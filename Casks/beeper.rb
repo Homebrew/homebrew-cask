@@ -1,7 +1,7 @@
 cask "beeper" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "2.6.8"
+  version "2.9.3"
   sha256 :no_check
 
   url "https://download.beeper.com/mac/dmg/#{arch}"
@@ -12,7 +12,7 @@ cask "beeper" do
   livecheck do
     url :url
     strategy :header_match
-    regex(/Beeper(?:%20|[ ._-])?(\d+(?:\.\d+)*)(?:[._-]#{arch})?\.dmg/i)
+    regex(/Beeper(?:%20|[ ._-])?(\d+(?:\.\d+)+)(?:[._-]#{arch})?\.dmg/i)
   end
 
   app "Beeper.app"

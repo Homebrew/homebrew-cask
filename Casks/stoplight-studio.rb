@@ -19,6 +19,8 @@ cask "stoplight-studio" do
     url "https://github.com/stoplightio/studio/releases/latest"
     strategy :page_match do |page|
       match = page.match(%r{href=.*?/v?(\d+(?:\.\d+)+)[._-]stable[._-]([^/]+)/stoplight[._-]studio[._-]#{arch}\.dmg}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

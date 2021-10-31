@@ -19,6 +19,8 @@ cask "lark" do
     url "https://www.larksuite.com/api/downloads"
     strategy :page_match do |page|
       match = page.match(%r{/lark-artifact-storage/(\w+)/Lark-darwin_#{arch}-(\d+(?:\.\d+)*)-signed\.dmg}i)
+      next if match.blank?
+
       "#{match[2]},#{match[1]}"
     end
   end

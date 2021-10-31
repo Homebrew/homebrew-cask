@@ -4,12 +4,13 @@ cask "connectmenow" do
 
   url "https://www.tweaking4all.com/downloads/network/ConnectMeNow-v#{version}-macOS-64bit.dmg"
   name "ConnectMeNow"
+  desc "Mount network shares quick and easy"
   homepage "https://www.tweaking4all.com/os-tips-and-tricks/macosx-tips-and-tricks/connectmenow-v3/"
 
   livecheck do
     url "https://www.tweaking4all.com/os-tips-and-tricks/macosx-tips-and-tricks/connectmenow-v3"
     strategy :page_match
-    regex(%r{href=.*?/ConnectMeNow-v?(\d+(?:\.\d+)*)-macOS-64bit\.dmg}i)
+    regex(%r{href=.*?/ConnectMeNow-v?(\d+(?:\.\d+)+)-macOS-64bit\.dmg}i)
   end
 
   app "ConnectMeNow.app"

@@ -10,7 +10,7 @@ cask "beyond-compare" do
   livecheck do
     url "https://www.scootersoftware.com/download.php?zz=v4changelog"
     strategy :page_match
-    regex(/<h2[^>]*>(\d+(?:\.\d+)*)/i)
+    regex(/<h2[^>]*>(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true

@@ -1,7 +1,7 @@
 cask "miro" do
   arch = Hardware::CPU.intel? ? "darwin" : "darwin-arm64"
 
-  version "0.6.4"
+  version "0.6.5"
   sha256 :no_check
 
   url "https://desktop.miro.com/platforms/#{arch}/Miro.dmg"
@@ -14,6 +14,8 @@ cask "miro" do
     url :url
     strategy :extract_plist
   end
+
+  auto_updates true
 
   app "Miro.app"
 

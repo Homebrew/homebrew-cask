@@ -1,14 +1,23 @@
 cask "tiger-trade" do
-  version "6.5.2,20201217:B9BB45"
-  sha256 "6d3ded90dbfb092705276c62ad04b05b937ab41a831f821617ff22998cf50645"
+  version "7.4.6,20211020:9BA969"
+  sha256 "3f719e4e2fe03739a8f1962010f78aaf5bf4eca17bc1b79632d2aac9e5146165"
 
   url "https://s.tigerfintech.com/desktop/cdn/f/TigerTrade_#{version.before_comma}_#{version.after_comma.before_colon}_#{version.after_colon}.dmg",
       verified: "s.tigerfintech.com/"
-  appcast "https://up.play-analytics.com/app/upgrade/latest?lang=zh_CN&platform=darwin&appVer=1"
   name "Tiger Trade"
   name "老虎证券"
   desc "Trading platform"
   homepage "https://www.itiger.com/download/"
+
+  livecheck do
+    url "https://up.play-analytics.com/app/upgrade/latest?lang=zh_CN&platform=darwin&appVer=1"
+    strategy :page_match do |page|
+      match = page.match(/downloadUrl.*?TigerTrade[._-]v?(\d+(?:\.\d+)+)[._-](\d+(?:\.\d+)*)[._-]([a-z\d]+).dmg/i)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}:#{match[3]}"
+    end
+  end
 
   depends_on macos: ">= :sierra"
 

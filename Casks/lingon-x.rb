@@ -3,8 +3,8 @@ cask "lingon-x" do
     version "6.6.5"
     sha256 "b0231b1a98dcc8f5c4234b419c9f5331407b8cce29b33f0ea2e32b12595adfa8"
   else
-    version "8.3.1"
-    sha256 "cd51982434907ec0ab441caf652875a1989612813860783339083d9e83f8e072"
+    version "8.4"
+    sha256 "4cba73dcf80ee753f66904013d5bce5277046760d3bb36488c19f8aac85aae48"
   end
 
   url "https://www.peterborgapps.com/downloads/LingonX#{version.major}.zip"
@@ -15,7 +15,7 @@ cask "lingon-x" do
   livecheck do
     url "https://www.peterborgapps.com/updates/lingonx#{version.major}.plist"
     strategy :page_match
-    regex(%r{<key>version</key>\s*\n\s*<string>(\d+(?:\.\d+)*)</string>}i)
+    regex(%r{<key>version</key>\s*\n\s*<string>(\d+(?:\.\d+)+)</string>}i)
   end
 
   depends_on macos: ">= :high_sierra"

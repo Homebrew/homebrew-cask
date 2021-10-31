@@ -15,6 +15,8 @@ cask "home-assistant" do
     url :url
     strategy :github_latest do |page|
       version = page.match(%r{href=".+/tree/(?:mac|release)/([\d.]+)/([\d.]+)"}i)
+      next if version.blank?
+
       "#{version[1]},#{version[2]}"
     end
   end

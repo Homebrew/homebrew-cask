@@ -12,6 +12,8 @@ cask "slicer" do
     url "http://download.slicer.org"
     strategy :page_match do |page|
       match = page.scan(%r{href=.*?/bitstream/(\d+).*?version\s*(\d+(?:\.\d+)*)}im)
+      next if match.blank?
+
       "#{match[1][1]},#{match[1][0]}"
     end
   end

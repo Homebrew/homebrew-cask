@@ -11,6 +11,8 @@ cask "parallels-client" do
     url "https://download.parallels.com/ras/v18/RAS%20Client%20for%20Mac%20Changelog.txt"
     strategy :page_match do |page|
       match = page.match(/Version\s*(\d+(?:\.\d+)*)\s*\((\d+)\)/i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

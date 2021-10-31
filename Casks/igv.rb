@@ -16,6 +16,6 @@ cask "igv" do
   app "IGV_#{version}.app"
 
   caveats do
-    depends_on_java "8+"
+    depends_on_java "11+"
   end
 end

@@ -2,16 +2,16 @@ cask "brave-browser" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
   folder = Hardware::CPU.intel? ? "stable" : "stable-arm64"
 
-  version "1.30.89.0,130.89"
+  version "1.31.88.0,131.88"
+
+  if Hardware::CPU.intel?
+    sha256 "655157ef29f2cfd4ba44c093fa15c2b4b11dc84b1801f396204715ac0035dcb2"
+  else
+    sha256 "37568a5eb862699472609c5f02cc220f4d3a81ddbe0cf745523309b0da323c7b"
+  end
 
   url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Browser/#{folder}/#{version.after_comma}/Brave-Browser-#{arch}.dmg",
       verified: "updates-cdn.bravesoftware.com/sparkle/Brave-Browser/"
-  if Hardware::CPU.intel?
-    sha256 "29cec4d7c71e7339c3a65d10c31e8f7f08408f135ba2729fd7c9fc52ee7578a5"
-  else
-    sha256 "699452bdc61f9feaa0c1b9de51ffed9022341601965156f76518331ca514ae33"
-  end
-
   name "Brave"
   desc "Web browser focusing on privacy"
   homepage "https://brave.com/"

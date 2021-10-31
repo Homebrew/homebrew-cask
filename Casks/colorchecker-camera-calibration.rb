@@ -10,7 +10,7 @@ cask "colorchecker-camera-calibration" do
 
   livecheck do
     url :homepage
-    regex(/>\s*v?(\d+(?:\.\d+)*)\s*</i)
+    regex(/>\s*v?(\d+(?:\.\d+)+)\s*</i)
   end
 
   pkg "ColorCheckerCameraCalibration.pkg"

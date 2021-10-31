@@ -11,6 +11,8 @@ cask "pitch" do
     url "https://desktop-app-builds.pitch.com/latest-mac.yml"
     strategy :page_match do |page|
       match = page.match(/Pitch[._-]v?(\d+(?:\.\d+)+)[._-]ci(\d+)\.dmg/i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

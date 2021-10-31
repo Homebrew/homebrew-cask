@@ -10,7 +10,7 @@ cask "clipgrab" do
   livecheck do
     url "https://clipgrab.org/"
     strategy :page_match
-    regex(%r{href=.*?/ClipGrab-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/ClipGrab-(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   depends_on macos: ">= :sierra"

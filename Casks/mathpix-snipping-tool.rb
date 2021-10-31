@@ -1,5 +1,5 @@
 cask "mathpix-snipping-tool" do
-  version "3.4,340.7"
+  version "3.4.1,341.5"
   sha256 :no_check
 
   url "https://mathpix.com/dmg/snip.dmg"

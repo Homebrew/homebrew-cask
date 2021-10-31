@@ -10,6 +10,8 @@ cask "post-haste" do
     url "https://www.digitalrebellion.com/download/posthaste"
     strategy :header_match do |headers|
       match = headers["location"].match(/_((\d+)(\d+)(\d+)\d+)\.dmg/)
+      next if match.blank?
+
       "#{match[2]}.#{match[3]}.#{match[4]},#{match[1]}"
     end
   end

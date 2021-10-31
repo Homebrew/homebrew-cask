@@ -1,6 +1,6 @@
 cask "dcp-o-matic-batch-converter" do
-  version "2.14.54"
-  sha256 "a447ca91ce1de85f161eb33666f7699f31be5ad9bace6db1df8f7afa0dbd16b3"
+  version "2.14.55"
+  sha256 "6109bbc3e24df2bd57d16f4ef2fbdf4225bc91e107992816d80cc96f4dee203b"
 
   url "https://dcpomatic.com/dl.php?id=osx-10.9-batch&version=#{version}"
   name "DCP-o-matic Batch converter"
@@ -10,7 +10,7 @@ cask "dcp-o-matic-batch-converter" do
   livecheck do
     url "https://dcpomatic.com/download"
     strategy :page_match
-    regex(/stable\s*release:\s*(\d+(?:\.\d+)*)/i)
+    regex(/stable\s*release:\s*(\d+(?:\.\d+)+)/i)
   end
 
   app "DCP-o-matic #{version.major} Batch converter.app"

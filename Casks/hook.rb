@@ -12,6 +12,8 @@ cask "hook" do
     url :homepage
     strategy :page_match do |page|
       match = page.match(%r{href=.*?/(\d+)/(\d+)/Hook-productivity-app-(\d+(?:\.\d+)*(?:-\d+)*)\.dmg}i)
+      next if match.blank?
+
       "#{match[3]},#{match[1]}.#{match[2]}"
     end
   end

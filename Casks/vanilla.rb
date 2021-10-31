@@ -1,6 +1,6 @@
 cask "vanilla" do
-  version "2.0.2,48"
-  sha256 "0d9190844431871fb8306f0d2d5289f7a1e89c095a55f4304efb32a0332d2f83"
+  version "2.0.3,49"
+  sha256 "a33d62b5ddaebb7f5e56ce0dd2407a08b564f0750705b3b809808992283a2d7e"
 
   url "https://macrelease.matthewpalmer.net/distribution/appcasts/Vanilla-#{version.after_comma}.dmg"
   name "Vanilla"
@@ -12,6 +12,7 @@ cask "vanilla" do
     strategy :sparkle
   end
 
+  auto_updates true
   depends_on macos: ">= :sierra"
 
   app "Vanilla.app"

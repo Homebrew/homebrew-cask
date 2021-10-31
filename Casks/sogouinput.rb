@@ -1,6 +1,6 @@
 cask "sogouinput" do
-  version "606a,1628136953"
-  sha256 "f9989231958812fa9c59d295df3f3e42737e21c2eb99925fbcbd8ce6b613951a"
+  version "606b,1630391065"
+  sha256 "955d8dbd1fb518cbdcbcb2d005fd811d9f9aeecb8535a3a65d85f5d418f9fc9e"
 
   url "http://cdn2.ime.sogou.com/dl/index/#{version.after_comma}/sogou_mac_#{version.before_comma}.zip"
   name "Sogou Input Method"
@@ -12,6 +12,8 @@ cask "sogouinput" do
     url :homepage
     strategy :page_match do |page|
       match = page.match(%r{/(\d+(?:\.\d+)*)/sogou_mac_(\d+(?:.\d+).*)\.zip}i)
+      next if match.blank?
+
       "#{match[2]},#{match[1]}"
     end
   end

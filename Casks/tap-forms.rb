@@ -12,6 +12,8 @@ cask "tap-forms" do
     url "https://vendors.paddle.com/download/product/503174"
     strategy :header_match do |headers|
       version = headers["location"].match(/([A-z0-9]+)[._-]Tap%20Forms%20Install%20(\d+(?:\.\d+)+)\.dmg/)
+      next if version.blank?
+
       "#{version[2]},#{version[1]}"
     end
   end

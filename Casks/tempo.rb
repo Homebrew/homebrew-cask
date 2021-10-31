@@ -1,13 +1,13 @@
 cask "tempo" do
   arch = Hardware::CPU.intel? ? "release" : "release-arm64"
 
-  version "5.27.0"
+  version "6.0.0"
 
   url "https://download.yourtempo.co/#{arch}/Tempo-#{version}.dmg"
   if Hardware::CPU.intel?
-    sha256 "c300943009a406554914e3f56abea4525b46e231aeff39441fcbc251928ccfc7"
+    sha256 "acfe86aedce23077a34de27717f38920bf4eafb740841088ab31b685fec4e3af"
   else
-    sha256 "ef8f7c72e9e96dca6a1edf6e10c1d72e0fa6e7cfdb66876b75c00b4c40cce1ea"
+    sha256 "67260ec4260e30da28abc20d847282f08e09d8bce00730594c598caf3a63bdb7"
   end
 
   name "Tempo"
@@ -29,4 +29,8 @@ cask "tempo" do
     "~/Library/Preferences/com.founders.mial.plist",
     "~/Library/Saved Application State/com.founders.mial.savedState",
   ]
+
+  caveats do
+    discontinued
+  end
 end

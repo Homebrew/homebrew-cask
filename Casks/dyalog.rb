@@ -9,7 +9,7 @@ cask "dyalog" do
 
   livecheck do
     url "https://www.dyalog.com/download-zone.htm?p=download"
-    regex(%r{href=.*?/mac_64_(\d+(?:\.\d+)*)_unicode\.pkg}i)
+    regex(%r{href=.*?/mac_64_(\d+(?:\.\d+)+)_unicode\.pkg}i)
   end
 
   pkg "mac_64_#{version}_unicode.pkg"

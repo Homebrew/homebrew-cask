@@ -12,6 +12,8 @@ cask "mactex" do
     url "https://ctan.org/texarchive/systems/mac/mactex/"
     strategy :page_match do |page|
       match = page.match(/href=.*?mactex-(\d{4})(\d{2})(\d{2})\.pkg/)
+      next if match.blank?
+
       "#{match[1]}.#{match[2]}#{match[3]}"
     end
   end
