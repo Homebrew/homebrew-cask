@@ -9,8 +9,7 @@ cask "vb-cable" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/VBCable_MACDriver_Pack(\d+)\.dmg}i)
+    regex(%r{href=.*?/VBCable_MACDriver_Pack(\d+)\.zip}i)
   end
 
   pkg "vb-cable-installer.pkg"
