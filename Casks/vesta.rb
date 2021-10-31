@@ -8,6 +8,11 @@ cask "vesta" do
   desc "Visualization for electronic and structural analysis"
   homepage "https://jp-minerals.org/vesta/en/"
 
+  livecheck do
+    url "https://jp-minerals.org/vesta/en/changes.html"
+    regex(/>\s*ver\.\s+v?(\d+(?:\.\d+)+)[<\s]/i)
+  end
+
   app "VESTA/VESTA.app"
 
   zap trash: [
