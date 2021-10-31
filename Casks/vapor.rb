@@ -8,4 +8,6 @@ cask "vapor" do
   homepage "https://github.com/NCAR/VAPOR"
 
   app "vapor.app"
+
+  # zap not needed
 end
