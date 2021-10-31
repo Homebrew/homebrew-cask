@@ -15,7 +15,7 @@ cask "lingon-x" do
   livecheck do
     url "https://www.peterborgapps.com/updates/lingonx#{version.major}.plist"
     strategy :page_match
-    regex(%r{<key>version</key>\s*\n\s*<string>(\d+(?:\.\d+)*)</string>}i)
+    regex(%r{<key>version</key>\s*\n\s*<string>(\d+(?:\.\d+)+)</string>}i)
   end
 
   depends_on macos: ">= :high_sierra"
