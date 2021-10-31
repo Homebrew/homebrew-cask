@@ -10,7 +10,7 @@ cask "dcp-o-matic-encode-server" do
   livecheck do
     url "https://dcpomatic.com/download"
     strategy :page_match
-    regex(/stable\s*release:\s*(\d+(?:\.\d+)*)/i)
+    regex(/stable\s*release:\s*(\d+(?:\.\d+)+)/i)
   end
 
   app "DCP-o-matic #{version.major} Encode Server.app"
