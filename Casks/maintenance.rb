@@ -32,7 +32,7 @@ cask "maintenance" do
     regex(/>\s*Maintenance\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s.-]*\s+#{MacOS.version}\s*</i)
   end
 
-  # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.
+  # Unusual case: The software may stop working, or may be dangerous to run, on the latest macOS release.
   depends_on macos: "<= :big_sur"
 
   app "Maintenance.app"
