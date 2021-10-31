@@ -11,7 +11,7 @@ cask "datovka" do
   livecheck do
     url "https://www.datovka.cz/cs/pages/instalace.html"
     strategy :page_match
-    regex(%r{href=.*?/datovka-(\d+(?:\.\d+)*)-64bit-macos10\.12\.dmg}i)
+    regex(%r{href=.*?/datovka-(\d+(?:\.\d+)+)-64bit-macos10\.12\.dmg}i)
   end
 
   app "datovka.app"
