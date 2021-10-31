@@ -10,7 +10,7 @@ cask "dcp-o-matic-player" do
   livecheck do
     url "https://dcpomatic.com/download"
     strategy :page_match
-    regex(/href=.*?id=osx[0-9._-]*player[^"']*?version=(\d+(?:\.\d+)*)/i)
+    regex(/href=.*?id=osx[0-9._-]*player[^"']*?version=(\d+(?:\.\d+)+)/i)
   end
 
   app "DCP-o-matic #{version.major} Player.app"
