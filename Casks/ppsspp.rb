@@ -8,8 +8,6 @@ cask "ppsspp" do
   desc "PSP emulator"
   homepage "https://www.ppsspp.org/"
 
-  auto_updates false
-
   app "PPSSPPSDL.app"
 
   uninstall quit: "org.ppsspp.ppsspp"
