@@ -1,6 +1,6 @@
 cask "kubecontext" do
-  version "2.0.0"
-  sha256 "b99db399fb038f87ac054f2d0741137de2a9b343f01f32a1db1b3f6dc313d882"
+  version "2.0.1"
+  sha256 "9b815995123dcf8a6e90c65600db68fdb38d1e9e362695922b2ec2aad7d74fc2"
 
   url "https://github.com/turkenh/KubeContext/releases/download/v#{version}/KubeContext.zip"
   name "KubeContext"
