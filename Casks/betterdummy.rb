@@ -13,4 +13,6 @@ cask "betterdummy" do
   end
 
   app "BetterDummy.app"
+
+  zap trash: "~/Library/Preferences/me.waydabber.BetterDummy.plist"
 end
