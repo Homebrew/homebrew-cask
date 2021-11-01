@@ -9,8 +9,8 @@ cask "azirevpn" do
   homepage "https://www.azirevpn.com/client"
 
   app "AzireVPN.app"
-  
+
   zap trash: [
-    "~/Library/Preferences/com.netbouncer-ab.AzireVPN.plist"
+    "~/Library/Preferences/com.netbouncer-ab.AzireVPN.plist",
   ]
 end
