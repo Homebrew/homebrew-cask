@@ -20,7 +20,7 @@ cask "onyx" do
   elsif MacOS.version <= :big_sur
     version "4.0.1"
     sha256 "d8b1613df2aacca0f827d4f98b7e6ec372c2030cc09ff3291f9660271f008c4d"
-  elsif MacOS.version <= :monterey
+  else
     version "4.1.0"
     sha256 "51f912407759a92c3fa54e1429f54989856cc6e5aba7c873e0d0dab075e70759"
   end
@@ -36,7 +36,8 @@ cask "onyx" do
   end
 
   # Unusual case: The software may stop working, or may be dangerous to run, on the latest macOS release.
-  depends_on macos: "<= :monterey"
+  # Uncomment once :monterey is suppoorted.
+  # depends_on macos: "<= :monterey"
 
   app "OnyX.app"
 
