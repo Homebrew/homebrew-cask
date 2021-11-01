@@ -1,12 +1,18 @@
 cask "slack" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "4.21.1"
+  if MacOS.version >= :mojave
+    version "4.21.1"
 
-  if Hardware::CPU.intel?
-    sha256 "8f64fdefc5354fbb75a56f5797b6a84a27a2c6f6f05fd13a4a6efc550fa510f6"
+    if Hardware::CPU.intel?
+      sha256 "8f64fdefc5354fbb75a56f5797b6a84a27a2c6f6f05fd13a4a6efc550fa510f6"
+    else
+      sha256 "1cff91fd85394f2ca2d97339ec06a16ce0c4a6c644d4fdf9b9d882051eef71e6"
+    end
+
   else
-    sha256 "1cff91fd85394f2ca2d97339ec06a16ce0c4a6c644d4fdf9b9d882051eef71e6"
+    version "4.19.0"
+    sha256 "fba05bc86f380642b41822db343e87ec516ffced9a3cbc72c5377befdb0a7ad7"
   end
 
   url "https://downloads.slack-edge.com/releases/macos/#{version}/prod/#{arch}/Slack-#{version}-macOS.dmg",
