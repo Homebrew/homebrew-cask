@@ -36,7 +36,7 @@ cask "onyx" do
   end
 
   # Unusual case: The software may stop working, or may be dangerous to run, on the latest macOS release.
-  # Uncomment once :monterey is suppoorted.
+  # Uncomment once :monterey is supported.
   # depends_on macos: "<= :monterey"
 
   app "OnyX.app"
