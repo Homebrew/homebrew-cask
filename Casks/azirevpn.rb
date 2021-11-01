@@ -1,6 +1,3 @@
-# typed: false
-# frozen_string_literal: true
-
 cask "azirevpn" do
   version "0.5"
   sha256 "e62af6fcbafa555734491ccca603cfbbd7cd74e63d17e2a5dfc58412fdc12748"
@@ -12,4 +9,8 @@ cask "azirevpn" do
   homepage "https://www.azirevpn.com/client"
 
   app "AzireVPN.app"
+  
+  zap trash: [
+    "~/Library/Preferences/com.netbouncer-ab.AzireVPN.plist"
+  ]
 end
