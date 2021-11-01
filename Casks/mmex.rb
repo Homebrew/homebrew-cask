@@ -11,7 +11,7 @@ cask "mmex" do
   livecheck do
     url "https://sourceforge.net/projects/moneymanagerex/rss"
     strategy :page_match
-    regex(/mmex[._-]?(\d+(?:\.\d+)*)[._-]?Darwin\.dmg/i)
+    regex(/mmex[._-]?(\d+(?:\.\d+)+)[._-]?Darwin\.dmg/i)
   end
 
   app "MMEX.app"
