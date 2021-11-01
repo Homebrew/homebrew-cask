@@ -1,5 +1,5 @@
 cask "affinity-publisher" do
-  version "1.10.1"
+  version "1.10.4"
   sha256 :no_check
 
   url "https://store.serif.com/download/7ef252/"
