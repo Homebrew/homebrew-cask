@@ -1,7 +1,7 @@
 cask "microsoft-openjdk" do
   arch = Hardware::CPU.intel? ? "x64" : "aarch64"
 
-  version "17.35.1"
+  version "17.0.1"
 
   url "https://aka.ms/download-jdk/microsoft-jdk-#{version}-macOS-#{arch}.pkg",
       verified: "aka.ms/download-jdk/"
