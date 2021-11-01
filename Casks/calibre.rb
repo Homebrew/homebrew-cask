@@ -2,18 +2,22 @@ cask "calibre" do
   if MacOS.version <= :high_sierra
     version "3.48.0"
     sha256 "68829cd902b8e0b2b7d5cf7be132df37bcc274a1e5720b4605d2dd95f3a29168"
-    url "https://download.calibre-ebook.com/#{version}/calibre-#{version}.dmg"
   else
-    version "4.23.0"
-    sha256 "422b8f452f2d801f612f28f262421a8b18195c5f9473c0997b828d6f4b91b005"
-    # github.com/kovidgoyal/calibre/ was verified as official when first introduced to the cask
-    url "https://github.com/kovidgoyal/calibre/releases/download/v#{version}/calibre-#{version}.dmg"
-    appcast "https://github.com/kovidgoyal/calibre/releases.atom"
+    version "5.31.1"
+    sha256 "e0ea164a86e4acafea8be5dd3ca3406b38434fd605db4db8c8d115028a452b30"
   end
 
+  url "https://download.calibre-ebook.com/#{version}/calibre-#{version}.dmg"
   name "calibre"
   desc "E-books management software"
   homepage "https://calibre-ebook.com/"
+
+  livecheck do
+    url "https://github.com/kovidgoyal/calibre"
+    strategy :github_latest
+  end
+
+  conflicts_with cask: "homebrew/cask-versions/calibre4"
 
   app "calibre.app"
   binary "#{appdir}/calibre.app/Contents/MacOS/calibre"
@@ -38,8 +42,10 @@ cask "calibre" do
   binary "#{appdir}/calibre.app/Contents/MacOS/web2disk"
 
   zap trash: [
+    "~/Library/Application Support/calibre-ebook.com",
     "~/Library/Caches/calibre",
     "~/Library/Preferences/calibre",
+    "~/Library/Preferences/com.calibre-ebook.ebook-viewer.plist",
     "~/Library/Preferences/net.kovidgoyal.calibre.plist",
     "~/Library/Saved Application State/com.calibre-ebook.ebook-viewer.savedState",
     "~/Library/Saved Application State/net.kovidgoyal.calibre.savedState",

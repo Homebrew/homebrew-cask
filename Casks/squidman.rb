@@ -1,11 +1,16 @@
 cask "squidman" do
-  version "4.1"
-  sha256 "26ec3c2cd84ae7180b90205d55443f9c52966bb0f7770b05c9c80a1bdec92187"
+  version "4.2"
+  sha256 "281e73b703b148448862fd3be8d31966f4c95339e4227d9ffc67ae698b2c9ef2"
 
   url "https://squidman.net/resources/downloads/SquidMan#{version}.dmg"
-  appcast "https://squidman.net/squidman/releasenotes/index.html"
   name "SquidMan"
   homepage "https://squidman.net/squidman/"
+
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/SquidMan(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   app "SquidMan.app"
 

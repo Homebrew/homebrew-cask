@@ -1,11 +1,16 @@
 cask "blitz" do
-  version "1.12.7"
-  sha256 "05444d98d90c6375149bc0e96e02055241399c1f5811f8d2d6ba2981860ce638"
+  version "1.15.67"
+  sha256 "760f8c781150342faf99eb7e547bc2e9e814d603375e4c649b1be3b743856b4a"
 
-  url "https://dl.blitz.gg/download/Blitz-#{version}.dmg"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_filename.cgi?url=https://dl.blitz.gg/download/mac"
+  url "https://blitz-stable.blitz.gg/Blitz-#{version}.dmg"
   name "Blitz"
+  desc "Performance analysis software"
   homepage "https://blitz.gg/"
+
+  livecheck do
+    url "https://dl.blitz.gg/download/mac"
+    strategy :header_match
+  end
 
   auto_updates true
 

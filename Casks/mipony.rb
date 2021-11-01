@@ -1,5 +1,5 @@
 cask "mipony" do
-  version :latest
+  version "1.7,9"
   sha256 :no_check
 
   url "https://download.mipony.net/downloads/mac/Mipony-Installer.pkg"

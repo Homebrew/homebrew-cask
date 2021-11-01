@@ -1,11 +1,16 @@
 cask "jellyfin" do
-  version "10.6.4"
-  sha256 "0ddfda5c16930202adc719cce89703ee5c27c2490fb36b59fe513188245ccffa"
+  version "10.7.7"
+  sha256 "f7aff9df60185709283f7ce090d400f94bbc3919f90a77a39f5317ec78beb40c"
 
   url "https://repo.jellyfin.org/releases/server/macos/stable/installer/Jellyfin_#{version}.dmg"
-  appcast "https://repo.jellyfin.org/releases/server/macos/stable/"
   name "Jellyfin"
+  desc "Media system"
   homepage "https://jellyfin.org/"
+
+  livecheck do
+    url "https://repo.jellyfin.org/releases/server/macos/stable/"
+    regex(%r{href=.*?/Jellyfin_(\d+(?:\.\d+)*)\.dmg}i)
+  end
 
   app "Jellyfin.app"
 end

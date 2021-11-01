@@ -4,37 +4,37 @@ cask "google-cloud-sdk" do
 
   url "https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz"
   name "Google Cloud SDK"
+  desc "Set of tools to manage resources and applications hosted on Google Cloud"
   homepage "https://cloud.google.com/sdk/"
 
+  depends_on formula: "python"
+
   installer script: {
-    executable: "google-cloud-sdk/install.sh",
+    executable: "#{token}/install.sh",
     args:       [
       "--usage-reporting", "false", "--bash-completion", "false", "--path-update", "false",
-      "--rc-path", "false", "--quiet"
+      "--rc-path", "false", "--quiet",
+      "--install-python", "false"
     ],
   }
-  binary "google-cloud-sdk/bin/bq"
-  binary "google-cloud-sdk/bin/docker-credential-gcloud"
-  binary "google-cloud-sdk/bin/gcloud"
-  binary "google-cloud-sdk/bin/git-credential-gcloud.sh"
-  binary "google-cloud-sdk/bin/gsutil"
+  binary "#{token}/bin/anthoscli"
+  binary "#{token}/bin/bq"
+  binary "#{token}/bin/docker-credential-gcloud"
+  binary "#{token}/bin/gcloud"
+  binary "#{token}/bin/git-credential-gcloud.sh", target: "git-credential-gcloud"
+  binary "#{token}/bin/gsutil"
 
   # Not actually necessary, since it would be deleted anyway.
   # It is present to make clear an uninstall was not forgotten and that for this cask it is indeed this simple.
   uninstall delete: "#{staged_path}/#{token}"
 
   caveats <<~EOS
-    #{token} is installed at #{staged_path}/#{token}. Add your profile:
+    To install shell completions, add this to your profile:
 
       for bash users
-        source "#{staged_path}/#{token}/path.bash.inc"
         source "#{staged_path}/#{token}/completion.bash.inc"
 
       for zsh users
-        source "#{staged_path}/#{token}/path.zsh.inc"
         source "#{staged_path}/#{token}/completion.zsh.inc"
-
-      for fish users
-        set -g fish_user_paths "#{staged_path}/#{token}/path.fish.inc" $fish_user_paths
   EOS
 end

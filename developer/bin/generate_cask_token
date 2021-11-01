@@ -1,14 +1,14 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
+
 #
 # generate_cask_token
 #
 # todo:
 #
-# remove Ruby 2.0 dependency and change shebang line
-#
 # detect Cask files which differ only by the placement of hyphens.
 #
-# merge entirely into "brew cask create" command
+# merge entirely into "brew create" command
 #
 
 ###
@@ -34,7 +34,7 @@ EXPANDED_SYMBOLS = {
   "@" => "at",
 }.freeze
 
-CASK_FILE_EXTENSION = ".rb".freeze
+CASK_FILE_EXTENSION = ".rb"
 
 # Hardcode App names that cannot be transformed automatically.
 # Example: in "x48.app", "x48" is not a version number.
@@ -357,10 +357,8 @@ def warnings
   return @warnings if @warnings
 
   @warnings = []
-  unless APP_EXCEPTION_PATS.rassoc(cask_token)
-    if /\d/.match?(cask_token)
-      @warnings.push "WARNING: '#{cask_token}' contains digits. Digits which are version numbers should be removed."
-    end
+  if !APP_EXCEPTION_PATS.rassoc(cask_token) && /\d/.match?(cask_token)
+    @warnings.push "WARNING: '#{cask_token}' contains digits. Digits which are version numbers should be removed."
   end
   filename = project_root.join("Casks", cask_file_name)
   if filename.exist?

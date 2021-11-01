@@ -1,14 +1,22 @@
 cask "osquery" do
-  version "4.5.0"
-  sha256 "569dcf91d2cd1a822b4d9c151bacb04d629d108b328d345200cc865b81133492"
+  version "5.0.1"
+  sha256 "ec58996e64637d861ccead8dc6bc8865662728f6e5bc2694a3c92f0f4a371095"
 
   url "https://pkg.osquery.io/darwin/osquery-#{version}.pkg"
-  appcast "https://github.com/osquery/osquery/releases.atom"
   name "osquery"
+  desc "SQL powered operating system instrumentation and analytics"
   homepage "https://osquery.io/"
+
+  livecheck do
+    url "https://github.com/osquery/osquery"
+    strategy :git
+  end
 
   pkg "osquery-#{version}.pkg"
 
   uninstall launchctl: "com.facebook.osqueryd",
-            pkgutil:   "com.facebook.osquery"
+            pkgutil:   [
+              "com.facebook.osquery",
+              "io.osquery.agent",
+            ]
 end

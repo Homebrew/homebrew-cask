@@ -1,11 +1,10 @@
 cask "flying-carpet" do
-  version "3.0"
-  sha256 "a38cb60ee732412d03c0372f1b1b3cc46cb83e94f33961c6f677afb4f71d4aaf"
+  version "4.1"
+  sha256 "924f84af02d402385785cbcc3e0c2ba7920310ca75b6d06f462a5b3ae290dd61"
 
-  url "https://github.com/spieglt/FlyingCarpet/releases/download/#{version}/Flying.Carpet.Mac.zip"
-  appcast "https://github.com/spieglt/flyingcarpet/releases.atom"
+  url "https://github.com/spieglt/FlyingCarpet/releases/download/v#{version}/FlyingCarpetMac.zip"
   name "Flying Carpet"
-  desc "Cross-platform file transfer over ad-hoc wifi"
+  desc "File transfer over ad-hoc wifi"
   homepage "https://github.com/spieglt/flyingcarpet"
 
   app "Flying Carpet.app"

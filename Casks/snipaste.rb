@@ -1,12 +1,17 @@
 cask "snipaste" do
-  version "2.5.1-Beta"
-  sha256 "cc047d8814d47abf7ef7c0c83e2168ac9005eae03040d6a65cdf37830b0550d3"
+  version "2.6.6-Beta2"
+  sha256 "8582b045b340cc328d9fab9aa37699f6bb7312a38c7b2847668478fc6fead913"
 
-  # bitbucket.org/liule/snipaste/ was verified as official when first introduced to the cask
-  url "https://bitbucket.org/liule/snipaste/downloads/Snipaste-#{version}.dmg"
-  appcast "https://www.snipaste.com/download.html"
+  url "https://bitbucket.org/liule/snipaste/downloads/Snipaste-#{version}.dmg",
+      verified: "bitbucket.org/liule/snipaste/"
   name "Snipaste"
+  desc "Snip or pin screenshots"
   homepage "https://www.snipaste.com/"
+
+  livecheck do
+    url "https://www.snipaste.com/all_versions"
+    regex(/"mac_version"\s*:\s*"v?(.*?)"/i)
+  end
 
   auto_updates true
 

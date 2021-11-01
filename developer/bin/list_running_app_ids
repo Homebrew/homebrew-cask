@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
+
 #
 # list_running_app_ids
 #
@@ -100,7 +102,7 @@ def report_apps
     running.add "#{bundle_id.ljust($COLUMNS / 2)}\t#{app_name}"
   end
 
-  puts "bundle_id".ljust($COLUMNS / 2) + "\tapp_name"
+  puts "#{"bundle_id".ljust($COLUMNS / 2)}\tapp_name"
   puts "-" * $COLUMNS
   puts running.to_a.sort.join "\n"
 end

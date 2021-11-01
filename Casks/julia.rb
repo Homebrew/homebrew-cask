@@ -1,12 +1,16 @@
 cask "julia" do
-  version "1.5.1"
-  sha256 "3c0dec6bca7b6bbec7e838b0efee878a665f26b53954b766cc80d36807e017d1"
+  version "1.6.3"
+  sha256 "31c5ef1b9fd6e23077a047fbbbfbe4209fe498fe7ddad3f7c3cc6e7abda985df"
 
   url "https://julialang-s3.julialang.org/bin/mac/x64/#{version.major_minor}/julia-#{version}-mac64.dmg"
-  appcast "https://github.com/JuliaLang/julia/releases.atom"
   name "Julia"
   desc "Programming language for technical computing"
   homepage "https://julialang.org/"
+
+  livecheck do
+    url "https://julialang.org/downloads/"
+    regex(/href=.*?julia[._-]v?(\d+(?:\.\d+)+)[._-]mac64\.dmg/i)
+  end
 
   app "Julia-#{version.major_minor}.app"
   binary "#{appdir}/Julia-#{version.major_minor}.app/Contents/Resources/julia/bin/julia"

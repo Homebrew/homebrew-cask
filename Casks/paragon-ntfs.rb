@@ -6,6 +6,12 @@ cask "paragon-ntfs" do
   name "Paragon NTFS for Mac"
   homepage "https://www.paragon-software.com/ufsdhome/ntfs-mac/"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/ntfsmac(\d+)_trial\.dmg}i)
+  end
+
   auto_updates true
 
   installer manual: "FSInstaller.app"

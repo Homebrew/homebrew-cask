@@ -1,13 +1,16 @@
 cask "chirp" do
-  version "20200909"
-  sha256 "7a229d0d5927fd417c14ece81a959eb900c126e4c88e0ed140bef313f7d4e3c6"
+  version "20211016"
+  sha256 "a4c4ebaa11334e757ca24070b565ed9874c22cc73ac67e6a856559d8eec744ab"
 
-  url "https://trac.chirp.danplanet.com/chirp_daily/LATEST/chirp-unified-daily-#{version}.app.zip"
-  appcast "https://trac.chirp.danplanet.com/chirp_daily/LATEST/SHA1SUM"
+  url "https://trac.chirp.danplanet.com/chirp_daily/daily-#{version}/chirp-unified-daily-#{version}.app.zip"
   name "CHIRP"
+  desc "Tool for programming amateur radio"
   homepage "https://chirp.danplanet.com/projects/chirp/wiki/Home"
 
-  depends_on cask: "kk7ds-python-runtime"
+  livecheck do
+    url "https://trac.chirp.danplanet.com/chirp_daily/LATEST/SHA1SUM"
+    regex(/chirp[._-]unified[._-]daily[._-]v?(\d+(?:\.\d+)*)\.app\.zip/i)
+  end
 
   app "CHIRP.app"
 end

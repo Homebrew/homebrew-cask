@@ -1,12 +1,16 @@
 cask "domainbrain" do
   version "2.0.1"
-  sha256 "3e016dcc863a4abb029f65dfb9a79573dafc5d84136d483d65874b2d0f64bd9d"
+  sha256 :no_check
 
-  # joeworkman_downloads.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://joeworkman_downloads.s3.amazonaws.com/DomainBrain.zip"
-  appcast "https://domainbrainapp.com/appcast_v#{version.major}.xml"
+  url "https://joeworkman_downloads.s3.amazonaws.com/DomainBrain.zip",
+      verified: "joeworkman_downloads.s3.amazonaws.com/"
   name "DomainBrain"
   homepage "https://domainbrainapp.com/"
+
+  livecheck do
+    url "https://domainbrainapp.com/appcast_v#{version.major}.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 

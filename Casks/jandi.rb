@@ -1,10 +1,14 @@
 cask "jandi" do
-  version :latest
+  version "1.4.6,201106"
   sha256 :no_check
 
   url "https://cdn.jandi.com/jandi-pc/download/JANDI.dmg"
   name "JANDI"
   homepage "https://www.jandi.com/landing/"
+
+  livecheck do
+    skip "unversioned URL"
+  end
 
   app "JANDI.app"
 

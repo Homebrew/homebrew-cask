@@ -1,12 +1,16 @@
 cask "cookie" do
-  version "6.1.5"
-  sha256 "a9295873f93bcc9edd497ac6041ff5a5adcb3fc9079b8e15aaa0188927dba057"
+  version "6.6.1"
+  sha256 :no_check
 
   url "https://sweetpproductions.com/products/cookieapp/Cookie.dmg"
-  appcast "https://sweetpproductions.com/products/cookieapp/appcast.xml"
   name "Cookie"
   desc "Protection from tracking and online profiling"
   homepage "https://sweetpproductions.com/"
+
+  livecheck do
+    url "https://sweetpproductions.com/products/cookieapp/appcast.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :mojave"
 
@@ -14,10 +18,10 @@ cask "cookie" do
 
   zap trash: [
     "~/Library/Application Scripts/com.sweetpproductions.Cookie5",
-    "~/Library/Containers/com.sweetpproductions.Cookie5",
-    "~/Library/Preferences/com.sweetpproductions.Cookie5.plist",
     "~/Library/Application Scripts/com.sweetpproductions.CookieApp",
+    "~/Library/Containers/com.sweetpproductions.Cookie5",
     "~/Library/Containers/com.sweetpproductions.CookieApp",
+    "~/Library/Preferences/com.sweetpproductions.Cookie5.plist",
     "~/Library/Preferences/com.sweetpproductions.CookieApp.plist",
   ]
 end

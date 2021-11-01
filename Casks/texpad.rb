@@ -2,20 +2,29 @@ cask "texpad" do
   if MacOS.version <= :yosemite
     version "1.7.45,237:1487350"
     sha256 "5973da0e221a9f9168228d628e25b1f788bcdc9ca8cae86cb02089804f3240f5"
-  elsif MacOS.version == :el_capitan
+  elsif MacOS.version <= :el_capitan
     version "1.8.5,404:f8f30e5"
     sha256 "676a1b071142c022cdfda57668c811f7747b36ded442548073fe6dda1b9ca934"
-  else
+  elsif MacOS.version <= :high_sierra
     version "1.8.15,529:346c842"
     sha256 "480bf4a3e8fd809c1eb07cb00099ed0d362996738a872efb42cb179488e8c1e1"
+  else
+    version "1.9.6,646:e78f29b"
+    sha256 "54443a06df0ef1426f331b2d7813a1441edb1e443c8a856f815932a40508de27"
   end
 
-  # download.texpadapp.com/ was verified as official when first introduced to the cask
-  url "https://download.texpadapp.com/apps/osx/updates/Texpad_#{version.before_comma.dots_to_underscores}__#{version.after_comma.before_colon}__#{version.after_colon}.dmg"
-  appcast "https://www.texpad.com/mac"
+  url "https://download.texpadapp.com/apps/osx/updates/Texpad_#{version.before_comma.dots_to_underscores}__#{version.after_comma.before_colon}__#{version.after_colon}.dmg",
+      verified: "download.texpadapp.com/"
   name "Texpad"
   desc "LaTeX editor"
   homepage "https://www.texpad.com/mac"
+
+  livecheck do
+    url "https://www.texpad.com/static-collected/upgrades/texpadappcast.xml"
+    strategy :sparkle do |item|
+      "#{item.short_version},#{item.version}:#{item.url[/_([^_]+)\.dmg/i, 1]}"
+    end
+  end
 
   auto_updates true
 

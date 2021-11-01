@@ -4,6 +4,7 @@ cask "google-featured-photos" do
 
   url "https://dl.google.com/featuredphotosscreensaver/GoogleFeaturedPhotos-#{version}.dmg"
   name "Google Featured Photos"
+  desc "Screensaver photos provider"
   homepage "https://plus.google.com/featuredphotos"
 
   screen_saver "Google Featured Photos.saver"

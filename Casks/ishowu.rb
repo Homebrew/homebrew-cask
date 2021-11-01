@@ -1,5 +1,5 @@
 cask "ishowu" do
-  version :latest
+  version "1.94.5,2751"
   sha256 :no_check
 
   url "https://www.shinywhitebox.com/store/file.php?p=1"

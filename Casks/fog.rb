@@ -3,7 +3,6 @@ cask "fog" do
   sha256 "dbf1216fce69ead08e9e9a37b18391d3d65e7f06ae4e6f633e7047832c6b1adc"
 
   url "https://github.com/vitorgalvao/fog/releases/download/#{version}/Fog-#{version}-mac.zip"
-  appcast "https://github.com/vitorgalvao/fog/releases.atom"
   name "Fog"
   desc "Unofficial overcast.fm podcast app"
   homepage "https://github.com/vitorgalvao/fog"

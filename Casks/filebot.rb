@@ -1,12 +1,16 @@
 cask "filebot" do
-  version "4.9.1"
-  sha256 "d3a5ccfd562c1d49e5053c4538d0c82d46b47cc61fdd885a395d96eefbfc18fa"
+  version "4.9.4"
+  sha256 "d9bb3fb4c275336512c3c52c9db333a75ca2b2f9919bf271a86ae91eae160d9f"
 
   url "https://get.filebot.net/filebot/FileBot_#{version}/FileBot_#{version}.app.tar.xz"
-  appcast "https://app.filebot.net/update.xml"
   name "FileBot"
   desc "Tool for organizing and renaming movies, TV shows, anime or music"
   homepage "https://www.filebot.net/"
+
+  livecheck do
+    url "https://www.filebot.net/download.html"
+    regex(/href=.*?FileBot[._-]v?(\d+(?:\.\d+)+)\.app\.t/i)
+  end
 
   app "FileBot.app"
   binary "#{appdir}/FileBot.app/Contents/MacOS/filebot.sh", target: "filebot"

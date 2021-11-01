@@ -1,9 +1,8 @@
 cask "epichrome" do
-  version "2.3.11"
-  sha256 "8e8ff755ab672af001802bc6f5a490560aab2ac64b7d3e15f2fc52a31c1d4daf"
+  version "2.4.18"
+  sha256 "ae53f72a06194a30859c3bff630fc28fdb4a128255dc60e12a6ce09c4575ffb6"
 
   url "https://github.com/dmarmor/epichrome/releases/download/v#{version}/epichrome-#{version}.pkg"
-  appcast "https://github.com/dmarmor/epichrome/releases.atom"
   name "Epichrome"
   desc "Tool to create web-based applications that work like standalone apps"
   homepage "https://github.com/dmarmor/epichrome"

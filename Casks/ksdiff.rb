@@ -1,14 +1,29 @@
 cask "ksdiff" do
-  version "2.2.0,122"
-  sha256 "cf32401d631e61cbbc3dc9947626174b45e8317a6cac39380067e7017e8d4c87"
+  version "2.4.2,126:sep-7-2021"
+  sha256 "11a4e09eab56fed96cb1e1fb5fbec350a726ee8dd07a7d0d1d992dd4e44b6d68"
 
-  url "https://cdn.kaleidoscopeapp.com/releases/ksdiff-#{version.after_comma}-#{version.before_comma}.zip"
+  url "https://updates.kaleidoscope.app/v2/prod/ksdiff-#{version.before_comma}-#{version.after_comma.before_colon}-#{version.after_colon}.zip"
   name "ksdiff"
-  homepage "https://www.kaleidoscopeapp.com/ksdiff2"
+  desc "Command-line tool for the App Store version of Kaleidoscope"
+  homepage "https://kaleidoscope.app/ksdiff2"
+
+  livecheck do
+    url :homepage
+    regex(%r{/ksdiff-(\d+(?:\.\d+)*)-(\d+)-(\w+(?:-\d+)*)\.zip}i)
+    strategy :page_match do |page, regex|
+      js_file = page[%r{src=["']?(/ksdiff\.\w+\.js)["' >]}i, 1]
+      next [] if js_file.blank?
+
+      js_file_data = Homebrew::Livecheck::Strategy.page_content("https://kaleidoscope.app#{js_file}")
+      next [] if js_file_data[:content].blank?
+
+      js_file_data[:content].scan(regex).map { |match| "#{match[0]},#{match[1]}:#{match[2]}" }
+    end
+  end
 
   conflicts_with cask: "kaleidoscope"
 
-  pkg "ksdiff-#{version.after_comma}/Install ksdiff.pkg"
+  pkg "ksdiff-#{version.before_comma}/Install ksdiff.pkg"
 
   uninstall pkgutil: "com.blackpixel.kaleidoscope.ksdiff.installer.pkg"
 

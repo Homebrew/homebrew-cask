@@ -1,11 +1,18 @@
 cask "sirimote" do
-  version "1.3.7"
-  sha256 "1a4c7fbf5476215278a26dedfdec6a81860fbf5ec53c157f2cf0466a645d8d35"
+  version "1.4,30"
+  sha256 :no_check
 
   url "https://eternalstorms.at/sirimote/SiriMote.zip"
-  appcast "https://eternalstorms.at/sirimote/updatefeed.xml"
   name "SiriMote"
+  desc "Control your computer with your Apple TV Siri Remote"
   homepage "https://eternalstorms.at/sirimote"
+
+  livecheck do
+    url "https://eternalstorms.at/sirimote/updatefeed.xml"
+    strategy :sparkle
+  end
+
+  depends_on macos: ">= :sierra"
 
   app "SiriMote.app"
 end

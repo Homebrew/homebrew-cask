@@ -1,5 +1,5 @@
 cask "elgiganten-jotta" do
-  version :latest
+  version "3.2.99.1074"
   sha256 :no_check
 
   url "https://cloud.elgiganten.dk/update/elgiganten/current/elgiganten.dmg"

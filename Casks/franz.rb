@@ -1,11 +1,11 @@
 cask "franz" do
-  version "5.5.0"
-  sha256 "cd3c9535d3a7763e5679470bc1194d77d1b4e32a8870145f413da6b0c5040bca"
+  version "5.7.0"
+  sha256 "197f143c7f3cfae472b1c6a66f6387f948357a94ae12a04977293ed41662a8ff"
 
-  # github.com/meetfranz/franz/ was verified as official when first introduced to the cask
-  url "https://github.com/meetfranz/franz/releases/download/v#{version}/franz-#{version}.dmg"
-  appcast "https://github.com/meetfranz/franz/releases.atom"
+  url "https://github.com/meetfranz/franz/releases/download/v#{version}/franz-#{version}.dmg",
+      verified: "github.com/meetfranz/franz/"
   name "Franz"
+  desc "Messaging app for WhatsApp, Facebook Messenger, Slack, Telegram and more"
   homepage "https://meetfranz.com/"
 
   auto_updates true

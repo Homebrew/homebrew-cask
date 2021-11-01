@@ -1,12 +1,21 @@
 cask "alfred" do
-  version "4.1.1_1172"
-  sha256 "7a8d77ce4d5a342225abe5adb37519e635416bc190770eeb3c45828d67ef6154"
+  version "4.6,1266"
+  sha256 "1fbfc0b188f68751fe1b96b060afbbaddf06dda80ed9b5d1dd563f9904211708"
 
-  url "https://cachefly.alfredapp.com/Alfred_#{version}.dmg"
-  appcast "https://www.alfredapp.com/app/update#{version.major}/general.xml"
+  url "https://cachefly.alfredapp.com/Alfred_#{version.before_comma}_#{version.after_comma}.dmg"
   name "Alfred"
   desc "Application launcher and productivity software"
   homepage "https://www.alfredapp.com/"
+
+  livecheck do
+    url "https://www.alfredapp.com/app/update#{version.major}/general.xml"
+    strategy :page_match do |page|
+      match = page.match(/Alfred_(\d(?:\.\d+)*)_(\d+)\.tar\.gz/i)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
+    end
+  end
 
   auto_updates true
 
@@ -17,6 +26,7 @@ cask "alfred" do
   zap trash: [
     "~/Library/Application Support/Alfred",
     "~/Library/Caches/com.runningwithcrayons.Alfred",
+    "~/Library/Cookies/com.runningwithcrayons.Alfred.binarycookies",
     "~/Library/Preferences/com.runningwithcrayons.Alfred.plist",
     "~/Library/Preferences/com.runningwithcrayons.Alfred-Preferences.plist",
     "~/Library/Saved Application State/com.runningwithcrayons.Alfred-Preferences.savedState",

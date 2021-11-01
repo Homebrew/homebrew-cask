@@ -1,12 +1,16 @@
 cask "rightfont" do
-  version "5.8.4"
-  sha256 "e581cac8691bb397c3e09ec83af8c30eb8da9fe8291b3a8f49a3e4e8cc828e57"
+  version "5.9.3,2859"
+  sha256 :no_check
 
   url "https://rightfontapp.com/update/rightfont.zip"
-  appcast "https://rightfontapp.com/update/appcast#{version.major}.xml"
   name "RightFont"
   desc "Font manager that helps preview, install, sync and manage fonts"
   homepage "https://rightfontapp.com/"
+
+  livecheck do
+    url "https://rightfontapp.com/update/appcast#{version.major}.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
   depends_on macos: ">= :yosemite"

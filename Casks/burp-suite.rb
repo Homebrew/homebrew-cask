@@ -1,11 +1,18 @@
 cask "burp-suite" do
-  version "2020.9.1"
-  sha256 "d17f8cf3a5e1d8252b197eb4358e370d4929aac0031e9b5f33a099d4159010d0"
+  version "2021.9.1"
+  sha256 "56e6bae8d27cb3880c44d9135adf7714f010a7fba3534592f3fa0385cc8ef8d9"
 
   url "https://portswigger.net/burp/releases/download?product=community&version=#{version}&type=MacOsx"
-  appcast "https://portswigger.net/burp/releases?initialTab=community"
-  name "Burp Suite"
+  name "Burp Suite Community Edition"
+  desc "Web security testing toolkit"
   homepage "https://portswigger.net/burp/"
+
+  livecheck do
+    url "https://portswigger.net/burp/releases/community/latest"
+    strategy :header_match do |headers|
+      headers["location"][%r{/professional[._-]community[._-]v?(\d+(?:-\d+)+)\?}i, 1].tr("-", ".")
+    end
+  end
 
   installer script: {
     executable: "Burp Suite Community Edition Installer.app/Contents/MacOS/JavaApplicationStub",

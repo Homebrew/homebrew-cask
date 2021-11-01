@@ -1,12 +1,17 @@
 cask "bricklink-studio" do
-  version "2.1.5_10"
-  sha256 "f5d36786aab7590f1415e15682047025718787027797e56d54d206b510345b27"
+  version "2.2.9_1"
+  sha256 "8dc6e09fe06841354f89aaebc5d80d552a862d3aa894bd8b7d463dd1845a5e9a"
 
-  # blstudio.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://blstudio.s3.amazonaws.com/Studio#{version.major}.0/Archive/#{version}/Studio+#{version.major}.0.pkg"
-  appcast "https://bricklink.com/v3/studio/download.page"
+  url "https://blstudio.s3.amazonaws.com/Studio#{version.major}.0/Archive/#{version}/Studio+#{version.major}.0.pkg",
+      verified: "blstudio.s3.amazonaws.com/"
   name "Studio"
-  homepage "https://bricklink.com/v3/studio/download.page"
+  desc "Build, render, and create LEGO instructions"
+  homepage "https://www.bricklink.com/v3/studio/download.page"
+
+  livecheck do
+    url "https://www.bricklink.com/v2/build/studio.page"
+    regex(/"version"\s*:\s*"(\d+(?:[._-]\d+)*)"/i)
+  end
 
   auto_updates true
 
@@ -16,10 +21,10 @@ cask "bricklink-studio" do
 
   zap trash: [
     "~/Library/Application Support/unity.BrickLink.Studio",
-    "~/Library/Preferences/unity.BrickLink.Studio.plist",
-    "~/Library/Preferences/unity.BrickLink.Patcher.plist",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/unity.BrickLink.Studio",
-    "~/Library/Saved Application State/unity.BrickLink.Studio.savedState",
+    "~/Library/Preferences/unity.BrickLink.Patcher.plist",
+    "~/Library/Preferences/unity.BrickLink.Studio.plist",
     "~/Library/Saved Application State/unity.BrickLink.Patcher.savedState",
+    "~/Library/Saved Application State/unity.BrickLink.Studio.savedState",
   ]
 end

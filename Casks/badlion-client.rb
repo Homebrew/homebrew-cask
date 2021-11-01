@@ -1,17 +1,22 @@
 cask "badlion-client" do
-  version "2.16.1"
-  sha256 "213d7323a767ce52c8d78e335d26f0c82ac233418e86c63d6f0e51d7d8a2edf6"
+  version "3.4.1"
+  sha256 "e981e292ee1e49eef093390c40d5a020d6954083e05ed20973ac4875ed598ab9"
 
   url "https://client-updates.badlion.net/Badlion%20Client-#{version}.dmg"
-  appcast "https://client-updates.badlion.net/latest-mac.yml"
   name "Badlion Client"
+  desc "Minecraft launcher"
   homepage "https://www.badlion.net/"
+
+  livecheck do
+    url "https://client-updates.badlion.net/latest-mac.yml"
+    strategy :electron_builder
+  end
 
   app "Badlion Client.app"
 
   zap trash: [
+    "~/Library/Application Support/Badlion Client",
     "~/Library/Caches/net.badlion.client",
     "~/Library/Caches/net.badlion.client.ShipIt",
-    "~/Library/Application Support/Badlion Client",
   ]
 end

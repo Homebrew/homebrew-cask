@@ -1,5 +1,5 @@
 cask "sixtyforce" do
-  version :latest
+  version "2.0.2,87"
   sha256 :no_check
 
   url "https://sixtyforce.com/download/sixtyforce.zip"

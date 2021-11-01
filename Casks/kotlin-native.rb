@@ -1,23 +1,36 @@
 cask "kotlin-native" do
-  version "1.4.0"
-  sha256 "476f920631b0ccb4b8e25456ef49356fb33d6e3960e9f2ec8def0aaa23284168"
+  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
-  # github.com/JetBrains/kotlin/ was verified as official when first introduced to the cask
-  url "https://github.com/JetBrains/kotlin/releases/download/v#{version}/kotlin-native-macos-#{version.major_minor}.tar.gz"
-  appcast "https://github.com/JetBrains/kotlin-native/releases.atom"
+  version "1.5.31"
+
+  url "https://github.com/JetBrains/kotlin/releases/download/v#{version}/kotlin-native-macos-#{arch}-#{version}.tar.gz",
+      verified: "github.com/JetBrains/kotlin/"
+  if Hardware::CPU.intel?
+    sha256 "fde7224a8e04a6cd934ecbf55d4d51966f8a0668104f4316a76b3f38062d1ade"
+  else
+    sha256 "fbd005e360253e7d7ff1cd78b7cbbe34df0592812676deada6620a53d469d803"
+  end
+
   name "Kotlin Native"
+  desc "LLVM backend for Kotlin"
   homepage "https://kotlinlang.org/docs/reference/native-overview.html"
+
+  livecheck do
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+)$/)
+  end
 
   conflicts_with formula: "kotlin"
 
-  binary "kotlin-native-macos-#{version.major_minor}/bin/cinterop"
-  binary "kotlin-native-macos-#{version.major_minor}/bin/jsinterop"
-  binary "kotlin-native-macos-#{version.major_minor}/bin/klib"
-  binary "kotlin-native-macos-#{version.major_minor}/bin/konan-lldb"
-  binary "kotlin-native-macos-#{version.major_minor}/bin/konanc"
-  binary "kotlin-native-macos-#{version.major_minor}/bin/kotlinc"
-  binary "kotlin-native-macos-#{version.major_minor}/bin/kotlinc-native"
-  binary "kotlin-native-macos-#{version.major_minor}/bin/run_konan"
+  binary "kotlin-native-macos-#{arch}-#{version}/bin/cinterop"
+  binary "kotlin-native-macos-#{arch}-#{version}/bin/generate-platform"
+  binary "kotlin-native-macos-#{arch}-#{version}/bin/jsinterop"
+  binary "kotlin-native-macos-#{arch}-#{version}/bin/klib"
+  binary "kotlin-native-macos-#{arch}-#{version}/bin/konan-lldb"
+  binary "kotlin-native-macos-#{arch}-#{version}/bin/konanc"
+  binary "kotlin-native-macos-#{arch}-#{version}/bin/kotlinc"
+  binary "kotlin-native-macos-#{arch}-#{version}/bin/kotlinc-native"
+  binary "kotlin-native-macos-#{arch}-#{version}/bin/run_konan"
 
   caveats do
     depends_on_java "6+"

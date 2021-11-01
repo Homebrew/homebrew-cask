@@ -1,11 +1,17 @@
 cask "minecraft" do
-  version :latest
+  version "973,1"
   sha256 :no_check
 
-  # mojang.com/ was verified as official when first introduced to the cask
-  url "https://launcher.mojang.com/download/Minecraft.dmg"
+  url "https://launcher.mojang.com/download/Minecraft.dmg",
+      verified: "mojang.com/"
   name "Minecraft"
+  desc "Sandbox construction video game"
   homepage "https://minecraft.net/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   app "Minecraft.app"
 

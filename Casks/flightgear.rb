@@ -1,17 +1,19 @@
 cask "flightgear" do
-  version "2018.3.6"
-  sha256 "cfc8667d68f2a08323f1abfa172e6a7bcbf465fa4f00a6576309066332974306"
+  version "2020.3.11"
+  sha256 "f6a04a20c9d5e45ec9e97a2cf506db477f186bac2693e051ede4e924cb0c517d"
 
-  # sourceforge.net/flightgear/ was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/flightgear/FlightGear-#{version}.dmg"
-  appcast "https://sourceforge.net/projects/flightgear/rss"
+  url "https://downloads.sourceforge.net/flightgear/FlightGear-#{version}.dmg",
+      verified: "sourceforge.net/flightgear/"
   name "FlightGear"
+  desc "Flight simulator"
   homepage "https://www.flightgear.org/"
+
+  livecheck do
+    url "https://www.flightgear.org/download/"
+    regex(/FlightGear[._-]?(\d+(?:\.\d+)*)\.dmg/i)
+  end
 
   app "FlightGear.app"
 
-  zap trash: [
-    "/Library/Logs/DiagnosticReports/fgfs*",
-    "~/Library/Application Support/FlightGear",
-  ]
+  zap trash: "~/Library/Application Support/FlightGear"
 end

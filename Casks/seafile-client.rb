@@ -1,12 +1,19 @@
 cask "seafile-client" do
-  version "7.0.9"
-  sha256 "b00e859fc55d05fe0af1dfaddab64d166875e90b5969289fd35b4811aaeea71c"
+  version "8.0.4"
+  sha256 "b398e2366b14d71a9eeb2b5d20e9bc06be071d381fb9589c1c1fb37ed3dcd054"
 
-  # seadrive.org/ was verified as official when first introduced to the cask
-  url "https://download.seadrive.org/seafile-client-#{version}.dmg"
-  appcast "https://www.seafile.com/en/download/"
+  url "https://download.seadrive.org/seafile-client-#{version}.dmg",
+      verified: "seadrive.org/"
   name "Seafile Client"
+  desc "File syncing client"
   homepage "https://www.seafile.com/"
+
+  livecheck do
+    url "https://www.seafile.com/en/download/"
+    regex(%r{href=.*?/seafile[._-]client[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+  end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Seafile Client.app"
 end

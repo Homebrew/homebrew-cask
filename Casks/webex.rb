@@ -1,0 +1,28 @@
+cask "webex" do
+  arch = Hardware::CPU.intel? ? "TeamsDesktop-MACOS" : "Desktop-MACOS-Apple-Silicon"
+
+  version "41.10.0.20395"
+  sha256 :no_check
+
+  url "https://binaries.webex.com/Webex#{arch}-Gold/Webex.dmg"
+  name "Webex Teams"
+  desc "Video communication and virtual meeting platform"
+  homepage "https://www.webex.com/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
+  app "Webex.app"
+
+  uninstall signal: [
+    ["TERM", "Cisco-Systems.Spark"],
+  ]
+
+  zap trash: [
+    "~/Library/Caches/Cisco-Systems.Spark",
+    "~/Library/Logs/SparkMacDesktop",
+    "~/Library/Preferences/Cisco-Systems.Spark.plist",
+  ]
+end

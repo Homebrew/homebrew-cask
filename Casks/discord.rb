@@ -1,12 +1,17 @@
 cask "discord" do
-  version "0.0.259"
-  sha256 "927b7174671aeede430e5a71f9a8eee1991e2dab5309a8ee623dd1fb04706517"
+  version "0.0.264"
+  sha256 "f7e8e401d1d1526eef3176cd75e38807cf73e25c4fe76b42d65443ec56ed74cb"
 
-  url "https://cdn.discordapp.com/apps/osx/#{version}/Discord.dmg"
-  appcast "https://discordapp.com/api/stable/updates?platform=osx"
+  url "https://dl.discordapp.net/apps/osx/#{version}/Discord.dmg",
+      verified: "dl.discordapp.net/"
   name "Discord"
   desc "Voice and text chat software"
-  homepage "https://discordapp.com/"
+  homepage "https://discord.com/"
+
+  livecheck do
+    url "https://discord.com/api/stable/updates?platform=osx"
+    regex(/"name"\s*:\s*"([^"]+)"/i)
+  end
 
   auto_updates true
 

@@ -1,12 +1,16 @@
 cask "rocket" do
-  version "1.7.4,69"
-  sha256 "af589098cad82a5e84a9212410d4b98cd2904ad38472c8feb5291374aca33971"
+  version "1.8.2,79"
+  sha256 "9ffc8acbf0bcc5075556d16574cac8f0c8f383b10cd047bbdf58a923b19fdc74"
 
   url "https://macrelease.matthewpalmer.net/distribution/appcasts/Rocket-#{version.after_comma}.dmg"
-  appcast "https://macrelease.matthewpalmer.net/distribution/appcasts/rocket.xml"
   name "Rocket"
   desc "Emoji picker optimized for blind people"
   homepage "https://matthewpalmer.net/rocket/"
+
+  livecheck do
+    url "https://macrelease.matthewpalmer.net/distribution/appcasts/rocket.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 

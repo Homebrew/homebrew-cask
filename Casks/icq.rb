@@ -1,13 +1,17 @@
 cask "icq" do
-  version "3.0.28888"
-  sha256 "d4df48dd83c5b632dbb479ea06fb5ed7e0bf20a0186b4359cc792886da00cfe1"
+  version "3.0.32393"
+  sha256 "3d645a9badd7524f3f9a23187a40079098427907d75f2c1ecaa676ff5369d2ec"
 
-  # icq-www.hb.bizmrg.com/ was verified as official when first introduced to the cask
-  url "https://icq-www.hb.bizmrg.com/mac/x64/#{version}/icq.dmg"
-  appcast "https://icq-www.hb.bizmrg.com/mac/x64/#{version}/version.xml"
+  url "https://icq-www.hb.bizmrg.com/mac/x64/#{version}/icq.dmg",
+      verified: "icq-www.hb.bizmrg.com/"
   name "ICQ"
   desc "Messenger application"
   homepage "https://icq.com/desktop"
+
+  livecheck do
+    url "https://icq-www.hb.bizmrg.com/mac/x64/#{version}/version.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 

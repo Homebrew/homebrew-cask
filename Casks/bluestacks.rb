@@ -1,20 +1,28 @@
 cask "bluestacks" do
-  version "4.210.0.2820,c172aa8a06c3c61d313ee9acf0e6c8b8"
-  sha256 "39ff9fd6393bcb326644f0e16f6eed5ed8c96345eabae01248c94f43246b8ce1"
+  version "4.270.1.2803,c610c2d26a70cad789a74e586a08e51f"
+  sha256 "a2e76c99a78d9c2559c2f0d2d1ab069f8f721468ec887939746820ef02927dc3"
 
   url "https://cdn3.bluestacks.com/downloads/mac/bgp64_mac/#{version.before_comma}/#{version.after_comma}/x64/BlueStacksInstaller_#{version.before_comma}.dmg"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://cloud.bluestacks.com/api/getdownloadnow?platform=mac",
-          must_contain: version.before_comma
   name "BlueStacks"
   desc "Mobile gaming platform"
   homepage "https://www.bluestacks.com/"
+
+  livecheck do
+    url "https://cloud.bluestacks.com/api/getdownloadnow?platform=mac&mac_version=#{MacOS.full_version}"
+    strategy :header_match do |headers|
+      match = headers["location"].match(%r{/(\d(?:\.\d+)*)/([^/]+)/})
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
+    end
+  end
 
   depends_on macos: ">= :sierra"
 
   installer manual: "BlueStacks Installer.app"
 
   uninstall_preflight do
-    set_ownership "#{appdir}/BlueStacks.app"
+    set_ownership "/Applications/BlueStacks.app"
   end
 
   uninstall launchctl: [
@@ -23,7 +31,10 @@ cask "bluestacks" do
     "com.BlueStacks.AppPlayer.UninstallWatcher",
     "com.BlueStacks.AppPlayer.Updater",
   ],
-            delete:    "/Library/PrivilegedHelperTools/com.BlueStacks.AppPlayer.bstservice_helper"
+            delete:    [
+              "/Applications/BlueStacks.app",
+              "/Library/PrivilegedHelperTools/com.BlueStacks.AppPlayer.bstservice_helper",
+            ]
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bluestacks.bluestacks.sfl*",

@@ -1,14 +1,19 @@
 cask "a-better-finder-rename" do
-  version "11.22"
+  version "11.38b05"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://www.publicspace.net/download/ABFRX#{version.major}.dmg"
-  appcast "https://www.publicspace.net/app/signed_abfr#{version.major}.xml"
   name "A Better Finder Rename"
   desc "Renamer for files, music and photos"
   homepage "https://www.publicspace.net/ABetterFinderRename/"
 
+  livecheck do
+    url "https://www.publicspace.net/app/signed_abfr#{version.major}.xml"
+    strategy :sparkle, &:version
+  end
+
   auto_updates true
+  depends_on macos: ">= :yosemite"
 
   app "A Better Finder Rename #{version.major}.app"
 

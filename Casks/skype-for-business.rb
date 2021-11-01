@@ -1,12 +1,16 @@
 cask "skype-for-business" do
-  version "16.28.0.192"
-  sha256 "0f82ee3369b6f79c56ca7d0234a28c622506ba37310ea3039671e359582bf302"
+  version "16.29.0.72"
+  sha256 "02e50ee62e5bb940f71ae25a9c942db57013535db9ab18acd1be1383651ac951"
 
   url "https://download.microsoft.com/download/D/0/5/D055DA17-C7B8-4257-89A1-78E7BBE3833F/SkypeForBusinessInstaller-#{version}.pkg"
-  appcast "https://www.microsoft.com/download/details.aspx?id=54108"
   name "Skype for Business"
   desc "Microsofts instant messaging enterprise software"
   homepage "https://www.microsoft.com/download/details.aspx?id=54108"
+
+  livecheck do
+    url "https://www.microsoft.com/download/details.aspx?id=54108"
+    regex(/SkypeForBusinessInstaller[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
+  end
 
   auto_updates true
   depends_on cask: "microsoft-auto-update"

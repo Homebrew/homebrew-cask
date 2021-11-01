@@ -1,12 +1,17 @@
 cask "astropad-studio" do
-  version "3.4.1"
-  sha256 "daaa20466a73ca4bbae15aa6bb40c270561a1e76f72970405d475093ab8a16fa"
+  version "3.7.0,3219"
+  sha256 "f11c1f8c5cef55d35678fea3a08882c6cf6bac0e3493ec30d35a476783e15a47"
 
-  # s3.amazonaws.com/astropad.com/ was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/astropad.com/downloads/AstropadStudio-#{version}.dmg"
-  appcast "https://s3.amazonaws.com/astropad.com/downloads/studio-sparkle.xml"
+  url "https://s3.amazonaws.com/astropad.com/downloads/AstropadStudio-#{version.before_comma}.dmg",
+      verified: "s3.amazonaws.com/astropad.com/"
   name "Astropad Studio"
+  desc "Turn your iPad into a professional drawing tablet"
   homepage "https://astropad.com/"
+
+  livecheck do
+    url "https://s3.amazonaws.com/astropad.com/downloads/studio-sparkle.xml"
+    strategy :sparkle
+  end
 
   app "Astropad Studio.app"
 

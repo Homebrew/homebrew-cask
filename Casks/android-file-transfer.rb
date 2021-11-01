@@ -1,12 +1,19 @@
 cask "android-file-transfer" do
-  version :latest
-  sha256 :no_check
+  version "5071136"
+  sha256 "b9249399a351e8146358ff1ddb546c68a63134b780be795ae64e0a4c2258bc61"
 
-  # google.com/dl/androidjumper/ was verified as official when first introduced to the cask
-  url "https://dl.google.com/dl/androidjumper/mtp/current/androidfiletransfer.dmg"
+  url "https://dl.google.com/dl/androidjumper/mtp/#{version}/androidfiletransfer.dmg",
+      verified: "google.com/dl/androidjumper/"
   name "Android File Transfer"
   desc "Transfer files from and to an Android smartphone"
   homepage "https://www.android.com/filetransfer/"
+
+  livecheck do
+    url "https://dl.google.com/dl/androidjumper/mtp/current/androidfiletransfer.dmg"
+    strategy :header_match do |headers|
+      headers["location"][%r{/(\d+)/androidfiletransfer\.dmg}i, 1]
+    end
+  end
 
   app "Android File Transfer.app"
 

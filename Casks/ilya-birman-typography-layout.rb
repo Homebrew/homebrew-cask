@@ -1,10 +1,17 @@
 cask "ilya-birman-typography-layout" do
-  version "3.6"
-  sha256 "95366ae651a39f59fa6fd92e07edac6961d02d33ef0ea2e479152a703c567b6c"
+  version "3.7"
+  sha256 "b21c86951038a5940e3fbab1f2b4e17f477a143eece9117670dea6a439b348d3"
 
   url "https://ilyabirman.ru/projects/typography-layout/download/ilya-birman-typolayout-#{version}-mac.dmg"
-  name "Ilya Birman typography layout"
+  name "Ilya Birman Typography Layout"
+  desc "Typography keyboard layout"
   homepage "https://ilyabirman.ru/projects/typography-layout/"
+
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/ilya-birman-typolayout-(\d+(?:\.\d+)*)-mac\.dmg}i)
+  end
 
   artifact \
     "Install Ilya Birman Typography Layout.app/Contents/Resources/Layout/Ilya Birman Typography Layout.bundle",

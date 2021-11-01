@@ -1,13 +1,17 @@
 cask "gitkraken" do
-  version "7.3.2"
-  sha256 "4e9ae036ed153d9fa7de9aa12e8dd1d5d673ac742053210d7bf54123dd62087c"
+  version "8.1.0"
+  sha256 :no_check
 
-  # release.axocdn.com/darwin/ was verified as official when first introduced to the cask
   url "https://release.gitkraken.com/darwin/installGitKraken.dmg"
-  appcast "https://www.gitkraken.com/download"
   name "GitKraken"
   desc "Git client focusing on productivity"
   homepage "https://www.gitkraken.com/"
+
+  livecheck do
+    url "https://www.gitkraken.com/download"
+    strategy :page_match
+    regex(/Latest\s*release:\s*(\d+(?:\.\d+)*)/i)
+  end
 
   auto_updates true
 

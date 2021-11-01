@@ -1,11 +1,15 @@
 cask "compositor" do
-  version "1.14.0"
-  sha256 "9ede6513b3ff29d229a697f4cd3da445017c99e0221d744d506904be08c5a7b9"
+  version "1.17.0"
+  sha256 "c9792d631e796e5bf8ddcd35ba90fe64ec42e9ce051c520a4b7516a5754cdda8"
 
   url "https://compositorapp.com/updates/Compositor_#{version}.zip"
-  appcast "https://compositorapp.com/updates/appcast.xml"
   name "Compositor"
   homepage "https://compositorapp.com/"
+
+  livecheck do
+    url "https://compositorapp.com/updates/appcast.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :sierra"
 

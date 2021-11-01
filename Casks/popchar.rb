@@ -1,13 +1,23 @@
 cask "popchar" do
-  version "8.10"
-  sha256 "cac9830de0ac9d1fa01b44e91315be2c60d68978b61968c3a8b9211e983e1f4b"
+  version "9.2"
+  sha256 "6ca95b6fa6f2f58fd6a55556b415aed90404e8a3005d1d4edb58cff3af8ae63c"
 
   url "https://www.ergonis.com/downloads/products/popcharx/PopCharX#{version.no_dots}-Install.dmg",
       user_agent: :fake
-  appcast "https://update.ergonis.com/vck/popcharx.xml"
   name "PopChar X"
   desc "Utility to display all characters of a font"
   homepage "https://www.ergonis.com/products/popcharx/"
 
+  livecheck do
+    url "https://update.ergonis.com/vck/popcharx.xml"
+    regex(/<Program_Version>(\d+(?:\.\d+)*)</i)
+  end
+
   app "PopChar.app"
+
+  zap trash: [
+    "~/Library/Application Support/PopChar",
+    "~/Library/Caches/com.macility.popchar3",
+    "~/Library/Preferences/com.macility.popchar3.plist",
+  ]
 end

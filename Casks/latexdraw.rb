@@ -1,13 +1,17 @@
 cask "latexdraw" do
-  version "4.0.1"
-  sha256 "f1daf6accb538cb7c8fc465a4a65d74dfa0e97b23a0ed8fecc60f4fe8cb7f81a"
+  version "4.0.3"
+  sha256 "7a21014c60d1d75fc8efe8c0d3ba8e827d2d09d29daeda492aff5d7cbc4f257c"
 
-  # downloads.sourceforge.net/latexdraw/ was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/latexdraw/LaTeXDraw-#{version}.dmg"
-  appcast "https://github.com/latexdraw/latexdraw/releases.atom"
+  url "https://downloads.sourceforge.net/latexdraw/LaTeXDraw-#{version}.dmg",
+      verified: "downloads.sourceforge.net/latexdraw/"
   name "LaTexDraw"
   desc "Drawing editor for creating LaTeX PSTricks code"
   homepage "https://latexdraw.sourceforge.io/"
+
+  livecheck do
+    url "https://github.com/latexdraw/latexdraw"
+    strategy :git
+  end
 
   app "LaTeXDraw.app"
 

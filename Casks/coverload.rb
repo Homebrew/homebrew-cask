@@ -1,11 +1,18 @@
 cask "coverload" do
-  version "2.1.1-752"
-  sha256 "e6cee75fa95facfb3588d9435d7a92e492a2d7d8efc49a3f6aa302dda0f57aa2"
+  version "2.2.0-757"
+  sha256 "ff8656a105aa315df33a0e9bfc38f1f284f26da773302dfbdd194f6b493cc73f"
 
-  # s3-us-west-2.amazonaws.com/coverloadapp.com/ was verified as official when first introduced to the cask
-  url "https://s3-us-west-2.amazonaws.com/coverloadapp.com/Uploads/CoverLoad-#{version}.zip"
+  url "https://s3-us-west-2.amazonaws.com/coverloadapp.com/Uploads/CoverLoad-#{version}.zip",
+      verified: "s3-us-west-2.amazonaws.com/coverloadapp.com/"
   name "CoverLoad"
+  desc "Download high quality artwork for movies, music albums, and more"
   homepage "https://coverloadapp.com/"
+
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/CoverLoad-(\d+(?:\.\d+)*-\d+)\.zip}i)
+  end
 
   app "CoverLoad.app"
 end

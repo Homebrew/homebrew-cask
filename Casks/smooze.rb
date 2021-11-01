@@ -1,11 +1,16 @@
 cask "smooze" do
-  version "1.9.6"
-  sha256 "43a3ed3a485eceb00e7f5ef1f94c9c91017cdf87be00ef0184b4bcd4fbe0fdef"
+  version "1.9.22,492"
+  sha256 :no_check
 
   url "https://smooze.co/updates/Smooze.dmg"
-  appcast "https://smooze.co/updates/update.xml"
   name "Smooze"
+  desc "Rediscover your scroll wheel mouse"
   homepage "https://smooze.co/"
+
+  livecheck do
+    url "https://smooze.co/updates/update.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"

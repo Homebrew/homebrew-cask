@@ -1,12 +1,16 @@
 cask "altserver" do
-  version "1.3.2"
-  sha256 "7c1db4387a700f389d173a8cf56d385673419b4c2227e1de4251101c5f14f153"
+  version "1.4.7,59"
+  sha256 "fb1ed7959e8bc9dc54144ed60ba50ccf66212a8ba59cf7c76ae052d8a12e3b56"
 
-  # f000.backblazeb2.com/file/ was verified as official when first introduced to the cask
-  url "https://f000.backblazeb2.com/file/altstore/altserver/#{version.dots_to_underscores}.zip"
-  appcast "https://altstore.io/altserver/sparkle-macos.xml"
+  url "https://cdn.altstore.io/file/altstore/altserver/#{version.before_comma.dots_to_underscores}.zip"
   name "AltServer"
+  desc "iOS App Store alternative"
   homepage "https://altstore.io/"
+
+  livecheck do
+    url "https://altstore.io/altserver/sparkle-macos.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :mojave"
 

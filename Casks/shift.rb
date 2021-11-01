@@ -1,11 +1,16 @@
 cask "shift" do
-  version "5.0.87"
-  sha256 "3e00182e5e3b894b265e12cc6f4efa3b9150996522fce1cf27f35662fbbe2162"
+  version "7.2.3"
+  sha256 "f11684499b72c6b9c0b595c131c11f788b38a338224136e7f980d1db4521ec70"
 
   url "https://update.tryshift.com/download/version/#{version}/osx_64"
-  appcast "https://tryshift.com/download/?platform=mac"
   name "Shift"
+  desc "Workstation to streamline your accounts, apps, and workflows"
   homepage "https://tryshift.com/"
+
+  livecheck do
+    url "https://tryshift.com/download/?platform=mac"
+    regex(%r{href=.*?version/(\d+(?:[._-]\d+)+)[._-]stable/osx[._-]64}i)
+  end
 
   app "Shift.app"
 end

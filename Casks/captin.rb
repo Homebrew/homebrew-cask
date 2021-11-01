@@ -1,12 +1,19 @@
 cask "captin" do
-  version "1.1.0,119:1585846526"
-  sha256 "79e75a8a3b6b6d576b9f06564bca033d7f2fe6b456484d15043a08511b495491"
+  version "1.1.3,143:1619187317"
+  sha256 "15854fad5bd0c0303649c1c53561a0ba9c02e6e2ffcfbd492df4b522c800d543"
 
-  # dl.devmate.com/com.100hps.captin/ was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.100hps.captin/#{version.after_comma.before_colon}/#{version.after_colon}/Captin-#{version.after_comma.before_colon}.dmg"
-  appcast "https://updates.devmate.com/com.100hps.captin.xml"
+  url "https://dl.devmate.com/com.100hps.captin/#{version.after_comma.before_colon}/#{version.after_colon}/Captin-#{version.after_comma.before_colon}.dmg",
+      verified: "dl.devmate.com/com.100hps.captin/"
   name "Captin"
+  desc "Tool to show caps lock status"
   homepage "http://captin.strikingly.com/"
+
+  livecheck do
+    url "https://updates.devmate.com/com.100hps.captin.xml"
+    strategy :sparkle do |item|
+      "#{item.short_version},#{item.version}:#{item.url[%r{/(\d+)/Captin-\d+\.dmg}i, 1]}"
+    end
+  end
 
   app "Captin.app"
 

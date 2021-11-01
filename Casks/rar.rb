@@ -1,12 +1,17 @@
 cask "rar" do
-  version "5.9.1"
-  sha256 "65cef7ada7728819de9dddde41fb0180ef2b3f7a40525638894e9a3fdb13f570"
+  version "6.0.2"
+  sha256 "6da67bd6f617206b36e5fecf274ba3a0652bb166519852e1bc32342a8564b6c8"
 
   url "https://www.rarlab.com/rar/rarosx-#{version}.tar.gz"
   name "RAR Archiver"
+  desc "Archive manager for data compression and backups"
   homepage "https://www.rarlab.com/"
 
-  conflicts_with formula: "unrar"
+  livecheck do
+    url "https://www.rarlab.com/download.htm"
+    strategy :page_match
+    regex(%r{href=.*?/rarosx-(\d+(:?\.\d+)*)\.tar\.gz}i)
+  end
 
   binary "rar/rar"
   binary "rar/unrar"

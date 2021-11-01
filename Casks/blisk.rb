@@ -1,12 +1,17 @@
 cask "blisk" do
-  version "12.0.92.83"
-  sha256 "c9cb87f735f27fe0b37921650d8b6b276f2cecc0cdfbed42c95e2b8d67067f0b"
+  version "16.1.94.111"
+  sha256 "b0ff50f5501d63071874069dc16111135b69b792d8842ee08be5feb38dadbfab"
 
-  # bliskcloudstorage.blob.core.windows.net/ was verified as official when first introduced to the cask
-  url "https://bliskcloudstorage.blob.core.windows.net/mac-installers/BliskInstaller_#{version}.dmg"
-  appcast "https://blisk.io/"
+  url "https://bliskcloudstorage.blob.core.windows.net/mac-installers/BliskInstaller_#{version}.dmg",
+      verified: "bliskcloudstorage.blob.core.windows.net/"
   name "Blisk Browser"
+  desc "Developer-oriented browser"
   homepage "https://blisk.io/"
+
+  livecheck do
+    url "https://blisk.io/download/?os=mac"
+    regex(%r{href=.*?/BliskInstaller[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+  end
 
   app "Blisk.app"
 end

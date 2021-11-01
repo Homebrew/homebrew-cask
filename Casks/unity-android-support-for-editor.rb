@@ -1,11 +1,24 @@
 cask "unity-android-support-for-editor" do
-  version "2020.1.1f1,2285c3239188"
-  sha256 "b5ba15492f91bad92058384e3d0619aaaa7b8fea9ae1c85fe6f117f7161393f7"
+  version "2021.2.0f1,4bf1ec4b23c9"
+  sha256 "d4f7674f6de66bbf22152d9479cb51795f514c81f0bc1e0c66991312fa6ca6a2"
 
-  url "https://netstorage.unity3d.com/unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-#{version.before_comma}.pkg"
-  appcast "https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json"
+  url "https://download.unity3d.com/download_unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-#{version.before_comma}.pkg",
+      verified: "download.unity3d.com/download_unity/"
   name "Unity Android Build Support"
-  homepage "https://unity3d.com/unity/"
+  desc "Android target support for Unity"
+  homepage "https://unity.com/products"
+
+  livecheck do
+    url "https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json"
+    strategy :page_match do |page|
+      page.scan(%r{
+        /download_unity/(\h+)/MacEditorTargetInstaller
+        /UnitySetup-Android-Support-for-Editor-(\d+(?:\.\d+)*[a-z]*\d*)\.pkg
+      }ix).map do |match|
+        "#{match[1]},#{match[0]}"
+      end
+    end
+  end
 
   depends_on cask: "unity"
 

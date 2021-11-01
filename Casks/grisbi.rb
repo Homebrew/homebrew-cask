@@ -1,12 +1,17 @@
 cask "grisbi" do
-  version "1.2.2,86a2992c1"
-  sha256 "89df854060d0445713e7bd02f99f952bd0fa7286a7102d32b2c40609f433d1cd"
+  version "2.0.5"
+  sha256 "cb60640ab3966b006bea5d3fc70ac196aef69e3c5a290cfe74797493e6c2b64c"
 
-  # sourceforge.net/grisbi/ was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/grisbi/grisbi%20stable/#{version.major_minor}.x/#{version.before_comma}/Grisbi-#{version.before_comma}-#{version.after_comma}.dmg"
-  appcast "https://sourceforge.net/projects/grisbi/rss?path=/grisbi%20stable"
+  url "https://downloads.sourceforge.net/grisbi/grisbi%20stable/#{version.major_minor}.x/#{version}/Grisbi-#{version}.dmg",
+      verified: "sourceforge.net/grisbi/"
   name "Grisbi"
+  desc "Personal financial management program"
   homepage "https://www.grisbi.org/"
+
+  livecheck do
+    url "https://sourceforge.net/projects/grisbi/files/latest/download"
+    strategy :header_match
+  end
 
   app "Grisbi.app"
 end

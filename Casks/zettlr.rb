@@ -1,13 +1,18 @@
 cask "zettlr" do
-  version "1.7.5"
-  sha256 "013ba4ce24e5ebac28a5af98db4c9b5d0c011c2a74d3f7b2eb5f0e969bf7ea59"
+  arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  # github.com/Zettlr/Zettlr/ was verified as official when first introduced to the cask
-  url "https://github.com/Zettlr/Zettlr/releases/download/v#{version}/Zettlr-#{version}.dmg"
-  appcast "https://github.com/Zettlr/Zettlr/releases.atom"
+  version "2.0.1"
+
+  url "https://github.com/Zettlr/Zettlr/releases/download/v#{version}/Zettlr-#{version}-#{arch}.dmg"
+  if Hardware::CPU.intel?
+    sha256 "b758a7b1aea7e1238ff666b96cfbc2d136e5b06f51fa6b02152ae4f415236ad8"
+  else
+    sha256 "f23d612685ef1abeaf8b0cbf8bce466c0303e9e2e12eaf0ac8c1975cdc01aa43"
+  end
+
   name "Zettlr"
   desc "Open-source markdown editor"
-  homepage "https://www.zettlr.com/"
+  homepage "https://github.com/Zettlr/Zettlr/"
 
   app "Zettlr.app"
 

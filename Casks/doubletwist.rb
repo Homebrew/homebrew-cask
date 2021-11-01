@@ -1,5 +1,5 @@
 cask "doubletwist" do
-  version :latest
+  version "3.2.0,11870"
   sha256 :no_check
 
   url "http://download.doubletwist.com/mac/doubleTwist.dmg"

@@ -1,5 +1,5 @@
 cask "tyke" do
-  version :latest
+  version "1.0"
   sha256 :no_check
 
   url "https://tyke.app/tyke.dmg"

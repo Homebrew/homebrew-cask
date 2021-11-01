@@ -1,13 +1,18 @@
 cask "nozbe" do
-  version "3.13.0"
-  sha256 "384a15bd9b34935b7f0f152ebdd5c8653e0aed86e01c4e7844acfe34769cc4c9"
+  version "3.20.1"
+  sha256 "1cf4461e172b66b486c24e1dbc6177559e921bf10e100b74262a165e44cee876"
 
-  url "https://files.nozbe.com/#{version.no_dots}/release/Nozbe.app.zip"
+  url "https://files2.nozbe.com/#{version.no_dots}/release/Nozbe.app.zip"
   name "Nozbe"
   desc "Task manager"
   homepage "https://nozbe.com/"
 
+  livecheck do
+    url "https://help.nozbe.com/gtd/release-notes/"
+    regex(%r{<h2.*id="newest".*?>Version\s+(\d+(?:\.\d+)+)</h2>}i)
+  end
+
   depends_on macos: ">= :sierra"
 
-  app "Nozbe.app"
+  app "Mac (Developer ID) 2021-08-19 10-25-56/Nozbe.app"
 end

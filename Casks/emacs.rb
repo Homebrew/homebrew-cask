@@ -1,11 +1,17 @@
 cask "emacs" do
-  version "27.1-1"
-  sha256 "67688cfa124544a2d41d62ad33dcd12843679a1bd48e870836044d9a0bb9b062"
+  version "27.2-2"
+  sha256 "a5f5efe3ce8e3c2ef1c0e1aaf6ab9197ee93ad22e80c2742710338fad27bad8b"
 
   url "https://emacsformacosx.com/emacs-builds/Emacs-#{version}-universal.dmg"
-  appcast "https://emacsformacosx.com/atom/release"
   name "Emacs"
+  desc "Text editor"
   homepage "https://emacsformacosx.com/"
+
+  livecheck do
+    url "https://emacsformacosx.com/atom/release"
+    strategy :page_match
+    regex(%r{href=.*?/Emacs-(\d+(?:\.\d+)*(?:-\d+)?)-universal\.dmg}i)
+  end
 
   conflicts_with formula: "emacs"
 
@@ -14,6 +20,10 @@ cask "emacs" do
   binary "#{appdir}/Emacs.app/Contents/MacOS/bin/ebrowse"
   binary "#{appdir}/Emacs.app/Contents/MacOS/bin/emacsclient"
   binary "#{appdir}/Emacs.app/Contents/MacOS/bin/etags"
+  manpage "#{appdir}/Emacs.app/Contents/Resources/man/man1/ebrowse.1.gz"
+  manpage "#{appdir}/Emacs.app/Contents/Resources/man/man1/emacs.1.gz"
+  manpage "#{appdir}/Emacs.app/Contents/Resources/man/man1/emacsclient.1.gz"
+  manpage "#{appdir}/Emacs.app/Contents/Resources/man/man1/etags.1.gz"
 
   zap trash: [
     "~/Library/Caches/org.gnu.Emacs",

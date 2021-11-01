@@ -1,5 +1,5 @@
 cask "pingmenu" do
-  version :latest
+  version "1.3,2"
   sha256 :no_check
 
   url "https://github.com/kalleboo/PingMenu/raw/master/PingMenu.app.zip"

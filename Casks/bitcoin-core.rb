@@ -1,13 +1,16 @@
 cask "bitcoin-core" do
-  version "0.20.1"
-  sha256 "c378d4e21109f09e8829f3591e015c66632dff2925a60b64d259be05a334c30b"
+  version "22.0"
+  sha256 "3b3e2680f7d9304c13bfebaf6445ada40d72324b4b3e0a07de9db807389a6c5b"
 
-  url "https://bitcoincore.org/bin/bitcoin-core-#{version}/bitcoin-#{version}-osx.dmg"
-  appcast "https://github.com/bitcoin/bitcoin/releases.atom"
+  url "https://bitcoincore.org/bin/bitcoin-core-#{version}/bitcoin-#{version}-osx-signed.dmg"
   name "Bitcoin Core"
+  desc "Bitcoin client and wallet"
   homepage "https://bitcoincore.org/"
 
-  conflicts_with cask: "bitcoin-xt"
+  livecheck do
+    url "https://github.com/bitcoin/bitcoin"
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "Bitcoin-Qt.app", target: "Bitcoin Core.app"

@@ -4,7 +4,14 @@ cask "keyboard-lock" do
 
   url "http://keylock.io/public/app/Keyboard-Lock-#{version}.zip"
   name "Keyboard Lock"
+  desc "Simple keyboard locker"
   homepage "http://keylock.io/"
+
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/Keyboard-Lock-(\d+(?:\.\d+)*)\.zip}i)
+  end
 
   app "Keyboard Lock.app"
 

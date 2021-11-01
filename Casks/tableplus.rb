@@ -1,14 +1,19 @@
 cask "tableplus" do
-  version "3.9.1,342.2"
-  sha256 "6d6f2e723aa4431dca07c29406bf958a90d9a942be249a46b19121869c0ef86e"
+  version "4.5.0,396"
+  sha256 "aca94041f83cbf4d37e11b121f3c0a8d36a97d6a20f7e378744f3c98e42d2c7c"
 
   url "https://download.tableplus.com/macos/#{version.after_comma}/TablePlus.dmg"
-  appcast "https://tableplus.com/osx/version.xml",
-          must_contain: version.after_comma
   name "TablePlus"
+  desc "Native GUI tool for relational databases"
   homepage "https://tableplus.com/"
 
+  livecheck do
+    url "https://tableplus.com/osx/version.xml"
+    strategy :sparkle
+  end
+
   auto_updates true
+  depends_on macos: ">= :el_capitan"
 
   app "TablePlus.app"
 

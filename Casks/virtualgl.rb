@@ -1,11 +1,11 @@
 cask "virtualgl" do
-  version "2.6.3"
-  sha256 "fbbc32adca830dc68eeff099843d230388c1f0fe51ea2f243855b9e17221e324"
+  version "2.6.95"
+  sha256 "43379793b4b63a37dd294841a5f442c08c666edad0bedc5d48b9f853d3e998b7"
 
-  # downloads.sourceforge.net/virtualgl/ was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/virtualgl/VirtualGL-#{version}.dmg"
-  appcast "https://sourceforge.net/projects/virtualgl/rss"
+  url "https://downloads.sourceforge.net/virtualgl/VirtualGL-#{version}.dmg",
+      verified: "downloads.sourceforge.net/virtualgl/"
   name "VirtualGL"
+  desc "3D without boundaries"
   homepage "https://www.virtualgl.org/"
 
   pkg "VirtualGL.pkg"

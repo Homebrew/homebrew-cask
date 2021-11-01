@@ -1,13 +1,25 @@
 cask "visual-studio-code" do
-  version "1.49.1"
-  sha256 "3de8ed982acb29676db919ceeb5871be8b18756f57be9ce5b573767d0b884c0e"
+  arch = Hardware::CPU.intel? ? "darwin" : "darwin-arm64"
 
-  url "https://update.code.visualstudio.com/#{version}/darwin/stable"
-  appcast "https://update.code.visualstudio.com/api/update/darwin/stable/VERSION"
+  version "1.61.2"
+
+  if Hardware::CPU.intel?
+    sha256 "6481bebaead19a42a46007392ed82b75c1967e8bf34b468bbbb107e3a22a3d83"
+  else
+    sha256 "7e7d86c51b89c3bd5984a530ab2bae5e4c3d4960e3c1ac562cd7e52258cfd51e"
+  end
+
+  url "https://update.code.visualstudio.com/#{version}/#{arch}/stable"
   name "Microsoft Visual Studio Code"
   name "VS Code"
   desc "Open-source code editor"
   homepage "https://code.visualstudio.com/"
+
+  livecheck do
+    url "https://update.code.visualstudio.com/api/update/#{arch}/stable/VERSION"
+    strategy :page_match
+    regex(/"productVersion"\s*:\s*"(\d+(:?\.\d+)*)"/)
+  end
 
   auto_updates true
 

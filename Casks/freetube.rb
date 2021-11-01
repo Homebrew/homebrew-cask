@@ -1,11 +1,16 @@
 cask "freetube" do
-  version "0.7.3"
-  sha256 "2bd054ad61e2a9754e69a200311f3a0f8fca09d0f3429e6130dbe3ae8936567e"
+  version "0.15.0"
+  sha256 "928115aaf71ef84743852051810dd30d221c425d49c3bf6a6f1390e6f47e1478"
 
-  url "https://github.com/FreeTubeApp/FreeTube/releases/download/v#{version}-beta/FreeTube-#{version}-mac.dmg"
-  appcast "https://github.com/FreeTubeApp/FreeTube/releases.atom"
+  url "https://github.com/FreeTubeApp/FreeTube/releases/download/v#{version}-beta/freetube-#{version}-mac.dmg"
   name "FreeTube"
+  desc "YouTube player focusing on privacy"
   homepage "https://github.com/FreeTubeApp/FreeTube"
+
+  livecheck do
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+)/i)
+  end
 
   app "FreeTube.app"
 

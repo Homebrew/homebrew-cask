@@ -1,13 +1,14 @@
 cask "jamulus" do
-  version "3.5.10"
-  sha256 "4f891976d3499f4511752c625b48e05751d561aaca7bed1601240560e81de1c8"
+  version "3.8.1"
+  sha256 "79fffe5c72c38260e6e5edff07ecccb355995c502d8a4a8c710eeccff8284624"
 
-  url "https://downloads.sourceforge.net/llcon/Jamulus-#{version}-installer-mac.dmg"
-  appcast "https://sourceforge.net/projects/llcon/rss"
+  url "https://downloads.sourceforge.net/llcon/jamulus_#{version}_mac.dmg",
+      verified: "downloads.sourceforge.net/llcon/"
   name "Jamulus"
-  homepage "http://llcon.sourceforge.net/"
+  desc "Play music online with friends"
+  homepage "https://jamulus.io/"
 
-  auto_updates true
+  depends_on macos: ">= :el_capitan"
 
   app "Jamulus.app"
   app "JamulusServer.app"

@@ -1,13 +1,17 @@
 cask "all-in-one-messenger" do
-  version "2.2.2"
-  sha256 "c4426400560634dd1450d7510e980dd18a8b52fa104d029df5fe630c9c0f777b"
+  version "2.5.0"
+  sha256 "e027442646255f02e848dc9ae78a57ccda00c860af5ccd7619996f15163611f2"
 
-  # all-in-one-messenger.ams3.digitaloceanspaces.com/ was verified as official when first introduced to the cask
-  url "https://all-in-one-messenger.ams3.digitaloceanspaces.com/All-in-One%20Messenger-#{version}.dmg"
-  appcast "https://all-in-one-messenger.ams3.digitaloceanspaces.com/latest-mac.yml"
+  url "https://all-in-one-messenger.ams3.digitaloceanspaces.com/All-in-One%20Messenger-#{version}.dmg",
+      verified: "all-in-one-messenger.ams3.digitaloceanspaces.com/"
   name "All-in-One Messenger"
   desc "Combined interface for various messaging platforms"
   homepage "https://allinone.im/"
+
+  livecheck do
+    url "https://all-in-one-messenger.ams3.digitaloceanspaces.com/latest-mac.yml"
+    strategy :electron_builder
+  end
 
   auto_updates true
 

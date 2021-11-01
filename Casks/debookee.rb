@@ -1,15 +1,20 @@
 cask "debookee" do
-  version "7.4.1"
-  sha256 "68984eb09333a545dbb634e3a323295ca0042c215df22a442fe56e138fe70d9a"
+  version "8.1.1,3238"
+  sha256 :no_check
 
-  # iwaxx.com/debookee/ was verified as official when first introduced to the cask
-  url "https://www.iwaxx.com/debookee/debookee.zip"
-  appcast "https://www.iwaxx.com/debookee/appcast.php"
+  url "https://www.iwaxx.com/debookee/debookee.zip",
+      verified: "iwaxx.com/debookee/"
   name "Debookee"
+  desc "Network traffic analyzer"
   homepage "https://debookee.com/"
 
+  livecheck do
+    url "https://www.iwaxx.com/debookee/appcast.php"
+    strategy :sparkle
+  end
+
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   app "Debookee.app"
 

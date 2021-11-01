@@ -1,9 +1,8 @@
 cask "nrlquaker-winbox" do
-  version "3.27.0"
-  sha256 "e38aca871ac88ad1e5646901519ffc9923d445dcb7e50b8c847f1bd874c65326"
+  version "3.31.0"
+  sha256 "431c87b4426d09b7c05de57e0c4a9fd21a41e84c3dca8050d45b3d984e1d0cef"
 
   url "https://github.com/nrlquaker/winbox-mac/releases/download/v#{version}/Winbox-mac-#{version}.zip"
-  appcast "https://github.com/nrlquaker/winbox-mac/releases.atom"
   name "Winbox-mac"
   desc "MikroTik Winbox"
   homepage "https://github.com/nrlquaker/winbox-mac/"

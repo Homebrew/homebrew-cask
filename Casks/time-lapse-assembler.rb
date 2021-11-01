@@ -1,5 +1,5 @@
 cask "time-lapse-assembler" do
-  version :latest
+  version "1.5.3"
   sha256 :no_check
 
   url "http://www.dayofthenewdan.com/TimeLapseAssembler.dmg"

@@ -1,13 +1,17 @@
 cask "skype" do
-  version "8.64.0.80"
-  sha256 "61a54fea27c94087d1d9ebacc8a90773e22b1de735887c4c40ae6aeb85432bed"
+  version "8.77.0.98"
+  sha256 "e2743e134bd85a4ffe8337e9b45558c61cb5a4bff6b07dc5683be657cf782bec"
 
-  # endpoint920510.azureedge.net/s4l/s4l/download/mac/ was verified as official when first introduced to the cask
-  url "https://endpoint920510.azureedge.net/s4l/s4l/download/mac/Skype-#{version}.dmg"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://go.skype.com/mac.download"
+  url "https://endpoint920510.azureedge.net/s4l/s4l/download/mac/Skype-#{version}.dmg",
+      verified: "endpoint920510.azureedge.net/s4l/s4l/download/mac/"
   name "Skype"
   desc "Video chat, voice call and instant messaging application"
   homepage "https://www.skype.com/"
+
+  livecheck do
+    url "https://go.skype.com/mac.download"
+    strategy :header_match
+  end
 
   auto_updates true
 
@@ -19,6 +23,7 @@ cask "skype" do
     "~/Library/Address Book Plug-Ins/SkypeABSMS.bundle",
     "~/Library/Address Book Plug-Ins/SkypeABChatter.bundle",
     "~/Library/Application Scripts/com.skype.skype.shareagent",
+    "~/Library/Application Support/Microsoft/Skype for Desktop",
     "~/Library/Application Support/Skype",
     "~/Library/Application Support/Skype Helper",
     "~/Library/Application Support/T/SkypeRT",

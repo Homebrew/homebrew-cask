@@ -1,11 +1,16 @@
 cask "airtame" do
-  version "4.1.1"
-  sha256 "44ae3bbfe967e086ccc7d37247b3e549ee7d1c7866f01caeec9a4713f0389b4b"
+  version "4.2.1"
+  sha256 "be8f24611aac6c552e2a396559f10408df48f981d0774e568b3d4aab0660efef"
 
   url "https://downloads-cdn.airtame.com/app/latest/mac/Airtame-#{version}.dmg"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://downloads-cdn.airtame.com/get.php?platform=osx_x64"
   name "Airtame"
+  desc "Wireless screen sharing platform"
   homepage "https://airtame.com/"
+
+  livecheck do
+    url "https://downloads-website.airtame.com/get.php?platform=mac"
+    strategy :header_match
+  end
 
   auto_updates true
 

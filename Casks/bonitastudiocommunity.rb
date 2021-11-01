@@ -1,13 +1,16 @@
 cask "bonitastudiocommunity" do
-  version "7.11.1"
-  sha256 "898af74f05e7b9b297b15225c662e62f0d18fb35a661483f62f9dfe2f9dfbbcb"
+  version "2021.1"
+  sha256 "428831b29c146a7dd8327f837be49b0582239f9d980d9b21fc9c9d0bf99aca7c"
 
-  # github.com/bonitasoft/bonita-platform-releases was verified as official when first introduced to the cask
-  url "https://github.com/bonitasoft/bonita-platform-releases/releases/download/#{version}/BonitaStudioCommunity-#{version}-x86_64.dmg"
-  appcast "https://www.bonitasoft.com/downloads",
-          must_contain: version.major_minor
+  url "https://github.com/bonitasoft/bonita-platform-releases/releases/download/#{version}/BonitaStudioCommunity-#{version}-x86_64.dmg",
+      verified: "github.com/bonitasoft/bonita-platform-releases/"
   name "Bonita Studio Community Edition"
   homepage "https://www.bonitasoft.com/downloads"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   installer script: {
     executable: "#{staged_path}/BonitaStudioCommunity-#{version}.app/Contents/MacOS/installbuilder.sh",

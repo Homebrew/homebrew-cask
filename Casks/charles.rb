@@ -1,12 +1,16 @@
 cask "charles" do
-  version "4.5.6"
-  sha256 "c00a002476b7a453ff1585288781081f71a81daacf0e39fa362e733a65f7258c"
+  version "4.6.2"
+  sha256 "8e66c73ebd5d97bbe2b79e27bdfd3f06299edb7f941246ea52cc32883917df12"
 
   url "https://www.charlesproxy.com/assets/release/#{version}/charles-proxy-#{version}.dmg"
-  appcast "https://www.charlesproxy.com/latest.do"
   name "Charles"
   desc "Web debugging Proxy application"
   homepage "https://www.charlesproxy.com/"
+
+  livecheck do
+    url "https://www.charlesproxy.com/latest.do"
+    regex(/v?(\d+(?:\.\d+)+)/i)
+  end
 
   app "Charles.app"
 

@@ -1,24 +1,22 @@
 cask "little-snitch" do
-  version "4.5.2"
-  sha256 "52116bb4e5186fed441c7cab835b4dd822243248f402334b486f0c7b20062c13"
+  version "5.3.1"
+  sha256 "8bc5b61a72bf33b197726a2f5df44676f89f42ce44a138e7f34c5434191b1618"
 
   url "https://www.obdev.at/downloads/littlesnitch/LittleSnitch-#{version}.dmg"
-  appcast "https://www.obdev.at/products/littlesnitch/releasenotes.html"
   name "Little Snitch"
   desc "Host-based application firewall"
   homepage "https://www.obdev.at/products/littlesnitch/index.html"
 
+  livecheck do
+    url "https://www.obdev.at/products/littlesnitch/download.html"
+    strategy :page_match
+    regex(%r{href=.*?/LittleSnitch-(\d+(?:\.\d+)*)\.dmg}i)
+  end
+
   auto_updates true
-  depends_on macos: ">= :el_capitan"
-  container type: :naked
+  depends_on macos: ">= :big_sur"
 
-  installer manual: "LittleSnitch-#{version}.dmg"
-
-  uninstall launchctl: [
-    "at.obdev.LittleSnitchUIAgent",
-    "at.obdev.LittleSnitchHelper",
-    "at.obdev.littlesnitchd",
-  ]
+  app "Little Snitch.app"
 
   zap trash: [
     "/Library/Application Support/Objective Development/Little Snitch",
@@ -48,9 +46,4 @@ cask "little-snitch" do
     "/Library/StagedExtensions/Library/Extensions/LittleSnitch.kext",
   ],
       rmdir: "/Library/Application Support/Objective Development"
-
-  caveats do
-    kext
-    reboot
-  end
 end

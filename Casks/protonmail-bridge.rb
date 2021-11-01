@@ -1,11 +1,18 @@
 cask "protonmail-bridge" do
-  version "1.3.3"
-  sha256 "8ea6c68f25fda80ddba5915f9281150c4f6b4a50d2891cb938ad6937b8a7f495"
+  version "1.8.10"
+  sha256 :no_check
 
   url "https://protonmail.com/download/Bridge-Installer.dmg"
-  appcast "https://protonmail.com/download/current_version_darwin.json"
   name "ProtonMail Bridge"
+  desc "Bridges ProtonMail to email clients supporting IMAP and SMTP protocols"
   homepage "https://protonmail.com/bridge/"
+
+  livecheck do
+    url "https://protonmail.com/download/current_version_darwin.json"
+    regex(/"Version"\s*:\s*"(\d+(?:\.\d+)+)"/i)
+  end
+
+  auto_updates true
 
   app "ProtonMail Bridge.app"
 

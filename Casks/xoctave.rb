@@ -1,5 +1,5 @@
 cask "xoctave" do
-  version :latest
+  version "1.0"
   sha256 :no_check
 
   url "http://www.xoctave.com/demo/xoctave%20demo.dmg",

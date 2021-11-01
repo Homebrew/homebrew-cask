@@ -1,13 +1,19 @@
 cask "gpodder" do
-  version "3.10.16"
-  sha256 "122ba5535a6a870b06ea60e670a51de29fc436d103c370439e91cc610dd46531"
+  version "3.10.21"
+  sha256 "a6b62428f28f0a06f3d8359999594688ddd38e1b3c7c22eb51dfadf0f39cf5a4"
 
-  # github.com/gpodder/gpodder/ was verified as official when first introduced to the cask
-  url "https://github.com/gpodder/gpodder/releases/download/#{version}/macOS-gPodder-#{version}.zip"
-  appcast "https://github.com/gpodder/gpodder/releases.atom"
+  url "https://github.com/gpodder/gpodder/releases/download/#{version}/macOS-gPodder-#{version}.zip",
+      verified: "github.com/gpodder/gpodder/"
   name "gPodder"
   desc "Podcast client"
   homepage "https://gpodder.github.io/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "gPodder.app"
+
+  zap trash: "~/Library/Application Support/gPodder"
 end

@@ -1,10 +1,10 @@
 cask "haptickey" do
-  version "0.5.0"
-  sha256 "ea7ce3a3c0761a0e0cbd13f2bccdc64c3f0cff363ecf89fcacb7081f634a412f"
+  version "0.6.1"
+  sha256 "62859fbac70db7183b421b11aaea29987a2cc0920ba602c8174a23c23a99c82d"
 
   url "https://github.com/niw/HapticKey/releases/download/#{version}/HapticKey.app.zip"
-  appcast "https://github.com/niw/HapticKey/releases.atom"
   name "HapticKey"
+  desc "Trigger haptic feedback when tapping Touch Bar"
   homepage "https://github.com/niw/HapticKey"
 
   depends_on macos: ">= :sierra"

@@ -3,10 +3,16 @@ cask "expressions" do
   sha256 "cce8506474d9c071ce9e945c7709e21cadcab2e962805b3b3ba61246723195ad"
 
   url "https://www.apptorium.com/public/products/expressions/releases/Expressions-#{version}.zip"
-  appcast "https://updates.devmate.com/com.apptorium.Expressions-dm.xml"
   name "Expressions"
   desc "Regular expressions manager app"
   homepage "https://www.apptorium.com/expressions"
+
+  livecheck do
+    url "https://www.apptorium.com/expressions/trial"
+    regex(%r{href=.*?/Expressions-(\d+(?:\.\d+)*)\.zip}i)
+  end
+
+  depends_on macos: ">= :el_capitan"
 
   app "Expressions.app"
 

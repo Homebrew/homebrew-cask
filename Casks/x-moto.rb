@@ -1,12 +1,17 @@
 cask "x-moto" do
-  version "0.5.10"
-  sha256 "0b032d21fb0644db252fe9210f9c0a3f465616996aad6d50b20ead2123a3507a"
+  version "0.6.1"
+  sha256 "36f85f4bc51703b555af8cd05ef78a9ca332383fc0641ed16ee88c89bd026f1f"
 
-  # github.com/vasi/xmoto-build/ was verified as official when first introduced to the cask
-  url "https://github.com/vasi/xmoto-build/releases/download/v#{version}-r1/xmoto-#{version}-macosx.zip"
-  appcast "https://github.com/vasi/xmoto-build/releases.atom"
-  name "XMoto"
+  url "https://github.com/xmoto/xmoto/releases/download/#{version}/xmoto-#{version}.dmg",
+      verified: "github.com/xmoto/xmoto/"
+  name "X-Moto"
   homepage "https://xmoto.tuxfamily.org/"
 
-  app "X-Moto.app"
+  livecheck do
+    url :url
+    strategy :git
+  end
+
+  # Renamed for consistency: app name is different in the Finder and in a shell.
+  app "xmoto.app", target: "X-Moto.app"
 end

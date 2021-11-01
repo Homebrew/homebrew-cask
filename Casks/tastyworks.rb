@@ -1,12 +1,17 @@
 cask "tastyworks" do
-  version "1.9.0"
-  sha256 "c9ea8ec83e0b5e6c69b17b47da045d9280c1786fc8a30a519198f97891049e0a"
+  version "1.14.2"
+  sha256 "09dec162db321904a25d196134da699dc7d79a1c17fa7134d81fc11677802f1b"
 
   url "https://download.tastyworks.com/desktop-#{version.major}.x.x/#{version}/tastyworks-#{version}.dmg"
-  appcast "https://tastyworks.freshdesk.com/support/solutions/articles/43000435186-recent-release-notes",
-          must_contain: version.major_minor
   name "tastyworks"
+  desc "Desktop trading platform for the tastyworks brokerage"
   homepage "https://tastyworks.com/"
+
+  livecheck do
+    url "https://tastyworks.com/component---src-pages-technology-js-c0073caebcf082ded47f.js"
+    strategy :page_match
+    regex(%r{/tastyworks-(\d+(?:\.\d+)*)}i)
+  end
 
   auto_updates true
 

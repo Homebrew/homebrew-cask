@@ -1,5 +1,5 @@
 cask "plan" do
-  version :latest
+  version "0.9.1"
   sha256 :no_check
 
   url "https://cdn.getplan.co/plan-latest.dmg"

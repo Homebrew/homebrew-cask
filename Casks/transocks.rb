@@ -1,12 +1,17 @@
 cask "transocks" do
-  version "3.0.6"
-  sha256 "69b638f28f02806fd380d265979e3d3a7206faf70a8672f3bae3af6ebdbd5e91"
+  version "3.0.9,872"
+  sha256 "cfdcdf99b84b659f08ca4debbaf0c3d31126201acc753ebd6461abfdbdd04fc1"
 
-  url "https://www.transocks.com/download/mac/Transocks_Official_v#{version}.dmg"
-  appcast "https://www.transocks.org/updateInfo/Original_update.xml"
+  url "https://download.chuansuo.io/transocks/download/mac/#{version.before_comma}/Transocks_official_v#{version.before_comma}.dmg",
+      verified: "download.chuansuo.io/"
   name "Transocks"
   desc "Tool to optimize access to various video music resources"
   homepage "https://www.transocks.com/"
+
+  livecheck do
+    url "https://www.transocks.org/updateInfo/official_update.xml"
+    strategy :sparkle
+  end
 
   app "穿梭Transocks.app"
 

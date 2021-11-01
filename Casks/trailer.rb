@@ -1,10 +1,9 @@
 cask "trailer" do
-  version "1.7.0"
-  sha256 "8dd50193a29e011ea1a190f6eb6ac5ed68a9078d32e09a10563786b238b8e187"
+  version "1.7.6"
+  sha256 "7e9890b2ee35cd3f2f07761252705117021addccff8d32b9554aabd792d5df30"
 
-  # github.com/ptsochantaris/trailer/ was verified as official when first introduced to the cask
-  url "https://github.com/ptsochantaris/trailer/releases/download/#{version}/Trailer-#{version.no_dots}.zip"
-  appcast "https://github.com/ptsochantaris/trailer/releases.atom"
+  url "https://github.com/ptsochantaris/trailer/releases/download/#{version}/Trailer-#{version.no_dots}.zip",
+      verified: "github.com/ptsochantaris/trailer/"
   name "Trailer"
   desc "Managing Pull Requests and Issues For GitHub & GitHub Enterprise"
   homepage "https://ptsochantaris.github.io/trailer/"

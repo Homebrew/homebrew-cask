@@ -1,13 +1,16 @@
 cask "vox" do
-  version "3398.3,1580250435"
-  sha256 "7b28a89217fad66944e9308e967a5e8dedb73f2536da543e6620c62575c6d730"
+  version "3.4.2,3420.3"
+  sha256 :no_check
 
-  # devmate.com/com.coppertino.Vox/ was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.coppertino.Vox/#{version.before_comma}/#{version.after_comma}/Vox-#{version.before_comma}.zip"
-  appcast "https://updates.devmate.com/com.coppertino.Vox.xml"
+  url "https://vox.rocks/app-download?app=vox"
   name "VOX"
   desc "Music player for high resoluion (Hi-Res) music through the external sources"
   homepage "https://vox.rocks/mac-music-player"
+
+  livecheck do
+    url "https://api.appcenter.ms/v0.1/public/sparkle/apps/bcf930e2-32da-0f52-2b12-6c3557ba50d7"
+    strategy :sparkle
+  end
 
   auto_updates true
 

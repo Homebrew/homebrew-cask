@@ -1,11 +1,17 @@
 cask "webplotdigitizer" do
-  version "4.3"
-  sha256 "f0810ab5be0ad5900a7bf6700687d0652e0f57fae3083fd5f591456d8800d0c1"
+  version "4.5"
+  sha256 "7cc5eaccda1d4e3cb1a53cf214eaa807feccaca4e62e2958b16342fbc4d578c7"
 
   url "https://automeris.io/downloads/WebPlotDigitizer-#{version}-darwin-x64.zip"
-  appcast "https://github.com/ankitrohatgi/WebPlotDigitizer/releases.atom"
   name "WebPlotDigitizer"
+  desc "Extract numerical data from plot images"
   homepage "https://automeris.io/WebPlotDigitizer/"
+
+  livecheck do
+    url "https://automeris.io/WebPlotDigitizer/download.html"
+    strategy :page_match
+    regex(%r{href=.*?/WebPlotDigitizer-(\d+(?:\.\d+)*)-darwin-x64\.zip}i)
+  end
 
   app "WebPlotDigitizer-#{version}-darwin-x64/WebPlotDigitizer-#{version}.app"
 end

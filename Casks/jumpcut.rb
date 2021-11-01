@@ -1,10 +1,9 @@
 cask "jumpcut" do
-  version "0.72"
-  sha256 "37c354d14394ca0af113a38295b3c1f8ec4e44e1f9bd90346f7a1cdebea78fc5"
+  version "0.75"
+  sha256 "170c669ae3dffdf029434412eb6ec5d733905583ad7ad72120179b5af3615c1a"
 
-  # github.com/snark/jumpcut/ was verified as official when first introduced to the cask
-  url "https://github.com/snark/jumpcut/releases/download/v#{version}/Jumpcut-#{version}.tar.bz2"
-  appcast "https://github.com/snark/jumpcut/releases.atom"
+  url "https://github.com/snark/jumpcut/releases/download/v#{version}/Jumpcut-#{version}.tar.bz2",
+      verified: "github.com/snark/jumpcut/"
   name "Jumpcut"
   desc "Clipboard manager"
   homepage "https://snark.github.io/jumpcut/"

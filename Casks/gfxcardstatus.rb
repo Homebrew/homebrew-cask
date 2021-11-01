@@ -1,11 +1,16 @@
 cask "gfxcardstatus" do
-  version "2.3"
-  sha256 "092b3e2fad44681ba396cf498707c8b6c228fd55310770a8323ebb9344b4d9a1"
+  version "2.5,5482"
+  sha256 "70d94cbf5d691c9530e974b5512a106e0bf532ab345fd911199928b8b11a3688"
 
-  url "https://gfx.io/downloads/gfxCardStatus-#{version}.zip"
-  appcast "https://gfx.io/appcast.xml"
+  url "https://github.com/codykrieger/gfxCardStatus/releases/download/v#{version.before_comma}/gfxCardStatus-#{version.before_comma}.zip",
+      verified: "github.com/codykrieger/gfxCardStatus/"
   name "gfxCardStatus"
   homepage "https://gfx.io/"
+
+  livecheck do
+    url "https://gfx.io/appcast.xml"
+    strategy :sparkle
+  end
 
   app "gfxCardStatus.app"
 

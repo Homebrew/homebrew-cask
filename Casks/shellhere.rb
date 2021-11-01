@@ -1,5 +1,5 @@
 cask "shellhere" do
-  version :latest
+  version "1.1"
   sha256 :no_check
 
   url "https://github.com/downloads/lhagan/ShellHere/ShellHere.dmg"

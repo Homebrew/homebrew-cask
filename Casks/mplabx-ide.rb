@@ -1,11 +1,16 @@
 cask "mplabx-ide" do
-  version "5.40"
-  sha256 "00f582ff074845260c7d2474c92a99b0f0f1cb4e16a7e6d173c5cabd27da0fa3"
+  version "5.50"
+  sha256 "6839ceb3d3e276aff3d9f5b3b97c58070881778d8a8eb5428b9cac114b7b9f08"
 
   url "https://ww1.microchip.com/downloads/en/DeviceDoc/MPLABX-v#{version}-osx-installer.dmg"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://www.microchip.com/mplabx-ide-osx-installer"
   name "MPLab X IDE"
+  desc "IDE for Microchip's microcontrollers and digital signal controllers"
   homepage "https://www.microchip.com/mplab/mplab-x-ide"
+
+  livecheck do
+    url "https://www.microchip.com/mplabx-ide-osx-installer"
+    strategy :header_match
+  end
 
   app "mplab_ide.app", target: "microchip/mplab_ide.app"
   app "mplab_ipe.app", target: "microchip/mplab_ipe.app"

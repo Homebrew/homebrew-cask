@@ -1,12 +1,23 @@
 cask "tunnelblick" do
-  version "3.8.3a,5521"
-  sha256 "309ec37fa94daf5fa435382d4f924d3d841f423896f97f819c56a44ec9b0aafa"
+  version "3.8.6a,5711"
+  sha256 "636c52eaba89a0fc7549160892fabb62f4d11bb34d959872f2c0ab93765e0835"
 
-  # github.com/Tunnelblick/Tunnelblick/ was verified as official when first introduced to the cask
-  url "https://github.com/Tunnelblick/Tunnelblick/releases/download/v#{version.before_comma}/Tunnelblick_#{version.before_comma}_build_#{version.after_comma}.dmg"
-  appcast "https://github.com/Tunnelblick/Tunnelblick/releases.atom"
+  url "https://github.com/Tunnelblick/Tunnelblick/releases/download/v#{version.before_comma}/Tunnelblick_#{version.before_comma}_build_#{version.after_comma}.dmg",
+      verified: "github.com/Tunnelblick/Tunnelblick/"
   name "Tunnelblick"
+  desc "Free and open-source OpenVPN client"
   homepage "https://www.tunnelblick.net/"
+
+  # We need to check all releases since the current latest release is a beta version.
+  livecheck do
+    url "https://github.com/Tunnelblick/Tunnelblick/releases"
+    strategy :page_match do |page|
+      match = page.match(%r{href=.*?/Tunnelblick_(\d+(?:\.\d+)*[a-z]?)_build_(\d+)\.dmg}i)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
+    end
+  end
 
   auto_updates true
 

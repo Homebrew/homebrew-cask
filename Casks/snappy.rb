@@ -1,5 +1,5 @@
 cask "snappy" do
-  version :latest
+  version "1.2.5,315"
   sha256 :no_check
 
   url "http://go-snappy.com/Snappy.zip"

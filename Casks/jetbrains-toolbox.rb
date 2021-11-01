@@ -1,14 +1,31 @@
 cask "jetbrains-toolbox" do
-  version "1.18.7455"
-  sha256 "b7b7d4d28448a39214e3ba435af93a137e67ecde85e6ed9f06fa290deba88936"
+  version "1.21,1.21.9712"
 
-  url "https://download.jetbrains.com/toolbox/jetbrains-toolbox-#{version}.dmg"
-  appcast "https://data.services.jetbrains.com/products/releases?code=TBA&latest=true&type=release"
+  if Hardware::CPU.intel?
+    sha256 "69a50c4b4d587da1a06c8553c9e28d22bff1c8d25e413e0306162ea7ad03f354"
+
+    url "https://download.jetbrains.com/toolbox/jetbrains-toolbox-#{version.after_comma}.dmg"
+  else
+    sha256 "1440b9cea8f283521a57b8060bfb7668ce2a1ba3c78ec5a91730f27984e8f3d9"
+
+    url "https://download.jetbrains.com/toolbox/jetbrains-toolbox-#{version.after_comma}-arm64.dmg"
+  end
+
   name "JetBrains Toolbox"
   desc "JetBrains tools manager"
-  homepage "https://www.jetbrains.com/toolbox/app/"
+  homepage "https://www.jetbrains.com/toolbox-app/"
+
+  livecheck do
+    url "https://data.services.jetbrains.com/products/releases?code=TBA&latest=true&type=release"
+    strategy :page_match do |page|
+      JSON.parse(page)["TBA"].map do |release|
+        "#{release["version"]},#{release["build"]}"
+      end
+    end
+  end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "JetBrains Toolbox.app"
 

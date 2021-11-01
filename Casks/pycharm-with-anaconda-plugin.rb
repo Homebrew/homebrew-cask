@@ -1,10 +1,10 @@
 cask "pycharm-with-anaconda-plugin" do
-  version "2020.2.2"
-  sha256 "a64c6ca95d0ef78361ec00f6a57722b295c0538588fb7861ed2844578bcc8ad2"
+  version "2020.3.2,203.6682.179"
+  sha256 "61637593237424a9bb7b44408ab3631a8e2458b58c68b5060fea9b218a10256f"
 
-  url "https://download.jetbrains.com/python/pycharm-professional-anaconda-#{version}.dmg"
-  appcast "https://data.services.jetbrains.com/products/releases?code=PCC&latest=true&type=release"
+  url "https://download.jetbrains.com/python/pycharm-professional-anaconda-#{version.before_comma}.dmg"
   name "Jetbrains PyCharm with Anaconda plugin"
+  desc "PyCharm IDE with Anaconda plugin"
   homepage "https://www.jetbrains.com/pycharm/promo/anaconda"
 
   auto_updates true
@@ -24,4 +24,8 @@ cask "pycharm-with-anaconda-plugin" do
     "~/Library/Application Support/JetBrains/PyCharm*",
     "~/Library/Saved Application State/com.jetbrains.pycharm.savedState",
   ]
+
+  caveats do
+    discontinued
+  end
 end

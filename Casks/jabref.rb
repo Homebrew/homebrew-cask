@@ -1,11 +1,11 @@
 cask "jabref" do
-  version "5.1"
-  sha256 "834b7b2efa4abc9a627a557de6eae4c627bb6860e545ff89e5307c36a3684f59"
+  version "5.3"
+  sha256 "f6a93cef6453176da25b7ecf81fed805339330113b56cef523de1827f7625d5e"
 
-  # github.com/JabRef/jabref/ was verified as official when first introduced to the cask
-  url "https://github.com/JabRef/jabref/releases/download/v#{version}/JabRef-#{version}.dmg"
-  appcast "https://github.com/JabRef/jabref/releases.atom"
+  url "https://github.com/JabRef/jabref/releases/download/v#{version}/JabRef-#{version}.dmg",
+      verified: "github.com/JabRef/jabref/"
   name "JabRef"
+  desc "Reference manager to edit, manage and search BibTeX files"
   homepage "https://www.jabref.org/"
 
   app "JabRef.app"

@@ -1,11 +1,18 @@
 cask "qlc-plus" do
-  version "4.12.2"
-  sha256 "fe43befe918da4ebfdd503d1f7852fed3dbd9f4a30a1711f9962051d6ebdb681"
+  version "4.12.4"
+  sha256 "63f744f7b55ba9b992aa481cda9049b24f9f568072404a71afe4a4f0a7b71469"
 
   url "https://qlcplus.org/downloads/#{version}/QLC+_#{version}.dmg"
-  appcast "https://github.com/mcallegari/qlcplus/releases.atom"
   name "Q Light Controller+"
+  desc "Control DMX or analog lighting systems"
   homepage "https://qlcplus.org/"
 
+  livecheck do
+    url "https://github.com/mcallegari/qlcplus"
+    regex(/^QLC\+[._-]v?(\d+(?:\.\d+)+)$/i)
+  end
+
   app "QLC+.app"
+
+  zap trash: "~/Library/Application Support/QLC+"
 end

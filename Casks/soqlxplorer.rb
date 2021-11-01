@@ -1,13 +1,18 @@
 cask "soqlxplorer" do
-  version "3.3"
-  sha256 "df52a4749a712c7f527af3f87dcd88c8e08ff25714c666070c09f78f68ca36a3"
+  version "4.2"
+  sha256 "3060930f6ad67fd677a072e4bbde016dd351d7b8a503bd09991448db92abc35c"
 
   url "https://www.pocketsoap.com/osx/soqlx/SoqlXplorer_v#{version}.zip"
-  appcast "https://www.pocketsoap.com/osx/soqlx/appcast.xml"
   name "SoqlXplorer"
+  desc "Desktop client for Salesforce.com platform"
   homepage "https://www.pocketsoap.com/osx/soqlx/"
 
-  depends_on macos: ">= :high_sierra"
+  livecheck do
+    url "https://www.pocketsoap.com/osx/soqlx/appcast.xml"
+    strategy :sparkle
+  end
+
+  depends_on macos: ">= :mojave"
 
   app "SoqlXplorer.app"
 

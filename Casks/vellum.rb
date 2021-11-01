@@ -1,15 +1,20 @@
 cask "vellum" do
-  version "2.7.3"
-  sha256 "8073c92cf29a9eae23d118628acd365695ed7f05e88854d222f4874363c86ad8"
+  version "2.8.9,28900"
+  sha256 "a7459ccc25cbda4e540dc88c87cf134ff69c3a0436627ad3a81f9b294c8438b5"
 
-  # 180g.s3.amazonaws.com/downloads/ was verified as official when first introduced to the cask
-  url "https://180g.s3.amazonaws.com/downloads/Vellum-#{version.no_dots}00.zip"
-  appcast "https://get.180g.co/updates/vellum/"
+  url "https://180g.s3.amazonaws.com/downloads/Vellum-#{version.after_comma}.zip",
+      verified: "180g.s3.amazonaws.com/downloads/"
   name "Vellum"
+  desc "Ebook creation software"
   homepage "https://vellum.pub/"
 
+  livecheck do
+    url "https://get.180g.co/updates/vellum/"
+    strategy :sparkle
+  end
+
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   app "Vellum.app"
 

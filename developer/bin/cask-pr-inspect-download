@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
 require "json"
 require "open-uri"
@@ -34,7 +35,7 @@ end
 
 pr_api = pr_url.sub(%r{^https://github.com/([^/]+)/([^/]+)/pull/([^/]+).*},
                     'https://api.github.com/repos/\1/\2/pulls/\3/files')
-pr_json = JSON.parse(URI.open(pr_api).read)
+pr_json = JSON.parse(URI(pr_api).read)
 
 abort "PR needs to have a single file" if pr_json.count != 1
 
@@ -45,8 +46,8 @@ tmp_cache_dir = Dir.mktmpdir
 tmp_download_dir = File.join(tmp_cache_dir, "downloads")
 
 ENV["HOMEBREW_CACHE"] = tmp_cache_dir
-File.write(local_file, URI.open(file_raw_url).read)
-system("brew", "cask", "fetch", local_file)
+File.write(local_file, URI(file_raw_url).read)
+system("brew", "fetch", "--cask", local_file)
 
 downloaded_file = File.join(tmp_download_dir, Dir.children(tmp_download_dir).first)
 downloaded_file_ext = File.extname(downloaded_file)

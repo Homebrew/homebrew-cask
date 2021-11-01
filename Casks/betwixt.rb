@@ -3,7 +3,6 @@ cask "betwixt" do
   sha256 "a97f893e8bc7611dfde66ae75775a829c4d25959b946276aacf32cc8485c4054"
 
   url "https://github.com/kdzwinel/betwixt/releases/download/#{version}/Betwixt-darwin-x64.zip"
-  appcast "https://github.com/kdzwinel/betwixt/releases.atom"
   name "Betwixt"
   desc "Web Debugging Proxy based on Chrome DevTools Network panel"
   homepage "https://github.com/kdzwinel/betwixt"

@@ -1,12 +1,16 @@
 cask "zenmap" do
-  version "7.80"
-  sha256 "3009b316b719b3f3be6c4279b8a03ba85b2332ccb9eaf4e1469ebfe30f4ff96a"
+  version "7.92"
+  sha256 "c561fb11d9c84922d9ebcf095f31ee2e314f3e6800ad66c93381ada43b6ca30c"
 
   url "https://nmap.org/dist/nmap-#{version}.dmg"
-  appcast "https://nmap.org/dist/?C=M&O=D"
   name "Zenmap"
   desc "Multi-platform graphical interface for official Nmap Security Scanner"
   homepage "https://nmap.org/zenmap/"
+
+  livecheck do
+    url "https://nmap.org/dist/?C=M;O=D"
+    regex(/href=.*?nmap[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+  end
 
   depends_on formula: "nmap"
 

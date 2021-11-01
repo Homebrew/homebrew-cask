@@ -1,11 +1,16 @@
 cask "openphone" do
-  version "1.9.3"
-  sha256 "268068a9614891a607db321931d407dd2f20ad1cf91e839cfc26ba038ff4dd07"
+  version "3.2.24"
+  sha256 "b5bff4727da35a861517127beabed81932c9b6d6aecc88c4777e1bb223a2bdc8"
 
   url "https://download.openphone.co/OpenPhone-#{version}.dmg"
-  appcast "https://s3-us-west-2.amazonaws.com/download.openphone.co/latest-mac.yml"
   name "OpenPhone"
-  homepage "https://www.openphone.co/desktop"
+  desc "Business phone for professionals, teams, and companies"
+  homepage "https://www.openphone.co/"
+
+  livecheck do
+    url "https://s3-us-west-2.amazonaws.com/download.openphone.co/latest-mac.yml"
+    strategy :electron_builder
+  end
 
   app "OpenPhone.app"
 end

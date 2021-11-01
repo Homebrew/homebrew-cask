@@ -1,13 +1,22 @@
 cask "silentknight" do
-  version "1.10,2020.08"
-  sha256 "43da2c9a4fce2e682dec2a6811651d784ab2e6ad87e3976078f7461b42a9aa75"
+  version "1.16,2021.08"
+  sha256 "995d10d128172b801adec810067e280fbaf1e4c477e285f7c15462a311dc3580"
 
-  # eclecticlightdotcom.files.wordpress.com/ was verified as official when first introduced to the cask
-  url "https://eclecticlightdotcom.files.wordpress.com/#{version.after_comma.major}/#{version.after_comma.minor}/silentknight#{version.before_comma.no_dots}.zip"
-  appcast "https://eclecticlight.co/lockrattler-systhist/"
+  url "https://eclecticlightdotcom.files.wordpress.com/#{version.after_comma.major}/#{version.after_comma.minor}/silentknight#{version.before_comma.no_dots}.zip",
+      verified: "eclecticlightdotcom.files.wordpress.com/"
   name "SilentKnight"
   desc "Automatically checks computer's security"
   homepage "https://eclecticlight.co/lockrattler-systhist/"
+
+  livecheck do
+    url "https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
+    strategy :page_match do |page|
+      match = page.match(%r{/(\d+)/(\d+)/silentknight(\d+)\.zip}i)
+      next if match.blank?
+
+      "#{match[3].split("", 2).join(".")},#{match[1]}.#{match[2]}"
+    end
+  end
 
   depends_on macos: ">= :el_capitan"
 

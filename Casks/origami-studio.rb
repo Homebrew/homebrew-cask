@@ -1,12 +1,17 @@
 cask "origami-studio" do
-  version "239499608"
-  sha256 "e1dca9739367ece16333c0f7834ad6901fedf5b81f9db3bab01ebbd4f61eccc5"
+  version "95.0.0.5.238,309227264"
+  sha256 :no_check
 
-  # fb.me/ was verified as official when first introduced to the cask
-  url "https://fb.me/getorigamistudio"
-  appcast "https://www.facebook.com/mobile_builds/appcast.xml?app_id=892075810923571"
+  url "https://facebook.com/designtools/origami/",
+      verified: "facebook.com/designtools/"
   name "Origami Studio"
+  desc "Design, animate, and prototype design tool from Facebook"
   homepage "https://origami.design/"
+
+  livecheck do
+    url "https://m.facebook.com/mobile_builds/appcast.xml?app_id=892075810923571&amp;amp%3Bflavor=production"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :sierra"
 

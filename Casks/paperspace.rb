@@ -1,11 +1,19 @@
 cask "paperspace" do
-  version "9.4.1.1292"
-  sha256 "a77a32d7c5dcee2aae4575ceb645b23709213d8dc3a71e2990733dfb8106bc16"
+  version "11.4.0.3931"
+  sha256 "ae68b900c701dd716d3667fc599cf91172a85ca85c97ab31747c36c0ad9d46c4"
 
   url "https://assets.paperspace.com/native-app/prod/darwin/Paperspace-#{version}.dmg"
-  appcast "https://www.macupdater.net/cgi-bin/extract_text/send_post_request_data.cgi?url=https://api.paperspace.io/receivers/latestVersion&data={%22component%22:%22paperspaceInstaller%22,%22os%22:%22mac%22}&headers={%22user-agent%22:%22Mozilla%22,%22content-type%22:%22application/json%22}"
   name "Paperspace"
-  homepage "https://www.paperspace.com/"
+  desc "Desktop app for the Paperspace cloud computing platform"
+  homepage "https://www.paperspace.com/app/"
+
+  livecheck do
+    # curl -H 'Content-Type: application/json' \
+    #   --data-binary \
+    #   '{"component": "paperspaceInstaller", "os": "mac"}' \
+    #   https://api.paperspace.io/receivers/latestVersion
+    skip "No version information available"
+  end
 
   app "Paperspace.app"
 end

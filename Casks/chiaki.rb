@@ -1,12 +1,15 @@
 cask "chiaki" do
-  version "1.2.1"
-  sha256 "8817d08633ee61f0ea2bc5283a035728c613fa665000bf0c097e31c19021e737"
+  version "2.1.1"
+  sha256 "d90aa5c7b0d5602165be845fa648474f084968109554d644544b64cd1399c6af"
 
-  url "https://github.com/thestr4ng3r/chiaki/releases/download/v#{version}/Chiaki-v#{version}-macOS-x86_64.dmg"
-  appcast "https://github.com/thestr4ng3r/chiaki/releases.atom"
+  url "https://git.sr.ht/~thestr4ng3r/chiaki/refs/download/v#{version}/Chiaki-v#{version}-macOS-x86_64.dmg"
   name "Chiaki"
-  desc "Free and open-source PS4 remote play client"
-  homepage "https://github.com/thestr4ng3r/chiaki"
+  desc "PlayStation remote play client"
+  homepage "https://git.sr.ht/~thestr4ng3r/chiaki"
+
+  livecheck do
+    url :homepage
+  end
 
   app "Chiaki.app"
 

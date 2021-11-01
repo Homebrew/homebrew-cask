@@ -1,11 +1,11 @@
 cask "batteries" do
-  version "2.0.1"
-  sha256 "9b4ec9875d6977392c182a9032ebead5857713bf9f78f7e78df29a7d8c592c1f"
+  version "2.1.9"
+  sha256 "81cf1b9444f5e23e4ea801ca489ad4c554ea87c655a1480ef323dded639630ca"
 
-  # github.com/ronyfadel/BatteriesReleases was verified as official when first introduced to the cask
-  url "https://github.com/ronyfadel/BatteriesReleases/releases/download/v#{version}/Batteries.dmg"
-  appcast "https://github.com/ronyfadel/BatteriesReleases/releases.atom"
+  url "https://github.com/ronyfadel/BatteriesReleases/releases/download/v#{version}/Batteries.dmg",
+      verified: "github.com/ronyfadel/BatteriesReleases/"
   name "Batteries"
+  desc "Track all your devices' batteries"
   homepage "https://www.fadel.io/batteries/"
 
   depends_on macos: ">= :mojave"
@@ -13,12 +13,12 @@ cask "batteries" do
   app "Batteries.app"
 
   zap trash: [
+    "~/Library/Application Scripts/io.fadel.Batteries.BatteriesTodayExtension",
     "~/Library/Caches/io.fadel.Batteries",
     "~/Library/Caches/io.fadel.Batteries.Helper",
     "~/Library/Containers/io.fadel.Batteries.BatteriesTodayExtension",
+    "~/Library/Group Containers/KUC6B4JW25.io.fadel.Batteries",
     "~/Library/Preferences/io.fadel.Batteries.Helper.plist",
     "~/Library/Preferences/io.fadel.Batteries.plist",
-    "~/Library/Group Containers/KUC6B4JW25.io.fadel.Batteries",
-    "~/Library/Application Scripts/io.fadel.Batteries.BatteriesTodayExtension",
   ]
 end

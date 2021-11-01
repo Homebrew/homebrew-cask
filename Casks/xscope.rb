@@ -1,13 +1,17 @@
 cask "xscope" do
-  version "4.4.1"
-  sha256 "2a4de71cb6b6ee56b466ff26ba70c104b5f2a2455e1f61af852ac43c0f4e6e19"
+  version "4.5.1,108"
+  sha256 "d09a109b922d9c9d51a93e03b34683653826348b9ce4251f304d6cbdf39c5884"
 
-  # iconfactory.com/ was verified as official when first introduced to the cask
-  url "https://iconfactory.com/assets/software/xscope/xScope-#{version}.zip"
-  appcast "https://iconfactory.com/appcasts/xScope/appcast.xml"
+  url "https://downloads.iconfactory.com/xscope/xScope-#{version.before_comma}+#{version.after_comma}.zip",
+      verified: "downloads.iconfactory.com/"
   name "xScope"
   desc "Tools for measuring, inspecting & testing on-screen graphics and layouts"
   homepage "https://xscopeapp.com/"
+
+  livecheck do
+    url "https://iconfactory.com/appcasts/xScope/appcast.xml"
+    strategy :sparkle
+  end
 
   app "xScope.app"
 

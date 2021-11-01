@@ -3,7 +3,6 @@ cask "middleclick" do
   sha256 "c17d944d9305d6da6c949ab1d5032326668d0e9dbd38ef3061955af4484d3f62"
 
   url "https://github.com/DaFuqtor/MiddleClick/releases/download/#{version}/MiddleClick.zip"
-  appcast "https://github.com/DaFuqtor/MiddleClick/releases.atom"
   name "MiddleClick"
   homepage "https://github.com/DaFuqtor/MiddleClick"
 

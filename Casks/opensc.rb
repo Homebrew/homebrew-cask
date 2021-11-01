@@ -1,10 +1,10 @@
 cask "opensc" do
-  version "0.20.0"
-  sha256 "fd456cd3920bead10d9f1845623408eb16c6b0f934f960d52d5850f0ee205eab"
+  version "0.22.0"
+  sha256 "defee8f8fb5a5de3a0d456768abe58427bf3ec11b09e196c1de9f8601dfd5cd8"
 
   url "https://github.com/OpenSC/OpenSC/releases/download/#{version}/OpenSC-#{version}.dmg"
-  appcast "https://github.com/OpenSC/OpenSC/releases.atom"
   name "OpenSC"
+  desc "Smart card libraries and utilities"
   homepage "https://github.com/OpenSC/OpenSC/wiki"
 
   pkg "OpenSC #{version}.pkg"
@@ -18,7 +18,7 @@ cask "opensc" do
               "org.opensc-project.startup",
             ],
             launchctl: [
-              "opensc-notify",
-              "pkcs11-register",
+              "org.opensc-project.mac.opensc-notify",
+              "org.opensc-project.mac.pkcs11-register",
             ]
 end

@@ -1,12 +1,21 @@
 cask "maciasl" do
-  version "1.5.8"
-  sha256 "cd2a4bb2311316f66a08b937b7ef3c9928d8c19f8a53d87759e123535bed876e"
+  version "1.6.2"
+  sha256 "2869fccc122e4b4cc115a3c9ff00cc96febfa8b7198bb98c1520467b84f69643"
 
-  url "https://github.com/acidanthera/MaciASL/releases/download/#{version}/MaciASL-#{version}-RELEASE.zip"
-  appcast "https://github.com/acidanthera/MaciASL/releases.atom"
+  url "https://github.com/acidanthera/MaciASL/releases/download/#{version}/MaciASL-#{version}-RELEASE.dmg"
   name "MaciASL"
+  desc "ACPI Machine Language (AML) compiler and IDE"
   homepage "https://github.com/acidanthera/MaciASL"
+
+  auto_updates true
 
   app "MaciASL.app"
   binary "#{appdir}/MaciASL.app/Contents/MacOS/iasl-stable", target: "iasl"
+
+  uninstall quit: "org.acidanthera.MaciASL"
+
+  zap trash: [
+    "~/Library/Preferences/org.acidanthera.MaciASL.plist",
+    "~/Library/Saved Application State/org.acidanthera.MaciASL.savedState",
+  ]
 end

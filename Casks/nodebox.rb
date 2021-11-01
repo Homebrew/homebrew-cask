@@ -1,13 +1,14 @@
 cask "nodebox" do
-  version "3.0.51"
-  sha256 "2187ebaa849de93f54c5550529678a8a160b06cf6186e8d21a66fc43f395e629"
+  version "3.0.52"
+  sha256 "64409451f786bb8bc08df0ac3b4e3e41f4340512960f682b2230a0bb8182fff3"
 
-  # github.com/nodebox/nodebox/ was verified as official when first introduced to the cask
-  url "https://github.com/nodebox/nodebox/releases/download/v#{version}/NodeBox-#{version}.zip"
-  appcast "https://www.nodebox.net/node/release-notes.html"
+  url "https://github.com/nodebox/nodebox/releases/download/v#{version}/NodeBox-#{version}.dmg",
+      verified: "github.com/nodebox/nodebox/"
   name "NodeBox"
   desc "Node-based data application for visualization and generative design"
   homepage "https://www.nodebox.net/node/"
+
+  depends_on macos: ">= :catalina"
 
   app "NodeBox.app"
 end

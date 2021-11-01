@@ -1,11 +1,15 @@
 cask "5kplayer" do
-  version "6.3.0"
-  sha256 "31def518c9c7023bea83e0ae9d273a5f8e45f0bb1a8ffb512d06242136011b9c"
+  version "6.8.0,5000"
+  sha256 :no_check
 
   url "https://www.5kplayer.com/download/5kplayer.dmg"
-  appcast "https://www.5kplayer.com/upgrade/mac/updatecast.xml"
   name "5KPlayer"
   homepage "https://www.5kplayer.com/"
+
+  livecheck do
+    url "https://www.5kplayer.com/upgrade/mac/updatecast.xml"
+    strategy :sparkle
+  end
 
   app "5KPlayer.app"
 

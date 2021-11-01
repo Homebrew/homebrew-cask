@@ -1,14 +1,23 @@
 cask "toolreleases" do
-  version "1.3.4,30"
-  sha256 "933078535ca581d278b331761705b3791f03970ee8e14b62f24a2a6d74b8369a"
+  version "1.4.2,45"
+  sha256 "1904c8a70263f2be5c9f089671e29eef1514d5a70d4390a8eedfd089047e943e"
 
   url "https://github.com/DeveloperMaris/ToolReleases/releases/download/v#{version.before_comma}/ToolReleases_v#{version.before_comma}.b#{version.after_comma}.zip"
-  appcast "https://github.com/DeveloperMaris/ToolReleases/releases.atom"
   name "ToolReleases"
   desc "Utility to notify about the latest Apple tool releases (including Beta releases)"
   homepage "https://github.com/DeveloperMaris/ToolReleases"
 
-  depends_on macos: ">= :catalina"
+  livecheck do
+    url "https://github.com/DeveloperMaris/ToolReleases/releases/latest"
+    strategy :page_match do |page|
+      match = page.match(%r{href=.*?/ToolReleases_v?(\d+(?:\.\d+)*)\.b(\d+)\.zip}i)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
+    end
+  end
+
+  depends_on macos: ">= :big_sur"
 
   app "ToolReleases.app"
 

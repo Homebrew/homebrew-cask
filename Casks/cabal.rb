@@ -1,10 +1,9 @@
 cask "cabal" do
-  version "6.0.5"
-  sha256 "0361917bfdabc760037ae64cb3dc20e38f7c879666b963d3c33056e77da8af77"
+  version "6.0.8"
+  sha256 "220966a9d873ee5103a7ff6c5bb21a52ba789e9cfea981ef68e90e0afed91484"
 
-  # github.com/cabal-club/cabal-desktop/ was verified as official when first introduced to the cask
-  url "https://github.com/cabal-club/cabal-desktop/releases/download/v#{version}/cabal-desktop-#{version}-mac.dmg"
-  appcast "https://github.com/cabal-club/cabal-desktop/releases.atom"
+  url "https://github.com/cabal-club/cabal-desktop/releases/download/v#{version}/cabal-desktop-#{version}-mac.dmg",
+      verified: "github.com/cabal-club/cabal-desktop/"
   name "Cabal"
   desc "Desktop client for the chat platform Cabal"
   homepage "https://cabal.chat/"

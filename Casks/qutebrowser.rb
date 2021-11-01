@@ -1,10 +1,9 @@
 cask "qutebrowser" do
-  version "1.13.1"
-  sha256 "0ed56a49d3ae661e6d5ef6007bdf86e7e3b6cb69bed9b11538d824a46f09b535"
+  version "2.4.0"
+  sha256 "6c941f9f58742b70e9689300ba663b7797fccbf21c96bde3cc408e2b6c04837a"
 
-  # github.com/qutebrowser/qutebrowser/ was verified as official when first introduced to the cask
-  url "https://github.com/qutebrowser/qutebrowser/releases/download/v#{version}/qutebrowser-#{version}.dmg"
-  appcast "https://github.com/qutebrowser/qutebrowser/releases.atom"
+  url "https://github.com/qutebrowser/qutebrowser/releases/download/v#{version}/qutebrowser-#{version}.dmg",
+      verified: "github.com/qutebrowser/qutebrowser/"
   name "qutebrowser"
   desc "Keyboard-driven, vim-like browser based on PyQt5"
   homepage "https://www.qutebrowser.org/"

@@ -1,25 +1,34 @@
 cask "sensei" do
-  version "1.2.16,68"
-  sha256 "de4c70ff9d73c7bd2bc91e458caf0979f2892c93ad020d057135799134966228"
+  version "1.5.0,96"
+  sha256 :no_check
 
-  # cindori.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://cindori.s3.amazonaws.com/Sensei.dmg"
-  appcast "https://api.appcenter.ms/v0.1/public/sparkle/apps/51fc066a-f4b4-49ec-b966-b2f476d2eede"
+  url "https://cindori.s3.amazonaws.com/Sensei.dmg",
+      verified: "cindori.s3.amazonaws.com/"
   name "Sensei"
   desc "Monitors the computer system and optimizes its performance"
   homepage "https://sensei.app/"
+
+  livecheck do
+    url "https://api.appcenter.ms/v0.1/public/sparkle/apps/51fc066a-f4b4-49ec-b966-b2f476d2eede"
+    strategy :sparkle
+  end
 
   auto_updates true
   depends_on macos: ">= :catalina"
 
   app "Sensei.app"
 
-  uninstall delete:    "/Library/PrivilegedHelperTools/org.cindori.SenseiTool",
+  uninstall delete:    [
+    "/Library/LaunchAgents/org.cindori.SenseiMonitor.plist",
+    "/Library/LaunchDaemons/org.cindori.SenseiDaemon.plist",
+    "/Library/LaunchDaemons/org.cindori.SenseiHelper.plist",
+    "/Library/PrivilegedHelperTools/org.cindori.SenseiTool",
+  ],
             launchctl: "org.cindori.SenseiTool"
 
   zap trash: [
-    "~/Library/Application Support/Sensei",
     "~/Library/Application Support/org.cindori.Sensei",
+    "~/Library/Application Support/Sensei",
     "~/Library/Caches/org.cindori.Sensei",
     "~/Library/Cookies/org.cindori.Sensei.binarycookies",
     "~/Library/Preferences/org.cindori.Sensei.plist",

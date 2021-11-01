@@ -1,13 +1,17 @@
 cask "amadeus-pro" do
-  version "2.8.4"
-  sha256 "34d89cb521e7bccef39c02f07ec5dbf25d5255a5e93d563e4b774c79a5a5829e"
+  version "2.8.7"
+  sha256 :no_check
 
-  # s3.amazonaws.com/AmadeusPro2/ was verified as official when first introduced to the cask
-  url "https://s3.amazonaws.com/AmadeusPro2/AmadeusPro.zip"
-  appcast "https://www.hairersoft.com/pro.html"
+  url "https://s3.amazonaws.com/AmadeusPro#{version.major}/AmadeusPro.zip",
+      verified: "s3.amazonaws.com/AmadeusPro2/"
   name "Amadeus Pro"
   desc "Multi-purpose audio recorder, editor and converter"
   homepage "https://www.hairersoft.com/pro.html"
+
+  livecheck do
+    url :homepage
+    regex(/Download\s*Amadeus\s*Pro\s*v?(\d+(?:\.\d+)+)/i)
+  end
 
   app "Amadeus Pro.app"
 end

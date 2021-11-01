@@ -1,12 +1,16 @@
 cask "yakyak" do
-  version "1.5.9"
-  sha256 "d671fda8da58ef414fee9728f438957f07a0720274c38f56f5d4985a8f441968"
+  version "1.5.11.5"
+  sha256 "a0f37f802b591f3f856c729a3db1537ecbbff37ec7eaa732bce09244ae824de0"
 
-  url "https://github.com/yakyak/yakyak/releases/download/v#{version}/yakyak-#{version}-osx.zip"
-  appcast "https://github.com/yakyak/yakyak/releases.atom"
+  url "https://github.com/yakyak/yakyak/releases/download/v#{version}/yakyak-#{version}-osx-x64.zip"
   name "Yakyak"
   desc "Desktop chat client for Google Hangouts"
   homepage "https://github.com/yakyak/yakyak"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "YakYak-darwin-x64/YakYak.app"
 end

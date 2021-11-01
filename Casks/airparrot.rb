@@ -1,12 +1,17 @@
 cask "airparrot" do
-  version "3.0.0"
-  sha256 "79e985c3cd6bbfe0a3d87424d658d1193a884b98bf27c44dda76270156c2ee87"
+  version "3.1.2"
+  sha256 "fac0deb4339ed1979b91cc24fe15e5b291800e0ef64e0dbe84d55dd1dc9492bc"
 
   url "https://download.airsquirrels.com/AirParrot#{version.major}/Mac/AirParrot-#{version}.dmg"
-  appcast "https://www.airsquirrels.com/airparrot/release-notes/mac"
   name "AirParrot"
   desc "Tool to wirelessly mirror the screen or stream media files"
   homepage "https://www.airsquirrels.com/airparrot/"
+
+  livecheck do
+    url "https://www.airsquirrels.com/airparrot/download"
+    strategy :page_match
+    regex(%r{href=.*?/AirParrot-(\d+(?:\.\d+)+)\.dmg}i)
+  end
 
   app "AirParrot #{version.major}.app"
 

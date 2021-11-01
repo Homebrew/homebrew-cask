@@ -1,23 +1,44 @@
 cask "teamviewer" do
-  version "15.9.4"
-  sha256 "a8c7ea1291cf47fc20e4f6c19872c8154628775e4bcdc450b76a5e7530b069db"
+  if MacOS.version <= :high_sierra
+    version "15.2.2756"
+
+    livecheck do
+      url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=10.11.1&type=1&channel=1"
+      strategy :sparkle
+    end
+  else
+    version "15.22.3"
+
+    livecheck do
+      url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=10.15.1&type=1&channel=1"
+      strategy :sparkle
+    end
+  end
+  sha256 :no_check
 
   url "https://download.teamviewer.com/download/TeamViewer.dmg"
-  appcast "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=14.7.1965&os=macos&osversion=10.15.1&type=1&channel=1"
   name "TeamViewer"
   desc "Remote access and connectivity software focused on security"
   homepage "https://www.teamviewer.com/"
 
   auto_updates true
   conflicts_with cask: "teamviewer-host"
+  depends_on macos: ">= :el_capitan"
 
-  pkg "Install TeamViewer.pkg"
+  if MacOS.version <= :high_sierra
+    pkg "Install TeamViewer.pkg"
+  else
+    pkg "Install TeamViewer.app/Contents/Resources/Install TeamViewer.pkg"
+  end
 
   uninstall delete:    [
     "#{staged_path}/#{token}", # This Cask should be uninstalled manually.
     "/Applications/TeamViewer.app",
   ],
-            pkgutil:   "com.teamviewer.teamviewer.*",
+            pkgutil:   [
+              "com.teamviewer.teamviewer.*",
+              "com.teamviewer.remoteaudiodriver",
+            ],
             launchctl: [
               "com.teamviewer.desktop",
               "com.teamviewer.service",
@@ -32,6 +53,7 @@ cask "teamviewer" do
     "/Library/Preferences/com.teamviewer.teamviewer.preferences.plist",
     "~/Library/Application Support/TeamViewer",
     "~/Library/Caches/com.teamviewer.TeamViewer",
+    "~/Library/Caches/TeamViewer",
     "~/Library/Cookies/com.teamviewer.TeamViewer.binarycookies",
     "~/Library/Logs/TeamViewer",
     "~/Library/Preferences/com.teamviewer.TeamViewer.plist",

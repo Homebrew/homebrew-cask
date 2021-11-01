@@ -1,12 +1,16 @@
 cask "stay" do
-  version "1.3"
-  sha256 "fc20518adc53aba6856cc5b3149889f046ab640134a9876952c5a0cb61e9b6a2"
+  version "1.4,747"
+  sha256 "20362f8564cf7384350f19ee39d46db675473cf82417e7b552e2cdabc363fd4b"
 
-  url "https://cordlessdog.com/stay/versions/Stay%20#{version}.dmg"
-  appcast "https://cordlessdog.com/stay/appcast.xml"
+  url "https://cordlessdog.com/stay/versions/Stay%20#{version.before_comma}.dmg"
   name "Stay"
   desc "Windows manager"
   homepage "https://cordlessdog.com/stay/"
+
+  livecheck do
+    url "https://cordlessdog.com/stay/appcast.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :mojave"
 

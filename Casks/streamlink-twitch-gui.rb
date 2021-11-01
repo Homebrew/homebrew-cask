@@ -1,9 +1,8 @@
 cask "streamlink-twitch-gui" do
-  version "1.10.0"
-  sha256 "957577720edb66dca92c4e03bd3f0e57f7f5d6cea30f58a8a2be6912654abed9"
+  version "1.13.0"
+  sha256 "1e8ce039e0282c2cd739e2eef735f70db338cf5e390e9be596bdde2f36eaa2de"
 
   url "https://github.com/streamlink/streamlink-twitch-gui/releases/download/v#{version}/streamlink-twitch-gui-v#{version}-macOS.tar.gz"
-  appcast "https://github.com/streamlink/streamlink-twitch-gui/releases.atom"
   name "Streamlink Twitch GUI"
   desc "Multi platform Twitch.tv browser for Streamlink"
   homepage "https://github.com/streamlink/streamlink-twitch-gui/"

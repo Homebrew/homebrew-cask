@@ -1,13 +1,19 @@
 cask "dropbox-passwords" do
-  version "5.2.4"
-  sha256 "74d41ac8296c4dfa71cda236320173c83856b1d99fcc6bcc9de820d669cd85ba"
+  version "8.2.14"
+  sha256 "02540fc02289845c12deb6f35c0a4cb63e31978a28793002a4046ee2dcf9d6fa"
 
-  # clientupdates.dropboxstatic.com was verified as official when first introduced to the cask
-  url "https://clientupdates.dropboxstatic.com/dbx-releng/dropbox_passwords/mac/DropboxPasswords_#{version}.dmg"
-  appcast "https://www.dropbox.com/dropbox-passwords-download/mac/stable"
+  url "https://clientupdates.dropboxstatic.com/dbx-releng/dropbox_passwords/mac/DropboxPasswords_#{version}.dmg",
+      verified: "clientupdates.dropboxstatic.com/"
   name "Dropbox Passwords"
   desc "Password manager that syncs across devices"
   homepage "https://www.dropbox.com/features/security/passwords"
+
+  livecheck do
+    url "https://www.dropbox.com/dropbox-passwords-download/mac/stable"
+    strategy :sparkle
+  end
+
+  depends_on macos: ">= :sierra"
 
   app "Dropbox Passwords.app"
 end

@@ -1,5 +1,5 @@
 cask "multiscan-3b" do
-  # note: "3b" is not a version number, but an intrinsic part of the product name
+  # NOTE: "3b" is not a version number, but an intrinsic part of the product name
   version "1.9.5"
   sha256 "f394f145b8581a855d2d5dfed6ed7e77206d84091895dd0fdfb30bd583d6dcb1"
 

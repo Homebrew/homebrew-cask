@@ -1,13 +1,19 @@
 cask "boop" do
-  version "1.2.1"
-  sha256 "9a8aa41f8ffe62596572aa2c4effbccef6e686e3515932bd22713d1825b8f5d8"
+  version "1.4.0"
+  sha256 "8c4492baf6d5b1d26d157877f53d063259e615d784e8ab4d046d3ee67fb9b345"
 
-  # github.com/IvanMathy/Boop was verified as official when first introduced to the cask
-  url "https://github.com/IvanMathy/Boop/releases/download/#{version}/Boop.zip"
-  appcast "https://github.com/IvanMathy/Boop/releases.atom"
+  url "https://github.com/IvanMathy/Boop/releases/download/#{version}/Boop.zip",
+      verified: "github.com/IvanMathy/Boop/"
   name "Boop"
   desc "Scriptable scratchpad for developers"
   homepage "https://boop.okat.best/"
+
+  livecheck do
+    url "https://boop.okat.best/version.json"
+    strategy :page_match do |page|
+      JSON.parse(page)["standalone"]["version"]
+    end
+  end
 
   depends_on macos: ">= :mojave"
 

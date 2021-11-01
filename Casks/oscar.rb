@@ -1,12 +1,20 @@
 cask "oscar" do
-  version "1.1.1"
-  sha256 "69f0f5e37f8c8aeaf2c2f03993cf1a15dc00952657fb6dd8fa4f7bb2b2b1b720"
+  version "1.3.0"
+  sha256 "89cd52d6e4ed932c87e2e4441e05678a4ae24bf1ea629d148ce0820bbd8afe6a"
 
-  # apneaboard.com/OSCAR/ was verified as official when first introduced to the cask
-  url "https://www.apneaboard.com/OSCAR/OSCAR-#{version}.dmg"
-  appcast "https://www.sleepfiles.com/OSCAR/"
+  url "https://www.apneaboard.com/OSCAR/OSCAR-#{version}.dmg",
+      verified: "apneaboard.com/OSCAR/"
   name "OSCAR"
+  desc "CPAP Analysis Reporter"
   homepage "https://www.sleepfiles.com/OSCAR/"
+
+  livecheck do
+    url "https://www.sleepfiles.com/OSCAR/"
+    strategy :page_match
+    regex(%r{href=.*?/OSCAR-(\d+(?:\.\d+)*)\.dmg}i)
+  end
+
+  depends_on macos: ">= :sierra"
 
   app "OSCAR.app"
 end

@@ -1,12 +1,19 @@
 cask "apparency" do
-  version "1.1"
-  sha256 "810708d82bc1bed6e339776a60f8c5214aada870a17795c673e778e5006a3f1b"
+  version "1.3,130"
+  sha256 :no_check
 
   url "https://mothersruin.com/software/downloads/Apparency.dmg"
-  appcast "https://www.mothersruin.com/software/Apparency/data/ApparencyVersionInfo.plist"
   name "Apparency"
   desc "Inspect application bundles"
   homepage "https://www.mothersruin.com/software/Apparency/"
+
+  livecheck do
+    url "https://www.mothersruin.com/software/Apparency/data/ApparencyVersionInfo.plist"
+    regex(/CFBundleShortVersionString.*?\n.*?(\d+(?:\.\d+)+).*?\n.*?CFBundleVersion.*?\n.*?(\d+(?:\.\d+)*)/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+    end
+  end
 
   depends_on macos: ">= :mojave"
 

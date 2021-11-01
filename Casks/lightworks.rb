@@ -1,11 +1,15 @@
 cask "lightworks" do
-  version "2020.1_r122068"
-  sha256 "c55738a83be001b2d020af7d77629791838c044428a7e74ca2260735023757a9"
+  version "2021.3,130952"
+  sha256 "3dc547e42a9087d19af0ca6371893336822f9d312036c7115e96c44da728c594"
 
-  url "https://cdn.lwks.com/releases/lightworks_#{version}.dmg"
-  appcast "https://www.lwks.com/index.php?option=com_lwks&view=download&Itemid=206&tab=2"
+  url "https://cdn.lwks.com/releases/#{version.before_comma}/lightworks_#{version.before_comma.major_minor}_r#{version.after_comma}.dmg"
   name "Lightworks"
+  desc "Complete video creation package"
   homepage "https://www.lwks.com/"
+
+  livecheck do
+    skip "No version information available"
+  end
 
   app "Lightworks.app"
 

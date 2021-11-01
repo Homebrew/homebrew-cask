@@ -1,13 +1,24 @@
 cask "virtualbox" do
-  version "6.1.14,140239"
-  sha256 "3abeee4822707db2f949431391dba27827840aa5390a9ec4e1bafdc5c8c3aaaa"
+  version "6.1.28,147628"
+  sha256 "2a92fce1c93dd5eb1b3f82446b8a7e16c79fa487a72dabbd2f5b6ed30f40b319"
 
   url "https://download.virtualbox.org/virtualbox/#{version.before_comma}/VirtualBox-#{version.before_comma}-#{version.after_comma}-OSX.dmg"
-  appcast "https://download.virtualbox.org/virtualbox/LATEST.TXT"
   name "Oracle VirtualBox"
+  desc "Free and open-source hosted hypervisor for x86 virtualization"
   homepage "https://www.virtualbox.org/"
 
-  conflicts_with cask: "virtualbox-beta"
+  livecheck do
+    url "https://www.virtualbox.org/wiki/Downloads"
+    strategy :page_match do |page|
+      match = page.match(/href=.*?VirtualBox-(\d+(?:\.\d+)*)-(\d+)-OSX.dmg/)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
+    end
+  end
+
+  conflicts_with cask: "homebrew/cask-versions/virtualbox-beta"
+  depends_on macos: ">= :high_sierra"
 
   pkg "VirtualBox.pkg",
       choices: [

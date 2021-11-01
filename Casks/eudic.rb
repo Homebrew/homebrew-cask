@@ -1,15 +1,36 @@
 cask "eudic" do
-  version "3.9.9,2020-08-07"
-  sha256 "ddd1c890d2affdf7067785f56c7572b80842ac2fde317f663d1f6d6739d46348"
+  version "4.1.5,1065"
+  sha256 "d593ff350a50faaa4bd5945f9bb0357b1689007b7e1546cdff3fddb71c11b76a"
 
-  # static.frdic.com/ was verified as official when first introduced to the cask
   url "https://static.frdic.com/pkg/eudicmac.dmg?v=#{version.after_comma}",
+      verified:   "static.frdic.com/",
       user_agent: :fake
-  appcast "https://www.eudic.net/v4/en/app/download",
-          must_contain: version.after_comma
   name "Eudic"
   name "欧路词典"
+  desc "European dictionary"
   homepage "https://www.eudic.net/v4/en/app/eudic"
 
+  livecheck do
+    url "https://www.eudic.net/update/eudic_mac.xml"
+    strategy :sparkle
+  end
+
   app "Eudic.app"
+
+  uninstall quit: [
+    "com.eusoft.eudic",
+    "com.eusoft.eudic.LightPeek",
+  ]
+
+  zap trash: [
+    "~/Library/Application Scripts/com.eusoft.eudic.QuickLook",
+    "~/Library/Application Support/com.eusoft.eudic",
+    "~/Library/Caches/com.eusoft.eudic",
+    "~/Library/Caches/com.eusoft.eudic.LightPeek",
+    "~/Library/Containers/com.eusoft.eudic.QuickLook",
+    "~/Library/Eudb_en",
+    "~/Library/Preferences/com.eusoft.eudic.plist",
+    "~/Library/Preferences/com.eusoft.eudic.LightPeek.plist",
+    "~/Library/Preferences/group.com.eusoft.eudic.plist",
+  ]
 end

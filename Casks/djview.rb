@@ -1,9 +1,9 @@
 cask "djview" do
-  version "4.10.6,57c"
-  sha256 "6ad1fe387434da4d103cbe343a7d6bb0da0fa139787069b3ba76f124651402a2"
+  version "4.12,3"
+  sha256 "f846b1488414f2063c1097768c5ca1d8a4dd8889749de03b108ce7c0941b9c3e"
 
-  # downloads.sourceforge.net/djvu/ was verified as official when first introduced to the cask
-  url "https://downloads.sourceforge.net/djvu/DjVuLibre-3.5.27%2BDjView-#{version.before_comma}-qt#{version.after_comma}-intel64.dmg"
+  url "https://downloads.sourceforge.net/djvu/DjVuLibre-3.5.28%2BDjView-#{version.before_comma}-intel64-#{version.after_comma}.dmg",
+      verified: "downloads.sourceforge.net/djvu/"
   appcast "https://sourceforge.net/projects/djvu/rss"
   name "DjView"
   homepage "https://djvu.sourceforge.io/"

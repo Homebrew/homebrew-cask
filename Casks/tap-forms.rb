@@ -1,13 +1,22 @@
 cask "tap-forms" do
-  version "5.3.13"
-  sha256 "0cea6bdad0da07aa75875f80df53afe02aa51ca217e0e8e14322bfa7574e430e"
+  version "5.3.19,pb7lTffTeGjI79IrJgY6"
+  sha256 "b114710f7cc23f6ea15076c990d60863e194fd2512c53b9251174fc90c0110cb"
 
-  # vendors.paddle.com/download/product/503174 was verified as official when first introduced to the cask. Developer uses paddle.com to process licences and payments for the software
-  url "https://vendors.paddle.com/download/product/503174"
-  appcast "https://www.tapforms.com/app/tf-mac-#{version.major}.1-sparkle-appcast.xml"
+  url "https://paddle.s3.amazonaws.com/fulfillment_downloads/9234/503174/#{version.after_comma}_Tap%20Forms%20Install%20#{version.before_comma}.dmg",
+      verified: "paddle.s3.amazonaws.com/"
   name "Tap Forms 5"
   desc "Helps to organize important files in one place"
   homepage "https://www.tapforms.com/"
+
+  livecheck do
+    url "https://vendors.paddle.com/download/product/503174"
+    strategy :header_match do |headers|
+      version = headers["location"].match(/([A-z0-9]+)[._-]Tap%20Forms%20Install%20(\d+(?:\.\d+)+)\.dmg/)
+      next if version.blank?
+
+      "#{version[2]},#{version[1]}"
+    end
+  end
 
   app "Tap Forms Mac #{version.major}.app"
 

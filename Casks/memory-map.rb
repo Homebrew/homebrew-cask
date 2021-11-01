@@ -1,11 +1,18 @@
 cask "memory-map" do
-  version "1.6-12"
-  sha256 "53e34e1e8d0e83356c26c861efcfdb56bcb365093f31e36de46fbb07bfb55b99"
+  version "1.7.1-18"
+  sha256 "b12e2c3d42905d24c43aff6a19895d16ec145e2d8dc378f1b609371f3ca5b0b6"
 
   url "https://memory-map.com/download/mac/Memory-Map.#{version}.pkg"
-  appcast "https://memory-map.com/Mapping_Software_Downloads.html"
   name "Memory-Map"
+  desc "GPS navigation software"
   homepage "https://memory-map.com/"
+
+  livecheck do
+    url "https://memory-map.com/downloads/"
+    regex(%r{href=.*?/Memory-Map\.(\d+(?:\.\d+)*-\d+)\.pkg}i)
+  end
+
+  depends_on macos: ">= :mojave"
 
   pkg "Memory-Map.#{version}.pkg"
 

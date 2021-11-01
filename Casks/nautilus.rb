@@ -3,9 +3,13 @@ cask "nautilus" do
   sha256 "ded1a3837122bd1788a70f10af026fdf2774d3821e24c429658a09fa55482fd7"
 
   url "https://nautilusdev.com/release/Nautilus-#{version}.dmg"
-  appcast "https://github.com/oslabs-beta/nautilus/releases.atom"
   name "Nautilus"
   homepage "https://nautilusdev.com/"
+
+  livecheck do
+    url "https://github.com/oslabs-beta/nautilus"
+    strategy :git
+  end
 
   app "Nautilus.app"
 

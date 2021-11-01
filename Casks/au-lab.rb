@@ -1,11 +1,11 @@
 cask "au-lab" do
-  version :latest
+  version "2.3"
   sha256 :no_check
 
-  url "https://images.apple.com/itunes/mastered-for-itunes/docs/au_lab.zip"
+  url "https://www.apple.com/apple-music/apple-digital-masters/docs/au_lab.zip"
   name "AU Lab"
   desc "Digital audio mixing application"
-  homepage "https://www.apple.com/itunes/mastered-for-itunes/"
+  homepage "https://www.apple.com/apple-music/apple-digital-masters/"
 
   app "AU Lab.app"
 end

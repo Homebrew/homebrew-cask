@@ -1,31 +1,33 @@
 cask "datadog-agent" do
-  version "7.22.0-1"
-  sha256 "ceb52c36924959c6dc88c75f7f403361937ced94efaf9bbf70fbdd895bb81e21"
+  version "7.31.1-1"
+  sha256 "cb0c82aed7761c6b0409c1d8c8e66052e757c13a2681b4845b215fd82ff3b4b5"
 
-  # dd-agent.s3.amazonaws.com/ was verified as official when first introduced to the cask
-  url "https://dd-agent.s3.amazonaws.com/datadog-agent-#{version}.dmg"
-  appcast "https://github.com/DataDog/datadog-agent/releases.atom"
+  url "https://s3.amazonaws.com/dd-agent/datadog-agent-#{version}.dmg",
+      verified: "s3.amazonaws.com/dd-agent/"
   name "Datadog Agent"
+  desc "Monitoring and security across systems, apps, and services"
   homepage "https://www.datadoghq.com/"
 
-  pkg "datadog-agent-#{version}.pkg"
-
-  preflight do
-    require "etc"
-    File.write("/tmp/datadog-install-user", Etc.getlogin)
+  livecheck do
+    url "https://s3.amazonaws.com/dd-agent/"
+    regex(%r{<Key>datadog-agent-([\d.-]+)\.dmg</Key>}i)
   end
 
-  uninstall launchctl: "com.datadoghq.agent",
-            # pkgutil: 'com.datadoghq.agent' # this is commented out because PKG uninstallation seems to fail due to
-            # missing files caused by case insensitivity and files that differ only in case.
-            # See https://github.com/Homebrew/homebrew-cask/pull/54739.
+  installer manual: "datadog-agent-#{version}.pkg"
+
+  uninstall quit:      "com.datadoghq.agent",
+            launchctl: "com.datadoghq.agent",
+            pkgutil:   "com.datadoghq.agent",
             delete:    [
               "/Applications/Datadog Agent.app",
-              "/opt/datadog-agent/",
-              "/private/var/db/receipts/com.datadoghq.agent.*",
+              "/usr/local/bin/datadog-agent",
             ]
 
-  zap trash: "/opt/datadog-agent"
+  zap trash: [
+    "~/.datadog-agent",
+    "~/Library/LaunchAgents/com.datadoghq.agent.plist",
+    "/opt/datadog-agent",
+  ]
 
   caveats <<~EOS
     You will need to update /opt/datadog-agent/etc/datadog.yaml and replace APIKEY with your api key

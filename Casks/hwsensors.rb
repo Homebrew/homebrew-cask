@@ -3,8 +3,6 @@ cask "hwsensors" do
   sha256 "1ea229bebb1cdfa3b6091cacfd7ab04da781cd6191db9ed08a73eb901aefa418"
 
   url "https://github.com/kozlekek/HWSensors/releases/download/#{version.major_minor}/HWSensors.#{version}.pkg.zip"
-  appcast "https://github.com/kozlekek/HWSensors/releases.atom",
-          must_contain: version.major_minor
   name "HWSensors"
   desc "Tool to access information from available hardware sensors"
   homepage "https://github.com/kozlekek/HWSensors/"
@@ -19,4 +17,8 @@ cask "hwsensors" do
     "~/Library/Application Support/HWMonitor",
     "~/Library/Preferences/org.hwsensors.HWMonitor.plist",
   ]
+
+  caveats do
+    discontinued
+  end
 end

@@ -1,10 +1,10 @@
 cask "welly" do
-  version "3.1.1.1"
-  sha256 "f17aa74d8668d02ff7c6eee81ae7e0c06d76a51d4aa50624ffe757c95f498ecf"
+  version "3.2.0"
+  sha256 "504219867e8ceb625d51fc25c7d3e7488db1eca4877a8734aca5bb9494d5f695"
 
-  url "https://github.com/clyang/welly/releases/download/#{version}/Welly.v#{version}.zip"
-  appcast "https://github.com/clyang/welly/releases.atom"
+  url "https://github.com/clyang/welly/releases/download/#{version}/Welly.v.#{version}.zip"
   name "Welly"
+  desc "BBS client"
   homepage "https://github.com/clyang/welly"
 
   auto_updates true

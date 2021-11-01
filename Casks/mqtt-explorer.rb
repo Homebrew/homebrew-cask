@@ -2,11 +2,15 @@ cask "mqtt-explorer" do
   version "0.3.5"
   sha256 "4322a9127c3ce9025d33afa3ff91e76e8873fff260493a112eadc4769c027778"
 
-  # github.com/thomasnordquist/MQTT-Explorer/ was verified as official when first introduced to the cask
-  url "https://github.com/thomasnordquist/MQTT-Explorer/releases/download/v#{version}/MQTT-Explorer-#{version}-mac.zip"
-  appcast "https://github.com/thomasnordquist/MQTT-Explorer/releases.atom"
+  url "https://github.com/thomasnordquist/MQTT-Explorer/releases/download/v#{version}/MQTT-Explorer-#{version}-mac.zip",
+      verified: "github.com/thomasnordquist/MQTT-Explorer/"
   name "MQTT Explorer"
   homepage "https://mqtt-explorer.com/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "MQTT Explorer.app"
 

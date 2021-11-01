@@ -1,11 +1,15 @@
 cask "zoho-docs" do
-  version :latest
+  version "1.10.2"
   sha256 :no_check
 
-  # files-accl.zohopublic.com/ was verified as official when first introduced to the cask
-  url "https://files-accl.zohopublic.com/public/docsbin/download/393b1306f04a3078b525b2c637d0a727"
+  url "https://files-accl.zohopublic.com/public/docsbin/download/393b1306f04a3078b525b2c637d0a727",
+      verified: "files-accl.zohopublic.com/"
   name "Zoho Docs"
   homepage "https://www.zoho.com/docs/desktop-sync.html"
+
+  livecheck do
+    skip "unversioned URL"
+  end
 
   app "Zoho Docs.app"
 end

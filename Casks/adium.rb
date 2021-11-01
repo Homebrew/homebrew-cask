@@ -2,12 +2,16 @@ cask "adium" do
   version "1.5.10.4"
   sha256 "31fa3fd32b86dd3381b60e0d5aafbc2a9452036f0fb4963bffbc2a6c64a9458b"
 
-  # adiumx.cachefly.net/ was verified as official when first introduced to the cask
-  url "https://adiumx.cachefly.net/Adium_#{version}.dmg"
-  appcast "https://www.adium.im/sparkle/appcast-release.xml"
+  url "https://adiumx.cachefly.net/Adium_#{version}.dmg",
+      verified: "adiumx.cachefly.net/"
   name "Adium"
   desc "Instant messaging application"
   homepage "https://www.adium.im/"
+
+  livecheck do
+    url "https://www.adium.im/sparkle/appcast-release.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 

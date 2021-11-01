@@ -1,11 +1,16 @@
 cask "cmake" do
-  version "3.18.2"
-  sha256 "45960e10378c611a00d2b9e76ab88d40e308ea066b25cae694c55732912283a3"
+  version "3.21.4"
+  sha256 "209e8c3048b6855d78dab1e1691309f377ba859a757e5f7b508fd7a3ff0afafa"
 
-  url "https://www.cmake.org/files/v#{version.major_minor}/cmake-#{version}-Darwin-x86_64.dmg"
-  appcast "https://cmake.org/files/LatestRelease/"
+  url "https://cmake.org/files/LatestRelease/cmake-#{version}-macos-universal.dmg"
   name "CMake"
+  desc "Family of tools to build, test and package software"
   homepage "https://cmake.org/"
+
+  livecheck do
+    url "https://cmake.org/files/LatestRelease/"
+    regex(/href=.*?cmake[._-]v?(\d+(?:\.\d+)+)-macos-universal\.dmg/i)
+  end
 
   conflicts_with formula: "cmake"
 
@@ -15,6 +20,30 @@ cask "cmake" do
   binary "#{appdir}/CMake.app/Contents/bin/cpack"
   binary "#{appdir}/CMake.app/Contents/bin/ctest"
   binary "#{appdir}/CMake.app/Contents/bin/cmake-gui"
+  manpage "#{appdir}/CMake.app/Contents/man/man1/cmake.1"
+  manpage "#{appdir}/CMake.app/Contents/man/man1/ccmake.1"
+  manpage "#{appdir}/CMake.app/Contents/man/man1/cpack.1"
+  manpage "#{appdir}/CMake.app/Contents/man/man1/ctest.1"
+  manpage "#{appdir}/CMake.app/Contents/man/man1/cmake-gui.1"
+  manpage "#{appdir}/CMake.app/Contents/man/man7/cmake-buildsystem.7"
+  manpage "#{appdir}/CMake.app/Contents/man/man7/cmake-commands.7"
+  manpage "#{appdir}/CMake.app/Contents/man/man7/cmake-compile-features.7"
+  manpage "#{appdir}/CMake.app/Contents/man/man7/cmake-developer.7"
+  manpage "#{appdir}/CMake.app/Contents/man/man7/cmake-env-variables.7"
+  manpage "#{appdir}/CMake.app/Contents/man/man7/cmake-file-api.7"
+  manpage "#{appdir}/CMake.app/Contents/man/man7/cmake-generator-expressions.7"
+  manpage "#{appdir}/CMake.app/Contents/man/man7/cmake-generators.7"
+  manpage "#{appdir}/CMake.app/Contents/man/man7/cmake-language.7"
+  manpage "#{appdir}/CMake.app/Contents/man/man7/cmake-modules.7"
+  manpage "#{appdir}/CMake.app/Contents/man/man7/cmake-packages.7"
+  manpage "#{appdir}/CMake.app/Contents/man/man7/cmake-policies.7"
+  manpage "#{appdir}/CMake.app/Contents/man/man7/cmake-presets.7"
+  manpage "#{appdir}/CMake.app/Contents/man/man7/cmake-properties.7"
+  manpage "#{appdir}/CMake.app/Contents/man/man7/cmake-qt.7"
+  manpage "#{appdir}/CMake.app/Contents/man/man7/cmake-server.7"
+  manpage "#{appdir}/CMake.app/Contents/man/man7/cmake-toolchains.7"
+  manpage "#{appdir}/CMake.app/Contents/man/man7/cmake-variables.7"
+  manpage "#{appdir}/CMake.app/Contents/man/man7/cpack-generators.7"
 
   zap trash: [
     "~/Library/Preferences/org.cmake.cmake.plist",

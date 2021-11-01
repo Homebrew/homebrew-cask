@@ -1,9 +1,9 @@
 cask "rescuetime" do
-  version "2.16.4.2"
-  sha256 "41f0f340ec75b8296756e4129f6df8743279ddfd77f581d825839c7d7725088f"
+  version "2.16.6.1"
+  sha256 :no_check
 
   url "https://www.rescuetime.com/installers/RescueTimeInstaller.pkg"
-  appcast "https://www.rescuetime.com/installers/appcast"
+  appcast "https://www.rescuetime.com/release-notes/mac"
   name "RescueTime"
   desc "Time optimising application"
   homepage "https://www.rescuetime.com/"

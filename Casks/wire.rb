@@ -1,13 +1,17 @@
 cask "wire" do
-  version "3.19.3799"
-  sha256 "8933f3c4180f072ebb21d0e624a43e904a97e10fa682a7f9e596b41b1eb168eb"
+  version "3.26.4145"
+  sha256 "c259fc7c81cf6286cab54e06b7c00e4e4509f13a64549c25ad3c57f1932267b2"
 
-  # github.com/wireapp/wire-desktop/ was verified as official when first introduced to the cask
-  url "https://github.com/wireapp/wire-desktop/releases/download/macos%2F#{version}/Wire.pkg"
-  appcast "https://github.com/wireapp/wire-desktop/releases.atom"
+  url "https://github.com/wireapp/wire-desktop/releases/download/macos%2F#{version}/Wire.pkg",
+      verified: "github.com/wireapp/wire-desktop/"
   name "Wire"
   desc "Collaboration platform focusing on security"
   homepage "https://wire.com/"
+
+  livecheck do
+    url :url
+    regex(%r{^macos[/._-]v?(\d+(?:\.\d+)+)$}i)
+  end
 
   pkg "Wire.pkg"
 

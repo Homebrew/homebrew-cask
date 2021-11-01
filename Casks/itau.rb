@@ -1,5 +1,5 @@
 cask "itau" do
-  version :latest
+  version "2.1.2.18"
   sha256 :no_check
 
   url "https://guardiao.itau.com.br/UpdateServer/aplicativoitau.dmg"

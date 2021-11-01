@@ -1,12 +1,16 @@
 cask "taskpaper" do
-  version "3.8.10"
-  sha256 "18b6d7e248ed88ff1d1a3db06de7110284967f277ad2732be90cc500c7a11663"
+  version "3.8.16,475"
+  sha256 "96c1efa86db091bbade3e9ef544254a347fdc6a0906cee086fbc27380ff4e2f0"
 
-  url "https://www.taskpaper.com/assets/app/TaskPaper-#{version}.dmg"
-  appcast "https://www.taskpaper.com/assets/app/TaskPaper.rss"
+  url "https://www.taskpaper.com/assets/app/TaskPaper-#{version.before_comma}.dmg"
   name "TaskPaper"
   desc "App to make lists and help with organization"
   homepage "https://www.taskpaper.com/"
+
+  livecheck do
+    url "https://www.taskpaper.com/assets/app/TaskPaper.rss"
+    strategy :sparkle
+  end
 
   auto_updates true
 

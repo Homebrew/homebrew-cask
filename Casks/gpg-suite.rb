@@ -1,15 +1,24 @@
 cask "gpg-suite" do
-  version "2020.1"
-  sha256 "43d7becb7faaeafcffaf6a2723cea7ea004265a79e2df9a1a9687916a694a131"
+  version "2021.1,105"
+  sha256 "383bd6ab4791ee51e0f67955ad1ab70bb3a2a1e5c71f6a7f42f53b92684106e0"
 
-  url "https://releases.gpgtools.org/GPG_Suite-#{version}.dmg"
-  appcast "https://gpgtools.org/releases/gka/appcast.xml"
+  url "https://releases.gpgtools.org/GPG_Suite-#{version.before_comma}_#{version.after_comma}.dmg"
   name "GPG Suite"
+  desc "Tools to protect your emails and files"
   homepage "https://gpgtools.org/"
 
+  livecheck do
+    url "https://gpgtools.org/releases/gka/appcast.xml"
+    strategy :sparkle
+  end
+
   auto_updates true
-  conflicts_with cask: "gpg-suite-nightly"
-  depends_on macos: ">= :sierra"
+  conflicts_with cask: [
+    "gpg-suite-nightly",
+    "gpg-suite-no-mail",
+    "gpg-suite-pinentry",
+  ], formula: "gpg"
+  depends_on macos: ">= :mojave"
 
   pkg "Install.pkg"
 
@@ -28,6 +37,7 @@ cask "gpg-suite" do
               "com.apple.mail",
               "org.gpgtools.gpgkeychainaccess",
               "org.gpgtools.gpgkeychain",
+              "org.gpgtools.gpgmail.upgrader",
               "org.gpgtools.gpgservices",
               # TODO: add "killall -kill gpg-agent"
             ],

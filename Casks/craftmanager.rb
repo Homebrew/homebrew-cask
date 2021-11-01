@@ -1,11 +1,18 @@
 cask "craftmanager" do
-  version "1.0.100"
-  sha256 "f68be63744393960400f57914753016427dd327660b006c4d3ebaa8a9ef53078"
+  version "1.0.114,244"
+  sha256 :no_check
 
   url "https://craft-assets.invisionapp.com/CraftManager/production/CraftManager.zip"
-  appcast "https://craft-assets.invisionapp.com/CraftManager/production/appcast.xml"
   name "CraftManager"
+  desc "Helps keep your Craft tools up to date"
   homepage "https://www.invisionapp.com/craft"
+
+  livecheck do
+    url "https://craft-assets.invisionapp.com/CraftManager/production/appcast.xml"
+    strategy :sparkle
+  end
+
+  depends_on macos: ">= :mojave"
 
   app "CraftManager.app"
 end

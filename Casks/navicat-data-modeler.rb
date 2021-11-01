@@ -1,11 +1,16 @@
 cask "navicat-data-modeler" do
-  version "3.0.13"
-  sha256 "6c9feff2a221b6895c24ee84c8435c65949298504e1cf98184d64fcffc1d71bc"
+  version "3.0.18"
+  sha256 :no_check
 
   url "http://download.navicat.com/download/modeler0#{version.major_minor.no_dots}_en.dmg"
-  appcast "https://navicat.com/en/products/navicat-data-modeler-release-note"
   name "Navicat Data Modeler"
+  desc "Database design tool"
   homepage "https://www.navicat.com/products/navicat-data-modeler"
+
+  livecheck do
+    url "https://updater.navicat.com/mac/navicat_updates.php?appName=Navicat%20Data%20Modeler&appLang=en"
+    strategy :sparkle
+  end
 
   app "Navicat Data Modeler.app"
 end

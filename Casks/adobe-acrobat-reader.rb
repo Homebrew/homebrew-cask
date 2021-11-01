@@ -1,11 +1,16 @@
 cask "adobe-acrobat-reader" do
-  version "20.012.20041"
-  sha256 "d93a04cdf86bbea7a4ac19110f49948fea77e1ac011673dca8a588e3f7893c95"
+  version "21.007.20099"
+  sha256 "7e2476096b067e04f2c0667c3ddd28512a8cbff1c13f69f9ae2a66192477001f"
 
   url "https://ardownload2.adobe.com/pub/adobe/reader/mac/AcrobatDC/#{version.no_dots}/AcroRdrDC_#{version.no_dots}_MUI.dmg"
-  appcast "https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotesDC/index.html"
   name "Adobe Acrobat Reader DC"
+  desc "View, print, and comment on PDF documents"
   homepage "https://acrobat.adobe.com/us/en/acrobat/pdf-reader.html"
+
+  livecheck do
+    url "https://armmf.adobe.com/arm-manifests/mac/AcrobatDC/reader/current_version.txt"
+    regex(/(\d+(?:\.\d+)+)/i)
+  end
 
   auto_updates true
 
@@ -13,14 +18,14 @@ cask "adobe-acrobat-reader" do
 
   uninstall pkgutil:   [
     "com.adobe.acrobat.DC.reader.*",
-    "com.adobe.RdrServicesUpdater",
     "com.adobe.armdc.app.pkg",
+    "com.adobe.RdrServicesUpdater",
   ],
             delete:    "/Applications/Adobe Acrobat Reader DC.app",
             quit:      [
-              "com.adobe.Reader",
-              "com.adobe.AdobeRdrCEFHelper",
               "com.adobe.AdobeRdrCEF",
+              "com.adobe.AdobeRdrCEFHelper",
+              "com.adobe.Reader",
             ],
             launchctl: [
               "com.adobe.ARMDC.Communicator",
@@ -29,10 +34,11 @@ cask "adobe-acrobat-reader" do
             ]
 
   zap trash: [
-    "~/Library/Preferences/com.adobe.Reader.plist",
+    "~/Library/Caches/com.adobe.Reader",
+    "~/Library/HTTPStorages/com.adobe.Reader.binarycookies",
     "~/Library/Preferences/com.adobe.AdobeRdrCEFHelper.plist",
     "~/Library/Preferences/com.adobe.crashreporter.plist",
-    "~/Library/Caches/com.adobe.Reader",
+    "~/Library/Preferences/com.adobe.Reader.plist",
     "/Library/Preferences/com.adobe.reader.DC.WebResource.plist",
   ]
 end

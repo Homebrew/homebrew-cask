@@ -1,12 +1,16 @@
 cask "app-tamer" do
-  version "2.5.2"
-  sha256 "b184e87e6465502485760a1fe5a535d8d9534fe7731e3f6d777b9983ebf1e861"
+  version "2.6.4,10674"
+  sha256 "ee84b3dbc0474777c7e886fc86c95f4e392dec4fcdbb5a141ff2fb0f1e28ec48"
 
-  url "https://www.stclairsoft.com/download/AppTamer-#{version}.dmg"
-  appcast "https://www.stclairsoft.com/cgi-bin/sparkle.cgi?AT"
+  url "https://www.stclairsoft.com/download/AppTamer-#{version.before_comma}.dmg"
   name "AppTamer"
   desc "CPU management applicataion"
   homepage "https://www.stclairsoft.com/AppTamer/"
+
+  livecheck do
+    url "https://www.stclairsoft.com/cgi-bin/sparkle.cgi?AT"
+    strategy :sparkle
+  end
 
   app "App Tamer.app"
 

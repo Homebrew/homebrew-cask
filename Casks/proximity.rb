@@ -2,8 +2,8 @@ cask "proximity" do
   version "1.0.1"
   sha256 "836d209bb83cd144780e200aad7ea6dda2581b20c5be316208337996532f0d51"
 
-  # kvraudio.com/ was verified as official when first introduced to the cask
-  url "https://static.kvraudio.com/files/1451/proximity_v#{version.dots_to_underscores}-mac.zip"
+  url "https://static.kvraudio.com/files/1451/proximity_v#{version.dots_to_underscores}-mac.zip",
+      verified: "kvraudio.com/"
   name "Proximity"
   homepage "https://www.tokyodawn.net/proximity/"
 

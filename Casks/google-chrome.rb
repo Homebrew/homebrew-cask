@@ -1,28 +1,26 @@
 cask "google-chrome" do
-  version "85.0.4183.102"
-  sha256 "feebe7524ab7a22650fb6237eccb33859598d4340b8afe89ac12dbb8e7e1c659"
+  arch = Hardware::CPU.intel? ? "" : "universal/"
 
-  url "https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg"
-  appcast "https://omahaproxy.appspot.com/history?os=mac;channel=stable"
+  version "95.0.4638.69"
+  sha256 :no_check
+
+  url "https://dl.google.com/chrome/mac/#{arch}stable/GGRO/googlechrome.dmg"
   name "Google Chrome"
-  desc "Cross-platform web browser"
+  desc "Web browser"
   homepage "https://www.google.com/chrome/"
 
+  livecheck do
+    url "https://chromiumdash.appspot.com/fetch_releases?channel=Stable&platform=Mac"
+    strategy :page_match
+    regex(/"version": "(\d+(?:\.\d+)*)"/i)
+  end
+
   auto_updates true
-  conflicts_with cask: [
-    "homebrew/cask-versions/google-chrome-beta",
-    "homebrew/cask-versions/google-chrome-dev",
-  ]
   depends_on macos: ">= :yosemite"
 
   app "Google Chrome.app"
 
-  uninstall launchctl: [
-    "com.google.keystone.agent",
-    "com.google.keystone.daemon",
-  ]
-
-  zap trash: [
+  zap trash:     [
     "/Library/Caches/com.google.SoftwareUpdate.*",
     "/Library/Google/Google Chrome Brand.plist",
     "/Library/Google/GoogleSoftwareUpdate",
@@ -38,6 +36,7 @@ cask "google-chrome" do
     "~/Library/Google/Google Chrome Brand.plist",
     "~/Library/Google/GoogleSoftwareUpdate",
     "~/Library/LaunchAgents/com.google.keystone.agent.plist",
+    "~/Library/LaunchAgents/com.google.keystone.xpcservice.plist",
     "~/Library/Logs/GoogleSoftwareUpdateAgent.log",
     "~/Library/Preferences/com.google.Chrome.plist",
     "~/Library/Preferences/com.google.Keystone.Agent.plist",
@@ -45,10 +44,14 @@ cask "google-chrome" do
     "~/Library/Saved Application State/com.google.Chrome.savedState",
     "~/Library/WebKit/com.google.Chrome",
   ],
-      rmdir: [
+      rmdir:     [
         "/Library/Google",
         "~/Library/Application Support/Google",
         "~/Library/Caches/Google",
         "~/Library/Google",
+      ],
+      launchctl: [
+        "com.google.keystone.agent",
+        "com.google.keystone.daemon",
       ]
 end

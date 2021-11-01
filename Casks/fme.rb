@@ -1,12 +1,21 @@
 cask "fme" do
-  version "2020.1.1-b20608"
-  sha256 "099e7834f6e8b5724d532fdfd3e9aef9d5495842fe83dbd248d6862af90b6f6d"
+  version "2021.0.3,21326"
+  sha256 "d0488a6db9a8b0c97d57f5ab99a5ba399038fe56b291b2526f3c7808a38bb95c"
 
-  url "https://downloads.safe.com/fme/#{version.major}/fme-desktop-#{version}-macosx.dmg"
-  appcast "https://www.safe.com/support/downloads/",
-          must_contain: version.major_minor
+  url "https://downloads.safe.com/fme/#{version.major}/fme-desktop-#{version.before_comma}-b#{version.after_comma}-macosx.dmg"
   name "FME Desktop"
+  desc "Platform for integrating spatial data"
   homepage "https://www.safe.com/"
+
+  livecheck do
+    url "https://www.safe.com/api/downloads/"
+    strategy :page_match do |page|
+      match = page.match(%r{/fme-desktop-(\d+(?:\.\d+)*)-b(\d+)-macosx\.dmg}i)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
+    end
+  end
 
   installer script: {
     executable: "FME Desktop Installer.app/Contents/MacOS/applet",

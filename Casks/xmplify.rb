@@ -1,11 +1,23 @@
 cask "xmplify" do
-  version "1.9.5"
-  sha256 "2ca369052f61ac40535f4cc4e651e8517a0ef737840c86c8b7f7010a6da44b94"
+  if MacOS.version <= :mojave
+    version "1.9.8"
+    sha256 "b742d5f039e119758ea2548a59a17aac5cb329c2102f835ca67e90e738f2cb7e"
+  else
+    version "1.10.1"
+    sha256 "41ebf6541e0847e86e19d490e5640eb11368e409ed994a45d23150d95e812b35"
+  end
 
   url "http://xmplifyapp.com/releases/Xmplify-#{version}.dmg"
-  appcast "http://xmplifyapp.com/appcast.xml"
   name "Xmplify"
+  desc "XML editor"
   homepage "http://xmplifyapp.com/"
+
+  livecheck do
+    url "http://xmplifyapp.com/appcast.xml"
+    strategy :sparkle
+  end
+
+  depends_on macos: ">= :sierra"
 
   app "Xmplify.app"
 

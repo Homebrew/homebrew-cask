@@ -1,10 +1,9 @@
 cask "mymonero" do
-  version "1.1.13"
-  sha256 "c7bc92419cf16f514ba7cbb3affffda417e0d5ea2fc446bdc3fff9efc2732c43"
+  version "1.2.0"
+  sha256 "988e846323232020aed886f0050de78dcbcc2855107e11c168a3a24d56438081"
 
-  # github.com/mymonero/mymonero-app-js/ was verified as official when first introduced to the cask
-  url "https://github.com/mymonero/mymonero-app-js/releases/download/v#{version}/MyMonero-#{version}.dmg"
-  appcast "https://github.com/mymonero/mymonero-app-js/releases.atom"
+  url "https://github.com/mymonero/mymonero-app-js/releases/download/v#{version}/MyMonero-#{version}.dmg",
+      verified: "github.com/mymonero/mymonero-app-js/"
   name "MyMonero"
   desc "Wallet for the Monero cryptocurrency"
   homepage "https://mymonero.com/"
@@ -13,8 +12,8 @@ cask "mymonero" do
 
   zap trash: [
     "~/Library/Application Support/MyMonero",
-    "~/Library/Saved Application State/com.mymonero.mymonero-desktop.savedState",
-    "~/Library/Preferences/com.mymonero.mymonero-desktop.plist",
     "~/Library/Logs/MyMonero",
+    "~/Library/Preferences/com.mymonero.mymonero-desktop.plist",
+    "~/Library/Saved Application State/com.mymonero.mymonero-desktop.savedState",
   ]
 end

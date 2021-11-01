@@ -1,13 +1,18 @@
 cask "ultimaker-cura" do
-  version "4.7.1"
-  sha256 "2caed221d300223ad42a29d14def124e04a6592e73e694e5a82040897a95f0f0"
+  version "4.11.0"
+  sha256 "301b709643e3816c71445af1263855ba8fa45d4c583cebcf039be2f9150c7c89"
 
-  url "https://download.ultimaker.com/cura/Ultimaker_Cura-#{version}-Darwin.dmg"
-  appcast "https://github.com/Ultimaker/Cura/releases.atom"
+  url "https://github.com/Ultimaker/Cura/releases/download/#{version}/Ultimaker_Cura-#{version}.dmg",
+      verified: "github.com/Ultimaker/Cura/"
   name "Ultimaker Cura"
   name "Cura"
   desc "3D printer and slicing GUI"
-  homepage "https://ultimaker.com/en/products/cura-software"
+  homepage "https://ultimaker.com/software/ultimaker-cura"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Ultimaker Cura.app"
 

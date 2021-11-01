@@ -3,10 +3,14 @@ cask "geotag" do
   sha256 "ad90415ca66aeea9029e00eeb829ad9706365bbd44340d3467f40d71e5c1d4b4"
 
   url "https://www.snafu.org/GeoTag/GeoTag-#{version}.dmg"
-  appcast "https://github.com/marchyman/GeoTag/releases.atom"
   name "GeoTag"
   desc "Geo location editor for images"
   homepage "https://www.snafu.org/GeoTag/"
+
+  livecheck do
+    url "https://github.com/marchyman/GeoTag"
+    strategy :git
+  end
 
   depends_on macos: ">= :sierra"
   depends_on formula: "exiftool"

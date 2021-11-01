@@ -4,7 +4,14 @@ cask "crystax-ndk" do
 
   url "https://www.crystax.net/download/crystax-ndk-#{version}-darwin-x86_64.tar.xz"
   name "Crystax NDK"
+  desc "Drop-in replacement for Google's Android NDK"
   homepage "https://www.crystax.net/android/ndk"
+
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/crystax-ndk-(\d+(?:\.\d+)+)-darwin-x86_64\.tar\.xz}i)
+  end
 
   conflicts_with cask: "android-ndk"
 
@@ -13,7 +20,7 @@ cask "crystax-ndk" do
   preflight do
     FileUtils.ln_sf("#{staged_path}/crystax-ndk-#{version}", "#{HOMEBREW_PREFIX}/share/crystax-ndk")
 
-    IO.write shimscript, <<~EOS
+    File.write shimscript, <<~EOS
       #!/bin/bash
       readonly executable="#{staged_path}/crystax-ndk-#{version}/$(basename ${0})"
       test -f "${executable}" && exec "${executable}" "${@}"

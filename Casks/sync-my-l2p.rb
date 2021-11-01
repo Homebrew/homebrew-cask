@@ -1,11 +1,11 @@
 cask "sync-my-l2p" do
-  version "2.4.1"
-  sha256 "481af4bd5be7bb8940fe3c9bd435f5b509acefa45cba347892893664a702265b"
+  version "2.4.5"
+  sha256 "e0eef5b462bb3c277784136a24165e29e207d3b0dc6ad165e8b621c46263d6c0"
 
-  # github.com/RobertKrajewski/Sync-my-L2P/ was verified as official when first introduced to the cask
-  url "https://github.com/RobertKrajewski/Sync-my-L2P/releases/download/v#{version}/SyncMyL2P-#{version}-osx.dmg"
-  appcast "https://github.com/RobertKrajewski/Sync-my-L2P/releases.atom"
+  url "https://github.com/rwthmoodle/Sync-my-L2P/releases/download/v#{version}/SyncMyL2P-#{version}-osx.dmg",
+      verified: "github.com/rwthmoodle/Sync-my-L2P/"
   name "Sync-my-L2P"
+  desc "Synchronizes your documents from the L2P and Moodle of RWTH Aachen"
   homepage "https://www.syncmyl2p.de/"
 
   app "Sync-my-L2P.app"

@@ -1,12 +1,19 @@
 cask "textadept" do
-  version "10.8"
-  sha256 "3c5fb990325f4af3ef443a97dad2409fb0986faf1e553b8f87f6d42dfb6fcc24"
+  version "11.2"
+  sha256 "cc7e782885c16dfedc97ba6545cfc7ba51e5b9db9f8cf86d94f6def89414da67"
 
-  url "https://foicica.com/textadept/download/textadept_#{version}.osx.zip"
-  appcast "https://foicica.com/textadept/feed"
+  url "https://github.com/orbitalquark/textadept/releases/download/textadept_#{version}/textadept_#{version}.macOS.zip",
+      verified: "github.com/orbitalquark/textadept/"
   name "Textadept"
-  homepage "https://foicica.com/textadept/"
+  desc "Text editor"
+  homepage "https://orbitalquark.github.io/textadept/"
 
-  app "textadept_#{version}.osx/Textadept.app"
-  binary "textadept_#{version}.osx/ta"
+  livecheck do
+    url :url
+    strategy :git
+    regex(/^textadept_(\d+(?:\.\d+)*)$/i)
+  end
+
+  app "textadept_#{version}.macOS/Textadept.app"
+  binary "textadept_#{version}.macOS/ta"
 end

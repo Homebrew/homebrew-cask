@@ -1,13 +1,18 @@
 cask "fontexplorer-x-pro" do
-  version "7.1.3"
-  sha256 "6f555dbf96ecd8acce1539d1a5ec2315ac19ee2905be86572b8748e009858290"
+  version "7.2.6"
+  sha256 "89c8a0dfb2f48527c00e87737cf37f6236edc95ebc824088384215642aa983b4"
 
   url "https://fast.fontexplorerx.com/FontExplorerXPro#{version.no_dots}.dmg"
-  appcast "https://macupdater.net/cgi-bin/check_urls/check_url_redirect_curl.cgi?url=https://fex.linotype.com/download/mac/FontExplorerXPro.dmg",
-          must_contain: version.no_dots
   name "FontExplorer X Pro"
   desc "Font finder and organizer"
   homepage "https://www.fontexplorerx.com/"
+
+  livecheck do
+    url "https://fex.linotype.com/download/mac/FontExplorerXPro.dmg"
+    strategy :header_match do |headers|
+      headers["location"][/FontExplorerXPro(\d+).dmg/i, 1].split("", 3).join(".")
+    end
+  end
 
   app "FontExplorer X Pro.app"
 

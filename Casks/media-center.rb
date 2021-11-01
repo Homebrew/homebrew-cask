@@ -1,12 +1,21 @@
 cask "media-center" do
-  version "26.0.107"
-  sha256 "8865b68f48fca629729b50175498cfae7d782a078bb948fa1a54f349615f35a0"
+  version "27.00.79"
+  sha256 "f1cf62af9c26051a8988c082f05f8953ef68994e5c9436efde0ff86f64ec1700"
 
-  url "https://files.jriver.com/mediacenter/channels/v#{version.major}/latest/MediaCenter#{version.no_dots}.dmg"
-  appcast "https://www.jriver.com/download.html",
-          must_contain: version.no_dots
+  url "https://files.jriver.com/mediacenter/channels/v#{version.major}/stable/MediaCenter#{version.no_dots}.dmg"
   name "JRiver Media Center"
+  desc "Manage and play your media"
   homepage "https://www.jriver.com/"
+
+  livecheck do
+    url "https://www.jriver.com/download.html"
+    strategy :page_match do |page|
+      match = page.match(/MediaCenter(\d\d+)(\d\d+)(\d\d+)\.dmg/i)
+      next if match.blank?
+
+      "#{match[1]}.#{match[2]}.#{match[3]}"
+    end
+  end
 
   auto_updates true
 

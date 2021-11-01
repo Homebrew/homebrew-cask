@@ -1,13 +1,18 @@
 cask "unetbootin" do
-  version "681"
-  sha256 "9e6b90a15c208d7979dc1e45ccb8e7e17f669d0143ccc96c914ac42af4c4ff20"
+  version "702"
+  sha256 "204f867e9b2604a5ba8818b7d7f4be83d08fa0c3eb0c22e51c39fc5526bd1aed"
 
-  # github.com/unetbootin/unetbootin/ was verified as official when first introduced to the cask
-  url "https://github.com/unetbootin/unetbootin/releases/download/#{version}/unetbootin-mac-#{version}.dmg"
-  appcast "https://github.com/unetbootin/unetbootin/releases.atom"
+  url "https://github.com/unetbootin/unetbootin/releases/download/#{version}/unetbootin-mac-#{version}.dmg",
+      verified: "github.com/unetbootin/unetbootin/"
   name "UNetbootin"
   desc "Tool to install Linux/BSD distributions to a partition or USB drive"
   homepage "https://unetbootin.github.io/"
+
+  livecheck do
+    url :url
+    strategy :git
+    regex(/^(\d+(?:\.\d+)*)$/i)
+  end
 
   app "unetbootin.app"
 

@@ -1,12 +1,16 @@
 cask "mudlet" do
-  version "4.9.1"
-  sha256 "e7105e93cd7dd12b920856ae3cc9a0b1fc4538970768a316921eb6f657cf883d"
+  version "4.13.1"
+  sha256 "a96bc99c75bd40f85c0a23d675ab29bddb46d344e56ac6cfc4e4393529f7594a"
 
   url "https://www.mudlet.org/wp-content/files/Mudlet-#{version}.dmg"
-  appcast "https://github.com/Mudlet/Mudlet/releases.atom"
   name "Mudlet"
-  desc "Cross-platform and open-source MUD client with scripting in Lua"
+  desc "Multi-User Dungeon client"
   homepage "https://www.mudlet.org/"
+
+  livecheck do
+    url "https://github.com/Mudlet/Mudlet"
+    strategy :git
+  end
 
   depends_on macos: ">= :high_sierra"
 

@@ -9,6 +9,14 @@ cask "candybar" do
 
   app "CandyBar.app"
 
+  zap trash: [
+    "~/Library/Application Support/CandyBar",
+    "~/Library/Caches/Cleanup At Startup/CandyBar",
+    "~/Library/Caches/com.panic.CandyBar3",
+    "~/Library/Preferences/com.panic.CandyBar3.plist",
+    "~/Library/Saved Application State/com.panic.CandyBar3.savedState",
+  ]
+
   caveats do
     discontinued
     free_license "https://panic.com/bin/setup.php/cb3/PPQA-YAMA-E3KP-VHXG-B6AL-L"

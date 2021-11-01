@@ -1,5 +1,5 @@
 cask "macupdate" do
-  version :latest
+  version "6.4.1,450525"
   sha256 :no_check
 
   url "https://www.macupdate.com/mud-download"

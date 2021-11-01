@@ -1,12 +1,18 @@
 cask "yandex" do
-  version :latest
+  version "21.3.3"
   sha256 :no_check
 
-  # yandex.net/ was verified as official when first introduced to the cask
-  url "https://download.cdn.yandex.net/browser/yandex/ru/Yandex.dmg"
+  url "https://download.cdn.yandex.net/browser/yandex/ru/Yandex.dmg",
+      verified: "yandex.net/"
   name "Yandex.Browser"
   desc "Web browser"
-  homepage "https://browser.yandex.ru/desktop/"
+  homepage "https://browser.yandex.ru/"
+
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(/download__version.*?(\d+(?:\.\d+)*)/mi)
+  end
 
   app "Yandex.app"
 end

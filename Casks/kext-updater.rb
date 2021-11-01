@@ -1,12 +1,16 @@
 cask "kext-updater" do
-  version "3.6.0"
-  sha256 "4e4756bcaa50d1f4ade483ae35ca1a464a6332220f8362355e8011a9b413f820"
+  version "3.9.6,396"
+  sha256 :no_check
 
   url "https://update.kextupdater.de/kextupdater/kextupdaterng.zip"
-  appcast "https://update.kextupdater.de/kextupdater/appcastng.xml"
   name "Kext Updater"
   desc "Automatic updater for kernel extensions required by 'Hackintoshes'"
   homepage "https://kextupdater.de/"
+
+  livecheck do
+    url "https://update.kextupdater.de/kextupdater/appcastng.xml"
+    strategy :sparkle
+  end
 
   app "Kext Updater.app"
 

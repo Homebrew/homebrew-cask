@@ -1,12 +1,16 @@
 cask "screens" do
-  version "4.7.9,25710"
-  sha256 "d12674a10552c9012aba2decedf0bd066da5196700a488fd0172b2f2b9f51c3d"
+  version "4.9,1634997122"
+  sha256 "4951f1aba2d298a2c22b1c1625213b06c31a6bac429a7088a4b21cd6a9655a8a"
 
   url "https://updates.edovia.com/com.edovia.screens#{version.major}.mac/Screens_#{version.before_comma}b#{version.after_comma}.zip"
-  appcast "https://updates.edovia.com/com.edovia.screens#{version.major}.mac/appcast.xml"
   name "Screens"
   desc "Remote access software focusing on usability"
   homepage "https://edovia.com/screens-mac/"
+
+  livecheck do
+    url "https://updates.edovia.com/com.edovia.screens#{version.major}.mac/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"

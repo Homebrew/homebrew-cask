@@ -1,12 +1,11 @@
 cask "invesalius" do
-  version "3.1.1"
-  sha256 "678b2f028c66b805a9865524eba49852f0c7f7e7d231a965ffa78b0ced47b629"
+  version "3.1.99995"
+  sha256 "e9ee3a7548cee911355440fb87362a14080e4ec8372b85fdb6dd118cb294d173"
 
-  # github.com/invesalius/invesalius3/ was verified as official when first introduced to the cask
-  url "https://github.com/invesalius/invesalius3/releases/download/v#{version}/InVesalius-#{version}.dmg"
-  appcast "https://github.com/invesalius/invesalius3/releases.atom"
+  url "https://github.com/invesalius/invesalius3/releases/download/v#{version}/InVesalius.#{version}.dmg"
   name "InVesalius"
-  homepage "https://www.cti.gov.br/en/invesalius"
+  desc "3D medical imaging reconstruction software"
+  homepage "https://github.com/invesalius/invesalius3/"
 
   app "InVesalius.app"
 end

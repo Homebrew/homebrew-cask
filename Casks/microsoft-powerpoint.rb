@@ -1,12 +1,17 @@
 cask "microsoft-powerpoint" do
-  version "16.41.20091302"
-  sha256 "8eef68b30feca7db82fcf461f674a7b575c382edf1e37edf68c2a061255d52ea"
+  version "16.54.21101001"
+  sha256 "75a57c82b46d0e2558c454f19610576b7a48baf1ccc5cd1fa61b69cca5bf0bd1"
 
-  # officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/ was verified as official when first introduced to the cask
-  url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_PowerPoint_#{version}_Installer.pkg"
-  appcast "https://docs.microsoft.com/en-us/officeupdates/update-history-office-for-mac"
+  url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_PowerPoint_#{version}_Installer.pkg",
+      verified: "officecdnmac.microsoft.com/"
   name "Microsoft PowerPoint"
+  desc "Presentation software"
   homepage "https://products.office.com/en-US/powerpoint"
+
+  livecheck do
+    url "https://go.microsoft.com/fwlink/p/?linkid=525136"
+    strategy :header_match
+  end
 
   auto_updates true
   conflicts_with cask: "microsoft-office"
@@ -33,5 +38,6 @@ cask "microsoft-powerpoint" do
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.powerpoint.sfl*",
     "~/Library/Containers/com.microsoft.Powerpoint",
     "~/Library/Preferences/com.microsoft.Powerpoint.plist",
+    "~/Library/Saved Application State/com.microsoft.Powerpoint.savedState",
   ]
 end

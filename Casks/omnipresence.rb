@@ -1,20 +1,30 @@
 cask "omnipresence" do
   if MacOS.version <= :yosemite
-    version "1.4.1,10.10"
+    version "1.4.1"
     sha256 "409bf272e7c4dc488f68abadb3e2ef15d4accde10f8ee9babd8b23f522bfe323"
+    url "https://downloads.omnigroup.com/software/MacOSX/10.10/OmniPresence-#{version}.dmg"
+  elsif MacOS.version <= :el_capitan
+    version "1.5.2"
+    sha256 "82d3c6978e644dc7defafd3706a02d15c500e8254ca22076a5095bdd94b786d1"
+    url "https://downloads.omnigroup.com/software/MacOSX/10.11/OmniPresence-#{version}.dmg"
   elsif MacOS.version <= :high_sierra
-    version "1.6,10.13"
+    version "1.6"
     sha256 "48bcc9f4a3b49f120651cb6d8fd3f1744bf91c4c63e7d30c5d1762eaacc3cd0b"
+    url "https://downloads.omnigroup.com/software/MacOSX/10.13/OmniPresence-#{version}.dmg"
   else
-    version "1.7,10.14"
-    sha256 "814c7178c3a674f6f65ddcf5815df1269c6519909fcac86ace2dba80b5cfc4f1"
+    version "1.8"
+    sha256 "dfb2d162103b3c23e2225dee2322d006f72be3b99b1283c365f6fdd4d1e047d3"
+    url "https://downloads.omnigroup.com/software/MacOSX/10.14/OmniPresence-#{version}.dmg"
   end
 
-  url "https://downloads.omnigroup.com/software/MacOSX/#{version.after_comma}/OmniPresence-#{version.before_comma}.dmg"
-  appcast "https://update.omnigroup.com/appcast/com.omnigroup.OmniPresence"
   name "OmniPresence"
   desc "Document syncing application"
   homepage "https://www.omnigroup.com/omnipresence"
+
+  livecheck do
+    url "https://update.omnigroup.com/appcast/com.omnigroup.OmniPresence"
+    strategy :sparkle
+  end
 
   app "OmniPresence.app"
 end

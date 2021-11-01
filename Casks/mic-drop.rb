@@ -1,12 +1,16 @@
 cask "mic-drop" do
-  version "1.1.6"
-  sha256 "e7d318ac68c2d394623e8507ba8d8a50cdfdce50c3667ce2709e5c3d09a0775b"
+  version "1.3.5,1305"
+  sha256 "81ebeb77f42fbd5ddbb19ed69443f05d68b9217a13c2383fafcb542b011dd8f6"
 
-  url "https://getmicdrop.com/downloads/Mic%20Drop%20#{version}.zip"
-  appcast "https://getmicdrop.com/downloads/appcast.xml"
+  url "https://getmicdrop.com/downloads/Mic%20Drop%20#{version.before_comma}.zip"
   name "Mic Drop"
   desc "Quickly mute your microphone with a global shortcut or menu bar control"
   homepage "https://getmicdrop.com/"
+
+  livecheck do
+    url "https://getmicdrop.com/downloads/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
   depends_on macos: ">= :catalina"

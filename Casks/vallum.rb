@@ -1,14 +1,21 @@
 cask "vallum" do
-  version "3.3.2"
-  sha256 "ed062cd0c8a268df37db6a71d7e8a15b12d3a3adff9af1ab52d6a4cb42300ce8"
+  version "4.0.3"
+  sha256 "b193781a78280ae2079df794e3783ea699a01d2aace6d46de44759461a2820c5"
 
-  # github.com/TheMurusTeam/Vallum/ was verified as official when first introduced to the cask
-  url "https://github.com/TheMurusTeam/Vallum/releases/download/v#{version}/vallum-#{version}.zip"
-  appcast "https://github.com/TheMurusTeam/Vallum/releases.atom"
+  url "https://github.com/TheMurusTeam/Vallum/releases/download/v#{version}/vallum-#{version}.zip",
+      verified: "github.com/TheMurusTeam/Vallum/"
   name "Vallum"
+  desc "Application firewall"
   homepage "https://www.vallumfirewall.com/"
 
-  pkg "Vallum.pkg"
+  livecheck do
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
+
+  depends_on macos: ">= :catalina"
+
+  app "Vallum.app"
 
   uninstall pkgutil:   "it.murus.afw.Vallum",
             launchctl: [

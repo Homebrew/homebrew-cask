@@ -1,13 +1,31 @@
 cask "webstorm" do
-  version "2020.2.2,202.7319.49"
-  sha256 "72faad29efc949a950c2629d2d97a706e5125188fce3fda58250538525f57f2f"
+  version "2021.2.3,212.5457.55"
 
-  url "https://download.jetbrains.com/webstorm/WebStorm-#{version.before_comma}.dmg"
-  appcast "https://data.services.jetbrains.com/products/releases?code=WS&latest=true&type=release"
+  if Hardware::CPU.intel?
+    sha256 "733d3353e19480b1beb544535b19f1bce309f12e72aaa95f92f3fd430e7a01f7"
+
+    url "https://download.jetbrains.com/webstorm/WebStorm-#{version.before_comma}.dmg"
+  else
+    sha256 "a0997ce4d80d3f684e0c3014f45334f37092f067fc0bdfa44e723ff55f129651"
+
+    url "https://download.jetbrains.com/webstorm/WebStorm-#{version.before_comma}-aarch64.dmg"
+  end
+
   name "WebStorm"
+  desc "JavaScript IDE"
   homepage "https://www.jetbrains.com/webstorm/"
 
+  livecheck do
+    url "https://data.services.jetbrains.com/products/releases?code=WS&latest=true&type=release"
+    strategy :page_match do |page|
+      JSON.parse(page)["WS"].map do |release|
+        "#{release["version"]},#{release["build"]}"
+      end
+    end
+  end
+
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "WebStorm.app"
 
@@ -21,11 +39,12 @@ cask "webstorm" do
   end
 
   zap trash: [
-    "~/Library/Application Support/WebStorm#{version.major_minor}",
-    "~/Library/Caches/WebStorm#{version.major_minor}",
-    "~/Library/Logs/WebStorm#{version.major_minor}",
+    "~/Library/Preferences/com.jetbrains.WebStorm.plist",
+    "~/Library/Preferences/jetbrains.webstorm.*.plist",
     "~/Library/Preferences/WebStorm#{version.major_minor}",
-    "~/Library/Preferences/jetbrains.webstorm.aaac0500.plist",
+    "~/Library/Application Support/JetBrains/WebStorm#{version.major_minor}",
+    "~/Library/Caches/JetBrains/WebStorm#{version.major_minor}",
+    "~/Library/Logs/JetBrains/WebStorm#{version.major_minor}",
     "~/Library/Saved Application State/com.jetbrains.WebStorm.savedState",
   ]
 end

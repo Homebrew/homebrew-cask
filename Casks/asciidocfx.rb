@@ -1,10 +1,9 @@
 cask "asciidocfx" do
-  version "1.7.3"
-  sha256 "394be4606490939526fe584981c3d00c922258b07bc1a7409322b153b9b5509f"
+  version "1.7.4"
+  sha256 "91f3c04aac2e4d785031883edd5aeb3b9be04c8907e25f2cbc866bc0598a9c3a"
 
-  # github.com/asciidocfx/AsciidocFX/ was verified as official when first introduced to the cask
-  url "https://github.com/asciidocfx/AsciidocFX/releases/download/v#{version}/AsciidocFX_Mac.dmg"
-  appcast "https://github.com/asciidocfx/AsciidocFX/releases.atom"
+  url "https://github.com/asciidocfx/AsciidocFX/releases/download/v#{version}/AsciidocFX_Mac.dmg",
+      verified: "github.com/asciidocfx/AsciidocFX/"
   name "AsciidocFX"
   desc "Asciidoc Editor and Toolchain to build books, documents and slides"
   homepage "https://www.asciidocfx.com/"

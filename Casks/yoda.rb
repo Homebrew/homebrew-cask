@@ -3,7 +3,6 @@ cask "yoda" do
   sha256 "4bed8d0f1e4a1be684fc4faf91bfd828f0f8cb6f7a3e4b60d28f0c4b1a94fdef"
 
   url "https://github.com/whoisandy/yoda/releases/download/v#{version}/yoda-installer-#{version}.dmg"
-  appcast "https://github.com/whoisandy/yoda/releases.atom"
   name "Yoda"
   desc "App to browse and download YouTube videos"
   homepage "https://github.com/whoisandy/yoda"

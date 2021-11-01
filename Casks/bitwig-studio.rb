@@ -1,11 +1,18 @@
 cask "bitwig-studio" do
-  version "3.2.7"
-  sha256 "e0536ca4e3f310c0689ca8da1c0c55f4083452c0407eafcd3ebf2738e2cc7d72"
+  version "4.0.5"
+  sha256 "c493c59365748637b6cd62eaa73e0dee49aabe2b28cc4409826adf0150d9ac3c"
 
   url "https://downloads.bitwig.com/stable/#{version}/Bitwig%20Studio%20#{version}.dmg"
-  appcast "https://www.bitwig.com/en/download.html"
   name "Bitwig Studio"
+  desc "Digital audio workstation"
   homepage "https://www.bitwig.com/"
+
+  livecheck do
+    url "https://www.bitwig.com/download/"
+    regex(/Bitwig\s*Studio\s*v?(\d+(?:\.\d+)+)/i)
+  end
+
+  depends_on macos: ">= :mojave"
 
   app "Bitwig Studio.app"
 

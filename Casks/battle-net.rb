@@ -10,6 +10,7 @@ cask "battle-net" do
   end
 
   name "Blizzard Battle.net"
+  desc "Online gaming platform"
   homepage "https://www.battle.net/"
 
   installer manual: "Battle.net-Setup.app"

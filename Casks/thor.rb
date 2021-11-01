@@ -1,9 +1,8 @@
 cask "thor" do
-  version "1.5.2"
-  sha256 "db2df1e126613b0a10c421b7fc78853d6bed319bfe43c47649eef645dd43bf52"
+  version "1.5.6"
+  sha256 "b35febd2c367f8fa266b914c4f93ca5b03a28d2902b8bbc79bbb7455ca2746ce"
 
   url "https://github.com/gbammc/Thor/releases/download/#{version}/Thor_#{version}.zip"
-  appcast "https://github.com/gbammc/Thor/releases.atom"
   name "Thor"
   desc "Utility to switch between applications"
   homepage "https://github.com/gbammc/Thor/"

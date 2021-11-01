@@ -1,12 +1,17 @@
 cask "telavox-flow" do
-  version "1.105.0"
-  sha256 "b134b6751d79473ce1ddf5a5b8fc974a7914ed6a669131abfadcfce1cee1e480"
+  version "1.130.1"
+  sha256 "0337bf1ac90878ff7992dbe619d78052b51c0df8defa5c013d0d97af22564a9d"
 
-  # s3.eu-west-2.amazonaws.com/flow-desktop/ was verified as official when first introduced to the cask
-  url "https://s3.eu-west-2.amazonaws.com/flow-desktop/Telavox-#{version}.dmg"
-  appcast "https://www.macupdater.net/cgi-bin/check_urls/check_url_redirect.cgi?url=https://deopappmanager.telavox.com/flow/download/mac/latest"
+  url "https://flow-desktop.s3.eu-west-2.amazonaws.com/Telavox-#{version}.dmg",
+      verified: "flow-desktop.s3.eu-west-2.amazonaws.com/"
   name "Telavox Flow"
+  desc "Communication and collaboration platform"
   homepage "https://telavox.com/en/apps/"
+
+  livecheck do
+    url "https://deopappmanager.telavox.com/flow/download/mac/latest"
+    strategy :header_match
+  end
 
   auto_updates true
 

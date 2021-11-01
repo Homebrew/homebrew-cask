@@ -1,12 +1,23 @@
 cask "exifrenamer" do
-  version "2.3.3"
-  sha256 "f228163dbda67bea7745967688b3025c0bc6d31f1c77dd2d04909bf627e59e10"
+  version "2.4.0,15"
+  sha256 :no_check
 
   url "https://www.qdev.de/downloads/files/ExifRenamer.dmg"
-  appcast "https://www.qdev.de/versions/ExifRenamer.txt"
   name "ExifRenamer"
   desc "Tool to rename digital photos, movie- and audio-clips"
   homepage "https://www.qdev.de/?location=mac/exifrenamer&forcelang=en"
+
+  livecheck do
+    url "https://www.qdev.de/versions/ExifRenamer.txt"
+    strategy :page_match do |page|
+      version = page.split
+      next if version.blank?
+
+      "#{version[0]},#{version[1].tr("()", "")}"
+    end
+  end
+
+  depends_on macos: ">= :el_capitan"
 
   app "ExifRenamer.app"
 

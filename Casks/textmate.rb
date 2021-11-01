@@ -1,19 +1,23 @@
 cask "textmate" do
-  version "2.0.6"
-  sha256 "fd4cf536c2e4bb703306737213babd36c0d548734de5de5ad78f2e6b8761627f"
+  version "2.0.23"
+  sha256 "f8dba933209bd01070028892474bf0b72f36c673f7bcb8da5973f93ddc387420"
 
-  # github.com/textmate/textmate/ was verified as official when first introduced to the cask
-  url "https://github.com/textmate/textmate/releases/download/v#{version}/TextMate_#{version}.tbz"
-  appcast "https://api.textmate.org/releases/release?os=10.14.6",
-          must_contain: version
+  url "https://github.com/textmate/textmate/releases/download/v#{version}/TextMate_#{version}.tbz",
+      verified: "github.com/textmate/textmate/"
   name "TextMate"
+  desc "General-purpose text editor"
   homepage "https://macromates.com/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"
 
   app "TextMate.app"
-  binary "#{appdir}/TextMate.app/Contents/Resources/mate"
+  binary "#{appdir}/TextMate.app/Contents/MacOS/mate"
 
   uninstall quit: "com.macromates.TextMate"
 

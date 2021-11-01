@@ -1,11 +1,16 @@
 cask "twonkyserver" do
-  version "8.5.1"
-  sha256 "19694b1d7cad69eb14921a6ce234edd71e1d1f4edd671193330b61e042f1d66c"
+  version "8.5.2"
+  sha256 "e010897ffab5fff125ba1e3b2b249cc62bfcae7613de858061d0b496464883be"
 
-  url "http://download.twonky.com/#{version}/TwonkyServerInstaller-#{version}.pkg"
-  appcast "https://twonky.com/downloads/index.html"
+  url "https://download.twonky.com/#{version}/TwonkyServerInstaller-#{version}.pkg"
   name "Twonky Server"
+  desc "DLNA/UPnP media server"
   homepage "https://twonky.com/"
+
+  livecheck do
+    url "https://twonky.com/downloads/index.html"
+    regex(%r{href=.*?/TwonkyServerInstaller[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
+  end
 
   pkg "TwonkyServerInstaller-#{version}.pkg"
 

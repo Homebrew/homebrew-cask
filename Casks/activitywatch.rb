@@ -1,12 +1,11 @@
 cask "activitywatch" do
-  version "0.9.2"
-  sha256 "3eecc1f61984428d4708785e9740d350a1ee5bdb8a2b5b480344121069ac5ffa"
+  version "0.11.0"
+  sha256 "91deabd5844968467b5b6b3423e12654d4e339ba309f333c25d991a2e689fd96"
 
-  # github.com/ActivityWatch/activitywatch/ was verified as official when first introduced to the cask
-  url "https://github.com/ActivityWatch/activitywatch/releases/download/v#{version}/activitywatch-v#{version}-macos-x86_64.dmg"
-  appcast "https://github.com/ActivityWatch/activitywatch/releases.atom"
+  url "https://github.com/ActivityWatch/activitywatch/releases/download/v#{version}/activitywatch-v#{version}-macos-x86_64.dmg",
+      verified: "github.com/ActivityWatch/activitywatch/"
   name "ActivityWatch"
-  desc "Cross-platform time tracking app"
+  desc "Time tracker"
   homepage "https://activitywatch.net/"
 
   app "ActivityWatch.app"

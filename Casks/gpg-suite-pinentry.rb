@@ -1,18 +1,24 @@
 cask "gpg-suite-pinentry" do
-  version "2020.1"
-  sha256 "43d7becb7faaeafcffaf6a2723cea7ea004265a79e2df9a1a9687916a694a131"
+  version "2021.1,105"
+  sha256 "383bd6ab4791ee51e0f67955ad1ab70bb3a2a1e5c71f6a7f42f53b92684106e0"
 
-  url "https://releases.gpgtools.org/GPG_Suite-#{version}.dmg"
-  appcast "https://gpgtools.org/releases/gka/appcast.xml"
+  url "https://releases.gpgtools.org/GPG_Suite-#{version.before_comma}_#{version.after_comma}.dmg"
   name "GPG Suite Pinentry"
+  desc "Pinentry GUI for GPG Suite"
   homepage "https://gpgtools.org/"
+
+  livecheck do
+    url "https://gpgtools.org/releases/gka/appcast.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
   conflicts_with cask: [
     "gpg-suite",
     "gpg-suite-nightly",
+    "gpg-suite-no-mail",
   ]
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   pkg "Install.pkg",
       choices: [
@@ -98,13 +104,24 @@ cask "gpg-suite-pinentry" do
         },
       ]
 
-  uninstall pkgutil: "org.gpgtools.pinentry.*",
-            quit:    "org.gpgtools.pinentry-mac",
-            delete:  "/usr/local/MacGPG2"
+  uninstall pkgutil:   [
+    "org.gpgtools.pinentry.*",
+    "org.gpgtools.checkprivatekey.pkg",
+    "org.gpgtools.updater.pkg",
+  ],
+            launchctl: "org.gpgtools.updater",
+            quit:      "org.gpgtools.pinentry-mac",
+            delete:    "/usr/local/MacGPG2"
 
   zap trash: "~/Library/Preferences/org.gpgtools.common.plist"
 
   caveats do
     files_in_usr_local
+
+    <<~EOS
+      You may need to set "pinentry-program" in `~/.gnupg/gpg-agent.conf` as follows:
+
+        pinentry-program /usr/local/MacGPG2/libexec/pinentry-mac.app/Contents/MacOS/pinentry-mac
+    EOS
   end
 end

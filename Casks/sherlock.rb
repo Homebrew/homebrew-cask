@@ -1,9 +1,9 @@
 cask "sherlock" do
-  version "1.8.0"
-  sha256 "3865549e0c4c17c6bc69b552d61c611d3ffad35193d00f4a296465b7e4419dca"
+  version "1.12.0"
+  sha256 :no_check
 
-  # dl.devmate.com/io.inspiredcode.Sherlock/ was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/io.inspiredcode.Sherlock/Sherlock.dmg"
+  url "https://dl.devmate.com/io.inspiredcode.Sherlock/Sherlock.dmg",
+      verified: "dl.devmate.com/io.inspiredcode.Sherlock/"
   appcast "http://sparkle.sherlock.inspiredcode.io"
   name "Sherlock"
   homepage "https://sherlock.inspiredcode.io/"

@@ -1,15 +1,19 @@
 cask "keep-it" do
-  version "1.8.16"
-  sha256 "a07062308b6722c70fd0cc5cdf93c99900ab50a49124175211cc6435af043312"
+  version "1.11.3,9032"
+  sha256 "9b5ed0c4c0e8c92dc815367967f9cdc16dcb0d5fc92525bc25c330abc1421fd5"
 
-  url "https://reinventedsoftware.com/keepit/downloads/KeepIt_#{version}.dmg"
-  appcast "https://reinventedsoftware.com/keepit/downloads/keepit.xml"
+  url "https://reinventedsoftware.com/keepit/downloads/KeepIt_#{version.before_comma}.dmg"
   name "Keep It"
   desc "Notebook, scrapbook and organizer tool"
   homepage "https://reinventedsoftware.com/keepit/"
 
+  livecheck do
+    url "https://reinventedsoftware.com/keepit/downloads/keepit.xml"
+    strategy :sparkle
+  end
+
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "Keep It.app"
 

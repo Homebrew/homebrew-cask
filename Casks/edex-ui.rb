@@ -1,11 +1,17 @@
 cask "edex-ui" do
-  version "2.2.2"
-  sha256 "5a7d232331dd06d61db39568e02f4bd3fa27262cb653f30ac6ff3b0ab570872c"
+  version "2.2.8"
+  sha256 "db38e5dea11e8b0f528c1a59971fe97cbecbcdd8cf29b21621ad7105173c3407"
 
-  url "https://github.com/GitSquared/edex-ui/releases/download/v#{version}/eDEX-UI.MacOS.Image.dmg"
-  appcast "https://github.com/GitSquared/edex-ui/releases.atom"
+  url "https://github.com/GitSquared/edex-ui/releases/download/v#{version}/eDEX-UI-macOS-x64.dmg"
   name "eDEX-UI"
+  desc "Sci-fi themed terminal emulator and system monitor"
   homepage "https://github.com/GitSquared/edex-ui"
 
   app "eDEX-UI.app"
+
+  zap trash: [
+    "~/Library/Application Support/eDEX-UI",
+    "~/Library/Saved Application State/com.edex.ui.savedState",
+    "~/Library/Preferences/com.edex.ui.plist",
+  ]
 end

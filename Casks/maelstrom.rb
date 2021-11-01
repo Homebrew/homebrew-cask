@@ -1,11 +1,17 @@
 cask "maelstrom" do
-  version "3.0.6a"
-  sha256 "78e714a422800b5a5026e7e719f74adf30e164a4c72a5c5db51cabb72a284402"
+  version "3.0.7"
+  sha256 "7c1770917522a00140b41508da8e9347a534dcdfa0cdedaed05b51a78c83f554"
 
   url "https://www.libsdl.org/projects/Maelstrom/bin/Maelstrom-#{version}-MacOSX.dmg"
-  appcast "https://www.libsdl.org/projects/Maelstrom/bin/"
   name "Maelstrom"
+  desc "Multidirectional shooter game"
   homepage "https://www.libsdl.org/projects/Maelstrom/index.html"
+
+  livecheck do
+    url "https://www.libsdl.org/projects/Maelstrom/binary.html"
+    strategy :page_match
+    regex(%r{href=.*?/Maelstrom-(\d+(?:\.\d+)*)-MacOSX\.dmg}i)
+  end
 
   app "Maelstrom.app"
 end

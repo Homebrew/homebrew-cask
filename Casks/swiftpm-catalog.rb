@@ -1,11 +1,20 @@
 cask "swiftpm-catalog" do
-  version "1.1.0-18"
-  sha256 "2ec279fc05262ef6f9b5cc498cafc96942658e94ecc2ed4fa8827293629d8d89"
+  version "1.1.10,30"
+  sha256 "584a4d4ad2b3d8945c527606dedd15376690975adb243b89fa3cc1bacfe81848"
 
-  url "https://zeezide.com/download/SwiftPM%20Catalog.app-#{version}.zip"
-  appcast "https://zeezide.com/en/products/swiftpmcatalog/"
+  url "https://zeezide.com/en/products/swiftpmcatalog/archives/SwiftPM%20Catalog.app-#{version.before_comma}-v#{version.after_comma}.zip"
   name "SwiftPM Catalog"
+  desc "Browse and search for Swift Package Manager packages"
   homepage "https://zeezide.com/en/products/swiftpmcatalog/"
+
+  livecheck do
+    url :homepage
+    strategy :page_match do |page|
+      page.scan(%r{href=.*?/SwiftPM\s*Catalog\.app[._-](\d+(?:\.\d+)+)[_-]v?(\d+)\.zip}i).map do |match|
+        "#{match[0]},#{match[1]}"
+      end
+    end
+  end
 
   depends_on macos: ">= :mojave"
 

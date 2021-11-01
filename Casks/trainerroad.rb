@@ -1,15 +1,21 @@
 cask "trainerroad" do
-  version :latest
-  sha256 :no_check
+  version "2021.41.0.148"
+  sha256 "00fbfcad4c12625e201c9b7c7b0e1026502986e6504cf8f94143ecaaa3f4bacb"
 
-  # trainerroadcdn1.blob.core.windows.net/ was verified as official when first introduced to the cask
-  url "https://trainerroadcdn1.blob.core.windows.net/mac/releases/production/TrainerRoad.pkg"
+  url "https://trainrdtrcmn01un1softw01.blob.core.windows.net/installers/mac/v001/Production/TrainerRoad-#{version}.dmg",
+      verified: "trainrdtrcmn01un1softw01.blob.core.windows.net/"
   name "TrainerRoad"
+  desc "Cycling training system"
   homepage "https://www.trainerroad.com/"
 
-  pkg "TrainerRoad.pkg"
+  livecheck do
+    url "https://trainrdtrcmn01un1softw01.blob.core.windows.net/installers/mac/v001/Production/latest-mac.yml"
+    regex(/url:\s*TrainerRoad[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+  end
 
-  uninstall pkgutil: "com.TrainerRoad.Mac"
+  depends_on macos: ">= :el_capitan"
+
+  app "TrainerRoad.app"
 
   zap trash: "~/Library/Application Support/TrainerRoad"
 end

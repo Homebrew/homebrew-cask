@@ -1,12 +1,17 @@
 cask "chatty" do
-  version "0.12"
-  sha256 "06bc32355e97f8d55ae888664dc8fabafca7ab07e4cdaa7c5c282c0a28f8f26c"
+  version "0.15"
+  sha256 "2c98913cf3eb91180a82bad0bb3c155324f235d1649efd9bc21519c77c5d7f48"
 
-  # github.com/chatty/chatty/ was verified as official when first introduced to the cask
-  url "https://github.com/chatty/chatty/releases/download/v#{version}/Chatty_#{version}.zip"
-  appcast "https://github.com/chatty/chatty/releases.atom"
+  url "https://github.com/chatty/chatty/releases/download/v#{version}/Chatty_#{version}.zip",
+      verified: "github.com/chatty/chatty/"
   name "Chatty"
+  desc "Twitch chat client"
   homepage "https://chatty.github.io/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   suite "Chatty"
 

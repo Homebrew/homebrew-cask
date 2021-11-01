@@ -1,13 +1,18 @@
 cask "vnote" do
-  version "2.10"
-  sha256 "9adc4d003bcfea3d3386a952b09ab5012fb6a4d22dc2ec1e313b6c3350f26059"
+  version "3.8.1"
+  sha256 "8c029b5d5567730d4b4fd5964a3e11b474300b82bf2fbcab595cf85cc2965455"
 
-  # github.com/tamlok/vnote/ was verified as official when first introduced to the cask
-  url "https://github.com/tamlok/vnote/releases/download/v#{version}/VNote-#{version}-x64.dmg"
-  appcast "https://github.com/tamlok/vnote/releases.atom"
+  url "https://github.com/vnotex/vnote/releases/download/v#{version}/vnote-mac-x64_v#{version}.zip",
+      verified: "github.com/vnotex/vnote/"
   name "VNote"
   desc "Note-taking application that knows programmers and Markdown better"
-  homepage "https://tamlok.github.io/vnote/"
+  homepage "https://vnotex.github.io/vnote/"
 
   app "VNote.app"
+
+  zap trash: [
+    "~/Library/Application Support/VNote",
+    "~/Library/Preferences/com.vnotex.vnote.plist",
+    "~/Library/Preferences/VNote",
+  ]
 end

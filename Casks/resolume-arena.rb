@@ -1,11 +1,19 @@
 cask "resolume-arena" do
-  version "7.2.1,70674"
-  sha256 "1e94368e192f970a6187b3974114ecca2e5370e5d172a418de8138c0aaf0224d"
+  version "7.6.1,79213"
+  sha256 "3892745c5f9b3a3ea8e862e487ec3ccfb132638a0cb16d16fb13b6376e532134"
 
   url "https://resolume.com/download/Resolume_Arena_#{version.major_minor_patch.dots_to_underscores}_rev_#{version.after_comma}_Installer.dmg"
-  appcast "https://resolume.com/download/"
   name "Resolume Arena"
+  desc "Video mapping software"
   homepage "https://resolume.com/"
+
+  livecheck do
+    url "https://resolume.com/download/"
+    strategy :page_match do |page|
+      page.scan(/href=.*?Arena[._-]v?(\d+(?:[._-]\d+)+)[._-]rev[._-](\d+).+\.dmg/i)
+          .map { |match| "#{match[0].tr("_", ".")},#{match[1]}" }
+    end
+  end
 
   pkg "Resolume Arena Installer.pkg"
 
@@ -14,7 +22,9 @@ cask "resolume-arena" do
     "com.resolume.pkg.ResolumeDXV",
     "com.resolume.pkg.ResolumeQuickLook",
     "com.resolume.pkg.ResolumeAlley",
+    "com.resolume.pkg.ResolumeWireNodes",
     "com.resolume.pkg.ResolumeCommon",
+    "com.resolume.pkg.ResolumeWire",
   ],
             delete:    "/Applications/Resolume Arena #{version.major}",
             signal:    ["TERM", "com.resolume.arena"],

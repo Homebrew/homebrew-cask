@@ -1,14 +1,22 @@
 cask "fontforge" do
-  version "2020.03.14.67687b0"
-  sha256 "394e4b1d216abd3d716dba94d9b6c7eacfdd9b3fa0c48d29fcaa1e27695593ce"
+  version "2020-11-07,21ad4a1"
+  sha256 "64e7193485b2047ff497ec43a39793e18593b2702a0724810f8c2c8ca8a34999"
 
-  # github.com/fontforge/fontforge/ was verified as official when first introduced to the cask
-  url "https://github.com/fontforge/fontforge/releases/download/#{version.major_minor_patch.no_dots}/FontForge-#{version.dots_to_hyphens}.app.dmg"
-  appcast "https://github.com/fontforge/fontforge/releases.atom",
-          must_contain: version.major_minor_patch.dots_to_hyphens
+  url "https://github.com/fontforge/fontforge/releases/download/#{version.before_comma.no_hyphens}/FontForge-#{version.before_comma}-#{version.after_comma}.app.dmg",
+      verified: "github.com/fontforge/fontforge/"
   name "FontForge"
   desc "Font editor and converter for outline and bitmap fonts"
   homepage "https://fontforge.github.io/en-US/"
+
+  livecheck do
+    url "https://github.com/fontforge/fontforge/releases/latest"
+    strategy :page_match do |page|
+      match = page.match(%r{href=.*?/FontForge-(\d+(?:-\d+)*)-([0-9a-f]+)\.app\.dmg}i)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
+    end
+  end
 
   depends_on macos: ">= :yosemite"
 
