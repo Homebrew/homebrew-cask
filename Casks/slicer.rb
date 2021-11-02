@@ -19,4 +19,12 @@ cask "slicer" do
   end
 
   app "Slicer.app"
+
+  zap trash: [
+    "~/Library/Application Support/NA-MIC",
+    "~/.config/www.na-mic.org",
+    "~/Library/Preferences/Slicer.plist",
+    "~/Library/Preferences/org.slicer.slicer.plist",
+    "~/Library/Saved Application State/org.slicer.slicer.savedState",
+  ]
 end
