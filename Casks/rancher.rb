@@ -24,9 +24,12 @@ cask "rancher" do
 
   zap trash: [
     "~/.kuberlr",
+    "~/Library/Application Support/Caches/rancher-desktop-updater",
     "~/Library/Application Support/rancher-desktop",
+    "~/Library/Caches/io.rancherdesktop.app*",
     "~/Library/Caches/rancher-desktop",
     "~/Library/Logs/rancher-desktop",
+    "~/Library/Preferences/ByHost/io.rancherdesktop.app*",
     "~/Library/Preferences/io.rancherdesktop.app.plist",
     "~/Library/Preferences/rancher-desktop",
     "~/Library/Saved Application State/io.rancherdesktop.app.savedState",
