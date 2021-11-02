@@ -18,6 +18,7 @@ cask "x2goclient" do
   end
 
   depends_on macos: ">= :el_capitan"
+
   app "x2goclient.app"
 
   zap trash: [
