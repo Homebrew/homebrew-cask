@@ -13,7 +13,17 @@ cask "superduper" do
     strategy :extract_plist
   end
 
+  auto_updates true
+
   app "SuperDuper!.app"
 
-  zap trash: "~/Library/Application Support/SuperDuper!"
+  zap trash: [
+    "~/Library/Application Support/SuperDuper!",  
+    "~/Library/Caches/com.blacey.SuperDuper",
+    "~/Library/Preferences/com.blacey.SuperDuper.plist",
+    "~/Library/Preferences/com.paradigmasoft.vstudio.plist",
+    "~/Library/Preferences/com.paradigmasoft.VStudio",
+    "~/Library/Saved Application State/com.blacey.SuperDuper.savedState",
+    "~/Library/Services/Run SuperDuper! Settings.workflow"
+  ]
 end
