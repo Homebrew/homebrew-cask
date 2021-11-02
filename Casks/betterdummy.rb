@@ -14,5 +14,11 @@ cask "betterdummy" do
 
   app "BetterDummy.app"
 
-  zap trash: "~/Library/Preferences/me.waydabber.BetterDummy.plist"
+  zap trash: [
+    "~/Library/Application Scripts/me.waydabber.BetterDummyHelper",
+    "~/Library/Application Scripts/me.waydabber.BetterDummy",
+    "~/Library/Containers/me.waydabber.BetterDummyHelper",
+    "~/Library/Containers/me.waydabber.BetterDummy",
+    "~/Library/Preferences/me.waydabber.BetterDummy.plist",
+  ]
 end
