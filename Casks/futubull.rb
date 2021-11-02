@@ -11,7 +11,7 @@ cask "futubull" do
   livecheck do
     url "https://www.futunn.com/download/history?client=11"
     strategy :page_match do |page|
-      page.scan(%r{/FTNNForMac[._-]v?(\d+(?:\.\d+)*)[_-](\d+)[._-]Website\.dmg}i).map do |match|
+      page.scan(%r{/FTNNForMac[._-]v?(\d+(?:\.\d+)+)[_-](\d+)[._-]Website\.dmg}i).map do |match|
         "#{match[0]},#{match[1]}"
       end
     end
