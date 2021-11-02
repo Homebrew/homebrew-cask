@@ -10,6 +10,7 @@ cask "x2goclient" do
   end
 
   name "X2Go Client"
+  desc "Remote desktop software"
   homepage "https://wiki.x2go.org/doku.php"
 
   app "x2goclient.app"
