@@ -1,6 +1,6 @@
 cask "x2goclient" do
   version "4.1.2.2"
-  sha :no_check
+  sha256 :no_check
 
   if MacOS.version <= :sierra
     url "https://code.x2go.org/releases/X2GoClient_latest_macosx_10_11.dmg"
