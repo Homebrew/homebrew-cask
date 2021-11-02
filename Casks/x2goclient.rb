@@ -13,8 +13,8 @@ cask "x2goclient" do
   homepage "https://wiki.x2go.org/doku.php"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://wiki.x2go.org/doku.php/doc:release-notes-mswin"
+    regex(/x2goclient[._-]v?(\d+(?:\.\d+)+)/i)
   end
 
   depends_on macos: ">= :el_capitan"
