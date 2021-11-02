@@ -9,8 +9,8 @@ cask "telegram-desktop" do
   homepage "https://desktop.telegram.org/"
 
   livecheck do
-    url "https://telegram.org/dl/desktop/mac"
-    strategy :header_match
+    url "https://github.com/telegramdesktop/tdesktop/releases/"
+    strategy :github_latest
   end
 
   auto_updates true
