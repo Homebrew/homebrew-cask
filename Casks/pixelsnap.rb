@@ -1,6 +1,6 @@
 cask "pixelsnap" do
-  version "2.4.3"
-  sha256 "5a01820c1163cab3b5625cdeee09e84c52d07b6e3171bfb1234fea786750f16f"
+  version "2.5"
+  sha256 "e7f7a9a979c0602e54dcad5f487f27808a983db09c6c4c9151285de7209773f2"
 
   url "https://updates.getpixelsnap.com/v#{version.major}/PixelSnap-#{version.major}-#{version}.dmg"
   name "PixelSnap"
