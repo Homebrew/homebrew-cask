@@ -1,5 +1,5 @@
 cask "yate" do
-  version "6.6.1.1,10542"
+  version "6.6.1.3,10544"
   sha256 :no_check
 
   url "https://2manyrobots.com/Updates/Yate/Yate.zip"
