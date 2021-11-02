@@ -5,7 +5,7 @@ cask "informant" do
   url "https://github.com/tyirvine/Informant/releases/download/#{version}/Informant.zip"
   name "Informant"
   desc "Inspect files with a single click"
-  homepage "https://github.com/tyirvine/Informant"
+  homepage "https://github.com/tyirvine/Informant/"
 
   depends_on macos: ">= :big_sur"
 
