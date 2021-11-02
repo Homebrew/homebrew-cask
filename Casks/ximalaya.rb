@@ -12,7 +12,7 @@ cask "ximalaya" do
   livecheck do
     url "https://www.ximalaya.com/down/lite?client=mac"
     strategy :header_match do |headers|
-      match = headers["location"].match(%r{/Ximalaya[_-](\d+(?:\.\d+)*)[_-](\d+)\.dmg}i)
+      match = headers["location"].match(%r{/Ximalaya[_-](\d+(?:\.\d+)+)[_-](\d+)\.dmg}i)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
