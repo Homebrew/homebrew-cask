@@ -10,7 +10,5 @@ cask "azirevpn" do
 
   app "AzireVPN.app"
 
-  zap trash: [
-    "~/Library/Preferences/com.netbouncer-ab.AzireVPN.plist",
-  ]
+  zap trash: "~/Library/Preferences/com.netbouncer-ab.AzireVPN.plist"
 end
