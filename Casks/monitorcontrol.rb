@@ -1,6 +1,22 @@
 cask "monitorcontrol" do
-  version "4.0.0"
-  sha256 "8e71a1f2bcdc2a5e95b22d8f4575032415d46b54ded998728e8fd23963fcc356"
+  if MacOS.version <= :high_sierra
+    version "2.1.0"
+    sha256 "c02a1a96a002a3e9f1072e3924ea66226233a227b5c971d617b3ef4f12acf206"
+
+    livecheck do
+      skip "Legacy version for Sierra and High Sierra"
+    end
+  elsif MacOS.version <= :mojave
+    version "3.1.1"
+    sha256 "41fa75f378e2a1d0ec0b90fae9cfe4f6859d1628fecf32d23ad7b5447beb78e1"
+
+    livecheck do
+      skip "Legacy version for Mojave"
+    end
+  else
+    version "4.0.0"
+    sha256 "8e71a1f2bcdc2a5e95b22d8f4575032415d46b54ded998728e8fd23963fcc356"
+  end
 
   url "https://github.com/MonitorControl/MonitorControl/releases/download/v#{version}/MonitorControl.#{version}.dmg"
   name "MonitorControl"
