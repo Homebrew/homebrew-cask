@@ -15,4 +15,9 @@ cask "yate" do
   auto_updates true
 
   app "Yate.app"
+
+  zap trash: [
+    "~/Library/Application Support/Yate",
+    "~/Library/Preferences/com.2manyrobots.Yate.plist",
+  ]
 end
