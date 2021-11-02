@@ -4,11 +4,14 @@ cask "superduper" do
 
   url "https://shirtpocket.s3.amazonaws.com/SuperDuper/SuperDuper!.dmg",
       verified: "shirtpocket.s3.amazonaws.com/SuperDuper/"
-  appcast "https://versioncheck.blacey.com/superduper/version.xml?VSN=100",
-          must_contain: version.after_comma
   name "SuperDuper!"
   desc "Backup, recovery and cloning software"
   homepage "https://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   app "SuperDuper!.app"
 
