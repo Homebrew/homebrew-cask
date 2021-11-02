@@ -3,16 +3,16 @@ cask "electerm" do
 
   version "1.17.3"
 
-  url "https://github.com/electerm/electerm/releases/download/v#{version}/electerm-#{version}-mac-#{arch}.dmg"
-  name "electerm"
-  desc "Terminal/ssh/serial port/sftp client"
-  homepage "https://github.com/electerm/electerm/"
-
   if Hardware::CPU.intel?
     sha256 "74dd8b394970eaed784c7d4eda145b9b9e02dbae787ec9bddeb3133d72f560e3"
   else
     sha256 "2fa227cfe7f449d3cdda13251a2c2432523362e95d047e63b66d74923af87342"
   end
+
+  url "https://github.com/electerm/electerm/releases/download/v#{version}/electerm-#{version}-mac-#{arch}.dmg"
+  name "electerm"
+  desc "Terminal/ssh/serial port/sftp client"
+  homepage "https://github.com/electerm/electerm/"
 
   app "electerm.app"
 
