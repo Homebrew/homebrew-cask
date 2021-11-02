@@ -7,9 +7,8 @@ cask "xonotic" do
   homepage "https://www.xonotic.org/"
 
   livecheck do
-    url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/xonotic-(\d+(?:\.\d+)*)\.zip}i)
+    url "https://www.xonotic.org/download/"
+    regex(%r{href=.*?/xonotic[._-]v?(\d+(?:\.\d+)+)\.zip}i)
   end
 
   suite "Xonotic"
