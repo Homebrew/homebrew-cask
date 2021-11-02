@@ -4,6 +4,7 @@ cask "xonotic" do
 
   url "https://dl.xonotic.org/xonotic-#{version}.zip"
   name "Xonotic"
+  desc "Arena-style first person shooter"
   homepage "https://www.xonotic.org/"
 
   livecheck do
