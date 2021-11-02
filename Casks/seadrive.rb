@@ -1,6 +1,6 @@
 cask "seadrive" do
-  version "2.0.17"
-  sha256 "7816d0f389f7ad343237a935f79b8ecb15205088df75dacd2784dde110abf972"
+  version "2.0.18"
+  sha256 "850a7a732dc50ea8683bda2502d43143a3d8c2fef5c4d9f8f3ced0e26890b6b1"
 
   url "https://download.seadrive.org/seadrive-#{version}.dmg",
       verified: "download.seadrive.org/"
