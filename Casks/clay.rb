@@ -19,6 +19,8 @@ cask "clay" do
     strategy :electron_builder
   end
 
+  auto_updates true
+
   app "Clay.app"
 
   zap trash: [
