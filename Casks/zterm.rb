@@ -12,5 +12,7 @@ cask "zterm" do
     regex(/href.*?ZTerm[._-]?v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  depends_on macos: "<= :mojave"
+
   app "ZTerm.app"
 end
