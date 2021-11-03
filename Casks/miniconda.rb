@@ -1,6 +1,6 @@
 cask "miniconda" do
-  version "py38_4.10.3"
-  sha256 "93e514e01142866629175f5a9e2e1d0bac8bc705f61d1ed1da3c010b7225683a"
+  version "py39_4.10.3"
+  sha256 "786de9721f43e2c7d2803144c635f5f6e4823483536dc141ccd82dbb927cd508"
 
   url "https://repo.anaconda.com/miniconda/Miniconda3-#{version}-MacOSX-x86_64.sh",
       verified: "repo.anaconda.com/miniconda/"
@@ -13,7 +13,7 @@ cask "miniconda" do
   # https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
   livecheck do
     url "https://repo.anaconda.com/miniconda/"
-    regex(/>\s*Miniconda3-(py38[._-]\d+(?:\.\d+)+)-MacOSX-x86_64\.sh\s*</i)
+    regex(/>\s*Miniconda3-(py39[._-]\d+(?:\.\d+)+)-MacOSX-x86_64\.sh\s*</i)
   end
 
   auto_updates true
