@@ -1,13 +1,21 @@
 cask "letter-opener" do
-  version :latest
-  sha256 :no_check
+  version "14.0.1"
+  sha256 "0cf02609d5111106665d548437aaa69c2af2a75e3f35dcf3cc5203a5118dbcc9"
 
-  url "https://winmail.help/LetterOpenerPro/download"
+  url "https://s3.amazonaws.com/LetterOpener/dmg/Letter-Opener-#{version}.zip",
+      verified: "s3.amazonaws.com/LetterOpener/dmg/"
   name "Letter Opener"
   desc "Open winmail.dat files Automatically in Mail.app"
   homepage "https://winmail.help/"
 
-  pkg "Install\ Letter\ Opener.pkg"
+  livecheck do
+    url "https://winmail.help/letter-opener-for-macos-mail/download"
+    regex(%r{Version:\s*<strong>(\d+(?:\.\d+)+)</strong>}i)
+  end
+
+  depends_on macos: ">= :mojave"
+
+  pkg "Install Letter Opener.pkg"
 
   uninstall pkgutil:   [
     "pkg.app.letteropener.*",
