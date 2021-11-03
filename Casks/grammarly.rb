@@ -1,6 +1,6 @@
 cask "grammarly" do
-  version "1.5.79"
-  sha256 "32ac6b4e4edccc9ed3346c6a49e918b52bb90a0afa40b20f3d11f92617c9553a"
+  version "1.5.80"
+  sha256 "7b9de277dead7e4c302e3a0c567e68435afca33179872a4e7e391205e2bf081e"
 
   url "https://download-editor.grammarly.com/osx/GrammarlyEditor#{version}-osx.zip"
   name "Grammarly"

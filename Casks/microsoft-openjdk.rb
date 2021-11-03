@@ -1,23 +1,23 @@
 cask "microsoft-openjdk" do
   arch = Hardware::CPU.intel? ? "x64" : "aarch64"
 
-  version "17.35.1"
+  version "17.0.1.12.1"
+
+  if Hardware::CPU.intel?
+    sha256 "f39e87d5c76c7e108e8e24645f294b5921dd5a431c8a62a58578dd83dfcb8cae"
+  else
+    sha256 "d149d45d0c1e149c878de231d2c37110876f4501816195e23aec132fa26e5536"
+  end
 
   url "https://aka.ms/download-jdk/microsoft-jdk-#{version}-macOS-#{arch}.pkg",
       verified: "aka.ms/download-jdk/"
-  if Hardware::CPU.intel?
-    sha256 "7e196a460a56a240eeafded32d25f4c94b680e300315051e008424416c866bb4"
-  else
-    sha256 "483a68942e24791b65334b6a4768449dadaddf30dc5407f08fbb8f7dbd6066da"
-  end
-
   name "Microsoft Build of OpenJDK"
   desc "OpenJDK distribution from Microsoft"
   homepage "https://microsoft.com/openjdk"
 
   livecheck do
     url "https://docs.microsoft.com/java/openjdk/download"
-    regex(%r{href=.*?/microsoft[._-]jdk[._-]v?(\d+(?:\.\d+)+)[._-]macOS[._-](aarch64|x64)\.pkg}i)
+    regex(%r{href=.*?/microsoft[._-]jdk[._-]v?(\d+(?:\.\d+)+)[._-]macOS[._-]#{arch}\.pkg}i)
   end
 
   pkg "microsoft-jdk-#{version}-macOS-#{arch}.pkg"
