@@ -8,6 +8,12 @@ cask "ultracopier" do
   desc "Replacement for files copy dialogs"
   homepage "http://ultracopier.first-world.info/"
 
+  livecheck do
+    url "http://ultracopier.first-world.info/download.html"
+    strategy :page_match
+    regex(%r{href=.*?/ultracopier/(\d+(?:\.\d+)*)/ultracopier-mac-os-x-.*?\.dmg}i)
+  end
+
   app "ultracopier.app"
 
   zap trash: ["~/Library/Preferences/com.ultracopier.Ultracopier.plist",
