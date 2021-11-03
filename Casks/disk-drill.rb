@@ -1,8 +1,8 @@
 cask "disk-drill" do
-  version "4.4.356"
-  sha256 "2f6c8be2c7803746723fbabf4fcd2b2976fea4db1cbd6405efa7ba24e32fbff1"
+  version "4.5.369"
+  sha256 :no_check
 
-  url "https://www.cleverfiles.com/releases/DiskDrill_#{version}.dmg"
+  url "https://dl.cleverfiles.com/diskdrill.dmg"
   name "Disk Drill"
   desc "Data recovery software"
   homepage "https://www.cleverfiles.com/"
