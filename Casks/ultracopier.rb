@@ -9,4 +9,8 @@ cask "ultracopier" do
   homepage "http://ultracopier.first-world.info/"
 
   app "ultracopier.app"
+
+  zap trash: ["~/Library/Preferences/com.ultracopier.Ultracopier.plist",
+              "~/Library/Preferences/com.yourcompany.ultracopier.plist",
+              "~/Library/Saved Application State/com.yourcompany.ultracopier.savedState"]
 end
