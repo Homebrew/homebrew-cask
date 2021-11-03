@@ -9,14 +9,16 @@ cask "ultracopier" do
   homepage "http://ultracopier.first-world.info/"
 
   livecheck do
-    url "http://ultracopier.first-world.info/download.html"
+    url "http://ultracopier.first-world.info/download-all.html"
     strategy :page_match
-    regex(%r{href=.*?/ultracopier/(\d+(?:\.\d+)*)/ultracopier-mac-os-x-.*?\.dmg}i)
+    regex(/ultracopier[._-]mac[._-]os[._-]x[._-](\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "ultracopier.app"
 
-  zap trash: ["~/Library/Preferences/com.ultracopier.Ultracopier.plist",
-              "~/Library/Preferences/com.yourcompany.ultracopier.plist",
-              "~/Library/Saved Application State/com.yourcompany.ultracopier.savedState"]
+  zap trash: [
+    "~/Library/Preferences/com.ultracopier.Ultracopier.plist",
+    "~/Library/Preferences/com.yourcompany.ultracopier.plist",
+    "~/Library/Saved Application State/com.yourcompany.ultracopier.savedState",
+  ]
 end
