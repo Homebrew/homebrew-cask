@@ -7,5 +7,10 @@ cask "todoist" do
   desc "To-do list"
   homepage "https://todoist.com/home"
 
+  livecheck do
+    url "https://electron-dl.todoist.com/mac/latest-mac.yml"
+    strategy :electron_builder
+  end
+
   app "Todoist.app"
 end
