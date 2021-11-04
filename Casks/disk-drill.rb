@@ -14,7 +14,10 @@ cask "disk-drill" do
 
   app "Disk Drill.app"
 
-  uninstall delete: "/Library/Application Support/CleverFiles"
+  uninstall script: {
+    executable: "#{staged_path}/Disk Drill.app/Contents/Resources/uninstall",
+    sudo:       true,
+  }
 
   zap trash: [
     "~/Library/Application Support/DiskDrill",
