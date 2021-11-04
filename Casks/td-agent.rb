@@ -5,6 +5,7 @@ cask "td-agent" do
   url "https://s3.amazonaws.com/packages.treasuredata.com/#{version.major}/macosx/td-agent-#{version}.dmg",
       verified: "s3.amazonaws.com/packages.treasuredata.com/"
   name "td-agent"
+  desc "Fluentd distribution package"
   homepage "https://www.fluentd.org/"
 
   livecheck do
