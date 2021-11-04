@@ -1,5 +1,5 @@
 cask "amadeus-pro" do
-  version "2.8.7"
+  version "2.8.8"
   sha256 :no_check
 
   url "https://s3.amazonaws.com/AmadeusPro#{version.major}/AmadeusPro.zip",
