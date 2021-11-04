@@ -2,10 +2,10 @@ cask "keyboard-maestro" do
   version "10.0"
   sha256 "04946ffc9606f2ea22e964ab3d05123d144ffa5f00e32a3081fe76d7ec4802ee"
 
-  # Versions >= 10 will have a trailing "0" in the URL to avoid conflicting
-  # with 1.0.Z versions. The version in the package is still X.Y.
+  # Versions >= 10 need to be X.Y.Z to avoid conflicting with 1.0.Z versions.
+  # The version in the package may be X.Y or X.Y.Z.
   url_version = version.clone
-  if version.major.to_i >= 10
+  if version.major.to_i >= 10 and version.split(".").length < 3
     url_version.concat(".0")
   end
 
