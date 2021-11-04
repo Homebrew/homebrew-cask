@@ -5,12 +5,10 @@ cask "keyboard-maestro" do
   # Versions >= 10 need to be X.Y.Z to avoid conflicting with 1.0.Z versions.
   # The version in the package may be X.Y or X.Y.Z.
   url_version = version.clone
-  if version.major.to_i >= 10 and version.split(".").length < 3
-    url_version.concat(".0")
-  end
+  url_version.concat(".0") if version.major.to_i >= 10 && version.split(".").length < 3
 
   url "https://files.stairways.com/keyboardmaestro-#{url_version.no_dots}.zip",
-    verified: "stairways.com/"
+      verified: "stairways.com/"
   name "Keyboard Maestro"
   desc "Automation software"
   homepage "https://www.keyboardmaestro.com/main/"
