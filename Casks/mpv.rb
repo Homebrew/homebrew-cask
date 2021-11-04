@@ -11,7 +11,7 @@ cask "mpv" do
   livecheck do
     url "https://laboratory.stolendata.net/~djinn/mpv_osx/"
     strategy :page_match
-    regex(/mpv-(\d+(?:\.\d+)*)\.tar\.gz/i)
+    regex(/mpv-(\d+(?:\.\d+)+)\.tar\.gz/i)
   end
 
   conflicts_with formula: "mpv"
