@@ -64,7 +64,7 @@ cask "cocktail" do
     sha256 "1f684f7a06ed9d5c44513434f87070dafa000bee2311c580ceff5727ae5a3d88"
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}BSE.dmg"
-    
+
     livecheck do
       url :homepage
       strategy :page_match
