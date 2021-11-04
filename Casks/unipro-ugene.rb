@@ -14,5 +14,4 @@ cask "unipro-ugene" do
     "~/Library/Preferences/net.ugene.ugene.plist",
     "~/Library/Preferences/com.unipro.UGENE.plist",
   ]
-
 end
