@@ -6,8 +6,8 @@ cask "smartgit" do
     version "20.2.6"
     sha256 "af5fbf8db26edde3d996d99c6e82287332598359fe63ff2cd97c712a1685a2ea"
   else
-    version "21.1.2"
-    sha256 "528152905e582bea0ed834267529c4fbffeb91e3cc38cafbf546c8674f1e4910"
+    version "21.1.3"
+    sha256 "b773478b5a05ce5afc8f300a0bdf0c91a01fd966ca2e208294223816f0f4f179"
   end
 
   url "https://www.syntevo.com/downloads/smartgit/smartgit-macosx-#{version.dots_to_underscores}.dmg"

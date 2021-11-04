@@ -12,4 +12,9 @@ cask "porting-kit" do
   depends_on macos: ">= :high_sierra"
 
   app "Porting Kit.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.paulthetall.portingkit.plist",
+    "~/Library/Saved Application State/com.paulthetall.portingkit.savedState",
+  ]
 end

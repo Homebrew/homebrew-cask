@@ -1,6 +1,6 @@
 cask "telegram-desktop" do
-  version "3.1.11"
-  sha256 "432fb789c6ec005930986c1321607573ceb6c24698fa6b32d649656e414c2555"
+  version "3.2.0"
+  sha256 "e8748cfa7f13900b0757c1925093d5d348464c5a1d2da20639d51c4e25025e7f"
 
   url "https://updates.tdesktop.com/tmac/tsetup.#{version}.dmg",
       verified: "updates.tdesktop.com/tmac/"
@@ -9,8 +9,8 @@ cask "telegram-desktop" do
   homepage "https://desktop.telegram.org/"
 
   livecheck do
-    url "https://github.com/telegramdesktop/tdesktop/releases/"
-    strategy :github_latest
+    url "https://telegram.org/dl/desktop/mac"
+    strategy :header_match
   end
 
   auto_updates true
