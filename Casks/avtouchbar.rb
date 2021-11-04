@@ -21,4 +21,9 @@ cask "avtouchbar" do
   depends_on macos: ">= :catalina"
 
   app "AVTouchBar.app"
+
+  zap trash: [
+    "~/Library/Containers/com.jakefishman.TouchBarVisualizer/",
+    "~/Library/Containers/com.jakefishman.TouchBarVisualizer-LaunchAtLoginHelper",
+  ]
 end
