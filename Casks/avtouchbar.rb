@@ -1,19 +1,24 @@
 cask "avtouchbar" do
-  version "3.0.7"
+  version "3.0.7,2021:08"
   sha256 "d04c1a6685e7ce59e10bae4464b6a113aa7bf302f5b515768055aa8326ecb8e1"
 
-  url "https://www.avtouchbar.com/wp-content/uploads/2021/08/AVTouchBar-#{version}.zip"
+  url "https://www.avtouchbar.com/wp-content/uploads/#{version.after_comma.before_colon}/#{version.after_colon}/AVTouchBar-#{version.before_comma}.zip"
   name "AVTouchBar"
   desc "Audio Visualizer for the Touch Bar"
   homepage "https://www.avtouchbar.com/"
 
   livecheck do
     url "https://www.avtouchbar.com/downloads/"
-    strategy :homepage
-    regex(%r{href=.*?/AVTouchBar[._-]?(\d+(?:\.\d+)+)\.z}i)
+    strategy :page_match do |page|
+      match = page.match(%r{href=.*?uploads/(\d+)/(\d+)/AVTouchBar[._-]?(\d+(?:\.\d+)+)\.zip}i)
+      next if match.blank?
+
+      "#{match[3]},#{match[1]}:#{match[2]}"
+    end
   end
 
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "AVTouchBar.app"
 end
