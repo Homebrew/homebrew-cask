@@ -9,4 +9,10 @@ cask "unipro-ugene" do
   homepage "https://ugene.net/"
 
   app "Unipro UGENE.app"
+
+  zap trash: [
+    "~/Library/Preferences/net.ugene.ugene.plist",
+    "~/Library/Preferences/com.unipro.UGENE.plist",
+  ]
+
 end
