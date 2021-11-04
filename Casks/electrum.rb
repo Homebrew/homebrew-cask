@@ -8,9 +8,8 @@ cask "electrum" do
   homepage "https://electrum.org/"
 
   livecheck do
-    url "https://github.com/spesmilo/electrum/tags"
-    strategy :page_match
-    regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)+)["' >]}i)
+    url "https://electrum.org/panel-download.html"
+    regex(/href=.*?electrum[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   depends_on macos: ">= :high_sierra"
