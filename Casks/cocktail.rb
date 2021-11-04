@@ -69,6 +69,7 @@ cask "cocktail" do
       url :homepage
       strategy :page_match
       regex(/macOS\s*11(?:\.\d+)*.*?(\d+(?:\.\d+)+)/i)
+    end
   else
     version "15.0"
     sha256 "8398c07b9f009d3d2a6554b646107c1e8c40938a2b98e5c5af9493d07fadf8e4"
