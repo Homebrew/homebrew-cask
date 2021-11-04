@@ -11,7 +11,7 @@ cask "unipro-ugene" do
   app "Unipro UGENE.app"
 
   zap trash: [
-    "~/Library/Preferences/net.ugene.ugene.plist",
     "~/Library/Preferences/com.unipro.UGENE.plist",
+    "~/Library/Preferences/net.ugene.ugene.plist",
   ]
 end
