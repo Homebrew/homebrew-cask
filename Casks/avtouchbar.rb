@@ -23,7 +23,7 @@ cask "avtouchbar" do
   app "AVTouchBar.app"
 
   zap trash: [
-    "~/Library/Containers/com.jakefishman.TouchBarVisualizer/",
+    "~/Library/Containers/com.jakefishman.TouchBarVisualizer",
     "~/Library/Containers/com.jakefishman.TouchBarVisualizer-LaunchAtLoginHelper",
   ]
 end
