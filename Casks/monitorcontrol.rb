@@ -14,8 +14,8 @@ cask "monitorcontrol" do
       skip "Legacy version for Mojave"
     end
   else
-    version "4.0.0"
-    sha256 "8e71a1f2bcdc2a5e95b22d8f4575032415d46b54ded998728e8fd23963fcc356"
+    version "4.0.1"
+    sha256 "74c8e89866fb24e431188d2c70c56980dae310dd3c1bf2de84679a60f5579eea"
   end
 
   url "https://github.com/MonitorControl/MonitorControl/releases/download/v#{version}/MonitorControl.#{version}.dmg"
