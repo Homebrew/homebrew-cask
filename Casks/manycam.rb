@@ -1,5 +1,5 @@
 cask "manycam" do
-  version "7.8.4.14"
+  version "7.8.6.2"
   sha256 :no_check
 
   url "https://download3.manycams.com/ManyCam.dmg",
