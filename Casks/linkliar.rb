@@ -15,7 +15,7 @@ cask "linkliar" do
   app "LinkLiar.app"
 
   uninstall delete:    [
-    "/Library/Application Support/LinkDaemon",
+    "/Library/Application Support/io.github.halo.linkdaemon",
     "/Library/Application Support/LinkLiar",
   ],
             launchctl: [
