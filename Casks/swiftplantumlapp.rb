@@ -10,9 +10,9 @@ cask "swiftplantumlapp" do
   app "SwiftPlantUMLApp.app"
 
   zap trash: [
-      "~/Library/Application Scripts/us.eidinger.SwiftPlantUML",
-      "~/Library/Application Scripts/us.eidinger.SwiftPlantUMLSourceEditorExtension",
-      "~/Library/Containers/us.eidinger.SwiftPlantUML",
-      "~/Library/Group Containers/us.eidinger.SwiftPlantUMLSourceEditorExtension",
-    ]
+    "~/Library/Application Scripts/us.eidinger.SwiftPlantUML",
+    "~/Library/Application Scripts/us.eidinger.SwiftPlantUMLSourceEditorExtension",
+    "~/Library/Containers/us.eidinger.SwiftPlantUML",
+    "~/Library/Group Containers/us.eidinger.SwiftPlantUMLSourceEditorExtension",
+  ]
 end
