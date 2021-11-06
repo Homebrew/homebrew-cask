@@ -1,19 +1,19 @@
-cask "bigsur-cache-cleaner" do
-  version "16.1.7"
+cask "monterey-cache-cleaner" do
+  version "17.0"
   sha256 :no_check
 
-  url "https://www.northernsoftworks.com/downloads/bscc.dmg"
-  name "Big Sur Cache Cleaner"
-  name "BSCC"
+  url "https://www.northernsoftworks.com/downloads/nscc.dmg"
+  name "Monterey Cache Cleaner"
+  name "MCC"
   desc "General purpose system maintenance tool"
-  homepage "https://www.northernsoftworks.com/bigsurcachecleaner.html"
+  homepage "https://www.northernsoftworks.com/montereycachecleaner.html"
 
   livecheck do
     url :homepage
-    regex(/Download\s*Big\s*Sur\s*Cache\s*Cleaner\s*v?(\d+(?:\.\d+)+)/i)
+    regex(/Download\s*Monterey\s*Cache\s*Cleaner\s*v?(\d+(?:\.\d+)+)/i)
   end
 
   depends_on macos: ">= :mojave"
 
-  app "Big Sur Cache Cleaner.app"
+  app "Monterey Cache Cleaner.app"
 end
