@@ -18,4 +18,13 @@ cask "prezi-classic" do
   end
 
   app "Prezi Classic.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.prezi.desktop",
+    "~/Library/Caches/com.prezi.desktop",
+    "~/Library/Logs/Prezi Classic",
+    "~/Library/Logs/Prezi Classic_debug.log",
+    "~/Library/Preferences/com.prezi.desktop.plist",
+    "~/Library/Saved Application State/com.prezi.desktop.savedState",
+  ]
 end
