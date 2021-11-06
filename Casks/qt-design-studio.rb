@@ -9,7 +9,7 @@ cask "qt-design-studio" do
 
   livecheck do
     url "https://download.qt.io/official_releases/qtdesignstudio/"
-    regex(%r{href=.*?(\d+(?:\.\d+)*)/}i)
+    regex(%r{href=.*?(\d+(?:\.\d+)+)/}i)
   end
 
   depends_on macos: ">= :sierra"
