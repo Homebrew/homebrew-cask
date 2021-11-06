@@ -4,6 +4,7 @@ cask "buildsettingextractor" do
 
   url "https://github.com/dempseyatgithub/BuildSettingExtractor/releases/download/v#{version}/BuildSettingExtractor_#{version}.dmg"
   name "BuildSettingExtractor"
+  desc "Xcode build settings extractor""
   homepage "https://github.com/dempseyatgithub/BuildSettingExtractor"
 
   depends_on macos: ">= :mojave"
