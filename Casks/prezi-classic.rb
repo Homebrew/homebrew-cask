@@ -4,6 +4,7 @@ cask "prezi-classic" do
 
   url "https://desktopassets.prezi.com/mac/pd6/releases/Prezi_Classic_#{version.before_comma}.dmg"
   name "Prezi Classic"
+  desc "Desktop client for the Prezi presentation SaaS"
   homepage "https://prezi.com/desktop"
 
   livecheck do
