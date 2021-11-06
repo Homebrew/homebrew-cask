@@ -19,9 +19,39 @@ cask "disk-drill" do
     sudo:       true,
   }
 
-  zap trash: [
-    "~/Library/Application Support/DiskDrill",
-    "~/Library/Caches/com.cleverfiles.Disk_Drill",
-    "~/Library/Logs/DiskDrill.log",
-  ]
+  zap script:    {
+    executable: "defaults",
+    args:       [
+      "delete com.cleverfiles.Disk_Drill",
+      "delete com.cleverfiles.DiskDrill",
+      "delete com.cleverfiles.DiskDrill-setapp",
+    ],
+  },
+      launchctl: "com.cleverfiles.cfbackd",
+      kext:      [
+        "com.cleverfiles.SecureDisk",
+        "com.cleverfiles.SecureDisk-11",
+      ],
+      quit:      [
+        "com.cleverfiles.DiskDrill",
+        "com.cleverfiles.DiskDrill.SmartDaemon",
+        "com.cleverfiles.cfbackd",
+      ],
+      signal:    [
+        ["KILL", "com.cleverfiles.DiskDrill"],
+      ],
+      trash:     [
+        "~/Library/Application Support/DiskDrill",
+        "~/Library/Caches/com.cleverfiles.Disk_Drill",
+        "~/Library/Logs/DiskDrill.log",
+        "~/Library/Preferences/com.cleverfiles.Disk_Drill.plist",
+        "~/Library/Preferences/com.cleverfiles.DiskDrill.plist",
+        "~/Library/Preferences/com.cleverfiles.DiskDrill-setapp.plist",
+        "~/Library/Containers/com.cleverfiles.DiskDrill.Media/Data/cfbackd.chief",
+        "/Library/Logs/CleverFiles",
+        "/Library/Application Support/CleverFiles",
+        "/Library/Preferences/com.cleverfiles.cfbackd.plist",
+        "/Library/Caches/CleverFiles",
+        "/Library/LaunchDaemons/com.cleverfiles.cfbackd.plist",
+      ]
 end
