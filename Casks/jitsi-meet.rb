@@ -7,6 +7,7 @@ cask "jitsi-meet" do
   desc "Free, open-source and secure video conferencing app"
   homepage "https://github.com/jitsi/jitsi-meet-electron"
 
+  auto_updates true
   app "Jitsi Meet.app"
 
   zap trash: [
