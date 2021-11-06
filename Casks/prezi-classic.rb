@@ -11,9 +11,9 @@ cask "prezi-classic" do
     url "https://prezidesktop.s3.amazonaws.com/assets/mac/pd6/updates/prezi-classic.xml"
     strategy :page_match do |page|
       match = page.match(/<enclosure.*?sparkle:version="(\d+).*?sparkle:shortVersionString="(\d+(?:\.\d+)*)"/im)
-        next if match.blank?
+      next if match.blank?
 
-        "#{match[2]},#{match[1]}"
+      "#{match[2]},#{match[1]}"
     end
   end
 
