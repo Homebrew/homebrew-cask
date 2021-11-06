@@ -4,7 +4,7 @@ cask "integrity" do
 
   url "https://peacockmedia.software/mac/integrity/integrity.dmg"
   name "Integrity"
-  desc "Tool to scans a website checking for broken links"
+  desc "Tool to scan a website checking for broken links"
   homepage "https://peacockmedia.software/mac/integrity/"
 
   livecheck do
