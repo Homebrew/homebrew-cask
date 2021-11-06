@@ -22,10 +22,10 @@ cask "pdfelement" do
   ]
 
   zap trash: [
-    "~/Library/Application Support/com.wondershare.PDFelement",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.wondershare.pdfelement.sfl2",
-    "~/Library/Caches/PDFelement",
+    "~/Library/Application Support/com.wondershare.PDFelement",
     "~/Library/Caches/com.wondershare.PDFelement",
+    "~/Library/Caches/PDFelement",
     "~/Library/Preferences/com.wondershare.PDFelement-custom.plist",
     "~/Library/Preferences/com.wondershare.PDFelement.plist",
     "~/Library/Saved Application State/com.wondershare.PDFelement.savedState",
