@@ -1,5 +1,5 @@
 cask "disk-drill" do
-  version "4.5.369"
+  version "4.6.370"
   sha256 :no_check
 
   url "https://dl.cleverfiles.com/diskdrill.dmg"
