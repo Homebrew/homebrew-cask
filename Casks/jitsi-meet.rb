@@ -4,8 +4,10 @@ cask "jitsi-meet" do
 
   url "https://github.com/jitsi/jitsi-meet-electron/releases/download/v#{version}/jitsi-meet.dmg"
   name "Jitsi Meet"
-  desc "Free, open-source and secure video conferencing app"
-  homepage "https://github.com/jitsi/jitsi-meet-electron"
+  desc "Secure video conferencing app"
+  homepage "https://github.com/jitsi/jitsi-meet-electron/"
+
+  auto_updates true
 
   app "Jitsi Meet.app"
 
