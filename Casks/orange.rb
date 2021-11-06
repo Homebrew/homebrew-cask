@@ -8,7 +8,8 @@ cask "orange" do
   homepage "https://orange.biolab.si/"
 
   livecheck do
-    url "https://github.com/biolab/orange3"
+    url "https://download.biolab.si/download/files/"
+    regex(/Orange3[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
   app "Orange#{version.major}.app"
