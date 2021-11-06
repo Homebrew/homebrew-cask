@@ -6,8 +6,8 @@ cask "start" do
     version "0.298.2-127"
     sha256 "51e92e5f335a6fb84de3c85e4be2bd88b8abfece394f1555bfa60362ab264166"
   else
-    version "0.298.2-14"
-    sha256 "369337b4b8da24c5874ef00f49113453a59f0f8b7e0149f0a6e8a90855991fa2"
+    version "0.298.3-18"
+    sha256 "c2685c39546af1ea2f9030ada68d44786ca3382341573b20fda2e618de1f8f96"
   end
 
   url "https://imgcdn.start.qq.com/cdn/mac.client/installer/#{url_arch}START-Installer-#{version}.dmg"
