@@ -10,6 +10,4 @@ cask "macmorpheus" do
   app "MacMorpheus.app"
 
   zap trash: "~/Library/Preferences/emoRaivis.MacMorpheus.plist"
-
-  caveats "For the correct wiring, go to #{homepage}."
 end
