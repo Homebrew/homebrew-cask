@@ -35,7 +35,7 @@ cask "librewolf" do
 
   name "LibreWolf"
   desc "Web browser"
-  homepage "https://librewolf-community.gitlab.io/"
+  homepage "https://librewolf.net/"
 
   app "LibreWolf.app"
 
