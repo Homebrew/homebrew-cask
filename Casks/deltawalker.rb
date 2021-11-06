@@ -1,6 +1,6 @@
 cask "deltawalker" do
-  version "2.5.6"
-  sha256 "d823244f7262351b7bc3ffa39c3a01eede50f9d079f81f32435d3642e8b9a9d3"
+  version "2.6.0"
+  sha256 "445f24ae130c2743fb99951615c4ae77be8f58260a07236871d98fdcbfa434b1"
 
   url "https://deltawalker.s3.amazonaws.com/DeltaWalker-#{version}.dmg",
       verified: "deltawalker.s3.amazonaws.com/"
@@ -9,8 +9,8 @@ cask "deltawalker" do
   homepage "https://www.deltawalker.com/"
 
   livecheck do
-    url "https://www.deltawalker.com/assets/js/main.js"
-    regex(/DeltaWalker[._-]?v?(\d+(?:\.\d+)*)\.dmg/)
+    url "https://www.deltawalker.com/download"
+    regex(/href=.*?DeltaWalker[._-]?v?(\d+(?:\.\d+)+)\.dmg/)
   end
 
   app "DeltaWalker.app"
