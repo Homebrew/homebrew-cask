@@ -9,4 +9,6 @@ cask "simple-comic" do
   homepage "https://dancingtortoise.github.io/"
 
   app "Simple Comic.app"
+
+  zap trash: "~/Library/Application Support/Simple Comic"
 end
