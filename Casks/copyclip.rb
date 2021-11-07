@@ -1,5 +1,5 @@
 cask "copyclip" do
-  version "2.9.98.8"
+  version "2.9.98.9"
   sha256 :no_check
 
   url "https://fiplab.com/app-download/CopyClip_#{version.major}.zip"
@@ -19,9 +19,7 @@ cask "copyclip" do
   uninstall quit: "com.fiplab.copyclip#{version.major}"
 
   zap delete: [
-    "~/Library/Application Scripts/com.fiplab.copyclip*helper",
     "~/Library/Application Scripts/com.fiplab.copyclip*",
-    "~/Library/Containers/com.fiplab.copyclip*helper",
     "~/Library/Containers/com.fiplab.copyclip*",
   ]
 end
