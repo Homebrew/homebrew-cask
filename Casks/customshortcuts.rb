@@ -4,6 +4,7 @@ cask "customshortcuts" do
 
   url "https://dl.houdah.com/customShortcuts/updates/cast_assets/CustomShortcuts#{version.before_comma}.zip"
   name "CustomShortcuts"
+  desc "Customize menu item keyboard shortcuts"
   homepage "https://www.houdah.com/customShortcuts/"
 
   livecheck do
@@ -12,6 +13,7 @@ cask "customshortcuts" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra
 
   app "CustomShortcuts.app"
 
