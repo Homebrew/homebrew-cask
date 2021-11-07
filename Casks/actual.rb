@@ -16,4 +16,11 @@ cask "actual" do
   homepage "https://actualbudget.com/"
 
   app "Actual.app"
+
+  zap trash: [
+    "~/Library/Application Support/Actual",
+    "~/Library/Logs/Actual",
+    "~/Library/Preferences/com.shiftreset.actual.plist",
+    "~/Library/Saved Application State/com.shiftreset.actual.savedState",
+  ]
 end
