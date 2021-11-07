@@ -24,6 +24,10 @@ cask "bbedit" do
   depends_on macos: ">= :mojave"
 
   app "BBEdit.app"
+  binary "#{appdir}/BBEdit.app/Contents/Helpers/bbedit_tool", target: "bbedit"
+  binary "#{appdir}/BBEdit.app/Contents/Helpers/bbdiff"
+  binary "#{appdir}/BBEdit.app/Contents/Helpers/bbfind"
+  binary "#{appdir}/BBEdit.app/Contents/Helpers/bbresults"
 
   zap trash: [
     "~/Library/Application Support/BBEdit",
