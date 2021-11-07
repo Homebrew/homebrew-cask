@@ -5,6 +5,7 @@ cask "energia" do
   url "https://s3.amazonaws.com/energiaUS/distributions/energia-#{version}-macosx-signed.zip",
       verified: "s3.amazonaws.com/energiaUS/"
   name "Energia"
+  desc "Electronics prototyping platform"
   homepage "https://energia.nu/"
 
   livecheck do
