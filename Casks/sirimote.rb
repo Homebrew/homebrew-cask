@@ -15,4 +15,6 @@ cask "sirimote" do
   depends_on macos: ">= :sierra"
 
   app "SiriMote.app"
+
+  zap trash: "~/Library/Preferences/at.EternalStorms.SiriMote-nonappstore.plist"
 end
