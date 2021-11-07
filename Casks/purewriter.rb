@@ -11,4 +11,6 @@ cask "purewriter" do
   pkg "PureWriter-#{version}.pkg"
 
   uninstall pkgutil: "com.drakeet.purewriter"
+
+  zap trash: "~/Library/Preferences/com.drakeet.purewriter.plist"
 end
