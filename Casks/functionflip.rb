@@ -4,6 +4,7 @@ cask "functionflip" do
 
   url "http://kevingessner.com/public/downloads/FunctionFlip/#{version}/FunctionFlip.prefPane.zip"
   name "FunctionFlip"
+  desc "Function key control"
   homepage "http://kevingessner.com/software/functionflip/"
 
   livecheck do
