@@ -1,6 +1,6 @@
 cask "pretzel" do
-  version "2.2.4"
-  sha256 "842bb214056f95e0dea18b55929dd84ab02242fd96887a2b6baec07dd62b1ab9"
+  version "2.2.13"
+  sha256 "eeb9b34ce983090ddab7290a106e027f6e17e69425f3d83053f759c68218920a"
 
   url "https://download.pretzel.rocks/Pretzel-#{version}-mac.zip"
   name "Pretzel"

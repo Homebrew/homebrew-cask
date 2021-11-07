@@ -10,6 +10,8 @@ cask "snip" do
     url "https://snip.qq.com/download"
     strategy :header_match do |headers|
       match = headers["location"].match(/_V(\d+(?:\.\d+)*)_(\d+).dmg/)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

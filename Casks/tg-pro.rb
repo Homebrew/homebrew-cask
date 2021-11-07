@@ -1,6 +1,6 @@
 cask "tg-pro" do
-  version "2.58,12255"
-  sha256 "de24253f820c9fd2c8f7d17328fd44dfc6e2d2cbefdf98fe3454a97e1022e04b"
+  version "2.61,12708"
+  sha256 "2d91b81df1341cf144be9656f154c4af2bf47bc160be258fcf66338badb9fad4"
 
   url "https://www.tunabellysoftware.com/resources/TG%20Pro%20#{version.before_comma}.dmg"
   name "TG Pro"

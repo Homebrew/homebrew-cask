@@ -11,6 +11,8 @@ cask "blu-ray-player-pro" do
     url "https://cdn.macblurayplayer.com/mac-bluray-player-pro3/appcast/Appcast.xml"
     strategy :sparkle do |item|
       match = item.url.match(/_(\d(?:\.\d+)*)_(.*?)\.dmg/)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

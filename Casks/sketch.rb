@@ -1,6 +1,6 @@
 cask "sketch" do
-  version "73.1,127209"
-  sha256 "4a23a537c608c392f59150f10a315f237e7f8cfed0a8baae01c051a1a4fe20cc"
+  version "79,133334"
+  sha256 "baaa8e0ec177d89b1d82ba40d9da44fbcd1635bd4e305515dd6540e8896611f3"
 
   url "https://download.sketchapp.com/sketch-#{version.before_comma}-#{version.after_comma}.zip"
   name "Sketch"
@@ -20,14 +20,14 @@ cask "sketch" do
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bohemiancoding.sketch3.sfl*",
     "~/Library/Application Support/com.bohemiancoding.sketch3",
+    "~/Library/Autosave Information/com.bohemiancoding.sketch3.plist",
     "~/Library/Caches/com.bohemiancoding.sketch3",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.bohemiancoding.sketch3",
+    "~/Library/Cookies/com.bohemiancoding.sketch3.binarycookies",
+    "~/Library/HTTPStorages/com.bohemiancoding.sketch3.binarycookies",
     "~/Library/Logs/com.bohemiancoding.sketch3",
     "~/Library/Preferences/com.bohemiancoding.sketch3.LSSharedFileList.plist",
     "~/Library/Preferences/com.bohemiancoding.sketch3.plist",
-    "~/Library/Cookies/com.bohemiancoding.sketch3.binarycookies",
-    "~/Library/HTTPStorages/com.bohemiancoding.sketch3.binarycookies",
     "~/Library/Saved Application State/com.bohemiancoding.sketch3.savedState",
-    "~/Library/Autosave Information/com.bohemiancoding.sketch3.plist",
   ]
 end

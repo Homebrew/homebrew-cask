@@ -1,13 +1,24 @@
 cask "unity-linux-support-for-editor" do
-  version "2020.1.16f1,f483ad6465d6"
-  sha256 "18eaa9e874ae3a14ea76c2079bc86c5ee90ca6d90497f9ee80b26081812d9a73"
+  version "2021.2.1f1,c20c6d589440"
+  sha256 "9ce9e9f3418731d2a3a36605ecd1a1e444b8407b6cd610a7309473551708448d"
 
   url "https://download.unity3d.com/download_unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Linux-Mono-Support-for-Editor-#{version.before_comma}.pkg",
       verified: "download.unity3d.com/download_unity/"
-  appcast "https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json"
   name "Unity Linux (Mono) Build Support"
   desc "Linux (Mono) target support for Unity"
   homepage "https://unity.com/products"
+
+  livecheck do
+    url "https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json"
+    strategy :page_match do |page|
+      page.scan(%r{
+        /download_unity/(\h+)/MacEditorTargetInstaller
+        /UnitySetup-Linux-Mono-Support-for-Editor-(\d+(?:\.\d+)*[a-z]*\d*)\.pkg
+      }ix).map do |match|
+        "#{match[1]},#{match[0]}"
+      end
+    end
+  end
 
   depends_on cask: "unity"
 

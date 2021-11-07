@@ -7,5 +7,10 @@ cask "jmc" do
   desc "Media organizer"
   homepage "https://github.com/jcm93/jmc"
 
+  livecheck do
+    url "https://github.com/jcm93/jmc/releases/latest"
+    regex(%r{releases/tag/v?(\d+(?:\.\d+)*((?:-beta)?)*(\d+)?)}i)
+  end
+
   app "jmc.app"
 end

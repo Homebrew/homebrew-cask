@@ -8,4 +8,9 @@ cask "lumen" do
   homepage "https://github.com/anishathalye/lumen"
 
   app "Lumen.app"
+
+  zap trash: [
+    "~/Library/Caches/com.anishathalye.Lumen",
+    "~/Library/Preferences/com.anishathalye.Lumen.plist",
+  ]
 end

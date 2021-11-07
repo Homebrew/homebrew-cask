@@ -12,16 +12,16 @@ cask "mysqlworkbench" do
     sha256 "7d812551cc1cc38e1d5f588e6c91b07f1778c78a04bfe94dafac3a23ea425e88"
     url "https://downloads.mysql.com/archives/get/p/#{version.major}/file/mysql-workbench-community-#{version}-macos-x86_64.dmg"
   elsif MacOS.version <= :catalina
-    version "8.0.23"
-    sha256 "4c8664f5686a449a9760bda9b85d7e8c6beb1367d35f668048ffe534652da7b3"
+    version "8.0.22"
+    sha256 "4e27de82d869043cf80e803f1a57cc041a91cabddf0aa6a6c054d68af1837d48"
     url "https://downloads.mysql.com/archives/get/p/#{version.major}/file/mysql-workbench-community-#{version}-macos-x86_64.dmg"
 
     livecheck do
       skip "newer versions only available for Big Sur or higher"
     end
   else
-    version "8.0.25"
-    sha256 "8da15d32d0c3cc8d43e49f8d3580ddec0d8dcd718153da7c934acf26f83ea0c5"
+    version "8.0.27"
+    sha256 "315c74168a814879ae56d6d18f31a86fc3dcc9ea0ff105979e35a9a8d0d587c7"
     url "https://cdn.mysql.com/Downloads/MySQLGUITools/mysql-workbench-community-#{version}-macos-x86_64.dmg"
 
     livecheck do

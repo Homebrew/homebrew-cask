@@ -12,6 +12,10 @@ on:
     - cron: "0 0 * * *"
   issue_comment:
 
+permissions:
+  issues: write
+  pull-requests: write
+
 concurrency:
   group: triage-issues
   cancel-in-progress: ${{ github.event_name != 'issue_comment' }}
@@ -28,7 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Mark/Close Stale Issues and Pull Requests
-        uses: actions/stale@v3.0.19
+        uses: actions/stale@v4
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           days-before-stale: 21
@@ -53,7 +57,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Mark/Close Stale `bump-formula-pr` and `bump-cask-pr` Pull Requests
-        uses: actions/stale@v3.0.19
+        uses: actions/stale@v4
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           days-before-stale: 2
@@ -70,10 +74,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Lock Outdated Threads
-        uses: dessant/lock-threads@486f7380c15596f92b724e4260e4981c68d6bde6
+        uses: dessant/lock-threads@e460dfeb36e731f3aeb214be6b0c9a9d9a67eda6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          issue-lock-inactive-days: 30
-          issue-lock-labels: outdated
-          pr-lock-inactive-days: 30
-          pr-lock-labels: outdated
+          issue-inactive-days: 30
+          add-issue-labels: outdated
+          pr-inactive-days: 30
+          add-pr-labels: outdated

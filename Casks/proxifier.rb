@@ -10,8 +10,8 @@ cask "proxifier" do
       regex(/Version\s*(\d+(?:\.\d+)*)/i)
     end
   else
-    version "3.5"
-    sha256 "7e2c10947e8fd95accc03c5f793d388b05784d34c8f8841f37e5a4fc05c81d1b"
+    version "3.6"
+    sha256 "8bcf87e0411b51e03d412a1b7da908975be612ebbf9a4ddf2af7577e983ce462"
     url "https://www.proxifier.com/download/ProxifierMac#{version.major}.dmg"
 
     livecheck do
@@ -22,6 +22,7 @@ cask "proxifier" do
   end
 
   name "Proxifier"
+  desc "Proxy client"
   homepage "https://www.proxifier.com/mac/"
 
   app "Proxifier.app"

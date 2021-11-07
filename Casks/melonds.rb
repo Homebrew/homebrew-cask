@@ -1,14 +1,14 @@
 cask "melonds" do
-  version "0.9.2"
+  arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
+  version "0.9.3"
+
+  url "https://github.com/Arisotura/melonDS/releases/download/#{version}/melonDS_#{version}_mac_#{arch}.dmg",
+      verified: "github.com/Arisotura/melonDS/"
   if Hardware::CPU.intel?
-    sha256 "253c3ce58c626d05c62444a347ccc6b3bd6e7698f685ffd404c9a51ac5c08a91"
-    url "https://github.com/Arisotura/melonDS/releases/download/#{version}/melonDS_#{version}_mac64.dmg",
-        verified: "github.com/Arisotura/melonDS/"
+    sha256 "04127b3c4106ff1780e7e4082aa978e7030beeb9c231656faea0ef27f73e16c3"
   else
-    sha256 "5dc4f493aaabaac91bf8fdd79c5de1c5014daa2cce64718c43f461c2640c82ab"
-    url "https://github.com/Arisotura/melonDS/releases/download/#{version}/melonDS_#{version}_macARM.dmg",
-        verified: "github.com/Arisotura/melonDS/"
+    sha256 "a8baa60d4a8e9376b2e214175a00781aeb32f3be840ead3ef3182fc3e23bfbf6"
   end
 
   name "melonDS"

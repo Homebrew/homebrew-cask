@@ -5,6 +5,7 @@ cask "fliqlo" do
   url "https://fliqlo.com/download/Fliqlo%20#{version}.dmg",
       referer: "https://fliqlo.com/#about"
   name "Fliqlo"
+  desc "Flip clock screensaver"
   homepage "https://fliqlo.com/"
 
   livecheck do
@@ -14,4 +15,6 @@ cask "fliqlo" do
   end
 
   screen_saver "Fliqlo.saver"
+
+  zap trash: "/Library/Screen Savers/Fliqlo.saver"
 end

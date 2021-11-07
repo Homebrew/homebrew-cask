@@ -1,6 +1,6 @@
 cask "keybase" do
-  version "5.7.0,20210622193735:e3826b703a"
-  sha256 "c3f3a08b2a023e04f16426e6c97411f969737ccf4c3c2bcb5ba4bf7473c8eca6"
+  version "5.8.0,20210920184218:ac2177aec7"
+  sha256 "55333b285a0c31712e478480462371efdec96c77cca7d7831b4748778fa5b7d5"
 
   url "https://prerelease.keybase.io/darwin-updates/Keybase-#{version.before_comma}-#{version.after_comma.before_colon}%2B#{version.after_colon}.zip"
   name "Keybase"
@@ -11,6 +11,8 @@ cask "keybase" do
     url "https://prerelease.keybase.io/update-darwin-prod-v2.json"
     strategy :page_match do |page|
       match = page.match(/Keybase-(\d+(?:\.\d+)*)-(\d+)%2B([0-9a-f]+)\.zip/i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}:#{match[3]}"
     end
   end

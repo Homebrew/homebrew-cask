@@ -1,6 +1,6 @@
 cask "frhelper" do
-  version "4.1.1,1054"
-  sha256 "c07c614333c1adddca0d8126317792571ecb7128934b7784607ba3046f78e64d"
+  version "4.1.5,1065"
+  sha256 "b98002603091c30ff682b281a2e53a285f883e8bfc6648c1d28ffb6ea6740218"
 
   url "https://static.frdic.com/pkg/fhmac.dmg?v=#{version.after_comma}",
       verified:   "static.frdic.com/",
@@ -24,12 +24,13 @@ cask "frhelper" do
   ]
 
   zap trash: [
-    "~/Library/Eudb_fr",
+    "~/Library/Application Support/com.eusoft.frhelper",
     "~/Library/Caches/com.eusoft.frhelper",
     "~/Library/Caches/com.eusoft.frhelper.LightPeek",
-    "~/Library/Preferences/com.eusoft.frhelper.plist",
-    "~/Library/Application Support/com.eusoft.frhelper",
-    "~/Library/Preferences/group.com.eusoft.frhelper.plist",
+    "~/Library/Containers/com.eusoft.frhelper.QuickLook",
+    "~/Library/Eudb_fr",
     "~/Library/Preferences/com.eusoft.frhelper.LightPeek.plist",
+    "~/Library/Preferences/com.eusoft.frhelper.plist",
+    "~/Library/Preferences/group.com.eusoft.frhelper.plist",
   ]
 end

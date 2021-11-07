@@ -25,7 +25,7 @@ cask "meld" do
   binary shimscript, target: "meld"
 
   preflight do
-    IO.write shimscript, <<~EOS
+    File.write shimscript, <<~EOS
       #!/bin/sh
       exec '#{appdir}/Meld.app/Contents/MacOS/Meld' "$@"
     EOS

@@ -1,14 +1,13 @@
 cask "tempo" do
-  version "5.21.0"
+  arch = Hardware::CPU.intel? ? "release" : "release-arm64"
 
+  version "6.0.0"
+
+  url "https://download.yourtempo.co/#{arch}/Tempo-#{version}.dmg"
   if Hardware::CPU.intel?
-    sha256 "6464b0fd2a0f9a3cc021e268456974d0596425484ead28e9cd9d865b21b1bed7"
-
-    url "https://download.yourtempo.co/release/Tempo-#{version}.dmg"
+    sha256 "acfe86aedce23077a34de27717f38920bf4eafb740841088ab31b685fec4e3af"
   else
-    sha256 "91e01e2ac220847de82ba1da7ae0392fb5eaa3d7cd0f31ab88753da2cf575ab3"
-
-    url "https://download.yourtempo.co/release-arm64/Tempo-#{version}.dmg"
+    sha256 "67260ec4260e30da28abc20d847282f08e09d8bce00730594c598caf3a63bdb7"
   end
 
   name "Tempo"
@@ -16,7 +15,7 @@ cask "tempo" do
   homepage "https://www.yourtempo.co/"
 
   livecheck do
-    url "https://download.yourtempo.co/release/latest-mac.yml"
+    url "https://download.yourtempo.co/#{arch}/latest-mac.yml"
     strategy :electron_builder
   end
 
@@ -30,4 +29,8 @@ cask "tempo" do
     "~/Library/Preferences/com.founders.mial.plist",
     "~/Library/Saved Application State/com.founders.mial.savedState",
   ]
+
+  caveats do
+    discontinued
+  end
 end

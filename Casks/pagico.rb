@@ -1,6 +1,6 @@
 cask "pagico" do
-  version "9.10,20210518"
-  sha256 "df3a7a150381d66b5c5eb5ebe7bac2ea1c230fcfe0cfa2c87457d1b92e7e2f12"
+  version "10.0,20211005"
+  sha256 "43d7710d4705ef2a5821fcb611cf67304fcbfef7c77fb0ec2e0c93fbe98a6be0"
 
   url "https://www.pagico.com/downloads/Pagico_macOS_r#{version.after_comma}.dmg"
   name "Pagico"
@@ -8,11 +8,11 @@ cask "pagico" do
   homepage "https://www.pagico.com/"
 
   livecheck do
-    url "https://www.pagico.com/api/pagico#{version.major}.mac.xml"
+    url "https://www.pagico.com/api/pagico#{version.major}.macOS.xml"
     strategy :sparkle
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :el_capitan"
 
   app "Pagico.app"
 end

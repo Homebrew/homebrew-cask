@@ -10,7 +10,7 @@ cask "art-directors-toolkit" do
   livecheck do
     url "https://www.code-line.com/downloads/"
     strategy :page_match
-    regex(/Art\s*Directors\s*Toolkit.*?\(v?(\d+(?:\.\d+)*)\)/i)
+    regex(/Art\s*Directors\s*Toolkit.*?\(v?(\d+(?:\.\d+)+)\)/i)
   end
 
   app "Art Directors Toolkit #{version.major}i.app"

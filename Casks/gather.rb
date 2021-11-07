@@ -1,6 +1,6 @@
 cask "gather" do
-  version "0.1.1"
-  sha256 "b562ac189c8118d79b67c12211cee697d2776ad46578507ff46cd5798d6999c2"
+  version "0.1.6"
+  sha256 "7f11ea97ae173182134438c48d415bd1fa78f8fd7067b7c55ff02647091073c1"
 
   url "https://github.com/gathertown/gather-town-desktop-releases/releases/download/v#{version}/Gather-#{version}-mac.zip",
       verified: "github.com/gathertown/gather-town-desktop-releases"

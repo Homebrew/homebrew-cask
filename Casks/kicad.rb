@@ -4,14 +4,18 @@ cask "kicad" do
 
   url "https://kicad-downloads.s3.cern.ch/osx/stable/kicad-unified-#{version}-10_14.dmg",
       verified: "kicad-downloads.s3.cern.ch/"
-  appcast "https://kicad-downloads.s3.cern.ch/?delimiter=/&prefix=osx/stable/"
   name "KiCad"
   desc "Electronics design automation suite"
   homepage "https://kicad.org/"
 
+  livecheck do
+    url "https://kicad-downloads.s3.cern.ch/?delimiter=/&prefix=osx/stable/"
+    regex(/kicad-unified-(\d+(?:.\d+)*)-10_14\.dmg/i)
+  end
+
   depends_on macos: ">= :mojave"
 
-  app "KiCad/kicad.app",            target: "KiCad/KiCad.app"
+  app "KiCad/kicad.app",            target: "KiCad/kicad.app"
   app "KiCad/bitmap2component.app", target: "KiCad/bitmap2component.app"
   app "KiCad/eeschema.app",         target: "KiCad/eeschema.app"
   app "KiCad/gerbview.app",         target: "KiCad/gerbview.app"

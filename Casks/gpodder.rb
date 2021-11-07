@@ -1,6 +1,6 @@
 cask "gpodder" do
-  version "3.10.20"
-  sha256 "41fa47705737692090c5b33b2f26ddbb1688efa1ad9a804b1a6f40877c22cc31"
+  version "3.10.21"
+  sha256 "a6b62428f28f0a06f3d8359999594688ddd38e1b3c7c22eb51dfadf0f39cf5a4"
 
   url "https://github.com/gpodder/gpodder/releases/download/#{version}/macOS-gPodder-#{version}.zip",
       verified: "github.com/gpodder/gpodder/"

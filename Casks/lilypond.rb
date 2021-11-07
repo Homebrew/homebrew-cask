@@ -32,7 +32,7 @@ cask "lilypond" do
   preflight do
     binaries.each do |shimscript|
       # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-      IO.write "#{staged_path}/#{shimscript}.wrapper.sh", <<~EOS
+      File.write "#{staged_path}/#{shimscript}.wrapper.sh", <<~EOS
         #!/bin/sh
         exec '#{appdir}/LilyPond.app/Contents/Resources/bin/#{shimscript}' "$@"
       EOS

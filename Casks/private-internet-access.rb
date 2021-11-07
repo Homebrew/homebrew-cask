@@ -1,6 +1,6 @@
 cask "private-internet-access" do
-  version "2.10-06571"
-  sha256 "a2ec1acab794f953fca4daee2e117a924e2586a537a26c641f560c0769318e18"
+  version "3.1-06756"
+  sha256 "dc8ff76085d4ef634f201bb9ab08db2450b7b4adabcb5be6a03261dcc60d8d6e"
 
   url "https://installers.privateinternetaccess.com/download/pia-macos-#{version}.zip"
   name "Private Internet Access"
@@ -28,7 +28,7 @@ cask "private-internet-access" do
 
   zap trash: [
     "~/Library/Application Support/com.privateinternetaccess.vpn",
-    "~/Library/LaunchDaemons/com.privateinternetaccess.vpn",
+    "~/Library/LaunchAgents/com.privateinternetaccess.vpn",
     "~/Library/Preferences/com.privateinternetaccess.vpn",
     "~/Library/Preferences/com.privateinternetaccess.vpn.plist",
   ]

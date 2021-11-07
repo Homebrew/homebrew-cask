@@ -1,6 +1,6 @@
 cask "versions" do
-  version "2.0.4,2007"
-  sha256 "e9925075e036ff301d46fcd4bf9c4eef5e9dfb6016d510f1b22dbb99e10e0bfe"
+  version "2.0.8,2016"
+  sha256 "d7946cb2ef3d735dab961201faec77998abeee440b1d5b3effbf0aeffda738d8"
 
   url "https://updates.versionsapp.com/v#{version.major}/prod/Versions-#{version.before_comma}-#{version.after_comma}.zip"
   name "Versions"
@@ -15,4 +15,11 @@ cask "versions" do
   depends_on macos: ">= :catalina"
 
   app "Versions.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.versionsapp.v#{version.major}",
+    "~/Library/Application Support/Versions",
+    "~/Library/Caches/com.versionsapp.v#{version.major}",
+    "~/Library/Preferences/com.versionsapp.v#{version.major}.plist",
+  ]
 end

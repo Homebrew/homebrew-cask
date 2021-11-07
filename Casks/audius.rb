@@ -1,6 +1,6 @@
 cask "audius" do
-  version "0.24.21"
-  sha256 "83cf8f356680962ab2adf289b0a248f14a423f8ac5f934dcbe769adb7319216b"
+  version "0.24.32"
+  sha256 "f6ce75a3b17ff958b54679898e8d013f1a88a910dbbdea3b08f3ba6166c8d694"
 
   url "https://download.audius.co/Audius-#{version}.dmg"
   name "Audius"

@@ -4,10 +4,14 @@ cask "posterazor" do
 
   url "https://downloads.sourceforge.net/posterazor/Binary%20Releases/#{version}/PosteRazor-#{version}-OSX.dmg",
       verified: "downloads.sourceforge.net/posterazor/"
-  appcast "https://sourceforge.net/projects/posterazor/rss"
   name "PosteRazor"
   desc "Raster image splitter"
   homepage "https://posterazor.sourceforge.io/"
+
+  livecheck do
+    url "https://posterazor.sourceforge.io/index.php?page=download&lang=english"
+    regex(/PosteRazor[._-]?(\d+(?:\.\d+)*)[._-]?OSX\.dmg/i)
+  end
 
   app "PosteRazor.app"
 end

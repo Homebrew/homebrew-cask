@@ -1,6 +1,6 @@
 cask "jaxx-liberty" do
-  version "2.6.4"
-  sha256 "bc0b37cfe544fbe7ed63456b997561a2161e15cbd628630a6f09ea73b1581088"
+  version "2.6.5"
+  sha256 "2963f0cbf9c0cc7568b4cc25cd716502472a8ecb8b785ba20483a3974d5e0252"
 
   url "https://download-liberty.jaxx.io/Jaxx.Liberty-#{version}.dmg"
   name "Jaxx Blockchain Wallet"

@@ -1,12 +1,12 @@
 cask "another-redis-desktop-manager" do
-  version "1.4.8"
+  version "1.4.9"
 
   if Hardware::CPU.intel?
-    sha256 "ecb6b50ff8d22e96fda124ffe16556f0e002cfbfe44c43f3f4c7a4c0e93001ba"
+    sha256 "6645823467fd50e62524c968104cdeb79b7416731e454eeb5822731b174528f7"
 
     url "https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v#{version}/Another-Redis-Desktop-Manager.#{version}.dmg"
   else
-    sha256 "e93e2309b512ac93c6ecdcf842fc5f4d7977721f86fd76c58d5921ef13da8e32"
+    sha256 "6018d0993b8abdbb51ced41fc26249780078bf79687a3a3d32a43782aa6edcee"
 
     url "https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v#{version}/Another-Redis-Desktop-Manager-M1-arm64-#{version}.dmg"
   end

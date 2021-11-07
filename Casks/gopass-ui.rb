@@ -1,6 +1,6 @@
 cask "gopass-ui" do
-  version "0.7.0"
-  sha256 "43f14b79004b32eb081d39752f34b09639993a039cff4691ad69eb82b562b6b0"
+  version "0.8.0"
+  sha256 "b31d8da91e622c2b1c85b837e9eacdb345ba6aafeaaeea0a9a16282e7ae8e596"
 
   url "https://github.com/codecentric/gopass-ui/releases/download/v#{version}/Gopass.UI-#{version}.dmg"
   name "Gopass UI"

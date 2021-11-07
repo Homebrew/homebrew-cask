@@ -11,6 +11,8 @@ cask "xiami" do
     url "https://g.alicdn.com/music/desktop-app/XiamiMac.xml"
     strategy :sparkle do |item|
       match = item.url.match(%r{/([^/]+)/([^/]+)\.zip}i)
+      next if match.blank?
+
       "#{item.short_version},#{item.version},#{match[1]}:#{match[2]}"
     end
   end

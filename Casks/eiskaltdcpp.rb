@@ -7,5 +7,9 @@ cask "eiskaltdcpp" do
   desc "Filesharing using Direct Connect and ADC protocols"
   homepage "https://sourceforge.net/projects/eiskaltdcpp/"
 
+  livecheck do
+    regex(/EiskaltDC%2B%2B[._-]v?(\d+(?:\.\d+)+)[._-]x86_64\.dmg/i)
+  end
+
   app "EiskaltDC++.app"
 end

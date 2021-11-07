@@ -1,6 +1,6 @@
 cask "home-assistant" do
-  version "2021.7,2021.202"
-  sha256 "ad1d58252b9930f04d8c3dbf7bcad51143e4c086c22329479515b39b6dd62334"
+  version "2021.10,2021.247"
+  sha256 "8fe17de082acc528b529b2486f2eccdd7ac8562a0744fc44fbcfbcef65a10d3c"
 
   url "https://github.com/home-assistant/iOS/releases/download/release%2F#{version.before_comma}%2F#{version.after_comma}/home-assistant-mac.zip",
       verified: "github.com/home-assistant/iOS/"
@@ -15,6 +15,8 @@ cask "home-assistant" do
     url :url
     strategy :github_latest do |page|
       version = page.match(%r{href=".+/tree/(?:mac|release)/([\d.]+)/([\d.]+)"}i)
+      next if version.blank?
+
       "#{version[1]},#{version[2]}"
     end
   end

@@ -1,18 +1,16 @@
 cask "tabby" do
-  version "1.0.144"
+  arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
+
+  version "1.0.161"
 
   if Hardware::CPU.intel?
-    sha256 "7b5e5967ab97a35061a5f1d6ad7715a8d072f0874a03645bcdbf53f2c0d5f2ee"
-
-    url "https://github.com/Eugeny/tabby/releases/download/v#{version}/tabby-#{version}-macos-x86_64.zip",
-        verified: "github.com/Eugeny/tabby/"
+    sha256 "0b62194ca9f7e6dbf44cc538dc843ba63d62489b233ae0b45c63542e43fa0432"
   else
-    sha256 "19ff5798afd1abc12db427b9fbf0d404f1aa6b0c45e56e2115e99957e5f957b9"
-
-    url "https://github.com/Eugeny/tabby/releases/download/v#{version}/tabby-#{version}-macos-arm64.zip",
-        verified: "github.com/Eugeny/tabby/"
+    sha256 "a9b0f9441922f48dd319c0ce81c044a26bfe75b95353d35db0890bb46d31b8c2"
   end
 
+  url "https://github.com/Eugeny/tabby/releases/download/v#{version}/tabby-#{version}-macos-#{arch}.zip",
+      verified: "github.com/Eugeny/tabby/"
   name "Tabby"
   name "Terminus"
   desc "Terminal emulator, SSH and serial client"

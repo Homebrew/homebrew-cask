@@ -1,6 +1,6 @@
 cask "kyokan-bob" do
-  version "0.7.1"
-  sha256 "8067666e5ebfa5befd918bbccf121bb1b219497c4f5fb679e829736ea5cf39e7"
+  version "0.8.0"
+  sha256 "66a49484070979a3215bf164a47a33d1035795ad3d513a598cbdaa7896c7bf81"
 
   url "https://github.com/kyokan/bob-wallet/releases/download/#{version}/Bob-#{version}.dmg",
       verified: "github.com/kyokan/bob-wallet"

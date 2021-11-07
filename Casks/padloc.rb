@@ -8,6 +8,11 @@ cask "padloc" do
   desc "Modern password manager"
   homepage "https://padloc.app/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Padloc.app"
 
   zap trash: [

@@ -1,12 +1,12 @@
 cask "wickrme" do
-  version "5.82.14"
-  sha256 "a1d34958736ad9414b8e6b0b06f7abd8912a734ee020d3af153a06102fc4058d"
+  version "5.90.3"
+  sha256 "ee08ff3d58c5645618146fe4b3e89b52651fd5d2ace166b0a08f2db8f4299ede"
 
   url "https://s3.amazonaws.com/static.wickr.com/downloads/mac/me/WickrMe-#{version}.dmg",
       verified: "s3.amazonaws.com/static.wickr.com/"
   name "Wickr Me"
   desc "Desktop client for Wickr Me"
-  homepage "https://wickr.com/products/personal/"
+  homepage "https://wickr.com/me/"
 
   livecheck do
     url "https://me-download.wickr.com/api/multiVerify/me/undefined/"

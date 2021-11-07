@@ -82,10 +82,6 @@ jobs:
             echo '::warning::Removing `conda` symlink is no longer necessary.'
           fi
 
-          if ! brew untap adoptopenjdk/openjdk; then
-            echo '::warning::Untapping adoptopenjdk/openjdk is no longer necessary.'
-          fi
-
           brew unlink python && brew link --overwrite python
         if: runner.os == 'macOS'
 

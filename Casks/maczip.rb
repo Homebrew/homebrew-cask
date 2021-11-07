@@ -1,6 +1,6 @@
 cask "maczip" do
-  version "2.1"
-  sha256 "79b8a75f6875827aa69df0e27f8e1e1c3930d4db0249ee6477f74d137ed77ec0"
+  version "2.2"
+  sha256 "186b4facde633ce15df4d6f36c927d517121cfdc75fc564b77d8bf6b003e7120"
 
   url "https://cdn.awehunt.com/ezip/release/MacZip_V#{version}.dmg"
   name "MacZip"

@@ -1,6 +1,6 @@
 cask "parsify" do
-  version "1.6.3"
-  sha256 "6e98677c1daf3c0a160e9d28679c8f9eab5b7ac7410fe34ad5b4de556e0de90e"
+  version "1.8.0"
+  sha256 "f44f3210b2059cb9f55861a15ec7dd8f9b3c56e2b774e91b9d1d17a7ad233f61"
 
   url "https://github.com/parsify-dev/desktop/releases/download/v#{version}/Parsify.Desktop-#{version}.dmg",
       verified: "github.com/parsify-dev/desktop/"

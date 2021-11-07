@@ -1,13 +1,12 @@
 cask "stack-stack" do
-  version "3.32.0"
+  version "3.36.1"
 
   if Hardware::CPU.intel?
-    sha256 "172199e4f2292cbeb93dc428dae21ffff27e3824d764198fb9117b47f002f5d2"
+    sha256 "682af014498759c38723666d7fbaa67915fc08636d5b3c4e73e302b4b14f7cc7"
 
-    url "https://stack-v1.s3.amazonaws.com/builds/prod/Stack-#{version}.dmg",
-        verified: "stack-v1.s3.amazonaws.com/"
+    url "https://binaries.getstack.app/builds/prod/Stack-#{version}.dmg"
   else
-    sha256 "0c8d4e35f5e320895a1bf2e6cd466cf672f7b992c5ab0bb706ff854f725e9759"
+    sha256 "b2e866d059c9736810a172d02d91b443807aa4b3d9df6dffd50914b341ef2740"
 
     url "https://binaries.getstack.app/builds/prod/mac/arm64/Stack%20#{version}-arm64.dmg"
   end
@@ -17,7 +16,7 @@ cask "stack-stack" do
   homepage "https://getstack.app/"
 
   livecheck do
-    url "https://stack-v1.s3.amazonaws.com/builds/prod/latest-mac.yml"
+    url "https://binaries.getstack.app/builds/prod/latest-mac.yml"
     strategy :electron_builder
   end
 

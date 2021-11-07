@@ -1,6 +1,6 @@
 cask "podolski" do
-  version "1.2.2,9724"
-  sha256 "36c3e778a3aaa82dcdb18459b9e01ba490884b52cc200941c299362024523994"
+  version "1.2.3,12092"
+  sha256 "c419d14ead23c5229aeafda0d6f43e9a55f70ac2dc14868d32cef00c58687201"
 
   url "https://uhedownloads-heckmannaudiogmb.netdna-ssl.com/releases/Podolski_#{version.before_comma.no_dots}_#{version.after_comma}_Mac.zip",
       verified: "uhedownloads-heckmannaudiogmb.netdna-ssl.com/"

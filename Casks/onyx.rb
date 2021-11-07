@@ -17,9 +17,12 @@ cask "onyx" do
   elsif MacOS.version <= :catalina
     version "3.8.7"
     sha256 "0dd8119ad3441c5130ca584ac90ad450c272aab8b577925561a2536da48d2d54"
+  elsif MacOS.version <= :big_sur
+    version "4.0.1"
+    sha256 "d8b1613df2aacca0f827d4f98b7e6ec372c2030cc09ff3291f9660271f008c4d"
   else
-    version "3.9.7"
-    sha256 "de6b55cbceee6fbe69262bd09a7edea90c2827baa26fe9a9a72f9db125636ccc"
+    version "4.1.0"
+    sha256 "51f912407759a92c3fa54e1429f54989856cc6e5aba7c873e0d0dab075e70759"
   end
 
   url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete(".")}/OnyX.dmg"
@@ -32,16 +35,9 @@ cask "onyx" do
     regex(/>\s*OnyX\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s.-]*\s+#{MacOS.version}\s*</i)
   end
 
-  # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.
-  depends_on macos: [
-    :yosemite,
-    :el_capitan,
-    :sierra,
-    :high_sierra,
-    :mojave,
-    :catalina,
-    :big_sur,
-  ]
+  # Unusual case: The software may stop working, or may be dangerous to run, on the latest macOS release.
+  # Uncomment once :monterey is supported.
+  # depends_on macos: "<= :monterey"
 
   app "OnyX.app"
 

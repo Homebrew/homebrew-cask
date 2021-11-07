@@ -1,6 +1,6 @@
 cask "yam-display" do
-  version "2.2.5"
-  sha256 "4ff45973a5f8ebe49de264bb99f521ba7dd561b0c7b0420d122e5d7734ad64d8"
+  version "2.2.8"
+  sha256 "38c605dfb130b63a1b89229dc8e022c3f9eba689a3a19ee184df511c9d261153"
 
   url "https://www.yamdisplay.com/app/YamDisplay#{version}.zip"
   name "Yam Display"

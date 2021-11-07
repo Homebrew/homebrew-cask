@@ -7,5 +7,11 @@ cask "fantasy-map-generator" do
   name "Azgaar's Fantasy Map Generator"
   homepage "https://azgaar.github.io/Fantasy-Map-Generator"
 
+  livecheck do
+    url "https://github.com/Azgaar/Fantasy-Map-Generator/wiki/Q&A#is-there-a-desktop-version"
+    regex(%r{v?(\d+(?:\.\d+)+)/FMG-macos-x64.dmg}i)
+    strategy :page_match
+  end
+
   app "Azgaar's Fantasy Map Generator.app"
 end

@@ -1,6 +1,6 @@
 cask "dcp-o-matic-kdm-creator" do
-  version "2.14.51"
-  sha256 "5e93646ea8be33dfdf22a86dbc370436b209ed7f363724b74e15148ce1a79b48"
+  version "2.14.55"
+  sha256 "2d4983d2dd755ebaffe987aed5aaece3f358af3827f43b2f98df960c881395ce"
 
   url "https://dcpomatic.com/dl.php?id=osx-10.9-kdm&version=#{version}"
   name "DCP-o-matic KDM Creator"
@@ -10,7 +10,7 @@ cask "dcp-o-matic-kdm-creator" do
   livecheck do
     url "https://dcpomatic.com/download"
     strategy :page_match
-    regex(/stable\s*release:\s*(\d+(?:\.\d+)*)/i)
+    regex(/stable\s*release:\s*(\d+(?:\.\d+)+)/i)
   end
 
   app "DCP-o-matic #{version.major} KDM Creator.app"

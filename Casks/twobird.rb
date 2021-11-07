@@ -1,5 +1,5 @@
 cask "twobird" do
-  version "1.0.35"
+  version "1.0.41"
   sha256 :no_check
 
   url "https://www.twobird.com/download/mac"

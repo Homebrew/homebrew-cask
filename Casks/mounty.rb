@@ -22,4 +22,6 @@ cask "mounty" do
   homepage "https://mounty.app/"
 
   app "Mounty.app"
+
+  zap trash: "~/Library/Preferences/com.cu4uc.mounty.plist"
 end

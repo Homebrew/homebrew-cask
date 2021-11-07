@@ -1,6 +1,6 @@
 cask "cocoarestclient" do
-  version "1.4.6"
-  sha256 "1bca8c7980fe656b95907569519538905da2141974e2bb9df2600a242f00b4e6"
+  version "1.4.7"
+  sha256 "8e974818e5b77e6e4291acbe09d439c3c17b01c23e48d2272f7817e2d18e9968"
 
   url "https://github.com/mmattozzi/cocoa-rest-client/releases/download/#{version}/CocoaRestClient-#{version}.dmg",
       verified: "github.com/mmattozzi/cocoa-rest-client/"

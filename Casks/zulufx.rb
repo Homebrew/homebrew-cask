@@ -1,25 +1,34 @@
 cask "zulufx" do
-  version "15.0.2,15.29.15-ca"
+  arch = Hardware::CPU.intel? ? "x64" : "aarch64"
+  choice = Hardware::CPU.intel? ? "x86" : "arm"
+
+  version "15.0.5,15.36.13-ca"
 
   if Hardware::CPU.intel?
-    sha256 "afb3d663e0e6c3e1b2292fb6d5a9920937a988aaa1999259975bce4302dd413c"
-
-    url "https://cdn.azul.com/zulu/bin/zulu#{version.after_comma}-fx-jdk#{version.before_comma}-macosx_x64.dmg",
-        referer: "https://www.azul.com/downloads/zulu/zulu-mac/"
+    sha256 "2d6b24911b2d8f5e363a564090edb8f6cc941a5e02a43d98b2d2edaa23f5243a"
   else
-    sha256 "c6a1a6fcf21adb1350d374c2827503fcf9ca39cef9a5a8cdffce678ca48f04d9"
-
-    url "https://cdn.azul.com/zulu/bin/zulu#{version.after_comma}-fx-jdk#{version.before_comma}-macosx_aarch64.dmg",
-        referer: "https://www.azul.com/downloads/zulu/zulu-mac/"
+    sha256 "22658b7103474047c7f6ed736dc6b177ee8098231cd8e2d26d10eedf640f0a0f"
   end
 
+  url "https://cdn.azul.com/zulu/bin/zulu#{version.after_comma}-fx-jdk#{version.before_comma}-macosx_#{arch}.dmg",
+      referer: "https://www.azul.com/downloads/"
   name "ZuluFX"
   desc "Azul ZuluFX Java Standard Edition Development Kit"
-  homepage "https://www.azul.com/downloads/zulu/zulu-mac/"
+  homepage "https://www.azul.com/downloads/"
+
+  livecheck do
+    url "https://api.azul.com/zulu/download/community/v1.0/bundles/latest/?jdk_version=#{version.major}&bundle_type=jdk&javafx=true&ext=dmg&os=macos&arch=#{choice}"
+    strategy :page_match do |page|
+      match = page.match(/zulu(\d+(?:\.\d+)*-.*?)-fx-jdk(\d+(?:\.\d+)*)-macosx_#{arch}\.dmg/i)
+      next if match.blank?
+
+      "#{match[2]},#{match[1]}"
+    end
+  end
 
   depends_on macos: ">= :sierra"
 
-  pkg "Double-Click to Install ZuluFX #{version.major}.pkg"
+  pkg "Double-Click to Install Azul Zulu JDK #{version.major}.pkg"
 
   uninstall pkgutil: "com.azulsystems.zulu.#{version.major}"
 end

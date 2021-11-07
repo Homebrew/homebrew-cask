@@ -1,6 +1,6 @@
 cask "flomo" do
-  version "0.1.2"
-  sha256 "066377a737908ce164467c67355b0be61c6cb9102fceecd4c116a0c373791394"
+  version "0.1.4"
+  sha256 "4d2bd0c3b994a8dd8b9346ca3d068733c3e76017ba5bdeb230827080ae6c2e4c"
 
   url "https://flomo-resource.oss-cn-shanghai.aliyuncs.com/flomo_mac_v#{version}.zip",
       verified: "flomo-resource.oss-cn-shanghai.aliyuncs.com/"
@@ -9,8 +9,10 @@ cask "flomo" do
   homepage "https://flomoapp.com/"
 
   livecheck do
-    url "https://help.flomoapp.com/basic/app"
-    regex(%r{/flomo[._-]mac[._-]v?(\d+(?:\.\d+)+)\.zip}i)
+    url "https://flomoapp.com/api/mac/latest/"
+    strategy :page_match do |page|
+      JSON.parse(page)["version"]
+    end
   end
 
   depends_on macos: ">= :catalina"

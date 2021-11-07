@@ -7,6 +7,12 @@ cask "obs-ndi" do
   desc "NewTek NDI integration for OBS Studio"
   homepage "https://github.com/Palakis/obs-ndi"
 
+  livecheck do
+    url "https://github.com/Palakis/obs-ndi/releases/"
+    strategy :page_match
+    regex(/obs[._-]?ndi[._-]?(\d+(?:\.\d+)*)[._-]?macOS\.pkg/i)
+  end
+
   pkg "obs-ndi-#{version}-macOS.pkg"
 
   uninstall pkgutil: [

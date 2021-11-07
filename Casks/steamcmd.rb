@@ -12,7 +12,7 @@ cask "steamcmd" do
   binary shimscript, target: "steamcmd"
 
   preflight do
-    IO.write shimscript, <<~EOS
+    File.write shimscript, <<~EOS
       #!/bin/sh
       exec '#{staged_path}/steamcmd.sh' "$@"
     EOS

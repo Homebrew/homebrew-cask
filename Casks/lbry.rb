@@ -1,6 +1,6 @@
 cask "lbry" do
-  version "0.51.1"
-  sha256 "8e910d31fff8af3fc626cafc46363927c0e65cc1c85c9f09ea2f618dbe52a68e"
+  version "0.51.2"
+  sha256 "f497927baa8f8b1c1a1c8b0bcf5eabbc89b2bb5ed9a7bc448612df69d7292ba6"
 
   url "https://github.com/lbryio/lbry-desktop/releases/download/v#{version}/LBRY_#{version}.dmg",
       verified: "github.com/lbryio/lbry-desktop/"
@@ -21,12 +21,12 @@ cask "lbry" do
   binary shim_lbryfirst, target: "lbry-first"
 
   preflight do
-    IO.write shim_lbrynet, <<~EOS
+    File.write shim_lbrynet, <<~EOS
       #!/bin/sh
       exec '#{appdir}/LBRY.app/Contents/Resources/static/daemon/lbrynet' "$@"
     EOS
 
-    IO.write shim_lbryfirst, <<~EOS
+    File.write shim_lbryfirst, <<~EOS
       #!/bin/sh
       exec '#{appdir}/LBRY.app/Contents/Resources/static/lbry-first/lbry-first' "$@"
     EOS

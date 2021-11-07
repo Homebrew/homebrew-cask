@@ -1,6 +1,6 @@
 cask "osquery" do
-  version "4.8.0"
-  sha256 "10b02b55b4f1465df7a7b8c46c6072b859e172809c4838c8a65dc148f056b821"
+  version "5.0.1"
+  sha256 "ec58996e64637d861ccead8dc6bc8865662728f6e5bc2694a3c92f0f4a371095"
 
   url "https://pkg.osquery.io/darwin/osquery-#{version}.pkg"
   name "osquery"
@@ -15,5 +15,8 @@ cask "osquery" do
   pkg "osquery-#{version}.pkg"
 
   uninstall launchctl: "com.facebook.osqueryd",
-            pkgutil:   "com.facebook.osquery"
+            pkgutil:   [
+              "com.facebook.osquery",
+              "io.osquery.agent",
+            ]
 end

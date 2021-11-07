@@ -1,6 +1,6 @@
 cask "ddnet" do
-  version "15.5.4"
-  sha256 "856ae969d4837523ed86e58b50708d4788cba54ac4c1a0f7cf2803389b9c8e94"
+  version "15.6.1"
+  sha256 "0d850b0af3cc73ab511eca33761cb30cc97a149f2cd91b87158b583867aeeb91"
 
   url "https://ddnet.tw/downloads/DDNet-#{version}-osx.dmg"
   name "DDNet"
@@ -8,8 +8,9 @@ cask "ddnet" do
   homepage "https://ddnet.tw/"
 
   livecheck do
-    url "https://github.com/ddnet/ddnet/releases"
-    strategy :github_latest
+    url "https://github.com/ddnet/ddnet/tags"
+    strategy :page_match
+    regex(/(\d+(?:\.\d+)+)\.zip/i)
   end
 
   auto_updates true

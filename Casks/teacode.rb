@@ -16,4 +16,6 @@ cask "teacode" do
   depends_on macos: ">= :sierra"
 
   app "TeaCode.app"
+
+  zap trash: "~/Library/Preferences/com.apptorium.TeaCode-dm.plist"
 end

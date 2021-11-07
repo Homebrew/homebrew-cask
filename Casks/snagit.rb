@@ -1,6 +1,6 @@
 cask "snagit" do
-  version "2021.4.0"
-  sha256 "9f1f436ffe91a279af960d1b2f9d13f5a6d13f64352358fe262acb7d08bac9fa"
+  version "2021.4.3"
+  sha256 "f348430bf1cdbd854983a03688826d4b84263c2c86489957590e95fb8e774231"
 
   url "https://download.techsmith.com/snagitmac/releases/#{version.major[-2..]}#{version.minor_patch.no_dots}/snagit.dmg"
   name "Snagit"
@@ -18,4 +18,13 @@ cask "snagit" do
   depends_on macos: ">= :mojave"
 
   app "Snagit #{version.major}.app"
+
+  zap trash: [
+    "~/Library/Caches/com.TechSmith.Snagit*",
+    "~/Library/Group Containers/*.com.techsmith.snagit",
+    "~/Library/Preferences/com.TechSmith.Snagit*.plist",
+    "~/Library/Preferences/com.techsmith.snagit.capturehelper*.plist",
+    "~/Library/Saved Application State/com.TechSmith.Snagit*.savedState",
+    "~/Library/WebKit/com.TechSmith.Snagit*",
+  ]
 end

@@ -1,6 +1,6 @@
 cask "pacifist" do
-  version "3.6.2,29642"
-  sha256 "dac6ef23f81494ff69d74d99aa36187484a207e7e0142f395160f511c18cee6a"
+  version "4.0,65083"
+  sha256 "d7ca9a1d98b75c372e15b35d7d8e68fda2f55739cd5fa133419d039b426cf2fe"
 
   url "https://www.charlessoft.com/pacifist_download/Pacifist_#{version.before_comma}.dmg"
   name "Pacifist"
@@ -15,22 +15,10 @@ cask "pacifist" do
   auto_updates true
 
   app "Pacifist.app"
-  qlplugin "Pacifist.qlgenerator"
-
-  preflight do
-    system_command "/usr/bin/tar", args: [
-      "--extract",
-      "--file",
-      "#{staged_path}/Pacifist.app/Contents/Resources/QLPlugin.tbz",
-      "--directory",
-      staged_path,
-    ]
-  end
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.charlessoft.pacifist.sfl2",
     "~/Library/Preferences/com.charlessoft.pacifist.plist",
-    "~/Library/QuickLook/Pacifist.qlgenerator",
     "~/Library/Saved Application State/com.charlessoft.pacifist.savedState",
   ]
 end

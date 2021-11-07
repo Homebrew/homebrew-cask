@@ -1,5 +1,5 @@
 cask "virtualhere" do
-  version "5.2.1"
+  version "5.2.3"
   sha256 :no_check
 
   url "https://www.virtualhere.com/sites/default/files/usbclient/VirtualHere.dmg"
@@ -13,4 +13,6 @@ cask "virtualhere" do
   end
 
   app "VirtualHere.app"
+
+  zap trash: "~/Library/Preferences/com.virtualhere.vhui.plist"
 end

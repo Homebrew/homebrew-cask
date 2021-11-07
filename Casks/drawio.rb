@@ -1,19 +1,24 @@
 cask "drawio" do
-  version "14.6.13"
+  arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
+  version "15.4.0"
+
+  url "https://github.com/jgraph/drawio-desktop/releases/download/v#{version}/draw.io-#{arch}-#{version}.dmg",
+      verified: "github.com/jgraph/drawio-desktop/"
   if Hardware::CPU.intel?
-    sha256 "aaf6016b98413f14064d1c1fa3070f160172d9cb602a5cf30fc702e2ffbd37a4"
-    url "https://github.com/jgraph/drawio-desktop/releases/download/v#{version}/draw.io-#{version}.dmg",
-        verified: "github.com/jgraph/drawio-desktop/"
+    sha256 "58e628ebae2c203c54d7e1ab031ffe572126d100507d06558cf48eb7455cd6cf"
   else
-    sha256 "21877b5045a1c8b1d4bef5eba881620c32a302fa7d011ebccf8bd287ad9cc8f9"
-    url "https://github.com/jgraph/drawio-desktop/releases/download/v#{version}/draw.io-arm64-#{version}.dmg",
-        verified: "github.com/jgraph/drawio-desktop/"
+    sha256 "9baee8d9dce105a22e5d9c04589007fcd0a482e6d72416b033e5e4485a42ed2a"
   end
 
   name "draw.io Desktop"
   desc "Draw.io is free online diagram software"
-  homepage "https://www.draw.io/"
+  homepage "https://www.diagrams.net/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "draw.io.app"
 

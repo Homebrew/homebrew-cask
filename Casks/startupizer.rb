@@ -12,6 +12,8 @@ cask "startupizer" do
     url "https://updates.devmate.com/com.gentlebytes.Startupizer#{version.major}.xml"
     strategy :sparkle do |item|
       match = item.url.match(%r{/(\d+)/Startupizer(\d+)-\d+\.zip}i)
+      next if match.blank?
+
       "#{match[2]},#{item.version}:#{match[1]}"
     end
   end

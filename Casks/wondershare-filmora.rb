@@ -1,5 +1,5 @@
 cask "wondershare-filmora" do
-  version "10.1.5.23"
+  version "10.5.0.23"
   sha256 :no_check
 
   url "https://download.wondershare.com/filmora-mac_full718.dmg"

@@ -1,6 +1,6 @@
 cask "caprine" do
-  version "2.53.0"
-  sha256 "014d85576fc6c0651c5324269859fb04d736d63415d4e7649078bf2453b4e3da"
+  version "2.55.0"
+  sha256 "9458f767fbf3a05fae32f8a2ec159591a47fc2ed8e0972ea52e09ca2cf69e9eb"
 
   url "https://github.com/sindresorhus/caprine/releases/download/v#{version}/Caprine-#{version}.dmg"
   name "Caprine"
@@ -13,9 +13,9 @@ cask "caprine" do
 
   zap trash: [
     "~/Library/Application Support/Caprine",
-    "~/Library/Logs/Caprine",
     "~/Library/Caches/com.sindresorhus.caprine",
     "~/Library/Caches/com.sindresorhus.caprine.ShipIt",
+    "~/Library/Logs/Caprine",
     "~/Library/Preferences/com.sindresorhus.caprine.helper.plist",
     "~/Library/Preferences/com.sindresorhus.caprine.plist",
     "~/Library/Saved Application State/com.sindresorhus.caprine.savedState",

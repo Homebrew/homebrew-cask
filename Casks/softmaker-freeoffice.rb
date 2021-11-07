@@ -1,15 +1,19 @@
 cask "softmaker-freeoffice" do
-  version "2018,982"
-  sha256 "9cf218b964830d1ab6c1394738becaf85b8eb91b7a7e516ba64852c86df68e98"
+  version "2021"
+  sha256 "f864428886d227a9ca781eb26a7f3c6cb3d70c4ff19769e69b10a21cd0a44c3f"
 
-  url "https://www.softmaker.net/down/softmaker-freeoffice-#{version.before_comma}.pkg",
+  url "https://www.softmaker.net/down/softmaker-freeoffice-#{version}.pkg",
       verified: "softmaker.net/"
-  appcast "https://www.freeoffice.com/en/support/version-history",
-          must_contain: version.after_comma
   name "SoftMaker FreeOffice"
+  desc "Office suite"
   homepage "https://www.freeoffice.com/"
 
-  pkg "softmaker-freeoffice-#{version.before_comma}.pkg"
+  livecheck do
+    url "https://www.freeoffice.com/en/download/servicepacks"
+    regex(/softmaker[._-]freeoffice[._-](\d+(?:\.\d+)*)\.pkg/i)
+  end
 
-  uninstall pkgutil: "com.SoftMaker.FreeOffice#{version.before_comma}"
+  pkg "softmaker-freeoffice-#{version}.pkg"
+
+  uninstall pkgutil: "com.SoftMaker.FreeOffice#{version}"
 end

@@ -1,35 +1,35 @@
 cask "openzfs" do
   if MacOS.version <= :yosemite
-    version "2.0.1,316"
-    sha256 "b7fc93ae63de5dc348d82b3a3e1b7acc0ea84c43f6f9f17a6c4e64e9fbbff849"
-    pkg "OpenZFSonOsX-#{version.before_comma}-YOSEMITE-10.10.pkg"
+    version "2.1.0,352"
+    sha256 "4a2029f59b6cc96e898e81aeb448b3306b2d23d0984af4decdf0e53a9de042f5"
+    pkg "OpenZFSonOsX-#{version.before_comma}-Yosemite-10.10.pkg"
   elsif MacOS.version <= :el_capitan
-    version "2.0.1,315"
-    sha256 "39ca712ce1b1e660659790ec32c4415460f66d2ce5d82cef0a5067a3193e2938"
-    pkg "OpenZFSonOsX-#{version.before_comma}-EL.CAPITAN-10.11.pkg"
+    version "2.1.0,353"
+    sha256 "66d74b3650ca3e099bcbec71733ad53664ba7f797a45920e73e0decb89de1a0d"
+    pkg "OpenZFSonOsX-#{version.before_comma}-El.Capitan-10.11.pkg"
   elsif MacOS.version <= :sierra
-    version "2.0.1,314"
-    sha256 "d1096996a10bc7b8d06a7f037f93b22c45c4c79662ea7bf0a7bb3486e30e95cc"
+    version "2.1.0,354"
+    sha256 "1c47d2cc4ad12923c314b566b2c86ed8345dfa1af9f5b5fb28c0822eba7c3c03"
     pkg "OpenZFSonOsX-#{version.before_comma}-Sierra-10.12.pkg"
   elsif MacOS.version <= :high_sierra
-    version "2.0.1,313"
-    sha256 "a1c956e60059329d940fea6b54a760be2a26963f41a57a9069be0a56fe796942"
+    version "2.1.0,346"
+    sha256 "3f5a09914c0d7243982d308b11f952edfc93de1b01bff7adeecc4f3214d58165"
     pkg "OpenZFSonOsX-#{version.before_comma}-High.Sierra-10.13.pkg"
   elsif MacOS.version <= :mojave
-    version "2.0.1,312"
-    sha256 "1ebfbea78a7d52ad63845a9203f1f9b6581f66b8733effe46962c925e2c526f4"
+    version "2.1.0,345"
+    sha256 "29ccb0e43cd351ac1b09b3ee435522d0e4694b6fb72a3241d042c31fbd71797f"
     pkg "OpenZFSonOsX-#{version.before_comma}-Mojave-10.14.pkg"
   elsif MacOS.version <= :catalina
-    version "2.0.1,309"
-    sha256 "ccdb70986d8f3786a96de0447c9cb55e3edcc455f4668af45e76fc8225810a1c"
+    version "2.1.0,344"
+    sha256 "0ee774a0f08cf6734238d1cbc71f9afb81ab0316e0a3e99efd1714c87df070f5"
     pkg "OpenZFSonOsX-#{version.before_comma}-Catalina-10.15.pkg"
   elsif Hardware::CPU.intel?
-    version "2.0.1,310"
-    sha256 "29e21e954d394fbed17b9df606d3183061ebc547500bb2e9dc460599b5c16015"
+    version "2.1.0,343"
+    sha256 "2cc0c2da33be3ce331e922ba2ca7c585179e79f1addc72246f10df95b7d7b8d7"
     pkg "OpenZFSonOsX-#{version.before_comma}-Big.Sur-11.pkg"
   else
-    version "2.0.1,308"
-    sha256 "bac99664fdfb632dd9b1c4dc2b922e33f81dc61720e14418b1e55b1175090a2e"
+    version "2.1.0,342"
+    sha256 "af2fab94102434cbc8a2f289d177d4a4d94a9471a11f2129fb5416081ab47ae7"
     pkg "OpenZFSonOsX-#{version.before_comma}-Big.Sur-11-arm64.pkg"
   end
 

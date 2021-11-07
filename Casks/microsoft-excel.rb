@@ -1,9 +1,9 @@
 cask "microsoft-excel" do
-  version "16.51.21071101"
-  sha256 "a20606ccdf3aee321188b6604497d309f488371d62265e382c4608c4011333bb"
+  version "16.54.21101001"
+  sha256 "e09fe9f49a36b37af3745673a385be4de9ae8ec774965fd1753f8479a775fc54"
 
-  url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Excel_#{version}_Installer.pkg",
-      verified: "officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/"
+  url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Excel_#{version}_Installer.pkg",
+      verified: "officecdnmac.microsoft.com/"
   name "Microsoft Excel"
   desc "Spreadsheet software"
   homepage "https://products.office.com/en-US/excel"

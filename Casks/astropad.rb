@@ -1,6 +1,6 @@
 cask "astropad" do
-  version "3.6.0,3204"
-  sha256 "5b3d2ae1f6a345a500253c95962b113ac06a6db1726dc3cfd3a0fe6d6a08c421"
+  version "3.7.0,3219"
+  sha256 "a0b163918cd94ecb9ecc4f9c423812bb73ec643fc7be713d043886af94d1d280"
 
   url "https://downloads.astropad.com/standard/Astropad-#{version.before_comma}.dmg"
   name "Astropad"

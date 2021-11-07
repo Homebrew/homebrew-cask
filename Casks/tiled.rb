@@ -1,6 +1,6 @@
 cask "tiled" do
-  version "1.7.0"
-  sha256 "09b778e120b2808100faa20ff1b123c06fe2019149c17b8b795eaefbd7d31ce8"
+  version "1.7.2"
+  sha256 "e43c467bb020a39af43f3ed5c584658dd0b1732ed0b65fa66b6f9e36334c5d5f"
 
   url "https://github.com/bjorn/tiled/releases/download/v#{version}/Tiled-#{version}-macos.zip",
       verified: "github.com/bjorn/tiled/"
@@ -16,7 +16,7 @@ cask "tiled" do
   binary shimscript, target: "tiled"
 
   preflight do
-    IO.write shimscript, <<~EOS
+    File.write shimscript, <<~EOS
       #!/bin/bash
       exec '#{appdir}/Tiled.app/Contents/MacOS/Tiled' "$@"
     EOS

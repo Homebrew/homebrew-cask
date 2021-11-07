@@ -12,5 +12,13 @@ cask "airserver" do
     strategy :sparkle
   end
 
+  auto_updates true
+
   app "AirServer.app"
+
+  zap trash: [
+    "~/Library/Caches/com.pratikkumar.airserver-mac",
+    "~/Library/Preferences/com.pratikkumar.airserver-mac.AirServer.plist",
+    "~/Library/Preferences/com.pratikkumar.airserver-mac.plist",
+  ]
 end

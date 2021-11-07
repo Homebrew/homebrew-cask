@@ -1,6 +1,6 @@
 cask "mediathekview" do
-  version "13.7.1"
-  sha256 "4e9cc25d62b6fe4420da6b881c41d067beef6f4c3beeae47a9ce66331a97f14c"
+  version "13.8.0"
+  sha256 "a35a3fe6303cbdca6129c367192d860e54e7397d979d656d5dd1375856fb99c0"
 
   url "https://download.mediathekview.de/stabil/MediathekView-#{version}-mac.dmg"
   name "MediathekView"

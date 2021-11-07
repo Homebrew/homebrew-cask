@@ -1,18 +1,16 @@
 cask "slack" do
-  version "4.18.0"
+  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+
+  version "4.21.1"
 
   if Hardware::CPU.intel?
-    sha256 "b3f01b8b98a59b611fe9ea7565c7553cfe80d99622eadef74381aed601ac8de2"
-
-    url "https://downloads.slack-edge.com/releases/macos/#{version}/prod/x64/Slack-#{version}-macOS.dmg",
-        verified: "downloads.slack-edge.com/"
+    sha256 "8f64fdefc5354fbb75a56f5797b6a84a27a2c6f6f05fd13a4a6efc550fa510f6"
   else
-    sha256 "4bc90b418d2bfa039fe47214139b6170a990179382b9176e21f9158ca7ee8e62"
-
-    url "https://downloads.slack-edge.com/releases/macos/#{version}/prod/arm64/Slack-#{version}-macOS.dmg",
-        verified: "downloads.slack-edge.com/"
+    sha256 "1cff91fd85394f2ca2d97339ec06a16ce0c4a6c644d4fdf9b9d882051eef71e6"
   end
 
+  url "https://downloads.slack-edge.com/releases/macos/#{version}/prod/#{arch}/Slack-#{version}-macOS.dmg",
+      verified: "downloads.slack-edge.com/releases/macos/"
   name "Slack"
   desc "Team communication and collaboration software"
   homepage "https://slack.com/"
@@ -24,6 +22,7 @@ cask "slack" do
 
   auto_updates true
   conflicts_with cask: "homebrew/cask-versions/slack-beta"
+  depends_on macos: ">= :mojave"
 
   app "Slack.app"
 

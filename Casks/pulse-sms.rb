@@ -1,6 +1,6 @@
 cask "pulse-sms" do
-  version "4.4.0"
-  sha256 "7d3df686e4e005acccd1d263417d7e206ae78c4af4c8416c02d3919797b9edf0"
+  version "4.5.2"
+  sha256 "e7991dd97c92931b4a74aa804bf42a81e13bb00ec5b1dfad8fa49ccbba392b99"
 
   url "https://github.com/maplemedia/pulse-sms-desktop/releases/download/v#{version}/pulse-sms-#{version}.dmg",
       verified: "github.com/maplemedia/pulse-sms-desktop/"

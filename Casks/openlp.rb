@@ -1,9 +1,10 @@
 cask "openlp" do
-  version "2.9.2"
-  sha256 "37b4febdb870158dd5306edc95a2490708f71048485944e185399f9851097c9d"
+  version "2.9.3"
+  sha256 "1e9e938a61bd99b5847ae03514eefbd20922d594173102cab288df8a5f02ea10"
 
   url "https://get.openlp.org/#{version}/OpenLP-#{version}.dmg"
   name "OpenLP"
+  desc "Worship presentation software"
   homepage "https://openlp.org/"
 
   livecheck do

@@ -1,16 +1,19 @@
 cask "softraid" do
-  version "5.8.4"
-  sha256 "5d5384403cd2e6b32e62cfe70bddbb82ce1ef4db88b0b197f5e08764e9a586c5"
+  version "6.2"
+  sha256 "44a9f6c203ebb78d8dd203d471f0561da344407aae2cbba4bf1ed921583ca4a9"
 
-  url "https://download.owcdigital.com/softraid/mac/#{version.major}/softraid/SoftRAID%20#{version}.dmg",
-      verified: "download.owcdigital.com/softraid/"
+  url "https://downloads.owc.com/softraid/mac/#{version.major}/SoftRAID%20#{version}.dmg",
+      verified: "downloads.owc.com/softraid/"
   name "SoftRAID"
+  desc "Powerful and intuitive software RAID utility"
   homepage "https://www.softraid.com/"
 
   livecheck do
-    url "https://download.owcdigital.com/softraid5/mac"
+    url "https://download.owcdigital.com/softraid#{version.major}/mac"
     strategy :header_match
   end
+
+  depends_on macos: ">= :catalina"
 
   app "SoftRAID #{version}/SoftRAID #{version}.app"
 end

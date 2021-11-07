@@ -7,6 +7,15 @@ cask "processing" do
   name "Processing"
   homepage "https://processing.org/"
 
+  livecheck do
+    url :url
+    regex(%r{href=.*?tree/processing[._-](\d+)[._-]v?(\d+(?:\.\d+)+)}i)
+    strategy :github_latest do |page|
+      page.scan(regex)
+          .map { |match| "#{match[1]},#{match[0]}" }
+    end
+  end
+
   app "Processing.app"
 
   uninstall quit: "org.processing.app"

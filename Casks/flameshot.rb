@@ -1,6 +1,6 @@
 cask "flameshot" do
-  version "0.9.0"
-  sha256 "fb593aaf5f060c323207eaf33444b9a6e5e2dd62734f71367876104ff35a9d03"
+  version "0.10.1"
+  sha256 "c4d20d790ee2922506e92ef47d08986f87f4cb11dbabcb126b23ac2c8392b48f"
 
   url "https://github.com/flameshot-org/flameshot/releases/download/v#{version}/flameshot.dmg",
       verified: "github.com/flameshot-org/flameshot/"

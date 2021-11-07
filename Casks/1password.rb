@@ -1,6 +1,6 @@
 cask "1password" do
-  version "7.8.6"
-  sha256 "324abd8ddb1484b513e90c19922e2af7703e9affd5a06a22ca0d83f6d5167358"
+  version "7.9.1"
+  sha256 "c2d8384ec1f09a7a232f56eb3702a0be6bd4fd59db54168946c701dd110b174c"
 
   url "https://c.1password.com/dist/1P/mac#{version.major}/1Password-#{version}.zip"
   name "1Password"
@@ -10,7 +10,7 @@ cask "1password" do
   livecheck do
     url "https://app-updates.agilebits.com/product_history/OPM#{version.major}"
     strategy :page_match
-    regex(%r{href=.*?/1Password-(\d+(?:\.\d+)*)\.pkg}i)
+    regex(%r{href=.*?/1Password-(\d+(?:\.\d+)+)\.pkg}i)
   end
 
   auto_updates true

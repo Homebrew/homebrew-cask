@@ -1,6 +1,6 @@
 cask "reflector" do
-  version "4.0.1,222"
-  sha256 "c035cb5e21317d7677fb6c482309735e2b2e5bbb0212add03a13010cb87e9ca6"
+  version "4.0.3,249"
+  sha256 "bf140df6a49c2be57d0cf4cad7b4180f73585959b04e3469999b7f4cefb99b08"
 
   url "https://download.airsquirrels.com/Reflector#{version.major}/Mac/Reflector-#{version.before_comma}.dmg"
   name "Reflector"

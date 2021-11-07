@@ -4,7 +4,13 @@ cask "osirix-quicklook" do
 
   url "https://www.osirix-viewer.com/Museum/OsiriXQuickLookInstaller.zip"
   name "OsiriX DICOM QuickLook"
+  desc "QuickLook plugin for OsiriX DICOM files"
   homepage "https://www.osirix-viewer.com/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   pkg "OsiriXQuickLookInstaller.pkg"
 

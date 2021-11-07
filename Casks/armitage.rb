@@ -11,6 +11,8 @@ cask "armitage" do
     url "http://www.fastandeasyhacking.com/download/"
     strategy :page_match do |page|
       match = page.match(%r{href=.*?/armitage(\d\d+)(\d\d+)(\d\d+)\.dmg}i)
+      next if match.blank?
+
       "#{match[1]}.#{match[2]}.#{match[3]}"
     end
   end
@@ -21,7 +23,7 @@ cask "armitage" do
   binary shimscript, target: "armitage"
 
   preflight do
-    IO.write shimscript, <<~EOS
+    File.write shimscript, <<~EOS
       #!/bin/sh
       java "$@" -jar '#{appdir}/Armitage.app/Contents/Java/armitage.jar'
     EOS

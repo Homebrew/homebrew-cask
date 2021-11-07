@@ -1,6 +1,6 @@
 cask "cakebrewjs" do
-  version "0.1.29"
-  sha256 "8e9b4e767a1aa1243b17def6142cb1d7c244c3324afdc9cd8cf3fb6ad29ce605"
+  version "1.0.0"
+  sha256 "81795cdfd8383d9f0f2076d206484f4f835d0fc8ac5abdef5b2cdf98f6b8c24b"
 
   url "https://downloads.sourceforge.net/cakebrewjs/v#{version}/cakebrewjs-#{version}-mac.zip"
   name "cakebrewjs"
@@ -10,7 +10,7 @@ cask "cakebrewjs" do
   livecheck do
     url "https://sourceforge.net/projects/cakebrewjs/rss?"
     strategy :page_match
-    regex(/cakebrewjs-(\d+(?:\.\d+)*)-mac\.zip/i)
+    regex(/cakebrewjs-(\d+(?:\.\d+)+)-mac\.zip/i)
   end
 
   app "cakebrewjs.app"

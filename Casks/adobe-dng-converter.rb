@@ -1,6 +1,6 @@
 cask "adobe-dng-converter" do
-  version "13.3"
-  sha256 "af03355011a69269c80e08a9094d64f0833f1572f8bb10f9a5f27b65818fa86f"
+  version "14.0"
+  sha256 "200abde368a9eb70c766eff1ac567a401914c99c89b7200a246f3cbaa69fe994"
 
   url "https://download.adobe.com/pub/adobe/dng/mac/DNGConverter_#{version.dots_to_underscores}.dmg"
   name "Adobe DNG Converter"
@@ -9,7 +9,7 @@ cask "adobe-dng-converter" do
 
   livecheck do
     url "https://helpx.adobe.com/in/photoshop/kb/uptodate.html"
-    regex(%r{The current version of Adobe DNG Converter is <b>(\d+(?:\.\d+)*)</b>}i)
+    regex(%r{The current version of Adobe DNG Converter is <b>(\d+(?:\.\d+)+)</b>}i)
   end
 
   depends_on macos: ">= :mojave"

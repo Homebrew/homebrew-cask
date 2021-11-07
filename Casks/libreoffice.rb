@@ -1,9 +1,17 @@
 cask "libreoffice" do
-  version "7.1.4"
-  sha256 "e85714bae026e8f1cce9c2dfdc9dc9d3d4dadc058d1aac208a9cfc2c98fa419f"
+  arch = Hardware::CPU.intel? ? "x86-64" : "aarch64"
+  folder = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
-  url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/x86_64/LibreOffice_#{version}_MacOS_x86-64.dmg",
-      verified: "documentfoundation.org/"
+  version "7.2.2"
+
+  if Hardware::CPU.intel?
+    sha256 "dc2fd0577e3ee4f99c79d235a6efcd8fecc7069d24090c4eaea69e0fad8245ae"
+  else
+    sha256 "83954ea5bae605aba26fb0d731e080ee04e9e748a3148c43620af6ef2154f611"
+  end
+
+  url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/#{folder}/LibreOffice_#{version}_MacOS_#{arch}.dmg",
+      verified: "download.documentfoundation.org/libreoffice/stable/"
   name "LibreOffice"
   desc "Office suite"
   homepage "https://www.libreoffice.org/"
@@ -33,7 +41,7 @@ cask "libreoffice" do
   binary shimscript, target: "soffice"
 
   preflight do
-    IO.write shimscript, <<~EOS
+    File.write shimscript, <<~EOS
       #!/bin/sh
       '#{appdir}/LibreOffice.app/Contents/MacOS/soffice' "$@"
     EOS

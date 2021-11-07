@@ -1,6 +1,6 @@
 cask "second-life-viewer" do
-  version "6.4.19.560171"
-  sha256 "dca90cf9782db8a1f8644f65fc9725b4cfee418d13c12d6a6fc3a7ab4070ec2d"
+  version "6.4.23.564172"
+  sha256 "7b00aa4f5f579764dde04a672a872804955f1a43d351f7cf686290a89a26fb36"
 
   url "http://download.cloud.secondlife.com/Viewer_#{version.major}/Second_Life_#{version.dots_to_underscores}_x86_64.dmg"
   name "Linden Lab Second Life Viewer"
@@ -14,6 +14,8 @@ cask "second-life-viewer" do
       v.tr("_", ".")
     end
   end
+
+  depends_on macos: ">= :sierra"
 
   app "Second Life Viewer.app"
 

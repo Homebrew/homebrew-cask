@@ -1,5 +1,5 @@
 cask "sensei" do
-  version "1.4.6,88"
+  version "1.5.1,99"
   sha256 :no_check
 
   url "https://cindori.s3.amazonaws.com/Sensei.dmg",
@@ -18,12 +18,17 @@ cask "sensei" do
 
   app "Sensei.app"
 
-  uninstall delete:    "/Library/PrivilegedHelperTools/org.cindori.SenseiTool",
+  uninstall delete:    [
+    "/Library/LaunchAgents/org.cindori.SenseiMonitor.plist",
+    "/Library/LaunchDaemons/org.cindori.SenseiDaemon.plist",
+    "/Library/LaunchDaemons/org.cindori.SenseiHelper.plist",
+    "/Library/PrivilegedHelperTools/org.cindori.SenseiTool",
+  ],
             launchctl: "org.cindori.SenseiTool"
 
   zap trash: [
-    "~/Library/Application Support/Sensei",
     "~/Library/Application Support/org.cindori.Sensei",
+    "~/Library/Application Support/Sensei",
     "~/Library/Caches/org.cindori.Sensei",
     "~/Library/Cookies/org.cindori.Sensei.binarycookies",
     "~/Library/Preferences/org.cindori.Sensei.plist",

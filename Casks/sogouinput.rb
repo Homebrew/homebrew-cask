@@ -1,11 +1,22 @@
 cask "sogouinput" do
-  version "601a,1612884268"
-  sha256 "60d4d2d651257d5170c50058adb9152b2862b6d0aa383444b1cd299200f8e908"
+  version "606b,1630391065"
+  sha256 "955d8dbd1fb518cbdcbcb2d005fd811d9f9aeecb8535a3a65d85f5d418f9fc9e"
 
   url "http://cdn2.ime.sogou.com/dl/index/#{version.after_comma}/sogou_mac_#{version.before_comma}.zip"
   name "Sogou Input Method"
   name "搜狗输入法"
+  desc "Input method supporting full and double spelling"
   homepage "https://pinyin.sogou.com/mac/"
+
+  livecheck do
+    url :homepage
+    strategy :page_match do |page|
+      match = page.match(%r{/(\d+(?:\.\d+)*)/sogou_mac_(\d+(?:.\d+).*)\.zip}i)
+      next if match.blank?
+
+      "#{match[2]},#{match[1]}"
+    end
+  end
 
   installer manual: "sogou_mac_#{version.before_comma}.app"
 

@@ -1,6 +1,6 @@
 cask "dcp-o-matic-encode-server" do
-  version "2.14.51"
-  sha256 "7b763121164bf89a15083b197cfdff7e0b86202fa8db6962cf5c7059c4943967"
+  version "2.14.55"
+  sha256 "33be42855f8b8810accf2ab41163a33c00f93a8fd575f6084fc3064d82206c8d"
 
   url "https://dcpomatic.com/dl.php?id=osx-10.9-server&version=#{version}"
   name "DCP-o-matic Encode Server"
@@ -10,7 +10,7 @@ cask "dcp-o-matic-encode-server" do
   livecheck do
     url "https://dcpomatic.com/download"
     strategy :page_match
-    regex(/stable\s*release:\s*(\d+(?:\.\d+)*)/i)
+    regex(/stable\s*release:\s*(\d+(?:\.\d+)+)/i)
   end
 
   app "DCP-o-matic #{version.major} Encode Server.app"

@@ -4,9 +4,14 @@ cask "qtspim" do
 
   url "https://downloads.sourceforge.net/spimsimulator/QtSpim_#{version}_mac.pkg",
       verified: "downloads.sourceforge.net/spimsimulator/"
-  appcast "https://sourceforge.net/projects/spimsimulator/rss"
   name "QtSpim"
+  desc "Simulator that runs MIPS32 assembly language programs"
   homepage "https://spimsimulator.sourceforge.io/"
+
+  livecheck do
+    url "https://sourceforge.net/projects/spimsimulator/files/"
+    regex(/QtSpim[._-]?(\d+(?:\.\d+)*)[._-]?mac\.pkg/i)
+  end
 
   pkg "QtSpim_#{version}_mac.pkg"
 

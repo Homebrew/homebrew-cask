@@ -1,12 +1,21 @@
 cask "avidcodecsle" do
-  version "2.3.7"
-  sha256 "0a3e9b24e1af3ea0e01167a944c08b086a6818eacb38bb637bd0dbe85486323b"
+  version "2.7.6,3B39AE16"
+  sha256 "b36f91f5551eedd2320121179c679300c64e09838c8967ebb73d1ac981873775"
 
-  url "https://resources.avid.com/supportfiles/attach/AvidCodecsLE_#{version.dots_to_underscores}/Mac/AvidCodecsLE.pkg.zip"
-  name "Avid DNxHR codec"
-  homepage "https://www.avid.com/en/products/Avid-DNxHR-and-DNxHD"
+  url "https://cdn.avid.com/Codecs/LE/#{version.before_comma}/#{version.after_comma}/AvidCodecsLE_#{version.before_comma}_Mac.pkg.zip",
+      verified: "cdn.avid.com/"
+  name "Avid Codecs LE"
+  desc "Use QuickTime movies using Avid codecs on systems without Media Composer"
+  homepage "https://avid.secure.force.com/pkb/articles/en_US/download/Avid-QuickTime-Codecs-LE"
+
+  livecheck do
+    skip "No version information available"
+  end
 
   pkg "AvidCodecsLE.pkg"
 
-  uninstall pkgutil: "com.avid.avidcodecsle"
+  uninstall pkgutil: [
+    "com.avid.avidcodecsle",
+    "com.avid.avidcodecsle.pkg",
+  ]
 end

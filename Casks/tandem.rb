@@ -1,9 +1,16 @@
 cask "tandem" do
-  version "1.7.617"
-  sha256 "57f34e7ce08288de76a3a37ecd1ee0e3e92b1df8d137ccab05cf46b1d286f7a8"
+  arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  url "https://download.todesktop.com/200527auaqaacsy/Tandem%20#{version}.dmg",
+  version "2.0.1001"
+
+  url "https://download.todesktop.com/200527auaqaacsy/Tandem%20#{version}-#{arch}.dmg",
       verified: "download.todesktop.com/200527auaqaacsy/"
+  if Hardware::CPU.intel?
+    sha256 "3aa0926745eb589656908de80dd68c7c6725791d5366efe8517f725a8891232b"
+  else
+    sha256 "c87bd5a231852cab6d87a07489d932af413e2e4877abb16130e154426215ca44"
+  end
+
   name "Tandem"
   desc "Virtual office for remote teams"
   homepage "https://tandem.chat/"

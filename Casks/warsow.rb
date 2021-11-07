@@ -4,6 +4,7 @@ cask "warsow" do
 
   url "https://warsow.net/warsow-#{version}.dmg"
   name "Warsow"
+  desc "First-person shooter game"
   homepage "https://www.warsow.net/"
 
   livecheck do

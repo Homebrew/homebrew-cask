@@ -1,8 +1,8 @@
 cask "neteasemusic" do
-  version "2.3.5,856"
-  sha256 "ce47062af9b9acbf407b1cd8bb1a3f798b28772b38eb2b91ddd07260bbe136ac"
+  version "2.3.6,862"
+  sha256 "b726fa77f9839e9d7a5fefd501aede26911bf3eb6e003816e550d48e5e518191"
 
-  url "https://d1.music.126.net/dmusic/NeteaseMusic_#{version.before_comma}_#{version.after_comma}_web.dmg",
+  url "https://d1.music.126.net/dmusic/NeteaseMusic_#{version.before_comma}_#{version.after_comma}_web_.dmg",
       verified:   "d1.music.126.net/",
       user_agent: :fake
   name "NetEase cloud music"
@@ -16,7 +16,7 @@ cask "neteasemusic" do
   livecheck do
     url "https://music.163.com/api/mac/appcast.xml"
     strategy :page_match do |page|
-      page.scan(%r{url=.*?/NeteaseMusic[._-]?v?(\d+(?:\.\d+)+)[_-](\d+)[._-]web\.dmg}i).map do |match|
+      page.scan(%r{url=.*?/NeteaseMusic[._-]?v?(\d+(?:\.\d+)+)[_-](\d+)[._-]web[._-]\.dmg}i).map do |match|
         "#{match[0]},#{match[1]}"
       end
     end

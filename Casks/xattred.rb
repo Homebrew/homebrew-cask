@@ -12,6 +12,8 @@ cask "xattred" do
     url "https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
     strategy :page_match do |page|
       match = page.match(%r{/(\d+)/(\d+)/xattred(\d+)\.zip}i)
+      next if match.blank?
+
       "#{match[3].split("", 2).join(".")},#{match[1]}.#{match[2]}"
     end
   end

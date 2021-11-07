@@ -16,4 +16,9 @@ cask "dozer" do
   depends_on macos: ">= :high_sierra"
 
   app "Dozer.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.mortennn.Dozer",
+    "~/Library/Preferences/com.mortennn.Dozer.plist",
+  ]
 end

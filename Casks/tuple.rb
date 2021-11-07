@@ -1,15 +1,15 @@
 cask "tuple" do
-  version "0.87.0-2021-06-21-f6705f82"
-  sha256 "230aedffa48d22c5e716b431e282cae210f4ac14d2cb378dcb9f11de59136d36"
+  version "0.91.0-2021-10-03-c4650309"
+  sha256 "96b0ecc58298c3ff26eadb744d2e5fded73389997c4cbe4c2817b5c7ba72d0f5"
 
-  url "https://s3.us-east-2.amazonaws.com/tuple-releases/production/sparkle/tuple-#{version}.zip",
-      verified: "s3.us-east-2.amazonaws.com/tuple-releases/"
+  url "https://d32ifkf9k9ezcg.cloudfront.net/production/sparkle/tuple-#{version}.zip",
+      verified: "d32ifkf9k9ezcg.cloudfront.net/"
   name "Tuple"
   desc "Remote pair programming app"
   homepage "https://tuple.app/"
 
   livecheck do
-    url "https://s3.us-east-2.amazonaws.com/tuple-releases/production/sparkle/appcast.xml"
+    url "https://d32ifkf9k9ezcg.cloudfront.net/production/sparkle/appcast.xml"
     strategy :sparkle, &:version
   end
 

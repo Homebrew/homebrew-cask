@@ -1,6 +1,6 @@
 cask "selfcontrol" do
-  version "3.0.3"
-  sha256 "4ab3b5d07613264a5f6cd321e5020a1bbda1c8e04c642f131a9758ba20348858"
+  version "4.0.1"
+  sha256 "fbefdca70944bb2578d06ee449195b0e7d0de0026f4f670701e8632b299c833f"
 
   url "https://downloads.selfcontrolapp.com/SelfControl-#{version}.zip"
   name "SelfControl"

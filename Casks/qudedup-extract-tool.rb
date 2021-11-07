@@ -1,6 +1,6 @@
 cask "qudedup-extract-tool" do
-  version "1.1.4.21020"
-  sha256 "c1a3faddb50271c5bfa7428eb70b3464ec44abbdf9f4dc673ea8cf5f8590c441"
+  version "1.1.5.21201"
+  sha256 "c156a73debb8f1250f761fd0380a94fbaa7643ddf3c00dda8a362c58e1708547"
 
   url "https://download.qnap.com/Storage/Utility/QudedupExToolMac-#{version}.dmg"
   name "Qnap QuDedup Extract Tool"

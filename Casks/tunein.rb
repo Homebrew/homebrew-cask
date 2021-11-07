@@ -1,12 +1,16 @@
 cask "tunein" do
-  version "1.19.0"
-  sha256 "591b77049d1e95e61335268fbaded1c6ace515d46b38ea8fb673ca873e3d16a5"
+  version "1.23.0"
+  sha256 "76a82f5413b39375e2ef00c1f9743edbbe91f586b81841c40759fdf1634616a5"
 
-  url "https://s3-us-west-2.amazonaws.com/gemini-desktop-prod/release/TuneIn-#{version}.dmg",
-      verified: "s3-us-west-2.amazonaws.com/gemini-desktop-prod/"
+  url "https://cdn-desktop.tunein.com/release/TuneIn-#{version}.dmg"
   name "TuneIn"
   desc "Free Internet Radio"
   homepage "https://tunein.com/"
+
+  livecheck do
+    url "https://gemini-desktop-prod.s3.amazonaws.com/release/latest-mac.yml"
+    strategy :electron_builder
+  end
 
   app "TuneIn.app"
 

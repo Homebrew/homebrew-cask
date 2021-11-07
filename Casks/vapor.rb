@@ -1,15 +1,13 @@
 cask "vapor" do
-  version "3.4.0"
-  sha256 "ebe3494eb45c098bdc3df0e4cb41a6699f7856147633d90388e99cb3b4221710"
+  version "3.5.0"
+  sha256 "16e321be63def7c16002bdc09f2ab403fe9ad4f85595a2f24d9069e8d6530dab"
 
-  url "https://github.com/NCAR/VAPOR/releases/download/#{version}/VAPOR3-#{version}-Darwin.dmg"
+  url "https://github.com/NCAR/VAPOR/releases/download/#{version}/VAPOR#{version.major}-#{version}-Darwin.dmg"
   name "VAPOR"
+  desc "Visualization and analysis platform"
   homepage "https://github.com/NCAR/VAPOR"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   app "vapor.app"
+
+  # No zap stanza required
 end

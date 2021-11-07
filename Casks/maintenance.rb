@@ -18,26 +18,22 @@ cask "maintenance" do
     version "2.7.1"
     sha256 "833e658f862f0a58dc6a073c70a67bed071b835167f73fc24e80386a36bfd38b"
   else
-    version "2.7.6"
-    sha256 "44cd65d70b4cb59c5d117c54d9ee19ffa51465d8ac8dd436232d84bb9bba3eaf"
+    version "2.8.1"
+    sha256 "d46d4b2a28779ec02b1ae208f80c504cb5726f43f29ff1ae247206050e26ede0"
   end
 
   url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete(".")}/Maintenance.dmg"
-  appcast "https://www.titanium-software.fr/en/maintenance.html"
   name "Maintenance"
   desc "Operating system maintenance and cleaning utility"
   homepage "https://www.titanium-software.fr/en/maintenance.html"
 
-  # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.
-  depends_on macos: [
-    :yosemite,
-    :el_capitan,
-    :sierra,
-    :high_sierra,
-    :mojave,
-    :catalina,
-    :big_sur,
-  ]
+  livecheck do
+    url :homepage
+    regex(/>\s*Maintenance\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s.-]*\s+#{MacOS.version}\s*</i)
+  end
+
+  # Unusual case: The software may stop working, or may be dangerous to run, on the latest macOS release.
+  depends_on macos: "<= :big_sur"
 
   app "Maintenance.app"
 end

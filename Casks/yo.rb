@@ -7,6 +7,12 @@ cask "yo" do
   desc "Utility to emit Notification Center messages from the command-line"
   homepage "https://github.com/sheagcraig/yo"
 
+  livecheck do
+    url "https://github.com/sheagcraig/yo/releases/"
+    strategy :page_match
+    regex(/yo[._-]?(\d+(?:\.\d+)*)\.pkg/i)
+  end
+
   pkg "yo-#{version}.pkg"
 
   uninstall delete:    "/usr/local/bin/yo_scheduler",

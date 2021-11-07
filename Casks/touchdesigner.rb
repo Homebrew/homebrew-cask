@@ -1,6 +1,6 @@
 cask "touchdesigner" do
-  version "2021.13610"
-  sha256 "a4b66eb3231efd94e8dd972e42b38f7d403081767ce98b5fdbff719e12f30447"
+  version "2021.15240"
+  sha256 "00df10a1c34fea7e7c404ab5d40886a0d58e1f90d888accd8343c066e6ce2414"
 
   url "https://download.derivative.ca/TouchDesigner.#{version}.dmg"
   name "Derivative TouchDesigner"

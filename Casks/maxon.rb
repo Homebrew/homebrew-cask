@@ -1,8 +1,8 @@
 cask "maxon" do
-  version "1.0.0"
-  sha256 "d60f049892c1ad6f28feebde4319afd5e6948742b47fbab13f4138c942edf526"
+  version "2.0.0"
+  sha256 "b45c6c593c942c99c5f1554cb9f6bf9efef7741773d4b2d17a6832135b4c45d1"
 
-  url "https://installer.maxon.net/installer/RG_installers/Maxon_App_#{version}_Mac.dmg"
+  url "https://installer.maxon.net/installer/RG_installers/Maxon_App_#{version.major_minor}_Mac.dmg"
   name "Maxon App"
   desc "Install, use, and try Maxon products"
   homepage "https://www.maxon.net/en/downloads/"
@@ -31,10 +31,10 @@ cask "maxon" do
   zap trash: [
     "~/Library/Application Support/Maxon",
     "~/Library/Application Support/Red Giant",
-    "~/Library/Saved Application State/net.maxon.app-manager.savedState",
+    "~/Library/Caches/net.maxon.app-manager",
     "~/Library/Preferences/Maxon",
     "~/Library/Preferences/net.maxon.app-manager.plist",
-    "~/Library/Caches/net.maxon.app-manager",
+    "~/Library/Saved Application State/net.maxon.app-manager.savedState",
     "/Users/Shared/Maxon",
     "/Users/Shared/Red Giant",
   ]

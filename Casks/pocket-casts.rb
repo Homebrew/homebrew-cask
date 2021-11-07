@@ -1,5 +1,5 @@
 cask "pocket-casts" do
-  version "1.5,44"
+  version "1.5.1,45"
   sha256 :no_check
 
   url "https://static.pocketcasts.com/mac/PocketCasts.zip"
@@ -13,7 +13,7 @@ cask "pocket-casts" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "Pocket Casts.app"
 

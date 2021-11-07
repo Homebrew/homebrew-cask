@@ -1,9 +1,10 @@
 cask "musaicfm" do
-  version "1.2.2"
-  sha256 "e694af171183e520f3837b9ff2493398a56bf510a983fe03dc7026bc1cfe1c06"
+  version "1.2.4"
+  sha256 "f9ca16dc22bbd3ff0f6955c6e8885674b455837bfc384329f9587fbc16cb7960"
 
   url "https://github.com/docterd/MusaicFM/releases/download/#{version}/MusaicFM.saver.zip"
   name "MusaicFM Screensaver"
+  desc "Screensaver displaying artwork based on Spotify or Last.fm profile data"
   homepage "https://github.com/docterd/MusaicFM"
 
   screen_saver "MusaicFM.saver"

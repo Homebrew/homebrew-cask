@@ -1,6 +1,6 @@
 cask "owasp-zap" do
-  version "2.10.0"
-  sha256 "bc25ff4fbd21fc36449c15ef66e109b72802ad9eedfc1ae122569cbf91ab9829"
+  version "2.11.0"
+  sha256 "881391488199ee8f87ed52aa7bd43993a3993b9931d3418c0dfa5dfedb92c854"
 
   url "https://github.com/zaproxy/zaproxy/releases/download/v#{version}/ZAP_#{version}.dmg",
       verified: "github.com/zaproxy/zaproxy/"

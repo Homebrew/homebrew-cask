@@ -1,6 +1,6 @@
 cask "sqlpro-studio" do
-  version "2021.53"
-  sha256 "6d9a5d0f61050871138181c5d39beb8503c13465526b046c6d1b38afbd4eaf5e"
+  version "2021.78"
+  sha256 "4761e5007a203c384dab8891d2a89ed95ea2962ef97f48b46e472ba478c04867"
 
   url "https://d3fwkemdw8spx3.cloudfront.net/studio/SQLProStudio.#{version}.app.zip",
       verified: "d3fwkemdw8spx3.cloudfront.net/studio/"
@@ -16,7 +16,7 @@ cask "sqlpro-studio" do
   app "SQLPro Studio.app"
 
   zap trash: [
-    "~/Library/Containers/com.hankinsoft.osx.sqlprostudio",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hankinsoft.osx.sqlprostudio.sfl*",
+    "~/Library/Containers/com.hankinsoft.osx.sqlprostudio",
   ]
 end

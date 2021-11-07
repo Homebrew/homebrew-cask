@@ -1,6 +1,6 @@
 cask "gitfiend" do
-  version "0.27.4"
-  sha256 "a257497a726b31cd7e634e3fec74f6c10d836991d8e78699915451828a963b2a"
+  version "0.29.0"
+  sha256 "8ef1607bef577cc61cf39598ef43d08b036f299da5a41a10f9cca76dfaac4ea7"
 
   url "https://gitfiend.com/resources/GitFiend-#{version}.dmg"
   name "GitFiend"
@@ -22,7 +22,7 @@ cask "gitfiend" do
   binary shimscript, target: "gitfiend"
 
   preflight do
-    IO.write shimscript, <<~EOS
+    File.write shimscript, <<~EOS
       #!/bin/sh
       exec '#{appdir}/GitFiend.app/Contents/MacOS/GitFiend' "$@"
     EOS

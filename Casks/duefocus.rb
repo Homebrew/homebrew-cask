@@ -10,7 +10,7 @@ cask "duefocus" do
   livecheck do
     url "https://web.duefocus.com/distribution/darwin/v3/appcast.html"
     strategy :page_match
-    regex(%r{/DueFocus-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{/DueFocus-(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "DueFocus.app"

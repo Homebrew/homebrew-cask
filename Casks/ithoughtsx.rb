@@ -1,15 +1,16 @@
 cask "ithoughtsx" do
-  version "5.24"
-  sha256 "03a3ca4e65e55acc45bd6922fb649e380a9487a3450c17e9b8c6062c9a5325d5"
+  version "5.29.0"
+  sha256 :no_check
 
-  url "https://ithoughtsx.s3.amazonaws.com/iThoughtsX_#{version.dots_to_underscores}.zip",
-      verified: "ithoughtsx.s3.amazonaws.com/"
+  url "https://cdn.toketaware.com?download=iThoughtsX.zip",
+      referer:    "https://www.toketaware.com/"
   name "iThoughtsX"
+  desc "Mind mapping tool"
   homepage "https://www.toketaware.com/ithoughts-osx"
 
   livecheck do
-    url "https://ithoughtsx.s3.amazonaws.com/ithoughtsx.xml"
-    strategy :sparkle
+    url :url
+    strategy :extract_plist
   end
 
   auto_updates true

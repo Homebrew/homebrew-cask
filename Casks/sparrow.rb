@@ -1,14 +1,12 @@
 cask "sparrow" do
-  version "1.4.2"
-  sha256 "272cf5e8f9e7481d078a52bf3e12bad0bca960210c554e2049202015c6d28bbc"
+  version "1.5.2"
+  sha256 "5b4acb49be52158d35af8f1428b1ba89b9194efe8efba3bf51cf992ff2d5a784"
 
   url "https://github.com/sparrowwallet/sparrow/releases/download/#{version}/Sparrow-#{version}.dmg",
       verified: "github.com/sparrowwallet/sparrow/"
   name "Sparrow Bitcoin Wallet"
-  desc "Modern desktop Bitcoin wallet application supporting most hardware wallet"
+  desc "Bitcoin wallet application"
   homepage "https://sparrowwallet.com/"
-
-  depends_on macos: ">= :sierra"
 
   app "Sparrow.app"
 

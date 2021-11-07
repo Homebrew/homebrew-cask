@@ -9,4 +9,11 @@ cask "jubler" do
   homepage "https://www.jubler.org/"
 
   app "Jubler.app"
+
+  zap trash: [
+    "~/Library/Application Support/Jubler",
+    "~/Library/Preferences/com.panayotis.jubler.config",
+    "~/Library/Preferences/com.panayotis.jubler.config.old",
+    "~/Library/Preferences/com.panayotis.jubler.plist",
+  ]
 end

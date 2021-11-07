@@ -1,6 +1,6 @@
 cask "splashtop-business" do
-  version "3.4.6.0"
-  sha256 "b0bb3e8d8fb62c7f2f23e16442c48a16acd7676aa8a129cb1c3e03b3240468e7"
+  version "3.4.8.0"
+  sha256 "cc2117328cfe2e9fae978b778bc54d994842a3ccd0962991af255bb397f2bfd3"
 
   url "https://d17kmd0va0f0mp.cloudfront.net/macclient/STB/Splashtop_Business_Mac_INSTALLER_v#{version}.dmg",
       verified: "d17kmd0va0f0mp.cloudfront.net/macclient/STB/"

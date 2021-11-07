@@ -1,6 +1,6 @@
 cask "tunnelblick" do
-  version "3.8.5a,5671"
-  sha256 "88f8cd776bf237a8b1c72531cf44bf7440e3bb4f94b16a77747351014c2de3a7"
+  version "3.8.6a,5711"
+  sha256 "636c52eaba89a0fc7549160892fabb62f4d11bb34d959872f2c0ab93765e0835"
 
   url "https://github.com/Tunnelblick/Tunnelblick/releases/download/v#{version.before_comma}/Tunnelblick_#{version.before_comma}_build_#{version.after_comma}.dmg",
       verified: "github.com/Tunnelblick/Tunnelblick/"
@@ -13,6 +13,8 @@ cask "tunnelblick" do
     url "https://github.com/Tunnelblick/Tunnelblick/releases"
     strategy :page_match do |page|
       match = page.match(%r{href=.*?/Tunnelblick_(\d+(?:\.\d+)*[a-z]?)_build_(\d+)\.dmg}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

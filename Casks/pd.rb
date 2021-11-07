@@ -18,4 +18,9 @@ cask "pd" do
   postflight do
     set_permissions "#{appdir}/Pd-#{version}.app", "u+w"
   end
+
+  zap trash: [
+    "~/Library/Preferences/org.puredata.pd.pd-gui.plist",
+    "~/Library/Saved Application State/org.puredata.pd.pd-gui.savedState",
+  ]
 end

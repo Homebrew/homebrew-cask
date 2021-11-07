@@ -1,22 +1,13 @@
 cask "mambaforge" do
-  version "4.10.2-0"
+  arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
 
+  version "4.10.3-7"
+
+  url "https://github.com/conda-forge/miniforge/releases/download/#{version}/Mambaforge-#{version}-MacOSX-#{arch}.sh"
   if Hardware::CPU.intel?
-    sha256 "5a396db66672b5e6557e692bcb3cb527bcbe7c24b9c4a1c67b4449f8ef67cd47"
-    url "https://github.com/conda-forge/miniforge/releases/download/#{version}/Mambaforge-#{version}-MacOSX-x86_64.sh"
-
-    installer script: {
-      executable: "Mambaforge-#{version}-MacOSX-x86_64.sh",
-      args:       ["-b", "-p", "#{caskroom_path}/base"],
-    }
+    sha256 "94ed8b8a647f48a815590958217aabebd4a3e3e10edaf2c5772d50a75727773a"
   else
-    sha256 "87768fed0097edf58a129981129142db2651ab5d1591e19c5840ade186b443c5"
-    url "https://github.com/conda-forge/miniforge/releases/download/#{version}/Mambaforge-#{version}-MacOSX-arm64.sh"
-
-    installer script: {
-      executable: "Mambaforge-#{version}-MacOSX-arm64.sh",
-      args:       ["-b", "-p", "#{caskroom_path}/base"],
-    }
+    sha256 "49c7ba06fe663c634929d5d85b4c06840f4ab9844744be691aab90848c52444e"
   end
 
   name "mambaforge"
@@ -30,6 +21,10 @@ cask "mambaforge" do
   ]
   container type: :naked
 
+  installer script: {
+    executable: "Mambaforge-#{version}-MacOSX-#{arch}.sh",
+    args:       ["-b", "-p", "#{caskroom_path}/base"],
+  }
   binary "#{caskroom_path}/base/condabin/conda"
 
   uninstall delete: "#{caskroom_path}/base"

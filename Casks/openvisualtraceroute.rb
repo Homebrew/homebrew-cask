@@ -4,9 +4,12 @@ cask "openvisualtraceroute" do
 
   url "https://downloads.sourceforge.net/openvisualtrace/#{version}/OpenVisualTraceRoute#{version}.dmg",
       verified: "downloads.sourceforge.net/openvisualtrace/"
-  appcast "https://sourceforge.net/projects/openvisualtrace/rss"
   name "OpenVisualTraceroute"
   homepage "https://visualtraceroute.net/"
+
+  livecheck do
+    regex(/OpenVisualTraceRoute[._-]?v?(\d+(?:\.\d+)+)\.dmg/i)
+  end
 
   app "OpenVisualTraceroute.app"
 

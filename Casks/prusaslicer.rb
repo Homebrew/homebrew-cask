@@ -1,6 +1,6 @@
 cask "prusaslicer" do
-  version "2.3.2,202107080658"
-  sha256 "aca73fee3c1a9fa8143ac2667ac8ba9637b944684a59d3e84fa591e02ffd9c9a"
+  version "2.3.3,202107161034"
+  sha256 "02b5820a371f4eb7b74ae7acfc4f0c32181c2eada4d00b97853d0559edff6462"
 
   url "https://github.com/prusa3d/PrusaSlicer/releases/download/version_#{version.before_comma}/PrusaSlicer-#{version.before_comma}+universal-#{version.after_comma}.dmg",
       verified: "github.com/prusa3d/PrusaSlicer/"
@@ -9,9 +9,11 @@ cask "prusaslicer" do
   homepage "https://www.prusa3d.com/slic3r-prusa-edition/"
 
   livecheck do
-    url :url
-    strategy :github_latest do |page|
+    url "https://github.com/prusa3d/PrusaSlicer/releases/"
+    strategy :page_match do |page|
       match = page.match(%r{href=.*?/PrusaSlicer-(\d+(?:\.\d+)*)\+universal-(\d+)\.dmg}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

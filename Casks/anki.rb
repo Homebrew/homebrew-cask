@@ -1,6 +1,6 @@
 cask "anki" do
-  version "2.1.44"
-  sha256 "6a4a7ad89a81182ae434a55581edb882e454f80540380d1001036b99098c2dff"
+  version "2.1.49"
+  sha256 "b04556650a4808bed162b3ae3e6d58e578733f10b0364d5618fd6b72d4ed1386"
 
   url "https://github.com/ankitects/anki/releases/download/#{version}/anki-#{version}-mac.dmg",
       verified: "github.com/ankitects/anki/"
@@ -17,8 +17,5 @@ cask "anki" do
 
   app "Anki.app"
 
-  zap trash: [
-    "~/Library/Application Support/Anki",
-    "~/Library/Application Support/Anki2",
-  ]
+  zap trash: "~/Library/Application Support/Anki*"
 end

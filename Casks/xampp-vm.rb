@@ -1,6 +1,6 @@
 cask "xampp-vm" do
-  version "8.0.7-0"
-  sha256 "b92b88a4464dd5b607bd736321740c4cd632d1028af503a91204fa10a6cf0e87"
+  version "8.0.9-0"
+  sha256 "1934778ffa461ee13aa197050ff58499d67e15f8f5f8f1b002f7a01b25f448db"
 
   url "https://www.apachefriends.org/xampp-files/#{version.split("-").first}/xampp-osx-#{version}-vm.dmg"
   name "XAMPP-VM"
