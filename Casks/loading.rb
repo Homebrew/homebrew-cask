@@ -4,7 +4,7 @@ cask "loading" do
 
   url "https://bonzaiapps.com/loading/Loading.zip"
   name "Loading"
-  desc "iOS-style network access indicator menulet"
+  desc "Network activity monitor"
   homepage "https://bonzaiapps.com/loading/"
 
   livecheck do
