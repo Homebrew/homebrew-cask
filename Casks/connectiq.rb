@@ -9,7 +9,7 @@ cask "connectiq" do
 
   livecheck do
     url "https://developer.garmin.com/downloads/connect-iq/sdks/sdks.json"
-    regex(/connectiq-sdk-mac[._-]v?(\d+(?:\.\d+)*-\d+(?:-\d+)*-\h+)\.dmg/i)
+    regex(/connectiq-sdk-mac[._-]v?(\d+(?:\.\d+)+-\d+(?:-\d+)+-\h+)\.dmg/i)
   end
 
   app "connectiq-sdk-mac-#{version}/bin/ConnectIQ.app"
