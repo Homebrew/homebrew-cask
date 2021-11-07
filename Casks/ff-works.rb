@@ -15,4 +15,9 @@ cask "ff-works" do
   depends_on macos: ">= :yosemite"
 
   app "ff·Works.app"
+
+  zap trash: [
+    "~/Library/WebKit/com.osbytes.ffworks2",
+    "~/Library/Application Support/ffWorks",
+  ]
 end
