@@ -9,7 +9,7 @@ cask "selfcontrol" do
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?/SelfControl[._-](\d+(?:\.\d+)*)\.zip}i)
+    regex(%r{href=.*?/SelfControl[._-](\d+(?:\.\d+)+)\.zip}i)
   end
 
   auto_updates true
