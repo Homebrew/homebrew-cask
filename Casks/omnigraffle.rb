@@ -1,7 +1,7 @@
 cask "omnigraffle" do
   if MacOS.version <= :yosemite
     version "6.6.2"
-    sha256 "57134e10ac2b6cf06c7946798873523067ca34e7554b14239a86b38dfa163bbe"
+    sha256 "f0b05a654686c42703cddef646a2519235b45d26bd06988a6e644aa96c0eb828"
     url "https://downloads.omnigroup.com/software/MacOSX/10.10/OmniGraffle-#{version}.dmg"
 
     livecheck do
