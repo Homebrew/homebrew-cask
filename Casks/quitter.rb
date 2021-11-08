@@ -17,8 +17,8 @@ cask "quitter" do
   app "Quitter.app"
 
   zap trash: [
-    "~/Library/Preferences/com.marcoarment.quitter.plist",
-    "~/Library/Caches/com.marcoarment.quitter",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.marcoarment.quitter.sfl*",
+    "~/Library/Caches/com.marcoarment.quitter",
+    "~/Library/Preferences/com.marcoarment.quitter.plist",
   ]
 end
