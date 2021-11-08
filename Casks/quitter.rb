@@ -1,5 +1,5 @@
 cask "quitter" do
-  version "1.0,107"
+  version "1.0,108"
   sha256 :no_check
 
   url "https://marco.org/appcasts/Quitter.zip"
