@@ -15,6 +15,11 @@ cask "deltawalker" do
 
   app "DeltaWalker.app"
 
+  installer script: {
+    executable: "#{staged_path}/run-me-first",
+    sudo:       false,
+  }
+
   zap trash: [
     "~/Library/Caches/com.deltopia.DeltaWalker",
     "~/Library/Containers/com.deltopia.DeltaWalker",
