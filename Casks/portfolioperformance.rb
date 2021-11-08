@@ -1,5 +1,6 @@
 cask "portfolioperformance" do
   arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
+
   version "0.56.0"
 
   if Hardware::CPU.intel?
