@@ -13,8 +13,6 @@ cask "billings-pro" do
   end
 
   app "Billings Pro.app"
-  
-  zap trash: [
-    "~/Library/Application Support/Billings Pro",
-  ]
+
+  zap trash: "~/Library/Application Support/Billings Pro"
 end
