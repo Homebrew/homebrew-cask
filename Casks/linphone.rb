@@ -10,7 +10,7 @@ cask "linphone" do
   livecheck do
     url "https://www.linphone.org/releases/macosx/RELEASE"
     strategy :page_match
-    regex(%r{/Linphone-(\d+(?:\.\d+)*)-mac\.dmg}i)
+    regex(%r{/Linphone-(\d+(?:\.\d+)+)-mac\.dmg}i)
   end
 
   app "Linphone.app"
