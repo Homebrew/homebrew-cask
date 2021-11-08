@@ -28,6 +28,10 @@ cask "bbedit" do
   binary "#{appdir}/BBEdit.app/Contents/Helpers/bbdiff"
   binary "#{appdir}/BBEdit.app/Contents/Helpers/bbfind"
   binary "#{appdir}/BBEdit.app/Contents/Helpers/bbresults"
+  manpage "#{appdir}/BBEdit.app/Contents/Resources/bbedit.1"
+  manpage "#{appdir}/BBEdit.app/Contents/Resources/bbdiff.1"
+  manpage "#{appdir}/BBEdit.app/Contents/Resources/bbfind.1"
+  manpage "#{appdir}/BBEdit.app/Contents/Resources/bbresults.1"
 
   zap trash: [
     "~/Library/Application Support/BBEdit",
