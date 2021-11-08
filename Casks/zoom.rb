@@ -45,6 +45,7 @@ cask "zoom" do
             pkgutil: "us.zoom.pkg.videomeeting",
             delete:  [
               "/Applications/zoom.us.app",
+              "/Library/Audio/Plug-Ins/HAL/ZoomAudioDevice.driver",
               "/Library/Internet Plug-Ins/ZoomUsPlugIn.plugin",
               "/Library/Logs/DiagnosticReports/zoom.us*",
             ]
