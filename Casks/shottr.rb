@@ -9,7 +9,7 @@ cask "shottr" do
 
   livecheck do
     url :homepage
-    regex(/Shottr-(\d+(?:\.\d+)*)-(\d+)\.dmg/i)
+    regex(/Shottr-(\d+(?:\.\d+)+)-(\d+)\.dmg/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
