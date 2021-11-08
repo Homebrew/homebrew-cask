@@ -12,7 +12,14 @@ cask "craftmanager" do
     strategy :sparkle
   end
 
+  auto_updates true
   depends_on macos: ">= :mojave"
 
   app "CraftManager.app"
+
+  zap trash: [
+    "~/Library/Application Support/CraftManager",
+    "~/Library/Caches/com.invisionlabs.CraftManager",
+    "~/Library/Preferences/com.invisionlabs.CraftManager.plist",
+  ]
 end
