@@ -15,7 +15,7 @@ cask "deltawalker" do
 
   app "DeltaWalker.app"
 
-  installer script: {
+  uninstall script: {
     executable:   "#{staged_path}/run-me-first",
     sudo:         false,
     must_succeed: false,
