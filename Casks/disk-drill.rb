@@ -22,6 +22,10 @@ cask "disk-drill" do
   zap trash: [
     "~/Library/Application Support/DiskDrill",
     "~/Library/Caches/com.cleverfiles.Disk_Drill",
+    "~/Library/Containers/com.cleverfiles.DiskDrill.Media/Data/cfbackd.chief",
     "~/Library/Logs/DiskDrill.log",
+    "~/Library/Preferences/com.cleverfiles.Disk_Drill.plist",
+    "~/Library/Preferences/com.cleverfiles.DiskDrill.plist",
+    "~/Library/Preferences/com.cleverfiles.DiskDrill-setapp.plist",
   ]
 end
