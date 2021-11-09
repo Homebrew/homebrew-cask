@@ -8,7 +8,7 @@ cask "camtasia" do
   homepage "https://www.techsmith.com/video-editor.html"
 
   livecheck do
-    url "https://support.techsmith.com/hc/en-us/articles/115006624748-Camtasia-Mac-Version-History"
+    url "https://support.techsmith.com/api/v2/help_center/en-us/articles/115006624748"
     regex(/Camtasia\s*\(Mac\)\s*(\d+(?:\.\d+)+)/i)
   end
 
