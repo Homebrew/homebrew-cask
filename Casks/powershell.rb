@@ -32,4 +32,3 @@ cask "powershell" do
     "~/.local/share/powershell",
   ]
 end
-
