@@ -18,4 +18,6 @@ cask "camerabag-photo" do
   depends_on macos: ">= :catalina"
 
   app "CameraBag Photo.app"
+
+  zap trash: "~/Library/Saved Application State/com.nevercenter.camerabagphoto.savedState"
 end
