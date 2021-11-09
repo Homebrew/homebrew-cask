@@ -15,4 +15,11 @@ cask "catlight" do
   depends_on macos: ">= :sierra"
 
   app "Catlight.app"
+
+  zap trash: [
+    "~/Library/Application Support/Catlight",
+    "~/Library/Logs/Catlight",
+    "~/Library/Preferences/Catlight.plist",
+    "~/Library/Saved Application State/Catlight.savedState",
+  ]
 end
