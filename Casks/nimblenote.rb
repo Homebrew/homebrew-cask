@@ -1,10 +1,10 @@
 cask "nimblenote" do
-  version "3.1.1"
-  sha256 "7dbdaa2d79baa13493e28c2ab0ba38671a6e2874dfa07c09278c8ebc278f775a"
+  version "3.1.2"
+  sha256 "37d8a004d36e03c9d98c4d7ab989d05644ce66c65dc897152cbe39e50a5258dd"
 
-  url "https://github.com/nimblenote/nimblenote/releases/latest/download/nimblenote-#{version}.dmg",
+  url "https://github.com/nimblenote/nimblenote/releases/download/v#{version}/nimblenote-#{version}.dmg",
       verified: "github.com/nimblenote/nimblenote/"
-  name "Nimblenote"
+  name "nimblenote"
   desc "Keyboard-driven note taking"
   homepage "https://nimblenote.app/"
 
