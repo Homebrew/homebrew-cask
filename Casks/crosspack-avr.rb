@@ -9,7 +9,7 @@ cask "crosspack-avr" do
 
   livecheck do
     url "https://www.obdev.at/products/crosspack/download.html"
-    regex(/>Crosspack\s*([\d-]+)/i)
+    regex(/>Crosspack\s*(\d+(?:[.-]\d+)+)/i)
   end
 
   pkg "CrossPack-AVR.pkg"
