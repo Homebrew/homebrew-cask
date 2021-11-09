@@ -1,6 +1,6 @@
 cask "screaming-frog-seo-spider" do
-  version "16.2"
-  sha256 "b3f29629cff8892733493a2be688d49d4432ace04e4b1e5a921de0a5916e69ed"
+  version "16.3"
+  sha256 "b17a9acf1d282922768dba3742e647357992e8dcfe7d1abc521fb167822b4c52"
 
   url "https://download.screamingfrog.co.uk/products/seo-spider/ScreamingFrogSEOSpider-#{version}.dmg"
   name "Screaming Frog SEO Spider"
