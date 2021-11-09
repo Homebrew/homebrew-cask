@@ -9,7 +9,7 @@ cask "camerabag-photo" do
 
   livecheck do
     url "https://nevercenter.com/camerabag/download/?filetype=mac"
-    regex(/href=.*?Install[._-]?CameraBag[._-]?Photo[._-]?v?(\d+(?:[._]\d+)*)[._-]?mac\.dmg/i)
+    regex(/href=.*?Install[._-]?CameraBag[._-]?Photo[._-]?v?(\d+(?:[._]\d+)+)[._-]?mac\.dmg/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| match[0].tr("_", ".") }
     end
