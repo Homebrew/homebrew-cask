@@ -9,8 +9,7 @@ cask "progressive-downloader" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/(\d+(?:\.\d+)*)/PSD\.dmg}i)
+    regex(%r{href=.*?/(\d+(?:\.\d+)+)/PSD\.dmg}i)
   end
 
   depends_on macos: ">= :yosemite"
