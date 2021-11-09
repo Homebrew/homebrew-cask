@@ -6,6 +6,11 @@ cask "crosspack-avr" do
   name "CrossPack"
   homepage "https://www.obdev.at/products/crosspack/index.html"
 
+  livecheck do
+    url "https://www.obdev.at/products/crosspack/download.html"
+    regex(/>Crosspack\s*([\d-]+)/i)
+  end
+
   pkg "CrossPack-AVR.pkg"
 
   uninstall script:  {
