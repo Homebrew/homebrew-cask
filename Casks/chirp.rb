@@ -13,4 +13,6 @@ cask "chirp" do
   end
 
   app "CHIRP.app"
+
+  zap trash: "~/.chirp"
 end
