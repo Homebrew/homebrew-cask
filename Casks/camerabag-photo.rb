@@ -15,5 +15,7 @@ cask "camerabag-photo" do
     end
   end
 
+  depends_on macos: ">= :catalina"
+
   app "CameraBag Photo.app"
 end
