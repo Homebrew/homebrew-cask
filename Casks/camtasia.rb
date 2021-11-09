@@ -5,7 +5,7 @@ cask "camtasia" do
   url "https://download.techsmith.com/camtasiamac/releases/#{version.major[-2..]}#{version.minor_patch.no_dots}/Camtasia.dmg"
   name "Camtasia"
   desc "Screen recorder and video editor"
-  homepage "https://www.techsmith.com/camtasia.html"
+  homepage "https://www.techsmith.com/video-editor.html"
 
   livecheck do
     url "https://support.techsmith.com/hc/en-us/articles/115006624748-Camtasia-Mac-Version-History"
@@ -16,4 +16,10 @@ cask "camtasia" do
   depends_on macos: ">= :mojave"
 
   app "Camtasia #{version.major}.app"
+
+  zap trash: [
+    "~/Library/Application Support/TechSmith/Camtasia#{version.major}",
+    "~/Library/Preferences/com.techsmith.camtasia2021.plist",
+    "/Users/Shared/TechSmith/Camtasia",
+  ]
 end
