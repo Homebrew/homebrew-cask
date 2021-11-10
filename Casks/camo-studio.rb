@@ -15,9 +15,9 @@ cask "camo-studio" do
   auto_updates true
 
   app "Camo Studio.app"
-  
+
   zap trash: [
     "~/Library/Caches/com.reincubate.macos.cam",
-    "~/Library/Preferences/com.reincubate.macos.cam.plist"
+    "~/Library/Preferences/com.reincubate.macos.cam.plist",
   ]
 end
