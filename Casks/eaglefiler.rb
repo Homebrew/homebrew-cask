@@ -10,7 +10,7 @@ cask "eaglefiler" do
   livecheck do
     url :homepage
     strategy :page_match
-    regex(%r{href=.*?/EagleFiler-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/EagleFiler-(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "EagleFiler.app"
