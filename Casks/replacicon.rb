@@ -15,7 +15,7 @@ cask "replacicon" do
   app "Replacicon.app"
 
   uninstall launchctl: "com.Replacicon.SetIcon",
-            delete: [
+            delete:    [
               "/Library/LaunchDaemons/com.Replacicon.SetIcon.plist",
               "/Library/PrivilegedHelperTools/com.Replacicon.SetIcon",
             ]
