@@ -1,5 +1,5 @@
 cask "replacicon" do
-  version "1.3"
+  version "1.3,20"
   sha256 :no_check
 
   url "https://replacicon.app/builds/Replacicon_latest.zip"
@@ -14,7 +14,7 @@ cask "replacicon" do
 
   app "Replacicon.app"
 
-  uninstall launchctl: "com.Replacicon.SetIcon"
+  uninstall launchctl: "com.Replacicon.SetIcon",
             delete: [
               "/Library/LaunchDaemons/com.Replacicon.SetIcon.plist",
               "/Library/PrivilegedHelperTools/com.Replacicon.SetIcon",
