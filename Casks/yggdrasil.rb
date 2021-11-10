@@ -1,8 +1,8 @@
 cask "yggdrasil" do
   arch = Hardware::CPU.intel? ? "amd64" : "arm64"
-  
+
   version "0.4.2"
-  
+
   if Hardware::CPU.intel?
     sha256 "00abf4a46dd1d75adbc35d9a687a99364d991e824f0302406e78caaa7857ef65"
   else
