@@ -10,7 +10,7 @@ cask "etrecheckpro" do
   livecheck do
     url "https://etrecheck.com/details"
     strategy :page_match
-    regex(/Changes\sin\sEtreCheckPro\sversion\s(\d+(?:\.\d+)*)/i)
+    regex(/Changes\sin\sEtreCheckPro\sversion\s(\d+(?:\.\d+)+)/i)
   end
 
   app "EtreCheckPro.app"
