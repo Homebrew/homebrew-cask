@@ -7,6 +7,11 @@ cask "fotokasten" do
   desc "Create and buy photo products"
   homepage "https://www.fotokasten.de/"
 
+  livecheck do
+    url "https://downloads.poi.de/fotokasten/pgx-mac/de_DE/appcast.xml"
+    strategy :sparkle
+  end
+
   app "Fotokasten.app"
 
   zap trash: [
