@@ -1,6 +1,6 @@
 cask "jgrennison-openttd" do
-  version "0.43.2"
-  sha256 "374861f2399ba0f23416d46de7c6578ecc0d8581193efc173fb3712b99759ec4"
+  version "0.44.0"
+  sha256 "f8d63c8389356c2aa66fda9d25bdcedcbb7d34b60a77914f91193dd264ca0ac3"
 
   url "https://github.com/JGRennison/OpenTTD-patches/releases/download/jgrpp-#{version}/openttd-jgrpp-#{version}-macos-universal.dmg"
   name "JGR's OpenTTD Patchpack"
