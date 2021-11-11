@@ -1,6 +1,6 @@
 cask "4k-slideshow-maker" do
-  version "2.0.0"
-  sha256 "70653289082098b9d39844f42f8b843e8b545afa93da2a3f36ea3fa263bbb389"
+  version "2.0.1"
+  sha256 "4761cf9ebfde489f5aef14a2f6f28064111f0729d15246a97fb06fcde8666e67"
 
   url "https://dl.4kdownload.com/app/4kslideshowmaker_#{version}.dmg"
   name "4K Slideshow Maker"
