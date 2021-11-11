@@ -1,5 +1,5 @@
 cask "breitbandmessung" do
-  version "2.0.3"
+  version "2.0.4"
   sha256 :no_check
 
   url "https://download.breitbandmessung.de/bbm/Breitbandmessung-mac.dmg"
