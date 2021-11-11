@@ -16,4 +16,6 @@ cask "dbschema" do
   end
 
   app "DbSchema.app"
+
+  # No zap stanza required
 end
