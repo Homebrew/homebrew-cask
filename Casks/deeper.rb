@@ -39,4 +39,11 @@ cask "deeper" do
   depends_on macos: "<= :monterey"
 
   app "Deeper.app"
+
+  zap trash: [
+    "~/Library/Caches/com.apple.helpd/Generated/Deeper Help*",
+    "~/Library/Logs/Deeper.log",
+    "~/Library/Preferences/com.titanium.Deeper.plist",
+    "~/Library/Saved Application State/com.titanium.Deeper.savedState",
+  ]
 end
