@@ -13,7 +13,7 @@ cask "eve-launcher" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :mojave"
 
   app "EVE Launcher.app"
 
