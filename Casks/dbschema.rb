@@ -10,7 +10,7 @@ cask "dbschema" do
   livecheck do
     url "https://www.dbschema.com/download.html"
     strategy :page_match do |page|
-      v = page[%r{href=.*?/DbSchema_macos_(\d+(?:_\d+)*)\.tgz}i, 1]
+      v = page[%r{href=.*?/DbSchema[._-]macos[._-]v?(\d+(?:_\d+)+)\.t}i, 1]
       v.tr("_", ".")
     end
   end
