@@ -20,7 +20,7 @@ cask "disk-expert" do
     "~/Library/Application Scripts/com.nektony.Disk-Expert-SII",
     "~/Library/Application Support/Disk-Expert-SII",
     "~/Library/Caches/com.nektony.Disk-Expert-SII",
-    "~/Library/Preferences/com.nektony.Disk-Expert-SII.plist",
     "~/Library/Cookies/com.nektony.Disk-Expert-SII.binarycookies",
+    "~/Library/Preferences/com.nektony.Disk-Expert-SII.plist",
   ]
 end
