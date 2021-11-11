@@ -23,14 +23,9 @@ cask "dashlane" do
   zap trash: [
     "~/Library/Application Scripts/com.dashlane.Dashlane.SafariExtensionDMG",
     "~/Library/Application Support/Dashlane",
-    "~/Library/Application Support/com.dashlane.Dashlane",
-    "~/Library/Application Support/com.dashlane.DashlaneAgent",
-    "~/Library/Caches/com.dashlane.Dashlane",
-    "~/Library/Caches/com.dashlane.DashlaneAgent",
-    "~/Library/Caches/com.dashlane.DashlanePluginService",
+    "~/Library/Application Support/com.dashlane.Dashlane*",
+    "~/Library/Caches/com.dashlane.Dashlane*",
     "~/Library/Containers/com.dashlane.Dashlane.SafariExtensionDMG",
-    "~/Library/Preferences/com.dashlane.Dashlane.plist",
-    "~/Library/Preferences/com.dashlane.DashlaneAgent.plist",
-    "~/Library/Preferences/com.dashlane.DashlanePluginService.plist",
+    "~/Library/Preferences/com.dashlane.Dashlane*.plist",
   ]
 end
