@@ -12,7 +12,7 @@ Making a new Cask is easy. Follow the directions in [Getting Set Up To Contribut
 
 ### Examples
 
-Here’s a Cask for `shuttle` as an example. Note the `verified` parameter below the `url`, which is needed when [the url and homepage hostnames differ](https://docs.brew.sh/Cask-Cookbook#when-url-and-homepage-hostnames-differ-add-verified)
+Here’s a Cask for `shuttle` as an example. Note the `verified` parameter below the `url`, which is needed when [the url and homepage hostnames differ](https://docs.brew.sh/Cask-Cookbook#when-url-and-homepage-domains-differ-add-verified)
 
 ```ruby
 cask "shuttle" do
@@ -127,7 +127,7 @@ Fill in the following stanzas for your Cask:
 | ------------------ | ----------- |
 | `version`          | application version
 | `sha256`           | SHA-256 checksum of the file downloaded from `url`, calculated by the command `shasum -a 256 <file>`. Can be suppressed by using the special value `:no_check`. (see [sha256](https://docs.brew.sh/Cask-Cookbook#stanza-sha256))
-| `url`              | URL to the `.dmg`/`.zip`/`.tgz`/`.tbz2` file that contains the application.<br />A [`verified` parameter](https://docs.brew.sh/Cask-Cookbook#when-url-and-homepage-hostnames-differ-add-verified) must be added if the hostnames in the `url` and `homepage` stanzas differ. [Block syntax](https://docs.brew.sh/Cask-Cookbook#using-a-block-to-defer-code-execution) is available for URLs that change on every visit
+| `url`              | URL to the `.dmg`/`.zip`/`.tgz`/`.tbz2` file that contains the application.<br />A [`verified` parameter](https://docs.brew.sh/Cask-Cookbook#when-url-and-homepage-domains-differ-add-verified) must be added if the hostnames in the `url` and `homepage` stanzas differ. [Block syntax](https://docs.brew.sh/Cask-Cookbook#using-a-block-to-defer-code-execution) is available for URLs that change on every visit
 | `name`             | the full and proper name defined by the vendor, and any useful alternate names (see [Name Stanza Details](https://docs.brew.sh/Cask-Cookbook#stanza-name))
 | `desc`             | one-line description of the software (see [Desc Stanza Details](https://docs.brew.sh/Cask-Cookbook#stanza-desc))
 | `homepage`         | application homepage; used for the `brew home` command

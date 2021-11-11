@@ -1,6 +1,6 @@
 cask "menumeters" do
-  version "2.1.5"
-  sha256 "ddccd6a7f67475bb586345fece8d37dbd9835fcf7c2bd4520eec1eccf3e2d5b1"
+  version "2.1.6"
+  sha256 "05234808cdfd8acfc8df6f9cd58b7b05196b23feb6a35aaaf9d302164e39c4dc"
 
   url "https://github.com/yujitach/MenuMeters/releases/download/#{version}/MenuMeters_#{version}.zip",
       verified: "github.com/yujitach/MenuMeters/"

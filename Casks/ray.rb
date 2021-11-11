@@ -1,16 +1,17 @@
 cask "ray" do
-  version "1.18.0"
+  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  folder = Hardware::CPU.intel? ? "" : "arm64/"
+
+  version "1.18.3"
 
   if Hardware::CPU.intel?
-    sha256 "6d58a918bff69eecfd02cd004e63e376889bf313d4f18f8f68d51740399890a4"
-    url "https://ray-app.s3.eu-west-1.amazonaws.com/Ray-#{version}.dmg",
-        verified: "ray-app.s3.eu-west-1.amazonaws.com/"
+    sha256 "b2ba99ed35304def9a545641c51e2452404a589e22ed1747a82157972555094d"
   else
-    sha256 "42357940c2fad33958d85cf82c0cbd158065e3532e5ebb58018633ecf3789e5f"
-    url "https://ray-app.s3.eu-west-1.amazonaws.com/arm64/Ray-#{version}-arm64.dmg",
-        verified: "ray-app.s3.eu-west-1.amazonaws.com/"
+    sha256 "28b636dc58347935275926cdf022c27c7a060e7d2fb3c0733734c431a7754acd"
   end
 
+  url "https://ray-app.s3.eu-west-1.amazonaws.com/#{folder}Ray-#{version}#{arch}.dmg",
+      verified: "ray-app.s3.eu-west-1.amazonaws.com/"
   name "Ray"
   desc "Debug with Ray to fix problems faster"
   homepage "https://myray.app/"

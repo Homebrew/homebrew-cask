@@ -1,5 +1,5 @@
 cask "boom" do
-  version "1.7.0,101.7.0216"
+  version "1.7.1,101.7.1039"
   sha256 :no_check
 
   url "https://d13nae1tw8tdnq.cloudfront.net/Boom2mac/webstore/Boom2.dmg",
@@ -22,9 +22,9 @@ cask "boom" do
             signal:    ["TERM", "com.globaldelight.Boom2"]
 
   zap trash: [
-    "~/Library/Application Support/com.globaldelight.Boom2",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.globaldelight.boom2.sfl*",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.globaldelight.boom2daemon.sfl*",
+    "~/Library/Application Support/com.globaldelight.Boom2",
     "~/Library/Preferences/com.globaldelight.Boom2.plist",
     "~/Library/Preferences/com.globaldelight.Boom2Daemon.plist",
   ]

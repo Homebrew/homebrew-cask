@@ -13,4 +13,12 @@ cask "backuploupe" do
   end
 
   app "BackupLoupe.app"
+
+  zap trash: [
+    "~/Library/Application Support/BackupLoupe",
+    "~/Library/Caches/com.apple.helpd/Generated/BackupLoupe*",
+    "~/Library/Preferences/com.soma-zone.BackupLoupe.plist",
+    "/Library/LaunchDaemons/com.soma-zone.BackupLoupe.Helper.plist",
+    "/Library/PrivilegedHelperTools/com.soma-zone.BackupLoupe.Helper",
+  ]
 end

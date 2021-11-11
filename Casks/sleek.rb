@@ -1,6 +1,6 @@
 cask "sleek" do
-  version "1.1.2"
-  sha256 "3de721a91b5e0ff670d174b4b9c5b1da395718b44a9e2a05148836e16804397f"
+  version "1.1.3"
+  sha256 "f70f18ef3823287397eb29ea2606bd90bfeca508597b34db9d3abf6c827c17c3"
 
   url "https://github.com/ransome1/sleek/releases/download/v#{version}/sleek-#{version}-mac.dmg"
   name "sleek"
@@ -11,7 +11,7 @@ cask "sleek" do
 
   zap trash: [
     "~/Library/Application Support/sleek",
-    "~/Library/Saved Application State/RobinAhle.sleektodomanager.savedState",
     "~/Library/Preferences/RobinAhle.sleektodomanager.plist",
+    "~/Library/Saved Application State/RobinAhle.sleektodomanager.savedState",
   ]
 end

@@ -1,5 +1,5 @@
 cask "ankama" do
-  version "3.5.1.12738"
+  version "3.5.4.12908"
   sha256 :no_check
 
   url "https://launcher.cdn.ankama.com/installers/production/Ankama%20Launcher-Setup.dmg"
@@ -12,7 +12,7 @@ cask "ankama" do
     strategy :extract_plist
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :yosemite"
 
   app "Ankama Launcher.app"
 

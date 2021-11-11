@@ -1,9 +1,10 @@
 cask "customshortcuts" do
-  version "1.0.5,96"
-  sha256 "a5cc8e20b91cb45b09263087e2fa28d000c5ee412e4c2d0341fbe83d2354cc07"
+  version "1.1,102"
+  sha256 "e6bda7397e2c2eed0475e1210bf33c22d3d94a2d78ebff89843685969a73f4dc"
 
   url "https://dl.houdah.com/customShortcuts/updates/cast_assets/CustomShortcuts#{version.before_comma}.zip"
   name "CustomShortcuts"
+  desc "Customize menu item keyboard shortcuts"
   homepage "https://www.houdah.com/customShortcuts/"
 
   livecheck do
@@ -12,6 +13,7 @@ cask "customshortcuts" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "CustomShortcuts.app"
 

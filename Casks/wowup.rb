@@ -1,6 +1,6 @@
 cask "wowup" do
-  version "2.4.7"
-  sha256 "01b735efaf9b5cc0f8b9d700546d98ca7743741e39f038e7ee0d0c798b142a1b"
+  version "2.5.1"
+  sha256 "e86239b93075eabde8cc776f8c3c7306c1494b1f562688329005eb5947763637"
 
   url "https://github.com/WowUp/WowUp/releases/download/v#{version}/WowUp-#{version}.dmg",
       verified: "github.com/WowUp/WowUp/"

@@ -1,12 +1,16 @@
 cask "wpsoffice" do
-  version "3.1.1,5096"
-  sha256 "ffa961f9e791ebd9576dcc9e181e60213fa97a53d4c1c5488d5befa2046cedf3"
+  version "3.1.6,6275"
+  sha256 "7ee681d6324a1a4d09b8c352818343db02ab7b02631880ea8bba6716f3be7f13"
 
   url "https://wdl1.pcfg.cache.wpscdn.com/wpsdl/macwpsoffice/download/#{version.before_comma}.#{version.after_comma}/WPSOffice_#{version.before_comma}(#{version.after_comma}).dmg",
       verified: "wdl1.pcfg.cache.wpscdn.com/"
   name "WPS Office"
   desc "All-in-one office suite"
   homepage "https://www.wps.com/mac/"
+
+  livecheck do
+    skip "No version information available"
+  end
 
   depends_on macos: ">= :sierra"
 

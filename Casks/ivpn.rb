@@ -1,15 +1,22 @@
 cask "ivpn" do
-  version "3.3.30"
-  sha256 "7155967dda8f53580ab2d158fa57b447efe0c40a29f28b884bf33fc0f8fcb12d"
+  arch = Hardware::CPU.intel? ? "" : "-arm64"
 
-  url "https://repo.ivpn.net/macos/bin/IVPN-#{version}.dmg"
+  version "3.4.0"
+
+  if Hardware::CPU.intel?
+    sha256 "ca9d45f7df2eb95fa5f57ada9012d6add95113635b74f21df36c40725687b3f2"
+  else
+    sha256 "8a1f4bb2c01f289b2ca241b86c0b5eec4b1225de06777d076d2ef534e20e7481"
+  end
+
+  url "https://repo.ivpn.net/macos/bin/IVPN-#{version}#{arch}.dmg"
   name "IVPN"
   desc "VPN client"
   homepage "https://www.ivpn.net/apps-macos"
 
   livecheck do
     url :homepage
-    regex(/href=.*?IVPN[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/href=.*?IVPN[._-]v?(\d+(?:\.\d+)+)#{arch}\.dmg/i)
   end
 
   auto_updates true
