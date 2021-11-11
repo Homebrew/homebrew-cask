@@ -5,6 +5,7 @@ cask "dbngin" do
   url "https://dbngin-osx-builds.s3.amazonaws.com/#{version.after_comma}/DBngin.dmg",
       verified: "dbngin-osx-builds.s3.amazonaws.com/"
   name "DBngin"
+  desc "Database version management tool"
   homepage "https://dbngin.com/"
 
   livecheck do
@@ -13,6 +14,7 @@ cask "dbngin" do
   end
 
   auto_updates true
+  depends_on macos: ">= :el_capitan"
 
   app "DBngin.app"
 
