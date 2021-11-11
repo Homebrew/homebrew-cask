@@ -9,8 +9,8 @@ cask "nova" do
   homepage "https://nova.app/"
 
   livecheck do
-    url :homepage
-    regex(%r{href=.*?/Nova(?:\s*|%20)?(\d+(?:\.\d+)*)\.zip}i)
+    url "https://circle.panic.com/api/v1/appcast/nova/"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
