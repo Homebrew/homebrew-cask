@@ -1,6 +1,6 @@
 cask "default-folder-x" do
-  version "5.5.9,4665"
-  sha256 "56c483fc60e236d539ee666f5e8c7740f84fe431dab2726e1a91abc8aebecbb4"
+  version "5.6.1,4912"
+  sha256 "139621deffbe2f11fad6e0a6c6341bee575988fb01d4881479d3c4e5827a2fd6"
 
   url "https://www.stclairsoft.com/download/DefaultFolderX-#{version.before_comma}.dmg"
   name "Default Folder X"
