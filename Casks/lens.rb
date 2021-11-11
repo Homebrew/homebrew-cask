@@ -16,7 +16,9 @@ cask "lens" do
 
   livecheck do
     url "https://lens-binaries.s3.amazonaws.com/ide/latest-mac.yml"
-    strategy :electron_builder
+    strategy :electron_builder do |data|
+      data["version"].sub("-latest.", ",")
+    end
   end
 
   auto_updates true
