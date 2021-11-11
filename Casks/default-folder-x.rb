@@ -19,9 +19,9 @@ cask "default-folder-x" do
 
   zap trash: [
     "~/Library/Application Support/.com.stclairsoft",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.stclairsoft.defaultfolderx5.sfl*",
-    "~/Library/Application Support/com.stclairsoft.DefaultFolderX5",
-    "~/Library/Caches/com.stclairsoft.DefaultFolderX5",
-    "~/Library/Preferences/com.stclairsoft.DefaultFolderX5.plist",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.stclairsoft.defaultfolderx#{version.major}.sfl*",
+    "~/Library/Application Support/com.stclairsoft.DefaultFolderX#{version.major}",
+    "~/Library/Caches/com.stclairsoft.DefaultFolderX#{version.major}",
+    "~/Library/Preferences/com.stclairsoft.DefaultFolderX#{version.major}.plist",
   ]
 end
