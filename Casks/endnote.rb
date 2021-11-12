@@ -1,8 +1,8 @@
 cask "endnote" do
-  version "20"
+  version "20.2"
   sha256 :no_check # required as upstream package is updated in-place
 
-  url "https://download.endnote.com/downloads/#{version}/EndNote#{version}Installer.dmg"
+  url "https://download.endnote.com/downloads/#{version.major}/EndNote#{version.major}Installer.dmg"
   name "EndNote"
   desc "Reference manager"
   homepage "https://endnote.com/"
@@ -12,7 +12,7 @@ cask "endnote" do
     regex(/>\s*EndNote\s*v?(\d+(?:\.\d+)*)\s*for\s*macOS/i)
   end
 
-  container nested: "Install EndNote #{version}.app/Contents/Resources/EndNote.zip"
+  container nested: "Install EndNote #{version.major}.app/Contents/Resources/EndNote.zip"
 
   suite "EndNote"
 
