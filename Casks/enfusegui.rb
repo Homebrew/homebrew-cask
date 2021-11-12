@@ -20,4 +20,9 @@ cask "enfusegui" do
   depends_on macos: ">= :high_sierra"
 
   app "EnfuseGUI.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.swipeware.enfusegui",
+    "~/Library/Containers/com.swipeware.enfusegui",
+  ]
 end
