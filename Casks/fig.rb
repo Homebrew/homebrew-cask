@@ -18,7 +18,7 @@ cask "fig" do
 
   app "Fig.app"
 
-  uninstall script: "#{appdir}/Fig.app/Contents/Resources/uninstall.sh"
+  uninstall script: "#{appdir}/Fig.app/Contents/Resources/config/tools/uninstall-script.sh"
 
   zap trash: [
     "~/.fig",
