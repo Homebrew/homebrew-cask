@@ -4,7 +4,10 @@ cask "plain-clip" do
 
   url "https://www.bluem.net/files/plain-clip.zip"
   name "Plain Clip"
+  desc "Removes formatting from copied text"
   homepage "https://www.bluem.net/en/mac/plain-clip/"
 
   app "Plain Clip/Plain Clip.app"
+
+  zap trash: "~/Library/Preferences/net.bluem.plain-clip.plist"
 end
