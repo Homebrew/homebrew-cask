@@ -17,5 +17,7 @@ cask "enfusegui" do
     end
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "EnfuseGUI.app"
 end
