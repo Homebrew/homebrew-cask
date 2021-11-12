@@ -18,7 +18,7 @@ cask "sf-symbols" do
   livecheck do
     url "https://developer.apple.com/sf-symbols/"
     strategy :page_match
-    regex(%r{href=.*?/SF-Symbols-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/SF-Symbols-(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   auto_updates true
