@@ -5,6 +5,7 @@ cask "feed-the-beast" do
   url "https://apps.modpacks.ch/FTBApp/release/#{version}-release/FTBA_macos_#{version}-release.dmg",
       verified: "apps.modpacks.ch/FTBApp/"
   name "Feed the Beast"
+  desc "Minecraft mod downloader and manager"
   homepage "https://www.feed-the-beast.com/"
 
   livecheck do
