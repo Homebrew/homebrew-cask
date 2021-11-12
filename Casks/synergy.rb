@@ -1,5 +1,5 @@
 cask "synergy" do
-  arch = Hardware::CPU.arm? ? "x86-64" : "arm64"
+  arch = Hardware::CPU.intel? ? "x86-64" : "arm64"
 
   version "1.14.1,37bbd3c0"
 
