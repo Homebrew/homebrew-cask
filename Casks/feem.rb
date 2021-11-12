@@ -16,5 +16,6 @@ cask "feem" do
 
   pkg "Feem_Mac_#{version}_beta_Installer.pkg"
 
-  uninstall pkgutil: "com.feeperfect.airsend.mac"
+  uninstall quit:    "com.feeperfect.airsend.mac",
+            pkgutil: "com.feeperfect.airsend.mac"
 end
