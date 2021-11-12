@@ -1,8 +1,8 @@
 cask "fig" do
-  version "1.0.51,285"
-  sha256 "f0ed6ec30c3ba7a47ae928f358e1655840118d32f5ed29d03c54e5f38b713b51"
+  version "1.0.52,307"
+  sha256 "b002dae7e82d71e5c1d953e3dc63dec312a5bc2f87140c00ab3f22f4e70d16df"
 
-  url "https://versions.withfig.com/fig%20#{version.before_comma}.dmg",
+  url "https://versions.withfig.com/fig%20#{version.after_comma}.dmg",
       verified: "versions.withfig.com/"
   name "fig"
   desc "Reimagine your terminal"
@@ -18,11 +18,15 @@ cask "fig" do
 
   app "Fig.app"
 
-  uninstall script: "#{appdir}/Fig.app/Contents/Resources/uninstall.sh"
+  uninstall script: "#{appdir}/Fig.app/Contents/Resources/config/tools/uninstall-script.sh"
 
   zap trash: [
+    "~/.fig",
+    "~/.fig.dotfiles.bak",
     "~/Library/Application Support/com.mschrage.fig",
     "~/Library/Caches/com.mschrage.fig",
-    "~/Library/Preferences/com.mschrage.fig.plist",
+    "~/Library/Caches/fig",
+    "~/Library/Preferences/com.mschrage.fig.*",
+    "~/Library/WebKit/com.mschrage.fig",
   ]
 end
