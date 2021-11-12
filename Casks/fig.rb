@@ -21,6 +21,8 @@ cask "fig" do
   uninstall script: "#{appdir}/Fig.app/Contents/Resources/uninstall.sh"
 
   zap trash: [
+    "~/.fig",
+    "~/.fig.dotfiles.bak",
     "~/Library/Application Support/com.mschrage.fig",
     "~/Library/Caches/com.mschrage.fig",
     "~/Library/Caches/fig",
