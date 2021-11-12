@@ -2,7 +2,7 @@ cask "whatsapp-beta" do
   version "2.2145.2"
   sha256 "23931ffc5f25d326afaa7c4c228eb94cd102da797f6c7e231301c528c1cc07aa"
 
-  url "https://web.whatsapp.com/desktop-beta/mac/files/WhatsApp-beta.dmg"
+  url "https://web.whatsapp.com/desktop-beta/mac/files/WhatsApp-beta.dmg?#{version}"
   name "WhatsApp Beta"
   desc "Desktop client for WhatsApp Beta"
   homepage "https://www.whatsapp.com/"
