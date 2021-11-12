@@ -5,6 +5,7 @@ cask "feem" do
   url "https://f000.backblazeb2.com/file/feemdownloads/Feem_Mac_#{version}_beta_Installer.pkg",
       verified: "f000.backblazeb2.com/file/feemdownloads/"
   name "Feem"
+  desc "Local file transfer"
   homepage "https://feem.io/"
 
   pkg "Feem_Mac_#{version}_beta_Installer.pkg"
