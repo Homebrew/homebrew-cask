@@ -21,6 +21,7 @@ cask "sf-symbols" do
     regex(%r{href=.*?/SF-Symbols-(\d+(?:\.\d+)*)\.dmg}i)
   end
 
+  auto_updates true
   depends_on macos: ">= :mojave"
 
   pkg "SF Symbols.pkg"
