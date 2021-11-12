@@ -14,4 +14,9 @@ cask "avitools" do
   end
 
   app "avitools#{version}/AVItools.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.emmgunn.AVItools3.plist",
+    "~/Library/Application Support/EmmGunn",
+  ]
 end
