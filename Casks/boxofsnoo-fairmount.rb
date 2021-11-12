@@ -11,7 +11,7 @@ cask "boxofsnoo-fairmount" do
 
   zap trash: [
     "~/Library/Application Support/Fairmount",
-    "~/Library/Caches/com.apple.helpd/Generated/Fairmount help*1.1.3",
+    "~/Library/Caches/com.apple.helpd/Generated/Fairmount help*#{version}",
     "~/Library/Caches/com.metakine.fairmount",
     "~/Library/Preferences/com.metakine.fairmount.plist",
   ]
