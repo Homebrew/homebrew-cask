@@ -5,8 +5,8 @@ cask "sf-symbols" do
 
     url "https://devimages-cdn.apple.com/design/resources/download/SF-Symbols.dmg"
   else
-    version "3"
-    sha256 "b3abddcd4f988cb8d7ffe7c0af486b9e5dbeb36f33c1e1e55a3a26c4d7bfa458"
+    version "3.1"
+    sha256 "63957ccf1f07654a706c9162bea84bb7172f040a22d5776d895f1f6e41cd17c7"
 
     url "https://devimages-cdn.apple.com/design/resources/download/SF-Symbols-#{version}.dmg"
   end
