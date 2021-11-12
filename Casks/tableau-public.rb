@@ -20,4 +20,9 @@ cask "tableau-public" do
     "com.tableausoftware.FLEXNet.*",
     "com.tableausoftware.Public.app",
   ]
+
+  zap trash: [
+    "~/Library/Caches/com.tableau.caching",
+    "~/Library/Caches/com.tableausoftware.MapTiles",
+  ]
 end
