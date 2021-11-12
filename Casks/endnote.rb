@@ -7,6 +7,11 @@ cask "endnote" do
   desc "Reference manager"
   homepage "https://endnote.com/"
 
+  livecheck do
+    url "https://endnote.com/downloads/available-updates/"
+    regex(/>\s*EndNote\s*v?(\d+(?:\.\d+)*)\s*for\s*macOS/i)
+  end
+
   container nested: "Install EndNote #{version}.app/Contents/Resources/EndNote.zip"
 
   suite "EndNote"
