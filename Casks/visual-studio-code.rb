@@ -18,7 +18,7 @@ cask "visual-studio-code" do
   livecheck do
     url "https://update.code.visualstudio.com/api/update/#{arch}/stable/VERSION"
     strategy :page_match
-    regex(/"productVersion"\s*:\s*"(\d+(:?\.\d+)*)"/)
+    regex(/"productVersion"\s*:\s*"(\d+(:?\.\d+)+)"/)
   end
 
   auto_updates true
