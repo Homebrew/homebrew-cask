@@ -7,5 +7,15 @@ cask "enfusegui" do
   desc "HDR image creator"
   homepage "https://swipeware.com/applications/enfusegui/"
 
+  livecheck do
+    url :homepage
+    strategy :page_match do |page|
+      match = page[/href=.*?enfusegui[._-]?v?(\d+(?:\_\d+)+)-mac/i, 1]
+      next if match.blank?
+
+      match.tr("_", ".")
+    end
+  end
+
   app "EnfuseGUI.app"
 end
