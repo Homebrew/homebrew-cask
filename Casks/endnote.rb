@@ -4,6 +4,7 @@ cask "endnote" do
 
   url "https://download.endnote.com/downloads/#{version}/EndNote#{version}Installer.dmg"
   name "EndNote"
+  desc "Reference manager"
   homepage "https://endnote.com/"
 
   container nested: "Install EndNote #{version}.app/Contents/Resources/EndNote.zip"
