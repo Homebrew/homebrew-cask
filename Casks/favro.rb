@@ -13,4 +13,11 @@ cask "favro" do
   end
 
   app "Favro.app"
+
+  zap trash: [
+    "~/Library/Application Support/Favro",
+    "~/Library/Logs/Favro",
+    "~/Library/Preferences/com.favro.desktop-app.plist",
+    "~/Library/Saved Application State/com.favro.desktop-app.savedState",
+  ]
 end
