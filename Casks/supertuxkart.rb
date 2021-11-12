@@ -14,4 +14,9 @@ cask "supertuxkart" do
   end
 
   app "SuperTuxKart.app"
+
+  zap trash: [
+    "~/Library/Application Support/SuperTuxKart",
+    "~/Library/Saved Application State/net.sourceforge.supertuxkart.savedState",
+  ]
 end
