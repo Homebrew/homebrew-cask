@@ -8,6 +8,12 @@ cask "feem" do
   desc "Local file transfer"
   homepage "https://feem.io/"
 
+  livecheck do
+    url "https://feem.link/feem-for-mac"
+    strategy :header_match
+    regex(/Feem[._-]Mac[._-]v?(\d+(?:\.\d+)+).*?\.pkg/i)
+  end
+
   pkg "Feem_Mac_#{version}_beta_Installer.pkg"
 
   uninstall pkgutil: "com.feeperfect.airsend.mac"
