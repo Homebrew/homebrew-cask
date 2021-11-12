@@ -1,8 +1,8 @@
 cask "fellow" do
-  version "1.0.36"
-  sha256 "b70b7de3451908b180727a6a9a7bbce5d45d7b487ed1de92bf2ca5d6911923cb"
+  version "1.1.0"
+  sha256 "4dd953ee57c6fafc030879c1fe0e48aacf9173720f4685c214befc034b07be5b"
 
-  url "https://cdn.fellow.app/desktop/#{version}/darwin/stable/Fellow.dmg"
+  url "https://cdn.fellow.app/desktop/#{version}/darwin/stable/universal/Fellow-#{version}-universal.dmg"
   name "Fellow"
   desc "Collaborative meeting agendas, notes, and action items"
   homepage "https://fellow.app/"
