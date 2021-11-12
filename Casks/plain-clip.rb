@@ -7,6 +7,11 @@ cask "plain-clip" do
   desc "Removes formatting from copied text"
   homepage "https://www.bluem.net/en/mac/plain-clip/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Plain Clip/Plain Clip.app"
 
   zap trash: "~/Library/Preferences/net.bluem.plain-clip.plist"
