@@ -23,6 +23,8 @@ cask "fig" do
   zap trash: [
     "~/Library/Application Support/com.mschrage.fig",
     "~/Library/Caches/com.mschrage.fig",
-    "~/Library/Preferences/com.mschrage.fig.plist",
+    "~/Library/Caches/fig",
+    "~/Library/Preferences/com.mschrage.fig.*",
+    "~/Library/WebKit/com.mschrage.fig",
   ]
 end
