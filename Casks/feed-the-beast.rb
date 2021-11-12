@@ -9,7 +9,7 @@ cask "feed-the-beast" do
 
   livecheck do
     url "https://www.feed-the-beast.com/app_release.xml"
-    regex(/FTBA_macos_(\d+-[a-f0-9]+)-release\.dmg/i)
+    regex(/FTBA[._-]macos[._-](\d+-\h+)[._-]release\.dmg/i)
   end
 
   app "FTBApp.app"
