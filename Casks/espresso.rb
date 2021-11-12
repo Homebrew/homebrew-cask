@@ -16,4 +16,11 @@ cask "espresso" do
   depends_on macos: ">= :high_sierra"
 
   app "Espresso.app"
+
+  zap trash: [
+    "~/Library/Application Support/Espresso",
+    "~/Library/Caches/com.kanagacode.espresso",
+    "~/Library/Preferences/com.kanagacode.espresso.plist",
+    "~/Library/WebKit/com.kanagacode.espresso",
+  ]
 end
