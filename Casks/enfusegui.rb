@@ -10,7 +10,7 @@ cask "enfusegui" do
   livecheck do
     url :homepage
     strategy :page_match do |page|
-      match = page[/href=.*?enfusegui[._-]?v?(\d+(?:\_\d+)+)-mac/i, 1]
+      match = page[/href=.*?enfusegui[._-]?v?(\d+(?:_\d+)+)-mac/i, 1]
       next if match.blank?
 
       match.tr("_", ".")
