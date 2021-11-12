@@ -14,6 +14,8 @@ cask "electerm" do
   desc "Terminal/ssh/serial port/sftp client"
   homepage "https://github.com/electerm/electerm/"
 
+  auto_updates true
+
   app "electerm.app"
 
   zap trash: [
