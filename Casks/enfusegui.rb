@@ -4,6 +4,7 @@ cask "enfusegui" do
 
   url "https://swipeware.com/apps/enfusegui/v#{version.major}/EnfuseGUI-#{version}.dmg"
   name "EnfuseGUI"
+  desc "HDR image creator"
   homepage "https://swipeware.com/applications/enfusegui/"
 
   app "EnfuseGUI.app"
