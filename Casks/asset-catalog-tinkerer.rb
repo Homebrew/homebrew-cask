@@ -4,6 +4,7 @@ cask "asset-catalog-tinkerer" do
 
   url "https://github.com/insidegui/AssetCatalogTinkerer/releases/download/#{version}/AssetCatalogTinkerer_v#{version}.zip"
   name "Asset Catalog Tinkerer"
+  desc "Browse/extract images from .car files"
   homepage "https://github.com/insidegui/AssetCatalogTinkerer"
 
   livecheck do
@@ -12,4 +13,9 @@ cask "asset-catalog-tinkerer" do
   end
 
   app "Asset Catalog Tinkerer.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/br.com.guilhermerambo.asset-catalog-tinkerer.sfl2",
+    "~/Library/Preferences/br.com.guilhermerambo.Asset-Catalog-Tinkerer.plist",
+  ]
 end
