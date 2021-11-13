@@ -14,4 +14,11 @@ cask "focusatwill" do
   end
 
   app "focusatwill.app"
+
+  zap trash: [
+    "~/Library/Application Support/focusatwill",
+    "~/Library/Logs/focusatwill",
+    "~/Library/Preferences/com.focusatwill.desktop.plist",
+    "~/Library/Saved Application State/com.focusatwill.desktop.savedState",
+  ]
 end
