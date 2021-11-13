@@ -2,6 +2,7 @@ cask "runelite" do
   arch = Hardware::CPU.intel? ? "x" : "aarch"
 
   version "2.2.0"
+
   if Hardware::CPU.intel?
     sha256 "0c6690000fb46eb1ff6d193a58ff3d7dc0e3514a03d0b1a22ca2351ef07e79c8"
   else
