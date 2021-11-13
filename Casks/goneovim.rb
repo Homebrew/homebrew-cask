@@ -6,7 +6,7 @@ cask "goneovim" do
     url "https://github.com/akiyosi/goneovim/releases/download/v#{version}/Goneovim-v#{version}-macos.tar.bz2"
     app "Goneovim-v#{version}-macos/goneovim.app"
   else
-    sha256 "5d8fc531d1b2d181addd4a8c5aba763e3d947a3fc22d34c51914e60d2f6e2c4f"
+    sha256 "c0599ecbe330ab244ed9b6eb42b934f1b10fef63af8a19cac1a1f21e5ecf7788"
     url "https://github.com/akiyosi/goneovim/releases/download/v#{version}/Goneovim-v#{version}-macos11.tar.bz2"
     app "Goneovim-v#{version}-macos11/goneovim.app"
   end
