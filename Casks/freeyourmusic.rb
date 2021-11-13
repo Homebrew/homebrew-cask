@@ -14,4 +14,11 @@ cask "freeyourmusic" do
   end
 
   app "FreeYourMusic.app"
+
+  zap trash: [
+    "~/Library/Application Support/FreeYourMusic",
+    "~/Library/Logs/FreeYourMusic",
+    "~/Library/Preferences/com.freeyourmusic.app.plist",
+    "~/Library/Saved Application State/com.freeyourmusic.app.savedState",
+  ]
 end
