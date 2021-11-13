@@ -4,7 +4,7 @@ cask "freeyourmusic" do
 
   url "https://fym-app-production.s3.nl-ams.scw.cloud/FreeYourMusic-#{version}.dmg",
       verified: "fym-app-production.s3.nl-ams.scw.cloud/"
-  name "FreeYourMusic⁩"
+  name "FreeYourMusic"
   desc "Move playlists, tracks, and albums between music platforms"
   homepage "https://freeyourmusic.com/"
 
