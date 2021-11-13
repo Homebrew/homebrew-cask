@@ -13,4 +13,9 @@ cask "fellow" do
   end
 
   app "Fellow.app"
+
+  zap trash: [
+    "~/Library/Application Support/Fellow",
+    "~/Library/Preferences/com.electron.fellow.plist",
+  ]
 end
