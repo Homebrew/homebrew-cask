@@ -1,14 +1,14 @@
 cask "freeplane" do
   arch = Hardware::CPU.intel? ? "intel" : "apple"
 
-  version "1.9.10"
+  version "1.9.11"
 
   url "https://downloads.sourceforge.net/freeplane/Freeplane-#{version}-#{arch}.dmg",
       verified: "downloads.sourceforge.net/freeplane/"
   if Hardware::CPU.intel?
-    sha256 "67b6ee390800ce93ec7aa7255f5a7669efda41ce904d164af623c20d5c71d0c2"
+    sha256 "b9d989832db053e7b0892f1d2778a77c9444ae5b45beceb5746b15245c08cf64"
   else
-    sha256 "375895d3087f69b235d8f5d3c3fa0294abb3fc5999e32941568e342bd47264ed"
+    sha256 "2332e15f6352871af86f90ea22221c0d905c88ba815c5653c29d425e95058c1a"
   end
 
   name "Freeplane"
