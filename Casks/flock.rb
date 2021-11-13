@@ -14,4 +14,11 @@ cask "flock" do
   end
 
   app "Flock.app"
+
+  zap trash: [
+    "~/Library/Application Support/Flock",
+    "~/Library/Logs/Flock",
+    "~/Library/Preferences/to.go.osx.plist",
+    "~/Library/Saved Application State/to.go.osx.savedState",
+  ]
 end
