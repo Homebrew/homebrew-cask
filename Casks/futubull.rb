@@ -1,6 +1,6 @@
 cask "futubull" do
-  version "11.11.1618,202110281756"
-  sha256 "6fe9fce68437220b0a4b7b84f763edbfbbe1f5d84b4e005a293dc0675c58672b"
+  version "11.11.1628,202111110958"
+  sha256 "d95c5ebf5e0d781732e30a09b09168d5332cf2b916c578ff5d067d2b0a6d54eb"
 
   url "https://softwarefile.futunn.com/FTNNForMac_#{version.before_comma}_#{version.after_comma}_Website.dmg"
   name "Futubull"
@@ -19,4 +19,9 @@ cask "futubull" do
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "FutuNiuniu.app", target: "Futubull.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/cn.futu.Niuniu",
+    "~/Library/Containers/cn.futu.Niuniu",
+  ]
 end
