@@ -19,4 +19,9 @@ cask "futubull" do
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "FutuNiuniu.app", target: "Futubull.app"
+
+  zap trash: [
+   "~/Library/Application Scripts/cn.futu.Niuniu",
+    "~/Library/Containers/cn.futu.Niuniu",
+  ]
 end
