@@ -9,8 +9,7 @@ cask "geomap" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(/GeoMapApp\s*is.*?(\d+(?:\.\d+)*)</i)
+    regex(/GeoMapApp\s*is.*?(\d+(?:\.\d+)+)\s*</i)
   end
 
   app "GeoMapApp.app"
