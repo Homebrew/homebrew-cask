@@ -8,6 +8,8 @@ cask "maestral" do
   desc "Open-source Dropbox client"
   homepage "https://maestral.app/"
 
+  auto_updates true
+
   app "Maestral.app"
   binary "#{appdir}/Maestral.app/Contents/MacOS/maestral-cli", target: "maestral"
 
