@@ -4,7 +4,7 @@ cask "mweb-pro" do
   if MacOS.version <= :catalina
     url "https://cdn.mwebapp.cn/MWebPro#{version.no_dots}_catalina.dmg",
         verified: "cdn.mwebapp.cn/"
-    sha256 "f9e349ad5e9c5a3bc3bd32271f04af4aa9a772027637507988dc993c1599e399"
+    sha256 "03c263aec90fdad780e68cdc00e81bc4a325ab8728607e82d13114bc8559c09b"
   else
     url "https://cdn.mwebapp.cn/MWebPro#{version.no_dots}.dmg",
         verified: "cdn.mwebapp.cn/"
