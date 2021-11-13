@@ -17,7 +17,7 @@ cask "mweb-pro" do
 
   livecheck do
     url "https://www.mweb.im/update_v4.json"
-    regex(/(?:"version":")(\d+(\.\d+)*)"/i)
+    regex(/"version":"(\d+(?:\.\d+)+)"/i)
   end
 
   depends_on macos: ">= :high_sierra"
