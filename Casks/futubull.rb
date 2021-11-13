@@ -21,7 +21,7 @@ cask "futubull" do
   app "FutuNiuniu.app", target: "Futubull.app"
 
   zap trash: [
-   "~/Library/Application Scripts/cn.futu.Niuniu",
+    "~/Library/Application Scripts/cn.futu.Niuniu",
     "~/Library/Containers/cn.futu.Niuniu",
   ]
 end
