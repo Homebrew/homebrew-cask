@@ -12,6 +12,8 @@ cask "betterdummy" do
     strategy :github_latest
   end
 
+  auto_updates true
+
   app "BetterDummy.app"
 
   zap trash: [
