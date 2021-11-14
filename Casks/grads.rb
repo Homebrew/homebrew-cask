@@ -6,6 +6,11 @@ cask "grads" do
   name "Grid Analysis and Display System"
   homepage "http://cola.gmu.edu/grads/grads.php"
 
+  livecheck do
+    url "http://cola.gmu.edu/grads/downloads.php"
+    regex(/href=.*?grads[._-]?v?(\d+(?:\.\d+)+)-bin-darwin.*?\.t/i)
+  end
+
   binary "grads-#{version}/bin/bufrscan"
   binary "grads-#{version}/bin/grads"
   binary "grads-#{version}/bin/grib2scan"
