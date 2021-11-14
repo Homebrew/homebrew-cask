@@ -14,11 +14,6 @@ cask "tempo" do
   desc "Email client that delivers all email in batches"
   homepage "https://www.yourtempo.co/"
 
-  livecheck do
-    url "https://download.yourtempo.co/#{arch}/latest-mac.yml"
-    strategy :electron_builder
-  end
-
   auto_updates true
 
   app "Tempo.app"
