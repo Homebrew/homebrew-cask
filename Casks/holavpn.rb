@@ -10,14 +10,13 @@ cask "holavpn" do
   livecheck do
     url "https://hola.org/download"
     strategy :page_match do |page|
-      # href="//cdn4.hola.org/static/HolaVPN2E-2.38-1.190.307-noc.dmg
       page.scan(/href=.*?HolaVPN#{version.before_comma.major}E[._-]v?(\d+(?:\.\d+)+)[_-](\d+(?:\.\d+)+)-noc\.dmg/i).map do |match|
         "#{match[0]},#{match[1]}"
       end
     end
   end
 
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :catalina"
 
   app "HolaVPN.app"
 end
