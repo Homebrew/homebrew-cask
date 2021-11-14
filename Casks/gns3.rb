@@ -13,4 +13,9 @@ cask "gns3" do
   depends_on macos: ">= :high_sierra"
 
   app "GNS3.app"
+
+  zap trash: [
+    "~/Library/Saved Application State/net.gns3.savedState",
+    "~/GNS3",
+  ]
 end
