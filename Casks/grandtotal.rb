@@ -15,4 +15,10 @@ cask "grandtotal" do
   depends_on macos: ">= :high_sierra"
 
   app "GrandTotal.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.mediaatelier.GrandTotal3",
+    "~/Library/Preferences/com.mediaatelier.GrandTotal3.plist",
+    "~/Library/Saved Application State/com.mediaatelier.GrandTotal3.savedState",
+  ]
 end
