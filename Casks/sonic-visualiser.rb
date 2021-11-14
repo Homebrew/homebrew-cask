@@ -2,8 +2,8 @@ cask "sonic-visualiser" do
   version "4.4,2813"
   sha256 "07550a124d503139837e809ff06701661749f0de77d43968a9e43494f4ff1bbf"
 
-  url "https://code.soundsoftware.ac.uk/attachments/download/#{version.after_comma}/Sonic%20Visualiser-#{version.before_comma}.dmg",
-      verified: "code.soundsoftware.ac.uk/"
+  url "https://github.com/sonic-visualiser/sonic-visualiser/releases/download/sv_v#{version.before_comma}/Sonic.Visualiser-#{version.before_comma}.dmg",
+      verified: "github.com/sonic-visualiser/sonic-visualiser/"
   name "Sonic Visualiser"
   desc "Visualisation, analysis, and annotation of music audio recordings"
   homepage "https://www.sonicvisualiser.org/"
