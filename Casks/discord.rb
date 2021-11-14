@@ -9,8 +9,8 @@ cask "discord" do
   homepage "https://discord.com/"
 
   livecheck do
-    url "https://discord.com/api/stable/updates?platform=osx"
-    regex(/"name"\s*:\s*"([^"]+)"/i)
+    url "https://discord.com/api/download/stable?platform=osx"
+    strategy :header_match
   end
 
   auto_updates true
