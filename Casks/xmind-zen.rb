@@ -9,11 +9,9 @@ cask "xmind-zen" do
 
   livecheck do
     url "https://www.xmind.net/zen/download/mac/"
-    strategy :header_match do |headers|
-      match = headers["location"].match(/[._-]v?(\d+(?:\.\d+)+)[._-](\d+)\.dmg/i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
+    regex(/[._-]v?(\d+(?:\.\d+)+)[._-](\d+)\.dmg/i)
+    strategy :header_match do |headers, regex|
+      headers["location"].match(regex)&.then { |match| "#{match[1]},#{match[2]}" }
     end
   end
 
