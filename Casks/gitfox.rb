@@ -1,5 +1,5 @@
 cask "gitfox" do
-  version "1.5180"
+  version "2.0.6,6451"
   sha256 :no_check
 
   url "https://storage.googleapis.com/gitfox/Gitfox.latest.stable.zip",
