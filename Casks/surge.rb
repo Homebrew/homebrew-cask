@@ -10,8 +10,10 @@ cask "surge" do
   livecheck do
     url "https://www.nssurge.com/mac/v#{version.major}/appcast-signed.xml"
     strategy :sparkle do |item|
-      regex = /[._-](\d+(?:\.\d+)+)[._-](\d+)[._-](\h+)\.zip/i
-      item.url.scan(regex).map { |match| "#{match[0]},#{match[1]},#{match[2]}" }
+      match = item.url.match(/[._-](\d+(?:\.\d+)+)[._-](\d+)[._-](\h+)\.zip/i)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]},#{match[3]}"
     end
   end
 
