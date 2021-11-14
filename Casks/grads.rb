@@ -4,6 +4,8 @@ cask "grads" do
 
   url "ftp://cola.gmu.edu/grads/#{version.major_minor}/grads-#{version}-bin-darwin17.5.tar.gz"
   name "Grid Analysis and Display System"
+  name "GrADS"
+  desc "Access, manipulate, and visualize earth science data"
   homepage "http://cola.gmu.edu/grads/grads.php"
 
   livecheck do
