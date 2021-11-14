@@ -4,12 +4,13 @@ cask "realforce" do
 
   url "https://www.realforce.co.jp/support/download/software/mac/files/Install%20REALFORCE%20Software_#{version.dots_to_hyphens}.pkg"
   name "REALFORCE for Mac"
+  desc "SOftware for Realforce keyboards and mice"
   homepage "https://www.realforce.co.jp/"
 
   livecheck do
     url "https://www.realforce.co.jp/support/download/keyboard_mac.html"
     strategy :page_match do |page|
-      v = page[%r{href=.*?/Install\s*REALFORCE\s*Software_(\d+(?:-\d+)*)\.pkg}i, 1]
+      v = page[%r{href=.*?/Install\s*REALFORCE\s*Software_(\d+(?:-\d+)+)\.pkg}i, 1]
       v.tr("-", ".")
     end
   end
