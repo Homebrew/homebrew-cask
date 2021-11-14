@@ -4,6 +4,7 @@ cask "qobuz" do
 
   url "https://desktop.qobuz.com/releases/darwin/x64/elCapitan_sierra/#{version.before_comma}-b#{version.after_comma}/Qobuz.dmg"
   name "Qobuz"
+  desc "Catalogue of hi-res music for streaming and download'
   homepage "https://www.qobuz.com/applications"
 
   livecheck do
