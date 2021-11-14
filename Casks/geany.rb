@@ -11,6 +11,8 @@ cask "geany" do
     url "https://geany.org/download/releases/"
     strategy :page_match do |page|
       match = page.match(/href=.*?geany[._-](\d+(?:\.\d+)+)[._-]osx(?:[._-](\d+))?\.dmg/i)
+      next if match.blank?
+
       match[2] ? "#{match[1]},#{match[2]}" : match[1]
     end
   end
