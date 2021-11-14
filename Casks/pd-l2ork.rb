@@ -6,6 +6,7 @@ cask "pd-l2ork" do
       verified: "github.com/agraef/purr-data/"
   name "Pd-l2ork"
   name "Purr Data"
+  desc "Programming environment for computer music and multimedia applications"
   homepage "https://agraef.github.io/purr-data/"
 
   livecheck do
