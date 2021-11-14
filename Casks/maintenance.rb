@@ -17,9 +17,12 @@ cask "maintenance" do
   elsif MacOS.version <= :catalina
     version "2.7.1"
     sha256 "833e658f862f0a58dc6a073c70a67bed071b835167f73fc24e80386a36bfd38b"
-  else
+  elsif MacOS.version <= :big_sur
     version "2.8.1"
     sha256 "d46d4b2a28779ec02b1ae208f80c504cb5726f43f29ff1ae247206050e26ede0"
+  else
+    version "2.8.5"
+    sha256 "394c8184f003446a1f38b99986e3ec555c1d223b96dd28d42cf40bbf738255f3"
   end
 
   url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete(".")}/Maintenance.dmg"
@@ -33,7 +36,7 @@ cask "maintenance" do
   end
 
   # Unusual case: The software may stop working, or may be dangerous to run, on the latest macOS release.
-  depends_on macos: "<= :big_sur"
+  depends_on macos: "<= :monterey"
 
   app "Maintenance.app"
 end
