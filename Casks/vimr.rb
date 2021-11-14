@@ -10,7 +10,7 @@ cask "vimr" do
 
   livecheck do
     url :url
-    regex(%r{href=.*?/VimR-v?(\d+(?:\.\d+)*-\d+\.\d+)\.t}i)
+    regex(/^v?(\d+(?:[.-]\d+)+)$/i)
   end
 
   auto_updates true
