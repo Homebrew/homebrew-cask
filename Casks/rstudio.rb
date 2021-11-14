@@ -11,7 +11,7 @@ cask "rstudio" do
   livecheck do
     url "https://www.rstudio.com/products/rstudio/download/"
     strategy :page_match do |page|
-      match = page.match(/RStudio-(\d{4}\.\d{2}\.\d+)-(\d+)\.dmg/i)
+      match = page.match(/RStudio-(\d+(?:\.\d+)+)-(\d+)\.dmg/i)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
