@@ -36,7 +36,7 @@ cask "maintenance" do
   end
 
   # Unusual case: The software may stop working, or may be dangerous to run, on the latest macOS release.
-  depends_on macos: "<= :big_sur"
+  depends_on macos: "<= :monterey"
 
   app "Maintenance.app"
 end
