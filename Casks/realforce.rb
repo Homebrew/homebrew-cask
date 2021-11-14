@@ -1,6 +1,6 @@
 cask "realforce" do
-  version "2.0.0"
-  sha256 "b8ea9d042a8b3e40c34159de96da0d31513bc447f83898ad72d93e1d311cd4aa"
+  version "2.1.10"
+  sha256 "2f1b468d5b07c994e324be9564b825d0f4582523dc1bf9eae4fb3c5def9b0934"
 
   url "https://www.realforce.co.jp/support/download/software/mac/files/Install%20REALFORCE%20Software_#{version.dots_to_hyphens}.pkg"
   name "REALFORCE for Mac"
