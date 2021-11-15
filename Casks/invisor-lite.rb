@@ -13,4 +13,9 @@ cask "invisor-lite" do
   end
 
   app "Invisor Lite.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.pozdeev.invisorfree.plist",
+    "~/Library/Saved Application State/com.pozdeev.invisorfree.savedState",
+  ]
 end
