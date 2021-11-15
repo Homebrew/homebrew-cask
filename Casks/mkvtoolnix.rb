@@ -21,4 +21,9 @@ cask "mkvtoolnix" do
   binary "#{appdir}/MKVToolNix-#{version}.app/Contents/MacOS/mkvinfo"
   binary "#{appdir}/MKVToolNix-#{version}.app/Contents/MacOS/mkvmerge"
   binary "#{appdir}/MKVToolNix-#{version}.app/Contents/MacOS/mkvpropedit"
+
+  zap trash: [
+    "~/Library/Preferences/bunkus.org/mkvtoolnix-gui",
+    "~/Library/Saved Application State/download.mkvtoolnix.MKVToolNix.savedState",
+  ]
 end
