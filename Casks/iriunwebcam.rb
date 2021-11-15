@@ -9,9 +9,8 @@ cask "iriunwebcam" do
   homepage "https://iriun.com/"
 
   livecheck do
-    url "https://iriun.com/"
-    strategy :page_match
-    regex(%r{href=.*?/IriunWebcam-(\d+(?:\.\d+)*)\.pkg}i)
+    url :homepage
+    regex(%r{href=.*?/IriunWebcam[._-]?v?(\d+(?:\.\d+)+)\.pkg}i)
   end
 
   pkg "IriunWebcam-#{version}.pkg"
