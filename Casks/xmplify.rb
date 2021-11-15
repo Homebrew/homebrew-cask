@@ -8,8 +8,8 @@ cask "xmplify" do
   homepage "http://xmplifyapp.com/"
 
   livecheck do
-    url "http://xmplifyapp.com/appcast.xml"
-    strategy :sparkle
+    url "http://xmplifyapp.com/release-notes/current.html"
+    regex(/>Release.*?Xmplify\s*v?(\d+(?:\.\d+)+)\s*</i)
   end
 
   depends_on macos: ">= :sierra"
