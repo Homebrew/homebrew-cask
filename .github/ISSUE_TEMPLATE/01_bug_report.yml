@@ -30,33 +30,18 @@ body:
   - type: textarea
     attributes:
       label: Output of command with `--verbose --debug`
-      value: |
-        <details><summary>Click to expand</summary><pre><code>
-
-        REPLACE THIS TEXT WITH THE OUTPUT
-
-        </code></pre></details>
+      render: shell
     validations:
       required: true
   - type: textarea
     attributes:
       label: Output of `brew doctor --verbose`
-      value: |
-        <details><summary>Click to expand</summary><pre><code>
-
-        REPLACE THIS TEXT WITH THE OUTPUT
-
-        </code></pre></details>
+      render: shell
     validations:
       required: true
   - type: textarea
     attributes:
       label: Output of `brew tap`
-      value: |
-        <details><summary>Click to expand</summary><pre><code>
-
-        REPLACE THIS TEXT WITH THE OUTPUT
-
-        </code></pre></details>
+      render: shell
     validations:
       required: true
