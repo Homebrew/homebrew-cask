@@ -15,9 +15,11 @@ cask "trezor-suite" do
   homepage "https://suite.trezor.io/"
 
   livecheck do
-    url :homepage
-    regex(/Trezor-Suite-(\d+(?:\.\d+)*)-/i)
+    url "https://github.com/trezor/trezor-suite"
+    strategy :github_latest
   end
+
+  auto_updates true
 
   app "Trezor Suite.app"
 
