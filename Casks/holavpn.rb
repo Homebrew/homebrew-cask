@@ -21,9 +21,9 @@ cask "holavpn" do
   app "HolaVPN#{version.before_comma.major}E.app"
 
   zap trash: [
-    "~/Documents/holavpn2e.db*",
-    "~/Library/Caches/org.hola.hola2e-nosdk",
-    "~/Library/Preferences/org.hola.hola2e-nosdk.plist",
-    "~/Library/Saved Application State/org.hola.hola2e-nosdk~iosmac.savedState",
+    "~/Documents/holavpn#{version.before_comma.major}e.db*",
+    "~/Library/Caches/org.hola.hola#{version.before_comma.major}e-nosdk",
+    "~/Library/Preferences/org.hola.hola#{version.before_comma.major}e-nosdk.plist",
+    "~/Library/Saved Application State/org.hola.hola#{version.before_comma.major}e-nosdk~iosmac.savedState",
   ]
 end
