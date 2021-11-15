@@ -19,4 +19,11 @@ cask "holavpn" do
   depends_on macos: ">= :catalina"
 
   app "HolaVPN#{version.before_comma.major}E.app"
+
+  zap trash: [
+    "~/Documents/holavpn2e.db*",
+    "~/Library/Caches/org.hola.hola2e-nosdk",
+    "~/Library/Preferences/org.hola.hola2e-nosdk.plist",
+    "~/Library/Saved Application State/org.hola.hola2e-nosdk~iosmac.savedState",
+  ]
 end
