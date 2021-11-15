@@ -17,7 +17,7 @@ cask "p4" do
   end
 
   conflicts_with cask: "perforce"
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :high_sierra"
   container type: :naked
 
   binary "bin.macosx1015x86_64", target: "p4"
