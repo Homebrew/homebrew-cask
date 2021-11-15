@@ -10,8 +10,7 @@ cask "ivideonserver" do
 
   livecheck do
     url "https://www.ivideon.com/downloads/"
-    strategy :page_match
-    regex(%r{href=.*?/IvideonServer_(\d+(?:\.\d+)*)_macosx-x86-64\.dmg}i)
+    regex(%r{href=.*?/IvideonServer[._-]v?(\d+(?:\.\d+)+)[._-]macosx[._-]x86[._-]64\.dmg}i)
   end
 
   app "IvideonServer.app"
