@@ -8,6 +8,7 @@ cask "infoflow" do
   name "百度 Hi"
   name "如流"
   name "infoflow"
+  desc "AI office platform"
   homepage "https://infoflow.baidu.com/"
 
   livecheck do
