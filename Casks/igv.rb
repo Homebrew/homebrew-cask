@@ -1,6 +1,6 @@
 cask "igv" do
-  version "2.11.2"
-  sha256 "8bfaaa12fc29594a654845905407edca7c8b6840902b89ffebe29c8a366c86fd"
+  version "2.11.3"
+  sha256 "6549efea89cb2551aff908ed3c1df757bbec6bdd0c3000320fdc38663238cd54"
 
   url "https://data.broadinstitute.org/igv/projects/downloads/#{version.major_minor}/IGV_MacApp_#{version}.zip"
   name "Integrative Genomics Viewer (IGV)"
@@ -9,8 +9,7 @@ cask "igv" do
 
   livecheck do
     url "https://software.broadinstitute.org/software/igv/download"
-    strategy :page_match
-    regex(%r{href=.*?/IGV_MacApp_(\d+(?:\.\d+)*)\.zip}i)
+    regex(%r{href=.*?/IGV[._-]MacApp[._-]v?(\d+(?:\.\d+)+)\.zip}i)
   end
 
   app "IGV_#{version}.app"
