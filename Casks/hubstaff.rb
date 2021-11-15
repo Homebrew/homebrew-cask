@@ -15,4 +15,9 @@ cask "hubstaff" do
   end
 
   app "Hubstaff.app"
+
+  zap trash: [
+    "~/Library/Application Support/Hubstaff",
+    "~/Library/Preferences/com.netsoft.Hubstaff.plist",
+  ]
 end
