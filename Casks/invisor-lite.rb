@@ -4,6 +4,7 @@ cask "invisor-lite" do
 
   url "https://www.invisorapp.com/download/InvisorLite-#{version.before_comma}.dmg"
   name "Invisor Lite"
+  desc "Media file inspector"
   homepage "https://www.invisorapp.com/"
 
   livecheck do
