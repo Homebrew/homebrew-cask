@@ -12,6 +12,8 @@ cask "hyperkey" do
     regex(/href=.+(\d+(:?\.\d+)).dmg/i)
   end
 
+  depends_on macos: ">= :sierra"
+
   app "Hyperkey.app"
 
   zap trash: [
