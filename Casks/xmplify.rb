@@ -20,10 +20,8 @@ cask "xmplify" do
 
   zap trash: [
     "~/Library/Caches/au.com.moso.Xmplify",
-    "~/Library/Logs/Xmplify.log",
-    "~/Library/Logs/Xmplify Quick Look Generator.log",
-    "~/Library/Preferences/au.com.moso.Xmplify.plist",
-    "~/Library/Preferences/au.com.moso.Xmplify.LSSharedFileList.plist",
+    "~/Library/Logs/Xmplify*.log",
+    "~/Library/Preferences/au.com.moso.Xmplify*.plist",
     "~/Library/Saved Application State/au.com.moso.Xmplify.savedState",
   ]
 end
