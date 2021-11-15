@@ -28,6 +28,7 @@ cask "nordvpn" do
             delete:     [
               "/Library/PrivilegedHelperTools/com.nordvpn.macos.helper",
               "/Library/PrivilegedHelperTools/com.nordvpn.macos.ovpnDnsManager",
+              "/Library/PrivilegedHelperTools/ovpn",
             ],
             login_item: "NordVPN",
             pkgutil:    "com.nordvpn.macos"
