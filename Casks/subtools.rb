@@ -8,4 +8,9 @@ cask "subtools" do
   homepage "http://www.emmgunn.com/subtools-home/"
 
   app "subtools#{version}/SUBtools.app"
+
+  zap trash: [
+    "~/Library/Application Support/EmmGunn",
+    "~/Library/Preferences/com.emmgunn.SUBtools.plist",
+  ]
 end
