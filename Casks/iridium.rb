@@ -9,8 +9,7 @@ cask "iridium" do
 
   livecheck do
     url "https://iridiumbrowser.de/downloads/macos"
-    strategy :page_match
-    regex(/iridium-browser[._-]?(\d+(?:\.\d+)*)[._-]?macos\.dmg/i)
+    regex(/iridium-browser[._-]?v?(\d+(?:\.\d+)+)[._-]?macos\.dmg/i)
   end
 
   app "Iridium.app"
