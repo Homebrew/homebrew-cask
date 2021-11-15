@@ -10,7 +10,7 @@ cask "iina-plus" do
   livecheck do
     url "https://github.com/xjbeta/iina-plus/releases/latest"
     strategy :page_match do |page|
-      match = page.match(/(\d+(?:\.\d+)*)\((\d+)\)/i)
+      match = page.match(/(\d+(?:\.\d+)+)\((\d+)\)/i)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
