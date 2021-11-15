@@ -18,5 +18,5 @@ cask "holavpn" do
 
   depends_on macos: ">= :catalina"
 
-  app "HolaVPN.app"
+  app "HolaVPN#{version.before_comma.major}E.app"
 end
