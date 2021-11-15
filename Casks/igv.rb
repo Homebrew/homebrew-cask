@@ -9,8 +9,7 @@ cask "igv" do
 
   livecheck do
     url "https://software.broadinstitute.org/software/igv/download"
-    strategy :page_match
-    regex(%r{href=.*?/IGV_MacApp_(\d+(?:\.\d+)*)\.zip}i)
+    regex(%r{href=.*?/IGV[._-]MacApp[._-]v?(\d+(?:\.\d+)+)\.zip}i)
   end
 
   app "IGV_#{version}.app"
