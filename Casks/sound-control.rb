@@ -25,4 +25,19 @@ cask "sound-control" do
     "com.static.soundsiphon.inputagent",
   ],
             quit:      "com.staticz.SoundControl"
+
+  zap trash: [
+    "/Library/Audio/Plug-Ins/HAL/_SoundSiphon.driver",
+    "/Library/LaunchAgents/com.staticz.soundsiphon.inputagent.plist",
+    "/Library/LaunchAgents/com.staticz.soundsiphon.playeragent.plist",
+    "/Library/LaunchDaemons/com.staticz.soundsiphon.bridgedaemon.plist",
+    "/Library/Preferences/Audio/Data/_SoundSiphon.driver",
+    "~/Library/Application Support/com.staticz.SoundControl",
+    "~/Library/Caches/com.staticz.SoundControl",
+    "~/Library/Cookies/com.staticz.SoundControl.binarycookies",
+    "~/Library/Cookies/com.staticz.SoundControl.binarycookies*",
+    "~/Library/HTTPStorages/com.staticz.SoundControl.binarycookies",
+    "~/Library/Preferences/com.staticz.SoundControl.plist",
+    "~/Library/Preferences/com.staticz.soundsiphon.playeragent.plist",
+  ]
 end
