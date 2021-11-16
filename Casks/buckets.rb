@@ -5,13 +5,8 @@ cask "buckets" do
   url "https://github.com/buckets/application/releases/download/v#{version}/Buckets-#{version}.dmg",
       verified: "github.com/buckets/application/"
   name "Buckets"
-  desc "Make your budget quick, simple and private"
+  desc "Budgeting tool"
   homepage "https://www.budgetwithbuckets.com/"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 
   app "Buckets.app"
 
