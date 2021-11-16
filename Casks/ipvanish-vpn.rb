@@ -13,4 +13,11 @@ cask "ipvanish-vpn" do
   end
 
   app "IPVanish VPN.app"
+
+  zap trash: [
+   "~/Library/Application Support/com.ipvanish.IPVanish",
+    "~/Library/Caches/com.ipvanish.IPVanish",
+    "~/Library/Logs/IPVanish VPN",
+    "~/Library/Preferences/com.ipvanish.IPVanish.plist",
+  ]
 end
