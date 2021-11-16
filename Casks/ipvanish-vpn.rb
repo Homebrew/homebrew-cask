@@ -12,6 +12,8 @@ cask "ipvanish-vpn" do
     strategy :sparkle
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "IPVanish VPN.app"
 
   zap trash: [
