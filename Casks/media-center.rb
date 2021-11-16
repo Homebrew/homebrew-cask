@@ -10,7 +10,7 @@ cask "media-center" do
   livecheck do
     url "https://www.jriver.com/download.html"
     strategy :page_match do |page|
-      match = page.match(/MediaCenter(\d\d+)(\d\d+)(\d\d+)\.dmg/i)
+      match = page.match(/MediaCenter(\d\d+)(\d\d+)(\d\d+)-Universal\.dmg/i)
       next if match.blank?
 
       "#{match[1]}.#{match[2]}.#{match[3]}"
