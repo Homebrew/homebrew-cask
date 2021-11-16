@@ -1,11 +1,11 @@
 cask "jupyterlab" do
-  version "3.2.1-2"
-  sha256 "e010f1661242efb8bdb4ec0f8cd5149caeee1cd99faf0091a4b15692f6561b5c"
+  version "3.2.3-1"
+  sha256 "df789ac94275c879e81aa6ef162ad599a3d6084551e38b73ee223e3ff2d47271"
 
-  url "https://github.com/jupyterlab/jupyterlab_app/releases/download/v#{version}/JupyterLab-Setup-macOS.pkg"
+  url "https://github.com/jupyterlab/jupyterlab-desktop/releases/download/v#{version}/JupyterLab-Setup-macOS.pkg"
   name "JupyterLab App"
   desc "Desktop application for JupyterLab"
-  homepage "https://github.com/jupyterlab/jupyterlab_app"
+  homepage "https://github.com/jupyterlab/jupyterlab-desktop"
 
   pkg "JupyterLab-Setup-macOS.pkg"
 
