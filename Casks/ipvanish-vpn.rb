@@ -4,6 +4,7 @@ cask "ipvanish-vpn" do
 
   url "https://www.ipvanish.com/software/osx/IPVanish_v#{version.before_comma}_b#{version.after_comma}.zip"
   name "IPVanish"
+  desc "VPN client"
   homepage "https://www.ipvanish.com/"
 
   livecheck do
