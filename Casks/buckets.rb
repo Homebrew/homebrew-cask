@@ -7,7 +7,7 @@ cask "buckets" do
   name "Buckets"
   desc "Budgeting tool"
   homepage "https://www.budgetwithbuckets.com/"
-  
+
   livecheck do
     url :url
     strategy :github_latest
