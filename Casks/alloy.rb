@@ -5,6 +5,7 @@ cask "alloy" do
   url "https://github.com/AlloyTools/org.alloytools.alloy/releases/download/v#{version}/alloy.dmg",
       verified: "github.com/AlloyTools/org.alloytools.alloy/"
   name "Alloy"
+  desc "Programming language for software modelling"
   homepage "https://alloytools.org/"
 
   app "Alloy.app"
