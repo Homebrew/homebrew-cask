@@ -1,12 +1,12 @@
 cask "logseq" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "0.4.5"
+  version "0.4.6"
 
   if Hardware::CPU.intel?
-    sha256 "4f6c2b0fa2fb1353bcc1f7db5c7e742c41e5fcae375d72a97c90f13391ab7971"
+    sha256 "08d37337fe52bbdfa3d34a4fbd9034bb45712cfcbfb9c7d93310a05db68aadf2"
   else
-    sha256 "8e2a5b220fe67c50684b3f0ffae169efac4177c0755331b497d7f20e238d05dd"
+    sha256 "fd0b5ded124f417e9d5813478ce39408212291747d4279b6b7867c6c8c64560f"
   end
 
   url "https://github.com/logseq/logseq/releases/download/#{version}/logseq-darwin-#{arch}-#{version}.dmg"
