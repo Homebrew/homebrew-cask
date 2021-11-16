@@ -1,8 +1,8 @@
 cask "protonvpn" do
   version "2.2.2"
-  sha256 "763f1d682c64a272d127394791deccb93784d5c9b32dcc681ee8ec3f7a116274"
+  sha256 :no_check
 
-  url "https://protonvpn.com/download/ProtonVPN_mac_v#{version}.dmg"
+  url "https://protonvpn.com/download/ProtonVPN_mac_v2.2.2.dmg"
   name "ProtonVPN"
   desc "VPN client focusing on security"
   homepage "https://protonvpn.com/"
