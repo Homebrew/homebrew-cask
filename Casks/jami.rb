@@ -10,7 +10,6 @@ cask "jami" do
 
   livecheck do
     url "https://dl.jami.net/mac_osx/sparkle-ring.xml"
-    strategy :page_match
     regex(/jami[._-]v?(\d+(?:\.\d+)*)\.dmg/i)
   end
 
