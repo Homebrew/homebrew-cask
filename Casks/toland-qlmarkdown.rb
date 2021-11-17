@@ -1,4 +1,4 @@
-cask "qlmarkdown" do
+cask "toland-qlmarkdown" do
   version "1.3.6"
   sha256 "810853c000dd5c3e18978070abb7f595ad52ddfa568fccb428d28b513d1810ab"
 
@@ -8,4 +8,8 @@ cask "qlmarkdown" do
   homepage "https://github.com/toland/qlmarkdown"
 
   qlplugin "QLMarkdown.qlgenerator"
+
+  caveats do
+    discontinued
+  end
 end
