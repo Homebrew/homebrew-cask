@@ -14,7 +14,7 @@ cask "jupyterlab" do
   ],
             delete:  [
               "/Applications/JupyterLab.app",
-              "/usr/local/bin/jlab"
+              "/usr/local/bin/jlab",
             ]
 
   zap trash: [
