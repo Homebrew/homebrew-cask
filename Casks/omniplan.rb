@@ -36,7 +36,7 @@ cask "omniplan" do
 
   auto_updates true
   conflicts_with cask: "homebrew/cask-versions/omniplan3"
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :yosemite"
 
   app "OmniPlan.app"
 
