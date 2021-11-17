@@ -1,5 +1,5 @@
 cask "megasync" do
-  version "4.6.1.0"
+  version "4.6.1"
   sha256 :no_check
 
   url "https://mega.nz/MEGAsyncSetup.dmg"
@@ -8,8 +8,8 @@ cask "megasync" do
   homepage "https://mega.nz/sync"
 
   livecheck do
-    url "https://github.com/meganz/MEGAsync/releases"
-    regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)+)_OSX}i)
+    url :url
+    strategy :extract_plist
   end
 
   auto_updates true
