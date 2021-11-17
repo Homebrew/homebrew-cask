@@ -10,11 +10,11 @@ cask "jupyterlab" do
   pkg "JupyterLab-Setup-macOS.pkg"
 
   uninstall pkgutil: [
-    "com.electron.jupyterlabapp",
     "com.electron.jupyterlab-desktop",
   ],
             delete:  [
               "/Applications/JupyterLab.app",
+              "/usr/local/bin/jlab"
             ]
 
   zap trash: [
