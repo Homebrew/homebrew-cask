@@ -1,4 +1,4 @@
-cask "sbarex-qlmarkdown" do
+cask "qlmarkdown" do
   version "1.0.5"
   sha256 "d0d040a8cb4df32561366eefd908fbcf69c3aaf87e319681777bf18812002679"
 
@@ -18,5 +18,6 @@ cask "sbarex-qlmarkdown" do
     "~/Library/Containers/org.sbarex.QLMarkdown",
     "~/Library/Containers/org.sbarex.QLMarkdown.QLExtension",
     "~/Library/Preferences/org.sbarex.QLMarkdown.plist",
+    "~/Library/QuickLook/QLMarkdown.qlgenerator",
   ]
 end
