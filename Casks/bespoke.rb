@@ -13,7 +13,7 @@ cask "bespoke" do
     strategy :github_latest
   end
 
-  suite "BespokeSynth"
+  suite "BespokeSynth.app"
 
   zap trash: [
     "~/Library/Caches/com.ryanchallinor.bespokesynth",
