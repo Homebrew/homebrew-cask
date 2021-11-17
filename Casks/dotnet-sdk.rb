@@ -40,8 +40,6 @@ cask "dotnet-sdk" do
     binary "/usr/local/share/dotnet/dotnet"
   end
 
-  binary "/usr/local/share/dotnet/dotnet"
-
   uninstall pkgutil: [
     "com.microsoft.dotnet.*",
     "com.microsoft.netstandard.pack.targeting.*",
