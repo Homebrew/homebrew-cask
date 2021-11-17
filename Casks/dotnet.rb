@@ -34,7 +34,11 @@ cask "dotnet" do
   depends_on macos: ">= :mojave"
 
   pkg "dotnet-runtime-#{version.before_comma}-osx-#{arch}.pkg"
-  binary "/usr/local/share/dotnet/dotnet"
+  if Hardware::CPU.intel?
+    binary "/usr/local/share/dotnet/#{arch}/dotnet"
+  else
+    binary "/usr/local/share/dotnet/dotnet"
+  end
 
   uninstall pkgutil: "com.microsoft.dotnet.*",
             delete:  "/etc/paths.d/dotnet"
