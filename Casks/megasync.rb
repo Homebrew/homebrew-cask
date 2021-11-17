@@ -9,8 +9,7 @@ cask "megasync" do
 
   livecheck do
     url "https://github.com/meganz/MEGAsync/releases"
-    strategy :page_match
-    regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)*)_OSX}i)
+    regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)+)_OSX}i)
   end
 
   auto_updates true
