@@ -18,10 +18,12 @@ cask "jupyterlab" do
             ]
 
   zap trash: [
-    "~/Library/Application Support/jupyterlab_app",
+    "~/.jupyter",
+    "~/Library/Application Support/jupyterlab-desktop",
+    "~/Library/Jupyter",
     "~/Library/Logs/JupyterLab",
-    "~/Library/Logs/jupyterlab_app",
-    "~/Library/Preferences/com.electron.jupyterlabapp.plist",
-    "~/Library/Saved Application State/com.electron.jupyterlabapp.savedState",
+    "~/Library/Logs/jupyterlab-desktop",
+    "~/Library/Preferences/com.electron.jupyterlab-desktop.plist",
+    "~/Library/Saved Application State/com.electron.jupyterlab-desktop.savedState",
   ]
 end
