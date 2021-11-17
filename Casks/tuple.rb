@@ -1,8 +1,8 @@
 cask "tuple" do
-  version "0.91.0-2021-10-03-c4650309"
-  sha256 "96b0ecc58298c3ff26eadb744d2e5fded73389997c4cbe4c2817b5c7ba72d0f5"
+  version "0.92.2,2021-11-12,54306c8f"
+  sha256 "99e8aa3e59b35c7fa798e06f3895a41d80784679cd3a880a3c39d74a3ed53be4"
 
-  url "https://d32ifkf9k9ezcg.cloudfront.net/production/sparkle/tuple-#{version}.zip",
+  url "https://d32ifkf9k9ezcg.cloudfront.net/production/sparkle/tuple-#{version.tr(",", "-")}.zip",
       verified: "d32ifkf9k9ezcg.cloudfront.net/"
   name "Tuple"
   desc "Remote pair programming app"
@@ -10,7 +10,12 @@ cask "tuple" do
 
   livecheck do
     url "https://d32ifkf9k9ezcg.cloudfront.net/production/sparkle/appcast.xml"
-    strategy :sparkle, &:version
+    strategy :sparkle do |item|
+      match = item.version.match(/^v?(\d+(?:\.\d+)+)[._-](\d+(?:-\d+)+)[._-](\h+)$/i)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]},#{match[3]}"
+    end
   end
 
   auto_updates true
