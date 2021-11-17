@@ -4,6 +4,7 @@ cask "jdiskreport" do
 
   url "http://www.jgoodies.com/download/jdiskreport/jdiskreport-#{version.dots_to_underscores}-mac.zip"
   name "JDiskReport"
+  desc "Disk usage utility"
   homepage "http://www.jgoodies.com/freeware/jdiskreport/"
 
   livecheck do
