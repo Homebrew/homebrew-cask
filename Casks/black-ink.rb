@@ -8,7 +8,7 @@ cask "black-ink" do
   homepage "https://redsweater.com/blackink/"
 
   livecheck do
-    url "https://redsweater.com/blackink/appcast2.php"
+    url "https://redsweater.com/blackink/appcast#{version.major}.php"
     strategy :sparkle
   end
 
