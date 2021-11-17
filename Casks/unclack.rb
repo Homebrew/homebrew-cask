@@ -1,5 +1,5 @@
 cask "unclack" do
-  version "1.1.1,9"
+  version "1.2.0,12"
   sha256 :no_check
 
   url "https://unclack.app/app/Unclack.dmg"
