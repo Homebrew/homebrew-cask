@@ -10,7 +10,7 @@ cask "qq" do
   livecheck do
     url "https://im.qq.com/proxy/domain/qzonestyle.gtimg.cn/qzone/qzactStatics/configSystem/data/1373/config1.js"
     strategy :page_match
-    regex(%r{/QQforMac/QQ_(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{/QQforMac/QQ_(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "QQ.app"
@@ -18,13 +18,13 @@ cask "qq" do
   uninstall quit: "com.tencent.qq"
 
   zap trash: [
-    "~/Library/Application Scripts/FN2V63AD2J.com.tencent.ScreenCapture2",
-    "~/Library/Application Scripts/FN2V63AD2J.com.tencent.localserver2",
     "~/Library/Application Scripts/com.tencent.qq",
+    "~/Library/Application Scripts/FN2V63AD2J.com.tencent.localserver2",
+    "~/Library/Application Scripts/FN2V63AD2J.com.tencent.ScreenCapture2",
     "~/Library/Caches/com.tencent.qq",
-    "~/Library/Containers/FN2V63AD2J.com.tencent.ScreenCapture2",
-    "~/Library/Containers/FN2V63AD2J.com.tencent.localserver2",
     "~/Library/Containers/com.tencent.qq",
+    "~/Library/Containers/FN2V63AD2J.com.tencent.localserver2",
+    "~/Library/Containers/FN2V63AD2J.com.tencent.ScreenCapture2",
     "~/Library/Group Containers/FN2V63AD2J.com.tencent",
     "~/Library/Preferences/com.tencent.qq.plist",
     "~/Library/Saved Application State/com.tencent.qq.savedState",
