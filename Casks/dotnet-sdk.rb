@@ -34,6 +34,12 @@ cask "dotnet-sdk" do
   depends_on macos: ">= :mojave"
 
   pkg "dotnet-sdk-#{version.before_comma}-osx-#{arch}.pkg"
+  if Hardware::CPU.intel?
+    binary "/usr/local/share/dotnet/#{arch}/dotnet"
+  else
+    binary "/usr/local/share/dotnet/dotnet"
+  end
+
   binary "/usr/local/share/dotnet/dotnet"
 
   uninstall pkgutil: [
