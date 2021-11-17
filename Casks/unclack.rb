@@ -12,6 +12,8 @@ cask "unclack" do
     regex(%r{href=.*?/v?(\d+(?:\.\d+)+)/Unclack\.dmg}i)
   end
 
+  depends_on macos: ">= :catalina"
+
   app "Unclack.app"
 
   zap trash: [
