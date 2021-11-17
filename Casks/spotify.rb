@@ -18,9 +18,10 @@ cask "spotify" do
   livecheck do
     url :url
     strategy :extract_plist do |items|
-      items["com.spotify.client"].version.match(/^(\d+(?:\.\d+)+)[._-]g(\h+)[._-](\d+)$/)&.then do |match|
-        "#{match[1]},#{match[2]},#{match[3]}"
-      end
+      match = items["com.spotify.client"].version.match(/^(\d+(?:\.\d+)+)[._-]g(\h+)[._-](\d+)$/i)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]},#{match[3]}"
     end
   end
 
