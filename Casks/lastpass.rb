@@ -1,5 +1,5 @@
 cask "lastpass" do
-  version "4.84.0,1209"
+  version "4.85.0,1214"
   sha256 :no_check
 
   url "https://download.cloud.lastpass.com/mac/LastPass.dmg"
