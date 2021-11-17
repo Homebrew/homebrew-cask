@@ -1,8 +1,8 @@
 cask "unclack" do
-  version "1.1.1,9"
-  sha256 :no_check
+  version "1.2.0"
+  sha256 "3f260fea020f4f2ed7ce7b0c9f7a300dd2987aebf7e5b4ba022e3adea6c306a9"
 
-  url "https://unclack.app/app/Unclack.dmg"
+  url "https://unclack.app/app/#{version}/Unclack.dmg"
   name "Unclack"
   desc "Mutes your keyboard while you type"
   homepage "https://unclack.app/"
