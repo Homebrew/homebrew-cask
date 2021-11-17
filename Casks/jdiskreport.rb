@@ -6,5 +6,15 @@ cask "jdiskreport" do
   name "JDiskReport"
   homepage "http://www.jgoodies.com/freeware/jdiskreport/"
 
+  livecheck do
+    url "http://www.jgoodies.com/downloads/jdiskreport/"
+    strategy :page_match do |page|
+      match = page[/href=.*?jdiskreport[._-]?v?(\d+(?:_\d+)+)[._-]mac\.zip/i, 1]
+      next if match.blank?
+
+      match.tr("_", ".")
+    end
+  end
+
   app "JDiskReport #{version}/JDiskReport.app"
 end
