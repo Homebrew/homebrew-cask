@@ -14,12 +14,13 @@ cask "sdm" do
 
   app "SDM.app"
 
+  uninstall delete: "#{appdir}/SDM.app/Contents/Resources/sdm-socket"
+
   zap trash: [
+    "~/.sdm",
     "~/Library/Application Support/SDM",
-    "~/Library/Caches/com.electron.sdm",
-    "~/Library/Caches/com.electron.sdm.ShipIt",
+    "~/Library/Caches/com.electron.sdm*",
     "~/Library/Preferences/com.electron.sdm.plist",
     "~/Library/Saved Application State/com.electron.sdm.savedState",
-    "~/.sdm",
   ]
 end
