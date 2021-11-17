@@ -26,10 +26,9 @@ cask "android-studio" do
 
   zap trash: [
     "~/Library/Android/sdk",
-    "~/Library/Application Support/AndroidStudio#{version.major_minor}",
-    "~/Library/Caches/AndroidStudio#{version.major_minor}",
-    "~/Library/Logs/AndroidStudio#{version.major_minor}",
-    "~/Library/Preferences/AndroidStudio#{version.major_minor}",
+    "~/Library/Application Support/Google/AndroidStudio#{version.major_minor}",
+    "~/Library/Caches/Google/AndroidStudio#{version.major_minor}",
+    "~/Library/Logs/Google/AndroidStudio#{version.major_minor}",
     "~/Library/Preferences/com.android.Emulator.plist",
     "~/Library/Preferences/com.google.android.studio.plist",
     "~/Library/Saved Application State/com.google.android.studio.savedState",
