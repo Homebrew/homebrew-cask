@@ -1,6 +1,6 @@
 cask "miditrail" do
-  version "1.3.3,75216"
-  sha256 "d67b18790b0ee486b2b2e590a9227940cdf5eca2eb27dcb24df0e85fff3f47b5"
+  version "1.3.4,75981"
+  sha256 "ce8b2b891e50aaf0f2d30c7ef89a03d09cf7c3ae91985e5abe0df0df47dfa09b"
 
   url "https://acc.dl.osdn.jp/miditrail/#{version.after_comma}/MIDITrail-Ver.#{version.before_comma}-macOS.zip",
       verified: "acc.dl.osdn.jp/miditrail/"

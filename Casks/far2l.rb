@@ -1,34 +1,28 @@
 cask "far2l" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
+  version "2.3.210921-716b329,2021-09-21_alpha"
+
   if MacOS.version <= :mojave
-    version "2.3.210630-fa68e35,2021-06-30_alpha"
+    sha256 "efcf4b9cc19e1a0fce2e2526b0e1549f95a2ee1a1f532a0056daf575311f7935"
+
     url "https://github.com/elfmz/far2l/releases/download/v#{version.after_comma}/far2l-#{version.before_comma}-alpha-MacOS-10.11.dmg"
-    sha256 "ecfc1daa71d9f7e5188a9ba3249981efc1d1522a817c6059a809b161d081cae3"
-
-    livecheck do
-      url "https://github.com/elfmz/far2l/releases"
-      regex(%r{/v(.*)/far2l-(.*)-alpha-MacOS-10\.11\.dmg}i)
-      strategy :page_match do |page, regex|
-        page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
-      end
-    end
   else
-    version "2.3.210630-fa68e350,2021-06-30_alpha"
-    url "https://github.com/elfmz/far2l/releases/download/v#{version.after_comma}/far2l-#{version.before_comma}-alpha-MacOS-10.15.dmg"
-    sha256 "dce76a889cfaef7c6bd056f41419aafb53b8753685a0258ba72e3a1a31372ec6"
+    sha256 "b78ee531f31ad6174a6211ee3841eff929089fca215c26ffb47c5913ed66d19b"
 
-    livecheck do
-      url "https://github.com/elfmz/far2l/releases"
-      regex(%r{/v(.*)/far2l-(.*)-alpha-MacOS-10\.15\.dmg}i)
-      strategy :page_match do |page, regex|
-        page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
-      end
-    end
+    url "https://github.com/elfmz/far2l/releases/download/v#{version.after_comma}/far2l-#{version.before_comma}-alpha-MacOS-10.15.dmg"
   end
 
   name "far2l"
   desc "Unix fork of FAR Manager v2"
   homepage "https://github.com/elfmz/far2l"
+
+  livecheck do
+    url "https://github.com/elfmz/far2l/releases"
+    regex(%r{/v(.*)/far2l-(.*)-alpha-MacOS-10\.(11|15)\.dmg}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
+    end
+  end
 
   depends_on macos: ">= :el_capitan"
 

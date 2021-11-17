@@ -12,6 +12,8 @@ cask "rowanj-gitx" do
     url "https://github.com/rowanj/gitx/releases/latest"
     strategy :page_match do |page|
       match = page.match(%r{href=.*?%2F(\d+(?:\.\d+)*)%2F(\d+)/GitX-dev-\d+\.dmg}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

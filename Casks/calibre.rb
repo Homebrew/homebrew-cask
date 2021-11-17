@@ -3,8 +3,8 @@ cask "calibre" do
     version "3.48.0"
     sha256 "68829cd902b8e0b2b7d5cf7be132df37bcc274a1e5720b4605d2dd95f3a29168"
   else
-    version "5.27.0"
-    sha256 "ad62a6f6e12ecfc449dccde73bfa44541a5835bb3bda9662a489f019b75c49a5"
+    version "5.32.0"
+    sha256 "5a8823af9d7ff743a877352c0d85bf3cc739d9dbc23f4abed8376c6ebd622fff"
   end
 
   url "https://download.calibre-ebook.com/#{version}/calibre-#{version}.dmg"
@@ -42,8 +42,10 @@ cask "calibre" do
   binary "#{appdir}/calibre.app/Contents/MacOS/web2disk"
 
   zap trash: [
+    "~/Library/Application Support/calibre-ebook.com",
     "~/Library/Caches/calibre",
     "~/Library/Preferences/calibre",
+    "~/Library/Preferences/com.calibre-ebook.ebook-viewer.plist",
     "~/Library/Preferences/net.kovidgoyal.calibre.plist",
     "~/Library/Saved Application State/com.calibre-ebook.ebook-viewer.savedState",
     "~/Library/Saved Application State/net.kovidgoyal.calibre.savedState",

@@ -1,6 +1,6 @@
 cask "elpass" do
-  version "1.3.5,363"
-  sha256 "326ca7831ca16e6469be4bc8843d8338804e86d0d6cf15dd3fd25aff5347f842"
+  version "1.4.2,412"
+  sha256 "da78de7639ea804d24764c22a34e8511f9863056d2e5923931c3c520363ff8de"
 
   url "https://elpass.app/macos/Elpass-#{version.before_comma}-#{version.after_comma}.zip"
   name "Elpass"

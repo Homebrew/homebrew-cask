@@ -1,10 +1,11 @@
 cask "alloy" do
-  version "5.1.0"
-  sha256 "177140c1e36a1429b91265b7e7e56d694cbf9bd991db40f8b3d92af1d9b8b837"
+  version "6.0.0"
+  sha256 "b51300410b96abe696be14be98b5277c8a732f0d7275ea62b83d7ab85151be52"
 
   url "https://github.com/AlloyTools/org.alloytools.alloy/releases/download/v#{version}/alloy.dmg",
       verified: "github.com/AlloyTools/org.alloytools.alloy/"
   name "Alloy"
+  desc "Programming language for software modelling"
   homepage "https://alloytools.org/"
 
   app "Alloy.app"

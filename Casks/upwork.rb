@@ -11,6 +11,8 @@ cask "upwork" do
     url "https://upwork-usw2-desktopapp.upwork.com/binaries/versions-mac.json"
     strategy :page_match do |page|
       match = page.match(%r{/v(\d+(?:_\d+)*)_([^/]+)/Upwork\.dmg}i)
+      next if match.blank?
+
       "#{match[1].tr("_", ".")},#{match[2]}"
     end
   end

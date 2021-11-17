@@ -13,6 +13,8 @@ cask "voov-meeting" do
     url "https://voovmeeting.com/download/darwin"
     strategy :header_match do |headers|
       match = headers["location"].match(/_(\d+)_(\d+(?:\.\d+)*)\.publish\.dmg/)
+      next if match.blank?
+
       "#{match[2]},#{match[1]}"
     end
   end

@@ -1,19 +1,25 @@
 cask "deltawalker" do
-  version "2.5.6"
-  sha256 "d823244f7262351b7bc3ffa39c3a01eede50f9d079f81f32435d3642e8b9a9d3"
+  version "2.6.1"
+  sha256 "0acdf90bca9210ebb436a3e1da8828cfed1e98fbaa593da61daf360fd450d3e6"
 
   url "https://deltawalker.s3.amazonaws.com/DeltaWalker-#{version}.dmg",
       verified: "deltawalker.s3.amazonaws.com/"
   name "DeltaWalker"
   desc "Tool to compare and synchronize files and folders"
-  homepage "https://www.deltawalker.com/"
+  homepage "http://www.deltawalker.com/"
 
   livecheck do
-    url "https://www.deltawalker.com/assets/js/main.js"
-    regex(/DeltaWalker[._-]?v?(\d+(?:\.\d+)*)\.dmg/)
+    url "http://www.deltawalker.com/download"
+    regex(/href=.*?DeltaWalker[._-]?v?(\d+(?:\.\d+)+)\.dmg/)
   end
 
   app "DeltaWalker.app"
+
+  uninstall script: {
+    executable:   "#{staged_path}/run-me-first",
+    sudo:         false,
+    must_succeed: false,
+  }
 
   zap trash: [
     "~/Library/Caches/com.deltopia.DeltaWalker",

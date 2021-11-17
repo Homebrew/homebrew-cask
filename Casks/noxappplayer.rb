@@ -11,6 +11,8 @@ cask "noxappplayer" do
     url "https://www.bignox.com/en/download/fullPackage/mac_fullzip"
     strategy :header_match do |headers|
       match = headers["location"].match(%r{/(\d+)/([^/]+)\.dmg\?filename=NoxInstaller_(\d+(?:\.\d+)*)_en\.dmg}i)
+      next if match.blank?
+
       "#{match[3]},#{match[1]}:#{match[2]}"
     end
   end

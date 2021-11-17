@@ -1,8 +1,8 @@
 cask "vmware-fusion" do
-  version "12.1.2-17964953"
-  sha256 "873049d4080168b56085c5b67be1d4eeb14debc0e6cf176dbd52c78518d0b883"
+  version "12.2.1,18811640"
+  sha256 "bb87e0a7db38beaf29ec9fd1191a092fd0bcc9f24c4bdc3ceebf65ff52289a52"
 
-  url "https://download3.vmware.com/software/fusion/file/VMware-Fusion-#{version}.dmg"
+  url "https://download3.vmware.com/software/fusion/file/VMware-Fusion-#{version.before_comma}-#{version.after_comma}_x86.dmg"
   name "VMware Fusion"
   desc "Create, manage, and run virtual machines"
   homepage "https://www.vmware.com/products/fusion.html"
@@ -10,14 +10,14 @@ cask "vmware-fusion" do
   livecheck do
     url "https://softwareupdate.vmware.com/cds/vmw-desktop/fusion.xml"
     strategy :page_match do |page|
-      scan = page.scan(%r{fusion/(\d+(?:\.\d+)+)/(\d+)/core}i)
-      scan.map { |v| "#{v[0]}-#{v[1]}" }
+      scan = page.scan(%r{fusion/(\d+(?:\.\d+)+)/(\d+)/x86}i)
+      scan.map { |v| "#{v[0]},#{v[1]}" }
     end
   end
 
   auto_updates true
   conflicts_with cask: "vmware-fusion-tech-preview"
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "VMware Fusion.app"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/VMware OVF Tool/ovftool"

@@ -1,6 +1,6 @@
 cask "vnc-viewer" do
-  version "6.21.406"
-  sha256 "613e67e87632ae1fa266e72d051fdbf77a32fe2e3d29e372bbf00c6159a35dd2"
+  version "6.21.920"
+  sha256 "9009c37ada8b51f92358e6aec97ea756e8415046c6272642dd1ff9f742e0788d"
 
   url "https://www.realvnc.com/download/file/viewer.files/VNC-Viewer-#{version}-MacOSX-x86_64.dmg"
   name "Real VNC Viewer"

@@ -1,9 +1,10 @@
 cask "uninstallpkg" do
-  version "1.1.9,1405"
-  sha256 "4815c2c4ce97f1e5768690651efaf2d7a4feec34a446a027cc866ad78b96ac02"
+  version "1.2.0,1512"
+  sha256 "1997d5ad61b809cc656214e7277d12e016bf6004b5ae04f241e0aa93d1814620"
 
   url "https://www.corecode.io/downloads/uninstallpkg_#{version.before_comma}.zip"
   name "UninstallPKG"
+  desc "PKG software package uninstall tool"
   homepage "https://www.corecode.io/uninstallpkg/"
 
   livecheck do

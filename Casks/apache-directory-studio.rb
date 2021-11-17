@@ -17,6 +17,11 @@ cask "apache-directory-studio" do
   zap trash: "~/.ApacheDirectoryStudio"
 
   caveats do
-    depends_on_java "8+"
+    depends_on_java "11+"
+    <<~EOS
+      To set the Java VM to use:
+
+        https://directory.apache.org/studio/faqs.html#how-to-set-the-java-vm-to-use
+    EOS
   end
 end

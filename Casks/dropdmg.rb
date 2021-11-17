@@ -10,7 +10,7 @@ cask "dropdmg" do
   livecheck do
     url "https://c-command.com/dropdmg/"
     strategy :page_match
-    regex(%r{href=.*?/DropDMG-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/DropDMG-(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "DropDMG.app"

@@ -1,5 +1,5 @@
 cask "river-sparkle" do
-  version "3.1.3,8548"
+  version "3.1.4,8560"
   sha256 :no_check
 
   url "https://sparkleapp.com/update/Sparkle.zip"

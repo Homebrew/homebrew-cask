@@ -1,5 +1,5 @@
 cask "qgroundcontrol" do
-  version "4.0.11"
+  version "4.1.4"
   sha256 :no_check
 
   url "https://qgroundcontrol.s3.amazonaws.com/latest/QGroundControl.dmg",

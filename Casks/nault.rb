@@ -1,6 +1,6 @@
 cask "nault" do
-  version "1.15.0"
-  sha256 "5c13bacbd888a7d3d4065c0e04caa8d699c6b3d2e92b57a9673cd040dbe52333"
+  version "1.16.0"
+  sha256 "7d7fa36570f6b5ad251ce6bee39a4cb4bc091100d8757a0c9d0919c153474829"
 
   url "https://github.com/Nault/Nault/releases/download/v#{version}/Nault-#{version}-Mac.dmg"
   name "Nault"

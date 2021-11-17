@@ -1,6 +1,6 @@
 cask "darktable" do
-  version "3.6.1.5"
-  sha256 "0fa0cd49971fdf76f690be095600250ad7777c2317f969c7135f035bc7b5f0ee"
+  version "3.6.1.6"
+  sha256 "8c22e442ecf079a2651871847e08d1317c30aeded8f15dc364ae395dd2ca5850"
 
   url "https://github.com/darktable-org/darktable/releases/download/release-#{version.major_minor_patch}/darktable-#{version}.dmg",
       verified: "github.com/darktable-org/darktable/"

@@ -1,5 +1,5 @@
 cask "smultron" do
-  version "12.4.5,12450"
+  version "12.5,12500"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://www.peterborgapps.com/downloads/Smultron#{version.major}.zip"
@@ -8,7 +8,7 @@ cask "smultron" do
   homepage "https://www.peterborgapps.com/smultron/"
 
   livecheck do
-    url :url
+    url "https://www.peterborgapps.com/updates/smultron#{version.major}.plist"
     strategy :extract_plist
   end
 

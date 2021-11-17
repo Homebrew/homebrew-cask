@@ -9,4 +9,9 @@ cask "todometer" do
   homepage "https://cassidoo.github.io/todometer/"
 
   app "mac/todometer.app"
+
+  zap trash: [
+    "~/Library/Application Support/todometer",
+    "~/Library/Preferences/com.electron.todometer.plist",
+  ]
 end

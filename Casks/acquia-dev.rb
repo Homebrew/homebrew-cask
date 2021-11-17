@@ -7,14 +7,6 @@ cask "acquia-dev" do
   desc "Install, test, and build Drupal sites locally"
   homepage "https://www.acquia.com/drupal/acquia-dev-desktop"
 
-  livecheck do
-    url "https://dev.acquia.com/downloads"
-    strategy :page_match do |page|
-      v = page[%r{href=.*?/AcquiaDevDesktop-(\d+(?:-\d+)*)-osx-installer_0\.zip}, 1]
-      v.tr("-", ".")
-    end
-  end
-
   installer manual: "Acquia Dev Desktop Installer.app"
 
   uninstall script: {
@@ -28,4 +20,8 @@ cask "acquia-dev" do
     "~/Library/Caches/com.acquia.acquia-dev-desktop#{version.major}",
     "~/Library/Saved Application State/com.acquia.acquia-dev-desktop#{version.major}.savedState",
   ]
+
+  caveats do
+    discontinued
+  end
 end

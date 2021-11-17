@@ -1,18 +1,16 @@
 cask "chromedriver" do
-  version "93.0.4577.63"
+  arch = Hardware::CPU.intel? ? "mac64" : "mac64_m1"
+
+  version "95.0.4638.69"
 
   if Hardware::CPU.intel?
-    sha256 "ff4469d533dd09998fc99767468995b81b2ccd180811d961496e3b4f9d058284"
-
-    url "https://chromedriver.storage.googleapis.com/#{version}/chromedriver_mac64.zip",
-        verified: "chromedriver.storage.googleapis.com/"
+    sha256 "7d70a8c0441ef9b572ac17ecbb2f1976a1689b2ed04aebb7e5586fe097ddf830"
   else
-    sha256 "e1e9998dc8430b1862477dd02b1737d7ff2c797ad841ed11dc5dd1c1aeebab5d"
-
-    url "https://chromedriver.storage.googleapis.com/#{version}/chromedriver_mac64_m1.zip",
-        verified: "chromedriver.storage.googleapis.com/"
+    sha256 "11b8e73ea5c1a01a17ae484c63155fb5a9674a3799c0225184aec305a5f705fe"
   end
 
+  url "https://chromedriver.storage.googleapis.com/#{version}/chromedriver_#{arch}.zip",
+      verified: "chromedriver.storage.googleapis.com/"
   name "ChromeDriver"
   desc "Automated testing of webapps for Google Chrome"
   homepage "https://sites.google.com/chromium.org/driver/"

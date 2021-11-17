@@ -1,15 +1,15 @@
 cask "gpg-suite" do
-  version "2021.1,105"
-  sha256 "383bd6ab4791ee51e0f67955ad1ab70bb3a2a1e5c71f6a7f42f53b92684106e0"
+  version "2021.2"
+  sha256 "828df766dec3aa1ad4fbd29c8dd6a830d756694fae1a9f38ae78b6cfcf403f52"
 
-  url "https://releases.gpgtools.org/GPG_Suite-#{version.before_comma}_#{version.after_comma}.dmg"
+  url "https://releases.gpgtools.org/GPG_Suite-#{version}.dmg"
   name "GPG Suite"
   desc "Tools to protect your emails and files"
   homepage "https://gpgtools.org/"
 
   livecheck do
-    url "https://gpgtools.org/releases/gka/appcast.xml"
-    strategy :sparkle
+    url :homepage
+    regex(/href=.*?GPG_Suite[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   auto_updates true

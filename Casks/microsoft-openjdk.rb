@@ -1,26 +1,26 @@
 cask "microsoft-openjdk" do
-  version "16.0.2.7.1"
+  arch = Hardware::CPU.intel? ? "x64" : "aarch64"
+
+  version "17.0.1.12.1"
 
   if Hardware::CPU.intel?
-    sha256 "a8a206ec15a4631532852d449b662fe737342606c326f1e133f64ce9837d9292"
-    url "https://aka.ms/download-jdk/microsoft-jdk-#{version}-macOS-x64.pkg",
-        verified: "aka.ms/download-jdk/"
-    pkg "microsoft-jdk-#{version}-macOS-x64.pkg"
+    sha256 "f39e87d5c76c7e108e8e24645f294b5921dd5a431c8a62a58578dd83dfcb8cae"
   else
-    sha256 "1236df500f6f8627670805485b8cef53578b0808c7ec7a2e50eae6ca2b90caf9"
-    url "https://aka.ms/download-jdk/microsoft-jdk-#{version}-macOS-aarch64.pkg",
-        verified: "aka.ms/download-jdk/"
-    pkg "microsoft-jdk-#{version}-macOS-aarch64.pkg"
+    sha256 "d149d45d0c1e149c878de231d2c37110876f4501816195e23aec132fa26e5536"
   end
 
+  url "https://aka.ms/download-jdk/microsoft-jdk-#{version}-macOS-#{arch}.pkg",
+      verified: "aka.ms/download-jdk/"
   name "Microsoft Build of OpenJDK"
   desc "OpenJDK distribution from Microsoft"
   homepage "https://microsoft.com/openjdk"
 
   livecheck do
     url "https://docs.microsoft.com/java/openjdk/download"
-    regex(%r{href=.*?/microsoft[._-]jdk[._-]v?(\d+(?:\.\d+)+)[._-]macOS[._-](aarch64|x64)\.pkg}i)
+    regex(%r{href=.*?/microsoft[._-]jdk[._-]v?(\d+(?:\.\d+)+)[._-]macOS[._-]#{arch}\.pkg}i)
   end
+
+  pkg "microsoft-jdk-#{version}-macOS-#{arch}.pkg"
 
   uninstall pkgutil: "com.microsoft.#{version.major}.jdk"
 end

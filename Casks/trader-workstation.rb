@@ -1,5 +1,5 @@
 cask "trader-workstation" do
-  version "10.10.2m"
+  version "10.11.2c"
   sha256 :no_check
 
   url "https://download2.interactivebrokers.com/installers/tws/latest/tws-latest-macosx-x64.dmg"
@@ -17,7 +17,11 @@ cask "trader-workstation" do
     args:       ["-q"],
   }
 
-  uninstall quit:   "com.install4j.5889-6375-8446-2021.22",
+  uninstall_preflight do
+    system_command "/usr/bin/pkill", args: ["-f", "/Applications/Trader Workstation/Trader Workstation.app"]
+  end
+
+  uninstall quit:   "com.install4j.5889-6375-8446-2021",
             script: {
               executable: "/Applications/Trader Workstation/Trader Workstation Uninstaller.app/Contents/MacOS/JavaApplicationStub",
               args:       ["-q"],

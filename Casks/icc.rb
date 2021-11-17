@@ -12,6 +12,8 @@ cask "icc" do
     url "https://www.chessclub.com/software-download/icc-for-mac"
     strategy :page_match do |page|
       match = page.match(/>\s*(\d+(?:\.\d+)*)\s*r(\d+)\s*/i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

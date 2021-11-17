@@ -1,6 +1,6 @@
 cask "clashx" do
-  version "1.70.0"
-  sha256 "21020591da8759206dc944547028d0215b5e86373401ca513f275140bae086b6"
+  version "1.72.0"
+  sha256 "5afd763eecfc34f430fb81a6c7d69e13f1fac459736262f2fd80211cb361ff25"
 
   url "https://github.com/yichengchen/clashX/releases/download/#{version}/ClashX.dmg"
   name "ClashX"
@@ -18,20 +18,20 @@ cask "clashx" do
   app "ClashX.app"
 
   uninstall delete:    [
-    "/Library/PrivilegedHelperTools/com.west2online.ClashX.ProxyConfigHelper",
     "/Library/LaunchDaemons/com.west2online.ClashX.ProxyConfigHelper.plist",
+    "/Library/PrivilegedHelperTools/com.west2online.ClashX.ProxyConfigHelper",
   ],
             launchctl: "com.west2online.ClashX.ProxyConfigHelper",
             quit:      "com.west2online.ClashX"
 
   zap trash: [
     "~/Library/Application Support/com.west2online.ClashX",
-    "~/Library/Cookies/com.west2online.ClashX.binarycookies",
-    "~/Library/Caches/io.fabric.sdk.mac.data/com.west2online.ClashX",
-    "~/Library/Caches/com.west2online.ClashX",
     "~/Library/Caches/com.crashlytics.data/com.west2online.ClashX",
-    "~/Library/Preferences/com.west2online.ClashX.plist",
+    "~/Library/Caches/com.west2online.ClashX",
+    "~/Library/Caches/io.fabric.sdk.mac.data/com.west2online.ClashX",
+    "~/Library/Cookies/com.west2online.ClashX.binarycookies",
     "~/Library/Logs/ClashX",
+    "~/Library/Preferences/com.west2online.ClashX.plist",
     "~/.config/clash/",
   ]
 end

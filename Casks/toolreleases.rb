@@ -11,6 +11,8 @@ cask "toolreleases" do
     url "https://github.com/DeveloperMaris/ToolReleases/releases/latest"
     strategy :page_match do |page|
       match = page.match(%r{href=.*?/ToolReleases_v?(\d+(?:\.\d+)*)\.b(\d+)\.zip}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

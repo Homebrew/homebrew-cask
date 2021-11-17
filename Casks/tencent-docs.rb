@@ -1,5 +1,5 @@
 cask "tencent-docs" do
-  version "2.2.1"
+  version "2.2.23"
   sha256 :no_check
 
   url "https://down.qq.com/qqweb/mac_docs/MacTencentDocs.dmg"
@@ -14,9 +14,6 @@ cask "tencent-docs" do
     #   --data-binary \
     #   '{"pull_item":{"app_id":"936c3190-4a5a-4608-ac9e-d37fe33f40be","group":"DOWNLOAD.release-note-mac"}}' \
     #   https://docs.qq.com/config.v2.ConfigService/PullConfigReq
-    url "https://docs.qq.com/home/download"
-    strategy :page_match
-    regex(/Mac\s*版本号\s*(\d+(?:\.\d+)*)/i)
     skip "only works with POST request"
   end
 

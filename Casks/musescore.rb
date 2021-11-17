@@ -22,7 +22,7 @@ cask "musescore" do
   binary shimscript, target: "mscore"
 
   preflight do
-    IO.write shimscript, <<~EOS
+    File.write shimscript, <<~EOS
       #!/bin/sh
       exec '#{appdir}/MuseScore #{version.major}.app/Contents/MacOS/mscore' "$@"
     EOS

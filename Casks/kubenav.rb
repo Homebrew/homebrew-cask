@@ -1,14 +1,14 @@
 cask "kubenav" do
-  version "3.7.0"
+  arch = Hardware::CPU.intel? ? "amd64" : "arm64"
 
+  version "3.7.2"
+
+  url "https://github.com/kubenav/kubenav/releases/download/#{version}/kubenav-darwin-#{arch}.zip",
+      verified: "github.com/kubenav/kubenav/"
   if Hardware::CPU.intel?
-    sha256 "550bb6289741ef1b7fce06478c117bbcbe486db5c9362ee3a3a2afb45720fe90"
-    url "https://github.com/kubenav/kubenav/releases/download/#{version}/kubenav-darwin-amd64.zip",
-        verified: "github.com/kubenav/kubenav/"
+    sha256 "6977025db6c093f5e7f7cd72bd027cec9b23ddfbe76a44343a84a4e1d7a43fa1"
   else
-    sha256 "82c9ceaaaedffa3db6f2a274077a4fbff6e74b1e855c659e2f21dfdc1b78043d"
-    url "https://github.com/kubenav/kubenav/releases/download/#{version}/kubenav-darwin-arm64.zip",
-        verified: "github.com/kubenav/kubenav/"
+    sha256 "267047ccca59c3ff7f9721fa86bed80016fe7f8ee4392ec6b2afdda3178a083c"
   end
 
   name "kubenav"

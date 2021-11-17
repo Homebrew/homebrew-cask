@@ -1,6 +1,6 @@
 cask "sync-my-l2p" do
-  version "2.4.4"
-  sha256 "43c7057f85e827feb87aa90cd8128b64a615260a8f2e534a6268eb6f6aeaf2c8"
+  version "2.4.5"
+  sha256 "e0eef5b462bb3c277784136a24165e29e207d3b0dc6ad165e8b621c46263d6c0"
 
   url "https://github.com/rwthmoodle/Sync-my-L2P/releases/download/v#{version}/SyncMyL2P-#{version}-osx.dmg",
       verified: "github.com/rwthmoodle/Sync-my-L2P/"

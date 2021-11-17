@@ -13,4 +13,6 @@ cask "openineditor-lite" do
   end
 
   app "OpenInEditor-Lite.app"
+
+  zap trash: "~/Library/Preferences/wang.jianing.app.OpenInEditor-Lite.plist"
 end

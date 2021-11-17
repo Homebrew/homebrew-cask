@@ -10,7 +10,7 @@ cask "dvdstyler" do
 
   livecheck do
     url "https://www.dvdstyler.org/en/downloads"
-    regex(/DVDStyler[._-]?(\d+(?:\.\d+)*)[._-]?MacOSX\.dmg/i)
+    regex(/DVDStyler[._-]?(\d+(?:\.\d+)+)[._-]?MacOSX\.dmg/i)
   end
 
   depends_on macos: ">= :yosemite"

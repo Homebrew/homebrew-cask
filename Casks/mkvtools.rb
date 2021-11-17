@@ -14,4 +14,9 @@ cask "mkvtools" do
   end
 
   app "mkvtools#{version}/MKVtools.app"
+
+  zap trash: [
+    "~/Library/Application Support/EmmGunn",
+    "~/Library/Preferences/com.emmgunn.MKVtools#{version.major}.plist",
+  ]
 end

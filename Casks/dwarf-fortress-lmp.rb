@@ -1,18 +1,23 @@
 cask "dwarf-fortress-lmp" do
-  version "0.47.04 dfhack-b1"
-  sha256 "7023cb5952172bdb74bda215a7856a0dd769188cc277846fd02a70783e86ea36"
+  version "0.47.05+dfhack-r1"
+  sha256 "c4931ef75ac5e474782f4353621b2f795f01f8f795d0727ee186c87af35cc42b"
 
-  url "https://dffd.bay12games.com/download.php?id=12202&f=Lazy+Mac+Pack.v#{version}.dmg",
-      verified: "dffd.bay12games.com/"
+  url "https://dffd.bay12games.com/download.php?id=12202&f=Lazy+Mac+Pack+v#{version}.dmg"
   name "Dwarf Fortress LMP (Lazy Mac Pack)"
-  homepage "http://www.bay12forums.com/smf/index.php?topic=158322.0"
+  desc "Use and switch graphics packs with Dwarf Fortress without corrupting your game"
+  homepage "https://dffd.bay12games.com/file.php?id=12202"
+
+  livecheck do
+    url :homepage
+    regex(/Lazy\+Mac\+Pack\+v(.+)\.dmg/i)
+  end
 
   # Renamed for clarity: suite name is inconsistent with branding
-  suite "Lazy Mac Pack v#{version}", target: "Dwarf Fortress LMP"
+  suite "Lazy Mac Pack v#{version.sub("+", " ")}", target: "Dwarf Fortress LMP"
 
   zap trash: [
-    "~/Library/Preferences/Lazy Mac Pack.plist",
     "~/Library/Preferences/com.phoenix-dev.setresx.plist",
+    "~/Library/Preferences/Lazy Mac Pack.plist",
     "~/Library/Saved Application State/Lazy Mac Pack.savedState",
   ]
 end

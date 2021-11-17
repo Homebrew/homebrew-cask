@@ -9,7 +9,7 @@ cask "anaconda" do
 
   livecheck do
     url "https://repo.anaconda.com/archive/"
-    regex(/Anaconda3-(\d+(?:\.\d+)*)-MacOSX-x86_64\.sh/i)
+    regex(/Anaconda3-(\d+(?:\.\d+)+)-MacOSX-x86_64\.sh/i)
   end
 
   auto_updates true

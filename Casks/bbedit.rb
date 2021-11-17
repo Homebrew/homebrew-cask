@@ -6,8 +6,8 @@ cask "bbedit" do
     version "12.6.7"
     sha256 "d0647c864268b187343bd95bfcf490d6a2388579b1f8fce64a289c65341b1144"
   else
-    version "14.0.1"
-    sha256 "200125b6762956cedf70a5898f1faaf3fdcb8c047fdab8f094044f50384a38f4"
+    version "14.0.2"
+    sha256 "8ca5ccf08cb2164b569e24787d425ee63cdaeec7ec2bf493b5c1ca2390d0d265"
   end
   url "https://s3.amazonaws.com/BBSW-download/BBEdit_#{version}.dmg",
       verified: "s3.amazonaws.com/BBSW-download/"
@@ -24,6 +24,14 @@ cask "bbedit" do
   depends_on macos: ">= :mojave"
 
   app "BBEdit.app"
+  binary "#{appdir}/BBEdit.app/Contents/Helpers/bbedit_tool", target: "bbedit"
+  binary "#{appdir}/BBEdit.app/Contents/Helpers/bbdiff"
+  binary "#{appdir}/BBEdit.app/Contents/Helpers/bbfind"
+  binary "#{appdir}/BBEdit.app/Contents/Helpers/bbresults"
+  manpage "#{appdir}/BBEdit.app/Contents/Resources/bbedit.1"
+  manpage "#{appdir}/BBEdit.app/Contents/Resources/bbdiff.1"
+  manpage "#{appdir}/BBEdit.app/Contents/Resources/bbfind.1"
+  manpage "#{appdir}/BBEdit.app/Contents/Resources/bbresults.1"
 
   zap trash: [
     "~/Library/Application Support/BBEdit",

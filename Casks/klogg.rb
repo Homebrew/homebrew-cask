@@ -19,7 +19,7 @@ cask "klogg" do
   binary shimscript, target: "klogg"
 
   preflight do
-    IO.write shimscript, <<~EOS
+    File.write shimscript, <<~EOS
       #!/bin/sh
       exec '#{appdir}/klogg.app/Contents/MacOS/klogg' "$@"
     EOS

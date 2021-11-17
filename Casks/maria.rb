@@ -11,6 +11,8 @@ cask "maria" do
     url "https://github.com/shincurry/Maria/releases/latest"
     strategy :page_match do |page|
       match = page.match(%r{href=.*?/Maria_v?(\d+(?:\.\d+)*)_build(.*?)\.dmg}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

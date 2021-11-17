@@ -1,13 +1,10 @@
 cask "google-chrome" do
-  version "94.0.4606.54"
+  arch = Hardware::CPU.intel? ? "" : "universal/"
+
+  version "96.0.4664.45"
   sha256 :no_check
 
-  if Hardware::CPU.intel?
-    url "https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg"
-  else
-    url "https://dl.google.com/chrome/mac/universal/stable/GGRO/googlechrome.dmg"
-  end
-
+  url "https://dl.google.com/chrome/mac/#{arch}stable/GGRO/googlechrome.dmg"
   name "Google Chrome"
   desc "Web browser"
   homepage "https://www.google.com/chrome/"
@@ -39,6 +36,7 @@ cask "google-chrome" do
     "~/Library/Google/Google Chrome Brand.plist",
     "~/Library/Google/GoogleSoftwareUpdate",
     "~/Library/LaunchAgents/com.google.keystone.agent.plist",
+    "~/Library/LaunchAgents/com.google.keystone.xpcservice.plist",
     "~/Library/Logs/GoogleSoftwareUpdateAgent.log",
     "~/Library/Preferences/com.google.Chrome.plist",
     "~/Library/Preferences/com.google.Keystone.Agent.plist",

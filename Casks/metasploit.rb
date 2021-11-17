@@ -1,6 +1,6 @@
 cask "metasploit" do
-  version "6.1.7,20210918102810"
-  sha256 "2f39cfa353a9406478d502b53f5a0efb0f275c8917c8de9cb9bef6b7d741432a"
+  version "6.1.15,20211113112859"
+  sha256 "6b5c3af3b43105cca5e5c241982d990c196e5c53530b3063fe4f135a0711c545"
 
   url "https://osx.metasploit.com/metasploit-framework-#{version.before_comma}%2B#{version.after_comma}-1rapid7-1.pkg"
   name "Metasploit Framework"
@@ -11,6 +11,8 @@ cask "metasploit" do
     url "https://osx.metasploit.com/LATEST"
     strategy :page_match do |page|
       match = page.match(/metasploit-framework-(\d+(?:\.\d+)*)\+(\d+)-1rapid7-1\.pkg/i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

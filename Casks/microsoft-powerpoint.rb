@@ -1,9 +1,9 @@
 cask "microsoft-powerpoint" do
-  version "16.53.21091200"
-  sha256 "88fdb7d74bde7b6941eda1e2a0dd0c43a29a46bca821ea8daa332131c6243eb6"
+  version "16.55.21111400"
+  sha256 "8de48979e26a09d317c9367a31e50382fee305b47ebfd1652b85c2bb4c42345d"
 
-  url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_PowerPoint_#{version}_Installer.pkg",
-      verified: "officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/"
+  url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_PowerPoint_#{version}_Installer.pkg",
+      verified: "officecdnmac.microsoft.com/"
   name "Microsoft PowerPoint"
   desc "Presentation software"
   homepage "https://products.office.com/en-US/powerpoint"

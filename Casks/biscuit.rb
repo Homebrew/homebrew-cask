@@ -1,13 +1,13 @@
 cask "biscuit" do
-  version "1.2.23"
+  version "1.2.24"
 
   if Hardware::CPU.intel?
-    sha256 "995127c3311e93c1857c3d00495b76817875fa1fa3a67d0a966ff98e8edeca02"
+    sha256 "3bcecb7a99765eb05b827454fe5ba5e07c8573ce96e895c65d8edc9a2af2cd35"
 
     url "https://github.com/agata/dl.biscuit/releases/download/v#{version}/Biscuit-#{version}.dmg",
         verified: "github.com/agata/dl.biscuit/"
   else
-    sha256 "eb02115d131101d25c3a95ad332ab8cecca3f5327c08c2200d6f95d9259a1c73"
+    sha256 "0b47026f817d5d27a00c5d59a29d430e7aab9235ca1dbbbba922a7d55a95d30a"
 
     url "https://github.com/agata/dl.biscuit/releases/download/v#{version}/Biscuit-#{version}-arm64.dmg",
         verified: "github.com/agata/dl.biscuit/"

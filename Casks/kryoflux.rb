@@ -23,4 +23,8 @@ cask "kryoflux" do
     "~/Library/Preferences/com.kryoflux.kryoflux-ui.plist",
     "~/.kryoflux",
   ]
+
+  caveats do
+    files_in_usr_local
+  end
 end

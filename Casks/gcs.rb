@@ -1,6 +1,6 @@
 cask "gcs" do
-  version "4.34.1"
-  sha256 "70503e417b5b1b8a2088c2edb3354009dd9017bab614ffdc05d20f4880ad6a0f"
+  version "4.34.2"
+  sha256 "8fa9071853edb6deb30700c5c867ff9b06ab925d50cb76712fc05c12f32df289"
 
   url "https://github.com/richardwilkes/gcs/releases/download/v#{version}/GCS-#{version}.dmg",
       verified: "github.com/richardwilkes/gcs/"

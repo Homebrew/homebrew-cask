@@ -13,7 +13,7 @@ cask "gogs" do
   binary shimscript, target: "gogs"
 
   preflight do
-    IO.write shimscript, <<~EOS
+    File.write shimscript, <<~EOS
       #!/bin/sh
       cd '#{staged_path}/gogs' && ./gogs "$@"
     EOS

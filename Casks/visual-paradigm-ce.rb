@@ -1,6 +1,6 @@
 cask "visual-paradigm-ce" do
-  version "16.3,20210827"
-  sha256 "ff745a82be43ce5d46825aaf883d4db9233360151304728c8f0535bd73ed7c4b"
+  version "16.3,20211012"
+  sha256 "31cba47822abb274afb979b36b084c7c72f79b4a6387e5ea47d5721d001784a6"
 
   url "https://www.visual-paradigm.com/downloads/vpce/Visual_Paradigm_CE_#{version.before_comma.dots_to_underscores}_#{version.after_comma}_OSX_WithJRE.dmg"
   name "Visual Paradigm Community Edition"
@@ -10,7 +10,9 @@ cask "visual-paradigm-ce" do
   livecheck do
     url "https://www.visual-paradigm.com/downloads/vpce/checksum.html"
     strategy :header_match do |headers|
-      match = headers["location"].match(%r{/vpce(\d+(?:\.\d+)*)/(\d+)/checksum\.html}i)
+      match = headers["location"].match(%r{/vpce(\d+(?:\.\d+)+)/(\d+)/checksum\.html}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

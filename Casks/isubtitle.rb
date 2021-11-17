@@ -1,6 +1,11 @@
 cask "isubtitle" do
-  version "3.4.5,48"
-  sha256 "6272f96c31ed4fb1118e0c95333afce7fffab063d57a861a36b3f56d811442b1"
+  if MacOS.version <= :mojave
+    version "3.4.3,42"
+    sha256 "e3eafe394b9447451e791cfe1c2a498ebf09931b807585f77a3401e4f15f0410"
+  else
+    version "3.4.6,49"
+    sha256 "41b7bdaa76d1658bea862822521678f3e8432dd5e941101c4ab045eec17c3ca8"
+  end
 
   url "https://www.bitfield.se/isubtitle#{version.major}/download/iSubtitle_#{version.before_comma}.zip"
   name "iSubtitle"

@@ -10,7 +10,7 @@ cask "adobe-digital-editions" do
   livecheck do
     url "https://www.adobe.com/solutions/ebook/digital-editions/download.html"
     strategy :page_match
-    regex(/Adobe\s*Digital\s*Editions\s*(\d+(?:\.\d+)*)/i)
+    regex(/Adobe\s*Digital\s*Editions\s*(\d+(?:\.\d+)+)/i)
   end
 
   pkg "Digital Editions #{version.major_minor} Installer.pkg"

@@ -15,7 +15,7 @@ cask "kitty" do
   binary shimscript, target: "kitty"
 
   preflight do
-    IO.write shimscript, <<~EOS
+    File.write shimscript, <<~EOS
       #!/bin/sh
       exec '#{appdir}/kitty.app/Contents/MacOS/kitty' "$@"
     EOS

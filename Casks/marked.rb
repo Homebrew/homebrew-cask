@@ -1,8 +1,8 @@
 cask "marked" do
-  version "2.6.9,1022"
-  sha256 "6a797ca8b027242aafa4dcea805eaaddcadc17f1fbee557242952b849e9a6f19"
+  version "2.6.12,1026"
+  sha256 "5840b24102eb5ac04a5961ba2ee9f5faea82424e2dce8e3b70e2cc9eea81251d"
 
-  url "https://updates.marked2app.com/Marked#{version.before_comma}#{version.after_comma}.zip"
+  url "https://updates.marked2app.com/Marked#{version.before_comma}#{version.after_comma}.dmg"
   name "Marked"
   desc "Previewer for Markdown, MultiMarkdown and other text markup languages"
   homepage "https://marked2app.com/"
@@ -13,7 +13,7 @@ cask "marked" do
   end
 
   auto_updates true
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :sierra"
 
   app "Marked #{version.major}.app"
 

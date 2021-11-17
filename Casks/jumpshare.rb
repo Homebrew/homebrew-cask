@@ -1,8 +1,9 @@
 cask "jumpshare" do
-  version "2.7.1,101"
-  sha256 "675b6d662baf9fcffc21d6d620b34a90882c2a72f0a264d7b1db8fa4eaa0da7d"
+  version "2.7.3,103"
+  sha256 "f9f1ddb4fdaafa64a817358805952836d8bc147f7a504a0a8417e7e17b3057a1"
 
-  url "https://apps.jumpshare.com/desktop/mac/updates/Jumpshare-#{version.before_comma}.tar.bz2"
+  url "https://d21hi1or3tbtjm.cloudfront.net//desktop/mac/updates/Jumpshare-#{version.before_comma}.tar.bz2",
+      verified: "d21hi1or3tbtjm.cloudfront.net/"
   name "Jumpshare"
   desc "File sharing, screen recording, and screenshot capture app"
   homepage "https://jumpshare.com/"

@@ -1,6 +1,6 @@
 cask "flomo" do
-  version "0.1.3"
-  sha256 "4fce120cf75390968dc76469b23759722819a18ba4e2b3e996dca6020b4bf48c"
+  version "0.1.4"
+  sha256 "4d2bd0c3b994a8dd8b9346ca3d068733c3e76017ba5bdeb230827080ae6c2e4c"
 
   url "https://flomo-resource.oss-cn-shanghai.aliyuncs.com/flomo_mac_v#{version}.zip",
       verified: "flomo-resource.oss-cn-shanghai.aliyuncs.com/"

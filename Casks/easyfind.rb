@@ -14,4 +14,9 @@ cask "easyfind" do
   end
 
   app "EasyFind.app"
+
+  zap trash: [
+    "~/Library/Application Support/EasyFind",
+    "~/Library/Preferences/org.grunenberg.EasyFind.plist",
+  ]
 end

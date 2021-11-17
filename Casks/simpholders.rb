@@ -10,6 +10,8 @@ cask "simpholders" do
     url "https://simpholders.com/latest/"
     strategy :header_match do |headers|
       match = headers["location"].match(%r{/(\d+)/simpholders_(\d+(?:_\d+)*).dmg}i)
+      next if match.blank?
+
       "#{match[2].tr("_", ".")},#{match[1]}"
     end
   end

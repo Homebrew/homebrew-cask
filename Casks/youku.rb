@@ -1,6 +1,6 @@
 cask "youku" do
-  version "1.9.0.04201"
-  sha256 "7e53d786cad61dbb9efc312477bd282d5329a152e0ef5eb4136509e2893320b9"
+  version "1.9.5.4.11151"
+  sha256 "0d9bdbe8158deeb710fcaddda9895aee779cb8d9d0ed8dd62b1f9ab7f18f2158"
 
   url "https://pcclient.download.youku.com/ikumac/youkumac_#{version}.dmg"
   name "Youku"
@@ -11,7 +11,7 @@ cask "youku" do
   livecheck do
     url "https://pd.youku.com/pc"
     strategy :page_match
-    regex(%r{href=.*?/youkumac_(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/youkumac_(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "优酷.app"

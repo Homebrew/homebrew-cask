@@ -11,6 +11,8 @@ cask "exifrenamer" do
     url "https://www.qdev.de/versions/ExifRenamer.txt"
     strategy :page_match do |page|
       version = page.split
+      next if version.blank?
+
       "#{version[0]},#{version[1].tr("()", "")}"
     end
   end

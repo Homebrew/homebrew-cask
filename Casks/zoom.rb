@@ -1,16 +1,15 @@
 cask "zoom" do
-  version "5.7.6.1320"
+  arch = Hardware::CPU.intel? ? "" : "arm64/"
+
+  version "5.8.4.2421"
 
   if Hardware::CPU.intel?
-    sha256 "14aca0f9273f0e7d5d8bd7931a74bd14772dd2eb3be3b6d966d6be060ac54242"
-
-    url "https://cdn.zoom.us/prod/#{version}/Zoom.pkg"
+    sha256 "8fa49005c1f54a2677d9a889c44e4795d74d6b6407a30806aee4ddc868c10606"
   else
-    sha256 "48994fb9c8435f51fa70c503c44283cc944e16ecb1b773c42d09fb0d82ef686f"
-
-    url "https://cdn.zoom.us/prod/#{version}/arm64/Zoom.pkg"
+    sha256 "435d0481a59f0cc8a1b7bb3d94bf6ddf8e74b8099e096197f5867e76ed49c534"
   end
 
+  url "https://cdn.zoom.us/prod/#{version}/#{arch}Zoom.pkg"
   name "Zoom.us"
   desc "Video communication and virtual meeting platform"
   homepage "https://www.zoom.us/"

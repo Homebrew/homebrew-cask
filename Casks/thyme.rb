@@ -9,4 +9,9 @@ cask "thyme" do
   homepage "https://joaomoreno.github.io/thyme/"
 
   app "Thyme.app"
+
+  zap trash: [
+    "~/Library/Application Support/Thyme",
+    "~/Library/Preferences/com.joaomoreno.Thyme.plist",
+  ]
 end

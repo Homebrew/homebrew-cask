@@ -12,6 +12,8 @@ cask "opencpn" do
     url "https://github.com/OpenCPN/OpenCPN/releases/latest"
     strategy :page_match do |page|
       match = page.match(%r{href=.*?/OpenCPN_(\d+(?:\.\d+)*)\+(.*?)\.pkg}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

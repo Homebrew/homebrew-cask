@@ -1,5 +1,5 @@
 cask "megasync" do
-  version "4.5.3.0"
+  version "4.6.0.0"
   sha256 :no_check
 
   url "https://mega.nz/MEGAsyncSetup.dmg"
@@ -14,6 +14,7 @@ cask "megasync" do
   end
 
   auto_updates true
+  depends_on macos: ">= :sierra"
 
   app "MEGAsync.app"
 

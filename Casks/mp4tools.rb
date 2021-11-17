@@ -14,4 +14,9 @@ cask "mp4tools" do
   end
 
   app "mp4tools#{version}/MP4Tools.app"
+
+  zap trash: [
+    "~/Library/Application Support/EmmGunn",
+    "~/Library/Preferences/com.emmgunn.MP4tools#{version.major}.plist",
+  ]
 end

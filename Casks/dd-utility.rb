@@ -14,4 +14,6 @@ cask "dd-utility" do
   end
 
   app "dd Utility.app"
+
+  zap trash: "~/Library/Saved Application State/co.za.thefanclub.ddUtility.savedState"
 end

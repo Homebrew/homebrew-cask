@@ -12,6 +12,8 @@ cask "liclipse" do
     url "https://www.liclipse.com/download.html"
     strategy :page_match do |page|
       match = page.match(%r{href=.*?/([0-9a-z]+)/liclipse_(\d+(?:\.\d+)*)_macosx\.cocoa\.x86_64\.tar\.gz}i)
+      next if match.blank?
+
       "#{match[2]},#{match[1]}"
     end
   end

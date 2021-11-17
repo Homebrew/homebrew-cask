@@ -14,12 +14,29 @@ cask "karabiner-elements" do
         verified: "github.com/pqrs-org/Karabiner-Elements/"
 
     pkg "Karabiner-Elements.sparkle_guided.pkg"
-  else
+  elsif MacOS.version <= :catalina
     version "13.7.0"
     sha256 "9ac5e53a71f3a00d7bdb2f5f5f001f70b6b8b7b2680e10a929e0e4c488c8734b"
 
     url "https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg",
         verified: "github.com/pqrs-org/Karabiner-Elements/"
+
+    livecheck do
+      skip "newer versions only available for Big Sur or higher"
+    end
+
+    pkg "Karabiner-Elements.pkg"
+  else
+    version "14.2.0"
+    sha256 "c57adeea587009fa06498d1399fea1899fc5753c658331531f0332c75ed0ca6e"
+
+    url "https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg",
+        verified: "github.com/pqrs-org/Karabiner-Elements/"
+
+    livecheck do
+      url "https://pqrs.org/osx/karabiner/files/karabiner-elements-appcast.xml"
+      strategy :sparkle
+    end
 
     pkg "Karabiner-Elements.pkg"
   end
@@ -27,11 +44,6 @@ cask "karabiner-elements" do
   name "Karabiner Elements"
   desc "Keyboard customizer"
   homepage "https://pqrs.org/osx/karabiner/"
-
-  livecheck do
-    url "https://pqrs.org/osx/karabiner/files/karabiner-elements-appcast.xml"
-    strategy :sparkle
-  end
 
   auto_updates true
   depends_on macos: ">= :el_capitan"

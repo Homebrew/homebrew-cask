@@ -18,7 +18,7 @@ cask "gloomhaven-helper" do
   binary shimscript, target: "gloomhaven-helper"
 
   preflight do
-    IO.write shimscript, <<~EOS
+    File.write shimscript, <<~EOS
       #!/bin/bash
       cd "$(dirname "$(readlink -n "${0}")")" && \
         java "${@}" -XstartOnFirstThread -jar 'ghh.jar'

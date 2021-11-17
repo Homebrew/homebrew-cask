@@ -1,9 +1,9 @@
 cask "loginputmac" do
-  version "2.4.8,23601"
-  sha256 "c7b21000beb2704917b08e7f077c66b9290389f2b4bd32413c7a238a5627e006"
+  version "2.5.0,24041"
+  sha256 "6d7282596ef8a45dc67eeafd7efcb582fc37797377b100200c9916b6ce20e8ea"
 
-  url "https://loginput-mac2.content-delivery.top/loginputmac#{version.major}_latest.pkg",
-      verified: "loginput-mac2.content-delivery.top/"
+  url "https://loginput-mac2.totest.top/LogInputMac#{version.major}.app#{version.after_comma}.zip",
+      verified: "loginput-mac2.totest.top/"
   name "LoginputMac"
   desc "Chinese input method"
   homepage "https://im.logcg.com/loginputmac#{version.major}"
@@ -15,8 +15,5 @@ cask "loginputmac" do
 
   auto_updates true
 
-  pkg "loginputmac#{version.major}_latest.pkg"
-
-  uninstall pkgutil: "com.logcg.pkg.LoginputMac#{version.major}",
-            quit:    "com.logcg.inputmethod.LogInputMac#{version.major}"
+  app "LogInputMac#{version.major}.app"
 end

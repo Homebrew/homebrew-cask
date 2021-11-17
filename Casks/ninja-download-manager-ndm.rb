@@ -4,7 +4,13 @@ cask "ninja-download-manager-ndm" do
 
   url "https://ninjadownloadmanager.com/downloads/ndm_#{version}.pkg"
   name "Ninja Download Manager"
+  desc "File download organizer and accelerator"
   homepage "https://ninjadownloadmanager.com/"
+
+  livecheck do
+    url "https://ninjadownloadmanager.com/downloads/?os=osx"
+    strategy :header_match
+  end
 
   pkg "ndm_#{version}.pkg"
 

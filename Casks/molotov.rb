@@ -1,8 +1,8 @@
 cask "molotov" do
-  version "4.4.4"
-  sha256 "bb719e48fc2ac61e3f5491135547fe3eab89fccadc29fbb73e4b4b3f60b7375c"
+  version "4.4.6"
+  sha256 "8d133568386e88fbf90f85e827ccb809d79cfd068a9ed5b3dee3fd29450a54b4"
 
-  url "https://desktop-auto-upgrade.molotov.tv/mac/Molotov-v#{version}.dmg"
+  url "https://desktop-auto-upgrade.molotov.tv/mac/Molotov-#{version}-mac.zip"
   name "Molotov"
   desc "French TV streaming service"
   homepage "https://www.molotov.tv/"

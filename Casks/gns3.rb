@@ -1,7 +1,7 @@
 cask "gns3" do
   # NOTE: "3" is not a version number, but an intrinsic part of the product name
-  version "2.2.24"
-  sha256 "a3157862e29b9fdd37fc2b50ce216f99c052f896998a148aad734db9b74b7503"
+  version "2.2.27"
+  sha256 "dbc39b26650a4cfdc59522fb0f77e502b5b737037806161fdc1637166c3fc627"
 
   url "https://github.com/GNS3/gns3-gui/releases/download/v#{version}/GNS3-#{version}.dmg",
       verified: "github.com/GNS3/gns3-gui/"
@@ -13,4 +13,9 @@ cask "gns3" do
   depends_on macos: ">= :high_sierra"
 
   app "GNS3.app"
+
+  zap trash: [
+    "~/Library/Saved Application State/net.gns3.savedState",
+    "~/GNS3",
+  ]
 end

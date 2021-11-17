@@ -11,9 +11,13 @@ cask "bluej" do
     url "https://www.bluej.org"
     strategy :page_match do |page|
       match = page.match(%r{href=.*?/BlueJ-mac-(\d+)(\d+)(\d+)\.zip}i)
+      next if match.blank?
+
       "#{match[1]}.#{match[2]}.#{match[3]}"
     end
   end
 
   app "BlueJ #{version}/BlueJ.app"
+
+  zap trash: "~/Library/Preferences/org.bluej"
 end

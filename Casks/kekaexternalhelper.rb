@@ -12,6 +12,8 @@ cask "kekaexternalhelper" do
     url "https://github.com/aonez/Keka/releases"
     strategy :page_match do |page|
       match = page.match(%r{href=.*?/v?(\d+(?:\.\d+)*)/KekaExternalHelper-v?(\d+(?:\.\d+)*)\.zip}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

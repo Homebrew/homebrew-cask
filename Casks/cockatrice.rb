@@ -26,7 +26,7 @@ cask "cockatrice" do
     url "https://github.com/Cockatrice/Cockatrice/releases/latest"
     strategy :page_match do |page|
       match = page.match(
-        %r{href=.*?/(\d+(?:-\d+)*)-Release-(\d+(?:\.\d+)*)/Cockatrice-([^/]+)-\2-macOS-[.\w]*\.dmg}i,
+        %r{href=".*?/(\d+(?:-\d+)+)-Release-(\d+(?:\.\d+)+)/Cockatrice-([^/]+)-\2-macOS-[.\w]*\.dmg"}i,
       )
       "#{match[2]},#{match[1]}:#{match[3]}"
     end

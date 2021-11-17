@@ -1,16 +1,16 @@
 cask "ivideonserver" do
-  version "3.9.1"
-  sha256 "0ebcf22ebeb1e7173d0a37605d0dc5dcec7ad5cd0d532f0c7d06657fc74666ff"
+  version "3.10.1"
+  sha256 "b6e8ee4343ab8b61600ee2eaeae4ad3f20d3b6fde0dfb8ddf25ecf747f87a962"
 
   url "https://updates.iv-cdn.com/bundles/ivideon_server/#{version}/IvideonServer_#{version}_macosx-x86-64.dmg",
       verified: "updates.iv-cdn.com/"
   name "Ivideon Client"
+  desc "Watch surveillance videos in your browser via your Ivideon account"
   homepage "https://www.ivideon.com/"
 
   livecheck do
     url "https://www.ivideon.com/downloads/"
-    strategy :page_match
-    regex(%r{href=.*?/IvideonServer_(\d+(?:\.\d+)*)_macosx-x86-64\.dmg}i)
+    regex(%r{href=.*?/IvideonServer[._-]v?(\d+(?:\.\d+)+)[._-]macosx[._-]x86[._-]64\.dmg}i)
   end
 
   app "IvideonServer.app"

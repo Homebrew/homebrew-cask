@@ -11,9 +11,19 @@ cask "mdrp" do
     url "https://www.macdvdripperpro.com/mdrp_sparkle#{version.major}.xml"
     strategy :page_match do |page|
       match = page.match(/MDRP_v(\d)(\d)(\d)\.zip/i)
+      next if match.blank?
+
       "#{match[1]}.#{match[2]}.#{match[3]}"
     end
   end
 
   app "MDRP.app"
+
+  zap trash: [
+    "~/Library/Application Support/MDRP",
+    "~/Library/Caches/com.mdrp.MDRP",
+    "~/Library/Cookies/com.mdrp.MDRP.binarycookies",
+    "~/Library/HTTPStorages/com.mdrp.MDRP.binarycookies",
+    "~/Library/Preferences/com.mdrp.MDRP.plist",
+  ]
 end
