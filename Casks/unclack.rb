@@ -8,7 +8,8 @@ cask "unclack" do
   homepage "https://unclack.app/"
 
   livecheck do
-    skip "unversioned URL"
+    url :homepage
+    regex(%r{href=.*?/v?(\d+(?:\.\d+)+)/Unclack\.dmg}i)
   end
 
   app "Unclack.app"
