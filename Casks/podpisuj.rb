@@ -10,9 +10,8 @@ cask "podpisuj" do
   livecheck do
     url "https://www.podpisuj.sk/o/portal-services3/client/appVersion?ext=dmg&version=0"
     strategy :page_match
-    regex(%r{.+,([\d\.]+),\d+}i)
+    regex(/.+,([\d.]+),\d+/i)
   end
 
   app "Podpisuj.app"
-
 end
