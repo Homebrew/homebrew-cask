@@ -8,12 +8,7 @@ cask "bespoke" do
   desc "Software modular synth"
   homepage "https://www.bespokesynth.com/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
-  suite "BespokeSynth.app"
+  app "BespokeSynth.app"
 
   zap trash: [
     "~/Library/Caches/com.ryanchallinor.bespokesynth",
