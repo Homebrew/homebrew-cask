@@ -2,7 +2,7 @@ cask "reaper" do
   version "6.42"
 
   if MacOS.version <= :mojave
-    sha256 "be22370d3e4d743feabd0efc014f0f62268f21157f28a17551297801a65959c8"
+    sha256 "899e32ecc25666da5b6237c76a69f71258ca7e4bdf3443f6bc62606cfc5240cb"
 
     url "https://www.reaper.fm/files/#{version.major}.x/reaper#{version.major_minor.no_dots}_x86_64.dmg"
   elsif Hardware::CPU.intel?
