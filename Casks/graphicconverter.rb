@@ -20,7 +20,7 @@ cask "graphicconverter" do
   zap trash: [
     "/Users/Shared/Library/Application Support/GraphicConverter",
     "~/Library/Application Support/GraphicConverter",
-    "~/Library/Group Containers/*.com.lemkesoft.graphicconverter*.group",
     "~/Library/Caches/com.lemkesoft.graphicconverter*",
+    "~/Library/Group Containers/*.com.lemkesoft.graphicconverter*.group",
   ]
 end
