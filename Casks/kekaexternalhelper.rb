@@ -4,6 +4,7 @@ cask "kekaexternalhelper" do
 
   url "https://github.com/aonez/Keka/releases/download/v#{version.before_comma}/KekaExternalHelper-v#{version.after_comma}.zip"
   name "Keka External Helper"
+  name "KekaDefaultApp"
   desc "Helper application for the Keka file archiver"
   homepage "https://github.com/aonez/Keka/wiki/Default-application"
 
