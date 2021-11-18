@@ -4,6 +4,7 @@ cask "middleclick" do
 
   url "https://github.com/artginzburg/MiddleClick-BigSur/releases/download/#{version}/MiddleClick.zip"
   name "MiddleClick"
+  desc "Utility to extend trackpad functionality"
   homepage "https://github.com/artginzburg/MiddleClick-BigSur"
 
   app "MiddleClick.app"
@@ -13,7 +14,4 @@ cask "middleclick" do
 
   zap trash: "~/Library/Preferences/com.rouge41.middleClick.plist"
 
-  caveats do
-    discontinued
-  end
 end
