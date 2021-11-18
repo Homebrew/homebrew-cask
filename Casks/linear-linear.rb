@@ -1,7 +1,7 @@
 cask "linear-linear" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "1.5.2"
+  version "1.5.3"
   sha256 :no_check
 
   url "https://desktop.linear.app/mac/dmg/#{arch}"
@@ -12,7 +12,7 @@ cask "linear-linear" do
   livecheck do
     url :url
     strategy :header_match
-    regex(/Linear\s*(\d+(?:\.\d+)*?)[._-]#{arch}.dmg/)
+    regex(/Linear[\s._-]?v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
   auto_updates true
