@@ -1,7 +1,7 @@
 cask "linear-linear" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "1.5.2"
+  version "1.5.3"
   sha256 :no_check
 
   url "https://desktop.linear.app/mac/dmg/#{arch}"
