@@ -11,7 +11,7 @@ cask "tableau-prep" do
   livecheck do
     url "https://www.tableau.com/downloads/prep/mac"
     strategy :header_match do |headers|
-      headers["location"][/-(\d+-\d+-\d+)\.dmg/i, 1].tr("-", ".")
+      headers["location"][/TableauPrep-(\d+(?:-\d+)+)\.dmg/i, 1].tr("-", ".")
     end
   end
 
@@ -21,14 +21,14 @@ cask "tableau-prep" do
 
   uninstall pkgutil: [
     "com.amazon.redshiftodbc",
-    "simba.sparkodbc",
     "com.simba.sparkodbc",
     "com.simba.sqlserverodbc",
-    "com.tableausoftware.Maestro.app",
     "com.tableausoftware.desktopShortcut",
-    "com.tableausoftware.telemetry",
     "com.tableausoftware.FLEXNet.11.*",
+    "com.tableausoftware.Maestro.app",
     "com.tableausoftware.oracle",
     "com.tableausoftware.postgresql",
+    "com.tableausoftware.telemetry",
+    "simba.sparkodbc",
   ]
 end
