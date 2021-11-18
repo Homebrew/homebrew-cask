@@ -1,8 +1,8 @@
 cask "kekaexternalhelper" do
-  version "1.2.7,1.1.1"
+  version "1.1.1,1.2.7"
   sha256 "8f25d23df3941cda7af5b8e6c964c7c00d9b5a24af803cd241aa26f5a8a51e72"
 
-  url "https://github.com/aonez/Keka/releases/download/v#{version.before_comma}/KekaExternalHelper-v#{version.after_comma}.zip"
+  url "https://github.com/aonez/Keka/releases/download/v#{version.after_comma}/KekaExternalHelper-v#{version.before_comma}.zip"
   name "Keka External Helper"
   name "KekaDefaultApp"
   desc "Helper application for the Keka file archiver"
@@ -14,7 +14,7 @@ cask "kekaexternalhelper" do
       match = page.match(%r{href=.*?/v?(\d+(?:\.\d+)*)/KekaExternalHelper-v?(\d+(?:\.\d+)*)\.zip}i)
       next if match.blank?
 
-      "#{match[1]},#{match[2]}"
+      "#{match[2]},#{match[1]}"
     end
   end
 
