@@ -18,7 +18,7 @@ cask "black-ink" do
 
   zap trash: [
     "~/Library/Application Scripts/com.red-sweater.blackink2",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.red-sweater.blackink2.sfl2",
-    "~/Library/Containers/com.red-sweater.blackink2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.red-sweater.blackink2.sfl*",
+    "~/Library/Containers/com.red-sweater.blackink#{version.major}",
   ]
 end
