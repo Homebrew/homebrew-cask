@@ -12,7 +12,7 @@ cask "linear-linear" do
   livecheck do
     url :url
     strategy :header_match
-    regex(/Linear\s*(\d+(?:\.\d+)*?)[._-]#{arch}.dmg/)
+    regex(/Linear[\s._-]?v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
   auto_updates true
