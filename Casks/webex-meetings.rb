@@ -6,7 +6,7 @@ cask "webex-meetings" do
   name "Webex Meetings"
   homepage "https://www.webex.com/"
 
-  pkg "Cisco Webex Meetings.pkg"
+  pkg "Cisco_Webex_Meetings.pkg"
 
   uninstall quit:      [
     "com.cisco.webexmeetingsapp",
