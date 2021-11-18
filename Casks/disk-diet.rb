@@ -13,4 +13,12 @@ cask "disk-diet" do
   end
 
   app "Disk Diet.app"
+
+  zap trash: [
+    "/Library/LaunchDaemons/com.tunabellysoftware.DiskDietHelper.plist",
+    "/Library/PrivilegedHelperTools/com.tunabellysoftware.DiskDietHelper",
+    "~/Library/Application Support/Disk Diet",
+    "~/Library/Caches/com.tunabellysoftware.diskdiet",
+    "~/Library/Preferences/com.tunabellysoftware.diskdiet.plist",
+  ]
 end
