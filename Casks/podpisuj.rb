@@ -13,5 +13,13 @@ cask "podpisuj" do
     regex(/(\d+(?:\.\d+)+)/i)
   end
 
+  auto_updates true
+
   app "Podpisuj.app"
+
+  zap trash: [
+    "~/.archimetes/signer",
+    "~/Library/Preferences/com.archimetes.podpisuj.desktopapp.Podpisuj.plist",
+    "~/Library/Saved Application State/com.archimetes.podpisuj.desktopapp.Podpisuj.savedState",
+  ]
 end
