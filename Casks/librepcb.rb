@@ -9,8 +9,7 @@ cask "librepcb" do
 
   livecheck do
     url "https://librepcb.org/download/"
-    strategy :page_match
-    regex(%r{href=.*?/librepcb-(\d+(?:\.\d+)*)-mac-x86_64\.dmg}i)
+    regex(%r{href=.*?/librepcb[._-]v?(\d+(?:\.\d+)+)-mac-x86_64\.dmg}i)
   end
 
   app "librepcb.app"
