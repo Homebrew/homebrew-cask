@@ -15,4 +15,10 @@ cask "black-ink" do
   depends_on macos: ">= :sierra"
 
   app "Black Ink.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.red-sweater.blackink2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.red-sweater.blackink2.sfl2",
+    "~/Library/Containers/com.red-sweater.blackink2",
+  ]
 end
