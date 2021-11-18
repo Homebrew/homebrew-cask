@@ -9,7 +9,7 @@ cask "kaleidoscope" do
 
   livecheck do
     url "https://updates.kaleidoscope.app/v#{version.major}/prod/appcast"
-    regex(/Kaleidoscope-(\d+(?:\.\d+)*)-(\d+)\.app\.zip/i)
+    regex(/Kaleidoscope-(\d+(?:\.\d+)+)-(\d+)\.app\.zip/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
