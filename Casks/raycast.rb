@@ -10,7 +10,7 @@ cask "raycast" do
   livecheck do
     url :url
     strategy :header_match
-    regex(/Raycast_v?(\d+(?:\.\d+)*)_universal\.dmg/i)
+    regex(/Raycast_v?(\d+(?:\.\d+)+)_universal\.dmg/i)
   end
 
   auto_updates true
