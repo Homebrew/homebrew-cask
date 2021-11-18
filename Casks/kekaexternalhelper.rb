@@ -7,9 +7,8 @@ cask "kekaexternalhelper" do
   desc "Helper application for the Keka file archiver"
   homepage "https://github.com/aonez/Keka/wiki/Default-application"
 
-  # Not all releases contain the external helper, so we have to check all of them.
   livecheck do
-    url "https://github.com/aonez/Keka/releases"
+    url "https://www.keka.io/en/"
     strategy :page_match do |page|
       match = page.match(%r{href=.*?/v?(\d+(?:\.\d+)*)/KekaExternalHelper-v?(\d+(?:\.\d+)*)\.zip}i)
       next if match.blank?
