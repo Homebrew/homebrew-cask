@@ -15,5 +15,13 @@ cask "menubar-stats" do
   auto_updates true
   depends_on macos: ">= :mojave"
 
-  app "MenuBar Stats.app"
+  app "MenuBar Stats.app
+
+  zap trash: [
+    "~/Library/Application Scripts/3EYN7PPTPF.com.fabriceleyne.menubarstats",
+    "~/Library/Application Scripts/com.fabriceleyne.menubarstats*",
+    "~/Library/Containers/com.fabriceleyne.menubarstats*",
+    "~/Library/Group Containers/3EYN7PPTPF.com.fabriceleyne/com.fabriceleyne.menubarstats",
+    "~/Library/Group Containers/3EYN7PPTPF.com.fabriceleyne.menubarstats",
+  ]
 end
