@@ -1,6 +1,6 @@
 cask "unity-android-support-for-editor" do
-  version "2021.2.2f1,5e2b1e92c7f8"
-  sha256 "4a76bc28bbe9a296d65c5471de4efe096f11ef7e91313ebd31e323299abfefc3"
+  version "2021.2.3f1,32358a8527b4"
+  sha256 "cf19a73a85360977a2fa247dccfb2aa4471bf4ff107908a9913901b026f4cb2c"
 
   url "https://download.unity3d.com/download_unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-#{version.before_comma}.pkg",
       verified: "download.unity3d.com/download_unity/"
@@ -13,7 +13,7 @@ cask "unity-android-support-for-editor" do
     strategy :page_match do |page|
       page.scan(%r{
         /download_unity/(\h+)/MacEditorTargetInstaller
-        /UnitySetup-Android-Support-for-Editor-(\d+(?:\.\d+)*[a-z]*\d*)\.pkg
+        /UnitySetup-Android-Support-for-Editor-(\d+(?:\.\d+)+[a-z]*\d*)\.pkg
       }ix).map do |match|
         "#{match[1]},#{match[0]}"
       end
