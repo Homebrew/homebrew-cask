@@ -1,6 +1,6 @@
 cask "ultimaker-cura" do
-  version "4.12.0"
-  sha256 "b2e14e6c7068a3c149fb45f8d35d1cc20f6f6597246d3700f18d0cf6a0df7322"
+  version "4.12.1"
+  sha256 "61115c550c88afcedfa714da73503941a819c377e121cd91a515d3e182883ecb"
 
   url "https://github.com/Ultimaker/Cura/releases/download/#{version}/Ultimaker_Cura-#{version}-Darwin.dmg",
       verified: "github.com/Ultimaker/Cura/"
