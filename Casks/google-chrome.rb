@@ -1,7 +1,7 @@
 cask "google-chrome" do
   arch = Hardware::CPU.intel? ? "" : "universal/"
 
-  version "96.0.4664.45"
+  version "96.0.4664.55"
   sha256 :no_check
 
   url "https://dl.google.com/chrome/mac/#{arch}stable/GGRO/googlechrome.dmg"
@@ -11,8 +11,7 @@ cask "google-chrome" do
 
   livecheck do
     url "https://chromiumdash.appspot.com/fetch_releases?channel=Stable&platform=Mac"
-    strategy :page_match
-    regex(/"version": "(\d+(?:\.\d+)*)"/i)
+    regex(/"version": "(\d+(?:\.\d+)+)"/i)
   end
 
   auto_updates true
