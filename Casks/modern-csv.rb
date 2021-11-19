@@ -10,7 +10,7 @@ cask "modern-csv" do
   livecheck do
     url "https://www.moderncsv.com/latest-version/"
     strategy :page_match
-    regex(/Modern\s*CSV\s*v?(\d+(?:\.\d+)*)/i)
+    regex(/Modern\s*CSV\s*v?(\d+(?:\.\d+)+)/i)
   end
 
   app "Modern CSV.app"
