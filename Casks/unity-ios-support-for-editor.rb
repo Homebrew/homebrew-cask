@@ -1,6 +1,6 @@
 cask "unity-ios-support-for-editor" do
-  version "2021.2.2f1,5e2b1e92c7f8"
-  sha256 "411ad76dbf6a78b3d278f343c449f238d9c3709bbc8b24365617a2c1d38c18e6"
+  version "2021.2.3f1,32358a8527b4"
+  sha256 "935cc24b813ad6553a11bb52413852ab2e0f9ac5a41ec05dc9764cf2672c6cd5"
 
   url "https://download.unity3d.com/download_unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-#{version.before_comma}.pkg",
       verified: "download.unity3d.com/download_unity/"
@@ -13,7 +13,7 @@ cask "unity-ios-support-for-editor" do
     strategy :page_match do |page|
       page.scan(%r{
         /download_unity/(\h+)/MacEditorTargetInstaller
-        /UnitySetup-iOS-Support-for-Editor-(\d+(?:\.\d+)*[a-z]*\d*)\.pkg
+        /UnitySetup-iOS-Support-for-Editor-(\d+(?:\.\d+)+[a-z]*\d*)\.pkg
       }ix).map do |match|
         "#{match[1]},#{match[0]}"
       end
