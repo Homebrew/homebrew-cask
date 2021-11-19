@@ -22,8 +22,8 @@ cask "parallels-toolbox" do
   zap trash: [
     "~/Library/Application Support/com.parallels.toolbox",
     "~/Library/Group Containers/*.com.parallels.toolbox",
-    "~/Library/Logs/prl.toolbox.ceplog.log",
     "~/Library/Logs/ParallelsToolbox",
+    "~/Library/Logs/prl.toolbox.ceplog.log",
     "~/Library/Logs/prl.toolbox.ceplog.xml",
     "~/Library/Preferences/com.parallels.toolbox.plist",
   ]
