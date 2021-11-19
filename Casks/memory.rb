@@ -1,5 +1,5 @@
 cask "memory" do
-  version "2021.07,320"
+  version "2021.09,334"
   sha256 :no_check
 
   url "https://memorymacapp.s3.amazonaws.com/Memory.zip",
