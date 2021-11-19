@@ -1,5 +1,5 @@
 cask "atext" do
-  version "2.39.3,116"
+  version "2.40,117"
   sha256 :no_check
 
   url "https://www.trankynam.com/atext/downloads/aText.dmg"
