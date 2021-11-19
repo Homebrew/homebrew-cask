@@ -13,7 +13,7 @@ cask "menubar-stats" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   app "MenuBar Stats.app"
 end
