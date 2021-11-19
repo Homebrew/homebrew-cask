@@ -14,4 +14,6 @@ cask "marvel" do
   end
 
   app "Marvel.app"
+
+  zap trash: "~/Library/Caches/com.marvelprototyping.marvelmacos"
 end
