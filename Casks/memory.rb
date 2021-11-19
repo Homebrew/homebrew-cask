@@ -17,4 +17,11 @@ cask "memory" do
   depends_on macos: ">= :high_sierra"
 
   app "Memory.app"
+
+  zap trash: [
+    "~/Library/Application Support/Memory",
+    "~/Library/Caches/com.timeapp.devlpmp.Timely-Mac-Tracker",
+    "~/Library/Logs/Memory",
+    "~/Library/Preferences/com.timeapp.devlpmp.Timely-Mac-Tracker.plist",
+  ]
 end
