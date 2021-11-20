@@ -14,18 +14,7 @@ cask "burp-suite-professional" do
     end
   end
 
-  installer script: {
-    executable: "Burp Suite Professional Installer.app/Contents/MacOS/JavaApplicationStub",
-    args:       ["-q"],
-    sudo:       true,
-  }
-
-  postflight do
-    set_ownership "/Applications/Burp Suite Professional.app"
-    set_permissions "/Applications/Burp Suite Professional.app", "a+rX"
-  end
-
-  uninstall delete: "/Applications/Burp Suite Professional.app"
+  app "Burp Suite Professional.app"
 
   zap trash: "~/.BurpSuite"
 end
