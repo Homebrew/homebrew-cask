@@ -12,6 +12,15 @@ cask "defold" do
   desc "Free to use game engine for development of desktop, mobile and web games"
   homepage "https://defold.com/"
 
+  livecheck do
+    url "http://d.defold.com/editor-alpha/info.json"
+    strategy :page_match do |json_content|
+      require "json"
+      info = JSON.parse(json_content)
+      "#{info["version"]},#{info["sha1"]}"
+    end
+  end
+
   depends_on macos: ">= :el_capitan"
 
   app "Defold.app"
