@@ -7,10 +7,5 @@ cask "macgesture" do
   desc "Utility to set up global mouse gestures"
   homepage "https://github.com/MacGesture/MacGesture"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   app "MacGesture.app"
 end
