@@ -13,4 +13,6 @@ cask "macx-video-converter-pro" do
   end
 
   app "MacX Video Converter Pro.app"
+
+  zap trash: "~/Library/Preferences/com.macxdvd.macxvdoconverterpro.plist"
 end
