@@ -10,7 +10,7 @@ cask "macgamestore" do
   livecheck do
     url "https://www.macgamestore.com/api_clientapp/clientupdates/public/update.xml"
     strategy :sparkle do |item|
-      match = item.url.match(%r{/MacGameStore_(\d+(?:\.\d+)*)_(\d+)\.tgz}i)
+      match = item.url.match(%r{/MacGameStore_(\d+(?:\.\d+)+)_(\d+)\.t}i)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
@@ -22,7 +22,7 @@ cask "macgamestore" do
   app "MacGameStore.app"
 
   zap trash: [
-    "~/Library/Application Support/MacGameStore.com",
     "/Applications/MacGameStore",
+    "~/Library/Application Support/MacGameStore.com",
   ]
 end
