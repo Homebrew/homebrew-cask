@@ -9,7 +9,7 @@ cask "macx-video-converter-pro" do
 
   livecheck do
     url "http://www.macxdvd.com/mac-video-converter-pro/upgrade/video-converter-pro.xml"
-    regex(%r{LastestVersion</key>\s*<string>(\d+(?:\.\d+)*)<}i)
+    regex(%r{LastestVersion</key>\s*<string>(\d+(?:\.\d+)+)<}i)
   end
 
   app "MacX Video Converter Pro.app"
