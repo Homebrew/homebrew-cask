@@ -10,8 +10,8 @@ cask "revolver-office" do
   livecheck do
     url "https://www.revolver.info/downloads/"
     strategy :page_match do |page|
-      page.scan(/href=.*?r?(\d+(?:\/\d+)+)\/mac\/revolveroffice?.*?\.dmg/i)
-          .map { |match| match&.first&.gsub(/\//, "\.") }
+      page.scan(%r{href=.*?r?(\d+(?:/\d+)+)/mac/revolveroffice?.*?\.dmg}i)
+          .map { |match| match&.first&.gsub(%r{/}, "\.") }
     end
   end
 
