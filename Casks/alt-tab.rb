@@ -3,8 +3,8 @@ cask "alt-tab" do
   sha256 "f86ecc32fe99e58a6dede0364ea3490caee878eac6788975bb4976944ab1e2f0"
 
   url "https://github.com/lwouis/alt-tab-macos/releases/download/v#{version}/AltTab-#{version}.zip"
-  name "alt-tab"
-  desc "Utility to set up alt-tab to switch between windows"
+  name "AltTab"
+  desc "Windows alt-tab on macOS"
   homepage "https://github.com/lwouis/alt-tab-macos"
 
   livecheck do
@@ -24,5 +24,6 @@ cask "alt-tab" do
     "~/Library/Caches/com.lwouis.alt-tab-macos",
     "~/Library/Cookies/com.lwouis.alt-tab-macos.binarycookies",
     "~/Library/Preferences/com.lwouis.alt-tab-macos.plist",
+    "~/Library/LaunchAgents/com.lwouis.alt-tab-macos.plist",
   ]
 end
