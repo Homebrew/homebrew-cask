@@ -10,4 +10,10 @@ cask "macgesture" do
   auto_updates true
 
   app "MacGesture.app"
+
+  zap trash: [
+    "~/Library/Caches/com.codefalling.MacGesture",
+    "~/Library/Preferences/com.codefalling.MacGesture.plist",
+    "~/Library/WebKit/com.codefalling.MacGesture",
+  ]
 end
