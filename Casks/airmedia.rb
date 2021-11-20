@@ -8,10 +8,10 @@ cask "airmedia" do
   homepage "https://www.crestron.com/microsites/airmedia-mobile-wireless-hd-presentations"
 
   livecheck do
-    url "https://www.crestron.com/en-US/Products/Featured-Solutions/Airmedia"
+    url "https://www.crestron.com/Products/Featured-Solutions/AirMedia/Airmedia-Apps"
     strategy :page_match do |page|
-      v = page[%r{href=.*?/airmedia_osx_(\d+(?:_\d+)*)_guest\.zip}i, 1]
-      v.tr("_", ".")
+      v = page[/airmedia_osx_(\d+(?:_\d+)*)_guest/i, 1]
+      v&.tr("_", ".")
     end
   end
 
