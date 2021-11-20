@@ -15,4 +15,13 @@ cask "mailbutler" do
   depends_on macos: ">= :high_sierra"
 
   app "Mailbutler.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.mailbutler.app",
+    "~/Library/Caches/com.mailbutler.app",
+    "~/Library/LaunchAgents/com.mailbutler.agent.plist",
+    "~/Library/Preferences/com.mailbutler.agent.plist",
+    "~/Library/Preferences/com.mailbutler.app.plist",
+    "~/Library/Saved Application State/com.mailbutler.app.savedState",
+  ]
 end
