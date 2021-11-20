@@ -14,18 +14,7 @@ cask "burp-suite" do
     end
   end
 
-  installer script: {
-    executable: "Burp Suite Community Edition.app/Contents/MacOS/JavaApplicationStub",
-    args:       ["-q"],
-    sudo:       true,
-  }
-
-  postflight do
-    set_ownership "/Applications/Burp Suite Community Edition.app"
-    set_permissions "/Applications/Burp Suite Community Edition.app", "a+rX"
-  end
-
-  uninstall delete: "/Applications/Burp Suite Community Edition.app"
+  app "Burp Suite Community Edition.app"
 
   zap trash: "~/.BurpSuite"
 end
