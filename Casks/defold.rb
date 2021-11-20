@@ -1,9 +1,12 @@
 cask "defold" do
-  version :latest
+  version "1.2.189,229b4dbc78495615871b3a7679e79d75d018c27a"
   sha256 :no_check
 
   # Yes, this is fine, editor-alpha is how their stable channel is called
-  url "http://d.defold.com/editor-alpha/info.json" do |json_content|
+  release_channel = "editor-alpha"
+  release_info_url = "http://d.defold.com/#{release_channel}/info.json"
+
+  url release_info_url do |json_content|
     require "json"
     version_sha = JSON.parse(json_content)["sha1"]
     "https://d.defold.com/archive/editor-alpha/#{version_sha}/editor-alpha/editor2/Defold-x86_64-darwin.dmg"
@@ -13,7 +16,7 @@ cask "defold" do
   homepage "https://defold.com/"
 
   livecheck do
-    url "http://d.defold.com/editor-alpha/info.json"
+    url release_info_url
     strategy :page_match do |json_content|
       require "json"
       info = JSON.parse(json_content)
@@ -21,6 +24,7 @@ cask "defold" do
     end
   end
 
+  auto_updates true
   depends_on macos: ">= :el_capitan"
 
   app "Defold.app"
