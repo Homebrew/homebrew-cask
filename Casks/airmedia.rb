@@ -1,8 +1,8 @@
 cask "airmedia" do
-  version "4.1.2"
-  sha256 "e96b36165378d2fec39d1994d4295cd27da83da505b12f4e3f5aefb5d160bd33"
+  version "4.1.4"
+  sha256 "be04bd4cf0e08d39c6a2fe70f74fc6fb6216a658f658711f68a728b247dcae4e"
 
-  url "https://www.crestron.com/Crestron/media/Crestron/WidenResources/Web%20Miscellaneous/airmedia_osx_#{version.dots_to_underscores}_guest.zip"
+  url "https://www.crestron.com/software_files_public/am-100/airmedia_osx_#{version}_guest.dmg"
   name "Crestron AirMedia"
   desc "Touchless presentation and collaboration software"
   homepage "https://www.crestron.com/microsites/airmedia-mobile-wireless-hd-presentations"
@@ -14,8 +14,6 @@ cask "airmedia" do
       v&.tr("_", ".")
     end
   end
-
-  container nested: "airmedia_osx_#{version}_guest.dmg"
 
   app "Crestron AirMedia.app"
 end
