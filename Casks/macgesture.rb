@@ -7,5 +7,7 @@ cask "macgesture" do
   desc "Utility to set up global mouse gestures"
   homepage "https://github.com/MacGesture/MacGesture"
 
+  auto_updates true
+
   app "MacGesture.app"
 end
