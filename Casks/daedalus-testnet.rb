@@ -1,6 +1,6 @@
 cask "daedalus-testnet" do
-  version "4.4.1,19369"
-  sha256 "4bf65f233a9d7b37e97bfc79c843a05d867446a141d81c99e5a997ea41f65dda"
+  version "4.5.1,19747"
+  sha256 "521606e0ebc3b51e29f2a5d112c1db823247a8efa2687e0756a1a8769239f398"
 
   url "https://updates-cardano-testnet.s3.amazonaws.com/daedalus-#{version.before_comma}-testnet-#{version.after_comma}.pkg",
       verified: "updates-cardano-testnet.s3.amazonaws.com/"
@@ -12,8 +12,8 @@ cask "daedalus-testnet" do
     url "https://updates-cardano-testnet.s3.amazonaws.com/daedalus-latest-version.json"
 
     strategy :page_match do |page|
-      version = page.match(/"version":"(.+?)"/)[1]
-      build = page.match(/-(\d+(?:\.\d+)*)\.pkg/)[1]
+      version = page.match(/"version":"(\d+(?:\.\d+)+)"/)[1]
+      build = page.match(/(\d+(?:\.\d+)*)\.pkg/)[1]
       "#{version},#{build}"
     end
   end
