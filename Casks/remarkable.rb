@@ -2,8 +2,7 @@ cask "remarkable" do
   version "2.10.3.179"
   sha256 "57579e8de8cf4d48f6c002d36878df4427ba113034eb2d783c0c26705056849e"
 
-  url "https://downloads.remarkable.com/desktop/production/mac/reMarkable-#{version}.dmg",
-      verified: "eu-central-1.linodeobjects.com/"
+  url "https://downloads.remarkable.com/desktop/production/mac/reMarkable-#{version}.dmg"
   name "Remarkable"
   desc "View, Screen Share, organize, import, and download files to a reMarkable device"
   homepage "https://remarkable.com/"
