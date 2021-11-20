@@ -11,7 +11,7 @@ cask "remarkable" do
     url "https://get-updates.cloud.remarkable.engineering/sparkle/reMarkableMacOs/Prod/appcast.xml"
     regex(%r{reMarkableMacOs/(Dev|Prod)/\d+/reMarkable-(\d+(?:\.\d+)*)\.dmg}i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| match[0].to_s }
+      page.scan(regex).map { |match| match[1].to_s }
     end
   end
 
