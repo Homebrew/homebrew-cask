@@ -13,4 +13,10 @@ cask "macdive" do
   end
 
   app "MacDive.app"
+
+  zap trash: [
+    "~/Library/Application Support/MacDive",
+    "~/Library/Preferences/com.mintsoftware.MacDive2.plist",
+    "~/Library/Saved Application State/com.mintsoftware.MacDive2.savedState",
+  ]
 end
