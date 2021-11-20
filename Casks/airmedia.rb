@@ -10,7 +10,7 @@ cask "airmedia" do
   livecheck do
     url "https://www.crestron.com/Products/Featured-Solutions/AirMedia/Airmedia-Apps"
     strategy :page_match do |page|
-      v = page[/airmedia_osx_(\d+(?:_\d+)+)_guest\.dmg/i, 1]
+      v = page[/airmedia_osx_(\d+(?:_\d+)+)_guest/i, 1]
       v&.tr("_", ".")
     end
   end
