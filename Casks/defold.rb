@@ -19,5 +19,7 @@ cask "defold" do
   zap trash: [
     "~/Library/Application Support/Defold",
     "~/Library/Preferences/com.defold.editor.plist",
+    "~/Library/Caches/com.defold.editor",
+    "~/Library/Saved Application State/com.defold.editor.savedState",
   ]
 end
