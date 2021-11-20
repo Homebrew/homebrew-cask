@@ -1,8 +1,8 @@
 cask "imageoptim" do
   version "1.8.8"
-  sha256 "f48ce652b8cbf0186e3a550d1dcd0ab81366d0662a3f01621d4cadd4af23cce3"
+  sha256 :no_check
 
-  url "https://imageoptim.com/ImageOptim#{version}.tar.bz2"
+  url "https://imageoptim.com/ImageOptim.tbz2"
   name "ImageOptim"
   desc "Tool to optimize images to a smaller size"
   homepage "https://imageoptim.com/mac"
