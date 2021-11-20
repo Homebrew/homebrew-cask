@@ -15,7 +15,7 @@ cask "burp-suite" do
   end
 
   installer script: {
-    executable: "Burp Suite Community Edition Installer.app/Contents/MacOS/JavaApplicationStub",
+    executable: "Burp Suite Community Edition.app/Contents/MacOS/JavaApplicationStub",
     args:       ["-q"],
     sudo:       true,
   }
