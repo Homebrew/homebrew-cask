@@ -9,9 +9,9 @@ cask "remarkable" do
 
   livecheck do
     url "https://get-updates.cloud.remarkable.engineering/sparkle/reMarkableMacOs/Prod/appcast.xml"
-    regex(%r{reMarkableMacOs/{Prod|Dev}/(\d+)/reMarkable-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{reMarkableMacOs/(Dev|Prod)/\d+/reMarkable-(\d+(?:\.\d+)*)\.dmg}i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
+      page.scan(regex).map { |match| "#{match[0]}" }
     end
   end
 
