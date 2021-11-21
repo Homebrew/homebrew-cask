@@ -9,19 +9,18 @@ cask "revolver-office" do
 
   livecheck do
     url "https://www.revolver.info/downloads/"
-    strategy :page_match do |page|
-      page.scan(%r{href=.*?r?(\d+(?:/\d+)+)/mac/revolveroffice?.*?\.dmg}i)
-          .map { |match| match&.first&.gsub(%r{/}, "\.") }
-    end
+    regex(/Revolver\s*(\d+(?:\.\d+)+)/i)
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Revolver Office.app"
 
   zap trash: [
     "~/Library/Caches/info.revolver.office",
+    "~/Library/Preferences/info.revolver.office.plist",
     "~/Library/Preferences/Revolver Logs",
     "~/Library/Preferences/Revolver Preferences",
-    "~/Library/Preferences/info.revolver.office.plist",
     "~/Library/Saved Application State/info.revolver.office.savedState",
     "~/Library/WebKit/info.revolver.office",
   ]
