@@ -14,4 +14,10 @@ cask "mudlet" do
   depends_on macos: ">= :high_sierra"
 
   app "Mudlet.app"
+
+  zap trash: [
+    "~/Library/Preferences/org.mudlet.mudlet.plist",
+    "~/Library/Saved Application State/org.mudlet.mudlet.savedState",
+    "~/mudlet-data",
+  ]
 end
