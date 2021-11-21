@@ -1,15 +1,15 @@
 cask "mps" do
   arch = Hardware::CPU.intel? ? "macos" : "macos-aarch64"
 
-  version "2021.2.1,212.5284.1175"
+  version "2021.2.2,212.5284.1234"
 
-  url "https://download.jetbrains.com/mps/#{version.major_minor}/MPS-#{version.before_comma}-#{arch}.dmg"
   if Hardware::CPU.intel?
-    sha256 "c2387d84c974582ac959e90d17baef331254f1dbda41579fb333228ab9e9d6dd"
+    sha256 "11e80c58039c5e3ea4c49a7aecd697494d12c84d5704a80d9ae1456d4cf8eda2"
   else
-    sha256 "f393a5cf68ae79b229cbbcb640a7fd64fb10cd5958ad45a04af3fa4fc4d10427"
+    sha256 "e0060854417b86e62362bf53d2b72efae6abcedf4a5dc18ad65b442ce6ffb51b"
   end
 
+  url "https://download.jetbrains.com/mps/#{version.major_minor}/MPS-#{version.before_comma}-#{arch}.dmg"
   name "JetBrains MPS"
   desc "Create your own domain-specific language"
   homepage "https://www.jetbrains.com/mps/"
