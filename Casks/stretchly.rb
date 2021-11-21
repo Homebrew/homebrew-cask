@@ -1,6 +1,6 @@
 cask "stretchly" do
-  version "1.7.0"
-  sha256 "fc0d3a3a26e24d1b8b262b5b2142c6057bf47cf3e452fd3b68c49b4eea611095"
+  version "1.8.0"
+  sha256 "faa5935b06e54ed5c0748f744e31abe49fddd602ee2d2d8f8e6a99dcd23f521b"
 
   url "https://github.com/hovancik/stretchly/releases/download/v#{version}/stretchly-#{version}.dmg",
       verified: "github.com/hovancik/stretchly/"
