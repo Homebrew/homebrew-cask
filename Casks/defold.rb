@@ -8,6 +8,14 @@ cask "defold" do
   desc "Game engine for development of desktop, mobile and web games"
   homepage "https://defold.com/"
 
+  livecheck do
+    url "https://d.defold.com/stable/info.json"
+    strategy :page_match do |json_content|
+      require "json"
+      JSON.parse(json_content)["version"]
+    end
+  end
+
   auto_updates true
 
   app "Defold.app"
