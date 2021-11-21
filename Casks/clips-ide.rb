@@ -4,9 +4,17 @@ cask "clips-ide" do
 
   url "https://downloads.sourceforge.net/clipsrules/clips_macos_executable_#{version.no_dots}.dmg",
       verified: "downloads.sourceforge.net/clipsrules/"
-  name "clips-ide"
+  name "CLIPS IDE"
   desc "Tool for building expert systems"
   homepage "http://www.clipsrules.net/"
+
+  livecheck do
+    url "https://sourceforge.net/projects/clipsrules/files/latest/download"
+    strategy :header_match
+    regex(%r{/CLIPS/(\d+(?:\.\d+)+)/}i)
+  end
+
+  depends_on macos: ">= :el_capitan"
 
   app "CLIPS IDE.app"
 end
