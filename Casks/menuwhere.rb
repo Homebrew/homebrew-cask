@@ -1,8 +1,8 @@
 cask "menuwhere" do
-  version "2.1,15"
+  version "2.1.1,22"
   sha256 :no_check
 
-  url "https://manytricks.com/download/menuwhere"
+  url "https://manytricks.com/download/_do_not_hotlink_/menuwhere#{version.before_comma.no_dots}.dmg"
   name "Menuwhere"
   desc "Access the menu from anywhere"
   homepage "https://manytricks.com/menuwhere/"
