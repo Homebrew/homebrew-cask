@@ -13,4 +13,9 @@ cask "musictube" do
   end
 
   app "Musictube.app"
+
+  zap trash: [
+    "~/Library/Preferences/org.tordini.flavio.musictube.plist",
+    "~/Library/Saved Application State/org.tordini.flavio.musictube.savedState",
+  ]
 end
