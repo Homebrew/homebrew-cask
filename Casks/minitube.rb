@@ -15,4 +15,9 @@ cask "minitube" do
   depends_on macos: ">= :sierra"
 
   app "Minitube.app"
+
+  zap trash: [
+    "~/Library/Preferences/org.tordini.flavio.minitube.plist",
+    "~/Library/Saved Application State/org.tordini.flavio.minitube.savedState",
+  ]
 end
