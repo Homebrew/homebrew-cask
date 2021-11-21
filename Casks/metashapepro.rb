@@ -13,4 +13,9 @@ cask "metashapepro" do
   end
 
   app "MetashapePro.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.agisoft.Metashape Pro.plist",
+    "~/Library/Saved Application State/com.agisoft.metashape.professional.savedState",
+  ]
 end
