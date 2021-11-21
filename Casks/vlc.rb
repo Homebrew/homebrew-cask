@@ -23,11 +23,13 @@ cask "vlc" do
   conflicts_with cask: "homebrew/cask-versions/vlc-nightly"
 
   app "VLC.app"
+
   # shim scripts (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscripts = {
     cvlc: "-I dummy",
     nvlc: "-I ncurses",
-    vlc: "",
+    rvlc: "-I rc",
+    vlc:  "",
   }
 
   shimscripts.each_key do |shimscript|
