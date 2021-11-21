@@ -1,4 +1,4 @@
-cask "alttab" do
+cask "alt-tab" do
   version "6.28.0"
   sha256 "f86ecc32fe99e58a6dede0364ea3490caee878eac6788975bb4976944ab1e2f0"
 
