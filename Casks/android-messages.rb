@@ -1,13 +1,13 @@
 cask "android-messages" do
-  version "3.1.0"
-  sha256 "4f1158c390e98c98516d6b34a98b6037dee55d4484f5aca5df75050ca91ece7f"
+  version "5.2.1"
+  sha256 "be0c271d478a15113af04f33349dd399bdd8b864e870b48ee7a82c42c5ced0d4"
 
-  url "https://github.com/chrisknepper/android-messages-desktop/releases/download/v#{version}/Android-Messages-#{version}.dmg"
+  url "https://github.com/OrangeDrangon/android-messages-desktop/releases/download/v#{version}/AndroidMessages-v#{version}-mac-universal.dmg"
   name "Android Messages Desktop"
   desc "Desktop client for Android Messages"
-  homepage "https://github.com/chrisknepper/android-messages-desktop"
+  homepage "https://github.com/OrangeDrangon/android-messages-desktop"
 
-  app "Android Messages.app"
+  app "AndroidMessages.app"
 
-  zap trash: "~/Library/Application Support/Android Messages"
+  zap trash: "~/Library/Application Support/android-messages-desktop"
 end
