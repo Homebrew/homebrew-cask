@@ -23,15 +23,24 @@ cask "vlc" do
   conflicts_with cask: "homebrew/cask-versions/vlc-nightly"
 
   app "VLC.app"
-  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/vlc.wrapper.sh"
-  binary shimscript, target: "vlc"
+  # shim scripts (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscripts = {
+    cvlc: "-I dummy",
+    nvlc: "-I ncurses",
+    vlc: "",
+  }
+
+  shimscripts.each_key do |shimscript|
+    binary "#{staged_path}/#{shimscript}.wrapper.sh", target: shimscript.to_s
+  end
 
   preflight do
-    File.write shimscript, <<~EOS
-      #!/bin/sh
-      exec '#{appdir}/VLC.app/Contents/MacOS/VLC' "$@"
-    EOS
+    shimscripts.each do |shimscript, args|
+      File.write "#{staged_path}/#{shimscript}.wrapper.sh", <<~EOS
+        #!/bin/sh
+        exec '#{appdir}/VLC.app/Contents/MacOS/VLC' #{args} "$@"
+      EOS
+    end
   end
 
   zap trash: [
