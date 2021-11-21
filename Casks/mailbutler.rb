@@ -17,6 +17,7 @@ cask "mailbutler" do
   app "Mailbutler.app"
 
   zap trash: [
+    "/Library/Mail/Bundles/Mailbutler.mailbundle",
     "~/Library/Application Support/com.mailbutler.app",
     "~/Library/Caches/com.mailbutler.app",
     "~/Library/LaunchAgents/com.mailbutler.agent.plist",
