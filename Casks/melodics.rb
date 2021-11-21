@@ -17,4 +17,12 @@ cask "melodics" do
   depends_on macos: ">= :high_sierra"
 
   app "Melodics.app"
+
+  zap trash: [
+    "~/Library/Application Support/Melodics",
+    "~/Library/Caches/Melodics",
+    "~/Library/Preferences/com.melodics.Melodics.plist",
+    "~/Library/Preferences/com.melodics.Melodics.updates.plist",
+    "~/Library/Saved Application State/com.melodics.melodics.savedState",
+  ]
 end
