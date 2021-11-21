@@ -18,8 +18,8 @@ cask "multitouch" do
   app "Multitouch.app"
 
   zap trash: [
-    "~/Library/Preferences/com.brassmonkery.Multitouch",
     "~/Library/Application Support/Multitouch",
     "~/Library/Caches/com.brassmonkery.Multitouch",
+    "~/Library/Preferences/com.brassmonkery.Multitouch",
   ]
 end
