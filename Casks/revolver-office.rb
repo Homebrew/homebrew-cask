@@ -16,4 +16,13 @@ cask "revolver-office" do
   end
 
   app "Revolver Office.app"
+
+  zap trash: [
+    "~/Library/Caches/info.revolver.office",
+    "~/Library/Preferences/Revolver Logs",
+    "~/Library/Preferences/Revolver Preferences",
+    "~/Library/Preferences/info.revolver.office.plist",
+    "~/Library/Saved Application State/info.revolver.office.savedState",
+    "~/Library/WebKit/info.revolver.office",
+  ]
 end
