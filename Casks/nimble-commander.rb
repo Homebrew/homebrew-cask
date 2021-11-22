@@ -15,4 +15,9 @@ cask "nimble-commander" do
   depends_on macos: ">= :catalina"
 
   app "Nimble Commander.app"
+
+  zap trash: [
+    "~/Library/Application Support/Nimble Commander",
+    "~/Library/Preferences/info.filesmanager.Files.plist",
+  ]
 end
