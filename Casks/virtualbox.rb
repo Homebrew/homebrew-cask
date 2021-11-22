@@ -19,6 +19,7 @@ cask "virtualbox" do
 
   conflicts_with cask: "homebrew/cask-versions/virtualbox-beta"
   depends_on macos: ">= :high_sierra"
+  depends_on arch: :intel
 
   pkg "VirtualBox.pkg",
       choices: [
