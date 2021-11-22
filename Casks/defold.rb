@@ -9,6 +9,10 @@ cask "defold" do
   homepage "https://defold.com/"
 
   auto_updates true
+  conflicts_with cask: [
+    "homebrew/cask-versions/defold-beta",
+    "homebrew/cask-versions/defold-alpha",
+  ]
 
   app "Defold.app"
 
