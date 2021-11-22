@@ -16,4 +16,11 @@ cask "mic-drop" do
   depends_on macos: ">= :catalina"
 
   app "Mic Drop.app"
+
+  zap trash: [
+    "~/Library/Application Support/Mic Drop",
+    "~/Library/Application Support/com.octopusthink.Mic-Drop",
+    "~/Library/Caches/com.octopusthink.Mic-Drop",
+    "~/Library/Preferences/com.octopusthink.Mic-Drop.plist",
+  ]
 end
