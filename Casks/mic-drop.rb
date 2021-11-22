@@ -1,6 +1,6 @@
 cask "mic-drop" do
-  version "1.3.5,1305"
-  sha256 "81ebeb77f42fbd5ddbb19ed69443f05d68b9217a13c2383fafcb542b011dd8f6"
+  version "1.3.6,1306"
+  sha256 "8687b90e0d70d7147cdb93cacc27c834bb4b29610c650f4b0aab82a9d357ec57"
 
   url "https://getmicdrop.com/downloads/Mic%20Drop%20#{version.before_comma}.zip"
   name "Mic Drop"
