@@ -14,4 +14,11 @@ cask "nucleo" do
   end
 
   app "Nucleo.app"
+
+  zap trash: [
+    "~/Library/Application Support/Nucleo",
+    "~/Library/Logs/Nucleo",
+    "~/Library/Preferences/co.ambercreative.nucleo.plist",
+    "~/Library/Saved Application State/co.ambercreative.nucleo.savedState",
+  ]
 end
