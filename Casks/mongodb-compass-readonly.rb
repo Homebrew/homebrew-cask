@@ -13,4 +13,13 @@ cask "mongodb-compass-readonly" do
   end
 
   app "MongoDB Compass Readonly.app"
+
+  zap trash: [
+    "~/.mongodb/compass",
+    "~/Library/Application Support/MongoDB Compass Readonly",
+    "~/Library/Caches/com.mongodb.compass.readonly",
+    "~/Library/Caches/com.mongodb.compass.readonly.ShipIt",
+    "~/Library/Preferences/com.mongodb.compass.readonly.plist",
+    "~/Library/Saved Application State/com.mongodb.compass.readonly.savedState",
+  ]
 end
