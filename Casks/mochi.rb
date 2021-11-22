@@ -1,6 +1,6 @@
 cask "mochi" do
-  version "1.11.19"
-  sha256 "ae3454906f60d45edc6cb23d82b2fa292b2fbb3b4e8d15bf1df9cc91a8ae5558"
+  version "1.12.6"
+  sha256 "953f8f26ba3d0b8914482feaa8ecea41708aade513ac75293d9a9b52bd598a60"
 
   url "https://mochi.cards/releases/Mochi-#{version}.dmg"
   name "Mochi"
@@ -13,4 +13,11 @@ cask "mochi" do
   end
 
   app "Mochi.app"
+
+  zap trash: [
+    "~/Library/Application Support/mochi",
+    "~/Library/Logs/Mochi",
+    "~/Library/Preferences/com.msteedman.mochi.plist",
+    "~/Library/Saved Application State/com.msteedman.mochi.savedState",
+  ]
 end
