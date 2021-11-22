@@ -12,5 +12,7 @@ cask "nimble-commander" do
     strategy :sparkle
   end
 
+  depends_on macos: ">= :catalina"
+
   app "Nimble Commander.app"
 end
