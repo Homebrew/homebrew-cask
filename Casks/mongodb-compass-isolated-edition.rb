@@ -13,4 +13,11 @@ cask "mongodb-compass-isolated-edition" do
   end
 
   app "MongoDB Compass Isolated Edition.app"
+
+  zap trash: [
+    "~/.mongodb/compass",
+    "~/Library/Application Support/MongoDB Compass Isolated Edition",
+    "~/Library/Preferences/com.mongodb.compass.isolated.plist",
+    "~/Library/Saved Application State/com.mongodb.compass.isolated.savedState",
+  ]
 end
