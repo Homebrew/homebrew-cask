@@ -1,11 +1,16 @@
 cask "privadovpn" do
-  version :latest
+  version "2.1.1,368581705"
   sha256 :no_check
 
   url "https://privadovpn.com/apps/osx/PrivadoVPN.dmg"
-  name "privadovpn"
+  name "PrivadoVPN"
   desc "VPN client"
   homepage "https://privadovpn.com/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   app "PrivadoVPN.app"
 
