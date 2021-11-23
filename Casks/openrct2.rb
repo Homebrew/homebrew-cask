@@ -1,4 +1,5 @@
 cask "openrct2" do
+  # NOTE: "2" is not a version number, but an intrinsic part of the product name
   if MacOS.version <= :sierra
     version "0.2.6"
     sha256 "0073933b486da10b181bc8a226a140badc64c7cd93f681d769c17b5715221a85"
