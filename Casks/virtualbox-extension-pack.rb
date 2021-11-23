@@ -4,13 +4,13 @@ cask "virtualbox-extension-pack" do
 
   url "https://download.virtualbox.org/virtualbox/#{version}/Oracle_VM_VirtualBox_Extension_Pack-#{version}.vbox-extpack"
   name "Oracle VirtualBox Extension Pack"
-  desc "AMD64/Intel64 and x86 virtualization"
+  desc "Extend the functionality of VirtualBox"
   homepage "https://www.virtualbox.org/"
 
   livecheck do
     url "https://download.virtualbox.org/virtualbox/LATEST.TXT"
     strategy :page_match
-    regex(/\d+\.\d+\.\d+/)
+    regex(/(\d+(?:\.\d+)+)/)
   end
 
   conflicts_with cask: "virtualbox-extension-pack-beta"
