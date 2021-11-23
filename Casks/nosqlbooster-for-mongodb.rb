@@ -14,4 +14,11 @@ cask "nosqlbooster-for-mongodb" do
   end
 
   app "NoSQLBooster for MongoDB.app"
+
+  zap trash: [
+    "~/Documents/NoSQLBooster",
+    "~/Library/Application Support/NoSQLBooster for MongoDB",
+    "~/Library/Preferences/com.nosqlbooster.mongodb.plist",
+    "~/Library/Saved Application State/com.nosqlbooster.mongodb.savedState",
+  ]
 end
