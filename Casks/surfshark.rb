@@ -18,7 +18,7 @@ cask "surfshark" do
     "~/Library/Application Scripts/com.surfshark.vpnclient.macos",
     "~/Library/Application Scripts/com.surfshark.vpnclient.macos.PacktTunnel-OpenVPN",
     "~/Library/Application Scripts/com.surfshark.vpnclient.macos.launchAgent",
-    "~/Library/Application Support/CrashReporter/Surfshark.OpenVPN_DF2D8DF5-283D-5FFF-9DBF-511FBB24AE9D.plist",
+    "~/Library/Application Support/CrashReporter/Surfshark.OpenVPN_*.plist",
     "~/Library/Containers/com.surfshark.vpnclient.macos",
     "~/Library/Containers/com.surfshark.vpnclient.macos.PacktTunnel-OpenVPN",
     "~/Library/Containers/com.surfshark.vpnclient.macos.launchAgent",
