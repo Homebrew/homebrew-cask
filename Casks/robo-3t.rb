@@ -12,6 +12,8 @@ cask "robo-3t" do
     url "https://github.com/Studio3T/robomongo"
     strategy :github_latest do |page|
       match = page.match(%r{href=.*?/v?(\d+(?:\.\d+)*)/robo3t-\1-darwin-x86_64-([0-9a-f]+)\.dmg}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end
@@ -22,6 +24,10 @@ cask "robo-3t" do
 
   zap trash: [
     "~/.3T/robo-3t/",
+    "~/Library/Application Support/Robo 3T",
+    "~/Library/Caches/Robo 3T",
+    "~/Library/Preferences/com.3tsoftwarelabs.robo3t.plist",
+    "~/Library/Saved Application State/com.3tsoftwarelabs.robo3t.savedState",
     "~/Library/Saved Application State/Robo 3T.savedState",
   ]
 end

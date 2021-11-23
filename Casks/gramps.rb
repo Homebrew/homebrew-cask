@@ -1,6 +1,6 @@
 cask "gramps" do
-  version "5.1.4,2"
-  sha256 "dc8e2518a8d17650edaada09ee1fa6b1e42ca440bd14c5fbd0d35d93499e5550"
+  version "5.1.4,5"
+  sha256 "b50494b5b851121989695c1ed41f0512de5da6e907dc94fe6cd06b95149f7ac6"
 
   url "https://github.com/gramps-project/gramps/releases/download/v#{version.before_comma}/Gramps-Intel-#{version.before_comma}-#{version.after_comma}.dmg",
       verified: "github.com/gramps-project/gramps/"
@@ -12,6 +12,8 @@ cask "gramps" do
     url "https://github.com/gramps-project/gramps/releases/latest"
     strategy :page_match do |page|
       match = page.match(%r{href=.*?/Gramps-Intel-(\d+(?:.\d+)*)-(\d+)\.dmg}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

@@ -1,6 +1,6 @@
 cask "iina-plus" do
-  version "0.5.20,21081917"
-  sha256 "9893dfae4a766cb310856cfe860a4c7f77c71abc96913f60f5a13ca519754107"
+  version "0.5.22,21102812"
+  sha256 "ab47610079c2143858ad9ac0c4a6810fdbbb4f9506f80ae2bce6b7365f93d764"
 
   url "https://github.com/xjbeta/iina-plus/releases/download/#{version.before_comma}(#{version.after_comma})/iina+.#{version.before_comma}.dmg"
   name "IINA+"
@@ -10,7 +10,9 @@ cask "iina-plus" do
   livecheck do
     url "https://github.com/xjbeta/iina-plus/releases/latest"
     strategy :page_match do |page|
-      match = page.match(/(\d+(?:\.\d+)*)\((\d+)\)/i)
+      match = page.match(/(\d+(?:\.\d+)+)\((\d+)\)/i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

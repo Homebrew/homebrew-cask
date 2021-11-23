@@ -1,6 +1,6 @@
 cask "bricklink-studio" do
-  version "2.2.8_1"
-  sha256 "501ad46af8c2916e43fdc4b73a02bd1d7c9b26fcbb5be276cafbecc0293a1b17"
+  version "2.2.9_1"
+  sha256 "8dc6e09fe06841354f89aaebc5d80d552a862d3aa894bd8b7d463dd1845a5e9a"
 
   url "https://blstudio.s3.amazonaws.com/Studio#{version.major}.0/Archive/#{version}/Studio+#{version.major}.0.pkg",
       verified: "blstudio.s3.amazonaws.com/"
@@ -21,10 +21,10 @@ cask "bricklink-studio" do
 
   zap trash: [
     "~/Library/Application Support/unity.BrickLink.Studio",
-    "~/Library/Preferences/unity.BrickLink.Studio.plist",
-    "~/Library/Preferences/unity.BrickLink.Patcher.plist",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/unity.BrickLink.Studio",
-    "~/Library/Saved Application State/unity.BrickLink.Studio.savedState",
+    "~/Library/Preferences/unity.BrickLink.Patcher.plist",
+    "~/Library/Preferences/unity.BrickLink.Studio.plist",
     "~/Library/Saved Application State/unity.BrickLink.Patcher.savedState",
+    "~/Library/Saved Application State/unity.BrickLink.Studio.savedState",
   ]
 end

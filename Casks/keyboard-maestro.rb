@@ -1,8 +1,8 @@
 cask "keyboard-maestro" do
-  version "9.2"
-  sha256 "a3a25d0663074e726e4d89692196f2e4a5b7ae013b5f3ed9eb1aae784d457c5d"
+  version "10.0.1,1001"
+  sha256 "1f1b4a6a11fe75cee12e0cd805b22247ce0af936188781163c19f6bc8dc5906a"
 
-  url "https://files.stairways.com/keyboardmaestro-#{version.no_dots}.zip",
+  url "https://files.stairways.com/keyboardmaestro-#{version.after_comma}.zip",
       verified: "stairways.com/"
   name "Keyboard Maestro"
   desc "Automation software"
@@ -10,8 +10,12 @@ cask "keyboard-maestro" do
 
   livecheck do
     url "https://files.stairways.com/index.html"
-    strategy :page_match
-    regex(/href=.*?\.zip.*?Keyboard\s*Maestro\s*(\d+(\.\d+)*)/i)
+    strategy :page_match do |page|
+      match = page.match(/href=.*?keyboardmaestro[._-]v?(\d+)\.zip.*?Maestro\s*(\d+(?:\.\d+)+)/i)
+      next if match.blank?
+
+      "#{match[2]},#{match[1]}"
+    end
   end
 
   auto_updates true

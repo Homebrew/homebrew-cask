@@ -1,6 +1,6 @@
 cask "shifty" do
-  version "1.1.2"
-  sha256 "71daedf1504907ac1ba59f478978da1c50bd78ddce846f4c1cf967462a40753a"
+  version "1.2"
+  sha256 "111b1df97cf5cbca91f4130e6d68d409dbefeffa9fde5f5c92f30f712a7215e9"
 
   url "https://github.com/thompsonate/Shifty/releases/download/v#{version}/Shifty-#{version}.zip",
       verified: "github.com/thompsonate/Shifty/"
@@ -8,6 +8,7 @@ cask "shifty" do
   desc "Menu bar app that provides more control over Night Shift"
   homepage "https://shifty.natethompson.io/"
 
+  auto_updates true
   depends_on macos: ">= :sierra"
 
   app "Shifty.app"

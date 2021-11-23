@@ -1,12 +1,23 @@
 cask "webex-meetings" do
-  version :latest
+  version "2111.1208.4112.2"
   sha256 :no_check
 
-  url "https://akamaicdn.webex.com/client/webexapp.dmg"
+  if Hardware::CPU.intel?
+    url "https://akamaicdn.webex.com/client/webexapp.dmg"
+  else
+    url "https://akamaicdn.webex.com/client/Cisco_Webex_Meetings.pkg"
+  end
+
   name "Webex Meetings"
+  desc "Video communication and virtual meeting platform"
   homepage "https://www.webex.com/"
 
-  pkg "Cisco Webex Meetings.pkg"
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
+  pkg "Cisco_Webex_Meetings.pkg"
 
   uninstall quit:      [
     "com.cisco.webexmeetingsapp",

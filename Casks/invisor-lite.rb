@@ -1,9 +1,10 @@
 cask "invisor-lite" do
-  version "3.15.1,940.210121"
-  sha256 "208eeb370966fd07a16a45d39fe93683692999032f9b89cab0723d58ed25cdf1"
+  version "3.17,989.211020"
+  sha256 "acdbf1f7b09fff9a450feb99f1a9686b698f82c71303fe6297f0485829fca09f"
 
   url "https://www.invisorapp.com/download/InvisorLite-#{version.before_comma}.dmg"
   name "Invisor Lite"
+  desc "Media file inspector"
   homepage "https://www.invisorapp.com/"
 
   livecheck do
@@ -12,4 +13,9 @@ cask "invisor-lite" do
   end
 
   app "Invisor Lite.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.pozdeev.invisorfree.plist",
+    "~/Library/Saved Application State/com.pozdeev.invisorfree.savedState",
+  ]
 end

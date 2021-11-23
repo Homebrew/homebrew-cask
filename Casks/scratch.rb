@@ -15,4 +15,9 @@ cask "scratch" do
   depends_on macos: ">= :high_sierra"
 
   app "Scratch #{version.major}.app"
+
+  zap trash: [
+    "~/Library/Application Support/Scratch",
+    "~/Library/Preferences/edu.mit.scratch.scratch-desktop.plist",
+  ]
 end

@@ -13,4 +13,10 @@ cask "onionshare" do
   end
 
   app "OnionShare.app"
+
+  zap trash: [
+    "~/Library/Application Support/OnionShare",
+    "~/Library/Preferences/org.onionshare.onionshare.plist",
+    "~/Library/Saved Application State/org.onionshare.onionshare.savedState",
+  ]
 end

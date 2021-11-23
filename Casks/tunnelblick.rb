@@ -13,6 +13,8 @@ cask "tunnelblick" do
     url "https://github.com/Tunnelblick/Tunnelblick/releases"
     strategy :page_match do |page|
       match = page.match(%r{href=.*?/Tunnelblick_(\d+(?:\.\d+)*[a-z]?)_build_(\d+)\.dmg}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

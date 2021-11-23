@@ -1,6 +1,6 @@
 cask "rancher" do
-  version "0.5.0"
-  sha256 "0ebdfb3e070e1c525a08730ccea761a040d366fa800c735870ff328080f8fa55"
+  version "0.6.1"
+  sha256 "181b46b6da8906e8bbbe0bc67e962a44b5abc13aa4b9bea54a0fbc9520795649"
 
   url "https://github.com/rancher-sandbox/rancher-desktop/releases/download/v#{version}/Rancher.Desktop-#{version}.dmg",
       verified: "github.com/rancher-sandbox/rancher-desktop/"
@@ -24,9 +24,12 @@ cask "rancher" do
 
   zap trash: [
     "~/.kuberlr",
+    "~/Library/Application Support/Caches/rancher-desktop-updater",
     "~/Library/Application Support/rancher-desktop",
+    "~/Library/Caches/io.rancherdesktop.app*",
     "~/Library/Caches/rancher-desktop",
     "~/Library/Logs/rancher-desktop",
+    "~/Library/Preferences/ByHost/io.rancherdesktop.app*",
     "~/Library/Preferences/io.rancherdesktop.app.plist",
     "~/Library/Preferences/rancher-desktop",
     "~/Library/Saved Application State/io.rancherdesktop.app.savedState",

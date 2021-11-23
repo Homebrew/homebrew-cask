@@ -1,5 +1,5 @@
 cask "adobe-air" do
-  version "33.1.1.633"
+  version "33.1.1.674"
   sha256 :no_check
 
   url "https://airsdk.harman.com/assets/downloads/AdobeAIR.dmg"
@@ -10,7 +10,7 @@ cask "adobe-air" do
   livecheck do
     url "https://airsdk.harman.com/api/config-settings/download"
     strategy :page_match
-    regex(/"versionName"\s*:\s*"(\d+(?:\.\d+)*)/i)
+    regex(/"versionName"\s*:\s*"(\d+(?:\.\d+)+)/i)
   end
 
   installer script: {

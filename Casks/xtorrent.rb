@@ -11,6 +11,8 @@ cask "xtorrent" do
     url "http://www.xtorrent.com/download.php"
     strategy :page_match do |page|
       match = page.match(/Xtorrent(\d+(?:\.\d+)*)\(v?(\d+(?:\.\d+)*)\)\.dmg/i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

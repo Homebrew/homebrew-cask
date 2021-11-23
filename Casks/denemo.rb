@@ -10,7 +10,7 @@ cask "denemo" do
   livecheck do
     url "http://denemo.org/downloads/"
     strategy :page_match
-    regex(/href=.*?denemo-(\d+(?:\.\d+)*)-darwin-x64.tar\.bz2/i)
+    regex(/href=.*?denemo-(\d+(?:\.\d+)+)-darwin-x64.tar\.bz2/i)
   end
 
   app "Denemo.app"

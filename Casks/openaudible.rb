@@ -1,11 +1,11 @@
 cask "openaudible" do
-  version "3.1.2"
-  sha256 "ccd7bc6f2ee23bd585c5726f4a71da73bd7682fbc804d7bb65909fb2585d32ce"
+  version "3.2.2"
+  sha256 "f9c229319962b10196e321cbf2e7baa13a572eeaa7b4e8697585df270b6280f6"
 
   url "https://github.com/openaudible/openaudible/releases/download/v#{version}/OpenAudible_#{version}.dmg",
       verified: "github.com/openaudible/"
   name "OpenAudible"
-  desc "Open-source audible manager"
+  desc "Audiobook manager for Audible users"
   homepage "https://openaudible.org/"
 
   livecheck do

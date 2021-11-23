@@ -11,6 +11,8 @@ cask "profilecreator" do
     url :url
     strategy :github_latest do |page|
       match = page.match(%r{href=.*?/ProfileCreator_v(\d+(?:\.\d+)*)-(.*?)\.dmg}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

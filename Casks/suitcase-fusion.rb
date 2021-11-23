@@ -1,18 +1,18 @@
 cask "suitcase-fusion" do
-  version "21.4.1"
-  sha256 "962677943d73133a703e8f36b6d2121889608926c98e8b04ff2f29ebf6da70fc"
+  version "21.4.4"
+  sha256 "849ada27d872dfa2ff535965476877fe9c147c8b49533d9e675235ac4530a361"
 
   url "https://bin.extensis.com/SuitcaseFusion-M-#{version.dots_to_hyphens}.dmg"
   name "Extensis Suitcase Fusion"
+  desc "Font manager"
   homepage "https://www.extensis.com/suitcase-fusion/"
 
   livecheck do
     url "https://www.extensis.com/support/suitcase-fusion-#{version.major}/release-notes/"
-    strategy :page_match
     regex(/Current\s*version:\s*(\d+(?:\.\d+)*)/i)
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :mojave"
 
   app "Suitcase Fusion.app"
 end

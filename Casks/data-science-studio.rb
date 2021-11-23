@@ -10,7 +10,7 @@ cask "data-science-studio" do
   livecheck do
     url "https://www.dataiku.com/dss/trynow/mac/"
     strategy :page_match
-    regex(%r{href=.*?/Data%20Science%20Studio%20(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/Data%20Science%20Studio%20(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "DataScienceStudio.app"

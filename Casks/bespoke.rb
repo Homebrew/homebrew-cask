@@ -1,6 +1,6 @@
 cask "bespoke" do
-  version "1.0.0"
-  sha256 "94e33d4d95114ac831f9de5d43bbdc78df237d1a8babb324aeb8f36942ff1f76"
+  version "1.1.0"
+  sha256 "a751c491290a91ecc455d7150ec36789aa34409bf2d99ef9ada8a3e79db3d6e8"
 
   url "https://github.com/BespokeSynth/BespokeSynth/releases/download/v#{version}/Bespoke-Mac.dmg",
       verified: "github.com/BespokeSynth/BespokeSynth/"
@@ -8,7 +8,7 @@ cask "bespoke" do
   desc "Software modular synth"
   homepage "https://www.bespokesynth.com/"
 
-  suite "BespokeSynth"
+  app "BespokeSynth.app"
 
   zap trash: [
     "~/Library/Caches/com.ryanchallinor.bespokesynth",

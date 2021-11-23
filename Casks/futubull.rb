@@ -1,6 +1,6 @@
 cask "futubull" do
-  version "11.10.1508,202109161741"
-  sha256 "6355cc0d0a4373ef2f46c77bd594044ac7c3126b7aea7b9c7c96629643bfe9d9"
+  version "11.11.1628,202111110958"
+  sha256 "d95c5ebf5e0d781732e30a09b09168d5332cf2b916c578ff5d067d2b0a6d54eb"
 
   url "https://softwarefile.futunn.com/FTNNForMac_#{version.before_comma}_#{version.after_comma}_Website.dmg"
   name "Futubull"
@@ -11,7 +11,7 @@ cask "futubull" do
   livecheck do
     url "https://www.futunn.com/download/history?client=11"
     strategy :page_match do |page|
-      page.scan(%r{/FTNNForMac[._-]v?(\d+(?:\.\d+)*)[_-](\d+)[._-]Website\.dmg}i).map do |match|
+      page.scan(%r{/FTNNForMac[._-]v?(\d+(?:\.\d+)+)[_-](\d+)[._-]Website\.dmg}i).map do |match|
         "#{match[0]},#{match[1]}"
       end
     end
@@ -19,4 +19,9 @@ cask "futubull" do
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "FutuNiuniu.app", target: "Futubull.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/cn.futu.Niuniu",
+    "~/Library/Containers/cn.futu.Niuniu",
+  ]
 end

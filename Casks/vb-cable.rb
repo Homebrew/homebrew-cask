@@ -1,17 +1,18 @@
 cask "vb-cable" do
   version "108"
-  sha256 "9de5ecc1bc4df1a7ec179eed4a89d66b3f197081936ec34d58054bd54350aa80"
+  sha256 "e46b41c6876995403cb1da37d7c0d566f59edd83aa9fcbcdc3a205eb0b6e05c7"
 
-  url "https://download.vb-audio.com/Download_MAC/VBCable_MACDriver_Pack#{version}.dmg"
+  url "https://download.vb-audio.com/Download_MAC/VBCable_MACDriver_Pack#{version}.zip"
   name "VB-CABLE Virtual Audio Device"
   desc "Virtual audio cable for routing audio from one application to another"
   homepage "https://www.vb-audio.com/Cable/index.htm"
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/VBCable_MACDriver_Pack(\d+)\.dmg}i)
+    regex(%r{href=.*?/VBCable_MACDriver_Pack(\d+)\.zip}i)
   end
+
+  container nested: "VBCable_MACDriver_Pack#{version}.dmg"
 
   pkg "vb-cable-installer.pkg"
 

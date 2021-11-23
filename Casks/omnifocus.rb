@@ -15,10 +15,14 @@ cask "omnifocus" do
     version "3.4.6"
     sha256 "b770b046c2c59f6e55f54d0ad822d5aa755a18aa201d333341de14ebbbcc6a85"
     url "https://downloads.omnigroup.com/software/MacOSX/10.13/OmniFocus-#{version}.dmg"
-  else
+  elsif MacOS.version <= :mojave
     version "3.11.7"
     sha256 "21c0a63b6bd8c8ff3e5067f4ccd0ab16c9fd65815a7305e184ed27723bd0aa15"
     url "https://downloads.omnigroup.com/software/MacOSX/10.14/OmniFocus-#{version}.dmg"
+  else
+    version "3.12.2"
+    sha256 "4d637108de417eb80835eaa34afda4fca950b4ec8809a3a38b8bab3b5d11af5f"
+    url "https://downloads.omnigroup.com/software/macOS/11/OmniFocus-#{version}.dmg"
   end
 
   name "OmniFocus"
@@ -37,12 +41,12 @@ cask "omnifocus" do
   uninstall quit: "com.omnigroup.OmniFocus#{version.major}"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.omnigroup.omnifocus#{version}.sfl*",
+    "~/Library/Caches/Metadata/com.omnigroup.OmniFocus#{version}",
     "~/Library/Containers/com.omnigroup.OmniFocus#{version}",
+    "~/Library/Group Containers/34YW5XSRB7.com.omnigroup.OmniFocus",
     "~/Library/Preferences/com.omnigroup.OmniFocus#{version}.LSSharedFileList.plist",
     "~/Library/Preferences/com.omnigroup.OmniSoftwareUpdate.plist",
-    "~/Library/Caches/Metadata/com.omnigroup.OmniFocus#{version}",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.omnigroup.omnifocus#{version}.sfl*",
-    "~/Library/Group Containers/34YW5XSRB7.com.omnigroup.OmniFocus",
     "~/Library/Saved Application State/com.omnigroup.OmniFocus#{version}.savedState",
   ]
 end

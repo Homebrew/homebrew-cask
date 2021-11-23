@@ -7,8 +7,8 @@ cask "couchbase-server-enterprise" do
 
     app "couchbase-server-enterprise_#{version}/Couchbase Server.app"
   else
-    version "7.0.0"
-    sha256 "c74adc0f75c41a4cc243066d9d5fb66f83012f5103d4df0cd315ff7494036339"
+    version "7.0.2"
+    sha256 "83e8e7e794b3eab4d9ae99b01f31d6c49dc1af33047e4931abc62620e8bda4f3"
 
     url "https://packages.couchbase.com/releases/#{version}/couchbase-server-enterprise_#{version}-macos_x86_64.dmg"
 
@@ -16,6 +16,7 @@ cask "couchbase-server-enterprise" do
   end
 
   name "Couchbase Server"
+  desc "Distributed NoSQL cloud database"
   homepage "https://www.couchbase.com/"
 
   livecheck do

@@ -12,5 +12,15 @@ cask "drivedx" do
     strategy :sparkle
   end
 
+  auto_updates true
+
   app "DriveDx.app"
+
+  zap trash: [
+    "~/Library/Application Support/DriveDx",
+    "~/Library/Caches/DriveDx",
+    "~/Library/Caches/com.binaryfruit.DriveDx",
+    "~/Library/Logs/DriveDx",
+    "~/Library/Preferences/com.binaryfruit.DriveDx.plist",
+  ]
 end

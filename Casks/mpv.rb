@@ -1,6 +1,6 @@
 cask "mpv" do
-  version "0.33.1"
-  sha256 "b2cfa0dd1dfd3d00d360a5ed50919920a2429da84315148fdda4bda886aa8225"
+  version "0.34.0"
+  sha256 "5816958ef70df7146b5fa9e6af354b5ddd44aa97b6c86d771ad822403d791384"
 
   url "https://laboratory.stolendata.net/~djinn/mpv_osx/mpv-#{version}.tar.gz",
       verified: "laboratory.stolendata.net/~djinn/mpv_osx/"
@@ -11,11 +11,11 @@ cask "mpv" do
   livecheck do
     url "https://laboratory.stolendata.net/~djinn/mpv_osx/"
     strategy :page_match
-    regex(/mpv-(\d+(?:\.\d+)*)\.tar\.gz/i)
+    regex(/mpv-(\d+(?:\.\d+)+)\.tar\.gz/i)
   end
 
   conflicts_with formula: "mpv"
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   app "mpv.app"
   binary "#{appdir}/mpv.app/Contents/MacOS/mpv"

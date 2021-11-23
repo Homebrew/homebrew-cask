@@ -9,7 +9,7 @@ cask "dwarf-fortress" do
 
   livecheck do
     url "https://www.bay12games.com/dwarves/older_versions.html"
-    regex(/DF\s*(\d+(?:\.\d+)*)/i)
+    regex(/DF\s*(\d+(?:\.\d+)+)/i)
   end
 
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)

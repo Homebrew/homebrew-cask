@@ -10,7 +10,7 @@ cask "clock" do
   livecheck do
     url "https://github.com/zachwaugh/Clock.app"
     strategy :page_match
-    regex(%r{href=.*?/Clock-(\d+(?:\.\d+)*)\.zip}i)
+    regex(%r{href=.*?/Clock-(\d+(?:\.\d+)+)\.zip}i)
   end
 
   app "Clock.app"

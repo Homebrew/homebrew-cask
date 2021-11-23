@@ -9,4 +9,6 @@ cask "tickeys" do
   homepage "https://www.yingdev.com/projects/tickeys"
 
   app "Tickeys.app"
+
+  zap trash: "~/Library/Preferences/com.yingDev.Tickeys.plist"
 end

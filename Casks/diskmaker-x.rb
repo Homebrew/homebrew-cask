@@ -13,7 +13,7 @@ cask "diskmaker-x" do
     livecheck do
       url "https://diskmakerx.com/"
       strategy :page_match
-      regex(/DiskMaker\s*X\s*(\d+(?:\.\d+)*)/i)
+      regex(/DiskMaker\s*X\s*(\d+(?:\.\d+)+)/i)
     end
   end
 

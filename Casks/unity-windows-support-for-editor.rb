@@ -1,6 +1,6 @@
 cask "unity-windows-support-for-editor" do
-  version "2021.1.23f1,b50729e604a9"
-  sha256 "f216d24ff0ac04ade5a171969182075257ac95123d69aa2eab0162959ae86a05"
+  version "2021.2.3f1,32358a8527b4"
+  sha256 "c8759e325e761c2c81a9d8e3322b313872af6e9e91b656c5fc1b33cfeb2c36db"
 
   url "https://download.unity3d.com/download_unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-#{version.before_comma}.pkg",
       verified: "download.unity3d.com/download_unity/"
@@ -13,7 +13,7 @@ cask "unity-windows-support-for-editor" do
     strategy :page_match do |page|
       page.scan(%r{
         /download_unity/(\h+)/MacEditorTargetInstaller
-        /UnitySetup-Windows-Mono-Support-for-Editor-(\d+(?:\.\d+)*[a-z]*\d*)\.pkg
+        /UnitySetup-Windows-Mono-Support-for-Editor-(\d+(?:\.\d+)+[a-z]*\d*)\.pkg
       }ix).map do |match|
         "#{match[1]},#{match[0]}"
       end

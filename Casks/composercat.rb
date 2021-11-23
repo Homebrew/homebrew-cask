@@ -4,12 +4,13 @@ cask "composercat" do
 
   url "https://getcomposercat.com/composercat/Composercat-#{version}.dmg"
   name "Composercat"
+  desc "Graphical interface for Composer (PHP)"
   homepage "https://getcomposercat.com/"
 
   livecheck do
     url "https://getcomposercat.com/"
     strategy :page_match
-    regex(%r{href=.*?/Composercat-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/Composercat-(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "Composercat.app"

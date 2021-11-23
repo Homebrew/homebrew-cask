@@ -1,6 +1,6 @@
 cask "xamarin-mac" do
-  version "7.14.0.24"
-  sha256 "77e532874eb85b0cba260d8f77c55b149c78d9f6d1f8758ac5fe6f427bd18fe0"
+  version "8.2.0.1"
+  sha256 "a1bb6eafe4d111106d81550407ee1dac2e829b02693e1b34cd8cca12dbb42ba2"
 
   url "https://dl.xamarin.com/XamarinforMac/Mac/xamarin.mac-#{version}.pkg"
   name "Xamarin Mac"

@@ -1,37 +1,29 @@
 cask "dosbox-x" do
+  arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
+
   if Hardware::CPU.intel?
-    version "0.83.17,20210831231846"
-    sha256 "2bcf0e8005e5a79db84c69e038db1a59b41f98ee452452263fd96f8be88a3de2"
-
-    url "https://github.com/joncampbell123/dosbox-x/releases/download/dosbox-x-v#{version.before_comma}/dosbox-x-macosx-x86_64-#{version.after_comma}.zip",
-        verified: "github.com/joncampbell123/dosbox-x/"
-
-    livecheck do
-      url "https://github.com/joncampbell123/dosbox-x/releases/latest"
-      strategy :page_match do |page|
-        match = page.match(%r{href=.*?/dosbox-x-v?(\d+(?:\.\d+)*)/dosbox-x-macosx-x86_64-([^/]+)\.zip}i)
-        "#{match[1]},#{match[2]}"
-      end
-    end
+    version "0.83.19,20211101101155"
+    sha256 "cda2d36b953b68934579340fe588186ce8b0661e75ec0410736929fe0634dc55"
   else
-    version "0.83.17,20210831230855"
-    sha256 "6bd75b2b09b3a1098832cbe894f0e430bf32b814ac469195022e9f045677e5c5"
-
-    url "https://github.com/joncampbell123/dosbox-x/releases/download/dosbox-x-v#{version.before_comma}/dosbox-x-macosx-arm64-#{version.after_comma}.zip",
-        verified: "github.com/joncampbell123/dosbox-x/"
-
-    livecheck do
-      url "https://github.com/joncampbell123/dosbox-x/releases/latest"
-      strategy :page_match do |page|
-        match = page.match(%r{href=.*?/dosbox-x-v?(\d+(?:\.\d+)*)/dosbox-x-macosx-arm64-([^/]+)\.zip}i)
-        "#{match[1]},#{match[2]}"
-      end
-    end
+    version "0.83.19,20211101100925"
+    sha256 "087a420bf1e878d5a6c3492fee55bb89724d0cad63bfec18009be37b18f2ad58"
   end
 
+  url "https://github.com/joncampbell123/dosbox-x/releases/download/dosbox-x-v#{version.before_comma}/dosbox-x-macosx-#{arch}-#{version.after_comma}.zip",
+      verified: "github.com/joncampbell123/dosbox-x/"
   name "DOSBox-X"
   desc "Fork of the DOSBox project"
   homepage "https://dosbox-x.com/"
+
+  livecheck do
+    url "https://github.com/joncampbell123/dosbox-x/releases/latest"
+    strategy :page_match do |page|
+      match = page.match(%r{href=".*?/dosbox-x-v?(\d+(?:\.\d+)+)/dosbox-x-macosx-#{arch}-([^/]+)\.zip"}i)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
+    end
+  end
 
   app "dosbox-x/dosbox-x.app"
 

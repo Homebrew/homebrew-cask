@@ -1,6 +1,6 @@
 cask "silentknight" do
-  version "1.16,2021.08"
-  sha256 "995d10d128172b801adec810067e280fbaf1e4c477e285f7c15462a311dc3580"
+  version "1.17,2021.10"
+  sha256 "9f0bae8ae2d7941d45d547044421a7e65b0ee6c15459359f3d21bea4fecc2736"
 
   url "https://eclecticlightdotcom.files.wordpress.com/#{version.after_comma.major}/#{version.after_comma.minor}/silentknight#{version.before_comma.no_dots}.zip",
       verified: "eclecticlightdotcom.files.wordpress.com/"
@@ -12,6 +12,8 @@ cask "silentknight" do
     url "https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
     strategy :page_match do |page|
       match = page.match(%r{/(\d+)/(\d+)/silentknight(\d+)\.zip}i)
+      next if match.blank?
+
       "#{match[3].split("", 2).join(".")},#{match[1]}.#{match[2]}"
     end
   end

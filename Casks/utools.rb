@@ -1,6 +1,6 @@
 cask "utools" do
-  version "2.1.0"
-  sha256 "3cc48b309b696ca5c92f11e0d32d96edf25ce0772ff5e279365f09e7c402bc03"
+  version "2.4.1"
+  sha256 "0f5a3e7cb8785f7143f2c71d0e4afe8eb370717204b593491e928d272820e49c"
 
   url "https://publish.u-tools.cn/version2/uTools-#{version}.dmg",
       verified: "publish.u-tools.cn/"
@@ -9,8 +9,8 @@ cask "utools" do
   homepage "https://u.tools/index.html"
 
   livecheck do
-    url "https://publish.u-tools.cn/version2/latest-mac.yml?noCache=true"
-    strategy :electron_builder
+    url :homepage
+    regex(/uTools[._-]v?(\d+(?:\.\d+)*)\.dmg/i)
   end
 
   auto_updates true

@@ -1,6 +1,6 @@
 cask "cryptomator" do
-  version "1.5.19"
-  sha256 "6576c1425e1388d83be525f240a8140c8a73e10dfe2a3ecd65ff452f7c0d6c63"
+  version "1.6.3"
+  sha256 "a19e2db2f8ba20c3b0aead2cbde827594f576af8721ee73bf070e0e9710c44e6"
 
   url "https://github.com/cryptomator/cryptomator/releases/download/#{version}/Cryptomator-#{version}.dmg",
       verified: "github.com/cryptomator/cryptomator/"
@@ -11,7 +11,7 @@ cask "cryptomator" do
   livecheck do
     url "https://cryptomator.org/downloads/mac/thanks/"
     strategy :page_match
-    regex(%r{href=.*?/Cryptomator-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/Cryptomator-(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   depends_on macos: ">= :high_sierra"

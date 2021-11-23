@@ -1,6 +1,6 @@
 cask "universal-media-server" do
-  version "10.12.0"
-  sha256 "bc04df210e6d5f23d891c2188ccb331714ca48f337af0cac96a1da17ba1ff79d"
+  version "10.13.0"
+  sha256 "08eb44f7b4b62a93db1002712c6d1f663f6cdd0b95b711073baff2bc63a62789"
 
   url "https://github.com/UniversalMediaServer/UniversalMediaServer/releases/download/#{version}/UMS-#{version}.dmg",
       verified: "github.com/UniversalMediaServer/UniversalMediaServer/"
@@ -12,5 +12,8 @@ cask "universal-media-server" do
 
   app "Universal Media Server.app"
 
-  zap trash: "~/Library/Application Support/UMS/"
+  zap trash: [
+    "~/Library/Application Support/UMS",
+    "~/Library/Saved Application State/net.pms.PMS.savedState",
+  ]
 end

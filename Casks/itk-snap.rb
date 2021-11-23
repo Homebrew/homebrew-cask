@@ -12,6 +12,8 @@ cask "itk-snap" do
     url "http://www.nitrc.org/frs/downloadlink.php/11444"
     strategy :header_match do |headers|
       match = headers["location"].match(/itksnap[._-]?(\d+(?:\.\d+)*)[._-]?(\d+(?:\.\d+)*)[._-]?MacOS-x86_64\.dmg/i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

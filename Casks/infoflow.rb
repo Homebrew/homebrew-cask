@@ -1,5 +1,5 @@
 cask "infoflow" do
-  version "2.3.8.0,2021081820"
+  version "2.3.9.5,2021103019"
   sha256 :no_check
 
   url "https://hi-static.cdn.bcebos.com/hi-official/infoflow_setup.dmg",
@@ -8,6 +8,7 @@ cask "infoflow" do
   name "百度 Hi"
   name "如流"
   name "infoflow"
+  desc "AI office platform"
   homepage "https://infoflow.baidu.com/"
 
   livecheck do

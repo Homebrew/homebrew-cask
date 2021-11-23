@@ -1,6 +1,6 @@
 cask "cleanshot" do
-  version "3.9.1"
-  sha256 "0cf07ae5ab708708977b6eab6a6e8dc14e9fa526880434d64872840e166e00f1"
+  version "3.9.4"
+  sha256 "59224386ec40ed0e1de092b4f0bf061c9f91378f278c231aac302454c6ff22bf"
 
   url "https://updates.getcleanshot.com/v#{version.major}/CleanShot-X-#{version}.dmg"
   name "CleanShot"
@@ -9,7 +9,7 @@ cask "cleanshot" do
 
   livecheck do
     url "https://cleanshot.com/changelog"
-    regex(/class="number">(\d+(?:\.\d+)*)/i)
+    regex(/class="number">(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true

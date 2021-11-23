@@ -1,6 +1,6 @@
 cask "kdocs" do
-  version "2.13.0,1001"
-  sha256 "cc0aa869986ff7302b1743d3deb34a0f9cf801a5e0bb5e6060209269efb12419"
+  version "3.0.1,1001"
+  sha256 "f9f61155316146a2cc7b40fd004281072dcd85af315e3db2b5be0d3b2f6d9b00"
 
   url "https://qn.cache.wpscdn.cn/kdocs/apk/kdesktopmac/KDocs_#{version.after_comma}_v#{version.before_comma}.dmg",
       verified: "qn.cache.wpscdn.cn/kdocs/apk/kdesktopmac/"
@@ -11,7 +11,9 @@ cask "kdocs" do
   livecheck do
     url "https://www.kdocs.cn/kd/api/configure/list?idList=appOfficial"
     strategy :page_match do |page|
-      match = page.match(/kdocs[._-](\d+(?:\.\d+)*)[._-]v?(\d+(?:\.\d+)*)\.dmg/i)
+      match = page.match(/kdocs[._-](\d+(?:\.\d+)*)[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+      next if match.blank?
+
       "#{match[2]},#{match[1]}"
     end
   end

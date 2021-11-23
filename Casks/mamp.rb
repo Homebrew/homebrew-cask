@@ -1,12 +1,13 @@
 cask "mamp" do
-  version "6.5"
+  arch = Hardware::CPU.intel? ? "Intel-x86" : "M1-arm"
 
+  version "6.6"
+
+  url "https://downloads.mamp.info/MAMP-PRO/releases/#{version}/MAMP_MAMP_PRO_#{version}-#{arch}.pkg"
   if Hardware::CPU.intel?
-    sha256 "957894db1b8ab3406f1c8248b89392807158ccec349bef8f2f56111052a008df"
-    url "https://downloads.mamp.info/MAMP-PRO/releases/#{version}/MAMP_MAMP_PRO_#{version}-Intel-x86.pkg"
+    sha256 "306b101a84251655b8e1d50ef1c4d59901d300f85d0e03910701d8d418d4a4d4"
   else
-    sha256 "82bea0c53849e8d2a73900bcc2bb108d1775e58b6ab18380d1370a61c4c58a56"
-    url "https://downloads.mamp.info/MAMP-PRO/releases/#{version}/MAMP_MAMP_PRO_#{version}-M1-arm.pkg"
+    sha256 "5d83861bcade99d6562bfb92c4a95f895f9e89496ca4c33380223ab9133640e6"
   end
 
   name "MAMP"
@@ -22,11 +23,7 @@ cask "mamp" do
   auto_updates true
   depends_on macos: ">= :sierra"
 
-  if Hardware::CPU.intel?
-    pkg "MAMP_MAMP_PRO_#{version}-Intel-x86.pkg"
-  else
-    pkg "MAMP_MAMP_PRO_#{version}-M1-arm.pkg"
-  end
+  pkg "MAMP_MAMP_PRO_#{version}-#{arch}.pkg"
 
   postflight do
     set_ownership ["/Applications/MAMP", "/Applications/MAMP PRO"]

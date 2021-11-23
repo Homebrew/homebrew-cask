@@ -1,8 +1,8 @@
 cask "typora" do
-  version "0.11.5"
-  sha256 "95057a87f0c749cefd703659fafc6aa579a9ba17e763feae35a9f0c02244a6bf"
+  version "0.11.18"
+  sha256 "cc8c9b07f4584f81b214d4a2cbc270cb1171d7262f0f7ffdd466f8b74b2da38e"
 
-  url "https://www.typora.io/download/Typora-#{version}.dmg"
+  url "https://www.typora.io/mac/Typora-#{version}.dmg"
   name "Typora"
   desc "Configurable document editor that supports Markdown"
   homepage "https://typora.io/"
@@ -10,7 +10,7 @@ cask "typora" do
   livecheck do
     url "https://www.typora.io/download/dev_update.xml"
     strategy :page_match
-    regex(/Typora-(\d+(?:\.\d+)*)\.dmg/i)
+    regex(/Typora-(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   auto_updates true
@@ -19,9 +19,9 @@ cask "typora" do
   app "Typora.app"
 
   zap trash: [
+    "~/Library/Application Support/abnerworks.Typora",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/abnerworks.typora.sfl*",
     "~/Library/Application Support/Typora",
-    "~/Library/Application Support/abnerworks.Typora",
     "~/Library/Caches/abnerworks.Typora",
     "~/Library/Cookies/abnerworks.Typora.binarycookies",
     "~/Library/Preferences/abnerworks.Typora.plist",

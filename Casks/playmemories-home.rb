@@ -12,6 +12,8 @@ cask "playmemories-home" do
     url "https://support.d-imaging.sony.co.jp/disoft_DL/PMHMAC_DL/mac?fm=ttl&fm=ja"
     strategy :header_match do |headers|
       match = headers["location"].match(%r{/([^/]+)/PMHOME_(\d+)DL\.dmg}i)
+      next if match.blank?
+
       "#{match[2].split("", 3).join(".")},#{match[1]}"
     end
   end

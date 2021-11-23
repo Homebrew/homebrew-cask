@@ -8,16 +8,6 @@ cask "adoptopenjdk" do
   desc "JDK from the Java User Group (JUG)"
   homepage "https://adoptopenjdk.net/"
 
-  livecheck do
-    url :url
-    strategy :git do |tags|
-      tags.map do |tag|
-        match = tag.match(/^jdk-(\d+(?:\.\d+)*)\+(\d+(?:\.\d+)*)$/i)
-        "#{match[1]},#{match[2]}" if match
-      end.compact
-    end
-  end
-
   pkg "OpenJDK#{version.major}U-jdk_x64_mac_hotspot_#{version.before_comma}_#{version.after_comma.major}.pkg"
 
   uninstall pkgutil: "net.adoptopenjdk.#{version.major}.jdk"

@@ -1,9 +1,9 @@
 cask "microsoft-outlook" do
-  version "16.53.21091200"
-  sha256 "cb1ff9b473069c39cd64e1b589d8165a8781f6a9c34d2a97adddbd8678c442f1"
+  version "16.55.21111400"
+  sha256 "066B46212225EF2DF99328F4641FDF8BA4A8F64593F9C40189B95A7F1956DBA3"
 
-  url "https://officecdn-microsoft-com.akamaized.net/db/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Outlook_#{version}_Installer.pkg",
-      verified: "officecdn-microsoft-com.akamaized.net/db/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/"
+  url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Outlook_#{version}_Installer.pkg",
+      verified: "officecdnmac.microsoft.com/"
   name "Microsoft Outlook"
   desc "Email client"
   homepage "https://products.office.com/en-us/outlook/email-and-calendar-software-microsoft-outlook"

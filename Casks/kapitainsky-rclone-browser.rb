@@ -10,6 +10,8 @@ cask "kapitainsky-rclone-browser" do
     url "https://github.com/kapitainsky/RcloneBrowser/releases/latest"
     strategy :page_match do |page|
       match = page.match(%r{href=.*?/rclone-browser-(\d+(?:.\d+)*)-([0-9a-f]+)-macos\.dmg}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

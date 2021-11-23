@@ -1,8 +1,8 @@
 cask "leapp" do
-  version "0.7.2"
-  sha256 "8a32fb62f263f2e03904494acec563683678a32f85d9a78bd9bc736e7d1288ce"
+  version "0.7.4"
+  sha256 "e074453330c8b66dd7ed2c8aa6172812ef97af4283b23af1187358bff35e4646"
 
-  url "https://asset.noovolari.com/latest/Leapp-#{version}-mac.zip",
+  url "https://asset.noovolari.com/#{version}/Leapp-#{version}.dmg",
       verified: "asset.noovolari.com/"
   name "Leapp"
   desc "Cloud credentials manager"
@@ -12,8 +12,6 @@ cask "leapp" do
     url "https://asset.noovolari.com/latest/latest-mac.yml"
     strategy :electron_builder
   end
-
-  container nested: "temp/Leapp-#{version}.dmg"
 
   app "Leapp.app"
 

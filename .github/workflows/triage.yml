@@ -20,20 +20,16 @@ jobs:
         with:
           token: ${{secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN}}
           def: |
-            [
-              {
-                "label": "new cask",
-                "status": "added",
-                "path": "Casks/.+"
-              }, {
-                "label": "marked for removal/rejection",
-                "status": "removed",
-                "path": "Casks/.+"
-              }, {
-                "label": "documentation",
-                "path": "(.*\\.md|\\.github/ISSUE_TEMPLATE/.*\\.yml)"
-              }, {
-                "label": "bump-cask-pr",
-                "pr_body_content": "Created with `brew bump-cask-pr`"
-              }
-            ]
+            - label: new cask
+              status: added
+              path: Casks/.+
+
+            - label: marked for removal/rejection
+              status: removed
+              path: Casks/.+
+
+            - label: documentation
+              path: (.*\.md|\.github/ISSUE_TEMPLATE/.*\.yml)
+
+            - label: bump-cask-pr
+              pr_body_content: Created with `brew bump-cask-pr`

@@ -1,14 +1,13 @@
 cask "syncovery" do
-  version "9.38g"
+  arch = Hardware::CPU.intel? ? "" : "-Apple"
 
+  version "9.39e"
+
+  url "https://www.syncovery.com/release/SyncoveryMac#{version}#{arch}.dmg"
   if Hardware::CPU.intel?
-    sha256 "1fe2dab73e91f2251fdf565dafd267abc82e2c4198bd8fe6560c805d2a59bc8b"
-
-    url "https://www.syncovery.com/release/SyncoveryMac#{version}.dmg"
+    sha256 "0fd98c967548c011eef41c1d87159211d66528863993f1c451ba72c6be248771"
   else
-    sha256 "f27786be3c6ebdaf416932f764de0ddaaff0aa8e47c82e1c3266d049099c6bb2"
-
-    url "https://www.syncovery.com/release/SyncoveryMac#{version}-Apple.dmg"
+    sha256 "9b70beaccc8f95d710064943d45e60c52618f242653a13df6eecdea09ce47fe5"
   end
 
   name "Syncovery"
@@ -17,7 +16,7 @@ cask "syncovery" do
 
   livecheck do
     url "https://www.syncovery.com/download/mac/"
-    regex(%r{href=.*?/SyncoveryMac(\d+(?:\.\d+)*[a-z]?)\.dmg}i)
+    regex(%r{href=.*?/SyncoveryMac(\d+(?:\.\d+)*[a-z]?)#{arch}\.dmg}i)
   end
 
   pkg "SyncoveryMac (double-click to install).pkg"

@@ -1,5 +1,5 @@
 cask "craftmanager" do
-  version "1.0.114,244"
+  version "1.0.115,251"
   sha256 :no_check
 
   url "https://craft-assets.invisionapp.com/CraftManager/production/CraftManager.zip"
@@ -12,7 +12,14 @@ cask "craftmanager" do
     strategy :sparkle
   end
 
+  auto_updates true
   depends_on macos: ">= :mojave"
 
   app "CraftManager.app"
+
+  zap trash: [
+    "~/Library/Application Support/CraftManager",
+    "~/Library/Caches/com.invisionlabs.CraftManager",
+    "~/Library/Preferences/com.invisionlabs.CraftManager.plist",
+  ]
 end

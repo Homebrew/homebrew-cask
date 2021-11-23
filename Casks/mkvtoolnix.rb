@@ -1,6 +1,6 @@
 cask "mkvtoolnix" do
-  version "61.0.0"
-  sha256 "b9af3afee74db065bd2d3a7d9830e4998c7944bd3042dc5e2bfe9bb35770089b"
+  version "63.0.0"
+  sha256 "2c09244106649a944503fac5cab760bd9f31120c92f9d7de78d4d6b143524f01"
 
   url "https://mkvtoolnix.download/macos/MKVToolNix-#{version}.dmg"
   name "MKVToolNix"
@@ -21,4 +21,9 @@ cask "mkvtoolnix" do
   binary "#{appdir}/MKVToolNix-#{version}.app/Contents/MacOS/mkvinfo"
   binary "#{appdir}/MKVToolNix-#{version}.app/Contents/MacOS/mkvmerge"
   binary "#{appdir}/MKVToolNix-#{version}.app/Contents/MacOS/mkvpropedit"
+
+  zap trash: [
+    "~/Library/Preferences/bunkus.org/mkvtoolnix-gui",
+    "~/Library/Saved Application State/download.mkvtoolnix.MKVToolNix.savedState",
+  ]
 end

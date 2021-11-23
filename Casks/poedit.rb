@@ -16,4 +16,12 @@ cask "poedit" do
   depends_on macos: ">= :yosemite"
 
   app "Poedit.app"
+
+  zap trash: [
+    "~/Library/Application Support/Poedit",
+    "~/Library/Caches/net.poedit.Poedit",
+    "~/Library/Preferences/net.poedit.Poedit.cfg",
+    "~/Library/Preferences/net.poedit.Poedit.plist",
+    "~/Library/Saved Application State/net.poedit.Poedit.savedState",
+  ]
 end

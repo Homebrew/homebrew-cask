@@ -1,5 +1,5 @@
 cask "nordpass" do
-  version "4.8.24"
+  version "4.14.20"
   sha256 :no_check
 
   url "https://downloads.npass.app/mac/NordPass.dmg",
@@ -22,11 +22,11 @@ cask "nordpass" do
             login_item: "NordPass"
 
   zap trash: [
+    "/Library/Application Support/NordPass",
     "~/Library/Application Scripts/com.nordsec.nordpass.safari.extension",
     "~/Library/Application Support/NordPass",
     "~/Library/Containers/com.nordsec.nordpass.safari.extension",
     "~/Library/Preferences/com.nordsec.nordpass.plist",
     "~/Library/Saved Application State/com.nordsec.nordpass.savedState",
-    "/Library/Application Support/NordPass",
   ]
 end

@@ -1,6 +1,6 @@
 cask "alfred" do
-  version "4.5.1,1256"
-  sha256 "cc2066d1c6d057e3ecb12485763bef2d076ad21de8fd27ebbd6452dbaf3a1344"
+  version "4.6,1266"
+  sha256 "1fbfc0b188f68751fe1b96b060afbbaddf06dda80ed9b5d1dd563f9904211708"
 
   url "https://cachefly.alfredapp.com/Alfred_#{version.before_comma}_#{version.after_comma}.dmg"
   name "Alfred"
@@ -11,6 +11,8 @@ cask "alfred" do
     url "https://www.alfredapp.com/app/update#{version.major}/general.xml"
     strategy :page_match do |page|
       match = page.match(/Alfred_(\d(?:\.\d+)*)_(\d+)\.tar\.gz/i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

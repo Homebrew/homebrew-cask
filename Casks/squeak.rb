@@ -10,6 +10,8 @@ cask "squeak" do
     url "https://squeak.org/downloads/"
     strategy :page_match do |page|
       match = page.match(%r{href=.*?/Squeak(\d+(?:\.\d+)*)-(\d+)-64bit-All-in-One\.zip}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

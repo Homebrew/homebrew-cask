@@ -1,14 +1,13 @@
 cask "blender" do
-  version "2.93.4"
+  arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
+  version "2.93.6"
+
+  url "https://download.blender.org/release/Blender#{version.major_minor}/blender-#{version}-macos-#{arch}.dmg"
   if Hardware::CPU.intel?
-    sha256 "9aab9e161e326f02d5ca51b9f77187e931ebc779bd85a604d797c187cd1611f4"
-
-    url "https://download.blender.org/release/Blender#{version.major_minor}/blender-#{version}-macos-x64.dmg"
+    sha256 "db703fbd60713f0b4270fc406b7a270d136bb6ae22a649b733fad4f61177b58d"
   else
-    sha256 "0478a156829213a683b6be92cd12fe63c4f58fce3d0c2b4b839c157737eb14bf"
-
-    url "https://download.blender.org/release/Blender#{version.major_minor}/blender-#{version}-macos-arm64.dmg"
+    sha256 "1290068841b6bc3404632e7174a7d374dba932e4d2bc5f1cf39717a195cf0777"
   end
 
   name "Blender"
@@ -17,10 +16,11 @@ cask "blender" do
 
   livecheck do
     url "https://www.blender.org/download/"
-    regex(%r{href=.*?/blender[._-]v?(\d+(?:\.\d+)+)[._-]macos[._-]}i)
+    regex(%r{href=.*?/blender[._-]v?(\d+(?:\.\d+)+)[._-]macos[._-]#{arch}\.dmg}i)
   end
 
   conflicts_with cask: "homebrew/cask-versions/blender-lts"
+  depends_on macos: ">= :high_sierra"
 
   app "Blender.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)

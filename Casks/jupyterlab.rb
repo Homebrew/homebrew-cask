@@ -1,26 +1,29 @@
 cask "jupyterlab" do
-  version "3.1.13-1"
-  sha256 "bce13d3022217a72f874a8b654834aaf3f5df4d820fecd40ca113c1a67499ea1"
+  version "3.2.3-1"
+  sha256 "df789ac94275c879e81aa6ef162ad599a3d6084551e38b73ee223e3ff2d47271"
 
-  url "https://github.com/jupyterlab/jupyterlab_app/releases/download/v#{version}/JupyterLab-Setup-macOS.pkg"
+  url "https://github.com/jupyterlab/jupyterlab-desktop/releases/download/v#{version}/JupyterLab-Setup-macOS.pkg"
   name "JupyterLab App"
   desc "Desktop application for JupyterLab"
-  homepage "https://github.com/jupyterlab/jupyterlab_app"
+  homepage "https://github.com/jupyterlab/jupyterlab-desktop"
 
   pkg "JupyterLab-Setup-macOS.pkg"
 
   uninstall pkgutil: [
-    "com.electron.jupyterlabapp",
+    "com.electron.jupyterlab-desktop",
   ],
             delete:  [
               "/Applications/JupyterLab.app",
+              "/usr/local/bin/jlab",
             ]
 
   zap trash: [
-    "~/Library/Application Support/jupyterlab_app",
+    "~/.jupyter",
+    "~/Library/Application Support/jupyterlab-desktop",
+    "~/Library/Jupyter",
     "~/Library/Logs/JupyterLab",
-    "~/Library/Logs/jupyterlab_app",
-    "~/Library/Preferences/com.electron.jupyterlabapp.plist",
-    "~/Library/Saved Application State/com.electron.jupyterlabapp.savedState",
+    "~/Library/Logs/jupyterlab-desktop",
+    "~/Library/Preferences/com.electron.jupyterlab-desktop.plist",
+    "~/Library/Saved Application State/com.electron.jupyterlab-desktop.savedState",
   ]
 end

@@ -16,4 +16,14 @@ cask "kite" do
   auto_updates true
 
   app "Kite.app"
+
+  zap trash: [
+    "~/Library/Application Support/Kite",
+    "~/Library/Caches/com.kite.Kite",
+    "~/Library/Caches/com.kite.KiteAutostart",
+    "~/Library/Caches/com.kite.KiteHelper",
+    "~/Library/Preferences/com.kite.Kite.plist",
+    "~/Library/Preferences/com.kite.KiteApp.plist",
+    "~/.kite",
+  ]
 end

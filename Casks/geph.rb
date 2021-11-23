@@ -10,6 +10,7 @@ cask "geph" do
 
   livecheck do
     url "https://github.com/geph-official/geph4"
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   app "Geph.app"

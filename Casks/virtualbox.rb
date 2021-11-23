@@ -1,22 +1,25 @@
 cask "virtualbox" do
-  version "6.1.26,145957"
-  sha256 "c544b8500e7e0cc397a38c6210f4a1cf3f0cc30c9463bc61fb10c713a9c36ecc"
+  version "6.1.30,148432"
+  sha256 "e4973bef35922493f91e1395b491cf2ec9dee4944d78ced0ebeeb437d93724d4"
 
   url "https://download.virtualbox.org/virtualbox/#{version.before_comma}/VirtualBox-#{version.before_comma}-#{version.after_comma}-OSX.dmg"
   name "Oracle VirtualBox"
-  desc "Free and open-source hosted hypervisor for x86 virtualization"
+  desc "Virtualizer for x86 hardware"
   homepage "https://www.virtualbox.org/"
 
   livecheck do
     url "https://www.virtualbox.org/wiki/Downloads"
     strategy :page_match do |page|
-      match = page.match(/href=.*?VirtualBox-(\d+(?:\.\d+)*)-(\d+)-OSX.dmg/)
+      match = page.match(/href=.*?VirtualBox-(\d+(?:\.\d+)+)-(\d+)-OSX.dmg/)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end
 
   conflicts_with cask: "homebrew/cask-versions/virtualbox-beta"
   depends_on macos: ">= :high_sierra"
+  depends_on arch: :x86_64
 
   pkg "VirtualBox.pkg",
       choices: [
@@ -59,12 +62,9 @@ cask "virtualbox" do
 
   zap trash: [
     "/Library/Application Support/VirtualBox",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.virtualbox.app.virtualbox.sfl*",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.virtualbox.app.virtualboxvm.sfl*",
-    "~/Library/Preferences/org.virtualbox.app.VirtualBox.plist",
-    "~/Library/Preferences/org.virtualbox.app.VirtualBoxVM.plist",
-    "~/Library/Saved Application State/org.virtualbox.app.VirtualBox.savedState",
-    "~/Library/Saved Application State/org.virtualbox.app.VirtualBoxVM.savedState",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.virtualbox.app.virtualbox*",
+    "~/Library/Preferences/org.virtualbox.app.VirtualBox*",
+    "~/Library/Saved Application State/org.virtualbox.app.VirtualBox*",
     "~/Library/VirtualBox",
   ],
       rmdir: "~/VirtualBox VMs"

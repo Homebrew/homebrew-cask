@@ -12,6 +12,8 @@ cask "retro-virtual-machine" do
     url "https://www.retrovirtualmachine.org/en/downloads"
     strategy :page_match do |page|
       match = page.match(/RetroVirtualMachine\.(\d+(?:\.\d+)*)\.beta-(\d+(?:\..\d+)*)\.macos\.dmg/i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

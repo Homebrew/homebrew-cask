@@ -1,6 +1,6 @@
 cask "nova" do
-  version "7.5"
-  sha256 "7f29d3c251ad8ccc841a3cc87808ced9ae9aa58ab9b1ccb1b1759c972e6f7d12"
+  version "8.2"
+  sha256 "e260177a6c3909cba6070d1c9fd3542231a24adc1082720aef822c9def8e7cd6"
 
   url "https://download-cdn.panic.com/nova/Nova%20#{version}.zip",
       verified: "https://download-cdn.panic.com/nova/"
@@ -9,8 +9,8 @@ cask "nova" do
   homepage "https://nova.app/"
 
   livecheck do
-    url :homepage
-    regex(%r{href=.*?/Nova(?:\s*|%20)?(\d+(?:\.\d+)*)\.zip}i)
+    url "https://circle.panic.com/api/v1/appcast/nova/"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

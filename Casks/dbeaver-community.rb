@@ -1,12 +1,13 @@
 cask "dbeaver-community" do
-  version "21.2.2"
+  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
+  version "21.2.5"
+
+  url "https://dbeaver.io/files/#{version}/dbeaver-ce-#{version}-macos-#{arch}.dmg"
   if Hardware::CPU.intel?
-    sha256 "985489c389c9cf56d8bd795ac72598d6c4361eb71c1cc13942bc838734befed8"
-    url "https://dbeaver.io/files/#{version}/dbeaver-ce-#{version}-macos-x86_64.dmg"
+    sha256 "b81fe38f7f4410bcc102fa1a20c3076de1da37427eb2e759aaebda06415fedef"
   else
-    sha256 "3190457fe92c5f1c1668b8b8813e632f6cbbc0e0ce48264b326ef6531fcbe6a3"
-    url "https://dbeaver.io/files/#{version}/dbeaver-ce-#{version}-macos-aarch64.dmg"
+    sha256 "bd3785d777d54043b564f470d531703328db9ba1306bd9e368d2e05b2ee72966"
   end
 
   name "DBeaver Community Edition"
@@ -20,5 +21,9 @@ cask "dbeaver-community" do
 
   app "DBeaver.app"
 
-  zap trash: "~/Library/Preferences/org.jkiss.dbeaver.core.product.plist"
+  zap trash: [
+    "~/Library/DBeaverData",
+    "~/Library/Preferences/org.jkiss.dbeaver.core.product.plist",
+    "~/Library/Saved Application State/org.jkiss.dbeaver.core.product.savedState",
+  ]
 end

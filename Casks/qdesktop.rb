@@ -12,6 +12,8 @@ cask "qdesktop" do
     strategy :git do |tags|
       tags.map do |tag|
         match = tag.match(/^v?(\d+(?:\.\d+)*)-(\d+)$/i)
+        next if match.blank?
+
         "#{match[1]},#{match[2]}"
       end
     end

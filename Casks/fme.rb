@@ -11,6 +11,8 @@ cask "fme" do
     url "https://www.safe.com/api/downloads/"
     strategy :page_match do |page|
       match = page.match(%r{/fme-desktop-(\d+(?:\.\d+)*)-b(\d+)-macosx\.dmg}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

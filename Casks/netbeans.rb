@@ -9,7 +9,7 @@ cask "netbeans" do
 
   livecheck do
     url "https://netbeans.apache.org/download/index.html"
-    regex(/NetBeans\s*v?(\d+(?:\.\d+)+)/i)
+    regex(/NetBeans\s*v?(\d+(?:\.\d+)+)</i)
   end
 
   pkg "Apache NetBeans #{version}.pkg"
