@@ -13,5 +13,7 @@ cask "neofinder" do
     strategy :sparkle
   end
 
+  depends_on macos: ">= :el_capitan"
+
   app "NeoFinder.app"
 end
