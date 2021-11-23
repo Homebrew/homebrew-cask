@@ -12,7 +12,9 @@ cask "coolterm" do
     regex(/^\s*v?(\d+(?:\.\d+)+)\s*$/i)
   end
 
-  app "CoolTermMac/CoolTermMac.app", target: "CoolTerm.app"
+  container nested: "CoolTermMac.dmg"
+
+  app "CoolTerm.app"
 
   zap trash: [
     "~/Library/Preferences/CoolTerm_Prefs.plist",
