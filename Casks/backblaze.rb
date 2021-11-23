@@ -9,7 +9,6 @@ cask "backblaze" do
 
   livecheck do
     url "https://secure.backblaze.com/api/clientversion.xml"
-    strategy :page_match
     regex(/mac[._-]version=.*?(\d+(?:\.\d+)+)/i)
   end
 
@@ -18,8 +17,8 @@ cask "backblaze" do
   installer manual: "Backblaze Installer.app"
 
   uninstall launchctl: [
-    "com.backblaze.bzserv",
     "com.backblaze.bzbmenu",
+    "com.backblaze.bzserv",
   ],
             delete:    [
               "#{appdir}/Backblaze.app",
