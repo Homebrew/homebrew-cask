@@ -16,4 +16,13 @@ cask "neofinder" do
   depends_on macos: ">= :el_capitan"
 
   app "NeoFinder.app"
+
+  zap trash: [
+    "~/Library/Application Support/CrashReporter/NeoFinder_*",
+    "~/Library/Application Support/NeoFinder",
+    "~/Library/Caches/de.wfs-apps.neofinder",
+    "~/Library/Caches/de.wfs-apps.neofinder.quicklaunch.cache",
+    "~/Library/Preferences/de.wfs-apps.neofinder.plist",
+    "~/Library/Preferences/de.wfs-apps.neofinder.statusBar.plist",
+  ]
 end
