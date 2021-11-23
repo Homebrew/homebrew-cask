@@ -10,7 +10,7 @@ cask "neat-reader" do
 
   livecheck do
     url "https://www.neat-reader.com/download/start-download?target=mac"
-    regex(/name=["']?deviceVersion["']?\s*value=["']?(\d+(?:\.\d+)*)["' >]/i)
+    regex(/name=["']?deviceVersion["']?\s*value=["']?(\d+(?:\.\d+)+)["' >]/i)
   end
 
   app "NeatReader.app"
