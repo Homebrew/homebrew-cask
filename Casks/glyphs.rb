@@ -17,10 +17,10 @@ cask "glyphs" do
   app "Glyphs #{version.major}.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.georgseifert.glyphs#{version.major}.sfl*",
+    "~/Library/Application Support/com.GeorgSeifert.Glyphs#{version.major}",
     "~/Library/Application Support/Glyphs",
-    "~/Library/Application Support/com.GeorgSeifert.Glyphs3",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.georgseifert.glyphs3.sfl*",
-    "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.GeorgSeifert.Glyphs3.help*",
-    "~/Library/Preferences/com.GeorgSeifert.Glyphs3.plist",
+    "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.GeorgSeifert.Glyphs#{version.major}.help*",
+    "~/Library/Preferences/com.GeorgSeifert.Glyphs#{version.major}.plist",
   ]
 end
