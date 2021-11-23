@@ -12,6 +12,7 @@ cask "network-radar" do
     strategy :sparkle
   end
 
+  auto_updates true
   depends_on macos: ">= :high_sierra"
 
   app "Network Radar.app"
