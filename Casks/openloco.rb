@@ -7,6 +7,8 @@ cask "openloco" do
   desc "Open source re-implementation of Chris Sawyer's Locomotion"
   homepage "https://github.com/OpenLoco/OpenLoco"
 
+  depends_on macos: "<= :mojave"
+
   app "OpenLoco.app"
 
   zap trash: "~/Library/Preferences/io.openloco.OpenLoco.plist"
