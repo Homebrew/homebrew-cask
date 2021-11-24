@@ -16,11 +16,13 @@ cask "temurin" do
   homepage "https://adoptium.net/"
 
   livecheck do
-    url :url
-    strategy :git do |tags|
-      tags.map do |tag|
-        match = tag.match(/^jdk-(\d+(?:\.\d+)*)\+(\d+(?:\.\d+)*)$/i)
-        "#{match[1]},#{match[2]}" if match
+    url "https://api.adoptium.net/v3/assets/feature_releases/#{version.major}/ga?architecture=#{arch}&image_type=jdk&jvm_impl=hotspot&os=mac&page=0&page_size=1&project=jdk&sort_method=DEFAULT&sort_order=DESC&vendor=eclipse"
+    strategy :page_match do |page|
+      JSON.parse(page).map do |release|
+        match = release["release_name"].match(/^jdk-(\d+(?:\.\d+)*)\+(\d+(?:\.\d+)*)$/i)
+        next if match.blank?
+
+        "#{match[1]},#{match[2]}"
       end.compact
     end
   end
