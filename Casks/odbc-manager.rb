@@ -9,8 +9,7 @@ cask "odbc-manager" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(/Download ODBC Manager (\d+(?:\.\d+)*)/i)
+    regex(/Download\s*ODBC\s*Manager\s*v?(\d+(?:\.\d+)+)/i)
   end
 
   conflicts_with cask: "actual-odbc-pack"
