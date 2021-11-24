@@ -10,8 +10,7 @@ cask "offset-explorer" do
 
   livecheck do
     url "https://www.kafkatool.com/download.html"
-    strategy :page_match
-    regex(/Offset\s*Explorer\s*(\d+(?:\.\d+)*)/i)
+    regex(/Offset\s*Explorer\s*v?(\d+(?:\.\d+)+)/i)
   end
 
   app "Offset Explorer #{version.major}.app"
