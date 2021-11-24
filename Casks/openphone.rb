@@ -13,4 +13,10 @@ cask "openphone" do
   end
 
   app "OpenPhone.app"
+
+  zap trash: [
+    "~/Library/Application Support/OpenPhone",
+    "~/Library/Preferences/ca.illusive.openphone.plist",
+    "~/Library/Saved Application State/ca.illusive.openphone.savedState",
+  ]
 end
