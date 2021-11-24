@@ -26,5 +26,7 @@ cask "ogdesign-eagle" do
     end
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Eagle.app"
 end
