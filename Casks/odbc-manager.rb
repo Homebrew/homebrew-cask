@@ -1,5 +1,5 @@
 cask "odbc-manager" do
-  version "1.0.21"
+  version "1.0.22"
   sha256 :no_check
 
   url "http://www.odbcmanager.net/downloads/ODBC_Manager64_Installer.dmg"
