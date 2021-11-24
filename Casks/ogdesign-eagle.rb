@@ -29,4 +29,11 @@ cask "ogdesign-eagle" do
   depends_on macos: ">= :high_sierra"
 
   app "Eagle.app"
+
+  zap trash: [
+    "~/Library/Application Support/Eagle",
+    "~/Library/Logs/Eagle",
+    "~/Library/Preferences/tw.ogdesign.eagle.plist",
+    "~/Library/Saved Application State/tw.ogdesign.eagle.savedState",
+  ]
 end
