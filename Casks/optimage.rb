@@ -17,4 +17,9 @@ cask "optimage" do
 
   app "Optimage.app"
   binary "#{appdir}/Optimage.app/Contents/MacOS/cli/optimage"
+
+  zap trash: [
+    "~/Library/Application Support/com.vmdanilov.optimage.cfg",
+    "~/Library/Preferences/com.vmdanilov.optimage.plist",
+  ]
 end
