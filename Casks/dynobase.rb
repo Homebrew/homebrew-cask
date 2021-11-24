@@ -3,14 +3,14 @@ cask "dynobase" do
 
   version "1.7.6"
 
-  url "https://github.com/Dynobase/dynobase/releases/download/#{version}/Dynobase-#{version}#{arch}.dmg",
-      verified: "github.com/Dynobase/dynobase/"
   if Hardware::CPU.intel?
     sha256 "fd4235aa70dd0adfbdfa106a4e6a36e072a242975be7b4a7cfd09d58b8063e43"
   else
     sha256 "ba904cd7f9fd9c50face990379487aefcfa941d4bc6da067516f659eaf09de34"
   end
 
+  url "https://github.com/Dynobase/dynobase/releases/download/#{version}/Dynobase-#{version}#{arch}.dmg",
+      verified: "github.com/Dynobase/dynobase/"
   name "Dynobase"
   desc "GUI Client for DynamoDB"
   homepage "https://dynobase.dev/"
