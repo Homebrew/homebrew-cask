@@ -16,7 +16,7 @@ cask "neteasemusic" do
   livecheck do
     url "https://music.163.com/api/osx/download/latest"
     strategy :header_match do |headers|
-      match = headers["location"].match(%r{/NeteaseMusic_([\d.]+)_(\d+)_web\.dmg}i)
+      match = headers["location"].match(%r{/NeteaseMusic_(\d+(?:\.\d+)+)_(\d+)_web\.dmg}i)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
