@@ -10,7 +10,7 @@ cask "vnc-viewer" do
   livecheck do
     url "https://www.realvnc.com/en/connect/download/viewer/macos/"
     strategy :page_match
-    regex(%r{href=.*?/VNC-Viewer-(\d+(?:\.\d+)*)-MacOSX-x86_64\.dmg}i)
+    regex(%r{href=.*?/VNC-Viewer-(\d+(?:\.\d+)+)-MacOSX-x86_64\.dmg}i)
   end
 
   app "VNC Viewer.app"
