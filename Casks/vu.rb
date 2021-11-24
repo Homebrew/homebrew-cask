@@ -1,8 +1,8 @@
 cask "vu" do
-  version "1.2,6:1523016199"
+  version "1.2,6,1523016199"
   sha256 "a51884117a8e33339429a93a84c70eb82db46dc50ebe827ab7b7c9a0c6ced313"
 
-  url "https://dl.devmate.com/com.boriskarulin.vu/#{version.after_comma.before_colon}/#{version.after_colon}/vu-#{version.after_comma.before_colon}.dmg",
+  url "https://dl.devmate.com/com.boriskarulin.vu/#{version.csv.second}/#{version.csv.third}/vu-#{version.csv.second}.dmg",
       verified: "dl.devmate.com/com.boriskarulin.vu/"
   name "vu"
   homepage "https://datastills.com/vu/"
@@ -13,7 +13,7 @@ cask "vu" do
       match = item.url.match(%r{/(\d+)/vu-(\d+(?:\.\d+)*)\.dmg}i)
       next if match.blank?
 
-      "#{item.short_version},#{item.version}:#{match[1]}"
+      "#{item.short_version},#{item.version},#{match[1]}"
     end
   end
 
