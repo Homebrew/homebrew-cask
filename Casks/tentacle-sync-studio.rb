@@ -18,4 +18,10 @@ cask "tentacle-sync-studio" do
   depends_on macos: ">= :high_sierra"
 
   app "Tentacle Sync Studio.app"
+
+  zap trash: [
+  "~/Library/Caches/com.tentaclesync.Tentacle-Sync-Studio",
+  "~/Library/Preferences/com.tentaclesync.Tentacle-Sync-Studio.plist",
+]
+
 end
