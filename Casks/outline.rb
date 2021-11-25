@@ -1,6 +1,6 @@
 cask "outline" do
-  version "3.2106.3,2106.3.1"
-  sha256 "ec915774bd6a0d57bba3f6799c77078d4f9e0f1405c8d6a457aade93f8d71a7e"
+  version "3.2110.1,2205"
+  sha256 "1fd2a5f1df09434666327050ce9fe4e46276b489b4b3c9f95f7a7328d8a3c6fd"
 
   url "https://static.outline.ws/versions/Outline_#{version.before_comma}.zip"
   name "Outline"
@@ -13,4 +13,14 @@ cask "outline" do
   end
 
   app "Outline.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/6WN928JT76.com.gorillized",
+    "~/Library/Application Scripts/com.gorillized.outlinemac.standalone*",
+    "~/Library/Caches/com.gorillized.outlinemac.standalone",
+    "~/Library/Containers/com.gorillized.outlinemac.standalone.extension",
+    "~/Library/Group Containers/6WN928JT76.com.gorillized",
+    "~/Library/Outline",
+    "~/Library/Preferences/com.gorillized.outlinemac.standalone.plist",
+  ]
 end
