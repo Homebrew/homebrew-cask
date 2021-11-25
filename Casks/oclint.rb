@@ -8,10 +8,10 @@ cask "oclint" do
   desc "Static source code analysis tool"
   homepage "https://oclint.org/"
 
-  binary "oclint-#{version.before_comma}/bin/oclint"
-  binary "oclint-#{version.before_comma}/bin/oclint-json-compilation-database"
-  binary "oclint-#{version.before_comma}/bin/oclint-xcodebuild"
-  binary "oclint-#{version.before_comma}/lib/oclint", target: "#{HOMEBREW_PREFIX}/lib/oclint"
-  binary "oclint-#{version.before_comma}/lib/clang", target: "#{HOMEBREW_PREFIX}/lib/clang"
-  binary "oclint-#{version.before_comma}/include/c++/v1", target: "#{HOMEBREW_PREFIX}/include/c++/v1"
+  binary "oclint-#{version}/bin/oclint-json-compilation-database"
+  binary "oclint-#{version}/bin/oclint-xcodebuild"
+  binary "oclint-#{version}/bin/oclint"
+  binary "oclint-#{version}/include/c++/v1", target: "#{HOMEBREW_PREFIX}/include/c++/v1"
+  binary "oclint-#{version}/lib/clang", target: "#{HOMEBREW_PREFIX}/lib/clang"
+  binary "oclint-#{version}/lib/oclint", target: "#{HOMEBREW_PREFIX}/lib/oclint"
 end
