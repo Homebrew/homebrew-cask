@@ -11,7 +11,7 @@ cask "qiyimedia" do
   livecheck do
     url "https://app.iqiyi.com/mac/player/index.html"
     strategy :page_match
-    regex(/.*最新版本：([\d.]+)/i)
+    regex(/最新版本：(\d+(?:\.\d+)+)/i)
   end
 
   depends_on macos: ">= :catalina"
@@ -19,10 +19,10 @@ cask "qiyimedia" do
   app "爱奇艺.app"
 
   zap trash: [
-    "Library/Application Scripts/com.iqiyi.player",
-    "~/Library/Containers/com.iqiyi.player.QYWidget",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.iqiyi.player.sfl*",
     "~/Library/Application Scripts/com.iqiyi.player.QYWidget",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.iqiyi.player.sfl*",
+    "~/Library/Containers/com.iqiyi.player.QYWidget",
     "~/Library/Group Containers/group.com.qiyi",
+    "Library/Application Scripts/com.iqiyi.player",
   ]
 end
