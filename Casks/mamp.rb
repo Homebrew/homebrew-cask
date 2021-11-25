@@ -7,7 +7,7 @@ cask "mamp" do
   if Hardware::CPU.intel?
     sha256 "306b101a84251655b8e1d50ef1c4d59901d300f85d0e03910701d8d418d4a4d4"
   else
-    sha256 "5d83861bcade99d6562bfb92c4a95f895f9e89496ca4c33380223ab9133640e6"
+    sha256 "4eb2a5146c0f0ccacfdaf4ea31e5735317a9e2aab18c0b9b591ab96c17808f1d"
   end
 
   name "MAMP"
