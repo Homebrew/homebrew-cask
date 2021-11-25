@@ -6,6 +6,7 @@ cask "ghosttile" do
       verified: "dl.devmate.com/im.kernelpanic.GhostTile/"
   name "Kernelpanic GhostTile"
   name "GhostTile"
+  desc "Hide your running applications from Dock"
   homepage "https://ghosttile.kernelpanic.im/"
 
   livecheck do
