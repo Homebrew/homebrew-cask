@@ -16,12 +16,11 @@ cask "outline" do
 
   zap trash: [
     "~/Library/Application Scripts/6WN928JT76.com.gorillized",
-    "~/Library/Application Scripts/com.gorillized.outlinemac.standalone.extension",
-    "~/Library/Application Support/com.gorillized.outlinemac.standalone",
+    "~/Library/Application Scripts/com.gorillized.outlinemac.standalone*",
     "~/Library/Caches/com.gorillized.outlinemac.standalone",
     "~/Library/Containers/com.gorillized.outlinemac.standalone.extension",
-    "~/Library/Outline",
     "~/Library/Group Containers/6WN928JT76.com.gorillized",
+    "~/Library/Outline",
     "~/Library/Preferences/com.gorillized.outlinemac.standalone.plist",
   ]
 end
