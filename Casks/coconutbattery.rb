@@ -8,7 +8,7 @@ cask "coconutbattery" do
     version "3.9.6,233080c3"
     sha256 "fd1dff203b48f74b626bfefc2e5071be87f25755897bd65cdb4a57bdc5df8c09"
 
-    url "https://www.coconut-flavour.com/downloads/coconutBattery_#{version.csv[0].no_dots}_#{version.csv[1]}.zip"
+    url "https://www.coconut-flavour.com/downloads/coconutBattery_#{version.csv.first.no_dots}_#{version.csv.second}.zip"
 
     livecheck do
       url "https://coconut-flavour.com/updates/coconutBattery.xml"

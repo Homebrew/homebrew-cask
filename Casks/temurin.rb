@@ -3,7 +3,7 @@ cask "temurin" do
 
   version "17.0.1,12"
 
-  url "https://github.com/adoptium/temurin#{version.csv[0].major}-binaries/releases/download/jdk-#{version.csv[0]}%2B#{version.csv[1]}/OpenJDK#{version.major}U-jdk_#{arch}_mac_hotspot_#{version.csv[0]}_#{version.csv[1].major}.pkg",
+  url "https://github.com/adoptium/temurin#{version.major}-binaries/releases/download/jdk-#{version.csv.first}%2B#{version.csv.second}/OpenJDK#{version.major}U-jdk_#{arch}_mac_hotspot_#{version.csv.first}_#{version.csv.second.major}.pkg",
       verified: "github.com/adoptium/"
   if Hardware::CPU.intel?
     sha256 "6318bac0268115f5740abc0113026356c3d784169ef9c5c94df2c3e3744505de"
@@ -27,7 +27,7 @@ cask "temurin" do
     end
   end
 
-  pkg "OpenJDK#{version.csv[0].major}U-jdk_#{arch}_mac_hotspot_#{version.csv[0]}_#{version.csv[1].major}.pkg"
+  pkg "OpenJDK#{version.major}U-jdk_#{arch}_mac_hotspot_#{version.csv.first}_#{version.csv.second.major}.pkg"
 
-  uninstall pkgutil: "net.temurin.#{version.csv[0].major}.jdk"
+  uninstall pkgutil: "net.temurin.#{version.major}.jdk"
 end
