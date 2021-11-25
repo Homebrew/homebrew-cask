@@ -10,13 +10,16 @@ cask "burp-suite" do
   livecheck do
     url "https://portswigger.net/burp/releases/data"
     strategy :page_match do |page|
-      all_builds = JSON.parse(page)["ResultSet"]["Reslts"]
-      next if all_builds.blank?
+      all_versions = JSON.parse(page)["ResultSet"]["Results"]
+      next if all_versions.blank?
 
-      mac_builds = all_builds.filter { |r| r["builds"].any? { |b| b["ProductPlatform"] == "MacOsx" } }
-      next if mac_builds.blank?
+      stable_versions = all_versions.filter { |v| v["releaseChannels"].include?("Stable") && v["categories"].include?("Community") }
+      next if stable_versions.blank?
 
-      mac_builds.first["version"]
+      mac_versions = stable_versions.filter { |v| v["builds"].any? { |b| b["ProductPlatform"] == "MacOsx" } }
+      next if mac_versions.blank?
+
+      mac_versions.first["version"]
     end
   end
 
