@@ -16,8 +16,8 @@ cask "fxfactory" do
   pkg "Install FxFactory #{version.major_minor_patch}.pkg"
 
   uninstall pkgutil: [
-     "com.fxfactory.pkg",
-   ]
+    "com.fxfactory.pkg",
+  ]
 
   zap trash: [
     "/Library/Application Support/FxFactory",
