@@ -4,7 +4,7 @@ cask "odbc-manager" do
 
   url "http://www.odbcmanager.net/downloads/ODBC_Manager64_Installer.dmg"
   name "ODBC Manager"
-  desc "Free ODBC administrator"
+  desc "ODBC administrator"
   homepage "http://www.odbcmanager.net/"
 
   livecheck do
@@ -17,8 +17,8 @@ cask "odbc-manager" do
   pkg "ODBC Manager.pkg"
 
   uninstall pkgutil: [
-    "com.actualtechnologies.odbcmanager.pkg",
     "com.actualtechnologies.odbcdriver.helpers.pkg",
+    "com.actualtechnologies.odbcmanager.pkg",
   ]
 
   zap trash: [
