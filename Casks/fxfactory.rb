@@ -2,7 +2,7 @@ cask "fxfactory" do
   version "7.2.6,6943"
   sha256 "b565a889b2878cc4cca17d2e38597a3628902be7eb775dca3bd94f94808ec8d2"
 
-  url "https://fxfactory.s3.amazonaws.com/noiseindustries/fxfactory/FxFactory_#{version.before_comma.no_dots}_#{version.after_comma}.zip",
+  url "https://fxfactory.s3.amazonaws.com/noiseindustries/fxfactory/FxFactory_#{version.csv.first.no_dots}_#{version.csv.second}.zip",
       verified: "fxfactory.s3.amazonaws.com/noiseindustries/"
   name "FxFactory"
   desc "Browse, install and purchase effects and plugins from a huge catalog"
@@ -19,7 +19,7 @@ cask "fxfactory" do
     end
   end
 
-  pkg "Install FxFactory #{version.before_comma}.pkg"
+  pkg "Install FxFactory #{version.csv.first}.pkg"
 
   uninstall pkgutil:   "com.fxfactory.pkg",
             launchctl: "com.fxfactory.FxFactory.helper",
@@ -28,12 +28,9 @@ cask "fxfactory" do
               "/Library/LaunchDaemons/com.fxfactory.FxFactory.helper.plist",
               "/Library/PrivilegedHelperTools/com.fxfactory.FxFactory.helper",
             ]
-  
+
   zap trash: [
-    "~/Movies/Motion Templates.localized/Titles.localized/3065D03D-92D7-4FD9-B472-E524B87B5012.localized",
-    "~/Movies/Motion Templates.localized/Effects.localized/3065D03D-92D7-4FD9-B472-E524B87B5012.localized",
-    "~/Movies/Motion Templates.localized/Generators.localized/3065D03D-92D7-4FD9-B472-E524B87B5012.localized",
-    "~/Movies/Motion Templates.localized/Transitions.localized/3065D03D-92D7-4FD9-B472-E524B87B5012.localized",
     "~/Library/Application Scripts/com.fxfactory.FxFactoryService.pluginkit",
+    "~/Movies/Motion Templates.localized",
   ]
 end
