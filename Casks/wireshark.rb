@@ -1,6 +1,6 @@
 cask "wireshark" do
   url_arch = Hardware::CPU.intel? ? "Intel" : "Arm"
-  livecheck_arch = Hardware::CPU.intel? ? "86-" : "arm"
+  livecheck_arch = Hardware::CPU.intel? ? "x86-" : "arm"
 
   version "3.6.0"
 
@@ -26,13 +26,18 @@ cask "wireshark" do
   depends_on macos: ">= :sierra"
 
   app "Wireshark.app"
-  pkg "Install ChmodBPF.pkg"
   pkg "Add Wireshark to the system path.pkg"
+  pkg "Install ChmodBPF.pkg"
   binary "#{appdir}/Wireshark.app/Contents/MacOS/capinfos"
   binary "#{appdir}/Wireshark.app/Contents/MacOS/captype"
   binary "#{appdir}/Wireshark.app/Contents/MacOS/dftest"
   binary "#{appdir}/Wireshark.app/Contents/MacOS/dumpcap"
   binary "#{appdir}/Wireshark.app/Contents/MacOS/editcap"
+  binary "#{appdir}/Wireshark.app/Contents/MacOS/extcap/androiddump"
+  binary "#{appdir}/Wireshark.app/Contents/MacOS/extcap/ciscodump"
+  binary "#{appdir}/Wireshark.app/Contents/MacOS/extcap/randpktdump"
+  binary "#{appdir}/Wireshark.app/Contents/MacOS/extcap/sshdump"
+  binary "#{appdir}/Wireshark.app/Contents/MacOS/extcap/udpdump"
   binary "#{appdir}/Wireshark.app/Contents/MacOS/idl2wrs"
   binary "#{appdir}/Wireshark.app/Contents/MacOS/mergecap"
   binary "#{appdir}/Wireshark.app/Contents/MacOS/mmdbresolve"
@@ -42,11 +47,6 @@ cask "wireshark" do
   binary "#{appdir}/Wireshark.app/Contents/MacOS/sharkd"
   binary "#{appdir}/Wireshark.app/Contents/MacOS/text2pcap"
   binary "#{appdir}/Wireshark.app/Contents/MacOS/tshark"
-  binary "#{appdir}/Wireshark.app/Contents/MacOS/extcap/androiddump"
-  binary "#{appdir}/Wireshark.app/Contents/MacOS/extcap/ciscodump"
-  binary "#{appdir}/Wireshark.app/Contents/MacOS/extcap/randpktdump"
-  binary "#{appdir}/Wireshark.app/Contents/MacOS/extcap/sshdump"
-  binary "#{appdir}/Wireshark.app/Contents/MacOS/extcap/udpdump"
 
   uninstall_preflight do
     system_command "/usr/sbin/installer",
@@ -66,11 +66,11 @@ cask "wireshark" do
   uninstall pkgutil: "org.wireshark.*"
 
   zap trash: [
+    "~/.config/wireshark",
     "~/Library/Caches/org.wireshark.Wireshark",
     "~/Library/Cookies/org.wireshark.Wireshark.binarycookies",
+    "~/Library/HTTPStorages/org.wireshark.Wireshark.binarycookies",
     "~/Library/Preferences/org.wireshark.Wireshark.plist",
     "~/Library/Saved Application State/org.wireshark.Wireshark.savedState",
-    "~/Library/HTTPStorages/org.wireshark.Wireshark.binarycookies",
-    "~/.config/wireshark",
   ]
 end
