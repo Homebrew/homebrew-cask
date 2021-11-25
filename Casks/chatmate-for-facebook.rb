@@ -5,6 +5,7 @@ cask "chatmate-for-facebook" do
   url "https://dl.devmate.com/net.coldx.mac.Facebook/#{version.csv.second}/#{version.csv.third}/ChatMateforFacebook-#{version.csv.second}.zip",
       verified: "dl.devmate.com/net.coldx.mac.Facebook/"
   name "ChatMate for Facebook"
+  desc "Facebook Messenger client"
   homepage "https://chatmate.io/mac/facebook/"
 
   livecheck do
