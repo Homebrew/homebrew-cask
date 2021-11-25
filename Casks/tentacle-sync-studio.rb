@@ -20,8 +20,7 @@ cask "tentacle-sync-studio" do
   app "Tentacle Sync Studio.app"
 
   zap trash: [
-  "~/Library/Caches/com.tentaclesync.Tentacle-Sync-Studio",
-  "~/Library/Preferences/com.tentaclesync.Tentacle-Sync-Studio.plist",
-]
-
+    "~/Library/Caches/com.tentaclesync.Tentacle-Sync-Studio",
+    "~/Library/Preferences/com.tentaclesync.Tentacle-Sync-Studio.plist",
+  ]
 end
