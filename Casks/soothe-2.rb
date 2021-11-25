@@ -18,7 +18,7 @@ cask "soothe-2" do
 
   pkg "/Volumes/soothe2/soothe2.pkg"
 
-  uninstall
+  uninstall ""
 
   zap trash: [
     "~/Library/Application Support/oeksound/soothe2/config.xml",
