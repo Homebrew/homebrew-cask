@@ -5,6 +5,7 @@ cask "vu" do
   url "https://dl.devmate.com/com.boriskarulin.vu/#{version.csv.second}/#{version.csv.third}/vu-#{version.csv.second}.dmg",
       verified: "dl.devmate.com/com.boriskarulin.vu/"
   name "vu"
+  desc "Instagram client"
   homepage "https://datastills.com/vu/"
 
   livecheck do
