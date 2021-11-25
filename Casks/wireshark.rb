@@ -1,14 +1,23 @@
 cask "wireshark" do
+  url_arch = Hardware::CPU.intel? ? "Intel" : "Arm"
+  livecheck_arch = Hardware::CPU.intel? ? "86-" : "arm"
+  
   version "3.6.0"
-  sha256 "c571417d3318074fbe73814a0180e84262e10b58cadb2e80c9fc05cf97e99645"
-
-  url "https://2.na.dl.wireshark.org/osx/Wireshark%20#{version}%20Intel%2064.dmg"
+  
+  url "https://2.na.dl.wireshark.org/osx/Wireshark%20#{version}%20#{url_arch}%2064.dmg"
+  
+  if Hardware::CPU.intel?
+    sha256 "c571417d3318074fbe73814a0180e84262e10b58cadb2e80c9fc05cf97e99645"
+  else
+    sha256 "9893a985693c01b29b532745ca0f999590b119a3e8e9820a403291ffce11fd97"
+  end
+  
   name "Wireshark"
   desc "Network protocol analyzer"
   homepage "https://www.wireshark.org/"
 
   livecheck do
-    url "https://www.wireshark.org/update/0/Wireshark/0.0.0/macOS/x86-64/en-US/stable.xml"
+    url "https://www.wireshark.org/update/0/Wireshark/0.0.0/macOS/#{livecheck_arch}64/en-US/stable.xml"
     strategy :sparkle
   end
 
