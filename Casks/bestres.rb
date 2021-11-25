@@ -5,6 +5,7 @@ cask "bestres" do
   url "https://dl.devmate.com/com.icyberon.BestRes/#{version.csv.second}/#{version.csv.third}/BestRes-#{version.csv.second}.zip",
       verified: "devmate.com/com.icyberon.BestRes/"
   name "BestRes"
+  desc "Quickly change your screen resolution from the menubar"
   homepage "https://bestres.wojtek.im/"
 
   livecheck do
