@@ -19,7 +19,7 @@ cask "libreoffice" do
   livecheck do
     url "https://download.documentfoundation.org/libreoffice/stable/"
     strategy :page_match
-    regex(%r{href="(\d+(?:\.\d+)*)/"}i)
+    regex(%r{href="(\d+(?:\.\d+)+)/"}i)
   end
 
   conflicts_with cask: "homebrew/cask-versions/libreoffice-still"
@@ -48,8 +48,8 @@ cask "libreoffice" do
   end
 
   zap trash: [
-    "~/Library/Application Support/LibreOffice",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.libreoffice.script.sfl*",
+    "~/Library/Application Support/LibreOffice",
     "~/Library/Preferences/org.libreoffice.script.plist",
     "~/Library/Saved Application State/org.libreoffice.script.savedState",
   ]
