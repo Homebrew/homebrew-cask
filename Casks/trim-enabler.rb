@@ -5,6 +5,7 @@ cask "trim-enabler" do
   url "https://dl.devmate.com/org.cindori.TrimEnabler4/#{version.csv.second}/#{version.csv.third}/TrimEnabler-#{version.csv.second}.zip",
       verified: "dl.devmate.com/org.cindori.TrimEnabler4/"
   name "Trim Enabler"
+  desc "Enable trim for SSD performance"
   homepage "https://cindori.org/trimenabler/"
 
   livecheck do
