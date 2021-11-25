@@ -28,4 +28,12 @@ cask "fxfactory" do
               "/Library/LaunchDaemons/com.fxfactory.FxFactory.helper.plist",
               "/Library/PrivilegedHelperTools/com.fxfactory.FxFactory.helper",
             ]
+  
+  zap trash: [
+    "~/Movies/Motion Templates.localized/Titles.localized/3065D03D-92D7-4FD9-B472-E524B87B5012.localized",
+    "~/Movies/Motion Templates.localized/Effects.localized/3065D03D-92D7-4FD9-B472-E524B87B5012.localized",
+    "~/Movies/Motion Templates.localized/Generators.localized/3065D03D-92D7-4FD9-B472-E524B87B5012.localized",
+    "~/Movies/Motion Templates.localized/Transitions.localized/3065D03D-92D7-4FD9-B472-E524B87B5012.localized",
+    "~/Library/Application Scripts/com.fxfactory.FxFactoryService.pluginkit",
+  ]
 end
