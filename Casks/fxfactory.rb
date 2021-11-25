@@ -9,14 +9,20 @@ cask "fxfactory" do
   homepage "https://fxfactory.com/"
 
   livecheck do
-    url "https://fxfactory.com/download/archive/"
-    regex(%r{href=.*?/fxfactory-(\d+(?:\.\d+)+)\.pkg}i)
+    url "https://fxfactory.com/download/"
+    regex(/FxFactory_\d+_(\d+)\.zip.*FxFactory\s(\d+(?:\.\d+)+)/i)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
+      next if match.blank?
+
+      "#{match[2]},#{match[1]}"
+    end
   end
 
   pkg "Install FxFactory #{version.before_comma}.pkg"
 
   uninstall pkgutil:   "com.fxfactory.pkg",
-            launchctl: "com.fxfactory.FxFactory.helper"
+            launchctl: "com.fxfactory.FxFactory.helper",
             delete:    [
               "/Library/Application Support/FxFactory",
               "/Library/LaunchDaemons/com.fxfactory.FxFactory.helper.plist",
