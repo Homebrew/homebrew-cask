@@ -1,5 +1,5 @@
 cask "optimage" do
-  version "3.4.3,192"
+  version "3.5.0,194"
   sha256 :no_check
 
   url "https://optimage.app/download/optimage-mac.zip"
@@ -17,4 +17,9 @@ cask "optimage" do
 
   app "Optimage.app"
   binary "#{appdir}/Optimage.app/Contents/MacOS/cli/optimage"
+
+  zap trash: [
+    "~/Library/Application Support/com.vmdanilov.optimage.cfg",
+    "~/Library/Preferences/com.vmdanilov.optimage.plist",
+  ]
 end
