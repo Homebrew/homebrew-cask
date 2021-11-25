@@ -801,7 +801,7 @@ cask "libreoffice-language-pack" do
   livecheck do
     url "https://download.documentfoundation.org/libreoffice/stable/"
     strategy :page_match
-    regex(%r{href="(\d+(?:\.\d+)*)/"}i)
+    regex(%r{href="(\d+(?:\.\d+)+)/"}i)
   end
 
   depends_on cask: "libreoffice"
