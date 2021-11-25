@@ -8,9 +8,15 @@ cask "burp-suite" do
   homepage "https://portswigger.net/burp/"
 
   livecheck do
-    url "https://portswigger.net/burp/releases/community/latest"
-    strategy :header_match do |headers|
-      headers["location"][%r{/professional[._-]community[._-]v?(\d+(?:-\d+)+)\?}i, 1].tr("-", ".")
+    url "https://portswigger.net/burp/releases/data"
+    strategy :page_match do |page|
+      all_builds = JSON.parse(page)["ResultSet"]["Reslts"]
+      next if all_builds.blank?
+
+      mac_builds = all_builds.filter { |r| r["builds"].any? { |b| b["ProductPlatform"] == "MacOsx" } }
+      next if mac_builds.blank?
+
+      mac_builds.first["version"]
     end
   end
 
