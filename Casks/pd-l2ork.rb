@@ -2,7 +2,7 @@ cask "pd-l2ork" do
   version "2.17.0,20210417,ca592f6f"
   sha256 "c890f169663d9cdf947baaa2ce9cf0d48fcd07cb71368b7eab29547b237dab39"
 
-  url "https://github.com/agraef/purr-data/releases/download/#{version.before_comma}/Pd-l2ork-OSX10.11-#{version.before_comma}-#{version.after_comma.before_comma}-rev.#{version.after_comma.after_comma}-x86_64.dmg",
+  url "https://github.com/agraef/purr-data/releases/download/#{version.csv.first}/Pd-l2ork-OSX10.11-#{version.csv.first}-#{version.csv.second}-rev.#{version.csv.third}-x86_64.dmg",
       verified: "github.com/agraef/purr-data/"
   name "Pd-l2ork"
   name "Purr Data"
