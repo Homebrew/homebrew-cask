@@ -3,10 +3,15 @@ cask "youdaodict" do
   sha256 :no_check
 
   url "https://codown.youdao.com/cidian/download/MacDict.dmg"
-  appcast "https://cidian.youdao.com/index-mac.html"
   name "YoudaoDict"
   name "网易有道词典"
+  desc "Youdao Dictionary"
   homepage "https://cidian.youdao.com/index-mac.html"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   depends_on macos: ">= :mojave"
 
