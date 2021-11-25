@@ -1,6 +1,6 @@
 cask "hazeover" do
   if MacOS.version <= :big_sur
-    version "1.8.9,1050:10.13"
+    version "1.8.9,1050,10.13"
     sha256 "d6b18a0a4c45e809cc9dd168626bbab6be378ed9ba38c8bde16c39fa44239adf"
 
     url "https://hazeover.com/get/HazeOver_#{version.after_colon}.dmg"

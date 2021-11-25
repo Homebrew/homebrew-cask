@@ -1,8 +1,8 @@
 cask "noxappplayer" do
-  version "3.8.5.6,20210617:7b95569e63e7493ea3daf9fae4574e4c"
+  version "3.8.5.6,20210617,7b95569e63e7493ea3daf9fae4574e4c"
   sha256 "ec816784862cab820cc0b93f73eca6783628e6eb88607e17285545edc523a976"
 
-  url "https://res06.bignox.com/full/#{version.after_comma.before_colon}/#{version.after_colon}.dmg?filename=NoxInstaller_#{version.before_comma}_en.dmg"
+  url "https://res06.bignox.com/full/#{version.csv.second}/#{version.csv.third}.dmg?filename=NoxInstaller_#{version.csv.first}_en.dmg"
   name "NoxAppPlayer"
   desc "Android emulator to play mobile games"
   homepage "https://www.bignox.com/"
@@ -13,7 +13,7 @@ cask "noxappplayer" do
       match = headers["location"].match(%r{/(\d+)/([^/]+)\.dmg\?filename=NoxInstaller_(\d+(?:\.\d+)*)_en\.dmg}i)
       next if match.blank?
 
-      "#{match[3]},#{match[1]}:#{match[2]}"
+      "#{match[3]},#{match[1]},#{match[2]}"
     end
   end
 
