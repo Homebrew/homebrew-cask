@@ -5,6 +5,7 @@ cask "dictionaries" do
   url "https://dl.devmate.com/io.dictionaries.Dictionaries/#{version.csv.second}/#{version.csv.third}/Dictionaries-#{version.csv.second}.zip",
       verified: "dl.devmate.com/io.dictionaries.Dictionaries/"
   name "Dictionaries"
+  desc "Translate words without ever opening a dictionary"
   homepage "https://dictionaries.io/"
 
   livecheck do
