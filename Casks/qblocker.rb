@@ -5,6 +5,7 @@ cask "qblocker" do
   url "https://dl.devmate.com/uk.co.wearecocoon.QBlocker/#{version.csv.second}/#{version.csv.third}/QBlocker-#{version.csv.second}.zip",
       verified: "devmate.com/uk.co.wearecocoon.QBlocker/"
   name "QBlocker"
+  desc "Stops you from accidentally quitting an app"
   homepage "https://qblocker.com/"
 
   livecheck do
