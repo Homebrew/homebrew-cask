@@ -5,6 +5,7 @@ cask "xiami" do
   url "https://files.xiami.com/xiamiMac/#{version.csv.third}/#{version.csv.fourth}.zip"
   name "Xiami"
   name "虾米音乐"
+  desc "Music content management and distribution"
   homepage "https://www.xiami.com/"
 
   livecheck do
