@@ -5,6 +5,7 @@ cask "the-archive-browser" do
   url "https://dl.devmate.com/cx.c3.thearchivebrowser/#{version.csv.second}/#{version.csv.third}/TheArchiveBrowser-#{version.csv.second}.zip",
       verified: "dl.devmate.com/cx.c3.thearchivebrowser/"
   name "The Archive Browser"
+  desc "Browse the contents of archives"
   homepage "https://theunarchiver.com/archive-browser"
 
   livecheck do
