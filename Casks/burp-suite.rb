@@ -13,15 +13,14 @@ cask "burp-suite" do
       all_versions = JSON.parse(page)["ResultSet"]["Results"]
       next if all_versions.blank?
 
-      stable_versions = all_versions.filter do |v|
-        v["releaseChannels"].include?("Stable") && v["categories"].include?("Community")
-      end
-      next if stable_versions.blank?
-
-      mac_versions = stable_versions.filter { |v| v["builds"].any? { |b| b["ProductPlatform"] == "MacOsx" } }
-      next if mac_versions.blank?
-
-      mac_versions.first["version"]
+      all_versions.map do |item|
+        item["version"] if
+              item["releaseChannels"].include?("Stable") &&
+              item["categories"].include?("Community") &&
+              item["builds"].any? do |build|
+                build["ProductPlatform"] == "MacOsx"
+              end
+      end.compact
     end
   end
 
