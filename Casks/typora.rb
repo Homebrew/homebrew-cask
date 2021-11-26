@@ -9,7 +9,6 @@ cask "typora" do
 
   livecheck do
     url "https://www.typora.io/download/dev_update.xml"
-    strategy :page_match
     regex(/Typora-(\d+(?:\.\d+)+)\.dmg/i)
   end
 
