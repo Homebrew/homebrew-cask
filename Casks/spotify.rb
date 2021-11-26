@@ -2,7 +2,7 @@ cask "spotify" do
   arch = Hardware::CPU.intel? ? "" : "ARM64"
 
   if Hardware::CPU.intel?
-    version "1.1.72.439,c253025e,34"
+    version "1.1.73.517,bef50fdb,23"
   else
     version "1.1.69.612,b7409abc,13"
   end
