@@ -1,8 +1,8 @@
 cask "parallels-client" do
-  version "18.1.0.1,22712"
-  sha256 "216c851551cd63fe16fd4f6293a26e26083ddec6919ff4f5585d957968079e23"
+  version "18.2.0,22861"
+  sha256 "94adf0f1458923a28f0aed83aea7968bddb29d17bcf3c9771e0c7fff136153c2"
 
-  url "https://download.parallels.com/ras/v#{version.major}/#{version.before_comma.major_minor_patch}.#{version.after_comma}/RasClient-Mac-Notarized-#{version.before_comma.major_minor_patch}-#{version.after_comma}.pkg"
+  url "https://download.parallels.com/ras/v#{version.major}/#{version.csv.first.major_minor_patch}.#{version.csv.second}/RasClient-Mac-Notarized-#{version.csv.first.major_minor_patch}-#{version.csv.second}.pkg"
   name "Parallels Client"
   desc "RDP client"
   homepage "https://www.parallels.com/products/ras/features/rdp-client/"
@@ -10,14 +10,14 @@ cask "parallels-client" do
   livecheck do
     url "https://download.parallels.com/ras/v18/RAS%20Client%20for%20Mac%20Changelog.txt"
     strategy :page_match do |page|
-      match = page.match(/Version\s*(\d+(?:\.\d+)*)\s*\((\d+)\)/i)
+      match = page.match(/Version\s*(\d+(?:\.\d+)+)\s*\((\d+)\)/i)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
     end
   end
 
-  pkg "RasClient-Mac-Notarized-#{version.before_comma.major_minor_patch}-#{version.after_comma}.pkg"
+  pkg "RasClient-Mac-Notarized-#{version.csv.first.major_minor_patch}-#{version.csv.second}.pkg"
 
   uninstall pkgutil: "com.2X.Client.Mac",
             quit:    "com.2X.Client.Mac"
