@@ -1,8 +1,8 @@
 cask "unity-lumin-support-for-editor" do
-  version "2021.2.3f1,32358a8527b4"
-  sha256 "bea4d5857003d3fcd8f5f11c4105c5ee94be8b90677afee6df6abb7aeaf7d262"
+  version "2021.2.4f1,99ba6aa4c552"
+  sha256 "78bbb8d6fcf006eadf7150974e1b85eed76c07033ec40055fcd8dff8cec18a53"
 
-  url "https://download.unity3d.com/download_unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Lumin-Support-for-Editor-#{version.before_comma}.pkg",
+  url "https://download.unity3d.com/download_unity/#{version.csv.second}/MacEditorTargetInstaller/UnitySetup-Lumin-Support-for-Editor-#{version.csv.first}.pkg",
       verified: "download.unity3d.com/download_unity/"
   name "Unity Lumin Build Support"
   desc "Lumin target support for Unity"
@@ -22,7 +22,7 @@ cask "unity-lumin-support-for-editor" do
 
   depends_on cask: "unity"
 
-  pkg "UnitySetup-Lumin-Support-for-Editor-#{version.before_comma}.pkg"
+  pkg "UnitySetup-Lumin-Support-for-Editor-#{version.csv.first}.pkg"
 
   uninstall pkgutil: "com.unity3d.LuminSupport"
 end
