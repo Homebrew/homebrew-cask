@@ -2,7 +2,7 @@ cask "unity" do
   version "2021.2.4f1,99ba6aa4c552"
   sha256 "255f5f92447ae02b36f7d3194574056d2985075ce32e92af61ce7acda0612ed5"
 
-  url "https://download.unity3d.com/download_unity/#{version.after_comma}/MacEditorInstaller/Unity-#{version.before_comma}.pkg",
+  url "https://download.unity3d.com/download_unity/#{version.csv.second}/MacEditorInstaller/Unity-#{version.csv.first}.pkg",
       verified: "download.unity3d.com/download_unity/"
   name "Unity Editor"
   desc "Platform for 3D content"
