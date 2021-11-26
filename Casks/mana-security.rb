@@ -1,6 +1,6 @@
 cask "mana-security" do
   version "2.4.0"
-  sha256 :no_check
+  sha256 "7a5c1cf4a1cb85098966dfb4672d6f7a5ba476dd3dbcc7c99eda237119636b41"
 
   url "https://download.manasecurity.com/"
   name "Mana Security"
