@@ -1,8 +1,8 @@
 cask "unity-linux-support-for-editor" do
-  version "2021.2.3f1,32358a8527b4"
-  sha256 "a39d56430ed30e352d698dbca0d0b1ab97878f054812d0eb545b8829f975295d"
+  version "2021.2.4f1,99ba6aa4c552"
+  sha256 "958bab392b8eef761e869c6a0e562f985cb3e3398c2504b365a7d0f2ee5d4c81"
 
-  url "https://download.unity3d.com/download_unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Linux-Mono-Support-for-Editor-#{version.before_comma}.pkg",
+  url "https://download.unity3d.com/download_unity/#{version.csv.second}/MacEditorTargetInstaller/UnitySetup-Linux-Mono-Support-for-Editor-#{version.csv.first}.pkg",
       verified: "download.unity3d.com/download_unity/"
   name "Unity Linux (Mono) Build Support"
   desc "Linux (Mono) target support for Unity"
@@ -22,7 +22,7 @@ cask "unity-linux-support-for-editor" do
 
   depends_on cask: "unity"
 
-  pkg "UnitySetup-Linux-Mono-Support-for-Editor-#{version.before_comma}.pkg"
+  pkg "UnitySetup-Linux-Mono-Support-for-Editor-#{version.csv.first}.pkg"
 
   uninstall pkgutil: "com.unity3d.LinuxStandaloneSupport"
 end
