@@ -1,8 +1,8 @@
 cask "typora" do
-  version "0.11.18"
-  sha256 "cc8c9b07f4584f81b214d4a2cbc270cb1171d7262f0f7ffdd466f8b74b2da38e"
+  version "1.0.0"
+  sha256 "8adee80793f6b1615d106119ba0d67b0dd5146ac30439fd60b78e52c2973c664"
 
-  url "https://www.typora.io/mac/Typora-#{version}.dmg"
+  url "https://download.typora.io/mac/Typora-#{version}.dmg"
   name "Typora"
   desc "Configurable document editor that supports Markdown"
   homepage "https://typora.io/"
