@@ -9,6 +9,7 @@ cask "ddnet" do
 
   livecheck do
     url "https://github.com/ddnet/ddnet/tags"
+    strategy :page_match
     regex(/(\d+(?:\.\d+)+)\.zip/i)
   end
 
