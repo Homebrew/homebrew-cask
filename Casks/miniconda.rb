@@ -1,6 +1,6 @@
 cask "miniconda" do
   arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
-  
+
   if Hardware::CPU.intel?
     version "py39_4.10.3"
     sha256 "786de9721f43e2c7d2803144c635f5f6e4823483536dc141ccd82dbb927cd508"
@@ -8,7 +8,7 @@ cask "miniconda" do
     version "py38_4.10.1"
     sha256 "4ce4047065f32e991edddbb63b3c7108e7f4534cfc1efafc332454a414deab58"
   end
-  
+
   url "https://repo.anaconda.com/miniconda/Miniconda3-#{version}-MacOSX-#{arch}.sh",
       verified: "repo.anaconda.com/miniconda/"
   name "Continuum Analytics Miniconda"
@@ -19,11 +19,10 @@ cask "miniconda" do
   # to be updated when the prefix changes in the latest version at the top of:
   # https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-#{arch}.sh
   livecheck do
+    url "https://repo.anaconda.com/miniconda/"
     if Hardware::CPU.intel?
-      url "https://repo.anaconda.com/miniconda/"
       regex(/>\s*Miniconda3-(py39[._-]\d+(?:\.\d+)+)-MacOSX-#{arch}\.sh\s*</i)
     else
-      url "https://repo.anaconda.com/miniconda/"
       regex(/>\s*Miniconda3-(py38[._-]\d+(?:\.\d+)+)-MacOSX-#{arch}\.sh\s*</i)
     end
   end
