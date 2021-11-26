@@ -4,7 +4,7 @@ cask "mana-security" do
 
   url "https://download.manasecurity.com/"
   name "Mana Security"
-  desc "macOS vulnerability management for individuals"
+  desc "Vulnerability Management for individuals"
   homepage "https://www.manasecurity.com/"
 
   livecheck do
