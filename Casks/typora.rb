@@ -1,15 +1,14 @@
 cask "typora" do
-  version "0.11.18"
-  sha256 "cc8c9b07f4584f81b214d4a2cbc270cb1171d7262f0f7ffdd466f8b74b2da38e"
+  version "1.0.1"
+  sha256 "e5c3c6f3c812e600cec1c496576d340f7b3becf5b5492eb770775bcbdcaf00df"
 
-  url "https://www.typora.io/mac/Typora-#{version}.dmg"
+  url "https://download.typora.io/mac/Typora-#{version}.dmg"
   name "Typora"
   desc "Configurable document editor that supports Markdown"
   homepage "https://typora.io/"
 
   livecheck do
     url "https://www.typora.io/download/dev_update.xml"
-    strategy :page_match
     regex(/Typora-(\d+(?:\.\d+)+)\.dmg/i)
   end
 
