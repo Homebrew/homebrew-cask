@@ -1,8 +1,8 @@
 cask "unity-windows-support-for-editor" do
-  version "2021.2.3f1,32358a8527b4"
-  sha256 "c8759e325e761c2c81a9d8e3322b313872af6e9e91b656c5fc1b33cfeb2c36db"
+  version "2021.2.4f1,99ba6aa4c552"
+  sha256 "68e0d9cb6db3ef7c36286d37c552a4c9a2ef80e06ddf58273e8f5b67576ff2ca"
 
-  url "https://download.unity3d.com/download_unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-#{version.before_comma}.pkg",
+  url "https://download.unity3d.com/download_unity/#{version.csv.second}/MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-#{version.csv.first}.pkg",
       verified: "download.unity3d.com/download_unity/"
   name "Unity Windows (Mono) Build Support"
   desc "Windows (Mono) target support for Unity"
@@ -22,7 +22,7 @@ cask "unity-windows-support-for-editor" do
 
   depends_on cask: "unity"
 
-  pkg "UnitySetup-Windows-Mono-Support-for-Editor-#{version.before_comma}.pkg"
+  pkg "UnitySetup-Windows-Mono-Support-for-Editor-#{version.csv.first}.pkg"
 
   uninstall pkgutil: "com.unity3d.WindowsStandaloneSupport"
 end
