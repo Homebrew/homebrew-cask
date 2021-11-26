@@ -1,8 +1,8 @@
 cask "tg-pro" do
-  version "2.62,12812"
-  sha256 "3f78ce30e6511e1c1792b38b10d859749878ec64260db6280df6a4262909655e"
+  version "2.63,12892"
+  sha256 "d50f76982a8530e1a70bc3f0535a94aea489080dc3c6e04718c172a019b436da"
 
-  url "https://www.tunabellysoftware.com/resources/TG%20Pro%20#{version.before_comma}.dmg"
+  url "https://www.tunabellysoftware.com/resources/TG%20Pro%20#{version.csv.first}.dmg"
   name "TG Pro"
   desc "Temperature monitoring, fan control and diagnostics"
   homepage "https://www.tunabellysoftware.com/tgpro/"
