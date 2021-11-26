@@ -2,7 +2,7 @@ cask "parallels-client" do
   version "18.2.0,22861"
   sha256 "94adf0f1458923a28f0aed83aea7968bddb29d17bcf3c9771e0c7fff136153c2"
 
-  url "https://download.parallels.com/ras/v#{version.major}/#{version.before_comma.major_minor_patch}.#{version.after_comma}/RasClient-Mac-Notarized-#{version.before_comma.major_minor_patch}-#{version.after_comma}.pkg"
+  url "https://download.parallels.com/ras/v#{version.major}/#{version.csv.first.major_minor_patch}.#{version.csv.second}/RasClient-Mac-Notarized-#{version.csv.first.major_minor_patch}-#{version.csv.second}.pkg"
   name "Parallels Client"
   desc "RDP client"
   homepage "https://www.parallels.com/products/ras/features/rdp-client/"
@@ -17,7 +17,7 @@ cask "parallels-client" do
     end
   end
 
-  pkg "RasClient-Mac-Notarized-#{version.before_comma.major_minor_patch}-#{version.after_comma}.pkg"
+  pkg "RasClient-Mac-Notarized-#{version.csv.first.major_minor_patch}-#{version.csv.second}.pkg"
 
   uninstall pkgutil: "com.2X.Client.Mac",
             quit:    "com.2X.Client.Mac"
