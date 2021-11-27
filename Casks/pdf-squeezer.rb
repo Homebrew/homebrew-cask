@@ -13,4 +13,11 @@ cask "pdf-squeezer" do
   end
 
   app "PDF Squeezer.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.witt-software.PDF-Squeezer",
+    "~/Library/Application Scripts/group.witt-software.com.PDF-Squeezer",
+    "~/Library/Containers/com.witt-software.PDF-Squeezer",
+    "~/Library/Group Containers/group.witt-software.com.PDF-Squeezer",
+  ]
 end
