@@ -14,4 +14,6 @@ cask "preferencecleaner" do
   depends_on macos: ">= :catalina"
 
   app "PreferenceCleaner #{version.major}.app"
+
+  zap trash: "~/Library/Caches/uk.co.echomist.PreferenceCleaner#{version.major}"
 end
