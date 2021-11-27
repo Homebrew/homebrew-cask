@@ -8,8 +8,7 @@ cask "preferencecleaner" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/PreferenceCleaner_(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/PreferenceCleaner[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   depends_on macos: ">= :catalina"
