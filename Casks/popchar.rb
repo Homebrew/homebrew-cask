@@ -10,7 +10,7 @@ cask "popchar" do
 
   livecheck do
     url "https://update.ergonis.com/vck/popcharx.xml"
-    regex(/<Program_Version>(\d+(?:\.\d+)*)</i)
+    regex(/<Program_Version>(\d+(?:\.\d+)+)</i)
   end
 
   app "PopChar.app"
