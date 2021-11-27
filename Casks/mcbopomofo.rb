@@ -5,7 +5,7 @@ cask "mcbopomofo" do
   url "https://github.com/openvanilla/McBopomofo/releases/download/#{version}/McBopomofo-Installer-#{version}.zip",
       verified: "github.com/"
   name "McBopomofo"
-  desc "A macOS input method for Bopomofo(Phonetic Symbols of Mandarin Chinese) user."
+  desc "input method for Bopomofo(Phonetic Symbols of Mandarin Chinese) user"
   homepage "https://mcbopomofo.openvanilla.org/"
 
   installer manual: "McBopomofoInstaller.app"
