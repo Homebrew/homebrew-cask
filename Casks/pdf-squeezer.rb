@@ -12,6 +12,8 @@ cask "pdf-squeezer" do
     strategy :sparkle
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "PDF Squeezer.app"
 
   zap trash: [
