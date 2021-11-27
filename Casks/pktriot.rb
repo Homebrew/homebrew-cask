@@ -9,7 +9,6 @@ cask "pktriot" do
 
   livecheck do
     url "https://packetriot.com/downloads"
-    strategy :page_match
     regex(/href=.*?pktriot[._-](\d+(?:\.\d+)+)\.macos\.t/i)
   end
 
