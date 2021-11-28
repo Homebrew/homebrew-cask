@@ -5,7 +5,7 @@ cask "valkyrie" do
   url "https://github.com/NPBruce/valkyrie/releases/download/release/#{version.major_minor}/v#{version}/valkyrie-macos-#{version}.tar.gz",
       verified: "github.com/NPBruce/valkyrie"
   name "Valkyrie"
-  desc "GM for Fantasy Flight Board Games"
+  desc "Game Master for Fantasy Flight board games"
   homepage "https://npbruce.github.io/valkyrie/"
 
   livecheck do
