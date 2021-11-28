@@ -1,5 +1,5 @@
 cask "platypus" do
-  version "5.3,1113"
+  version "5.3"
   sha256 "efc66e943e6327896d0c1b82b0c1798c9ea17cffa03581e4949541c30d9833b0"
 
   url "https://sveinbjorn.org/files/software/platypus/platypus#{version.before_comma}.zip"
@@ -8,8 +8,7 @@ cask "platypus" do
   homepage "https://sveinbjorn.org/platypus"
 
   livecheck do
-    url "https://sveinbjorn.org/files/appcasts/PlatypusAppcast.xml"
-    strategy :sparkle
+    url "https://github.com/sveinbjornt/Platypus"
   end
 
   auto_updates true
