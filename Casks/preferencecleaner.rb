@@ -4,6 +4,7 @@ cask "preferencecleaner" do
 
   url "https://echomist.co.uk/software/downloads/PreferenceCleaner_#{version}.dmg"
   name "PreferenceCleaner"
+  desc "Utility to simplify the task of deleting preference files"
   homepage "https://echomist.co.uk/software/PreferenceCleaner.php"
 
   livecheck do
