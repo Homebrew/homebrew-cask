@@ -16,7 +16,8 @@ cask "mana-security" do
 
   app "Mana Security.app"
 
-  uninstall login_item: "Mana Security"
+  uninstall login_item: "Mana Security",
+            quit:       ["com.apple.systemevents"]
 
   zap trash: [
     "~/Library/Application Support/Mana Security/",
