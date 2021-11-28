@@ -9,7 +9,7 @@ cask "pinegrow" do
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?/PinegrowMac[._-]v?(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/PinegrowMac[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "Pinegrow.app"
