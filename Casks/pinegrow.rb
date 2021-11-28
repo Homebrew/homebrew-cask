@@ -13,4 +13,11 @@ cask "pinegrow" do
   end
 
   app "Pinegrow.app"
+
+  zap trash: [
+    "~/Library/Application Support/Pinegrow",
+    "~/Library/Caches/Pinegrow",
+    "~/Library/Preferences/com.pinegrow.pinegrow.plist",
+    "~/Library/Saved Application State/com.pinegrow.pinegrow.savedState",
+  ]
 end
