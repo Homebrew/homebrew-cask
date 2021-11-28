@@ -1,6 +1,6 @@
 cask "pktriot" do
-  version "0.12.0"
-  sha256 "8b4b28bfa9f05db5857116709d20e52db9d89e3d99be69e651f9d1cddc63734f"
+  version "0.12.2"
+  sha256 "0c0d5b19e1dcc82d27d3ff0e3f0d876f77ce04267e618ac6f060638a55e351e5"
 
   url "https://download.packetriot.com/macos/pktriot-#{version}.macos.tar.gz"
   name "pktriot"
@@ -9,7 +9,6 @@ cask "pktriot" do
 
   livecheck do
     url "https://packetriot.com/downloads"
-    strategy :page_match
     regex(/href=.*?pktriot[._-](\d+(?:\.\d+)+)\.macos\.t/i)
   end
 
