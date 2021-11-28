@@ -10,8 +10,7 @@ cask "postbox" do
 
   livecheck do
     url "https://www.postbox-inc.com/download/success-mac"
-    strategy :page_match
-    regex(%r{href=.*?/postbox-(\d+(?:\.\d+)*)-mac64\.dmg}i)
+    regex(%r{href=.*?/postbox[._-]v?(\d+(?:\.\d+)+)[._-]mac64\.dmg}i)
   end
 
   auto_updates true
