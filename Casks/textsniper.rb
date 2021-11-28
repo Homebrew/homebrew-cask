@@ -21,4 +21,12 @@ cask "textsniper" do
   uninstall  quit:      "com.valerijs.boguckis.TextSniper",
              launchctl: "com.valerijs.boguckis.TextSniper-LaunchAtLoginHelper",
              delete:    "/Applications/TextSniper.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.valerijs.boguckis.TextSniper-LaunchAtLoginHelper",
+    "~/Library/Application Support/com.valerijs.boguckis.TextSniper",
+    "~/Library/Caches/com.valerijs.boguckis.TextSniper",
+    "~/Library/Containers/com.valerijs.boguckis.TextSniper-LaunchAtLoginHelper",
+    "~/Library/Preferences/com.valerijs.boguckis.TextSniper.plist",
+  ]
 end
