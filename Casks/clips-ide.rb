@@ -18,5 +18,8 @@ cask "clips-ide" do
 
   app "CLIPS IDE.app"
 
-  zap trash: "~/Library/Preferences/com.SSoP.CLIPSIDE.plist"
+  zap trash: [
+    "~/Library/Preferences/com.SSoP.CLIPSIDE.plist",
+    "~/Library/Saved Application State/com.SSoP.CLIPSIDE.savedState",
+  ]
 end
