@@ -1,6 +1,6 @@
 cask "daedalus-testnet" do
-  version "4.5.1,19747"
-  sha256 "521606e0ebc3b51e29f2a5d112c1db823247a8efa2687e0756a1a8769239f398"
+  version "4.5.2,19820"
+  sha256 "ee943f48f0fefc8ebbb3d9c956cc11b900c620c01657ac4be117c358a0c0fe71"
 
   url "https://updates-cardano-testnet.s3.amazonaws.com/daedalus-#{version.before_comma}-testnet-#{version.after_comma}.pkg",
       verified: "updates-cardano-testnet.s3.amazonaws.com/"
