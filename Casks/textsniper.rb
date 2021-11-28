@@ -17,4 +17,8 @@ cask "textsniper" do
   depends_on macos: ">= :catalina"
 
   app "TextSniper.app"
+
+  uninstall  quit:      "com.valerijs.boguckis.TextSniper",
+             launchctl: "com.valerijs.boguckis.TextSniper-LaunchAtLoginHelper",
+             delete:    "/Applications/TextSniper.app"
 end
