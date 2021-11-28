@@ -2,7 +2,7 @@ cask "daedalus-testnet" do
   version "4.5.2,19820"
   sha256 "ee943f48f0fefc8ebbb3d9c956cc11b900c620c01657ac4be117c358a0c0fe71"
 
-  url "https://updates-cardano-testnet.s3.amazonaws.com/daedalus-#{version.before_comma}-testnet-#{version.after_comma}.pkg",
+  url "https://updates-cardano-testnet.s3.amazonaws.com/daedalus-#{version.csv.first}-testnet-#{version.csv.second}.pkg",
       verified: "updates-cardano-testnet.s3.amazonaws.com/"
   name "Daedalus Testnet"
   desc "Cryptocurrency wallet for test ada on the Cardano Testnet blockchain"
@@ -21,7 +21,7 @@ cask "daedalus-testnet" do
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
-  pkg "daedalus-#{version.before_comma}-testnet-#{version.after_comma}.pkg"
+  pkg "daedalus-#{version.csv.first}-testnet-#{version.csv.second}.pkg"
 
   uninstall pkgutil: "org.Daedalustestnet.pkg"
 
