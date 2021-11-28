@@ -15,4 +15,14 @@ cask "mana-security" do
   depends_on macos: ">= :big_sur"
 
   app "Mana Security.app"
+
+  uninstall login_item: "Mana Security"
+
+  zap trash: [
+    "~/Library/Application Support/Mana Security/",
+    "~/Library/Caches/com.manasecurity*",
+    "~/Library/Logs/Mana Security",
+    "~/Library/Preferences/com.manasecurity*",
+    "~/Library/Saved Application State/com.manasecurity*",
+  ]
 end
