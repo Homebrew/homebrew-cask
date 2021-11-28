@@ -17,4 +17,8 @@ cask "clips-ide" do
   depends_on macos: ">= :el_capitan"
 
   app "CLIPS IDE.app"
+
+  zap trash: [
+    '~/Library/Preferences/com.SSoP.CLIPSIDE.plist',
+  ]
 end
