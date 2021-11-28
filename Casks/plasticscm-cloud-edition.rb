@@ -10,7 +10,7 @@ cask "plasticscm-cloud-edition" do
 
   livecheck do
     url "https://www.plasticscm.com/download/releasenotes/"
-    regex(/plastic\sscm\s-\srelease\snotes\s-\s(\d+(?:\.\d+)*)/i)
+    regex(/plastic\sscm\s-\srelease\snotes\s-\s(\d+(?:\.\d+)+)/i)
   end
 
   pkg "plasticscm-cloud-#{version}.pkg"
