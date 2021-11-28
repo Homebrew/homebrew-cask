@@ -9,4 +9,9 @@ cask "phoenix-slides" do
   homepage "https://blyt.net/phxslides/"
 
   app "Phoenix Slides.app"
+
+  zap trash: [
+    "~/Library/Caches/com.apple.helpd/Generated/Phoenix Slides Help*",
+    "~/Library/Preferences/net.blyt.phoenixslides.plist",
+  ]
 end
