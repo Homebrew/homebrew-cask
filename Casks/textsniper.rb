@@ -10,7 +10,7 @@ cask "textsniper" do
 
   livecheck do
     url "https://textsniper.app/latest_releases.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
