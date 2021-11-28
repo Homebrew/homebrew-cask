@@ -1,6 +1,6 @@
 cask "pinegrow" do
-  version "6.1.1"
-  sha256 "1c088e090de903185c066ad5383973111d9a97bce8b24331a27fad7098fe8eff"
+  version "6.21"
+  sha256 "d2c037f70a07a2ad4fc049a8e2bc6393593b12933a8c18ccb58a8c713899f9d5"
 
   url "https://download.pinegrow.com/PinegrowMac.#{version}.dmg"
   name "Pinegrow"
