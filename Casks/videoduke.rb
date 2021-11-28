@@ -3,7 +3,7 @@ cask "videoduke" do
   sha256 :no_check
 
   url "https://cdn.eltima.com/download/videoduke.dmg"
-  name "videoduke"
+  name "VideoDuke"
   desc "Video Downloader"
   homepage "https://mac.eltima.com/video-downloader.html"
 
