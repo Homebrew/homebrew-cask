@@ -2,7 +2,7 @@ cask "bettertouchtool" do
   version "3.625,1777"
   sha256 "d1d21c209f7156deeed83ffc5aff7e7ed87fc9d4bcf09de20e2ff73eca49f71b"
 
-  url "https://folivora.ai/releases/btt#{version.before_comma}-#{version.after_comma}.zip"
+  url "https://folivora.ai/releases/btt#{version.csv.first}-#{version.csv.second}.zip"
   name "BetterTouchTool"
   desc "Tool to customize input devices and automate computer systems"
   homepage "https://folivora.ai/"
