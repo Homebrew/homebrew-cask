@@ -1,15 +1,15 @@
 cask "browserosaurus" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "15.3.9"
+  version "16.0.7"
 
-  url "https://github.com/will-stone/browserosaurus/releases/download/v#{version}/Browserosaurus-darwin-#{arch}-#{version}.zip"
   if Hardware::CPU.intel?
-    sha256 "e81751d7d44f8dea3079444f6ac34a4ce6e3c18f3886f0b76d1716f8e6490976"
+    sha256 "ecc3037716b745b48d1b4eea59b1ffb49648e28c6ff1a5316ac1cfb74df86c35"
   else
-    sha256 "0fb4e3982c394ad38c2eb1ab1d865e0e57e76eec7ccc2a8bcaa635f7889a5535"
+    sha256 "e61cbc2110b1c705fe487c51094d9e585728fe35df2fd46c334d893516c0c69e"
   end
 
+  url "https://github.com/will-stone/browserosaurus/releases/download/v#{version}/Browserosaurus-darwin-#{arch}-#{version}.zip"
   name "Browserosaurus"
   desc "Open-source browser prompter"
   homepage "https://github.com/will-stone/browserosaurus"
