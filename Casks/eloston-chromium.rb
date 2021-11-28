@@ -1,7 +1,7 @@
 cask "eloston-chromium" do
   if Hardware::CPU.intel?
-    version "96.0.4664.45-1.1_x86-64"
-    sha256 "42b48f75081e74e727e43baa35f1306210c86c0794a01af190aee659992c386f"
+    version "96.0.4664.55-1.1_x86-64"
+    sha256 "32620bcd432d33e68173e9ccb91d773b07722e19d7b1b153df1a389a68d68cce"
   else
     version "96.0.4664.45-1.1_arm64"
     sha256 "3fa8c683f4c9731d3b224c11bdd07ee16c257227a8f26408d48572b2e0cd961a"
