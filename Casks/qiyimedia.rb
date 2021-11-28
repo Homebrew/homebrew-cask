@@ -20,9 +20,9 @@ cask "qiyimedia" do
 
   zap trash: [
     "~/Library/Application Scripts/com.iqiyi.player.QYWidget",
+    "~/Library/Application Scripts/com.iqiyi.player",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.iqiyi.player.sfl*",
     "~/Library/Containers/com.iqiyi.player.QYWidget",
     "~/Library/Group Containers/group.com.qiyi",
-    "~/Library/Application Scripts/com.iqiyi.player",
   ]
 end
