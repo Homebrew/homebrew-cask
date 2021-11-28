@@ -4,12 +4,12 @@ cask "garagesale" do
 
   url "https://downloads.iwascoding.com/downloads/GarageSale_#{version}.dmg"
   name "GarageSale"
+  desc "Manage eBay Listings"
   homepage "https://www.iwascoding.com/GarageSale/"
 
   livecheck do
     url "https://www.iwascoding.com/GarageSale/Downloads.html#VersionHistory"
-    strategy :page_match
-    regex(%r{href=.*?/GarageSale_(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/GarageSale_(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   depends_on macos: ">= :sierra"
