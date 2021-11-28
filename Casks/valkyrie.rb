@@ -10,7 +10,6 @@ cask "valkyrie" do
 
   livecheck do
     url :url
-    strategy :github_latest
     regex(%r{/v(\d+(?:\.\d+)+)$}i)
   end
 
