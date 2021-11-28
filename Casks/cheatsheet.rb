@@ -13,6 +13,8 @@ cask "cheatsheet" do
     strategy :sparkle
   end
 
+  auto_updates true
+
   app "CheatSheet.app"
 
   zap trash: [

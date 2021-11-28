@@ -1,8 +1,8 @@
 cask "xee" do
-  version "3.5.3,45:1504018134"
+  version "3.5.3,45,1504018134"
   sha256 "756719157ae7d9cd3a0153ca80b48b71a239691d3ff8aa0061fd529a825d7926"
 
-  url "https://dl.devmate.com/cx.c3.Xee3/#{version.after_comma.before_colon}/#{version.after_colon}/Xee-#{version.after_comma.before_colon}.zip",
+  url "https://dl.devmate.com/cx.c3.Xee3/#{version.csv.second}/#{version.csv.third}/Xee-#{version.csv.second}.zip",
       verified: "devmate.com/cx.c3.Xee3/"
   name "Xee³"
   desc "Image viewer and file browser"
@@ -11,7 +11,7 @@ cask "xee" do
   livecheck do
     url "https://updates.devmate.com/cx.c3.Xee3.xml"
     strategy :sparkle do |item|
-      "#{item.short_version},#{item.version}:#{item.url[%r{/([^/]+)/[^/]+\.zip}i, 1]}"
+      "#{item.short_version},#{item.version},#{item.url[%r{/([^/]+)/[^/]+\.zip}i, 1]}"
     end
   end
 

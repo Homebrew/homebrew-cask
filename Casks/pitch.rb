@@ -1,8 +1,8 @@
 cask "pitch" do
-  version "1.47.0,2102271"
-  sha256 "8e5228bd052848392b639025e762eb3567aa80d27da5f7026af63b097992c938"
+  version "1.54.2,2358921"
+  sha256 "0198b44d0f57ea2160582b8c12dcba80b9970dc1060fc3624594853afd30a6da"
 
-  url "https://desktop-app-builds.pitch.com/Pitch-#{version.before_comma}-ci#{version.after_comma}.dmg"
+  url "https://desktop-app-builds.pitch.com/Pitch-#{version.csv.first}-ci#{version.csv.second}.dmg"
   name "Pitch"
   desc "Collaborative presentation software"
   homepage "https://pitch.com/"

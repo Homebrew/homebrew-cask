@@ -1,6 +1,6 @@
 cask "nosqlbooster-for-mongodb" do
-  version "6.2.17"
-  sha256 "e081b9899b93347bc441a40366efb58b12997e3134a8653497189cbec47a8448"
+  version "7.0.5"
+  sha256 "06e2ebb30ff255d41a0d746986ba606b247bc77a481bc570ab6585c5509910b1"
 
   url "https://s3.mongobooster.com/download/releasesv#{version.major}/nosqlbooster4mongo-#{version}.dmg",
       verified: "mongobooster.com/"
@@ -14,4 +14,11 @@ cask "nosqlbooster-for-mongodb" do
   end
 
   app "NoSQLBooster for MongoDB.app"
+
+  zap trash: [
+    "~/Documents/NoSQLBooster",
+    "~/Library/Application Support/NoSQLBooster for MongoDB",
+    "~/Library/Preferences/com.nosqlbooster.mongodb.plist",
+    "~/Library/Saved Application State/com.nosqlbooster.mongodb.savedState",
+  ]
 end

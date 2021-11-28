@@ -5,10 +5,10 @@ cask "coconutbattery" do
 
     url "https://www.coconut-flavour.com/downloads/coconutBattery_#{version}.zip"
   else
-    version "3.9.6,404cb123"
-    sha256 "52a6a06b33ced49eb324c2aa0a7c9b56717eb9361efeaeada9fd5f2179d63fed"
+    version "3.9.6,fd006bab"
+    sha256 "a8644818e08267df2f94ce139a7710d1f0b49f794a26187a63610498bc982e54"
 
-    url "https://www.coconut-flavour.com/downloads/coconutBattery_#{version.before_comma.no_dots}_#{version.after_comma}.zip"
+    url "https://www.coconut-flavour.com/downloads/coconutBattery_#{version.csv.first.no_dots}_#{version.csv.second}.zip"
 
     livecheck do
       url "https://coconut-flavour.com/updates/coconutBattery.xml"
@@ -34,8 +34,8 @@ cask "coconutbattery" do
     "~/Library/Application Support/coconutBattery",
     "~/Library/Caches/com.coconut-flavour.coconutBattery*",
     "~/Library/Group Containers/*.coconut-flavour.coconutBattery",
-    "~/Library/Preferences/com.coconut-flavour.coconutBattery.plist",
     "~/Library/Preferences/com.coconut-flavour.coconutBattery-Menu.plist",
+    "~/Library/Preferences/com.coconut-flavour.coconutBattery.plist",
     "~/Library/Saved Application State/com.coconut-flavour.coconutBattery.savedState",
   ]
 end

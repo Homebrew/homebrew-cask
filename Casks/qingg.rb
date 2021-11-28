@@ -1,8 +1,8 @@
 cask "qingg" do
-  version "2.10,3410"
-  sha256 "04a116bf164d7720f6ed165dadc256b56f51f669089d626a4431bcc4fbc70af0"
+  version "2.11,3411"
+  sha256 "e08f5831b27b4ffaef0537c79253904352219064de44566969c5ee417e92c705"
 
-  url "https://qingg.im/download/Qingg-#{version.before_comma}.dmg"
+  url "https://qingg.im/download/Qingg-#{version.csv.first}.dmg"
   name "QinggIM"
   name "清歌输入法"
   desc "Wubi input method"
@@ -20,8 +20,8 @@ cask "qingg" do
   uninstall pkgutil: "com.aodaren.*"
 
   zap trash: [
-    "~/Library/Application Support/Qingg",
     "~/Library/Application Support/com.aodaren.inputmethod.Qingg",
+    "~/Library/Application Support/Qingg",
     "~/Library/Caches/com.aodaren.inputmethod.Qingg",
     "~/Library/Preferences/com.aodaren.inputmethod.Qingg.plist",
   ]

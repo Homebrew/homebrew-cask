@@ -1,5 +1,5 @@
 cask "raycast" do
-  version "1.25.6"
+  version "1.25.7"
   sha256 :no_check
 
   url "https://api.raycast.app/v2/download"
@@ -14,6 +14,7 @@ cask "raycast" do
   end
 
   auto_updates true
+  depends_on macos: ">= :mojave"
 
   app "Raycast.app"
 

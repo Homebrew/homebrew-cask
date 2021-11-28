@@ -1,8 +1,8 @@
 cask "sketch" do
-  version "79.1,133344"
-  sha256 "c0a83ddc47c23d30d653d33bd5d94d8c1e0f7acd3c13459b17ccc9c7f3b0b59a"
+  version "80.1,134476"
+  sha256 "2ede3107c0c4578c224a0bb32f11a483677c6b68ee09340aa8a76642ee0f267f"
 
-  url "https://download.sketch.com/sketch-#{version.before_comma}-#{version.after_comma}.zip"
+  url "https://download.sketch.com/sketch-#{version.csv.first}-#{version.csv.second}.zip"
   name "Sketch"
   desc "Digital design and prototyping platform"
   homepage "https://www.sketch.com/"

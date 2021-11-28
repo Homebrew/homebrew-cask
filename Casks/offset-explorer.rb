@@ -1,5 +1,5 @@
 cask "offset-explorer" do
-  version "2.1"
+  version "2.2"
   sha256 :no_check
 
   url "https://www.kafkatool.com/download2/offsetexplorer.dmg"
@@ -10,8 +10,7 @@ cask "offset-explorer" do
 
   livecheck do
     url "https://www.kafkatool.com/download.html"
-    strategy :page_match
-    regex(/Offset\s*Explorer\s*(\d+(?:\.\d+)*)/i)
+    regex(/Offset\s*Explorer\s*v?(\d+(?:\.\d+)+)/i)
   end
 
   app "Offset Explorer #{version.major}.app"
