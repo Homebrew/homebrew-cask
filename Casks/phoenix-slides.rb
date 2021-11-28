@@ -5,6 +5,7 @@ cask "phoenix-slides" do
   url "https://github.com/gobbledegook/creevey/releases/download/v#{version}/phoenix-slides-#{version.no_dots}.dmg",
       verified: "github.com/gobbledegook/creevey/"
   name "Phoenix Slides"
+  desc "Full-screen slideshow program"
   homepage "https://blyt.net/phxslides/"
 
   app "Phoenix Slides.app"
