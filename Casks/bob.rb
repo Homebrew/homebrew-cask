@@ -12,7 +12,7 @@ cask "bob" do
   app "Bob.app"
 
   zap trash: [
-    "~/Library/Preferences/com.ripperhe.Bob.plist",
     "~/Library/Caches/com.ripperhe.Bob",
+    "~/Library/Preferences/com.ripperhe.Bob.plist",
   ]
 end
