@@ -9,8 +9,8 @@ cask "textsniper" do
   homepage "https://textsniper.app/"
 
   livecheck do
-    url "https://textsniper.app/latest_releases.xml"
-    strategy :sparkle, &:short_version
+    url "https://textsniper.app/api/downloads/mac-latest"
+    strategy :header_match
   end
 
   auto_updates true
