@@ -4,7 +4,6 @@ cask "textsniper" do
 
   url "https://s3.amazonaws.com/textsniper.app/TextSniper#{version}.dmg",
       verified: "s3.amazonaws.com/textsniper.app/"
-  url "https://textsniper.app/api/downloads/mac-latest"
   name "textsniper"
   desc "Extract text from images and other digital documents in seconds"
   homepage "https://textsniper.app/"
