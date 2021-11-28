@@ -1,6 +1,6 @@
 cask "leapp" do
-  version "0.7.4"
-  sha256 "e074453330c8b66dd7ed2c8aa6172812ef97af4283b23af1187358bff35e4646"
+  version "0.8.0"
+  sha256 "a90dc0cea12008fad53ffef63f1eb109e31c0e49ed98d94ddc940c26fba8424e"
 
   url "https://asset.noovolari.com/#{version}/Leapp-#{version}.dmg",
       verified: "asset.noovolari.com/"
