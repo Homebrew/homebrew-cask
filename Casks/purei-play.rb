@@ -17,4 +17,9 @@ cask "purei-play" do
   end
 
   app "Play.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.virtualapplications.Play.plist",
+    "~/Library/Saved Application State/com.virtualapplications.Play.savedState",
+  ]
 end
