@@ -1,8 +1,8 @@
 cask "tunnelblick" do
-  version "3.8.6a,5711"
-  sha256 "636c52eaba89a0fc7549160892fabb62f4d11bb34d959872f2c0ab93765e0835"
+  version "3.8.7,5750"
+  sha256 "9bbf95e5b892f736a06fa03fdfc0db5b5f14da44ec5ea9cdc2af837b53986f93"
 
-  url "https://github.com/Tunnelblick/Tunnelblick/releases/download/v#{version.before_comma}/Tunnelblick_#{version.before_comma}_build_#{version.after_comma}.dmg",
+  url "https://github.com/Tunnelblick/Tunnelblick/releases/download/v#{version.csv.first}/Tunnelblick_#{version.csv.first}_build_#{version.csv.second}.dmg",
       verified: "github.com/Tunnelblick/Tunnelblick/"
   name "Tunnelblick"
   desc "Free and open-source OpenVPN client"
@@ -12,7 +12,7 @@ cask "tunnelblick" do
   livecheck do
     url "https://github.com/Tunnelblick/Tunnelblick/releases"
     strategy :page_match do |page|
-      match = page.match(%r{href=.*?/Tunnelblick_(\d+(?:\.\d+)*[a-z]?)_build_(\d+)\.dmg}i)
+      match = page.match(%r{href=.*?/Tunnelblick[._-]v?(\d+(?:\.\d+)*[a-z]?)_build_(\d+)\.dmg}i)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
@@ -34,12 +34,12 @@ cask "tunnelblick" do
             quit:      "net.tunnelblick.tunnelblick"
 
   zap trash: [
+    "/Library/Application Support/Tunnelblick",
     "~/Library/Application Support/Tunnelblick",
-    "~/Library/Caches/net.tunnelblick.tunnelblick",
     "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/Tunnelblick*",
+    "~/Library/Caches/net.tunnelblick.tunnelblick",
     "~/Library/Cookies/net.tunnelblick.tunnelblick.binarycookies",
     "~/Library/Preferences/net.tunnelblick.tunnelblick.plist",
-    "/Library/Application Support/Tunnelblick",
   ]
 
   caveats <<~EOS
