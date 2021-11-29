@@ -14,8 +14,6 @@ cask "gimp" do
     regex(%r{href=.*?/gimp-(\d+(?:\.\d+)*)-x86_64\.dmg}i)
   end
 
-  auto_updates true
-
   app "GIMP-#{version.major_minor}.app"
   binary "#{appdir}/GIMP-#{version.major_minor}.app/Contents/MacOS/gimp"
 
