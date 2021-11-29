@@ -43,8 +43,8 @@ cask "onyx" do
   zap trash: [
     "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.titanium.OnyX.help*",
     "~/Library/Logs/OnyX.log",
-    "~/Library/Preferences/OnyX.plist",
     "~/Library/Preferences/com.titanium.OnyX.plist",
+    "~/Library/Preferences/OnyX.plist",
     "~/Library/Saved Application State/com.titanium.OnyX.savedState",
   ]
 end
