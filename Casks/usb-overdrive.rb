@@ -7,12 +7,17 @@ cask "usb-overdrive" do
   desc "USB and Bluetooth device driver"
   homepage "https://www.usboverdrive.com/"
 
-  pkg "Install USB Overdrive.pkg"
+  livecheck do
+    url "https://www.usboverdrive.com/index.php/download/"
+    regex(/>USB\s+Overdrive\s+v?(\d+(?:\.\d+)+)/i)
+  end
 
-  uninstall pkgutil: "com.usboverdrive.installer",
-            kext:    "/Library/Extensions/USBOverdrive.kext",
-            delete:  [
-              "/Library/PreferencePanes/USB Overdrive.prefPane",
-              "/Applications/Utilities/Uninstall USB Overdrive.app",
-            ]
+  depends_on macos: ">= :big_sur"
+
+  app "USB Overdrive.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.usboverdrive.app.plist",
+    "~/Library/Preferences/com.usboverdrive.settings.plist",
+  ]
 end
