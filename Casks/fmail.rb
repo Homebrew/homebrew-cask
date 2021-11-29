@@ -1,6 +1,6 @@
 cask "fmail" do
   version "2.4.5,93"
-  sha256 :no_check
+  sha256 :no_check  # required as upstream package is updated in place, including versioned sparkle url
 
   url "https://arievanboxel.fr/fmail/updates/fmail.dmg"
   name "FMail"
