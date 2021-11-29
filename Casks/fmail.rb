@@ -1,5 +1,5 @@
 cask "fmail" do
-  version "2.4.4,92"
+  version "2.4.5,93"
   sha256 :no_check
 
   url "https://arievanboxel.fr/fmail/updates/fmail.dmg"
