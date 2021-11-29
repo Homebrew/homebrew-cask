@@ -8,4 +8,11 @@ cask "datasette-desktop" do
   homepage "https://github.com/simonw/datasette-app"
 
   app "Datasette.app"
+
+  zap trash: [
+    '~/Library/Application Support/Datasette',
+    '~/Library/Caches/io.datasette.app.ShipIt',
+    '~/Library/Preferences/io.datasette.app.plist',
+    '~Library/Saved Application State/io.datasette.app.savedState'
+  ]
 end
