@@ -15,4 +15,10 @@ cask "protopie" do
   auto_updates true
 
   app "ProtoPie.app"
+
+  zap trash: [
+    "~/Library/Application Support/ProtoPie",
+    "~/Library/Preferences/io.protopie.plist",
+    "~/Library/Saved Application State/io.protopie.savedState",
+  ]
 end
