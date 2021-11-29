@@ -9,8 +9,7 @@ cask "power-manager" do
 
   livecheck do
     url "https://version.dssw.co.uk/powermanager/"
-    strategy :page_match
-    regex(/Changes\s*in\s*v(\d+(?:\.\d+)*)/i)
+    regex(/Changes\s*in\s*v(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
