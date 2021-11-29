@@ -4,7 +4,7 @@ cask "datasette-desktop" do
 
   url "https://github.com/simonw/datasette-app/releases/download/#{version}/Datasette-mac.app.zip"
   name "Datasette Desktop"
-  desc "A macOS desktop application that wraps Datasette"
+  desc "Desktop application that wraps Datasette"
   homepage "https://github.com/simonw/datasette-app"
 
   app "Datasette.app"
