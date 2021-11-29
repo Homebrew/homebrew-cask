@@ -14,4 +14,10 @@ cask "valkyrie" do
   end
 
   app "Valkyrie.app"
+
+  zap trash: [
+    "~/Library/Application Support/CrashReporter/Valkyrie_*.plist",
+    "~/Library/Preferences/unity.NA.Valkyrie.plist",
+    "~/Library/Saved Application State/unity.NA.Valkyrie.savedState",
+  ]
 end
