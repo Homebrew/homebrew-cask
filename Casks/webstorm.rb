@@ -1,16 +1,14 @@
 cask "webstorm" do
+  arch = Hardware::CPU.intel? ? "" : "-aarch64"
   version "2021.3,213.5744.224"
 
   if Hardware::CPU.intel?
     sha256 "60c857097e437400196054182741aeb42ae78a614a205c9dfb933e245d14abd4"
-
-    url "https://download.jetbrains.com/webstorm/WebStorm-#{version.before_comma}.dmg"
   else
     sha256 "8b21f3f4ee204356801b187c8b4f4a21a4185d7247c30815c032b74b7e4e3a2b"
-
-    url "https://download.jetbrains.com/webstorm/WebStorm-#{version.before_comma}-aarch64.dmg"
   end
 
+  url "https://download.jetbrains.com/webstorm/WebStorm-#{version.csv.first}#{arch}.dmg"
   name "WebStorm"
   desc "JavaScript IDE"
   homepage "https://www.jetbrains.com/webstorm/"
