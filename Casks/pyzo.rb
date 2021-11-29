@@ -5,6 +5,7 @@ cask "pyzo" do
   url "https://github.com/pyzo/pyzo/releases/download/v#{version}/pyzo-#{version}-macos.dmg",
       verified: "github.com/pyzo/pyzo/"
   name "Pyzo"
+  desc "Python IDE focused on interactivity and introspection"
   homepage "https://pyzo.org/"
 
   app "pyzo.app"
