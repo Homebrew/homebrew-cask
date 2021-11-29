@@ -13,6 +13,6 @@ cask "datasette-desktop" do
     '~/Library/Application Support/Datasette',
     '~/Library/Caches/io.datasette.app.ShipIt',
     '~/Library/Preferences/io.datasette.app.plist',
-    '~Library/Saved Application State/io.datasette.app.savedState'
+    '~/Library/Saved Application State/io.datasette.app.savedState'
   ]
 end
