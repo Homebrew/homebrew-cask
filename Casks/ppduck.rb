@@ -1,6 +1,6 @@
 cask "ppduck" do
-  version "3.10.12"
-  sha256 "0070ce4f6fba3b9258c542ca008bc75d9210ab7102817635384e67c939b57a16"
+  version "3.10.13"
+  sha256 "0332e5e628907a041202588ed56551246c08042b91a66dd4d6e6fafd55384640"
 
   url "https://download.ppduck.com/PPDuck#{version.major}_#{version}.dmg"
   name "PPDuck"
