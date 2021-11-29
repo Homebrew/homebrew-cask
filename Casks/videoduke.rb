@@ -4,7 +4,7 @@ cask "videoduke" do
 
   url "https://cdn.eltima.com/download/videoduke.dmg"
   name "VideoDuke"
-  desc "Video Downloader"
+  desc "Video downloader"
   homepage "https://mac.eltima.com/video-downloader.html"
 
   livecheck do
