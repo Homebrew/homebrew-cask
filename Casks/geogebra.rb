@@ -17,10 +17,7 @@ cask "geogebra" do
 
   app "GeoGebra Classic #{version.major}.app"
 
-  uninstall quit:       [
-    "com.apple.systemevents",
-    "org.geogebra.mathapps",
-  ],
+  uninstall quit:       "org.geogebra.mathapps",
             login_item: "GeoGebra",
             pkgutil:    "org.geogebra6.mac"
 
