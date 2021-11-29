@@ -16,4 +16,11 @@ cask "power-manager" do
   depends_on macos: ">= :sierra"
 
   app "Power Manager.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/uk.co.dssw.powermanager.standard",
+    "~/Library/Application Scripts/uk.co.dssw.powermanager.update.download",
+    "~/Library/Containers/uk.co.dssw.powermanager.standard",
+    "~/Library/Containers/uk.co.dssw.powermanager.update.download",
+  ]
 end
