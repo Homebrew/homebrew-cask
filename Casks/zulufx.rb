@@ -10,7 +10,7 @@ cask "zulufx" do
     sha256 "3412519566e589d25233468d10173daca6a25ec3cdb03e78bc8a3c58842d7e40"
   end
 
-  url "https://cdn.azul.com/zulu/bin/zulu#{version.after_comma}-fx-jdk#{version.before_comma}-macosx_#{arch}.dmg",
+  url "https://cdn.azul.com/zulu/bin/zulu#{version.csv.second}-fx-jdk#{version.csv.first}-macosx_#{arch}.dmg",
       referer: "https://www.azul.com/downloads/"
   name "ZuluFX"
   desc "Azul ZuluFX Java Standard Edition Development Kit"
