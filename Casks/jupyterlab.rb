@@ -1,6 +1,6 @@
 cask "jupyterlab" do
-  version "3.2.3-1"
-  sha256 "df789ac94275c879e81aa6ef162ad599a3d6084551e38b73ee223e3ff2d47271"
+  version "3.2.4-3"
+  sha256 "c1b95c42168bb73e10bc57db52fe51d83ed2783a4ca32dd372df0b4478b6108d"
 
   url "https://github.com/jupyterlab/jupyterlab-desktop/releases/download/v#{version}/JupyterLab-Setup-macOS.pkg"
   name "JupyterLab App"
