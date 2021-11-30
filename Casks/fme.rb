@@ -19,11 +19,11 @@ cask "fme" do
 
   pkg "fme-desktop-#{version.before_comma}-b#{version.after_comma}-macosx.pkg"
 
-  uninstall pkgutil:   [
+  uninstall pkgutil: [
     "com.safesoftware.pkg.engine.fme-desktop-2021.2-b21789-macosx",
     "com.safesoftware.pkg.apps.fme-desktop-2021.2-b21789-macosx",
   ],
-            delete: [
+            delete:  [
               "/Applications/FME #{version.major_minor}",
               "/Library/FME/#{version.major_minor}",
             ]
