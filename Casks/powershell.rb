@@ -35,7 +35,7 @@ cask "powershell" do
   caveats "If PowerShell is used as a login shell, an entry must be added to the " \
           "PowerShell profile file to use Homebrew. The easiest way to do this is to run " \
           "the following command once within a PowerShell session:" \
-          "" \
+          "\n\n" \
           "Add-Content -Path $PROFILE -Value '$(if (Test-Path -PathType Leaf " \
           "/opt/homebrew/bin/brew) {/opt/homebrew/bin/brew shellenv} elseif (Test-Path " \
           "-PathType Leaf /usr/local/bin/brew) {/usr/local/bin/brew shellenv}) | " \
