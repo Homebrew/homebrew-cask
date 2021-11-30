@@ -12,7 +12,7 @@ cask "geogebra" do
     strategy :header_match do |headers|
       v = headers["location"][%r{/GeoGebra-Classic-\d+-MacOS-Portable-(\d+(?:-\d+)+)\.zip}i, 1]
       next if v.blank?
-      
+
       v.tr("-", ".")
     end
   end
