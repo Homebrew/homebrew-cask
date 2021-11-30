@@ -11,6 +11,8 @@ cask "geogebra" do
     url "https://download.geogebra.org/package/mac-port"
     strategy :header_match do |headers|
       v = headers["location"][%r{/GeoGebra-Classic-\d+-MacOS-Portable-(\d+(?:-\d+)+)\.zip}i, 1]
+      next if v.blank?
+      
       v.tr("-", ".")
     end
   end
