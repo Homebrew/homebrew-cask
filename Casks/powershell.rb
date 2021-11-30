@@ -37,5 +37,4 @@ cask "powershell" do
           "the following command once within a PowerShell session:" \
           "" \
           "Add-Content -Path $PROFILE -Value '$(if (Test-Path -PathType Leaf /opt/homebrew/bin/brew) {/opt/homebrew/bin/brew shellenv} elseif (Test-Path -PathType Leaf /usr/local/bin/brew) {/usr/local/bin/brew shellenv}) | Invoke-Expression -ErrorAction SilentlyContinue'"
-
 end
