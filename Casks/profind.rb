@@ -15,4 +15,12 @@ cask "profind" do
   depends_on macos: ">= :high_sierra"
 
   app "ProFind.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.zeroonetwenty.ProFind",
+    "~/Library/Application Support/com.zeroonetwenty.ProFind",
+    "~/Library/Caches/com.zeroonetwenty.ProFind",
+    "~/Library/Preferences/com.zeroonetwenty.ProFind.plist",
+    "~/Library/Saved Application State/com.zeroonetwenty.ProFind.savedState",
+  ]
 end
