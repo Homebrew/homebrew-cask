@@ -8,7 +8,7 @@ cask "mana-security" do
   homepage "https://www.manasecurity.com/"
 
   livecheck do
-    url "https://download.manasecurity.com/"
+    url :url
     strategy :header_match
   end
 
@@ -19,7 +19,7 @@ cask "mana-security" do
   uninstall login_item: "Mana Security"
 
   zap trash: [
-    "~/Library/Application Support/Mana Security/",
+    "~/Library/Application Support/Mana Security",
     "~/Library/Caches/com.manasecurity*",
     "~/Library/Logs/Mana Security",
     "~/Library/Preferences/com.manasecurity*",
