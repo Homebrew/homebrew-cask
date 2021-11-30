@@ -11,7 +11,7 @@ cask "gimp" do
   livecheck do
     url "https://www.gimp.org/downloads/"
     strategy :page_match
-    regex(%r{href=.*?/gimp-(\d+(?:\.\d+)*)-x86_64\.dmg}i)
+    regex(%r{href=.*?/gimp-(\d+(?:\.\d+)+)-x86_64\.dmg}i)
   end
 
   app "GIMP-#{version.major_minor}.app"
@@ -22,8 +22,8 @@ cask "gimp" do
   end
 
   zap trash: [
-    "~/Library/Preferences/org.gimp.gimp-#{version.major_minor}:.plist",
     "~/Library/Application Support/Gimp",
+    "~/Library/Preferences/org.gimp.gimp-#{version.major_minor}:.plist",
     "~/Library/Saved Application State/org.gimp.gimp-#{version.major_minor}:.savedState",
   ]
 end
