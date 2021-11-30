@@ -10,7 +10,7 @@ cask "fme" do
   livecheck do
     url "https://www.safe.com/api/downloads/"
     strategy :page_match do |page|
-      match = page.match(%r{/fme-desktop-(\d+(?:\.\d+)*)-b(\d+)-macosx\.pkg}i)
+      match = page.match(%r{/fme-desktop-(\d+(?:\.\d+)+)-b(\d+)-macosx\.pkg}i)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
