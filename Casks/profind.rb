@@ -4,6 +4,7 @@ cask "profind" do
 
   url "https://www.zeroonetwenty.com/profind/downloads/ProFind#{version.csv.first.no_dots}.dmg"
   name "ProFind"
+  desc "File search app"
   homepage "https://www.zeroonetwenty.com/profind/"
 
   livecheck do
