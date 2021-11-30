@@ -5,8 +5,13 @@ cask "appflowy" do
   url "https://github.com/AppFlowy-IO/appflowy/releases/download/#{version}/AppFlowy-MacOS.zip",
       verified: "github.com/AppFlowy-IO/appflowy/"
   name "appflowy"
-  desc "Open-source alternative to Notion"
+  desc "Open-source project and knowledge management tool"
   homepage "https://www.appflowy.io/"
 
   app "AppFlowy.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.appflowy.macos",
+    "~/Library/Containers/com.appflowy.macos",
+  ]
 end
