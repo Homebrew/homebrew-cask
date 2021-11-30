@@ -2,7 +2,7 @@ cask "fmail" do
   version "2.4.5,93"
   sha256 "9043e30ffe364836ca40ab913ceb46730aa2c3bca152e9146d8564d6298978f6"
 
-  url "https://arievanboxel.fr/fmail/sparkle/FMail_245.zip"
+  url "https://arievanboxel.fr/fmail/sparkle/FMail_#{version.csv.first.no_dots}.zip"
   name "FMail"
   desc "Unofficial native application for Fastmail"
   homepage "https://arievanboxel.fr/fmail/en/"
