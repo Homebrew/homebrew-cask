@@ -1,9 +1,8 @@
 cask "malus" do
-  version "1.9.6"
-  sha256 "5318b05bfead4b3bd08b25772af4c265d850bbd0af7ce2f57e7bb49421980ebe"
+  version "3.0.0"
+  sha256 "8cae0a7abdbf207741d21f7a9937fe87dfc9a1798c9c29c34098eacef8358eda"
 
-  url "https://malus.s3cdn.net/uploads/Malus-mac_#{version.no_dots}.dmg",
-      verified: "malus.s3cdn.net/"
+  url "https://download.getmalus.com/uploads/malus-mac-#{version.dots_to_underscores}.dmg"
   name "Malus"
   desc "Proxy to help accessing various online media resources/services"
   homepage "https://getmalus.com/"
