@@ -5,17 +5,17 @@ cask "mockoon" do
   url "https://github.com/mockoon/mockoon/releases/download/v#{version}/mockoon.setup.#{version}.dmg",
       verified: "github.com/mockoon/mockoon/"
   name "Mockoon"
-  desc "Easily create mock APIs locally."
+  desc "Create mock APIs locally"
   homepage "https://mockoon.com/"
 
   auto_updates true
 
   app "Mockoon.app"
-  
+
   zap trash: [
     "~/Library/Application Support/mockoon",
     "~/Library/Logs/Mockoon",
     "~/Library/Preferences/com.mockoon.app.plist",
-    "~/Library/Saved Application State/com.mockoon.app.savedState"
+    "~/Library/Saved Application State/com.mockoon.app.savedState",
   ]
 end
