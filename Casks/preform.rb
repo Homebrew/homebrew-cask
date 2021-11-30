@@ -21,4 +21,9 @@ cask "preform" do
   depends_on macos: ">= :high_sierra"
 
   app "PreForm.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.formlabs.PreForm.plist",
+    "~/Library/Saved Application State/com.formlabs.PreForm.savedState",
+  ]
 end
