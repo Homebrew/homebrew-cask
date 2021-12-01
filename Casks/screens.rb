@@ -25,6 +25,7 @@ cask "screens" do
     "~/Library/Application Scripts/com.edovia.screens.launcher",
     "~/Library/Containers/com.edovia.screens#{version.major}.mac",
     "~/Library/Containers/com.edovia.screens.launcher",
+    "~/Library/Preferences/com.edovia.screens#{version.major}.mac.plist",
     "~/Library/Logs/Screens",
   ]
 end
