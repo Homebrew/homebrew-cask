@@ -8,12 +8,7 @@ cask "retrace" do
     homepage "https://github.com/Staffbase/retrace/"
   
     depends_on macos: ">= :sierra"
-
-    livecheck do
-        url :url
-        strategy :github_latest
-    end
-  
+    
     app "RE-Trace.app"
   
     zap trash: "~/Library/Application Support/RE-Trace"
