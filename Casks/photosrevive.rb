@@ -11,10 +11,10 @@ cask "photosrevive" do
   livecheck do
     url "https://neededapps.com/appcasts/photosrevive/changelog.xml"
     strategy :sparkle do |item|
-      match = item.url.match(%r{/([\h-]+)\.zip}i)
-      next if match.blank?
+      hex = item.url[%r{/([\h-]+)\.zip}i, 1]
+      next if hex.blank?
 
-      "#{item.short_version},#{match[1]}"
+      "#{item.short_version},#{hex}"
     end
   end
 
