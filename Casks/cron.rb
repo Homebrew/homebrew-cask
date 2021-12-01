@@ -15,10 +15,8 @@ cask "cron" do
 
   livecheck do
     url :url
-    regex(/Cron (\d+(?:\.\d+)+)-[a-z1-9]+\.dmg/i)
     strategy :header_match do |headers|
-      version = headers["content-disposition"].match(regex)[1]
-      version
+      headers["content-disposition"][/Cron (\d+(?:\.\d+)+)-[a-z1-9]+\.dmg/i, 1]
     end
   end
 
