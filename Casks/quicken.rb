@@ -17,7 +17,7 @@ cask "quicken" do
   app "Quicken.app"
 
   zap trash: [
-    "~/Library/Preferences/com.quicken.Quicken.plist",
     "~/Library/Application Support/Quicken",
+    "~/Library/Preferences/com.quicken.Quicken.plist",
   ]
 end
