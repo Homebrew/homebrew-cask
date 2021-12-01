@@ -13,4 +13,3 @@ cask "retrace" do
   
     zap trash: "~/Library/Application Support/RE-Trace"
   end
-  
