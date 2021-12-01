@@ -13,4 +13,11 @@ cask "pretzel" do
   end
 
   app "Pretzel.app"
+
+  zap trash: [
+    "~/Library/Application Support/@pretzel-aux",
+    "~/Library/Logs/Pretzel",
+    "~/Library/Preferences/rocks.pretzel.plist",
+    "~/Library/Saved Application State/rocks.pretzel.savedState",
+  ]
 end
