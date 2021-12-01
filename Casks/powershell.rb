@@ -29,7 +29,7 @@ cask "powershell" do
 
   zap trash: [
     "~/.cache/powershell",
-    "~/.config/PowerShell",
+    "~/.config/powershell",
     "~/.local/share/powershell",
   ]
 end
