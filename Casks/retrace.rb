@@ -1,0 +1,21 @@
+cask "retrace" do
+    version "1.0.1-beta.0"
+    sha256 "28db7777ae1b63b875eb7d6ceeed2a677cbcff55960375c0af22ea5e044e42ad"
+
+    url "https://github.com/Staffbase/retrace/releases/download/v#{version}/RE-Trace-#{version}.dmg"
+    name "RE-Trace"
+    desc "RE-Trace is a micro-journaling app, designed to be as minimal and the least distracting as possible."
+    homepage "https://github.com/Staffbase/retrace/"
+  
+    depends_on macos: ">= :sierra"
+
+    livecheck do
+        url :url
+        strategy :github_latest
+    end
+  
+    app "RE-Trace.app"
+  
+    zap trash: "~/Library/Application Support/RE-Trace"
+  end
+  
