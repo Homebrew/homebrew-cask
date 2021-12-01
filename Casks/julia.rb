@@ -1,6 +1,5 @@
 cask "julia" do
-  arch = Hardware::CPU.intel? ? "mac64" : "macaarch64"
-  arch_folder = Hardware::CPU.intel? ? "x64" : "aarch64"
+  arch, arch_folder = Hardware::CPU.intel? ? ["mac64", "x64"] : ["macaarch64", "aarch64"]
 
   version "1.7.0"
 
