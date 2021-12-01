@@ -9,21 +9,22 @@ cask "cron" do
     sha256 "3d5c156e5762b1c0a86691f87bd07d9aec3e5ad632ceb9c26f816ae73188f127"
   end
 
+  name "cron"
+  desc "Next-generation calendar for professionals and teams"
+  homepage "https://cron.com/"
+
   livecheck do
     url :url
     regex(/Cron (\d+(?:\.\d+)+)-[a-z1-9]+\.dmg/i)
     strategy :header_match do |headers|
-      match = headers["content-disposition"].match(regex)[1]
+      version = headers["content-disposition"].match(regex)[1]
+      version
     end
   end
-
-  name "cron"
-  desc "Next-generation calendar for professionals and teams"
-  homepage "https://cron.com"
 
   app "Cron.app"
 
   zap trash: [
-    "~/Library/Application Support/Cron"
+    "~/Library/Application Support/Cron",
   ]
 end
