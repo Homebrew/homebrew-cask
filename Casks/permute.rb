@@ -2,7 +2,7 @@ cask "permute" do
   version "3.7.7,2537"
   sha256 "9ee249d81e8ce5b3d6fed2910dba607074f212da335087bc264b2af9fd2d1bd9"
 
-  url "https://trial.charliemonroe.net/permute/v#{version.major}/Permute_#{version.major}_#{version.after_comma}.dmg"
+  url "https://trial.charliemonroe.net/permute/v#{version.major}/Permute_#{version.major}_#{version.csv.second}.dmg"
   name "Permute"
   desc "Converts and edits video, audio or image files"
   homepage "https://software.charliemonroe.net/permute.php"
