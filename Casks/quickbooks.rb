@@ -10,6 +10,8 @@ cask "quickbooks" do
     url "https://http-download.intuit.com/http.intuit/Downloads/Mac/QuickBooks/020/66E6085F-B670-45F7-88DB-D19C9CBD5855/app/appcast.xml"
     strategy :sparkle do |item|
       year = item.url[%r{/QuickBooks_(\d+)\.tgz}i, 1]
+      next if year.blank?
+
       "#{item.short_version},#{year}"
     end
   end
