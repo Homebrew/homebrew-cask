@@ -4,6 +4,7 @@ cask "pretzel" do
 
   url "https://download.pretzel.rocks/Pretzel-#{version}-mac.zip"
   name "Pretzel"
+  desc "DMCA-safe music for creators"
   homepage "https://www.pretzel.rocks/"
 
   livecheck do
