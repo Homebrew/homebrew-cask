@@ -1,6 +1,6 @@
 cask "softmaker-freeoffice" do
   version "2021"
-  sha256 "f864428886d227a9ca781eb26a7f3c6cb3d70c4ff19769e69b10a21cd0a44c3f"
+  sha256 "721c5bc20eb343f87f5c373e61cb4a20f619fe1a98d61b921d75f7da8bcac593"
 
   url "https://www.softmaker.net/down/softmaker-freeoffice-#{version}.pkg",
       verified: "softmaker.net/"
