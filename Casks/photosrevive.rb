@@ -18,6 +18,8 @@ cask "photosrevive" do
     end
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "PhotosRevive.app"
 
   zap trash: [
