@@ -4,7 +4,7 @@ cask "retrace" do
 
     url "https://github.com/Staffbase/retrace/releases/download/v#{version}/RE-Trace-#{version}.dmg"
     name "RE-Trace"
-    desc "RE-Trace is a micro-journaling app, designed to be as minimal and the least distracting as possible."
+    desc "Micro-journaling app"
     homepage "https://github.com/Staffbase/retrace/"
   
     depends_on macos: ">= :sierra"
