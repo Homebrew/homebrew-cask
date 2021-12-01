@@ -17,4 +17,13 @@ cask "quip" do
   depends_on macos: ">= :high_sierra"
 
   app "Quip.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.quip.Desktop.Quick-Look-Preview",
+    "~/Library/Application Support/com.quip.Desktop",
+    "~/Library/Caches/com.quip.Desktop",
+    "~/Library/Containers/com.quip.Desktop.Quick-Look-Preview",
+    "~/Library/Preferences/com.quip.Desktop.plist",
+    "~/Library/WebKit/com.quip.Desktop",
+  ]
 end
