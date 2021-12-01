@@ -1,8 +1,8 @@
 cask "quicken" do
-  version "6.4.2,604.41752.100"
-  sha256 "982f46814372e8a6b2960ca9079ee7b404243d01c74a65bea24bdd6867868b53"
+  version "6.4.4,604.41834.100"
+  sha256 "10cc878dcd2d27c493025a0c02458d57622e17b2dae5b529c1d28384a7ebf5b8"
 
-  url "https://download.quicken.com/mac/Quicken/001/Release/031A96D9-EFE6-4520-8B6A-7F465DDAA3E4/Quicken-#{version.after_comma}/Quicken-#{version.after_comma}.zip"
+  url "https://download.quicken.com/mac/Quicken/001/Release/031A96D9-EFE6-4520-8B6A-7F465DDAA3E4/Quicken-#{version.csv.second}/Quicken-#{version.csv.second}.zip"
   name "Quicken"
   desc "Personal finance mananger"
   homepage "https://www.quicken.com/mac"
