@@ -10,7 +10,12 @@ cask "photosrevive" do
 
   livecheck do
     url "https://neededapps.com/appcasts/photosrevive/changelog.xml"
-    strategy :sparkle
+    strategy :sparkle do |item|
+      match = item.url.match(%r{/([\h-]+)\.zip}i)
+      next if match.blank?
+
+      "#{item.short_version},#{match[1]}"
+    end
   end
 
   app "PhotosRevive.app"
