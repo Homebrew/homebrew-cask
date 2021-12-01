@@ -3,6 +3,7 @@ description: If you’re sure it’s reproducible and not just your machine, sub
 body:
   - type: checkboxes
     attributes:
+      label: Verification
       description: Please verify that you’ve followed these steps
       options:
         - label: I understand that [if I ignore these instructions, my issue may be closed without review](https://github.com/Homebrew/homebrew-cask/blob/master/doc/faq/closing_issues_without_review.md).
