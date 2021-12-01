@@ -1,6 +1,6 @@
 cask "julia" do
-  version "1.6.4"
-  sha256 "a00598f04832b8f5d28039942280feadf40e8a14d7f6264c754ec70627507ace"
+  version "1.7.0"
+  sha256 "9a7919448e13ba9cefb0f0fe8178ca089333c86e2722f1e482a1dc8c0e2f03b6"
 
   url "https://julialang-s3.julialang.org/bin/mac/x64/#{version.major_minor}/julia-#{version}-mac64.dmg"
   name "Julia"
