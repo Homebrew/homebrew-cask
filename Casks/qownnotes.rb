@@ -17,4 +17,9 @@ cask "qownnotes" do
   depends_on macos: ">= :sierra"
 
   app "QOwnNotes.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.pbe.QOwnNotes.plist",
+    "~/Library/Saved Application State/com.PBE.QOwnNotes.savedState",
+  ]
 end
