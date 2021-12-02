@@ -9,7 +9,7 @@ cask "lens" do
     sha256 "4aea465676090c53d3204379b6ce2800b864b0d90d05937139be3ae0b3468eb7"
   end
 
-  url "https://api.k8slens.dev/binaries/Lens-#{version.before_comma}-latest.#{version.after_comma}#{arch}.dmg"
+  url "https://api.k8slens.dev/binaries/Lens-#{version.csv.first}-latest.#{version.csv.second}#{arch}.dmg"
   name "Lens"
   desc "Kubernetes IDE"
   homepage "https://k8slens.dev/"
