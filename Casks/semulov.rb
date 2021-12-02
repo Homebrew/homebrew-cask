@@ -7,5 +7,10 @@ cask "semulov" do
   desc "Access mounted and unmounted volumes from the menubar"
   homepage "https://github.com/kainjow/Semulov"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Semulov.app"
 end
