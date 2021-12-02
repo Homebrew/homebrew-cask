@@ -1,8 +1,8 @@
 cask "local" do
-  version "6.1.7,5610"
-  sha256 "92d02f127eed0c6790d49cc098fd31e7e08dd1a7da90ab6b1b4217c7a2d62ae0"
+  version "6.1.8,5621"
+  sha256 "6ecdf21384970b86ac059370795ac2345fe3a888cde80268c962a299115ca92a"
 
-  url "https://cdn.localwp.com/releases-stable/#{version.before_comma}+#{version.after_comma}/local-#{version.before_comma}-mac.dmg"
+  url "https://cdn.localwp.com/releases-stable/#{version.csv.first}+#{version.csv.second}/local-#{version.csv.first}-mac.dmg"
   name "Local"
   desc "WordPress local development tool by Flywheel"
   homepage "https://localwp.com/"
