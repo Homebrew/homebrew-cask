@@ -1,8 +1,8 @@
 cask "reveal" do
-  version "31,15014"
-  sha256 "f86e79ab705ea7a1087cb66a2fb8621d9849655db4fdc43a1457f02144d96663"
+  version "32,15614"
+  sha256 "efa2029000c6ea78d0284416dfbc92c9ad6e5a56703b213a23e3d96353586828"
 
-  url "https://download.revealapp.com/Reveal.app-#{version.before_comma}.zip"
+  url "https://download.revealapp.com/Reveal.app-#{version.csv.first}.zip"
   name "Reveal"
   desc "Powerful runtime view debugging for iOS developers"
   homepage "https://revealapp.com/"
