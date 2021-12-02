@@ -80,10 +80,10 @@ cask "docker" do
     "~/Library/Group Containers/group.com.docker",
     "~/Library/HTTPStorages/com.docker.docker.binarycookies",
     "~/Library/Preferences/com.docker.docker.plist",
-    "~/Library/Preferences/com.electron.dockerdesktop.plist",
     "~/Library/Preferences/com.electron.docker-frontend.plist",
-    "~/Library/Saved Application State/com.electron.dockerdesktop.savedState",
+    "~/Library/Preferences/com.electron.dockerdesktop.plist",
     "~/Library/Saved Application State/com.electron.docker-frontend.savedState",
+    "~/Library/Saved Application State/com.electron.dockerdesktop.savedState",
     "~/Library/Logs/Docker Desktop",
   ],
       rmdir: [
