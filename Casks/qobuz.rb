@@ -1,8 +1,8 @@
 cask "qobuz" do
-  version "6.0.3,025"
-  sha256 "f4dcbb4ef34372ff7435837d57e963e066a05cdb5e13b90a578f3e2d4356c2fc"
+  version "6.0.4,017"
+  sha256 "5038d4c2581ce4921b2ca64371108a5027547a176ed3aa1f5de249acee530262"
 
-  url "https://desktop.qobuz.com/releases/darwin/x64/elCapitan_sierra/#{version.before_comma}-b#{version.after_comma}/Qobuz.dmg"
+  url "https://desktop.qobuz.com/releases/darwin/x64/elCapitan_sierra/#{version.csv.first}-b#{version.csv.second}/Qobuz.dmg"
   name "Qobuz"
   desc "Catalogue of hi-res music for streaming and download"
   homepage "https://www.qobuz.com/applications"
