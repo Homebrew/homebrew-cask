@@ -4,6 +4,7 @@ cask "quickbooks" do
 
   url "https://http-download.intuit.com/http.intuit/Downloads/#{version.csv.second}/Latest/QuickBooksMac#{version.csv.second}.dmg"
   name "QuickBooks Desktop"
+  desc "Accounting software"
   homepage "https://quickbooks.intuit.com/desktop/mac/"
 
   livecheck do
