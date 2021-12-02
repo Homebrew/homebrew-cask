@@ -4,7 +4,7 @@ cask "quicken" do
 
   url "https://download.quicken.com/mac/Quicken/001/Release/031A96D9-EFE6-4520-8B6A-7F465DDAA3E4/Quicken-#{version.csv.second}/Quicken-#{version.csv.second}.zip"
   name "Quicken"
-  desc "Personal finance mananger"
+  desc "Personal finance manager"
   homepage "https://www.quicken.com/mac"
 
   livecheck do
