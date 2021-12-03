@@ -9,7 +9,7 @@ cask "appcode" do
     sha256 "d6abb0b0e73dc0be5aaf6eeb97f61e32dd9c0e1e864c650d980466b065e29769"
   end
 
-  url "https://download.jetbrains.com/objc/AppCode-#{version.before_comma}#{arch}.dmg"
+  url "https://download.jetbrains.com/objc/AppCode-#{version.csv.first}#{arch}.dmg"
   name "AppCode"
   desc "IDE for Swift, Objective-C, C, and C++ development"
   homepage "https://www.jetbrains.com/objc/"
