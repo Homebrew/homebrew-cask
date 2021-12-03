@@ -1,7 +1,7 @@
 cask "intellij-idea-ce" do
   arch = Hardware::CPU.intel? ? "" : "-aarch64"
 
-  version "2021.3"
+  version "2021.3,213.5744.223"
 
   url "https://download.jetbrains.com/idea/ideaIC-#{version.before_comma}#{arch}.dmg"
   if Hardware::CPU.intel?
