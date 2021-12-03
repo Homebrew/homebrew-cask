@@ -11,7 +11,7 @@ cask "robofont" do
   livecheck do
     url "https://doc.robofont.com/appcast.xml"
     strategy :page_match do |page|
-      match = page.match(/Version\s(\d+(?:\.\d+)*)\s\(build\s(\d+(?:\.\d+)*)\)/i)
+      match = page.match(/Version\s(\d+(?:\.\d+)+)\s\(build\s(\d+(?:\.\d+)*)\)/i)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
