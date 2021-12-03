@@ -2,7 +2,7 @@ cask "fantastical" do
   version "3.5.1,1360"
   sha256 "62352e293315984f4794bc754a283935e76a11dc2b78d8772e1cb0fb0406b56a"
 
-  url "https://cdn.flexibits.com/Fantastical_#{version.before_comma}.zip"
+  url "https://cdn.flexibits.com/Fantastical_#{version.csv.first}.zip"
   name "Fantastical"
   desc "Calendar software"
   homepage "https://flexibits.com/fantastical"
