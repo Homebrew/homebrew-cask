@@ -5,6 +5,7 @@ cask "robofont" do
   url "https://static.typemytype.com/robofont/RoboFont.dmg",
       verified: "static.typemytype.com/robofont/"
   name "RoboFont"
+  desc "Font editor"
   homepage "https://robofont.com/"
 
   livecheck do
