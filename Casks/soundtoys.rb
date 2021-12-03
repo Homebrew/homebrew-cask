@@ -1,15 +1,18 @@
 cask "soundtoys" do
-  version "5.3.6,16152"
+  version "5.3.6.16152"
   sha256 "859676347419937c6d77c2eb47dca2b262574db056138b7028e2e3792080bb27"
 
-  url "https://storage.googleapis.com/soundtoys-download/versions/version_#{version.major}_#{version.minor}_#{version.patch}_#{version.after_comma}/Soundtoys#{version.major}_#{version.major}.#{version.minor}.#{version.patch}.#{version.after_comma}.dmg",
+  url "https://storage.googleapis.com/soundtoys-download/versions/version_#{version.dots_to_underscores}/Soundtoys#{version.major}_#{version}.dmg",
       verified: "https://storage.googleapis.com/soundtoys-download/"
-  name "Soundtoys #{version.major}"
+  name "Soundtoys"
   desc "Audio Effects Plugins"
-  homepage "https://www.soundtoys.com/product/soundtoys-#{version.major}/"
+  homepage "https://www.soundtoys.com/product/soundtoys/"
 
   livecheck do
-    skip "No version information available"
+    url "https://storage.googleapis.com/soundtoys-download/download.json"
+    strategy :page_match do |page|
+      JSON.parse(page)["Soundtoys5_Mac"]["fullversion"]
+    end
   end
 
   auto_updates false
