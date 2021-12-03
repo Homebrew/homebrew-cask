@@ -23,6 +23,7 @@ cask "cleanshot" do
     "~/Library/Application Support/CleanShot",
     "~/Library/Caches/pl.maketheweb.cleanshotx",
     "~/Library/Caches/SentryCrash/CleanShot X",
+    "~/Library/Preferences/com.getcleanshot.app.plist",
     "~/Library/Preferences/pl.maketheweb.cleanshotx.plist",
   ]
 end
