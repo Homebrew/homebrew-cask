@@ -2,7 +2,8 @@ cask "steam" do
   version "4.0"
   sha256 :no_check
 
-  url "https://cdn.cloudflare.steamstatic.com/client/installer/steam.dmg"
+  url "https://cdn.cloudflare.steamstatic.com/client/installer/steam.dmg",
+      verified: "cdn.cloudflare.steamstatic.com/"
   name "Steam"
   desc "Video game digital distribution service"
   homepage "https://store.steampowered.com/about/"
