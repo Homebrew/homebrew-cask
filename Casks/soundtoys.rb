@@ -15,5 +15,5 @@ cask "soundtoys" do
   pkg "Install Soundtoys #{version.major}.pkg"
 
   uninstall pkgutil:   ["com.soundtoys.*", "com.paceap.pkg.eden.*"],
-            launchctl: ["com.paceap.eden.*"]
+            launchctl: ["com.paceap.eden.licensed", "com.paceap.eden.licensed.agent"]
 end
