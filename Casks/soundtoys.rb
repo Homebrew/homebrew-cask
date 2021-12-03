@@ -15,7 +15,6 @@ cask "soundtoys" do
     end
   end
 
-  auto_updates false
   depends_on cask: "ilok-license-manager"
 
   pkg "Install Soundtoys #{version.major}.pkg"
