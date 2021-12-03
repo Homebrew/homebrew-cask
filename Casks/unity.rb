@@ -1,6 +1,6 @@
 cask "unity" do
-  version "2021.2.4f1,99ba6aa4c552"
-  sha256 "255f5f92447ae02b36f7d3194574056d2985075ce32e92af61ce7acda0612ed5"
+  version "2021.2.5f1,4ec9a5e799f5"
+  sha256 "584c59fac757546a13cc24a80894a5fa206295ae7ba00c5cc9864848d3e43de1"
 
   url "https://download.unity3d.com/download_unity/#{version.csv.second}/MacEditorInstaller/Unity-#{version.csv.first}.pkg",
       verified: "download.unity3d.com/download_unity/"
@@ -17,7 +17,7 @@ cask "unity" do
     end
   end
 
-  pkg "Unity-#{version.before_comma}.pkg"
+  pkg "Unity-#{version.csv.first}.pkg"
 
   uninstall quit:    "com.unity3d.UnityEditor5.x",
             pkgutil: "com.unity3d.UnityEditor5.x",
