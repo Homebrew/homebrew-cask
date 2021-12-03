@@ -19,4 +19,10 @@ cask "robofont" do
   end
 
   app "RoboFont.app"
+
+  zap trash: [
+    "~/Library/Application Support/RoboFont",
+    "~/Library/Preferences/com.typemytype.robofont#{version.major}.plist",
+    "~/Library/Saved Application State/com.typemytype.robofont#{version.major}.savedState",
+  ]
 end
