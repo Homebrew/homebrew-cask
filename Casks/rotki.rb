@@ -9,4 +9,10 @@ cask "rotki" do
   homepage "https://rotki.com/"
 
   app "rotki.app"
+
+  zap trash: [
+    "~/Library/Application Support/rotki",
+    "~/Library/Preferences/com.rotki.app.plist",
+    "~/Library/Saved Application State/com.rotki.app.savedState",
+  ]
 end
