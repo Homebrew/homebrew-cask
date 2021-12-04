@@ -17,6 +17,8 @@ cask "local" do
     end
   end
 
+  auto_updates true
+
   app "Local.app"
 
   zap trash: [
