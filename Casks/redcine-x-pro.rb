@@ -1,8 +1,8 @@
 cask "redcine-x-pro" do
-  version "53.0,51001"
-  sha256 "d44cbc953f536bd82a33e1434b2521f3cce8ce22c2c4abb33bf29404e39c0c38"
+  version "54.0,51463"
+  sha256 "12164f4ce2a40b22c071779a24413eecedde51f2b6fadd71ffaa421f366aba59"
 
-  url "https://downloads.red.com/software/rcx/mac/release/#{version.major}.#{version.after_comma}/REDCINE-X_PRO_Build_#{version.before_comma}.pkg"
+  url "https://downloads.red.com/software/rcx/mac/release/#{version.major}.#{version.csv.second}/REDCINE-X_PRO_Build_#{version.csv.first}.pkg"
   name "REDCINE-X PRO"
   desc "Transcode and manipulate REDCODE RAW footage"
   homepage "https://www.red.com/"
