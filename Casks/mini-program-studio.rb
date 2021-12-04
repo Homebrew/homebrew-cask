@@ -1,8 +1,8 @@
 cask "mini-program-studio" do
-  version "2.5.3,eff9a8c7-aead-4196-b9df-4559129a9709"
-  sha256 "7580275142cb1195cc8d764e3bff9ce694d82f5b2649010b11bb0a58724f35d0"
+  version "2.7.2,1073c5f0-0f2c-43f1-b3cb-6b701612b514"
+  sha256 "148a47881366a129971cd55e0abbae1900b900579aa04544efecf8e47957477c"
 
-  url "https://gw.alipayobjects.com/os/volans-demo/#{version.after_comma}/MiniProgramStudio-#{version.before_comma}.dmg",
+  url "https://gw.alipayobjects.com/os/volans-demo/#{version.csv.second}/MiniProgramStudio-#{version.csv.first}.dmg",
       verified: "gw.alipayobjects.com/"
   name "Mini Program Studio"
   name "小程序开发者工具"
