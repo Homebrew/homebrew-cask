@@ -1,6 +1,6 @@
 cask "nosleep" do
-  version "1.5.1"
-  sha256 "2dd5293c41a16a35deeaf903cc9f10092721b8869b69ef263231a73a4202cb5a"
+  version "1.5.2"
+  sha256 "582893f1d457399cebf50efaaa76fdffca6e20a2e6f95635053576ecf94749c7"
 
   url "https://github.com/integralpro/nosleep/releases/download/#{version}/NoSleep-#{version}.dmg",
       verified: "github.com/integralpro/nosleep/"
