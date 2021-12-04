@@ -8,7 +8,7 @@ cask "fastscripts" do
   homepage "https://redsweater.com/fastscripts/"
 
   livecheck do
-    url "https://redsweater.com/fastscripts/appcast2.php"
+    url "https://redsweater.com/fastscripts/appcast3.php"
     strategy :sparkle
   end
 
