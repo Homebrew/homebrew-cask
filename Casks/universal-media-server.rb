@@ -12,8 +12,5 @@ cask "universal-media-server" do
 
   app "Universal Media Server.app"
 
-  zap trash: [
-    "~/Library/Application Support/UMS",
-    "~/Library/Saved Application State/net.pms.PMS.savedState",
-  ]
+  zap trash: "~/Library/Application Support/UMS"
 end
