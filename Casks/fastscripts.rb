@@ -1,6 +1,6 @@
 cask "fastscripts" do
-  version "2.8.3,985"
-  sha256 "0e942f689e2965613c8702abe214496084c5e94147bd87c9963fb392161e9d32"
+  version "3.0.2,1524"
+  sha256 "fed63c476458b6a12e202ce480016912fdd55dac575f979df684d69c1bfc13a8"
 
   url "https://redsweater.com/fastscripts/FastScripts#{version.before_comma}.zip"
   name "FastScripts"
@@ -8,7 +8,7 @@ cask "fastscripts" do
   homepage "https://redsweater.com/fastscripts/"
 
   livecheck do
-    url "https://redsweater.com/fastscripts/appcast2.php"
+    url "https://redsweater.com/fastscripts/appcast3.php"
     strategy :sparkle
   end
 
