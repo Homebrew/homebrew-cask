@@ -1,6 +1,6 @@
 cask "gluemotion" do
-  version "2.0.2,fee459b0-05dd-46e6-a9c2-d2c397c298fd"
-  sha256 "b801e9fde09f34e76491621fa494fc7e85a689751ab9e7dfb144c54997c4f4ea"
+  version "2.0.2,4e1c690b-af5e-4bf3-bdeb-ca6f8cebbc66"
+  sha256 "6a80e14f6fbeb69d18fa8226c45e7d756174660d68956ad7c82c478ba4fcd6c9"
 
   url "https://neededapps.nyc3.digitaloceanspaces.com/media/public/#{version.csv.second}.zip",
       verified: "neededapps.nyc3.digitaloceanspaces.com"
@@ -10,7 +10,12 @@ cask "gluemotion" do
 
   livecheck do
     url "https://neededapps.com/appcasts/gluemotion/changelog.xml"
-    strategy :sparkle
+    strategy :sparkle do |item|
+      hex = item.url[%r{/([\h-]+)\.zip}i, 1]
+      next if hex.blank?
+
+      "#{item.short_version},#{hex}"
+    end
   end
 
   app "GlueMotion.app"
