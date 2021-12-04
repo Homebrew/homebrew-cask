@@ -1,5 +1,5 @@
 cask "maxon" do
-  version "2.0.0"
+  version "2.0.1.5"
   sha256 "b45c6c593c942c99c5f1554cb9f6bf9efef7741773d4b2d17a6832135b4c45d1"
 
   url "https://installer.maxon.net/installer/RG_installers/Maxon_App_#{version.major_minor}_Mac.dmg"
