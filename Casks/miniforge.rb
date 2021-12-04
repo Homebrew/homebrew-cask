@@ -1,13 +1,13 @@
 cask "miniforge" do
   arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
 
-  version "4.10.3-9"
+  version "4.10.3-10"
 
   url "https://github.com/conda-forge/miniforge/releases/download/#{version}/Miniforge3-#{version}-MacOSX-#{arch}.sh"
   if Hardware::CPU.intel?
-    sha256 "86ba79bba787ea943d11810b8f7b393a3ce5d421cd31528436c3ffa17eb062ed"
+    sha256 "7d325a5370664ec2fe1c09c3066c22fd905431f338c7eed31ad7e14c7ce4bd83"
   else
-    sha256 "68196959ddc966046935ab80fb0fda73675914e55e96764e0358f7eb4a4e7714"
+    sha256 "bd4d59ead779a6e2d9af69fd8cdcaac8e1446191c59ab446ae8547a1aecd75b7"
   end
 
   name "miniforge"
