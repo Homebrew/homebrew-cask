@@ -4,6 +4,7 @@ cask "rocks-n-diamonds" do
 
   url "https://www.artsoft.org/RELEASES/macosx/rocksndiamonds/rocksndiamonds-#{version}.dmg"
   name "Rocks'n'Diamonds"
+  desc "Arcade-style game"
   homepage "https://www.artsoft.org/rocksndiamonds/"
 
   livecheck do
