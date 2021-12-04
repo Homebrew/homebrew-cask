@@ -18,6 +18,7 @@ cask "actual" do
   app "Actual.app"
 
   zap trash: [
+    "~/Documents/Actual",
     "~/Library/Application Support/Actual",
     "~/Library/Logs/Actual",
     "~/Library/Preferences/com.shiftreset.actual.plist",
