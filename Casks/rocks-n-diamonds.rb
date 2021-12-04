@@ -13,4 +13,9 @@ cask "rocks-n-diamonds" do
   end
 
   app "Rocks'n'Diamonds.app"
+
+  zap trash: [
+    "~/Documents/Rocks'n'Diamonds",
+    "~/Library/Saved Application State/org.artsoft.rocksndiamonds.savedState",
+  ]
 end
