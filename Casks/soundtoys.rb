@@ -15,8 +15,6 @@ cask "soundtoys" do
     end
   end
 
-  depends_on cask: "ilok-license-manager"
-
   pkg "Install Soundtoys #{version.major}.pkg"
 
   uninstall pkgutil:   ["com.soundtoys.*", "com.paceap.pkg.eden.*"],
