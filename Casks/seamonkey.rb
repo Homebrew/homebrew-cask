@@ -40,4 +40,11 @@ cask "seamonkey" do
   auto_updates true
 
   app "SeaMonkey.app"
+
+  zap trash: [
+    "~/Library/Application Support/SeaMonkey",
+    "~/Library/Caches/SeaMonkey",
+    "~/Library/Preferences/org.mozilla.seamonkey.plist",
+    "~/Library/Saved Application State/org.mozilla.seamonkey.savedState",
+  ]
 end
