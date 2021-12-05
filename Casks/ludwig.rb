@@ -8,8 +8,8 @@ cask "ludwig" do
   homepage "https://ludwig.guru/"
 
   livecheck do
-    url "https://ludwig.guru/download"
-    regex(/"macOs".+"version":"(\d+(?:\.\d+)+)"/i)
+    url "https://desktop.ludwig.guru/download/latest/osx_64"
+    strategy :header_match
   end
 
   app "Ludwig.app"
