@@ -34,8 +34,7 @@ cask "seamonkey" do
 
   livecheck do
     url "https://www.seamonkey-project.org/releases/"
-    strategy :page_match
-    regex(%r{href=.*?/seamonkey-(\d+(?:\.\d+)*)\.en-US\.mac\.dmg}i)
+    regex(%r{href=.*?/seamonkey-(\d+(?:\.\d+)+)\.en-US\.mac\.dmg}i)
   end
 
   auto_updates true
