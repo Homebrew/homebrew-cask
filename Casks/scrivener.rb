@@ -17,4 +17,10 @@ cask "scrivener" do
   depends_on macos: ">= :sierra"
 
   app "Scrivener.app"
+
+  zap trash: [
+    "~/Library/Application Support/Scrivener",
+    "~/Library/Caches/com.literatureandlatte.scrivener#{version.major}",
+    "~/Library/Preferences/com.literatureandlatte.scrivener#{version.major}.plist",
+  ]
 end
