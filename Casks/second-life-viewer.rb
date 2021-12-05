@@ -11,6 +11,8 @@ cask "second-life-viewer" do
     url "https://secondlife.com/support/downloads/"
     strategy :page_match do |page|
       v = page[%r{href=.*?/Second_Life_(\d+(?:_\d+)*)_x86_64\.dmg}i, 1]
+      next if v.blank?
+
       v.tr("_", ".")
     end
   end
