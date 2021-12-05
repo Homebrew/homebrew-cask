@@ -9,7 +9,7 @@ cask "ludwig" do
 
   livecheck do
     url "https://ludwig.guru/download"
-    regex(/"macOs".+"version":"(\d+(?:\.\d+)+)"/)
+    regex(/"macOs".+"version":"(\d+(?:\.\d+)+)"/i)
   end
 
   app "Ludwig.app"
