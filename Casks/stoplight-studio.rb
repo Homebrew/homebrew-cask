@@ -3,14 +3,14 @@ cask "stoplight-studio" do
 
   version "2.8.0,6878.git-fbaa089"
 
-  url "https://github.com/stoplightio/studio/releases/download/v#{version.before_comma}-stable.#{version.after_comma}/stoplight-studio-#{arch}.dmg",
-      verified: "github.com/stoplightio/studio/"
   if Hardware::CPU.intel?
     sha256 "273fa1f5a3784ecfa6dd515fdab7da39187b0e5c682a11f65e60aac85e4e8db2"
   else
     sha256 "fd67ca0c26c4160b74a0e4bb02353452e7f82fa23a8886ef27ee02edfe6c96e2"
   end
 
+  url "https://github.com/stoplightio/studio/releases/download/v#{version.before_comma}-stable.#{version.after_comma}/stoplight-studio-#{arch}.dmg",
+      verified: "github.com/stoplightio/studio/"
   name "Stoplight Studio"
   desc "Editor for designing and documenting APIs"
   homepage "https://stoplight.io/studio/"
