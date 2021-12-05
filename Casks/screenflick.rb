@@ -1,6 +1,6 @@
 cask "screenflick" do
-  version "3.0.4"
-  sha256 "05884717298595adbb0b4750066f6d0dc13d65a3afba1af5699c10d2ad609457"
+  version "3.0.7"
+  sha256 "9f76efcdcc81a6e99e1fe6b56bab3fb46f48b326b09cd22aa434cbb0c91abcfa"
 
   url "https://store.araelium.com/screenflick/downloads/versions/Screenflick#{version}.zip"
   name "Screenflick"
@@ -15,4 +15,10 @@ cask "screenflick" do
   depends_on macos: ">= :mojave"
 
   app "Screenflick.app"
+
+  zap trash: [
+    "~/Library/Caches/com.araeliumgroup.screenflick",
+    "~/Library/Preferences/com.araeliumgroup.screenflick.plist",
+    "~/Library/WebKit/com.araeliumgroup.screenflick",
+  ]
 end
