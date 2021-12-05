@@ -2,7 +2,8 @@ cask "maxon" do
   version "2.1.0,5"
   sha256 "c0d9e9ace0e7d19bb27d9d26d10b5f2688acf16c17c76d30884da1468813bc36"
 
-  url "https://package-cf.redgiant.com/macos/maxon/products/fuse/mxa-combo-installer/#{version.major}/#{version.minor}/#{version.patch}/0/Maxon-#{version.major_minor_patch}-mac-b#{version.csv.second}.zip"
+  url "https://package-cf.redgiant.com/macos/maxon/products/fuse/mxa-combo-installer/#{version.major}/#{version.minor}/#{version.patch}/0/Maxon-#{version.major_minor_patch}-mac-b#{version.csv.second}.zip",
+      verified: "package-cf.redgiant.com/macos/maxon/products/fuse/mxa-combo-installer/"
   name "Maxon App"
   desc "Install, use, and try Maxon products"
   homepage "https://www.maxon.net/en/downloads/"
