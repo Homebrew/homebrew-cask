@@ -6,7 +6,7 @@ cask "scrivener" do
       verified: "scrivener.s3.amazonaws.com/"
   name "Scrivener"
   desc "Word processing software with a typewriter style"
-  homepage "https://literatureandlatte.com/scrivener.php"
+  homepage "https://www.literatureandlatte.com/scrivener/overview"
 
   livecheck do
     url "https://www.literatureandlatte.com/downloads/scrivener-#{version.major}.xml"
