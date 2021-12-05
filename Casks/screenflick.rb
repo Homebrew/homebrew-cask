@@ -15,4 +15,10 @@ cask "screenflick" do
   depends_on macos: ">= :mojave"
 
   app "Screenflick.app"
+
+  zap trash: [
+    "~/Library/Caches/com.araeliumgroup.screenflick",
+    "~/Library/Preferences/com.araeliumgroup.screenflick.plist",
+    "~/Library/WebKit/com.araeliumgroup.screenflick",
+  ]
 end
