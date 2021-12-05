@@ -13,7 +13,7 @@ cask "showyedge" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "ShowyEdge.app"
 
