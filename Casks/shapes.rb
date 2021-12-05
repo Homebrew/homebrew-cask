@@ -15,4 +15,9 @@ cask "shapes" do
   depends_on macos: ">= :high_sierra"
 
   app "Shapes.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.celestialteapot.Shapes5",
+    "~/Library/Preferences/com.celestialteapot.Shapes5.plist",
+  ]
 end
