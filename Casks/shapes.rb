@@ -12,5 +12,7 @@ cask "shapes" do
     strategy :sparkle
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Shapes.app"
 end
