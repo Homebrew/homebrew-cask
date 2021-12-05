@@ -1,8 +1,8 @@
 cask "hydrogen" do
   version "1.1.1"
-  sha256 "5ef9dc9a3190de0c6524b6fa6bc1e3ef16aeb2a420fb98decc7689a87de2f1b2"
+  sha256 "755008edb085d1a5b7655e592bd6d983735a3f3a1af2b39e386c336bed002f87"
 
-  url "https://github.com/hydrogen-music/hydrogen/releases/download/#{version}/Hydrogen-#{version}.dmg",
+  url "https://github.com/hydrogen-music/hydrogen/releases/download/#{version}/Hydrogen-#{version}-x86_64.dmg",
       verified: "github.com/hydrogen-music/hydrogen/"
   name "Hydrogen"
   desc "Drum machine and sequencer"
