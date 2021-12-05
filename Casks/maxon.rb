@@ -1,14 +1,18 @@
 cask "maxon" do
-  version "2.0.1.5"
-  sha256 "b45c6c593c942c99c5f1554cb9f6bf9efef7741773d4b2d17a6832135b4c45d1"
+  version "2.1.0,5"
+  sha256 "c0d9e9ace0e7d19bb27d9d26d10b5f2688acf16c17c76d30884da1468813bc36"
 
-  url "https://installer.maxon.net/installer/RG_installers/Maxon_App_#{version.major_minor}_Mac.dmg"
+  url "https://package-cf.redgiant.com/macos/maxon/products/fuse/mxa-combo-installer/#{version.major}/#{version.minor}/#{version.patch}/0/Maxon-#{version.major_minor_patch}-mac-b#{version.csv.second}.zip"
   name "Maxon App"
   desc "Install, use, and try Maxon products"
   homepage "https://www.maxon.net/en/downloads/"
 
   livecheck do
-    skip "No version information available"
+    url "https://link.redgiant.com/store/api/v2/package/manifests?platform=macos&org=maxon&type=products&family=fuse"
+    regex(/"filename".+"Maxon[._-]v?(\d+(?:\.\d+)+)-mac-b(\d+)\.zip"/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+    end
   end
 
   installer script: {
