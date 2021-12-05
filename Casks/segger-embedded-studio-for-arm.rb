@@ -16,7 +16,7 @@ cask "segger-embedded-studio-for-arm" do
 
   livecheck do
     url "https://studio.segger.com/arm_segger_studio_release_notes.htm"
-    regex(/<h2[^>]*>\s*Version\s*(\d+(?:\.\d+)*[a-z]?)/i)
+    regex(/<h2[^>]*>\s*Version\s*(\d+(?:\.\d+)+[a-z]?)/i)
   end
 
   pkg "Install SEGGER Embedded Studio for ARM #{version}.pkg"
