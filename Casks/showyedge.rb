@@ -6,7 +6,7 @@ cask "showyedge" do
       verified: "github.com/pqrs-org/ShowyEdge/"
   name "ShowyEdge"
   desc "Visible indicator of the current input source"
-  homepage "https://pqrs.org/osx/ShowyEdge/"
+  homepage "https://showyedge.pqrs.org/"
 
   livecheck do
     url "https://appcast.pqrs.org/showyedge-appcast.xml"
