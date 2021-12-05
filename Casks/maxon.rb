@@ -29,6 +29,7 @@ cask "maxon" do
     "/Library/Logs/Red Giant",
   ],
             launchctl: [
+              "com.maxon.mxnotify.agent",
               "com.maxon.mxredirect.agent",
               "com.redgiant.service",
             ]
