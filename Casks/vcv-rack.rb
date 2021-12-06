@@ -15,6 +15,4 @@ cask "vcv-rack" do
   pkg "RackFree-#{version}-mac.pkg"
   
   uninstall pkgutil: ["com.vcvrack.rack"]
-
-  app "Rack.app"
 end
