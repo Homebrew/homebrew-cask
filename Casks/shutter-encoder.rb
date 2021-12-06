@@ -16,7 +16,7 @@ cask "shutter-encoder" do
 
   livecheck do
     url "https://www.shutterencoder.com/changelog.txt"
-    regex(/^\s*Version\s*(\d+(?:\.\d+)*)/i)
+    regex(/^\s*Version\s*(\d+(?:\.\d+)+)/i)
   end
 
   pkg "Shutter Encoder #{version} Mac #{arch}.pkg"
