@@ -11,7 +11,7 @@ cask "sogouinput" do
   livecheck do
     url :homepage
     strategy :page_match do |page|
-      match = page.match(%r{/(\d+(?:\.\d+)*)/sogou_mac_(\d+(?:.\d+).*)\.zip}i)
+      match = page.match(%r{/(\d+(?:\.\d+)*)/sogou_mac_(\d+(?:\.\d+)*[a-z]*)\.zip}i)
       next if match.blank?
 
       "#{match[2]},#{match[1]}"
