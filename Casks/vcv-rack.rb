@@ -13,7 +13,7 @@ cask "vcv-rack" do
     regex(%r{href=.*?/RackFree-(\d+(?:\.\d+)*)-mac\.pkg}i)
   end
   
-  pkg "Install RackFree-#{version}-mac.pkg"
+  pkg "RackFree-#{version}-mac.pkg"
 
   app "Rack.app"
 end
