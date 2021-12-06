@@ -9,8 +9,7 @@ cask "sitebulb" do
 
   livecheck do
     url "https://sitebulb.com/download/"
-    strategy :page_match
-    regex(%r{href=.*?/(\d+(?:\.\d+)*)/macOS/Sitebulb\.dmg}i)
+    regex(%r{href=.*?/(\d+(?:\.\d+)+)/macOS/Sitebulb\.dmg}i)
   end
 
   app "Sitebulb.app"
