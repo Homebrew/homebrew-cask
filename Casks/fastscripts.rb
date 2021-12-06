@@ -12,9 +12,8 @@ cask "fastscripts" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :mojave"
-
   auto_updates true
+  depends_on macos: ">= :mojave"
 
   app "FastScripts.app"
 
