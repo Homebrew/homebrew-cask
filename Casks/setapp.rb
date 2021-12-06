@@ -2,7 +2,7 @@ cask "setapp" do
   version "2.13.2,1638793697"
   sha256 "08e6b47491d56a040cca159f7d6809a6a204f794b2465a715c9cfa1a399ea59b"
 
-  url "https://dl.devmate.com/com.setapp.InstallSetapp/#{version.before_comma}/#{version.after_comma}/InstallSetapp-#{version.before_comma}.zip",
+  url "https://dl.devmate.com/com.setapp.InstallSetapp/#{version.csv.first}/#{version.csv.second}/InstallSetapp-#{version.csv.first}.zip",
       verified: "devmate.com/com.setapp.InstallSetapp/"
   name "Setapp"
   desc "Collection of apps available by subscription"
