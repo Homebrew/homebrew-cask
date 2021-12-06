@@ -14,4 +14,9 @@ cask "sourcetrail" do
   end
 
   app "Sourcetrail.app"
+
+  zap trash: [
+    "~/Library/Application Support/Sourcetrail",
+    "~/Library/Saved Application State/com.sourcetrail.savedState",
+  ]
 end
