@@ -12,5 +12,5 @@ cask "softorino-youtube-converter" do
     strategy :sparkle
   end
 
-  app "Softorino YouTube Converter #{version.major}.app"
+  app "Softorino YouTube Converter 2.app"
 end
