@@ -15,4 +15,9 @@ cask "silo" do
   depends_on macos: ">= :mojave"
 
   app "Silo.app"
+
+  zap trash: [
+    "/Library/Caches/com.nevercenter.silo",
+    "~/Library/Application Support/com.nevercenter.silo",
+  ]
 end
