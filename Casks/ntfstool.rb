@@ -4,6 +4,7 @@ cask "ntfstool" do
 
   url "https://github.com/ntfstool/ntfstool/releases/download/#{version}/NTFSTool-#{version}.dmg"
   name "NTFSTool"
+  desc "Utility that provides NTFS read and write support"
   homepage "https://github.com/ntfstool/ntfstool"
 
   auto_updates true
