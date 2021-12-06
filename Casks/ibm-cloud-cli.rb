@@ -12,8 +12,8 @@ cask "ibm-cloud-cli" do
   end
 
   depends_on cask: "docker"
-  depends_on formula: "kubectl"
-  depends_on formula: "kubernetes-helm"
+  depends_on formula: "helm"
+  depends_on formula: "kubernetes-cli"
 
   pkg "IBM_Cloud_CLI_#{version}.pkg"
 
