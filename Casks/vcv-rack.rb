@@ -9,8 +9,7 @@ cask "vcv-rack" do
 
   livecheck do
     url "https://vcvrack.com/Rack.html"
-    strategy :page_match
-    regex(%r{href=.*?/RackFree-(\d+(?:\.\d+)*)-mac\.pkg}i)
+    regex(%r{href=.*?/RackFree[._-]v?(\d+(?:\.\d+)+)-mac\.pkg}i)
   end
   
   pkg "RackFree-#{version}-mac.pkg"
