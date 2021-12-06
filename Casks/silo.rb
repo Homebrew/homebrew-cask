@@ -9,7 +9,7 @@ cask "silo" do
 
   livecheck do
     url "https://nevercenter.com/silo/download/"
-    regex(/Silo\s*(\d+(?:\.\d+)*)\s*/i)
+    regex(/Silo\s*(\d+(?:\.\d+)+)\s*/i)
   end
 
   depends_on macos: ">= :mojave"
