@@ -12,6 +12,8 @@ cask "vcv-rack" do
     strategy :page_match
     regex(%r{href=.*?/RackFree-(\d+(?:\.\d+)*)-mac\.pkg}i)
   end
+  
+  pkg "Install RackFree-#{version}-mac.pkg"
 
   app "Rack.app"
 end
