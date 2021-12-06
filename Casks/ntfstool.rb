@@ -7,7 +7,7 @@ cask "ntfstool" do
   homepage "https://github.com/ntfstool/ntfstool"
 
   auto_updates true
-  depends_on cask: "osxfuse"
+  depends_on cask: "macfuse"
 
   app "NTFSTool.app"
 
