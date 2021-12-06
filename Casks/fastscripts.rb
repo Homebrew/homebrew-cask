@@ -14,6 +14,8 @@ cask "fastscripts" do
 
   depends_on macos: ">= :mojave"
 
+  auto_updates true
+
   app "FastScripts.app"
 
   zap trash: [
