@@ -1,15 +1,15 @@
 cask "shortery" do
-  version "1.0,3"
+  version "1.1,5"
   sha256 :no_check
 
   url "https://lgerckens.de/shortery/Shortery.zip"
   name "Shortery"
   desc "Shortcut automation"
-  homepage "https://lgerckens.de/shortery"
+  homepage "https://lgerckens.de/shortery/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://www.lgerckens.de/shortery/update_feed.xml"
+    strategy :sparkle
   end
 
   depends_on macos: ">= :monterey"
