@@ -1,13 +1,13 @@
 cask "segger-embedded-studio-for-arm" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "5.64"
+  version "5.68"
 
   url "https://www.segger.com/downloads/embedded-studio/Setup_EmbeddedStudio_ARM_v#{version.no_dots}_macos_#{arch}.dmg"
   if Hardware::CPU.intel?
-    sha256 "2b58c3225f2db6bc3dd386ddf979a8656f83812624269b013fea1b2acce1ded0"
+    sha256 "d8240f6fa4a0980fb8977ffce6b910d65452b74c5164052ae05b9a8463907653"
   else
-    sha256 "7e1cfd9ee8462e45411a7ff9af67f71c955f62b5bd6b959b29c03a1690409a7f"
+    sha256 "460c0022541bf9cc49b492c57c2a6939a59e5636a64b3642d75a53455b73e55c"
   end
 
   name "SEGGER Embedded Studio for ARM"
@@ -16,7 +16,7 @@ cask "segger-embedded-studio-for-arm" do
 
   livecheck do
     url "https://studio.segger.com/arm_segger_studio_release_notes.htm"
-    regex(/<h2[^>]*>\s*Version\s*(\d+(?:\.\d+)*[a-z]?)/i)
+    regex(/<h2[^>]*>\s*Version\s*(\d+(?:\.\d+)+[a-z]?)/i)
   end
 
   pkg "Install SEGGER Embedded Studio for ARM #{version}.pkg"
