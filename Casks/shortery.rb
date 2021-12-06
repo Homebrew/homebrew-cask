@@ -8,8 +8,8 @@ cask "shortery" do
   homepage "https://lgerckens.de/shortery/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://www.lgerckens.de/shortery/update_feed.xml"
+    strategy :sparkle
   end
 
   depends_on macos: ">= :monterey"
