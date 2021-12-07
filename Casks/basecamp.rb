@@ -5,6 +5,7 @@ cask "basecamp" do
   url "https://bc#{version.major}-desktop.s3.amazonaws.com/mac/basecamp#{version.major}-#{version.csv.second}.zip",
       verified: "bc3-desktop.s3.amazonaws.com/"
   name "Basecamp"
+  desc "All-In-One Toolkit for Working Remotely"
   homepage "https://basecamp.com/help/#{version}/guides/apps/mac"
 
   livecheck do
