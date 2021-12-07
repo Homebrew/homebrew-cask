@@ -1,6 +1,6 @@
 cask "enpass" do
-  version "6.7.2.887"
-  sha256 "459e00bc56bc48aa6d1465ea820062f9c4b18d8abd5d35a1903910f85656fa1a"
+  version "6.7.4.949"
+  sha256 "237d73edab978f97d009fe75322a92d5826270fc2d96e8cf8d1b8d47617bb35b"
 
   url "https://dl.enpass.io/stable/mac/package/#{version}/Enpass.pkg"
   name "Enpass"
@@ -9,7 +9,7 @@ cask "enpass" do
 
   livecheck do
     url "https://www.enpass.io/downloads/"
-    regex(%r{href=.*?/(\d+(?:\.\d+)*)/Enpass\.pkg}i)
+    regex(%r{href=.*?/(\d+(?:\.\d+)+)/Enpass\.pkg}i)
   end
 
   depends_on macos: ">= :sierra"
