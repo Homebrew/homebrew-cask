@@ -12,6 +12,7 @@ cask "blueharvest" do
     regex(/>\s*Version\s+(\d+(?:\.\d+)+)/i)
   end
 
+  auto_updates true
   depends_on macos: ">= :catalina"
 
   app "BlueHarvest.app"
