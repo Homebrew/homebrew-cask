@@ -9,7 +9,7 @@ cask "ghidra" do
   homepage "https://www.ghidra-sre.org/"
 
   livecheck do
-    url "https://github.com/NationalSecurityAgency/ghidra/releases/latest"
+    url "https://github.com/NationalSecurityAgency/ghidra/releases"
     strategy :page_match do |page|
       page.scan(/href=.*?ghidra[._-]v?(\d+(?:\.\d+)+)[._-]PUBLIC[._-](\d+)\.zip/i)
           .map { |matches| "#{matches[0]},#{matches[1]}" }
