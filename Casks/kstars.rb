@@ -10,8 +10,7 @@ cask "kstars" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/kstars-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/kstars-(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   depends_on macos: ">= :high_sierra"
