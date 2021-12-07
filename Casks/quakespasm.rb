@@ -1,6 +1,6 @@
 cask "quakespasm" do
-  version "0.94.2"
-  sha256 "3ee460df4aabebcc64e1f4f035590a0b65f21e694f675afa683c967ddfd41fa0"
+  version "0.94.3"
+  sha256 "503bab018154e9c27fd8c5c4407bfd57c3644aa3a80a6cbb1c0ae6f631a5465e"
 
   url "https://downloads.sourceforge.net/quakespasm/Mac/QuakeSpasm-#{version}-osx-SDL2.zip",
       verified: "downloads.sourceforge.net/quakespasm/"
