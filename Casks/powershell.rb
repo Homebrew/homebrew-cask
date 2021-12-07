@@ -31,4 +31,9 @@ cask "powershell" do
     "~/.config/PowerShell",
     "~/.local/share/powershell",
   ]
+
+  caveats <<~EOS
+    To use Homebrew in PowerShell, set:
+      Add-Content -Path $PROFILE.CurrentUserAllHosts -Value '$(#{HOMEBREW_PREFIX}/bin/brew shellenv) | Invoke-Expression'
+  EOS
 end
