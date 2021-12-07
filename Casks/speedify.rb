@@ -1,5 +1,5 @@
 cask "speedify" do
-  version "11.6.0,8791"
+  version "11.7.0,8829"
   sha256 :no_check
 
   url "https://downloads.speedify.com/speedify.php?platform=osx"
@@ -18,8 +18,8 @@ cask "speedify" do
 
   uninstall launchctl: [
     "me.connectify.SMJobBlessHelper",
-    "SwitchboardService",
     "SpeedifyService",
+    "SwitchboardService",
   ],
             script:    "#{appdir}/Speedify.app/Contents/Resources/uninstall-speedify-service.sh"
 
