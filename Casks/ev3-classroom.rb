@@ -1,13 +1,17 @@
 cask "ev3-classroom" do
   # NOTE: "3" is not a version number, but an intrinsic part of the product name
-  version "1.1.1"
-  sha256 "3df3347be4912af6457afc1731328daecc8161a38ef09231b26cdcd9aa59c5ab"
+  version "1.50"
+  sha256 "bc946ab51a3eec7ed82478ad18acb41726bcd08d01007b3ce004528f1eaa8f0a"
 
-  url "https://le-www-live-s.legocdn.com/downloads/LME-Scratch/LME-Scratch_Full-setup_#{version}_en-US_MacOS.dmg",
-      verified: "le-www-live-s.legocdn.com/downloads/LME-Scratch/"
+  url "https://education.lego.com/_/downloads/EV3_#{version}_Global.dmg"
   name "EV3 Classroom"
   desc "Companion app for the LEGO MINDSTORMS Education EV3 Core Set"
   homepage "https://education.lego.com/en-us/downloads/mindstorms-ev3/software"
+
+  livecheck do
+    url "https://education.lego.com/page-data/en-us/downloads/mindstorms-ev3/software/page-data.json"
+    regex(/EV3[._-]v?(\d+(?:\.\d+)+)_Global\.dmg/i)
+  end
 
   depends_on macos: ">= :mojave"
 
