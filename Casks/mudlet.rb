@@ -1,6 +1,6 @@
 cask "mudlet" do
-  version "4.14.0"
-  sha256 "fbea26f85aae4713a6c10f39c67b01ad35778a1626d70c97c12e311d1faf1fd7"
+  version "4.14.1"
+  sha256 "6545e12871a9fa136224da87744bd7eb33f5da73f3d3bbe4a897b4cadd02758e"
 
   url "https://www.mudlet.org/wp-content/files/Mudlet-#{version}.dmg"
   name "Mudlet"
