@@ -1,12 +1,12 @@
 cask "chromium" do
   arch = Hardware::CPU.intel? ? "Mac" : "Mac_Arm"
 
-  version "939125"
+  version "948906"
 
   if Hardware::CPU.intel?
-    sha256 "cf3a1503482345888bbb1b44bfa603f962721264b1c3c9cce9200e1f2ae62e17"
+    sha256 "dee4dbb296e672d2e7e552d865d82c3248b2534b232ee638f472aa3a8948b223"
   else
-    sha256 "829cca35a32d51a85ef5b3638ba1641a9f2a6bac43583f9893fded01e4cf03af"
+    sha256 "823c1c56a981619d4a1fb029ba415ab6a0d47caf70c70d337d64651a2e6d82d9"
   end
 
   url "https://commondatastorage.googleapis.com/chromium-browser-snapshots/#{arch}/#{version}/chrome-mac.zip",
