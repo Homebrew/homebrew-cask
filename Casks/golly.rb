@@ -4,7 +4,6 @@ cask "golly" do
 
   url "https://downloads.sourceforge.net/golly/golly/golly-#{version.major_minor}/golly-#{version}-mac.dmg",
       verified: "downloads.sourceforge.net/golly/"
-  appcast "https://sourceforge.net/projects/golly/rss?path=/golly"
   name "Golly"
   desc "Explore Conway's Game of Life and other types of cellular automata"
   homepage "https://golly.sourceforge.io/"
