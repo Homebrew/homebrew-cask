@@ -1,6 +1,6 @@
 cask "cloudapp" do
-  version "6.5.2,2245"
-  sha256 "b3db3b870775039678407b053a8f2ec028f49ba62c2f743c9e01b419f03fca11"
+  version "6.6.4,2281"
+  sha256 "4d230c5ef6ac8a1f7f6910b910664534975d4b88e1ed948e93fa84f900e30d7c"
 
   url "https://downloads.getcloudapp.com/mac/CloudApp-#{version.before_comma}.#{version.after_comma}.zip"
   name "CloudApp"
