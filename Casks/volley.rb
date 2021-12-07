@@ -13,5 +13,12 @@ cask "volley" do
     strategy :electron_builder
   end
 
+  zap trash: [
+    "~/Library/Application Support/Volley",
+    "~/Library/Logs/Volley",
+    "~/Library/Preferences/com.volleyapp.prod.VolleyElectron.plist",
+    "~/Library/Saved Application State/com.volleyapp.prod.VolleyElectron.savedState",
+  ]
+
   app "Volley.app"
 end
