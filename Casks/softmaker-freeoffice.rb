@@ -1,8 +1,8 @@
 cask "softmaker-freeoffice" do
-  version "2021"
-  sha256 "f864428886d227a9ca781eb26a7f3c6cb3d70c4ff19769e69b10a21cd0a44c3f"
+  version "2021,1040"
+  sha256 :no_check # required as upstream package is updated in place
 
-  url "https://www.softmaker.net/down/softmaker-freeoffice-#{version}.pkg",
+  url "https://www.softmaker.net/down/softmaker-freeoffice-#{version.csv.first}.pkg",
       verified: "softmaker.net/"
   name "SoftMaker FreeOffice"
   desc "Office suite"
@@ -10,10 +10,15 @@ cask "softmaker-freeoffice" do
 
   livecheck do
     url "https://www.freeoffice.com/en/download/servicepacks"
-    regex(/softmaker[._-]freeoffice[._-](\d+(?:\.\d+)*)\.pkg/i)
+    strategy :page_match do |page|
+      match = page.match(/(\d+)-(\d+)-(\d+):\s*Revision\s*(\d+)/i)
+      next if match.blank?
+
+      "#{match[1]},#{match[4]}"
+    end
   end
 
-  pkg "softmaker-freeoffice-#{version}.pkg"
+  pkg "softmaker-freeoffice-#{version.csv.first}.pkg"
 
-  uninstall pkgutil: "com.SoftMaker.FreeOffice#{version}"
+  uninstall pkgutil: "com.SoftMaker.FreeOffice#{version.csv.first}"
 end
