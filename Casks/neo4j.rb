@@ -11,7 +11,6 @@ cask "neo4j" do
 
   livecheck do
     url "https://neo4j.com/download-center/#desktop"
-    strategy :page_match
     regex(%r{href=.*?/neo4j-desktop/.*?flavour=osx.*?release=(\d+(?:\.\d+)+)}i)
   end
 
