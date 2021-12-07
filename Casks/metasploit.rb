@@ -1,8 +1,8 @@
 cask "metasploit" do
-  version "6.1.16,20211121112905"
+  version "6.1.18,20211206112825"
   sha256 "133d20497a9d1bd23686220aacbef8a6ef28e2bb36f7bfd8f66954bd9d4d4a9c"
 
-  url "https://osx.metasploit.com/metasploit-framework-#{version.before_comma}%2B#{version.after_comma}-1rapid7-1.pkg"
+  url "https://osx.metasploit.com/metasploit-framework-#{version.csv.first}%2B#{version.csv.second}-1rapid7-1.x86_64.pkg"
   name "Metasploit Framework"
   desc "Penetration testing framework"
   homepage "https://www.metasploit.com/"
@@ -10,7 +10,7 @@ cask "metasploit" do
   livecheck do
     url "https://osx.metasploit.com/LATEST"
     strategy :page_match do |page|
-      match = page.match(/metasploit-framework-(\d+(?:\.\d+)+)\+(\d+)-1rapid7-1\.pkg/i)
+      match = page.match(/metasploit-framework-(\d+(?:\.\d+)+)\+(\d+)-1rapid7-1\.x86_64\.pkg/i)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
