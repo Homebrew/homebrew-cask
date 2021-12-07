@@ -20,6 +20,7 @@ cask "powershell" do
     regex(/^v?(\d+(?:\.\d+)*)$/)
   end
 
+  depends_on formula: "openssl"
   depends_on macos: ">= :mojave"
 
   pkg "powershell-#{version}-osx-#{arch}.pkg"
@@ -28,7 +29,7 @@ cask "powershell" do
 
   zap trash: [
     "~/.cache/powershell",
-    "~/.config/PowerShell",
+    "~/.config/powershell",
     "~/.local/share/powershell",
   ]
 
