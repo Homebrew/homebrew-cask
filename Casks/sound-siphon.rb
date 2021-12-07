@@ -8,8 +8,8 @@ cask "sound-siphon" do
   homepage "https://staticz.com/soundsiphon/"
 
   livecheck do
-    url "http://staticz.net/updates/soundsiphon#{version.major}.rss"
-    strategy :sparkle
+    url :url
+    strategy :header_match
   end
 
   depends_on macos: ">= :mojave"
