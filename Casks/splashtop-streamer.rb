@@ -10,7 +10,7 @@ cask "splashtop-streamer" do
 
   livecheck do
     url "https://www.splashtop.com/wp-content/themes/responsive/downloadx.php?platform=mac"
-    regex(/v(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   auto_updates true
