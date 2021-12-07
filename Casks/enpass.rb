@@ -9,7 +9,7 @@ cask "enpass" do
 
   livecheck do
     url "https://www.enpass.io/downloads/"
-    regex(%r{href=.*?/(\d+(?:\.\d+)*)/Enpass\.pkg}i)
+    regex(%r{href=.*?/(\d+(?:\.\d+)+)/Enpass\.pkg}i)
   end
 
   depends_on macos: ">= :sierra"
