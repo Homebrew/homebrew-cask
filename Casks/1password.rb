@@ -9,7 +9,6 @@ cask "1password" do
 
   livecheck do
     url "https://app-updates.agilebits.com/product_history/OPM#{version.major}"
-    strategy :page_match
     regex(%r{href=.*?/1Password-(\d+(?:\.\d+)+)\.pkg}i)
   end
 
