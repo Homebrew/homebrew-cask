@@ -1,6 +1,6 @@
 cask "stork" do
-  version "1.0.0,1310"
-  sha256 "818019911e3dc2438c90b78fef0383eb35eb0dafd04718bab990e09ced164c9b"
+  version "1.0.0,1320"
+  sha256 "20069ae317958033be5509cfb1d30cbad0ebbd1117fda8568f57e4b0bc824d88"
 
   url "https://downloads.stork.ai/macos/release/Stork-#{version.csv.first}.#{version.csv.second}.dmg"
   name "Stork for macOS"
