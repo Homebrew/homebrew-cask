@@ -20,10 +20,10 @@ cask "malus" do
   uninstall rmdir: "/Library/Application Support/Malus"
 
   zap trash: [
-    "~/Library/Application Support/Malus",
     "~/Library/Application Support/com.getmalus.malus",
-    "~/Library/Logs/com.getmalus.malus",
+    "~/Library/Application Support/Malus",
     "~/Library/Caches/com.getmalus.malus",
+    "~/Library/Logs/com.getmalus.malus",
     "~/Library/Preferences/com.getmalus.malus.plist",
     "~/Library/Saved Application State/com.getmalus.malus.savedState",
   ]
