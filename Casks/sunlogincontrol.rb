@@ -14,7 +14,7 @@ cask "sunlogincontrol" do
     regex(/SunloginRemote[._-](\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  pkg "SunloginControl.pkg"
+  pkg "SunloginRemote.pkg"
 
   uninstall quit:    "com.oray.remote",
             pkgutil: "com.oray.sunlogin.control"
