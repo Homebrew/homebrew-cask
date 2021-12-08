@@ -15,4 +15,9 @@ cask "supermjograph" do
   end
 
   app "SuperMjograph.app"
+
+  zap trash: [
+    "~/Library/Caches/com.mjo.SuperMjograph",
+    "~/Library/Preferences/com.mjo.SuperMjograph.plist",
+  ]
 end
