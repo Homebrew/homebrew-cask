@@ -4,12 +4,12 @@ cask "tev" do
 
   url "https://github.com/Tom94/tev/releases/download/v#{version}/tev.dmg"
   name "tev"
-  desc "HDR image comparison tool. With an emphasis on OpenEXR images"
+  desc "HDR image comparison tool with an emphasis on OpenEXR images"
   homepage "https://github.com/Tom94/tev"
 
   depends_on macos: ">= :catalina"
 
   app "tev.app"
 
-  zap trash: "~Library/Preferences/org.tom94.tev.plist"
+  zap trash: "~/Library/Preferences/org.tom94.tev.plist"
 end
