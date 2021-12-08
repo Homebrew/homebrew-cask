@@ -17,5 +17,5 @@ cask "sunlogincontrol" do
   pkg "SunloginRemote.pkg"
 
   uninstall quit:    "com.oray.remote",
-            pkgutil: "com.oray.sunlogin.control"
+            pkgutil: "com.oray.remote"
 end
