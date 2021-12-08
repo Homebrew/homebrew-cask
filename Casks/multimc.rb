@@ -9,9 +9,7 @@ cask "multimc" do
 
   livecheck do
     url "https://files.multimc.org/update/osx64-5.15.2/stable/index.json"
-    strategy :page_match do |page|
-      JSON.parse(page)["Versions"]["Name"]
-    end
+    regex(/"Name":\s*"(\d+(?:\.\d+)+)"/i)
   end
 
   auto_updates true
