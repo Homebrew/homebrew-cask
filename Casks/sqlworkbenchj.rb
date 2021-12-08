@@ -4,6 +4,7 @@ cask "sqlworkbenchj" do
 
   url "https://www.sql-workbench.eu/Workbench-Build#{version}-Mac.tgz"
   name "SQL Workbench/J"
+  desc "DBMS-independent SQL query tool"
   homepage "https://www.sql-workbench.eu/"
 
   livecheck do
