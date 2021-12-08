@@ -2,14 +2,14 @@ cask "librewolf" do
   arch = Hardware::CPU.intel? ? "" : "_aarch64_exp"
 
   if Hardware::CPU.intel?
-    version "94.0.2-1,af4732e68ec6219135288af9fffdd920"
-    sha256 "81395028781c1a59bf60d5e61b960cadf730282f8fe567340e68f8aeabe0b83f"
+    version "95.0-1,4aa1720552e47aecaf6b327ecd0e8b14"
+    sha256 "8620b7b434b171ab2b1de256eb1a446764e0fc7d4a12a50d16a5fed7b81f4dc0"
   else
-    version "94.0.2-1,28eb3a54b3a320cdb09773e848e681d2"
-    sha256 "8831d2e14383750597c477e2c95262d403bc25b15ed1f2ab423af28f3e37dfd3"
+    version "95.0-1,a8e661b69e34058ee3e9f970730d5c9b"
+    sha256 "c07c913b46bdc953940487f3494aefa0d0856729e5439d0a703207a64fc69b8e"
   end
 
-  url "https://gitlab.com/librewolf-community/browser/macos/uploads/#{version.after_comma}/librewolf-#{version.before_comma}#{arch}.dmg",
+  url "https://gitlab.com/librewolf-community/browser/macos/uploads/#{version.csv.second}/librewolf-#{version.csv.first}#{arch}.dmg",
       verified: "gitlab.com/librewolf-community/browser/macos/"
   name "LibreWolf"
   desc "Web browser"
@@ -28,11 +28,11 @@ cask "librewolf" do
   app "LibreWolf.app"
 
   zap trash: [
+    "~/.librewolf",
     "~/Library/Application Support/LibreWolf",
     "~/Library/Caches/LibreWolf",
     "~/Library/Caches/LibreWolf Community",
     "~/Library/Preferences/io.gitlab.librewolf-community.librewolf.plist",
     "~/Library/Saved Application State/io.gitlab.librewolf-community.librewolf.savedState",
-    "~/.librewolf",
   ]
 end
