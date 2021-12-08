@@ -8,6 +8,12 @@ cask "sunlogincontrol" do
   desc "Target component of remote desktop control and monitoring tool"
   homepage "https://sunlogin.oray.com/"
 
+  livecheck do
+    url "https://sunlogin.oray.com/zh_CN/download/download?id=17"
+    strategy :header_match
+    regex(/SunloginRemote[._-](\d+(?:\.\d+)+)\.dmg/i)
+  end
+
   pkg "SunloginControl.pkg"
 
   uninstall quit:    "com.oray.remote",
