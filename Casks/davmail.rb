@@ -1,13 +1,22 @@
 cask "davmail" do
-  version "6.0.0-3375"
-  sha256 "a212b6f3e06c9a145b3626bc1dcfc527f36d625530e53adf2ef379b9c6e9d354"
+  version "6.0.1,3390"
+  sha256 "917bafe8b5466cbd2a9ac282bf0ef5590f3cc83e099c88ce729897b60fd9bc89"
 
-  url "https://downloads.sourceforge.net/davmail/DavMail-MacOSX-#{version}.app.zip",
+  url "https://downloads.sourceforge.net/davmail/DavMail-MacOSX-#{version.csv.first}-#{version.csv.second}.app.zip",
       verified: "downloads.sourceforge.net/davmail/"
-  appcast "https://sourceforge.net/projects/davmail/rss"
   name "DavMail"
   desc "Use any mail/calendar client with an Exchange server"
   homepage "https://davmail.sourceforge.io/"
+
+  livecheck do
+    url "https://sourceforge.net/projects/davmail/rss"
+    strategy :page_match do |page|
+      match = page.match(/DavMail[._-]MacOSX[._-]v?(\d+(?:\.\d+)+)[._-](\d+(?:\.\d+)*).app.zip/i)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
+    end
+  end
 
   app "DavMail.app"
 
