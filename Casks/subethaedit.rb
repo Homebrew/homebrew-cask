@@ -16,4 +16,9 @@ cask "subethaedit" do
   depends_on macos: ">= :high_sierra"
 
   app "SubEthaEdit.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/de.codingmonkeys.SubEthaEdit.MacFULL",
+    "~/Library/Containers/de.codingmonkeys.SubEthaEdit.MacFULL",
+  ]
 end
