@@ -1,6 +1,6 @@
 cask "springtoolsuite" do
-  version "4.12.0,4.21.0"
-  sha256 "7b9ae67a6cd45a35bd352dabf0bec9207dc5d75f82be12ad6ea1efa6d65279fe"
+  version "4.12.1,4.21.0"
+  sha256 "e2fa67f147f41033604d4c5cd9b39e55fa6894a8af0483e0bfea816948b99a18"
 
   url "https://download.springsource.com/release/STS#{version.major}/#{version.before_comma}.RELEASE/dist/e#{version.after_comma.major_minor}/spring-tool-suite-#{version.major}-#{version.before_comma}.RELEASE-e#{version.after_comma}-macosx.cocoa.x86_64.dmg",
       verified: "download.springsource.com/release/"
@@ -12,7 +12,7 @@ cask "springtoolsuite" do
     url :homepage
     strategy :page_match do |page|
       match = page.match(
-        %r{href=.*?/spring-tool-suite-\d+-(\d+(?:\.\d+)*)\.RELEASE-e(\d+(?:\.\d+)*)-macosx\.cocoa\.x86_64\.dmg}i,
+        %r{href=.*?/spring-tool-suite-\d+-(\d+(?:\.\d+)+)\.RELEASE-e(\d+(?:\.\d+)+)-macosx\.cocoa\.x86_64\.dmg}i,
       )
       next if match.blank?
 
