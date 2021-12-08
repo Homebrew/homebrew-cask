@@ -1,6 +1,6 @@
 cask "mailtrackerblocker" do
-  version "0.5.4"
-  sha256 "eaf5148bc611e3595efff6d9d63276b549f3f62286a255f3334e4b6528ded5a3"
+  version "0.5.5"
+  sha256 "875b0dce9df4947e787de7a395c420c6bf91cf0460ef5830d60107f1bf1ec0bc"
 
   url "https://github.com/apparition47/MailTrackerBlocker/releases/download/#{version}/MailTrackerBlocker.pkg",
       verified: "github.com/apparition47/MailTrackerBlocker/"
