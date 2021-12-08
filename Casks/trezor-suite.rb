@@ -1,15 +1,15 @@
 cask "trezor-suite" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "21.11.2"
+  version "21.12.1"
 
-  url "https://suite.trezor.io/web/static/desktop/Trezor-Suite-#{version}-mac-#{arch}.dmg"
   if Hardware::CPU.intel?
-    sha256 "1aa1977d19787529e1ec49292e1c7ee305fbc4430f79729ece3aad7eb4e2bad5"
+    sha256 "fdf2e06efe885740272eb94ef87830d6c1aeae3456f7af2a8b2ac9a2fae818d0"
   else
-    sha256 "75751697fdf87a335b94af01ded4ccaefba6fdf2d46a04f087d46771c473c6c8"
+    sha256 "dfee8c5abc4ac243c40edb6faf73f8541c1c4701e8f3a38c0a7d2591ac09e190"
   end
 
+  url "https://suite.trezor.io/web/static/desktop/Trezor-Suite-#{version}-mac-#{arch}.dmg"
   name "TREZOR Suite"
   desc "Companion app for the Trezor hardware wallet"
   homepage "https://suite.trezor.io/"
