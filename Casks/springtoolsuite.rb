@@ -12,7 +12,7 @@ cask "springtoolsuite" do
     url :homepage
     strategy :page_match do |page|
       match = page.match(
-        %r{href=.*?/spring-tool-suite-\d+-(\d+(?:\.\d+)*)\.RELEASE-e(\d+(?:\.\d+)*)-macosx\.cocoa\.x86_64\.dmg}i,
+        %r{href=.*?/spring-tool-suite-\d+-(\d+(?:\.\d+)+)\.RELEASE-e(\d+(?:\.\d+)+)-macosx\.cocoa\.x86_64\.dmg}i,
       )
       next if match.blank?
 
