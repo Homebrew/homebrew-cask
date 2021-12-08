@@ -1,13 +1,13 @@
 cask "syncovery" do
   arch = Hardware::CPU.intel? ? "" : "-Apple"
 
-  version "9.39e"
+  version "9.39r"
 
   url "https://www.syncovery.com/release/SyncoveryMac#{version}#{arch}.dmg"
   if Hardware::CPU.intel?
-    sha256 "0fd98c967548c011eef41c1d87159211d66528863993f1c451ba72c6be248771"
+    sha256 "11b87ffd74da5ea83d6f8f3e5f3c3815c95ed2961d1f306fb26b39812188f08e"
   else
-    sha256 "9b70beaccc8f95d710064943d45e60c52618f242653a13df6eecdea09ce47fe5"
+    sha256 "d34f408af39112fa6366c05151e745e635dfcba9d7650178deaa879b161d107f"
   end
 
   name "Syncovery"
