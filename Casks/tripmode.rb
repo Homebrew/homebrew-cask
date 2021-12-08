@@ -3,17 +3,17 @@ cask "tripmode" do
     version "2.3.0,818"
     sha256 "db409c94cbe8f03749e38a9e4acf58efbf7363fb2ca3aff7a316574d9f2b2737"
 
-    url "https://tripmode-updates.ch/app/TripMode-#{version.before_comma}-#{version.after_comma}-app.dmg",
+    url "https://tripmode-updates.ch/app/TripMode-#{version.csv.first}-#{version.csv.second}-app.dmg",
         verified: "tripmode-updates.ch/"
 
     livecheck do
       skip
     end
   else
-    version "3.0.6,1158"
-    sha256 "923753c567049c4f2f33e7e7ba4b55ba0a08b841ae44908390be0651600df189"
+    version "3.1.2,1267"
+    sha256 "41db7886236a3c8b7bf5c364ef4e8b15f72e0946440bb90bb40daf009cfc31f8"
 
-    url "https://tripmode-updates.ch/app/TripMode-#{version.before_comma}-#{version.after_comma}.zip",
+    url "https://tripmode-updates.ch/app/TripMode-#{version.csv.first}-#{version.csv.second}.zip",
         verified: "tripmode-updates.ch/"
 
     livecheck do
