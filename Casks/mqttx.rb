@@ -12,8 +12,8 @@ cask "mqttx" do
 
   zap trash: [
     "~/Library/Application Support/MQTTX",
+    "~/Library/Logs/MQTTX",
     "~/Library/Preferences/com.electron.mqttx.plist",
     "~/Library/Saved Application State/com.electron.mqttx.savedState",
-    "~/Library/Logs/MQTTX",
   ]
 end
