@@ -14,4 +14,6 @@ cask "sweet-home3d" do
   end
 
   app "Sweet Home 3D.app"
+
+  zap trash: "~/Library/Preferences/com.eteks.sweethome3d.plist"
 end
