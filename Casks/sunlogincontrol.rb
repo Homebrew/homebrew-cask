@@ -5,6 +5,7 @@ cask "sunlogincontrol" do
   url "https://down.oray.com/sunlogin/mac/SunloginRemote_#{version}.dmg"
   name "SunloginControl"
   name "向日葵控制端"
+  desc "Target component of remote desktop control and monitoring tool"
   homepage "https://sunlogin.oray.com/"
 
   pkg "SunloginControl.pkg"
