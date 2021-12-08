@@ -1,6 +1,6 @@
 cask "sunloginclient" do
-  version "11.0.1.39931"
-  sha256 "785a61095f5c4640fbecc2770ba25c7717406c9a5262019493c4e4233102a97d"
+  version "11.0.2.41962"
+  sha256 "f2ca66a21fa3d09550ac65b89957ad35836403211c4456adbcd81d8bc147585f"
 
   url "https://down.oray.com/sunlogin/mac/SunloginClient_#{version}.dmg"
   name "Sunlogin 11"
@@ -11,7 +11,7 @@ cask "sunloginclient" do
   livecheck do
     url "https://sunlogin.oray.com/zh_CN/download/download?id=89"
     strategy :header_match
-    regex(/SunloginClient[._-](\d+(?:\.\d+)*)\.dmg/i)
+    regex(/SunloginClient[._-](\d+(?:\.\d+)+)\.dmg/i)
   end
 
   pkg "SunloginClient.pkg"
