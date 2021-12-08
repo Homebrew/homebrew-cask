@@ -1,7 +1,7 @@
 cask "superhuman" do
   arch = Hardware::CPU.intel? ? "" : "-arm64"
 
-  version "11.0.34"
+  version "11.0.36"
   sha256 :no_check
 
   url "https://download.superhuman.com/Superhuman#{arch}.dmg"
