@@ -8,5 +8,11 @@ cask "supermjograph" do
   desc "Generate scientific graphs from data"
   homepage "https://www.mjograph.net/"
 
+  livecheck do
+    url "https://sourceforge.net/projects/mjograph/files/latest/download"
+    strategy :header_match
+    regex(/SuperMjograph[._-](\d+(?:\.\d+)+)\.zip/i)
+  end
+
   app "SuperMjograph.app"
 end
