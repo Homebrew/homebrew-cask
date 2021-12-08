@@ -14,8 +14,7 @@ cask "subnetcalc" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/subnetcalc-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/subnetcalc[._-]?v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "SubnetCalc.app"
