@@ -23,11 +23,11 @@ cask "syncovery" do
 
   uninstall pkgutil: "com.company.Syncovery*"
 
-  zap trash: "~/Library/Preferences/Syncovery.ini",
-      rmdir: [
+  zap trash: [
         "~/Library/Application Support/Syncovery",
-        "~/Saved Application State/com.company.Syncovery.savedState",
-        "~/Library/Preferences/Syncovery",
         "~/Library/Logs/Syncovery",
+        "~/Library/Preferences/Syncovery.ini",
+        "~/Library/Preferences/Syncovery",
+        "~/Saved Application State/com.company.Syncovery.savedState",
       ]
 end
