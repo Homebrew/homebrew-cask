@@ -16,7 +16,7 @@ cask "syncovery" do
 
   livecheck do
     url "https://www.syncovery.com/download/mac/"
-    regex(%r{href=.*?/SyncoveryMac(\d+(?:\.\d+)*[a-z]?)#{arch}\.dmg}i)
+    regex(%r{href=.*?/SyncoveryMac[._-]?v?(\d+(?:\.\d+)+[a-z]?)#{arch}\.dmg}i)
   end
 
   pkg "SyncoveryMac (double-click to install).pkg"
