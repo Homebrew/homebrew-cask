@@ -18,4 +18,9 @@ cask "subnetcalc" do
   end
 
   app "SubnetCalc.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/net.mulot.subnetcalc",
+    "~/Library/Containers/net.mulot.subnetcalc",
+  ]
 end
