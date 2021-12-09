@@ -8,4 +8,6 @@ cask "tinypng4mac" do
   homepage "https://github.com/kyleduo/TinyPNG4Mac"
 
   app "TinyPNG4Mac.app"
+
+  zap trash: "~/Library/Preferences/com.kyleduo.tinypngmac.plist"
 end
