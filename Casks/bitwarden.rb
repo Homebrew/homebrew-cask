@@ -1,9 +1,8 @@
 cask "bitwarden" do
-  version "1.29.1"
-  sha256 "d617bbffe866d4fec01230bc54a9b752bb77420e345b9e8b36c7c6c9b5155459"
+  version "1.30.0"
+  sha256 "8495fc110e74189b148cb85b012c70ac55e24984de6a9cece57f95bb851d2bdc"
 
-  url "https://github.com/bitwarden/desktop/releases/download/v#{version}/Bitwarden-#{version}-mac.zip",
-      verified: "github.com/bitwarden/desktop/"
+  url "https://github.com/bitwarden/desktop/releases/download/v#{version}/Bitwarden-#{version}-universal-mac.zip"
   name "Bitwarden"
   desc "Desktop password and login vault"
   homepage "https://bitwarden.com/"
