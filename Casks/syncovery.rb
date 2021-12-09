@@ -3,13 +3,13 @@ cask "syncovery" do
 
   version "9.39r"
 
-  url "https://www.syncovery.com/release/SyncoveryMac#{version}#{arch}.dmg"
   if Hardware::CPU.intel?
     sha256 "11b87ffd74da5ea83d6f8f3e5f3c3815c95ed2961d1f306fb26b39812188f08e"
   else
     sha256 "d34f408af39112fa6366c05151e745e635dfcba9d7650178deaa879b161d107f"
   end
 
+  url "https://www.syncovery.com/release/SyncoveryMac#{version}#{arch}.dmg"
   name "Syncovery"
   desc "File synchronization and backup software"
   homepage "https://www.syncovery.com/"
