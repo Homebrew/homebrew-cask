@@ -4,6 +4,7 @@ cask "textbar" do
 
   url "http://richsomerfield.com/apps/textbar/TextBar.app-#{version}.zip"
   name "TextBar"
+  desc "Add any text to menu bar"
   homepage "http://richsomerfield.com/apps/"
 
   livecheck do
