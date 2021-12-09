@@ -10,8 +10,7 @@ cask "turbo-boost-switcher" do
 
   livecheck do
     url "https://www.rugarciap.com/turbo-boost-switcher-for-os-x-blog/"
-    strategy :page_match
-    regex(%r{href=.*?/Turbo_Boost_Switcher_v?(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/Turbo_Boost_Switcher_v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   suite "tbswitcher_resources"
