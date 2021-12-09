@@ -8,6 +8,12 @@ cask "subsync" do
   desc "Subtitle speech synchronizer"
   homepage "https://subsync.online/"
 
+  livecheck do
+    url "https://github.com/sc0ty/subsync/releases/"
+    strategy :page_match
+    regex(%r{href=.*?/subsync[._-]v?(\d+(?:\.\d+)+)-mac-x86_64\.dmg}i)
+  end
+
   app "subsync.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/subsync.wrapper.sh"
