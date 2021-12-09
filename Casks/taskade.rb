@@ -15,4 +15,10 @@ cask "taskade" do
   depends_on macos: ">= :yosemite"
 
   app "Taskade.app"
+
+  zap trash: [
+    "~/Library/Application Support/taskade",
+    "~/Library/Preferences/com.taskade.plist",
+    "~/Library/Saved Application State/com.taskade.savedState",
+  ]
 end
