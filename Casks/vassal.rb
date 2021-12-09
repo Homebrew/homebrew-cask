@@ -13,7 +13,7 @@ cask "vassal" do
       verified: "github.com/vassalengine/vassal/"
   name "VASSAL"
   desc "Board game engine"
-  homepage "http://www.vassalengine.org/"
+  homepage "https://www.vassalengine.org/"
 
   app "VASSAL.app"
 end
