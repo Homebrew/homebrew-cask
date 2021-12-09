@@ -13,4 +13,10 @@ cask "textbar" do
   end
 
   app "TextBar.app"
+
+  zap trash: [
+    "~/Library/Application Support/TextBar",
+    "~/Library/Caches/com.RichSomerfield.TextBar",
+    "~/Library/Preferences/com.RichSomerfield.TextBar.plist",
+  ]
 end
