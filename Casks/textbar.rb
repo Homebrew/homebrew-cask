@@ -1,6 +1,6 @@
 cask "textbar" do
-  version "3.2.182"
-  sha256 "911e5a309b57df82872dae9c3ae0986a9618f1a69983166a8f8918843e4ade01"
+  version "3.5.6"
+  sha256 "61fba4cdab18070c1ba21176072556df42a9c92fc280a51363028d86731a298e"
 
   url "http://richsomerfield.com/apps/textbar/TextBar.app-#{version}.zip"
   name "TextBar"
