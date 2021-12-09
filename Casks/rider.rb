@@ -2,7 +2,7 @@ cask "rider" do
   version "2021.3,213.5744.293"
   sha256 "af5af5d7915e591a7a6a1dc1302db85745642882d8332d70867ab3f5310f20b9"
 
-  url "https://download.jetbrains.com/rider/JetBrains.Rider-#{version.before_comma}.dmg"
+  url "https://download.jetbrains.com/rider/JetBrains.Rider-#{version.csv.first}.dmg"
   name "JetBrains Rider"
   desc ".NET IDE"
   homepage "https://www.jetbrains.com/rider/"
@@ -34,8 +34,8 @@ cask "rider" do
     "~/Library/Application Support/Rider#{version.major_minor}",
     "~/Library/Caches/Rider#{version.major_minor}",
     "~/Library/Logs/Rider#{version.major_minor}",
-    "~/Library/Preferences/Rider#{version.major_minor}",
     "~/Library/Preferences/jetbrains.rider.71e559ef.plist",
+    "~/Library/Preferences/Rider#{version.major_minor}",
     "~/Library/Saved Application State/com.jetbrains.rider.savedState",
   ]
 end
