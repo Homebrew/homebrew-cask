@@ -18,8 +18,8 @@ cask "vivaldi" do
 
   zap trash: [
     "~/Library/Application Support/Vivaldi",
-    "~/Library/Caches/Vivaldi",
     "~/Library/Caches/com.vivaldi.Vivaldi",
+    "~/Library/Caches/Vivaldi",
     "~/Library/Preferences/com.vivaldi.Vivaldi.plist",
     "~/Library/Saved Application State/com.vivaldi.Vivaldi.savedState",
   ]
