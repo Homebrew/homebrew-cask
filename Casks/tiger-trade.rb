@@ -12,7 +12,7 @@ cask "tiger-trade" do
   livecheck do
     url "https://up.play-analytics.com/app/upgrade/latest?lang=zh_CN&platform=darwin&appVer=1"
     strategy :page_match do |page|
-      match = page.match(/downloadUrl.*?TigerTrade[._-]v?(\d+(?:\.\d+)+)[._-](\d+(?:\.\d+)*)[._-]([a-z\d]+).dmg/i)
+      match = page.match(/downloadUrl.*?TigerTrade[._-]v?(\d+(?:\.\d+)+)[._-](\d+(?:\.\d+)*)[._-]([\h]+).dmg/i)
       next if match.blank?
 
       "#{match[1]},#{match[2]},#{match[3]}"
