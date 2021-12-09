@@ -17,4 +17,15 @@ cask "timemator" do
   depends_on macos: ">= :high_sierra"
 
   app "Timemator.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.catforce.timemator.macos.TimematorWidgets",
+    "~/Library/Application Scripts/group.catforce.timemator",
+    "~/Library/Application Support/com.catforce.timemator.macos",
+    "~/Library/Application Support/Timemator",
+    "~/Library/Caches/com.catforce.timemator.macos",
+    "~/Library/Containers/com.catforce.timemator.macos.TimematorWidgets",
+    "~/Library/Group Containers/group.catforce.timemator",
+    "~/Library/Preferences/com.catforce.timemator.macos.plist",
+  ]
 end
