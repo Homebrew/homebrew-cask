@@ -16,11 +16,11 @@ cask "finalshell" do
 
   uninstall quit:    "finalshellinstall.all",
             pkgutil: "finalshellinstall.all",
-            delete:  "/Applications/FinalShell.app",
+            delete:  "/Applications/FinalShell.app"
 
   zap trash: [
     "~/fsdownload",
     "~/Library/FinalShell",
-    "~/Library/Saved Application State/myssh.savedState",
+    "~/Library/Saved Application State/myssh.savedState"
   ]
 end
