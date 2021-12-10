@@ -1,14 +1,15 @@
 cask "centered" do
   version "3.3.1"
-  sha256 :no_check
+  sha256 "a498db40f8a7f5f5c5a6a3d868c5046527746a006ee2e554afc970873e44f078"
 
-  url "https://www.centered.app/api/download?flavor=latest&platform=mac"
+  url "https://d3ni5jxar6n4fz.cloudfront.net/Centered-#{version}-universal.dmg",
+      verified: "d3ni5jxar6n4fz.cloudfront.net/"
   name "Centered"
-  desc "Flow State App for Productivity"
+  desc "Flow state app for productivity"
   homepage "https://www.centered.app/"
 
   livecheck do
-    url :url
+    url "https://www.centered.app/api/download?flavor=latest&platform=mac"
     strategy :header_match
   end
 
