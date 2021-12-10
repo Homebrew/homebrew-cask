@@ -1,6 +1,6 @@
 cask "deezer" do
-  version "5.30.110"
-  sha256 "d8bf2aef3389bf18075039971bb9d4bb62f92df59552ee1c861148338dd7d372"
+  version "5.30.120"
+  sha256 "cc96bc16faa85d77f9f4baa7e8a2ea7ce1cccd1ede4d78c9c0d9c4574a8b93d7"
 
   url "https://www.deezer.com/desktop/download/artifact/darwin/x64/#{version}"
   name "Deezer"
