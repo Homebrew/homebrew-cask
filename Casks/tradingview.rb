@@ -4,7 +4,7 @@ cask "tradingview" do
 
   url "https://tvd-packages.tradingview.com/stable/#{version}/darwin/TradingView.dmg"
   name "TradingView Desktop"
-  desc "Experience with the power and flexibility of a desktop application"
+  desc "Charting and social-networking for investment traders"
   homepage "https://www.tradingview.com/desktop/"
 
   livecheck do
