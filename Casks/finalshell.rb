@@ -21,6 +21,6 @@ cask "finalshell" do
   zap trash: [
     "~/fsdownload",
     "~/Library/FinalShell",
-    "~/Library/Saved Application State/myssh.savedState"
+    "~/Library/Saved Application State/myssh.savedState",
   ]
 end
