@@ -3,19 +3,19 @@ cask "finalshell" do
   sha256 :no_check
 
   url "https://www.hostbuf.com/downloads/finalshell_install.pkg"
-  name "finalshell"
-  desc "一体化的的服务器,网络管理软件,不仅是ssh客户端,还是功能强大的开发,运维工具,充分满足开发,运维需求"
+  name "FinalShell"
+  desc "SSH tool, server management and remote desktop acceleration software"
   homepage "https://www.hostbuf.com/"
+
+  livecheck do
+    url "http://www.hostbuf.com/t/989.html"
+    regex(/版本号(\d+(?:\.\d+)+)/i)
+  end
 
   pkg "finalshell_install.pkg"
 
-  uninstall quit:    [
-    "finalshellinstall.all",
-  ],
-            delete:  [
-              "/Applications/FinalShell.app",
-            ],
+  uninstall quit:    "finalshellinstall.all",
             pkgutil: "finalshellinstall.all",
-
+            delete:  "/Applications/FinalShell.app",
             rmdir:   "~/Library/FinalShell/"
 end
