@@ -18,4 +18,9 @@ cask "finalshell" do
             pkgutil: "finalshellinstall.all",
             delete:  "/Applications/FinalShell.app",
             rmdir:   "~/Library/FinalShell/"
+  zap trash: [
+	     "~/fsdownload",
+              "~/Library/FinalShell/",
+	      "~/Library/Saved\ Application\ State/myssh.savedState/"
+	     ]
 end
