@@ -9,8 +9,8 @@ cask "centered" do
   homepage "https://www.centered.app/"
 
   livecheck do
-    url "https://www.centered.app/api/download?flavor=latest&platform=mac"
-    strategy :header_match
+    url "https://centered-desktop-release.s3.amazonaws.com/latest-mac.yml"
+    strategy :electron_builder
   end
 
   auto_updates true
