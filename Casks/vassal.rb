@@ -1,12 +1,12 @@
 cask "vassal" do
   arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
-  version "3.6.1"
+  version "3.6.2"
 
   if Hardware::CPU.intel?
-    sha256 "cfc72844e7241cd89ed7ff583429d238fb6660e0898d18594fce325487a046e8"
+    sha256 "8b1069fab615a901f4bae4bd45fefe93f52237e2e13a74a4856c937ac5aebcdd"
   else
-    sha256 "d7d04138e55747fa38387f6b4133afa8a080cc501863ed5cf50c055089ee2ca3"
+    sha256 "84f5405fd300daa49bcfe5f4025f8b2f9435d563d70d6565ea7b70c6906be41c"
   end
 
   url "https://github.com/vassalengine/vassal/releases/download/#{version}/VASSAL-#{version}-macos-#{arch}.dmg",
