@@ -3,13 +3,13 @@ cask "rider" do
 
   version "2021.3,213.5744.293"
 
-  url "https://download.jetbrains.com/rider/JetBrains.Rider-#{version.csv.first}#{arch}.dmg"
   if Hardware::CPU.intel?
     sha256 "af5af5d7915e591a7a6a1dc1302db85745642882d8332d70867ab3f5310f20b9"
   else
     sha256 "f293dadaf584bf87cc969403e9d91ecd0e51f489e7c4f1d887b5b43f55c8f78a"
   end
 
+  url "https://download.jetbrains.com/rider/JetBrains.Rider-#{version.csv.first}#{arch}.dmg"
   name "JetBrains Rider"
   desc ".NET IDE"
   homepage "https://www.jetbrains.com/rider/"
