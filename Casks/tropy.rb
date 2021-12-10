@@ -1,8 +1,8 @@
 cask "tropy" do
   version "1.11.0"
-  sha256 "c51d01439a6549651ef0e670bf52d68bc728f9f333ee8ad389bd959667d6a65a"
+  sha256 "8cb9c6b5a2bfc69a7f9f833aabcd5b3765a88239e682343e32c64f8452c30895"
 
-  url "https://github.com/tropy/tropy/releases/download/v#{version}/tropy-#{version}-arm64.dmg",
+  url "https://github.com/tropy/tropy/releases/download/v#{version}/tropy-#{version}.dmg",
       verified: "github.com/tropy/tropy/"
   name "Tropy"
   desc "Research photo management"
