@@ -26,6 +26,7 @@ cask "tripmode" do
   desc "Control your data usage on slow or expensive networks"
   homepage "https://www.tripmode.ch/"
 
+  auto_updates true
   depends_on macos: ">= :yosemite"
 
   app "TripMode.app"
