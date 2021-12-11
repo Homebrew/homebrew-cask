@@ -15,4 +15,11 @@ cask "twist" do
   depends_on macos: ">= :el_capitan"
 
   app "Twist.app"
+
+  zap trash: [
+    "~/Library/Application Support/Twist",
+    "~/Library/Logs/Twist",
+    "~/Library/Preferences/com.twistapp.mac-sparkle.Twist.plist",
+    "~/Library/Saved Application State/com.twistapp.mac-sparkle.Twist.savedState",
+  ]
 end
