@@ -1,8 +1,8 @@
 cask "ghidra" do
-  version "10.0.4,20210928"
-  sha256 "1ce9bdf2d7f6bdfe5dccd06da828af31bc74acfd800f71ade021d5211e820d5e"
+  version "10.1,20211210"
+  sha256 "99139c4a63a81135b3b63fe9997a012a6394a766c2c7f2ac5115ab53912d2a6c"
 
-  url "https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_#{version.before_comma}_build/ghidra_#{version.before_comma}_PUBLIC_#{version.after_comma}.zip",
+  url "https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_#{version.csv.first}_build/ghidra_#{version.csv.first}_PUBLIC_#{version.csv.second}.zip",
       verified: "github.com/NationalSecurityAgency/ghidra/"
   name "Ghidra"
   desc "Software reverse engineering (SRE) suite of tools"
@@ -18,7 +18,7 @@ cask "ghidra" do
 
   conflicts_with cask: "homebrew/cask-versions/ghidra-beta"
 
-  binary "ghidra_#{version.before_comma}_PUBLIC/ghidraRun"
+  binary "ghidra_#{version.csv.first}_PUBLIC/ghidraRun"
 
   zap trash: "~/.ghidra"
 
