@@ -6,10 +6,10 @@ cask "permute" do
       verified: "charliemonroesoftware.com/"
   name "Permute"
   desc "Converts and edits video, audio or image files"
-  homepage "https://software.charliemonroe.net/permute.php"
+  homepage "https://software.charliemonroe.net/permute/"
 
   livecheck do
-    url "https://trial.charliemonroe.net/permute/updates_#{version.major}.xml"
+    url "https://charliemonroesoftware.com/trial/permute/updates_#{version.major}.xml"
     strategy :sparkle
   end
 
