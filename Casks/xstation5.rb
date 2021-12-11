@@ -1,5 +1,5 @@
 cask "xstation5" do
-  # note: "5" is not a version number, but an intrinsic part of the product name
+  # NOTE: "5" is not a version number, but an intrinsic part of the product name
   version "2.34.0-Build.3"
   sha256 :no_check
 
