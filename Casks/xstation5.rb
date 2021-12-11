@@ -1,6 +1,6 @@
 cask "xstation5" do
   # NOTE: "5" is not a version number, but an intrinsic part of the product name
-  version "2.34.0-Build.3"
+  version "2.35.0-Build.3"
   sha256 :no_check
 
   url "https://desktopxstation5.xtb.com/prod/update/mac/xStation5-MacOS.dmg"
