@@ -15,4 +15,6 @@ cask "tinymediamanager" do
   auto_updates true
 
   app "tinyMediaManager.app"
+
+  # No zap stanza required
 end
