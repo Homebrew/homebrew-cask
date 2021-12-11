@@ -6,7 +6,7 @@ cask "typinator" do
       user_agent: :fake
   name "Typinator"
   desc "Tool to automate the insertion of frequently used text and graphics"
-  homepage "https://www.ergonis.com/"
+  homepage "https://www.ergonis.com/products/typinator/"
 
   livecheck do
     url "https://update.ergonis.com/vck/typinator.xml"
