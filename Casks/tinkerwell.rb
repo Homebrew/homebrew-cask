@@ -1,12 +1,12 @@
 cask "tinkerwell" do
   arch = Hardware::CPU.intel? ? "" : "-arm64"
 
-  version "2.18.1"
+  version "2.19.0"
 
   if Hardware::CPU.intel?
-    sha256 "1348d171fa38bbfb6060f1d5cc25d08dbcc847fb7c44a04b548323c26463a825"
+    sha256 "f5bf17eef5652b51b19cbd884df8ca3a0ceee69211ec80d10a0290f0290a5d42"
   else
-    sha256 "e5402f01c863da00ff143ec008f491fb42281aaf4689bcde4c0089bc29e36803"
+    sha256 "20c1129db8e78bf13c35e8b8182dd239186166371506f7d4ebb4523c00a59578"
   end
 
   url "https://download.tinkerwell.app/tinkerwell/Tinkerwell-#{version}#{arch}.dmg"
