@@ -16,4 +16,12 @@ cask "tibco-jaspersoft-studio" do
   auto_updates true
 
   app "TIBCO Jaspersoft Studio #{version}.app"
+
+  zap trash: [
+    "~/JaspersoftWorkspace",
+    "~/Library/Application Support/Jaspersoft Studio",
+    "~/Library/Preferences/com.jaspersoft.studio.plist",
+    "~/Library/Preferences/com.jaspersoft.studio.rcp.product.plist",
+    "~/Library/Saved Application State/com.jaspersoft.studio.rcp.product.savedState",
+  ]
 end
