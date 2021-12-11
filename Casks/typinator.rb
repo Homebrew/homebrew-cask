@@ -14,4 +14,10 @@ cask "typinator" do
   end
 
   app "Typinator.app"
+
+  zap trash: [
+    "~/Desktop/Typinator Tutorial.rtfd",
+    "~/Library/Application Support/Typinator",
+    "~/Library/Preferences/com.macility.typinator2.plist",
+  ]
 end
