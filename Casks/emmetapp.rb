@@ -24,7 +24,6 @@ cask "emmetapp" do
   zap trash: [
     "~/Library/Application Scripts/com.speedyhill.emmetapp-LaunchAtLoginHelper",
     "~/Library/Containers/com.speedyhill.emmetapp-LaunchAtLoginHelper",
-    "~/Library/Group Containers/2BUA8C4S2C.com.agilebits",
     "~/Library/Preferences/com.speedyhill.emmetapp.plist",
   ]
 end
