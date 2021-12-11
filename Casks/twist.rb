@@ -8,8 +8,8 @@ cask "twist" do
   homepage "https://twist.com/"
 
   livecheck do
-    url "https://twist.com/mac_app"
-    strategy :header_match
+    url "https://downloads.twist.com/mac/latest-mac.yml"
+    strategy :electron_builder
   end
 
   depends_on macos: ">= :el_capitan"
