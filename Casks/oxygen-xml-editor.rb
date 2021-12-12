@@ -10,10 +10,14 @@ cask "oxygen-xml-editor" do
   end
 
   url "https://archives.oxygenxml.com/Oxygen/Editor/InstData#{version}/MacOSX/VM/oxygen-openjdk#{arch}.dmg"
-  appcast "https://www.oxygenxml.com/rssBuildID.xml"
   name "oXygen XML Editor"
   desc "Tools for XML editing, including Oxygen XML Developer and Author"
   homepage "https://www.oxygenxml.com/xml_editor.html"
+
+  livecheck do
+    url "https://www.oxygenxml.com/rssBuildID.xml"
+    regex(/Oxygen\sXML\sEditor\sversion\s(\d+(?:\.\d+)+)/i)
+  end
 
   suite "Oxygen XML Editor"
 end
