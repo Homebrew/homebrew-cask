@@ -7,6 +7,11 @@ cask "appium-inspector" do
   desc "GUI inspector for mobile apps"
   homepage "https://github.com/appium/appium-inspector/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Appium Inspector.app"
 
   zap trash: [
