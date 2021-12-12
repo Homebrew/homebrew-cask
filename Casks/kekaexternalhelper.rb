@@ -1,8 +1,8 @@
 cask "kekaexternalhelper" do
-  version "1.1.1,1.2.7"
-  sha256 "8f25d23df3941cda7af5b8e6c964c7c00d9b5a24af803cd241aa26f5a8a51e72"
+  version "1.1.2,1.2.50"
+  sha256 "4fb629045b9d887a6adb3280e791ff8ac7843b40b475bb88ece5c25c6cd5d70f"
 
-  url "https://github.com/aonez/Keka/releases/download/v#{version.after_comma}/KekaExternalHelper-v#{version.before_comma}.zip"
+  url "https://github.com/aonez/Keka/releases/download/v#{version.csv.second}/KekaExternalHelper-v#{version.csv.first}.zip"
   name "Keka External Helper"
   name "KekaDefaultApp"
   desc "Helper application for the Keka file archiver"
