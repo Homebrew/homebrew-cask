@@ -8,7 +8,7 @@ cask "twonkyserver" do
   homepage "https://twonky.com/"
 
   livecheck do
-    url "https://twonky.com/downloads/index.html"
+    url "https://twonky.com/downloads/"
     regex(%r{href=.*?/TwonkyServerInstaller[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
   end
 
