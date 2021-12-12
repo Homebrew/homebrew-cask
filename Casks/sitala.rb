@@ -20,4 +20,13 @@ cask "sitala" do
     "de.decomposer.Sitala.au",
     "de.decomposer.Sitala.vst",
   ]
+
+  zap trash: [
+    "~/Library/Application Support/Sitala",
+    "~/Library/Caches/de.decomposer.Sitala",
+    "~/Library/Preferences/Sitala.settings",
+    "~/Library/Preferences/SitalaStandalone.settings",
+    "~/Library/Preferences/de.decomposer.Sitala.plist",
+    "~/Library/Saved Application State/de.decomposer.Sitala.savedState",
+  ]
 end
