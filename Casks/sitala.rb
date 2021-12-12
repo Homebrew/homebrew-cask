@@ -3,7 +3,7 @@ cask "sitala" do
   sha256 "d07a7c107a1d944bb2fc11392bec9c606e1c9caf357db6bd979e248f6c584831"
 
   url "https://decomposer.de/sitala/releases/Sitala-#{version}.dmg"
-  name "sitala"
+  name "Sitala"
   desc "Drum sampler plugin and standalone app"
   homepage "https://decomposer.de/sitala/"
 
