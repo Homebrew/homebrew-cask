@@ -4,12 +4,11 @@ cask "sitala" do
 
   url "https://decomposer.de/sitala/releases/Sitala-#{version}.dmg"
   name "sitala"
-  desc "Free drum plugin and standalone app"
+  desc "Drum sampler plugin and standalone app"
   homepage "https://decomposer.de/sitala/"
 
   livecheck do
     url "https://decomposer.de/sitala/"
-    strategy :page_match
     regex(%r{href="/sitala/releases/Sitala-(\d+(?:\.\d+)*)\.dmg}i)
   end
 
