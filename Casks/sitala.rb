@@ -8,8 +8,8 @@ cask "sitala" do
   homepage "https://decomposer.de/sitala/"
 
   livecheck do
-    url "https://decomposer.de/sitala/"
-    regex(%r{href="/sitala/releases/Sitala-(\d+(?:\.\d+)*)\.dmg}i)
+    url :homepage
+    regex(/Sitala-(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "Sitala.app"
@@ -24,9 +24,9 @@ cask "sitala" do
   zap trash: [
     "~/Library/Application Support/Sitala",
     "~/Library/Caches/de.decomposer.Sitala",
+    "~/Library/Preferences/de.decomposer.Sitala.plist",
     "~/Library/Preferences/Sitala.settings",
     "~/Library/Preferences/SitalaStandalone.settings",
-    "~/Library/Preferences/de.decomposer.Sitala.plist",
     "~/Library/Saved Application State/de.decomposer.Sitala.savedState",
   ]
 end
