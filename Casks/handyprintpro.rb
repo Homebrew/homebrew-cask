@@ -10,7 +10,7 @@ cask "handyprintpro" do
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?/handyPrintPRO\+v(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/handyPrintPRO\+v(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   pkg "handyPrintProInstaller.pkg"
