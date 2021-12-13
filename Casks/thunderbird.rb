@@ -79,6 +79,7 @@ cask "thunderbird" do
 
   auto_updates true
   conflicts_with cask: "homebrew/cask-versions/thunderbird-beta"
+  depends_on macos: ">= :sierra"
 
   app "Thunderbird.app"
 
