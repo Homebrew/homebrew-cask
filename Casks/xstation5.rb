@@ -14,4 +14,12 @@ cask "xstation5" do
   end
 
   app "xStation5.app"
+
+  zap trash: [
+    "~/Library/Application Support/xStation5",
+    "~/Library/Caches/xstation5-updater",
+    "~/Library/Logs/xStation5",
+    "~/Library/Preferences/xStation5.desktop.x64.plist",
+    "~/Library/Saved Application State/xStation5.desktop.x64.savedState",
+  ]
 end
