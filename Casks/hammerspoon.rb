@@ -1,6 +1,6 @@
 cask "hammerspoon" do
-  version "0.9.92"
-  sha256 "1064757823b0f8406538be569c6c60efc2dcb1efa407041c04fec5ac190c784e"
+  version "0.9.93"
+  sha256 "b49282ca1c90ea555f5e1cd1a405792b98ac5c5472a16b44fed1bd3e53da8e44"
 
   url "https://github.com/Hammerspoon/hammerspoon/releases/download/#{version}/Hammerspoon-#{version}.zip",
       verified: "github.com/Hammerspoon/hammerspoon/"
