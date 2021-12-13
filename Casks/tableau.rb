@@ -1,6 +1,6 @@
 cask "tableau" do
-  version "2021.3.4"
-  sha256 "33c686d0981b07af49bd2f3bd780c8ffdcb0d2f0bf42f8c167229af002a51061"
+  version "2021.4.0"
+  sha256 "1ae94e72863163f772377fd22127105b1b7ae318019b7a08d42bdf914a846dcf"
 
   url "https://downloads.tableau.com/tssoftware/TableauDesktop-#{version.dots_to_hyphens}.dmg"
   name "Tableau Desktop"
@@ -10,7 +10,7 @@ cask "tableau" do
   livecheck do
     url "https://www.tableau.com/downloads/desktop/mac"
     strategy :header_match do |headers|
-      headers["location"][/-(\d+-\d+-\d+)\.dmg/i, 1].tr("-", ".")
+      headers["location"][/-(\d+-\d+-\d+)\w?\.dmg/i, 1].tr("-", ".")
     end
   end
 
@@ -20,7 +20,6 @@ cask "tableau" do
 
   uninstall pkgutil: [
     "com.amazon.redshiftodbc",
-    "simba.sparkodbc",
     "com.simba.sparkodbc",
     "com.simba.sqlserverodbc",
     "com.tableausoftware.Desktop.app",
@@ -29,5 +28,6 @@ cask "tableau" do
     "com.tableausoftware.mysql",
     "com.tableausoftware.oracle",
     "com.tableausoftware.postgresql",
+    "simba.sparkodbc",
   ]
 end
