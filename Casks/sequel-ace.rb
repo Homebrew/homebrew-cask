@@ -11,7 +11,7 @@ cask "sequel-ace" do
     url :url
     strategy :git do |tags|
       tags.map do |tag|
-        match = tag.match(%r{^production/(\d+(?:\.\d+)*)-(\d+)$}i)
+        match = tag.match(%r{^production/(\d+(?:\.\d+)+)-(\d+)$}i)
         "#{match[1]},#{match[2]}" if match
       end.compact
     end
