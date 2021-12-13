@@ -16,9 +16,8 @@ cask "wolai" do
   homepage "https://www.wolai.com/"
 
   livecheck do
-    url "https://wolai-public.oss-cn-shanghai.aliyuncs.com/dist/installers/electron-versions.json"
-    strategy :page_match
-    regex(/"version"\s*:\s*"(\d+(:?\.\d+)+)"/)
+    url "https://static2.wolai.com/dist/installers/latest-mac.yml"
+    strategy :electron_builder
   end
 
   app "wolai.app"
