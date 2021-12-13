@@ -9,9 +9,7 @@ cask "jupyterlab" do
 
   pkg "JupyterLab-Setup-macOS.pkg"
 
-  uninstall pkgutil: [
-    "com.electron.jupyterlab-desktop",
-  ],
+  uninstall pkgutil: "com.electron.jupyterlab-desktop",
             delete:  [
               "/Applications/JupyterLab.app",
               "/usr/local/bin/jlab",
@@ -21,8 +19,8 @@ cask "jupyterlab" do
     "~/.jupyter",
     "~/Library/Application Support/jupyterlab-desktop",
     "~/Library/Jupyter",
-    "~/Library/Logs/JupyterLab",
     "~/Library/Logs/jupyterlab-desktop",
+    "~/Library/Logs/JupyterLab",
     "~/Library/Preferences/com.electron.jupyterlab-desktop.plist",
     "~/Library/Saved Application State/com.electron.jupyterlab-desktop.savedState",
   ]
