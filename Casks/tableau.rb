@@ -10,7 +10,7 @@ cask "tableau" do
   livecheck do
     url "https://www.tableau.com/downloads/desktop/mac"
     strategy :header_match do |headers|
-      headers["location"][/-(\d+-\d+-\d+)\.dmg/i, 1].tr("-", ".")
+      headers["location"][/-(\d+-\d+-\d+)\w?\.dmg/i, 1].tr("-", ".")
     end
   end
 
@@ -20,7 +20,6 @@ cask "tableau" do
 
   uninstall pkgutil: [
     "com.amazon.redshiftodbc",
-    "simba.sparkodbc",
     "com.simba.sparkodbc",
     "com.simba.sqlserverodbc",
     "com.tableausoftware.Desktop.app",
@@ -29,5 +28,6 @@ cask "tableau" do
     "com.tableausoftware.mysql",
     "com.tableausoftware.oracle",
     "com.tableausoftware.postgresql",
+    "simba.sparkodbc",
   ]
 end
