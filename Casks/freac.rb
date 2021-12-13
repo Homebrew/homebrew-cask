@@ -6,11 +6,29 @@ cask "freac" do
 
     url "https://github.com/enzo1982/freac/releases/download/v#{version.csv.first}/freac-#{version.delete(",")}-macos10.dmg",
         verified: "github.com/enzo1982/freac/"
+
+    livecheck do
+      url "https://github.com/enzo1982/freac/releases/latest"
+      strategy :page_match do |page|
+        page.scan(%r{href=.*?/freac[._-](\d+(?:\.\d+)+)([A-z]*)-macos10\.dmg}i).map do |match|
+          match[1].blank? ? match[0] : "#{match[0]},#{match[1]}"
+        end
+      end
+    end
   else
     sha256 "131b4037c90d996e2a798ec62a413aeefffbc7ee02d1616b807bd0708c3c8854"
 
     url "https://github.com/enzo1982/freac/releases/download/v#{version.csv.first}/freac-#{version.delete(",")}-macos11.dmg",
         verified: "github.com/enzo1982/freac/"
+
+    livecheck do
+      url "https://github.com/enzo1982/freac/releases/latest"
+      strategy :page_match do |page|
+        page.scan(%r{href=.*?/freac[._-](\d+(?:\.\d+)+)([A-z]*)-macos11\.dmg}i).map do |match|
+          match[1].blank? ? match[0] : "#{match[0]},#{match[1]}"
+        end
+      end
+    end
   end
 
   name "fre:ac"
