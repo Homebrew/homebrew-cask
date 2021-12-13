@@ -16,7 +16,7 @@ cask "centered" do
   auto_updates true
 
   app "Centered.app"
-  
+
   zap trash: [
     "~/Library/Application Support/Centered",
     "~/Library/Preferences/app.centered.mac.prod.plist",
