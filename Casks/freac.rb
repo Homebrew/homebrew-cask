@@ -2,7 +2,7 @@ cask "freac" do
   version "1.1.5,a"
 
   if MacOS.version <= :catalina
-    sha256 "0e3d14e789b6d413db519348bfdade657af4324054ac3a47f6b389131422f1d7"
+    sha256 "7066273f53e8ba106f6858e90e5637b2d4d3b7548ea26186a210a4c770f3a357"
 
     url "https://github.com/enzo1982/freac/releases/download/v#{version.csv.first}/freac-#{version.delete(",")}-macos10.dmg",
         verified: "github.com/enzo1982/freac/"
