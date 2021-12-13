@@ -1,8 +1,8 @@
 cask "netbeans" do
-  version "12.5"
-  sha256 "012d684899d19102050e64991f8e90e22f60545f954c32638a14bf1e4c8cfb51"
+  version "12.6"
+  sha256 "714cbd2f8409ff45764040ddbbcf00a79eeeb41d08dfd29dd2e46466a29917ff"
 
-  url "https://www-eu.apache.org/dist/netbeans/netbeans/#{version}/Apache-NetBeans-#{version}-bin-macosx.dmg"
+  url "https://dlcdn.apache.org/netbeans/netbeans-installers/#{version}/Apache-NetBeans-#{version}-bin-macosx.dmg"
   name "NetBeans IDE"
   desc "Development environment, tooling platform and application framework"
   homepage "https://netbeans.apache.org/"
