@@ -10,11 +10,8 @@ cask "oxygen-xml-editor" do
   homepage "https://www.oxygenxml.com/xml_editor.html"
 
   livecheck do
-    url "https://www.oxygenxml.com/allVersions.xml"
-    strategy :page_match do |page|
-      v = page.match(/buildId_(\d+(?:_\d+)+)/i)
-      v.tr("_", ".")
-    end
+    url "https://www.oxygenxml.com/rssBuildID.xml"
+    regex(/Oxygen\sXML\sEditor\sversion\s(\d+(?:\.\d+)+)/i)
   end
 
   suite "Oxygen XML Editor"
