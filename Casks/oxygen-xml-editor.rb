@@ -12,7 +12,7 @@ cask "oxygen-xml-editor" do
   livecheck do
     url "https://www.oxygenxml.com/allVersions.xml"
     strategy :page_match do |page|
-      v = page[/buildId_(\d+(?:_\d+)+)/i, 1]
+      v = page.match(/buildId_(\d+(?:_\d+)+)/i)
       v.tr("_", ".")
     end
   end
