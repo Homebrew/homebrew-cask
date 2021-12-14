@@ -8,6 +8,17 @@ cask "my-image-garden" do
   desc "Photo editing and printing tool"
   homepage "https://support-asia.canon-asia.com/?personal"
 
+  livecheck do
+    url "https://pdisp01.c-wss.com/gdl/WWUFORedirectTarget.do?id=MDIwMDAwNjA2MjA0"
+    regex(%r{/([^/]+)/mmig-mac[._-]v?(\d+(?:[._]\d+)+)-ea11\.dmg}i)
+    strategy :header_match do |headers, regex|
+      match = headers["location"].match(regex)
+      next if match.blank?
+
+      "#{match[2].tr("_", ".")},#{match[1]}"
+    end
+  end
+
   pkg "My Image Garden V#{version.csv.first.no_dots}.pkg"
 
   uninstall pkgutil: "jp.co.canon.MyImageGarden",
