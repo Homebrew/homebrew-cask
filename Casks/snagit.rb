@@ -15,7 +15,7 @@ cask "snagit" do
     end
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :big_sur"
 
   app "Snagit #{version.major}.app"
 
