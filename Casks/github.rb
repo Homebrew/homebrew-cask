@@ -4,14 +4,14 @@ cask "github" do
 
   version "2.9.6-9196a1ae"
 
-  url "https://desktop.githubusercontent.com/github-desktop/releases/#{version}/GitHubDesktop-#{arch}.zip",
-      verified: "desktop.githubusercontent.com/github-desktop/"
   if Hardware::CPU.intel?
     sha256 "aff132fd70efbbc8154ce3e1c92bf5b907fda6d4d4a5733238cb61bbc005f3fe"
   else
     sha256 "0d0c066619295d3633e310c186e538ee97cabb41523b1e85396173afb0a655fc"
   end
 
+  url "https://desktop.githubusercontent.com/github-desktop/releases/#{version}/GitHubDesktop-#{arch}.zip",
+      verified: "desktop.githubusercontent.com/github-desktop/"
   name "GitHub Desktop"
   desc "Desktop client for GitHub repositories"
   homepage "https://desktop.github.com/"
