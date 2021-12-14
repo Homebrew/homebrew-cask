@@ -9,8 +9,7 @@ cask "tablecruncher" do
 
   livecheck do
     url "https://tablecruncher.com/download/"
-    strategy :page_match
-    regex(%r{href=.*?/download/Tablecruncher-(\d+(?:\.\d+)+)\.zip}i)
+    regex(/Tablecruncher-(\d+(?:\.\d+)+)\.zip/i)
   end
 
   app "Tablecruncher.app"
