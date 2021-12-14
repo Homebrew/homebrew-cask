@@ -1,6 +1,6 @@
 cask "mediathekview" do
-  version "13.8.0"
-  sha256 "a35a3fe6303cbdca6129c367192d860e54e7397d979d656d5dd1375856fb99c0"
+  version "13.8.1"
+  sha256 "1f614242ee44c81fd3b690929cb340a76d1d3cc262652a2bd4b8afc7c9a4b4a8"
 
   url "https://download.mediathekview.de/stabil/MediathekView-#{version}-mac.dmg"
   name "MediathekView"
@@ -10,7 +10,7 @@ cask "mediathekview" do
   livecheck do
     url "https://download.mediathekview.de/stabil/"
     strategy :page_match
-    regex(%r{href=.*?/MediathekView-(\d+(?:\.\d+)*)-mac\.dmg}i)
+    regex(%r{href=.*?/MediathekView-(\d+(?:\.\d+)+)-mac\.dmg}i)
   end
 
   app "MediathekView.app"
