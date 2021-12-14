@@ -7,5 +7,11 @@ cask "tablecruncher" do
   desc "Lightweight CSV editor"
   homepage "https://tablecruncher.com"
 
+  livecheck do
+    url "https://tablecruncher.com/download/"
+    strategy :page_match
+    regex(%r{href=.*?/download/Tablecruncher-(\d+(?:\.\d+)+)\.zip}i)
+  end
+
   app "Tablecruncher.app"
 end
