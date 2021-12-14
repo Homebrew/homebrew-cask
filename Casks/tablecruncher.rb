@@ -5,7 +5,7 @@ cask "tablecruncher" do
   url "https://tablecruncher.com/download/Tablecruncher-#{version}.zip"
   name "Tablecruncher"
   desc "Lightweight CSV editor"
-  homepage "https://tablecruncher.com"
+  homepage "https://tablecruncher.com/"
 
   livecheck do
     url "https://tablecruncher.com/download/"
