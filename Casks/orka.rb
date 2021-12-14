@@ -10,8 +10,7 @@ cask "orka" do
 
   livecheck do
     url "https://orkadocs.macstadium.com/docs/downloads"
-    strategy :page_match
-    regex(%r{href=.*?/official/(\d+(?:\.\d+)*)/macos/orka\.pkg}i)
+    regex(%r{href=.*?/official/(\d+(?:\.\d+)+)/macos/orka\.pkg}i)
   end
 
   pkg "orka.pkg"
