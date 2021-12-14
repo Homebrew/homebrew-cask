@@ -14,4 +14,10 @@ cask "tablecruncher" do
   end
 
   app "Tablecruncher.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.tablecruncher",
+    "~/Library/Preferences/com.tablecruncher.Tablecruncher.plist",
+    "~/Library/Saved Application State/com.tablecruncher.Tablecruncher.savedState",
+  ]
 end
