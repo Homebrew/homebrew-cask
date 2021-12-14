@@ -1,7 +1,7 @@
 cask "powershell" do
-  version "7.2.1"
-
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
+
+  version "7.2.1"
 
   if Hardware::CPU.intel?
     sha256 "23046dbada76832e441b838170e3e36ada54a69c4f3ae25e210be554e659fce4"
