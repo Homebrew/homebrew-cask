@@ -21,13 +21,13 @@ cask "dingtalk" do
 
   zap trash: [
     "~/Library/Application Support/DingTalkMac",
-    "~/Library/Caches/DingTalk",
     "~/Library/Caches/com.alibaba.DingTalkInstaller",
     "~/Library/Caches/com.alibaba.DingTalkMac",
-    "~/Library/Preferences/com.dingtalk.mac.plist",
-    "~/Library/Preferences/com.alibaba.DingTalkMac.plist",
-    "~/Library/Preferences/com.alibaba.DingTalkInstaller.plist",
+    "~/Library/Caches/DingTalk",
     "~/Library/Preferences/com.alibaba.DingTalk-Helper.plist",
+    "~/Library/Preferences/com.alibaba.DingTalkInstaller.plist",
+    "~/Library/Preferences/com.alibaba.DingTalkMac.plist",
+    "~/Library/Preferences/com.dingtalk.mac.plist",
     "~/Library/Saved Application State/com.alibaba.DingTalkMac.savedState",
     "~/Library/WebKit/com.alibaba.DingTalkMac",
   ]
