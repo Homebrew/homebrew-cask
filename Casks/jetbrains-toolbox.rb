@@ -9,7 +9,7 @@ cask "jetbrains-toolbox" do
     sha256 "9832d19e3341ff159855f8002da18c3fd1e41ebcf86c6fb94e99272b6fa52e5b"
   end
 
-  url "https://download.jetbrains.com/toolbox/jetbrains-toolbox-#{version.after_comma}#{arch}.dmg"
+  url "https://download.jetbrains.com/toolbox/jetbrains-toolbox-#{version.csv.second}#{arch}.dmg"
   name "JetBrains Toolbox"
   desc "JetBrains tools manager"
   homepage "https://www.jetbrains.com/toolbox-app/"
