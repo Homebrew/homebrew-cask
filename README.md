@@ -30,13 +30,13 @@ And there we have it. An application installed with one quick command: no clicki
 
 ## Learn More
 
-* Find basic documentation on using Homebrew Cask in [USAGE.md](USAGE.md)
-* Want to contribute a Cask? Awesome! See [CONTRIBUTING.md](CONTRIBUTING.md)
-* More project-related details and discussion are available in the [documentation](doc)
+* Find basic documentation on using Homebrew Cask in [USAGE.md](USAGE.md).
+* Want to contribute a Cask? Awesome! See [CONTRIBUTING.md](CONTRIBUTING.md).
+* More project-related details and discussion are available in the [documentation](doc).
 
 ## Reporting bugs
 
-[**If you ignore this guide, your issue may be closed without review**](doc/faq/closing_issues_without_review.md).
+[**If you ignore this guide, your issue may be closed without review**](doc/faq/closing_issues_without_review.md)
 
 Before reporting a bug, run `brew update-reset && brew update` and try your command again. This is a fix-all that will reset the state of all your taps, ensuring the problem isn’t an outdated setup on your side.
 
@@ -64,7 +64,7 @@ If the issue is still not solved, see the guides for common problems:
 We’re really rather friendly! Here are the best places to talk about the project:
 
 * [Open an issue](https://github.com/Homebrew/homebrew-cask/issues/new/choose).
-* Join us on [GitHub discussions (forum)](https://github.com/Homebrew/discussions)
+* Join us on [GitHub discussions (forum)](https://github.com/Homebrew/discussions).
 
 ## License
-Code is under the [BSD 2 Clause (NetBSD) license](LICENSE)
+Code is under the [BSD 2 Clause (NetBSD) license](LICENSE).
