@@ -9,8 +9,7 @@ cask "launchbar" do
 
   livecheck do
     url "https://www.obdev.at/products/launchbar/download.html"
-    strategy :page_match
-    regex(%r{href=.*?/LaunchBar-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/LaunchBar-(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   auto_updates true
