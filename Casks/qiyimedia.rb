@@ -10,7 +10,6 @@ cask "qiyimedia" do
 
   livecheck do
     url "https://app.iqiyi.com/mac/player/index.html"
-    strategy :page_match
     regex(/最新版本：(\d+(?:\.\d+)+)/i)
   end
 
