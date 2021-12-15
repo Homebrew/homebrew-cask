@@ -4,12 +4,12 @@ cask "serviio" do
 
   url "https://download.serviio.org/releases/serviio-#{version}-osx.tar.gz"
   name "Serviio"
+  desc "Media server"
   homepage "https://serviio.org/"
 
   livecheck do
     url "https://www.serviio.org/download"
-    strategy :page_match
-    regex(%r{href=.*?/serviio-(\d+(?:\.\d+)*)-osx\.tar\.gz}i)
+    regex(%r{href=.*?/serviio-(\d+(?:\.\d+)+)-osx\.tar\.gz}i)
   end
 
   pkg "Serviio-#{version}.pkg"
