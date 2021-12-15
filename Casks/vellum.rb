@@ -1,8 +1,8 @@
 cask "vellum" do
-  version "2.8.9,28900"
-  sha256 "a7459ccc25cbda4e540dc88c87cf134ff69c3a0436627ad3a81f9b294c8438b5"
+  version "3.0.1,30100"
+  sha256 "de10e693d35accd85e063de89225cfc949e12c1c8c6427af0595d0f16370de9b"
 
-  url "https://180g.s3.amazonaws.com/downloads/Vellum-#{version.after_comma}.zip",
+  url "https://180g.s3.amazonaws.com/downloads/Vellum-#{version.csv.second}.zip",
       verified: "180g.s3.amazonaws.com/downloads/"
   name "Vellum"
   desc "Ebook creation software"
