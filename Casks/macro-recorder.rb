@@ -3,7 +3,7 @@ cask "macro-recorder" do
   sha256 :no_check
 
   url "https://www.macrorecorder.com/MacroRecorderSetup.dmg"
-  name "macro-recorder"
+  name "Macro Recorder"
   desc "Record mouse and keyboard actions"
   homepage "https://www.macrorecorder.com/"
 
