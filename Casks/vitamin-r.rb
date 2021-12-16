@@ -20,4 +20,10 @@ cask "vitamin-r" do
   auto_updates true
 
   app "Vitamin-R #{version.major}.app"
+
+  zap trash: [
+    "~/Library/Application Support/Vitamin-R",
+    "~/Library/Caches/net.publicspace.dist.vitaminr#{version.major}",
+    "~/Library/Preferences/net.publicspace.dist.vitaminr#{version.major}.plist",
+  ]
 end
