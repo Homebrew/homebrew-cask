@@ -5,7 +5,7 @@ cask "librewolf" do
     version "95.0-2,7972ac43891a576a17b90753be3694a0"
     sha256 "c9b996797ba4aa8c38bc058d47504e78f20f8ec1dc7bbc98185c67e535bed736"
   else
-    version "95.0-2-eeb57ce10660d7e33a18898609873bcb"
+    version "95.0-2,eeb57ce10660d7e33a18898609873bcb"
     sha256 "1a2813330676f4fee597d393d6ae3cfe9e68225787abcb3095ee6d2a163b6e21"
   end
 
@@ -17,7 +17,7 @@ cask "librewolf" do
 
   livecheck do
     url "https://gitlab.com/api/v4/projects/13853965/releases"
-    regex(%r{/(\w+\d+)/librewolf[._-](\d+(?:\.\d+)+(?:-\d+)?)#{arch}\.dmg}i)
+    regex(%r{/(\w+)/librewolf[._-](\d+(?:\.\d+)+(?:-\d+)?)#{arch}\.dmg}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|
         "#{match[1]},#{match[0]}"
