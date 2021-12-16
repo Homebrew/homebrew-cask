@@ -9,6 +9,7 @@ cask "vitamin-r" do
 
   url "https://www.publicspace.net/download/signedVitamin#{version.major}.zip"
   name "Vitamin-R"
+  desc "Collection of productivity tools and techniques"
   homepage "https://www.publicspace.net/Vitamin-R/"
 
   livecheck do
