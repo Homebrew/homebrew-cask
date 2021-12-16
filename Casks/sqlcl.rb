@@ -8,6 +8,7 @@ cask "sqlcl" do
   homepage "https://www.oracle.com/sqlcl"
 
   livecheck do
+     # this will make sure the actual file is listed 
     url "https://www.oracle.com/tools/downloads/sqlcl-downloads.html"
     regex(/href=.*?sqlcl[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
