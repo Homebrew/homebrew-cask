@@ -7,6 +7,12 @@ cask "macrorecorder" do
   desc "Record mouse and keyboard actions"
   homepage "https://www.macrorecorder.com/"
 
+  livecheck do
+    url "https://www.macrorecorder.com/download/"
+    strategy :page_match
+    regex(%r{changelog-mac/'>(\d+(?:\.\d+)*)</a>}i)
+  end
+
   depends_on macos: ">= :mojave"
 
   app "MacroRecorder.app"
