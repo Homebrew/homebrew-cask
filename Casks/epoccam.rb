@@ -1,5 +1,5 @@
 cask "epoccam" do
-  version "3.4.0"
+  version "3.4"
   sha256 "176be15ccf03f8166733237862c40d7837af7dce5893d06a649d7816cca0af3b"
 
   url "https://edge.elgato.com/egc/macos/epoccam/EpocCam_Installer_#{version.dots_to_underscores}.pkg"
