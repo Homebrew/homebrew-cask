@@ -1,5 +1,5 @@
 cask "robloxstudio" do
-  version :latest
+  version "1.2.2.5060610"
   sha256 :no_check
 
   url "https://setup.rbxcdn.com/mac/RobloxStudio.dmg",
