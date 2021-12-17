@@ -8,6 +8,7 @@ cask "shifty" do
   desc "Menu bar app that provides more control over Night Shift"
   homepage "https://shifty.natethompson.io/"
 
+  auto_updates true
   depends_on macos: ">= :sierra"
 
   app "Shifty.app"

@@ -1,11 +1,11 @@
 cask "ringcentral" do
-  version "21.3.31"
+  version "21.4.25"
   sha256 :no_check
 
   url "https://app.ringcentral.com/downloads/RingCentral.pkg"
   name "RingCentral"
   desc "Team messaging, video meetings, and a business phone"
-  homepage "https://www.ringcentral.com/rcapp.html"
+  homepage "https://www.ringcentral.com/download.html"
 
   livecheck do
     url "https://app.ringcentral.com/download/latest-mac.yml"

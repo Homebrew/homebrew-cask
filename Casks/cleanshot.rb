@@ -1,8 +1,8 @@
 cask "cleanshot" do
-  version "3.9.3"
-  sha256 "08d9a0d641b10b52990785b484ff0f42b1f13d5e835ccff9af2a1e588ce117d4"
+  version "4.0"
+  sha256 "035b429459257d134298e3bf4f1670e2d58fcec9a304309eeb27fc5725527f24"
 
-  url "https://updates.getcleanshot.com/v#{version.major}/CleanShot-X-#{version}.dmg"
+  url "https://updates.getcleanshot.com/v3/CleanShot-X-#{version}.dmg"
   name "CleanShot"
   desc "Screen capturing tool"
   homepage "https://getcleanshot.com/"
@@ -23,6 +23,7 @@ cask "cleanshot" do
     "~/Library/Application Support/CleanShot",
     "~/Library/Caches/pl.maketheweb.cleanshotx",
     "~/Library/Caches/SentryCrash/CleanShot X",
+    "~/Library/Preferences/com.getcleanshot.app.plist",
     "~/Library/Preferences/pl.maketheweb.cleanshotx.plist",
   ]
 end

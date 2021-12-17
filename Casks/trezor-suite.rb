@@ -1,23 +1,25 @@
 cask "trezor-suite" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "21.10.2"
+  version "21.12.2"
 
-  url "https://suite.trezor.io/web/static/desktop/Trezor-Suite-#{version}-mac-#{arch}.dmg"
   if Hardware::CPU.intel?
-    sha256 "f2043d03f8bd71373f09634cedf44425702398b3453ab6d541683a8accd58d2a"
+    sha256 "07070c6d1e345cc238e8c4ea5e293c24ae713a654c7b73b04bc6c580b0cf835f"
   else
-    sha256 "5a7eeac02cfa9efa4fb411b49cbe1fe7a763e8e1f043a300def1532d4da836da"
+    sha256 "07234bff11628537281ba4d6939d72524ff69a3f588b7328a6c2f2bb371827cd"
   end
 
+  url "https://suite.trezor.io/web/static/desktop/Trezor-Suite-#{version}-mac-#{arch}.dmg"
   name "TREZOR Suite"
   desc "Companion app for the Trezor hardware wallet"
   homepage "https://suite.trezor.io/"
 
   livecheck do
-    url :homepage
-    regex(/Trezor-Suite-(\d+(?:\.\d+)*)-/i)
+    url "https://github.com/trezor/trezor-suite"
+    strategy :github_latest
   end
+
+  auto_updates true
 
   app "Trezor Suite.app"
 

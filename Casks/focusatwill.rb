@@ -1,6 +1,6 @@
 cask "focusatwill" do
-  version "2.0.0"
-  sha256 "c57df34add6bcefbc86f4180c71ca334b4ca7c58114a631c5bcf66f27b0dbe6e"
+  version "3.1.0"
+  sha256 "86ff016571ffd43711c2eaf9f68db5eba51c5cc7b9446ab6cdebad194c02fbc7"
 
   url "https://faw-desktop.s3.amazonaws.com/focusatwill-#{version}.dmg",
       verified: "faw-desktop.s3.amazonaws.com/"
@@ -14,4 +14,11 @@ cask "focusatwill" do
   end
 
   app "focusatwill.app"
+
+  zap trash: [
+    "~/Library/Application Support/focusatwill",
+    "~/Library/Logs/focusatwill",
+    "~/Library/Preferences/com.focusatwill.desktop.plist",
+    "~/Library/Saved Application State/com.focusatwill.desktop.savedState",
+  ]
 end

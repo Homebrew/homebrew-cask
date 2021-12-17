@@ -1,17 +1,22 @@
 cask "pd-l2ork" do
-  version "2.15.2-rev.2d04705d"
-  sha256 "12ad771161cbab189ab27a2f09be2a416bc69c84a727dcb3a5e2678b6adc051b"
+  version "2.17.0,20210417,ca592f6f"
+  sha256 "c890f169663d9cdf947baaa2ce9cf0d48fcd07cb71368b7eab29547b237dab39"
 
-  url "https://github.com/agraef/purr-data/releases/download/#{version}/osx_10.11-x86_64-dmg.zip",
+  url "https://github.com/agraef/purr-data/releases/download/#{version.csv.first}/Pd-l2ork-OSX10.11-#{version.csv.first}-#{version.csv.second}-rev.#{version.csv.third}-x86_64.dmg",
       verified: "github.com/agraef/purr-data/"
   name "Pd-l2ork"
   name "Purr Data"
+  desc "Programming environment for computer music and multimedia applications"
   homepage "https://agraef.github.io/purr-data/"
 
   livecheck do
     url :url
-    strategy :git
-    regex(/(\d+(?:\.\d+)*-rev.[0-9a-f]+)/i)
+    strategy :github_latest do |page|
+      match = page.match(%r{href=.*?/v?(\d+(?:\.\d+)+)/Pd-l2ork-OSX10\.11-\1-(\d+)-rev\.(\h+)-x86_64\.dmg}i)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]},#{match[3]}"
+    end
   end
 
   app "Pd-l2ork.app"

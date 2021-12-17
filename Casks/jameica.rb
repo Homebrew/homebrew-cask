@@ -1,6 +1,6 @@
 cask "jameica" do
-  version "2.10.0"
-  sha256 "f6b95ec1120ce6cc2af3619f2abd142305950e698d4366571aec578248c8d89c"
+  version "2.10.1"
+  sha256 "2ca8b1ae37bdeb656287aaccd97ddd7dcdf65da6cf145f20a527ba2b0fc4ee1f"
 
   url "https://www.willuhn.de/products/jameica/releases/current/jameica/jameica-macos64-#{version}.zip"
   name "Jameica"

@@ -2,12 +2,12 @@ cask "libreoffice" do
   arch = Hardware::CPU.intel? ? "x86-64" : "aarch64"
   folder = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
-  version "7.2.2"
+  version "7.2.4"
 
   if Hardware::CPU.intel?
-    sha256 "dc2fd0577e3ee4f99c79d235a6efcd8fecc7069d24090c4eaea69e0fad8245ae"
+    sha256 "825c5a74a97cc9daa3ca993c6d24c36db3dea2aa65bfe7b5e1a371c3adcfbcf5"
   else
-    sha256 "83954ea5bae605aba26fb0d731e080ee04e9e748a3148c43620af6ef2154f611"
+    sha256 "97a6e45372c3c7ad84b39232d7bec09dd5d9e022e25ff94cb1b28bef37cad2be"
   end
 
   url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/#{folder}/LibreOffice_#{version}_MacOS_#{arch}.dmg",
@@ -19,7 +19,7 @@ cask "libreoffice" do
   livecheck do
     url "https://download.documentfoundation.org/libreoffice/stable/"
     strategy :page_match
-    regex(%r{href="(\d+(?:\.\d+)*)/"}i)
+    regex(%r{href="(\d+(?:\.\d+)+)/"}i)
   end
 
   conflicts_with cask: "homebrew/cask-versions/libreoffice-still"
@@ -48,8 +48,8 @@ cask "libreoffice" do
   end
 
   zap trash: [
-    "~/Library/Application Support/LibreOffice",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.libreoffice.script.sfl*",
+    "~/Library/Application Support/LibreOffice",
     "~/Library/Preferences/org.libreoffice.script.plist",
     "~/Library/Saved Application State/org.libreoffice.script.savedState",
   ]

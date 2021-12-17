@@ -1,5 +1,5 @@
 cask "apparency" do
-  version "1.3,130"
+  version "1.4,175"
   sha256 :no_check
 
   url "https://mothersruin.com/software/downloads/Apparency.dmg"
@@ -15,7 +15,7 @@ cask "apparency" do
     end
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :catalina"
 
   app "Apparency.app"
 

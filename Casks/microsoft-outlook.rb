@@ -1,6 +1,6 @@
 cask "microsoft-outlook" do
-  version "16.54.21101001"
-  sha256 "c7b3ced52462b611a9762941088fa05e42d79b26349ca62b705a9bcbce00b41e"
+  version "16.56.21121100"
+  sha256 "ef7defaf070d21c1aeed9938624d831674d5a0aa8a40160107c2d4a8f56879f7"
 
   url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Outlook_#{version}_Installer.pkg",
       verified: "officecdnmac.microsoft.com/"

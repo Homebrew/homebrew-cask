@@ -1,6 +1,6 @@
 cask "betterdummy" do
-  version "1.0.9"
-  sha256 "c7c071cfe2c16b3395af43db5acbbdf45336af06760562185bea24b3ff43224e"
+  version "1.0.13"
+  sha256 "23a46ea3607045a74f9d1ebae5b8034964bb2d217a56d2f0dd8a298e03c4a7ed"
 
   url "https://github.com/waydabber/BetterDummy/releases/download/v#{version}/BetterDummy-v#{version}.zip"
   name "betterdummy"
@@ -11,6 +11,8 @@ cask "betterdummy" do
     url :url
     strategy :github_latest
   end
+
+  auto_updates true
 
   app "BetterDummy.app"
 

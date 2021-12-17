@@ -4,6 +4,7 @@ cask "mountain" do
 
   url "https://appgineers.de/mountain/files/Mountain.zip"
   name "Mountain"
+  desc "Display notifications when mounting/unmounting volumes"
   homepage "https://appgineers.de/mountain/"
 
   livecheck do
@@ -12,4 +13,11 @@ cask "mountain" do
   end
 
   app "Mountain.app"
+
+  zap trash: [
+    "~/Library/Application Support/Mountain",
+    "~/Library/Preferences/de.appgineers.Mountain.plist",
+    "/Library/LaunchDaemons/de.appgineers.Mountain.Helper.plist",
+    "/Library/PrivilegedHelperTools/de.appgineers.Mountain.Helper",
+  ]
 end

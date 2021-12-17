@@ -1,6 +1,6 @@
 cask "vivaldi" do
-  version "4.3.2439.63"
-  sha256 "3da32247c36fd3aa8b3ab9b34c2a7676f59cd68a55102752c2894567efd3fb56"
+  version "5.0.2497.32"
+  sha256 "935fb8539dd4334ab770b2feed4cf01fabfc9f50c6e40f6ba19a4dc959104adf"
 
   url "https://downloads.vivaldi.com/stable/Vivaldi.#{version}.universal.dmg"
   name "Vivaldi"
@@ -18,8 +18,8 @@ cask "vivaldi" do
 
   zap trash: [
     "~/Library/Application Support/Vivaldi",
-    "~/Library/Caches/Vivaldi",
     "~/Library/Caches/com.vivaldi.Vivaldi",
+    "~/Library/Caches/Vivaldi",
     "~/Library/Preferences/com.vivaldi.Vivaldi.plist",
     "~/Library/Saved Application State/com.vivaldi.Vivaldi.savedState",
   ]

@@ -8,4 +8,11 @@ cask "boxofsnoo-fairmount" do
   homepage "https://github.com/BoxOfSnoo/Fairmount"
 
   app "Fairmount.app"
+
+  zap trash: [
+    "~/Library/Application Support/Fairmount",
+    "~/Library/Caches/com.apple.helpd/Generated/Fairmount help*#{version}",
+    "~/Library/Caches/com.metakine.fairmount",
+    "~/Library/Preferences/com.metakine.fairmount.plist",
+  ]
 end

@@ -1,18 +1,20 @@
 cask "electerm" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "1.17.3"
+  version "1.17.19"
 
   if Hardware::CPU.intel?
-    sha256 "74dd8b394970eaed784c7d4eda145b9b9e02dbae787ec9bddeb3133d72f560e3"
+    sha256 "87de8ec164ee9b2c3e4366a4926aff8b0f04976bb6c8ef2520501be1369547df"
   else
-    sha256 "2fa227cfe7f449d3cdda13251a2c2432523362e95d047e63b66d74923af87342"
+    sha256 "4e9ee6e7c7f43518ba299f3a050397e8d059eb20b31274f7488ac3208ecd3d9f"
   end
 
   url "https://github.com/electerm/electerm/releases/download/v#{version}/electerm-#{version}-mac-#{arch}.dmg"
   name "electerm"
   desc "Terminal/ssh/serial port/sftp client"
   homepage "https://github.com/electerm/electerm/"
+
+  auto_updates true
 
   app "electerm.app"
 

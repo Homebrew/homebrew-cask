@@ -1,6 +1,6 @@
 cask "waltr-pro" do
-  version "1.0.98"
-  sha256 "23c4e87f6be1ed65896eef1c4d15c75ae33709f83b7ad86dfbfdb24c4761f450"
+  version "3.7.98"
+  sha256 "3818e93ac674c54b199148ebbfb5c2742051cb6580db514fb76a26dbc4a35282"
 
   url "https://shining.softorino.com/shine_uploads/waltrpromac_#{version}.dmg"
   name "WALTR PRO"

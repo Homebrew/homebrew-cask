@@ -1,6 +1,6 @@
 cask "catlight" do
-  version "2.34.2"
-  sha256 "42d4338ca3ce49db9ab05e248da2ea0a430aaf379a7a5b2a01d3575fa6da94b5"
+  version "2.35.1"
+  sha256 "086409d6fecbd24ea49cb3ef75d33c9cd590c31e433b949dd56aa8d13ca979d5"
 
   url "https://download.catlight.io/rel/mac/beta/CatLightSetup-#{version}.zip"
   name "catlight"
@@ -15,4 +15,11 @@ cask "catlight" do
   depends_on macos: ">= :sierra"
 
   app "Catlight.app"
+
+  zap trash: [
+    "~/Library/Application Support/Catlight",
+    "~/Library/Logs/Catlight",
+    "~/Library/Preferences/Catlight.plist",
+    "~/Library/Saved Application State/Catlight.savedState",
+  ]
 end

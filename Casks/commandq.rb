@@ -1,6 +1,6 @@
 cask "commandq" do
-  version "2.0.6"
-  sha256 "91c639e497994245ab32e021538ef0af0af3291625087e8dbd1d8d555c109d77"
+  version "3.0.0"
+  sha256 "cd826add0aab404d231b42486902ae4e9f150b1ce7ff218fbca48c314c57e573"
 
   url "https://download.clickontyler.com/commandq/commandq20_#{version.no_dots}.zip",
       verified: "download.clickontyler.com/"

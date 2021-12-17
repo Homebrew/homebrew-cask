@@ -1,6 +1,6 @@
 cask "hyperkey" do
-  version "0.10"
-  sha256 "e166d9a16f9dfb3f2fa6d83ae22d6368a6e1b0deac3b94a2ac432006ec5c6973"
+  version "0.11"
+  sha256 "b7ec7e59d8f5355ab7cfd7df93c84c9c38144da175c11dc8effd863b371a6583"
 
   url "https://hyperkey.app/downloads/Hyperkey#{version}.dmg"
   name "hyperkey"
@@ -11,6 +11,8 @@ cask "hyperkey" do
     url :homepage
     regex(/href=.+(\d+(:?\.\d+)).dmg/i)
   end
+
+  depends_on macos: ">= :sierra"
 
   app "Hyperkey.app"
 

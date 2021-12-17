@@ -1,6 +1,6 @@
 cask "ivideonserver" do
-  version "3.10.0"
-  sha256 "7e9d6a9c382f728fa8bf559365672b1f7312bc5345844ecd7e9064efe4239951"
+  version "3.10.1"
+  sha256 "b6e8ee4343ab8b61600ee2eaeae4ad3f20d3b6fde0dfb8ddf25ecf747f87a962"
 
   url "https://updates.iv-cdn.com/bundles/ivideon_server/#{version}/IvideonServer_#{version}_macosx-x86-64.dmg",
       verified: "updates.iv-cdn.com/"
@@ -10,8 +10,7 @@ cask "ivideonserver" do
 
   livecheck do
     url "https://www.ivideon.com/downloads/"
-    strategy :page_match
-    regex(%r{href=.*?/IvideonServer_(\d+(?:\.\d+)*)_macosx-x86-64\.dmg}i)
+    regex(%r{href=.*?/IvideonServer[._-]v?(\d+(?:\.\d+)+)[._-]macosx[._-]x86[._-]64\.dmg}i)
   end
 
   app "IvideonServer.app"

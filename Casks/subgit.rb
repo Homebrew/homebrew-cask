@@ -1,6 +1,6 @@
 cask "subgit" do
-  version "3.3.11"
-  sha256 "96d4e99973c22064e6543c4a73aa1e94c1334165d16c87f43444b346e81a5e8d"
+  version "3.3.12"
+  sha256 "31d8e6eeb905fe2c371c17ed0a05eb6c5086d3483f468c05705fe878a2f2ccbd"
 
   url "https://subgit.com/download/subgit-#{version}.zip"
   name "SubGit"

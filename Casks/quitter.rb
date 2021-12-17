@@ -1,5 +1,5 @@
 cask "quitter" do
-  version "1.0,107"
+  version "1.0,108"
   sha256 :no_check
 
   url "https://marco.org/appcasts/Quitter.zip"
@@ -17,8 +17,8 @@ cask "quitter" do
   app "Quitter.app"
 
   zap trash: [
-    "~/Library/Preferences/com.marcoarment.quitter.plist",
-    "~/Library/Caches/com.marcoarment.quitter",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.marcoarment.quitter.sfl*",
+    "~/Library/Caches/com.marcoarment.quitter",
+    "~/Library/Preferences/com.marcoarment.quitter.plist",
   ]
 end

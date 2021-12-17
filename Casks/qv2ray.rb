@@ -8,11 +8,6 @@ cask "qv2ray" do
   desc "V2Ray GUI client with extensive protocol support"
   homepage "https://qv2ray.net/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on formula: "v2ray"
   depends_on macos: ">= :mojave"
 

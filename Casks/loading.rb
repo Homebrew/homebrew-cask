@@ -4,6 +4,7 @@ cask "loading" do
 
   url "https://bonzaiapps.com/loading/Loading.zip"
   name "Loading"
+  desc "Network activity monitor"
   homepage "https://bonzaiapps.com/loading/"
 
   livecheck do
@@ -12,4 +13,6 @@ cask "loading" do
   end
 
   app "Loading.app"
+
+  zap trash: "~/Library/Preferences/com.bonzaiapps.loading.plist"
 end

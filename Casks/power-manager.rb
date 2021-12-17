@@ -1,6 +1,6 @@
 cask "power-manager" do
-  version "5.7.1"
-  sha256 "80170d910d72b04936d12f2cf7933d910e7f344a482ea65d99facd3a2bfe97b7"
+  version "5.9.1"
+  sha256 "95bf24cac83cb780e5546f6f5f11b33c2208121639313942a9d98425b2dff413"
 
   url "https://www.dssw.co.uk/powermanager/dsswpowermanager-#{version.no_dots}.dmg"
   name "Power Manager"
@@ -9,12 +9,18 @@ cask "power-manager" do
 
   livecheck do
     url "https://version.dssw.co.uk/powermanager/"
-    strategy :page_match
-    regex(/Changes\s*in\s*v(\d+(?:\.\d+)*)/i)
+    regex(/Changes\s*in\s*v(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
   depends_on macos: ">= :sierra"
 
   app "Power Manager.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/uk.co.dssw.powermanager.standard",
+    "~/Library/Application Scripts/uk.co.dssw.powermanager.update.download",
+    "~/Library/Containers/uk.co.dssw.powermanager.standard",
+    "~/Library/Containers/uk.co.dssw.powermanager.update.download",
+  ]
 end

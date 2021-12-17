@@ -1,9 +1,10 @@
 cask "clocksaver" do
-  version "0.7.0"
-  sha256 "9497e774695cadfb25fb6ad1b5689a110f806041b34d3b536b862d653de8bca4"
+  version "0.7.1"
+  sha256 "a2dbe86718c2721578084585580b29f5f294d098e009a47873fae9b8248c6ad8"
 
-  url "https://github.com/soffes/Clock.saver/releases/download/v#{version}/Clock.saver-#{version}.zip"
+  url "https://github.com/soffes/Clock.saver/releases/download/v#{version}/Clock.saver.zip"
   name "Clock.saver screensaver"
+  desc "Screensavers inspired by Braun watches"
   homepage "https://github.com/soffes/Clock.saver"
 
   screen_saver "Clock.saver"

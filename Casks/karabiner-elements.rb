@@ -27,8 +27,8 @@ cask "karabiner-elements" do
 
     pkg "Karabiner-Elements.pkg"
   else
-    version "14.2.0"
-    sha256 "c57adeea587009fa06498d1399fea1899fc5753c658331531f0332c75ed0ca6e"
+    version "14.3.0"
+    sha256 "c7ccf664686143a98ba0ee406e408adcc747ec19fc33dd95bd72eab4d7239aa5"
 
     url "https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg",
         verified: "github.com/pqrs-org/Karabiner-Elements/"

@@ -1,5 +1,5 @@
 cask "suspicious-package" do
-  version "4.0,826"
+  version "4.1,880"
   sha256 :no_check
 
   url "https://www.mothersruin.com/software/downloads/SuspiciousPackage.dmg"

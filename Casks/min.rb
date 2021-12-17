@@ -1,12 +1,12 @@
 cask "min" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "1.22.0"
+  version "1.22.1"
 
   if Hardware::CPU.intel?
-    sha256 "a29adf556203cbf78673193de54ca31f1d17c9cde039afab8f9b2210b6bc6ac9"
+    sha256 "9d1fc0de80c7db309893fa0caef23a6a08facb92fd6d78b85c7f2f40d9f73d6e"
   else
-    sha256 "07a8ca5773d00eebf0df6be4156de22c6a3c20310b27558410d12bdb1178bd36"
+    sha256 "f61f62e0f715b8cdaa98f5cbaa4506e4526295f31d2db238732b6445c8156d09"
   end
 
   url "https://github.com/minbrowser/min/releases/download/v#{version}/Min-v#{version}-darwin-#{arch}.zip",

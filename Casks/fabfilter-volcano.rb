@@ -1,6 +1,6 @@
 cask "fabfilter-volcano" do
-  version "2.32"
-  sha256 "74caf46fd7549231709fdf6220f3c8840c0a7f781b0a14f0b96b0051d5d2e8ae"
+  version "3.00"
+  sha256 "71ce8e586e7bfb1e7fa8ee50c0cb6bb079ceba3aa740167b81a594220e0e79d8"
 
   url "https://download.fabfilter.com/ffvolcano#{version.no_dots}.dmg"
   name "FabFilter Volcano"

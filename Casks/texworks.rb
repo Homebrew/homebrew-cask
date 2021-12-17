@@ -1,8 +1,8 @@
 cask "texworks" do
-  version "0.6.6,202103111124:24442ac"
+  version "0.6.6,202103111124,24442ac"
   sha256 "9517f6bd8f3a34264bc9e5c6ae59969a81bcfdafda2c830d58d2d0d652cffe57"
 
-  url "https://github.com/TeXworks/texworks/releases/download/release-#{version.before_comma}/TeXworks-macos-#{version.before_comma}-#{version.after_comma.before_colon}-git_#{version.after_colon}.dmg",
+  url "https://github.com/TeXworks/texworks/releases/download/release-#{version.csv.first}/TeXworks-macos-#{version.csv.first}-#{version.csv.second}-git_#{version.csv.third}.dmg",
       verified: "github.com/TeXworks/texworks/"
   name "TeXworks"
   desc "Main codebase"
@@ -14,7 +14,7 @@ cask "texworks" do
       match = page.match(%r{href=.*?/TeXworks-macos-(\d+(?:\.\d+)*)-(\d+)-git_(.*?)\.dmg}i)
       next if match.blank?
 
-      "#{match[1]},#{match[2]}:#{match[3]}"
+      "#{match[1]},#{match[2]},#{match[3]}"
     end
   end
 

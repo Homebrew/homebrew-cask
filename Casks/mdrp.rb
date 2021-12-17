@@ -18,4 +18,12 @@ cask "mdrp" do
   end
 
   app "MDRP.app"
+
+  zap trash: [
+    "~/Library/Application Support/MDRP",
+    "~/Library/Caches/com.mdrp.MDRP",
+    "~/Library/Cookies/com.mdrp.MDRP.binarycookies",
+    "~/Library/HTTPStorages/com.mdrp.MDRP.binarycookies",
+    "~/Library/Preferences/com.mdrp.MDRP.plist",
+  ]
 end

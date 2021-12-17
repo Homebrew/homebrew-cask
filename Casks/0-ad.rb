@@ -16,4 +16,6 @@ cask "0-ad" do
   depends_on macos: ">= :sierra"
 
   app "0 A.D..app"
+
+  zap trash: "~/Library/Saved Application State/com.wildfiregames.0ad.savedState"
 end

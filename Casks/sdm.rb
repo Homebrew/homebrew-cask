@@ -1,5 +1,5 @@
 cask "sdm" do
-  version "15.27.0"
+  version "15.44.0"
   sha256 :no_check
 
   url "https://app.strongdm.com/downloads/client/darwin"
@@ -14,12 +14,13 @@ cask "sdm" do
 
   app "SDM.app"
 
+  uninstall delete: "#{appdir}/SDM.app/Contents/Resources/sdm-socket"
+
   zap trash: [
+    "~/.sdm",
     "~/Library/Application Support/SDM",
-    "~/Library/Caches/com.electron.sdm",
-    "~/Library/Caches/com.electron.sdm.ShipIt",
+    "~/Library/Caches/com.electron.sdm*",
     "~/Library/Preferences/com.electron.sdm.plist",
     "~/Library/Saved Application State/com.electron.sdm.savedState",
-    "~/.sdm",
   ]
 end

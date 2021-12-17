@@ -20,4 +20,9 @@ cask "avidemux" do
   app "Avidemux_#{version}.app"
   binary "#{appdir}/Avidemux_#{version}.app/Contents/MacOS/avidemux_cli", target: "avidemux"
   binary "#{appdir}/Avidemux_#{version}.app/Contents/MacOS/avidemux_jobs"
+
+  zap trash: [
+    "~/.avidemux6",
+    "~/Library/Saved Application State/Avidemux.org.savedState",
+  ]
 end

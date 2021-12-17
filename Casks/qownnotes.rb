@@ -1,6 +1,6 @@
 cask "qownnotes" do
-  version "21.11.3"
-  sha256 "9c6cb8c0a49086b8219ef3aa6c1a4b8e81194a7584f39019467454effa7771be"
+  version "21.12.3"
+  sha256 "a9affaef6764a31bdefd7780a398df53b785aaa5ac845006381afa13f2ae1e69"
 
   url "https://github.com/pbek/QOwnNotes/releases/download/v#{version}/QOwnNotes.dmg",
       verified: "github.com/pbek/QOwnNotes/"
@@ -17,4 +17,9 @@ cask "qownnotes" do
   depends_on macos: ">= :sierra"
 
   app "QOwnNotes.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.pbe.QOwnNotes.plist",
+    "~/Library/Saved Application State/com.PBE.QOwnNotes.savedState",
+  ]
 end

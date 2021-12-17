@@ -1,6 +1,6 @@
 cask "todoist" do
-  version "8.0.1"
-  sha256 "1cd6db17e5610f1af5de2898e56a47733141b553838cd1ed6f9acbd59668bca8"
+  version "8.0.4"
+  sha256 "683553e5fc1f81ebb204a55a646500eb9ff72e02acd2755a6981e96b2cd868df"
 
   url "https://electron-dl.todoist.com/mac/Todoist-#{version}.dmg"
   name "Todoist"
@@ -11,6 +11,8 @@ cask "todoist" do
     url "https://electron-dl.todoist.com/mac/latest-mac.yml"
     strategy :electron_builder
   end
+
+  auto_updates true
 
   app "Todoist.app"
 

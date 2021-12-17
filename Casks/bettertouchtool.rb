@@ -1,8 +1,8 @@
 cask "bettertouchtool" do
-  version "3.616-1765"
-  sha256 "f1ef9b823a46460c8b11d7625c755200dbdc4ab3799255b1958b286a87dce54f"
+  version "3.669,1800"
+  sha256 "7c7315e50d61257fc87eacfe4679d568ac75d1e54f67a703ceb78e18e6b55fe5"
 
-  url "https://folivora.ai/releases/btt#{version}.zip"
+  url "https://folivora.ai/releases/btt#{version.csv.first}-#{version.csv.second}.zip"
   name "BetterTouchTool"
   desc "Tool to customize input devices and automate computer systems"
   homepage "https://folivora.ai/"
@@ -10,9 +10,10 @@ cask "bettertouchtool" do
   livecheck do
     url "https://folivora.ai/releases/"
     strategy :page_match do |page|
-      page.scan(/btt(\d+(?:.\d+)*)\.zip.*?(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2})/i)
+      page.scan(/btt(\d+(?:[._-]\d+)*)\.zip.*?(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2})/i)
           .max_by { |(_, time)| Time.parse(time) }
           .first
+          .tr("-", ",")
     end
   end
 

@@ -1,8 +1,8 @@
 cask "breitbandmessung" do
-  version "2.0.3"
-  sha256 :no_check
+  version "3.0.0"
+  sha256 "0feb8629ed63476e9e3d24ce3437f9ee554bbdb659c978f6f33e4032a84f9756"
 
-  url "https://download.breitbandmessung.de/bbm/Breitbandmessung-mac.dmg"
+  url "https://download.breitbandmessung.de/bbm/Breitbandmessung-#{version}-mac.dmg"
   name "Breitbandmessung"
   desc "Official internet speed test from the German Bundesnetzagentur"
   homepage "https://www.breitbandmessung.de/"
