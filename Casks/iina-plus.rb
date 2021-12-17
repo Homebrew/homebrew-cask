@@ -2,7 +2,7 @@ cask "iina-plus" do
   version "0.5.25,21121217"
   sha256 "ab870d939856f93c8524a8e54c3ae33afa5bb5d696f95e6a6e7a9bdca7648ddc"
 
-  url "https://github.com/xjbeta/iina-plus/releases/download/#{version.before_comma}(#{version.after_comma})/iina+.#{version.before_comma}.dmg"
+  url "https://github.com/xjbeta/iina-plus/releases/download/#{version.csv.first}(#{version.csv.second})/iina+.#{version.csv.first}.dmg"
   name "IINA+"
   desc "Extra danmaku support for iina (iina 弹幕支持)"
   homepage "https://github.com/xjbeta/iina-plus"
