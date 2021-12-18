@@ -9,7 +9,7 @@ cask "macrorecorder" do
 
   livecheck do
     url "https://www.macrorecorder.com/download/"
-    regex(%r{changelog-mac/'>(\d+(?:\.\d+)*)</a>}i)
+    regex(%r{changelog-mac/'>(\d+(?:\.\d+)+)</a>}i)
   end
 
   depends_on macos: ">= :mojave"
