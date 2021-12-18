@@ -9,7 +9,6 @@ cask "macrorecorder" do
 
   livecheck do
     url "https://www.macrorecorder.com/download/"
-    strategy :page_match
     regex(%r{changelog-mac/'>(\d+(?:\.\d+)*)</a>}i)
   end
 
