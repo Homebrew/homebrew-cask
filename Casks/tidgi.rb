@@ -1,11 +1,11 @@
 cask "tidgi" do
   arch = Hardware::CPU.intel? ? "darwin-x64" : "darwin-arm64"
 
-  version "latest"
+  version "0.6.6"
 
   sha256 :no_check
 
-  url "https://github.com/tiddly-gittly/TidGi-Desktop/releases/latest/download/TiddlyGit-#{arch}-#{version}.zip"
+  url "https://github.com/tiddly-gittly/TidGi-Desktop/releases/download/v#{version}/TiddlyGit-#{arch}-#{version}.zip"
   name "TidGi"
   desc "Customizable personal knowledge-base with Github as unlimited storage and blogging platform."
   homepage "https://github.com/tiddly-gittly/TidGi-Desktop"
