@@ -24,7 +24,7 @@ cask "smartgit" do
 
   livecheck do
     url "https://www.syntevo.com/smartgit/download/"
-    regex(/href=.*?smartgit[._-]aarch64[._-]v?(\d+(?:[._]\d+)+)\.dmg/i)
+    regex(/href=.*?smartgit[._-]#{arch}[._-]v?(\d+(?:[._]\d+)+)\.dmg/i)
     strategy :page_match do |page, regex|
       page.scan(regex)
           .map { |match| match[0].tr("_", ".") }
