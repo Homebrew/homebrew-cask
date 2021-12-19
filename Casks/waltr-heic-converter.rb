@@ -7,6 +7,11 @@ cask "waltr-heic-converter" do
   desc "Drag-and-drop HEIC to JPEG image converter"
   homepage "https://softorino.com/heic-converter/"
 
+  livecheck do
+    url "https://updates.devmate.com/com.softorino.WaltrHeicConverter.xml"
+    strategy :sparkle
+  end
+
   auto_updates true
 
   app "WALTR HEIC Converter.app"
