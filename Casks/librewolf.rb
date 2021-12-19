@@ -2,8 +2,8 @@ cask "librewolf" do
   arch = Hardware::CPU.intel? ? "" : "_aarch64_exp"
 
   if Hardware::CPU.intel?
-    version "95.0-2,7972ac43891a576a17b90753be3694a0"
-    sha256 "c9b996797ba4aa8c38bc058d47504e78f20f8ec1dc7bbc98185c67e535bed736"
+    version "95.0.1-1,5bb6190211fa0013084409c1ae2bffcd"
+    sha256 "fca05a020f8594ee9064819988daee64638192cf2ae0d0085944fe9a6233037c"
   else
     version "95.0-2,eeb57ce10660d7e33a18898609873bcb"
     sha256 "1a2813330676f4fee597d393d6ae3cfe9e68225787abcb3095ee6d2a163b6e21"
