@@ -2,10 +2,10 @@ cask "vitalsigns" do
   version "3.0.12,1"
   sha256 :no_check
 
-  url "https://www.disometric.com/downloads/VitalSigns#{version.major}/VitalSigns.dmg"
+  url "https://www.disometrics.com/downloads/VitalSigns#{version.major}/VitalSigns.dmg"
   name "Vitalsigns"
   desc "Temperature and memory monitor"
-  homepage "https://www.disometric.com/vitalsigns/"
+  homepage "https://www.disometrics.com/vitalsigns/"
 
   livecheck do
     url :url
