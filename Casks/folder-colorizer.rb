@@ -17,9 +17,9 @@ cask "folder-colorizer" do
   app "Folder Colorizer.app"
 
   zap trash: [
+    "/Users/Shared/Folder Colorizer",
     "~/Library/Application Support/Folder Colorizer",
     "~/Library/Preferences/com.softorino.foldercolorizer.plist",
     "~/Library/Saved Application State/com.softorino.foldercolorizer.savedState",
-    "/Users/Shared/Folder Colorizer",
   ]
 end
