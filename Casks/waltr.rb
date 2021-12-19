@@ -15,10 +15,10 @@ cask "waltr" do
   app "Waltr #{version.major}.app"
 
   zap trash: [
-    "/Users/Shared/Waltr 2",
     "/Users/Shared/Waltr",
-    "~/Library/Application Support/Waltr 2",
+    "/Users/Shared/Waltr #{version.major}",
     "~/Library/Application Support/Waltr",
+    "~/Library/Application Support/Waltr #{version.major}",
     "~/Library/Preferences/com.softorino.waltr2.plist",
   ]
 end
