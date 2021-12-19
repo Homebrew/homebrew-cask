@@ -7,6 +7,11 @@ cask "folder-colorizer" do
   desc "Folder icon editor & manager"
   homepage "https://softorino.com/folder-colorizer-mac/"
 
+  livecheck do
+    url "https://ushining.softorino.com/appcast.php?abbr=fcm"
+    strategy :sparkle
+  end
+
   auto_updates true
 
   app "Folder Colorizer.app"
