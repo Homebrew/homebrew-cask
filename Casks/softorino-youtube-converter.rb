@@ -15,4 +15,13 @@ cask "softorino-youtube-converter" do
   auto_updates true
 
   app "Softorino YouTube Converter 2.app"
+
+  zap trash: [
+    "/Users/Shared/Softorino YouTube Converter 2",
+    "~/Library/Application Support/Softorino YouTube Converter 2",
+    "~/Library/Caches/com.softorino.syc2",
+    "~/Library/Logs/com.softorino.syc2",
+    "~/Library/Preferences/com.softorino.syc2.plist",
+    "~/Library/Saved Application State/com.softorino.syc2.savedState",
+  ]
 end
