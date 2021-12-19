@@ -11,7 +11,7 @@ cask "waltr-heic-converter" do
   livecheck do
     url "https://updates.devmate.com/com.softorino.WaltrHeicConverter.xml"
     strategy :sparkle do |item|
-      timestamp = item.url.match(/\/(\d{10})\//i)
+      timestamp = item.url.match(%r{/(\d{10})/}i)
       next if timestamp.blank?
 
       "#{item.short_version},#{timestamp[1]}"
