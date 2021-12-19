@@ -8,4 +8,11 @@ cask "folder-colorizer" do
   homepage "https://softorino.com/folder-colorizer-mac/"
 
   app "Folder Colorizer.app"
+
+  zap trash: [
+    "~/Library/Application Support/Folder Colorizer",
+    "~/Library/Preferences/com.softorino.foldercolorizer.plist",
+    "~/Library/Saved Application State/com.softorino.foldercolorizer.savedState",
+    "/Users/Shared/Folder Colorizer",
+  ]
 end
