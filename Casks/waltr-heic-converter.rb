@@ -2,7 +2,7 @@ cask "waltr-heic-converter" do
   version "1.0.2,1537972843"
   sha256 "6e716143b73cf314e8fd1728a466ede9d7b99b1ec2364b55a7dad818ffcd1ab2"
 
-  url "https://dl.devmate.com/com.softorino.WaltrHeicConverter/#{version.before_comma}/#{version.after_comma}/WALTRHEICConverter-#{version.before_comma}.zip",
+  url "https://dl.devmate.com/com.softorino.WaltrHeicConverter/#{version.csv.first}/#{version.csv.second}/WALTRHEICConverter-#{version.csv.first}.zip",
       verified: "dl.devmate.com/com.softorino"
   name "WALTR HEIC Converter"
   desc "Drag-and-drop HEIC to JPEG image converter"
