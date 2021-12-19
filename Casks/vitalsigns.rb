@@ -18,6 +18,8 @@ cask "vitalsigns" do
   app "VitalSigns.app"
 
   zap trash: [
+    "~/Library/Caches/com.creationalstate.VitalSigns",
+    "~/Library/HTTPStorages/com.creationalstate.VitalSigns",
     "~/Library/LaunchAgents/com.disometric.vitalsigns.launcher.plist",
     "~/Library/Preferences/com.creationalstate.VitalSigns.plist",
     "~/Library/Preferences/com.disometric.vitalsigns.plist",
