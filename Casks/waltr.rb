@@ -4,6 +4,7 @@ cask "waltr" do
 
   url "https://shining.softorino.com/shine_uploads/waltr#{version.major}mac_#{version}.dmg"
   name "WALTR"
+  desc "Media direct transfer tool for Apple devices"
   homepage "https://softorino.com/w#{version.major}/"
 
   livecheck do
