@@ -14,6 +14,8 @@ cask "waltr-pro" do
 
   app "WALTR PRO.app"
 
+  auto_updates true
+
   zap trash: [
     "~/Library/Application Support/WALTR PRO",
     "~/Library/Preferences/com.softorino.waltrpro.plist",
