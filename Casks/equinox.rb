@@ -8,15 +8,12 @@ cask "equinox" do
   desc "Create dynamic wallpapers"
   homepage "https://equinoxmac.com/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  depends_on macos: ">= :mojave"
 
   app "Equinox.app"
 
   zap trash: [
-    "~/Library/Containers/com.rlxone.equinox",
     "~/Library/Application Scripts/com.rlxone.equinox",
+    "~/Library/Containers/com.rlxone.equinox",
   ]
 end
