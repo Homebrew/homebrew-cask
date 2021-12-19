@@ -7,6 +7,8 @@ cask "folder-colorizer" do
   desc "Folder icon editor & manager"
   homepage "https://softorino.com/folder-colorizer-mac/"
 
+  auto_updates true
+
   app "Folder Colorizer.app"
 
   zap trash: [
