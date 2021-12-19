@@ -21,4 +21,9 @@ cask "waltr-heic-converter" do
   auto_updates true
 
   app "WALTR HEIC Converter.app"
+
+  zap trash: [
+    "~/Library/Logs/com.softorino.WaltrHeicConverter",
+    "~/Library/Preferences/com.softorino.WaltrHeicConverter.plist",
+  ]
 end
