@@ -8,7 +8,7 @@ cask "waltr-pro" do
   homepage "https://softorino.com/waltr/"
 
   livecheck do
-    url "https://api.softorino.com/live/app-manager/v3/waltrpro/mac/updates"
+    url "https://ushining.softorino.com/appcast.php?abbr=wpm"
     strategy :sparkle
   end
 
