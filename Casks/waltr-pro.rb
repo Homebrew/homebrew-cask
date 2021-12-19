@@ -12,9 +12,9 @@ cask "waltr-pro" do
     strategy :sparkle
   end
 
-  app "WALTR PRO.app"
-
   auto_updates true
+
+  app "WALTR PRO.app"
 
   zap trash: [
     "~/Library/Application Support/WALTR PRO",
