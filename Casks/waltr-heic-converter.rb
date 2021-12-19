@@ -7,5 +7,7 @@ cask "waltr-heic-converter" do
   desc "Drag-and-drop HEIC to JPEG image converter"
   homepage "https://softorino.com/heic-converter/"
 
+  auto_updates true
+
   app "WALTR HEIC Converter.app"
 end
