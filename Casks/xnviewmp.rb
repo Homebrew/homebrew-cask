@@ -12,6 +12,8 @@ cask "xnviewmp" do
     regex(/>XnView\sMP\sv?(\d+(?:\.\d+)+)[\s<]/i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "XnViewMP.app"
 
   zap trash: "~/Library/Saved Application State/com.xnview.XnView.savedState"
