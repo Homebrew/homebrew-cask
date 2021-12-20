@@ -1,8 +1,8 @@
 cask "touchosc" do
-  version "1.0.8,122"
-  sha256 "59f8959aadb95e9d20eaadf48e2e60cb5daf2611897064888c7f48d452a88873"
+  version "1.0.9,126"
+  sha256 "b420a0287cbb17aca10e54b52b9a5a2cd0ee3b14b0a967e3a2d7f74176e343d5"
 
-  url "https://hexler.net/pub/touchosc/touchosc-#{version.before_comma}.#{version.after_comma}-macos.dmg"
+  url "https://hexler.net/pub/touchosc/touchosc-#{version.csv.first}.#{version.csv.second}-macos.dmg"
   name "touchosc"
   desc "MIDI and OSC Controller Software"
   homepage "https://hexler.net/touchosc"
