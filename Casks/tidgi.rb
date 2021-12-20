@@ -11,7 +11,7 @@ cask "tidgi" do
 
   url "https://github.com/tiddly-gittly/TidGi-Desktop/releases/download/v#{version}/TiddlyGit-#{arch}-#{version}.zip"
   name "TidGi"
-  desc "Customizable personal knowledge-base app powered by tiddlywiki"
+  desc "Personal knowledge-base app"
   homepage "https://github.com/tiddly-gittly/TidGi-Desktop"
 
   app "TidGi.app"
