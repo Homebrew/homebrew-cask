@@ -5,6 +5,7 @@ cask "memo" do
   url "https://usememo.com/MemoSetup.dmg"
   appcast "https://raw.githubusercontent.com/btk/memo/master/package.json"
   name "Memo"
+  desc "Note taking app using GitHub Gists"
   homepage "https://usememo.com/"
 
   livecheck do
