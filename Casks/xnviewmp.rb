@@ -13,4 +13,6 @@ cask "xnviewmp" do
   end
 
   app "XnViewMP.app"
+
+  zap trash: "~/Library/Saved Application State/com.xnview.XnView.savedState"
 end
