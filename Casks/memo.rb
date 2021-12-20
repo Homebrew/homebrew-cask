@@ -7,6 +7,13 @@ cask "memo" do
   name "Memo"
   homepage "https://usememo.com/"
 
+  livecheck do
+    url "https://raw.githubusercontent.com/btk/memo/master/package.json"
+    strategy :page_match do |page|
+      JSON.parse(page)["version"]
+    end
+  end
+
   app "Memo.app"
 
   zap trash: [
