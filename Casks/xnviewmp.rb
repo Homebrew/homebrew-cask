@@ -8,8 +8,8 @@ cask "xnviewmp" do
   homepage "https://www.xnview.com/en/xnviewmp/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url :homepage
+    regex(/>XnView\sMP\sv?(\d+(?:\.\d+)+)[\s<]/i)
   end
 
   app "XnViewMP.app"
