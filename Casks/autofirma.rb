@@ -8,6 +8,17 @@ cask "autofirma" do
   desc "Add a digital signature to documents"
   homepage "https://firmaelectronica.gob.es/Home/Descargas.htm"
 
+  livecheck do
+    url :homepage
+    strategy :page_match do |page|
+      match = page.match(%r{href=.*?/(\d+)/(\d+)/(\d+)/AutoFirma_Mac.zip}i)
+      next if match.blank?
+      
+	  "#{match[1]}.#{match[2]}.#{match[3]}"
+    end
+  end
+
+
   pkg "AutoFirma_#{version.dots_to_underscores}.pkg"
 
   # remove 'Autofirma ROOT' and '127.0.0.1' certificates from keychain (these were installed by pkg)
