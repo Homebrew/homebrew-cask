@@ -8,6 +8,13 @@ cask "xlplayer" do
   name "迅雷影音 for Mac"
   homepage "https://video.xunlei.com/mac.html"
 
+  livecheck do
+    url "https://static-xl.a.88cdn.com/json/xunlei_video_version_mac.json"
+    strategy :page_match do |page|
+      JSON.parse(page)["version"]
+    end
+  end
+
   depends_on macos: ">= :yosemite"
 
   app "XLPlayer.app"
