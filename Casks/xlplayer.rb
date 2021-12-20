@@ -23,7 +23,8 @@ cask "xlplayer" do
   zap trash: [
     "~/Library/Application Support/XLPlayer",
     "~/Library/Caches/com.xunlei.XLPlayer",
+    "~/Library/HTTPStorages/com.xunlei.XLPlayer",
     "~/Library/Preferences/com.xunlei.XLPlayer.plist",
-    "~/Library/Saved Application State/com.xunlei.XLPlayer.savedState",
+    "~/Library/WebKit/com.xunlei.XLPlayer",
   ]
 end
