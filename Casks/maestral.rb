@@ -9,6 +9,7 @@ cask "maestral" do
   homepage "https://maestral.app/"
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Maestral.app"
   binary "#{appdir}/Maestral.app/Contents/MacOS/maestral-cli", target: "maestral"
