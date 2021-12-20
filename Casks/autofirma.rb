@@ -5,7 +5,7 @@ cask "autofirma" do
   url "https://estaticos.redsara.es/comunes/autofirma/#{version.major}/#{version.minor}/#{version.patch}/AutoFirma_Mac.zip",
       verified: "estaticos.redsara.es/comunes/autofirma/"
   name "AutoFirma"
-  desc "Add a digital signature to documents"
+  desc "Digital signature editor and validator"
   homepage "https://firmaelectronica.gob.es/Home/Descargas.htm"
 
   livecheck do
