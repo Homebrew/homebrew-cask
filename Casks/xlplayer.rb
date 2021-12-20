@@ -6,6 +6,7 @@ cask "xlplayer" do
       verified: "down.sandai.net/"
   name "XLPlayer for Mac"
   name "迅雷影音 for Mac"
+  desc "Video player"
   homepage "https://video.xunlei.com/mac.html"
 
   livecheck do
