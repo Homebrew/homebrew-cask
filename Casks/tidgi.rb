@@ -1,13 +1,17 @@
 cask "tidgi" do
   arch = Hardware::CPU.intel? ? "darwin-x64" : "darwin-arm64"
 
-  version "0.6.6"
+  version "0.7.1"
 
-  sha256 :no_check
+  if Hardware::CPU.intel?
+    sha256 "afbb29ae19f09f2632a94ac050e939b82fc368a0070ebcab88465e9764d5499a"
+  else
+    sha256 "6a51812d50cb30a53ce079c202556590b02acf63a6b6e02a83ccdb3766f70c6f"
+  end
 
   url "https://github.com/tiddly-gittly/TidGi-Desktop/releases/download/v#{version}/TiddlyGit-#{arch}-#{version}.zip"
   name "TidGi"
-  desc "Customizable personal knowledge-base with Github as unlimited storage and blogging platform."
+  desc "Customizable personal knowledge-base app powered by tiddlywiki"
   homepage "https://github.com/tiddly-gittly/TidGi-Desktop"
 
   app "TidGi.app"
