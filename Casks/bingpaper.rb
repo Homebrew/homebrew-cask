@@ -10,7 +10,9 @@ cask "bingpaper" do
   livecheck do
     url "https://github.com/pengsrc/BingPaper/releases/latest"
     strategy :page_match do |page|
-      match = page.match(%r{href=.*?/BingPaper\.v?(\d+(?:\.\d+)*)\.build\.(\d+)\.zip}i)
+      match = page.match(%r{href=.*?/BingPaper\.v?(\d+(?:\.\d+)+)\.build\.(\d+)\.zip}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

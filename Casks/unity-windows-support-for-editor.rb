@@ -1,8 +1,8 @@
 cask "unity-windows-support-for-editor" do
-  version "2021.1.24f1,6667702a1e7c"
-  sha256 "a68dbbc9e1c812d0c5c5387f7d2fae0749116c9c777a5f4543a139387ad12806"
+  version "2021.2.7f1,6bd9e232123f"
+  sha256 "3bbd4e0381984084f1f82862cfc489082ca5a21e76b77fcc9741e1c5b7a754c7"
 
-  url "https://download.unity3d.com/download_unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-#{version.before_comma}.pkg",
+  url "https://download.unity3d.com/download_unity/#{version.csv.second}/MacEditorTargetInstaller/UnitySetup-Windows-Mono-Support-for-Editor-#{version.csv.first}.pkg",
       verified: "download.unity3d.com/download_unity/"
   name "Unity Windows (Mono) Build Support"
   desc "Windows (Mono) target support for Unity"
@@ -13,7 +13,7 @@ cask "unity-windows-support-for-editor" do
     strategy :page_match do |page|
       page.scan(%r{
         /download_unity/(\h+)/MacEditorTargetInstaller
-        /UnitySetup-Windows-Mono-Support-for-Editor-(\d+(?:\.\d+)*[a-z]*\d*)\.pkg
+        /UnitySetup-Windows-Mono-Support-for-Editor-(\d+(?:\.\d+)+[a-z]*\d*)\.pkg
       }ix).map do |match|
         "#{match[1]},#{match[0]}"
       end
@@ -22,7 +22,7 @@ cask "unity-windows-support-for-editor" do
 
   depends_on cask: "unity"
 
-  pkg "UnitySetup-Windows-Mono-Support-for-Editor-#{version.before_comma}.pkg"
+  pkg "UnitySetup-Windows-Mono-Support-for-Editor-#{version.csv.first}.pkg"
 
   uninstall pkgutil: "com.unity3d.WindowsStandaloneSupport"
 end

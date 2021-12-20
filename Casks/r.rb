@@ -8,12 +8,12 @@ cask "r" do
     sha256 "f2b771e94915af0fe0a6f042bc7a04ebc84fb80cb01aad5b7b0341c4636336dd"
     url "https://cloud.r-project.org/bin/macosx/R-#{version}.pkg"
   elsif Hardware::CPU.intel?
-    version "4.1.1"
-    sha256 "c239e97c3659169447c50474827d9af79176fff67a34249fcd413d8da6ef2414"
+    version "4.1.2"
+    sha256 "86d169f9d62b2b2ddbf5fde55935fbb96729da5c47d7bf09240228cd23b664e5"
     url "https://cloud.r-project.org/bin/macosx/base/R-#{version}.pkg"
   else
-    version "4.1.1"
-    sha256 "cc078658708fdc7ae807f927cf5b3a96d17d287717679b3327540030f625d47b"
+    version "4.1.2"
+    sha256 "247604393ec271cb3e72f42f2ffca9024de1b2d77fcba142c8ab866dc498ba21"
     url "https://cloud.r-project.org/bin/macosx/big-sur-arm64/base/R-#{version}-arm64.pkg"
   end
 

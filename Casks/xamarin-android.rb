@@ -1,6 +1,6 @@
 cask "xamarin-android" do
-  version "11.3.0.4"
-  sha256 "a2efde72d9d75eacf65a9e2dacc4516875a738646c7f098b764e130dab4e0949"
+  version "12.0.0.3"
+  sha256 "10777dbb5d636d1e9563b07cce892c6d1764750bec97df081562facb06491e54"
 
   url "https://dl.xamarin.com/MonoforAndroid/Mac/xamarin.android-#{version}.pkg"
   name "Xamarin.Android"

@@ -11,7 +11,7 @@ cask "cloud-pbx" do
   livecheck do
     url "https://cpbx-hilfe.deutschland-lan.de/de/direkthilfe/hilfe-downloads/downloads"
     strategy :page_match
-    regex(%r{href=.*?/cloud-pbx\.osx-(\d+(?:\.\d+)*)}i)
+    regex(%r{href=.*?/cloud-pbx\.osx-(\d+(?:\.\d+)+)}i)
   end
 
   app "Cloud PBX.app"

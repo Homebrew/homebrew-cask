@@ -1,6 +1,6 @@
 cask "exist-db" do
-  version "5.3.0"
-  sha256 "8c51155ab84b5eb52b8cbaebf4dd7be5d94c55ec08087793d1c531049377f93a"
+  version "5.3.1"
+  sha256 "3b01df29bc54b4bb79e354dea1698a3148c1e22dfe4d9f460b911438b5d04eaa"
 
   url "https://github.com/eXist-db/exist/releases/download/eXist-#{version}/eXist-db-#{version}.dmg",
       verified: "github.com/eXist-db/exist/"

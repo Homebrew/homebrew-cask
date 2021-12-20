@@ -11,6 +11,8 @@ cask "lyricsx" do
     url "https://github.com/ddddxxx/LyricsX/releases/latest"
     strategy :page_match do |page|
       match = page.match(%r{href=.*?/LyricsX_(\d+(?:\.\d+)*)\+(\d+)\.zip}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

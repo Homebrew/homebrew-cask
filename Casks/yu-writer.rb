@@ -11,6 +11,8 @@ cask "yu-writer" do
     url :homepage
     strategy :page_match do |page|
       match = page.match(%r{href=.*?/yu-writer-(?:([a-z]+)-)?(\d+(?:\.\d+)*)-macos\.dmg}i)
+      next if match.blank?
+
       "#{match[2]},#{match[1]}"
     end
   end

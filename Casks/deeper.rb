@@ -17,9 +17,12 @@ cask "deeper" do
   elsif MacOS.version <= :catalina
     version "2.6.0"
     sha256 "302c91c7995364bd02b71613ed440c1480d905637ba02da661cc4e53402643b3"
-  else
+  elsif MacOS.version <= :big_sur
     version "2.7.0"
     sha256 "695a1572294fb535bbf266f11cc1d3e1838995d762b4d841f2f7d77801e7a546"
+  else
+    version "2.7.6"
+    sha256 "cf28a7b468f90e3c92179e21ca61a4aebaa0a34f481149c238c3756d855efa69"
   end
 
   url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete(".")}/Deeper.dmg"
@@ -32,8 +35,15 @@ cask "deeper" do
     regex(/>\s*Deeper\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s.-]*\s+#{MacOS.version}\s*</i)
   end
 
-  # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.
-  depends_on macos: "<= :big_sur"
+  # Unusual case: The software may stop working, or may be dangerous to run, on the latest macOS release.
+  depends_on macos: "<= :monterey"
 
   app "Deeper.app"
+
+  zap trash: [
+    "~/Library/Caches/com.apple.helpd/Generated/Deeper Help*",
+    "~/Library/Logs/Deeper.log",
+    "~/Library/Preferences/com.titanium.Deeper.plist",
+    "~/Library/Saved Application State/com.titanium.Deeper.savedState",
+  ]
 end

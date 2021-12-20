@@ -1,6 +1,6 @@
 cask "nordvpn" do
-  version "6.8.2,171"
-  sha256 "7076238f7ef49dae500265fa710dc25efa1c052624f7dc304b619647ff7bbbb4"
+  version "7.1.0,174"
+  sha256 "d2d85e0423a63522ca9fda5b6a37753911b484aeea32ca0ee102a24ad4804d60"
 
   url "https://downloads.nordcdn.com/apps/macos/generic/NordVPN-OpenVPN/#{version.before_comma}/NordVPN.pkg",
       verified: "downloads.nordcdn.com/"
@@ -28,6 +28,7 @@ cask "nordvpn" do
             delete:     [
               "/Library/PrivilegedHelperTools/com.nordvpn.macos.helper",
               "/Library/PrivilegedHelperTools/com.nordvpn.macos.ovpnDnsManager",
+              "/Library/PrivilegedHelperTools/ovpn",
             ],
             login_item: "NordVPN",
             pkgutil:    "com.nordvpn.macos"

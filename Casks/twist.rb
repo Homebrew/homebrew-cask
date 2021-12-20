@@ -1,6 +1,6 @@
 cask "twist" do
-  version "0.3.1"
-  sha256 "ef41d0a81f2966ed136894ca12db26c1fee701ef27a76bd6a9a001b5678683c8"
+  version "1.0.3"
+  sha256 "3d9e4b7e29fa6223d606e63052e3c71729b1f8967856c7670de5656c0bb0008d"
 
   url "https://downloads.twist.com/mac/Twist-#{version}.dmg"
   name "Twist"
@@ -8,11 +8,18 @@ cask "twist" do
   homepage "https://twist.com/"
 
   livecheck do
-    url "https://twist.com/mac_app"
-    strategy :header_match
+    url "https://downloads.twist.com/mac/latest-mac.yml"
+    strategy :electron_builder
   end
 
   depends_on macos: ">= :el_capitan"
 
   app "Twist.app"
+
+  zap trash: [
+    "~/Library/Application Support/Twist",
+    "~/Library/Logs/Twist",
+    "~/Library/Preferences/com.twistapp.mac-sparkle.Twist.plist",
+    "~/Library/Saved Application State/com.twistapp.mac-sparkle.Twist.savedState",
+  ]
 end

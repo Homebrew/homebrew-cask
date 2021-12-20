@@ -1,12 +1,12 @@
 cask "postman" do
   arch = Hardware::CPU.intel? ? "osx64" : "osx_arm64"
 
-  version "9.1.2"
+  version "9.5.0"
 
   if Hardware::CPU.intel?
-    sha256 "1d8badc2b848a52549eafe8ac03bb85577a44c4ae9aae818b557314f62f698ca"
+    sha256 "52f3f5f2dcb80d0e6070ff474d78c8f8e117a8f1683c460d8ada9013d2e7a2cf"
   else
-    sha256 "2677a0027a714798a994b60298dec728a6b3e0357e9324b8fb93212d6f7bccb4"
+    sha256 "0c039244b6afe60fb836acb2a784d8e642af5a845ba70b3cee8785099cf5edeb"
   end
 
   url "https://dl.pstmn.io/download/version/#{version}/#{arch}",

@@ -1,6 +1,6 @@
 cask "gimp" do
-  version "2.10.24"
-  sha256 "d835afd64b4a617516a432a4ff78454594f5147786b4b900371a9fa68252567a"
+  version "2.10.28"
+  sha256 "8cf0db374dcaba6fb0e1184ff8c6a3c585aa1814189ed4b97ba51780469f0805"
 
   url "https://download.gimp.org/pub/gimp/v#{version.major_minor}/osx/gimp-#{version}-x86_64.dmg"
   name "GIMP"
@@ -11,10 +11,8 @@ cask "gimp" do
   livecheck do
     url "https://www.gimp.org/downloads/"
     strategy :page_match
-    regex(%r{href=.*?/gimp-(\d+(?:\.\d+)*)-x86_64\.dmg}i)
+    regex(%r{href=.*?/gimp-(\d+(?:\.\d+)+)-x86_64\.dmg}i)
   end
-
-  auto_updates true
 
   app "GIMP-#{version.major_minor}.app"
   binary "#{appdir}/GIMP-#{version.major_minor}.app/Contents/MacOS/gimp"
@@ -24,8 +22,8 @@ cask "gimp" do
   end
 
   zap trash: [
-    "~/Library/Preferences/org.gimp.gimp-#{version.major_minor}:.plist",
     "~/Library/Application Support/Gimp",
+    "~/Library/Preferences/org.gimp.gimp-#{version.major_minor}:.plist",
     "~/Library/Saved Application State/org.gimp.gimp-#{version.major_minor}:.savedState",
   ]
 end

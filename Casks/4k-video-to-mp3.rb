@@ -1,6 +1,6 @@
 cask "4k-video-to-mp3" do
-  version "3.0.0"
-  sha256 "591e27aeecf0adab9f9787d0d6da96a0945cd9679c38cd58a7c61dbc9333c4f7"
+  version "3.0.1"
+  sha256 "3a9b4b9920a712e3e356ea09ca770b8d59c88926ae7a63bd530a2d9682a24a8b"
 
   url "https://dl.4kdownload.com/app/4kvideotomp3_#{version}.dmg"
   name "4K Video to MP3"
@@ -10,7 +10,7 @@ cask "4k-video-to-mp3" do
   livecheck do
     url "https://www.4kdownload.com/download"
     strategy :page_match
-    regex(%r{href=.*?/4kvideotomp3_(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/4kvideotomp3_(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "4K Video to MP3.app"

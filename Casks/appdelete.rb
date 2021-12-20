@@ -7,11 +7,6 @@ cask "appdelete" do
   desc "App uninstaller"
   homepage "http://www.reggieashworth.com/appdelete.html"
 
-  livecheck do
-    url "http://www.reggieashworth.com/AD#{version.major}Appcast.xml"
-    strategy :sparkle
-  end
-
   auto_updates true
 
   app "AppDelete.app"

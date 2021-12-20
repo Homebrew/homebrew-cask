@@ -12,6 +12,8 @@ cask "robo-3t" do
     url "https://github.com/Studio3T/robomongo"
     strategy :github_latest do |page|
       match = page.match(%r{href=.*?/v?(\d+(?:\.\d+)*)/robo3t-\1-darwin-x86_64-([0-9a-f]+)\.dmg}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

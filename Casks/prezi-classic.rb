@@ -4,12 +4,27 @@ cask "prezi-classic" do
 
   url "https://desktopassets.prezi.com/mac/pd6/releases/Prezi_Classic_#{version.before_comma}.dmg"
   name "Prezi Classic"
+  desc "Desktop client for the Prezi presentation SaaS"
   homepage "https://prezi.com/desktop"
 
   livecheck do
     url "https://prezidesktop.s3.amazonaws.com/assets/mac/pd6/updates/prezi-classic.xml"
-    strategy :sparkle
+    strategy :page_match do |page|
+      match = page.match(/<enclosure.*?sparkle:version="(\d+).*?sparkle:shortVersionString="(\d+(?:\.\d+)+)"/im)
+      next if match.blank?
+
+      "#{match[2]},#{match[1]}"
+    end
   end
 
   app "Prezi Classic.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.prezi.desktop",
+    "~/Library/Caches/com.prezi.desktop",
+    "~/Library/Logs/Prezi Classic",
+    "~/Library/Logs/Prezi Classic_debug.log",
+    "~/Library/Preferences/com.prezi.desktop.plist",
+    "~/Library/Saved Application State/com.prezi.desktop.savedState",
+  ]
 end

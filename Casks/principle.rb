@@ -1,8 +1,8 @@
 cask "principle" do
-  version "6.11,6013"
-  sha256 "33ca078dc9e2e5108fbd9cf02820d22bed09d809d63eac050c12f959224c9b96"
+  version "6.14,6016"
+  sha256 "5b8c4b5b3b6153db17b72e5e5081fcd2d0fa199d9c18a8cb7dd0e2a95c3bbd96"
 
-  url "https://principleformac.com/download/Principle_#{version.before_comma.dots_to_underscores}.zip"
+  url "https://principleformac.com/download/Principle_#{version.csv.first.dots_to_underscores}.zip"
   name "Principle"
   desc "Design animated and interactive user interfaces"
   homepage "https://principleformac.com/"

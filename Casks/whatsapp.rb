@@ -1,6 +1,6 @@
 cask "whatsapp" do
-  version "2.2140.12"
-  sha256 "46167a70f7c74110ac92c5ddc23f5d20471f92e15f57b4e060939e24922788a9"
+  version "2.2147.16"
+  sha256 "da381a355c48ffa5cff6b7efa0b01efddab0b832bde1182d7602ba0de4c829e4"
 
   url "https://web.whatsapp.com/desktop/mac/files/release-#{version}.zip"
   name "WhatsApp"
@@ -10,7 +10,7 @@ cask "whatsapp" do
   livecheck do
     url "https://web.whatsapp.com/desktop/mac/releases"
     strategy :page_match
-    regex(/release-(\d+(?:\.\d+)*)\.zip/i)
+    regex(/release-(\d+(?:\.\d+)+)\.zip/i)
   end
 
   auto_updates true

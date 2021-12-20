@@ -1,6 +1,6 @@
 cask "vimr" do
-  version "0.34.0-355"
-  sha256 "e4e5db59146993fa01ad9999ff0cab9effe209c6827cf6eabe4a54a92d9f987c"
+  version "0.35.0-20211105.213803"
+  sha256 "bb0ea1ba949bee1c4a41bb459f7cbe48651a092878be4874f12a6d5200b18a7d"
 
   url "https://github.com/qvacua/vimr/releases/download/v#{version}/VimR-v#{version}.tar.bz2",
       verified: "github.com/qvacua/vimr/"
@@ -10,8 +10,7 @@ cask "vimr" do
 
   livecheck do
     url :url
-    strategy :github_latest
-    regex(%r{href=.*?/VimR-v?(\d+(?:\.\d+)*-\d+)\.t}i)
+    regex(/^v?(\d+(?:[.-]\d+)+)$/i)
   end
 
   auto_updates true

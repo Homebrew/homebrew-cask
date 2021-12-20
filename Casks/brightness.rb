@@ -4,12 +4,13 @@ cask "brightness" do
 
   url "http://bergdesign.com/resources/Brightness/Brightness_#{version}.dmg"
   name "Brightness"
+  desc "Menu bar item for adjusting the brightness of the display and backlit keyboard"
   homepage "http://bergdesign.com/brightness/"
 
   livecheck do
     url "http://bergdesign.com/brightness/"
     strategy :page_match
-    regex(%r{href=.*?/Brightness_(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/Brightness_(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "Brightness.app"

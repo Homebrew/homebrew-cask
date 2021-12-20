@@ -1,7 +1,7 @@
 cask "plexamp" do
   if Hardware::CPU.intel?
-    version "3.7.1"
-    sha256 "2c906f70564c01cfd10b10f7433e31d4f6637c57416860c39d0f84a1264f77b3"
+    version "3.8.2"
+    sha256 "6fd7bcfd1ccce7249912bfa4d42947d703e02e827e4fc3eb6c199cd7e06da627"
 
     url "https://plexamp.plex.tv/plexamp.plex.tv/desktop/Plexamp-#{version}.dmg",
         verified: "plexamp.plex.tv/"

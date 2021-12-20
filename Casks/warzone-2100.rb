@@ -1,6 +1,6 @@
 cask "warzone-2100" do
-  version "4.1.3"
-  sha256 "828009fa7f0245eff5da4e57f68db05e1c8f98c4fb9c2871deabb53a1df96f5e"
+  version "4.2.3"
+  sha256 "b65574dd0249ac5cd256d3c1f31d57183254e308ae7488be00751e2fdf197b53"
 
   url "https://github.com/Warzone2100/warzone2100/releases/download/#{version}/warzone2100_macOS_universal.zip",
       verified: "github.com/Warzone2100/warzone2100/"

@@ -16,4 +16,10 @@ cask "transnomino" do
   depends_on macos: ">= :high_sierra"
 
   app "Transnomino.app"
+
+  zap trash: [
+    "~/Library/Caches/com.apple.helpd/Generated/com.bastiaanverreijt.Transnomino.help*",
+    "~/Library/HTTPStorages/com.bastiaanverreijt.Transnomino",
+    "~/Library/Preferences/com.bastiaanverreijt.Transnomino.plist",
+  ]
 end

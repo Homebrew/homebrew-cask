@@ -1,6 +1,6 @@
 cask "hammerspoon" do
-  version "0.9.90"
-  sha256 "f129842bb4a8a0e7a8bad64f2c9b0c6044569a48b789ca62f86a2cb45f8b9023"
+  version "0.9.93"
+  sha256 "b49282ca1c90ea555f5e1cd1a405792b98ac5c5472a16b44fed1bd3e53da8e44"
 
   url "https://github.com/Hammerspoon/hammerspoon/releases/download/#{version}/Hammerspoon-#{version}.zip",
       verified: "github.com/Hammerspoon/hammerspoon/"
@@ -11,7 +11,7 @@ cask "hammerspoon" do
   livecheck do
     url :url
     strategy :git
-    regex(/^(\d+(?:\.\d+)*)$/)
+    regex(/^(\d+(?:\.\d+)+)$/)
   end
 
   auto_updates true

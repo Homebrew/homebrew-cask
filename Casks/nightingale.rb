@@ -12,6 +12,8 @@ cask "nightingale" do
     url "https://github.com/nightingale-media-player/nightingale-hacking/releases/latest"
     strategy :page_match do |page|
       match = page.match(%r{href=.*?/Nightingale_(\d+(?:\.\d+)*)-(\d+)_macosx-i686\.dmg}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

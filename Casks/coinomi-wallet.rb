@@ -11,7 +11,7 @@ cask "coinomi-wallet" do
   livecheck do
     url "https://coinomi.com/downloads"
     strategy :page_match
-    regex(/href=.*?coinomi-wallet-(\d+(?:\.\d+)*)-macos\.dmg/i)
+    regex(/href=.*?coinomi-wallet-(\d+(?:\.\d+)+)-macos\.dmg/i)
   end
 
   depends_on macos: ">= :sierra"

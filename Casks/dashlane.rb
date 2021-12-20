@@ -1,6 +1,6 @@
 cask "dashlane" do
-  version "6.2126.0.47719"
-  sha256 "06d157bb78de15bf29b12a2f9a421474593e0bce2b840819a99bca1a128a137c"
+  version "6.2148.0.51413"
+  sha256 "fdc2f01040b7bf5f98d64f7412be483a7d7724365d97be892f0be48b82242c04"
 
   url "https://d3mfqat9ni8wb5.cloudfront.net/releases/#{version.major_minor_patch}/#{version}/release/Dashlane.dmg",
       verified: "d3mfqat9ni8wb5.cloudfront.net/releases/"
@@ -23,14 +23,9 @@ cask "dashlane" do
   zap trash: [
     "~/Library/Application Scripts/com.dashlane.Dashlane.SafariExtensionDMG",
     "~/Library/Application Support/Dashlane",
-    "~/Library/Application Support/com.dashlane.Dashlane",
-    "~/Library/Application Support/com.dashlane.DashlaneAgent",
-    "~/Library/Caches/com.dashlane.Dashlane",
-    "~/Library/Caches/com.dashlane.DashlaneAgent",
-    "~/Library/Caches/com.dashlane.DashlanePluginService",
+    "~/Library/Application Support/com.dashlane.Dashlane*",
+    "~/Library/Caches/com.dashlane.Dashlane*",
     "~/Library/Containers/com.dashlane.Dashlane.SafariExtensionDMG",
-    "~/Library/Preferences/com.dashlane.Dashlane.plist",
-    "~/Library/Preferences/com.dashlane.DashlaneAgent.plist",
-    "~/Library/Preferences/com.dashlane.DashlanePluginService.plist",
+    "~/Library/Preferences/com.dashlane.Dashlane*.plist",
   ]
 end

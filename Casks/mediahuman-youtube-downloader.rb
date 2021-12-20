@@ -1,5 +1,5 @@
 cask "mediahuman-youtube-downloader" do
-  version "3.9.9.61"
+  version "3.9.9.62"
   sha256 :no_check
 
   url "https://www.mediahuman.com/files/YouTubeDownloader.dmg"
@@ -10,7 +10,7 @@ cask "mediahuman-youtube-downloader" do
   livecheck do
     url :homepage
     strategy :page_match
-    regex(/Version:.*?(\d+(?:\.\d+)*)/i)
+    regex(/Version:.*?(\d+(?:\.\d+)+)/i)
   end
 
   app "MediaHuman YouTube Downloader.app"

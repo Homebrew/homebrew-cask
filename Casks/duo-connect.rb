@@ -5,12 +5,13 @@ cask "duo-connect" do
   url "https://dl.duosecurity.com/DuoConnect-#{version}.pkg",
       verified: "dl.duosecurity.com/"
   name "DuoConnect"
+  desc "Access your organization’s SSH servers"
   homepage "https://guide.duo.com/duoconnect"
 
   livecheck do
     url "https://duo.com/docs/checksums#duoconnect-for-macos"
     strategy :page_match
-    regex(%r{href=.*?/DuoConnect-(\d+(?:\.\d+)*)\.pkg}i)
+    regex(%r{href=.*?/DuoConnect-(\d+(?:\.\d+)+)\.pkg}i)
   end
 
   depends_on macos: ">= :yosemite"

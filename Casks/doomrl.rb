@@ -10,7 +10,7 @@ cask "doomrl" do
   livecheck do
     url "https://drl.chaosforge.org/downloads"
     strategy :page_match
-    regex(/DRL\s*(\d+(?:\.\d+)*)/i)
+    regex(/DRL\s*(\d+(?:\.\d+)+)/i)
   end
 
   app "DoomRL.app"

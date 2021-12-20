@@ -10,7 +10,7 @@ cask "celestia" do
 
   livecheck do
     url "https://celestia.space/download.html"
-    regex(%r{href=.*?/celestia[._-](\d+(?:\.\d+)*)[._-]macOS\.zip["' >]}i)
+    regex(%r{href=.*?/celestia[._-](\d+(?:\.\d+)+)[._-]macOS\.zip["' >]}i)
   end
 
   app "Celestia.app"

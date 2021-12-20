@@ -1,5 +1,5 @@
 cask "airy" do
-  version "3.23,333"
+  version "3.24,336"
   sha256 :no_check
 
   url "https://cdn.eltima.com/download/airy.dmg"

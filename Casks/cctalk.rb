@@ -1,6 +1,6 @@
 cask "cctalk" do
-  version "7.8.8.3"
-  sha256 "08c58e8501176dbce024ea6440075fa7413bb3fc76bd38bf3b411264daf4686d"
+  version "7.9.1.1"
+  sha256 "688added8cdaa0d2b6a7bd1ef9855d40df76d2beb6dfdc218a6e7dc065866b6a"
 
   url "https://cc.hjfile.cn/cc/#{version}/8/1/103/#{version}.dmg",
       verified: "cc.hjfile.cn/"

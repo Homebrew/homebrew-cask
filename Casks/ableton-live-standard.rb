@@ -1,6 +1,6 @@
 cask "ableton-live-standard" do
-  version "11.0.11"
-  sha256 "cf9b13181652ea34da7c5a2c552ea1092c7e5011fac180a72c9c9ea0f7095d2f"
+  version "11.0.12"
+  sha256 "5195d68cbc0fc926bfd8c293d1bee7566eac4ae5b4af1fbb195e84945dcea838"
 
   url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_standard_#{version}_64.dmg"
   name "Ableton Live Standard"
@@ -9,7 +9,7 @@ cask "ableton-live-standard" do
 
   livecheck do
     url "https://www.ableton.com/en/release-notes/live-#{version.major}/"
-    regex(/(\d+(?:\.\d+)*)\s*Release\s*Notes/i)
+    regex(/(\d+(?:\.\d+)+)\s*Release\s*Notes/i)
   end
 
   auto_updates true

@@ -12,6 +12,8 @@ cask "fpc-src-laz" do
     url "https://sourceforge.net/projects/lazarus/rss"
     strategy :page_match do |page|
       match = page.match(%r{Lazarus%20(\d+(?:.\d+)*)/fpc-src-(\d+(?:.\d+)*)-laz\.pkg}i)
+      next if match.blank?
+
       "#{match[2]},#{match[1]}"
     end
   end

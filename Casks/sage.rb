@@ -1,8 +1,8 @@
 cask "sage" do
-  version "9.4,1.2.1"
-  sha256 "9813ba0473f3c873144f9c789b9ffb2984f1b8e267d1b4320c7652aacee048ad"
+  version "9.4,1.2.2"
+  sha256 "d59e16c3ec816f5b1ca0a9ad1e77fe5710d6f6d65f84495c64a0e846d9df4da8"
 
-  url "https://github.com/3-manifolds/Sage_macOS/releases/download/v#{version.after_comma}/SageMath-#{version.before_comma}.dmg",
+  url "https://github.com/3-manifolds/Sage_macOS/releases/download/v#{version.csv.second}/SageMath-#{version.csv.first}%2B.dmg",
       verified: "github.com/3-manifolds/Sage_macOS/"
   name "Sage"
   desc "Mathematics software system"
@@ -11,15 +11,17 @@ cask "sage" do
   livecheck do
     url "https://github.com/3-manifolds/Sage_macOS/releases/latest"
     strategy :page_match do |page|
-      match = page.match(%r{href=.*?/v?(\d+(?:\.\d+)*)/SageMath-(\d+(?:\.\d+)*)\.dmg}i)
+      match = page.match(%r{href=.*?/v?(\d+(?:\.\d+)+)/SageMath-(\d+(?:\.\d+)+)\+?\.dmg}i)
+      next if match.blank?
+
       "#{match[2]},#{match[1]}"
     end
   end
 
   depends_on macos: ">= :high_sierra"
 
-  app "SageMath-#{version.before_comma.dots_to_hyphens}.app"
-  pkg "Recommended_#{version.before_comma.dots_to_underscores}.pkg"
+  app "SageMath-#{version.csv.first.dots_to_hyphens}.app"
+  pkg "Recommended_#{version.csv.first.dots_to_underscores}.pkg"
 
   uninstall quit:    [
     "org.computop.sage",
@@ -28,9 +30,9 @@ cask "sage" do
     "com.tcltk.tklibrary",
   ],
             pkgutil: [
-              "org.computop.SageMath.#{version.before_comma.dots_to_underscores}.bin",
-              "org.computop.SageMath.#{version.before_comma.dots_to_underscores}.share",
-              "org.computop.SageMath.#{version.before_comma.dots_to_underscores}.texlive",
+              "org.computop.SageMath.#{version.csv.first.dots_to_underscores}.bin",
+              "org.computop.SageMath.#{version.csv.first.dots_to_underscores}.share",
+              "org.computop.SageMath.#{version.csv.first.dots_to_underscores}.texlive",
             ]
 
   zap trash: [

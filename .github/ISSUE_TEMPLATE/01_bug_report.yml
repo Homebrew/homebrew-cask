@@ -3,6 +3,7 @@ description: If you’re sure it’s reproducible and not just your machine, sub
 body:
   - type: checkboxes
     attributes:
+      label: Verification
       description: Please verify that you’ve followed these steps
       options:
         - label: I understand that [if I ignore these instructions, my issue may be closed without review](https://github.com/Homebrew/homebrew-cask/blob/master/doc/faq/closing_issues_without_review.md).
@@ -30,33 +31,18 @@ body:
   - type: textarea
     attributes:
       label: Output of command with `--verbose --debug`
-      value: |
-        <details><summary>Click to expand</summary><pre><code>
-
-        REPLACE THIS TEXT WITH THE OUTPUT
-
-        </code></pre></details>
+      render: shell
     validations:
       required: true
   - type: textarea
     attributes:
       label: Output of `brew doctor --verbose`
-      value: |
-        <details><summary>Click to expand</summary><pre><code>
-
-        REPLACE THIS TEXT WITH THE OUTPUT
-
-        </code></pre></details>
+      render: shell
     validations:
       required: true
   - type: textarea
     attributes:
       label: Output of `brew tap`
-      value: |
-        <details><summary>Click to expand</summary><pre><code>
-
-        REPLACE THIS TEXT WITH THE OUTPUT
-
-        </code></pre></details>
+      render: shell
     validations:
       required: true

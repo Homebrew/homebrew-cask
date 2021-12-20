@@ -10,7 +10,7 @@ cask "codeexpander" do
   livecheck do
     url :url
     strategy :github_latest
-    regex(%r{href=.*?/CodeExpander-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/CodeExpander-(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "CodeExpander.app"

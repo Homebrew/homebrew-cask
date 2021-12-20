@@ -11,6 +11,8 @@ cask "get-iplayer-automator" do
     url "https://github.com/Ascoware/get-iplayer-automator/releases/latest"
     strategy :page_match do |page|
       match = page.match(%r{href=.*?/Get\.?iPlayer\.?Automator\.?v?(\d+(?:.\d+)*).b(\d+)\.zip}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

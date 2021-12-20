@@ -8,5 +8,11 @@ cask "marathon" do
   desc "First-person shooter, first in a trilogy"
   homepage "https://alephone.lhowon.org/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+    regex(%r{href=.*?/Marathon-(\d+)-Mac\.dmg}i)
+  end
+
   app "Marathon.app"
 end

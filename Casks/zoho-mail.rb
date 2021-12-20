@@ -1,8 +1,15 @@
 cask "zoho-mail" do
-  version "1.3.1"
-  sha256 "f8099f704317173c46083e946e7cb03143aa854b288832d9a0bbb5a31edf4aff"
+  arch = Hardware::CPU.intel? ? "" : "arm64-"
 
-  url "https://downloads.zohocdn.com/zmail-desktop/mac/zoho-mail-desktop-installer-v#{version}.dmg",
+  version "1.3.2"
+
+  if Hardware::CPU.intel?
+    sha256 "e523500871505808527a251b4c0f447a3d82c4f1df37df69932c4a5b9eda9f19"
+  else
+    sha256 "3f5a3613e06e6fca2a317087e24ec24c2eb0c070f312c78416bd36de63a4f08f"
+  end
+
+  url "https://downloads.zohocdn.com/zmail-desktop/mac/zoho-mail-desktop-installer-#{arch}v#{version}.dmg",
       verified: "downloads.zohocdn.com/zmail-desktop/mac/"
   name "Zoho Mail"
   desc "Email client"

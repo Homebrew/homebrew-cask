@@ -1,9 +1,10 @@
 cask "5kplayer" do
-  version "6.8.0,5000"
+  version "6.9.0,5000"
   sha256 :no_check
 
   url "https://www.5kplayer.com/download/5kplayer.dmg"
   name "5KPlayer"
+  desc "Play 4K/1080p/360° video, MP3 AAC APE FLAC music without quality loss"
   homepage "https://www.5kplayer.com/"
 
   livecheck do

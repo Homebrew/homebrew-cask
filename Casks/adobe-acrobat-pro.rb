@@ -11,7 +11,7 @@ cask "adobe-acrobat-pro" do
 
   livecheck do
     url "https://armmf.adobe.com/arm-manifests/mac/AcrobatDC/acrobat/current_version.txt"
-    regex(/^(\d+(?:\.\d+)*)$/i)
+    regex(/^(\d+(?:\.\d+)+)$/i)
   end
 
   auto_updates true

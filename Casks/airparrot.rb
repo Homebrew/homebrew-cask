@@ -10,7 +10,7 @@ cask "airparrot" do
   livecheck do
     url "https://www.airsquirrels.com/airparrot/download"
     strategy :page_match
-    regex(%r{href=.*?/AirParrot-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/AirParrot-(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "AirParrot #{version.major}.app"

@@ -1,9 +1,10 @@
 cask "unicodechecker" do
-  version "1.22,776"
-  sha256 "3c173ef1984cc42baa0dd03cfbd4d07cf18c75e3699b2c2a3a24250ac77fbe4f"
+  version "1.23,796"
+  sha256 "4cfc69e10860ffe5080f42acdbd43bcd8518d94c7e294cf0070521b9d8097cee"
 
   url "https://earthlingsoft.net/UnicodeChecker/UnicodeChecker%20#{version.before_comma}%20(#{version.after_comma}).zip"
   name "UnicodeChecker"
+  desc "Explore and convert Unicode"
   homepage "https://earthlingsoft.net/UnicodeChecker/"
 
   livecheck do
@@ -11,7 +12,7 @@ cask "unicodechecker" do
     strategy :sparkle
   end
 
-  app "UnicodeChecker #{version.before_comma} (#{version.after_comma})/UnicodeChecker.app"
+  app "UnicodeChecker.app"
 
   zap trash: [
     "~/Library/Application Support/UnicodeChecker",

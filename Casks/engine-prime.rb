@@ -12,6 +12,8 @@ cask "engine-prime" do
     url "https://www.denondj.com/downloads"
     strategy :page_match do |page|
       match = page.match(%r{href=.*?/Engine[._-]?Prime[._-]?v?(\d+(?:\.\d+)*)(?:[._-]([0-9a-z]+))?[._-]Setup\.dmg}i)
+      next if match.blank?
+
       "#{match[1]}#{"," + match[2] if match[2]}"
     end
   end

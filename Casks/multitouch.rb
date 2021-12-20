@@ -1,6 +1,6 @@
 cask "multitouch" do
-  version "1.24.13,140"
-  sha256 "bddf63d7a2b6867cfe7bbe168d6748edcb45ac6e2c706b5994e8d46f3c5aae60"
+  version "1.25.1,146"
+  sha256 "72c320f923d514a38f0f2cbf4d936bf7db9e293afd4c12beeaa9d75877ad936b"
 
   url "https://multitouch.app/downloads/multitouch#{version.before_comma}.dmg"
   name "Multitouch"
@@ -18,8 +18,8 @@ cask "multitouch" do
   app "Multitouch.app"
 
   zap trash: [
-    "~/Library/Preferences/com.brassmonkery.Multitouch",
     "~/Library/Application Support/Multitouch",
     "~/Library/Caches/com.brassmonkery.Multitouch",
+    "~/Library/Preferences/com.brassmonkery.Multitouch",
   ]
 end

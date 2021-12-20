@@ -1,5 +1,5 @@
 cask "sirimote" do
-  version "1.4,30"
+  version "1.4.2,32"
   sha256 :no_check
 
   url "https://eternalstorms.at/sirimote/SiriMote.zip"
@@ -15,4 +15,6 @@ cask "sirimote" do
   depends_on macos: ">= :sierra"
 
   app "SiriMote.app"
+
+  zap trash: "~/Library/Preferences/at.EternalStorms.SiriMote-nonappstore.plist"
 end

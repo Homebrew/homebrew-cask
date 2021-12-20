@@ -1,5 +1,5 @@
 cask "yate" do
-  version "6.6.1.1,10542"
+  version "6.7.0.1,10749"
   sha256 :no_check
 
   url "https://2manyrobots.com/Updates/Yate/Yate.zip"
@@ -15,4 +15,9 @@ cask "yate" do
   auto_updates true
 
   app "Yate.app"
+
+  zap trash: [
+    "~/Library/Application Support/Yate",
+    "~/Library/Preferences/com.2manyrobots.Yate.plist",
+  ]
 end

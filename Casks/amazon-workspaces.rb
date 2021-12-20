@@ -1,6 +1,6 @@
 cask "amazon-workspaces" do
-  version "4.0.3.2103"
-  sha256 "51bd247e3b38269767950d9ab791d5e8ef92806baaeb41e5ce1b9975b81d7a6a"
+  version "4.0.5.2143"
+  sha256 "ac8b220e064150176a35ba3f6023976ad8b6becdfe4c9a45646434cc91e2fc7f"
 
   url "https://d2td7dqidlhjx7.cloudfront.net/prod/iad/osx/WorkSpaces_AllProducts_#{version.split(".")[-1]}.zip",
       verified: "d2td7dqidlhjx7.cloudfront.net/prod/iad/osx/"

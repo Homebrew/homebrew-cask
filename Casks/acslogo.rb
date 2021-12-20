@@ -10,7 +10,7 @@ cask "acslogo" do
 
   livecheck do
     url "https://www.alancsmith.co.uk/logo/release.html"
-    regex(/Release\s*(\d+(?:\.\d+)*)/i)
+    regex(/Release\s*(\d+(?:\.\d+)+)/i)
   end
 
   app "ACSLogo/ACSLogo.app"

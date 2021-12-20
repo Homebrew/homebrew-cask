@@ -1,19 +1,19 @@
 cask "sketch" do
-  version "78.1,131922"
-  sha256 "f576636bb6420cd54183c48f00670705aef7a3f8892b1dd599b5bb96564f5bfa"
+  version "81.1,135647"
+  sha256 "dda0154827b10760330ac174fca48ec9980d9fab2a655cd938c321c5855694fc"
 
-  url "https://download.sketchapp.com/sketch-#{version.before_comma}-#{version.after_comma}.zip"
+  url "https://download.sketch.com/sketch-#{version.csv.first}-#{version.csv.second}.zip"
   name "Sketch"
   desc "Digital design and prototyping platform"
-  homepage "https://www.sketchapp.com/"
+  homepage "https://www.sketch.com/"
 
   livecheck do
-    url "https://download.sketchapp.com/sketch-versions.xml"
+    url "https://download.sketch.com/sketch-versions.xml"
     strategy :sparkle
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :catalina"
 
   app "Sketch.app"
 

@@ -1,16 +1,16 @@
 cask "blockbench" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "4.0.1"
+  version "4.0.5"
+
+  if Hardware::CPU.intel?
+    sha256 "2e20958fd6738ca5e628edf2068d731a6487ebe2a10325c7e7cba120029f873d"
+  else
+    sha256 "0102dcba3ffef753bac823dd7fd113035dc4f4f9ec0fd8598809bed0bd9827d0"
+  end
 
   url "https://github.com/JannisX11/blockbench/releases/download/v#{version}/Blockbench_#{arch}_#{version}.dmg",
       verified: "github.com/JannisX11/blockbench/"
-  if Hardware::CPU.intel?
-    sha256 "562e5a56281a61b8d9533d541f06e89d55fc85659a67d744673b81f0dfd65da5"
-  else
-    sha256 "2acd9a3bb54474e97cc3fc6a64bd2e6824f7a3397c1b4b31bf9fddfd27f486a4"
-  end
-
   name "Blockbench"
   desc "3D model editor for boxy models and pixel art textures"
   homepage "https://www.blockbench.net/"

@@ -1,6 +1,6 @@
 cask "pdf-expert" do
-  version "2.5.18,738"
-  sha256 "110eecbd34fb083f3b47c3478d134c60922d6da28369c0db067e65e13f005b01"
+  version "2.5.19,752"
+  sha256 "3168dccd88db0ee0752d2b6dfb44c37d400ad03be9e6d9a2fb95c5ec9f213eb0"
 
   url "https://d1ke680phyeohy.cloudfront.net/versions/#{version.after_comma}/PDFExpert.dmg",
       verified: "d1ke680phyeohy.cloudfront.net/versions/"

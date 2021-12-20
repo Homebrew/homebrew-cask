@@ -10,7 +10,7 @@ cask "deluge" do
 
   livecheck do
     url "https://ftp.osuosl.org/pub/deluge/mac_osx/?C=M;O=D"
-    regex(/href=["']?deluge[._-]v?(\d+(?:\.\d+)*)[._-][a-z0-9._-]*\.dmg/i)
+    regex(/href=["']?deluge[._-]v?(\d+(?:\.\d+)+)[._-][a-z0-9._-]*\.dmg/i)
   end
 
   app "Deluge.app"

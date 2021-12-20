@@ -9,7 +9,7 @@ cask "adobe-acrobat-reader" do
 
   livecheck do
     url "https://armmf.adobe.com/arm-manifests/mac/AcrobatDC/reader/current_version.txt"
-    regex(/(\d+(?:\.\d+)*)/i)
+    regex(/(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true

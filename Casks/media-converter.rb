@@ -9,4 +9,6 @@ cask "media-converter" do
   homepage "https://media-converter.sourceforge.io/"
 
   app "Media Converter.localized/Media Converter.app"
+
+  zap trash: "~/Library/Preferences/com.kiwifruitware.Media-Converter.plist"
 end

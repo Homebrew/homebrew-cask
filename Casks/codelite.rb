@@ -11,6 +11,8 @@ cask "codelite" do
     url "https://downloads.codelite.org/"
     strategy :page_match do |page|
       match = page.match(/CodeLite\s*(\d+\.\d+)((?:\.\d+)*)\s*-\s*Stable\s*Release/i)
+      next if match.blank?
+
       "#{match[1]}#{match[2].presence || ".0"}"
     end
   end

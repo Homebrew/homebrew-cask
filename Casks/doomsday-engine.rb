@@ -9,7 +9,7 @@ cask "doomsday-engine" do
 
   livecheck do
     url "https://files.dengine.net/archive/"
-    regex(/doomsday_(\d+(?:\.\d+)*)_x86_64\.dmg/i)
+    regex(/doomsday_(\d+(?:\.\d+)+)_x86_64\.dmg/i)
   end
 
   app "Doomsday.app"

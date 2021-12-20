@@ -1,8 +1,8 @@
 cask "wezterm" do
-  version "20210814-124438,54e29167"
-  sha256 "1b3a86e881ad24dd93b39cc7c50478804482438f734aee7ca44cefa5384188a8"
+  version "20211205-192649,672c1cc1"
+  sha256 "74be671b70935e9b694ec18bef1978068aa0ea951ca0ff5881a6698dbbc7a5a2"
 
-  url "https://github.com/wez/wezterm/releases/download/#{version.before_comma}-#{version.after_comma}/WezTerm-macos-#{version.before_comma}-#{version.after_comma}.zip",
+  url "https://github.com/wez/wezterm/releases/download/#{version.csv.first}-#{version.csv.second}/WezTerm-macos-#{version.csv.first}-#{version.csv.second}.zip",
       verified: "github.com/wez/wezterm/"
   name "WezTerm"
   desc "GPU-accelerated cross-platform terminal emulator and multiplexer"
@@ -13,11 +13,13 @@ cask "wezterm" do
     regex(%r{href=.*?/WezTerm-macos-(\d{8}-\d{6})-([0-9a-f]+)\.zip}i)
     strategy :github_latest do |page, regex|
       match = page.match(regex)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end
 
-  app "WezTerm-macos-#{version.before_comma}-#{version.after_comma}/WezTerm.app"
+  app "WezTerm-macos-#{version.csv.first}-#{version.csv.second}/WezTerm.app"
 
   %w[
     wezterm

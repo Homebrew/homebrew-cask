@@ -1,8 +1,8 @@
 cask "macupdater" do
-  version "2.1.0,12138"
-  sha256 "df407bead7c271389fd6ac5f694cb32c40e5a2a5a85d7df8d3c5cc02eb673e29"
+  version "2.1.1,12442"
+  sha256 "540c01f24af6a1f82970111538b848c83de39f7883b76f9a526cd499fac1e36e"
 
-  url "https://www.corecode.io/downloads/macupdater_#{version.before_comma}.dmg"
+  url "https://www.corecode.io/downloads/macupdater_#{version.csv.first}.dmg"
   name "MacUpdater"
   desc "Track and update to the latest versions of installed software"
   homepage "https://www.corecode.io/macupdater/index.html"

@@ -1,8 +1,8 @@
 cask "axure-rp" do
-  version "10.0.0.3838"
-  sha256 :no_check
+  version "10.0.0.3851"
+  sha256 "f94d284b0f9144fa26264807d5831486b437db3cbb96c8aec4c92126beb0b5aa"
 
-  url "https://axure.cachefly.net/AxureRP-Setup.dmg",
+  url "https://axure.cachefly.net/versions/#{version.before_comma.major_minor.dots_to_hyphens}/AxureRP-Setup-#{version.split(".")[3]}.dmg",
       verified: "axure.cachefly.net/"
   name "Axure RP"
   desc "Planning and prototyping tool for developers"

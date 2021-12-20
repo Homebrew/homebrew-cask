@@ -12,6 +12,8 @@ cask "foxitreader" do
     url "https://www.foxit.com/downloads/latest.html?product=Foxit-Reader&platform=Mac-OS-X"
     strategy :header_match do |headers|
       match = headers["location"].match(%r{/(\d+(?:\.\d+)*)/ML/FoxitPDFReader(\d+)\.L10N\.Setup\.pkg}i)
+      next if match.blank?
+
       "#{match[1]}.#{match[2].delete_prefix(match[1].delete("."))}"
     end
   end

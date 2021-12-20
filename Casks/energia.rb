@@ -4,9 +4,14 @@ cask "energia" do
 
   url "https://s3.amazonaws.com/energiaUS/distributions/energia-#{version}-macosx-signed.zip",
       verified: "s3.amazonaws.com/energiaUS/"
-  appcast "https://energia.nu/download/"
   name "Energia"
+  desc "Electronics prototyping platform"
   homepage "https://energia.nu/"
+
+  livecheck do
+    url "https://energia.nu/download/"
+    regex(/file=energia[._-]?v?(\d+(?:\.[\dE]+)+)[._-]macosx[._-]signed\.zip/i)
+  end
 
   app "Energia.app"
 

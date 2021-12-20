@@ -1,8 +1,8 @@
 cask "daedalus-mainnet" do
-  version "4.4.0,19288"
-  sha256 "dc624b0c9820af146a62d1fc131cd5c8e1dedf2fb23ebbbd4e85b3a1853a3a3c"
+  version "4.6.0,20052"
+  sha256 "4978236ec97f07e83500a57adac574f0d3addc6f950f2a3017cf6c4aef2d0449"
 
-  url "https://update-cardano-mainnet.iohk.io/daedalus-#{version.before_comma}-mainnet-#{version.after_comma}.pkg",
+  url "https://update-cardano-mainnet.iohk.io/daedalus-#{version.csv.first}-mainnet-#{version.csv.second}.pkg",
       verified: "update-cardano-mainnet.iohk.io/"
   name "Daedalus Mainnet"
   desc "Cryptocurrency wallet for ada on the Cardano blockchain"
@@ -11,7 +11,9 @@ cask "daedalus-mainnet" do
   livecheck do
     url "https://update-cardano-mainnet.iohk.io/daedalus-latest-version.json"
     strategy :page_match do |page|
-      match = page.match(%r{/daedalus[._-](\d+(?:\.\d+)*)[._-]mainnet[._-](\d+)\.pkg}i)
+      match = page.match(%r{/daedalus[._-](\d+(?:\.\d+)+)[._-]mainnet[._-](\d+)\.pkg}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

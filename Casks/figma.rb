@@ -1,12 +1,12 @@
 cask "figma" do
   arch = Hardware::CPU.intel? ? "mac" : "mac-arm"
 
-  version "104.1.0"
+  version "107.1.0"
 
   if Hardware::CPU.intel?
-    sha256 "442b2649e388eeae644131c5cb4344c63166a147386ece179c42413ae6cc71f4"
+    sha256 "cb5e73a2b3a6f347d6729e9a2585cfdd3ba2ad00edeec6f0edbbb7a57f14d172"
   else
-    sha256 "e5479dc1455daca530d99b67de8344c64ae5f1542f93dbcc96a8d44302f481ed"
+    sha256 "8cbb43d9fb7aefc1a86d8ee0452b3b460cb051b8397de7160bf5e8ed9b15595e"
   end
 
   url "https://desktop.figma.com/#{arch}/Figma-#{version}.zip"

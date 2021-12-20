@@ -11,6 +11,8 @@ cask "aether" do
     url "https://static.getaether.net/WebsiteReleaseLinks/Latest/LatestReleaseLinks.json"
     strategy :page_match do |page|
       match = page.match(%r{/Aether-(\d+(?:\.\d+)*-dev\.\d+)%2B(\d+\.[0-9a-f]+)\.dmg}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

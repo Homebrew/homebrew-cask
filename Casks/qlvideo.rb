@@ -10,6 +10,8 @@ cask "qlvideo" do
     url "https://github.com/Marginal/QLVideo/releases/latest"
     strategy :page_match do |page|
       match = page.match(%r{href=.*?/QLVideo_(\d+?)(\d+)\.pkg}i)
+      next if match.blank?
+
       "#{match[1]}.#{match[2]}"
     end
   end

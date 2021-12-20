@@ -3,9 +3,14 @@ cask "zandronum" do
   sha256 "9e50fee5eea4c3eda08ea6433f1a5bc8edb60ea44be634511f06109357686616"
 
   url "https://zandronum.com/downloads/zandronum#{version}-macosx.dmg"
-  appcast "https://zandronum.com/downloads/"
   name "Zandronum"
+  desc "Multiplayer oriented port for Doom and Doom II"
   homepage "https://zandronum.com/"
+
+  livecheck do
+    url "https://zandronum.com/downloads/"
+    regex(/href=.*?zandronum[._-]?v?(\d+(?:\.\d+)+)-macosx\.dmg/i)
+  end
 
   app "Zandronum.app"
   app "Doomseeker.app"

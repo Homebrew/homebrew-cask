@@ -1,14 +1,14 @@
 cask "mweb-pro" do
-  version "4.2.1"
+  version "4.2.3"
 
   if MacOS.version <= :catalina
     url "https://cdn.mwebapp.cn/MWebPro#{version.no_dots}_catalina.dmg",
         verified: "cdn.mwebapp.cn/"
-    sha256 "f9e349ad5e9c5a3bc3bd32271f04af4aa9a772027637507988dc993c1599e399"
+    sha256 "2e874002fc377d44ae2573f5f386adb9acd10abd63a5bbcf4ed78f895fd9df47"
   else
     url "https://cdn.mwebapp.cn/MWebPro#{version.no_dots}.dmg",
         verified: "cdn.mwebapp.cn/"
-    sha256 "836d890d2571e45ed3c69a4a9bf35dbb4ee03c08542b9e0be0eb40783bc953b1"
+    sha256 "e9ee631bd10a9f7f6fb885b339d6ff6e015f6b1ff9c219853a4a745f01212fa2"
   end
 
   name "MWeb Pro"
@@ -17,7 +17,7 @@ cask "mweb-pro" do
 
   livecheck do
     url "https://www.mweb.im/update_v4.json"
-    regex(/(?:"version":")(\d+(\.\d+)*)"/i)
+    regex(/"version":"(\d+(?:\.\d+)+)"/i)
   end
 
   depends_on macos: ">= :high_sierra"

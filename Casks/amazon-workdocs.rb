@@ -5,12 +5,15 @@ cask "amazon-workdocs" do
   url "https://d28gdqadgmua23.cloudfront.net/mac/version/#{version.before_comma}/#{version.after_comma}/Amazon%20WorkDocs.app.zip",
       verified: "d28gdqadgmua23.cloudfront.net/"
   name "Amazon WorkDocs"
+  desc "Fully managed, secure content creation, storage, and collaboration service"
   homepage "https://aws.amazon.com/workdocs/"
 
   livecheck do
     url "https://d28gdqadgmua23.cloudfront.net/mac/appcast/appcast-workdocs-prod.xml"
     strategy :sparkle do |item|
-      match = item.url.match(%r{/(\d+(?:\.\d+)*)/(\d+)/Amazon WorkDocs\.app\.zip}i)
+      match = item.url.match(%r{/(\d+(?:\.\d+)+)/(\d+)/Amazon WorkDocs\.app\.zip}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

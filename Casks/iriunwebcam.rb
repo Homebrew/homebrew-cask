@@ -1,6 +1,6 @@
 cask "iriunwebcam" do
-  version "2.6"
-  sha256 "f9c0b7ea5faa6e42ddd30148be00ba615bc1ad5e1cc60b0056c061e3074f652d"
+  version "2.7.1"
+  sha256 "e13b6708debbe6f92676fff2a98073774a64d556e88a3bedd0681477a0a123e8"
 
   url "https://1758658189.rsc.cdn77.org/IriunWebcam-#{version}.pkg",
       verified: "1758658189.rsc.cdn77.org/"
@@ -9,9 +9,8 @@ cask "iriunwebcam" do
   homepage "https://iriun.com/"
 
   livecheck do
-    url "https://iriun.com/"
-    strategy :page_match
-    regex(%r{href=.*?/IriunWebcam-(\d+(?:\.\d+)*)\.pkg}i)
+    url :homepage
+    regex(%r{href=.*?/IriunWebcam[._-]?v?(\d+(?:\.\d+)+)\.pkg}i)
   end
 
   pkg "IriunWebcam-#{version}.pkg"

@@ -1,8 +1,8 @@
 cask "moneydance" do
-  version "2022,4056"
-  sha256 "bfe2711707ce42809e4c92f7458059c7aa793e6c788f8febd92aafe6022b227a"
+  version "2022.2,4060"
+  sha256 :no_check
 
-  url "https://infinitekind.com/stabledl/#{version.before_comma}_#{version.after_comma}/Moneydance.zip"
+  url "https://infinitekind.com/stabledl/current/Moneydance.dmg"
   name "Moneydance"
   desc "Personal financial management application focused on privacy"
   homepage "https://infinitekind.com/moneydance"

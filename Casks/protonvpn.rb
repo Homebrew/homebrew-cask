@@ -1,6 +1,6 @@
 cask "protonvpn" do
-  version "2.2.1"
-  sha256 "7edce86180155738777970116a3579e668ad9537cab4020f1cf89c027a17c1e3"
+  version "2.2.2"
+  sha256 "763f1d682c64a272d127394791deccb93784d5c9b32dcc681ee8ec3f7a116274"
 
   url "https://protonvpn.com/download/ProtonVPN_mac_v#{version}.dmg"
   name "ProtonVPN"
@@ -10,7 +10,7 @@ cask "protonvpn" do
   livecheck do
     url "https://protonvpn.com/download/macos-update3.xml"
     strategy :page_match
-    regex(/ProtonVPN_mac_v?(\d+(?:\.\d+)*)\.dmg/i)
+    regex(/ProtonVPN_mac_v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   auto_updates true

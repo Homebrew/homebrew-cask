@@ -1,16 +1,15 @@
 cask "zoom" do
-  version "5.8.3.2240"
+  arch = Hardware::CPU.intel? ? "" : "arm64/"
+
+  version "5.8.6.2879"
 
   if Hardware::CPU.intel?
-    sha256 "ae0f4683875ef0a4358ef274c66e9a3b39861497e25e0894b2b56d698d0cd47e"
-
-    url "https://cdn.zoom.us/prod/#{version}/Zoom.pkg"
+    sha256 "e829ad0eedf75dfa010fce4253f10698e6f769e4dbfa28ded57a9d540969917a"
   else
-    sha256 "ac5bdd2824e47c27560f3aff9a9a24d24b31707c27663ea8a85e7bb0d2bc462a"
-
-    url "https://cdn.zoom.us/prod/#{version}/arm64/Zoom.pkg"
+    sha256 "87a5ef87af853b298980b12439a1eed8a5f9eef7a2db9215983382bfc64a517a"
   end
 
+  url "https://cdn.zoom.us/prod/#{version}/#{arch}Zoom.pkg"
   name "Zoom.us"
   desc "Video communication and virtual meeting platform"
   homepage "https://www.zoom.us/"
@@ -42,9 +41,10 @@ cask "zoom" do
       opoo "Unable to forcibly close zoom.us.app"
   end
 
-  uninstall signal:  ["KILL", "us.zoom.xos"],
-            pkgutil: "us.zoom.pkg.videomeeting",
-            delete:  [
+  uninstall signal:    ["KILL", "us.zoom.xos"],
+            pkgutil:   "us.zoom.pkg.videomeeting",
+            launchctl: "us.zoom.ZoomDaemon",
+            delete:    [
               "/Applications/zoom.us.app",
               "/Library/Internet Plug-Ins/ZoomUsPlugIn.plugin",
               "/Library/Logs/DiagnosticReports/zoom.us*",

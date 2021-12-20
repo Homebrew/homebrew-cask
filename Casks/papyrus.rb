@@ -11,6 +11,8 @@ cask "papyrus" do
     url "https://www.eclipse.org/papyrus/download.html"
     strategy :page_match do |page|
       match = page.match(%r{href=.*?/papyrus-(\d+(?:-\d+)*)-(\d+(?:\.\d+)*)-macosx64\.tar\.gz}i)
+      next if match.blank?
+
       "#{match[2]},#{match[1]}"
     end
   end

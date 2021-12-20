@@ -4,12 +4,13 @@ cask "cryo" do
 
   url "https://cryonet.io/downloads/macos/cryo_#{version}_macos.zip"
   name "cryo"
+  desc "Visual file manager"
   homepage "https://cryonet.io/"
 
   livecheck do
     url :homepage
     strategy :page_match
-    regex(%r{href=.*?/cryo_(\d+(?:\.\d+)*)_macos\.zip}i)
+    regex(%r{href=.*?/cryo_(\d+(?:\.\d+)+)_macos\.zip}i)
   end
 
   app "cryo.app"

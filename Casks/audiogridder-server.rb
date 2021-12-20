@@ -17,7 +17,7 @@ cask "audiogridder-server" do
   livecheck do
     url "https://audiogridder.com/releases/latest.txt"
     strategy :page_match
-    regex(/(\d+(?:\.\d+)*)/)
+    regex(/(\d+(?:\.\d+)+)/)
   end
 
   pkg "AudioGridderServer_#{version}_macOS-#{arch}.pkg"

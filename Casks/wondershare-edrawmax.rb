@@ -1,5 +1,5 @@
 cask "wondershare-edrawmax" do
-  version "11.1.0"
+  version "11.1.2"
   sha256 :no_check
 
   language "zh", "CN" do
@@ -18,7 +18,7 @@ cask "wondershare-edrawmax" do
 
   livecheck do
     url "https://www.edrawsoft.com/whats-new/edrawmax.html"
-    regex(/EdrawMax\s*V?(\d+(?:\.\d+)*)/i)
+    regex(/EdrawMax\s*V?(\d+(?:\.\d+)+)/i)
   end
 
   zap trash: [

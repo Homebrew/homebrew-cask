@@ -10,7 +10,7 @@ cask "atlantis" do
   livecheck do
     url "https://www.riverdark.net/atlantis/downloads/"
     strategy :page_match
-    regex(/href=.*?Atlantis-(\d+(?:\.\d+)*)\.zip/i)
+    regex(/href=.*?Atlantis-(\d+(?:\.\d+)+)\.zip/i)
   end
 
   app "Atlantis.app"

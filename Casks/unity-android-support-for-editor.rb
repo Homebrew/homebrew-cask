@@ -1,8 +1,8 @@
 cask "unity-android-support-for-editor" do
-  version "2021.1.24f1,6667702a1e7c"
-  sha256 "6f88600ddbf03acbd336e25ec3efc5480932882cff6a64e81bec8c6babc7378f"
+  version "2021.2.7f1,6bd9e232123f"
+  sha256 "61a3d58bb6df842f715eee3cce484802a570cf148d35a84b1d75e6ba03bf4d50"
 
-  url "https://download.unity3d.com/download_unity/#{version.after_comma}/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-#{version.before_comma}.pkg",
+  url "https://download.unity3d.com/download_unity/#{version.csv.second}/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-#{version.csv.first}.pkg",
       verified: "download.unity3d.com/download_unity/"
   name "Unity Android Build Support"
   desc "Android target support for Unity"
@@ -13,7 +13,7 @@ cask "unity-android-support-for-editor" do
     strategy :page_match do |page|
       page.scan(%r{
         /download_unity/(\h+)/MacEditorTargetInstaller
-        /UnitySetup-Android-Support-for-Editor-(\d+(?:\.\d+)*[a-z]*\d*)\.pkg
+        /UnitySetup-Android-Support-for-Editor-(\d+(?:\.\d+)+[a-z]*\d*)\.pkg
       }ix).map do |match|
         "#{match[1]},#{match[0]}"
       end
@@ -22,7 +22,7 @@ cask "unity-android-support-for-editor" do
 
   depends_on cask: "unity"
 
-  pkg "UnitySetup-Android-Support-for-Editor-#{version.before_comma}.pkg"
+  pkg "UnitySetup-Android-Support-for-Editor-#{version.csv.first}.pkg"
 
   uninstall pkgutil: "com.unity3d.AndroidPlayer"
 end

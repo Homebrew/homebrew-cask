@@ -10,8 +10,13 @@ cask "avitools" do
   livecheck do
     url "https://www.emmgunn.com/avitools-home/avitools-downloads/"
     strategy :page_match
-    regex(%r{href=.*?/avitools(\d+(?:\.\d+)*)\.zip}i)
+    regex(%r{href=.*?/avitools(\d+(?:\.\d+)+)\.zip}i)
   end
 
   app "avitools#{version}/AVItools.app"
+
+  zap trash: [
+    "~/Library/Application Support/EmmGunn",
+    "~/Library/Preferences/com.emmgunn.AVItools#{version.major}.plist",
+  ]
 end

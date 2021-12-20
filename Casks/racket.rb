@@ -1,15 +1,15 @@
 cask "racket" do
   arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
-  version "8.2"
+  version "8.3"
 
-  url "https://mirror.racket-lang.org/installers/#{version}/racket-#{version}-#{arch}-macosx-cs.dmg"
   if Hardware::CPU.intel?
-    sha256 "55147ccf7adf55df9586a91db6d56a2f9b47ed1cb3eda1fda87ff19b622cc383"
+    sha256 "f54d4eb5018fd19135fee2886e56dba8bc496ea345776cacf748cc0ec49a9e68"
   else
-    sha256 "86de0c29783a056798a0ffba7e0f00bf81a70d524dec156d47132cee2159ccb0"
+    sha256 "9a021edb8c1cb2454dfb0110d8251044b791619f7a447f780ceb7c660ffdd53f"
   end
 
+  url "https://mirror.racket-lang.org/installers/#{version}/racket-#{version}-#{arch}-macosx-cs.dmg"
   name "Racket"
   desc "Modern programming language in the Lisp/Scheme family"
   homepage "https://racket-lang.org/"
@@ -17,7 +17,7 @@ cask "racket" do
   livecheck do
     url "https://download.racket-lang.org/all-versions.html"
     strategy :page_match
-    regex(/racket-v?(\d+(?:\.\d+)*)/i)
+    regex(/racket-v?(\d+(?:\.\d+)+)/i)
   end
 
   suite "Racket v#{version}"

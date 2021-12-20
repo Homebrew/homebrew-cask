@@ -1,8 +1,8 @@
 cask "disk-drill" do
-  version "4.4.356"
-  sha256 "2f6c8be2c7803746723fbabf4fcd2b2976fea4db1cbd6405efa7ba24e32fbff1"
+  version "4.6.370"
+  sha256 :no_check
 
-  url "https://www.cleverfiles.com/releases/DiskDrill_#{version}.dmg"
+  url "https://dl.cleverfiles.com/diskdrill.dmg"
   name "Disk Drill"
   desc "Data recovery software"
   homepage "https://www.cleverfiles.com/"
@@ -14,11 +14,18 @@ cask "disk-drill" do
 
   app "Disk Drill.app"
 
-  uninstall delete: "/Library/Application Support/CleverFiles"
+  uninstall script: {
+    executable: "#{staged_path}/Disk Drill.app/Contents/Resources/uninstall",
+    sudo:       true,
+  }
 
   zap trash: [
     "~/Library/Application Support/DiskDrill",
     "~/Library/Caches/com.cleverfiles.Disk_Drill",
+    "~/Library/Containers/com.cleverfiles.DiskDrill.Media/Data/cfbackd.chief",
     "~/Library/Logs/DiskDrill.log",
+    "~/Library/Preferences/com.cleverfiles.Disk_Drill.plist",
+    "~/Library/Preferences/com.cleverfiles.DiskDrill.plist",
+    "~/Library/Preferences/com.cleverfiles.DiskDrill-setapp.plist",
   ]
 end

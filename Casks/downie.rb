@@ -1,8 +1,8 @@
 cask "downie" do
-  version "4.3.7,4297"
-  sha256 "34c4eb21d37cc51bd490a17f1c73c33a96a3dff6bd11cf6619d05991f8353d0c"
+  version "4.4.1,4320"
+  sha256 "4ca656aa2df990a802700077967330e0910e49fbefe1167b596662357dfad254"
 
-  url "https://charliemonroesoftware.com/trial/downie/v#{version.major}/Downie_#{version.major}_#{version.after_comma}.dmg",
+  url "https://charliemonroesoftware.com/trial/downie/v#{version.major}/Downie_#{version.major}_#{version.csv.second}.dmg",
       verified: "charliemonroesoftware.com/"
   name "Downie"
   desc "Downloads videos from different websites"

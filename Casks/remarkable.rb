@@ -1,19 +1,15 @@
 cask "remarkable" do
-  version "2.8.2.170,11141120"
-  sha256 "7669f1e8dd1b13fd5305af8a215b17b33b7ff6cc218a218c9992b7dd83223465"
+  version "2.10.3.179"
+  sha256 "57579e8de8cf4d48f6c002d36878df4427ba113034eb2d783c0c26705056849e"
 
-  url "https://eu-central-1.linodeobjects.com/remarkable-#{version.major}/sparkle/reMarkableMacOs/Prod/#{version.after_comma}/reMarkable-#{version.before_comma}.dmg",
-      verified: "eu-central-1.linodeobjects.com/"
+  url "https://downloads.remarkable.com/desktop/production/mac/reMarkable-#{version}.dmg"
   name "Remarkable"
   desc "View, Screen Share, organize, import, and download files to a reMarkable device"
   homepage "https://remarkable.com/"
 
   livecheck do
     url "https://get-updates.cloud.remarkable.engineering/sparkle/reMarkableMacOs/Prod/appcast.xml"
-    regex(%r{reMarkableMacOs/Prod/(\d+)/reMarkable-(\d+(?:\.\d+)*)\.dmg}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
-    end
+    regex(/reMarkable-(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   auto_updates true

@@ -1,8 +1,8 @@
 cask "ticktick" do
-  version "4.0.21,195"
-  sha256 "3db7a420e87e9bdf744a8b4f379ee260c5adf2adf4f59500e276764bb08aaa3d"
+  version "4.0.60,203"
+  sha256 "5d88f21d86c4d9b992e334f68be97ee4cd254a21fbf7fb3e8500c5c9fbd134f4"
 
-  url "https://appest-public.s3.amazonaws.com/download/mac/TickTick_#{version.before_comma}_#{version.after_comma}.dmg",
+  url "https://appest-public.s3.amazonaws.com/download/mac/TickTick_#{version.csv.first}_#{version.csv.second}.dmg",
       verified: "appest-public.s3.amazonaws.com/"
   name "TickTick"
   desc "To-do & task list manager"
@@ -12,6 +12,8 @@ cask "ticktick" do
     url "https://www.ticktick.com/static/getApp/download?type=mac"
     strategy :header_match do |headers|
       match = headers["location"].match(/TickTick[._-]v?(\d+(?:\.\d+)+)[_-](\d+)\.dmg/i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

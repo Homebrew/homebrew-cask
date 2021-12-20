@@ -1,5 +1,5 @@
 cask "audio-hijack" do
-  version "3.8.8"
+  version "3.8.9"
   sha256 :no_check
 
   url "https://rogueamoeba.com/audiohijack/download/AudioHijack.zip"
@@ -9,7 +9,7 @@ cask "audio-hijack" do
 
   livecheck do
     url "https://www.rogueamoeba.com/audiohijack/releasenotes.php"
-    regex(/ra-version="(\d+(?:\.\d+)*)"/i)
+    regex(/ra-version="(\d+(?:\.\d+)+)"/i)
   end
 
   auto_updates true

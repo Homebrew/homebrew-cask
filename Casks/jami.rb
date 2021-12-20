@@ -1,6 +1,6 @@
 cask "jami" do
-  version "202110012216"
-  sha256 "8d270bb64d5d54933bded2428982e5b65e540aed1e865db1fa659ba521ae0dc3"
+  version "202111051146"
+  sha256 "1898c6bb955925e3342baeb88c13b9e121cd1d2b42658597888970a7c4c1f776"
 
   url "https://dl.jami.net/mac_osx/jami-#{version}.dmg"
   name "Jami"
@@ -10,7 +10,6 @@ cask "jami" do
 
   livecheck do
     url "https://dl.jami.net/mac_osx/sparkle-ring.xml"
-    strategy :page_match
     regex(/jami[._-]v?(\d+(?:\.\d+)*)\.dmg/i)
   end
 

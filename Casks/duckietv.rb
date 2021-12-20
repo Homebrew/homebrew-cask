@@ -9,8 +9,9 @@ cask "duckietv" do
   homepage "https://schizoduckie.github.io/DuckieTV/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://github.com/SchizoDuckie/DuckieTV/releases"
+    strategy :page_match
+    regex(/href=.*?DuckieTV[._-]?v?(\d+(?:\.\d+)+)[._-]OSX[._-]x64\.pkg/i)
   end
 
   pkg "DuckieTV-#{version}-OSX-x64.pkg"

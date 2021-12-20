@@ -10,7 +10,7 @@ cask "cheetah3d" do
   livecheck do
     url "https://www.cheetah3d.com/download.php"
     strategy :page_match
-    regex(%r{Download\s<br/>Cheetah3D\s(\d+(?:\.\d+)*)}i)
+    regex(%r{Download\s<br/>Cheetah3D\s(\d+(?:\.\d+)+)}i)
   end
 
   app "Cheetah3D.app"

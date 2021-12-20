@@ -1,13 +1,13 @@
 cask "yuque" do
-  version "0.9.31"
+  version "0.10.2"
 
   if Hardware::CPU.intel?
-    sha256 "c209f5270456c5ebe930e78bb89957ffcff3d0fc63880eb9fdaf558613b24fb0"
+    sha256 "c1546b1ce49425bd2e1035d5b6e98bc4fc4d84c9738d769b87e40f396713f780"
 
     url "https://app.nlark.com/yuque-desktop/Yuque-#{version}.dmg",
         verified: "app.nlark.com/yuque-desktop/"
   else
-    sha256 "5e9a303cf46c7aebc1f5621e200f9cce83c80d37b60193435fd6f441f5550dd1"
+    sha256 "fc05836674756f961be2516f5cfb5f24fb3d9fec635e9a811c56a1f587c1ee81"
 
     url "https://app.nlark.com/yuque-desktop/arm64/Yuque-#{version}.dmg",
         verified: "app.nlark.com/yuque-desktop/arm64/"

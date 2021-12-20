@@ -10,7 +10,7 @@ cask "checkra1n" do
   livecheck do
     url "https://checkra.in/"
     strategy :page_match
-    regex(%r{href=.*?/checkra1n%20beta%20(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/checkra1n%20beta%20(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "checkra1n.app"

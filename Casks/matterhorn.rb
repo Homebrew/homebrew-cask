@@ -1,6 +1,6 @@
 cask "matterhorn" do
-  version "50200.13.0"
-  sha256 "2fc9d2b51ff21ab92bca7280f200a8acc11e41153235ef3eaf84612ee23486d3"
+  version "50200.14.1"
+  sha256 "25bb9010374b2b2320b46bc87ea16286930958f0740bdfe3e0c919522656e33f"
 
   url "https://github.com/matterhorn-chat/matterhorn/releases/download/#{version}/matterhorn-#{version}-Darwin-x86_64.tar.bz2"
   name "Matterhorn"

@@ -9,7 +9,7 @@ cask "chronoagent" do
 
   livecheck do
     url "https://www.econtechnologies.com/chronoagent/whats-new.html"
-    regex(/>\s*Version:?\s*(\d+(?:\.\d+)*)\s*</i)
+    regex(/>\s*Version:?\s*(\d+(?:\.\d+)+)\s*</i)
   end
 
   pkg "Install.pkg"

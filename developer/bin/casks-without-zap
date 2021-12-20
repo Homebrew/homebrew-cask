@@ -13,7 +13,6 @@ at_exit { TMP_DIR.rmtree }
 # Constants
 ONLINE_ISSUE = "https://github.com/Homebrew/homebrew-cask/issues/88469"
 CASK_REPOS = %w[homebrew-cask homebrew-cask-versions homebrew-cask-drivers].freeze
-EXCLUDED_CASKS = %w[].freeze # Software which produces no settings files
 
 # Helpers
 def cask_name(cask_path)
@@ -59,7 +58,6 @@ ALL_CASKS = CASK_DIRS.each_with_object({}) do |tap_dir, casks|
     .children
     .shuffle
     .select { _1.extname == ".rb" }
-    .reject { EXCLUDED_CASKS.include?(_1.basename(".rb").to_path) }
     .each { casks[tap_dir].push(_1) }
 end.freeze
 
@@ -68,7 +66,7 @@ CASKS_NO_ZAP = ALL_CASKS.each_with_object({}) do |(tap_dir, casks), without_zap|
 
   # Populate hash with casks without a zap
   casks
-    .reject { |file| file.readlines.any? { _1.start_with?(/\s+zap /) } }
+    .reject { |file| file.readlines.any? { _1.start_with?(/\s+(# No )?zap /) } }
     .each { without_zap[tap_dir].push(_1) }
 
   # Reject tap directory if there are no casks without zap

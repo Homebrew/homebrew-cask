@@ -2,14 +2,14 @@ cask "dosbox-x" do
   arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
 
   if Hardware::CPU.intel?
-    version "0.83.18,20211001082411"
-    sha256 "c6a9fb6e410b5db7d1d8b55662a9137dec6c46098edacb3da3ff333fa62a9f82"
+    version "0.83.20,20211130202141"
+    sha256 "2bb2b0f9dcaca0432d0c88853034b0a778b38be03568a0372d3ab353855c11a1"
   else
-    version "0.83.18,20211001001714"
-    sha256 "3178fe181e6725bd2671f7dcef9b1e99e7399d94bda6ea22a8ccf111885dd7f1"
+    version "0.83.19,20211101100925"
+    sha256 "087a420bf1e878d5a6c3492fee55bb89724d0cad63bfec18009be37b18f2ad58"
   end
 
-  url "https://github.com/joncampbell123/dosbox-x/releases/download/dosbox-x-v#{version.before_comma}/dosbox-x-macosx-#{arch}-#{version.after_comma}.zip",
+  url "https://github.com/joncampbell123/dosbox-x/releases/download/dosbox-x-v#{version.csv.first}/dosbox-x-macosx-#{arch}-#{version.csv.second}.zip",
       verified: "github.com/joncampbell123/dosbox-x/"
   name "DOSBox-X"
   desc "Fork of the DOSBox project"
@@ -18,7 +18,9 @@ cask "dosbox-x" do
   livecheck do
     url "https://github.com/joncampbell123/dosbox-x/releases/latest"
     strategy :page_match do |page|
-      match = page.match(%r{href=.*?/dosbox-x-v?(\d+(?:\.\d+)*)/dosbox-x-macosx-#{arch}-([^/]+)\.zip}i)
+      match = page.match(%r{href=".*?/dosbox-x-v?(\d+(?:\.\d+)+)/dosbox-x-macosx-#{arch}-([^/]+)\.zip"}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

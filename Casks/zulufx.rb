@@ -2,16 +2,16 @@ cask "zulufx" do
   arch = Hardware::CPU.intel? ? "x64" : "aarch64"
   choice = Hardware::CPU.intel? ? "x86" : "arm"
 
-  version "15.0.4,15.34.17-ca"
+  version "15.0.5,15.36.51-ca"
 
-  url "https://cdn.azul.com/zulu/bin/zulu#{version.after_comma}-fx-jdk#{version.before_comma}-macosx_#{arch}.dmg",
-      referer: "https://www.azul.com/downloads/"
   if Hardware::CPU.intel?
-    sha256 "776fc9a3e9d71497a3368bb49f58bacb04fa97c9964c26ff2a54631dc89e3054"
+    sha256 "9eb251eaa348cbfaaa40d7258a375e03330789c07631af2d097951b6a2a8fcfb"
   else
-    sha256 "71cc95214219f8dddc0674cbfdd56ced99007727a99c6f31a2645efccafc2d0b"
+    sha256 "3412519566e589d25233468d10173daca6a25ec3cdb03e78bc8a3c58842d7e40"
   end
 
+  url "https://cdn.azul.com/zulu/bin/zulu#{version.csv.second}-fx-jdk#{version.csv.first}-macosx_#{arch}.dmg",
+      referer: "https://www.azul.com/downloads/"
   name "ZuluFX"
   desc "Azul ZuluFX Java Standard Edition Development Kit"
   homepage "https://www.azul.com/downloads/"

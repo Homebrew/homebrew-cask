@@ -1,6 +1,6 @@
 cask "taskade" do
-  version "4.0.0"
-  sha256 "749dbb7e06a7b9796b33c709b534d79a89e12458d010865739fb0ad36aed2835"
+  version "4.1.2"
+  sha256 "8acb02232a8f9e8513ab931789e621566242e70ca71be301a1cdf43d025f0bf6"
 
   url "https://apps.taskade.com/updates/Taskade-#{version}-universal.dmg"
   name "Taskade"
@@ -15,4 +15,10 @@ cask "taskade" do
   depends_on macos: ">= :yosemite"
 
   app "Taskade.app"
+
+  zap trash: [
+    "~/Library/Application Support/taskade",
+    "~/Library/Preferences/com.taskade.plist",
+    "~/Library/Saved Application State/com.taskade.savedState",
+  ]
 end

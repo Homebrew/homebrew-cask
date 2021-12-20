@@ -4,12 +4,13 @@ cask "baretorrent" do
 
   url "https://launchpad.net/baretorrent/trunk/#{version}/+download/baretorrent-#{version}-osx-x64.dmg"
   name "baretorrent"
+  desc "Bittorrent client"
   homepage "https://launchpad.net/baretorrent"
 
   livecheck do
     url :homepage
     strategy :page_match
-    regex(%r{href=.*?/baretorrent-(\d+(?:\.\d+)*)-osx-x64\.dmg}i)
+    regex(%r{href=.*?/baretorrent-(\d+(?:\.\d+)+)-osx-x64\.dmg}i)
   end
 
   app "baretorrent.app"

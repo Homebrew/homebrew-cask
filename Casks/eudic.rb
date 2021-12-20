@@ -1,6 +1,6 @@
 cask "eudic" do
-  version "4.1.3,1062"
-  sha256 "d2fe8f18be4fedd5c872e23907c691f5add979cef29c088729fdead8af56d85a"
+  version "4.1.5,1065"
+  sha256 "d593ff350a50faaa4bd5945f9bb0357b1689007b7e1546cdff3fddb71c11b76a"
 
   url "https://static.frdic.com/pkg/eudicmac.dmg?v=#{version.after_comma}",
       verified:   "static.frdic.com/",

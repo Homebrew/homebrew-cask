@@ -9,7 +9,7 @@ cask "deepnest" do
 
   livecheck do
     url :homepage
-    regex(/href=.*?Deepnest-(\d+(?:\.\d+)*)-mac\.zip/i)
+    regex(/href=.*?Deepnest-(\d+(?:\.\d+)+)-mac\.zip/i)
   end
 
   app "Deepnest-#{version}-mac/Deepnest-mac-#{version}.app", target: "Deepnest.app"

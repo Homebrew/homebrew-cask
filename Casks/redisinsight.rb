@@ -1,6 +1,6 @@
 cask "redisinsight" do
-  version "1.10.1"
-  sha256 "2f6ff3044a75740549fe7bd452cdfbfb1aa6b9c04c3b85a4ab727875d68c4eee"
+  version "1.11.0"
+  sha256 "c3fcaf5ba461e7e39ee35f70d5d374d903e29a16d321e5ff77d0d7fb97f3253a"
 
   url "https://downloads.redisinsight.redislabs.com/#{version}/redisinsight-mac.dmg"
   name "RedisInsight"

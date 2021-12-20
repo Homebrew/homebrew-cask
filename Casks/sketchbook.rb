@@ -12,6 +12,8 @@ cask "sketchbook" do
     url "https://www.autodesk.com/products/sketchbook/free-download"
     strategy :page_match do |page|
       match = page.match(%r{sketchbook_(\d+)/sketchbook_v?(\d+(?:\.\d+)*)_mac\.dmg}i)
+      next if match.blank?
+
       "#{match[2]},#{match[1]}"
     end
   end

@@ -11,6 +11,8 @@ cask "fabfilter-timeless" do
     url "https://www.fabfilter.com/download"
     strategy :page_match do |page|
       match = page.match(%r{href=".*?/fftimeless(\d)(\d\d)\.dmg}i)
+      next if match.blank?
+
       "#{match[1]}.#{match[2]}"
     end
   end

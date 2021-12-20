@@ -3,8 +3,8 @@ cask "linkliar" do
     version "1.1.3"
     sha256 "34c9baeaf1d6732c8ce9add689b281f9b71fddadd8f56cca614cba4f8c167962"
   else
-    version "2.1.1"
-    sha256 "58cd56b7f53039d7c608bd4a6c5e6fcf2ade63c4a3e99df0510a4838c5ec57b0"
+    version "3.0.3"
+    sha256 "36e62eab4ef8d2b004c6886182fc49830afdf56f4f14f9be07adfe552d7140d2"
   end
 
   url "https://github.com/halo/LinkLiar/releases/download/#{version}/LinkLiar.app.zip"
@@ -15,7 +15,7 @@ cask "linkliar" do
   app "LinkLiar.app"
 
   uninstall delete:    [
-    "/Library/Application Support/LinkDaemon",
+    "/Library/Application Support/io.github.halo.linkdaemon",
     "/Library/Application Support/LinkLiar",
   ],
             launchctl: [

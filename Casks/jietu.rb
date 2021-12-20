@@ -12,6 +12,8 @@ cask "jietu" do
     url "https://jietu.qq.com/"
     strategy :page_match do |page|
       match = page.match(%r{href=.*?/Jietu_(\d+(?:\.\d+)*)\((\d+)\)\.dmg}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end
