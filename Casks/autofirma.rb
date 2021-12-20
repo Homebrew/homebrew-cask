@@ -13,11 +13,10 @@ cask "autofirma" do
     strategy :page_match do |page|
       match = page.match(%r{href=.*?/(\d+)/(\d+)/(\d+)/AutoFirma_Mac.zip}i)
       next if match.blank?
-      
-	  "#{match[1]}.#{match[2]}.#{match[3]}"
+
+      "#{match[1]}.#{match[2]}.#{match[3]}"
     end
   end
-
 
   pkg "AutoFirma_#{version.dots_to_underscores}.pkg"
 
