@@ -23,7 +23,6 @@ cask "vpn-tracker" do
 
   app "VPN Tracker 365.app"
 
-
   zap trash: [
     "/Library/Application Support/VPN Tracker 365",
     "/Library/Preferences/com.equinux.VPNTracker365.plist",
