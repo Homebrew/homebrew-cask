@@ -8,4 +8,10 @@ cask "pd-runner" do
   homepage "https://github.com/lihaoyun6/PD-Runner"
 
   app "PD Runner.app"
+
+  zap trash: [
+    "/Library/LaunchDaemons/com.lihaoyun6.PD-Runner-Helper.plist",
+    "/Library/PrivilegedHelperTools/com.lihaoyun6.PD-Runner-Helper",
+    "~/Library/Preferences/com.lihaoyun6.PD-Runner.plist",
+  ]
 end
