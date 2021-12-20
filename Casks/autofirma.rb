@@ -2,9 +2,10 @@ cask "autofirma" do
   version "1.6.5"
   sha256 "4564893f65a1566ea82c131a63bb56b44dbd2bcc218b5ba501ebb6dc22634c79"
 
-  url "https://estaticos.redsara.es/comunes/autofirma/#{major}/#{minor}/#{patch}/AutoFirma_Mac.zip",
+  url "https://estaticos.redsara.es/comunes/autofirma/#{version.major}/#{version.minor}/#{version.patch}/AutoFirma_Mac.zip",
       verified: "estaticos.redsara.es/comunes/autofirma/"
   name "AutoFirma"
+  desc "Add a digital signature to documents"
   homepage "https://firmaelectronica.gob.es/Home/Descargas.htm"
 
   pkg "AutoFirma_#{version.dots_to_underscores}.pkg"
