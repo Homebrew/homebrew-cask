@@ -9,7 +9,7 @@ cask "xampp-vm" do
 
   livecheck do
     url "https://www.apachefriends.org/download.html"
-    regex(%r{href=.*?/xampp-osx-(\d+(?:\.\d+)*-\d+)-vm\.dmg}i)
+    regex(%r{href=.*?/xampp-osx-(\d+(?:\.\d+)+-\d+)-vm\.dmg}i)
   end
 
   app "XAMPP.app"
