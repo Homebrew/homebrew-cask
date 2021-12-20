@@ -8,9 +8,10 @@ cask "snagit" do
   homepage "https://www.techsmith.com/screen-capture.html"
 
   livecheck do
-    url "https://www.techsmith.com/redirect.asp?target=sufeedurl&product=snagitmac&ver=#{version}&lang=enu&os=mac"
-    strategy :sparkle do |item|
-      "#{item.short_version},#{item.version}:#{item.url[%r{/(\d+)/[^/]+\.zip}i, 1]}"
+    url "https://www.techsmith.com/api/v/1/products/getallversions/100"
+    strategy :page_match do |page|
+      v = JSON.parse(page).first
+      "20#{v["Major"]}.#{v["Minor"]}.#{v["Maintenance"]}"
     end
   end
 
