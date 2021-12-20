@@ -1,10 +1,9 @@
 cask "xlplayer" do
-  version "2.0.6.1288"
-  sha256 "ddfe34ea188b1ac0e77fed209659031d7e8a30015f779a6a2c7c3997525bac36"
+  version "3.0.1.12449"
+  sha256 "40ba4499c42e9c2e75858601fb1d031724e54d01f42d56daf9f814c71a796400"
 
-  url "https://down.sandai.net/mac/xlplayer_#{version}.dmg",
+  url "https://down.sandai.net/mac/player_#{version}.dmg",
       verified: "down.sandai.net/"
-  appcast "https://static-xl.a.88cdn.com/json/xunlei_video_version_mac.json"
   name "XLPlayer for Mac"
   name "迅雷影音 for Mac"
   homepage "https://video.xunlei.com/mac.html"
