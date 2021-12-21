@@ -9,15 +9,10 @@ cask "airmessage" do
   end
 
   url "https://github.com/airmessage/airmessage-server/releases/download/rel-#{version}/server-#{arch}-v#{version}.zip",
-      verified: "github.com/airmessage"
+      verified: "github.com/airmessage/airmessage-server"
   name "AirMessage"
   desc "Relay server for iMessage"
   homepage "https://airmessage.org/"
-
-  livecheck do
-    url :url
-    strategy :git
-  end
 
   app "AirMessage.app"
 
