@@ -11,4 +11,9 @@ cask "sioyek" do
   container nested: "build/sioyek.dmg"
 
   app "sioyek.app"
+
+  zap trash: [
+    "~/Library/Application Support/sioyek",
+    "~/Library/Saved Application State/com.yourcompany.sioyek.savedState",
+  ]
 end
