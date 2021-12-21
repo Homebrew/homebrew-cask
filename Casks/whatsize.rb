@@ -16,6 +16,6 @@ cask "whatsize" do
 
   pkg "WhatSize.pkg"
 
-  uninstall pkgutil:   "com.id-design.whatsize#{version.major}.pkg",
+  uninstall pkgutil:   "com.id-design.v#{version.major}.whatsize.pkg",
             launchctl: "com.id-design.v#{version.major}.whatsizehelper"
 end
