@@ -1,8 +1,8 @@
 cask "whatsize" do
-  version "7.6.6,7660"
-  sha256 "7093b980281946f9d1cab92cb4249054c3027a6cca8508d8e31bab531f933883"
+  version "7.7.3,7730"
+  sha256 "9fc88735f680a6817758a04b72fe755457d29cf49858eebf55304284703d139d"
 
-  url "https://www.whatsizemac.com/software/whatsize#{version.major}/whatsize_#{version.before_comma}.tgz"
+  url "https://www.whatsizemac.com/software/whatsize#{version.major}/whatsize_#{version.csv.first}.tgz"
   name "WhatSize"
   desc "File system utility used to view and reclaim disk space"
   homepage "https://www.whatsizemac.com/"
@@ -16,6 +16,6 @@ cask "whatsize" do
 
   pkg "WhatSize.pkg"
 
-  uninstall pkgutil:   "com.id-design.whatsize#{version.major}.pkg",
+  uninstall pkgutil:   "com.id-design.v#{version.major}.whatsize.pkg",
             launchctl: "com.id-design.v#{version.major}.whatsizehelper"
 end
