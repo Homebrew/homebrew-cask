@@ -3,13 +3,13 @@ cask "dataspell" do
 
   version "2021.3,213.5744.251"
 
-  url "https://download.jetbrains.com/python/dataspell-#{version.before_comma}#{arch}.dmg"
   if Hardware::CPU.intel?
     sha256 "99c66a49404233f69360d33b4b9d04154e7ce88a4396c7d29f2abff5f24b8d48"
   else
     sha256 "f1b59c3472b455a03a9d77d4432c279a1267e5b80258734bb9263ed5c88d0246"
   end
 
+  url "https://download.jetbrains.com/python/dataspell-#{version.csv.first}#{arch}.dmg"
   name "DataSpell"
   desc "IDE for Professional Data Scientists"
   homepage "https://www.jetbrains.com/dataspell/"
