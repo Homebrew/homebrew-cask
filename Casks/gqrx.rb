@@ -1,6 +1,6 @@
 cask "gqrx" do
-  version "2.14.6"
-  sha256 "825364e34579d491d641844e3885821ea59839bff836d9c3ce778dbce216aaae"
+  version "2.15.1"
+  sha256 "d3c5695a4a7f981ea463fdde35e517bf2147c81dcd57196761f982d6a1c7874e"
 
   url "https://github.com/gqrx-sdr/gqrx/releases/download/v#{version.major_minor_patch}/Gqrx-#{version}.dmg",
       verified: "github.com/gqrx-sdr/gqrx/"
