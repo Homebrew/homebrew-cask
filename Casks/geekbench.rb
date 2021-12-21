@@ -7,7 +7,7 @@ cask "geekbench" do
     sha256 "6b50e91213e9c4013e352fce1562288e9c4551378cfe0a11d4d27626a7caeb89"
   end
 
-  url "https://cdn.geekbench.com/Geekbench-#{version.before_comma}-Mac.zip"
+  url "https://cdn.geekbench.com/Geekbench-#{version.csv.first}-Mac.zip"
   name "Geekbench"
   desc "Tool to measure the computer system's performance"
   homepage "https://www.geekbench.com/"
