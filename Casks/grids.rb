@@ -9,7 +9,9 @@ cask "grids" do
 
   livecheck do
     url "https://gridsapp.net/appcast.json"
-    regex(/"mac"\s*:\s*"v?(\d+(?:\.\d+)+)"/i)
+    strategy :page_match do |page|
+      JSON.parse(page)["version"]["mac"]
+    end
   end
 
   auto_updates true
