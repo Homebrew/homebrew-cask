@@ -1,8 +1,8 @@
 cask "xpra" do
-  version "4.2.3,0"
-  sha256 "a6de5a0aff30f9b81aa615bcddf3c856ea4c0b0407a3f70dfde5f7d992e9bc25"
+  version "4.3,12"
+  sha256 "21bbd9a3293efc629af9643772224209d0feb3f659fbc72381b35927e7c1eae1"
 
-  url "https://www.xpra.org/dists/osx/x86_64/Xpra-Python3-x86_64-#{version.before_comma}-r#{version.after_comma}.pkg"
+  url "https://www.xpra.org/dists/osx/x86_64/Xpra-Python3-x86_64-#{version.csv.first}-r#{version.csv.second}.pkg"
   name "Xpra"
   desc "Screen and application forwarding system"
   homepage "https://www.xpra.org/"
@@ -17,7 +17,7 @@ cask "xpra" do
     end
   end
 
-  pkg "Xpra-Python3-x86_64-#{version.before_comma}-r#{version.after_comma}.pkg"
+  pkg "Xpra-Python3-x86_64-#{version.csv.first}-r#{version.csv.second}.pkg"
 
   uninstall pkgutil: "org.xpra.pkg"
 
