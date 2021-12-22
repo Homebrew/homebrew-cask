@@ -1,5 +1,5 @@
 cask "pingplotter" do
-  version "5.19.5,6802"
+  version "5.21.2,6992"
   sha256 :no_check
 
   url "https://www.pingplotter.com/downloads/pingplotter_osx.zip"
