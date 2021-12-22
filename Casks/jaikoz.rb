@@ -4,7 +4,7 @@ cask "jaikoz" do
 
   url "https://www.jthink.net/jaikoz/jsp/manualdownload/jaikoz-osx.dmg"
   name "Jaikoz"
-  desc "Audio metadata editor"
+  desc "Audio tag editor"
   homepage "https://www.jthink.net/jaikoz/"
 
   app "Jaikoz.app"
