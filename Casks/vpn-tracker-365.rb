@@ -1,4 +1,5 @@
-cask "vpn-tracker" do
+cask "vpn-tracker-365" do
+  # NOTE: "365" is not a version number, but an intrinsic part of the product name
   version "21.7.3,210743"
   sha256 "1ec147294b325eac97c50bb2279d406639ba2caad6115efa35b16f9f005c1f39"
 
@@ -23,13 +24,16 @@ cask "vpn-tracker" do
 
   app "VPN Tracker 365.app"
 
-  zap trash: [
+  uninstall delete: [
     "/Library/Application Support/VPN Tracker 365",
     "/Library/Extensions/com.equinux.VPNTracker365.*",
     "/Library/LaunchDaemons/com.equinux.VPNTracker365.agent.plist",
     "/Library/Preferences/com.equinux.VPNTracker365.plist",
     "/Library/PrivilegedHelperTools/com.equinux.VPNTracker365.agent",
     "/Library/PrivilegedHelperTools/com.equinux.VPNTracker365.connectiond",
+  ]
+
+  zap trash: [
     "~/Library/Application Support/VPN Tracker 365",
     "~/Library/Preferences/com.equinux.VPNTracker365.plist",
   ]
