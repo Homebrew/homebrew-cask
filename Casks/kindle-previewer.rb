@@ -10,8 +10,7 @@ cask "kindle-previewer" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(/Kindle\s*Previewer\s*(\d+(?:\.\d+)*)/i)
+    regex(/Kindle\s*Previewer\s*(\d+(?:\.\d+)+)/i)
   end
 
   pkg "KindlePreviewerInstaller.pkg"
