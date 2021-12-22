@@ -30,4 +30,9 @@ cask "gitkraken" do
     "~/Library/Preferences/com.axosoft.gitkraken.plist",
     "~/Library/Saved Application State/com.axosoft.gitkraken.savedState",
   ]
+
+  caveats <<~EOS
+    Big Sur and later Performance Fix
+    See https://www.gitkraken.com/blog/workaround-gitkraken-big-sur-issues
+  EOS
 end
