@@ -12,6 +12,8 @@ cask "clamxav" do
     strategy :sparkle
   end
 
+  auto_updates true
+
   app "ClamXAV.app"
 
   zap trash: [
