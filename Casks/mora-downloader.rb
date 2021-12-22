@@ -1,11 +1,16 @@
 cask "mora-downloader" do
-  version :latest
+  version "2.0.0.5,6"
   sha256 :no_check
 
   url "https://downloader.mora.jp/mac/MoraDownloader.pkg"
   name "Mora Downloader"
   desc "Online music and video store for the Japanese market"
   homepage "https://mora.jp/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   pkg "MoraDownloader.pkg"
 
