@@ -1,8 +1,8 @@
 cask "amazon-workdocs" do
-  version "1.2.200340.0,99"
-  sha256 "3864f95771d3a272a2e95577062d52b2f717b56d77710bc0ce77c6a50bc7f7b2"
+  version "1.2.200427.0,6"
+  sha256 "6c38c9ecccf416afa81d1b19d6a5d549d205af7ae1af449e974c044c25c05c1a"
 
-  url "https://d28gdqadgmua23.cloudfront.net/mac/version/#{version.before_comma}/#{version.after_comma}/Amazon%20WorkDocs.app.zip",
+  url "https://d28gdqadgmua23.cloudfront.net/mac/version/#{version.csv.first}/#{version.csv.second}/Amazon%20WorkDocs.app.zip",
       verified: "d28gdqadgmua23.cloudfront.net/"
   name "Amazon WorkDocs"
   desc "Fully managed, secure content creation, storage, and collaboration service"
