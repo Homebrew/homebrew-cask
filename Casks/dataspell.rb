@@ -26,7 +26,7 @@ cask "dataspell" do
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
-  app "DataSpell 2021.3.app", target: "DataSpell.app"
+  app "DataSpell #{version.csv.first}.app", target: "DataSpell.app"
 
   uninstall_postflight do
     ENV["PATH"].split(File::PATH_SEPARATOR).map { |path| File.join(path, "dataspell") }.each do |path|
@@ -38,13 +38,13 @@ cask "dataspell" do
   end
 
   zap trash: [
-    "~/Library/Application Support/JetBrains/DataSpell#{version.major_minor}",
-    "~/Library/Application Support/DataSpell#{version.major_minor}",
-    "~/Library/Caches/JetBrains/DataSpell#{version.major_minor}",
-    "~/Library/Logs/JetBrains/DataSpell#{version.major_minor}",
+    "~/Library/Application Support/JetBrains/DataSpell*",
+    "~/Library/Application Support/DataSpell*",
+    "~/Library/Caches/JetBrains/DataSpell*",
+    "~/Library/Logs/JetBrains/DataSpell*",
     "~/Library/Preferences/com.jetbrains.dataspell.plist",
     "~/Library/Preferences/jetbrains.dataspell.*.plist",
-    "~/Library/Preferences/DataSpell#{version.major_minor}",
+    "~/Library/Preferences/DataSpell*",
     "~/Library/Saved Application State/com.jetbrains.dataspell.savedState",
   ]
 end
