@@ -8,5 +8,10 @@ cask "honto" do
   desc "Ebook reader for the honto store"
   homepage "https://honto.jp/ebook/dlinfo.html"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "honto.app"
 end
