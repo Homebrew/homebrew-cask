@@ -1,8 +1,8 @@
 cask "gitkraken" do
   version "8.2.1"
-  sha256 :no_check
+  sha256 "40269f91fd979c7347cbedddbe719bd224cd303c3c55842e76cea6273ef8696a"
 
-  url "https://release.axocdn.com/darwin/installGitKraken.dmg",
+  url "https://release.axocdn.com/darwin/GitKraken-v#{version}.zip",
       verified: "release.axocdn.com/darwin/"
   name "GitKraken"
   desc "Git client focusing on productivity"
