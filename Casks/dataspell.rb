@@ -38,13 +38,13 @@ cask "dataspell" do
   end
 
   zap trash: [
-    "~/Library/Application Support/JetBrains/DataSpell*",
     "~/Library/Application Support/DataSpell*",
+    "~/Library/Application Support/JetBrains/DataSpell*",
     "~/Library/Caches/JetBrains/DataSpell*",
     "~/Library/Logs/JetBrains/DataSpell*",
     "~/Library/Preferences/com.jetbrains.dataspell.plist",
-    "~/Library/Preferences/jetbrains.dataspell.*.plist",
     "~/Library/Preferences/DataSpell*",
+    "~/Library/Preferences/jetbrains.dataspell.*.plist",
     "~/Library/Saved Application State/com.jetbrains.dataspell.savedState",
   ]
 end
