@@ -1,5 +1,5 @@
 cask "klokki" do
-  version "1.3.3,62"
+  version "1.3.4,74"
   sha256 :no_check
 
   url "https://storage.yandexcloud.net/klokki/Klokki.dmg",
