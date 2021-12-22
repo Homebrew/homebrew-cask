@@ -18,6 +18,20 @@ cask "gitkraken" do
 
   app "GitKraken.app"
 
+  # Workaround for GitKraken Big Sur and later Performance Issues
+  # See https://www.gitkraken.com/blog/workaround-gitkraken-big-sur-issues
+  if MacOS.version >= :big_sur
+    postflight do
+      system_command "xattr",
+                     args: ["-d", "com.apple.quarantine", "#{appdir}/GitKraken.app"]
+      system_command "/usr/bin/codesign",
+                     args: [
+                       "--remove-signature",
+                       "#{appdir}/GitKraken.app/Contents/Frameworks/GitKraken\ Helper\ \(Renderer\).app"
+                     ]
+    end
+  end
+
   zap trash: [
     "~/.gitkraken",
     "~/Library/Application Support/com.axosoft.gitkraken.ShipIt",
