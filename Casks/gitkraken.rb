@@ -34,12 +34,5 @@ cask "gitkraken" do
   caveats <<~EOS
     Big Sur and later Performance Fix
     See https://www.gitkraken.com/blog/workaround-gitkraken-big-sur-issues
-
-    Run this in the terminal to make GitKraken a partially-signed app as a temporary workaround:
-
-      codesign --remove-signature #{appdir}/GitKraken.app/Contents/Frameworks/GitKraken\\ Helper\\ \\(Renderer\\).app
-
-    WARNING: GitKraken must be out of quarantine before execute command.
-    Please note: if you update GitKraken to a newer version (such as v7.3.2 -> v7.4.0), you will need to run this command afterwards.
   EOS
 end
