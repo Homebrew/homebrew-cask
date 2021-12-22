@@ -9,7 +9,7 @@ cask "djl-bench" do
 
   livecheck do
     url "https://github.com/deepjavalibrary/djl/releases"
-    strategy :github_latest
+    strategy :git
   end
 
   binary "benchmark-#{version}/bin/benchmark", target: "djl-bench"
