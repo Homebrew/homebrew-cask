@@ -5,6 +5,7 @@ cask "honto" do
   url "https://dl.honto.jp/macapp/honto.dmg"
   name "honto view app"
   name "hontoビューアアプリ"
+  desc "Ebook reader for the honto store"
   homepage "https://honto.jp/ebook/dlinfo.html"
 
   app "honto.app"
