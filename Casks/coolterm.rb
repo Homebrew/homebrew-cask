@@ -1,5 +1,5 @@
 cask "coolterm" do
-  version "1.9.1.3.0.964"
+  version "1.9.1.3.964"
   sha256 :no_check
 
   url "https://freeware.the-meiers.org/CoolTermMac.zip"
