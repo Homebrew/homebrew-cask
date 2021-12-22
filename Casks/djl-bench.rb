@@ -1,6 +1,6 @@
 cask "djl-bench" do
-  version "0.14.0"
-  sha256 "520c746f31a64b979c2b74e8d56fe992dd591c871702f2a42d32a4699eb607a9"
+  version "0.14.1"
+  sha256 "8408ef60ff0ded7288637883138d262d216a8c6ac7fc322ab60f5900f097860d"
 
   url "https://publish.djl.ai/djl-bench/#{version}/benchmark-#{version}.zip"
   name "djl-bench"
@@ -9,7 +9,7 @@ cask "djl-bench" do
 
   livecheck do
     url "https://github.com/deepjavalibrary/djl/releases"
-    strategy :github_latest
+    strategy :git
   end
 
   binary "benchmark-#{version}/bin/benchmark", target: "djl-bench"
