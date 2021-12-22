@@ -15,5 +15,7 @@ cask "paperspace" do
     skip "No version information available"
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Paperspace.app"
 end
