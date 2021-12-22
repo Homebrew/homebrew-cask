@@ -1,8 +1,8 @@
 cask "busycontacts" do
-  version "1.6.3,2021-12-15-15-51"
-  sha256 "027c1c945107bb73484a13438db2427a21d63794c83a03e3270e98f50f4cf570"
+  version "1.6.3,2021-12-21-01-39"
+  sha256 "e1bb8115383e009a8057fb2a525557e97940a2dac543bf2732017009bc18220c"
 
-  url "https://7e968b6ce8a839f034d9-23cfb9eddcb7b94cb43ba95f95a76900.ssl.cf1.rackcdn.com/bct-#{version.before_comma}-#{version.after_comma}.zip",
+  url "https://7e968b6ce8a839f034d9-23cfb9eddcb7b94cb43ba95f95a76900.ssl.cf1.rackcdn.com/bct-#{version.csv.first}-#{version.csv.second}.zip",
       verified: "7e968b6ce8a839f034d9-23cfb9eddcb7b94cb43ba95f95a76900.ssl.cf1.rackcdn.com/"
   name "BusyContacts"
   desc "Contact manager focusing on efficiency"
