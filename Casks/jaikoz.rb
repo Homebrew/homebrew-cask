@@ -7,5 +7,10 @@ cask "jaikoz" do
   desc "Audio tag editor"
   homepage "https://www.jthink.net/jaikoz/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Jaikoz.app"
 end
