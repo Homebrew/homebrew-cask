@@ -9,7 +9,7 @@ cask "stoplight-studio" do
     sha256 "04c9b31ce08d4a04d9018dda8c3bfc0ec8315b9ac50bc4c115fc3aea2152d83e"
   end
 
-  url "https://github.com/stoplightio/studio/releases/download/v#{version.before_comma}-stable.#{version.after_comma}/stoplight-studio-#{arch}.dmg",
+  url "https://github.com/stoplightio/studio/releases/download/v#{version.csv.first}-stable.#{version.csv.second}/stoplight-studio-#{arch}.dmg",
       verified: "github.com/stoplightio/studio/"
   name "Stoplight Studio"
   desc "Editor for designing and documenting APIs"
