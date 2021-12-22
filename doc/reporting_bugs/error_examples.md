@@ -14,7 +14,7 @@ the problem was with the downloading itself (see how the error came from `curl`)
 2. Cask is outdated.
 3. A problem in your setup or connection.
 
-[How to fix](curl_error.md)
+[How to fix](https://docs.brew.sh/Common-Issues#cask-curl-error)
 
 ---
 
@@ -28,7 +28,7 @@ Error: Permission denied - (/usr/local/Caskroom/someapp/0.1/Someapp.app, /Applic
 
 the problem isn’t with Homebrew Cask itself, but some permissions on your system.
 
-[How to fix](permission_denied_error.md)
+[How to fix](https://docs.brew.sh/Common-Issues#cask-permission-denied)
 
 ---
 
@@ -45,7 +45,7 @@ Actual: 526d747d99a93b760f7965e25a57ed61de9b93d566a0ba0c5f1c7e83719b20fd
 
 either your download was incomplete/corrupt or the cask is outdated.
 
-[How to fix](checksum_does_not_match_error.md)
+[How to fix](https://docs.brew.sh/Common-Issues#cask-checksum-does-not-match)
 
 ---
 
