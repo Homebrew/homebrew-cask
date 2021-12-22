@@ -1,6 +1,6 @@
 cask "8x8-work" do
-  version "7.13.2-2"
-  sha256 "5a29ea47255baaeecb731c2520799fa9e07c87e3e2b97bb4d93f4498e12e549e"
+  version "7.14.5-1"
+  sha256 "743235c3b7d19d4411ca89eb30c1af1247a08028bb0236c4b5a4dab6ce117411"
 
   url "https://vod-updates.8x8.com/ga/work-dmg-v#{version}.dmg"
   name "8x8_work"
