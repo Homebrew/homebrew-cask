@@ -4,7 +4,7 @@ cask "spotify" do
   if Hardware::CPU.intel?
     version "1.1.74.631,0b24d9ad,16"
   else
-    version "1.1.73.517,gbef50fdb,19"
+    version "1.1.73.517,bef50fdb,19"
   end
 
   sha256 :no_check

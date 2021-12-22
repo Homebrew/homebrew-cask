@@ -1,8 +1,8 @@
 cask "cleanshot" do
-  version "3.9.4"
-  sha256 "59224386ec40ed0e1de092b4f0bf061c9f91378f278c231aac302454c6ff22bf"
+  version "4.0"
+  sha256 "035b429459257d134298e3bf4f1670e2d58fcec9a304309eeb27fc5725527f24"
 
-  url "https://updates.getcleanshot.com/v#{version.major}/CleanShot-X-#{version}.dmg"
+  url "https://updates.getcleanshot.com/v3/CleanShot-X-#{version}.dmg"
   name "CleanShot"
   desc "Screen capturing tool"
   homepage "https://getcleanshot.com/"

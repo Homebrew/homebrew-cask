@@ -1,6 +1,6 @@
 cask "vyprvpn" do
-  version "4.3.0.9284"
-  sha256 "43b43bf19004e9c97ca7aaae065aab54e4756fd8de3027400188bf0b73624b0a"
+  version "4.4.0.9372"
+  sha256 "5de5d47f7a3836d73184dc9fe5bcb9303602a862f651a28f38f70483ad80764c"
 
   url "https://www.goldenfrog.com/downloads/vyprvpn/desktop/mac/production/#{version}/VyprVPN_v#{version}.dmg"
   name "VyprVPN"
@@ -13,7 +13,7 @@ cask "vyprvpn" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   app "VyprVPN.app"
 
