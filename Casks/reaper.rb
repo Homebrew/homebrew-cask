@@ -18,13 +18,8 @@ cask "reaper" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  if Hardware::CPU.intel?
-    app "REAPER.app"
-    app "ReaMote.app"
-  else
-    app "REAPER-ARM.app"
-    app "ReaMote-ARM.app"
-  end
+  app "REAPER.app"
+  app "ReaMote.app"
 
   zap trash: [
     "~/Library/Application Support/REAPER",
