@@ -1,5 +1,5 @@
 cask "gitkraken" do
-  version "8.2.0"
+  version "8.2.1"
   sha256 :no_check
 
   url "https://release.axocdn.com/darwin/installGitKraken.dmg",
