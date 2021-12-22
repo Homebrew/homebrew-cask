@@ -18,4 +18,12 @@ cask "paperspace" do
   depends_on macos: ">= :high_sierra"
 
   app "Paperspace.app"
+
+  zap trash: [
+    "~/Library/Application Support/Paperspace",
+    "~/Library/Caches/Paperspace",
+    "~/Library/Preferences/com.paperspace.Paperspace.plist",
+    "~/Library/Preferences/paperspace.Paperspace.plist",
+    "~/Library/Saved Application State/paperspace.Paperspace.savedState",
+  ]
 end
