@@ -3,13 +3,13 @@ cask "clion" do
 
   version "2021.3.1,213.6461.46"
 
-  url "https://download.jetbrains.com/cpp/CLion-#{version.before_comma}#{arch}.dmg"
   if Hardware::CPU.intel?
     sha256 "83fba95a836ec28a848c8bafe7d3faac86dc297fb01728833a7866cfae01f1a4"
   else
     sha256 "90f53aaabf4d272e4655e2ab07f18254fa99b0eef5b789461f127aca37721df1"
   end
 
+  url "https://download.jetbrains.com/cpp/CLion-#{version.csv.first}#{arch}.dmg"
   name "CLion"
   desc "C and C++ IDE"
   homepage "https://www.jetbrains.com/clion/"
