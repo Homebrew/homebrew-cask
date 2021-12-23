@@ -1,5 +1,5 @@
 cask "dropbox" do
-  version "136.4.4345"
+  version "138.4.2392"
   sha256 :no_check
 
   url "https://www.dropbox.com/download?plat=mac&full=1"
@@ -31,8 +31,8 @@ cask "dropbox" do
     "~/Library/Application Support/Dropbox",
     "~/Library/Caches/CloudKit/com.apple.bird/iCloud.com.getdropbox.Dropbox",
     "~/Library/Caches/com.dropbox.DropboxMacUpdate",
-    "~/Library/Caches/com.getdropbox.DropboxMetaInstaller",
     "~/Library/Caches/com.getdropbox.dropbox",
+    "~/Library/Caches/com.getdropbox.DropboxMetaInstaller",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.dropbox.DropboxMacUpdate",
     "~/Library/Containers/com.dropbox.activityprovider",
     "~/Library/Containers/com.dropbox.foldertagger",
