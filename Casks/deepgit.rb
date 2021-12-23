@@ -11,6 +11,8 @@ cask "deepgit" do
     url "https://syntevo.com/deepgit/download"
     strategy :page_match do |page|
       v = page[%r{href=.*?/deepgit-macosx-(\d+(?:_\d+)+)\.dmg}i, 1]
+      next if v.blank?
+
       v.tr("_", ".")
     end
   end
