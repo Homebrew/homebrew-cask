@@ -23,4 +23,6 @@ cask "dcv-viewer" do
   depends_on macos: ">= :mojave"
 
   app "DCV Viewer.app"
+
+  zap trash: "~/Library/Preferences/com.nicesoftware.dcvviewer.plist"
 end
