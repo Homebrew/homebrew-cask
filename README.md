@@ -50,8 +50,8 @@ If the issue is still not solved, see the guides for common problems:
 * [`Checksum does not match` error](doc/reporting_bugs/checksum_does_not_match_error.md)
 * [`source is not there` error](doc/reporting_bugs/source_is_not_there_error.md)
 * [`wrong number of arguments` error](doc/reporting_bugs/wrong_number_of_arguments_error.md)
-* [App isn’t included in `upgrade`](doc/faq/app_not_upgrading.md)
-* [The app can’t be opened because it is from an unidentified developer](doc/faq/app_cant_be_opened.md)
+* [App isn’t included in `upgrade`](https://docs.brew.sh/FAQ#why-arent-some-apps-included-during-brew-upgrade)
+* [The app can’t be opened because it is from an unidentified developer](https://docs.brew.sh/FAQ#why-cant-i-open-a-mac-app-from-an-unidentified-developer)
 * [My problem isn’t listed](https://github.com/Homebrew/homebrew-cask/issues/new?template=01_bug_report.yml)
 
 ## Requests
