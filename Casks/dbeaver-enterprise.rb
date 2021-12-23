@@ -1,8 +1,15 @@
 cask "dbeaver-enterprise" do
-  version "21.2.0"
-  sha256 "2fc2d2a91544a9559876a0849656290b02bab6d944b458eda82021184b11c914"
+  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
-  url "https://dbeaver.com/files/#{version}/dbeaver-ee-#{version}-macos.dmg"
+  version "21.3.0"
+
+  if Hardware::CPU.intel?
+    sha256 "7ecea0a249b619c4f6e20ceebc43222b518d8b6e7a28f5cbfdc8bd25dc36dbe6"
+  else
+    sha256 "9a6b16c0d5972cec2d5a1eb58d342db933f1f1a60c3cc2c1cda3755de841f3a0"
+  end
+
+  url "https://dbeaver.com/files/#{version}/dbeaver-ee-#{version}-macos-#{arch}.dmg"
   name "DBeaver Enterprise Edition"
   desc "Universal database tool and SQL client"
   homepage "https://dbeaver.com/"

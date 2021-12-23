@@ -1,12 +1,12 @@
 cask "ogdesign-eagle" do
   arch = Hardware::CPU.intel? ? "build" : "M1-build"
 
-  version "2.0,39"
+  version "2.0,46"
 
   if Hardware::CPU.intel?
-    sha256 "833d15f3431e26b70263ef8ab73bee47eb91ee31cf74a625579cce9563ba58bb"
+    sha256 "40d543bdd8230c291a2fbe1e73b30162d2746df0038f4152e54b16ecd788e3d3"
   else
-    sha256 "c0de55e6be531c99a653ccc4b9e61a8bca49fa8001637106b064b99150fb80a9"
+    sha256 "67004ffb71eb0ff095162a0187b35056930e1225cd73e0d6dbbfb3211db9e395"
   end
 
   url "https://eagleapp.s3-accelerate.amazonaws.com/releases/Eagle-#{version.before_comma}-#{arch}#{version.after_comma}.dmg",
