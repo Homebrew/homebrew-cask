@@ -7,6 +7,11 @@ cask "shapr3d" do
   desc "Parametric 3D CAD"
   homepage "https://www.shapr3d.com/"
 
+  livecheck do
+    url "https://download.shapr3d.com/mac/latest"
+    strategy :header_match
+  end
+
   depends_on macos: ">= :big_sur"
 
   app "Shapr3D.app"
