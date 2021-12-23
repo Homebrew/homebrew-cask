@@ -1,6 +1,6 @@
 cask "superslicer" do
-  version "2.3.57.7,211212"
-  sha256 "8b95a9f05593e9163a2074169ecda9ed8381489a04c124189a4eac407ffa43fd"
+  version "2.3.57.8,211222"
+  sha256 "1d8d5e324cf77c37b53f47291cef6976665ea4d15d9ad3c9806a9ba7c1068bc4"
 
   url "https://github.com/supermerill/SuperSlicer/releases/download/#{version.csv.first}/SuperSlicer_#{version.csv.first}_macos_#{version.csv.second}.dmg"
   name "SuperSlicer"
