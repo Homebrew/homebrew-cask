@@ -1,6 +1,6 @@
 cask "deepgit" do
-  version "4.2"
-  sha256 "56b2992cbe36268578064827a791f809345ffd1cfda44b653cd1c727af7827ff"
+  version "4.2.1"
+  sha256 "f872cef7524216bae6c97aefaf5edc4b3d5b2048f00c370e829222cbfc55ed9f"
 
   url "https://www.syntevo.com/downloads/deepgit/deepgit-macosx-#{version.dots_to_underscores}.dmg"
   name "DeepGit"
