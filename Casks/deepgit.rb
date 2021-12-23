@@ -16,4 +16,10 @@ cask "deepgit" do
   end
 
   app "DeepGit.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.syntevo.deepgit.plist",
+    "~/Library/Preferences/DeepGit",
+    "~/Library/Saved Application State/com.syntevo.deepgit.savedState",
+  ]
 end
