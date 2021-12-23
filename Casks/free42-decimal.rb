@@ -17,9 +17,9 @@ cask "free42-decimal" do
   zap trash: [
     "~/Library/Application Support/Free42",
     "~/Library/Caches/com.thomasokken.Free42",
-    "~/Library/Saved Application State/com.thomasokken.Free42",
     "~/Library/HTTPStorages/com.thomasokken.Free42",
     "~/Library/HTTPStorages/com.thomasokken.Free42.binarycookies",
     "~/Library/Preferences/com.thomasokken.Free42.plist",
+    "~/Library/Saved Application State/com.thomasokken.Free42",
   ]
 end
