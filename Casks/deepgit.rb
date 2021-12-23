@@ -10,7 +10,7 @@ cask "deepgit" do
   livecheck do
     url "https://syntevo.com/deepgit/download"
     strategy :page_match do |page|
-      v = page[%r{href=.*?/deepgit-macosx-(\d+(?:_\d+)*)\.dmg}i, 1]
+      v = page[%r{href=.*?/deepgit-macosx-(\d+(?:_\d+)+)\.dmg}i, 1]
       v.tr("_", ".")
     end
   end
