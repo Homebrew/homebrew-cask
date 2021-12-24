@@ -10,7 +10,7 @@ cask "smallcubed-mailsuite" do
 
   livecheck do
     url "https://smallcubed.com/download/scs"
-    srategy :header_match
+    strategy :header_match
   end
 
   depends_on macos: ">= :big_sur"
