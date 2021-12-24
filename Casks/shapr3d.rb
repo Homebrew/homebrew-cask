@@ -4,7 +4,7 @@ cask "shapr3d" do
 
   url "https://download.shapr3d.com/mac/Shapr3D-#{version}.dmg"
   name "Shapr3D"
-  desc "Parametric 3D CAD"
+  desc "3D CAD software"
   homepage "https://www.shapr3d.com/"
 
   livecheck do
