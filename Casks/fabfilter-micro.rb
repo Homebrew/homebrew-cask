@@ -10,7 +10,7 @@ cask "fabfilter-micro" do
   livecheck do
     url "https://www.fabfilter.com/download"
     strategy :page_match do |page|
-      match = page.match(%r{href=.*?/ffmicro(\d)(\d\d)\.dmg}i)
+      match = page.match(/ffmicro(\d)(\d+)\.dmg/i)
       next if match.blank?
 
       "#{match[1]}.#{match[2]}"
@@ -21,7 +21,5 @@ cask "fabfilter-micro" do
 
   pkg "FabFilter Micro #{version} Installer.pkg"
 
-  uninstall pkgutil: [
-    "com.fabfilter.Micro.#{version.major}",
-  ]
+  uninstall pkgutil: "com.fabfilter.Micro.#{version.major}"
 end
