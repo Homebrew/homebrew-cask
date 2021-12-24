@@ -10,7 +10,7 @@ cask "fabfilter-twin" do
   livecheck do
     url "https://www.fabfilter.com/download"
     strategy :page_match do |page|
-      match = page.match(%r{href=.*?/fftwin(\d)(\d\d)\.dmg}i)
+      match = page.match(/fftwin(\d)(\d+)\.dmg/i)
       next if match.blank?
 
       "#{match[1]}.#{match[2]}"
@@ -21,7 +21,5 @@ cask "fabfilter-twin" do
 
   pkg "FabFilter Twin #{version} Installer.pkg"
 
-  uninstall pkgutil: [
-    "com.fabfilter.Twin.#{version.major}",
-  ]
+  uninstall pkgutil: "com.fabfilter.Twin.#{version.major}"
 end
