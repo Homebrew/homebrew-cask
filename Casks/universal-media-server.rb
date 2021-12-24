@@ -8,6 +8,11 @@ cask "universal-media-server" do
   desc "Media server supporting DLNA, UPnP and HTTP(S)"
   homepage "https://www.universalmediaserver.com/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :catalina"
 
   app "Universal Media Server.app"
