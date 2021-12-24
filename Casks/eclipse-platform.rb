@@ -1,9 +1,10 @@
 cask "eclipse-platform" do
-  version "4.21,202109060500"
-  sha256 "cec9c3e2b53263bade835a78347b1f7d1eb4e50b63edc949d2162ce53b091286"
+  version "4.22,202111241800"
+  sha256 "923dca09cebf4ebc97fdf7151f2dc984b8c7c425a452df7167e94e7aba473cc2"
 
-  url "https://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops#{version.major}/R-#{version.before_comma}-#{version.after_comma}/eclipse-SDK-#{version.before_comma}-macosx-cocoa-x86_64.dmg&r=1"
+  url "https://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops#{version.major}/R-#{version.csv.first}-#{version.csv.second}/eclipse-SDK-#{version.csv.first}-macosx-cocoa-x86_64.dmg&r=1"
   name "Eclipse SDK"
+  desc "SDK for the Eclipse IDE"
   homepage "https://eclipse.org/"
 
   livecheck do
