@@ -1,9 +1,10 @@
 cask "far2l" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
+  version "2.3.2,_2.3.2"
+
   if MacOS.version <= :mojave
-    version "far2l-2.3.211204-48654cc,2021-12-04_alpha"
     url "https://github.com/elfmz/far2l/releases/download/v#{version.csv.second}/far2l-#{version.csv.first}-alpha-MacOS-10.11.dmg"
-    sha256 "113c55b19e8427258bea955415ff9282d18a4669df5f459ca8340bb5ce1726f2"
+    sha256 "eabf42a5cee8332d9f12ed0818453c729219db13368ec3834377ab818ff5ee1c"
 
     livecheck do
       url "https://github.com/elfmz/far2l/releases"
@@ -13,9 +14,8 @@ cask "far2l" do
       end
     end
   else
-    version "2.3.211204-48654cc4,2021-12-04_alpha"
     url "https://github.com/elfmz/far2l/releases/download/v#{version.csv.second}/far2l-#{version.csv.first}-alpha-MacOS-10.15.dmg"
-    sha256 "b2e43058b9d77306670afe61d579cf2031827328706dab54e34d3f7597b7fa01"
+    sha256 "1058a7f7d0b4da0620faae424158bd5398ee1bb6647ce22e9e6e4a6dc1a6408b"
 
     livecheck do
       url "https://github.com/elfmz/far2l/releases"
