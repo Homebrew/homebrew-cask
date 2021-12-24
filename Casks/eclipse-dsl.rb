@@ -1,6 +1,6 @@
 cask "eclipse-dsl" do
-  version "4.21.0,2021-09"
-  sha256 "8f3a8862d331c72596e5e9625807b2dc936a16bf0a90da4c6175e4e1da5c4df0"
+  version "4.22.0,2021-12"
+  sha256 "46ca25ded90512de578ba8879db1fb18a9bc98498f9b091dce84732cf7c04a78"
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-dsl-#{version.csv.second}-R-macosx-cocoa-x86_64.dmg&r=1"
   name "Eclipse IDE for Java and DSL Developers"
