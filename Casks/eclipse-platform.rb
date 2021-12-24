@@ -4,6 +4,7 @@ cask "eclipse-platform" do
 
   url "https://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops#{version.major}/R-#{version.csv.first}-#{version.csv.second}/eclipse-SDK-#{version.csv.first}-macosx-cocoa-x86_64.dmg&r=1"
   name "Eclipse SDK"
+  desc "SDK for the Eclipse IDE"
   homepage "https://eclipse.org/"
 
   livecheck do
