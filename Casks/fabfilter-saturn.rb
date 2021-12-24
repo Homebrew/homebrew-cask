@@ -10,7 +10,7 @@ cask "fabfilter-saturn" do
   livecheck do
     url "https://www.fabfilter.com/download"
     strategy :page_match do |page|
-      match = page.match(%r{href=".*?/ffsaturn(\d)(\d\d)\.dmg}i)
+      match = page.match(/ffsaturn(\d)(\d+)\.dmg/i)
       next if match.blank?
 
       "#{match[1]}.#{match[2]}"
@@ -21,7 +21,5 @@ cask "fabfilter-saturn" do
 
   pkg "FabFilter Saturn #{version} Installer.pkg"
 
-  uninstall pkgutil: [
-    "com.fabfilter.Saturn.#{version.major}",
-  ]
+  uninstall pkgutil: "com.fabfilter.Saturn.#{version.major}"
 end
