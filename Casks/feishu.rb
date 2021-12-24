@@ -17,7 +17,7 @@ cask "feishu" do
 
   livecheck do
     url "https://www.feishu.cn/api/downloads"
-    regex(%r{/(\h+)/Feishu-darwin_#{arch}[._-]v?(\d+(?:\.\d+)*)-signed\.dmg}i)
+    regex(%r{/(\h+)/Feishu-darwin_#{arch}[._-]v?(\d+(?:\.\d+)+)-signed\.dmg}i)
     strategy :page_match do |page|
       page.scan(regex)
           .map { |match| "#{match[1]},#{match[0]}" }
