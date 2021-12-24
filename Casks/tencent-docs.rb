@@ -1,5 +1,5 @@
 cask "tencent-docs" do
-  version "2.2.25"
+  version "2.2.28"
   sha256 :no_check
 
   url "https://down.qq.com/qqweb/mac_docs/MacTencentDocs.dmg"

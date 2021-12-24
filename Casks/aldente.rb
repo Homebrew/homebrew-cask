@@ -1,8 +1,8 @@
 cask "aldente" do
-  version "1.10"
-  sha256 "4d2593639a8eeac4723709d154759154991a3fc64106c1a32d8912feeead290d"
+  version "1.12"
+  sha256 "c44838b1a5abe5554bcfe1c90f3c0b412681388f8c89b7e7e8ada866d811620f"
 
-  url "https://github.com/davidwernhart/AlDente/releases/download/#{version}/AlDente#{version}.dmg"
+  url "https://github.com/davidwernhart/AlDente/releases/download/#{version}/AlDente.dmg"
   name "AlDente"
   desc "Menu bar tool to limit maximum charging percentage"
   homepage "https://github.com/davidwernhart/AlDente"

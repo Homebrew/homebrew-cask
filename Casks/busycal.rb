@@ -1,8 +1,8 @@
 cask "busycal" do
-  version "2021.4.2,2021-11-05-00-14"
-  sha256 "d4af25aee4733b94bfbb5af287e272a7f6263ba50462216165bf034fc4b59d27"
+  version "2021.4.3,2021-12-21-23-23"
+  sha256 "1376ef13a8607b66ec9b8e95a56cb14022c06e6e415aa76a5201e83861e6176a"
 
-  url "https://7e968b6ce8a839f034d9-23cfb9eddcb7b94cb43ba95f95a76900.ssl.cf1.rackcdn.com/bcl-#{version.before_comma}-#{version.after_comma}.zip",
+  url "https://7e968b6ce8a839f034d9-23cfb9eddcb7b94cb43ba95f95a76900.ssl.cf1.rackcdn.com/bcl-#{version.csv.first}-#{version.csv.second}.zip",
       verified: "7e968b6ce8a839f034d9-23cfb9eddcb7b94cb43ba95f95a76900.ssl.cf1.rackcdn.com/"
   name "BusyCal"
   desc "Calendar software focusing on flexibility and reliability"

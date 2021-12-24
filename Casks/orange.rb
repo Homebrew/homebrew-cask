@@ -1,6 +1,6 @@
 cask "orange" do
-  version "3.30.2"
-  sha256 "8e2734fb02f32a9e5b2f85b585f3146b967cb0a8ade09ebf2648c1f38e3e24e4"
+  version "3.31.0"
+  sha256 "35716b799c9d5c301427efb8a9c4929637752126d50addd1fbf3d3616be04a4b"
 
   url "https://download.biolab.si/download/files/Orange#{version.major}-#{version}-Python3.8.8.dmg"
   name "Orange"

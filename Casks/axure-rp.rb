@@ -1,8 +1,8 @@
 cask "axure-rp" do
-  version "10.0.0.3851"
-  sha256 "f94d284b0f9144fa26264807d5831486b437db3cbb96c8aec4c92126beb0b5aa"
+  version "10.0.0.3854"
+  sha256 "544ca8458802771a4fdfb54b723ce08001116f98940b0c405fbc5b8599673c4b"
 
-  url "https://axure.cachefly.net/versions/#{version.before_comma.major_minor.dots_to_hyphens}/AxureRP-Setup-#{version.split(".")[3]}.dmg",
+  url "https://axure.cachefly.net/versions/#{version.csv.first.major_minor.dots_to_hyphens}/AxureRP-Setup-#{version.split(".")[3]}.dmg",
       verified: "axure.cachefly.net/"
   name "Axure RP"
   desc "Planning and prototyping tool for developers"
@@ -16,8 +16,8 @@ cask "axure-rp" do
   app "Axure RP #{version.major}.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.axure.axurerp#{version.major}.sfl*",
-    "~/Library/Preferences/com.axure.AxureRP#{version.major}.plist",
-    "~/Library/Saved Application State/com.axure.AxureRP#{version.major}.savedState",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.axure.axurerp#*.sfl*",
+    "~/Library/Preferences/com.axure.AxureRP#*.plist",
+    "~/Library/Saved Application State/com.axure.AxureRP#*.savedState",
   ]
 end

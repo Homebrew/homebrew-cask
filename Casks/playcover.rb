@@ -1,6 +1,21 @@
 cask "playcover" do
-  version "0.9.2"
-  sha256 "cbcc51a37079219d171ac7eb41eb51c7469192628db5db2359670ee25831d87a"
+  if MacOS.version <= :big_sur
+    version "0.9.2"
+    sha256 "cbcc51a37079219d171ac7eb41eb51c7469192628db5db2359670ee25831d87a"
+
+    livecheck do
+      skip "Last supported version for Big Sur"
+    end
+
+    app "PlayCover #{version}/PlayCover.app"
+  else
+    version "0.9.5"
+    sha256 "dec89178a9bc2d545dc39a4f93ccaede0648bf11b3c975251ebca6d6a9aa11ee"
+
+    container nested: "PlayCover #{version}.dmg"
+
+    app "PlayCover.app"
+  end
 
   url "https://github.com/iVoider/PlayCover/releases/download/#{version}/PlayCover.#{version}.zip",
       verified: "github.com/iVoider/PlayCover/"
@@ -9,8 +24,6 @@ cask "playcover" do
   homepage "https://www.playcover.me/"
 
   depends_on arch: :arm64
-
-  app "PlayCover #{version}/PlayCover.app"
 
   zap trash: [
     "~/Library/Application Support/me.playcover.PlayCover",
