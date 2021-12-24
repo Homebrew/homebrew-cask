@@ -10,7 +10,7 @@ cask "fabfilter-simplon" do
   livecheck do
     url "https://www.fabfilter.com/download"
     strategy :page_match do |page|
-      match = page.match(%r{href=.*?/ffsimplon(\d)(\d\d)\.dmg}i)
+      match = page.match(/ffsimplon(\d)(\d+)\.dmg/i)
       next if match.blank?
 
       "#{match[1]}.#{match[2]}"
@@ -21,7 +21,5 @@ cask "fabfilter-simplon" do
 
   pkg "FabFilter Simplon #{version} Installer.pkg"
 
-  uninstall pkgutil: [
-    "com.fabfilter.Simplon.#{version.major}",
-  ]
+  uninstall pkgutil: "com.fabfilter.Simplon.#{version.major}"
 end
