@@ -10,7 +10,7 @@ cask "fabfilter-pro-g" do
   livecheck do
     url "https://www.fabfilter.com/download"
     strategy :page_match do |page|
-      match = page.match(%r{href=.*?/ffprog(\d)(\d\d)\.dmg}i)
+      match = page.match(/ffprog(\d)(\d+)\.dmg/i)
       next if match.blank?
 
       "#{match[1]}.#{match[2]}"
@@ -21,7 +21,5 @@ cask "fabfilter-pro-g" do
 
   pkg "FabFilter Pro-G #{version} Installer.pkg"
 
-  uninstall pkgutil: [
-    "com.fabfilter.Pro-G.#{version.major}",
-  ]
+  uninstall pkgutil: "com.fabfilter.Pro-G.#{version.major}"
 end
