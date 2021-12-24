@@ -10,7 +10,7 @@ cask "fabfilter-volcano" do
   livecheck do
     url "https://www.fabfilter.com/download"
     strategy :page_match do |page|
-      match = page.match(%r{href=.*?/ffvolcano(\d)(\d\d)\.dmg}i)
+      match = page.match(/ffvolcano(\d)(\d+)\.dmg/i)
       next if match.blank?
 
       "#{match[1]}.#{match[2]}"
@@ -21,7 +21,5 @@ cask "fabfilter-volcano" do
 
   pkg "FabFilter Volcano #{version} Installer.pkg"
 
-  uninstall pkgutil: [
-    "com.fabfilter.Volcano.#{version.major}",
-  ]
+  uninstall pkgutil: "com.fabfilter.Volcano.#{version.major}"
 end
