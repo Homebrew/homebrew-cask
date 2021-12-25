@@ -1,6 +1,6 @@
 cask "loginputmac" do
   version "2.5.3,24161"
-  sha256 "9ad1e436283dbb6a60d040c205da3a31e5d97e999f53c6e6ed01682bb36e5857"
+  sha256 "a6111d21be1f28e7a8ea748c7b98d5168432c20d47ad6abe93b05867429f58f5"
 
   # The install source has to be a PKG file otherwise both install and update will be failed.
   # Inputmethod (IME) is a special application that lives in `/Library/Input\ Method` not `/Application`,
