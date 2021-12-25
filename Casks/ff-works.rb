@@ -17,7 +17,7 @@ cask "ff-works" do
   app "ff·Works.app"
 
   zap trash: [
-    "~/Library/WebKit/com.osbytes.ffworks2",
     "~/Library/Application Support/ffWorks",
+    "~/Library/WebKit/com.osbytes.ffworks2",
   ]
 end
