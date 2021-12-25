@@ -1,5 +1,6 @@
 cask "helo" do
   arch = Hardware::CPU.intel? ? "" : "-arm64"
+  livecheck_arch = Hardware::CPU.intel? ? "mac" : "apple-silicon"
 
   version "1.6.2"
 
@@ -10,13 +11,13 @@ cask "helo" do
   end
 
   url "https://helo.fra1.digitaloceanspaces.com/helo/HELO-#{version}#{arch}.dmg",
-      verified: "helo.fra1.digitaloceanspaces.com"
+      verified: "helo.fra1.digitaloceanspaces.com/helo/"
   name "HELO"
   desc "Email tester and debugger"
   homepage "https://usehelo.com/"
 
   livecheck do
-    url "https://usehelo.com/download/latest/mac"
+    url "https://usehelo.com/download/latest/#{livecheck_arch}"
     strategy :header_match
   end
 
