@@ -18,6 +18,6 @@ cask "ff-works" do
 
   zap trash: [
     "~/Library/Application Support/ffWorks",
-    "~/Library/WebKit/com.osbytes.ffworks2",
+    "~/Library/WebKit/com.osbytes.ffworks#{version.major}",
   ]
 end
