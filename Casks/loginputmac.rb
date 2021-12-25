@@ -6,7 +6,7 @@ cask "loginputmac" do
   # Inputmethod (IME) is a special application that lives in `/Library/Input\ Method` not `/Application`,
   # and needs privilege to write in.
   # Pls DO NOT change the path into `.app` again, those files only for sparkle update framework tho.
-  
+
   url "https://loginput-mac2.totest.top/loginputmac#{version.major}_latest.pkg",
       verified: "loginput-mac2.totest.top/"
   name "LoginputMac"
