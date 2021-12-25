@@ -1,8 +1,8 @@
 cask "loginputmac" do
-  version "2.5.1,24052"
-  sha256 "adf15f31538287824ecfc28e8b193399bac9025f9fe6fea931bb1f22e122f370"
+  version "2.5.3,24161"
+  sha256 "9ad1e436283dbb6a60d040c205da3a31e5d97e999f53c6e6ed01682bb36e5857"
 
-  url "https://loginput-mac2.totest.top/LogInputMac#{version.major}.app#{version.after_comma}.zip",
+  url "https://loginput-mac2.totest.top/LogInputMac#{version.major}.app#{version.csv.second}.zip",
       verified: "loginput-mac2.totest.top/"
   name "LoginputMac"
   desc "Chinese input method"

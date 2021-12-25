@@ -1,8 +1,8 @@
 cask "feed-the-beast" do
-  version "202111051727,fc8797cf31"
-  sha256 "f169e80c3bf6289ca5f810ba44b4d0fe92720150eb8b301ab631078b01a4b205"
+  version "202112101445,bdf8bdbaca"
+  sha256 "26588e020c85b64a31e8143c8e5537b500c1f2ba880f1a9c5d89be2c4bd672c8"
 
-  url "https://apps.modpacks.ch/FTBApp/release/#{version.before_comma}-#{version.after_comma}-release/FTBA_macos_#{version.before_comma}-#{version.after_comma}-release.dmg",
+  url "https://apps.modpacks.ch/FTBApp/release/#{version.csv.first}-#{version.csv.second}-release/FTBA_macos_#{version.csv.first}-#{version.csv.second}-release.dmg",
       verified: "apps.modpacks.ch/FTBApp/"
   name "Feed the Beast"
   desc "Minecraft mod downloader and manager"

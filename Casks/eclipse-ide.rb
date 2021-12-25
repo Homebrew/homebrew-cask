@@ -1,6 +1,6 @@
 cask "eclipse-ide" do
-  version "4.21.0,2021-09"
-  sha256 "33cef79073c9ed6bdda1286d0c29b810e4d883526127be800198ef39727f6c11"
+  version "4.22.0,2021-12"
+  sha256 "a3ef73cb7fb40cc1a8dc424996850f7eb6b207d8e67579b4260a9ce196241e2c"
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-committers-#{version.csv.second}-R-macosx-cocoa-x86_64.dmg&r=1"
   name "Eclipse IDE for Eclipse Committers"

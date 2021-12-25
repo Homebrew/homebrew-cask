@@ -1,5 +1,5 @@
 cask "kindle-previewer" do
-  version "3.59.1"
+  version "3.60.0"
   sha256 :no_check
 
   url "https://d2bzeorukaqrvt.cloudfront.net/KindlePreviewerInstaller.pkg",
@@ -10,8 +10,7 @@ cask "kindle-previewer" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(/Kindle\s*Previewer\s*(\d+(?:\.\d+)*)/i)
+    regex(/Kindle\s*Previewer\s*(\d+(?:\.\d+)+)/i)
   end
 
   pkg "KindlePreviewerInstaller.pkg"

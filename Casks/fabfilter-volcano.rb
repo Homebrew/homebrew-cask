@@ -1,6 +1,6 @@
 cask "fabfilter-volcano" do
-  version "3.00"
-  sha256 "71ce8e586e7bfb1e7fa8ee50c0cb6bb079ceba3aa740167b81a594220e0e79d8"
+  version "3.01"
+  sha256 "5828a19df2d7c0fb19f457c2c8ccd0feea87e70bb0b260cfc1e9f8e965d857f0"
 
   url "https://download.fabfilter.com/ffvolcano#{version.no_dots}.dmg"
   name "FabFilter Volcano"
@@ -10,7 +10,7 @@ cask "fabfilter-volcano" do
   livecheck do
     url "https://www.fabfilter.com/download"
     strategy :page_match do |page|
-      match = page.match(%r{href=.*?/ffvolcano(\d)(\d\d)\.dmg}i)
+      match = page.match(/ffvolcano(\d)(\d+)\.dmg/i)
       next if match.blank?
 
       "#{match[1]}.#{match[2]}"
@@ -21,7 +21,5 @@ cask "fabfilter-volcano" do
 
   pkg "FabFilter Volcano #{version} Installer.pkg"
 
-  uninstall pkgutil: [
-    "com.fabfilter.Volcano.#{version.major}",
-  ]
+  uninstall pkgutil: "com.fabfilter.Volcano.#{version.major}"
 end
