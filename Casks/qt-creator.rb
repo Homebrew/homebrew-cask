@@ -22,7 +22,7 @@ cask "qt-creator" do
         next if versions.blank?
 
         versions
-      end.reject(&:nil?).first
+      end.compact_blank.first
     end
   end
 
