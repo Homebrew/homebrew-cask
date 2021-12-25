@@ -1,8 +1,8 @@
 cask "popo" do
-  version "3.37.1"
-  sha256 "2afffba552c7fec1c80768cc9defd7c7f8deaaf29fefae242c29971373b330df"
+  version "3.40.0"
+  sha256 "64cfeec26e74c210c6ca280bddb575040b8f4b840fce8ad83daf88141bade018"
 
-  url "https://popo.netease.com/file/popomac/POPO_Mac_V#{version.dots_to_underscores}.dmg"
+  url "https://popo.netease.com/file/popomac/POPO-setup_#{version.dots_to_underscores}.dmg"
   name "NetEase POPO"
   desc "Instant messaging platform"
   homepage "https://popo.netease.com/"

@@ -1,8 +1,15 @@
 cask "rider" do
-  version "2021.2.2,212.5284.64"
-  sha256 "a81a6dca0f72aaeee82cf2cc3add1995b1bf54b3664d67f8f738dd3c74c00023"
+  arch = Hardware::CPU.intel? ? "" : "-aarch64"
 
-  url "https://download.jetbrains.com/rider/JetBrains.Rider-#{version.before_comma}.dmg"
+  version "2021.3.1,213.5744.299"
+
+  if Hardware::CPU.intel?
+    sha256 "4a62dba2f75b02a58ec35e3afa261744e470e042d7183d7c7e42767904170788"
+  else
+    sha256 "9ad15323c1e35daf517e8ecfc464d9aea5b0543cffa121e27e2c55c842838dc1"
+  end
+
+  url "https://download.jetbrains.com/rider/JetBrains.Rider-#{version.csv.first}#{arch}.dmg"
   name "JetBrains Rider"
   desc ".NET IDE"
   homepage "https://www.jetbrains.com/rider/"
@@ -34,8 +41,8 @@ cask "rider" do
     "~/Library/Application Support/Rider#{version.major_minor}",
     "~/Library/Caches/Rider#{version.major_minor}",
     "~/Library/Logs/Rider#{version.major_minor}",
-    "~/Library/Preferences/Rider#{version.major_minor}",
     "~/Library/Preferences/jetbrains.rider.71e559ef.plist",
+    "~/Library/Preferences/Rider#{version.major_minor}",
     "~/Library/Saved Application State/com.jetbrains.rider.savedState",
   ]
 end

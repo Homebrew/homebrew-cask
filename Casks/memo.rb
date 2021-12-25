@@ -3,9 +3,16 @@ cask "memo" do
   sha256 :no_check
 
   url "https://usememo.com/MemoSetup.dmg"
-  appcast "https://raw.githubusercontent.com/btk/memo/master/package.json"
   name "Memo"
+  desc "Note taking app using GitHub Gists"
   homepage "https://usememo.com/"
+
+  livecheck do
+    url "https://raw.githubusercontent.com/btk/memo/master/package.json"
+    strategy :page_match do |page|
+      JSON.parse(page)["version"]
+    end
+  end
 
   app "Memo.app"
 

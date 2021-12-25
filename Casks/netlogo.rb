@@ -1,6 +1,6 @@
 cask "netlogo" do
-  version "6.2.1"
-  sha256 "96580609987aa489b659922b01ce3dec07cff2d25061bbef1fc65a70b3ac460f"
+  version "6.2.2"
+  sha256 "156a454167c3a91e55ccb33865eaacc023ef023e307ecc4889ee45969b69cc5f"
 
   url "https://ccl.northwestern.edu/netlogo/#{version}/NetLogo-#{version}.dmg"
   name "NetLogo"

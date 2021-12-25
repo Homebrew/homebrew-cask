@@ -4,10 +4,10 @@
 
 Homebrew Cask is implemented as part of Homebrew. All Homebrew Cask commands begin with `brew`, which works for both Casks and Formulae. The most frequently-used commands are:
 
-* `install` — installs the given Cask
-* `uninstall` — uninstalls the given Cask
-* `reinstall` — reinstalls the given Cask
-* `list --casks` — lists installed Casks
+* `install` — installs the given Cask.
+* `uninstall` — uninstalls the given Cask.
+* `reinstall` — reinstalls the given Cask.
+* `list --casks` — lists installed Casks.
 
 ## Searching for Casks
 
@@ -45,22 +45,22 @@ This will both uninstall the Cask and remove applications which were moved to `/
 
 ## Other Commands
 
-* `info` — displays information about the given Cask
-* `fetch` — downloads remote application files for the given Cask to the local cache (with `--force`, re-download even if already cached)
-* `--cache` — displays the path to Homebrew's local cache
-* `doctor` — checks for configuration issues
-* `style` — checks Cask style using RuboCop
-* `home` — opens the homepage of the given Cask; or with no arguments, the Homebrew project page
-* `uninstall --zap` — try to remove *all* files associated with a Cask (may include resources shared with other applications)
-* `outdated` — lists all outdated Casks
-* `upgrade` — updates all outdated Casks
+* `info` — displays information about the given Cask.
+* `fetch` — downloads remote application files for the given Cask to the local cache (with `--force`, re-download even if already cached).
+* `--cache` — displays the path to Homebrew's local cache.
+* `doctor` — checks for configuration issues.
+* `style` — checks Cask style using RuboCop.
+* `home` — opens the homepage of the given Cask; or with no arguments, the Homebrew project page.
+* `uninstall --zap` — try to remove *all* files associated with a Cask (may include resources shared with other applications).
+* `outdated` — lists all outdated Casks.
+* `upgrade` — updates all outdated Casks.
 
 The following commands are for Cask authors:
 
-* `audit` — verifies installability of Casks
-* `cat` — dumps the given Cask to the standard output
-* `create --cask` — creates a Cask and opens it in an editor
-* `edit` — edits the given Cask
+* `audit` — verifies installability of Casks.
+* `cat` — dumps the given Cask to the standard output.
+* `create --cask` — creates a Cask and opens it in an editor.
+* `edit` — edits the given Cask.
 
 The following aliases and abbreviations are provided for convenience:
 
@@ -151,11 +151,11 @@ $ brew install homebrew/cask-fonts/font-symbola
 
 `brew` accepts a number of options:
 
-* `--version`: print version and exit
-* `--debug`: output debug information
-* `--no-binaries`: skip symlinking executable binaries into `/usr/local/bin`
-* `--require-sha`: abort installation of Cask if no checksum is defined
-* `--no-quarantine`: [disable Apple’s quarantining](https://github.com/Homebrew/homebrew-cask/blob/HEAD/doc/faq/app_cant_be_opened.md) for the specific app
+* `--version`: print version and exit.
+* `--debug`: output debug information.
+* `--no-binaries`: skip symlinking executable binaries into `/usr/local/bin`.
+* `--require-sha`: abort installation of Cask if no checksum is defined.
+* `--no-quarantine`: [disable Apple’s quarantining](https://docs.brew.sh/FAQ#why-cant-i-open-a-mac-app-from-an-unidentified-developer) for the specific app.
 * `--language=<iso-language>[,<iso-language> ... ]`: changes the language of the Cask to be installed. The first matching language is used, otherwise it uses the default language of the Cask.
 
 You can also modify the default installation locations used when issuing `brew install`:

@@ -1,12 +1,22 @@
 cask "silnite" do
-  version "5,2020.08"
-  sha256 "bd4a314918710af6a2eaeccb8dbf26724b5075a178118f33a719161af697eb7c"
+  version "6,2021.12"
+  sha256 "932117c39f351e6933f295a52b222cde4bf18d3a069dadc9bd5cffc4caab965a"
 
-  url "https://eclecticlightdotcom.files.wordpress.com/#{version.after_comma.major}/#{version.after_comma.minor}/silnite#{version.before_comma}.zip",
+  url "https://eclecticlightdotcom.files.wordpress.com/#{version.csv.second.major}/#{version.csv.second.minor}/silnite#{version.csv.first}.zip",
       verified: "eclecticlightdotcom.files.wordpress.com/"
   name "silnite"
   desc "Checks EFI firmware and security data file updates"
   homepage "https://eclecticlight.co/lockrattler-systhist/"
+
+  livecheck do
+    url :homepage
+    regex(%r{href=.*?/(\d+)/(\d+)/silnite[._-]?v?(\d+(?:\.\d+)*)\.zip}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map do |match|
+        "#{match[2]},#{match[0]}.#{match[1]}"
+      end
+    end
+  end
 
   depends_on macos: ">= :el_capitan"
 

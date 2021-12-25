@@ -1,12 +1,12 @@
 cask "julia" do
   arch, arch_folder = Hardware::CPU.intel? ? ["mac64", "x64"] : ["macaarch64", "aarch64"]
 
-  version "1.7.0"
+  version "1.7.1"
 
   if Hardware::CPU.intel?
-    sha256 "9a7919448e13ba9cefb0f0fe8178ca089333c86e2722f1e482a1dc8c0e2f03b6"
+    sha256 "95842f2782d6cef397cfbde250f627def8c86cc281efce0d64a14c13bd62d494"
   else
-    sha256 "6852aab9a40a3265551eb85ad19ff16c3ba5410c852f5e7949972cb9911d473a"
+    sha256 "b6489d1e00cd539dfd60b29743b5d813889368bdc1a8fb9418893db5ae2d43d6"
   end
 
   url "https://julialang-s3.julialang.org/bin/mac/#{arch_folder}/#{version.major_minor}/julia-#{version}-#{arch}.dmg"

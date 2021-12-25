@@ -1,6 +1,6 @@
 cask "sketch" do
-  version "80.1,134476"
-  sha256 "2ede3107c0c4578c224a0bb32f11a483677c6b68ee09340aa8a76642ee0f267f"
+  version "81.1,135647"
+  sha256 "dda0154827b10760330ac174fca48ec9980d9fab2a655cd938c321c5855694fc"
 
   url "https://download.sketch.com/sketch-#{version.csv.first}-#{version.csv.second}.zip"
   name "Sketch"
@@ -13,7 +13,7 @@ cask "sketch" do
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :catalina"
 
   app "Sketch.app"
 

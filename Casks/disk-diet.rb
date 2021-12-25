@@ -1,8 +1,8 @@
 cask "disk-diet" do
-  version "5.5,1474"
-  sha256 "a7f1a0c2c3b7186dc9844a60e5dded90aca4e758f7502c174452bf90cabaf67e"
+  version "5.5.1,1595"
+  sha256 "e4ab5d2e9d5935fdc85af9421ce805fa336291d4c83b748b62928699d852a3a7"
 
-  url "https://www.tunabellysoftware.com/resources/Disk%20Diet%20#{version.before_comma}.dmg"
+  url "https://www.tunabellysoftware.com/resources/Disk%20Diet%20#{version.csv.first}.dmg"
   name "Disk Diet"
   desc "Free up disk space"
   homepage "https://www.tunabellysoftware.com/disk_diet/"

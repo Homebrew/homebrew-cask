@@ -1,8 +1,15 @@
 cask "cryptomator" do
-  version "1.6.4"
-  sha256 "7c763610523dc6ced2d51d5e25fdb15ccd93366a107b8959460f7796eef83dc2"
+  arch = Hardware::CPU.intel? ? "" : "-arm64"
 
-  url "https://github.com/cryptomator/cryptomator/releases/download/#{version}/Cryptomator-#{version}.dmg",
+  version "1.6.5"
+
+  if Hardware::CPU.intel?
+    sha256 "78e098e04a85def34bb5f2c2afc2268bed8f40a7415805bfcc7bd8a1869d7887"
+  else
+    sha256 "78cd5a34cf0ab9bd1f14ce8871d04e3481c8dab23311cf19c54d80d60128c7be"
+  end
+
+  url "https://github.com/cryptomator/cryptomator/releases/download/#{version}/Cryptomator-#{version}#{arch}.dmg",
       verified: "github.com/cryptomator/cryptomator/"
   name "Cryptomator"
   desc "Multi-platform client-side cloud file encryption tool"

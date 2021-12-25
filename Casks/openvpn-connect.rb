@@ -1,8 +1,8 @@
 cask "openvpn-connect" do
-  version "3.3.2,4125"
-  sha256 "8c91ed756461b11a87bc51eb631015706017757296445ea48424ecf85f1aad49"
+  version "3.3.3,4163"
+  sha256 "758459b63a798bd57eb08bb3cbe94c080a1762656c9a7a7e43f017e1211ecd2d"
 
-  url "https://swupdate.openvpn.net/downloads/connect/openvpn-connect-#{version.before_comma}.#{version.after_comma}_signed.dmg"
+  url "https://swupdate.openvpn.net/downloads/connect/openvpn-connect-#{version.csv.first}.#{version.csv.second}_signed.dmg"
   name "OpenVPN Connect client"
   desc "Client program for the OpenVPN Access Server"
   homepage "https://openvpn.net/client-connect-vpn-for-mac-os/"
