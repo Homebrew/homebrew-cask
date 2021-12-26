@@ -15,23 +15,23 @@ cask "kicad" do
 
   depends_on macos: ">= :catalina"
 
-  app "KiCad/kicad.app",            target: "KiCad/kicad.app"
-  app "KiCad/bitmap2component.app", target: "KiCad/bitmap2component.app"
-  app "KiCad/eeschema.app",         target: "KiCad/eeschema.app"
-  app "KiCad/gerbview.app",         target: "KiCad/gerbview.app"
-  app "KiCad/pcb_calculator.app",   target: "KiCad/pcb_calculator.app"
-  app "KiCad/pcbnew.app",           target: "KiCad/pcbnew.app"
-  app "KiCad/pl_editor.app",        target: "KiCad/pl_editor.app"
-  artifact "kicad/help",            target: "/Library/Application Support/kicad/help"
-  artifact "kicad/library",         target: "/Library/Application Support/kicad/library"
-  artifact "kicad/modules",         target: "/Library/Application Support/kicad/modules"
-  artifact "kicad/share",           target: "/Library/Application Support/kicad/share"
-  artifact "kicad/template",        target: "/Library/Application Support/kicad/template"
+  app "KiCad/Bitmap2Component.app",   target: "KiCad/Bitmap2Component.app"
+  app "KiCad/Eeschema.app",           target: "KiCad/Eeschema.app"
+  app "KiCad/GerbView.app",           target: "KiCad/GerbView.app"
+  app "KiCad/KiCad.app",              target: "KiCad/KiCad.app"
+  app "KiCad/PCB Calculator.app",     target: "KiCad/PCB Calculator.app"
+  app "KiCad/Page Layout Editor.app", target: "KiCad/Page Layout Editor.app"
+  app "KiCad/Pcbnew.app",             target: "KiCad/Pcbnew.app"
+  artifact "KiCad/demos",             target: "/Library/Application Support/kicad/demos"
 
   uninstall rmdir: [
     "/Library/Application Support/kicad",
     "#{appdir}/KiCad",
   ]
 
-  zap trash: "~/Library/Preferences/kicad"
+  zap trash: [
+    "~/Library/Application Support/kicad",
+    "~/Library/Preferences/kicad",
+    "~/Library/Preferences/org.kicad-pcb.*",
+  ]
 end
