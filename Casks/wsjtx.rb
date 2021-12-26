@@ -9,9 +9,10 @@ cask "wsjtx" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(/href=.*?wsjtx-(\d+(?:\.\d+)*)-Darwin\.dmg/i)
+    regex(/href=.*?wsjtx-(\d+(?:\.\d+)+)-Darwin\.dmg/i)
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "wsjtx.app"
   artifact "com.wsjtx.sysctl.plist", target: "/Library/LaunchDaemons/com.wsjtx.sysctl.plist"
