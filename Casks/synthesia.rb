@@ -10,8 +10,7 @@ cask "synthesia" do
 
   livecheck do
     url "https://www.synthesiagame.com/download"
-    strategy :page_match
-    regex(/synthesia\s(\d+(?:\.\d+)*)\sfor\smacOS/i)
+    regex(/synthesia\s(\d+(?:\.\d+)+)\sfor\smacOS/i)
   end
 
   app "Synthesia.app"
