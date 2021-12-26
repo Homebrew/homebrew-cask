@@ -22,7 +22,7 @@ cask "kicad" do
   app "KiCad/PCB Calculator.app",     target: "KiCad/PCB Calculator.app"
   app "KiCad/Page Layout Editor.app", target: "KiCad/Page Layout Editor.app"
   app "KiCad/Pcbnew.app",             target: "KiCad/Pcbnew.app"
-  artifact "KiCad/demos",             target: "/Library/Application Support/kicad/demos"
+  artifact "demos",                   target: "/Library/Application Support/kicad/demos"
 
   uninstall rmdir: [
     "/Library/Application Support/kicad",
