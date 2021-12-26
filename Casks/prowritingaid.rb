@@ -1,6 +1,6 @@
 cask "prowritingaid" do
-  version "2.0.50"
-  sha256 "8549bdee7f71a3057e7f4dcb905a9ca78badf48a28e77fc50e249cf2af8976cd"
+  version "2.0.56"
+  sha256 "c455e6bf606bffd63fd18eb6c8d5abce3648773f1cf0256b1ed7ec3c8c65980e"
 
   url "https://cdn.prowritingaid.com/prowritingaid-desktop/desktop_#{version.dots_to_underscores}/ProWritingAid.dmg"
   name "ProWritingAid"
