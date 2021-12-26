@@ -20,7 +20,7 @@ cask "kicad" do
 
   uninstall delete: [
     "#{appdir}/KiCad",
-    "/Library/Application Support/kicad/demos",    
+    "/Library/Application Support/kicad/demos",
   ]
 
   zap trash: [
