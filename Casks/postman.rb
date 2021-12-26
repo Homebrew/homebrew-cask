@@ -1,12 +1,12 @@
 cask "postman" do
   arch = Hardware::CPU.intel? ? "osx64" : "osx_arm64"
 
-  version "9.6.1"
+  version "9.6.2"
 
   if Hardware::CPU.intel?
-    sha256 "9ed84aac8092ffffc70082209094f30c293ed8ccef052bfe9167cdae2d762e2d"
+    sha256 "04b329aff2dddb9e891691632b50dc69fb94b983696870f6b52682b64c027010"
   else
-    sha256 "7637a623c3b3590716d9dbae67a2733ce40af6284e1e02d951ff6e065eace699"
+    sha256 "ba2f713dee7729633b5d4c984757694803c5321a5d3c43d570c457d1f3f7f11e"
   end
 
   url "https://dl.pstmn.io/download/version/#{version}/#{arch}",
@@ -25,11 +25,11 @@ cask "postman" do
   app "Postman.app"
 
   zap trash: [
-    "~/Library/Application Support/Postman",
     "~/Library/Application Support/com.postmanlabs.mac.ShipIt",
-    "~/Library/Caches/Postman",
-    "~/Library/Caches/com.postmanlabs.mac",
+    "~/Library/Application Support/Postman",
     "~/Library/Caches/com.postmanlabs.mac.ShipIt",
+    "~/Library/Caches/com.postmanlabs.mac",
+    "~/Library/Caches/Postman",
     "~/Library/Preferences/ByHost/com.postmanlabs.mac.ShipIt.*.plist",
     "~/Library/Preferences/com.postmanlabs.mac.plist",
     "~/Library/Saved Application State/com.postmanlabs.mac.savedState",
