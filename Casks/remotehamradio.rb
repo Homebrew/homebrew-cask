@@ -19,5 +19,4 @@ cask "remotehamradio" do
     "~/Library/Application Support/RemoteHamRadio",
     "~/Library/Preferences/com.rst.rhr-desktop.plist",
   ]
-
 end
