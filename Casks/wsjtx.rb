@@ -21,6 +21,12 @@ cask "wsjtx" do
     set_ownership("/Library/LaunchDaemons/com.wsjtx.sysctl.plist", user: "root", group: "wheel")
   end
 
+  zap trash: [
+    "~/Library/Saved Application State/org.k1jt.wsjtx.savedState",
+    "~/Library/Application Support/WSJT-X",
+    "~/Library/Preferences/WSJT-X.ini",
+  ]
+
   caveats do
     reboot
   end
