@@ -1,8 +1,8 @@
 cask "fme" do
-  version "2021.2.0.1,21789"
-  sha256 "5bd89c262999f554490f6fba7de49cdb1ec8b840b148a5cb5652dd922ee32072"
+  version "2021.2.1,21797"
+  sha256 "635597c4bea365be713145d21510c29d8fcb85506377a390b648ded894d76e2e"
 
-  url "https://downloads.safe.com/fme/#{version.major}/fme-desktop-#{version.before_comma}-b#{version.after_comma}-macosx.pkg"
+  url "https://downloads.safe.com/fme/#{version.major}/fme-desktop-#{version.csv.first}-b#{version.csv.second}-macosx.pkg"
   name "FME Desktop"
   desc "Platform for integrating spatial data"
   homepage "https://www.safe.com/"
@@ -17,11 +17,11 @@ cask "fme" do
     end
   end
 
-  pkg "fme-desktop-#{version.before_comma}-b#{version.after_comma}-macosx.pkg"
+  pkg "fme-desktop-#{version.csv.first}-b#{version.csv.second}-macosx.pkg"
 
   uninstall pkgutil: [
-    "com.safesoftware.pkg.engine.fme-desktop-#{version.major_minor}-b#{version.after_comma}-macosx",
-    "com.safesoftware.pkg.apps.fme-desktop-#{version.major_minor}-b#{version.after_comma}-macosx",
+    "com.safesoftware.pkg.engine.fme-desktop-#{version.major_minor}-b#{version.csv.second}-macosx",
+    "com.safesoftware.pkg.apps.fme-desktop-#{version.major_minor}-b#{version.csv.second}-macosx",
   ],
             delete:  [
               "/Applications/FME #{version.major_minor}",
