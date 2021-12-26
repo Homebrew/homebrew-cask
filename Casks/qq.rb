@@ -9,8 +9,7 @@ cask "qq" do
 
   livecheck do
     url "https://im.qq.com/proxy/domain/qzonestyle.gtimg.cn/qzone/qzactStatics/configSystem/data/1373/config1.js"
-    strategy :page_match
-    regex(%r{/QQforMac/QQ_[\w.]+\.dmg}i)
+    regex(/QQ_(\d+(?:\.\d+)+([._-]EXP)?)\.dmg/i)
   end
 
   app "QQ.app"
