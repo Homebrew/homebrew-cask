@@ -25,11 +25,11 @@ cask "postman" do
   app "Postman.app"
 
   zap trash: [
-    "~/Library/Application Support/Postman",
     "~/Library/Application Support/com.postmanlabs.mac.ShipIt",
-    "~/Library/Caches/Postman",
-    "~/Library/Caches/com.postmanlabs.mac",
+    "~/Library/Application Support/Postman",
     "~/Library/Caches/com.postmanlabs.mac.ShipIt",
+    "~/Library/Caches/com.postmanlabs.mac",
+    "~/Library/Caches/Postman",
     "~/Library/Preferences/ByHost/com.postmanlabs.mac.ShipIt.*.plist",
     "~/Library/Preferences/com.postmanlabs.mac.plist",
     "~/Library/Saved Application State/com.postmanlabs.mac.savedState",
