@@ -13,4 +13,12 @@ cask "front" do
   end
 
   app "Front.app"
+
+  zap trash: [
+    "~/Library/Application Support/Front",
+    "~/Library/FrontBoard",
+    "~/Library/Logs/Front",
+    "~/Library/Preferences/com.frontapp.Front.plist",
+    "~/Library/Saved Application State/com.frontapp.Front.savedState",
+  ]
 end
