@@ -14,4 +14,10 @@ cask "remotehamradio" do
   end
 
   app "RemoteHamRadio.app"
+
+  zap trash: [
+    "~/Library/Application Support/RemoteHamRadio",
+    "~/Library/Preferences/com.rst.rhr-desktop.plist",
+  ]
+
 end
