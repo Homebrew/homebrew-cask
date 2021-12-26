@@ -9,4 +9,6 @@ cask "fontgoggles" do
   homepage "https://fontgoggles.org/"
 
   app "FontGoggles.app"
+
+  zap trash: "~/Library/Preferences/com.github.justvanrossum.FontGoggles.plist"
 end
