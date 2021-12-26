@@ -1,8 +1,8 @@
 cask "kicad" do
-  version "5.1.12-1"
-  sha256 "c2380302f0ddce72123aa0ae4a6561b3acc168c3c04fc6b3019ee3325dcd65e3"
+  version "6.0.0-0"
+  sha256 "ac8d93c9e4d3eb03446f18e6803f92168cf34f35080595425d0c5cb448c2a743"
 
-  url "https://kicad-downloads.s3.cern.ch/osx/stable/kicad-unified-#{version}-10_14.dmg",
+  url "https://kicad-downloads.s3.cern.ch/osx/stable/kicad-unified-#{version}.dmg",
       verified: "kicad-downloads.s3.cern.ch/"
   name "KiCad"
   desc "Electronics design automation suite"
@@ -10,10 +10,10 @@ cask "kicad" do
 
   livecheck do
     url "https://kicad-downloads.s3.cern.ch/?delimiter=/&prefix=osx/stable/"
-    regex(/kicad-unified-(\d+(?:.\d+)*)-10_14\.dmg/i)
+    regex(/kicad-unified-(\d+(?:.\d+)*)\.dmg/i)
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :catalina"
 
   app "KiCad/kicad.app",            target: "KiCad/kicad.app"
   app "KiCad/bitmap2component.app", target: "KiCad/bitmap2component.app"
