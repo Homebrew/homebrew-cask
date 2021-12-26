@@ -21,10 +21,12 @@ cask "wsjtx" do
     set_ownership("/Library/LaunchDaemons/com.wsjtx.sysctl.plist", user: "root", group: "wheel")
   end
 
+  uninstall delete: "/Library/LaunchDaemons/com.wsjtx.sysctl.plist"
+
   zap trash: [
-    "~/Library/Saved Application State/org.k1jt.wsjtx.savedState",
     "~/Library/Application Support/WSJT-X",
     "~/Library/Preferences/WSJT-X.ini",
+    "~/Library/Saved Application State/org.k1jt.wsjtx.savedState",
   ]
 
   caveats do
