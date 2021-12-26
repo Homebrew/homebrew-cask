@@ -1,5 +1,5 @@
 cask "freeze" do
-  version "3.14,305"
+  version "3.15,307"
   sha256 :no_check
 
   url "https://www.freezeapp.net/download/Freeze.zip"
