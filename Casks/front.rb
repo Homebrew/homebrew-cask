@@ -1,6 +1,6 @@
 cask "front" do
-  version "3.28.3"
-  sha256 "2837108c8e88fe808098c233f2e303e67dfffd8f2cac373e2a169d288a5b7f29"
+  version "3.29.5"
+  sha256 "3c59771b33893e82f54461db11c758ae709de54454b9b8d3251d603f8adb8f44"
 
   url "https://dl.frontapp.com/desktop/builds/#{version}/Front-#{version}.zip"
   name "Front"
