@@ -15,21 +15,16 @@ cask "kicad" do
 
   depends_on macos: ">= :catalina"
 
-  app "KiCad/Bitmap2Component.app",   target: "KiCad/Bitmap2Component.app"
-  app "KiCad/Eeschema.app",           target: "KiCad/Eeschema.app"
-  app "KiCad/GerbView.app",           target: "KiCad/GerbView.app"
-  app "KiCad/KiCad.app",              target: "KiCad/KiCad.app"
-  app "KiCad/PCB Calculator.app",     target: "KiCad/PCB Calculator.app"
-  app "KiCad/Page Layout Editor.app", target: "KiCad/Page Layout Editor.app"
-  app "KiCad/Pcbnew.app",             target: "KiCad/Pcbnew.app"
-  artifact "demos",                   target: "/Library/Application Support/kicad/demos"
+  suite "KiCad"
+  artifact "demos", target: "/Library/Application Support/kicad/demos"
 
-  uninstall rmdir: [
-    "/Library/Application Support/kicad",
+  uninstall delete: [
     "#{appdir}/KiCad",
+    "/Library/Application Support/kicad/demos",    
   ]
 
   zap trash: [
+    "/Library/Application Support/kicad",
     "~/Library/Application Support/kicad",
     "~/Library/Preferences/kicad",
     "~/Library/Preferences/org.kicad-pcb.*",
