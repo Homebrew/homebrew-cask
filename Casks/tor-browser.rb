@@ -163,6 +163,6 @@ cask "tor-browser" do
     "~/Library/Application Support/TorBrowser-Data",
     "~/Library/Preferences/org.mozilla.tor browser.plist",
     "~/Library/Preferences/org.torproject.torbrowser.plist",
-    "~/Library/SavedApplicationState/org.torproject.torbrowser.savedState",
+    "~/Library/Saved Application State/org.torproject.torbrowser.savedState",
   ]
 end

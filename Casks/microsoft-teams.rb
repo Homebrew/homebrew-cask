@@ -23,12 +23,14 @@ cask "microsoft-teams" do
   zap trash: [
     "/Library/Logs/Microsoft/Teams",
     "/Library/Preferences/com.microsoft.teams.plist",
-    "~/Library/Application Support/Microsoft/Teams",
     "~/Library/Application Support/com.microsoft.teams",
+    "~/Library/Application Support/Microsoft/Teams",
+    "~/Library/Application Support/Teams",
     "~/Library/Caches/com.microsoft.teams",
     "~/Library/Cookies/com.microsoft.teams.binarycookies",
     "~/Library/Logs/Microsoft Teams",
     "~/Library/Preferences/com.microsoft.teams.plist",
     "~/Library/Saved Application State/com.microsoft.teams.savedState",
+    "~/Library/WebKit/com.microsoft.teams",
   ]
 end

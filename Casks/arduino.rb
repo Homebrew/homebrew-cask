@@ -18,5 +18,6 @@ cask "arduino" do
   zap trash: [
     "~/Library/Arduino15",
     "~/Library/Preferences/cc.arduino.Arduino.plist",
+    "~/Library/Saved Application State/cc.arduino.Arduino.savedState",
   ]
 end
