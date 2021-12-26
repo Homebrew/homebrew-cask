@@ -16,8 +16,10 @@ cask "monero-wallet" do
 
   zap trash: [
     "~/.bitmonero",
-    "~/Monero",
     "~/Library/Preferences/org.getmonero.monero-core.plist",
+    "~/Library/Preferences/org.monero-project.monero-wallet-gui.plist",
     "~/Library/Saved Application State/com.yourcompany.monero-wallet-gui.savedState",
+    "~/Library/Saved Application State/org.monero-project.monero-wallet-gui.savedState",
+    "~/Monero",
   ]
 end
