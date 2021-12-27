@@ -16,5 +16,10 @@ cask "macloggerdx" do
 
   app "MacLoggerDX.app"
 
-  zap trash: "~/Library/Preferences/com.dogparksoftware.MacLoggerDX*.plist"
+  zap trash: [
+    "~/Library/Caches/com.apple.helpd/Generated/MacLoggerDX Help*",
+    "~/Library/Caches/com.dogparksoftware.MacLoggerDX",
+    "~/Library/HTTPStorages/com.dogparksoftware.MacLoggerDX",
+    "~/Library/Preferences/com.dogparksoftware.MacLoggerDX*.plist",
+  ]
 end
