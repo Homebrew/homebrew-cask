@@ -1,14 +1,14 @@
 cask "linearmouse" do
-  version "0.3.1"
-  sha256 "c95286e1c6eb8592f57aac0c0dd31a157b93e7f0879cc62ed09e07b0638df5b0"
+  version "0.3.2"
+  sha256 "2bf0fabfc3ac48f041bf443bbd3033353bf898f2860d2c963f6df405da613fed"
 
   url "https://github.com/lujjjh/LinearMouse/releases/download/v#{version}/LinearMouse.dmg",
-      verified: "github.com/lujjjh/LinearMouse"
+      verified: "github.com/lujjjh/LinearMouse/"
   name "LinearMouse"
   desc "Customize mouse behavior"
   homepage "https://linearmouse.org/"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :catalina"
 
   app "LinearMouse.app"
 
