@@ -13,6 +13,8 @@ cask "jt-bridge" do
     regex(%r{href=.*?/JT-Bridge\.app[._-]v?(\d+(?:\.\d+)+)\.zip}i)
   end
 
+  depends_on macos: ">= :el_capitan"
+
   app "JT-Bridge.app"
 
   zap trash: [
