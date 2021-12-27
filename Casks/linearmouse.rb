@@ -8,7 +8,7 @@ cask "linearmouse" do
   desc "Customize mouse behavior"
   homepage "https://linearmouse.org/"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :catalina"
 
   app "LinearMouse.app"
 
