@@ -18,11 +18,11 @@ cask "anka-virtualization" do
   pkg "Anka-#{version}.pkg"
 
   uninstall launchctl: [
-    "com.veertu.nlimit",
-    "com.veertu.vlaunch",
-    "com.veertu.anka.lupd",
     "com.veertu.anka.ankakbd",
     "com.veertu.anka.ankanetd",
+    "com.veertu.anka.lupd",
+    "com.veertu.nlimit",
+    "com.veertu.vlaunch",
   ],
             script:    {
               executable: "/Library/Application Support/Veertu/Anka/tools/uninstall.sh",
@@ -31,16 +31,16 @@ cask "anka-virtualization" do
             }
 
   zap trash: [
+    "/Library/Application Support/Veertu/Anka",
     "~/.anka",
-    "~/Library/Application Support/Veertu/Anka",
     "~/Library/Application Support/CrashReporter/ankahv_*.plist",
+    "~/Library/Application Support/Veertu/Anka",
     "~/Library/Logs/Anka",
     "~/Library/Preferences/com.veertu.ankaview.plist",
-    "/Library/Application Support/Veertu/Anka",
   ],
       rmdir: [
-        "~/Library/Application Support/Veertu",
         "/Library/Application Support/Veertu",
+        "~/Library/Application Support/Veertu",
       ]
 
   caveats do
