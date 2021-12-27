@@ -1,12 +1,12 @@
 cask "rider" do
   arch = Hardware::CPU.intel? ? "" : "-aarch64"
 
-  version "2021.3.1,213.5744.299"
+  version "2021.3.2,213.6461.51"
 
   if Hardware::CPU.intel?
-    sha256 "4a62dba2f75b02a58ec35e3afa261744e470e042d7183d7c7e42767904170788"
+    sha256 "91a6298baf58350eb8e092965d68142214d51cb92471cffe4de515adb72d92bb"
   else
-    sha256 "9ad15323c1e35daf517e8ecfc464d9aea5b0543cffa121e27e2c55c842838dc1"
+    sha256 "8046df03ab99d9a2a2363c17b6ec6ecf3291767b7eb5974e8a51093a6cedd4d4"
   end
 
   url "https://download.jetbrains.com/rider/JetBrains.Rider-#{version.csv.first}#{arch}.dmg"
