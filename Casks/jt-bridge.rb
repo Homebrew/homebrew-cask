@@ -10,7 +10,7 @@ cask "jt-bridge" do
 
   livecheck do
     url "https://jt-bridge.eller.nu/downloads/"
-    regex(%r{href=.*?/JT-Bridge\.app[._-]v?(\d+(?:\.\d+)+)\.zip}i)
+    regex(/JT[._-]Bridge[._-]app[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
   depends_on macos: ">= :el_capitan"
