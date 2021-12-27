@@ -9,8 +9,8 @@ cask "playcover" do
 
     app "PlayCover #{version}/PlayCover.app"
   else
-    version "0.9.5"
-    sha256 "dec89178a9bc2d545dc39a4f93ccaede0648bf11b3c975251ebca6d6a9aa11ee"
+    version "0.9.6"
+    sha256 "c03406dcb7a93d20bc2cef09186eac52943eac3664f9c0e8d915d9789db7c398"
 
     container nested: "PlayCover #{version}.dmg"
 
