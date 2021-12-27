@@ -15,4 +15,12 @@ cask "goodsync" do
   depends_on macos: ">= :yosemite"
 
   app "GoodSync.app"
+
+  zap trash: [
+    "/Library/Application Support/GoodSync",
+    "/Library/LaunchDaemons/com.siber.gs-server.plist",
+    "~/.goodsync",
+    "~/Library/Application Support/GoodSync",
+    "~/Library/Preferences/com.sibersystems.goodsyncmac2000.plist",
+  ]
 end
