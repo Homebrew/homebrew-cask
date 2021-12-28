@@ -16,6 +16,8 @@ cask "houdahspot" do
 
   app "HoudahSpot.app"
 
+  uninstall delete: "~/Library/Mail/Bundles/HoudahSpotMailPlugin.mailbundle"
+
   zap trash: [
     "~/Library/Application Scripts/com.houdah.HoudahSpot4.FinderExtension",
     "~/Library/Application Scripts/com.houdah.HoudahSpot4.HoudahSpotQuickAction",
