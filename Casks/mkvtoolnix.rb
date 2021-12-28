@@ -10,7 +10,7 @@ cask "mkvtoolnix" do
   livecheck do
     url "https://mkvtoolnix.download/macos/"
     strategy :page_match
-    regex(%r{href=.*?/MKVToolNix-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/MKVToolNix-(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   conflicts_with formula: "mkvtoolnix"
