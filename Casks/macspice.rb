@@ -1,6 +1,6 @@
 cask "macspice" do
-  version "3.1.24,341"
-  sha256 "486baee366773f3589c870d9294e1028c118e29f9bf4dc824322e37f2782475f"
+  version "3.1.25,343"
+  sha256 "22f82c32b6e79916b123a7d1f5ded71a9a30cffc5ab63262b43a0d11db3c45f9"
 
   url "https://www.macspice.com/mirror/binaries/v#{version.before_comma}/MacSpice3f5.dmg"
   name "MacSpice"
