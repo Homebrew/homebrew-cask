@@ -4,6 +4,7 @@ cask "macspice" do
 
   url "https://www.macspice.com/mirror/binaries/v#{version.before_comma}/MacSpice3f5.dmg"
   name "MacSpice"
+  desc "Electronic circuit simulator"
   homepage "https://www.macspice.com/"
 
   livecheck do
