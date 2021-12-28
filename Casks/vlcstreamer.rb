@@ -4,6 +4,7 @@ cask "vlcstreamer" do
 
   url "https://hobbyistsoftware.com/Downloads/VLCStreamer/Versions/VLCStreamer_#{version}.dmg"
   name "VLC Streamer"
+  desc "Stream videos to mobile devices using VLC"
   homepage "https://hobbyistsoftware.com/vlcstreamer"
 
   livecheck do
