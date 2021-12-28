@@ -1,8 +1,8 @@
 cask "startupizer" do
-  version "2,2060:1527510167"
+  version "2,2060,1527510167"
   sha256 "56792a52fc91129f6f192cbbc0dbc6a7175d0699f2dab726baaf7d94f30ce150"
 
-  url "https://dl.devmate.com/com.gentlebytes.Startupizer#{version.major}/#{version.after_comma.before_colon}/#{version.after_colon}/Startupizer#{version.major}-#{version.after_comma.before_colon}.zip",
+  url "https://dl.devmate.com/com.gentlebytes.Startupizer#{version.major}/#{version.csv.second}/#{version.csv.third}/Startupizer#{version.major}-#{version.csv.second}.zip",
       verified: "dl.devmate.com/com.gentlebytes.Startupizer#{version.major}/"
   name "Startupizer#{version.major}"
   desc "Login items handler"
@@ -14,7 +14,7 @@ cask "startupizer" do
       match = item.url.match(%r{/(\d+)/Startupizer(\d+)-\d+\.zip}i)
       next if match.blank?
 
-      "#{match[2]},#{item.version}:#{match[1]}"
+      "#{match[2]},#{item.version},#{match[1]}"
     end
   end
 

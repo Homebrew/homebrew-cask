@@ -1,6 +1,6 @@
 cask "mimestream" do
-  version "0.30.5"
-  sha256 "1d6f7ff3ad2999845ec5523332f19fd1bc6fac255036c0386a29f5da1cab18ae"
+  version "0.31.5"
+  sha256 "5eeb9ab2bd5e2fa3dda9d04f06726df71e1433f731923ae28487f28fcfec5c14"
 
   url "https://storage.googleapis.com/mimestream-releases/Mimestream_#{version}.dmg",
       verified: "storage.googleapis.com/mimestream-releases/"

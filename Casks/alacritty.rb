@@ -14,6 +14,13 @@ cask "alacritty" do
 
   app "Alacritty.app"
   binary "#{appdir}/Alacritty.app/Contents/MacOS/alacritty"
+  binary "#{appdir}/Alacritty.app/Contents/Resources/completions/_alacritty",
+         target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_alacritty"
+  binary "#{appdir}/Alacritty.app/Contents/Resources/completions/alacritty.bash",
+         target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/alacritty"
+  binary "#{appdir}/Alacritty.app/Contents/Resources/completions/alacritty.fish",
+         target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/alacritty.fish"
+  manpage "#{appdir}/Alacritty.app/Contents/Resources/alacritty.1.gz"
 
   zap trash: [
     "~/Library/Preferences/io.alacritty.plist",

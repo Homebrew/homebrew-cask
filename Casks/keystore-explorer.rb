@@ -1,6 +1,6 @@
 cask "keystore-explorer" do
-  version "5.4.4"
-  sha256 "07f4283a7e120293690b11c8963019b632e0bf18ed785caf706fdc66a4f868b8"
+  version "5.5.0"
+  sha256 "ec50f0e15a2c3fa3077285f928cbfcf98a0dd5fdd3646b7e4bf1e79f8d0e2153"
 
   url "https://github.com/kaikramer/keystore-explorer/releases/download/v#{version}/kse-#{version.no_dots}.dmg",
       verified: "github.com/kaikramer/keystore-explorer/"

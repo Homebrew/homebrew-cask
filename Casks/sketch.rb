@@ -1,8 +1,8 @@
 cask "sketch" do
-  version "79.1,133344"
-  sha256 "c0a83ddc47c23d30d653d33bd5d94d8c1e0f7acd3c13459b17ccc9c7f3b0b59a"
+  version "81.1,135647"
+  sha256 "dda0154827b10760330ac174fca48ec9980d9fab2a655cd938c321c5855694fc"
 
-  url "https://download.sketch.com/sketch-#{version.before_comma}-#{version.after_comma}.zip"
+  url "https://download.sketch.com/sketch-#{version.csv.first}-#{version.csv.second}.zip"
   name "Sketch"
   desc "Digital design and prototyping platform"
   homepage "https://www.sketch.com/"
@@ -13,7 +13,7 @@ cask "sketch" do
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :catalina"
 
   app "Sketch.app"
 

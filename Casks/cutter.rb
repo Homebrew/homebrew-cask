@@ -1,6 +1,6 @@
 cask "cutter" do
-  version "2.0.3"
-  sha256 "0b2cb245f21bca7ffd69279fabd74c368d80b789007b94d6d3c5b511907d0cd1"
+  version "2.0.4"
+  sha256 "030762bfbcac52e3e06c3a2bd98d221b063c716efb154c45ecb672e826c356f8"
 
   url "https://github.com/rizinorg/cutter/releases/download/v#{version}/Cutter-v#{version}-x64.macOS.dmg",
       verified: "github.com/rizinorg/cutter/"

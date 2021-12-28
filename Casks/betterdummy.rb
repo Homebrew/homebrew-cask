@@ -1,6 +1,6 @@
 cask "betterdummy" do
-  version "1.0.10"
-  sha256 "0d7b97942daeb32f75f45eb5ace6a5b93792a5b2cb85043fd83ffac277eebf5c"
+  version "1.0.13"
+  sha256 "23a46ea3607045a74f9d1ebae5b8034964bb2d217a56d2f0dd8a298e03c4a7ed"
 
   url "https://github.com/waydabber/BetterDummy/releases/download/v#{version}/BetterDummy-v#{version}.zip"
   name "betterdummy"

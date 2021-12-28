@@ -1,14 +1,14 @@
 cask "dcv-viewer" do
   arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
 
-  version "2021.2.3776"
+  version "2021.3.3829"
 
   url "https://d1uj6qtbmh3dt5.cloudfront.net/#{version.major_minor}/Clients/nice-dcv-viewer-#{version}.#{arch}.dmg",
       verified: "d1uj6qtbmh3dt5.cloudfront.net/"
   if Hardware::CPU.intel?
-    sha256 "0d72af77d33d472c9f6523036809e5936f516851d1c788a909674dc857fe0e78"
+    sha256 "aaca37ccc846f33dc71735556e3e533a55525818490ce05c767f1526b227aece"
   else
-    sha256 "86061eeacf8c59fa71a08eb00cf65e918193e2007d47224820049431c2b370bb"
+    sha256 "8d71305c0a606929f568d688e2f0ac19beafb99fefd0b29b9306eb25398e7bb4"
   end
 
   name "NICE DCV Viewer"
@@ -23,4 +23,6 @@ cask "dcv-viewer" do
   depends_on macos: ">= :mojave"
 
   app "DCV Viewer.app"
+
+  zap trash: "~/Library/Preferences/com.nicesoftware.dcvviewer.plist"
 end

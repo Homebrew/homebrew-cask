@@ -1,13 +1,13 @@
 cask "okta-advanced-server-access" do
-  version "1.54.1"
-  sha256 "2507999301c036660a2a0a7d31d177c1f3c24ac88b83e586d911c102ce77b8e0"
+  version "1.55.1"
+  sha256 "743690788fbca162ef312d68cbee1a10cf8ec2e1351569f85648e76301b1d859"
 
   url "https://dist.scaleft.com/client-tools/mac/v#{version}/ScaleFT-#{version}.pkg",
       verified: "scaleft.com/"
   name "Okta Advanced Server Access"
   name "ScaleFT"
   desc "Identity and access management"
-  homepage "https://help.okta.com/en/prod/Content/Topics/Adv_Server_Access/docs/sft-osx.htm"
+  homepage "https://help.okta.com/asa/en-us/Content/Topics/Adv_Server_Access/docs/sft-osx.htm"
 
   livecheck do
     url "https://dist.scaleft.com/client-tools/mac/latest/ScaleFT.pkg"

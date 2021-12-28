@@ -1,6 +1,6 @@
 cask "fabfilter-pro-q" do
-  version "3.17"
-  sha256 "52f9db4e524960eb0bb9f1548372aef4915176ef9ab6e5662917341743375ed6"
+  version "3.20"
+  sha256 "31619d5e1d698b2e54f2b2faffa98e3f22d7c5dcc5a941ddccd89357905fe0ff"
 
   url "https://download.fabfilter.com/ffproq#{version.no_dots}.dmg"
   name "FabFilter Pro-Q"
@@ -10,7 +10,7 @@ cask "fabfilter-pro-q" do
   livecheck do
     url "https://www.fabfilter.com/download"
     strategy :page_match do |page|
-      match = page.match(%r{href=".*?/ffproq(\d)(\d\d)\.dmg}i)
+      match = page.match(/ffproq(\d)(\d+)\.dmg/i)
       next if match.blank?
 
       "#{match[1]}.#{match[2]}"
@@ -21,7 +21,5 @@ cask "fabfilter-pro-q" do
 
   pkg "FabFilter Pro-Q #{version} Installer.pkg"
 
-  uninstall pkgutil: [
-    "com.fabfilter.Pro-Q.#{version.major}",
-  ]
+  uninstall pkgutil: "com.fabfilter.Pro-Q.#{version.major}"
 end

@@ -1,14 +1,14 @@
 cask "drawio" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "15.7.3"
+  version "16.0.2"
 
   url "https://github.com/jgraph/drawio-desktop/releases/download/v#{version}/draw.io-#{arch}-#{version}.dmg",
       verified: "github.com/jgraph/drawio-desktop/"
   if Hardware::CPU.intel?
-    sha256 "62e6a8afd22a100021f73fbbefb21c1751dc91a5df23da5b2a8bc7a9ccc2763c"
+    sha256 "e32a41c8f3c65548822794544aa1fb920a17400a3b66cc5afa953a79aa4a41a5"
   else
-    sha256 "f3340df9bddcd813c7b3fbdf3cd90dfcbd930d1cfffbb9c071148cb8c9a1c729"
+    sha256 "1eb36e8c43a3e378bda010d73a8d42cd388b8c3d5f62e4cf4666f776349e4e61"
   end
 
   name "draw.io Desktop"
@@ -19,6 +19,8 @@ cask "drawio" do
     url :url
     strategy :github_latest
   end
+
+  auto_updates true
 
   app "draw.io.app"
 

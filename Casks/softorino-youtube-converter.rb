@@ -1,16 +1,27 @@
 cask "softorino-youtube-converter" do
-  version "2.1.34"
-  sha256 "83ec4d1ee654e939ae82f48a76597f3f1b63f113abb7fda1f0bd3289847a97c8"
+  version "4.0.21"
+  sha256 "a0d6e858476b2500c43568b9fb91a4e988dd9787f64b13f3277b9244cb3de832"
 
-  url "https://shining.softorino.com/shine_uploads/softorinoyoutubeconverter#{version.major}mac_#{version}.dmg"
+  url "https://ushining.softorino.com/shine_uploads/softorinoyoutubeconverter2mac_#{version}.dmg"
   name "Softorino YouTube Converter"
   desc "YouTube downloader and converter"
   homepage "https://softorino.com/youtube-converter/"
 
   livecheck do
-    url "https://shining.softorino.com/appcast.php?abbr=syc2m"
+    url "https://api.softorino.com/live/app-manager/v3/syc2/mac/updates"
     strategy :sparkle
   end
 
-  app "Softorino YouTube Converter #{version.major}.app"
+  auto_updates true
+
+  app "Softorino YouTube Converter 2.app"
+
+  zap trash: [
+    "/Users/Shared/Softorino YouTube Converter 2",
+    "~/Library/Application Support/Softorino YouTube Converter 2",
+    "~/Library/Caches/com.softorino.syc2",
+    "~/Library/Logs/com.softorino.syc2",
+    "~/Library/Preferences/com.softorino.syc2.plist",
+    "~/Library/Saved Application State/com.softorino.syc2.savedState",
+  ]
 end

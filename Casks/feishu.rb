@@ -2,14 +2,14 @@ cask "feishu" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
   if Hardware::CPU.intel?
-    version "4.11.14,57b437"
-    sha256 "d083a7d0cf53555687ea63db0608396ad8d3631f5ce6bfac9772653cbf20c474"
+    version "5.2.11,e1ae01"
+    sha256 "7b1c81a16cbdcb1044811bda65fe249fe743b88bb4736a0bc25bf01517292482"
   else
-    version "4.11.14,204151"
-    sha256 "6a66b97a0393402481e44d92d07758d460064e8203c046481400493ac6841769"
+    version "5.2.11,a103b3"
+    sha256 "8d1946daec929bdcaadb778f1916ba194424bcded3b5359cf7a55d80316ba87b"
   end
 
-  url "https://sf3-cn.feishucdn.com/obj/ee-appcenter/#{version.after_comma}/Feishu-darwin_#{arch}-#{version.before_comma}-signed.dmg",
+  url "https://sf3-cn.feishucdn.com/obj/ee-appcenter/#{version.csv.second}/Feishu-darwin_#{arch}-#{version.csv.first}-signed.dmg",
       verified: "sf3-cn.feishucdn.com/"
   name "feishu"
   desc "Project management software"
@@ -17,7 +17,7 @@ cask "feishu" do
 
   livecheck do
     url "https://www.feishu.cn/api/downloads"
-    regex(%r{/(\h+)/Feishu-darwin_#{arch}[._-]v?(\d+(?:\.\d+)*)-signed\.dmg}i)
+    regex(%r{/(\h+)/Feishu-darwin_#{arch}[._-]v?(\d+(?:\.\d+)+)-signed\.dmg}i)
     strategy :page_match do |page|
       page.scan(regex)
           .map { |match| "#{match[1]},#{match[0]}" }

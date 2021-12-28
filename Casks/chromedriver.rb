@@ -1,12 +1,12 @@
 cask "chromedriver" do
   arch = Hardware::CPU.intel? ? "mac64" : "mac64_m1"
 
-  version "95.0.4638.69"
+  version "96.0.4664.45"
 
   if Hardware::CPU.intel?
-    sha256 "7d70a8c0441ef9b572ac17ecbb2f1976a1689b2ed04aebb7e5586fe097ddf830"
+    sha256 "0e88eab13db9bd6ef2def8c2342556c29f739f00846de21258b2a3b61e476b64"
   else
-    sha256 "11b8e73ea5c1a01a17ae484c63155fb5a9674a3799c0225184aec305a5f705fe"
+    sha256 "351fdac849f4de034d36f4edb6bc7a9cf6455dca460767e92ac508fd2ce2d6fb"
   end
 
   url "https://chromedriver.storage.googleapis.com/#{version}/chromedriver_#{arch}.zip",

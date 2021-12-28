@@ -6,9 +6,10 @@ cask "bbedit" do
     version "12.6.7"
     sha256 "d0647c864268b187343bd95bfcf490d6a2388579b1f8fce64a289c65341b1144"
   else
-    version "14.0.2"
-    sha256 "8ca5ccf08cb2164b569e24787d425ee63cdaeec7ec2bf493b5c1ca2390d0d265"
+    version "14.0.4"
+    sha256 "6958194e05948152ecb601fec9272a0b407727a9bce6444f8f4506b1074a41ec"
   end
+
   url "https://s3.amazonaws.com/BBSW-download/BBEdit_#{version}.dmg",
       verified: "s3.amazonaws.com/BBSW-download/"
   name "BBEdit"

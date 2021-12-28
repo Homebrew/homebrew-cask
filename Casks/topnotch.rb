@@ -1,6 +1,6 @@
 cask "topnotch" do
-  version "1.2"
-  sha256 "38c672b2f799e3ca02676f9eef5d2ecbb89350696a3eaa1c6f090ca53efcc1fe"
+  version "1.3"
+  sha256 "9dd66619f88424960ab88b27215b6b464723767164c54c4c0ddc59bfb5fe5c89"
 
   url "https://updates.topnotch.app/TopNotch-#{version}.dmg"
   name "topnotch"

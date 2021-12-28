@@ -1,15 +1,21 @@
 cask "snapmotion" do
-  version "4.5.0,6036"
-  sha256 "b2e3f27e8a98f993a98e60b3885ba16d5c4c4e308bb9f83743fff6d8503700b5"
+  version "5.0.3,01f7c639-980e-46f7-8ab9-077b2275da40"
+  sha256 "7bd57f713b3bb1624b6d0a73b4185624e5550187ba80b45ee5d576fa0cf8c902"
 
-  url "https://neededapps.com/appcasts/snapmotion/versions/SM-#{version.before_comma}.zip"
+  url "https://neededapps.nyc3.digitaloceanspaces.com/media/public/#{version.csv.second}.zip",
+      verified: "neededapps.nyc3.digitaloceanspaces.com"
   name "SnapMotion"
   desc "Extract images from videos"
   homepage "https://neededapps.com/snapmotion/"
 
   livecheck do
     url "https://neededapps.com/appcasts/snapmotion/changelog.xml"
-    strategy :sparkle
+    strategy :sparkle do |item|
+      hex = item.url[%r{/([\h-]+)\.zip}i, 1]
+      next if hex.blank?
+
+      "#{item.short_version},#{hex}"
+    end
   end
 
   app "SnapMotion.app"

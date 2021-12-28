@@ -1,6 +1,6 @@
 cask "little-snitch" do
-  version "5.3.1"
-  sha256 "8bc5b61a72bf33b197726a2f5df44676f89f42ce44a138e7f34c5434191b1618"
+  version "5.3.2"
+  sha256 "36743f5b6a687a7431988e1de6a658c60bc93051840b1de4b093b4e4c341fa2e"
 
   url "https://www.obdev.at/downloads/littlesnitch/LittleSnitch-#{version}.dmg"
   name "Little Snitch"
@@ -9,8 +9,7 @@ cask "little-snitch" do
 
   livecheck do
     url "https://www.obdev.at/products/littlesnitch/download.html"
-    strategy :page_match
-    regex(%r{href=.*?/LittleSnitch-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/LittleSnitch-(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   auto_updates true

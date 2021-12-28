@@ -21,8 +21,8 @@ cask "onyx" do
     version "4.0.1"
     sha256 "d8b1613df2aacca0f827d4f98b7e6ec372c2030cc09ff3291f9660271f008c4d"
   else
-    version "4.1.1"
-    sha256 "c59457c5570c7583ce8e1b7083905b583d03e3a96eb6c3a6b0ad03fb2bf9c0b8"
+    version "4.1.4"
+    sha256 "e3e6db670c8a7e5ea2e37976fd1a1f6a7afb7c926008d595520947a8313237bd"
   end
 
   url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete(".")}/OnyX.dmg"
@@ -43,8 +43,8 @@ cask "onyx" do
   zap trash: [
     "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.titanium.OnyX.help*",
     "~/Library/Logs/OnyX.log",
-    "~/Library/Preferences/OnyX.plist",
     "~/Library/Preferences/com.titanium.OnyX.plist",
+    "~/Library/Preferences/OnyX.plist",
     "~/Library/Saved Application State/com.titanium.OnyX.savedState",
   ]
 end

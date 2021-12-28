@@ -1,6 +1,6 @@
 cask "synthesia" do
   version "10.8"
-  sha256 "0211192748bac7dfab553386fdba1b8e1f0322638729bd04858add6fdbe13750"
+  sha256 "02fa6519b152d28cb6bd9d41be0a859ef66c35bdf563a0a2dab7e4dccd334d8e"
 
   url "https://synthesia.s3.amazonaws.com/files/Synthesia-#{version}.dmg",
       verified: "synthesia.s3.amazonaws.com/"
@@ -10,8 +10,7 @@ cask "synthesia" do
 
   livecheck do
     url "https://www.synthesiagame.com/download"
-    strategy :page_match
-    regex(/synthesia\s(\d+(?:\.\d+)*)\sfor\smacOS/i)
+    regex(/synthesia\s(\d+(?:\.\d+)+)\sfor\smacOS/i)
   end
 
   app "Synthesia.app"

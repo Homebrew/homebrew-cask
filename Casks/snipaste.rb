@@ -1,6 +1,6 @@
 cask "snipaste" do
-  version "2.6.6-Beta2"
-  sha256 "8582b045b340cc328d9fab9aa37699f6bb7312a38c7b2847668478fc6fead913"
+  version "2.7.1-Beta"
+  sha256 "c26d93f499229ebd14a19cd036028a7b3d4f34a28486cd080a2adb7e415bf90f"
 
   url "https://bitbucket.org/liule/snipaste/downloads/Snipaste-#{version}.dmg",
       verified: "bitbucket.org/liule/snipaste/"

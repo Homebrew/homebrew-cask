@@ -1,12 +1,12 @@
 cask "fs-uae-launcher" do
   arch = Hardware::CPU.intel? ? "x86-64" : "ARM64"
 
-  version "3.1.43"
+  version "3.1.66"
 
   if Hardware::CPU.intel?
-    sha256 "c810dc3cfaa022baaa2672203c230bcb76ca279995bf8bcb0a133a9a7bff3bd2"
+    sha256 "89dc35917fceeebee62d7bfaa80c3384b6daf0600908d46ba3508855195effb2"
   else
-    sha256 "aa7941947c40180a7150fb1487af318bcf4a855086cccc972f862b7c8c06803e"
+    sha256 "03c720ee5f3293c6e4002dd593af9518b05873f869da73bfb8480128a8b586d2"
   end
 
   url "https://fs-uae.net/files/FS-UAE-Launcher/Stable/#{version}/FS-UAE-Launcher_#{version}_macOS_#{arch}.tar.xz"

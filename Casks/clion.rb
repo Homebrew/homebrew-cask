@@ -1,15 +1,15 @@
 cask "clion" do
   arch = Hardware::CPU.intel? ? "" : "-aarch64"
 
-  version "2021.2.3,212.5457.51"
+  version "2021.3.1,213.6461.46"
 
-  url "https://download.jetbrains.com/cpp/CLion-#{version.before_comma}#{arch}.dmg"
   if Hardware::CPU.intel?
-    sha256 "00db4ad6b9946a28596f533fe4927734732d0a88d6439f7ea4fbc60bae29b588"
+    sha256 "83fba95a836ec28a848c8bafe7d3faac86dc297fb01728833a7866cfae01f1a4"
   else
-    sha256 "4c6088a5c492e8ee97efa32b5c7e257a5869ec77ddbc9cd21974e7fdabeecd8a"
+    sha256 "90f53aaabf4d272e4655e2ab07f18254fa99b0eef5b789461f127aca37721df1"
   end
 
+  url "https://download.jetbrains.com/cpp/CLion-#{version.csv.first}#{arch}.dmg"
   name "CLion"
   desc "C and C++ IDE"
   homepage "https://www.jetbrains.com/clion/"

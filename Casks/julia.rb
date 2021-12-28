@@ -1,19 +1,29 @@
 cask "julia" do
-  version "1.6.3"
-  sha256 "31c5ef1b9fd6e23077a047fbbbfbe4209fe498fe7ddad3f7c3cc6e7abda985df"
+  arch, arch_folder = Hardware::CPU.intel? ? ["mac64", "x64"] : ["macaarch64", "aarch64"]
 
-  url "https://julialang-s3.julialang.org/bin/mac/x64/#{version.major_minor}/julia-#{version}-mac64.dmg"
+  version "1.7.1"
+
+  if Hardware::CPU.intel?
+    sha256 "95842f2782d6cef397cfbde250f627def8c86cc281efce0d64a14c13bd62d494"
+  else
+    sha256 "b6489d1e00cd539dfd60b29743b5d813889368bdc1a8fb9418893db5ae2d43d6"
+  end
+
+  url "https://julialang-s3.julialang.org/bin/mac/#{arch_folder}/#{version.major_minor}/julia-#{version}-#{arch}.dmg"
   name "Julia"
   desc "Programming language for technical computing"
   homepage "https://julialang.org/"
 
   livecheck do
     url "https://julialang.org/downloads/"
-    regex(/href=.*?julia[._-]v?(\d+(?:\.\d+)+)[._-]mac64\.dmg/i)
+    regex(/href=.*?julia[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
   app "Julia-#{version.major_minor}.app"
   binary "#{appdir}/Julia-#{version.major_minor}.app/Contents/Resources/julia/bin/julia"
 
-  zap trash: "~/.julia"
+  zap trash: [
+    "~/.julia",
+    "~/Library/Preferences/julia.plist",
+  ]
 end

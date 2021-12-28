@@ -1,8 +1,8 @@
 cask "marsedit" do
-  version "4.5.5,9750"
-  sha256 "03bd0354ccd8616cccd0bd35b1cd4c571430910f78f0c0c8a6d31e288fb18709"
+  version "4.5.7,9821"
+  sha256 "617530fc8f660c84ad2094293f449e10af9572d481f188c07bb5ed42e848e276"
 
-  url "https://redsweater.com/marsedit/MarsEdit#{version.before_comma}.zip"
+  url "https://redsweater.com/marsedit/MarsEdit#{version.csv.first}.zip"
   name "MarsEdit"
   desc "Tool to write, preview and publish blogs"
   homepage "https://redsweater.com/marsedit/"

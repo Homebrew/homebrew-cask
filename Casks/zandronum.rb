@@ -1,6 +1,6 @@
 cask "zandronum" do
-  version "3.0"
-  sha256 "9e50fee5eea4c3eda08ea6433f1a5bc8edb60ea44be634511f06109357686616"
+  version "3.1"
+  sha256 "586dccf52bfb27a6fc019dea99fcd1cce203b85e14ca908268c33a95ae6947ff"
 
   url "https://zandronum.com/downloads/zandronum#{version}-macosx.dmg"
   name "Zandronum"

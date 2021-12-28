@@ -1,22 +1,15 @@
 cask "eclipse-installer" do
-  version "4.21.0,2021-09:R"
-  sha256 "111f77a2ac0c6e474af6da8168691c45af50728447f00a3e303fd65c178b1b5a"
+  version "4.22.0,2021-12"
+  sha256 "e6e3b1d34c6023eb01b8a01e34ac40527e09b17d6a21ec51b599200b1d79c4f0"
 
-  url "https://eclipse.org/downloads/download.php?file=/oomph/epp/#{version.after_comma.before_colon}/#{version.after_colon}/eclipse-inst-mac64.tar.gz&r=1"
+  url "https://eclipse.org/downloads/download.php?file=/oomph/epp/#{version.csv.second}/R/eclipse-inst-mac64.tar.gz&r=1"
   name "Eclipse Installer"
   name "Eclipse IDE installer"
   desc "Install and update your Eclipse Development Environment"
   homepage "https://eclipse.org/"
 
   livecheck do
-    url "https://www.eclipse.org/downloads/packages/"
-    strategy :page_match do |page|
-      page.scan(/Eclipse IDE (\d+-\d+) R Packages/i).map do |release|
-        version_page = Homebrew::Livecheck::Strategy.page_content("https://projects.eclipse.org/releases/#{release[0]}")[:content]
-        version = version_page.scan(%r{href="/projects/eclipse/releases/(\d+(?:\.\d+)*)"}i)
-        "#{version[0][0]},#{release[0]}:R"
-      end
-    end
+    cask "eclipse-ide"
   end
 
   app "Eclipse Installer.app"

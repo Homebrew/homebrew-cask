@@ -1,6 +1,6 @@
 cask "burp-suite" do
-  version "2021.9.1"
-  sha256 "56e6bae8d27cb3880c44d9135adf7714f010a7fba3534592f3fa0385cc8ef8d9"
+  version "2021.10.3"
+  sha256 "495476d68622657e0376b4dfaddccba27cbfaabe900771a4acd2799c79f82819"
 
   url "https://portswigger.net/burp/releases/download?product=community&version=#{version}&type=MacOsx"
   name "Burp Suite Community Edition"
@@ -8,9 +8,19 @@ cask "burp-suite" do
   homepage "https://portswigger.net/burp/"
 
   livecheck do
-    url "https://portswigger.net/burp/releases/community/latest"
-    strategy :header_match do |headers|
-      headers["location"][%r{/professional[._-]community[._-]v?(\d+(?:-\d+)+)\?}i, 1].tr("-", ".")
+    url "https://portswigger.net/burp/releases/data"
+    strategy :page_match do |page|
+      all_versions = JSON.parse(page)["ResultSet"]["Results"]
+      next if all_versions.blank?
+
+      all_versions.map do |item|
+        item["version"] if
+              item["releaseChannels"].include?("Stable") &&
+              item["categories"].include?("Community") &&
+              item["builds"].any? do |build|
+                build["ProductPlatform"] == "MacOsx"
+              end
+      end.compact
     end
   end
 

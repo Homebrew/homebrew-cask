@@ -1,8 +1,8 @@
 cask "keybase" do
-  version "5.8.0,20210920184218:ac2177aec7"
-  sha256 "55333b285a0c31712e478480462371efdec96c77cca7d7831b4748778fa5b7d5"
+  version "5.9.0,20211216221146,9b33c9201f"
+  sha256 "17f0c419665e98c26eb705bbcf591bd222125ab19f3085f3dbf5e3926cdd7a22"
 
-  url "https://prerelease.keybase.io/darwin-updates/Keybase-#{version.before_comma}-#{version.after_comma.before_colon}%2B#{version.after_colon}.zip"
+  url "https://prerelease.keybase.io/darwin-updates/Keybase-#{version.csv.first}-#{version.csv.second}%2B#{version.csv.third}.zip"
   name "Keybase"
   desc "End-to-end encryption software"
   homepage "https://keybase.io/"
@@ -13,7 +13,7 @@ cask "keybase" do
       match = page.match(/Keybase-(\d+(?:\.\d+)*)-(\d+)%2B([0-9a-f]+)\.zip/i)
       next if match.blank?
 
-      "#{match[1]},#{match[2]}:#{match[3]}"
+      "#{match[1]},#{match[2]},#{match[3]}"
     end
   end
 

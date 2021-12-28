@@ -1,5 +1,5 @@
 cask "multimc" do
-  version "0.6.13"
+  version "0.6.14"
   sha256 :no_check
 
   url "https://files.multimc.org/downloads/mmc-stable-osx64-5.15.2.tar.gz"
@@ -9,9 +9,7 @@ cask "multimc" do
 
   livecheck do
     url "https://files.multimc.org/update/osx64-5.15.2/stable/index.json"
-    strategy :page_match do |page|
-      JSON.parse(page)["Versions"][0]["Name"]
-    end
+    regex(/"Name":\s*"(\d+(?:\.\d+)+)"/i)
   end
 
   auto_updates true

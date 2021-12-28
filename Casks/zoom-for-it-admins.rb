@@ -1,6 +1,6 @@
 cask "zoom-for-it-admins" do
-  version "5.8.4.2421"
-  sha256 "64706c314d9e6a60c2c5efb7e5330f55170c5eac58aab7859f204b8ca8e7f832"
+  version "5.9.1.3506"
+  sha256 "47addb51720f84280ce4d163bef52e45e37c19a9e11d08bbe1fad3344fd2b1c7"
 
   url "https://cdn.zoom.us/prod/#{version}/ZoomInstallerIT.pkg"
   name "Zoom for IT Admins"
@@ -8,8 +8,7 @@ cask "zoom-for-it-admins" do
   homepage "https://support.zoom.us/hc/en-us/articles/115001799006-Mass-Deployment-with-Preconfigured-Settings-for-Mac"
 
   livecheck do
-    url "https://zoom.us/client/latest/Zoom.pkg"
-    strategy :header_match
+    cask "zoom"
   end
 
   # Do not add `auto_updates`. While supporting an auto-update mechanism, this software is more inconvenient than most
@@ -34,8 +33,8 @@ cask "zoom-for-it-admins" do
     "~/.zoomus",
     "~/Desktop/Zoom",
     "~/Documents/Zoom",
-    "~/Library/Application Support/CloudDocs/session/containers/iCloud.us.zoom.videomeetings",
     "~/Library/Application Support/CloudDocs/session/containers/iCloud.us.zoom.videomeetings.plist",
+    "~/Library/Application Support/CloudDocs/session/containers/iCloud.us.zoom.videomeetings",
     "~/Library/Application Support/CrashReporter/zoom.us*",
     "~/Library/Application Support/zoom.us",
     "~/Library/Caches/us.zoom.xos",
@@ -45,10 +44,10 @@ cask "zoom-for-it-admins" do
     "~/Library/Logs/zoominstall.log",
     "~/Library/Logs/ZoomPhone",
     "~/Library/Mobile Documents/iCloud~us~zoom~videomeetings",
-    "~/Library/Preferences/ZoomChat.plist",
     "~/Library/Preferences/us.zoom.airhost.plist",
     "~/Library/Preferences/us.zoom.xos.Hotkey.plist",
     "~/Library/Preferences/us.zoom.xos.plist",
+    "~/Library/Preferences/ZoomChat.plist",
     "~/Library/Safari/PerSiteZoomPreferences.plist",
     "~/Library/SafariTechnologyPreview/PerSiteZoomPreferences.plist",
     "~/Library/Saved Application State/us.zoom.xos.savedState",

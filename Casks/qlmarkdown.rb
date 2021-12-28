@@ -1,11 +1,23 @@
 cask "qlmarkdown" do
-  version "1.3.6"
-  sha256 "810853c000dd5c3e18978070abb7f595ad52ddfa568fccb428d28b513d1810ab"
+  version "1.0.9"
+  sha256 "a3c507f9da728d53f816b44a1c5987c3e2ee63b974b6d831ef2b44c0fbb3d74c"
 
-  url "https://github.com/toland/qlmarkdown/releases/download/v#{version}/QLMarkdown.qlgenerator.zip"
-  name "QLMarkdown"
+  url "https://github.com/sbarex/QLMarkdown/releases/download/#{version}/QLMarkdown.zip"
+  name "sbarex-qlmarkdown"
   desc "QuickLook generator for Markdown files"
-  homepage "https://github.com/toland/qlmarkdown"
+  homepage "https://github.com/sbarex/QLMarkdown"
 
-  qlplugin "QLMarkdown.qlgenerator"
+  auto_updates true
+  depends_on macos: ">= :catalina"
+
+  app "QLMarkdown.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/org.sbarex.QLMarkdown",
+    "~/Library/Application Scripts/org.sbarex.QLMarkdown.QLExtension",
+    "~/Library/Containers/org.sbarex.QLMarkdown",
+    "~/Library/Containers/org.sbarex.QLMarkdown.QLExtension",
+    "~/Library/Preferences/org.sbarex.QLMarkdown.plist",
+    "~/Library/QuickLook/QLMarkdown.qlgenerator",
+  ]
 end

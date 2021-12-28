@@ -7,6 +7,12 @@ cask "n1ghtshade" do
   desc "Permits the downgrade/jailbreak of 32-bit iOS devices"
   homepage "https://github.com/synackuk/n1ghtshade"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+    regex(%r{href=.*?/tag/v?([\w._-]+)["' >]}i)
+  end
+
   depends_on formula: %w[
     libimobiledevice
     libirecovery

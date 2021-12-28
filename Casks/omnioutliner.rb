@@ -34,5 +34,7 @@ cask "omnioutliner" do
     strategy :header_match
   end
 
+  auto_updates true
+
   app "OmniOutliner.app"
 end

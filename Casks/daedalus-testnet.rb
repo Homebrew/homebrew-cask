@@ -1,8 +1,8 @@
 cask "daedalus-testnet" do
-  version "4.4.1,19369"
-  sha256 "4bf65f233a9d7b37e97bfc79c843a05d867446a141d81c99e5a997ea41f65dda"
+  version "4.6.0,20052"
+  sha256 "669baae698c85f42ab273cfbca5c020e13d8664ad97de53a744af23e312484f4"
 
-  url "https://updates-cardano-testnet.s3.amazonaws.com/daedalus-#{version.before_comma}-testnet-#{version.after_comma}.pkg",
+  url "https://updates-cardano-testnet.s3.amazonaws.com/daedalus-#{version.csv.first}-testnet-#{version.csv.second}.pkg",
       verified: "updates-cardano-testnet.s3.amazonaws.com/"
   name "Daedalus Testnet"
   desc "Cryptocurrency wallet for test ada on the Cardano Testnet blockchain"
@@ -12,8 +12,8 @@ cask "daedalus-testnet" do
     url "https://updates-cardano-testnet.s3.amazonaws.com/daedalus-latest-version.json"
 
     strategy :page_match do |page|
-      version = page.match(/"version":"(.+?)"/)[1]
-      build = page.match(/-(\d+(?:\.\d+)*)\.pkg/)[1]
+      version = page.match(/"version":"(\d+(?:\.\d+)+)"/)[1]
+      build = page.match(/(\d+(?:\.\d+)*)\.pkg/)[1]
       "#{version},#{build}"
     end
   end
@@ -21,7 +21,7 @@ cask "daedalus-testnet" do
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
-  pkg "daedalus-#{version.before_comma}-testnet-#{version.after_comma}.pkg"
+  pkg "daedalus-#{version.csv.first}-testnet-#{version.csv.second}.pkg"
 
   uninstall pkgutil: "org.Daedalustestnet.pkg"
 
