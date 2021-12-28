@@ -16,7 +16,6 @@ cask "mediathekview" do
 
   livecheck do
     url "https://download.mediathekview.de/stabil/"
-    strategy :page_match
     regex(%r{href=.*?/MediathekView-(\d+(?:\.\d+)+)-#{arch}\.dmg}i)
   end
 
