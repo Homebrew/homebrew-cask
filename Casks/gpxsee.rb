@@ -9,4 +9,9 @@ cask "gpxsee" do
   homepage "https://www.gpxsee.org/"
 
   app "GPXSee.app"
+
+  zap trash: [
+    "~/Library/Caches/GPXSee",
+    "~/Library/Preferences/com.gpxsee.GPXSee.plist",
+  ]
 end
