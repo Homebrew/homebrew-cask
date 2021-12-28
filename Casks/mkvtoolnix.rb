@@ -1,6 +1,6 @@
 cask "mkvtoolnix" do
-  version "63.0.0"
-  sha256 "2c09244106649a944503fac5cab760bd9f31120c92f9d7de78d4d6b143524f01"
+  version "64.0.0"
+  sha256 "72999f645e7e5989cd33efcd7383514874c4e65b03ad964f621c40a1254523cc"
 
   url "https://mkvtoolnix.download/macos/MKVToolNix-#{version}.dmg"
   name "MKVToolNix"
@@ -10,7 +10,7 @@ cask "mkvtoolnix" do
   livecheck do
     url "https://mkvtoolnix.download/macos/"
     strategy :page_match
-    regex(%r{href=.*?/MKVToolNix-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/MKVToolNix-(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   conflicts_with formula: "mkvtoolnix"
