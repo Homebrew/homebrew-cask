@@ -5,6 +5,7 @@ cask "icestudio" do
   url "https://github.com/FPGAwars/icestudio/releases/download/v#{version}/icestudio-#{version}-osx64.dmg",
       verified: "github.com/FPGAwars/icestudio/"
   name "icestudio"
+  desc "Visual editor for open FPGA boards"
   homepage "https://icestudio.io/"
 
   app "icestudio.app"
