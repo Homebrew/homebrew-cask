@@ -1,8 +1,8 @@
 cask "shimo" do
-  version "5.0.3,8887"
-  sha256 "6438ea5627591bbb12e8b7b2796ade24fe8d59712d8c523443a5632e66dfc9f3"
+  version "5.0.4,8890"
+  sha256 "0f624d29248c2cb3d77ede2cc8ce8e30cdddaa7358d444571dd2ec1932f6958c"
 
-  url "https://downloads.mailbutler.io/Shimo_#{version.before_comma}_#{version.after_comma}.zip",
+  url "https://downloads.mailbutler.io/Shimo_#{version.csv.first}_#{version.csv.second}.zip",
       verified: "downloads.mailbutler.io/"
   name "Shimo"
   desc "VPN client for secure internet access and private browsing"
