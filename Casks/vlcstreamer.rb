@@ -13,7 +13,7 @@ cask "vlcstreamer" do
   end
 
   app "VLCStreamer.app"
-  
+
   zap trash: [
      "~/Library/Application Support/com.HobbyistSoftware.VLCStreamer",
      "~/Library/Application Support/VLCStreamer",
