@@ -3,7 +3,7 @@ cask "pycharm-ce" do
 
   version "2021.3.1,213.6461.77"
 
-  url "https://download.jetbrains.com/python/pycharm-community-#{version.before_comma}#{arch}.dmg"
+  url "https://download.jetbrains.com/python/pycharm-community-#{version.csv.first}#{arch}.dmg"
   if Hardware::CPU.intel?
     sha256 "aec1cb259c1418adfb864118ca6fc1df8ac845478c19e1f742aaa54e111638f4"
   else
