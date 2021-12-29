@@ -1,8 +1,8 @@
 cask "macspice" do
   version "3.1.25,343"
-  sha256 "61c10bf428d4d813a81d75fdc667c7839a86a01015ff35b86798650097e73558"
+  sha256 :no_check # required as upstream package is updated in place
 
-  url "https://www.macspice.com/mirror/binaries/v#{version.csv.first}/MacSpice3f5.dmg",
+  url "https://www.macspice.com/binaries/v#{version.csv.first}/MacSpice3f5.dmg",
       user_agent: :fake
   name "MacSpice"
   desc "Electronic circuit simulator"
