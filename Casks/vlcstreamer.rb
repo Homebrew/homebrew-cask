@@ -9,8 +9,7 @@ cask "vlcstreamer" do
 
   livecheck do
     url "https://hobbyistsoftware.com/vlcstreamer-versions"
-    strategy :page_match
-    regex(%r{href=.*?/VLCStreamer_(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/VLCStreamer_(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "VLCStreamer.app"
