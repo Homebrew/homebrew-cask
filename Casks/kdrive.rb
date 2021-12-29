@@ -17,12 +17,16 @@ cask "kdrive" do
 
   pkg "kDrive-#{version}.pkg"
 
+  uninstall_preflight do
+    system_command "/usr/bin/pkill", args: ["-f", "/Applications/kDrive.app"]
+  end
+
   uninstall quit:      [
     "com.infomaniak.drive.desktopclient",
     "com.infomaniak.drive.desktopclient.Extension",
   ],
             pkgutil:   "com.infomaniak.drive.desktopclient",
-            launchctl: "*.com.infomaniak.drive.desktopclient.LoginItemAgent"
+            launchctl: "864VDCS2QY.com.infomaniak.drive.desktopclient.LoginItemAgent"
 
   zap trash: [
     "~/Library/Application Scripts/*.com.infomaniak.drive.desktopclient.LoginItemAgent",
