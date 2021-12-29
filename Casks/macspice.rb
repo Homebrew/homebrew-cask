@@ -1,6 +1,6 @@
 cask "macspice" do
   version "3.1.25,343"
-  sha256 "22f82c32b6e79916b123a7d1f5ded71a9a30cffc5ab63262b43a0d11db3c45f9"
+  sha256 "61c10bf428d4d813a81d75fdc667c7839a86a01015ff35b86798650097e73558"
 
   url "https://www.macspice.com/mirror/binaries/v#{version.csv.first}/MacSpice3f5.dmg",
       user_agent: :fake
