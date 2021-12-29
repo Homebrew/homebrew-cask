@@ -9,7 +9,7 @@ cask "datagrip" do
     sha256 "21e0e3a1a0c2bdc809430eea1011e929f120f290d8450de0070f641f752fe9d0"
   end
 
-  url "https://download.jetbrains.com/datagrip/datagrip-#{version.before_comma}#{arch}.dmg"
+  url "https://download.jetbrains.com/datagrip/datagrip-#{version.csv.first}#{arch}.dmg"
   name "DataGrip"
   desc "Databases & SQL IDE"
   homepage "https://www.jetbrains.com/datagrip/"
