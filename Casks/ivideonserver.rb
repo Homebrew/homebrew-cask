@@ -10,7 +10,7 @@ cask "ivideonserver" do
 
   livecheck do
     url "https://www.ivideon.com/downloads/"
-    regex(%r{href=.*?/IvideonServer[._-]v?(\d+(?:\.\d+)+)[._-]macosx[._-]x86[._-]64\.dmg}i)
+    regex(/href=.*?IvideonServer[._-]v?(\d+(?:\.\d+)+)[._-]macosx[._-]x86[._-]64\.dmg/i)
   end
 
   app "IvideonServer.app"
