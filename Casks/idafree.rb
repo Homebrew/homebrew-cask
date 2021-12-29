@@ -1,16 +1,15 @@
 cask "idafree" do
   arch = Hardware::CPU.intel? ? "idafree" : "arm_idafree"
 
-  version "7.6"
+  version "7.7"
 
-  url "https://out7.hex-rays.com/files/#{arch}#{version.no_dots}_mac.app.zip",
-      verified: ""
   if Hardware::CPU.intel?
-    sha256 "d56949e39ec988dfd4a5793cbb0bc90341fb50a39d4b304e3c197629496d541b"
+    sha256 "1141a984567f3eab8bda2b372a15d03757fa06919f67e007e1a948d52acc8377"
   else
-    sha256 "5ab07c6a2edc257717c4c8d26eaa9b4655a14d322c8360216ef8b18ec9b04b7e"
+    sha256 "161b7ef7b7415e03dd95e401c32173b6711074b632d46de8a89115999ecd83a6"
   end
 
+  url "https://out7.hex-rays.com/files/#{arch}#{version.no_dots}_mac.app.zip"
   name "IDA Free"
   desc "Binary code analysis tool"
   homepage "https://hex-rays.com/ida-free/"
