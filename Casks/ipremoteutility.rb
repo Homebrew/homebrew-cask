@@ -8,8 +8,7 @@ cask "ipremoteutility" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/IPRemoteUtility-(\d+(?:\.\d+)*)-macOSX\.zip}i)
+    regex(/href=.*?IPRemoteUtility[._-]v?(\d+(?:\.\d+)+)-macOSX\.zip/i)
   end
 
   container nested: "IPRemoteUtility-#{version}-macOSX/IPRemoteUtility-#{version}.dmg"
