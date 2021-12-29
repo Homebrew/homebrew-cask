@@ -15,4 +15,16 @@ cask "insync" do
   auto_updates true
 
   app "Insync.app"
+
+  zap trash: [
+    "/Library/LaunchDaemons/com.insynchq.insync.daemon.plist",
+    "~/Library/Application Scripts/com.insynchq.insync",
+    "~/Library/Application Scripts/com.insynchq.Insync.Insync-Finder-Integration",
+    "~/Library/Application Support/Insync",
+    "~/Library/Caches/com.insynchq.insync",
+    "~/Library/Containers/com.insynchq.Insync.Insync-Finder-Integration",
+    "~/Library/Group Containers/com.insynchq.insync",
+    "~/Library/Saved Application State/com.insynchq.insync.savedState",
+    "~/Library/WebKit/com.insynchq.insync",
+  ]
 end
