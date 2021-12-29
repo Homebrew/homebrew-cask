@@ -4,6 +4,7 @@ cask "ipremoteutility" do
 
   url "https://www.flandersscientific.com/ip-remote/release/IPRemoteUtility-#{version}-macOSX.zip"
   name "Flanders IP Remote Utility"
+  desc "Management of Flanders Scientific hardware"
   homepage "https://www.flandersscientific.com/ip-remote/"
 
   livecheck do
