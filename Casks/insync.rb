@@ -9,7 +9,7 @@ cask "insync" do
 
   livecheck do
     url :homepage
-    regex(%r{/Insync[._-]?v?(\d+(?:\.\d+)+)\.dmg}i)
+    regex(/Insync[._-]?v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   auto_updates true
