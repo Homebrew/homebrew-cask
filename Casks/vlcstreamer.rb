@@ -15,8 +15,8 @@ cask "vlcstreamer" do
   app "VLCStreamer.app"
 
   zap trash: [
-     "~/Library/Application Support/com.HobbyistSoftware.VLCStreamer",
-     "~/Library/Application Support/VLCStreamer",
-     "~/Library/Preferences/com.HobbyistSoftware.VLCStreamer.plist",
-   ]
+    "~/Library/Application Support/com.HobbyistSoftware.VLCStreamer",
+    "~/Library/Application Support/VLCStreamer",
+    "~/Library/Preferences/com.HobbyistSoftware.VLCStreamer.plist",
+  ]
 end
