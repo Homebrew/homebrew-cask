@@ -1,8 +1,8 @@
 cask "graphicconverter" do
-  version "11.5.4,5261"
-  sha256 "ce0e23d2c3145aea20a7ed596290539691898b04ffe5a9e451720077d7677dea"
+  version "11.5.5,5314"
+  sha256 "91ad56e4e7645946313333b9ce78c5216d8e1fadf2a013f256b9e92adbc0e670"
 
-  url "https://www.lemkesoft.info/files/graphicconverter/gc#{version.major}_build#{version.after_comma}.zip",
+  url "https://www.lemkesoft.info/files/graphicconverter/gc#{version.major}_build#{version.csv.second}.zip",
       verified: "lemkesoft.info/"
   name "GraphicConverter"
   desc "For browsing, enhancing and converting images"
