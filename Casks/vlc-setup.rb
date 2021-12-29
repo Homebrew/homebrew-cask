@@ -9,16 +9,16 @@ cask "vlc-setup" do
 
   livecheck do
     url "https://hobbyistsoftware.com/vlc-versions"
-    regex(%r{href=.*?/VLCSetup[._-](\d+(?:\.\d+)+)\.dmg}i)
+    regex(/VLCSetup[._-](\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "VLC Setup.app"
 
   zap trash: [
     "~/Library/Application Support/com.HobbyistSoftware.VLCSetup",
-    "~/Library/Saved Application State/com.HobbyistSoftware.VLCSetup.savedState",
     "~/Library/Caches/com.HobbyistSoftware.VLCSetup",
-    "~/Library/Preferences/com.HobbyistSoftware.VLCSetup.plist",
     "~/Library/Logs/VLC Setup",
+    "~/Library/Preferences/com.HobbyistSoftware.VLCSetup.plist",
+    "~/Library/Saved Application State/com.HobbyistSoftware.VLCSetup.savedState",
   ]
 end
