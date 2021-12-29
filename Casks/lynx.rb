@@ -1,5 +1,5 @@
 cask "lynx" do
-  version "7.4.7.0"
+  version "7.5.2.0"
   sha256 :no_check
 
   url "https://download.saharasupport.com/lynx#{version.major}/production/macx/Lynx#{version.major}-install.dmg",
