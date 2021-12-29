@@ -11,7 +11,7 @@ cask "wolfram-engine" do
   livecheck do
     url "https://account.wolfram.com/download/public/wolfram-engine/desktop/MAC"
     strategy :header_match
-    regex(%r{/v?(\d+(?:\.\d+)+)/WolframEngine[._-]v?\d+(?:\.\d+)+[._-]MAC\.dmg}i)
+    regex(%r{/v?(\d+(?:\.\d+)+)/WolframEngine[._-]v?\d+(?:\.\d+)+[._-]MAC(?:_EXP)?\.dmg}i)
   end
 
   depends_on macos: ">= :sierra"
