@@ -2,7 +2,7 @@ cask "plistedplus" do
   version "1.2.08"
 
   if MacOS.version <= :sierra
-    sha256 "801e5de263d70fc718a03f91cc0c7cceb190a817a677cc126716c44a3afe5349"
+    sha256 "0ccaac4eb7c42d443ff1cf6135269229b800b5790e55eab4ecc6fa4fa2834524"
     url "https://github.com/ic005k/PlistEDPlus/releases/download/#{version}/PlistEDPlus_Mac10.12.and.below.dmg"
   else
     sha256 "26c653b9d323f8d5c2d6f18e4aa6d2f010afe233ecade8bd870ff7795f57de5d"
