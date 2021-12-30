@@ -12,8 +12,8 @@ cask "p4v" do
   livecheck do
     url "https://www.perforce.com/perforce/doc.current/user/p4vnotes.txt"
     strategy :page_match do |page|
-      page.scan(%r{Supporting\s+Libraries\s+for\s+v?(\d+\.\d+)(?:\.\d+)*/(\d+)}i).map do |match|
-        "#{match[0]},#{match[1]}"
+      page.scan(%r{(Patch|Release)\sfor\sHelix\sVisual\sClient,\sHelix\sMerge,\sand\sHelix\sAdmin.(\d+(?:\.\d+)+)/(\d+)}i).map do |match|
+        "#{match[1]},#{match[2]}"
       end
     end
   end
