@@ -12,7 +12,7 @@ cask "p4v" do
   livecheck do
     url "https://www.perforce.com/support/software-release-index"
     regex(%r{(?:Patch|Release) for[^<]+?Helix Visual Client[^<]+?v?(\d+(?:\.\d+)+)/(\d+)}im)
-    strategy :page_match do |page|
+    strategy :page_match do |page, regex|
       page.scan(
         %r{(Patch|Release)\sfor\sHelix\sVisual\sClient,\sHelix\sMerge,\sand\sHelix\sAdmin.(\d+(?:\.\d+)+)/(\d+)}i,
       ).map do |match|
