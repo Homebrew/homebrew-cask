@@ -5,6 +5,7 @@ cask "qtox" do
   url "https://github.com/qTox/qTox/releases/download/v#{version}/qTox.dmg",
       verified: "github.com/qTox/qTox/"
   name "qTox"
+  desc "Instant messaging and video conferencing app"
   homepage "https://qtox.github.io/"
 
   app "qTox.app"
