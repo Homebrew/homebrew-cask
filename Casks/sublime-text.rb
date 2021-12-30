@@ -33,12 +33,9 @@ cask "sublime-text" do
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sublimetext.#{version.major}.sfl*",
     "~/Library/Application Support/Sublime Text",
     "~/Library/Application Support/Sublime Text (Safe Mode)",
-    "~/Library/Application Support/Sublime Text 3",
+    "~/Library/Caches/Sublime Text",
     "~/Library/Caches/com.sublimetext.#{version.major}",
-    "~/Library/Caches/com.sublimetext.3",
     "~/Library/Preferences/com.sublimetext.#{version.major}.plist",
-    "~/Library/Preferences/com.sublimetext.3.plist",
     "~/Library/Saved Application State/com.sublimetext.#{version.major}.savedState",
-    "~/Library/Saved Application State/com.sublimetext.3.savedState",
   ]
 end
