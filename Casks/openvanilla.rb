@@ -5,7 +5,19 @@ cask "openvanilla" do
   url "https://github.com/openvanilla/openvanilla/releases/download/#{version.before_comma}/OpenVanilla-Installer-Mac-#{version.before_comma}.zip",
       verified: "github.com/openvanilla/openvanilla/"
   name "OpenVanilla"
+  desc "Provides common input methods"
   homepage "https://openvanilla.org/"
+
+  livecheck do
+    url "https://raw.githubusercontent.com/openvanilla/openvanilla/master/Source/Mac/OpenVanilla-Info.plist"
+    strategy :page_match do |page|
+      shortversion = page.match(/CFBundleShortVersionString.*?\n.*?(\d+(?:\.\d+)+)/i)
+      version = page.match(/CFBundleVersion.*?\n.*?(\d+(?:\.\d+)*)/i)
+      next if shortversion.blank? || version.blank?
+
+      "#{shortversion[1]},#{version[1]}"
+    end
+  end
 
   container nested: "OpenVanillaInstaller.app/Contents/Resources/NotarizedArchives/OpenVanilla-r#{version.after_comma}.zip"
 
