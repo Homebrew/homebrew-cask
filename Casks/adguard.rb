@@ -22,14 +22,16 @@ cask "adguard" do
             launchctl: [
               "com.adguard.mac.adguard.pac",
               "com.adguard.mac.adguard.tun-helper",
+            ],
+            delete:    [
+              "/Library/com.adguard.mac.adguard.pac",
+              "/Library/Application Support/AdGuard Software",
+              "/Library/Application Support/com.adguard.Adguard",
+              "/Library/LaunchDaemons/com.adguard.mac.adguard.pac.plist",
+              "/Library/LaunchDaemons/com.adguard.mac.adguard.tun-helper.plist",
             ]
 
   zap trash: [
-    "/Library/com.adguard.mac.adguard.pac",
-    "/Library/Application Support/AdGuard Software",
-    "/Library/Application Support/com.adguard.Adguard",
-    "/Library/LaunchDaemons/com.adguard.mac.adguard.pac.plist",
-    "/Library/LaunchDaemons/com.adguard.mac.adguard.tun-helper.plist",
     "~/Library/Application Scripts/*.com.adguard.mac",
     "~/Library/Application Scripts/com.adguard.mac.adguard.loginhelper",
     "~/Library/Application Scripts/com.adguard.mac.adguard.safari-assistant",
