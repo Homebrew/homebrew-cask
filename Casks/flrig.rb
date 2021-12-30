@@ -5,7 +5,7 @@ cask "flrig" do
     sha256 "d6cdd639c59807e7bde531585e349789ca5ee20d9bb7262dbd8d9966e94d8805"
     url "https://downloads.sourceforge.net/fldigi/fldigi/flrig-#{version}_HS.dmg"
   else
-    sha256 "d5fd8be8f39c998f4ee76a461f935d0da51582730df1b71e3e29240d41d53252"
+    sha256 "c19d9eb62c899fd6e1eefe6db8bacdae70762e284afb567348e4d4fc311233b6"
     url "https://downloads.sourceforge.net/fldigi/fldigi/flrig-#{version}_BS.dmg"
   end
 
