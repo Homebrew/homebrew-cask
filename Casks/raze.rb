@@ -1,6 +1,6 @@
 cask "raze" do
-  version "1.2.1"
-  sha256 "6d21093fa3470018e1fdba3c7349f1dde1ac6191f433835beb7af414c9975ca0"
+  version "1.3.1"
+  sha256 "8f58b8d4c2f5d350f790cbbef154a285d533b129daaf95d423fb6e2578ac3f45"
 
   url "https://github.com/coelckers/Raze/releases/download/#{version}/raze-macos-#{version}.zip"
   name "Raze"
@@ -10,7 +10,7 @@ cask "raze" do
   livecheck do
     url "https://github.com/coelckers/Raze/releases"
     strategy :page_match
-    regex(/raze[._-]macos[._-]v?(\d+(?:\.\d+)*)\.zip/i)
+    regex(/raze[._-]macos[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
   app "Raze.app"
