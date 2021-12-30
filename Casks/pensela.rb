@@ -1,6 +1,6 @@
 cask "pensela" do
-  version "1.2.4"
-  sha256 "1bba20814765d1ffb07aa1dc62e49d15c53d68efe3c11347ef0c4815295aa610"
+  version "1.2.5"
+  sha256 "f6029a8a876038835c9045e75a05367f4f6f63e7ff6a9f11e4921a0ef9559c6b"
 
   url "https://github.com/weiameili/Pensela/releases/download/v#{version}/Pensela-#{version}.dmg"
   name "Pensela"

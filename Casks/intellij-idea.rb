@@ -1,13 +1,13 @@
 cask "intellij-idea" do
   arch = Hardware::CPU.intel? ? "" : "-aarch64"
 
-  version "2021.3,213.5744.223"
+  version "2021.3.1,213.6461.79"
 
-  url "https://download.jetbrains.com/idea/ideaIU-#{version.before_comma}#{arch}.dmg"
+  url "https://download.jetbrains.com/idea/ideaIU-#{version.csv.first}#{arch}.dmg"
   if Hardware::CPU.intel?
-    sha256 "463e861c5357bef19f498f4bffa06f7e912d59f7a795eda2c603b02d4d737de0"
+    sha256 "49b716dd822b8478c629baef22f337e0b1a3ca5ee751821d4311bdda0ad78fcb"
   else
-    sha256 "9f9186b9a9ac97c656fb3f40fd0880e0d84957e66e19e72a20d6f15d2cd92b41"
+    sha256 "a91e995a66a68ace8078bb76074be2a9263fcb4d38a99ebd603bc516239adcec"
   end
 
   name "IntelliJ IDEA Ultimate"

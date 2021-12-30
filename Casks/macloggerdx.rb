@@ -9,7 +9,7 @@ cask "macloggerdx" do
 
   livecheck do
     url :homepage
-    regex(/Download:\s*v?(\d+(?:\.\d+)+)[^a-z]+/i)
+    regex(/Download:\s*v?(\d+(?:\.\d+)+)[\s<]/im)
   end
 
   conflicts_with cask: "homebrew/cask-versions/macloggerdx-beta"
