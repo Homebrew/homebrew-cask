@@ -1,0 +1,163 @@
+#!/bin/bash
+#
+# list_ids_in_app
+#
+
+###
+### settings
+###
+
+set -e                # exit on any uncaught error
+set +o histexpand     # don't expand history expressions
+shopt -s nocasematch  # case-insensitive regular expressions
+
+###
+### global variables
+###
+
+appdir=''
+scriptdir="$(dirname "$0")"
+
+# prefer GNU xargs
+xargs="$(/usr/bin/which gxargs || printf '/usr/bin/xargs')"
+
+###
+### functions
+###
+
+bundle_id_source_1 () {
+    /usr/bin/find "$appdir" -name Info.plist -print0 |                                 \
+    "$xargs" -0 -I {} /usr/libexec/PlistBuddy {} -c 'Print :CFBundleIdentifier'
+}
+
+merge_sources () {
+    /usr/bin/sort | /usr/bin/uniq
+}
+
+clean_sources () {
+    /usr/bin/egrep -v  '^com\.apple\.' |                                                                     \
+    /usr/bin/egrep -vi '^org\.andymatuschak\.Sparkle' |                                                      \
+    /usr/bin/egrep -vi '^(SDL|SDL_net|TDParseKit)$'   |                                                      \
+    /usr/bin/egrep -vi '^com\.growl\.(growlframework|WebKit|iCal|GrowlAction|GrowlLauncher|GrowlPlugins)' |  \
+    /usr/bin/egrep -vi '^com\.adobe\.(ACE|AGM|AXE8SharedExpat|AdobeExtendScript|AdobeScCore|AdobeXMPCore|BIB|BIBUtils|CoolType|ESD\.AdobeUpdaterLibFramework|JP2K|adobe_caps|AcrobatPlugin|AdobeResourceSynchronizer|ICUConverter|ICUData|acrobat\.assert|acrobat\.pdfviewerNPAPI|adobepdf417pmp|ahclientframework|datamatrixpmp|eulaframework|framework|linguistic|qrcodepmp)' | \
+    /usr/bin/egrep -vi '^com\.microsoft\.(Automator|certificate\.framework|chart|converterlib|converters|excel\.pde|grammar|igx|mcp|merp|msls3|netlib|officeart|ole|oleo|powerplant|powerplantcore|powerpoint\.pde|speller|thesaurus|urlmon|wizard|wordforms|MSCommon|mbuinstrument_framework|mbukernel_framework|rdpkit)' | \
+    /usr/bin/egrep -vi '^com\.google\.(Chrome\.framework|Chrome\.helper|Keystone|BreakpadFramework|GDataFramework|Reporter)' | \
+    /usr/bin/egrep -vi '^atmo\.mac\.macho' |                                                                 \
+    /usr/bin/egrep -vi '^com\.Breakpad\.crash_report_sender' |                                               \
+    /usr/bin/egrep -vi '^com\.Cycling74\.driver\.Soundflower' |                                              \
+    /usr/bin/egrep -vi '^com\.HumbleDaisy\.HDCrashReporter' |                                                \
+    /usr/bin/egrep -vi '^com\.amazon\.JSONKit' |                                                             \
+    /usr/bin/egrep -vi '^com\.bensyverson\..*dvmatte' |                                                      \
+    /usr/bin/egrep -vi '^com\.binarymethod\.BGHUDAppKit' |                                                   \
+    /usr/bin/egrep -vi '^com\.blacktree\.(QSCore|QSEffects|QSFoundation|QSInterface)' |                      \
+    /usr/bin/egrep -vi '^com\.brandonwalkin\.BWToolkitFramework' |                                           \
+    /usr/bin/egrep -vi '^com\.cruzapp\.TDWebThumbnail' |                                                     \
+    /usr/bin/egrep -vi '^com\.cycling74\.QTExportTool' |                                                     \
+    /usr/bin/egrep -vi '^com\.fluidapp\.(BrowserBrowserPlugIn|FluidInstance|ThumbnailPlugIn)' |              \
+    /usr/bin/egrep -vi '^com\.github\.(Electron\.framework|ObjectiveGit|Squirrel)' |                         \
+    /usr/bin/egrep -vi '^com\.heroku\.RedisAdapter' |                                                        \
+    /usr/bin/egrep -vi '^com\.instinctivecode\.MGScopeBar' |                                                 \
+    /usr/bin/egrep -vi '^com\.intel\.nw\.helper' |                                                           \
+    /usr/bin/egrep -vi '^com\.joshaber\.RockemSockem' |                                                      \
+    /usr/bin/egrep -vi '^com\.katidev\.KTUIKit' |                                                            \
+    /usr/bin/egrep -vi '^com\.kirin\.plugin\.adapter' |                                                      \
+    /usr/bin/egrep -vi '^com\.lextek\.onix' |                                                                \
+    /usr/bin/egrep -vi '^com\.macromedia\.(Flash Player\.authplaylib|PepperFlashPlayer)' |                   \
+    /usr/bin/egrep -vi '^com\.mainconcept\.mc\.enc\.avc' |                                                   \
+    /usr/bin/egrep -vi '^com\.netscape\.(DefaultPlugin|MRJPlugin)' |                                         \
+    /usr/bin/egrep -vi '^com\.nxtbgthng\.JSONKit' |                                                          \
+    /usr/bin/egrep -vi '^com\.omnigroup\.(OmniAppKit|OmniInspector|framework)' |                             \
+    /usr/bin/egrep -vi '^com\.oracle\.java\..*\.jdk' |                                                       \
+    /usr/bin/egrep -vi '^com\.panic\.(PanicCore|automator|CodaScriptPlugIn)' |                               \
+    /usr/bin/egrep -vi '^com\.pixelespresso\.cocoafob' |                                                     \
+    /usr/bin/egrep -vi '^com\.positivespinmedia\.(PSMTabBarControlFramework|PSMTabBarFramework)' |           \
+    /usr/bin/egrep -vi '^com\.softube\.(Amplifier|Cabinet)' |                                                \
+    /usr/bin/egrep -vi '^com\.sonic\.(AS_Storage|AuthorScriptHDMV)' |                                        \
+    /usr/bin/egrep -vi '^com\.soundcloud\.Share-on-SoundCloud' |                                             \
+    /usr/bin/egrep -vi '^com\.stuffit\.(format|sdk|stuffitcore)' |                                           \
+    /usr/bin/egrep -vi '^com\.sun\.Scintilla' |                                                              \
+    /usr/bin/egrep -vi '^com\.yourcompany' |                                                                 \
+    /usr/bin/egrep -vi '^coop\.plausible\.(CrashReporter|PLWeakCompatibility)' |                             \
+    /usr/bin/egrep -vi '^de\.buzzworks\.Quincy' |                                                            \
+    /usr/bin/egrep -vi '^de\.dstoecker\.xadmaster' |                                                         \
+    /usr/bin/egrep -vi '^isao\.sonobe\.OgreKit' |                                                            \
+    /usr/bin/egrep -vi '^jp\.hmdt\.framework\.hmdtblkappkit' |                                               \
+    /usr/bin/egrep -vi '^net\.hockeyapp\.sdk\.mac' |                                                         \
+    /usr/bin/egrep -vi '^net\.java\.openjdk\.jre' |                                                          \
+    /usr/bin/egrep -vi '^net\.liquidx\.EyeTunes' |                                                           \
+    /usr/bin/egrep -vi '^net\.sourceforge\.Log4Cocoa' |                                                      \
+    /usr/bin/egrep -vi '^net\.sourceforge\.munt\.MT32Emu' |                                                  \
+    /usr/bin/egrep -vi '^net\.sourceforge\.skim-app\.framework' |                                            \
+    /usr/bin/egrep -vi '^net\.wafflesoftware\.ShortcutRecorder\.framework' |                                 \
+    /usr/bin/egrep -vi '^org\.AFNetworking\.AFNetworking' |                                                  \
+    /usr/bin/egrep -vi '^org\.boredzo\.(LMX|ISO8601DateFormatter)' |                                         \
+    /usr/bin/egrep -vi '^org\.dribin\.dave\.DDHidLib' |                                                      \
+    /usr/bin/egrep -vi '^org\.linkbackproject\.LinkBack' |                                                   \
+    /usr/bin/egrep -vi '^org\.mantle\.Mantle' |                                                              \
+    /usr/bin/egrep -vi '^org\.mozilla\.(crashreporter|plugincontainer|universalchardet|updater)' |           \
+    /usr/bin/egrep -vi '^org\.python\.(python|PythonLauncher|buildapplet)' |                                 \
+    /usr/bin/egrep -vi '^org\.reactivecocoa\.ReactiveCocoa' |                                                \
+    /usr/bin/egrep -vi '^org\.remotesensing\.libtiff' |                                                      \
+    /usr/bin/egrep -vi '^org\.vafer\.FeedbackReporter'   |                                                   \
+    /usr/bin/egrep -vi '^org\.xiph\.(ogg|vorbis)' |                                                          \
+    /usr/bin/egrep -vi '^se\.propellerheads\..*\.library$'
+
+}
+
+mark_up_sources () {
+    /usr/bin/perl -pe 's{\n}{\000}sg' |                                                \
+    "$xargs" -0 -I{} -n1 /bin/bash -c                                                  \
+      "printf '{}'; $scriptdir/list_running_app_ids -t '{}' >/dev/null 2>&1 && printf ' (+)'; printf "\\\\n""
+}
+
+###
+### main
+###
+
+_list_ids_in_app () {
+
+    appdir="$1"
+    if [[ -h "$appdir" ]]; then
+        appdir="$(/usr/bin/readlink "$appdir")"
+    fi
+
+    {
+      # emit strings that look like bundle ids
+      bundle_id_source_1;
+    } |                     \
+    clean_sources |         \
+    merge_sources |         \
+    mark_up_sources
+
+}
+
+# process args
+if [[ $1 =~ ^-+h(elp)?$ || -z "$1" ]]; then
+    printf "list_ids_in_app <path.app>
+
+Given a Application (app) bundle directory on disk, extract the
+associated app Bundle ID, which may be useful in a Cask uninstall
+stanza, eg
+
+    uninstall quit: 'app.id.goes.here'
+
+The app need not be running for this script to work.
+
+Bundle IDs attributed to Apple and common developer frameworks
+are excluded from the output.
+
+If a given app is currently running, it will be followed by a plus
+symbol '(+)' in the output. This can be verified via the command
+
+    list_running_app_ids | grep 'app.id.goes.here'
+
+See CONTRIBUTING.md for more information.
+
+"
+    exit
+fi
+
+# dispatch main
+_list_ids_in_app "${@}"
+
+#

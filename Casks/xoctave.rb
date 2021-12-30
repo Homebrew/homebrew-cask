@@ -1,0 +1,15 @@
+cask "xoctave" do
+  version "1.0"
+  sha256 :no_check
+
+  url "http://www.xoctave.com/demo/xoctave%20demo.dmg",
+      user_agent: :fake
+  name "Xoctave"
+  homepage "http://www.xoctave.com/"
+
+  app "Xoctave.app"
+
+  uninstall quit: "org.magnifier.magnifier"
+
+  zap trash: "~/xoctave"
+end

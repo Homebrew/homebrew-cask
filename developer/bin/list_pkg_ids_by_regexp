@@ -1,0 +1,83 @@
+#!/bin/bash
+#
+# list_pkg_ids_by_regexp
+#
+
+###
+### settings
+###
+
+set -e               # exit on any uncaught error
+set +o histexpand    # don't expand history expressions
+shopt -s nocasematch # case-insensitive regular expressions
+
+###
+### functions
+###
+
+warn () {
+    local message="$@"
+    message="${message//\\t/$'\011'}"
+    message="${message//\\n/$'\012'}"
+    message="${message%"${message##*[![:space:]]}"}"
+    printf "%s\n" "$message" 1>&2
+}
+
+die () {
+    warn "$@"
+    exit 1
+}
+
+fail_informatively () {
+    local message="No match."
+    if ! [[ "$1" =~ '*' ]]; then
+        message="$message  Suggestion: try '${1}.*'"
+    fi
+    die "$message"
+}
+
+analyze_regexp () {
+    if [[ "$1" =~ ^\^ ]]; then
+        warn "Note: pkgutil regular expressions are implicitly anchored with '^' at start"
+    fi
+    if [[ "$1" =~ \$$ ]]; then
+        warn "Note: pkgutil regular expressions are implicitly anchored with '$' at end"
+    fi
+}
+
+###
+### main
+###
+
+_list_pkg_ids_by_regexp () {
+    analyze_regexp "$1"
+    if ! /usr/sbin/pkgutil --pkgs="$1"; then
+        fail_informatively "$1"
+    fi
+}
+
+# process args
+if [[ $1 =~ ^-+h(elp)?$ || $# -ne 1 ]]; then
+    printf "list_pkg_ids_by_regexp <regexp>
+
+Print pkg receipt IDs for installed packages matching a regular
+expression, which may be useful in a Cask uninstall stanza, eg
+
+    uninstall pkgutil: 'pkg.regexp.goes.here'
+
+Unlike most other scripts in this directory, package IDs attributed to
+Apple are NOT excluded from the output. This is to avoid uninstalling
+essential system files due to an exuberant regexp.
+
+For more information, see
+
+    https://github.com/Homebrew/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/uninstall.md
+
+"
+    exit
+fi
+
+# dispatch main
+_list_pkg_ids_by_regexp "${@}"
+
+#

@@ -1,0 +1,133 @@
+#!/bin/bash
+#
+# list_payload_in_pkg
+#
+
+###
+### settings
+###
+
+set -e                # exit on any uncaught error
+set +o histexpand     # don't expand history expressions
+shopt -s nocasematch  # case-insensitive regular expressions
+
+###
+### global variables
+###
+
+pkg_arg=''
+tmp_boms=''
+
+# prefer GNU xargs
+xargs="$(/usr/bin/which gxargs || printf '/usr/bin/xargs')"
+
+trap cleanup_tmp_boms EXIT
+
+###
+### functions
+###
+
+cleanup_tmp_boms () {
+    if [[ -n "$tmp_boms" ]]; then
+        # tmpfile ensures that rmdir -p is not too destructive
+        local tmpfile="/tmp/list_payload_in_pkg.$$";
+        /usr/bin/touch "$tmpfile";
+        echo "$tmp_boms" |                            \
+        /usr/bin/perl -pe 's{\n}{\000}sg' |           \
+        "$xargs" -0 /bin/rm -f --;
+        {
+         echo "$tmp_boms" |                           \
+         /usr/bin/perl -pe 's{[^/]+\n}{\000}sg' |     \
+         "$xargs" -0 /bin/rmdir -p -- || true
+        } 2>/dev/null
+        /bin/rm -- "$tmpfile";
+    fi
+}
+
+bom_source_1 () {
+    /usr/bin/find "$pkg_arg" -iname '*.pkg' -print0 | \
+    "$xargs" -0 -I{} -n1 /usr/sbin/pkgutil --bom "{}" 2>/dev/null
+}
+
+bom_source_2 () {
+    /usr/bin/find "$pkg_arg" -name '*.bom'
+}
+
+expand_sources () {
+    /usr/bin/perl -pe 's{\n}{\000}sg' |               \
+    "$xargs" -0 lsbom --
+}
+
+merge_sources () {
+    /usr/bin/sort | /usr/bin/uniq
+}
+
+clean_sources () {
+    /usr/bin/cut -f1 |                                \
+    /usr/bin/perl -pe 's{\A\.}{}' |                   \
+    /usr/bin/egrep '.'
+}
+
+mark_up_sources () {
+    /usr/bin/perl -pe 's{\n}{\000}sg' |               \
+    "$xargs" -0 -I{} -n1 /bin/bash -c                 \
+      'printf "{}"; /bin/test -e "{}" >/dev/null 2>&1 && printf " (+)"; printf "\n"'
+}
+
+###
+### main
+###
+
+_list_payload_in_pkg () {
+
+    pkg_arg="$1"
+    if [[ -h "$pkg_arg" ]]; then
+        pkg_arg="$(/usr/bin/readlink "$pkg_arg")"
+    fi
+
+    tmp_boms="$(bom_source_1)";
+    {
+      # find BOM files
+      echo "$tmp_boms";
+      bom_source_2;
+    } |                  \
+    expand_sources  |    \
+    clean_sources   |    \
+    merge_sources   |    \
+    mark_up_sources
+
+}
+
+# process args
+if [[ $1 =~ ^-+h(elp)?$ || -z "$1" ]]; then
+    printf "list_payload_in_pkg <file.pkg>
+
+Given a package file, show what files may be installed by that
+pkg, which may be useful when writing a Cask uninstall stanza.
+
+The given package file need not be installed.
+
+The output attempts to be overly inclusive. However, since
+pkg files are allowed to run arbitrary scripts, there can be
+no guarantee that the output is exact.
+
+If a given file is already installed, it will be followed by
+a plus symbol '(+)' in the output.
+
+Note that Apple's xargs utility has a limitation of processing
+up to 255 bytes. Therefore long payload paths might be printed
+as '{}' instead. To overcome this limitation, please consider
+installing the GNU xargs utility instead using:
+
+brew install findutils
+
+See CONTRIBUTING.md and 'man pkgutil' for more information.
+
+"
+    exit
+fi
+
+# dispatch main
+_list_payload_in_pkg "${@}"
+
+#

@@ -1,0 +1,26 @@
+#!/bin/bash
+
+readonly program="$(basename "${0}")"
+
+function usage {
+  echo "
+    List pkg receipt IDs for the 10 most recently installed packages. Package IDs attributed to Apple are excluded from the output.
+
+    Usage:
+      ${program} [options]
+
+    Options:
+      -h, --help   Show this message.
+  " | sed -E 's/ {4}//'
+}
+
+if [[ "${1}" =~ ^(-h|--help)$ ]]; then
+  usage
+  exit 0
+fi
+
+/bin/ls -t /var/db/receipts | \
+  /usr/bin/grep '\.plist$' | \
+  /usr/bin/grep --invert-match '^com\.apple\.' | \
+  /usr/bin/sed 's/\.plist$//' | \
+  /usr/bin/head -10
