@@ -17,6 +17,7 @@ cask "santa" do
             launchctl: [
               "com.google.santa",
               "com.google.santa.bundleservice",
+              "com.google.santa.metricservice",
               "com.google.santad",
             ],
             pkgutil:   "com.google.santa"
