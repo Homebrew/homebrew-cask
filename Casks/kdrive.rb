@@ -28,13 +28,13 @@ cask "kdrive" do
             launchctl: "864VDCS2QY.com.infomaniak.drive.desktopclient.LoginItemAgent"
 
   zap trash: [
-    "~/Library/Application Scripts/*.com.infomaniak.drive.desktopclient.LoginItemAgent",
+    "~/Library/Application Scripts/864VDCS2QY.com.infomaniak.drive.desktopclient.LoginItemAgent",
     "~/Library/Application Scripts/com.infomaniak.drive.desktopclient.Extension",
     "~/Library/Caches/com.infomaniak.drive.desktopclient",
-    "~/Library/Containers/*.com.infomaniak.drive.desktopclient.LoginItemAgent",
+    "~/Library/Containers/864VDCS2QY.com.infomaniak.drive.desktopclient.LoginItemAgent",
     "~/Library/Containers/com.infomaniak.drive.desktopclient.Extension",
     "~/Library/Cookies/com.infomaniak.drive.desktopclient.binarycookies",
-    "~/Library/Group Containers/*.com.infomaniak.drive.desktopclient",
+    "~/Library/Group Containers/864VDCS2QY.com.infomaniak.drive.desktopclient",
     "~/Library/Preferences/com.infomaniak.drive.desktopclient.plist",
     "~/Library/Preferences/kDrive",
   ]
