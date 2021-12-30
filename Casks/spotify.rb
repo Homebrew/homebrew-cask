@@ -36,6 +36,7 @@ cask "spotify" do
     "~/Library/Caches/com.spotify.client.helper",
     "~/Library/Caches/com.spotify.client",
     "~/Library/Cookies/com.spotify.client.binarycookies",
+    "~/Library/HTTPStorages/com.spotify.client",
     "~/Library/Logs/Spotify",
     "~/Library/Preferences/com.spotify.client.helper.plist",
     "~/Library/Preferences/com.spotify.client.plist",
