@@ -45,20 +45,25 @@ cask "zoom" do
             delete:    [
               "/Applications/zoom.us.app",
               "/Library/Internet Plug-Ins/ZoomUsPlugIn.plugin",
+              "/Library/LaunchDaemons/us.zoom.ZoomDaemon.plist",
               "/Library/Logs/DiagnosticReports/zoom.us*",
+              "/Library/PrivilegedHelperTools/us.zoom.ZoomDaemon",
             ]
 
   zap trash: [
     "~/.zoomus",
     "~/Desktop/Zoom",
     "~/Documents/Zoom",
+    "~/Library/Application Scripts/*.ZoomClient3rd",
     "~/Library/Application Support/CloudDocs/session/containers/iCloud.us.zoom.videomeetings.plist",
     "~/Library/Application Support/CloudDocs/session/containers/iCloud.us.zoom.videomeetings",
     "~/Library/Application Support/CrashReporter/zoom.us*",
     "~/Library/Application Support/zoom.us",
     "~/Library/Caches/us.zoom.xos",
     "~/Library/Cookies/us.zoom.xos.binarycookies",
-    "~/Library/Group Containers/BJ4HAAB9B3.ZoomClient3rd",
+    "~/Library/Group Containers/*.ZoomClient3rd",
+    "~/Library/HTTPStorages/us.zoom.xos",
+    "~/Library/HTTPStorages/us.zoom.xos.binarycookies",
     "~/Library/Internet Plug-Ins/ZoomUsPlugIn.plugin",
     "~/Library/Logs/zoom.us",
     "~/Library/Logs/zoominstall.log",
