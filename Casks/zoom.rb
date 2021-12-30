@@ -45,12 +45,12 @@ cask "zoom" do
             delete:    [
               "/Applications/zoom.us.app",
               "/Library/Internet Plug-Ins/ZoomUsPlugIn.plugin",
+              "/Library/LaunchDaemons/us.zoom.ZoomDaemon.plist",
               "/Library/Logs/DiagnosticReports/zoom.us*",
+              "/Library/PrivilegedHelperTools/us.zoom.ZoomDaemon",
             ]
 
   zap trash: [
-    "/Library/LaunchDaemons/us.zoom.ZoomDaemon.plist",
-    "/Library/PrivilegedHelperTools/us.zoom.ZoomDaemon",
     "~/.zoomus",
     "~/Desktop/Zoom",
     "~/Documents/Zoom",
