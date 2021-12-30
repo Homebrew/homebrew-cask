@@ -5,10 +5,11 @@ cask "itunes-volume-control" do
   url "http://quantum-technologies.iap.uni-bonn.de/alberti/iTunesVolumeControl/iTunesVolumeControl-v#{version}.zip",
       verified: "uni-bonn.de/alberti/iTunesVolumeControl/"
   name "iTunes Volume Control"
-  homepage "https://github.com/alberti42/iTunes-Volume-Control"
+  desc "Control the volume of Apple Music and Spotify using keyboard volume keys"
+  homepage "https://github.com/alberti42/Volume-Control"
 
   livecheck do
-    url "https://github.com/alberti42/iTunes-Volume-Control#versions"
+    url "https://github.com/alberti42/Volume-Control#versions"
     strategy :page_match
     regex(%r{href=.*?/iTunesVolumeControl-v?(\d+(?:\.\d+)*)\.zip}i)
   end
@@ -16,5 +17,5 @@ cask "itunes-volume-control" do
   auto_updates true
   depends_on macos: ">= :mojave"
 
-  app "iTunes Volume Control.app"
+  app "Volume Control.app"
 end
