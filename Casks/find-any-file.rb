@@ -1,6 +1,6 @@
 cask "find-any-file" do
-  version "2.3.1"
-  sha256 "06506dd070179563edbac270eabd36e4bf5933dbcb5a1b95bed9ca026abc3ea2"
+  version "2.3.2"
+  sha256 "7fc620cf8cbdd58961eb8ef37ad108d69f44b18932ac6b12817faa5e430c6c2b"
 
   url "https://s3.amazonaws.com/files.tempel.org/FindAnyFile_#{version}.zip",
       verified: "s3.amazonaws.com/"
