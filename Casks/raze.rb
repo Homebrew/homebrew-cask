@@ -10,7 +10,7 @@ cask "raze" do
   livecheck do
     url "https://github.com/coelckers/Raze/releases"
     strategy :page_match
-    regex(/raze[._-]macos[._-]v?(\d+(?:\.\d+)*)\.zip/i)
+    regex(/raze[._-]macos[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
   app "Raze.app"
