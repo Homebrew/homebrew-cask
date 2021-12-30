@@ -1,12 +1,11 @@
 cask "textbuddy" do
-  version "1.1.0,20"
-  sha256 "bc76c0b845f055e75968a5995c6b92f0568d4db4dd6d143589b826e19a39cc66"
+  version "1.2.0,23"
+  sha256 "7eeda9b0d8aeafe47b7e611b9b62fcf6026dd956565764ac48b7e791260a828c"
 
-  url "https://download.clickontyler.com/textbuddy/textbuddy_#{version.after_comma}.zip",
-      verified: "download.clickontyler.com/textbuddy"
+  url "https://get.retina.studio/textbuddy/textbuddy_#{version.csv.second}.dmg"
   name "TextBuddy"
   desc "Convert, filter, sort, and transform text"
-  homepage "https://textbuddy.app/"
+  homepage "https://retina.studio/textbuddy/"
 
   livecheck do
     url "https://shine.clickontyler.com/appcast.php?id=58"
