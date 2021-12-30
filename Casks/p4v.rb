@@ -12,7 +12,9 @@ cask "p4v" do
   livecheck do
     url "https://www.perforce.com/support/software-release-index#tab-panel-6258"
     strategy :page_match do |page|
-      page.scan(%r{(Patch|Release)\sfor\sHelix\sVisual\sClient,\sHelix\sMerge,\sand\sHelix\sAdmin.(\d+(?:\.\d+)+)/(\d+)}i).map do |match|
+      page.scan(
+        %r{(Patch|Release)\sfor\sHelix\sVisual\sClient,\sHelix\sMerge,\sand\sHelix\sAdmin.(\d+(?:\.\d+)+)/(\d+)}i,
+      ).map do |match|
         "#{match[1]},#{match[2]}"
       end
     end
