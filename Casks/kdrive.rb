@@ -4,14 +4,13 @@ cask "kdrive" do
 
   url "https://download.storage.infomaniak.com/drive/desktopclient/kDrive-#{version}.pkg"
   name "kDrive"
-  desc "Allows to store, edit, share and access files wherever you are"
+  desc "Client for the kDrive collaborative cloud storage service"
   homepage "https://www.infomaniak.com/kdrive"
 
   livecheck do
     url "https://www.infomaniak.com/drive/latest"
-
     strategy :page_match do |page|
-      JSON.parse(page)["macos"]["versionstring"].match(/([\d+.]+)[^\d]+([\d+.]+)/i)[1, 2].join(".")
+      JSON.parse(page)["macos"]["downloadurl"][/kDrive[._-](\d+(?:\.\d+)+)\.pkg/i, 1]
     end
   end
 
