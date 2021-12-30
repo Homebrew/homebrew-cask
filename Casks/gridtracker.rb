@@ -9,7 +9,7 @@ cask "gridtracker" do
 
   livecheck do
     url "https://download.gridtracker.org/"
-    regex(%r{href=["']?v?(\d+(?:\.\d+)*)/}i)
+    regex(%r{href=["']?v?(\d+(?:\.\d+)+)/}i)
   end
 
   depends_on macos: ">= :mojave"
