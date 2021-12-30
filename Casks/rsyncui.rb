@@ -7,7 +7,7 @@ cask "rsyncui" do
   desc "GUI for rsync"
   homepage "https://github.com/rsyncOSX/RsyncUI"
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :monterey"
 
   app "RsyncUI.app"
 
