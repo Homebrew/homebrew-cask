@@ -8,7 +8,7 @@ cask "textbuddy" do
   homepage "https://retina.studio/textbuddy/"
 
   livecheck do
-    url "https://shine.clickontyler.com/appcast.php?id=58"
+    url "https://dash.retina.studio/appcast.php?id=58"
     strategy :sparkle
   end
 
