@@ -4,15 +4,9 @@ cask "gaphor" do
 
   url "https://github.com/gaphor/gaphor/releases/download/#{version}/Gaphor-#{version}.dmg",
       verified: "github.com/gaphor/gaphor/"
-  name "gaphor"
+  name "Gaphor"
   desc "UML/SysML modeling tool"
   homepage "https://gaphor.org/"
-
-  livecheck do
-    url "https://gaphor.org/latest.txt"
-    strategy :page_match
-    regex(/(\d+(?:\.\d+)*)/)
-  end
 
   app "Gaphor.app"
 
