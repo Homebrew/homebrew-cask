@@ -15,7 +15,7 @@ cask "pritunl" do
   desc "OpenVPN client"
   homepage "https://client.pritunl.com/"
 
-  kg "Pritunl#{arch}.pkg"
+  pkg "Pritunl#{arch}.pkg"
 
   uninstall pkgutil:   "com.pritunl.pkg.Pritunl",
             launchctl: [
