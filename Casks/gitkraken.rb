@@ -26,6 +26,7 @@ cask "gitkraken" do
     "~/Library/Caches/com.axosoft.gitkraken",
     "~/Library/Caches/GitKraken",
     "~/Library/Cookies/com.axosoft.gitkraken.binarycookies",
+    "~/Library/HTTPStorages/com.axosoft.gitkraken",
     "~/Library/Preferences/com.axosoft.gitkraken.helper.plist",
     "~/Library/Preferences/com.axosoft.gitkraken.plist",
     "~/Library/Saved Application State/com.axosoft.gitkraken.savedState",
