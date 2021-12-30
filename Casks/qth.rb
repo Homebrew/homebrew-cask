@@ -9,7 +9,7 @@ cask "qth" do
 
   livecheck do
     url "https://www.w8wjb.com/wp/qth/qth-app-changelog/"
-    regex(%r{href=.*?/QTH[._-]v?(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/QTH[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "QTH.app"
