@@ -9,7 +9,7 @@ cask "jamovi" do
 
   livecheck do
     url "https://www.jamovi.org/download.html"
-    regex(%r{href=.*?/jamovi[._-]v?(\d+(?:\.\d+)+)[._-]macos\.dmg}i)
+    regex(/.*?jamovi[._-]v?(\d+(?:\.\d+)+)[._-]macos\.dmg/i)
   end
 
   auto_updates true
