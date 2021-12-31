@@ -8,6 +8,11 @@ cask "jellyfin-media-player" do
   desc "Jellyfin desktop client"
   homepage "https://jellyfin.org/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Jellyfin Media Player.app"
 
   zap trash: [
