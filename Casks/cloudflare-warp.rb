@@ -31,6 +31,7 @@ cask "cloudflare-warp" do
     "~/Library/Caches/com.cloudflare.1dot1dot1dot1.macos",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.cloudflare.1dot1dot1dot1.macos",
     "~/Library/Containers/com.cloudflare.1dot1dot1dot1.macos.loginlauncherapp",
+    "~/Library/HTTPStorages/com.cloudflare.1dot1dot1dot1.macos",
     "~/Library/HTTPStorages/com.cloudflare.1dot1dot1dot1.macos.binarycookies",
     "~/Library/Preferences/com.cloudflare.1dot1dot1dot1.macos.plist",
   ]
