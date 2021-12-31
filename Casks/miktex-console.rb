@@ -9,8 +9,7 @@ cask "miktex-console" do
 
   livecheck do
     url "https://miktex.org/download"
-    strategy :page_match
-    regex(%r{href=.*?/miktex-(\d+(?:\.\d+)*)-darwin-x86_64\.dmg}i)
+    regex(%r{href=.*?/miktex-(\d+(?:\.\d+)+)-darwin-x86_64\.dmg}i)
   end
 
   app "MiKTeX Console.app"
