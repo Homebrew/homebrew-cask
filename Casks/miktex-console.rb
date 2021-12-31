@@ -1,6 +1,6 @@
 cask "miktex-console" do
-  version "21.7"
-  sha256 "a274220b1237837a300717042258a27092f4065514634df5ce8da05a0c0956b1"
+  version "21.12.10"
+  sha256 "029ff0dbfd8b1210a7b437cbcd43f37cc82bb2b6df2dbfa3aeee1257cd597c19"
 
   url "https://miktex.org/download/ctan/systems/win32/miktex/setup/darwin-x86_64/miktex-#{version}-darwin-x86_64.dmg"
   name "MiKTeX"
@@ -9,8 +9,7 @@ cask "miktex-console" do
 
   livecheck do
     url "https://miktex.org/download"
-    strategy :page_match
-    regex(%r{href=.*?/miktex-(\d+(?:\.\d+)*)-darwin-x86_64\.dmg}i)
+    regex(%r{href=.*?/miktex-(\d+(?:\.\d+)+)-darwin-x86_64\.dmg}i)
   end
 
   app "MiKTeX Console.app"
