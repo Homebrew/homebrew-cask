@@ -1,6 +1,6 @@
 cask "menutube" do
-  version "1.7.3"
-  sha256 "2428a68c085c9a10407eca1d778c2d5b3d37e4d0dfadb12376b44eab2f9f43a1"
+  version "1.7.4"
+  sha256 "ba7ea5753a270a5300a9a98effaa378a3e1e4305f89c804c1e779b06ebbf5a46"
 
   url "https://github.com/edanchenkov/MenuTube/releases/download/#{version}/MenuTube-#{version}.dmg",
       verified: "github.com/edanchenkov/MenuTube/"
