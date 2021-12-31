@@ -30,7 +30,13 @@ cask "microsoft-auto-update" do
               "com.microsoft.package.Microsoft_AutoUpdate.app",
               "com.microsoft.package.Microsoft_AU_Bootstrapper.app",
             ],
-            delete:    "/Library/PrivilegedHelperTools/com.microsoft.autoupdate.helper"
+            delete:    [
+              "/Library/Caches/com.microsoft.autoupdate.fba",
+              "/Library/Caches/com.microsoft.autoupdate.helper",
+              "/Library/LaunchDaemons/com.microsoft.autoupdate.helper.plist",
+              "/Library/Preferences/com.microsoft.autoupdate2.plist",
+              "/Library/PrivilegedHelperTools/com.microsoft.autoupdate.helper",
+            ]
 
   zap trash: [
     "~/Library/Application Support/Microsoft AutoUpdate",
@@ -40,6 +46,8 @@ cask "microsoft-auto-update" do
     "~/Library/Caches/com.microsoft.autoupdate2",
     "~/Library/Cookies/com.microsoft.autoupdate.fba.binarycookies",
     "~/Library/Cookies/com.microsoft.autoupdate2.binarycookies",
+    "~/Library/HTTPStorages/com.microsoft.autoupdate.fba",
+    "~/Library/HTTPStorages/com.microsoft.autoupdate2",
     "~/Library/Preferences/com.microsoft.autoupdate.fba.plist",
     "~/Library/Preferences/com.microsoft.autoupdate2.plist",
     "~/Library/Saved Application State/com.microsoft.autoupdate2.savedState",
