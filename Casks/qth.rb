@@ -12,6 +12,8 @@ cask "qth" do
     regex(%r{href=.*?/QTH[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
+  depends_on macos: ">= :sierra"
+
   app "QTH.app"
 
   zap trash: [
