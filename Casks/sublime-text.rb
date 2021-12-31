@@ -36,12 +36,15 @@ cask "sublime-text" do
     "~/Library/Application Support/Sublime Text 3",
     "~/Library/Caches/com.sublimetext.#{version.major}",
     "~/Library/Caches/com.sublimetext.3",
+    "~/Library/Caches/com.sublimetext.4",
     "~/Library/Caches/Sublime Text",
     "~/Library/Caches/Sublime Text (Safe Mode)",
     "~/Library/Caches/Sublime Text 3",
+    "~/Library/HTTPStorages/com.sublimetext.4",
     "~/Library/Preferences/com.sublimetext.#{version.major}.plist",
     "~/Library/Preferences/com.sublimetext.3.plist",
     "~/Library/Saved Application State/com.sublimetext.#{version.major}.savedState",
     "~/Library/Saved Application State/com.sublimetext.3.savedState",
+    "~/Library/Saved Application State/com.sublimetext.4.savedState",
   ]
 end
