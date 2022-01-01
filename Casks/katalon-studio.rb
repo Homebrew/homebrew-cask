@@ -9,7 +9,7 @@ cask "katalon-studio" do
 
   livecheck do
     url "https://github.com/katalon-studio/katalon-studio"
-    regex(/^v?(\d+(?:\.\d+)*)$/i)
+    strategy :github_latest
   end
 
   app "Katalon Studio.app"
