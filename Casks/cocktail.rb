@@ -60,8 +60,8 @@ cask "cocktail" do
       strategy :sparkle
     end
   elsif MacOS.version <= :big_sur
-    version "14.4"
-    sha256 "1f684f7a06ed9d5c44513434f87070dafa000bee2311c580ceff5727ae5a3d88"
+    version "14.4.1"
+    sha256 "10a7f6731d5055a097a0dda665583ec19eaf7001618f37e2c826b07408bc2752"
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}BSE.dmg"
 
