@@ -1,6 +1,6 @@
 cask "keycombiner" do
-  version "0.5.0"
-  sha256 "506126e1a5aa180520cec522ea24083f3f7196bce45f3a9d9a175bdc923bfdc3"
+  version "0.6.0"
+  sha256 "fce85e5e5530f8910fc59ac8a086a1d8bf33ab3f55a2081fc56a90b3b2b4a91c"
 
   url "https://keycombiner.com/download/KeyCombiner-#{version}.dmg"
   name "keycombiner"
