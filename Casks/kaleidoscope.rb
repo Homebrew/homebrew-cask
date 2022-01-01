@@ -1,8 +1,8 @@
 cask "kaleidoscope" do
-  version "3.1.2,2022"
-  sha256 "304a779895019867d33cd530058022f5382c483c019d544203ded953ae9cef8a"
+  version "3.1.3,2027"
+  sha256 "21d46bb5cb251cab1e4822ed1b12604bec91ea4653e50b8243dda9c38a02badc"
 
-  url "https://updates.kaleidoscope.app/v#{version.major}/prod/Kaleidoscope-#{version.before_comma}-#{version.after_comma}.app.zip"
+  url "https://updates.kaleidoscope.app/v#{version.major}/prod/Kaleidoscope-#{version.csv.first}-#{version.csv.second}.app.zip"
   name "Kaleidoscope"
   desc "Spot and merge differences in text and image files or folders"
   homepage "https://www.kaleidoscope.app/"
