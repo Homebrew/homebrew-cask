@@ -13,4 +13,10 @@ cask "katalon-studio" do
   end
 
   app "Katalon Studio.app"
+
+  zap trash: [
+    "~/.katalon",
+    "~/Library/Preferences/com.kms.katalon.product.product.plist",
+    "~/Library/Saved Application State/com.kms.katalon.product.product.savedState",
+  ]
 end
