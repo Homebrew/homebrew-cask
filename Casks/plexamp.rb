@@ -1,5 +1,6 @@
 cask "plexamp" do
   version "3.9.0"
+
   if Hardware::CPU.intel?
     sha256 "a40e58af21255fc9b9c1a2363165ee2f0fb7708e68ca88c2e14d1124f78dc41b"
 
