@@ -1,6 +1,6 @@
 cask "vcv-rack" do
-  version "2.0.4"
-  sha256 "37c853416d546d30429868187fcc83eb7d9db11528cab6a9b9c4735158d26f52"
+  version "2.0.5"
+  sha256 "1bc766e2f75322a3f16fb059f15b8548ed26a85325891a26924876ebbd85de9e"
 
   url "https://vcvrack.com/downloads/RackFree-#{version}-mac.pkg"
   name "VCV Rack"
