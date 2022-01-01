@@ -11,8 +11,8 @@ cask "plexamp" do
       strategy :electron_builder
     end
   else
-    version "3.5.0"
-    sha256 "ead85dd518814718ce57b47a2cf76d0f290a9fd6465c88369d33964a67dbb76d"
+    version "3.9.0"
+    sha256 "765ae9021dd7a2e4129bf48c5f26517e9dea8e1a93941bfc36e81544fa71136a"
 
     url "https://plexamp.plex.tv/plexamp.plex.tv/desktop/Plexamp-#{version}-arm64.dmg",
         verified: "plexamp.plex.tv/"
