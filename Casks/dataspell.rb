@@ -26,7 +26,7 @@ cask "dataspell" do
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
-  app "DataSpell #{version.csv.first}.app", target: "DataSpell.app"
+  app "DataSpell.app"
 
   uninstall_postflight do
     ENV["PATH"].split(File::PATH_SEPARATOR).map { |path| File.join(path, "dataspell") }.each do |path|
