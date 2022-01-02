@@ -4,6 +4,7 @@ cask "kkbox" do
 
   url "https://download.kkbox.com/files/KKBOX-#{version}.dmg"
   name "KKBOX"
+  desc "Music streaming service"
   homepage "https://www.kkbox.com/"
 
   app "KKBOX.app"
