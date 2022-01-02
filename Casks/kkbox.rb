@@ -10,7 +10,7 @@ cask "kkbox" do
 
   livecheck do
     url "https://www.kkbox.com/tw/en/download"
-    regex(%r{href=.*?/(\d+(?:\.\d+)+)/KKBOX-(\d+(?:\.\d+)+)\.dmg}i)
+    regex(/href=.*?KKBOX[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   depends_on macos: ">= :el_capitan"
