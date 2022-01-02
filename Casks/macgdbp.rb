@@ -13,4 +13,6 @@ cask "macgdbp" do
   end
 
   app "MacGDBp.app"
+
+  zap trash: "~/Library/Preferences/org.bluestatic.macgdbp.plist"
 end
