@@ -11,7 +11,9 @@ cask "loaf" do
   app "Loaf.app"
 
   zap trash: [
-    "~/Library/Application Support/Motion (beta)",
-    "~/Library/Preferences/com.motionicons.studio.plist",
+    "~/Library/Application Support/Loaf",
+    "~/Library/Logs/Loaf",
+    "~/Library/Preferences/com.loaf.studio.plist",
+    "~/Library/Saved Application State/com.loaf.studio.savedState",
   ]
 end
