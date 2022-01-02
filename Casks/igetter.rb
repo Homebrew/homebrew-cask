@@ -9,8 +9,7 @@ cask "igetter" do
 
   livecheck do
     url "https://www.igetter.net/downloads.html"
-    strategy :page_match
-    regex(%r{href=.*?/iGetter(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/iGetter(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   depends_on macos: "<= :mojave"
