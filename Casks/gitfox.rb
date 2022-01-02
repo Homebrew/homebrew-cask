@@ -9,7 +9,7 @@ cask "gitfox" do
   homepage "https://www.gitfox.app/"
 
   livecheck do
-    url :url
+    url "https://storage.googleapis.com/gitfox/Gitfox.latest.stable.zip"
     strategy :extract_plist
   end
 
