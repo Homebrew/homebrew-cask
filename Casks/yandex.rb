@@ -1,7 +1,7 @@
 cask "yandex" do
   arch = Hardware::CPU.intel? ? "" : "?arch=arm64"
 
-  version "21.3.3"
+  version "21.11.0.2054,0.2054"
   sha256 :no_check
 
   url "https://browser.yandex.ru/download#{arch}"
@@ -10,8 +10,8 @@ cask "yandex" do
   homepage "https://browser.yandex.ru/"
 
   livecheck do
-    url :homepage
-    regex(/browserVersion":"(\d+(?:\.\d+)+)"/i)
+    url :url
+    strategy :extract_plist
   end
 
   app "Yandex.app"
