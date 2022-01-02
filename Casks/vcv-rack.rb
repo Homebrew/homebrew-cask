@@ -8,8 +8,8 @@ cask "vcv-rack" do
   homepage "https://vcvrack.com/"
 
   livecheck do
-    url "https://vcvrack.com/Rack.html"
-    regex(%r{href=.*?/RackFree[._-]v?(\d+(?:\.\d+)+)[._-]mac\.pkg}i)
+    url "https://raw.githubusercontent.com/VCVRack/Rack/v#{version.major}/CHANGELOG.md"
+    regex(/###\s(\d+(?:\.\d+)+)/i)
   end
 
   pkg "RackFree-#{version}-mac.pkg"
