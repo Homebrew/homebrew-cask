@@ -9,7 +9,7 @@ cask "mps" do
     sha256 "86d6ab1d727c612dca694396caf26732a0fbdc016f0e4a6f88df642ba2e88a90"
   end
 
-  url "https://download.jetbrains.com/mps/#{version.major_minor}/MPS-#{version.before_comma}-#{arch}.dmg"
+  url "https://download.jetbrains.com/mps/#{version.major_minor}/MPS-#{version.csv.first}-#{arch}.dmg"
   name "JetBrains MPS"
   desc "Create your own domain-specific language"
   homepage "https://www.jetbrains.com/mps/"
@@ -38,10 +38,10 @@ cask "mps" do
   end
 
   zap trash: [
-    "~/MPSSamples.#{version.before_comma.major_minor}",
     "~/Library/Application Support/MPS#{version.before_comma.major_minor}",
     "~/Library/Caches/MPS#{version.before_comma.major_minor}",
     "~/Library/Logs/MPS#{version.before_comma.major_minor}",
     "~/Library/Preferences/MPS#{version.before_comma.major_minor}",
+    "~/MPSSamples.#{version.before_comma.major_minor}",
   ]
 end
