@@ -13,6 +13,8 @@ cask "lbry" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :mojave"
+
   app "LBRY.app"
   # shim scripts (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shim_lbrynet = "#{staged_path}/lbrynet.wrapper.sh"
