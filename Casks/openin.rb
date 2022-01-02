@@ -3,15 +3,17 @@ cask "openin" do
   sha256 "e6f17699c9cb59f53c17b07f00b225dcfdd15fefc2e967ebd4999558963f9529"
 
   url "https://loshadki.app/openin/OpenIn%20#{version}.dmg"
-  name "openin"
+  name "OpenIn"
   desc "Open links/files with specific browsers/apps"
   homepage "https://loshadki.app/openin/"
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/OpenIn%20(\d+(?:\.\d+)*)\.dmg}i)
+    regex(/href=.*?OpenIn%20v?(\d+(?:\.\d+)+)\.dmg/i)
   end
+  
+  auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "OpenIn.app"
 
