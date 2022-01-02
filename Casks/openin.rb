@@ -11,7 +11,7 @@ cask "openin" do
     url :homepage
     regex(/href=.*?OpenIn%20v?(\d+(?:\.\d+)+)\.dmg/i)
   end
-  
+
   auto_updates true
   depends_on macos: ">= :big_sur"
 
