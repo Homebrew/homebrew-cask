@@ -9,8 +9,7 @@ cask "tn3270-x" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/tn3270_X_(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/tn3270_X_(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   depends_on macos: "<= :mojave"
