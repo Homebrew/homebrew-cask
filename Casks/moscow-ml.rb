@@ -5,6 +5,7 @@ cask "moscow-ml" do
   url "https://github.com/kfl/mosml/releases/download/ver-#{version}/mosml-#{version}.pkg",
       verified: "github.com/kfl/mosml/"
   name "Moscow ML"
+  desc "Light-weight implementation of Standard ML"
   homepage "https://mosml.org/"
 
   pkg "mosml-#{version}.pkg"
