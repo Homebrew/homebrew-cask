@@ -8,6 +8,11 @@ cask "kkbox" do
   desc "Music streaming service"
   homepage "https://www.kkbox.com/"
 
+  livecheck do
+    url "https://www.kkbox.com/tw/tc/download"
+    regex(%r{href=.*?/(\d+(?:\.\d+)+)/KKBOX-(\d+(?:\.\d+)+)\.dmg}i)
+  end
+
   depends_on macos: ">= :el_capitan"
 
   app "KKBOX.app"
