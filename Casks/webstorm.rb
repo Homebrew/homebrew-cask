@@ -1,5 +1,6 @@
 cask "webstorm" do
   arch = Hardware::CPU.intel? ? "" : "-aarch64"
+
   version "2021.3.1,213.6461.79"
 
   if Hardware::CPU.intel?
@@ -37,12 +38,12 @@ cask "webstorm" do
   end
 
   zap trash: [
-    "~/Library/Preferences/com.jetbrains.WebStorm.plist",
-    "~/Library/Preferences/jetbrains.webstorm.*.plist",
-    "~/Library/Preferences/WebStorm#{version.major_minor}",
     "~/Library/Application Support/JetBrains/WebStorm#{version.major_minor}",
     "~/Library/Caches/JetBrains/WebStorm#{version.major_minor}",
     "~/Library/Logs/JetBrains/WebStorm#{version.major_minor}",
+    "~/Library/Preferences/com.jetbrains.WebStorm.plist",
+    "~/Library/Preferences/jetbrains.webstorm.*.plist",
+    "~/Library/Preferences/WebStorm#{version.major_minor}",
     "~/Library/Saved Application State/com.jetbrains.WebStorm.savedState",
   ]
 end
