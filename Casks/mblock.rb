@@ -10,8 +10,7 @@ cask "mblock" do
 
   livecheck do
     url "https://mblock.makeblock.com/en-us/download/"
-    strategy :page_match
-    regex(%r{href=.*?/darwin/V(\d+(?:\.\d+)*)\.pkg}i)
+    regex(/href=.*?V(\d+(?:\.\d+)+)\.pkg/i)
   end
 
   depends_on macos: ">= :sierra"
