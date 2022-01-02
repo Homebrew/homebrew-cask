@@ -9,7 +9,7 @@ cask "jtool2" do
   homepage "http://newosxbook.com/tools/jtool.html"
 
   livecheck do
-    skip "NO version information available"
+    skip "No version information available"
   end
 
   binary "jtool2"
