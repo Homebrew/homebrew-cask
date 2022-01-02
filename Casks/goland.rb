@@ -9,7 +9,7 @@ cask "goland" do
     sha256 "bc4b89e78532899ea43d4d27f8864a06254e88f75327329292f2c05fcec8a9c7"
   end
 
-  url "https://download.jetbrains.com/go/goland-#{version.before_comma}#{arch}.dmg"
+  url "https://download.jetbrains.com/go/goland-#{version.csv.first}#{arch}.dmg"
   name "Goland"
   desc "Go (golang) IDE"
   homepage "https://www.jetbrains.com/go/"
@@ -42,8 +42,8 @@ cask "goland" do
     "~/Library/Application Support/JetBrains/GoLand#{version.major_minor}",
     "~/Library/Caches/JetBrains/GoLand#{version.major_minor}",
     "~/Library/Logs/JetBrains/GoLand#{version.major_minor}",
-    "~/Library/Preferences/GoLand#{version.major_minor}",
     "~/Library/Preferences/com.jetbrains.goland.plist",
+    "~/Library/Preferences/GoLand#{version.major_minor}",
     "~/Library/Saved Application State/com.jetbrains.goland.SavedState",
   ]
 end
