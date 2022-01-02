@@ -7,10 +7,6 @@ cask "soundboosterlite" do
   desc "App for an enhanced audio experience"
   homepage "https://froyosoft.com/soundbooster.php"
 
-  livecheck do
-    skip "No version information available"
-  end
-
   pkg "SoundBoosterLite.pkg"
 
   uninstall quit:      "com.froyosoft.SoundBoosterLite",
