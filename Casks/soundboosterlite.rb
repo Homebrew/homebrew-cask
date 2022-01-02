@@ -1,5 +1,5 @@
 cask "soundboosterlite" do
-  version "0.31,23"
+  version :latest
   sha256 :no_check
 
   url "https://froyosoft.com/SoundBoosterLite.zip"
@@ -8,8 +8,7 @@ cask "soundboosterlite" do
   homepage "https://froyosoft.com/soundbooster.php"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    skip "No version information available"
   end
 
   pkg "SoundBoosterLite.pkg"
