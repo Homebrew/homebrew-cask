@@ -17,7 +17,7 @@ cask "openvpn-connect" do
     end
   end
 
-  pkg "OpenVPN_Connect_#{version.before_comma.dots_to_underscores}(#{version.after_comma})_Installer_signed.pkg"
+  pkg "OpenVPN_Connect_#{version.csv.first.dots_to_underscores}(#{version.csv.second})_Installer_signed.pkg"
 
   uninstall launchctl: [
     "org.openvpn.client",
