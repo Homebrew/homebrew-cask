@@ -4,6 +4,7 @@ cask "mplab-xc16" do
 
   url "https://ww1.microchip.com/downloads/en/DeviceDoc/xc16-v#{version}-full-install-osx64-installer.dmg"
   name "MPLab XC16 Compiler"
+  desc "Compiler for 16-bit PIC and SAM MCUs and MPUs"
   homepage "https://www.microchip.com/mplab/compilers"
 
   livecheck do
