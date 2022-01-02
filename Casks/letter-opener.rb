@@ -5,7 +5,7 @@ cask "letter-opener" do
   url "https://s3.amazonaws.com/LetterOpener/dmg/Letter-Opener-#{version}.zip",
       verified: "s3.amazonaws.com/LetterOpener/dmg/"
   name "Letter Opener"
-  desc "Open winmail.dat files Automatically in Mail.app"
+  desc "Display winmail.dat files directly in Mail.app"
   homepage "https://winmail.help/"
 
   livecheck do
