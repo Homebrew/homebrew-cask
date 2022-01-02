@@ -1,12 +1,12 @@
 cask "dataspell" do
   arch = Hardware::CPU.intel? ? "" : "-aarch64"
 
-  version "2021.3,213.5744.251"
+  version "2021.3.1,213.6461.76"
 
   if Hardware::CPU.intel?
-    sha256 "99c66a49404233f69360d33b4b9d04154e7ce88a4396c7d29f2abff5f24b8d48"
+    sha256 "4a21b95cdcd5d623d8bfa6d7916423f3e69200ff728764da719202c2ab4952f0"
   else
-    sha256 "f1b59c3472b455a03a9d77d4432c279a1267e5b80258734bb9263ed5c88d0246"
+    sha256 "77e2579dfedb9786c33d5d2e8420b513271c370338a9df11ab3984a4daab34b4"
   end
 
   url "https://download.jetbrains.com/python/dataspell-#{version.csv.first}#{arch}.dmg"
@@ -26,7 +26,7 @@ cask "dataspell" do
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
-  app "DataSpell #{version.csv.first}.app", target: "DataSpell.app"
+  app "DataSpell.app"
 
   uninstall_postflight do
     ENV["PATH"].split(File::PATH_SEPARATOR).map { |path| File.join(path, "dataspell") }.each do |path|
