@@ -8,7 +8,7 @@ cask "mailbutler" do
   homepage "https://www.mailbutler.io/"
 
   livecheck do
-    url "https://www.mailbutler.io/appcast2.php"
+    url "https://downloads.mailbutler.io/sparkle/public/appcast.xml"
     strategy :sparkle
   end
 
