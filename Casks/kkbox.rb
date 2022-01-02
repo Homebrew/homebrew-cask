@@ -9,7 +9,7 @@ cask "kkbox" do
   homepage "https://www.kkbox.com/"
 
   livecheck do
-    url "https://www.kkbox.com/tw/tc/download"
+    url "https://www.kkbox.com/tw/en/download"
     regex(%r{href=.*?/(\d+(?:\.\d+)+)/KKBOX-(\d+(?:\.\d+)+)\.dmg}i)
   end
 
