@@ -10,4 +10,8 @@ cask "pixelpeeper" do
   depends_on macos: "<= :mojave"
 
   app "PixelPeeper.app"
+
+  caveats do
+    discontinued
+  end
 end
