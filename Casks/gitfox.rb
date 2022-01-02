@@ -17,7 +17,7 @@ cask "gitfox" do
   depends_on macos: ">= :big_sur"
 
   app "Gitfox.app"
-  binary "#{appdir}/Gitfox.app/Contents/SharedSupport/bin/gitfox-cli"
+  binary "#{appdir}/Gitfox.app/Contents/SharedSupport/bin/gitfox-cli", target: "gitfox"
 
   zap trash: [
     "~/Library/Application Support/com.bytieful.Gitfox",
