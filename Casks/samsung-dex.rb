@@ -22,6 +22,7 @@ cask "samsung-dex" do
   ]
 
   caveats do
+    discontinued
     kext
     reboot
   end
