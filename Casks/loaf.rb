@@ -6,7 +6,7 @@ cask "loaf" do
       verified: "github.com/philipardeljan/getloaf/"
   name "Loaf"
   desc "Animated icon library"
-  homepage "https://www.getmotion.io/"
+  homepage "https://getloaf.io/"
 
   app "Loaf.app"
 
