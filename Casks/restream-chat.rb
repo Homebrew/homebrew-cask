@@ -4,19 +4,16 @@ cask "restream-chat" do
 
   url "https://s3.eu-central-1.amazonaws.com/restream-chat-client/Restream+Chat-#{version}.dmg",
       verified: "https://s3.eu-central-1.amazonaws.com/restream-chat-client/"
-  name "restream-chat"
+  name "Restream Chat"
   desc "Keep your streaming chats in one place"
   homepage "https://restream.io/chat/"
 
   livecheck do
-    url "https://s3.eu-central-1.amazonaws.com/restream-chat-client/"
-    strategy :page_match
-    regex(/Restream[._+]Chat[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    url "https://s3.eu-central-1.amazonaws.com/restream-chat-client/beta-mac.yml"
+    strategy :electron_builder
   end
 
   app "Restream Chat.app"
 
-  zap trash: [
-    "~/Library/Application Support/Restream Chat",
-  ]
+  zap trash: "~/Library/Application Support/Restream Chat"
 end
