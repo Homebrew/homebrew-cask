@@ -22,4 +22,11 @@ cask "loom" do
   auto_updates true
 
   app "Loom.app"
+
+  zap trash: [
+    "~/Library/Application Support/Loom",
+    "~/Library/Logs/Loom",
+    "~/Library/Preferences/com.loom.desktop.plist",
+    "~/Library/Saved Application State/com.loom.desktop.savedState",
+  ]
 end
