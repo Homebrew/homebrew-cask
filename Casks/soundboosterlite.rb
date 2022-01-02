@@ -4,6 +4,7 @@ cask "soundboosterlite" do
 
   url "https://froyosoft.com/SoundBoosterLite.zip"
   name "FroYoSoft Sound Booster Lite"
+  desc "App for an enhanced audio experience"
   homepage "https://froyosoft.com/soundbooster.php"
 
   pkg "SoundBoosterLite.pkg"
