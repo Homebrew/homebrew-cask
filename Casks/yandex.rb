@@ -12,7 +12,7 @@ cask "yandex" do
   livecheck do
     url :url
     strategy :header_match do |headers|
-      match = headers["location"].match(%r{(\d+)_(\d+)_(\d+)}i)
+      match = headers["location"].match(/(\d+)_(\d+)_(\d+)/i)
       next if match.blank?
 
       "#{match[1]}.#{match[2]}.#{match[3]}"
