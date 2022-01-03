@@ -1,18 +1,20 @@
 cask "yandex" do
-  version "21.3.3"
+  arch = Hardware::CPU.intel? ? "" : "&arch=arm64"
+
+  version "21.11.0.2054,0.2054"
   sha256 :no_check
 
-  url "https://download.cdn.yandex.net/browser/yandex/ru/Yandex.dmg",
-      verified: "yandex.net/"
+  url "https://browser.yandex.ru/download/?os=mac#{arch}&full=1"
   name "Yandex.Browser"
   desc "Web browser"
   homepage "https://browser.yandex.ru/"
 
   livecheck do
-    url :homepage
-    strategy :page_match
-    regex(/download__version.*?(\d+(?:\.\d+)*)/mi)
+    url "https://browser.yandex.ru/download/?os=mac&full=1"
+    strategy :extract_plist
   end
+
+  auto_updates true
 
   app "Yandex.app"
 end
