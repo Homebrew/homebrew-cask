@@ -1,8 +1,8 @@
 cask "black-ink" do
   version "2.1.9,2788"
-  sha256 "652c35510f38fda9051052c989baff31f54e0d23d39ed676e43d03699a3db51c"
+  sha256 "dc75acf1e599023dca12f2e7c60f23964c9879a3a6092416092cd6d2c06420c9"
 
-  url "https://redsweater.com/blackink/BlackInk#{version.before_comma}.zip"
+  url "https://redsweater.com/blackink/BlackInk#{version.csv.first}.zip"
   name "Black Ink"
   desc "Download, solve, and print crossword puzzles"
   homepage "https://redsweater.com/blackink/"
@@ -17,8 +17,8 @@ cask "black-ink" do
   app "Black Ink.app"
 
   zap trash: [
-    "~/Library/Application Scripts/com.red-sweater.blackink2",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.red-sweater.blackink2.sfl*",
+    "~/Library/Application Scripts/com.red-sweater.blackink#{version.major}",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.red-sweater.blackink#{version.major}.sfl*",
     "~/Library/Containers/com.red-sweater.blackink#{version.major}",
   ]
 end
