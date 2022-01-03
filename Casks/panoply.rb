@@ -9,8 +9,7 @@ cask "panoply" do
 
   livecheck do
     url "https://www.giss.nasa.gov/tools/panoply/download/"
-    strategy :page_match
-    regex(/href=.*?PanoplyMacOS-(\d+(?:\.\d+)*)\.dmg/i)
+    regex(/href=.*?PanoplyMacOS-(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "Panoply.app"
