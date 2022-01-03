@@ -10,7 +10,7 @@ cask "mblock" do
 
   livecheck do
     url "https://mblock.makeblock.com/en-us/download/"
-    regex(/href=.*?V(\d+(?:\.\d+)+)\.pkg/i)
+    regex(/href=.*?V?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
   depends_on macos: ">= :sierra"
