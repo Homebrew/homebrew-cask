@@ -9,7 +9,7 @@ cask "nomachine" do
 
   livecheck do
     url "https://www.nomachine.com/download/download&id=7"
-    regex(/nomachine[._-]v?(\d+(?:\.\d+)*_\d+)\.dmg/i)
+    regex(/nomachine[._-]v?(\d+(?:\.\d+)+_\d+)\.dmg/i)
   end
 
   pkg "NoMachine.pkg"
