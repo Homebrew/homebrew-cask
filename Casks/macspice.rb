@@ -15,7 +15,9 @@ cask "macspice" do
   app "MacSpice.app"
 
   zap trash: [
+    "~/Documents/MacSpice",
     "~/Library/Application Support/MacSpice",
+    "~/Library/Caches/com.apple.helpd/Generated/uk.co.cdhw.MacSpice.help*#{version.csv.first}",
     "~/Library/Preferences/uk.co.cdhw.MacSpice.plist",
     "~/Library/Saved Application State/uk.co.cdhw.MacSpice.savedState",
   ]
