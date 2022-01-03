@@ -1,7 +1,7 @@
 cask "yandex" do
   arch = Hardware::CPU.intel? ? "" : "&arch=arm64"
 
-  version "21.11.0.2054,0.2054"
+  version "21.11.0"
   sha256 :no_check
 
   url "https://browser.yandex.ru/download/?os=mac#{arch}&full=1"
@@ -10,8 +10,13 @@ cask "yandex" do
   homepage "https://browser.yandex.ru/"
 
   livecheck do
-    url "https://browser.yandex.ru/download/?os=mac&full=1"
-    strategy :extract_plist
+    url :url
+    strategy :header_match do |headers|
+      match = headers["location"].match(/(\d+)_(\d+)_(\d+)/i)
+      next if match.blank?
+
+      "#{match[1]}.#{match[2]}.#{match[3]}"
+    end
   end
 
   auto_updates true
