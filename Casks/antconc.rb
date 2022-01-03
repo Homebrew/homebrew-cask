@@ -1,8 +1,8 @@
 cask "antconc" do
   version "4.0.2"
-  sha256 "5d335b71900f2843b39aa135828b38f0a0397499167deb500f6da8f2640bcf1e"
+  sha256 "a05c6ac057349f7e1588d2542a4d41f158ec4b445ec71cce42560a233936af0a"
 
-  url "https://www.laurenceanthony.net/software/antconc/releases/AntConc#{version.no_dots}/AntConc.zip"
+  url "https://www.laurenceanthony.net/software/antconc/releases/AntConc#{version.no_dots}/AntConc.dmg"
   name "AntConc"
   desc "Corpus analysis toolkit for concordancing and text analysis"
   homepage "https://www.laurenceanthony.net/software/antconc/"
