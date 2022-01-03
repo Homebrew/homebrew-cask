@@ -8,9 +8,9 @@ cask "samsung-dex" do
   homepage "https://www.samsung.com/us/explore/dex/"
 
   livecheck do
-    url "https://www.samsung.com/global/download/SamsungDeXMac"
+    url "https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=COMMON&CttFileID=8385137"
     strategy :header_match
-    regex(%r{(\d+)/SamsungDeXSetup\.dmg}i)
+    regex(%r{(\d+)/SamsungDeXSetupMac\.dmg}i)
   end
 
   pkg "Install Samsung DeX.pkg"
