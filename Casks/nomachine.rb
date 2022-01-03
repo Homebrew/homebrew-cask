@@ -24,4 +24,10 @@ cask "nomachine" do
               "com.nomachine.server",
               "com.nomachine.uninstall",
             ]
+
+  zap trash: [
+    "/Library/Application Support/NoMachine",
+    "~/Documents/NoMachine",
+    "~/Library/Preferences/com.nomachine.nxdock.plist",
+  ]
 end
