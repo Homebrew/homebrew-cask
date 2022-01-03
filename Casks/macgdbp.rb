@@ -1,8 +1,8 @@
 cask "macgdbp" do
-  version "2.0.3,203.1"
-  sha256 "1f80a3868ccb1023c602337a925b964aebde9da7c90f3c27679f5becd5c6d071"
+  version "2.1,204.5"
+  sha256 "0dcd472d65ca20cd3e5680865d63556c4cf66738f3aef29a4538503c5ee370a0"
 
-  url "https://www.bluestatic.org/downloads/macgdbp/macgdbp-#{version.before_comma}.zip"
+  url "https://www.bluestatic.org/downloads/macgdbp/macgdbp-#{version.csv.first}.zip"
   name "MacGDBp"
   desc "Live, interactive debugging of your running PHP applications"
   homepage "https://www.bluestatic.org/software/macgdbp/"
@@ -13,4 +13,6 @@ cask "macgdbp" do
   end
 
   app "MacGDBp.app"
+
+  zap trash: "~/Library/Preferences/org.bluestatic.macgdbp.plist"
 end
