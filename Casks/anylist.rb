@@ -2,7 +2,7 @@ cask "anylist" do
   version "1.2,3"
   sha256 "be31f177fac4694e6f391a0231e3cb2d834d51c19129696b5191fc1d1b4601f2"
 
-  url "https://s3.amazonaws.com/files.anylistapp.com/mac/AnyList_v#{version.before_comma.dots_to_underscores}.zip",
+  url "https://s3.amazonaws.com/files.anylistapp.com/mac/AnyList_v#{version.csv.first.dots_to_underscores}.zip",
       verified: "s3.amazonaws.com/files.anylistapp.com/"
   name "AnyList"
   desc "Grocery shopping list"
