@@ -1,12 +1,12 @@
 cask "runelite" do
   arch = Hardware::CPU.intel? ? "x64" : "aarch64"
 
-  version "2.2.0"
+  version "2.3.0"
 
   if Hardware::CPU.intel?
-    sha256 "0c6690000fb46eb1ff6d193a58ff3d7dc0e3514a03d0b1a22ca2351ef07e79c8"
+    sha256 "ff360de37696de98230883baec01d0ac76cb0d6e817f2747a9cdb178a30ac8bf"
   else
-    sha256 "5f6f25d64bcf39e7d6cb742178ddc5365759d432add8ef8a31580a3e03322be0"
+    sha256 "4ab78485a19f4e719355e798098a77cdb8fb1fd27a3916e0957c04bb03270be7"
   end
 
   url "https://github.com/runelite/launcher/releases/download/#{version}/RuneLite-#{arch}.dmg",
