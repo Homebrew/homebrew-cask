@@ -18,6 +18,7 @@ cask "paperpile" do
 
   zap trash: [
     "~/Library/Application Support/Paperpile",
+    "~/Library/Group Containers/*.Office/User Content.localized/Startup.localized/Word/paperpile*",
     "~/Library/Preferences/com.paperpile.paperpile.plist",
   ]
 end
