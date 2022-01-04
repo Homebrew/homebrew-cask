@@ -4,7 +4,7 @@ cask "notion-enhanced" do
 
   url "https://github.com/notion-enhancer/notion-repackaged/releases/download/v#{version}/Notion-Enhanced-#{version}.dmg",
       verified: "github.com/notion-enhancer"
-  name "notion-enhanced"
+  name "Notion Enhanced"
   desc "Enhancer/customiser for the all-in-one productivity workspace notion.so"
   homepage "https://notion-enhancer.github.io/"
 
