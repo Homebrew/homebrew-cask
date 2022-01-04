@@ -18,6 +18,8 @@ cask "gitkraken" do
 
   app "GitKraken.app"
 
+  uninstall quit: "com.axosoft.gitkraken"
+
   zap trash: [
     "~/.gitkraken",
     "~/Library/Application Support/com.axosoft.gitkraken.ShipIt",
