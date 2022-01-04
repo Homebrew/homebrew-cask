@@ -126,17 +126,19 @@ cask "firefox" do
 
   app "Firefox.app"
 
+  uninstall quit:   "org.mozilla.firefox",
+            delete: "/Library/Logs/DiagnosticReports/firefox_*"
+
   zap trash: [
-    "/Library/Logs/DiagnosticReports/firefox_*",
-    "~/Library/Application Support/Firefox",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.firefox.sfl*",
     "~/Library/Application Support/CrashReporter/firefox_*",
+    "~/Library/Application Support/Firefox",
     "~/Library/Caches/Firefox",
     "~/Library/Caches/Mozilla/updates/Applications/Firefox",
-    "~/Library/Caches/org.mozilla.firefox",
     "~/Library/Caches/org.mozilla.crashreporter",
-    "~/Library/Preferences/org.mozilla.firefox.plist",
+    "~/Library/Caches/org.mozilla.firefox",
     "~/Library/Preferences/org.mozilla.crashreporter.plist",
+    "~/Library/Preferences/org.mozilla.firefox.plist",
     "~/Library/Saved Application State/org.mozilla.firefox.savedState",
     "~/Library/WebKit/org.mozilla.firefox",
   ],

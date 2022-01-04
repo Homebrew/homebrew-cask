@@ -2,7 +2,7 @@ cask "bingpaper" do
   version "0.11.1,46"
   sha256 "29694e8ae3bea1a50719865ffe4ca19e7794b1c7dc733a2cd532056cf35641ee"
 
-  url "https://github.com/pengsrc/BingPaper/releases/download/v#{version.before_comma}/BingPaper.v#{version.before_comma}.build.#{version.after_comma}.zip"
+  url "https://github.com/pengsrc/BingPaper/releases/download/v#{version.csv.first}/BingPaper.v#{version.csv.first}.build.#{version.csv.second}.zip"
   name "BingPaper"
   desc "Use the Bing daily photo as your wallpaper"
   homepage "https://github.com/pengsrc/BingPaper"

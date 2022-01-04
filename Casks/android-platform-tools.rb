@@ -2,7 +2,7 @@ cask "android-platform-tools" do
   version "31.0.3,e8b2b4cbe47c728c1e54c5f524440b52d4e1a33c"
   sha256 "773c08cfa31cec1bb4568ce5b374366e6310a5ffc21875024604a0f65bc831b1"
 
-  url "https://dl.google.com/android/repository/#{version.after_comma}.platform-tools_r#{version.before_comma}-darwin.zip",
+  url "https://dl.google.com/android/repository/#{version.csv.second}.platform-tools_r#{version.csv.first}-darwin.zip",
       verified: "google.com/android/repository/"
   name "Android SDK Platform-Tools"
   desc "Android SDK component"

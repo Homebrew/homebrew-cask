@@ -1,6 +1,6 @@
 cask "vcv-rack" do
-  version "2.0.4"
-  sha256 "37c853416d546d30429868187fcc83eb7d9db11528cab6a9b9c4735158d26f52"
+  version "2.0.5"
+  sha256 "1bc766e2f75322a3f16fb059f15b8548ed26a85325891a26924876ebbd85de9e"
 
   url "https://vcvrack.com/downloads/RackFree-#{version}-mac.pkg"
   name "VCV Rack"
@@ -8,8 +8,8 @@ cask "vcv-rack" do
   homepage "https://vcvrack.com/"
 
   livecheck do
-    url "https://vcvrack.com/Rack.html"
-    regex(%r{href=.*?/RackFree[._-]v?(\d+(?:\.\d+)+)[._-]mac\.pkg}i)
+    url "https://raw.githubusercontent.com/VCVRack/Rack/v#{version.major}/CHANGELOG.md"
+    regex(/###\s(\d+(?:\.\d+)+)/i)
   end
 
   pkg "RackFree-#{version}-mac.pkg"

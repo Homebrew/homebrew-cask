@@ -2,7 +2,7 @@ cask "airbuddy" do
   version "2.4.5,344"
   sha256 "ab46153127ef5cc7526d0f740cd8c7a064a8995e3c67b3a73f7c60bf7e034147"
 
-  url "https://su.airbuddy.app/kCRSAmcjBc/AirBuddy_v#{version.before_comma}-#{version.after_comma}.dmg"
+  url "https://su.airbuddy.app/kCRSAmcjBc/AirBuddy_v#{version.csv.first}-#{version.csv.second}.dmg"
   name "AirBuddy"
   desc "AirPods companion app"
   homepage "https://airbuddy.app/"
@@ -22,7 +22,7 @@ cask "airbuddy" do
     "~/Library/Caches/codes.rambo.AirBuddy",
     "~/Library/Caches/codes.rambo.AirCore",
     "~/Library/Containers/codes.rambo.AirBuddy*",
-    "~/Library/Group Containers/8C7439RJLG.group.codes.rambo.AirBuddy",
+    "~/Library/Group Containers/*.group.codes.rambo.AirBuddy",
     "~/Library/HTTPStorages/codes.rambo.AirBuddy.binarycookies",
     "~/Library/LaunchAgents/codes.rambo.AirBuddyHelper.plist",
     "~/Library/Preferences/codes.rambo.AirBuddy.plist",
