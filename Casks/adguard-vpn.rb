@@ -9,9 +9,11 @@ cask "adguard-vpn" do
 
   livecheck do
     url "https://static.adguard-vpn.com/mac/adguard-release-appcast.xml"
-    strategy :page_match
     regex(/AdGuardVPN[._-]?(\d+(?:\.\d+)+)\.dmg/i)
   end
+
+  auto_updates true
+  depends_on macos: ">= :sierra"
 
   pkg "AdGuard VPN.pkg"
 
