@@ -13,4 +13,15 @@ cask "data-rescue" do
   end
 
   app "Data Rescue.app"
+
+  uninstall quit:   "com.prosofteng.DataRescue",
+            delete: "/Library/Application Support/Data Rescue"
+
+  zap trash: [
+    "~/Library/Application Support/Data Rescue",
+    "~/Library/HTTPStorages/com.prosofteng.DataRescue",
+    "~/Library/Preferences/com.prosofteng.Data Rescue.plist",
+    "~/Library/Preferences/com.prosofteng.DataRescue.plist",
+    "~/Library/Saved Application State/com.prosofteng.DataRescue.savedState",
+  ]
 end
