@@ -164,6 +164,7 @@ cask "gpg-suite-no-mail" do
     "~/Library/Caches/org.gpgtools.gpg*",
     "~/Library/Containers/com.apple.mail/Data/Library/Preferences/org.gpgtools.*",
     "~/Library/Frameworks/Libmacgpg.framework",
+    "~/Library/HTTPStorages/org.gpgtools.*",
     "~/Library/LaunchAgents/org.gpgtools.*",
     "~/Library/Mail/Bundles/GPGMail.mailbundle",
     "~/Library/PreferencePanes/GPGPreferences.prefPane",
