@@ -8,6 +8,11 @@ cask "eqmac" do
   desc "System-wide audio equalizer"
   homepage "https://eqmac.app/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   pkg "eqMac.pkg"
 
   uninstall pkgutil: "com.bitgapp.eqmac.pkg",
