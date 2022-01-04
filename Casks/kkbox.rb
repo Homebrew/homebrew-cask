@@ -17,6 +17,8 @@ cask "kkbox" do
 
   app "KKBOX.app"
 
+  uninstall quit: "com.kkbox.electron-app"
+
   zap trash: [
     "~/Library/Application Support/com.kkbox.KKBOX",
     "~/Library/Application Support/KKBOX",
