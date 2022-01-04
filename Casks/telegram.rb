@@ -20,6 +20,8 @@ cask "telegram" do
 
   app "Telegram.app"
 
+  uninstall quit: "ru.keepcoder.Telegram"
+
   zap trash: [
     "~/Library/Application Scripts/*.ru.keepcoder.Telegram",
     "~/Library/Application Scripts/*.ru.keepcoder.Telegram.TelegramShare",
