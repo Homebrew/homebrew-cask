@@ -15,9 +15,19 @@ cask "rotato" do
     end
   end
 
+  auto_updates true
   depends_on macos: ">= :high_sierra"
 
   app "Rotato.app"
 
-  zap trash: "~/Library/Application Support/Rotato"
+  uninstall quit: "com.mortenjust.Rendermock"
+
+  zap trash: [
+    "~/Library/Application Support/com.mortenjust.Rendermock",
+    "~/Library/Application Support/Rotato",
+    "~/Library/Caches/com.mortenjust.Rendermock",
+    "~/Library/HTTPStorages/com.mortenjust.Rendermock",
+    "~/Library/HTTPStorages/com.mortenjust.Rendermock.binarycookies",
+    "~/Library/Preferences/com.mortenjust.Rendermock.plist",
+  ]
 end
