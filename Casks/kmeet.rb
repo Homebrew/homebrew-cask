@@ -19,8 +19,8 @@ cask "kmeet" do
   ]
 
   zap trash: [
+    "~/Library/Application Support/Caches/kmeet-electron-updater",
     "~/Library/Application Support/kMeet",
     "~/Library/Logs/kMeet",
-    "~/Library/Application Support/Caches/kmeet-electron-updater",
   ]
 end
