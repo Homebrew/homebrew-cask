@@ -8,7 +8,7 @@ cask "notion-enhanced" do
   desc "Enhancer/customiser for the all-in-one productivity workspace notion.so"
   homepage "https://notion-enhancer.github.io/"
 
-  app "Notion Enhancer.app"
+  app "Notion Enhanced.app"
 
   zap trash: [
     "~/Library/Logs/Notion Enhanced",
