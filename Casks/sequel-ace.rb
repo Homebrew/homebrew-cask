@@ -9,11 +9,11 @@ cask "sequel-ace" do
 
   livecheck do
     url :url
-    strategy :git do |tags|
-      tags.map do |tag|
-        match = tag.match(%r{^production/(\d+(?:\.\d+)+)-(\d+)$}i)
-        "#{match[1]},#{match[2]}" if match
-      end.compact
+    strategy :github_latest do |page|
+      match = page.match(%r{href=.*?/tag/production/v?(\d+(?:\.\d+)+)-(\d+)["' >]}i)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
     end
   end
 
