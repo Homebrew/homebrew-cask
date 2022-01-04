@@ -3,7 +3,7 @@ cask "creality-slicer" do
   sha256 :no_check
 
   url "https://file2-cdn.creality.com/website/b049ecf6-2295-4fac-8d10-377dc67a494c"
-  name "Creality Salicer"
+  name "Creality Slicer"
   desc "Slicer for all Creality FDM 3D printers"
   homepage "https://www.creality.com/download/"
 
