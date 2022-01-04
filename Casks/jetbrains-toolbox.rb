@@ -28,10 +28,17 @@ cask "jetbrains-toolbox" do
 
   app "JetBrains Toolbox.app"
 
+  uninstall quit: "com.jetbrains.toolbox"
+
   zap trash: [
     "~/Library/Application Support/JetBrains/Toolbox",
     "~/Library/Logs/JetBrains/Toolbox",
     "~/Library/Preferences/com.jetbrains.toolbox.renderer.plist",
     "~/Library/Saved Application State/com.jetbrains.toolbox.savedState",
-  ]
+  ],
+      rmdir: [
+        "~/Library/Application Support/JetBrains",
+        "~/Library/Caches/JetBrains",
+        "~/Library/Logs/JetBrains",
+      ]
 end
