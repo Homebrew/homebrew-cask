@@ -2,8 +2,7 @@ cask "macspice" do
   version "3.2.1,351"
   sha256 "85e8ec002c9a1af823bd18766176d3e77b51173fa91e482da6ada30bf84950d7"
 
-  url "https://www.macspice.com/mirror/binaries/v#{version.csv.first}/MacSpice3f5.dmg",
-      user_agent: :fake
+  url "https://www.macspice.com/mirror/binaries/v#{version.csv.first}/MacSpice3f5.dmg"
   name "MacSpice"
   desc "Electronic circuit simulator"
   homepage "https://www.macspice.com/"
