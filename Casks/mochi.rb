@@ -9,7 +9,7 @@ cask "mochi" do
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?/Mochi[._-]?v?(\d+(?:\.\d+)+)\.dmg}i)
+    regex(/href=.*?Mochi[._-]?v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "Mochi.app"
