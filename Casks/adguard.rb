@@ -15,6 +15,7 @@ cask "adguard" do
   end
 
   auto_updates true
+  depends_on macos: ">= :sierra"
 
   pkg "AdGuard.pkg"
 
