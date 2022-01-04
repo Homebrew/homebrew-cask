@@ -11,7 +11,7 @@ cask "creality-slicer" do
     url :homepage
     regex(/Creality[._-]Slicer[._-](\d+(?:\.\d+)+)[._-]build[._-](\d+)[._-]Darwin\.zip/i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[1]},#{match[2]}" }
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 
