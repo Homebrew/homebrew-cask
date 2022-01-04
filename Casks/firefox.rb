@@ -126,6 +126,8 @@ cask "firefox" do
 
   app "Firefox.app"
 
+  uninstall quit: "org.mozilla.firefox"
+
   zap trash: [
     "/Library/Logs/DiagnosticReports/firefox_*",
     "~/Library/Application Support/Firefox",
