@@ -10,8 +10,7 @@ cask "starsector" do
 
   livecheck do
     url "https://fractalsoftworks.com/preorder/"
-    strategy :page_match
-    regex(%r{href=.*?/starsector_mac-(\d+(?:\.\d+)*a-RC\d+)\.zip}i)
+    regex(/href=.*?starsector_mac[._-]v?(\d+(?:\.\d+)+[\w._-]+)\.zip/i)
   end
 
   app "Starsector.app"
