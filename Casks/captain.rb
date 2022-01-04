@@ -13,4 +13,11 @@ cask "captain" do
   end
 
   app "Captain.app"
+
+  zap trash: [
+    "~/Library/Application Support/captain",
+    "~/Library/Preferences/com.electron.captain.helper.plist",
+    "~/Library/Preferences/com.electron.captain.plist",
+    "~/Library/Saved Application State/com.electron.captain.savedState",
+  ]
 end
