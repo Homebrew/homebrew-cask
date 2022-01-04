@@ -4,10 +4,17 @@ cask "tag" do
 
   url "https://feisty-dog.s3.amazonaws.com/versions/binaries/000/000/#{version.csv.second}/Tag-#{version.csv.first}.zip",
       verified: "feisty-dog.s3.amazonaws.com/"
-  appcast "https://www.feisty-dog.com/tag/"
   name "Tag"
   desc "Music tag editor"
   homepage "https://www.feisty-dog.com/tag/"
+
+  livecheck do
+    url "https://www.feisty-dog.com/panel/updates/Tag"
+    regex(%r{(\d+)/Tag[._-](\d+(?:\.\d+)+)\.zip}/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[2]},#{match[1]}" }
+    end
+  end
 
   app "Tag.app"
 
