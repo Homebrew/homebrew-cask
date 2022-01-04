@@ -9,7 +9,7 @@ cask "pastebot" do
   homepage "https://tapbots.com/pastebot/"
 
   livecheck do
-    url "https://tapbots.net/pastebot2/update.plist"
+    url "https://tapbots.net/pastebot#{version.major}/update.plist"
     regex(%r{<key>shortVersion</key>.*\n.*<string>(\d+(?:\.\d+)+)</string>}i)
   end
 
