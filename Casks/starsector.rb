@@ -1,6 +1,6 @@
 cask "starsector" do
-  version "0.95a-RC15"
-  sha256 "355c36a6bd7f027c6b719429c985074ce347c3daddeee1ecf6eabb69a5937ae6"
+  version "0.95.1a-RC6"
+  sha256 "fac284c08fe3905f6a1f37cefcb24c790c7450d2ebc6468bc138f4e47262fcc9"
 
   url "https://s3.amazonaws.com/fractalsoftworks/starsector/starsector_mac-#{version}.zip",
       verified: "s3.amazonaws.com/fractalsoftworks/"
@@ -10,8 +10,7 @@ cask "starsector" do
 
   livecheck do
     url "https://fractalsoftworks.com/preorder/"
-    strategy :page_match
-    regex(%r{href=.*?/starsector_mac-(\d+(?:\.\d+)*a-RC\d+)\.zip}i)
+    regex(/href=.*?starsector_mac[._-]v?(\d+(?:\.\d+)+[\w._-]+)\.zip/i)
   end
 
   app "Starsector.app"
