@@ -4,7 +4,7 @@ cask "kmeet" do
 
   url "https://download.storage.infomaniak.com/meet/kMeet.dmg"
   name "kMeet"
-  desc "Client fot the kMeet videoconferencing solution"
+  desc "Client for the kMeet videoconferencing solution"
   homepage "https://kmeet.infomaniak.com/"
 
   livecheck do
