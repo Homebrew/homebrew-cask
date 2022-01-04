@@ -34,7 +34,12 @@ cask "openvpn-connect" do
               "org.openvpn.client.pkg",
               "org.openvpn.helper_framework.pkg",
               "org.openvpn.helper_launch.pkg",
-            ]
+            ],
+            delete:    [
+              "/Library/LaunchDaemons/org.openvpn.client.plist",
+              "/Library/LaunchDaemons/org.openvpn.helper.plist",
+            ],
+            quit:      "org.openvpn.client.app"
 
   zap trash: [
     "~/Library/Application Support/OpenVPN Connect",
