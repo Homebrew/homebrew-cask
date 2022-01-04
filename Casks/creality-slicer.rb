@@ -3,7 +3,7 @@ cask "creality-slicer" do
   sha256 :no_check
 
   url "https://file2-cdn.creality.com/website/b049ecf6-2295-4fac-8d10-377dc67a494c"
-  name "creality-slicer"
+  name "Creality Salicer"
   desc "Slicer for all Creality FDM 3D printers"
   homepage "https://www.creality.com/download/"
 
@@ -16,4 +16,11 @@ cask "creality-slicer" do
   end
 
   app "Creality Slicer.app"
+
+  zap trash: [
+    "~/Library/Application Support/Creality Slicer",
+    "~/Library/Saved Application State/com.creality.crealityslicer.savedState",
+    "~/Library/Preferences/com.creality.crealityslicer.plist",
+    "~/Library/Logs/Creality Slicer",
+  ]
 end
