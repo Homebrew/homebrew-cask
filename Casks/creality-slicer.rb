@@ -1,5 +1,5 @@
 cask "creality-slicer" do
-  version "4.8.2-96"
+  version "4.8.2,96"
   sha256 :no_check
 
   url "https://file2-cdn.creality.com/website/b049ecf6-2295-4fac-8d10-377dc67a494c"
@@ -9,9 +9,9 @@ cask "creality-slicer" do
 
   livecheck do
     url :homepage
-    regex(/Creality_Slicer-((?:\d+(?:\.\d+)*)-build-(?:\d+(?:\.\d+)*))-Darwin\.zip/i)
+    regex(/Creality[._-]Slicer[._-](\d+(?:\.\d+)+)[._-]build[._-](\d+)[._-]Darwin\.zip/i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| match[0].sub("-build-", "-") }
+      page.scan(regex).map { |match| "#{match[1]},#{match[2]}" }
     end
   end
 
@@ -19,8 +19,8 @@ cask "creality-slicer" do
 
   zap trash: [
     "~/Library/Application Support/Creality Slicer",
-    "~/Library/Saved Application State/com.creality.crealityslicer.savedState",
-    "~/Library/Preferences/com.creality.crealityslicer.plist",
     "~/Library/Logs/Creality Slicer",
+    "~/Library/Preferences/com.creality.crealityslicer.plist",
+    "~/Library/Saved Application State/com.creality.crealityslicer.savedState",
   ]
 end
