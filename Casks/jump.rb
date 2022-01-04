@@ -2,7 +2,7 @@ cask "jump" do
   version "8.8.28,80828"
   sha256 "51c47eef515cef38da22c9e06b1b9ecfcfa152d14022cdbc016e364f7385d16e"
 
-  url "https://mirror.jumpdesktop.com/downloads/jdm/JumpDesktopMac-#{version.before_comma}.zip"
+  url "https://mirror.jumpdesktop.com/downloads/jdm/JumpDesktopMac-#{version.csv.first}.zip"
   name "Jump Desktop"
   desc "Remote desktop application"
   homepage "https://jumpdesktop.com/#jdmac"
