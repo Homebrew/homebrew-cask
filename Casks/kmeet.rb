@@ -14,9 +14,7 @@ cask "kmeet" do
 
   app "kMeet.app"
 
-  uninstall quit: [
-    "com.infomaniak.meet",
-  ]
+  uninstall quit: "com.infomaniak.meet"
 
   zap trash: [
     "~/Library/Application Support/Caches/kmeet-electron-updater",
