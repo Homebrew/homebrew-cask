@@ -4,8 +4,8 @@ cask "kmeet" do
 
   url "https://download.storage.infomaniak.com/meet/kMeet.dmg"
   name "kMeet"
-  desc "Client fot the kMeet videoconferencing solution."
-  homepage "https://kmeet.infomaniak.com"
+  desc "Client fot the kMeet videoconferencing solution"
+  homepage "https://kmeet.infomaniak.com/"
 
   livecheck do
     url "https://download.storage.infomaniak.com/meet/latest-mac.yml"
@@ -15,7 +15,7 @@ cask "kmeet" do
   app "kMeet.app"
 
   uninstall quit: [
-    "com.infomaniak.meet"
+    "com.infomaniak.meet",
   ]
 
   zap trash: [
