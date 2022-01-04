@@ -12,6 +12,8 @@ cask "macspice" do
     strategy :sparkle
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "MacSpice.app"
 
   zap trash: [
