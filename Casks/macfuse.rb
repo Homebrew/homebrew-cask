@@ -11,9 +11,10 @@ cask "macfuse" do
   livecheck do
     url :url
     strategy :github_latest
-    regex(%r{href=.*?/macfuse-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/macfuse-(\d+(?:\.\d+)+)\.dmg}i)
   end
 
+  auto_updates true
   conflicts_with cask: "macfuse-dev"
   depends_on macos: ">= :sierra"
 
