@@ -13,6 +13,9 @@ cask "adguard-vpn" do
     regex(/AdGuardVPN[._-]?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  auto_updates true
+  depends_on macos: ">= :sierra"
+
   pkg "AdGuard VPN.pkg"
 
   uninstall quit:      "com.adguard.mac.vpn",
