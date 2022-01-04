@@ -12,7 +12,7 @@ cask "tag" do
     url "https://www.feisty-dog.com/panel/updates/Tag"
     regex(%r{(\d+)/Tag[._-](\d+(?:\.\d+)+)\.zip}i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[2]},#{match[1]}" }
+      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
 
