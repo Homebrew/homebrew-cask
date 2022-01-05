@@ -14,4 +14,11 @@ cask "missive" do
   end
 
   app "Missive.app"
+
+  zap trash: [
+    "~/Library/Application Support/Missive",
+    "~/Library/Logs/Missive",
+    "~/Library/Preferences/com.missiveapp.osx.plist",
+    "~/Library/Saved Application State/com.missiveapp.osx.savedState",
+  ]
 end
