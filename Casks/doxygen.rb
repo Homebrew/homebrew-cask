@@ -9,7 +9,6 @@ cask "doxygen" do
 
   livecheck do
     url "https://www.doxygen.nl/download.html"
-    strategy :page_match
     regex(%r{href=.*?/Doxygen-(\d+(?:\.\d+)+)\.dmg}i)
   end
 
