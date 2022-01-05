@@ -1,6 +1,6 @@
 cask "smartreporter-free" do
-  version "3.2.0,2572"
-  sha256 "c6217997c0f615d29512ec7cc017cfaee039e42678a9c69f8fe1de15b9804378"
+  version "3.2.0,2576"
+  sha256 "5e22b45fea538245d2100b77d45180e3ff978a473e81a8e624bd497a94adefce"
 
   url "https://www.corecode.io/downloads/smartreporter_#{version.csv.first}.zip"
   name "SMARTReporter Free"
