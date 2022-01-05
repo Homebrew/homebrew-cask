@@ -14,7 +14,7 @@ cask "ssdreporter-free" do
 
   depends_on macos: ">= :mojave"
 
-  app "SSDReporter Free.app"
+  app "SSDReporter.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.corecode.SSDReporter",
