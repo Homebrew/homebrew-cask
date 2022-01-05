@@ -3,7 +3,7 @@ cask "adguard" do
   sha256 "c1733f65960c3798cccfe7492fad2f579a9d1f443514a0d6dcf201b7df86a416"
 
   url "https://static.adguard.com/mac/release/AdGuard-#{version}.dmg"
-  name "Adguard"
+  name "AdGuard"
   desc "Stand alone ad blocker"
   homepage "https://adguard.com/"
 
@@ -27,13 +27,15 @@ cask "adguard" do
             ],
             delete:    [
               "/Library/com.adguard.mac.adguard.pac",
-              "/Library/Application Support/AdGuard Software",
+              "/Library/Application Support/AdGuard Software/com.adguard.mac.adguard",
               "/Library/Application Support/com.adguard.Adguard",
               "/Library/LaunchDaemons/com.adguard.mac.adguard.pac.plist",
               "/Library/LaunchDaemons/com.adguard.mac.adguard.tun-helper.plist",
-            ]
+            ],
+            rmdir:     "/Library/Application Support/AdGuard Software"
 
   zap trash: [
+    "/Library/Logs/com.adguard.mac.adguard",
     "~/Library/Application Scripts/*.com.adguard.mac",
     "~/Library/Application Scripts/com.adguard.mac.adguard.loginhelper",
     "~/Library/Application Scripts/com.adguard.mac.adguard.safari-assistant",
