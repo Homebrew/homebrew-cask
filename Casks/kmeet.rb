@@ -20,5 +20,6 @@ cask "kmeet" do
     "~/Library/Application Support/Caches/kmeet-electron-updater",
     "~/Library/Application Support/kMeet",
     "~/Library/Logs/kMeet",
+    "~/Library/Preferences/com.infomaniak.meet.plist",
   ]
 end
