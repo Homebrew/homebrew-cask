@@ -13,6 +13,8 @@ cask "utm" do
     strategy :github_latest
   end
 
+  conflicts_with cask: "homebrew/cask-versions/utm-beta"
+
   app "UTM.app"
 
   uninstall quit: "com.utmapp.UTM"
