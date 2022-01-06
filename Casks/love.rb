@@ -1,10 +1,11 @@
 cask "love" do
-  version "11.3"
-  sha256 "f506af5a6443a559d8edf9b165fd817acb5accdf9873a3be9baf41ab09e0d2d9"
+  version "11.4"
+  sha256 "30ac7db17d9f63398f8f91a7e413a1c38df79f5ebad1ff0012d6e9720961559f"
 
   url "https://github.com/love2d/love/releases/download/#{version}/love-#{version}-macos.zip",
       verified: "github.com/love2d/love/"
   name "LÖVE"
+  desc "2D game framework for Lua"
   homepage "https://love2d.org/"
 
   app "love.app"
