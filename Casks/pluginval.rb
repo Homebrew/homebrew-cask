@@ -3,7 +3,7 @@ cask "pluginval" do
   sha256 "1678f91c1afed6857a7a7c05bb13fc2b5586a7a29b02381751aa622c0386429c"
 
   url "https://github.com/Tracktion/pluginval/releases/download/v#{version}/pluginval_macOS.zip",
-      verified: "https://github.com/Tracktion/pluginval/"
+      verified: "github.com/Tracktion/pluginval/"
   name "pluginval"
   desc "Cross-platform plugin validator and tester application"
   homepage "https://www.tracktion.com/develop/pluginval"
