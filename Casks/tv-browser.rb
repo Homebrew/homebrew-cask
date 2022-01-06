@@ -1,6 +1,6 @@
 cask "tv-browser" do
-  version "4.2.3"
-  sha256 "f5542146d514b44fbb3dddb0c36bc64af0436820db47bda4334d4b2e2b869f77"
+  version "4.2.4"
+  sha256 "56f0baf6ed1a690c1ced9d90e79e1cec7aecdfef9e38076c24a2bb63bf23b702"
 
   url "https://downloads.sourceforge.net/tvbrowser/tvbrowser_#{version}_macjava.dmg",
       verified: "sourceforge.net/tvbrowser/"
