@@ -3,7 +3,7 @@ cask "nordvpn-teams" do
   sha256 :no_check
 
   url "https://downloads.nordlayer.com/mac/latest/NordLayer_v#{version.csv.first}.zip"
-  name "NordVPN Teams"
+  name "NordLayer"
   desc "Security software for business"
   homepage "https://nordlayer.com/"
 
