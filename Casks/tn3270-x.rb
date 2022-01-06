@@ -4,13 +4,19 @@ cask "tn3270-x" do
 
   url "https://www.brown.edu/cis/tn3270/tn3270_X_#{version}.dmg"
   name "tn3270 for the Macintosh"
+  desc "Terminal emulator for connecting to computers which use IBM 3270 terminal"
   homepage "https://www.brown.edu/cis/tn3270/index.html"
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/tn3270_X_(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/tn3270_X_(\d+(?:\.\d+)+)\.dmg}i)
   end
 
+  depends_on macos: "<= :mojave"
+
   app "tn3270 X.app"
+
+  caveats do
+    discontinued
+  end
 end

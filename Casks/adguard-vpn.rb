@@ -15,7 +15,8 @@ cask "adguard-vpn" do
 
   pkg "AdGuard VPN.pkg"
 
-  uninstall launchctl: "com.adguard.mac.vpn.tun-helper",
+  uninstall quit:      "com.adguard.mac.vpn",
+            launchctl: "com.adguard.mac.vpn.tun-helper",
             pkgutil:   "com.adguard.mac.vpn-pkg"
 
   zap trash: "/Library/Application Support/com.adguard.mac.vpn"

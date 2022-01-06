@@ -26,10 +26,12 @@ cask "spotify" do
   end
 
   auto_updates true
+  depends_on macos: ">= :el_capitan"
 
   app "Spotify.app"
 
-  uninstall launchctl: "com.spotify.webhelper"
+  uninstall quit:      "com.spotify.client",
+            launchctl: "com.spotify.webhelper"
 
   zap trash: [
     "~/Library/Application Support/Spotify",

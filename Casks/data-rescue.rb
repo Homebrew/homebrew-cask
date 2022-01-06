@@ -1,8 +1,8 @@
 cask "data-rescue" do
-  version "6.0.5,6212.14.08"
-  sha256 "e5964d3ff514915de923d8c843530f318cb40c5b278cbe96dd8fefa3b67b737f"
+  version "6.0.6,6213.62.03"
+  sha256 "2e4186325d13a8442fe7ef4b3f9c3d75578d2cbcf911537f85ca07e898970884"
 
-  url "https://downloads.prosofteng.com/dr/Data_Rescue_#{version.before_comma}.dmg"
+  url "https://downloads.prosofteng.com/dr/Data_Rescue_#{version.csv.first}.dmg"
   name "Data Rescue #{version.major}"
   desc "Data recovery software"
   homepage "https://www.prosofteng.com/data-rescue-recovery-software/"
@@ -13,4 +13,15 @@ cask "data-rescue" do
   end
 
   app "Data Rescue.app"
+
+  uninstall quit:   "com.prosofteng.DataRescue",
+            delete: "/Library/Application Support/Data Rescue"
+
+  zap trash: [
+    "~/Library/Application Support/Data Rescue",
+    "~/Library/HTTPStorages/com.prosofteng.DataRescue",
+    "~/Library/Preferences/com.prosofteng.Data Rescue.plist",
+    "~/Library/Preferences/com.prosofteng.DataRescue.plist",
+    "~/Library/Saved Application State/com.prosofteng.DataRescue.savedState",
+  ]
 end
