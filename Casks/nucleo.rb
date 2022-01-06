@@ -10,7 +10,7 @@ cask "nucleo" do
 
   livecheck do
     url "https://nucleoapp.com/updates"
-    regex(%r{href=.*?/Nucleo[._-]v?(\d+(?:\.\d+)+)\.zip}i)
+    regex(/href=.*?Nucleo[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
   app "Nucleo.app"
