@@ -8,7 +8,7 @@ cask "nordvpn-teams" do
   homepage "https://nordlayer.com/"
 
   livecheck do
-    url "https://downloads.nordteams.com/mac/update.xml"
+    url "https://downloads.nordlayer.com/mac/update.xml"
     strategy :sparkle
   end
 
