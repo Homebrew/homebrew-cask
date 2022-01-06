@@ -20,4 +20,9 @@ cask "lunasea" do
   end
 
   app "LunaSea.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/app.lunasea.lunasea",
+    "~/Library/Containers/app.lunasea.lunasea",
+  ]
 end
