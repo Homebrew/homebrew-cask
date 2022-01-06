@@ -13,7 +13,7 @@ cask "jgrennison-openttd" do
     "~/Documents/OpenTTD",
     "~/Library/Application Support/CrashReporter/openttd_*.plist",
     "~/Library/Logs/DiagnosticReports/openttd_*.crash",
-    "~/Library/Saved Application State/org.openttd.openttd.savedState",
     "~/Library/Saved Application State/org.openttd.openttd.jgrpp.savedState",
+    "~/Library/Saved Application State/org.openttd.openttd.savedState",
   ]
 end
