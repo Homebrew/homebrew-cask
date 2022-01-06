@@ -15,6 +15,16 @@ cask "goneovim" do
   depends_on formula: "neovim"
 
   app "Goneovim-latest-macos/goneovim.app"
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/goneovim.wrapper.sh"
+  binary shimscript, target: "goneovim"
+
+  preflight do
+    File.write shimscript, <<~EOS
+      #!/bin/sh
+      exec '#{appdir}/goneovim.app/Contents/MacOS/goneovim' "$@"
+    EOS
+  end
 
   zap trash: [
     "~/Library/Saved Application State/com.ident.goneovim.savedState",

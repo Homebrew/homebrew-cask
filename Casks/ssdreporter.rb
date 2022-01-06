@@ -1,9 +1,9 @@
-cask "ssdreporter-free" do
-  version "1.6.0,1542"
-  sha256 "18744721b68bfd78a8e0884d213f4a29aa123865dde12efa92fd7dc2fa1ed23a"
+cask "ssdreporter" do
+  version "1.6.0,1575"
+  sha256 "d176e7c0d63d220ac061fde998cd9ad0563d437b60019bc46acd720327359cd3"
 
   url "https://www.corecode.io/downloads/ssdreporter_#{version.csv.first}.zip"
-  name "SSDReporter Free"
+  name "SSDReporter"
   desc "SSD health monitoring tool"
   homepage "https://www.corecode.io/ssdreporter/"
 
@@ -14,7 +14,7 @@ cask "ssdreporter-free" do
 
   depends_on macos: ">= :mojave"
 
-  app "SSDReporter Free.app"
+  app "SSDReporter.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.corecode.SSDReporter",
