@@ -1,6 +1,6 @@
 cask "nordvpn-teams" do
   version "2.1.0,1666"
-  sha256 :no_check
+  sha256 "978167da3bf1926f8113f8315fda7967ace4b80c915a710bddde779eeb5758f7"
 
   url "https://downloads.nordlayer.com/mac/latest/NordLayer_v#{version.csv.first}.zip"
   name "NordLayer"
