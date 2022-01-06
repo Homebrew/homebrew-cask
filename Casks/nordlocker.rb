@@ -1,8 +1,8 @@
 cask "nordlocker" do
-  version "2.15.3,151"
-  sha256 "ca1e6d9ab08e7a9d3a5b6f24f5377753a185897eb5559ccff7af0b9adefa68d1"
+  version "2.16.1,153"
+  sha256 "fa9aed6752a69b21aede9ec4c07eba034a742d4d496b45de53f80118d24efa6d"
 
-  url "https://downloads.nordcdn.com/apps/macos/generic/NordLocker/#{version.before_comma}/NordLocker.pkg",
+  url "https://downloads.nordcdn.com/apps/macos/generic/NordLocker/#{version.csv.first}/NordLocker.pkg",
       verified: "https://downloads.nordcdn.com/"
   name "NordLocker"
   desc "Store and sync files securely"
