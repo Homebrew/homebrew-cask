@@ -9,7 +9,7 @@ cask "netxms-console" do
 
   livecheck do
     url "https://netxms.org/download"
-    regex(%r{href=.*?/nxmc[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    regex(/href=.*?nxmc[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "NetXMS Console (#{version}).app"
