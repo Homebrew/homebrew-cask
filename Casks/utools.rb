@@ -1,6 +1,6 @@
 cask "utools" do
-  version "2.4.1"
-  sha256 "0f5a3e7cb8785f7143f2c71d0e4afe8eb370717204b593491e928d272820e49c"
+  version "2.5.2"
+  sha256 "40c68599367d6fe2fcb4d26085c748ce52ba3876e5968a085af566ddba49479d"
 
   url "https://publish.u-tools.cn/version2/uTools-#{version}.dmg",
       verified: "publish.u-tools.cn/"
