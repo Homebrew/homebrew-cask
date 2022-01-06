@@ -1,5 +1,5 @@
 cask "nordvpn-teams" do
-  version "2.0.5,1568"
+  version "2.1.0,1666"
   sha256 :no_check
 
   url "https://downloads.nordteams.com/mac/latest/NordVPNTeams.pkg",
