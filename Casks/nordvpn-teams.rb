@@ -6,7 +6,7 @@ cask "nordvpn-teams" do
       verified: "downloads.nordteams.com/"
   name "NordVPN Teams"
   desc "Security software for business"
-  homepage "https://nordvpnteams.com/"
+  homepage "https://nordlayer.com/"
 
   livecheck do
     url "https://downloads.nordteams.com/mac/update.xml"
