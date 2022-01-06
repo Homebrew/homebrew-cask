@@ -9,8 +9,7 @@ cask "scummvm" do
 
   livecheck do
     url "https://www.scummvm.org/downloads/"
-    strategy :page_match
-    regex(%r{href=.*?/scummvm-(\d+(?:\.\d+)*)-macosx\.dmg}i)
+    regex(%r{href=.*?/scummvm-(\d+(?:\.\d+)+)-macosx\.dmg}i)
   end
 
   app "ScummVM.app"
@@ -19,8 +18,8 @@ cask "scummvm" do
     "~/Documents/ScummVM Savegames",
     "~/Library/Caches/org.scummvm.scummvm",
     "~/Library/Logs/scummvm.log",
-    "~/Library/Preferences/ScummVM Preferences",
     "~/Library/Preferences/org.scummvm.scummvm.plist",
+    "~/Library/Preferences/ScummVM Preferences",
     "~/Library/Saved Application State/org.scummvm.scummvm.savedState",
   ]
 end
