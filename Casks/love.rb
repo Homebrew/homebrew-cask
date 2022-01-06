@@ -5,6 +5,7 @@ cask "love" do
   url "https://github.com/love2d/love/releases/download/#{version}/love-#{version}-macos.zip",
       verified: "github.com/love2d/love/"
   name "LÖVE"
+  desc "2D game framework for Lua"
   homepage "https://love2d.org/"
 
   app "love.app"
