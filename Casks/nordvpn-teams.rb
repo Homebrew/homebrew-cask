@@ -14,7 +14,7 @@ cask "nordvpn-teams" do
 
   auto_updates true
 
-  pkg "NordVPNTeams.pkg"
+  app "NordLayer.app"
 
   uninstall quit:      "com.nordvpn.macos.teams.NordVPNTeamsLauncher",
             launchctl: "com.nordvpn.macos.teams.helper",
