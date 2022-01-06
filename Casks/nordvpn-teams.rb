@@ -17,10 +17,8 @@ cask "nordvpn-teams" do
 
   app "NordLayer.app"
 
-  uninstall quit:      "com.nordvpn.macos.teams.NordVPNTeamsLauncher",
-            launchctl: "com.nordvpn.macos.teams.helper",
-            delete:    "/Library/PrivilegedHelperTools/com.nordvpn.osx.helper",
-            pkgutil:   "com.nordvpn.macos.teams"
+  uninstall quit:      "com.nordvpn.macos.teams",
+            launchctl: "com.nordvpn.macos.teams"
 
   zap trash: [
     "~/Library/Application Support/com.nordvpn.macos.teams",
