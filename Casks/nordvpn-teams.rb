@@ -2,8 +2,7 @@ cask "nordvpn-teams" do
   version "2.1.0,1666"
   sha256 :no_check
 
-  url "https://downloads.nordteams.com/mac/latest/NordVPNTeams.pkg",
-      verified: "downloads.nordteams.com/"
+  url "https://downloads.nordlayer.com/mac/latest/NordLayer_v#{version.csv.first}.zip"
   name "NordVPN Teams"
   desc "Security software for business"
   homepage "https://nordlayer.com/"
