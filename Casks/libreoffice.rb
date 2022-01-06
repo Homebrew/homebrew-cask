@@ -30,7 +30,6 @@ cask "libreoffice" do
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/regmerge"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/regview"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/senddoc"
-  binary "#{appdir}/LibreOffice.app/Contents/MacOS/ui-previewer"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/uno"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/unoinfo"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/unopkg"
