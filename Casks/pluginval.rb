@@ -8,6 +8,10 @@ cask "pluginval" do
   desc "Cross-platform plugin validator and tester application"
   homepage "https://www.tracktion.com/develop/pluginval"
 
+  livecheck do
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
+
   app "pluginval.app"
 
   zap trash: [
