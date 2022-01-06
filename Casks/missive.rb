@@ -9,7 +9,7 @@ cask "missive" do
   homepage "https://missiveapp.com/"
 
   livecheck do
-    url "https://download.missiveapp.com/electron-updater/stable/darwin/latest-mac.yml"
+    url "https://missiveapp.com/update/stable/latest-mac.yml"
     strategy :electron_builder
   end
 
