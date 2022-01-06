@@ -1,4 +1,4 @@
-cask "nordvpn-teams" do
+cask "nordlayer" do
   version "2.1.0,1666"
   sha256 "978167da3bf1926f8113f8315fda7967ace4b80c915a710bddde779eeb5758f7"
 
