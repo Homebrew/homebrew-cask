@@ -25,6 +25,7 @@ cask "nordvpn-teams" do
   zap trash: [
     "~/Library/Application Support/com.nordvpn.macos.teams",
     "~/Library/Caches/com.nordvpn.macos.teams",
+    "~/Library/HTTPStorages/com.nordvpn.macos.teams",
     "~/Library/Preferences/com.nordvpn.macos.teams.plist",
   ]
 end
