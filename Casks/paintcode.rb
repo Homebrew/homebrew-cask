@@ -5,6 +5,7 @@ cask "paintcode" do
   url "https://www.pixelcut.com/paintcode#{version.major}/paintcode_#{version.csv.first}.zip",
       verified: "pixelcut.com/"
   name "PaintCode"
+  desc "Turn vector drawings into program code"
   homepage "https://www.paintcodeapp.com/"
 
   livecheck do
