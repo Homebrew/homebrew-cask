@@ -7,13 +7,13 @@ cask "mondoo-cli" do
   desc "Mondoo Client CLI for the Mondoo Policy as Code Platform"
   homepage "https://mondoo.io/"
 
-  pkg "mondoo_#{version}_darwin_universal.pkg"
-
   livecheck do
     url "https://releases.mondoo.io/mondoo/latest"
     strategy :page_match
-    regex(%r{href=\'\.\.\/(\d+.\d+.\d+)}i) 
+    regex(%r{href='\.\./(\d+.\d+.\d+)}i)
   end
+
+  pkg "mondoo_#{version}_darwin_universal.pkg"
 
   uninstall script: {
     executable: "/Library/Mondoo/#{version}/uninstall.sh",
