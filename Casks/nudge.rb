@@ -1,6 +1,6 @@
 cask "nudge" do
-  version "1.1.2.10212021172015"
-  sha256 "c95fe9c8718cdfc08911be6b549ceef341a3800e9e09c3e6b2ec98cf1fc08ee3"
+  version "1.1.3.11292021162608"
+  sha256 "d0ece3ccffd8dbfa0b6c065bd7ce91305f9ca2347b30091ee53a483484f19144"
 
   url "https://github.com/macadmins/nudge/releases/download/v#{version}/Nudge-#{version}.pkg"
   name "Nudge"
