@@ -1,15 +1,15 @@
 cask "portx" do
-  version "2.0.3,10.11"
-  sha256 :no_check
+  version "2.0.5,10.16"
+  sha256 "ae92ca8cc82ae032f717ffd226c47c7f835278b02841ce10975ee1c398c6e1c0"
 
-  url "https://cdn.netsarang.net/0ac7ea20/PortX-latest.dmg",
+  url "https://cdn.netsarang.net/0ac7ea20/PortX-#{version.before_comma}.dmg",
       verified: "cdn.netsarang.net/"
   name "portx"
   desc "SSH Client"
   homepage "https://portx.online/en/portx/"
 
   livecheck do
-    url :url
+    url "https://cdn.netsarang.net/0ac7ea20/PortX-latest.dmg"
     strategy :extract_plist
   end
 
