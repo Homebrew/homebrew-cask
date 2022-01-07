@@ -15,7 +15,7 @@ cask "kdeconnect" do
 
   app "kdeconnect-indicator.app", target: "KDE Connect.app"
 
-  uninstall exit: "org.kde.kdeconnect"
+  uninstall quit: "org.kde.kdeconnect"
 
   zap trash: [
     "~/Library/Application Support/kpeoplevcard",
@@ -23,6 +23,6 @@ cask "kdeconnect" do
     "~/Library/Preferences/kdeconnect",
     "~/Library/Preferences/kdeconnect_runcommand",
     "~/Library/Preferences/kdeconnect_sendnotifications",
-    "~/Library/Preferences/kdeconnect_share"
+    "~/Library/Preferences/kdeconnect_share",
   ]
 end
