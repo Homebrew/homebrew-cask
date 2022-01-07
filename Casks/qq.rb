@@ -8,7 +8,7 @@ cask "qq" do
   homepage "https://im.qq.com/macqq/"
 
   livecheck do
-    url "https://im.qq.com/proxy/domain/qzonestyle.gtimg.cn/qzone/qzactStatics/configSystem/data/1373/config1.js"
+    url "https://im.qq.com/rainbow/"
     regex(/QQ_(\d+(?:\.\d+)+([._-]EXP)?)\.dmg/i)
   end
 
