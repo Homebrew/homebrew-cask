@@ -2,7 +2,7 @@ cask "quickhash" do
   version "3.3.1,2258"
   sha256 "9540ade4b01e99d6e0e1cb42e7ef169c75a334ab4bceebe4befed8f400cfe65f"
 
-  url "https://www.quickhash-gui.org/download/quickhash-gui-v#{version.before_comma.dots_to_hyphens}-apple-osx/?wpdmdl=#{version.after_comma}"
+  url "https://www.quickhash-gui.org/download/quickhash-gui-v#{version.csv.first.dots_to_hyphens}-apple-osx/?wpdmdl=#{version.csv.second}"
   name "Quickhash"
   desc "Data hashing tool"
   homepage "https://www.quickhash-gui.org/"
