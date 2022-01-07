@@ -11,7 +11,7 @@ cask "pinta" do
   app "Pinta.app"
 
   zap trash: [
-    "~/Library/Logs/Pinta",
     "~/Library/Preferences/com.ximian.pinta.plist",
+    "~/Library/Saved Application State/com.ximian.pinta.savedState",
   ]
 end
