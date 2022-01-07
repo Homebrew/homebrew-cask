@@ -9,7 +9,7 @@ cask "portx" do
   homepage "https://portx.online/en/portx/"
 
   livecheck do
-    url :url
+    url "https://cdn.netsarang.net/0ac7ea20/PortX-latest.dmg"
     strategy :extract_plist
   end
 
