@@ -7,6 +7,16 @@ cask "otx" do
   desc "Mach-O disassembler"
   homepage "https://github.com/x43x61x69/otx"
 
+  livecheck do
+    url "https://github.com/x43x61x69/otx/releases/latest"
+    strategy :page_match do |page|
+      match = page.match(%r{href=.*?/v?(\d+(?:\.\d+)+)/otx[._-](\h+)\.zip}i)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
+    end
+  end
+
   auto_updates true
 
   app "otx.app"
