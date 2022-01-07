@@ -9,7 +9,7 @@ cask "osquery" do
 
   livecheck do
     url "https://github.com/osquery/osquery"
-    strategy :git
+    strategy :github_latest
   end
 
   pkg "osquery-#{version}.pkg"
