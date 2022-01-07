@@ -8,10 +8,9 @@ cask "mondoo-cli" do
   homepage "https://mondoo.io/"
 
   pkg "mondoo_#{version}_darwin_universal.pkg"
-  
-  uninstall script: {
-                      executable: "/Library/Mondoo/#{version}/uninstall.sh",
-                      sudo:       true,
-                    }
-end
 
+  uninstall script: {
+    executable: "/Library/Mondoo/#{version}/uninstall.sh",
+    sudo:       true,
+  }
+end
