@@ -12,5 +12,6 @@ cask "pinta" do
 
   zap trash: [
     "~/Library/Logs/Pinta",
+    "~/Library/Preferences/com.ximian.pinta.plist",
   ]
 end
