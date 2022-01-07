@@ -7,6 +7,11 @@ cask "nudge" do
   desc "Application for enforcing OS updates"
   homepage "https://github.com/macadmins/nudge"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :big_sur"
 
   pkg "Nudge-#{version}.pkg"
