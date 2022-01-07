@@ -1,6 +1,6 @@
 cask "qq" do
-  version "6.7.5.20390_EXP"
-  sha256 "9fe3430b99471da8572e812b4d992b13b34c9dec042139fe776a6373fbc22a4a"
+  version "6.7.5.20630_EXP"
+  sha256 "11264a225f52a6596b46e06ad450e02b614013600ee177089cd9d9639e9b3c7a"
 
   url "https://dldir1.qq.com/qqfile/QQforMac/QQ_#{version}.dmg"
   name "QQ"
@@ -8,7 +8,7 @@ cask "qq" do
   homepage "https://im.qq.com/macqq/"
 
   livecheck do
-    url "https://im.qq.com/proxy/domain/qzonestyle.gtimg.cn/qzone/qzactStatics/configSystem/data/1373/config1.js"
+    url "https://im.qq.com/rainbow/"
     regex(/QQ_(\d+(?:\.\d+)+([._-]EXP)?)\.dmg/i)
   end
 
