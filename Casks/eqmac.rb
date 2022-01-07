@@ -13,6 +13,8 @@ cask "eqmac" do
     strategy :github_latest
   end
 
+  auto_updates true
+
   pkg "eqMac.pkg"
 
   uninstall pkgutil: "com.bitgapp.eqmac.pkg",
