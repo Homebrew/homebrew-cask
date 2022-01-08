@@ -1,6 +1,6 @@
 cask "veracrypt" do
-  version "1.25.4"
-  sha256 "0af273555cbd82573f0f3182c178fefe61436e7260f4dc1a778efd9e786802ea"
+  version "1.25.7"
+  sha256 "97d264940e9f5789e724c43407696b087be8f2c65a3fef335340ca36008f0ee5"
 
   url "https://launchpad.net/veracrypt/trunk/#{version}/+download/VeraCrypt_#{version}.dmg",
       verified: "launchpad.net/veracrypt/trunk/"
