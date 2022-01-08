@@ -9,7 +9,7 @@ cask "kdeconnect" do
 
   livecheck do
     url "https://binary-factory.kde.org/job/kdeconnect-kde_Release_macos/lastSuccessfulBuild/artifact/"
-    regex(/href=.*?kdeconnect-kde[._-]v?(\d+(?:[.-]\d+)+)-macos-64-clang.dmg/i)
+    regex(/href=.*?kdeconnect-kde[._-]v?(\d+(?:[.-]\d+)+)-macos-64-clang\.dmg/i)
   end
 
   app "kdeconnect-indicator.app", target: "KDE Connect.app"
