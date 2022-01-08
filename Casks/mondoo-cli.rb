@@ -9,7 +9,6 @@ cask "mondoo-cli" do
 
   livecheck do
     url "https://releases.mondoo.io/mondoo/latest"
-    strategy :page_match
     regex(%r{href='\.\./(\d+.\d+.\d+)}i)
   end
 
