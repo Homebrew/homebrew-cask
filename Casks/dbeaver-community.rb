@@ -21,6 +21,8 @@ cask "dbeaver-community" do
 
   app "DBeaver.app"
 
+  uninstall signal: ["TERM", "org.jkiss.dbeaver.core.product"]
+
   zap trash: [
     "~/Library/DBeaverData",
     "~/Library/Preferences/org.jkiss.dbeaver.core.product.plist",
