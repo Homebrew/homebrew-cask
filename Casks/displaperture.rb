@@ -18,6 +18,7 @@ cask "displaperture" do
 
   zap trash: [
     "~/Library/Caches/com.manytricks.Displaperture",
+    "~/Library/Containers/com.manytricks.Displaperture",
     "~/Library/Preferences/com.manytricks.Displaperture.plist",
   ]
 end
