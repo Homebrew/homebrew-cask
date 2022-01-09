@@ -9,11 +9,11 @@ cask "mono-mdk" do
 
   livecheck do
     url "https://www.mono-project.com/download/stable/"
-    strategy :page_match
-    regex(%r{href=.*?/MonoFramework-MDK-(\d+(?:\.\d+)*).macos10.xamarin.universal\.pkg}i)
+    regex(%r{href=.*?/MonoFramework-MDK-(\d+(?:\.\d+)+).macos10.xamarin.universal\.pkg}i)
   end
 
-  conflicts_with cask: "homebrew/cask-versions/mono-mdk-for-visual-studio"
+  conflicts_with cask:    "homebrew/cask-versions/mono-mdk-for-visual-studio",
+                 formula: "mono"
 
   pkg "MonoFramework-MDK-#{version}.macos10.xamarin.universal.pkg"
 
