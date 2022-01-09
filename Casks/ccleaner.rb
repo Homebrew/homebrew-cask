@@ -15,10 +15,16 @@ cask "ccleaner" do
 
   app "CCleaner.app"
 
+  uninstall quit:      "com.piriform.ccleaner",
+            launchctl: "com.piriform.ccleaner.CCleanerAgent",
+            delete:    "/Library/PrivilegedHelperTools/com.piriform.ccleaner.CCleanerAgent"
+
   zap trash: [
     "~/Library/Application Support/CCleaner",
     "~/Library/Caches/com.piriform.ccleaner",
     "~/Library/Cookies/com.piriform.ccleaner.binarycookies",
+    "~/Library/HTTPStorages/com.piriform.ccleaner",
+    "~/Library/HTTPStorages/com.piriform.ccleaner.binarycookies",
     "~/Library/Preferences/com.piriform.ccleaner.plist",
     "~/Library/Saved Application State/com.piriform.ccleaner.savedState",
     "/Users/Shared/CCleaner",
