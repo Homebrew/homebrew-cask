@@ -21,7 +21,11 @@ cask "dbeaver-enterprise" do
 
   app "DBeaverEE.app"
 
-  caveats do
-    depends_on_java "8+"
-  end
+  uninstall signal: ["TERM", "com.dbeaver.product.enterprise"]
+
+  zap trash: [
+    "~/Library/DBeaverData",
+    "~/Library/Preferences/com.dbeaver.product.enterprise.plist",
+    "~/Library/Saved Application State/com.dbeaver.product.enterprise.savedState",
+  ]
 end
