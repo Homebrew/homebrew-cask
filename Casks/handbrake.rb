@@ -19,8 +19,8 @@ cask "handbrake" do
   app "HandBrake.app"
 
   zap trash: [
-    "~/Library/Application Support/HandBrake",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/fr.handbrake.handbrake.sfl*",
+    "~/Library/Application Support/HandBrake",
     "~/Library/Caches/fr.handbrake.HandBrake",
     "~/Library/Preferences/fr.handbrake.HandBrake.plist",
     "~/Library/Saved Application State/fr.handbrake.HandBrake.savedState",
