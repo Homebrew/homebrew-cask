@@ -25,15 +25,19 @@ cask "adguard-vpn" do
             delete:    [
               "/Library/Application Support/AdGuard Software/com.adguard.mac.vpn",
               "/Library/Application Support/com.adguard.mac.vpn",
-              "/Library/LaunchDaemons/com.adguard.mac.vpn.tun-helper.plist",
             ],
-            rmdir:     "/Library/Application Support/AdGuard Software"
+            rmdir:     [
+              "/Library/Application Support/AdGuard Software",
+              "/Library/Application Support/AdGuard Software/com.adguard.mac",
+            ]
 
   zap trash: [
     "/Library/Logs/com.adguard.mac.vpn",
+    "~/Library/Application Scripts/*.com.adguard.mac",
     "~/Library/Application Scripts/com.adguard.mac.vpn.launchatlogin",
     "~/Library/Caches/com.adguard.mac.vpn",
     "~/Library/Containers/com.adguard.mac.vpn.launchatlogin",
+    "~/Library/Group Containers/*.com.adguard.mac",
     "~/Library/HTTPStorages/com.adguard.mac.vpn",
     "~/Library/Preferences/com.adguard.mac.vpn.plist",
   ]
