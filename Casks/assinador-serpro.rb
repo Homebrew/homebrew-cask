@@ -1,6 +1,6 @@
 cask "assinador-serpro" do
-  version "2.7.1"
-  sha256 "11dc80202d25008d83e82a76e1cc34e6fa1678af9ff530c61819e7c2a7b526b5"
+  version "3.0.0"
+  sha256 "a981db5b5a6a250c24565f031aa58a9fb2723ac4cbfcd3db74dbb7cdd53ca6df"
 
   url "https://www.serpro.gov.br/links-fixos-superiores/assinador-digital/assinador-serpro/arquivos/assinador-serpro-#{version.dots_to_hyphens}-instalador.dmg"
   name "assinador-serpro"
