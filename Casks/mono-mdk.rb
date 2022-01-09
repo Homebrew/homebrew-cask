@@ -14,7 +14,7 @@ cask "mono-mdk" do
   end
 
   conflicts_with "mono", because: "both install 'mono' binaries"
-  conflicts_with cask: "mono-mdk-for-visual-studio"
+  conflicts_with cask: "homebrew/cask-versions/mono-mdk-for-visual-studio"
 
   pkg "MonoFramework-MDK-#{version}.macos10.xamarin.universal.pkg"
 
