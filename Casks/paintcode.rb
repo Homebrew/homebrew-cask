@@ -1,10 +1,11 @@
 cask "paintcode" do
-  version "3.4.8,34800"
-  sha256 "07f10e3f7680ab58ade062e338a8ffe71d6a1e7bc950ba1df3bebcdbb23335dc"
+  version "3.5.2,35013"
+  sha256 "42fe5c12ea2e7c43a912562d63d282ee81bfeacaa7df404d2ccb9982ec9adc5e"
 
-  url "https://www.pixelcut.com/paintcode#{version.major}/paintcode_#{version.before_comma}.zip",
+  url "https://www.pixelcut.com/paintcode#{version.major}/paintcode_#{version.csv.first}.zip",
       verified: "pixelcut.com/"
   name "PaintCode"
+  desc "Turn vector drawings into program code"
   homepage "https://www.paintcodeapp.com/"
 
   livecheck do
