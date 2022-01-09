@@ -35,6 +35,7 @@ cask "adguard-vpn" do
     "/Library/Logs/com.adguard.mac.vpn",
     "~/Library/Application Scripts/*.com.adguard.mac",
     "~/Library/Application Scripts/com.adguard.mac.vpn.launchatlogin",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.adguard.mac.vpn.launchatlogin.sfl*",
     "~/Library/Caches/com.adguard.mac.vpn",
     "~/Library/Containers/com.adguard.mac.vpn.launchatlogin",
     "~/Library/Group Containers/*.com.adguard.mac",
