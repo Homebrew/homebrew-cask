@@ -44,6 +44,7 @@ cask "adguard" do
     "~/Library/Application Support/com.adguard.Adguard",
     "~/Library/Application Support/com.adguard.mac.adguard.pac",
     "~/Library/Application Support/com.adguard.mac.adguard.tun-helper",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.adguard.mac.adguard.loginhelper.sfl*",
     "~/Library/Caches/com.adguard.Adguard",
     "~/Library/Caches/com.adguard.mac.adguard",
     "~/Library/Containers/com.adguard.mac.adguard.loginhelper",
