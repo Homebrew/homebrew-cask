@@ -67,7 +67,6 @@ cask "cocktail" do
 
     livecheck do
       url :homepage
-      strategy :page_match
       regex(/macOS\s*11(?:\.\d+)*.*?(\d+(?:\.\d+)+)/i)
     end
   else
@@ -78,7 +77,6 @@ cask "cocktail" do
 
     livecheck do
       url :homepage
-      strategy :page_match
       regex(/macOS\s*12(?:\.\d+)*.*?(\d+(?:\.\d+)+)/i)
     end
   end
