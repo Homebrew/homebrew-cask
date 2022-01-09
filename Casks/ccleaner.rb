@@ -9,7 +9,6 @@ cask "ccleaner" do
 
   livecheck do
     url "https://www.ccleaner.com/ccleaner-mac/download"
-    strategy :page_match
     regex(/CCleaner\s*for\s*Mac\s*v?(\d+(?:\.\d+)+)/i)
   end
 
