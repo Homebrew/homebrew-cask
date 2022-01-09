@@ -29,10 +29,11 @@ cask "adguard" do
               "/Library/com.adguard.mac.adguard.pac",
               "/Library/Application Support/AdGuard Software/com.adguard.mac.adguard",
               "/Library/Application Support/com.adguard.Adguard",
-              "/Library/LaunchDaemons/com.adguard.mac.adguard.pac.plist",
-              "/Library/LaunchDaemons/com.adguard.mac.adguard.tun-helper.plist",
             ],
-            rmdir:     "/Library/Application Support/AdGuard Software"
+            rmdir:     [
+              "/Library/Application Support/AdGuard Software",
+              "/Library/Application Support/AdGuard Software/com.adguard.mac",
+            ]
 
   zap trash: [
     "/Library/Logs/com.adguard.mac.adguard",
@@ -44,6 +45,7 @@ cask "adguard" do
     "~/Library/Application Support/com.adguard.mac.adguard.pac",
     "~/Library/Application Support/com.adguard.mac.adguard.tun-helper",
     "~/Library/Caches/com.adguard.Adguard",
+    "~/Library/Caches/com.adguard.mac.adguard",
     "~/Library/Containers/com.adguard.mac.adguard.loginhelper",
     "~/Library/Containers/com.adguard.mac.adguard.safari-assistant",
     "~/Library/Cookies/com.adguard.Adguard.binarycookies",
@@ -51,6 +53,7 @@ cask "adguard" do
     "~/Library/HTTPStorages/com.adguard.mac.adguard",
     "~/Library/Logs/Adguard",
     "~/Library/Preferences/com.adguard.Adguard.plist",
+    "~/Library/Preferences/com.adguard.mac.adguard.plist",
     "~/Library/Saved Application State/com.adguard.mac.adguard.savedState",
   ]
 end
