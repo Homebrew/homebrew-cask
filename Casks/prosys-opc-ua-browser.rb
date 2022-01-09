@@ -5,7 +5,7 @@ cask "prosys-opc-ua-browser" do
   url "https://www.prosysopc.com/opcua/apps/UaBrowser/dist/#{version}/prosys-opc-ua-browser-macos-#{version}.dmg"
   name "Prosys OPC UA Browser"
   desc "Browse and visualize data from OPC UA servers"
-  homepage "https://www.prosysopc.com/products/opc-ua-client/"
+  homepage "https://www.prosysopc.com/products/opc-ua-browser/"
 
   livecheck do
     url "https://downloads.prosysopc.com/opc-ua-browser-downloads.php"
