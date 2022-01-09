@@ -38,11 +38,11 @@ cask "adguard" do
   zap trash: [
     "/Library/Logs/com.adguard.mac.adguard",
     "~/Library/Application Scripts/*.com.adguard.mac",
+    "~/Library/Application Scripts/com.adguard.mac.adguard.loginhelper",
+    "~/Library/Application Scripts/com.adguard.mac.adguard.safari-assistant",
     "~/Library/Application Support/Adguard",
     "~/Library/Application Support/com.adguard.Adguard",
-    "~/Library/Application Scripts/com.adguard.mac.adguard.loginhelper",
     "~/Library/Application Support/com.adguard.mac.adguard.pac",
-    "~/Library/Application Scripts/com.adguard.mac.adguard.safari-assistant",
     "~/Library/Application Support/com.adguard.mac.adguard.tun-helper",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.adguard.mac.adguard.loginhelper.sfl*",
     "~/Library/Caches/com.adguard.Adguard",
