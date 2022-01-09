@@ -5,7 +5,7 @@ cask "foxit-pdf-editor" do
   url "https://cdn01.foxitsoftware.com/pub/foxit/phantomPDF/desktop/mac/#{version.major}.x/#{version.major_minor}/ML/FoxitPDFEditor#{version.no_dots}.L10N.Setup.pkg",
       verified: "cdn01.foxitsoftware.com/pub/foxit/phantomPDF/desktop/mac/"
   name "Foxit PDF Editor"
-  desc "PDF Editor from Foxit, you need valid license or you can use 14-day trial"
+  desc "PDF Editor"
   homepage "https://www.foxit.com/pdf-editor/"
 
   livecheck do
@@ -21,12 +21,14 @@ cask "foxit-pdf-editor" do
   pkg "FoxitPDFEditor#{version.no_dots}.L10N.Setup.pkg"
 
   uninstall pkgutil:   "com.foxit.pkg.pdfeditor",
-            delete:    "/Applications/Foxit PDF Editor.app",
+            delete:    [
+              "/Applications/Foxit PDF Editor.app",
+              "/Library/Application Support/Foxit Software/FoxitService/FoxitPDFEditorUpdateService.app",
+              "/Library/LaunchDaemons/com.foxit.PDFEditorUpdateService.plist",
+            ],
             launchctl: "com.foxit.PDFEditorUpdateService"
 
   zap trash: [
-    "/Library/Application Support/Foxit Software/FoxitService/FoxitPDFEditorUpdateService.app",
-    "/Library/LaunchDaemons/com.foxit.PDFEditorUpdateService.plist",
     "~/Library/Application Support/Foxit Software/Foxit PDF Editor",
     "~/Library/Caches/com.foxit-software.Foxit PDF Editor",
     "~/Library/Preferences/com.foxit-software.Foxit PDF Editor.plist",
