@@ -23,7 +23,7 @@ cask "dotnet-sdk" do
     "dotnet",
     "homebrew/cask-versions/dotnet-preview",
     "homebrew/cask-versions/dotnet-sdk-preview",
-  ]
+  ], formula: "dotnet"
   depends_on macos: ">= :mojave"
 
   pkg "dotnet-sdk-#{version.csv.first}-osx-#{arch}.pkg"

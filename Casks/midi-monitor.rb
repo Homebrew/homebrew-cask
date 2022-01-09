@@ -1,9 +1,10 @@
 cask "midi-monitor" do
-  version "1.4.1"
-  sha256 "bb37fac9094d544920eaa5c3d30fa4ac81ad279164f8e3a999f8838681f4f570"
+  version "1.5.2"
+  sha256 "548a48f54487f01ae33587fd25bc2382d79ffd89591e1cfb97c72a4c1bfb9d47"
 
-  url "https://www.snoize.com/MIDIMonitor/MIDIMonitor_#{version.dots_to_underscores}.zip"
+  url "https://www.snoize.com/MIDIMonitor/MIDIMonitor_#{version.dots_to_underscores}.dmg"
   name "MIDI Monitor"
+  desc "Display MIDI signals going in and out of your computer"
   homepage "https://www.snoize.com/MIDIMonitor/"
 
   livecheck do
