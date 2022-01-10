@@ -12,6 +12,6 @@ cask "jump-desktop-connect" do
   uninstall pkgutil: [
     "com.p5sys.jump.connect",
     "com.p5sys.jump.connect.agent",
-    "com.p5sys.jump.connect.service"
+    "com.p5sys.jump.connect.service",
   ]
 end
