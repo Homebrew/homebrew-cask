@@ -19,4 +19,6 @@ cask "openbci" do
   end
 
   app "OpenBCI_GUI.app"
+
+  zap trash: "~/Documents/OpenBCI_GUI"
 end
