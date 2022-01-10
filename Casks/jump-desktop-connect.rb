@@ -9,9 +9,11 @@ cask "jump-desktop-connect" do
 
   pkg ".jdc.sparkle_guided.pkg"
 
-  uninstall pkgutil: [
-    "com.p5sys.jump.connect",
-    "com.p5sys.jump.connect.agent",
-    "com.p5sys.jump.connect.service",
-  ]
+  uninstall do
+    launchctl [
+      "com.p5sys.jump.connect.agent",
+      "com.p5sys.jump.connect.service"
+    ],
+    pkgutil: "com.p5sys.jump.connect"
+  end
 end
