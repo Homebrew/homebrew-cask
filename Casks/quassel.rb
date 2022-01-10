@@ -1,8 +1,8 @@
 cask "quassel" do
-  version "0.13.1"
-  sha256 "5a2437dd0fc51a8fa12f2c83472e8294635edea41e55c523535df080c012379e"
+  version "0.14.0"
+  sha256 "cb8b195cd9961c8af26a9df7f5411aa1f23324d1ee717f7c4df8abc2b70021a2"
 
-  url "https://github.com/quassel/quassel/releases/download/#{version}/QuasselMono_MacOSX-x86_64_#{version}.dmg",
+  url "https://github.com/quassel/quassel/releases/download/#{version}/QuasselMono-MacOS-#{version}.dmg",
       verified: "github.com/quassel/quassel/"
   name "Quassel"
   desc "IRC client"
