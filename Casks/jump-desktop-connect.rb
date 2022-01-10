@@ -13,5 +13,6 @@ cask "jump-desktop-connect" do
             launchctl: [
               "com.p5sys.jump.connect.agent",
               "com.p5sys.jump.connect.service",
+              "com.p5sys.jump.connect.49240.*",
             ]
 end
