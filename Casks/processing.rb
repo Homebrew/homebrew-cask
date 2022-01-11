@@ -16,6 +16,11 @@ cask "processing" do
     end
   end
 
+  conflicts_with cask: [
+    "homebrew/cask-versions/processing2",
+    "homebrew/cask-versions/processing-beta",
+  ]
+
   app "Processing.app"
 
   uninstall quit: "org.processing.app"
