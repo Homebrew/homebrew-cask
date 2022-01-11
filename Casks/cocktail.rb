@@ -71,7 +71,7 @@ cask "cocktail" do
     end
   else
     version "15.2.1"
-    sha256 "8c8f11e69d98c6f5243f723c12d93cac6b075f3c914f1fcacf10165c0b9e315e"
+    sha256 "788a9b81339e5d826cc6d2ce5d66f8f6f986178d979369841d40becd40ab2ed1"
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}ME.dmg"
 
