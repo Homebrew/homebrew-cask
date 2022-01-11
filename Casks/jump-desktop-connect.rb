@@ -14,26 +14,26 @@ cask "jump-desktop-connect" do
 
   pkg ".jdc.sparkle_guided.pkg"
 
-  uninstall pkgutil:   "com.p5sys.jump.connect",
+  uninstall quit:      "com.p5sys.jump.connect",
+            signal:    [["QUIT", "com.p5sys.jump.connect"]],
+            pkgutil:   "com.p5sys.jump.connect",
             launchctl: [
               "com.p5sys.jump.connect.service",
               "com.p5sys.jump.connect.agent",
-              "com.p5sys.jump.connect.*",
             ],
-            quit:      "com.p5sys.jump.connect",
-            signal:    [["QUIT", "com.p5sys.jump.connect"]]
+            delete:    "/Library/Application Support/Jump Desktop/Connect/sharedconfig.plist",
+            rmdir:     [
+              "/Library/Application Support/Jump Desktop/Connect/",
+              "/Library/Application Support/Jump Desktop",
+            ]
 
   zap trash: [
-    "/Library/Application Support/Jump Desktop/Connect/sharedconfig.plist",
     "~/Library/Application Support/com.p5sys.jump.connect",
-    "~/Library/Preferences/com.p5sys.jump.connect.plist",
-    "~/Library/HTTPStorages/com.p5sys.jump.connect",
-    "~/Library/Caches/Jump Desktop/jump.connect",
-    "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.p5sys.jump.connect",
     "~/Library/Caches/com.p5sys.jump.connect",
+    "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.p5sys.jump.connect",
+    "~/Library/Caches/Jump Desktop/jump.connect",
+    "~/Library/HTTPStorages/com.p5sys.jump.connect",
+    "~/Library/Preferences/com.p5sys.jump.connect.plist",
   ],
-      rmdir: [
-        "/Library/Application Support/Jump Desktop",
-        "~/Library/Caches/Jump Desktop",
-      ]  
+      rmdir: "~/Library/Caches/Jump Desktop"
 end
