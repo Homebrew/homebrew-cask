@@ -14,6 +14,7 @@ cask "cleanmymac" do
   end
 
   auto_updates true
+  conflicts_with cask: "cleanmymac-ch"
 
   app "CleanMyMac X.app"
 
