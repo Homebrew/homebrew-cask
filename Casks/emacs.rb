@@ -13,7 +13,11 @@ cask "emacs" do
     regex(%r{href=.*?/Emacs-(\d+(?:\.\d+)*(?:-\d+)?)-universal\.dmg}i)
   end
 
-  conflicts_with formula: "emacs"
+  conflicts_with cask:    [
+    "homebrew/cask-versions/emacs-nightly",
+    "homebrew/cask-versions/emacs-pretest",
+  ],
+                 formula: "emacs"
 
   app "Emacs.app"
   binary "#{appdir}/Emacs.app/Contents/MacOS/Emacs", target: "emacs"
