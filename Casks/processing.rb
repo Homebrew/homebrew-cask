@@ -5,6 +5,7 @@ cask "processing" do
   url "https://github.com/processing/processing/releases/download/processing-#{version.after_comma}-#{version.before_comma}/processing-#{version.before_comma}-macosx.zip",
       verified: "github.com/processing/processing/"
   name "Processing"
+  desc "Flexible software sketchbook and a language for learning how to code"
   homepage "https://processing.org/"
 
   livecheck do
