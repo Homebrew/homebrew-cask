@@ -22,4 +22,18 @@ cask "jump-desktop-connect" do
             ],
             quit:      "com.p5sys.jump.connect",
             signal:    [["QUIT", "com.p5sys.jump.connect"]]
+
+  zap trash: [
+    "/Library/Application Support/Jump Desktop/Connect/sharedconfig.plist",
+    "~/Library/Application Support/com.p5sys.jump.connect",
+    "~/Library/Preferences/com.p5sys.jump.connect.plist",
+    "~/Library/HTTPStorages/com.p5sys.jump.connect",
+    "~/Library/Caches/Jump Desktop/jump.connect",
+    "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.p5sys.jump.connect",
+    "~/Library/Caches/com.p5sys.jump.connect",
+  ],
+      rmdir: [
+        "/Library/Application Support/Jump Desktop",
+        "~/Library/Caches/Jump Desktop",
+      ]  
 end
