@@ -11,6 +11,16 @@ cask "eloston-chromium" do
 
     url "https://github.com/kramred/ungoogled-chromium-macos/releases/download/#{version.csv.first}__#{version.csv.second}/ungoogled-chromium_#{version.csv.first}-macos.dmg",
         verified: "github.com/kramred/ungoogled-chromium-macos/"
+
+    livecheck do
+      url "https://github.com/kramred/ungoogled-chromium-macos/releases/"
+      strategy :page_match do |page|
+        match = page.match(%r{releases/download/(.+)[._-][._-](\d+)/ungoogled[._-]chromium[._-](.+)[._-]macos\.dmg}i)
+        next if match.blank?
+
+        "#{match[1]},#{match[2]}"
+      end
+    end
   end
 
   name "Ungoogled Chromium"
