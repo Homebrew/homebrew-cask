@@ -1,11 +1,16 @@
 cask "jump-desktop-connect" do
-  version "4.1.3"
+  version "6.7.69"
   sha256 :no_check
 
   url "https://mirror.jumpdesktop.com/downloads/connect/JumpDesktopConnect.dmg"
   name "Jump Desktop Connect"
-  desc "High Performance Desktop Sharing using a fraction of bandwidth of RDP/VNC"
-  homepage "https://jumpdesktop.com/"
+  desc "Remote desktop app"
+  homepage "https://jumpdesktop.com/connect/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   pkg ".jdc.sparkle_guided.pkg"
 
@@ -13,6 +18,7 @@ cask "jump-desktop-connect" do
             launchctl: [
               "com.p5sys.jump.connect.service",
               "com.p5sys.jump.connect.agent",
+              "com.p5sys.jump.connect.*"
             ],
             quit:      "com.p5sys.jump.connect",
             signal:    [["QUIT", "com.p5sys.jump.connect"]]
