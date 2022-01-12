@@ -15,4 +15,11 @@ cask "qlab" do
   auto_updates true
 
   app "QLab.app"
+
+  zap trash: [
+    "~/Library/Application Support/QLab",
+    "~/Library/HTTPStorages/com.figure53.QLab.4",
+    "~/Library/Preferences/com.figure53.QLab.4.plist",
+    "~/Library/Saved Application State/com.figure53.QLab.4.savedState",
+  ]
 end
