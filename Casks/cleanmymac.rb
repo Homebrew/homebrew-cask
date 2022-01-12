@@ -1,18 +1,5 @@
 cask "cleanmymac" do
   language "en", default: true do
-    version "4.10.0,41000.0.2112211205"
-    sha256 "1f415dd5ff9fe03aba01ddbacd1c6e5fb972cf90f5798ac4d3e4ab88c137e230"
-
-    url "https://dl.devmate.com/com.macpaw.CleanMyMac#{version.major}/CleanMyMacX.dmg",
-        verified: "dl.devmate.com/com.macpaw.CleanMyMac"
-
-    livecheck do
-      url "https://s3-us-west-2.amazonaws.com/updateinfo.devmate.com/com.macpaw.CleanMyMac#{version.major}/updates.xml"
-      strategy :sparkle
-    end
-    ""
-  end
-  language "zh", "CN", "zh-CN" do
     version "4.10.0,41000.0.2112201815"
     sha256 "c2c63fe19526706cff20d42262c9f737bd424508b913deb5fd3a0d0536b0579c"
 
@@ -24,6 +11,19 @@ cask "cleanmymac" do
       strategy :sparkle
     end
     ".zh"
+  end
+  language "zh", "CN", "zh-CN" do
+    version "4.10.0,41000.0.2112211205"
+    sha256 "1f415dd5ff9fe03aba01ddbacd1c6e5fb972cf90f5798ac4d3e4ab88c137e230"
+
+    url "https://dl.devmate.com/com.macpaw.CleanMyMac#{version.major}/CleanMyMacX.dmg",
+        verified: "dl.devmate.com/com.macpaw.CleanMyMac"
+
+    livecheck do
+      url "https://s3-us-west-2.amazonaws.com/updateinfo.devmate.com/com.macpaw.CleanMyMac#{version.major}/updates.xml"
+      strategy :sparkle
+    end
+    ""
   end
 
   name "CleanMyMac X"
