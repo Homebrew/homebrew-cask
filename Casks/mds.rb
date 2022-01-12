@@ -2,7 +2,7 @@ cask "mds" do
   version "4.0,40106"
   sha256 "29e53a23bb97cb260290c868dc92a31cdba359f98cbf6643742d367204c207f2"
 
-  url "https://twocanoes-software-updates.s3.amazonaws.com/MDS_Build-#{version.after_comma}_Version-#{version.before_comma}.dmg",
+  url "https://twocanoes-software-updates.s3.amazonaws.com/MDS_Build-#{version.csv.second}_Version-#{version.csv.first}.dmg",
       verified: "https://twocanoes-software-updates.s3.amazonaws.com/"
   name "MDS"
   desc "Deploy Intel and Apple Silicon Macs in Seconds"

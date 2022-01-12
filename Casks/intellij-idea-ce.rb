@@ -3,7 +3,7 @@ cask "intellij-idea-ce" do
 
   version "2021.3.1,213.6461.79"
 
-  url "https://download.jetbrains.com/idea/ideaIC-#{version.before_comma}#{arch}.dmg"
+  url "https://download.jetbrains.com/idea/ideaIC-#{version.csv.first}#{arch}.dmg"
   if Hardware::CPU.intel?
     sha256 "4fa16f7af36a6e10baedb877228d286638bc5e018959988998ec0eae46704f3e"
   else

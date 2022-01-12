@@ -2,7 +2,7 @@ cask "accessmenubarapps" do
   version "2.6.1,15"
   sha256 "fe8a08d721af4b9e5e71bb71f3b876169fecde8219b53c01938861c2781fb16c"
 
-  url "https://www.ortisoft.de/resources/AccessMenuBarApps#{version.before_comma}.zip"
+  url "https://www.ortisoft.de/resources/AccessMenuBarApps#{version.csv.first}.zip"
   name "AccessMenuBarApps"
   desc "Instant access for menubar apps"
   homepage "https://www.ortisoft.de/accessmenubarapps/"

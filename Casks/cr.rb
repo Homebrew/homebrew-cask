@@ -2,7 +2,7 @@ cask "cr" do
   version "3.0.56,10"
   sha256 "0b6ba965635e9f9af745421b2579c8c14d8e3931a77ebbb1afc427cd537c18f3"
 
-  url "https://downloads.sourceforge.net/crengine/cr#{version.before_comma}-#{version.after_comma}.dmg"
+  url "https://downloads.sourceforge.net/crengine/cr#{version.csv.first}-#{version.csv.second}.dmg"
   name "Cool Reader"
   desc "XML/CSS based eBook reader"
   homepage "https://sourceforge.net/projects/crengine/"
