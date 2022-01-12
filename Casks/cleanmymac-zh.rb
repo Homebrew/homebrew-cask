@@ -37,7 +37,6 @@ cask "cleanmymac-zh" do
             ]
 
   zap trash: [
-
     "/Users/Shared/CleanMyMac-X Menu",
     "/Users/Shared/CleanMyMac-X",
     "~/Library/Application Scripts/com.macpaw.zh.CleanMyMac#{version.major}.CleanMyMacWidget",
