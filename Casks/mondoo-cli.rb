@@ -19,10 +19,9 @@ cask "mondoo-cli" do
     sudo:       true,
   }
 
-
   zap trash: [
-               '/Library/Mondoo',
-               '/etc/opt/mondoo',
-               '/usr/local/bin/mondoo'
+                '/Library/Mondoo',
+                '/etc/opt/mondoo',
+                '/usr/local/bin/mondoo',
              ]
 end
