@@ -18,6 +18,8 @@ cask "openbci" do
     end
   end
 
+  auto_updates true
+
   app "OpenBCI_GUI.app"
 
   zap trash: "~/Documents/OpenBCI_GUI"
