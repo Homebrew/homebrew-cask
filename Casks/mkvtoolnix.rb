@@ -35,6 +35,11 @@ cask "mkvtoolnix" do
   binary "#{appdir}/MKVToolNix-#{version}.app/Contents/MacOS/mkvinfo"
   binary "#{appdir}/MKVToolNix-#{version}.app/Contents/MacOS/mkvmerge"
   binary "#{appdir}/MKVToolNix-#{version}.app/Contents/MacOS/mkvpropedit"
+  manpage "#{appdir}/MKVToolNix-#{version}.app/Contents/MacOS/man/man1/mkvextract.1"
+  manpage "#{appdir}/MKVToolNix-#{version}.app/Contents/MacOS/man/man1/mkvinfo.1"
+  manpage "#{appdir}/MKVToolNix-#{version}.app/Contents/MacOS/man/man1/mkvmerge.1"
+  manpage "#{appdir}/MKVToolNix-#{version}.app/Contents/MacOS/man/man1/mkvpropedit.1"
+  manpage "#{appdir}/MKVToolNix-#{version}.app/Contents/MacOS/man/man1/mkvtoolnix-gui.1"
 
   zap trash: [
     "~/Library/Preferences/bunkus.org/mkvtoolnix-gui",
