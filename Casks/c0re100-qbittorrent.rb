@@ -1,8 +1,8 @@
 cask "c0re100-qbittorrent" do
-  version "4.3.9.10"
-  sha256 "5f12859b473341429cb3b6480285dfe67b53a836b89f408c55362e2283365fa8"
+  version "4.4.0.10"
+  sha256 "8d4b9a203ff5c048c8208fc40c8d9cff79e22695f0bc8ea7b2ba151728c763c9"
 
-  url "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-#{version}/qBittorrent-#{version}.dmg"
+  url "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-#{version}/qBittorrent_enhanced-#{version}.dmg"
   name "qBittorrent Enhanced Edition"
   desc "Bittorrent client"
   homepage "https://github.com/c0re100/qBittorrent-Enhanced-Edition"
