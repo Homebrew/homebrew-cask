@@ -4,6 +4,7 @@ cask "qlab" do
 
   url "https://qlab.app/downloads/archive/QLab-#{version.csv.first}.zip"
   name "QLab"
+  desc "Sound, video and lighting control"
   homepage "https://qlab.app/"
 
   livecheck do
