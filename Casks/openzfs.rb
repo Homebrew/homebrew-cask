@@ -33,7 +33,7 @@ cask "openzfs" do
     pkg "OpenZFSonOsX-#{version.before_comma}-Big.Sur-11-arm64.pkg"
   end
 
-  url "https://openzfsonosx.org/forum/download/file.php?id=#{version.after_comma}"
+  url "https://openzfsonosx.org/forum/download/file.php?id=#{version.csv.second}"
   name "OpenZFS on OS X"
   desc "ZFS driver and utilities"
   homepage "https://openzfsonosx.org/"

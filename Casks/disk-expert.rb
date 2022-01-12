@@ -2,7 +2,7 @@ cask "disk-expert" do
   version "3.6.3,361"
   sha256 "c2786062fcfa1cfbfbf62eefa605dc0377b79a525ac73bb785b72a0d1732fe78"
 
-  url "https://nektony.com/pro-support/disk-expert/update/update_#{version.before_comma}b#{version.after_comma}.zip"
+  url "https://nektony.com/pro-support/disk-expert/update/update_#{version.csv.first}b#{version.csv.second}.zip"
   name "Disk Expert"
   desc "Disk space analyzer"
   homepage "https://nektony.com/disk-expert"

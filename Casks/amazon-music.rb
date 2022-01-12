@@ -2,7 +2,7 @@ cask "amazon-music" do
   version "8.8.2.2305,23051118_02624dcfac75462d853bb932c93b00fc"
   sha256 "a2ac4cfcdb8d5d043a7e7aaf56528ba06e0d8bd698aa66fa7428ce3c70151925"
 
-  url "https://d2j9xt6n9dg5d3.cloudfront.net/mac/#{version.after_comma}/Amazon+Music+Installer.dmg",
+  url "https://d2j9xt6n9dg5d3.cloudfront.net/mac/#{version.csv.second}/Amazon+Music+Installer.dmg",
       verified: "d2j9xt6n9dg5d3.cloudfront.net/mac/"
   name "Amazon Music"
   desc "Desktop client for Amazon Music"

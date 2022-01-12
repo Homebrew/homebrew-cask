@@ -2,7 +2,7 @@ cask "cirrus" do
   version "1.12,2021.04"
   sha256 "80ed7a29fdaafa54aaf11a455716be15be248424a81301e1352c59696ef63ffa"
 
-  url "https://eclecticlightdotcom.files.wordpress.com/#{version.after_comma.major}/#{version.after_comma.minor}/cirrus#{version.before_comma.no_dots}.zip",
+  url "https://eclecticlightdotcom.files.wordpress.com/#{version.csv.second.major}/#{version.csv.second.minor}/cirrus#{version.csv.first.no_dots}.zip",
       verified: "eclecticlightdotcom.files.wordpress.com/"
   name "Cirrus"
   desc "Inspector for iCloud Drive folders"
