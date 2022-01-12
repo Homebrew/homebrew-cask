@@ -3,7 +3,7 @@ cask "cleanmymac" do
   sha256 "1f415dd5ff9fe03aba01ddbacd1c6e5fb972cf90f5798ac4d3e4ab88c137e230"
 
   url "https://dl.devmate.com/com.macpaw.CleanMyMac#{version.major}/CleanMyMacX.dmg",
-      verified: "dl.devmate.com/com.macpaw.CleanMyMac"
+      verified: "dl.devmate.com/"
   name "CleanMyMac X"
   desc "Tool to remove unnecessary files and folders from disk"
   homepage "https://macpaw.com/cleanmymac"
@@ -14,10 +14,14 @@ cask "cleanmymac" do
   end
 
   auto_updates true
+  conflicts_with cask: "cleanmymac-zh"
 
   app "CleanMyMac X.app"
 
-  uninstall delete:     "/Library/PrivilegedHelperTools/com.macpaw.CleanMyMac#{version.major}.Agent",
+  uninstall delete:     [
+    "/Library/PrivilegedHelperTools/com.macpaw.CleanMyMac#{version.major}.Agent",
+    "/Library/LaunchDaemons/com.macpaw.CleanMyMac#{version.major}.Agent.plist",
+  ],
             launchctl:  [
               "com.macpaw.CleanMyMac#{version.major}.Agent",
               "com.macpaw.CleanMyMac#{version.major}.HealthMonitor",
@@ -33,14 +37,13 @@ cask "cleanmymac" do
             ]
 
   zap trash: [
-    "/Library/LaunchDaemons/com.macpaw.CleanMyMac#{version.major}.Agent.plist",
     "/Users/Shared/CleanMyMac X Menu",
     "/Users/Shared/CleanMyMac X",
     "~/Library/Application Scripts/com.macpaw.CleanMyMac#{version.major}.CleanMyMacWidget",
     "~/Library/Application Support/CleanMyMac X Menu",
     "~/Library/Application Support/CleanMyMac X",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macpaw.cleanmymac#{version.major}.scheduler.sfl*",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macpaw.cleanmymac#{version.major}.sfl*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macpaw.cleanmymac#{version.major}.scheduler.sfl*",
     "~/Library/Caches/CleanMyMac #{version.major}",
     "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.macpaw.CleanMyMac#{version.major}.help*",
     "~/Library/Caches/com.macpaw.CleanMyMac#{version.major}.HealthMonitor",
