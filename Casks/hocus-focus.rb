@@ -2,7 +2,7 @@ cask "hocus-focus" do
   version "1.3,2131"
   sha256 "8a51419112d9626497217a9953460c075480a139e1b1a47b175454be8a04f85a"
 
-  url "https://hocusfoc.us/static/releases/hocusfocus-#{version.before_comma}.zip"
+  url "https://hocusfoc.us/static/releases/hocusfocus-#{version.csv.first}.zip"
   name "Hocus Focus"
   desc "Automatically hides inactive application windows"
   homepage "https://hocusfoc.us/"

@@ -10,7 +10,7 @@ cask "itsycal" do
     sha256 "3c87506496c2f02256112939893bd703686f2efb3c81e34537507727c2792ec8"
   end
 
-  url "https://itsycal.s3.amazonaws.com/Itsycal-#{version.before_comma}.zip",
+  url "https://itsycal.s3.amazonaws.com/Itsycal-#{version.csv.first}.zip",
       verified: "itsycal.s3.amazonaws.com/"
   name "Itsycal"
   desc "Menu bar calendar"

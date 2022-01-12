@@ -2,7 +2,7 @@ cask "ipvanish-vpn" do
   version "3.3.0,67479"
   sha256 "d738cc5db300b512c2329d349e5c4df7dfaba78935e09b89a90f98974ddada5f"
 
-  url "https://www.ipvanish.com/software/osx/IPVanish_v#{version.before_comma}_b67497.zip"
+  url "https://www.ipvanish.com/software/osx/IPVanish_v#{version.csv.first}_b67497.zip"
   name "IPVanish"
   desc "VPN client"
   homepage "https://www.ipvanish.com/"

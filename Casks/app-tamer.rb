@@ -2,7 +2,7 @@ cask "app-tamer" do
   version "2.6.4,10674"
   sha256 "ee84b3dbc0474777c7e886fc86c95f4e392dec4fcdbb5a141ff2fb0f1e28ec48"
 
-  url "https://www.stclairsoft.com/download/AppTamer-#{version.before_comma}.dmg"
+  url "https://www.stclairsoft.com/download/AppTamer-#{version.csv.first}.dmg"
   name "AppTamer"
   desc "CPU management applicataion"
   homepage "https://www.stclairsoft.com/AppTamer/"

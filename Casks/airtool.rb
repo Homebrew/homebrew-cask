@@ -2,7 +2,7 @@ cask "airtool" do
   version "2.3.2,10"
   sha256 "0cb877f0ec485ee100db44ce155cc1c39d242a37db60e6951fa8b9f0e2e669e3"
 
-  url "https://www.intuitibits.com/downloads/Airtool_#{version.before_comma}.pkg"
+  url "https://www.intuitibits.com/downloads/Airtool_#{version.csv.first}.pkg"
   name "Airtool"
   desc "Capture Wi-Fi packets"
   homepage "https://www.intuitibits.com/products/airtool/"

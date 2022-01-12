@@ -2,7 +2,7 @@ cask "meld" do
   version "3.21.0-r3,19"
   sha256 "50a4a45b3b7f44910c1a4c782c044579bc9dd09432c5e0a965dbeb973bbc767e"
 
-  url "https://github.com/yousseb/meld/releases/download/osx-#{version.after_comma}/meldmerge.dmg",
+  url "https://github.com/yousseb/meld/releases/download/osx-#{version.csv.second}/meldmerge.dmg",
       verified: "github.com/yousseb/meld/"
   name "Meld for OSX"
   desc "Visual diff and merge tool"

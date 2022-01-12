@@ -2,7 +2,7 @@ cask "go-server" do
   version "21.4.0,13469"
   sha256 "475ba8cfd3e35b5311df3702b5d6f6046b0ce8c5f01db01fefbb22cef5a73519"
 
-  url "https://download.gocd.io/binaries/#{version.before_comma}-#{version.after_comma}/osx/go-server-#{version.before_comma}-#{version.after_comma}-osx.zip",
+  url "https://download.gocd.io/binaries/#{version.csv.first}-#{version.csv.second}/osx/go-server-#{version.csv.first}-#{version.csv.second}-osx.zip",
       verified: "download.gocd.io/binaries/"
   name "Go Server"
   name "GoCD Server"

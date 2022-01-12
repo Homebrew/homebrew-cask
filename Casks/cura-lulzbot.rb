@@ -2,7 +2,7 @@ cask "cura-lulzbot" do
   version "3.6.21,ce3e47a08065c6687f0a226a4f1b2dc3"
   sha256 "1548b15734ab2299f2fb8106e1b6f3242e5efe66286306f64b7675a0f354ff2c"
 
-  url "https://gitlab.com/lulzbot3d/cura-le/cura-lulzbot/uploads/#{version.after_comma}/cura-lulzbot_#{version.before_comma}.dmg",
+  url "https://gitlab.com/lulzbot3d/cura-le/cura-lulzbot/uploads/#{version.csv.second}/cura-lulzbot_#{version.csv.first}.dmg",
       verified: "gitlab.com/lulzbot3d/cura-le/cura-lulzbot/"
   name "Cura LulzBot Edition"
   desc "3D printing solution"

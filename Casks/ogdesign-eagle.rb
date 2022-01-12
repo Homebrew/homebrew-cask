@@ -9,7 +9,7 @@ cask "ogdesign-eagle" do
     sha256 "67004ffb71eb0ff095162a0187b35056930e1225cd73e0d6dbbfb3211db9e395"
   end
 
-  url "https://eagleapp.s3-accelerate.amazonaws.com/releases/Eagle-#{version.before_comma}-#{arch}#{version.after_comma}.dmg",
+  url "https://eagleapp.s3-accelerate.amazonaws.com/releases/Eagle-#{version.csv.first}-#{arch}#{version.csv.second}.dmg",
       verified: "eagleapp.s3-accelerate.amazonaws.com/"
   name "Eagle"
   desc "Organize all your reference images in one place"

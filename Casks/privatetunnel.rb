@@ -2,7 +2,7 @@ cask "privatetunnel" do
   version "3.0.2,3242"
   sha256 "9d0710b152bc50314a09849eaa011166a87ef85a8b93e05d4f089251e978ca69"
 
-  url "https://swupdate.openvpn.net/downloads/privatetunnel/private-tunnel-#{version.before_comma}.#{version.after_comma}_signed.dmg",
+  url "https://swupdate.openvpn.net/downloads/privatetunnel/private-tunnel-#{version.csv.first}.#{version.csv.second}_signed.dmg",
       verified: "swupdate.openvpn.net/downloads/privatetunnel/"
   name "Private Tunnel"
   desc "VPN client"

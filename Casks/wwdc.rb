@@ -2,7 +2,7 @@ cask "wwdc" do
   version "7.3.3,1024"
   sha256 "b1dde361e43c58f30d40e1fefab38699322e95a98b3eb4325177e4a7abea1ea4"
 
-  url "https://github.com/insidegui/WWDC/releases/download/#{version.before_comma}/WWDC_v#{version.before_comma}-#{version.after_comma}.dmg",
+  url "https://github.com/insidegui/WWDC/releases/download/#{version.csv.first}/WWDC_v#{version.csv.first}-#{version.csv.second}.dmg",
       verified: "github.com/insidegui/WWDC/"
   name "WWDC"
   desc "Allows access to WWDC livestreams, videos and sessions"

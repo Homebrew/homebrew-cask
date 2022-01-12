@@ -2,7 +2,7 @@ cask "ubar" do
   version "4.2.0,420"
   sha256 "23ffd2b1df89d0df1a795923a2a3df8f1025c2bf1329e9c54a4372db51039077"
 
-  url "https://www.brawersoftware.com/downloads/ubar/ubar#{version.after_comma}.zip"
+  url "https://www.brawersoftware.com/downloads/ubar/ubar#{version.csv.second}.zip"
   name "uBar"
   desc "Window manager and productivity tool"
   homepage "https://brawersoftware.com/products/ubar"

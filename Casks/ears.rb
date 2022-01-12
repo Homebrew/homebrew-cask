@@ -2,7 +2,7 @@ cask "ears" do
   version "1.3.1,18"
   sha256 "c67da49f54f18c43ce04127ab48ec1a5cf8421ff174a2d5b453cd585b70dd9f5"
 
-  url "https://download.clickontyler.com/ears/ears_#{version.after_comma}.zip"
+  url "https://download.clickontyler.com/ears/ears_#{version.csv.second}.zip"
   name "Ears"
   desc "Instant audio switcher"
   homepage "https://clickontyler.com/ears/"

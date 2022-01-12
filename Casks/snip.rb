@@ -2,7 +2,7 @@ cask "snip" do
   version "2.0,5771"
   sha256 "2e9c2863d4412dbfa1323c1f2cb056c6a81b77d520c8b2a732cade1e7b40df00"
 
-  url "https://snip.qq.com/resources/Snip_V#{version.before_comma}_#{version.after_comma}.dmg"
+  url "https://snip.qq.com/resources/Snip_V#{version.csv.first}_#{version.csv.second}.dmg"
   name "Snip"
   homepage "https://snip.qq.com/"
 

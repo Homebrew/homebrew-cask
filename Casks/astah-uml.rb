@@ -2,7 +2,7 @@ cask "astah-uml" do
   version "8.4.1,827bdf"
   sha256 "d71853df04a935ee04d11bee3d06bb0688f1220e9348f09d2db058189982a870"
 
-  url "https://cdn.change-vision.com/files/astah-uml-#{version.before_comma.dots_to_underscores}-#{version.after_comma}-MacOs.dmg",
+  url "https://cdn.change-vision.com/files/astah-uml-#{version.csv.first.dots_to_underscores}-#{version.csv.second}-MacOs.dmg",
       verified: "cdn.change-vision.com/files/"
   name "Change Vision Astah UML"
   desc "UML diagramming tool with mind mapping"

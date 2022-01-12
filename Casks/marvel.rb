@@ -2,7 +2,7 @@ cask "marvel" do
   version "10.9.7,5072"
   sha256 "87e24bb48022ab88c91d9a9509220943728004d6578df68cd2b52a9c5b7724fd"
 
-  url "https://storage.googleapis.com/sketch-plugin/#{version.before_comma}/Marvel.zip",
+  url "https://storage.googleapis.com/sketch-plugin/#{version.csv.first}/Marvel.zip",
       verified: "storage.googleapis.com/sketch-plugin/"
   name "Marvel"
   desc "Prototyping, testing and handoff tools"

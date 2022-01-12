@@ -9,7 +9,7 @@ cask "synergy" do
     sha256 "2b3358b8f94de63a74d1b29ea8a70f3e06b110b521a909403ec908ead51a8252"
   end
 
-  url "https://binaries.symless.com/synergy/v#{version.before_comma.major}-core-standard/#{version.before_comma}-stable.#{version.after_comma}/synergy_#{version.before_comma}-stable.#{version.after_comma}_macos_#{arch}.dmg"
+  url "https://binaries.symless.com/synergy/v#{version.csv.first.major}-core-standard/#{version.csv.first}-stable.#{version.csv.second}/synergy_#{version.csv.first}-stable.#{version.csv.second}_macos_#{arch}.dmg"
   name "Synergy"
   desc "Keyboard and mouse sharing tool - open-source core"
   homepage "https://symless.com/synergy"

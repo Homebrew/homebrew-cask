@@ -2,7 +2,7 @@ cask "opencpn" do
   version "5.2.4,1.6b314e6"
   sha256 "05152e347480519bc010bb334b27601520671ae32953d8e915131ed54da738ca"
 
-  url "https://github.com/OpenCPN/OpenCPN/releases/download/Release_#{version.before_comma}/OpenCPN_#{version.before_comma}+#{version.after_comma}.pkg",
+  url "https://github.com/OpenCPN/OpenCPN/releases/download/Release_#{version.csv.first}/OpenCPN_#{version.csv.first}+#{version.csv.second}.pkg",
       verified: "github.com/OpenCPN/OpenCPN/"
   name "OpenCPN"
   desc "Full-featured and concise ChartPlotter/Navigator"

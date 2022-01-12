@@ -2,7 +2,7 @@ cask "vanilla" do
   version "2.0.3,49"
   sha256 "a33d62b5ddaebb7f5e56ce0dd2407a08b564f0750705b3b809808992283a2d7e"
 
-  url "https://macrelease.matthewpalmer.net/distribution/appcasts/Vanilla-#{version.after_comma}.dmg"
+  url "https://macrelease.matthewpalmer.net/distribution/appcasts/Vanilla-#{version.csv.second}.dmg"
   name "Vanilla"
   desc "Tool to hide menu bar icons"
   homepage "https://matthewpalmer.net/vanilla/"

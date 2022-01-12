@@ -2,7 +2,7 @@ cask "soulver" do
   version "3.5.4,255"
   sha256 "40474eb11c036de7e924c058ac27db0751a98e04676ae5058e862709aaefe88b"
 
-  url "https://soulver.app/mac/sparkle/soulver-#{version.before_comma}-#{version.after_comma}.zip"
+  url "https://soulver.app/mac/sparkle/soulver-#{version.csv.first}-#{version.csv.second}.zip"
   name "Soulver"
   desc "Notepad with a built-in calculator"
   homepage "https://soulver.app/"

@@ -2,7 +2,7 @@ cask "openarena" do
   version "0.8.8,r28"
   sha256 "5a8faf7f5b51f351b0a1618c06b6b98a5f1a6758f1d39818de2c87df2a0bac4a"
 
-  url "https://download.tuxfamily.org/openarena/rel/#{version.before_comma.no_dots}/openarena-#{version.before_comma}.zip",
+  url "https://download.tuxfamily.org/openarena/rel/#{version.csv.first.no_dots}/openarena-#{version.csv.first}.zip",
       verified: "download.tuxfamily.org/openarena/"
   name "OpenArena"
   homepage "https://openarena.ws/smfnews.php"

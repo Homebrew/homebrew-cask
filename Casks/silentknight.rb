@@ -2,7 +2,7 @@ cask "silentknight" do
   version "1.17,2021.10"
   sha256 "9f0bae8ae2d7941d45d547044421a7e65b0ee6c15459359f3d21bea4fecc2736"
 
-  url "https://eclecticlightdotcom.files.wordpress.com/#{version.after_comma.major}/#{version.after_comma.minor}/silentknight#{version.before_comma.no_dots}.zip",
+  url "https://eclecticlightdotcom.files.wordpress.com/#{version.csv.second.major}/#{version.csv.second.minor}/silentknight#{version.csv.first.no_dots}.zip",
       verified: "eclecticlightdotcom.files.wordpress.com/"
   name "SilentKnight"
   desc "Automatically checks computer's security"

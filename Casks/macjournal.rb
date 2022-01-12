@@ -2,7 +2,7 @@ cask "macjournal" do
   version "7.3,341"
   sha256 "265135648f1f3164818b450dd2f350c411d937ad223d1bda04cb000953ca0256"
 
-  url "https://danschimpf.com/macjournal/MacJournal_#{version.before_comma}.zip"
+  url "https://danschimpf.com/macjournal/MacJournal_#{version.csv.first}.zip"
   name "MacJournal"
   desc "Journaling and blogging software"
   homepage "https://danschimpf.com/"

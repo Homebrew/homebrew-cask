@@ -2,7 +2,7 @@ cask "triplecheese" do
   version "1.3,12092"
   sha256 "d2ed37186ddffe360fb564f357193ac66d09c370fecebbca71e619268ecfb0a7"
 
-  url "https://uhedownloads-heckmannaudiogmb.netdna-ssl.com/releases/TripleCheese_#{version.before_comma.no_dots}_#{version.after_comma}_Mac.zip",
+  url "https://uhedownloads-heckmannaudiogmb.netdna-ssl.com/releases/TripleCheese_#{version.csv.first.no_dots}_#{version.csv.second}_Mac.zip",
       verified: "uhedownloads-heckmannaudiogmb.netdna-ssl.com/"
   name "Triple Cheese"
   desc "Luscious and cheesy synthesizer"

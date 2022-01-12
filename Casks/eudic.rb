@@ -2,7 +2,7 @@ cask "eudic" do
   version "4.1.5,1065"
   sha256 "d593ff350a50faaa4bd5945f9bb0357b1689007b7e1546cdff3fddb71c11b76a"
 
-  url "https://static.frdic.com/pkg/eudicmac.dmg?v=#{version.after_comma}",
+  url "https://static.frdic.com/pkg/eudicmac.dmg?v=#{version.csv.second}",
       verified:   "static.frdic.com/",
       user_agent: :fake
   name "Eudic"

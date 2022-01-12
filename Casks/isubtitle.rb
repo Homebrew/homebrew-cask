@@ -7,7 +7,7 @@ cask "isubtitle" do
     sha256 "41b7bdaa76d1658bea862822521678f3e8432dd5e941101c4ab045eec17c3ca8"
   end
 
-  url "https://www.bitfield.se/isubtitle#{version.major}/download/iSubtitle_#{version.before_comma}.zip"
+  url "https://www.bitfield.se/isubtitle#{version.major}/download/iSubtitle_#{version.csv.first}.zip"
   name "iSubtitle"
   desc "Inject subtitle tracks, chapter markers and metadata into your media"
   homepage "https://www.bitfield.se/isubtitle/"

@@ -2,7 +2,7 @@ cask "playmemories-home" do
   version "3.6.01,zb2OnHfINu"
   sha256 "99de6ea54029d14b7c7b94d7a4d5096470a65a26a3aff53164213272b0d33896"
 
-  url "https://pmb.update.sony.net/PMH/#{version.after_comma}/PMHOME_#{version.before_comma.no_dots}DL.dmg",
+  url "https://pmb.update.sony.net/PMH/#{version.csv.second}/PMHOME_#{version.csv.first.no_dots}DL.dmg",
       verified: "pmb.update.sony.net/PMH/"
   name "PlayMemories Home"
   desc "Freeware that manages and edits photos and videos"

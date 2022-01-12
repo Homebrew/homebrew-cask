@@ -2,7 +2,7 @@ cask "replacicon" do
   version "1.3,20"
   sha256 "8db03ca6375f0fe1e67fa8415ac8028199cb75011d5a03f7d064e271ee3b929d"
 
-  url "https://replacicon.app/builds/Replacicon_#{version.after_comma}.zip"
+  url "https://replacicon.app/builds/Replacicon_#{version.csv.second}.zip"
   name "Replacicon"
   desc "App icon replacement utility"
   homepage "https://replacicon.app/"
