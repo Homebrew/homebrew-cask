@@ -18,8 +18,8 @@ cask "qlab" do
 
   zap trash: [
     "~/Library/Application Support/QLab",
-    "~/Library/HTTPStorages/com.figure53.QLab.4",
-    "~/Library/Preferences/com.figure53.QLab.4.plist",
-    "~/Library/Saved Application State/com.figure53.QLab.4.savedState",
+    "~/Library/HTTPStorages/com.figure53.QLab.#{version.major}",
+    "~/Library/Preferences/com.figure53.QLab.#{version.major}.plist",
+    "~/Library/Saved Application State/com.figure53.QLab.#{version.major}.savedState",
   ]
 end
