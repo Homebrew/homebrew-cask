@@ -18,4 +18,11 @@ cask "mondoo-cli" do
     executable: "/Library/Mondoo/#{version}/uninstall.sh",
     sudo:       true,
   }
+
+
+  zap trash: [
+               '/Library/Mondoo',
+               '/etc/opt/mondoo',
+               '/usr/local/bin/mondoo'
+             ]
 end
