@@ -6,7 +6,7 @@ cask "cleanmymac-ch" do
       verified: "dl.devmate.com/com.macpaw.zh.CleanMyMac"
   name "CleanMyMac X Chinese"
   desc "Tool to remove unnecessary files and folders from disk. China Special Edition"
-  homepage "https://macpaw.com/cleanmymac"
+  homepage "https://www.mycleanmymac.com/"
 
   livecheck do
     url "https://updates.devmate.com/com.macpaw.zh.CleanMyMac#{version.major}.xml"
