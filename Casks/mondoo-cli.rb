@@ -8,8 +8,8 @@ cask "mondoo-cli" do
   homepage "https://mondoo.io/"
 
   livecheck do
-    url "https://releases.mondoo.io/mondoo/latest"
-    regex(%r{href='\.\./(\d+.\d+.\d+)}i)
+    url "https://releases.mondoo.io/mondoo/latest/index.html"
+    regex(%r{href='\.\./(\d+(?:\.\d+)+)}i)
   end
 
   pkg "mondoo_#{version}_darwin_universal.pkg"
