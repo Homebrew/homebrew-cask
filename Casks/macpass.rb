@@ -13,10 +13,13 @@ cask "macpass" do
 
   app "MacPass.app"
 
+  uninstall quit: "com.hicknhacksoftware.MacPass"
+
   zap delete: [
     "~/Library/Application Support/MacPass",
     "~/Library/Caches/com.hicknhacksoftware.MacPass",
     "~/Library/Cookies/com.hicknhacksoftware.MacPass.binarycookies",
+    "~/Library/HTTPStorages/com.hicknhacksoftware.MacPass",
     "~/Library/Preferences/com.hicknhacksoftware.MacPass.plist",
     "~/Library/Saved Application State/com.hicknhacksoftware.MacPass.savedState",
   ]

@@ -4,9 +4,9 @@ cask "standard-notes" do
   version "3.9.13"
 
   if Hardware::CPU.intel?
-    sha256 "de625b569e3330a8b86e28e87dc4c800e250f2c555d16909396388228639feeb"
+    sha256 "d7e30f50e22e06868e5752d0fe1b47aa629d10e85bb7d47d9c184328b6447d70"
   else
-    sha256 "aa29dda83dfc44e6a264dc2e9087307293b2b01d48ca9bb157955e2c27e92ae8"
+    sha256 "cd89476ed24f68bf59797e7a1b1ad6ee8127b3e5769d5387ab2d6a1e94de4c0e"
   end
 
   url "https://github.com/standardnotes/desktop/releases/download/v#{version}/Standard-Notes-#{version}-mac-#{arch}.zip",
