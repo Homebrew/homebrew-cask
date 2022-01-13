@@ -1,5 +1,5 @@
 cask "mkvtoolnix" do
-  if MacOS.version <= "10.9"
+  if MacOS.version <= "10.10"
     version "24.0.0"
     sha256 "758da621d3a92358885333b767d64b024197a8147a339b1a0d14e938673452f9"
   elsif MacOS.version <= "10.11"
