@@ -6,7 +6,7 @@ cask "subsurface" do
     url "https://subsurface-divelog.org/downloads/Subsurface-#{version}-10.13+14.dmg"
   elsif MacOS.version <= :big_sur
       sha256 "b80919d25d6a998df20064032d7fc06661cbd2aedbf0a024a2357178897f7bf9"
-      url "https://subsurface-divelog.org/downloads/Subsurface-#{version}-10.15+11.dmg"  
+      url "https://subsurface-divelog.org/downloads/Subsurface-#{version}-10.15+11.0.dmg"  
   else
     sha256 "b80919d25d6a998df20064032d7fc06661cbd2aedbf0a024a2357178897f7bf9"
     url "https://subsurface-divelog.org/downloads/Subsurface-#{version}.dmg"
@@ -15,6 +15,10 @@ cask "subsurface" do
   name "Subsurface"
   desc "Open source divelog program"
   homepage "https://subsurface-divelog.org/"
+  
+  livecheck do
+    url "https://subsurface-divelog.org/downloads/"
+  end
 
   app "Subsurface.app"
 end
