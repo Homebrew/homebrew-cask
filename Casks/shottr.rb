@@ -1,18 +1,15 @@
 cask "shottr" do
-  version "1.5.1,12"
-  sha256 "e495fa0486d98db139d6c63de1fd86cc2299c57fef68aa2ad99c9e5227e2a46f"
+  version "1.5.2"
+  sha256 "a6827cb18392c9853526f033076a21fca923d08594653cd7d8d6d1000bb27e1e"
 
-  url "https://shottr.cc/dl/Shottr-#{version.csv.first}-#{version.csv.second}.dmg"
+  url "https://shottr.cc/dl/Shottr-#{version}.dmg"
   name "Shottr"
   desc "Screenshot measurement and annotation tool"
   homepage "https://shottr.cc/"
 
   livecheck do
     url :homepage
-    regex(/Shottr-(\d+(?:\.\d+)+)-(\d+)\.dmg/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
-    end
+    regex(/Shottr-(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   depends_on macos: ">= :catalina"
