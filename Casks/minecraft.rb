@@ -1,5 +1,5 @@
 cask "minecraft" do
-  version "973,1"
+  version "1036"
   sha256 :no_check
 
   url "https://launcher.mojang.com/download/Minecraft.dmg",
