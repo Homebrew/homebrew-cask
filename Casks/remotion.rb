@@ -5,7 +5,7 @@ cask "remotion" do
   url "https://updates.remotion.com/installers/Remotion%20#{version}.dmg"
   name "remotion"
   desc "Communication tool for remote teams"
-  homepage "https://remotion.com/"
+  homepage "https://www.remotion.com/"
 
   livecheck do
     url "https://updates.remotion.com/latest"
