@@ -1,6 +1,6 @@
 cask "orange" do
-  version "3.31.0"
-  sha256 "35716b799c9d5c301427efb8a9c4929637752126d50addd1fbf3d3616be04a4b"
+  version "3.31.1"
+  sha256 "be92fdeeeb3336456d56829bd473538e4abae70269285b7990f8cbc72a91951c"
 
   url "https://download.biolab.si/download/files/Orange#{version.major}-#{version}-Python3.8.8.dmg"
   name "Orange"
@@ -9,7 +9,7 @@ cask "orange" do
 
   livecheck do
     url "https://download.biolab.si/download/files/"
-    regex(/Orange3[._-]v?(\d+(?:\.\d+)+)\.zip/i)
+    regex(/Orange#{version.major}[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
   app "Orange#{version.major}.app"
