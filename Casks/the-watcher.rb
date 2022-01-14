@@ -1,0 +1,16 @@
+cask "the-watcher" do
+  version "1.0"
+  sha256 "3a38bb76f147a377f4ea25983bcf5bf6a883d08cc3a75d3317c2aba65fbe6bf6"
+
+  url "https://watcher.app/downloads/TheWatcher_v#{version}.zip"
+  name "The Watcher"
+  desc "Monitor ETH, Gas, & Wallets"
+  homepage "https://watcher.app/"
+
+  livecheck do
+    url "https://watcher.app/downloads/latest-version.txt"
+    regex(/([0-9.]+)/)
+  end
+
+  app "The Watcher.app"
+end
