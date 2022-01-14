@@ -17,7 +17,7 @@ cask "subsurface" do
   homepage "https://subsurface-divelog.org/"
 
   livecheck do
-    url "https://subsurface-divelog.org/downloads/"
+    url "https://subsurface.github.io/download/"
     regex(/href=.*?Subsurface[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
