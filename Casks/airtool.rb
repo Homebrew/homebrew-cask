@@ -1,6 +1,6 @@
 cask "airtool" do
-  version "2.3.2,10"
-  sha256 "0cb877f0ec485ee100db44ce155cc1c39d242a37db60e6951fa8b9f0e2e669e3"
+  version "2.3.3,11"
+  sha256 "40e2df85e5d6d1e8d26f87786046ee74d5ae583f4c337595c569df1c1cedda89"
 
   url "https://www.intuitibits.com/downloads/Airtool_#{version.csv.first}.pkg"
   name "Airtool"
@@ -14,7 +14,7 @@ cask "airtool" do
 
   auto_updates true
 
-  pkg "Airtool_#{version.before_comma}.pkg"
+  pkg "Airtool_#{version.csv.first}.pkg"
 
   uninstall_preflight do
     set_ownership "/Library/Application Support/Airtool #{version.major}"
