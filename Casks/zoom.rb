@@ -45,7 +45,6 @@ cask "zoom" do
             delete:    [
               "/Applications/zoom.us.app",
               "/Library/Internet Plug-Ins/ZoomUsPlugIn.plugin",
-              "/Library/LaunchDaemons/us.zoom.ZoomDaemon.plist",
               "/Library/Logs/DiagnosticReports/zoom.us*",
               "/Library/PrivilegedHelperTools/us.zoom.ZoomDaemon",
             ]
@@ -78,5 +77,6 @@ cask "zoom" do
     "~/Library/Safari/PerSiteZoomPreferences.plist",
     "~/Library/SafariTechnologyPreview/PerSiteZoomPreferences.plist",
     "~/Library/Saved Application State/us.zoom.xos.savedState",
+    "~/Library/WebKit/us.zoom.xos",
   ]
 end

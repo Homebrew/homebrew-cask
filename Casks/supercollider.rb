@@ -1,6 +1,6 @@
 cask "supercollider" do
-  version "3.12.1"
-  sha256 "7a987249751f7eb5d1678b01e8ade88b7afd205e907afdbd1e0d587856a1ea71"
+  version "3.12.2"
+  sha256 "57728f2e2a86ccd64ab1c0688f75c41797adf892db1d63f9f29d753f78378448"
 
   url "https://github.com/supercollider/supercollider/releases/download/Version-#{version}/SuperCollider-#{version}-macOS.dmg",
       verified: "github.com/supercollider/supercollider/"
@@ -11,7 +11,7 @@ cask "supercollider" do
   livecheck do
     url :url
     strategy :git
-    regex(/^Version-(\d+(?:\.\d+)*)$/i)
+    regex(/^Version-(\d+(?:\.\d+)+)$/i)
   end
 
   app "SuperCollider.app"

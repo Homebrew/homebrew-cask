@@ -67,18 +67,16 @@ cask "cocktail" do
 
     livecheck do
       url :homepage
-      strategy :page_match
       regex(/macOS\s*11(?:\.\d+)*.*?(\d+(?:\.\d+)+)/i)
     end
   else
-    version "15.2"
-    sha256 "ce90ffe2089149a241e92503998ae5d65593d82bb70fbadea3c9cfc9f032e353"
+    version "15.2.1"
+    sha256 "788a9b81339e5d826cc6d2ce5d66f8f6f986178d979369841d40becd40ab2ed1"
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}ME.dmg"
 
     livecheck do
       url :homepage
-      strategy :page_match
       regex(/macOS\s*12(?:\.\d+)*.*?(\d+(?:\.\d+)+)/i)
     end
   end

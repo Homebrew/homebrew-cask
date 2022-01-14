@@ -2,7 +2,7 @@ cask "icc" do
   version "1.0,7648"
   sha256 "d512be0aaa6e7189f863b0b80bb4e8cc0fdf86c42bbdec13b8cd3e09218931dd"
 
-  url "https://s3-us-west-2.amazonaws.com/download.chessclub.com/desktop/mac/ICCforMac.r#{version.after_comma}.pkg",
+  url "https://s3-us-west-2.amazonaws.com/download.chessclub.com/desktop/mac/ICCforMac.r#{version.csv.second}.pkg",
       verified: "s3-us-west-2.amazonaws.com/download.chessclub.com/"
   name "International Chess Club"
   desc "Chess club client"
