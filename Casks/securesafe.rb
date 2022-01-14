@@ -9,8 +9,7 @@ cask "securesafe" do
 
   livecheck do
     url "https://www.securesafe.com/en/downloads"
-    strategy :page_match
-    regex(/securesafe-(\d+(?:\.\d+)*)\.pkg/i)
+    regex(/securesafe-(\d+(?:\.\d+)+)\.pkg/i)
   end
 
   depends_on macos: ">= :mojave"
