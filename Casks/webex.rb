@@ -16,9 +16,7 @@ cask "webex" do
 
   app "Webex.app"
 
-  uninstall signal: [
-    ["TERM", "Cisco-Systems.Spark"],
-  ]
+  uninstall signal: ["TERM", "Cisco-Systems.Spark"]
 
   zap trash: [
     "~/Library/Caches/Cisco-Systems.Spark",
