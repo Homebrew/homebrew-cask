@@ -1,17 +1,17 @@
 cask "mkvtoolnix" do
-  if MacOS.version <= "10.10"
+  if MacOS.version <= :yosemite
     version "24.0.0"
     sha256 "758da621d3a92358885333b767d64b024197a8147a339b1a0d14e938673452f9"
-  elsif MacOS.version <= "10.11"
+  elsif MacOS.version <= :el_capitan
     version "29.0.0"
     sha256 "209578d5d25adb37a2cf857139afb35a421a64b104c2d59af0476d609037244d"
-  elsif MacOS.version <= "10.13" # 10.12-10.13
+  elsif MacOS.version <= :high_sierra
     version "41.0.0"
     sha256 "2eb34d57209f6dc4d8ec9809028affb0ce8a7edad8370b36abf8996edbb9ac86"
-  elsif MacOS.version <= "10.14"
+  elsif MacOS.version <= :mojave
     version "53.0.0"
     sha256 "bb6d0ba4e0052b2831de0ae29ef3d0d4c7b4d0933b258455c248c1a1c5f913a0"
-  else # 10.15+
+  else
     version "64.0.0"
     sha256 "72999f645e7e5989cd33efcd7383514874c4e65b03ad964f621c40a1254523cc"
   end
@@ -23,7 +23,6 @@ cask "mkvtoolnix" do
 
   livecheck do
     url "https://mkvtoolnix.download/macos/"
-    strategy :page_match
     regex(%r{href=.*?/MKVToolNix-(\d+(?:\.\d+)+)\.dmg}i)
   end
 
