@@ -5,7 +5,6 @@ cask "yuque" do
 
   if Hardware::CPU.intel?
     sha256 "b81398d9bc7b241deeb19e73ccea9c48229ac791617dc4cc8de518b553cdf978"
-        verified: "app.nlark.com/yuque-desktop/"
   else
     sha256 "58ca2a09b575ebc118bcb9c800a3c72b1bb5142ec17b1376f1bfc842ffbc5328"
   end
