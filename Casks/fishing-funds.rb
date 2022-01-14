@@ -15,11 +15,6 @@ cask "fishing-funds" do
   desc "Display real-time trends of Chinese funds in the menubar"
   homepage "https://ff.1zilc.top/"
 
-  livecheck do
-    url :url
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
-  end
-
   app "Fishing Funds.app"
 
   zap trash: [
