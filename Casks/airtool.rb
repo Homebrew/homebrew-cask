@@ -14,7 +14,7 @@ cask "airtool" do
 
   auto_updates true
 
-  pkg "Airtool_#{version.before_comma}.pkg"
+  pkg "Airtool_#{version.csv.first}.pkg"
 
   uninstall_preflight do
     set_ownership "/Library/Application Support/Airtool #{version.major}"
