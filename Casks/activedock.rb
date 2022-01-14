@@ -15,5 +15,5 @@ cask "activedock" do
 
   depends_on macos: ">= :sierra"
 
-  app "ActiveDock #{version.before_comma.major}.app"
+  app "ActiveDock #{version.csv.first.major}.app"
 end
