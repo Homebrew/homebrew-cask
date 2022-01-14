@@ -2,6 +2,8 @@ cask "playcover" do
   if MacOS.version <= :big_sur
     version "0.9.2"
     sha256 "cbcc51a37079219d171ac7eb41eb51c7469192628db5db2359670ee25831d87a"
+    url "https://github.com/iVoider/PlayCover/releases/download/#{version}/PlayCover.#{version}.zip",
+        verified: "github.com/iVoider/PlayCover/"
 
     livecheck do
       skip "Last supported version for Big Sur"
@@ -9,16 +11,16 @@ cask "playcover" do
 
     app "PlayCover #{version}/PlayCover.app"
   else
-    version "0.9.63"
-    sha256 "cb8a93c2a3d366804baf5f33937651a343832f6f4c75ccadaf3cd16e1658f5cc"
+    version "0.9.7"
+    sha256 "ce7271b1780a9e2ff17406f32ccafbf9fbb04597636ed848879020ab6c0a9117"
+    url "https://github.com/iVoider/PlayCover/releases/download/#{version}/PlayCover_#{version}.zip",
+        verified: "github.com/iVoider/PlayCover/"
 
-    container nested: "PlayCover #{version}.dmg"
+    container nested: "PlayCover_#{version}.dmg"
 
     app "PlayCover.app"
   end
 
-  url "https://github.com/iVoider/PlayCover/releases/download/#{version}/PlayCover.#{version}.zip",
-      verified: "github.com/iVoider/PlayCover/"
   name "PlayCover"
   desc "Sideload iOS apps and games"
   homepage "https://www.playcover.me/"
