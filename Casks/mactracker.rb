@@ -1,6 +1,3 @@
-# typed: false
-# frozen_string_literal: true
-
 cask "mactracker" do
   version "7.11.1"
   sha256 "c5a96d50df73dcc31317c8340705317c06d9a8fcfdb6c621782e0d1d802d72f6"
