@@ -12,7 +12,7 @@ cask "cron" do
   url "https://download.todesktop.com/210303leazlircz/Cron%20#{version}-#{arch}-mac.zip",
       verified: "download.todesktop.com/210303leazlircz/"
   name "Cron Calendar"
-  desc "Next-generation calendar for professionals and teams"
+  desc "Calendar for professionals and teams"
   homepage "https://cron.com/"
 
   livecheck do
