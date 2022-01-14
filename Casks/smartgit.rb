@@ -9,12 +9,12 @@ cask "smartgit" do
     sha256 "af5fbf8db26edde3d996d99c6e82287332598359fe63ff2cd97c712a1685a2ea"
   elsif Hardware::CPU.intel?
     arch = "x86_64"
-    version "21.2.0"
-    sha256 "eba7fb71aca69c126ad813ea063c45179f2fe9d6bc4fcd85ef8d2e092f79d5bc"
+    version "21.2.1"
+    sha256 "5bf744e71c4be03e4428dc26fbe6ab5f10210b20b9e1cf972f25545cc71fec1c"
   else
     arch = "aarch64"
-    version "21.2.0"
-    sha256 "2fb4a2bf57d2181be1d9bce91122c0dd650fb74c6edcee37e0fe4c0326a2d213"
+    version "21.2.1"
+    sha256 "f07c995b7c259ffb47b0e6c03cd8590c3f3f4740ef5547ddde9637051fd29470"
   end
 
   url "https://www.syntevo.com/downloads/smartgit/smartgit-#{arch}-#{version.dots_to_underscores}.dmg"
