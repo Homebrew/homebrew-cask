@@ -1,6 +1,6 @@
 cask "burp-suite-professional" do
-  version "2021.10.3"
-  sha256 "c96f482d59e34e424c73da3bd265366f487bdf1bae32590755880cded2c9bd9e"
+  version "2021.12.1"
+  sha256 "f555221aeea3ed6ce2b2377cc997b352c4f4614fe897baeb1c9518a6bdd641a9"
 
   url "https://portswigger.net/burp/releases/download?product=pro&version=#{version}&type=MacOsx"
   name "Burp Suite Professional"
@@ -24,18 +24,7 @@ cask "burp-suite-professional" do
     end
   end
 
-  installer script: {
-    executable: "Burp Suite Professional Installer.app/Contents/MacOS/JavaApplicationStub",
-    args:       ["-q"],
-    sudo:       true,
-  }
-
-  postflight do
-    set_ownership "/Applications/Burp Suite Professional.app"
-    set_permissions "/Applications/Burp Suite Professional.app", "a+rX"
-  end
-
-  uninstall delete: "/Applications/Burp Suite Professional.app"
+  app "Burp Suite Professional.app"
 
   zap trash: "~/.BurpSuite"
 end

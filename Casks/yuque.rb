@@ -1,18 +1,16 @@
 cask "yuque" do
-  version "0.10.2"
+  arch = Hardware::CPU.intel? ? "" : "arm64/"
+
+  version "1.0.3"
 
   if Hardware::CPU.intel?
-    sha256 "c1546b1ce49425bd2e1035d5b6e98bc4fc4d84c9738d769b87e40f396713f780"
-
-    url "https://app.nlark.com/yuque-desktop/Yuque-#{version}.dmg",
-        verified: "app.nlark.com/yuque-desktop/"
+    sha256 "b81398d9bc7b241deeb19e73ccea9c48229ac791617dc4cc8de518b553cdf978"
   else
-    sha256 "fc05836674756f961be2516f5cfb5f24fb3d9fec635e9a811c56a1f587c1ee81"
-
-    url "https://app.nlark.com/yuque-desktop/arm64/Yuque-#{version}.dmg",
-        verified: "app.nlark.com/yuque-desktop/arm64/"
+    sha256 "58ca2a09b575ebc118bcb9c800a3c72b1bb5142ec17b1376f1bfc842ffbc5328"
   end
 
+  url "https://app.nlark.com/yuque-desktop/#{arch}Yuque-#{version}.dmg",
+      verified: "app.nlark.com/yuque-desktop/"
   name "Yuque"
   name "语雀"
   desc "Cloud knowledge base"
@@ -22,7 +20,7 @@ cask "yuque" do
   #   https://github.com/Homebrew/homebrew-cask/pull/111472
   livecheck do
     url "https://www.yuque.com/install/desktop"
-    regex(/desktopDownloadVersion%22%3A%22(\d+(?:\.\d+)*)/i)
+    regex(/desktopDownloadVersion%22%3A%22(\d+(?:\.\d+)+)/i)
   end
 
   app "语雀.app"

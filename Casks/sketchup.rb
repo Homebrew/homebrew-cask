@@ -3,7 +3,7 @@ cask "sketchup" do
   sha256 "a534d77d1ea9622b19463258abf21768cb8bb8126734bd40329dd4088b04d79f"
 
   # downloads can be found at https://www.sketchup.com/download/all
-  url "https://www.sketchup.com/sketchup/#{version.before_comma}/en/sketchupmake-#{version.before_comma}-#{version.after_comma}-en-dmg"
+  url "https://www.sketchup.com/sketchup/#{version.csv.first}/en/sketchupmake-#{version.csv.first}-#{version.csv.second}-en-dmg"
   name "SketchUp"
   name "SketchUp Make"
   desc "3D design software"

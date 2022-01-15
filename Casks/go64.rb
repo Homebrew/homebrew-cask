@@ -3,7 +3,7 @@ cask "go64" do
   version "1.3,1301"
   sha256 "75b0d8a39d35eca4d62c93be2d0c3dd2a560b55d6dcbc53136e48ffcea03cabb"
 
-  url "https://www.stclairsoft.com/download/Go64-#{version.before_comma}.zip"
+  url "https://www.stclairsoft.com/download/Go64-#{version.csv.first}.zip"
   name "Go64"
   desc "Scan computer disk for 32-bit applications"
   homepage "https://www.stclairsoft.com/Go64/"

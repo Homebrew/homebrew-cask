@@ -2,7 +2,7 @@ cask "engine-prime" do
   version "1.6.1,5f4b42a70b"
   sha256 "978c1fdde817f855242502a833b9a7447501fdc2ba9af0d941509561059f90b3"
 
-  url "https://cdn.inmusicbrands.com/denondj/EnginePrime/#{version.before_comma.no_dots}/Engine_Prime_#{version.before_comma}_#{version.after_comma}_Setup.dmg",
+  url "https://cdn.inmusicbrands.com/denondj/EnginePrime/#{version.csv.first.no_dots}/Engine_Prime_#{version.csv.first}_#{version.csv.second}_Setup.dmg",
       verified: "inmusicbrands.com/"
   name "Engine Prime"
   desc "Music Management Software for Denon's Engine OS Hardware"
