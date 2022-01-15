@@ -17,7 +17,7 @@ cask "jdk-mission-control" do
     end
   end
 
-  app "jmc-#{version.before_comma}_osx-x64/JDK Mission Control.app"
+  app "jmc-#{version.csv.first}_osx-x64/JDK Mission Control.app"
 
   caveats do
     depends_on_java "11"

@@ -19,7 +19,7 @@ cask "mars" do
 
   container type: :naked
 
-  app "Mars#{version.before_comma.dots_to_underscores}.jar", target: "Mars.jar"
+  app "Mars#{version.csv.first.dots_to_underscores}.jar", target: "Mars.jar"
 
   caveats do
     depends_on_java "9+"

@@ -19,5 +19,5 @@ cask "3dgenceslicer" do
     end
   end
 
-  app "3DGence Slicer #{version.after_comma}.app"
+  app "3DGence Slicer #{version.csv.second}.app"
 end
