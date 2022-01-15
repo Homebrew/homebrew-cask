@@ -3,7 +3,7 @@ cask "zebra2" do
   version "2.9.3,12092"
   sha256 "d088d17fc42eca3ffede5f7ee8586dceb19ddc9a29b1829f7d84b15221eb5fb2"
 
-  url "https://uhedownloads-heckmannaudiogmb.netdna-ssl.com/releases/Zebra#{version.major}_#{version.before_comma.no_dots}_#{version.after_comma}_Mac.zip",
+  url "https://uhedownloads-heckmannaudiogmb.netdna-ssl.com/releases/Zebra#{version.major}_#{version.csv.first.no_dots}_#{version.csv.second}_Mac.zip",
       verified: "uhedownloads-heckmannaudiogmb.netdna-ssl.com/"
   name "Zebra2"
   desc "Wireless modular synthesizer"

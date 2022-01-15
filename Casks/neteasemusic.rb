@@ -2,7 +2,7 @@ cask "neteasemusic" do
   version "2.3.7,868"
   sha256 "a2cd470cdecadc5fc45e5bf8fc7e2778fd3b7e2719c7cd0eae1fadb6a4e20318"
 
-  url "https://d1.music.126.net/dmusic/NeteaseMusic_#{version.before_comma}_#{version.after_comma}_web.dmg",
+  url "https://d1.music.126.net/dmusic/NeteaseMusic_#{version.csv.first}_#{version.csv.second}_web.dmg",
       verified:   "d1.music.126.net/",
       user_agent: :fake
   name "NetEase cloud music"

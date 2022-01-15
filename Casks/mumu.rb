@@ -2,7 +2,7 @@ cask "mumu" do
   version "1.1.9,z1OGCA1HTEaGuREtlgxX"
   sha256 "e957259d2eb69aaf0cf3ba6c09f06561784a538a3f81bc84ab8c91b3d2590438"
 
-  url "https://paddle.s3.amazonaws.com/fulfillment_downloads/116824/597910/#{version.after_comma}_Mumu%20#{version.before_comma}.dmg",
+  url "https://paddle.s3.amazonaws.com/fulfillment_downloads/116824/597910/#{version.csv.second}_Mumu%20#{version.csv.first}.dmg",
       verified: "paddle.s3.amazonaws.com/fulfillment_downloads/116824/597910/"
   name "Mumu"
   homepage "https://getmumu.com/"

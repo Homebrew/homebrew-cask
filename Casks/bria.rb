@@ -2,7 +2,7 @@ cask "bria" do
   version "6.5.1,108815"
   sha256 "84c1a1cea97ce406fdb7d5b6ce0fc98c76d69a5ed4f707fa08f15b7306d5fcf5"
 
-  url "https://counterpath.s3.amazonaws.com/downloads/Bria_#{version.before_comma}_#{version.after_comma}.dmg",
+  url "https://counterpath.s3.amazonaws.com/downloads/Bria_#{version.csv.first}_#{version.csv.second}.dmg",
       verified: "counterpath.s3.amazonaws.com/"
   name "Bria"
   desc "Softphone application"

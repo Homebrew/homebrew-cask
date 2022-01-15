@@ -2,7 +2,7 @@ cask "simpholders" do
   version "3.0.12,2366"
   sha256 "0f74633bd6bd9723063af0be550364882b93fbb5cd67bac6e2066083174e5f0d"
 
-  url "https://simpholders.com/site/assets/files/#{version.after_comma}/simpholders_#{version.before_comma.dots_to_underscores}.dmg"
+  url "https://simpholders.com/site/assets/files/#{version.csv.second}/simpholders_#{version.csv.first.dots_to_underscores}.dmg"
   name "SimPholders"
   homepage "https://simpholders.com/"
 

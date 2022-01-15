@@ -1,20 +1,15 @@
 cask "vale-server" do
-  version "1.13.0"
-  sha256 "a10067f4321386f49c5c79426cd078bc8cfea96684682a88809ad9f9c49d58a0"
+  version "2.0.0"
+  sha256 "3d8a84b268bc15a696df99739a96e1ed45b2b5b523f3ccf87fae117b4086f74e"
 
-  url "https://github.com/errata-ai/errata.ai/releases/download/v#{version.major}.0.0/Vale-Server-#{version}-macos.dmg",
-      verified: "github.com/errata-ai/errata.ai/"
+  url "https://github.com/errata-ai/vale-server/releases/download/v#{version}/Vale-Server-#{version}-macos.dmg",
+      verified: "github.com/errata-ai/vale-server/"
   name "Vale Server"
   desc "Cross-platform desktop application"
   homepage "https://errata.ai/vale-server/"
 
-  livecheck do
-    url "https://github.com/errata-ai/errata.ai/releases/"
-    strategy :page_match
-    regex(/Vale[._-]Server[._-]v?(\d+(?:\.\d+)+)[._-]macos\.dmg/i)
-  end
-
-  depends_on macos: ">= :high_sierra"
+  depends_on formula: "vale"
+  depends_on macos: ">= :catalina"
 
   app "Vale Server.app"
 

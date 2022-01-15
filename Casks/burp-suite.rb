@@ -1,6 +1,6 @@
 cask "burp-suite" do
-  version "2021.10.3"
-  sha256 "495476d68622657e0376b4dfaddccba27cbfaabe900771a4acd2799c79f82819"
+  version "2021.12.1"
+  sha256 "bec817afc59faa60b20ba4761af471b0b09925dac128c30326438d13e746d2e6"
 
   url "https://portswigger.net/burp/releases/download?product=community&version=#{version}&type=MacOsx"
   name "Burp Suite Community Edition"
@@ -24,18 +24,7 @@ cask "burp-suite" do
     end
   end
 
-  installer script: {
-    executable: "Burp Suite Community Edition Installer.app/Contents/MacOS/JavaApplicationStub",
-    args:       ["-q"],
-    sudo:       true,
-  }
-
-  postflight do
-    set_ownership "/Applications/Burp Suite Community Edition.app"
-    set_permissions "/Applications/Burp Suite Community Edition.app", "a+rX"
-  end
-
-  uninstall delete: "/Applications/Burp Suite Community Edition.app"
+  app "Burp Suite Community Edition.app"
 
   zap trash: "~/.BurpSuite"
 end

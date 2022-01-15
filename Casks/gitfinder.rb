@@ -2,7 +2,7 @@ cask "gitfinder" do
   version "1.7.4,117"
   sha256 "7dfcfd41bea02642d60a5396bf1f1493b0dc8307545fca6ac5d134cbe2a9cd69"
 
-  url "https://get.gitfinder.com/GitFinder#{version.before_comma.dots_to_underscores}.dmg"
+  url "https://get.gitfinder.com/GitFinder#{version.csv.first.dots_to_underscores}.dmg"
   name "GitFinder"
   desc "Git client with Finder integration"
   homepage "https://gitfinder.com/"

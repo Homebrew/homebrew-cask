@@ -2,7 +2,7 @@ cask "messenger-unofficial" do
   version "0.1.13.1491443794,7b1777b58fef0bf9"
   sha256 "6b6f9888c9bf4e7d8fb2db547331cea7e9df99b85f914322af12a476c47bc984"
 
-  url "https://fbmacmessenger.rsms.me/dist/Messenger-#{version.before_comma}-#{version.after_comma}.zip"
+  url "https://fbmacmessenger.rsms.me/dist/Messenger-#{version.csv.first}-#{version.csv.second}.zip"
   name "Messenger"
   homepage "https://fbmacmessenger.rsms.me/"
 

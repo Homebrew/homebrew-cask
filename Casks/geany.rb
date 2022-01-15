@@ -2,7 +2,7 @@ cask "geany" do
   version "1.38,4"
   sha256 "f9882c1ea469c57d8c6d00012d0dc59735efeb48b0c504cccd13f03bb5184bed"
 
-  url "https://download.geany.org/geany-#{version.before_comma}_osx#{version.after_comma&.prepend("-")}.dmg"
+  url "https://download.geany.org/geany-#{version.csv.first}_osx#{version.csv.second&.prepend("-")}.dmg"
   name "Geany"
   desc "Fast and lightweight IDE"
   homepage "https://www.geany.org/"
