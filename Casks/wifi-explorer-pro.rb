@@ -1,6 +1,6 @@
 cask "wifi-explorer-pro" do
-  version "3.4.1,20"
-  sha256 "cfb2f567004e6dca3e70ea05195ac1a15015b129e690f45b6567489b58dc8b5f"
+  version "3.4.2,21"
+  sha256 "07144100479dadb01ac5f4fe435bb36b717c8b454ea71a744e6f57b3a1be1dc8"
 
   url "https://www.intuitibits.com/appcasts/WiFiExplorerPro_#{version.csv.first}.zip"
   name "WiFi Explorer Pro"
