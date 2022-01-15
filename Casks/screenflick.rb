@@ -9,7 +9,7 @@ cask "screenflick" do
 
   livecheck do
     url "https://arweb-assets.s3.amazonaws.com/downloads/screenflick/updates.json"
-    regex(%r{/Screenflick(\d+(?:\.\d+)+)\.zip}i)
+    regex(/Screenflick(\d+(?:\.\d+)+)\.zip/i)
   end
 
   depends_on macos: ">= :mojave"
