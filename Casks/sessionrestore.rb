@@ -1,10 +1,10 @@
 cask "sessionrestore" do
-  version "2.6.4"
+  version "2.6.5"
   sha256 :no_check
 
   url "https://sweetpproductions.com/products/sessionrestore/SessionRestore.dmg"
   name "SessionRestore"
-  desc "Helps to keep numerous Safari tabs open forreading them later"
+  desc "Helps to keep numerous Safari tabs open for reading them later"
   homepage "https://sessionrestore.sweetpproductions.com/"
 
   livecheck do
