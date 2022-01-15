@@ -12,7 +12,7 @@ cask "sidenotes" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :catalina"
 
   app "SideNotes.app"
 end
