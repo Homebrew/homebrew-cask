@@ -13,6 +13,7 @@ cask "parallels-toolbox" do
   end
 
   auto_updates true
+  depends_on macos: ">= :sierra"
 
   installer manual: "Install Parallels Toolbox.app"
 
@@ -20,11 +21,15 @@ cask "parallels-toolbox" do
             signal: ["TERM", "com.parallels.toolbox"]
 
   zap trash: [
+    "~/Library/Application Scripts/*.com.parallels.toolbox",
+    "~/Library/Application Scripts/com.parallels.toolbox.*-Safari-Extension",
     "~/Library/Application Support/com.parallels.toolbox",
     "~/Library/Group Containers/*.com.parallels.toolbox",
     "~/Library/Logs/ParallelsToolbox",
     "~/Library/Logs/prl.toolbox.ceplog.log",
     "~/Library/Logs/prl.toolbox.ceplog.xml",
+    "~/Library/Preferences/*.com.parallels.toolbox.*.plist",
+    "~/Library/Preferences/com.parallels.toolbox.*.plist",
     "~/Library/Preferences/com.parallels.toolbox.plist",
   ]
 end
