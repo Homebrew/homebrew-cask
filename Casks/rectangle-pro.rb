@@ -5,7 +5,7 @@ cask "rectangle-pro" do
   url "https://rectangleapp.com/pro/downloads/Rectangle%20Pro%20#{version.csv.first}.dmg"
   name "Rectangle Pro"
   desc "Window snapping tool"
-  homepage "https://rectangleapp.com/pro/"
+  homepage "https://rectangleapp.com/pro"
 
   livecheck do
     url "https://rectangleapp.com/pro/downloads/updates.xml"
