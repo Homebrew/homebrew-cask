@@ -21,7 +21,6 @@ cask "devilutionx" do
   zap trash: [
     "#{ENV["HOME"]}/Library/Application Support/CrashReporter/devilutionX_*.plist",
     "#{ENV["HOME"]}/Library/Application Support/diasurgical/devilution/devilutionx.mpq",
-  ], rmdir:  [
-    "#{ENV["HOME"]}/Library/Application Support/diasurgical",
-  ]
+  ],
+      rmdir: "#{ENV["HOME"]}/Library/Application Support/diasurgical"
 end
