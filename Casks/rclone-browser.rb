@@ -9,7 +9,7 @@ cask "rclone-browser" do
 
   depends_on formula: "rclone"
 
-  app "rclone-browser-#{version.before_comma}-#{version.after_comma}-macOS/Rclone Browser.app"
+  app "rclone-browser-#{version.csv.first}-#{version.csv.second}-macOS/Rclone Browser.app"
 
   zap trash: [
     "~/Library/Preferences/Rclone Browser.plist",

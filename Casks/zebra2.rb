@@ -19,7 +19,7 @@ cask "zebra2" do
     end
   end
 
-  pkg "Zebra#{version.major}_#{version.after_comma}_Mac/Zebra#{version.major} #{version.before_comma} Installer.pkg"
+  pkg "Zebra#{version.major}_#{version.csv.second}_Mac/Zebra#{version.major} #{version.csv.first} Installer.pkg"
 
   uninstall pkgutil: [
     "com.u-he.Zebra#{version.major}.aax.pkg",

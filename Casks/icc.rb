@@ -18,7 +18,7 @@ cask "icc" do
     end
   end
 
-  pkg "ICCforMac.r#{version.after_comma}.pkg"
+  pkg "ICCforMac.r#{version.csv.second}.pkg"
 
   uninstall pkgutil: "com.chessclub.*"
 

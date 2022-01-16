@@ -4,7 +4,7 @@ cask "icollections" do
 
   url "https://naarakstudio.com/download/iCollections.dmg"
   appcast "https://naarakstudio.com/download/icollections/update.ver",
-          must_contain: version.after_comma
+          must_contain: version.csv.second
   name "iCollections"
   desc "App to help keep the desktop organized"
   homepage "https://naarakstudio.com/icollections/"

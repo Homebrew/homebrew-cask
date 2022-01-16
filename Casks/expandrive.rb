@@ -8,7 +8,7 @@ cask "expandrive" do
   homepage "https://www.expandrive.com/apps/expandrive/"
 
   livecheck do
-    url "https://updates.expandrive.com/apps/expandrive#{version.before_comma}/download_latest"
+    url "https://updates.expandrive.com/apps/expandrive#{version.csv.first}/download_latest"
     strategy :header_match do |headers|
       matches = headers["location"].scan(/expandrive(\d+).*ExpanDrive[._-](\d+\.\d+\.\d+)\.dmg/).flatten
       "#{matches[0]},#{matches[1]}"

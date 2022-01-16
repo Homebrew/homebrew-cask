@@ -16,7 +16,7 @@ cask "squeak" do
     end
   end
 
-  app "Squeak#{version.before_comma}-#{version.after_comma}-64bit-All-in-One.app"
+  app "Squeak#{version.csv.first}-#{version.csv.second}-64bit-All-in-One.app"
 
-  zap trash: "~/Library/Saved Application State/org.squeak.Squeak#{version.before_comma}.64.All-in-One.savedState"
+  zap trash: "~/Library/Saved Application State/org.squeak.Squeak#{version.csv.first}.64.All-in-One.savedState"
 end

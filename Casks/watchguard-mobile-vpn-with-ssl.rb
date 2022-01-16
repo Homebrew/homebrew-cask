@@ -6,7 +6,7 @@ cask "watchguard-mobile-vpn-with-ssl" do
   name "WatchGuard Mobile VPN with SSL"
   homepage "https://www.watchguard.com/"
 
-  pkg "WatchGuard Mobile VPN with SSL Installer V#{version.after_comma}.mpkg"
+  pkg "WatchGuard Mobile VPN with SSL Installer V#{version.csv.second}.mpkg"
 
   uninstall pkgutil: "com.watchguard.*",
             delete:  [

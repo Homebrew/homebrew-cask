@@ -12,7 +12,7 @@ cask "accessmenubarapps" do
     strategy :sparkle
   end
 
-  app "AccessMenuBarApps#{version.before_comma}/AccessMenuBarApps.app"
+  app "AccessMenuBarApps#{version.csv.first}/AccessMenuBarApps.app"
 
   uninstall quit: "de.ortisoft.AccessMenuBarApps"
 

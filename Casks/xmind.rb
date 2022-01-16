@@ -4,7 +4,7 @@ cask "xmind" do
 
   url "https://dl3.xmind.net/xmind-#{version.csv.second}-macosx.dmg"
   appcast "https://www.xmind.net/download/xmind8/",
-          must_contain: version.after_comma
+          must_contain: version.csv.second
   name "XMind"
   desc "Mind mapping and brainstorming tool"
   homepage "https://www.xmind.net/"

@@ -9,17 +9,17 @@ cask "sketchup" do
   desc "3D design software"
   homepage "https://www.sketchup.com/"
 
-  suite "SketchUp #{version.before_comma}"
+  suite "SketchUp #{version.csv.first}"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sketchup.sketchup.#{version.before_comma}.sfl*",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sketchup.stylebuilder.#{version.before_comma}.sfl*",
-    "~/Library/Application Support/SketchUp #{version.before_comma}",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sketchup.sketchup.#{version.csv.first}.sfl*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sketchup.stylebuilder.#{version.csv.first}.sfl*",
+    "~/Library/Application Support/SketchUp #{version.csv.first}",
     "~/Library/Application Support/Trimble Connect for SketchUp",
-    "~/Library/Caches/com.sketchup.SketchUp.#{version.before_comma}",
-    "~/Library/Cookies/com.sketchup.SketchUp.#{version.before_comma}.binarycookies",
-    "~/Library/Preferences/com.sketchup.SketchUp.#{version.before_comma}.plist",
-    "~/Library/Preferences/com.sketchup.SketchUp.#{version.before_comma}.plist",
+    "~/Library/Caches/com.sketchup.SketchUp.#{version.csv.first}",
+    "~/Library/Cookies/com.sketchup.SketchUp.#{version.csv.first}.binarycookies",
+    "~/Library/Preferences/com.sketchup.SketchUp.#{version.csv.first}.plist",
+    "~/Library/Preferences/com.sketchup.SketchUp.#{version.csv.first}.plist",
     "~/Library/Preferences/Trimble.SketchUp-Helper.plist",
   ]
 

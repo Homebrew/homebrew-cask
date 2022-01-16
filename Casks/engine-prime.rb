@@ -18,7 +18,7 @@ cask "engine-prime" do
     end
   end
 
-  pkg "Engine Prime_#{version.before_comma}_Setup.pkg"
+  pkg "Engine Prime_#{version.csv.first}_Setup.pkg"
 
   uninstall pkgutil: "com.airmusictechnology.engineprime.application"
 

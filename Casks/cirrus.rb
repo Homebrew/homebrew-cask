@@ -20,7 +20,7 @@ cask "cirrus" do
 
   depends_on macos: ">= :sierra"
 
-  app "cirrus#{version.before_comma.major}#{version.before_comma.minor}/Cirrus.app"
+  app "cirrus#{version.csv.first.major}#{version.csv.first.minor}/Cirrus.app"
 
   zap trash: [
     "~/Library/Caches/co.eclecticlight.CirrusMac",

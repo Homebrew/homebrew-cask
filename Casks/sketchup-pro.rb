@@ -53,21 +53,21 @@ cask "sketchup-pro" do
   # downloads can be found at https://sketchup.com/download/all
   url "https://www.sketchup.com/sketchup/SketchUpPro-#{language}-dmg"
   appcast "https://help.sketchup.com/en/release-notes",
-          must_contain: version.after_comma.major_minor
+          must_contain: version.csv.second.major_minor
   name "SketchUp"
   desc "3D visualization software"
   homepage "https://www.sketchup.com/"
 
-  suite "SketchUp #{version.after_comma.major}"
+  suite "SketchUp #{version.csv.second.major}"
 
   zap trash: [
-    "~/Library/Application Support/SketchUp #{version.after_comma.major}",
-    "~/Library/Caches/com.sketchup.LayOut.#{version.after_comma.major}",
-    "~/Library/Caches/com.sketchup.SketchUp.#{version.after_comma.major}",
-    "~/Library/Caches/com.sketchup.StyleBuilder.#{version.after_comma.major}",
-    "~/Library/Preferences/com.sketchup.LayOut.#{version.after_comma.major}.plist",
-    "~/Library/Preferences/com.sketchup.SketchUp.#{version.after_comma.major}.plist",
-    "~/Library/Preferences/com.sketchup.StyleBuilder.#{version.after_comma.major}.plist",
+    "~/Library/Application Support/SketchUp #{version.csv.second.major}",
+    "~/Library/Caches/com.sketchup.LayOut.#{version.csv.second.major}",
+    "~/Library/Caches/com.sketchup.SketchUp.#{version.csv.second.major}",
+    "~/Library/Caches/com.sketchup.StyleBuilder.#{version.csv.second.major}",
+    "~/Library/Preferences/com.sketchup.LayOut.#{version.csv.second.major}.plist",
+    "~/Library/Preferences/com.sketchup.SketchUp.#{version.csv.second.major}.plist",
+    "~/Library/Preferences/com.sketchup.StyleBuilder.#{version.csv.second.major}.plist",
     "~/Library/Preferences/Trimble.SketchUp-Helper.plist",
   ]
 end

@@ -20,7 +20,7 @@ cask "xattred" do
 
   depends_on macos: ">= :el_capitan"
 
-  app "xattred#{version.before_comma.major}#{version.before_comma.minor}/xattred.app"
+  app "xattred#{version.csv.first.major}#{version.csv.first.minor}/xattred.app"
 
   zap trash: [
     "~/Library/Caches/co.eclecticlight.xattred",

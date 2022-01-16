@@ -18,7 +18,7 @@ cask "fpc-src-laz" do
     end
   end
 
-  pkg "fpc-src-#{version.before_comma}-laz.pkg"
+  pkg "fpc-src-#{version.csv.first}-laz.pkg"
 
   uninstall pkgutil: [
     "org.freepascal.fpc.source",

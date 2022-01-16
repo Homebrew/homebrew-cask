@@ -6,10 +6,10 @@ cask "intel-psxe-ce-c-plus-plus" do
   name "Intel Parallel Studio XE Composer Edition for C++"
   homepage "https://software.intel.com/en-us/parallel-studio-xe"
 
-  installer manual: "m_ccompxe_#{version.before_comma}.app"
+  installer manual: "m_ccompxe_#{version.csv.first}.app"
 
   uninstall script: {
-    executable: "m_ccompxe_#{version.before_comma}.app/Contents/MacOS/uninstall.sh",
+    executable: "m_ccompxe_#{version.csv.first}.app/Contents/MacOS/uninstall.sh",
     args:       ["--silent"],
     sudo:       true,
   }

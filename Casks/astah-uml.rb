@@ -17,7 +17,7 @@ cask "astah-uml" do
     end
   end
 
-  pkg "astah uml ver #{version.before_comma.dots_to_underscores}.pkg"
+  pkg "astah uml ver #{version.csv.first.dots_to_underscores}.pkg"
 
   uninstall pkgutil: "com.change-vision.astahuml.astahUML.pkg"
 

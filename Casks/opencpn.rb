@@ -18,7 +18,7 @@ cask "opencpn" do
     end
   end
 
-  pkg "OpenCPN_#{version.before_comma}+#{version.after_comma}.pkg"
+  pkg "OpenCPN_#{version.csv.first}+#{version.csv.second}.pkg"
 
   uninstall pkgutil: [
     "org.opencpn.pkg.OpenCPN",

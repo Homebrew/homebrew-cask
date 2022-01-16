@@ -5,7 +5,7 @@ cask "react-studio" do
   url "https://s3.amazonaws.com/sc.neonto.com/ReactStudio_v#{version.csv.first.no_dots}_build#{version.csv.second}.zip",
       verified: "s3.amazonaws.com/sc.neonto.com/"
   appcast "https://www.macupdater.net/cgi-bin/extract_text/send_post_request.cgi?url=https://reactstudio.com/api/download/reactstudio",
-          must_contain: version.before_comma.no_dots
+          must_contain: version.csv.first.no_dots
   name "ReactStudio"
   homepage "https://reactstudio.com/"
 
