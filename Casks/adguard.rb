@@ -15,6 +15,7 @@ cask "adguard" do
   end
 
   auto_updates true
+  conflicts_with cask: "homebrew/cask-versions/adguard-nightly"
   depends_on macos: ">= :sierra"
 
   pkg "AdGuard.pkg"
