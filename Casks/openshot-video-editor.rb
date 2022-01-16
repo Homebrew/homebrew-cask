@@ -8,5 +8,8 @@ cask "openshot-video-editor" do
   desc "Cross-platform video editor"
   homepage "https://openshot.org/"
 
+  conflicts_with cask: "homebrew/cask-versions/openshot-video-editor-daily"
+  depends_on macos: ">= :catalina"
+
   app "OpenShot Video Editor.app"
 end
