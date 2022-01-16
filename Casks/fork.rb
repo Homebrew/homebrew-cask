@@ -2,11 +2,10 @@ cask "fork" do
   version "2.15.1"
   sha256 "3050db0db66f598ee39c02ed111f68c479fb2a7d7236dae1d09991960ddc93b4"
 
-  url "https://forkapp.ams3.cdn.digitaloceanspaces.com/mac/Fork-#{version}.dmg",
-      verified: "forkapp.ams3.cdn.digitaloceanspaces.com/mac/"
+  url "https://cdn.fork.dev/mac/Fork-#{version}.dmg"
   name "Fork"
   desc "GIT client"
-  homepage "https://git-fork.com/"
+  homepage "https://fork.dev/"
 
   livecheck do
     url "https://git-fork.com/update/feed.xml"
@@ -26,7 +25,10 @@ cask "fork" do
     "~/Library/Application Support/com.DanPristupov.Fork",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.danpristupov.fork.sfl2",
     "~/Library/Caches/com.DanPristupov.Fork",
+    "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.DanPristupov.Fork",
     "~/Library/Cookies/com.DanPristupov.Fork.binarycookies",
+    "~/Library/HTTPStorages/com.DanPristupov.Fork",
+    "~/Library/HTTPStorages/com.DanPristupov.Fork.binarycookies",
     "~/Library/Logs/Fork.log",
     "~/Library/Preferences/com.DanPristupov.Fork.plist",
     "~/Library/Saved Application State/com.DanPristupov.Fork.savedState",
