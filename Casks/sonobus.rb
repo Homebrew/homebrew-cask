@@ -18,10 +18,10 @@ cask "sonobus" do
 
   uninstall pkgutil: [
     "net.sonobus.pkg.aax",
+    "net.sonobus.pkg.app",
+    "net.sonobus.pkg.au",
     "net.sonobus.pkg.vst2",
     "net.sonobus.pkg.vst3",
-    "net.sonobus.pkg.au",
-    "net.sonobus.pkg.app",
   ]
 
   zap trash: [
