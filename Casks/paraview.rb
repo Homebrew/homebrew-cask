@@ -18,7 +18,7 @@ cask "paraview" do
 
   livecheck do
     url "https://www.paraview.org/files/listing.txt"
-    regex(/ParaView[._-](\d+(?:\.\d+)+)[._-]MPI[._-]OSX10\.13[._-]Python3\.9[._-]x86[._-]64\.dmg/i)
+    regex(/ParaView[._-](\d+(?:\.\d+)+)[._-]MPI[._-]OSX#{min_macos_version}[._-]Python3\.9[._-]#{arch}\.dmg/i)
   end
 
   depends_on macos: ">= :sierra"
