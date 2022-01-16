@@ -25,4 +25,9 @@ cask "paraview" do
 
   app "ParaView-#{version}.app"
   binary "#{appdir}/Paraview-#{version}.app/Contents/MacOS/paraview"
+
+  zap trash: [
+    "~/.config/Paraview",
+    "~/Library/Saved Application State/org.paraview.ParaView.savedState",
+  ]
 end
