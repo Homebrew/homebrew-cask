@@ -1,10 +1,11 @@
 cask "qview" do
-  version "4.0"
-  sha256 "bc8385149973c0564602d39bb5163de5b26bbc52f2c523a884f3310855a37c8d"
+  version "5.0"
+  sha256 "37515e6188970b7ecd4d9f85b1e5102e3743fe49907d0533dbf82a8832741a97"
 
   url "https://github.com/jurplel/qView/releases/download/#{version}/qView-#{version}.dmg"
   name "qView"
-  homepage "https://github.com/jurplel/qView"
+  desc "Image viewer"
+  homepage "https://github.com/jurplel/qView/"
 
   app "qView.app"
 end
