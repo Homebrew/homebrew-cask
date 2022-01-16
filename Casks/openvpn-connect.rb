@@ -17,7 +17,6 @@ cask "openvpn-connect" do
     end
   end
 
-  conflicts_with cask: "homebrew/cask-versions/openvpn-connect-beta"
   depends_on macos: ">= :yosemite"
 
   pkg "OpenVPN_Connect_#{version.csv.first.dots_to_underscores}(#{version.csv.second})_Installer_signed.pkg"
