@@ -6,7 +6,7 @@ cask "swift-publisher" do
       verified: "belightsoft.s3.amazonaws.com/"
   name "Swift Publisher"
   desc "Page layout and desktop publishing application"
-  homepage "https://www.belightsoft.com/swift-publisher/"
+  homepage "https://www.swiftpublisher.com/"
 
   livecheck do
     url "https://www.belightsoft.com/download/updates/appcast_SwiftPublisher#{version.major}.xml"
