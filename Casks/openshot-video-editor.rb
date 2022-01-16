@@ -9,4 +9,10 @@ cask "openshot-video-editor" do
   homepage "https://openshot.org/"
 
   app "OpenShot Video Editor.app"
+
+  zap trash: [
+    "~/.openshot_qt",
+    "~/Library/Application Support/openshot",
+    "~/Library/Preferences/openshot-qt.plist",
+  ]
 end
