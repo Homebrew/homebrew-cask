@@ -26,11 +26,11 @@ cask "adguard-vpn" do
             delete:    [
               "/Library/Application Support/AdGuard Software/com.adguard.mac.vpn",
               "/Library/Application Support/com.adguard.mac.vpn",
+              "/Library/Logs/com.adguard.mac.vpn",
             ],
             rmdir:     "/Library/Application Support/AdGuard Software"
 
   zap trash: [
-    "/Library/Logs/com.adguard.mac.vpn",
     "~/Library/Application Scripts/*.com.adguard.mac",
     "~/Library/Application Scripts/com.adguard.mac.vpn.launchatlogin",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.adguard.mac.vpn.launchatlogin.sfl*",
