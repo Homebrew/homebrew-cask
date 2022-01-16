@@ -15,9 +15,12 @@ cask "devilutionx" do
   depends_on macos: ">= :high_sierra"
 
   app "devilutionx.app"
+  artifact "devilutionx.mpq",
+           target: "#{ENV["HOME"]}/Library/Application Support/diasurgical/devilution/devilutionx.mpq"
 
   zap trash: [
-    "~/Library/Application Support/CrashReporter/devilutionX_*.plist",
-    "~/Library/Application Support/diasurgical/devilution",
-  ]
+    "#{ENV["HOME"]}/Library/Application Support/CrashReporter/devilutionX_*.plist",
+    "#{ENV["HOME"]}/Library/Application Support/diasurgical/devilution/devilutionx.mpq",
+  ],
+      rmdir: "#{ENV["HOME"]}/Library/Application Support/diasurgical"
 end
