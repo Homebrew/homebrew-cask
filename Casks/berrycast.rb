@@ -19,7 +19,6 @@ cask "berrycast" do
 
   uninstall login_item: "Berrycast",
             quit:       [
-              "com.apple.systemevents",
               "com.openmindt.berrycast",
               "com.openmindt.berrycast.helper",
               "com.openmindt.berrycast.helper.GPU",
