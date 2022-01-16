@@ -33,6 +33,7 @@ cask "windscribe" do
             ]
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.windscribe.launcher.macos.sfl*",
     "~/Library/Application Support/Windscribe",
     "~/Library/Preferences/com.windscribe.Windscribe2.plist",
     "~/Library/Preferences/com.aaa.windscribe.windscribe.plist",
