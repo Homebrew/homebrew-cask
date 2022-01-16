@@ -8,7 +8,7 @@ cask "multitouch" do
   homepage "https://multitouch.app/"
 
   livecheck do
-    url "https://www.multitouch.app/downloads/updates.xml"
+    url "https://multitouch.app/downloads/updates.xml"
     strategy :sparkle
   end
 
@@ -17,9 +17,14 @@ cask "multitouch" do
 
   app "Multitouch.app"
 
+  uninstall quit: "com.brassmonkery.Multitouch"
+
   zap trash: [
     "~/Library/Application Support/Multitouch",
     "~/Library/Caches/com.brassmonkery.Multitouch",
-    "~/Library/Preferences/com.brassmonkery.Multitouch",
+    "~/Library/Cookies/com.brassmonkery.Multitouch.binarycookies",
+    "~/Library/HTTPStorages/com.brassmonkery.Multitouch",
+    "~/Library/HTTPStorages/com.brassmonkery.Multitouch.binarycookies",
+    "~/Library/Preferences/com.brassmonkery.Multitouch.plist",
   ]
 end
