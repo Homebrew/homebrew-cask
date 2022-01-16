@@ -9,8 +9,7 @@ cask "ilya-birman-typography-layout" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/ilya-birman-typolayout-(\d+(?:\.\d+)*)-mac\.dmg}i)
+    regex(%r{href=.*?/ilya[._-]birman[._-]typolayout[._-]v?(\d+(?:\.\d+)+)[._-]mac\.dmg}i)
   end
 
   artifact \
