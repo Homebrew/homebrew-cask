@@ -23,11 +23,11 @@ cask "openwebstart" do
     executable: "/Applications/OpenWebStart/OpenWebStart Uninstaller.app/Contents/MacOS/JavaApplicationStub",
     args:       ["-c"],
     sudo:       true,
-  }
+  },
+            delete: "/Applications/OpenWebStart"
 
   zap trash: [
-    "~/.config/icedtea-web",
     "~/.cache/icedtea-web",
-    "/Applications/OpenWebStart",
+    "~/.config/icedtea-web",
   ]
 end
