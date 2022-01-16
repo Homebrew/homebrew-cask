@@ -2,7 +2,7 @@ cask "brackets" do
   version "2.0.1"
   sha256 "2aa93fc36011bea42554ec3c118f4e1c5d5518b92094b89b57c20f5ba1a1ec66"
 
-  url "https://github.com/brackets-cont/brackets/releases/download/v#{version}/Brackets.#{version}.signed.dmg
+  url "https://github.com/brackets-cont/brackets/releases/download/v#{version}/Brackets.#{version}.signed.dmg",
       verified: "github.com/brackets-cont/brackets/"
   name "Brackets"
   desc "Open-source code editor for web-developement"
