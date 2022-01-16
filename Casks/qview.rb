@@ -4,7 +4,8 @@ cask "qview" do
 
   url "https://github.com/jurplel/qView/releases/download/#{version}/qView-#{version}.dmg"
   name "qView"
-  homepage "https://github.com/jurplel/qView"
+  desc "Image viewer"
+  homepage "https://github.com/jurplel/qView/"
 
   app "qView.app"
 end
