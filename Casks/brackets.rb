@@ -6,7 +6,7 @@ cask "brackets" do
       verified: "github.com/brackets-cont/brackets/"
   name "Brackets"
   desc "Open-source code editor for web-developement"
-  homepage "http://brackets.io/"
+  homepage "https://brackets.io/"
 
   livecheck do
     url :url
