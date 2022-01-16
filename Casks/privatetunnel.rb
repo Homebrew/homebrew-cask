@@ -18,7 +18,7 @@ cask "privatetunnel" do
     end
   end
 
-  pkg "Private_Tunnel_#{version.before_comma.dots_to_underscores}(#{version.after_comma})_Installer_signed.pkg"
+  pkg "Private_Tunnel_#{version.csv.first.dots_to_underscores}(#{version.csv.second})_Installer_signed.pkg"
 
   uninstall pkgutil:   [
     "org.openvpn.privatetunnel.pkg",

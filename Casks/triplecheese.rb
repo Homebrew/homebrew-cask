@@ -18,7 +18,7 @@ cask "triplecheese" do
     end
   end
 
-  pkg "TripleCheese_#{version.after_comma}_Mac/TripleCheese #{version.before_comma}.0 Installer.pkg"
+  pkg "TripleCheese_#{version.csv.second}_Mac/TripleCheese #{version.csv.first}.0 Installer.pkg"
 
   uninstall pkgutil: [
     "com.u-he.TripleCheese.aax.pkg",

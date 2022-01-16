@@ -8,7 +8,7 @@ cask "adoptopenjdk" do
   desc "JDK from the Java User Group (JUG)"
   homepage "https://adoptopenjdk.net/"
 
-  pkg "OpenJDK#{version.major}U-jdk_x64_mac_hotspot_#{version.before_comma}_#{version.after_comma.major}.pkg"
+  pkg "OpenJDK#{version.major}U-jdk_x64_mac_hotspot_#{version.csv.first}_#{version.csv.second.major}.pkg"
 
   uninstall pkgutil: "net.adoptopenjdk.#{version.major}.jdk"
 

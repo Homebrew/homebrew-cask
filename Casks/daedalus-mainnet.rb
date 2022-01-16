@@ -21,7 +21,7 @@ cask "daedalus-mainnet" do
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
-  pkg "daedalus-#{version.before_comma}-mainnet-#{version.after_comma}.pkg"
+  pkg "daedalus-#{version.csv.first}-mainnet-#{version.csv.second}.pkg"
 
   uninstall pkgutil: "org.Daedalusmainnet.pkg"
 

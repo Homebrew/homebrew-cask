@@ -20,7 +20,7 @@ cask "lockrattler" do
 
   depends_on macos: ">= :el_capitan"
 
-  app "lockrattler#{version.before_comma.major}#{version.before_comma.minor}/LockRattler.app"
+  app "lockrattler#{version.csv.first.major}#{version.csv.first.minor}/LockRattler.app"
 
   zap trash: [
     "~/Library/Caches/co.eclecticlight.LockRattler",

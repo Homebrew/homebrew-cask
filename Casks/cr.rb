@@ -8,7 +8,7 @@ cask "cr" do
   homepage "https://sourceforge.net/projects/crengine/"
 
   livecheck do
-    url "https://sourceforge.net/projects/crengine/rss?path=/CoolReader#{version.major}/cr#{version.major}-#{version.before_comma}"
+    url "https://sourceforge.net/projects/crengine/rss?path=/CoolReader#{version.major}/cr#{version.major}-#{version.csv.first}"
     strategy :page_match do |page|
       match = page.match(%r{url=.*?/cr(\d+(?:\.\d+)+)-(\d+)\.dmg}i)
       next if match.blank?

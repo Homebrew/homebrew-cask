@@ -16,7 +16,7 @@ cask "cave-story" do
       end
     end
 
-    url "https://www.cavestory.org/downloads/cavestory_#{version.before_comma.no_dots}_r#{version.after_comma}.dmg"
+    url "https://www.cavestory.org/downloads/cavestory_#{version.csv.first.no_dots}_r#{version.csv.second}.dmg"
   end
   language "ja" do
     if MacOS.version <= :mojave
