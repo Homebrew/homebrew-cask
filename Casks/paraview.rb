@@ -1,8 +1,16 @@
 cask "paraview" do
-  version "5.10.0"
-  sha256 "346833f38ef82d9313fcb203396b901da41e968a8d7078e2f128a345d2d6bafc"
+  arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
+  min_macos_version = Hardware::CPU.intel? ? "10.13" : "11.0"
 
-  url "https://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v#{version.major_minor}&type=binary&os=macOS&downloadFile=ParaView-#{version}-MPI-OSX10.13-Python3.9-x86_64.dmg",
+  version "5.10.0"
+
+  if Hardware::CPU.intel?
+    sha256 "346833f38ef82d9313fcb203396b901da41e968a8d7078e2f128a345d2d6bafc"
+  else
+    sha256 "701663d8bac7daa8f6e6ffb65a6f4dd73adbd9acf9c96e053b692220072f952c"
+  end
+
+  url "https://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v#{version.major_minor}&type=binary&os=macOS&downloadFile=ParaView-#{version}-MPI-OSX#{min_macos_version}-Python3.9-#{arch}.dmg",
       user_agent: :fake
   name "ParaView"
   desc "Data analysis and visualization application"
