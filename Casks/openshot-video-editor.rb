@@ -9,4 +9,8 @@ cask "openshot-video-editor" do
   homepage "https://openshot.org/"
 
   app "OpenShot Video Editor.app"
+
+  postflight do
+    set_permissions "#{appdir}/OpenShot Video Editor.app/Contents", "a+rx"
+  end
 end
