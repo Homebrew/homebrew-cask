@@ -7,6 +7,11 @@ cask "sleek" do
   desc "Todo app based on todo.txt"
   homepage "https://github.com/ransome1/sleek"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "sleek.app"
 
   zap trash: [
