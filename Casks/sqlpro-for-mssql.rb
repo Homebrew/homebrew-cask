@@ -16,7 +16,7 @@ cask "sqlpro-for-mssql" do
   app "SQLPro for MSSQL.app"
 
   zap trash: [
-    "~/Library/Containers/com.hankinsoft.osx.tinysqlstudio",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hankinsoft.osx.tinysqlstudio.sfl*",
+    "~/Library/Containers/com.hankinsoft.osx.tinysqlstudio",
   ]
 end
