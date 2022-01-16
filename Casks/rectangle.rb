@@ -9,7 +9,7 @@ cask "rectangle" do
   homepage "https://rectangleapp.com/"
 
   livecheck do
-    url "https://www.rectangleapp.com/downloads/updates.xml"
+    url "https://rectangleapp.com/downloads/updates.xml"
     strategy :sparkle
   end
 
