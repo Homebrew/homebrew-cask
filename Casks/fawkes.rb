@@ -5,12 +5,11 @@ cask "fawkes" do
   url "https://mirror.cs.uchicago.edu/fawkes/files/#{version.major_minor}/Fawkes-#{version}.dmg"
   name "Fawkes"
   desc "Cloaks picture files to circumvent facial recognition"
-  homepage "https://sandlab.cs.uchicago.edu/fawkes/"
+  homepage "http://sandlab.cs.uchicago.edu/fawkes/"
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/Fawkes-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/Fawkes-(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   depends_on macos: ">= :high_sierra"
@@ -18,8 +17,8 @@ cask "fawkes" do
   app "Fawkes.app"
 
   zap trash: [
+    "~/.fawkes",
     "~/Library/Preferences/Fawkes.plist",
     "~/Library/Saved Application State/Fawkes.savedState",
-    "~/.fawkes",
   ]
 end
