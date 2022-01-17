@@ -9,8 +9,7 @@ cask "molotov" do
 
   livecheck do
     url "https://desktop-auto-upgrade.molotov.tv/mac/manifest.json"
-    strategy :page_match
-    regex(%r{/Molotov-v?(\d+(?:\.\d+)*)-mac\.zip}i)
+    regex(%r{/Molotov-v?(\d+(?:\.\d+)+)-mac\.zip}i)
   end
 
   app "Molotov.app"
