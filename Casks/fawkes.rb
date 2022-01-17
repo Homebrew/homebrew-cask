@@ -5,10 +5,10 @@ cask "fawkes" do
   url "https://mirror.cs.uchicago.edu/fawkes/files/#{version.major_minor}/Fawkes-#{version}.dmg"
   name "Fawkes"
   desc "Cloaks picture files to circumvent facial recognition"
-  homepage "http://sandlab.cs.uchicago.edu/fawkes/"
+  homepage "https://sandlab.cs.uchicago.edu/fawkes/"
 
   livecheck do
-    url :homepage
+    url "http://sandlab.cs.uchicago.edu/fawkes/"
     regex(%r{href=.*?/Fawkes-(\d+(?:\.\d+)+)\.dmg}i)
   end
 
