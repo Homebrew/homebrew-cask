@@ -9,7 +9,6 @@ cask "assinador-serpro" do
 
   livecheck do
     url :homepage
-    strategy :page_match
     regex(/Assinador\sSerpro\s(\d+(?:\.\d+)+)/i)
   end
 
