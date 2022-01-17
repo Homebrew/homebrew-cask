@@ -1,8 +1,8 @@
 cask "115browser" do
-  version "24.5.0.1"
-  sha256 "c112daab381a8bc182dd1a8892b514b452c794e4c855c12efc8ec72563b4d9c4"
+  version "1.0.2.6"
+  sha256 "118c0e02876e54198d49e67a030c1afce71d09c5147da1c7e095e1ba48a6eb3e"
 
-  url "https://down.115.com/client/mac/115pc_#{version}.dmg"
+  url "https://down.115.com/client/115pc/mac/115pc_#{version}.dmg"
   name "115Browser"
   name "115浏览器"
   desc "Web browser"
@@ -10,8 +10,7 @@ cask "115browser" do
 
   livecheck do
     url "https://appversion.115.com/1/web/1.0/api/chrome?callback=get_version"
-    strategy :page_match
-    regex(/115pc_(\d+(\.\d+)*).dmg/i)
+    regex(/115pc_(\d+(\.\d+)+).dmg/i)
   end
 
   app "115Browser.app"
