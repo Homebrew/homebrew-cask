@@ -4,6 +4,7 @@ cask "texturepacker" do
 
   url "https://www.codeandweb.com/download/texturepacker/#{version}/TexturePacker-#{version}.dmg"
   name "TexturePacker"
+  desc "Game sprite sheet packer"
   homepage "https://www.codeandweb.com/texturepacker"
 
   livecheck do
