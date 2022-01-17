@@ -15,4 +15,8 @@ cask "confluent-cli" do
   end
 
   binary "confluent/confluent"
+
+  zap trash: [
+    "~/.confluent"
+  ]
 end
