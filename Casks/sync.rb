@@ -9,7 +9,7 @@ cask "sync" do
 
   livecheck do
     url "https://www.sync.com/install/"
-    regex(/(\d+(?:\.\d+)*)\n.*release\s*notes/i)
+    regex(/(\d+(?:\.\d+)+)\n.*release\s*notes/i)
   end
 
   app "Sync.app"
