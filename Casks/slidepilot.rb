@@ -9,8 +9,7 @@ cask "slidepilot" do
 
   livecheck do
     url "https://slidepilotapp.com/updates/versions.xml"
-    strategy :page_match
-    regex(/SlidePilot-(\d+(?:\.\d+)*)\.zip/i)
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
