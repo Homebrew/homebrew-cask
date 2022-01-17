@@ -12,7 +12,7 @@ cask "wine-stable" do
   homepage "https://wiki.winehq.org/MacOS"
 
   livecheck do
-    url "https://github.com/Gcenx/macOS_Wine_builds/releases/latest"
+    url "https://github.com/Gcenx/macOS_Wine_builds/releases/"
     strategy :page_match
     regex(/wine[._-]stable[._-]v?(\d+(?:\.\d+)*)[._-]osx64\.tar\.xz/i)
   end
