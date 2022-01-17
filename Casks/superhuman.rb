@@ -20,17 +20,20 @@ cask "superhuman" do
     strategy :electron_builder
   end
 
+  auto_updates true
+
   app "Superhuman.app"
 
   zap trash: [
     "~/Library/Application Support/Superhuman",
-    "~/Library/Caches/com.superhuman.electron",
-    "~/Library/Caches/com.superhuman.electron.helper",
-    "~/Library/Caches/com.superhuman.electron.ShipIt",
     "~/Library/Caches/Superhuman",
+    "~/Library/Caches/com.superhuman.electron",
+    "~/Library/Caches/com.superhuman.electron.ShipIt",
+    "~/Library/Caches/com.superhuman.electron.helper",
     "~/Library/Logs/Superhuman",
-    "~/Library/Preferences/com.superhuman.electron.plist",
     "~/Library/Preferences/com.superhuman.electron.helper.plist",
+    "~/Library/Preferences/com.superhuman.electron.plist",
     "~/Library/Preferences/com.superhuman.mail.plist",
+    "~/Library/Saved Application State/com.superhuman.electron.savedState",
   ]
 end
