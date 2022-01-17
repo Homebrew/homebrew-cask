@@ -9,7 +9,6 @@ cask "gdat" do
 
   livecheck do
     url "https://sites.google.com/view/genealogical-dna-analysis-tool/home/download"
-    strategy :page_match
     regex(/Genealogical DNA Analysis Tool (\d+(?:.\d+)+)/i)
   end
 
