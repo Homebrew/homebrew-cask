@@ -9,8 +9,7 @@ cask "gloomhaven-helper" do
 
   livecheck do
     url "https://esotericsoftware.com/gloomhaven-helper"
-    strategy :page_match
-    regex(%r{href=.*?/GloomhavenHelper-(\d+(?:\.\d+)*)\.zip}i)
+    regex(%r{href=.*?/GloomhavenHelper-(\d+(?:\.\d+)+)\.zip}i)
   end
 
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
