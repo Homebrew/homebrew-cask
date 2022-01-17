@@ -4,12 +4,12 @@ cask "xrg" do
 
   url "https://download.gauchosoft.com/xrg/XRG-release-#{version}.zip"
   name "XRG"
+  desc "System monitor"
   homepage "https://gauchosoft.com/Products/XRG/"
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/XRG-release-(\d+(?:\.\d+)*)\.zip}i)
+    regex(%r{href=.*?/XRG-release-(\d+(?:\.\d+)+)\.zip}i)
   end
 
   app "XRG.app"
