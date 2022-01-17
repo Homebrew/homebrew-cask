@@ -1,6 +1,6 @@
 cask "qview" do
   version "5.0"
-  sha256 "37515e6188970b7ecd4d9f85b1e5102e3743fe49907d0533dbf82a8832741a97"
+  sha256 "a023cd363ebc5f95e01746b04322eeea179f6dde1fe65f9cb386e7de266c45ab"
 
   url "https://github.com/jurplel/qView/releases/download/#{version}/qView-#{version}.dmg"
   name "qView"
