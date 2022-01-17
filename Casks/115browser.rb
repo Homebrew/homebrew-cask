@@ -13,7 +13,9 @@ cask "115browser" do
     regex(/115pc_(\d+(\.\d+)+).dmg/i)
   end
 
-  app "115Browser.app"
+  depends_on macos: ">= :high_sierra"
+
+  app "115电脑版.app"
 
   zap trash: [
     "~/Library/Application Support/115Browser",
