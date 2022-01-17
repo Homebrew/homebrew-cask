@@ -20,6 +20,8 @@ cask "superhuman" do
     strategy :electron_builder
   end
 
+  auto_updates true
+
   app "Superhuman.app"
 
   zap trash: [
