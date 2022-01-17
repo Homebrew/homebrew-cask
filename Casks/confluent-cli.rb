@@ -11,6 +11,7 @@ cask "confluent-cli" do
   livecheck do
     url "https://s3-us-west-2.amazonaws.com/confluent.cloud/confluent-cli/archives/latest/confluent_latest_darwin_amd64.tar.gz"
     strategy :header_match
+    regex(/confluent[._-]v?(\d+(?:\.\d+)+)[._-]darwin[._-]amd64\.tar\.gz/i)
   end
 
   binary "confluent/confluent"
