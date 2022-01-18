@@ -20,6 +20,5 @@ cask "the-watcher" do
     "~/Library/Application Scripts/io.galactic.web3console",
     "~/Library/Containers/io.galactic.web3console",
     "~/Library/Group Containers/2VV9TDDQG6.group.io.galactic.web3console",
-    "/var/db/receipts/io.galactic.web3console.*",
   ]
 end
