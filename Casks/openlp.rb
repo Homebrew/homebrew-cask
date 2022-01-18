@@ -9,8 +9,7 @@ cask "openlp" do
 
   livecheck do
     url "https://get.openlp.org"
-    strategy :page_match
-    regex(/href=['"]?(\d+(?:\.\d+)*)['"]?/i)
+    regex(/href=['"]?(\d+(?:\.\d+)+)['"]?/i)
   end
 
   app "OpenLP.app"
