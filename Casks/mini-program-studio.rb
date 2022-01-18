@@ -14,9 +14,14 @@ cask "mini-program-studio" do
   # the HTML for the release information, so we can match within that.
   livecheck do
     url "https://opendocs.alipay.com/api/content/006l6m"
-    regex(%r{href=.*?/([a-z\d-]+)/MiniProgramStudio[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
     strategy :page_match do |page|
-      page.scan(regex).map do |match|
+      # Get stable branch major_minor version
+      major_minor = page.match(/(\d+(?:\.\d+)+)\s+稳定版/i)[1]
+      next if major_minor.blank?
+
+      # Get major_minor_patch of latest stable release
+      dynamic_regex = %r{href=.*?/([a-z\d-]+)/MiniProgramStudio[._-]v?(#{major_minor}\.(?:\d+(?:\.\d+)*))\.dmg}i
+      page.scan(dynamic_regex).map do |match|
         (match[0] && match[1]) ? "#{match[1]},#{match[0]}" : ""
       end
     end
