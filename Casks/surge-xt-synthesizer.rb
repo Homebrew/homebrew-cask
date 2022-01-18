@@ -19,4 +19,6 @@ cask "surge-xt-synthesizer" do
     "com.surge-synth-team.surge-xt-fx.app.pkg",
     "com.surge-synth-team.surge-xt.resources.pkg",
   ]
+
+  zap trash: []
 end
