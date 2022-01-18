@@ -15,4 +15,12 @@ cask "the-watcher" do
   depends_on macos: ">= :monterey"
 
   app "The Watcher.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/io.galactic.web3console",
+    "~/Library/Containers/io.galactic.web3console",
+    "~/Library/Group Containers/2VV9TDDQG6.group.io.galactic.web3console",
+    "/var/db/receipts/io.galactic.web3console.*",
+  ]
+  
 end
