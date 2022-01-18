@@ -24,5 +24,5 @@ cask "surge-xt" do
               "/Applications/Surge XT.app",
             ]
 
-  zap trash: []
+  # no zap stanza required
 end
