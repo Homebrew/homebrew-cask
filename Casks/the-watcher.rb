@@ -9,7 +9,7 @@ cask "the-watcher" do
 
   livecheck do
     url "https://watcher.app/downloads/latest-version.txt"
-    regex(/([0-9.]+)/)
+    regex(/(\d+(?:\.\d+)+)/)
   end
 
   app "The Watcher.app"
