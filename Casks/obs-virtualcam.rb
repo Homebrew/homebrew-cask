@@ -8,7 +8,7 @@ cask "obs-virtualcam" do
 
   depends_on macos: ">= :high_sierra"
 
-  pkg "obs-mac-virtualcam-#{version.after_comma}-v#{version.before_comma}.pkg"
+  pkg "obs-mac-virtualcam-#{version.csv.second}-v#{version.csv.first}.pkg"
 
   uninstall pkgutil: "com.johnboiles.obs-mac-virtualcam"
 
