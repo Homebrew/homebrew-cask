@@ -9,7 +9,6 @@ cask "virtualbox-extension-pack" do
 
   livecheck do
     url "https://download.virtualbox.org/virtualbox/LATEST.TXT"
-    strategy :page_match
     regex(/(\d+(?:\.\d+)+)/)
   end
 
