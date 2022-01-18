@@ -14,11 +14,9 @@ cask "surge-xt-synthesizer" do
     "com.surge-synth-team.surge-xt.app.pkg",
     "com.surge-synth-team.surge-xt.component.pkg",
     "com.surge-synth-team.surge-xt.vst3.pkg",
-
     "com.surge-synth-team.surge-xt-fx.app.pkg",
     "com.surge-synth-team.surge-xt-fx.component.pkg",
     "com.surge-synth-team.surge-xt-fx.vst3.pkg",
-
     "com.surge-synth-team.surge-xt.resources.pkg",
   ],
             delete:
