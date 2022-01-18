@@ -1,6 +1,6 @@
 cask "virtualbox" do
-  version "6.1.30,148432"
-  sha256 "e4973bef35922493f91e1395b491cf2ec9dee4944d78ced0ebeeb437d93724d4"
+  version "6.1.32,149290"
+  sha256 "be4bdf794f866b184eaff57e32f388215a3f861f918a5060b2d15d426725b748"
 
   url "https://download.virtualbox.org/virtualbox/#{version.csv.first}/VirtualBox-#{version.csv.first}-#{version.csv.second}-OSX.dmg"
   name "Oracle VirtualBox"
