@@ -17,7 +17,7 @@ cask "podolski" do
     end
   end
 
-  pkg "Podolski_#{version.after_comma}_Mac/Podolski #{version.before_comma} Installer.pkg"
+  pkg "Podolski_#{version.csv.second}_Mac/Podolski #{version.csv.first} Installer.pkg"
 
   uninstall pkgutil: [
     "com.u-he.Podolski.aax.pkg",

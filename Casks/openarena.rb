@@ -7,10 +7,10 @@ cask "openarena" do
   name "OpenArena"
   homepage "https://openarena.ws/smfnews.php"
 
-  app "openarena-#{version.before_comma}/OpenArena #{version.before_comma} #{version.after_comma}.app"
+  app "openarena-#{version.csv.first}/OpenArena #{version.csv.first} #{version.csv.second}.app"
 
   postflight do
-    system_command "/bin/mv", args: ["#{staged_path}/openarena-#{version.before_comma}/baseoa", "#{appdir}/OpenArena #{version.before_comma} #{version.after_comma}.app/Contents/MacOS"]
-    set_permissions "#{appdir}/OpenArena #{version.before_comma} #{version.after_comma}.app/Contents/MacOS/openarena.ub", "755"
+    system_command "/bin/mv", args: ["#{staged_path}/openarena-#{version.csv.first}/baseoa", "#{appdir}/OpenArena #{version.csv.first} #{version.csv.second}.app/Contents/MacOS"]
+    set_permissions "#{appdir}/OpenArena #{version.csv.first} #{version.csv.second}.app/Contents/MacOS/openarena.ub", "755"
   end
 end

@@ -7,5 +7,5 @@ cask "polyphone" do
   name "Polyphone"
   homepage "https://polyphone-soundfonts.com/"
 
-  app "polyphone-#{version.before_comma}.app"
+  app "polyphone-#{version.csv.first}.app"
 end

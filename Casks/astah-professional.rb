@@ -19,7 +19,7 @@ cask "astah-professional" do
 
   depends_on macos: ">= :catalina"
 
-  pkg "astah professional ver #{version.before_comma.dots_to_underscores}.pkg"
+  pkg "astah professional ver #{version.csv.first.dots_to_underscores}.pkg"
 
   uninstall pkgutil: "com.change-vision.astahprofessional.astahprofessional.pkg"
 end

@@ -1,5 +1,5 @@
 cask "adobe-air" do
-  version "33.1.1.713"
+  version "33.1.1.743"
   sha256 :no_check
 
   url "https://airsdk.harman.com/assets/downloads/AdobeAIR.dmg"
@@ -9,7 +9,6 @@ cask "adobe-air" do
 
   livecheck do
     url "https://airsdk.harman.com/api/config-settings/download"
-    strategy :page_match
     regex(/"versionName"\s*:\s*"(\d+(?:\.\d+)+)/i)
   end
 

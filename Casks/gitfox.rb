@@ -21,10 +21,14 @@ cask "gitfox" do
 
   zap trash: [
     "~/Library/Application Support/com.bytieful.Gitfox",
+    "~/Library/Application Support/com.bytieful.Gitfox-retail",
     "~/Library/Application Support/Gitfox",
     "~/Library/Caches/com.bytieful.Gitfox",
+    "~/Library/Caches/com.bytieful.Gitfox-retail",
     "~/Library/Caches/com.crashlytics.data/com.bytieful.Gitfox",
     "~/Library/Preferences/com.bytieful.Gitfox.*",
+    "~/Library/Preferences/com.bytieful.Gitfox-retail.plist",
+    "~/Library/Saved Application State/com.bytieful.Gitfox-retail.savedState",
     "~/Library/WebKit/com.bytieful.Gitfox",
   ]
 end

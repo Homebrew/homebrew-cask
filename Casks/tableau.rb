@@ -10,7 +10,7 @@ cask "tableau" do
   livecheck do
     url "https://www.tableau.com/downloads/desktop/mac"
     strategy :header_match do |headers|
-      headers["location"][/-(\d+-\d+-\d+)\w?\.dmg/i, 1].tr("-", ".")
+      headers["location"][/-(\d+(?:-\d+)+)\.dmg/i, 1].tr("-", ".")
     end
   end
 

@@ -20,7 +20,7 @@ cask "fpc-laz" do
 
   conflicts_with formula: "fpc"
 
-  pkg "fpc-#{version.before_comma}-intel-macosx.pkg"
+  pkg "fpc-#{version.csv.first}-intel-macosx.pkg"
 
   uninstall pkgutil: [
     "org.freepascal.freePascalCompiler320.fpcinst386",
