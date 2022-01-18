@@ -18,10 +18,12 @@ cask "surge-xt-synthesizer" do
     "com.surge-synth-team.surge-xt-fx.component.pkg",
     "com.surge-synth-team.surge-xt-fx.app.pkg",
     "com.surge-synth-team.surge-xt.resources.pkg",
-  ]
+  ],
+            delete:
+                     [
+                       "/Applications/Surge XT Effects.app",
+                       "/Applications/Surge XT.app",
+                     ]
 
-  zap trash: [
-    "/Applications/Surge XT Effects.app",
-    "/Applications/Surge XT.app",
-  ]
+  zap trash: []
 end
