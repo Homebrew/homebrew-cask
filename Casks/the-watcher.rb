@@ -12,5 +12,7 @@ cask "the-watcher" do
     regex(/(\d+(?:\.\d+)+)/)
   end
 
+  depends_on macos: ">= :monterey"
+
   app "The Watcher.app"
 end
