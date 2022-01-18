@@ -1,6 +1,6 @@
 cask "virtualbox-extension-pack" do
-  version "6.1.30"
-  sha256 "a5ee3e693a0470a77735556a77a09aa83bfc48181998b9b21b1af82ef1d11c2a"
+  version "6.1.32"
+  sha256 "ba9dd35434c5cac3b99c53708b10ab07fa8a2fb2995b4515ad81f2d7c465c5ec"
 
   url "https://download.virtualbox.org/virtualbox/#{version}/Oracle_VM_VirtualBox_Extension_Pack-#{version}.vbox-extpack"
   name "Oracle VirtualBox Extension Pack"
@@ -9,7 +9,6 @@ cask "virtualbox-extension-pack" do
 
   livecheck do
     url "https://download.virtualbox.org/virtualbox/LATEST.TXT"
-    strategy :page_match
     regex(/(\d+(?:\.\d+)+)/)
   end
 
