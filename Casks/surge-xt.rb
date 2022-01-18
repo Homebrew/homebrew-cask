@@ -24,5 +24,5 @@ cask "surge-xt" do
               "/Applications/Surge XT.app",
             ]
 
-  zap rmdir: "~/Documents/Surge XT"
+  # no zap stanza required
 end
