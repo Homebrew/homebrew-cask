@@ -10,7 +10,7 @@ cask "115browser" do
 
   livecheck do
     url "https://appversion.115.com/1/web/1.0/api/chrome?callback=get_version"
-    regex(/115br_(\d+(\.\d+)*).dmg/i)
+    regex(/115br_(\d+(\.\d+)+).dmg/i)
   end
 
   depends_on macos: ">= :sierra"
