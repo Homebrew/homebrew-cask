@@ -14,5 +14,9 @@ cask "xscreensaver" do
 
   pkg "Install Everything.pkg"
 
-  uninstall pkgutil: "org.jwz.xscreensaver"
+  uninstall pkgutil: "org.jwz.xscreensaver",
+            delete:  [
+              "/Applications/Apple2.app",
+              "/Applications/Phosphor.app",
+            ]
 end
