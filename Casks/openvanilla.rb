@@ -19,7 +19,7 @@ cask "openvanilla" do
     end
   end
 
-  container nested: "OpenVanillaInstaller.app/Contents/Resources/NotarizedArchives/OpenVanilla-r#{version.after_comma}.zip"
+  container nested: "OpenVanillaInstaller.app/Contents/Resources/NotarizedArchives/OpenVanilla-r#{version.csv.second}.zip"
 
   input_method "OpenVanilla.app"
 

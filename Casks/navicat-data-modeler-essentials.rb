@@ -1,5 +1,5 @@
 cask "navicat-data-modeler-essentials" do
-  version "3.0.19"
+  version "3.1.4"
   sha256 :no_check
 
   url "https://download3.navicat.com/updater/modeler0#{version.major_minor.no_dots}_ess_mac_en.zip"

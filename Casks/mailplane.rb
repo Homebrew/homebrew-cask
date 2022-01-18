@@ -8,7 +8,7 @@ cask "mailplane" do
   homepage "https://mailplaneapp.com/"
 
   livecheck do
-    url "https://update.mailplaneapp.com/appcast.php?rqsr=1&osVersion=10.14.1&appVersion=#{version.after_comma}&shortVersionString=#{version.before_comma}"
+    url "https://update.mailplaneapp.com/appcast.php?rqsr=1&osVersion=10.14.1&appVersion=#{version.csv.second}&shortVersionString=#{version.csv.first}"
     strategy :sparkle
   end
 

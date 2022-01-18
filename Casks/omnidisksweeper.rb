@@ -6,7 +6,7 @@ cask "omnidisksweeper" do
   elsif MacOS.version <= :high_sierra
     version "1.11"
     sha256 "f06b150239e5c5ee27615b1e8bd6ec2c87c61c4cda575547f124ff84986b6f37"
-    url "https://downloads.omnigroup.com/software/MacOSX/10.13/OmniDiskSweeper-#{version.before_comma}(n).dmg"
+    url "https://downloads.omnigroup.com/software/MacOSX/10.13/OmniDiskSweeper-#{version.csv.first}(n).dmg"
   else
     version "1.13"
     sha256 "bf572a47079cd4dea44f7ae2f14bb9a75e2548ad6066757d33564c21a0003821"

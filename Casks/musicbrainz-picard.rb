@@ -1,6 +1,6 @@
 cask "musicbrainz-picard" do
-  version "2.7.2"
-  sha256 "d86eb7740e077ac7c376507dcec92654b8a337d7e94389b6ce1f6c828eadbe97"
+  version "2.7.3"
+  sha256 "c53d1176858a7b4a4567320e01accfca5f3e939adfb9a90e7279f307fa2a24d5"
 
   url "https://musicbrainz.osuosl.org/pub/musicbrainz/picard/MusicBrainz-Picard-#{version}-macOS-10.14.dmg",
       verified: "musicbrainz.osuosl.org/pub/"

@@ -18,5 +18,5 @@ cask "go-server" do
     end
   end
 
-  binary "go-server-#{version.before_comma}/bin/go-server"
+  binary "go-server-#{version.csv.first}/bin/go-server"
 end

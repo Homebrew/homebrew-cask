@@ -15,6 +15,7 @@ cask "adguard" do
   end
 
   auto_updates true
+  conflicts_with cask: "homebrew/cask-versions/adguard-nightly"
   depends_on macos: ">= :sierra"
 
   pkg "AdGuard.pkg"
@@ -30,10 +31,7 @@ cask "adguard" do
               "/Library/Application Support/AdGuard Software/com.adguard.mac.adguard",
               "/Library/Application Support/com.adguard.Adguard",
             ],
-            rmdir:     [
-              "/Library/Application Support/AdGuard Software",
-              "/Library/Application Support/AdGuard Software/com.adguard.mac",
-            ]
+            rmdir:     "/Library/Application Support/AdGuard Software"
 
   zap trash: [
     "/Library/Logs/com.adguard.mac.adguard",
@@ -52,6 +50,7 @@ cask "adguard" do
     "~/Library/Cookies/com.adguard.Adguard.binarycookies",
     "~/Library/Group Containers/*.com.adguard.mac",
     "~/Library/HTTPStorages/com.adguard.mac.adguard",
+    "~/Library/HTTPStorages/com.adguard.mac.adguard.binarycookies",
     "~/Library/Logs/Adguard",
     "~/Library/Preferences/com.adguard.Adguard.plist",
     "~/Library/Preferences/com.adguard.mac.adguard.plist",
