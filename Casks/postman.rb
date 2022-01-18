@@ -16,8 +16,11 @@ cask "postman" do
   homepage "https://www.postman.com/"
 
   livecheck do
-    url "https://dl.pstmn.io/api/version/notes/"
-    regex(/Postman\s*v?(\d+(?:\.\d+)+)/i)
+    url "https://dl.pstmn.io/api/version/"
+    strategy :page_match do |page|
+      stable_versions = JSON.parse(page).filter { |v| v["channel"] == "stable" }
+      stable_versions.map { |v| v["name"] }
+    end
   end
 
   auto_updates true
