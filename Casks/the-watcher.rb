@@ -22,5 +22,4 @@ cask "the-watcher" do
     "~/Library/Group Containers/2VV9TDDQG6.group.io.galactic.web3console",
     "/var/db/receipts/io.galactic.web3console.*",
   ]
-  
 end
