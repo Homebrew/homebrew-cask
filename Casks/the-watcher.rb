@@ -4,7 +4,7 @@ cask "the-watcher" do
 
   url "https://watcher.app/downloads/TheWatcher_v#{version}.zip"
   name "The Watcher"
-  desc "Monitor ETH, Gas, & Wallets"
+  desc "Monitor ETH wallets, USD-ETH prices and gas prices"
   homepage "https://watcher.app/"
 
   livecheck do
