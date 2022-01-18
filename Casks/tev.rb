@@ -7,6 +7,10 @@ cask "tev" do
   desc "HDR image comparison tool with an emphasis on OpenEXR images"
   homepage "https://github.com/Tom94/tev"
 
+  livecheck do
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
+
   depends_on macos: ">= :catalina"
 
   app "tev.app"
