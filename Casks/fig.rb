@@ -2,7 +2,7 @@ cask "fig" do
   version "1.0.54,359"
   sha256 "7ada2c04614ea58f4729747d2e5c831dda5efd6314b70ac2788b872c7976a22d"
 
-  url "https://versions.withfig.com/fig%20#{version.after_comma}.dmg",
+  url "https://versions.withfig.com/fig%20#{version.csv.second}.dmg",
       verified: "versions.withfig.com/"
   name "fig"
   desc "Reimagine your terminal"
