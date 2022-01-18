@@ -20,5 +20,8 @@ cask "surge-xt-synthesizer" do
     "com.surge-synth-team.surge-xt.resources.pkg",
   ]
 
-  zap trash: []
+  zap trash: [
+    "/Applications/Surge XT Effects.app",
+    "/Applications/Surge XT.app",
+  ]
 end
