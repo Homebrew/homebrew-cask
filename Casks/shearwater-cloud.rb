@@ -7,6 +7,11 @@ cask "shearwater-cloud" do
   desc "Review, edit and share dive log data"
   homepage "https://www.shearwater.com/"
 
+  livecheck do
+    url "https://www.shearwater.com/cloud/"
+    regex(/href=.*?ShearwaterCloudInstaller[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+  end
+
   app "Shearwater Cloud.app"
 
   zap trash: "~/Library/Containers/unity.Shearwater-Research.Shearwater"
