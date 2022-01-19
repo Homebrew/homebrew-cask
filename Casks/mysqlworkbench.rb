@@ -20,14 +20,13 @@ cask "mysqlworkbench" do
       skip "newer versions only available for Big Sur or higher"
     end
   else
-    version "8.0.27"
-    sha256 "315c74168a814879ae56d6d18f31a86fc3dcc9ea0ff105979e35a9a8d0d587c7"
+    version "8.0.28"
+    sha256 "bd50e64caee2ac6c0f0520fc34e107f3f77c8bcc6de6d85b7c948a696b247157"
     url "https://cdn.mysql.com/Downloads/MySQLGUITools/mysql-workbench-community-#{version}-macos-x86_64.dmg"
 
     livecheck do
       url "https://dev.mysql.com/downloads/workbench/"
-      strategy :page_match
-      regex(/MySQL\s*Workbench\s*(\d+(?:\.\d+)*)/i)
+      regex(/MySQL\s*Workbench\s*(\d+(?:\.\d+)+)/i)
     end
   end
 
