@@ -1,16 +1,16 @@
 cask "toontown-rewritten" do
   version "1.2.5"
-  sha256 "ed7bd2c60e582cd2a6d51d6188a78d371fe05772e63447cdcf0ca3afa5f4fefb"
+  sha256 :no_check
 
-  url "https://cdn.toontownrewritten.com/launcher/mac/updates/#{version}/ttr_launcher_#{version}.zip"
+  url "https://cdn.toontownrewritten.com/launcher/mac/Toontown%20Rewritten.dmg"
   name "Toontown Rewritten"
   name "Toontown Launcher"
+  desc "Fan-made revival of Disney's Toontown Online"
   homepage "https://www.toontownrewritten.com/"
 
   livecheck do
-    url "https://www.toontownrewritten.com/play"
-    strategy :page_match
-    regex(%r{href=.*?/ttr_launcher_(\d+(?:\.\d+)*)\.zip}i)
+    url :url
+    strategy :extract_plist
   end
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
