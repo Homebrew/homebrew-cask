@@ -8,9 +8,7 @@ cask "dcp-o-matic-kdm-creator" do
   homepage "https://dcpomatic.com/"
 
   livecheck do
-    url "https://dcpomatic.com/download"
-    strategy :page_match
-    regex(/stable\s*release:\s*(\d+(?:\.\d+)+)/i)
+    cask "dcp-o-matic"
   end
 
   app "DCP-o-matic #{version.major} KDM Creator.app"
