@@ -28,7 +28,9 @@ cask "evernote" do
   livecheck do
     url "https://evernote.s3.amazonaws.com/boron/mac/public/latest-mac.yml"
     strategy :electron_builder do |yml|
-      match = yml["files"][0]["url"].match(/Evernote[._-]v?(\d+(?:\.\d+)+)[._-]mac[._-]ddl[._-]ga[._-](\d+(?:\.\d+)*)/)
+      match = yml["files"][0]["url"].match(/
+          Evernote[._-]v?(\d+(?:\.\d+)+)[._-]mac[._-]ddl[._-]ga[._-](\d+(?:\.\d+)*)
+        /)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
