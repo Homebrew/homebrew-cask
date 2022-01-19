@@ -11,7 +11,7 @@ cask "pulse" do
   livecheck do
     url "https://github.com/kean/Pulse/releases/"
     strategy :page_match
-    regex(%r{v?(\d+(?:\.\d+)+)/Pulse[._-]macos.zip}i)
+    regex(%r{v?(\d+(?:\.\d+)+)/Pulse[._-]macos\.zip}i)
   end
 
   app "Pulse.app"
