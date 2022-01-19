@@ -9,7 +9,7 @@ cask "touchdesigner" do
 
   livecheck do
     url "https://derivative.ca/download/"
-    regex(%r{href=.*?/TouchDesigner[._-]?v?(\d+(?:\.\d+)+)\.dmg}i)
+    regex(/href=.*?TouchDesigner[._-]?v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   depends_on macos: ">= :sierra"
