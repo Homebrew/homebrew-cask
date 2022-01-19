@@ -19,7 +19,7 @@ cask "projector" do
   livecheck do
     url "https://github.com/JetBrains/projector-client/releases/"
     strategy :page_match
-    regex(/projector-darwin-signed-#{arch}-launcher-v(\d+(?:\.\d+)+)\.zip/i)
+    regex(/projector[._-]darwin[._-]signed[._-]#{arch}[._-]launcher[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
   depends_on macos: ">= :high_sierra"
