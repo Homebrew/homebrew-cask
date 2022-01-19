@@ -1,10 +1,11 @@
 cask "toontown-rewritten" do
-  version "1.2.5,1.2.5"
+  version "1.2.5"
   sha256 :no_check
 
   url "https://cdn.toontownrewritten.com/launcher/mac/Toontown%20Rewritten.dmg"
   name "Toontown Rewritten"
   name "Toontown Launcher"
+  desc "Fan-made revival of Disney's Toontown Online"
   homepage "https://www.toontownrewritten.com/"
 
   livecheck do
