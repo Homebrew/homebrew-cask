@@ -1,6 +1,6 @@
 cask "nova" do
-  version "8.3"
-  sha256 "2d97ed0472e2042d0c5de1857381be4b07f2f9e33f1b07cd4ec9381d8f8bca47"
+  version "8.4"
+  sha256 "bb8cbf8bc2a87f019c0f730248610dcbc3cdbeb5505d919bb590a4761789e54b"
 
   url "https://download-cdn.panic.com/nova/Nova%20#{version}.zip",
       verified: "https://download-cdn.panic.com/nova/"
@@ -19,12 +19,15 @@ cask "nova" do
   app "Nova.app"
   binary "#{appdir}/Nova.app/Contents/SharedSupport/nova"
 
-  zap trash: [
+  uninstall delete: [
     "/Library/LaunchDaemons/com.panic.NovaPrivilegedHelper.plist",
     "/Library/PrivilegedHelperTools/com.panic.NovaPrivilegedHelper",
+  ]
+
+  zap trash: [
     "~/Library/Application Scripts/com.panic.Nova.NovaQuickLookPreview",
     "~/Library/Application Scripts/com.panic.Nova.NovaQuickLookThumbnail",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.panic.nova.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.panic.nova.sfl*",
     "~/Library/Caches/com.panic.Nova",
     "~/Library/Containers/com.panic.Nova.NovaQuickLookPreview",
     "~/Library/Containers/com.panic.Nova.NovaQuickLookThumbnail",
