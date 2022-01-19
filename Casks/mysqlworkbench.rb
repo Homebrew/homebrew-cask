@@ -26,8 +26,7 @@ cask "mysqlworkbench" do
 
     livecheck do
       url "https://dev.mysql.com/downloads/workbench/"
-      strategy :page_match
-      regex(/MySQL\s*Workbench\s*(\d+(?:\.\d+)*)/i)
+      regex(/MySQL\s*Workbench\s*(\d+(?:\.\d+)+)/i)
     end
   end
 
