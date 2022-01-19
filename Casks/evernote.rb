@@ -27,9 +27,8 @@ cask "evernote" do
 
   livecheck do
     url "https://evernote.s3.amazonaws.com/boron/mac/public/latest-mac.yml"
-
     strategy :electron_builder do |yml|
-      match = yml["files"][0]["url"].match(/Evernote-(\d+(?:\.\d+)*)-mac-ddl-ga-(\d+(?:\.\d+)*)/)
+      match = yml["files"][0]["url"].match(/Evernote[._-]v?(\d+(?:\.\d+)+)[._-]mac[._-]ddl[._-]ga[._-](\d+(?:\.\d+)*)/)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
@@ -46,10 +45,10 @@ cask "evernote" do
   ]
 
   zap trash: [
-    "~/Library/Application Support/Evernote",
+    "~/Library/Application Support/Caches/evernote-client-updater",
     "~/Library/Application Support/com.evernote.Evernote",
     "~/Library/Application Support/com.evernote.EvernoteHelper",
-    "~/Library/Application Support/Caches/evernote-client-updater",
+    "~/Library/Application Support/Evernote",
     "~/Library/Caches/com.evernote.Evernote",
     "~/Library/Cookies/com.evernote.Evernote.binarycookies",
     "~/Library/Logs/Evernote",
