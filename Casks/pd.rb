@@ -8,7 +8,7 @@ cask "pd" do
   homepage "http://msp.ucsd.edu/software.html"
 
   livecheck do
-    url "http://msp.ucsd.edu/software.html"
+    url :homepage
     regex(/pd[._-]v?(\d+(?:\.\d+)+-\d+)\.macos\.zip/i)
   end
 
