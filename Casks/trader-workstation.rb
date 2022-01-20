@@ -1,5 +1,5 @@
 cask "trader-workstation" do
-  version "10.12.2h"
+  version "10.12.2i"
   sha256 :no_check
 
   url "https://download2.interactivebrokers.com/installers/tws/latest/tws-latest-macosx-x64.dmg"
