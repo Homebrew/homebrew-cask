@@ -1,12 +1,23 @@
 cask "angry-ip-scanner" do
-  version "3.7.6"
-  sha256 "16cee34ed7af7175f622197c764fd0c69399bc6dc8b7d891ac76266d077c5415"
+  arch = Hardware::CPU.intel? ? "X86" : "Arm64"
 
-  url "https://github.com/angryip/ipscan/releases/download/#{version}/ipscan-mac-#{version}.zip",
+  version "3.8.0"
+
+  if Hardware::CPU.intel?
+    sha256 "6c514ecc4155806aef7eb0a913cf4a88214e20bdd69694ad9ac5c565d588dea9"
+  else
+    sha256 "eb91b66cced883e4445f8e26fbf33689c82d04f5c736866d08d00847bb46b1f8"
+  end
+
+  url "https://github.com/angryip/ipscan/releases/download/#{version}/ipscan-mac#{arch}-#{version}.zip",
       verified: "github.com/angryip/ipscan/"
   name "Angry IP Scanner"
   desc "Network scanner"
   homepage "https://angryip.org/"
 
   app "Angry IP Scanner.app"
+
+  caveats do
+    depends_on_java "11"
+  end
 end
