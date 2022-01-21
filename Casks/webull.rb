@@ -10,7 +10,9 @@ cask "webull" do
 
   livecheck do
     url "https://infoapi.webullfintech.com/api/operation/appver/last?platform=qt_mac_global"
-    regex(%r{"upgradeUrl"\s*:\s*"[^"]*/Webull%20Desktop%20(\d+(?:\.\d+)*(?:[._-][a-z]+)?)\.dmg"}i)
+    strategy :page_match do |page|
+      JSON.parse(page)["latestAppVersion"]
+    end
   end
 
   depends_on macos: ">= :sierra"
