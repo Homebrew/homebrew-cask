@@ -1,6 +1,6 @@
 cask "laravel-kit" do
-  version "2.0.4"
-  sha256 "e77253af8998076301c8964adaa09b4986532e5fe2724789540da0ced6e10968"
+  version "2.0.5"
+  sha256 "b52d7ce4e5a8032a3d9cd12dbc5c6ad9b2cf8107b7502b25bec53b5f56ef3d6a"
 
   url "https://github.com/tmdh/laravel-kit/releases/download/v#{version}/laravel-kit-#{version}-mac.zip",
       verified: "github.com/tmdh/laravel-kit/"
