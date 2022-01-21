@@ -17,7 +17,7 @@ cask "airtable" do
   app "Airtable.app"
 
   uninstall quit:   "com.FormaGrid.Airtable",
-            delete: "/Library/Logs/DiagnosticReports/Airtable*.*_resource.diag",
+            delete: "/Library/Logs/DiagnosticReports/Airtable*.*_resource.diag"
 
   zap trash: [
     "~/Library/Application Support/Airtable",
