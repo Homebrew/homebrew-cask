@@ -17,10 +17,10 @@ cask "rancher" do
 
   auto_updates true
   conflicts_with formula: %w[
-                   docker
-                   helm
-                   kubernetes-cli
-                 ]
+    docker
+    helm
+    kubernetes-cli
+  ]
 
   app "Rancher Desktop.app"
   binary "#{appdir}/Rancher Desktop.app/Contents/Resources/resources/darwin/bin/docker"
