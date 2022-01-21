@@ -18,7 +18,6 @@ cask "libreoffice" do
 
   livecheck do
     url "https://download.documentfoundation.org/libreoffice/stable/"
-    strategy :page_match
     regex(%r{href="(\d+(?:\.\d+)+)/"}i)
   end
 
