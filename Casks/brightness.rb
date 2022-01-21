@@ -9,7 +9,6 @@ cask "brightness" do
 
   livecheck do
     url "http://bergdesign.com/brightness/"
-    strategy :page_match
     regex(%r{href=.*?/Brightness_(\d+(?:\.\d+)+)\.dmg}i)
   end
 
