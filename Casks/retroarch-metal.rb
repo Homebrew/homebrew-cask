@@ -8,8 +8,7 @@ cask "retroarch-metal" do
   homepage "https://www.libretro.com/"
 
   livecheck do
-    url "https://buildbot.libretro.com/stable/"
-    regex(%r{href=["']?/stable/v?(\d+(?:\.\d+)+)/?["' >]}i)
+    cask "retroarch"
   end
 
   conflicts_with cask: "retroarch"
