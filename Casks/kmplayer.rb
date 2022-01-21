@@ -4,15 +4,14 @@ cask "kmplayer" do
 
   url "http://cdn.kmplayer.com/KMP/Download/KMPX/KMPlayer-#{version}.pkg"
   name "KMPlayer"
-  homepage "http://www.kmplayer.com/"
-
-  livecheck do
-    url "http://www.kmplayer.com/mac"
-    strategy :page_match
-    regex(%r{href=.*?/KMPlayer-(\d+(?:\.\d+)*)\.pkg}i)
-  end
+  desc "Video player"
+  homepage "https://www.kmplayer.com/"
 
   pkg "KMPlayer-#{version}.pkg"
 
   uninstall pkgutil: "com.kmplayer.osx"
+
+  caveats do
+    discontinued
+  end
 end
