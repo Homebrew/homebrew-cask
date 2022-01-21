@@ -1,6 +1,6 @@
 cask "rocket" do
-  version "1.8.2,79"
-  sha256 "9ffc8acbf0bcc5075556d16574cac8f0c8f383b10cd047bbdf58a923b19fdc74"
+  version "1.9,80"
+  sha256 "8e639b4e86c90dc82d17634b5eec448d881242c53c4ff05fd121b283e88df963"
 
   url "https://macrelease.matthewpalmer.net/distribution/appcasts/Rocket-#{version.csv.second}.dmg"
   name "Rocket"

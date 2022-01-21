@@ -1,18 +1,19 @@
 cask "photoninja" do
-  version "1.3.10"
-  sha256 "9f6df73e21dffb47e281183ea8fd6a8ed74bb0ad725240c7cfbba4a7fbb1dce7"
+  version "1.4.0d"
+  sha256 "bea6d1a366309be6ed469072b74067edbe698d651faf8fae6198f97f96b0b823"
 
-  url "https://picturecode.cachefly.net/photoninja/downloads/Install_PhotoNinja_#{version}.dmg",
-      verified: "picturecode.cachefly.net/"
+  url "https://picturecode.cachefly.net/photoninja/downloads/PhotoNinja_#{version}_sse42.pkg",
+      verified: "picturecode.cachefly.net/photoninja/downloads/"
   name "Photo Ninja"
   desc "Professional RAW converter"
   homepage "https://www.picturecode.com/index.php"
 
   livecheck do
     url "https://www.picturecode.com/download.php"
-    strategy :page_match
-    regex(%r{href=.*?/Install_PhotoNinja_(\d+(?:\.\d+)*)\.dmg}i)
+    regex(/PhotoNinja[._-]v?(\d+(?:\.\d+)+\w?)[._-]sse42\.pkg/i)
   end
 
-  app "PhotoNinja_#{version}.app"
+  pkg "PhotoNinja_#{version}_sse42.pkg"
+
+  uninstall pkgutil: "PhotoNinja.#{version}.sse42"
 end

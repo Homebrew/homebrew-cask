@@ -1,6 +1,6 @@
 cask "the-watcher" do
-  version "1.0"
-  sha256 "3a38bb76f147a377f4ea25983bcf5bf6a883d08cc3a75d3317c2aba65fbe6bf6"
+  version "1.1"
+  sha256 "c4db80b6f1daeeded41e1f1955ee6e5bb47a6ad38cdb91aff2b5e443986ef270"
 
   url "https://watcher.app/downloads/TheWatcher_v#{version}.zip"
   name "The Watcher"
@@ -12,7 +12,7 @@ cask "the-watcher" do
     regex(/(\d+(?:\.\d+)+)/)
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :big_sur"
 
   app "The Watcher.app"
 

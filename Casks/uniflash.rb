@@ -1,6 +1,6 @@
 cask "uniflash" do
-  version "6.4.0.3394"
-  sha256 "8ddb6990b78fa40d293effd471ba8850613a2ae2997e87b8d9863ccba172d43a"
+  version "7.0.0.3615"
+  sha256 "d858da86d2ebbedd8c85173663eaf877e284e92f685a463dcbf2fa2efcd47ca7"
 
   url "https://downloads.ti.com/ccs/esd/uniflash/uniflash_sl.#{version}.dmg"
   name "TI UniFlash"
@@ -9,7 +9,7 @@ cask "uniflash" do
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?/uniflash_sl\.(\d+(?:\.\d+)*)\.dmg}i)
+    regex(/href=.*?uniflash_sl\.(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   installer script: {
