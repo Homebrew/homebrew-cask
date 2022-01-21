@@ -9,7 +9,6 @@ cask "010-editor" do
 
   livecheck do
     url "https://www.sweetscape.com/download/010editor/"
-    strategy :page_match
     regex(/Version:?\s*(\d+(?:\.\d+)+),\s*macOS/i)
   end
 
