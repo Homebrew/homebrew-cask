@@ -1,5 +1,5 @@
 cask "kap" do
-  arch = Hardware::CPU.intel? ? "-x64" : "-arm64"
+  arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
   version "3.5.2"
 
@@ -9,7 +9,7 @@ cask "kap" do
     sha256 "5a5e26a6dcaf2e8fbe2255a61a0f0739b333e31193fb0c77686c519c06a604e0"
   end
 
-  url "https://github.com/wulkano/kap/releases/download/v#{version.major_minor_patch}/Kap-#{version}#{arch}.dmg",
+  url "https://github.com/wulkano/kap/releases/download/v#{version.major_minor_patch}/Kap-#{version}-#{arch}.dmg",
       verified: "github.com/wulkano/kap/"
   name "Kap"
   desc "Open-source screen recorder built with web technology"
