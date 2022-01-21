@@ -8,6 +8,11 @@ cask "vmpk" do
   desc "Virtual MIDI Piano Keyboard"
   homepage "https://vmpk.sourceforge.io/"
 
+  livecheck do
+    url "https://sourceforge.net/projects/vmpk/rss?path=/vmpk"
+    regex(/url=.*?vmpk[._-]?v?(\d+(?:\.\d+)+)-mac-x64\.dmg/i)
+  end
+
   depends_on formula: "fluid-synth"
   depends_on macos: ">= :sierra"
 
