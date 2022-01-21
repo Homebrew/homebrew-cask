@@ -1,5 +1,5 @@
 cask "workplace-chat" do
-  version "103.71.123"
+  version "103.72.123"
   sha256 :no_check
 
   url "https://www.facebook.com/work/chat/download/mac",
