@@ -40,6 +40,7 @@ cask "pycharm-ce" do
 
   zap trash: [
     "~/Library/Application Support/PyCharm#{version.major_minor}",
+    "~/Library/Caches/JetBrains/PyCharmCE#{version.major_minor}",
     "~/Library/Caches/PyCharmCE#{version.major_minor}",
     "~/Library/Caches/PyCharm#{version.major_minor}",
     "~/Library/Logs/PyCharm#{version.major_minor}",
