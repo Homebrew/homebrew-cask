@@ -10,7 +10,6 @@ cask "archiver" do
 
   livecheck do
     url "https://api.incrediblebee.com/appcasts/archiver-#{version.major}.xml"
-    strategy :page_match
     regex(%r{url=.*?/Archiver-(\d+(?:\.\d+)+)\.zip}i)
   end
 
