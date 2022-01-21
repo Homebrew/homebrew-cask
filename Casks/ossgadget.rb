@@ -4,7 +4,7 @@ cask "ossgadget" do
 
   url "https://github.com/microsoft/OSSGadget/releases/download/v#{version}/OSSGadget_macos_#{version}.tar.gz"
   name "OSSGadget"
-  desc "Collection of tools for analyzing open source packages."
+  desc "Collection of tools for analyzing open source packages"
   homepage "https://github.com/microsoft/OSSGadget"
 
   livecheck do
