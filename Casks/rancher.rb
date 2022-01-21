@@ -23,11 +23,6 @@ cask "rancher" do
   ]
 
   app "Rancher Desktop.app"
-  binary "#{appdir}/Rancher Desktop.app/Contents/Resources/resources/darwin/bin/docker"
-  binary "#{appdir}/Rancher Desktop.app/Contents/Resources/resources/darwin/bin/helm"
-  binary "#{appdir}/Rancher Desktop.app/Contents/Resources/resources/darwin/bin/kim"
-  binary "#{appdir}/Rancher Desktop.app/Contents/Resources/resources/darwin/bin/kubectl"
-  binary "#{appdir}/Rancher Desktop.app/Contents/Resources/resources/darwin/bin/nerdctl"
 
   uninstall delete: [
     "/opt/rancher-desktop",
