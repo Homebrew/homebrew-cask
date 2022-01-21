@@ -5,7 +5,7 @@ cask "kmplayer" do
   url "http://cdn.kmplayer.com/KMP/Download/KMPX/KMPlayer-#{version}.pkg"
   name "KMPlayer"
   desc "Video player"
-  homepage "http://www.kmplayer.com/"
+  homepage "https://www.kmplayer.com/"
 
   pkg "KMPlayer-#{version}.pkg"
 
