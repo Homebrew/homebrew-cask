@@ -1,5 +1,5 @@
 cask "vitalsigns" do
-  version "3.0.12,1"
+  version "3.0.13,1"
   sha256 :no_check
 
   url "https://www.disometrics.com/downloads/VitalSigns#{version.major}/VitalSigns.dmg"
