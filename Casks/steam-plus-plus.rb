@@ -12,7 +12,7 @@ cask "steam-plus-plus" do
 
   app "Steam++.app"
 
-  zap trash:  [
+  zap trash: [
     "~/Library/Caches/Steam++",
     "~/Library/Preferences/net.steampp.app.plist",
     "~/Library/Saved Application State/net.steampp.app.savedState",
