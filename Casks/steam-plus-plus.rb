@@ -1,4 +1,4 @@
-cask "steamplusplus" do
+cask "steam-plus-plus" do
   version "2.6.4"
   sha256 "3bf9edc4053ba08b706ee47234a8b4a3c73feb1a952289e82d029bb17217219d"
 
