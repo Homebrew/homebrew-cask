@@ -9,7 +9,7 @@ cask "uniflash" do
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?/uniflash_sl\.(\d+(?:\.\d+)*)\.dmg}i)
+    regex(/href=.*?uniflash_sl\.(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   installer script: {
