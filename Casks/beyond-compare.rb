@@ -9,7 +9,6 @@ cask "beyond-compare" do
 
   livecheck do
     url "https://www.scootersoftware.com/download.php?zz=v4changelog"
-    strategy :page_match
     regex(/<h2[^>]*>(\d+(?:\.\d+)+)/i)
   end
 
@@ -17,12 +16,11 @@ cask "beyond-compare" do
 
   app "Beyond Compare.app"
   binary "#{appdir}/Beyond Compare.app/Contents/MacOS/bcomp"
-  binary "#{appdir}/Beyond Compare.app/Contents/MacOS/bcomp", target: "bcompare"
 
   zap trash: [
     "~/Library/Application Support/Beyond Compare",
-    "~/Library/Caches/com.apple.helpd/Generated/com.ScooterSoftware.BeyondCompare.help*",
     "~/Library/Caches/com.apple.helpd/Generated/Beyond Compare Help*",
+    "~/Library/Caches/com.apple.helpd/Generated/com.ScooterSoftware.BeyondCompare.help*",
     "~/Library/Caches/com.ScooterSoftware.BeyondCompare",
     "~/Library/Saved Application State/com.ScooterSoftware.BeyondCompare.savedState",
   ]
