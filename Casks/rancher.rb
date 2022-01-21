@@ -16,10 +16,7 @@ cask "rancher" do
   homepage "https://rancherdesktop.io/"
 
   auto_updates true
-  conflicts_with cask:    %w[
-    docker
-  ],
-                 formula: %w[
+  conflicts_with formula: %w[
                    docker
                    helm
                    kubernetes-cli
