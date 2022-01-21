@@ -14,10 +14,10 @@ cask "veepn" do
 
   app "VeePN.app"
 
-  uninstall launchctl: "com.veepn.macos.helper"
+  uninstall launchctl: "com.veepn.macos.helper",
+            delete:    "/Library/PrivilegedHelperTools/com.veepn.macos.helper"
 
   zap trash: [
-    "/Library/PrivilegedHelperTools/com.veepn.macos.helper",
     "~/Library/Application Support/com.veepn.macos.direct",
     "~/Library/Preferences/com.veepn.macos.direct.plist",
   ]
