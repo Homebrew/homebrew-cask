@@ -3,13 +3,13 @@ cask "pycharm-ce" do
 
   version "2021.3.1,213.6461.77"
 
-  url "https://download.jetbrains.com/python/pycharm-community-#{version.csv.first}#{arch}.dmg"
   if Hardware::CPU.intel?
     sha256 "aec1cb259c1418adfb864118ca6fc1df8ac845478c19e1f742aaa54e111638f4"
   else
     sha256 "0eef9121c16bc2bce32ae6d4d2b1ab788977e0d2044efdee1ec0904942dfa1f9"
   end
 
+  url "https://download.jetbrains.com/python/pycharm-community-#{version.csv.first}#{arch}.dmg"
   name "Jetbrains PyCharm Community Edition"
   name "PyCharm CE"
   desc "IDE for Python programming - Community Edition"
@@ -40,8 +40,9 @@ cask "pycharm-ce" do
 
   zap trash: [
     "~/Library/Application Support/PyCharm#{version.major_minor}",
-    "~/Library/Caches/PyCharmCE#{version.major_minor}",
+    "~/Library/Caches/JetBrains/PyCharmCE#{version.major_minor}",
     "~/Library/Caches/PyCharm#{version.major_minor}",
+    "~/Library/Caches/PyCharmCE#{version.major_minor}",
     "~/Library/Logs/PyCharm#{version.major_minor}",
     "~/Library/Logs/PyCharmCE#{version.major_minor}",
     "~/Library/Preferences/PyCharm#{version.major_minor}",
