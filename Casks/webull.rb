@@ -1,8 +1,9 @@
 cask "webull" do
-  version "5.4.22_us"
-  sha256 "75f4c8981b27e248360fdf024ca6620ae50711af3ff54d03e60efadfa66b3c26"
+  version "5.6.6"
+  sha256 "23a7a94b26d8b151d665c5cb57498c27f2761e22b73223091747f731efe80b5f"
 
-  url "https://pub.webull.com/us/desktop/Webull%20Desktop%20#{version}.dmg"
+  url "https://u1sweb.webullfinance.com/us/desktop/Webull%20Desktop%20#{version}_us.dmg",
+      verified: "u1sweb.webullfinance.com"
   name "Webull"
   desc "Desktop client for Webull Financial LLC"
   homepage "https://webull.com/"
