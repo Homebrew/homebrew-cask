@@ -9,7 +9,6 @@ cask "airtable" do
 
   livecheck do
     url "https://airtable.com/mac"
-    strategy :page_match
     regex(%r{href=.*?/Airtable-(\d+(?:\.\d+)+)\.dmg}i)
   end
 
@@ -17,15 +16,15 @@ cask "airtable" do
 
   app "Airtable.app"
 
-  uninstall quit: "com.FormaGrid.Airtable"
+  uninstall quit:   "com.FormaGrid.Airtable",
+            delete: "/Library/Logs/DiagnosticReports/Airtable*.*_resource.diag"
 
   zap trash: [
-    "/Library/Logs/DiagnosticReports/Airtable*.*_resource.diag",
-    "~/Library/Logs/Airtable",
+    "~/Library/Application Support/Airtable",
     "~/Library/Caches/com.FormaGrid.Airtable*",
     "~/Library/Cookies/com.FormaGrid.Airtable.binarycookies",
-    "~/Library/Application Support/Airtable",
-    "~/Library/Preferences/com.FormaGrid.Airtable*.plist",
+    "~/Library/Logs/Airtable",
     "~/Library/Preferences/ByHost/com.FormaGrid.Airtable.ShipIt.*.plist",
+    "~/Library/Preferences/com.FormaGrid.Airtable*.plist",
   ]
 end
