@@ -18,7 +18,7 @@ cask "postman" do
   livecheck do
     url "https://dl.pstmn.io/api/version/"
     strategy :page_match do |page|
-      stable_versions = JSON.parse(page).filter { |v| v["channel"] == "stable" }
+      stable_versions = JSON.parse(page).filter { |v| v["channel"] == "stable" && v["disabled"] == false }
       stable_versions.map { |v| v["name"] }
     end
   end
