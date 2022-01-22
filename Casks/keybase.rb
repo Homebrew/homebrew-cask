@@ -10,7 +10,7 @@ cask "keybase" do
   livecheck do
     url "https://prerelease.keybase.io/update-darwin-prod-v2.json"
     strategy :page_match do |page|
-      match = page.match(/Keybase-(\d+(?:\.\d+)*)-(\d+)%2B([0-9a-f]+)\.zip/i)
+      match = page.match(/Keybase[._-]v?(\d+(?:\.\d+)+)[._-](\d+)%2B([0-9a-f]+)\.zip/i)
       next if match.blank?
 
       "#{match[1]},#{match[2]},#{match[3]}"
@@ -26,7 +26,10 @@ cask "keybase" do
                    args: ["install-auto"]
   end
 
-  uninstall delete:    "/Library/PrivilegedHelperTools/keybase.Helper",
+  uninstall delete:    [
+    "/Library/Logs/keybase*",
+    "/Library/PrivilegedHelperTools/keybase.Helper",
+  ],
             launchctl: "keybase.Helper",
             signal:    [
               ["TERM", "keybase.Electron"],
@@ -44,9 +47,7 @@ cask "keybase" do
     "~/Library/Caches/Keybase",
     "~/Library/Group Containers/keybase",
     "~/Library/Logs/Keybase*",
-    "~/Library/Logs/keybase*",
     "~/Library/Preferences/keybase*",
-    "/Library/Logs/keybase*",
   ],
       rmdir: "/keybase"
 end
