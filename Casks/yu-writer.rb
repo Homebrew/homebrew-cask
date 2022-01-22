@@ -2,10 +2,10 @@ cask "yu-writer" do
   version "0.5.3,beta"
   sha256 "4fff4042c6ac7c047097c5e6d59a8a1c3f9dacfbdcadb3121904426413b38e06"
 
-  url "https://github.com/hemashushu/yu-writer.site/releases/download/v#{version.csv.first}/yu-writer-#{version.csv.second}-#{version.csv.first}-macos.dmg",
-      verified: "github.com/hemashushu/yu-writer.site/"
+  url "https://github.com/ivarptr/yu-writer.site/releases/download/v#{version.csv.first}/yu-writer-#{version.csv.second}-#{version.csv.first}-macos.dmg",
+      verified: "github.com/ivarptr/yu-writer.site"
   name "Yu Writer"
-  homepage "https://hemashushu.github.io/yu-writer.site/"
+  homepage "https://ivarptr.github.io/yu-writer.site/"
 
   livecheck do
     url :homepage
