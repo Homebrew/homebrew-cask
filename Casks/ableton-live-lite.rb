@@ -8,8 +8,7 @@ cask "ableton-live-lite" do
   homepage "https://www.ableton.com/en/products/live-lite/"
 
   livecheck do
-    url "https://www.ableton.com/en/release-notes/live-#{version.major}/"
-    regex(/(\d+(?:\.\d+)+)\s*Release\s*Notes/i)
+    cask "ableton-live-suite"
   end
 
   auto_updates true
@@ -20,9 +19,9 @@ cask "ableton-live-lite" do
   uninstall quit: "com.ableton.live"
 
   zap trash: [
+    "~/Library/Application Support/Ableton",
     "~/Library/Application Support/CrashReporter/Ableton *_*.plist",
     "~/Library/Application Support/CrashReporter/Live_*.plist",
-    "~/Library/Application Support/Ableton",
     "~/Library/Caches/Ableton",
     "~/Library/Preferences/Ableton",
     "~/Library/Preferences/com.ableton.live.plist*",
