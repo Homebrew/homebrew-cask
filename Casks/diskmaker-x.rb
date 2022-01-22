@@ -11,8 +11,7 @@ cask "diskmaker-x" do
     app "DiskMaker X #{version.major} for macOS Catalina.app"
 
     livecheck do
-      url "https://diskmakerx.com/"
-      strategy :page_match
+      url :url
       regex(/DiskMaker\s*X\s*(\d+(?:\.\d+)+)/i)
     end
   end
