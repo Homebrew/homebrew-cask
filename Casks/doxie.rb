@@ -9,7 +9,6 @@ cask "doxie" do
 
   livecheck do
     url "https://r.getdoxie.com/app/doxie/release-notes-latest.html"
-    strategy :page_match
     regex(/Doxie.(\d+(?:\.\d+)+)/i)
   end
 
