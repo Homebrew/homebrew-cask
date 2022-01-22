@@ -9,7 +9,6 @@ cask "cmdtap" do
 
   livecheck do
     url "https://www.yingdev.com/projects/cmdtap"
-    strategy :page_match
     regex(%r{href=.*?/(\d+(?:\.\d+)+)/CmdTap\.zip}i)
   end
 
