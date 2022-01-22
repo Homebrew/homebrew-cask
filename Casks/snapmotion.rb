@@ -3,7 +3,7 @@ cask "snapmotion" do
   sha256 "d7ed2c57e318ac44825df4c0fba83c1be3fd9942b8825b7c63391ffc9b180dec"
 
   url "https://neededapps.nyc3.digitaloceanspaces.com/media/public/#{version.csv.second}.zip",
-      verified: "neededapps.nyc3.digitaloceanspaces.com"
+      verified: "neededapps.nyc3.digitaloceanspaces.com/media/public/"
   name "SnapMotion"
   desc "Extract images from videos"
   homepage "https://neededapps.com/snapmotion/"
