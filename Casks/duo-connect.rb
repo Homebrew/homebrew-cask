@@ -10,8 +10,7 @@ cask "duo-connect" do
 
   livecheck do
     url "https://duo.com/docs/checksums#duoconnect-for-macos"
-    strategy :page_match
-    regex(%r{href=.*?/DuoConnect-(\d+(?:\.\d+)+)\.pkg}i)
+    regex(%r{href=.*?/DuoConnect[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
   end
 
   depends_on macos: ">= :yosemite"
