@@ -10,8 +10,7 @@ cask "duplicacy-web-edition" do
 
   livecheck do
     url "https://duplicacy.com/download.html"
-    strategy :page_match
-    regex(%r{href=.*?/duplicacy_web_osx_x64_(\d+(?:\.\d+)+)\.dmg}i)
+    regex(%r{href=.*?/duplicacy[._-]web[._-]osx[._-]x64[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "Duplicacy Web Edition.app"
