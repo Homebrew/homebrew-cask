@@ -9,8 +9,7 @@ cask "composercat" do
 
   livecheck do
     url "https://getcomposercat.com/"
-    strategy :page_match
-    regex(%r{href=.*?/Composercat-(\d+(?:\.\d+)+)\.dmg}i)
+    regex(%r{href=.*?/Composercat[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "Composercat.app"
