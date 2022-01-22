@@ -1,7 +1,7 @@
 cask "klayout" do
   version "0.27.7"
 
-if MacOS.version <= :catalina
+  if MacOS.version <= :catalina
     sha256 "7e7b515f2e0a735ce57f247a1a51e4f1b37b71d73dac5fb931c4e428ed38ff0b"
 
     url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Catalina-1-qt5Brew-RsysPhb38.dmg",
