@@ -5,6 +5,7 @@ cask "yu-writer" do
   url "https://github.com/ivarptr/yu-writer.site/releases/download/v#{version}/yu-writer-beta-#{version}-macos.dmg",
       verified: "github.com/ivarptr/yu-writer.site"
   name "Yu Writer"
+  desc "Markdown editor"
   homepage "https://ivarptr.github.io/yu-writer.site/"
 
   app "Yu Writer.app"
