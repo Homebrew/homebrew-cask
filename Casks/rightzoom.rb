@@ -1,6 +1,6 @@
 cask "rightzoom" do
   version "3.0"
-  sha256 "60ad9b6a54dc1191159dc4ac557d095a38780afec4f7d3067093da98037fe476"
+  sha256 "09a8992789c50bef29e62578b7ffb3abd9e3c20a1dab67bb6a9a202eb0a95a50"
 
   url "https://www.blazingtools.com/mac/RightZoom.zip"
   name "Right Zoom"
