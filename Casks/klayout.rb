@@ -24,7 +24,6 @@ cask "klayout" do
 
   livecheck do
     url "https://github.com/KLayout/klayout/"
-    strategy :github_latest
   end
 
   depends_on macos: ">= :catalina"
