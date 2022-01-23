@@ -4,12 +4,12 @@ cask "electrum-ltc" do
 
   url "https://electrum-ltc.org/download/electrum-ltc-#{version}.dmg"
   name "Electrum-LTC"
+  desc "Litecoin wallet"
   homepage "https://electrum-ltc.org/"
 
   livecheck do
-    url "https://electrum-ltc.org/"
-    strategy :page_match
-    regex(%r{href=.*?/electrum-ltc-(\d+(?:\.\d+)*)\.dmg}i)
+    url :homepage
+    regex(%r{href=.*?/electrum[._-]ltc[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "Electrum-LTC.app"
