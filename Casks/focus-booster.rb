@@ -5,6 +5,7 @@ cask "focus-booster" do
   url "https://dcwy7j973b6zk.cloudfront.net/downloads/stable/focusbooster#{version}.dmg",
       verified: "dcwy7j973b6zk.cloudfront.net/downloads/stable/"
   name "Focus Booster"
+  desc "Time tracker"
   homepage "https://www.focusboosterapp.com/"
 
   livecheck do
