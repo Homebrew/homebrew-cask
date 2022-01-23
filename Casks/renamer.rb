@@ -16,4 +16,10 @@ cask "renamer" do
   depends_on macos: ">= :mojave"
 
   app "Renamer.app"
+
+  zap trash: [
+    "~/Library/Application Support/Renamer",
+    "~/Library/Logs/Renamer.log",
+    "~/Library/Preferences/com.incrediblebee.Renamer#{version.major}.plist",
+  ]
 end
