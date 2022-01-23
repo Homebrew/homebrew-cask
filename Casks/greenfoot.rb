@@ -9,8 +9,7 @@ cask "greenfoot" do
 
   livecheck do
     url "https://www.greenfoot.org/download"
-    strategy :page_match
-    regex(/Version:\s*(\d+(?:\.\d+)*)/i)
+    regex(/Version:\s*(\d+(?:\.\d+)+)/i)
   end
 
   app "Greenfoot #{version}/Greenfoot.app"
