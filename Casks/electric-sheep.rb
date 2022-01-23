@@ -10,8 +10,7 @@ cask "electric-sheep" do
 
   livecheck do
     url "https://electricsheep.org/#/download"
-    strategy :page_match
-    regex(%r{href=.*?/electricsheep-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/electricsheep[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   pkg "Electric Sheep.pkg"
