@@ -4,7 +4,7 @@ cask "easytether" do
 
   url "http://www.mobile-stream.com/beta/darwin/easytether-yosemite-b#{version}.pkg"
   name "EasyTether"
-  desd "Carrier-independent Internet connection sharing (tethering)"
+  desc "Carrier-independent Internet connection sharing (tethering)"
   homepage "http://www.mobile-stream.com/index.html"
 
   livecheck do
