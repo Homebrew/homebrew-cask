@@ -9,8 +9,7 @@ cask "focus-booster" do
 
   livecheck do
     url "https://www.focusboosterapp.com/download"
-    strategy :page_match
-    regex(%r{href=.*?/focusbooster(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/focusboosterv?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "focus booster.app"
