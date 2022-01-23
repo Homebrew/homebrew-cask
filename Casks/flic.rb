@@ -10,8 +10,7 @@ cask "flic" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(/Flic\.(\d+(?:\.\d+)*)\.zip/i)
+    regex(/Flic\.(\d+(?:\.\d+)+)\.zip/i)
   end
 
   app "Flic.app"
