@@ -8,11 +8,6 @@ cask "utm" do
   desc "Virtual machines UI using QEMU"
   homepage "https://getutm.app/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   conflicts_with cask: "homebrew/cask-versions/utm-beta"
 
   app "UTM.app"
