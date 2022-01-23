@@ -18,9 +18,8 @@ cask "renamer" do
   app "Renamer.app"
   
   zap trash: [
-  "~/Library/Application Support/Renamer",
-  "~/Library/Logs/Renamer.log",
-  "~/Library/Preferences/com.incrediblebee.Renamer6.plist",
-]
-  
+    "~/Library/Application Support/Renamer",
+    "~/Library/Logs/Renamer.log",
+    "~/Library/Preferences/com.incrediblebee.Renamer6.plist",
+  ]  
 end
