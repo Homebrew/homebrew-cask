@@ -5,17 +5,17 @@ cask "klayout" do
     sha256 "7e7b515f2e0a735ce57f247a1a51e4f1b37b71d73dac5fb931c4e428ed38ff0b"
 
     url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Catalina-1-qt5Brew-RsysPhb38.dmg",
-        verified: "www.klayout.org/downloads/MacOS/"
+        verified: "klayout.org/downloads/MacOS/"
   elsif MacOS.version <= :big_sur
     sha256 "398524660a4fab288190791f57d34262b120faf6bb19c024b438826edb0a7d28"
 
     url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-BigSur-1-qt5Brew-RsysPhb38.dmg",
-        verified: "www.klayout.org/downloads/MacOS/"
+        verified: "klayout.org/downloads/MacOS/"
   else
     sha256 "a5047a1058a8795f06ae7b26cce417ac093eee42b0fdd6d0bac86efaf5a003f4"
 
     url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Monterey-1-qt5Brew-RsysPhb38.dmg",
-        verified: "www.klayout.org/downloads/MacOS/"
+        verified: "klayout.org/downloads/MacOS/"
   end
 
   name "KLayout"
