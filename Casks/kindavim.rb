@@ -4,7 +4,7 @@ cask "kindavim" do
 
   url "https://kindavim.app/releases/kindaVim.zip"
   name "kindaVim"
-  desc "Vim for the whole macOS"
+  desc "Use vim anywhere"
   homepage "https://kindavim.app/"
 
   livecheck do
