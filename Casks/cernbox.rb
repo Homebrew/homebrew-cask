@@ -9,8 +9,7 @@ cask "cernbox" do
 
   livecheck do
     url "https://cernbox.web.cern.ch/cernbox/downloads/"
-    strategy :page_match
-    regex(%r{href=.*?/cernbox-(\d+(?:\.\d+)+)\.pkg}i)
+    regex(%r{href=.*?/cernbox[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
   end
 
   pkg "cernbox-#{version}.pkg"

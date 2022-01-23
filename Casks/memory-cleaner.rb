@@ -1,5 +1,5 @@
 cask "memory-cleaner" do
-  version "4.4,117"
+  version "4.4.1,118"
   sha256 :no_check
 
   url "https://nektony.com/download/memory-cleaner/dmg/memory-cleaner.dmg"

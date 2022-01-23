@@ -17,5 +17,5 @@ cask "go-agent" do
     end
   end
 
-  binary "go-agent-#{version.before_comma}/bin/go-agent"
+  binary "go-agent-#{version.csv.first}/bin/go-agent"
 end

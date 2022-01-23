@@ -20,7 +20,7 @@ cask "silentknight" do
 
   depends_on macos: ">= :el_capitan"
 
-  app "silentknight#{version.before_comma.no_dots}/SilentKnight.app"
+  app "silentknight#{version.csv.first.no_dots}/SilentKnight.app"
 
   zap trash: [
     "~/Library/Caches/co.eclecticlight.SilentKnight",

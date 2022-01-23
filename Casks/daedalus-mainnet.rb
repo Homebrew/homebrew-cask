@@ -1,6 +1,6 @@
 cask "daedalus-mainnet" do
-  version "4.6.0,20052"
-  sha256 "4978236ec97f07e83500a57adac574f0d3addc6f950f2a3017cf6c4aef2d0449"
+  version "4.7.0,20341"
+  sha256 "4fb19704a6e85bf9d0180f2d2c78362638e7a957bafd07f29acb321af59bf431"
 
   url "https://update-cardano-mainnet.iohk.io/daedalus-#{version.csv.first}-mainnet-#{version.csv.second}.pkg",
       verified: "update-cardano-mainnet.iohk.io/"
@@ -21,7 +21,7 @@ cask "daedalus-mainnet" do
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
-  pkg "daedalus-#{version.before_comma}-mainnet-#{version.after_comma}.pkg"
+  pkg "daedalus-#{version.csv.first}-mainnet-#{version.csv.second}.pkg"
 
   uninstall pkgutil: "org.Daedalusmainnet.pkg"
 

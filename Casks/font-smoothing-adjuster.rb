@@ -10,8 +10,7 @@ cask "font-smoothing-adjuster" do
 
   livecheck do
     url "https://font-smoothing-adjuster-updates.s3.eu-west-2.amazonaws.com/appcast.xml"
-    strategy :page_match
-    regex(/Font%20Smoothing%20Adjuster%20(\d+(?:\.\d+)*)\.dmg/i)
+    regex(/Font%20Smoothing%20Adjuster%20v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "Font Smoothing Adjuster.app"

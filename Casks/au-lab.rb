@@ -7,5 +7,10 @@ cask "au-lab" do
   desc "Digital audio mixing application"
   homepage "https://www.apple.com/apple-music/apple-digital-masters/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "AU Lab.app"
 end

@@ -9,8 +9,7 @@ cask "cursorsense" do
 
   livecheck do
     url "https://plentycom.jp/en/cursorsense/download.php"
-    strategy :page_match
-    regex(%r{href=.*?/CursorSense(\d+(?:\.\d+)+)\.dmg}i)
+    regex(%r{href=.*?/CursorSensev?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   depends_on macos: ">= :sierra"

@@ -25,4 +25,8 @@ cask "coda" do
     "~/Library/Preferences/com.panic.Coda#{version.major}.plist",
     "~/Library/Saved Application State/com.panic.Coda#{version.major}.savedState",
   ]
+
+  caveats do
+    discontinued
+  end
 end

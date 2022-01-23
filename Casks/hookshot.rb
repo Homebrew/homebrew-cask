@@ -1,6 +1,6 @@
 cask "hookshot" do
-  version "1.23.1,54"
-  sha256 "e57af39f3398edb18df37a849d820f39718d97e7a2ab247753b3fef1c73bb5e6"
+  version "1.24,55"
+  sha256 "90ca5f61de4912f7958bd690e424fa3e962e69459ca0a796a7737da712984b4b"
 
   url "https://hookshot.app/downloads/Hookshot#{version.csv.first}.dmg"
   name "Hookshot"
@@ -17,10 +17,18 @@ cask "hookshot" do
 
   app "Hookshot.app"
 
+  uninstall quit: "com.knollsoft.Hookshot"
+
   zap trash: [
     "~/Library/Application Support/Hookshot",
     "~/Library/Caches/com.knollsoft.Hookshot",
     "~/Library/Cookies/com.knollsoft.Hookshot.binarycookies",
-    "/Library/Preferences/com.knollsoft.Hookshot.plist",
+    "~/Library/HTTPStorages/com.knollsoft.Hookshot",
+    "~/Library/HTTPStorages/com.knollsoft.Hookshot.binarycookies",
+    "~/Library/Preferences/com.knollsoft.Hookshot.plist",
   ]
+
+  caveats do
+    discontinued
+  end
 end
