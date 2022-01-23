@@ -5,6 +5,7 @@ cask "glyphfinder" do
   url "https://ueber.fra1.cdn.digitaloceanspaces.com/glyphfinder/mac/Glyphfinder-#{version}-mac.dmg",
       verified: "ueber.fra1.cdn.digitaloceanspaces.com/glyphfinder/mac/"
   name "Glyphfinder"
+  desc "Character search for designers, developers and writers"
   homepage "https://www.glyphfinder.com/"
 
   livecheck do
