@@ -9,8 +9,7 @@ cask "gitblade" do
 
   livecheck do
     url "https://gitblade.com/#download"
-    strategy :page_match
-    regex(%r{href=.*?/gitblade-(\d+(?:\.\d+)*)-darwin-x64\.dmg}i)
+    regex(%r{href=.*?/gitblade[._-]v?(\d+(?:\.\d+)*)[._-]darwin[._-]x64\.dmg}i)
   end
 
   app "GitBlade.app"
