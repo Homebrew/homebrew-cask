@@ -9,8 +9,13 @@ cask "nheko" do
   homepage "https://nheko-reborn.github.io/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://github.com/Nheko-Reborn/nheko/releases/latest"
+    strategy :page_match do |page|
+      match = page.match(/nheko[._-]v?(\d+(?:\.\d+)+)[._-](.+)[._-](.+)\.dmg/i)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
+    end
   end
 
   app "Nheko.app"
