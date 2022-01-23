@@ -12,7 +12,5 @@ cask "quarto" do
 
   pkg "quarto-#{version}-macos.pkg"
 
-  uninstall pkgutil: [
-    "org.rstudio.quarto",
-  ]
+  uninstall pkgutil: "org.rstudio.quarto"
 end
