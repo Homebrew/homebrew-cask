@@ -9,8 +9,7 @@ cask "genymotion" do
 
   livecheck do
     url "https://www.genymotion.com/download/"
-    strategy :page_match
-    regex(/Genymotion\s*Desktop\s*(\d+(?:\.\d+)*)/i)
+    regex(/Genymotion\s*Desktop\s*(\d+(?:\.\d+)+)/i)
   end
 
   depends_on cask: "virtualbox"
