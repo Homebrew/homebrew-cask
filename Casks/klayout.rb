@@ -1,28 +1,32 @@
 cask "klayout" do
-  version "0.26.8"
+  version "0.27.7"
 
-  if MacOS.version <= :high_sierra
-    sha256 "b6ee7a8ee71e8cb218b6ecea4df6865cb1d0f49b646101246543bd7de1d6d5e7"
+  if MacOS.version <= :catalina
+    sha256 "7e7b515f2e0a735ce57f247a1a51e4f1b37b71d73dac5fb931c4e428ed38ff0b"
 
-    url "https://www.klayout.org/downloads/MacOS/ST-klayout-#{version}-macOS-HighSierra-1-qt5MP-RsysPsys.dmg",
-        verified: "klayout.org/"
-  elsif MacOS.version <= :mojave
-    sha256 "e3ade30ac217f312720d2157cd6e9afad566cbb239a08ecd55a6f9d8dc9af3e0"
+    url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Catalina-1-qt5Brew-RsysPhb38.dmg",
+        verified: "klayout.org/downloads/MacOS/"
+  elsif MacOS.version <= :big_sur
+    sha256 "398524660a4fab288190791f57d34262b120faf6bb19c024b438826edb0a7d28"
 
-    url "https://www.klayout.org/downloads/MacOS/ST-klayout-#{version}-macOS-Mojave-1-qt5MP-RsysPsys.dmg",
-        verified: "klayout.org/"
+    url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-BigSur-1-qt5Brew-RsysPhb38.dmg",
+        verified: "klayout.org/downloads/MacOS/"
   else
-    sha256 "73641ce0c0f34bb21d43001f1f5924f60221a60458b131cb445fdf3f98c5dff5"
+    sha256 "a5047a1058a8795f06ae7b26cce417ac093eee42b0fdd6d0bac86efaf5a003f4"
 
-    url "https://www.klayout.org/downloads/MacOS/ST-klayout-#{version}-macOS-Catalina-1-qt5MP-RsysPsys.dmg",
-        verified: "klayout.org/"
+    url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Monterey-1-qt5Brew-RsysPhb38.dmg",
+        verified: "klayout.org/downloads/MacOS/"
   end
 
-  appcast "https://www.klayout.de/development.html"
   name "KLayout"
+  desc "IC design layout viewer and editor"
   homepage "https://www.klayout.de/"
 
-  depends_on macos: ">= :mojave"
+  livecheck do
+    url "https://github.com/KLayout/klayout/"
+  end
+
+  depends_on macos: ">= :catalina"
 
   suite "KLayout"
 
