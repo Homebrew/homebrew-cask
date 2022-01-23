@@ -7,5 +7,10 @@ cask "8x8-meet" do
   name "8x8 Meet"
   homepage "https://8x8.vc/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "8x8 Meet.app"
 end
