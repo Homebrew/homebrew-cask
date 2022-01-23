@@ -5,6 +5,7 @@ cask "heimdall-suite" do
   url "https://bitbucket.org/benjamin_dobell/heimdall/downloads/heimdall-suite-#{version}-mac.dmg",
       verified: "bitbucket.org/benjamin_dobell/heimdall/downloads/"
   name "Heimdall Suite"
+  desc "Flash firmware onto Samsung mobile devices"
   homepage "https://glassechidna.com.au/heimdall/"
 
   livecheck do
