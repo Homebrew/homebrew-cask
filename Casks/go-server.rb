@@ -11,7 +11,6 @@ cask "go-server" do
 
   livecheck do
     url "https://download.gocd.org/releases.json"
-    strategy :page_match
     regex(/go[._-]server[._-]v?(\d+(?:\.\d+)+)[._-](\d+)[._-]osx\.zip/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
