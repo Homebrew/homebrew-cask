@@ -27,8 +27,6 @@ cask "klayout" do
   end
 
   depends_on macos: ">= :catalina"
-  depends_on formula: "python@3.8"
-  depends_on formula: "qt@5"
 
   suite "KLayout"
 
