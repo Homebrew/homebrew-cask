@@ -9,8 +9,7 @@ cask "focuswriter" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(/href=.*?FocusWriter_(\d+(?:\.\d+)*)\./i)
+    regex(/href=.*?FocusWriter[._-]v?(\d+(?:\.\d+)+)\./i)
   end
 
   app "FocusWriter.app"
