@@ -9,7 +9,6 @@ cask "4peaks" do
 
   livecheck do
     url :homepage
-    # <div class="product-version">v 1.8</div>
     regex(/"product-version">v?\s+?(\d+(?:\.\d+)+)[\s<]/i)
   end
 
