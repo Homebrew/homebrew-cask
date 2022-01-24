@@ -21,9 +21,8 @@ cask "ipsecuritas" do
   homepage "https://www.lobotomo.com/products/IPSecuritas/"
 
   livecheck do
-    url "https://www.lobotomo.com/products/IPSecuritas/"
-    strategy :page_match
-    regex(%r{href=.*?/ipSecuritas-(\d+(?:\.\d+)*)\.dmg}i)
+    url :homepage
+    regex(%r{href=.*?/ipSecuritas[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   depends_on macos: ">= :yosemite"
