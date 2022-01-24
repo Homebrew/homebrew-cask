@@ -3,8 +3,8 @@ cask "4peaks" do
   sha256 :no_check
 
   url "http://downloads.nucleobytes.com/4peaks.dmg"
-  appcast "https://nucleobytes.com/4peaks/index.html"
   name "4Peaks"
+  desc "Visualize and edit DNA sequence trace files"
   homepage "https://nucleobytes.com/4peaks/index.html"
 
   livecheck do
