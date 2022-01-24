@@ -15,6 +15,6 @@ cask "supercollider" do
   end
 
   app "SuperCollider.app"
-  
+
   zap trash: "~/Library/Application Support/SuperCollider"
 end
