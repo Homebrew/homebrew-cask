@@ -14,8 +14,7 @@ cask "idefrag" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/iDefrag-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/iDefrag[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   depends_on macos: ">= :yosemite"
