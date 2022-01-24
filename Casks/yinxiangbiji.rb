@@ -11,7 +11,7 @@ cask "yinxiangbiji" do
   livecheck do
     url "https://www.yinxiang.com/download/get.php?file=EvernoteMac"
     strategy :header_match
-    regex(/YinxiangBiji_RELEASE_(\d+(?:.\d+)*).dmg/i)
+    regex(/YinxiangBiji_RELEASE_(\d+(?:[._]\d+)+)\.dmg/i)
   end
 
   auto_updates true
