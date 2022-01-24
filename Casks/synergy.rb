@@ -1,15 +1,15 @@
 cask "synergy" do
-  arch = Hardware::CPU.intel? ? "x86-64" : "arm64"
+  arch = Hardware::CPU.intel? ? "_x86-64" : "-arm64"
 
-  version "1.14.1,37bbd3c0"
+  version "1.14.2,c6918b74"
 
   if Hardware::CPU.intel?
-    sha256 "fa3628e5956bb043395828449e7073c2ac561bbd6d50b933bc08e38e68a0e596"
+    sha256 "a331a373020f81a10bbef7e7a21ffd4875dfd3f4ca41f427c5c2a3c91bd43d0e"
   else
-    sha256 "2b3358b8f94de63a74d1b29ea8a70f3e06b110b521a909403ec908ead51a8252"
+    sha256 "6238c6894a56b5e977e5a81e4333a074f02ec299eb6e6f3e79a365b495e1faf3"
   end
 
-  url "https://binaries.symless.com/synergy/v#{version.csv.first.major}-core-standard/#{version.csv.first}-stable.#{version.csv.second}/synergy_#{version.csv.first}-stable.#{version.csv.second}_macos_#{arch}.dmg"
+  url "https://binaries.symless.com/synergy/v#{version.csv.first.major}-core-standard/#{version.csv.first}-stable.#{version.csv.second}/synergy_#{version.csv.first}-stable.#{version.csv.second}_macos#{arch}.dmg"
   name "Synergy"
   desc "Keyboard and mouse sharing tool - open-source core"
   homepage "https://symless.com/synergy"
