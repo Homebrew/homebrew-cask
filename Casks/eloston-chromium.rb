@@ -9,7 +9,7 @@ cask "eloston-chromium" do
     sha256 "790164b7b166c22fad1e830523e6eb3abc41b54b57ce8c7c8ca2a5dfbe5ca282"
   end
 
-  url "https://github.com/kramred/ungoogled-chromium-macos/releases/download/#{version.csv.first}_#{version.csv.second}}__#{version.csv.third}/ungoogled-chromium_#{version.csv.first}_#{version.csv.second}-macos.dmg",
+  url "https://github.com/kramred/ungoogled-chromium-macos/releases/download/#{version.csv.first}_#{version.csv.second}__#{version.csv.third}/ungoogled-chromium_#{version.csv.first}_#{version.csv.second}-macos.dmg",
       verified: "github.com/kramred/ungoogled-chromium-macos/"
   name "Ungoogled Chromium"
   desc "Google Chromium, sans integration with Google"
