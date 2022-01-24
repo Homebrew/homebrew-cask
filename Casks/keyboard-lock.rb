@@ -9,8 +9,7 @@ cask "keyboard-lock" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/Keyboard-Lock-(\d+(?:\.\d+)*)\.zip}i)
+    regex(%r{href=.*?/Keyboard[._-]Lock[._-]v?(\d+(?:\.\d+)+)\.zip}i)
   end
 
   app "Keyboard Lock.app"
