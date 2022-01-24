@@ -9,7 +9,6 @@ cask "jgrasp" do
 
   livecheck do
     url "https://spider.eng.auburn.edu/user-cgi/grasp/grasp.pl?;dl=download_jgrasp.html"
-    strategy :page_match
     regex(/jGRASP\s*(\d+(?:\.\d+)*_\d+)\s(?!Beta)/i)
   end
 
