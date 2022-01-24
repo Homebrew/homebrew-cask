@@ -9,8 +9,7 @@ cask "jprofiler" do
 
   livecheck do
     url "https://www.ej-technologies.com/feeds/jprofiler/"
-    strategy :page_match
-    regex(/JProfiler\s*Release\s*(\d+(?:\.\d+)*)/i)
+    regex(/JProfiler\s*Release\s*v?(\d+(?:\.\d+)+)/i)
   end
 
   app "JProfiler.app"
