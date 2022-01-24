@@ -1,6 +1,6 @@
 cask "clicker-for-netflix" do
-  version "2.12.0"
-  sha256 "a169329cc61fc75fa93c1628edf2e2f48414ccf7c571fa028749b3404dfa5cd1"
+  version "2.13.0"
+  sha256 "3e852a75f61d2091fc1f63a167431200022c13e48d9de3a3c8b0f10950956e22"
 
   url "https://www.dbklabs.com/clicker-for-netflix/appcast/Clicker%20for%20Netflix%20#{version}.dmg"
   name "Clicker for Netflix"
