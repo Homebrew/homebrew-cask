@@ -9,8 +9,7 @@ cask "id3-editor" do
 
   livecheck do
     url "http://www.pa-software.com/id3editor/history/"
-    strategy :page_match
-    regex(/Version\s*(\d+(?:\.\d+)*)/i)
+    regex(/Version\s*v?(\d+(?:\.\d+)+)/i)
   end
 
   app "ID3 Editor.app"
