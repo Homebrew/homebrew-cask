@@ -1,31 +1,32 @@
 cask "eloston-chromium" do
+  arch = Hardware::CPU.intel? ? "x86-64" : "arm64"
+
   if Hardware::CPU.intel?
-    version "97.0.4692.71-1.2_x86-64"
-    sha256 "324d339576b17029a692d20c80dbee4e81b72b92183b1196532dc4d72d7d51a5"
-
-    url "https://github.com/kramred/ungoogled-chromium-macos/releases/download/#{version}/ungoogled-chromium_#{version}-macos.dmg",
-        verified: "github.com/kramred/ungoogled-chromium-macos/"
+    version "97.0.4692.99-1.1,x86-64,1642829547"
+    sha256 "cb62374873c04497b2e257cec8fa81565d8147311ddfda13f552acac8ec747f3"
   else
-    version "97.0.4692.71-1.1_arm64,1641722599"
-    sha256 "875065219a9f3cbd88dc290b1a98c4780dc84228939fc37bfdaba675ead99b3c"
-
-    url "https://github.com/kramred/ungoogled-chromium-macos/releases/download/#{version.csv.first}__#{version.csv.second}/ungoogled-chromium_#{version.csv.first}-macos.dmg",
-        verified: "github.com/kramred/ungoogled-chromium-macos/"
-
-    livecheck do
-      url "https://github.com/kramred/ungoogled-chromium-macos/releases/"
-      strategy :page_match do |page|
-        match = page.match(%r{releases/download/(.+)[._-][._-](\d+)/ungoogled[._-]chromium[._-](.+)[._-]macos\.dmg}i)
-        next if match.blank?
-
-        "#{match[1]},#{match[2]}"
-      end
-    end
+    version "97.0.4692.99-1.1,arm64,1642868666"
+    sha256 "790164b7b166c22fad1e830523e6eb3abc41b54b57ce8c7c8ca2a5dfbe5ca282"
   end
 
+  url "https://github.com/kramred/ungoogled-chromium-macos/releases/download/#{version.csv.first}_#{version.csv.second}__#{version.csv.third}/ungoogled-chromium_#{version.csv.first}_#{version.csv.second}-macos.dmg",
+      verified: "github.com/kramred/ungoogled-chromium-macos/"
   name "Ungoogled Chromium"
   desc "Google Chromium, sans integration with Google"
   homepage "https://ungoogled-software.github.io/ungoogled-chromium-binaries/"
+
+  livecheck do
+    url "https://github.com/kramred/ungoogled-chromium-macos/releases/"
+    strategy :page_match do |page|
+      match = page.match(%r{
+        releases/download/(\d+(?:[.-]\d+)+)[._-]#{arch}[._-]{2}(\d+)/
+        ungoogled[._-]chromium[._-](\d+(?:[.-]\d+)+)[._-]#{arch}[._-]macos\.dmg
+      }xi)
+      next if match.blank?
+
+      "#{match[1]},#{arch},#{match[2]}"
+    end
+  end
 
   conflicts_with cask: [
     "chromium",
