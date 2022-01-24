@@ -9,8 +9,7 @@ cask "iconscout" do
 
   livecheck do
     url "https://iconscout.com/download"
-    strategy :page_match
-    regex(/Iconscout-(\d+(?:\.\d+)*)/i)
+    regex(/Iconscout[._-]v?(\d+(?:\.\d+)+)/i)
   end
 
   app "Iconscout.app"
