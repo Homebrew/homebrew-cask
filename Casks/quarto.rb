@@ -13,4 +13,6 @@ cask "quarto" do
   pkg "quarto-#{version}-macos.pkg"
 
   uninstall pkgutil: "org.rstudio.quarto"
+
+  zap trash: "~/Library/Caches/quarto"
 end
