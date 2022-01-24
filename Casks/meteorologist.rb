@@ -9,7 +9,7 @@ cask "meteorologist" do
   homepage "https://heat-meteo.sourceforge.io/"
 
   app "Meteorologist.app"
-  
+
   zap trash: [
     "~/Library/Caches/com.heat.Meteorologist",
     "~/Library/Logs/Meteorologist.log",
