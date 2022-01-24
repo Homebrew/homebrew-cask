@@ -10,7 +10,7 @@ cask "bean" do
   livecheck do
     url :homepage
     strategy :page_match do |page|
-      v = page[%r{href=.*?/Bean-Install-(\d+(?:-\d+)*)\.zip}i, 1]
+      v = page[%r{href=.*?/Bean[._-]Install[._-]v?(\d+(?:-\d+)+)\.zip}i, 1]
       v.tr("-", ".")
     end
   end
