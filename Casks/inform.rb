@@ -9,8 +9,7 @@ cask "inform" do
 
   livecheck do
     url "http://inform7.com/downloads/"
-    strategy :page_match
-    regex(%r{href=.*?/I7-(\d+M\d+)-OSX-Interim\.dmg}i)
+    regex(%r{href=.*?/I7[._-]v?(\d+M\d+)[._-]OSX[._-]Interim\.dmg}i)
   end
 
   app "Inform.app"
