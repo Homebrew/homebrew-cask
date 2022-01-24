@@ -15,4 +15,15 @@ cask "kindavim" do
   depends_on macos: ">= :monterey"
 
   app "kindaVim.app"
+
+  zap trash: [
+                "~/Library/Application Scripts/mo.com.sleeplessmind.kindaVim",
+                "~/Library/Application Scripts/mo.com.sleeplessmind.kindaVim-LaunchAtLoginHelper",
+                "~/Library/Application Support/kindaVim",
+                "~/Library/Caches/mo.com.sleeplessmind.kindaVim",
+                "~/Library/Containers/mo.com.sleeplessmind.kindaVim",
+                "~/Library/Containers/mo.com.sleeplessmind.kindaVim-LaunchAtLoginHelper",
+                "~/Library/Preferences/mo.com.sleeplessmind.kindaVim.plist",
+                "~/Library/Saved Application State/mo.com.sleeplessmind.kindaVim.savedState",
+              ]
 end
