@@ -6,5 +6,10 @@ cask "artpip" do
   name "Artpip"
   homepage "https://www.artpip.com/"
 
+  livecheck do
+    url :url
+    strategy :header_match
+  end
+
   app "Artpip.app"
 end
