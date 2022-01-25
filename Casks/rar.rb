@@ -4,9 +4,9 @@ cask "rar" do
   version "6.10"
 
   if Hardware::CPU.intel?
-    sha256 "40c119a9e6e1f7883d2d3333205f1c6c928080ea57f93bf6797d5996c2131eb2"
+    sha256 "5c68d6b55e483e498d1b2851ff293098a5b537ca8676dc5bb561d05abcd57664"
   else
-    sha256 "db20d61544d5a569de718eac5f652a9105579db9f48ecc4ade78556a3ac24c1d"
+    sha256 "64eefac221a5e5f93934360114e5e0f1f750606e0e5d7823c780887f6630c13c"
   end
 
   url "https://www.rarlab.com/rar/rarmacos-#{arch}-#{version.no_dots}.tar.gz"
