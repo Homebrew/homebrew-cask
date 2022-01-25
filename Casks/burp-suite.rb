@@ -1,5 +1,6 @@
 cask "burp-suite" do
   version "2021.12.1"
+
   arch = Hardware::CPU.intel? ? "MacOsx" : "MacOsArm64"
 
   if Hardware::CPU.intel?
@@ -24,10 +25,10 @@ cask "burp-suite" do
               item["releaseChannels"].include?("Stable") &&
               item["categories"].include?("Community") &&
               item["builds"].any? do |build|
-                if Hardware::CPU.intel?
-                  build["ProductPlatform"] == "MacOsx"
+                build["ProductPlatform"] == if Hardware::CPU.intel?
+                  "MacOsx"
                 else
-                  build["ProductPlatform"] == "MacOsArm64"
+                  "MacOsArm64"
                 end
               end
       end.compact
