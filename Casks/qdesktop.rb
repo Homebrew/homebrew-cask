@@ -7,17 +7,9 @@ cask "qdesktop" do
   desc "App to set a website as the desktop background"
   homepage "https://github.com/qvacua/qdesktop"
 
-  livecheck do
-    url :url
-    strategy :git do |tags|
-      tags.map do |tag|
-        match = tag.match(/^v?(\d+(?:\.\d+)*)-(\d+)$/i)
-        next if match.blank?
-
-        "#{match[1]},#{match[2]}"
-      end
-    end
-  end
-
   app "Qdesktop.app"
+
+  caveats do
+    discontinued
+  end
 end
