@@ -1,8 +1,8 @@
 cask "adobe-dng-converter" do
-  version "14.0"
-  sha256 "200abde368a9eb70c766eff1ac567a401914c99c89b7200a246f3cbaa69fe994"
+  version "14.1"
+  sha256 "7f0a20b5f2ee27965c6eafd4a79339bb13b306fbda4dc19657237bd3fedefd27"
 
-  url "https://download.adobe.com/pub/adobe/dng/mac/DNGConverter_#{version.dots_to_underscores}.dmg"
+  url "https://download.adobe.com/pub/adobe/dng/mac/DNG_Converter_#{version.dots_to_underscores}.dmg"
   name "Adobe DNG Converter"
   desc "DNG file converter"
   homepage "https://helpx.adobe.com/photoshop/using/adobe-dng-converter.html"
