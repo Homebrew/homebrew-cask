@@ -8,8 +8,7 @@ cask "navicat-for-sql-server" do
   homepage "https://www.navicat.com/products/navicat-for-sqlserver"
 
   livecheck do
-    url "https://updater.navicat.com/mac/navicat_updates.php?appName=Navicat%20for%20SQL%20Server&appLang=en"
-    strategy :sparkle
+    cask "navicat-premium"
   end
 
   app "Navicat For SQL Server.app"
