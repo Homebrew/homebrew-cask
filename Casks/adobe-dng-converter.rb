@@ -8,8 +8,8 @@ cask "adobe-dng-converter" do
   homepage "https://helpx.adobe.com/camera-raw/using/adobe-dng-converter.html"
 
   livecheck do
-    url "https://helpx.adobe.com/in/photoshop/kb/uptodate.html"
-    regex(%r{The current version of Adobe DNG Converter is <b>(\d+(?:\.\d+)+)</b>}i)
+    url "https://www.adobe.com/go/dng_converter_mac"
+    strategy :header_match
   end
 
   depends_on macos: ">= :mojave"
