@@ -8,8 +8,7 @@ cask "navicat-premium-essentials" do
   homepage "https://navicat.com/products/navicat-essentials"
 
   livecheck do
-    url "https://updater.navicat.com/mac/navicat_updates.php?appName=Navicat%20Premium%20Essentials&appLang=en"
-    strategy :sparkle
+    cask "navicat-premium"
   end
 
   app "Navicat Premium Essentials.app"
