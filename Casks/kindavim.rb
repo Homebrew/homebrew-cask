@@ -4,7 +4,7 @@ cask "kindavim" do
 
   url "https://kindavim.app/releases/kindaVim.zip"
   name "kindaVim"
-  desc "Use Vim allover, in Input Fields and Non Input Fields"
+  desc "Use Vim in input fields and non input fields"
   homepage "https://kindavim.app/"
 
   livecheck do
