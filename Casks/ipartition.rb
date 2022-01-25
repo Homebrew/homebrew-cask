@@ -18,4 +18,6 @@ cask "ipartition" do
   end
 
   app "iPartition.app"
+
+  zap trash: "~/Library/Preferences/com.coriolis-systems.iPartition.plist"
 end
