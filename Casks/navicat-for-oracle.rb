@@ -11,5 +11,7 @@ cask "navicat-for-oracle" do
     cask "navicat-premium"
   end
 
+  depends_on macos: ">= :mojave"
+
   app "Navicat for Oracle.app"
 end
