@@ -22,8 +22,8 @@ cask "midi-monitor" do
   ]
 
   zap trash: [
-    "~/Library/Preferences/com.snoize.MIDIMonitor.plist",
     "~/Library/Caches/com.snoize.MIDIMonitor",
+    "~/Library/Preferences/com.snoize.MIDIMonitor.plist",
     "~/Library/Saved Application State/com.snoize.MIDIMonitor.savedState",
   ]
 end
