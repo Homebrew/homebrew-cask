@@ -7,7 +7,7 @@ cask "birdfont" do
       url "https://birdfont.org/purchase.php"
       regex(%r{Mac\s*OS\s*10\.12.*?/birdfont[._-]v?(\d+(?:\.\d+)+)[._-]free\.dmg}i)
     end
-  elseif MacOS.version <= :big_sur
+  elsif MacOS.version <= :big_sur
     version "4.24.0"
     sha256 "95287f80a86302fe8c9eb987a81bfbf057314adbb111227d905843ff16f3e067"
 
