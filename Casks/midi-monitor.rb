@@ -1,6 +1,6 @@
 cask "midi-monitor" do
-  version "1.5.2"
-  sha256 "548a48f54487f01ae33587fd25bc2382d79ffd89591e1cfb97c72a4c1bfb9d47"
+  version "1.5.3"
+  sha256 "d9c73c222db915f01a93d6a2893ab75e7770e2106472f8cb61100e380605d40c"
 
   url "https://www.snoize.com/MIDIMonitor/MIDIMonitor_#{version.dots_to_underscores}.dmg"
   name "MIDI Monitor"
