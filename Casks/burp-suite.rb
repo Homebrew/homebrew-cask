@@ -25,7 +25,7 @@ cask "burp-suite" do
               item["releaseChannels"].include?("Stable") &&
               item["categories"].include?("Community") &&
               item["builds"].any? do |build|
-                build["ProductPlatform"] == "#{arch}"
+                build["ProductPlatform"] == arch.to_s
               end
       end.compact
     end
