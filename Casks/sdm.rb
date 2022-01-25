@@ -1,5 +1,5 @@
 cask "sdm" do
-  version "15.44.0"
+  version "15.45.0"
   sha256 :no_check
 
   url "https://app.strongdm.com/downloads/client/darwin"

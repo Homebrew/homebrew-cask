@@ -9,8 +9,7 @@ cask "ibored" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/iBored-Mac_(\d+(?:\.\d+)*)\.zip}i)
+    regex(%r{href=.*?/iBored[._-]Mac[._-]v?(\d+(?:\.\d+)+)\.zip}i)
   end
 
   app "iBored.app"

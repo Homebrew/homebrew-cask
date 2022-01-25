@@ -2,7 +2,7 @@ cask "gfxcardstatus" do
   version "2.5,5482"
   sha256 "70d94cbf5d691c9530e974b5512a106e0bf532ab345fd911199928b8b11a3688"
 
-  url "https://github.com/codykrieger/gfxCardStatus/releases/download/v#{version.before_comma}/gfxCardStatus-#{version.before_comma}.zip",
+  url "https://github.com/codykrieger/gfxCardStatus/releases/download/v#{version.csv.first}/gfxCardStatus-#{version.csv.first}.zip",
       verified: "github.com/codykrieger/gfxCardStatus/"
   name "gfxCardStatus"
   homepage "https://gfx.io/"

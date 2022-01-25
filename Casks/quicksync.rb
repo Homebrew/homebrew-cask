@@ -1,8 +1,8 @@
 cask "quicksync" do
-  version "4.2.5"
-  sha256 "3d112da18e13b4bd0f4c98b812cc061e227d149f7dc9fc623d35ef0b07634d76"
+  version "4.3.3"
+  sha256 "9458bee719ca6d19ef84bfb4f1c309e8c509c88c626a71bde1c58b1f02854f38"
 
-  url "https://gse.gigaset.com/fileadmin/gigaset/images/CORE/QuickSync/Mac_#{version}/QuickSync.dmg"
+  url "https://cms.gigaset.com/macsw/gqs/leopard/QuickSync_#{version}.zip"
   name "QuickSync"
   desc "Syncing software for Gigaset products"
   homepage "https://www.gigaset.com/en_en/cms/start/service/support-detail/gigaset-quicksync-mac-version.html"

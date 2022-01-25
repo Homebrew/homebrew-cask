@@ -9,8 +9,7 @@ cask "gpower" do
 
   livecheck do
     url "https://www.psychologie.hhu.de/arbeitsgruppen/allgemeine-psychologie-und-arbeitspsychologie/gpower.html"
-    strategy :page_match
-    regex(%r{href=.*?/GPowerMac_(\d+(?:\.\d+)*)\.zip}i)
+    regex(%r{href=.*?/GPowerMac[._-]v?(\d+(?:\.\d+)+)\.zip}i)
   end
 
   app "G*Power.app"

@@ -2,7 +2,7 @@ cask "stay" do
   version "1.4,747"
   sha256 "20362f8564cf7384350f19ee39d46db675473cf82417e7b552e2cdabc363fd4b"
 
-  url "https://cordlessdog.com/stay/versions/Stay%20#{version.before_comma}.dmg"
+  url "https://cordlessdog.com/stay/versions/Stay%20#{version.csv.first}.dmg"
   name "Stay"
   desc "Windows manager"
   homepage "https://cordlessdog.com/stay/"

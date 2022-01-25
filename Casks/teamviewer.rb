@@ -7,7 +7,7 @@ cask "teamviewer" do
       strategy :sparkle
     end
   else
-    version "15.25.5"
+    version "15.26.4"
 
     livecheck do
       url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=10.15.1&type=1&channel=1"
@@ -34,23 +34,23 @@ cask "teamviewer" do
   uninstall delete:    [
     "#{staged_path}/#{token}", # This Cask should be uninstalled manually.
     "/Applications/TeamViewer.app",
+    "/Library/Preferences/com.teamviewer.teamviewer.preferences.plist",
   ],
             pkgutil:   [
-              "com.teamviewer.teamviewer.*",
               "com.teamviewer.remoteaudiodriver",
+              "com.teamviewer.teamviewer.*",
             ],
             launchctl: [
               "com.teamviewer.desktop",
-              "com.teamviewer.service",
               "com.teamviewer.Helper",
-              "com.teamviewer.teamviewer",
+              "com.teamviewer.service",
               "com.teamviewer.teamviewer_desktop",
               "com.teamviewer.teamviewer_service",
+              "com.teamviewer.teamviewer",
             ],
             quit:      "com.teamviewer.TeamViewer"
 
   zap trash: [
-    "/Library/Preferences/com.teamviewer.teamviewer.preferences.plist",
     "~/Library/Application Support/TeamViewer",
     "~/Library/Caches/com.teamviewer.TeamViewer",
     "~/Library/Caches/TeamViewer",

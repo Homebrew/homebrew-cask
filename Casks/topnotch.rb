@@ -16,8 +16,10 @@ cask "topnotch" do
 
   zap trash: [
     "~/Library/Application Scripts/pl.maketheweb.TopNotch-LaunchAtLoginHelper",
+    "~/Library/Application Support/TopNotch",
     "~/Library/Caches/pl.maketheweb.TopNotch",
     "~/Library/Containers/pl.maketheweb.TopNotch-LaunchAtLoginHelper",
+    "~/Library/HTTPStorages/pl.maketheweb.TopNotch",
     "~/Library/Preferences/pl.maketheweb.TopNotch.plist",
     "~/Library/WebKit/pl.maketheweb.TopNotch",
   ]

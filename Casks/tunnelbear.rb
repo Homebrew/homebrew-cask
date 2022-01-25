@@ -2,7 +2,7 @@ cask "tunnelbear" do
   version "4.1.8,1629989300"
   sha256 "60c332511b91b794405249132ceb0c88e999b070c087b5f70f1cf09a84e5e5e9"
 
-  url "https://tunnelbear.s3.amazonaws.com/downloads/mac/TunnelBear-#{version.before_comma}.zip",
+  url "https://tunnelbear.s3.amazonaws.com/downloads/mac/TunnelBear-#{version.csv.first}.zip",
       verified: "tunnelbear.s3.amazonaws.com/"
   name "TunnelBear"
   desc "VPN client for secure internet access and private browsing"

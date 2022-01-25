@@ -1,6 +1,6 @@
 cask "soapui" do
-  version "5.6.1"
-  sha256 "6ed75fd75bc9df17390daacf54ec8823daa71fcf0b5bfc8c7352e930322b45d0"
+  version "5.7.0"
+  sha256 "3f4d6690d56c6030e15b1e26c92af1baae1c6aa82947408ce3d8929cd5d41103"
 
   url "https://s3.amazonaws.com/downloads.eviware/soapuios/#{version}/SoapUI-#{version}.dmg",
       verified: "s3.amazonaws.com/downloads.eviware/soapuios/"

@@ -1,6 +1,6 @@
 cask "sidenotes" do
-  version "1.4.3,167"
-  sha256 "676da676ed9f92e34c27c920860eab5504fc561979c11394a2fcea1db4267338"
+  version "1.4.5,179"
+  sha256 "5b16a7125235b218085044cecfdf72a29adcd6923274af493feb8ea02e547865"
 
   url "https://www.apptorium.com/public/products/sidenotes/releases/SideNotes-#{version.csv.first}.zip"
   name "SideNotes"
@@ -12,7 +12,7 @@ cask "sidenotes" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :catalina"
 
   app "SideNotes.app"
 end

@@ -1,5 +1,5 @@
 cask "activedock" do
-  version "2.106,2216"
+  version "2.107,2217"
   sha256 :no_check
 
   url "https://macplus-software.com/downloads/ActiveDock.zip",
@@ -15,5 +15,5 @@ cask "activedock" do
 
   depends_on macos: ">= :sierra"
 
-  app "ActiveDock #{version.before_comma.major}.app"
+  app "ActiveDock #{version.csv.first.major}.app"
 end

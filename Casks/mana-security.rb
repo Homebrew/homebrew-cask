@@ -1,5 +1,5 @@
 cask "mana-security" do
-  version "2.4.1"
+  version "2.4.2"
   sha256 :no_check
 
   url "https://download.manasecurity.com/"
@@ -16,7 +16,8 @@ cask "mana-security" do
 
   app "Mana Security.app"
 
-  uninstall login_item: "Mana Security"
+  uninstall quit:       "com.manasecurity.mana",
+            login_item: "Mana Security"
 
   zap trash: [
     "~/Library/Application Support/Mana Security",

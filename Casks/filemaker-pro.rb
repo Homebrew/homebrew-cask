@@ -9,8 +9,7 @@ cask "filemaker-pro" do
 
   livecheck do
     url "https://www.filemaker.com/redirects/ss.txt"
-    strategy :page_match
-    regex(%r{/fmp_(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{/fmp[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   auto_updates true

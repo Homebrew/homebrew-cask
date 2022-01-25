@@ -8,5 +8,14 @@ cask "openshot-video-editor" do
   desc "Cross-platform video editor"
   homepage "https://openshot.org/"
 
+  conflicts_with cask: "homebrew/cask-versions/openshot-video-editor-daily"
+  depends_on macos: ">= :catalina"
+
   app "OpenShot Video Editor.app"
+
+  zap trash: [
+    "~/.openshot_qt",
+    "~/Library/Application Support/openshot",
+    "~/Library/Preferences/openshot-qt.plist",
+  ]
 end

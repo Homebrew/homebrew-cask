@@ -38,10 +38,10 @@ cask "mps" do
   end
 
   zap trash: [
-    "~/Library/Application Support/MPS#{version.before_comma.major_minor}",
-    "~/Library/Caches/MPS#{version.before_comma.major_minor}",
-    "~/Library/Logs/MPS#{version.before_comma.major_minor}",
-    "~/Library/Preferences/MPS#{version.before_comma.major_minor}",
-    "~/MPSSamples.#{version.before_comma.major_minor}",
+    "~/Library/Application Support/MPS#{version.csv.first.major_minor}",
+    "~/Library/Caches/MPS#{version.csv.first.major_minor}",
+    "~/Library/Logs/MPS#{version.csv.first.major_minor}",
+    "~/Library/Preferences/MPS#{version.csv.first.major_minor}",
+    "~/MPSSamples.#{version.csv.first.major_minor}",
   ]
 end

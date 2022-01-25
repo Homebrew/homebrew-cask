@@ -1,8 +1,8 @@
 cask "airtool" do
-  version "2.3.2,10"
-  sha256 "0cb877f0ec485ee100db44ce155cc1c39d242a37db60e6951fa8b9f0e2e669e3"
+  version "2.3.4,12"
+  sha256 "4b4dff3d7dfbb8513da361ffc2ab78efeca90aa3d092ebbe6501ab21df40fd0c"
 
-  url "https://www.intuitibits.com/downloads/Airtool_#{version.before_comma}.pkg"
+  url "https://www.intuitibits.com/downloads/Airtool_#{version.csv.first}.pkg"
   name "Airtool"
   desc "Capture Wi-Fi packets"
   homepage "https://www.intuitibits.com/products/airtool/"
@@ -14,7 +14,7 @@ cask "airtool" do
 
   auto_updates true
 
-  pkg "Airtool_#{version.before_comma}.pkg"
+  pkg "Airtool_#{version.csv.first}.pkg"
 
   uninstall_preflight do
     set_ownership "/Library/Application Support/Airtool #{version.major}"

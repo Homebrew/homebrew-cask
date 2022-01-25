@@ -20,7 +20,7 @@ cask "silnite" do
 
   depends_on macos: ">= :el_capitan"
 
-  pkg "silnite#{version.before_comma}/silniteInstaller.pkg"
+  pkg "silnite#{version.csv.first}/silniteInstaller.pkg"
 
   uninstall pkgutil: "co.eclecticlight.pkg.silniteInstaller"
 end

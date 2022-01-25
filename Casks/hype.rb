@@ -2,7 +2,7 @@ cask "hype" do
   version "4.1.7,736"
   sha256 "d8c095e6a45ad0231b9a5aaa23c6ff042e477f09ca8d1c6b7734f59a499b5755"
 
-  url "https://tumult.com/hype/download/Hype-#{version.after_comma}.dmg"
+  url "https://tumult.com/hype/download/Hype-#{version.csv.second}.dmg"
   name "Tumult Hype"
   desc "App to create animated and interactive web content"
   homepage "https://tumult.com/hype/"

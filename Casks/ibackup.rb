@@ -9,8 +9,7 @@ cask "ibackup" do
 
   livecheck do
     url "http://www.grapefruit.ch/iBackup/downloads.html"
-    strategy :page_match
-    regex(%r{href=.*?/iBackup\s*(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/iBackup\s*v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "iBackup.app"

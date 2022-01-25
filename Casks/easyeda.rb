@@ -9,8 +9,7 @@ cask "easyeda" do
 
   livecheck do
     url "https://easyeda.com/page/download"
-    strategy :page_match
-    regex(%r{href=.*?/easyeda-mac-darwin-(\d+(?:\.\d+)*)\.zip}i)
+    regex(%r{href=.*?/easyeda[._-]mac[._-]darwin[._-]v?(\d+(?:\.\d+)+)\.zip}i)
   end
 
   app "EasyEDA.app"

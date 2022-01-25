@@ -14,9 +14,10 @@ cask "ipartition" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/iPartition-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/iPartition[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "iPartition.app"
+
+  zap trash: "~/Library/Preferences/com.coriolis-systems.iPartition.plist"
 end

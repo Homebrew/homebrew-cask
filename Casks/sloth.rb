@@ -2,7 +2,7 @@ cask "sloth" do
   version "3.1,282"
   sha256 "de6d97f2c63107e209f52f10f74ebe329e3a8c86ac578c188a9e36b790ed5e52"
 
-  url "https://sveinbjorn.org/files/software/sloth/sloth-#{version.before_comma}.zip"
+  url "https://sveinbjorn.org/files/software/sloth/sloth-#{version.csv.first}.zip"
   name "Sloth"
   desc "Displays all open files and sockets in use by all running processes"
   homepage "https://sveinbjorn.org/sloth"

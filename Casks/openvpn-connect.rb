@@ -17,12 +17,15 @@ cask "openvpn-connect" do
     end
   end
 
+  depends_on macos: ">= :yosemite"
+
   pkg "OpenVPN_Connect_#{version.csv.first.dots_to_underscores}(#{version.csv.second})_Installer_signed.pkg"
 
-  uninstall launchctl: [
-    "org.openvpn.client",
-    "org.openvpn.helper",
-  ],
+  uninstall quit:      "org.openvpn.client.app",
+            launchctl: [
+              "org.openvpn.client",
+              "org.openvpn.helper",
+            ],
             script:    {
               executable: "/Applications/OpenVPN Connect/Uninstall OpenVPN Connect.app/Contents/Resources/remove.sh",
               sudo:       true,
@@ -34,12 +37,7 @@ cask "openvpn-connect" do
               "org.openvpn.client.pkg",
               "org.openvpn.helper_framework.pkg",
               "org.openvpn.helper_launch.pkg",
-            ],
-            delete:    [
-              "/Library/LaunchDaemons/org.openvpn.client.plist",
-              "/Library/LaunchDaemons/org.openvpn.helper.plist",
-            ],
-            quit:      "org.openvpn.client.app"
+            ]
 
   zap trash: [
     "~/Library/Application Support/OpenVPN Connect",

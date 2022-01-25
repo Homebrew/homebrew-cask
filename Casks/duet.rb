@@ -1,6 +1,6 @@
 cask "duet" do
-  version "2.3.3.7"
-  sha256 "765a7ac170f8e1a523636b237dfff394e58b7434b75023a639a451cd1b4934f7"
+  version "2.4.0.2"
+  sha256 "1cc8df6b8eab6a6019a15225380e8b8c703e3098acdc9482a99e6284e6ad62db"
 
   url "https://duet.nyc3.cdn.digitaloceanspaces.com/Mac/#{version.major_minor.dots_to_underscores}/duet-#{version.dots_to_hyphens}.zip",
       verified: "duet.nyc3.cdn.digitaloceanspaces.com/Mac/"

@@ -2,7 +2,7 @@ cask "pycharm-ce-with-anaconda-plugin" do
   version "2020.3.2,203.6682.179"
   sha256 "978819647422f10a58761f9fc93f2a302f497da3e966c8a6b9e4a113558daf32"
 
-  url "https://download.jetbrains.com/python/pycharm-community-anaconda-#{version.before_comma}.dmg"
+  url "https://download.jetbrains.com/python/pycharm-community-anaconda-#{version.csv.first}.dmg"
   name "Jetbrains PyCharm Community Edition with Anaconda plugin"
   name "PyCharm CE with Anaconda plugin"
   desc "PyCharm IDE with Anaconda plugin"

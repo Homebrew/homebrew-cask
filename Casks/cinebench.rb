@@ -2,7 +2,7 @@ cask "cinebench" do
   version "R23,330542"
   sha256 "c8826647af0c7c8cc9bfa2533b254a37deb9852caeea1a47cbacec5e577cdda9"
 
-  url "https://http.maxon.net/pub/cinebench/Cinebench#{version.before_comma}.dmg"
+  url "https://http.maxon.net/pub/cinebench/Cinebench#{version.csv.first}.dmg"
   name "Cinebench"
   homepage "https://www.maxon.net/products/cinebench/"
 

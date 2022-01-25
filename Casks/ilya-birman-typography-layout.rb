@@ -1,16 +1,15 @@
 cask "ilya-birman-typography-layout" do
-  version "3.7"
-  sha256 "b21c86951038a5940e3fbab1f2b4e17f477a143eece9117670dea6a439b348d3"
+  version "3.8"
+  sha256 "9c6fd58ef2f527a400e850358c38f4c36a5f264e66d03a464f1d70102c5ce9df"
 
-  url "https://ilyabirman.ru/projects/typography-layout/download/ilya-birman-typolayout-#{version}-mac.dmg"
+  url "https://ilyabirman.ru/typography-layout/download/ilya-birman-typolayout-#{version}-mac.dmg"
   name "Ilya Birman Typography Layout"
   desc "Typography keyboard layout"
-  homepage "https://ilyabirman.ru/projects/typography-layout/"
+  homepage "https://ilyabirman.ru/typography-layout/"
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/ilya-birman-typolayout-(\d+(?:\.\d+)*)-mac\.dmg}i)
+    regex(%r{href=.*?/ilya[._-]birman[._-]typolayout[._-]v?(\d+(?:\.\d+)+)[._-]mac\.dmg}i)
   end
 
   artifact \

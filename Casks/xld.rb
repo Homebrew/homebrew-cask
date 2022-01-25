@@ -2,7 +2,7 @@ cask "xld" do
   version "20211018,154.0"
   sha256 "5234e17218624e6bb341a2bb23c8994310b7d4962d3f878c3ed27b265d2791d6"
 
-  url "https://downloads.sourceforge.net/xld/xld-#{version.before_comma}.dmg",
+  url "https://downloads.sourceforge.net/xld/xld-#{version.csv.first}.dmg",
       verified: "sourceforge.net/xld/"
   name "X Lossless Decoder"
   name "XLD"

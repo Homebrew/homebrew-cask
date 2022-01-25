@@ -9,12 +9,15 @@ cask "flowsync" do
 
   livecheck do
     url "https://flow.polar.com/start"
-    strategy :page_match
-    regex(%r{href=.*?/FlowSync_installer-(\d+(?:\.\d+)*)\.pkg}i)
+    regex(%r{href=.*?/FlowSync[._-]installer[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
   end
 
   pkg "FlowSync_installer-#{version}.pkg"
 
-  uninstall pkgutil: ["com.polarelectro.pkg.flowsync", "fi.polar.FlowSync", "com.joshuawise.kexts.HoRNDIS"],
+  uninstall pkgutil: [
+    "com.joshuawise.kexts.HoRNDIS",
+    "com.polarelectro.pkg.flowsync",
+    "fi.polar.FlowSync",
+  ],
             quit:    "fi.polar.Polar-FlowSync"
 end
