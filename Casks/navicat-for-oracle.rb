@@ -8,8 +8,7 @@ cask "navicat-for-oracle" do
   homepage "https://www.navicat.com/products/navicat-for-oracle"
 
   livecheck do
-    url "https://updater.navicat.com/mac/navicat_updates.php?appName=Navicat%20for%20Oracle&appLang=en"
-    strategy :sparkle
+    cask "navicat-premium"
   end
 
   app "Navicat for Oracle.app"
