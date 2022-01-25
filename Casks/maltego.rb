@@ -1,6 +1,6 @@
 cask "maltego" do
-  version "4.2.19.13940"
-  sha256 "6e690f7fdb7deb715ea645732a1ba382a56b3c71a48bd2a76182d74a3592ef3b"
+  version "4.3.0"
+  sha256 "40c8efccfc81648b7e1d51087131398e6b9e13a9b26bde018729cff8dd4a51dd"
 
   url "https://maltego-downloads.s3.us-east-2.amazonaws.com/mac/Maltego.v#{version}.dmg",
       verified: "maltego-downloads.s3.us-east-2.amazonaws.com/"
@@ -10,8 +10,7 @@ cask "maltego" do
 
   livecheck do
     url "https://maltego-downloads.s3.us-east-2.amazonaws.com/info.json"
-    strategy :page_match
-    regex(/Maltego\.v(\d+(?:\.\d+)*)\.dmg/i)
+    regex(/Maltego[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "Maltego.app"
