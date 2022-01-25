@@ -9,8 +9,7 @@ cask "ubersicht" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/Uebersicht-(\d+(?:\.\d+)*)\.app\.zip}i)
+    regex(%r{href=.*?/Uebersicht[._-]v?(\d+(?:\.\d+)+)\.app\.zip}i)
   end
 
   auto_updates true
