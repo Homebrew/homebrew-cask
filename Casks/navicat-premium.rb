@@ -15,7 +15,7 @@ cask "navicat-premium" do
   desc "Database administration and development tool"
 
   livecheck do
-    url "http://www.navicat.com/en/products/navicat-premium-release-note#M"
+    url "https://www.navicat.com/en/products/navicat-premium-release-note#M"
     regex(/Navicat\sPremium\s\(macOS\)\sversion\s(\d+(?:\.\d+)+)/i)
   end
 
