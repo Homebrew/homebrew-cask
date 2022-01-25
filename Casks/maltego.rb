@@ -10,8 +10,7 @@ cask "maltego" do
 
   livecheck do
     url "https://maltego-downloads.s3.us-east-2.amazonaws.com/info.json"
-    strategy :page_match
-    regex(/Maltego\.v(\d+(?:\.\d+)*)\.dmg/i)
+    regex(/Maltego[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "Maltego.app"
