@@ -20,7 +20,12 @@ cask "alacritty" do
          target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/alacritty"
   binary "#{appdir}/Alacritty.app/Contents/Resources/completions/alacritty.fish",
          target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/alacritty.fish"
+  binary "#{appdir}/Alacritty.app/Contents/Resources/61/alacritty",
+         target: "#{ENV["HOME"]}/.terminfo/61/alacritty"
+  binary "#{appdir}/Alacritty.app/Contents/Resources/61/alacritty-direct",
+         target: "#{ENV["HOME"]}/.terminfo/61/alacritty-direct"
   manpage "#{appdir}/Alacritty.app/Contents/Resources/alacritty.1.gz"
+  manpage "#{appdir}/Alacritty.app/Contents/Resources/alacritty-msg.1.gz"
 
   zap trash: [
     "~/Library/Preferences/io.alacritty.plist",
