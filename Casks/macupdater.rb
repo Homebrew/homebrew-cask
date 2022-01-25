@@ -1,6 +1,6 @@
 cask "macupdater" do
   version "2.1.2,12880"
-  sha256 "8c11689131cee194de5c1b5d9f1cd1151f287fb21f9512040e12890702ba0a9b"
+  sha256 :no_check # required as upstream package is updated in-place
 
   url "https://www.corecode.io/downloads/macupdater_#{version.csv.first}.dmg"
   name "MacUpdater"
@@ -8,8 +8,8 @@ cask "macupdater" do
   homepage "https://www.corecode.io/macupdater/index.html"
 
   livecheck do
-    url "https://www.corecode.io/macupdater/macupdater#{version.major}.xml"
-    strategy :sparkle
+    url :url
+    strategy :extract_plist
   end
 
   auto_updates true
