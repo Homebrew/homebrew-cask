@@ -3,8 +3,8 @@ cask "birdfont" do
     version "4.17.0"
     sha256 "74c778e3b7598a66b9ddb11b189ba6a21d68263fb0499a965dcedd0ac987b051"
   elsif MacOS.version <= :catalina
-    version "4.22.2"
-    sha256 "fa372bd4b957df1188d40d900b493e1cf7fd12cd786fba4499652cee5cdd47e6"
+    version "4.24.0"
+    sha256 "95287f80a86302fe8c9eb987a81bfbf057314adbb111227d905843ff16f3e067"
 
     livecheck do
       url "https://birdfont.org/purchase.php"
