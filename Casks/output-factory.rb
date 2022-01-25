@@ -1,5 +1,5 @@
 cask "output-factory" do
-  version "2.4.74"
+  version "2.4.75"
   sha256 :no_check
 
   url "https://zevrix.com/downloads/OutputFactory.dmg"
@@ -9,8 +9,7 @@ cask "output-factory" do
 
   livecheck do
     url "https://zevrix.com/download/"
-    strategy :page_match
-    regex(/Output\s*Factory\s*(\d+(?:\.\d+)*)/i)
+    regex(/Output\s*Factory\s*(\d+(?:\.\d+)+)/i)
   end
 
   installer manual: "Output Factory Installer.app"
