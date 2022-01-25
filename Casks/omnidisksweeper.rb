@@ -19,8 +19,7 @@ cask "omnidisksweeper" do
 
   livecheck do
     url "https://update.omnigroup.com/appcast/com.omnigroup.OmniDiskSweeper"
-    strategy :page_match
-    regex(/OmniDiskSweeper-(\d+(?:\.\d+)*)\.dmg/i)
+    regex(/OmniDiskSweeper[._-](\d+(?:\.\d+)+)\.dmg/i)
   end
 
   auto_updates true
