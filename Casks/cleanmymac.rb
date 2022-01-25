@@ -19,8 +19,8 @@ cask "cleanmymac" do
   app "CleanMyMac X.app"
 
   uninstall delete:     [
-    "/Library/PrivilegedHelperTools/com.macpaw.CleanMyMac#{version.major}.Agent",
     "/Library/LaunchDaemons/com.macpaw.CleanMyMac#{version.major}.Agent.plist",
+    "/Library/PrivilegedHelperTools/com.macpaw.CleanMyMac#{version.major}.Agent",
   ],
             launchctl:  [
               "com.macpaw.CleanMyMac#{version.major}.Agent",
@@ -42,8 +42,8 @@ cask "cleanmymac" do
     "~/Library/Application Scripts/com.macpaw.CleanMyMac#{version.major}.CleanMyMacWidget",
     "~/Library/Application Support/CleanMyMac X Menu",
     "~/Library/Application Support/CleanMyMac X",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macpaw.cleanmymac#{version.major}.sfl*",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macpaw.cleanmymac#{version.major}.scheduler.sfl*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macpaw.cleanmymac#{version.major}.sfl*",
     "~/Library/Caches/CleanMyMac #{version.major}",
     "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.macpaw.CleanMyMac#{version.major}.help*",
     "~/Library/Caches/com.macpaw.CleanMyMac#{version.major}.HealthMonitor",
