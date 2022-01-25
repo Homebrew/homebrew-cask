@@ -2,17 +2,10 @@ cask "navicat-premium" do
   version "16.0.7"
   sha256 :no_check
 
-  language "zh-CN" do
-    url "http://download.navicat.com.cn/download/navicat#{version.major_minor.no_dots}_premium_cs.dmg"
-    homepage "https://www.navicat.com.cn/products/navicat-premium"
-  end
-  language "en", default: true do
-    url "http://download.navicat.com/download/navicat#{version.major_minor.no_dots}_premium_en.dmg"
-    homepage "https://www.navicat.com/products/navicat-premium"
-  end
-
+  url "http://download.navicat.com/download/navicat#{version.major_minor.no_dots}_premium_en.dmg"
   name "Navicat Premium"
   desc "Database administration and development tool"
+  homepage "https://www.navicat.com/products/navicat-premium"
 
   livecheck do
     url "https://www.navicat.com/en/products/navicat-premium-release-note#M"
