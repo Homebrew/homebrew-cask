@@ -11,5 +11,7 @@ cask "navicat-for-postgresql" do
     cask "navicat-premium"
   end
 
+  depends_on macos: ">= :mojave"
+
   app "Navicat for PostgreSQL.app"
 end
