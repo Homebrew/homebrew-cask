@@ -11,5 +11,7 @@ cask "navicat-for-mariadb" do
     cask "navicat-premium"
   end
 
+  depends_on macos: ">= :mojave"
+
   app "Navicat for MariaDB.app"
 end
