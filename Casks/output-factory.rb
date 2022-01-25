@@ -9,8 +9,7 @@ cask "output-factory" do
 
   livecheck do
     url "https://zevrix.com/download/"
-    strategy :page_match
-    regex(/Output\s*Factory\s*(\d+(?:\.\d+)*)/i)
+    regex(/Output\s*Factory\s*(\d+(?:\.\d+)+)/i)
   end
 
   installer manual: "Output Factory Installer.app"
