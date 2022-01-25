@@ -11,5 +11,7 @@ cask "navicat-for-sqlite" do
     cask "navicat-premium"
   end
 
+  depends_on macos: ">= :mojave"
+
   app "Navicat for SQLite.app"
 end
