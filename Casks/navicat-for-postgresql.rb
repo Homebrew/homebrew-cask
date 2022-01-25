@@ -8,8 +8,7 @@ cask "navicat-for-postgresql" do
   homepage "https://www.navicat.com/products/navicat-for-postgresql"
 
   livecheck do
-    url "https://updater.navicat.com/mac/navicat_updates.php?appName=Navicat%20for%20PostgreSQL&appLang=en"
-    strategy :sparkle
+    cask "navicat-premium"
   end
 
   app "Navicat for PostgreSQL.app"
