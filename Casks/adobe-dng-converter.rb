@@ -5,7 +5,7 @@ cask "adobe-dng-converter" do
   url "https://download.adobe.com/pub/adobe/dng/mac/DNG_Converter_#{version.dots_to_underscores}.dmg"
   name "Adobe DNG Converter"
   desc "DNG file converter"
-  homepage "https://helpx.adobe.com/photoshop/using/adobe-dng-converter.html"
+  homepage "https://helpx.adobe.com/camera-raw/using/adobe-dng-converter.html"
 
   livecheck do
     url "https://helpx.adobe.com/in/photoshop/kb/uptodate.html"
