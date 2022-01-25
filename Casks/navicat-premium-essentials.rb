@@ -11,5 +11,7 @@ cask "navicat-premium-essentials" do
     cask "navicat-premium"
   end
 
+  depends_on macos: ">= :mojave"
+
   app "Navicat Premium Essentials.app"
 end
