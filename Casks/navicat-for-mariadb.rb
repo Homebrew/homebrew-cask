@@ -1,5 +1,5 @@
 cask "navicat-for-mariadb" do
-  version "15.0.33"
+  version "16.0.7"
   sha256 :no_check
 
   url "http://download.navicat.com/download/navicat#{version.major_minor.no_dots}_mariadb_en.dmg"
@@ -8,9 +8,10 @@ cask "navicat-for-mariadb" do
   homepage "https://www.navicat.com/products/navicat-for-mariadb"
 
   livecheck do
-    url "https://updater.navicat.com/mac/navicat_updates.php?appName=Navicat%20for%20MariaDB&appLang=en"
-    strategy :sparkle
+    cask "navicat-premium"
   end
+
+  depends_on macos: ">= :mojave"
 
   app "Navicat for MariaDB.app"
 end
