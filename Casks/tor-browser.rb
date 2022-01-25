@@ -149,8 +149,7 @@ cask "tor-browser" do
 
   livecheck do
     url "https://www.torproject.org/download/"
-    strategy :page_match
-    regex(%r{href=.*?/TorBrowser-(\d+(?:\.\d+)+)-osx64_.*\.dmg}i)
+    regex(%r{href=.*?/TorBrowser[._-]v?(\d+(?:\.\d+)+)[._-]osx64[._-].*\.dmg}i)
   end
 
   auto_updates true
