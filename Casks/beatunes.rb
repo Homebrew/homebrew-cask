@@ -13,7 +13,7 @@ cask "beatunes" do
       match = page[/href=.*?beaTunes[._-]?v?(\d+(?:-\d+)+)\.dmg/i, 1]
       next if match.blank?
 
-      match.tr("_", ".")
+      match.tr("-", ".")
     end
   end
 
