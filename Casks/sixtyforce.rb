@@ -5,6 +5,14 @@ cask "sixtyforce" do
   url "https://sixtyforce.com/download/sixtyforce.zip"
   name "sixtyforce"
   homepage "https://sixtyforce.com/"
+  desc "N64 emulator"
 
   app "sixtyforce.app"
+  
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.gerrit.sixtyforce.sfl2",
+    "~/Library/Application Support/sixtyforce",
+    "~/Library/Caches/com.Gerrit.sixtyforce",
+    "~/Library/Preferences/com.Gerrit.sixtyforce.plist",
+  ]
 end
