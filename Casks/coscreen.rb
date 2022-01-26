@@ -1,8 +1,8 @@
 cask "coscreen" do
-  version "3.8.44"
-  sha256 "e83020c18d2a6f4e365dd61f899bb98f91ca1dba0b1e1d0882fccfee7adcb288"
+  version "3.9.40"
+  sha256 "e99da30344a364e8c98fa882aa26faee52fb5131cb4bb1cbba80b83753886cae"
 
-  url "https://update.coscreen.org/CoScreen-#{version}-beta.dmg",
+  url "https://update.coscreen.org/CoScreen-#{version}-stable.dmg",
       verified: "https://update.coscreen.org/"
   name "CoScreen"
   desc "Collaboration tool with multi-user screen sharing"
