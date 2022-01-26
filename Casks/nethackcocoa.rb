@@ -4,7 +4,13 @@ cask "nethackcocoa" do
 
   url "https://github.com/dirkz/NetHack-Cocoa/releases/download/v#{version}/NetHackCocoa-#{version}.dmg"
   name "NetHackCocoa"
+  desc "Roguelike RPG"
   homepage "https://github.com/dirkz/NetHack-Cocoa"
 
   app "NetHackCocoa.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.descy.michael.todotxtmac.sfl2",
+    "~/Library/Preferences/com.descy.michael.TodoTxtMac.plist",
+  ]
 end
