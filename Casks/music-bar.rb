@@ -8,11 +8,6 @@ cask "music-bar" do
   desc "Control Apple Music right from your menu bar"
   homepage "https://musa11971.github.io/Music-Bar/index.html"
 
-  livecheck do
-    url :stable
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
-  end
-
   auto_updates true
   depends_on macos: ">= :mojave"
 
