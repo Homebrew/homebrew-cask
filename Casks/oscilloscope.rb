@@ -4,6 +4,7 @@ cask "oscilloscope" do
 
   url "https://github.com/kritzikratzi/Oscilloscope/releases/download/#{version}/oscilloscope-#{version}-osx.zip"
   name "Oscilloscope"
+  desc "Mimic the aesthetic of ray-oscilloscopes"
   homepage "https://github.com/kritzikratzi/Oscilloscope"
 
   livecheck do
