@@ -29,6 +29,8 @@ cask "macfuse" do
     "io.macfuse.installer.components.preferencepane",
   ]
 
+  zap trash: "/Library/PreferencePanes/macFUSE.prefPane"
+
   caveats do
     kext
   end
