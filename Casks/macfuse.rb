@@ -32,4 +32,6 @@ cask "macfuse" do
   caveats do
     kext
   end
+
+  zap trash: "/Library/PreferencePanes/macFUSE.prefPane"
 end
