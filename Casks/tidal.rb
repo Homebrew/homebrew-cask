@@ -12,6 +12,8 @@ cask "tidal" do
     strategy :extract_plist
   end
 
+  auto_updates true
+
   app "TIDAL.app"
 
   zap trash: [
