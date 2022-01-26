@@ -3,7 +3,7 @@ cask "minecraft" do
   sha256 :no_check
 
   url "https://launcher.mojang.com/download/Minecraft.dmg",
-      verified: "mojang.com/"
+      verified: "mojang.com/download/"
   name "Minecraft"
   desc "Sandbox construction video game"
   homepage "https://minecraft.net/"
@@ -16,8 +16,8 @@ cask "minecraft" do
   app "Minecraft.app"
 
   zap trash: [
+    "~/Library/Application Support/Minecraft Launcher",
     "~/Library/Caches/com.mojang.minecraftlauncher",
     "~/Library/Caches/com.mojang.minecraftlauncherupdater",
-    "~/Library/Application Support/Minecraft Launcher",
   ]
 end
