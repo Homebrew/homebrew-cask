@@ -12,5 +12,5 @@ cask "oscilloscope" do
     strategy :github_latest
   end
 
-  app "Oscilloscope/Oscilloscope.app"
+  app "Oscilloscope.app"
 end
