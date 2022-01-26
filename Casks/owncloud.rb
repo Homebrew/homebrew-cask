@@ -12,6 +12,7 @@ cask "owncloud" do
     regex(%r{href=.*?/owncloud[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
   end
 
+  auto_updates true
   depends_on macos: ">= :sierra"
 
   pkg "ownCloud-#{version}.pkg"
