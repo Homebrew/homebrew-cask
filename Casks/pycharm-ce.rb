@@ -43,6 +43,7 @@ cask "pycharm-ce" do
     "~/Library/Caches/JetBrains/PyCharmCE#{version.major_minor}",
     "~/Library/Caches/PyCharm#{version.major_minor}",
     "~/Library/Caches/PyCharmCE#{version.major_minor}",
+    "~/Library/Logs/JetBrains/PyCharmCE#{version.major_minor}",
     "~/Library/Logs/PyCharm#{version.major_minor}",
     "~/Library/Logs/PyCharmCE#{version.major_minor}",
     "~/Library/Preferences/PyCharm#{version.major_minor}",
