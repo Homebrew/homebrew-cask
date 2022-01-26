@@ -8,7 +8,7 @@ cask "sixtyforce" do
   homepage "https://sixtyforce.com/"
 
   app "sixtyforce.app"
-  
+
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.gerrit.sixtyforce.sfl2",
     "~/Library/Application Support/sixtyforce",
