@@ -16,11 +16,8 @@ cask "postman" do
   homepage "https://www.postman.com/"
 
   livecheck do
-    url "https://dl.pstmn.io/api/version/"
-    strategy :page_match do |page|
-      stable_versions = JSON.parse(page).filter { |v| v["channel"] == "stable" && v["disabled"] == false }
-      stable_versions.map { |v| v["name"] }
-    end
+    url "https://dl.pstmn.io/download/latest/#{arch}"
+    strategy :header_match
   end
 
   auto_updates true
