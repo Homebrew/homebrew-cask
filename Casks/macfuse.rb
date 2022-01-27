@@ -11,7 +11,7 @@ cask "macfuse" do
   livecheck do
     url :url
     strategy :github_latest
-    regex(%r{href=.*?/macfuse-(\d+(?:\.\d+)+)\.dmg}i)
+    regex(%r{href=.*?/macfuse[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   auto_updates true
@@ -28,6 +28,8 @@ cask "macfuse" do
     "io.macfuse.installer.components.core",
     "io.macfuse.installer.components.preferencepane",
   ]
+
+  zap trash: "/Library/PreferencePanes/macFUSE.prefPane"
 
   caveats do
     kext
