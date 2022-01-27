@@ -19,6 +19,8 @@ cask "dbeaver-community" do
     strategy :github_latest
   end
 
+  auto_updates true
+
   app "DBeaver.app"
 
   uninstall signal: ["TERM", "org.jkiss.dbeaver.core.product"]
