@@ -18,11 +18,13 @@ cask "microsoft-teams" do
   pkg "Teams_osx.pkg"
 
   uninstall pkgutil:   "com.microsoft.teams",
-            launchctl: "com.microsoft.teams.TeamsUpdaterDaemon"
+            launchctl: "com.microsoft.teams.TeamsUpdaterDaemon",
+            delete:    [
+              "/Library/Logs/Microsoft/Teams",
+              "/Library/Preferences/com.microsoft.teams.plist",
+            ]
 
   zap trash: [
-    "/Library/Logs/Microsoft/Teams",
-    "/Library/Preferences/com.microsoft.teams.plist",
     "~/Library/Application Support/com.microsoft.teams",
     "~/Library/Application Support/Microsoft/Teams",
     "~/Library/Application Support/Teams",
