@@ -1,12 +1,12 @@
 cask "rancher" do
   arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
-  version "0.7.1"
+  version "1.0.0"
 
   if Hardware::CPU.intel?
-    sha256 "2f2e9c0ee43fb6a3752d9244c32249714e91f638136c54184430e1c217356fe6"
+    sha256 "835355c1e8338a9661b38cac4bca1664e116994f7a2c9e67118ad8947dfd3ce8"
   else
-    sha256 "76fad627e3bab036904471735b9f5c402eabde6f70a0c8428a77d6ca6ccd803f"
+    sha256 "eecd25ff4e1f3dfa9db3c9940d280f04c2bafe1f11d3b9c30a6de4efe622facf"
   end
 
   url "https://github.com/rancher-sandbox/rancher-desktop/releases/download/v#{version}/Rancher.Desktop-#{version}.#{arch}.dmg",
@@ -28,7 +28,6 @@ cask "rancher" do
   app "Rancher Desktop.app"
   binary "#{appdir}/Rancher Desktop.app/Contents/Resources/resources/darwin/bin/docker"
   binary "#{appdir}/Rancher Desktop.app/Contents/Resources/resources/darwin/bin/helm"
-  binary "#{appdir}/Rancher Desktop.app/Contents/Resources/resources/darwin/bin/kim"
   binary "#{appdir}/Rancher Desktop.app/Contents/Resources/resources/darwin/bin/kubectl"
   binary "#{appdir}/Rancher Desktop.app/Contents/Resources/resources/darwin/bin/nerdctl"
 
@@ -43,6 +42,7 @@ cask "rancher" do
   zap trash: [
     "~/.kuberlr",
     "~/Library/Application Support/Caches/rancher-desktop-updater",
+    "~/Library/Application Support/Rancher Desktop",
     "~/Library/Application Support/rancher-desktop",
     "~/Library/Caches/io.rancherdesktop.app*",
     "~/Library/Caches/rancher-desktop",
