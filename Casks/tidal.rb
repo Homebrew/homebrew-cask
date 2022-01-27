@@ -1,5 +1,5 @@
 cask "tidal" do
-  version "2.29.6"
+  version "2.29.7"
   sha256 :no_check
 
   url "https://download.tidal.com/desktop/TIDAL.dmg"
@@ -11,6 +11,8 @@ cask "tidal" do
     url :url
     strategy :extract_plist
   end
+
+  auto_updates true
 
   app "TIDAL.app"
 
