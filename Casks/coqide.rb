@@ -8,6 +8,12 @@ cask "coqide" do
   desc "Formal proof management system"
   homepage "https://coq.inria.fr/"
 
+  livecheck do
+    url "https://github.com/coq/coq/releases"
+    strategy :page_match
+    regex(/href=.*?coq[._-]?v?(\d+(?:\.\d+)+)-installer-macos\.dmg/i)
+  end
+
   depends_on macos: ">= :sierra"
 
   app "CoqIDE_#{version.major_minor_patch}.app"
