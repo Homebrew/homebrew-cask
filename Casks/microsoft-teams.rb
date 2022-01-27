@@ -1,6 +1,6 @@
 cask "microsoft-teams" do
-  version "1.4.00.34557"
-  sha256 "4e540460dbc8910eddae44b64889d37b6ea261175fdeede4a6d45c81030456a9"
+  version "1.4.00.35562"
+  sha256 "d82f20d86e2c7a683ddb37e299b307fff88756239db938b8d3f8ec91a24ac659"
 
   url "https://statics.teams.cdn.office.net/production-osx/#{version}/Teams_osx.pkg",
       verified: "statics.teams.cdn.office.net"
@@ -18,11 +18,13 @@ cask "microsoft-teams" do
   pkg "Teams_osx.pkg"
 
   uninstall pkgutil:   "com.microsoft.teams",
-            launchctl: "com.microsoft.teams.TeamsUpdaterDaemon"
+            launchctl: "com.microsoft.teams.TeamsUpdaterDaemon",
+            delete:    [
+              "/Library/Logs/Microsoft/Teams",
+              "/Library/Preferences/com.microsoft.teams.plist",
+            ]
 
   zap trash: [
-    "/Library/Logs/Microsoft/Teams",
-    "/Library/Preferences/com.microsoft.teams.plist",
     "~/Library/Application Support/com.microsoft.teams",
     "~/Library/Application Support/Microsoft/Teams",
     "~/Library/Application Support/Teams",
