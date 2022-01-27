@@ -14,6 +14,7 @@ cask "microsoft-outlook" do
   else
     version "16.57.22011101"
     sha256 "63dd37ee10f934abf8ee08f0baad986b9a92d3fc9d9435e4b40d20ca413d39d3"
+  end
 
   url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Outlook_#{version}_Installer.pkg",
       verified: "officecdnmac.microsoft.com/"
