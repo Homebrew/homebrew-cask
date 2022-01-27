@@ -1,7 +1,22 @@
 cask "visual-studio-code" do
   arch = Hardware::CPU.intel? ? "darwin" : "darwin-arm64"
 
-  version "1.63.2"
+  
+  if MacOS.version <= :yosemite
+    version "1.55.2"
+    if Hardware::CPU.intel?
+      sha256 "be3a1ebfac2c6c5e882714304adc518aff8bac6b663e194a9e73524c62065b94"
+    else
+      sha256 "c3621a13c9a927e99563513f95593d4d605f70a123e538681fba6d3ef6ec9dee"
+    end
+  else
+    version "1.63.2"
+    if Hardware::CPU.intel?
+      sha256 "1ef5957499ecbf92cc14fd9f49eef6251f3fc77c83babc8185c6f564a2886633"
+    else
+      sha256 "be22b8fcea0af2d2416f47fbe0cae7f8199f21ad0c3ba28402027752d4f93630"
+    end
+  end
 
   if Hardware::CPU.intel?
     sha256 "1ef5957499ecbf92cc14fd9f49eef6251f3fc77c83babc8185c6f564a2886633"
