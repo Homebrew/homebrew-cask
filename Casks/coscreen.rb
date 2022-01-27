@@ -9,7 +9,7 @@ cask "coscreen" do
   homepage "https://www.coscreen.co/"
 
   livecheck do
-    url "https://update.coscreen.org/beta-mac.yml"
+    url "https://update.coscreen.org/stable-mac.yml"
     strategy :electron_builder
   end
 
