@@ -1,6 +1,6 @@
 cask "cleanmymac" do
-  version "4.10.0,41000.0.2112211205"
-  sha256 "1f415dd5ff9fe03aba01ddbacd1c6e5fb972cf90f5798ac4d3e4ab88c137e230"
+  version "4.10.1,41001.0.2201241200"
+  sha256 "ddd0bde6ef98269c92c3285e4f8ba08cc52dd7b9f434c0452711dc6c7c83ceed"
 
   url "https://dl.devmate.com/com.macpaw.CleanMyMac#{version.major}/CleanMyMacX.dmg",
       verified: "dl.devmate.com/"
@@ -19,8 +19,8 @@ cask "cleanmymac" do
   app "CleanMyMac X.app"
 
   uninstall delete:     [
-    "/Library/PrivilegedHelperTools/com.macpaw.CleanMyMac#{version.major}.Agent",
     "/Library/LaunchDaemons/com.macpaw.CleanMyMac#{version.major}.Agent.plist",
+    "/Library/PrivilegedHelperTools/com.macpaw.CleanMyMac#{version.major}.Agent",
   ],
             launchctl:  [
               "com.macpaw.CleanMyMac#{version.major}.Agent",
@@ -42,8 +42,8 @@ cask "cleanmymac" do
     "~/Library/Application Scripts/com.macpaw.CleanMyMac#{version.major}.CleanMyMacWidget",
     "~/Library/Application Support/CleanMyMac X Menu",
     "~/Library/Application Support/CleanMyMac X",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macpaw.cleanmymac#{version.major}.sfl*",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macpaw.cleanmymac#{version.major}.scheduler.sfl*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macpaw.cleanmymac#{version.major}.sfl*",
     "~/Library/Caches/CleanMyMac #{version.major}",
     "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.macpaw.CleanMyMac#{version.major}.help*",
     "~/Library/Caches/com.macpaw.CleanMyMac#{version.major}.HealthMonitor",

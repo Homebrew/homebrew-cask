@@ -1,6 +1,6 @@
 cask "swiftplantumlapp" do
-  version "1.2.1"
-  sha256 "44dc78f5ef2795cb881d4ffa028a9b728c6000b0effbce3e294815d77bda46da"
+  version "1.3.0"
+  sha256 "2a1a48c608b30667671f4111f1d38455a6291210604d81ca70ef4a5f02823f5e"
 
   url "https://github.com/MarcoEidinger/SwiftPlantUML-Xcode-Extension/releases/download/#{version}/SwiftPlantUMLApp.zip"
   name "swiftplantumlapp"

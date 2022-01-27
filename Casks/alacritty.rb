@@ -1,6 +1,6 @@
 cask "alacritty" do
-  version "0.9.0"
-  sha256 "754406b48ce1d4b4529f354ca51496c6c57c47ff98d7e5f6aa67efd89e4a5859"
+  version "0.10.0"
+  sha256 "b8d70984ec7fae00afe0f7f163ac9f805390ec928b2b95fce578453c0663f192"
 
   url "https://github.com/alacritty/alacritty/releases/download/v#{version}/Alacritty-v#{version}.dmg"
   name "Alacritty"
@@ -20,7 +20,12 @@ cask "alacritty" do
          target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/alacritty"
   binary "#{appdir}/Alacritty.app/Contents/Resources/completions/alacritty.fish",
          target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/alacritty.fish"
+  binary "#{appdir}/Alacritty.app/Contents/Resources/61/alacritty",
+         target: "#{ENV["HOME"]}/.terminfo/61/alacritty"
+  binary "#{appdir}/Alacritty.app/Contents/Resources/61/alacritty-direct",
+         target: "#{ENV["HOME"]}/.terminfo/61/alacritty-direct"
   manpage "#{appdir}/Alacritty.app/Contents/Resources/alacritty.1.gz"
+  manpage "#{appdir}/Alacritty.app/Contents/Resources/alacritty-msg.1.gz"
 
   zap trash: [
     "~/Library/Preferences/io.alacritty.plist",

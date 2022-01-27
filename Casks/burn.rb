@@ -9,4 +9,6 @@ cask "burn" do
   homepage "https://burn-osx.sourceforge.io/"
 
   app "Burn.localized/Burn.app"
+
+  zap trash: "~/Library/Preferences/com.kiwifruitware.Burn.plist"
 end

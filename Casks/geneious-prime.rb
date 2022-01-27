@@ -9,8 +9,7 @@ cask "geneious-prime" do
 
   livecheck do
     url "https://www.geneious.com/download/"
-    strategy :page_match
-    regex(/Prime\s*(\d+(?:\.\d+)*)/i)
+    regex(/Prime\s*(\d+(?:\.\d+)+)/i)
   end
 
   app "Geneious Prime.app"
