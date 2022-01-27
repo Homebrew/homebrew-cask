@@ -8,4 +8,6 @@ cask "noisy" do
   homepage "https://github.com/jonshea/Noisy"
 
   app "Noisy.app"
+
+  zap trash: "~/Library/Preferences/com.rathertremendous.noisy.plist"
 end
