@@ -10,12 +10,7 @@ cask "android-platform-tools" do
 
   livecheck do
     url "https://dl.google.com/android/repository/platform-tools-latest-darwin.zip"
-    strategy :header_match do |headers|
-      match = headers["location"].match(%r{/([0-9a-f]{40,}).platform-tools_r([.0-9]+)-darwin})
-      next if match.blank?
-
-      "#{match[2]},#{match[1]}"
-    end
+    strategy :header_match
   end
 
   binary "#{staged_path}/platform-tools/adb"
