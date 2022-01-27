@@ -7,11 +7,6 @@ cask "ieasemusic" do
   desc "Third-party NetEase cloud music player"
   homepage "https://github.com/trazyn/ieaseMusic"
 
-  livecheck do
-    url :url
-    strategy :git
-  end
-
   auto_updates true
 
   app "ieaseMusic.app"
