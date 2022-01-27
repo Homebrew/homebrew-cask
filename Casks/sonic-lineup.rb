@@ -11,7 +11,7 @@ cask "sonic-lineup" do
   livecheck do
     url "https://code.soundsoftware.ac.uk/projects/sonic-lineup/files"
     strategy :page_match do |page|
-      match = page.match(%r{href=.*?/(\d+)/Sonic%20Lineup-(\d+(?:\.\d+)*)\.dmg}i)
+      match = page.match(%r{href=.*?/(\d+)/Sonic%20Lineup[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
       next if match.blank?
 
       "#{match[2]},#{match[1]}"
@@ -23,9 +23,9 @@ cask "sonic-lineup" do
   app "Sonic Lineup.app"
 
   zap trash: [
-    "~/Library/Saved Application State/org.sonicvisualiser.SonicLineup.savedState",
+    "~/Library/Application Support/sonic-visualiser/Sonic Lineup",
     "~/Library/Preferences/org.sonicvisualiser.Sonic Lineup.plist",
     "~/Library/Preferences/org.sonicvisualiser.SonicLineup.plist",
-    "~/Library/Application Support/sonic-visualiser/Sonic Lineup",
+    "~/Library/Saved Application State/org.sonicvisualiser.SonicLineup.savedState",
   ]
 end
