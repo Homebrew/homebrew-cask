@@ -1,6 +1,6 @@
 cask "dcp-o-matic" do
-  version "2.14.56"
-  sha256 "800758cd50f918e2968421870eb0cf3d5f63a49ebc6654264f1a8d38e6dd6486"
+  version "2.14.57"
+  sha256 "ba9155b7d5abf71a4c589ab4c59d9d8b8b929261c2ede4168fca6de19163144e"
 
   url "https://dcpomatic.com/dl.php?id=osx-10.9-main&version=#{version}"
   name "DCP-o-matic"
@@ -9,7 +9,6 @@ cask "dcp-o-matic" do
 
   livecheck do
     url "https://dcpomatic.com/download"
-    strategy :page_match
     regex(/stable\s*release:\s*(\d+(?:\.\d+)+)/i)
   end
 

@@ -1,6 +1,6 @@
 cask "dcp-o-matic-player" do
-  version "2.14.56"
-  sha256 "fee4792e65561b82df69488e115dc0da9be7860f6f87a9e48ca68b7f3a115313"
+  version "2.14.57"
+  sha256 "a8c9dc2f1ee081d34da0045ccd4fe49ffec21ba9ff81de52a7c0c1aee36e9ab8"
 
   url "https://dcpomatic.com/dl.php?id=osx-10.9-player&version=#{version}"
   name "DCP-o-matic Player"
@@ -8,9 +8,7 @@ cask "dcp-o-matic-player" do
   homepage "https://dcpomatic.com/"
 
   livecheck do
-    url "https://dcpomatic.com/download"
-    strategy :page_match
-    regex(/href=.*?id=osx[0-9._-]*player[^"']*?version=(\d+(?:\.\d+)+)/i)
+    cask "dcp-o-matic"
   end
 
   app "DCP-o-matic #{version.major} Player.app"
