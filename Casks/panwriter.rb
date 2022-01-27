@@ -15,11 +15,6 @@ cask "panwriter" do
   desc "Markdown editor with pandoc integration and paginated preview"
   homepage "https://panwriter.com/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on formula: "pandoc"
 
   app "PanWriter.app"
