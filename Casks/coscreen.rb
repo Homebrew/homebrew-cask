@@ -6,7 +6,7 @@ cask "coscreen" do
       verified: "https://update.coscreen.org/"
   name "CoScreen"
   desc "Collaboration tool with multi-user screen sharing"
-  homepage "https://coscreen.co/"
+  homepage "https://www.coscreen.co/"
 
   livecheck do
     url "https://update.coscreen.org/beta-mac.yml"
