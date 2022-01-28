@@ -1,5 +1,5 @@
 cask "macupdater" do
-  version "2.1.2,12983"
+  version "2.1.2,12999"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://www.corecode.io/downloads/macupdater_#{version.csv.first}.dmg"
