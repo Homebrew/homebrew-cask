@@ -1,8 +1,8 @@
 cask "coarchi" do
-  version "0.8.0.202110121448"
-  sha256 "3615ab5f1064b301a2f7f69e95782d5cb42996ee6772136214f2a4e9f0bcaf71"
+  version "0.8.1.202112061132"
+  sha256 "ffd87ed646d20842e85d02e79377e6aed15ea18b29590f5f2bb32efe7b0a4c4d"
 
-  url "https://www.archimatetool.com/downloads/coarchi/coArchi_#{version}.archiplugin"
+  url "https://www.archimatetool.com/downloads/coarchi1/coArchi_#{version}.archiplugin"
   name "coArchi plugin for Archi"
   desc "Model Collaboration plugin for Archi"
   homepage "https://www.archimatetool.com/plugins/#coArchi"
