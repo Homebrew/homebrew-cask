@@ -4,12 +4,12 @@ cask "icefloor" do
 
   url "https://www.hanynet.com/icefloor-#{version}.zip"
   name "IceFloor"
+  desc "Firewall tool"
   homepage "https://www.hanynet.com/icefloor/"
 
   livecheck do
-    url "https://www.hanynet.com/icefloor/"
-    strategy :page_match
-    regex(%r{href=.*?/icefloor-(\d+(?:\.\d+)*)\.zip}i)
+    url :homepage
+    regex(%r{href=.*?/icefloor[._-]v?(\d+(?:\.\d+)+)\.zip}i)
   end
 
   app "IceFloor.app"

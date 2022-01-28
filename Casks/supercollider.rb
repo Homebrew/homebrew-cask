@@ -15,4 +15,10 @@ cask "supercollider" do
   end
 
   app "SuperCollider.app"
+
+  zap trash: [
+    "~/Library/Application Support/SuperCollider",
+    "~/Library/Preferences/net.sourceforge.supercollider.plist",
+    "~/Library/Saved Application State/net.sourceforge.supercollider.savedState",
+  ]
 end

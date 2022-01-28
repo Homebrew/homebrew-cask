@@ -1,12 +1,12 @@
 cask "android-studio" do
   arch = Hardware::CPU.intel? ? "mac" : "mac_arm"
 
-  version "2020.3.1.26"
+  version "2021.1.1.20"
 
   if Hardware::CPU.intel?
-    sha256 "7da10ce0c3e998393045f6de3c37df46bd95e3bacb3f803d63fd85bc67148d6e"
+    sha256 "72c7f0f2e0d7d931c9d4ea394a413023f60692885aefe2cf91f33cdb77b4fb17"
   else
-    sha256 "19688e19df59f37ce1d4b2b339d0c81dbc8f443fb2c8cbe4d6e4178cc70f935a"
+    sha256 "52604f8f9250986b0a69c0ec94f6db16260f3b1c25d73b073dd982429d38d6c9"
   end
 
   url "https://redirector.gvt1.com/edgedl/android/studio/install/#{version}/android-studio-#{version}-#{arch}.dmg",
@@ -17,7 +17,7 @@ cask "android-studio" do
 
   livecheck do
     url :homepage
-    regex(/android-studio-(\d+(?:\.\d+)+)-#{arch}\.dmg/i)
+    regex(/android[._-]studio[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
   auto_updates true

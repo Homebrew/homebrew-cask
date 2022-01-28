@@ -20,4 +20,6 @@ cask "wickrme" do
   depends_on macos: ">= :high_sierra"
 
   app "WickrMe.app"
+
+  zap trash: "~/Library/Preferences/com.wickr-llc.WickrMe.plist"
 end

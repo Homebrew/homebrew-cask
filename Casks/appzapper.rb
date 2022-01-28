@@ -21,4 +21,9 @@ cask "appzapper" do
   depends_on macos: ">= :sierra"
 
   app "AppZapper.app"
+
+  zap trash: [
+    "~/Library/Application Support/AppZapper",
+    "~/Library/Preferences/com.appzapper.appzapper2.plist",
+  ]
 end
