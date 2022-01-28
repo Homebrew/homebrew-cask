@@ -5,6 +5,7 @@ cask "weka" do
   url "https://downloads.sourceforge.net/weka/weka-#{version.dots_to_hyphens}-azul-zulu-osx.dmg",
       verified: "sourceforge.net/weka/"
   name "Weka"
+  desc "Collection of machine learning algorithms for data mining tasks"
   homepage "https://www.cs.waikato.ac.nz/ml/weka/"
 
   livecheck do
