@@ -8,7 +8,7 @@ cask "poedit" do
   homepage "https://poedit.net/"
 
   livecheck do
-    url "https://poedit.net/updates/osx/appcast"
+    url "https://poedit.net/updates_v2/osx/appcast"
     strategy :sparkle
   end
 
