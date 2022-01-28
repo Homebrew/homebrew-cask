@@ -13,4 +13,13 @@ cask "cloudup" do
   end
 
   app "Cloudup.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.cloudup.Cloudup.ShareExtension",
+    "~/Library/Application Support/Cloudup",
+    "~/Library/Caches/com.cloudup.Cloudup",
+    "~/Library/Containers/com.cloudup.Cloudup.ShareExtension",
+    "~/Library/HTTPStorages/com.cloudup.Cloudup",
+    "~/Library/Preferences/com.cloudup.Cloudup.plist",
+  ]
 end
