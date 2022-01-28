@@ -1,6 +1,6 @@
 cask "gb-studio" do
-  version "3.0.2"
-  sha256 "902799ecf53a622e644e86ebfc27b3dbaf0bb9eb20eb5e71f5594c53a632152d"
+  version "3.0.3"
+  sha256 "be9ef5b72ce54daec4f7870d3c1178ac2c4efb67cc523a76fdcf3d18edc1e72b"
 
   url "https://github.com/chrismaltby/gb-studio/releases/download/v#{version}/gb-studio-mac.zip",
       verified: "github.com/chrismaltby/gb-studio/"
