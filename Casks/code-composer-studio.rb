@@ -9,7 +9,7 @@ cask "code-composer-studio" do
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?/ccs_installer_osx_(\d+(?:\.\d+)+)\.dmg}i)
+    regex(/href=.*?ccs[._-]installer[._-]osx[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   installer script: {
