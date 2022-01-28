@@ -26,16 +26,16 @@ cask "rancher" do
                  ]
 
   app "Rancher Desktop.app"
-  binary "#{appdir}/Rancher Desktop.app/Contents/Resources/resources/darwin/bin/docker"
-  binary "#{appdir}/Rancher Desktop.app/Contents/Resources/resources/darwin/bin/helm"
-  binary "#{appdir}/Rancher Desktop.app/Contents/Resources/resources/darwin/bin/kubectl"
-  binary "#{appdir}/Rancher Desktop.app/Contents/Resources/resources/darwin/bin/nerdctl"
 
   uninstall delete: [
     "/opt/rancher-desktop",
     "/private/etc/sudoers.d/rancher-desktop-lima",
     "/private/var/run/docker.sock",
     "/private/var/run/rancher-desktop-lima",
+    "/usr/local/bin/docker",
+    "/usr/local/bin/helm",
+    "/usr/local/bin/kubectl",
+    "/usr/local/bin/nerdctl",
   ],
             quit:   "io.rancherdesktop.app"
 
