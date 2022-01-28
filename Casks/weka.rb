@@ -1,6 +1,6 @@
 cask "weka" do
-  version "3.8.5"
-  sha256 "9fe4a84bf6c7146b7899fea857310e932f37f39ea788e6eda8b994c4a8ef3048"
+  version "3.8.6"
+  sha256 "092284e53006f37c5c43bab1f4a082771375c7db9d749963498a5e4bda0e146c"
 
   url "https://downloads.sourceforge.net/weka/weka-#{version.dots_to_hyphens}-azul-zulu-osx.dmg",
       verified: "sourceforge.net/weka/"
