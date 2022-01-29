@@ -3,13 +3,13 @@ cask "pycharm" do
 
   version "2021.3.2,213.6777.50"
 
-  url "https://download.jetbrains.com/python/pycharm-professional-#{version.csv.first}#{arch}.dmg"
   if Hardware::CPU.intel?
     sha256 "a2743c89aa5d1df0ec305d0b3d12adbd7ddb2e2f4e780bb19581dfe9e95dd453"
   else
     sha256 "23b89fb594b1d969b5101efef7223be8380c2543f29df787129180367743a1f1"
   end
 
+  url "https://download.jetbrains.com/python/pycharm-professional-#{version.csv.first}#{arch}.dmg"
   name "PyCharm"
   name "PyCharm Professional"
   desc "IDE for professional Python development"
