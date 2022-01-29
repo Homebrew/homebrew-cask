@@ -4,7 +4,7 @@ cask "pycharm-ce" do
   version "2021.3.2,213.6777.50"
 
   if Hardware::CPU.intel?
-    sha256 "2153f488fbd77123e379642c603045f26a2137245f52ee9d8b588c0c388a6f23"
+    sha256 "b8f41f5dddeda0ed5f5c81ba57d2560ccc6e227987882fb6bf305b5d1d8c6909"
   else
     sha256 "407bf395cfb6d61f1c0861c7679b197238780e82a019e10162b8cd7130edb15a"
   end
