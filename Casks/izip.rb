@@ -15,4 +15,6 @@ cask "izip" do
   depends_on macos: ">= :yosemite"
 
   app "iZip.app"
+
+  zap trash: "~/Library/Preferences/com.codeius.izip.plist"
 end
