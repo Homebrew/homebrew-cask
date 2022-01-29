@@ -2,8 +2,8 @@ cask "chromium" do
   arch = Hardware::CPU.intel? ? "Mac" : "Mac_Arm"
 
   if Hardware::CPU.intel?
-    version "962800"
-    sha256 "b4698c951a2981919df555878d7555acd96e193bccb6d9852dd3934fc011ba46"
+    version "964838"
+    sha256 "cb114c4eaa34b9fc67f55a6b13e79666a469ee00ed50265044014ef37bae906f"
   else
     version "962796"
     sha256 "4c4b4bb5a324bb794684bb295bd2e1b3c5df218069dc297a35971c78deb265c5"
