@@ -11,9 +11,9 @@ cask "weka" do
   livecheck do
     url "https://waikato.github.io/weka-wiki/downloading_weka/"
     strategy :page_match do |page|
-      page[%r{href=.*?/weka-(\d+(?:-\d+)*)-azul-zulu-osx\.dmg}i, 1].tr("-", ".")
+      page[%r{href=.*?/weka[._-]v?(\d+(?:-\d+)+)[._-]azul[._-]zulu[._-]osx\.dmg}i, 1].tr("-", ".")
     end
   end
 
-  app "weka-#{version.dots_to_hyphens}-azul-zulu.app"
+  app "weka-#{version}.app"
 end
