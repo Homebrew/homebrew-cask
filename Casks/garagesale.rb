@@ -15,4 +15,10 @@ cask "garagesale" do
   depends_on macos: ">= :sierra"
 
   app "GarageSale.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.iwascoding.garagesale8",
+    "~/Library/Caches/com.apple.helpd/Generated/com.iwascoding.garagesale8.help*8.4",
+    "~/Library/Containers/com.iwascoding.garagesale8",
+  ]
 end
