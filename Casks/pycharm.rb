@@ -4,9 +4,9 @@ cask "pycharm" do
   version "2021.3.2,213.6777.50"
 
   if Hardware::CPU.intel?
-    sha256 "a2743c89aa5d1df0ec305d0b3d12adbd7ddb2e2f4e780bb19581dfe9e95dd453"
+    sha256 "188b998660e7cfb7ac1364c818c008a5608ab2aeb17c6cc19d1d9dda547d3775"
   else
-    sha256 "23b89fb594b1d969b5101efef7223be8380c2543f29df787129180367743a1f1"
+    sha256 "12fa34d1e60a555bac230acea9cd46c7adfe9ca42ff3e458c79d33e5b88eb8db"
   end
 
   url "https://download.jetbrains.com/python/pycharm-professional-#{version.csv.first}#{arch}.dmg"
