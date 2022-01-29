@@ -6,7 +6,7 @@ cask "pycharm-ce" do
   if Hardware::CPU.intel?
     sha256 "2153f488fbd77123e379642c603045f26a2137245f52ee9d8b588c0c388a6f23"
   else
-    sha256 "567db4a722703fd44343e5fda1240bddd5ff62f2a5aa73ac4ee811425ef13bcd"
+    sha256 "407bf395cfb6d61f1c0861c7679b197238780e82a019e10162b8cd7130edb15a"
   end
 
   url "https://download.jetbrains.com/python/pycharm-community-#{version.csv.first}#{arch}.dmg"
