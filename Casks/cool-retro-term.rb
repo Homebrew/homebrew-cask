@@ -4,6 +4,7 @@ cask "cool-retro-term" do
 
   url "https://github.com/Swordfish90/cool-retro-term/releases/download/#{version}/Cool-Retro-Term-#{version}.dmg"
   name "cool-retro-term"
+  desc "Terminal emulator mimicking the old cathode display"
   homepage "https://github.com/Swordfish90/cool-retro-term"
 
   app "cool-retro-term.app"
