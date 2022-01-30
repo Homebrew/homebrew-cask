@@ -1,4 +1,6 @@
 cask "eclipse-rcp" do
+  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
+
   version "4.22.0,2021-12"
 
   if Hardware::CPU.intel?
@@ -6,8 +8,6 @@ cask "eclipse-rcp" do
   else
     sha256 "852a41ea297428e240ff97266d2f5deff9719e2352f464a322613b17dbbc34d7"
   end
-
-  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-rcp-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&r=1"
   name "Eclipse for RCP and RAP Developers"
