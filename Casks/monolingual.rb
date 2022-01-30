@@ -20,4 +20,9 @@ cask "monolingual" do
   homepage "https://ingmarstein.github.io/Monolingual/"
 
   app "Monolingual.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.github.IngmarStein.Monolingual",
+    "~/Library/Containers/com.github.IngmarStein.Monolingual",
+  ]
 end
