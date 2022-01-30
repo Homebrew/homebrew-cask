@@ -1,4 +1,6 @@
 cask "eclipse-modeling" do
+  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
+
   version "4.22.0,2021-12"
 
   if Hardware::CPU.intel?
@@ -6,8 +8,6 @@ cask "eclipse-modeling" do
   else
     sha256 "7558bead45bf18509f8e689fd9a4091605af2e8dd09e171b648b9e8dc3e82435"
   end
-
-  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-modeling-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&r=1"
   name "Eclipse Modeling Tools"
