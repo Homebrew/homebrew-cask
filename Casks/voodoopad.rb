@@ -5,7 +5,8 @@ cask "voodoopad" do
   url "https://voodoopad.s3.amazonaws.com/VoodooPad-#{version.csv.first}.zip",
       verified: "voodoopad.s3.amazonaws.com/"
   name "VoodooPad"
-  homepage "http://www.voodoopad.com/"
+  desc "Notes organizer"
+  homepage "https://www.voodoopad.com/"
 
   livecheck do
     url "https://www.primatelabs.com/appcast/voodoopad#{version.major}.xml"
