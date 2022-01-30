@@ -13,4 +13,9 @@ cask "oscilloscope" do
   end
 
   app "Oscilloscope.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/org.sd.oscilloscope",
+    "~/Library/Containers/org.sd.oscilloscope",
+  ]
 end
