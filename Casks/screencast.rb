@@ -4,7 +4,10 @@ cask "screencast" do
 
   url "https://github.com/soh335/Screencast/releases/download/#{version}/Screencast.dmg"
   name "Screencast"
+  desc "Simple screen video capture application"
   homepage "https://github.com/soh335/Screencast"
 
   app "Screencast.app"
+
+  zap trash: "~/Library/Preferences/jp.makeitreal.Screencast.plist"
 end
