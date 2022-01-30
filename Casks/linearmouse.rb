@@ -12,9 +12,7 @@ cask "linearmouse" do
 
   app "LinearMouse.app"
 
-  uninstall quit: [
-    "com.lujjjh.LinearMouse",
-  ]
+  uninstall quit: "com.lujjjh.LinearMouse"
 
   zap trash: "~/Library/Preferences/com.lujjjh.LinearMouse.plist"
 end
