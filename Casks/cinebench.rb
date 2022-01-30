@@ -1,10 +1,15 @@
 cask "cinebench" do
-  version "R23,330542"
+  version "23"
   sha256 "c8826647af0c7c8cc9bfa2533b254a37deb9852caeea1a47cbacec5e577cdda9"
 
-  url "https://http.maxon.net/pub/cinebench/Cinebench#{version.csv.first}.dmg"
+  url "https://http.maxon.net/pub/cinebench/CinebenchR#{version}.dmg"
   name "Cinebench"
   homepage "https://www.maxon.net/products/cinebench/"
+
+  livecheck do
+    url "https://www.maxon.net/en/downloads"
+    regex(/href=.*?cinebench-r(\d+(?:\.\d+)*)-downloads/i)
+  end
 
   depends_on macos: ">= :el_capitan"
 
