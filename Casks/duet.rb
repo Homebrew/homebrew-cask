@@ -11,7 +11,7 @@ cask "duet" do
   livecheck do
     url "https://updates.duetdisplay.com/latestMac"
     strategy :header_match do |headers|
-      headers["location"][/-(\d+(?:-\d+)*)\.zip/i, 1].tr("-", ".")
+      headers["location"][/duet[._-]v?(\d+(?:-\d+)+)\.zip/i, 1].tr("-", ".")
     end
   end
 
