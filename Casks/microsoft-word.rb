@@ -10,7 +10,7 @@ cask "microsoft-word" do
     sha256 "3d957d534fb2142f6e95a688552890a31f0d942796f0128ca837a3e98405d413"
   elsif MacOS.version <= :mojave
     version "16.54.21101001"
-    sha256 ""
+    sha256 "7f3ed397b517aac3637d8b8f8b4233f9e7132941f0657eaca8ec423ac068616e"
   else
     version "16.57.22011101"
     sha256 "b47b5ef70336e0f591583ac52d895ea57ab81ad870737734aedfe05ffac239d1"
