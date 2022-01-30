@@ -1,4 +1,6 @@
 cask "eclipse-jee" do
+  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
+
   version "4.22.0,2021-12"
 
   if Hardware::CPU.intel?
@@ -6,8 +8,6 @@ cask "eclipse-jee" do
   else
     sha256 "858075dcf46e3ac4e9894688f4e006d127dbccd8cfc8e97c556d5f53d520072d"
   end
-
-  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-jee-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&r=1"
   name "Eclipse IDE for Java EE Developers"
