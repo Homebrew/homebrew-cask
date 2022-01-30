@@ -31,24 +31,28 @@ cask "teamviewer" do
     pkg "Install TeamViewer.app/Contents/Resources/Install TeamViewer.pkg"
   end
 
-  uninstall delete:    [
-    "#{staged_path}/#{token}", # This Cask should be uninstalled manually.
-    "/Applications/TeamViewer.app",
-    "/Library/Preferences/com.teamviewer.teamviewer.preferences.plist",
-  ],
-            pkgutil:   [
-              "com.teamviewer.remoteaudiodriver",
-              "com.teamviewer.teamviewer.*",
-            ],
-            launchctl: [
-              "com.teamviewer.desktop",
-              "com.teamviewer.Helper",
-              "com.teamviewer.service",
-              "com.teamviewer.teamviewer_desktop",
-              "com.teamviewer.teamviewer_service",
-              "com.teamviewer.teamviewer",
-            ],
-            quit:      "com.teamviewer.TeamViewer"
+  if MacOS.version == :catalina
+    uninstall delete: "#{staged_path}/#{token}" # This Cask should be uninstalled manually.
+  else
+    uninstall delete:    [
+      "#{staged_path}/#{token}", # This Cask should be uninstalled manually.
+      "/Applications/TeamViewer.app",
+      "/Library/Preferences/com.teamviewer.teamviewer.preferences.plist",
+    ],
+              pkgutil:   [
+                "com.teamviewer.remoteaudiodriver",
+                "com.teamviewer.teamviewer.*",
+              ],
+              launchctl: [
+                "com.teamviewer.desktop",
+                "com.teamviewer.Helper",
+                "com.teamviewer.service",
+                "com.teamviewer.teamviewer_desktop",
+                "com.teamviewer.teamviewer_service",
+                "com.teamviewer.teamviewer",
+              ],
+              quit:      "com.teamviewer.TeamViewer"
+  end
 
   zap trash: [
     "~/Library/Application Support/TeamViewer",
