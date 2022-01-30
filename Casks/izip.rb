@@ -9,10 +9,12 @@ cask "izip" do
 
   livecheck do
     url "https://www.izip.com/download"
-    regex(%r{<li>Version:\s*(\d+(?:\.\d+)*)</li>}i)
+    regex(%r{<li>Version:\s*(\d+(?:\.\d+)+)</li>}i)
   end
 
   depends_on macos: ">= :yosemite"
 
   app "iZip.app"
+
+  zap trash: "~/Library/Preferences/com.codeius.izip.plist"
 end
