@@ -18,4 +18,9 @@ cask "ditto" do
     "com.squirrels.Ditto",
     "com.squirrels.SquirrelsLoopbackAudioDriver",
   ]
+
+  zap trash: [
+    "~/Library/Caches/com.squirrels.Ditto",
+    "~/Library/Preferences/com.squirrels.Ditto.plist",
+  ]
 end
