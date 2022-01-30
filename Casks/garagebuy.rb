@@ -16,4 +16,9 @@ cask "garagebuy" do
   depends_on macos: ">= :sierra"
 
   app "GarageBuy.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.iwascoding.garagebuy2",
+    "~/Library/Containers/com.iwascoding.garagebuy2",
+  ]
 end
