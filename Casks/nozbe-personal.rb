@@ -9,7 +9,7 @@ cask "nozbe-personal" do
 
   livecheck do
     url "https://nozbe.com/mac"
-    srategy :extract_plist
+    strategy :extract_plist
   end
 
   depends_on macos: ">= :mojave"
