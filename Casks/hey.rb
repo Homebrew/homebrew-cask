@@ -1,6 +1,6 @@
 cask "hey" do
-  version "1.2.2"
-  sha256 "0c0553576874e6d72c81890066f9631c3be9a191328f46fd9843bbea5beefa95"
+  version "1.2.3"
+  sha256 "a33c9d6e78b9165c199618ecf073f3562685d55f0475cee901731b80420fd0bf"
 
   url "https://hey-desktop.s3.amazonaws.com/HEY-#{version}.dmg",
       verified: "hey-desktop.s3.amazonaws.com/"
