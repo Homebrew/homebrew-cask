@@ -1,4 +1,6 @@
 cask "eclipse-installer" do
+  arch = Hardware::CPU.intel? ? "mac64" : "aarch64"
+
   version "4.22.0,2021-12"
 
   if Hardware::CPU.intel?
@@ -6,8 +8,6 @@ cask "eclipse-installer" do
   else
     sha256 "e718be7f0fc2b0324013e72c4f47aadda9e34b019e980da847081e5f58c58f6d"
   end
-
-  arch = Hardware::CPU.intel? ? "mac64" : "aarch64"
 
   url "https://eclipse.org/downloads/download.php?file=/oomph/epp/#{version.csv.second}/R/eclipse-inst-#{arch}.tar.gz&r=1"
   name "Eclipse Installer"
