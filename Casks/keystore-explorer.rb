@@ -5,6 +5,7 @@ cask "keystore-explorer" do
   url "https://github.com/kaikramer/keystore-explorer/releases/download/v#{version}/kse-#{version.no_dots}.dmg",
       verified: "github.com/kaikramer/keystore-explorer/"
   name "KeyStore Explorer"
+  desc "GUI replacement for the Java command-line utilities keytool and jarsigner"
   homepage "https://keystore-explorer.org/"
 
   app "KeyStore Explorer.app"
