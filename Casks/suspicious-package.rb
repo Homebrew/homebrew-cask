@@ -1,8 +1,26 @@
 cask "suspicious-package" do
-  version "4.1,880"
-  sha256 :no_check
+  if MacOS.version <= :yosemite
+    version "3.2"
+    url "https://www.mothersruin.com/software/downloads/SuspiciousPackage-#{version}.dmg"
+    sha256 "770db2942eb5132f3da5b064ce4471fa6e7aba75e46d6b91d7b10f620f81cce0"
+  elsif MacOS.version <= :sierra
+    version "3.4.1"
+    url "https://www.mothersruin.com/software/downloads/SuspiciousPackage-#{version}.dmg"
+    sha256 "a9c4da2cfe4a8f116594eb327d8d8754d47037c62f41bd81bd4f427307efe032"
+  elsif MacOS.version <= :high_sierra
+    version "3.5.3"
+    url "https://www.mothersruin.com/software/downloads/SuspiciousPackage-#{version}.dmg"
+    sha256 "2177e278cb8046c2151e72bb066822b6ed4e5e5b7e601643a3423360e3531b1d"
+  elsif MacOS.version <= :mojave
+    version "4.0"
+    url "https://www.mothersruin.com/software/downloads/SuspiciousPackage-#{version}.dmg"
+    sha256 "b224c8e4625ff818cc17e38cf001b9097f77d70938709e14e4ba598ba74a66c4"
+  else
+    version "4.1,880"
+    url "https://www.mothersruin.com/software/downloads/SuspiciousPackage.dmg"
+    sha256 :no_check
+  end
 
-  url "https://www.mothersruin.com/software/downloads/SuspiciousPackage.dmg"
   name "Suspicious Package"
   desc "Application for inspecting installer packages"
   homepage "https://www.mothersruin.com/software/SuspiciousPackage/"
@@ -15,7 +33,7 @@ cask "suspicious-package" do
     end
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :yosemite"
 
   app "Suspicious Package.app"
   binary "#{appdir}/Suspicious Package.app/Contents/SharedSupport/spkg"
