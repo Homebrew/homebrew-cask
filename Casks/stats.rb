@@ -1,6 +1,6 @@
 cask "stats" do
-  version "2.7.1"
-  sha256 "60d97eb1552d565edb68739203726addf7fac47de3114a0d3d70b75a6fe99d3b"
+  version "2.7.2"
+  sha256 "e9a339f95ad5f5e1c279afb844a876054d12e7e3d74a5ef22bcd35d13f683c07"
 
   url "https://github.com/exelban/stats/releases/download/v#{version}/Stats.dmg"
   name "Stats"
