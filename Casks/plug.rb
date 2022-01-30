@@ -15,4 +15,10 @@ cask "plug" do
   end
 
   app "Plug.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.plug.Plug2",
+    "~/Library/Caches/com.plug.Plug2",
+    "~/Library/Preferences/com.plug.Plug2.plist",
+  ]
 end
