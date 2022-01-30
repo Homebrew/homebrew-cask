@@ -9,7 +9,7 @@ cask "garagesale" do
 
   livecheck do
     url "https://www.iwascoding.com/GarageSale/Downloads.html#VersionHistory"
-    regex(%r{href=.*?/GarageSale_(\d+(?:\.\d+)+)\.dmg}i)
+    regex(%r{href=.*?/GarageSale[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   depends_on macos: ">= :sierra"
