@@ -16,4 +16,11 @@ cask "voodoopad" do
   depends_on macos: ">= :sierra"
 
   app "VoodooPad.app"
+
+  zap trash: [
+    "~/Library/Application Support/VoodooPad",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.flyingmeat.voodoopad5.sfl2",
+    "~/Library/Caches/com.flyingmeat.VoodooPad5",
+    "~/Library/Preferences/com.flyingmeat.VoodooPad5.plist",
+  ]
 end
