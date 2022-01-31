@@ -1,5 +1,5 @@
 cask "around" do
-  version "0.57.12"
+  version "0.58.27"
   sha256 :no_check
 
   url "https://downloads.around.co/Around-mac-installer.zip"
