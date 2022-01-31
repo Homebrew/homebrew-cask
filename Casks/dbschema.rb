@@ -11,6 +11,8 @@ cask "dbschema" do
     url "https://www.dbschema.com/download.html"
     strategy :page_match do |page|
       v = page[/href=.*?DbSchema[._-]macos[._-]v?(\d+(?:_\d+)+)\.t/i, 1]
+      next if v.blank?
+      
       v.tr("_", ".")
     end
   end
