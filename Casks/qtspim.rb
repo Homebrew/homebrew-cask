@@ -10,7 +10,7 @@ cask "qtspim" do
 
   livecheck do
     url "https://sourceforge.net/projects/spimsimulator/files/"
-    regex(/QtSpim_(\d+\.\d+\.\d+)_mac\.(?:mpkg|pkg)(?:\.zip)?/i)
+    regex(/QtSpim[._-]v?(\d+\.\d+\.\d+)[._-]mac\.(?:mpkg|pkg)(?:\.zip)?/i)
   end
 
   pkg "QtSpim.mpkg/Contents/Packages/QtSpim.pkg"
