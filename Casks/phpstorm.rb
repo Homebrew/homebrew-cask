@@ -1,12 +1,12 @@
 cask "phpstorm" do
   arch = Hardware::CPU.intel? ? "" : "-aarch64"
 
-  version "2021.3.1,213.6461.83"
+  version "2021.3.2,213.6777.58"
 
   if Hardware::CPU.intel?
-    sha256 "389ae36007b66b75f8e0880981b77a72f33199e2feee39c8aaca6027b266d085"
+    sha256 "596a9d5fdc30d5fba65ddd482da90f9d555fed748b930587562022bfe7df4e14"
   else
-    sha256 "e6d5f13c596100445411e2b406093768b13004c593d5081b9628ef128f1c313c"
+    sha256 "ba15c3f843c85141a9adaec1c4611224a853bd98649148751e34ac304591a314"
   end
 
   url "https://download.jetbrains.com/webide/PhpStorm-#{version.csv.first}#{arch}.dmg"
