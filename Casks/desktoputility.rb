@@ -1,5 +1,5 @@
 cask "desktoputility" do
-  version "4.7.2"
+  version "5.0.1"
   sha256 :no_check
 
   url "https://sweetpproductions.com/products/desktoputility/DesktopUtility.dmg"
