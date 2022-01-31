@@ -15,4 +15,9 @@ cask "desktoputility" do
   depends_on macos: ">= :el_capitan"
 
   app "DesktopUtility.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.sweetpproductions.DesktopUtility",
+    "~/Library/Containers/com.sweetpproductions.DesktopUtility",
+  ]
 end
