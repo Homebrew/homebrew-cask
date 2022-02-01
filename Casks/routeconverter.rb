@@ -14,5 +14,5 @@ cask "routeconverter" do
 
   auto_updates true
 
-  app "RouteConverterMac.app"
+  app "RouteConverter.app"
 end
