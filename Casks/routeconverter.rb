@@ -4,8 +4,13 @@ cask "routeconverter" do
 
   url "https://static.routeconverter.com/download/RouteConverterMac.app.zip"
   name "RouteConverter"
-  desc "A free, user friendly GPS tool to display, edit, enrich and convert routes, tracks and waypoints."
+  desc "GPS tool to display, edit, enrich and convert routes, tracks and waypoints"
   homepage "https://www.routeconverter.com/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   auto_updates true
 
