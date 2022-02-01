@@ -16,4 +16,11 @@ cask "aircall" do
   depends_on macos: ">= :sierra"
 
   app "Aircall.app"
+
+  zap trash: [
+    "~/Library/Application Support/Aircall",
+    "~/Library/Caches/io.aircall.phone",
+    "~/Library/Caches/io.aircall.phone.ShipIt",
+    "~/Library/Preferences/io.aircall.phone.plist",
+  ]
 end
