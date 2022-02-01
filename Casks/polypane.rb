@@ -7,8 +7,12 @@ cask "polypane" do
   name "Polypane"
   desc "Browser for ambitious developers"
   homepage "https://polypane.app/"
-
   app "Polypane.app"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   zap trash: [
     "~/Library/Application Support/Polypane",
