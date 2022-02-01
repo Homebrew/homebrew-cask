@@ -1,14 +1,20 @@
 cask "routeconverter" do
-  version "2.28.116"
-  sha256 "4fef088ac9a83f3f938b7ec0f967f504385c495715173f3e1ca7336c37661944"
+  version "2.30.324"
+  sha256 :no_check
 
-  url "https://static.routeconverter.com/download/previous-releases/#{version.major_minor}/RouteConverterMacOpenSource.app.zip"
-  appcast "https://static.routeconverter.com/download/previous-releases/",
-          must_contain: version.major_minor
+  url "https://static.routeconverter.com/download/RouteConverterMac.app.zip"
   name "RouteConverter"
+  desc "GPS tool to display, edit, enrich and convert routes, tracks and waypoints"
   homepage "https://www.routeconverter.com/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist do |versions|
+      versions.values.map(&:short_version).compact.first
+    end
+  end
 
   auto_updates true
 
-  app "RouteConverterMacOpenSource.app"
+  app "RouteConverter.app"
 end
