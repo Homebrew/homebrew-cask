@@ -9,4 +9,10 @@ cask "flipper" do
   homepage "https://fbflipper.com/"
 
   app "Flipper.app"
+
+  zap trash: [
+    "~/.flipper",
+    "~/Library/Application Support/Flipper",
+    "~/Library/Preferences/rs.flipper-launcher",
+  ]
 end
