@@ -10,4 +10,9 @@ cask "praat" do
 
   app "Praat.app"
   binary "#{appdir}/Praat.app/Contents/MacOS/Praat", target: "praat"
+
+  zap trash: [
+    "~/Library/Preferences/Praat Prefs",
+    "~/Library/Saved Application State/org.praat.Praat.savedState",
+  ]
 end
