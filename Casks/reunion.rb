@@ -18,4 +18,14 @@ cask "reunion" do
   end
 
   app "Reunion #{version.major}.app"
+
+  zap trash: [
+    "~/Documents/Reunion Files",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.leisterpro.reunion#{version.major}.sfl*",
+    "~/Library/Application Support/Reunion",
+    "~/Library/Caches/com.leisterpro.reunion#{version.major}",
+    "~/Library/Preferences/com.leisterpro.reunion.version.plist",
+    "~/Library/Preferences/com.leisterpro.reunion#{version.major}.plist",
+    "~/Library/Preferences/Reunion Preferences",
+  ]
 end
