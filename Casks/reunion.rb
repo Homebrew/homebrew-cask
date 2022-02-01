@@ -21,11 +21,11 @@ cask "reunion" do
 
   zap trash: [
     "~/Documents/Reunion Files",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.leisterpro.reunion#{version.major}.sfl*",
     "~/Library/Application Support/Reunion",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.leisterpro.reunion13.sfl2",
-    "~/Library/Caches/com.leisterpro.reunion13",
-    "~/Library/Preferences/Reunion Preferences",
+    "~/Library/Caches/com.leisterpro.reunion#{version.major}",
     "~/Library/Preferences/com.leisterpro.reunion.version.plist",
-    "~/Library/Preferences/com.leisterpro.reunion13.plist",
+    "~/Library/Preferences/com.leisterpro.reunion#{version.major}.plist",
+    "~/Library/Preferences/Reunion Preferences",
   ]
 end
