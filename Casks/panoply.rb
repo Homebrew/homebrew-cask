@@ -14,6 +14,12 @@ cask "panoply" do
 
   app "Panoply.app"
 
+  zap trash: [
+    "~/Library/Caches/gov.nasa.giss.panoply",
+    "~/Library/Preferences/gov.nasa.giss.Panoply.prefs.xml",
+    "~/Library/Preferences/gov.nasa.giss.panoply.plist",
+  ]
+
   caveats do
     depends_on_java "9+"
   end
