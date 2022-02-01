@@ -2,7 +2,8 @@ cask "sdm" do
   version "15.45.0,D6A5C8C512E194970DEC7F47B7C4CD7B6FC31676"
   sha256 "45fc1b07ca923dee4184579badee901c6b50dead615954a4c66881720c8f11aa"
 
-  url "https://sdm-releases-production.s3.amazonaws.com/builds/sdm-gui/#{version.csv.first}/darwin/#{version.csv.second}/SDM-#{version.csv.first}.zip"
+  url "https://sdm-releases-production.s3.amazonaws.com/builds/sdm-gui/#{version.csv.first}/darwin/#{version.csv.second}/SDM-#{version.csv.first}.zip",
+      verified: "sdm-releases-production.s3.amazonaws.com/builds/sdm-gui/"
   name "sdm"
   desc "Strongdm client"
   homepage "https://www.strongdm.com/"
