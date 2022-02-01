@@ -11,10 +11,10 @@ cask "pynsource" do
   livecheck do
     url :url
     strategy :git
-    regex(/^version-(\d+(?:\.\d+)*)$/)
+    regex(/^version[._-]v?(\d+(?:\.\d+)+)$/)
   end
 
-  app "pynsource-macos-version-#{version}/Pynsource.app"
+  app "Pynsource.app"
 
   zap trash: [
     "~/Library/Application Support/PyNsource",
