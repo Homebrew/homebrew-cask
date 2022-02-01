@@ -1,9 +1,9 @@
-cask "streamlabs-obs" do
+cask "streamlabs-desktop" do
   version "1.7.0"
   sha256 "d9b0c84edfb32c851dfcec1cd58e9f431fcc40adcb241041f819bec2cb18d015"
 
   url "https://slobs-cdn.streamlabs.com/Streamlabs+Desktop-#{version}.dmg"
-  name "Streamlabs OBS"
+  name "Streamlabs Desktop"
   desc "All-in-one live streaming software"
   homepage "https://streamlabs.com/"
 
@@ -15,7 +15,7 @@ cask "streamlabs-obs" do
   auto_updates true
   depends_on macos: ">= :mojave"
 
-  app "Streamlabs OBS.app"
+  app "Streamlabs Desktop.app"
 
   zap trash: [
     "~/Library/Application Support/slobs-client",
