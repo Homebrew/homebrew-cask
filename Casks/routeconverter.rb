@@ -9,7 +9,9 @@ cask "routeconverter" do
 
   livecheck do
     url :url
-    strategy :extract_plist
+    strategy :extract_plist do |versions|
+      versions.values.map(&:short_version).compact.first
+    end
   end
 
   auto_updates true
