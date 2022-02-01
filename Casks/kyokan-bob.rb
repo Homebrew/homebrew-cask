@@ -1,9 +1,8 @@
 cask "kyokan-bob" do
-  version "0.8.0"
-  sha256 "66a49484070979a3215bf164a47a33d1035795ad3d513a598cbdaa7896c7bf81"
+  version "0.9.0"
+  sha256 "fb097ae8405705de007fe86def051b259de38c4b969ffff2f3cd081b80b95eeb"
 
-  url "https://github.com/kyokan/bob-wallet/releases/download/#{version}/Bob-#{version}.dmg",
-      verified: "github.com/kyokan/bob-wallet"
+  url "https://github.com/kyokan/bob-wallet/releases/download/v0.9.0/Bob-0.9.0.dmg"
   name "Bob Wallet"
   desc "Handshake wallet GUI for name auction and DNS record management"
   homepage "https://bobwallet.io/"
