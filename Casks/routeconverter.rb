@@ -17,4 +17,6 @@ cask "routeconverter" do
   auto_updates true
 
   app "RouteConverter.app"
+
+  zap trash: "~/.routeconverter"
 end
