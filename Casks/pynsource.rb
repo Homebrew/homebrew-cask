@@ -1,6 +1,6 @@
 cask "pynsource" do
-  version "1.81"
-  sha256 "11fc81919a68fa8cd4914fe164e5eee624b08597201fa3d920e5379a78a4708a"
+  version "1.83"
+  sha256 "a3b8812b8b0234627989b158b4eaa428682e61fbbcf0774c340a6617e76a47a1"
 
   url "https://github.com/abulka/pynsource/releases/download/version-#{version}/pynsource-macos-version-#{version}.zip",
       verified: "github.com/abulka/pynsource/"
