@@ -27,4 +27,12 @@ cask "airtool" do
             launchctl:  "com.intuitibits.airtool#{version.major}.airtool-bpf",
             login_item: "Airtool",
             delete:     "/Library/Application Support/Airtool #{version.major}"
+
+  zap trash: [
+    "~/Library/Application Support/Airtool #{version.major}",
+    "~/Library/Caches/com.apple.helpd/Generated/com.intuitibits.airtool#{version.major}.help*",
+    "~/Library/Caches/com.intuitibits.airtool#{version.major}",
+    "~/Library/HTTPStorages/com.intuitibits.airtool#{version.major}.binarycookies",
+    "~/Library/Preferences/com.intuitibits.airtool#{version.major}.plist",
+  ]
 end
