@@ -9,10 +9,16 @@ cask "panoply" do
 
   livecheck do
     url "https://www.giss.nasa.gov/tools/panoply/download/"
-    regex(/href=.*?PanoplyMacOS-(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/href=.*?PanoplyMacOS[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "Panoply.app"
+
+  zap trash: [
+    "~/Library/Caches/gov.nasa.giss.panoply",
+    "~/Library/Preferences/gov.nasa.giss.panoply.plist",
+    "~/Library/Preferences/gov.nasa.giss.Panoply.prefs.xml",
+  ]
 
   caveats do
     depends_on_java "9+"
