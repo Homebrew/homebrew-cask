@@ -21,9 +21,9 @@ cask "avast-security" do
     sudo:         true,
   },
             launchctl: [
-              "com.avast.hub",
               "com.avast.hub.schedule",
               "com.avast.hub.xpc",
+              "com.avast.hub",
             ],
             pkgutil:   [
               "com.avast.AAFM",
@@ -31,7 +31,7 @@ cask "avast-security" do
             ]
 
   zap trash: [
-    "~/Library/Preferences/com.avast.avast!.plist",
     "~/Library/Cookies/com.avast.AAFM.binarycookies",
+    "~/Library/Preferences/com.avast.avast!.plist",
   ]
 end
