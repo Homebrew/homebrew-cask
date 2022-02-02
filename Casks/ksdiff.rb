@@ -1,8 +1,8 @@
 cask "ksdiff" do
-  version "2.4.2,126,sep-7-2021"
-  sha256 "11a4e09eab56fed96cb1e1fb5fbec350a726ee8dd07a7d0d1d992dd4e44b6d68"
+  version "3.2,144"
+  sha256 :no_check
 
-  url "https://updates.kaleidoscope.app/v2/prod/ksdiff-#{version.csv.first}-#{version.csv.second}-#{version.csv.third}.zip"
+  url "https://updates.kaleidoscope.app/v3/prod/ksdiff-3.2-144.zip"
   name "ksdiff"
   desc "Command-line tool for the App Store version of Kaleidoscope"
   homepage "https://kaleidoscope.app/ksdiff2"
