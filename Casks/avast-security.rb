@@ -2,8 +2,10 @@ cask "avast-security" do
   version :latest
   sha256 :no_check
 
-  url "https://bits.avcdn.net/productfamily_ANTIVIRUS/insttype_FREE/platform_MAC/installertype_ONLINE/build_RELEASE"
+  url "https://bits.avcdn.net/productfamily_ANTIVIRUS/insttype_FREE/platform_MAC/installertype_ONLINE/build_RELEASE",
+      verified: "bits.avcdn.net/productfamily_ANTIVIRUS/insttype_FREE/platform_MAC/installertype_ONLINE/build_RELEASE"
   name "Avast Security"
+  desc "Antivirus software"
   homepage "https://www.avast.com/"
 
   pkg "Install Avast Security.pkg"
