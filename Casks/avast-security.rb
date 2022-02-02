@@ -1,12 +1,12 @@
 cask "avast-security" do
-  version "4.0,2.0"
+  version :latest
   sha256 :no_check
 
-  url "http://download.ff.avast.com/mac/avast_security_online.dmg"
+  url "https://bits.avcdn.net/productfamily_ANTIVIRUS/insttype_FREE/platform_MAC/installertype_ONLINE/build_RELEASE"
   name "Avast Security"
   homepage "https://www.avast.com/"
 
-  pkg "Avast Security.pkg"
+  pkg "Install Avast Security.pkg"
 
   uninstall script:    {
     executable:   "/Applications/Avast.app/Contents/Backend/hub/uninstall.sh",
