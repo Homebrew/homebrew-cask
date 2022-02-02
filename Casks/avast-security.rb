@@ -1,5 +1,5 @@
 cask "avast-security" do
-  version :latest
+  version "15.0"
   sha256 :no_check
 
   url "https://bits.avcdn.net/productfamily_ANTIVIRUS/insttype_FREE/platform_MAC/installertype_ONLINE/build_RELEASE",
@@ -7,6 +7,11 @@ cask "avast-security" do
   name "Avast Security"
   desc "Antivirus software"
   homepage "https://www.avast.com/"
+
+  livecheck do
+    url "http://mac-av.u.avcdn.net/mac-av/10_10/AAFM/changelog.html"
+    regex(%r{<h2>(\d+(?:\.\d+)+).*</h2>}i)
+  end
 
   pkg "Install Avast Security.pkg"
 
