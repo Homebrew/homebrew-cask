@@ -26,6 +26,13 @@ cask "boxcryptor" do
 
   app "Boxcryptor.app"
 
+  uninstall delete: [
+    "/Library/LaunchDaemons/com.boxcryptor.BCFS.Mounter.Helper.plist",
+    "/Library/LaunchDaemons/com.boxcryptor.osx.PrivilegedHelper.plist",
+    "/Library/PrivilegedHelperTools/com.boxcryptor.BCFS.Mounter.Helper",
+    "/Library/PrivilegedHelperTools/com.boxcryptor.osx.PrivilegedHelper",
+  ]
+
   zap trash: [
     "~/Library/Application Scripts/com.boxcryptor.osx.Rednif",
     "~/Library/Application Support/Boxcryptor",
@@ -34,9 +41,5 @@ cask "boxcryptor" do
     "~/Library/Containers/com.boxcryptor.osx.Rednif",
     "~/Library/Logs/Boxcryptor",
     "~/Library/Preferences/com.boxcryptor.osx.plist",
-    "/Library/LaunchDaemons/com.boxcryptor.BCFS.Mounter.Helper.plist",
-    "/Library/LaunchDaemons/com.boxcryptor.osx.PrivilegedHelper.plist",
-    "/Library/PrivilegedHelperTools/com.boxcryptor.BCFS.Mounter.Helper",
-    "/Library/PrivilegedHelperTools/com.boxcryptor.osx.PrivilegedHelper",
   ]
 end
