@@ -7,7 +7,7 @@ cask "teamviewer" do
       strategy :sparkle
     end
   else
-    version "15.26.4"
+    version "15.26.5"
 
     livecheck do
       url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=10.15.1&type=1&channel=1"
@@ -27,28 +27,37 @@ cask "teamviewer" do
 
   if MacOS.version <= :high_sierra
     pkg "Install TeamViewer.pkg"
+  elsif MacOS.version == :catalina
+    # This Cask should be installed and uninstalled manually on Catalina.
+    # See https://github.com/Homebrew/homebrew-cask/issues/76829
+    installer manual: "Install TeamViewer.app/Contents/Resources/Install TeamViewer.pkg"
   else
     pkg "Install TeamViewer.app/Contents/Resources/Install TeamViewer.pkg"
   end
 
-  uninstall delete:    [
-    "#{staged_path}/#{token}", # This Cask should be uninstalled manually.
-    "/Applications/TeamViewer.app",
-    "/Library/Preferences/com.teamviewer.teamviewer.preferences.plist",
-  ],
-            pkgutil:   [
-              "com.teamviewer.remoteaudiodriver",
-              "com.teamviewer.teamviewer.*",
-            ],
-            launchctl: [
-              "com.teamviewer.desktop",
-              "com.teamviewer.Helper",
-              "com.teamviewer.service",
-              "com.teamviewer.teamviewer_desktop",
-              "com.teamviewer.teamviewer_service",
-              "com.teamviewer.teamviewer",
-            ],
-            quit:      "com.teamviewer.TeamViewer"
+  if MacOS.version == :catalina
+    # This Cask should be installed and uninstalled manually on Catalina.
+    # See https://github.com/Homebrew/homebrew-cask/issues/76829
+    uninstall delete: "#{staged_path}/#{token}"
+  else
+    uninstall delete:    [
+      "/Applications/TeamViewer.app",
+      "/Library/Preferences/com.teamviewer.teamviewer.preferences.plist",
+    ],
+              pkgutil:   [
+                "com.teamviewer.remoteaudiodriver",
+                "com.teamviewer.teamviewer.*",
+              ],
+              launchctl: [
+                "com.teamviewer.desktop",
+                "com.teamviewer.Helper",
+                "com.teamviewer.service",
+                "com.teamviewer.teamviewer_desktop",
+                "com.teamviewer.teamviewer_service",
+                "com.teamviewer.teamviewer",
+              ],
+              quit:      "com.teamviewer.TeamViewer"
+  end
 
   zap trash: [
     "~/Library/Application Support/TeamViewer",
