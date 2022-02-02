@@ -9,7 +9,7 @@ cask "polypane" do
     sha256 "f6626a6777cdf0e0e7e34f30521ad54fadd6393f73fd3d04fe971ba3d8103f18"
   end
 
-  url "https://github.com/firstversionist/polypane/releases/download/v#{version}/Polypane-v#{version}#{arch}.dmg",
+  url "https://github.com/firstversionist/polypane/releases/download/v#{version}/Polypane-#{version}#{arch}.dmg",
       verified: "github.com/firstversionist/polypane/"
   name "Polypane"
   desc "Browser for ambitious developers"
