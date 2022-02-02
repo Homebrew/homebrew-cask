@@ -1,6 +1,6 @@
 cask "mixxx" do
-  version "2.3.1"
-  sha256 "27e2420e9527bf8748dce92bee1592e53d224ce04fa5095c7e9ce2ef22abdf1d"
+  version "2.3.2"
+  sha256 "51adbe24755273cf8423253a2520ff994483e500836c357c90869a45a6c74e0b"
 
   url "https://downloads.mixxx.org/releases/#{version}/mixxx-#{version}-macosintel.dmg"
   name "Mixxx"
