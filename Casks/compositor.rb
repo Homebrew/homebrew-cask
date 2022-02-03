@@ -4,6 +4,7 @@ cask "compositor" do
 
   url "https://compositorapp.com/updates/Compositor_#{version}.zip"
   name "Compositor"
+  desc "WYSIWYG LaTeX editor"
   homepage "https://compositorapp.com/"
 
   livecheck do
