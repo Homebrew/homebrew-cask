@@ -1,5 +1,5 @@
 cask "devkinsta" do
-  version "2.3.0.2184"
+  version "2.4.0.2954"
   sha256 :no_check
 
   url "https://devkinsta-updates.s3.amazonaws.com/DevKinsta.dmg",
