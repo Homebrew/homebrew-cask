@@ -8,4 +8,10 @@ cask "ivolume" do
   homepage "https://www.mani.de/en/ivolume/"
 
   app "iVolume.app"
+
+  zap trash: [
+    "~/Library/Application Support/de.ivolume.mac",
+    "~/Library/Caches/de.ivolume.mac",
+    "~/Library/Preferences/de.ivolume.mac.plist",
+  ]
 end
