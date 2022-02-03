@@ -1,6 +1,20 @@
 cask "microsoft-excel" do
-  version "16.57.22011101"
-  sha256 "18fe5ff159ac09512926ab9a187f4cbe3d9a115a8e4591cb4efaec8f4ac4a181"
+  if MacOS.version <= :el_capitan
+    version "16.16.20101200"
+    sha256 "bdd23b696d54e5ffeb40f30a9bd7f968d2936380ab78a6eaf29d05f5fc8eb78e"
+  elsif MacOS.version <= :sierra
+    version "16.30.19101301"
+    sha256 "9886b661067f4a99de544d140980fb0f8ef2f4871baa519024781fb814a02fe5"
+  elsif MacOS.version <= :high_sierra
+    version "16.43.20110804"
+    sha256 "2711a1b8864f7474458086b4b0a56673fee0097d2049f276788c50e004c47d72"
+  elsif MacOS.version <= :mojave
+    version "16.54.21101001"
+    sha256 "e09fe9f49a36b37af3745673a385be4de9ae8ec774965fd1753f8479a775fc54"
+  else
+    version "16.57.22011101"
+    sha256 "18fe5ff159ac09512926ab9a187f4cbe3d9a115a8e4591cb4efaec8f4ac4a181"
+  end
 
   url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Excel_#{version}_Installer.pkg",
       verified: "officecdnmac.microsoft.com/"
@@ -16,7 +30,7 @@ cask "microsoft-excel" do
   auto_updates true
   conflicts_with cask: "microsoft-office"
   depends_on cask: "microsoft-auto-update"
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :yosemite"
 
   pkg "Microsoft_Excel_#{version}_Installer.pkg",
       choices: [

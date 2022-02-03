@@ -1,6 +1,6 @@
 cask "kaleidoscope" do
-  version "3.1.3,2027"
-  sha256 "21d46bb5cb251cab1e4822ed1b12604bec91ea4653e50b8243dda9c38a02badc"
+  version "3.2,2039"
+  sha256 "fb38aa620c03c6f269b10c801de3545fbd055a3a6f13fb3b2386c5ef247b24df"
 
   url "https://updates.kaleidoscope.app/v#{version.major}/prod/Kaleidoscope-#{version.csv.first}-#{version.csv.second}.app.zip"
   name "Kaleidoscope"
@@ -9,7 +9,7 @@ cask "kaleidoscope" do
 
   livecheck do
     url "https://updates.kaleidoscope.app/v#{version.major}/prod/appcast"
-    regex(/Kaleidoscope-(\d+(?:\.\d+)+)-(\d+)\.app\.zip/i)
+    regex(/Kaleidoscope[._-]v?(\d+(?:\.\d+)+)[._-](\d+)\.app\.zip/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end

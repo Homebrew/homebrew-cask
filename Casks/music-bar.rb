@@ -1,6 +1,6 @@
 cask "music-bar" do
-  version "1.5"
-  sha256 "9d9d130a29a83040b112da7dd798409d41aa3fa425469f9c76ea637bc914fd9d"
+  version "1.6"
+  sha256 "70a76a9cce1a2f2515878eea9789faaa2172c5131b4ede854622fd2f2316edd3"
 
   url "https://github.com/musa11971/Music-Bar/releases/download/v#{version}/Music.Bar.zip",
       verified: "github.com/musa11971/Music-Bar/"

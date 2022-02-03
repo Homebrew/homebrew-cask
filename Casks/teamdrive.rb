@@ -1,6 +1,6 @@
 cask "teamdrive" do
-  version "4.7.2.3014"
-  sha256 "899960b99c3fd1e2224a6d0ad0299cde1e0aae55e6408da3a59f5de4c62de81d"
+  version "4.7.3.3113"
+  sha256 "fa5197a93056534920a81a4f17e1b181eb1d5ab88701fcd6c7517ca3f4b36a12"
 
   url "https://download.teamdrive.net/#{version}/TMDR/mac/Install-TeamDrive-#{version}_TMDR.dmg",
       verified: "teamdrive.net/"
@@ -10,8 +10,10 @@ cask "teamdrive" do
 
   livecheck do
     url "https://teamdrive.com/en/downloads/"
-    regex(/Install[._-]TeamDrive[._-](\d+(?:\.\d+)*)[._-]TMDR\.dmg/i)
+    regex(/Install[._-]TeamDrive[._-]v?(\d+(?:\.\d+)*)[._-]TMDR\.dmg/i)
   end
+
+  depends_on macos: ">= :mojave"
 
   installer script: {
     executable: "Install-TeamDrive-#{version}_TMDR.app/Contents/MacOS/osx-x86_64",
@@ -32,6 +34,9 @@ cask "teamdrive" do
             ]
 
   zap trash: [
+    "/Users/Shared/teamdrive.fsfilter",
+    "/Users/Shared/teamdrive.ini",
+    "~/.teamdrive",
     "~/Library/Application Scripts/com.teamdrive.teamdrive3.FinderExt",
     "~/Library/Application Support/teamdrive",
     "~/Library/Caches/teamdrive",
@@ -40,8 +45,5 @@ cask "teamdrive" do
     "~/Library/Preferences/com.teamdrive.TeamDrive.plist",
     "~/Library/Preferences/com.teamdrive.teamdrive3.plist",
     "~/Library/Saved Application State/com.teamdrive.teamdrive3.savedState",
-    "/Users/Shared/teamdrive.fsfilter",
-    "/Users/Shared/teamdrive.ini",
-    "~/.teamdrive",
   ]
 end

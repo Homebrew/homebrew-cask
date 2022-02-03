@@ -1,6 +1,6 @@
 cask "bilimini" do
-  version "1.5.6"
-  sha256 "87ef9f9c4fc48aa4fcefa9057a7b3bfc321330a61b41cca115681b97c211527f"
+  version "1.5.7"
+  sha256 "d6c92362253c0d41cabd3440b2e72e25bb0da157d2bf87c7ef989e4ff28a1563"
 
   url "https://github.com/chitosai/bilimini/releases/download/v#{version}/bilimini-#{version}-mac.zip"
   name "bilimini"
