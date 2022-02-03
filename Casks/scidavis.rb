@@ -4,12 +4,13 @@ cask "scidavis" do
 
   url "https://downloads.sourceforge.net/scidavis/scidavis-#{version}-mac-dist.dmg",
       verified: "downloads.sourceforge.net/scidavis/"
-  name "scidavis"
+  name "SciDAVis"
+  desc "Application for scientific data analysis and visualization"
   homepage "https://scidavis.sourceforge.io/"
 
   livecheck do
     url "https://sourceforge.net/projects/scidavis/rss.xml"
-    regex(%r{/scidavis-(\d+(?:\.\d+)*)-mac-dist\.dmg}i)
+    regex(%r{/scidavis[._-]v?(\d+(?:\.\d+)+)[._-]mac[._-]dist\.dmg}i)
   end
 
   depends_on macos: ">= :yosemite"
