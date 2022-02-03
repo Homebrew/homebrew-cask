@@ -22,6 +22,7 @@ cask "kitty" do
   end
 
   zap trash: [
+    "~/.config/kitty",
     "~/Library/Caches/kitty",
     "~/Library/Preferences/kitty",
     "~/Library/Preferences/net.kovidgoyal.kitty.plist",
