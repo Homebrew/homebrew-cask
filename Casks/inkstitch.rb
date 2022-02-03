@@ -29,5 +29,7 @@ cask "inkstitch" do
     pkg "inkstitch-v#{version}-osx.pkg"
   end
 
-  uninstall trash: "~/Library/Application\ Support/org.inkscape.Inkscape/config/inkscape/extensions/inkstitch"
+  preflight do
+    system_command "/bin/mkdir", args: ["-p", "#{ENV["HOME"]}/Library/Application Support/org.inkscape.Inkscape/config/inkscape/extensions/"]
+  end
 end
