@@ -27,5 +27,6 @@ cask "runelite" do
     "~/jagex_cl_oldschool_LIVE.dat",
     "~/jagexcache/oldschool",
     "~/random.dat",
+    "~/.runelite",
   ]
 end
