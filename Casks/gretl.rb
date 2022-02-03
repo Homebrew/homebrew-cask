@@ -10,6 +10,7 @@ cask "gretl" do
 
   livecheck do
     url "http://gretl.sourceforge.net/osx.html"
+    strategy :page_match
     regex(/gretl[._-]v?(\d+\w)[._-]macos[._-]intel\.pkg/i)
   end
 
