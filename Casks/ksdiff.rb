@@ -1,31 +1,31 @@
 cask "ksdiff" do
-  version "2.4.2,126,sep-7-2021"
-  sha256 "11a4e09eab56fed96cb1e1fb5fbec350a726ee8dd07a7d0d1d992dd4e44b6d68"
+  version "3.2,144"
+  sha256 "449e7b607f848ebdc39bf8b3f557ffa4e8c6db4a2ec607dad92a790080804f88"
 
-  url "https://updates.kaleidoscope.app/v2/prod/ksdiff-#{version.csv.first}-#{version.csv.second}-#{version.csv.third}.zip"
+  url "https://updates.kaleidoscope.app/v#{version.major}/prod/ksdiff-#{version.csv.first}-#{version.csv.second}.zip"
   name "ksdiff"
   desc "Command-line tool for the App Store version of Kaleidoscope"
-  homepage "https://kaleidoscope.app/ksdiff2"
+  homepage "https://kaleidoscope.app/ksdiff#{version.major}"
 
   livecheck do
-    url :homepage
-    regex(%r{/ksdiff-(\d+(?:\.\d+)*)-(\d+)-(\w+(?:-\d+)*)\.zip}i)
-    strategy :page_match do |page, regex|
-      js_file = page[%r{src=["']?(/ksdiff\d*\.\w+\.js)["' >]}i, 1]
-      next [] if js_file.blank?
+    url "https://kaleidoscope.app/download/latest/ksdiff"
+    strategy :header_match do |headers|
+      match = headers["location"].match(%r{/ksdiff[._-]v?(\d+(?:\.\d+)+)[._-](\d+)\.zip}i)
+      next if match.blank?
 
-      js_file_data = Homebrew::Livecheck::Strategy.page_content("https://kaleidoscope.app#{js_file}")
-      next [] if js_file_data[:content].blank?
-
-      js_file_data[:content].scan(regex).map { |match| "#{match[0]},#{match[1]},#{match[2]}" }
+      "#{match[1]},#{match[2]}"
     end
   end
 
-  conflicts_with cask: "kaleidoscope"
+  conflicts_with cask: [
+    "kaleidoscope",
+    "homebrew/cask-versions/kaleidoscope2",
+    "homebrew/cask-versions/ksdiff2",
+  ]
 
   pkg "ksdiff-#{version.csv.first}/Install ksdiff.pkg"
 
-  uninstall pkgutil: "com.blackpixel.kaleidoscope.ksdiff.installer.pkg"
+  uninstall pkgutil: "app.kaleidoscope.v#{version.major}.ksdiff.installer.pkg"
 
   caveats <<~EOS
     The #{token} Cask is not needed when installing Kaleidoscope via Cask. It
