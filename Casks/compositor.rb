@@ -12,7 +12,7 @@ cask "compositor" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :el_capitan"
 
   app "Compositor.app"
 
