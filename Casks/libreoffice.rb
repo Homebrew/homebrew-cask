@@ -2,12 +2,12 @@ cask "libreoffice" do
   arch = Hardware::CPU.intel? ? "x86-64" : "aarch64"
   folder = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
-  version "7.2.5"
+  version "7.3.0"
 
   if Hardware::CPU.intel?
-    sha256 "0b7ef18ed08341ac6c15339fe9a161ad17f6b469009d987cfc7d50c628d12a4e"
+    sha256 "6d71ba832e2c01df4a90b702be38f48bece7f0d043cf3e17366ac8a23e9251bb"
   else
-    sha256 "bdbcb9a98211f866ca089d440aebcd1d313aa99e8ab4104aae4e65ea3cee74ca"
+    sha256 "4f09478d32467d3735ab416ed75e79355bec0bed66db729d90b8d5794bcd22d2"
   end
 
   url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/#{folder}/LibreOffice_#{version}_MacOS_#{arch}.dmg",
@@ -22,7 +22,7 @@ cask "libreoffice" do
   end
 
   conflicts_with cask: "homebrew/cask-versions/libreoffice-still"
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :sierra"
 
   app "LibreOffice.app"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/gengal"
