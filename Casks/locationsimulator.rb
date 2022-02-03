@@ -4,7 +4,7 @@ cask "locationsimulator" do
 
   url "https://github.com/Schlaubischlump/LocationSimulator/releases/download/v#{version}/LocationSimulator.app.zip"
   name "LocationSimulator"
-  desc "Application to spoof your iOS / iPadOS or iPhoneSimulator device location."
+  desc "Application to spoof your iOS / iPadOS or iPhoneSimulator device location"
   homepage "https://github.com/Schlaubischlump/LocationSimulator"
 
   depends_on macos: ">= :catalina"
