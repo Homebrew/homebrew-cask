@@ -11,7 +11,7 @@ cask "classroom-mode-for-minecraft" do
   livecheck do
     url "https://aka.ms/meecmmacos"
     strategy :header_match do |headers|
-      headers["location"][/Classroom[._-]Mode[._-]v?(\d+(?:_\d+)+)\.dmg/i, 1].tr("_", ".")
+      headers["location"][/Classroom[._-]Mode[._-]v?(\d+(?:_v?\d+)+)\.dmg/i, 1].tr("_", ".")
     end
   end
 
