@@ -9,8 +9,7 @@ cask "mixxx" do
 
   livecheck do
     url "https://www.mixxx.org/download/"
-    strategy :page_match
-    regex(%r{href=.*?/mixxx[-_.](\d+(?:\.\d+)*)[-_.]macosintel\.dmg}i)
+    regex(%r{href=.*?/mixxx[-_.]v?(\d+(?:\.\d+)+)[-_.]macosintel\.dmg}i)
   end
 
   app "Mixxx.app"
