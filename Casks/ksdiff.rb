@@ -5,12 +5,12 @@ cask "ksdiff" do
   url "https://updates.kaleidoscope.app/v#{version.major}/prod/ksdiff-#{version.csv.first}-#{version.csv.second}.zip"
   name "ksdiff"
   desc "Command-line tool for the App Store version of Kaleidoscope"
-  homepage "https://kaleidoscope.app/ksdiff3"
+  homepage "https://kaleidoscope.app/ksdiff#{version.major}"
 
   livecheck do
     url "https://kaleidoscope.app/download/latest/ksdiff"
     strategy :header_match do |headers|
-      match = headers["location"].match(%r{/ksdiff-(\d+(?:\.\d+)+)-(\d+)\.zip}i)
+      match = headers["location"].match(%r{/ksdiff[._-]v?(\d+(?:\.\d+)+)[._-](\d+)\.zip}i)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
