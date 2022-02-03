@@ -29,5 +29,5 @@ cask "inkstitch" do
     pkg "inkstitch-v#{version}-osx.pkg"
   end
 
-  uninstall pkgutil: "org.inkstitch.installer"
+  uninstall trash: "~/Library/Application\ Support/org.inkscape.Inkscape/config/inkscape/extensions/inkstitch"
 end
