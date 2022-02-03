@@ -1,6 +1,6 @@
 cask "advancedrestclient" do
-  version "17.0.6"
-  sha256 "fc69cf62376393f178d287d4bbdf2c58c4c1a468b9a451d5b584dfd1ecc91c90"
+  version "17.0.7"
+  sha256 "efd5eb3f6d3ce4ad09b764284187fcb3c3907d0ea2e06a1f9c84fc6c3f108953"
 
   url "https://github.com/advanced-rest-client/arc-electron/releases/download/v#{version}/arc-macos.dmg"
   name "Advanced REST Client"
