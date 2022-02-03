@@ -17,7 +17,11 @@ cask "ksdiff" do
     end
   end
 
-  conflicts_with cask: "kaleidoscope"
+  conflicts_with cask: [
+    "kaleidoscope",
+    "homebrew/cask-versions/kaleidoscope2",
+    "homebrew/cask-versions/ksdiff2",
+  ]
 
   pkg "ksdiff-#{version.csv.first}/Install ksdiff.pkg"
 
