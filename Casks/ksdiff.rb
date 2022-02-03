@@ -21,7 +21,7 @@ cask "ksdiff" do
 
   pkg "ksdiff-#{version.csv.first}/Install ksdiff.pkg"
 
-  uninstall pkgutil: "com.blackpixel.kaleidoscope.ksdiff.installer.pkg"
+  uninstall pkgutil: "app.kaleidoscope.v#{version.major}.ksdiff.installer.pkg"
 
   caveats <<~EOS
     The #{token} Cask is not needed when installing Kaleidoscope via Cask. It
