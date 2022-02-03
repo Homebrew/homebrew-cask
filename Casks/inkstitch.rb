@@ -32,7 +32,7 @@ cask "inkstitch" do
   preflight do
     system_command "/bin/mkdir",
                    args: ["-p", "#{ENV["HOME"]}/Library/Application Support" \
-                                 "/org.inkscape.Inkscape/config/inkscape/extensions"]
+                                "/org.inkscape.Inkscape/config/inkscape/extensions"]
   end
 
   uninstall pkgutil: "org.inkstitch.installer"
