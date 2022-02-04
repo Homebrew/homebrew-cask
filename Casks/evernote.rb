@@ -27,12 +27,14 @@ cask "evernote" do
 
   livecheck do
     url "https://evernote.s3.amazonaws.com/boron/mac/public/latest-mac.yml"
-    strategy :electron_builder do |yml|
-      regex(/Evernote[._-](\d+(?:\.\d+)+)[._-]mac[._-]ddl[._-]ga[._-](\d+(?:\.\d+)*)[._-]([0-9a-fA-F]+)/)
-      match = yml["files"][0]["url"].match(regex)
-      next if match.blank?
+    regex(/Evernote[._-](\d+(?:\.\d+)+)-mac-ddl-ga-(\d+(?:\.\d+)*)-([0-9a-f]+)\.dmg/i)
+    strategy :electron_builder do |yaml, regex|
+      yaml["files"]&.map do |file|
+        match = file["url"]&.match(regex)
+        next if match.blank?
 
-      "#{match[1]},#{match[2]},#{match[3]}"
+        "#{match[1]},#{match[2]},#{match[3]}"
+      end
     end
   end
 
