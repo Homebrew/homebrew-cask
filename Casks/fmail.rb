@@ -1,6 +1,6 @@
 cask "fmail" do
-  version "2.5.7,105"
-  sha256 "077d7c75638f4ab0480cc44ec87f8c91d1a8ba3f86ec6cac2e2c242a163c18c2"
+  version "2.5.8,106"
+  sha256 "5c1a17444d97778ad1dcd169a2d1765b2f9e285d04fc60239aebc53a58338d77"
 
   url "https://arievanboxel.fr/fmail/sparkle/FMail_#{version.csv.first.no_dots}.zip"
   name "FMail"
