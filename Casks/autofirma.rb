@@ -1,6 +1,6 @@
 cask "autofirma" do
-  version "1.6.5"
-  sha256 "4564893f65a1566ea82c131a63bb56b44dbd2bcc218b5ba501ebb6dc22634c79"
+  version "1.7.1"
+  sha256 "83131c5809815742bf23406361b514f8c798d9f9dc344b7a42bc178886dbd0da"
 
   url "https://estaticos.redsara.es/comunes/autofirma/#{version.major}/#{version.minor}/#{version.patch}/AutoFirma_Mac.zip",
       verified: "estaticos.redsara.es/comunes/autofirma/"
