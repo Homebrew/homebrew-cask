@@ -36,4 +36,6 @@ cask "inkstitch" do
   end
 
   uninstall pkgutil: "org.inkstitch.installer"
+  
+  zap trash: "/Library/Application\ Support/inkstitch"
 end
