@@ -16,13 +16,8 @@ cask "sage" do
   homepage "https://www.sagemath.org/"
 
   livecheck do
-    url "https://github.com/3-manifolds/Sage_macOS/releases/latest"
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/v?(\d+(?:\.\d+)+)/SageMath-(\d+(?:\.\d+)+)\+?\.dmg}i)
-      next if match.blank?
-
-      "#{match[2]},#{match[1]}"
-    end
+    url :url
+    strategy :git
   end
 
   depends_on macos: ">= :high_sierra"
