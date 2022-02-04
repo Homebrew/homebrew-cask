@@ -1,6 +1,6 @@
 cask "cyberduck" do
-  version "8.2.1,36773"
-  sha256 "052125fa4acfb4dc42b6e6849d9307d26ac543d723c088f3a1f86ffdb15fe8c9"
+  version "8.2.3,36880"
+  sha256 "edac85691a21fee1c1d10fc72dfc7ca91230273bc31a37d0a7b8b1e8afa30d80"
 
   url "https://update.cyberduck.io/Cyberduck-#{version.csv.first}.#{version.csv.second}.zip"
   name "Cyberduck"
