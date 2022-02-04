@@ -4,7 +4,7 @@ cask "sage" do
   version "9.5,1.3"
 
   if Hardware::CPU.intel?
-    sha256 "73d9fd535a690c1fdcc9099edbb7f9e9b8897e30573c0be95360e6896804c203"
+    sha256 "21606aa7476b70a01de6594e37d74625436ac6307ccafe19ff1146d2315189fd"
   else
     sha256 "4640428a7b41b829a1a18d6f5ecf9d22d2ae12c50d4b791fcebb532a369d70e0"
   end
