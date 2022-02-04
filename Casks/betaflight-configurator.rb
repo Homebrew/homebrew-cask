@@ -7,5 +7,10 @@ cask "betaflight-configurator" do
   desc "Configuration tool for the Betaflight firmware"
   homepage "https://github.com/betaflight/betaflight-configurator"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Betaflight Configurator.app"
 end
