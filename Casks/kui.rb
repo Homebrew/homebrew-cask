@@ -1,12 +1,12 @@
 cask "kui" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "11.1.6"
+  version "11.1.7"
 
   if Hardware::CPU.intel?
-    sha256 "491484aac72158b5f32e11322f2eab70160fa0e1806d794dc34c151a05da0c2e"
+    sha256 "371d8d23ced626a2289e7e5916c80bf925e4e60044c5ccb427288cdf92078737"
   else
-    sha256 "4a54f6c49d070ed1f6099c994672fe232d0978412c9f3d20e8d788ec5c331872"
+    sha256 "72c2ccd4449e37e7dba6f1954ec2499807f40050496fd1b5e3aa667ca0c5ccf6"
   end
 
   url "https://github.com/kubernetes-sigs/kui/releases/download/v#{version}/Kui-darwin-#{arch}.tar.bz2"
