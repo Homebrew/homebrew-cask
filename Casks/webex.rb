@@ -14,6 +14,8 @@ cask "webex" do
     strategy :extract_plist
   end
 
+  auto_updates true
+
   app "Webex.app"
 
   uninstall signal: ["TERM", "Cisco-Systems.Spark"]
