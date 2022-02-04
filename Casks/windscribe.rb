@@ -25,8 +25,8 @@ cask "windscribe" do
             ],
             delete:    [
               "/Applications/Windscribe.app",
-              "/Library/PrivilegedHelperTools/com.windscribe.helper.macos",
               "/Library/LaunchDaemons/com.windscribe.helper.macos.plist",
+              "/Library/PrivilegedHelperTools/com.windscribe.helper.macos",
               "/usr/local/bin/windscribe-cli",
             ]
 
