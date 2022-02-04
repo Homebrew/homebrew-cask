@@ -9,15 +9,8 @@ cask "duplicati" do
   homepage "https://www.duplicati.com/"
 
   livecheck do
-    url :url
-    strategy :git do |tags|
-      tags.map do |tag|
-        match = tag.match(/^v(\d+(?:\.\d+)+)-(?:\d+(?:\.\d+)+)_(beta|canary|experimental)_(\d+(?:-\d+)*)$/i)
-        next if match.blank?
-
-        "#{match[1]},#{match[2]},#{match[3]}" if match
-      end.compact
-    end
+    url "https://updates.duplicati.com/beta/latest-installers.js"
+    regex(%r{^\s+"name":\s+"duplicati-(.*)\.dmg",$}i)
   end
 
   depends_on formula: "mono"
