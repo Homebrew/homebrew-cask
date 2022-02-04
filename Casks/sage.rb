@@ -6,7 +6,7 @@ cask "sage" do
   if Hardware::CPU.intel?
     sha256 "73d9fd535a690c1fdcc9099edbb7f9e9b8897e30573c0be95360e6896804c203"
   else
-    sha256 "43004172febad37c804ec7f64b2e2113751500190d44fbf935604a13729edfca"
+    sha256 "4640428a7b41b829a1a18d6f5ecf9d22d2ae12c50d4b791fcebb532a369d70e0"
   end
 
   url "https://github.com/3-manifolds/Sage_macOS/releases/download/v#{version.csv.second}/SageMath-#{version.csv.first}_#{arch}.dmg",
