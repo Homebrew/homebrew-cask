@@ -36,7 +36,8 @@ cask "inkstitch" do
   end
 
   uninstall pkgutil: "org.inkstitch.installer",
-            delete:  "/Library/Application Support/inkstitch"
+            delete:  "~/Library/Application Support/org.inkscape.Inkscape/config/inkscape/extensions/inkstitch"
 
-  zap rmdir: "~/Library/Application Support/org.inkscape.Inkscape/config/inkscape/extensions"
+  zap trash: "~/Library/Application Support/inkstitch",
+      rmdir: "~/Library/Application Support/org.inkscape.Inkscape/config/inkscape/extensions/"
 end
