@@ -6,7 +6,7 @@ cask "arctype" do
   name "arctype"
   desc "SQL client and database management tool that's fun to use"
   homepage "https://arctype.com/"
-  
+
   livecheck do
     url "https://arctype-downloads.s3.amazonaws.com/updates/latest-mac.yml"
     strategy :electron_builder
@@ -21,6 +21,6 @@ cask "arctype" do
     "~/Library/Application Support/Arctype",
     "~/Library/Logs/Arctype",
     "~/Library/Preferences/com.arctype.sql.plist",
-    "~/Library/Saved Application State/com.arctype.sql.savedState"
+    "~/Library/Saved Application State/com.arctype.sql.savedState",
   ]
 end
