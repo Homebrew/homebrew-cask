@@ -9,7 +9,7 @@ cask "duplicati" do
 
   livecheck do
     url "https://updates.duplicati.com/beta/latest-installers.js"
-    regex(/^\s+"name":\s+"duplicati-(.*)\.dmg",$/i)
+    regex(/^\s+"name":\s+"duplicati[._-]v?(.+)\.dmg",$/i)
   end
 
   depends_on formula: "mono"
