@@ -10,6 +10,7 @@ cask "streamlabs-obs" do
   livecheck do
     url "https://streamlabs.com/streamlabs-desktop/download"
     strategy :header_match
+    regex(/Streamlabs\+Desktop\+Setup\+(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
