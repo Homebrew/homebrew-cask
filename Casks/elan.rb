@@ -11,6 +11,8 @@ cask "elan" do
     url "https://archive.mpi.nl/tla/elan/download"
     strategy :page_match do |page|
       v = page[/href=.*?ELAN[._-]v?(\d+(?:-\d+)+)[._-]mac\.zip/i, 1]
+      next if v.blank?
+
       v.tr("-", ".")
     end
   end
