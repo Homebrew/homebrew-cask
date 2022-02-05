@@ -9,7 +9,6 @@ cask "battlescribe" do
 
   livecheck do
     url "https://battlescribe.net/?tab=downloads"
-    strategy :page_match
     regex(/"desktop"\s*:\s*"(\d+(?:\.\d+)+)"/i)
   end
 

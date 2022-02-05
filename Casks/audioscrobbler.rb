@@ -8,4 +8,9 @@ cask "audioscrobbler" do
   homepage "https://github.com/mxcl/Audioscrobbler.app"
 
   app "Audioscrobbler.app"
+
+  zap trash: [
+    "~/Library/Caches/fm.last.Audioscrobbler",
+    "~/Library/Preferences/fm.last.Audioscrobbler.plist",
+  ]
 end

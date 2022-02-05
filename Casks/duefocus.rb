@@ -9,15 +9,14 @@ cask "duefocus" do
 
   livecheck do
     url "https://web.duefocus.com/distribution/darwin/v3/appcast.html"
-    strategy :page_match
-    regex(%r{/DueFocus-(\d+(?:\.\d+)+)\.dmg}i)
+    regex(%r{/DueFocus[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "DueFocus.app"
 
   zap trash: [
     "~/Library/Application Support/DueFocus",
-    "~/Library/Preferences/com.qarea.duefocus.plist",
     "~/Library/Logs/DueFocus",
+    "~/Library/Preferences/com.qarea.duefocus.plist",
   ]
 end

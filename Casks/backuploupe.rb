@@ -1,6 +1,6 @@
 cask "backuploupe" do
-  version "3.5.3,2309"
-  sha256 "04ea5b8ee79ad2db71e3b048b87396b6b7b8665de9441ae230573c9b2b4e66e2"
+  version "3.5.4,2322"
+  sha256 "e453748da41643a11416989cf88c53ee555e949e3a96a32e9768de884c942b87"
 
   url "https://www.soma-zone.com/download/files/BackupLoupe-#{version.csv.first}.tar.bz2"
   name "BackupLoupe"
@@ -14,11 +14,14 @@ cask "backuploupe" do
 
   app "BackupLoupe.app"
 
+  uninstall delete: [
+    "/Library/LaunchDaemons/com.soma-zone.BackupLoupe.Helper.plist",
+    "/Library/PrivilegedHelperTools/com.soma-zone.BackupLoupe.Helper",
+  ]
+
   zap trash: [
     "~/Library/Application Support/BackupLoupe",
     "~/Library/Caches/com.apple.helpd/Generated/BackupLoupe*",
     "~/Library/Preferences/com.soma-zone.BackupLoupe.plist",
-    "/Library/LaunchDaemons/com.soma-zone.BackupLoupe.Helper.plist",
-    "/Library/PrivilegedHelperTools/com.soma-zone.BackupLoupe.Helper",
   ]
 end

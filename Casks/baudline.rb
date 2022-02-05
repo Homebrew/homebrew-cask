@@ -9,7 +9,6 @@ cask "baudline" do
 
   livecheck do
     url "https://www.baudline.com/download.html"
-    strategy :page_match
     regex(/href=.*?baudline_(\d+(?:\.\d+)+)_macosx_universal\.dmg/i)
   end
 
