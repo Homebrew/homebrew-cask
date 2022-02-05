@@ -10,7 +10,7 @@ cask "elan" do
   livecheck do
     url "https://archive.mpi.nl/tla/elan/download"
     strategy :page_match do |page|
-      v = page[%r{href=.*?/ELAN_(\d+(?:-\d+)*)_mac\.zip}i, 1]
+      v = page[/href=.*?ELAN[._-]v?(\d+(?:-\d+)+)[._-]mac\.zip/i, 1]
       v.tr("-", ".")
     end
   end
