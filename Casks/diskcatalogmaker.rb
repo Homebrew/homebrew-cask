@@ -22,10 +22,10 @@ cask "diskcatalogmaker" do
   app "DiskCatalogMaker.app"
 
   zap trash: [
-    "~/Library/Application Support/DiskCatalogMaker",
     "~/Library/Application Support/com.mac.fujisoft.DiskCatalogMaker",
-    "~/Library/Caches/DiskCatalogMaker",
+    "~/Library/Application Support/DiskCatalogMaker",
     "~/Library/Caches/com.mac.fujisoft.DiskCatalogMaker",
+    "~/Library/Caches/DiskCatalogMaker",
     "~/Library/Logs/DiskCatalogMaker",
     "~/Library/Preferences/com.mac.fujisoft.DiskCatalogMaker.plist",
     "~/Library/Saved Application State/com.mac.fujisoft.DiskCatalogMaker.savedState",
