@@ -10,4 +10,12 @@ cask "recents" do
   depends_on macos: ">= :high_sierra"
 
   app "Recents.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.lapier.Recents",
+    "~/Library/Caches/com.lapier.Recents",
+    "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.lapier.Recents",
+    "~/Library/HTTPStorages/com.lapier.Recents",
+    "~/Library/Preferences/com.lapier.Recents.plist",
+  ]
 end
