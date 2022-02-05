@@ -1,5 +1,5 @@
 cask "displaperture" do
-  version "2.1,1052"
+  version "2.2,1055"
   sha256 :no_check
 
   url "https://manytricks.com/download/displaperture"

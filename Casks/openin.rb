@@ -13,12 +13,19 @@ cask "openin" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :catalina"
 
   app "OpenIn.app"
 
   zap trash: [
+    "~/Library/Application Scripts/app.loshadki.OpenIn",
+    "~/Library/Application Scripts/app.loshadki.OpenIn.Share",
+    "~/Library/Application Scripts/app.loshadki.OpenInLauncher",
+    "~/Library/Application Scripts/4QE86VV38D.app.loshadki.OpenIn",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/app.loshadki.openin.sfl2",
     "~/Library/Containers/app.loshadki.OpenIn",
+    "~/Library/Containers/app.loshadki.OpenIn.Share",
     "~/Library/Containers/app.loshadki.OpenInLauncher",
+    "~/Library/Group Containers/4QE86VV38D.app.loshadki.OpenIn",
   ]
 end

@@ -1,6 +1,6 @@
 cask "linearmouse" do
-  version "0.3.4"
-  sha256 "2a9a94e48d2e2c5bfa683dd0abf1795b2277e606e2739e39c699a9cd528de87b"
+  version "0.4.1"
+  sha256 "513d874384876c76c213d8db526c9503a776fdf8d43afa3f034998532c1ae395"
 
   url "https://github.com/linearmouse/linearmouse/releases/download/v#{version}/LinearMouse.dmg",
       verified: "github.com/linearmouse/linearmouse/"
@@ -12,9 +12,7 @@ cask "linearmouse" do
 
   app "LinearMouse.app"
 
-  uninstall quit: [
-    "com.lujjjh.LinearMouse",
-  ]
+  uninstall quit: "com.lujjjh.LinearMouse"
 
   zap trash: "~/Library/Preferences/com.lujjjh.LinearMouse.plist"
 end

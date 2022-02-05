@@ -1,6 +1,6 @@
 cask "unity-android-support-for-editor" do
-  version "2021.2.8f1,d0e5f0a7b06a"
-  sha256 "8e54434350656faf3646e63b8c870cde34ab561b099e4aea04f9bc96fad0cd16"
+  version "2021.2.10f1,ee872746220e"
+  sha256 "7f6c6ee070a8b49d1743380eca19a4f04d9bb70b77de52ca599269d0c64a9010"
 
   url "https://download.unity3d.com/download_unity/#{version.csv.second}/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-#{version.csv.first}.pkg",
       verified: "download.unity3d.com/download_unity/"

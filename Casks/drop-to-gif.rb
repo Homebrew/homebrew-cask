@@ -9,4 +9,9 @@ cask "drop-to-gif" do
   homepage "https://mortenjust.github.io/droptogif/"
 
   app "Drop to GIF.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.mortenjust.Drop-to-GIF.plist",
+    "~/Library/Saved Application State/com.mortenjust.Drop-to-GIF.savedState",
+  ]
 end

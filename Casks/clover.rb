@@ -1,6 +1,6 @@
 cask "clover" do
-  version "1.0.0"
-  sha256 "e125732a914d9be5eed5625bc407b8beb4fe52a84fc4ed4afe811f09d4641f93"
+  version "1.1.0"
+  sha256 "ab778b4937c4dff320f8e106500daaa0d12536158964a902a307f7004938b546"
 
   url "https://clover-desktop-app.s3.amazonaws.com/Clover-#{version}.dmg",
       verified: "clover-desktop-app.s3.amazonaws.com/"
