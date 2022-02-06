@@ -1,8 +1,7 @@
 cask "mediaelch" do
-  version "2.8.12,2021-05-10_06-33,08ebf8c0"
-  sha256 "75390642ca0228d2f0086fd99363ec9d9708aafc92aaa8b01f1acd1f2f8e7465"
-
-  url "https://github.com/Komet/MediaElch/releases/download/v#{version.csv.first}/MediaElch_macOS_#{version.csv.first}_#{version.csv.second}_git-master-#{version.csv.third}.dmg",
+  version "2.8.14,2022-02-06,84e18bb"
+  sha256 "a849c3b2e152776a7c60e17f58941c7ac11db362c19e2c64ec8f3d10e3182243"
+  url "https://github.com/Komet/MediaElch/releases/download/v#{version.csv.first}/MediaElch_macOS_#{version.csv.first}_#{version.csv.second}_git-#{version.csv.third}.dmg",
       verified: "github.com/Komet/MediaElch/"
   name "MediaElch"
   desc "Media Manager for Kodi"
@@ -10,7 +9,7 @@ cask "mediaelch" do
 
   livecheck do
     url "https://github.com/Komet/MediaElch/releases/latest"
-    regex(%r{href=.*?/MediaElch_macOS_(\d+(?:\.\d+)*)_(\d+(?:.\d+)*)_git-master-([^/]*?)\.dmg}i)
+    regex(%r{href=.*?/MediaElch_macOS_(\d+(?:\.\d+)*)_(\d+(?:.\d+)*)_git-([^/]*?)\.dmg}i)
     strategy :page_match do |page, regex|
       match = page.match(regex)
       next if match.blank?
