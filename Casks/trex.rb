@@ -1,6 +1,3 @@
-# typed: false
-# frozen_string_literal: true
-
 cask "trex" do
   version "1.5.0"
   sha256 "035ffda6acc996002518f9731bb566fe3de6fb840ba0cd9a7b6722f3a9f608c2"
