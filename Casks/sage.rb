@@ -4,9 +4,9 @@ cask "sage" do
   version "9.5,1.3"
 
   if Hardware::CPU.intel?
-    sha256 "21606aa7476b70a01de6594e37d74625436ac6307ccafe19ff1146d2315189fd"
+    sha256 "035a882ec96f190e4ec6929913bdd8880035494f9ffe27e109c828eefb35945b"
   else
-    sha256 "4640428a7b41b829a1a18d6f5ecf9d22d2ae12c50d4b791fcebb532a369d70e0"
+    sha256 "a134fe93a5fa61de58bf6d512f9867663b565bb2b72eea5c77b8cf8a0fc8cb81"
   end
 
   url "https://github.com/3-manifolds/Sage_macOS/releases/download/v#{version.csv.second}/SageMath-#{version.csv.first}_#{arch}.dmg",
