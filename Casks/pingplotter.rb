@@ -1,5 +1,5 @@
 cask "pingplotter" do
-  version "5.21.2"
+  version "5.22.3"
   sha256 :no_check
 
   url "https://www.pingplotter.com/downloads/pingplotter_osx.zip"
@@ -8,8 +8,8 @@ cask "pingplotter" do
   homepage "https://www.pingplotter.com/"
 
   livecheck do
-    url "https://www.pingplotter.com/download/release-highlights"
-    regex(/<h3>PingPlotter\s+v?(\d+(?:\.\d+)+)[\s<]/i)
+    url "https://www.pingplotter.com/download/macos/release-notes.html"
+    regex(/<h3>PingPlotter\s+v?(\d+(?:\.\d+)+)[[:space:]<]/i)
   end
 
   app "PingPlotter.app"
