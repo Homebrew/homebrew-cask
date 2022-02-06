@@ -9,9 +9,10 @@ cask "imagex" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/ImageX-v(\d+(?:\.\d+)*)-macos\.zip}i)
+    regex(/href=.*?ImageX[._-]v?(\d+(?:\.\d+)+)[._-]macos\.zip/i)
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "ImageX.app"
 
