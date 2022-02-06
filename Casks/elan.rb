@@ -1,6 +1,6 @@
 cask "elan" do
-  version "6.2"
-  sha256 "bca954c66e6390e4bb2bdadea046eb165be231083c298558c1b29adaead587dc"
+  version "6.3"
+  sha256 "ee0948e20013f79d058a344f360edcd88d95cec57207eebc267aa80512db430b"
 
   url "https://www.mpi.nl/tools/elan/ELAN_#{version.dots_to_hyphens}_mac.zip"
   name "ELAN"
@@ -10,7 +10,9 @@ cask "elan" do
   livecheck do
     url "https://archive.mpi.nl/tla/elan/download"
     strategy :page_match do |page|
-      v = page[%r{href=.*?/ELAN_(\d+(?:-\d+)*)_mac\.zip}i, 1]
+      v = page[/href=.*?ELAN[._-]v?(\d+(?:-\d+)+)[._-]mac\.zip/i, 1]
+      next if v.blank?
+
       v.tr("-", ".")
     end
   end
