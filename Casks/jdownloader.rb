@@ -1,11 +1,19 @@
 cask "jdownloader" do
-  version :latest
+  version "45328"
   sha256 :no_check
 
   url "http://installer.jdownloader.org/clean/JD2Setup.dmg",
       user_agent: :fake
   name "JDownloader"
+  desc "Download manager"
   homepage "https://jdownloader.org/"
+
+  livecheck do
+    url "https://svn.jdownloader.org/build.php"
+    regex(/Revision:.*?(\d+)[\s<]/i)
+  end
+
+  auto_updates true
 
   preflight do
     system_command "#{staged_path}/JDownloader Installer.app/Contents/MacOS/JavaApplicationStub",
