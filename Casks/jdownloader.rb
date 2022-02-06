@@ -5,6 +5,7 @@ cask "jdownloader" do
   url "http://installer.jdownloader.org/clean/JD2Setup.dmg",
       user_agent: :fake
   name "JDownloader"
+  desc "Download manager"
   homepage "https://jdownloader.org/"
 
   livecheck do
