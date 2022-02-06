@@ -16,4 +16,6 @@ cask "photoninja" do
   pkg "PhotoNinja_#{version}_sse42.pkg"
 
   uninstall pkgutil: "PhotoNinja.#{version}.sse42"
+
+  zap trash: "~/Library/Saved Application State/PhotoNinja.*.sse42.savedState"
 end
