@@ -15,7 +15,7 @@ cask "webcatalog" do
 
   auto_updates true
 
-  app "WebCatalog.app"
+  app "WebCatalog Classic.app"
 
   zap trash: [
     "~/Library/Application Support/WebCatalog",
