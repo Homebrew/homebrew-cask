@@ -1,6 +1,6 @@
 cask "foxitreader" do
   version "11.1.1"
-  sha256 "bf74b8d1eb87d36f9cd2bf0d1614aad262ded20bd8dc7b7c5f0c2b0af8c75b4f"
+  sha256 "30043642510add6f424c0afde40a52e102b701c5901c5398f277040533b688fe"
 
   url "https://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/mac/#{version.major}.x/#{version.major_minor}/ML/FoxitPDFReader#{version.no_dots}.L10N.Setup.pkg",
       verified: "cdn01.foxitsoftware.com/pub/foxit/reader/desktop/mac/"
