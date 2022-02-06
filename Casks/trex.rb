@@ -2,10 +2,10 @@
 # frozen_string_literal: true
 
 cask "trex" do
-  version "v1.4.3"
-  sha256 "e18a030af4b1037022736c12045a6eff8aa13b65201c9ef98d0a7f36d050dc36"
+  version "1.4.3"
+  sha256 "f231a866ba1fe2e85e33bf81c33b5fc0f63548857dca54cbd7d8d60d1ef4cbdf"
 
-  url "https://github.com/amebalabs/TRex/releases/download/#{version}/TRex.zip",
+  url "https://github.com/amebalabs/TRex/releases/download/v#{version}/TRex.zip",
       verified: "github.com/amebalabs/TRex/releases/"
   name "TRex"
   desc "Easy to use text extraction tool"
