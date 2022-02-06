@@ -1,12 +1,12 @@
 cask "superslicer" do
   arch = Hardware::CPU.intel? ? "" : "arm_"
 
-  version "2.3.57.9,220105"
+  version "2.3.57.10,220203"
 
   if Hardware::CPU.intel?
-    sha256 "ef30236e2a1de56f2300c3771fc4409f15fbfb18ecc2d921198f91e4a6f83614"
+    sha256 "88deb50dd1c0abb85a360a56b944443b81e1a4bb3be4801b900f37b96cba2354"
   else
-    sha256 "e6bbe074ce1a7cebe82f6de1d14947f5e519d3c032267f3fd4104d7fd11f3e88"
+    sha256 "553f4d069d856418e6d22b65f107d6d77ed59224171a5fcf233cdb6ca050d3d9"
   end
 
   url "https://github.com/supermerill/SuperSlicer/releases/download/#{version.csv.first}/SuperSlicer_#{version.csv.first}_macos_#{arch}#{version.csv.second}.dmg"
