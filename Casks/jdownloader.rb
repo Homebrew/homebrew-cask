@@ -12,6 +12,8 @@ cask "jdownloader" do
     regex(/Revision:.*?(\d+)[\s<]/i)
   end
 
+  auto_updates true
+
   preflight do
     system_command "#{staged_path}/JDownloader Installer.app/Contents/MacOS/JavaApplicationStub",
                    args:         [
