@@ -1,8 +1,8 @@
 cask "redis-pro" do
-  version "1.4.1"
-  sha256 "f3f32fa5f4527117c80f53925af80230d7623172d031382b527f69c66a2e107f"
+  version "1.4.2"
+  sha256 :no_check
 
-  url "https://github.com/cmushroom/redis-pro/releases/download/#{version}/redis-pro.dmg"
+  url "https://github.com/cmushroom/redis-pro/releases/download/1.4.2/redis-pro.dmg"
   name "redis-pro"
   desc "Redis desktop"
   homepage "https://github.com/cmushroom/redis-pro"
