@@ -5,8 +5,8 @@ cask "eloston-chromium" do
     version "98.0.4758.80-1.1,1643761345"
     sha256 "5900644b3bdfcbe8f5c158a85afa9988e440e36ef209bdf337e431434ffe7568"
   else
-    version "97.0.4692.99-1.1,1642868666"
-    sha256 "790164b7b166c22fad1e830523e6eb3abc41b54b57ce8c7c8ca2a5dfbe5ca282"
+    version "98.0.4758.80-1.1,1644029602"
+    sha256 "b743fb0ea2fcef474d8ed0cc04dab49d97df039c3ec7a1f6143b326114c5c2de"
   end
 
   url "https://github.com/kramred/ungoogled-chromium-macos/releases/download/#{version.csv.first}_#{arch}__#{version.csv.second}/ungoogled-chromium_#{version.csv.first}_#{arch}-macos.dmg",
