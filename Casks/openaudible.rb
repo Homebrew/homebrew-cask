@@ -15,6 +15,11 @@ cask "openaudible" do
   desc "Audiobook manager for Audible users"
   homepage "https://openaudible.org/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "OpenAudible.app"
 
   zap trash: "/Library/OpenAudible"
