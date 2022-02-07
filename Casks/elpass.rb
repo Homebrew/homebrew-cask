@@ -15,4 +15,11 @@ cask "elpass" do
   depends_on macos: ">= :sierra"
 
   app "Elpass.app"
+
+  zap trash: [
+    "~/Library/Application Support/app.elpass.macos",
+    "~/Library/Caches/app.elpass.macos",
+    "~/Library/Group Containers/YCKFLA6N72.app.elpass.macos.group",
+    "~/Library/Preferences/app.elpass.macos.plist",
+  ]
 end
