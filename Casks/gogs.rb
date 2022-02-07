@@ -1,6 +1,6 @@
 cask "gogs" do
-  version "0.12.3"
-  sha256 "3e943a13b7f8ade0a87c5f2b40e5db52faab9035ae045d4ee1d0632b9b2479fc"
+  version "0.12.4"
+  sha256 "92d0cb113697a47ee75fa41bc27ab561383ade7929a38e9b6313d160ee053293"
 
   url "https://github.com/gogs/gogs/releases/download/v#{version}/gogs_#{version}_darwin_amd64.zip",
       verified: "github.com/gogs/gogs/"
