@@ -9,4 +9,6 @@ cask "butt" do
   homepage "https://danielnoethen.de/butt/"
 
   app "butt.app"
+
+  zap trash: "~/.buttrc"
 end
