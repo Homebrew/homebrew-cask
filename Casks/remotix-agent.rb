@@ -1,16 +1,26 @@
 cask "remotix-agent" do
-  version "1.5-21433"
-  sha256 "73faf4bdc58297e152d5920f3181c11708b7c39943640d988d76b1050f54f0d1"
+  version "1.5.19,23333"
+  sha256 "87be3d61e5406cd55e3c8ff50567e255379b085d1eeca330899186f7ad96b117"
 
-  url "https://downloads.remotix.com/agent-mac/RemotixAgent-#{version}.pkg",
+  url "https://downloads.remotix.com/agent-mac/RemotixAgent-#{version.csv.first}-#{version.csv.second}.pkg",
       verified: "remotix.com/agent-mac/"
-  appcast "https://remotix.com/downloads-mac/"
   name "Remotix Agent"
+  desc "Remote desktop and monitoring solution"
   homepage "https://remotixcloud.com/"
+
+  livecheck do
+    url "https://remotix.com/downloads-mac/"
+    strategy :page_match do |page|
+      match = page.match(/Remotix\sAgent.*Current\sversion:\s<b>(\d+(?:\.\d+)+)\s\((\d+)\)/i)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
+    end
+  end
 
   auto_updates true
 
-  pkg "RemotixAgent-#{version}.pkg"
+  pkg "RemotixAgent-#{version.csv.first}-#{version.csv.second}.pkg"
 
   uninstall pkgutil:    [
     "com.nulana.rxagentmac.daemon",
@@ -21,10 +31,10 @@ cask "remotix-agent" do
               ["KILL", "com.nulana.rxagentmac"],
             ],
             launchctl:  [
-              "com.nulana.rxagentmac.user",
               "com.nulana.rxagentmac.daemon",
               "com.nulana.rxagentmac.gui",
               "com.nulana.rxagentmac.rc",
+              "com.nulana.rxagentmac.user",
             ],
             login_item: "Remotix Agent",
             quit:       "com.nulana.rxagentmac",
