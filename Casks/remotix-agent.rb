@@ -20,7 +20,7 @@ cask "remotix-agent" do
 
   auto_updates true
 
-  pkg "RemotixAgent-#{version}.pkg"
+  pkg "RemotixAgent-#{version.csv.first}-#{version.csv.second}.pkg"
 
   uninstall pkgutil:    [
     "com.nulana.rxagentmac.daemon",
