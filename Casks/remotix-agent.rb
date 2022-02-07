@@ -17,6 +17,7 @@ cask "remotix-agent" do
       "#{match[1]},#{match[2]}"
     end
   end
+
   auto_updates true
 
   pkg "RemotixAgent-#{version}.pkg"
