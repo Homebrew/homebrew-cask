@@ -8,8 +8,9 @@ cask "openinterminal-lite" do
   homepage "https://github.com/Ji4n1ng/OpenInTerminal"
 
   livecheck do
-    url "https://raw.githubusercontent.com/Ji4n1ng/OpenInTerminal/master/Resources/README-Lite.md"
-    regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)*)}i)
+    url "https://github.com/Ji4n1ng/OpenInTerminal/releases"
+    strategy :page_match
+    regex(%r{v?(\d+(?:\.\d+)+)/OpenInTerminal[._-]Lite\.app\.zip}i)
   end
 
   app "OpenInTerminal-Lite.app"
