@@ -15,4 +15,6 @@ cask "fastrawviewer" do
   depends_on macos: ">= :sierra"
 
   app "FastRawViewer.app"
+
+  zap trash: "~/Library/Preferences/com.libraw-llc.FastRawViewer.plist"
 end
