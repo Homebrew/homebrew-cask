@@ -10,10 +10,8 @@ cask "curio" do
   livecheck do
     url "https://www.zengobi.com/curio/download/"
     strategy :header_match do |headers|
-      match = headers["location"].match(%r{/Curio(\d+)\.zip})
+      match = headers["location"].match(/Curio(\d+)\.zip/i)
       next if match.blank?
-
-      puts match
 
       "#{match[1][0..1]},#{match[1]}"
     end
