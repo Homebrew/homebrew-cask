@@ -16,4 +16,9 @@ cask "lx-music" do
   homepage "https://github.com/lyswhut/lx-music-desktop/"
 
   app "lx-music-desktop.app"
+
+  zap trash: [
+    "~/Library/Application Support/lx-music-desktop",
+    "~/Library/Logs/lx-music-desktop",
+  ]
 end
