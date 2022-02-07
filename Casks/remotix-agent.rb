@@ -11,7 +11,7 @@ cask "remotix-agent" do
   livecheck do
     url "https://remotix.com/downloads-mac/"
     strategy :page_match do |page|
-      match = page.match(/Current\sversion:\s<b>(\d+(?:\.\d+)+)\s\((\d+)\)/i)
+      match = page.match(/Remotix\sAgent.*Current\sversion:\s<b>(\d+(?:\.\d+)+)\s\((\d+)\)/i)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
