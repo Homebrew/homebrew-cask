@@ -33,6 +33,8 @@ cask "jdownloader" do
     "#{appdir}/JDownloader2.app",
   ]
 
+  zap trash: "~/Library/Preferences/org.jdownloader.launcher.plist"
+
   caveats do
     depends_on_java "8"
   end
