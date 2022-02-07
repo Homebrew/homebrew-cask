@@ -22,4 +22,9 @@ cask "mediaelch" do
   depends_on macos: ">= :sierra"
 
   app "MediaElch.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.kvibes.MediaElch.plist",
+    "~/Library/Saved Application State/com.kvibes.MediaElch.savedState",
+  ]
 end
