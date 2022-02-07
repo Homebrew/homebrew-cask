@@ -20,4 +20,9 @@ cask "elan" do
   depends_on macos: ">= :high_sierra"
 
   app "ELAN_#{version}.app"
+
+  zap trash: [
+    "~/Library/Preferences/ELAN",
+    "~/Library/Preferences/nl.mpi.elan.plist",
+  ]
 end
