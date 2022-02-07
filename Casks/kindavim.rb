@@ -1,11 +1,16 @@
 cask "kindavim" do
-  version :latest
+  version "2.0.0"
   sha256 :no_check
 
   url "https://kindavim.app/releases/kindaVim.zip"
   name "kindaVim"
   desc "Use Vim in input fields and non input fields"
   homepage "https://kindavim.app/"
+
+  livecheck do
+    url "https://kindavim.app/releases/appcast.xml"
+    strategy :sparkle
+  end
 
   depends_on macos: ">= :monterey"
 
