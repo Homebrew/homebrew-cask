@@ -9,4 +9,9 @@ cask "superproductivity" do
   homepage "https://super-productivity.com/"
 
   app "superProductivity.app"
+
+  zap trash: [
+    "~/Library/Application Support/superProductivity",
+    "~/Library/Logs/superProductivity",
+  ]
 end
