@@ -1,6 +1,6 @@
 cask "remotix-agent" do
-  version "1.5-21433"
-  sha256 "73faf4bdc58297e152d5920f3181c11708b7c39943640d988d76b1050f54f0d1"
+  version "1.5.19-23333"
+  sha256 "87be3d61e5406cd55e3c8ff50567e255379b085d1eeca330899186f7ad96b117"
 
   url "https://downloads.remotix.com/agent-mac/RemotixAgent-#{version}.pkg",
       verified: "remotix.com/agent-mac/"
