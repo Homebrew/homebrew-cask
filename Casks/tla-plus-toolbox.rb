@@ -8,10 +8,5 @@ cask "tla-plus-toolbox" do
   desc "IDE for TLA+"
   homepage "https://lamport.azurewebsites.net/tla/toolbox.html"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   app "TLA+ Toolbox.app"
 end
