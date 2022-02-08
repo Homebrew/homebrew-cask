@@ -3,14 +3,14 @@ cask "raindropio" do
 
   version "5.4.19"
 
-  url "https://github.com/raindropio/desktop/releases/download/v#{version}/Raindrop-#{arch}.dmg",
-      verified: "github.com/raindropio/desktop/"
   if Hardware::CPU.intel?
     sha256 "9ba75b0000ac6836bdc01fa3344e49984d15c9f9c488e0e25dba3731ee7b2b75"
   else
     sha256 "207bd9bb10b855da93d1ad5740eaded77eafe9447c18e638beb36b49a07e927b"
   end
 
+  url "https://github.com/raindropio/desktop/releases/download/v#{version}/Raindrop-#{arch}.dmg",
+      verified: "github.com/raindropio/desktop/"
   name "Raindrop.io"
   desc "All-in-one bookmark manager"
   homepage "https://raindrop.io/"
@@ -18,7 +18,7 @@ cask "raindropio" do
   livecheck do
     url "https://github.com/raindropio/desktop/releases"
     strategy :page_match
-    regex(%r{v?(\d+(?:\.\d+)*)/Raindrop[._-]#{arch}\.dmg}i)
+    regex(%r{v?(\d+(?:\.\d+)+)/Raindrop[._-]#{arch}\.dmg}i)
   end
 
   auto_updates true
