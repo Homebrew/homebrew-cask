@@ -9,7 +9,7 @@ cask "sharemouse" do
 
   livecheck do
     url "https://www.sharemouse.com/download/"
-    regex(/Mac\s*Version:.*?(\d+(?:\.\d+)*)/i)
+    regex(/Mac\s*Version:.*?(\d+(?:\.\d+)+)/i)
   end
 
   depends_on macos: ">= :high_sierra"
