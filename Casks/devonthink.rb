@@ -1,6 +1,6 @@
 cask "devonthink" do
-  version "3.8"
-  sha256 "a1f76e4fabfafe1ad684ecdf595030ade44569bed18dafe1d434033b233fce4d"
+  version "3.8.1"
+  sha256 "c7741393a5d2ccca03a408fb9f933243e3fafce54b3e50f95a75e3ae6277d5fa"
 
   url "https://download.devontechnologies.com/download/devonthink/#{version}/DEVONthink_#{version.major}.app.zip"
   name "DEVONthink"

@@ -1,6 +1,6 @@
 cask "airtool" do
-  version "2.3.4,12"
-  sha256 "4b4dff3d7dfbb8513da361ffc2ab78efeca90aa3d092ebbe6501ab21df40fd0c"
+  version "2.3.5,13"
+  sha256 "13be5957b4f4b5c3fd3a3029dfb3a6a4884b747760d4275218bbb44ba54e372b"
 
   url "https://www.intuitibits.com/downloads/Airtool_#{version.csv.first}.pkg"
   name "Airtool"
@@ -27,4 +27,12 @@ cask "airtool" do
             launchctl:  "com.intuitibits.airtool#{version.major}.airtool-bpf",
             login_item: "Airtool",
             delete:     "/Library/Application Support/Airtool #{version.major}"
+
+  zap trash: [
+    "~/Library/Application Support/Airtool #{version.major}",
+    "~/Library/Caches/com.apple.helpd/Generated/com.intuitibits.airtool#{version.major}.help*",
+    "~/Library/Caches/com.intuitibits.airtool#{version.major}",
+    "~/Library/HTTPStorages/com.intuitibits.airtool#{version.major}.binarycookies",
+    "~/Library/Preferences/com.intuitibits.airtool#{version.major}.plist",
+  ]
 end

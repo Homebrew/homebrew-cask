@@ -6,8 +6,7 @@ cask "proxifier" do
 
     livecheck do
       url "https://www.proxifier.com/changelog/mac#{version.major}.html"
-      strategy :page_match
-      regex(/Version\s*(\d+(?:\.\d+)*)/i)
+      regex(/Version\s*(\d+(?:\.\d+)+)/i)
     end
   else
     version "3.6"
@@ -16,8 +15,7 @@ cask "proxifier" do
 
     livecheck do
       url "https://www.proxifier.com/changelog/mac.html"
-      strategy :page_match
-      regex(/Version\s*(\d+(?:\.\d+)*)/i)
+      regex(/Version\s*(\d+(?:\.\d+)+)/i)
     end
   end
 
@@ -30,8 +28,8 @@ cask "proxifier" do
   zap trash: [
     "~/Library/Application Scripts/com.initex.proxifier.v3.macos",
     "~/Library/Application Support/Proxifier",
-    "~/Library/Caches/com.initex.proxifier.macosx",
     "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/Proxifier Help*",
+    "~/Library/Caches/com.initex.proxifier.macosx",
     "~/Library/Containers/com.initex.proxifier.v3.macos",
     "~/Library/Group Containers/NXELXU5YLW.com.initex.proxifier.v3.macos",
     "~/Library/Logs/Proxifier",

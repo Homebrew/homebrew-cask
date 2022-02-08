@@ -1,6 +1,6 @@
 cask "keybase" do
-  version "5.9.0,20220121192730,95a3939b3a"
-  sha256 "00a113f296545b464135764c51a66e0ab792785004cf37f6e3f9cc220990c267"
+  version "5.9.2,20220131221715,a25f15e42b"
+  sha256 "dfdba447f395862a6efa38b061b202b49e0a1c549c8a24c53fb189567564e376"
 
   url "https://prerelease.keybase.io/darwin-updates/Keybase-#{version.csv.first}-#{version.csv.second}%2B#{version.csv.third}.zip"
   name "Keybase"

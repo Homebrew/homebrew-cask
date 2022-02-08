@@ -7,11 +7,6 @@ cask "hookshot" do
   desc "Window snapping tool"
   homepage "https://hookshot.app/"
 
-  livecheck do
-    url "https://hookshot.app/downloads/updates.xml"
-    strategy :sparkle
-  end
-
   auto_updates true
   depends_on macos: ">= :sierra"
 

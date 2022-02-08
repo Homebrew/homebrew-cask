@@ -15,10 +15,10 @@ cask "evernote" do
 
     url "https://cdn1.evernote.com/mac-smd/public/Evernote_RELEASE_#{version}.dmg"
   else
-    version "10.29.7,3186"
-    sha256 "0d33fb552f72086ea73bbbd0719bd14bec36973303d8f8b10e54e90220b76da4"
+    version "10.30.6,3202,cfd8660355"
+    sha256 "48c3d90408dddb9bee15c1a07eb6bf030c386100aae3eef4f4eec9c52cc3d4bf"
 
-    url "https://cdn1.evernote.com/boron/mac/builds/Evernote-#{version.csv.first}-mac-ddl-ga-#{version.csv.second}.dmg"
+    url "https://cdn1.evernote.com/boron/mac/builds/Evernote-#{version.csv.first}-mac-ddl-ga-#{version.csv.second}-#{version.csv.third}.dmg"
   end
 
   name "Evernote"
@@ -27,11 +27,14 @@ cask "evernote" do
 
   livecheck do
     url "https://evernote.s3.amazonaws.com/boron/mac/public/latest-mac.yml"
-    strategy :electron_builder do |yml|
-      match = yml["files"][0]["url"].match(/Evernote[._-](\d+(?:\.\d+)+)[._-]mac[._-]ddl[._-]ga[._-](\d+(?:\.\d+)*)/)
-      next if match.blank?
+    regex(/Evernote[._-](\d+(?:\.\d+)+)-mac-ddl-ga-(\d+(?:\.\d+)*)-([0-9a-f]+)\.dmg/i)
+    strategy :electron_builder do |yaml, regex|
+      yaml["files"]&.map do |file|
+        match = file["url"]&.match(regex)
+        next if match.blank?
 
-      "#{match[1]},#{match[2]}"
+        "#{match[1]},#{match[2]},#{match[3]}"
+      end
     end
   end
 

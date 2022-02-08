@@ -1,6 +1,6 @@
 cask "classroom-mode-for-minecraft" do
-  version "1.81"
-  sha256 "982eac2c28235d483351760ee17a3a45ca9d8d3f4ada05959e2bda859b0e3538"
+  version "1.81.v2"
+  sha256 "68bf1c2e3156ce4849c644bc47f9bcb1f817ca0e35a45ddc3f90fb6b49bb2e10"
 
   url "https://meedownloads.blob.core.windows.net/retailbuilds/ClassroomMode/mac/Classroom_Mode_#{version.dots_to_underscores}.dmg",
       verified: "meedownloads.blob.core.windows.net/"
@@ -11,7 +11,7 @@ cask "classroom-mode-for-minecraft" do
   livecheck do
     url "https://aka.ms/meecmmacos"
     strategy :header_match do |headers|
-      headers["location"][/Classroom[._-]Mode[._-]v?(\d+(?:_\d+)+)\.dmg/i, 1].tr("_", ".")
+      headers["location"][/Classroom[._-]Mode[._-]v?(\d+(?:_v?\d+)+)\.dmg/i, 1].tr("_", ".")
     end
   end
 

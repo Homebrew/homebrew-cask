@@ -1,5 +1,5 @@
 cask "windscribe" do
-  version "2.02.10"
+  version "2.3.16"
   sha256 :no_check
 
   url "https://assets.windscribe.com/desktop/mac/Windscribe.dmg"
@@ -25,8 +25,8 @@ cask "windscribe" do
             ],
             delete:    [
               "/Applications/Windscribe.app",
-              "/Library/PrivilegedHelperTools/com.windscribe.helper.macos",
               "/Library/LaunchDaemons/com.windscribe.helper.macos.plist",
+              "/Library/PrivilegedHelperTools/com.windscribe.helper.macos",
               "/usr/local/bin/windscribe-cli",
             ]
 
