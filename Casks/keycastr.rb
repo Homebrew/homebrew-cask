@@ -8,4 +8,6 @@ cask "keycastr" do
   homepage "https://github.com/keycastr/keycastr"
 
   app "KeyCastr.app"
+
+  zap trash: "~/Library/Preferences/io.github.keycastr.plist"
 end
