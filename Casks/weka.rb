@@ -1,8 +1,15 @@
 cask "weka" do
-  version "3.8.6"
-  sha256 "092284e53006f37c5c43bab1f4a082771375c7db9d749963498a5e4bda0e146c"
+  arch = Hardware::CPU.intel? ? "osx" : "arm-osx"
 
-  url "https://downloads.sourceforge.net/weka/weka-#{version.dots_to_hyphens}-azul-zulu-osx.dmg",
+  version "3.8.6"
+
+  if Hardware::CPU.intel?
+    sha256 "282d5ff81960d1ae43ee6e4e8eaa7ae8c341666a214e859728e15214af80383b"
+  else
+    sha256 "85de453da3bb41c952da48eee0bf574d1da7ee4fa6fd3a8e2d7a81a89d55d3d7"
+  end
+
+  url "https://downloads.sourceforge.net/weka/weka-#{version.dots_to_hyphens}-azul-zulu-#{arch}.dmg",
       verified: "sourceforge.net/weka/"
   name "Weka"
   desc "Collection of machine learning algorithms for data mining tasks"
@@ -11,7 +18,7 @@ cask "weka" do
   livecheck do
     url "https://waikato.github.io/weka-wiki/downloading_weka/"
     strategy :page_match do |page|
-      page[%r{href=.*?/weka[._-]v?(\d+(?:-\d+)+)[._-]azul[._-]zulu[._-]osx\.dmg}i, 1].tr("-", ".")
+      page[%r{href=.*?/weka[._-]v?(\d+(?:-\d+)+)[._-]azul[._-]zulu[._-]#{arch}\.dmg}i, 1].tr("-", ".")
     end
   end
 

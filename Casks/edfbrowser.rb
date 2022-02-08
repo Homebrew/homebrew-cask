@@ -9,9 +9,9 @@ cask "edfbrowser" do
   homepage "https://www.teuniz.net/edfbrowser"
 
   livecheck do
-    url "https://gitlab.com/whitone/EDFbrowser/-/tags?format=atom"
+    url "https://gitlab.com/whitone/EDFbrowser/-/releases.json"
     strategy :page_match do |page|
-      page.scan(%r{href=.*?/(\h+)/EDFbrowser[._-]?(\d+(?:\.\d+)*)\.dmg}i).map do |match|
+      page.scan(%r{/uploads/(\h+)/EDFbrowser[._-]v?(\d+(?:\.\d+)+)\.dmg}i).map do |match|
         "#{match[1]},#{match[0]}"
       end
     end

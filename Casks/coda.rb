@@ -7,11 +7,6 @@ cask "coda" do
   desc "Text editor"
   homepage "https://panic.com/coda/"
 
-  livecheck do
-    url "https://www.panic.com/updates/update.php?appName=Coda%202&appVersion=1"
-    strategy :sparkle
-  end
-
   auto_updates true
   depends_on macos: ">= :high_sierra"
 

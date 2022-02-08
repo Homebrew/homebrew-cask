@@ -13,4 +13,6 @@ cask "electrum-ltc" do
   end
 
   app "Electrum-LTC.app"
+
+  zap trash: "~/.electrum-ltc"
 end
