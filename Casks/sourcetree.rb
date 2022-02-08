@@ -38,11 +38,11 @@ cask "sourcetree" do
             quit:      "com.torusknot.SourceTreeNotMAS"
 
   zap trash: [
-    "~/Library/Application Support/SourceTree",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.torusknot.sourcetreenotmas.sfl2",
+    "~/Library/Application Support/SourceTree",
     "~/Library/Caches/com.torusknot.SourceTreeNotMAS",
-    "~/Library/Preferences/com.torusknot.SourceTreeNotMAS.plist",
     "~/Library/Preferences/com.torusknot.SourceTreeNotMAS.LSSharedFileList.plist",
+    "~/Library/Preferences/com.torusknot.SourceTreeNotMAS.plist",
     "~/Library/Saved Application State/com.torusknot.SourceTreeNotMAS.savedState",
   ]
 end
