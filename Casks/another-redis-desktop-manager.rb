@@ -15,4 +15,9 @@ cask "another-redis-desktop-manager" do
   homepage "https://github.com/qishibo/AnotherRedisDesktopManager/"
 
   app "Another Redis Desktop Manager.app"
+
+  zap trash: [
+    "~/Library/Application Support/another-redis-desktop-manager",
+    "~/Library/Preferences/me.qii404.another-redis-desktop-manager.plist",
+  ]
 end
