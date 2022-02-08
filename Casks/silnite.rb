@@ -10,7 +10,7 @@ cask "silnite" do
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?/(\d+)/(\d+)/silnite[._-]?v?(\d+(?:\.\d+)*)\.zip}i)
+    regex(%r{href=.*?/(\d+)/(\d+)/silnite[._-]?v?(\d+(?:\.\d+)*\w?)\.zip}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|
         "#{match[2]},#{match[0]}.#{match[1]}"
