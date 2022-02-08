@@ -19,8 +19,9 @@ cask "termius" do
 
   app "Termius.app"
 
+  uninstall delete: "/Library/Preferences/com.termius-dmg.mac.plist"
+
   zap trash: [
-    "/Library/Preferences/com.termius-dmg.mac.plist",
     "~/.termius",
     "~/Library/Application Support/Termius",
     "~/Library/Logs/Termius",
