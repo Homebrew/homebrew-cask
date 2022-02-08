@@ -1,6 +1,5 @@
 cask "libreoffice-language-pack" do
-  arch = Hardware::CPU.intel? ? "x86-64" : "aarch64"
-  folder = Hardware::CPU.intel? ? "x86_64" : "aarch64"
+  arch, folder = Hardware::CPU.intel? ? ["x86-64", "x86_64"] : ["aarch64", "aarch64"]
 
   version "7.3.0"
 
