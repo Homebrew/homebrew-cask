@@ -13,7 +13,5 @@ cask "tla-plus-toolbox" do
     strategy :github_latest
   end
 
-  conflicts_with cask: "homebrew/cask-versions/tla-plus-toolbox-nightly"
-
   app "TLA+ Toolbox.app"
 end
