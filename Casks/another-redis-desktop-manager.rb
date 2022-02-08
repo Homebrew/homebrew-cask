@@ -14,5 +14,15 @@ cask "another-redis-desktop-manager" do
   desc "Redis desktop manager"
   homepage "https://github.com/qishibo/AnotherRedisDesktopManager/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Another Redis Desktop Manager.app"
+
+  zap trash: [
+    "~/Library/Application Support/another-redis-desktop-manager",
+    "~/Library/Preferences/me.qii404.another-redis-desktop-manager.plist",
+  ]
 end
