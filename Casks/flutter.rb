@@ -17,4 +17,6 @@ cask "flutter" do
 
   binary "flutter/bin/dart"
   binary "flutter/bin/flutter"
+
+  zap trash: "~/.flutter"
 end
