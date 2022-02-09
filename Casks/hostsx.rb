@@ -1,4 +1,4 @@
-cask "hoststool" do
+cask "hostsx" do
   version "2.8.0"
   sha256 "20f87eca89f92957e9d35c1854318659998a5663038162778016d9e2d581a07d"
 
