@@ -5,6 +5,7 @@ cask "growlnotify" do
   url "https://growl.cachefly.net/GrowlNotify-#{version}.zip",
       verified: "growl.cachefly.net/"
   name "GrowlNotify"
+  desc "Notification system"
   homepage "https://growl.github.io/growl/"
 
   pkg "GrowlNotify.pkg"
