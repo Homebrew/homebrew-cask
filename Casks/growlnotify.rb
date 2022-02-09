@@ -11,4 +11,8 @@ cask "growlnotify" do
   pkg "GrowlNotify.pkg"
 
   uninstall pkgutil: "info.growl.growlnotify.*pkg"
+
+  caveats do
+    discontinued
+  end
 end
