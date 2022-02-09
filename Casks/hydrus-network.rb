@@ -11,7 +11,7 @@ cask "hydrus-network" do
   livecheck do
     url :url
     strategy :github_latest
-    regex(%r{href=.*?/v?(\d+(?:\.\d+)*)/Hydrus[._-]Network}i)
+    regex(%r{href=.*?/tag/v?(\d+\h*)["' >]}i)
   end
 
   app "Hydrus Network.app"
