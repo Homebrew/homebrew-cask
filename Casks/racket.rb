@@ -16,8 +16,7 @@ cask "racket" do
 
   livecheck do
     url "https://download.racket-lang.org/all-versions.html"
-    strategy :page_match
-    regex(/racket-v?(\d+(?:\.\d+)+)/i)
+    regex(/racket[._-]v?(\d+(?:\.\d+)+)/i)
   end
 
   suite "Racket v#{version}"
