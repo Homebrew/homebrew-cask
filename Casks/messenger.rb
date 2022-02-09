@@ -1,6 +1,6 @@
 cask "messenger" do
-  version "138.6.115,348389716"
-  sha256 "7ed33d2378e18335436083ca50e57f421571c1ad196ef79da7037f51aeeb3f62"
+  version "139.5.116,348939139"
+  sha256 "bdc2ecc811eb2620dd448d835f80f891418d5eaa2d76d9e0c96acce36e2726f2"
 
   url "https://www.facebook.com/messenger/desktop/update/#{version.csv.second}.zip",
       verified: "facebook.com/messenger/desktop/"
