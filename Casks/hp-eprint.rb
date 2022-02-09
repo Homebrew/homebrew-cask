@@ -15,4 +15,8 @@ cask "hp-eprint" do
     "~/Library/Containers/com.hp.cloudprint.HP-ePrint-Mobile",
     "~/Library/PDF Services/HP ePrint",
   ]
+
+  caveats do
+    discontinued
+  end
 end
