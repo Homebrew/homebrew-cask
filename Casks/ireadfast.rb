@@ -12,5 +12,7 @@ cask "ireadfast" do
     regex(%r{href=.*?/iReadFast\s*v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
+  depends_on macos: "<= :mojave"
+
   app "iReadFast.app"
 end
