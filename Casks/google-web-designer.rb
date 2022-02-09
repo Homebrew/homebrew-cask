@@ -1,5 +1,5 @@
 cask "google-web-designer" do
-  version "9.0.7.0"
+  version "9.0.8.0"
   sha256 :no_check
 
   url "https://dl.google.com/webdesigner/mac/shell/googlewebdesigner_mac.dmg"
