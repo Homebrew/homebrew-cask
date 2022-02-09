@@ -6,6 +6,8 @@ cask "ireadfast" do
   name "iReadFast"
   desc "Speed reading program"
   homepage "https://www.gengis.net/prodotti/iReadFast_Mac/en/index.php"
+  
+  depends_on macos: "<= :mojave"
 
   livecheck do
     url :homepage
