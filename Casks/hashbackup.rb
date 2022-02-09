@@ -3,7 +3,7 @@ cask "hashbackup" do
   sha256 "6082314b56598497878712e63968d612320536bfd754451c7f431a62e379cf88"
 
   url "http://upgrade.hashbackup.com/#{version}/hb.r#{version}.Darwin.x86_64.bz2"
-  name "hashbackup"
+  name "HashBackup"
   desc "Command-line backup program"
   homepage "https://www.hashbackup.com/hashbackup/index.html"
 
