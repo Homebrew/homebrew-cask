@@ -2,10 +2,10 @@ cask "hoststool" do
   version "2.7.0"
   sha256 "52a8c777210dff249e5d37c839ec711910e3c87f68dfe127cb0b9b4719736782"
 
-  url "https://github.com/ZzzM/HostsToolforMac/releases/download/#{version}/HostsToolForMac.zip"
+  url "https://github.com/ZzzM/HostsX/releases/download/#{version}/HostsToolForMac.zip"
   name "Hosts tool for Mac"
   desc "Local hosts update tool"
-  homepage "https://github.com/ZzzM/HostsToolforMac/"
+  homepage "https://github.com/ZzzM/HostsX"
 
   depends_on macos: ">= :sierra"
 
