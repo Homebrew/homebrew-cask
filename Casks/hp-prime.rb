@@ -4,6 +4,7 @@ cask "hp-prime" do
 
   url "https://ftp.hp.com/pub/calculators/Prime/HP_Prime_Virtual_Calculator_#{version}.dmg"
   name "HP Prime"
+  desc "Graphing calculator emulator"
   homepage "https://www8.hp.com/us/en/campaigns/prime-graphing-calculator/overview.html"
 
   app "HP Prime.app"
