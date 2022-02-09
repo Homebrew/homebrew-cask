@@ -7,6 +7,11 @@ cask "hiddenbar" do
   desc "Utility to hide menu bar items"
   homepage "https://github.com/dwarvesf/hidden/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :high_sierra"
 
   app "Hidden Bar.app"
