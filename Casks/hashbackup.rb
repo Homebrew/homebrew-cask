@@ -8,8 +8,8 @@ cask "hashbackup" do
   homepage "https://www.hashbackup.com/hashbackup/index.html"
 
   livecheck do
-    url "http://www.hashbackup.com/changelog"
-    regex(/>\s*#(\d+)\s+[a-z]+\s*\d{1,2},\s*\d{4}/i)
+    url "https://www.hashbackup.com/hashbackup/releases.html"
+    regex(/>\s*#(\d+)\s+[a-z]+\s*\d{1,2},\s*\d{4}\s*</i)
   end
 
   binary "hb.r#{version}.Darwin.x86_64", target: "hb"
