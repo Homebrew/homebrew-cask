@@ -5,7 +5,7 @@ cask "hashbackup" do
   url "http://upgrade.hashbackup.com/#{version}/hb.r#{version}.Darwin.x86_64.bz2"
   name "hashbackup"
   desc "Command-line backup program"
-  homepage "https://www.hashbackup.com/"
+  homepage "https://www.hashbackup.com/hashbackup/index.html"
 
   livecheck do
     url "http://www.hashbackup.com/changelog"
