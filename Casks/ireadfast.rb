@@ -7,12 +7,12 @@ cask "ireadfast" do
   desc "Speed reading program"
   homepage "https://www.gengis.net/prodotti/iReadFast_Mac/en/index.php"
   
-  depends_on macos: "<= :mojave"
-
   livecheck do
     url :homepage
     regex(%r{href=.*?/iReadFast\s*v?(\d+(?:\.\d+)+)\.dmg}i)
   end
+  
+  depends_on macos: "<= :mojave"
 
   app "iReadFast.app"
 end
