@@ -4,7 +4,7 @@ cask "parallels-access" do
 
   url "https://download.parallels.com/pmobile/v#{version.major}/#{version}/ParallelsAccess-#{version}-mac.dmg"
   name "Parallels Access"
-  desc "The fastest, simplest, most reliable remote access to your computer from anywhere. Access all your applications, files, and computers in one place."
+  desc "The simplest remote access to your computer from anywhere"
   homepage "https://www.parallels.com/products/access/"
 
   livecheck do
