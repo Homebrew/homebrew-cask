@@ -25,6 +25,7 @@ cask "parallels-access" do
     "com.parallels.mobile.dispatcher.launchdaemon",
     "com.parallels.mobile.kextloader.launchdaemon",
     "com.parallels.mobile.prl_deskctl_agent.launchagent",
+    "com.parallels.mobile.audioloader",
   ],
             quit:      [
               "com.parallels.inputmethod.ParallelsIM",
@@ -46,4 +47,8 @@ cask "parallels-access" do
     "~/Library/Preferences/com.parallels.Parallels Access.plist.sdb",
     "~/Library/Preferences/com.parallels.mobile.plist",
   ]
+
+  livecheck do
+    skip "No version information available"
+  end
 end
