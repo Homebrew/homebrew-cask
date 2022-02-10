@@ -1,4 +1,4 @@
-cask "dotnet" do
+cask "dotnet-runtime" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
   if Hardware::CPU.intel?
@@ -27,7 +27,7 @@ cask "dotnet" do
 
   conflicts_with cask: [
     "dotnet-sdk",
-    "homebrew/cask-versions/dotnet-preview",
+    "homebrew/cask-versions/dotnet-runtime-preview",
     "homebrew/cask-versions/dotnet-sdk-preview",
   ], formula: "dotnet"
   depends_on macos: ">= :mojave"
