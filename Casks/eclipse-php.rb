@@ -20,4 +20,9 @@ cask "eclipse-php" do
 
   # Renamed to avoid conflict with other Eclipse.
   app "Eclipse.app", target: "Eclipse PHP.app"
+
+  zap trash: [
+    "~/Library/Preferences/org.eclipse.platform.ide.plist",
+    "~/Library/Saved Application State/org.eclipse.platform.ide.savedState",
+  ]
 end
