@@ -11,7 +11,9 @@ cask "parallels-access" do
     skip "No version information available"
   end
 
-  container type: :dmg
+  # This .dmg cannot be extracted normally
+  # Original discussion: https://github.com/Homebrew/homebrew-cask/issues/26872
+  container type: :naked
 
   preflight do
     system_command "/usr/bin/hdiutil",
