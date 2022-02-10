@@ -22,5 +22,9 @@ cask "blockbench" do
 
   app "Blockbench.app"
 
-  zap trash: "~/Library/Application Support/Blockbench"
+  zap trash: [
+    "~/Library/Application Support/Blockbench",
+    "~/Library/Preferences/blockbench.plist",
+    "~/Library/Saved Application State/blockbench.savedState",
+  ]
 end
