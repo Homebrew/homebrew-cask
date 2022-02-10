@@ -1,16 +1,15 @@
 cask "wireshark" do
-  url_arch = Hardware::CPU.intel? ? "Intel" : "Arm"
-  livecheck_arch = Hardware::CPU.intel? ? "x86-" : "arm"
+  url_arch, livecheck_arch = Hardware::CPU.intel? ? ["Intel", "x86-"] : ["Arm", "arm"]
 
-  version "3.6.1"
+  version "3.6.2"
 
-  url "https://2.na.dl.wireshark.org/osx/Wireshark%20#{version}%20#{url_arch}%2064.dmg"
   if Hardware::CPU.intel?
-    sha256 "f348d9fc1f67f4bf75aef3c45aca864dfc9b43cac488b86af8a7b85c671eb46e"
+    sha256 "7d434803ca73a4282b1e52b77510d176063b609eda98dfa3ddb30c963cf616e3"
   else
-    sha256 "878bd09f9bfb6e058e37020902eea92d3111480b4db3114357219042ff126fde"
+    sha256 "3835b6942192675ed3173c4f5fa2bf144c5f6792b3624b140ab9525ca362b17e"
   end
 
+  url "https://2.na.dl.wireshark.org/osx/Wireshark%20#{version}%20#{url_arch}%2064.dmg"
   name "Wireshark"
   desc "Network protocol analyzer"
   homepage "https://www.wireshark.org/"
