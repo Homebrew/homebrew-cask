@@ -1,12 +1,12 @@
 cask "burp-suite-professional" do
   arch = Hardware::CPU.intel? ? "MacOsx" : "MacOsArm64"
 
-  version "2021.12.1"
+  version "2022.1.1"
 
   if Hardware::CPU.intel?
-    sha256 "f555221aeea3ed6ce2b2377cc997b352c4f4614fe897baeb1c9518a6bdd641a9"
+    sha256 "57eb7e76d598572d7edc178c035850077802fad16aa76422c919eab3f9391e90"
   else
-    sha256 "fe96d42f185372ca9e7ff1881705dce91a5b59a33de2e0ff7481734b9d42d4e7"
+    sha256 "85c8f6156fcf91c31d695d16daacda8a458cc2e6ac5196158154fc99b6b3dc3d"
   end
 
   url "https://portswigger.net/burp/releases/download?product=pro&version=#{version}&type=#{arch}"
