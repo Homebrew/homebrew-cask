@@ -20,11 +20,11 @@ cask "imgotv" do
   app "芒果TV.app"
 
   zap trash: [
-    "~/Library/Preferences/com.hunantv.osx.imgotv.plist",
     "~/Library/Caches/com.hunantv.LaunchAtLoginHelper",
-    "~/Library/Saved Application State/com.hunantv.osx.imgotv.savedState",
     "~/Library/Caches/com.hunantv.osx.imgotv",
     "~/Library/Caches/Imgotv-Mac",
     "~/Library/Logs/Imgotv-Mac",
+    "~/Library/Preferences/com.hunantv.osx.imgotv.plist",
+    "~/Library/Saved Application State/com.hunantv.osx.imgotv.savedState",
   ]
 end
