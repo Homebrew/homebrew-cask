@@ -4,11 +4,14 @@ cask "parallels-access" do
 
   url "https://download.parallels.com/pmobile/v#{version.major}/#{version}/ParallelsAccess-#{version}-mac.dmg"
   name "Parallels Access"
+  desc "The fastest, simplest, most reliable remote access to your computer from anywhere. Access all your applications, files, and computers in one place."
   homepage "https://www.parallels.com/products/access/"
 
-  # This .dmg cannot be extracted normally
-  # Original discussion: https://github.com/Homebrew/homebrew-cask/issues/26872
-  container type: :naked
+  livecheck do
+    skip "No version information available"
+  end
+
+  container type: :dmg
 
   preflight do
     system_command "/usr/bin/hdiutil",
@@ -47,8 +50,4 @@ cask "parallels-access" do
     "~/Library/Preferences/com.parallels.Parallels Access.plist.sdb",
     "~/Library/Preferences/com.parallels.mobile.plist",
   ]
-
-  livecheck do
-    skip "No version information available"
-  end
 end
