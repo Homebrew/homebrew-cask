@@ -24,7 +24,7 @@ cask "paraview" do
   depends_on macos: ">= :sierra"
 
   app "ParaView-#{version}.app"
-  binary "#{appdir}/Paraview-#{version}.app/Contents/MacOS/paraview"
+  binary "#{appdir}/ParaView-#{version}.app/Contents/MacOS/paraview"
 
   zap trash: [
     "~/.config/ParaView",
