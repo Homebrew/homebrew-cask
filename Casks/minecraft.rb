@@ -12,6 +12,8 @@ cask "minecraft" do
     url :url
     strategy :extract_plist
   end
+  
+  auto_updates true
 
   app "Minecraft.app"
 
