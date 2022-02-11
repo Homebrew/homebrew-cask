@@ -1,6 +1,6 @@
 cask "parallels-access" do
-  version "5.5.0-36378"
-  sha256 "8a7e85adae4b9402fb413557c9e6f0913d8cf02f81ac286d0bc846ac17ad1e07"
+  version "7.0.0-39895"
+  sha256 "c80dae90a90aea8fd1ec81da914c8b4258e33ff5d49f1d381b58eed130e4f91e"
 
   url "https://download.parallels.com/pmobile/v#{version.major}/#{version}/ParallelsAccess-#{version}-mac.dmg"
   name "Parallels Access"
