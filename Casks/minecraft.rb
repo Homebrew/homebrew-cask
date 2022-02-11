@@ -13,6 +13,8 @@ cask "minecraft" do
     strategy :extract_plist
   end
 
+  auto_updates true
+
   app "Minecraft.app"
 
   zap trash: [
