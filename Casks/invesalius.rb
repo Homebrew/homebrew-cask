@@ -1,6 +1,6 @@
 cask "invesalius" do
-  version "3.1.99996"
-  sha256 "dac9b2ad8875b04862d0945906892b163ca3fbf9923138cb180aae181c7a2cab"
+  version "3.1.99997"
+  sha256 "11399491620b9a2084b1ad9b078df627698908545f6de1fb744e78a5ff7c9cd5"
 
   url "https://github.com/invesalius/invesalius3/releases/download/v#{version}/InVesalius.#{version}.dmg"
   name "InVesalius"
