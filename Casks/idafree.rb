@@ -4,9 +4,9 @@ cask "idafree" do
   version "7.7"
 
   if Hardware::CPU.intel?
-    sha256 "1141a984567f3eab8bda2b372a15d03757fa06919f67e007e1a948d52acc8377"
+    sha256 "75f623b3f438aac5d5207fc48fee14db262db6dcf0393d3f636d1117f480f337"
   else
-    sha256 "161b7ef7b7415e03dd95e401c32173b6711074b632d46de8a89115999ecd83a6"
+    sha256 "1594c4dc719d888d4c1cb5da5faf45793d5923b5a8830346ed785f4abab0cc2b"
   end
 
   url "https://out7.hex-rays.com/files/#{arch}#{version.no_dots}_mac.app.zip"
