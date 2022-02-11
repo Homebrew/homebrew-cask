@@ -1,5 +1,5 @@
 cask "parallels-access" do
-  version "7.0.0,39895"
+  version "7.0.0-39895"
   sha256 "c80dae90a90aea8fd1ec81da914c8b4258e33ff5d49f1d381b58eed130e4f91e"
 
   url "https://download.parallels.com/pmobile/v#{version.major}/#{version}/ParallelsAccess-#{version}-mac.dmg"
@@ -15,7 +15,7 @@ cask "parallels-access" do
       match = page.match(/href=.*?ParallelsAccess-(\d+(?:\.\d+)*)-(\d+).*-mac\.dmg/)
       next if match.blank?
 
-      "#{match[1]},#{match[2]}"
+      "#{match[1]}-#{match[2]}"
     end
   end
 
