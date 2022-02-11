@@ -15,6 +15,7 @@ cask "intel-psxe-ce-c-plus-plus" do
   }
 
   caveats do
+    discontinued
     license "https://software.intel.com/en-us/articles/end-user-license-agreement"
     free_license "https://software.intel.com/en-us/articles/qualify-for-free-software"
   end
