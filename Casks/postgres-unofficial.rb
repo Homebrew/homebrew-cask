@@ -1,8 +1,8 @@
 cask "postgres-unofficial" do
-  version "2.5.2"
-  sha256 "e5514489872776b1c2eeedbd210c481d51ef27f8f7551353a761b245a977a612"
+  version "2.5.6"
+  sha256 "0ee8211d5e5e5475f6c1e1ae3989d20424bc245c3936713f5f83086ef88d2067"
 
-  url "https://github.com/PostgresApp/PostgresApp/releases/download/v#{version}/Postgres-#{version}-9.6-10-11-12-13-14.dmg",
+  url "https://github.com/PostgresApp/PostgresApp/releases/download/v#{version}/Postgres-#{version}-10-11-12-13-14.dmg",
       verified: "github.com/PostgresApp/PostgresApp/"
   name "Postgres"
   desc "App wrapper for Postgres"
