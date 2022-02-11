@@ -25,6 +25,7 @@ cask "parallels-access" do
     "com.parallels.mobile.dispatcher.launchdaemon",
     "com.parallels.mobile.kextloader.launchdaemon",
     "com.parallels.mobile.prl_deskctl_agent.launchagent",
+    "com.parallels.mobile.audioloader",
   ],
             quit:      [
               "com.parallels.inputmethod.ParallelsIM",
