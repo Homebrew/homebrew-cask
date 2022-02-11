@@ -1,6 +1,6 @@
 cask "the-watcher" do
-  version "1.1"
-  sha256 "c4db80b6f1daeeded41e1f1955ee6e5bb47a6ad38cdb91aff2b5e443986ef270"
+  version "1.2"
+  sha256 "39b4a67b321fe34deae95c7c71eab062e4486b2572605752cf668f48e9f0af81"
 
   url "https://watcher.app/downloads/TheWatcher_v#{version}.zip"
   name "The Watcher"
