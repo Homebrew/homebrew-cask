@@ -9,8 +9,7 @@ cask "spamsieve" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/SpamSieve-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/SpamSieve[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "SpamSieve.app"
