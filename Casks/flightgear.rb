@@ -10,7 +10,7 @@ cask "flightgear" do
 
   livecheck do
     url "https://www.flightgear.org/download/"
-    regex(/FlightGear[._-]?(\d+(?:\.\d+)*)\.dmg/i)
+    regex(/FlightGear[._-]?v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "FlightGear.app"
