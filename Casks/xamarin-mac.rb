@@ -12,7 +12,7 @@ cask "xamarin-mac" do
     regex(%r{/xamarin\.mac[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
   end
 
-  depends_on cask: "homebrew/cask-versions/mono-mdk-for-visual-studio"
+  depends_on cask: "homebrew/cask/mono-mdk"
 
   pkg "xamarin.mac-#{version}.pkg"
 
