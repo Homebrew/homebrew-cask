@@ -8,7 +8,9 @@ cask "parallels-access" do
   homepage "https://www.parallels.com/products/access/"
 
   livecheck do
-    skip "No version information available"
+    url "https://www.parallels.com/products/access/download/"
+    strategy :page_match
+    regex(%r{href=.*?/ParallelsAccess-(\d+(?:\.\d+)*)-mac\.dmg}i)
   end
 
   # This .dmg cannot be extracted normally
