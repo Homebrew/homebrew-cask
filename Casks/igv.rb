@@ -9,7 +9,7 @@ cask "igv" do
 
   livecheck do
     url "https://software.broadinstitute.org/software/igv/download"
-    regex(%r{href=.*?/IGV[._-]MacApp[._-]v?(\d+(?:\.\d+)+)\.zip}i)
+    regex(/href=.*?IGV[._-]MacApp[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
   app "IGV_#{version}.app"
