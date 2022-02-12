@@ -4,13 +4,13 @@ cask "psychopy" do
 
   url "https://github.com/psychopy/psychopy/releases/download/#{version.major_minor_patch}/StandalonePsychoPy-#{version}-macOS.dmg"
   name "PsychoPy"
-  desc "For running psychology and neuroscience experiments"
+  desc "Create experiments in behavioral science"
   homepage "https://github.com/psychopy/psychopy"
 
   livecheck do
     url :url
     strategy :github_latest
-    regex(%r{href=.+/StandalonePsychoPy-v?(\d+(?:\.\d+)*)-macOS\.dmg}i)
+    regex(%r{href=.+/StandalonePsychoPy[._-]v?(\d+(?:\.\d+)+)[._-]macOS\.dmg}i)
   end
 
   app "PsychoPy.app"
