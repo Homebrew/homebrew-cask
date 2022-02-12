@@ -17,5 +17,5 @@ cask "blu-ray-player-pro" do
     end
   end
 
-  app "Blu-ray Player Pro.app"
+  app "Mac Blu-ray Player PRO.app"
 end
