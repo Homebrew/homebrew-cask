@@ -22,3 +22,10 @@ cask "lightproxy" do
     end
   end
 end
+
+  zap trash: [
+    "~/Library/Application Support/LightProxy",
+    "~/Library/Logs/LightProxy",
+    "~/Library/Preferences/org.lightproxy.plist",
+    "~/Library/Saved Application State/org.lightproxy.savedState",
+  ]
