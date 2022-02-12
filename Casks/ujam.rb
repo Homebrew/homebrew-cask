@@ -9,7 +9,7 @@ cask "ujam" do
 
   livecheck do
     url "https://software.ujam.com/ujamapp/latest-mac.yml"
-    regex(/version:\s+(\d+(?:\.\d+)+)/i)
+    strategy :electron_builder
   end
 
   app "UJAM.app"
