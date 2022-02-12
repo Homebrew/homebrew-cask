@@ -11,7 +11,7 @@ cask "vimr" do
   livecheck do
     url "https://github.com/qvacua/vimr/releases/latest"
     strategy :page_match do |page|
-      match = page.match(/v?(\d+(?:\.\d+)+)[._-](\d+(?:\.\d+)*)/i)
+      match = page.match(/v?(\d+(?:\.\d+)+)[._-](\d+(?:\.\d+)+)/i)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
@@ -26,8 +26,8 @@ cask "vimr" do
 
   zap trash: [
     "~/Library/Caches/com.qvacua.VimR",
-    "~/Library/Preferences/com.qvacua.VimR.plist",
     "~/Library/Preferences/com.qvacua.VimR.menuitems.plist",
+    "~/Library/Preferences/com.qvacua.VimR.plist",
     "~/Library/Saved Application State/com.qvacua.VimR.savedState",
     "~/Library/WebKit/com.qvacua.VimR",
   ]
