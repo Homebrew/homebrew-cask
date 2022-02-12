@@ -17,10 +17,10 @@ cask "tex-live-utility" do
   app "TeX Live Utility.app"
 
   zap trash: [
-    "~/Library/Caches/com.googlecode.mactlmgr.tlu",
     "~/Library/Application Support/TeX Live Utility",
+    "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/TeX Live Utility Help*",
+    "~/Library/Caches/com.googlecode.mactlmgr.tlu",
     "~/Library/Preferences/com.googlecode.mactlmgr.tlu.plist",
     "~/Library/Saved Application State/com.googlecode.mactlmgr.tlu.savedState",
-    "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/TeX Live Utility Help*",
   ]
 end
