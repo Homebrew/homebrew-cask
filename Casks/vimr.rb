@@ -1,6 +1,6 @@
 cask "vimr" do
-  version "0.36.0,20220102.161018"
-  sha256 "b1361cd3b811b04702f924cdd1bca571778c56180b44c18d5a12b5e6d21a207f"
+  version "0.36.1,20220212.162106"
+  sha256 "0d899cdacdb0f40e8eebe962860c35a0238ee38a8d7105bb4d74614583c3f254"
 
   url "https://github.com/qvacua/vimr/releases/download/v#{version.csv.first}-#{version.csv.second}/VimR-v#{version.csv.first}.tar.bz2",
       verified: "github.com/qvacua/vimr/"
@@ -11,7 +11,7 @@ cask "vimr" do
   livecheck do
     url "https://github.com/qvacua/vimr/releases/latest"
     strategy :page_match do |page|
-      match = page.match(/v?(\d+(?:\.\d+)+)[._-](\d+(?:\.\d+)*)/i)
+      match = page.match(/v?(\d+(?:\.\d+)+)[._-](\d+(?:\.\d+)+)/i)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
@@ -26,8 +26,8 @@ cask "vimr" do
 
   zap trash: [
     "~/Library/Caches/com.qvacua.VimR",
-    "~/Library/Preferences/com.qvacua.VimR.plist",
     "~/Library/Preferences/com.qvacua.VimR.menuitems.plist",
+    "~/Library/Preferences/com.qvacua.VimR.plist",
     "~/Library/Saved Application State/com.qvacua.VimR.savedState",
     "~/Library/WebKit/com.qvacua.VimR",
   ]
