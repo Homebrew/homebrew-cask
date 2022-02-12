@@ -10,7 +10,7 @@ cask "wiznote" do
   end
 
   url "https://wizteam-generic.pkg.coding.net/client/wiznote-autoupdate/wiznote-desktop-#{version}-mac-#{arch}.dmg",
-      verified: "wizteam-generic.pkg.coding.net/"
+      verified: "wizteam-generic.pkg.coding.net/client/wiznote-autoupdate/"
   name "WizNote"
   desc "Note-taking application"
   homepage "https://www.wiz.cn/"
@@ -18,7 +18,7 @@ cask "wiznote" do
   livecheck do
     url "https://url.wiz.cn/u/mac64_new"
     strategy :header_match
-    regex(/wiznote-desktop-(\d+(?:\.\d+)*)-mac-x64.dmg/i)
+    regex(/wiznote[._-]desktop[._-]?(\d+(?:\.\d+)+)[._-]mac[._-]#{arch}.dmg/i)
   end
 
   auto_updates true
