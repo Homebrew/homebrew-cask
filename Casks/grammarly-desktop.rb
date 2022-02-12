@@ -1,5 +1,5 @@
 cask "grammarly-desktop" do
-  version "1.0.3.1"
+  version "1.0.4.1"
   sha256 :no_check
 
   url "https://download-mac.grammarly.com/Grammarly.dmg"
