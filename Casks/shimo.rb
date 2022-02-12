@@ -17,4 +17,11 @@ cask "shimo" do
   depends_on macos: ">= :high_sierra"
 
   app "Shimo.app"
+
+  zap trash: [
+    "~/Library/Application Support/Shimo",
+    "~/Library/Caches/com.feingeist.Shimo",
+    "~/Library/HTTPStorages/com.feingeist.Shimo.binarycookies",
+    "~/Library/Preferences/com.feingeist.Shimo.plist",
+  ]
 end
