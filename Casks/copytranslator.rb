@@ -18,4 +18,11 @@ cask "copytranslator" do
   depends_on macos: ">= :sierra"
 
   app "copytranslator.app"
+
+  zap trash: [
+    "~/Library/Application Support/copytranslator",
+    "~/Library/Preferences/com.copytranslator.copytranslator.plist",
+    "~/Library/Saved Application State/com.copytranslator.copytranslator.savedState",
+    "~/copytranslator",
+  ]
 end
