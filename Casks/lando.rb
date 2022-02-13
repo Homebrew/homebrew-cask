@@ -37,4 +37,6 @@ cask "lando" do
       ]
 
   uninstall pkgutil: "dev.lando.pkg.lando"
+
+  # No zap stanza required
 end
