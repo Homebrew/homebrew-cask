@@ -13,4 +13,6 @@ cask "dcp-o-matic" do
   end
 
   app "DCP-o-matic #{version.major}.app"
+
+  # No zap stanza required
 end
