@@ -12,6 +12,9 @@ cask "8bitdo-ultimate-software" do
     strategy :sparkle
   end
 
+  auto_updates true
+  depends_on macos: ">= :high_sierra"
+
   app "8BitDo Ultimate Software.app"
 
   zap trash: [
