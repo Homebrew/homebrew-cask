@@ -1,10 +1,10 @@
 cask "ddnet" do
-  version "15.8.1"
-  sha256 "bb80f5823307c9dccb59ff50b25646bb5516749e3337fc54d8f5767661a5f106"
+  version "15.9"
+  sha256 "17d734def39c82340c9798cde5feccd52be38953e541115a17377385de4aa981"
 
   url "https://ddnet.tw/downloads/DDNet-#{version}-macos.dmg"
   name "DDNet"
-  desc "Teeworlds version of DDRace"
+  desc "Cooperative online platform game based on Teeworlds"
   homepage "https://ddnet.tw/"
 
   livecheck do
