@@ -13,4 +13,9 @@ cask "jalview" do
   end
 
   app "Jalview.app"
+
+  zap trash: [
+    "~/.jalview_properties",
+    "~/Library/Saved Application State/org.jalview.jalview-desktop.savedState",
+  ]
 end
