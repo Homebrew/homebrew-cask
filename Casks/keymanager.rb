@@ -7,5 +7,10 @@ cask "keymanager" do
   name "KeyManager"
   homepage "https://keymanager.org/"
 
+  livecheck do
+    url "https://keymanager.org/release/latest.yml"
+    strategy :electron_builder
+  end
+
   app "KeyManager.app"
 end
