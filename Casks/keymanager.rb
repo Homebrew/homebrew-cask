@@ -5,6 +5,7 @@ cask "keymanager" do
   url "https://keymanager.trustasia.com/release/KeyManager-#{version}.dmg",
       verified: "keymanager.trustasia.com/"
   name "KeyManager"
+  desc "Certificate manager"
   homepage "https://keymanager.org/"
 
   livecheck do
