@@ -1,6 +1,6 @@
 cask "sequel-ace" do
-  version "3.4.5,20025"
-  sha256 "7afeef6e1a8c4f2229d3de96d0938408b86f216b477e9af77916bac1df571b1f"
+  version "3.5.0,20029"
+  sha256 "28d60b5978a3eaa1f5ed8afb035daa3d33da46a57232665ee779d46103b14c0f"
 
   url "https://github.com/Sequel-Ace/Sequel-Ace/releases/download/production/#{version.csv.first}-#{version.csv.second}/Sequel-Ace-#{version.csv.first}.zip"
   name "Sequel Ace"
