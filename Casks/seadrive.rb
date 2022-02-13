@@ -15,5 +15,5 @@ cask "seadrive" do
 
   depends_on macos: ">= :high_sierra"
 
-  app "Seadrive.app"
+  app "SeaDrive.app"
 end
