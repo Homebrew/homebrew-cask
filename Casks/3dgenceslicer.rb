@@ -1,6 +1,6 @@
 cask "3dgenceslicer" do
-  version "3.0.1,4.0"
-  sha256 "8f062252c1414adfb930d78286d1ed6f17f0d629f930433680dd79d807267335"
+  version "3.1.1,4.0"
+  sha256 "53f5e56af69d969cd4aec5360c6846857ab95d93e8d7326322ab8b372122a20c"
 
   url "https://cloud.3dgence.com/downloads/slicer/3DGence%20Slicer%20#{version.csv.second}%20(v.#{version.csv.first}).dmg"
   name "3DGence Slicer"
