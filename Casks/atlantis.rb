@@ -13,4 +13,9 @@ cask "atlantis" do
   end
 
   app "Atlantis.app"
+
+  zap trash: [
+    "~/Library/Application Support/Atlantis",
+    "~/Library/Preferences/net.riverdark.Atlantis.plist",
+  ]
 end
