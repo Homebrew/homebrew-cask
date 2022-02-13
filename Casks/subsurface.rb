@@ -22,4 +22,10 @@ cask "subsurface" do
   end
 
   app "Subsurface.app"
+
+  zap trash: [
+    "~/Library/Application Support/Subsurface",
+    "~/Library/Caches/Subsurface",
+    "~/Library/Preferences/org.hohndel.subsurface.Subsurface.plist",
+  ]
 end
