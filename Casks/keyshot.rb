@@ -4,6 +4,7 @@ cask "keyshot" do
 
   url "https://download.keyshot.com/keyshot#{version.major}/keyshot_mac64_#{version}.pkg"
   name "KeyShot"
+  desc "Real-time 3D rendering"
   homepage "https://www.keyshot.com/"
 
   depends_on macos: ">= :sierra"
