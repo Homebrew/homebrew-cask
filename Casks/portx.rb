@@ -6,7 +6,7 @@ cask "portx" do
       verified: "cdn.netsarang.net/"
   name "portx"
   desc "SSH Client"
-  homepage "https://portx.online"
+  homepage "https://portx.online/en/portx/"
 
   livecheck do
     url "https://cdn.netsarang.net/0ac7ea20/PortX-latest.dmg"
