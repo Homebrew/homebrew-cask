@@ -19,6 +19,7 @@ cask "mechvibes" do
     "~/Library/Application Support/Mechvibes",
     "~/Library/Preferences/com.electron.mechvibes.plist",
     "~/Library/Saved Application State/com.electron.mechvibes.savedState",
-    "~/mechvibes_custom",
+  ],
+      rmdir: "~/mechvibes_custom"
   ]
 end
