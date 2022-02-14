@@ -29,5 +29,4 @@ cask "copytranslator" do
     "~/copytranslator/styles.css",
   ],
       rmdir: "~/copytranslator/locales"
-  ]
 end
