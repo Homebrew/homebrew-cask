@@ -1,9 +1,16 @@
 cask "gitkraken" do
-  version "8.2.1"
-  sha256 "40269f91fd979c7347cbedddbe719bd224cd303c3c55842e76cea6273ef8696a"
+  arch = Hardware::CPU.intel? ? "darwin" : "darwin-arm64"
+  
+  version "8.3.0"
 
-  url "https://release.axocdn.com/darwin/GitKraken-v#{version}.zip",
-      verified: "release.axocdn.com/darwin/"
+  if Hardware::CPU.intel?
+    sha256 "f75a534683d4fd76493e3d942c7221b22a247178ae974cb482156c56477945d4"
+  else
+    sha256 "5877eb06db592692e0eb31a934273e7ad01f866f8a269d9d62931f22622b7d7d"
+  end
+
+  url "https://release.axocdn.com/#{arch}/GitKraken-v#{version}.zip",
+      verified: "release.axocdn.com/"
   name "GitKraken"
   desc "Git client focusing on productivity"
   homepage "https://www.gitkraken.com/"
