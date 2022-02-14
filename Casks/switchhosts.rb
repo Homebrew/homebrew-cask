@@ -1,11 +1,11 @@
 cask "switchhosts" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
-  version "4.1.0.6076"
+  version "4.1.1.6077"
 
   if Hardware::CPU.intel?
-    sha256 "ba0e47d5d255f610a578641306d6aa8f13797d2b8da86c3b04ca08cccd774886"
+    sha256 "c1997049a9721cedd9bedcf031f91c46b06b1abe502b34dc2408906df10c9b30"
   else
-    sha256 "f7360db875930fb4065970bbab274aea98218ce2d2c85c833cd42cd03a10bdc2"
+    sha256 "15dc0715559be2bb0d1252d27deba8fd1f23cb9be53a492b1da5e4bb4afa436d"
   end
 
   url "https://github.com/oldj/SwitchHosts/releases/download/v#{version.major_minor_patch}/SwitchHosts_mac_#{arch}_#{version}.dmg",
