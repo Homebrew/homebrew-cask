@@ -17,7 +17,7 @@ cask "fpc-laz" do
   end
 
   conflicts_with formula: "fpc"
-  
+
   pkg "fpc-#{version.csv.first}-intelarm64-macosx.mpkg/Contents/Packages/fpc-#{version.csv.first}-intelarm64-macosx.pkg"
 
   uninstall pkgutil: [
