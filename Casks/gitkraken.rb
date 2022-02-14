@@ -1,6 +1,6 @@
 cask "gitkraken" do
-  version "8.2.1"
-  sha256 "40269f91fd979c7347cbedddbe719bd224cd303c3c55842e76cea6273ef8696a"
+  version "8.3.0"
+  sha256 "f75a534683d4fd76493e3d942c7221b22a247178ae974cb482156c56477945d4"
 
   url "https://release.axocdn.com/darwin/GitKraken-v#{version}.zip",
       verified: "release.axocdn.com/darwin/"
