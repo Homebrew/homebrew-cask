@@ -1,6 +1,6 @@
 cask "gitkraken" do
   arch = Hardware::CPU.intel? ? "darwin" : "darwin-arm64"
-  
+
   version "8.3.0"
 
   if Hardware::CPU.intel?
@@ -40,9 +40,4 @@ cask "gitkraken" do
     "~/Library/Preferences/com.axosoft.gitkraken.plist",
     "~/Library/Saved Application State/com.axosoft.gitkraken.savedState",
   ]
-
-  caveats <<~EOS
-    Big Sur and later Performance Fix
-    See https://www.gitkraken.com/blog/workaround-gitkraken-big-sur-issues
-  EOS
 end
