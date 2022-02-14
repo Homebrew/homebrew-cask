@@ -21,7 +21,6 @@ cask "wine-stable" do
     "wine-devel",
     "wine-staging",
   ]
-  depends_on formula: "xz"
 
   app "Wine Stable.app"
   binary "#{appdir}/Wine Stable.app/Contents/Resources/start/bin/appdb"
