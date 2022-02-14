@@ -23,6 +23,11 @@ cask "copytranslator" do
     "~/Library/Application Support/copytranslator",
     "~/Library/Preferences/com.copytranslator.copytranslator.plist",
     "~/Library/Saved Application State/com.copytranslator.copytranslator.savedState",
-    "~/copytranslator",
+    "~/copytranslator/copytranslator.json",
+    "~/copytranslator/localShortcuts.json",
+    "~/copytranslator/shortcuts.json",
+    "~/copytranslator/styles.css",
+  ],
+      rmdir: "~/copytranslator/locales"
   ]
 end
