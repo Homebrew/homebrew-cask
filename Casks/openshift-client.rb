@@ -1,16 +1,12 @@
 cask "openshift-client" do
   version "4.9.21"
-  if Hardware::CPU.intel?
-    sha256 "583e18caa5377fc269a0d4889c3866ddb119947a1cfa8c1f5fcd3a442768f8cf"
-  else
-    sha256 ""
-  end
+  sha256 Hardware::CPU.intel? ? "583e18caa5377fc269a0d4889c3866ddb119947a1cfa8c1f5fcd3a442768f8cf" : ""
 
   arch = Hardware::CPU.intel? ? "" : "-arm64"
   url "https://mirror.openshift.com/pub/openshift-v4/clients/ocp/#{version}/openshift-client-mac#{arch}.tar.gz"
   name "openshift-client"
-  desc "The OpenShift Command Line, part of OKD"
-  homepage "https://www.openshift.com"
+  desc "OpenShift Command-line, part of OKD"
+  homepage "https://www.openshift.com/"
 
   livecheck do
     url "https://mirror.openshift.com/pub/openshift-v4/clients/ocp/"
