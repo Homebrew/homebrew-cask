@@ -1,10 +1,9 @@
 cask "leanote" do
-  version "2.6.2"
-  sha256 "2d24602efe3a31b63b6fc82b91f28be0bb6f1939f7c2bb23a7a8455b3ed24a54"
+  version "2.7.0"
+  sha256 "18c680dc9f3af54a0ef4edfa987407ed41bbd4654bc1791720cb40e0047b3da4"
 
-  url "https://downloads.sourceforge.net/leanote-desktop-app/#{version}/leanote-desktop-mac-v#{version}.zip",
-      verified: "sourceforge.net/leanote-desktop-app/"
-  appcast "https://sourceforge.net/projects/leanote-desktop-app/rss?path=/"
+  url "https://github.com/leanote/desktop-app/releases/download/v#{version}/leanote-desktop-mac-v#{version}.zip",
+      verified: "github.com/leanote/desktop-app/"
   name "Leanote"
   homepage "http://leanote.org/"
 
