@@ -7,6 +7,13 @@ cask "tresorit" do
   name "Tresorit"
   homepage "https://tresorit.com/"
 
+  livecheck do
+    url :url
+    strategy :header_match do |headers|
+      headers["x-ms-meta-version"]
+    end
+  end
+
   app "Tresorit.app"
 
   uninstall login_item: "Tresorit"
