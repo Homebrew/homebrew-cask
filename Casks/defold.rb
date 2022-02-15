@@ -1,6 +1,6 @@
 cask "defold" do
-  version "1.2.190"
-  sha256 "0a6ec5f1e27833253dba25b4029332bce9f1eb36a592b3b507705cf0912eddfb"
+  version "1.2.192"
+  sha256 "367b2415718591917db70a4d376e59b9362556c63b90a6caec4ceaf2f54307fb"
 
   url "https://github.com/defold/defold/releases/download/#{version}/Defold-x86_64-darwin.dmg",
       verified: "github.com/defold/defold/"
