@@ -10,7 +10,7 @@ cask "tower" do
   livecheck do
     url "https://www.git-tower.com/updates/tower3-mac/stable/releases/latest/download"
     strategy :header_match do |headers|
-      match = headers["location"].match(%r{(\d+(?:\.\d+)*)[._-]([a-z0-9]+)/Tower[._-](\d+(?:\.\d+)+)[._-](\d+(?:\.\d+)*)\.zip}i)
+      match = headers["location"].match(%r{(\d+(?:\.\d+)*)-([a-z0-9]+)/Tower-(\d+(?:\.\d+)+)-(\d+(?:\.\d+)*)\.zip}i)
       next if match.blank?
 
       "#{match[3]},#{match[1]},#{match[2]}"
