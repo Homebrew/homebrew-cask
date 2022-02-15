@@ -1,11 +1,10 @@
 cask "openshift-client" do
   version "4.9.21"
-  sha256 Hardware::CPU.intel? ? "583e18caa5377fc269a0d4889c3866ddb119947a1cfa8c1f5fcd3a442768f8cf" : ""
+  sha256 "583e18caa5377fc269a0d4889c3866ddb119947a1cfa8c1f5fcd3a442768f8cf"
 
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
-  url "https://mirror.openshift.com/pub/openshift-v4/clients/ocp/#{version}/openshift-client-mac#{arch}.tar.gz"
-  name "openshift-client"
-  desc "OpenShift Command-line, part of OKD"
+  url "https://mirror.openshift.com/pub/openshift-v4/clients/ocp/#{version}/openshift-client-mac.tar.gz"
+  name "Openshift Client"
+  desc "OpenShift Command-line client, part of OKD"
   homepage "https://www.openshift.com/"
 
   livecheck do
@@ -13,12 +12,12 @@ cask "openshift-client" do
     regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
-  auto_updates false
-
   binary "oc"
 
   caveats <<~EOS
-    In order to use the cli, the quarantine attribute needs to be removed. To do so, install this cask with:
+    This cli tool will not work with quarantine attributes.
+    To use this cask, install it with:
       brew install --cask --no-quarantine #{token}
+    WARNING: quarantining is a macOS security feature and you disable it at your own risk!
   EOS
 end
