@@ -5,6 +5,7 @@ cask "tresorit" do
   url "https://installerstorage.blob.core.windows.net/public/install/Tresorit.dmg",
       verified: "installerstorage.blob.core.windows.net/"
   name "Tresorit"
+  desc "Client for the Tresorit cloud storage service"
   homepage "https://tresorit.com/"
 
   livecheck do
