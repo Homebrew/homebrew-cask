@@ -8,6 +8,9 @@ cask "coteditor" do
   elsif MacOS.version <= :mojave
     version "3.9.7"
     sha256 "be34d4f800e73cc8363d8b83e1b257a06176dc85d345d680149b108f51686cf2"
+  elsif MacOS.version <= :catalina
+    version "4.0.9"
+    sha256 "969e891f4a36146c317150806fee01559d177f956734595c73537affc8897e79"
   else
     version "4.1.0"
     sha256 "134796c3515ccffade82e914e95d4b570709dbf581b9016ffbee72edf01f0ee0"
@@ -20,9 +23,13 @@ cask "coteditor" do
   homepage "https://coteditor.com/"
 
   livecheck do
-    url :url
-    strategy :github_latest
-    regex(%r{href=.*?/tag/v?(\d+(?:[.-]\d+)+)["' >]}i)
+    if MacOS.version >= :big_sur
+      url :url
+      regex(%r{href=.*?/tag/v?(\d+(?:[.-]\d+)+)["' >]}i)
+      strategy :github_latest
+    else
+      skip "version is static on older macOS releases"
+    end
   end
 
   auto_updates true
