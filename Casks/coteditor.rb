@@ -23,7 +23,7 @@ cask "coteditor" do
   homepage "https://coteditor.com/"
 
   livecheck do
-    if MacOS.version > :catalina
+    if MacOS.version >= :big_sur
       url :url
       regex(%r{href=.*?/tag/v?(\d+(?:[.-]\d+)+)["' >]}i)
       strategy :github_latest
