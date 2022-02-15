@@ -4,7 +4,7 @@ cask "openshift-client" do
 
   url "https://mirror.openshift.com/pub/openshift-v#{version.major}/clients/ocp/#{version}/openshift-client-mac.tar.gz"
   name "Openshift Client"
-  desc "OpenShift Command-line client, part of OKD"
+  desc "Red Hat OpenShift Container Platform command-line client"
   homepage "https://www.openshift.com/"
 
   livecheck do
