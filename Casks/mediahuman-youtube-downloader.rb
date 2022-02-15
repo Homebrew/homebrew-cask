@@ -12,5 +12,7 @@ cask "mediahuman-youtube-downloader" do
     regex(/Version:.*?(\d+(?:\.\d+)+)/i)
   end
 
+  auto_updates true
+
   app "MediaHuman YouTube Downloader.app"
 end
