@@ -23,9 +23,13 @@ cask "coteditor" do
   homepage "https://coteditor.com/"
 
   livecheck do
-    url :url
-    strategy :github_latest
-    regex(%r{href=.*?/tag/v?(\d+(?:[.-]\d+)+)["' >]}i)
+    if MacOS.version > :catalina
+      url :url
+      regex(%r{href=.*?/tag/v?(\d+(?:[.-]\d+)+)["' >]}i)
+      strategy :github_latest
+    else
+      skip "version is static on older macOS releases"
+    end
   end
 
   auto_updates true
