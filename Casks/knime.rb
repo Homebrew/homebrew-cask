@@ -4,10 +4,15 @@ cask "knime" do
 
   url "https://download.knime.org/analytics-platform/macosx/knime_#{version}.app.macosx.cocoa.x86_64.dmg",
       verified: "download.knime.org/analytics-platform/macosx/"
-  appcast "https://www.knime.com/downloads/download-knime"
   name "KNIME Analytics Platform"
   desc "Software to create and productionize data science"
   homepage "https://www.knime.com/"
+
+  livecheck do
+    url "https://download.knime.org/analytics-platform/macosx/knime-latest-app.macosx.cocoa.x86_64.dmg"
+    strategy :header_match
+    regex(/knime[._-]v?(\d+(?:\.\d+)+).*?\.dmg/i)
+  end
 
   depends_on macos: ">= :high_sierra"
 
