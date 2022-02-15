@@ -13,7 +13,7 @@ cask "unshaky" do
   app "Unshaky.app"
 
   zap trash: [
-    "Library/Caches/com.nestederror.Unshaky",
-    "Library/Preferences/com.nestederror.Unshaky.plist",
+    "~/Library/Caches/com.nestederror.Unshaky",
+    "~/Library/Preferences/com.nestederror.Unshaky.plist",
   ]
 end
