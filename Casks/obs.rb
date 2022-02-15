@@ -9,15 +9,16 @@ cask "obs" do
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?/obs-mac-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/obs[._-]mac[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   auto_updates true
 
   app "OBS.app"
 
+  uninstall delete: "/Library/CoreMediaIO/Plug-Ins/DAL/obs-mac-virtualcam.plugin"
+
   zap trash: [
-    "/Library/CoreMediaIO/Plug-Ins/DAL/obs-mac-virtualcam.plugin",
     "~/Library/Application Support/obs-studio",
     "~/Library/Preferences/com.obsproject.obs-studio.plist",
     "~/Library/Saved Application State/com.obsproject.obs-studio.savedState",
