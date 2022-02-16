@@ -12,6 +12,8 @@ cask "lyn" do
     strategy :sparkle
   end
 
+  depends_on macos: ">= :sierra"
+
   app "Lyn.app"
 
   zap trash: [
