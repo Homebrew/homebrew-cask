@@ -13,11 +13,4 @@ cask "openshift-client" do
   end
 
   binary "oc"
-
-  caveats <<~EOS
-    This cli tool will not work with quarantine attributes.
-    To use this cask, install it with:
-      brew install --cask --no-quarantine #{token}
-    WARNING: quarantining is a macOS security feature and you disable it at your own risk!
-  EOS
 end
