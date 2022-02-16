@@ -12,8 +12,8 @@ cask "coteditor" do
     version "4.0.9"
     sha256 "969e891f4a36146c317150806fee01559d177f956734595c73537affc8897e79"
   else
-    version "4.1.0"
-    sha256 "134796c3515ccffade82e914e95d4b570709dbf581b9016ffbee72edf01f0ee0"
+    version "4.1.1"
+    sha256 "dcac837d223e168471ad56fdf94445bdce08d1fcce601809c27bc127b865727d"
   end
 
   url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg",
