@@ -4,6 +4,7 @@ cask "lyn" do
 
   url "https://www.lynapp.com/downloads/Lyn-#{version}.dmg"
   name "Lyn"
+  desc "Media browser and viewer"
   homepage "https://www.lynapp.com/"
 
   livecheck do
