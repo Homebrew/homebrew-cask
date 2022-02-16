@@ -3,7 +3,7 @@ cask "appcleaner" do
     version "3.4"
     sha256 "0c60d929478c1c91e0bad76d3c04795665c07a05e45e33321db845429c9aefa8"
   else
-    version "3.6.0,4070"
+    version "3.6.3,4222"
     sha256 "812bcacd845fac07e073130d3fe4c5f037815d0774a9782e0e309fced1bded1c"
   end
 
