@@ -13,4 +13,10 @@ cask "thinlinc-client" do
   end
 
   app "ThinLinc Client.app"
+
+  # zap as discussed https://github.com/Homebrew/homebrew-cask/pull/119225#pullrequestreview-883188247
+  # it appears as thinlinc dosnt persist data anywhere else except saved state
+  zap trash: [
+    "~/.thinlinc",
+  ]
 end
