@@ -9,7 +9,7 @@ cask "thinlinc-client" do
 
   livecheck do
     url "https://www.cendio.com/thinlinc/download"
-    regex(/tl[._-]v?(\d+(?:.\d+)+)[._-]client[._-]macos\.iso/i)
+    regex(/tl[._-]v?(\d+(?:[._]\d+)+)[._-]client[._-]macos\.iso/i)
   end
 
   app "ThinLinc Client.app"
