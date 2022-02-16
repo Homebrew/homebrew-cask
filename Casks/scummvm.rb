@@ -1,6 +1,6 @@
 cask "scummvm" do
-  version "2.5.0"
-  sha256 "a0845f146681347fdbf907d77fd473295c73e9c9373a6ecb339021bb1abb51ee"
+  version "2.5.1"
+  sha256 "583226d08db6ca10b05f42c9c00625d6ee583ab4c80011e07428484c0a21cace"
 
   url "https://downloads.scummvm.org/frs/scummvm/#{version}/scummvm-#{version}-macosx.dmg"
   name "ScummVM"
@@ -9,8 +9,7 @@ cask "scummvm" do
 
   livecheck do
     url "https://www.scummvm.org/downloads/"
-    strategy :page_match
-    regex(%r{href=.*?/scummvm-(\d+(?:\.\d+)*)-macosx\.dmg}i)
+    regex(%r{href=.*?/scummvm-(\d+(?:\.\d+)+)-macosx\.dmg}i)
   end
 
   app "ScummVM.app"
@@ -19,8 +18,8 @@ cask "scummvm" do
     "~/Documents/ScummVM Savegames",
     "~/Library/Caches/org.scummvm.scummvm",
     "~/Library/Logs/scummvm.log",
-    "~/Library/Preferences/ScummVM Preferences",
     "~/Library/Preferences/org.scummvm.scummvm.plist",
+    "~/Library/Preferences/ScummVM Preferences",
     "~/Library/Saved Application State/org.scummvm.scummvm.savedState",
   ]
 end

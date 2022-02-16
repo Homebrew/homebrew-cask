@@ -1,6 +1,6 @@
 cask "berrycast" do
-  version "0.34.16"
-  sha256 "8f2024c62d1b2d6a06061d88b78c70c6296f7c2219c0bde0d45329a8241234d5"
+  version "0.35.9"
+  sha256 "7a02398e1a49f26659862a7f3341b89fc854d2725af16adc085a1ca2e770b2ab"
 
   url "https://media.berrycast.app/desktop-installer/Berrycast-#{version}-latest.dmg",
       verified: "media.berrycast.app/"
@@ -10,7 +10,6 @@ cask "berrycast" do
 
   livecheck do
     url "https://media.berrycast.app/desktop-installer/v2/latest-mac.yml"
-    strategy :page_match
     regex(/Berrycast[._-]?v?(\d+(?:\.\d+)+)[._-]latest\.dmg/i)
   end
 

@@ -2,7 +2,7 @@ cask "haptic-touch-bar" do
   version "2.4.0,1540815050"
   sha256 "c7b044f1516bb0912e863e2e3a3fd080fa06833eaddc0f056caf55a5e9df94b5"
 
-  url "https://dl.devmate.com/com.bopsoft.HapticTouchBar/#{version.before_comma.no_dots}/#{version.after_comma}/HapticTouchBar-#{version.before_comma.no_dots}.zip",
+  url "https://dl.devmate.com/com.bopsoft.HapticTouchBar/#{version.csv.first.no_dots}/#{version.csv.second}/HapticTouchBar-#{version.csv.first.no_dots}.zip",
       verified: "dl.devmate.com/com.bopsoft.HapticTouchBar/"
   name "Haptic Touch Bar"
   homepage "https://www.haptictouchbar.com/"

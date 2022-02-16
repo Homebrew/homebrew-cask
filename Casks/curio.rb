@@ -1,6 +1,6 @@
 cask "curio" do
-  version "19,19006"
-  sha256 "e2ee57fbc298573e83da89f25b7c3f11aa71ddd6c1d76ad4d81d3b5782623141"
+  version "20,20009"
+  sha256 "d1cb21d05345cc77dd31726ba0b3cac665e81974681959401f9c0d5d7cc21c20"
 
   url "https://www.zengobi.com/downloads/Curio#{version.csv.second.no_dots}.zip"
   name "Curio"
@@ -10,10 +10,8 @@ cask "curio" do
   livecheck do
     url "https://www.zengobi.com/curio/download/"
     strategy :header_match do |headers|
-      match = headers["location"].match(%r{/Curio(\d+)\.zip})
+      match = headers["location"].match(/Curio(\d+)\.zip/i)
       next if match.blank?
-
-      puts match
 
       "#{match[1][0..1]},#{match[1]}"
     end

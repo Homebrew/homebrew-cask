@@ -1,6 +1,6 @@
 cask "rectangle" do
-  version "0.49,54"
-  sha256 "60699a4f1700de0edb30668a2342840b8d62257ced73e7d9e9812eb62f009389"
+  version "0.51,57"
+  sha256 "ed0c1e4634471f3c095ed1331611f8fb859f47febcdc9c2c4aba670f7db3a5bb"
 
   url "https://github.com/rxhanson/Rectangle/releases/download/v#{version.csv.first}/Rectangle#{version.csv.first}.dmg",
       verified: "github.com/rxhanson/Rectangle/"
@@ -9,7 +9,7 @@ cask "rectangle" do
   homepage "https://rectangleapp.com/"
 
   livecheck do
-    url "https://www.rectangleapp.com/downloads/updates.xml"
+    url "https://rectangleapp.com/downloads/updates.xml"
     strategy :sparkle
   end
 

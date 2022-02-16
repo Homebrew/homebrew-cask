@@ -10,8 +10,7 @@ cask "fliqlo" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/Fliqlo%20(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/Fliqlo%20v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   screen_saver "Fliqlo.saver"

@@ -1,6 +1,6 @@
 cask "santa" do
-  version "2021.7"
-  sha256 "7682a855aa2517011fe08eb5c1f420c1dbe2ab6ea3a732bbf915267fda203754"
+  version "2022.1"
+  sha256 "0df631a29ee8a6902c0c228533068403d8c998c8a7dc36bca7779047f60d8ebd"
 
   url "https://github.com/google/santa/releases/download/#{version}/santa-#{version}.dmg"
   name "Santa"
@@ -17,6 +17,7 @@ cask "santa" do
             launchctl: [
               "com.google.santa",
               "com.google.santa.bundleservice",
+              "com.google.santa.metricservice",
               "com.google.santad",
             ],
             pkgutil:   "com.google.santa"

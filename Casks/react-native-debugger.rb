@@ -10,4 +10,9 @@ cask "react-native-debugger" do
   auto_updates true
 
   app "React Native Debugger.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.electron.react-native-debugger.plist",
+    "~/Library/Saved Application State/com.electron.react-native-debugger.savedState",
+  ]
 end

@@ -2,9 +2,10 @@ cask "bathyscaphe" do
   version "3.1.0,1089"
   sha256 "32f7758d2898fd8cccd1b506c8d78bbff6733640e392eba67c95a6626377a603"
 
-  url "https://bitbucket.org/bathyscaphe/public/downloads/BathyScaphe-#{version.before_comma.no_dots}-v#{version.after_comma}.dmg",
+  url "https://bitbucket.org/bathyscaphe/public/downloads/BathyScaphe-#{version.csv.first.no_dots}-v#{version.csv.second}.dmg",
       verified: "bitbucket.org/bathyscaphe/public/downloads/"
   name "BathyScaphe"
+  desc "2-channel browser"
   homepage "https://bathyscaphe.bitbucket.io/"
 
   livecheck do

@@ -1,6 +1,6 @@
 cask "wickrme" do
-  version "5.90.3"
-  sha256 "ee08ff3d58c5645618146fe4b3e89b52651fd5d2ace166b0a08f2db8f4299ede"
+  version "5.97.4"
+  sha256 "3e82886ffdb44b36e71ee1b6cda2809333a7f2bb209634e04f49d95d3a7d28bc"
 
   url "https://s3.amazonaws.com/static.wickr.com/downloads/mac/me/WickrMe-#{version}.dmg",
       verified: "s3.amazonaws.com/static.wickr.com/"
@@ -20,4 +20,6 @@ cask "wickrme" do
   depends_on macos: ">= :high_sierra"
 
   app "WickrMe.app"
+
+  zap trash: "~/Library/Preferences/com.wickr-llc.WickrMe.plist"
 end

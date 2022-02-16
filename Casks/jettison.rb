@@ -1,8 +1,8 @@
 cask "jettison" do
-  version "1.8.2,3340"
-  sha256 "ff3e6bde991a52b5f33b38ea24f543dc421c2e055c4f1c89aa37fa2f823bea97"
+  version "1.8.4,3396"
+  sha256 "b69dde9d18d0f499789327123d9f26fa9742522364973a1ceed725620d1fd56b"
 
-  url "https://stclairsoft.com/download/Jettison-#{version.before_comma}.dmg"
+  url "https://stclairsoft.com/download/Jettison-#{version.csv.first}.dmg"
   name "Jettison"
   name "St. Clair Software Jettison"
   desc "Automatically ejects external drives"

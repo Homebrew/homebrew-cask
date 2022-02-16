@@ -1,12 +1,12 @@
 cask "rancher" do
   arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
-  version "0.7.0"
+  version "1.0.1"
 
   if Hardware::CPU.intel?
-    sha256 "3af104a4fd0637560e395e3889fd657fab71e4e7a697553426c332ed6071e167"
+    sha256 "01dcabe09dca068853da7a3966a6f9895fa7537eeef296f0363da64f42ad78fc"
   else
-    sha256 "3c3dd59e17022a83fb44f49e0fd3380da8350ba4639273a17a4d5a212cbc8ff2"
+    sha256 "b5a3af6c95355efe05dcee8afbf57d8af170e1356d502b1bb9f2f3f58a2bd147"
   end
 
   url "https://github.com/rancher-sandbox/rancher-desktop/releases/download/v#{version}/Rancher.Desktop-#{version}.#{arch}.dmg",
@@ -26,23 +26,23 @@ cask "rancher" do
                  ]
 
   app "Rancher Desktop.app"
-  binary "#{appdir}/Rancher Desktop.app/Contents/Resources/resources/darwin/bin/docker"
-  binary "#{appdir}/Rancher Desktop.app/Contents/Resources/resources/darwin/bin/helm"
-  binary "#{appdir}/Rancher Desktop.app/Contents/Resources/resources/darwin/bin/kim"
-  binary "#{appdir}/Rancher Desktop.app/Contents/Resources/resources/darwin/bin/kubectl"
-  binary "#{appdir}/Rancher Desktop.app/Contents/Resources/resources/darwin/bin/nerdctl"
 
   uninstall delete: [
     "/opt/rancher-desktop",
-    "/private/etc/sudoers.d/rancher-desktop-lima",
+    "/private/etc/sudoers.d/zzzzz-rancher-desktop-lima", # zzzzz is not a typo
     "/private/var/run/docker.sock",
     "/private/var/run/rancher-desktop-lima",
+    "/usr/local/bin/docker",
+    "/usr/local/bin/helm",
+    "/usr/local/bin/kubectl",
+    "/usr/local/bin/nerdctl",
   ],
             quit:   "io.rancherdesktop.app"
 
   zap trash: [
     "~/.kuberlr",
     "~/Library/Application Support/Caches/rancher-desktop-updater",
+    "~/Library/Application Support/Rancher Desktop",
     "~/Library/Application Support/rancher-desktop",
     "~/Library/Caches/io.rancherdesktop.app*",
     "~/Library/Caches/rancher-desktop",

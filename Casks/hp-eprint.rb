@@ -4,7 +4,8 @@ cask "hp-eprint" do
 
   url "https://ftp.hp.com/pub/softlib/software13/COL43009/ds-104730-8/HP-ePrint_v#{version}.dmg"
   name "HP ePrint"
-  homepage "http://h20331.www2.hp.com/hpsub/us/en/eprint/overview.html"
+  desc "Mobile printing solution"
+  homepage "https://h20331.www2.hp.com/hpsub/us/en/eprint/overview.html"
 
   pkg "HP ePrint Installer.pkg"
 
@@ -14,4 +15,8 @@ cask "hp-eprint" do
     "~/Library/Containers/com.hp.cloudprint.HP-ePrint-Mobile",
     "~/Library/PDF Services/HP ePrint",
   ]
+
+  caveats do
+    discontinued
+  end
 end

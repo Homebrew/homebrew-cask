@@ -1,6 +1,6 @@
 cask "syncthing" do
-  version "1.18.5-1"
-  sha256 "194eb77965c3024d765f8ef946a521aaa466ae90c20b695ebd44143255f05152"
+  version "1.19.0-1"
+  sha256 "b06e3bd4bc92268aff127d4d811d1f582254dc933b0ddb6b75f610bc752fa6ef"
 
   url "https://github.com/syncthing/syncthing-macos/releases/download/v#{version}/Syncthing-#{version}.dmg",
       verified: "github.com/syncthing/syncthing-macos/"
@@ -10,8 +10,8 @@ cask "syncthing" do
 
   livecheck do
     url :url
-    strategy :git
-    regex(/^v?(\d+(?:\.\d+)*(?:-\d+)?)$/i)
+    strategy :github_latest
+    regex(%r{href=.*?/tag/v?(\d+(?:[._-]\d+)+)["' >]}i)
   end
 
   auto_updates true

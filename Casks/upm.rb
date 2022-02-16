@@ -9,4 +9,6 @@ cask "upm" do
   homepage "https://upm.sourceforge.io/"
 
   app "upm-mac-#{version}/UPM.app"
+
+  zap trash: "~/Library/Saved Application State/com._17od.upm.gui.MainWindow.savedState"
 end

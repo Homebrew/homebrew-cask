@@ -2,7 +2,7 @@ cask "noun-project" do
   version "2.2.5,641"
   sha256 "3d852802f7fc86f35755985a93c82a14d5ac897da9065e1a05ad449fb64bc746"
 
-  url "https://nounproject.s3.amazonaws.com/mac/Noun-Project-#{version.before_comma}.dmg",
+  url "https://nounproject.s3.amazonaws.com/mac/Noun-Project-#{version.csv.first}.dmg",
       verified: "nounproject.s3.amazonaws.com/"
   name "Noun Project"
   desc "Icon manager"

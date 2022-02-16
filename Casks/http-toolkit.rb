@@ -8,6 +8,11 @@ cask "http-toolkit" do
   desc "HTTP(S) debugging proxy, analyzer, and client"
   homepage "https://httptoolkit.tech/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "HTTP Toolkit.app"
 
   zap trash: [

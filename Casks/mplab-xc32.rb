@@ -1,6 +1,6 @@
 cask "mplab-xc32" do
-  version "3.01"
-  sha256 "f8ef09babfd238f155fd5409ab7923f140cb4ea55a1302d81d5f8e5d8157f78c"
+  version "4.00"
+  sha256 "fbea8fbf0160cc91a86934e246cbca97238c625c191a903d05ed6648662c7459"
 
   url "https://ww1.microchip.com/downloads/en/DeviceDoc/xc32-v#{version}-full-install-osx-installer.dmg"
   name "MPLab XC32 Compiler"

@@ -1,5 +1,5 @@
 cask "suuntodm5" do
-  version "1.5.2"
+  version "1.5.3"
   sha256 :no_check
 
   url "https://dm5.movescount.com/SuuntoDM5.dmg",

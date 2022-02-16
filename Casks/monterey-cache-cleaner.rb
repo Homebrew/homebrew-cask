@@ -1,5 +1,5 @@
 cask "monterey-cache-cleaner" do
-  version "17.0"
+  version "17.0.1"
   sha256 :no_check
 
   url "https://www.northernsoftworks.com/downloads/nscc.dmg"

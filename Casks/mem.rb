@@ -1,6 +1,6 @@
 cask "mem" do
-  version "0.26.0"
-  sha256 "9f1daa5dc0f65d8aa255eccdf79a99782c228a7ca0ec821c23c8cab3ecef7457"
+  version "0.28.26"
+  sha256 "749b8280c4ab76e654f3af018bedd79d629a3736b7c562570de398933123f6f9"
 
   url "https://storage.googleapis.com/mem-desktop/Mem-#{version}.dmg",
       verified: "storage.googleapis.com/mem-desktop/"

@@ -1,15 +1,15 @@
 cask "goland" do
   arch = Hardware::CPU.intel? ? "" : "-aarch64"
 
-  version "2021.3,213.5744.269"
+  version "2021.3.3,213.6777.51"
 
   if Hardware::CPU.intel?
-    sha256 "eb637e92ba88f8316a024d0691ecc87d48a65e0dda24986cc9b5fec51ecfc2cd"
+    sha256 "4b245b6fe0cf588adbf36e68f12397d5fd311b0b6d49f17ba374ebaa10d207c9"
   else
-    sha256 "c64cad5f261aebd70751a2c1df1a19b7c9e3340c5ad3da31de1bc358db667da2"
+    sha256 "54397d48e20fb534206e13f84b35868b1eaea13175176487b1239b23db4e13db"
   end
 
-  url "https://download.jetbrains.com/go/goland-#{version.before_comma}#{arch}.dmg"
+  url "https://download.jetbrains.com/go/goland-#{version.csv.first}#{arch}.dmg"
   name "Goland"
   desc "Go (golang) IDE"
   homepage "https://www.jetbrains.com/go/"
@@ -42,8 +42,8 @@ cask "goland" do
     "~/Library/Application Support/JetBrains/GoLand#{version.major_minor}",
     "~/Library/Caches/JetBrains/GoLand#{version.major_minor}",
     "~/Library/Logs/JetBrains/GoLand#{version.major_minor}",
-    "~/Library/Preferences/GoLand#{version.major_minor}",
     "~/Library/Preferences/com.jetbrains.goland.plist",
+    "~/Library/Preferences/GoLand#{version.major_minor}",
     "~/Library/Saved Application State/com.jetbrains.goland.SavedState",
   ]
 end

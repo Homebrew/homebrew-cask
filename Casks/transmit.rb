@@ -1,6 +1,6 @@
 cask "transmit" do
-  version "5.8.2"
-  sha256 "d1ccc52f08cb2980548675a456d301d74613d7f48461945b5f766676361ad7a0"
+  version "5.8.4"
+  sha256 "5fdd2c1a5d34cb57d7e47b0f6b74184d7f5a6d357d6fa772449bb6254a0e9ff7"
 
   url "https://www.panic.com/transmit/d/Transmit%20#{version}.zip"
   name "Transmit"
@@ -18,9 +18,9 @@ cask "transmit" do
   app "Transmit.app"
 
   zap trash: [
-    "~/Library/Application Support/Transmit",
-    "~/Library/Application Support/com.panic.Transmit",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.panic.transmit.sfl2",
+    "~/Library/Application Support/com.panic.Transmit",
+    "~/Library/Application Support/Transmit",
     "~/Library/Caches/com.panic.Transmit",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.panic.Transmit",
     "~/Library/Caches/Transmit",

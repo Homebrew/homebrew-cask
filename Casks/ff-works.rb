@@ -1,8 +1,8 @@
 cask "ff-works" do
-  version "2.6.4"
+  version "3.0.1"
   sha256 :no_check
 
-  url "https://www.ffworks.net/ffWorks.dmg"
+  url "https://www.ffworks.net/Downloads/ffWorks.dmg"
   name "ff·Works"
   desc "Video-encoding and transcoding app"
   homepage "https://www.ffworks.net/"
@@ -17,7 +17,7 @@ cask "ff-works" do
   app "ff·Works.app"
 
   zap trash: [
-    "~/Library/WebKit/com.osbytes.ffworks2",
     "~/Library/Application Support/ffWorks",
+    "~/Library/WebKit/com.osbytes.ffworks#{version.major}",
   ]
 end

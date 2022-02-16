@@ -1,15 +1,15 @@
 cask "itunes-producer" do
-  version "3.1.2"
-  sha256 "21079edbf0d559db4403a76fb7f18f02c93e5fbb68006bb5aaf55af329301ded"
+  version "3.1.4,1085"
+  sha256 :no_check
 
-  url "https://itunespartner.apple.com/assets/downloads/iTunesProducer_#{version}.dmg"
+  url "https://itunespartner.apple.com/assets/downloads/iTunesProducer.dmg"
   name "iTunes Producer"
-  homepage "https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa/ra/ng/resources_page"
+  desc "Submit book details, pricing, and files to Apple Books"
+  homepage "https://itunespartner.apple.com/books/tools"
 
   livecheck do
-    url "https://itunespartner.apple.com/books/tools"
-    strategy :page_match
-    regex(/(\d+(?:\.\d+)*).dmg/)
+    url :url
+    strategy :extract_plist
   end
 
   pkg "iTunesProducer.pkg"

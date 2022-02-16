@@ -1,8 +1,8 @@
 cask "messenger" do
-  version "130.7.115,331335098"
-  sha256 "7f418d731eba031599e8113c3b9360f68b2d97515daf40452a550757e322cf52"
+  version "140.4.112,351062954"
+  sha256 "32401e4b99fc79099edde07c3ac4345fe48841c2c15f08af918a39043b1743ae"
 
-  url "https://www.facebook.com/messenger/desktop/update/#{version.after_comma}.zip",
+  url "https://www.facebook.com/messenger/desktop/update/#{version.csv.second}.zip",
       verified: "facebook.com/messenger/desktop/"
   name "Facebook Messenger"
   desc "Native desktop app for Messenger (formerly Facebook Messenger)"

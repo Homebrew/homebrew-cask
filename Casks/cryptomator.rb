@@ -17,8 +17,7 @@ cask "cryptomator" do
 
   livecheck do
     url "https://cryptomator.org/downloads/mac/thanks/"
-    strategy :page_match
-    regex(%r{href=.*?/Cryptomator-(\d+(?:\.\d+)+)\.dmg}i)
+    regex(%r{href=.*?/Cryptomator[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   depends_on macos: ">= :high_sierra"

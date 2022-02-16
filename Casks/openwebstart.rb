@@ -1,6 +1,6 @@
 cask "openwebstart" do
-  version "1.5.0"
-  sha256 "30aee9333dcbdb2b925ec34c66803f973f6504760494b24fe61e013917106921"
+  version "1.5.1"
+  sha256 "5836d95e3bc326ba985e5fa6ea63bdf8efe93973115b27ab6a530368e798a6c2"
 
   url "https://github.com/karakun/OpenWebStart/releases/download/v#{version}/OpenWebStart_macos_#{version.dots_to_underscores}.dmg",
       verified: "github.com/karakun/OpenWebStart/"
@@ -23,11 +23,11 @@ cask "openwebstart" do
     executable: "/Applications/OpenWebStart/OpenWebStart Uninstaller.app/Contents/MacOS/JavaApplicationStub",
     args:       ["-c"],
     sudo:       true,
-  }
+  },
+            delete: "/Applications/OpenWebStart"
 
   zap trash: [
-    "~/.config/icedtea-web",
     "~/.cache/icedtea-web",
-    "/Applications/OpenWebStart",
+    "~/.config/icedtea-web",
   ]
 end

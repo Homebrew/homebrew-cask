@@ -4,7 +4,7 @@ cask "securityspy" do
 
   url "https://www.bensoftware.com/securityspy/SecuritySpy.dmg"
   appcast "https://www.bensoftware.com/securityspy/versionhistory.html",
-          must_contain: version.before_comma
+          must_contain: version.csv.first
   name "SecuritySpy"
   homepage "https://www.bensoftware.com/securityspy/"
 

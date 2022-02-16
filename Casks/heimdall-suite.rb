@@ -3,14 +3,14 @@ cask "heimdall-suite" do
   sha256 "4b283fc7bc331f8ec84031c939ef9d2aa71bb8fe6be6d3434dd268d76f7c0e60"
 
   url "https://bitbucket.org/benjamin_dobell/heimdall/downloads/heimdall-suite-#{version}-mac.dmg",
-      verified: "bitbucket.org/benjamin_dobell/heimdall/"
+      verified: "bitbucket.org/benjamin_dobell/heimdall/downloads/"
   name "Heimdall Suite"
+  desc "Flash firmware onto Samsung mobile devices"
   homepage "https://glassechidna.com.au/heimdall/"
 
   livecheck do
     url "https://glassechidna.com.au/heimdall/#downloads"
-    strategy :page_match
-    regex(%r{href=.*?/heimdall-suite-(\d+(?:\.\d+)*)-mac\.dmg}i)
+    regex(%r{href=.*?/heimdall[._-]suite[._-]v?(\d+(?:\.\d+)+)[._-]mac\.dmg}i)
   end
 
   pkg "Heimdall Suite #{version}.pkg"

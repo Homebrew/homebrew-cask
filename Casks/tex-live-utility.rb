@@ -1,6 +1,6 @@
 cask "tex-live-utility" do
-  version "1.49"
-  sha256 "5a5256f3e43203f59f3d55120b9faa4080ce7bed19a14bdf76e065f72d692907"
+  version "1.53"
+  sha256 "64caa374c9a34d0b7a513248aa42cf4c9b0dff207010ee4b4cd2fd5b56a956df"
 
   url "https://github.com/amaxwell/tlutility/releases/download/#{version}/TeX.Live.Utility.app-#{version}.zip"
   name "TeX Live Utility"
@@ -19,5 +19,8 @@ cask "tex-live-utility" do
   zap trash: [
     "~/Library/Application Support/TeX Live Utility",
     "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/TeX Live Utility Help*",
+    "~/Library/Caches/com.googlecode.mactlmgr.tlu",
+    "~/Library/Preferences/com.googlecode.mactlmgr.tlu.plist",
+    "~/Library/Saved Application State/com.googlecode.mactlmgr.tlu.savedState",
   ]
 end

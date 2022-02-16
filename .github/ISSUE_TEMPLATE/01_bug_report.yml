@@ -16,7 +16,7 @@ body:
           required: false
         - label: I have checked the instructions for [reporting bugs](https://github.com/Homebrew/homebrew-cask#reporting-bugs).
           required: true
-        - label: I made doubly sure this is not a [checksum does not match](https://github.com/Homebrew/homebrew-cask/blob/master/doc/reporting_bugs/checksum_does_not_match_error.md) error.
+        - label: I made doubly sure this is not a [checksum does not match](https://docs.brew.sh/Common-Issues#cask-checksum-does-not-match) error.
           required: true
   - type: textarea
     attributes:

@@ -1,12 +1,12 @@
 cask "tidgi" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "0.7.1"
+  version "0.7.3"
 
   if Hardware::CPU.intel?
-    sha256 "afbb29ae19f09f2632a94ac050e939b82fc368a0070ebcab88465e9764d5499a"
+    sha256 "0b771350d754085db6f6e270a292c37c9563f67fd46b94718fef10ec0f1ed0d1"
   else
-    sha256 "6a51812d50cb30a53ce079c202556590b02acf63a6b6e02a83ccdb3766f70c6f"
+    sha256 "d3f40451ece62a4baa5a90fcc79014a7f22cfc30983ed6506661b01c55621b8e"
   end
 
   url "https://github.com/tiddly-gittly/TidGi-Desktop/releases/download/v#{version}/TidGi-darwin-#{arch}-#{version}.zip"

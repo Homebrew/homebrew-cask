@@ -8,4 +8,10 @@ cask "markright" do
   homepage "https://github.com/dvcrn/markright"
 
   app "MarkRight.app"
+
+  zap trash: [
+    "~/Library/Application Support/MarkRight",
+    "~/Library/Caches/MarkRight",
+    "~/Library/Preferences/com.electron.markright.plist",
+  ]
 end

@@ -2,7 +2,7 @@ cask "usenapp" do
   version "1.17,351"
   sha256 "cfa5a047e72107a1ea37b738acda2f6ac6dbc202a0c8465eca710cdf3a05cd74"
 
-  url "https://www.usenapp.com/download/Usenapp-#{version.before_comma}.dmg"
+  url "https://www.usenapp.com/download/Usenapp-#{version.csv.first}.dmg"
   name "Usenapp"
   desc "Newsreader and Usenet client"
   homepage "https://www.usenapp.com/"

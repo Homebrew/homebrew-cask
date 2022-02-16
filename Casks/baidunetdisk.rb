@@ -1,6 +1,6 @@
 cask "baidunetdisk" do
-  version "4.3.0"
-  sha256 "9c2665da6ba8840f3b6686af096984741313292d0d642939b8cf6776cd28e6ce"
+  version "4.5.5"
+  sha256 "e59c64f4c57941a73392c3a0491bc1e1451b8c6dab01e0144603fceda7a58b76"
 
   url "https://wppkg.baidupcs.com/issue/netdisk/MACguanjia/BaiduNetdisk_mac_#{version}.dmg",
       verified: "baidupcs.com/issue/netdisk/MACguanjia/"
@@ -19,10 +19,14 @@ cask "baidunetdisk" do
   app "BaiduNetdisk_mac.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.baidu.BaiduNetdisk-mac.FinderSync",
+    "~/Library/Application Support/baidunetdisk",
     "~/Library/Application Support/com.baidu.BaiduNetdisk-mac",
     "~/Library/Caches/com.baidu.BaiduNetdisk-mac",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.baidu.BaiduNetdisk-mac",
+    "~/Library/Containers/com.baidu.BaiduNetdisk-mac.FinderSync",
     "~/Library/Cookies/com.baidu.BaiduNetdisk-mac.binarycookies",
+    "~/Library/HTTPStorages/com.baidu.BaiduNetdisk-mac",
     "~/Library/Preferences/com.baidu.BaiduNetdisk-mac.plist",
     "~/Library/sapi/wappass.baidu.com",
     "~/Library/Saved Application State/com.baidu.BaiduNetdisk-mac.savedState",

@@ -1,6 +1,6 @@
 cask "gloomhaven-helper" do
-  version "8.4.8"
-  sha256 "b35bf9d5ac7acea2437bb1cafb6516ce9d4988fc8f06077cd0323bd3e666ab21"
+  version "8.4.12"
+  sha256 "bcad969cadeeb35c5fec96567021065eebfba44bed93c3f240721633d570e890"
 
   url "https://esotericsoftware.com/files/ghh/GloomhavenHelper-#{version}.zip"
   name "Gloomhaven Helper"
@@ -9,8 +9,7 @@ cask "gloomhaven-helper" do
 
   livecheck do
     url "https://esotericsoftware.com/gloomhaven-helper"
-    strategy :page_match
-    regex(%r{href=.*?/GloomhavenHelper-(\d+(?:\.\d+)*)\.zip}i)
+    regex(%r{href=.*?/GloomhavenHelper-(\d+(?:\.\d+)+)\.zip}i)
   end
 
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)

@@ -1,6 +1,6 @@
 cask "electron-cash" do
-  version "4.2.5"
-  sha256 "d75bb773abb7022884c44b5bc4e36e6cd40fa86f7fd9f7baa8ab75ff1c661054"
+  version "4.2.6"
+  sha256 "a14936681c517edd1aa5a99824e55322b4213c06e36486f8e45275c1a37cd6db"
 
   url "https://electroncash.org/downloads/#{version.major_minor_patch}/mac/Electron-Cash-#{version}-macosx.dmg"
   name "Electron Cash"

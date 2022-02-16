@@ -1,5 +1,5 @@
 cask "macdroid" do
-  version "1.3,110"
+  version "1.4,124"
   sha256 :no_check
 
   url "https://cdn.electronic.us/products/macdroid/mac/download/macdroid.dmg",
@@ -12,6 +12,8 @@ cask "macdroid" do
     url "https://cdn.electronic.us/products/macdroid/mac/update/settings.xml"
     strategy :sparkle
   end
+
+  auto_updates true
 
   app "MacDroid.app"
 

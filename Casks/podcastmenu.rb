@@ -2,7 +2,7 @@ cask "podcastmenu" do
   version "1.3,10"
   sha256 "bff1a2b2b5f6c6eac37f567fdf917b696b1ef0b203f61725e44274461f957e31"
 
-  url "https://github.com/insidegui/PodcastMenu/raw/master/Releases/PodcastMenu_v#{version.before_comma}.zip"
+  url "https://github.com/insidegui/PodcastMenu/raw/master/Releases/PodcastMenu_v#{version.csv.first}.zip"
   name "PodcastMenu"
   desc "Tool to display Overcast on the menu bar"
   homepage "https://github.com/insidegui/PodcastMenu"

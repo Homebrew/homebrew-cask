@@ -1,6 +1,6 @@
 cask "mpv" do
-  version "0.34.0"
-  sha256 "5816958ef70df7146b5fa9e6af354b5ddd44aa97b6c86d771ad822403d791384"
+  version "0.34.1"
+  sha256 "82f9bc62199744744ef01b64587e3995d78429e42b8687e9a8db4bf4df09862a"
 
   url "https://laboratory.stolendata.net/~djinn/mpv_osx/mpv-#{version}.tar.gz",
       verified: "laboratory.stolendata.net/~djinn/mpv_osx/"
@@ -10,7 +10,6 @@ cask "mpv" do
 
   livecheck do
     url "https://laboratory.stolendata.net/~djinn/mpv_osx/"
-    strategy :page_match
     regex(/mpv-(\d+(?:\.\d+)+)\.tar\.gz/i)
   end
 

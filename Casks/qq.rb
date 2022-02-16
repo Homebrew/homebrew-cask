@@ -1,6 +1,6 @@
 cask "qq" do
-  version "6.7.5.20299"
-  sha256 "39086ce6bf7f57ed657e468ad165f89945606239f558cbf026806c6271e50e53"
+  version "6.7.5.20630_EXP"
+  sha256 "11264a225f52a6596b46e06ad450e02b614013600ee177089cd9d9639e9b3c7a"
 
   url "https://dldir1.qq.com/qqfile/QQforMac/QQ_#{version}.dmg"
   name "QQ"
@@ -8,9 +8,8 @@ cask "qq" do
   homepage "https://im.qq.com/macqq/"
 
   livecheck do
-    url "https://im.qq.com/proxy/domain/qzonestyle.gtimg.cn/qzone/qzactStatics/configSystem/data/1373/config1.js"
-    strategy :page_match
-    regex(%r{/QQforMac/QQ_(\d+(?:\.\d+)+)\.dmg}i)
+    url "https://im.qq.com/rainbow/"
+    regex(/QQ_(\d+(?:\.\d+)+([._-]EXP)?)\.dmg/i)
   end
 
   app "QQ.app"

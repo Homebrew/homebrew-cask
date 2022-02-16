@@ -1,6 +1,6 @@
 cask "telegram" do
-  version "8.3,223729"
-  sha256 "b45d144f110a3b1515cc811162eab7806e79c002ccde0619c86cc254783b398e"
+  version "8.5,226936"
+  sha256 "0aba0cc04de2b27fc6e7e6fb153c5e932c818a21403e02207837902fa3012800"
 
   url "https://osx.telegram.org/updates/Telegram-#{version.csv.first}.#{version.csv.second}.app.zip"
   name "Telegram for macOS"
@@ -20,7 +20,11 @@ cask "telegram" do
 
   app "Telegram.app"
 
+  uninstall quit: "ru.keepcoder.Telegram"
+
   zap trash: [
+    "~/Library/Application Scripts/*.ru.keepcoder.Telegram",
+    "~/Library/Application Scripts/*.ru.keepcoder.Telegram.TelegramShare",
     "~/Library/Application Scripts/ru.keepcoder.Telegram",
     "~/Library/Application Scripts/ru.keepcoder.Telegram.TelegramShare",
     "~/Library/Caches/ru.keepcoder.Telegram",
@@ -28,6 +32,8 @@ cask "telegram" do
     "~/Library/Containers/ru.keepcoder.Telegram.TelegramShare",
     "~/Library/Cookies/ru.keepcoder.Telegram.binarycookies",
     "~/Library/Group Containers/*.ru.keepcoder.Telegram",
+    "~/Library/Group Containers/*.ru.keepcoder.Telegram.TelegramShare",
+    "~/Library/HTTPStorages/ru.keepcoder.Telegram",
     "~/Library/Preferences/ru.keepcoder.Telegram.plist",
     "~/Library/Saved Application State/ru.keepcoder.Telegram.savedState",
   ]

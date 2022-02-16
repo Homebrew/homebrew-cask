@@ -8,9 +8,8 @@ cask "fawkes" do
   homepage "https://sandlab.cs.uchicago.edu/fawkes/"
 
   livecheck do
-    url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/Fawkes-(\d+(?:\.\d+)*)\.dmg}i)
+    url "http://sandlab.cs.uchicago.edu/fawkes/"
+    regex(%r{href=.*?/Fawkes-(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   depends_on macos: ">= :high_sierra"
@@ -18,8 +17,8 @@ cask "fawkes" do
   app "Fawkes.app"
 
   zap trash: [
+    "~/.fawkes",
     "~/Library/Preferences/Fawkes.plist",
     "~/Library/Saved Application State/Fawkes.savedState",
-    "~/.fawkes",
   ]
 end

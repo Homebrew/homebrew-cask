@@ -20,5 +20,6 @@ cask "network-radar" do
   zap trash: [
     "~/Library/Application Scripts/com.mac-attender.Network-Radar*",
     "~/Library/Containers/com.mac-attender.Network-Radar*",
+    "~/Library/Preferences/com.mac-attender.Network-Radar.plist",
   ]
 end

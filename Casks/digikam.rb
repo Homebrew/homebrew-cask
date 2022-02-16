@@ -1,6 +1,6 @@
 cask "digikam" do
-  version "7.3.0"
-  sha256 "12551e5fe31c0a16c0b98d3d03f5767e317f7e2759ed723a2150999bedec3aaf"
+  version "7.5.0"
+  sha256 "87e298a527dfe6e5249cdb559b75176e3a0fac1ed7fa915e26d57ebe89cbe70d"
 
   url "https://download.kde.org/stable/digikam/#{version}/digiKam-#{version}-MacOS-x86-64.pkg",
       verified: "kde.org/stable/digikam/"
@@ -15,7 +15,10 @@ cask "digikam" do
 
   pkg "digiKam-#{version}-MacOS-x86-64.pkg"
 
-  uninstall pkgutil: "org.kde.digikam",
+  uninstall pkgutil: [
+    "org.digiKam",
+    "org.kde.digikam",
+  ],
             delete:  [
               "/Applications/digikam.app",
               "/Applications/showfoto.app",

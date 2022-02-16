@@ -1,9 +1,10 @@
 cask "midi-monitor" do
-  version "1.4.1"
-  sha256 "bb37fac9094d544920eaa5c3d30fa4ac81ad279164f8e3a999f8838681f4f570"
+  version "1.5.3"
+  sha256 "d9c73c222db915f01a93d6a2893ab75e7770e2106472f8cb61100e380605d40c"
 
-  url "https://www.snoize.com/MIDIMonitor/MIDIMonitor_#{version.dots_to_underscores}.zip"
+  url "https://www.snoize.com/MIDIMonitor/MIDIMonitor_#{version.dots_to_underscores}.dmg"
   name "MIDI Monitor"
+  desc "Display MIDI signals going in and out of your computer"
   homepage "https://www.snoize.com/MIDIMonitor/"
 
   livecheck do
@@ -21,8 +22,8 @@ cask "midi-monitor" do
   ]
 
   zap trash: [
-    "~/Library/Preferences/com.snoize.MIDIMonitor.plist",
     "~/Library/Caches/com.snoize.MIDIMonitor",
+    "~/Library/Preferences/com.snoize.MIDIMonitor.plist",
     "~/Library/Saved Application State/com.snoize.MIDIMonitor.savedState",
   ]
 end

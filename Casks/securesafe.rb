@@ -1,6 +1,6 @@
 cask "securesafe" do
-  version "2.12.0"
-  sha256 "87e64f2f10e58173c239267cfbe7c4975eb5598b33eb6ce7441e8ae2323b0aa6"
+  version "2.13.0"
+  sha256 "9a467f7e122880fe6bab30b9524f1873c9fcf7d473f11fc561185224018728be"
 
   url "https://www.securesafe.com/userdata/downloads/securesafe-#{version}.pkg"
   name "SecureSafe"
@@ -9,8 +9,7 @@ cask "securesafe" do
 
   livecheck do
     url "https://www.securesafe.com/en/downloads"
-    strategy :page_match
-    regex(/securesafe-(\d+(?:\.\d+)*)\.pkg/i)
+    regex(/securesafe-(\d+(?:\.\d+)+)\.pkg/i)
   end
 
   depends_on macos: ">= :mojave"

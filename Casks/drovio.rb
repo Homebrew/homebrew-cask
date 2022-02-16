@@ -1,14 +1,21 @@
 cask "drovio" do
-  version "3.1.7"
-  sha256 "78d1a64844256c6969179b7e623cb4d7adb5911773e87978267f13016b5a39f2"
+  arch = Hardware::CPU.intel? ? "macos" : "macos_silicon"
 
-  url "https://repository.drovio.com/stable/drovio/macos/#{version.major}.x/#{version}/drovio.dmg"
+  version "3.2.1"
+
+  if Hardware::CPU.intel?
+    sha256 "a491a8625f1caf14bc97623d68febb30b683696bbbb1605269f661052770c7c7"
+  else
+    sha256 "a2e6575a38ae4659db69f5021583bca48c6b8ae72b6935de8785d8e1d42f5865"
+  end
+
+  url "https://repository.drovio.com/stable/drovio/#{arch}/#{version.major}.x/#{version}/drovio.dmg"
   name "Drovio"
   desc "Remote pair programming and team collaboration tool"
   homepage "https://www.drovio.com/"
 
   livecheck do
-    url "https://repository.drovio.com/stable/drovio/macos/latest_version/release.json"
+    url "https://repository.drovio.com/stable/drovio/#{arch}/latest_version/release.json"
     regex(/"version"\s*:\s*"(\d+(?:\.\d+)+)"/i)
   end
 

@@ -2,7 +2,7 @@ cask "dockmate" do
   version "0.8.7,2737"
   sha256 "0bff2c4b3c915bbd8719a57fd8f2b6c7251af01ceb625bd554fc0326e3fcaf35"
 
-  url "https://raw.githubusercontent.com/w0lfschild/app_updates/master/DockMate/DockMate.#{version.before_comma}.zip",
+  url "https://raw.githubusercontent.com/w0lfschild/app_updates/master/DockMate/DockMate.#{version.csv.first}.zip",
       verified: "raw.githubusercontent.com/w0lfschild/"
   name "Dock Mate"
   desc "Window previews and controls"

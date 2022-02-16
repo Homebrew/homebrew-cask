@@ -9,8 +9,7 @@ cask "hedgewars" do
 
   livecheck do
     url "https://hedgewars.org/download.html"
-    strategy :page_match
-    regex(%r{href=.*?/Hedgewars-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/Hedgewars[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "Hedgewars.app"

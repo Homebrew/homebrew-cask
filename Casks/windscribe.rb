@@ -1,5 +1,5 @@
 cask "windscribe" do
-  version "2.02.10"
+  version "2.3.16"
   sha256 :no_check
 
   url "https://assets.windscribe.com/desktop/mac/Windscribe.dmg"
@@ -9,8 +9,7 @@ cask "windscribe" do
 
   livecheck do
     url "https://windscribe.com/changelog/mac"
-    strategy :page_match
-    regex(/Windscribe\.dmg">\s*v(\d+(?:\.\d+)*)/i)
+    regex(/Windscribe\.dmg">\s*v(\d+(?:\.\d+)+)/i)
   end
 
   installer manual: "WindscribeInstaller.app"
@@ -26,16 +25,16 @@ cask "windscribe" do
             ],
             delete:    [
               "/Applications/Windscribe.app",
-              "/Library/PrivilegedHelperTools/com.windscribe.helper.macos",
               "/Library/LaunchDaemons/com.windscribe.helper.macos.plist",
-              "/private/var/run/windscribe_helper_socket2",
+              "/Library/PrivilegedHelperTools/com.windscribe.helper.macos",
               "/usr/local/bin/windscribe-cli",
             ]
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.windscribe.launcher.macos.sfl*",
     "~/Library/Application Support/Windscribe",
-    "~/Library/Preferences/com.windscribe.Windscribe2.plist",
     "~/Library/Preferences/com.aaa.windscribe.windscribe.plist",
+    "~/Library/Preferences/com.windscribe.Windscribe2.plist",
     "~/Library/Saved Application State/com.windscribe.gui.macos.savedState",
   ]
 end

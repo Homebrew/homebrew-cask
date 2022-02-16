@@ -1,6 +1,6 @@
 cask "opgg" do
-  version "1.0.7"
-  sha256 "a61bedc82219fb57df034f1427d927c8a94d7e16ee1b0a2bfeb36fd10ea7a7be"
+  version "1.0.9"
+  sha256 "83df4704372b3154accc657b07ef776c11c45348ccf0b1b80c3a163d5976f95c"
 
   url "https://opgg-desktop-patch.akamaized.net/OP.GG-#{version}.dmg",
       verified: "opgg-desktop-patch.akamaized.net/"

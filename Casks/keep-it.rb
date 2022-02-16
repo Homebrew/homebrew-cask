@@ -1,8 +1,8 @@
 cask "keep-it" do
-  version "1.11.6,9180"
-  sha256 "f3bfcae04fb49a7a241095646ffc95627a997e2c0e84c57b4982ce455c296d2a"
+  version "1.11.11,9760"
+  sha256 "66b1003292d9935ccd1e2d1070ece3cc8b30ffbab8faf1c45a7bf3e5e43c1404"
 
-  url "https://reinventedsoftware.com/keepit/downloads/KeepIt_#{version.before_comma}.dmg"
+  url "https://reinventedsoftware.com/keepit/downloads/KeepIt_#{version.csv.first}.dmg"
   name "Keep It"
   desc "Notebook, scrapbook and organizer tool"
   homepage "https://reinventedsoftware.com/keepit/"

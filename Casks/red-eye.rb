@@ -4,7 +4,7 @@ cask "red-eye" do
 
   url "https://www.hexedbits.com/downloads/redeye.zip"
   appcast "https://www.hexedbits.com/redeye/",
-          must_contain: version.before_comma.chomp(".0")
+          must_contain: version.csv.first.chomp(".0")
   name "Red Eye"
   homepage "https://www.hexedbits.com/redeye/"
 

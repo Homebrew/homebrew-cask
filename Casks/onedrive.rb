@@ -1,6 +1,6 @@
 cask "onedrive" do
-  version "21.220.1024.0005"
-  sha256 "498e779d2ea2e4312b20306121c1d243e13af004b23417c03933c1c6335aa64b"
+  version "22.002.0103.0004"
+  sha256 "a971213e20064b15de8382508154e9ddca063420e2ea04868647180ccd46777a"
 
   url "https://oneclient.sfx.ms/Mac/Direct/#{version}/OneDrive.pkg",
       verified: "oneclient.sfx.ms/Mac/Direct/"
@@ -21,39 +21,39 @@ cask "onedrive" do
 
   uninstall delete:    "/Applications/OneDrive.app",
             launchctl: [
-              "com.microsoft.OneDriveUpdaterDaemon",
               "com.microsoft.OneDriveStandaloneUpdater",
               "com.microsoft.OneDriveStandaloneUpdaterDaemon",
+              "com.microsoft.OneDriveUpdaterDaemon",
             ],
             pkgutil:   "com.microsoft.OneDrive",
             quit:      [
+              "com.microsoft.OneDrive.FinderSync",
               "com.microsoft.OneDrive",
               "com.microsoft.OneDriveUpdater",
-              "com.microsoft.OneDrive.FinderSync",
             ]
 
   zap trash: [
-    "~/Library/Application Support/OneDrive",
-    "~/Library/Application Support/com.microsoft.OneDrive",
-    "~/Library/Application Support/com.microsoft.OneDriveUpdater",
-    "~/Library/Application Support/OneDriveUpdater",
+    "~/Library/Application Scripts/com.microsoft.OneDrive-mac",
     "~/Library/Application Scripts/com.microsoft.OneDrive.FinderSync",
     "~/Library/Application Scripts/com.microsoft.OneDriveLauncher",
-    "~/Library/Application Scripts/com.microsoft.OneDrive-mac",
+    "~/Library/Application Support/com.microsoft.OneDrive",
+    "~/Library/Application Support/com.microsoft.OneDriveUpdater",
+    "~/Library/Application Support/OneDrive",
+    "~/Library/Application Support/OneDriveUpdater",
     "~/Library/Caches/com.microsoft.OneDrive",
     "~/Library/Caches/com.microsoft.OneDriveUpdater",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDrive",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDriveUpdater",
-    "~/Library/Containers/com.microsoft.OneDriveLauncher",
     "~/Library/Containers/com.microsoft.OneDrive.FinderSync",
+    "~/Library/Containers/com.microsoft.OneDriveLauncher",
     "~/Library/Cookies/com.microsoft.OneDrive.binarycookies",
     "~/Library/Cookies/com.microsoft.OneDriveUpdater.binarycookies",
+    "~/Library/Group Containers/*.OfficeOneDriveSyncIntegration",
     "~/Library/Group Containers/*.OneDriveStandaloneSuite",
     "~/Library/Group Containers/*.OneDriveSyncClientSuite",
-    "~/Library/Group Containers/*.OfficeOneDriveSyncIntegration",
     "~/Library/Logs/OneDrive",
+    "~/Library/Preferences/*.OneDriveStandaloneSuite.plist",
     "~/Library/Preferences/com.microsoft.OneDrive.plist",
     "~/Library/Preferences/com.microsoft.OneDriveUpdater.plist",
-    "~/Library/Preferences/*.OneDriveStandaloneSuite.plist",
   ]
 end

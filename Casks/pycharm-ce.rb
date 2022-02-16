@@ -1,15 +1,15 @@
 cask "pycharm-ce" do
   arch = Hardware::CPU.intel? ? "" : "-aarch64"
 
-  version "2021.3,213.5744.248"
+  version "2021.3.2,213.6777.50"
 
-  url "https://download.jetbrains.com/python/pycharm-community-#{version.before_comma}#{arch}.dmg"
   if Hardware::CPU.intel?
-    sha256 "13e1db716f4a4626dd41f3bd881236864ec3d8516b1c2c04b74b89dfa91eadf1"
+    sha256 "b8f41f5dddeda0ed5f5c81ba57d2560ccc6e227987882fb6bf305b5d1d8c6909"
   else
-    sha256 "0c04abd7ff7ec5cb0f7fc5964b94f598cd9d9e4b4505a8740f0d43986f7571bd"
+    sha256 "407bf395cfb6d61f1c0861c7679b197238780e82a019e10162b8cd7130edb15a"
   end
 
+  url "https://download.jetbrains.com/python/pycharm-community-#{version.csv.first}#{arch}.dmg"
   name "Jetbrains PyCharm Community Edition"
   name "PyCharm CE"
   desc "IDE for Python programming - Community Edition"
@@ -40,8 +40,10 @@ cask "pycharm-ce" do
 
   zap trash: [
     "~/Library/Application Support/PyCharm#{version.major_minor}",
-    "~/Library/Caches/PyCharmCE#{version.major_minor}",
+    "~/Library/Caches/JetBrains/PyCharmCE#{version.major_minor}",
     "~/Library/Caches/PyCharm#{version.major_minor}",
+    "~/Library/Caches/PyCharmCE#{version.major_minor}",
+    "~/Library/Logs/JetBrains/PyCharmCE#{version.major_minor}",
     "~/Library/Logs/PyCharm#{version.major_minor}",
     "~/Library/Logs/PyCharmCE#{version.major_minor}",
     "~/Library/Preferences/PyCharm#{version.major_minor}",

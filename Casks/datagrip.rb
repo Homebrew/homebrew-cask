@@ -1,15 +1,15 @@
 cask "datagrip" do
   arch = Hardware::CPU.intel? ? "" : "-aarch64"
 
-  version "2021.3.2,213.6461.19"
+  version "2021.3.4,213.6777.22"
 
   if Hardware::CPU.intel?
-    sha256 "81bcc455f002dff13488652ff7f61083983f8a393894e0f5546a8e69c926f324"
+    sha256 "27e709d2ced66d37a615d8c56885828e49a08962708e28df1a20f324c626bf52"
   else
-    sha256 "5125b3504fcbf519db845dc0e80cd64d09f5790941cc2b679f493f69a6e0da05"
+    sha256 "7a77ba9fce56c781ae6a4fc65eaab4bcc10780b6bd679b04d74146719e42890a"
   end
 
-  url "https://download.jetbrains.com/datagrip/datagrip-#{version.before_comma}#{arch}.dmg"
+  url "https://download.jetbrains.com/datagrip/datagrip-#{version.csv.first}#{arch}.dmg"
   name "DataGrip"
   desc "Databases & SQL IDE"
   homepage "https://www.jetbrains.com/datagrip/"

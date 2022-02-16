@@ -1,16 +1,15 @@
 cask "phpstorm" do
-  version "2021.3,213.5744.279"
+  arch = Hardware::CPU.intel? ? "" : "-aarch64"
+
+  version "2021.3.2,213.6777.58"
 
   if Hardware::CPU.intel?
-    sha256 "3baedcc1cfac39b49a87d284e01c539dd044cf48dae9aa8cd82f5860a3874fba"
-
-    url "https://download.jetbrains.com/webide/PhpStorm-#{version.before_comma}.dmg"
+    sha256 "596a9d5fdc30d5fba65ddd482da90f9d555fed748b930587562022bfe7df4e14"
   else
-    sha256 "763ce71f924bb760c14281797aa31fd3d2eaa43ad2c3a9135ee476a25a5fa46e"
-
-    url "https://download.jetbrains.com/webide/PhpStorm-#{version.before_comma}-aarch64.dmg"
+    sha256 "ba15c3f843c85141a9adaec1c4611224a853bd98649148751e34ac304591a314"
   end
 
+  url "https://download.jetbrains.com/webide/PhpStorm-#{version.csv.first}#{arch}.dmg"
   name "JetBrains PhpStorm"
   desc "PHP IDE by JetBrains"
   homepage "https://www.jetbrains.com/phpstorm/"
@@ -42,7 +41,7 @@ cask "phpstorm" do
     "~/Library/Application Support/PhpStorm#{version.major_minor}",
     "~/Library/Caches/PhpStorm#{version.major_minor}",
     "~/Library/Logs/PhpStorm#{version.major_minor}",
-    "~/Library/Preferences/PhpStorm#{version.major_minor}",
     "~/Library/Preferences/jetbrains.phpstorm.*.plist",
+    "~/Library/Preferences/PhpStorm#{version.major_minor}",
   ]
 end

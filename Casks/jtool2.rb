@@ -5,6 +5,7 @@ cask "jtool2" do
 
   url "http://newosxbook.com/tools/jtool2.tgz"
   name "jtool2"
+  desc "Tool to help out reverse engineering, security researchers, and tweak developers"
   homepage "http://newosxbook.com/tools/jtool.html"
 
   binary "jtool2"

@@ -1,5 +1,5 @@
 cask "navicat-data-modeler-essentials" do
-  version "3.0.19"
+  version "3.1.4"
   sha256 :no_check
 
   url "https://download3.navicat.com/updater/modeler0#{version.major_minor.no_dots}_ess_mac_en.zip"
@@ -8,8 +8,7 @@ cask "navicat-data-modeler-essentials" do
   homepage "https://www.navicat.com/products/navicat-data-modeler"
 
   livecheck do
-    url "https://updater.navicat.com/mac/navicat_updates.php?appName=Navicat%20Data%20Modeler%20Essentials&appLang=en"
-    strategy :sparkle
+    cask "navicat-data-modeler"
   end
 
   depends_on macos: ">= :yosemite"

@@ -1,12 +1,12 @@
 cask "stack-stack" do
-  version "3.36.1"
+  version "3.41.1"
 
   if Hardware::CPU.intel?
-    sha256 "682af014498759c38723666d7fbaa67915fc08636d5b3c4e73e302b4b14f7cc7"
+    sha256 "eaca3be87c4dc15eb7634a350d3d0da3ba814f08cc9950878248eeb4492efdf9"
 
     url "https://binaries.getstack.app/builds/prod/Stack-#{version}.dmg"
   else
-    sha256 "b2e866d059c9736810a172d02d91b443807aa4b3d9df6dffd50914b341ef2740"
+    sha256 "388c6db35bc736b1b88b2e7a85b9175670f8e063b7c2256f3ad0a64cee22e425"
 
     url "https://binaries.getstack.app/builds/prod/mac/arm64/Stack%20#{version}-arm64.dmg"
   end

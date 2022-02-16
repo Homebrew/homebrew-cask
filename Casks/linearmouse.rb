@@ -1,16 +1,18 @@
 cask "linearmouse" do
-  version "0.3.1"
-  sha256 "c95286e1c6eb8592f57aac0c0dd31a157b93e7f0879cc62ed09e07b0638df5b0"
+  version "0.4.3"
+  sha256 "70d25deaf27ef5d7e6635aae9894227351e08b910c5959c1d0d400d3152fbaf2"
 
-  url "https://github.com/lujjjh/LinearMouse/releases/download/v#{version}/LinearMouse.dmg",
-      verified: "github.com/lujjjh/LinearMouse"
+  url "https://github.com/linearmouse/linearmouse/releases/download/v#{version}/LinearMouse.dmg",
+      verified: "github.com/linearmouse/linearmouse/"
   name "LinearMouse"
   desc "Customize mouse behavior"
   homepage "https://linearmouse.org/"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :catalina"
 
   app "LinearMouse.app"
+
+  uninstall quit: "com.lujjjh.LinearMouse"
 
   zap trash: "~/Library/Preferences/com.lujjjh.LinearMouse.plist"
 end

@@ -6,8 +6,8 @@ cask "nextcloud" do
     url "https://github.com/nextcloud/desktop/releases/download/v#{version.major_minor_patch}/Nextcloud-#{version}.pkg",
         verified: "github.com/nextcloud/desktop/"
   else
-    version "3.3.6"
-    sha256 "12be976d3388be2f81d8a0fd87ac62bffbb02bd29903274ea88fbcf8406257c6"
+    version "3.4.2"
+    sha256 "0e1bc63dee7ccdfd9fdb547afbbb0d2973b765dcedfe9c9c1c7fac5a6e53c63c"
 
     url "https://github.com/nextcloud/desktop/releases/download/v#{version}/Nextcloud-#{version}.pkg",
         verified: "github.com/nextcloud/desktop/"
@@ -25,7 +25,7 @@ cask "nextcloud" do
   depends_on macos: ">= :yosemite"
 
   pkg "Nextcloud-#{version}.pkg"
-  binary "#{appdir}/Nextcloud.app/Contents/MacOS/nextcloudcmd"
+  binary "/Applications/Nextcloud.app/Contents/MacOS/nextcloudcmd"
 
   uninstall pkgutil: "com.nextcloud.desktopclient"
 

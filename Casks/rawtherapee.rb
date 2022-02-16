@@ -13,4 +13,6 @@ cask "rawtherapee" do
   end
 
   app "RawTherapee.app"
+
+  zap trash: "~/Library/Application Support/RawTherapee"
 end

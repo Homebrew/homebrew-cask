@@ -1,23 +1,18 @@
 cask "kui" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "10.8.2"
+  version "11.2.5"
 
-  url "https://github.com/kubernetes-sigs/kui/releases/download/v#{version}/Kui-darwin-#{arch}.tar.bz2"
   if Hardware::CPU.intel?
-    sha256 "4d2fe54d3cc167ca93f9c1586c59ef53e2d8943dab1e4ea09522591b65871bfb"
+    sha256 "3f08aed1388c88cff27459c5089277279d935715cf4b36f7507a52c1a74446c2"
   else
-    sha256 "807e6a17b808cb9a0ae6edda28ce2e12d9da3e9c2c98e53ffb2e7d660aa9c2ad"
+    sha256 "bb583c90ebe6a18d086370f7f8d1d4835e1b5f26e0a6753888764f7af6ae5a96"
   end
 
+  url "https://github.com/kubernetes-sigs/kui/releases/download/v#{version}/Kui-darwin-#{arch}.tar.bz2"
   name "Kui"
   desc "Hybrid command-line/UI development experience for cloud-native development"
   homepage "https://github.com/kubernetes-sigs/kui"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 
   app "Kui-darwin-#{arch}/Kui.app"
   binary "#{appdir}/Kui.app/Contents/Resources/kubectl-kui"

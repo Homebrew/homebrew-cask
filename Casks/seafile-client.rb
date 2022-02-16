@@ -16,4 +16,12 @@ cask "seafile-client" do
   depends_on macos: ">= :high_sierra"
 
   app "Seafile Client.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.seafile.seafile-client.findersync",
+    "~/Library/Containers/com.seafile.seafile-client.findersync",
+    "~/Library/Group Containers/com.seafile.seafile-client.findersync",
+    "~/Library/Preferences/com.seafile.seafile-client.plist",
+    "~/Library/Saved Application State/com.seafile.seafile-client.savedState",
+  ]
 end

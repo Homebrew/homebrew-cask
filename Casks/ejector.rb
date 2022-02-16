@@ -4,12 +4,12 @@ cask "ejector" do
 
   url "https://www.jeb.com.fr/soft/Ejector-v#{version}.dmg"
   name "Ejector"
+  desc "Adds an Eject icon to the menu bar"
   homepage "https://www.jeb.com.fr/en/ejector.shtml"
 
   livecheck do
     url "https://www.jeb.com.fr/en/ejector.shtml"
-    strategy :page_match
-    regex(%r{href=.*?/Ejector-v?(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/Ejector[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "Ejector.app"

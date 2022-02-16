@@ -5,6 +5,7 @@ cask "editaro" do
   url "https://github.com/kkosuge/editaro/releases/download/#{version}/Editaro-#{version}-mac.zip",
       verified: "github.com/kkosuge/editaro/"
   name "Editaro"
+  desc "Text editor"
   homepage "https://editaro.com/"
 
   app "Editaro.app"

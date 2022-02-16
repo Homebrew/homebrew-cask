@@ -11,7 +11,7 @@ cask "inso" do
   livecheck do
     url "https://github.com/Kong/insomnia/releases"
     strategy :page_match
-    regex(/href=.*?inso-macos-(?:latest-)*(\d+(?:\.\d+).*?)\.zip/i)
+    regex(/href=.*?inso-macos-(?:latest-)*(\d+(?:\.\d+)+)\.zip/i)
   end
 
   conflicts_with cask: "homebrew/cask-versions/inso-beta"

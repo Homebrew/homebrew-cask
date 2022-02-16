@@ -1,6 +1,6 @@
 cask "code42-crashplan" do
-  version "8.2.1,1525200006821,77"
-  sha256 "89af29fd387aef977ca1da175105d0861c2a39742dc87dd648ea330548570ae4"
+  version "8.2.3,1525200006823,22"
+  sha256 "3e2cafdcf35786e90a909961a8f839a4d9f31ebe68a236d52d97d5635ac5f03f"
 
   url "https://download.code42.com/installs/client-package-repository/#{version.csv.first}/#{version.csv.third}/install/Code42_#{version.tr(",", "_")}_Mac.dmg",
       verified: "download.code42.com/"

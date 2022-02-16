@@ -1,8 +1,8 @@
 cask "futubull" do
-  version "11.11.1628,202111110958"
-  sha256 "d95c5ebf5e0d781732e30a09b09168d5332cf2b916c578ff5d067d2b0a6d54eb"
+  version "11.13.1828,202112291010"
+  sha256 "b92dda076e28ce4cbe38050581840920f08a6f73b0160247a72fb8f59bf22e1b"
 
-  url "https://softwarefile.futunn.com/FTNNForMac_#{version.before_comma}_#{version.after_comma}_Website.dmg"
+  url "https://softwarefile.futunn.com/FTNNForMac_#{version.csv.first}_#{version.csv.second}_Website.dmg"
   name "Futubull"
   name "FutuNiuniu"
   desc "Trading application"
@@ -11,9 +11,10 @@ cask "futubull" do
   livecheck do
     url "https://www.futunn.com/download/history?client=11"
     strategy :page_match do |page|
-      page.scan(%r{/FTNNForMac[._-]v?(\d+(?:\.\d+)+)[_-](\d+)[._-]Website\.dmg}i).map do |match|
-        "#{match[0]},#{match[1]}"
-      end
+      match = page.match(/FTNNForMac[._-]v?(\d+(?:\.\d+)+)[_-](\d+)[._-]Website.*?\.dmg/i)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
     end
   end
 

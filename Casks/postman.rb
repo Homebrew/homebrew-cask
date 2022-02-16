@@ -1,12 +1,12 @@
 cask "postman" do
   arch = Hardware::CPU.intel? ? "osx64" : "osx_arm64"
 
-  version "9.5.0"
+  version "9.13.0"
 
   if Hardware::CPU.intel?
-    sha256 "52f3f5f2dcb80d0e6070ff474d78c8f8e117a8f1683c460d8ada9013d2e7a2cf"
+    sha256 "fbfbe26124ec0101e7b874685c0196d307b15a16066357b503955ab98e477046"
   else
-    sha256 "0c039244b6afe60fb836acb2a784d8e642af5a845ba70b3cee8785099cf5edeb"
+    sha256 "ee5579510c3b3e5122bb482af540866cf4a11251e069c44034cfd45a81ece425"
   end
 
   url "https://dl.pstmn.io/download/version/#{version}/#{arch}",
@@ -16,8 +16,8 @@ cask "postman" do
   homepage "https://www.postman.com/"
 
   livecheck do
-    url "https://dl.pstmn.io/api/version/notes"
-    regex(/Postman\s*v?(\d+(?:\.\d+)+)/i)
+    url "https://dl.pstmn.io/download/latest/#{arch}"
+    strategy :header_match
   end
 
   auto_updates true
@@ -25,11 +25,11 @@ cask "postman" do
   app "Postman.app"
 
   zap trash: [
-    "~/Library/Application Support/Postman",
     "~/Library/Application Support/com.postmanlabs.mac.ShipIt",
-    "~/Library/Caches/Postman",
-    "~/Library/Caches/com.postmanlabs.mac",
+    "~/Library/Application Support/Postman",
     "~/Library/Caches/com.postmanlabs.mac.ShipIt",
+    "~/Library/Caches/com.postmanlabs.mac",
+    "~/Library/Caches/Postman",
     "~/Library/Preferences/ByHost/com.postmanlabs.mac.ShipIt.*.plist",
     "~/Library/Preferences/com.postmanlabs.mac.plist",
     "~/Library/Saved Application State/com.postmanlabs.mac.savedState",

@@ -1,6 +1,6 @@
 cask "duet" do
-  version "2.3.3.7"
-  sha256 "765a7ac170f8e1a523636b237dfff394e58b7434b75023a639a451cd1b4934f7"
+  version "2.4.2.1"
+  sha256 "141bb37fc2b4cdf6b9155577867d809d9716689505a4b7e504c896964871237e"
 
   url "https://duet.nyc3.cdn.digitaloceanspaces.com/Mac/#{version.major_minor.dots_to_underscores}/duet-#{version.dots_to_hyphens}.zip",
       verified: "duet.nyc3.cdn.digitaloceanspaces.com/Mac/"
@@ -11,7 +11,7 @@ cask "duet" do
   livecheck do
     url "https://updates.duetdisplay.com/latestMac"
     strategy :header_match do |headers|
-      headers["location"][/-(\d+(?:-\d+)*)\.zip/i, 1].tr("-", ".")
+      headers["location"][/duet[._-]v?(\d+(?:-\d+)+)\.zip/i, 1].tr("-", ".")
     end
   end
 

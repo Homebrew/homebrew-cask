@@ -1,17 +1,32 @@
 cask "eloston-chromium" do
+  arch = Hardware::CPU.intel? ? "x86-64" : "arm64"
+
   if Hardware::CPU.intel?
-    version "96.0.4664.110-1.1_x86-64"
-    sha256 "182eda1aa04614c4f6709734f6cb17d39851dc75ec46a57e51398e5b7a432f2a"
+    version "98.0.4758.80-1.1,1643761345"
+    sha256 "5900644b3bdfcbe8f5c158a85afa9988e440e36ef209bdf337e431434ffe7568"
   else
-    version "96.0.4664.110-1.1_arm64"
-    sha256 "7724b7aaf7d6085a76ae793c0259b71ae3c9bf37180bf6e5dd6eab64ba119cae"
+    version "98.0.4758.80-1.1,1644029602"
+    sha256 "b743fb0ea2fcef474d8ed0cc04dab49d97df039c3ec7a1f6143b326114c5c2de"
   end
 
-  url "https://github.com/kramred/ungoogled-chromium-macos/releases/download/#{version}/ungoogled-chromium_#{version}-macos.dmg",
+  url "https://github.com/kramred/ungoogled-chromium-macos/releases/download/#{version.csv.first}_#{arch}__#{version.csv.second}/ungoogled-chromium_#{version.csv.first}_#{arch}-macos.dmg",
       verified: "github.com/kramred/ungoogled-chromium-macos/"
   name "Ungoogled Chromium"
   desc "Google Chromium, sans integration with Google"
   homepage "https://ungoogled-software.github.io/ungoogled-chromium-binaries/"
+
+  livecheck do
+    url "https://github.com/kramred/ungoogled-chromium-macos/releases/"
+    strategy :page_match do |page|
+      match = page.match(%r{
+        releases/download/(\d+(?:[.-]\d+)+)[._-]#{arch}[._-]{2}(\d+)/
+        ungoogled[._-]chromium[._-](\d+(?:[.-]\d+)+)[._-]#{arch}[._-]macos\.dmg
+      }xi)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
+    end
+  end
 
   conflicts_with cask: [
     "chromium",
