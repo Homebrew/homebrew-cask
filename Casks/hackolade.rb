@@ -1,5 +1,5 @@
 cask "hackolade" do
-  version "5.4.3"
+  version "5.4.4"
   sha256 :no_check
 
   url "https://s3-eu-west-1.amazonaws.com/hackolade/current/Hackolade-mac-setup-signed.pkg",
