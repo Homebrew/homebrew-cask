@@ -4,10 +4,10 @@ cask "appcleaner" do
     sha256 "0c60d929478c1c91e0bad76d3c04795665c07a05e45e33321db845429c9aefa8"
   else
     version "3.6.3,4222"
-    sha256 "812bcacd845fac07e073130d3fe4c5f037815d0774a9782e0e309fced1bded1c"
+    sha256 "081e8c221bb54c103d5bdf22dcd1b4dda3d19b544d0f37b43dc304272152d3d0"
   end
 
-  url "https://www.freemacsoft.net/downloads/AppCleaner_#{version.major_minor}.zip"
+  url "https://www.freemacsoft.net/downloads/AppCleaner_#{version.csv.first}.zip"
   name "FreeMacSoft AppCleaner"
   desc "Application uninstaller"
   homepage "https://freemacsoft.net/appcleaner/"
