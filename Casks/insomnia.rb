@@ -9,7 +9,7 @@ cask "insomnia" do
   homepage "https://insomnia.rest/"
 
   livecheck do
-    url "https://github.com/Kong/insomnia/releases/"
+    url "https://github.com/Kong/insomnia/releases?q=prerelease%3Afalse"
     strategy :page_match
     regex(/Insomnia[._-]Core[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
