@@ -4,9 +4,9 @@ cask "plexamp" do
   version "4.0.0"
 
   if Hardware::CPU.intel?
-    sha256 "5aa900de0dc7c6f0081bea5c56f0fae0a220e886076a56ed2e650defe80a4edd"
+    sha256 "872435af0b97bc9dff6195413a0874ce8a70d1a762a5fbbdf1707d1770d819f7"
   else
-    sha256 "84476e43d516eb9fe6bc4dd56241fb747b27cf47fddbc65c1f596ed7c32f1e9a"
+    sha256 "82e56de03d6d5745532d4aad5bf9813a85b8d98386ee45943e86adef6fad3406"
   end
 
   url "https://plexamp.plex.tv/plexamp.plex.tv/desktop/Plexamp-#{version}#{arch}.dmg",
