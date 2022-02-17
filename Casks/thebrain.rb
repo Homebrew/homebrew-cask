@@ -8,7 +8,7 @@ cask "thebrain" do
   homepage "https://www.thebrain.com/"
 
   livecheck do
-    url "https://salesapi.thebrain.com/?a=doDirectDownload&id=11000"
+    url "https://salesapi.thebrain.com/?a=doDirectDownload&id=12000"
     strategy :header_match
   end
 
