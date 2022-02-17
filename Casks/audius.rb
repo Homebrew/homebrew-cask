@@ -18,6 +18,7 @@ cask "audius" do
 
   zap trash: [
     "~/Library/Application Support/Audius",
+    "~/Library/Application Support/Caches/audius-client-updater",
     "~/Library/Logs/Audius",
     "~/Library/Saved Application State/co.audius.app.savedState",
   ]
