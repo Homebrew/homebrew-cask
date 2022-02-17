@@ -1,6 +1,6 @@
 cask "qctools" do
-  version "1.2"
-  sha256 "b474389e87283ef3b190ff5427272077c938a2503328c3d4fc08d77ccebead46"
+  version "1.2.1"
+  sha256 "6495a06e4b42b0d0f1298193ddc113aa6b7ac3c1337a2c6dfcd851a314f5c987"
 
   url "https://mediaarea.net/download/binary/qctools/#{version}/QCTools_#{version}_mac.dmg"
   name "QCTools"
