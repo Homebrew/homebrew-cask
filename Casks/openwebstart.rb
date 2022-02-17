@@ -20,9 +20,9 @@ cask "openwebstart" do
   end
 
   uninstall script: {
-    executable: "/Applications/OpenWebStart/OpenWebStart Uninstaller.app/Contents/MacOS/JavaApplicationStub",
-    args:       ["-c", "-q"],
-    sudo:       true,
+    executable:   "/Applications/OpenWebStart/OpenWebStart Uninstaller.app/Contents/MacOS/JavaApplicationStub",
+    args:         ["-c", "-q"],
+    sudo:         true,
     print_stderr: false,
   },
             delete: "/Applications/OpenWebStart"
