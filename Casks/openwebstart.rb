@@ -21,7 +21,7 @@ cask "openwebstart" do
 
   uninstall script: {
     executable:   "/Applications/OpenWebStart/OpenWebStart Uninstaller.app/Contents/MacOS/JavaApplicationStub",
-    args:         ["-c", "-q"],
+    args:         ["-q"],
     sudo:         true,
     print_stderr: false,
   },
