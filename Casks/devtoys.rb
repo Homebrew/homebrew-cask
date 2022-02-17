@@ -4,12 +4,12 @@ cask "devtoys" do
 
   url "https://github.com/ObuchiYuki/DevToysMac/releases/download/#{version}/DevToys.app.zip"
   name "DevToys"
-  desc "Provides convenient access to utilities designed to make common development tasks easier"
+  desc "Utilities designed to make common development tasks easier"
   homepage "https://github.com/ObuchiYuki/DevToysMac"
+
+  depends_on macos: ">= :catalina"
 
   app "DevToys.app"
 
-  zap trash: [
-    "~/Library/Preferences/com.yuki.DevToys.plist",
-  ]
+  zap trash: "~/Library/Preferences/com.yuki.DevToys.plist"
 end
