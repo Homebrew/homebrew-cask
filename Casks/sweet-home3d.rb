@@ -9,8 +9,8 @@ cask "sweet-home3d" do
   homepage "https://www.sweethome3d.com/"
 
   livecheck do
-    url "https://sourceforge.net/projects/sweethome3d/rss"
-    regex(%r{url=.*?/SweetHome3D[._-]?v?(\d+(?:\.\d+)+)-macosx\.dmg}i)
+    url "https://sourceforge.net/projects/sweethome3d/rss?path=/SweetHome3D"
+    regex(%r{url=.*?/SweetHome3D[._-]v?(\d+(?:\.\d+)+)-macosx\.dmg}i)
   end
 
   app "Sweet Home 3D.app"
