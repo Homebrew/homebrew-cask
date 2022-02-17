@@ -7,6 +7,8 @@ cask "blu-ray-player-pro" do
   desc "Blu-ray player software"
   homepage "https://www.macblurayplayer.com/"
 
+  auto_updates true
+
   livecheck do
     url "https://cdn.macblurayplayer.com/mac-bluray-player-pro#{version.major}/appcast/Appcast.xml"
     strategy :sparkle do |item|
