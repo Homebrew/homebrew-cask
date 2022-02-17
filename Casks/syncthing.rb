@@ -14,7 +14,6 @@ cask "syncthing" do
     regex(%r{href=.*?/tag/v?(\d+(?:[._-]\d+)+)["' >]}i)
   end
 
-  auto_updates true
   depends_on macos: ">= :sierra"
 
   app "Syncthing.app"
