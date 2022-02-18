@@ -7,7 +7,7 @@ cask "jitsi-meet" do
   desc "Secure video conferencing app"
   homepage "https://github.com/jitsi/jitsi-meet-electron/"
 
-  auto_updates true
+  auto_updates false
 
   app "Jitsi Meet.app"
 
