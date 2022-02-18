@@ -11,7 +11,7 @@ cask "sshfs" do
   livecheck do
     url :url
     strategy :github_latest
-    regex(%r{href=.*?/sshfs[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    regex(%r{href=.*?/sshfs[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
   end
 
   auto_updates true

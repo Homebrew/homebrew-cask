@@ -43,7 +43,6 @@
   "serf": "homebrew/core",
   "sickbeard": "homebrew/core",
   "srclib": "homebrew/core",
-  "sshfs": "homebrew/core",
   "sslmate": "homebrew/core",
   "swi-prolog": "homebrew/core",
   "terraform": "homebrew/core",
