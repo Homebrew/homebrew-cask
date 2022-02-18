@@ -1,6 +1,6 @@
 cask "tuxguitar" do
-  version "1.5.4"
-  sha256 "af2d3bee09057c9716eaf4a13d11898945f0431a3c84739a51a39cea49497f6e"
+  version "1.5.5"
+  sha256 "98e546d9aac5c88430335eb8ed2718ea4089f8d5e186c3f4bdcabe5856877b31"
 
   url "https://downloads.sourceforge.net/tuxguitar/tuxguitar-#{version}-macosx-cocoa-64.app.tar.gz"
   name "TuxGuitar"

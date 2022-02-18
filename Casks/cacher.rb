@@ -1,6 +1,6 @@
 cask "cacher" do
-  version "2.43.0"
-  sha256 "1399ad52f427e19751627f37f5ada7aeb94e5beba0118508e625c2b95b45e3b9"
+  version "2.43.1"
+  sha256 "db8dd381798456c8868008a0edb9a639b275c1d3372d9d57dbbe2995d78245aa"
 
   url "https://cacher-download.nyc3.digitaloceanspaces.com/Cacher-#{version}-mac.zip",
       verified: "cacher-download.nyc3.digitaloceanspaces.com/"

@@ -4,6 +4,7 @@ cask "intel-psxe-ce-c-plus-plus" do
 
   url "https://registrationcenter-download.intel.com/akdlm/irc_nas/tec/#{version.csv.second}/m_ccompxe_#{version.csv.first}.dmg"
   name "Intel Parallel Studio XE Composer Edition for C++"
+  desc "Software development tools"
   homepage "https://software.intel.com/en-us/parallel-studio-xe"
 
   installer manual: "m_ccompxe_#{version.csv.first}.app"
@@ -15,6 +16,7 @@ cask "intel-psxe-ce-c-plus-plus" do
   }
 
   caveats do
+    discontinued
     license "https://software.intel.com/en-us/articles/end-user-license-agreement"
     free_license "https://software.intel.com/en-us/articles/qualify-for-free-software"
   end
