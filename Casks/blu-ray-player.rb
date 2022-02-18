@@ -17,5 +17,7 @@ cask "blu-ray-player" do
     end
   end
 
+  auto_updates true
+
   app "Blu-ray Player.app"
 end
