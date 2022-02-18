@@ -7,8 +7,6 @@ cask "blu-ray-player" do
   desc "Player for Blu-ray content"
   homepage "https://www.macblurayplayer.com/"
 
-  auto_updates true
-
   livecheck do
     url "https://cdn.macblurayplayer.com/mac-bluray-player-pro#{version.major}/appcast/Appcast.xml"
     strategy :sparkle do |item|
@@ -18,6 +16,8 @@ cask "blu-ray-player" do
       "#{match[1]},#{match[2]}"
     end
   end
+
+  auto_updates true
 
   app "Blu-ray Player.app"
 end
