@@ -21,5 +21,6 @@ cask "mysteriumvpn" do
     "/var/log/myst_supervisor.log",
     "~/Library/Preferences/network.mysterium.mysterium-vpn-desktop.plist",
     "~/Library/Saved Application State/network.mysterium.mysterium-vpn-desktop.savedState",
+    "~/Library/Application Support/MysteriumVPN",
   ]
 end
