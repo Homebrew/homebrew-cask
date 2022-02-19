@@ -1,6 +1,6 @@
 cask "franz" do
-  version "5.7.0"
-  sha256 "197f143c7f3cfae472b1c6a66f6387f948357a94ae12a04977293ed41662a8ff"
+  version "5.8.0"
+  sha256 "8f390f36ad1d34427e44d8e7b9860253eeaaca878f434482b4a78334a3a028ff"
 
   url "https://github.com/meetfranz/franz/releases/download/v#{version}/franz-#{version}.dmg",
       verified: "github.com/meetfranz/franz/"
