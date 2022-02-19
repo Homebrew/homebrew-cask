@@ -1,5 +1,5 @@
 cask "tresorit" do
-  version "3.5.2161.2400"
+  version "3.5.2194.2571"
   sha256 :no_check
 
   url "https://installerstorage.blob.core.windows.net/public/install/Tresorit.dmg",
@@ -14,6 +14,8 @@ cask "tresorit" do
       headers["x-ms-meta-version"]
     end
   end
+
+  auto_updates true
 
   app "Tresorit.app"
 
