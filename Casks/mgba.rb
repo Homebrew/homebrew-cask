@@ -16,6 +16,7 @@ cask "mgba" do
   app "mGBA.app"
 
   zap trash: [
+    "~/.config/mgba",
     "~/Library/Preferences/com.endrift.mgba-qt.plist",
     "~/Library/Saved Application State/com.endrift.mgba-qt.savedState",
   ]
