@@ -1,12 +1,12 @@
 cask "mockuuups-studio" do
   arch = Hardware::CPU.intel? ? "" : "arm64-"
 
-  version "3.5.0"
+  version "3.7.0"
 
   if Hardware::CPU.intel?
-    sha256 "ed795198679c5206b77f10b42a1fb963cbe887aab9be94a742c6d1dce048235e"
+    sha256 "1b5897be81511a1a8dc7fd3f19824adc3186898fae9bdaed7e1bcd3469e22dcf"
   else
-    sha256 "b5f743b9185451df86ee71f7d4cbb488c483eb73e7654554304b8c5bca47c6aa"
+    sha256 "deefb92a749360fc2c524c427b3c462f0220a8fa5797fe2d634a009f476a03da"
   end
 
   url "https://binaries.mockuuups.com/Mockuuups%20Studio-#{version}-#{arch}mac.zip",
