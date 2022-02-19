@@ -1,6 +1,6 @@
 cask "rstudio" do
-  version "2021.09.2,382"
-  sha256 "ae18a925b11f03f0913294c666bc76cebfd8a17a6ade7aed0acb1d5c9241fd50"
+  version "2022.02.0,443"
+  sha256 "391d5f188fe2ebc0dc67ee35b3d3c389e3772b5b95c1fdcfb6b983b94038298d"
 
   url "https://rstudio-desktop.s3.amazonaws.com/desktop/macos/RStudio-#{version.csv.first}-#{version.csv.second}.dmg",
       verified: "rstudio-desktop.s3.amazonaws.com/"
