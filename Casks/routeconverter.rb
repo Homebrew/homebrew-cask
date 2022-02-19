@@ -1,5 +1,5 @@
 cask "routeconverter" do
-  version "2.30.324"
+  version "2.32.332"
   sha256 :no_check
 
   url "https://static.routeconverter.com/download/RouteConverterMac.app.zip"

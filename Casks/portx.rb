@@ -1,6 +1,6 @@
 cask "portx" do
-  version "2.0.5,10.16"
-  sha256 "ae92ca8cc82ae032f717ffd226c47c7f835278b02841ce10975ee1c398c6e1c0"
+  version "2.0.7,10.19"
+  sha256 "db16a023d9985760bcc7e165fd49349a07baf94bbfd191aad316cc3ac6e0683a"
 
   url "https://cdn.netsarang.net/0ac7ea20/PortX-#{version.csv.first}.dmg",
       verified: "cdn.netsarang.net/"

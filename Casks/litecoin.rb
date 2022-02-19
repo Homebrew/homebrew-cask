@@ -9,7 +9,7 @@ cask "litecoin" do
 
   livecheck do
     url "https://github.com/litecoin-project/litecoin"
-    strategy :git
+    strategy :github_latest
   end
 
   app "Litecoin-Qt.app"

@@ -11,4 +11,9 @@ cask "opentoonz" do
   pkg "OpenToonz.pkg"
 
   uninstall pkgutil: "io.github.opentoonz"
+
+  zap trash: [
+    "~/Library/Caches/OpenToonz",
+    "~/Library/Saved Application State/io.github.opentoonz.OpenToonz.savedState",
+  ]
 end
