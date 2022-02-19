@@ -43,5 +43,5 @@ cask "omnioutliner" do
     "~/Library/Application Scripts/com.omnigroup.OmniOutliner#{version.major}.Thumbnails",
     "~/Library/Containers/com.omnigroup.OmniOutliner#{version.major}",
     "~/Library/Containers/com.omnigroup.OmniOutliner#{version.major}.Thumbnails",
-  ]  
+  ]
 end
