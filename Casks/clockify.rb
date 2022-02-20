@@ -2,10 +2,14 @@ cask "clockify" do
   version "2.7.12,356"
   sha256 :no_check
 
-  url "https://clockify.me/downloads/ClockifyDesktop.zip",
+  url "https://clockify.me/downloads/ClockifyDesktop.zip"
   name "Clockify"
   desc "Time tracking tool for agencies and freelancers"
   homepage "https://clockify.me/mac-time-tracking"
+
+  livecheck do
+    skip "unversioned URL"
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"
