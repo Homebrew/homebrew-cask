@@ -4,7 +4,7 @@ cask "heroic" do
 
   url "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v#{version}/Heroic-#{version}.dmg"
   name "Heroic Games Launcher"
-  desc "Open Source Game Launcher for Native and Windows Games from Epic Games Store"
+  desc "Open Source Game Launcher"
   homepage "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher"
 
   app "Heroic.app"
