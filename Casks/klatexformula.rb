@@ -9,4 +9,9 @@ cask "klatexformula" do
   homepage "https://klatexformula.sourceforge.io/"
 
   app "klatexformula.app"
+
+  zap trash: [
+    "~/Library/Preferences/org.klatexformula.klatexformula.plist",
+    "~/Library/Saved Application State/org.klatexformula.klatexformula.savedState",
+  ]
 end
