@@ -8,7 +8,8 @@ cask "clockify" do
   homepage "https://clockify.me/mac-time-tracking"
 
   livecheck do
-    skip "unversioned URL"
+    url "https://clockify.me/downloads/appcast.xml"
+    strategy :sparkle
   end
 
   auto_updates true
