@@ -5,22 +5,16 @@ cask "mysteriumvpn" do
   url "https://github.com/mysteriumnetwork/mysterium-vpn-desktop/releases/download/#{version}/MysteriumVPN-#{version}.dmg",
       verified: "github.com/mysteriumnetwork/mysterium-vpn-desktop/"
   name "Mysterium VPN"
-  desc "Safe, secure and affordable decentralized VPN"
+  desc "VPN client"
   homepage "https://www.mysteriumvpn.com/"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 
   app "MysteriumVPN.app"
 
   zap trash: [
-    "~/Library/Logs/MysteriumVPN",
     "~/.mysterium",
-    "/var/log/myst_supervisor.log",
+    "~/Library/Application Support/MysteriumVPN",
+    "~/Library/Logs/MysteriumVPN",
     "~/Library/Preferences/network.mysterium.mysterium-vpn-desktop.plist",
     "~/Library/Saved Application State/network.mysterium.mysterium-vpn-desktop.savedState",
-    "~/Library/Application Support/MysteriumVPN",
   ]
 end
