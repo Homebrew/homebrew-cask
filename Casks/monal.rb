@@ -15,4 +15,6 @@ cask "monal" do
   depends_on macos: ">= :catalina"
 
   app "Monal.app"
+
+  zap trash: "~/Library/Group Containers/group.monal"
 end
