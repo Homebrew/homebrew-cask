@@ -15,4 +15,19 @@ cask "moneywiz" do
   depends_on macos: ">= :sierra"
 
   app "MoneyWiz #{version.major}.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.moneywiz.personalfinance",
+    "~/Library/Application Scripts/com.moneywiz.personalfinance.MoneyWizWidgets",
+    "~/Library/Application Scripts/com.moneywiz.personalfinance.MoneyWizWidgetsIntentsExtension",
+    "~/Library/Application Scripts/group.com.silverwiz.moneywiz.personalfinance",
+    "~/Library/Application Support/CloudDocs/session/containers/iCloud.com.moneywiz.ios.free",
+    "~/Library/Application Support/CloudDocs/session/containers/iCloud.com.moneywiz.ios.free.plist",
+    "~/Library/Application Support/CloudDocs/session/containers/iCloud.moneywiz.personalfinance",
+    "~/Library/Application Support/CloudDocs/session/containers/iCloud.moneywiz.personalfinance.plist",
+    "~/Library/Containers/com.moneywiz.personalfinance.MoneyWizWidgets",
+    "~/Library/Containers/com.moneywiz.personalfinance.MoneyWizWidgetsIntentsExtension",
+    "~/Library/Group Containers/group.com.silverwiz.moneywiz.personalfinance",
+    "~/Library/Containers/com.moneywiz.personalfinance",
+  ]
 end
