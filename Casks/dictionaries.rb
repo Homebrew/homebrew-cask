@@ -16,4 +16,9 @@ cask "dictionaries" do
   end
 
   app "Dictionaries.app"
+
+  zap trash: [
+    "~/Library/Containers/io.dictionaries.Dictionaries",
+    "~/Library/Preferences/io.dictionaries.Dictionaries.plist",
+  ]
 end

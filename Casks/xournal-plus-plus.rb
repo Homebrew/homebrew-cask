@@ -7,6 +7,8 @@ cask "xournal-plus-plus" do
   desc "Handwriting notetaking software"
   homepage "https://github.com/xournalpp/xournalpp"
 
+  depends_on macos: ">= :catalina"
+
   app "Xournal++.app"
 
   zap trash: [
