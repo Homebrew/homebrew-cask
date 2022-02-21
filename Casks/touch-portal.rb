@@ -15,4 +15,6 @@ cask "touch-portal" do
   pkg "Touch_Portal_Installer.pkg"
 
   uninstall pkgutil: "org.eclipse.jdt.internal.jarinjarloader"
+
+  zap trash: "~/Documents/TouchPortal"
 end
