@@ -12,6 +12,8 @@ cask "midiview" do
     strategy :header_match
   end
 
+  auto_updates true
+
   app "MidiView.app"
 
   zap trash: [
