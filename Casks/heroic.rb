@@ -9,5 +9,10 @@ cask "heroic" do
 
   app "Heroic.app"
 
-  zap trash: "~/Library/Preferences/com.electron.heroic.plist"
+  zap trash: [
+    "~/Library/Application Support/heroic",
+    "~/Library/Logs/heroic",
+    "~/Library/Preferences/com.electron.heroic.plist",
+    "~/Library/Saved Application State/com.electron.heroic.savedState",
+  ]
 end
