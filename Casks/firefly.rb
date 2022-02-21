@@ -10,8 +10,7 @@ cask "firefly" do
 
   livecheck do
     url :url
-    strategy :git
-    regex(/^desktop-(\d+(?:\.\d+)*)$/i)
+    regex(/^desktop[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
   app "Firefly.app"

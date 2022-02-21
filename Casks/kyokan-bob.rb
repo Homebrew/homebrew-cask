@@ -10,7 +10,6 @@ cask "kyokan-bob" do
 
   livecheck do
     url :url
-    strategy :git
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 

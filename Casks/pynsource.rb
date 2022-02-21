@@ -10,7 +10,6 @@ cask "pynsource" do
 
   livecheck do
     url :url
-    strategy :git
     regex(/^version[._-]v?(\d+(?:\.\d+)+)$/)
   end
 

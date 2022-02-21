@@ -5,12 +5,12 @@ cask "xaos" do
   url "https://github.com/xaos-project/XaoS/releases/download/release-#{version}/XaoS-#{version}.dmg",
       verified: "github.com/xaos-project/XaoS/"
   name "GNU XaoS"
+  desc "Real-time interactive fractal zoomer"
   homepage "https://xaos-project.github.io/"
 
   livecheck do
     url :url
-    strategy :git
-    regex(/^release-(\d+(?:\.\d+)*)$/i)
+    regex(/^release[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
   app "XaoS.app"

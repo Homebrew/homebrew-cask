@@ -10,8 +10,7 @@ cask "textadept" do
 
   livecheck do
     url :url
-    strategy :git
-    regex(/^textadept_(\d+(?:\.\d+)*)$/i)
+    regex(/^textadept[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
   app "textadept_#{version}.macOS/Textadept.app"
