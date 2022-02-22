@@ -13,7 +13,7 @@ cask "alpha" do
   zap trash: [
     "~/Library/Application Support/Alpha",
     "~/Library/Caches/net.sourceforge.alphacocoa",
-    "~/Library/Preferences/Alpha-v9",
+    "~/Library/Preferences/Alpha-v#{version.major}",
     "~/Library/Preferences/net.sourceforge.alphacocoa.plist",
     "~/Library/Saved Application State/net.sourceforge.alphacocoa.savedState",
   ]
