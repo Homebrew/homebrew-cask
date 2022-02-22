@@ -12,7 +12,7 @@ cask "macrorecorder" do
     regex(%r{changelog-mac/'>(\d+(?:\.\d+)+)</a>}i)
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :big_sur"
 
   app "MacroRecorder.app"
 
