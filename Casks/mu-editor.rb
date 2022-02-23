@@ -8,5 +8,5 @@ cask "mu-editor" do
   desc "Small, simple editor for beginner Python programmers"
   homepage "https://codewith.mu/"
 
-  app "mu-editor.app"
+  app "Mu Editor.app"
 end
