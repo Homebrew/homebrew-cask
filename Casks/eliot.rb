@@ -9,8 +9,7 @@ cask "eliot" do
 
   livecheck do
     url "https://www.nongnu.org/eliot/en/dl-macosx.html"
-    strategy :page_match
-    regex(%r{href=.*?/eliot-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(/href=.*?eliot[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "Eliot.app"
