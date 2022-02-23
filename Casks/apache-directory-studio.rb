@@ -8,8 +8,8 @@ cask "apache-directory-studio" do
   homepage "https://directory.apache.org/studio/"
 
   livecheck do
-    url "https://archive.apache.org/dist/directory/studio/"
-    regex(%r{href="(\d+(?:\.\d+)*.*)/"}i)
+    url :url
+    regex(%r{href=["']?v?(\d+(?:\.\d+)+[^/]*?)/?["' >]}i)
   end
 
   app "ApacheDirectoryStudio.app"
