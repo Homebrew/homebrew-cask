@@ -1,12 +1,12 @@
 cask "kap" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "3.5.3"
+  version "3.5.4"
 
   if Hardware::CPU.intel?
-    sha256 "d5c4acb633b34db23c0115363254d806ad5ce7ecb052fc6936deb13d65cc7fd5"
+    sha256 "141c69b044887eb772688b6dc60029f4da8fac2793336c54d2777545e3324df9"
   else
-    sha256 "a47eb3fda8732ecc3da92ddb4c7bb449e5f84c8186c09b498570495c156be98c"
+    sha256 "1240b9de59eb8bc1b870deb45b2da69f3e406debcc423e7bfb574780a43a9593"
   end
 
   url "https://github.com/wulkano/kap/releases/download/v#{version.major_minor_patch}/Kap-#{version}-#{arch}.dmg",
