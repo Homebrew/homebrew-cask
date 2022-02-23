@@ -8,11 +8,8 @@ cask "flycast" do
   homepage "https://github.com/flyinghead/flycast"
 
   livecheck do
-    url :stable
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   app "Flycast.app"
-
-  zap trash: "~/.flycast"
 end
