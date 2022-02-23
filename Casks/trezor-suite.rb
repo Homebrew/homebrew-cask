@@ -1,12 +1,12 @@
 cask "trezor-suite" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "22.1.1"
+  version "22.2.3"
 
   if Hardware::CPU.intel?
-    sha256 "b95a6ecde010c41ce186f92039b116d97b6ec729479cbd22704079434d1a0e9f"
+    sha256 "dc9aed771c5bc36f9faea46c7a616a666176ecbb84d156046dd5212cc031a48b"
   else
-    sha256 "9e68c0c82dc9a73976c4374ccb51a01092ca1efe2d7494886854c565b653dc03"
+    sha256 "58eccdde9c24eec9894106e8fcdb0998434b326a4c716af24a9c1f76860c92ae"
   end
 
   url "https://suite.trezor.io/web/static/desktop/Trezor-Suite-#{version}-mac-#{arch}.dmg"
