@@ -12,4 +12,6 @@ cask "flycast" do
   end
 
   app "Flycast.app"
+
+  zap rmdir: "~/.flycast"
 end
