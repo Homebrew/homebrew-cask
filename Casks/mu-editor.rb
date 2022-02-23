@@ -9,4 +9,10 @@ cask "mu-editor" do
   homepage "https://codewith.mu/"
 
   app "Mu Editor.app"
+
+  zap rmdir: "~/mu_code",
+      trash: [
+        "~/Library/Application Support/mu",
+        "~/Library/Logs/mu",
+      ]
 end
