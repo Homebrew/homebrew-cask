@@ -18,7 +18,7 @@ cask "gargoyle" do
   livecheck do
     url "https://github.com/garglk/garglk/releases"
     strategy :page_match
-    regex(%r{href=.*?/gargoyle-(\d+(?:\.\d+)*)-#{arch}\.dmg}i)
+    regex(/href=.*?gargoyle[._-]v?(\d+(?:\.\d+)+)-#{arch}\.dmg/i)
   end
 
   app "Gargoyle.app"
