@@ -47,6 +47,7 @@ cask "teamviewer" do
               pkgutil:   [
                 "com.teamviewer.remoteaudiodriver",
                 "com.teamviewer.teamviewer.*",
+                "com.teamviewer.AuthorizationPlugin",
               ],
               launchctl: [
                 "com.teamviewer.desktop",
