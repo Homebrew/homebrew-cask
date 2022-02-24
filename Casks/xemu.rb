@@ -9,7 +9,7 @@ cask "xemu" do
   homepage "https://xemu.app/"
 
   livecheck do
-    regex(/gh-release\/(.*)/i)
+    regex(%r{gh-release/(.*)}i)
   end
 
   app "Xemu.app"
