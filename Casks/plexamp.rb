@@ -1,12 +1,12 @@
 cask "plexamp" do
   arch = Hardware::CPU.intel? ? "" : "-arm64"
 
-  version "4.0.1"
+  version "4.0.2"
 
   if Hardware::CPU.intel?
-    sha256 "127e6b86ddaaceda422aa686c903277139d2aa338c72182253712231a2ea2004"
+    sha256 "4eb4db1e196933479315a22aaaf31101c8ada0887dfd934a631802b702167439"
   else
-    sha256 "1fb91447a07d363cf3c8a65587d95c3446f8f046ee681899399d09a4c28e97c0"
+    sha256 "0fab9f8f957708404e995c3078525050064455b21cebbf2bc8255f009fb51130"
   end
 
   url "https://plexamp.plex.tv/plexamp.plex.tv/desktop/Plexamp-#{version}#{arch}.dmg",
