@@ -7,7 +7,7 @@ cask "teamviewer" do
       strategy :sparkle
     end
   else
-    version "15.26.5"
+    version "15.27.3"
 
     livecheck do
       url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=10.15.1&type=1&channel=1"
@@ -47,6 +47,7 @@ cask "teamviewer" do
               pkgutil:   [
                 "com.teamviewer.remoteaudiodriver",
                 "com.teamviewer.teamviewer.*",
+                "com.teamviewer.AuthorizationPlugin",
               ],
               launchctl: [
                 "com.teamviewer.desktop",
