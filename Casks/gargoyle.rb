@@ -22,4 +22,10 @@ cask "gargoyle" do
   end
 
   app "Gargoyle.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.googlecode.garglk.launcher.sfl2",
+    "~/Library/Preferences/com.googlecode.garglk.Launcher.plist",
+    "~/Library/Saved Application State/com.googlecode.garglk.Launcher.savedState",
+  ]
 end
