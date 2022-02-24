@@ -3,13 +3,13 @@ cask "xemu" do
   sha256 "8e13ac491e1fdd69d2a4beb3d5fcb12a8ebfe6a344282758cd0a4763c132b56d"
 
   url "https://github.com/mborgerson/xemu/releases/download/gh-release%2F#{version}/xemu-macos-universal-release.zip",
-      verified: "https://github.com/mborgerson/xemu/releases/"
+      verified: "/github.com/mborgerson/xemu/"
   name "Xemu"
   desc "Original Xbox Emulator"
   homepage "https://xemu.app/"
 
   livecheck do
-    regex(%r{gh-release/v?(\d+(?:\.\d+)+-\d+-+g+[0-9a-f]{5,40}\b)$}i)
+    regex(/gh-release\/(.*)/i)
   end
 
   app "Xemu.app"
