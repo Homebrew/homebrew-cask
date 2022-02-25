@@ -3,7 +3,7 @@ cask "microsoft-teams" do
   sha256 "6c0d24f71b3a7e296361bdb53ab84caf1fb8b95ffda69d8a0850cc56a415037e"
 
   url "https://statics.teams.cdn.office.net/production-osx/#{version}/Teams_osx.pkg",
-      verified: "statics.teams.cdn.office.net"
+      verified: "statics.teams.cdn.office.net/production-osx/"
   name "Microsoft Teams"
   desc "Meet, chat, call, and collaborate in just one place"
   homepage "https://teams.microsoft.com/downloads"
