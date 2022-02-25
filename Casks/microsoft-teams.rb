@@ -34,5 +34,6 @@ cask "microsoft-teams" do
     "~/Library/Preferences/com.microsoft.teams.plist",
     "~/Library/Saved Application State/com.microsoft.teams.savedState",
     "~/Library/WebKit/com.microsoft.teams",
-  ]
+  ],
+      rmdir: "~/Library/Application Support/Microsoft"
 end
