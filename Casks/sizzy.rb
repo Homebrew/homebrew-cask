@@ -12,7 +12,5 @@ cask "sizzy" do
   desc "Tool to simulate responsive designs on multiple devices"
   homepage "https://sizzy.co/"
 
-  auto_updates true
-
   app "Sizzy.app"
 end
