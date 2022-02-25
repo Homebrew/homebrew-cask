@@ -1,6 +1,6 @@
 cask "beekeeper-studio" do
-  version "3.2.0"
-  sha256 "dc0a310f9ea4def93ec09796dcfae058faa6ef3e0c6b46419aa3a55cb3362247"
+  version "3.2.1"
+  sha256 "295bde2be2d95699fe4f5e8ee6a2a66a50d4d84e9a81ee9861073d1392231456"
 
   url "https://github.com/beekeeper-studio/beekeeper-studio/releases/download/v#{version}/Beekeeper-Studio-#{version}.dmg",
       verified: "github.com/beekeeper-studio/beekeeper-studio/"
