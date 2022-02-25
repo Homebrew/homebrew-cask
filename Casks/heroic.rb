@@ -1,6 +1,6 @@
 cask "heroic" do
-  version "2.2.0"
-  sha256 "3b859160998a81483f49e888d8a70b320aac6a6ef1823c8d3015e066a9cebf96"
+  version "2.2.1"
+  sha256 "69c737db3bd1ed643c4b05e195e2516de7dcd5676de67ca3f940a4c18b7be38f"
 
   url "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v#{version}/Heroic-#{version}.dmg"
   name "Heroic Games Launcher"
