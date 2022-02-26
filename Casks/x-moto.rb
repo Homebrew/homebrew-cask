@@ -5,11 +5,12 @@ cask "x-moto" do
   url "https://github.com/xmoto/xmoto/releases/download/#{version}/xmoto-#{version}.dmg",
       verified: "github.com/xmoto/xmoto/"
   name "X-Moto"
+  desc "2D motocross platform game"
   homepage "https://xmoto.tuxfamily.org/"
 
   livecheck do
     url :url
-    strategy :git
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
