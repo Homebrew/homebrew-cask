@@ -3,7 +3,7 @@ cask "exodus" do
 
   version "22.2.25"
 
-  if arch == "macos"
+  if Hardware::CPU.intel?
     sha256 "76ce318f31b8c58478827906c8e1fd31800737e838695871e816539123366395"
   else
     sha256 "f3240563df41efbd7b38daf838971f531f5b90c40dbb083e3be6cf18302867d9"
