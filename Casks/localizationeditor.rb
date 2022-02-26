@@ -4,7 +4,7 @@ cask "localizationeditor" do
 
   url "https://github.com/igorkulman/iOSLocalizationEditor/releases/download/v#{version}/LocalizationEditor.app.zip"
   name "LocalizationEditor"
-  desc "Simple macOS editor app to help you manage iOS app localizations by allowing you to edit all the translations side by side, highlighting missing translations"
+  desc "iOS app localization manager"
   homepage "https://github.com/igorkulman/iOSLocalizationEditor/"
 
   depends_on macos: ">= :high_sierra"
