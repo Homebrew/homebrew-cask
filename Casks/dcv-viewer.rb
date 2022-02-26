@@ -3,14 +3,14 @@ cask "dcv-viewer" do
 
   version "2022.0.3929"
 
-  url "https://d1uj6qtbmh3dt5.cloudfront.net/#{version.major_minor}/Clients/nice-dcv-viewer-#{version}.#{arch}.dmg",
-      verified: "d1uj6qtbmh3dt5.cloudfront.net/"
   if Hardware::CPU.intel?
     sha256 "4b596d5c6709eb92f88120dbd80bb21d4f7ff8ce0754d616d42470283f75f0e7"
   else
     sha256 "ea4cbb17eb819b7551c100e7a39c2fcb6b8d106632c418b89fd32ec1cced8e1f"
   end
 
+  url "https://d1uj6qtbmh3dt5.cloudfront.net/#{version.major_minor}/Clients/nice-dcv-viewer-#{version}.#{arch}.dmg",
+      verified: "d1uj6qtbmh3dt5.cloudfront.net/"
   name "NICE DCV Viewer"
   desc "Client for NICE DCV remote display protocol"
   homepage "https://www.nice-dcv.com/"
