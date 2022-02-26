@@ -6,7 +6,7 @@ cask "morgen" do
       verified: "https://dl.todesktop.com/210203cqcj00tw1/mac/dmg/x64"
   name "Morgen"
   desc "All-in-one Calendars, Tasks and Scheduler"
-  homepage "https://morgen.so"
+  homepage "https://morgen.so/"
 
   app "Morgen.app"
 end
