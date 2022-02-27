@@ -1,5 +1,5 @@
 cask "pdfpen" do
-  version "13.1"
+  version "13.1,1310.8"
   sha256 "1f76e0d76eedc6d9d1d013f380cf101507a2ca858e669e25786a01418041231d"
 
   url "https://cdn.smilesoftware.com/PDFpen_#{version.csv.first}.dmg"
