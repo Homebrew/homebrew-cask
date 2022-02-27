@@ -1,8 +1,10 @@
 cask "naver-whale" do
-  version "2.11.126.23"
+  arch = Hardware::CPU.intel? ? "" : "ARM64"
+
+  version "3.13.131.36"
   sha256 :no_check
 
-  url "http://update.whale.naver.net/downloads/installers/NaverWhale.dmg",
+  url "http://update.whale.naver.net/downloads/installers/NaverWhale#{arch}.dmg",
       verified: "update.whale.naver.net/downloads/installers/"
   name "NAVER Whale"
   desc "Web browser"
