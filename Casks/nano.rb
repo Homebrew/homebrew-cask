@@ -19,7 +19,7 @@ cask "nano" do
 
   zap trash: [
     "~/Library/Preferences/net.raiblocks.rai_wallet.Nano.plist",
-    "~/Library/Saved Application State/net.raiblocks.rai_wallet.savedState",
     "~/Library/RaiBlocks",
+    "~/Library/Saved Application State/net.raiblocks.rai_wallet.savedState",
   ]
 end
