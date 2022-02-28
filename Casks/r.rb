@@ -1,7 +1,7 @@
 cask "r" do
   if MacOS.version <= :yosemite
     version "3.3.3"
-    sha245 "77d7a145d1f7d5c3f5bd7310ae2beb7349118528d938e519845ce7d205b4c864"
+    sha256 "77d7a145d1f7d5c3f5bd7310ae2beb7349118528d938e519845ce7d205b4c864"
     url "https://cloud.r-project.org/bin/macosx/R-#{version}.pkg"
   elsif MacOS.version <= :sierra
     version "3.6.3.nn"
@@ -23,8 +23,7 @@ cask "r" do
 
   livecheck do
     url "https://cloud.r-project.org/bin/macosx/"
-    strategy :page_match
-    regex(/href=.*?R-(\d+(?:\.\d+)*)\.pkg/i)
+    regex(/href=.*?R[._-]v?(\d+(?:\.\d+)*)\.pkg/i)
   end
 
   depends_on macos: ">= :el_capitan"
