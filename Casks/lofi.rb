@@ -1,6 +1,6 @@
 cask "lofi" do
-  version "1.6.0"
-  sha256 "9b0373b37fc1fd61075963ddd3e109523150b3cc09de8aeef8f83bf3dfa24cf9"
+  version "1.6.1"
+  sha256 "dd30d8cf7bb60d274e5046a52b1254ff02a13058342a07214329f26afd1d7afa"
 
   url "https://github.com/dvx/lofi/releases/download/v#{version}/lofi-#{version}.dmg",
       verified: "github.com/dvx/lofi/"
