@@ -12,7 +12,6 @@ cask "phoenix" do
   app "Phoenix.app"
 
   zap trash: [
-    "~/.phoenix.js",
     "~/Library/Application Support/Phoenix/storage.json",
     "~/Library/Preferences/org.khirviko.Phoenix.plist",
   ]
