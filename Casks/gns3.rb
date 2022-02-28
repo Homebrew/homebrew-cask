@@ -15,7 +15,7 @@ cask "gns3" do
   app "GNS3.app"
 
   zap trash: [
-    "~/Library/Saved Application State/net.gns3.savedState",
     "~/GNS3",
+    "~/Library/Saved Application State/net.gns3.savedState",
   ]
 end
