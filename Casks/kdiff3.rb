@@ -10,7 +10,7 @@ cask "kdiff3" do
 
   livecheck do
     url "https://download.kde.org/stable/kdiff3/"
-    regex(/href=["']?kdiff3[._-]?v?(\d+(?:\.\d+)+)[._-]?macos[._-]?64\.dmg/i)
+    regex(/href=["']?kdiff3[._-]v?(\d+(?:\.\d+)+)[._-]macos[._-]64[._-]clang\.dmg/i)
   end
 
   app "kdiff3.app"
