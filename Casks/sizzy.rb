@@ -9,5 +9,12 @@ cask "sizzy" do
   desc "Tool to simulate responsive designs on multiple devices"
   homepage "https://sizzy.co/"
 
+  livecheck do
+    url :url
+    strategy :header_match
+  end
+
+  auto_updates true
+
   app "Sizzy.app"
 end
