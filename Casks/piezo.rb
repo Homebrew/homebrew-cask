@@ -1,5 +1,5 @@
 cask "piezo" do
-  version "1.7.7"
+  version "1.7.8"
   sha256 :no_check
 
   url "https://rogueamoeba.com/piezo/download/Piezo.zip"
