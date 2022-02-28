@@ -10,11 +10,12 @@ cask "metaimage" do
 
   livecheck do
     url "https://neededapps.com/appcasts/metaimage/changelog.xml"
-    strategy :sparkle do |item|
-      hex = item.url[%r{/([\h-]+)\.zip}i, 1]
-      next if hex.blank?
+    regex(%r{/([^/]+)\.zip$}i)
+    strategy :sparkle do |item, regex|
+      filename = item.url[regex, 1]
+      next if filename.blank?
 
-      "#{item.short_version},#{hex}"
+      "#{item.short_version},#{filename}"
     end
   end
 
