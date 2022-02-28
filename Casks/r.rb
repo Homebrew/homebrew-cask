@@ -23,8 +23,7 @@ cask "r" do
 
   livecheck do
     url "https://cloud.r-project.org/bin/macosx/"
-    strategy :page_match
-    regex(/href=.*?R-(\d+(?:\.\d+)*)\.pkg/i)
+    regex(/href=.*?R[._-]v?(\d+(?:\.\d+)*)\.pkg/i)
   end
 
   depends_on macos: ">= :el_capitan"
