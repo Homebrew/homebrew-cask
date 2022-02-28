@@ -11,12 +11,13 @@ cask "electerm" do
 
   url "https://github.com/electerm/electerm/releases/download/v#{version}/electerm-#{version}-mac-#{arch}.dmg"
   name "electerm"
-  desc "Terminal/ssh/serial port/sftp client"
+  desc "Terminal/ssh/sftp client"
   homepage "https://github.com/electerm/electerm/"
 
   auto_updates true
 
   app "electerm.app"
+  binary "#{appdir}/electerm.app/Contents/MacOS/electerm"
 
   zap trash: [
     "~/Library/Application Support/electerm",
