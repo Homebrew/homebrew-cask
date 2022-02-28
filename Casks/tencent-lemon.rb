@@ -10,7 +10,7 @@ cask "tencent-lemon" do
 
   livecheck do
     url "https://lemon.guanjia.qq.com/latest/package"
-    regex(/"downloadUrl":"https.*Lemon(\d+(?:[._]\d+)+)\.dmg/i)
+    regex(/"downloadUrl":"https.*Lemonv?(\d+(?:[._]\d+)+)\.dmg/i)
   end
 
   app "Tencent Lemon.app"
