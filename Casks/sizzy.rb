@@ -1,6 +1,6 @@
 cask "sizzy" do
   arch = Hardware::CPU.intel? ? "intel" : "arm64"
-  
+
   version :latest
   sha256 :no_check
 
