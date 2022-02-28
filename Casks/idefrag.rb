@@ -17,7 +17,12 @@ cask "idefrag" do
     regex(%r{href=.*?/iDefrag[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  depends_on macos: ">= :yosemite"
+  depends_on macos: "<= :high_sierra"
 
   app "iDefrag.app"
+
+  caveats do
+    discontinued
+    free_license "https://coriolis-systems.com/downloads/iDefrag.png"
+  end
 end
