@@ -9,8 +9,7 @@ cask "makemkv" do
 
   livecheck do
     url "https://www.makemkv.com/download/"
-    strategy :page_match
-    regex(%r{href=.*?/makemkv_v?(\d+(?:\.\d+)*)_osx\.dmg}i)
+    regex(%r{href=.*?/makemkv[._-]v?(\d+(?:\.\d+)+)[._-]osx\.dmg}i)
   end
 
   app "MakeMKV.app"
