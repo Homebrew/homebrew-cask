@@ -26,5 +26,8 @@ cask "mullvadvpn" do
     "~/Library/Logs/Mullvad VPN",
     "~/Library/Preferences/net.mullvad.vpn.plist",
     "/Library/LaunchDaemons/net.mullvad.daemon.plist",
+    "/var/log/mullvad-vpn",
+    "/Library/Caches/mullvad-vpn",
+    "/etc/mullvad-vpn",
   ]
 end
