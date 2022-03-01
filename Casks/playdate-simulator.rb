@@ -11,7 +11,6 @@ cask "playdate-simulator" do
   livecheck do
     url :homepage
     regex(/Playdate\sSDK\s(\d+(?:\.\d+)+)/i)
-    end
   end
 
   depends_on macos: ">= :catalina"
