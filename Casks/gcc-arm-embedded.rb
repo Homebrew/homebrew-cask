@@ -15,8 +15,6 @@ cask "gcc-arm-embedded" do
     regex(/href=.*?gcc-arm-(\d+\.\d+-\d+\.\d+)-darwin-(?:\w+)-arm-none-eabi.pkg/i)
   end
 
-  depends_on arch: :x86_64
-
   pkg "gcc-arm-#{version}-darwin-x86_64-arm-none-eabi.pkg"
   binary "#{appdir}/ARM/bin/arm-none-eabi-addr2line"
   binary "#{appdir}/ARM/bin/arm-none-eabi-ar"
