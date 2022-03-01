@@ -7,11 +7,10 @@ cask "phoenix" do
   desc "Window and app manager scriptable with JavaScript"
   homepage "https://github.com/kasper/phoenix/"
 
+  auto_updates true
   depends_on macos: ">= :el_capitan"
 
   app "Phoenix.app"
-
-  auto_updates true
 
   zap trash: [
     "~/Library/Application Support/Phoenix/storage.json",
