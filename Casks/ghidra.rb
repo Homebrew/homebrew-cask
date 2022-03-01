@@ -16,8 +16,6 @@ cask "ghidra" do
     end
   end
 
-  conflicts_with cask: "homebrew/cask-versions/ghidra-beta"
-
   binary "#{caskroom_path}/#{version.csv.first}-#{version.csv.second}/ghidra_#{version.csv.first}_PUBLIC/ghidraRun"
 
   preflight do
