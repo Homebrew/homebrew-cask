@@ -17,7 +17,14 @@ cask "ipartition" do
     regex(%r{href=.*?/iPartition[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
+  depends_on macos: "<= :high_sierra"
+
   app "iPartition.app"
 
   zap trash: "~/Library/Preferences/com.coriolis-systems.iPartition.plist"
+
+  caveats do
+    discontinued
+    free_license "https://coriolis-systems.com/downloads/iPartition.png"
+  end
 end

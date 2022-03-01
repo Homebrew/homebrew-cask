@@ -1,12 +1,12 @@
 cask "gitkraken" do
   arch = Hardware::CPU.intel? ? "darwin" : "darwin-arm64"
 
-  version "8.3.0"
+  version "8.3.1"
 
   if Hardware::CPU.intel?
-    sha256 "f75a534683d4fd76493e3d942c7221b22a247178ae974cb482156c56477945d4"
+    sha256 "de4cb366279b07241181da8dab653b2ccde70fcda01a36a58af8255640fe879b"
   else
-    sha256 "5877eb06db592692e0eb31a934273e7ad01f866f8a269d9d62931f22622b7d7d"
+    sha256 "04b1bd5a62783f516f74e8e86cc1914627cc4d8b84b8d53c00dad4bef373bed7"
   end
 
   url "https://release.axocdn.com/#{arch}/GitKraken-v#{version}.zip",
