@@ -18,15 +18,15 @@ cask "runelite" do
   livecheck do
     url "https://github.com/runelite/launcher/releases"
     strategy :page_match
-    regex(%r{(\d+(?:\.\d+)+)/RuneLite-#{arch}\.dmg}i)
+    regex(%r{v?(\d+(?:\.\d+)+)/RuneLite[._-]#{arch}\.dmg}i)
   end
 
   app "RuneLite.app"
 
   zap trash: [
+    "~/.runelite",
     "~/jagex_cl_oldschool_LIVE.dat",
     "~/jagexcache/oldschool",
     "~/random.dat",
-    "~/.runelite",
   ]
 end
