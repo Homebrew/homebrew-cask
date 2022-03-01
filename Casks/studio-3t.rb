@@ -3,6 +3,7 @@ cask "studio-3t" do
   livecheckarch = Hardware::CPU.intel? ? "" : "_aarch64"
 
   version "2022.2.0"
+
   if Hardware::CPU.intel?
     sha256 "201b99316f65687b5c6642362a3723c9ea1382e0625aea1469f41bec4e46494e"
   else
