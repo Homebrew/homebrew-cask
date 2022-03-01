@@ -9,8 +9,7 @@ cask "querious" do
 
   livecheck do
     url "https://arweb-assets.s3.amazonaws.com/downloads/querious/updates.json"
-    strategy :page_match
-    regex(/Querious(\d+(?:\.\d+)*)\.zip/i)
+    regex(/Queriousv?(\d+(?:\.\d+)+)\.zip/i)
   end
 
   auto_updates true
