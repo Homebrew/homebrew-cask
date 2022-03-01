@@ -1,8 +1,9 @@
 cask "cloudflare-warp" do
-  version "2022.2.69.0,20220214.3"
+  version "2022.2.248.0,20220223.7"
   sha256 :no_check
 
-  url "https://cloudflarewarp.com/Cloudflare_WARP.zip"
+  url "https://1111-releases.cloudflareclient.com/mac/Cloudflare_WARP.zip",
+      verified: "1111-releases.cloudflareclient.com/mac/"
   name "Cloudflare WARP"
   desc "Free app that makes your Internet safer"
   homepage "https://cloudflarewarp.com/"
