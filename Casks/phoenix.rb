@@ -11,6 +11,8 @@ cask "phoenix" do
 
   app "Phoenix.app"
 
+  auto_updates true
+
   zap trash: [
     "~/Library/Application Support/Phoenix/storage.json",
     "~/Library/Preferences/org.khirviko.Phoenix.plist",
