@@ -11,7 +11,6 @@ cask "ncar-ncl" do
         verified: "earthsystemgrid.org/dataset/ncl."
   end
 
-  appcast "https://www.ncl.ucar.edu/current_release.shtml"
   name "NCAR Command Language"
   name "ncl"
   desc "Interpreted language for scientific data analysis and visualization"
