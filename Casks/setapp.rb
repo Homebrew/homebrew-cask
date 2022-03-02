@@ -20,10 +20,11 @@ cask "setapp" do
 
   app "Setapp.app"
 
-  uninstall script: {
-    executable: "#{appdir}/Setapp.app/Contents/Resources/SetappUninstaller.app/Contents/Resources/removeSetapp.sh",
-    sudo:       true,
-  }
+  uninstall launchctl: "com.setapp.DesktopClient",
+            script:    {
+              executable: "#{appdir}/Setapp.app/Contents/Resources/SetappUninstaller.app/Contents/Resources/removeSetapp.sh",
+              sudo:       true,
+            }
 
   zap trash: [
     "~/Library/Application Scripts/com.setapp.DesktopClient.SetappAgent.FinderSyncExt",
