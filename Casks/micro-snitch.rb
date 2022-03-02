@@ -9,8 +9,7 @@ cask "micro-snitch" do
 
   livecheck do
     url "https://www.obdev.at/products/microsnitch/download.html"
-    strategy :page_match
-    regex(%r{href=.*?/MicroSnitch-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/MicroSnitch[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   auto_updates true
