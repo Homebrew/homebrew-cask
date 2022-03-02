@@ -18,7 +18,7 @@ cask "setapp" do
   auto_updates true
   depends_on macos: ">= :catalina"
 
-  installer manual: "Setapp.app"
+  app "Setapp.app"
 
   uninstall script: {
     executable: "#{appdir}/Setapp.app/Contents/Resources/SetappUninstaller.app/Contents/Resources/removeSetapp.sh",
