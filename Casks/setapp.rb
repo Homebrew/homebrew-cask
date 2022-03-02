@@ -20,9 +20,6 @@ cask "setapp" do
 
   app "Setapp.app"
 
-  uninstall quit:      "com.setapp.DesktopClient",
-            launchctl: "com.setapp.DesktopClient"
-
   zap trash: [
     "~/Library/Application Scripts/com.setapp.DesktopClient.SetappAgent.FinderSyncExt",
     "~/Library/Caches/com.setapp.DesktopClient",
