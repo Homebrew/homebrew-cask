@@ -18,7 +18,7 @@ cask "ncar-ncl" do
 
   livecheck do
     url :homepage
-    regex (/>Current\s*Version.*?v?(\d+(?:\.\d+)+)\s*?</i)
+    regex(/>Current\s*Version.*?v?(\d+(?:\.\d+)+)\s*?</i)
   end
 
   depends_on cask: "xquartz"
