@@ -1,6 +1,6 @@
 cask "amazon-workdocs" do
-  version "1.2.200427.0,6"
-  sha256 "6c38c9ecccf416afa81d1b19d6a5d549d205af7ae1af449e974c044c25c05c1a"
+  version "1.2.200445.0,20"
+  sha256 "b2f5f93c69180aaac60ab1737669cec054f5d117ae5e373f8e4bb342cd1a887e"
 
   url "https://d28gdqadgmua23.cloudfront.net/mac/version/#{version.csv.first}/#{version.csv.second}/Amazon%20WorkDocs.app.zip",
       verified: "d28gdqadgmua23.cloudfront.net/"
