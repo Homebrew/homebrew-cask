@@ -16,14 +16,9 @@ cask "setapp" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :catalina"
 
-  installer manual: "Setapp.app"
-
-  uninstall script: {
-    executable: "#{appdir}/Setapp.app/Contents/Resources/SetappUninstaller.app/Contents/Resources/removeSetapp.sh",
-    sudo:       true,
-  }
+  app "Setapp.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.setapp.DesktopClient.SetappAgent.FinderSyncExt",
