@@ -4,6 +4,7 @@ cask "comictagger" do
 
   url "https://github.com/davide-romanini/comictagger/releases/download/#{version}/ComicTagger-#{version}-osx-10.15.7-x86_64.app.zip"
   name "ComicTagger"
+  desc "Metadata editor for digital comics"
   homepage "https://github.com/davide-romanini/comictagger"
 
   livecheck do
