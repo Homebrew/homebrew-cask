@@ -60,5 +60,5 @@ cask "gcc-aarch64-embedded" do
               "/Applications/ARM/share/man/man5/aarch64-none-elf-gdbinit.5",
             ]
 
-  zap delete: "/Applications/ARM"
+  zap trash: "/Applications/ARM"
 end
