@@ -12,11 +12,6 @@ cask "ipartition" do
   desc "Disk partitioning tool"
   homepage "https://coriolis-systems.com/iPartition/"
 
-  livecheck do
-    url :homepage
-    regex(%r{href=.*?/iPartition[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
-  end
-
   depends_on macos: "<= :high_sierra"
 
   app "iPartition.app"
