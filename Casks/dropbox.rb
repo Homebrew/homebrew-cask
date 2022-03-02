@@ -49,4 +49,3 @@ cask "dropbox" do
     "~/Library/Preferences/com.getdropbox.dropbox.plist",
   ]
 end
-R
