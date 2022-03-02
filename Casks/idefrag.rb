@@ -12,11 +12,6 @@ cask "idefrag" do
   desc "Disk optimizer and defragmentation tool"
   homepage "https://coriolis-systems.com/iDefrag/"
 
-  livecheck do
-    url :homepage
-    regex(%r{href=.*?/iDefrag[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
-  end
-
   depends_on macos: "<= :high_sierra"
 
   app "iDefrag.app"
