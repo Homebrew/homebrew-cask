@@ -13,5 +13,9 @@ cask "flycast" do
 
   app "Flycast.app"
 
-  zap rmdir: "~/.flycast"
+  zap rmdir: [
+    "~/.reicast",
+    "~/.flycast",
+    "/Library/Application Support/Flycast/",
+  ]
 end
