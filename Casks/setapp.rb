@@ -9,7 +9,7 @@ cask "setapp" do
   homepage "https://setapp.com/"
 
   livecheck do
-    url "https://updateinfo.devmate.com/com.setapp.DesktopClient/updates.xml"
+    url "https://s3-us-west-2.amazonaws.com/updateinfo.devmate.com/com.setapp.DesktopClient/updates.xml"
     strategy :sparkle do |item|
       "#{item.short_version},#{item.url[%r{/(\d+)/Setapp-(?:\d+(?:\.\d+)*)\.zip}i, 1]}"
     end
