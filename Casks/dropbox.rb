@@ -2,8 +2,8 @@ cask "dropbox" do
   version "143.4.4161"
   sha256 :no_check
   arch = Hardware::CPU.intel? ? "" : "&arch=arm64"
-  
-  url "https://www.dropbox.com/downloading?build=#{version}&plat=mac&type=full#{arch}"
+
+  url "https://www.dropbox.com/download?plat=mac&full=1#{arch}"
   name "Dropbox"
   desc "Client for the Dropbox cloud storage service"
   homepage "https://www.dropbox.com/"
@@ -49,3 +49,4 @@ cask "dropbox" do
     "~/Library/Preferences/com.getdropbox.dropbox.plist",
   ]
 end
+R
