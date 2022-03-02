@@ -61,5 +61,5 @@ cask "gcc-arm-embedded" do
               "/Applications/ARM/share/man/man5/arm-none-eabi-gdbinit.5",
             ]
 
-  zap delete: "/Application/ARM"
+  zap trash: "/Applications/ARM"
 end
