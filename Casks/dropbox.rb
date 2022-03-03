@@ -1,8 +1,10 @@
 cask "dropbox" do
+  arch = Hardware::CPU.intel? ? "" : "&arch=arm64"
+
   version "142.4.4197"
   sha256 :no_check
 
-  url "https://www.dropbox.com/download?plat=mac&full=1"
+  url "https://www.dropbox.com/download?plat=mac&full=1#{arch}"
   name "Dropbox"
   desc "Client for the Dropbox cloud storage service"
   homepage "https://www.dropbox.com/"

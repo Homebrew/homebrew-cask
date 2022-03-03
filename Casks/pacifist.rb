@@ -1,6 +1,6 @@
 cask "pacifist" do
-  version "4.0.2,65727"
-  sha256 "8c1c1c71d0452f8c0a3276224f6755d5c48fcfdf5d12bac12d4b418698052b0f"
+  version "4.0.3,66254"
+  sha256 "a49a3303f6eea9fdb34c94fea4bc185c956b26f471059833759ea775da5b8062"
 
   url "https://www.charlessoft.com/pacifist_download/Pacifist_#{version.csv.first}.dmg"
   name "Pacifist"
