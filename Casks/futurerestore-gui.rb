@@ -1,6 +1,6 @@
 cask "futurerestore-gui" do
-  version "1.95"
-  sha256 "99398637c36c33174cdff6d8181156bf44349a81237944a4c59416af9e334f54"
+  version "1.96"
+  sha256 "9c90c6ad8f2d7548567c1d792418ced56b788a9c12d929930d3e5d68dcbe6459"
 
   url "https://github.com/CoocooFroggy/FutureRestore-GUI/releases/download/v#{version}/FutureRestore-GUI-Mac-#{version}.dmg"
   name "FutureRestore GUI"
