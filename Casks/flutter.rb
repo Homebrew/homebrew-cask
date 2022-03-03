@@ -1,6 +1,6 @@
 cask "flutter" do
-  version "2.10.2"
-  sha256 "6d4ad8ab7c0bc8e9dee043c4ea84719c4016403f4ae6b3441e7a099f194deff5"
+  version "2.10.3"
+  sha256 "77475dd7e674bf2079a2000183478c19ca9b2eeb404d4819777b1fc12b87ca4a"
 
   url "https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos_#{version}-stable.zip",
       verified: "storage.googleapis.com/flutter_infra_release/"
