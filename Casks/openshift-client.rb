@@ -1,6 +1,6 @@
 cask "openshift-client" do
-  version "4.9.21"
-  sha256 "583e18caa5377fc269a0d4889c3866ddb119947a1cfa8c1f5fcd3a442768f8cf"
+  version "4.9.23"
+  sha256 "cf82ac4052746b457d0185acc09ecd544628cf242b6263c562533d248217fa1e"
 
   url "https://mirror.openshift.com/pub/openshift-v#{version.major}/clients/ocp/#{version}/openshift-client-mac.tar.gz"
   name "Openshift Client"
