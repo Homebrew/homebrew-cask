@@ -1,7 +1,7 @@
 cask "webex" do
   arch = Hardware::CPU.intel? ? "TeamsDesktop-MACOS" : "Desktop-MACOS-Apple-Silicon"
 
-  version "42.2.0.21486"
+  version "42.3.0.21576"
   sha256 :no_check
 
   url "https://binaries.webex.com/Webex#{arch}-Gold/Webex.dmg"
