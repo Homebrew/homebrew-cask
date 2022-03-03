@@ -1,12 +1,12 @@
 cask "stoplight-studio" do
   arch = Hardware::CPU.intel? ? "mac" : "mac-arm64"
 
-  version "2.8.0,7236.git-cc3bce2"
+  version "2.8.0,7260.git-04f3365"
 
   if Hardware::CPU.intel?
-    sha256 "68591adcadafcd95b9efb64b978709bbfd3fc01a263d4f60413e8fc88c0f115e"
+    sha256 "9b08e460d6c3f587f8050d1bbf43905a2cdea8977d27761ae6b38df01445eb72"
   else
-    sha256 "1ca94b94ba97fcdd88c68769423452a12e81706d818882bb518df0002fa745f3"
+    sha256 "61304c1757c4414b7af304607aab42b205e1b690faeba99745a7955f4cc86be9"
   end
 
   url "https://github.com/stoplightio/studio/releases/download/v#{version.csv.first}-stable.#{version.csv.second}/stoplight-studio-#{arch}.dmg",
