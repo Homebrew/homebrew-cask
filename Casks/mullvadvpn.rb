@@ -1,6 +1,6 @@
 cask "mullvadvpn" do
-  version "2021.6"
-  sha256 "fddd96e5c8d829936b63be4a754b865d52422e7984369c5ab479706892b38b71"
+  version "2022.1"
+  sha256 "a8322f73a082be65fa28692ace6fca3432fd40cacf6ef131cd2fb5bd49cbb8f6"
 
   url "https://github.com/mullvad/mullvadvpn-app/releases/download/#{version}/MullvadVPN-#{version}.pkg",
       verified: "github.com/mullvad/mullvadvpn-app/"
@@ -19,12 +19,17 @@ cask "mullvadvpn" do
   pkg "MullvadVPN-#{version}.pkg"
 
   uninstall pkgutil:   "net.mullvad.vpn",
-            launchctl: "net.mullvad.daemon"
+            launchctl: "net.mullvad.daemon",
+            delete:    [
+              "/etc/mullvad-vpn",
+              "/Library/Caches/mullvad-vpn",
+              "/Library/LaunchDaemons/net.mullvad.daemon.plist",
+              "/var/log/mullvad-vpn",
+            ]
 
   zap trash: [
     "~/Library/Application Support/Mullvad VPN",
     "~/Library/Logs/Mullvad VPN",
     "~/Library/Preferences/net.mullvad.vpn.plist",
-    "/Library/LaunchDaemons/net.mullvad.daemon.plist",
   ]
 end
