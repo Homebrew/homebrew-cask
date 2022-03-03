@@ -9,7 +9,9 @@ cask "google-chrome" do
 
   livecheck do
     url "https://chromiumdash.appspot.com/fetch_releases?channel=Stable&platform=Mac"
-    regex(/"version": "(\d+(?:\.\d+)+)"/i)
+    strategy :page_match do |page|
+      JSON.parse(page)[0]["version"]
+    end
   end
 
   auto_updates true
