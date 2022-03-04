@@ -18,8 +18,8 @@ cask "blockblock" do
       sudo:       true,
     }
   else
-    version "2.1.0"
-    sha256 "037ff2dcca4f6d0329928d557d4792b4068d796fbe8733025e79f77092b9c9af"
+    version "2.1.3"
+    sha256 "1bf8c68eeca3dfc8e55722054385e1d170bed61ec3e785bea8ea9741a78d27af"
 
     url "https://github.com/objective-see/BlockBlock/releases/download/v#{version}/BlockBlock_#{version}.zip",
         verified: "github.com/objective-see/BlockBlock/"
