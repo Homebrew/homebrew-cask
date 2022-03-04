@@ -1,12 +1,12 @@
 cask "filebot" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "4.9.5"
+  version "4.9.6"
 
   if Hardware::CPU.intel?
-    sha256 "8f98cd152102dd752433dac9f7939376bb4a5bc5c8080722ecbb1b17e1dccdc9"
+    sha256 "38935215702be042aae44effad9cd5e82139ece8ecdb55ee86515b875064873a"
   else
-    sha256 "7387674b10adae30ea69288a6828b35391d0fd32e067412d11efea2be363233b"
+    sha256 "e1804ce4e402dcdda5a8417294d7317217a5eca57569f4fa47f9f701a0a7c61e"
   end
 
   url "https://get.filebot.net/filebot/FileBot_#{version}/FileBot_#{version}_#{arch}.app.tar.xz"
