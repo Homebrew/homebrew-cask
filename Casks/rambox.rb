@@ -1,6 +1,6 @@
 cask "rambox" do
-  version "2.0.1"
-  sha256 "cd7f3a0016fc4b46813d70dc3e2c2ebf00b59cedb858a2acea7e8abf977a80fa"
+  version "2.0.2"
+  sha256 "bf39c9d012d57be07228f7fcb8e2d08829e0e76a67c1469ebad3637ac4260076"
 
   url "https://github.com/ramboxapp/download/releases/download/v#{version}/Rambox-#{version}-mac.zip",
       verified: "github.com/ramboxapp/download/"
