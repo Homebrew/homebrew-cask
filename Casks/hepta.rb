@@ -10,7 +10,7 @@ cask "hepta" do
   end
 
   url "https://github.com/heptameta/project-meta/releases/download/v#{version}/Hepta-#{version}-#{arch}mac.zip",
-      verified: "github.com/heptameta/"
+      verified: "github.com/heptameta/project-meta/"
   name "Hepta"
   desc "Note-taking tool for visual learning"
   homepage "https://heptabase.com/"
