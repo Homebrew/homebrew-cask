@@ -4,6 +4,7 @@ cask "pdf-converter-master" do
 
   url "https://www.lightenpdf.com/upload/download/pdf-converter-master-#{version.no_dots}.dmg"
   name "PDF Converter Master"
+  desc "Document converter"
   homepage "https://www.lightenpdf.com/pdf-converter-mac.html"
 
   livecheck do
