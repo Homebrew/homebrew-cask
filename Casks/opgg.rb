@@ -10,9 +10,7 @@ cask "opgg" do
 
   livecheck do
     url "https://desktop-app-update.s3.amazonaws.com/latest-mac.yml"
-    strategy :page_match do |page|
-      YAML.safe_load(page)["version"]
-    end
+    strategy :electron_builder
   end
 
   app "OP.GG.app"
