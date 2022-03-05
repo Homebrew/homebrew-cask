@@ -8,8 +8,7 @@ cask "pdf-converter-master" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(/Version\s*(\d+(?:\.\d+)*)/i)
+    regex(/Version\s*v?(\d+(?:\.\d+)+)/i)
   end
 
   app "PDF Converter Master.app"
