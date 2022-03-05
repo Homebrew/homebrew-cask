@@ -9,13 +9,8 @@ cask "opencpn" do
   homepage "https://www.opencpn.org/"
 
   livecheck do
-    url "https://github.com/OpenCPN/OpenCPN/releases/latest"
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/OpenCPN_(\d+(?:\.\d+)*)\+(.*?)\.pkg}i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
-    end
+    url :url
+    regex(/v?(\d+(?:\.\d+)+)$/i)
   end
 
   pkg "OpenCPN_#{version}.pkg"
