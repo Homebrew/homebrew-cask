@@ -27,6 +27,7 @@ cask "notion" do
   app "Notion.app"
 
   zap trash: [
+    "~/Library/Application Support/Caches/notion-updater",
     "~/Library/Application Support/Notion",
     "~/Library/Caches/notion.id",
     "~/Library/Logs/Notion",
