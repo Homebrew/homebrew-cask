@@ -3,9 +3,9 @@ cask "elephicon" do
 
   version "1.6.2"
   if Hardware::CPU.intel?
-    sha256 "93aea28776f9853f3c1c6b09afccc8a390bf3f2c3a2a1891e51a26a802acc010"
+    sha256 "d0a6a198173fe2d5130b70befc8a382e85c2024632986e1fbc991bcdb790385a"
   else
-    sha256 "4906b3c174b193241b90a3a161b0a7836a67738aba6ac6436d5867b5561c8411"
+    sha256 "c6faabb9bb261d0b473de1826e505e1663718530bd5886d4746ba640c7eed840"
   end
 
   url "https://github.com/sprout2000/elephicon/releases/download/v#{version}/Elephicon-#{version}-darwin-#{arch}.zip"
