@@ -1,12 +1,12 @@
 cask "radarr" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "4.0.4.5922"
+  version "4.0.5.5981"
 
   if Hardware::CPU.intel?
-    sha256 "eb8fd9912ecafd013c3a5632d9ff9a7617fec8213e76cadec9a4cabadb61d141"
+    sha256 "b54ace4f3643b2d307302ec09e4a6ddcaa0e4e450ff040ed26930445ef216a6b"
   else
-    sha256 "70378b2032706e3422e893dfd2f015dfbc40e5f331cea77c298e31acd5b13754"
+    sha256 "91649d73d2a769c431a1e03b7c2b9d3525af3a26e21ef85336baf6b1229547a0"
   end
 
   url "https://github.com/Radarr/Radarr/releases/download/v#{version}/Radarr.master.#{version}.osx-app-core-#{arch}.zip",
