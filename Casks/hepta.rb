@@ -1,5 +1,5 @@
 cask "hepta" do
-  arch = Hardware::CPU.intel? ? "" : "arm64-"
+  arch = Hardware::CPU.intel? ? "mac" : "arm64-mac"
 
   version "0.97.0"
 
@@ -9,7 +9,7 @@ cask "hepta" do
     sha256 "d416e9bc14227f4fe841baf8b7ee204dce4bdb910bd9914b7b8c751a4a5908a3"
   end
 
-  url "https://github.com/heptameta/project-meta/releases/download/v#{version}/Hepta-#{version}-#{arch}mac.zip",
+  url "https://github.com/heptameta/project-meta/releases/download/v#{version}/Hepta-#{version}-#{arch}.zip",
       verified: "github.com/heptameta/project-meta/"
   name "Hepta"
   desc "Note-taking tool for visual learning"
