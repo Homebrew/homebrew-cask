@@ -10,8 +10,7 @@ cask "luxmark" do
 
   livecheck do
     url :url
-    strategy :git
-    regex(/^luxmark_v?(\d+(?:\.\d+)*)$/i)
+    regex(/^luxmark[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
   app "LuxMark.app"

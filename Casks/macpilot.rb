@@ -14,7 +14,7 @@ cask "macpilot" do
       skip "newer versions only available for Big Sur or higher"
     end
   else
-    version "13.0.5"
+    version "13.0.6"
     sha256 :no_check
 
     url "https://www.koingosw.com/products/macpilot/download/macpilot.dmg"

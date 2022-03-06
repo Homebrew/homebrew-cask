@@ -1,12 +1,12 @@
 cask "exodus" do
   arch = Hardware::CPU.intel? ? "macos" : "macos-arm64"
 
-  version "22.2.10"
+  version "22.2.25"
 
-  if arch == "macos"
-    sha256 "38803a856d0a873985626dcc650a6e3a756504211b79c6bc9df71dd55ed43477"
+  if Hardware::CPU.intel?
+    sha256 "76ce318f31b8c58478827906c8e1fd31800737e838695871e816539123366395"
   else
-    sha256 "eed20387906a46f5dd6732fb70cf49b5b797386bc9cebbf457b7a218f008b898"
+    sha256 "f3240563df41efbd7b38daf838971f531f5b90c40dbb083e3be6cf18302867d9"
   end
 
   url "https://downloads.exodus.com/releases/exodus-#{arch}-#{version}.dmg"

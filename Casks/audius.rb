@@ -1,6 +1,6 @@
 cask "audius" do
-  version "0.24.39"
-  sha256 "339d4854454bbced6067c973c1d0d93bd97ace1d4dfd5b7ce391d3c51a9ae1e2"
+  version "1.1.1"
+  sha256 "cfaf08fd33a6b69a9598952e2d191b6614ffabfbb7a82b039eae356c8dbca349"
 
   url "https://download.audius.co/Audius-#{version}.dmg"
   name "Audius"
@@ -18,6 +18,7 @@ cask "audius" do
 
   zap trash: [
     "~/Library/Application Support/Audius",
+    "~/Library/Application Support/Caches/audius-client-updater",
     "~/Library/Logs/Audius",
     "~/Library/Saved Application State/co.audius.app.savedState",
   ]

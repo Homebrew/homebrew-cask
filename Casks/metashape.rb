@@ -1,6 +1,6 @@
 cask "metashape" do
-  version "1.8.0"
-  sha256 "cd32618913ad89338923f7fbdface5e6cfb17a7d9f40f1f3bfb5bc4268ddcc17"
+  version "1.8.1"
+  sha256 "1779a84193cdcc6f1e904ddefa91b7abaac81fad79518c37fe54afd557b1136a"
 
   url "http://download.agisoft.com/metashape_#{version.dots_to_underscores}.dmg"
   name "Agisoft Metashape Standard Edition"

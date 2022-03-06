@@ -1,6 +1,6 @@
 cask "linearmouse" do
-  version "0.5.1"
-  sha256 "10c9e2e886a8e57e881f72f34218a3d6b04c203bc903056205b3d9c881bc4d57"
+  version "0.5.3"
+  sha256 "52733e6840229171c3c3939933719f05c4f2a6958a3c9eacf5fae4e3d0c24272"
 
   url "https://github.com/linearmouse/linearmouse/releases/download/v#{version}/LinearMouse.dmg",
       verified: "github.com/linearmouse/linearmouse/"
@@ -8,6 +8,7 @@ cask "linearmouse" do
   desc "Customize mouse behavior"
   homepage "https://linearmouse.org/"
 
+  auto_updates true
   depends_on macos: ">= :catalina"
 
   app "LinearMouse.app"

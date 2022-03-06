@@ -1,5 +1,5 @@
 cask "midiview" do
-  version "1.1.1"
+  version "1.2.0"
   sha256 :no_check
 
   url "https://hautetechnique.com/apps/backend/v1/apps/midiview/latest/macOS"
@@ -11,6 +11,8 @@ cask "midiview" do
     url :url
     strategy :header_match
   end
+
+  auto_updates true
 
   app "MidiView.app"
 

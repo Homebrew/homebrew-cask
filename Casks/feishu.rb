@@ -5,8 +5,8 @@ cask "feishu" do
     version "5.6.9,4595c3"
     sha256 "43cb18c92a2968c05e4d88ec5f9179fe9d292179ed144b9f079a01edeee6c25a"
   else
-    version "5.5.10,c484cd"
-    sha256 "a668a502b940cbd78cbde4ada0419b0ab1b4028f97979f9317b24bf8690da0c1"
+    version "5.6.9,77b27f"
+    sha256 "a0f52951eb632e4f0ba33a9763a471e3563e5078225ce632c7f1a590391a568c"
   end
 
   url "https://sf3-cn.feishucdn.com/obj/ee-appcenter/#{version.csv.second}/Feishu-darwin_#{arch}-#{version.csv.first}-signed.dmg",

@@ -1,6 +1,6 @@
 cask "berrycast" do
-  version "0.35.9"
-  sha256 "7a02398e1a49f26659862a7f3341b89fc854d2725af16adc085a1ca2e770b2ab"
+  version "0.35.12"
+  sha256 "cf68103754c048c147d80a9cec39e5e81c8a2223fe224d728982cd25c5e6d41e"
 
   url "https://media.berrycast.app/desktop-installer/Berrycast-#{version}-latest.dmg",
       verified: "media.berrycast.app/"
@@ -27,7 +27,9 @@ cask "berrycast" do
             ]
 
   zap trash: [
+    "~/Library/Application Support/berrycast-desktop",
     "~/Library/Logs/Berrycast",
+    "~/Library/Logs/berrycast-desktop",
     "~/Library/Preferences/com.openmindt.berrycast.plist",
     "~/Library/Saved Application State/com.openmindt.berrycast.savedState",
   ]

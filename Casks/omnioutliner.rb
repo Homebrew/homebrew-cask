@@ -37,4 +37,11 @@ cask "omnioutliner" do
   auto_updates true
 
   app "OmniOutliner.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.omnigroup.OmniOutliner#{version.major}",
+    "~/Library/Application Scripts/com.omnigroup.OmniOutliner#{version.major}.Thumbnails",
+    "~/Library/Containers/com.omnigroup.OmniOutliner#{version.major}",
+    "~/Library/Containers/com.omnigroup.OmniOutliner#{version.major}.Thumbnails",
+  ]
 end

@@ -23,4 +23,15 @@ cask "foxitreader" do
   uninstall pkgutil:   "com.foxit.pkg.pdfreader",
             delete:    "/Applications/Foxit PDF Reader.app",
             launchctl: "com.foxit.PDFReaderUpdateService"
+
+  zap trash: [
+    "~/Library/Application Support/Foxit Software/Addon/Foxit PDF Reader",
+    "~/Library/Application Support/Foxit Software/Foxit PDF Reader",
+    "~/Library/Caches/com.foxit-software.Foxit PDF Reader",
+    "~/Library/HTTPStorages/com.foxit-software.Foxit%20PDF%20Reader.binarycookies",
+    "~/Library/Preferences/Foxit Software",
+    "~/Library/Preferences/com.foxit-software.Foxit PDF Reader*",
+    "~/Library/Saved Application State/com.foxit-software.Foxit PDF Reader.savedState",
+    "/Library/LaunchDaemons/com.foxit.PDFReaderUpdateService.plist",
+  ]
 end

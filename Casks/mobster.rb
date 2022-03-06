@@ -8,4 +8,11 @@ cask "mobster" do
   homepage "https://github.com/dillonkearns/mobster/"
 
   app "Mobster.app"
+
+  zap trash: [
+    "~/Library/Application Support/Mobster",
+    "~/Library/Preferences/com.dillonkearns.mobster.helper.plist",
+    "~/Library/Preferences/com.dillonkearns.mobster.plist",
+    "~/Library/Saved Application State/com.dillonkearns.mobster.savedState",
+  ]
 end

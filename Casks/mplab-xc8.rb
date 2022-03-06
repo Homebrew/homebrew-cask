@@ -1,6 +1,6 @@
 cask "mplab-xc8" do
-  version "2.32"
-  sha256 "651919702d7e68416908983784971c83c2e816aaf0735dbcd587f556bdcee904"
+  version "2.36"
+  sha256 "bfa3585d1a6543e32f9ffe62f4382c11491c2f0b41e0d7632eb291651be735ff"
 
   url "https://ww1.microchip.com/downloads/en/DeviceDoc/xc8-v#{version}-full-install-macos-x64-installer.dmg"
   name "MPLab XC8 Compiler"
