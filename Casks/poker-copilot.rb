@@ -1,5 +1,5 @@
 cask "poker-copilot" do
-  version "7.26.build.8855"
+  version "7.26,8855"
   sha256 "32fedd6ac7d39a03c58a376f2247b82cc8b7473d7ae38dc91c674c14f2f51ad4"
 
   url "https://static.pokercopilot.com/pokercopilot_macos_#{version.dots_to_underscores}.dmg"
@@ -9,11 +9,9 @@ cask "poker-copilot" do
 
   livecheck do
     url :homepage
+    regex(%r{href=.*?/pokercopilot_macos[._-]v?(\d+(?:[._]\d+)+)_build_(\d+)\.dmg}i)
     strategy :page_match do |page|
-      match = page.match(%r{href=.*?/pokercopilot_macos_([\d_]+build_\d+).dmg}i)
-      next if match.blank?
-
-      match[1].tr("_", ".")
+       page.scan(regex).map { |m| "#{m[0].tr("_",".")},#{m[1]}" }
     end
   end
 
