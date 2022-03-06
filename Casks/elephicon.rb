@@ -2,6 +2,7 @@ cask "elephicon" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
   version "1.6.2"
+
   if Hardware::CPU.intel?
     sha256 "d0a6a198173fe2d5130b70befc8a382e85c2024632986e1fbc991bcdb790385a"
   else
@@ -10,7 +11,7 @@ cask "elephicon" do
 
   url "https://github.com/sprout2000/elephicon/releases/download/v#{version}/Elephicon-#{version}-darwin-#{arch}.zip"
   name "Elephicon"
-  desc "A GUI wrapper for png2icons"
+  desc "GUI wrapper for png2icons"
   homepage "https://github.com/sprout2000/elephicon/"
 
   app "Elephicon.app"
