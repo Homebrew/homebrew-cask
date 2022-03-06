@@ -4,7 +4,12 @@ cask "opera-mobile-emulator" do
 
   url "https://get.geo.opera.com/pub/opera/sdlbream/1210/Opera_Mobile_Emulator_#{version}_Mac.dmg"
   name "Opera Mobile Classic Emulator"
+  desc "Browser emulator"
   homepage "https://www.opera.com/developer/mobile-emulator"
 
   app "Opera Mobile Emulator.app"
+
+  caveats do
+    discontinued
+  end
 end
