@@ -11,7 +11,7 @@ cask "poker-copilot" do
     url :homepage
     regex(%r{href=.*?/pokercopilot_macos[._-]v?(\d+(?:[._]\d+)+)_build_(\d+)\.dmg}i)
     strategy :page_match do |page|
-       page.scan(regex).map { |match| "#{match[0].tr("_",".")},#{match[1]}" }
+      page.scan(regex).map { |match| "#{match[0].tr("_", ".")},#{match[1]}" }
     end
   end
 
