@@ -1,6 +1,6 @@
 cask "osquery" do
-  version "5.1.0"
-  sha256 "25cfdd033e7ac6d5de601c6263bf1ba089e1972e6a16da5a8f12bdcc9ed24201"
+  version "5.2.2"
+  sha256 "c1db00554f65a1f240e9c827c73e0a768fbda66475b18bd68786b3a12e04200f"
 
   url "https://pkg.osquery.io/darwin/osquery-#{version}.pkg"
   name "osquery"
