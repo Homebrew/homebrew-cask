@@ -1,0 +1,11 @@
+cask "elephicon" do
+  version "1.6.2"
+  sha256 ""
+
+  url "https://github.com/sprout2000/elephicon/releases/download/v1.6.2/Elephicon-1.6.2-darwin-x64.zip"
+  name "Elephicon"
+  desc "A GUI wrapper for png2icons"
+  homepage "https://github.com/sprout2000/elephicon/"
+
+  app "Elephicon.app"
+end
