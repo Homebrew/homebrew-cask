@@ -13,6 +13,7 @@ cask "path-finder" do
   end
 
   auto_updates true
+  depends_on macos: ">= :sierra"
 
   app "Path Finder.app"
 
