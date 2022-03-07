@@ -1,8 +1,8 @@
 cask "pdfelement" do
-  version "8.5.10"
+  version "8.6.2"
   sha256 :no_check
 
-  url "https://download.wondershare.com/cbs_down/mac-pdfelement_full5237.zip"
+  url "https://download.wondershare.com/cbs_down/mac-pdfelement_full5237.dmg"
   name "Wondershare PDFelement for Mac"
   desc "Create, edit, convert and sign PDF documents"
   homepage "https://pdf.wondershare.com/"
