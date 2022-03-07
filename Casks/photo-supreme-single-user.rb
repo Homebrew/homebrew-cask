@@ -4,6 +4,7 @@ cask "photo-supreme-single-user" do
 
   url "https://trial.idimager.com/PhotoSupreme_V#{version}.pkg"
   name "Photo Supreme Single User"
+  desc "Digital Asset Management"
   homepage "https://www.idimager.com/home"
 
   pkg "PhotoSupreme_V#{version}.pkg"
