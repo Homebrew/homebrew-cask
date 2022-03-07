@@ -4,6 +4,7 @@ cask "physicseditor" do
 
   url "https://www.codeandweb.com/download/physicseditor/#{version}/PhysicsEditor-#{version}.dmg"
   name "PhysicsEditor"
+  desc "2D collision shape editor"
   homepage "https://www.codeandweb.com/physicseditor"
 
   livecheck do
