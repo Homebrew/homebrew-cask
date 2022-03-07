@@ -1,6 +1,6 @@
 cask "adobe-acrobat-reader" do
-  version "21.011.20039"
-  sha256 "6a9637e252fe1b44ca3204355484e7de8b687e903bca6eaaaa854946a6577c83"
+  version "22.001.20085"
+  sha256 "c13aca26047e182afcb66a7b386c704ab2724f81c77298cd2c05838781935cb4"
 
   url "https://ardownload2.adobe.com/pub/adobe/reader/mac/AcrobatDC/#{version.no_dots}/AcroRdrDC_#{version.no_dots}_MUI.dmg"
   name "Adobe Acrobat Reader DC"
