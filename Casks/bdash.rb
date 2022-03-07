@@ -1,6 +1,6 @@
 cask "bdash" do
-  version "1.14.1"
-  sha256 "cc494654ecfc0a19aa7a1dca3bab40e9debf3e77a10deb5a924eaa1d078a0aee"
+  version "1.14.2"
+  sha256 "a76547720cc68112e31ef66b296adb8943198221bc1008d99e80973549f45156"
 
   url "https://github.com/bdash-app/bdash/releases/download/v#{version}/Bdash-#{version}-mac.zip"
   name "Bdash"
