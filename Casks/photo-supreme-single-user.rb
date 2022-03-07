@@ -12,7 +12,7 @@ cask "photo-supreme-single-user" do
     regex(/>s*(\d+(?:\.\d+)+)[\s<]/i)
   end
 
-  pkg "PhotoSupreme_V#{version}.pkg"
+  pkg "PhotoSupreme_V#{version.major}.pkg"
 
   uninstall pkgutil: "com.idimager.idimagersu"
 end
