@@ -1,6 +1,5 @@
 cask "dropbox" do
   arch = Hardware::CPU.intel? ? "" : "&arch=arm64"
-  livecheck_folder = Hardware::CPU.intel? ? "" : "arm64"
 
   version "143.4.4161"
   sha256 :no_check
@@ -12,8 +11,8 @@ cask "dropbox" do
 
   livecheck do
     url :url
+    regex(%r{/Dropbox(?:%20|[._-])v?(\d+(?:\.\d+)+)}i)
     strategy :header_match
-    regex(/Dropbox%20v?(\d+(?:\.\d+)+)(?:.#{livecheck_folder})?\.dmg/i)
   end
 
   auto_updates true
