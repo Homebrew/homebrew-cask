@@ -8,9 +8,8 @@ cask "pcoipclient" do
   homepage "https://docs.teradici.com/find/product/software-and-mobile-clients/"
 
   livecheck do
-    url "https://downloads.teradici.com/mac/stable/"
-    strategy :page_match
-    regex(/href=.*?pcoip-client_(\d+(?:\.\d+)*)\.dmg/i)
+    url "https://dl.teradici.com/DeAdBCiUYInHcSTy/pcoip-client/raw/names/pcoip-client-dmg/versions/latest/pcoip-client_latest.dmg"
+    strategy :header_match
   end
 
   app "PCoIPClient.app"
