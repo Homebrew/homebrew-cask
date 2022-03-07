@@ -5,7 +5,7 @@ cask "path-finder" do
   url "https://get.cocoatech.com/PathFinder.dmg"
   name "Path Finder"
   desc "File manager"
-  homepage "https://cocoatech.com/"
+  homepage "https://www.cocoatech.io/"
 
   livecheck do
     url "https://get.cocoatech.com/releasecast.xml"
