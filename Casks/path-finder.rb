@@ -2,7 +2,8 @@ cask "path-finder" do
   version "2123"
   sha256 :no_check
 
-  url "https://get.cocoatech.com/PathFinder.dmg"
+  url "https://get.cocoatech.com/PathFinder.dmg",
+      verified: "get.cocoatech.com/"
   name "Path Finder"
   desc "File manager"
   homepage "https://www.cocoatech.io/"
