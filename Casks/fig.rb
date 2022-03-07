@@ -17,8 +17,21 @@ cask "fig" do
   depends_on macos: ">= :high_sierra"
 
   app "Fig.app"
+  binary "#{appdir}/Fig.app/MacOS/fig-darwin-universal", target: "fig"
 
-  uninstall script: "#{appdir}/Fig.app/Contents/Resources/config/tools/uninstall-script.sh"
+  uninstall script:    {
+                         executable: "#{appdir}/Fig.app/MacOS/fig-darwin-universal"
+                         args: [ "app", "uninstall"]
+                       }
+            launchctl: [
+                         "io.fig.launcher",
+                         "io.fig.uninstall",
+                         "io.fig.dotfiles-daemon",
+                       ]
+            quit:      [
+                         "com.mschrage.fig",
+                         "io.fig.input-method.cursor"
+                       ]
 
   zap trash: [
     "~/.fig",
@@ -28,5 +41,10 @@ cask "fig" do
     "~/Library/Caches/fig",
     "~/Library/Preferences/com.mschrage.fig.*",
     "~/Library/WebKit/com.mschrage.fig",
+    "~/Library/Application Support/fig"
   ]
+
+  caveats <<~EOS
+    Please launch the Fig application to finish setup...
+  EOS
 end
