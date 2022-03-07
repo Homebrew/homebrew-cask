@@ -22,12 +22,12 @@ jobs:
           - Homebrew/homebrew-cask-versions
     steps:
       - name: Clone main repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           persist-credentials: false
 
       - name: Clone secondary repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: ${{ matrix.repo }}
           path: vendor/${{ matrix.repo }}
