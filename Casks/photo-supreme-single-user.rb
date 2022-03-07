@@ -7,6 +7,11 @@ cask "photo-supreme-single-user" do
   desc "Digital Asset Management"
   homepage "https://www.idimager.com/home"
 
+  livecheck do
+    url "https://www.idimager.com/what-s-new-in-photo-supreme-v#{version.major}"
+    regex(/>s*(\d+(?:\.\d+)+)[\s<]/i)
+  end
+
   pkg "PhotoSupreme_V#{version}.pkg"
 
   uninstall pkgutil: "com.idimager.idimagersu"
