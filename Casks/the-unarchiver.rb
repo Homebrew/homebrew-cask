@@ -1,8 +1,8 @@
 cask "the-unarchiver" do
-  version "4.3.4,1646238910"
+  version "4.3.4,137,1646240113"
   sha256 "1ef28dcccdc4285551febbf3f67b6b7cc6a65718d6821d0ad5037ca5e44f53af"
 
-  url "https://dl.devmate.com/com.macpaw.site.theunarchiver/#{version.csv.first}/#{version.csv.second}/TheUnarchiver-#{version.csv.first}.zip",
+  url "https://dl.devmate.com/com.macpaw.site.theunarchiver/#{version.csv.second}/#{version.csv.third}/TheUnarchiver-#{version.csv.second}.zip",
       verified: "devmate.com/com.macpaw.site.theunarchiver/"
   name "The Unarchiver"
   desc "Unpacks archive files"
@@ -11,7 +11,7 @@ cask "the-unarchiver" do
   livecheck do
     url "https://updates.devmate.com/com.macpaw.site.theunarchiver.xml"
     strategy :sparkle do |item|
-      "#{item.version},#{item.url[%r{/(\d+)/TheUnarchiver-(?:\d+(?:\.\d+)+)\.zip}i, 1]}"
+      "#{item.short_version},#{item.version},#{item.url[%r{/(\d+)/TheUnarchiver-\d+\.zip}i, 1]}"
     end
   end
 
