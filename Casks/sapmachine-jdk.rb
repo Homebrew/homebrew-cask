@@ -15,10 +15,11 @@ cask "sapmachine-jdk" do
   desc "OpenJDK distribution from SAP"
   homepage "https://sapmachine.io/"
 
+  # The version information on the homepage is rendered client-side from the
+  # following JSON file, so we have to check it instead.
   livecheck do
-    url :url
-    strategy :github_latest
-    regex(%r{href=.*/sapmachine-jdk-(\d+(?:\.\d+)*(?:\+\d+(?:\.\d+)*)?)_macos-#{arch}_bin\.dmg}i)
+    url "https://sap.github.io/SapMachine/assets/data/sapmachine_releases.json"
+    regex(/["']tag["']:\s*["']sapmachine[._-]v?(\d+(?:\.\d+)+)["']/i)
   end
 
   artifact "sapmachine-jdk-#{version}.jdk", target: "/Library/Java/JavaVirtualMachines/sapmachine-jdk-#{version}.jdk"
