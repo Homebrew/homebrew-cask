@@ -1,18 +1,19 @@
 cask "mark-text" do
-  version "0.16.3"
-  sha256 "7054e56a439d5d09dd4b0898e01e541e1afb22fc74556678bcb006d37c1e041d"
+  version "0.17.0"
+  sha256 "bed69ac813c1bcc82889bdae922eb027a29e2e8df4264b18d5492567bae6ce11"
 
-  url "https://github.com/marktext/marktext/releases/download/v#{version}/marktext.dmg",
+  url "https://github.com/marktext/marktext/releases/download/v#{version}/marktext-x64.dmg",
       verified: "github.com/marktext/marktext/"
-  name "Mark Text"
+  name "MarkText"
+  desc "Simple and elegant markdown editor"
   homepage "https://marktext.app/"
 
-  app "Mark Text.app"
+  app "MarkText.app"
 
   zap trash: [
     "~/Library/Application Support/marktext",
     "~/Library/Preferences/com.github.marktext.marktext.plist",
     "~/Library/Saved Application State/com.github.marktext.marktext.savedState",
-    "~/Library/Logs/Mark Text",
+    "~/Library/Logs/marktext",
   ]
 end
