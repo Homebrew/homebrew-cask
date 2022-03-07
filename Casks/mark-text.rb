@@ -1,4 +1,4 @@
-cask "marktext" do
+cask "mark-text" do
   version "0.17.0"
   sha256 "bed69ac813c1bcc82889bdae922eb027a29e2e8df4264b18d5492567bae6ce11"
 
