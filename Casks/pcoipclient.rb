@@ -24,4 +24,8 @@ cask "pcoipclient" do
     "~/Library/Preferences/com.teradici.Teradici PCoIP Client.plist",
     "~/Library/Preferences/com.teradici.PCoIP Client Connection Info.plist",
   ]
+
+  caveats do
+    license "https://docs.teradici.com/reference/eula/teradici-end-user-license-agreement"
+  end
 end
