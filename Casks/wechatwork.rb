@@ -1,8 +1,8 @@
 cask "wechatwork" do
-  version "4.0.0.90438"
-  sha256 "c8043a3408757d1d5629b1d618f7278f04a09a0f2ea8a48f5fd2d81e8118700a"
+  version "4.0.0.99028"
+  sha256 "106a2be7da56cfe3903e3a987f824ff9f5fe46caa9f70b9ca8f3761be913411a"
 
-  url "https://dldir1.qq.com/wework/work_weixin/WeCom_#{version}.dmg"
+  url "https://dldir1.qq.com/foxmail/wecom-mac/sparkle/publish/WeCom_#{version}.zip"
   name "WeChat Work"
   name "企业微信"
   desc "Messaging and calling application"
@@ -15,7 +15,7 @@ cask "wechatwork" do
 
   auto_updates true
 
-  app "企业微信.app"
+  app "WeCom_#{version}/企业微信.app"
 
   uninstall quit: "com.tencent.WeWorkMac"
 end
