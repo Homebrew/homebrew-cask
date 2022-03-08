@@ -2,7 +2,7 @@ cask "fig" do
   version "1.0.52,328"
   sha256 "9f94fcfd37b02d12f30ecd3bc5d35355311ba25a28e42838d8e09728ad0bd705"
 
-  url "https://versions.withfig.com/fig%20#{version.after_comma}.dmg",
+  url "https://versions.withfig.com/fig%20#{version.csv.second}.dmg",
       verified: "versions.withfig.com/"
   name "fig"
   desc "Reimagine your terminal"
@@ -19,18 +19,21 @@ cask "fig" do
   app "Fig.app"
   binary "#{appdir}/Fig.app/MacOS/fig-darwin-universal", target: "fig"
 
-  uninstall script:    {
-                         executable: "#{appdir}/Fig.app/MacOS/fig-darwin-universal"
-                         args: [ "app", "uninstall"]
-                       }
-            launchctl: [
+  uninstall script:
+                       {
+                         executable: "#{appdir}/Fig.app/MacOS/fig-darwin-universal",
+                         args:       ["app", "uninstall"],
+                       },
+            launchctl:
+                       [
                          "io.fig.launcher",
                          "io.fig.uninstall",
                          "io.fig.dotfiles-daemon",
-                       ]
-            quit:      [
+                       ],
+            quit:
+                       [
                          "com.mschrage.fig",
-                         "io.fig.input-method.cursor"
+                         "io.fig.input-method.cursor",
                        ]
 
   zap trash: [
@@ -41,7 +44,7 @@ cask "fig" do
     "~/Library/Caches/fig",
     "~/Library/Preferences/com.mschrage.fig.*",
     "~/Library/WebKit/com.mschrage.fig",
-    "~/Library/Application Support/fig"
+    "~/Library/Application Support/fig",
   ]
 
   caveats <<~EOS
