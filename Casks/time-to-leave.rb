@@ -7,10 +7,12 @@ cask "time-to-leave" do
   desc "Log work hours and get notified when it's time to leave the office"
   homepage "https://github.com/thamara/time-to-leave"
 
+  # A tag using the stable version format is sometimes marked as "Pre-release"
+  # on the GitHub releases page, so we have to use the `GithubLatest` strategy.
   livecheck do
     url :url
-    strategy :git
-    regex(/^v?\.?(\d+(?:\.\d+)*)$/i)
+    regex(%r{href=["']?[^"' >]*?/tag/\D*([^"' >]+?)["' >]}i)
+    strategy :github_latest
   end
 
   app "Time To Leave.app"
