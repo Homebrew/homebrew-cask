@@ -1,7 +1,7 @@
 cask "sonic-robo-blast-2" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
-  version "2.2.9"
-  sha256 "a739cd8018720fb5fa15361ca1f3f230fc59201235d4dcb061403d3a7e5df1ad"
+  version "2.2.10"
+  sha256 "30bf6a96707c9c824b5fb8a4b2ca43431b2109ae1cb80e9adcbbdf0ef531e5c6"
 
   url "https://github.com/STJr/SRB2/releases/download/SRB2_release_#{version}/SRB2-#{version}-macOS-Installer.dmg",
       verified: "github.com/STJr/SRB2/"
