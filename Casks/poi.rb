@@ -6,7 +6,7 @@ cask "poi" do
       verified: "github.com/poooi/poi/"
   name "poi"
   desc "Scalable KanColle browser and tool"
-  homepage "https://poi.io/"
+  homepage "https://poi.moe/"
 
   app "poi.app"
 
