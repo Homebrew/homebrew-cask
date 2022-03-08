@@ -1,5 +1,5 @@
 cask "poedit" do
-  version "3.0.1,6415"
+  version "3.0.1,6416"
   sha256 "3f927041cf4aac86b816aa34c249dd8c9e4c7fb2ab19db5b0bfb530ce7fbf1a4"
 
   url "https://download.poedit.net/Poedit-#{version.csv.first}.zip"
