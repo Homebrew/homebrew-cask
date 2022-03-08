@@ -9,4 +9,9 @@ cask "tla-plus-toolbox" do
   homepage "https://lamport.azurewebsites.net/tla/toolbox.html"
 
   app "TLA+ Toolbox.app"
+
+  livecheck do
+    url :homepage
+    regex(%r{href=.*?github.com/tlaplus/tlaplus/releases/tag/v?(\d+(?:\.\d+)+)[\s"]}i)
+  end
 end
