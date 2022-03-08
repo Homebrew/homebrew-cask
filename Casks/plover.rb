@@ -11,6 +11,7 @@ cask "plover" do
   livecheck do
     url :url
     strategy :github_latest
+    regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)+[\w.]+)["' >]}i)
   end
 
   app "Plover.app"
