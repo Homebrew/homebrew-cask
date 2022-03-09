@@ -11,6 +11,7 @@ cask "dropbox" do
 
   livecheck do
     url :url
+    regex(%r{/Dropbox(?:%20|[._-])v?(\d+(?:\.\d+)+)}i)
     strategy :header_match
   end
 

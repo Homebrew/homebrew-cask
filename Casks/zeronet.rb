@@ -1,5 +1,5 @@
 cask "zeronet" do
-  version "0.7.1"
+  version "0.7.2"
   sha256 :no_check
 
   url "https://github.com/HelloZeroNet/ZeroNet-dist/archive/mac/ZeroNet-dist-mac.zip",
