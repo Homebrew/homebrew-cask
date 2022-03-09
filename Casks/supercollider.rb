@@ -10,8 +10,7 @@ cask "supercollider" do
 
   livecheck do
     url :url
-    strategy :git
-    regex(/^Version-(\d+(?:\.\d+)+)$/i)
+    regex(/^Version[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
   app "SuperCollider.app"

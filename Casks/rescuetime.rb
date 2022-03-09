@@ -1,5 +1,5 @@
 cask "rescuetime" do
-  version "2.16.6.1"
+  version "2.16.7.1"
   sha256 :no_check
 
   url "https://www.rescuetime.com/installers/RescueTimeInstaller.pkg"

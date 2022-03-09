@@ -40,8 +40,8 @@ cask "omnigraffle" do
       skip "Legacy version for Mojave and Catalina"
     end
   else
-    version "7.19.4"
-    sha256 "4e5eee7ee56bb6137600fe7d5561826ce98f3ed49ac9cc1672212970a36f74dd"
+    version "7.19.5"
+    sha256 "2b89b7212743af5e215346147a000b22fc186658bd6d5c1b4c9153507e5049a0"
     url "https://downloads.omnigroup.com/software/macOS/11/OmniGraffle-#{version}.dmg"
 
     livecheck do

@@ -9,10 +9,10 @@ cask "c0re100-qbittorrent" do
 
   livecheck do
     url :url
-    strategy :git
-    regex(/^release-(\d+(?:\.\d+)+)$/i)
+    regex(/^release[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
+  conflicts_with cask: "qbittorrent"
   depends_on macos: ">= :sierra"
 
   app "qbittorrent.app"
