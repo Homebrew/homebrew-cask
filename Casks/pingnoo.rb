@@ -11,7 +11,7 @@ cask "pingnoo" do
   livecheck do
     url :url
     strategy :github_latest
-    regex(%r{href=.*?/tag/v?(\d{4}\.\d{2}\.\d{2}-\w+)["' >]}i)
+    regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)+-\w+)
   end
 
   depends_on macos: ">= :high_sierra"
