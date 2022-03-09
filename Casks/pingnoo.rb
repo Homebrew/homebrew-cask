@@ -18,5 +18,8 @@ cask "pingnoo" do
 
   app "Pingnoo.app"
 
-  # No zap stanza required
+  zap trash: [
+    "~/Library/Application Support/Nedrysoft",
+    "~/Library/Saved Application State/com.nedrysoft.pingnoo.savedState",
+  ]
 end
