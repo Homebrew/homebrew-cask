@@ -1,6 +1,6 @@
 cask "thor" do
-  version "1.5.6"
-  sha256 "b35febd2c367f8fa266b914c4f93ca5b03a28d2902b8bbc79bbb7455ca2746ce"
+  version "1.5.10"
+  sha256 "47f4ba1a9ba84853e599ddbba2da17f64c01f311e0196f7adf746f0b93d565c6"
 
   url "https://github.com/gbammc/Thor/releases/download/#{version}/Thor_#{version}.zip"
   name "Thor"
