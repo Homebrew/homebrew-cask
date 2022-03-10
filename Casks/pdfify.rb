@@ -9,7 +9,7 @@ cask "pdfify" do
 
   livecheck do
     url "https://pdfify.app/updater-macos"
-    regex(/PDFify[._-]v?(\d+(?:\.\d+)*-\d+)\.zip/i)
+    regex(/PDFify[._-]v?(\d+(?:[.-]\d+)+)\.zip/i)
   end
 
   depends_on macos: ">= :high_sierra"
