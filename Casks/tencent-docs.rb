@@ -1,8 +1,10 @@
 cask "tencent-docs" do
-  version "2.2.33"
+  arch = Hardware::CPU.intel? ? "X64" : "Arm64"
+
+  version "2.2.35"
   sha256 :no_check
 
-  url "https://down.qq.com/qqweb/mac_docs/MacTencentDocs.dmg"
+  url "https://down.qq.com/qqweb/mac_docs/MacTencentDocs#{arch}.dmg"
   name "Tencent Docs"
   name "腾讯文档"
   desc "Online editor for Word, Excel and PPT documents"
