@@ -1,5 +1,5 @@
 cask "universal-battle" do
-  version "1.4.1,52"
+  version "1.5.50,220305000"
   sha256 :no_check
 
   url "https://universalbattle2.com/builds/Mac.zip"
@@ -12,7 +12,7 @@ cask "universal-battle" do
     strategy :extract_plist
   end
 
-  app "OSX/Universal Battle 2.app"
+  app "UB2.app"
 
   zap trash: "~/Library/Saved Application State/com.gamojo.sa.universalbattle2.savedState"
 end
