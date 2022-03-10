@@ -1,7 +1,7 @@
 cask "blender" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "3.0.1"
+  version "3.1.0"
 
   url "https://download.blender.org/release/Blender#{version.major_minor}/blender-#{version}-macos-#{arch}.dmg"
   if Hardware::CPU.intel?
