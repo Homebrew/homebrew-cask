@@ -1,6 +1,6 @@
 cask "jcryptool" do
-  version "1.0.7"
-  sha256 "f641f81d3fb329795f1b4583292f0df2cc60921dba920aea42b6ea478cacf642"
+  version "1.0.8"
+  sha256 "6710102ac48fdd12356c557e6c742330458704c2da89fe0c99f9c1ba787fc5c8"
 
   url "https://github.com/jcryptool/core/releases/download/#{version}/JCrypTool-#{version}-macOS-64bit.tar.gz",
       verified: "github.com/jcryptool/core/"
