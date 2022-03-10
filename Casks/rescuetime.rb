@@ -1,14 +1,18 @@
 cask "rescuetime" do
-  version "2.16.7.1"
+  version "3.0.13.2"
   sha256 :no_check
 
-  url "https://www.rescuetime.com/installers/RescueTimeInstaller.pkg"
-  appcast "https://www.rescuetime.com/release-notes/mac"
+  url "https://www.rescuetime.com/installers/RescueTimeInstaller_X.pkg"
   name "RescueTime"
   desc "Time optimising application"
   homepage "https://www.rescuetime.com/"
 
-  pkg "RescueTimeInstaller.pkg"
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
+  pkg "RescueTimeInstaller_X.pkg"
 
   uninstall pkgutil: "com.rescuetime.RescueTime"
 
