@@ -18,7 +18,7 @@ cask "jetbrains-gateway" do
     url "https://data.services.jetbrains.com/products/releases?code=GW&latest=true&type=release"
     strategy :page_match do |page|
       JSON.parse(page)["GW"].map do |release|
-        "#{release["version"]}"
+        (release["version"]).to_s
       end
     end
   end
