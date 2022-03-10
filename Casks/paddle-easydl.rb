@@ -20,7 +20,7 @@ cask "paddle-easydl" do
 
   auto_updates true
   depends_on macos: ">= :el_capitan"
-  depends_on arch: :intel
+  depends_on arch: :x86_64
 
   app "飞桨EasyDL.app"
 
