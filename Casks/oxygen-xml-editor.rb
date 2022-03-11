@@ -1,7 +1,7 @@
 cask "oxygen-xml-editor" do
   arch = Hardware::CPU.intel? ? "" : "-aarch64"
 
-  version "24.0,2022012607"
+  version "24.1,2022030807"
   sha256 :no_check
 
   url "https://www.oxygenxml.com/InstData/Editor/MacOSX/VM/oxygen-openjdk#{arch}.dmg"
