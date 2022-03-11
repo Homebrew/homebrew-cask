@@ -1,6 +1,6 @@
 cask "pdfify" do
-  version "3.3.4-138"
-  sha256 "58c460d7c590cb2bc9ca85c4551c60287cc431704390917bc47c1bf8aee18426"
+  version "3.3.5-144"
+  sha256 "59077bb1e07e8c330cc455c99f6910ac6efe849f93c7918acd67eca40f97eb70"
 
   url "https://pdfify.app/get/cask/download/macos/PDFify-#{version}.zip"
   name "PDFify"
@@ -9,7 +9,7 @@ cask "pdfify" do
 
   livecheck do
     url "https://pdfify.app/updater-macos"
-    regex(/PDFify[._-]v?(\d+(?:\.\d+)*-\d+)\.zip/i)
+    regex(/PDFify[._-]v?(\d+(?:[.-]\d+)+)\.zip/i)
   end
 
   depends_on macos: ">= :high_sierra"
