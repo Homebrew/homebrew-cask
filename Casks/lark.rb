@@ -5,7 +5,7 @@ cask "lark" do
     version "5.2.23,5b373f"
     sha256 "fb1e17ee5d6cc9a92a86d3453ed4309dc500eaee59dcd2e9b5fde17d3acb4cd2"
   else
-    version "4.10.14,40a957"
+    version "5.2.23,bf0a5c"
     sha256 "fb8f06d56ac036a40f7bba037e01f4428fe9a54ae9d6540d0c4639c0a4213dc4"
   end
 
