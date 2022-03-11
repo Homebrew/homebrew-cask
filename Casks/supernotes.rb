@@ -4,12 +4,14 @@ cask "supernotes" do
 
   url "https://download.supernotes.app/desktop/Supernotes-#{version}.dmg"
   name "Supernotes"
-  desc "Best collaborative note-taking app"
+  desc "Collaborative note-taking app"
   homepage "https://supernotes.app/"
 
   livecheck do
     url "https://api.supernotes.app/v1/"
-    regex(/(\d+(?:\.\d+)+)/i)
+    strategy :page_match do |page|
+      JSON.parse(page)["version"]
+    end
   end
 
   auto_updates true
@@ -19,7 +21,7 @@ cask "supernotes" do
 
   zap trash: [
     "~/Library/Application Support/Supernotes",
-    "~/Library/Saved Application State/app.supernotes.SupernotesDesktop.savedState",
     "~/Library/Preferences/app.supernotes.SupernotesDesktop.plist",
+    "~/Library/Saved Application State/app.supernotes.SupernotesDesktop.savedState",
   ]
 end
