@@ -1,19 +1,17 @@
 cask "scribus" do
-  version "1.4.8"
-  sha256 "9626c35ca5de5da59ac983efac3572318d327b3a921522c9f80a525b039a0af5"
+  version "1.5.8"
+  sha256 "d5ebc6f104bb57457c68ce651864053040af38f218bad1eef17491db7e6282ef"
 
-  url "https://downloads.sourceforge.net/scribus/scribus/#{version}/scribus-#{version}.dmg",
+  url "https://downloads.sourceforge.net/scribus/scribus-devel/#{version}/scribus-#{version}.dmg",
       verified: "sourceforge.net/scribus/"
   name "Scribus"
   desc "Free and open-source page layout program"
   homepage "https://www.scribus.net/"
 
   livecheck do
-    url "https://www.scribus.net/downloads/stable-branch/"
-    regex(/Current\s*stable\s*release:\s*Scribus\s*(\d+(?:\.\d+)*)/i)
+    url "https://www.scribus.net/downloads/unstable-branch/"
+    regex(/Current\s*development\s*candidate:\s*Scribus\s*(\d+(?:\.\d+)+)/i)
   end
-
-  conflicts_with cask: "homebrew/cask-versions/scribus-dev"
 
   app "Scribus.app"
 
