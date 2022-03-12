@@ -1,5 +1,5 @@
 cask "shortery" do
-  version "1.1,5"
+  version "1.2,11"
   sha256 :no_check
 
   url "https://lgerckens.de/shortery/Shortery.zip"

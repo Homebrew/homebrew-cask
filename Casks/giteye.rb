@@ -4,12 +4,12 @@ cask "giteye" do
 
   url "https://www.collab.net/sites/default/files/downloads/GitEye-#{version}-macosx.x86_64.zip"
   name "CollabNet GitEye"
+  desc "Git client"
   homepage "https://www.collab.net/products/giteye"
 
   livecheck do
     url "https://www.collab.net/downloads/giteye-mac-64"
-    strategy :page_match
-    regex(%r{href=.*?/GitEye-(\d+(?:\.\d+)*)-macosx\.x86_64\.zip}i)
+    regex(%r{href=.*?/GitEye[._-]v?(\d+(?:\.\d+)*)[._-]macosx\.x86[._-]64\.zip}i)
   end
 
   app "GitEye.app"

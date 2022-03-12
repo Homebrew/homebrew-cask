@@ -1,6 +1,6 @@
 cask "dungeon-crawl-stone-soup-console" do
-  version "0.27.1"
-  sha256 "2872cbea354e1017146f7df2777f8fbdf4d59e56eec71b9fa41c933de60eb121"
+  version "0.28.0"
+  sha256 "902cbd333db64ab89f7f33d8c621e6de8330d4b626ba5ecf0cf3c514c52d68ca"
 
   url "https://github.com/crawl/crawl/releases/download/#{version}/dcss-#{version}-macos-console.zip",
       verified: "github.com/crawl/crawl/releases/"

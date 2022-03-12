@@ -24,14 +24,23 @@ cask "jetbrains-toolbox" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :mojave"
 
   app "JetBrains Toolbox.app"
 
+  uninstall signal:    ["TERM", "com.jetbrains.toolbox"],
+            launchctl: "com.jetbrains.toolbox"
+
   zap trash: [
     "~/Library/Application Support/JetBrains/Toolbox",
+    "~/Library/Caches/JetBrains/Toolbox",
     "~/Library/Logs/JetBrains/Toolbox",
     "~/Library/Preferences/com.jetbrains.toolbox.renderer.plist",
     "~/Library/Saved Application State/com.jetbrains.toolbox.savedState",
-  ]
+  ],
+      rmdir: [
+        "~/Library/Application Support/JetBrains",
+        "~/Library/Caches/JetBrains",
+        "~/Library/Logs/JetBrains",
+      ]
 end

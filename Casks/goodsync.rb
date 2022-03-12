@@ -1,6 +1,6 @@
 cask "goodsync" do
-  version "11.9.1"
-  sha256 "6010f2fd75a5611ed1500da0fa484a8a0914a1b08995f5176d2137448e253d19"
+  version "11.10.3"
+  sha256 "37917a406348268e2c69db47a3930f0af29ccc4d01869eaa967f20c5ab92fade"
 
   url "https://www.goodsync.com/download/goodsync-v#{version.major}-mac.dmg"
   name "GoodSync"
@@ -15,4 +15,12 @@ cask "goodsync" do
   depends_on macos: ">= :yosemite"
 
   app "GoodSync.app"
+
+  zap trash: [
+    "/Library/Application Support/GoodSync",
+    "/Library/LaunchDaemons/com.siber.gs-server.plist",
+    "~/.goodsync",
+    "~/Library/Application Support/GoodSync",
+    "~/Library/Preferences/com.sibersystems.goodsyncmac2000.plist",
+  ]
 end

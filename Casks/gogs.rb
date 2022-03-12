@@ -1,10 +1,18 @@
 cask "gogs" do
-  version "0.12.3"
-  sha256 "3e943a13b7f8ade0a87c5f2b40e5db52faab9035ae045d4ee1d0632b9b2479fc"
+  arch = Hardware::CPU.intel? ? "amd64" : "arm64"
 
-  url "https://github.com/gogs/gogs/releases/download/v#{version}/gogs_#{version}_darwin_amd64.zip",
+  version "0.12.5"
+
+  if Hardware::CPU.intel?
+    sha256 "fddd527dab4d8933c60c2cda6195f54539f63a46a10d9696b0dca607187546d2"
+  else
+    sha256 "74e9b518470b8292bad47e8a81350f1d0d14e500ef6c52e252749fd569c180ca"
+  end
+
+  url "https://github.com/gogs/gogs/releases/download/v#{version}/gogs_#{version}_darwin_#{arch}.zip",
       verified: "github.com/gogs/gogs/"
   name "Go Git Service"
+  desc "Self-hosted Git service"
   homepage "https://gogs.io/"
 
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)

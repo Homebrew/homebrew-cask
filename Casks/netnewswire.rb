@@ -10,8 +10,7 @@ cask "netnewswire" do
 
   livecheck do
     url :url
-    strategy :git
-    regex(/^mac-(\d+(?:\.\d+)*)$/i)
+    regex(/^mac[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
   auto_updates true

@@ -1,15 +1,14 @@
 cask "permute" do
-  version "3.7.8,2540"
-  sha256 "894ac7c3e9ceb507978c29782305251ac20962b2a34b3aebc5b13e17ee6be5da"
+  version "3.8.8,2584"
+  sha256 "52fd9846b5c2668cf3e77e0439301da46bf0ab4b917932ec7af7bd697e705473"
 
-  url "https://charliemonroesoftware.com/trial/permute/v#{version.major}/Permute_#{version.major}_#{version.csv.second}.dmg",
-      verified: "charliemonroesoftware.com/"
+  url "https://software.charliemonroe.net/trial/permute/v#{version.major}/Permute_#{version.major}_#{version.csv.second}.dmg"
   name "Permute"
   desc "Converts and edits video, audio or image files"
   homepage "https://software.charliemonroe.net/permute/"
 
   livecheck do
-    url "https://charliemonroesoftware.com/trial/permute/updates_#{version.major}.xml"
+    url "https://software.charliemonroe.net/trial/permute/v#{version.major}/updates.xml"
     strategy :sparkle
   end
 

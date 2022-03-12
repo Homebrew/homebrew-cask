@@ -1,9 +1,16 @@
 cask "gitkraken" do
-  version "8.2.0"
-  sha256 :no_check
+  arch = Hardware::CPU.intel? ? "darwin" : "darwin-arm64"
 
-  url "https://release.axocdn.com/darwin/installGitKraken.dmg",
-      verified: "release.axocdn.com/darwin/"
+  version "8.3.2"
+
+  if Hardware::CPU.intel?
+    sha256 "aa9fd32d9a30378acdd697748c45046415410fa89fa46480cf5681e6bc301de3"
+  else
+    sha256 "e3a1aad29ad3030e8d628e39c9d5592405e93729bf65ded468c4e082b5a1b6f1"
+  end
+
+  url "https://release.axocdn.com/#{arch}/GitKraken-v#{version}.zip",
+      verified: "release.axocdn.com/"
   name "GitKraken"
   desc "Git client focusing on productivity"
   homepage "https://www.gitkraken.com/"
@@ -14,8 +21,11 @@ cask "gitkraken" do
   end
 
   auto_updates true
+  depends_on macos: ">= :yosemite"
 
   app "GitKraken.app"
+
+  uninstall quit: "com.axosoft.gitkraken"
 
   zap trash: [
     "~/.gitkraken",
@@ -25,6 +35,7 @@ cask "gitkraken" do
     "~/Library/Caches/com.axosoft.gitkraken",
     "~/Library/Caches/GitKraken",
     "~/Library/Cookies/com.axosoft.gitkraken.binarycookies",
+    "~/Library/HTTPStorages/com.axosoft.gitkraken",
     "~/Library/Preferences/com.axosoft.gitkraken.helper.plist",
     "~/Library/Preferences/com.axosoft.gitkraken.plist",
     "~/Library/Saved Application State/com.axosoft.gitkraken.savedState",

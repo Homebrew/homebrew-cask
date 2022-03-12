@@ -9,8 +9,7 @@ cask "isyncer" do
 
   livecheck do
     url "https://www.isyncer.de/en/releases/"
-    strategy :page_match
-    regex(%r{href=.*?/iSyncerV(\d+(?:\.\d+)*)mac-installer\.tgz}i)
+    regex(%r{href=.*?/iSyncerv?(\d+(?:\.\d+)+)mac[._-]installer\.tgz}i)
   end
 
   pkg "iSyncer-installer-#{version}.pkg"

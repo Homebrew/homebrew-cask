@@ -1,8 +1,8 @@
 cask "pacifist" do
-  version "4.0.1,65216"
-  sha256 "09fa75a476d80d1241c30772a116254a0b19a54a5c03614b4da75860faa09718"
+  version "4.0.3,66254"
+  sha256 "a49a3303f6eea9fdb34c94fea4bc185c956b26f471059833759ea775da5b8062"
 
-  url "https://www.charlessoft.com/pacifist_download/Pacifist_#{version.before_comma}.dmg"
+  url "https://www.charlessoft.com/pacifist_download/Pacifist_#{version.csv.first}.dmg"
   name "Pacifist"
   desc "Extract files and folders from package files, disk images, and archives"
   homepage "https://www.charlessoft.com/"

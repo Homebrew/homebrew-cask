@@ -1,15 +1,15 @@
 cask "mps" do
   arch = Hardware::CPU.intel? ? "macos" : "macos-aarch64"
 
-  version "2021.2.2,212.5284.1234"
+  version "2021.3,213.6777.846"
 
   if Hardware::CPU.intel?
-    sha256 "11e80c58039c5e3ea4c49a7aecd697494d12c84d5704a80d9ae1456d4cf8eda2"
+    sha256 "2c5517518fec31ac960e4309fa848ad831f9048ef15df1b362e12aa8f41d9dbd"
   else
-    sha256 "e0060854417b86e62362bf53d2b72efae6abcedf4a5dc18ad65b442ce6ffb51b"
+    sha256 "3ace6d45db718dffd80bf126a76735fb65099de292112a01cc078aa61c475a70"
   end
 
-  url "https://download.jetbrains.com/mps/#{version.major_minor}/MPS-#{version.before_comma}-#{arch}.dmg"
+  url "https://download.jetbrains.com/mps/#{version.major_minor}/MPS-#{version.csv.first}-#{arch}.dmg"
   name "JetBrains MPS"
   desc "Create your own domain-specific language"
   homepage "https://www.jetbrains.com/mps/"
@@ -38,10 +38,10 @@ cask "mps" do
   end
 
   zap trash: [
-    "~/MPSSamples.#{version.before_comma.major_minor}",
-    "~/Library/Application Support/MPS#{version.before_comma.major_minor}",
-    "~/Library/Caches/MPS#{version.before_comma.major_minor}",
-    "~/Library/Logs/MPS#{version.before_comma.major_minor}",
-    "~/Library/Preferences/MPS#{version.before_comma.major_minor}",
+    "~/Library/Application Support/MPS#{version.csv.first.major_minor}",
+    "~/Library/Caches/MPS#{version.csv.first.major_minor}",
+    "~/Library/Logs/MPS#{version.csv.first.major_minor}",
+    "~/Library/Preferences/MPS#{version.csv.first.major_minor}",
+    "~/MPSSamples.#{version.csv.first.major_minor}",
   ]
 end

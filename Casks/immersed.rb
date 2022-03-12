@@ -1,15 +1,14 @@
 cask "immersed" do
-  version "15.9,131"
+  version "16.2,135"
   sha256 :no_check
 
-  url "https://immersed.com/dl/Immersed.dmg",
-      verified: "immersed.com/dl/"
+  url "https://immersed.com/dl/Immersed.dmg"
   name "Immersed"
   desc "Desktop Agent for VR Office"
-  homepage "https://immersedvr.com/"
+  homepage "https://immersed.com/"
 
   livecheck do
-    url "https://immersedvr.com/dl/appcast.xml"
+    url "https://immersed.com/dl/appcast.xml"
     strategy :sparkle
   end
 

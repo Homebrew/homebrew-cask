@@ -1,9 +1,9 @@
 cask "ximalaya" do
-  version "2.2.0,1637833363"
-  sha256 "08683899b2ae0b633063607e8cc117126ca4940a360b0c590e0cdb75db3493fe"
+  version "2.5.0,1645498451"
+  sha256 "ae46314cfc96ddd6ab7a50cf5181ab30c38cdac49fc84dc5e3b37f48aa920828"
 
-  url "https://s1.xmcdn.com/yx/ximalaya-pc-client/#{version.before_comma}/download/mac-x64/Ximalaya_#{version.before_comma}_#{version.after_comma}.dmg",
-      verified: "s1.xmcdn.com/"
+  url "https://s1.xmcdn.com/yx/ximalaya-pc-client/#{version.csv.first}/download/mac-x64/Ximalaya_#{version.csv.first}_#{version.csv.second}.dmg",
+      verified: "s1.xmcdn.com/yx/ximalaya-pc-client/"
   name "ximalaya"
   name "喜马拉雅"
   desc "Platform for podcasting and audio-sharing"

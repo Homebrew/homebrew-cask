@@ -1,12 +1,12 @@
 cask "lagrange" do
   arch = Hardware::CPU.intel? ? "macos10.13-x86_64" : "macos11.0-arm64"
 
-  version "1.9.2"
+  version "1.11.1"
 
   if Hardware::CPU.intel?
-    sha256 "a8df827ce408dba6d6912b78f2caccba1662ce3c1bd7ba8f3ef3a026f219abaa"
+    sha256 "423ced9b5c08ef14d5c2d557d2d9ef9f8e45c5de95a4e8c0b7fff5fc2707a509"
   else
-    sha256 "034a2c95fcbbae9f17b74e0bc25b12c2c924b5bb95cf4d317c662437de58698b"
+    sha256 "68a14be366bacc4fe7cfcd605512e328b260c78377cb08b59094a44b7ae4467b"
   end
 
   url "https://github.com/skyjake/lagrange/releases/download/v#{version}/lagrange_v#{version}_#{arch}.tbz",

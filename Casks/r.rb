@@ -1,19 +1,19 @@
 cask "r" do
   if MacOS.version <= :yosemite
     version "3.3.3"
-    sha245 "77d7a145d1f7d5c3f5bd7310ae2beb7349118528d938e519845ce7d205b4c864"
+    sha256 "77d7a145d1f7d5c3f5bd7310ae2beb7349118528d938e519845ce7d205b4c864"
     url "https://cloud.r-project.org/bin/macosx/R-#{version}.pkg"
   elsif MacOS.version <= :sierra
     version "3.6.3.nn"
     sha256 "f2b771e94915af0fe0a6f042bc7a04ebc84fb80cb01aad5b7b0341c4636336dd"
     url "https://cloud.r-project.org/bin/macosx/R-#{version}.pkg"
   elsif Hardware::CPU.intel?
-    version "4.1.2"
-    sha256 "86d169f9d62b2b2ddbf5fde55935fbb96729da5c47d7bf09240228cd23b664e5"
+    version "4.1.3"
+    sha256 "fd310672d3c80a335df004d0022c97814ef614545b2c396477197352ea655c88"
     url "https://cloud.r-project.org/bin/macosx/base/R-#{version}.pkg"
   else
-    version "4.1.2"
-    sha256 "247604393ec271cb3e72f42f2ffca9024de1b2d77fcba142c8ab866dc498ba21"
+    version "4.1.3"
+    sha256 "7c5cdf3d5b64a3fe3a83960b1940189975aff792ae5735ca7982876252a2e137"
     url "https://cloud.r-project.org/bin/macosx/big-sur-arm64/base/R-#{version}-arm64.pkg"
   end
 
@@ -23,8 +23,7 @@ cask "r" do
 
   livecheck do
     url "https://cloud.r-project.org/bin/macosx/"
-    strategy :page_match
-    regex(/href=.*?R-(\d+(?:\.\d+)*)\.pkg/i)
+    regex(/href=.*?R[._-]v?(\d+(?:\.\d+)*)\.pkg/i)
   end
 
   depends_on macos: ">= :el_capitan"

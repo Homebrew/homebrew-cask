@@ -1,30 +1,48 @@
 cask "rancher" do
-  version "0.6.1"
-  sha256 "181b46b6da8906e8bbbe0bc67e962a44b5abc13aa4b9bea54a0fbc9520795649"
+  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
-  url "https://github.com/rancher-sandbox/rancher-desktop/releases/download/v#{version}/Rancher.Desktop-#{version}.dmg",
+  version "1.1.1"
+
+  if Hardware::CPU.intel?
+    sha256 "c53ec3f9ade755f5fcff40d18cc2a36b8501b0783b9a0477ebaaabcd2af88dcf"
+  else
+    sha256 "0c8a90a2c6dc634d998c4b1811e038c96210f68f8413aae915bd7e52f66c3f90"
+  end
+
+  url "https://github.com/rancher-sandbox/rancher-desktop/releases/download/v#{version}/Rancher.Desktop-#{version}.#{arch}.dmg",
       verified: "github.com/rancher-sandbox/rancher-desktop/"
   name "Rancher Desktop"
   desc "Kubernetes and container management on the desktop"
   homepage "https://rancherdesktop.io/"
 
   auto_updates true
-  conflicts_with formula: %w[
-    helm
-    kubernetes-cli
-  ]
+  conflicts_with cask:    %w[
+    docker
+  ],
+                 formula: %w[
+                   docker
+                   helm
+                   kubernetes-cli
+                 ]
 
   app "Rancher Desktop.app"
-  binary "#{appdir}/Rancher Desktop.app/Contents/Resources/resources/darwin/bin/helm"
-  binary "#{appdir}/Rancher Desktop.app/Contents/Resources/resources/darwin/bin/kim"
-  binary "#{appdir}/Rancher Desktop.app/Contents/Resources/resources/darwin/bin/kubectl"
-  binary "#{appdir}/Rancher Desktop.app/Contents/Resources/resources/darwin/bin/nerdctl"
 
-  uninstall quit: "io.rancherdesktop.app"
+  uninstall delete: [
+    "/opt/rancher-desktop",
+    "/private/etc/sudoers.d/zzzzz-rancher-desktop-lima", # zzzzz is not a typo
+    "/private/var/run/docker.sock",
+    "/private/var/run/rancher-desktop-lima",
+    "/usr/local/bin/docker",
+    "/usr/local/bin/helm",
+    "/usr/local/bin/kubectl",
+    "/usr/local/bin/nerdctl",
+  ],
+            quit:   "io.rancherdesktop.app"
 
   zap trash: [
     "~/.kuberlr",
     "~/Library/Application Support/Caches/rancher-desktop-updater",
+    "~/Library/Application Support/Rancher Desktop",
     "~/Library/Application Support/rancher-desktop",
     "~/Library/Caches/io.rancherdesktop.app*",
     "~/Library/Caches/rancher-desktop",

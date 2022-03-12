@@ -1,6 +1,6 @@
 cask "turbovnc-viewer" do
-  version "2.2.6"
-  sha256 "1421928d7ca4a81f296dcc7dde9225c03d2f7ad94b060862e1a3f99d7adeff54"
+  version "2.2.90"
+  sha256 "6a6a5cca04076280173ad394640aa4e409ecd7b87ee6de72754a3cfde3ac3b54"
 
   url "https://downloads.sourceforge.net/turbovnc/#{version}/TurboVNC-#{version}.dmg",
       verified: "sourceforge.net/turbovnc/"

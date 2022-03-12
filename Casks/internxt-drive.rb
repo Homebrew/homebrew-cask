@@ -1,6 +1,6 @@
 cask "internxt-drive" do
-  version "1.4.2"
-  sha256 "b229a276182f4f66eb8b5b733e70a1aab903c2ffbdeeacba89d1c6fe4f42db18"
+  version "1.7.1"
+  sha256 "81d7f3a80dc5bf4919dc455f4cf06e8c149788a14c1ca54d51f6bb9088c32a56"
 
   url "https://github.com/internxt/drive-desktop/releases/download/v#{version}/internxt-drive-#{version}.dmg",
       verified: "https://github.com/internxt/drive-desktop/"

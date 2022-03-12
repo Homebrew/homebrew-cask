@@ -1,6 +1,6 @@
 cask "fabfilter-simplon" do
-  version "1.32"
-  sha256 "32514c293732f7b2ef139f1a597625c5d4805adb0179237758844ee1b52b78ae"
+  version "1.33"
+  sha256 "dab367f7c51265303c2d3687c27b9bb1b7e0d7073abc4e2830a91ce935051f05"
 
   url "https://download.fabfilter.com/ffsimplon#{version.no_dots}.dmg"
   name "FabFilter Simplon"
@@ -10,7 +10,7 @@ cask "fabfilter-simplon" do
   livecheck do
     url "https://www.fabfilter.com/download"
     strategy :page_match do |page|
-      match = page.match(%r{href=.*?/ffsimplon(\d)(\d\d)\.dmg}i)
+      match = page.match(/ffsimplon(\d)(\d+)\.dmg/i)
       next if match.blank?
 
       "#{match[1]}.#{match[2]}"
@@ -21,7 +21,5 @@ cask "fabfilter-simplon" do
 
   pkg "FabFilter Simplon #{version} Installer.pkg"
 
-  uninstall pkgutil: [
-    "com.fabfilter.Simplon.#{version.major}",
-  ]
+  uninstall pkgutil: "com.fabfilter.Simplon.#{version.major}"
 end

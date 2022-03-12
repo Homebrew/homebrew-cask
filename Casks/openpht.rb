@@ -8,4 +8,10 @@ cask "openpht" do
   homepage "https://github.com/RasPlex/OpenPHT"
 
   app "OpenPHT.app"
+
+  zap trash: [
+    "~/Library/Application Support/OpenPHT",
+    "~/Library/Logs/OpenPHT.log",
+    "~/Library/Saved Application State/tv.openpht.openpht.savedState",
+  ]
 end

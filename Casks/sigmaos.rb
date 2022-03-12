@@ -1,6 +1,6 @@
 cask "sigmaos" do
-  version "0.14.0.1-b"
-  sha256 "7f3b746d06e817a2d118ab42aa57857ff9edcfa40bb4d3ae3fb5764c272920e4"
+  version "0.15.2.1-b"
+  sha256 "897d87df22cbac5f27b99a1542f011f1ae8dc6445eb5a5e7716231fd5f3bc2f5"
 
   url "https://releases.sigmaos.com/macos/SigmaOS-#{version}.dmg"
   name "sigmaos"

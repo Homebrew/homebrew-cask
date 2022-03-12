@@ -1,6 +1,6 @@
 cask "gpg-suite-no-mail" do
-  version "2021.3"
-  sha256 "4a3ca87d9d8363542873b5eb695d85186ab1ff00d5adf2c37c3d055dd78d0a4d"
+  version "2022.1"
+  sha256 "d1a17bb4c8c62960d7ae7ff352a3647bc3109b8989dae4ed7b51cf8a71048768"
 
   url "https://releases.gpgtools.org/GPG_Suite-#{version}.dmg"
   name "GPG Suite (without GPG Mail)"
@@ -37,67 +37,77 @@ cask "gpg-suite-no-mail" do
           "attributeSetting" => 1,
         },
         {
-          "choiceIdentifier" => "installer_choice_4", # GPGMail_14_Core.pkg
+          "choiceIdentifier" => "installer_choice_4", # GPGMail_6_Core.pkg
           "choiceAttribute"  => "selected",
           "attributeSetting" => 0,
         },
         {
-          "choiceIdentifier" => "installer_choice_5", # GPGMail_13_Core.pkg
+          "choiceIdentifier" => "installer_choice_5", # GPGMail_5_Core.pkg
           "choiceAttribute"  => "selected",
           "attributeSetting" => 0,
         },
         {
-          "choiceIdentifier" => "installer_choice_6", # GPGMail_12_Core.pkg
+          "choiceIdentifier" => "installer_choice_6", # GPGMail_4_Core.pkg
           "choiceAttribute"  => "selected",
           "attributeSetting" => 0,
         },
         {
-          "choiceIdentifier" => "installer_choice_7", # GPGMailLoader_Core.pkg
+          "choiceIdentifier" => "installer_choice_7", # GGPGMail_3_Core.pkg
           "choiceAttribute"  => "selected",
           "attributeSetting" => 0,
         },
         {
-          "choiceIdentifier" => "installer_choice_8", # GPGServices_Core.pkg
+          "choiceIdentifier" => "installer_choice_8", # GPGMail_12_Core.pkg
+          "choiceAttribute"  => "selected",
+          "attributeSetting" => 0,
+        },
+        {
+          "choiceIdentifier" => "installer_choice_9", # GPGMailLoader_Core.pkg
+          "choiceAttribute"  => "selected",
+          "attributeSetting" => 0,
+        },
+        {
+          "choiceIdentifier" => "installer_choice_10", # GPGServices_Core.pkg
           "choiceAttribute"  => "selected",
           "attributeSetting" => 1,
         },
         {
-          "choiceIdentifier" => "installer_choice_9", # GPGKeychain_Core.pkg
+          "choiceIdentifier" => "installer_choice_11", # GPGKeychain_Core.pkg
           "choiceAttribute"  => "selected",
           "attributeSetting" => 1,
         },
         {
-          "choiceIdentifier" => "installer_choice_10", # GPGPreferences_Core.pkg
+          "choiceIdentifier" => "installer_choice_12", # GPGPreferences_Core.pkg
           "choiceAttribute"  => "selected",
           "attributeSetting" => 1,
         },
         {
-          "choiceIdentifier" => "installer_choice_11", # MacGPG2.1_Core.pkg
+          "choiceIdentifier" => "installer_choice_13", # MacGPG2.1_Core.pkg
           "choiceAttribute"  => "selected",
           "attributeSetting" => 1,
         },
         {
-          "choiceIdentifier" => "installer_choice_12", # Updater_Core.pkg
+          "choiceIdentifier" => "installer_choice_14", # Updater_Core.pkg
           "choiceAttribute"  => "selected",
           "attributeSetting" => 1,
         },
         {
-          "choiceIdentifier" => "installer_choice_13", # pinentry_Core.pkg
+          "choiceIdentifier" => "installer_choice_15", # pinentry_Core.pkg
           "choiceAttribute"  => "selected",
           "attributeSetting" => 1,
         },
         {
-          "choiceIdentifier" => "installer_choice_14", # version.pkg
+          "choiceIdentifier" => "installer_choice_16", # version.pkg
           "choiceAttribute"  => "selected",
           "attributeSetting" => 1,
         },
         {
-          "choiceIdentifier" => "installer_choice_15", # key.pkg
+          "choiceIdentifier" => "installer_choice_17", # key.pkg
           "choiceAttribute"  => "selected",
           "attributeSetting" => 1,
         },
         {
-          "choiceIdentifier" => "installer_choice_16", # CheckPrivateKey.pkg
+          "choiceIdentifier" => "installer_choice_18", # CheckPrivateKey.pkg
           "choiceAttribute"  => "selected",
           "attributeSetting" => 1,
         },
@@ -154,6 +164,7 @@ cask "gpg-suite-no-mail" do
     "~/Library/Caches/org.gpgtools.gpg*",
     "~/Library/Containers/com.apple.mail/Data/Library/Preferences/org.gpgtools.*",
     "~/Library/Frameworks/Libmacgpg.framework",
+    "~/Library/HTTPStorages/org.gpgtools.*",
     "~/Library/LaunchAgents/org.gpgtools.*",
     "~/Library/Mail/Bundles/GPGMail.mailbundle",
     "~/Library/PreferencePanes/GPGPreferences.prefPane",

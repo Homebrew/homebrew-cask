@@ -1,6 +1,6 @@
 cask "molotov" do
-  version "4.4.6"
-  sha256 "8d133568386e88fbf90f85e827ccb809d79cfd068a9ed5b3dee3fd29450a54b4"
+  version "4.5.0"
+  sha256 "9366230de159a4b5dffe29e1823b6e3bc0d6e6fd2ddc2c4f1b9e9764319cf995"
 
   url "https://desktop-auto-upgrade.molotov.tv/mac/Molotov-#{version}-mac.zip"
   name "Molotov"
@@ -9,8 +9,7 @@ cask "molotov" do
 
   livecheck do
     url "https://desktop-auto-upgrade.molotov.tv/mac/manifest.json"
-    strategy :page_match
-    regex(%r{/Molotov-v?(\d+(?:\.\d+)*)-mac\.zip}i)
+    regex(%r{/Molotov-v?(\d+(?:\.\d+)+)-mac\.zip}i)
   end
 
   app "Molotov.app"

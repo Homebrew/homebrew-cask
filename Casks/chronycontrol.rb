@@ -1,8 +1,8 @@
 cask "chronycontrol" do
-  version "1.4.4,275"
-  sha256 "b80d0f32f645e555bd55728a7c3d9aed8a96eeb36b758e2e9c6eac55cb83ccd1"
+  version "1.4.5,278"
+  sha256 "c100561a76336eef7607310b15b75ac377796be3175c2e4ddf1d66289212ac9b"
 
-  url "https://www.whatroute.net/software/chronycontrol-#{version.before_comma}.zip"
+  url "https://www.whatroute.net/software/chronycontrol-#{version.csv.first}.zip"
   name "ChronyControl"
   desc "Install and configure chronyd"
   homepage "https://whatroute.net/chronycontrol.html"

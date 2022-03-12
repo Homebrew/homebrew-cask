@@ -1,14 +1,14 @@
 cask "lando" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "3.4.2"
+  version "3.6.2"
 
   url "https://github.com/lando/lando/releases/download/v#{version}/lando-#{arch}-v#{version}.dmg",
       verified: "github.com/lando/lando/"
   if Hardware::CPU.intel?
-    sha256 "2593ebb137733f3069a6db873f440f84860e0d00fa0eb99293bda0c8f17472fe"
+    sha256 "a32692e8b25365b40ad125114df8eaa10ef3ed171f251a1cd3fedc8117175d76"
   else
-    sha256 "a5d9837a5509ce60a45cc4bdf6aa8bcdd5df7ceb0e972f1f547ab45eb9f69dee"
+    sha256 "514d244ec465ed552c1d05a153695dc232e264a3d3f6394392b5deeaae7bf803"
   end
 
   name "Lando"
@@ -37,4 +37,6 @@ cask "lando" do
       ]
 
   uninstall pkgutil: "dev.lando.pkg.lando"
+
+  # No zap stanza required
 end

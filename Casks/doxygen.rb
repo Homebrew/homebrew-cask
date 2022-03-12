@@ -1,6 +1,6 @@
 cask "doxygen" do
-  version "1.9.2"
-  sha256 "788d56c30ecb1d3f816f3eca31a2e983a7864ed28fce0566143dfb70afed7916"
+  version "1.9.3"
+  sha256 "1507f95600b87897e6fadd8e5ef204c80d1c8902c255381e3961bdd6ba5e6503"
 
   url "https://doxygen.nl/files/Doxygen-#{version}.dmg"
   name "Doxygen"
@@ -9,7 +9,6 @@ cask "doxygen" do
 
   livecheck do
     url "https://www.doxygen.nl/download.html"
-    strategy :page_match
     regex(%r{href=.*?/Doxygen-(\d+(?:\.\d+)+)\.dmg}i)
   end
 

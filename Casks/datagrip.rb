@@ -1,16 +1,15 @@
 cask "datagrip" do
-  version "2021.3.1,213.5744.178"
+  arch = Hardware::CPU.intel? ? "" : "-aarch64"
+
+  version "2021.3.4,213.6777.22"
 
   if Hardware::CPU.intel?
-    sha256 "7528d19484174fc1e26560aec3ec2bda7a85cf251f377b05b00f485d6dfe9a34"
-
-    url "https://download.jetbrains.com/datagrip/datagrip-#{version.before_comma}.dmg"
+    sha256 "27e709d2ced66d37a615d8c56885828e49a08962708e28df1a20f324c626bf52"
   else
-    sha256 "129c706214677ebf3f02a007e667dfbfa6074a2c79450f6176211eabdd59c3dc"
-
-    url "https://download.jetbrains.com/datagrip/datagrip-#{version.before_comma}-aarch64.dmg"
+    sha256 "7a77ba9fce56c781ae6a4fc65eaab4bcc10780b6bd679b04d74146719e42890a"
   end
 
+  url "https://download.jetbrains.com/datagrip/datagrip-#{version.csv.first}#{arch}.dmg"
   name "DataGrip"
   desc "Databases & SQL IDE"
   homepage "https://www.jetbrains.com/datagrip/"
@@ -39,9 +38,9 @@ cask "datagrip" do
   end
 
   zap trash: [
-    "~/Library/Application Support/JetBrains/DataGrip#{version.major_minor}",
-    "~/Library/Caches/JetBrains/DataGrip#{version.major_minor}",
-    "~/Library/Logs/JetBrains/DataGrip#{version.major_minor}",
+    "~/Library/Application Support/JetBrains/DataGrip*",
+    "~/Library/Caches/JetBrains/DataGrip*",
+    "~/Library/Logs/JetBrains/DataGrip*",
     "~/Library/Saved Application State/com.jetbrains.datagrip.savedState",
   ]
 end

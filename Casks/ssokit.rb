@@ -1,6 +1,6 @@
 cask "ssokit" do
-  version "1.1.8"
-  sha256 "f0f947d46997c3cfa418b238315d427a4c6e3fc7c2c40e6b43b708f3b4ceee33"
+  version "1.2.0"
+  sha256 "996cbcf1219ef43afed9d6f77de89cc8a8fb345cbe83417a966687a0625114eb"
 
   url "https://github.com/rangaofei/SSokit-qmake/releases/download/#{version}/SSokit_#{version}.dmg"
   name "SSokit"

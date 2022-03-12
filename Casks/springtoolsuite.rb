@@ -1,6 +1,6 @@
 cask "springtoolsuite" do
-  version "4.13.0,4.22.0"
-  sha256 "ab25a0837de367605b3445fc358939bba1ba21408eb43cf8acccb8e7eb628be1"
+  version "4.13.1,4.22.0"
+  sha256 "a52c73eaadb8f591ab4313beb52d61a705e1594e224115d98cca943f35d32baf"
 
   url "https://download.springsource.com/release/STS#{version.major}/#{version.csv.first}.RELEASE/dist/e#{version.csv.second.major_minor}/spring-tool-suite-#{version.major}-#{version.csv.first}.RELEASE-e#{version.csv.second}-macosx.cocoa.x86_64.dmg",
       verified: "download.springsource.com/release/"

@@ -3,8 +3,8 @@ cask "jedit-omega" do
     version "1.32"
     sha256 "251697fe6b76419b2cef41a89a2cb7d2e3f8caab0bc1ae82aed6c14a366fdad9"
   else
-    version "2.43"
-    sha256 "0ca5b43b32734793d063fbfb5e666453c4de462eb26600781f30045496688e06"
+    version "2.44"
+    sha256 "9a953d7af9d357764526d910c4d5c1f46f4a754367a3cb62a99a2ac9f5aefe92"
   end
 
   url "http://download.artman21.co.jp/product/JeditOmega/JeditOmega#{version.no_dots}.dmg",

@@ -1,6 +1,6 @@
 cask "jamovi" do
-  version "2.2.4.0"
-  sha256 "1ff4d1ce7da6a9120572c5842ed2ddf57c61cf0a93a564003394a1793ef48557"
+  version "2.3.2.0"
+  sha256 "df56b3a760894c9d37c5a40737fe023ba5343f2ff619bd9a0771aa9111287f85"
 
   url "https://www.jamovi.org/downloads/jamovi-#{version}-macos.dmg"
   name "jamovi"
@@ -9,7 +9,7 @@ cask "jamovi" do
 
   livecheck do
     url "https://www.jamovi.org/download.html"
-    regex(%r{href=.*?/jamovi[._-]v?(\d+(?:\.\d+)+)[._-]macos\.dmg}i)
+    regex(/href=.*?jamovi[._-]v?(\d+(?:\.\d+)+)[._-]macos\.dmg/i)
   end
 
   auto_updates true

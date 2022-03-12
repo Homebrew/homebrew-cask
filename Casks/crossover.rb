@@ -21,7 +21,7 @@ cask "crossover" do
     "~/Library/Caches/com.apple.helpd/Generated/CrossOver Help*",
     "~/Library/Caches/com.codeweavers.CrossOver",
     "~/Library/Cookies/com.codeweavers.CrossOver.binarycookies",
-    "~/Library/HTTPStorages/com.codeweavers.CrossOver.binarycookies",
+    "~/Library/HTTPStorages/com.codeweavers.CrossOver*",
     "~/Library/Logs/CrossOver",
     "~/Library/Logs/DiagnosticReports/CrossOver*",
     "~/Library/Preferences/com.codeweavers.*",

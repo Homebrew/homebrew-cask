@@ -9,7 +9,6 @@ cask "abscissa" do
 
   livecheck do
     url "http://rbruehl.macbay.de/Abscissa/Downloads/"
-    strategy :page_match
     regex(/href=.*?Abscissa-(\d+(?:\.\d+)+)\.zip/i)
   end
 

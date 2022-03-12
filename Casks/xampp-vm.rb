@@ -1,6 +1,6 @@
 cask "xampp-vm" do
-  version "8.0.9-0"
-  sha256 "1934778ffa461ee13aa197050ff58499d67e15f8f5f8f1b002f7a01b25f448db"
+  version "8.1.2-0"
+  sha256 "46807357a9a3a3efc25cdf8b8949ca3d18f40874b717b85f9282af55c00bc3f1"
 
   url "https://www.apachefriends.org/xampp-files/#{version.split("-").first}/xampp-osx-#{version}-vm.dmg"
   name "XAMPP-VM"
@@ -8,8 +8,7 @@ cask "xampp-vm" do
   homepage "https://www.apachefriends.org/index.html"
 
   livecheck do
-    url "https://www.apachefriends.org/download.html"
-    regex(%r{href=.*?/xampp-osx-(\d+(?:\.\d+)*-\d+)-vm\.dmg}i)
+    cask "xampp"
   end
 
   app "XAMPP.app"

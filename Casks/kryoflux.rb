@@ -9,8 +9,7 @@ cask "kryoflux" do
 
   livecheck do
     url "https://www.kryoflux.com/?page=download"
-    strategy :page_match
-    regex(%r{href=.*?/kryoflux_(\d+(?:\.\d+)*)_macosx\.dmg}i)
+    regex(%r{href=.*?/kryoflux[._-]v?(\d+(?:\.\d+)+)[._-]macosx\.dmg}i)
   end
 
   app "KryoFlux UI.app"
@@ -19,9 +18,9 @@ cask "kryoflux" do
   uninstall pkgutil: "com.kryoflux.pkg.DTC"
 
   zap trash: [
-    "~/Library/Preferences/com.kryoflux.ui.plist",
-    "~/Library/Preferences/com.kryoflux.kryoflux-ui.plist",
     "~/.kryoflux",
+    "~/Library/Preferences/com.kryoflux.kryoflux-ui.plist",
+    "~/Library/Preferences/com.kryoflux.ui.plist",
   ]
 
   caveats do

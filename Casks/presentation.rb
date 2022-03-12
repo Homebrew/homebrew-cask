@@ -4,12 +4,12 @@ cask "presentation" do
 
   url "http://iihm.imag.fr/blanch/software/osx-presentation/releases/osx-presentation-#{version}.pkg"
   name "Présentation"
+  desc "Tool for pdf slides"
   homepage "http://iihm.imag.fr/blanch/software/osx-presentation/"
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/osx-presentation-(\d+(?:\.\d+)*)\.pkg}i)
+    regex(%r{href=.*?/osx[._-]presentation[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
   end
 
   pkg "osx-presentation-#{version}.pkg"

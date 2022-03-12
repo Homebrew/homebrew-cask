@@ -4,12 +4,12 @@ cask "fing-cli" do
 
   url "https://www.fing.com/images/uploads/general/CLI_macOSX_#{version}.zip"
   name "Fing Desktop Embedded CLI"
+  desc "Network scanner"
   homepage "https://www.fing.com/products/development-toolkit/"
 
   livecheck do
     url "https://www.fing.com/products/development-toolkit/"
-    strategy :page_match
-    regex(%r{href=.*?/CLI_macOSX_(\d+(?:\.\d+)*)\.zip}i)
+    regex(%r{href=.*?/CLI[._-]macOSX[._-]v?(\d+(?:\.\d+)+)\.zip}i)
   end
 
   pkg "Fing-#{version}-osX.pkg"

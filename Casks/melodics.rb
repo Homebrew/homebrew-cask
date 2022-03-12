@@ -1,8 +1,8 @@
 cask "melodics" do
-  version "2.1.6747,E14EF329-9DFA-4233-92F3-D2C11E4C65AE"
-  sha256 "1cb76ba1e3abdc2107c20b1a32aa3bcf366210d5abfd9add51d6360e8c864fe9"
+  version "2.1.7041,D4D64BF4-F407-419C-A47F-F799431BD552"
+  sha256 "8ed0ae58d018caf5eef099a3806ebd76998ddc2817a11b97c2f305b22f9f8121"
 
-  url "https://web-cdn.melodics.com/download/#{version.after_comma}.zip"
+  url "https://web-cdn.melodics.com/download/#{version.csv.second}.zip"
   name "Melodics"
   desc "Helps you learn to play your instrument"
   homepage "https://melodics.com/"

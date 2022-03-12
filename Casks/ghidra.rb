@@ -1,6 +1,6 @@
 cask "ghidra" do
-  version "10.1,20211210"
-  sha256 "99139c4a63a81135b3b63fe9997a012a6394a766c2c7f2ac5115ab53912d2a6c"
+  version "10.1.2,20220125"
+  sha256 "ac96fbdde7f754e0eb9ed51db020e77208cdb12cf58c08657a2ab87cb2694940"
 
   url "https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_#{version.csv.first}_build/ghidra_#{version.csv.first}_PUBLIC_#{version.csv.second}.zip",
       verified: "github.com/NationalSecurityAgency/ghidra/"
@@ -16,9 +16,16 @@ cask "ghidra" do
     end
   end
 
-  conflicts_with cask: "homebrew/cask-versions/ghidra-beta"
+  binary "#{caskroom_path}/#{version.csv.first}-#{version.csv.second}/ghidra_#{version.csv.first}_PUBLIC/ghidraRun"
 
-  binary "ghidra_#{version.csv.first}_PUBLIC/ghidraRun"
+  preflight do
+    # Log4j misinterprets comma in staged_path as alternative delimiter
+    FileUtils.mv(staged_path, "#{caskroom_path}/#{version.csv.first}-#{version.csv.second}")
+  end
+
+  uninstall_preflight do
+    FileUtils.mv("#{caskroom_path}/#{version.csv.first}-#{version.csv.second}", staged_path)
+  end
 
   zap trash: "~/.ghidra"
 

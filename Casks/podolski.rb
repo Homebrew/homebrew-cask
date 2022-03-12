@@ -2,7 +2,7 @@ cask "podolski" do
   version "1.2.3,12092"
   sha256 "c419d14ead23c5229aeafda0d6f43e9a55f70ac2dc14868d32cef00c58687201"
 
-  url "https://uhedownloads-heckmannaudiogmb.netdna-ssl.com/releases/Podolski_#{version.before_comma.no_dots}_#{version.after_comma}_Mac.zip",
+  url "https://uhedownloads-heckmannaudiogmb.netdna-ssl.com/releases/Podolski_#{version.csv.first.no_dots}_#{version.csv.second}_Mac.zip",
       verified: "uhedownloads-heckmannaudiogmb.netdna-ssl.com/"
   name "Podolski"
   desc "Virtual analogue synthesizer"
@@ -17,7 +17,7 @@ cask "podolski" do
     end
   end
 
-  pkg "Podolski_#{version.after_comma}_Mac/Podolski #{version.before_comma} Installer.pkg"
+  pkg "Podolski_#{version.csv.second}_Mac/Podolski #{version.csv.first} Installer.pkg"
 
   uninstall pkgutil: [
     "com.u-he.Podolski.aax.pkg",

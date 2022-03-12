@@ -3,8 +3,8 @@ cask "calibre" do
     version "3.48.0"
     sha256 "68829cd902b8e0b2b7d5cf7be132df37bcc274a1e5720b4605d2dd95f3a29168"
   else
-    version "5.33.2"
-    sha256 "e0195186120789ca78d0714437737ea5e0a27b982809504c45ad79d834cd32b6"
+    version "5.38.0"
+    sha256 "5aabd6a02ddb8aa91b6237fc8ff449ca1a10e021425188d663bc20ae3119bb78"
   end
 
   url "https://download.calibre-ebook.com/#{version}/calibre-#{version}.dmg"

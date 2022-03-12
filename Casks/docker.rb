@@ -1,12 +1,12 @@
 cask "docker" do
   arch = Hardware::CPU.intel? ? "amd64" : "arm64"
 
-  version "4.3.1,72247"
+  version "4.5.0,74594"
 
   if Hardware::CPU.intel?
-    sha256 "67933788ed97868a0cc821b3d78ea1864598ad4dcd7a5b25b79cab2911fe835b"
+    sha256 "fa65e21ec54f472b293170f409c87934929c5488612589275d05a47cd59ba3ae"
   else
-    sha256 "560eed309eaac86a22a96e063a3322bb3f3063a0e3e5edcaf727b1fc15f126c4"
+    sha256 "24ebf379469925983a353be3ec10ebb22f4b07d79d833c15ed01abf198ddc104"
   end
 
   url "https://desktop.docker.com/mac/main/#{arch}/#{version.csv.second}/Docker.dmg"
@@ -68,6 +68,7 @@ cask "docker" do
   zap trash: [
     "/usr/local/bin/docker-compose.backup",
     "/usr/local/bin/docker.backup",
+    "~/.docker",
     "~/Library/Application Scripts/com.docker.helper",
     "~/Library/Application Support/com.bugsnag.Bugsnag/com.docker.docker",
     "~/Library/Application Support/Docker Desktop",

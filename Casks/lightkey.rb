@@ -1,8 +1,8 @@
 cask "lightkey" do
-  version "3.8.3,6a381dabf4-1639498319"
-  sha256 "cbe572d9ed9bb7dcb70ae03c11759f7d40090153b0888b37d3dffb2288451019"
+  version "3.9.1,0c16779ca2-1645804602"
+  sha256 "f3df4275e8c6ae5616cde0ac63171fc6810fad743f47a2ffdb7985fee3f4db0b"
 
-  url "https://lightkeyapp.com/media/pages/download/Lightkey-#{version.before_comma.dots_to_hyphens}/#{version.after_comma}/LightkeyInstaller.zip"
+  url "https://lightkeyapp.com/media/pages/download/Lightkey-#{version.csv.first.dots_to_hyphens}/#{version.csv.second}/LightkeyInstaller.zip"
   name "Lightkey"
   desc "DMX lighting control"
   homepage "https://lightkeyapp.com/"

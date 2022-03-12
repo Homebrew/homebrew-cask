@@ -1,5 +1,5 @@
 cask "displaperture" do
-  version "2.1,1052"
+  version "2.2,1055"
   sha256 :no_check
 
   url "https://manytricks.com/download/displaperture"
@@ -18,6 +18,7 @@ cask "displaperture" do
 
   zap trash: [
     "~/Library/Caches/com.manytricks.Displaperture",
+    "~/Library/Containers/com.manytricks.Displaperture",
     "~/Library/Preferences/com.manytricks.Displaperture.plist",
   ]
 end

@@ -1,5 +1,5 @@
 cask "macx-video-converter-pro" do
-  version "6.5.9"
+  version "6.6.0"
   sha256 :no_check
 
   url "https://www.macxdvd.com/download/macx-video-converter-pro.dmg"

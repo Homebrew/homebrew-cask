@@ -1,6 +1,6 @@
 cask "zprint" do
-  version "1.2.0"
-  sha256 "3497c5f15df5deddaa47c9be8d33afc625b4645e178d089d8cd919d0061ef943"
+  version "1.2.2"
+  sha256 "759412de201dd5038e196e7095230566eeeab5bfd0d1996e7944326ce8afaaef"
 
   url "https://github.com/kkinnear/zprint/releases/download/#{version}/zprintm-#{version}"
   name "zprint"

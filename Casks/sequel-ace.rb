@@ -1,6 +1,6 @@
 cask "sequel-ace" do
-  version "3.4.3,20019"
-  sha256 "59c9e4f15c0acf1e0c5ee22cc7372085ae4794777684ebbb7b900f77c9b8441f"
+  version "3.5.1,20031"
+  sha256 "145ef09101e7435e933bd3086fabf60c84b991a5a6b3dc26e1eb4a5d70173195"
 
   url "https://github.com/Sequel-Ace/Sequel-Ace/releases/download/production/#{version.csv.first}-#{version.csv.second}/Sequel-Ace-#{version.csv.first}.zip"
   name "Sequel Ace"
@@ -9,11 +9,11 @@ cask "sequel-ace" do
 
   livecheck do
     url :url
-    strategy :git do |tags|
-      tags.map do |tag|
-        match = tag.match(%r{^production/(\d+(?:\.\d+)+)-(\d+)$}i)
-        "#{match[1]},#{match[2]}" if match
-      end.compact
+    strategy :github_latest do |page|
+      match = page.match(%r{href=.*?/tag/production/v?(\d+(?:\.\d+)+)-(\d+)["' >]}i)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
     end
   end
 

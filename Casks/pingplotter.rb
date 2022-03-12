@@ -1,11 +1,16 @@
 cask "pingplotter" do
-  version "5.19.5,6802"
+  version "5.22.3"
   sha256 :no_check
 
   url "https://www.pingplotter.com/downloads/pingplotter_osx.zip"
-  appcast "https://www.pingplotter.com/download"
   name "PingPlotter"
+  desc "Network monitoring tool"
   homepage "https://www.pingplotter.com/"
+
+  livecheck do
+    url "https://www.pingplotter.com/download/release-notes"
+    regex(/<h3>v?(\d+(?:\.\d+)+)[[:space:]<]/i)
+  end
 
   app "PingPlotter.app"
 

@@ -13,4 +13,9 @@ cask "ifunbox" do
   end
 
   app "iFunBox.app"
+
+  zap trash: [
+    "~/Library/Caches/com.iFunBoxDevTeam.iFunBox",
+    "~/Library/Preferences/com.iFunBoxDevTeam.iFunBox.plist",
+  ]
 end

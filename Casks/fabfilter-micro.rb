@@ -1,6 +1,6 @@
 cask "fabfilter-micro" do
-  version "1.22"
-  sha256 "883b14ae12459cdc75a8dc904f891c1ec94c484541a538e78119ead83f7cc00a"
+  version "1.23"
+  sha256 "914fbec32ef3c81bfa45fc6eaf73e04a5f66632098ab270ff74e4dadd004349c"
 
   url "https://download.fabfilter.com/ffmicro#{version.no_dots}.dmg"
   name "FabFilter Micro"
@@ -10,7 +10,7 @@ cask "fabfilter-micro" do
   livecheck do
     url "https://www.fabfilter.com/download"
     strategy :page_match do |page|
-      match = page.match(%r{href=.*?/ffmicro(\d)(\d\d)\.dmg}i)
+      match = page.match(/ffmicro(\d)(\d+)\.dmg/i)
       next if match.blank?
 
       "#{match[1]}.#{match[2]}"
@@ -21,7 +21,5 @@ cask "fabfilter-micro" do
 
   pkg "FabFilter Micro #{version} Installer.pkg"
 
-  uninstall pkgutil: [
-    "com.fabfilter.Micro.#{version.major}",
-  ]
+  uninstall pkgutil: "com.fabfilter.Micro.#{version.major}"
 end

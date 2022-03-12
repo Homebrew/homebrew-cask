@@ -1,8 +1,8 @@
 cask "silentknight" do
-  version "1.17,2021.10"
-  sha256 "9f0bae8ae2d7941d45d547044421a7e65b0ee6c15459359f3d21bea4fecc2736"
+  version "1.18,2022.01"
+  sha256 "9ae34b65dccf76a78db674ffa12ef6813d4ebf88ef3a3fbcd50c8c5743f7b242"
 
-  url "https://eclecticlightdotcom.files.wordpress.com/#{version.after_comma.major}/#{version.after_comma.minor}/silentknight#{version.before_comma.no_dots}.zip",
+  url "https://eclecticlightdotcom.files.wordpress.com/#{version.csv.second.major}/#{version.csv.second.minor}/silentknight#{version.csv.first.no_dots}.zip",
       verified: "eclecticlightdotcom.files.wordpress.com/"
   name "SilentKnight"
   desc "Automatically checks computer's security"
@@ -20,7 +20,7 @@ cask "silentknight" do
 
   depends_on macos: ">= :el_capitan"
 
-  app "silentknight#{version.before_comma.no_dots}/SilentKnight.app"
+  app "silentknight#{version.csv.first.no_dots}/SilentKnight.app"
 
   zap trash: [
     "~/Library/Caches/co.eclecticlight.SilentKnight",

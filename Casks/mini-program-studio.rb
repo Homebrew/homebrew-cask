@@ -1,8 +1,8 @@
 cask "mini-program-studio" do
-  version "2.5.3,eff9a8c7-aead-4196-b9df-4559129a9709"
-  sha256 "7580275142cb1195cc8d764e3bff9ce694d82f5b2649010b11bb0a58724f35d0"
+  version "2.7.2,1073c5f0-0f2c-43f1-b3cb-6b701612b514"
+  sha256 "148a47881366a129971cd55e0abbae1900b900579aa04544efecf8e47957477c"
 
-  url "https://gw.alipayobjects.com/os/volans-demo/#{version.after_comma}/MiniProgramStudio-#{version.before_comma}.dmg",
+  url "https://gw.alipayobjects.com/os/volans-demo/#{version.csv.second}/MiniProgramStudio-#{version.csv.first}.dmg",
       verified: "gw.alipayobjects.com/"
   name "Mini Program Studio"
   name "小程序开发者工具"
@@ -14,9 +14,14 @@ cask "mini-program-studio" do
   # the HTML for the release information, so we can match within that.
   livecheck do
     url "https://opendocs.alipay.com/api/content/006l6m"
-    regex(%r{href=.*?/([a-z\d-]+)/MiniProgramStudio[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
     strategy :page_match do |page|
-      page.scan(regex).map do |match|
+      # Get stable branch major_minor version
+      major_minor = page.match(/(\d+(?:\.\d+)+)\s+稳定版/i)[1]
+      next if major_minor.blank?
+
+      # Get major_minor_patch of latest stable release
+      dynamic_regex = %r{href=.*?/([a-z\d-]+)/MiniProgramStudio[._-]v?(#{major_minor}\.(?:\d+(?:\.\d+)*))\.dmg}i
+      page.scan(dynamic_regex).map do |match|
         (match[0] && match[1]) ? "#{match[1]},#{match[0]}" : ""
       end
     end

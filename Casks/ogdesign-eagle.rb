@@ -1,15 +1,15 @@
 cask "ogdesign-eagle" do
   arch = Hardware::CPU.intel? ? "build" : "M1-build"
 
-  version "2.0,39"
+  version "2.0,48"
 
   if Hardware::CPU.intel?
-    sha256 "833d15f3431e26b70263ef8ab73bee47eb91ee31cf74a625579cce9563ba58bb"
+    sha256 "b4a976274392103470cf07fad6db05f93e72c66d197ba7dec4c5ea2d723c96eb"
   else
-    sha256 "c0de55e6be531c99a653ccc4b9e61a8bca49fa8001637106b064b99150fb80a9"
+    sha256 "21243e9d5c448d5849b29e836c2d6f427e45a8e8086b228e815debdef03436c4"
   end
 
-  url "https://eagleapp.s3-accelerate.amazonaws.com/releases/Eagle-#{version.before_comma}-#{arch}#{version.after_comma}.dmg",
+  url "https://eagleapp.s3-accelerate.amazonaws.com/releases/Eagle-#{version.csv.first}-#{arch}#{version.csv.second}.dmg",
       verified: "eagleapp.s3-accelerate.amazonaws.com/"
   name "Eagle"
   desc "Organize all your reference images in one place"

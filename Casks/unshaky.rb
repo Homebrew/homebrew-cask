@@ -7,13 +7,18 @@ cask "unshaky" do
   desc "Software fix for double key presses on Apple's butterfly keyboard"
   homepage "https://github.com/aahung/Unshaky"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
   depends_on macos: ">= :sierra"
 
   app "Unshaky.app"
 
   zap trash: [
-    "Library/Caches/com.nestederror.Unshaky",
-    "Library/Preferences/com.nestederror.Unshaky.plist",
+    "~/Library/Caches/com.nestederror.Unshaky",
+    "~/Library/Preferences/com.nestederror.Unshaky.plist",
   ]
 end

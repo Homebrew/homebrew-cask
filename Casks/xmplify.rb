@@ -1,6 +1,6 @@
 cask "xmplify" do
-  version "1.10.3"
-  sha256 "497d87a00e6112ae818ecc47936061f54e71178ef3594f2af5251805eda666f7"
+  version "1.10.4"
+  sha256 "61f4aada6da960b711463222bab8b5a48ea0c8ae5cf320f874a77dea6acf55cb"
 
   url "http://xmplifyapp.com/releases/Xmplify-#{version}.dmg"
   name "Xmplify"
@@ -8,8 +8,8 @@ cask "xmplify" do
   homepage "http://xmplifyapp.com/"
 
   livecheck do
-    url "http://xmplifyapp.com/release-notes/current.html"
-    regex(/>Release.*?Xmplify\s*v?(\d+(?:\.\d+)+)\s*</i)
+    url "http://xmplifyapp.com/appcast.xml"
+    strategy :sparkle
   end
 
   depends_on macos: ">= :sierra"

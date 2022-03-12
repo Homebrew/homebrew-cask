@@ -9,7 +9,6 @@ cask "ampps" do
 
   livecheck do
     url "https://www.ampps.com/downloads"
-    strategy :page_match
     regex(%r{href=.*?/AMPPS-(\d+(?:\.\d+)+)-x86_64\.dmg}i)
   end
 

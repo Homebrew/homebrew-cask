@@ -1,12 +1,12 @@
 cask "zoom" do
   arch = Hardware::CPU.intel? ? "" : "arm64/"
 
-  version "5.8.6.2879"
+  version "5.9.6.4993"
 
   if Hardware::CPU.intel?
-    sha256 "e829ad0eedf75dfa010fce4253f10698e6f769e4dbfa28ded57a9d540969917a"
+    sha256 "13170018d0954fff5e63f546a851350e94794be421cc765ac2690de3236240d5"
   else
-    sha256 "87a5ef87af853b298980b12439a1eed8a5f9eef7a2db9215983382bfc64a517a"
+    sha256 "a0e87396285f70202c2b72e6f9dbf67e1ee4e993449e686e48ec55d954f16302"
   end
 
   url "https://cdn.zoom.us/prod/#{version}/#{arch}Zoom.pkg"
@@ -19,9 +19,7 @@ cask "zoom" do
     strategy :header_match
   end
 
-  # Do not add `auto_updates`. While supporting an auto-update mechanism, this software is more inconvenient than most
-  # See https://github.com/Homebrew/homebrew-cask/pull/93083
-
+  auto_updates true
   conflicts_with cask: "zoom-for-it-admins"
 
   pkg "Zoom.pkg"
@@ -48,32 +46,37 @@ cask "zoom" do
               "/Applications/zoom.us.app",
               "/Library/Internet Plug-Ins/ZoomUsPlugIn.plugin",
               "/Library/Logs/DiagnosticReports/zoom.us*",
+              "/Library/PrivilegedHelperTools/us.zoom.ZoomDaemon",
             ]
 
   zap trash: [
     "~/.zoomus",
     "~/Desktop/Zoom",
     "~/Documents/Zoom",
-    "~/Library/Application Support/CloudDocs/session/containers/iCloud.us.zoom.videomeetings",
+    "~/Library/Application Scripts/*.ZoomClient3rd",
     "~/Library/Application Support/CloudDocs/session/containers/iCloud.us.zoom.videomeetings.plist",
+    "~/Library/Application Support/CloudDocs/session/containers/iCloud.us.zoom.videomeetings",
     "~/Library/Application Support/CrashReporter/zoom.us*",
     "~/Library/Application Support/zoom.us",
     "~/Library/Caches/us.zoom.xos",
     "~/Library/Cookies/us.zoom.xos.binarycookies",
+    "~/Library/Group Containers/*.ZoomClient3rd",
+    "~/Library/HTTPStorages/us.zoom.xos",
+    "~/Library/HTTPStorages/us.zoom.xos.binarycookies",
     "~/Library/Internet Plug-Ins/ZoomUsPlugIn.plugin",
     "~/Library/Logs/zoom.us",
     "~/Library/Logs/zoominstall.log",
     "~/Library/Logs/ZoomPhone",
-    "~/Library/Group Containers/BJ4HAAB9B3.ZoomClient3rd",
     "~/Library/Mobile Documents/iCloud~us~zoom~videomeetings",
-    "~/Library/Preferences/ZoomChat.plist",
     "~/Library/Preferences/us.zoom.airhost.plist",
     "~/Library/Preferences/us.zoom.caphost.plist",
     "~/Library/Preferences/us.zoom.Transcode.plist",
     "~/Library/Preferences/us.zoom.xos.Hotkey.plist",
     "~/Library/Preferences/us.zoom.xos.plist",
+    "~/Library/Preferences/ZoomChat.plist",
     "~/Library/Safari/PerSiteZoomPreferences.plist",
     "~/Library/SafariTechnologyPreview/PerSiteZoomPreferences.plist",
     "~/Library/Saved Application State/us.zoom.xos.savedState",
+    "~/Library/WebKit/us.zoom.xos",
   ]
 end

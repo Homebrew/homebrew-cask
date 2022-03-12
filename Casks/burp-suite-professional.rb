@@ -1,8 +1,15 @@
 cask "burp-suite-professional" do
-  version "2021.10.3"
-  sha256 "c96f482d59e34e424c73da3bd265366f487bdf1bae32590755880cded2c9bd9e"
+  arch = Hardware::CPU.intel? ? "MacOsx" : "MacOsArm64"
 
-  url "https://portswigger.net/burp/releases/download?product=pro&version=#{version}&type=MacOsx"
+  version "2022.1.1"
+
+  if Hardware::CPU.intel?
+    sha256 "57eb7e76d598572d7edc178c035850077802fad16aa76422c919eab3f9391e90"
+  else
+    sha256 "85c8f6156fcf91c31d695d16daacda8a458cc2e6ac5196158154fc99b6b3dc3d"
+  end
+
+  url "https://portswigger.net/burp/releases/download?product=pro&version=#{version}&type=#{arch}"
   name "Burp Suite Professional"
   desc "Web security testing toolkit"
   homepage "https://portswigger.net/burp/pro"
@@ -18,24 +25,13 @@ cask "burp-suite-professional" do
               item["releaseChannels"].include?("Stable") &&
               item["categories"].include?("Professional") &&
               item["builds"].any? do |build|
-                build["ProductPlatform"] == "MacOsx"
+                build["ProductPlatform"] == arch.to_s
               end
       end.compact
     end
   end
 
-  installer script: {
-    executable: "Burp Suite Professional Installer.app/Contents/MacOS/JavaApplicationStub",
-    args:       ["-q"],
-    sudo:       true,
-  }
-
-  postflight do
-    set_ownership "/Applications/Burp Suite Professional.app"
-    set_permissions "/Applications/Burp Suite Professional.app", "a+rX"
-  end
-
-  uninstall delete: "/Applications/Burp Suite Professional.app"
+  app "Burp Suite Professional.app"
 
   zap trash: "~/.BurpSuite"
 end

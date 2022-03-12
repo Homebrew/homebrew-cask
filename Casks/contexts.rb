@@ -7,7 +7,7 @@ cask "contexts" do
     sha256 "f4ca05c6abb14f6193b158645d74ca9d2672aabba7e07cc1c6cc3af18aa44907"
   end
 
-  url "https://contexts.co/releases/Contexts-#{version.before_comma}.dmg"
+  url "https://contexts.co/releases/Contexts-#{version.csv.first}.dmg"
   name "Contexts"
   desc "Allows switching between application windows"
   homepage "https://contexts.co/"

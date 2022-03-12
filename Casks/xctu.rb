@@ -1,6 +1,6 @@
 cask "xctu" do
-  version "40003027_AC"
-  sha256 "a8c0bf2fd8b62caa86c1ee35e7c4379d70eab04e7c868f7f6a6875a5e41ada93"
+  version "40003027_AE"
+  sha256 "549aa41bca87035df7251765404a6600c0696a260a09d6d35e8e11b783d5fa0a"
 
   url "https://ftp1.digi.com/support/utilities/#{version}.zip"
   name "XCTU"
@@ -9,8 +9,7 @@ cask "xctu" do
 
   livecheck do
     url "https://www.digi.com/support/includes/utilities.aspx?pid=3352"
-    strategy :page_match
-    regex(%r{href=.*?/(\d+_AC)\.zip}i)
+    regex(/(\d+[._-]\w+)\.zip/i)
   end
 
   installer script: {

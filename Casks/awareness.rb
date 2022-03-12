@@ -9,7 +9,6 @@ cask "awareness" do
 
   livecheck do
     url "http://iamfutureproof.com/javascripts/tools/awareness.js"
-    strategy :page_match
     regex(%r{/Awareness-(\d+(?:\.\d+)+)\.dmg}i)
   end
 

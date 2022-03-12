@@ -1,12 +1,16 @@
 cask "wordservice" do
-  version "2.8.2"
-  sha256 "bf2a982702d922b984639b372510ee73cdfc28f5c5fbbb5fa540bb2702beab7a"
+  version "2.8.3"
+  sha256 "35e553ec48d8dbae490142d184cd61396aed9a13e2c226580aba7683b1016d6e"
 
-  url "https://s3.amazonaws.com/DTWebsiteSupport/download/freeware/wordservice/#{version}/WordService.zip",
-      verified: "s3.amazonaws.com/DTWebsiteSupport/"
+  url "https://download.devontechnologies.com/download/freeware/wordservice/#{version}/WordService.app.zip"
   name "WordService"
   desc "Tool that provides commands for working with selected text"
   homepage "https://www.devontechnologies.com/apps/freeware"
+
+  livecheck do
+    url "https://www.devontechnologies.com/support/download"
+    regex(%r{<td>WordService</td><td>(\d+(?:\.\d+)+)</td>}i)
+  end
 
   app "WordService.app"
 end

@@ -1,8 +1,8 @@
 cask "droplr" do
-  version "5.9.13,472"
-  sha256 "730f0e5064ccc1af034d1b070aeec1e8490c0580e80b4cd8184375ee0a4df723"
+  version "5.9.16,475"
+  sha256 "786d294566445746a205e1302244e030d5e94b15d2814984ef5c3eefea001ac3"
 
-  url "https://files.droplr.com/apps/mac/Droplr#{version.before_comma.no_dots}-#{version.after_comma}.zip"
+  url "https://files.droplr.com/apps/mac/Droplr#{version.csv.first.no_dots}-#{version.csv.second}.zip"
   name "Droplr"
   desc "Screenshot and screen recorder"
   homepage "https://droplr.com/"
@@ -20,7 +20,7 @@ cask "droplr" do
   auto_updates true
   depends_on macos: ">= :sierra"
 
-  pkg "Droplr#{version.before_comma.no_dots}-#{version.after_comma}.pkg"
+  pkg "Droplr#{version.csv.first.no_dots}-#{version.csv.second}.pkg"
 
   uninstall pkgutil: "com.droplr.droplr-mac"
 end

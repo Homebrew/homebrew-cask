@@ -1,6 +1,6 @@
 cask "nwjs" do
-  version "0.59.0"
-  sha256 "47f996cb58e36a7e1138e0735fa208ef0bcf8b778a81fb8656082087a61cc43d"
+  version "0.62.0"
+  sha256 "4e585a8ddb34b49c88aaf8a992a67506b929c656d9a188cc20cf1a5b37a36bd6"
 
   url "https://dl.nwjs.io/v#{version}/nwjs-sdk-v#{version}-osx-x64.zip"
   name "NW.js"

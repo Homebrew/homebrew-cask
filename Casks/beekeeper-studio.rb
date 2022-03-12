@@ -1,6 +1,6 @@
 cask "beekeeper-studio" do
-  version "2.1.5"
-  sha256 "62992dc72dfeb425d821da85e9feb2ab68cce040ff03bfd7729c50400b3ef4b4"
+  version "3.2.1"
+  sha256 "295bde2be2d95699fe4f5e8ee6a2a66a50d4d84e9a81ee9861073d1392231456"
 
   url "https://github.com/beekeeper-studio/beekeeper-studio/releases/download/v#{version}/Beekeeper-Studio-#{version}.dmg",
       verified: "github.com/beekeeper-studio/beekeeper-studio/"
@@ -18,10 +18,10 @@ cask "beekeeper-studio" do
   app "Beekeeper Studio.app"
 
   zap trash: [
-    "~/Library/Application Support/Caches/beekeeper-studio-updater",
     "~/Library/Application Support/beekeeper-studio",
-    "~/Library/Caches/io.beekeeperstudio.desktop",
+    "~/Library/Application Support/Caches/beekeeper-studio-updater",
     "~/Library/Caches/io.beekeeperstudio.desktop.ShipIt",
+    "~/Library/Caches/io.beekeeperstudio.desktop",
     "~/Library/Preferences/ByHost/io.beekeeperstudio.desktop.ShipIt.*.plist",
     "~/Library/Preferences/io.beekeeperstudio.desktop.plist",
     "~/Library/Saved Application State/io.beekeeperstudio.desktop.savedState",

@@ -1,12 +1,12 @@
 cask "cryptomator" do
   arch = Hardware::CPU.intel? ? "" : "-arm64"
 
-  version "1.6.4"
+  version "1.6.6"
 
   if Hardware::CPU.intel?
-    sha256 "7c763610523dc6ced2d51d5e25fdb15ccd93366a107b8959460f7796eef83dc2"
+    sha256 "02b8ba1384d67fa507609500891461942e97297da69ccc718aab57fa96b83ae9"
   else
-    sha256 "1e7fc2bb09bbe914317c9b1459415a250d8f7baaa4cb51735c2f1a1e8d4605da"
+    sha256 "9c6db1941c64f7bd644d42b4b0502adfe75ef854e4ebe87d46f7c392cc4ab2b6"
   end
 
   url "https://github.com/cryptomator/cryptomator/releases/download/#{version}/Cryptomator-#{version}#{arch}.dmg",
@@ -17,8 +17,7 @@ cask "cryptomator" do
 
   livecheck do
     url "https://cryptomator.org/downloads/mac/thanks/"
-    strategy :page_match
-    regex(%r{href=.*?/Cryptomator-(\d+(?:\.\d+)+)\.dmg}i)
+    regex(%r{href=.*?/Cryptomator[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   depends_on macos: ">= :high_sierra"

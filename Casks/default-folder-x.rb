@@ -1,8 +1,8 @@
 cask "default-folder-x" do
-  version "5.6.2,5008"
-  sha256 "8be641abf04911f7d9386e7a68c7917495f01b9a8c0fd556fc91b074477a6010"
+  version "5.6.4,5086"
+  sha256 "8f3644d0a093b8cfbe1d5a964b52f2ec95fd0e62244f4b9e86f2c360f2648f71"
 
-  url "https://www.stclairsoft.com/download/DefaultFolderX-#{version.before_comma}.dmg"
+  url "https://www.stclairsoft.com/download/DefaultFolderX-#{version.csv.first}.dmg"
   name "Default Folder X"
   desc "Utility to enhance the Open and Save dialogs in applications"
   homepage "https://www.stclairsoft.com/DefaultFolderX/"

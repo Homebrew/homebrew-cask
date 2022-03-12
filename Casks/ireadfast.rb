@@ -9,9 +9,10 @@ cask "ireadfast" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/iReadFast\s*(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/iReadFast\s*v?(\d+(?:\.\d+)+)\.dmg}i)
   end
+
+  depends_on macos: "<= :mojave"
 
   app "iReadFast.app"
 end

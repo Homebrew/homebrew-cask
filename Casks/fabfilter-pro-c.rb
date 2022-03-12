@@ -1,6 +1,6 @@
 cask "fabfilter-pro-c" do
-  version "2.12"
-  sha256 "e6da95e92fbba7bc0cdda325cc67264d5d7b0709eef5579bc75960ca40a1624c"
+  version "2.14"
+  sha256 "c88018639f9c96331a756f2c21ad809671d4fcb7f0fb37b6d8b3c47d71d0d483"
 
   url "https://download.fabfilter.com/ffproc#{version.no_dots}.dmg"
   name "FabFilter Pro-C"
@@ -10,7 +10,7 @@ cask "fabfilter-pro-c" do
   livecheck do
     url "https://www.fabfilter.com/download"
     strategy :page_match do |page|
-      match = page.match(%r{href=.*?/ffproc(\d)(\d\d)\.dmg}i)
+      match = page.match(/ffproc(\d)(\d+)\.dmg/i)
       next if match.blank?
 
       "#{match[1]}.#{match[2]}"
@@ -21,7 +21,5 @@ cask "fabfilter-pro-c" do
 
   pkg "FabFilter Pro-C #{version} Installer.pkg"
 
-  uninstall pkgutil: [
-    "com.fabfilter.Pro-C.#{version.major}",
-  ]
+  uninstall pkgutil: "com.fabfilter.Pro-C.#{version.major}"
 end

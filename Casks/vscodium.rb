@@ -1,6 +1,6 @@
 cask "vscodium" do
-  version "1.63.1"
-  sha256 "8d52206bcb7007d9251c65d85474e3cc3bdb25c96778dc761ad125e7de48dc64"
+  version "1.65.2"
+  sha256 "0eb18d24d0e4879d4de13c7d77764da37c3c16da182439a2b11c62f99a94d872"
 
   url "https://github.com/VSCodium/vscodium/releases/download/#{version}/VSCodium.x64.#{version}.dmg"
   name "VSCodium"

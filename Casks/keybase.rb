@@ -1,6 +1,6 @@
 cask "keybase" do
-  version "5.8.0,20210920184218,ac2177aec7"
-  sha256 "55333b285a0c31712e478480462371efdec96c77cca7d7831b4748778fa5b7d5"
+  version "5.9.2,20220131221715,a25f15e42b"
+  sha256 "dfdba447f395862a6efa38b061b202b49e0a1c549c8a24c53fb189567564e376"
 
   url "https://prerelease.keybase.io/darwin-updates/Keybase-#{version.csv.first}-#{version.csv.second}%2B#{version.csv.third}.zip"
   name "Keybase"
@@ -10,7 +10,7 @@ cask "keybase" do
   livecheck do
     url "https://prerelease.keybase.io/update-darwin-prod-v2.json"
     strategy :page_match do |page|
-      match = page.match(/Keybase-(\d+(?:\.\d+)*)-(\d+)%2B([0-9a-f]+)\.zip/i)
+      match = page.match(/Keybase[._-]v?(\d+(?:\.\d+)+)[._-](\d+)%2B([0-9a-f]+)\.zip/i)
       next if match.blank?
 
       "#{match[1]},#{match[2]},#{match[3]}"
@@ -26,7 +26,10 @@ cask "keybase" do
                    args: ["install-auto"]
   end
 
-  uninstall delete:    "/Library/PrivilegedHelperTools/keybase.Helper",
+  uninstall delete:    [
+    "/Library/Logs/keybase*",
+    "/Library/PrivilegedHelperTools/keybase.Helper",
+  ],
             launchctl: "keybase.Helper",
             signal:    [
               ["TERM", "keybase.Electron"],
@@ -44,9 +47,7 @@ cask "keybase" do
     "~/Library/Caches/Keybase",
     "~/Library/Group Containers/keybase",
     "~/Library/Logs/Keybase*",
-    "~/Library/Logs/keybase*",
     "~/Library/Preferences/keybase*",
-    "/Library/Logs/keybase*",
   ],
       rmdir: "/keybase"
 end

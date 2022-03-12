@@ -26,6 +26,8 @@ cask "keepassxc" do
   app "KeePassXC.app"
   binary "#{appdir}/KeePassXC.app/Contents/MacOS/keepassxc-cli"
 
+  uninstall quit: "org.keepassxc.keepassxc"
+
   zap trash: [
     "~/.keepassxc",
     "~/Library/Application Support/CrashReporter/KeePassXC_*.plist",

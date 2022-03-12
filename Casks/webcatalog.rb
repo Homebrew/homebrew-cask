@@ -1,8 +1,8 @@
 cask "webcatalog" do
-  version "40.2.0"
-  sha256 "586fb6869f676e96f5940f9298825c45939b48ce0ef61915242fa1f22bb9349c"
+  version "41.2.1"
+  sha256 "1cd63f5417a1e5192af38f00d6dbe8476754619815d2221055bb195b7078360f"
 
-  url "https://github.com/webcatalog/webcatalog-app/releases/download/v#{version}/WebCatalog-#{version}-universal.dmg",
+  url "https://github.com/webcatalog/webcatalog-app/releases/download/v#{version}/WebCatalog-classic-#{version}-universal.dmg",
       verified: "github.com/webcatalog/webcatalog-app/"
   name "WebCatalog"
   desc "Tool to run web apps like desktop apps"
@@ -15,7 +15,7 @@ cask "webcatalog" do
 
   auto_updates true
 
-  app "WebCatalog.app"
+  app "WebCatalog Classic.app"
 
   zap trash: [
     "~/Library/Application Support/WebCatalog",

@@ -1,16 +1,21 @@
 cask "nheko" do
-  version "0.9.0"
-  sha256 "7065b579903098dd098707812a7e6e325860517e01e70e6ee9b205f2efaa2aaf"
+  version "0.9.1,dfab0c92"
+  sha256 "a795ebee28df116997b2da9d20db132a8a07a35d438eb9bf9be98467f1bb2f27"
 
-  url "https://github.com/Nheko-Reborn/nheko/releases/download/v#{version}/nheko-v#{version}.dmg",
+  url "https://github.com/Nheko-Reborn/nheko/releases/download/v#{version.csv.first}/nheko-v#{version.csv.first}-#{version.csv.second}-#{version.csv.second}.dmg",
       verified: "github.com/Nheko-Reborn/nheko/"
   name "Nheko"
   desc "Desktop client for the Matrix protocol"
   homepage "https://nheko-reborn.github.io/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://github.com/Nheko-Reborn/nheko/releases/latest"
+    strategy :page_match do |page|
+      match = page.match(/nheko[._-]v?(\d+(?:\.\d+)+)[._-](.+)[._-](.+)\.dmg/i)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
+    end
   end
 
   app "Nheko.app"

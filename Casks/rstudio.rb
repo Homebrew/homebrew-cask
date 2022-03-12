@@ -1,8 +1,8 @@
 cask "rstudio" do
-  version "2021.09.1,372"
-  sha256 "daec6a4034ca93d562e4c4103eb7f764a1005fe4d774ec2ad13e547a51d8d942"
+  version "2022.02.0,443"
+  sha256 "391d5f188fe2ebc0dc67ee35b3d3c389e3772b5b95c1fdcfb6b983b94038298d"
 
-  url "https://rstudio-desktop.s3.amazonaws.com/desktop/macos/RStudio-#{version.before_comma}-#{version.after_comma}.dmg",
+  url "https://rstudio-desktop.s3.amazonaws.com/desktop/macos/RStudio-#{version.csv.first}-#{version.csv.second}.dmg",
       verified: "rstudio-desktop.s3.amazonaws.com/"
   name "RStudio"
   desc "Data science software focusing on R and Python"

@@ -1,6 +1,6 @@
 cask "reveal" do
-  version "32,15614"
-  sha256 "efa2029000c6ea78d0284416dfbc92c9ad6e5a56703b213a23e3d96353586828"
+  version "33,15756"
+  sha256 "084b1efa476e55c90d45b0ea2193e3b8b9ac33dede4c49a6f8e84de476130bb8"
 
   url "https://download.revealapp.com/Reveal.app-#{version.csv.first}.zip"
   name "Reveal"
@@ -13,7 +13,7 @@ cask "reveal" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Reveal.app"
 

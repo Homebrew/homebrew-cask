@@ -1,6 +1,6 @@
 cask "flutter" do
-  version "2.8.0"
-  sha256 "6b4c04338fa1188345fc43540170c8ec9f56307ecf8df99ebac1265a8f9f0fe4"
+  version "2.10.3"
+  sha256 "77475dd7e674bf2079a2000183478c19ca9b2eeb404d4819777b1fc12b87ca4a"
 
   url "https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos_#{version}-stable.zip",
       verified: "storage.googleapis.com/flutter_infra_release/"
@@ -17,4 +17,6 @@ cask "flutter" do
 
   binary "flutter/bin/dart"
   binary "flutter/bin/flutter"
+
+  zap trash: "~/.flutter"
 end

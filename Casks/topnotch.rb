@@ -1,6 +1,6 @@
 cask "topnotch" do
-  version "1.3"
-  sha256 "9dd66619f88424960ab88b27215b6b464723767164c54c4c0ddc59bfb5fe5c89"
+  version "1.3.1"
+  sha256 "c8f5b516ba11590b269852f074a070ac6fb87662345fe390f4a66dd1a6e4faf2"
 
   url "https://updates.topnotch.app/TopNotch-#{version}.dmg"
   name "topnotch"
@@ -16,8 +16,10 @@ cask "topnotch" do
 
   zap trash: [
     "~/Library/Application Scripts/pl.maketheweb.TopNotch-LaunchAtLoginHelper",
+    "~/Library/Application Support/TopNotch",
     "~/Library/Caches/pl.maketheweb.TopNotch",
     "~/Library/Containers/pl.maketheweb.TopNotch-LaunchAtLoginHelper",
+    "~/Library/HTTPStorages/pl.maketheweb.TopNotch",
     "~/Library/Preferences/pl.maketheweb.TopNotch.plist",
     "~/Library/WebKit/pl.maketheweb.TopNotch",
   ]

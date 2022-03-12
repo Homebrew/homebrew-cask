@@ -4,13 +4,15 @@ cask "igetter" do
 
   url "https://www.igetter.net/search/downloads/iGetter#{version}.dmg"
   name "iGetter"
+  desc "Full featured download manager and accelerator"
   homepage "https://www.igetter.net/index.html"
 
   livecheck do
     url "https://www.igetter.net/downloads.html"
-    strategy :page_match
-    regex(%r{href=.*?/iGetter(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/iGetter(\d+(?:\.\d+)+)\.dmg}i)
   end
+
+  depends_on macos: "<= :mojave"
 
   app "iGetter #{version}/iGetter.app"
 end

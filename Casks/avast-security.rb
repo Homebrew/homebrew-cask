@@ -1,12 +1,19 @@
 cask "avast-security" do
-  version "4.0,2.0"
+  version "15.0"
   sha256 :no_check
 
-  url "http://download.ff.avast.com/mac/avast_security_online.dmg"
+  url "https://bits.avcdn.net/productfamily_ANTIVIRUS/insttype_FREE/platform_MAC/installertype_ONLINE/build_RELEASE",
+      verified: "bits.avcdn.net/productfamily_ANTIVIRUS/insttype_FREE/platform_MAC/installertype_ONLINE/build_RELEASE"
   name "Avast Security"
+  desc "Antivirus software"
   homepage "https://www.avast.com/"
 
-  pkg "Avast Security.pkg"
+  livecheck do
+    url "http://mac-av.u.avcdn.net/mac-av/10_10/AAFM/changelog.html"
+    regex(%r{<h2>(\d+(?:\.\d+)+).*</h2>}i)
+  end
+
+  pkg "Install Avast Security.pkg"
 
   uninstall script:    {
     executable:   "/Applications/Avast.app/Contents/Backend/hub/uninstall.sh",
@@ -14,9 +21,9 @@ cask "avast-security" do
     sudo:         true,
   },
             launchctl: [
-              "com.avast.hub",
               "com.avast.hub.schedule",
               "com.avast.hub.xpc",
+              "com.avast.hub",
             ],
             pkgutil:   [
               "com.avast.AAFM",
@@ -24,7 +31,7 @@ cask "avast-security" do
             ]
 
   zap trash: [
-    "~/Library/Preferences/com.avast.avast!.plist",
     "~/Library/Cookies/com.avast.AAFM.binarycookies",
+    "~/Library/Preferences/com.avast.avast!.plist",
   ]
 end

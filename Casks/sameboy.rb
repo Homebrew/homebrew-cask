@@ -16,4 +16,11 @@ cask "sameboy" do
   depends_on macos: ">= :sierra"
 
   app "SameBoy.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.github.liji32.sameboy.sfl2",
+    "~/Library/Caches/com.github.liji32.sameboy",
+    "~/Library/Preferences/com.github.liji32.sameboy.plist",
+    "~/Library/Saved Application State/com.github.liji32.sameboy.savedState",
+  ]
 end

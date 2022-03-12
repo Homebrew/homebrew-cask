@@ -1,6 +1,6 @@
 cask "screaming-frog-seo-spider" do
-  version "16.3"
-  sha256 "b17a9acf1d282922768dba3742e647357992e8dcfe7d1abc521fb167822b4c52"
+  version "16.7"
+  sha256 "6379947949b879a7a9a88da1c2b5022491cd9865f7d5bb4d88aae7be3fd6df18"
 
   url "https://download.screamingfrog.co.uk/products/seo-spider/ScreamingFrogSEOSpider-#{version}.dmg"
   name "Screaming Frog SEO Spider"
@@ -9,8 +9,7 @@ cask "screaming-frog-seo-spider" do
 
   livecheck do
     url "https://www.screamingfrog.co.uk/wp-content/themes/screamingfrog/inc/download-modal.php"
-    strategy :page_match
-    regex(%r{href=.*?/ScreamingFrogSEOSpider-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/ScreamingFrogSEOSpider[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "Screaming Frog SEO Spider.app"

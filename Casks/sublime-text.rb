@@ -1,6 +1,6 @@
 cask "sublime-text" do
-  version "4.121"
-  sha256 "4bca411ffc67128eb0920781ac482224283b41f086b52f4f55627991ce8da731"
+  version "4.126"
+  sha256 "06e47f404b3e1c14d505bfbd0b884f8d5a62c9f376a62f735a693dc31d9cc212"
 
   url "https://download.sublimetext.com/sublime_text_build_#{version.no_dots}_mac.zip"
   name "Sublime Text"
@@ -36,6 +36,11 @@ cask "sublime-text" do
     "~/Library/Application Support/Sublime Text 3",
     "~/Library/Caches/com.sublimetext.#{version.major}",
     "~/Library/Caches/com.sublimetext.3",
+    "~/Library/Caches/Sublime Text",
+    "~/Library/Caches/Sublime Text (Safe Mode)",
+    "~/Library/Caches/Sublime Text 3",
+    "~/Library/HTTPStorages/com.sublimetext.#{version.major}",
+    "~/Library/HTTPStorages/com.sublimetext.3",
     "~/Library/Preferences/com.sublimetext.#{version.major}.plist",
     "~/Library/Preferences/com.sublimetext.3.plist",
     "~/Library/Saved Application State/com.sublimetext.#{version.major}.savedState",

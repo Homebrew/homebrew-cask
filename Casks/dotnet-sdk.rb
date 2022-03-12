@@ -2,11 +2,11 @@ cask "dotnet-sdk" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
   if Hardware::CPU.intel?
-    version "6.0.101,83e6b9b3-a78e-4df7-b33f-78a38a1db0c7,b1641cad9024c212bafdd6273f3d5e19"
-    sha256 "31414204e26119baf10eaa035ff1b30e98df1bd57c5d86800fd95c5a4b7caa20"
+    version "6.0.201,a5e0f5da-6088-451c-a341-b751c0d418c7,9fe3a31273888fe23cbe71cac32fa35c"
+    sha256 "a6199cee00bb381b00847cf2e4e7a2192935e2a03c8892a3368a5b3479f3868f"
   else
-    version "6.0.101,43027810-8a5a-40bf-a10a-c3e8d9adef48,e11706837e6380a1760438d0787e9b72"
-    sha256 "429a2759df7adaba9c29ca4b4d1b4c3a7dc393b5f5238ab77d90203eced0fafd"
+    version "6.0.201,2e20d654-1371-4c8f-a0dd-e81bac07549e,7b63667ab1941110bf9e684dc66b590d"
+    sha256 "a219339edb3156c84bfc684efc5a1061d528b2e10b870763bb1119f925249135"
   end
 
   url "https://download.visualstudio.microsoft.com/download/pr/#{version.csv.second}/#{version.csv.third}/dotnet-sdk-#{version.csv.first}-osx-#{arch}.pkg"
@@ -23,7 +23,7 @@ cask "dotnet-sdk" do
     "dotnet",
     "homebrew/cask-versions/dotnet-preview",
     "homebrew/cask-versions/dotnet-sdk-preview",
-  ]
+  ], formula: "dotnet"
   depends_on macos: ">= :mojave"
 
   pkg "dotnet-sdk-#{version.csv.first}-osx-#{arch}.pkg"

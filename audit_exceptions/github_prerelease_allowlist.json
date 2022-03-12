@@ -7,7 +7,6 @@
   "drop-to-gif": "all",
   "duplicati": "all",
   "extraterm": "all",
-  "far2l": "all",
   "freetube": "all",
   "ghdl": "all",
   "graphsketcher": "all",
@@ -23,10 +22,10 @@
   "my-budget": "all",
   "nuclear": "all",
   "pock": "all",
+  "protonmail-bridge": "all",
   "ql-ansilove": "all",
   "profilecreator": "all",
   "qdesktop": "all",
-  "rancher": "all",
   "seaglass": "all",
   "servpane": "all",
   "shadowsocksx-ng-r": "all",
@@ -34,6 +33,5 @@
   "steveschow-gfxcardstatus": "all",
   "themeengine": "all",
   "toggl-track": "all",
-  "vial": "all",
   "xit": "all"
 }

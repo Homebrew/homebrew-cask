@@ -8,14 +8,18 @@ cask "safe-multisig" do
   desc "Ethereum multisig wallet"
   homepage "https://gnosis-safe.io/"
 
-  # It's necessary to check the GitHub releases page and match versions
-  # from dmg files, as not all releases provide a dmg file. Normally we avoid
-  # checking the releases page and use the Git or, if necessary, GithubLatest
-  # strategy but this is an exception.
   livecheck do
-    url "https://github.com/gnosis/safe-react/releases"
-    regex(/href=.*?Safe-Multisig[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
-    strategy :page_match
+    url :homepage
+    regex(/Safe-Multisig[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    strategy :page_match do |page, regex|
+      js_file = page[/component---src-pages-index-tsx-([^.]+)\.js/i, 1]
+      next [] if js_file.blank?
+
+      js_file_data = Homebrew::Livecheck::Strategy.page_content("https://gnosis-safe.io/component---src-pages-index-tsx-#{js_file}.js")
+      next [] if js_file_data[:content].blank?
+
+      js_file_data[:content][regex, 1]
+    end
   end
 
   app "Safe Multisig.app"

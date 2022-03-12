@@ -15,9 +15,8 @@ cask "powershell" do
   homepage "https://github.com/PowerShell/PowerShell"
 
   livecheck do
-    url :homepage
-    strategy :git
-    regex(/^v?(\d+(?:\.\d+)*)$/)
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   depends_on formula: "openssl"

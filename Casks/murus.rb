@@ -1,6 +1,6 @@
 cask "murus" do
-  version "2.2.1"
-  sha256 "fca2e21560991926c77613b80acd15c061cdae9ced7595417ff5dfe064d52e1a"
+  version "2.3"
+  sha256 "8a92450dd570f65b8f5e226d88dba6d89f725aedc1bd483657561744e67c9526"
 
   url "https://github.com/TheMurusTeam/Murus/releases/download/v#{version}/murus-#{version}.zip",
       verified: "github.com/TheMurusTeam/Murus/"
@@ -13,11 +13,11 @@ cask "murus" do
   uninstall launchctl: "it.murus.murusfirewallrules"
 
   zap trash: [
-    "/Library/Application Support/Murus",
-    "/etc/murus",
     "/etc/murus.sh",
+    "/etc/murus",
+    "/Library/Application Support/Murus",
+    "/Library/Preferences/it.murus.muruslibrary.plist",
     "~/Library/Caches/it.murus.Murus",
     "~/Library/Preferences/it.murus.Murus.plist",
-    "/Library/Preferences/it.murus.muruslibrary.plist",
   ]
 end

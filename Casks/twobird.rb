@@ -1,7 +1,7 @@
 cask "twobird" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "1.0.45"
+  version "1.0.46"
   sha256 :no_check
 
   url "https://www.twobird.com/download/mac-#{arch}"

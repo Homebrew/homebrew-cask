@@ -1,6 +1,6 @@
 cask "redis-pro" do
-  version "1.4.0"
-  sha256 "2774e8e86df88eab76c61a342e58c7d31656551bee354eca212ee9d53762a96c"
+  version "1.4.4"
+  sha256 "a2c20d6bb5bc1b84b31d073cb73ba8daa604f07a31da9985b8800dd1e8d99158"
 
   url "https://github.com/cmushroom/redis-pro/releases/download/#{version}/redis-pro.dmg"
   name "redis-pro"

@@ -1,6 +1,11 @@
 cask "microsoft-auto-update" do
-  version "4.42.21121100"
-  sha256 "299ddcbfb071c287603b9602c94efe8977ef82cf1c65c98f36b1bc9428cbc02b"
+  if MacOS.version <= :el_capitan
+    version "4.40.21101001"
+    sha256 "f638f7e0da9ee659c323f2ede0f176804bfe9a615a8f8b6320bd2e69d91ef2b2"
+  else
+    version "4.44.22021501"
+    sha256 "0839300cecf910e03fe224b506dce8f6e732f0c8fc474a8e26d6981c80e32e2b"
+  end
 
   url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_AutoUpdate_#{version}_Updater.pkg"
   name "Microsoft Auto Update"
@@ -30,7 +35,13 @@ cask "microsoft-auto-update" do
               "com.microsoft.package.Microsoft_AutoUpdate.app",
               "com.microsoft.package.Microsoft_AU_Bootstrapper.app",
             ],
-            delete:    "/Library/PrivilegedHelperTools/com.microsoft.autoupdate.helper"
+            delete:    [
+              "/Library/Caches/com.microsoft.autoupdate.fba",
+              "/Library/Caches/com.microsoft.autoupdate.helper",
+              "/Library/LaunchDaemons/com.microsoft.autoupdate.helper.plist",
+              "/Library/Preferences/com.microsoft.autoupdate2.plist",
+              "/Library/PrivilegedHelperTools/com.microsoft.autoupdate.helper",
+            ]
 
   zap trash: [
     "~/Library/Application Support/Microsoft AutoUpdate",
@@ -40,6 +51,8 @@ cask "microsoft-auto-update" do
     "~/Library/Caches/com.microsoft.autoupdate2",
     "~/Library/Cookies/com.microsoft.autoupdate.fba.binarycookies",
     "~/Library/Cookies/com.microsoft.autoupdate2.binarycookies",
+    "~/Library/HTTPStorages/com.microsoft.autoupdate.fba",
+    "~/Library/HTTPStorages/com.microsoft.autoupdate2",
     "~/Library/Preferences/com.microsoft.autoupdate.fba.plist",
     "~/Library/Preferences/com.microsoft.autoupdate2.plist",
     "~/Library/Saved Application State/com.microsoft.autoupdate2.savedState",

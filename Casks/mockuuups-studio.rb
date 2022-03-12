@@ -1,8 +1,15 @@
 cask "mockuuups-studio" do
-  version "3.4.0"
-  sha256 "60d237d8d044785c2c60fb2406b1ab4db68080e2735d61aab1736201011ebc87"
+  arch = Hardware::CPU.intel? ? "" : "arm64-"
 
-  url "https://binaries.mockuuups.com/Mockuuups%20Studio-#{version}-mac.zip",
+  version "3.7.0"
+
+  if Hardware::CPU.intel?
+    sha256 "1b5897be81511a1a8dc7fd3f19824adc3186898fae9bdaed7e1bcd3469e22dcf"
+  else
+    sha256 "deefb92a749360fc2c524c427b3c462f0220a8fa5797fe2d634a009f476a03da"
+  end
+
+  url "https://binaries.mockuuups.com/Mockuuups%20Studio-#{version}-#{arch}mac.zip",
       verified: "mockuuups.com/"
   name "Mockuuups Studio"
   desc "Allows designers and marketers to drag and drop visuals into scenes"

@@ -2,7 +2,7 @@ cask "robo-3t" do
   version "1.4.4,e6ac9ec"
   sha256 "aa5e56482c2f454154b2a346dc85e5016ffb5facabf649c0aaa186d970842bcd"
 
-  url "https://download.studio3t.com/robomongo/mac/robo3t-#{version.before_comma}-darwin-x86_64-#{version.after_comma}.dmg",
+  url "https://download.studio3t.com/robomongo/mac/robo3t-#{version.csv.first}-darwin-x86_64-#{version.csv.second}.dmg",
       verified: "download.studio3t.com/"
   name "Robo 3T (formerly Robomongo)"
   desc "MongoDB management tool"

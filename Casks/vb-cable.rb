@@ -5,7 +5,7 @@ cask "vb-cable" do
   url "https://download.vb-audio.com/Download_MAC/VBCable_MACDriver_Pack#{version}.zip"
   name "VB-CABLE Virtual Audio Device"
   desc "Virtual audio cable for routing audio from one application to another"
-  homepage "https://www.vb-audio.com/Cable/index.htm"
+  homepage "https://vb-audio.com/Cable/index.htm"
 
   livecheck do
     url :homepage

@@ -1,11 +1,16 @@
 cask "nudge" do
-  version "1.1.2.10212021172015"
-  sha256 "c95fe9c8718cdfc08911be6b549ceef341a3800e9e09c3e6b2ec98cf1fc08ee3"
+  version "1.1.5.81289"
+  sha256 "d0bfecfb0380157f8fffee2da5a8fbf3e05905580686e2991719e70fe9eef3fe"
 
   url "https://github.com/macadmins/nudge/releases/download/v#{version}/Nudge-#{version}.pkg"
   name "Nudge"
   desc "Application for enforcing OS updates"
   homepage "https://github.com/macadmins/nudge"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   depends_on macos: ">= :big_sur"
 

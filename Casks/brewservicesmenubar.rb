@@ -1,6 +1,6 @@
 cask "brewservicesmenubar" do
-  version "4.0"
-  sha256 "79735a498e5191e513f6912718b6529c354e15886011848a56f4f2415d135169"
+  version "4.1"
+  sha256 "9736f68d97ccab2028fe1f9167fe60e229562ae10f56f5506585ce4747a3d055"
 
   url "https://github.com/andrewn/brew-services-menubar/releases/download/v#{version}/BrewServicesMenubar-v#{version}.zip"
   name "Brew Services Menubar"

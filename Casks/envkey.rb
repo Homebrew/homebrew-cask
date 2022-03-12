@@ -10,8 +10,7 @@ cask "envkey" do
 
   livecheck do
     url :url
-    strategy :git
-    regex(/^darwin-x64-prod-v(\d+(?:\.\d+)*)$/i)
+    regex(/^darwin-x64-prod[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
   app "EnvKey.app"
