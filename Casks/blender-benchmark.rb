@@ -9,11 +9,9 @@ cask "blender-benchmark" do
 
   livecheck do
     url :homepage
-    strategy :page_match do |page|
-      match = page.match(%r{.*Benchmark(\d+(?:\.\d+)+)/.*benchmark[._-]launcher[._-](\d+(?:\.\d+)+)[._-]macos\.dmg}i)
-      next if match.blank?
-
-      "#{match[2]},#{match[1]}"
+    regex(%r{["'][^"']+?Benchmark(\d+(?:\.\d+)+)/[^"']*?benchmark[._-]launcher[._-](\d+(?:\.\d+)+)[._-]macos\.dmg}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
 
