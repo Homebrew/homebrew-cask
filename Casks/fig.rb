@@ -17,7 +17,7 @@ cask "fig" do
   depends_on macos: ">= :high_sierra"
 
   app "Fig.app"
-  binary "#{appdir}/Fig.app/MacOS/fig-darwin-universal", target: "fig"
+  binary "#{appdir}/Fig.app/Contents/MacOS/fig-darwin-universal", target: "fig"
 
   uninstall script:
                        {
