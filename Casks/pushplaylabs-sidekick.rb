@@ -3,8 +3,8 @@ cask "pushplaylabs-sidekick" do
   livecheck_folder = Hardware::CPU.intel? ? "mac" : "macm1"
 
   if Hardware::CPU.intel?
-    version "96.15.1.16725,adcf8c9"
-    sha256 "b73b2e3c9ea18e48809fce791155244a114692b210e097d990bd1066ce23248c"
+    version "96.15.1.16731,d814696"
+    sha256 "04d769fd4dcaceb71b11725535cf29daee6d6aa73aeff43ffb95f65cf4db0731"
   else
     version "96.15.1.16727,60e4139"
     sha256 "21af615ef4e52e3e07f8811d2d8d5cfbc22b0ba7e377e9782f873e7d522c283e"
