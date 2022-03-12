@@ -1,8 +1,8 @@
 cask "focusatwill" do
-  version "3.1.0"
-  sha256 "86ff016571ffd43711c2eaf9f68db5eba51c5cc7b9446ab6cdebad194c02fbc7"
+  version "3.2.0"
+  sha256 "011476e399e725654d1cc6b76ac8fbb61d39f9fa5aa5fc6ac562f7f3ee73df03"
 
-  url "https://faw-desktop.s3.amazonaws.com/focusatwill-#{version}.dmg",
+  url "https://faw-desktop.s3.amazonaws.com/focusatwill-#{version}-universal.dmg",
       verified: "faw-desktop.s3.amazonaws.com/"
   name "Focus@Will"
   desc "Personalized focus music"
