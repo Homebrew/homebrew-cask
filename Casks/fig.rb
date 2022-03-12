@@ -40,11 +40,11 @@ cask "fig" do
     "~/.fig",
     "~/.fig.dotfiles.bak",
     "~/Library/Application Support/com.mschrage.fig",
+    "~/Library/Application Support/fig",
     "~/Library/Caches/com.mschrage.fig",
     "~/Library/Caches/fig",
     "~/Library/Preferences/com.mschrage.fig.*",
     "~/Library/WebKit/com.mschrage.fig",
-    "~/Library/Application Support/fig",
   ]
 
   caveats <<~EOS
