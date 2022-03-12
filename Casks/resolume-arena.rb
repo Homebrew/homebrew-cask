@@ -2,7 +2,8 @@ cask "resolume-arena" do
   version "7.10.0,12509"
   sha256 "8ecdc3378ed475246a81e4a40757796469d4001c45b814b6dbb7c6ea3e0f942a"
 
-  url "https://resolume.com/download/Resolume_Arena_#{version.major_minor_patch.dots_to_underscores}_rev_#{version.csv.second}_Installer.dmg"
+  url "https://dd5sgwxv3xok.cloudfront.net/Resolume_Arena_#{version.major_minor_patch.dots_to_underscores}_rev_#{version.csv.second}_Installer.dmg",
+      verified: "dd5sgwxv3xok.cloudfront.net/"
   name "Resolume Arena"
   desc "Video mapping software"
   homepage "https://resolume.com/"
