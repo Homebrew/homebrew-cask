@@ -21,7 +21,7 @@ cask "fig" do
 
   uninstall script:
                        {
-                         executable: "#{appdir}/Fig.app/MacOS/fig-darwin-universal",
+                         executable: "#{appdir}/Fig.app/Contents/MacOS/fig-darwin-universal",
                          args:       ["app", "uninstall"],
                        },
             launchctl:
