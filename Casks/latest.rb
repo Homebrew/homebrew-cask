@@ -1,5 +1,5 @@
 cask "latest" do
-  version "0.7.3,462"
+  version "0.8,484"
   sha256 :no_check
 
   url "https://max.codes/latest/download"
