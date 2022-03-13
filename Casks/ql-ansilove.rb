@@ -4,11 +4,14 @@ cask "ql-ansilove" do
 
   url "https://github.com/ansilove/QLAnsilove/releases/download/v#{version}/QLAnsilove-#{version}.zip"
   name "QLAnsilove"
+  desc "Quick Look plugin for text-mode art"
   homepage "https://github.com/ansilove/QLAnsilove"
 
+  # This cask uses an unstable version and this `livecheck` block is only used
+  # to prevent livecheck from skipping pre-release versions by default. This
+  # should be removed/updated if the cask is updated to a stable version.
   livecheck do
     url :url
-    strategy :git
   end
 
   qlplugin "QLAnsilove.qlgenerator"

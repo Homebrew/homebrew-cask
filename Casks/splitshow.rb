@@ -4,11 +4,14 @@ cask "splitshow" do
 
   url "https://github.com/mpflanzer/splitshow/releases/download/v#{version}/SplitShow.app.zip"
   name "SplitShow"
+  desc "Dual-head presentation of PDF slides"
   homepage "https://github.com/mpflanzer/splitshow"
 
+  # This cask uses an unstable version and this `livecheck` block is only used
+  # to prevent livecheck from skipping pre-release versions by default. This
+  # should be removed/updated if the cask is updated to a stable version.
   livecheck do
     url :url
-    strategy :git
   end
 
   app "SplitShow.app"
