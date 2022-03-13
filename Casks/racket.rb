@@ -9,7 +9,7 @@ cask "racket" do
     sha256 "b8d34491e98cea5e0562569b5b0267eab9d301d3524bdceb8dc3ec62754673ce"
   end
 
-  url "https://mirror.racket-lang.org/installers/#{version}/racket-#{version}-#{arch}-macosx-cs.dmg"
+  url "https://download.racket-lang.org/installers/#{version}/racket-#{version}-#{arch}-macosx-cs.dmg"
   name "Racket"
   desc "Modern programming language in the Lisp/Scheme family"
   homepage "https://racket-lang.org/"
