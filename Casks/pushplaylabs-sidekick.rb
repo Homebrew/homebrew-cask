@@ -6,8 +6,8 @@ cask "pushplaylabs-sidekick" do
     version "96.15.1.16731,d814696"
     sha256 "04d769fd4dcaceb71b11725535cf29daee6d6aa73aeff43ffb95f65cf4db0731"
   else
-    version "96.15.1.16727,60e4139"
-    sha256 "21af615ef4e52e3e07f8811d2d8d5cfbc22b0ba7e377e9782f873e7d522c283e"
+    version "96.15.1.16733,6b0a612"
+    sha256 "407a5adf7bfbfc7b384137007c0157239b0f1aa56d909c4d71c89f5ac8d40f71"
   end
 
   url "https://sidekick-cdn-production.meetsidekick.com/builds/sidekick-mac-release-#{arch}-#{version.csv.first}-#{version.csv.second}-df.dmg"
