@@ -16,6 +16,8 @@ cask "mdrp" do
       "#{match[1]}.#{match[2]}.#{match[3]}"
     end
   end
+  
+  depends_on macos: ">= :high_sierra"
 
   app "MDRP.app"
 
