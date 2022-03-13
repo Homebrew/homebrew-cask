@@ -31,10 +31,16 @@ cask "texpad" do
   app "Texpad.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vallettaventures.texpad.sfl2",
+    "~/Library/Application Support/CloudDocs/session/containers/iCloud.com.vallettaventures.texpadm",
+    "~/Library/Application Support/CloudDocs/session/containers/iCloud.com.vallettaventures.texpadm.plist",
     "~/Library/Application Support/Texpad",
     "~/Library/Caches/com.vallettaventures.Texpad",
     "~/Library/Cookies/com.vallettaventures.Texpad.binarycookies",
+    "~/Library/HTTPStorages/com.vallettaventures.Texpad",
+    "~/Library/HTTPStorages/com.vallettaventures.Texpad.binarycookies",
     "~/Library/Preferences/com.vallettaventures.Texpad.plist",
     "~/Library/Saved Application State/com.vallettaventures.Texpad.savedState",
+    "~/Library/WebKit/com.vallettaventures.Texpad",
   ]
 end
