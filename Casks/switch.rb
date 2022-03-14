@@ -7,9 +7,5 @@ cask "switch" do
   desc "Multiple format audio file converter"
   homepage "https://www.nch.com.au/switch/"
 
-  livecheck do
-    skip "unversioned URL"
-  end
-
   app "Switch.app"
 end
