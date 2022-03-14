@@ -1,6 +1,6 @@
 cask "prosys-opc-ua-browser" do
-  version "4.1.0,354"
-  sha256 "e289747b31d2603d579e0495cd559c60a1c558f054461bbfb8fa3aa373a0261a"
+  version "4.1.2,364"
+  sha256 "47f7d6b07f822ac2735c8f04e90716e13ad641b7ba2cebe7f04d36dd2c119161"
 
   url "https://www.prosysopc.com/opcua/apps/UaBrowser/dist/#{version.csv.first}-#{version.csv.second}/prosys-opc-ua-browser-macos-#{version.csv.first}-#{version.csv.second}.dmg"
   name "Prosys OPC UA Browser"
