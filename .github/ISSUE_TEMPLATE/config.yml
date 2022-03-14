@@ -6,7 +6,10 @@ contact_links:
     about: Have a question? Not sure if your issue affects everyone reproducibly? The quickest way to get help is on Homebrew's GitHub Discussions!
   - name: New issue on Homebrew/brew
     url: https://github.com/Homebrew/brew/issues/new/choose
-    about: Having a `brew` problem that's not from a `brew install` or `brew upgrade` of a single cask? Report it to Homebrew/brew (the Homebrew package manager).
+    about: Having a `brew` problem that's not from a `brew install` or `brew upgrade` of a single cask? Report it to Homebrew/brew (the Homebrew package manager)
   - name: New issue on Homebrew/homebrew-core
     url: https://github.com/Homebrew/homebrew-core/issues/new/choose
     about: Having a Homebrew formula problem? Report it to Homebrew/homebrew-core (the formula tap/repository)
+  - name: Ideas for a new feature
+    url: https://docs.brew.sh/How-To-Open-a-Homebrew-Pull-Request
+    about: If you have an idea for a new feature here's how to add it to Brew
