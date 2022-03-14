@@ -24,9 +24,5 @@ cask "radarr" do
 
   app "Radarr.app"
 
-  preflight do
-    set_permissions "#{staged_path}/Radarr.app", "0755"
-  end
-
   # No zap stanza required
 end
