@@ -1,6 +1,6 @@
 cask "dendroscope" do
-  version "3.8.1"
-  sha256 "bc88ae1a4b3e9f448d64a112597cbfdad678f11c7c70085cc870e3b6e71b62cd"
+  version "3.8.2"
+  sha256 "d7acc94ad8dfd4c98b697c7679e660991005ac6e2dbddb70983ef81383787328"
 
   url "https://software-ab.informatik.uni-tuebingen.de/download/dendroscope/Dendroscope_macos_#{version.dots_to_underscores}.dmg"
   name "Dendroscope"
