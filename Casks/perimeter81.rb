@@ -8,10 +8,6 @@ cask "perimeter81" do
   desc "Zero trust network as a service client"
   homepage "https://perimeter81.com/"
 
-  livecheck do
-    skip "unversioned URL"
-  end
-
   pkg "Perimeter81.pkg"
 
   uninstall pkgutil:   "com.safervpn.osx.smb",
