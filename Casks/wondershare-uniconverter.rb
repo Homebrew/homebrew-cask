@@ -7,10 +7,6 @@ cask "wondershare-uniconverter" do
   desc "Video editing software"
   homepage "https://videoconverter.wondershare.com/"
 
-  livecheck do
-    skip "unversioned URL"
-  end
-
   app "Wondershare UniConverter.app"
 
   zap trash: [

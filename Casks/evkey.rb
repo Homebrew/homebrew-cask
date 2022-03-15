@@ -8,10 +8,6 @@ cask "evkey" do
   desc "Vietnamese keyboard"
   homepage "https://evkeyvn.com/"
 
-  livecheck do
-    skip "unversioned URL"
-  end
-
   app "EVKey.app"
 
   zap trash: [
