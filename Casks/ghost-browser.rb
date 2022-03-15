@@ -1,12 +1,12 @@
 cask "ghost-browser" do
   arch = Hardware::CPU.intel? ? "" : "_arm64"
 
-  version "2.1.4.1"
+  version "2.1.4.2"
 
   if Hardware::CPU.intel?
-    sha256 "312170ef3d048e46d8f58fedf9ab85bd82372b6319690c8c3afb48af79b63533"
+    sha256 "bee4370106ddf93e3408835b4d2a1ac956d00776388a36ddcb13ef9642d5dbe0"
   else
-    sha256 "16fbf1770fa65f4df73cc677e46894a5e392478e722a915bc3d7a64b9a1fe820"
+    sha256 "c8cf9bf5c878c7de6210cb3703fcf4035753b2d99d0f42c2b9d335ac9e5e62e3"
   end
 
   url "https://downloads.ghostbrowser.com/GhostBrowser-#{version}#{arch}.dmg"
