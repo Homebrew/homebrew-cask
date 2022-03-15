@@ -8,10 +8,6 @@ cask "league-of-legends" do
   desc "Multiplayer online battle arena game"
   homepage "https://na.leagueoflegends.com/en-us/"
 
-  livecheck do
-    skip "unversioned URL"
-  end
-
   installer manual: "Install League of Legends na.app"
 
   uninstall delete: "/Applications/League of Legends.app"

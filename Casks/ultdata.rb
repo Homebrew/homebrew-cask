@@ -7,10 +7,6 @@ cask "ultdata" do
   desc "iPhone data recovery software"
   homepage "https://www.tenorshare.com/products/iphone-data-recovery.html"
 
-  livecheck do
-    skip "unversioned URL"
-  end
-
   auto_updates true
   depends_on macos: ">= :yosemite"
 

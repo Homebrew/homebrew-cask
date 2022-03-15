@@ -7,10 +7,6 @@ cask "timemachineeditor" do
   desc "Utility to change the default backup interval of Time Machine"
   homepage "https://tclementdev.com/timemachineeditor/"
 
-  livecheck do
-    skip "unversioned URL"
-  end
-
   pkg "TimeMachineEditor.pkg"
 
   uninstall launchctl: "com.tclementdev.timemachineeditor.scheduler",

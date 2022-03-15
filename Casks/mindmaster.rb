@@ -4,11 +4,8 @@ cask "mindmaster" do
 
   url "https://download.edrawsoft.com/mindmaster_full5378.dmg"
   name "MindMaster"
+  desc "Mind mapping software"
   homepage "https://www.edrawsoft.com/mindmaster/"
-
-  livecheck do
-    skip "unversioned URL"
-  end
 
   app "MindMaster.app"
 end
