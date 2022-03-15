@@ -1,12 +1,12 @@
 cask "voov-meeting" do
-  version "3.3.0.520,1410000198"
+  version "3.3.2.510,1410000198"
   sha256 :no_check
 
   if Hardware::CPU.intel?
-    url "https://updatecdn.meeting.qq.com/e3a8df8a8f31495d20d4dea1ad978336/VooVMeeting_#{version.csv.second}_#{version.csv.first}.publish.x86_64.dmg",
+    url "https://updatecdn.meeting.qq.com/255661c36b01c1f58129754358b192ac/VooVMeeting_#{version.csv.second}_#{version.csv.first}.publish.x86_64.dmg",
         verified: "updatecdn.meeting.qq.com"
   else
-    url "https://updatecdn.meeting.qq.com/e187c2b2db4619068591b905c134362d/VooVMeeting_#{version.csv.second}_#{version.csv.first}.publish.arm64.dmg",
+    url "https://updatecdn.meeting.qq.com/4c95e5f9ac1a586edab01d761aa8e0be/VooVMeeting_#{version.csv.second}_#{version.csv.first}.publish.arm64.dmg",
         verified: "updatecdn.meeting.qq.com"
   end
 
