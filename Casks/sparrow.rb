@@ -1,6 +1,6 @@
 cask "sparrow" do
-  version "1.6.0"
-  sha256 "a89789a50a24c62b6e00e28c4fe5d4684a29f981c379288cb7fdfeba87adf8dd"
+  version "1.6.1"
+  sha256 "ac754bba9d0e977cd9bc52e3420585def34ac26dd3cb56b1601dfd297dc3d7a8"
 
   url "https://github.com/sparrowwallet/sparrow/releases/download/#{version}/Sparrow-#{version}.dmg",
       verified: "github.com/sparrowwallet/sparrow/"
