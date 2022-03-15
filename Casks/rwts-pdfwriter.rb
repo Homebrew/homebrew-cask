@@ -7,10 +7,6 @@ cask "rwts-pdfwriter" do
   desc "Print driver for printing documents directly to a pdf file"
   homepage "https://github.com/rodyager/RWTS-PDFwriter"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 
   pkg "RWTS-PDFwriter.pkg"
 
