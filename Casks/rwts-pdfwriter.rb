@@ -9,5 +9,9 @@ cask "rwts-pdfwriter" do
 
   pkg "RWTS-PDFwriter.pkg"
 
-  uninstall script: "/Library/Printers/RWTS/PDFwriter/uninstall.sh"
+  uninstall script: "/Library/Printers/RWTS/PDFwriter/uninstall.sh",
+            rmdir:  [
+              "/Users/Shared/PDFwriter",
+              "/var/spool/pdfwriter",
+            ]
 end
