@@ -9,8 +9,7 @@ cask "mediahuman-audio-converter" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(/"softwareVersion">(\d+(?:\.\d+)*)/i)
+    regex(/"softwareVersion">\s*(\d+(?:\.\d+)+)[\s<]/i)
   end
 
   app "MediaHuman Audio Converter.app"
