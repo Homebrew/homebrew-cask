@@ -1,5 +1,4 @@
 cask "balenaetcher" do
-  arch = Hardware::CPU.intel? ? "" : "arm64/"
   
   version "1.7.7"
   
