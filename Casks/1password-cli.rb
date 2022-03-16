@@ -3,13 +3,13 @@ cask "1password-cli" do
   sha256 "0c2f6177346343d88d8db7ba3df469317cc37889eae2b61201ada70c740c4d1a"
 
   if version[0] == 1
-      url "https://cache.agilebits.com/dist/1P/op/pkg/v#{version}/op_apple_universal_v#{version}.pkg",
-          verified: "cache.agilebits.com/dist/1P/op/pkg/"
-      homepage "https://support.1password.com/command-line/"
+    url "https://cache.agilebits.com/dist/1P/op/pkg/v#{version}/op_apple_universal_v#{version}.pkg",
+        verified: "cache.agilebits.com/dist/1P/op/pkg/"
+    homepage "https://support.1password.com/command-line/"
   else
-      url "https://cache.agilebits.com/dist/1P/op#{version[0]}/pkg/v#{version}/op_apple_universal_v#{version}.pkg",
-          verified: "cache.agilebits.com/dist/1P/op#{version[0]}/pkg/"
-      homepage "https://developer.1password.com/docs/cli"
+    url "https://cache.agilebits.com/dist/1P/op#{version[0]}/pkg/v#{version}/op_apple_universal_v#{version}.pkg",
+        verified: "cache.agilebits.com/dist/1P/op#{version[0]}/pkg/"
+    homepage "https://developer.1password.com/docs/cli"
   end
 
   name "1Password CLI"
