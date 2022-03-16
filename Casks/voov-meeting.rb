@@ -10,7 +10,6 @@ cask "voov-meeting" do
   end
   url "https://updatecdn.meeting.qq.com/#{version.csv.third}/VooVMeeting_#{version.csv.second}_#{version.csv.first}.publish.#{arch}.dmg",
       verified: "updatecdn.meeting.qq.com"
-
   name "VooV Meeting"
   name "Tencent Meeting International Version"
   desc "Cross-border video conferencing software"
