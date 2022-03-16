@@ -18,7 +18,7 @@ cask "voov-meeting" do
 
   # See https://github.com/Homebrew/homebrew-cask/pull/120458#issuecomment-1068393782
   livecheck do
-    skip "only works with POST request"
+    skip "Only works with POST request"
   end
 
   app "VooV Meeting.app"
