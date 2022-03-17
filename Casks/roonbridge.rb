@@ -13,6 +13,6 @@ cask "roonbridge" do
   end
 
   app "RoonBridge.app"
-  
-  zap trash: '~/Library/RoonBridge'
+
+  zap trash: "~/Library/RoonBridge"
 end
