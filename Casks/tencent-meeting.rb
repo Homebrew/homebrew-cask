@@ -6,7 +6,7 @@ cask "tencent-meeting" do
     sha256 "ad7b17e29a97229c6f891fe791fa397034ac5b04ec6035763456a490c89ff0b1"
   else
     version "3.5.4.418,d17ed88d5be8f4f7be0722bb5c31fa36"
-    sha256 "4d653fb7012866b3100460b7cb36915ca9fbceff149d7f52eb65e4b17be1408f"
+    sha256 "e7929e0c637e3077992610b0b0d3ab62d369e1ddbff322e9de0e0d72975aac4b"
   end
 
   url "https://updatecdn.meeting.qq.com/cos/#{version.csv.second}/TencentMeeting_0300000000_#{version.csv.first}.publish.#{arch}.dmg",
