@@ -3,8 +3,7 @@ cask "sourcetree" do
     version "2.7.6a"
     sha256 "d60614e9ab603e0ed158b6473c36e7944b2908d9943e332c505eba03dc1d829e"
 
-    url "https://downloads.atlassian.com/software/sourcetree/Sourcetree_#{version}.zip",
-        verified: "atlassian.com/software/sourcetree/"
+    url "https://product-downloads.atlassian.com/software/sourcetree/ga/Sourcetree_4.1.6_242.zip"
   elsif MacOS.version <= :high_sierra
     version "3.2.1,225"
     sha256 "4bd82affa3402814c3d07ff613fbc8f45da8b0cda294d498ffbb0667bf729c9f"
