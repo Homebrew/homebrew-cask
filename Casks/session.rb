@@ -1,6 +1,6 @@
 cask "session" do
-  version "1.7.6"
-  sha256 "7056ed33a377737cd68ae9d229c0aa1f1e449ce5fcf77395d8eae323f85be478"
+  version "1.7.8"
+  sha256 "0af61bf44271e8dec9d9d45ca9407177d95a6d0008835576559fecc9becb5f46"
 
   url "https://github.com/oxen-io/session-desktop/releases/download/v#{version}/session-desktop-mac-#{version}.dmg",
       verified: "github.com/oxen-io/session-desktop/"
