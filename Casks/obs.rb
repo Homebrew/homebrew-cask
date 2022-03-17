@@ -13,6 +13,7 @@ cask "obs" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "OBS.app"
 
@@ -20,6 +21,7 @@ cask "obs" do
 
   zap trash: [
     "~/Library/Application Support/obs-studio",
+    "~/Library/HTTPStorages/com.obsproject.obs-studio",
     "~/Library/Preferences/com.obsproject.obs-studio.plist",
     "~/Library/Saved Application State/com.obsproject.obs-studio.savedState",
   ]
