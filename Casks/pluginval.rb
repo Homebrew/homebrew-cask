@@ -9,6 +9,7 @@ cask "pluginval" do
   homepage "https://www.tracktion.com/develop/pluginval"
 
   livecheck do
+    url :url
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
