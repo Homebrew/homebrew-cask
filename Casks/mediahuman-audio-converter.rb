@@ -13,4 +13,10 @@ cask "mediahuman-audio-converter" do
   end
 
   app "MediaHuman Audio Converter.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.mediahuman.Audio Converter.plist",
+    "~/Library/Preferences/com.mediahuman.plist",
+    "~/Library/Saved Application State/com.mediahuman.Audio Converter.savedState",
+  ]
 end
