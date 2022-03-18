@@ -8,6 +8,7 @@ cask "tev" do
   homepage "https://github.com/Tom94/tev"
 
   livecheck do
+    url :url
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 

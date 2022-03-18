@@ -9,7 +9,8 @@ cask "xemu" do
   homepage "https://xemu.app/"
 
   livecheck do
-    regex(%r{gh-release/(.*)}i)
+    url :url
+    regex(%r{^gh-release/(.*)$}i)
   end
 
   app "Xemu.app"
