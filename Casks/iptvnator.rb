@@ -8,6 +8,7 @@ cask "iptvnator" do
   homepage "https://github.com/4gray/iptvnator"
 
   livecheck do
+    url :url
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
