@@ -1,6 +1,6 @@
 cask "soulver" do
-  version "3.5.5,270"
-  sha256 "cd05c5326407aff43d67e694ac7fa00f0c80a275d8a1c02103bad6aff72e1f3e"
+  version "3.5.6,272"
+  sha256 "2d5ae9f6e0333e43ea44c93cf6e31ce725258b1a60ddb0c0a803572ac255f62f"
 
   url "https://soulver.app/mac/sparkle/soulver-#{version.csv.first}-#{version.csv.second}.zip"
   name "Soulver"
