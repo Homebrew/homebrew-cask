@@ -10,7 +10,7 @@ cask "android-ndk" do
 
   livecheck do
     url "https://developer.android.com/ndk/downloads"
-    regex(/Latest\s+LTS\s+Version\s+\(r(\d+[a-z]?)\)/i)
+    regex(/Latest\s+r(\d+[a-z]?)/i)
   end
 
   conflicts_with cask: "crystax-ndk"
