@@ -1,22 +1,28 @@
 cask "eclipse-php" do
-  version "4.18.0,2020-12:R"
-  sha256 "3f38772a0022bf9309e06ab4b9f950dc9cc62bbeda7917674ff72da490245ef4"
+  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
-  url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.after_comma.before_colon}/#{version.after_colon}/eclipse-php-#{version.after_comma.before_colon}-#{version.after_colon}-macosx-cocoa-x86_64.dmg&r=1"
+  version "4.22.0,2021-12"
+
+  if Hardware::CPU.intel?
+    sha256 "9a6fb55f6bbc51401324241cf5598d228de4b417c12eadaa40ec85fba41164e0"
+  else
+    sha256 "63224429da78386946381c6cec4808d07b5485f9878246dccd9713a331012b6c"
+  end
+
+  url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-php-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&r=1"
   name "Eclipse IDE for PHP Developers"
+  desc "Eclipse IDE for PHP developers"
   homepage "https://eclipse.org/"
 
   livecheck do
-    url "https://projects.eclipse.org/releases/"
-    strategy :page_match do |page|
-      page.scan(%r{href=.*projects.eclipse.org/releases/(\d+-\d+)}i).map do |release|
-        version_page = Net::HTTP.get(URI.parse("https://projects.eclipse.org/releases/#{release[0]}"))
-        version = version_page.scan(%r{href="/projects/eclipse/releases/(\d+(?:\.\d+)*)"}i)
-        "#{version[0][0]},#{release[0]}:R"
-      end
-    end
+    cask "eclipse-ide"
   end
 
   # Renamed to avoid conflict with other Eclipse.
   app "Eclipse.app", target: "Eclipse PHP.app"
+
+  zap trash: [
+    "~/Library/Preferences/org.eclipse.platform.ide.plist",
+    "~/Library/Saved Application State/org.eclipse.platform.ide.savedState",
+  ]
 end

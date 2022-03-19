@@ -1,29 +1,50 @@
 cask "sage" do
-  if MacOS.version <= :mojave
-    version "9.1,10.11.6"
-    sha256 "23c13690b8a72deca1628dd0e66a0f7b83557f98c13c3db1dc7eb15d80cf3a8d"
+  arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
+
+  version "9.5,1.3"
+
+  if Hardware::CPU.intel?
+    sha256 "035a882ec96f190e4ec6929913bdd8880035494f9ffe27e109c828eefb35945b"
   else
-    version "9.2,10.15.7"
-    sha256 "fa6eb93368d4f7c220cbdd7a1483c1ef9d9b718b0f179c17c2acf14fb74f10c1"
+    sha256 "a134fe93a5fa61de58bf6d512f9867663b565bb2b72eea5c77b8cf8a0fc8cb81"
   end
 
-  url "https://mirrors.mit.edu/sage/osx/intel/sage-#{version.before_comma}-OSX_#{version.after_comma}-x86_64.app.dmg",
-      verified: "mirrors.mit.edu/sage/osx/intel/"
-  appcast "https://mirrors.mit.edu/sage/osx/intel/index.html"
+  url "https://github.com/3-manifolds/Sage_macOS/releases/download/v#{version.csv.second}/SageMath-#{version.csv.first}_#{arch}.dmg",
+      verified: "github.com/3-manifolds/Sage_macOS/"
   name "Sage"
+  desc "Mathematics software system"
   homepage "https://www.sagemath.org/"
 
-  depends_on macos: ">= :el_capitan"
+  livecheck do
+    url "https://github.com/3-manifolds/Sage_macOS/releases"
+    strategy :page_match do |page|
+      match = page.match(%r{href=.*?/v?(\d+(?:\.\d+)+)/SageMath[._-]v?(\d+(?:\.\d+)+)\+?[._-]#{arch}\.dmg}i)
+      next if match.blank?
 
-  app "SageMath-#{version.before_comma}.app"
-  binary "#{appdir}/SageMath-#{version.before_comma}.app/Contents/Resources/sage/sage"
+      "#{match[2]},#{match[1]}"
+    end
+  end
 
-  uninstall quit: "org.sagemath.Sage"
+  depends_on macos: ">= :high_sierra"
+
+  app "SageMath-#{version.csv.first.dots_to_hyphens}.app"
+  pkg "Recommended_#{version.csv.first.dots_to_underscores}.pkg"
+
+  uninstall quit:    [
+    "org.computop.sage",
+    "org.computop.SageMath",
+    "com.tcltk.tcllibrary",
+    "com.tcltk.tklibrary",
+  ],
+            pkgutil: [
+              "org.computop.SageMath.#{version.csv.first.dots_to_underscores}.bin",
+              "org.computop.SageMath.#{version.csv.first.dots_to_underscores}.share",
+              "org.computop.SageMath.#{version.csv.first.dots_to_underscores}.texlive",
+            ]
 
   zap trash: [
     "~/.sage",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.sagemath.sage.sfl*",
-    "~/Library/Logs/sage.log",
-    "~/Library/Preferences/org.sagemath.Sage.plist",
+    "~/Library/Application Support/SageMath",
+    "~/Library/Preferences/SageMath.plist",
   ]
 end

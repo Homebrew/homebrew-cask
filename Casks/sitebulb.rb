@@ -1,6 +1,6 @@
 cask "sitebulb" do
-  version "4.7.1"
-  sha256 "92aeedf50e9393ee741cd3f4e11782c7a0824b374be645b7853f91f98b2def93"
+  version "5.5"
+  sha256 "e154a2300ac406b8fd611e8a4e1b22634a01f3be1a0e8c2ad46c7ccc49d022fb"
 
   url "https://downloads.sitebulb.com/#{version}/macOS/Sitebulb.dmg"
   name "Sitebulb"
@@ -9,8 +9,7 @@ cask "sitebulb" do
 
   livecheck do
     url "https://sitebulb.com/download/"
-    strategy :page_match
-    regex(%r{href=.*?/(\d+(?:\.\d+)*)/macOS/Sitebulb\.dmg}i)
+    regex(%r{href=.*?/(\d+(?:\.\d+)+)/macOS/Sitebulb\.dmg}i)
   end
 
   app "Sitebulb.app"

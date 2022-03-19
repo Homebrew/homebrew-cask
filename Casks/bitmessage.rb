@@ -4,8 +4,8 @@ cask "bitmessage" do
 
   url "https://github.com/Bitmessage/PyBitmessage/releases/download/#{version}/bitmessage-v#{version}.dmg",
       verified: "github.com/Bitmessage/PyBitmessage/"
-  appcast "https://github.com/Bitmessage/PyBitmessage/releases.atom"
   name "Bitmessage"
+  desc "P2P communications protocol"
   homepage "https://bitmessage.org/"
 
   app "Bitmessage.app"

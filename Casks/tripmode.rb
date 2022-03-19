@@ -2,22 +2,31 @@ cask "tripmode" do
   if MacOS.version <= :catalina
     version "2.3.0,818"
     sha256 "db409c94cbe8f03749e38a9e4acf58efbf7363fb2ca3aff7a316574d9f2b2737"
-    url "https://tripmode-updates.ch/app/TripMode-#{version.before_comma}-#{version.after_comma}-app.dmg",
+
+    url "https://tripmode-updates.ch/app/TripMode-#{version.csv.first}-#{version.csv.second}-app.dmg",
         verified: "tripmode-updates.ch/"
+
+    livecheck do
+      skip
+    end
   else
-    version "3.0.0,1023"
-    sha256 "8c684785c7e91847cc998355203712c515b2ce4629d68fd5e559a5587c4a60a9"
-    url "https://tripmode-updates.ch/app/TripMode-#{version.before_comma}-#{version.after_comma}.zip",
+    version "3.1.2,1267"
+    sha256 "41db7886236a3c8b7bf5c364ef4e8b15f72e0946440bb90bb40daf009cfc31f8"
+
+    url "https://tripmode-updates.ch/app/TripMode-#{version.csv.first}-#{version.csv.second}.zip",
         verified: "tripmode-updates.ch/"
+
+    livecheck do
+      url "https://tripmode-updates.ch/app/appcast-v#{version.major}.xml"
+      strategy :sparkle
+    end
   end
+
   name "TripMode"
+  desc "Control your data usage on slow or expensive networks"
   homepage "https://www.tripmode.ch/"
 
-  livecheck do
-    url "https://tripmode-updates.ch/app/appcast-v#{version.major}.xml"
-    strategy :sparkle
-  end
-
+  auto_updates true
   depends_on macos: ">= :yosemite"
 
   app "TripMode.app"

@@ -1,12 +1,27 @@
 cask "edfbrowser" do
-  version "1.77,d46af4a00350581592aff8e210fe8295"
-  sha256 "d51f87e1d08fac2f6144219833a60e9fa59deab4d7bc0b260c29d57169784fe5"
+  version "1.84,81b147ef06488445bd7ef8fe4b036648"
+  sha256 "27217b7cc2f770921e51c31f16c2958ab5de8d61b762d889692df83bd3f61ccc"
 
-  url "https://gitlab.com/whitone/EDFbrowser/uploads/#{version.after_comma}/EDFbrowser-#{version.before_comma}.dmg",
+  url "https://gitlab.com/whitone/EDFbrowser/uploads/#{version.csv.second}/EDFbrowser-#{version.csv.first}.dmg",
       verified: "gitlab.com/whitone/EDFbrowser/"
-  appcast "https://gitlab.com/whitone/EDFbrowser/-/tags?format=atom"
   name "EDFbrowser"
+  desc "EDF+ and BDF+ viewer and toolbox"
   homepage "https://www.teuniz.net/edfbrowser"
 
+  livecheck do
+    url "https://gitlab.com/whitone/EDFbrowser/-/releases.json"
+    strategy :page_match do |page|
+      page.scan(%r{/uploads/(\h+)/EDFbrowser[._-]v?(\d+(?:\.\d+)+)\.dmg}i).map do |match|
+        "#{match[1]},#{match[0]}"
+      end
+    end
+  end
+
   app "EDFbrowser.app"
+
+  zap trash: [
+    "~/Library/Preferences/net.teuniz.EDFbrowser.plist",
+    "~/Library/Saved Application State/net.teuniz.EDFbrowser.savedState",
+    "~/.EDFbrowser",
+  ]
 end

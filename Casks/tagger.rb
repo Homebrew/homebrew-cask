@@ -8,12 +8,6 @@ cask "tagger" do
   desc "Music metadata editor supporting batch edits and importing VGMdb data"
   homepage "https://bilalh.github.io/projects/tagger/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-    regex(%r{/Tagger_(\d+(?:\.\d+)*)\.zip}i)
-  end
-
   app "Tagger.app"
 
   caveats do

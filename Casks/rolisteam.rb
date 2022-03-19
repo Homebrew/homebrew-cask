@@ -4,8 +4,8 @@ cask "rolisteam" do
 
   url "https://downloads.sourceforge.net/rolisteam/rolisteam_v#{version}_MacOs.dmg",
       verified: "downloads.sourceforge.net/rolisteam/"
-  appcast "https://sourceforge.net/projects/rolisteam/rss"
   name "Rolisteam"
+  desc "Virtual tabletop software"
   homepage "https://rolisteam.org/"
 
   app "rolisteam.app"

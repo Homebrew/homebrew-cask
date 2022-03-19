@@ -1,13 +1,18 @@
 cask "cheatsheet" do
-  version "1.6"
-  sha256 "64986f698f44d6644378c771379ed14eea6f4be00e7e4e75152f9d779f2190f4"
+  version "1.6.3"
+  sha256 "1bfd6b85e8180d33bc6ba19620b5c6f083536d749bbd84c66d0a47f93459ee17"
 
-  url "https://mediaatelier.com/CheatSheet/CheatSheet_#{version}.zip",
-      verified: "mediaatelier.com/CheatSheet/"
-  appcast "https://mediaatelier.com/CheatSheet/feed.php"
+  url "https://mediaatelier.com/CheatSheet/CheatSheet_#{version}.zip"
   name "CheatSheet"
   desc "Tool to list all active shortcuts of the current application"
-  homepage "https://www.cheatsheetapp.com/CheatSheet/"
+  homepage "https://www.mediaatelier.com/CheatSheet/"
+
+  livecheck do
+    url "https://mediaatelier.com/CheatSheet/feed.php"
+    strategy :sparkle
+  end
+
+  auto_updates true
 
   app "CheatSheet.app"
 

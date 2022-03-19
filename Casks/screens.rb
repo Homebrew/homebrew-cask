@@ -1,8 +1,8 @@
 cask "screens" do
-  version "4.8.5,1614695241"
-  sha256 "fedfe8ff7469ea4e8ac087f3a08400c93f5e8f415cdd8173ab1bba1b848f3d5b"
+  version "4.9.3,1643990258"
+  sha256 "4889a5fd04d5c8514a9bc6324638d01ee91c978db63d81aaeb271942c3774dde"
 
-  url "https://updates.edovia.com/com.edovia.screens#{version.major}.mac/Screens_#{version.before_comma}b#{version.after_comma}.zip"
+  url "https://updates.edovia.com/com.edovia.screens#{version.major}.mac/Screens_#{version.csv.first}b#{version.csv.second}.zip"
   name "Screens"
   desc "Remote access software focusing on usability"
   homepage "https://edovia.com/screens-mac/"
@@ -25,6 +25,7 @@ cask "screens" do
     "~/Library/Application Scripts/com.edovia.screens.launcher",
     "~/Library/Containers/com.edovia.screens#{version.major}.mac",
     "~/Library/Containers/com.edovia.screens.launcher",
+    "~/Library/Preferences/com.edovia.screens#{version.major}.mac.plist",
     "~/Library/Logs/Screens",
   ]
 end

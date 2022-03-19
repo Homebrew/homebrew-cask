@@ -1,8 +1,8 @@
 cask "lyricsx" do
-  version "1.6.0,2334"
-  sha256 "2af8492bb1da0916151caa649fdfcf71091de950d1418f5b0e91dd8382b6f2f8"
+  version "1.6.1,2341"
+  sha256 "b9a4555f9cb070800eba87ae88df65140d72246f18d9f31517a85276d14308f6"
 
-  url "https://github.com/ddddxxx/LyricsX/releases/download/v#{version.before_comma}/LyricsX_#{version.before_comma}+#{version.after_comma}.zip"
+  url "https://github.com/ddddxxx/LyricsX/releases/download/v#{version.csv.first}/LyricsX_#{version.csv.first}+#{version.csv.second}.zip"
   name "LyricsX"
   desc "Lyrics for iTunes, Spotify, Vox and Audirvana Plus"
   homepage "https://github.com/ddddxxx/LyricsX"
@@ -11,6 +11,8 @@ cask "lyricsx" do
     url "https://github.com/ddddxxx/LyricsX/releases/latest"
     strategy :page_match do |page|
       match = page.match(%r{href=.*?/LyricsX_(\d+(?:\.\d+)*)\+(\d+)\.zip}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

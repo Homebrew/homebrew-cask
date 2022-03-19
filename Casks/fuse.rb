@@ -4,7 +4,6 @@ cask "fuse" do
 
   url "https://github.com/fuse-open/fuse-studio/releases/download/#{version}/fuse_osx_#{version.dots_to_underscores}.pkg",
       verified: "github.com/fuse-open/fuse-studio/"
-  appcast "https://github.com/fuse-open/fuse-studio/releases.atom"
   name "Fuse Studio"
   name "Fuse Open"
   name "Fuse Fusetools"
@@ -14,4 +13,10 @@ cask "fuse" do
   pkg "fuse_osx_#{version.dots_to_underscores}.pkg"
 
   uninstall pkgutil: "com.fusetools.fuse"
+
+  zap trash: [
+    "~/Library/Preferences/com.fusetools.Fuse.Tray.plist",
+    "~/Library/Preferences/com.fusetools.FuseStudio.plist",
+    "~/Library/Saved Application State/com.fusetools.FuseStudio.savedState",
+  ]
 end

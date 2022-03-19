@@ -1,18 +1,24 @@
 cask "microsoft-office" do
-  version "16.46.21021202"
-  sha256 "587a3b13b587e25befbb4fb762e9f203e50ea1c621016e2552455bf0b3796673"
+  version "16.59.22031300"
+  sha256 "ecd3c09bad64e08c3db1af54793aa0ceea8b3e27ef7aad077354d17a58da3580"
 
-  url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Office_#{version}_Installer.pkg",
-      verified: "officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/"
+  url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Office_#{version}_Installer.pkg",
+      verified: "officecdnmac.microsoft.com/"
   name "Microsoft Office"
+  desc "Office suite"
   homepage "https://products.office.com/mac/microsoft-office-for-mac/"
+
+  livecheck do
+    url "https://go.microsoft.com/fwlink/p/?linkid=525133"
+    strategy :header_match
+  end
 
   auto_updates true
   conflicts_with cask: %w[
-    microsoft-word
     microsoft-excel
-    microsoft-powerpoint
     microsoft-outlook
+    microsoft-powerpoint
+    microsoft-word
     onedrive
   ]
   depends_on cask: "microsoft-auto-update"
@@ -28,6 +34,7 @@ cask "microsoft-office" do
       ]
 
   uninstall pkgutil:   [
+    "com.microsoft.OneDrive",
     "com.microsoft.package.DFonts",
     "com.microsoft.package.Frameworks",
     "com.microsoft.package.Microsoft_AutoUpdate.app",
@@ -38,9 +45,8 @@ cask "microsoft-office" do
     "com.microsoft.package.Microsoft_Word.app",
     "com.microsoft.package.Proofing_Tools",
     "com.microsoft.pkg.licensing",
-    "com.microsoft.OneDrive",
   ],
-            # Frameworks, DFonts and ProofingTools remain in each applicaiton after pkg uninstall, delete them
+            # Frameworks, DFonts and ProofingTools remain in each application after pkg uninstall, delete them
             delete:    [
               "/Applications/Microsoft Excel.app",
               "/Applications/Microsoft OneNote.app",
@@ -58,13 +64,19 @@ cask "microsoft-office" do
             ]
 
   zap trash: [
+    "~/Library/Application Scripts/com.microsoft.errorreporting",
     "~/Library/Application Scripts/com.microsoft.Excel",
+    "~/Library/Application Scripts/com.microsoft.OneDrive.FileProvider",
+    "~/Library/Application Scripts/com.microsoft.OneDrive.FinderSync",
+    "~/Library/Application Scripts/com.microsoft.OneDriveLauncher",
     "~/Library/Application Scripts/com.microsoft.Office365ServiceV2",
+    "~/Library/Application Scripts/com.microsoft.onenote.mac",
+    "~/Library/Application Scripts/com.microsoft.onenote.mac.shareextension",
+    "~/Library/Application Scripts/com.microsoft.openxml.excel.app",
     "~/Library/Application Scripts/com.microsoft.Outlook",
+    "~/Library/Application Scripts/com.microsoft.outlook.profilemanager",
     "~/Library/Application Scripts/com.microsoft.Powerpoint",
     "~/Library/Application Scripts/com.microsoft.Word",
-    "~/Library/Application Scripts/com.microsoft.errorreporting",
-    "~/Library/Application Scripts/com.microsoft.onenote.mac",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.excel.sfl*",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.powerpoint.sfl*",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.word.sfl*",
@@ -72,23 +84,29 @@ cask "microsoft-office" do
     "~/Library/Application Support/Microsoft Update Assistant",
     "~/Library/Caches/com.microsoft.OneDriveStandaloneUpdater",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDriveStandaloneUpdater",
-    "~/Library/Containers/com.microsoft.Excel",
-    "~/Library/Containers/com.microsoft.Office365ServiceV2",
-    "~/Library/Containers/com.microsoft.Outlook",
-    "~/Library/Containers/com.microsoft.Powerpoint",
     "~/Library/Containers/com.microsoft.com.microsoft.RMS-XPCService",
-    "~/Library/Containers/com.microsoft.Word",
     "~/Library/Containers/com.microsoft.errorreporting",
+    "~/Library/Containers/com.microsoft.Excel",
     "~/Library/Containers/com.microsoft.netlib.shipassertprocess",
+    "~/Library/Containers/com.microsoft.Office365ServiceV2",
     "~/Library/Containers/com.microsoft.onenote.mac",
+    "~/Library/Containers/com.microsoft.onenote.mac.shareextension",
+    "~/Library/Containers/com.microsoft.openxml.excel.app",
+    "~/Library/Containers/com.microsoft.Outlook",
+    "~/Library/Containers/com.microsoft.outlook.profilemanager",
+    "~/Library/Containers/com.microsoft.Powerpoint",
+    "~/Library/Containers/com.microsoft.Word",
+    "~/Library/Group Containers/UBF8T346G9.ms",
     "~/Library/Group Containers/UBF8T346G9.Office",
     "~/Library/Group Containers/UBF8T346G9.OfficeOneDriveSyncIntegration",
     "~/Library/Group Containers/UBF8T346G9.OfficeOsfWebHost",
-    "~/Library/Group Containers/UBF8T346G9.ms",
+    "~/Library/HTTPStorages/com.microsoft.OneDriveStandaloneUpdater",
+    "~/Library/HTTPStorages/com.microsoft.OneDriveStandaloneUpdater.binarycookies",
     "~/Library/Preferences/com.microsoft.Excel.plist",
     "~/Library/Preferences/com.microsoft.Outlook.plist",
     "~/Library/Preferences/com.microsoft.Powerpoint.plist",
     "~/Library/Preferences/com.microsoft.Word.plist",
     "~/Library/Saved Application State/com.microsoft.office.setupassistant.savedState",
+    "~/Library/Saved Application State/com.microsoft.Word.savedState",
   ]
 end

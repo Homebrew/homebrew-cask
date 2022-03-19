@@ -22,9 +22,19 @@ cask "musescore" do
   binary shimscript, target: "mscore"
 
   preflight do
-    IO.write shimscript, <<~EOS
+    File.write shimscript, <<~EOS
       #!/bin/sh
       exec '#{appdir}/MuseScore #{version.major}.app/Contents/MacOS/mscore' "$@"
     EOS
   end
+
+  zap trash: [
+    "~/Documents/MuseScore3",
+    "~/Library/Application Support/MuseScore",
+    "~/Library/Caches/MuseScore",
+    "~/Library/Caches/org.musescore.MuseScore",
+    "~/Library/Preferences/org.musescore.MuseScore.plist",
+    "~/Library/Preferences/org.musescore.MuseScore3.plist",
+    "~/Library/Saved Application State/org.musescore.MuseScore.savedState",
+  ]
 end

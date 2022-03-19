@@ -1,10 +1,16 @@
 cask "onlyoffice" do
-  version "6.1.0"
-  sha256 "cb70d3eb81c3a93ef130243b3ccaf065c37cd024583453debdb32ec862fb4070"
+  arch = Hardware::CPU.intel? ? "x86_64" : "arm"
 
-  url "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v#{version}/ONLYOFFICE.dmg",
+  version "7.0.1"
+
+  if Hardware::CPU.intel?
+    sha256 "84dd81ba9ee6ee54409133f7014240c0c23f7c2dfe5f1f8b334e5e52cf93e161"
+  else
+    sha256 "e33c84ec414ec918208d1168d7dc25190faf7ab2d7d114e535b7f9a111d00360"
+  end
+
+  url "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v#{version}/ONLYOFFICE-#{arch}.dmg",
       verified: "github.com/ONLYOFFICE/DesktopEditors/"
-  appcast "https://github.com/ONLYOFFICE/DesktopEditors/releases.atom"
   name "ONLYOFFICE"
   desc "Document editor"
   homepage "https://www.onlyoffice.com/"

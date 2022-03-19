@@ -1,13 +1,12 @@
 cask "poi" do
-  version "10.6.0"
-  sha256 "dcca7d7b47ebab2fb7a702aba33b07901f203f0f6efd2f846b0dfc0df076cfad"
+  version "10.8.0"
+  sha256 "050f317e303b1955ad977fa7e50bd77ca43f82e3658aa7e4d963bc41d57a77c1"
 
   url "https://github.com/poooi/poi/releases/download/v#{version}/poi-#{version}.dmg",
       verified: "github.com/poooi/poi/"
-  appcast "https://github.com/poooi/poi/releases.atom"
   name "poi"
   desc "Scalable KanColle browser and tool"
-  homepage "https://poi.io/"
+  homepage "https://poi.moe/"
 
   app "poi.app"
 

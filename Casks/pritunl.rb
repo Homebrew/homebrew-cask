@@ -1,31 +1,21 @@
 cask "pritunl" do
+  arch = Hardware::CPU.intel? ? "" : ".arm64"
+
+  version "1.2.3019.52"
+
   if Hardware::CPU.intel?
-    if MacOS.version <= :catalina
-      version "1.2.2615.73"
-      sha256 "275f8498fb736a0a1ddebcbfcb6f03e82b8eb4fedf9b7eb61b0e306cb6de4a71"
-    else
-      version "1.2.2709.72"
-      sha256 "014acca51584f24c74f581e7e44acd2f3f34cdeb0388e39f1f30097301a0ac78"
-    end
-
-    url "https://github.com/pritunl/pritunl-client-electron/releases/download/#{version}/Pritunl.pkg.zip",
-        verified: "github.com/pritunl/pritunl-client-electron/"
-
-    pkg "Pritunl.pkg"
+    sha256 "94bc6e293f31f293f0d19be631eec9bf7908aa0f953ea0a3a0f23b409e711b9d"
   else
-    version "1.2.2709.72"
-    sha256 "2ca2f3b31d78177a591c9166990017521ac3f283b032933c1983ffdbde21475b"
-
-    url "https://github.com/pritunl/pritunl-client-electron/releases/download/#{version}/Pritunl.arm64.pkg.zip",
-        verified: "github.com/pritunl/pritunl-client-electron/"
-
-    pkg "Pritunl.arm64.pkg"
+    sha256 "06d0ca35297b52ead7a9f111bc76ee99eb109612110eae75a71b1fd87721bee4"
   end
 
-  appcast "https://github.com/pritunl/pritunl-client-electron/releases.atom"
+  url "https://github.com/pritunl/pritunl-client-electron/releases/download/#{version}/Pritunl#{arch}.pkg.zip",
+      verified: "github.com/pritunl/pritunl-client-electron/"
   name "Pritunl"
   desc "OpenVPN client"
   homepage "https://client.pritunl.com/"
+
+  pkg "Pritunl#{arch}.pkg"
 
   uninstall pkgutil:   "com.pritunl.pkg.Pritunl",
             launchctl: [

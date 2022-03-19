@@ -1,10 +1,16 @@
 cask "ppduck" do
-  version "3.9.1"
-  sha256 "27a1493d8e6f9c6e8d843249bab6bca6f016e14afa428628cc65ac89e5ee2ba9"
+  version "3.10.13"
+  sha256 "0332e5e628907a041202588ed56551246c08042b91a66dd4d6e6fafd55384640"
 
-  url "http://download.ppduck.com/PPDuck#{version.major}_#{version}.dmg"
+  url "https://download.ppduck.com/PPDuck#{version.major}_#{version}.dmg"
   name "PPDuck"
-  homepage "https://www.ppduck.com/"
+  desc "Integrates several image compression algorithms"
+  homepage "https://ppduck.com/"
+
+  livecheck do
+    url :homepage
+    regex(/PPDuck.[._-]?(\d+(?:\.\d+)*)\.dmg/i)
+  end
 
   app "PPDuck#{version.major}.app"
 end

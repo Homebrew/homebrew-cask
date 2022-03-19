@@ -1,12 +1,19 @@
 cask "openinterminal-lite" do
-  version "1.2.2"
-  sha256 "d36b2359eba2806b458aa130e5dd56bcccf48e396e5e3dc4211fbde6c820f973"
+  version "1.2.4"
+  sha256 "816d2e3a97e9fc1613fdde75c13eaa171944dd9328fb3dd645abc68b6ec7df6f"
 
   url "https://github.com/Ji4n1ng/OpenInTerminal/releases/download/v#{version}/OpenInTerminal-Lite.app.zip"
-  appcast "https://github.com/Ji4n1ng/OpenInTerminal/releases.atom"
   name "OpenInTerminal-Lite"
   desc "Finder Toolbar app to open the current directory in Terminal"
   homepage "https://github.com/Ji4n1ng/OpenInTerminal"
 
+  livecheck do
+    url "https://github.com/Ji4n1ng/OpenInTerminal/releases"
+    strategy :page_match
+    regex(%r{v?(\d+(?:\.\d+)+)/OpenInTerminal[._-]Lite\.app\.zip}i)
+  end
+
   app "OpenInTerminal-Lite.app"
+
+  zap trash: "~/Library/Preferences/wang.jianing.app.OpenInTerminal-Lite.plist"
 end

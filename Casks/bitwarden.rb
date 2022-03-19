@@ -1,8 +1,8 @@
 cask "bitwarden" do
-  version "1.25.0"
-  sha256 "ae5a1d122a84e7c373cf6773968f485d316a568ca74f765f46d04a4f598a24da"
+  version "1.32.0"
+  sha256 "c758f1145f91fd8dcac1dab19458100fc238711d704de1426a366b482368a678"
 
-  url "https://github.com/bitwarden/desktop/releases/download/v#{version}/Bitwarden-#{version}-mac.zip",
+  url "https://github.com/bitwarden/desktop/releases/download/v#{version}/Bitwarden-#{version}-universal-mac.zip",
       verified: "github.com/bitwarden/desktop/"
   name "Bitwarden"
   desc "Desktop password and login vault"
@@ -23,13 +23,13 @@ cask "bitwarden" do
   ]
 
   zap trash: [
-    "~/Library/Logs/Bitwarden",
     "~/Library/Application Support/Bitwarden",
     "~/Library/Caches/com.bitwarden.desktop",
     "~/Library/Caches/com.bitwarden.desktop.ShipIt",
+    "~/Library/Logs/Bitwarden",
     "~/Library/Preferences/ByHost/com.bitwarden.desktop.ShipIt.*.plist",
-    "~/Library/Preferences/com.bitwarden.desktop.plist",
     "~/Library/Preferences/com.bitwarden.desktop.helper.plist",
+    "~/Library/Preferences/com.bitwarden.desktop.plist",
     "~/Library/Saved Application State/com.bitwarden.desktop.savedState",
   ]
 end

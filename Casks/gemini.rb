@@ -1,8 +1,8 @@
 cask "gemini" do
-  version "2.8.6,376:1614607724"
-  sha256 "46075fc573c75fbaa9ec110faed9cd6e276794a044d1aca4db0487073665931d"
+  version "2.9.4,391,1645434880"
+  sha256 "de959eea69b5b3d7c05d4ab935f7ba155fa5c9ad18325570095ae6bc1f6c41ed"
 
-  url "https://dl.devmate.com/com.macpaw.site.Gemini#{version.major}/#{version.after_comma.before_colon}/#{version.after_colon}/Gemini#{version.major}-#{version.after_comma.before_colon}.zip",
+  url "https://dl.devmate.com/com.macpaw.site.Gemini#{version.major}/#{version.csv.second}/#{version.csv.third}/Gemini#{version.major}-#{version.csv.second}.zip",
       verified: "dl.devmate.com/com.macpaw.site.Gemini"
   name "Gemini"
   desc "Disk space cleaner that finds and deletes duplicated and similar files"
@@ -11,7 +11,7 @@ cask "gemini" do
   livecheck do
     url "https://updates.devmate.com/com.macpaw.site.Gemini#{version.major}.xml"
     strategy :sparkle do |item|
-      "#{item.short_version},#{item.version}:#{item.url[%r{/(\d+)/Gemini.*?\.zip}i, 1]}"
+      "#{item.short_version},#{item.version},#{item.url[%r{/(\d+)/Gemini.*?\.zip}i, 1]}"
     end
   end
 

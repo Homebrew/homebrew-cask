@@ -1,20 +1,23 @@
 cask "xmind-zen" do
-  version "10.3.1-202101070049"
-  sha256 "44147f844524fd1dd9fcbfda322cd7877325c1a791aac491e583ce6d9e62f330"
+  version "11.1.2,202111071943"
+  sha256 "923ca09d1b81435088680179c50f73bb27342b2a5e97e16d0daaa0433aea5de3"
 
-  url "https://www.xmind.net/xmind/downloads/XMind-2020-for-macOS-#{version}.dmg"
-  name "Xmind 2020"
+  url "https://dl3.xmind.net/XMind-for-macOS-#{version.csv.first}-#{version.csv.second}.dmg"
+  name "XMind"
   desc "Mindmap and brainstorming app"
-  homepage "https://www.xmind.net/xmind2020/"
+  homepage "https://www.xmind.net/desktop/"
 
   livecheck do
     url "https://www.xmind.net/zen/download/mac/"
-    strategy :header_match
-    regex(/macOS-(\d+(?:\.\d+)*-\d+(?:\.\d+)*).dmg$/)
+    regex(/[._-]v?(\d+(?:\.\d+)+)[._-](\d+)\.dmg/i)
+    strategy :header_match do |headers, regex|
+      headers["location"].match(regex)&.then { |match| "#{match[1]},#{match[2]}" }
+    end
   end
 
   auto_updates true
   conflicts_with cask: "xmind"
+  depends_on macos: ">= :el_capitan"
 
   app "XMind.app"
 

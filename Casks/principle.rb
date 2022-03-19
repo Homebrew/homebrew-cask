@@ -1,9 +1,10 @@
 cask "principle" do
-  version "5.14,5026"
-  sha256 "7772a9dbaa6312211d897b222160e9c7aa3eed81ef10af47c268cf7fa3bee288"
+  version "6.15,6017"
+  sha256 "457891dd5ad80b6af7acc0d675895351687298411fe4ca6d340584fdbfcff2f4"
 
-  url "https://principleformac.com/download/Principle_#{version.before_comma.dots_to_underscores}.zip"
+  url "https://principleformac.com/download/Principle_#{version.csv.first.dots_to_underscores}.zip"
   name "Principle"
+  desc "Design animated and interactive user interfaces"
   homepage "https://principleformac.com/"
 
   livecheck do

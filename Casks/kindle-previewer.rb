@@ -1,14 +1,27 @@
 cask "kindle-previewer" do
-  version "3.49"
+  version "3.61.0"
   sha256 :no_check
 
-  url "https://kindlepreviewer3.s3.amazonaws.com/KindlePreviewerInstaller.pkg",
-      verified: "kindlepreviewer3.s3.amazonaws.com/"
+  url "https://d2bzeorukaqrvt.cloudfront.net/KindlePreviewerInstaller.pkg",
+      verified: "d2bzeorukaqrvt.cloudfront.net/"
   name "Kindle Previewer"
-  homepage "https://www.amazon.com/gp/feature.html?ie=UTF8&docId=1003018611"
+  desc "Preview and audit Kindle eBooks"
+  homepage "https://www.amazon.com/Kindle-Previewer/b?ie=UTF8&node=21381691011"
+
+  livecheck do
+    url :homepage
+    regex(/Kindle\s*Previewer\s*(\d+(?:\.\d+)+)/i)
+  end
+
+  auto_updates true
 
   pkg "KindlePreviewerInstaller.pkg"
 
   uninstall launchctl: "com.amazon.KindlePreviewerUpdater",
             pkgutil:   "Amazon.Kindle.Previewer.pkg"
+
+  zap trash: [
+    "/Library/LaunchDaemons/com.amazon.KindlePreviewerUpdater.plist",
+    "~/.kindle",
+  ]
 end

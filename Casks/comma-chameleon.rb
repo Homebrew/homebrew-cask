@@ -4,7 +4,6 @@ cask "comma-chameleon" do
 
   url "https://github.com/theodi/comma-chameleon/releases/download/#{version}/Comma.Chameleon-darwin-x64.zip",
       verified: "github.com/theodi/comma-chameleon/"
-  appcast "https://github.com/theodi/comma-chameleon/releases.atom"
   name "Comma Chameleon"
   homepage "https://comma-chameleon.io/"
 

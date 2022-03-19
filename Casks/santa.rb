@@ -1,19 +1,23 @@
 cask "santa" do
-  version "2021.2"
-  sha256 "bbd4bb501660ca85ad9fd268e36ab5e266a27cbd1e2f133bb2ef2d748705bd00"
+  version "2022.2"
+  sha256 "433d700a9435a37e588ffe7c15e3aae8cbcd4fa3d201f0e63a774ab6add38a0c"
 
   url "https://github.com/google/santa/releases/download/#{version}/santa-#{version}.dmg"
-  appcast "https://github.com/google/santa/releases.atom"
   name "Santa"
+  desc "Binary authorization system"
   homepage "https://github.com/google/santa"
 
   pkg "santa-#{version}.pkg"
 
-  uninstall delete:    "/usr/local/bin/santactl",
+  uninstall delete:    [
+    "/Applications/Santa.app",
+    "/usr/local/bin/santactl",
+  ],
             kext:      "com.google.santa-driver",
             launchctl: [
               "com.google.santa",
               "com.google.santa.bundleservice",
+              "com.google.santa.metricservice",
               "com.google.santad",
             ],
             pkgutil:   "com.google.santa"

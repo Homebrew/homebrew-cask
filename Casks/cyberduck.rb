@@ -1,8 +1,8 @@
 cask "cyberduck" do
-  version "7.8.2,34203"
-  sha256 "abe182b5b79eb19b879486b1e28fa804b9b20dc917f2a5fc36facaebc13a2c53"
+  version "8.2.3,36880"
+  sha256 "edac85691a21fee1c1d10fc72dfc7ca91230273bc31a37d0a7b8b1e8afa30d80"
 
-  url "https://update.cyberduck.io/Cyberduck-#{version.before_comma}.#{version.after_comma}.zip"
+  url "https://update.cyberduck.io/Cyberduck-#{version.csv.first}.#{version.csv.second}.zip"
   name "Cyberduck"
   desc "Server and cloud storage browser"
   homepage "https://cyberduck.io/"

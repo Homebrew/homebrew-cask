@@ -4,10 +4,15 @@ cask "playback" do
 
   url "https://github.com/mafintosh/playback/releases/download/v#{version}/Playback.app.zip",
       verified: "github.com/mafintosh/playback/"
-  appcast "https://github.com/mafintosh/playback/releases.atom"
   name "Playback"
   desc "Video player"
   homepage "https://mafintosh.github.io/playback/"
 
   app "Playback.app"
+
+  zap trash: [
+    "~/Library/Application Support/playback",
+    "~/Library/Caches/playback",
+    "~/Library/Preferences/com.electron.playback.plist",
+  ]
 end

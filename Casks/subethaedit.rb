@@ -1,8 +1,8 @@
 cask "subethaedit" do
-  version "5.2,9748"
-  sha256 "7e3cb09ee77b6a9aa15bd2a73aed08c081819605fabcb03e230eb02b847c5825"
+  version "5.2.4,9813"
+  sha256 "11f9cce3e33988a912f9c1df085ebd0d58b65fc856dc7806041b70bcd30c5043"
 
-  url "https://subethaedit.net/Releases/SubEthaEdit-#{version.before_comma}.zip"
+  url "https://subethaedit.net/Releases/SubEthaEdit-#{version.csv.first}.zip"
   name "SubEthaEdit"
   desc "Plain text and source editor"
   homepage "https://subethaedit.net/"
@@ -16,4 +16,9 @@ cask "subethaedit" do
   depends_on macos: ">= :high_sierra"
 
   app "SubEthaEdit.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/de.codingmonkeys.SubEthaEdit.MacFULL",
+    "~/Library/Containers/de.codingmonkeys.SubEthaEdit.MacFULL",
+  ]
 end

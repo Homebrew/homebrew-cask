@@ -1,6 +1,6 @@
 cask "espresso" do
-  version "5.6.1"
-  sha256 "f9f044493de83b0d4aebe3ecc9f3b28322563434fbb474739417540728c09bca"
+  version "5.8"
+  sha256 "f502323db472164d98c098ad300ad47d35d350fcbcaed7e4d3342722642cef04"
 
   url "https://downloads.kangacode.com/Espresso/Espresso_#{version}.zip",
       verified: "downloads.kangacode.com/"
@@ -10,11 +10,17 @@ cask "espresso" do
 
   livecheck do
     url "https://espressoapp.com/updates/"
-    strategy :page_match
-    regex(/data-title="(\d+(?:\.\d+)*)"/i)
+    regex(/data-title="(\d+(?:\.\d+)+)"/i)
   end
 
   depends_on macos: ">= :high_sierra"
 
   app "Espresso.app"
+
+  zap trash: [
+    "~/Library/Application Support/Espresso",
+    "~/Library/Caches/com.kanagacode.espresso",
+    "~/Library/Preferences/com.kanagacode.espresso.plist",
+    "~/Library/WebKit/com.kanagacode.espresso",
+  ]
 end

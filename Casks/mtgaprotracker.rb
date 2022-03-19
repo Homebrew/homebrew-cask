@@ -1,13 +1,20 @@
 cask "mtgaprotracker" do
-  version "2.1.16"
-  sha256 "bbf0772321dd50af103fd7734ed3a5d88a044c97478e4e4288e3f696c9ff2253"
+  version "2.1.35"
+  sha256 "f71552a5e97755adf705758c11147ab15b5adb145707daa5ca689da937e3ec40"
 
   url "https://github.com/Razviar/mtgap/releases/download/v#{version}/mtgaprotracker.dmg",
       verified: "github.com/Razviar/mtgap/"
-  appcast "https://github.com/Razviar/mtgap/releases.atom"
   name "MTGA Pro Tracker"
   desc "Advanced Magic: The Gathering Arena tracking tool"
   homepage "https://mtgarena.pro/mtga-pro-tracker/"
 
   app "mtgaprotracker.app"
+
+  zap trash: [
+    "~/Library/Application Support/mtgaprotracker",
+    "~/Library/Caches/com.mtgarenapro.mtgaprotracker",
+    "~/Library/Caches/com.mtgarenapro.mtgaprotracker.ShipIt",
+    "~/Library/Logs/MTGAproTracker",
+    "~/Library/Preferences/com.mtgarenapro.mtgaprotracker.plist",
+  ]
 end

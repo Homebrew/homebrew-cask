@@ -1,13 +1,21 @@
 cask "feem" do
-  version "4.3.0"
-  sha256 "8243609c6cce4e5d004c51ca868ac7f7d78fe1110590e11dc97588a5ab732462"
+  version "4.4.2"
+  sha256 "5d5b36a31ad6f656cc36e5c014c1b93d3387d0a1c0313fd7db9d242b47203302"
 
-  url "https://f000.backblazeb2.com/file/feemdownloads/Feem_For_MacOSX_Installer_v#{version}.pkg",
+  url "https://f000.backblazeb2.com/file/feemdownloads/Feem_Mac_#{version}_beta_Installer.pkg",
       verified: "f000.backblazeb2.com/file/feemdownloads/"
   name "Feem"
+  desc "Local file transfer"
   homepage "https://feem.io/"
 
-  pkg "Feem_For_MacOSX_Installer_v#{version}.pkg"
+  livecheck do
+    url "https://feem.link/feem-for-mac"
+    strategy :header_match
+    regex(/Feem[._-]Mac[._-]v?(\d+(?:\.\d+)+).*?\.pkg/i)
+  end
 
-  uninstall pkgutil: "com.feeperfect.airsend.mac"
+  pkg "Feem_Mac_#{version}_beta_Installer.pkg"
+
+  uninstall quit:    "com.feeperfect.airsend.mac",
+            pkgutil: "com.feeperfect.airsend.mac"
 end

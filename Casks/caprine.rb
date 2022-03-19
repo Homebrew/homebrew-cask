@@ -1,9 +1,8 @@
 cask "caprine" do
-  version "2.52.1"
-  sha256 "78f7af18ea92ca17f985a4c0c00b950376c5b398b6421cd8ed9180b89e1f1546"
+  version "2.55.2"
+  sha256 "76effd375045ab5b3bb293e21038036e38dc9e4034c7513184012942f98edda0"
 
   url "https://github.com/sindresorhus/caprine/releases/download/v#{version}/Caprine-#{version}.dmg"
-  appcast "https://github.com/sindresorhus/caprine/releases.atom"
   name "Caprine"
   desc "Elegant Facebook Messenger desktop app"
   homepage "https://github.com/sindresorhus/caprine"
@@ -14,9 +13,9 @@ cask "caprine" do
 
   zap trash: [
     "~/Library/Application Support/Caprine",
-    "~/Library/Logs/Caprine",
     "~/Library/Caches/com.sindresorhus.caprine",
     "~/Library/Caches/com.sindresorhus.caprine.ShipIt",
+    "~/Library/Logs/Caprine",
     "~/Library/Preferences/com.sindresorhus.caprine.helper.plist",
     "~/Library/Preferences/com.sindresorhus.caprine.plist",
     "~/Library/Saved Application State/com.sindresorhus.caprine.savedState",

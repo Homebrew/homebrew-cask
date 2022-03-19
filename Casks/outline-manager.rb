@@ -1,6 +1,6 @@
 cask "outline-manager" do
-  version "1.6.1"
-  sha256 "329db2c8c64c5b8700f0ade335d69c68020dd5ab0ff788a68c90771b1dc6905a"
+  version "1.9.0"
+  sha256 "8a1e97f1fcebacd4cbaae8a9278aa652a13f6f4d43546709e74e0df96b3ae149"
 
   url "https://github.com/Jigsaw-Code/outline-server/releases/download/v#{version}/Outline-Manager.dmg",
       verified: "github.com/Jigsaw-Code/outline-server/"
@@ -9,9 +9,8 @@ cask "outline-manager" do
   homepage "https://www.getoutline.org/"
 
   livecheck do
-    url "https://github.com/Jigsaw-Code/outline-releases/raw/master/manager/latest-mac.yml"
-    strategy :page_match
-    regex(/version: (\d+(?:\.\d+)*)/i)
+    url "https://raw.githubusercontent.com/Jigsaw-Code/outline-releases/master/manager/latest-mac.yml"
+    strategy :electron_builder
   end
 
   app "Outline Manager.app"

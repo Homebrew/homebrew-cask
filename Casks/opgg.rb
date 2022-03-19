@@ -1,6 +1,6 @@
 cask "opgg" do
-  version "0.1.56"
-  sha256 "66443deabfa15a783c95cf16887d0f5ac18f6389914c9cdbed2a5a01b9b7f26c"
+  version "1.0.15"
+  sha256 "54960c6afde5163e1a1187e4ec18512d99e9ff04d3c3d3c909f5a2de8999d5f8"
 
   url "https://opgg-desktop-patch.akamaized.net/OP.GG-#{version}.dmg",
       verified: "opgg-desktop-patch.akamaized.net/"
@@ -10,8 +10,7 @@ cask "opgg" do
 
   livecheck do
     url "https://desktop-app-update.s3.amazonaws.com/latest-mac.yml"
-    strategy :page_match
-    regex(/OP\.GG-(\d+(?:\.\d+)*)\.dmg/i)
+    strategy :electron_builder
   end
 
   app "OP.GG.app"

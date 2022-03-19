@@ -1,6 +1,6 @@
 cask "makemkv" do
-  version "1.16.1"
-  sha256 "6220fad431e8c7101c324308a32d66219296d976228d349dccea321440e446e1"
+  version "1.16.7"
+  sha256 "57083112fdbbe3b5ad4017133754907ca23bc6f794dd2d8a2e85171d09ae21fe"
 
   url "https://www.makemkv.com/download/makemkv_v#{version}_osx.dmg"
   name "MakeMKV"
@@ -9,8 +9,7 @@ cask "makemkv" do
 
   livecheck do
     url "https://www.makemkv.com/download/"
-    strategy :page_match
-    regex(%r{href=.*?/makemkv_v?(\d+(?:\.\d+)*)_osx\.dmg}i)
+    regex(%r{href=.*?/makemkv[._-]v?(\d+(?:\.\d+)+)[._-]osx\.dmg}i)
   end
 
   app "MakeMKV.app"

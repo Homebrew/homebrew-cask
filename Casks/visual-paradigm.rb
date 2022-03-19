@@ -1,8 +1,8 @@
 cask "visual-paradigm" do
-  version "16.2,20210301"
-  sha256 "886d66ed2541fff5896c542fcc7277649a8c01b6c25eb8a6391e5def956e8dd2"
+  version "16.3,20220215"
+  sha256 "1c6cb9a5970d11ea03ee7eabeeaccb862e570300607d00995d5fab8cff0152ab"
 
-  url "https://www.visual-paradigm.com/downloads/vp#{version.before_comma}/#{version.after_comma}/Visual_Paradigm_#{version.before_comma.dots_to_underscores}_#{version.after_comma}_OSX_WithJRE.dmg"
+  url "https://www.visual-paradigm.com/downloads/vp#{version.csv.first}/#{version.csv.second}/Visual_Paradigm_#{version.csv.first.dots_to_underscores}_#{version.csv.second}_OSX_WithJRE.dmg"
   name "Visual Paradigm"
   desc "UML CASE Tool supporting UML 2, SysML and Business Process Modeling Notation"
   homepage "https://www.visual-paradigm.com/"
@@ -10,7 +10,9 @@ cask "visual-paradigm" do
   livecheck do
     url "https://www.visual-paradigm.com/downloads/vp/checksum.html"
     strategy :header_match do |headers|
-      match = headers["location"].match(%r{/vp(\d+(?:\.\d+)*)/(\d+)/checksum\.html}i)
+      match = headers["location"].match(%r{/vp(\d+(?:\.\d+)+)/(\d+)/checksum\.html}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

@@ -1,12 +1,16 @@
 cask "mycloud" do
-  version :latest
+  version "21.26.6"
   sha256 :no_check
 
-  url "https://desktop-client-installer-server-mac.prod.mdl.swisscom.ch/myCloud%20Desktop%20installer.pkg",
-      verified: "desktop-client-installer-server-mac.prod.mdl.swisscom.ch/"
+  url "https://filehostdesktopmac.mycloud.ch/myCloudDesktop.dmg"
   name "Swisscom myCloud Desktop"
   desc "Swiss cloud storage desktop app"
   homepage "https://desktop.mycloud.ch/"
+
+  livecheck do
+    url "https://help.mycloud.ch/hc/en-us/articles/115001202054-What-are-the-release-notes-for-myCloud-Desktop-"
+    regex(/<strong>myCloud Desktop Version (\d+(?:\.\d+)+)</i)
+  end
 
   # pkg cannot be installed automatically
   installer manual: "myCloud Desktop installer.pkg"

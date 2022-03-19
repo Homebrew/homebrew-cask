@@ -1,6 +1,6 @@
 cask "dingtalk" do
-  version "6.0.3.6"
-  sha256 "dbb1dfed651f0384e1a4fddf6ec4a9da6d92a719f60945647fd78b903e18d3ce"
+  version "6.3.35.7"
+  sha256 "5b7f9113f918963717bcbcd73f5f058230e11bd92b5dc10ec396c1e401d000df"
 
   url "https://dtapp-pub.dingtalk.com/dingtalk-desktop/mac_dmg/Release/DingTalk_v#{version}.dmg"
   name "DingTalk"
@@ -11,7 +11,6 @@ cask "dingtalk" do
   livecheck do
     url "https://www.dingtalk.com/mac/d/"
     strategy :header_match
-    regex(/DingTalk_v(\d+(?:\.\d+)*)\.dmg/i)
   end
 
   auto_updates true
@@ -22,13 +21,13 @@ cask "dingtalk" do
 
   zap trash: [
     "~/Library/Application Support/DingTalkMac",
-    "~/Library/Caches/DingTalk",
     "~/Library/Caches/com.alibaba.DingTalkInstaller",
     "~/Library/Caches/com.alibaba.DingTalkMac",
-    "~/Library/Preferences/com.dingtalk.mac.plist",
-    "~/Library/Preferences/com.alibaba.DingTalkMac.plist",
-    "~/Library/Preferences/com.alibaba.DingTalkInstaller.plist",
+    "~/Library/Caches/DingTalk",
     "~/Library/Preferences/com.alibaba.DingTalk-Helper.plist",
+    "~/Library/Preferences/com.alibaba.DingTalkInstaller.plist",
+    "~/Library/Preferences/com.alibaba.DingTalkMac.plist",
+    "~/Library/Preferences/com.dingtalk.mac.plist",
     "~/Library/Saved Application State/com.alibaba.DingTalkMac.savedState",
     "~/Library/WebKit/com.alibaba.DingTalkMac",
   ]

@@ -1,15 +1,18 @@
 cask "lyn" do
-  version "2.0.6"
-  sha256 "e6785fffd2342152805389a041b11838bae212be9de29d7ab6353a5fe2bba1db"
+  version "2.1.1"
+  sha256 "62f70642e55e6c1ee7ea68c89fbe71114331861bdecfca2a5c95d30342886153"
 
   url "https://www.lynapp.com/downloads/Lyn-#{version}.dmg"
   name "Lyn"
+  desc "Media browser and viewer"
   homepage "https://www.lynapp.com/"
 
   livecheck do
     url "https://www.lynapp.com/lyn/update#{version.major}x.xml"
     strategy :sparkle
   end
+
+  depends_on macos: ">= :sierra"
 
   app "Lyn.app"
 

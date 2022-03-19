@@ -1,6 +1,6 @@
 cask "transnomino" do
-  version "5.3.2"
-  sha256 "9e88fb2dda099bb368ddf403b3a8a286230e0d790caa829cc6242e281f9fdb32"
+  version "6.1"
+  sha256 "cd52b4636cf2913e08315098c9cb2cec514423a1a08f3cb110c43f72b5b8a130"
 
   url "https://transnomino.bastiaanverreijt.com/download/Transnomino-#{version}.dmg"
   name "Transnomino"
@@ -9,11 +9,17 @@ cask "transnomino" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/Transnomino-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/Transnomino[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Transnomino.app"
+
+  zap trash: [
+    "~/Library/Caches/com.apple.helpd/Generated/com.bastiaanverreijt.Transnomino.help*",
+    "~/Library/HTTPStorages/com.bastiaanverreijt.Transnomino",
+    "~/Library/Preferences/com.bastiaanverreijt.Transnomino.plist",
+  ]
 end

@@ -1,8 +1,15 @@
 cask "stoplight-studio" do
-  version "2.3.0,5490.git-9070dc9"
-  sha256 "0a0e02e4dae9bff9f039dd6600af6d97cb3e6633f8f40d5effcee15d1ec32496"
+  arch = Hardware::CPU.intel? ? "mac" : "mac-arm64"
 
-  url "https://github.com/stoplightio/studio/releases/download/v#{version.before_comma}-stable.#{version.after_comma}/stoplight-studio-mac.dmg",
+  version "2.8.0,7260.git-04f3365"
+
+  if Hardware::CPU.intel?
+    sha256 "9b08e460d6c3f587f8050d1bbf43905a2cdea8977d27761ae6b38df01445eb72"
+  else
+    sha256 "61304c1757c4414b7af304607aab42b205e1b690faeba99745a7955f4cc86be9"
+  end
+
+  url "https://github.com/stoplightio/studio/releases/download/v#{version.csv.first}-stable.#{version.csv.second}/stoplight-studio-#{arch}.dmg",
       verified: "github.com/stoplightio/studio/"
   name "Stoplight Studio"
   desc "Editor for designing and documenting APIs"
@@ -11,7 +18,9 @@ cask "stoplight-studio" do
   livecheck do
     url "https://github.com/stoplightio/studio/releases/latest"
     strategy :page_match do |page|
-      match = page.match(%r{href=.*?/v?(\d+(?:\.\d+)*)-stable\.([^/]+)/stoplight-studio-mac\.dmg}i)
+      match = page.match(%r{href=.*?/v?(\d+(?:\.\d+)+)[._-]stable[._-]([^/]+)/stoplight[._-]studio[._-]#{arch}\.dmg}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

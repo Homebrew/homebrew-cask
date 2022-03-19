@@ -1,9 +1,11 @@
 cask "microsoft-teams" do
-  version "1.4.00.4971"
-  sha256 "607f2a237ec39e8e84270edc1e7f3fe6221a57813c9b6346095cd5fe887e8119"
+  version "1.5.00.6181"
+  sha256 "2afc0528dc06f0fbec4be5fc321e180b679e3721d42fd05f8d60276cb9777d2a"
 
-  url "https://statics.teams.microsoft.com/production-osx/#{version}/Teams_osx.pkg"
+  url "https://statics.teams.cdn.office.net/production-osx/#{version}/Teams_osx.pkg",
+      verified: "statics.teams.cdn.office.net/production-osx/"
   name "Microsoft Teams"
+  desc "Meet, chat, call, and collaborate in just one place"
   homepage "https://teams.microsoft.com/downloads"
 
   livecheck do
@@ -16,17 +18,22 @@ cask "microsoft-teams" do
   pkg "Teams_osx.pkg"
 
   uninstall pkgutil:   "com.microsoft.teams",
-            launchctl: "com.microsoft.teams.TeamsUpdaterDaemon"
+            launchctl: "com.microsoft.teams.TeamsUpdaterDaemon",
+            delete:    [
+              "/Library/Logs/Microsoft/Teams",
+              "/Library/Preferences/com.microsoft.teams.plist",
+            ]
 
   zap trash: [
-    "/Library/Logs/Microsoft/Teams",
-    "/Library/Preferences/com.microsoft.teams.plist",
-    "~/Library/Application Support/Microsoft/Teams",
     "~/Library/Application Support/com.microsoft.teams",
+    "~/Library/Application Support/Microsoft/Teams",
+    "~/Library/Application Support/Teams",
     "~/Library/Caches/com.microsoft.teams",
     "~/Library/Cookies/com.microsoft.teams.binarycookies",
     "~/Library/Logs/Microsoft Teams",
     "~/Library/Preferences/com.microsoft.teams.plist",
     "~/Library/Saved Application State/com.microsoft.teams.savedState",
-  ]
+    "~/Library/WebKit/com.microsoft.teams",
+  ],
+      rmdir: "~/Library/Application Support/Microsoft"
 end

@@ -1,6 +1,6 @@
 cask "adobe-acrobat-reader" do
-  version "21.001.20145"
-  sha256 "c103f106a22027d7e1bfcb39a8bebce014ddd779818991f471ebece246ebd39f"
+  version "22.001.20085"
+  sha256 "c13aca26047e182afcb66a7b386c704ab2724f81c77298cd2c05838781935cb4"
 
   url "https://ardownload2.adobe.com/pub/adobe/reader/mac/AcrobatDC/#{version.no_dots}/AcroRdrDC_#{version.no_dots}_MUI.dmg"
   name "Adobe Acrobat Reader DC"
@@ -8,8 +8,8 @@ cask "adobe-acrobat-reader" do
   homepage "https://acrobat.adobe.com/us/en/acrobat/pdf-reader.html"
 
   livecheck do
-    url "https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotesDC/index.html"
-    regex(/<em>(\d+(?:\.\d+)*) /i)
+    url "https://armmf.adobe.com/arm-manifests/mac/AcrobatDC/reader/current_version.txt"
+    regex(/(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
@@ -18,14 +18,14 @@ cask "adobe-acrobat-reader" do
 
   uninstall pkgutil:   [
     "com.adobe.acrobat.DC.reader.*",
-    "com.adobe.RdrServicesUpdater",
     "com.adobe.armdc.app.pkg",
+    "com.adobe.RdrServicesUpdater",
   ],
             delete:    "/Applications/Adobe Acrobat Reader DC.app",
             quit:      [
-              "com.adobe.Reader",
-              "com.adobe.AdobeRdrCEFHelper",
               "com.adobe.AdobeRdrCEF",
+              "com.adobe.AdobeRdrCEFHelper",
+              "com.adobe.Reader",
             ],
             launchctl: [
               "com.adobe.ARMDC.Communicator",
@@ -34,11 +34,11 @@ cask "adobe-acrobat-reader" do
             ]
 
   zap trash: [
-    "~/Library/Preferences/com.adobe.Reader.plist",
-    "~/Library/Preferences/com.adobe.AdobeRdrCEFHelper.plist",
-    "~/Library/Preferences/com.adobe.crashreporter.plist",
     "~/Library/Caches/com.adobe.Reader",
     "~/Library/HTTPStorages/com.adobe.Reader.binarycookies",
+    "~/Library/Preferences/com.adobe.AdobeRdrCEFHelper.plist",
+    "~/Library/Preferences/com.adobe.crashreporter.plist",
+    "~/Library/Preferences/com.adobe.Reader.plist",
     "/Library/Preferences/com.adobe.reader.DC.WebResource.plist",
   ]
 end

@@ -1,6 +1,6 @@
 cask "webplotdigitizer" do
-  version "4.4"
-  sha256 "e9ee0ba2b317b81205593a7d1688a165ba10806465308c505e0534eb28e9d0c3"
+  version "4.5"
+  sha256 "7cc5eaccda1d4e3cb1a53cf214eaa807feccaca4e62e2958b16342fbc4d578c7"
 
   url "https://automeris.io/downloads/WebPlotDigitizer-#{version}-darwin-x64.zip"
   name "WebPlotDigitizer"

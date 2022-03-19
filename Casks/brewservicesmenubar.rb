@@ -1,10 +1,10 @@
 cask "brewservicesmenubar" do
-  version "3.0.0"
-  sha256 "13c8401bc212b65d38a4aa96daf7f98f76e27758ac29fc80fb25e21c989b194d"
+  version "4.1"
+  sha256 "9736f68d97ccab2028fe1f9167fe60e229562ae10f56f5506585ce4747a3d055"
 
-  url "https://github.com/andrewn/brew-services-menubar/releases/download/v#{version}/BrewServicesMenubar.zip"
-  appcast "https://github.com/andrewn/brew-services-menubar/releases.atom"
+  url "https://github.com/andrewn/brew-services-menubar/releases/download/v#{version}/BrewServicesMenubar-v#{version}.zip"
   name "Brew Services Menubar"
+  desc "Menu item for starting and stopping homebrew services"
   homepage "https://github.com/andrewn/brew-services-menubar"
 
   app "BrewServicesMenubar.app"

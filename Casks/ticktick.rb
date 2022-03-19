@@ -1,8 +1,8 @@
 cask "ticktick" do
-  version "3.7.80,171"
-  sha256 "d62790e0511adf31fb3f7ec99a335cddfabcbd059a08d3994f1854a572ad593f"
+  version "4.1.20,213"
+  sha256 "065c7e2c1bcbbea24d828f2b5705702941b5bff9795e0fcec4072c17093eaa07"
 
-  url "https://appest-public.s3.amazonaws.com/download/mac/TickTick_#{version.before_comma}_#{version.after_comma}.dmg",
+  url "https://appest-public.s3.amazonaws.com/download/mac/TickTick_#{version.csv.first}_#{version.csv.second}.dmg",
       verified: "appest-public.s3.amazonaws.com/"
   name "TickTick"
   desc "To-do & task list manager"
@@ -11,7 +11,9 @@ cask "ticktick" do
   livecheck do
     url "https://www.ticktick.com/static/getApp/download?type=mac"
     strategy :header_match do |headers|
-      match = headers["location"].match(%r{/TickTick_(\d+(?:\.\d+)*)_(\d+)\.dmg}i)
+      match = headers["location"].match(/TickTick[._-]v?(\d+(?:\.\d+)+)[_-](\d+)\.dmg/i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end
@@ -20,4 +22,21 @@ cask "ticktick" do
   depends_on macos: ">= :sierra"
 
   app "TickTick.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.TickTick.task.mac.MainWidget",
+    "~/Library/Application Scripts/com.TickTick.task.mac.TickTick-Safari-Extension",
+    "~/Library/Application Scripts/com.TickTick.task.mac.TickTick-Today-Widget",
+    "~/Library/Application Scripts/com.TickTick.task.mac.TickTick-WidgetConfiguration-Extension",
+    "~/Library/Application Support/com.TickTick.task.mac",
+    "~/Library/Caches/TickTick",
+    "~/Library/Caches/com.TickTick.task.mac",
+    "~/Library/Containers/com.TickTick.task.mac.MainWidget",
+    "~/Library/Containers/com.TickTick.task.mac.TickTick-Safari-Extension",
+    "~/Library/Containers/com.TickTick.task.mac.TickTick-Today-Widget",
+    "~/Library/Containers/com.TickTick.task.mac.TickTick-WidgetConfiguration-Extension",
+    "~/Library/Group Containers/75TY9UT8AY.com.TickTick.task.mac",
+    "~/Library/Preferences/com.TickTick.task.mac.plist",
+    "~/Library/Saved Application State/com.TickTick.task.mac.savedState",
+  ]
 end

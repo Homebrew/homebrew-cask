@@ -1,11 +1,22 @@
 cask "macdive" do
-  version "2.13.1"
-  sha256 "8d2522e2cacfcd416095153f7bc930bba12d3de6803db2e63d6cfc2672367ef7"
+  version "2.15.0"
+  sha256 "82993c29c1fe8be09bb0860951fc958d4a671bb09414723ed1fb27727a9b1b09"
 
   url "https://www.mac-dive.com/downloads/MacDive_#{version}.dmg"
-  appcast "https://www.mac-dive.com/shimmer/?appcast&appName=MacDive"
   name "MacDive"
+  desc "Digital dive log"
   homepage "https://www.mac-dive.com/"
 
+  livecheck do
+    url "https://www.mac-dive.com/shimmer/?appcast&appName=MacDive"
+    strategy :sparkle
+  end
+
   app "MacDive.app"
+
+  zap trash: [
+    "~/Library/Application Support/MacDive",
+    "~/Library/Preferences/com.mintsoftware.MacDive2.plist",
+    "~/Library/Saved Application State/com.mintsoftware.MacDive2.savedState",
+  ]
 end

@@ -1,6 +1,6 @@
 cask "krita" do
-  version "4.4.2"
-  sha256 "c9f703be76bdd96d6d86b62850d8323b76743736a2d64af8d1506b4f9d1856c4"
+  version "5.0.2"
+  sha256 "ecf98fd1ceba8dce196984d4db631d1c6728af6ee426f69d99da7b7d3aefa507"
 
   url "https://cdn.download.kde.org/stable/krita/#{version.major_minor_patch}/krita-#{version}.dmg",
       verified: "cdn.download.kde.org/stable/krita/"
@@ -10,7 +10,7 @@ cask "krita" do
 
   livecheck do
     url "https://download.kde.org/stable/krita/"
-    regex(%r{href=['"]?(\d+(?:\.\d+)*)/['"]?}i)
+    regex(%r{href=['"]?(\d+(?:\.\d+)+)/['"]?}i)
   end
 
   depends_on macos: ">= :sierra"

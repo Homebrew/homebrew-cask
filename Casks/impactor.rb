@@ -1,13 +1,17 @@
 cask "impactor" do
-  version "0.9.53"
-  sha256 "5c4bc39ed919ec39c8c948afbf26455b5cdf04cce3ece3f56296dd1031da4e8e"
+  version "0.9.56"
+  sha256 "e73c88bb617462fb997821d2db7e7c50936af59bc790523805eeed6517249841"
 
   url "https://cache.saurik.com/impactor/mac/Impactor_#{version}.dmg",
       verified: "cache.saurik.com/impactor/"
-  appcast "https://cydia.saurik.com/api/appcast/1"
   name "Impactor"
   desc "GUI tool for working with mobile devices"
   homepage "http://www.cydiaimpactor.com/"
+
+  livecheck do
+    url "https://cydia.saurik.com/api/latest/1"
+    strategy :header_match
+  end
 
   app "Impactor.app"
 

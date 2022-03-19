@@ -4,7 +4,6 @@ cask "zeebe-modeler" do
 
   url "https://github.com/zeebe-io/zeebe-modeler/releases/download/v#{version}/zeebe-modeler-#{version}-mac.zip",
       verified: "github.com/zeebe-io/zeebe-modeler/"
-  appcast "https://github.com/zeebe-io/zeebe-modeler/releases.atom"
   name "Zeebe Modeler"
   desc "Desktop Application for modeling Zeebe Workflows with BPMN"
   homepage "https://zeebe.io/"

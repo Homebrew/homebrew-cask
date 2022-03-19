@@ -1,13 +1,21 @@
 cask "rapidweaver" do
-  version "8.7,20860"
-  sha256 "ade685d615339c208331a54e7354335178f0e54299eb424310c9a1a4ba65e0aa"
+  version "8.9.3,20888"
+  sha256 "cf739d2819de327ca77946d2348735aaad72451d85683f1facb606325e8cf740"
 
-  url "https://github.com/realmacsoftware/RapidWeaver#{version.major}-releases/releases/download/#{version.before_comma}-%28#{version.after_comma}%29/RapidWeaver#{version.major}.zip",
+  url "https://github.com/realmacsoftware/RapidWeaver#{version.major}-releases/releases/download/#{version.csv.first}-%28#{version.csv.second}%29/RapidWeaver#{version.major}.zip",
       verified: "github.com/realmacsoftware/"
-  appcast "https://github.com/realmacsoftware/RapidWeaver#{version.major}-releases/releases.atom"
   name "RapidWeaver"
   desc "Web design software"
   homepage "https://www.realmacsoftware.com/rapidweaver/"
+
+  livecheck do
+    url "https://www.realmacsoftware.com/rapidweaver/releasenotes/"
+    strategy :page_match do |page|
+      page.scan(%r{href=.*?/(\d+(?:\.\d+)+)-\((\d+)\)/RapidWeaver\d*\.zip}i).map do |match|
+        "#{match[0]},#{match[1]}"
+      end
+    end
+  end
 
   depends_on macos: ">= :sierra"
 

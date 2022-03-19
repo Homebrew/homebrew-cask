@@ -7,12 +7,6 @@ cask "hwsensors" do
   desc "Tool to access information from available hardware sensors"
   homepage "https://github.com/kozlekek/HWSensors/"
 
-  livecheck do
-    url "https://github.com/kozlekek/HWSensors/releases/latest"
-    strategy :page_match
-    regex(%r{href=.*?/HWSensors\.(\d+(?:\.\d+)*)\.pkg\.zip}i)
-  end
-
   pkg "HWSensors.#{version}.pkg"
 
   uninstall login_item: "HWMonitor",

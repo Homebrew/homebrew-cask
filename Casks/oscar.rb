@@ -1,10 +1,11 @@
 cask "oscar" do
-  version "1.2.0"
-  sha256 "adaa1c9412c3e3d37fe275d1e1670b38fa1cdfdf58bd829a9db03cbd8f66a179"
+  version "1.3.1"
+  sha256 "5378de6b994e5a526de3912e14ad9ce26d22f38e8c5d8371371b3966295f4438"
 
   url "https://www.apneaboard.com/OSCAR/OSCAR-#{version}.dmg",
       verified: "apneaboard.com/OSCAR/"
   name "OSCAR"
+  desc "CPAP Analysis Reporter"
   homepage "https://www.sleepfiles.com/OSCAR/"
 
   livecheck do
@@ -12,6 +13,8 @@ cask "oscar" do
     strategy :page_match
     regex(%r{href=.*?/OSCAR-(\d+(?:\.\d+)*)\.dmg}i)
   end
+
+  depends_on macos: ">= :sierra"
 
   app "OSCAR.app"
 end

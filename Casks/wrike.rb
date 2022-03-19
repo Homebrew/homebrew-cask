@@ -1,11 +1,16 @@
 cask "wrike" do
-  version "3.3.7"
-  sha256 "0f4dd666676bf1049b5dc3ce45dbf7e1fe2767eadddc251585f944f8be080c2e"
+  version "3.3.14"
+  sha256 "6d607d4865d5cf2da1e601e55ed79532bb2720c24bbeaa8f8fd4fbe05cc5c65c"
 
   url "https://dl.wrike.com/download/WrikeDesktopApp.v#{version}.dmg"
-  appcast "https://www.wrike.com/frontend/electron-app/changelog.json"
   name "Wrike"
+  desc "Project management app"
   homepage "https://www.wrike.com/apps/mobile-and-desktop/desktop-app/"
+
+  livecheck do
+    url "https://www.wrike.com/frontend/electron-app/changelog.json"
+    regex(/"version"\s*:\s*"v?(\d+(?:\.\d+)+)(?:"|\s*\(for\s+Mac)/i)
+  end
 
   app "Wrike for Mac.app"
 end

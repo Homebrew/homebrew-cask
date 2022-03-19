@@ -3,7 +3,6 @@ cask "qlcolorcode" do
   sha256 "a0f7a97a20cd85eebaef15e399ad29c47711dae2e33e9f51de034f3c8a7a251f"
 
   url "https://github.com/anthonygelibert/QLColorCode/releases/download/release-#{version}/QLColorCode.qlgenerator.zip"
-  appcast "https://github.com/anthonygelibert/QLColorCode/releases.atom"
   name "QLColorCode"
   desc "QuickLook plug-in that renders source code with syntax highlighting"
   homepage "https://github.com/anthonygelibert/QLColorCode"

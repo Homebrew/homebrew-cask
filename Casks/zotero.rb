@@ -1,12 +1,17 @@
 cask "zotero" do
-  version "5.0.96.1"
-  sha256 "7813ba51147ba44cc56a47b3326852b524c6d78eea967fa88e6291e393855a7c"
+  version "6.0"
+  sha256 "b7dc736018cfa39d2ec95160bbec7d4a6956af640fa4c0316975ed623fa9d900"
 
   url "https://download.zotero.org/client/release/#{version}/Zotero-#{version}.dmg"
-  appcast "https://www.zotero.org/download/"
   name "Zotero"
   desc "Collect, organize, cite, and share research sources"
   homepage "https://www.zotero.org/"
+
+  livecheck do
+    url "https://www.zotero.org/download/"
+    strategy :page_match
+    regex(/standaloneVersions.*?"mac"\s*:\s*"(\d+(?:\.\d+)*)"/i)
+  end
 
   auto_updates true
 

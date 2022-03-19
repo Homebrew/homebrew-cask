@@ -1,12 +1,16 @@
 cask "geotag" do
-  version "4.9"
-  sha256 "ad90415ca66aeea9029e00eeb829ad9706365bbd44340d3467f40d71e5c1d4b4"
+  version "4.14"
+  sha256 "1005a96b6d9eccd5cfd161fdb41a667101e8a5b9bfa371ccd9ddc2c73c69c0aa"
 
   url "https://www.snafu.org/GeoTag/GeoTag-#{version}.dmg"
-  appcast "https://github.com/marchyman/GeoTag/releases.atom"
   name "GeoTag"
   desc "Geo location editor for images"
   homepage "https://www.snafu.org/GeoTag/"
+
+  livecheck do
+    url "https://www.snafu.org/GeoTag/"
+    regex(/href=.*?GeoTag[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+  end
 
   depends_on macos: ">= :sierra"
   depends_on formula: "exiftool"

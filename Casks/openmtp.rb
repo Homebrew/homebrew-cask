@@ -1,10 +1,11 @@
 cask "openmtp" do
-  version "3.1.5"
-  sha256 "a5b36531c586659ec3b0869c5a5f586b4cc12ddcd5b17dbaed49800721c02bf9"
+  version "3.1.15"
+  sha256 "9e1002759ab0b8b0c82799c6eae951e53a0dcb5410c0276226fff7cd35d58ef7"
 
   url "https://github.com/ganeshrvel/openmtp/releases/download/v#{version}/OpenMTP-#{version}-mac.zip",
       verified: "github.com/ganeshrvel/openmtp/"
   name "OpenMTP"
+  desc "Android file transfer"
   homepage "https://openmtp.ganeshrvel.com/"
 
   livecheck do

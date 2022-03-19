@@ -6,13 +6,14 @@ on:
 
 jobs:
   dispatch-command:
+    if: startsWith(github.repository, 'Homebrew/')
     runs-on: ubuntu-latest
     steps:
       - name: Dispatch /rebase Command
-        uses: peter-evans/slash-command-dispatch@72ab5a2e417e454aa8e89c43b28e36fe331e00a5
+        uses: peter-evans/slash-command-dispatch@40877f718dce0101edfc7aea2b3800cc192f9ed5
         with:
-          token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
-          reaction-token: ${{ secrets.HOMEBREW_GITHUB_API_TOKEN }}
+          token: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
+          reaction-token: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
           commands: rebase
           permission: triage
           issue-type: pull-request

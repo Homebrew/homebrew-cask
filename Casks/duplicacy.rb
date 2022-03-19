@@ -5,8 +5,13 @@ cask "duplicacy" do
   url "https://acrosync.com/duplicacy/duplicacy_gui_osx_#{version}.dmg",
       verified: "acrosync.com/duplicacy/"
   name "Duplicacy"
+  desc "Cloud backup tool"
   homepage "https://duplicacy.com/"
 
   app "Duplicacy.app"
   binary "#{appdir}/Duplicacy.app/Contents/Resources/duplicacy_osx_x64_#{version}", target: "duplicacy"
+
+  caveats do
+    discontinued
+  end
 end

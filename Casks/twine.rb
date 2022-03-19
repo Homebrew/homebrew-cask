@@ -1,10 +1,9 @@
 cask "twine" do
-  version "2.3.13"
-  sha256 "4f6f49b938a196181d87d6ab0dc96a5fc02a479b5e698ddaf216840e7d7af48a"
+  version "2.3.16"
+  sha256 "d3a479a4887910d3032e8f98461b86acd48c157b40406aa8354a267f47b0cfc2"
 
   url "https://github.com/klembot/twinejs/releases/download/#{version}/twine_#{version}_macos.dmg",
       verified: "github.com/klembot/twinejs/"
-  appcast "https://github.com/klembot/twinejs/releases.atom"
   name "Twine"
   desc "Tool for telling interactive, nonlinear stories"
   homepage "https://twinery.org/"

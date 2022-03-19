@@ -1,13 +1,22 @@
 cask "sonic-visualiser" do
-  version "4.3"
-  sha256 "eafd46decd7c00680ba95c2246fd34a9da64a280479bb3077d4487d656a6cdc2"
+  version "4.4,2813"
+  sha256 "07550a124d503139837e809ff06701661749f0de77d43968a9e43494f4ff1bbf"
 
-  url "https://bintray.com/sonic-visualiser/sonic-visualiser/download_file?file_path=Sonic+Visualiser-#{version}.dmg",
-      verified: "bintray.com/sonic-visualiser/"
-  appcast "https://code.soundsoftware.ac.uk/projects/sonic-visualiser/repository/raw/CHANGELOG"
+  url "https://github.com/sonic-visualiser/sonic-visualiser/releases/download/sv_v#{version.csv.first}/Sonic.Visualiser-#{version.csv.first}.dmg",
+      verified: "github.com/sonic-visualiser/sonic-visualiser/"
   name "Sonic Visualiser"
   desc "Visualisation, analysis, and annotation of music audio recordings"
   homepage "https://www.sonicvisualiser.org/"
+
+  livecheck do
+    url "https://www.sonicvisualiser.org/download.html"
+    strategy :page_match do |page|
+      match = page.match(%r{href=.*?/(\d+)/Sonic%20Visualiser-(\d+(?:\.\d+)*)\.dmg}i)
+      next if match.blank?
+
+      "#{match[2]},#{match[1]}"
+    end
+  end
 
   depends_on macos: ">= :sierra"
 

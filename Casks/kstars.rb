@@ -1,17 +1,19 @@
 cask "kstars" do
-  version "3.5.2"
-  sha256 "dcf6df488efea55d8423ea7e76b54f12643ae4555a8b12224510c6ab27ce26df"
+  version "3.5.7"
+  sha256 "cbc370514bf2b886997c67263145d939a8c75fb3f04936cca823e00f1f549676"
 
   url "https://www.indilib.org/jdownloads/kstars/kstars-#{version}.dmg",
       verified: "indilib.org/jdownloads/kstars/"
   name "KStars"
+  desc "Astronomy software"
   homepage "https://edu.kde.org/kstars/"
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/kstars-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/kstars-(\d+(?:\.\d+)+)\.dmg}i)
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "kstars.app"
 end

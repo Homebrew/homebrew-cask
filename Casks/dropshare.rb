@@ -1,8 +1,8 @@
 cask "dropshare" do
-  version "5.10,5207"
-  sha256 "79bf7b1d3e7561b9a4e97ee2af627caa94f98a3d77aa0fed6e89dd82c20c5e8b"
+  version "5.19,5258"
+  sha256 "32a1366dd49852304f851792616428e2f41dd9f264fa94862d091fcd67a891d7"
 
-  url "https://d2wvuuix8c9e48.cloudfront.net/Dropshare#{version.major}-#{version.after_comma}.app.zip",
+  url "https://d2wvuuix8c9e48.cloudfront.net/Dropshare#{version.major}-#{version.csv.second}.app.zip",
       verified: "d2wvuuix8c9e48.cloudfront.net/"
   name "Dropshare"
   desc "File sharing solution"
@@ -11,7 +11,7 @@ cask "dropshare" do
   livecheck do
     url "https://dropshare.app/sparkle/Dropshare#{version.major}.xml"
     strategy :sparkle do |item|
-      "#{item.title[/(\d+(?:\.\d+)*)/i, 1]},#{item.version}"
+      "#{item.title[/(\d+(?:\.\d+)+)/i, 1]},#{item.version}"
     end
   end
 

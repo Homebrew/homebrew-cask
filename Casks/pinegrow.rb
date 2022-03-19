@@ -1,16 +1,23 @@
 cask "pinegrow" do
-  version "5.991"
-  sha256 "6697851b9be272bddf2638c637be9fb3dae26d793e78e164586ef72ade66fb07"
+  version "6.21"
+  sha256 "d2c037f70a07a2ad4fc049a8e2bc6393593b12933a8c18ccb58a8c713899f9d5"
 
   url "https://download.pinegrow.com/PinegrowMac.#{version}.dmg"
   name "Pinegrow"
+  desc "Web editor"
   homepage "https://pinegrow.com/"
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/PinegrowMac\.(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/PinegrowMac[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "Pinegrow.app"
+
+  zap trash: [
+    "~/Library/Application Support/Pinegrow",
+    "~/Library/Caches/Pinegrow",
+    "~/Library/Preferences/com.pinegrow.pinegrow.plist",
+    "~/Library/Saved Application State/com.pinegrow.pinegrow.savedState",
+  ]
 end

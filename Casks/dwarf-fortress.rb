@@ -4,14 +4,20 @@ cask "dwarf-fortress" do
 
   url "https://www.bay12games.com/dwarves/df_#{version.minor}_#{version.patch}_osx.tar.bz2"
   name "Dwarf Fortress"
+  desc "Single-player fantasy game"
   homepage "https://www.bay12games.com/dwarves/"
+
+  livecheck do
+    url "https://www.bay12games.com/dwarves/older_versions.html"
+    regex(/DF\s*(\d+(?:\.\d+)+)/i)
+  end
 
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/df_osx/df.wrapper.sh"
   binary shimscript, target: "dwarf-fortress"
 
   preflight do
-    IO.write shimscript, <<~EOS
+    File.write shimscript, <<~EOS
       #!/bin/sh
       exec '#{staged_path}/df_osx/df' "$@"
     EOS

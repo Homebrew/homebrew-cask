@@ -1,13 +1,17 @@
 cask "element" do
-  version "1.7.22"
-  sha256 "1f8d7e6f90eccbbe51431910883fdfb93f5e8c98bad7cdb898b7ff52a39965da"
+  version "1.10.7"
+  sha256 "f495587bfa232ae9cbc75558a86dff45865724c4f7981f7d3b7c0e8db17c42a8"
 
-  url "https://packages.riot.im/desktop/install/macos/Element-#{version}.dmg",
+  url "https://packages.riot.im/desktop/install/macos/Element-#{version}-universal.dmg",
       verified: "packages.riot.im/desktop/"
-  appcast "https://github.com/vector-im/riot-desktop/releases.atom"
   name "Element"
   desc "Matrix collaboration client"
   homepage "https://element.io/get-started"
+
+  livecheck do
+    url "https://github.com/vector-im/riot-desktop"
+    strategy :github_latest
+  end
 
   auto_updates true
 

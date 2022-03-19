@@ -1,10 +1,17 @@
 cask "tempo" do
-  version "5.5.4"
-  sha256 "e8c3c62ef616486551a463ce50dba9e5f03bbb45a135c6a1dc12c77d8ed49345"
+  arch = Hardware::CPU.intel? ? "release" : "release-arm64"
 
-  url "https://download.yourtempo.co/release/Tempo-#{version}.dmg"
-  appcast "https://download.yourtempo.co/release/latest-mac.yml"
+  version "6.0.0"
+
+  url "https://download.yourtempo.co/#{arch}/Tempo-#{version}.dmg"
+  if Hardware::CPU.intel?
+    sha256 "acfe86aedce23077a34de27717f38920bf4eafb740841088ab31b685fec4e3af"
+  else
+    sha256 "67260ec4260e30da28abc20d847282f08e09d8bce00730594c598caf3a63bdb7"
+  end
+
   name "Tempo"
+  desc "Email client that delivers all email in batches"
   homepage "https://www.yourtempo.co/"
 
   auto_updates true
@@ -17,4 +24,8 @@ cask "tempo" do
     "~/Library/Preferences/com.founders.mial.plist",
     "~/Library/Saved Application State/com.founders.mial.savedState",
   ]
+
+  caveats do
+    discontinued
+  end
 end

@@ -1,26 +1,32 @@
 cask "dotnet-sdk" do
-  if MacOS.version <= :sierra
-    version "2.2.402,7430e32b-092b-4448-add7-2dcf40a7016d:1076952734fbf775062b48344d1a1587"
-    sha256 "e74d816bc034d0fcdfa847286a6cad097227d4864da1c97fe801012af0c26341"
+  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+
+  if Hardware::CPU.intel?
+    version "6.0.201,a5e0f5da-6088-451c-a341-b751c0d418c7,9fe3a31273888fe23cbe71cac32fa35c"
+    sha256 "a6199cee00bb381b00847cf2e4e7a2192935e2a03c8892a3368a5b3479f3868f"
   else
-    version "5.0.201,de613120-9306-4867-b504-45fcc81ba1b6:2a03f18c549f52cf78f88afa44e6dc6a"
-    sha256 "ff8914bc1cac2af0e8959a42afd2fb18517505b3118f64abd7dcc30276fe8c1d"
+    version "6.0.201,2e20d654-1371-4c8f-a0dd-e81bac07549e,7b63667ab1941110bf9e684dc66b590d"
+    sha256 "a219339edb3156c84bfc684efc5a1061d528b2e10b870763bb1119f925249135"
   end
 
-  url "https://download.visualstudio.microsoft.com/download/pr/#{version.after_comma.before_colon}/#{version.after_colon}/dotnet-sdk-#{version.before_comma}-osx-x64.pkg"
-  appcast "https://github.com/dotnet/sdk/releases.atom"
+  url "https://download.visualstudio.microsoft.com/download/pr/#{version.csv.second}/#{version.csv.third}/dotnet-sdk-#{version.csv.first}-osx-#{arch}.pkg"
   name ".NET SDK"
   desc "Developer platform"
   homepage "https://www.microsoft.com/net/core#macos"
+
+  livecheck do
+    cask "dotnet"
+    regex(%r{/download/pr/([^/]+)/([^/]+)/dotnet-sdk-v?(\d+(?:\.\d+)+)-osx-#{arch}\.pkg}i)
+  end
 
   conflicts_with cask: [
     "dotnet",
     "homebrew/cask-versions/dotnet-preview",
     "homebrew/cask-versions/dotnet-sdk-preview",
-  ]
-  depends_on macos: ">= :sierra"
+  ], formula: "dotnet"
+  depends_on macos: ">= :mojave"
 
-  pkg "dotnet-sdk-#{version.before_comma}-osx-x64.pkg"
+  pkg "dotnet-sdk-#{version.csv.first}-osx-#{arch}.pkg"
   binary "/usr/local/share/dotnet/dotnet"
 
   uninstall pkgutil: [

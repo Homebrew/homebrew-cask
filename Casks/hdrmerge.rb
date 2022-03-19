@@ -4,10 +4,12 @@ cask "hdrmerge" do
 
   url "https://github.com/jcelaya/hdrmerge/releases/download/v#{version}/HDRMerge.dmg",
       verified: "github.com/jcelaya/hdrmerge/"
-  appcast "https://github.com/jcelaya/hdrmerge/releases.atom"
   name "HDRMerge"
+  desc "Creates raw images with extended dynamic range"
   homepage "https://jcelaya.github.io/hdrmerge/"
 
   app "HDRMerge.app"
   binary "#{appdir}/HDRMerge.app/Contents/MacOS/hdrmerge"
+
+  zap trash: "~/Library/Preferences/com.j-celaya.HdrMerge.plist"
 end

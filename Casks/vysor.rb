@@ -1,12 +1,17 @@
 cask "vysor" do
-  version "4.0.17"
-  sha256 "1570fd11bee1b140e8e17d1bd05319504c80e6004a1ce8760ebbdd3a25e8e0b7"
+  version "4.1.77"
+  sha256 "b02f1f01c0ea8c071d3e1fe5ca4d4a0affa9a5d40a2544af49cc24fc5b4fbbb9"
 
   url "https://github.com/koush/vysor.io/releases/download/v#{version}/Vysor-mac-#{version}.zip",
       verified: "github.com/koush/vysor.io/"
-  appcast "https://github.com/koush/vysor.io/releases.atom"
   name "Vysor"
+  desc "Mirror and control your phone"
   homepage "https://www.vysor.io/"
+
+  livecheck do
+    url "http://vysornuts.clockworkmod.com/download/mac"
+    strategy :header_match
+  end
 
   app "Vysor.app"
 

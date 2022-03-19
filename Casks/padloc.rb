@@ -4,10 +4,14 @@ cask "padloc" do
 
   url "https://github.com/padloc/padloc/releases/download/v#{version}/Padloc-#{version}.dmg",
       verified: "github.com/padloc/padloc/"
-  appcast "https://github.com/padloc/padloc/releases.atom"
   name "Padloc"
   desc "Modern password manager"
   homepage "https://padloc.app/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Padloc.app"
 

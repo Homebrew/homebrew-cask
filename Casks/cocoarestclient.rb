@@ -1,10 +1,9 @@
 cask "cocoarestclient" do
-  version "1.4.5"
-  sha256 "dccc638d7b8e9f793055cb1c4fc49da9f0f35e24e89f3559e53810150c77a6b1"
+  version "1.4.7"
+  sha256 "8e974818e5b77e6e4291acbe09d439c3c17b01c23e48d2272f7817e2d18e9968"
 
   url "https://github.com/mmattozzi/cocoa-rest-client/releases/download/#{version}/CocoaRestClient-#{version}.dmg",
       verified: "github.com/mmattozzi/cocoa-rest-client/"
-  appcast "https://github.com/mmattozzi/cocoa-rest-client/releases.atom"
   name "CocoaRestClient"
   desc "App for testing HTTP/REST endpoints"
   homepage "https://mmattozzi.github.io/cocoa-rest-client/"

@@ -1,6 +1,6 @@
 cask "airserver" do
-  version "7.2.6"
-  sha256 "fc7c7562654ffd47c46e4ffe0a8fc1565d0fa76297ad2e6105cab3c8ab125568"
+  version "7.2.7"
+  sha256 "e092aa4803418483dac749f71c644d63972b4ffe61f235364b92a5b72e08ae0d"
 
   url "https://dl.airserver.com/mac/AirServer-#{version}.dmg"
   name "AirServer"
@@ -12,5 +12,13 @@ cask "airserver" do
     strategy :sparkle
   end
 
+  auto_updates true
+
   app "AirServer.app"
+
+  zap trash: [
+    "~/Library/Caches/com.pratikkumar.airserver-mac",
+    "~/Library/Preferences/com.pratikkumar.airserver-mac.AirServer.plist",
+    "~/Library/Preferences/com.pratikkumar.airserver-mac.plist",
+  ]
 end

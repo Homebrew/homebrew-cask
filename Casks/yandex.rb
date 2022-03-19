@@ -1,12 +1,25 @@
 cask "yandex" do
-  version "20.11.0.918,0.918"
+  arch = Hardware::CPU.intel? ? "" : "&arch=arm64"
+
+  version "22.1.0"
   sha256 :no_check
 
-  url "https://download.cdn.yandex.net/browser/yandex/ru/Yandex.dmg",
-      verified: "yandex.net/"
+  url "https://browser.yandex.ru/download/?os=mac#{arch}&full=1"
   name "Yandex.Browser"
   desc "Web browser"
-  homepage "https://browser.yandex.ru/desktop/"
+  homepage "https://browser.yandex.ru/"
+
+  livecheck do
+    url :url
+    strategy :header_match do |headers|
+      match = headers["location"].match(/(\d+)_(\d+)_(\d+)/i)
+      next if match.blank?
+
+      "#{match[1]}.#{match[2]}.#{match[3]}"
+    end
+  end
+
+  auto_updates true
 
   app "Yandex.app"
 end

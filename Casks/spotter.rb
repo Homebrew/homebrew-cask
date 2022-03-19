@@ -1,9 +1,8 @@
 cask "spotter" do
-  version "1.0.0"
-  sha256 "cb957e9d53a68c1cdd615685bd4ad05583c349661aacf1e728903a2e4d7bdd87"
+  version "1.0.7"
+  sha256 "7c435738deb9317de300139f41f04916f76a6d67fbef3f6b21fce3c6ccb49d74"
 
   url "https://github.com/spotter-application/spotter/releases/download/#{version}/spotter.dmg"
-  appcast "https://github.com/spotter-application/spotter/releases.atom"
   name "Spotter"
   desc "Productivity tool to launch everything"
   homepage "https://github.com/spotter-application/spotter"

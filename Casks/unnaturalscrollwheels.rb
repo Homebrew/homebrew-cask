@@ -1,9 +1,8 @@
 cask "unnaturalscrollwheels" do
-  version "1.2.2"
-  sha256 "1df6542af46cf5f48a1099598dabcc3fc3b8d8caa8817b0c4261071efd76db21"
+  version "1.2.3"
+  sha256 "89e4bbdf74c1025f045a34f7d3949fe5ea0d1b0cd8d3e893d41c9c0d50caf7c5"
 
   url "https://github.com/ther0n/UnnaturalScrollWheels/releases/download/#{version}/UnnaturalScrollWheels-#{version}.dmg"
-  appcast "https://github.com/ther0n/UnnaturalScrollWheels/releases.atom"
   name "UnnaturalScrollWheels"
   desc "Tool to invert scroll direction for physical scroll wheels"
   homepage "https://github.com/ther0n/UnnaturalScrollWheels"

@@ -4,9 +4,15 @@ cask "manuskript" do
 
   url "https://github.com/olivierkes/manuskript/releases/download/#{version.major_minor_patch}/manuskript-#{version}-osx.zip",
       verified: "github.com/olivierkes/manuskript/"
-  appcast "https://github.com/olivierkes/manuskript/releases.atom"
   name "Manuskript"
+  desc "Tool for writers"
   homepage "https://www.theologeek.ch/manuskript/"
+
+  livecheck do
+    url "https://github.com/olivierkes/manuskript/releases/"
+    strategy :page_match
+    regex(/manuskript[._-]?(\d+(?:\.\d+)+)[._-]?osx\.zip/i)
+  end
 
   binary "manuskript/manuskript"
 end

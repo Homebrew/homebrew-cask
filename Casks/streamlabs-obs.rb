@@ -1,16 +1,22 @@
 cask "streamlabs-obs" do
-  version "0.27.2"
-  sha256 "15d1c2803d6be6a66c4e7b12f65304cc68052e722bcb435dcf3f4415eb61ad99"
+  version "1.7.0"
+  sha256 "d9b0c84edfb32c851dfcec1cd58e9f431fcc40adcb241041f819bec2cb18d015"
 
-  url "https://slobs-cdn.streamlabs.com/Streamlabs+OBS-#{version}.dmg"
-  appcast "https://slobs-cdn.streamlabs.com/latest-mac.yml"
-  name "Streamlabs OBS"
+  url "https://slobs-cdn.streamlabs.com/Streamlabs+Desktop-#{version}.dmg"
+  name "Streamlabs Desktop"
   desc "All-in-one live streaming software"
   homepage "https://streamlabs.com/"
 
-  auto_updates true
+  livecheck do
+    url "https://streamlabs.com/streamlabs-desktop/download"
+    strategy :header_match
+    regex(/Streamlabs\+Desktop\+Setup\+(\d+(?:\.\d+)+)/i)
+  end
 
-  app "Streamlabs OBS.app"
+  auto_updates true
+  depends_on macos: ">= :mojave"
+
+  app "Streamlabs Desktop.app"
 
   zap trash: [
     "~/Library/Application Support/slobs-client",

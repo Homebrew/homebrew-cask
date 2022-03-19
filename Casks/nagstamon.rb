@@ -1,11 +1,12 @@
 cask "nagstamon" do
-  version "3.4.1"
-  sha256 "3493578ca06b61a146d3f1af1f7858e2aee662c4fa3ef5dedfc45c0203896ac5"
+  version "3.8.0"
+  sha256 "99912e45dd8940dd508f31e775a4f1a2729d65fb7d4e072448b2f9e02daaaaf5"
 
-  url "https://nagstamon.ifw-dresden.de/files/stable/Nagstamon%20#{version}.dmg"
-  appcast "https://nagstamon.ifw-dresden.de/files/stable/sha256sums.txt"
+  url "https://github.com/HenriWahl/Nagstamon/releases/download/v#{version}/Nagstamon.#{version}.dmg",
+      verified: "github.com/HenriWahl/Nagstamon/"
   name "Nagstamon"
-  homepage "https://nagstamon.ifw-dresden.de/"
+  desc "Nagios status monitor"
+  homepage "https://nagstamon.de/"
 
   app "Nagstamon.app"
 

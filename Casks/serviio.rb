@@ -1,15 +1,15 @@
 cask "serviio" do
-  version "2.1"
-  sha256 "2a6d948c00205c5c4cf60127ed94a8e0e6965a145e5162b298f3108492f73cae"
+  version "2.2.1"
+  sha256 "3544bdf12d9b6825c26f8c259055815b875ea7d4c741d87b19b71e7d17dc8d9c"
 
   url "https://download.serviio.org/releases/serviio-#{version}-osx.tar.gz"
   name "Serviio"
+  desc "Media server"
   homepage "https://serviio.org/"
 
   livecheck do
     url "https://www.serviio.org/download"
-    strategy :page_match
-    regex(%r{href=.*?/serviio-(\d+(?:\.\d+)*)-osx\.tar\.gz}i)
+    regex(%r{href=.*?/serviio-(\d+(?:\.\d+)+)-osx\.tar\.gz}i)
   end
 
   pkg "Serviio-#{version}.pkg"

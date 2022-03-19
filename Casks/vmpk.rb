@@ -1,13 +1,19 @@
 cask "vmpk" do
-  version "0.8.0.1"
-  sha256 "d3ff90bd78320525f23a67c7d216e2cd3df0b02e5c8dbb905084333be006a6d7"
+  version "0.8.4"
+  sha256 "cbc0e4d821aa2277efe65b2caf6d8f631ac9289f802df24bbf44e4b0c153095e"
 
   url "https://downloads.sourceforge.net/vmpk/#{version.major_minor_patch}/vmpk-#{version}-mac-x64.dmg",
       verified: "downloads.sourceforge.net/vmpk/"
-  appcast "https://sourceforge.net/projects/vmpk/rss"
   name "VMPK"
+  desc "Virtual MIDI Piano Keyboard"
   homepage "https://vmpk.sourceforge.io/"
 
+  livecheck do
+    url "https://sourceforge.net/projects/vmpk/rss?path=/vmpk"
+    regex(/url=.*?vmpk[._-]?v?(\d+(?:\.\d+)+)-mac-x64\.dmg/i)
+  end
+
+  depends_on formula: "fluid-synth"
   depends_on macos: ">= :sierra"
 
   app "vmpk.app"

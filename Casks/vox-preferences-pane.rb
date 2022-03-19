@@ -5,6 +5,7 @@ cask "vox-preferences-pane" do
   url "https://dl.devmate.com/com.coppertino.VoxPrefs/VoxPrefs.dmg",
       verified: "devmate.com/com.coppertino.VoxPrefs/"
   name "VOX Preferences"
+  desc "VOX Add-on for Apple Remote, EarPods and System Buttons"
   homepage "https://vox.rocks/mac-music-player/control-extension-download"
 
   livecheck do
@@ -13,4 +14,8 @@ cask "vox-preferences-pane" do
   end
 
   prefpane "Vox Preferences.prefPane"
+
+  zap trash: [
+    "~/Library/Preferences/com.coppertino.VoxPrefs.plist",
+  ]
 end

@@ -6,9 +6,10 @@ cask "bbedit" do
     version "12.6.7"
     sha256 "d0647c864268b187343bd95bfcf490d6a2388579b1f8fce64a289c65341b1144"
   else
-    version "13.5.4"
-    sha256 "b55359e27937390f9b4a028b180c140e24fdf8077d1caa9f9d3440fdfeacf411"
+    version "14.1.1"
+    sha256 "1bd804208fa32f4ec1639a35b380a71626815e560ab8de183c325f1cec06c7b0"
   end
+
   url "https://s3.amazonaws.com/BBSW-download/BBEdit_#{version}.dmg",
       verified: "s3.amazonaws.com/BBSW-download/"
   name "BBEdit"
@@ -21,14 +22,22 @@ cask "bbedit" do
   end
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :mojave"
 
   app "BBEdit.app"
+  binary "#{appdir}/BBEdit.app/Contents/Helpers/bbedit_tool", target: "bbedit"
+  binary "#{appdir}/BBEdit.app/Contents/Helpers/bbdiff"
+  binary "#{appdir}/BBEdit.app/Contents/Helpers/bbfind"
+  binary "#{appdir}/BBEdit.app/Contents/Helpers/bbresults"
+  manpage "#{appdir}/BBEdit.app/Contents/Resources/bbedit.1"
+  manpage "#{appdir}/BBEdit.app/Contents/Resources/bbdiff.1"
+  manpage "#{appdir}/BBEdit.app/Contents/Resources/bbfind.1"
+  manpage "#{appdir}/BBEdit.app/Contents/Resources/bbresults.1"
 
   zap trash: [
     "~/Library/Application Support/BBEdit",
-    "~/Library/Preferences/com.barebones.bbedit.plist",
     "~/Library/BBEdit",
     "~/Library/Caches/com.barebones.bbedit",
+    "~/Library/Preferences/com.barebones.bbedit.plist",
   ]
 end

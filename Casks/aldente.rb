@@ -1,24 +1,31 @@
 cask "aldente" do
-  if MacOS.version <= :catalina
-    version "1.2"
-    sha256 "a588dc29faca894b7321e23420ca17d6a944b9b3b46412435f519b96e4ebee7b"
-    url "https://github.com/davidwernhart/AlDente/releases/download/#{version}/AlDente.app.zip"
-  else
-    version "2.1.2"
-    sha256 "39cebc2db5b75c4217abd42470ecfee8280a35178b0d2581df3857cd8b742880"
-    url "https://github.com/davidwernhart/AlDente/releases/download/#{version}/AlDente_#{version}_Notarized.app.zip"
-  end
+  version "1.15.2"
+  sha256 "e29d58a460df8fd38ee7c70d0de15b94e46c90975e5c117e8621b79204b4aead"
 
-  appcast "https://github.com/davidwernhart/AlDente/releases.atom"
+  url "https://github.com/davidwernhart/AlDente/releases/download/#{version}/AlDente.dmg"
   name "AlDente"
   desc "Menu bar tool to limit maximum charging percentage"
   homepage "https://github.com/davidwernhart/AlDente"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "AlDente.app"
 
   uninstall quit:   "com.davidwernhart.Helper",
             delete: [
-              "/Library/LaunchDaemons/com.davidwernhart.Helper.plist",
-              "/Library/PrivilegedHelperTools/com.davidwernhart.Helper",
+              "/Library/LaunchDaemons/com.apphousekitchen.aldente-pro.helper.plist",
+              "/Library/PrivilegedHelperTools/com.apphousekitchen.aldente-pro.helper",
             ]
+
+  zap trash: [
+    "~/Library/Application Support/AlDente",
+    "~/Library/Caches/com.apphousekitchen.aldente-pro",
+    "~/Library/HTTPStorages/com.apphousekitchen.aldente-pro.binarycookies",
+  ]
 end

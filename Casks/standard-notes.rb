@@ -1,10 +1,16 @@
 cask "standard-notes" do
-  version "3.6.1"
-  sha256 "4ef1a85a2f8805c58a64e1523581893797cd1533251392345bbc235658769fcd"
+  arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  url "https://github.com/standardnotes/desktop/releases/download/v#{version}/Standard-Notes-#{version}-mac.zip",
+  version "3.13.0"
+
+  if Hardware::CPU.intel?
+    sha256 "c171773d0cf91a5c11706e3161ac002a62aa7f39fad70187295e6794d696381a"
+  else
+    sha256 "4d5fb36c6868b3e149bdf3241448badfe00b245d81e3d2c57bbcba80d411ba3c"
+  end
+
+  url "https://github.com/standardnotes/desktop/releases/download/v#{version}/Standard-Notes-#{version}-mac-#{arch}.zip",
       verified: "github.com/standardnotes/desktop/"
-  appcast "https://github.com/standardnotes/desktop/releases.atom"
   name "Standard Notes"
   desc "Free, open-source, and completely encrypted notes app"
   homepage "https://standardnotes.org/"
@@ -15,10 +21,10 @@ cask "standard-notes" do
 
   zap trash: [
     "~/Library/Application Support/Standard Notes",
-    "~/Library/Caches/org.standardnotes.standardnotes",
     "~/Library/Caches/org.standardnotes.standardnotes.ShipIt",
-    "~/Library/Preferences/org.standardnotes.standardnotes.plist",
+    "~/Library/Caches/org.standardnotes.standardnotes",
     "~/Library/Preferences/org.standardnotes.standardnotes.helper.plist",
+    "~/Library/Preferences/org.standardnotes.standardnotes.plist",
     "~/Library/Saved Application State/org.standardnotes.standardnotes.savedState",
   ]
 end

@@ -3,10 +3,15 @@ cask "yo" do
   sha256 "115218ea1bf39e5aa301740d00a2b0e17a5f31c2bc2f4bff5becd2da77d791f7"
 
   url "https://github.com/sheagcraig/yo/releases/download/#{version}/yo-#{version}.pkg"
-  appcast "https://github.com/sheagcraig/yo/releases.atom"
   name "Yo Scheduler"
   desc "Utility to emit Notification Center messages from the command-line"
   homepage "https://github.com/sheagcraig/yo"
+
+  livecheck do
+    url "https://github.com/sheagcraig/yo/releases/"
+    strategy :page_match
+    regex(/yo[._-]?(\d+(?:\.\d+)*)\.pkg/i)
+  end
 
   pkg "yo-#{version}.pkg"
 

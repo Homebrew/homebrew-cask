@@ -1,9 +1,8 @@
 cask "nightfall" do
-  version "2.1.1"
-  sha256 "ad6242cbf9477a34b19d38f9c39dbc354dd3eca75c6585837757503bc5302b22"
+  version "3.0.0"
+  sha256 "94ef109e272ea578e8a92ef0719f17c53e960eb65826e5594986d463ed682ef5"
 
   url "https://github.com/r-thomson/Nightfall/releases/download/v#{version}/Nightfall.dmg"
-  appcast "https://github.com/r-thomson/Nightfall/releases.atom"
   name "Nightfall"
   desc "Menu bar utility for toggling dark mode"
   homepage "https://github.com/r-thomson/Nightfall/"
@@ -11,4 +10,9 @@ cask "nightfall" do
   depends_on macos: ">= :catalina"
 
   app "Nightfall.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.ryanthomson.Nightfall",
+    "~/Library/Containers/com.ryanthomson.Nightfall",
+  ]
 end

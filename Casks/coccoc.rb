@@ -1,9 +1,10 @@
 cask "coccoc" do
-  version "85.0.4183.146,85.0.146"
+  version "87.0.4280.148,87.0.148"
   sha256 :no_check
 
   url "https://files.coccoc.com/browser/mac/coccoc.dmg"
   name "Cốc Cốc"
+  desc "Chromium-based web browser"
   homepage "https://coccoc.com/"
 
   app "CocCoc.app"

@@ -4,7 +4,6 @@ cask "tabula" do
 
   url "https://github.com/tabulapdf/tabula/releases/download/v#{version.major_minor_patch}/tabula-mac-#{version}.zip",
       verified: "github.com/tabulapdf/tabula/"
-  appcast "https://github.com/tabulapdf/tabula/releases.atom"
   name "Tabula"
   desc "Tool for liberating data tables trapped inside PDF files"
   homepage "https://tabula.technology/"

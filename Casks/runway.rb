@@ -1,12 +1,25 @@
 cask "runway" do
-  version "0.17.0"
-  sha256 "0f48d55b5fa184d9513fe7dbaddb4747c1dad2c810e295e6d6dd7aa7467279b1"
+  version "0.19.2"
+  sha256 "25ef6c07a8c0c3832a35d414cfc11ee12f45a8f7c159dcc45129e1514041c474"
 
   url "https://runway-releases.s3.amazonaws.com/Runway-#{version}.dmg",
       verified: "runway-releases.s3.amazonaws.com/"
-  appcast "https://runway-releases.s3.amazonaws.com/latest-mac.yml"
   name "Runway"
+  desc "Creative toolkit powered by machine learning"
   homepage "https://runwayml.com/"
 
+  livecheck do
+    url "https://runway-releases.s3.amazonaws.com/latest-mac.yml"
+    strategy :electron_builder
+  end
+
   app "Runway.app"
+
+  zap trash: [
+    "~/Library/Application Support/Runway",
+    "~/Library/Logs/Runway",
+    "~/Library/Preferences/com.runwayai.runway.plist",
+    "~/Library/Saved Application State/com.runwayai.runway.savedState",
+    "~/.runway",
+  ]
 end

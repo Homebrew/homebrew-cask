@@ -1,18 +1,27 @@
 cask "daedalus-mainnet" do
-  version "3.3.2,16919"
-  sha256 "eb8eaf93fcd6f699797a5a9be9de6b885b26bfd6045194e9fffdbb6c30b064d1"
+  version "4.9.0,21112"
+  sha256 "ce5aac78e03f8b12497b66a141fc655d3fdc037400c1373eefb70d2e634f39b3"
 
-  url "https://update-cardano-mainnet.iohk.io/daedalus-#{version.before_comma}-mainnet-#{version.after_comma}.pkg",
+  url "https://update-cardano-mainnet.iohk.io/daedalus-#{version.csv.first}-mainnet-#{version.csv.second}.pkg",
       verified: "update-cardano-mainnet.iohk.io/"
-  appcast "https://update-cardano-mainnet.iohk.io/daedalus-latest-version.json"
   name "Daedalus Mainnet"
   desc "Cryptocurrency wallet for ada on the Cardano blockchain"
   homepage "https://daedaluswallet.io/"
 
+  livecheck do
+    url "https://update-cardano-mainnet.iohk.io/daedalus-latest-version.json"
+    strategy :page_match do |page|
+      match = page.match(%r{/daedalus[._-](\d+(?:\.\d+)+)[._-]mainnet[._-](\d+)\.pkg}i)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
+    end
+  end
+
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
-  pkg "daedalus-#{version.before_comma}-mainnet-#{version.after_comma}.pkg"
+  pkg "daedalus-#{version.csv.first}-mainnet-#{version.csv.second}.pkg"
 
   uninstall pkgutil: "org.Daedalusmainnet.pkg"
 

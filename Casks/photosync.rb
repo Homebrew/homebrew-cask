@@ -1,8 +1,8 @@
 cask "photosync" do
-  version "4.0,401"
-  sha256 "1a912729cb38991b645c6cd2fd04d4e48e5cbe2fbe8da3ad817a68f4c7ad1974"
+  version "4.2,420"
+  sha256 "20e6e268697a0b8b3841ed30b12e738cdb0a6452b86537dfa258793bbf65d63d"
 
-  url "https://download.photosync-app.com/mac/photosync_#{version.before_comma.dots_to_underscores}.zip"
+  url "https://download.photosync-app.com/mac/photosync_#{version.csv.first.dots_to_underscores}.zip"
   name "PhotoSync Companion"
   homepage "https://www.photosync-app.com/home.html"
 

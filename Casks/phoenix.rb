@@ -1,18 +1,19 @@
 cask "phoenix" do
-  version "2.6.6"
-  sha256 "d860328b044518a609b8b29cd38b505d63840eed79f67f68b7453b5dda12999f"
+  version "3.0.0"
+  sha256 "9fbe966e2f82f8702a431a183fb2a8bc5866233433fb34bc7570df39bf069049"
 
   url "https://github.com/kasper/phoenix/releases/download/#{version}/phoenix-#{version}.tar.gz"
-  appcast "https://github.com/kasper/phoenix/releases.atom"
   name "Phoenix"
+  desc "Window and app manager scriptable with JavaScript"
   homepage "https://github.com/kasper/phoenix/"
 
-  depends_on macos: ">= :yosemite"
+  auto_updates true
+  depends_on macos: ">= :el_capitan"
 
   app "Phoenix.app"
 
   zap trash: [
-    "~/.phoenix.js",
     "~/Library/Application Support/Phoenix/storage.json",
+    "~/Library/Preferences/org.khirviko.Phoenix.plist",
   ]
 end

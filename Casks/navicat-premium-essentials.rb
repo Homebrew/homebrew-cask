@@ -1,11 +1,17 @@
 cask "navicat-premium-essentials" do
-  version "15.0.25"
-  sha256 "a84813c6cccf4161ec2f07e223472a29dba79700e1f299bce690bde201c6c629"
+  version "16.0.11"
+  sha256 :no_check
 
-  url "http://download.navicat.com/download/navicatess#{version.major_minor.no_dots}_premium_en.dmg"
-  appcast "https://updater.navicat.com/mac/navicat_updates.php?appName=Navicat%20Premium%20Essentials&appLang=en"
+  url "https://download.navicat.com/download/navicatess#{version.major_minor.no_dots}_premium_en.dmg"
   name "Navicat Premium Essentials"
+  desc "Database administration and development tool"
   homepage "https://navicat.com/products/navicat-essentials"
+
+  livecheck do
+    cask "navicat-premium"
+  end
+
+  depends_on macos: ">= :mojave"
 
   app "Navicat Premium Essentials.app"
 end

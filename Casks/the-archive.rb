@@ -1,6 +1,6 @@
 cask "the-archive" do
-  version "1.5.9"
-  sha256 "7b7becbe9bdbe975026367bc4b368580fa6daac4988991ca72948838e116108d"
+  version "1.7.5"
+  sha256 "1c3b89131c119d50bc33efcabfb3e73d7c7dd0d81c7c52b0741cfa3220fe5570"
 
   url "https://dlyfuw95744jo.cloudfront.net/TheArchive-v#{version}.dmg",
       verified: "dlyfuw95744jo.cloudfront.net/"
@@ -14,6 +14,7 @@ cask "the-archive" do
   end
 
   auto_updates true
+  depends_on macos: ">= :el_capitan"
 
   app "The Archive.app"
 

@@ -3,11 +3,11 @@ cask "geekbench" do
     version "4.4.2"
     sha256 "3c46e630a28a0752afd702fc1cd379edd2420001be22302c932e61751284c0cc"
   else
-    version "5.3.2,503747"
-    sha256 "33805d2d01ddd32e77c7ad32093e4abe2305a1258309838aa4a5a11757ace883"
+    version "5.4.4,503875"
+    sha256 "6b50e91213e9c4013e352fce1562288e9c4551378cfe0a11d4d27626a7caeb89"
   end
 
-  url "https://cdn.geekbench.com/Geekbench-#{version.before_comma}-Mac.zip"
+  url "https://cdn.geekbench.com/Geekbench-#{version.csv.first}-Mac.zip"
   name "Geekbench"
   desc "Tool to measure the computer system's performance"
   homepage "https://www.geekbench.com/"

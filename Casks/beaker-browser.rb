@@ -4,8 +4,8 @@ cask "beaker-browser" do
 
   url "https://github.com/beakerbrowser/beaker/releases/download/#{version}/beaker-browser-#{version}.dmg",
       verified: "github.com/beakerbrowser/beaker/"
-  appcast "https://github.com/beakerbrowser/beaker/releases.atom"
   name "Beaker Browser"
+  name "Beaker"
   desc "Experimental peer-to-peer web browser"
   homepage "https://beakerbrowser.com/"
 

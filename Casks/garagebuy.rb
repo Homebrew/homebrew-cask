@@ -1,20 +1,24 @@
 cask "garagebuy" do
-  version "3.5.3"
-  sha256 "da6d5de29c3593336ea62a0d7a10a134213bb659b2deee833ee1922e188ed3ea"
+  version "3.6"
+  sha256 "00617c84593b56c2ad2f8b50ee863c2ac469610e2a199ab0ceee5831ea4eec3a"
 
   url "https://www.iwascoding.de/downloads/GarageBuy_#{version}.dmg",
-      verified: "iwascoding.de/"
+      verified: "iwascoding.de/downloads/"
   name "GarageBuy"
   desc "App to assist with finding, tracking, and purchasing items on eBay"
   homepage "https://www.iwascoding.com/GarageBuy/"
 
   livecheck do
     url "https://www.iwascoding.com/GarageBuy/Downloads.html"
-    strategy :page_match
-    regex(%r{href=.*?/GarageBuy_(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/GarageBuy[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   depends_on macos: ">= :sierra"
 
   app "GarageBuy.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.iwascoding.garagebuy2",
+    "~/Library/Containers/com.iwascoding.garagebuy2",
+  ]
 end

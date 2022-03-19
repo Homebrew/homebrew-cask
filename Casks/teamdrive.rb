@@ -1,14 +1,19 @@
 cask "teamdrive" do
-  version "4.6.12.2788"
-  sha256 "5e7d84ba4a184438dddbbbd25fc67b0adc16ef2dcecf8e4051b369d9252ad884"
+  version "4.7.3.3113"
+  sha256 "fa5197a93056534920a81a4f17e1b181eb1d5ab88701fcd6c7517ca3f4b36a12"
 
-  url "https://download.teamdrive.net/#{version.major_minor}.#{version.split(".").last}/TMDR/mac-10.15.7/Install-TeamDrive-#{version}_TMDR.dmg",
+  url "https://download.teamdrive.net/#{version}/TMDR/mac/Install-TeamDrive-#{version}_TMDR.dmg",
       verified: "teamdrive.net/"
-  appcast "https://teamdrive.com/en/downloads/",
-          must_contain: version.major_minor_patch
   name "TeamDrive"
   desc "Secure cloud storage service"
   homepage "https://www.teamdrive.com/"
+
+  livecheck do
+    url "https://teamdrive.com/en/downloads/"
+    regex(/Install[._-]TeamDrive[._-]v?(\d+(?:\.\d+)*)[._-]TMDR\.dmg/i)
+  end
+
+  depends_on macos: ">= :mojave"
 
   installer script: {
     executable: "Install-TeamDrive-#{version}_TMDR.app/Contents/MacOS/osx-x86_64",
@@ -27,4 +32,18 @@ cask "teamdrive" do
               ["QUIT", "com.teamdrive.teamdrive3.MenuExt"],
               ["KILL", "com.teamdrive.teamdrive3.MenuExt"],
             ]
+
+  zap trash: [
+    "/Users/Shared/teamdrive.fsfilter",
+    "/Users/Shared/teamdrive.ini",
+    "~/.teamdrive",
+    "~/Library/Application Scripts/com.teamdrive.teamdrive3.FinderExt",
+    "~/Library/Application Support/teamdrive",
+    "~/Library/Caches/teamdrive",
+    "~/Library/Containers/com.teamdrive.teamdrive3.FinderExt",
+    "~/Library/Group Containers/com.teamdrive.teamdrive3.finderExt",
+    "~/Library/Preferences/com.teamdrive.TeamDrive.plist",
+    "~/Library/Preferences/com.teamdrive.teamdrive3.plist",
+    "~/Library/Saved Application State/com.teamdrive.teamdrive3.savedState",
+  ]
 end

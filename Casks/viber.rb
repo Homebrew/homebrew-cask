@@ -1,5 +1,5 @@
 cask "viber" do
-  version "14.4.1,14412"
+  version "17.1.0,1712"
   sha256 :no_check
 
   url "https://download.viber.com/desktop/mac/Viber.dmg"
@@ -7,7 +7,12 @@ cask "viber" do
   desc "Calling and messaging application focusing on security"
   homepage "https://www.viber.com/"
 
-  depends_on macos: ">= :sierra"
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Viber.app"
 
@@ -15,7 +20,7 @@ cask "viber" do
     "~/Library/Application Scripts/com.viber.osx.macvibershare",
     "~/Library/Application Support/com.viber.osx",
     "~/Library/Application Support/ViberPC",
-    "~/Library/Caches/Viber Media S.à r.l",
+    "~/Library/Caches/Viber Media S.à r.l",
     "~/Library/Caches/com.viber.osx",
     "~/Library/Containers/com.viber.osx.macvibershare",
     "~/Library/Preferences/com.viber.*.plist",

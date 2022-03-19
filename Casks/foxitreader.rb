@@ -1,25 +1,37 @@
 cask "foxitreader" do
-  version "4.1.3"
-  sha256 "88a68e664dd60b4934683283cef1ada7b372533d0bc34bffd6b9bfdf90625def"
+  version "11.1.1"
+  sha256 "30043642510add6f424c0afde40a52e102b701c5901c5398f277040533b688fe"
 
-  url "https://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/mac/#{version.major}.x/#{version.major_minor}/ML/FoxitReader#{version.no_dots}.L10N.Setup.pkg"
+  url "https://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/mac/#{version.major}.x/#{version.major_minor}/ML/FoxitPDFReader#{version.no_dots}.L10N.Setup.pkg",
+      verified: "cdn01.foxitsoftware.com/pub/foxit/reader/desktop/mac/"
   name "Foxit Reader"
   desc "PDF reader"
-  homepage "https://www.foxitsoftware.com/pdf-reader/"
+  homepage "https://www.foxit.com/pdf-reader/"
 
   livecheck do
-    url "https://www.foxitsoftware.com/downloads/latest.html?product=Foxit-Reader&platform=Mac-OS-X"
+    url "https://www.foxit.com/downloads/latest.html?product=Foxit-Reader&platform=Mac-OS-X"
     strategy :header_match do |headers|
-      match = headers["location"].match(%r{/(\d+(?:\.\d+)*)/ML/FoxitReader(\d+)\.L10N\.Setup\.pkg}i)
+      match = headers["location"].match(%r{/(\d+(?:\.\d+)*)/ML/FoxitPDFReader(\d+)\.L10N\.Setup\.pkg}i)
+      next if match.blank?
+
       "#{match[1]}.#{match[2].delete_prefix(match[1].delete("."))}"
     end
   end
 
-  pkg "FoxitReader#{version.no_dots}.L10N.Setup.pkg"
+  pkg "FoxitPDFReader#{version.no_dots}.L10N.Setup.pkg"
 
-  uninstall pkgutil: [
-    "com.foxitsoftware.reader.pkg",
-    "com.foxit.pkg.reader",
-  ],
-            delete:  "/Applications/Foxit Reader.app"
+  uninstall pkgutil:   "com.foxit.pkg.pdfreader",
+            delete:    "/Applications/Foxit PDF Reader.app",
+            launchctl: "com.foxit.PDFReaderUpdateService"
+
+  zap trash: [
+    "~/Library/Application Support/Foxit Software/Addon/Foxit PDF Reader",
+    "~/Library/Application Support/Foxit Software/Foxit PDF Reader",
+    "~/Library/Caches/com.foxit-software.Foxit PDF Reader",
+    "~/Library/HTTPStorages/com.foxit-software.Foxit%20PDF%20Reader.binarycookies",
+    "~/Library/Preferences/Foxit Software",
+    "~/Library/Preferences/com.foxit-software.Foxit PDF Reader*",
+    "~/Library/Saved Application State/com.foxit-software.Foxit PDF Reader.savedState",
+    "/Library/LaunchDaemons/com.foxit.PDFReaderUpdateService.plist",
+  ]
 end

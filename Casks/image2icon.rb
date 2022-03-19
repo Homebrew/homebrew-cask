@@ -1,8 +1,8 @@
 cask "image2icon" do
-  version "2.13,892"
-  sha256 "631d503dfdb264d20ce057c6ea5b65c57b6ea44b1596f453c951922de9fdfe6d"
+  version "2.16,930"
+  sha256 "c860da6709efbd8f9ea2a8684a9978352acf7c3d9380c9464dfae1c09f345534"
 
-  url "https://sf-applications.s3.amazonaws.com/Image2Icon/app-releases/Image2icon#{version.before_comma}.zip",
+  url "https://sf-applications.s3.amazonaws.com/Image2Icon/app-releases/Image2icon#{version.csv.first}.zip",
       verified: "sf-applications.s3.amazonaws.com/Image2Icon/"
   name "Image2Icon"
   desc "Icon creator and file and folder customizer"
@@ -18,8 +18,7 @@ cask "image2icon" do
   zap trash: [
     "~/Library/Caches/net.shinyfrog.image2icon",
     "~/Library/Preferences/net.shinyfrog.image2icon.plist",
-    "~/Library/Containers/net.shinyfrog.image2icon",
-    "~/Library/Containers/net.shinyfrog.image2icon.templateRenderer",
+    "~/Library/Containers/net.shinyfrog.image2icon*",
     "~/Library/Containers/net.shinyfrog.templateRenderer",
     "~/Library/Saved Application State/net.shinyfrog.image2icon.savedState",
   ]

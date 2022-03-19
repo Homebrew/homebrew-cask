@@ -1,11 +1,19 @@
 cask "cloudflare-warp" do
-  version "1.3.206,20210305.5"
+  version "2022.3.36.0,20220308.16"
   sha256 :no_check
 
-  url "https://1.1.1.1/Cloudflare_WARP.zip"
+  url "https://1111-releases.cloudflareclient.com/mac/Cloudflare_WARP.zip",
+      verified: "1111-releases.cloudflareclient.com/mac/"
   name "Cloudflare WARP"
   desc "Free app that makes your Internet safer"
-  homepage "https://1.1.1.1/"
+  homepage "https://cloudflarewarp.com/"
+
+  livecheck do
+    # :sparkle strategy using appcenter url cannot be used - see below link
+    # https://github.com/Homebrew/homebrew-cask/pull/109118#issuecomment-887184248
+    url :url
+    strategy :extract_plist
+  end
 
   auto_updates true
 
@@ -17,4 +25,15 @@ cask "cloudflare-warp" do
               input:      ["Y\n"],
               sudo:       true,
             }
+
+  zap trash: [
+    "~/Library/Application Scripts/com.cloudflare.1dot1dot1dot1.macos.loginlauncherapp",
+    "~/Library/Application Support/com.cloudflare.1dot1dot1dot1.macos",
+    "~/Library/Caches/com.cloudflare.1dot1dot1dot1.macos",
+    "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.cloudflare.1dot1dot1dot1.macos",
+    "~/Library/Containers/com.cloudflare.1dot1dot1dot1.macos.loginlauncherapp",
+    "~/Library/HTTPStorages/com.cloudflare.1dot1dot1dot1.macos",
+    "~/Library/HTTPStorages/com.cloudflare.1dot1dot1dot1.macos.binarycookies",
+    "~/Library/Preferences/com.cloudflare.1dot1dot1dot1.macos.plist",
+  ]
 end

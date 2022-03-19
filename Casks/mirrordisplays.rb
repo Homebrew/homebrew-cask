@@ -4,7 +4,6 @@ cask "mirrordisplays" do
 
   url "https://github.com/fcanas/mirror-displays/releases/download/v#{version}/MirrorDisplays.zip",
       verified: "github.com/fcanas/mirror-displays/"
-  appcast "https://github.com/fcanas/mirror-displays/releases.atom"
   name "Mirror Displays"
   homepage "https://fabiancanas.com/open-source/mirror-displays"
 

@@ -1,8 +1,8 @@
 cask "graphicconverter" do
-  version "11.4,4804"
-  sha256 "6d292b4fa46878a1806ac4af1bace5b9738af3951f4c5e91ff4442509b759d25"
+  version "11.6,5393"
+  sha256 "4a6251d663b2d0dc75d4a831407a30d69fe18c43818a5600f3f3fbf6fea3bae3"
 
-  url "https://www.lemkesoft.info/files/graphicconverter/gc#{version.major}_build#{version.after_comma}.zip",
+  url "https://www.lemkesoft.info/files/graphicconverter/gc#{version.major}_build#{version.csv.second}.zip",
       verified: "lemkesoft.info/"
   name "GraphicConverter"
   desc "For browsing, enhancing and converting images"
@@ -20,7 +20,7 @@ cask "graphicconverter" do
   zap trash: [
     "/Users/Shared/Library/Application Support/GraphicConverter",
     "~/Library/Application Support/GraphicConverter",
-    "~/Library/Group Containers/*.com.lemkesoft.graphicconverter*.group",
     "~/Library/Caches/com.lemkesoft.graphicconverter*",
+    "~/Library/Group Containers/*.com.lemkesoft.graphicconverter*.group",
   ]
 end

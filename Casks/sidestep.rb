@@ -4,7 +4,6 @@ cask "sidestep" do
 
   url "https://github.com/chetan51/sidestep/releases/download/#{version}/Sidestep.zip",
       verified: "github.com/chetan51/sidestep/"
-  appcast "https://github.com/chetan51/sidestep/releases.atom"
   name "Sidestep"
   homepage "https://chetansurpur.com/projects/sidestep/"
 

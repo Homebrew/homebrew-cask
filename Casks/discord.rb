@@ -1,6 +1,6 @@
 cask "discord" do
-  version "0.0.261"
-  sha256 "f6bed5976d1ee223b42986b185626fbc758d5f918aff27d3d7b0c2212406cba9"
+  version "0.0.266"
+  sha256 "ca304913ad6a66d8f17af0f8486880f88988fb4d947b8d858421531715c529c4"
 
   url "https://dl.discordapp.net/apps/osx/#{version}/Discord.dmg",
       verified: "dl.discordapp.net/"
@@ -9,8 +9,8 @@ cask "discord" do
   homepage "https://discord.com/"
 
   livecheck do
-    url "https://discord.com/api/stable/updates?platform=osx"
-    regex(/"name"\s*:\s*"([^"]+)"/i)
+    url "https://discord.com/api/download/stable?platform=osx"
+    strategy :header_match
   end
 
   auto_updates true

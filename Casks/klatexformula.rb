@@ -4,9 +4,14 @@ cask "klatexformula" do
 
   url "https://downloads.sourceforge.net/klatexformula/klatexformula/klatexformula-#{version}/klatexformula-#{version}-macosx.dmg",
       verified: "downloads.sourceforge.net/klatexformula/"
-  appcast "https://sourceforge.net/projects/klatexformula/rss?path=/klatexformula"
   name "KLatexFormula"
+  desc "Generate images from LaTeX equations"
   homepage "https://klatexformula.sourceforge.io/"
 
   app "klatexformula.app"
+
+  zap trash: [
+    "~/Library/Preferences/org.klatexformula.klatexformula.plist",
+    "~/Library/Saved Application State/org.klatexformula.klatexformula.savedState",
+  ]
 end

@@ -4,7 +4,6 @@ cask "laverna" do
 
   url "https://github.com/Laverna/laverna/releases/download/#{version}/laverna-#{version}-darwin-x64.zip",
       verified: "github.com/Laverna/laverna/"
-  appcast "https://github.com/Laverna/laverna/releases.atom"
   name "Laverna"
   homepage "https://laverna.cc/"
 

@@ -1,8 +1,8 @@
 cask "peakhour" do
-  version "4.1.12,35332"
-  sha256 "f255b7bcb53e8eeb99adda90bb60f8cde92df89c09ae9de1ce5f4ecb7e62366c"
+  version "4.1.14,35461"
+  sha256 "4c2f2d44f63986d7b6979269ab2988a9a346e70fae8c7e9a29ff28da55baddf3"
 
-  url "https://updates.peakhourapp.com/releases/PeakHour%20#{version.before_comma}.zip"
+  url "https://updates.peakhourapp.com/releases/PeakHour%20#{version.csv.first}.zip"
   name "PeakHour"
   desc "Network bandwidth and network quality visualiser"
   homepage "https://www.peakhourapp.com/"

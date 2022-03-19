@@ -1,6 +1,6 @@
 cask "hstracker" do
-  version "1.8.1"
-  sha256 "ec8cc1a6dee5b669866ab2c8c88294d38de773cd8c5567d496c3ca6898934da0"
+  version "2.0.13"
+  sha256 "ce292cd564dbc8bbfc0269d6eaebcebb90bd66593a5643a741ce7858493552e0"
 
   url "https://github.com/HearthSim/HSTracker/releases/download/#{version}/HSTracker.app.zip",
       verified: "github.com/HearthSim/HSTracker/"
@@ -10,9 +10,10 @@ cask "hstracker" do
 
   livecheck do
     url :url
-    strategy :git
-    regex(/^(\d+(?:\.\d+)*)$/)
+    regex(/^v?(\d+(?:\.\d+)+)$/)
   end
+
+  depends_on macos: ">= :sierra"
 
   app "HSTracker.app"
 

@@ -1,31 +1,34 @@
 cask "visual-studio" do
-  version "8.9.1.34"
-  sha256 "cc73d2712c31c27fac93288b8d9f073f83595a4b6b34ef9f8dddf924e36f6f85"
+  version "8.10.20.0"
+  sha256 "67e795777e6559ac7fb7167787a274c724bff574006d4f6ff2d1021b907857f2"
 
   url "https://dl.xamarin.com/VsMac/VisualStudioForMac-#{version}.dmg",
       verified: "dl.xamarin.com/VsMac/"
-  appcast "https://docs.microsoft.com/en-us/visualstudio/releasenotes/vs2019-mac-relnotes",
-          must_contain: version.major_minor_patch
   name "Microsoft Visual Studio"
   desc "Integrated development environment"
   homepage "https://www.visualstudio.com/vs/visual-studio-mac/"
 
+  livecheck do
+    url "https://docs.microsoft.com/en-us/visualstudio/releasenotes/vs2019-mac-relnotes"
+    regex(/Visual\s*Studio\s*\d+\s+for\s+Mac\s+version\s+\d+(?:\.\d+)*\s+\((\d+(?:\.\d+)+)\)/i)
+  end
+
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
   depends_on cask: "homebrew/cask-versions/mono-mdk-for-visual-studio"
 
   app "Visual Studio.app"
 
   zap trash: [
-    "/Applications/Xamarin Workbooks.app",
     "/Applications/Xamarin Profiler.app",
-    "~/Library/Application Support/VisualStudio",
+    "/Applications/Xamarin Workbooks.app",
     "~/Library/Application Support/CrashReporter/VisualStudio*",
+    "~/Library/Application Support/VisualStudio",
     "~/Library/Caches/VisualStudio",
+    "~/Library/Developer/Xamarin",
     "~/Library/Logs/VisualStudio",
     "~/Library/Preferences/Visual*Studio",
     "~/Library/Preferences/Xamarin",
-    "~/Library/Developer/Xamarin",
     "~/Library/VisualStudio",
   ]
 end

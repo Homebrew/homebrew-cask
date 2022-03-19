@@ -1,10 +1,10 @@
 cask "icollections" do
-  version "6.7.3,67303"
+  version "6.8.3,68301"
   sha256 :no_check
 
   url "https://naarakstudio.com/download/iCollections.dmg"
   appcast "https://naarakstudio.com/download/icollections/update.ver",
-          must_contain: version.after_comma
+          must_contain: version.csv.second
   name "iCollections"
   desc "App to help keep the desktop organized"
   homepage "https://naarakstudio.com/icollections/"

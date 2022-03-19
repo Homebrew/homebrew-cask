@@ -1,10 +1,10 @@
 cask "bonjeff" do
-  version "1.0.8"
-  sha256 "b352025d99a4eb0624ec15714aa30b434a98f6ec7bebcd040d3301ee7bb120cd"
+  version "2.0.0"
+  sha256 "d6793dffe0c4ebcd962bb8a1802d5c092b24effdd18ec27655eeb3d20b7953fc"
 
-  url "https://github.com/lapcat/Bonjeff/releases/download/v#{version}/Bonjeff.#{version}.zip"
-  appcast "https://github.com/lapcat/Bonjeff/releases.atom"
+  url "https://github.com/lapcat/Bonjeff/releases/download/v#{version}/Bonjeff#{version}.zip"
   name "Bonjeff"
+  desc "Shows a live display of the Bonjour services published on your network"
   homepage "https://github.com/lapcat/Bonjeff"
 
   depends_on macos: ">= :sierra"

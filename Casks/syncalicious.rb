@@ -3,7 +3,6 @@ cask "syncalicious" do
   sha256 "ff43d46269d18c8ac86f7d49f1abae8100f0b0852a594e88925b8e1bccd028f0"
 
   url "https://github.com/zenangst/Syncalicious/releases/download/#{version}/Syncalicious.zip"
-  appcast "https://github.com/zenangst/Syncalicious/releases.atom"
   name "Syncalicious"
   desc "Backup and synchronize preferences across multiple machines"
   homepage "https://github.com/zenangst/Syncalicious"

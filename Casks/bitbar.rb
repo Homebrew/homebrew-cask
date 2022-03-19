@@ -3,7 +3,6 @@ cask "bitbar" do
   sha256 "8a7013dca92715ba80cccef98b84dd1bc8d0b4c4b603f732e006eb204bab43fa"
 
   url "https://github.com/matryer/bitbar/releases/download/v#{version}/BitBar.app.zip"
-  appcast "https://github.com/matryer/bitbar/releases.atom"
   name "BitBar"
   desc "Utility to display the output from any script or program in the menu bar"
   homepage "https://github.com/matryer/bitbar/"

@@ -15,10 +15,14 @@ cask "monolingual" do
 
   url "https://github.com/IngmarStein/Monolingual/releases/download/v#{version}/Monolingual-#{version}.dmg",
       verified: "github.com/IngmarStein/Monolingual/"
-  appcast "https://github.com/IngmarStein/Monolingual/releases.atom"
   name "Monolingual"
   desc "Utility to remove unnecessary language resources from the system"
   homepage "https://ingmarstein.github.io/Monolingual/"
 
   app "Monolingual.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.github.IngmarStein.Monolingual",
+    "~/Library/Containers/com.github.IngmarStein.Monolingual",
+  ]
 end

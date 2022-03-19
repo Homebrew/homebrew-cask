@@ -1,6 +1,6 @@
 cask "goodsync" do
-  version "11.5.6"
-  sha256 "ca407a854c69cfe085247d0811606f6522df02568b1f15f9d3599ab3b0f6ac88"
+  version "11.10.3"
+  sha256 "37917a406348268e2c69db47a3930f0af29ccc4d01869eaa967f20c5ab92fade"
 
   url "https://www.goodsync.com/download/goodsync-v#{version.major}-mac.dmg"
   name "GoodSync"
@@ -9,11 +9,18 @@ cask "goodsync" do
 
   livecheck do
     url "https://www.goodsync.com/download?os=macos"
-    strategy :page_match
-    regex(/GoodSync\ for\ Mac\ v\ (\d+(?:\.\d+)*)/i)
+    regex(/GoodSync\s+for\s+Mac\s+v?\s*(\d+(?:\.\d+)+)/i)
   end
 
   depends_on macos: ">= :yosemite"
 
   app "GoodSync.app"
+
+  zap trash: [
+    "/Library/Application Support/GoodSync",
+    "/Library/LaunchDaemons/com.siber.gs-server.plist",
+    "~/.goodsync",
+    "~/Library/Application Support/GoodSync",
+    "~/Library/Preferences/com.sibersystems.goodsyncmac2000.plist",
+  ]
 end

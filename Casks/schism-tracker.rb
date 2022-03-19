@@ -1,12 +1,11 @@
 cask "schism-tracker" do
-  version "20200412"
-  sha256 "0f43b52949d60787eecc4fd5679f01694f114c17f6ee05a20d49ac995bfa6445"
+  version "20220125"
+  sha256 "4d010b3a4e64a3bf7672affbefe872f43033a7830cf3ba44dda230c4afa2a770"
 
-  url "https://github.com/schismtracker/schismtracker/releases/download/#{version}/schismtracker-#{version}-osx.tar.gz"
-  appcast "https://github.com/schismtracker/schismtracker/releases.atom"
+  url "https://github.com/schismtracker/schismtracker/releases/download/#{version}/schismtracker-#{version}-macos.zip"
   name "Schism Tracker"
   desc "Oldschool sample-based music composition tool"
   homepage "https://github.com/schismtracker/schismtracker"
 
-  app "schismtracker/Schism Tracker.app"
+  app "Schism Tracker.app"
 end

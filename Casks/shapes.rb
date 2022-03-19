@@ -1,11 +1,23 @@
 cask "shapes" do
-  version "4.9"
-  sha256 "9b48bf8bb1d224b8ee85ee3f0746f66aa436544eb4ed6d0ac6bfd5264bb4119c"
+  version "5.0,5002"
+  sha256 "ee6c2946acbd481c260b9894756057f51aff4f11cf9d9904a0d2b3b8524adb95"
 
-  url "http://shapesapp.com/dist/Shapes_#{version}.zip"
-  appcast "http://shapesapp.com/appcast/shapes#{version.major}.rss"
+  url "https://shapesapp.com/dist/Shapes_#{version.csv.first}.zip"
   name "Shapes"
-  homepage "http://shapesapp.com/"
+  desc "Diagramming app"
+  homepage "https://shapesapp.com/"
+
+  livecheck do
+    url "https://shapesapp.com/appcast/shapes#{version.major}.rss"
+    strategy :sparkle
+  end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Shapes.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.celestialteapot.Shapes5",
+    "~/Library/Preferences/com.celestialteapot.Shapes5.plist",
+  ]
 end

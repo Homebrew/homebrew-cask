@@ -4,6 +4,7 @@ cask "graphql-playground" do
 
   url "https://github.com/prisma/graphql-playground/releases/download/v#{version}/graphql-playground-electron-#{version}.dmg"
   name "GraphQL Playground"
+  desc "GraphQL IDE for better development workflows"
   homepage "https://github.com/prisma/graphql-playground"
 
   livecheck do

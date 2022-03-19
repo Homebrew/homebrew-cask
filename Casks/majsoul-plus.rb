@@ -3,7 +3,6 @@ cask "majsoul-plus" do
   sha256 "efac0e077f871a092ce1654466055fdc73c74f22da6a2364588d7b460443a52b"
 
   url "https://github.com/MajsoulPlus/majsoul-plus/releases/download/v#{version}/Majsoul_Plus-#{version}-darwin.dmg"
-  appcast "https://github.com/MajsoulPlus/majsoul-plus/releases.atom"
   name "Majsoul Plus"
   homepage "https://github.com/MajsoulPlus/majsoul-plus/"
 

@@ -1,12 +1,17 @@
 cask "scidavis" do
-  version "1.26"
-  sha256 "bc49df3fc712cdcfee7804bf5e6b6e3d378e4178e07e6f664e05795b93829a1b"
+  version "2.7.1"
+  sha256 "44029e5faeea836ef17922c1cdd58903158e744035e14ef692f07a57f8c62b15"
 
   url "https://downloads.sourceforge.net/scidavis/scidavis-#{version}-mac-dist.dmg",
       verified: "downloads.sourceforge.net/scidavis/"
-  appcast "https://sourceforge.net/projects/scidavis/rss.xml"
-  name "scidavis"
+  name "SciDAVis"
+  desc "Application for scientific data analysis and visualization"
   homepage "https://scidavis.sourceforge.io/"
+
+  livecheck do
+    url "https://sourceforge.net/projects/scidavis/rss.xml"
+    regex(%r{/scidavis[._-]v?(\d+(?:\.\d+)+)[._-]mac[._-]dist\.dmg}i)
+  end
 
   depends_on macos: ">= :yosemite"
 

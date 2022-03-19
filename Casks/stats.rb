@@ -1,9 +1,8 @@
 cask "stats" do
-  version "2.5.4"
-  sha256 "6ef58b9c41d5f7abd0c3ae4750d67269851633271156f8112ff6e63d09474c62"
+  version "2.7.7"
+  sha256 "5d878938ba6e14842372dfa20359a3bd521989bcb1a7f378e362e288a3bdd25e"
 
   url "https://github.com/exelban/stats/releases/download/v#{version}/Stats.dmg"
-  appcast "https://github.com/exelban/stats/releases.atom"
   name "Stats"
   desc "System monitor for the menu bar"
   homepage "https://github.com/exelban/stats"
@@ -16,10 +15,10 @@ cask "stats" do
   uninstall quit: "eu.exelban.Stats"
 
   zap trash: [
-    "~/Library/Preferences/eu.exelban.Stats.plist",
     "~/Library/Application Scripts/eu.exelban.Stats.LaunchAtLogin",
+    "~/Library/Caches/eu.exelban.Stats",
     "~/Library/Containers/eu.exelban.Stats.LaunchAtLogin",
     "~/Library/Cookies/eu.exelban.Stats.binarycookies",
-    "~/Library/Caches/eu.exelban.Stats",
+    "~/Library/Preferences/eu.exelban.Stats.plist",
   ]
 end

@@ -4,7 +4,6 @@ cask "gitnote" do
 
   url "https://github.com/zhaopengme/gitnote/releases/download/#{version}/GitNote_setup_#{version}.dmg",
       verified: "github.com/zhaopengme/gitnote/"
-  appcast "https://github.com/zhaopengme/gitnote/releases.atom"
   name "gitnote"
   homepage "https://gitnoteapp.com/"
 

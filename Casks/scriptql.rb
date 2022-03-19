@@ -1,10 +1,16 @@
 cask "scriptql" do
-  version :latest
+  version "1.1"
   sha256 :no_check
 
-  url "https://www.kainjow.com/downloads/ScriptQL_qlgenerator.zip"
+  url "https://kainjow.com/downloads/ScriptQL_qlgenerator.zip"
   name "ScriptQL"
-  homepage "https://www.kainjow.com/"
+  desc "AppleScript Quick Look plugin"
+  homepage "https://kainjow.com/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   qlplugin "ScriptQL.qlgenerator"
 end

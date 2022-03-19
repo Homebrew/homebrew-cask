@@ -1,10 +1,11 @@
 cask "retroshare" do
-  version "0.6.5"
-  sha256 "6c2e900f236fa8ea06e55e5ca29132656d6eb4bfd0060d9a7b95c650f67d069d"
+  version "0.6.6"
+  sha256 "9a52ae0da3235faba1cb3f4e2b59916d1d0883378ab538c443122f96b935335d"
 
-  url "https://github.com/RetroShare/RetroShare/releases/download/v#{version}/Retroshare-#{version}.OSX-10.13+.dmg",
+  url "https://github.com/RetroShare/RetroShare/releases/download/v#{version}/RetroShare-#{version}-MacOS-10.14-Qt-5.14.1.dmg",
       verified: "github.com/RetroShare/RetroShare/"
   name "RetroShare"
+  desc "Friend-2-Friend and secure decentralised communication platform"
   homepage "https://retroshare.cc/"
 
   livecheck do

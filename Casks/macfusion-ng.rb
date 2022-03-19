@@ -3,9 +3,16 @@ cask "macfusion-ng" do
   sha256 "3e6e356f36623dde805aa3de941e29f6256b02cfe0720bcbd70df4526e2a7198"
 
   url "https://github.com/macfusion-ng/macfusion#{version.major}/releases/download/#{version}/Macfusion.zip"
-  appcast "https://github.com/macfusion-ng/macfusion#{version.major}/releases.atom"
   name "Macfusion"
+  desc "Mount SSH and FTP servers as local volumes"
   homepage "https://github.com/macfusion-ng/macfusion#{version.major}/"
+
+  # This cask uses an unstable version and this `livecheck` block is only used
+  # to prevent livecheck from skipping pre-release versions by default. This
+  # should be removed/updated if the cask is updated to a stable version.
+  livecheck do
+    url :url
+  end
 
   conflicts_with cask: "macfusion"
   depends_on formula: "sshfs"

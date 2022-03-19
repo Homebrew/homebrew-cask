@@ -1,9 +1,10 @@
 cask "blitz" do
-  version "1.13.138"
-  sha256 "64f76d53110bb4b62831b01539d7bc77ef6717e0639031a86b11c5c5595de887"
+  version "1.16.39"
+  sha256 "d29e1e798d69015ad5368b502e96d2a427d2ea50000a084ea7946a6eb328c428"
 
-  url "https://dl.blitz.gg/download/Blitz-#{version}.dmg"
+  url "https://blitz-stable.blitz.gg/Blitz-#{version}.dmg"
   name "Blitz"
+  desc "Performance analysis software"
   homepage "https://blitz.gg/"
 
   livecheck do

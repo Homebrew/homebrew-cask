@@ -1,8 +1,8 @@
 cask "ibm-aspera-connect" do
-  version "3.11.1.58"
-  sha256 "bbbd2707681939af5237d718fc07b61f1a5feca9ff3a3f056b8b27c72acb4b7e"
+  version "4.1.1.73"
+  sha256 "44302e64fdc4625aa0e8fc0ce1807302e4b19ad5c408d140fd89d7ec84b3ad9a"
 
-  url "https://d3gcli72yxqn2z.cloudfront.net/connect_latest/v4/bin/IBMAsperaConnectInstallerOneClick-#{version}.dmg",
+  url "https://d3gcli72yxqn2z.cloudfront.net/connect_latest/v4/bin/ibm-aspera-connect_#{version}_macOS_x86_64.dmg",
       verified: "d3gcli72yxqn2z.cloudfront.net/"
   name "IBM Aspera Connect"
   desc "Facilitate uploads and downloads with an Aspera transfer server"
@@ -10,8 +10,7 @@ cask "ibm-aspera-connect" do
 
   livecheck do
     url "https://d3gcli72yxqn2z.cloudfront.net/connect_latest/v4/connectversions.min.js"
-    strategy :page_match
-    regex(/(\d+(?:\.\d+)*)\.dmg/)
+    regex(/ibm-aspera-connect[._-]v?(\d+(?:\.\d+)+)_macOS_x86_64\.dmg/)
   end
 
   installer manual: "IBM Aspera Connect Installer.app"
@@ -19,6 +18,16 @@ cask "ibm-aspera-connect" do
   uninstall script: {
     executable: "~/Library/Application Support/Aspera/Aspera Connect/uninstall_connect.sh",
     args:       ["-f"],
-  },
-            delete: "~/Library/Logs/Aspera_Connect"
+  }
+
+  zap trash: [
+    "~/Library/Application Scripts/com.aspera.connect.SafariExtension",
+    "~/Library/Application Scripts/com.aspera.drive.SendToExtension",
+    "~/Library/Containers/com.aspera.connect.SafariExtension",
+    "~/Library/Containers/com.aspera.drive.SendToExtension",
+    "~/Library/Group Containers/group.com.aspera.connect",
+    "~/Library/Logs/Aspera_Connect",
+    "~/Library/Preferences/com.aspera.connect.plist",
+    "~/Library/Saved Application State/com.aspera.connect.savedState",
+  ]
 end

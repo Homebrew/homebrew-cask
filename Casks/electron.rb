@@ -1,8 +1,15 @@
 cask "electron" do
-  version "12.0.0"
-  sha256 "18546dec0ecc63d1a679762e00bc85fbb820e08f7ca205924681379bb0a7afc2"
+  arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  url "https://github.com/electron/electron/releases/download/v#{version}/electron-v#{version}-darwin-x64.zip",
+  version "17.1.2"
+
+  if Hardware::CPU.intel?
+    sha256 "d4382d3f01b750676a1f3c9e2273ad69cac16dc64a4145469c663bcda8d2471b"
+  else
+    sha256 "135dec87211fcefdb53ab1fef13344c7b71a321f7c4f6846f260c1e0848e73bf"
+  end
+
+  url "https://github.com/electron/electron/releases/download/v#{version}/electron-v#{version}-darwin-#{arch}.zip",
       verified: "github.com/electron/electron/"
   name "Electron"
   desc "Build desktop apps with JavaScript, HTML, and CSS"

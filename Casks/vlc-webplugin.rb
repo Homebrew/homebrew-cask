@@ -4,7 +4,12 @@ cask "vlc-webplugin" do
 
   url "https://get.videolan.org/vlc/#{version}/macosx/VLC-webplugin-#{version}.dmg"
   name "VLC for OS X web plugin"
+  desc "Web browser plugin"
   homepage "https://www.videolan.org/vlc/download-macosx.html"
 
   internet_plugin "VLC Plugin.plugin"
+
+  caveats do
+    discontinued
+  end
 end

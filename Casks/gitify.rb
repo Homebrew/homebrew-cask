@@ -1,9 +1,8 @@
 cask "gitify" do
-  version "4.2.0"
-  sha256 "208649b9c7fa2059f48340ab7f421a1ca37649b04199586082a91e33d132df1d"
+  version "4.3.1"
+  sha256 "46158a704a94c5a5389aca52fe689b94aa4b3abd1eadbd2378d0f18cf7358ae9"
 
-  url "https://github.com/manosim/gitify/releases/download/v#{version}/Gitify-#{version}-mac.zip"
-  appcast "https://github.com/manosim/gitify/releases.atom"
+  url "https://github.com/manosim/gitify/releases/download/v#{version}/Gitify-#{version}-universal-mac.zip"
   name "Gitify"
   desc "App that shows GitHub notifications on the desktop"
   homepage "https://github.com/manosim/gitify"

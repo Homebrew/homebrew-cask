@@ -1,11 +1,16 @@
 cask "rightzoom" do
-  version "2.3"
-  sha256 "026b18288814a6c548fe18730b4959b8e968ffb2eef31517796e72f7b988242c"
+  version "3.0"
+  sha256 :no_check
 
-  url "https://www.blazingtools.com/mac/RightZoom#{version.no_dots}.zip"
-  appcast "https://www.blazingtools.com/right_zoom_mac.html"
+  url "https://www.blazingtools.com/mac/RightZoom.zip"
   name "Right Zoom"
+  desc "Changes the way the full screen button acts"
   homepage "https://www.blazingtools.com/right_zoom_mac.html"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   app "RightZoom.app"
 end

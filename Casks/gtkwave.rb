@@ -4,10 +4,14 @@ cask "gtkwave" do
 
   url "https://downloads.sourceforge.net/gtkwave/gtkwave-#{version}-osx-app/gtkwave.zip",
       verified: "downloads.sourceforge.net/gtkwave/"
-  appcast "https://sourceforge.net/projects/gtkwave/rss"
   name "GTKWave"
   desc "GTK+ based wave viewer"
   homepage "https://gtkwave.sourceforge.io/"
+
+  livecheck do
+    url :url
+    regex(%r{url=.*?/gtkwave[._-]v?(\d+(?:\.\d+)+)[._-]osx[._-]app/}i)
+  end
 
   app "gtkwave.app"
   binary "#{appdir}/gtkwave.app/Contents/Resources/bin/gtkwave_bin_launcher.sh", target: "gtkwave"

@@ -4,8 +4,8 @@ cask "jedit" do
 
   url "https://downloads.sourceforge.net/jedit/jedit#{version}install.dmg",
       verified: "sourceforge.net/jedit/"
-  appcast "https://sourceforge.net/projects/jedit/rss"
   name "jEdit"
+  desc "Text editor"
   homepage "http://www.jedit.org/"
 
   app "jEdit.app"

@@ -4,12 +4,12 @@ cask "easytether" do
 
   url "http://www.mobile-stream.com/beta/darwin/easytether-yosemite-b#{version}.pkg"
   name "EasyTether"
+  desc "Carrier-independent Internet connection sharing (tethering)"
   homepage "http://www.mobile-stream.com/index.html"
 
   livecheck do
     url "http://www.mobile-stream.com/easytether/drivers.html"
-    strategy :page_match
-    regex(%r{href=.*?/easytether-yosemite-b(\d+)\.pkg}i)
+    regex(%r{href=.*?/easytether[._-]yosemite[._-]b?(\d+(?:\.\d+)*)\.pkg}i)
   end
 
   depends_on macos: ">= :yosemite"

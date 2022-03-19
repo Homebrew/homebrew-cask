@@ -1,6 +1,6 @@
 cask "sourcetrail" do
-  version "2020.4.35"
-  sha256 "cf251f79038acd79609a8978ee369a3f68459b4ca98f919da1900565c2ecc764"
+  version "2021.4.19"
+  sha256 "b2155e5b1f6f97b466d404821a61b57d4db0040356cd7487827ea9a003d65291"
 
   url "https://github.com/CoatiSoftware/Sourcetrail/releases/download/#{version}/Sourcetrail_#{version.dots_to_underscores}_macOS_64bit.dmg",
       verified: "github.com/CoatiSoftware/Sourcetrail/"
@@ -14,4 +14,9 @@ cask "sourcetrail" do
   end
 
   app "Sourcetrail.app"
+
+  zap trash: [
+    "~/Library/Application Support/Sourcetrail",
+    "~/Library/Saved Application State/com.sourcetrail.savedState",
+  ]
 end

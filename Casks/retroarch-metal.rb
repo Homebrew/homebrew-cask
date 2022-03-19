@@ -1,16 +1,17 @@
 cask "retroarch-metal" do
-  version "1.9.0"
-  sha256 "e1f88d0535411eacf1035112a53f732c2bfd8cebbfa4aa9729dc2516ddd7ce24"
+  version "1.10.1"
+  sha256 "85bbd9da4c54238b5df28c982616707aebf33dd4163ac2feeabaeb76d0a72e76"
 
-  url "https://buildbot.libretro.com/stable/#{version}/apple/osx/x86_64/RetroArch_Metal.dmg"
-  appcast "https://buildbot.libretro.com/stable/"
-  name "RetroArch Metal"
+  url "https://buildbot.libretro.com/stable/#{version}/apple/osx/universal/RetroArch_Metal.dmg"
+  name "RetroArch"
+  desc "Emulator frontend (Metal graphics API version)"
   homepage "https://www.libretro.com/"
 
-  conflicts_with cask: [
-    "retroarch",
-    "retroarch-cg",
-  ]
+  livecheck do
+    cask "retroarch"
+  end
+
+  conflicts_with cask: "retroarch"
 
   app "RetroArch.app"
 

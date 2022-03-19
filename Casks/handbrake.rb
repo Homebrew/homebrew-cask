@@ -1,6 +1,6 @@
 cask "handbrake" do
-  version "1.3.3"
-  sha256 "500cb924de7a3cc3a95cac4e69f303fc0623d3524fe59ac4ee4160ff43d56af6"
+  version "1.5.1"
+  sha256 "767cb16314e3869c42cff78db92bcad7a7faa861c70f97b1326fe3686c62b61f"
 
   url "https://github.com/HandBrake/HandBrake/releases/download/#{version}/HandBrake-#{version}.dmg",
       verified: "github.com/HandBrake/HandBrake/"
@@ -14,12 +14,13 @@ cask "handbrake" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "HandBrake.app"
 
   zap trash: [
-    "~/Library/Application Support/HandBrake",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/fr.handbrake.handbrake.sfl*",
+    "~/Library/Application Support/HandBrake",
     "~/Library/Caches/fr.handbrake.HandBrake",
     "~/Library/Preferences/fr.handbrake.HandBrake.plist",
     "~/Library/Saved Application State/fr.handbrake.HandBrake.savedState",

@@ -1,12 +1,19 @@
 cask "crushftp" do
-  version "9"
+  version "10"
   sha256 :no_check # required as upstream package is updated in-place
 
-  url "https://www.crushftp.com/CrushFTP#{version}_OSX.zip"
+  url "https://www.crushftp.com/early#{version}/CrushFTP#{version}.zip",
+      cookies: { "CrushAuth" => "homebrew_homebrew_homebrew_homebrew" }
   name "CrushFTP"
+  desc "File transfer server"
   homepage "https://www.crushftp.com/"
 
-  app "CrushFTP#{version}_OSX/CrushFTP#{version}.app"
+  livecheck do
+    url "https://www.crushftp.com/download.html"
+    regex(/href=.*?CrushFTP(\d+)\.zip/i)
+  end
+
+  suite "CrushFTP#{version}"
 
   caveats do
     depends_on_java

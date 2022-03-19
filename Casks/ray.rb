@@ -1,12 +1,25 @@
 cask "ray" do
-  version "1.12.0"
-  sha256 "6f7c43c34ca9d0a20796f80c7930042900b44ae1d29bfc65585896bd7f37dc5d"
+  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  folder = Hardware::CPU.intel? ? "" : "arm64/"
 
-  url "https://ray-app.s3.eu-west-1.amazonaws.com/Ray-#{version}.dmg",
+  version "2.0.0"
+
+  if Hardware::CPU.intel?
+    sha256 "5e734cd6b75ab00c8df2748d419af294792daae9da7922926a57cf8f653ce514"
+  else
+    sha256 "5eec7112a2884035d7ce854143869217586b0bb9bd7b823087869a8a76e52f3a"
+  end
+
+  url "https://ray-app.s3.eu-west-1.amazonaws.com/#{folder}Ray-#{version}#{arch}.dmg",
       verified: "ray-app.s3.eu-west-1.amazonaws.com/"
   name "Ray"
   desc "Debug with Ray to fix problems faster"
   homepage "https://myray.app/"
+
+  livecheck do
+    url "https://ray-app.s3.amazonaws.com/latest-mac.yml"
+    strategy :electron_builder
+  end
 
   auto_updates true
 

@@ -12,7 +12,7 @@ cask "abricotine" do
   livecheck do
     url "https://github.com/brrd/Abricotine/releases"
     strategy :page_match
-    regex(%r{href=.*?/Abricotine-(\d+(?:\.\d+)*)-osx-x64\.zip}i)
+    regex(%r{href=.*?/Abricotine-(\d+(?:\.\d+)+)-osx-x64\.zip}i)
   end
 
   app "Abricotine-darwin-x64/Abricotine.app"

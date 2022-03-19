@@ -3,7 +3,6 @@ cask "colorpicker-materialdesign" do
   sha256 "244efc1d45c11dbffc478fc92b25ae777b4cfde463b06663290cc8352d6a2464"
 
   url "https://github.com/CodeCatalyst/MaterialDesignColorPicker/releases/download/v#{version}/MaterialDesignColorPicker.colorPicker.zip"
-  appcast "https://github.com/CodeCatalyst/MaterialDesignColorPicker/releases.atom"
   name "Material Design"
   homepage "https://github.com/CodeCatalyst/MaterialDesignColorPicker"
 

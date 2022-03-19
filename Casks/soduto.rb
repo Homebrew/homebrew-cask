@@ -4,6 +4,7 @@ cask "soduto" do
 
   url "https://soduto.com/downloads/Soduto_v#{version}.dmg"
   name "Soduto"
+  desc "Communicate and share information between devices"
   homepage "https://soduto.com/"
 
   livecheck do
@@ -15,4 +16,11 @@ cask "soduto" do
   depends_on macos: ">= :sierra"
 
   app "Soduto.app"
+
+  zap trash: [
+    "~/Library/Containers/com.soduto.Soduto",
+    "~/Library/Containers/com.soduto.SodutoBrowser",
+    "~/Library/Containers/com.soduto.SodutoLauncher",
+    "~/Library/Saved Application State/com.soduto.SodutoBrowser.savedState",
+  ]
 end

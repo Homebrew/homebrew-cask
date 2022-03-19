@@ -1,12 +1,18 @@
 cask "zulip" do
-  version "5.6.0"
-  sha256 "e4a50b3b5d01364c09e4033698b9dfc4d305cecf8b8985deecc6832528dd4a7d"
+  arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  url "https://github.com/zulip/zulip-desktop/releases/download/v#{version}/Zulip-#{version}.dmg",
+  version "5.8.1"
+
+  url "https://github.com/zulip/zulip-desktop/releases/download/v#{version}/Zulip-#{version}-#{arch}.dmg",
       verified: "github.com/zulip/zulip-desktop/"
-  appcast "https://github.com/zulip/zulip-desktop/releases.atom"
+  if Hardware::CPU.intel?
+    sha256 "ccf3ec50b1c3d1dd92d0b5c3307514b73f72056b56e9015b8e911b2fa2dcd887"
+  else
+    sha256 "561a49f84a1a035e26fd9f18b6cfc36da6a028fb4eeb8d6034a8c8d994e5efeb"
+  end
+
   name "Zulip"
-  desc "Desktop client for the Zulip open source team chat platform"
+  desc "Desktop client for the Zulip team chat platform"
   homepage "https://zulipchat.com/apps/"
 
   auto_updates true

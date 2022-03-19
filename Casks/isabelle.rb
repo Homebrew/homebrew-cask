@@ -1,13 +1,17 @@
 cask "isabelle" do
-  version "2020"
-  sha256 "bd0353ee15b9371729e94548c849864d14531eb2e9125fde48122b4da32bd9e9"
+  version "2021-1"
+  sha256 "6cf1ca71345f780890f8ab4032d87e5a4d1e7e0fecacfb510ffa02c777d23458"
 
   url "https://www.cl.cam.ac.uk/research/hvg/Isabelle/dist/Isabelle#{version}_macos.tar.gz"
-  appcast "https://mirror.cse.unsw.edu.au/pub/isabelle/dist/"
   name "Isabelle"
   desc "Generic proof assistant"
   homepage "https://www.cl.cam.ac.uk/research/hvg/Isabelle/"
 
+  livecheck do
+    url :homepage
+    regex(%r{href=.*?/Isabelle(\d+(?:.\d+)*)_macos\.tar\.gz}i)
+  end
+
   app "Isabelle#{version}.app"
-  binary "#{appdir}/Isabelle#{version}.app/Isabelle/bin/isabelle"
+  binary "#{appdir}/Isabelle#{version}.app/bin/isabelle"
 end

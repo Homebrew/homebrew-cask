@@ -4,11 +4,15 @@ cask "magicavoxel" do
 
   url "https://github.com/ephtracy/ephtracy.github.io/releases/download/#{version.major_minor_patch}/MagicaVoxel-#{version}-macos-10.15.zip",
       verified: "github.com/ephtracy/ephtracy.github.io/"
-  appcast "https://github.com/ephtracy/ephtracy.github.io/releases.atom",
-          must_contain: version.major_minor_patch
   name "MagicaVoxel"
   desc "8-bit 3D voxel editor and interactive path tracing renderer"
   homepage "https://ephtracy.github.io/"
+
+  livecheck do
+    url "https://github.com/ephtracy/ephtracy.github.io/releases"
+    strategy :page_match
+    regex(/MagicaVoxel-(\d+(?:\.\d+)*)-macos/i)
+  end
 
   suite staged_path, target: "MagicaVoxel"
 

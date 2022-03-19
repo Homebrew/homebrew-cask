@@ -1,8 +1,8 @@
 cask "acorn" do
-  version "6.6.3,13830"
-  sha256 "7e378a46ce4a5ca6c0d36a0a99914d73a4471113f2cb38b6dc19473b86825da3"
+  version "7.1.3,16020"
+  sha256 "15cf8b1e0abf375b42b0fd748c7f2eb2d0e80d0b19937accd8fbcc8ec89ded39"
 
-  url "https://flyingmeat.com/download/Acorn-#{version.before_comma}.zip"
+  url "https://flyingmeat.com/download/Acorn-#{version.csv.first}.zip"
   name "Acorn"
   desc "Image editor focused on simplicity"
   homepage "https://flyingmeat.com/acorn/"

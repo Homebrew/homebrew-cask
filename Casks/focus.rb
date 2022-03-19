@@ -1,9 +1,10 @@
 cask "focus" do
-  version "1.11"
-  sha256 "4be805d35fc57d24debc0e4d0fd36b74d08c2f93d26c9daea7c8ac45019cb345"
+  version "1.13"
+  sha256 "056bbb214ae14ff5ea3ec99766220169e42f593bee9e258d43d7a3135c70d8c6"
 
   url "https://heyfocus.com/uploads/Focus-v#{version}.zip"
   name "Focus"
+  desc "Website and application blocker"
   homepage "https://heyfocus.com/"
 
   livecheck do
@@ -11,13 +12,15 @@ cask "focus" do
     strategy :header_match
   end
 
+  depends_on macos: ">= :yosemite"
+
   app "Focus.app"
 
   uninstall quit: "BradJasper.focus"
 
   zap trash: [
-    "~/Library/Caches/BradJasper.focus/",
     "~/Library/Application Support/Focus/",
+    "~/Library/Caches/BradJasper.focus/",
     "~/Library/Preferences/BradJasper.focus.plist",
   ]
 end

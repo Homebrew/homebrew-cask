@@ -1,12 +1,21 @@
 cask "sequel-ace" do
-  version "3.2.3,3024"
-  sha256 "c9119c42e5d266bee224e1b8cde3a458ab93e82979025947a3662dcc3e5b87cd"
+  version "3.5.1,20031"
+  sha256 "145ef09101e7435e933bd3086fabf60c84b991a5a6b3dc26e1eb4a5d70173195"
 
-  url "https://github.com/Sequel-Ace/Sequel-Ace/releases/download/production/#{version.before_comma}-#{version.after_comma}/Sequel-Ace-#{version.before_comma}.zip"
-  appcast "https://github.com/Sequel-Ace/Sequel-Ace/releases.atom"
+  url "https://github.com/Sequel-Ace/Sequel-Ace/releases/download/production/#{version.csv.first}-#{version.csv.second}/Sequel-Ace-#{version.csv.first}.zip"
   name "Sequel Ace"
   desc "MySQL/MariaDB database management"
   homepage "https://github.com/Sequel-Ace/Sequel-Ace"
+
+  livecheck do
+    url :url
+    strategy :github_latest do |page|
+      match = page.match(%r{href=.*?/tag/production/v?(\d+(?:\.\d+)+)-(\d+)["' >]}i)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
+    end
+  end
 
   app "Sequel Ace.app"
 

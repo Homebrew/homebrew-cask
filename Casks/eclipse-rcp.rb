@@ -1,20 +1,21 @@
 cask "eclipse-rcp" do
-  version "4.18.0,2020-12:R"
-  sha256 "cb2fa051770bc69a223fb987595496c849dff663c66b3ef93fe7f4ee850de197"
+  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
-  url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.after_comma.before_colon}/#{version.after_colon}/eclipse-rcp-#{version.after_comma.before_colon}-#{version.after_colon}-macosx-cocoa-x86_64.dmg&r=1"
+  version "4.22.0,2021-12"
+
+  if Hardware::CPU.intel?
+    sha256 "e64b09c51f71327f6822faaf9e459e76a5bebf48ed599876ca55732ff33d89f7"
+  else
+    sha256 "852a41ea297428e240ff97266d2f5deff9719e2352f464a322613b17dbbc34d7"
+  end
+
+  url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-rcp-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&r=1"
   name "Eclipse for RCP and RAP Developers"
+  desc "Eclipse IDE for RCP and RAP developers"
   homepage "https://eclipse.org/"
 
   livecheck do
-    url "https://projects.eclipse.org/releases/"
-    strategy :page_match do |page|
-      page.scan(%r{href=.*projects.eclipse.org/releases/(\d+-\d+)}i).map do |release|
-        version_page = Net::HTTP.get(URI.parse("https://projects.eclipse.org/releases/#{release[0]}"))
-        version = version_page.scan(%r{href="/projects/eclipse/releases/(\d+(?:\.\d+)*)"}i)
-        "#{version[0][0]},#{release[0]}:R"
-      end
-    end
+    cask "eclipse-ide"
   end
 
   # Renamed to avoid conflict with other Eclipse.

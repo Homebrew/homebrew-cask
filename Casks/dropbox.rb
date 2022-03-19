@@ -1,14 +1,17 @@
 cask "dropbox" do
-  version "117.4.378"
+  arch = Hardware::CPU.intel? ? "" : "&arch=arm64"
+
+  version "144.4.4491"
   sha256 :no_check
 
-  url "https://www.dropbox.com/download?plat=mac&full=1"
+  url "https://www.dropbox.com/download?plat=mac&full=1#{arch}"
   name "Dropbox"
   desc "Client for the Dropbox cloud storage service"
   homepage "https://www.dropbox.com/"
 
   livecheck do
     url :url
+    regex(%r{/Dropbox(?:%20|[._-])v?(\d+(?:\.\d+)+)}i)
     strategy :header_match
   end
 
@@ -31,8 +34,8 @@ cask "dropbox" do
     "~/Library/Application Support/Dropbox",
     "~/Library/Caches/CloudKit/com.apple.bird/iCloud.com.getdropbox.Dropbox",
     "~/Library/Caches/com.dropbox.DropboxMacUpdate",
-    "~/Library/Caches/com.getdropbox.DropboxMetaInstaller",
     "~/Library/Caches/com.getdropbox.dropbox",
+    "~/Library/Caches/com.getdropbox.DropboxMetaInstaller",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.dropbox.DropboxMacUpdate",
     "~/Library/Containers/com.dropbox.activityprovider",
     "~/Library/Containers/com.dropbox.foldertagger",

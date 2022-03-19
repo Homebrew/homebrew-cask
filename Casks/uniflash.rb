@@ -1,6 +1,6 @@
 cask "uniflash" do
-  version "6.2.0.3059"
-  sha256 "8c43684e3ab3e1ef1202503c3eb6dfc34139432568c6294cbc77002f3175fbc2"
+  version "7.0.0.3615"
+  sha256 "d858da86d2ebbedd8c85173663eaf877e284e92f685a463dcbf2fa2efcd47ca7"
 
   url "https://downloads.ti.com/ccs/esd/uniflash/uniflash_sl.#{version}.dmg"
   name "TI UniFlash"
@@ -9,7 +9,7 @@ cask "uniflash" do
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?/uniflash_sl\.(\d+(?:\.\d+)*)\.dmg}i)
+    regex(/href=.*?uniflash_sl\.(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   installer script: {
@@ -21,7 +21,7 @@ cask "uniflash" do
   binary shimscript
 
   preflight do
-    IO.write shimscript, <<~EOS
+    File.write shimscript, <<~EOS
       #!/bin/sh
       exec '/Applications/TI/UniFlash/dslite.sh' "$@"
     EOS

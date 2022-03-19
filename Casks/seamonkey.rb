@@ -1,39 +1,50 @@
 cask "seamonkey" do
-  version "2.53.5.1"
+  version "2.53.11"
 
   language "de" do
-    sha256 "4c14e1c717198f770069b102a43b38be09df789892302f1e5f0563d7f4e35079"
+    sha256 "0abe96a48b0ef764eec1d3185cbdcdddb6541618401afe22203884705ef35038"
     "de"
   end
   language "en-GB" do
-    sha256 "a3efa795ab6aed915b2fd47b2640db099b0299be82e5f2b5b667df3a3756690f"
+    sha256 "1055012271698385d2ace746b739cbc96fad25b9817a8063da8b8c27c3d33a30"
     "en-GB"
   end
   language "en-US", default: true do
-    sha256 "437c4127483d8db3c0cfcfe978f17d12345de7172e3b1fe712172f2a8cd03bce"
+    sha256 "c5f3cadb834323b813fefca9110bf7ba78b507bbdc7dd06de5b797d12e2aac57"
     "en-US"
   end
   language "fr" do
-    sha256 "846580b1ada457df23f44e3976f3cca0c6e03d1c777e68b683ad6c039763e534"
+    sha256 "e004daef88557140f43709fe256aa96b42b1d756324c1b49c7d9d6e8e3016f16"
     "fr"
   end
   language "it" do
-    sha256 "7b57f8c76aafde48cb8ce48caf616495d24bfa8ce795af94043d7e495933a41b"
+    sha256 "75e723a24f07a00af9e4b4b93cc1015a78bbb906a8e5e79638c2ede41b4ba09c"
     "it"
   end
   language "ru" do
-    sha256 "06639433277b3c4fbf08cded488168b4ed0c3121ed9f3b0ed09954d984a320e8"
+    sha256 "de04600e3b422251c8ce628835dcff1528e9e0eb1111321e306f6c9842cf1220"
     "ru"
   end
 
   url "https://archive.mozilla.org/pub/seamonkey/releases/#{version}/mac/#{language}/seamonkey-#{version}.#{language}.mac.dmg",
       verified: "mozilla.org/pub/seamonkey/releases/"
-  appcast "https://www.seamonkey-project.org/releases/"
   name "SeaMonkey"
   desc "Development of SeaMonkey Internet Application Suite"
   homepage "https://www.seamonkey-project.org/"
 
+  livecheck do
+    url "https://www.seamonkey-project.org/releases/"
+    regex(%r{href=.*?/seamonkey-(\d+(?:\.\d+)+)\.en-US\.mac\.dmg}i)
+  end
+
   auto_updates true
 
   app "SeaMonkey.app"
+
+  zap trash: [
+    "~/Library/Application Support/SeaMonkey",
+    "~/Library/Caches/SeaMonkey",
+    "~/Library/Preferences/org.mozilla.seamonkey.plist",
+    "~/Library/Saved Application State/org.mozilla.seamonkey.savedState",
+  ]
 end

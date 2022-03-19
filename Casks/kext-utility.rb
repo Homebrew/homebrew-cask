@@ -4,12 +4,12 @@ cask "kext-utility" do
 
   url "https://cvad-mac.narod.ru/files/Kext_Utility.app.v#{version}.zip"
   name "Kext Utility"
+  desc "Kext repair tool"
   homepage "https://cvad-mac.narod.ru/index/0-4"
 
   livecheck do
-    url "https://cvad-mac.narod.ru/index/0-4"
-    strategy :page_match
-    regex(%r{href=.*?/Kext_Utility\.app\.v?(\d+(?:\.\d+)*)\.zip}i)
+    url :homepage
+    regex(%r{href=.*?/Kext[._-]Utility\.app\.v?(\d+(?:\.\d+)+)\.zip}i)
   end
 
   app "Kext Utility.app"

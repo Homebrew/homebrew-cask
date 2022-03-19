@@ -1,10 +1,9 @@
 cask "mailspring" do
-  version "1.8.0"
-  sha256 "3128301a258d9439b4075bd2ba34c8b10d3bc93eb4da82ba4054bcebef9d6da6"
+  version "1.9.2"
+  sha256 "8e5ab30e60307fe8f2db72f1c7ea432769f33c6e3a59d571a66cc1ad4f3b3e4c"
 
   url "https://github.com/Foundry376/Mailspring/releases/download/#{version}/Mailspring.zip",
       verified: "github.com/Foundry376/Mailspring/"
-  appcast "https://github.com/Foundry376/Mailspring/releases.atom"
   name "Mailspring"
   desc "Fork of Nylas Mail"
   homepage "https://getmailspring.com/"
@@ -15,9 +14,9 @@ cask "mailspring" do
 
   zap trash: [
     "~/Library/Application Support/Mailspring",
-    "~/Library/Preferences/com.mailspring.*",
     "~/Library/Caches/com.mailspring.*",
-    "~/Library/Saved Application State/com.mailspring.*",
     "~/Library/Logs/Mailspring",
+    "~/Library/Preferences/com.mailspring.*",
+    "~/Library/Saved Application State/com.mailspring.*",
   ]
 end

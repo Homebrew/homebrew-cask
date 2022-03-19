@@ -1,6 +1,6 @@
 cask "outset" do
-  version "3.0.1"
-  sha256 "c00c0041e6fb02e457ada88072b71ef92ffdee75778af51a0f82b8cd71a7987e"
+  version "3.0.3"
+  sha256 "ab9ae93045eaee02a4e57dd5ff18e026ed2381062c1579e4555ff7112c110df4"
 
   url "https://github.com/chilcote/outset/releases/download/#{version}/outset-#{version}.pkg"
   name "outset"

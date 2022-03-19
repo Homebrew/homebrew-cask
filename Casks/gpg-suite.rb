@@ -1,6 +1,6 @@
 cask "gpg-suite" do
-  version "2020.2"
-  sha256 "e2ede6b317d53d1e321342a6f7dd5ab6b123a4900aa8f1eab89b29051a2a4742"
+  version "2022.1"
+  sha256 "d1a17bb4c8c62960d7ae7ff352a3647bc3109b8989dae4ed7b51cf8a71048768"
 
   url "https://releases.gpgtools.org/GPG_Suite-#{version}.dmg"
   name "GPG Suite"
@@ -8,12 +8,16 @@ cask "gpg-suite" do
   homepage "https://gpgtools.org/"
 
   livecheck do
-    url "https://gpgtools.org/download"
-    strategy :header_match
+    url :homepage
+    regex(/href=.*?GPG_Suite[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   auto_updates true
-  conflicts_with cask: "gpg-suite-nightly"
+  conflicts_with cask: [
+    "gpg-suite-nightly",
+    "gpg-suite-no-mail",
+    "gpg-suite-pinentry",
+  ], formula: "gpg"
   depends_on macos: ">= :mojave"
 
   pkg "Install.pkg"
@@ -31,49 +35,50 @@ cask "gpg-suite" do
             pkgutil:   "org.gpgtools.*",
             quit:      [
               "com.apple.mail",
-              "org.gpgtools.gpgkeychainaccess",
               "org.gpgtools.gpgkeychain",
+              "org.gpgtools.gpgkeychainaccess",
               "org.gpgtools.gpgmail.upgrader",
               "org.gpgtools.gpgservices",
               # TODO: add "killall -kill gpg-agent"
             ],
             launchctl: [
-              "org.gpgtools.Libmacgpg.xpc",
-              "org.gpgtools.gpgmail.patch-uuid-user",
-              "org.gpgtools.macgpg2.fix",
-              "org.gpgtools.macgpg2.shutdown-gpg-agent",
-              "org.gpgtools.macgpg2.updater",
-              "org.gpgtools.macgpg2.gpg-agent",
               "org.gpgtools.gpgmail.enable-bundles",
+              "org.gpgtools.gpgmail.patch-uuid-user",
               "org.gpgtools.gpgmail.user-uuid-patcher",
               "org.gpgtools.gpgmail.uuid-patcher",
+              "org.gpgtools.Libmacgpg.xpc",
+              "org.gpgtools.macgpg2.fix",
+              "org.gpgtools.macgpg2.gpg-agent",
+              "org.gpgtools.macgpg2.shutdown-gpg-agent",
+              "org.gpgtools.macgpg2.updater",
               "org.gpgtools.updater",
             ],
             delete:    [
-              "/Library/Services/GPGServices.service",
-              "/Library/Mail/Bundles/GPGMail.mailbundle",
-              "/Library/Mail/Bundles.gpgmail*",
-              "/Network/Library/Mail/Bundles/GPGMail.mailbundle",
-              "/usr/local/MacGPG2",
-              "/private/etc/paths.d/MacGPG2",
-              "/private/etc/manpaths.d/MacGPG2",
-              "/private/tmp/gpg-agent",
-              "/Library/PreferencePanes/GPGPreferences.prefPane",
               "/Library/Application Support/GPGTools",
               "/Library/Frameworks/Libmacgpg.framework",
+              "/Library/Mail/Bundles.gpgmail*",
+              "/Library/Mail/Bundles/GPGMail.mailbundle",
+              "/Library/PreferencePanes/GPGPreferences.prefPane",
+              "/Library/Services/GPGServices.service",
+              "/Network/Library/Mail/Bundles/GPGMail.mailbundle",
+              "/private/etc/manpaths.d/MacGPG2",
+              "/private/etc/paths.d/MacGPG2",
+              "/private/tmp/gpg-agent",
+              "/usr/local/MacGPG2",
             ]
 
   zap trash: [
-    "~/Library/Services/GPGServices.service",
-    "~/Library/Mail/Bundles/GPGMail.mailbundle",
-    "~/Library/PreferencePanes/GPGPreferences.prefPane",
-    "~/Library/LaunchAgents/org.gpgtools.*",
+    "~/Containers/com.apple.mail/Data/Library/Frameworks/Libmacgpg.framework",
+    "~/Library/Application Support/GPGTools",
+    "~/Library/Caches/org.gpgtools.gpg*",
     "~/Library/Containers/com.apple.mail/Data/Library/Preferences/org.gpgtools.*",
     "~/Library/Frameworks/Libmacgpg.framework",
-    "~/Containers/com.apple.mail/Data/Library/Frameworks/Libmacgpg.framework",
-    "~/Library/Caches/org.gpgtools.gpg*",
-    "~/Library/Application Support/GPGTools",
+    "~/Library/HTTPStorages/org.gpgtools.*",
+    "~/Library/LaunchAgents/org.gpgtools.*",
+    "~/Library/Mail/Bundles/GPGMail.mailbundle",
+    "~/Library/PreferencePanes/GPGPreferences.prefPane",
     "~/Library/Preferences/org.gpgtools.*",
+    "~/Library/Services/GPGServices.service",
   ]
 
   caveats do

@@ -11,4 +11,6 @@ cask "happymac" do
   depends_on macos: ">= :sierra"
 
   app "happymac.app"
+
+  zap trash: "~/HappyMacApp"
 end

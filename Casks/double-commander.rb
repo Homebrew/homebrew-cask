@@ -4,8 +4,8 @@ cask "double-commander" do
 
   url "https://downloads.sourceforge.net/doublecmd/doublecmd-#{version}.qt.x86_64.dmg",
       verified: "downloads.sourceforge.net/doublecmd/"
-  appcast "https://sourceforge.net/projects/doublecmd/rss"
   name "Double Commander"
+  desc "File manager"
   homepage "https://doublecmd.sourceforge.io/"
 
   app "Double Commander.app"

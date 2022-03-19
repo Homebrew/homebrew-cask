@@ -1,11 +1,17 @@
 cask "angband" do
-  version "4.2.1"
-  sha256 "82fb2a2939c4ad2d3157a13013a69291cb44165052e01b1c4d4fc35f8a3fbe2b"
+  version "4.2.4"
+  sha256 "a0260cbd00807f0d495a3743dca9cc94938978cd90bd6872394ac4bb11cce880"
 
-  url "https://rephial.org/downloads/#{version.major_minor}/Angband-#{version}-osx.dmg"
-  appcast "https://rephial.org/release/"
+  url "https://github.com/angband/angband/releases/download/#{version}/Angband-#{version}-osx.dmg",
+      verified: "github.com/angband/angband/"
   name "Angband"
-  homepage "https://rephial.org/"
+  desc "Dungeon exploration game"
+  homepage "https://angband.github.io/angband/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   depends_on macos: ">= :sierra"
 

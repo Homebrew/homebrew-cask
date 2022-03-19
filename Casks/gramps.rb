@@ -1,8 +1,8 @@
 cask "gramps" do
-  version "5.1.3,4"
-  sha256 "30d4a44d2900c3c8519f90e0b2f7236d3859002b8ba30596b0900c5634a80f33"
+  version "5.1.5,1"
+  sha256 "16e7416fd1aa48f4e67190123572a02f795b75e1af3b88d67b4dde9a8e1e7dfe"
 
-  url "https://github.com/gramps-project/gramps/releases/download/v#{version.before_comma}/Gramps-Intel-#{version.before_comma}-#{version.after_comma}.dmg",
+  url "https://github.com/gramps-project/gramps/releases/download/v#{version.csv.first}/Gramps-Intel-#{version.csv.first}-#{version.csv.second}.dmg",
       verified: "github.com/gramps-project/gramps/"
   name "Gramps"
   desc "Genealogy software"
@@ -11,7 +11,9 @@ cask "gramps" do
   livecheck do
     url "https://github.com/gramps-project/gramps/releases/latest"
     strategy :page_match do |page|
-      match = page.match(%r{href=.*?/Gramps-Intel-(\d+(?:.\d+)*)-(\d+)\.dmg}i)
+      match = page.match(%r{href=.*?/Gramps[._-]Intel[._-]v?(\d+(?:.\d+)+)[._-](\d+)\.dmg}i)
+      next if match.blank?
+
       "#{match[1]},#{match[2]}"
     end
   end

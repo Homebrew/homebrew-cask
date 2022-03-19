@@ -1,10 +1,9 @@
 cask "surge-synthesizer" do
-  version "1.8.1"
-  sha256 "20aa7648b626ad06b35f63542ca928f629c41f2105cfc93681881152fbc0120c"
+  version "1.9.0"
+  sha256 "f64329c0dcba60fea9c7bf56c584e124de24527e6625dab19f1f689b128880e5"
 
   url "https://github.com/surge-synthesizer/releases/releases/download/#{version}/Surge-#{version}-Setup.dmg",
       verified: "github.com/surge-synthesizer/releases/"
-  appcast "https://github.com/surge-synthesizer/releases/releases.atom"
   name "Surge"
   desc "Hybrid synthesizer"
   homepage "https://surge-synthesizer.github.io/"

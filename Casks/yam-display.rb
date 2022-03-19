@@ -1,9 +1,10 @@
 cask "yam-display" do
-  version "1.8.8"
-  sha256 "9d7ea3042119dbbc83d1a243e4fb4c3f2795678d4a5fe51fd67f4987e6ccb859"
+  version "2.2.8"
+  sha256 "38c605dfb130b63a1b89229dc8e022c3f9eba689a3a19ee184df511c9d261153"
 
   url "https://www.yamdisplay.com/app/YamDisplay#{version}.zip"
   name "Yam Display"
+  desc "Yet another monitor"
   homepage "https://www.yamdisplay.com/"
 
   livecheck do

@@ -4,9 +4,13 @@ cask "sigdigger" do
 
   url "https://github.com/BatchDrake/SigDigger/releases/download/v#{version}/SigDigger-#{version}-x86_64.dmg",
       verified: "github.com/BatchDrake/SigDigger/"
-  appcast "https://github.com/BatchDrake/SigDigger/releases.atom"
   name "SigDigger"
   homepage "https://batchdrake.github.io/SigDigger/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "SigDigger.app"
 end

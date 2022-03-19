@@ -4,6 +4,7 @@ cask "macbreakz" do
 
   url "https://www.publicspace.net/download/MacBreakZ#{version.major}.dmg"
   name "MacBreakZ"
+  desc "Ergonomic Assistant to prevent health problems"
   homepage "https://www.publicspace.net/MacBreakZ/"
 
   livecheck do
@@ -12,4 +13,6 @@ cask "macbreakz" do
   end
 
   app "MacBreakZ #{version.major}.app"
+
+  zap trash: "~/Library/Caches/com.apple.helpd/Generated/MacBreakZ Help*#{version}"
 end

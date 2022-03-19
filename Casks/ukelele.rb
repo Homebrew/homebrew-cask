@@ -1,9 +1,10 @@
 cask "ukelele" do
-  version "3.5.1,340"
-  sha256 "f512159bfbe7c13c4007e45b4149c7825916e4999ab6d632b2a8541580f92b85"
+  version "3.5.5,351"
+  sha256 "7a4309b0694aa5e802efc877260e71171fe8762802386b362c0fdbb183b39c61"
 
-  url "https://software.sil.org/downloads/r/ukelele/Ukelele_#{version.before_comma}.dmg"
+  url "https://software.sil.org/downloads/r/ukelele/Ukelele_#{version.csv.first}.dmg"
   name "Ukelele"
+  desc "Unicode keyboard layout editor"
   homepage "https://software.sil.org/ukelele/"
 
   livecheck do
@@ -15,8 +16,8 @@ cask "ukelele" do
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.sil.ukelele.sfl*",
+    "~/Library/Caches/org.sil.Ukelele",
     "~/Library/Preferences/org.sil.ukelele.plist",
     "~/Library/Preferences/Ukelele",
-    "~/Library/Caches/org.sil.Ukelele",
   ]
 end

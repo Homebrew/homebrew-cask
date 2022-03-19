@@ -4,10 +4,16 @@ cask "jubler" do
 
   url "https://github.com/teras/Jubler/releases/download/v#{version}/Jubler-#{version}.dmg",
       verified: "github.com/teras/Jubler/"
-  appcast "https://github.com/teras/Jubler/releases.atom"
   name "Jubler"
   desc "Subtitle editor"
   homepage "https://www.jubler.org/"
 
   app "Jubler.app"
+
+  zap trash: [
+    "~/Library/Application Support/Jubler",
+    "~/Library/Preferences/com.panayotis.jubler.config",
+    "~/Library/Preferences/com.panayotis.jubler.config.old",
+    "~/Library/Preferences/com.panayotis.jubler.plist",
+  ]
 end

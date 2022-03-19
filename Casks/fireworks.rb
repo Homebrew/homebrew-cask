@@ -1,12 +1,18 @@
 cask "fireworks" do
-  version "1.2,1200"
+  version "1.2"
   sha256 :no_check
 
   url "https://www.fireworksapp.xyz/public/fireworks.zip"
-  appcast "https://www.fireworksapp.xyz"
   name "Fireworks"
   desc "Particle effects editor"
   homepage "https://www.fireworksapp.xyz/"
+
+  livecheck do
+    url :homepage
+    regex(/Download\s+v?(\d+(?:\.\d+)+)/i)
+  end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Fireworks.app"
 

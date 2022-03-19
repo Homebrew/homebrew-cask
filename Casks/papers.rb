@@ -4,6 +4,7 @@ cask "papers" do
 
   url "https://download.readcube.com/app/Install%20Papers.zip"
   name "ReadCube Papers"
+  desc "Reference management software for researchers"
   homepage "https://www.readcube.com/home"
 
   installer manual: "Papers Installer.app"

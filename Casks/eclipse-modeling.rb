@@ -1,20 +1,21 @@
 cask "eclipse-modeling" do
-  version "4.18.0,2020-12:R"
-  sha256 "f2c39ac1ff166901f195dc51ed867896e05d415af5a3285aaf146dd6248fd75b"
+  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
-  url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.after_comma.before_colon}/#{version.after_colon}/eclipse-modeling-#{version.after_comma.before_colon}-#{version.after_colon}-macosx-cocoa-x86_64.dmg&r=1"
+  version "4.22.0,2021-12"
+
+  if Hardware::CPU.intel?
+    sha256 "5a5a847d4c9bfb6df462baee4e0cc78f56e06562f5de79252071486dd589cd01"
+  else
+    sha256 "7558bead45bf18509f8e689fd9a4091605af2e8dd09e171b648b9e8dc3e82435"
+  end
+
+  url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-modeling-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&r=1"
   name "Eclipse Modeling Tools"
+  desc "Tools and runtimes for building model-based applications"
   homepage "https://eclipse.org/"
 
   livecheck do
-    url "https://projects.eclipse.org/releases/"
-    strategy :page_match do |page|
-      page.scan(%r{href=.*projects.eclipse.org/releases/(\d+-\d+)}i).map do |release|
-        version_page = Net::HTTP.get(URI.parse("https://projects.eclipse.org/releases/#{release[0]}"))
-        version = version_page.scan(%r{href="/projects/eclipse/releases/(\d+(?:\.\d+)*)"}i)
-        "#{version[0][0]},#{release[0]}:R"
-      end
-    end
+    cask "eclipse-ide"
   end
 
   # Renamed to avoid conflict with other Eclipse.

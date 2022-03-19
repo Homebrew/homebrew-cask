@@ -1,5 +1,5 @@
 cask "moneymoney" do
-  version "2.4.2,382"
+  version "2.4.10,399"
   sha256 :no_check
 
   url "https://service.moneymoney-app.com/1/MoneyMoney.zip"
@@ -15,4 +15,11 @@ cask "moneymoney" do
   auto_updates true
 
   app "MoneyMoney.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.moneymoney-app.retail",
+    "~/Library/Caches/com.moneymoney-app.retail",
+    "~/Library/Containers/MoneyMoney",
+    "~/Library/Saved Application State/com.moneymoney-app.retail.savedState",
+  ]
 end

@@ -1,17 +1,20 @@
 cask "xiami" do
-  version "7.5.8,7058,30b52410ba8955c21df3c3555fa75f6c:a916a2565fc172a83bc0106f1f4c23d5"
+  version "7.5.8,7058,30b52410ba8955c21df3c3555fa75f6c,a916a2565fc172a83bc0106f1f4c23d5"
   sha256 "6afc939ec54927ef8cee8ab4c015477e3efbda9e638242877bffadd183f39bb2"
 
-  url "https://files.xiami.com/xiamiMac/#{version.after_comma.after_comma.before_colon}/#{version.after_colon}.zip"
+  url "https://files.xiami.com/xiamiMac/#{version.csv.third}/#{version.csv.fourth}.zip"
   name "Xiami"
   name "虾米音乐"
+  desc "Music content management and distribution"
   homepage "https://www.xiami.com/"
 
   livecheck do
     url "https://g.alicdn.com/music/desktop-app/XiamiMac.xml"
     strategy :sparkle do |item|
       match = item.url.match(%r{/([^/]+)/([^/]+)\.zip}i)
-      "#{item.short_version},#{item.version},#{match[1]}:#{match[2]}"
+      next if match.blank?
+
+      "#{item.short_version},#{item.version},#{match[1]},#{match[2]}"
     end
   end
 

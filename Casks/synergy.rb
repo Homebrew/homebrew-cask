@@ -1,12 +1,27 @@
 cask "synergy" do
-  version "1.13.0,bdb8f767"
-  sha256 "94796404c500d0c396d94a21e541fe3dca08bb7d491815f741f093bfe3b26ffa"
+  arch = Hardware::CPU.intel? ? "_x86-64" : "-arm64"
 
-  url "https://binaries.symless.com/synergy/v#{version.before_comma.major}-core-standard/#{version.before_comma}-stable-#{version.after_comma}/synergy_#{version.before_comma}-stable.#{version.after_comma}_macos_x86-64.dmg"
-  appcast "https://github.com/symless/synergy-core/releases.atom"
+  version "1.14.2,c6918b74"
+
+  if Hardware::CPU.intel?
+    sha256 "a331a373020f81a10bbef7e7a21ffd4875dfd3f4ca41f427c5c2a3c91bd43d0e"
+  else
+    sha256 "6238c6894a56b5e977e5a81e4333a074f02ec299eb6e6f3e79a365b495e1faf3"
+  end
+
+  url "https://binaries.symless.com/synergy/v#{version.csv.first.major}-core-standard/#{version.csv.first}-stable.#{version.csv.second}/synergy_#{version.csv.first}-stable.#{version.csv.second}_macos#{arch}.dmg"
   name "Synergy"
   desc "Keyboard and mouse sharing tool - open-source core"
   homepage "https://symless.com/synergy"
+
+  livecheck do
+    url "https://github.com/symless/synergy-core"
+    strategy :github_latest do |page|
+      version = page[%r{href=.*?/tag/v?(\d+(?:\.\d+){,2})(?:\.\d+)*[._-]stable}i, 1]
+      commit = page[%r{href=.*?/commit/(\h{8})}i, 1]
+      "#{version},#{commit}"
+    end
+  end
 
   app "Synergy.app"
 end

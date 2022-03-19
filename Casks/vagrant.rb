@@ -1,13 +1,17 @@
 cask "vagrant" do
-  version "2.2.14"
-  sha256 "76b849b26e6d6187a7829212b05545d3b424e05f1bcd0f7163da1e5117084fa6"
+  version "2.2.19"
+  sha256 "6307be217813a11c9e106448bf232803031e434a08c8b2df8c62fdc9e8543845"
 
   url "https://releases.hashicorp.com/vagrant/#{version}/vagrant_#{version}_x86_64.dmg",
       verified: "hashicorp.com/vagrant/"
-  appcast "https://github.com/hashicorp/vagrant/releases.atom"
   name "Vagrant"
   desc "Development environment"
   homepage "https://www.vagrantup.com/"
+
+  livecheck do
+    url "https://github.com/hashicorp/vagrant"
+    strategy :git
+  end
 
   pkg "vagrant.pkg"
 

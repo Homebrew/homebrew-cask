@@ -1,20 +1,27 @@
 cask "corretto" do
-  version "15.0.2.7.1"
-  sha256 "07fceb0782298f791fc0f68dcc703481ce6ae26c44aa5f3e0cbcc5fd09bbb30a"
+  arch = Hardware::CPU.intel? ? "x64" : "aarch64"
 
-  url "https://corretto.aws/downloads/resources/#{version.sub(/-\d+/, "")}/amazon-corretto-#{version}-macosx-x64.pkg"
+  version "17.0.2.8.1"
+
+  if Hardware::CPU.intel?
+    sha256 "8856ff07f1b225b7444bf30aea69963641ad18a27312ce2770512b1a4d5ced5b"
+  else
+    sha256 "182dd6a5064d5a4135b82bca6293f1d557d5c48ba64bf0e05c931153ba06802c"
+  end
+
+  url "https://corretto.aws/downloads/resources/#{version.sub(/-\d+/, "")}/amazon-corretto-#{version}-macosx-#{arch}.pkg"
   name "AWS Corretto JDK"
   desc "OpenJDK distribution from Amazon"
   homepage "https://corretto.aws/"
 
   livecheck do
-    url "https://corretto.aws/downloads/latest/amazon-corretto-#{version.major}-x64-macos-jdk.pkg"
+    url "https://corretto.aws/downloads/latest/amazon-corretto-#{version.major}-#{arch}-macos-jdk.pkg"
     strategy :header_match do |headers|
-      headers["location"][%r{/amazon-corretto-(\d+(?:\.\d+)*)-macosx-x64\.pkg}i, 1]
+      headers["location"][%r{/amazon-corretto-(\d+(?:\.\d+)+)-macosx-#{arch}\.pkg}i, 1]
     end
   end
 
-  pkg "amazon-corretto-#{version}-macosx-x64.pkg"
+  pkg "amazon-corretto-#{version}-macosx-#{arch}.pkg"
 
   uninstall pkgutil: "com.amazon.corretto.#{version.major}"
 end

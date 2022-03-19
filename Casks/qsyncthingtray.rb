@@ -3,7 +3,6 @@ cask "qsyncthingtray" do
   sha256 "1a8bf6975d5f9b1952edf1a070e35338d2c0f6ff9939e3dcda742280baa645b1"
 
   url "https://github.com/sieren/QSyncthingTray/releases/download/#{version}/QSyncthingTray_#{version}_MAC.dmg"
-  appcast "https://github.com/sieren/QSyncthingTray/releases.atom"
   name "QSyncthingTray"
   desc "Tray app for Syncthing"
   homepage "https://github.com/sieren/QSyncthingTray"

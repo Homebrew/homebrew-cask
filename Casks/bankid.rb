@@ -1,9 +1,10 @@
 cask "bankid" do
-  version "7.10.0"
-  sha256 "4ea124c97c4d138bdf32de71ff32074bebd79614a4f1e35e16aa5a6b24fafd1e"
+  version "7.12.0"
+  sha256 "a53860dc1ea5b2879e908022ec4478423824a9a702b387dcfc838284a51645d8"
 
-  url "https://install.bankid.com/Repository/BankID_installation_#{version.dots_to_underscores}.pkg"
+  url "https://cdn.bankid.com/bisp/mac/BankID_installation_#{version.dots_to_underscores}.pkg"
   name "BankID"
+  desc "Electronic personal identification system"
   homepage "https://install.bankid.com/"
 
   livecheck do

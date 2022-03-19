@@ -1,6 +1,6 @@
 cask "smartsvn" do
-  version "14.0.3"
-  sha256 "c38ddac8526a00ea297eb05bde20849e879867047e4833d7dc37c67ce0a3602a"
+  version "14.1.3"
+  sha256 "f92358a5c6dbcbee10984a0fbf37bc956ee3607e195f8e9043a78b8b32e386ba"
 
   url "https://www.smartsvn.com/downloads/smartsvn/smartsvn-macosx-#{version.dots_to_underscores}.dmg"
   name "SmartSVN"
@@ -9,7 +9,7 @@ cask "smartsvn" do
 
   livecheck do
     url "https://www.smartsvn.com/documents/smartsvn/changelog.txt"
-    regex(/SmartSVN\s+(\d+(?:\.\d+)*)/i)
+    regex(/SmartSVN\s+v?(\d+(?:\.\d+)+)/i)
   end
 
   depends_on macos: ">= :el_capitan"

@@ -1,9 +1,10 @@
 cask "mplab-xc16" do
-  version "1.61"
-  sha256 "d02ebe6ae6daa430827148c51eb0d667cdaf1e58ff7d3302c6b9c57a8efed7e8"
+  version "2.00"
+  sha256 "df1c619ebc35f360fcb7f809983fdb81613ebb153b324ac14ba1d654817456e7"
 
   url "https://ww1.microchip.com/downloads/en/DeviceDoc/xc16-v#{version}-full-install-osx64-installer.dmg"
   name "MPLab XC16 Compiler"
+  desc "Compiler for 16-bit PIC and SAM MCUs and MPUs"
   homepage "https://www.microchip.com/mplab/compilers"
 
   livecheck do

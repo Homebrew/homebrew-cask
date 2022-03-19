@@ -1,6 +1,6 @@
 cask "zecwallet-lite" do
-  version "1.4.2"
-  sha256 "09e99c3458f4f05f6cd3b68339073b13871fc93bfbefbc0c6bbd968611808331"
+  version "1.7.8"
+  sha256 "51f3c73de24ed044e9f6f883b651d556885857637a38df049382af6eeebd6fa5"
 
   url "https://github.com/adityapk00/zecwallet-lite/releases/download/v#{version}/Zecwallet.Lite-#{version}.dmg",
       verified: "github.com/adityapk00/zecwallet-lite/"

@@ -5,8 +5,8 @@ cask "sf-symbols" do
 
     url "https://devimages-cdn.apple.com/design/resources/download/SF-Symbols.dmg"
   else
-    version "2.1"
-    sha256 "97af56dee070ddf7f22cf649aab9bde61edab4aa16021702e51d912a8303c02e"
+    version "3.2"
+    sha256 "07da570ca37ecc6a023e7b2f774ce1f72c6960f5013e040225c9f7265073330a"
 
     url "https://devimages-cdn.apple.com/design/resources/download/SF-Symbols-#{version}.dmg"
   end
@@ -18,9 +18,10 @@ cask "sf-symbols" do
   livecheck do
     url "https://developer.apple.com/sf-symbols/"
     strategy :page_match
-    regex(%r{href=.*?/SF-Symbols-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/SF-Symbols-(\d+(?:\.\d+)+)\.dmg}i)
   end
 
+  auto_updates true
   depends_on macos: ">= :mojave"
 
   pkg "SF Symbols.pkg"

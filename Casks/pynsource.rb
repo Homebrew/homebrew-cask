@@ -1,19 +1,19 @@
 cask "pynsource" do
-  version "1.77"
-  sha256 "1b4f6fca899876f0482de79ade1fa4d18cd2084eedbf08504311b0e3b46c649f"
+  version "1.84"
+  sha256 "6c979c404c388bd712c3507d1f9494a11586106179deaba5a2ea83207716a112"
 
-  url "https://github.com/abulka/pynsource/releases/download/version-#{version}/pynsource-#{version}-macosx.zip",
+  url "https://github.com/abulka/pynsource/releases/download/version-#{version}/pynsource-macos-version-#{version}.zip",
       verified: "github.com/abulka/pynsource/"
   name "Pynsource"
+  desc "Reverse engineer Python source code into UML"
   homepage "https://www.pynsource.com/"
 
   livecheck do
     url :url
-    strategy :git
-    regex(/^version-(\d+(?:\.\d+)*)$/)
+    regex(/^version[._-]v?(\d+(?:\.\d+)+)$/)
   end
 
-  app "pynsource.app"
+  app "Pynsource.app"
 
   zap trash: [
     "~/Library/Application Support/PyNsource",

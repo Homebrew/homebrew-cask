@@ -1,20 +1,21 @@
 cask "eclipse-dsl" do
-  version "4.18.0,2020-12:R"
-  sha256 "1a17c68f62d690576a4e32be7febc30dd4efb827b4a8a558a5ca46206263370b"
+  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
-  url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.after_comma.before_colon}/#{version.after_colon}/eclipse-dsl-#{version.after_comma.before_colon}-#{version.after_colon}-macosx-cocoa-x86_64.dmg&r=1"
+  version "4.22.0,2021-12"
+
+  if Hardware::CPU.intel?
+    sha256 "46ca25ded90512de578ba8879db1fb18a9bc98498f9b091dce84732cf7c04a78"
+  else
+    sha256 "33dc8f7bb75659dffc850790db1e9027e63adfea4cf91295918a6dcaa0819ca0"
+  end
+
+  url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-dsl-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&r=1"
   name "Eclipse IDE for Java and DSL Developers"
+  desc "Eclipse IDE for Java and DSL developers"
   homepage "https://eclipse.org/"
 
   livecheck do
-    url "https://projects.eclipse.org/releases/"
-    strategy :page_match do |page|
-      page.scan(%r{href=.*projects.eclipse.org/releases/(\d+-\d+)}i).map do |release|
-        version_page = Net::HTTP.get(URI.parse("https://projects.eclipse.org/releases/#{release[0]}"))
-        version = version_page.scan(%r{href="/projects/eclipse/releases/(\d+(?:\.\d+)*)"}i)
-        "#{version[0][0]},#{release[0]}:R"
-      end
-    end
+    cask "eclipse-ide"
   end
 
   # Renamed to avoid conflict with other Eclipse.

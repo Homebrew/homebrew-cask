@@ -4,10 +4,14 @@ cask "thyme" do
 
   url "https://github.com/joaomoreno/thyme/releases/download/#{version}/Thyme.#{version}.dmg",
       verified: "github.com/joaomoreno/thyme/"
-  appcast "https://github.com/joaomoreno/thyme/releases.atom"
   name "Thyme"
   desc "Task timer"
   homepage "https://joaomoreno.github.io/thyme/"
 
   app "Thyme.app"
+
+  zap trash: [
+    "~/Library/Application Support/Thyme",
+    "~/Library/Preferences/com.joaomoreno.Thyme.plist",
+  ]
 end

@@ -1,6 +1,6 @@
 cask "scratch" do
-  version "3.19.2"
-  sha256 "b5791f6eec147388e0c042230ba7cef2030a09a05bc4983296c8bb24cfa85750"
+  version "3.29.1"
+  sha256 "0032867c2eb6885e1e1f3e24fe24f37fc5a12c3e995825f8eea5630eb8052860"
 
   url "https://downloads.scratch.mit.edu/desktop/Scratch%20#{version}.dmg"
   name "Scratch"
@@ -15,4 +15,9 @@ cask "scratch" do
   depends_on macos: ">= :high_sierra"
 
   app "Scratch #{version.major}.app"
+
+  zap trash: [
+    "~/Library/Application Support/Scratch",
+    "~/Library/Preferences/edu.mit.scratch.scratch-desktop.plist",
+  ]
 end

@@ -1,16 +1,21 @@
 cask "clipgrab" do
-  version "3.9.6"
-  sha256 "45282684f1f8e957a98a4023467bc693153368618935698e7b4f2a9f44773495"
+  version "3.9.7,1010"
+  sha256 "514fc0e8ec9c37aface3eb070710de7dae329794dda63aac5d1e40d629220399"
 
-  url "https://download.clipgrab.org/ClipGrab-#{version}.dmg"
+  url "https://download.clipgrab.org/ClipGrab-#{version.csv.first}-cpython-#{version.csv.last}.dmg"
   name "ClipGrab"
   desc "Downloads videos and audio from websites"
   homepage "https://clipgrab.org/"
 
   livecheck do
     url "https://clipgrab.org/"
-    strategy :page_match
-    regex(%r{href=.*?/ClipGrab-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/ClipGrab[._-]v?(\d+(?:\.\d+)+)-cpython-(\d+)\.dmg}i)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
+    end
   end
 
   depends_on macos: ">= :sierra"

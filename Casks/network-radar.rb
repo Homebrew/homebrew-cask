@@ -1,5 +1,5 @@
 cask "network-radar" do
-  version "2.10,290b"
+  version "3.0.1,316b"
   sha256 :no_check
 
   url "https://witt-software.com/downloads/networkradar/Network%20Radar.dmg"
@@ -12,12 +12,14 @@ cask "network-radar" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :el_capitan"
+  auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Network Radar.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.mac-attender.Network-Radar*",
     "~/Library/Containers/com.mac-attender.Network-Radar*",
+    "~/Library/Preferences/com.mac-attender.Network-Radar.plist",
   ]
 end

@@ -4,8 +4,8 @@ cask "dhs" do
 
   url "https://bitbucket.org/objective-see/deploy/downloads/DHS_#{version}.zip",
       verified: "bitbucket.org/objective-see/"
-  appcast "https://objective-see.com/products/changelogs/DHS.txt"
   name "Dylib Hijack Scanner"
+  desc "Scans for dylib hijacking"
   homepage "https://objective-see.com/products/dhs.html"
 
   app "DHS.app"

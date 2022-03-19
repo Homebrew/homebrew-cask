@@ -1,11 +1,20 @@
 cask "redcine-x-pro" do
-  version "52.2.50136"
-  sha256 "d16bd655838b91b7999b8651d4f28347f4e57492cf15c7139328629909b91624"
+  version "54.0,51463"
+  sha256 "12164f4ce2a40b22c071779a24413eecedde51f2b6fadd71ffaa421f366aba59"
 
-  url "http://downloads.red.com/software/rcx/mac/release/#{version.major}.#{version.patch}/REDCINE-X_PRO_Build_#{version.major_minor}.pkg"
-  appcast "https://www.red.com/RedSuiteCentric/SCA-Kilimanjaro/services/Download.Service.ss?downloadIdentifier=redcine-x-pro-mac"
+  url "https://downloads.red.com/software/rcx/mac/release/#{version.major}.#{version.csv.second}/REDCINE-X_PRO_Build_#{version.csv.first}.pkg"
   name "REDCINE-X PRO"
+  desc "Transcode and manipulate REDCODE RAW footage"
   homepage "https://www.red.com/"
+
+  livecheck do
+    url "https://www.red.com/RedSuiteCentric/SCA-Kilimanjaro/services/Download.Service.ss?downloadIdentifier=redcine-x-pro-mac"
+    strategy :page_match do |page|
+      json = JSON.parse(page)
+      latest = json["data"][0]
+      "#{latest["versionMajor"]}.#{latest["versionMinor"]},#{latest["versionRevision"]}"
+    end
+  end
 
   pkg "REDCINE-X_PRO_Build_#{version.major_minor}.pkg"
 

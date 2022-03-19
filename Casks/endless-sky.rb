@@ -1,10 +1,9 @@
 cask "endless-sky" do
-  version "0.9.12"
-  sha256 "4b6a4e45b173fd986ae9fab775267795361befb3f68ac6b9cb6517f69eee22aa"
+  version "0.9.14"
+  sha256 "c55fe79a7403e7667222a4b1531a51da6dd3d2990ede0e97fd121672164dab4b"
 
-  url "https://github.com/endless-sky/endless-sky/releases/download/v#{version}/endless-sky-macos-#{version}.dmg",
+  url "https://github.com/endless-sky/endless-sky/releases/download/v#{version}/endless-sky-macos-v#{version}.dmg",
       verified: "github.com/endless-sky/endless-sky/"
-  appcast "https://github.com/endless-sky/endless-sky/releases.atom"
   name "Endless Sky"
   desc "Space exploration, trading, and combat game"
   homepage "https://endless-sky.github.io/"

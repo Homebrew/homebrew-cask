@@ -15,10 +15,10 @@ cask "evernote" do
 
     url "https://cdn1.evernote.com/mac-smd/public/Evernote_RELEASE_#{version}.dmg"
   else
-    version "10.9.10,2439"
-    sha256 "5e3991b7e9018c4f5872847bc0bec3472a335126eb3e748e829cfaad8c0e467e"
+    version "10.33.4,3285,c3c0da8cee"
+    sha256 "28f3e8b417cf14ff7da68e55a7fb3feab3d768c17ed02db36ecc23e4b74a7ae9"
 
-    url "https://cdn1.evernote.com/boron/mac/builds/Evernote-#{version.before_comma}-mac-ddl-ga-#{version.after_comma}.dmg"
+    url "https://cdn1.evernote.com/boron/mac/builds/Evernote-#{version.csv.first}-mac-ddl-ga-#{version.csv.second}-#{version.csv.third}.dmg"
   end
 
   name "Evernote"
@@ -27,9 +27,14 @@ cask "evernote" do
 
   livecheck do
     url "https://evernote.s3.amazonaws.com/boron/mac/public/latest-mac.yml"
-    strategy :page_match do |page|
-      match = page.match(/(\d+(?:\.\d+)*)-mac-ddl-ga-(\d+)\.zip/)
-      "#{match[1]},#{match[2]}"
+    regex(/Evernote[._-](\d+(?:\.\d+)+)-mac-ddl-ga-(\d+(?:\.\d+)*)-([0-9a-f]+)\.dmg/i)
+    strategy :electron_builder do |yaml, regex|
+      yaml["files"]&.map do |file|
+        match = file["url"]&.match(regex)
+        next if match.blank?
+
+        "#{match[1]},#{match[2]},#{match[3]}"
+      end
     end
   end
 
@@ -43,15 +48,15 @@ cask "evernote" do
   ]
 
   zap trash: [
-    "~/Library/Application Support/Evernote",
+    "~/Library/Application Support/Caches/evernote-client-updater",
     "~/Library/Application Support/com.evernote.Evernote",
     "~/Library/Application Support/com.evernote.EvernoteHelper",
-    "~/Library/Application Support/Caches/evernote-client-updater",
+    "~/Library/Application Support/Evernote",
     "~/Library/Caches/com.evernote.Evernote",
+    "~/Library/Cookies/com.evernote.Evernote.binarycookies",
+    "~/Library/Logs/Evernote",
     "~/Library/Preferences/com.evernote.Evernote.plist",
     "~/Library/Preferences/com.evernote.EvernoteHelper.plist",
-    "~/Library/Logs/Evernote",
-    "~/Library/Cookies/com.evernote.Evernote.binarycookies",
     "~/Library/Saved Application State/com.evernote.Evernote.savedState",
   ]
 end

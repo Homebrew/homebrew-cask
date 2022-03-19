@@ -1,6 +1,6 @@
 cask "oss-browser" do
-  version "1.14.0"
-  sha256 "7f1dc15059fb16fc10ece2f544b5f587682890d46101f09e1ea3aa691fe635cf"
+  version "1.16.0"
+  sha256 "db165811bb5b862c1e6037a8b477157171b6e684fd0b2c1a7c1652d4614604d2"
 
   url "https://oss-attachment.cn-hangzhou.oss.aliyun-inc.com/oss-browser/#{version}/oss-browser-darwin-x64.zip",
       verified: "oss-attachment.cn-hangzhou.oss.aliyun-inc.com"
@@ -11,7 +11,7 @@ cask "oss-browser" do
   livecheck do
     url :homepage
     strategy :page_match
-    regex(%r{href=.*?/(\d+(?:\.\d+)*)/oss-browser-darwin-x64\.zip}i)
+    regex(%r{href=.*?/(\d+(?:\.\d+)+)/oss-browser-darwin-x64\.zip}i)
   end
 
   app "oss-browser-darwin-x64/oss-browser.app"

@@ -1,18 +1,19 @@
 cask "cleanshot" do
-  version "3.5.1"
-  sha256 "760e84da1ee6249fa40d317240e4cc426902f3f05359e1bc01d86af6f341cf23"
+  version "4.1"
+  sha256 "50f7926fa620cd89db57c38785de7e25883144583903c30de32451c5d11c4b25"
 
-  url "https://updates.getcleanshot.com/v#{version.major}/CleanShot-X-#{version}.dmg"
+  url "https://updates.getcleanshot.com/v3/CleanShot-X-#{version}.dmg"
   name "CleanShot"
   desc "Screen capturing tool"
   homepage "https://getcleanshot.com/"
 
   livecheck do
-    url "https://updates.getcleanshot.com/v#{version.major}/appcast.xml"
-    strategy :sparkle
+    url "https://cleanshot.com/changelog"
+    regex(/class="number">(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
+  depends_on macos: ">= :sierra"
 
   app "CleanShot X.app"
 
@@ -20,8 +21,9 @@ cask "cleanshot" do
 
   zap trash: [
     "~/Library/Application Support/CleanShot",
-    "~/Library/Caches/SentryCrash/CleanShot X",
     "~/Library/Caches/pl.maketheweb.cleanshotx",
+    "~/Library/Caches/SentryCrash/CleanShot X",
+    "~/Library/Preferences/com.getcleanshot.app.plist",
     "~/Library/Preferences/pl.maketheweb.cleanshotx.plist",
   ]
 end

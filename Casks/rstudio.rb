@@ -1,16 +1,21 @@
 cask "rstudio" do
-  version "1.4.1106"
-  sha256 "c64d2cda7c73686540313e26822f927f839c048f9135fe2f3db10f0fd26083f5"
+  version "2022.02.0,443"
+  sha256 "391d5f188fe2ebc0dc67ee35b3d3c389e3772b5b95c1fdcfb6b983b94038298d"
 
-  url "https://rstudio-desktop.s3.amazonaws.com/desktop/macos/RStudio-#{version}.dmg",
+  url "https://rstudio-desktop.s3.amazonaws.com/desktop/macos/RStudio-#{version.csv.first}-#{version.csv.second}.dmg",
       verified: "rstudio-desktop.s3.amazonaws.com/"
   name "RStudio"
   desc "Data science software focusing on R and Python"
   homepage "https://www.rstudio.com/"
 
   livecheck do
-    url "https://rstudio.org/download/latest/stable/desktop/mac/RStudio-latest.dmg"
-    strategy :header_match
+    url "https://www.rstudio.com/products/rstudio/download/"
+    strategy :page_match do |page|
+      match = page.match(/RStudio-(\d+(?:\.\d+)+)-(\d+)\.dmg/i)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
+    end
   end
 
   conflicts_with cask: "homebrew/cask-versions/rstudio-preview"

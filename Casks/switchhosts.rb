@@ -1,18 +1,31 @@
 cask "switchhosts" do
-  version "3.5.7.5554"
-  sha256 "e837625cf19d881e33ebffb9984fbaca7d9c74780d67767f0b015595b176c82d"
+  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  version "4.1.1.6077"
 
-  url "https://github.com/oldj/SwitchHosts/releases/download/v#{version.major_minor_patch}/SwitchHosts._macOS_#{version}.dmg",
+  if Hardware::CPU.intel?
+    sha256 "c1997049a9721cedd9bedcf031f91c46b06b1abe502b34dc2408906df10c9b30"
+  else
+    sha256 "15dc0715559be2bb0d1252d27deba8fd1f23cb9be53a492b1da5e4bb4afa436d"
+  end
+
+  url "https://github.com/oldj/SwitchHosts/releases/download/v#{version.major_minor_patch}/SwitchHosts_mac_#{arch}_#{version}.dmg",
       verified: "github.com/oldj/SwitchHosts/"
-  name "SwitchHosts!"
+  name "SwitchHosts"
   desc "App to switch hosts"
   homepage "https://oldj.github.io/SwitchHosts/"
 
   livecheck do
     url :url
     strategy :github_latest
-    regex(%r{/SwitchHosts\._macOS_(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{/SwitchHosts_mac_#{arch}[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  app "SwitchHosts!.app"
+  app "SwitchHosts.app"
+
+  zap trash: [
+    "~/Library/Application Support/SwitchHosts",
+    "~/Library/Preferences/SwitchHosts.plist",
+    "~/Library/Saved Application State/SwitchHosts.savedState",
+    "~/.SwitchHosts",
+  ]
 end

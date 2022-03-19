@@ -1,6 +1,6 @@
 cask "nano" do
-  version "21.2"
-  sha256 "a5f6a987b1516495afc64810b41003f0332de49ec4d54b6f1ed652dbba7f5896"
+  version "23.0"
+  sha256 "2cd67cfda8b52b445a2173b7b46cbed1d7a60b9fbf46962a80774109b1204e31"
 
   url "https://github.com/nanocurrency/nano-node/releases/download/V#{version}/nano-node-V#{version}-Darwin.dmg",
       verified: "github.com/nanocurrency/nano-node/"
@@ -19,7 +19,7 @@ cask "nano" do
 
   zap trash: [
     "~/Library/Preferences/net.raiblocks.rai_wallet.Nano.plist",
-    "~/Library/Saved Application State/net.raiblocks.rai_wallet.savedState",
     "~/Library/RaiBlocks",
+    "~/Library/Saved Application State/net.raiblocks.rai_wallet.savedState",
   ]
 end

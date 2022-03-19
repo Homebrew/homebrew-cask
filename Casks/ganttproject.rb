@@ -1,19 +1,12 @@
 cask "ganttproject" do
-  version "2.8.11,2396"
-  sha256 "b8f64286ca9c04f606336994785c5ed3995c1842f8b1d82199f7ad0bb01d2851"
+  version "3.2.3200"
+  sha256 "6dde4a151cabdf69fe84a3ea6d4b943233c8f9cb181bdac9168a6748e74778a6"
 
-  url "https://github.com/bardsoftware/ganttproject/releases/download/ganttproject-#{version.before_comma}/ganttproject-#{version.before_comma}-r#{version.after_comma}.dmg",
+  url "https://github.com/bardsoftware/ganttproject/releases/download/ganttproject-#{version}/ganttproject-#{version}.dmg",
       verified: "github.com/bardsoftware/ganttproject/"
   name "GanttProject"
+  desc "Gantt chart and project management application"
   homepage "https://www.ganttproject.biz/"
-
-  livecheck do
-    url "https://github.com/bardsoftware/ganttproject/releases/latest"
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/ganttproject-(\d+(?:.\d+)*)-r(\d+)\.dmg}i)
-      "#{match[1]},#{match[2]}"
-    end
-  end
 
   app "GanttProject.app"
 end

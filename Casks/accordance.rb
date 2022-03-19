@@ -1,6 +1,6 @@
 cask "accordance" do
-  version "13.1.5"
-  sha256 "f87115b27a41c56350cc760dbca137353a485d2400e797e032dfcc76710bbfa1"
+  version "13.3.2"
+  sha256 "d425e73ab3d15aee0e57f4226e08d3d884f2dfd33956e5e612e3b3b03da07790"
 
   url "https://accordancefiles1.com/products/Accordance_#{version}.dmg",
       verified: "accordancefiles1.com/"

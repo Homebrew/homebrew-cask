@@ -1,8 +1,8 @@
 cask "agenda" do
-  version "12.0.2,181"
-  sha256 "defa0876ae5bcb0a2afc61ef6b32efe967955323969a8991cf26f5efae523ad2"
+  version "13.1.1,195"
+  sha256 "5ce0632c652b69c51135d2137ac5b1e9e3be1007866a1a13878024b3bceb61af"
 
-  url "https://downloads.agenda.com/Agenda_#{version.before_comma}.zip"
+  url "https://downloads.agenda.com/Agenda_#{version.csv.first}.zip"
   name "Agenda"
   desc "Note taking application focusing on dates"
   homepage "https://agenda.com/"
@@ -24,5 +24,6 @@ cask "agenda" do
     "~/Library/Containers/com.momenta.agenda.macos.extension-sharing",
     "~/Library/Containers/com.momenta.agenda.macos.extension-widget",
     "~/Library/Group Containers/WRBK2Z2EG7.group.com.momenta.agenda.macos",
+    "~/Library/Preferences/com.momenta.agenda.macos.plist",
   ]
 end

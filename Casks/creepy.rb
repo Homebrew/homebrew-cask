@@ -4,7 +4,6 @@ cask "creepy" do
 
   url "https://github.com/jkakavas/creepy/releases/download/v#{version}/cree.py_#{version}.dmg.zip",
       verified: "github.com/jkakavas/creepy/"
-  appcast "https://github.com/jkakavas/creepy/releases.atom"
   name "Creepy"
   homepage "https://www.geocreepy.com/"
 

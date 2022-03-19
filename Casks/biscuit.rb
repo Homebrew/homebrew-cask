@@ -1,10 +1,18 @@
 cask "biscuit" do
-  version "1.2.17"
-  sha256 "4321f28d7b314d214d0b8ceb043f88ad8728e229c76185d7d9b6a798d695ce60"
+  version "1.2.24"
 
-  url "https://github.com/agata/dl.biscuit/releases/download/v#{version}/Biscuit-#{version}.dmg",
-      verified: "github.com/agata/dl.biscuit/"
-  appcast "https://github.com/agata/dl.biscuit/releases.atom"
+  if Hardware::CPU.intel?
+    sha256 "3bcecb7a99765eb05b827454fe5ba5e07c8573ce96e895c65d8edc9a2af2cd35"
+
+    url "https://github.com/agata/dl.biscuit/releases/download/v#{version}/Biscuit-#{version}.dmg",
+        verified: "github.com/agata/dl.biscuit/"
+  else
+    sha256 "0b47026f817d5d27a00c5d59a29d430e7aab9235ca1dbbbba922a7d55a95d30a"
+
+    url "https://github.com/agata/dl.biscuit/releases/download/v#{version}/Biscuit-#{version}-arm64.dmg",
+        verified: "github.com/agata/dl.biscuit/"
+  end
+
   name "Biscuit"
   desc "Browser to organize apps"
   homepage "https://eatbiscuit.com/"
@@ -14,7 +22,9 @@ cask "biscuit" do
   app "Biscuit.app"
 
   zap trash: [
-    "~/Library/Application Support/Biscuit",
+    "~/Library/Application Support/biscuit",
+    "~/Library/Logs/Biscuit",
     "~/Library/Preferences/com.eatbiscuit.biscuit.plist",
+    "~/Library/Saved Application State/com.eatbiscult.biscult.savedState",
   ]
 end

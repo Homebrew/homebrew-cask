@@ -1,13 +1,16 @@
 cask "malus" do
-  version "1.7.6,176"
-  sha256 "b3cdf4bae6a5f67b66d6cd03e9cb98f6449384f54cd810cceac966f6cdece202"
+  version "3.0.3"
+  sha256 "54d1b34d5574ae18f8dc94bf88697c751e224824f96cbfe05ab55f4d58d8a945"
 
-  url "https://malus.s3cdn.net/uploads/Malus_#{version.before_comma.dots_to_underscores}.dmg",
-      verified: "malus.s3cdn.net/"
-  appcast "https://api.getmalus.com/api/checkDesktopUpdate?type=mac"
+  url "https://download.getmalus.com/uploads/Malus_#{version.dots_to_underscores}.dmg"
   name "Malus"
   desc "Proxy to help accessing various online media resources/services"
   homepage "https://getmalus.com/"
+
+  livecheck do
+    url "https://api.getmalus.com/api/checkDesktopUpdate?type=mac"
+    strategy :sparkle, &:short_version
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"
@@ -17,10 +20,10 @@ cask "malus" do
   uninstall rmdir: "/Library/Application Support/Malus"
 
   zap trash: [
-    "~/Library/Application Support/Malus",
     "~/Library/Application Support/com.getmalus.malus",
-    "~/Library/Logs/com.getmalus.malus",
+    "~/Library/Application Support/Malus",
     "~/Library/Caches/com.getmalus.malus",
+    "~/Library/Logs/com.getmalus.malus",
     "~/Library/Preferences/com.getmalus.malus.plist",
     "~/Library/Saved Application State/com.getmalus.malus.savedState",
   ]

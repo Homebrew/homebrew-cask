@@ -1,8 +1,8 @@
 cask "mi" do
-  version "3.5.2,1000"
-  sha256 "19646316623e83359b2f5c7096270e29ddc9b7db3b2f53d1350214bad3e23226"
+  version "3.6,1100"
+  sha256 "3cbc4d3c69b1511ff5a518e3fc32a4eb867accf460855599354bf765e4195b80"
 
-  url "https://www.mimikaki.net/download/mi#{version.before_comma}.dmg"
+  url "https://www.mimikaki.net/download/mi#{version.csv.first}.dmg"
   name "mi"
   desc "Text editor"
   homepage "https://www.mimikaki.net/"

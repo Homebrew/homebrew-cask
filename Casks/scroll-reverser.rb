@@ -1,8 +1,8 @@
 cask "scroll-reverser" do
-  version "1.8,10433"
-  sha256 "57914a55c6ffc1687b2a5d2c559cd065dff90994814ce10741cb72c4b5ef1682"
+  version "1.8.2,10505"
+  sha256 "afe125b05ef1740f9a95101233006453b0e02bd71b6195608414bab5fb5d2c6a"
 
-  url "https://pilotmoon.com/downloads/ScrollReverser-#{version.before_comma}.zip"
+  url "https://pilotmoon.com/downloads/ScrollReverser-#{version.csv.first}.zip"
   name "Scroll Reverser"
   desc "Tool to reverse the direction of scrolling"
   homepage "https://pilotmoon.com/scrollreverser/"

@@ -1,11 +1,16 @@
 cask "openlp" do
-  version "2.9.1"
-  sha256 "c01ff0a446716048c9f2e19b13ebf124a2d7fadcd6d73273e8d41cf60326c2c5"
+  version "2.9.4"
+  sha256 "ad4e93c8a0f360cfbbb3cdbe27268235251ac2cfb9ac6cd6ebd2d14e8b7c31d3"
 
   url "https://get.openlp.org/#{version}/OpenLP-#{version}.dmg"
-  appcast "https://get.openlp.org"
   name "OpenLP"
+  desc "Worship presentation software"
   homepage "https://openlp.org/"
+
+  livecheck do
+    url "https://get.openlp.org"
+    regex(/href=['"]?(\d+(?:\.\d+)+)['"]?/i)
+  end
 
   app "OpenLP.app"
 end

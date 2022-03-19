@@ -1,16 +1,22 @@
 cask "cinco" do
-  version "1.1"
-  sha256 "0e2ada95f3735cc123950f7ad999f4aa954f48dc82f6c379dda6f06b9a9e05d2"
+  version "2.0.1"
+  sha256 "6b8e07c76c896ee5b79708f3317deb1197ce6c1f87acd45ee740c4423b5a8645"
 
-  url "https://ls5download.cs.tu-dortmund.de/cinco/releases/#{version}/cinco-#{version}-macosx.cocoa.x86_64.zip",
+  url "https://ls5download.cs.tu-dortmund.de/cinco/releases/#{version}/cinco-#{version}-macos.dmg",
       verified: "ls5download.cs.tu-dortmund.de/cinco/releases/"
   name "Cinco"
   desc "Generator-driven Eclipse IDE for domain-specific graphical modeling tools"
   homepage "https://cinco.scce.info/"
 
-  app "cinco-#{version}.app"
+  livecheck do
+    url "https://ls5download.cs.tu-dortmund.de/cinco/releases/"
+    regex(%r{href="(\d+(?:\.\d+)+)/"}i)
+  end
 
-  uninstall quit: "de.jabc.cinco.meta.product.product"
+  pkg "Install Cinco.pkg"
+
+  uninstall quit:    "de.jabc.cinco.meta.product.product",
+            pkgutil: "de.jabc.cinco.meta.product.product.cinco.pkg.component"
 
   zap trash: [
     "~/Library/Preferences/de.jabc.cinco.meta.product.product.plist",
@@ -19,6 +25,6 @@ cask "cinco" do
 
   caveats do
     license "https://www.eclipse.org/legal/epl-v10.html"
-    depends_on_java "8"
+    depends_on_java "11"
   end
 end

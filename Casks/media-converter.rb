@@ -4,9 +4,11 @@ cask "media-converter" do
 
   url "https://downloads.sourceforge.net/media-converter/media-converter/#{version}/media-converter-#{version}.zip",
       verified: "downloads.sourceforge.net/media-converter/"
-  appcast "https://sourceforge.net/projects/media-converter/rss?path=/media-converter"
   name "Media Converter"
+  desc "Convert avi, wmv, mkv, rm, mov and more to other formats"
   homepage "https://media-converter.sourceforge.io/"
 
   app "Media Converter.localized/Media Converter.app"
+
+  zap trash: "~/Library/Preferences/com.kiwifruitware.Media-Converter.plist"
 end

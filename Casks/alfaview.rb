@@ -1,11 +1,18 @@
 cask "alfaview" do
-  version "8.12.1"
-  sha256 "6028b02fec473628bac312934c938edb22e0ccb1778c67be5ae2b8d551d14879"
+  version "8.40.0"
+  sha256 "342f001f1552db1692043c059dd3cdfd1a6f1b99bc2f3c51fcac2f4af3708330"
 
   url "https://assets.alfaview.com/stable/mac/alfaview-mac-production-#{version}.dmg"
-  appcast "https://production-alfaview-assets.alfaview.com/stable/mac/version.info"
   name "Alfaview"
+  desc "Audio video conferencing"
   homepage "https://alfaview.com/"
+
+  livecheck do
+    url "https://production-alfaview-assets.alfaview.com/stable/mac/version.info"
+    regex(/alfaview-mac-production[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+  end
+
+  depends_on macos: ">= :high_sierra"
 
   app "alfaview.app"
 

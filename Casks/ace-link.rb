@@ -1,12 +1,16 @@
 cask "ace-link" do
-  version "1.7.0"
-  sha256 "0aa033d5fd483d68914f2ea9c1267b3572741c4f828fa9ee6d0a277c876f366c"
+  version "2.0.1"
+  sha256 "93437d6359c567654d85c6cad1601df8297482ef68d5cf01888c346b8cdbe40d"
 
   url "https://github.com/blaise-io/acelink/releases/download/#{version}/Ace.Link.#{version}.dmg"
-  appcast "https://github.com/blaise-io/acelink/releases.atom"
   name "Ace Link"
   desc "Menu bar app that allows playing Ace Stream video streams in the VLC player"
   homepage "https://github.com/blaise-io/acelink"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   depends_on macos: ">= :high_sierra"
   depends_on cask: [

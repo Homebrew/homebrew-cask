@@ -5,7 +5,11 @@ on: pull_request
 env:
   HOMEBREW_DEVELOPER: 1
   HOMEBREW_NO_AUTO_UPDATE: 1
-  HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  HOMEBREW_GITHUB_API_TOKEN: ${{ github.token }}
+
+concurrency:
+  group: "${{ github.ref }}"
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   generate-matrix:
@@ -20,7 +24,7 @@ jobs:
           test-bot: false
 
       - name: Check out Pull Request
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
           persist-credentials: false
@@ -46,7 +50,7 @@ jobs:
           test-bot: false
 
       - name: Check out Pull Request
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
           persist-credentials: false
@@ -57,6 +61,10 @@ jobs:
             if ! rm -r '/Applications/Visual Studio.app'; then
               echo '::warning::Removing Visual Studio is no longer necessary.'
             fi
+          fi
+          
+          if ! brew uninstall --cask julia && ! rm -r /Applications/Julia-*.app; then
+            echo '::warning::Removing Julia is no longer necessary.'
           fi
 
           if ! rm /usr/local/share/man/man1/al.1 || \
@@ -78,10 +86,6 @@ jobs:
             echo '::warning::Removing `conda` symlink is no longer necessary.'
           fi
 
-          if ! brew untap adoptopenjdk/openjdk; then
-            echo '::warning::Untapping adoptopenjdk/openjdk is no longer necessary.'
-          fi
-
           brew unlink python && brew link --overwrite python
         if: runner.os == 'macOS'
 
@@ -93,7 +97,7 @@ jobs:
           mkdir "${GITHUB_WORKSPACE}"
 
       - name: Cache Homebrew Gems
-        uses: actions/cache@v2.1.4
+        uses: actions/cache@v2.1.7
         with:
           path: ${{ steps.set-up-homebrew.outputs.gems-path }}
           key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
@@ -125,6 +129,7 @@ jobs:
         id: audit
         run: |
           brew audit --cask ${{ join(matrix.audit_args, ' ') }}${{ (matrix.cask && ' ') || ' --tap ' }}'${{ matrix.cask.path || matrix.tap }}'
+        timeout-minutes: 30
         if: >
           always() && steps.gems.outcome == 'success' &&
           (!matrix.cask || steps.fetch.outcome == 'success') &&
@@ -133,6 +138,7 @@ jobs:
       - name: Gather cask information
         id: info
         run: |
+          brew tap homebrew/cask-versions
           brew ruby <<'EOF'
             require 'cask/cask_loader'
             require 'cask/installer'

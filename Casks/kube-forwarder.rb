@@ -4,7 +4,6 @@ cask "kube-forwarder" do
 
   url "https://github.com/pixel-point/kube-forwarder/releases/download/v#{version}/kube-forwarder.dmg",
       verified: "github.com/pixel-point/kube-forwarder/"
-  appcast "https://github.com/pixel-point/kube-forwarder/releases.atom"
   name "Kube Forwarder"
   homepage "https://kube-forwarder.pixelpoint.io/"
 

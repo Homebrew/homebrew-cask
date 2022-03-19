@@ -1,10 +1,9 @@
 cask "jasper" do
-  version "1.0.2"
-  sha256 "e02557d1bc297aba46f64fab31857bce045ba527fa65f6e7df8b254aa0f75cdb"
+  version "1.0.7"
+  sha256 "4a1077c8e775587b94ea3e0bebaca2681f19b362e1d5cfd576019d0a734ff6fc"
 
   url "https://github.com/jasperapp/jasper/releases/download/v#{version}/jasper_v#{version}_mac.zip",
       verified: "github.com/jasperapp/jasper/"
-  appcast "https://github.com/jasperapp/jasper/releases.atom"
   name "Jasper"
   desc "Issue reader for GitHub"
   homepage "https://jasperapp.io/"

@@ -4,7 +4,6 @@ cask "magiccap" do
 
   url "https://github.com/magiccap/MagicCap/releases/download/v#{version}/magiccap-mac.dmg",
       verified: "github.com/magiccap/MagicCap/"
-  appcast "https://github.com/magiccap/MagicCap/releases.atom"
   name "MagicCap"
   desc "Image/GIF capture suite"
   homepage "https://magiccap.me/"

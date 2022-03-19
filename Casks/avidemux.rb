@@ -6,14 +6,13 @@ cask "avidemux" do
     url "https://downloads.sourceforge.net/avidemux/avidemux/#{version}/Avidemux_#{version}_Mojava_64Bits_Qt5.dmg",
         verified: "sourceforge.net/avidemux/"
   else
-    version "2.7.8"
-    sha256 "517b0197d6c9e0dd1e8cf70c235cb1af3d11af9168569693362781c61eb07338"
+    version "2.8.0"
+    sha256 "23994f8e863dbe59a70d91f162b56cab14930c22925aa40007db07d01ced8e12"
 
-    url "https://downloads.sourceforge.net/avidemux/avidemux/#{version}/Avidemux_#{version}_Catalina_64Bits_Qt5.dmg",
+    url "https://downloads.sourceforge.net/avidemux/avidemux/#{version}/Avidemux_#{version}_Catalina_64Bits_Qt6.dmg",
         verified: "sourceforge.net/avidemux/"
   end
 
-  appcast "https://sourceforge.net/projects/avidemux/rss?path=/avidemux"
   name "Avidemux"
   desc "Video editor"
   homepage "https://www.avidemux.org/"
@@ -21,4 +20,9 @@ cask "avidemux" do
   app "Avidemux_#{version}.app"
   binary "#{appdir}/Avidemux_#{version}.app/Contents/MacOS/avidemux_cli", target: "avidemux"
   binary "#{appdir}/Avidemux_#{version}.app/Contents/MacOS/avidemux_jobs"
+
+  zap trash: [
+    "~/.avidemux6",
+    "~/Library/Saved Application State/Avidemux.org.savedState",
+  ]
 end

@@ -1,6 +1,6 @@
 cask "mailtrackerblocker" do
-  version "0.3.21"
-  sha256 "ebee7a4c95f120efc94eac3ec11113d7b1f9200c812205700c5107932ad785eb"
+  version "0.6.1"
+  sha256 "c2688fcbfed80b7c827e67f61f993c07667e459a50f33c3371f008502bb303f6"
 
   url "https://github.com/apparition47/MailTrackerBlocker/releases/download/#{version}/MailTrackerBlocker.pkg",
       verified: "github.com/apparition47/MailTrackerBlocker/"
@@ -8,6 +8,7 @@ cask "mailtrackerblocker" do
   desc "Email tracker, read receipt and spy pixel blocker plugin for Apple Mail"
   homepage "https://apparition47.github.io/MailTrackerBlocker/"
 
+  auto_updates true
   depends_on macos: ">= :el_capitan"
 
   pkg "MailTrackerBlocker.pkg"
@@ -20,4 +21,7 @@ cask "mailtrackerblocker" do
 
   uninstall pkgutil: "com.onefatgiraffe.mailtrackerblocker",
             delete:  "/Library/Mail/Bundles/MailTrackerBlocker.mailbundle"
+
+  zap trash: "~/Library/Containers/com.apple.mail/Data/Library/Application Support/" \
+             "com.onefatgiraffe.mailtrackerblocker"
 end

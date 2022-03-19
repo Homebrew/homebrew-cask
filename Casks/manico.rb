@@ -1,10 +1,10 @@
 cask "manico" do
-  version "2.9.2,410"
-  sha256 "13c8e81cc809912f3201f7c55a915c07cf323b411be52e43a9494ee79d2f4c45"
+  version "2.10.1,418"
+  sha256 "e2a2a654ba31a55003be70ab3338336933b0b7bcc1448587962132747f5643e7"
 
-  url "https://manico.im/api/release_manager/downloads/im.manico.Manico/#{version.after_comma}.zip"
+  url "https://manico.im/api/release_manager/downloads/im.manico.Manico/#{version.csv.second}.zip"
   name "Manico"
-  desc "App Launcher & Switcher"
+  desc "App launcher and switcher"
   homepage "https://manico.im/"
 
   livecheck do
@@ -12,11 +12,9 @@ cask "manico" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   app "Manico.app"
 
-  zap trash: [
-    "~/Library/Containers/im.manico.Manico",
-  ]
+  zap trash: "~/Library/Containers/im.manico.Manico"
 end

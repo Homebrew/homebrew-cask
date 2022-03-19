@@ -1,27 +1,20 @@
 cask "porting-kit" do
-  version "3.0.60"
-  sha256 "7c6fd060d90e76c2a8c2272d49f92ef99600c65ed9b7c71617f9e96256a76637"
+  version "5.0.5"
+  sha256 "a1985298a96264d5bdedeee294931a53218daaf7c71bc40d052f5f532c009632"
 
-  url "https://portingkit.com/kit/Porting%20Kit%20#{version}.zip"
+  url "https://github.com/vitor251093/porting-kit-releases/releases/download/v#{version}/Porting-Kit-#{version}.dmg",
+      verified: "github.com/vitor251093/porting-kit-releases/"
   name "Porting Kit"
+  desc "Install games and apps compiled for Microsoft Windows"
   homepage "https://portingkit.com/"
 
-  livecheck do
-    url "https://portingkit.com/kit/updatecast.xml"
-    strategy :sparkle
-  end
-
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Porting Kit.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/edu.ufrj.vitormm.porting-kit.sfl*",
-    "~/Library/Application Support/Porting-Kit",
-    "~/Library/Caches/edu.ufrj.vitormm.Porting-Kit",
-    "~/Library/Cookies/edu.ufrj.vitormm.Porting-Kit.binarycookies",
-    "~/Library/Preferences/edu.ufrj.vitormm.Porting-Kit.plist",
-    "~/Library/Saved Application State/edu.ufrj.vitormm.Porting-Kit.savedState",
-    "~/Library/WebKit/edu.ufrj.vitormm.Porting-Kit",
+    "~/Library/Preferences/com.paulthetall.portingkit.plist",
+    "~/Library/Saved Application State/com.paulthetall.portingkit.savedState",
   ]
 end

@@ -48,9 +48,7 @@ module Check
         system_command!("/bin/launchctl", args: ["list"], print_stderr: false, sudo: sudo)
           .stdout
           .lines.drop(1)
-          .reject do |id|
-            id.match?(/\A(?:application\.)?com\.apple\.(installer|Safari|systemevents|systempreferences)(?:\.|$)/)
-          end
+          .grep_v(/\A(?:application\.)?com\.apple\.(installer|Safari|systemevents|systempreferences)(?:\.|$)/)
       end
 
       [false, true]
@@ -125,12 +123,12 @@ module Check
 
     running_apps = diff[:loaded_launchjobs]
                    .added
-                   .select { |id| id.match?(/\.\d+\Z/) }
+                   .grep(/\.\d+\Z/)
                    .map { |id| id.sub(/\A(?:application\.)?(.*?)(?:\.\d+){0,2}\Z/, '\1') }
 
     loaded_launchjobs = diff[:loaded_launchjobs]
                         .added
-                        .reject { |id| id.match?(/\.\d+\Z/) }
+                        .grep_v(/\.\d+\Z/)
 
     missing_running_apps = running_apps - Array(uninstall_directives[:quit])
     if missing_running_apps.any?

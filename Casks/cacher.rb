@@ -1,6 +1,6 @@
 cask "cacher" do
-  version "2.39.0"
-  sha256 "7561f887a23f7f536606dcaad3c49836e3a8985b1c50a4c188bcd063a066af3e"
+  version "2.43.2"
+  sha256 "ceaf83eed25fab26f23748e9f4f0bf82f8c530c718018c2450833570b2403eb4"
 
   url "https://cacher-download.nyc3.digitaloceanspaces.com/Cacher-#{version}-mac.zip",
       verified: "cacher-download.nyc3.digitaloceanspaces.com/"
@@ -10,7 +10,7 @@ cask "cacher" do
 
   livecheck do
     url "https://cacher-download.nyc3.digitaloceanspaces.com/latest-mac.yml"
-    regex(/version\s*:\s*(\d+(?:\.\d+)+)/i)
+    strategy :electron_builder
   end
 
   app "Cacher.app"

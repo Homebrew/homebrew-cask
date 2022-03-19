@@ -1,20 +1,23 @@
 cask "racket" do
-  version "8.0"
+  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
+
+  version "8.4"
 
   if Hardware::CPU.intel?
-    sha256 "42195d6fcc3ea6b3df91b860d2593511e6ce5f9173cfc391fb37fc67767592a9"
-
-    url "https://mirror.racket-lang.org/installers/#{version}/racket-#{version}-x86_64-macosx-cs.dmg"
+    sha256 "35276b0aed6a9f9de3bca0a20064ce536520988e22e00161f0530d70b6c3c685"
   else
-    sha256 "3f1eb3c2965e2d19f0a7301049f397e3117197280f087a7bd2497bb077aadd5d"
-
-    url "https://mirror.racket-lang.org/installers/#{version}/racket-#{version}-aarch64-macosx-cs.dmg"
+    sha256 "b8d34491e98cea5e0562569b5b0267eab9d301d3524bdceb8dc3ec62754673ce"
   end
 
-  appcast "https://download.racket-lang.org/all-versions.html"
+  url "https://mirror.racket-lang.org/installers/#{version}/racket-#{version}-#{arch}-macosx-cs.dmg"
   name "Racket"
   desc "Modern programming language in the Lisp/Scheme family"
   homepage "https://racket-lang.org/"
+
+  livecheck do
+    url "https://download.racket-lang.org/all-versions.html"
+    regex(/racket[._-]v?(\d+(?:\.\d+)+)/i)
+  end
 
   suite "Racket v#{version}"
   binary "#{appdir}/Racket v#{version}/bin/drracket"
@@ -39,4 +42,27 @@ cask "racket" do
   binary "#{appdir}/Racket v#{version}/bin/slatex"
   binary "#{appdir}/Racket v#{version}/bin/slideshow"
   binary "#{appdir}/Racket v#{version}/bin/swindle"
+  manpage "#{appdir}/Racket v#{version}/man/man1/drracket.1"
+  manpage "#{appdir}/Racket v#{version}/man/man1/gracket.1"
+  manpage "#{appdir}/Racket v#{version}/man/man1/mred.1"
+  manpage "#{appdir}/Racket v#{version}/man/man1/mzc.1"
+  manpage "#{appdir}/Racket v#{version}/man/man1/mzscheme.1"
+  manpage "#{appdir}/Racket v#{version}/man/man1/plt-help.1"
+  manpage "#{appdir}/Racket v#{version}/man/man1/racket.1"
+  manpage "#{appdir}/Racket v#{version}/man/man1/raco.1"
+  manpage "#{appdir}/Racket v#{version}/man/man1/setup-plt.1"
+
+  zap trash: [
+    "~/Library/Caches/Racket",
+    "~/Library/Preferences/org.racket-lang.DrRacket.plist",
+    "~/Library/Preferences/org.racket-lang.prefs.rktd",
+    "~/Library/Preferences/PLT-autosave-toc.rktd",
+    "~/Library/Preferences/PLT-autosave-toc-save.rktd",
+    "~/Library/Racket",
+    "~/Library/Saved Application State/org.racket-lang.DrRacket.savedState",
+    "~/Library/Saved Application State/org.racket-lang.DrRacketBC.savedState",
+    "~/Library/Saved Application State/org.racket-lang.GRacket3m.savedState",
+    "~/Library/Saved Application State/org.racket-lang.PLT Games.savedState",
+    "~/Library/Saved Application State/org.racket-lang.Slideshow.savedState",
+  ]
 end

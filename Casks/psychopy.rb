@@ -1,12 +1,17 @@
 cask "psychopy" do
-  version "2021.1.0"
-  sha256 "ea2fd6ae02aeaf8baae3c1e2312247cd2b2e39c8c66535dc86fb45b7436bcc8d"
+  version "2022.1.1"
+  sha256 "68376bc4a9b8bf8913c078f534f7e253736cffe105ab7d498e30e769a4e7cdd6"
 
-  url "https://github.com/psychopy/psychopy/releases/download/#{version}/StandalonePsychoPy-#{version}-macOS.dmg"
-  appcast "https://github.com/psychopy/psychopy/releases.atom"
+  url "https://github.com/psychopy/psychopy/releases/download/#{version.major_minor_patch}/StandalonePsychoPy-#{version}-macOS.dmg"
   name "PsychoPy"
-  desc "For running psychology and neuroscience experiments"
+  desc "Create experiments in behavioral science"
   homepage "https://github.com/psychopy/psychopy"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+    regex(%r{href=.+/StandalonePsychoPy[._-]v?(\d+(?:\.\d+)+)[._-]macOS\.dmg}i)
+  end
 
   app "PsychoPy.app"
 end

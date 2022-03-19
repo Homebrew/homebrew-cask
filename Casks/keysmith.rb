@@ -1,8 +1,8 @@
 cask "keysmith" do
-  version "1.14.0,83"
-  sha256 "b9c8b8e39d6a2fbb9527c44ed85e247175548cdab5803a33ee4b878baae5eb3f"
+  version "1.18.0,93"
+  sha256 "1c49037d93448228bed33304a89bdd0a530112042f390860ee8a6a10a715aa5f"
 
-  url "https://keysmith.app/versions/Keysmith-#{version.before_comma}.dmg"
+  url "https://keysmith.app/versions/Keysmith-#{version.csv.first}.dmg"
   name "Keysmith"
   desc "Create custom keyboard shortcuts for anything"
   homepage "https://www.keysmith.app/"

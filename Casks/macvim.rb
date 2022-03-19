@@ -1,6 +1,6 @@
 cask "macvim" do
-  version "170"
-  sha256 "f873f18f04b574e9c24a4eafaad77c83a2c787a51033069714362e4f5f1a48e1"
+  version "172"
+  sha256 "c603a81036e7dab04e5daee70e1811675a859f833ae6aa713aca5bfc8a26c977"
 
   url "https://github.com/macvim-dev/macvim/releases/download/snapshot-#{version}/MacVim.dmg"
   name "MacVim"
@@ -9,7 +9,7 @@ cask "macvim" do
 
   livecheck do
     url :url
-    strategy :git
+    regex(/^snapshot[._-]v?(\d+(?:\.\d+)*)$/i)
   end
 
   auto_updates true
@@ -21,12 +21,16 @@ cask "macvim" do
     gview
     gvim
     gvimdiff
+    gvimex
     mview
     mvim
     mvimdiff
+    mvimex
     view
     vim
     vimdiff
+    vimex
+    vi
   ].each { |link_name| binary "#{appdir}/MacVim.app/Contents/bin/mvim", target: link_name }
 
   zap trash: [

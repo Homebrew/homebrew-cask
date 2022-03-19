@@ -1,10 +1,18 @@
 cask "copyq" do
-  version "3.13.0"
-  sha256 "07c12f91649d512616d9eef9a9492d7041f31620a4fbeeae1baae0d5b73c3461"
+  if MacOS.version <= :catalina
+    version "5.0.0"
+    sha256 "7201ff51d1258c8eae03580262a96bbee7d65c6e2133b0d5d6f10f95f031edd4"
 
-  url "https://github.com/hluk/CopyQ/releases/download/v#{version}/CopyQ.dmg",
+    livecheck do
+      skip "Legacy version for Catalina and earlier"
+    end
+  else
+    version "6.1.0"
+    sha256 "88b4018029c9c344b0a9ac104d37af188b897a8265a26267386f27987458d5e1"
+  end
+
+  url "https://github.com/hluk/CopyQ/releases/download/v#{version}/CopyQ.dmg.zip",
       verified: "github.com/hluk/CopyQ/"
-  appcast "https://github.com/hluk/CopyQ/releases.atom"
   name "CopyQ"
   desc "Clipboard manager with advanced features"
   homepage "https://hluk.github.io/CopyQ/"
@@ -15,7 +23,7 @@ cask "copyq" do
   binary shimscript, target: "copyq"
 
   preflight do
-    IO.write shimscript, <<~EOS
+    File.write shimscript, <<~EOS
       #!/bin/bash
       exec '#{appdir}/CopyQ.app/Contents/MacOS/CopyQ' "$@"
     EOS

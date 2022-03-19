@@ -1,13 +1,18 @@
 cask "meteorologist" do
-  version "3.4.3"
-  sha256 "df73f484f6bc6a5d800c8fa1cc2fd91013f310dbf162288c1686dcd865813c9f"
+  version "3.5.1"
+  sha256 "33deb5524378f4f73cabfe94474b5144e4bb340748c457b8a56b3ba66328658b"
 
   url "https://downloads.sourceforge.net/heat-meteo/Meteorologist-#{version}.dmg",
       verified: "downloads.sourceforge.net/heat-meteo/"
-  appcast "https://sourceforge.net/projects/heat-meteo/rss"
   name "Meteorologist"
   desc "Adjustable weather viewing application"
   homepage "https://heat-meteo.sourceforge.io/"
 
   app "Meteorologist.app"
+
+  zap trash: [
+    "~/Library/Caches/com.heat.Meteorologist",
+    "~/Library/Logs/Meteorologist.log",
+    "~/Library/Preferences/com.heat.Meteorologist.plist",
+  ]
 end

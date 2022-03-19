@@ -1,11 +1,11 @@
 cask "cutter" do
-  version "1.12.0"
-  sha256 "700327f904de00a29b8622eb7548b96181c50f0842d726a84be2a8f7558cae83"
+  version "2.0.5"
+  sha256 "a5c42b53954dcc9a9409e4cc50c529db5ea87854ae4eaa1d864bdd635d7a3893"
 
-  url "https://github.com/radareorg/cutter/releases/download/v#{version}/Cutter-v#{version}-x64.macOS.dmg",
-      verified: "github.com/radareorg/cutter/"
+  url "https://github.com/rizinorg/cutter/releases/download/v#{version}/Cutter-v#{version}-x64.macOS.dmg",
+      verified: "github.com/rizinorg/cutter/"
   name "Cutter"
-  desc "Reverse engineering platform powered by radare2"
+  desc "Reverse engineering platform powered by Rizin"
   homepage "https://cutter.re/"
 
   livecheck do
@@ -21,18 +21,18 @@ cask "cutter" do
   binary shimscript, target: "cutter"
 
   preflight do
-    IO.write shimscript, <<~EOS
+    File.write shimscript, <<~EOS
       #!/bin/sh
       '#{appdir}/Cutter.app/Contents/MacOS/Cutter' "$@"
     EOS
   end
 
   zap trash: [
-    "~/.config/RadareOrg",
-    "~/.local/share/radare2",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.radare.cutter.sfl*",
-    "~/Library/Application Support/RadareOrg",
-    "~/Library/Preferences/org.radare.cutter.plist",
-    "~/Library/Saved Application State/org.radare.cutter.savedState",
+    "~/.config/rizin",
+    "~/.local/share/rizin",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/re.rizin.cutter.sfl*",
+    "~/Library/Application Support/rizin",
+    "~/Library/Preferences/re.rizin.cutter.plist",
+    "~/Library/Saved Application State/re.rizin.cutter.savedState",
   ]
 end

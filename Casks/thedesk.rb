@@ -1,6 +1,6 @@
 cask "thedesk" do
-  version "22.0.1"
-  sha256 "03e53978dc69f50178203891979024b795d7d0d6fbf84db3ff43477a4d347ab7"
+  version "22.3.1"
+  sha256 "8271e41b214d1c4f20393a2e47d9653d2fe18896de31f383375431a914885f5b"
 
   url "https://github.com/cutls/TheDesk/releases/download/v#{version}/TheDesk-#{version}.dmg",
       verified: "github.com/cutls/TheDesk/"
@@ -14,4 +14,10 @@ cask "thedesk" do
   end
 
   app "TheDesk.app"
+
+  zap trash: [
+    "~/Library/Application Support/thedesk",
+    "~/Library/Preferences/top.thedesk.plist",
+    "~/Library/Saved Application State/top.thedesk.savedState",
+  ]
 end

@@ -1,14 +1,31 @@
 cask "ghidra" do
-  version "9.2.2,20201229"
-  sha256 "8cf8806dd5b8b7c7826f04fad8b86fc7e07ea380eae497f3035f8c974de72cf8"
+  version "10.1.2,20220125"
+  sha256 "ac96fbdde7f754e0eb9ed51db020e77208cdb12cf58c08657a2ab87cb2694940"
 
-  url "https://www.ghidra-sre.org/ghidra_#{version.before_comma}_PUBLIC_#{version.after_comma}.zip"
+  url "https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_#{version.csv.first}_build/ghidra_#{version.csv.first}_PUBLIC_#{version.csv.second}.zip",
+      verified: "github.com/NationalSecurityAgency/ghidra/"
   name "Ghidra"
+  desc "Software reverse engineering (SRE) suite of tools"
   homepage "https://www.ghidra-sre.org/"
 
-  conflicts_with cask: "homebrew/cask-versions/ghidra-beta"
+  livecheck do
+    url "https://github.com/NationalSecurityAgency/ghidra/releases"
+    strategy :page_match do |page|
+      page.scan(/href=.*?ghidra[._-]v?(\d+(?:\.\d+)+)[._-]PUBLIC[._-](\d+)\.zip/i)
+          .map { |matches| "#{matches[0]},#{matches[1]}" }
+    end
+  end
 
-  binary "ghidra_#{version.before_comma}_PUBLIC/ghidraRun"
+  binary "#{caskroom_path}/#{version.csv.first}-#{version.csv.second}/ghidra_#{version.csv.first}_PUBLIC/ghidraRun"
+
+  preflight do
+    # Log4j misinterprets comma in staged_path as alternative delimiter
+    FileUtils.mv(staged_path, "#{caskroom_path}/#{version.csv.first}-#{version.csv.second}")
+  end
+
+  uninstall_preflight do
+    FileUtils.mv("#{caskroom_path}/#{version.csv.first}-#{version.csv.second}", staged_path)
+  end
 
   zap trash: "~/.ghidra"
 

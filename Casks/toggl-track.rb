@@ -16,4 +16,10 @@ cask "toggl-track" do
   auto_updates true
 
   app "Toggl Track.app"
+
+  zap trash: [
+    "~/Library/Caches/com.toggl.toggldesktop.TogglDesktop",
+    "~/Library/Preferences/com.toggl.toggldesktop.TogglDesktop.plist",
+    "~/Library/Saved Application State/com.toggl.toggldesktop.TogglDesktop.savedState",
+  ]
 end

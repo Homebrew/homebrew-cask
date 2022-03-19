@@ -4,9 +4,19 @@ cask "googleappengine" do
 
   url "https://storage.googleapis.com/appengine-sdks/featured/GoogleAppEngineLauncher-#{version}.dmg",
       verified: "storage.googleapis.com/appengine-sdks/"
-  appcast "https://storage.googleapis.com/appengine-sdks/featured/VERSION"
   name "Google App Engine"
+  desc "Cloud computing platform"
   homepage "https://cloud.google.com/appengine/docs/standard/python/download#appengine_sdk/"
 
   app "GoogleAppEngineLauncher.app"
+
+  zap trash: [
+    "~/Library/Application Support/GoogleAppEngineLauncher",
+    "~/Library/Preferences/com.google.GoogleAppEngineLauncher.plist",
+    "~/Library/Saved Application State/com.google.GoogleAppEngineLauncher.savedState",
+  ]
+
+  caveats do
+    discontinued
+  end
 end

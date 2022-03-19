@@ -1,6 +1,6 @@
 cask "sqlpro-for-sqlite" do
-  version "2020.104"
-  sha256 "8b6cd01e570477833a006f02b8aae42b4ec37975c2ea2151d8e5d0fd0d54caf3"
+  version "2022.1"
+  sha256 "376e86eb7df6fe7c636ebf4864acdfa0029b9757f8548577394ab1263c6417a7"
 
   url "https://d3fwkemdw8spx3.cloudfront.net/sqlite/SQLProSQLite.#{version}.app.zip",
       verified: "d3fwkemdw8spx3.cloudfront.net/sqlite/"
@@ -16,7 +16,7 @@ cask "sqlpro-for-sqlite" do
   app "SQLPro for SQLite.app"
 
   zap trash: [
-    "~/Library/Containers/com.hankinsoft.osx.sqliteprofessional",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hankinsoft.osx.sqliteprofessional.sfl*",
+    "~/Library/Containers/com.hankinsoft.osx.sqliteprofessional",
   ]
 end

@@ -1,9 +1,8 @@
 cask "multi" do
-  version "2.1.2"
-  sha256 "808989027656c166d703c31934a673708a0947cc812fb9e66adaa2c878d3f981"
+  version "2.1.4"
+  sha256 "29b04f3a3e73d3ae63e756c907998d11f951df7874f13f5c8bb47a372b0f4590"
 
   url "https://github.com/hkgumbs/multi/releases/download/v#{version}/Multi.#{version}.dmg"
-  appcast "https://github.com/hkgumbs/multi/releases.atom"
   name "Multi"
   desc "Create apps from groups of websites"
   homepage "https://github.com/hkgumbs/multi"

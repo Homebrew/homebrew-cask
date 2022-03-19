@@ -1,8 +1,8 @@
 cask "home-assistant" do
-  version "2021.3,2021.77"
-  sha256 "17f89db317f3d6db879e52bf28e107d2fe6b80de44c6ec47113679a3ac5e6e93"
+  version "2022.3,2022.358"
+  sha256 "90180afa50f3775326ebc9e6c4892a5901f532b6b1fb90737e36f1283303fd83"
 
-  url "https://github.com/home-assistant/iOS/releases/download/release%2F#{version.before_comma}%2F#{version.after_comma}/home-assistant-mac.zip",
+  url "https://github.com/home-assistant/iOS/releases/download/release%2F#{version.csv.first}%2F#{version.csv.second}/home-assistant-mac.zip",
       verified: "github.com/home-assistant/iOS/"
   name "Home Assistant"
   desc "Companion app for Home Assistant home automation software"
@@ -15,6 +15,8 @@ cask "home-assistant" do
     url :url
     strategy :github_latest do |page|
       version = page.match(%r{href=".+/tree/(?:mac|release)/([\d.]+)/([\d.]+)"}i)
+      next if version.blank?
+
       "#{version[1]},#{version[2]}"
     end
   end
@@ -25,7 +27,7 @@ cask "home-assistant" do
 
   zap trash: [
     "~/Library/Application Scripts/io.robbie.HomeAssistant",
-    "~/Library/Group Containers/group.io.robbie.homeassistant",
     "~/Library/Containers/io.robbie.HomeAssistant",
+    "~/Library/Group Containers/group.io.robbie.homeassistant",
   ]
 end

@@ -1,11 +1,18 @@
 cask "openaudible" do
-  version "3.0"
-  sha256 "4d61ce0fe0cf702e175d47a488bd887f7270e4182b1fcc0d538b80c0278c1536"
+  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
-  url "https://github.com/openaudible/openaudible/releases/download/v#{version}/OpenAudible_#{version}_mac.dmg",
-      verified: "github.com/openaudible/"
+  version "3.5.2"
+
+  if Hardware::CPU.intel?
+    sha256 "35274d767cdb9500473febee8a59c82d82a2d4615249343d959cdfc9d237941c"
+  else
+    sha256 "868e62eae4e4f5af9aa1d3a907e464946d5a3f9586fbb3b135b9c33404f99b01"
+  end
+
+  url "https://github.com/openaudible/openaudible/releases/download/v#{version}/OpenAudible_#{version}_#{arch}.dmg",
+      verified: "github.com/openaudible/openaudible/"
   name "OpenAudible"
-  desc "Open-source audible manager"
+  desc "Audiobook manager for Audible users"
   homepage "https://openaudible.org/"
 
   livecheck do

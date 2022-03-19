@@ -1,11 +1,16 @@
 cask "mailplane" do
-  version "4.3.1,4859"
-  sha256 "c76e71b0b6db97dacd80a5421d1a5dc647504c16062db934b45ff5708fbbbd42"
+  version "4.3.4,4912"
+  sha256 "383508c5d8c53fe2ad8ee6c47f7cb46c67efc8ed1a4f643d7b8dae846b274e0f"
 
-  url "https://builds.mailplaneapp.com/Mailplane_#{version.major}_#{version.after_comma}.tbz"
-  appcast "https://update.mailplaneapp.com/appcast.php?rqsr=1&osVersion=10.14.1&appVersion=#{version.after_comma}&shortVersionString=#{version.before_comma}"
+  url "https://builds.mailplaneapp.com/Mailplane_#{version.major}_#{version.csv.second}.tbz"
   name "Mailplane"
+  desc "Gmail client"
   homepage "https://mailplaneapp.com/"
+
+  livecheck do
+    url "https://update.mailplaneapp.com/appcast.php?rqsr=1&osVersion=10.14.1&appVersion=#{version.csv.second}&shortVersionString=#{version.csv.first}"
+    strategy :sparkle
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"

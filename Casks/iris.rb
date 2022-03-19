@@ -4,10 +4,14 @@ cask "iris" do
 
   url "https://raw.githubusercontent.com/danielng01/product-builds/master/iris/macos/Iris-#{version}-OSX.zip",
       verified: "raw.githubusercontent.com/danielng01/product-builds/"
-  appcast "https://iristech.co/iris/"
   name "Iris"
   desc "Blue light filter and eye protection software"
   homepage "https://iristech.co/iris/"
+
+  livecheck do
+    url :homepage
+    regex(/Iris[._-]?v?(\d+(?:\.\d+)+)[._-]?OSX\.zip/i)
+  end
 
   app "Iris.app"
 

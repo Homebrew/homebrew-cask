@@ -1,16 +1,23 @@
 cask "x2goclient" do
-  version "4.1.2.2,20200213"
+  version "4.1.2.2"
+  sha256 :no_check
 
-  if MacOS.version <= :el_capitan
-    sha256 "7ad7c500fd61f23061c1ec6977f82e9cfa69b7edd0b01f7c97d0f3f1f527cff4"
-    url "https://code.x2go.org/releases/binary-macosx/x2goclient/releases/#{version.before_comma}/x2goclient-#{version.before_comma}.#{version.after_comma}.OSX_10_11.dmg"
+  if MacOS.version <= :sierra
+    url "https://code.x2go.org/releases/X2GoClient_latest_macosx_10_11.dmg"
   else
-    sha256 "f41c1a20cc5d6e420a4800954aa18f7b86ed52f4300e187990aa78451be5225a"
-    url "https://code.x2go.org/releases/binary-macosx/x2goclient/releases/#{version.before_comma}/x2goclient-#{version.before_comma}.#{version.after_comma}.OSX_10_13.dmg"
+    url "https://code.x2go.org/releases/X2GoClient_latest_macosx_10_13.dmg"
   end
 
   name "X2Go Client"
+  desc "Remote desktop software"
   homepage "https://wiki.x2go.org/doku.php"
+
+  livecheck do
+    url "https://wiki.x2go.org/doku.php/doc:release-notes-mswin"
+    regex(/x2goclient[._-]v?(\d+(?:\.\d+)+)/i)
+  end
+
+  depends_on macos: ">= :el_capitan"
 
   app "x2goclient.app"
 

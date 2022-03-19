@@ -1,10 +1,16 @@
 cask "subgit" do
-  version "3.3.9"
-  sha256 "65039f787790e9eff7ee5802c2d6fb884dfabb32d9ab60d6882cdf5afd148d37"
+  version "3.3.12"
+  sha256 "31d8e6eeb905fe2c371c17ed0a05eb6c5086d3483f468c05705fe878a2f2ccbd"
 
   url "https://subgit.com/download/subgit-#{version}.zip"
   name "SubGit"
+  desc "Convert SVN repositories to Git"
   homepage "https://subgit.com/"
+
+  livecheck do
+    url "https://subgit.com/download"
+    regex(%r{/subgit[._-]?v?(\d+(?:\.\d+)+)\.zip}i)
+  end
 
   binary "subgit-#{version}/bin/subgit"
 

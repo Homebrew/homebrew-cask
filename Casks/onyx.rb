@@ -17,35 +17,34 @@ cask "onyx" do
   elsif MacOS.version <= :catalina
     version "3.8.7"
     sha256 "0dd8119ad3441c5130ca584ac90ad450c272aab8b577925561a2536da48d2d54"
+  elsif MacOS.version <= :big_sur
+    version "4.0.2"
+    sha256 "18659c76972690bb58f1c1b850ae2c6c9991fdeb9c22790daa1b18c9fa74cb8e"
   else
-    version "3.9.5"
-    sha256 "8a2d841e26cb64184cad3a31e77a6d84a6474db050b0a12bcc940a9b5b5fcbba"
+    version "4.1.6"
+    sha256 "e1fd1d0793761164180c0b96edda818de0e7a786dd3fd3b45e41bb4a251ce717"
   end
 
   url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete(".")}/OnyX.dmg"
-  appcast "https://www.titanium-software.fr/en/onyx.html"
   name "OnyX"
   desc "Verify system files structure, run miscellaneous maintenance and more"
   homepage "https://www.titanium-software.fr/en/onyx.html"
 
-  # Unusual case: The software will stop working, or is dangerous to run, on the next macOS release.
-  depends_on macos: [
-    :yosemite,
-    :el_capitan,
-    :sierra,
-    :high_sierra,
-    :mojave,
-    :catalina,
-    :big_sur,
-  ]
+  livecheck do
+    url :homepage
+    regex(/>\s*OnyX\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s.-]*\s+#{MacOS.version}\s*</i)
+  end
+
+  # Unusual case: The software may stop working, or may be dangerous to run, on the latest macOS release.
+  depends_on macos: "<= :monterey"
 
   app "OnyX.app"
 
   zap trash: [
     "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.titanium.OnyX.help*",
     "~/Library/Logs/OnyX.log",
-    "~/Library/Preferences/OnyX.plist",
     "~/Library/Preferences/com.titanium.OnyX.plist",
+    "~/Library/Preferences/OnyX.plist",
     "~/Library/Saved Application State/com.titanium.OnyX.savedState",
   ]
 end

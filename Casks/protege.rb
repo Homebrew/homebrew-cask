@@ -4,7 +4,6 @@ cask "protege" do
 
   url "https://github.com/protegeproject/protege-distribution/releases/download/v#{version}/Protege-#{version}-os-x.zip",
       verified: "github.com/protegeproject/protege-distribution/"
-  appcast "https://github.com/protegeproject/protege-distribution/releases.atom"
   name "Protégé"
   homepage "https://protege.stanford.edu/"
 

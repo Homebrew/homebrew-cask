@@ -9,5 +9,11 @@ cask "tipp10" do
   desc "Free touch typing tutor"
   homepage "https://www.tipp10.com/"
 
+  depends_on macos: "<= :mojave"
+
   app "TIPP10.app"
+
+  caveats do
+    discontinued
+  end
 end

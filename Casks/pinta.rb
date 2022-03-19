@@ -1,15 +1,17 @@
 cask "pinta" do
-  version "1.7"
-  sha256 "eab26f25f78f906127a4b12991d39483f96f43ded1a75837aad5b539f27abb0c"
+  version "2.0.2"
+  sha256 "2b0a2bf6e0f517c93958b0f80fdbbccd7329e5685b897bc63ba87c9c0dc553b1"
 
-  url "https://github.com/PintaProject/Pinta/releases/download/#{version}/Pinta.app.zip",
+  url "https://github.com/PintaProject/Pinta/releases/download/#{version}/Pinta.dmg",
       verified: "github.com/PintaProject/Pinta/"
-  appcast "https://github.com/PintaProject/Pinta/releases.atom"
   name "Pinta"
   desc "Simple Gtk# Paint Program"
   homepage "https://www.pinta-project.com/"
 
-  depends_on cask: "mono-mdk"
-
   app "Pinta.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.ximian.pinta.plist",
+    "~/Library/Saved Application State/com.ximian.pinta.savedState",
+  ]
 end

@@ -4,7 +4,6 @@ cask "openconnect-gui" do
 
   url "https://github.com/openconnect/openconnect-gui/releases/download/v#{version}/openconnect-gui-#{version}.high_sierra.bottle.tar.gz",
       verified: "github.com/openconnect/openconnect-gui/"
-  appcast "https://github.com/openconnect/openconnect-gui/releases.atom"
   name "OpenConnect-GUI"
   desc "GitLab mirror - Graphical OpenConnect client (beta phase)"
   homepage "https://openconnect.github.io/openconnect-gui/"
@@ -15,4 +14,8 @@ cask "openconnect-gui" do
     "~/Library/Application Support/OpenConnect-GUI Team",
     "~/Library/Preferences/io.github.openconnect.openconnect-gui.plist",
   ]
+
+  caveats do
+    discontinued
+  end
 end

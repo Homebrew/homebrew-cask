@@ -3,9 +3,14 @@ cask "1clipboard" do
   sha256 "d1dee1594fa8b16a54bbcaf2d88b07e3bade0bb809416e535621ddb63b9e2b3d"
 
   url "http://1clipboard.io/download/darwin/#{version}/1Clipboard.zip"
-  appcast "http://1clipboard.io/download/darwin/"
   name "1Clipboard"
+  desc "Clipboard managing app"
   homepage "http://1clipboard.io/"
+
+  livecheck do
+    url "http://1clipboard.io/download/darwin/"
+    regex(%r{/v?(\d+(?:\.\d+)+)/1Clipboard\.zip}i)
+  end
 
   app "1Clipboard.app"
 

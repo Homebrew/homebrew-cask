@@ -1,9 +1,13 @@
 cask "microsoft-auto-update" do
-  version "4.32.21021202"
-  sha256 "ccb758531b295848620c703957fd8cf3c7f1555c334fb320c4bb682aba0261d6"
+  if MacOS.version <= :el_capitan
+    version "4.40.21101001"
+    sha256 "f638f7e0da9ee659c323f2ede0f176804bfe9a615a8f8b6320bd2e69d91ef2b2"
+  else
+    version "4.45.22031300"
+    sha256 "6fcecbdf0348b67d925ce55d85e7cb223178df2b157d72fd14f76c30fd3fc324"
+  end
 
-  url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_AutoUpdate_#{version}_Updater.pkg",
-      verified: "officecdn-microsoft-com.akamaized.net/"
+  url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_AutoUpdate_#{version}_Updater.pkg"
   name "Microsoft Auto Update"
   desc "Provides updates to various Microsoft products"
   homepage "https://docs.microsoft.com/officeupdates/release-history-microsoft-autoupdate"
@@ -31,7 +35,13 @@ cask "microsoft-auto-update" do
               "com.microsoft.package.Microsoft_AutoUpdate.app",
               "com.microsoft.package.Microsoft_AU_Bootstrapper.app",
             ],
-            delete:    "/Library/PrivilegedHelperTools/com.microsoft.autoupdate.helper"
+            delete:    [
+              "/Library/Caches/com.microsoft.autoupdate.fba",
+              "/Library/Caches/com.microsoft.autoupdate.helper",
+              "/Library/LaunchDaemons/com.microsoft.autoupdate.helper.plist",
+              "/Library/Preferences/com.microsoft.autoupdate2.plist",
+              "/Library/PrivilegedHelperTools/com.microsoft.autoupdate.helper",
+            ]
 
   zap trash: [
     "~/Library/Application Support/Microsoft AutoUpdate",
@@ -41,6 +51,8 @@ cask "microsoft-auto-update" do
     "~/Library/Caches/com.microsoft.autoupdate2",
     "~/Library/Cookies/com.microsoft.autoupdate.fba.binarycookies",
     "~/Library/Cookies/com.microsoft.autoupdate2.binarycookies",
+    "~/Library/HTTPStorages/com.microsoft.autoupdate.fba",
+    "~/Library/HTTPStorages/com.microsoft.autoupdate2",
     "~/Library/Preferences/com.microsoft.autoupdate.fba.plist",
     "~/Library/Preferences/com.microsoft.autoupdate2.plist",
     "~/Library/Saved Application State/com.microsoft.autoupdate2.savedState",

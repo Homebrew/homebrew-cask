@@ -1,12 +1,22 @@
 cask "ableton-live-suite" do
-  version "11.0"
-  sha256 "dce197a1cfe371aa3c34b424feee61b8c0cef61ba86a28ad1c0f5450c2fa2016"
+  arch = MacOS.version >= :mojave ? "universal" : "intel"
+  version "11.1"
 
-  url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_suite_#{version}_64.dmg"
-  appcast "https://www.ableton.com/en/release-notes/live-#{version.major}/"
+  if MacOS.version >= :mojave
+    sha256 "3712379f7e1d8ef163cbc3d6e31564046584a01f117b529552b93bc104f6be4f"
+  else
+    sha256 "0e1779d22c087993a4e5f11f9f2a83a429dccfafa92c5e7aa05c87219de39c90"
+  end
+
+  url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_suite_#{version}_#{arch}.dmg"
   name "Ableton Live Suite"
   desc "Sound and music editor"
   homepage "https://www.ableton.com/en/live/"
+
+  livecheck do
+    url "https://www.ableton.com/en/release-notes/live-#{version.major}/"
+    regex(/(\d+(?:\.\d+)+)\s*Release\s*Notes/i)
+  end
 
   auto_updates true
   depends_on macos: ">= :high_sierra"

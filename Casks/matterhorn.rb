@@ -1,9 +1,8 @@
 cask "matterhorn" do
-  version "50200.12.0"
-  sha256 "b2b5b4082824dc49ddef0bf2957352b2fd309a64517dfda962a9a75c15e89842"
+  version "50200.15.0"
+  sha256 "1957ece9b769fe2767898dbfe2204c82a1813e03f6e7cc8309f92483c34371f6"
 
   url "https://github.com/matterhorn-chat/matterhorn/releases/download/#{version}/matterhorn-#{version}-Darwin-x86_64.tar.bz2"
-  appcast "https://github.com/matterhorn-chat/matterhorn/releases.atom"
   name "Matterhorn"
   desc "Unix terminal client for Mattermost"
   homepage "https://github.com/matterhorn-chat/matterhorn"

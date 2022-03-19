@@ -1,10 +1,10 @@
 cask "jclasslib-bytecode-viewer" do
-  version "5.8"
-  sha256 "e62d16c01e25628d2b69f951e01f875f64d1a72e391f131643f85b6f993548d0"
+  version "6.0.3"
+  sha256 "944d53183b325606c54e56cae4e08ba3f0f8c442834128bbba94f6c758c2f2fe"
 
   url "https://github.com/ingokegel/jclasslib/releases/download/#{version}/jclasslib_macos_#{version.dots_to_underscores}.dmg"
-  appcast "https://github.com/ingokegel/jclasslib/releases.atom"
   name "jclasslib bytecode viewer"
+  desc "Visualize all aspects of compiled Java class files and the contained bytecode"
   homepage "https://github.com/ingokegel/jclasslib"
 
   auto_updates true

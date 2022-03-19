@@ -1,10 +1,9 @@
 cask "iconset" do
-  version "1.3.11"
-  sha256 "33b86a855464f16dcbbd9fcde1cbb2eeb4a20d7aecc1b68393a82d54bb1bbac4"
+  version "2.0.0"
+  sha256 "2dc15de9314b3291446e6f98adac67e52f0b430a024282b2f5be3b2512609ec4"
 
   url "https://github.com/IconsetApp/iconset/releases/download/v#{version}/Iconset-#{version}-mac.zip",
       verified: "github.com/IconsetApp/iconset/"
-  appcast "https://github.com/IconsetApp/iconset/releases.atom"
   name "Iconset"
   desc "Organize icon sets and packs in one place"
   homepage "https://iconset.io/"

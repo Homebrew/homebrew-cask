@@ -1,15 +1,21 @@
 cask "tweetbot" do
-  version "3.5.200,4"
-  sha256 "c399823105d6d388f5d36dd931bc2709d58d3abad18076b37e767b0066fb537e"
+  version "3.5.7,35700"
+  sha256 "6245981493a0a7c919d1945b4405647545760eb705d8918ebeeae7500e0898ca"
 
-  url "https://tapbots.net/tweetbot#{version.after_comma}/Tweetbot.#{version.before_comma.no_dots}.zip",
+  url "https://tapbots.net/tweetbot4/Tweetbot.#{version.csv.second}.zip",
       verified: "tapbots.net/"
-  appcast "https://tapbots.net/tweetbot#{version.after_comma}/update.plist",
-          must_contain: version.before_comma.no_dots
   name "Tweetbot"
   desc "Twitter client"
   homepage "https://tapbots.com/tweetbot/mac/"
 
+  livecheck do
+    url "https://tapbots.net/tweetbot4/update.plist"
+    strategy :extract_plist do |version|
+      "#{version.values.map(&:short_version).compact.first},#{version.values.map(&:version).compact.first}"
+    end
+  end
+
+  auto_updates true
   depends_on macos: ">= :high_sierra"
 
   app "Tweetbot.app"

@@ -1,17 +1,29 @@
 cask "isyncr" do
   if MacOS.version <= :mojave
-    version "5.14.11"
-    sha256 "b234a1de565854fc9cdfefba9b2f05887e150ec01612bbfadaa0a0d95566034e"
+    version "5.14.12"
+    sha256 "b4f0ddd19ba49924e00226ff09d543928e13a4e8ec10d2b9cb53e227aeaf2953"
   else
-    version "6.0.3"
-    sha256 "c7033eb946a6a6104a75cc5c182506f47a0399b54f3b4ce486e82a1c7d040154"
+    version "6.1.0"
+    sha256 "29d8e06de375a41efcdd378dec9f7f08a92212325270fb462aae5593a1217fbc"
   end
 
   url "https://www.jrtstudio.com/files/iSyncr%20Desktop%20#{version}.pkg"
-  appcast "https://www.jrtstudio.com/files/SlashiSyncr38.js"
   name "iSyncr Desktop"
   desc "Syncs iTunes to Android over a USB or WiFi connection"
   homepage "https://www.jrtstudio.com/iSyncr-iTunes-for-Android"
+
+  # The download page is rendered using JavaScript with the download links
+  # obtained from https://www.jrtstudio.com/files/SlashiSyncr<number>.js
+  # Since the <number> is not fixed in the filename, the current JavaScript
+  # file needs to be extracted from the download page.
+  livecheck do
+    url "https://www.jrtstudio.com/iSyncr-Desktop-Download"
+    strategy :page_match do |page|
+      js_file = page[%r{src=["']?/(files/SlashiSyncr\d+\.js)\??["' >]}i, 1]
+      version_page = Homebrew::Livecheck::Strategy.page_content("https://www.jrtstudio.com/#{js_file}")
+      version_page[:content].scan(/iSyncr\s*Desktop\s*(\d+(?:\.\d+)+)\.pkg/i).flatten
+    end
+  end
 
   pkg "iSyncr Desktop #{version}.pkg"
 

@@ -4,12 +4,12 @@ cask "interarchy" do
 
   url "https://downloads.kangacode.com/Interarchy/Interarchy_#{version}.zip"
   name "Interarchy"
+  desc "File fransfer tool"
   homepage "https://www.kangacode.com/interarchy/"
 
   livecheck do
-    url "https://www.kangacode.com/interarchy/"
-    strategy :page_match
-    regex(%r{href=.*?/Interarchy_(\d+(?:\.\d+)*)\.zip}i)
+    url :homepage
+    regex(%r{href=.*?/Interarchy[._-]v?(\d+(?:\.\d+)+)\.zip}i)
   end
 
   app "Interarchy.app"
