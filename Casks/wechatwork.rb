@@ -1,6 +1,6 @@
 cask "wechatwork" do
-  version "4.0.2.90460"
-  sha256 "1636b040fd2c7f274456b21c2d4bd2e704e45d2ce4b42f8a0363c062520bbc08"
+  version "4.0.2.90474"
+  sha256 "af2ecb6694e8ee5677a9d7d37790adcf86e0e5cdab5d1eb419e5678a3c531f8c"
 
   url "https://dldir1.qq.com/foxmail/wecom-mac/update/WeCom_#{version}.dmg"
   name "WeChat Work"
