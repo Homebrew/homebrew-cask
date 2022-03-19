@@ -9,8 +9,8 @@ cask "playdate-simulator" do
   homepage "https://play.date/dev/"
 
   livecheck do
-    url :homepage
-    regex(/Playdate\sSDK\s(\d+(?:\.\d+)+)/i)
+    url "https://download.panic.com/playdate_sdk/PlaydateSDK-latest.zip"
+    strategy :header_match
   end
 
   depends_on macos: ">= :catalina"
