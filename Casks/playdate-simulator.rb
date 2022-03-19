@@ -18,4 +18,8 @@ cask "playdate-simulator" do
   pkg "PlaydateSDK-#{version}.pkg"
 
   uninstall pkgutil: "date.play.sdk"
+
+  caveats do
+    license "https://play.date/dev/sdk-license"
+  end
 end
