@@ -3,8 +3,8 @@ cask "sunloginclient" do
   sha256 "a7cfd675da269712f85b996283cd40bde9259ee1d227d37a51884984ea0b3ec7"
 
   url "https://down.oray.com/sunlogin/mac/SunloginClient#{version}.dmg"
-  name "Sunlogin"
-  name "向日葵"
+  name "Sunlogin Client"
+  name "向日葵个人版"
   desc "Remote desktop control and monitoring tool"
   homepage "https://sunlogin.oray.com/"
 
