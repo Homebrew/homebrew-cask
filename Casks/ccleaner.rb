@@ -19,6 +19,7 @@ cask "ccleaner" do
   uninstall quit:      "com.piriform.ccleaner",
             pkgutil:   "com.piriform.pkg.CCleaner",
             launchctl: [
+              "com.piriform.CCleaner",
               "com.piriform.ccleaner.CCleanerAgent",
               "com.piriform.ccleaner (com.piriform.CCleaner)",
               "com.piriform.ccleaner.engine.xpc",
@@ -27,7 +28,7 @@ cask "ccleaner" do
               "com.piriform.ccleaner.uninstall",
               "com.piriform.ccleaner.update",
               "com.piriform.ccleaner.update.xpc"
-              ],
+            ],
             delete:    "/Library/PrivilegedHelperTools/com.piriform.ccleaner.CCleanerAgent"
 
   zap trash: [
