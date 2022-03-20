@@ -4,8 +4,8 @@ cask "omegat" do
 
   url "https://downloads.sourceforge.net/omegat/OmegaT%20-%20Standard/OmegaT%20#{version.major_minor_patch}/OmegaT_#{version}_Mac_Notarized.zip",
       verified: "downloads.sourceforge.net/omegat/"
-  appcast "https://sourceforge.net/projects/omegat/rss?path=/OmegaT%20-%20Standard"
   name "OmegaT"
+  desc "Translation memory tool"
   homepage "https://omegat.org/"
 
   app "OmegaT_#{version}_Mac_Notarized/OmegaT.app"
