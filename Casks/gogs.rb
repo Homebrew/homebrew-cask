@@ -1,12 +1,12 @@
 cask "gogs" do
   arch = Hardware::CPU.intel? ? "amd64" : "arm64"
 
-  version "0.12.5"
+  version "0.12.6"
 
   if Hardware::CPU.intel?
-    sha256 "fddd527dab4d8933c60c2cda6195f54539f63a46a10d9696b0dca607187546d2"
+    sha256 "9d10de00d718cc7c3deabc9e668d33dde2d06328a9807db7d9c7280cda9cce06"
   else
-    sha256 "74e9b518470b8292bad47e8a81350f1d0d14e500ef6c52e252749fd569c180ca"
+    sha256 "cb12b3bd4e748a7a780536d93118736cc8473629fa9443b6dc641c09b00d28c2"
   end
 
   url "https://github.com/gogs/gogs/releases/download/v#{version}/gogs_#{version}_darwin_#{arch}.zip",
