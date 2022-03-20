@@ -14,7 +14,7 @@ cask "ccleaner" do
 
   depends_on macos: ">= :yosemite"
 
- pkg "Install CCleaner.pkg"
+  pkg "Install CCleaner.pkg"
 
   uninstall quit:      "com.piriform.ccleaner",
             launchctl: "com.piriform.ccleaner.CCleanerAgent",
