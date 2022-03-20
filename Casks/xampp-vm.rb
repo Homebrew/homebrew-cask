@@ -11,5 +11,5 @@ cask "xampp-vm" do
     cask "xampp"
   end
 
-  app "XAMPP.app"
+  app "xampp-osx-#{version}-vm.app"
 end
