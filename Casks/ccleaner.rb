@@ -17,6 +17,7 @@ cask "ccleaner" do
   pkg "Install CCleaner.pkg"
 
   uninstall quit:      "com.piriform.ccleaner",
+            pkgutil:   "com.piriform.pkg.CCleaner",
             launchctl: [
               "com.piriform.ccleaner.CCleanerAgent",
               "com.piriform.ccleaner (com.piriform.CCleaner)",
