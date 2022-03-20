@@ -1,6 +1,6 @@
 cask "tidal" do
   arch = Hardware::CPU.intel? ? "" : ".arm64"
-  version "2.29.7"
+  version "2.30.0"
   sha256 :no_check
 
   url "https://download.tidal.com/desktop/TIDAL#{arch}.dmg"
