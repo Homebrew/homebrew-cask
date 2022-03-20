@@ -1,5 +1,6 @@
 cask "tidal" do
   arch = Hardware::CPU.intel? ? "" : ".arm64"
+
   version "2.30.0"
   sha256 :no_check
 
