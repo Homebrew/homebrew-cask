@@ -1,6 +1,6 @@
 cask "android-ndk" do
-  version "23b"
-  sha256 "e067b7402fdae85bfbe8af1822afd573b8e73dce443a8292fdaeb2e8dc3aeb86"
+  version "24"
+  sha256 "162a7000515be07489f2ed70d6d3a117d236150f83f3fcb601c163349429ba23"
 
   url "https://dl.google.com/android/repository/android-ndk-r#{version}-darwin.zip",
       verified: "dl.google.com/android/repository/"
@@ -10,7 +10,7 @@ cask "android-ndk" do
 
   livecheck do
     url "https://developer.android.com/ndk/downloads"
-    regex(/Latest\s+LTS\s+Version\s+\(r(\d+[a-z]?)\)/i)
+    regex(/Latest\s+r(\d+[a-z]?)\b(?!\s+Preview)/i)
   end
 
   conflicts_with cask: "crystax-ndk"

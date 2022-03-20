@@ -8,7 +8,8 @@ cask "data-integration" do
   homepage "https://sourceforge.net/projects/pentaho/"
 
   livecheck do
-    regex(/pdi-ce-(\d+(?:[.-]\d+)+)\.zip/i)
+    url :url
+    regex(%r{url=.*?/pdi-ce[._-]v?(\d+(?:[.-]\d+)+)\.zip}i)
   end
 
   app "data-integration/Data Integration.app"
