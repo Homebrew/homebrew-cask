@@ -1,6 +1,6 @@
 cask "flmsg" do
   version "4.0.19"
-  
+
   if MacOS.version <= :catalina
     sha256 "a3176e35f0c4ae322c640138e43486c495009fe6648585f29c9bddec5816fd05"
     url "http://www.w1hkj.com/files/flmsg/flmsg-#{version}_hs.dmg"
