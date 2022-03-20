@@ -27,7 +27,7 @@ cask "ccleaner" do
               "com.piriform.ccleaner.services.xpc",
               "com.piriform.ccleaner.uninstall",
               "com.piriform.ccleaner.update",
-              "com.piriform.ccleaner.update.xpc"
+              "com.piriform.ccleaner.update.xpc",
             ],
             delete:    "/Library/PrivilegedHelperTools/com.piriform.ccleaner.CCleanerAgent"
 
