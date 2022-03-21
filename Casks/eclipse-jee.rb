@@ -1,12 +1,12 @@
 cask "eclipse-jee" do
   arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
-  version "4.22.0,2021-12"
+  version "4.23.0,2022-03"
 
   if Hardware::CPU.intel?
-    sha256 "3a4d32951ddb2b1a5e87ed31a4fa49bf16516407152f49c1ad82b18931fc9b57"
+    sha256 "135c2588014f56cb5edaf27f517a56a124663aa9752927d40a782b27945ece3d"
   else
-    sha256 "858075dcf46e3ac4e9894688f4e006d127dbccd8cfc8e97c556d5f53d520072d"
+    sha256 "c8eeffc744c935d5bae47483b9671ca32b5e206ea84ab07c2e9c70095f6bf563"
   end
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-jee-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&r=1"
