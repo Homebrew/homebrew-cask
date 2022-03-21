@@ -1,10 +1,10 @@
 cask "eclipse-java" do
-  version "4.22.0,2021-12"
+  version "4.23.0,2022-03"
 
   if Hardware::CPU.intel?
-    sha256 "e9ace21603240bd9c05bb0af67281ae542a762e5477e054d7a2f1e85770f653e"
+    sha256 "8e8429b19fc804f12477e27df07e968bbfa052c80bf0f768d948e5aaeac0281d"
   else
-    sha256 "97c718bc5c5121525cef86dc87f7931bc2abdf28d165ffdd28cfffb3f79c46ba"
+    sha256 "bab60d9eebc38d58dc49b07eb0bc52c4cd4b01d5f15116659806c74478c71527"
   end
 
   arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
