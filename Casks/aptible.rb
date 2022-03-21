@@ -1,9 +1,8 @@
 cask "aptible" do
-  version "0.19.1,20210802230457,251"
-  sha256 "693e38e36edcd5289df8c0456ecfd7e812c668fc368b32ca9cc54fe90698530a"
+  version "0.19.3,20220314154920,340,10.15.7-1"
+  sha256 "e50d899e25172facbac1489a6e24a4d17431631485ca15be8b026be1c99480e8"
 
-  url "https://omnibus-aptible-toolbelt.s3.amazonaws.com/aptible/omnibus-aptible-toolbelt/master/#{version.csv.third}/pkg/aptible-toolbelt-#{version.csv.first}%2B#{version.csv.second}-mac-os-x.10.11.6-1.pkg",
-      verified: "omnibus-aptible-toolbelt.s3.amazonaws.com/"
+  url "https://omnibus-aptible-toolbelt.s3.amazonaws.com/aptible/omnibus-aptible-toolbelt/master/#{version.csv.third}/pkg/aptible-toolbelt-#{version.csv.first}%2B#{version.csv.second}-mac-os-x.#{version.csv.fourth}.pkg"
   name "Aptible Toolbelt"
   desc "Command-line tool for Aptible Deploy, an audit-ready App Deployment Platform"
   homepage "https://www.aptible.com/documentation/deploy/cli.html"
