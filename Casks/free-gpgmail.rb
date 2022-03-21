@@ -11,26 +11,26 @@ cask 'free-gpgmail' do
   end
 
   if MacOS.version <= :mojave
-    version '2021.3'
-    sha256 '7b4eaf2d52ddc1519dfec4087f09bad018657fde87a87021904075f55ac00377'
+    version '2021.3.1'
+    sha256 '584827bde768cad5d7160b22387add35b02e75c1e4e75894cecd30c2edbabc13'
     url "https://github.com/Free-GPGMail/Free-GPGMail/releases/download/v#{version}/Free-GPGMail_3-#{version}.mailbundle.zip"
     artifact "Free-GPGMail_3.mailbundle", target: "#{ENV['HOME']}/Library/Mail/Bundles/Free-GPGMail_3.mailbundle"
     uninstall delete: "~/Library/Mail/Bundles/Free-GPGMail_3.mailbundle"
   elsif MacOS.version <= :catalina
-    version '2021.3'
-    sha256 'c2fda8cc9a52825cf0c0a9d954036e215076db5ec8b898c35d16d306aa6b1ea4'
+    version '2021.3.1'
+    sha256 '3d1fc129589a495527601102080993db61e78f430b1cf2372a219f1a8d4c1fb3'
     url "https://github.com/Free-GPGMail/Free-GPGMail/releases/download/v#{version}/Free-GPGMail_4-#{version}.mailbundle.zip"
     artifact "Free-GPGMail_4.mailbundle", target: "#{ENV['HOME']}/Library/Mail/Bundles/Free-GPGMail_4.mailbundle"
     uninstall delete: "~/Library/Mail/Bundles/Free-GPGMail_4.mailbundle"
   elsif MacOS.version <= :big_sur
-    version '2021.3'
-    sha256 '438519fa8b5ed04081553efd58b5edf52b6847ea3719fe9b1331e97c8021ca43'
-    url "https://github.com/Free-GPGMail/Free-GPGMail/releases/download/v#{version}/Free-GPGMail_5-#{version}.mailbundle.zip"
+    version '2021.3.1'
+    sha256 'ee0b1a313afedb5cdf8a9703b00f35040b3109877247bb342c92a60b53944c9a'
+    url "https://github.com/Free-GPGMail/Free-GPGMail/releases/download/v#{version}/Free-GPGMail_5-#{version}-signed.mailbundle.zip"
     artifact "Free-GPGMail_5.mailbundle", target: "#{ENV['HOME']}/Library/Mail/Bundles/Free-GPGMail_5.mailbundle"
     uninstall delete: "~/Library/Mail/Bundles/Free-GPGMail_5.mailbundle"
   elsif MacOS.version >= :monterey
-    version '2021.3'
-    sha256 'a3e9d799ee332093303f4bf7ecc03d084e0bd3e28954cedc7d9149f660ae72e5'
+    version '2021.3.1'
+    sha256 'd15ae3bad7a40c98a078b5be0891dd38d43240cde7acbfd5f7ac03fafad4bbb1'
     url "https://github.com/Free-GPGMail/Free-GPGMail/releases/download/v#{version}/Free-GPGMail_6-#{version}.mailbundle.zip"
     artifact "Free-GPGMail_6.mailbundle", target: "#{ENV['HOME']}/Library/Mail/Bundles/Free-GPGMail_6.mailbundle"
     uninstall delete: "~/Library/Mail/Bundles/Free-GPGMail_6.mailbundle"
