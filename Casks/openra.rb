@@ -9,7 +9,8 @@ cask "openra" do
   homepage "https://www.openra.net/"
 
   livecheck do
-    regex(/^release-(\d+)$/i)
+    url :url
+    regex(/^release[._-]v?(\d+(?:[.-]\d+)*)$/i)
   end
 
   app "OpenRA - Dune 2000.app"
