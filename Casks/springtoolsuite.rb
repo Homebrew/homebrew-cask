@@ -1,5 +1,6 @@
 cask "springtoolsuite" do
   arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
+
   version "4.14.0,4.23.0"
 
   if Hardware::CPU.intel?
