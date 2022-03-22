@@ -3,8 +3,8 @@ cask "appcleaner" do
     version "3.4"
     sha256 "0c60d929478c1c91e0bad76d3c04795665c07a05e45e33321db845429c9aefa8"
   else
-    version "3.6.3,4222"
-    sha256 "081e8c221bb54c103d5bdf22dcd1b4dda3d19b544d0f37b43dc304272152d3d0"
+    version "3.6.4,4270"
+    sha256 "610c22fda19d558130e742f9c1d5a40587bc182967abdb2e47b4385fdaad1501"
   end
 
   url "https://www.freemacsoft.net/downloads/AppCleaner_#{version.csv.first}.zip"
