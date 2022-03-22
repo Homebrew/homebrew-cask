@@ -1,6 +1,6 @@
 cask "focusatwill" do
-  version "3.2.0"
-  sha256 "011476e399e725654d1cc6b76ac8fbb61d39f9fa5aa5fc6ac562f7f3ee73df03"
+  version "3.4.0"
+  sha256 "b5e2cfdd30e1f4ba69f41c06cc5c2e7c803b28541d24954d454b91e7af892524"
 
   url "https://faw-desktop.s3.amazonaws.com/focusatwill-#{version}-universal.dmg",
       verified: "faw-desktop.s3.amazonaws.com/"
