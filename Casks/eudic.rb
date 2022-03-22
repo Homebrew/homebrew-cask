@@ -1,5 +1,5 @@
 cask "eudic" do
-  version "4.1.7,1067"
+  version "4.1.8,1068"
   sha256 "416e31a4baa4b1739776413cfd0d2f932b41868dc65a1cc6b5784cca2fa7a6ff"
 
   url "https://static.frdic.com/pkg/eudicmac.dmg?v=#{version.csv.second}",
@@ -9,11 +9,6 @@ cask "eudic" do
   name "欧路词典"
   desc "European dictionary"
   homepage "https://www.eudic.net/v4/en/app/eudic"
-
-  livecheck do
-    url "https://www.eudic.net/update/eudic_mac.xml"
-    strategy :sparkle
-  end
 
   app "Eudic.app"
 
