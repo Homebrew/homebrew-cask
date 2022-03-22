@@ -8,8 +8,11 @@ cask "opensong" do
   desc "Presentation software"
   homepage "http://www.opensong.org/"
 
+  # This regex has to match unstable versions until the cask uses a stable
+  # version again.
   livecheck do
-    regex(/OpenSong[\s._-]+?v?(\d+(?:\.\d+)+)\.pkg/i)
+    url "https://sourceforge.net/projects/opensong/rss?path=/OpenSong"
+    regex(/OpenSong[\s._-]*?v?(\d+(?:[._]\d+)+(?:[\s._-]?(?:B(?:eta)?|RC)\d*)?)(?:[._-][^"']+?)?\.(?:dmg|pkg)/i)
   end
 
   pkg "OpenSong%20#{version}.pkg"
