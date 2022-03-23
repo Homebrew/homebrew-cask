@@ -1,6 +1,6 @@
 cask "xemu" do
-  version "0.6.2-88-g6e1969001e"
-  sha256 "b117b0a45b093d27f4b79e21c86ea813ec6f1534d95a9ff6ab6377cab54bf515"
+  version "0.6.2-89-g2d5471c5be"
+  sha256 "6bb43e7b02fd953f0a6e8098184a77e056661c3834d9f782f5ff000cab240976"
 
   url "https://github.com/mborgerson/xemu/releases/download/gh-release%2F#{version}/xemu-macos-universal-release.zip",
       verified: "github.com/mborgerson/xemu/"
