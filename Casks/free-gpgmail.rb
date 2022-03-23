@@ -15,7 +15,6 @@ cask "free-gpgmail" do
   desc "Apple Mail plugin for GnuPG encrypted e-mails"
   homepage "https://github.com/Free-GPGMail/Free-GPGMail"
 
-
   livecheck do
     url :url
     strategy :git do |tags|
