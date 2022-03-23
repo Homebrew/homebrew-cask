@@ -31,21 +31,5 @@ cask "free-gpgmail" do
 
   artifact "Free-GPGMail_#{version.csv.first}.mailbundle", target: "#{ENV["HOME"]}/Library/Mail/Bundles/Free-GPGMail_#{version.csv.first}.mailbundle"
 
-  preflight do
-    system "rm", "#{ENV["HOME"]}/Library/Mail/Bundles/Free-GPGMail_*.mailbundle"
-  end
-
   uninstall delete: "~/Library/Mail/Bundles/Free-GPGMail_#{version.csv.first}.mailbundle"
-
-  caveats "Apple Mail plugin for GnuPG has been updated."
-  caveats "To finalize installation, do the following:"
-  caveats "    In Mail, go to Preferences -> General -> Manage Plugins..."
-  caveats "    - Make sure that 'GPGMailLoader_*.mailbundle', if present, is disabled."
-  caveats "    - Enable the 'Free-GPGMail_<version>.mailbundle'."
-  caveats "    - Apply and Restart Mail."
-  caveats ""
-  caveats "If this is your first time installing Free-GPGMail:"
-  caveats "    In Mail.app, check Preferences -> Free-GPGMail. If it says that you are in"
-  caveats "    Trial Mode or Decryption Only Mode, hit Activate. It will perform a dummy"
-  caveats "    activation routine."
 end
