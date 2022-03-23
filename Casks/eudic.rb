@@ -9,7 +9,7 @@ cask "eudic" do
   name "欧路词典"
   desc "European dictionary"
   homepage "https://www.eudic.net/v4/en/app/eudic"
-  
+
   livecheck do
     url "https://static.frdic.com/pkg/eudicmac.dmg"
     strategy :extract_plist
