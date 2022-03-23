@@ -14,8 +14,8 @@ cask "readyapi" do
   end
 
   installer script: {
-    executable: "ReadyAPI #{version} Installer.app/Contents/MacOS/JavaApplicationStub", 
-    args: ["-q"],
+    executable: "ReadyAPI #{version} Installer.app/Contents/MacOS/JavaApplicationStub",
+    args:       ["-q"],
   }
 
   uninstall delete: [
