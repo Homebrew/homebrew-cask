@@ -1,6 +1,6 @@
 cask "monodraw" do
-  version "1.5,107"
-  sha256 "f5f9042605bd9f80efd0a0a634c27f04ff079e2e55d12491d0c9f22fd4f0a09c"
+  version "1.5,109"
+  sha256 "5e9ef196a912a43ed4aade4467a891d2160427b36c46cf1817cbf867ef70134a"
 
   url "https://updates.helftone.com/monodraw/downloads/Monodraw-b#{version.csv.second}.zip"
   name "Monodraw"
