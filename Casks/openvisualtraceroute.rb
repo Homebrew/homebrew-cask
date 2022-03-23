@@ -5,10 +5,12 @@ cask "openvisualtraceroute" do
   url "https://downloads.sourceforge.net/openvisualtrace/#{version}/OpenVisualTraceRoute#{version}.dmg",
       verified: "downloads.sourceforge.net/openvisualtrace/"
   name "OpenVisualTraceroute"
+  desc "Visual networking tool"
   homepage "https://visualtraceroute.net/"
 
   livecheck do
-    regex(/OpenVisualTraceRoute[._-]?v?(\d+(?:\.\d+)+)\.dmg/i)
+    url :url
+    regex(%r{url=.*?/OpenVisualTraceRoute[._-]?v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "OpenVisualTraceroute.app"
