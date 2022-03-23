@@ -15,4 +15,21 @@ cask "qutebrowser" do
     "~/Library/Caches/qutebrowser",
     "~/Library/Preferences/qutebrowser",
   ]
+
+  caveats <<~EOS
+    If you're using macOS Catalina or newer, you may
+    get an error similar to the following when attempting
+    to launch qutebrowser:
+
+      "qutebrowser.app" is damaged and can't be opened.
+
+    To bypass this error, run:
+
+      sudo xattr -rd com.apple.quarantine "#{appdir}/qutebrowser.app"
+
+    You don't need to run this command again on subsequent launches.
+    For more information, see this qutebrowser issue:
+
+      https://github.com/qutebrowser/qutebrowser/issues/6771
+  EOS
 end
