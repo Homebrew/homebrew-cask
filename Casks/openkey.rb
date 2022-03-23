@@ -1,6 +1,6 @@
 cask "openkey" do
-  version "2.0.4"
-  sha256 "422ea5cca0873fc6af739bb339e5a0c79837aa3b3baecc68790a0f2382756de1"
+  version "2.0.5"
+  sha256 "0551e0b73f2aff1c75098124f348ea871b8a7233f8c407875ceb69d7b8f84b1c"
 
   url "https://github.com/tuyenvm/OpenKey/releases/download/#{version}/OpenKey#{version}.dmg"
   name "OpenKey"
