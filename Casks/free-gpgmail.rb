@@ -15,6 +15,17 @@ cask "free-gpgmail" do
   desc "Apple Mail plugin for GnuPG encrypted e-mails"
   homepage "https://github.com/Free-GPGMail/Free-GPGMail"
 
+
+  livecheck do
+    url :url
+    strategy :git do |tags|
+      tags.map do |tag|
+        match = tag.match(/^v(\d+(?:\.\d+)*)/i)
+        "#{version.csv.first},#{match[1]},#{version.csv.third}" if match
+      end.compact
+    end
+  end
+
   auto_updates false
   depends_on macos: ">= :mojave"
   depends_on cask: "gpg-suite-no-mail"
