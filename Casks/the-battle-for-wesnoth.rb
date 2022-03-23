@@ -13,7 +13,7 @@ cask "the-battle-for-wesnoth" do
 
   livecheck do
     url :homepage
-    regex(/href=.*?Wesnoth[._-]v?(\d+(?:\.\d*[02468])+(?:\.\d+)*[a-z]?)\.dmg/i)
+    regex(/href=.*?Wesnoth[._-]v?(\d+\.\d*[02468](?:\.\d+)*[a-z]?)\.dmg/i)
   end
 
   app "The Battle for Wesnoth.app"
