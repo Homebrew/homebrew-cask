@@ -15,11 +15,6 @@ cask "free-gpgmail" do
   desc "Apple Mail plugin for GnuPG encrypted e-mails"
   homepage "https://github.com/Free-GPGMail/Free-GPGMail"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates false
   depends_on macos: ">= :mojave"
   depends_on cask: "gpg-suite-no-mail"
