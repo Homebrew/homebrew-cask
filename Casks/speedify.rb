@@ -1,5 +1,5 @@
 cask "speedify" do
-  version "11.8.0,8872"
+  version "11.9.2,8960"
   sha256 :no_check
 
   url "https://downloads.speedify.com/speedify.php?platform=osx"
