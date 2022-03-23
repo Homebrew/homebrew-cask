@@ -1,6 +1,3 @@
-# typed: false
-# frozen_string_literal: true
-
 cask "dmenu-mac" do
   version "0.7.2"
   sha256 "db82a9ac07e1fca23e31db2e458979d12fce846a8948e5a053fd8d317967e469"
