@@ -1,23 +1,16 @@
 cask "free-gpgmail" do
-  if MacOS.version <= :mojave
-    version "3,2021.3.1"
-    sha256 "584827bde768cad5d7160b22387add35b02e75c1e4e75894cecd30c2edbabc13"
-  elsif MacOS.version <= :catalina
-    version "4,2021.3.1"
-    sha256 "3d1fc129589a495527601102080993db61e78f430b1cf2372a219f1a8d4c1fb3"
+  if MacOS.version <= :catalina
+    version "5,2021.3.1,-unsigned"
+    sha256 "3a3c9290622cc3fe8d4761050363917d009f9fa923eb32d436364f0ae9a161b9"
   elsif MacOS.version <= :big_sur
-    version "5,2021.3.1"
+    version "5,2021.3.1,-signed"
     sha256 "ee0b1a313afedb5cdf8a9703b00f35040b3109877247bb342c92a60b53944c9a"
   elsif MacOS.version >= :monterey
-    version "6,2021.3.1"
+    version "6,2021.3.1,"
     sha256 "d15ae3bad7a40c98a078b5be0891dd38d43240cde7acbfd5f7ac03fafad4bbb1"
   end
 
-  if version.csv.first == 5
-    url "https://github.com/Free-GPGMail/Free-GPGMail/releases/download/v#{version.csv.second}/Free-GPGMail_#{version.csv.first}-#{version.csv.second}-signed.mailbundle.zip"
-  else
-    url "https://github.com/Free-GPGMail/Free-GPGMail/releases/download/v#{version.csv.second}/Free-GPGMail_#{version.csv.first}-#{version.csv.second}.mailbundle.zip"
-  end
+  url "https://github.com/Free-GPGMail/Free-GPGMail/releases/download/v#{version.csv.second}/Free-GPGMail_#{version.csv.first}-#{version.csv.second}#{version.csv.third}.mailbundle.zip"
   name "Free-GPGMail"
   desc "Apple Mail plugin for GnuPG encrypted e-mails"
   homepage "https://github.com/Free-GPGMail/Free-GPGMail"
