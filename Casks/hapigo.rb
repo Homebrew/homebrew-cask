@@ -8,4 +8,11 @@ cask "hapigo" do
   homepage "https://www.hapigo.com/"
 
   app "HapiGo.app"
+
+  zap trash: [
+    "~/Library/Application Support/Hapigo",
+    "~/Library/Caches/Hapigo",
+    "~/Library/Caches/com.hapigo",
+    "~/Library/Preferences/com.xunyong.hapigo.plist"
+  ]
 end
