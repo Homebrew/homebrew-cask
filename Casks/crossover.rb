@@ -12,6 +12,8 @@ cask "crossover" do
     strategy :sparkle
   end
 
+  auto_updates true
+  
   app "CrossOver.app"
 
   zap trash: [
