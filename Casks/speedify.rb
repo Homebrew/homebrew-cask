@@ -2,7 +2,7 @@ cask "speedify" do
   version "11.9.2,8960"
   sha256 :no_check
 
-  url "https://downloads.speedify.com/speedify.php?platform=osx"
+  url "https://downloads.speedify.com/Speedify-#{version.sub(',','.')}.dmg"
   name "Speedify"
   desc "VPN client"
   homepage "https://speedify.com/"
