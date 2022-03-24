@@ -3,7 +3,8 @@ cask "hapigo" do
   sha256 "6393038f16c30e00ac6f033787a261510b56f76e0bb4d32ae38fa08cd837047f"
 
   url "https://github.com/HapiGo/HapiGo/releases/download/#{version}/HapiGo.dmg"
-  name "hapigo"
+      verified: "github.com/HapiGo/HapiGo/"
+  name "HapiGo"
   desc "脑力工作者必备工具"
   homepage "https://www.hapigo.com/"
 
@@ -13,6 +14,6 @@ cask "hapigo" do
     "~/Library/Application Support/Hapigo",
     "~/Library/Caches/Hapigo",
     "~/Library/Caches/com.hapigo",
-    "~/Library/Preferences/com.xunyong.hapigo.plist"
+    "~/Library/Preferences/com.xunyong.hapigo.plist",
   ]
 end
