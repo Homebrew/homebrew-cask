@@ -10,9 +10,11 @@ cask "mellel" do
 
   livecheck do
     url "http://www.mellelupdate.com/mellelupdate/latest_update.xml"
-    strategy :page_match do |page|
-      page.scan(%r{<full-version>(\d+(?:\.\d+)+)\.(\d+)</full-version>}i)
-          .map { |match| "#{match[0]},#{match[1]}" }
+    regex(%r{<full-version>v?(\d+(?:\.\d{1,2})+)(?:\.(\d{3,}))?</full-version>}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map do |match|
+        match[1].present? ? "#{match[0]},#{match[1]}" : match[0]
+      end
     end
   end
 
