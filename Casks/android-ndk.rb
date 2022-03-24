@@ -1,8 +1,8 @@
 cask "android-ndk" do
   version "24"
-  sha256 "162a7000515be07489f2ed70d6d3a117d236150f83f3fcb601c163349429ba23"
+  sha256 "9b67b1aec07aaf707ca167332982d3d86eff901df0843cefa2a3b347fb463333"
 
-  url "https://dl.google.com/android/repository/android-ndk-r#{version}-darwin.zip",
+  url "https://dl.google.com/android/repository/android-ndk-r#{version}-darwin.dmg",
       verified: "dl.google.com/android/repository/"
   name "Android NDK"
   desc "Toolset to implement parts of Android apps in native code"
@@ -18,11 +18,12 @@ cask "android-ndk" do
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/ndk_exec.sh"
   preflight do
-    FileUtils.ln_sf("#{staged_path}/android-ndk-r#{version}", "#{HOMEBREW_PREFIX}/share/android-ndk")
+    build = File.read("#{staged_path}/source.properties").match(/(?<=Pkg.Revision\s=\s\d\d.\d.)\d+/)
+    FileUtils.ln_sf("#{staged_path}/AndroidNDK#{build}.app/Contents/NDK", "#{HOMEBREW_PREFIX}/share/android-ndk")
 
     File.write shimscript, <<~EOS
       #!/bin/bash
-      readonly executable="#{staged_path}/android-ndk-r#{version}/$(basename ${0})"
+      readonly executable="#{staged_path}/AndroidNDK#{build}.app/Contents/NDK/$(basename ${0})"
       test -f "${executable}" && exec "${executable}" "${@}"
     EOS
   end
