@@ -13,7 +13,7 @@ cask "crossover" do
   end
 
   auto_updates true
-  
+
   app "CrossOver.app"
 
   zap trash: [
