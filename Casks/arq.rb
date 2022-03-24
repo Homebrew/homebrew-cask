@@ -21,13 +21,18 @@ cask "arq" do
             quit:      "com.haystacksoftware.Arq",
             delete:    [
               "/Applications/Arq.app",
-              "/Library/Application Support/ArqAgent",
-              "/Library/Application Support/ArqAgentAPFS",
             ],
             launchctl: [
               "com.haystacksoftware.ArqMonitor",
               "com.haystacksoftware.arqagent",
             ]
 
-  zap trash: "~/Library/Application Support/Arq *"
+  zap trash: [
+    "~/Library/Arq *",
+    "~/Library/Application Support/Arq *",
+    "~/Library/Preferences/com.haystacksoftware.Arq.plist",
+    "~/Library/Preferences/com.haystacksoftware.ArqMonitor.plist",
+    "/Library/Application Support/ArqAgent",
+    "/Library/Application Support/ArqAgentAPFS",
+  ]
 end
