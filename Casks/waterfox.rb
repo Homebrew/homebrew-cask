@@ -14,8 +14,8 @@ cask "waterfox" do
   homepage "https://www.waterfox.net/"
 
   livecheck do
-    url "https://www.waterfox.net/download/"
-    regex(%r{href=.*?/Waterfox\.G(\d+(?:\.\d+)+)\.#{suffix}\.dmg}i)
+    url "https://api.github.com/repos/WaterfoxCo/Waterfox/releases/latest"
+    regex(%r{browser_download_url.*?/Waterfox\.G(\d+(?:[._-]\d+)+)\.#{suffix}\.dmg}i)
   end
 
   depends_on macos: ">= :yosemite"
