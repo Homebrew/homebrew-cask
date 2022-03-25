@@ -11,7 +11,7 @@ cask "nheko" do
   livecheck do
     url "https://github.com/Nheko-Reborn/nheko/releases/latest"
     strategy :page_match do |page|
-      match = page.match(/nheko[._-]v?(\d+(?:\.\d+)+)[._-](.+)[._-](.+)\.dmg/i)
+      match = page.match(/nheko[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
