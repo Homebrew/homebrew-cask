@@ -1,12 +1,12 @@
 cask "cryptomator" do
   arch = Hardware::CPU.intel? ? "" : "-arm64"
 
-  version "1.6.6"
+  version "1.6.7"
 
   if Hardware::CPU.intel?
-    sha256 "02b8ba1384d67fa507609500891461942e97297da69ccc718aab57fa96b83ae9"
+    sha256 "653d67f20a3ef3e186a90338a5fa42653e1bc50ef40c31642708d0c204c05cdb"
   else
-    sha256 "9c6db1941c64f7bd644d42b4b0502adfe75ef854e4ebe87d46f7c392cc4ab2b6"
+    sha256 "289420e809a9bad0feac4dc0372a709f6f37915109dbc32f979c291c11a9c0aa"
   end
 
   url "https://github.com/cryptomator/cryptomator/releases/download/#{version}/Cryptomator-#{version}#{arch}.dmg",
