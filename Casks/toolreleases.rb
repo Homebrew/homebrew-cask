@@ -25,7 +25,7 @@ cask "toolreleases" do
   uninstall login_item: "ToolReleases",
             quit:       [
               "com.developermaris.ToolReleases",
-              "com.apple.systemevents"
+              "com.apple.systemevents",
             ]
 
   zap trash: [
