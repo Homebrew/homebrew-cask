@@ -1,6 +1,6 @@
 cask "toolreleases" do
-  version "1.4.2,45"
-  sha256 "1904c8a70263f2be5c9f089671e29eef1514d5a70d4390a8eedfd089047e943e"
+  version "1.5.0,59"
+  sha256 "2097bafa9cfe648c259e5c81f98137e3e38217838deccfe262460773807dd8df"
 
   url "https://github.com/DeveloperMaris/ToolReleases/releases/download/v#{version.csv.first}/ToolReleases_v#{version.csv.first}.b#{version.csv.second}.zip"
   name "ToolReleases"
@@ -17,12 +17,16 @@ cask "toolreleases" do
     end
   end
 
+  auto_updates true
   depends_on macos: ">= :big_sur"
 
   app "ToolReleases.app"
 
   uninstall login_item: "ToolReleases",
-            quit:       "com.developermaris.ToolReleases"
+            quit:       [
+              "com.developermaris.ToolReleases",
+              "com.apple.systemevents"
+            ]
 
   zap trash: [
     "~/Library/Caches/com.developermaris.ToolReleases",
