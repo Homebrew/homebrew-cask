@@ -1,6 +1,6 @@
 cask "arctype" do
-  version "0.9.53"
-  sha256 "bbcf92950728cb6b3a867e06dbfca22efbe7868b482031aae6445bcc59316405"
+  version "0.9.55"
+  sha256 "956ace09c0d3c75a4f699479568550834fee4411d263ad58a5f738980c06b7f1"
 
   url "https://arctype-downloads.s3-us-west-2.amazonaws.com/updates/Arctype-#{version}.dmg",
       verified: "arctype-downloads.s3-us-west-2.amazonaws.com/updates/"

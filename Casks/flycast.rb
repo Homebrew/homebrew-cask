@@ -8,6 +8,7 @@ cask "flycast" do
   homepage "https://github.com/flyinghead/flycast"
 
   livecheck do
+    url :url
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 

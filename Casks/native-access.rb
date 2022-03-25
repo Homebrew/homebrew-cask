@@ -7,10 +7,6 @@ cask "native-access" do
   desc "Administration tool for Native Instruments products"
   homepage "https://native-instruments.com/specials/native-access"
 
-  livecheck do
-    skip "unversioned URL"
-  end
-
   auto_updates true
   depends_on macos: ">= :sierra"
 

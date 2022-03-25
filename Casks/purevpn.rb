@@ -5,11 +5,8 @@ cask "purevpn" do
   url "https://purevpn-dialer-assets.s3.amazonaws.com/mac-2.0/packages/Production/PureVPN.pkg",
       verified: "purevpn-dialer-assets.s3.amazonaws.com/"
   name "PureVPN"
+  desc "VPN client"
   homepage "https://www.purevpn.com/"
-
-  livecheck do
-    skip "unversioned URL"
-  end
 
   pkg "PureVPN.pkg"
 

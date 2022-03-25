@@ -1,12 +1,12 @@
 cask "signal" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "5.34.0"
+  version "5.36.0"
 
   if Hardware::CPU.intel?
-    sha256 "9bf0cab2f3edcb1eecb872f0c073239d71e2c54999c3184d83b12cc3f2d2554c"
+    sha256 "24563d6a599f160d97a9c9c6f3d129707aec71b5f1ba619ac3a5cf77dec17170"
   else
-    sha256 "09036747b817e6fa3521ddf4801336640a7d7536828efdb15a2868cda10a2b58"
+    sha256 "c01276dd66e569d3b30f30faad52625b3b0e61c8884dd92b2a028742ba73be68"
   end
 
   url "https://updates.signal.org/desktop/signal-desktop-mac-#{arch}-#{version}.dmg"

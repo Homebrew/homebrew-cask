@@ -5,11 +5,8 @@ cask "mikogo" do
   url "https://download.mikogo4.com/Mikogo-installer.signed.pkg",
       verified: "mikogo4.com/"
   name "Mikogo"
+  desc "Desktop app for the Mikogo screen-sharing platform"
   homepage "https://www.mikogo.com/"
-
-  livecheck do
-    skip "unversioned URL"
-  end
 
   pkg "Mikogo-installer.signed.pkg"
 

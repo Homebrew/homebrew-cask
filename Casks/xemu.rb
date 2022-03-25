@@ -1,6 +1,6 @@
 cask "xemu" do
-  version "0.6.2-79-ga32f271d55"
-  sha256 "174ffa45ff5eecf8a6c6991e4cddd8acffa6e5de0ba952c956d96a45bb0fe4cf"
+  version "0.6.2-88-g6e1969001e"
+  sha256 "b117b0a45b093d27f4b79e21c86ea813ec6f1534d95a9ff6ab6377cab54bf515"
 
   url "https://github.com/mborgerson/xemu/releases/download/gh-release%2F#{version}/xemu-macos-universal-release.zip",
       verified: "github.com/mborgerson/xemu/"
@@ -9,7 +9,8 @@ cask "xemu" do
   homepage "https://xemu.app/"
 
   livecheck do
-    regex(%r{gh-release/(.*)}i)
+    url :url
+    regex(%r{^gh-release/(.*)$}i)
   end
 
   app "Xemu.app"

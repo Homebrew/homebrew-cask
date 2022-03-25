@@ -2,12 +2,12 @@ cask "paraview" do
   arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
   min_macos_version = Hardware::CPU.intel? ? "10.13" : "11.0"
 
-  version "5.10.0"
+  version "5.10.1"
 
   if Hardware::CPU.intel?
-    sha256 "346833f38ef82d9313fcb203396b901da41e968a8d7078e2f128a345d2d6bafc"
+    sha256 "21d28f0bfd4129a5e394990e981ad79d27c4613f3da9f171417c17af785ebcba"
   else
-    sha256 "701663d8bac7daa8f6e6ffb65a6f4dd73adbd9acf9c96e053b692220072f952c"
+    sha256 "1b6bdf86fee03525b1978b4312624bcc522796bbf5675f370797c5f21e189e5d"
   end
 
   url "https://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v#{version.major_minor}&type=binary&os=macOS&downloadFile=ParaView-#{version}-MPI-OSX#{min_macos_version}-Python3.9-#{arch}.dmg",

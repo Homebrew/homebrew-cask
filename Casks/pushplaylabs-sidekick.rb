@@ -3,14 +3,14 @@ cask "pushplaylabs-sidekick" do
   livecheck_folder = Hardware::CPU.intel? ? "mac" : "macm1"
 
   if Hardware::CPU.intel?
-    version "96.15.1.16725,adcf8c9"
-    sha256 "b73b2e3c9ea18e48809fce791155244a114692b210e097d990bd1066ce23248c"
+    version "96.16.1.17878,9ea5ea3"
+    sha256 "db6ccddd4f184cd809ae359ead926e4d0eae0a11a726090fd1780f622daecc3b"
   else
-    version "96.15.1.16727,60e4139"
-    sha256 "21af615ef4e52e3e07f8811d2d8d5cfbc22b0ba7e377e9782f873e7d522c283e"
+    version "96.16.1.17880,96f997e"
+    sha256 "45d7e1489e06c0b18cd044cefcefd47fe2969477abd25f0b9e15969bf9b51489"
   end
 
-  url "https://sidekick-cdn-production.meetsidekick.com/builds/sidekick-mac-release-#{arch}-#{version.csv.first}-#{version.csv.second}-df.dmg"
+  url "https://fast-cdn.meetsidekick.com/builds/sidekick-mac-release-#{arch}-#{version.csv.first}-#{version.csv.second}-default.dmg"
   name "Sidekick"
   desc "Browser designed for modern work"
   homepage "https://www.meetsidekick.com/"
@@ -18,7 +18,7 @@ cask "pushplaylabs-sidekick" do
   livecheck do
     url "https://api.meetsidekick.com/downloads/df/#{livecheck_folder}"
     strategy :header_match do |headers|
-      match = headers["location"].match(/[_-](\d+(?:\.\d+)+)[_-](.+)[._-]df\.dmg/i)
+      match = headers["location"].match(/[_-](\d+(?:\.\d+)+)[_-](.+)[._-](?:default|df)\.dmg/i)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"

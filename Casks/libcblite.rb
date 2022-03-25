@@ -1,6 +1,6 @@
 cask "libcblite" do
-  version "3.0.0"
-  sha256 "abd416d4753b204a1327ffd53f4b12fc5eec2419191b8b0fa55b78d79b7b23a2"
+  version "3.0.1"
+  sha256 "d94d17efcd4ee3b7a44e8bba07e0c0af91b4af3732c1fdff20c26bf13cdb7329"
 
   url "https://packages.couchbase.com/releases/couchbase-lite-c/#{version}/couchbase-lite-c-enterprise-#{version}-macos.zip"
   name "Couchbase Lite (Enterprise Edition)"

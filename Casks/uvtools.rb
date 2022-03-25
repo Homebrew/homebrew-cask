@@ -1,6 +1,6 @@
 cask "uvtools" do
-  version "2.29.0"
-  sha256 "f052245764b060e7306c3e5c540091c23f139678271241d949cdf32b99d65330"
+  version "3.1.1"
+  sha256 "cc7244073863d187e2ef4fab0ba73d0cf5b5a3bace073890ad1d6deb1a230a6b"
 
   url "https://github.com/sn4k3/UVtools/releases/download/v#{version}/UVtools_osx-x64_v#{version}.zip"
   name "UVtools"

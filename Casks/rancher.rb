@@ -1,12 +1,12 @@
 cask "rancher" do
   arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
-  version "1.1.1"
+  version "1.2.0"
 
   if Hardware::CPU.intel?
-    sha256 "c53ec3f9ade755f5fcff40d18cc2a36b8501b0783b9a0477ebaaabcd2af88dcf"
+    sha256 "49547c2c40fb67df4d8fdc094905e4b608c4939e3f9fc9381d0f2971751926e6"
   else
-    sha256 "0c8a90a2c6dc634d998c4b1811e038c96210f68f8413aae915bd7e52f66c3f90"
+    sha256 "070731bdad58e94c269a48dce461f3c7cdfdb003633100ecc3573e7b803d9161"
   end
 
   url "https://github.com/rancher-sandbox/rancher-desktop/releases/download/v#{version}/Rancher.Desktop-#{version}.#{arch}.dmg",
@@ -31,11 +31,12 @@ cask "rancher" do
     "/opt/rancher-desktop",
     "/private/etc/sudoers.d/zzzzz-rancher-desktop-lima", # zzzzz is not a typo
     "/private/var/run/docker.sock",
-    "/private/var/run/rancher-desktop-lima",
+    "/private/var/run/rancher-desktop-*",
     "/usr/local/bin/docker",
     "/usr/local/bin/helm",
     "/usr/local/bin/kubectl",
     "/usr/local/bin/nerdctl",
+    "/usr/local/bin/rdctl",
   ],
             quit:   "io.rancherdesktop.app"
 

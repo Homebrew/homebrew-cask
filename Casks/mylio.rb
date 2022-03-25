@@ -5,11 +5,8 @@ cask "mylio" do
   url "https://myliodownloads.s3.amazonaws.com/Mylio.dmg",
       verified: "myliodownloads.s3.amazonaws.com/"
   name "Mylio"
+  desc "Photo organizer"
   homepage "https://mylio.com/"
-
-  livecheck do
-    skip "unversioned URL"
-  end
 
   app "Mylio.app"
 end
