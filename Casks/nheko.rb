@@ -14,7 +14,7 @@ cask "nheko" do
       match = page.match(/nheko[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
       next if match.blank?
 
-      match[1].to_s()
+      match[1].to_s
     end
   end
 
