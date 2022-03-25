@@ -1,6 +1,6 @@
 cask "fvim" do
-  version "0.3.520,g8a6f26b"
-  sha256 "25781fecb94754d37a0d484a02e8e6266f31618ee927fdfef1b31ed45fc7775b"
+  version "0.3.528,g5190942"
+  sha256 "17ffaa92d32106487c6de4264301383b5b074da86e6c3abdb95f79fdadf75b7e"
 
   url "https://github.com/yatli/fvim/releases/download/v#{version.csv.first}%2B#{version.csv.second}/fvim-osx-v#{version.csv.first}+#{version.csv.second}.zip"
   name "FVim"
