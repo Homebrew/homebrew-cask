@@ -2,7 +2,7 @@ cask "soundtoys" do
   version "5.3.6.16421"
   sha256 "5f11f1c6f7d7ecaa7e988c8d34f45b7ef907d9c8165cf6072cb06a3c4a1fbe92"
 
-  url "https://storage.googleapis.com/soundtoys-download/versions/version_#{version.dots_to_underscores}/Soundtoys#{version.major}_{version}.dmg",
+  url "https://storage.googleapis.com/soundtoys-download/versions/version_#{version.dots_to_underscores}/Soundtoys#{version.major}_#{version}.dmg",
       verified: "https://storage.googleapis.com/soundtoys-download/"
   name "Soundtoys"
   desc "Audio Effects Plugins"
