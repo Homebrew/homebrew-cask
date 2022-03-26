@@ -13,6 +13,8 @@ cask "balenaetcher" do
     strategy :github_latest
   end
 
+  auto_updates true
+
   app "balenaEtcher.app"
 
   uninstall quit: [
