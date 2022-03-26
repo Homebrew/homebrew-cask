@@ -14,4 +14,9 @@ cask "magicplot" do
   end
 
   app "MagicPlot#{version}.app"
+
+  zap trash: [
+    "~/Library/Application Support/MagicPlot",
+    "~/Library/Saved Application State/com.magicplot.MagicPlot.savedState",
+  ]
 end

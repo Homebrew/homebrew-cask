@@ -13,7 +13,7 @@ cask "r" do
     url "https://cloud.r-project.org/bin/macosx/base/R-#{version}.pkg"
   else
     version "4.1.3"
-    sha256 "7c5cdf3d5b64a3fe3a83960b1940189975aff792ae5735ca7982876252a2e137"
+    sha256 "d973134c1417afeb8c54a8bd0b53ddbc47719e0e30fd9c2122a71d13a57106c4"
     url "https://cloud.r-project.org/bin/macosx/big-sur-arm64/base/R-#{version}-arm64.pkg"
   end
 
