@@ -4,7 +4,7 @@ cask "raindropio" do
   version "5.4.22"
 
   if Hardware::CPU.intel?
-    sha256 "2459e5b3cf7fecf06004ccb4e8b6ac79954a3199c797563f1ae"
+    sha256 "2459e5b3cf7fecf06004ccb4e8b6ac79954a3199c797563f1ae3301465378b54"
   else
     sha256 "8072e9d5b7b9af5823b4bcad1b305c03ec2effc72906b913df69725ed3954639"
   end
