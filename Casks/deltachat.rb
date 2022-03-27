@@ -1,6 +1,6 @@
 cask "deltachat" do
-  version "1.26.0"
-  sha256 "e21fbd9120739aa34a870ed44630998b63ac570a49278ca822600ea8a1887748"
+  version "1.28.0"
+  sha256 "8bd56d38c22251bd28d8dac945000c31e31706af78aaf9398dfc24b2b1d74dd7"
 
   url "https://download.delta.chat/desktop/v#{version}/DeltaChat-#{version}.dmg"
   name "DeltaChat"
