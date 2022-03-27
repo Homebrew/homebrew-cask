@@ -1,6 +1,6 @@
 cask "unpkg" do
-  version "4.7"
-  sha256 "fee4f5ee286573f00a46dbe0e372d671ba82ce270ba4104cac9743b2e528d5b1"
+  version "4.8"
+  sha256 "1b8318d2fb642397471221344836a967176089bce44e70a2b99f5cb4f60eee09"
 
   url "https://www.timdoug.com/unpkg/unpkg-#{version}.zip"
   name "unpkg"
