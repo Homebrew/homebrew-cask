@@ -18,4 +18,9 @@ cask "irpf2022" do
 
   uninstall pkgutil: "br.gov.economia.receita.IRPF2022",
             delete:  "/Library/Application Support/IRPF2022"
+
+  caveats <<~EOS
+    IRPF2022 will store data in #{ENV["HOME"]}/Documents/ProgramasRFB/IRPF2022.
+    You might want to delete this directory after you finish your tax report.
+  EOS
 end
