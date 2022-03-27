@@ -12,7 +12,7 @@ cask "simplemind" do
     strategy :page_match
     # regex(/Version: ([\d\.]+ [a-zA-Z0-9]+)/i)
     strategy :page_match do |page|
-      match = page.match(%r{<b>Version: ([\d\.]+) ([a-zA-Z0-9]+)<\/b>}i)
+      match = page.match(%r{<b>Version: ([\d.]+) ([a-zA-Z0-9]+)</b>}i)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
