@@ -77,7 +77,7 @@ CASK_LISTS = CASKS_NO_ZAP.each_with_object([]) do |(tap_dir, casks), message|
   message.push("<details><summary>#{tap_dir.dirname.basename.to_path}</summary>")
   message.push("") # Empty line so the markdown still works inside the HTML
 
-  casks.each { message.push("- [ ] [`#{cask_name(_1)}`](#{cask_url(tap_dir, _1)})") }
+  casks.each { message.push("* [`#{cask_name(_1)}`](#{cask_url(tap_dir, _1)})") }
 
   message.push("</details>")
 end.freeze
