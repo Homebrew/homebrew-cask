@@ -1,5 +1,5 @@
 cask "prefs-editor" do
-  version "1.3.0.3.0"
+  version "1.3.2.3.1"
   sha256 :no_check
 
   url "https://files.tempel.org/Various/OSX_Prefs_Editor/PrefsEditor.zip"
