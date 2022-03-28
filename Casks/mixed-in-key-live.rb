@@ -3,7 +3,7 @@ cask "mixed-in-key-live" do
   sha256 :no_check
 
   url "https://builds.mixedinkey.com/download/55/release/latest?key=public"
-  name token.titleize
+  name "Mixed in Key Live"
   desc "Get the Key and BPM of any audio, instantly"
   homepage "https://mixedinkey.com/live"
 
