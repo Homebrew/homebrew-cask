@@ -1,6 +1,6 @@
 cask "papyrus" do
-  version "6.0.0,2021-12"
-  sha256 "e6e23d41c41d894ba341eb90f59c11c3a458426ffba581d786cab6825a9b5add"
+  version "6.1.0,2022-03"
+  sha256 "4847d461c8147953f00860f3fa95b554de59bfc8df8c89e960d01fd2929dd06f"
 
   url "https://www.eclipse.org/downloads/download.php?file=/modeling/mdt/papyrus/rcp/#{version.csv.second}/#{version.csv.first}/papyrus-#{version.csv.second}-#{version.csv.first}-macosx64.tar.gz&r=1"
   name "Papyrus"
