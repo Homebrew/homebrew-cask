@@ -9,8 +9,8 @@ cask "dmidiplayer" do
   homepage "https://dmidiplayer.sourceforge.io/"
 
   livecheck do
-    url "https://sourceforge.net/projects/dmidiplayer/rss?path=/"
-    regex(%r{url=.*?/dmidiplayer[._-]v?(\d+(?:\.\d+)+)-mac-x64\.dmg}i)
+    url :url
+    regex(%r{url=.*?/dmidiplayer[._-]v?(\d+(?:\.\d+)+)[^"' >]*?\.dmg}i)
   end
 
   depends_on formula: "fluid-synth"
