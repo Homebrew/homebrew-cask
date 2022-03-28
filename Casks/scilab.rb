@@ -5,7 +5,7 @@ cask "scilab" do
   version "6.1.1"
 
   if Hardware::CPU.intel?
-    sha256 "922e879979fe4e1fde83be4b3df02070c0930a56a75cdeb9b5ef46ae29f0ef57"
+    sha256 "b417aace594cba882b19c2711aa125d8374d5da8b0a24df2873592765598e457"
   else
     sha256 "2f87710fc47c6d8e6777ee280ece589342e536c17290b9c033ea0dfcef3b4912"
   end
