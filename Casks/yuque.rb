@@ -1,15 +1,15 @@
 cask "yuque" do
-  arch = Hardware::CPU.intel? ? "" : "arm64/"
+  arch = Hardware::CPU.intel? ? "" : "-arm64"
 
-  version "1.0.3"
+  version "1.1.4"
 
   if Hardware::CPU.intel?
-    sha256 "b81398d9bc7b241deeb19e73ccea9c48229ac791617dc4cc8de518b553cdf978"
+    sha256 "fbdbfa356a0559170029019f12b8fb958635f5418051d90a0c37772f1887eecb"
   else
-    sha256 "58ca2a09b575ebc118bcb9c800a3c72b1bb5142ec17b1376f1bfc842ffbc5328"
+    sha256 "cd6e8b3a5f496cf49a109f86b5f27a772bac3069fa791dcbe912b4cbcbbea527"
   end
 
-  url "https://app.nlark.com/yuque-desktop/#{arch}Yuque-#{version}.dmg",
+  url "https://app.nlark.com/yuque-desktop/#{version}/Yuque-#{version}#{arch}.dmg",
       verified: "app.nlark.com/yuque-desktop/"
   name "Yuque"
   name "语雀"
@@ -19,7 +19,7 @@ cask "yuque" do
   # The stable version is that listed on the download page. See:
   #   https://github.com/Homebrew/homebrew-cask/pull/111472
   livecheck do
-    url "https://www.yuque.com/install/desktop"
+    url "https://www.yuque.com/download/"
     regex(/desktopDownloadVersion%22%3A%22(\d+(?:\.\d+)+)/i)
   end
 
