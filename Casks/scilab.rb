@@ -11,7 +11,7 @@ cask "scilab" do
   end
 
   url "https://www.utc.fr/~mottelet/scilab/download/#{version}/scilab-#{version}-#{prefix}#{arch}.dmg",
-      verified: "utc.fr/~mottelet/scilab/"  
+      verified: "utc.fr/~mottelet/scilab/"
   name "Scilab"
   desc "Software for numerical computation"
   homepage "https://www.scilab.org/"
