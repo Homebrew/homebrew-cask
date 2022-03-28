@@ -12,6 +12,8 @@ cask "around" do
     regex(/"desktopappMinVersion":"v?(\d+(?:\.\d+)+)"/i)
   end
 
+  auto_updates true
+
   installer manual: "Install Around.app"
 
   uninstall quit:   "co.teamport.around",
