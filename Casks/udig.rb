@@ -8,7 +8,6 @@ cask "udig" do
 
   livecheck do
     url "http://udig.refractions.net/download/"
-    strategy :page_match
     regex(%r{href=.*?/udig-(\d+(?:\.\d+)*)\.macosx\.cocoa\.x86_64\.dmg}i)
   end
 

@@ -11,7 +11,6 @@ cask "sonic-robo-blast-2" do
 
   livecheck do
     url "https://www.srb2.org/download/"
-    strategy :page_match
     regex(%r{href=.*?/SRB2-(\d+(?:\.\d+)*)-macOS-Installer.dmg}i)
   end
 
