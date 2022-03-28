@@ -16,7 +16,7 @@ cask "banana-cake-pop" do
 
   livecheck do
     url "https://chillicream.com/docs/bananacakepop"
-    regex(%r{bananacakepop/BananaCakePop-((:?\d+(?:\.|\d+)+)(:?-[A-z]+.\d+)?)-mac-x64\.dmg}i)
+    regex(%r{bananacakepop/BananaCakePop-((:?\d+(?:\.|\d+)+)(:?-[A-z]+.\d+)?)-mac-#{arch}\.dmg}i)
   end
 
   auto_updates true
