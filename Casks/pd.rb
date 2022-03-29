@@ -1,6 +1,6 @@
 cask "pd" do
-  version "0.52-1"
-  sha256 "c8721aa1ec3d433d28e055bd6a64559723d28e0eb49c0ac1401d6ae46621e4db"
+  version "0.52-2"
+  sha256 "06d2cb0f0126170f53675eb1b17d0fd9e95acdcce6d7d881a4135b746bb20533"
 
   url "http://msp.ucsd.edu/Software/pd-#{version}.macos.zip"
   name "Pd"
@@ -12,10 +12,10 @@ cask "pd" do
     regex(/pd[._-]v?(\d+(?:\.\d+)+-\d+)\.macos\.zip/i)
   end
 
-  app "Pd-#{version}-really.app"
+  app "Pd-#{version}.app"
 
   postflight do
-    set_permissions "#{appdir}/Pd-#{version}-really.app", "u+w"
+    set_permissions "#{appdir}/Pd-#{version}.app", "u+w"
   end
 
   zap trash: [
