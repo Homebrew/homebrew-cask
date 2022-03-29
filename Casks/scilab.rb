@@ -17,8 +17,8 @@ cask "scilab" do
   homepage "https://www.scilab.org/"
 
   livecheck do
-    url "https://www.scilab.org/download/"
-    strategy :header_match
+    url "https://www.utc.fr/~mottelet/scilab_for_macOS.html"
+    regex(/href=.*?scilab[._-]v?(\d+(?:\.\d+)+)-#{prefix}#{arch}\.dmg/i)
   end
 
   depends_on macos: ">= :high_sierra"
