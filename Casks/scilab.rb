@@ -17,7 +17,7 @@ cask "scilab" do
 
   livecheck do
     url "https://www.utc.fr/~mottelet/scilab_for_macOS.html"
-    regex(/href=.*?scilab[._-]v?(\d+(?:\.\d+)+)-#{prefix}#{hardware::CPU.arch}\.dmg/i)
+    regex(/href=.*?scilab[._-]v?(\d+(?:\.\d+)+)-#{prefix}#{Hardware::CPU.arch}\.dmg/i)
   end
 
   depends_on macos: ">= :high_sierra"
