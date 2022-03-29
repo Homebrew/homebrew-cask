@@ -12,8 +12,8 @@ cask "lapce" do
 
   uninstall quit: "io.lapce"
 
-  zap trash: %w[
-    ~/Library/Application Support/Lapce
-    ~/Library/Saved Application State/io.lapce.savedState
+  zap trash: [
+    "~/Library/Application Support/Lapce",
+    "~/Library/Saved Application State/io.lapce.savedState",
   ]
 end
