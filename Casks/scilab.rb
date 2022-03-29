@@ -1,5 +1,4 @@
 cask "scilab" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
   prefix = Hardware::CPU.intel? ? "" : "accelerate-" # there is also an "openblas-" version
 
   version "6.1.1"
