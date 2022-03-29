@@ -10,7 +10,7 @@ cask "scilab" do
     sha256 "2f87710fc47c6d8e6777ee280ece589342e536c17290b9c033ea0dfcef3b4912"
   end
 
-  url "https://www.utc.fr/~mottelet/scilab/download/#{version}/scilab-#{version}-#{prefix}#{arch}.dmg",
+  url "https://www.utc.fr/~mottelet/scilab/download/#{version}/scilab-#{version}-#{prefix}#{Hardware::CPU.arch}.dmg",
       verified: "utc.fr/~mottelet/scilab/"
   name "Scilab"
   desc "Software for numerical computation"
