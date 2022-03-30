@@ -1,12 +1,12 @@
 cask "actual" do
   arch = Hardware::CPU.intel? ? "" : "-arm64"
 
-  version "0.0.147"
+  version "0.0.148"
 
   if Hardware::CPU.intel?
-    sha256 "9a725ee6b3923dc461f37a8200acfa70d63aa84e1a2dae9ee447e3a702c2ee20"
+    sha256 "95159e54c011aba02f64b0d126a497b99544e1086429a11e67587e3ffc0533d4"
   else
-    sha256 "e32ecd2331495911200ccf98a54d232a72c3668f92f0aa205ca54bf7c0d7e5e9"
+    sha256 "df9e2139a3a5b1355f1ed1a28863115ac574eb15ec856d6e95de13b02bc26ae0"
   end
 
   url "https://github.com/actualbudget/releases/releases/download/#{version}/Actual-#{version}#{arch}.dmg",
