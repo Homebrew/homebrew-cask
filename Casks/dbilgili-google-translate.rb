@@ -4,7 +4,7 @@ cask "dbilgili-google-translate" do
 
   url "https://github.com/dbilgili/GoogleTranslate/releases/download/#{version}/Translator-#{version}.dmg.zip"
   name "dbilgili-google-translate"
-  desc "A basic macOS menu bar app to access Google Translate quickly"
+  desc "Menu bar app to access Google Translate quickly"
   homepage "https://github.com/dbilgili/GoogleTranslate"
 
   app "Translator.app"
