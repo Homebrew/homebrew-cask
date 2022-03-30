@@ -1,12 +1,12 @@
 cask "runelite" do
   arch = Hardware::CPU.intel? ? "x64" : "aarch64"
 
-  version "2.4.0"
-
   if Hardware::CPU.intel?
-    sha256 "c547f1e9be49b0403517498c50120209c19bd49e6f47753c056892082a1545c4"
+    version "2.4.3"
+    sha256 "0e39d850278a0ea5599fe9d80af2feba785261c4fb60c6254d594047298eb722"
   else
-    sha256 "18fe12a44953b57222e8ad05cfecb889373cede2aa357820ba00b6599e10f3cb"
+    version "2.4.2"
+    sha256 "6deceeb1460259622d0f6d35e2527f94d1613b5a5bc40ebade25b617a970a411"
   end
 
   url "https://github.com/runelite/launcher/releases/download/#{version}/RuneLite-#{arch}.dmg",
@@ -16,9 +16,8 @@ cask "runelite" do
   homepage "https://runelite.net/"
 
   livecheck do
-    url "https://github.com/runelite/launcher/releases"
-    strategy :page_match
-    regex(%r{v?(\d+(?:\.\d+)+)/RuneLite[._-]#{arch}\.dmg}i)
+    url :homepage
+    regex(%r{href=.*?/v?(\d+(?:\.\d+)+)/RuneLite[._-]#{arch}\.dmg}i)
   end
 
   app "RuneLite.app"
