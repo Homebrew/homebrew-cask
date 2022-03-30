@@ -4,7 +4,7 @@ cask "simplemind" do
 
   url "https://simpleapps.eu/simplemind/SMPOSX1_yQj3MSn64GXSTF36Rtj/SimpleMindMacOS#{version.csv.first.no_dots}#{version.csv.second}.dmg"
   name "SimpleMind"
-  desc "Is the world leader in cross-platform Mind Mapping tools"
+  desc "Cross-platform Mind Mapping tool"
   homepage "https://simpleapps.eu/"
 
   livecheck do
