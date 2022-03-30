@@ -4,6 +4,7 @@ cask "postgrespreferencepane" do
 
   url "https://github.com/MaccaTech/PostgresPrefs/releases/download/v#{version}/PostgresPrefs-v#{version}.dmg"
   name "PostgresPrefs"
+  desc "Preference Pane for controlling PostgreSQL database servers"
   homepage "https://github.com/MaccaTech/PostgresPrefs"
 
   prefpane "PostgreSQL.prefPane"
