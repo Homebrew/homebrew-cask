@@ -1,15 +1,22 @@
 cask "waterfox" do
-  version "3.2.6"
-  sha256 "1aa0442868c503a2b214c023364d6b86e7a3cb6eda94c80d73e19d627996ee3d"
+  arch = Hardware::CPU.intel? ? "Setup" : "ARM.Setup"
 
-  url "https://cdn.waterfox.net/releases/osx64/installer/Waterfox%20G#{version}%20Setup.dmg"
+  version "4.0.8"
+
+  if Hardware::CPU.intel?
+    sha256 "fe49d8da775d0d1ae7914cd51cf59fa9032cf02d398ac8891f2b722f4c2799b0"
+  else
+    sha256 "ee65166b3da3ff442e2ba0a9953844e5d4db386e0780ce41f3a39b842a191ce2"
+  end
+
+  url "https://github.com/WaterfoxCo/Waterfox/releases/download/G#{version}/Waterfox.G#{version}.#{arch}.dmg", verified: "github.com/WaterfoxCo/Waterfox/"
   name "Waterfox"
   desc "Web browser"
   homepage "https://www.waterfox.net/"
 
   livecheck do
-    url "https://www.waterfox.net/download/"
-    regex(%r{href=.*?/Waterfox%20G(\d+(?:\.\d+)+)%20Setup\.dmg}i)
+    url :url
+    regex(/^G?(\d+(?:\.\d+)+)$/i)
   end
 
   depends_on macos: ">= :yosemite"
