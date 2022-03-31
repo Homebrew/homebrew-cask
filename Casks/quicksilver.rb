@@ -1,6 +1,6 @@
 cask "quicksilver" do
-  version "1.6.1"
-  sha256 "abc2c084913f95d3036a0cfe696bf9cd4b9fd0d6c3c16bec6e4a98ae600492c8"
+  version "2.0.0"
+  sha256 "a0a60697bbd6960604a1f7b199f5273ea0fa28d2d41d27c0df398ea289fcddcb"
 
   url "https://qsapp.com/archives/downloads/Quicksilver%20#{version}.dmg"
   name "Quicksilver"
