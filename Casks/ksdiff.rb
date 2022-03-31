@@ -1,6 +1,6 @@
 cask "ksdiff" do
-  version "3.2.2,145"
-  sha256 "e1e5f2943e6e028b3ddd63c2b55531e0b70b95b5e85fb7a1f2e6db5875284ba9"
+  version "3.3,146"
+  sha256 "8039f5642afead0eac18306b2303cffb477bf7fdf1ebd550ec82cbe9d54464dc"
 
   url "https://updates.kaleidoscope.app/v#{version.major}/prod/ksdiff-#{version.csv.first}-#{version.csv.second}.zip"
   name "ksdiff"
