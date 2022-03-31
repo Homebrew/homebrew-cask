@@ -8,7 +8,7 @@ cask "plistedit-pro" do
   homepage "https://www.fatcatsoftware.com/plisteditpro/"
 
   livecheck do
-    url "https://www.fatcatsoftware.com/plisteditpro/plisteditpro_appcast.xml"
+    url "https://www.fatcatsoftware.com/plisteditpro/downloads/appcast.xml"
     strategy :sparkle
   end
 
