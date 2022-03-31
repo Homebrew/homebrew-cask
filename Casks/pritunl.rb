@@ -1,12 +1,12 @@
 cask "pritunl" do
   arch = Hardware::CPU.intel? ? "" : ".arm64"
 
-  version "1.2.3119.63"
+  version "1.2.3121.61"
 
   if Hardware::CPU.intel?
-    sha256 "a553a8cd87f0c02bd67288ce7bf0fe0f01b50de902178ba7c8204e0ea305136f"
+    sha256 "1af01c1df8e224e17fad212943eab136bf1aca83b00951a7aa24bb0d8f1fac73"
   else
-    sha256 "9a20f00ecf88304694cb24f47afc816ad549641bfc8d024fc481b44fc3198fe0"
+    sha256 "46e261a3b69bb96428909d03d9bd413a498c9a9e41e62691f3032d82e6174ca1"
   end
 
   url "https://github.com/pritunl/pritunl-client-electron/releases/download/#{version}/Pritunl#{arch}.pkg.zip",
