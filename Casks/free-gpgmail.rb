@@ -15,13 +15,24 @@ cask "free-gpgmail" do
   desc "Apple Mail plugin for GnuPG encrypted e-mails"
   homepage "https://github.com/Free-GPGMail/Free-GPGMail"
 
+  # This restricts matching to new releases that use the same major as the
+  # cask `version` (based on the execution environment). As such, this won't
+  # surface a new major version and that will need to be handled manually.
   livecheck do
     url :url
-    strategy :git do |tags|
-      tags.map do |tag|
-        match = tag.match(/^v(\d+(?:\.\d+)*)/i)
-        "#{version.csv.first},#{match[1]},#{version.csv.third}" if match
-      end.compact
+    regex(/href=.*?Free-GPGMail[._-]v?(\d+)-(\d+(?:\.\d+)+)(-[^"' >]+?)?[._-]mailbundle\.zip/i)
+    strategy :github_latest do |page, regex|
+      page.scan(regex).map do |match|
+        next if match[0] != version.csv.first
+
+        if match[2].present?
+          next if version.csv.third.present? && match[2] != version.csv.third
+
+          "#{match[0]},#{match[1]},#{match[2]}"
+        else
+          "#{match[0]},#{match[1]}"
+        end
+      end
     end
   end
 
