@@ -30,7 +30,7 @@ cask "free-gpgmail" do
 
           "#{match[0]},#{match[1]},#{match[2]}"
         else
-          "#{match[0]},#{match[1]}"
+          "#{match[0]},#{match[1]},"
         end
       end
     end
