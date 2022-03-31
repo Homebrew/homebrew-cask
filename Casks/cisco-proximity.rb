@@ -1,11 +1,16 @@
 cask "cisco-proximity" do
-  version "desktop-3.1.0"
+  version "4.0.0"
   sha256 :no_check
 
   url "https://proximity.cisco.com/mac/Proximity.dmg"
-  appcast "https://proximity.cisco.com/mac/version.txt"
   name "Cisco Proximity"
+  desc "Content sharing and video conference system control"
   homepage "https://proximity.cisco.com/"
+
+  livecheck do
+    url "https://proximity.cisco.com/mac/version.txt"
+    regex(/^desktop[._-]v?(\d+(?:\.\d+)+)$/i)
+  end
 
   app "Cisco Proximity.app"
 
