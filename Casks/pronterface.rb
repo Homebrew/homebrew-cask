@@ -9,7 +9,6 @@ cask "pronterface" do
 
   livecheck do
     url "https://github.com/kliment/Printrun/releases/latest"
-    strategy :page_match
     regex(%r{href=.*?/pronterface-macos-app-(\d+(?:\.\d+)*(?:rc\d*)?)\.zip}i)
   end
 

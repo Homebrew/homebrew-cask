@@ -9,7 +9,6 @@ cask "synology-note-station-client" do
 
   livecheck do
     url "https://www.synology.com/en-us/releaseNote/NoteStationClient"
-    strategy :page_match
     regex(/Version:\s*(\d+(?:\.\d+)*-\d+)/i)
   end
 

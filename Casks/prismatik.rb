@@ -9,7 +9,6 @@ cask "prismatik" do
 
   livecheck do
     url :homepage
-    strategy :page_match
     regex(%r{href=.*?/Prismatik_(\d+(?:\.\d+)*)_signed\.dmg}i)
   end
 

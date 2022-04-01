@@ -9,7 +9,6 @@ cask "vnc-server" do
 
   livecheck do
     url "https://www.realvnc.com/en/connect/download/vnc/macos/"
-    strategy :page_match
     regex(%r{href=.*?/VNC-Server-(\d+(?:\.\d+)*)-MacOSX-x86_64\.pkg}i)
   end
 

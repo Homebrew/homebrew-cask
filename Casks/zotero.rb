@@ -9,7 +9,6 @@ cask "zotero" do
 
   livecheck do
     url "https://www.zotero.org/download/"
-    strategy :page_match
     regex(/standaloneVersions.*?"mac"\s*:\s*"(\d+(?:\.\d+)*)"/i)
   end
 

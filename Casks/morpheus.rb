@@ -10,7 +10,6 @@ cask "morpheus" do
 
   livecheck do
     url "https://imc.zih.tu-dresden.de/morpheus/packages/mac/"
-    strategy :page_match
     regex(/href=.*?Morpheus[._-](\d+(?:\.\d+)*)\.dmg/i)
   end
 

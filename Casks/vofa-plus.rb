@@ -10,7 +10,6 @@ cask "vofa-plus" do
 
   livecheck do
     url "https://www.vofa.plus/downloads/"
-    strategy :page_match
     regex(/vofa\+_(\d+(?:\.\d+)*)_amd64\.dmg/i)
   end
 

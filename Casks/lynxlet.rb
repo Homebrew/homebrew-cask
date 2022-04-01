@@ -9,7 +9,6 @@ cask "lynxlet" do
 
   livecheck do
     url :homepage
-    strategy :page_match
     regex(/href=.*?Lynxlet_(\d+(?:\.\d+)*)\.dmg/i)
   end
 

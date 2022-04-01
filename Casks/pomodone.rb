@@ -8,7 +8,6 @@ cask "pomodone" do
 
   livecheck do
     url "https://pomodoneapp.com/download-pomodone-app.html"
-    strategy :page_match
     regex(%r{href=.*?/PomoDoneApp-(\d+(?:\.\d+)*)\.dmg}i)
   end
 

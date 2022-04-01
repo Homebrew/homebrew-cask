@@ -8,7 +8,6 @@ cask "squidman" do
 
   livecheck do
     url :homepage
-    strategy :page_match
     regex(%r{href=.*?/SquidMan(\d+(?:\.\d+)*)\.dmg}i)
   end
 

@@ -9,7 +9,6 @@ cask "radio-silence" do
 
   livecheck do
     url "https://radiosilenceapp.com/update"
-    strategy :page_match
     regex(%r{href=.*?/Radio_Silence_(\d+(?:\.\d+)*)\.pkg}i)
   end
 

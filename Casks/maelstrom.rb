@@ -9,7 +9,6 @@ cask "maelstrom" do
 
   livecheck do
     url "https://www.libsdl.org/projects/Maelstrom/binary.html"
-    strategy :page_match
     regex(%r{href=.*?/Maelstrom-(\d+(?:\.\d+)*)-MacOSX\.dmg}i)
   end
 

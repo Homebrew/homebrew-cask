@@ -9,7 +9,6 @@ cask "mkvtools" do
 
   livecheck do
     url "https://www.emmgunn.com/mkvtools-home/mkvtools-downloads/"
-    strategy :page_match
     regex(%r{href=.*?/mkvtools(\d+(?:\.\d+)*)\.zip}i)
   end
 

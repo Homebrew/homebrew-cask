@@ -9,7 +9,6 @@ cask "tastyworks" do
 
   livecheck do
     url "https://tastyworks.com/component---src-pages-technology-js-c0073caebcf082ded47f.js"
-    strategy :page_match
     regex(%r{/tastyworks-(\d+(?:\.\d+)*)}i)
   end
 

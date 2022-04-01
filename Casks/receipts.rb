@@ -8,7 +8,6 @@ cask "receipts" do
 
   livecheck do
     url "https://www.receipts-app.com/updater.php"
-    strategy :page_match
     regex(%r{href=.*?/Receipts-(\d+(?:\.\d+)*-\d+)\.zip}i)
   end
 

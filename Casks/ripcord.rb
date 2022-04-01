@@ -9,7 +9,6 @@ cask "ripcord" do
 
   livecheck do
     url "https://cancel.fm/ripcord/updates/v1"
-    strategy :page_match
     regex(%r{/Ripcord_Mac_(\d+(?:\.\d+)*)\.zip}i)
   end
 

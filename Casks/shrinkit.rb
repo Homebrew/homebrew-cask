@@ -8,7 +8,6 @@ cask "shrinkit" do
 
   livecheck do
     url :homepage
-    strategy :page_match
     regex(%r{href=.*?/ShrinkIt%20(\d+(?:\.\d+)*)\.zip}i)
   end
 

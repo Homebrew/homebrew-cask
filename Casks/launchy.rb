@@ -9,7 +9,6 @@ cask "launchy" do
 
   livecheck do
     url "https://www.launchy.net/download.php"
-    strategy :page_match
     regex(%r{href=.*?/Launchy(\d+(?:\.\d+)*)\.dmg}i)
   end
 

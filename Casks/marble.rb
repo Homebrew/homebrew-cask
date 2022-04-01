@@ -8,7 +8,6 @@ cask "marble" do
 
   livecheck do
     url "https://marble.kde.org/install.php"
-    strategy :page_match
     regex(%r{href=.*?/Marble-(\d+(?:\.\d+)*)\.pkg}i)
   end
 

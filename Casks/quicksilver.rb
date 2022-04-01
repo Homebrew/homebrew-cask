@@ -9,7 +9,6 @@ cask "quicksilver" do
 
   livecheck do
     url "https://qsapp.com/archives/"
-    strategy :page_match
     regex(%r{href=.*?/Quicksilver%20(\d+(?:\.\d+)*)\.dmg}i)
   end
 

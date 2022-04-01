@@ -9,7 +9,6 @@ cask "prince" do
 
   livecheck do
     url "https://www.princexml.com/download/"
-    strategy :page_match
     regex(%r{href=.*?/prince-(\d+(?:\.\d+)*)-macos\.zip}i)
   end
 

@@ -9,7 +9,6 @@ cask "macwinzipper" do
 
   livecheck do
     url "https://tida.co.jp/macwinzipper"
-    strategy :page_match
     regex(%r{href=.*?/MacWinZipper-(\d+(?:\.\d+)*)\.dmg}i)
   end
 

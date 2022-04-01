@@ -9,7 +9,6 @@ cask "touchosc-editor" do
 
   livecheck do
     url :homepage
-    strategy :page_match
     regex(%r{href=.*?/touchosc-editor-(\d+(?:\.\d+)*)-macos\.zip}i)
   end
 

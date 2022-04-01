@@ -8,7 +8,6 @@ cask "supersync" do
 
   livecheck do
     url "https://supersync.com/downloads.php"
-    strategy :page_match
     regex(%r{href=.*?/SuperSync_(\d+(?:\.\d+)*)\.dmg}i)
   end
 

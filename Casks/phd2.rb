@@ -9,7 +9,6 @@ cask "phd2" do
 
   livecheck do
     url "https://openphdguiding.org/changelog/"
-    strategy :page_match
     regex(%r{href=.*?/PHD2-(\d+(?:\.\d+)*)-OSX-64\.zip}i)
   end
 

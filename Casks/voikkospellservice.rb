@@ -8,7 +8,6 @@ cask "voikkospellservice" do
 
   livecheck do
     url :homepage
-    strategy :page_match
     regex(%r{href=.*?/VoikkoSpellService-(\d+(?:\.\d+)*b\d+)\.dmg}i)
   end
 

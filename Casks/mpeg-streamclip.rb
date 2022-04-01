@@ -10,7 +10,6 @@ cask "mpeg-streamclip" do
 
   livecheck do
     url "http://www.squared5.com/svideo/mpeg-streamclip-mac.html"
-    strategy :page_match
     regex(%r{href=.*?/MPEG_Streamclip_(\d+(?:\.\d+)*)\.dmg}i)
   end
 

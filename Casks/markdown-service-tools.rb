@@ -9,7 +9,6 @@ cask "markdown-service-tools" do
 
   livecheck do
     url :homepage
-    strategy :page_match
     regex(%r{href=.*?/MarkdownServiceTools(\d+(?:\.\d+)*)\.zip}i)
   end
 

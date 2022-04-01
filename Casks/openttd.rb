@@ -14,7 +14,6 @@ cask "openttd" do
 
   livecheck do
     url "https://www.openttd.org/downloads/openttd-releases/latest.html"
-    strategy :page_match
     regex(%r{href=.*?/openttd-(\d+(?:\.\d+)*)-macos-universal\.zip}i)
   end
 

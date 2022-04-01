@@ -8,7 +8,6 @@ cask "pdf-toolbox" do
 
   livecheck do
     url :homepage
-    strategy :page_match
     regex(/Version\s*(\d+(?:\.\d+)*)/i)
   end
 

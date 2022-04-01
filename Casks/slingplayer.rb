@@ -10,7 +10,6 @@ cask "slingplayer" do
 
   livecheck do
     url "https://www.slingbox.com/Products/SlingplayerApps.aspx"
-    strategy :page_match
     regex(%r{href=.*?/SlingplayerDesktop-(\d+(?:\.\d+)*)\.dmg}i)
   end
 
