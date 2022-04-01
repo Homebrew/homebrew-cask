@@ -8,9 +8,8 @@ cask "ddnet" do
   homepage "https://ddnet.tw/"
 
   livecheck do
-    url "https://github.com/ddnet/ddnet/tags"
-    strategy :page_match
-    regex(/(\d+(?:\.\d+)+)\.zip/i)
+    url "https://ddnet.tw/downloads/"
+    regex(/href=.*?DDNet[._-]v?(\d+(?:\.\d+)+)[^"' >]*?\.dmg/i)
   end
 
   auto_updates true
