@@ -1,8 +1,15 @@
 cask "iconset" do
-  version "2.0.0"
-  sha256 "2dc15de9314b3291446e6f98adac67e52f0b430a024282b2f5be3b2512609ec4"
+  arch = Hardware::CPU.intel? ? "" : "arm64-"
 
-  url "https://github.com/IconsetApp/iconset/releases/download/v#{version}/Iconset-#{version}-mac.zip",
+  version "2.1.0"
+
+  if Hardware::CPU.intel?
+    sha256 "66c63730a0771de1ac63299f3fd1c55f7aa75f4e103954d59363a8fcd4c3859d"
+  else
+    sha256 "8dfef7dd8597a88f1a10b3306bd9ebb45ed8895d6dc5fda530a2b746368d32e3"
+  end
+
+  url "https://github.com/IconsetApp/iconset/releases/download/v#{version}/Iconset-#{version}-#{arch}mac.zip",
       verified: "github.com/IconsetApp/iconset/"
   name "Iconset"
   desc "Organize icon sets and packs in one place"
