@@ -7,7 +7,7 @@ cask "teamviewer" do
       strategy :sparkle
     end
   else
-    version "15.28.7"
+    version "15.28.8"
 
     livecheck do
       url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=10.15.1&type=1&channel=1"
