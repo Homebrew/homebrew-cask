@@ -8,7 +8,6 @@ cask "slic3r" do
 
   livecheck do
     url "https://dl.slic3r.org/mac/"
-    strategy :page_match
     regex(/href=.*?slic3r-(\d+(?:\.\d+)*)\.dmg/i)
   end
 

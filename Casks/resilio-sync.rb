@@ -9,7 +9,6 @@ cask "resilio-sync" do
 
   livecheck do
     url "https://download-cdn.resilio.com/stable/osx/version.txt"
-    strategy :page_match
     regex(/(\d+(?:\.\d+)*)/i)
   end
 

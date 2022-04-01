@@ -9,7 +9,6 @@ cask "publii" do
 
   livecheck do
     url "https://getpublii.com/download/"
-    strategy :page_match
     regex(%r{href=.*?/Publii-(\d+(?:\.\d+)*)\.dmg}i)
   end
 

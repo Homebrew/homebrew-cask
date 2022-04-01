@@ -9,7 +9,6 @@ cask "pixelsnap" do
 
   livecheck do
     url "https://updates.getpixelsnap.com/v#{version.major}/appcast.xml"
-    strategy :page_match
     regex(/sparkle:version="(\d+(?:\.\d+)+)"/i)
   end
 

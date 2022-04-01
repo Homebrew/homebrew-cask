@@ -9,7 +9,6 @@ cask "synology-chat" do
 
   livecheck do
     url "https://www.synology.com/en-us/releaseNote/ChatClient"
-    strategy :page_match
     regex(/Version:\s*(\d+(?:\.\d+)*-\d+)/i)
   end
 

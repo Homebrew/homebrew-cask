@@ -8,7 +8,6 @@ cask "paragon-ntfs" do
 
   livecheck do
     url :homepage
-    strategy :page_match
     regex(%r{href=.*?/ntfsmac(\d+)_trial\.dmg}i)
   end
 

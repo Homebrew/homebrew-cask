@@ -10,7 +10,6 @@ cask "tortoisehg" do
 
   livecheck do
     url "https://www.mercurial-scm.org/release/tortoisehg/macos/"
-    strategy :page_match
     regex(/TortoiseHg-(\d+(?:\.\d+)*)-mac-x64-qt5\.dmg/i)
   end
 
