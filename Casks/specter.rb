@@ -1,8 +1,8 @@
 cask "specter" do
-  version "1.7.2"
-  sha256 "4aad4ab6fad94b95f7d4730e9cea07d4ed3ec4ab50c6c58e51007d522d225954"
+  version "1.9.0"
+  sha256 "1fd6abec0e763ff68ae49ac2538093960ebbb15860207fdb2ea8177fb513feb5"
 
-  url "https://github.com/cryptoadvance/specter-desktop/releases/download/v#{version}/SpecterDesktop-v#{version}.dmg",
+  url "https://github.com/cryptoadvance/specter-desktop/releases/download/v#{version}/Specter-v#{version}.dmg",
       verified: "github.com/cryptoadvance/specter-desktop/"
   name "Specter"
   desc "Desktop GUI for Bitcoin Core optimised to work with hardware wallets"
