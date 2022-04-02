@@ -1,6 +1,6 @@
 cask "dupeguru" do
-  version "4.2.0"
-  sha256 "4fbb46df4f11c0c4510b406ce6055b849381e08c7dc7f09f05849a7d1c353b6d"
+  version "4.2.1"
+  sha256 "ce0a49f4524dbd2567a01635bb41f95c10fcac1267cb9372861a5e7098a5d41d"
 
   url "https://github.com/arsenetar/dupeguru/releases/download/#{version}/dupeguru_macOS_Qt_#{version}.zip",
       verified: "github.com/arsenetar/dupeguru/"
