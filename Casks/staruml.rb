@@ -9,7 +9,6 @@ cask "staruml" do
 
   livecheck do
     url "https://staruml.io/"
-    strategy :page_match
     regex(%r{href=.*?/StarUML-(\d+(?:\.\d+)*)\.dmg}i)
   end
 

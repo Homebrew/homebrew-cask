@@ -4,11 +4,14 @@ cask "macfusion-ng" do
 
   url "https://github.com/macfusion-ng/macfusion#{version.major}/releases/download/#{version}/Macfusion.zip"
   name "Macfusion"
+  desc "Mount SSH and FTP servers as local volumes"
   homepage "https://github.com/macfusion-ng/macfusion#{version.major}/"
 
+  # This cask uses an unstable version and this `livecheck` block is only used
+  # to prevent livecheck from skipping pre-release versions by default. This
+  # should be removed/updated if the cask is updated to a stable version.
   livecheck do
     url :url
-    strategy :git
   end
 
   conflicts_with cask: "macfusion"

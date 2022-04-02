@@ -1,5 +1,5 @@
 cask "app-cleaner" do
-  version "7.5.1,853"
+  version "7.6,857"
   sha256 :no_check
 
   url "https://nektony.com/download/app-cleaner-uninstaller/app-cleaner-uninstaller.dmg"

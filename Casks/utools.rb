@@ -1,12 +1,12 @@
 cask "utools" do
   arch = Hardware::CPU.intel? ? "" : "-arm64"
 
-  version "2.5.2"
+  version "2.6.2"
 
   if Hardware::CPU.intel?
-    sha256 "40c68599367d6fe2fcb4d26085c748ce52ba3876e5968a085af566ddba49479d"
+    sha256 "bcc2dda2b7d737e3ee48f94bca39780d3c267eb66334bb2018da65902c36a46d"
   else
-    sha256 "020b09e550f7cf007f927b69d742cc51c883ba84ca2593176b36810e4c269cdf"
+    sha256 "6d32fd8b6b4244e50c20a5e6b27742593f8e322294ff56e32669a3a95546535e"
   end
 
   url "https://publish.u-tools.cn/version2/uTools-#{version}#{arch}.dmg",

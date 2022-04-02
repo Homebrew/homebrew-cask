@@ -4,11 +4,8 @@ cask "coccoc" do
 
   url "https://files.coccoc.com/browser/mac/coccoc.dmg"
   name "Cốc Cốc"
+  desc "Chromium-based web browser"
   homepage "https://coccoc.com/"
-
-  livecheck do
-    skip "unversioned URL"
-  end
 
   app "CocCoc.app"
 

@@ -1,6 +1,6 @@
 cask "manyverse" do
-  version "0.2202.7-beta"
-  sha256 "7b10ff5f1216e845dc294727e37517bfed6d41ce7a5421ca4f1180f87562c655"
+  version "0.2203.21-beta"
+  sha256 "b3515036da272508dacf55746646c28c52285b43d817a74421034e9de996974b"
 
   url "https://github.com/staltz/manyverse/releases/download/v#{version}/Manyverse-#{version}.dmg",
       verified: "github.com/staltz/manyverse/"

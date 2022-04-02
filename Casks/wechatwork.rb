@@ -1,8 +1,8 @@
 cask "wechatwork" do
-  version "4.0.0.90438"
-  sha256 "c8043a3408757d1d5629b1d618f7278f04a09a0f2ea8a48f5fd2d81e8118700a"
+  version "4.0.3.90492"
+  sha256 "c7306cf208cbdc1e4b0dbcfd96f981d04dff5875616ada7d1d369c214be39a4e"
 
-  url "https://dldir1.qq.com/wework/work_weixin/WeCom_#{version}.dmg"
+  url "https://dldir1.qq.com/foxmail/wecom-mac/update/WeCom_#{version}.dmg"
   name "WeChat Work"
   name "企业微信"
   desc "Messaging and calling application"

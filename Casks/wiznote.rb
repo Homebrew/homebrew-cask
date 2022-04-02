@@ -1,16 +1,15 @@
 cask "wiznote" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "0.1.66"
+  version "0.1.71"
 
   if Hardware::CPU.intel?
-    sha256 "2616f22d08cf8ecaedd8b0133de51bd60b2ad9d9e81d38594a9e99143af504f8"
+    sha256 "99ddca79257f9a38fd764b8f03fe7b5e0c23379d11995c4f8a63bf8cef2bd746"
   else
-    sha256 "c64c544274fc13c032e1f5e030e7176b2ed7eaedb4f4899eef83109cf2181975"
+    sha256 "ef3fcf1153647cbc2acea8c75d78371142df3ed8a5147bb9f244b45d21c6ea3e"
   end
 
-  url "https://wizteam-generic.pkg.coding.net/client/wiznote-autoupdate/wiznote-desktop-#{version}-mac-#{arch}.dmg",
-      verified: "wizteam-generic.pkg.coding.net/client/wiznote-autoupdate/"
+  url "https://get.wiz.cn/x/wiznote-desktop-#{version}-mac-#{arch}.dmg"
   name "WizNote"
   desc "Note-taking application"
   homepage "https://www.wiz.cn/"

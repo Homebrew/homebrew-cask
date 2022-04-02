@@ -1,6 +1,6 @@
 cask "obs" do
-  version "27.2"
-  sha256 "116258e73c7943149c1454d24bdaf269f708b18fd2c24f57b62c99fa42ed841c"
+  version "27.2.4"
+  sha256 "9aeed92816f23fdb4819eb1b0c989c158aaab246e0bd024933429614b06435f2"
 
   url "https://cdn-fastly.obsproject.com/downloads/obs-mac-#{version}.dmg"
   name "OBS"
@@ -13,6 +13,7 @@ cask "obs" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "OBS.app"
 
@@ -20,6 +21,7 @@ cask "obs" do
 
   zap trash: [
     "~/Library/Application Support/obs-studio",
+    "~/Library/HTTPStorages/com.obsproject.obs-studio",
     "~/Library/Preferences/com.obsproject.obs-studio.plist",
     "~/Library/Saved Application State/com.obsproject.obs-studio.savedState",
   ]

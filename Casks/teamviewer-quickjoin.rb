@@ -5,11 +5,8 @@ cask "teamviewer-quickjoin" do
   url "https://download.teamviewer.com/download/TeamViewerQJ.dmg"
   name "TeamViewer QuickJoin"
   name "TeamViewer QJ"
+  desc "Standalone TeamViewer app for joining presentations and meetings"
   homepage "https://www.teamviewer.com/"
-
-  livecheck do
-    skip "unversioned URL"
-  end
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "TeamViewerQJ.app", target: "TeamViewer QuickJoin.app"

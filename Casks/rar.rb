@@ -1,12 +1,12 @@
 cask "rar" do
   arch = Hardware::CPU.intel? ? "x64" : "arm"
 
-  version "6.10"
+  version "6.11"
 
   if Hardware::CPU.intel?
-    sha256 "5c68d6b55e483e498d1b2851ff293098a5b537ca8676dc5bb561d05abcd57664"
+    sha256 "c875b102c72a9cb2ab1bd0a5b1a8b2eb049bc95cf8829bcde808f28ab0a620a4"
   else
-    sha256 "64eefac221a5e5f93934360114e5e0f1f750606e0e5d7823c780887f6630c13c"
+    sha256 "ab67c2e30dbfb49f86683dc44cf3fe5774800297652c382bdde13661c1114170"
   end
 
   url "https://www.rarlab.com/rar/rarmacos-#{arch}-#{version.no_dots}.tar.gz"

@@ -1,6 +1,6 @@
 cask "google-chat-electron" do
-  version "2.14.2"
-  sha256 "366af974366d86079ff450ab681ace86844f48d6af8fa035748efca9e2a17b28"
+  version "2.14.4"
+  sha256 "4d974ff1fd374ebb8a9befdcb019c073cbc29fef0b76b3d2737d2a68a42a2d15"
 
   url "https://github.com/ankurk91/google-chat-electron/releases/download/#{version}/google-chat-electron-#{version}-darwin-x64.zip"
   name "google-chat-electron"

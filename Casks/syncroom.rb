@@ -9,7 +9,6 @@ cask "syncroom" do
 
   livecheck do
     url "https://syncroom.yamaha.com/play/dl/"
-    strategy :page_match
     regex(%r{href=.*?/SYNCROOM-JP-mac-(\d+(?:\.\d+)*)\.zip}i)
   end
 

@@ -1,12 +1,12 @@
 cask "raindropio" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "5.4.19"
+  version "5.4.24"
 
   if Hardware::CPU.intel?
-    sha256 "9ba75b0000ac6836bdc01fa3344e49984d15c9f9c488e0e25dba3731ee7b2b75"
+    sha256 "7e39e61cb413069f96ae06f4b1919316d864e05947496cb870f4e81c849f7e21"
   else
-    sha256 "207bd9bb10b855da93d1ad5740eaded77eafe9447c18e638beb36b49a07e927b"
+    sha256 "98c531f6a965977d119acda5623a5ccf74592aeaa3feb5b5aa188451385c850e"
   end
 
   url "https://github.com/raindropio/desktop/releases/download/v#{version}/Raindrop-#{arch}.dmg",

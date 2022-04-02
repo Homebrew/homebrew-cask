@@ -1,6 +1,6 @@
 cask "propresenter" do
-  version "7.8,117964825"
-  sha256 "43bc9cd44ff4e95d979b78d4ebf2f32ae531846a7ab30330791c3932a0d1773c"
+  version "7.8.4,117965828"
+  sha256 "ac0ca25ce043ddb5c9e12209e10f9bd9294755c29e49a4b265fc2392c7f6fbfe"
 
   url "https://renewedvision.com/downloads/propresenter/mac/ProPresenter_#{version.csv.first}_#{version.csv.second}.zip"
   name "ProPresenter"

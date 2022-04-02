@@ -1,6 +1,6 @@
 cask "jamovi" do
-  version "2.3.0.0"
-  sha256 "b126138d0c4a70fee6cc946fcb819dbd175354ee54461d8e4047f5d70ac4c24a"
+  version "2.3.2.0"
+  sha256 "df56b3a760894c9d37c5a40737fe023ba5343f2ff619bd9a0771aa9111287f85"
 
   url "https://www.jamovi.org/downloads/jamovi-#{version}-macos.dmg"
   name "jamovi"

@@ -9,7 +9,6 @@ cask "northernspysoftware-colorpicker" do
 
   livecheck do
     url :homepage
-    strategy :page_match
     regex(/ColorPicker_(\d+(?:\.\d+)*)\.dmg/i)
   end
 
