@@ -12,7 +12,7 @@ cask "postman-agent" do
   url "https://dl-agent.pstmn.io/download/version/#{version}/#{arch}",
       verified: "dl-agent.pstmn.io/download/version/"
   name "Postman Agent"
-  desc "Desktop agenet for Postman on the Web"
+  desc "Desktop agent for Postman on the Web"
   homepage "https://www.postman.com/downloads/postman-agent/"
 
   livecheck do
