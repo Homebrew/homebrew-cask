@@ -8,9 +8,8 @@ cask "baretorrent" do
   homepage "https://launchpad.net/baretorrent"
 
   livecheck do
-    url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/baretorrent-(\d+(?:\.\d+)+)-osx-x64\.dmg}i)
+    url :url
+    regex(/href=.*?baretorrent[._-]v?(\d+(?:\.\d+)+)(?:[._-][^"' >]+?)?\.dmg/i)
   end
 
   app "baretorrent.app"
