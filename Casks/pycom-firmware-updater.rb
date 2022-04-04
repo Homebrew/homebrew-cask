@@ -10,6 +10,8 @@ cask "pycom-firmware-updater" do
   pkg "FwUpdater-mac.pkg"
 
   uninstall pkgutil: [
+    "org.FwUpdater-mac.1.0.3",
     "io.pycom.fwupdater",
+    "fwupdater",
   ]
 end
