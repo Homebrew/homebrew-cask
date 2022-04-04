@@ -1,5 +1,5 @@
 cask "wifi-explorer" do
-  version "3.3.4"
+  version "3.3.4,49"
   sha256 "f0de1c340502fce7d6093b5811ea7f0498dd90541430d646eeeaa54aef2c1bcb"
 
   url "https://www.intuitibits.com/downloads/WiFiExplorer_#{version.csv.first}.dmg"
