@@ -10,8 +10,8 @@ cask "tripmode" do
       skip
     end
   else
-    version "3.1.2,1267"
-    sha256 "41db7886236a3c8b7bf5c364ef4e8b15f72e0946440bb90bb40daf009cfc31f8"
+    version "3.1.3,1303"
+    sha256 "93a3d1fa2ba00053c144f0224fbc5054ba419a42bd0169d509e13c7a9f805727"
 
     url "https://tripmode-updates.ch/app/TripMode-#{version.csv.first}-#{version.csv.second}.zip",
         verified: "tripmode-updates.ch/"
@@ -40,8 +40,12 @@ cask "tripmode" do
 
   zap trash: [
     "/Library/Application Support/Tripmode",
+    "~/Library/Application Scripts/com.alix-sarl.TripMode",
+    "~/Library/Application Scripts/P39EL2R8C4.com.alix-sarl.TripMode",
     "~/Library/Application Support/Tripmode",
+    "~/Library/Caches/com.apple.helpd/Generated/ch.tripmode.TripMode.help*#{version.csv.first}",
     "~/Library/Caches/ch.tripmode.TripMode",
+    "~/Library/Group Containers/P39EL2R8C4.com.alix-sarl.TripMode",
     "~/Library/Preferences/ch.tripmode.TripMode.plist",
   ]
 end
