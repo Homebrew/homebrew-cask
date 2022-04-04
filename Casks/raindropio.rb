@@ -15,10 +15,10 @@ cask "raindropio" do
   desc "All-in-one bookmark manager"
   homepage "https://raindrop.io/"
 
+  # First-party download page links to dmg file from GitHub "latest" release.
   livecheck do
-    url "https://github.com/raindropio/desktop/releases"
-    strategy :page_match
-    regex(%r{v?(\d+(?:\.\d+)+)/Raindrop[._-]#{arch}\.dmg}i)
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true
