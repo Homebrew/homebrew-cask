@@ -1,6 +1,6 @@
 cask "openvisualtraceroute" do
   version "2.0.0"
-  sha256 "581417e62d6d269fe8d0e5ccd426e21cc3fdd431b329e6c0aa113fc678c42ae4"
+  sha256 "bf1fecac21fecde1100f495b0e4e5a166b552dcc8477ab1caf90d6f63c610977"
 
   url "https://downloads.sourceforge.net/openvisualtrace/#{version}/OpenVisualTraceRoute#{version}.dmg",
       verified: "downloads.sourceforge.net/openvisualtrace/"
