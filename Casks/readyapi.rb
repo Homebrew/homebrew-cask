@@ -9,8 +9,8 @@ cask "readyapi" do
   homepage "https://smartbear.com/product/ready-api/overview/"
 
   livecheck do
-    url "https://support.smartbear.com/readyapi/downloads/"
-    regex(%r{href=.*?/ReadyAPI[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    url "https://dl.eviware.com/version-update/readyapi-updates.xml"
+    regex(/fileName=.*?ReadyAPI[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   installer script: {
