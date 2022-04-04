@@ -17,11 +17,11 @@ cask "bettermouse" do
 
   uninstall quit: bundle_id = "com.naotanhaocan.BetterMouse"
 
-  zap trash: %W[
-    ~/Library/Application Support/BetterMouse
-    ~/Library/Caches/#{bundle_id}
-    ~/Library/HTTPStorages/#{bundle_id}*
-    ~/Library/Preferences/#{bundle_id}.plist
-    ~/Library/Saved Application State/#{bundle_id}.savedState
+  zap trash: [
+    "~/Library/Application Support/BetterMouse",
+    "~/Library/Caches/#{bundle_id}",
+    "~/Library/HTTPStorages/#{bundle_id}*",
+    "~/Library/Preferences/#{bundle_id}.plist",
+    "~/Library/Saved Application State/#{bundle_id}.savedState",
   ]
 end
