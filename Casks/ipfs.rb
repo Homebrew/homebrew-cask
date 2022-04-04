@@ -15,4 +15,9 @@ cask "ipfs" do
   auto_updates true
 
   app "IPFS Desktop.app"
+
+  zap trash: [
+    "~/Library/Application Support/Caches/ipfs-desktop-updater/",
+    "~/Library/Application Support/IPFS Desktop",
+  ]
 end
