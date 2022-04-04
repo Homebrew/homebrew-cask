@@ -1,7 +1,7 @@
 cask "termius" do
   arch = Hardware::CPU.intel? ? "mac" : "mac-arm64"
 
-  version "7.37.0"
+  version "7.37.2"
   sha256 :no_check
 
   url "https://autoupdate.termius.com/#{arch}/Termius.dmg"
