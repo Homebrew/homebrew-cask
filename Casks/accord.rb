@@ -10,7 +10,6 @@ cask "accord" do
   livecheck do
     url :url
     strategy :github_latest
-    regex(%r{href=.*?/tag/v?([\w._-]+)["' >]}i)
   end
 
   depends_on macos: ">= :big_sur"
