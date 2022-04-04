@@ -9,7 +9,7 @@ cask "redream" do
 
   livecheck do
     url "https://redream.io/download"
-    regex(/redream\.x86_64-mac-v(\d+(?:\.\d+)*)\.tar\.gz/)
+    regex(/redream\.x86_64-mac-v(\d+(?:\.\d+)*)\.t/)
   end
 
   app "redream.app"

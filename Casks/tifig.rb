@@ -9,7 +9,7 @@ cask "tifig" do
 
   livecheck do
     url "https://www.tifig.net/download/"
-    regex(%r{href=.*?/tifig-(\d+(?:\.\d+)*-\d+)-macosx\.cocoa\.x86_64\.tar\.gz}i)
+    regex(%r{href=.*?/tifig-(\d+(?:\.\d+)*-\d+)-macosx\.cocoa\.x86_64\.t}i)
   end
 
   app "Tifig.app"
