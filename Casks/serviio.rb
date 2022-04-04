@@ -9,7 +9,7 @@ cask "serviio" do
 
   livecheck do
     url "https://www.serviio.org/download"
-    regex(%r{href=.*?/serviio-(\d+(?:\.\d+)+)-osx\.tar\.gz}i)
+    regex(%r{href=.*?/serviio-(\d+(?:\.\d+)+)-osx\.t}i)
   end
 
   pkg "Serviio-#{version}.pkg"

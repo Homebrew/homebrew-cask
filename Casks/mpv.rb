@@ -10,7 +10,7 @@ cask "mpv" do
 
   livecheck do
     url "https://laboratory.stolendata.net/~djinn/mpv_osx/"
-    regex(/mpv-(\d+(?:\.\d+)+)\.tar\.gz/i)
+    regex(/mpv-(\d+(?:\.\d+)+)\.t/i)
   end
 
   conflicts_with formula: "mpv"

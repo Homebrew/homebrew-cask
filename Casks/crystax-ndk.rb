@@ -9,7 +9,7 @@ cask "crystax-ndk" do
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?/crystax[._-]ndk[._-]v?(\d+(?:\.\d+)+)[._-]darwin[._-]x86[._-]64\.tar\.xz}i)
+    regex(%r{href=.*?/crystax[._-]ndk[._-]v?(\d+(?:\.\d+)+)[._-]darwin[._-]x86[._-]64\.t}i)
   end
 
   conflicts_with cask: "android-ndk"
