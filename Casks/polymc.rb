@@ -8,10 +8,6 @@ cask "polymc" do
   desc "Minecraft launcher"
   homepage "https://polymc.org/"
 
-  livecheck do
-    url :url
-  end
-
   depends_on macos: ">= :sierra"
 
   app "PolyMC.app"
