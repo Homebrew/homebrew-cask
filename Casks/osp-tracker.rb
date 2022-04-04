@@ -8,9 +8,8 @@ cask "osp-tracker" do
   homepage "https://physlets.org/tracker/"
 
   livecheck do
-    url "https://physlets.org/tracker/"
-    strategy :page_match
-    regex(/href="?.*?file=Tracker-(\d+(?:\.\d+)+)-osx-installer\.dmg"?/i)
+    url :homepage
+    regex(/href=.*?file=Tracker[._-]v?(\d+(?:\.\d+)+)-osx-installer\.dmg/i)
   end
 
   installer script: {
