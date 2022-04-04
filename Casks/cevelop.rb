@@ -9,7 +9,7 @@ cask "cevelop" do
 
   livecheck do
     url "https://www.cevelop.com/download/"
-    regex(%r{href=.*?/cevelop[._-]v?(\d+(?:\.\d+)+-\d+)[._-]macosx\.cocoa\.x86_64\.tar\.gz}i)
+    regex(%r{href=.*?/cevelop[._-]v?(\d+(?:\.\d+)+-\d+)[._-]macosx\.cocoa\.x86_64\.t}i)
   end
 
   app "Cevelop.app"
