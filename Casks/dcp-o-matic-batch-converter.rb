@@ -12,4 +12,6 @@ cask "dcp-o-matic-batch-converter" do
   end
 
   app "DCP-o-matic #{version.major} Batch converter.app"
+
+  # No zap stanza required
 end
