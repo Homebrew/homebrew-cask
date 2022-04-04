@@ -1,6 +1,6 @@
 cask "irpf2022" do
-  version "1.2"
-  sha256 "fc78a71318680e419426f1eddf983e2baffe46e9f6fd89af403e35aadcb1cdf6"
+  version "1.3"
+  sha256 "7354343e39a30fc753d8e02d93cfbb1edd6e105723da36df8a957a1a62e7a3ed"
 
   url "https://downloadirpf.receita.fazenda.gov.br/irpf/2022/irpf/arquivos/IRPF2022-v#{version}.pkg"
   name "IRPF 2022"
