@@ -9,7 +9,7 @@ cask "nwjs" do
 
   livecheck do
     url "https://github.com/nwjs/nw.js"
-    regex(/^nw[._-]v?(\d+(?:\.\d+)+)$/)
+    regex(/^nw[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
   app "nwjs-sdk-v#{version}-osx-x64/nwjs.app"
