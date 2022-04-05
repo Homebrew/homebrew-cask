@@ -19,7 +19,7 @@ cask "warp" do
 
   zap trash: [
     "~/Library/Preferences/dev.warp.Warp-Stable.plist",
-    "~/Library/Application Support/dev.warp.Warp-Stable/",
+    "~/Library/Application Support/dev.warp.Warp-Stable",
     "~/Library/Logs/warp.log",
   ]
 end
