@@ -2,7 +2,7 @@ blank_issues_enabled: false
 
 contact_links:
   - name: Get help in GitHub Discussions
-    url: https://github.com/Homebrew/discussions/discussions
+    url: https://github.com/orgs/Homebrew/discussions
     about: Have a question? Not sure if your issue affects everyone reproducibly? The quickest way to get help is on Homebrew's GitHub Discussions!
   - name: New issue on Homebrew/brew
     url: https://github.com/Homebrew/brew/issues/new/choose
