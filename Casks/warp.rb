@@ -3,7 +3,7 @@ cask "warp" do
   sha256 "c2a51c76b02d4734ef319b3fabaac38a3cf9b41c1f762ddb497196e500f736b3"
 
   url "https://warp-releases.storage.googleapis.com/stable/#{version}/Warp.dmg",
-    verified: "warp-releases.storage.googleapis.com"
+      verified: "warp-releases.storage.googleapis.com"
   name "Warp"
   desc "Blazingly fast, Rust-based terminal"
   homepage "https://www.warp.dev/"
