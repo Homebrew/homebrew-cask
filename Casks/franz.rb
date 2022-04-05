@@ -1,12 +1,12 @@
 cask "franz" do
   arch = Hardware::CPU.intel? ? "" : "-arm64"
 
-  version "5.8.0"
+  version "5.9.1"
 
   if Hardware::CPU.intel?
-    sha256 "8f390f36ad1d34427e44d8e7b9860253eeaaca878f434482b4a78334a3a028ff"
+    sha256 "ff177691e82bd29b9caa57dd602bd955d00accd68d3d5147a015f6ac4eb3f5bc"
   else
-    sha256 "da49e15cbb6f5cf649bdba2ce480b9adc55b42afc3ba002d754df62e6db1580f"
+    sha256 "48e2e918f43aec4b2c47822a9eb53e7053c1c7ce54a1642012a851a54661ad16"
   end
 
   url "https://github.com/meetfranz/franz/releases/download/v#{version}/franz-#{version}#{arch}.dmg",
