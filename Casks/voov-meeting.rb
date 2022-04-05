@@ -2,8 +2,8 @@ cask "voov-meeting" do
   arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
 
   if Hardware::CPU.intel?
-    version "3.3.2.510,1410000198,255661c36b01c1f58129754358b192ac"
-    sha256 "e33c32b2af728c3ac0277156ef75e781fcec48f7191dc93c81669cde9b13dd64"
+    version "3.3.3.520,1410000198,3307503a228f40f6cab7172d0e3febc0"
+    sha256 "f7ae3485ebdf5595b52ed08bc00a76d1937879b7a1f52c03d643480b5752d467"
   else
     version "3.3.3.520,1410000198,f58b838447dddaf1132601a05ba163bd"
     sha256 "f91967906c4f7a57276a1e47110c0e4f2799f7f8738e16430ed79f002f3dccdd"
