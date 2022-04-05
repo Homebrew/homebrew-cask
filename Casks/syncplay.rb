@@ -10,7 +10,7 @@ cask "syncplay" do
 
   livecheck do
     url :stable
-    regex(/^v?(\d+(?:\.\d+)+)$/)
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   depends_on macos: ">= :sierra"
