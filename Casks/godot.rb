@@ -10,7 +10,7 @@ cask "godot" do
 
   livecheck do
     url "https://github.com/godotengine/godot"
-    regex(/^v?(\d+(?:\.\d+)+)[._-]stable$/)
+    regex(/^v?(\d+(?:\.\d+)+)[._-]stable$/i)
   end
 
   app "Godot.app"

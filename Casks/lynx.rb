@@ -10,7 +10,7 @@ cask "lynx" do
 
   livecheck do
     url "https://downloads.saharasupport.com/lynx#{version.major}/production/macx/version.txt"
-    regex(/(\d+(?:[._-]\d+)+)/)
+    regex(/(\d+(?:[._-]\d+)+)/i)
   end
 
   auto_updates true

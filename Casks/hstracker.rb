@@ -10,7 +10,7 @@ cask "hstracker" do
 
   livecheck do
     url :url
-    regex(/^v?(\d+(?:\.\d+)+)$/)
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   depends_on macos: ">= :sierra"

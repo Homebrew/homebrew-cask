@@ -17,7 +17,7 @@ cask "kotlin-native" do
 
   livecheck do
     url :url
-    regex(/^v?(\d+(?:\.\d+)+)$/)
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   conflicts_with formula: "kotlin"

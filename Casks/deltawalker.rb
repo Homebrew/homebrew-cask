@@ -10,7 +10,7 @@ cask "deltawalker" do
 
   livecheck do
     url "http://www.deltawalker.com/download"
-    regex(/href=.*?DeltaWalker[._-]?v?(\d+(?:\.\d+)+)\.dmg/)
+    regex(/href=.*?DeltaWalker[._-]?v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "DeltaWalker.app"

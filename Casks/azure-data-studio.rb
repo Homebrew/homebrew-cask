@@ -10,7 +10,7 @@ cask "azure-data-studio" do
 
   livecheck do
     url "https://azuredatastudio-update.azurewebsites.net/api/update/darwin/stable/VERSION"
-    regex(/"productVersion"\s*:\s*"(\d+(:?\.\d+)+)"/)
+    regex(/"productVersion"\s*:\s*"(\d+(:?\.\d+)+)"/i)
   end
 
   auto_updates true

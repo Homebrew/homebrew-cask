@@ -9,7 +9,7 @@ cask "enclave" do
 
   livecheck do
     url "https://install.enclave.io/latest/osx-homebrew-version.txt"
-    regex(/(\d+(?:\.\d+)*)/)
+    regex(/(\d+(?:\.\d+)*)/i)
   end
 
   depends_on macos: ">= :yosemite"
