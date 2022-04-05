@@ -17,7 +17,9 @@ cask "warp" do
 
   app "Warp.app"
 
-  zap trash: ["~/Library/Preferences/dev.warp.Warp-Stable.plist",
-              "~/Library/Application\ Support/dev.warp.Warp-Stable/",
-              "~/Library/Logs/warp.log"]
+  zap trash: [
+    "~/Library/Preferences/dev.warp.Warp-Stable.plist",
+    "~/Library/Application\ Support/dev.warp.Warp-Stable/",
+    "~/Library/Logs/warp.log",
+  ]
 end
