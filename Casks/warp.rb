@@ -1,15 +1,16 @@
 cask "warp" do
-  version "0.2022.04.01.01.37"
-  sha256 :no_check
+  version "v0.2022.04.01.01.37.stable_03"
+  sha256 "c2a51c76b02d4734ef319b3fabaac38a3cf9b41c1f762ddb497196e500f736b3"
 
-  url "https://app.warp.dev/download"
+  url "https://warp-releases.storage.googleapis.com/stable/#{version}/Warp.dmg",
+    verified: "warp-releases.storage.googleapis.com"
   name "Warp"
   desc "Blazingly fast, Rust-based terminal"
   homepage "https://www.warp.dev/"
 
   livecheck do
-    url "https://docs.warp.dev/help/changelog"
-    regex(/\(v?(\d+(?:\.\d+)+)\)/i)
+    url "https://storage.googleapis.com/warp-releases/channel_versions.json"
+    regex(/v\d+(?:\.\d+)+\.stable_\d+/i)
   end
 
   auto_updates true
