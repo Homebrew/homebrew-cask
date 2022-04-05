@@ -12,4 +12,6 @@ cask "dcp-o-matic-kdm-creator" do
   end
 
   app "DCP-o-matic #{version.major} KDM Creator.app"
+
+  # No zap stanza required
 end

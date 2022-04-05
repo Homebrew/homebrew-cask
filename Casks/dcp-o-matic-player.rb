@@ -12,4 +12,6 @@ cask "dcp-o-matic-player" do
   end
 
   app "DCP-o-matic #{version.major} Player.app"
+
+  # No zap stanza required
 end
