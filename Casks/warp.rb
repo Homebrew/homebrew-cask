@@ -5,7 +5,7 @@ cask "warp" do
   url "https://warp-releases.storage.googleapis.com/stable/v#{version}/Warp.dmg",
       verified: "warp-releases.storage.googleapis.com"
   name "Warp"
-  desc "Blazingly fast, Rust-based terminal"
+  desc "Rust-based terminal"
   homepage "https://www.warp.dev/"
 
   livecheck do
