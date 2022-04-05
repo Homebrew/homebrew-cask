@@ -4,12 +4,14 @@ cask "audiorelay" do
 
   url "https://dl.audiorelay.net/setups/macos/AudioRelay-#{version}.dmg"
   name "AudioRelay"
-  desc "Turn your Android phone into a microphone or speakers for PC"
+  desc "Stream audio between your devices"
   homepage "https://www.audiorelay.net/"
 
   livecheck do
     url "https://api.audiorelay.net/Downloads"
-    regex(/"macOs":{"version":"(.*?)"/i)
+    strategy :page_match do |page|
+      JSON.parse(page)["macOs"]["version"]
+    end
   end
 
   auto_updates true
