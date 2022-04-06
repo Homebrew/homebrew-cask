@@ -1,4 +1,4 @@
-name: Publish and publish casks on schedule
+name: Publish casks on schedule
 
 on:
   workflow_dispatch:
