@@ -81,7 +81,7 @@ jobs:
         uses: Homebrew/actions/git-try-push@master
         with:
           token: ${{secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN}}
-          directory: /home/linuxbrew/.linuxbrew/Homebrew/Library/Taps/homebrew/homebrew-core
+          directory: /home/linuxbrew/.linuxbrew/Homebrew/Library/Taps/homebrew/homebrew-cask
         env:
           GIT_COMMITTER_NAME: BrewTestBot
           GIT_COMMITTER_EMAIL: 1589480+BrewTestBot@users.noreply.github.com
