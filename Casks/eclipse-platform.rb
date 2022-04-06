@@ -1,12 +1,12 @@
 cask "eclipse-platform" do
   arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
-  version "4.22,202111241800"
+  version "4.23,202203080310"
 
   if Hardware::CPU.intel?
-    sha256 "923dca09cebf4ebc97fdf7151f2dc984b8c7c425a452df7167e94e7aba473cc2"
+    sha256 "1c087f17a49eeffaa2405f224a89a068d02f896c4461c79647cb73d233285a3a"
   else
-    sha256 "4c9ac2e2be62776f408016e1935d80a0ca3783f1a19e4aa7f013cdb66e93fc0a"
+    sha256 "50a8a29dfdfde7b34eaeeac59e8c50d77bb5fb4b6198acec44977bdc3b9bc952"
   end
 
   url "https://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops#{version.major}/R-#{version.csv.first}-#{version.csv.second}/eclipse-SDK-#{version.csv.first}-macosx-cocoa-#{arch}.dmg&r=1"
