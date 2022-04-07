@@ -1,6 +1,6 @@
 cask "qdslrdashboard" do
-  version "3.6.4"
-  sha256 "29df5858f8d3c5d8e8e6ab6b220f52a391fabd619f0d444094b07e9c36fd81f2"
+  version "3.6.7"
+  sha256 "a3360bbdc3ad98629c120f916ccb420c10ac8554ffe655866a276259c535494c"
 
   url "https://files.lrtimelapse.com/dslrdashboard/V#{version}/qDslrDashboard_V#{version}_macOS_x64.dmg",
       verified: "files.lrtimelapse.com/dslrdashboard/"
