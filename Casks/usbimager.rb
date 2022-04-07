@@ -9,7 +9,8 @@ cask "usbimager" do
   homepage "https://bztsrc.gitlab.io/usbimager/"
 
   livecheck do
-    url "https://gitlab.com/bztsrc/usbimager.git"
+    url :homepage
+    regex(%r{/usbimager[._-]v?(\d+(?:\.\d+)+)[._-][^"' >]*?macosx?[^"' >]*?\.zip}i)
   end
 
   app "USBImager.app"
