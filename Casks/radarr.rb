@@ -24,5 +24,7 @@ cask "radarr" do
 
   app "Radarr.app"
 
-  # No zap stanza required
+  zap trash: [
+    "~/.config/Radarr",
+  ]
 end

@@ -10,7 +10,7 @@ cask "godot-mono" do
 
   livecheck do
     url "https://github.com/godotengine/godot"
-    regex(/^v?(\d+(?:\.\d+)+)[._-]stable$/)
+    regex(/^v?(\d+(?:\.\d+)+)[._-]stable$/i)
   end
 
   depends_on formula: "mono"

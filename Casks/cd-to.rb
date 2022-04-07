@@ -1,6 +1,6 @@
 cask "cd-to" do
-  version "3.1"
-  sha256 "2871b5324210a04eb13b27aa69ab572215a6ac11a33ca96de8e8526b39f77113"
+  version "3.1.3"
+  sha256 "821cf3b1f4a0af0d89e71317a5a3271b89e569adf84c9b609d6f159d643c568b"
 
   url "https://github.com/jbtule/cdto/releases/download/v#{version}/cdto_#{version.dots_to_underscores}.zip"
   name "cd to"

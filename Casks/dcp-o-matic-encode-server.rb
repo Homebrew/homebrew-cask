@@ -12,4 +12,6 @@ cask "dcp-o-matic-encode-server" do
   end
 
   app "DCP-o-matic #{version.major} Encode Server.app"
+
+  # No zap stanza required
 end

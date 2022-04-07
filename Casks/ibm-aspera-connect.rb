@@ -10,7 +10,7 @@ cask "ibm-aspera-connect" do
 
   livecheck do
     url "https://d3gcli72yxqn2z.cloudfront.net/connect_latest/v4/connectversions.min.js"
-    regex(/ibm-aspera-connect[._-]v?(\d+(?:\.\d+)+)_macOS_x86_64\.dmg/)
+    regex(/ibm-aspera-connect[._-]v?(\d+(?:\.\d+)+)_macOS_x86_64\.dmg/i)
   end
 
   installer manual: "IBM Aspera Connect Installer.app"
