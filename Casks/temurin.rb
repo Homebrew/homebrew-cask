@@ -1,12 +1,12 @@
 cask "temurin" do
   arch = Hardware::CPU.intel? ? "x64" : "aarch64"
 
-  version "17.0.2,8"
+  version "18,36"
 
   if Hardware::CPU.intel?
-    sha256 "b82d3ba3ff4c453bd954979a20e67754478294da8650e3b9e50f6d1a7cf5c628"
+    sha256 "9cdce52d4c803be62e52a8cd8ec1715c16c5f0b91a520bc36082e3781db9ae82"
   else
-    sha256 "0904c11eb5f7b53aac53e6279992ee2a900c9517b26659dee3704b2d11c149cd"
+    sha256 "e38da4fb708cdab64060c4a754208c7557f6cdb6188fa57977165bbf07e078cd"
   end
 
   url "https://github.com/adoptium/temurin#{version.major}-binaries/releases/download/jdk-#{version.csv.first}%2B#{version.csv.second}/OpenJDK#{version.major}U-jdk_#{arch}_mac_hotspot_#{version.csv.first}_#{version.csv.second.major}.pkg",
