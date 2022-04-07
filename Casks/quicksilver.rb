@@ -9,8 +9,8 @@ cask "quicksilver" do
   homepage "https://qsapp.com/"
 
   livecheck do
-    url "https://qsapp.com/archives/"
-    regex(%r{href=.*?/Quicksilver%20(\d+(?:\.\d+)*)\.dmg}i)
+    url "https://github.com/quicksilver/Quicksilver/releases"
+    strategy :github_latest
   end
 
   auto_updates true
