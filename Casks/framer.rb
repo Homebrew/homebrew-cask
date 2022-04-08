@@ -1,7 +1,7 @@
 cask "framer" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "2022.6.5"
+  version "2022.14.2"
   sha256 :no_check
 
   url "https://updates.framer.com/electron/darwin/#{arch}/Framer.zip"
