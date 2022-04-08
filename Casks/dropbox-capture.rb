@@ -13,6 +13,7 @@ cask "dropbox-capture" do
     strategy :extract_plist
   end
 
+  auto_updates true
   depends_on macos: ">= :el_capitan"
 
   app "Dropbox Capture.app"
