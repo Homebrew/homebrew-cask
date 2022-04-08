@@ -1,6 +1,6 @@
 cask "hostsx" do
-  version "2.8.0"
-  sha256 "20f87eca89f92957e9d35c1854318659998a5663038162778016d9e2d581a07d"
+  version "2.8.1"
+  sha256 "acf2f6b909215ec2b822a2c88bc7a19b4f0f231b86d0184883f481de8b535bd6"
 
   url "https://github.com/ZzzM/HostsX/releases/download/#{version}/HostsX.dmg"
   name "HostsX"
