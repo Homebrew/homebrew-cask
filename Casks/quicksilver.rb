@@ -9,7 +9,7 @@ cask "quicksilver" do
   homepage "https://qsapp.com/"
 
   livecheck do
-    url :stable
+    url "https://github.com/quicksilver/Quicksilver/releases"
     strategy :github_latest
   end
 
