@@ -20,6 +20,8 @@ cask "wolai" do
     strategy :electron_builder
   end
 
+  auto_updates true
+
   app "wolai.app"
 
   zap trash: [
