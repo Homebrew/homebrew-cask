@@ -3,11 +3,11 @@ cask "start" do
   livecheck_arch = Hardware::CPU.intel? ? "" : "-arm"
 
   if Hardware::CPU.intel?
-    version "0.299.4-143"
-    sha256 "aa20d9c5efdbab42f14b1f8a0e58eb4e1ba5d3e11c48e3e05c986c2afbd22130"
+    version "0.301.3-164"
+    sha256 "53def2dd52c41d602e4b3ce1dce47b6af6c6b62c941ef7708314031526438e4d"
   else
-    version "0.300.2-38"
-    sha256 "44a371c013a0b2f989ade67a110fbafecc404943bfb154736ee47fabef03c73f"
+    version "0.301.3-50"
+    sha256 "99c87e6aa79e39188fe7374ec16f208d92d97654c4eeff0e7b90db077018fc6a"
   end
 
   url "https://imgcdn.start.qq.com/cdn/mac.client/installer/#{url_arch}START-Installer-#{version}.dmg"
