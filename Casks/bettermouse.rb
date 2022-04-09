@@ -9,7 +9,6 @@ cask "bettermouse" do
 
   livecheck do
     url :homepage
-    strategy :page_match
     regex(/Version (\d+(?:\.\d+)+)/i)
   end
 
