@@ -9,7 +9,6 @@ cask "save-hollywood" do
 
   livecheck do
     url "http://s.sudre.free.fr/Software/SaveHollywood/release_notes.html"
-    strategy :page_match
     regex(/Release_notes_Version.*?(\d+(?:\.\d+)*)/i)
   end
 
