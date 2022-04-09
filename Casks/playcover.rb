@@ -16,7 +16,7 @@ cask "playcover" do
     url "https://github.com/iVoider/PlayCover/releases/download/#{version}/PlayCover.#{version}.zip",
         verified: "github.com/iVoider/PlayCover/"
 
-    container nested: "PlayCover_#{version}.dmg"
+    container nested: "PlayCover #{version}.dmg"
 
     app "PlayCover.app"
   end
