@@ -27,6 +27,8 @@ cask "duet" do
     "~/Library/Caches/com.crashlytics.data/com.kairos.duet*",
     "~/Library/Caches/com.kairos.duet*",
     "~/Library/Caches/io.fabric.sdk.mac.data/com.kairos.duet*",
+    "~/Library/Caches/SentryCrash/duet",
+    "~/Library/HTTPStorages/com.kairos.duet*",
     "~/Library/Preferences/com.kairos.duet*.plist",
   ],
       rmdir: [
