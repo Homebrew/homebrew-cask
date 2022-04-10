@@ -1,6 +1,6 @@
 cask "tencent-lemon" do
-  version "5.0.5"
-  sha256 "938392c780a91bb2f3aaec7ca3063d852cfd2bb4b2743b7c2eca1457975182c6"
+  version "5.0.6"
+  sha256 "9e8e47a19e564335d18a59ca22db367199b35bf05e8626d71f29d3ab91533347"
 
   url "https://pm.myapp.com/invc/xfspeed/qqpcmgr/module_update/Lemon#{version}.dmg",
       verified: "pm.myapp.com/invc/xfspeed/qqpcmgr/"
@@ -10,7 +10,7 @@ cask "tencent-lemon" do
 
   livecheck do
     url "https://lemon.guanjia.qq.com/latest/package"
-    regex(/"downloadUrl":"https.*Lemonv?(\d+(?:[._]\d+)+)\.dmg/i)
+    regex(/"latest":{"version":"(\d+(?:\.\d+)+)"/i)
   end
 
   app "Tencent Lemon.app"
