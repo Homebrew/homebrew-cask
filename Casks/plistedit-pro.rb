@@ -1,5 +1,5 @@
 cask "plistedit-pro" do
-  version "1.9.4,929"
+  version "1.9.5,933"
   sha256 :no_check
 
   url "https://www.fatcatsoftware.com/plisteditpro/PlistEditPro.zip"

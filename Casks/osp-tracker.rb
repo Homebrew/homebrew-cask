@@ -1,6 +1,6 @@
 cask "osp-tracker" do
-  version "6.0.7"
-  sha256 "df0e0ccd2e2631fee0dc4c6863a7b015215c05eb620a9d913958f8cb8ac68ebe"
+  version "6.0.8"
+  sha256 "b79b13aa244fb2b3c2edb3154a409ec8c3ab5ffdca8a90288edae84cf0bc8281"
 
   url "https://physlets.org/tracker/installers/download.php?file=Tracker-#{version}-osx-installer.dmg"
   name "Tracker"
