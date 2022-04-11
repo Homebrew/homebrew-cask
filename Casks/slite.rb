@@ -1,15 +1,17 @@
 cask "slite" do
-  version "64"
+  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  version "1.2.10"
   sha256 :no_check
 
-  url "https://download.slite.com/mac"
+  url "https://download.slite.com/mac/dmg/#{arch}"
   name "Slite"
   desc "Team communication and collaboration software"
   homepage "https://slite.com/"
 
   livecheck do
-    url "https://download.slite.com/mac"
+    url "https://download.slite.com/mac/dmg/#{arch}"
     strategy :header_match
+    regex(/Slite (\d+(?:\.\d+)*)\.zip/i)
   end
 
   app "Slite.app"
