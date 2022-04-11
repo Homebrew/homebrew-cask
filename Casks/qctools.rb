@@ -4,6 +4,7 @@ cask "qctools" do
 
   url "https://mediaarea.net/download/binary/qctools/#{version}/QCTools_#{version}_mac.dmg"
   name "QCTools"
+  desc "Audiovisual analytics and filtering for video files"
   homepage "https://mediaarea.net/QCTools"
 
   livecheck do
