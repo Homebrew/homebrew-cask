@@ -23,7 +23,14 @@ cask "paragon-ntfs" do
             signal:    [
               ["KILL", "com.paragon-software.ntfs.FSMenuApp"],
               ["KILL", "com.paragon-software.ntfs.notification-agent"],
-            ]
+            ],
+            delete:    [
+              "/Library/Application Support/Paragon Software/com.paragon-software.kernelio.kext",
+              "/Library/Application Support/Paragon Software/uc.ntfs",
+              "/Library/LaunchDaemons/com.paragon-software.installer.plist",
+              "/Library/PrivilegedHelperTools/com.paragon-software.installer",
+            ],
+            rmdir:     "/Library/Application Support/Paragon Software/"
 
   zap trash: [
     "~/Library/Application Support/com.paragon-software.ntfs.*",
