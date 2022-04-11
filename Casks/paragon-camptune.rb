@@ -17,4 +17,11 @@ cask "paragon-camptune" do
   depends_on macos: ">= :sierra"
 
   app "Paragon CampTune.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.paragon-software.camptunex",
+    "~/Library/HTTPStorages/com.paragon-software.camptunex",
+    "~/Library/Preferences/com.paragon-software.camptunex.plist",
+    "~/Library/Saved Application State/com.paragon-software.camptunex.savedState",
+  ]
 end
