@@ -11,8 +11,8 @@ cask "gdevelop" do
   app "GDevelop #{version.major}.app"
 
   zap trash: [
-    "~/Library/Application Support/GDevelop 5",
-    "~/Library/Logs/GDevelop 5",
+    "~/Library/Application Support/GDevelop #{version.major}",
+    "~/Library/Logs/GDevelop #{version.major}",
     "~/Library/Preferences/com.gdevelop-app.ide.plist",
     "~/Library/Saved Application State/com.gdevelop-app.ide.savedState",
   ]
