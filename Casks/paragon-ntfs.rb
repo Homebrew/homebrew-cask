@@ -4,6 +4,7 @@ cask "paragon-ntfs" do
 
   url "https://dl.paragon-software.com/demo/ntfsmac#{version}_trial.dmg"
   name "Paragon NTFS for Mac"
+  desc "Paragon read-write NTFS driver"
   homepage "https://www.paragon-software.com/ufsdhome/ntfs-mac/"
 
   livecheck do
@@ -24,5 +25,12 @@ cask "paragon-ntfs" do
               ["KILL", "com.paragon-software.ntfs.notification-agent"],
             ]
 
-  zap trash: "~/Library/Preferences/com.paragon-software.ntfs.fsapp.plist"
+  zap trash: [
+    "~/Library/Application Support/com.paragon-software.ntfs.*",
+    "~/Library/Caches/com.paragon-software.ntfs.fsapp",
+    "~/Library/HTTPStorages/com.paragon-software.ntfs.*",
+    "~/Library/Preferences/com.paragon-software.ntfs.fsapp.plist",
+    "~/Library/Saved Application State/com.paragon-software.ntfs.fsapp.savedState",
+    "~/Library/WebKit/com.paragon-software.ntfs.fsapp",
+  ]
 end
