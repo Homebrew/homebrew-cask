@@ -20,7 +20,7 @@ cask "free-gpgmail" do
   # surface a new major version and that will need to be handled manually.
   livecheck do
     url :url
-    regex(/href=.*?Free-GPGMail[._-]v?(\d+)-(\d+(?:\.\d+)+)(-[^"' >]+?)?[._-]mailbundle\.zip/i)
+    regex(/href=.*?Free-GPGMail[._-]v?(\d+)-(\d+(?:\.\d+)+)([_-][^"' >]+?)?[._-]mailbundle\.zip/i)
     strategy :github_latest do |page, regex|
       page.scan(regex).map do |match|
         next if match[0] != version.csv.first
