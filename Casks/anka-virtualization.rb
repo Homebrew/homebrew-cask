@@ -13,11 +13,13 @@ cask "anka-virtualization" do
     regex(/Anka[._-]?v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :big_sur"
 
   pkg "Anka-#{version}.pkg"
 
   uninstall launchctl: [
+    "com.veertu.anka.guestaddons.pkg"
+    "com.veertu.anka.agent.pkg",
     "com.veertu.anka.ankakbd",
     "com.veertu.anka.ankanetd",
     "com.veertu.anka.lupd",
