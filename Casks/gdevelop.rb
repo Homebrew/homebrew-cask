@@ -9,4 +9,11 @@ cask "gdevelop" do
   homepage "https://gdevelop.io/"
 
   app "GDevelop #{version.major}.app"
+
+  zap trash: [
+    "~/Library/Application Support/GDevelop 5",
+    "~/Library/Logs/GDevelop 5",
+    "~/Library/Preferences/com.gdevelop-app.ide.plist",
+    "~/Library/Saved Application State/com.gdevelop-app.ide.savedState",
+  ]
 end
