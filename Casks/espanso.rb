@@ -1,7 +1,7 @@
 cask "espanso" do
   arch = Hardware::CPU.intel? ? "Intel" : "M1"
 
-  version "2.1.5"
+  version "2.1.5-beta"
 
   if Hardware::CPU.intel?
     sha256 "6058ea8b851073ab97a6ffd257127ef7cfd367ccc6c290648217b3b657319539"
@@ -9,16 +9,15 @@ cask "espanso" do
     sha256 "8e71bf8904f3418ddc54c8faeb9e1f40fe4a57bef81d6c93468dbf0c55bcb210"
   end
 
-  url "https://github.com/federico-terzi/espanso/releases/download/v#{version}-beta/Espanso-Mac-#{arch}.zip",
+  url "https://github.com/federico-terzi/espanso/releases/download/v#{version}/Espanso-Mac-#{arch}.zip",
       verified: "github.com/federico-terzi/espanso/"
   name "Espanso"
   desc "Cross-platform Text Expander written in Rust"
   homepage "https://espanso.org/"
 
   livecheck do
-    url "https://github.com/federico-terzi/espanso/releases/latest"
-    strategy :page_match
-    regex(%r{href=.*?/v(\d+(?:\.\d+)*)(?:-beta)?/Espanso-Mac-(?:Intel|M1)\.zip}i)
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+(?:-beta\.?\d*)?)$/i)
   end
 
   app "Espanso.app"
