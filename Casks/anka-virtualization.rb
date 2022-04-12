@@ -17,9 +17,12 @@ cask "anka-virtualization" do
 
   pkg "Anka-#{version}.pkg"
 
-  uninstall launchctl: [
+  uninstall pkgutil: [
     "com.veertu.anka.guestaddons.pkg",
-    "com.veertu.anka.agent.pkg",
+    "com.veertu.anka.agent.pkg"
+  ],
+
+  uninstall launchctl: [
     "com.veertu.anka.ankakbd",
     "com.veertu.anka.ankanetd",
     "com.veertu.anka.lupd",
