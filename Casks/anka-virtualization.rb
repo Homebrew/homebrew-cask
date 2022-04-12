@@ -19,7 +19,7 @@ cask "anka-virtualization" do
 
   uninstall pkgutil: [
     "com.veertu.anka.guestaddons.pkg",
-    "com.veertu.anka.agent.pkg"
+    "com.veertu.anka.agent.pkg",
   ],
 
   uninstall launchctl: [
