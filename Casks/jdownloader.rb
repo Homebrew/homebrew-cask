@@ -34,8 +34,4 @@ cask "jdownloader" do
   ]
 
   zap trash: "~/Library/Preferences/org.jdownloader.launcher.plist"
-
-  caveats do
-    depends_on_java "8"
-  end
 end
