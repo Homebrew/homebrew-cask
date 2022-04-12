@@ -1,12 +1,12 @@
 cask "panwriter" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "0.8.3"
+  version "0.8.4"
 
   if Hardware::CPU.intel?
-    sha256 "2e6cf9e12c5cbd8e378f27aa7453017600dc554e321be5cd786ff79756a99e87"
+    sha256 "d0e4431d02a7f6185f12958f805ffba97b212f6fc7e2baff0564ac6e5fea0cf0"
   else
-    sha256 "ceea9777d744f910cc9fdf87555141acf54261c80556cd7045d1342713fe7dcf"
+    sha256 "06bf44d2dd81c16dcbc82aefb6f1f71379ffe9abf95ba6de1fcef3ea1b66a886"
   end
 
   url "https://github.com/mb21/panwriter/releases/download/v#{version}/PanWriter-#{version}-#{arch}.dmg",
