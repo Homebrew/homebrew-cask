@@ -1,5 +1,5 @@
 cask "youdaonote" do
-  version "3.6.3"
+  version "7.0.10"
   sha256 :no_check
 
   url "https://download.ydstatic.com/notewebsite/downloads/YoudaoNote.dmg",
