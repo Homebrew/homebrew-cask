@@ -23,4 +23,10 @@ cask "google-chat-electron" do
     "~/Library/Preferences/com.electron.google-chat-electron.plist",
     "~/Library/Saved Application State/com.electron.google-chat-electron.savedState",
   ]
+
+  caveats <<~EOS
+    If Apple Silicon macOS says the package is corrupted or not trusted, remove app quarantine:
+    - Run `xattr -d com.apple.quarantine /Applications/google-chat-electron.app`
+    - or; install using `brew install --cask --no-quarantine google-chat-electron`
+  EOS
 end
