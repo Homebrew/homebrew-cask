@@ -1,14 +1,14 @@
 cask "zulip" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "5.9.0"
+  version "5.9.1"
 
   url "https://github.com/zulip/zulip-desktop/releases/download/v#{version}/Zulip-#{version}-#{arch}.dmg",
       verified: "github.com/zulip/zulip-desktop/"
   if Hardware::CPU.intel?
-    sha256 "065f08ebf7b44cb418d1831ddced3324502f5be2986fe52c6e7c5be5a05109d0"
+    sha256 "645be694af70dc5a9be4ab2c2d1d86b3e9283445f59e30c0e8e7fecc776f6ef8"
   else
-    sha256 "0152db38f7250a79aa63da35ccbf1a98b4e2693508a679388e3f09cdd1ceec03"
+    sha256 "b2ae74985fa5c8835be71da5a1e9b3477572fefb09e62a30436869b1d32d8a13"
   end
 
   name "Zulip"
