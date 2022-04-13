@@ -4,14 +4,14 @@ cask "ngrok" do
   version "3.0.2"
   sha256 :no_check
 
-  url "https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-darwin-#{arch}.zip",
+  url "https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-darwin-#{arch}.zip",
       verified: "bin.equinox.io/"
   name "ngrok"
   desc "Reverse proxy, secure introspectable tunnels to localhost"
   homepage "https://ngrok.com/"
 
   livecheck do
-    url "https://dl.equinox.io/ngrok/ngrok/stable"
+    url "https://dl.equinox.io/ngrok/ngrok-v3/stable"
     regex(/Version\s*(\d+(?:\.\d+)*)/i)
   end
 
