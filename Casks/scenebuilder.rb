@@ -1,6 +1,6 @@
 cask "scenebuilder" do
-  version "17.0.0"
-  sha256 "d62a2fd5e692c79229c2de37daa732a78e51df4db98eda8d0ca1144159d5df19"
+  version "18.0.0"
+  sha256 "280a1bf776e39e93d611276d67560b9c0e195c6011ca7c5fd34a2b961165c66b"
 
   url "https://download2.gluonhq.com/scenebuilder/#{version}/install/mac/SceneBuilder-#{version}.dmg"
   name "Scene Builder"
