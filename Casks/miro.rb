@@ -1,7 +1,7 @@
 cask "miro" do
   arch = Hardware::CPU.intel? ? "darwin" : "darwin-arm64"
 
-  version "0.7.8"
+  version "0.7.9"
   sha256 :no_check
 
   url "https://desktop.miro.com/platforms/#{arch}/Miro.dmg"
