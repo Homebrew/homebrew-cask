@@ -11,7 +11,8 @@ cask "youdaonote" do
   homepage "https://note.youdao.com/"
 
   livecheck do
-    skip "No version information available"
+    url "https://artifact.lx.netease.com/download/ynote-electron/latest-mac.yml"
+    strategy :electron_builder
   end
 
   app "有道云笔记.app"
