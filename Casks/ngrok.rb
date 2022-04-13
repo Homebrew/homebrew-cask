@@ -1,7 +1,7 @@
 cask "ngrok" do
   arch = Hardware::CPU.intel? ? "amd64" : "arm64"
 
-  if Hardware::CPU.arm?
+  if Hardware::CPU.intel?
     version "3.0.2,jXmyvZWJNHj,a"
     sha256 "46e6e1d047aa9c0da5eaa63beabc8725b3b35deb74194bb7ead566cbb102200d"
   else
