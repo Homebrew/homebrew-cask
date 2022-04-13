@@ -25,8 +25,10 @@ cask "google-chat-electron" do
   ]
 
   caveats <<~EOS
-    If Apple Silicon macOS says the package is corrupted or not trusted, remove app quarantine:
-    - Run `xattr -d com.apple.quarantine /Applications/google-chat-electron.app`
-    - or; install using `brew install --cask --no-quarantine google-chat-electron`
+    The quaratine attribute breaks the app (macOS will say the package is corrupted or not trusted), to do so:
+      - install this cask with `brew install --cask --no-quarantine #{token}`
+      - or; run `xattr -d com.apple.quarantine /Applications/#{token}.app` after the install
+
+    WARNING: quarantining is a macOS security feature and you disable it at your own risk!
   EOS
 end
