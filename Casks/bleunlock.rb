@@ -1,6 +1,6 @@
 cask "bleunlock" do
-  version "1.11"
-  sha256 "004534e749386e092719f930cddcdc9b7608c2e6f662854346870d9472574326"
+  version "1.12.1"
+  sha256 "d9847b2f540393bb2a18dc5be6929021c7499c383d12a198ee9f9e9ffada5f6b"
 
   url "https://github.com/ts1/BLEUnlock/releases/download/#{version}/BLEUnlock-#{version}.zip"
   name "BLEUnlock"

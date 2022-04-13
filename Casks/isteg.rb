@@ -4,12 +4,12 @@ cask "isteg" do
 
   url "https://www.hanynet.com/isteg-#{version}.zip"
   name "iSteg"
+  desc "Encryption tool"
   homepage "https://www.hanynet.com/isteg/"
 
   livecheck do
-    url "https://www.hanynet.com/isteg/"
-    strategy :page_match
-    regex(%r{href=.*?/isteg-(\d+(?:\.\d+)*)\.zip}i)
+    url :homepage
+    regex(%r{href=.*?/isteg[._-]v?(\d+(?:\.\d+)+)\.zip}i)
   end
 
   app "iSteg.app"

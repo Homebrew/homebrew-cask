@@ -10,8 +10,7 @@ cask "sequel-pro" do
 
   livecheck do
     url :url
-    strategy :git
-    regex(/^release-(\d+(?:\.\d+)*)$/i)
+    regex(/^release[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
   app "Sequel Pro.app"

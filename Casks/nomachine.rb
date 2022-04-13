@@ -1,6 +1,6 @@
 cask "nomachine" do
-  version "7.7.4_1"
-  sha256 "776d49dbe26570ebbca6903cc5b50f072cd70c5bc4162907a2f52b44d07b5d54"
+  version "7.9.2_1"
+  sha256 "1b6a9be2d9dde230f2195ed12d8efcd3242d6890989c65c436cd639c3ca08488"
 
   url "https://download.nomachine.com/download/#{version.major_minor}/MacOSX/nomachine_#{version}.dmg"
   name "NoMachine"
@@ -9,7 +9,7 @@ cask "nomachine" do
 
   livecheck do
     url "https://www.nomachine.com/download/download&id=7"
-    regex(/nomachine[._-]v?(\d+(?:\.\d+)*_\d+)\.dmg/i)
+    regex(/nomachine[._-]v?(\d+(?:\.\d+)+_\d+)\.dmg/i)
   end
 
   pkg "NoMachine.pkg"
@@ -24,4 +24,10 @@ cask "nomachine" do
               "com.nomachine.server",
               "com.nomachine.uninstall",
             ]
+
+  zap trash: [
+    "/Library/Application Support/NoMachine",
+    "~/Documents/NoMachine",
+    "~/Library/Preferences/com.nomachine.nxdock.plist",
+  ]
 end

@@ -1,8 +1,8 @@
 cask "app-tamer" do
-  version "2.6.4,10674"
-  sha256 "ee84b3dbc0474777c7e886fc86c95f4e392dec4fcdbb5a141ff2fb0f1e28ec48"
+  version "2.7.1,11373"
+  sha256 "7873dbd12182a99c04d0c6754a939732fd8085a00d0c1ad3eadc95f54eb0a077"
 
-  url "https://www.stclairsoft.com/download/AppTamer-#{version.before_comma}.dmg"
+  url "https://www.stclairsoft.com/download/AppTamer-#{version.csv.first}.dmg"
   name "AppTamer"
   desc "CPU management applicataion"
   homepage "https://www.stclairsoft.com/AppTamer/"
@@ -14,9 +14,12 @@ cask "app-tamer" do
 
   app "App Tamer.app"
 
-  zap trash: [
+  uninstall delete: [
     "/Library/LaunchDaemons/com.stclairsoft.AppTamerAgent.plist",
     "/Library/PrivilegedHelperTools/com.stclairsoft.AppTamerAgent",
+  ]
+
+  zap trash: [
     "~/Library/Caches/com.stclairsoft.AppTamer",
     "~/Library/Preferences/com.stclairsoft.AppTamer.plist",
   ]

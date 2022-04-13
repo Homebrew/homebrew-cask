@@ -9,7 +9,6 @@ cask "soduto" do
 
   livecheck do
     url "https://soduto.com/downloads/"
-    strategy :page_match
     regex(%r{href=.*?/Soduto_v?(\d+(?:\.\d+)*)\.dmg}i)
   end
 

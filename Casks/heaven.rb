@@ -9,8 +9,7 @@ cask "heaven" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/Unigine_Heaven-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/Unigine[._-]Heaven[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "Heaven.app"

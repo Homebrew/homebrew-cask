@@ -1,8 +1,15 @@
 cask "eclipse-cpp" do
-  version "4.22.0,2021-12"
-  sha256 "7d2af4314a610793e70a0e54260fadb3aa0bd2307f8fe368e866fb22da9226cf"
+  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
-  url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-cpp-#{version.csv.second}-R-macosx-cocoa-x86_64.dmg&r=1"
+  version "4.23.0,2022-03"
+
+  if Hardware::CPU.intel?
+    sha256 "b8ec6894a3989bfda5861c5cd9d772d7fb6d37354230d6a1f730c77b76e701f2"
+  else
+    sha256 "12f1c47951d0263f22a2dd10734767bb41a46b39d4e22e6402aa1c8b8e2cadea"
+  end
+
+  url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-cpp-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&r=1"
   name "Eclipse IDE for C/C++ Developers"
   desc "Eclipse IDE for C and C++ developers"
   homepage "https://eclipse.org/"

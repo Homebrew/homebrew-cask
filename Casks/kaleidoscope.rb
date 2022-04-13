@@ -1,15 +1,15 @@
 cask "kaleidoscope" do
-  version "3.1.2,2022"
-  sha256 "304a779895019867d33cd530058022f5382c483c019d544203ded953ae9cef8a"
+  version "3.3,2050"
+  sha256 "dc32e433668943999a438b4973529afe937278511a56ec570aaec2ae4685eebf"
 
-  url "https://updates.kaleidoscope.app/v#{version.major}/prod/Kaleidoscope-#{version.before_comma}-#{version.after_comma}.app.zip"
+  url "https://updates.kaleidoscope.app/v#{version.major}/prod/Kaleidoscope-#{version.csv.first}-#{version.csv.second}.app.zip"
   name "Kaleidoscope"
   desc "Spot and merge differences in text and image files or folders"
   homepage "https://www.kaleidoscope.app/"
 
   livecheck do
     url "https://updates.kaleidoscope.app/v#{version.major}/prod/appcast"
-    regex(/Kaleidoscope-(\d+(?:\.\d+)+)-(\d+)\.app\.zip/i)
+    regex(/Kaleidoscope[._-]v?(\d+(?:\.\d+)+)[._-](\d+)\.app\.zip/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end

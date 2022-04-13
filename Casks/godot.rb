@@ -1,6 +1,6 @@
 cask "godot" do
-  version "3.4.2"
-  sha256 "f5cc679ae043778a42788e8af5e2b5e06bf21d35431d365f35a17b8c5d5f297f"
+  version "3.4.4"
+  sha256 "8dbc086c7403042e1c001ac669596f5c4ba0f363cd458405154356f06c1398e5"
 
   url "https://downloads.tuxfamily.org/godotengine/#{version}/Godot_v#{version}-stable_osx.universal.zip",
       verified: "downloads.tuxfamily.org/godotengine/"
@@ -10,7 +10,7 @@ cask "godot" do
 
   livecheck do
     url "https://github.com/godotengine/godot"
-    regex(/^v?(\d+(?:\.\d+)+)[._-]stable$/)
+    regex(/^v?(\d+(?:\.\d+)+)[._-]stable$/i)
   end
 
   app "Godot.app"

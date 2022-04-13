@@ -9,9 +9,13 @@ cask "magicplot" do
 
   livecheck do
     url :homepage
-    strategy :page_match
     regex(/href=.*?MagicPlot(\d+(?:\.\d+)*)\.zip/i)
   end
 
   app "MagicPlot#{version}.app"
+
+  zap trash: [
+    "~/Library/Application Support/MagicPlot",
+    "~/Library/Saved Application State/com.magicplot.MagicPlot.savedState",
+  ]
 end

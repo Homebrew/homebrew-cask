@@ -9,4 +9,9 @@ cask "pulse-sms" do
   homepage "https://messenger.klinkerapps.com/overview/platform-mac.html"
 
   app "Pulse SMS.app"
+
+  zap trash: [
+    "~/Library/Application Support/pulse-sms",
+    "~/Library/Logs/pulse-sms",
+  ]
 end

@@ -4,7 +4,10 @@ cask "ieasemusic" do
 
   url "https://github.com/trazyn/ieaseMusic/releases/download/v#{version}/ieaseMusic-#{version}-mac.dmg"
   name "ieaseMusic"
+  desc "Third-party NetEase cloud music player"
   homepage "https://github.com/trazyn/ieaseMusic"
+
+  auto_updates true
 
   app "ieaseMusic.app"
 

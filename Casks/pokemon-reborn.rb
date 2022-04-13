@@ -8,7 +8,6 @@ cask "pokemon-reborn" do
 
   livecheck do
     url "https://www.rebornevo.com/pr/download/"
-    strategy :page_match
     regex(%r{href=.*?/Reborn(\d+(?:\.\d+)*)%204%20Fruits\.zip}i)
   end
 

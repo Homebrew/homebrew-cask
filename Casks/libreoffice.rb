@@ -1,13 +1,12 @@
 cask "libreoffice" do
-  arch = Hardware::CPU.intel? ? "x86-64" : "aarch64"
-  folder = Hardware::CPU.intel? ? "x86_64" : "aarch64"
+  arch, folder = Hardware::CPU.intel? ? ["x86-64", "x86_64"] : ["aarch64", "aarch64"]
 
-  version "7.2.4"
+  version "7.3.2"
 
   if Hardware::CPU.intel?
-    sha256 "825c5a74a97cc9daa3ca993c6d24c36db3dea2aa65bfe7b5e1a371c3adcfbcf5"
+    sha256 "4fecfd3e9172ddd5586ce4a0105f305d729bc33f63abfa32f8d2bf09abf9d124"
   else
-    sha256 "97a6e45372c3c7ad84b39232d7bec09dd5d9e022e25ff94cb1b28bef37cad2be"
+    sha256 "76365f4d8713a2cf2611c34e01737723f299bc8a7f5d2a9279ddd95bcbe54d2f"
   end
 
   url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/#{folder}/LibreOffice_#{version}_MacOS_#{arch}.dmg",
@@ -18,19 +17,17 @@ cask "libreoffice" do
 
   livecheck do
     url "https://download.documentfoundation.org/libreoffice/stable/"
-    strategy :page_match
     regex(%r{href="(\d+(?:\.\d+)+)/"}i)
   end
 
   conflicts_with cask: "homebrew/cask-versions/libreoffice-still"
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :sierra"
 
   app "LibreOffice.app"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/gengal"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/regmerge"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/regview"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/senddoc"
-  binary "#{appdir}/LibreOffice.app/Contents/MacOS/ui-previewer"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/uno"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/unoinfo"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/unopkg"

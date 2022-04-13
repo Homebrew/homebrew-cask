@@ -6,18 +6,16 @@ cask "proxifier" do
 
     livecheck do
       url "https://www.proxifier.com/changelog/mac#{version.major}.html"
-      strategy :page_match
-      regex(/Version\s*(\d+(?:\.\d+)*)/i)
+      regex(/Version\s*(\d+(?:\.\d+)+)/i)
     end
   else
-    version "3.6"
-    sha256 "8bcf87e0411b51e03d412a1b7da908975be612ebbf9a4ddf2af7577e983ce462"
+    version "3.7"
+    sha256 "ed96cb643aa52292410109850997165d4c80f2782d596e018f53b33e45415ed3"
     url "https://www.proxifier.com/download/ProxifierMac#{version.major}.dmg"
 
     livecheck do
       url "https://www.proxifier.com/changelog/mac.html"
-      strategy :page_match
-      regex(/Version\s*(\d+(?:\.\d+)*)/i)
+      regex(/Version\s*(\d+(?:\.\d+)+)/i)
     end
   end
 
@@ -30,8 +28,8 @@ cask "proxifier" do
   zap trash: [
     "~/Library/Application Scripts/com.initex.proxifier.v3.macos",
     "~/Library/Application Support/Proxifier",
-    "~/Library/Caches/com.initex.proxifier.macosx",
     "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/Proxifier Help*",
+    "~/Library/Caches/com.initex.proxifier.macosx",
     "~/Library/Containers/com.initex.proxifier.v3.macos",
     "~/Library/Group Containers/NXELXU5YLW.com.initex.proxifier.v3.macos",
     "~/Library/Logs/Proxifier",

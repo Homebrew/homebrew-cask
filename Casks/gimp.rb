@@ -10,8 +10,7 @@ cask "gimp" do
 
   livecheck do
     url "https://www.gimp.org/downloads/"
-    strategy :page_match
-    regex(%r{href=.*?/gimp-(\d+(?:\.\d+)+)-x86_64\.dmg}i)
+    regex(%r{href=.*?/gimp[._-]v?(\d+(?:\.\d+)+)[._-]x86[._-]64\.dmg}i)
   end
 
   app "GIMP-#{version.major_minor}.app"

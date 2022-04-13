@@ -1,6 +1,6 @@
 cask "flipper" do
-  version "0.127.0"
-  sha256 "efa5e775ec16bb8d13584931744a74d12ab5c482b46b9d8c0792f5933c682ed9"
+  version "0.142.0"
+  sha256 "a955981e18971d7283cefececb4e5149571e0cbf4666d3a70cc32d34c68e8107"
 
   url "https://github.com/facebook/flipper/releases/download/v#{version}/Flipper-mac.dmg",
       verified: "github.com/facebook/flipper/"
@@ -9,4 +9,10 @@ cask "flipper" do
   homepage "https://fbflipper.com/"
 
   app "Flipper.app"
+
+  zap trash: [
+    "~/.flipper",
+    "~/Library/Application Support/Flipper",
+    "~/Library/Preferences/rs.flipper-launcher",
+  ]
 end

@@ -1,8 +1,8 @@
 cask "dropzone" do
-  version "4.2.2,1455"
-  sha256 "bd7280896de8c605539861390a839713fa85d0a612131cbf8fab8f590cfad2a1"
+  version "4.3.0,1539"
+  sha256 "adeb54a8ebce4a3dbb8fdd41be537f9395835bc7249ba42b66a0a2faed4a91db"
 
-  url "https://aptonic.com/releases/Dropzone-#{version.before_comma}.zip"
+  url "https://aptonic.com/releases/Dropzone-#{version.csv.first}.zip"
   name "Dropzone"
   desc "Productivity app"
   homepage "https://aptonic.com/"

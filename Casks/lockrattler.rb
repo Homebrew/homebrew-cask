@@ -1,8 +1,8 @@
 cask "lockrattler" do
-  version "4.31,2021.09"
-  sha256 "58445fe9ee0a527f93580a8a532b39671755513e8c8ba92c2b8c38e37989ec65"
+  version "4.33,2022.04"
+  sha256 "4a53d6a8e119f478c163c6351a43250508996f658d354380bc927cf6f0ed391d"
 
-  url "https://eclecticlightdotcom.files.wordpress.com/#{version.after_comma.major}/#{version.after_comma.minor}/lockrattler#{version.before_comma.no_dots}.zip",
+  url "https://eclecticlightdotcom.files.wordpress.com/#{version.csv.second.major}/#{version.csv.second.minor}/lockrattler#{version.csv.first.no_dots}.zip",
       verified: "eclecticlightdotcom.files.wordpress.com/"
   name "Lock Rattler"
   desc "Checks security systems and reports issues"
@@ -20,7 +20,7 @@ cask "lockrattler" do
 
   depends_on macos: ">= :el_capitan"
 
-  app "lockrattler#{version.before_comma.major}#{version.before_comma.minor}/LockRattler.app"
+  app "lockrattler#{version.csv.first.major}#{version.csv.first.minor}/LockRattler.app"
 
   zap trash: [
     "~/Library/Caches/co.eclecticlight.LockRattler",

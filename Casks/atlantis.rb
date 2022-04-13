@@ -9,9 +9,13 @@ cask "atlantis" do
 
   livecheck do
     url "https://www.riverdark.net/atlantis/downloads/"
-    strategy :page_match
     regex(/href=.*?Atlantis-(\d+(?:\.\d+)+)\.zip/i)
   end
 
   app "Atlantis.app"
+
+  zap trash: [
+    "~/Library/Application Support/Atlantis",
+    "~/Library/Preferences/net.riverdark.Atlantis.plist",
+  ]
 end

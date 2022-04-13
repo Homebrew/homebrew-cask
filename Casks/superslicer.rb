@@ -1,8 +1,15 @@
 cask "superslicer" do
-  version "2.3.57.8,211222"
-  sha256 "1d8d5e324cf77c37b53f47291cef6976665ea4d15d9ad3c9806a9ba7c1068bc4"
+  arch = Hardware::CPU.intel? ? "" : "arm_"
 
-  url "https://github.com/supermerill/SuperSlicer/releases/download/#{version.csv.first}/SuperSlicer_#{version.csv.first}_macos_#{version.csv.second}.dmg"
+  version "2.3.57.12,220401"
+
+  if Hardware::CPU.intel?
+    sha256 "00c7398b3d5487ba594cffd449e4e4af4e7d6ae8cb8dd59531d4d37ea0b6f51a"
+  else
+    sha256 "eecd1698635b66930756ab71a294bac6b95f5254d930bf42706c63bbaa1def07"
+  end
+
+  url "https://github.com/supermerill/SuperSlicer/releases/download/#{version.csv.first}/SuperSlicer_#{version.csv.first}_macos_#{arch}#{version.csv.second}.dmg"
   name "SuperSlicer"
   desc "Convert 3D models into G-code instructions or PNG layers"
   homepage "https://github.com/supermerill/SuperSlicer"

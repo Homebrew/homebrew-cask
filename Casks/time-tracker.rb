@@ -4,12 +4,12 @@ cask "time-tracker" do
 
   url "https://github.com/rburgst/time-tracker-mac/releases/download/v#{version}-binary/Time.Tracker-#{version}-bin.zip"
   name "TimeTracker"
+  desc "Time tracking app"
   homepage "https://github.com/rburgst/time-tracker-mac"
 
   livecheck do
     url :url
-    strategy :git
-    regex(/^v?(\d+(?:\.\d+)*)-binary$/i)
+    regex(/^v?(\d+(?:\.\d+)+)-binary$/i)
   end
 
   app "Time Tracker.app"

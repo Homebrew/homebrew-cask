@@ -1,6 +1,6 @@
 cask "flightgear" do
-  version "2020.3.11"
-  sha256 "f6a04a20c9d5e45ec9e97a2cf506db477f186bac2693e051ede4e924cb0c517d"
+  version "2020.3.13"
+  sha256 "429a30909cf1e84288f8fea1158cc7cde0c9027d58ceef33f4b10fafee0ebd2c"
 
   url "https://downloads.sourceforge.net/flightgear/FlightGear-#{version}.dmg",
       verified: "sourceforge.net/flightgear/"
@@ -10,7 +10,7 @@ cask "flightgear" do
 
   livecheck do
     url "https://www.flightgear.org/download/"
-    regex(/FlightGear[._-]?(\d+(?:\.\d+)*)\.dmg/i)
+    regex(/FlightGear[._-]?v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "FlightGear.app"

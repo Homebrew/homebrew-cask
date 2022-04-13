@@ -9,8 +9,7 @@ cask "xit" do
 
   livecheck do
     url :url
-    strategy :git
-    regex(/^v?(\d+(?:\.\d+)*(?:b\d+)?)$/i)
+    regex(/^v?(\d+(?:\.\d+)+(?:b\d+)?)$/i)
   end
 
   depends_on macos: ">= :mojave"

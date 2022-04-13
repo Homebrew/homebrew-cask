@@ -1,8 +1,8 @@
 cask "devutils" do
-  version "1.12.0,99"
-  sha256 "00fd3320528d32324dbb03b08ee795ed5f1e254a5d54ef09859c9e45cea7c1e7"
+  version "1.14.0,127"
+  sha256 "7d14a8ac75ca8ed349ece7f75c86f3af8c64e7042b197330ac29f4d80641e11d"
 
-  url "https://devutils.app/archives/DevUtils-#{version.before_comma}.dmg"
+  url "https://devutils.app/archives/DevUtils-#{version.csv.first}.dmg"
   name "DevUtils"
   desc "Offline toolbox for developers"
   homepage "https://devutils.app/"

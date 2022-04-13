@@ -4,12 +4,12 @@ cask "ebmac" do
 
   url "http://ebstudio.info/download/ebpocket/EBMac#{version}.dmg"
   name "EBMac"
+  desc "Electronic dictionary viewer"
   homepage "http://ebstudio.info/manual/EBMac/"
 
   livecheck do
     url "http://ebstudio.info/manual/EBMac/"
-    strategy :page_match
-    regex(%r{href=.*?/EBMac(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/EBMacv?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "EBMac.app"

@@ -1,6 +1,6 @@
 cask "fmail" do
-  version "2.4.8,96"
-  sha256 "35cb422bd1df66c18e0a61e732f8f098a648e10e77bdcfb65d3bfd8835310971"
+  version "2.6.9,116"
+  sha256 "faa8ac01702b8246ba07385eafcee996d5e4878658b3cf90ecf11cd583c2d433"
 
   url "https://arievanboxel.fr/fmail/sparkle/FMail_#{version.csv.first.no_dots}.zip"
   name "FMail"
@@ -13,7 +13,7 @@ cask "fmail" do
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :big_sur"
 
   app "FMail.app"
 

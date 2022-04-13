@@ -1,12 +1,12 @@
 cask "shutter-encoder" do
   arch = Hardware::CPU.intel? ? "64bits" : "Silicon"
 
-  version "15.7"
+  version "15.9"
 
   if Hardware::CPU.intel?
-    sha256 "14bf5c1eb5f6979d1975fe1977cc57ec06515c07937da1c92ca458826037d449"
+    sha256 "8a2cad539a8d8628ad2c86321372ebdfd5291b6a32ff4a9124854e04db9f0ff7"
   else
-    sha256 "4a39a50b7b7e4e601b1d4f11ff5e9959f39c8651d5533c962af6d52ce2f0ad1b"
+    sha256 "519c9912396a1e9158b15947718ab31031eb7b5314fa0ee0f74a088a0d4fc248"
   end
 
   url "https://www.shutterencoder.com/Shutter%20Encoder%20#{version}%20Mac%20#{arch}.pkg"

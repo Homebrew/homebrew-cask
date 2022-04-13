@@ -1,14 +1,16 @@
 cask "openvisualtraceroute" do
-  version "1.7.1"
-  sha256 "bf57e3f85e1d9174f6e934174aa113b7fe8286a060e3d1d4ea357b76e4089f8f"
+  version "2.0.0"
+  sha256 "bf1fecac21fecde1100f495b0e4e5a166b552dcc8477ab1caf90d6f63c610977"
 
   url "https://downloads.sourceforge.net/openvisualtrace/#{version}/OpenVisualTraceRoute#{version}.dmg",
       verified: "downloads.sourceforge.net/openvisualtrace/"
   name "OpenVisualTraceroute"
+  desc "Visual networking tool"
   homepage "https://visualtraceroute.net/"
 
   livecheck do
-    regex(/OpenVisualTraceRoute[._-]?v?(\d+(?:\.\d+)+)\.dmg/i)
+    url :url
+    regex(%r{url=.*?/OpenVisualTraceRoute[._-]?v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "OpenVisualTraceroute.app"

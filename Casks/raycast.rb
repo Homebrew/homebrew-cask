@@ -1,5 +1,5 @@
 cask "raycast" do
-  version "1.26.3"
+  version "1.32.1"
   sha256 :no_check
 
   url "https://api.raycast.app/v2/download"
@@ -10,11 +10,11 @@ cask "raycast" do
   livecheck do
     url :url
     strategy :header_match
-    regex(/Raycast_v?(\d+(?:\.\d+)+)_universal\.dmg/i)
+    regex(/Raycast[._-]v?(\d+(?:\.\d+)+)[._-]universal\.dmg/i)
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :catalina"
 
   app "Raycast.app"
 

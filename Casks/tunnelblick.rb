@@ -20,6 +20,7 @@ cask "tunnelblick" do
   end
 
   auto_updates true
+  depends_on macos: ">= :yosemite"
 
   app "Tunnelblick.app"
 
@@ -31,14 +32,15 @@ cask "tunnelblick" do
     "net.tunnelblick.tunnelblick.LaunchAtLogin",
     "net.tunnelblick.tunnelblick.tunnelblickd",
   ],
+            delete:    "/Library/Application Support/Tunnelblick",
             quit:      "net.tunnelblick.tunnelblick"
 
   zap trash: [
-    "/Library/Application Support/Tunnelblick",
     "~/Library/Application Support/Tunnelblick",
     "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/Tunnelblick*",
     "~/Library/Caches/net.tunnelblick.tunnelblick",
     "~/Library/Cookies/net.tunnelblick.tunnelblick.binarycookies",
+    "~/Library/HTTPStorages/net.tunnelblick.tunnelblick",
     "~/Library/Preferences/net.tunnelblick.tunnelblick.plist",
   ]
 

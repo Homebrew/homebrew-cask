@@ -1,9 +1,16 @@
 cask "gitkraken" do
-  version "8.2.1"
-  sha256 "40269f91fd979c7347cbedddbe719bd224cd303c3c55842e76cea6273ef8696a"
+  arch = Hardware::CPU.intel? ? "darwin" : "darwin-arm64"
 
-  url "https://release.axocdn.com/darwin/GitKraken-v#{version}.zip",
-      verified: "release.axocdn.com/darwin/"
+  version "8.4.0"
+
+  if Hardware::CPU.intel?
+    sha256 "2022d118747bb3be31cd0cc4c1e52eb1ab6debe97ece26fdd39540edba7c7b3d"
+  else
+    sha256 "97a8155788298325636880cf3a7687601c2b067bd112f926355a22a2b08c5ce9"
+  end
+
+  url "https://release.axocdn.com/#{arch}/GitKraken-v#{version}.zip",
+      verified: "release.axocdn.com/"
   name "GitKraken"
   desc "Git client focusing on productivity"
   homepage "https://www.gitkraken.com/"
@@ -18,6 +25,8 @@ cask "gitkraken" do
 
   app "GitKraken.app"
 
+  uninstall quit: "com.axosoft.gitkraken"
+
   zap trash: [
     "~/.gitkraken",
     "~/Library/Application Support/com.axosoft.gitkraken.ShipIt",
@@ -26,13 +35,9 @@ cask "gitkraken" do
     "~/Library/Caches/com.axosoft.gitkraken",
     "~/Library/Caches/GitKraken",
     "~/Library/Cookies/com.axosoft.gitkraken.binarycookies",
+    "~/Library/HTTPStorages/com.axosoft.gitkraken",
     "~/Library/Preferences/com.axosoft.gitkraken.helper.plist",
     "~/Library/Preferences/com.axosoft.gitkraken.plist",
     "~/Library/Saved Application State/com.axosoft.gitkraken.savedState",
   ]
-
-  caveats <<~EOS
-    Big Sur and later Performance Fix
-    See https://www.gitkraken.com/blog/workaround-gitkraken-big-sur-issues
-  EOS
 end

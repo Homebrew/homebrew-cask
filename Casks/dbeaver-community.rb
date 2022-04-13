@@ -1,12 +1,12 @@
 cask "dbeaver-community" do
   arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
-  version "21.3.2"
+  version "22.0.2"
 
   if Hardware::CPU.intel?
-    sha256 "8278253d121e1c74645ed302263dd340f61fadd075c9d676732c248b47011f26"
+    sha256 "46f8b6455d7b4b318b82774a2377f01aaab456c8351032c7ca06349725093c07"
   else
-    sha256 "5810939ec9e2d0176d7e837abab2b2f4b21a1adc11f56c0099969c9491c3ad47"
+    sha256 "bada73f261f16138eb912bbb5fde1afcf84e758c2ef3426910dde9cd030d02f0"
   end
 
   url "https://dbeaver.io/files/#{version}/dbeaver-ce-#{version}-macos-#{arch}.dmg"
@@ -19,7 +19,11 @@ cask "dbeaver-community" do
     strategy :github_latest
   end
 
+  auto_updates true
+
   app "DBeaver.app"
+
+  uninstall signal: ["TERM", "org.jkiss.dbeaver.core.product"]
 
   zap trash: [
     "~/Library/DBeaverData",

@@ -12,8 +12,8 @@ cask "sourcetree" do
     url "https://product-downloads.atlassian.com/software/sourcetree/ga/Sourcetree_#{version.csv.first}_#{version.csv.second}.zip",
         verified: "atlassian.com/software/sourcetree/"
   else
-    version "4.1.5,241"
-    sha256 "cf4b66d8455450028357bc8ffdf4acbaf7ab18d47c309c7c0bfe967bf57acd9f"
+    version "4.1.7,250"
+    sha256 "79ed035aaf0c4a8f24604a63fcf67881c8c9d8e2f992f55c862a2f7175745041"
 
     url "https://product-downloads.atlassian.com/software/sourcetree/ga/Sourcetree_#{version.csv.first}_#{version.csv.second}.zip",
         verified: "atlassian.com/software/sourcetree/"
@@ -38,11 +38,11 @@ cask "sourcetree" do
             quit:      "com.torusknot.SourceTreeNotMAS"
 
   zap trash: [
-    "~/Library/Application Support/SourceTree",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.torusknot.sourcetreenotmas.sfl2",
+    "~/Library/Application Support/SourceTree",
     "~/Library/Caches/com.torusknot.SourceTreeNotMAS",
-    "~/Library/Preferences/com.torusknot.SourceTreeNotMAS.plist",
     "~/Library/Preferences/com.torusknot.SourceTreeNotMAS.LSSharedFileList.plist",
+    "~/Library/Preferences/com.torusknot.SourceTreeNotMAS.plist",
     "~/Library/Saved Application State/com.torusknot.SourceTreeNotMAS.savedState",
   ]
 end

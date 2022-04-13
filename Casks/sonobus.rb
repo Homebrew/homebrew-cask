@@ -1,6 +1,6 @@
 cask "sonobus" do
-  version "1.4.6"
-  sha256 "cf54817a619149197fa399c8c40932f38c2643a435fdce33d5798885133c167c"
+  version "1.5.1"
+  sha256 "49712ce5726b21ffff6bed1070c65eb0cc4d70ba748a96deac62b487a72a9a92"
 
   url "https://sonobus.net/releases/sonobus-#{version}-mac.dmg"
   name "SonoBus"
@@ -18,10 +18,10 @@ cask "sonobus" do
 
   uninstall pkgutil: [
     "net.sonobus.pkg.aax",
+    "net.sonobus.pkg.app",
+    "net.sonobus.pkg.au",
     "net.sonobus.pkg.vst2",
     "net.sonobus.pkg.vst3",
-    "net.sonobus.pkg.au",
-    "net.sonobus.pkg.app",
   ]
 
   zap trash: [

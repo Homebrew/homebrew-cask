@@ -1,6 +1,6 @@
 cask "pynsource" do
-  version "1.81"
-  sha256 "11fc81919a68fa8cd4914fe164e5eee624b08597201fa3d920e5379a78a4708a"
+  version "1.84"
+  sha256 "6c979c404c388bd712c3507d1f9494a11586106179deaba5a2ea83207716a112"
 
   url "https://github.com/abulka/pynsource/releases/download/version-#{version}/pynsource-macos-version-#{version}.zip",
       verified: "github.com/abulka/pynsource/"
@@ -10,11 +10,10 @@ cask "pynsource" do
 
   livecheck do
     url :url
-    strategy :git
-    regex(/^version-(\d+(?:\.\d+)*)$/)
+    regex(/^version[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
-  app "pynsource-macos-version-#{version}/Pynsource.app"
+  app "Pynsource.app"
 
   zap trash: [
     "~/Library/Application Support/PyNsource",

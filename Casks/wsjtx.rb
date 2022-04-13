@@ -1,6 +1,6 @@
 cask "wsjtx" do
-  version "2.5.3"
-  sha256 "595a90359a16551a4ed36aaaffb4d3efc5fce03754a1e3093812813ad783a2be"
+  version "2.5.4"
+  sha256 "ccc50805cdf8e4fba1f6243623cbb237ddfbae0ec138fad521e02289c0cdb94b"
 
   url "https://physics.princeton.edu/pulsar/k1jt/wsjtx-#{version}-Darwin.dmg"
   name "WSJT-X"

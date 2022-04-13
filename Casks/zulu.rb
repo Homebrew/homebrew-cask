@@ -2,15 +2,15 @@ cask "zulu" do
   arch = Hardware::CPU.intel? ? "x64" : "aarch64"
   choice = Hardware::CPU.intel? ? "x86" : "arm"
 
-  version "17.0.1,17.30.15-ca"
+  version "18.0.0,18.28.13-ca"
 
   if Hardware::CPU.intel?
-    sha256 "34311143c9da6f4993d073979f64c1a4272990261a429dcb9e4a231c6236bccf"
+    sha256 "a349702f247729466471acaf5b33eda291ad615233ad5224a7130d7eb4a6c497"
   else
-    sha256 "132ba9bed55c54eeafdee3472468bde1e740d13a1dbb644f76dba0eaa585f1f2"
+    sha256 "1b690d087e0b0f0b61cc7ac0f8b9f7d0fd6269f0132067330a106f205f288eed"
   end
 
-  url "https://cdn.azul.com/zulu/bin/zulu#{version.after_comma}-jdk#{version.before_comma}-macosx_#{arch}.dmg",
+  url "https://cdn.azul.com/zulu/bin/zulu#{version.csv.second}-jdk#{version.csv.first}-macosx_#{arch}.dmg",
       referer: "https://www.azul.com/downloads/zulu/zulu-mac/"
   name "Azul Zulu Java Standard Edition Development Kit"
   desc "OpenJDK distribution from Azul"
@@ -26,7 +26,7 @@ cask "zulu" do
     end
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   pkg "Double-Click to Install Azul Zulu JDK #{version.major}.pkg"
 

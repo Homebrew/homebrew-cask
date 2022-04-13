@@ -1,6 +1,6 @@
 cask "font-smoothing-adjuster" do
-  version "1.2.1"
-  sha256 "f0f02948be588bdff455195baeb8f72c0c45977775ab936644e8bf9053c316a6"
+  version "1.3.1"
+  sha256 "87d501fc56383417ec1ec7862e714fdbc5c04173b7e48c4246b54b98781f6ec4"
 
   url "https://font-smoothing-adjuster-updates.s3.eu-west-2.amazonaws.com/Font+Smoothing+Adjuster+#{version}.dmg",
       verified: "font-smoothing-adjuster-updates.s3.eu-west-2.amazonaws.com"
@@ -10,8 +10,7 @@ cask "font-smoothing-adjuster" do
 
   livecheck do
     url "https://font-smoothing-adjuster-updates.s3.eu-west-2.amazonaws.com/appcast.xml"
-    strategy :page_match
-    regex(/Font%20Smoothing%20Adjuster%20(\d+(?:\.\d+)*)\.dmg/i)
+    regex(/Font%20Smoothing%20Adjuster%20v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "Font Smoothing Adjuster.app"

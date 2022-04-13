@@ -9,7 +9,6 @@ cask "plex-media-player" do
 
   livecheck do
     url "https://plex.tv/api/downloads/3.json"
-    strategy :page_match
     regex(%r{/PlexMediaPlayer-(\d+(?:\.\d+)*-[0-9a-f]+)-macosx-x86_64\.zip}i)
   end
 

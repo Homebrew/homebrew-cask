@@ -1,8 +1,8 @@
 cask "go-agent" do
-  version "21.3.0,13067"
-  sha256 "8969fd8d0b708601eabc6db6167c0b8d0f6e559b7ff394f659ac66210216d8d0"
+  version "22.1.0,13913"
+  sha256 "1a0df6da1b71e36ac17b546a98fc9d8eeddc9ac19962dd9138fb5260b1b3185e"
 
-  url "https://download.gocd.io/binaries/#{version.before_comma}-#{version.after_comma}/osx/go-agent-#{version.before_comma}-#{version.after_comma}-osx.zip",
+  url "https://download.gocd.io/binaries/#{version.csv.first}-#{version.csv.second}/osx/go-agent-#{version.csv.first}-#{version.csv.second}-osx.zip",
       verified: "download.gocd.io/binaries/"
   name "Go Agent"
   name "GoCD Agent"
@@ -17,5 +17,5 @@ cask "go-agent" do
     end
   end
 
-  binary "go-agent-#{version.before_comma}/bin/go-agent"
+  binary "go-agent-#{version.csv.first}/bin/go-agent"
 end

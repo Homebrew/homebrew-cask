@@ -10,7 +10,7 @@ cask "gzdoom" do
 
   livecheck do
     url :url
-    regex(/^g?(\d+(?:\.\d+)+)$/)
+    regex(/^g?(\d+(?:\.\d+)+)$/i)
   end
 
   app "GZDoom.app"

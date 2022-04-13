@@ -1,16 +1,16 @@
 cask "temurin" do
   arch = Hardware::CPU.intel? ? "x64" : "aarch64"
 
-  version "17.0.1,12"
+  version "18,36"
+
+  if Hardware::CPU.intel?
+    sha256 "9cdce52d4c803be62e52a8cd8ec1715c16c5f0b91a520bc36082e3781db9ae82"
+  else
+    sha256 "e38da4fb708cdab64060c4a754208c7557f6cdb6188fa57977165bbf07e078cd"
+  end
 
   url "https://github.com/adoptium/temurin#{version.major}-binaries/releases/download/jdk-#{version.csv.first}%2B#{version.csv.second}/OpenJDK#{version.major}U-jdk_#{arch}_mac_hotspot_#{version.csv.first}_#{version.csv.second.major}.pkg",
       verified: "github.com/adoptium/"
-  if Hardware::CPU.intel?
-    sha256 "6318bac0268115f5740abc0113026356c3d784169ef9c5c94df2c3e3744505de"
-  else
-    sha256 "918b8d7796bf8761369a4b2d5c8c518e83eacd96347f6dc4bdd03a4792de024c"
-  end
-
   name "Eclipse Temurin Java Development Kit"
   desc "JDK from the Eclipse Foundation (Adoptium)"
   homepage "https://adoptium.net/"

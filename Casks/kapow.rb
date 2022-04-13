@@ -9,8 +9,7 @@ cask "kapow" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(/Changes\s*in\s*version\s*(\d+(?:\.\d+)*)/i)
+    regex(/Changes\s*in\s*version\s*v?(\d+(?:\.\d+)+)/i)
   end
 
   app "Kapow.app"

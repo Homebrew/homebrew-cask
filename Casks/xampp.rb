@@ -1,6 +1,6 @@
 cask "xampp" do
-  version "8.1.1-2"
-  sha256 "64a696b4732de3c106c51553ff0b206a4e6d54b16dbc53324c3e45110702c70e"
+  version "8.1.4-1"
+  sha256 "65091f10d11cbbcdfdb5d2a442e81561285acd0ca8d19ffb67e6ba8cc48ebd2c"
 
   url "https://downloadsapachefriends.global.ssl.fastly.net/xampp-files/#{version.split("-").first}/xampp-osx-#{version}-installer.dmg",
       verified: "downloadsapachefriends.global.ssl.fastly.net/xampp-files/"
@@ -14,7 +14,7 @@ cask "xampp" do
   end
 
   installer script: {
-    executable: "XAMPP.app/Contents/MacOS/osx-x86_64",
+    executable: "xampp-osx-#{version}-installer.app/Contents/MacOS/osx-x86_64",
     args:       ["--mode", "unattended"],
     sudo:       true,
   }

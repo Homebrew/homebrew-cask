@@ -1,8 +1,8 @@
 cask "launchcontrol" do
-  version "1.52.3,1509"
-  sha256 "6e28172f756ca9fd8cf5c6396468f043c51cf6c53bff349a2fd76892d042c33d"
+  version "1.52.5,1838"
+  sha256 "43148dfdc1bbf21c506c5cc0477b4adb3282c52895e3469d9ff4a63d6eb78dda"
 
-  url "https://www.soma-zone.com/download/files/LaunchControl-#{version.csv.first}.tar.bz2"
+  url "https://www.soma-zone.com/download/files/LaunchControl-#{version.csv.first}.tar.xz"
   name "LaunchControl"
   desc "Create, manage and debug system- and user services"
   homepage "https://www.soma-zone.com/LaunchControl/"

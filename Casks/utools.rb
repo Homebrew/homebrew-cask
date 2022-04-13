@@ -1,8 +1,15 @@
 cask "utools" do
-  version "2.4.1"
-  sha256 "0f5a3e7cb8785f7143f2c71d0e4afe8eb370717204b593491e928d272820e49c"
+  arch = Hardware::CPU.intel? ? "" : "-arm64"
 
-  url "https://publish.u-tools.cn/version2/uTools-#{version}.dmg",
+  version "2.6.2"
+
+  if Hardware::CPU.intel?
+    sha256 "bcc2dda2b7d737e3ee48f94bca39780d3c267eb66334bb2018da65902c36a46d"
+  else
+    sha256 "6d32fd8b6b4244e50c20a5e6b27742593f8e322294ff56e32669a3a95546535e"
+  end
+
+  url "https://publish.u-tools.cn/version2/uTools-#{version}#{arch}.dmg",
       verified: "publish.u-tools.cn/"
   name "uTools"
   desc "Plug-in productivity tool set"

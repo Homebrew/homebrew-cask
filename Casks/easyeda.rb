@@ -1,6 +1,6 @@
 cask "easyeda" do
-  version "6.4.25"
-  sha256 "af3dcb51a172c80d5374618bad47d56242b0cb0593f85db33565d1b2431833b9"
+  version "6.5.1"
+  sha256 "88e96c1624099ce37bc6ee9f0d3242adaf61c9e028566d5d6583d6a95bde0470"
 
   url "https://image.easyeda.com/files/easyeda-mac-darwin-#{version}.zip"
   name "EasyEDA"
@@ -9,8 +9,7 @@ cask "easyeda" do
 
   livecheck do
     url "https://easyeda.com/page/download"
-    strategy :page_match
-    regex(%r{href=.*?/easyeda-mac-darwin-(\d+(?:\.\d+)*)\.zip}i)
+    regex(%r{href=.*?/easyeda[._-]mac[._-]darwin[._-]v?(\d+(?:\.\d+)+)\.zip}i)
   end
 
   app "EasyEDA.app"

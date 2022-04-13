@@ -8,4 +8,6 @@ cask "bloomrpc" do
   homepage "https://github.com/uw-labs/bloomrpc"
 
   app "BloomRPC.app"
+
+  zap trash: "~/Library/Preferences/io.github.utilitywarehouse.BloomRPC.plist"
 end

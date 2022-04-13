@@ -1,15 +1,14 @@
 cask "downie" do
-  version "4.4.3,4329"
-  sha256 "d087fc118d87958679f8ab3471e5b2b1e89f3fda4318d7f29228019e54ab83e5"
+  version "4.5,4380"
+  sha256 "7fd37d45839d549ee0a8144e5f151c55e72f562774398fcef9a32b0fd8f14fe0"
 
-  url "https://charliemonroesoftware.com/trial/downie/v#{version.major}/Downie_#{version.major}_#{version.csv.second}.dmg",
-      verified: "charliemonroesoftware.com/"
+  url "https://software.charliemonroe.net/trial/downie/v#{version.major}/Downie_#{version.major}_#{version.csv.second}.dmg"
   name "Downie"
   desc "Downloads videos from different websites"
   homepage "https://software.charliemonroe.net/downie.php"
 
   livecheck do
-    url "https://charliemonroesoftware.com/trial/downie/v#{version.major}/updates.xml"
+    url "https://software.charliemonroe.net/trial/downie/v#{version.major}/updates.xml"
     strategy :sparkle
   end
 

@@ -1,15 +1,14 @@
 cask "tower" do
-  version "7.2,294,642368dc"
-  sha256 "f0d3309f30960fdc2f4427eac08dff9211cef409b2546d8fbbb3d576e8bc72d6"
+  version "8.1,313,c820a367"
+  sha256 "ee61a8f66b37fa5d5017878a31ab367f4c67c0abdeec22252c96fe9d14ff1fca"
 
-  url "https://fournova-app-updates.s3.amazonaws.com/apps/tower3-mac/#{version.csv.second}-#{version.csv.third}/Tower-#{version.csv.first}-#{version.csv.second}.zip",
-      verified: "fournova-app-updates.s3.amazonaws.com/"
+  url "https://www.git-tower.com/apps/tower3-mac/#{version.csv.second}-#{version.csv.third}/Tower-#{version.csv.first}-#{version.csv.second}.zip"
   name "Tower"
   desc "Git client focusing on power and productivity"
   homepage "https://www.git-tower.com/"
 
   livecheck do
-    url "https://updates.fournova.com/tower3-mac/stable/releases/latest/download"
+    url "https://www.git-tower.com/updates/tower3-mac/stable/releases/latest/download"
     strategy :header_match do |headers|
       match = headers["location"].match(%r{(\d+(?:\.\d+)*)-([a-z0-9]+)/Tower-(\d+(?:\.\d+)+)-(\d+(?:\.\d+)*)\.zip}i)
       next if match.blank?

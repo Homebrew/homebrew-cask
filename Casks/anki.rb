@@ -1,8 +1,21 @@
 cask "anki" do
-  version "2.1.49"
-  sha256 "b04556650a4808bed162b3ae3e6d58e578733f10b0364d5618fd6b72d4ed1386"
+  arch = Hardware::CPU.intel? ? "intel" : "apple"
+  version "2.1.50"
 
-  url "https://github.com/ankitects/anki/releases/download/#{version}/anki-#{version}-mac.dmg",
+  if Hardware::CPU.intel?
+    if MacOS.version >= :mojave
+      sha256 "7f1ff8c79ee7f01efd19c6a434e39209b0664da693cf3a8441dc5dc5f5a9e882"
+      qtversion = 6
+    else
+      sha256 "dd2ae85e02a9153662d4e8899e39782c2861dbd5d5d5eb3d408dd4a86a541525"
+      qtversion = 5
+    end
+  else
+    sha256 "a17c47ddde0b34caffef13d68f696650793ef7246303b1f74c173d8231d44f53"
+    qtversion = 6
+  end
+
+  url "https://github.com/ankitects/anki/releases/download/#{version}/anki-#{version}-mac-#{arch}-qt#{qtversion}.dmg",
       verified: "github.com/ankitects/anki/"
   name "Anki"
   desc "Memory training application"

@@ -10,4 +10,8 @@ cask "epichrome" do
   pkg "epichrome-#{version}.pkg"
 
   uninstall pkgutil: "org.epichrome.Epichrome"
+
+  caveats do
+    discontinued
+  end
 end

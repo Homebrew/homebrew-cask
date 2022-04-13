@@ -1,12 +1,12 @@
 cask "zoom" do
   arch = Hardware::CPU.intel? ? "" : "arm64/"
 
-  version "5.9.1.3506"
+  version "5.10.1.5839"
 
   if Hardware::CPU.intel?
-    sha256 "d6c814e486371059c6db5031d70c2c50406389543b7b9bf7b40f6b56f5281e2c"
+    sha256 "037d473bc311e278d7aa0eae5de2d78e3eb97fa2a627c06bf913b5b8423203dd"
   else
-    sha256 "b1ef69df3edd0d206c41539c5c919bf9a649edafa11d45397d6817142b44a378"
+    sha256 "38973a22e39d3a7c8d8ad4fee01b9591b962fe77a55f17ad83f098b56172e549"
   end
 
   url "https://cdn.zoom.us/prod/#{version}/#{arch}Zoom.pkg"
@@ -46,19 +46,23 @@ cask "zoom" do
               "/Applications/zoom.us.app",
               "/Library/Internet Plug-Ins/ZoomUsPlugIn.plugin",
               "/Library/Logs/DiagnosticReports/zoom.us*",
+              "/Library/PrivilegedHelperTools/us.zoom.ZoomDaemon",
             ]
 
   zap trash: [
     "~/.zoomus",
     "~/Desktop/Zoom",
     "~/Documents/Zoom",
+    "~/Library/Application Scripts/*.ZoomClient3rd",
     "~/Library/Application Support/CloudDocs/session/containers/iCloud.us.zoom.videomeetings.plist",
     "~/Library/Application Support/CloudDocs/session/containers/iCloud.us.zoom.videomeetings",
     "~/Library/Application Support/CrashReporter/zoom.us*",
     "~/Library/Application Support/zoom.us",
     "~/Library/Caches/us.zoom.xos",
     "~/Library/Cookies/us.zoom.xos.binarycookies",
-    "~/Library/Group Containers/BJ4HAAB9B3.ZoomClient3rd",
+    "~/Library/Group Containers/*.ZoomClient3rd",
+    "~/Library/HTTPStorages/us.zoom.xos",
+    "~/Library/HTTPStorages/us.zoom.xos.binarycookies",
     "~/Library/Internet Plug-Ins/ZoomUsPlugIn.plugin",
     "~/Library/Logs/zoom.us",
     "~/Library/Logs/zoominstall.log",
@@ -73,5 +77,6 @@ cask "zoom" do
     "~/Library/Safari/PerSiteZoomPreferences.plist",
     "~/Library/SafariTechnologyPreview/PerSiteZoomPreferences.plist",
     "~/Library/Saved Application State/us.zoom.xos.savedState",
+    "~/Library/WebKit/us.zoom.xos",
   ]
 end

@@ -1,8 +1,15 @@
 cask "eclipse-ide" do
-  version "4.22.0,2021-12"
-  sha256 "a3ef73cb7fb40cc1a8dc424996850f7eb6b207d8e67579b4260a9ce196241e2c"
+  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
-  url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-committers-#{version.csv.second}-R-macosx-cocoa-x86_64.dmg&r=1"
+  version "4.23.0,2022-03"
+
+  if Hardware::CPU.intel?
+    sha256 "bfc5c686de994939f580343111c4d76382452e3aaf918ae93e5536bb0c6ced41"
+  else
+    sha256 "3fdefa5ae3f023b53b5d7ca8d065ca31b20226202d1bcaf68f722fb699e0ef27"
+  end
+
+  url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-committers-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&r=1"
   name "Eclipse IDE for Eclipse Committers"
   desc "Eclipse integrated development environment"
   homepage "https://eclipse.org/"

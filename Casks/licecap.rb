@@ -9,7 +9,6 @@ cask "licecap" do
 
   livecheck do
     url :homepage
-    strategy :page_match
     regex(/v?(\d+(?:\.\d+)*)\s*for\s*macOS/i)
   end
 

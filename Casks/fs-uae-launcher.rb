@@ -15,9 +15,7 @@ cask "fs-uae-launcher" do
   homepage "https://fs-uae.net/"
 
   livecheck do
-    url "https://fs-uae.net/builds/stable"
-    strategy :page_match
-    regex(/href=.*?FS[._-]UAE[._-]Launcher[._-](\d+(?:\.\d+)+)[._-]macOS[._-]/i)
+    cask "fs-uae"
   end
 
   app "FS-UAE-Launcher/macOS/#{arch}/FS-UAE Launcher.app"

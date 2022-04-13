@@ -1,6 +1,6 @@
 cask "utm" do
-  version "2.4.1"
-  sha256 "cab9a7d9dc23004e10382cb496ca5336f263d5e0f7e0dff3efd5a6d12e4fd291"
+  version "3.1.5"
+  sha256 "0854a0c760450f738227a78ac1e7e8bd8a7d3a9bf75e3aae4c9b070769be7588"
 
   url "https://github.com/utmapp/UTM/releases/download/v#{version}/UTM.dmg",
       verified: "github.com/utmapp/UTM/"
@@ -11,7 +11,10 @@ cask "utm" do
   livecheck do
     url :url
     strategy :github_latest
+    regex(%r{href=.*?/tag/v?(\d+(?:[.-]\d+)+)["' >]}i)
   end
+
+  conflicts_with cask: "homebrew/cask-versions/utm-beta"
 
   app "UTM.app"
 

@@ -1,6 +1,6 @@
 cask "remarkable" do
-  version "2.10.3.179"
-  sha256 "57579e8de8cf4d48f6c002d36878df4427ba113034eb2d783c0c26705056849e"
+  version "2.12.2.251"
+  sha256 "9b4c44f6133c9f9f2ecce3fc123a19cf64038a6ec06c68c947751d4cf0553f03"
 
   url "https://downloads.remarkable.com/desktop/production/mac/reMarkable-#{version}.dmg"
   name "Remarkable"

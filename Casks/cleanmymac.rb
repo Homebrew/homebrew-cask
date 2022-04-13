@@ -1,9 +1,9 @@
 cask "cleanmymac" do
-  version "4.10.0,41000.0.2112211205"
-  sha256 "1f415dd5ff9fe03aba01ddbacd1c6e5fb972cf90f5798ac4d3e4ab88c137e230"
+  version "4.10.4,41004.0.2203291614"
+  sha256 "ba405e478bf9f046a253d5270ce88a0bd27733472e9f36beca0d3e5df36cfb56"
 
   url "https://dl.devmate.com/com.macpaw.CleanMyMac#{version.major}/CleanMyMacX.dmg",
-      verified: "dl.devmate.com/com.macpaw.CleanMyMac"
+      verified: "dl.devmate.com/"
   name "CleanMyMac X"
   desc "Tool to remove unnecessary files and folders from disk"
   homepage "https://macpaw.com/cleanmymac"
@@ -14,10 +14,14 @@ cask "cleanmymac" do
   end
 
   auto_updates true
+  conflicts_with cask: "cleanmymac-zh"
 
   app "CleanMyMac X.app"
 
-  uninstall delete:     "/Library/PrivilegedHelperTools/com.macpaw.CleanMyMac#{version.major}.Agent",
+  uninstall delete:     [
+    "/Library/LaunchDaemons/com.macpaw.CleanMyMac#{version.major}.Agent.plist",
+    "/Library/PrivilegedHelperTools/com.macpaw.CleanMyMac#{version.major}.Agent",
+  ],
             launchctl:  [
               "com.macpaw.CleanMyMac#{version.major}.Agent",
               "com.macpaw.CleanMyMac#{version.major}.HealthMonitor",
@@ -33,7 +37,6 @@ cask "cleanmymac" do
             ]
 
   zap trash: [
-    "/Library/LaunchDaemons/com.macpaw.CleanMyMac#{version.major}.Agent.plist",
     "/Users/Shared/CleanMyMac X Menu",
     "/Users/Shared/CleanMyMac X",
     "~/Library/Application Scripts/com.macpaw.CleanMyMac#{version.major}.CleanMyMacWidget",

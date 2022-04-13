@@ -1,6 +1,6 @@
 cask "missive" do
-  version "10.5.0"
-  sha256 "e1ba7e4f127f49fffa7c70980ff2269ba089cd2751718d1382ef52bd8b8dac36"
+  version "10.17.0"
+  sha256 "4c4b16dd14879e791be8e3ef9edaf6b3cc1d86898a041bc19df7a4c01eb169ba"
 
   url "https://d1weoh55n7oehu.cloudfront.net/#{version}/Missive-#{version}.dmg",
       verified: "d1weoh55n7oehu.cloudfront.net/"
@@ -9,9 +9,16 @@ cask "missive" do
   homepage "https://missiveapp.com/"
 
   livecheck do
-    url "https://download.missiveapp.com/electron-updater/stable/darwin/latest-mac.yml"
+    url "https://missiveapp.com/update/stable/latest-mac.yml"
     strategy :electron_builder
   end
 
   app "Missive.app"
+
+  zap trash: [
+    "~/Library/Application Support/Missive",
+    "~/Library/Logs/Missive",
+    "~/Library/Preferences/com.missiveapp.osx.plist",
+    "~/Library/Saved Application State/com.missiveapp.osx.savedState",
+  ]
 end

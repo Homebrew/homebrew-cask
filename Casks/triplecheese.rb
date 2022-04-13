@@ -1,8 +1,8 @@
 cask "triplecheese" do
   version "1.3,12092"
-  sha256 "d2ed37186ddffe360fb564f357193ac66d09c370fecebbca71e619268ecfb0a7"
+  sha256 "89457e5b085cb10fc1ba140b001fda214ddcd08a215292f2dc95c610a53baa03"
 
-  url "https://uhedownloads-heckmannaudiogmb.netdna-ssl.com/releases/TripleCheese_#{version.before_comma.no_dots}_#{version.after_comma}_Mac.zip",
+  url "https://uhedownloads-heckmannaudiogmb.netdna-ssl.com/releases/TripleCheese_#{version.csv.first.no_dots}_#{version.csv.second}_Mac.zip",
       verified: "uhedownloads-heckmannaudiogmb.netdna-ssl.com/"
   name "Triple Cheese"
   desc "Luscious and cheesy synthesizer"
@@ -18,17 +18,17 @@ cask "triplecheese" do
     end
   end
 
-  pkg "TripleCheese_#{version.after_comma}_Mac/TripleCheese #{version.before_comma}.0 Installer.pkg"
+  pkg "TripleCheese_#{version.csv.second}_Mac/TripleCheese #{version.csv.first}.0 Installer.pkg"
 
   uninstall pkgutil: [
-    "com.u-he.TripleCheese.aax.pkg",
-    "com.u-he.TripleCheese.au.pkg",
+    "com.u-he.TripleCheese.aax",
+    "com.u-he.TripleCheese.au",
     "com.u-he.TripleCheese.data.pkg",
     "com.u-he.TripleCheese.documentation.pkg",
     "com.u-he.TripleCheese.presets.pkg",
     "com.u-he.TripleCheese.tuningFiles.pkg",
-    "com.u-he.TripleCheese.vst.pkg",
-    "com.u-he.TripleCheese.vst3.pkg",
+    "com.u-he.TripleCheese.vst",
+    "com.u-he.TripleCheese.vst3",
   ]
 
   zap trash: [

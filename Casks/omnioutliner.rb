@@ -20,8 +20,8 @@ cask "omnioutliner" do
     sha256 "4439e6f700e71e3ec182fd16be9eca3de3afa3db4c4894c396297ba59b0f6b10"
     url "https://downloads.omnigroup.com/software/MacOSX/10.14/OmniOutliner-#{version}.dmg"
   else
-    version "5.9.1"
-    sha256 "50676fbd83b88f84e90f0ecf63c288af726887d51d79b55d05c3b9a441a3cf1b"
+    version "5.10"
+    sha256 "f22727997bf676f8fc82c39a5a8e3ee9fc9a5e3f644b7dd97050b514b9bdf4aa"
     url "https://downloads.omnigroup.com/software/macOS/11/OmniOutliner-#{version}.dmg"
   end
 
@@ -37,4 +37,11 @@ cask "omnioutliner" do
   auto_updates true
 
   app "OmniOutliner.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.omnigroup.OmniOutliner#{version.major}",
+    "~/Library/Application Scripts/com.omnigroup.OmniOutliner#{version.major}.Thumbnails",
+    "~/Library/Containers/com.omnigroup.OmniOutliner#{version.major}",
+    "~/Library/Containers/com.omnigroup.OmniOutliner#{version.major}.Thumbnails",
+  ]
 end

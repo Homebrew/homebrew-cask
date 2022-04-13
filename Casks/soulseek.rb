@@ -4,12 +4,12 @@ cask "soulseek" do
 
   url "https://www.slsknet.org/SoulseekQt/Mac/SoulseekQt-#{version}.dmg"
   name "Soulseek"
+  desc "File sharing network"
   homepage "https://www.slsknet.org/"
 
   livecheck do
     url "https://www.slsknet.org/news/node/1"
-    strategy :page_match
-    regex(%r{href=.*?/SoulseekQt-(\d+(?:-\d+)*)\.dmg}i)
+    regex(%r{href=.*?/SoulseekQt[._-]v?(\d+(?:-\d+)+)\.dmg}i)
   end
 
   app "SoulseekQt.app"

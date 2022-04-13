@@ -11,7 +11,7 @@ cask "geburtstagschecker" do
     strategy :sparkle
   end
 
-  app "GeburtstagsChecker #{version.before_comma} (#{version.after_comma})/GeburtstagsChecker.app"
+  app "GeburtstagsChecker #{version.csv.first} (#{version.csv.second})/GeburtstagsChecker.app"
 
   zap trash: [
     "~/Library/Caches/earthlingsoft.GeburtstagsChecker",

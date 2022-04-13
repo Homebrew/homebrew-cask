@@ -2,14 +2,14 @@ cask "lark" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
   if Hardware::CPU.intel?
-    version "4.10.14,a89957"
-    sha256 "1df03dc07768e8678cb443aa8aff2b61509b2fdeb9b842c0815d1e01d02bcf17"
+    version "5.2.23,5b373f"
+    sha256 "fb1e17ee5d6cc9a92a86d3453ed4309dc500eaee59dcd2e9b5fde17d3acb4cd2"
   else
-    version "4.10.14,40a957"
-    sha256 "fb8f06d56ac036a40f7bba037e01f4428fe9a54ae9d6540d0c4639c0a4213dc4"
+    version "5.2.23,bf0a5c"
+    sha256 "e0e4ebcfd11ffa9b6fccb2ed80de3aa96272fe705dd6b75103b4f5ecde10a7bd"
   end
 
-  url "https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/#{version.after_comma}/Lark-darwin_#{arch}-#{version.before_comma}-signed.dmg",
+  url "https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/#{version.csv.second}/Lark-darwin_#{arch}-#{version.csv.first}-signed.dmg",
       verified: "sf16-va.larksuitecdn.com/obj/lark-artifact-storage/"
   name "Lark"
   desc "Project management software"

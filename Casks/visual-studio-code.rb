@@ -1,12 +1,16 @@
 cask "visual-studio-code" do
   arch = Hardware::CPU.intel? ? "darwin" : "darwin-arm64"
 
-  version "1.63.2"
-
-  if Hardware::CPU.intel?
-    sha256 "1ef5957499ecbf92cc14fd9f49eef6251f3fc77c83babc8185c6f564a2886633"
+  if MacOS.version <= :yosemite
+    version "1.55.2"
+    sha256 "be3a1ebfac2c6c5e882714304adc518aff8bac6b663e194a9e73524c62065b94"
   else
-    sha256 "be22b8fcea0af2d2416f47fbe0cae7f8199f21ad0c3ba28402027752d4f93630"
+    version "1.66.2"
+    if Hardware::CPU.intel?
+      sha256 "d41c492e03d52fd37ae1393b9412aee5eac0eae7134add444ff92887d89e5900"
+    else
+      sha256 "63e80377000d45150f3b5ff7b4ff93795922d7caeb0ceb7f47e337e6cc9c02a2"
+    end
   end
 
   url "https://update.code.visualstudio.com/#{version}/#{arch}/stable"
@@ -17,7 +21,7 @@ cask "visual-studio-code" do
 
   livecheck do
     url "https://update.code.visualstudio.com/api/update/#{arch}/stable/VERSION"
-    regex(/"productVersion"\s*:\s*"(\d+(:?\.\d+)+)"/)
+    regex(/"productVersion"\s*:\s*"(\d+(:?\.\d+)+)"/i)
   end
 
   auto_updates true

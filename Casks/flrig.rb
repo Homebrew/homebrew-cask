@@ -1,11 +1,11 @@
 cask "flrig" do
-  version "1.4.3"
+  version "1.4.5"
 
   if MacOS.version <= :catalina
-    sha256 "374ec3645c953efa62a49c7f4b590a2de48500c02fbcaa5ef99980ac972eb172"
+    sha256 "ede5c990548312c62b758a6e517f410112d14d899fec09fba2630f83d17c3e6f"
     url "https://downloads.sourceforge.net/fldigi/fldigi/flrig-#{version}_HS.dmg"
   else
-    sha256 "d5fd8be8f39c998f4ee76a461f935d0da51582730df1b71e3e29240d41d53252"
+    sha256 "ec6831998bc98b73e3f6ec3faa613997b76d91a007b45ed8217f7c5cb42e9ff2"
     url "https://downloads.sourceforge.net/fldigi/fldigi/flrig-#{version}_BS.dmg"
   end
 

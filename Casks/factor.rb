@@ -9,8 +9,7 @@ cask "factor" do
 
   livecheck do
     url "https://downloads.factorcode.org/releases/"
-    strategy :page_match
-    regex(%r{href=.*?(\d+(?:\.\d+)*)/}i)
+    regex(%r{href=.*?(\d+(?:\.\d+)+)/}i)
   end
 
   suite "factor"

@@ -9,7 +9,6 @@ cask "hyperbackupexplorer" do
 
   livecheck do
     url "https://www.synology.com/en-global/releaseNote/HyperBackupExplorer"
-    strategy :page_match
     regex(/Version:\s*(\d+(?:\.\d+)*-\d+)/i)
   end
 

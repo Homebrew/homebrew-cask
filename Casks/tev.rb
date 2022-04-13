@@ -1,11 +1,16 @@
 cask "tev" do
-  version "1.19"
-  sha256 "198b8c5d410cb1f5f55be3fd91b45fd4161d8d1e542486c5af6a7dc3b093bc32"
+  version "1.23"
+  sha256 "bac400214628594c03c31cc4838415b3ab3929da91b83a067ad2a2078abe39bc"
 
   url "https://github.com/Tom94/tev/releases/download/v#{version}/tev.dmg"
   name "tev"
   desc "HDR image comparison tool with an emphasis on OpenEXR images"
   homepage "https://github.com/Tom94/tev"
+
+  livecheck do
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
 
   depends_on macos: ">= :catalina"
 

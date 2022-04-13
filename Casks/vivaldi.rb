@@ -1,6 +1,6 @@
 cask "vivaldi" do
-  version "5.0.2497.32"
-  sha256 "935fb8539dd4334ab770b2feed4cf01fabfc9f50c6e40f6ba19a4dc959104adf"
+  version "5.2.2623.33"
+  sha256 "cfb183118c660cc5cba149c51fa4a7e4ddf90cba058caea5cbfd9c15f7f5bd1b"
 
   url "https://downloads.vivaldi.com/stable/Vivaldi.#{version}.universal.dmg"
   name "Vivaldi"
@@ -13,6 +13,7 @@ cask "vivaldi" do
   end
 
   auto_updates true
+  depends_on macos: ">= :el_capitan"
 
   app "Vivaldi.app"
 

@@ -1,14 +1,17 @@
 cask "dropbox" do
-  version "138.4.2392"
+  arch = Hardware::CPU.intel? ? "" : "&arch=arm64"
+
+  version "145.4.4921"
   sha256 :no_check
 
-  url "https://www.dropbox.com/download?plat=mac&full=1"
+  url "https://www.dropbox.com/download?plat=mac&full=1#{arch}"
   name "Dropbox"
   desc "Client for the Dropbox cloud storage service"
   homepage "https://www.dropbox.com/"
 
   livecheck do
     url :url
+    regex(%r{/Dropbox(?:%20|[._-])v?(\d+(?:\.\d+)+)}i)
     strategy :header_match
   end
 

@@ -4,12 +4,12 @@ cask "image-tool" do
 
   url "http://www.jimmcgowan.net/diskimages/ImageTool#{version}.dmg"
   name "Image Tool"
+  desc "Scale images and convert image file formats"
   homepage "http://www.jimmcgowan.net/Site/ImageTool.html"
 
   livecheck do
-    url "http://www.jimmcgowan.net/Site/ImageTool.html"
-    strategy :page_match
-    regex(%r{href=.*?/ImageTool(\d+(?:\.\d+)*)\.dmg}i)
+    url :homepage
+    regex(%r{href=.*?/ImageToolv?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "Image Tool.app"

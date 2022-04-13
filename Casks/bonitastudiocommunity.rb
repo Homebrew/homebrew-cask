@@ -9,9 +9,9 @@ cask "bonitastudiocommunity" do
   homepage "https://www.bonitasoft.com/downloads"
 
   livecheck do
-    url :url
-    strategy :github_latest
-    regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)+(?:[a-z\d_-]+))["' >]}i)
+    url "https://go.bonitasoft.com/l/148721/2021-09-24/5rq47g"
+    strategy :header_match
+    regex(/filename=BonitaStudioCommunity[._-]v?(\d+(?:\.\d+)+(?:[a-z\d_-]+))[._-]x86_64\.dmg/i)
   end
 
   installer script: {

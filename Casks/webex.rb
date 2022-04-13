@@ -1,7 +1,7 @@
 cask "webex" do
   arch = Hardware::CPU.intel? ? "TeamsDesktop-MACOS" : "Desktop-MACOS-Apple-Silicon"
 
-  version "41.12.0.20899"
+  version "42.4.0.21893"
   sha256 :no_check
 
   url "https://binaries.webex.com/Webex#{arch}-Gold/Webex.dmg"
@@ -14,11 +14,11 @@ cask "webex" do
     strategy :extract_plist
   end
 
+  auto_updates true
+
   app "Webex.app"
 
-  uninstall signal: [
-    ["TERM", "Cisco-Systems.Spark"],
-  ]
+  uninstall signal: ["TERM", "Cisco-Systems.Spark"]
 
   zap trash: [
     "~/Library/Caches/Cisco-Systems.Spark",

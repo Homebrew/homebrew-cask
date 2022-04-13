@@ -1,6 +1,6 @@
 cask "nwjs" do
-  version "0.59.1"
-  sha256 "73fb423a1aae2ad3d371e05db87549e107c02d5abed2c3af40404826a99f3c52"
+  version "0.63.0"
+  sha256 "99748798896f4e71d9b9dfa613a9766e04783e372f55cb4bb2d169033a5489c1"
 
   url "https://dl.nwjs.io/v#{version}/nwjs-sdk-v#{version}-osx-x64.zip"
   name "NW.js"
@@ -9,7 +9,7 @@ cask "nwjs" do
 
   livecheck do
     url "https://github.com/nwjs/nw.js"
-    regex(/^nw[._-]v?(\d+(?:\.\d+)+)$/)
+    regex(/^nw[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
   app "nwjs-sdk-v#{version}-osx-x64/nwjs.app"

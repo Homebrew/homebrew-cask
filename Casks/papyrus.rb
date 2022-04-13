@@ -1,8 +1,8 @@
 cask "papyrus" do
-  version "5.2.0,2021-09"
-  sha256 "315ef11131c4b0695d18949c8faba2160e7b4a53b42087befc594d904c9f2a56"
+  version "6.1.0,2022-03"
+  sha256 "4847d461c8147953f00860f3fa95b554de59bfc8df8c89e960d01fd2929dd06f"
 
-  url "https://www.eclipse.org/downloads/download.php?file=/modeling/mdt/papyrus/rcp/#{version.after_comma}/#{version.before_comma}/papyrus-#{version.after_comma}-#{version.before_comma}-macosx64.tar.gz&r=1"
+  url "https://www.eclipse.org/downloads/download.php?file=/modeling/mdt/papyrus/rcp/#{version.csv.second}/#{version.csv.first}/papyrus-#{version.csv.second}-#{version.csv.first}-macosx64.tar.gz&r=1"
   name "Papyrus"
   desc "Model-Based Engineering tool"
   homepage "https://eclipse.org/papyrus/"

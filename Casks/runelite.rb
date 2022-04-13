@@ -1,12 +1,12 @@
 cask "runelite" do
   arch = Hardware::CPU.intel? ? "x64" : "aarch64"
 
-  version "2.2.0"
-
   if Hardware::CPU.intel?
-    sha256 "0c6690000fb46eb1ff6d193a58ff3d7dc0e3514a03d0b1a22ca2351ef07e79c8"
+    version "2.4.3"
+    sha256 "0e39d850278a0ea5599fe9d80af2feba785261c4fb60c6254d594047298eb722"
   else
-    sha256 "5f6f25d64bcf39e7d6cb742178ddc5365759d432add8ef8a31580a3e03322be0"
+    version "2.4.2"
+    sha256 "6deceeb1460259622d0f6d35e2527f94d1613b5a5bc40ebade25b617a970a411"
   end
 
   url "https://github.com/runelite/launcher/releases/download/#{version}/RuneLite-#{arch}.dmg",
@@ -16,14 +16,14 @@ cask "runelite" do
   homepage "https://runelite.net/"
 
   livecheck do
-    url "https://github.com/runelite/launcher/releases"
-    strategy :page_match
-    regex(%r{(\d+(?:\.\d+)+)/RuneLite-#{arch}\.dmg}i)
+    url :homepage
+    regex(%r{href=.*?/v?(\d+(?:\.\d+)+)/RuneLite[._-]#{arch}\.dmg}i)
   end
 
   app "RuneLite.app"
 
   zap trash: [
+    "~/.runelite",
     "~/jagex_cl_oldschool_LIVE.dat",
     "~/jagexcache/oldschool",
     "~/random.dat",

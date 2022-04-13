@@ -1,6 +1,6 @@
 cask "aircall" do
-  version "2.18.2"
-  sha256 "cbfe83484c994340ad52921b5281e3990a7c34143ad48ca256eb5de725f3b88e"
+  version "2.21.0"
+  sha256 "1b7cdf941baccccb112ef54fa9ae6d5b8f57f337e4b9cf6eeb7daae29347ebc6"
 
   url "https://download-electron.aircall.io/Aircall-#{version}.zip"
   name "Aircall"
@@ -16,4 +16,11 @@ cask "aircall" do
   depends_on macos: ">= :sierra"
 
   app "Aircall.app"
+
+  zap trash: [
+    "~/Library/Application Support/Aircall",
+    "~/Library/Caches/io.aircall.phone",
+    "~/Library/Caches/io.aircall.phone.ShipIt",
+    "~/Library/Preferences/io.aircall.phone.plist",
+  ]
 end

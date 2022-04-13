@@ -1,6 +1,6 @@
 cask "imgotv" do
-  version "6.4.3"
-  sha256 "26f9e653944b8f5708590dcdfc4e41da588822e59a2c64154f195afe9fb9ba51"
+  version "6.4.4"
+  sha256 "e58eea277418b7353adb338e81de64f9ab2767f3e5f98fb7e75553f9599ca52c"
 
   url "https://download.imgo.tv/app/mac/#{version}/mgtv-mango-#{version.major_minor_patch}.dmg",
       verified: "download.imgo.tv/"
@@ -20,11 +20,11 @@ cask "imgotv" do
   app "芒果TV.app"
 
   zap trash: [
-    "~/Library/Preferences/com.hunantv.osx.imgotv.plist",
     "~/Library/Caches/com.hunantv.LaunchAtLoginHelper",
-    "~/Library/Saved Application State/com.hunantv.osx.imgotv.savedState",
     "~/Library/Caches/com.hunantv.osx.imgotv",
     "~/Library/Caches/Imgotv-Mac",
     "~/Library/Logs/Imgotv-Mac",
+    "~/Library/Preferences/com.hunantv.osx.imgotv.plist",
+    "~/Library/Saved Application State/com.hunantv.osx.imgotv.savedState",
   ]
 end

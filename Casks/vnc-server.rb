@@ -1,6 +1,6 @@
 cask "vnc-server" do
-  version "6.8.0"
-  sha256 "17f5d68ab4552066659f5e31fdd9f8c498f2e1b93473e5a277db31632b69c1c0"
+  version "6.9.1"
+  sha256 "18138ce9647f0b9d908c0827ebb2d84010b7c183d11c75a2c6645d2e038729b1"
 
   url "https://www.realvnc.com/download/file/vnc.files/VNC-Server-#{version}-MacOSX-x86_64.pkg"
   name "Real VNC Server"
@@ -9,7 +9,6 @@ cask "vnc-server" do
 
   livecheck do
     url "https://www.realvnc.com/en/connect/download/vnc/macos/"
-    strategy :page_match
     regex(%r{href=.*?/VNC-Server-(\d+(?:\.\d+)*)-MacOSX-x86_64\.pkg}i)
   end
 
