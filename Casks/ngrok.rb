@@ -1,7 +1,7 @@
 cask "ngrok" do
   arch = Hardware::CPU.intel? ? "amd64" : "arm64"
 
-  version "2.3.40"
+  version "3.0.2"
   sha256 :no_check
 
   url "https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-darwin-#{arch}.zip",
