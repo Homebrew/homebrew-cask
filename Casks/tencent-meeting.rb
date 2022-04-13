@@ -2,8 +2,8 @@ cask "tencent-meeting" do
   arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
 
   if Hardware::CPU.intel?
-    version "3.6.3.406,df6275418f4ac5eae1f1c792cc5c8fa4"
-    sha256 "d6e3941b610fea88931ef76dade4ebf3b7dea265c7b91469f536b7fc3165c8e8"
+    version "3.6.6.420,68df5eca7502c04be9efe9e55ef7be6e"
+    sha256 "1c90896d72cdffc3644a282af27494ebad4d23050cd692838d54bead25b3b81c"
   else
     version "3.6.3.406,660bcc73f81e223b3d06ea921bbcd6f3"
     sha256 "3e3af4bb84e8c4623762515bf0e79c0d14e9dc771f635bf1f7b113da5eeb88ed"
