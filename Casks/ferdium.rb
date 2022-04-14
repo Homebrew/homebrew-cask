@@ -1,4 +1,4 @@
-cask "ferdi" do
+cask "ferdium" do
   arch = Hardware::CPU.intel? ? "" : "-arm64"
 
   version "5.8.1"
@@ -9,11 +9,11 @@ cask "ferdi" do
     sha256 "ec7ccceba08f1c581290d6ce4f5fa5478bed2c713c592d0298856f7b2719f35d"
   end
 
-  url "https://github.com/getferdi/ferdi/releases/download/v#{version}/Ferdi-#{version}#{arch}.dmg",
-      verified: "github.com/getferdi/ferdi/"
-  name "Ferdi"
+  url "https://github.com//ferdium/ferdi/releases/download/v#{version}/Ferdi-#{version}#{arch}.dmg",
+      verified: "github.com/ferdium/ferdi/"
+  name "Ferdium"
   desc "Messaging browser which combines several services"
-  homepage "https://getferdi.com/"
+  homepage "https://getferdium.com/"
 
   livecheck do
     url :url
@@ -21,9 +21,9 @@ cask "ferdi" do
   end
 
   auto_updates true
-  conflicts_with cask: "homebrew/cask-versions/ferdi-beta"
+  conflicts_with cask: "homebrew/cask-versions/ferdium-beta"
 
-  app "Ferdi.app"
+  app "Ferdium.app"
 
   uninstall quit:   "com.kytwb.ferdi",
             delete: "/Library/Logs/DiagnosticReports/Ferdi Helper_.*wakeups_resource.diag"
