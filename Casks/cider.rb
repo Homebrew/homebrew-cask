@@ -1,5 +1,5 @@
 cask "cider" do
-  version "beta"
+  version "1.14.3"
   sha256 "bc99ba04122f17cd0a8f4cd6413b13d83ec369d4c3a21cedb75fd6990144618f"
    
   url "https://github.com/ciderapp/Cider/releases/download/macos-beta/Cider.dmg"
