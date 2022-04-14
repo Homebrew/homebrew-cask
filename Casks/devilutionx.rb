@@ -1,8 +1,8 @@
 cask "devilutionx" do
-  version "1.3.0"
-  sha256 "a121d354fbcb3a5911d50a8d71f452cccd72978b20ce39fc88ff6d155c3f5f48"
+  version "1.4.0"
+  sha256 "e3aeeffce76dcac935bcc1ac8ed5e8757668d1728c4ceee2eed562b6e9f51661"
 
-  url "https://github.com/diasurgical/devilutionX/releases/download/#{version}/devilutionx-mac-x86_64.dmg"
+  url "https://github.com/diasurgical/devilutionX/releases/download/#{version}/devilutionx-macos-x86_64.dmg"
   name "DevilutionX"
   desc "Diablo build for modern operating systems"
   homepage "https://github.com/diasurgical/devilutionX/"
@@ -15,12 +15,10 @@ cask "devilutionx" do
   depends_on macos: ">= :high_sierra"
 
   app "devilutionx.app"
-  artifact "devilutionx.mpq",
-           target: "#{ENV["HOME"]}/Library/Application Support/diasurgical/devilution/devilutionx.mpq"
 
   zap trash: [
-    "#{ENV["HOME"]}/Library/Application Support/CrashReporter/devilutionX_*.plist",
-    "#{ENV["HOME"]}/Library/Application Support/diasurgical/devilution/devilutionx.mpq",
+    "~/Library/Application Support/CrashReporter/devilutionX_*.plist",
+    "~/Library/Application Support/diasurgical/devilution",
   ],
-      rmdir: "#{ENV["HOME"]}/Library/Application Support/diasurgical"
+      rmdir: "~/Library/Application Support/diasurgical"
 end
