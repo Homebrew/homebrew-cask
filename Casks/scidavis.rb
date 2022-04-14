@@ -1,6 +1,6 @@
 cask "scidavis" do
-  version "2.7.1"
-  sha256 "44029e5faeea836ef17922c1cdd58903158e744035e14ef692f07a57f8c62b15"
+  version "2.8"
+  sha256 "921b597237a97b3a734cb9b50aaa233822856c4fa90e42f90a7b25e8beaa6b23"
 
   url "https://downloads.sourceforge.net/scidavis/scidavis-#{version}-mac-dist.dmg",
       verified: "downloads.sourceforge.net/scidavis/"
