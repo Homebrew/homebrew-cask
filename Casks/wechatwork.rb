@@ -12,14 +12,14 @@ cask "wechatwork" do
   name "企业微信"
   desc "Messaging and calling application"
   homepage "https://work.weixin.qq.com/"
-  
+
   livecheck do
     skip "No version information available"
   end
-  
+
   auto_updates true
-  
+
   app "企业微信.app"
-  
+
   uninstall quit: "com.tencent.WeWorkMac"
 end
