@@ -4,7 +4,7 @@ cask "neovide" do
 
   url "https://github.com/neovide/neovide/releases/download/#{version}/Neovide.dmg.zip"
   name "neovide"
-  desc "No Nonsense Neovim Client in Rust"
+  desc "Neovim Client"
   homepage "https://github.com/neovide/neovide"
 
   app "Neovide.app"
