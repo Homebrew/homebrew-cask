@@ -22,4 +22,3 @@ cask "youdaonote" do
     "~/Library/Saved Application State/com.youdao.YoudaoDict.savedState",
   ]
 end
-
