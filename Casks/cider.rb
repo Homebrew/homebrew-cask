@@ -1,5 +1,5 @@
 cask "cider" do
-  version "1.14.3"
+  version "1.4.3"
   sha256 :no_check
 
   url "https://github.com/ciderapp/Cider/releases/download/macos-beta/Cider.dmg", verified: "https://github.com/ciderapp/Cider"
