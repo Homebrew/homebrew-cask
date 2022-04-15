@@ -24,12 +24,4 @@ cask "google-chat-electron" do
     "~/Library/Saved Application State/com.electron.google-chat-electron.savedState",
   ]
 
-  caveats <<~EOS
-    According to the vendor (https://github.com/ankurk91/google-chat-electron#installation-mac),
-    the quarantine attribute breaks the app and needs to be removed. To do so, install this cask with:
-
-      brew install --cask --no-quarantine #{token}
-
-    WARNING: quarantining is a macOS security feature and you disable it at your own risk!
-  EOS
 end
