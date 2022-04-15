@@ -9,11 +9,11 @@ cask "ferdium" do
     sha256 "ec7ccceba08f1c581290d6ce4f5fa5478bed2c713c592d0298856f7b2719f35d"
   end
 
-  url "https://github.com//ferdium/ferdi/releases/download/v#{version}/Ferdi-#{version}#{arch}.dmg",
+  url "https://github.com/ferdium/ferdi/releases/download/v#{version}/Ferdi-#{version}#{arch}.dmg",
       verified: "github.com/ferdium/ferdi/"
   name "Ferdium"
   desc "Messaging browser which combines several services"
-  homepage "https://getferdium.com/"
+  homepage "https://ferdium.org/"
 
   livecheck do
     url :url
