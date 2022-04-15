@@ -1,10 +1,10 @@
 cask "intellij-idea-ce" do
   arch = Hardware::CPU.intel? ? "" : "-aarch64"
 
-  version "2021.3.3,213.7172.25"
+  version "2022.1,221.5080.210"
 
   if Hardware::CPU.intel?
-    sha256 "c813eda533b09ae5c88960d431b1734ddf2089b4be8ddb632865f6eae792776d"
+    sha256 "6f9dddab5c280bb2ad6bb8d46bcc85c1b167974ce4b412a68faf31f7f7d1c194"
   else
     sha256 "bc50fea44e5728f3091315a58eb31d9dc7e0d80b95351ef244d7eeed2bfaadc0"
   end
