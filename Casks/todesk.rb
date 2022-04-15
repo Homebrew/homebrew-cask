@@ -2,18 +2,19 @@ cask "todesk" do
   version "4.2.2"
   sha256 "e6ce86082b96cd8abd0a66e2720d296c8f2087f99e8830212e61725d79c4d0b6"
 
-  url "https://dl.todesk.com/macos/ToDesk_#{version}.dmg"
+  url "https://dl.todesk.com/macos/ToDesk_#{version}.pkg"
   name "com.youqu.todesk.mac"
   desc "Remote control software"
   homepage "http://www.todesk.net.cn/"
 
   livecheck do
-    skip "No version information available"
+    url "https://www.todesk.com/js/common.js"
+    regex(/URL\s*=.*?ToDesk[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
   auto_updates true
 
-  app "ToDesk.app"
+  pkg "ToDesk_#{version}.pkg"
 
   uninstall quit: "com.youqu.todesk.mac"
 
