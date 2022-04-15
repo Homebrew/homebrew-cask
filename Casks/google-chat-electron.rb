@@ -23,5 +23,4 @@ cask "google-chat-electron" do
     "~/Library/Preferences/com.electron.google-chat-electron.plist",
     "~/Library/Saved Application State/com.electron.google-chat-electron.savedState",
   ]
-
 end
