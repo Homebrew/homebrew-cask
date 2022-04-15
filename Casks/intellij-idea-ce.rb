@@ -6,7 +6,7 @@ cask "intellij-idea-ce" do
   if Hardware::CPU.intel?
     sha256 "6f9dddab5c280bb2ad6bb8d46bcc85c1b167974ce4b412a68faf31f7f7d1c194"
   else
-    sha256 "bc50fea44e5728f3091315a58eb31d9dc7e0d80b95351ef244d7eeed2bfaadc0"
+    sha256 "f61bdf70e373a948a71331e68a7303bf90cf47ea4e2f97338aaf96d19e8862c4"
   end
 
   url "https://download.jetbrains.com/idea/ideaIC-#{version.csv.first}#{arch}.dmg"
