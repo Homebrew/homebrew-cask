@@ -4,7 +4,6 @@ cask "i4tools" do
 
   url "http://d-updater.i4.cn/i4mac/20220413/0/i4Tools_v#{version}_v#{version}.dmg"
   name "i4Tools"
-  name "爱思助手"
   desc "Mobile device management assistant"
   homepage "https://www.i4.cn/"
 
@@ -14,7 +13,7 @@ cask "i4tools" do
 
   auto_updates true
 
-  app "爱思助手.app"
+  app "i4Tools.app"
 
   uninstall quit: "cn.i4tools.mac"
 end
