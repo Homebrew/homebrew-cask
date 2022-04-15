@@ -13,7 +13,7 @@ cask "i4tools" do
 
   auto_updates true
 
-  app "i4Tools.app"
+  app "i4tools.app"
 
   uninstall quit: "cn.i4tools.mac"
 end
