@@ -16,7 +16,7 @@ cask "i4tools" do
 
   pkg "i4tools.pkg"
 
-  uninstall quit: "cn.i4tools.mac",
+  uninstall quit:    "cn.i4tools.mac",
             pkgutil: "cn.i4tools.mac"
 
   zap trash: [
