@@ -13,9 +13,9 @@ cask "icue" do
 
   auto_updates true
 
-  app "iCUE.app"
+  pkg "iCUE/iCUE.pkg"
 
-  uninstall delete: "/Applications/Corsair"
+  uninstall delete: "/Applications/Corsair/"
 
   zap trash: [
     "~/Library/Preferences/com.corsair.cue.3.plist",
