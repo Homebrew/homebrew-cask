@@ -3,7 +3,7 @@ cask "todesk" do
   sha256 "e6ce86082b96cd8abd0a66e2720d296c8f2087f99e8830212e61725d79c4d0b6"
 
   url "https://dl.todesk.com/macos/ToDesk_#{version}.pkg", verified: "dl.todesk.com/macos/"
-  name "com.youqu.todesk.mac"
+  name "ToDesk"
   desc "Remote control software"
   homepage "http://www.todesk.net.cn/"
 
