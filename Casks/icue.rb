@@ -24,7 +24,7 @@ cask "icue" do
               "com.corsair.CorsairAudio",
               "com.corsair.cue.3",
             ],
-            quit: "com.corsair.cue",
+            quit: "com.corsair.cue"
 
   zap trash: [
     "~/Library/Preferences/com.corsair.cue.3.plist",
