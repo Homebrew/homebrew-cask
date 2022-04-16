@@ -19,11 +19,11 @@ cask "icue" do
             launchctl: [
               "com.corsair.AudioConfigService.System",
               "com.corsair.cue.3.launchHelper",
-            ]      
+            ],
             pkgutil: [
               "com.corsair.CorsairAudio",
               "com.corsair.cue.3",
-            ]
+            ],
             quit: "com.corsair.cue",
 
   zap trash: [
