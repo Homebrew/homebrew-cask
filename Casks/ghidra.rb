@@ -16,9 +16,16 @@ cask "ghidra" do
     end
   end
 
-  conflicts_with cask: "homebrew/cask-versions/ghidra-beta"
+  binary "#{caskroom_path}/#{version.csv.first}-#{version.csv.second}/ghidra_#{version.csv.first}_PUBLIC/ghidraRun"
 
-  binary "ghidra_#{version.csv.first}_PUBLIC/ghidraRun"
+  preflight do
+    # Log4j misinterprets comma in staged_path as alternative delimiter
+    FileUtils.mv(staged_path, "#{caskroom_path}/#{version.csv.first}-#{version.csv.second}")
+  end
+
+  uninstall_preflight do
+    FileUtils.mv("#{caskroom_path}/#{version.csv.first}-#{version.csv.second}", staged_path)
+  end
 
   zap trash: "~/.ghidra"
 

@@ -1,5 +1,5 @@
 cask "jdownloader" do
-  version "45328"
+  version "45821"
   sha256 :no_check
 
   url "http://installer.jdownloader.org/clean/JD2Setup.dmg",
@@ -34,8 +34,4 @@ cask "jdownloader" do
   ]
 
   zap trash: "~/Library/Preferences/org.jdownloader.launcher.plist"
-
-  caveats do
-    depends_on_java "8"
-  end
 end

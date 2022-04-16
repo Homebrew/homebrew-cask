@@ -1,5 +1,5 @@
 cask "timemachineeditor" do
-  version "5.1.9,213"
+  version "5.2.0,214"
   sha256 :no_check
 
   url "https://tclementdev.com/timemachineeditor/TimeMachineEditor.pkg"
@@ -8,7 +8,8 @@ cask "timemachineeditor" do
   homepage "https://tclementdev.com/timemachineeditor/"
 
   livecheck do
-    skip "unversioned URL"
+    url :url
+    strategy :extract_plist
   end
 
   pkg "TimeMachineEditor.pkg"

@@ -1,15 +1,15 @@
 cask "panwriter" do
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "0.8.2"
+  version "0.8.4"
 
   if Hardware::CPU.intel?
-    sha256 "cccad3de00d028a6d3cd179bb5bca49e0cfad693bf0ef78621613685600b3fcf"
+    sha256 "d0e4431d02a7f6185f12958f805ffba97b212f6fc7e2baff0564ac6e5fea0cf0"
   else
-    sha256 "982a3fb5ad3aa0673cf8aca7eae06d54ae11c19639e16320f925f82de517b5c5"
+    sha256 "06bf44d2dd81c16dcbc82aefb6f1f71379ffe9abf95ba6de1fcef3ea1b66a886"
   end
 
-  url "https://github.com/mb21/panwriter/releases/download/v#{version}/PanWriter-#{version}#{arch}.dmg",
+  url "https://github.com/mb21/panwriter/releases/download/v#{version}/PanWriter-#{version}-#{arch}.dmg",
       verified: "github.com/mb21/panwriter/"
   name "PanWriter"
   desc "Markdown editor with pandoc integration and paginated preview"

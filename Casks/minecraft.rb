@@ -1,5 +1,5 @@
 cask "minecraft" do
-  version "1097,1"
+  version "1.0.1222"
   sha256 :no_check
 
   url "https://launcher.mojang.com/download/Minecraft.dmg",
@@ -12,6 +12,8 @@ cask "minecraft" do
     url :url
     strategy :extract_plist
   end
+
+  auto_updates true
 
   app "Minecraft.app"
 

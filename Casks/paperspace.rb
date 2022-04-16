@@ -1,6 +1,6 @@
 cask "paperspace" do
-  version "11.6.0.4326"
-  sha256 "9d657675fbbcf1817ba0fbc52a60d47fcb5dbcdb43cdce30d17750f279db076d"
+  version "11.9.4.4899"
+  sha256 "45aa6918aa820b94330f705d07d0a7ca7e2c95eb311d613783e207491a1068d6"
 
   url "https://assets.paperspace.com/native-app/prod/darwin/Paperspace-#{version}.dmg"
   name "Paperspace"

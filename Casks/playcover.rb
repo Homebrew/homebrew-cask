@@ -11,12 +11,10 @@ cask "playcover" do
 
     app "PlayCover #{version}/PlayCover.app"
   else
-    version "0.9.7"
-    sha256 "ce7271b1780a9e2ff17406f32ccafbf9fbb04597636ed848879020ab6c0a9117"
-    url "https://github.com/iVoider/PlayCover/releases/download/#{version}/PlayCover_#{version}.zip",
+    version "1.0.0"
+    sha256 "3b04ebec69d5a49d711f1f3b212cf5805708f7a5f9ef9d3b469007eae62d978c"
+    url "https://github.com/iVoider/PlayCover/releases/download/#{version}/PlayCover.#{version}.dmg",
         verified: "github.com/iVoider/PlayCover/"
-
-    container nested: "PlayCover_#{version}.dmg"
 
     app "PlayCover.app"
   end

@@ -1,9 +1,9 @@
 cask "keycombiner" do
-  version "0.6.0"
-  sha256 "fce85e5e5530f8910fc59ac8a086a1d8bf33ab3f55a2081fc56a90b3b2b4a91c"
+  version "0.7.2"
+  sha256 "9e9e6b24f82f74009470415f2484f58ce045eedfdf138588791feb552f8ad61c"
 
   url "https://keycombiner.com/download/KeyCombiner-#{version}.dmg"
-  name "keycombiner"
+  name "KeyCombiner"
   desc "Instant shortcut lookup"
   homepage "https://keycombiner.com/"
 

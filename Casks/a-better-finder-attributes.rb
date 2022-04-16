@@ -1,6 +1,6 @@
 cask "a-better-finder-attributes" do
-  version "7.17"
-  sha256 "e53f3b827a3efb0269833c925b7e755458c544e540e088b9cf6198e878581191"
+  version "7.18"
+  sha256 "9502f12fa1a310911e0af1c28aec0047eaa95cfd145ea91ef8ed1645f699dc9c"
 
   url "https://www.publicspace.net/download/signedABFA#{version.major}.zip"
   name "A Better Finder Attributes"

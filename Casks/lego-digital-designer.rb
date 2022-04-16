@@ -7,17 +7,13 @@ cask "lego-digital-designer" do
   desc "Build models using virtual Lego bricks"
   homepage "https://www.lego.com/en-us/ldd"
 
-  livecheck do
-    url "https://www.lego.com/en-us/ldd/download"
-    strategy :page_match do |page|
-      v = page[%r{href=.*?/SetupLDD-MAC-(\d+(?:_\d+)*)\.zip}i, 1]
-      v.tr("_", ".")
-    end
-  end
-
   depends_on macos: "<= :mojave"
 
   pkg "LDD.pkg"
 
   uninstall pkgutil: "com.LEGO.LDD"
+
+  caveats do
+    discontinued
+  end
 end

@@ -1,6 +1,6 @@
 cask "porting-kit" do
-  version "4.2.41"
-  sha256 "57ba837dd380ff731217476ee698e1879696aa205c47c33b82a9f0f7f6a7be84"
+  version "5.0.13"
+  sha256 "4ecfc01c1612e19ee2b4c89735f7a4bee1bfb39be4fee33efdceec87f024ad65"
 
   url "https://github.com/vitor251093/porting-kit-releases/releases/download/v#{version}/Porting-Kit-#{version}.dmg",
       verified: "github.com/vitor251093/porting-kit-releases/"

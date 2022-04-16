@@ -13,11 +13,22 @@ cask "camo-studio" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Camo Studio.app"
 
-  zap trash: [
-    "~/Library/Caches/com.reincubate.macos.cam",
-    "~/Library/Preferences/com.reincubate.macos.cam.plist",
+  uninstall delete: [
+    "/Library/Audio/Plug-Ins/HAL/ReincubateCamoAudio.driver",
+    "/Library/CoreMediaIO/Plug-Ins/DAL/ReincubateCamoDAL.plugin",
   ]
+
+  zap trash: [
+    "~/Library/Application Support/Reincubate/Camo",
+    "~/Library/Caches/SentryCrash/Camo Studio",
+    "~/Library/Caches/com.reincubate.macos.cam",
+    "~/Library/HTTPStorages/com.reincubate.macos.cam",
+    "~/Library/Preferences/com.reincubate.macos.cam.plist",
+    "~/Library/WebKit/com.reincubate.macos.cam",
+  ],
+      rmdir: "~/Library/Application Support/Reincubate"
 end

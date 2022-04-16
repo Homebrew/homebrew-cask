@@ -13,15 +13,14 @@ cask "wine-stable" do
 
   livecheck do
     url "https://github.com/Gcenx/macOS_Wine_builds/releases/"
+    regex(/wine[._-]stable[._-]v?(\d+(?:\.\d+)+)[._-]osx64\.t/i)
     strategy :page_match
-    regex(/wine[._-]stable[._-]v?(\d+(?:\.\d+)+)[._-]osx64\.tar\.xz/i)
   end
 
   conflicts_with cask: [
     "wine-devel",
     "wine-staging",
   ]
-  depends_on formula: "xz"
 
   app "Wine Stable.app"
   binary "#{appdir}/Wine Stable.app/Contents/Resources/start/bin/appdb"

@@ -1,6 +1,6 @@
 cask "perforce" do
-  version "2021.2,2220431"
-  sha256 "da19454f275ad6645591acd1adec12d6d813f5b1a92c1ea23b06a7ad60aa8ecc"
+  version "2021.2,2264565"
+  sha256 "ffc757b9d4d0629b2594e2777edfb18097825e29c70d8f33a444c7482d622806"
 
   url "https://cdist2.perforce.com/perforce/r#{version.major[-2..]}.#{version.minor}/bin.macosx1015x86_64/helix-core-server.tgz"
   name "Perforce Helix Core Server"

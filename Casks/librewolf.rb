@@ -1,15 +1,15 @@
 cask "librewolf" do
-  arch = Hardware::CPU.intel? ? "" : "_aarch64_exp"
+  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
   if Hardware::CPU.intel?
-    version "96.0.3,1,dc7f916e3934e6e332b2b7c5fcf30175"
-    sha256 "3a45392bac62cf11e1153fd83cdedeb90b8acfc93d9e31d97f7853625973a187"
+    version "99.0.1,1,659a83b4fdf2cb6b7e1f7bb0382cd1b4"
+    sha256 "87ee370ee94d8ba701339f7cd5cf0d580b0a16e651b211be5da3cb309f77ab35"
   else
-    version "96.0.3,1,50ab139fe29f3ae1b0e3d3488386d145"
-    sha256 "ce576f5cce6fa2fe78bb5afe4706358be1b72d3b30630617a8768d99e9ca4fce"
+    version "99.0.1,1,78700cd8e858117eda792a936bf88358"
+    sha256 "4f193a950b76151bfdc4c59c508689ac0fb72c625be1e9973f0ef67ebf23b685"
   end
 
-  url "https://gitlab.com/librewolf-community/browser/macos/uploads/#{version.csv.third}/librewolf-#{version.csv.first}-#{version.csv.second}#{arch}.dmg",
+  url "https://gitlab.com/librewolf-community/browser/macos/uploads/#{version.csv.third}/librewolf-#{version.csv.first}-#{version.csv.second}.en-US.mac.#{arch}.dmg",
       verified: "gitlab.com/librewolf-community/browser/macos/"
   name "LibreWolf"
   desc "Web browser"
@@ -17,7 +17,7 @@ cask "librewolf" do
 
   livecheck do
     url "https://gitlab.com/api/v4/projects/13853965/releases"
-    regex(%r{/(\w+)/librewolf[._-](\d+(?:\.\d+)+)-(\d+)#{arch}\.dmg}i)
+    regex(%r{/(\w+)/librewolf[._-](\d+(?:\.\d+)+)-(\d+)\.en-US\.mac\.#{arch}\.dmg[\s"]}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|
         "#{match[1]},#{match[2]},#{match[0]}"

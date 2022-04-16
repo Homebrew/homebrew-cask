@@ -1,9 +1,10 @@
 cask "localizationeditor" do
-  version "2.8"
-  sha256 "0b2f24a4485d338edf7166b6ccbad34c9f0511bb7ecf82bb376440a800121a07"
+  version "2.9"
+  sha256 "7c7f3c9d64763401fca9921b4c2b4d175b96aacc43d362334dedcba1e62cbb2e"
 
   url "https://github.com/igorkulman/iOSLocalizationEditor/releases/download/v#{version}/LocalizationEditor.app.zip"
   name "LocalizationEditor"
+  desc "iOS app localization manager"
   homepage "https://github.com/igorkulman/iOSLocalizationEditor/"
 
   depends_on macos: ">= :high_sierra"

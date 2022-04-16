@@ -1,9 +1,9 @@
 cask "microsoft-teams" do
-  version "1.4.00.35562"
-  sha256 "d82f20d86e2c7a683ddb37e299b307fff88756239db938b8d3f8ec91a24ac659"
+  version "1.5.00.8073"
+  sha256 "7c0758db2ef58808c3e1c26f17c20cc58a7241bb4db3b29110003b2f54e28e27"
 
   url "https://statics.teams.cdn.office.net/production-osx/#{version}/Teams_osx.pkg",
-      verified: "statics.teams.cdn.office.net"
+      verified: "statics.teams.cdn.office.net/production-osx/"
   name "Microsoft Teams"
   desc "Meet, chat, call, and collaborate in just one place"
   homepage "https://teams.microsoft.com/downloads"
@@ -34,5 +34,6 @@ cask "microsoft-teams" do
     "~/Library/Preferences/com.microsoft.teams.plist",
     "~/Library/Saved Application State/com.microsoft.teams.savedState",
     "~/Library/WebKit/com.microsoft.teams",
-  ]
+  ],
+      rmdir: "~/Library/Application Support/Microsoft"
 end

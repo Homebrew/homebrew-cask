@@ -9,8 +9,7 @@ cask "redream" do
 
   livecheck do
     url "https://redream.io/download"
-    strategy :page_match
-    regex(/redream\.x86_64-mac-v(\d+(?:\.\d+)*)\.tar\.gz/)
+    regex(/redream\.x86_64-mac-v(\d+(?:\.\d+)*)\.t/i)
   end
 
   app "redream.app"

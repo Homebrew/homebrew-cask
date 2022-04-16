@@ -9,13 +9,15 @@ cask "medibangpaintpro" do
 
   livecheck do
     url "https://medibangpaint.com/en/app-download/"
-    strategy :page_match
     regex(%r{href=.*?/MediBangPaintPro-(\d+(?:\.\d+)*)\.dmg}i)
   end
 
   app "MediBangPaintPro.app"
 
   zap trash: [
+    "~/Library/Application Support/Medibang",
+    "~/Library/Application Support/CloudDocs/session/containers/iCloud.com.medibang.MediBangPaintTablet.plist",
+    "~/Library/Application Support/CloudDocs/session/containers/iCloud.com.medibang.MediBangPaintTablet",
     "~/Library/Preferences/com.medibang.cloudalpaca.plist",
     "~/Library/Saved Application State/com.medibang.cloudalpaca.savedState",
   ]

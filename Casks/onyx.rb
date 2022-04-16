@@ -18,11 +18,11 @@ cask "onyx" do
     version "3.8.7"
     sha256 "0dd8119ad3441c5130ca584ac90ad450c272aab8b577925561a2536da48d2d54"
   elsif MacOS.version <= :big_sur
-    version "4.0.1"
-    sha256 "d8b1613df2aacca0f827d4f98b7e6ec372c2030cc09ff3291f9660271f008c4d"
+    version "4.0.2"
+    sha256 "18659c76972690bb58f1c1b850ae2c6c9991fdeb9c22790daa1b18c9fa74cb8e"
   else
-    version "4.1.5"
-    sha256 "0452fd4e96e2ee02308000f10e30d1f7d8fc5689469dbf5cbabd358d694c3049"
+    version "4.1.8"
+    sha256 "c325e5c71998652834186651fcebdd45852c1546745f848c1cd21256451fd453"
   end
 
   url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete(".")}/OnyX.dmg"

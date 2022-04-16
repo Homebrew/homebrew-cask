@@ -8,12 +8,13 @@ cask "cutesdr" do
   homepage "https://sourceforge.net/projects/cutesdr/"
 
   livecheck do
-    url "https://sourceforge.net/projects/cutesdr/rss"
-    strategy :page_match do |page|
-      match = page.match(/CuteSdr(\d+?)(\d+)\.dmg/i)
-      next if match.blank?
-
-      "#{match[1]}.#{match[2]}"
+    url :url
+    regex(%r{url=.*?/CuteSdr[._-]?v?(\d+(?:\.\d+)*)\.dmg}i)
+    strategy :sourceforge do |page, regex|
+      page.scan(regex).map do |match|
+        # Naively convert filename versions like `120` to `1.20`
+        match[0].include?(".") ? match[0] : match[0].insert(1, ".")
+      end
     end
   end
 

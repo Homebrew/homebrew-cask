@@ -7,12 +7,6 @@ cask "samsung-dex" do
   desc "Extend some Samsung devices into a desktop-like experience"
   homepage "https://www.samsung.com/us/explore/dex/"
 
-  livecheck do
-    url "https://org.downloadcenter.samsung.com/downloadfile/ContentsFile.aspx?CDSite=COMMON&CttFileID=8385137"
-    strategy :header_match
-    regex(%r{(\d+)/SamsungDeXSetupMac\.dmg}i)
-  end
-
   pkg "Install Samsung DeX.pkg"
 
   uninstall pkgutil: [

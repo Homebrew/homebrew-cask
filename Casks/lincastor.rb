@@ -15,4 +15,9 @@ cask "lincastor" do
   depends_on macos: ">= :sierra"
 
   app "LinCastor.app"
+
+  zap trash: [
+    "~/Library/Application Support/LinCastor",
+    "~/Library/Preferences/com.onflapp.LinCastor.plist",
+  ]
 end

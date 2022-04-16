@@ -13,6 +13,8 @@ cask "macdroid" do
     strategy :sparkle
   end
 
+  auto_updates true
+
   app "MacDroid.app"
 
   zap trash: [

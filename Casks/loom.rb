@@ -1,12 +1,12 @@
 cask "loom" do
   arch = Hardware::CPU.intel? ? "" : "-arm64"
 
-  version "0.112.1"
+  version "0.118.0"
 
   if Hardware::CPU.intel?
-    sha256 "216667496fc31dbd4c1513c487da53fd25a08ea24e5bceec3d7ad53ff8c7340c"
+    sha256 "340c8d0753aac92cac065a273d3a6b389db0ee584a26da834a9baed59f97f23f"
   else
-    sha256 "6c981563138d5b341bd8a6371e90a6810fad8754cd607c27c40ea79c95c50918"
+    sha256 "c9e4f90e59d564f9dd3b693da6cd13bd20e413e937bc47a2bf49f8ff87a7bc52"
   end
 
   url "https://cdn.loom.com/desktop-packages/Loom-#{version}#{arch}.dmg"

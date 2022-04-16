@@ -1,6 +1,6 @@
 cask "arq" do
-  version "7.13.4"
-  sha256 "5c9db343e348d7ad3a8257f29323fb96f0dbcdefcccdc24d6fa7e3330440e529"
+  version "7.19"
+  sha256 "486cee4491b71242e78d7011a4031ec2271a3c754d3afe5819fec9c92412c123"
 
   url "https://www.arqbackup.com/download/arqbackup/Arq#{version}.pkg"
   name "Arq"
@@ -21,13 +21,18 @@ cask "arq" do
             quit:      "com.haystacksoftware.Arq",
             delete:    [
               "/Applications/Arq.app",
-              "/Library/Application Support/ArqAgent",
-              "/Library/Application Support/ArqAgentAPFS",
             ],
             launchctl: [
               "com.haystacksoftware.ArqMonitor",
               "com.haystacksoftware.arqagent",
             ]
 
-  zap trash: "~/Library/Application Support/Arq *"
+  zap trash: [
+    "~/Library/Arq *",
+    "~/Library/Application Support/Arq *",
+    "~/Library/Preferences/com.haystacksoftware.Arq.plist",
+    "~/Library/Preferences/com.haystacksoftware.ArqMonitor.plist",
+    "/Library/Application Support/ArqAgent",
+    "/Library/Application Support/ArqAgentAPFS",
+  ]
 end

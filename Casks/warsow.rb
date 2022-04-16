@@ -9,7 +9,6 @@ cask "warsow" do
 
   livecheck do
     url "https://www.warsow.net/bundles/client.bundle.js"
-    strategy :page_match
     regex(%r{href=.*?/warsow-(\d+(?:\.\d+)*)\.dmg}i)
   end
 

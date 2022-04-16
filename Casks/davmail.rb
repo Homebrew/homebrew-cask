@@ -9,12 +9,10 @@ cask "davmail" do
   homepage "https://davmail.sourceforge.io/"
 
   livecheck do
-    url "https://sourceforge.net/projects/davmail/rss"
-    strategy :page_match do |page|
-      match = page.match(/DavMail[._-]MacOSX[._-]v?(\d+(?:\.\d+)+)[._-](\d+(?:\.\d+)*).app.zip/i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
+    url "https://sourceforge.net/projects/davmail/rss?path=/davmail"
+    regex(%r{url=.*?/DavMail-MacOSX[._-]v?(\d+(?:\.\d+)+)-(\d+(?:\.\d+)*)\.app\.zip}i)
+    strategy :sourceforge do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 

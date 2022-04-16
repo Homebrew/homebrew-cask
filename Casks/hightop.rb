@@ -1,6 +1,6 @@
 cask "hightop" do
-  version "1.2.11,33"
-  sha256 "822582bedee41da9f7ab7e45a838b30d641b4459970a917c72e501edcfee20f3"
+  version "1.3,35"
+  sha256 "cc62867ed3b2f7c91e654166fbc59696661b67fc8df39677c4cf6d2f80138050"
 
   url "https://hightop.app/downloads/HighTop#{version.csv.first}.dmg"
   name "HighTop"

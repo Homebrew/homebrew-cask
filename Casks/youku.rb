@@ -10,7 +10,6 @@ cask "youku" do
 
   livecheck do
     url "https://pd.youku.com/pc"
-    strategy :page_match
     regex(%r{href=.*?/youkumac_(\d+(?:\.\d+)+)\.dmg}i)
   end
 

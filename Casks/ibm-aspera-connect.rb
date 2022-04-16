@@ -1,6 +1,6 @@
 cask "ibm-aspera-connect" do
-  version "4.1.1.73"
-  sha256 "44302e64fdc4625aa0e8fc0ce1807302e4b19ad5c408d140fd89d7ec84b3ad9a"
+  version "4.1.3.93"
+  sha256 "502fe4644ed79d214a9acc33922e55de88c50ddd37dd4072515a1a51c287d617"
 
   url "https://d3gcli72yxqn2z.cloudfront.net/connect_latest/v4/bin/ibm-aspera-connect_#{version}_macOS_x86_64.dmg",
       verified: "d3gcli72yxqn2z.cloudfront.net/"
@@ -10,7 +10,7 @@ cask "ibm-aspera-connect" do
 
   livecheck do
     url "https://d3gcli72yxqn2z.cloudfront.net/connect_latest/v4/connectversions.min.js"
-    regex(/ibm-aspera-connect[._-]v?(\d+(?:\.\d+)+)_macOS_x86_64\.dmg/)
+    regex(/ibm-aspera-connect[._-]v?(\d+(?:\.\d+)+)_macOS_x86_64\.dmg/i)
   end
 
   installer manual: "IBM Aspera Connect Installer.app"

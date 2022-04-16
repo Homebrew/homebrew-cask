@@ -1,6 +1,6 @@
 cask "duet" do
-  version "2.4.2.0"
-  sha256 "e2b1df4a1ade77bd96374f3b1ad0995dec849e5c85ffef31c43d9ed0686779e5"
+  version "2.4.2.2"
+  sha256 "b8c8f0f2f2222350db52f53f42b95a7659312217d9680de4df7d5ea3fb40fcbd"
 
   url "https://duet.nyc3.cdn.digitaloceanspaces.com/Mac/#{version.major_minor.dots_to_underscores}/duet-#{version.dots_to_hyphens}.zip",
       verified: "duet.nyc3.cdn.digitaloceanspaces.com/Mac/"
@@ -27,6 +27,8 @@ cask "duet" do
     "~/Library/Caches/com.crashlytics.data/com.kairos.duet*",
     "~/Library/Caches/com.kairos.duet*",
     "~/Library/Caches/io.fabric.sdk.mac.data/com.kairos.duet*",
+    "~/Library/Caches/SentryCrash/duet",
+    "~/Library/HTTPStorages/com.kairos.duet*",
     "~/Library/Preferences/com.kairos.duet*.plist",
   ],
       rmdir: [

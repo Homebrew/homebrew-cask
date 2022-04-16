@@ -1,6 +1,6 @@
 cask "anka-virtualization" do
-  version "2.5.4.139"
-  sha256 "e914e99ee7bab70416e3ec1e13c262df54b3ca2eb85913318b4dae3c05cca8d2"
+  version "2.5.5.142"
+  sha256 "655aae008a84fe265f85ef8527bb5f94cdf4275b5b13dff38358af632baa6a0b"
 
   url "https://downloads.veertu.com/anka/Anka-#{version}.pkg"
   name "Anka Virtualization"
@@ -13,7 +13,7 @@ cask "anka-virtualization" do
     regex(/Anka[._-]?v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :big_sur"
 
   pkg "Anka-#{version}.pkg"
 
@@ -24,6 +24,10 @@ cask "anka-virtualization" do
     "com.veertu.nlimit",
     "com.veertu.vlaunch",
   ],
+            pkgutil:   [
+              "com.veertu.anka.guestaddons.pkg",
+              "com.veertu.anka.agent.pkg",
+            ],
             script:    {
               executable: "/Library/Application Support/Veertu/Anka/tools/uninstall.sh",
               args:       ["-f"],

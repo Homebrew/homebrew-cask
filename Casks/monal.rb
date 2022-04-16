@@ -1,5 +1,5 @@
 cask "monal" do
-  version "5.1.0,767"
+  version "5.1.0,779"
   sha256 :no_check
 
   url "https://monal.im/macOS/Monal-macOS.zip"
@@ -15,4 +15,6 @@ cask "monal" do
   depends_on macos: ">= :catalina"
 
   app "Monal.app"
+
+  zap trash: "~/Library/Group Containers/group.monal"
 end
