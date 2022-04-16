@@ -14,7 +14,7 @@ cask "todesk" do
 
   auto_updates true
 
-  app "ToDesk.app"
+  pkg "ToDesk_#{version}.pkg"
 
   uninstall delete:    "/Applications/ToDesk.app",
             launchctl: [
@@ -24,9 +24,7 @@ cask "todesk" do
               "com.youqu.todesk.client.startup",
             ],
             pkgutil:   "com.youqu.todesk.mac",
-            quit:      [
-              "com.youqu.todesk.mac",
-            ]
+            quit:      "com.youqu.todesk.mac"
 
   zap trash: [
     "~/Library/Application Scripts/com.youqu.todesk.mac.LaunchHelper",
