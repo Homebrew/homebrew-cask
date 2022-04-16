@@ -1,13 +1,12 @@
 cask "wpsoffice-cn" do
+  version "4.2.0,6717"
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
   if Hardware::CPU.intel?
-    version "4.2.0,6717"
     sha256 "0e68e797253863fff96fc6f022657dab4914731ddaf4e8f32799be3bb6483a85"
     url "https://package.mac.wpscdn.cn/mac_wps_pkg/#{version.csv.first}/WPS_Office_#{version.csv.first}(#{version.csv.second})_#{arch}.dmg",
         verified: "package.mac.wpscdn.cn/mac_wps_pkg/"
   else
-    version "4.2.0,6717"
     sha256 "fc8b71c6a330792aa7c7d36ded9ee0636f3a3bd786d132840398e1ab56bdcf5f"
     url "https://package.mac.wpscdn.cn/mac_wps_pkg/SilentUpdate/WPS_Office_#{version.csv.first}_#{version.csv.second}_#{arch}.dmg",
         verified: "package.mac.wpscdn.cn/mac_wps_pkg/"
@@ -23,7 +22,7 @@ cask "wpsoffice-cn" do
 
   depends_on macos: ">= :sierra"
 
-  app "WPS Office.app"
+  app "wpsoffice.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.kingsoft.wpsoffice.mac",
