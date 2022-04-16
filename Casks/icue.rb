@@ -15,8 +15,8 @@ cask "icue" do
 
   app "iCUE.app"
 
-  uninstall delete:    "/Applications/Corsair",
-            quit:       "com.corsair.cue.3"
+  uninstall delete:  "/Applications/Corsair",
+            quit:  "com.corsair.cue.3"
 
   zap trash: [
     "~/Library/Preferences/com.corsair.cue.3.plist",
