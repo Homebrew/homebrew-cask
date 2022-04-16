@@ -15,6 +15,6 @@ cask "cnkiexpress" do
 
   app "全球学术快报.app"
 
-  uninstall delete:    "/Applications/全球学术快报.app",
-            quit: "com.cnki.cnkiexpress"
+  uninstall delete:  "/Applications/全球学术快报.app",
+            quit:  "com.cnki.cnkiexpress"
 end
