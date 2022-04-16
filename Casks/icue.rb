@@ -16,15 +16,15 @@ cask "icue" do
   pkg "iCUE.pkg"
 
   uninstall delete: "/Applications/Corsair/",
-            quit: "com.corsair.cue",
+            launchctl: [
+              "com.corsair.AudioConfigService.System",
+              "com.corsair.cue.3.launchHelper",
+            ]      
             pkgutil: [
               "com.corsair.CorsairAudio",
               "com.corsair.cue.3",
             ]
-            launchctl: [
-              "com.corsair.AudioConfigService.System",
-              "com.corsair.cue.3.launchHelper",
-            ]
+            quit: "com.corsair.cue",
 
   zap trash: [
     "~/Library/Preferences/com.corsair.cue.3.plist",
