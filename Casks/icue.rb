@@ -13,7 +13,7 @@ cask "icue" do
 
   auto_updates true
 
-  pkg "iCUE/iCUE.pkg"
+  pkg "iCUE.pkg"
 
   uninstall delete: "/Applications/Corsair/"
 
