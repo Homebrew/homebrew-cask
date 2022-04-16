@@ -3,7 +3,7 @@ cask "icue" do
   sha256 "526c4d4b220d83574c80a320a9b94d9a06aa67182054fa4933e7b22805ee4d65"
 
   url "https://downloads.corsair.com/Files/CUE/iCUE-#{version}-release.dmg"
-  name "com.corsair.cue"
+  name "iCUE"
   desc "Orchestrate compatible CORSAIR peripherals"
   homepage "https://www.corsair.com/uk/en/icue-mac"
 
