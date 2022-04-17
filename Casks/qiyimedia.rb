@@ -9,8 +9,7 @@ cask "qiyimedia" do
   homepage "https://app.iqiyi.com/mac/player/index.html"
 
   livecheck do
-    url "https://app.iqiyi.com/mac/player/index.html"
-    regex(/最新版本：(\d+(?:\.\d+)+)/i)
+    skip "No latest version information available"
   end
 
   depends_on macos: ">= :catalina"
