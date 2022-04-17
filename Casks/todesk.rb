@@ -29,6 +29,8 @@ cask "todesk" do
   zap trash: [
     "~/Library/Application Scripts/com.youqu.todesk.mac.LaunchHelper",
     "~/Library/Containers/com.youqu.todesk.mac.LaunchHelper",
+    "~/Library/Group Containers/group.youqu.todesk",
     "~/Library/Preferences/com.youqu.todesk.mac.plist",
+    "~/Library/ToDesk",
   ]
 end
