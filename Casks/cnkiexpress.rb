@@ -10,7 +10,7 @@ cask "cnkiexpress" do
 
   livecheck do
     url "https://cajviewer.cnki.net/download.html"
-    regex(%r{(?<=-)(\d+\.\d+\.\d+)(?=.dmg)}i)
+    regex(/(?<=-)(\d+\.\d+\.\d+)(?=.dmg)/i)
   end
 
   auto_updates true
