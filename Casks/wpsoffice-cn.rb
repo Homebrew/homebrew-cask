@@ -18,7 +18,8 @@ cask "wpsoffice-cn" do
   homepage "https://mac.wps.cn/"
 
   livecheck do
-    skip "No version information available"
+    url "https://mac.wps.cn/"
+    regex((\d+(?:\.\d)+)(?=\(\d+\)/))
   end
 
   depends_on macos: ">= :sierra"
