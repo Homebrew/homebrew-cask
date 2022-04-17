@@ -32,6 +32,7 @@ cask "icue" do
             ]
 
   zap trash: [
+    "~/Library/Application Support/Corsair/",
     "~/Library/Preferences/com.corsair.cue.3.plist",
     "~/Library/Saved Application State/com.corsair.cue.3.savedState",
   ]
