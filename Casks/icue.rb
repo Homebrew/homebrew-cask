@@ -10,7 +10,7 @@ cask "icue" do
   livecheck do
     url "https://www.corsair.com/uk/en/downloads"
     strategy :page_match do |page|
-      match = page.match(%r{(?<=data-url="https://downloads.corsair.com/Files/CUE/iCUE-)(\d+(?:\.\d+)+)(?=-release.dmg)}i)
+      match = page.match(%r{(?<=data-url="https://downloads.corsair.com/Files/CUE/iCUE-)(\d+(?:\.\d+)+)(?=-release.dmg")}i)
       next if match.blank?
 
       "#{match[1]}"
