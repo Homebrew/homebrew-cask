@@ -9,8 +9,12 @@ cask "icue" do
 
   livecheck do
     url "https://www.corsair.com/uk/en/downloads"
-    strategy :page_match
-    regex(%r{(?<=data-url="https://downloads.corsair.com/Files/CUE/iCUE-)(4(?:\.\d+)+)(?=-release.dmg")}i)
+    strategy :page_match do |page|
+      match = page.match(%r{(?<=data-url="https://downloads.corsair.com/Files/CUE/iCUE-)(4(?:\.\d+)+)(?=-release.dmg")}i)
+      next if match.blank?
+
+      "#{match[1]}"
+    end
   end
 
   auto_updates true
