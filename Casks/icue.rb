@@ -8,10 +8,7 @@ cask "icue" do
   homepage "https://www.corsair.com/uk/en/icue-mac"
 
   livecheck do
-    url "https://www.corsair.com/uk/en/downloads"
-    strategy :page_match do |page|
-      page.scan(%r{(?<=data-url="https://downloads.corsair.com/Files/CUE/iCUE-)(\d+(?:\.\d+)+)(?=-release.dmg")}i)
-    end
+    skip "No version information available"
   end
 
   auto_updates true
