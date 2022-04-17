@@ -20,6 +20,8 @@ cask "i4tools" do
             pkgutil: "cn.i4tools.mac"
 
   zap trash: [
+    "~/Library/Application Support/i4Airplayer/",
+    "~/Library/Application Support/i4Tools/",
     "~/Library/Preferences/cn.i4tools.mac.plist",
     "~/Library/Preferences/org.example.i4AirPlayer.plist",
     "~/Library/Saved Application State/org.example.i4AirPlayer.savedState",
