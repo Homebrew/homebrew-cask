@@ -9,7 +9,8 @@ cask "cnkiexpress" do
   homepage "https://cajviewer.cnki.net/index.html"
 
   livecheck do
-    skip "No version information available"
+    url "https://cajviewer.cnki.net/download.html"
+    regex(%r{(?<=-)(\d+\.\d+\.\d)(?=\.dmg)}i)
   end
 
   auto_updates true
