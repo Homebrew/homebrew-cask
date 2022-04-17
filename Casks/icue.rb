@@ -9,7 +9,12 @@ cask "icue" do
 
   livecheck do
     url "https://www.corsair.com/uk/en/downloads"
-    regex(/URL\s*=.*?iCUE[._-]v?(\d+(?:\.\d+)+)-release\.dmg/i)
+    strategy :page_match do |page|
+      match = page.match(/(?<=data-url="https://downloads.corsair.com/Files/CUE/iCUE-)(\d+(?:\.\d+)+)(?=-release.dmg)/i)
+      next if match.blank?
+
+      "#{match[1]}"
+    end
   end
 
   auto_updates true
