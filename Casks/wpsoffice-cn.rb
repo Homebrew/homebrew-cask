@@ -19,7 +19,7 @@ cask "wpsoffice-cn" do
 
   livecheck do
     url "https://mac.wps.cn/"
-    regex((\d+(?:\.\d)+)(?=\(\d+\)/))
+    regex(%r{(\d+\.\d+\.\d)(?=\(\d+\)/)}i)
   end
 
   depends_on macos: ">= :sierra"
