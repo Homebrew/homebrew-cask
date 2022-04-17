@@ -21,8 +21,7 @@ cask "videofusion" do
   app "VideoFusion-macOS.app"
 
   zap trash: [
-    "~/Library/Caches/com.lemon.ee.lv",
-    "~/Library/Preferences/com.lemon.ee.lv.plist",
-    "~/Library/Saved Application State/com.lemon.ee.lv.savedState",
+    "~/Library/Application Scripts/com.lemon.lvpro",
+    "~/Library/Containers/com.lemon.lvpro",
   ]
 end
