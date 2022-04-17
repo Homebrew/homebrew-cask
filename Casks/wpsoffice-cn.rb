@@ -19,7 +19,13 @@ cask "wpsoffice-cn" do
 
   livecheck do
     url "https://mac.wps.cn/"
-    regex(%r{(\d+\.\d+\.\d)(?=\(\d+\)/)}i)
+    strategy :page_match do |page|
+      v = page.match(%r{(\d+\.\d+\.\d)(?=\(\d+\)/)}i)
+      id = page.match(%r{\d+(?=\)/)}i)
+      next if v.blank? || id.blank?
+
+      "#{v},#{id}"
+    end
   end
 
   depends_on macos: ">= :sierra"
