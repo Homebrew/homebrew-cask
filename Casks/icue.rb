@@ -8,7 +8,8 @@ cask "icue" do
   homepage "https://www.corsair.com/uk/en/icue-mac"
 
   livecheck do
-    skip "No version information available"
+    url "https://www.corsair.com/uk/en/downloads"
+    regex(/URL\s*=.*?iCUE[._-]v?(\d+(?:\.\d+)+)-release\.dmg/i)
   end
 
   auto_updates true
