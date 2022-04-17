@@ -28,12 +28,11 @@ cask "wpsoffice-cn" do
   zap trash: [
     "~/Library/Application Scripts/com.kingsoft.wpsoffice.mac",
     "~/Library/Application Scripts/com.kingsoft.wpsoffice.mac.FinderSync",
-    "~/Library/Application Scripts/com.kingsoft.wpsoffice.mac.global",
-    "~/Library/Application Scripts/com.kingsoft.wpsoffice.mac.global.recentfiles",
     "~/Library/Application Scripts/com.kingsoft.wpsoffice.mac.recentfiles",
-    "~/Library/Application Scripts/com.kingsoft.wpsoffice.mac.WidgetExtension",
+    "~/Library/Application Scripts/YK4WKE5WAM.wpsoffice",
     "~/Library/Containers/com.kingsoft.wpsoffice.mac",
-    "~/Library/Containers/com.kingsoft.wpsoffice.mac.global",
     "~/Library/Containers/com.kingsoft.wpsoffice.mac.FinderSync",
+    "~/Library/Containers/com.kingsoft.wpsoffice.mac.recentfiles",
+    "~/Library/Containers/YK4WKE5WAM.wpsoffice",
   ]
 end
