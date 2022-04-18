@@ -1,6 +1,6 @@
 cask "microsoft-azure-storage-explorer" do
   version "1.23.1"
-  sha256 "571f7979db73ed36146a96be8e611647d272b4c0a0da3197b5be03e4d7b35f95"
+  sha256 "d09d23ff2679ee29ed8b24df5e5c89d17c4b870ccbdb015e0ca33e7af2d2a5fd"
 
   url "https://github.com/microsoft/AzureStorageExplorer/releases/download/v#{version}/Mac_StorageExplorer.zip",
       verified: "github.com/microsoft/AzureStorageExplorer/"
