@@ -8,8 +8,8 @@ cask "presentation" do
   homepage "http://iihm.imag.fr/blanch/software/osx-presentation/"
 
   livecheck do
-    url :homepage
-    regex(%r{href=.*?/osx[._-]presentation[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
+    url "http://iihm.imag.fr/blanch/software/osx-presentation/releases/version.txt"
+    regex(/^(\d+(?:\.\d+)+)$/i)
   end
 
   pkg "osx-presentation-#{version}.pkg"
