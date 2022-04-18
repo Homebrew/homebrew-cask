@@ -10,7 +10,7 @@ cask "keysafe" do
   livecheck do
     url "https://miln.eu/keysafe/miln-keysafe-darwin-universal.zip"
     strategy :header_match
-    regex(/miln-keysafe-v(\d+\.\d+\.\d+)-darwin-universal\.zip/i)
+    regex(/miln-keysafe[._-]v?(\d+(?:\.\d+)+)-darwin-universal\.zip/i)
   end
 
   binary "miln-keysafe-v#{version}-darwin-universal/keysafe"
