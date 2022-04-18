@@ -6,7 +6,7 @@ cask "mongodb-realm-studio" do
       verified: "github.com/realm/realm-studio/"
   name "MongoDB Realm Studio"
   desc "Tool for the Realm Database and Realm Platform"
-  homepage "https://docs.mongodb.com/realm-legacy/products/realm-studio.html"
+  homepage "https://realm.io/products/realm-studio/"
 
   auto_updates true
 
