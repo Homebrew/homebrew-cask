@@ -1,5 +1,5 @@
 cask "qiyimedia" do
-  version "13.4.0"
+  version "13.4.0,20220412102300"
   sha256 :no_check
 
   url "https://static-d.iqiyi.com/ext/common/iQIYIMedia_271.dmg"
@@ -9,7 +9,8 @@ cask "qiyimedia" do
   homepage "https://app.iqiyi.com/mac/player/index.html"
 
   livecheck do
-    skip "No latest version information available"
+    url :url
+    strategy :extract_plist
   end
 
   depends_on macos: ">= :catalina"
