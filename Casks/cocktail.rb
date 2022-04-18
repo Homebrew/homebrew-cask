@@ -60,8 +60,8 @@ cask "cocktail" do
       strategy :sparkle
     end
   elsif MacOS.version <= :big_sur
-    version "14.4.1"
-    sha256 "10a7f6731d5055a097a0dda665583ec19eaf7001618f37e2c826b07408bc2752"
+    version "14.5"
+    sha256 "13833eefd4913eccbc319e57d7bac93c50f5a0a667d6dde877f5aa8a047be068"
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}BSE.dmg"
 
@@ -70,8 +70,8 @@ cask "cocktail" do
       regex(/macOS\s*11(?:\.\d+)*.*?(\d+(?:\.\d+)+)/i)
     end
   else
-    version "15.2.2"
-    sha256 "209795b6462cf54984a613d51fb09c10848bcf47982b56969f54ab8b1a925ed3"
+    version "15.3"
+    sha256 "2cc96ecc4a84956dbc87637f0624474340ce58653d4f4d9275931e00ec6a5e40"
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}ME.dmg"
 
