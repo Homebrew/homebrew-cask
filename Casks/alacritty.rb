@@ -27,6 +27,22 @@ cask "alacritty" do
   manpage "#{appdir}/Alacritty.app/Contents/Resources/alacritty.1.gz"
   manpage "#{appdir}/Alacritty.app/Contents/Resources/alacritty-msg.1.gz"
 
+  postflight do
+    # Update icon for macOS. Icon is from https://github.com/alacritty/alacritty/pull/4726
+    icon_url = "https://github.com/bouk/alacritty/blob/604686ba061c714f37d1db7002258517f062f0d2/extra/osx/Alacritty.app/Contents/Resources/alacritty.icns?raw=true"
+    apple_script = <<~EOS
+      use framework "AppKit"
+      use scripting additions
+      set iconURL to current application's NSURL's URLWithString:"#{icon_url}"
+      set iconImage to (current application's NSImage's alloc)'s initWithContentsOfURL:iconURL
+      set workspace to current application's NSWorkspace's sharedWorkspace()
+      workspace's setIcon:iconImage forFile:"#{appdir}/Alacritty.app" options:0
+    EOS
+
+    system_command "osascript",
+                   args: ["-e", apple_script]
+  end
+
   zap trash: [
     "~/Library/Preferences/io.alacritty.plist",
     "~/Library/Saved Application State/io.alacritty.savedState",
