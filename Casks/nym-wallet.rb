@@ -9,7 +9,6 @@ cask "nym-wallet" do
   homepage "https://nymtech.net/"
 
   depends_on macos: ">= :big_sur"
-  depends_on arch: :x86_64
 
   app "nym-wallet.app"
 
