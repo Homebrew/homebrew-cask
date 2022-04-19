@@ -10,7 +10,7 @@ cask "youku" do
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?/youkumac_(\d+(?:\.\d+)+)\.dmg}i)
+    regex(%r{ikumac.*?youkumac_(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "优酷.app"
