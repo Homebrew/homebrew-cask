@@ -18,5 +18,6 @@ cask "xiv-on-mac" do
     "~/Library/Caches/dezent.XIV-on-Mac",
     "~/Library/HTTPStorages/dezent.XIV-on-Mac",
     "~/Library/Preferences/dezent.XIV-on-Mac.plist",
+    "~/Library/Application Support/XIV on Mac",
   ]
 end
