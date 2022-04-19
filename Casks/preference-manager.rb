@@ -1,6 +1,6 @@
 cask "preference-manager" do
-  version "4.5.2.0"
-  sha256 "780626b2e0a557f86e42ab899dadd727c1ef01f029ddd1ae98a4984365639971"
+  version "4.5.3"
+  sha256 "16a71f08a8e2f3fae5b8c4634e67f8378a0947fb8f85f87e6e63641bc5441e49"
 
   url "https://www.digitalrebellion.com/download/prefman?version=#{version.no_dots}"
   name "Preference Manager"
