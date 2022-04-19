@@ -19,12 +19,9 @@ cask "wpsoffice-cn" do
 
   livecheck do
     url :homepage
+    regex(/href=.*?WPS_Office[._-]v?(\d+(?:\.\d+)+)[_(](\d+)[_)]#{arch}\.dmg/i)
     strategy :page_match do |page|
-      v = page.match(/href=["'].*?WPS_Office[._-](\d+(?:\.\d+)+).*\.dmg["']/i)
-      id = page.match(/href=["'].*?WPS_Office[._-].*\((\d+)\).*\.dmg["']/i)
-      next if v.blank? || id.blank?
-
-      "#{v[1]},#{id[1]}"
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 
