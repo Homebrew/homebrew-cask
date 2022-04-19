@@ -9,7 +9,9 @@ cask "imgotv" do
   homepage "https://www.mgtv.com/app/"
 
   livecheck do
-    skip "No version information available"
+    url "https://pcconf.api.mgtv.com/getPcDownloadUrl?source=mango2"
+    strategy :header_match
+    regex(%r{/v?(\d+(?:\.\d+)+)/mgtv[._-]mango[._-]v?\d+(?:\.\d+)*\.dmg}i)
   end
 
   auto_updates true
