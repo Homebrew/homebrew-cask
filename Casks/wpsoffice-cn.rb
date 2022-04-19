@@ -18,8 +18,14 @@ cask "wpsoffice-cn" do
   homepage "https://mac.wps.cn/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url homepage
+    strategy :page_match do |page|
+      v = page.match(/href=.*?WPS_Office[._-](\d+(?:\.\d+)+)(?=\(\d+\))/i)
+      id = page.match(%r{\d+(?=\)/)}i)
+      next if v.blank? || id.blank?
+
+      "#{v},#{id}"
+    end
   end
 
   depends_on macos: ">= :sierra"
