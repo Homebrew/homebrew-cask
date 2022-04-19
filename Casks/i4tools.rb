@@ -11,7 +11,7 @@ cask "i4tools" do
   livecheck do
     url "https://url.i4.cn/fqIBBbaa"
     strategy :header_match
-    regex(/i4Tools_v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/i4Tools[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   auto_updates true
