@@ -17,4 +17,8 @@ cask "nym-wallet" do
     "~/Library/Saved Application State/net.nymtech.wallet.savedState/",
     "~/Library/Caches/net.nymtech.wallet/",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
