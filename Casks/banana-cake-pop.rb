@@ -15,8 +15,9 @@ cask "banana-cake-pop" do
   homepage "https://chillicream.com/"
 
   livecheck do
-    url "https://chillicream.com/docs/bananacakepop"
-    regex(%r{bananacakepop/BananaCakePop-((:?\d+(?:\.|\d+)+)(:?-[A-z]+.\d+)?)-mac-#{arch}\.dmg}i)
+    # Update to `latest-mac.yml` when stable releases are avaliable
+    url "https://download.chillicream.com/bananacakepop/preview-mac.yml"
+    strategy :electron_builder
   end
 
   auto_updates true
@@ -29,7 +30,7 @@ cask "banana-cake-pop" do
     "~/Library/Caches/com.chillicream.bananacakepop.ShipIt",
     "~/Library/Caches/com.chillicream.bananacakepop",
     "~/Library/Preferences/ByHost/com.chillicream.bananacakepop.ShipIt.*.plist",
-    "~/Library/Preferenes/com.chillicream.bananacakepop.plist",
+    "~/Library/Preferences/com.chillicream.bananacakepop.plist",
     "~/Library/Saved Application State/com.chillicream.bananacakepop.savedState",
   ]
 end
