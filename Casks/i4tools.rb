@@ -9,7 +9,9 @@ cask "i4tools" do
   homepage "https://www.i4.cn/"
 
   livecheck do
-    skip "No version information available"
+    url "https://url.i4.cn/fqIBBbaa"
+    strategy :header_match
+    regex(%r{href=.*/i4Tools_v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   auto_updates true
