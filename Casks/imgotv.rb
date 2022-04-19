@@ -12,7 +12,6 @@ cask "imgotv" do
     skip "No version information available"
   end
 
-  auto_updates true
   depends_on macos: ">= :yosemite"
 
   app "芒果TV.app"
