@@ -22,6 +22,6 @@ cask "imgotv" do
     "~/Library/Caches/com.mgtv.pcclientx",
     "~/Library/Containers/com.mgtv.MGTV-macOS",
     "~/Library/Preferences/com.mgtv.pcclientx.plist",
-    "~/Library/Saved Application State/com.mgtv.pcclientx.savedState",
-  ]
+  ],
+      rmdir: "~/Library/Saved Application State/com.mgtv.pcclientx.savedState"
 end
