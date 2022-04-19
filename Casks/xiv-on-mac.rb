@@ -12,6 +12,9 @@ cask "xiv-on-mac" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
+  depends_on macos: ">= :big_sur"
+
   app "XIV on Mac.app"
 
   zap trash: [
