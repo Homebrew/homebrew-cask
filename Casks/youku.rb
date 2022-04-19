@@ -6,10 +6,10 @@ cask "youku" do
   name "Youku"
   name "优酷"
   desc "Chinese video streaming and sharing platform"
-  homepage "https://pd.youku.com/pc"
+  homepage "https://youku.com/product/index"
 
   livecheck do
-    url "https://pd.youku.com/pc"
+    url :homepage
     regex(%r{href=.*?/youkumac_(\d+(?:\.\d+)+)\.dmg}i)
   end
 
