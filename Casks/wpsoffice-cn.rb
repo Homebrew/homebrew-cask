@@ -25,7 +25,7 @@ cask "wpsoffice-cn" do
     end
   end
 
-  conflicts_with cask: "wps-office"
+  conflicts_with cask: "wpsoffice"
   depends_on macos: ">= :sierra"
 
   app "wpsoffice.app"
