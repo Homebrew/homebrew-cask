@@ -14,8 +14,13 @@ cask "wechatwork" do
   homepage "https://work.weixin.qq.com/"
 
   livecheck do
-    url "https://work.weixin.qq.com/wework_admin/commdownload?platform=mac"
-    strategy :header_match
+    if Hardware::CPU.intel?
+      url "https://work.weixin.qq.com/wework_admin/commdownload?platform=mac"
+      strategy :header_match
+    else
+      url :homepage
+      regex(%r{href=.*/wecom-mac/update/WeCom[-_.](\d+(?:\.\d+)+)\.dmg}i)
+    end
   end
 
   auto_updates true
