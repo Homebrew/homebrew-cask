@@ -22,8 +22,4 @@ cask "manymc" do
     "~/Library/Preferences/org.multimc.ManyMC.plist",
     "~/Library/Saved Application State/org.multimc.ManyMC.savedState",
   ]
-
-  caveats do
-    depends_on_java "17+"
-  end
 end
