@@ -1,6 +1,6 @@
 cask "local" do
-  version "6.3.1,5826"
-  sha256 "07dfcec8c34bf89389f5d96794a8e3603462453fd747eb2db7c100be61c7b4a6"
+  version "6.4.0,5927"
+  sha256 "912220739143240899e3c7a7e1007103fdcd6531dc0b23a189dd6fff0a5889c3"
 
   url "https://cdn.localwp.com/releases-stable/#{version.csv.first}+#{version.csv.second}/local-#{version.csv.first}-mac.dmg"
   name "Local"
