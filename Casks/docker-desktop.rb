@@ -1,10 +1,5 @@
 cask "docker-desktop" do
   version "4.7.1"
-
-  name "Docker"
-  desc "Docker Desktop for Mac"
-  homepage "https://docs.docker.com/desktop/"
-
   # requested an audit
   sha256 :no_check
 
@@ -15,6 +10,9 @@ cask "docker-desktop" do
     url "https://desktop.docker.com/mac/main/arm64/Docker.dmg"
     # sha256 "ce5aea6a2c30c10a81b9768cfe09c24d4e33a36d355b3703d590ca6c4498e73f"
   end
+
+  name "Docker"
+  homepage "https://docs.docker.com/desktop/"
 
   auto_updates true
   conflicts_with cask: "docker-edge"
