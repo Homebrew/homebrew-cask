@@ -1,17 +1,22 @@
 cask "docker-desktop" do
   version "4.7.1"
 
-  name "Docker Desktop for Mac"
+  name "Docker"
+  desc "Docker Desktop for Mac"
   homepage "https://docs.docker.com/desktop/"
 
-  if Hardware::CPU.Intel?
+  # requested an audit
+  sha256 :no_check
+
+  if Hardware::CPU.intel?
     url "https://desktop.docker.com/mac/main/amd64/Docker.dmg"
-    sha256 "194bb59c7015ddea680993be42ee572ccd1a7e4b7f8f00293fa398b98f2926aa"
+    # sha256 "194bb59c7015ddea680993be42ee572ccd1a7e4b7f8f00293fa398b98f2926aa"
   else
     url "https://desktop.docker.com/mac/main/arm64/Docker.dmg"
-    sha256 "ce5aea6a2c30c10a81b9768cfe09c24d4e33a36d355b3703d590ca6c4498e73f"
+    # sha256 "ce5aea6a2c30c10a81b9768cfe09c24d4e33a36d355b3703d590ca6c4498e73f"
   end
 
+  auto_updates true
   conflicts_with cask: "docker-edge"
   depends_on macos: ">= :catalina"
 
