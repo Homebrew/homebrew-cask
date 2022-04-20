@@ -14,7 +14,7 @@ cask "wifi-explorer-pro" do
 
   depends_on macos: ">= :high_sierra"
 
-  pkg "WiFiExplorerPro_#{version.before_comma}.pkg"
+  pkg "WiFiExplorerPro_#{version.csv.first}.pkg"
 
   uninstall pkgutil:   [
     "com.intuitibits.wifiexplorerpro#{version.major}.pkg",
