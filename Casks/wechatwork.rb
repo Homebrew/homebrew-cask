@@ -14,7 +14,8 @@ cask "wechatwork" do
   homepage "https://work.weixin.qq.com/"
 
   livecheck do
-    skip "No version information available"
+    url "https://work.weixin.qq.com/wework_admin/commdownload?platform=mac"
+    strategy :header_match
   end
 
   auto_updates true
