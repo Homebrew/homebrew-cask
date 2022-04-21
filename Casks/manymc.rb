@@ -7,11 +7,6 @@ cask "manymc" do
   desc "Familiar Minecraft Launcher with native support for arm64 (M1)"
   homepage "https://github.com/MinecraftMachina/ManyMC"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on arch: :arm64
   depends_on macos: ">= :big_sur"
 
