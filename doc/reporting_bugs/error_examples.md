@@ -59,7 +59,7 @@ It seems the App source '/usr/local/Caskroom/someapp/0.1/Someapp.app' is not the
 
 the directory structure inside the app’s archive changed in some way. It must be fixed in Homebrew Cask.
 
-[How to fix](source_is_not_there_error.md)
+[How to fix](https://docs.brew.sh/Common-Issues#cask---source-is-not-there)
 
 ---
 
@@ -73,7 +73,7 @@ Error: wrong number of arguments (1 for 4)
 
 it’s likely the software you’re trying to install is incompatible with your macOS version.
 
-[How to fix](wrong_number_of_arguments_error.md)
+[How to fix](https://docs.brew.sh/Common-Issues#cask---wrong-number-of-arguments)
 
 ---
 

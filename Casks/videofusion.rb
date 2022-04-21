@@ -1,6 +1,6 @@
 cask "videofusion" do
-  version "2.8.0.5854.0"
-  sha256 "9abbdf4bc34774e890f18a9cbe0e728d64fa0188b8a786c3ca6ea74bfe4d772c"
+  version "2.9.0.6253.0"
+  sha256 "3463f508251b44449003bfc010168ced5bdbbd620519f912b7213020cfc98202"
 
   url "https://lf3-package.vlabstatic.com/obj/faceu-packages/Jianying_#{version.dots_to_underscores}.dmg",
       verified: "lf3-package.vlabstatic.com/obj/faceu-packages/"
@@ -21,8 +21,7 @@ cask "videofusion" do
   app "VideoFusion-macOS.app"
 
   zap trash: [
-    "~/Library/Caches/com.lemon.ee.lv",
-    "~/Library/Preferences/com.lemon.ee.lv.plist",
-    "~/Library/Saved Application State/com.lemon.ee.lv.savedState",
+    "~/Library/Application Scripts/com.lemon.lvpro",
+    "~/Library/Containers/com.lemon.lvpro",
   ]
 end

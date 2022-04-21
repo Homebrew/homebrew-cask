@@ -1,6 +1,6 @@
 cask "vmware-horizon-client" do
-  version "2111.1-8.4.1-19484634,CART23FQ1_MAC_2111_1"
-  sha256 "5d80a385e924b3a2534651945efdf88470082248b7f1355ff2d914ac079f3364"
+  version "2203.1-8.5.1-19641512,CART23FQ1_MAC_2203_1"
+  sha256 "1054642183d0f87500def9cdfa36f522797b371ef0c32d137d15047d774c4925"
 
   url "https://download3.vmware.com/software/#{version.csv.second}/VMware-Horizon-Client-#{version.csv.first}.dmg"
   name "VMware Horizon Client"

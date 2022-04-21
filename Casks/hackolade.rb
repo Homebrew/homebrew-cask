@@ -1,9 +1,9 @@
 cask "hackolade" do
-  version "5.4.10"
-  sha256 :no_check
+  version "6.0.4"
+  sha256 "2c013d83a3f9cd94709b141d6c26d2adb8f97ec613ff8875f96874605dc2fc3d"
 
-  url "https://s3-eu-west-1.amazonaws.com/hackolade/current/Hackolade-mac-setup-signed.pkg",
-      verified: "s3-eu-west-1.amazonaws.com/hackolade/current/"
+  url "https://s3-eu-west-1.amazonaws.com/hackolade/previous/v#{version}/Hackolade-mac-setup-signed.pkg",
+      verified: "s3-eu-west-1.amazonaws.com/hackolade/"
   name "Hackolade"
   desc "Data Modeling for NoSQL databases, storage formats, REST APIs, and JSON in RDBMS"
   homepage "https://hackolade.com/"

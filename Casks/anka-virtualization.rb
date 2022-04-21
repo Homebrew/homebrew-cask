@@ -1,6 +1,6 @@
 cask "anka-virtualization" do
-  version "2.5.4.139"
-  sha256 "e914e99ee7bab70416e3ec1e13c262df54b3ca2eb85913318b4dae3c05cca8d2"
+  version "2.5.5.143"
+  sha256 "bf7201575fefe9606de93d91e042f8e4ad9c95e0024fcd86da8b165bb9e28895"
 
   url "https://downloads.veertu.com/anka/Anka-#{version}.pkg"
   name "Anka Virtualization"
@@ -13,7 +13,7 @@ cask "anka-virtualization" do
     regex(/Anka[._-]?v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :big_sur"
 
   pkg "Anka-#{version}.pkg"
 

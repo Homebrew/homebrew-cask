@@ -5,11 +5,11 @@ cask "visual-studio-code" do
     version "1.55.2"
     sha256 "be3a1ebfac2c6c5e882714304adc518aff8bac6b663e194a9e73524c62065b94"
   else
-    version "1.66.0"
+    version "1.66.2"
     if Hardware::CPU.intel?
-      sha256 "97bc49f68a35d8f22fe2706a09ba62e90f2995f4c4f23beb7091e8f9a7cdeb0d"
+      sha256 "d41c492e03d52fd37ae1393b9412aee5eac0eae7134add444ff92887d89e5900"
     else
-      sha256 "8af0efe4aa2fc83faf169d9fabd1bd4d51cfd65f78e5b9cc7405df1e08d2a2fd"
+      sha256 "63e80377000d45150f3b5ff7b4ff93795922d7caeb0ceb7f47e337e6cc9c02a2"
     end
   end
 
@@ -21,7 +21,7 @@ cask "visual-studio-code" do
 
   livecheck do
     url "https://update.code.visualstudio.com/api/update/#{arch}/stable/VERSION"
-    regex(/"productVersion"\s*:\s*"(\d+(:?\.\d+)+)"/)
+    regex(/"productVersion"\s*:\s*"(\d+(:?\.\d+)+)"/i)
   end
 
   auto_updates true

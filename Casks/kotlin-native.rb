@@ -1,12 +1,12 @@
 cask "kotlin-native" do
   arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
-  version "1.6.10"
+  version "1.6.21"
 
   if Hardware::CPU.intel?
-    sha256 "a5c78e46df9825988febb9db9d407a9f2d6273faf4693add03686c422e4eb69f"
+    sha256 "ce74cc3bc874a42e9b912515626c563dee075503d0c3f55c24cd75724986f020"
   else
-    sha256 "5bef45d586790136ba29a00b6101175b8c6be14c5faaeb82ef6c68076f7cee23"
+    sha256 "92426f943b4ad18fb37a1b7ef5f2d7d872f67f228e232a34a9890993edf9b4c5"
   end
 
   url "https://github.com/JetBrains/kotlin/releases/download/v#{version}/kotlin-native-macos-#{arch}-#{version}.tar.gz",
@@ -17,7 +17,7 @@ cask "kotlin-native" do
 
   livecheck do
     url :url
-    regex(/^v?(\d+(?:\.\d+)+)$/)
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   conflicts_with formula: "kotlin"

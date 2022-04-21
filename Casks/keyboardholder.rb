@@ -1,8 +1,8 @@
 cask "keyboardholder" do
-  version "1.5.3"
-  sha256 "b8c114c7208900598ebe4d2be4a0e02a5a716a00b9e9c6071e231dce8463df43"
+  version "1.6.0"
+  sha256 "50e3b7c277038527ac8e5d3cab48a1a11b747bfbd03bdfce8ec5ff45a7b30c38"
 
-  url "https://github.com/leaves615/KeyboardHolder/releases/download/#{version}/KeyboardHolder.app.#{version}.zip"
+  url "https://github.com/leaves615/KeyboardHolder/releases/download/#{version}/KeyboardHolder-#{version}.zip"
   name "KeyboardHolder"
   desc "Switch input method per application"
   homepage "https://github.com/leaves615/KeyboardHolder"

@@ -1,6 +1,6 @@
 cask "slidepilot" do
-  version "1.7.0"
-  sha256 "22d7b17138893547cd2dca7fdb8cfeaa126bf813db871a3089c0865fe95462d1"
+  version "1.8.0"
+  sha256 "bc8bf077a504cdb2d09d7adee313e408d40063e66e2c0d8722c6678e4ee5cc20"
 
   url "https://slidepilotapp.com/updates/SlidePilot-#{version}.zip"
   name "SlidePilot"

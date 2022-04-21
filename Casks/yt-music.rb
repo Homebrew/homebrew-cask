@@ -1,6 +1,6 @@
 cask "yt-music" do
-  version "1.2.0"
-  sha256 "22f611a45f1c8217c51985ad9a174f431cfb9d1d735c15c6eaa523634b964358"
+  version "1.3.0"
+  sha256 "a38281f1b994829dadee5063345da794ce0116fa49b815cb58e903b3987e3d33"
 
   url "https://github.com/steve228uk/YouTube-Music/releases/download/#{version}/YT-Music-#{version}.zip"
   name "YouTube Music"

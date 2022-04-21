@@ -1,9 +1,9 @@
 cask "ableton-live-suite" do
   arch = MacOS.version >= :mojave ? "universal" : "intel"
-  version "11.1"
+  version "11.1.1"
 
   if MacOS.version >= :mojave
-    sha256 "3712379f7e1d8ef163cbc3d6e31564046584a01f117b529552b93bc104f6be4f"
+    sha256 "fdcc733097305c4ba1a033784bc6442a094e27aee11a37a5987b130eac1aa0b3"
   else
     sha256 "0e1779d22c087993a4e5f11f9f2a83a429dccfafa92c5e7aa05c87219de39c90"
   end

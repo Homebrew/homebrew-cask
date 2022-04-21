@@ -1,6 +1,6 @@
 cask "tiles" do
-  version "1.2.3,9890ca0f"
-  sha256 "024ca61875fa1d7cac205b7c656b0490cd491389b94d4c98c4733c128060e670"
+  version "1.3.0,6c7491b2"
+  sha256 "c88ec00075f9c0504f793ec354be9752c700717deefe2164a67d6daeb90ff48d"
 
   url "https://updates.sempliva.com/tiles/Tiles-#{version.csv.second}.dmg"
   name "Sempliva Tiles"

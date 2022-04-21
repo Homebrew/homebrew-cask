@@ -21,5 +21,11 @@ cask "lyricsx" do
 
   app "LyricsX.app"
 
-  zap trash: "~/ddddxxx.LyricsX"
+  zap trash: [
+    "~/ddddxxx.LyricsX",
+    "~/Library/Application Scripts/3665V726AE.group.ddddxxx.LyricsX",
+    "~/Library/Application Scripts/ddddxxx.LyricsX",
+    "~/Library/Application Scripts/ddddxxx.LyricsXHelper",
+    "~/Library/Group Containers/3665V726AE.group.ddddxxx.LyricsX",
+  ]
 end

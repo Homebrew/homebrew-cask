@@ -1,12 +1,12 @@
 cask "dbgate" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "4.7.3"
+  version "4.8.2"
 
   if Hardware::CPU.intel?
-    sha256 "aa3328c47b4caa6e99a52d4b2be9fcaa7d788cf1333cfaddb98e69b7c134a6d0"
+    sha256 "3642012fbf57a10535b384631adb4c2ced2dae89ef3ef3e34aed755896427a28"
   else
-    sha256 "2d77746bedfe999e2187b7cae4be6a6fb506b0ffb2694900be915934f79d4293"
+    sha256 "99fb96ca2aaf835e56cc4037ee2bed848dd9847cfbc44cdc77f1605305e9d785"
   end
 
   url "https://github.com/dbgate/dbgate/releases/download/v#{version}/dbgate-#{version}-mac_#{arch}.dmg",

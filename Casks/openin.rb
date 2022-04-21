@@ -1,6 +1,6 @@
 cask "openin" do
-  version "3.0.4"
-  sha256 "81eaba701c8cd46b45f7d1cadbe999e879991ae6e9c622c5d780450ab636e407"
+  version "3.0.5"
+  sha256 "cd119af8cd1f71aa1978e69252c283ae3a80838adcb536da45f4ae2bf6bbd7e2"
 
   url "https://loshadki.app/openin/OpenIn%20#{version}.dmg"
   name "OpenIn"

@@ -1,12 +1,12 @@
 cask "portfolioperformance" do
   arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
-  version "0.56.6"
+  version "0.57.2"
 
   if Hardware::CPU.intel?
-    sha256 "6fdc7fe8c0d7fb8a474a398a84528f9beb827dc96bda0e033d7116da0c328d5f"
+    sha256 "413b3aa29e2ce3cdfb262426772aab7750e584bf8a5ebb21295ffbc143023c67"
   else
-    sha256 "8fb8a79741c0085af10be2881ae5cc7ecbac6a2f28f42b52f30eabd2e2560bc3"
+    sha256 "f2d7ef1ff3944b8021473b85e986d26822a6e303412bd569f0e43bf24339ec48"
   end
 
   url "https://github.com/buchen/portfolio/releases/download/#{version}/PortfolioPerformance-#{version}-#{arch}.dmg",
@@ -17,7 +17,7 @@ cask "portfolioperformance" do
 
   livecheck do
     url :url
-    regex(/^v?(\d+(?:\.\d+)+)$/)
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   auto_updates true

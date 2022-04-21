@@ -8,5 +8,5 @@ cask "swiftdefaultappsprefpane" do
   homepage "https://github.com/Lord-Kamina/SwiftDefaultApps"
 
   binary "swda"
-  prefpane "SwiftDefaultApps.prefPane"
+  prefpane "SwiftDefaultApps.prefpane"
 end
