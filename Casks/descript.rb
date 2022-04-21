@@ -1,8 +1,8 @@
 cask "descript" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
-  archdmgsuffix = Hardware::CPU.intel? ? "" : "-arm64"
+  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  livecheck_folder = Hardware::CPU.intel? ? "x86_64" : "arm64"
 
-  version "37.1.2,20220419.1"
+  version "37.1.2-release.20220419.1"
   sha256
 
   if Hardware::CPU.intel?
@@ -11,20 +11,14 @@ cask "descript" do
     sha256 "1dd8111342037d7ecfd85295f41b922b89c7c7b99895690f86a93c45e052efac"
   end
 
-  url "https://electron.descript.com/Descript-#{version.csv.first}-release.#{version.csv.second}#{archdmgsuffix}.dmg"
+  url "https://electron.descript.com/Descript-#{version}#{arch}.dmg"
   name "Descript"
   desc "Audio and video editor"
   homepage "https://www.descript.com/"
 
   livecheck do
-    url "https://web.descript.com/download?platform=mac&arch=#{arch}"
-    strategy :header_match do |headers|
-      version = headers["location"][/Descript-(\d+(?:\.\d+)*)/i, 1]
-      release = headers["location"][/-release.(\d+(?:\.\d+)*).dmg/i, 1]
-      next if version.blank? || release.blank?
-
-      "#{version},#{release}"
-    end
+    url "https://electron.descript.com/master-mac.yml"
+    strategy :electron_builder
   end
 
   auto_updates true
