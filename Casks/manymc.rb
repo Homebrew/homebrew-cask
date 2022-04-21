@@ -4,7 +4,7 @@ cask "manymc" do
 
   url "https://github.com/MinecraftMachina/ManyMC/releases/download/v#{version}/ManyMC.zip"
   name "ManyMC"
-  desc "Familiar Minecraft Launcher with native support for arm64 (M1)"
+  desc "Minecraft launcher with native arm64 support"
   homepage "https://github.com/MinecraftMachina/ManyMC"
 
   depends_on arch: :arm64
