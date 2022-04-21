@@ -1,9 +1,7 @@
 cask "descript" do
   arch = Hardware::CPU.intel? ? "" : "-arm64"
-  livecheck_folder = Hardware::CPU.intel? ? "x86_64" : "arm64"
 
   version "37.1.2-release.20220419.1"
-  sha256
 
   if Hardware::CPU.intel?
     sha256 "6acde97dbae4056b57a401ed9ae4f4f589456056fcb7881b99e07ca43a46cb29"
@@ -27,13 +25,13 @@ cask "descript" do
 
   zap trash: [
     "~/Library/Application Support/Descript",
-    "~/Library/Caches/com.descript.Descript-Installer",
     "~/Library/Caches/com.descript.beachcube",
     "~/Library/Caches/com.descript.beachcube.ShipIt",
+    "~/Library/Caches/com.descript.Descript-Installer",
+    "~/Library/Preferences/com.descript.beachcube.plist",
     "~/Library/Preferences/com.descript.Descript-Installer.plist",
     "~/Library/Preferences/com.descript.ScreenRecorder.plist",
-    "~/Library/Preferences/com.descript.beachcube.plist",
-    "~/Library/Saved Application State/com.descript.Descript-Installer.savedState",
     "~/Library/Saved Application State/com.descript.beachcube.savedState",
+    "~/Library/Saved Application State/com.descript.Descript-Installer.savedState",
   ]
 end
