@@ -13,8 +13,8 @@ cask "nym-wallet" do
   app "nym-wallet.app"
 
   zap trash: [
-    "~/Library/Saved Application State/net.nymtech.wallet.savedState/",
     "~/Library/Caches/net.nymtech.wallet/",
+    "~/Library/Saved Application State/net.nymtech.wallet.savedState/",
   ]
 
   caveats do
