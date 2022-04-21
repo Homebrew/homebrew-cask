@@ -1,12 +1,12 @@
 cask "stellarium" do
   arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
 
-  version "0.22.0"
+  version "0.22.1"
 
   if Hardware::CPU.intel?
-    sha256 "8e55d08d87769c2f02d807d0480839560ad00b93eae74ab2d39a1d5a0541b03d"
+    sha256 "a3993feda9b9401f5838ff1c43f1d3c22d9c9ef2c085015f4e6b4a9447b73924"
   else
-    sha256 "b9fed25a9272de8300155ad656a527e5878fc1e9fd6a091a14f30830442bbd7d"
+    sha256 "a9a1bb92b6ec8df2722da57c1d3e5162f9ca0d4b12fbc642c7ee0d947ffa9b53"
   end
 
   url "https://github.com/Stellarium/stellarium/releases/download/v#{version.major_minor_patch}/Stellarium-#{version}-#{arch}.zip",
