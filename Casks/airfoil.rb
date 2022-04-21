@@ -1,5 +1,5 @@
 cask "airfoil" do
-  version "5.10.8"
+  version "5.11.0"
   sha256 :no_check
 
   url "https://rogueamoeba.com/airfoil/mac/download/Airfoil.zip"
