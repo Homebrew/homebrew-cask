@@ -4,7 +4,6 @@ cask "baidunetdisk" do
 
   url "https://issuepcdn.baidupcs.com/issue/netdisk/MACguanjia/BaiduNetdisk_mac_#{version}.dmg",
       verified: "issuepcdn.baidupcs.com/issue/netdisk/MACguanjia/"
-
   name "Baidu NetDisk"
   name "百度网盘"
   desc "Cloud storage service"
