@@ -1,7 +1,7 @@
 cask "miniconda" do
   arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
   version "py39_4.11.0"
-  
+
   if Hardware::CPU.intel?
     sha256 "7717253055e7c09339cd3d0815a0b1986b9138dcfcb8ec33b9733df32dd40eaa"
   else
