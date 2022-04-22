@@ -22,7 +22,7 @@ cask "r" do
   homepage "https://www.r-project.org/"
 
   livecheck do
-    url "https://cloud.r-project.org/bin/macosx/"
+    url "https://cloud.r-project.org/bin/macosx/base"
     regex(/href=.*?R[._-]v?(\d+(?:\.\d+)*)\.pkg/i)
   end
 
