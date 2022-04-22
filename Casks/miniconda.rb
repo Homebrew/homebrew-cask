@@ -1,12 +1,11 @@
 cask "miniconda" do
   arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
+  version "py39_4.11.0"
 
   if Hardware::CPU.intel?
-    version "py39_4.11.0"
     sha256 "7717253055e7c09339cd3d0815a0b1986b9138dcfcb8ec33b9733df32dd40eaa"
   else
-    version "py38_4.10.1"
-    sha256 "4ce4047065f32e991edddbb63b3c7108e7f4534cfc1efafc332454a414deab58"
+    sha256 "7d3d6e695e62651a2473425b84762b1c1b819a97a2c4419b2b60ae94cab8381b"
   end
 
   url "https://repo.anaconda.com/miniconda/Miniconda3-#{version}-MacOSX-#{arch}.sh",
