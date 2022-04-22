@@ -1,5 +1,5 @@
 cask "tiny-player" do
-  version "1.6.5"
+  version "1.6.5,220"
   sha256 "3a80545e6f2c4745eee9fbe01933d387684290e528f865b471b14dd71b09eb15"
 
   url "https://download.catnapgames.com/TinyPlayer-#{version.csv.first}.zip"
