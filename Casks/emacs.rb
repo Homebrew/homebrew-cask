@@ -1,6 +1,6 @@
 cask "emacs" do
-  version "28.1-2"
-  sha256 "7e6219a71c08c9a582d7d83b5ffe483d4a8cd07b82b56c57ac90d18a4cfb6393"
+  version "28.1-3"
+  sha256 "96cc6e84cf688ccfcff83a9282697ac9c760c4d552f20230cf61035438ab6943"
 
   url "https://emacsformacosx.com/emacs-builds/Emacs-#{version}-universal.dmg"
   name "Emacs"
