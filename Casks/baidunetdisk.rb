@@ -32,8 +32,7 @@ cask "baidunetdisk" do
     "~/Library/sapi/wappass.baidu.com",
     "~/Library/Saved Application State/com.baidu.BaiduNetdisk-mac.savedState",
   ],
-      rmdir:
-             [
+      rmdir: [
                "~/Library/Caches/com.plausiblelabs.crashreporter.data",
                "~/Library/sapi",
              ]
