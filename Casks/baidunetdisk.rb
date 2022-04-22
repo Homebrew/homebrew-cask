@@ -2,8 +2,9 @@ cask "baidunetdisk" do
   version "4.8.0"
   sha256 "bd81867aa6d65e27996c518a14d94b436553309d3ce299516bb8b7d993bd76c0"
 
-  url "https://wppkg.baidupcs.com/issue/netdisk/MACguanjia/BaiduNetdisk_mac_#{version}.dmg",
-      verified: "baidupcs.com/issue/netdisk/MACguanjia/"
+  url "https://issuepcdn.baidupcs.com/issue/netdisk/MACguanjia/BaiduNetdisk_mac_#{version}.dmg",
+      verified: "issuepcdn.baidupcs.com/issue/netdisk/MACguanjia/"
+
   name "Baidu NetDisk"
   name "百度网盘"
   desc "Cloud storage service"
