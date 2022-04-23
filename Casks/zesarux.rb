@@ -4,6 +4,7 @@ cask "zesarux" do
 
   url "https://github.com/chernandezba/zesarux/releases/download/ZEsarUX-#{version}/ZEsarUX_macos-#{version}.dmg"
   name "ZEsarUX"
+  desc "ZX Second-Emulator And Released for UniX"
   homepage "https://github.com/chernandezba/zesarux"
 
   livecheck do
