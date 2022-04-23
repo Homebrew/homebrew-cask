@@ -9,7 +9,7 @@ cask "zesarux" do
 
   livecheck do
     url :url
-    strategy :github_latest
+    regex(/^ZEsarUX-?(\d+(?:\.\d+)+)$/i)
   end
 
   app "ZEsarUX.app"
