@@ -9,11 +9,11 @@ cask "r" do
     url "https://cloud.r-project.org/bin/macosx/R-#{version}.pkg"
   elsif Hardware::CPU.intel?
     version "4.2.0"
-    sha256 "8d1f1f51d04bdf89974f6e3aea7bf178f6db79f3d41d175c2375fa7bcbfef19d"
+    sha256 "efb0a98d407c4a4d621cf3f3c33d674b71071099577301b079f4d114b2fc2d00"
     url "https://cloud.r-project.org/bin/macosx/base/R-#{version}.pkg"
   else
     version "4.2.0"
-    sha256 "e7967f60f39be65dd62d741553bcd70d107f1c00b1ef3b4b4e59714cfc1182f2"
+    sha256 "b663dbc124c51e842ba15695abb151b1b2ebd09e9810c3c34c51bf50ec4ee206"
     url "https://cloud.r-project.org/bin/macosx/big-sur-arm64/base/R-#{version}-arm64.pkg"
   end
 
@@ -22,7 +22,7 @@ cask "r" do
   homepage "https://www.r-project.org/"
 
   livecheck do
-    url "https://cloud.r-project.org/bin/macosx/base"
+    url "https://cloud.r-project.org/bin/macosx"
     regex(/href=.*?R[._-]v?(\d+(?:\.\d+)*)\.pkg/i)
   end
 
