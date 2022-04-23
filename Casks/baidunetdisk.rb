@@ -1,9 +1,9 @@
 cask "baidunetdisk" do
-  version "4.7.1"
-  sha256 "529422a87bb1bccc61701c1e782fcf53a517e9ba7d8fc293fe0843b9844fca99"
+  version "4.8.0"
+  sha256 "bd81867aa6d65e27996c518a14d94b436553309d3ce299516bb8b7d993bd76c0"
 
-  url "https://wppkg.baidupcs.com/issue/netdisk/MACguanjia/BaiduNetdisk_mac_#{version}.dmg",
-      verified: "baidupcs.com/issue/netdisk/MACguanjia/"
+  url "https://issuepcdn.baidupcs.com/issue/netdisk/MACguanjia/BaiduNetdisk_mac_#{version}.dmg",
+      verified: "issuepcdn.baidupcs.com/issue/netdisk/MACguanjia/"
   name "Baidu NetDisk"
   name "百度网盘"
   desc "Cloud storage service"
@@ -31,9 +31,8 @@ cask "baidunetdisk" do
     "~/Library/sapi/wappass.baidu.com",
     "~/Library/Saved Application State/com.baidu.BaiduNetdisk-mac.savedState",
   ],
-      rmdir:
-             [
-               "~/Library/Caches/com.plausiblelabs.crashreporter.data",
-               "~/Library/sapi",
-             ]
+      rmdir: [
+        "~/Library/Caches/com.plausiblelabs.crashreporter.data",
+        "~/Library/sapi",
+      ]
 end
