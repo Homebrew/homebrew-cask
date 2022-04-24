@@ -12,11 +12,9 @@ cask "oracle-jdk-javadoc" do
 
   livecheck do
     url "https://www.oracle.com/java/technologies/javase-jdk#{version.major}-doc-downloads.html"
-    strategy :page_match do |page|
-      match = page.match(%r{(\d+(?:\.\d+)*)\+(\d+(?:\.\d+)*)/(.+)/jdk-(\d+(?:\.\d+)*)_doc-all\.zip}i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]},#{match[3]}"
+    regex(%r{/(\d+(?:\.\d+)*)(?:\+|%2B)(\d+(?:\.\d+)*)/(\h+)/jdk[._-]v?(\d+(?:\.\d+)*)_doc-all\.zip}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]},#{match[2]}" }
     end
   end
 
