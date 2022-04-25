@@ -7,7 +7,7 @@ cask "anki" do
       sha256 "c1930911b7297b3540b8148a9703531e5aa3a7415f9b20c1ed70fa041b898720"
       qtversion = 6
     else
-      sha256 "dd2ae85e02a9153662d4e8899e39782c2861dbd5d5d5eb3d408dd4a86a541525"
+      sha256 "7db1414f94ede307456b7b17de8bf8266b53d6fc60d12a387db336d7f8591eda"
       qtversion = 5
     end
   else
