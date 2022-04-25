@@ -2,7 +2,7 @@ cask "mate-translate" do
   version "8.1.3,3040"
   sha256 :no_check
 
-  url "https://gikken.co/mate/MateTranslate.zip",
+  url "https://gikken.co/mate/MateTranslate.dmg",
       verified: "gikken.co/mate/"
   name "Mate Translate"
   desc "Select text in any app and translate it"
