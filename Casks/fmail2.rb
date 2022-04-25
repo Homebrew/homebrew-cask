@@ -1,4 +1,5 @@
 cask "fmail2" do
+  # note: "2" is not a version number, but an intrinsic part of the product name
   version "1.0.1,7"
   sha256 "1925e18ea288b710ad286596140d2a4379c8a1ef5e6bfbea87c3eef91e0bb033"
 
