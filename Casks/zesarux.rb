@@ -4,12 +4,13 @@ cask "zesarux" do
 
   url "https://github.com/chernandezba/zesarux/releases/download/ZEsarUX-#{version}/ZEsarUX_macos-#{version}.dmg"
   name "ZEsarUX"
-  desc "ZX Second-Emulator And Released for UniX"
+  desc "ZX machines emulator"
   homepage "https://github.com/chernandezba/zesarux"
 
   livecheck do
     url :url
-    regex(/^ZEsarUX-?(\d+(?:\.\d+)+)$/i)
+    strategy :github_latest
+    regex(/href=.*?ZEsarUX[._-]macos[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "ZEsarUX.app"
