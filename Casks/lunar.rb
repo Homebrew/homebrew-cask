@@ -8,7 +8,7 @@ cask "lunar" do
   homepage "https://lunar.fyi/"
 
   livecheck do
-    url "https://static.lunar.fyi/appcast.xml"
+    url "https://files.lunar.fyi/appcast2.xml"
     strategy :sparkle
   end
 
