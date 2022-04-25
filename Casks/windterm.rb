@@ -4,7 +4,7 @@ cask "windterm" do
 
   url "https://github.com/kingToolbox/WindTerm/releases/download/#{version}/WindTerm_#{version}_Mac_Portable_x86_64.dmg"
   name "WindTerm"
-  desc "This is a professional cross-platform SSH/Sftp/Shell/Telnet/Serial terminal"
+  desc "SSH/SFTP/Shell/Telnet/Serial terminal"
   homepage "https://github.com/kingToolbox/WindTerm"
 
   livecheck do
@@ -18,7 +18,7 @@ cask "windterm" do
   app "WindTerm.app"
 
   zap trash: [
-    "~/Library/Saved Application State/KingToolbox.WindTerm.savedState",
     "~/Library/Preferences/KingToolbox.WindTerm.plist",
+    "~/Library/Saved Application State/KingToolbox.WindTerm.savedState",
   ]
 end
