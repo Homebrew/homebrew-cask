@@ -1,6 +1,6 @@
 cask "agenda" do
-  version "14.0.3,222"
-  sha256 "27aa859011f214be3e20e42ba7a5db3c0954f4286f1ab42dc20f95cbf9e9557a"
+  version "14.0.4,224"
+  sha256 "f04bc3026336363788bdeb0c882eb60c39557f5246703f3e8717d4e276aa4bf6"
 
   url "https://downloads.agenda.com/Agenda_#{version.csv.first}.zip"
   name "Agenda"

@@ -1,8 +1,8 @@
 cask "imgotv" do
-  version "6.4.4"
-  sha256 "e58eea277418b7353adb338e81de64f9ab2767f3e5f98fb7e75553f9599ca52c"
+  version "6.4.6_1"
+  sha256 "af68f7ec41444eb274ce7bc4d8e2c6b39b36f2d20b8299d507b0a3cd41e1b967"
 
-  url "https://download.imgo.tv/app/mac/#{version}/mgtv-mango-#{version.major_minor_patch}.dmg",
+  url "https://download.imgo.tv/app/mac/#{version}/mgtv-mango.dmg",
       verified: "download.imgo.tv/"
   name "芒果TV"
   desc "Mango TV video app"
@@ -11,20 +11,17 @@ cask "imgotv" do
   livecheck do
     url "https://pcconf.api.mgtv.com/getPcDownloadUrl?source=mango2"
     strategy :header_match
-    regex(%r{/v?(\d+(?:\.\d+)+)/mgtv[._-]mango[._-]v?\d+(?:\.\d+)*\.dmg}i)
+    regex(%r{/app/mac/(\d+(?:[._]\d+)+)/mgtv[._-]mango\.dmg}i)
   end
 
-  auto_updates true
   depends_on macos: ">= :yosemite"
 
   app "芒果TV.app"
 
   zap trash: [
-    "~/Library/Caches/com.hunantv.LaunchAtLoginHelper",
-    "~/Library/Caches/com.hunantv.osx.imgotv",
-    "~/Library/Caches/Imgotv-Mac",
-    "~/Library/Logs/Imgotv-Mac",
-    "~/Library/Preferences/com.hunantv.osx.imgotv.plist",
-    "~/Library/Saved Application State/com.hunantv.osx.imgotv.savedState",
+    "~/Library/Caches/com.mgtv.pcclientx",
+    "~/Library/Containers/com.mgtv.MGTV-macOS",
+    "~/Library/Preferences/com.mgtv.pcclientx.plist",
+    "~/Library/Saved Application State/com.mgtv.pcclientx.savedState",
   ]
 end
