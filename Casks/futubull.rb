@@ -1,6 +1,3 @@
-# typed: false
-# frozen_string_literal: true
-
 cask "futubull" do
   version "12.4.2308"
   sha256 "e821db2331c6bac8ba2c12773ae164be65af3be801d6821923f120331224a291"
@@ -13,12 +10,7 @@ cask "futubull" do
 
   livecheck do
     url "https://www.futunn.com/download/history?client=11"
-    strategy :page_match do |page|
-      match = page.match(/FTNNForMac[._-]v?(\d+(?:\.\d+)+)[._-]Website.*?\.dmg/i)
-      next if match.blank?
-
-      (match[1]).to_s
-    end
+    regex(/FTNNForMac[._-]v?(\d+(?:\.\d+)+)[._-]Website\.dmg/i)
   end
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
