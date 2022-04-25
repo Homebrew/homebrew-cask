@@ -1,6 +1,6 @@
 cask "visual-paradigm-ce" do
-  version "16.3,20220401"
-  sha256 "02d096650d862fa8de29078b77ae48e7055e5c434c8df2f800691953445a8674"
+  version "16.3,20220422"
+  sha256 "2939344c19292570764ad306c794329f0e830e3fb2faa2a5e8380b7c9f971b0f"
 
   url "https://www.visual-paradigm.com/downloads/vpce/Visual_Paradigm_CE_#{version.csv.first.dots_to_underscores}_#{version.csv.second}_OSX_WithJRE.dmg"
   name "Visual Paradigm Community Edition"
