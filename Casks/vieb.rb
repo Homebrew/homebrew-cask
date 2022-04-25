@@ -1,6 +1,3 @@
-# typed: false
-# frozen_string_literal: true
-
 cask "vieb" do
   version "7.2.0"
   sha256
@@ -16,7 +13,7 @@ cask "vieb" do
   url "https://github.com/Jelmerro/Vieb/releases/download/#{version}/Vieb-#{version}-#{arch}mac.zip",
       verified: "https://github.com/Jelmerro/Vieb"
   name "Vieb"
-  desc "Vim Inspired Electron Browser - Vim bindings for the web by design"
+  desc "Vim Inspired Electron Browser"
   homepage "https://vieb.dev/"
 
   app "Vieb.app"
