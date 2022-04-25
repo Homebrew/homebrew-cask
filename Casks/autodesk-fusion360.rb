@@ -16,7 +16,7 @@ cask "autodesk-fusion360" do
     "com.autodesk.dls.streamer.scriptapp.Autodesk-Fusion-360",
   ],
             script: {
-              executable: "#{staged_path}/Right-click > Open to Install.app/Contents/MacOS/streamer",
+              executable: "#{staged_path}/Install Autodesk Fusion 360.app/Contents/MacOS/streamer",
               args:       [
                 "--process", "uninstall",
                 "--appid", "73e72ada57b7480280f7a6f4a289729f",
