@@ -5,7 +5,7 @@ cask "remnote" do
   url "https://download.remnote.io/RemNote-#{version}.dmg"
   name "RemNote"
   desc "Spaced-repetition powered note-taking tool"
-  homepage "https://www.remnote.io/"
+  homepage "https://www.remnote.com/"
 
   livecheck do
     url "https://s3.amazonaws.com/download.remnote.io/latest-mac.yml"
