@@ -1,6 +1,6 @@
 cask "metaz" do
-  version "1.0.1"
-  sha256 "102a57e1e0553149a3075aa68bfb8adf5c037178ceb3e04ee7db9a2091439747"
+  version "1.0.2"
+  sha256 "f5192f0554292a30b5ed541a380d9b597bdd4dc64d8e7d5e97eef8c35041f452"
 
   url "https://github.com/griff/metaz/releases/download/v#{version}/MetaZ-#{version}.zip",
       verified: "github.com/griff/metaz/"
