@@ -9,7 +9,7 @@ cask "radix-wallet" do
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?/Radix-Wallet-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/Radix-Wallet[._-]v?(\d+(?:\.\d+)*)\.dmg}i)
   end
 
   app "Radix Wallet.app"
