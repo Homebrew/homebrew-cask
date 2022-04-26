@@ -2,8 +2,7 @@ cask "opencore-configurator" do
   version "2.60.0.1"
   sha256 :no_check
 
-  url "https://mackie100projects.altervista.org/apps/opencoreconf/download-new-build.php?version=last",
-      referer:    "https://mackie100projects.altervista.org/"
+  url "https://mackie100projects.altervista.org/apps/opencoreconf/download-new-build.php?version=last"
   name "OpenCore Configurator"
   desc "OpenCore EFI bootloader configuration helper"
   homepage "https://mackie100projects.altervista.org/opencore-configurator/"
