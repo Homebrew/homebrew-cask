@@ -9,7 +9,6 @@ cask "radix-wallet" do
 
   livecheck do
     url :homepage
-    strategy :page_match
     regex(%r{href=.*?/Radix-Wallet-(\d+(?:\.\d+)*)\.dmg}i)
   end
 
