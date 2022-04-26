@@ -8,14 +8,9 @@ cask "lunar" do
   homepage "https://lunar.fyi/"
 
   livecheck do
+    # The sparkle strategy cannot be used because we need to skip alpha releases in the appcast
     url "https://static.lunar.fyi/appcast2.xml"
-    strategy :sparkle do |item|
-      # Skip alpha/beta
-      match = item.url.match(%r{/releases/Lunar-(\d+(?:\.\d+)*)\.dmg}i)
-      next if match.blank?
-
-      item.short_version.to_s
-    end
+    regex(/url=.*?Lunar[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   auto_updates true
