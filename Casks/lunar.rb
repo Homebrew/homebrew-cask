@@ -11,10 +11,10 @@ cask "lunar" do
     url "https://static.lunar.fyi/appcast2.xml"
     strategy :sparkle do |item|
       # Skip alpha/beta
-      match = item.url.match(%r{/releases\/Lunar-(\d+(?:\.\d+)*)\.dmg}i)
+      match = item.url.match(%r{/releases/Lunar-(\d+(?:\.\d+)*)\.dmg}i)
       next if match.blank?
-      
-      "#{match[1]}"
+
+      item.short_version.to_s
     end
   end
 
