@@ -12,6 +12,11 @@ cask "linkliar" do
   desc "Link-Layer MAC spoofing GUI for macOS"
   homepage "https://github.com/halo/LinkLiar"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "LinkLiar.app"
 
   uninstall delete:    [
