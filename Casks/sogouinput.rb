@@ -1,8 +1,8 @@
 cask "sogouinput" do
-  version "630a,1642071509"
-  sha256 "2eb06a28d1ebeb223f7e63a27c4ee4bb81c4f9e42f7845bad80f7ecf84d38711"
+  version "650b,1649731856"
+  sha256 "84eed725abe26faa183f66281aab64f28b5b2c766863fe037830bf3ae5ce8636"
 
-  url "http://cdn2.ime.sogou.com/dl/index/#{version.csv.second}/sogou_mac_#{version.csv.first}.zip"
+  url "http://cdn2.ime.sogou.com/dl/gzindex/#{version.csv.second}/sogou_mac_#{version.csv.first}.zip"
   name "Sogou Input Method"
   name "搜狗输入法"
   desc "Input method supporting full and double spelling"
