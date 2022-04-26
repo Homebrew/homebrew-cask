@@ -7,6 +7,11 @@ cask "meetingbar" do
   desc "Shows the next meeting in the menu bar"
   homepage "https://github.com/leits/MeetingBar"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :catalina"
 
   app "MeetingBar.app"
