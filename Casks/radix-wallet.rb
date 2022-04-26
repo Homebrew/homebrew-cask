@@ -14,4 +14,10 @@ cask "radix-wallet" do
   end
 
   app "Radix Wallet.app"
+
+  zap trash: [
+    "~/Library/Application Support/radix-olympia-desktop-wallet",
+    "~/Library/Preferences/com.radixdlt.olympia-wallet.plist",
+    "~/Library/Saved Application State/com.radixdlt.olympia-wallet.savedState",
+  ]
 end
