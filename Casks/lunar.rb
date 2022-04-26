@@ -8,10 +8,12 @@ cask "lunar" do
   homepage "https://lunar.fyi/"
 
   livecheck do
-    url "https://files.lunar.fyi/appcast2.xml"
-    strategy :sparkle
+    url "https://static.lunar.fyi/appcast2.xml"
+    strategy :sparkle do |item|
       # Skip alpha/beta
       next if item.channel.present?
+      "#{item.short_version}"
+    end
   end
 
   auto_updates true
