@@ -1,5 +1,5 @@
 cask "redisinsight" do
-  version "2.0.5"
+  version "2.0.6"
   sha256 :no_check
 
   url "https://download.redisinsight.redis.com/latest/RedisInsight-v2-mac-x64.dmg"
