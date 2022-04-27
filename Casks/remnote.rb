@@ -1,11 +1,12 @@
 cask "remnote" do
-  version "1.5.3"
-  sha256 "7e1fee3745c3daa1ccc5a5863c5dc99305262bd37c03547f1bb238cb6f80bdab"
+  version "1.7.6"
+  sha256 "2dd23f3cdc19daf9a03531aebd7e3b6ecac46a86322ab4904d2ee040d9ce4b96"
 
-  url "https://download.remnote.io/RemNote-#{version}.dmg"
+  url "https://download.remnote.io/RemNote-#{version}.dmg",
+      verified: "remnote.io"
   name "RemNote"
   desc "Spaced-repetition powered note-taking tool"
-  homepage "https://www.remnote.io/"
+  homepage "https://www.remnote.com/"
 
   livecheck do
     url "https://s3.amazonaws.com/download.remnote.io/latest-mac.yml"
