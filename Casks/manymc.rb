@@ -1,6 +1,6 @@
 cask "manymc" do
-  version "0.0.8"
-  sha256 "6d319f765c470275a6954220262022a2975a9a457ff7ec613517e2743ae3912c"
+  version "0.0.9"
+  sha256 "62ae45ac6475102304b141976b730b34957c73359982ae58938546d522c12211"
 
   url "https://github.com/MinecraftMachina/ManyMC/releases/download/v#{version}/ManyMC.zip"
   name "ManyMC"
