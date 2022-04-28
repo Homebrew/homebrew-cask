@@ -1,6 +1,6 @@
 cask "brewlet" do
-  version "1.6"
-  sha256 "5bde803b2247962b85e768cc64f1aac5ffa3e5641cfaf09e9cb277a557cd0941"
+  version "1.7"
+  sha256 "dad90df09f58d4089e0b7591dc2b721ef6108540664dad016a5775f118a574f5"
 
   url "https://github.com/zkokaja/Brewlet/releases/download/v#{version}/Brewlet.zip"
   name "Brewlet"
