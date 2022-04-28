@@ -1,6 +1,6 @@
 cask "semeru-jdk-open" do
-  version "17.0.2+8,openj9-0.30.0"
-  sha256 "4a461598e128687994265e9168d3989635807cbfa3074c611b61986216b04b3f"
+  version "18.0.1+10,openj9-0.32.0"
+  sha256 "07c06c863324870d0ad9bd34df952c1d88e8d8834b9e60364eb027e2bfba6369"
 
   url "https://github.com/ibmruntimes/semeru#{version.major}-binaries/releases/download/jdk-#{version.csv.first}_#{version.csv.second}/ibm-semeru-open-jdk_x64_mac_#{version.csv.first.tr("+", "_")}_#{version.csv.second}.pkg",
       verified: "github.com/ibmruntimes/semeru#{version.major}-binaries/"
