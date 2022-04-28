@@ -8,7 +8,7 @@ cask "popo" do
   homepage "https://popo.netease.com/"
 
   livecheck do
-    url "http://http.popo.netease.com:8080/api/open/jsonp/check_version?device=4"
+    url "https://popo.netease.com/api/open/jsonp/check_version?device=4&callback="
     regex(/"version"\s*:\s*"(\d+(?:\.\d+)+)"/i)
   end
 
