@@ -4,7 +4,7 @@ cask "ords" do
 
   url "https://download.oracle.com/otn_software/java/ords/ords-#{version}.zip"
   name "sqlcl"
-  desc "Oracle REST Data Services (ORDS) bridges HTTPS and your Oracle Database. A mid-tier Java application, ORDS provides a Database Management REST API, SQL Developer Web, a PL/SQL Gateway, SODA for REST, and the ability to publish RESTful Web Services for interacting with the data and stored procedures in your Oracle Database."
+  desc "Oracle REST Data Services provides REST services for your Oracle Database"
   homepage "https://www.oracle.com/rest"
 
   livecheck do
@@ -16,6 +16,6 @@ cask "ords" do
 
   caveats do
     depends_on_java "11+"
-    path_environment_variable "#{staged_path}/ords/bin"
+    path_environment_variable "#{staged_path}/bin"
   end
 end
