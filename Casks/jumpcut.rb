@@ -1,6 +1,6 @@
 cask "jumpcut" do
-  version "0.75"
-  sha256 "170c669ae3dffdf029434412eb6ec5d733905583ad7ad72120179b5af3615c1a"
+  version "0.80"
+  sha256 "a9bfdf8c01d641f0185eda1889b59ed6045505f4e757bf7180479d45e167d833"
 
   url "https://github.com/snark/jumpcut/releases/download/v#{version}/Jumpcut-#{version}.tar.bz2",
       verified: "github.com/snark/jumpcut/"
