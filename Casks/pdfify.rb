@@ -1,6 +1,6 @@
 cask "pdfify" do
-  version "3.3.5-144"
-  sha256 "59077bb1e07e8c330cc455c99f6910ac6efe849f93c7918acd67eca40f97eb70"
+  version "3.4-154"
+  sha256 "493a9b0919d91b5ebb7017cc3fdc7fa83de53c9af5680b6a7ba1516ce6c38c71"
 
   url "https://pdfify.app/get/cask/download/macos/PDFify-#{version}.zip"
   name "PDFify"
