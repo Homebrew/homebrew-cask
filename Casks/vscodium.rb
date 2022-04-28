@@ -2,6 +2,7 @@ cask "vscodium" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
   version "1.66.2"
+
   if Hardware::CPU.intel?
     sha256 "7163ee27353cba1d8477da3a39001db0c67a71bef19799af3e16ff9367c93e10"
   else
