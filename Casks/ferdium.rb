@@ -12,7 +12,7 @@ cask "ferdium" do
     url "https://github.com/ferdium/ferdium-app/releases/download/v#{version}/Ferdium-#{version}#{arch}.dmg",
         verified: "github.com/ferdium/ferdium-app/"
     name "Ferdium"
-    desc "The hard-fork of @getferdi, adding awesome features and removing the unwanted owner."
+    desc "Multi-platform multi-messaging app"
     homepage "https://ferdium.org/"
 
     livecheck do
@@ -39,4 +39,4 @@ cask "ferdium" do
       "~/Library/Preferences/com.ferdium.ferdium-app.plist",
       "~/Library/Saved Application State/com.ferdium.ferdium-app.savedState",
     ]
-  end
+end
