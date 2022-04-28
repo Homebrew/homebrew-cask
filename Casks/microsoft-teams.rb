@@ -18,9 +18,9 @@ cask "microsoft-teams" do
   pkg "Teams_osx.pkg"
 
   uninstall pkgutil:   [
-              "com.microsoft.teams",
-              "com.microsoft.MSTeamsAudioDevice"
-            ],
+    "com.microsoft.teams",
+    "com.microsoft.MSTeamsAudioDevice",
+  ],
             launchctl: "com.microsoft.teams.TeamsUpdaterDaemon",
             delete:    [
               "/Library/Logs/Microsoft/Teams",
