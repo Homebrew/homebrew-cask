@@ -14,7 +14,7 @@ cask "powerpanel" do
       match = page[%r{href=.*?/PPP_Mac_v(\d+(?:.\d+)*)\.dmg}i, 1]
       next if match.blank?
 
-      (match[1]).to_s
+      match
     end
   end
 
