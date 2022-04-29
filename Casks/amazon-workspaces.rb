@@ -1,6 +1,6 @@
 cask "amazon-workspaces" do
   version "rolling"
-  sha256 "6f4f61172dc62b75cb1de3f8a5afbc2df691ff5326c1c69bcaea4f59d80a6cc3"
+  sha256 :no_check
 
   url "https://d2td7dqidlhjx7.cloudfront.net/prod/global/osx/WorkSpaces.pkg",
       verified: "d2td7dqidlhjx7.cloudfront.net/prod/global/osx/"
