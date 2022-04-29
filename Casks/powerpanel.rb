@@ -11,10 +11,10 @@ cask "powerpanel" do
   livecheck do
     url :homepage
     strategy :page_match do |page|
-      match = page[%r{href=.*?/ppp_macos_(\d+(?:_\d+)*)\.dmg}i, 1]
+      match = page[%r{href=.*?/PPP_Mac_v(\d+(?:.\d+)*)\.dmg}i, 1]
       next if match.blank?
 
-      match.tr("_", ".")
+      (match[1]).to_s
     end
   end
 
