@@ -1,11 +1,11 @@
 cask "google-chat-electron" do
-  version "2.15.0"
+  version "2.15.1"
 
   if Hardware::CPU.intel?
-    sha256 "a757dc557990f32a9be8b21fd81995748e8a2ecc56c772681a3cb427000986fb"
+    sha256 "671b42125a6100fdf64b07ecde1cd91d8ba1b3caf5530746f96cf4621516eee3"
     arch = "darwin-x64"
   else
-    sha256 "aadb3e0db0053330fa0543556781d28dc6ca4e32e0a5060b18778e6d5c346cbd"
+    sha256 "cf490d915018e12cfaca061cb0aef0ac013600b8c112b06a6219cf377268e1fb"
     arch = "darwin-arm64"
   end
 
