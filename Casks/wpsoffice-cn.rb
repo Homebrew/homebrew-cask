@@ -1,5 +1,6 @@
 cask "wpsoffice-cn" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
+
   version "4.2.1,6777"
 
   if Hardware::CPU.intel?
