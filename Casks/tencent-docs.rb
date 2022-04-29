@@ -1,7 +1,7 @@
 cask "tencent-docs" do
   arch = Hardware::CPU.intel? ? "X64" : "Arm64"
 
-  version "2.2.35"
+  version "2.2.41"
   sha256 :no_check
 
   url "https://down.qq.com/qqweb/mac_docs/MacTencentDocs#{arch}.dmg"
