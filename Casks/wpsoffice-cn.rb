@@ -1,18 +1,15 @@
 cask "wpsoffice-cn" do
-  version "4.2.0,6717"
-
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  version "4.2.1,6777"
 
   if Hardware::CPU.intel?
-    sha256 "0e68e797253863fff96fc6f022657dab4914731ddaf4e8f32799be3bb6483a85"
-    url "https://package.mac.wpscdn.cn/mac_wps_pkg/#{version.csv.first}/WPS_Office_#{version.csv.first}(#{version.csv.second})_#{arch}.dmg",
-        verified: "package.mac.wpscdn.cn/mac_wps_pkg/"
+    sha256 "307e70de26a8d0e343107c1b36017b95b3cdb325025b4dd705e0c744d419e3e5"
   else
-    sha256 "fc8b71c6a330792aa7c7d36ded9ee0636f3a3bd786d132840398e1ab56bdcf5f"
-    url "https://package.mac.wpscdn.cn/mac_wps_pkg/SilentUpdate/WPS_Office_#{version.csv.first}_#{version.csv.second}_#{arch}.dmg",
-        verified: "package.mac.wpscdn.cn/mac_wps_pkg/"
+    sha256 "41982ab000f8c5bc6c17c62991b7ce133fd774cbd02a97d0d864007b8928dfed"
   end
 
+  url "https://package.mac.wpscdn.cn/mac_wps_pkg/#{version.csv.first}/WPS_Office_#{version.csv.first}(#{version.csv.second})_#{arch}.dmg",
+        verified: "package.mac.wpscdn.cn/mac_wps_pkg/"
   name "WPS Office"
   desc "All-in-one office service platform in Chinese"
   homepage "https://mac.wps.cn/"
@@ -25,6 +22,7 @@ cask "wpsoffice-cn" do
     end
   end
 
+  auto_updates true
   conflicts_with cask: "wpsoffice"
   depends_on macos: ">= :sierra"
 
