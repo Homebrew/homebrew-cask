@@ -7,6 +7,8 @@ cask "adrive" do
   name "Aliyundrive"
   desc "阿里云盘"
   homepage "https://www.aliyundrive.com/"
+  
+  auto_updates true
 
   app "aDrive.app"
 
