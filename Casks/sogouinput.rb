@@ -18,6 +18,8 @@ cask "sogouinput" do
     end
   end
 
+  auto_updates true
+
   installer manual: "sogou_mac_#{version.csv.first}.app"
 
   uninstall delete:    [
