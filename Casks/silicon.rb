@@ -7,9 +7,8 @@ cask "silicon" do
   desc "Identify Intel-only apps"
   homepage "https://github.com/DigiDNA/Silicon"
 
-  depends_on macos: ">= :high_sierra"
-
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Silicon.app"
 
