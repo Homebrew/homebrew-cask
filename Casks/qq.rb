@@ -12,6 +12,8 @@ cask "qq" do
     regex(/QQ[._-]v?(\d+(?:[._]\d+)+([._-]EXP)?)\.dmg/i)
   end
 
+  auto_updates true
+
   app "QQ.app"
 
   uninstall quit: "com.tencent.qq"

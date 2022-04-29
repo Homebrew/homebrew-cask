@@ -13,6 +13,8 @@ cask "mubu" do
     regex(/href=.*?Mubu[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  auto_updates true
+
   app "幕布.app"
 
   zap trash: [
