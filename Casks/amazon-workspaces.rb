@@ -1,15 +1,15 @@
 cask "amazon-workspaces" do
-  version "4.0.6.2177"
-  sha256 "3ff5cfdf6628c8a208d137f3319d563240948e83ce1534ff5661044fcb736442"
+  version "rolling"
+  sha256 "6f4f61172dc62b75cb1de3f8a5afbc2df691ff5326c1c69bcaea4f59d80a6cc3"
 
-  url "https://d2td7dqidlhjx7.cloudfront.net/prod/iad/osx/WorkSpaces_AllProducts_#{version.split(".")[-1]}.zip",
-      verified: "d2td7dqidlhjx7.cloudfront.net/prod/iad/osx/"
+  url "https://d2td7dqidlhjx7.cloudfront.net/prod/global/osx/WorkSpaces.pkg",
+      verified: "d2td7dqidlhjx7.cloudfront.net/prod/global/osx/"
   name "Amazon Workspaces"
   desc "Cloud native persistent desktop virtualization"
   homepage "https://clients.amazonworkspaces.com/"
 
   livecheck do
-    url "https://d2td7dqidlhjx7.cloudfront.net/prod/iad/osx/WorkSpacesAppCast_macOS_20171023.xml"
+    url "https://d2td7dqidlhjx7.cloudfront.net/prod/global/osx/WorkSpacesAppCast_macOS_20171023.xml"
     strategy :sparkle
   end
 
