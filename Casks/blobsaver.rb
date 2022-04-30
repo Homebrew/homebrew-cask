@@ -14,6 +14,11 @@ cask "blobsaver" do
   desc "GUI for automatically saving SHSH blobs"
   homepage "https://github.com/airsquared/blobsaver"
 
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
+
   app "blobsaver.app"
 
   zap trash: "~/Library/Preferences/airsquared.blobsaver.app.plist"
