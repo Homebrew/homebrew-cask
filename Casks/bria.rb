@@ -8,15 +8,5 @@ cask "bria" do
   desc "Softphone application"
   homepage "https://www.counterpath.com/bria-solo/"
 
-  livecheck do
-    url "https://www.counterpath.com/Bria#{version.major}forMac"
-    strategy :header_match do |headers|
-      match = headers["location"].match(/Bria[._-]v?(\d+(?:\.\d+)+)[_-](\d+)\.dmg/i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
-    end
-  end
-
   app "Bria.app"
 end
