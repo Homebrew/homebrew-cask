@@ -1,5 +1,5 @@
 cask "mx-power-gadget" do
-    version "1.2"
+    version "1.2,20220322"
     sha256 "702f6ee1e533334bd6ffa42c168b20ad4d39a4c9a197fd0ece7e4b196bfdb929"
   
     url "https://www.seense.com/menubarstats/mxpg/updateapp/mxpg.zip"
