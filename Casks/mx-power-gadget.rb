@@ -8,4 +8,9 @@ cask "mx-power-gadget" do
     homepage "https://www.seense.com/menubarstats/mxpg/"
   
     app "Mx Power Gadget.app"
+
+    zap trash: [
+        "~/Library/Caches/com.fabriceleyne.MxPowerGadget",
+        "~/Library/Preferences/com.fabriceleyne.MxPowerGadget.plist",
+      ]
   end
