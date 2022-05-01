@@ -8,9 +8,8 @@ cask "streamlabs-obs" do
   homepage "https://streamlabs.com/"
 
   livecheck do
-    url "https://streamlabs.com/streamlabs-desktop/download"
-    strategy :header_match
-    regex(/Streamlabs\+Desktop\+Setup\+(\d+(?:\.\d+)+)/i)
+    url "https://slobs-cdn.streamlabs.com/desktop-latest-mac.yml"
+    strategy :electron_builder
   end
 
   auto_updates true
