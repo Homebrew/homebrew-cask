@@ -1,12 +1,12 @@
 cask "steam-plus-plus" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "2.7.1"
+  version "2.7.2"
 
   if Hardware::CPU.intel?
-    sha256 "f33bbdc8c9463c02e31315a2522331e34a1b25931cbd0575b77459d916772b9d"
+    sha256 "f31fe7ecda1b84aca2cdeeabbb5fc1f3c8c533b1a1a2877ba3da5228068b4ce8"
   else
-    sha256 "96914c17dd50a3db1bc63435caff834cb1a805a2edaa9b7d36d8c333806d5bff"
+    sha256 "143a42787341bebf849a9ce754ba2758267b399a394adc016d398e7e81120355"
   end
 
   url "https://github.com/BeyondDimension/SteamTools/releases/download/#{version}/Steam++_macos_#{arch}_v#{version}.dmg",

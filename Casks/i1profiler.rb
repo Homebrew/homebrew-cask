@@ -10,7 +10,7 @@ cask "i1profiler" do
   homepage "https://www.xrite.com/service-support/downloads/I/i1Profiler-i1Publish_V#{version.major_minor_patch.dots_to_underscores}"
 
   livecheck do
-    url "http://www.xrite.com/Downloads/Autoupdate/i1profiler_mac_appcast.xml"
+    url "https://downloads.xrite.com/downloads/autoupdate/i1profiler_mac_appcast.xml"
     strategy :sparkle
   end
 
