@@ -8,10 +8,6 @@ cask "xemu" do
   desc "Original Xbox Emulator"
   homepage "https://xemu.app/"
 
-  livecheck do
-    url :url
-  end
-
   app "Xemu.app"
 
   zap trash: [
