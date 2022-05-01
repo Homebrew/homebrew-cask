@@ -6,6 +6,11 @@ cask "mx-power-gadget" do
     name "Mx Power Gadget"
     desc "Power management and monitoring for Apple Mx processors"
     homepage "https://www.seense.com/menubarstats/mxpg/"
+
+    livecheck do
+        url "https://www.seense.com/menubarstats/mxpg/updateapp/appcast.xml"
+        strategy :sparkle
+    end
   
     app "Mx Power Gadget.app"
 
