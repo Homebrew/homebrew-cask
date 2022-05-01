@@ -10,7 +10,7 @@ cask "jumpcut" do
 
   depends_on macos: ">= :el_capitan"
 
-  app "Jumpcut.app"
+  app "Applications/Jumpcut.app"
 
   zap trash: "~/Library/Preferences/net.sf.Jumpcut.plist"
 end
