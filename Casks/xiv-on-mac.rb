@@ -18,9 +18,9 @@ cask "xiv-on-mac" do
   app "XIV on Mac.app"
 
   zap trash: [
+    "~/Library/Application Support/XIV on Mac",
     "~/Library/Caches/dezent.XIV-on-Mac",
     "~/Library/HTTPStorages/dezent.XIV-on-Mac",
     "~/Library/Preferences/dezent.XIV-on-Mac.plist",
-    "~/Library/Application Support/XIV on Mac",
   ]
 end
