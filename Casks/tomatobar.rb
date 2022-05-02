@@ -8,4 +8,9 @@ cask "tomatobar" do
   homepage "https://github.com/ivoronin/TomatoBar"
 
   app "TomatoBar.app"
+
+  zap trash: [
+    "~/Library/Containers/com.github.ivoronin.TomatoBar",
+    "~/Library/Application Scripts/com.github.ivoronin.TomatoBar",
+  ]
 end
