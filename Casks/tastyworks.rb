@@ -6,7 +6,7 @@ cask "tastyworks" do
   name "tastyworks"
   desc "Desktop trading platform for the tastyworks brokerage"
   homepage "https://tastyworks.com/"
-  
+
   livecheck do
     skip "No version information available"
   end
