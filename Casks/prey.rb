@@ -1,6 +1,6 @@
 cask "prey" do
-  version "1.9.20"
-  sha256 "a4711594081030d00b4d860ec3d820246d453cce09d3b5f2a8e1ba2545b4a122"
+  version "1.9.23"
+  sha256 "005266d932d45fe20d10ec7659a8e143c9c7ec81dd7c95be03f371e5c3279d3b"
 
   url "https://downloads.preyproject.com/prey-client-releases/node-client/#{version}/prey-mac-#{version}-x64.pkg"
   name "Prey"
