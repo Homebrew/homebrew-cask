@@ -1,12 +1,12 @@
 cask "racket" do
   arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
-  version "8.4"
+  version "8.5"
 
   if Hardware::CPU.intel?
-    sha256 "35276b0aed6a9f9de3bca0a20064ce536520988e22e00161f0530d70b6c3c685"
+    sha256 "8569951152d4f75a2146c40858772ea89db7e9162a2459c6a674994b5584b77f"
   else
-    sha256 "b8d34491e98cea5e0562569b5b0267eab9d301d3524bdceb8dc3ec62754673ce"
+    sha256 "2c5893faccd33e2c8c4c48012b6b36a821f0006c3953736b37b879910ac94529"
   end
 
   url "https://mirror.racket-lang.org/installers/#{version}/racket-#{version}-#{arch}-macosx-cs.dmg"
