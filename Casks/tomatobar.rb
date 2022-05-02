@@ -4,7 +4,7 @@ cask "tomatobar" do
 
   url "https://github.com/ivoronin/TomatoBar/releases/download/v#{version}/TomatoBar-v#{version}.zip"
   name "tomato-bar"
-  desc "🍅 World's neatest Pomodoro timer for menu bar"
+  desc "Menu bar pomodoro timer"
   homepage "https://github.com/ivoronin/TomatoBar"
 
   app "TomatoBar.app"
