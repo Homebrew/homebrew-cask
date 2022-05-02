@@ -4,7 +4,7 @@ cask "pushplaylabs-sidekick" do
 
   if Hardware::CPU.intel?
     version "98.20.1.19494,23ab524"
-    sha256 "8f8ad91fa00a5a58f9f02e243941232c59c52f525ef405d7406c46aa5a413efc"
+    sha256 "997a546da900f2e37e8248083874a99ad6805312deafd56cf3e5bc44555ba178"
   else
     version "98.20.1.19496,d1e91d7"
     sha256 "33e709bbba2c2bbbd77afe6f3116bc1846092c0d831acc1505aff03921047f17"
