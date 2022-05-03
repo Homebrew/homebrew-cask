@@ -1,6 +1,6 @@
 cask "gephi" do
-  version "0.9.4"
-  sha256 "0622a01d3bf6fc46441c438fdfc40f6cf7b4fab574d1a28d9c33795420e56cf1"
+  version "0.9.5"
+  sha256 "a0d9f63e7b385f6c19d5016dc16808253401fd09b3d143d4cb0894323c78a8b7"
 
   url "https://github.com/gephi/gephi/releases/download/v#{version}/gephi-#{version}-macos-x64.dmg",
       verified: "github.com/gephi/gephi/"
