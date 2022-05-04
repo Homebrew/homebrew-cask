@@ -4,7 +4,6 @@ cask "trader-workstation" do
 
   arch = Hardware::CPU.intel? ? "x64" : "arm"
   url "https://download2.interactivebrokers.com/installers/tws/latest/tws-latest-macosx-#{arch}.dmg"
-
   name "Trader Workstation"
   desc "Trading software"
   homepage "https://www.interactivebrokers.com/"
