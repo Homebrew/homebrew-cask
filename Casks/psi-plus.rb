@@ -10,7 +10,7 @@ cask "psi-plus" do
 
   livecheck do
     url "https://sourceforge.net/projects/psiplus/files/macOS/tehnick/"
-    regex(/Psi%2B[._-]?(\d+(?:\.\d+)*)[._-]?macOS.*-x86_64\.dmg/i)
+    regex(/Psi%2B[._-]?(\d+(?:\.\d+)+)[._-]?macOS.*-x86_64\.dmg/i)
   end
 
   depends_on macos: ">= :catalina"
