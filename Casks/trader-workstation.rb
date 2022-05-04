@@ -1,5 +1,5 @@
 cask "trader-workstation" do
-  version "10.15.1f"
+  version "10.15.1g"
   sha256 :no_check
 
   arch = Hardware::CPU.intel? ? "x64" : "arm"
