@@ -5,10 +5,10 @@ cask "mplabx-ide" do
   url "https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/SoftwareTools/MPLABX-v#{version}-osx-installer.dmg"
   name "MPLab X IDE"
   desc "IDE for Microchip's microcontrollers and digital signal controllers"
-  homepage "https://www.microchip.com/mplab/mplab-x-ide"
+  homepage "https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-x-ide"
 
   livecheck do
-    url "https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide"
+    url :homepage
     regex(/href=.*?MPLABX[._-]v?(\d+(?:\.\d+)+)-osx-installer\.dmg/i)
   end
 
