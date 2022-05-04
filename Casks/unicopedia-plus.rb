@@ -1,6 +1,6 @@
 cask "unicopedia-plus" do
-  version "11.5.0"
-  sha256 "9f97f73270eb8ada943c056687b57511601aaf9596cdc7d9678102ac432d0991"
+  version "11.6.0"
+  sha256 "de355c6bc5e8dd51850f514e8fb8b326667eb1ac1d191f6303221b9d726c4936"
 
   url "https://github.com/tonton-pixel/unicopedia-plus/releases/download/v#{version}/unicopedia-plus-mac-universal-#{version}.dmg"
   name "Unicopedia Plus"
