@@ -8,8 +8,7 @@ cask "mplabx-ide" do
   homepage "https://www.microchip.com/mplab/mplab-x-ide"
 
   livecheck do
-    url "https://www.microchip.com/mplabx-ide-osx-installer"
-    strategy :header_match
+    url :stable
   end
 
   app "mplab_ide.app", target: "microchip/mplab_ide.app"
