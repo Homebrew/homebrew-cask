@@ -14,7 +14,6 @@ cask "kdenlive" do
   end
 
   depends_on macos: ">= :mojave"
-  depends_on arch: :intel
 
   app "kdenlive.app"
 
