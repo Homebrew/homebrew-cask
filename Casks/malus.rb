@@ -1,8 +1,8 @@
 cask "malus" do
-  version "3.0.3"
-  sha256 "54d1b34d5574ae18f8dc94bf88697c751e224824f96cbfe05ab55f4d58d8a945"
+  version "4.0.0"
+  sha256 "1d9f1952971480045885406795286405ffed0170d9923c7c58d1b86663900ae8"
 
-  url "https://download.getmalus.com/uploads/Malus_#{version.dots_to_underscores}.dmg"
+  url "https://download.getmalus.com/uploads/Malus#{version.dots_to_underscores}.dmg"
   name "Malus"
   desc "Proxy to help accessing various online media resources/services"
   homepage "https://getmalus.com/"

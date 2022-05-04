@@ -13,6 +13,8 @@ cask "kindle" do
     strategy :header_match
   end
 
+  auto_updates true
+
   app "Kindle.app"
 
   uninstall delete: "/Library/Logs/DiagnosticReports/Kindle_*.diag"

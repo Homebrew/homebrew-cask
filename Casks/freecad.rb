@@ -8,6 +8,11 @@ cask "freecad" do
   desc "3D parametric modeler"
   homepage "https://www.freecadweb.org/"
 
+  livecheck do
+    url "https://www.freecadweb.org/downloads.php"
+    regex(/href=.*?FreeCAD[._-]v?(\d+(?:\.\d+)+)-OSX-x86_64-conda\.dmg/i)
+  end
+
   conflicts_with cask: "homebrew/cask-versions/freecad-pre"
   depends_on macos: ">= :sierra"
 

@@ -1,6 +1,6 @@
 cask "element" do
-  version "1.10.9"
-  sha256 "11076e2f4d50a7416f546edd8b335f1394632744f155a2069d77d10f7a5b524c"
+  version "1.10.11"
+  sha256 "19bc23dc6e1c5857d024c39c9960bab1960af0990d4d7c77c16cc41f8969db97"
 
   url "https://packages.riot.im/desktop/install/macos/Element-#{version}-universal.dmg",
       verified: "packages.riot.im/desktop/"

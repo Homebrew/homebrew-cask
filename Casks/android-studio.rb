@@ -21,6 +21,7 @@ cask "android-studio" do
   end
 
   auto_updates true
+  conflicts_with cask: "android-studio-preview-beta"
 
   app "Android Studio.app"
 

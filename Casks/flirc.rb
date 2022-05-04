@@ -1,13 +1,14 @@
 cask "flirc" do
-  version "3.26.0"
-  sha256 "21732f74006a0701619572d9be25e2aec816498bc2bd7d86420dad73fcadb08f"
+  version "3.26.3"
+  sha256 "fb733eb216e7b7ed1369d4261222b8bb2110b5e4e38d984c9e7a368c2ced3096"
 
-  url "https://flirc.tv/software/flirc-usb/GUI/release/mac/Flirc-#{version}.dmg"
+  url "https://flirc.com/software/flirc-usb/GUI/release/mac/Flirc-#{version}.dmg"
   name "Flirc"
-  homepage "https://flirc.tv/"
+  desc "IR USB receiver configurator"
+  homepage "https://flirc.com/"
 
   livecheck do
-    url "https://flirc.tv/software/release/gui/mac/appcast.xml"
+    url "https://flirc.com/software/release/gui/mac/appcast.xml"
     strategy :sparkle
   end
 

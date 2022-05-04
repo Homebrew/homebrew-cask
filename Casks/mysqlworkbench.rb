@@ -20,8 +20,8 @@ cask "mysqlworkbench" do
       skip "newer versions only available for Big Sur or higher"
     end
   else
-    version "8.0.28"
-    sha256 "bd50e64caee2ac6c0f0520fc34e107f3f77c8bcc6de6d85b7c948a696b247157"
+    version "8.0.29"
+    sha256 "7c84277e1b3d58c60cda5bb649ad601757e6c991be41de74ff3f38a78f426a53"
     url "https://cdn.mysql.com/Downloads/MySQLGUITools/mysql-workbench-community-#{version}-macos-x86_64.dmg"
 
     livecheck do

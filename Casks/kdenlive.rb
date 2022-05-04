@@ -1,6 +1,6 @@
 cask "kdenlive" do
-  version "21.12.3"
-  sha256 "91de570db84e62923b01b75a7ddc104fce9987d34173c0e60ea5a51eb05b054a"
+  version "22.04.0-1"
+  sha256 "1ae0331fd5c3ac0a5594ffedde26581e1b70c9444f676bdc7a40a74e96a556b2"
 
   url "https://cdn.download.kde.org/stable/kdenlive/#{version.major_minor}/macOS/kdenlive-#{version}.dmg",
       verified: "cdn.download.kde.org/stable/kdenlive/"
@@ -10,7 +10,7 @@ cask "kdenlive" do
 
   livecheck do
     url "https://kdenlive.org/en/download/"
-    regex(%r{stable/kdenlive/\d+(?:\.\d+)+/macOS/kdenlive-(\d+(?:\.\d+)+(?:\.\d+)+).dmg['"]?}i)
+    regex(/href=.*?kdenlive[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
   end
 
   depends_on macos: ">= :mojave"

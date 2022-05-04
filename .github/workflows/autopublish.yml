@@ -1,0 +1,30 @@
+name: Publish casks on schedule
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Once every hour
+    - cron: "*/60 * * * *"
+
+concurrency:
+  group: autopublish
+  cancel-in-progress: true
+
+jobs:
+  autopublish:
+    if: github.repository == 'Homebrew/homebrew-cask'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+
+      - name: Run automerge
+        env:
+          HOMEBREW_GITHUB_API_TOKEN: ${{secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN}}
+        run: |
+          brew pr-automerge --verbose \
+                            --publish \
+                            --tap homebrew/cask \
+                            --workflow=publish-commit-casks.yml \
+                            --without-labels="do not merge,new cask,automerge-skip"

@@ -1,16 +1,29 @@
 cask "shimonote" do
-  version "1.5.2"
-  sha256 "c0ea43cd66a7b9e2b0e081c769d2a3502e167f0712d5ae445d4ad6c6d4b4375c"
+  arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  url "https://assets.shimonote.com/lizard-desktop/static/%E7%9F%B3%E5%A2%A8%E6%96%87%E6%A1%A3-#{version}.dmg",
-      verified: "assets.shimonote.com/"
+  version "2.5.8,3a8635b"
+
+  if Hardware::CPU.intel?
+    sha256 "df0d218917c2ab3f0c10edafbd18804e8cafc92f752601d7e93198f79a816f3b"
+  else
+    sha256 "14570abd17f9aa077502e8af9b2e15a980657241714e2b7c5c9e533844493f14"
+  end
+
+  url "https://as.smvm.cn/panther/shimo/release/darwin/#{arch}/\%e7\%9f\%b3\%e5\%a2\%a8\%e6\%96\%87\%e6\%a1\%a3_v#{version.csv.first}-release.#{version.csv.second}_darwin-#{arch}.zip",
+      verified: "as.smvm.cn/panther/shimo/release/darwin/"
   name "Shimonote"
   desc "Document editor"
   homepage "https://shimo.im/"
 
   livecheck do
-    url "https://shimo.im/download"
-    regex(%r{/%E7%9F%B3%E5%A2%A8%E6%96%87%E6%A1%A3[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    url "https://as.smvm.cn/panther/shimo/release/darwin/#{arch}/shimo-mac.yml"
+    regex(/石墨文档[._-]v?(\d+(?:\.\d+)+)-release\.(\h+)_darwin-#{arch}\.zip/i)
+    strategy :electron_builder do |item|
+      match = item["path"].match(regex)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
+    end
   end
 
   app "石墨文档.app"

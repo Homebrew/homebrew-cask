@@ -1,6 +1,6 @@
 cask "neofinder" do
-  version "8.1"
-  sha256 "c3fb3e13a1d147e2b39ecae0d202afaad24cd7a9faeee4d6dc9814bfd697175a"
+  version "8.1.1"
+  sha256 "9df3263c3a04d8c205d3c82438df430807043e9b871b445a3979417c26b7c694"
 
   url "https://www.wfs-apps.de/updates/neofinder-mac.#{version}.zip",
       verified: "wfs-apps.de/"

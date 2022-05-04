@@ -1,12 +1,12 @@
 cask "goland" do
   arch = Hardware::CPU.intel? ? "" : "-aarch64"
 
-  version "2021.3.4,213.7172.22"
+  version "2022.1,221.5080.224"
 
   if Hardware::CPU.intel?
-    sha256 "623a6b11860861438e0fdc35b61fc14a4fe714fc4bef1affd599b286e676b34f"
+    sha256 "ec44455e83b8c8d85614b63815245a0dff984796a432e05801787c7f8474900b"
   else
-    sha256 "257582ff7dcf039360c96fa0ed7ab854c6940ce555a38356fec87f08e307fdfb"
+    sha256 "0506a817e35a80d3d776484a88bf4136628b589a8f5754833387a8dec99798d3"
   end
 
   url "https://download.jetbrains.com/go/goland-#{version.csv.first}#{arch}.dmg"

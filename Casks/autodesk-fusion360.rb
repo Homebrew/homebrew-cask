@@ -5,16 +5,19 @@ cask "autodesk-fusion360" do
 
   url "https://dl.appstreaming.autodesk.com/production/installers/Fusion%20360%20Client%20Downloader.dmg"
   name "Autodesk Fusion 360"
+  desc "Integrated CAD, CAM, CAE, and PCB software"
   homepage "https://www.autodesk.com/products/fusion-360"
 
-  installer script: "Right-click > Open to Install.app/Contents/MacOS/Fusion 360 Client Downloader"
+  installer script: {
+    executable: "#{staged_path}/Install Autodesk Fusion 360.app/Contents/MacOS/Fusion 360 Client Downloader",
+  }
 
   uninstall quit:   [
     "com.autodesk.fusion360",
     "com.autodesk.dls.streamer.scriptapp.Autodesk-Fusion-360",
   ],
             script: {
-              executable: "#{staged_path}/Right-click > Open to Install.app/Contents/MacOS/streamer",
+              executable: "#{staged_path}/Install Autodesk Fusion 360.app/Contents/MacOS/streamer",
               args:       [
                 "--process", "uninstall",
                 "--appid", "73e72ada57b7480280f7a6f4a289729f",

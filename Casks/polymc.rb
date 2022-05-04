@@ -1,6 +1,6 @@
 cask "polymc" do
-  version "1.1.1"
-  sha256 "5f40a9db742b1910825f88980c24e5bb40673b127e5794a4d09729356e5a9778"
+  version "1.2.1"
+  sha256 "572e27b3efff69296db49f9191c54a603fb2498ad997219cbff8ddbea8e282f1"
 
   url "https://github.com/PolyMC/PolyMC/releases/download/#{version}/PolyMC-macOS-#{version}.tar.gz",
       verified: "github.com/PolyMC/PolyMC/"
@@ -8,7 +8,7 @@ cask "polymc" do
   desc "Minecraft launcher"
   homepage "https://polymc.org/"
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "PolyMC.app"
 

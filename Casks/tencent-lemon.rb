@@ -1,6 +1,6 @@
 cask "tencent-lemon" do
-  version "5.0.6"
-  sha256 "9e8e47a19e564335d18a59ca22db367199b35bf05e8626d71f29d3ab91533347"
+  version "5.0.7"
+  sha256 "15b2d94dd35532a11c8e92157b87eda0161cac875a3a1528229be1e99cab0aa4"
 
   url "https://pm.myapp.com/invc/xfspeed/qqpcmgr/module_update/Lemon#{version}.dmg",
       verified: "pm.myapp.com/invc/xfspeed/qqpcmgr/"
@@ -12,6 +12,8 @@ cask "tencent-lemon" do
     url "https://lemon.guanjia.qq.com/latest/package"
     regex(/"latest":{"version":"(\d+(?:\.\d+)+)"/i)
   end
+
+  auto_updates true
 
   app "Tencent Lemon.app"
 

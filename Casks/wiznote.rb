@@ -1,12 +1,12 @@
 cask "wiznote" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "0.1.71"
+  version "0.1.73"
 
   if Hardware::CPU.intel?
-    sha256 "99ddca79257f9a38fd764b8f03fe7b5e0c23379d11995c4f8a63bf8cef2bd746"
+    sha256 "1320008361d58e5857df03add6e9c74897b26c98da06c2f0fa1e110e20d2825c"
   else
-    sha256 "ef3fcf1153647cbc2acea8c75d78371142df3ed8a5147bb9f244b45d21c6ea3e"
+    sha256 "69218a60763f190ccc38b8b27419af1276f71ba939edd2c365b7d44b45c91beb"
   end
 
   url "https://get.wiz.cn/x/wiznote-desktop-#{version}-mac-#{arch}.dmg"
