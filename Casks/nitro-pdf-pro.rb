@@ -10,7 +10,6 @@ cask "nitro-pdf-pro" do
 
   livecheck do
     url "https://pdfpen.com/pdfpenpro/download_thanks/"
-    strategy :page_match
     regex(/href=.*?Retail_(\d+(?:\.\d+)*)\.dmg/i)
   end
 
