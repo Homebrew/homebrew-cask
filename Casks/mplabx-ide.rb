@@ -8,7 +8,8 @@ cask "mplabx-ide" do
   homepage "https://www.microchip.com/mplab/mplab-x-ide"
 
   livecheck do
-    url :stable
+    url "https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide"
+    regex(/href=.*?MPLABX[._-]v?(\d+(?:\.\d+)+)-osx-installer\.dmg/i)
   end
 
   app "mplab_ide.app", target: "microchip/mplab_ide.app"
