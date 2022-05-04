@@ -17,4 +17,10 @@ cask "nitro-pdf-pro" do
   depends_on macos: ">= :sierra"
 
   app "Nitro PDF Pro.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.gonitro.NitroPDFPro.retail",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.gonitro.nitropdfpro.retail.sfl2",
+    "~/Library/Containers/com.gonitro.NitroPDFPro.retail",
+  ]
 end
