@@ -24,7 +24,7 @@ cask "camo-studio" do
     "/Library/LaunchDaemons/com.reincubate.macos.cam.PrivilegedHelper.plist",
     "/Library/PrivilegedHelperTools/com.reincubate.macos.cam.PrivilegedHelper",
   ],
-            rmdir: "/Library/Application Support/Reincubate"
+            rmdir:  "/Library/Application Support/Reincubate"
 
   zap trash: [
     "~/Library/Application Support/CrashReporter/Camo Studio",
