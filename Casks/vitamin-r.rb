@@ -24,6 +24,8 @@ cask "vitamin-r" do
   zap trash: [
     "~/Library/Application Support/Vitamin-R",
     "~/Library/Caches/net.publicspace.dist.vitaminr#{version.major}",
+    "~/Library/HTTPStorages/net.publicspace.dist.vitaminr#{version.major}",
+    "~/Library/HTTPStorages/net.publicspace.dist.vitaminr#{version.major}.binarycookies",
     "~/Library/Preferences/net.publicspace.dist.vitaminr#{version.major}.plist",
   ]
 end
