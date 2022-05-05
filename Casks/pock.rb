@@ -9,7 +9,6 @@ cask "pock" do
 
   livecheck do
     url :homepage
-    strategy :page_match
     regex(/Latest version: (\d+(?:\.\d+)*(?:-\d+)?)/i)
   end
 

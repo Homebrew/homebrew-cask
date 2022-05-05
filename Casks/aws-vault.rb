@@ -1,13 +1,13 @@
 cask "aws-vault" do
   arch = Hardware::CPU.intel? ? "amd64" : "arm64"
 
-  version "6.5.0"
+  version "6.6.0"
 
   url "https://github.com/99designs/aws-vault/releases/download/v#{version}/aws-vault-darwin-#{arch}.dmg"
   if Hardware::CPU.intel?
-    sha256 "14ded0a4911b23c95211b32945c4a48e7d4b71d0f0b6466902985636f6b8558d"
+    sha256 "eeb7b8dbdba7bb18fcf32e1c422683d5fd444c6c3b5eb41e760bbfcb2036df6c"
   else
-    sha256 "d1b506e7a94e68dfca3dc227b465e99f36dcf1efd88cc5a9d28839ea6d47133f"
+    sha256 "7c624f16a60f6d48900d7aa7f17add991376f1d280e8a5168094e19098797c35"
   end
 
   name "aws-vault"

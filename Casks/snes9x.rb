@@ -1,12 +1,23 @@
 cask "snes9x" do
-  version "1.60"
-  sha256 "99f843f84533a0a8e2aefe0b4f248f47649e06ff58ea2d0c041ff931ee503884"
+  version "1.61"
+  sha256 "dc0fce0eb7db92e6d8827309f595a83e7fa77c84a18fe9c4df541d2dedfd7d1b"
 
-  url "http://www.s9x-w32.de/dl/snes9x-#{version}-macosx-i386.zip",
-      verified: "s9x-w32.de/"
-  appcast "http://www.s9x-w32.de/dl/"
+  url "https://github.com/snes9xgit/snes9x/releases/download/#{version}/snes9x-#{version}-macos.zip",
+      verified: "https://github.com/snes9xgit/snes9x/"
   name "Snes9x"
+  desc "Video game console emulator"
   homepage "https://www.snes9x.com/"
 
-  app "snes9x-#{version}-macosx-i386/Snes9x.app"
+  livecheck do
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
+
+  app "Snes9x.app"
+
+  zap trash: [
+    "~/Library/Application Support/Snes9x",
+    "~/Library/Preferences/com.snes9x.macos.snes9x.plist",
+    "~/Library/Saved Application State/com.snes9x.macos.snes9x.savedState",
+  ]
 end

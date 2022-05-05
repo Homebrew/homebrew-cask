@@ -1,18 +1,23 @@
 cask "redisinsight" do
-  version "1.11.0"
-  sha256 "c3fcaf5ba461e7e39ee35f70d5d374d903e29a16d321e5ff77d0d7fb97f3253a"
+  arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  url "https://downloads.redisinsight.redislabs.com/#{version}/redisinsight-mac.dmg"
+  version "2.0.6"
+  sha256 :no_check
+
+  url "https://download.redisinsight.redis.com/latest/RedisInsight-v#{version.major}-mac-#{arch}.dmg"
   name "RedisInsight"
   desc "GUI for streamlined Redis application development"
-  homepage "https://www.redislabs.com/redisinsight/"
+  homepage "https://redis.com/redis-enterprise/redis-insight/"
 
   livecheck do
-    url "https://downloads.redisinsight.redislabs.com/latest/redisinsight-mac.dmg"
-    strategy :header_match
+    url "https://github.com/RedisInsight/RedisInsight.git"
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  app "RedisInsight.app"
+  app "RedisInsight-v#{version.major}.app", target: "RedisInsight.app"
 
-  zap trash: "~/Library/Saved Application State/com.redislabs.redisinsight.savedState"
+  zap trash: [
+    "~/Library/Preferences/org.RedisLabs.RedisInsight-V#{version.major}.plist",
+    "~/Library/Saved Application State/org.RedisLabs.RedisInsight-V#{version.major}.savedState",
+  ]
 end

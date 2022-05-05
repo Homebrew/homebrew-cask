@@ -1,8 +1,8 @@
 cask "vmware-fusion" do
-  version "12.2.1,18811640"
-  sha256 "bb87e0a7db38beaf29ec9fd1191a092fd0bcc9f24c4bdc3ceebf65ff52289a52"
+  version "12.2.3,19436697"
+  sha256 "8cd01bd0e7d18b32bfa159bcce54bd885151e3d92d97e5d4a20bcbc09a1c3f4b"
 
-  url "https://download3.vmware.com/software/fusion/file/VMware-Fusion-#{version.csv.first}-#{version.csv.second}_x86.dmg"
+  url "https://download3.vmware.com/software/FUS-#{version.csv.first.no_dots}-New/VMware-Fusion-#{version.csv.first}-#{version.csv.second}_x86.dmg"
   name "VMware Fusion"
   desc "Create, manage, and run virtual machines"
   homepage "https://www.vmware.com/products/fusion.html"

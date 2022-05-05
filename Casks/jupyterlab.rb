@@ -1,13 +1,13 @@
 cask "jupyterlab" do
-  version "3.2.5-2"
-  sha256 "721bee40dfa1377a7c4b0ef90479d6e55abf3bf5b405c206c1ae9bb23ab5dc82"
+  version "3.3.4-2"
+  sha256 "d4247a21886e898fe52de4c79d448ec0250db06ede7b1afdbd2fed3efa20d901"
 
-  url "https://github.com/jupyterlab/jupyterlab-desktop/releases/download/v#{version}/JupyterLab-Setup-macOS.pkg"
+  url "https://github.com/jupyterlab/jupyterlab-desktop/releases/download/v#{version}/JupyterLab-Setup-macOS.dmg"
   name "JupyterLab App"
   desc "Desktop application for JupyterLab"
   homepage "https://github.com/jupyterlab/jupyterlab-desktop"
 
-  pkg "JupyterLab-Setup-macOS.pkg"
+  app "JupyterLab.app"
 
   uninstall pkgutil: "com.electron.jupyterlab-desktop",
             delete:  [

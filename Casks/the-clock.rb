@@ -1,5 +1,5 @@
 cask "the-clock" do
-  version "4.6.3,20211217"
+  version "4.6.4,20220322"
   sha256 :no_check
 
   url "https://seense.com/the_clock/updateapp/the_clock.zip"

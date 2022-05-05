@@ -10,7 +10,6 @@ cask "ultracopier" do
 
   livecheck do
     url "http://ultracopier.first-world.info/download-all.html"
-    strategy :page_match
     regex(/ultracopier[._-]mac[._-]os[._-]x[._-](\d+(?:\.\d+)+)\.dmg/i)
   end
 

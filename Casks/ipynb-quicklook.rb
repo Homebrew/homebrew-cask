@@ -1,6 +1,6 @@
 cask "ipynb-quicklook" do
-  version "0.1.2"
-  sha256 "92b573acf9d28cd9adf594dc8b6144d4ab3273df8a1561b704fd7fa66d1058bd"
+  version "0.1.5"
+  sha256 "b8d1b10b79d35d3c60537fef34c20bbbe52808c8fc4ad673b862e7094a265ef5"
 
   url "https://github.com/tuxu/ipynb-quicklook/releases/download/v#{version}/ipynb-quicklook.qlgenerator.zip"
   name "ipynb-quicklook"

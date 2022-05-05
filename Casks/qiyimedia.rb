@@ -1,5 +1,5 @@
 cask "qiyimedia" do
-  version "13.1.5"
+  version "13.4.5,20220427174100"
   sha256 :no_check
 
   url "https://static-d.iqiyi.com/ext/common/iQIYIMedia_271.dmg"
@@ -9,8 +9,8 @@ cask "qiyimedia" do
   homepage "https://app.iqiyi.com/mac/player/index.html"
 
   livecheck do
-    url "https://app.iqiyi.com/mac/player/index.html"
-    regex(/最新版本：(\d+(?:\.\d+)+)/i)
+    url :url
+    strategy :extract_plist
   end
 
   depends_on macos: ">= :catalina"
@@ -18,9 +18,10 @@ cask "qiyimedia" do
   app "爱奇艺.app"
 
   zap trash: [
-    "~/Library/Application Scripts/com.iqiyi.player.QYWidget",
     "~/Library/Application Scripts/com.iqiyi.player",
+    "~/Library/Application Scripts/com.iqiyi.player.QYWidget",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.iqiyi.player.sfl*",
+    "~/Library/Containers/com.iqiyi.player",
     "~/Library/Containers/com.iqiyi.player.QYWidget",
     "~/Library/Group Containers/group.com.qiyi",
   ]

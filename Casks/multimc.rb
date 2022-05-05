@@ -1,5 +1,5 @@
 cask "multimc" do
-  version "0.6.14"
+  version "0.6.15"
   sha256 :no_check
 
   url "https://files.multimc.org/downloads/mmc-stable-osx64-5.15.2.tar.gz"

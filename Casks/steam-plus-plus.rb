@@ -1,8 +1,15 @@
 cask "steam-plus-plus" do
-  version "2.6.5"
-  sha256 "b9e23a09c1ddfe254fda43dba16db387514834e67509569f1631e3a325e4ec90"
+  arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  url "https://github.com/BeyondDimension/SteamTools/releases/download/#{version}/Steam++_macos_x64_v#{version}.dmg",
+  version "2.7.2"
+
+  if Hardware::CPU.intel?
+    sha256 "f31fe7ecda1b84aca2cdeeabbb5fc1f3c8c533b1a1a2877ba3da5228068b4ce8"
+  else
+    sha256 "143a42787341bebf849a9ce754ba2758267b399a394adc016d398e7e81120355"
+  end
+
+  url "https://github.com/BeyondDimension/SteamTools/releases/download/#{version}/Steam++_macos_#{arch}_v#{version}.dmg",
       verified: "github.com/BeyondDimension/SteamTools/"
   name "Steam++"
   desc "Steam helper tools"

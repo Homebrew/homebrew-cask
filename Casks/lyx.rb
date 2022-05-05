@@ -25,6 +25,7 @@ cask "lyx" do
   zap trash: [
     "~/Library/Application Support/LyX-#{version.major_minor}",
     "~/Library/Preferences/org.lyx.LyX-#{version.major_minor}.plist",
+    "~/Library/Caches/com.apple.python/Applications/LyX.app",
     "~/Library/Preferences/org.lyx.lyx.plist",
     "~/Library/Saved Application State/org.lyx.lyx.savedState",
   ]

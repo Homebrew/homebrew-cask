@@ -10,7 +10,6 @@ cask "routebuddy" do
 
   livecheck do
     url "http://routebuddy.com/routebuddy-topo-map-software-for-windows-and-mac-os-x/"
-    strategy :page_match
     regex(%r{href=.*?/RouteBuddy_(\d+(?:\.\d+)*)\.dmg}i)
   end
 

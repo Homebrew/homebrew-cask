@@ -1,12 +1,12 @@
 cask "eclipse-dsl" do
   arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
-  version "4.22.0,2021-12"
+  version "4.23.0,2022-03"
 
   if Hardware::CPU.intel?
-    sha256 "46ca25ded90512de578ba8879db1fb18a9bc98498f9b091dce84732cf7c04a78"
+    sha256 "91f4bbf9fc302c012b67637123294ff21cd9eb132d22b4d453639bdc28d66a61"
   else
-    sha256 "33dc8f7bb75659dffc850790db1e9027e63adfea4cf91295918a6dcaa0819ca0"
+    sha256 "c7b621f83c22171f0292614e527fb74a1a4cdb9761bd7bb977cca69a1b5933f1"
   end
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-dsl-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&r=1"

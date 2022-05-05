@@ -1,6 +1,6 @@
 cask "qq" do
-  version "6.7.5.20630_EXP"
-  sha256 "11264a225f52a6596b46e06ad450e02b614013600ee177089cd9d9639e9b3c7a"
+  version "6.7.6"
+  sha256 "8517cede810e151a879faff38283cfbb43c68b1041719ed61563553be3445be1"
 
   url "https://dldir1.qq.com/qqfile/QQforMac/QQ_#{version}.dmg"
   name "QQ"
@@ -9,8 +9,10 @@ cask "qq" do
 
   livecheck do
     url "https://im.qq.com/rainbow/"
-    regex(/QQ_(\d+(?:\.\d+)+([._-]EXP)?)\.dmg/i)
+    regex(/QQ[._-]v?(\d+(?:[._]\d+)+([._-]EXP)?)\.dmg/i)
   end
+
+  auto_updates true
 
   app "QQ.app"
 

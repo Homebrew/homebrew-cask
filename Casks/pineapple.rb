@@ -9,7 +9,6 @@ cask "pineapple" do
 
   livecheck do
     url :homepage
-    strategy :page_match
     regex(%r{href=.*?/Pineapple-(\d+(?:\.\d+)*)-Python3\.5\.dmg}i)
   end
 

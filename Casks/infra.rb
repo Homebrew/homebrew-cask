@@ -1,6 +1,6 @@
 cask "infra" do
-  version "0.46.0"
-  sha256 "d33af6e480e0fc04f7ad97b18a662fced3f0e7bc56cfc91fc13c3e1d85ad10ff"
+  version "0.47.0"
+  sha256 "41f2d71fe84935c4ec3eb13e73c91e9c5b33c38c599bf70a72756091356d13d1"
 
   url "https://download.infra.app/darwin/Infra-darwin-universal-#{version}.zip"
   name "infra"

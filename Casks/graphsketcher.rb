@@ -7,10 +7,5 @@ cask "graphsketcher" do
   desc "Graph drawing and data plotting app"
   homepage "https://github.com/graphsketcher/GraphSketcher"
 
-  livecheck do
-    url :url
-    strategy :git
-  end
-
   app "GraphSketcher/GraphSketcher.app"
 end

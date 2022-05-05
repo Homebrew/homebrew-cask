@@ -1,16 +1,16 @@
 cask "dcv-viewer" do
   arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
 
-  version "2021.3.3829"
+  version "2022.0.3973"
+
+  if Hardware::CPU.intel?
+    sha256 "4192d79260933dfe0dd60858b088f2f286b91b24749c69336fc3e455666d7f39"
+  else
+    sha256 "150bdc8fcfa12fb4a0647e4fcd7b05142ea47b65bf3b4e400e92e2584a175c39"
+  end
 
   url "https://d1uj6qtbmh3dt5.cloudfront.net/#{version.major_minor}/Clients/nice-dcv-viewer-#{version}.#{arch}.dmg",
       verified: "d1uj6qtbmh3dt5.cloudfront.net/"
-  if Hardware::CPU.intel?
-    sha256 "aaca37ccc846f33dc71735556e3e533a55525818490ce05c767f1526b227aece"
-  else
-    sha256 "8d71305c0a606929f568d688e2f0ac19beafb99fefd0b29b9306eb25398e7bb4"
-  end
-
   name "NICE DCV Viewer"
   desc "Client for NICE DCV remote display protocol"
   homepage "https://www.nice-dcv.com/"

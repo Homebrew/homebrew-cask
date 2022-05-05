@@ -1,6 +1,6 @@
 cask "sky-ticket" do
-  version "8.9.0"
-  sha256 "45e84a3f269e61381ffd9a092c3c3ff94dd711b415a8a4a07f580723179eb734"
+  version "8.10.0"
+  sha256 "4d4d1022c722ab11a694d02a18eb8894288719930ea93fd322c24d816a468c76"
 
   url "https://web.static.nowtv.com/watch/player/skyticket/de/#{version}/SkyTicket-Mac.dmg",
       verified: "web.static.nowtv.com/watch/player/skyticket/"

@@ -28,4 +28,10 @@ cask "ipsecuritas" do
   depends_on macos: ">= :yosemite"
 
   app "IPSecuritas.app"
+
+  zap trash: [
+    "/Library/LaunchDaemons/com.lobotomo.IPSecuritasDaemon.plist",
+    "/Library/PrivilegedHelperTools/com.lobotomo.IPSecuritasDaemon",
+    "~/Library/Preferences/com.lobotomo.IPSecuritas.plist",
+  ]
 end

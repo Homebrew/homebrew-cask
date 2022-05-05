@@ -8,7 +8,6 @@ cask "rosaimagewriter" do
 
   livecheck do
     url :homepage
-    strategy :page_match
     regex(%r{href=.*?/RosaImageWriter-(\d+(?:\.\d+)*)-osx\.dmg}i)
   end
 

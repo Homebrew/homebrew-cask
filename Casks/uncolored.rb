@@ -10,8 +10,7 @@ cask "uncolored" do
 
   livecheck do
     url :url
-    strategy :git
-    regex(/^v?\.?(\d+(?:\.\d+)*)$/i)
+    regex(/^v?\.?(\d+(?:\.\d+)+)$/i)
   end
 
   app "Uncolored.app"

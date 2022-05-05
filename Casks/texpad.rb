@@ -9,8 +9,8 @@ cask "texpad" do
     version "1.8.15,529,346c842"
     sha256 "480bf4a3e8fd809c1eb07cb00099ed0d362996738a872efb42cb179488e8c1e1"
   else
-    version "1.9.6,646,e78f29b"
-    sha256 "54443a06df0ef1426f331b2d7813a1441edb1e443c8a856f815932a40508de27"
+    version "1.9.9,680,c9a035e"
+    sha256 "43cd70ec07f8602bc7228696d16ea288eeef70755a5355823d0963ec57540f04"
   end
 
   url "https://download.texpadapp.com/apps/osx/updates/Texpad_#{version.csv.first.dots_to_underscores}__#{version.csv.second}__#{version.csv.third}.dmg",
@@ -31,10 +31,16 @@ cask "texpad" do
   app "Texpad.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vallettaventures.texpad.sfl2",
+    "~/Library/Application Support/CloudDocs/session/containers/iCloud.com.vallettaventures.texpadm",
+    "~/Library/Application Support/CloudDocs/session/containers/iCloud.com.vallettaventures.texpadm.plist",
     "~/Library/Application Support/Texpad",
     "~/Library/Caches/com.vallettaventures.Texpad",
     "~/Library/Cookies/com.vallettaventures.Texpad.binarycookies",
+    "~/Library/HTTPStorages/com.vallettaventures.Texpad",
+    "~/Library/HTTPStorages/com.vallettaventures.Texpad.binarycookies",
     "~/Library/Preferences/com.vallettaventures.Texpad.plist",
     "~/Library/Saved Application State/com.vallettaventures.Texpad.savedState",
+    "~/Library/WebKit/com.vallettaventures.Texpad",
   ]
 end

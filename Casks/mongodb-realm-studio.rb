@@ -1,12 +1,12 @@
 cask "mongodb-realm-studio" do
-  version "11.1.1"
-  sha256 "84f68e04624b65f54fd301bbbb4a7e1161b2d7fb7d51ae70284d9d991d0cae26"
+  version "11.1.2"
+  sha256 "6552fe80de8e4606d24090bd8f0ed843fcde57fdd859271498a418e60b78c1a7"
 
   url "https://github.com/realm/realm-studio/releases/download/v#{version}/MongoDB.Realm.Studio-#{version}.dmg",
       verified: "github.com/realm/realm-studio/"
   name "MongoDB Realm Studio"
   desc "Tool for the Realm Database and Realm Platform"
-  homepage "https://docs.mongodb.com/realm-legacy/products/realm-studio.html"
+  homepage "https://realm.io/products/realm-studio/"
 
   auto_updates true
 

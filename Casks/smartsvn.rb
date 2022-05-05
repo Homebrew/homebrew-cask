@@ -1,6 +1,6 @@
 cask "smartsvn" do
-  version "14.1.2"
-  sha256 "f0573d0dce28257df5331d4adf24a576f87c0ec619a1bb533901f905c1746a60"
+  version "14.1.3"
+  sha256 "f92358a5c6dbcbee10984a0fbf37bc956ee3607e195f8e9043a78b8b32e386ba"
 
   url "https://www.smartsvn.com/downloads/smartsvn/smartsvn-macosx-#{version.dots_to_underscores}.dmg"
   name "SmartSVN"

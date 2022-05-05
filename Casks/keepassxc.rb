@@ -1,14 +1,14 @@
 cask "keepassxc" do
   arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
 
-  version "2.6.6"
+  version "2.7.1"
 
   url "https://github.com/keepassxreboot/keepassxc/releases/download/#{version}/KeePassXC-#{version}-#{arch}.dmg",
       verified: "github.com/keepassxreboot/keepassxc/"
   if Hardware::CPU.intel?
-    sha256 "ab96033c16459de5a95e1f9e5864a5bd8cc47b4f3dee2c68ede6199dd44286ec"
+    sha256 "473f994698ec082f16bb20b4824dadbfb744f53a01b737b4016f6cc45f403b83"
   else
-    sha256 "9dc121bb08f5b46186930ac9ba189553cec2c2ce9688df466e9ce1d9d75fe8c5"
+    sha256 "97e7c57b4695cf4a558186cd36b89605ec6d6dec8791f7add043a3a387089f01"
   end
 
   name "KeePassXC"

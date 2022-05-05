@@ -1,14 +1,14 @@
 cask "cog" do
-  version "1784,8eb2b4c4"
-  sha256 "b8bc880a0333ff7bb815cbc6084254cae2a316f3d2c6e75c0b0427e05cfcbc93"
+  version "2169,bf54c452"
+  sha256 "8f72d9713c205e38be063ca71f20c09729eee9ec633fb985d4935b5f28cd8ad8"
 
-  url "https://f.losno.co/cog/Cog-#{version.csv.second}.zip"
+  url "https://cogcdn.cog.losno.co/Cog-#{version.csv.second}.zip"
   name "Cog"
   desc "Audio player"
   homepage "https://cog.losno.co/"
 
   livecheck do
-    url "https://f.losno.co/file/balde-losno-co/cog/mercury.xml"
+    url "https://cogcdn.cog.losno.co/mercury.xml"
     strategy :sparkle do |item|
       item.version.split("-g", 2).join(",")
     end

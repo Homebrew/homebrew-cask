@@ -1,6 +1,6 @@
 cask "foxitreader" do
-  version "11.1.1"
-  sha256 "30043642510add6f424c0afde40a52e102b701c5901c5398f277040533b688fe"
+  version "11.1.2"
+  sha256 "62f8e3f2fc3f18d0dbfc7a9dfee22c9c8c4cd103afac5a526ebf58e11890c0a3"
 
   url "https://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/mac/#{version.major}.x/#{version.major_minor}/ML/FoxitPDFReader#{version.no_dots}.L10N.Setup.pkg",
       verified: "cdn01.foxitsoftware.com/pub/foxit/reader/desktop/mac/"
@@ -23,4 +23,15 @@ cask "foxitreader" do
   uninstall pkgutil:   "com.foxit.pkg.pdfreader",
             delete:    "/Applications/Foxit PDF Reader.app",
             launchctl: "com.foxit.PDFReaderUpdateService"
+
+  zap trash: [
+    "~/Library/Application Support/Foxit Software/Addon/Foxit PDF Reader",
+    "~/Library/Application Support/Foxit Software/Foxit PDF Reader",
+    "~/Library/Caches/com.foxit-software.Foxit PDF Reader",
+    "~/Library/HTTPStorages/com.foxit-software.Foxit%20PDF%20Reader.binarycookies",
+    "~/Library/Preferences/Foxit Software",
+    "~/Library/Preferences/com.foxit-software.Foxit PDF Reader*",
+    "~/Library/Saved Application State/com.foxit-software.Foxit PDF Reader.savedState",
+    "/Library/LaunchDaemons/com.foxit.PDFReaderUpdateService.plist",
+  ]
 end

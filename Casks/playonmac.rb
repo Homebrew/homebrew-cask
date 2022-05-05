@@ -14,7 +14,6 @@ cask "playonmac" do
 
   livecheck do
     url "https://www.playonmac.com/en/download.html"
-    strategy :page_match
     regex(%r{href=.*?/PlayOnMac_(\d+(?:\.\d+)*)\.dmg}i)
   end
 

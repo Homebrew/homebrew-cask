@@ -1,6 +1,6 @@
 cask "sonarr" do
-  version "3.0.6.1342"
-  sha256 "27054a0c0da44f182195af5ae475bfe1cc518b2b8b56c01420b8c1ead1a1b7c6"
+  version "3.0.8.1507"
+  sha256 "bc85825983df6f0e58d551fa8a9c9716ed5d8f550328e84d4936182fb6230748"
 
   url "https://download.sonarr.tv/v#{version.major}/main/#{version}/Sonarr.main.#{version}.macos.zip"
   name "Sonarr"

@@ -5,12 +5,18 @@ cask "turtl" do
   url "https://github.com/turtl/desktop/releases/download/v#{version}/turtl-osx.zip",
       verified: "github.com/turtl/desktop/"
   name "turtl"
+  desc "Secure collaborative notebook"
   homepage "https://turtlapp.com/"
 
+  # A tag using the stable version format is sometimes marked as "Pre-release"
+  # on the GitHub releases page, so we have to use the `GithubLatest` strategy.
+  # Versions with suffixes like `0.7.2.6-sqlite-fix` are also a problem when
+  # using the `Git` strategy, as the suffix is compared alphabetically (so a
+  # newer version may wrongly appear to be older).
   livecheck do
     url :url
-    strategy :git
-    regex(/^v?(\d+(?:\.\d+)*.*)$/i)
+    regex(%r{href=["']?[^"' >]*?/tag/\D*([^"' >]+?)["' >]}i)
+    strategy :github_latest
   end
 
   app "Turtl.app"

@@ -5,12 +5,14 @@ cask "dust3d" do
   url "https://github.com/huxingyi/dust3d/releases/download/#{version}/dust3d-#{version}.dmg",
       verified: "github.com/huxingyi/dust3d/"
   name "Dust3D"
+  desc "Open-source 3D modeling software"
   homepage "https://dust3d.org/"
 
+  # TODO: Update this regex to only match stable versions once 1.0.0 stabilizes:
+  # regex(/^v?(\d+(?:\.\d+)+)$/i)
   livecheck do
     url :url
-    strategy :git
-    regex(/^(\d+(?:\.\d+)*(?:-rc\.\d+)?)$/i)
+    regex(/^v?(\d+(?:\.\d+)+(?:-rc\.?\d*)?)$/i)
   end
 
   app "dust3d-#{version}.app"

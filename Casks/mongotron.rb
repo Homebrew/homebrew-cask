@@ -8,9 +8,11 @@ cask "mongotron" do
   desc "Mongo DB management"
   homepage "http://mongotron.io/"
 
+  # This cask uses an unstable version and this `livecheck` block is only used
+  # to prevent livecheck from skipping pre-release versions by default. This
+  # should be removed/updated if the cask is updated to a stable version.
   livecheck do
     url :url
-    strategy :git
   end
 
   app "Mongotron-darwin-x64/Mongotron.app"

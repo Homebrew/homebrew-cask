@@ -10,8 +10,7 @@ cask "gcollazo-mongodb" do
 
   livecheck do
     url :url
-    strategy :git
-    regex(/^v?(\d+(?:\.\d+)*-build\.\d+)$/i)
+    regex(/^v?(\d+(?:\.\d+)+(?:-build[._-]?\d+)?)$/i)
   end
 
   app "MongoDB.app"

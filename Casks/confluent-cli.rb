@@ -1,6 +1,6 @@
 cask "confluent-cli" do
-  version "2.4.0"
-  sha256 "ed89aaa5a9bb35e35648ea472f0d729055fb30ec7f3d768a44f30ccbd23d6ef6"
+  version "2.9.0"
+  sha256 "04ec22ff55d689400f73e39f3183acd65e8b191d8205e16bbaabb35400823fcb"
 
   url "https://s3-us-west-2.amazonaws.com/confluent.cloud/confluent-cli/archives/#{version}/confluent_v#{version}_darwin_amd64.tar.gz",
       verified: "s3-us-west-2.amazonaws.com/confluent.cloud/confluent-cli/archives/"
@@ -10,8 +10,8 @@ cask "confluent-cli" do
 
   livecheck do
     url "https://s3-us-west-2.amazonaws.com/confluent.cloud/confluent-cli/archives/latest/confluent_latest_darwin_amd64.tar.gz"
+    regex(/confluent[._-]v?(\d+(?:\.\d+)+)(?:[_-].+?)?\.t/i)
     strategy :header_match
-    regex(/confluent[._-]v?(\d+(?:\.\d+)+)[._-]darwin[._-]amd64\.tar\.gz/i)
   end
 
   binary "confluent/confluent"

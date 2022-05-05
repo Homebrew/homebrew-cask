@@ -8,9 +8,5 @@ cask "capto" do
   desc "Screen capture/recorder and video editor"
   homepage "https://www.globaldelight.com/capto/"
 
-  livecheck do
-    skip "unversioned URL"
-  end
-
   app "Capto.app"
 end

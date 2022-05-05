@@ -1,6 +1,6 @@
 cask "alacritty" do
-  version "0.10.0"
-  sha256 "b8d70984ec7fae00afe0f7f163ac9f805390ec928b2b95fce578453c0663f192"
+  version "0.10.1"
+  sha256 "08b59c3b41bdf369a8ce8ed65c8607eeac2e73672298a04ebf53e7a802b56939"
 
   url "https://github.com/alacritty/alacritty/releases/download/v#{version}/Alacritty-v#{version}.dmg"
   name "Alacritty"
@@ -21,9 +21,9 @@ cask "alacritty" do
   binary "#{appdir}/Alacritty.app/Contents/Resources/completions/alacritty.fish",
          target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/alacritty.fish"
   binary "#{appdir}/Alacritty.app/Contents/Resources/61/alacritty",
-         target: "#{ENV["HOME"]}/.terminfo/61/alacritty"
+         target: "#{ENV.fetch("TERMINFO", "#{ENV["HOME"]}/.terminfo")}/61/alacritty"
   binary "#{appdir}/Alacritty.app/Contents/Resources/61/alacritty-direct",
-         target: "#{ENV["HOME"]}/.terminfo/61/alacritty-direct"
+         target: "#{ENV.fetch("TERMINFO", "#{ENV["HOME"]}/.terminfo")}/61/alacritty-direct"
   manpage "#{appdir}/Alacritty.app/Contents/Resources/alacritty.1.gz"
   manpage "#{appdir}/Alacritty.app/Contents/Resources/alacritty-msg.1.gz"
 

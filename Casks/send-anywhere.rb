@@ -7,9 +7,5 @@ cask "send-anywhere" do
   desc "File sharing app"
   homepage "https://send-anywhere.com/"
 
-  livecheck do
-    skip "unversioned URL"
-  end
-
   app "Send Anywhere.app"
 end

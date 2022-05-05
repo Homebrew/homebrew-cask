@@ -1,15 +1,12 @@
 cask "purevpn" do
-  version "8.0.6,843"
+  version "8.4.2"
   sha256 :no_check
 
   url "https://purevpn-dialer-assets.s3.amazonaws.com/mac-2.0/packages/Production/PureVPN.pkg",
       verified: "purevpn-dialer-assets.s3.amazonaws.com/"
   name "PureVPN"
+  desc "VPN client"
   homepage "https://www.purevpn.com/"
-
-  livecheck do
-    skip "unversioned URL"
-  end
 
   pkg "PureVPN.pkg"
 

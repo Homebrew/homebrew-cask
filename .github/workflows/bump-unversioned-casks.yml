@@ -51,7 +51,7 @@ jobs:
           mkdir "${GITHUB_WORKSPACE}"
 
       - name: Cache Homebrew Gems
-        uses: actions/cache@v2.1.7
+        uses: actions/cache@v3
         with:
           path: ${{ steps.set-up-homebrew.outputs.gems-path }}
           key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
@@ -66,7 +66,7 @@ jobs:
           echo "::set-output name=time::$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
 
       - name: Cache state
-        uses: actions/cache@v2.1.7
+        uses: actions/cache@v3
         with:
           path: ~/bump-unversioned-casks-state.json
           key: bump-unversioned-casks-${{ steps.cache-id.outputs.time }}

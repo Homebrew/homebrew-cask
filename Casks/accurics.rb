@@ -1,6 +1,6 @@
 cask "accurics" do
-  version "1.0.32"
-  sha256 "d338e8e5d73c2ab64a9a0743ac25c8211c5c5f852daf48e44f81d49bd5cc9747"
+  version "1.0.35"
+  sha256 "ea1c33ec5b2c97880f024564f8f046e51de9e92f2e7ad02167c23aae3a6fc2ff"
 
   url "https://downloads.accurics.com/cli/#{version}/accurics-cli.dmg",
       user_agent: :fake

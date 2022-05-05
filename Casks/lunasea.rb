@@ -1,23 +1,12 @@
 cask "lunasea" do
-  version "6.0.0,60000006"
-  sha256 "10ad53618b83ca1b94ef0190805911f54c73865fd477695191991c41223454d2"
+  version "10.0.2"
+  sha256 "3f07e0653c82e0b8f86b5432b5e11bd59aa56559edee7e72ded10a8f9d4944c6"
 
-  url "https://github.com/CometTools/LunaSea/releases/download/#{version.csv.first}%2B#{version.csv.second}/LunaSea-macOS-#{version.csv.second}.zip"
+  url "https://github.com/JagandeepBrar/LunaSea/releases/download/v#{version}/lunasea-macos-amd64.zip",
+      verified: "github.com/JagandeepBrar/LunaSea/"
   name "LunaSea"
-  desc "Open source self-hosted remote control for media software"
-  homepage "https://github.com/CometTools/LunaSea/"
-
-  livecheck do
-    url :url
-    strategy :git do |tags|
-      tags.map do |tag|
-        match = tag.match(/^v?(\d+(?:\.\d+)+)[+-](\d+(?:\.\d+)*)$/i)
-        next if match.blank?
-
-        "#{match[1]},#{match[2]}"
-      end
-    end
-  end
+  desc "Self-hosted controller built using the Flutter framework"
+  homepage "https://www.lunasea.app/"
 
   app "LunaSea.app"
 

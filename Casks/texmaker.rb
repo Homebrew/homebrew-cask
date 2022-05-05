@@ -1,6 +1,6 @@
 cask "texmaker" do
-  version "5.1.2"
-  sha256 "91c0f4acf58b21199852e3c90555ad223d4fd99c315e6a72f12fc2d293affde4"
+  version "5.1.3"
+  sha256 "38b098a3cf1770c307bf263ec76ba639579c744a125226d0dadd1f32bcc25931"
 
   url "https://www.xm1math.net/texmaker/assets/files/texmaker-#{version}.dmg"
   name "Texmaker"
@@ -9,7 +9,6 @@ cask "texmaker" do
 
   livecheck do
     url "https://www.xm1math.net/texmaker/download.html"
-    strategy :page_match
     regex(%r{href=.*?/texmaker-(\d+(?:\.\d+)*)\.dmg}i)
   end
 

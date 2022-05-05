@@ -9,6 +9,7 @@ cask "shield" do
   homepage "https://theevilbit.github.io/shield/"
 
   livecheck do
+    url :url
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 

@@ -1,8 +1,8 @@
 cask "backuploupe" do
-  version "3.5.4,2322"
-  sha256 "e453748da41643a11416989cf88c53ee555e949e3a96a32e9768de884c942b87"
+  version "3.6,2400"
+  sha256 "5468647c292d64f3aef6a93b1d10deb26699a122ea4cc01a83363d3468fbe9de"
 
-  url "https://www.soma-zone.com/download/files/BackupLoupe-#{version.csv.first}.tar.bz2"
+  url "https://www.soma-zone.com/download/files/BackupLoupe-#{version.csv.first}.tar.xz"
   name "BackupLoupe"
   desc "Alternative GUI for Time Machine"
   homepage "https://www.soma-zone.com/BackupLoupe/"

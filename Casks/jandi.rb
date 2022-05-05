@@ -4,11 +4,8 @@ cask "jandi" do
 
   url "https://cdn.jandi.com/jandi-pc/download/JANDI.dmg"
   name "JANDI"
+  desc "Desktop app for the JANDI collaboration platform"
   homepage "https://www.jandi.com/landing/"
-
-  livecheck do
-    skip "unversioned URL"
-  end
 
   app "JANDI.app"
 

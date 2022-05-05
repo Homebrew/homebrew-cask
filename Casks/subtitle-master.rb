@@ -4,12 +4,12 @@ cask "subtitle-master" do
 
   url "https://github.com/subtitle-master/subtitlemaster/releases/download/v#{version}-SNAPSHOT/Subtitle.Master-osx-v#{version}-SNAPSHOT.zip"
   name "Subtitle Master"
-  homepage "https://github.com/subtitle-master/subtitlemaster/releases"
+  desc "Search for subtitles"
+  homepage "https://github.com/subtitle-master/subtitlemaster"
 
   livecheck do
     url :url
-    strategy :git
-    regex(/^v?(\d+(?:\.\d+)*)-SNAPSHOT$/i)
+    regex(/^v?(\d+(?:\.\d+)+)(?:-SNAPSHOT)?$/i)
   end
 
   app "Subtitle Master.app"

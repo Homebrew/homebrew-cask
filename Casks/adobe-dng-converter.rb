@@ -1,8 +1,8 @@
 cask "adobe-dng-converter" do
-  version "14.1"
-  sha256 "7f0a20b5f2ee27965c6eafd4a79339bb13b306fbda4dc19657237bd3fedefd27"
+  version "14.2"
+  sha256 "0354ae751dd1dd07096cd46662363273dcc442bb480082836bed0e2b2deea7de"
 
-  url "https://download.adobe.com/pub/adobe/dng/mac/DNG_Converter_#{version.dots_to_underscores}.dmg"
+  url "https://download.adobe.com/pub/adobe/dng/mac/DNGConverter_#{version.dots_to_underscores}.dmg"
   name "Adobe DNG Converter"
   desc "DNG file converter"
   homepage "https://helpx.adobe.com/camera-raw/using/adobe-dng-converter.html"

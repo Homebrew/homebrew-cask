@@ -1,8 +1,8 @@
 cask "forticlient-vpn" do
-  version "7.0.0.22"
+  version "7.0"
   sha256 "9bc0fd4a55e468ac0ae9483a544e81489d05cce3ae0aab3edbe29c4d4aa8f057"
 
-  url "https://filestore.fortinet.com/forticlient/downloads/FortiClientVPN_#{version}_OnlineInstaller.dmg",
+  url "https://filestore.fortinet.com/forticlient/downloads/FortiClientVPNOnlineInstaller_#{version}.dmg",
       verified: "filestore.fortinet.com/forticlient/"
   name "FortiClient VPN"
   desc "Free VPN client for FortiClient"

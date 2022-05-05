@@ -8,6 +8,7 @@ cask "crescendo" do
   homepage "https://github.com/SuprHackerSteve/Crescendo"
 
   livecheck do
+    url :url
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 

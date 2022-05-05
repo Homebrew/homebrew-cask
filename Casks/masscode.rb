@@ -1,6 +1,6 @@
 cask "masscode" do
-  version "1.3.0"
-  sha256 "64fb6b176b5fad02e2b6fcec3abb1d350fa2831b2ba1dd214db5a874dfe9f23e"
+  version "1.3.1"
+  sha256 "e97324388b26e916e81a16ffc8433e0dd8e31baf62e6d79d1c8f15788b6cc326"
 
   url "https://github.com/antonreshetov/massCode/releases/download/v#{version}/massCode-#{version}.dmg",
       verified: "github.com/antonreshetov/massCode/"

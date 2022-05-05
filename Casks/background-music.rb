@@ -4,6 +4,7 @@ cask "background-music" do
 
   url "https://github.com/kyleneideck/BackgroundMusic/releases/download/v#{version}/BackgroundMusic-#{version}.pkg"
   name "Background Music"
+  desc "Audio Utility"
   homepage "https://github.com/kyleneideck/BackgroundMusic"
 
   livecheck do

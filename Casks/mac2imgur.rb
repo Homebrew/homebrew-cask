@@ -4,12 +4,8 @@ cask "mac2imgur" do
 
   url "https://github.com/mileswd/mac2imgur/releases/download/b#{version}/mac2imgur.zip"
   name "mac2imgur"
+  desc "Upload images and screenshots to Imgur"
   homepage "https://github.com/mileswd/mac2imgur"
-
-  livecheck do
-    url :url
-    strategy :git
-  end
 
   app "mac2imgur.app"
 

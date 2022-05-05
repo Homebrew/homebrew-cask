@@ -1,6 +1,6 @@
 cask "parallels-client" do
-  version "18.3.0,22893"
-  sha256 "30814113889352ee68f1e6aa46c40683e1520afa1c30ad1af41014afd84ebc69"
+  version "18.3.1,22907"
+  sha256 "bc07cbd961777a3ca25755a9e89c3fa71648991713a52dc777bb65441828c2df"
 
   url "https://download.parallels.com/ras/v#{version.major}/#{version.csv.first.major_minor_patch}.#{version.csv.second}/RasClient-Mac-Notarized-#{version.csv.first.major_minor_patch}-#{version.csv.second}.pkg"
   name "Parallels Client"

@@ -12,8 +12,8 @@ cask "araxis-merge" do
     version "2021.5602"
     sha256 "06c56e6d08057090f3718b6db560e2a79551f953d4c83c0fad8b60f415c59347"
   else
-    version "2021.5644"
-    sha256 "255d2498047395756ad5fdc1f9b26435e667160f9ac0d47eefc28652cfe2253b"
+    version "2022.5706"
+    sha256 "245cc0f43ba552ac2f0dede25747d0e1e17372e0d856ef9904c7c3592cdef09a"
   end
 
   url "https://www.araxis.com/download/Merge#{version}-macOS.dmg"

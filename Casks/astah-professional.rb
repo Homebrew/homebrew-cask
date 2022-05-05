@@ -1,6 +1,6 @@
 cask "astah-professional" do
-  version "8.4.1,827bdf"
-  sha256 "8335eb366284cbd5b99be7c0e47a5334b37901c489fd20c4ee43b8f9afb89cb3"
+  version "8.5.0,39c620"
+  sha256 "84310f7c69dbc4eef2a3a8f815ba10ff919c26b8fa82fe8b3c7831d4dfb94153"
 
   url "https://cdn.change-vision.com/files/astah-professional-#{version.csv.first.dots_to_underscores}-#{version.csv.second}-MacOs.dmg",
       verified: "cdn.change-vision.com/files/"

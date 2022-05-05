@@ -23,6 +23,7 @@
   "nuclear": "all",
   "pock": "all",
   "protonmail-bridge": "all",
+  "prowlarr": "all",
   "ql-ansilove": "all",
   "profilecreator": "all",
   "qdesktop": "all",
@@ -32,7 +33,6 @@
   "splitshow": "all",
   "steveschow-gfxcardstatus": "all",
   "themeengine": "all",
-  "tla-plus-toolbox": "all",
   "toggl-track": "all",
   "xit": "all"
 }

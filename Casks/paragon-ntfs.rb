@@ -4,11 +4,11 @@ cask "paragon-ntfs" do
 
   url "https://dl.paragon-software.com/demo/ntfsmac#{version}_trial.dmg"
   name "Paragon NTFS for Mac"
+  desc "Paragon read-write NTFS driver"
   homepage "https://www.paragon-software.com/ufsdhome/ntfs-mac/"
 
   livecheck do
     url :homepage
-    strategy :page_match
     regex(%r{href=.*?/ntfsmac(\d+)_trial\.dmg}i)
   end
 
@@ -23,7 +23,21 @@ cask "paragon-ntfs" do
             signal:    [
               ["KILL", "com.paragon-software.ntfs.FSMenuApp"],
               ["KILL", "com.paragon-software.ntfs.notification-agent"],
-            ]
+            ],
+            delete:    [
+              "/Library/Application Support/Paragon Software/com.paragon-software.kernelio.kext",
+              "/Library/Application Support/Paragon Software/uc.ntfs",
+              "/Library/LaunchDaemons/com.paragon-software.installer.plist",
+              "/Library/PrivilegedHelperTools/com.paragon-software.installer",
+            ],
+            rmdir:     "/Library/Application Support/Paragon Software/"
 
-  zap trash: "~/Library/Preferences/com.paragon-software.ntfs.fsapp.plist"
+  zap trash: [
+    "~/Library/Application Support/com.paragon-software.ntfs.*",
+    "~/Library/Caches/com.paragon-software.ntfs.fsapp",
+    "~/Library/HTTPStorages/com.paragon-software.ntfs.*",
+    "~/Library/Preferences/com.paragon-software.ntfs.fsapp.plist",
+    "~/Library/Saved Application State/com.paragon-software.ntfs.fsapp.savedState",
+    "~/Library/WebKit/com.paragon-software.ntfs.fsapp",
+  ]
 end

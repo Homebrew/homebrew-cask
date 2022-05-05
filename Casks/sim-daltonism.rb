@@ -9,7 +9,6 @@ cask "sim-daltonism" do
 
   livecheck do
     url "https://littoral.michelf.ca/apps/sim-daltonism/"
-    strategy :page_match
     regex(/href=.*?sim-daltonism-(\d+(?:\.\d+)*)\.zip/i)
   end
 

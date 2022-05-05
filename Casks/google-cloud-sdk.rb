@@ -36,5 +36,13 @@ cask "google-cloud-sdk" do
 
       for zsh users
         source "#{staged_path}/#{token}/completion.zsh.inc"
+
+    To add gcloud components to your PATH, add this to your profile:
+
+      for bash users
+        source "#{staged_path}/#{token}/path.bash.inc"
+
+      for zsh users
+        source "#{staged_path}/#{token}/path.zsh.inc"
   EOS
 end

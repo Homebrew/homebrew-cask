@@ -1,14 +1,14 @@
 cask "lando" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "3.6.0"
+  version "3.6.4"
 
   url "https://github.com/lando/lando/releases/download/v#{version}/lando-#{arch}-v#{version}.dmg",
       verified: "github.com/lando/lando/"
   if Hardware::CPU.intel?
-    sha256 "03b0a4a3c76c91141dd1fcaee2d679d6a5e1030fcb6d53f36cf941c57ee35677"
+    sha256 "cc1fd722bd8588837ff9cc51ce809075e08a7c49e6b9f3c328377a8ce04d03ae"
   else
-    sha256 "e9e58bd71e73f2ae26aa791492f29581b69f58aaa07d219b11a06e2010c972cb"
+    sha256 "1dfc9bf38f562f99227cb9430d1311ea885f278e338318afe10871a38aae5925"
   end
 
   name "Lando"

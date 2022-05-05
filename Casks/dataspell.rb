@@ -1,12 +1,12 @@
 cask "dataspell" do
   arch = Hardware::CPU.intel? ? "" : "-aarch64"
 
-  version "2021.3.2,213.6777.49"
+  version "2022.1,221.5080.210"
 
   if Hardware::CPU.intel?
-    sha256 "8addeff5f15731d23a2fded94c549dd449154ca63c626c17c26973c13829a692"
+    sha256 "1c4d24664c4bd0e34fe080cffcfaadc078d4f7850b33d61355dd3f8eb5e36926"
   else
-    sha256 "f95cb7b3158b49cd0d556e75090e6c58ced8436affe9ae98ea1baaa16ad20237"
+    sha256 "b99cbc8afd3408d92a50c458b11666038ef737dbd91e72e44fcedc83540ee3fd"
   end
 
   url "https://download.jetbrains.com/python/dataspell-#{version.csv.first}#{arch}.dmg"

@@ -18,8 +18,12 @@ cask "latexit" do
   app "LaTeXiT.app"
 
   zap trash: [
+    "~/Library/Application Scripts/7SFX84GNR7.fr.chachatelier.pierre.LaTeXiT",
+    "~/Library/Application Scripts/fr.chachatelier.pierre.LaTeXiT.appex",
     "~/Library/Caches/fr.chachatelier.pierre.LaTeXiT",
+    "~/Library/Containers/fr.chachatelier.pierre.LaTeXiT.appex",
     "~/Library/Cookies/fr.chachatelier.pierre.LaTeXiT.binarycookies",
+    "~/Library/Group Containers/7SFX84GNR7.fr.chachatelier.pierre.LaTeXiT",
     "~/Library/Preferences/fr.chachatelier.pierre.LaTeXiT.plist",
   ]
 end

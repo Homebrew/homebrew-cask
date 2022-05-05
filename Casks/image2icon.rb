@@ -1,6 +1,6 @@
 cask "image2icon" do
-  version "2.16,930"
-  sha256 "c860da6709efbd8f9ea2a8684a9978352acf7c3d9380c9464dfae1c09f345534"
+  version "2.17,943"
+  sha256 "653db224080c06b303a187e3048b6aa4dd07b7d0a5021623f038254e12baa81a"
 
   url "https://sf-applications.s3.amazonaws.com/Image2Icon/app-releases/Image2icon#{version.csv.first}.zip",
       verified: "sf-applications.s3.amazonaws.com/Image2Icon/"
@@ -12,6 +12,8 @@ cask "image2icon" do
     url "http://apps.shinynode.com/apps/image2icon_appcast.xml"
     strategy :sparkle
   end
+
+  auto_updates true
 
   app "Image2Icon.app"
 

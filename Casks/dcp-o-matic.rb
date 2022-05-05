@@ -1,8 +1,8 @@
 cask "dcp-o-matic" do
-  version "2.14.57"
-  sha256 "ba9155b7d5abf71a4c589ab4c59d9d8b8b929261c2ede4168fca6de19163144e"
+  version "2.16.8"
+  sha256 "f93ef5a39a0f05ef3caa3707f70c71cf3fdb3c7ae25f1fb5302fc0e4fa207a9c"
 
-  url "https://dcpomatic.com/dl.php?id=osx-10.9-main&version=#{version}"
+  url "https://dcpomatic.com/dl.php?id=osx-10.10-main&version=#{version}"
   name "DCP-o-matic"
   desc "Convert video, audio and subtitles into DCP (Digital Cinema Democratized)"
   homepage "https://dcpomatic.com/"

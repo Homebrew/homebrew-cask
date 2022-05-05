@@ -1,8 +1,8 @@
 cask "safe-multisig" do
-  version "3.8.4"
-  sha256 "afe4017944f362c038454714bd520914390e72dc6743562c82e573a8467062ae"
+  version "3.17.2"
+  sha256 "3f2121a86d2d476d0a23785f00f389aa85b9744d279764159ae7b3b30b73588b"
 
-  url "https://github.com/gnosis/safe-react/releases/download/v#{version}/Safe-Multisig-#{version}.dmg",
+  url "https://github.com/gnosis/safe-react/releases/download/v#{version}-desktop/Safe-#{version}.dmg",
       verified: "github.com/gnosis/safe-react/"
   name "Gnosis Safe Multisig"
   desc "Ethereum multisig wallet"
@@ -10,7 +10,7 @@ cask "safe-multisig" do
 
   livecheck do
     url :homepage
-    regex(/Safe-Multisig[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/Safe-?(\d+(?:\.\d+)+)\.dmg/i)
     strategy :page_match do |page, regex|
       js_file = page[/component---src-pages-index-tsx-([^.]+)\.js/i, 1]
       next [] if js_file.blank?
@@ -22,7 +22,7 @@ cask "safe-multisig" do
     end
   end
 
-  app "Safe Multisig.app"
+  app "Safe.app"
 
   zap trash: "~/Library/Application Support/Safe Multisig"
 end

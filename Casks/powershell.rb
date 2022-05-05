@@ -1,12 +1,12 @@
 cask "powershell" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "7.2.1"
+  version "7.2.3"
 
   if Hardware::CPU.intel?
-    sha256 "23046dbada76832e441b838170e3e36ada54a69c4f3ae25e210be554e659fce4"
+    sha256 "2c2172fd3ddf039020acdf21ed39b9c84c45d952ca7133f84e0ab4d73e971301"
   else
-    sha256 "034bdb6ca923036a4d4e2a065810f9cf96b07ea5781bc1c81330417433dd1ea6"
+    sha256 "0504bac6c3aab585740aca403d052ecd277c486cb2813c45ba86617a3bf5ab54"
   end
 
   url "https://github.com/PowerShell/PowerShell/releases/download/v#{version}/powershell-#{version}-osx-#{arch}.pkg"
@@ -15,9 +15,8 @@ cask "powershell" do
   homepage "https://github.com/PowerShell/PowerShell"
 
   livecheck do
-    url :homepage
-    strategy :git
-    regex(/^v?(\d+(?:\.\d+)*)$/)
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   depends_on formula: "openssl"

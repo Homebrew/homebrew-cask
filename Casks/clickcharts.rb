@@ -5,11 +5,8 @@ cask "clickcharts" do
   url "https://www.nchsoftware.com/chart/clickchartspmaci.zip",
       user_agent: :fake
   name "ClickCharts"
+  desc "Diagram and flowchart software"
   homepage "https://www.nchsoftware.com/"
-
-  livecheck do
-    skip "unversioned URL"
-  end
 
   app "ClickCharts.app"
 end

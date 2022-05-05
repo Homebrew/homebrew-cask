@@ -1,21 +1,15 @@
 cask "mactex-no-gui" do
-  version "2021.0328"
-  sha256 "e541257d70f911550341853709fc45d9fa9fcd4c93058382000ebb19b284833b"
+  version "2022.0321"
+  sha256 "dc1983c82de2c68f1c434f734d94343959d1338adb6f55132ccce11c787badc1"
 
-  url "http://mirror.ctan.org/systems/mac/mactex/mactex-#{version.no_dots}.pkg",
+  url "https://mirror.ctan.org/systems/mac/mactex/mactex-#{version.no_dots}.pkg",
       verified: "mirror.ctan.org/systems/mac/mactex/"
   name "MacTeX"
   desc "Full TeX Live distribution without GUI applications"
   homepage "https://www.tug.org/mactex/"
 
   livecheck do
-    url "https://ctan.org/texarchive/systems/mac/mactex/"
-    strategy :page_match do |page|
-      match = page.match(/href=.*?mactex-(\d{4})(\d{2})(\d{2})\.pkg/)
-      next if match.blank?
-
-      "#{match[1]}.#{match[2]}#{match[3]}"
-    end
+    cask "mactex"
   end
 
   conflicts_with cask: [
@@ -29,13 +23,13 @@ cask "mactex-no-gui" do
       choices: [
         {
           # Ghostscript
-          "choiceIdentifier" => "org.tug.mactex.ghostscript9.53.3",
+          "choiceIdentifier" => "org.tug.mactex.ghostscript9.55",
           "choiceAttribute"  => "selected",
           "attributeSetting" => 0,
         },
         {
           # Ghostscript Dynamic Library
-          "choiceIdentifier" => "org.tug.mactex.ghostscript9.53.3libgs",
+          "choiceIdentifier" => "org.tug.mactex.ghostscript9.55-libgs",
           "choiceAttribute"  => "selected",
           "attributeSetting" => 0,
         },

@@ -9,7 +9,6 @@ cask "webplotdigitizer" do
 
   livecheck do
     url "https://automeris.io/WebPlotDigitizer/download.html"
-    strategy :page_match
     regex(%r{href=.*?/WebPlotDigitizer-(\d+(?:\.\d+)*)-darwin-x64\.zip}i)
   end
 

@@ -1,6 +1,6 @@
 cask "flacon" do
-  version "8.3.0"
-  sha256 "a6d630f1574e9cec5c1d8dbaf85ab2a6ac67735b7271dfb91feed2bd3498f614"
+  version "9.0.0"
+  sha256 "3d79ba3685efe065c6b67d9209fc9df95176eabb2c5fe78ef572fac30f64f831"
 
   url "https://github.com/flacon/flacon/releases/download/v#{version}/Flacon_#{version}.dmg",
       verified: "github.com/flacon/flacon/"

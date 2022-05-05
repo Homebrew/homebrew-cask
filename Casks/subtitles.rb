@@ -1,6 +1,6 @@
 cask "subtitles" do
-  version "3.2.15"
-  sha256 "cfa29bbf47b3c18f854844a0e3768c8d9aae638efb501aae419bfba3fed9276a"
+  version "3.2.16"
+  sha256 "0e63c5eecd4175e99006e8bbaab88eee6c3e17757b4ba28aa7642d22400befe3"
 
   url "https://subtitlesapp.com/download/Subtitles-mac-#{version}.zip"
   name "Subtitles"

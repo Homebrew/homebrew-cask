@@ -1,5 +1,5 @@
 cask "around" do
-  version "0.58.27"
+  version "0.59.35"
   sha256 :no_check
 
   url "https://downloads.around.co/Around-mac-installer.zip"
@@ -11,6 +11,8 @@ cask "around" do
     url "https://meet.around.co/versions.json"
     regex(/"desktopappMinVersion":"v?(\d+(?:\.\d+)+)"/i)
   end
+
+  auto_updates true
 
   installer manual: "Install Around.app"
 

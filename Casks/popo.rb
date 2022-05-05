@@ -1,6 +1,6 @@
 cask "popo" do
-  version "3.43.0"
-  sha256 "d6725c1e60471d588c431110ce14719e4d10acf36183274de73df763da458031"
+  version "3.48.0"
+  sha256 "3f9ef89810baf10b1d50fc675e5d191bf3ce8ed2db886d498400d2c73ad7fd3c"
 
   url "https://popo.netease.com/file/popomac/POPO-setup_#{version.dots_to_underscores}.dmg"
   name "NetEase POPO"
@@ -8,7 +8,7 @@ cask "popo" do
   homepage "https://popo.netease.com/"
 
   livecheck do
-    url "http://http.popo.netease.com:8080/api/open/jsonp/check_version?device=4"
+    url "https://popo.netease.com/api/open/jsonp/check_version?device=4&callback="
     regex(/"version"\s*:\s*"(\d+(?:\.\d+)+)"/i)
   end
 

@@ -1,12 +1,12 @@
 cask "loom" do
   arch = Hardware::CPU.intel? ? "" : "-arm64"
 
-  version "0.112.19"
+  version "0.126.0"
 
   if Hardware::CPU.intel?
-    sha256 "55063eda44bac6fb72a422274e3d356df446eeea5da9fd1645d57ed5e39fcd18"
+    sha256 "458f2587391de81a91eb4a160371f376e6664a0e1b5e20b2a25c9259575c6226"
   else
-    sha256 "412100d661babdd489d415f58be31676bc305fa0a8478b72f1c6e4d028e3797e"
+    sha256 "d48189e554bfe385f8f342d2bf7c38367432a93568779412a824aedaf3afec73"
   end
 
   url "https://cdn.loom.com/desktop-packages/Loom-#{version}#{arch}.dmg"
@@ -22,6 +22,8 @@ cask "loom" do
   auto_updates true
 
   app "Loom.app"
+
+  uninstall login_item: "Loom"
 
   zap trash: [
     "~/Library/Application Support/Loom",

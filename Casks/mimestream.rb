@@ -1,6 +1,6 @@
 cask "mimestream" do
-  version "0.32.4"
-  sha256 "63f312b4ff23a7543d1cf0ecb4e87c915162bfa387001cccfb098283b0f3fa2f"
+  version "0.34.2"
+  sha256 "b3323c90f5656baf6e7e5fa0ef2e8a10ea10786554a6bbd36e4591ddda4d3190"
 
   url "https://storage.googleapis.com/mimestream-releases/Mimestream_#{version}.dmg",
       verified: "storage.googleapis.com/mimestream-releases/"
@@ -19,8 +19,10 @@ cask "mimestream" do
 
   zap trash: [
     "~/Library/Application Scripts/com.mimestream.Mimestream",
+    "~/Library/Application Scripts/com.mimestream.Mimestream.ShareExtension",
     "~/Library/Caches/com.mimestream.Mimestream",
     "~/Library/Containers/com.mimestream.Mimestream",
+    "~/Library/Containers/com.mimestream.Mimestream.ShareExtension",
     "~/Library/Saved Application State/com.mimestream.Mimestream.savedState",
   ]
 end

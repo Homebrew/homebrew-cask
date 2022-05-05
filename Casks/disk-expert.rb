@@ -1,6 +1,6 @@
 cask "disk-expert" do
-  version "3.6.3,361"
-  sha256 "c2786062fcfa1cfbfbf62eefa605dc0377b79a525ac73bb785b72a0d1732fe78"
+  version "3.7,364"
+  sha256 "d02e23a66137e1c8270ad9ba8f6b5a219dfe05e1b90837d49fd9382edcdd00b6"
 
   url "https://nektony.com/pro-support/disk-expert/update/update_#{version.csv.first}b#{version.csv.second}.zip"
   name "Disk Expert"

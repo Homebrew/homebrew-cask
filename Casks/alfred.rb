@@ -1,6 +1,6 @@
 cask "alfred" do
-  version "4.6.3,1285"
-  sha256 "b9ce13e2a8bf92ce0d0a3212ab25f2ff9804f2005818ea1fb513767f493fee39"
+  version "4.6.5,1299"
+  sha256 "2e40599ba17fd6beb36d2db405647b3e7a2e529f91b9d1383776d58b4b7ff5ac"
 
   url "https://cachefly.alfredapp.com/Alfred_#{version.csv.first}_#{version.csv.second}.dmg"
   name "Alfred"

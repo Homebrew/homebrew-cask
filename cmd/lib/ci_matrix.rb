@@ -9,7 +9,8 @@ module CiMatrix
 
   RUNNERS = {
     { symbol: :catalina, name: "macos-10.15" } => 0.9,
-    { symbol: :big_sur,  name: "macos-11.0" }  => 0.1,
+    { symbol: :big_sur,  name: "macos-11" }    => 0.1,
+    { symbol: :monterey,  name: "macos-12" }   => 0.1,
   }.freeze
 
   def self.filter_runners(cask_content)

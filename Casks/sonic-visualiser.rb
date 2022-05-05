@@ -1,6 +1,6 @@
 cask "sonic-visualiser" do
-  version "4.4,2813"
-  sha256 "07550a124d503139837e809ff06701661749f0de77d43968a9e43494f4ff1bbf"
+  version "4.5,2824"
+  sha256 "8d52092334a0a01c1c8f13f70bcf2b4d85f107b52a216149622cdef66d39f977"
 
   url "https://github.com/sonic-visualiser/sonic-visualiser/releases/download/sv_v#{version.csv.first}/Sonic.Visualiser-#{version.csv.first}.dmg",
       verified: "github.com/sonic-visualiser/sonic-visualiser/"

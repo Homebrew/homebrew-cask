@@ -8,7 +8,6 @@ cask "not-tetris" do
 
   livecheck do
     url "https://stabyourself.net/nottetris2/"
-    strategy :page_match
     regex(%r{href=.*?/nottetris(\d+)-osx\.zip}i)
   end
 

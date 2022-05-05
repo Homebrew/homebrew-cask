@@ -1,12 +1,12 @@
 cask "pycharm-ce" do
   arch = Hardware::CPU.intel? ? "" : "-aarch64"
 
-  version "2021.3.2,213.6777.50"
+  version "2022.1,221.5080.212"
 
   if Hardware::CPU.intel?
-    sha256 "b8f41f5dddeda0ed5f5c81ba57d2560ccc6e227987882fb6bf305b5d1d8c6909"
+    sha256 "99ba20a8b0752ca58e1fc814fb19766fd19c376b42e3cbfa4102c67bc21942ec"
   else
-    sha256 "407bf395cfb6d61f1c0861c7679b197238780e82a019e10162b8cd7130edb15a"
+    sha256 "1873565756716cb0eee23c60068dd5d394413b2b2e54b4b75cbe8b882540a0b7"
   end
 
   url "https://download.jetbrains.com/python/pycharm-community-#{version.csv.first}#{arch}.dmg"

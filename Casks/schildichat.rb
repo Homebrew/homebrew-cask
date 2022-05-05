@@ -1,6 +1,6 @@
 cask "schildichat" do
-  version "1.9.8-sc.1"
-  sha256 "962e45b1bebf86b95092f82bf08eb865f86769f592ff9b02dee84cfaf9042d86"
+  version "1.10.4-sc.1"
+  sha256 "68a5ebc99b872c97bd3bb7cf343c15e65cac9b84db0e70a9ec99c95760a4f9e7"
 
   url "https://github.com/SchildiChat/schildichat-desktop/releases/download/v#{version}/SchildiChat-#{version}-universal_by_nyantec.dmg",
       verified: "github.com/SchildiChat/schildichat-desktop/"

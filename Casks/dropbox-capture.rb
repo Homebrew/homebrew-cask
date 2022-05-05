@@ -1,5 +1,5 @@
 cask "dropbox-capture" do
-  version "69.0.0"
+  version "77.0.0"
   sha256 :no_check
 
   url "https://clientupdates.dropboxstatic.com/dbx-releng/dropbox_capture/mac/Dropbox_Capture.dmg",
@@ -13,6 +13,7 @@ cask "dropbox-capture" do
     strategy :extract_plist
   end
 
+  auto_updates true
   depends_on macos: ">= :el_capitan"
 
   app "Dropbox Capture.app"

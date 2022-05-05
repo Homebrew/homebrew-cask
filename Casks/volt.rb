@@ -16,4 +16,11 @@ cask "volt" do
   homepage "https://volt-app.com/"
 
   app "Volt.app"
+
+  zap trash: [
+    "~/.volt",
+    "~/Library/Caches/Volt",
+    "~/Library/HTTPStorages/Volt.binarycookies",
+    "~/Library/WebKit/Volt",
+  ]
 end

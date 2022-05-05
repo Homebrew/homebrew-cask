@@ -9,7 +9,6 @@ cask "pngyu" do
 
   livecheck do
     url :homepage
-    strategy :page_match
     regex(/mac:\s*(\d+(?:\.\d+)*)/i)
   end
 

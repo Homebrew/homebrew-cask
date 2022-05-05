@@ -21,7 +21,6 @@ cask "max" do
 
   livecheck do
     url :homepage
-    strategy :page_match
     regex(%r{href=.*?/Max-(\d+(?:\.\d+)*b\d+)\.dmg}i)
   end
 
