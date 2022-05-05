@@ -1,12 +1,12 @@
 cask "drawio" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "18.0.0"
+  version "18.0.1"
 
   if Hardware::CPU.intel?
-    sha256 "78588bf986a1f039237b731ba8fbd71b20c1656f576702050197ab56af4dec72"
+    sha256 "79e38e1dee751d1e79b2154db87126a5a9e727cb5b74f1ac9b67ee6dec59d5e2"
   else
-    sha256 "ef6258080903e37c31fe8721eea1185549104b782f1816504aaaed79094a9283"
+    sha256 "56279bb1013b0394bbd6d88f43438368b940a6cf7c8b9464a651a6fd867f8114"
   end
 
   url "https://github.com/jgraph/drawio-desktop/releases/download/v#{version}/draw.io-#{arch}-#{version}.dmg",
