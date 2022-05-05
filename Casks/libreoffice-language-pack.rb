@@ -5,39 +5,39 @@ cask "libreoffice-language-pack" do
 
   if Hardware::CPU.intel?
     language "af" do
-      sha256 "e7cf19eac44dcde21e62ae2087b81021f771c0c59501cff36bfc2191bd07622c"
+      sha256 "7e477f6c6dfadc5137b795c298437700da07e6f61a744e4bfc74ef5f9d07c079"
       "af"
     end
     language "am" do
-      sha256 "4178e0d30b0da328ec0c2770637e3cb9563443b76e6e6ef5d581e97243d8cdc4"
+      sha256 "196a97bfa0648a7159b516535628a94fee55f101ca15ac745f23d680ea0c5fb6"
       "am"
     end
     language "ar" do
-      sha256 "3aa57a1ceeba17913199299dab871183b5e84ab35ec482afa0d586ac87c19453"
+      sha256 "da30026a72732edb80eb64fac6f6219440971832b28ff9dc35d56868cfbae4f9"
       "ar"
     end
     language "as" do
-      sha256 "6319c78d3ebf43d14fee26a98132bc4e273172e83185f07845e06c953cf26a91"
+      sha256 "b2df589fdece3deec20225f2a936f9c5092b747c87cbab18f630378705bb1f1e"
       "as"
     end
     language "be" do
-      sha256 "1f483ebb95f1be87be94f189acaf27aafddaae2b8b9dd1b4230ec7fa25ef1fa6"
+      sha256 "6434c5543cce0789f93d2e1be0638fcdbf5880826b70623d08aaa068eb92be2a"
       "be"
     end
     language "bg" do
-      sha256 "2a7c2dfcc5d9f3326e48d8b020f45a7a4eabe134ea4532faac57ae4dbd6273b8"
+      sha256 "9310fd3cb15def707c1b67d698200c8a06c968fd279f07acccb6f1dab84eeb84"
       "bg"
     end
     language "bn-IN" do
-      sha256 "ecb413b5419ce230d42ad4fa04e531d7328faea15cc0dc98d5f5086e5969198f"
+      sha256 "cbac64b174f7540be366f38ada065dfc3cf12fbe6a9117666366e643b4085912"
       "bn-IN"
     end
     language "bn" do
-      sha256 "5a0f049ee162f090401defdd33278fe0b3e9d78f17a4ffd39ac9b3c9123c502e"
+      sha256 "efd9da069c1dfbf13ddb545f8db7588d9bb69ec867fffa2e2ef7cf4855bbb1ef"
       "bn"
     end
     language "bo" do
-      sha256 "1f9d9256ad6fa601d1867931571f9f976a3e42cddaf258cf34fce875a2540de2"
+      sha256 "0fa2b4719487fbe6881b18e72b3477f4bae1d19d3a73965c8a2fd5d29149b66b"
       "bo"
     end
     language "br" do
