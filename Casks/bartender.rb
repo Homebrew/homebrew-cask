@@ -10,8 +10,8 @@ cask "bartender" do
     url "https://macbartender.com/B2/updates/#{version.csv.first.dots_to_hyphens}/Bartender%20#{version.major}.zip",
         referer: "https://www.macbartender.com"
   else
-    version "4.1.40,41040"
-    sha256 "018b4a2bc2ef88368a5324392720ba4963f9e90d635f622c4751aef57bf5e8de"
+    version "4.1.48,41048"
+    sha256 "a60075aac93d15bc5e01f05088c4cf51e347d7c184ccc4b275aaf90c96c4c770"
     url "https://macbartender.com/B2/updates/#{version.csv.first.major}-#{version.csv.first.minor}-#{version.csv.first.patch.rjust(2, "0")}/Bartender%20#{version.major}.dmg",
         referer: "https://www.macbartender.com"
   end
