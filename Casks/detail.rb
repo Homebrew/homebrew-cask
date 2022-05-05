@@ -26,7 +26,7 @@ cask "detail" do
 
   zap trash: [
     "~/Library/Application Support/co.detail.mac",
-    "~Library/Application Support/Detail",
+    "~/Library/Application Support/Detail",
     "~/Library/Caches/co.detail.mac",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/co.detail.mac",
     "~/Library/co.detail.library",
