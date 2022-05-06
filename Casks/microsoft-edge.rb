@@ -22,7 +22,6 @@ cask "microsoft-edge" do
   end
 
   auto_updates true
-  depends_on cask: "microsoft-auto-update"
 
   pkg "MicrosoftEdge-#{version}.pkg",
       choices: [
