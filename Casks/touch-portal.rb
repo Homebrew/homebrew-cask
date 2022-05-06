@@ -9,7 +9,7 @@ cask "touch-portal" do
 
   livecheck do
     url :homepage
-    regex(/\.dmg.*\n.*<br>v?(\d+(?:\.\d+)*)/i)
+    regex(/\.dmg.*\n.*<br><span style="font-size: 20px;">v?(\d+(?:\.\d+)*)/i)
   end
 
   app "TouchPortal.app"
