@@ -2,7 +2,7 @@ cask "touch-portal" do
   version "3.0.10"
   sha256 :no_check
 
-  url "https://www.touch-portal.com/downloads/Touch_Portal_Installer.pkg"
+  url "https://www.touch-portal.com/downloads/TouchPortalMacRelease.dmg"
   name "Touch Portal"
   desc "Macro remote control"
   homepage "https://www.touch-portal.com/"
