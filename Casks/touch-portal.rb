@@ -9,10 +9,10 @@ cask "touch-portal" do
 
   livecheck do
     url :homepage
-    regex(/\.pkg.*\n.*<br>v?(\d+(?:\.\d+)*)/i)
+    regex(/\.dmg.*\n.*<br>v?(\d+(?:\.\d+)*)/i)
   end
 
-  pkg "Touch_Portal_Installer.pkg"
+  app "TouchPortal.app"
 
   uninstall pkgutil: "org.eclipse.jdt.internal.jarinjarloader"
 
