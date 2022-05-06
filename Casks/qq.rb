@@ -1,8 +1,8 @@
 cask "qq" do
-  version "6.7.6"
-  sha256 "8517cede810e151a879faff38283cfbb43c68b1041719ed61563553be3445be1"
+  version "6.7.7.20976_960"
+  sha256 "de307904dffb54c16d6f7adf5b1db9d6ea1e7c4fc4f009589dcbf49c3c897414"
 
-  url "https://dldir1.qq.com/qqfile/QQforMac/QQ_#{version}.dmg"
+  url "https://dldir1.qq.com/qqfile/QQforMac/QQ_#{version}_EXP.dmg"
   name "QQ"
   desc "Instant messaging tool"
   homepage "https://im.qq.com/macqq/"
