@@ -9,7 +9,7 @@ cask "qq" do
 
   livecheck do
     url "https://im.qq.com/rainbow/"
-    regex(/QQ[._-]v?(\d+(?:[._]\d+)+)([._-]EXP)?\.dmg/i)
+    regex(/QQ[._-]v?(\d+(?:[._]\d+)+([._-]EXP)?)\.dmg/i)
   end
 
   auto_updates true
