@@ -7,5 +7,10 @@ cask "yattee" do
   desc "Alternative and privacy-friendly YouTube frontend"
   homepage "https://github.com/yattee/yattee"
 
-  app ""
+  app "Yattee.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/stream.yattee.app",
+    "~/Library/Containers/stream.yattee.app",
+  ]
 end
