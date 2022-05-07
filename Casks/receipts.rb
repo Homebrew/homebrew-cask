@@ -9,7 +9,7 @@ cask "receipts" do
 
   livecheck do
     url "https://www.receipts-app.com/updater.php"
-    regex(%r{href=.*?/Receipts-(\d+(?:\.\d+)*-\d+)\.zip}i)
+    regex(/href=.*?Receipts[._-]v?(\d+(?:[.-]\d+)+)\.zip/i)
   end
 
   depends_on macos: ">= :yosemite"
