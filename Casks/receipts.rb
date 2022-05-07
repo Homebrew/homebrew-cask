@@ -4,6 +4,7 @@ cask "receipts" do
 
   url "https://www.receipts-app.com/update/download/Receipts-#{version}.zip"
   name "Receipts"
+  desc "Document management"
   homepage "https://www.receipts-app.com/"
 
   livecheck do
