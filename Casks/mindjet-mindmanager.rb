@@ -8,10 +8,9 @@ cask "mindjet-mindmanager" do
   homepage "https://www.mindjet.com/mindmanager/"
 
   livecheck do
-    url "https://www.mindjet.com/latest-release-notes-mac-english"
-    strategy :header_match do |headers|
-      headers["location"][/_(\d+(?:_\d+)*)_/, 1].tr("_", ".")
-    end
+    url "https://www.mindmanager.com/mm-mac-dmg"
+    regex(/MindManager[._-]Mac[._-]v?(\d+(?:\.\d+)+)/i)
+    strategy :header_match
   end
 
   depends_on macos: ">= :high_sierra"

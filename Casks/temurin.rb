@@ -1,11 +1,11 @@
 cask "temurin" do
   arch = Hardware::CPU.intel? ? "x64" : "aarch64"
 
-  version "18,36"
-
   if Hardware::CPU.intel?
-    sha256 "9cdce52d4c803be62e52a8cd8ec1715c16c5f0b91a520bc36082e3781db9ae82"
+    version "18.0.1,10"
+    sha256 "568aaf7c58ea913c1188fb033677b92e2b3145a0babadff2179a7a7d2050129d"
   else
+    version "18,36"
     sha256 "e38da4fb708cdab64060c4a754208c7557f6cdb6188fa57977165bbf07e078cd"
   end
 
