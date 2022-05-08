@@ -1,8 +1,8 @@
 cask "fldigi" do
-  version "4.1.20"
-  sha256 "00a9fe74e1eff23d4fa003c2919b46cae6fb54436b2df08706874e80ef28b000"
+  version "4.1.22"
+  sha256 "019ac3a188ad6378efddb88f2f6fb072dc9dbdcf7c5b7e68aaa071477ba926d7"
 
-  url "https://downloads.sourceforge.net/fldigi/fldigi/fldigi-#{version}_bs.dmg"
+  url "https://downloads.sourceforge.net/fldigi/fldigi/fldigi-#{version}_BS.dmg"
   name "fldigi"
   desc "Ham radio digital modem application"
   homepage "https://sourceforge.net/projects/fldigi/files/fldigi/"
