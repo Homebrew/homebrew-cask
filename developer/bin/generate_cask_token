@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# frozen_string_literal: true
+# frozen_string_literal: false
 
 #
 # generate_cask_token
@@ -34,7 +34,7 @@ EXPANDED_SYMBOLS = {
   "@" => "at",
 }.freeze
 
-CASK_FILE_EXTENSION = ".rb"
+CASK_FILE_EXTENSION = ".rb".freeze
 
 # Hardcode App names that cannot be transformed automatically.
 # Example: in "x48.app", "x48" is not a version number.
@@ -124,7 +124,7 @@ AFTER_INTERIOR_VERSION_PATS = [
 ### classes
 ###
 
-class AppName < String
+class String
   def self.remove_trailing_pat
     @@remove_trailing_pat ||= /(?<=.)(?:#{REMOVE_TRAILING_PATS.join('|')})\Z/i
   end
@@ -149,7 +149,7 @@ class AppName < String
     rescue
       nil
     end
-    return AppName.new(bundle_name) if bundle_name&.ascii_only?
+    return String.new(bundle_name) if bundle_name&.ascii_only?
 
     # check Info.plist CFBundleName
     bundle_name = Open3.popen3("/usr/libexec/PlistBuddy", "-c",
@@ -159,7 +159,7 @@ class AppName < String
     rescue
       nil
     end
-    return AppName.new(bundle_name) if bundle_name&.ascii_only?
+    return String.new(bundle_name) if bundle_name&.ascii_only?
 
     # check localization strings
     local_strings_file = Pathname.new(self).join("Contents", "Resources", "en.lproj", "InfoPlist.strings")
@@ -174,7 +174,7 @@ class AppName < String
           match.captures.first
         end
       end
-      return AppName.new(bundle_name) if bundle_name&.ascii_only?
+      return String.new(bundle_name) if bundle_name&.ascii_only?
     end
 
     # check Info.plist CFBundleExecutable
@@ -185,14 +185,14 @@ class AppName < String
     rescue
       nil
     end
-    return AppName.new(bundle_name) if bundle_name&.ascii_only?
+    return String.new(bundle_name) if bundle_name&.ascii_only?
 
     self
   end
 
   def basename
     if Pathname.new(self).exist?
-      AppName.new(Pathname.new(self).basename.to_s)
+      String.new(Pathname.new(self).basename.to_s)
     else
       self
     end
@@ -207,18 +207,18 @@ class AppName < String
     return self if ascii_only?
     return self unless respond_to?(:mb_chars)
 
-    AppName.new(mb_chars.normalize(:kd).each_char.select(&:ascii_only?).join)
+    String.new(mb_chars.normalize(:kd).each_char.select(&:ascii_only?).join)
   end
 
   def hardcoded_exception
     APP_EXCEPTION_PATS.each do |regexp, exception|
-      return AppName.new(exception) if regexp.match(self)
+      return String.new(exception) if regexp.match(self)
     end
     nil
   end
 
   def insert_vertical_tabs_for_camel_case
-    app_name = AppName.new(self)
+    app_name = String.new(self)
     trailing = Regexp.last_match(1) if app_name.sub!(/(#{self.class.preserve_trailing_pat})\Z/i, "")
     app_name.gsub!(/([^A-Z])([A-Z])/, "\\1\v\\2")
     app_name.sub!(/\Z/, trailing) if trailing
@@ -263,7 +263,7 @@ class AppName < String
   end
 end
 
-class CaskFileName < String
+class String
   def spaces_to_hyphens
     gsub(/ +/, "-")
   end
@@ -292,21 +292,21 @@ class CaskFileName < String
     cask_file_name.sub(/ +\Z/, "")
   end
 
-  def add_extension
+  def add_cask_file_extension
     sub(/(?:#{escaped_cask_file_extension})?\Z/i, CASK_FILE_EXTENSION)
   end
 
-  def remove_extension
+  def remove_cask_file_extension
     sub(/#{escaped_cask_file_extension}\Z/i, "")
   end
 
   def from_simplified_app_name
     return @from_simplified_app_name if @from_simplified_app_name
 
-    @from_simplified_app_name = if APP_EXCEPTION_PATS.rassoc(remove_extension)
-      remove_extension
+    @from_simplified_app_name = if APP_EXCEPTION_PATS.rassoc(remove_cask_file_extension)
+      remove_cask_file_extension
     else
-      remove_extension
+      remove_cask_file_extension
         .downcase
         .spell_out_symbols
         .spaces_to_hyphens
@@ -317,7 +317,7 @@ class CaskFileName < String
     end
     raise "Could not determine Simplified App name" if @from_simplified_app_name.empty?
 
-    @from_simplified_app_name.add_extension
+    @from_simplified_app_name.add_cask_file_extension
   end
 end
 
@@ -342,15 +342,15 @@ def escaped_cask_file_extension
 end
 
 def simplified_app_name
-  @simplified_app_name ||= AppName.new(ARGV.first.dup.force_encoding("UTF-8")).simplified
+  @simplified_app_name ||= String.new(ARGV.first.dup.force_encoding("UTF-8")).simplified
 end
 
 def cask_file_name
-  @cask_file_name ||= CaskFileName.new(simplified_app_name).from_simplified_app_name
+  @cask_file_name ||= String.new(simplified_app_name).from_simplified_app_name
 end
 
 def cask_token
-  @cask_token ||= cask_file_name.remove_extension
+  @cask_token ||= cask_file_name.remove_cask_file_extension
 end
 
 def warnings
