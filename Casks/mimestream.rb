@@ -23,6 +23,7 @@ cask "mimestream" do
     "~/Library/Caches/com.mimestream.Mimestream",
     "~/Library/Containers/com.mimestream.Mimestream",
     "~/Library/Containers/com.mimestream.Mimestream.ShareExtension",
+    "~/Library/Preferences/com.mimestream.Mimestream.plist",
     "~/Library/Saved Application State/com.mimestream.Mimestream.savedState",
   ]
 end
