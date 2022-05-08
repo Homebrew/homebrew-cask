@@ -13,4 +13,9 @@ cask "miniwol" do
   end
 
   app "miniWOL.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.Tweaking4all.miniWOL.plist",
+    "~/Library/Preferences/miniWOL",
+  ]
 end
