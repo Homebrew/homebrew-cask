@@ -19,4 +19,8 @@ cask "fog" do
     "~/Library/Preferences/com.vitorgalvao.fog.plist",
     "~/Library/Saved Application State/com.vitorgalvao.fog.savedState",
   ]
+
+  caveats do
+    discontinued
+  end
 end
