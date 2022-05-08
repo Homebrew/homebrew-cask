@@ -10,11 +10,9 @@ cask "paddle-easydl" do
 
   livecheck do
     url "https://aip-static.cdn.bcebos.com/paddle-desktop/releases/latest-mac.yml"
-    strategy :page_match do |page|
-      match = page.match(%r{path:.*/飞桨EasyDL-(\d+).(\d+).(\d+).(\d+).zip}i)
-      next if match.blank?
-
-      "#{match[1]}.#{match[2]}.#{match[3]},#{match[4]}"
+    regex(/path:.*?EasyDL[._-]v?(\d+(?:\.\d+)+)[._-](\d{4,})\.zip/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 
