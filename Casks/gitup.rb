@@ -21,6 +21,7 @@ cask "gitup" do
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/co.gitup.mac.sfl*",
     "~/Library/Caches/co.gitup.mac",
+    "~/Library/HTTPStorages/co.gitup.mac",
     "~/Library/Preferences/co.gitup.mac.plist",
   ]
 end

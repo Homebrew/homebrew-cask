@@ -1,12 +1,12 @@
 cask "pycharm-edu" do
   arch = Hardware::CPU.intel? ? "" : "-aarch64"
 
-  version "2021.3.4,213.7172.45"
+  version "2022.1,221.5080.251"
 
   if Hardware::CPU.intel?
-    sha256 "f08400b7bf80b199b52749a2a34604de13a0a90156f028dd6b765aac284462f9"
+    sha256 "7fa3a5212ef6cabfa24a96c7113e521fe2a18d3c23b30288e7ec7ef69a107b10"
   else
-    sha256 "5b1ee2b696db6564598cd1c43f0a73a59dc2baa945ba93a07831fb5fb26d085f"
+    sha256 "a18696acef871e824098f61c9573040d1304eb7ee63f98ea5358bde151271915"
   end
 
   url "https://download.jetbrains.com/python/pycharm-edu-#{version.csv.first}#{arch}.dmg"

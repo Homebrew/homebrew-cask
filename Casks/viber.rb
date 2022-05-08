@@ -1,5 +1,5 @@
 cask "viber" do
-  version "17.4.0,174482"
+  version "17.5.1,1750"
   sha256 :no_check
 
   url "https://download.viber.com/desktop/mac/Viber.dmg"
@@ -12,6 +12,7 @@ cask "viber" do
     strategy :extract_plist
   end
 
+  auto_updates true
   depends_on macos: ">= :high_sierra"
 
   app "Viber.app"

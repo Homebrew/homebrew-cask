@@ -1,12 +1,12 @@
 cask "oracle-jdk" do
   arch = Hardware::CPU.intel? ? "x64" : "aarch64"
 
-  version "18.0.1"
+  version "18.0.1.1"
 
   if Hardware::CPU.intel?
-    sha256 "d458b36fcc04522cf179fd963dcc7fc3bea0fa3c74608dc04b4bc199a7397c13"
+    sha256 "1725de224350c79906ea10546fa8186638f875c12f0b2161442278e8cf444369"
   else
-    sha256 "0e919d9f0860ffaaa4ef4aa8c3effb4380a0abaded2b949850e5eb3a4bf46ab4"
+    sha256 "6ef544cd2318051c1033564a352142c78ad448f9cca8ae87d289499f47d97838"
   end
 
   url "https://download.oracle.com/java/#{version.major}/archive/jdk-#{version}_macos-#{arch}_bin.dmg"

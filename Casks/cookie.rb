@@ -1,5 +1,5 @@
 cask "cookie" do
-  version "6.6.7"
+  version "6.6.8"
   sha256 :no_check
 
   url "https://sweetpproductions.com/products/cookieapp/Cookie.dmg"
