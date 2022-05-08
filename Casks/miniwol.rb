@@ -9,7 +9,7 @@ cask "miniwol" do
 
   livecheck do
     url "https://www.tweaking4all.com/downloads/"
-    regex(/href=.*?miniWOL-v?(\d+(?:\.\d+)+)-64bit\.dmg/i)
+    regex(/href=.*?miniWOL[._-]v?(\d+(?:\.\d+)+)-64bit\.dmg/i)
   end
 
   app "miniWOL.app"
