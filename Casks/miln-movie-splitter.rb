@@ -18,6 +18,6 @@ cask "miln-movie-splitter" do
   depends_on macos: ">= :high_sierra"
 
   app "Movie Splitter.app"
-  
+
   zap trash: "~/Library/Containers/eu.miln.movie-splitter"
 end
