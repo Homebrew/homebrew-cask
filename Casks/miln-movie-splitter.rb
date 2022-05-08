@@ -1,4 +1,4 @@
-cask "movie-splitter" do
+cask "miln-movie-splitter" do
   version "1.7.2"
   sha256 "da83197ca6f7c9e079b1bc69667bd458c9b5e9dceb90c49a866c7a2fce096080"
 
@@ -18,4 +18,6 @@ cask "movie-splitter" do
   depends_on macos: ">= :high_sierra"
 
   app "Movie Splitter.app"
+  
+  zap trash: "~/Library/Containers/eu.miln.movie-splitter"
 end
