@@ -17,9 +17,9 @@ cask "medis" do
   app "Medis.app"
 
   zap trash: [
-    "~/Library/Application Support/li.zihua.medis2",
-    "~/Library/Caches/li.zihua.medis2",
-    "~/Library/HTTPStorages/li.zihua.medis2",
-    "~/Library/Preferences/li.zihua.medis2.plist",
+    "~/Library/Application Support/li.zihua.medis*",
+    "~/Library/Caches/li.zihua.medis*",
+    "~/Library/HTTPStorages/li.zihua.medis*",
+    "~/Library/Preferences/li.zihua.medis*.plist",
   ]
 end
