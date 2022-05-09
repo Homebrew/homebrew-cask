@@ -25,6 +25,6 @@ cask "rightfont" do
     "~/Library/Logs/RightFont #{version.major}",
     "~/Library/Preferences/com.rightfontapp.RightFont#{version.major}.plist",
     "~/Library/WebKit/com.rightfontapp.RightFont#{version.major}",
-    "~/RightFont",
-  ]
+  ],
+      rmdir: "~/RightFont"
 end
