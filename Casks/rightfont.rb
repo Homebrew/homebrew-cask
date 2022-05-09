@@ -15,7 +15,7 @@ cask "rightfont" do
   auto_updates true
   depends_on macos: ">= :yosemite"
 
-  app "RightFont #{version.major}.app"
+  app "RightFont.app"
 
   zap trash: [
     "~/Library/Application Support/RightFont",
