@@ -16,7 +16,7 @@ module CiMatrix
   def self.filter_runners(cask_content)
     # Retrieve arguments from `depends_on macos:`
     args = case cask_content
-    when /depends_on macos: \[((.*,?\s*)*)\]/
+    when /depends_on macos: \[([\s\S]+)\]\n/
       Regexp.last_match(1).scan(/\s*"?:([^\s",]+)"?,?\s*/).flatten.map(&:to_sym)
     when /depends_on macos: "?:([^\s"]+)"?/
       [*Regexp.last_match(1).to_sym]
