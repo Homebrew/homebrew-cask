@@ -11,6 +11,7 @@ cask "oxwu" do
     url "https://eew.earthquake.tw/releases/autoupdates/package.json"
     strategy :page_match do |page|
       JSON.parse(page)["version"]
+    end
   end
 
   depends_on macos: ">= :high_sierra"
