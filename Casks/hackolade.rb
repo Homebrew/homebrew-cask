@@ -1,6 +1,6 @@
 cask "hackolade" do
-  version "6.0.6"
-  sha256 "fbc4582937bc3d87540e96b35fd7213e5b07eba6e632dccee6f14d364e5ce2dc"
+  version "6.0.7"
+  sha256 "51a2e9865bb52ac9b8915c5cea42743d5ed96173bbade59e59bf7d6af5d1a034"
 
   url "https://s3-eu-west-1.amazonaws.com/hackolade/previous/v#{version}/Hackolade-mac-setup-signed.pkg",
       verified: "s3-eu-west-1.amazonaws.com/hackolade/"
