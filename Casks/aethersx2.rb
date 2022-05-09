@@ -7,6 +7,8 @@ cask "aethersx2" do
   desc "Sony PlayStation 2 emulator for ARM based Macs"
   homepage "https://aethersx2.com/"
 
+  depends_on arch: :arm64
+
   app "AetherSX2.app"
 
   zap trash: [
