@@ -19,12 +19,12 @@ cask "rightfont" do
 
   zap trash: [
     "~/Library/Application Support/RightFont",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.rightfontapp.rightfont#{version.major}.sfl2",
-    "~/Library/Application Support/com.rightfontapp.RightFont#{version.major}",
-    "~/Library/Caches/com.rightfontapp.RightFont#{version.major}",
-    "~/Library/Logs/RightFont #{version.major}",
-    "~/Library/Preferences/com.rightfontapp.RightFont#{version.major}.plist",
-    "~/Library/WebKit/com.rightfontapp.RightFont#{version.major}",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.rightfontapp.rightfont*.sfl2",
+    "~/Library/Application Support/com.rightfontapp.RightFont*",
+    "~/Library/Caches/com.rightfontapp.RightFont*",
+    "~/Library/Logs/RightFont*",
+    "~/Library/Preferences/com.rightfontapp.RightFont*.plist",
+    "~/Library/WebKit/com.rightfontapp.RightFont*",
   ],
       rmdir: "~/RightFont"
 end
