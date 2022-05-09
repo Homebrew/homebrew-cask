@@ -9,9 +9,7 @@ cask "medis" do
 
   livecheck do
     url "https://api.appcenter.ms/v0.1/public/sparkle/apps/d33d1248-5582-4304-b45c-cb40d51da2ab"
-    strategy :sparkle do |item|
-      item.short_version.to_s
-    end
+    strategy :sparkle, &:short_version
   end
 
   app "Medis.app"
