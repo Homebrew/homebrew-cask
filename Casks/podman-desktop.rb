@@ -1,10 +1,10 @@
 cask "podman-desktop" do
-  version "0.0.2"
+  version "0.0.3"
 
   if Hardware::CPU.intel?
-    sha256 "f2bbf9efa47b168545800ea019841efba402c1e13015bc71164b54b87fe1a849"
+    sha256 "43a52fcc39ef210cf9f98f525a09fe11b8d9ca8746463d406fd72e5f627eb1f6"
   else
-    sha256 "13edf34e547d1a1b522b8ebebc948765b7a43919ebb3b966e2483ac74ddeee77"
+    sha256 "a79678e6f24aeb710f8d05d6d93fb5256b17922d5060c7e46c8950a7c32f4435"
   end
 
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
