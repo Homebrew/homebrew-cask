@@ -10,9 +10,7 @@ cask "oxwu" do
   livecheck do
     url "https://eew.earthquake.tw/releases/autoupdates/package.json"
     strategy :page_match do |page|
-      page.scan(%r{"(\d+(?:\.\d+)+)\.(\d+)"})
-        .map { |matches| "#{matches[0]}.#{matches[1]}" }
-    end
+      JSON.parse(page)["version"]
   end
 
   depends_on macos: ">= :high_sierra"
