@@ -8,13 +8,12 @@ cask "lunar" do
   homepage "https://lunar.fyi/"
 
   livecheck do
-    # The sparkle strategy cannot be used because we need to skip alpha releases in the appcast
-    url "https://static.lunar.fyi/appcast2.xml"
-    regex(/url=.*?Lunar[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    url "https://static.lunar.fyi/appcast-stable.xml"
+    strategy :sparkle
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Lunar.app"
 
