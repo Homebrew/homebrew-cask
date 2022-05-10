@@ -17,8 +17,9 @@ cask "jquake" do
 
   livecheck do
     url "https://fleneindre.github.io/version.json"
-    strategy :page_match
-    regex(/"version":"(\d+(?:\.\d+)*)"/i)
+    strategy :page_match do |page|
+      JSON.parse(page)["version"]
+    end
   end
 
   app "JQuake.app"
