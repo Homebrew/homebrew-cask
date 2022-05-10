@@ -1,12 +1,12 @@
 cask "nota" do
   arch = Hardware::CPU.intel? ? "mac" : "arm64-mac"
 
-  version "0.35.4"
+  version "0.36.0"
 
   if Hardware::CPU.intel?
-    sha256 "f2b9e9a1d8aa0de9a9f1d3df452af17cad5a33df1e5ed8794751e1e34bac756b"
+    sha256 "47bf6be7cbb78b98e6115e0a75ccc319bec12b7706ad9dbd625f86dc0eed4a73"
   else
-    sha256 "b02fb231ce4cac30143429bf74121320444aea259f47be2dcbff517c1991a8ac"
+    sha256 "72c2fcd0788fed16d406abb51cae94cb556e1490c340fa3e0021ed5bbf00156f"
   end
 
   url "https://github.com/notaapp/releases/releases/download/#{version}/Nota-#{version}-#{arch}.zip",
