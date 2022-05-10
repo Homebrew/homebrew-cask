@@ -26,6 +26,11 @@ module CiMatrix
       [*Regexp.last_match(1).to_sym]
     when /depends_on macos: "([=<>]=\s:?\S+)"/
       [*Regexp.last_match(1)]
+    when /depends_on macos:/
+      # In this case, `depends_on macos:` is present but wasn't matched by the
+      # previous regexes. We want this to visibly fail so we can address the
+      # shortcoming instead of quietly defaulting to `RUNNERS`.
+      odie "Unhandled `depends_on macos` argument"
     end
     return RUNNERS if args.nil?
 
