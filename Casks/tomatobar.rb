@@ -1,6 +1,6 @@
 cask "tomatobar" do
-  version "3.3.1"
-  sha256 "c371cd6cd2f6aa3625e9c7d78a95ccfaff752873593abcea51d3eaea694bafc1"
+  version "3.4.0"
+  sha256 "b3ab06fa2c47f41d3bc6baeccfc9145554d68ed6311a75672a696d9d4a298f7d"
 
   url "https://github.com/ivoronin/TomatoBar/releases/download/v#{version}/TomatoBar-v#{version}.zip"
   name "TomatoBar"
