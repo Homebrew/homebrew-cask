@@ -1,12 +1,12 @@
 cask "electron" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "18.2.1"
+  version "18.2.2"
 
   if Hardware::CPU.intel?
-    sha256 "537d2c02962ad25a666bd76636e222723a351b27a442833e1ad53e33c7c91fbe"
+    sha256 "9e8f4714f53465cc1595e63ba841269edfd081c4222ceab0da1118653fa946bd"
   else
-    sha256 "05fe17df84f6c85c7a083ee16beb0bddca1d5dee27dca0437bc9bf719401ed68"
+    sha256 "0a3ddd50d592b785b1714524df82a3bdff2645971d656a86c284c27f82ea73a0"
   end
 
   url "https://github.com/electron/electron/releases/download/v#{version}/electron-v#{version}-darwin-#{arch}.zip",
