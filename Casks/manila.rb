@@ -7,6 +7,11 @@ cask "manila" do
   desc "Finder extension for changing folder colors"
   homepage "https://github.com/neilsardesai/Manila#readme"
 
+  livecheck do
+     url :url
+     strategy :github_latest
+   end
+
   depends_on macos: ">= :monterey"
 
   app "Manila.app"
