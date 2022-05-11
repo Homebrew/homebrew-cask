@@ -1,8 +1,12 @@
 cask "apache-couchdb" do
   version "3.2.2"
-  sha256 "6a76d33ec0fd4b1323df27b5cc2877d72408f3a7645d0e60517428e72002f0ba"
+  sha256 "985d15aad597699e61c3654597ede37e43b9e13062c3b7e1d69a7cd3e1e71448"
 
-  url "https://couchdbneighbourhoodie.fra1.digitaloceanspaces.com/downloads/#{version}/mac/Apache-CouchDB.zip",
+  # 3.2.2 is the CouchDB version. This binary package
+  # 3.2.2-1 is a bugfix release with a nonstandard URL.
+  # Replace with original url in the next release.
+  # url "https://couchdbneighbourhoodie.fra1.digitaloceanspaces.com/downloads/#{version}/mac/Apache-CouchDB.zip",
+  url "https://couchdbneighbourhoodie.fra1.digitaloceanspaces.com/downloads/#{version}/mac/3.2.2-1/Apache-CouchDB.zip",
       verified: "couchdbneighbourhoodie.fra1.digitaloceanspaces.com/"
   name "Apache CouchDB"
   desc "Multi-master syncing database"
@@ -10,7 +14,11 @@ cask "apache-couchdb" do
 
   livecheck do
     url "https://neighbourhood.ie/download-apache-couchdb-mac/"
-    regex(%r{href=.*?/(\d+(?:\.\d+)+)/mac/Apache[._-]?CouchDB\.zip}i)
+    # 3.2.2 is the CouchDB version. This binary package
+    # 3.2.2-1 is a bugfix release with a nonstandard URL.
+    # Replace with original regex in the next release.
+    # regex(%r{href=.*?/(\d+(?:\.\d+)+)/mac/Apache[._-]?CouchDB\.zip}i)
+    regex(%r{href=.*?/(\d+(?:\.\d+)+)/mac/3.2.2-1/Apache[._-]?CouchDB\.zip}i)
   end
 
   depends_on macos: ">= :yosemite"
