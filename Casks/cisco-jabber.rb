@@ -21,6 +21,7 @@ cask "cisco-jabber" do
     "com.logitech.LogiUCPlugin",
     "com.PlantronicsPlugin.CiscoJabberPlugin",
     "com.Sennheiser.pkg.SennheiserSDKv789904MacSDKv8602",
+    "com.sennheiser.CiscoJabberPlugin",
   ],
             delete:  [
               "/Applications/Cisco Jabber.app",
