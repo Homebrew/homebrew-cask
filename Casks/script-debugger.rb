@@ -10,7 +10,7 @@ cask "script-debugger" do
 
   livecheck do
     url "https://latenightsw.com/download/"
-    regex(%r{action=.*?/ScriptDebugger(\d+(?:\.\d+)*-\d+A\d+)\.dmg}i)
+    regex(/action=.*?ScriptDebugger(\d+(?:\.\d+)+-\d+A\d+)\.dmg/i)
   end
 
   depends_on macos: ">= :mojave"
