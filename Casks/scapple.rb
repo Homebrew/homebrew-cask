@@ -13,5 +13,7 @@ cask "scapple" do
     strategy :sparkle
   end
 
+  depends_on macos: ">= :catalina"
+
   app "Scapple.app"
 end
