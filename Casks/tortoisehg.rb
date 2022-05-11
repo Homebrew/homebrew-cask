@@ -1,8 +1,8 @@
 cask "tortoisehg" do
-  version "6.0"
-  sha256 "eeb33f994219dd12f8af9d5ba499b7f500abec76738c0b0975d9c2a99d3b66f5"
+  version "6.1.2"
+  sha256 "e78e552df0e787fe6be147ffdb201a23d9627793285b5a765761cdec426806a4"
 
-  url "https://www.mercurial-scm.org/release/tortoisehg/macos/TortoiseHg-#{version}-mac-x64-qt5.dmg",
+  url "https://www.mercurial-scm.org/release/tortoisehg/macos/TortoiseHg-#{version}-mac-x64-qt5-python2.dmg",
       verified: "mercurial-scm.org/release/tortoisehg/"
   name "TortoiseHg"
   desc "Tools for the Mercurial distributed revision control system"
@@ -10,7 +10,7 @@ cask "tortoisehg" do
 
   livecheck do
     url "https://www.mercurial-scm.org/release/tortoisehg/macos/"
-    regex(/TortoiseHg-(\d+(?:\.\d+)*)-mac-x64-qt5\.dmg/i)
+    regex(/TortoiseHg-(\d+(?:\.\d+)*)-mac-x64-qt5-python2\.dmg/i)
   end
 
   app "TortoiseHg.app"
