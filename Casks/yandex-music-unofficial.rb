@@ -15,16 +15,9 @@ cask "yandex-music-unofficial" do
   desc "Unofficial app for Yandex Music"
   homepage "https://yandex-music.juvs.dev/"
 
-  livecheck do
-    url "https://github.com/juvirez/yandex-music-app/releases/latest/download/latest-mac.yml"
-    strategy :electron_builder
-  end
-
   auto_updates true
 
   app "Yandex Music Unofficial.app"
 
-  zap trash: [
-    "~/Library/Application Support/yandex-music-app",
-  ]
+  zap trash: "~/Library/Application Support/yandex-music-app"
 end
