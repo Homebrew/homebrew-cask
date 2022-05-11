@@ -10,13 +10,8 @@ cask "mindforger" do
 
   livecheck do
     url :url
-    regex(%r{href=.*?/mindforger-(\d+\.\d+\.\d+-\d{8}\.\d{6})-intel\.dmg}i)
-    strategy :github_latest do |page, regex|
-      match = page.match(regex)
-      next if match.blank?
-
-      match[1]
-    end
+    regex(/href=.*?mindforger[._-]v?(\d+(?:[.-]\d+)+)-intel\.dmg/i)
+    strategy :github_latest
   end
 
   app "mindforger.app"
