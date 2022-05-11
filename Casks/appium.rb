@@ -1,6 +1,6 @@
 cask "appium" do
-  version "1.22.2"
-  sha256 "6a6462429443f77126d024047613ca76552dab86a368551fcf797a9436e5059a"
+  version "1.22.3"
+  sha256 "b536499e070560197b2310732d1cfee42835468c78b77d0b804d2cf2fda72f1d"
 
   url "https://github.com/appium/appium-desktop/releases/download/v#{version}/Appium-Server-GUI-mac-#{version}.dmg",
       verified: "github.com/appium/appium-desktop/"
