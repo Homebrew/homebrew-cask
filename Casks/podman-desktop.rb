@@ -1,4 +1,6 @@
 cask "podman-desktop" do
+  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+
   version "0.0.3"
 
   if Hardware::CPU.intel?
@@ -7,7 +9,6 @@ cask "podman-desktop" do
     sha256 "a79678e6f24aeb710f8d05d6d93fb5256b17922d5060c7e46c8950a7c32f4435"
   end
 
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
   url "https://github.com/containers/podman-desktop/releases/download/v#{version}/podman-desktop-#{version}-#{arch}.dmg",
       verified: "https://github.com/containers/podman-desktop"
   name "Podman Desktop"
@@ -24,7 +25,5 @@ cask "podman-desktop" do
 
   app "Podman Desktop.app"
 
-  zap trash: [
-    "~/.local/share/containers/podman-desktop",
-  ]
+  zap trash: "~/.local/share/containers/podman-desktop"
 end
