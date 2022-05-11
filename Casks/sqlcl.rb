@@ -15,7 +15,7 @@ cask "sqlcl" do
   stage_only true
 
   caveats do
-    depends_on_java "8+"
+    depends_on_java "11+"
     path_environment_variable "#{staged_path}/sqlcl/bin"
   end
 end
