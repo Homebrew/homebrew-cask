@@ -7,18 +7,13 @@ cask "manila" do
   desc "Finder extension for changing folder colors"
   homepage "https://github.com/neilsardesai/Manila#readme"
 
-  livecheck do
-    url :stable
-    strategy :github_latest
-  end
-
   depends_on macos: ">= :monterey"
 
   app "Manila.app"
 
-  zap trash: %w[
-    ~/Library/Application Scripts/com.NeilSardesai.Manila*
-    ~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.neilsardesai.manila.sfl*
-    ~/Library/Containers/com.NeilSardesai.Manila*
+  zap trash: [
+    "~/Library/Application Scripts/com.NeilSardesai.Manila*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.neilsardesai.manila.sfl*",
+    "~/Library/Containers/com.NeilSardesai.Manila*",
   ]
 end
