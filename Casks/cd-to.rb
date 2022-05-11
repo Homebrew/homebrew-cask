@@ -12,6 +12,17 @@ cask "cd-to" do
   desc "Finder Toolbar app to open the current directory in the Terminal"
   homepage "https://github.com/jbtule/cdto"
 
+  if MacOS.version <= :big_sur
+    livecheck do
+      skip "Legacy version for Big Sur and earlier"
+    end
+  else
+    livecheck do
+      url :url
+      strategy :github_latest
+    end
+  end
+
   depends_on macos: ">= :mojave"
 
   app "cd to.app"
