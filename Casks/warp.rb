@@ -1,6 +1,6 @@
 cask "warp" do
-  version "0.2022.04.25.09.59.stable_03"
-  sha256 "cde78f7437d427e146650c25a52808fcfb95d04ce834fd45f340d7b4a8494347"
+  version "0.2022.05.09.09.06.stable_01"
+  sha256 "8fcda5f2cdcc343992f5335b4c4f2ede798c06aa6aab67b20f52ae679ce6ae7b"
 
   url "https://warp-releases.storage.googleapis.com/stable/v#{version}/Warp.dmg",
       verified: "warp-releases.storage.googleapis.com"
