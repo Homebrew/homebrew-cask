@@ -8,9 +8,9 @@ cask "manila" do
   homepage "https://github.com/neilsardesai/Manila#readme"
 
   livecheck do
-     url :url
-     strategy :github_latest
-   end
+    url :url
+    strategy :github_latest
+  end
 
   depends_on macos: ">= :monterey"
 
