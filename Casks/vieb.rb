@@ -1,8 +1,7 @@
 cask "vieb" do
-  version "7.2.0"
-  sha256
-
   arch = Hardware::CPU.intel? ? "" : "arm64-"
+
+  version "7.2.0"
 
   if Hardware::CPU.intel?
     sha256 "3a935e4212d435aefce420dfa9d00522f728fed4cff2654b0971b93f1c2b5096"
@@ -11,7 +10,7 @@ cask "vieb" do
   end
 
   url "https://github.com/Jelmerro/Vieb/releases/download/#{version}/Vieb-#{version}-#{arch}mac.zip",
-      verified: "https://github.com/Jelmerro/Vieb"
+      verified: "github.com/Jelmerro/Vieb/"
   name "Vieb"
   desc "Vim Inspired Electron Browser"
   homepage "https://vieb.dev/"
