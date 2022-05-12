@@ -14,5 +14,8 @@ cask "guitar-pro" do
 
   pkg "guitar-pro-#{version.major}-setup.pkg"
 
-  uninstall pkgutil: "com.arobas-music.guitarpro*"
+  uninstall pkgutil: [
+    "com.arobas-music.guitarpro*",
+    "com.arobas-music.soundbank.standard",
+  ]
 end
