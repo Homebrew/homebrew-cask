@@ -4,8 +4,8 @@ cask "ipfs" do
 
   url "https://github.com/ipfs-shipyard/ipfs-desktop/releases/download/v#{version}/IPFS-Desktop-#{version}.dmg"
   name "IPFS Desktop"
-  desc "Menu bar application for the IPFS peer-to-peer network"
-  homepage "https://github.com/ipfs-shipyard/ipfs-desktop"
+  desc "An unobtrusive and user-friendly desktop application for IPFS on Windows, Mac and Linux."
+  homepage "https://github.com/ipfs/ipfs-desktop"
 
   livecheck do
     url :url
