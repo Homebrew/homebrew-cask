@@ -1,24 +1,24 @@
 cask "jetbrains-gateway" do
   arch = Hardware::CPU.intel? ? "" : "-aarch64"
 
-  version "213.6777.25"
+  version "221.5080.246"
 
   if Hardware::CPU.intel?
-    sha256 "b38a888ed197808ec74ed95e38b28156a8f20611bf292a2f4ff732efd6881c7d"
+    sha256 "658ae23001592c6af7d44775386a10d00d949ccdc7b9eec2454a1fade9e5cd24"
   else
-    sha256 "6c140a6288fa99714c86a8cbe346b807e62ec270de7e252ab80ce2d6fe212944"
+    sha256 "3be185ca9cef02b98158baba529925dabe69f837580375cb4667207d2b38d885"
   end
 
   url "https://download.jetbrains.com/idea/gateway/JetBrainsGateway-#{version}#{arch}.dmg"
   name "jetbrains-gateway"
-  desc "Remote development Gateway by Jetbrains"
+  desc "Remote development gateway by Jetbrains"
   homepage "https://www.jetbrains.com/remote-development/gateway/"
 
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=GW&latest=true&type=release"
     strategy :page_match do |page|
       JSON.parse(page)["GW"].map do |release|
-        (release["version"]).to_s
+        (release["build"]).to_s
       end
     end
   end
