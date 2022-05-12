@@ -9,6 +9,7 @@ cask "sioyek" do
   homepage "https://sioyek.info/"
 
   livecheck do
+    url :url
     strategy :github_latest
   end
 
