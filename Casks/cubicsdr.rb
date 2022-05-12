@@ -9,6 +9,7 @@ cask "cubicsdr" do
   homepage "https://cubicsdr.com/"
 
   livecheck do
+    url "https://github.com/cjcliffe/CubicSDR/releases/"
     regex(/CubicSDR[._-]v?(\d+(?:\.\d+)+)[._-]Darwin\.dmg/i)
   end
 
