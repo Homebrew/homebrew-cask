@@ -17,5 +17,9 @@ cask "duo-connect" do
 
   pkg "DuoConnect-#{version}.pkg"
 
-  uninstall pkgutil: "com.duo.connect.bin"
+  uninstall pkgutil:   "com.duo.connect.bin",
+            launchctl: [
+              "com.duo.connect.tcp",
+              "com.duo.connect.tun",
+            ]
 end
