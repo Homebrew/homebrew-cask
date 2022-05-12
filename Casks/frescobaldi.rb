@@ -5,12 +5,13 @@ cask "frescobaldi" do
   url "https://github.com/frescobaldi/frescobaldi/releases/download/v#{version}/Frescobaldi-#{version}-x86_64.dmg",
       verified: "github.com/frescobaldi/frescobaldi/"
   name "Frescobaldi"
-  desc "LilyPond Editor"
+  desc "LilyPond editor"
   homepage "https://frescobaldi.org/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://github.com/frescobaldi/frescobaldi/releases/"
+    strategy :page_match
+    regex(/Frescobaldi[._-]v?(\d+(?:\.\d+)+)[._-]x86[._-]64\.dmg/i)
   end
 
   app "Frescobaldi.app"
