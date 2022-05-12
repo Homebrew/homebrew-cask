@@ -5,7 +5,7 @@ cask "xmind-zen" do
   url "https://dl3.xmind.net/XMind-for-macOS-#{version.csv.first}-#{version.csv.second}.dmg"
   name "XMind"
   desc "Mindmap and brainstorming app"
-  homepage "https://www.xmind.net/desktop/"
+  homepage "https://www.xmind.net/"
 
   livecheck do
     url "https://www.xmind.net/zen/download/mac/"
