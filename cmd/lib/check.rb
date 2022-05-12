@@ -124,6 +124,7 @@ module Check
     running_apps = diff[:loaded_launchjobs]
                    .added
                    .grep(/\.\d+\Z/)
+                   .grep_v(/\A(?:application\.)?com\.apple\.(installer|Safari|systemevents|systempreferences)(?:\.|$)/)
                    .map { |id| id.sub(/\A(?:application\.)?(.*?)(?:\.\d+){0,2}\Z/, '\1') }
 
     loaded_launchjobs = diff[:loaded_launchjobs]
