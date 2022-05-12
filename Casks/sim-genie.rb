@@ -16,4 +16,11 @@ cask "sim-genie" do
   depends_on macos: ">= :mojave"
 
   app "Sim Genie.app"
+
+  zap trash: [
+    "~/Library/Application Support/Sim Genie",
+    "~/Library/Caches/com.consumedbycode.simgenie",
+    "~/Library/HTTPStorages/com.consumedbycode.simgenie",
+    "~/Library/Preferences/com.consumedbycode.simgenie.plist",
+  ]
 end
