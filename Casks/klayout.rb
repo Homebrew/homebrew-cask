@@ -24,7 +24,7 @@ cask "klayout" do
 
   livecheck do
     url "https://www.klayout.de/development.html"
-    regex(/Version\s+(\d+(?:\.\d+)+)/i)
+    regex(%r{<b>Version\s+(\d+(?:\.\d+)+)</b>}i)
   end
 
   depends_on macos: ">= :catalina"
