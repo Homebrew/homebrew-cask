@@ -1,5 +1,6 @@
 cask "flutter" do
   arch = Hardware::CPU.intel? ? "_" : "_arm64_"
+
   version "3.0.0"
 
   if Hardware::CPU.intel?
@@ -9,7 +10,7 @@ cask "flutter" do
   end
 
   url "https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos#{arch}#{version}-stable.zip",
-      verified: "storage.googleapis.com/flutter_infra_release/"
+      verified: "storage.googleapis.com/flutter_infra_release/releases/stable/macos/"
   name "Flutter SDK"
   desc "UI toolkit for building applications for mobile, web and desktop"
   homepage "https://flutter.dev/"
