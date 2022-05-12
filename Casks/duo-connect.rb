@@ -19,7 +19,9 @@ cask "duo-connect" do
 
   uninstall launchctl: [
     "com.duo.connect.tcp",
+    "com.duo.connect.tcp.plist",
     "com.duo.connect.tun",
+    "com.duo.connect.tun.plist",
   ],
             pkgutil:   "com.duo.connect.bin"
 end
