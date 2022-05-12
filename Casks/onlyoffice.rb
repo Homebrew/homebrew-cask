@@ -15,6 +15,12 @@ cask "onlyoffice" do
   desc "Document editor"
   homepage "https://www.onlyoffice.com/"
 
+  livecheck do
+    url "https://github.com/ONLYOFFICE/DesktopEditors/releases/"
+    strategy :page_match
+    regex(%r{v?(\d+(?:\.\d+)+)/ONLYOFFICE-#{arch}\.dmg}i)
+  end
+
   auto_updates true
 
   app "ONLYOFFICE.app"
