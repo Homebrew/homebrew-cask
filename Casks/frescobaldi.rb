@@ -10,6 +10,7 @@ cask "frescobaldi" do
 
   livecheck do
     url "https://github.com/frescobaldi/frescobaldi/releases/"
+    strategy :page_match
     regex(/Frescobaldi[._-]v?(\d+(?:\.\d+)+)[._-]x86[._-]64\.dmg/i)
   end
 
