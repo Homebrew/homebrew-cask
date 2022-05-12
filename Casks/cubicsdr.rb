@@ -10,6 +10,7 @@ cask "cubicsdr" do
 
   livecheck do
     url "https://github.com/cjcliffe/CubicSDR/releases/"
+    strategy :page_match
     regex(/CubicSDR[._-]v?(\d+(?:\.\d+)+)[._-]Darwin\.dmg/i)
   end
 
