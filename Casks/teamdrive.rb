@@ -10,7 +10,7 @@ cask "teamdrive" do
 
   livecheck do
     url "https://teamdrive.com/en/downloads/"
-    regex(/Install[._-]TeamDrive[._-]v?(\d+(?:\.\d+)*)[._-]TMDR\.dmg/i)
+    regex(/Install[._-]TeamDrive[._-]v?(\d+(?:\.\d+)+)[._-]TMDR\.dmg/i)
   end
 
   depends_on macos: ">= :mojave"
