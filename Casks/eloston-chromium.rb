@@ -2,10 +2,10 @@ cask "eloston-chromium" do
   arch = Hardware::CPU.intel? ? "x86-64" : "arm64"
 
   if Hardware::CPU.intel?
-    version "101.0.4951.61-1.1,1652326040"
+    version "101.0.4951.64-1.1,1652326040"
     sha256 "93c31e5eb34828396c6f17ac42f54135878caf8ce5e01b063d3d97f8d2be4481"
   else
-    version "101.0.4951.61-1.1,1652357504"
+    version "101.0.4951.64-1.1,1652357504"
     sha256 "3031b33840919b606c5cfbd95e76abe84960c3ea9fd997aed00a94fbfb3b8eb1"
   end
 
