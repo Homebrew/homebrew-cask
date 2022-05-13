@@ -14,7 +14,7 @@ cask "manictime" do
 
   depends_on macos: ">= :sierra"
 
-  pkg "ManicTime-v#{version}.pkg"
+  pkg "ManicTime-osx-x64-v#{version}.pkg"
 
   uninstall pkgutil: "com.finkit.manictime.tracker"
 
