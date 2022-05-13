@@ -1,6 +1,6 @@
 cask "djl-bench" do
-  version "0.16.0"
-  sha256 "40d260157cac0f9db946255b81850d6447e7f4acfc7658048aa38f4dbe26909e"
+  version "0.17.0"
+  sha256 "e30edcb2b3b17f2b71961692742b15ee74c6ea3b66db65716b573449c3289242"
 
   url "https://publish.djl.ai/djl-bench/#{version}/benchmark-#{version}.zip"
   name "djl-bench"
