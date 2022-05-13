@@ -4,7 +4,7 @@ cask "background-music" do
 
   url "https://github.com/kyleneideck/BackgroundMusic/releases/download/v#{version}/BackgroundMusic-#{version}.pkg"
   name "Background Music"
-  desc "Audio Utility"
+  desc "Audio utility"
   homepage "https://github.com/kyleneideck/BackgroundMusic"
 
   livecheck do
@@ -16,7 +16,23 @@ cask "background-music" do
 
   pkg "BackgroundMusic-#{version}.pkg"
 
-  uninstall pkgutil:   "com.bearisdriving.BGM",
+  uninstall_postflight do
+    system_command "/bin/launchctl",
+                   args:         [
+                     "kickstart",
+                     "-kp",
+                     "system/com.apple.audio.coreaudiod",
+                   ],
+                   sudo:         true,
+                   must_succeed: true
+  end
+
+  uninstall delete:    [
+    "/Library/Application Support/Background Music",
+    "/Library/Audio/Plug-Ins/HAL/Background Music Device.driver",
+    "/usr/local/libexec/BGMXPCHelper.xpc",
+  ],
+            pkgutil:   "com.bearisdriving.BGM",
             quit:      "com.bearisdriving.BGM.App",
             launchctl: "com.bearisdriving.BGM.XPCHelper"
 
