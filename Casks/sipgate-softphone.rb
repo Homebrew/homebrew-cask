@@ -18,6 +18,5 @@ cask "sipgate-softphone" do
   zap trash: [
     "~/Library/Saved Application State/com.sipgate.desktop.savedState",
     "~/Library/Preferences/com.sipgate.desktop.plist",
-    "~/Library/Saved Application State/com.sipgate.desktop.savedState",
   ]
 end
