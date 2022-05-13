@@ -26,6 +26,7 @@ cask "transocks" do
     "~/Library/Application Support/CrashReporter/穿梭Transocks*",
     "/Library/Application Support/CrashReporter/穿梭Transocks*",
     "~/Library/Preferences/com.transocks.mac.signed.plist",
+    "~/Library/Preferences/group.com.transocks.mac.plist",
     "~/Library/Saved Application State/com.transocks.mac.signed.savedState",
   ]
 end
