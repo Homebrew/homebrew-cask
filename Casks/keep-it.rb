@@ -1,6 +1,6 @@
 cask "keep-it" do
-  version "1.11.11,9760"
-  sha256 "66b1003292d9935ccd1e2d1070ece3cc8b30ffbab8faf1c45a7bf3e5e43c1404"
+  version "1.11.16,10500"
+  sha256 "a8a9e26114f7f1e4cf70bb6e0c5315b4fe37ff03cb06d0d0a9102624b5640cf3"
 
   url "https://reinventedsoftware.com/keepit/downloads/KeepIt_#{version.csv.first}.dmg"
   name "Keep It"
