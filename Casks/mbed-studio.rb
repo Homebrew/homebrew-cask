@@ -1,5 +1,5 @@
 cask "mbed-studio" do
-  version "1.4.3"
+  version "1.4.4"
   sha256 :no_check
 
   url "https://studio.mbed.com/installers/latest/mac/MbedStudio.pkg"
