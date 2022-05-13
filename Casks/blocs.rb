@@ -1,5 +1,5 @@
 cask "blocs" do
-  version "4.5.0,450"
+  version "4.5.1,451"
   sha256 :no_check
 
   url "https://blocsapp.com/download/Blocs.zip"
