@@ -3,8 +3,8 @@ cask "free-gpgmail" do
     version "5,2021.3.1,-unsigned"
     sha256 "3a3c9290622cc3fe8d4761050363917d009f9fa923eb32d436364f0ae9a161b9"
   elsif MacOS.version <= :big_sur
-    version "5,2021.3.1,-signed"
-    sha256 "ee0b1a313afedb5cdf8a9703b00f35040b3109877247bb342c92a60b53944c9a"
+    version "5,2022.1,"
+    sha256 "bfcb6765ec1ec7141a73d4f464654ebd34d3a8abc418debcdb3a4c272f92b903"
   elsif MacOS.version >= :monterey
     version "6,2021.3.1,"
     sha256 "d15ae3bad7a40c98a078b5be0891dd38d43240cde7acbfd5f7ac03fafad4bbb1"
