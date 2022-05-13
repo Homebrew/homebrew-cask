@@ -1,6 +1,6 @@
 cask "fabfilter-saturn" do
-  version "2.05"
-  sha256 "b5a8210bad70ff8a6e76cfa5598b47c74e84cfc7f96b80c4b7ac86d2189dca2d"
+  version "2.06"
+  sha256 "11d3f9e92a88520e253b831be1c788894836d16c6b843fdc192d5bde082c4fcd"
 
   url "https://download.fabfilter.com/ffsaturn#{version.no_dots}.dmg"
   name "FabFilter Saturn"
