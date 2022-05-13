@@ -2,7 +2,7 @@ cask "manictime" do
   version "2.2.0"
   sha256 "8bbb13a603e1c3286e51b2eb8bedfce9963c8e388ef982650b743032fc0896ea"
 
-  url "https://cdn.manictime.com/setup/mac/ManicTime-v#{version}.dmg"
+  url "https://cdn.manictime.com/setup/mac/v#{version.dots_to_underscores}/ManicTime-osx-x64-v#{version}.dmg"
   name "ManicTime"
   desc "Time tracker that automatically collects computer usage data"
   homepage "https://www.manictime.com/Mac"
