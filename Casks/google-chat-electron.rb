@@ -10,6 +10,7 @@ cask "google-chat-electron" do
   end
 
   url "https://github.com/ankurk91/google-chat-electron/releases/download/#{version}/google-chat-electron-#{version}-#{arch}.zip"
+  appcast 'https://github.com/ankurk91/google-chat-electron/releases.atom'
   name "google-chat-electron"
   desc "Standalone app for Google Chat"
   homepage "https://github.com/ankurk91/google-chat-electron"
