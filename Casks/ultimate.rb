@@ -1,5 +1,5 @@
 cask "ultimate" do
-  version "3.0.13.1216"
+  version "3.0.14.402"
   sha256 :no_check
 
   url "https://download.epubor.com/epubor_ultimate.zip"
