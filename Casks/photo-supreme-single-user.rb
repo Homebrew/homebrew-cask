@@ -1,5 +1,5 @@
 cask "photo-supreme-single-user" do
-  version "7.0.1.4284"
+  version "7.1.0.4306"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://trial.idimager.com/PhotoSupreme_V#{version.major}.pkg"
