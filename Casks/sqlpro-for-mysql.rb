@@ -1,8 +1,8 @@
 cask "sqlpro-for-mysql" do
-  version "2021.53"
-  sha256 "53b718c7a4b6ee6271030cdb1959bdd9e2917371e5348bcf0d567d26614b6a72"
+  version "2022.15"
+  sha256 "05a738a786e8a6119331de4dec8fa1fda98ea47bb4a9702950a15453a3ca26dd"
 
-  url "https://d3fwkemdw8spx3.cloudfront.net/mysql/SQLProMySQL.#{version}.zip",
+  url "https://d3fwkemdw8spx3.cloudfront.net/mysql/SQLProMySQL.#{version}.app.zip",
       verified: "d3fwkemdw8spx3.cloudfront.net/mysql/"
   name "SQLPro for MySQL"
   desc "MySQL & MariaDB database client"
