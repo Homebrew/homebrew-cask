@@ -4,7 +4,7 @@ cask "tqsl" do
 
   url "https://www.arrl.org/tqsl/tqsl-#{version}.pkg"
   name "Trusted QSL"
-  desc "Sign and upload QSO records to Logbood of The World (LoTW)"
+  desc "Sign and upload QSO records to Logbook of The World (LoTW)"
   homepage "https://www.arrl.org/tqsl-download"
 
   livecheck do
