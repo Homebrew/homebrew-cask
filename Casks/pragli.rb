@@ -1,5 +1,5 @@
 cask "pragli" do
-  version "21.9.2"
+  version "22.5.4"
   sha256 :no_check
 
   url "https://storage.googleapis.com/always-on-cdf01.appspot.com/dist/Pragli.dmg",
