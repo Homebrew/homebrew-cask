@@ -1,7 +1,7 @@
 cask "naver-whale" do
   arch = Hardware::CPU.intel? ? "" : "ARM64"
 
-  version "3.13.131.36"
+  version "3.14.134.62"
   sha256 :no_check
 
   url "http://update.whale.naver.net/downloads/installers/NaverWhale#{arch}.dmg",
