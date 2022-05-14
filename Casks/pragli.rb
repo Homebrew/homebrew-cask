@@ -13,7 +13,7 @@ cask "pragli" do
     strategy :electron_builder
   end
 
-  app "Pragli.app"
+  app "Pesto (Pragli).app"
 
   zap trash: [
     "~/Library/Application Support/Pragli",
