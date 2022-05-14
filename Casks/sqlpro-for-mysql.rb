@@ -16,7 +16,7 @@ cask "sqlpro-for-mysql" do
   app "SQLPro for MySQL.app"
 
   zap trash: [
-    "~/Library/Containers/com.hankinsoft.osx.mysql",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hankinsoft.osx.mysql.sfl*",
+    "~/Library/Containers/com.hankinsoft.osx.mysql",
   ]
 end
