@@ -1,12 +1,12 @@
 cask "tandem" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "2.1.1207"
+  version "2.2.307"
 
   if Hardware::CPU.intel?
-    sha256 "52610c4f0fd97b3ea27030a16097c19eefe463205c7202cf88a9fbfcbc6a812a"
+    sha256 "2a01c9dc79673463e28a6c8e72abd1e4041a3480defaa9092ab85b1869575717"
   else
-    sha256 "a088b5d2d2316067c9357b278396a50e725ecb51413dec65588849d700012e44"
+    sha256 "3e72e92e27f01178efca1d78f27da0ac4fb28e07c99832bb9f53388ccc541056"
   end
 
   url "https://download.todesktop.com/200527auaqaacsy/Tandem%20#{version}-#{arch}.dmg",
