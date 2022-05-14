@@ -1,6 +1,6 @@
 cask "openinterminal" do
-  version "2.3.5"
-  sha256 "4271d793bb2f3cfe55189ca4aea5117551dc8c58a3abc06eec058630d47e3785"
+  version "2.3.6"
+  sha256 "11af1d2367e966dc4ea829cbf39cc7c869af50d687708600b188024539180ec8"
 
   url "https://github.com/Ji4n1ng/OpenInTerminal/releases/download/v#{version}/OpenInTerminal.app.zip"
   name "OpenInTerminal"
