@@ -10,7 +10,7 @@ cask "transcribe" do
       regex(/version\s*(\d+(?:\.\d+)+)\s*for\s*Mac\s*OS\s*10/i)
     end
   else
-    version "9.10"
+    version "9.21"
     sha256 :no_check
 
     if Hardware::CPU.intel?
