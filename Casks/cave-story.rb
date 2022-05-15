@@ -46,6 +46,7 @@ cask "cave-story" do
   end
 
   name "Cave Story"
+  name "Doukutsu"
   name "洞窟物語"
   desc "Action-adventure game reminiscent of classic 8- and 16-bit games"
   homepage "https://www.cavestory.org/"
