@@ -1,14 +1,14 @@
 cask "sigmaos" do
-  version "0.15.2.1-b"
-  sha256 "897d87df22cbac5f27b99a1542f011f1ae8dc6445eb5a5e7716231fd5f3bc2f5"
+  version "0.20.2.2"
+  sha256 "dcf9349e23c3d79add6858366addb5f292edc914841740342e1ffe3cdbd6e373"
 
-  url "https://releases.sigmaos.com/macos/SigmaOS-#{version}.dmg"
+  url "https://releases.sigmaos.com/SigmaOS-#{version}.dmg"
   name "sigmaos"
   desc "Web browser"
   homepage "https://sigmaos.com/"
 
   livecheck do
-    url "https://releases.sigmaos.com/macos/appcast.xml"
+    url "https://releases.sigmaos.com/appcast.xml"
     strategy :sparkle, &:version
   end
 
