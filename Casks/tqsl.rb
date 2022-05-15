@@ -9,8 +9,7 @@ cask "tqsl" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/tqsl-(\d+(?:\.\d+)*)\.pkg}i)
+    regex(%r{href=.*?/tqsl[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
   end
 
   depends_on macos: ">= :yosemite"
