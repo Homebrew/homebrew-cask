@@ -21,5 +21,10 @@ cask "segger-embedded-studio-for-arm" do
 
   pkg "Install SEGGER Embedded Studio for ARM #{version}.pkg"
 
-  uninstall pkgutil: "arm_segger_studio"
+  uninstall pkgutil: [
+    "arm_segger_studio",
+    "com.segger.studio.arm_segger_studio.#{version}",
+    "com.segger.studio.arm_segger_studio.le.#{version}",
+    "com.segger.studio.arm_segger_studio.libcxx.#{version}",
+  ]
 end
