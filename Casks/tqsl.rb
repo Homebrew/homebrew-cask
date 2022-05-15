@@ -18,4 +18,11 @@ cask "tqsl" do
   pkg "tqsl-#{version}.pkg"
 
   uninstall pkgutil: "org.arrl.tqsl"
+
+  zap trash: [
+    "~/.tqsl",
+    "~/Library/Preferences/org.arrl.tqsl.plist",
+    "~/Library/Preferences/tqslapp Preferences",
+    "~/Library/Saved Application State/org.arrl.tqsl.savedState",
+  ]
 end
