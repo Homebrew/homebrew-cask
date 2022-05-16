@@ -18,6 +18,7 @@ cask "accessmenubarapps" do
 
   zap trash: [
     "~/Library/Caches/de.ortisoft.AccessMenuBarApps",
+    "~/Library/HTTPStorages/de.ortisoft.AccessMenubarApps",
     "~/Library/Preferences/de.ortisoft.AccessMenuBarApps.plist",
   ]
 end
