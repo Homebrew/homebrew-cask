@@ -1,6 +1,6 @@
 cask "airtable" do
-  version "1.4.5"
-  sha256 "c4078c92678b41dbbd7cd79af10280eb2f89a8c4ff22f6edbf554d8c080c186a"
+  version "1.5.3"
+  sha256 "a5be587891b0f8311cf90f98522f5da792f779f406e492eb4298e45d55411143"
 
   url "https://static.airtable.com/download/macos/Airtable-#{version}.dmg"
   name "Airtable"
@@ -8,8 +8,10 @@ cask "airtable" do
   homepage "https://airtable.com/"
 
   livecheck do
-    url "https://airtable.com/mac"
-    regex(%r{href=.*?/Airtable-(\d+(?:\.\d+)+)\.dmg}i)
+    url "https://airtable.com/desktopAppLatestVersion?version=0.0.0&platform=darwin"
+    strategy :page_match do |page|
+      JSON.parse(page)["version"]
+    end
   end
 
   auto_updates true
@@ -23,8 +25,10 @@ cask "airtable" do
     "~/Library/Application Support/Airtable",
     "~/Library/Caches/com.FormaGrid.Airtable*",
     "~/Library/Cookies/com.FormaGrid.Airtable.binarycookies",
+    "~/Library/HTTPStorages/com.FormaGrid.Airtable*",
     "~/Library/Logs/Airtable",
     "~/Library/Preferences/ByHost/com.FormaGrid.Airtable.ShipIt.*.plist",
     "~/Library/Preferences/com.FormaGrid.Airtable*.plist",
+    "~/Library/Saved Application State/com.FormaGrid.Airtable.savedState",
   ]
 end
