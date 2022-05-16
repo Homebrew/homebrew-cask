@@ -15,13 +15,13 @@ cask "webcamoid" do
 
   zap trash: [
     "~/Library/Application Support/CrashReporter/webcamoid_*.plist",
+    "~/Library/Caches/Webcamoid",
+    "~/Library/LaunchAgents/org.webcamoid.cmio.AkVCam.Assistant.plist",
     "~/Library/Logs/DiagnosticReports/webcamoid_*.crash",
-    "~/Library/Saved Application State/com.webcamoidprj.webcamoid.savedState",
     "~/Library/Preferences/com.webcamoid.PluginsCache.plist",
     "~/Library/Preferences/com.webcamoid.Webcamoid.plist",
     "~/Library/Preferences/com.webcamoidprj.webcamoid.plist",
     "~/Library/Preferences/org.webcamoid.cmio.AkVCam.Assistant.plist",
-    "~/Library/LaunchAgents/org.webcamoid.cmio.AkVCam.Assistant.plist",
-    "~/Library/Caches/Webcamoid",
+    "~/Library/Saved Application State/com.webcamoidprj.webcamoid.savedState",
   ]
 end
