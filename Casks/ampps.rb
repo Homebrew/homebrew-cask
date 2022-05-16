@@ -1,15 +1,17 @@
 cask "ampps" do
-  version "3.9"
-  sha256 "7395bdcb3958cef4c3274cc1c6c68444104e6e464f692a76b61ead878236ec7d"
+  version "4.2"
+  sha256 "a5d9c3442bf57649e943f8995795b707a9e2d03ad673c027b45fcd96aab76f2f"
 
-  url "https://files.ampps.com/AMPPS-#{version}.dmg"
+  url "https://s1.softaculous.com/a/ampps/files/versions/AMPPS-#{version}-x86_64.dmg",
+      verified: "s1.softaculous.com/a/ampps/"
   name "AMPPS"
   desc "Software stack for website development"
   homepage "https://www.ampps.com/"
 
   livecheck do
-    url "https://www.ampps.com/downloads"
-    regex(%r{href=.*?/AMPPS-(\d+(?:\.\d+)+)-x86_64\.dmg}i)
+    url "https://api.ampps.com/download.php?arch=mac64"
+    strategy :header_match
+    regex(/AMPPS[._-]v?(\d+(?:\.\d+)+)-x86_64\.dmg/i)
   end
 
   suite "AMPPS"
