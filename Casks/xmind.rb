@@ -10,7 +10,7 @@ cask "xmind" do
   livecheck do
     url "https://www.xmind.net/zen/download/mac/"
     strategy :header_match
-    regex(/XMind[._-]for[._-]macOS[._-]v?(\d+(?:.\d+)+)\.dmg/i)
+    regex(/XMind[._-]for[._-]macOS[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
   end
     
   app "XMind.app"
