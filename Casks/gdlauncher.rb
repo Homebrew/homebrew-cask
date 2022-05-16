@@ -9,4 +9,12 @@ cask "gdlauncher" do
   homepage "https://gdevs.io/"
 
   app "GDLauncher.app"
+
+  zap trash: [
+    "~/Library/Application Support/gdlauncher",
+    "~/Library/Application Support/gdlauncher_next",
+    "~/Library/Logs/gdlauncher",
+    "~/Library/Preferences/org.gorilladevs.GDLauncher.plist",
+    "~/Library/Saved Application State/org.gorilladevs.GDLauncher.savedState",
+  ]
 end
