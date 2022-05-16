@@ -12,7 +12,7 @@ cask "xmind" do
     strategy :header_match
     regex(/XMind[._-]for[._-]macOS[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
   end
-    
+
   app "XMind.app"
 
   zap trash: [
