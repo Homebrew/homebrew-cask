@@ -8,10 +8,13 @@ cask "creality-slicer" do
   homepage "https://www.creality.com/download/"
 
   livecheck do
-    url :homepage
+    url :url
     regex(/Creality[._-]Slicer[._-](\d+(?:\.\d+)+)[._-]build[._-](\d+)[._-]Darwin\.zip/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+    strategy :header_match do |headers, regex|
+      match = headers["content-disposition"].match(regex)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
     end
   end
 
