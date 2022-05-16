@@ -6,7 +6,7 @@ cask "waterfox-classic" do
       verified: "github.com/WaterfoxCo/Waterfox-Classic/"
   name "Waterfox Classic"
   desc "Web browser"
-  homepage "https://classic.waterfox.net"
+  homepage "https://classic.waterfox.net/"
 
   livecheck do
     url "https://github.com/WaterfoxCo/Waterfox-Classic/releases/"
