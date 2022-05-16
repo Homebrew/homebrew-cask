@@ -1,6 +1,6 @@
 cask "appium" do
-  version "1.22.3"
-  sha256 "b536499e070560197b2310732d1cfee42835468c78b77d0b804d2cf2fda72f1d"
+  version "1.22.3-4"
+  sha256 "907265e27ba854f4ec66c2fea55ac2f8756264783d69b000d447b841d407e753"
 
   url "https://github.com/appium/appium-desktop/releases/download/v#{version}/Appium-Server-GUI-mac-#{version}.dmg",
       verified: "github.com/appium/appium-desktop/"
@@ -11,6 +11,7 @@ cask "appium" do
   livecheck do
     url :url
     strategy :github_latest
+    regex(%r{href=.*?/tag/v?(\d+(?:[.-]\d+)+)["' >]}i)
   end
 
   app "Appium Server GUI.app"
