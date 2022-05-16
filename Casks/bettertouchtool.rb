@@ -21,9 +21,7 @@ cask "bettertouchtool" do
 
   app "BetterTouchTool.app"
 
-  uninstall quit: [
-    "com.hegenberg.BetterTouchTool",
-  ]
+  uninstall quit: "com.hegenberg.BetterTouchTool"
 
   zap trash: [
     "~/Library/Application Support/BetterTouchTool",
