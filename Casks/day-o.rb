@@ -11,6 +11,11 @@ cask "day-o" do
   name "Day-O"
   homepage "https://shauninman.com/archive/2020/04/08/day_o_mac_menu_bar_clock_for_catalina"
 
+  livecheck do
+    # The internal version of the application is different from the download url
+    skip "Version information not available"
+  end
+
   app "Day-#{version.major_minor}/Day-O.app"
 
   zap trash: "~/Library/Preferences/com.shauninman.Day-O.plist"
