@@ -2,7 +2,8 @@ cask "waterfox-classic" do
   version "2022.04"
   sha256 "384a0682a38a78a09fcee3cd571e90d1368a0f5d3279dfbe2039fcb341f5d277"
 
-  url "https://github.com/WaterfoxCo/Waterfox-Classic/releases/download/#{version}-classic/Waterfox.Classic.#{version}.Setup.dmg"
+  url "https://github.com/WaterfoxCo/Waterfox-Classic/releases/download/#{version}-classic/Waterfox.Classic.#{version}.Setup.dmg",
+      verified: "github.com/WaterfoxCo/Waterfox-Classic/"
   name "Waterfox Classic"
   desc "Web browser"
   homepage "https://classic.waterfox.net"
