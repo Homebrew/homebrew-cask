@@ -8,7 +8,7 @@ cask "accessmenubarapps" do
   homepage "https://www.ortisoft.de/accessmenubarapps/"
 
   livecheck do
-    url "https://www.ortisoft.de/accessmenubarapps/profileInfo.php"
+    url "https://www.ortisoft.de/accessmenubarapps/appcast.xml"
     strategy :sparkle
   end
 
