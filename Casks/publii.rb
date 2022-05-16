@@ -14,13 +14,8 @@ cask "publii" do
   homepage "https://getpublii.com/"
 
   livecheck do
-    url "https://github.com/GetPublii/Publii/releases/latest"
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/v\.?(\d+(?:\.\d+)+).zip}i)
-      next if match.blank?
-
-      match[1].to_s
-    end
+    url "https://getpublii.com/download/"
+    regex(/href=.*?Publii[._-]v?(\d+(?:\.\d+)+)(?:[._-]#{arch})?\.dmg/i)
   end
 
   app "Publii.app"
