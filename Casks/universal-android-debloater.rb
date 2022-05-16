@@ -5,7 +5,7 @@ cask "universal-android-debloater" do
   url "https://github.com/0x192/universal-android-debloater/releases/download/#{version}/uad_gui-macos-opengl.tar.gz"
   name "Universal Android Debloater"
   name "UAD"
-  desc "Cross-platform GUI which uses ADB to debloat non-rooted Android devices"
+  desc "GUI which uses ADB to debloat non-rooted Android devices"
   homepage "https://github.com/0x192/universal-android-debloater"
 
   depends_on cask: "android-platform-tools"
