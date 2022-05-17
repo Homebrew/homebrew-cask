@@ -1,11 +1,11 @@
 cask "smartsynchronize" do
+  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
+
   version "4.3.0"
 
   if Hardware::CPU.intel?
-    arch = "x86_64"
     sha256 "22041d221c32b23e6be76a089e72ddc7fe1f52fac190fac949f29fff7b05d498"
   else
-    arch = "aarch64"
     sha256 "e52c0b57bd4c31023cb0dc84f0f45369e27ee8b96fc6b20768b2f8831469db9d"
   end
 
