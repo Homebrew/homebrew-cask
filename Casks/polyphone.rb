@@ -9,8 +9,9 @@ cask "polyphone" do
 
   livecheck do
     url "https://www.polyphone-soundfonts.com/download"
-    strategy :page_match do |page|
-      match = page.match(/(\d+)[._-]polyphone[._-]v?(\d+(?:-\d+)+)[._-]dmg/i)
+    regex(/(\d+)[._-]polyphone[._-]v?(\d+(?:-\d+)+)[._-]dmg/i)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
       next if match.blank?
 
       "#{match[2].tr("-", ".")},#{match[1]}"
