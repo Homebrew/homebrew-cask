@@ -2,7 +2,7 @@ cask "mega" do
   version "11.0.11"
   sha256 "0bdc3ed14bd73d3bbaea28044ab593a33c7f0ce1e477cf754a774095f3ba9c1c"
 
-  url "ttps://megasoftware.net/do_force_download/MEGA_#{version}_installer.pkg"
+  url "https://megasoftware.net/do_force_download/MEGA_#{version}_installer.pkg"
   name "MEGA"
   name "Molecular Evolutionary Genetics Analysis"
   desc "Molecular evolution statistical analysis and construction of phylogenetic trees"
@@ -23,7 +23,7 @@ cask "mega" do
             delete:  [
               "/Applications/MEGA#{version.major}.app",
               "/usr/local/bin/megacc",
-              "/usr/local/share/man/man1/mega#{version.major}.1",
+              "/usr/local/share/man/man1/mega.1",
               "/usr/local/share/man/man1/megacc.1",
             ]
 
