@@ -13,4 +13,14 @@ cask "shift" do
   end
 
   app "Shift.app"
+
+  zap trash: [
+    "~/Library/Application Support/.Shift",
+    "~/Library/Application Support/Shift",
+    "~/Library/Caches/com.rdbrck.shift.ShipIt",
+    "~/Library/Caches/com.rdbrck.shift",
+    "~/Library/HTTPStorages/com.rdbrck.shift",
+    "~/Library/Preferences/com.rdbrck.shift.plist",
+    "~/Library/Saved Application State/com.rdbrck.shift.savedState",
+  ]
 end
