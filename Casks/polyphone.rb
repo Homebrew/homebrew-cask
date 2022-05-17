@@ -13,7 +13,7 @@ cask "polyphone" do
       match = page.match(/(\d+)[._-]polyphone[._-]v?(\d+(?:-\d+)+)[._-]dmg/i)
       next if match.blank?
 
-      "#{match[2].tr("_", ".")},#{match[1]}"
+      "#{match[2].tr("-", ".")},#{match[1]}"
     end
   end
 
