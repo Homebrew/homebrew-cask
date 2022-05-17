@@ -13,6 +13,8 @@ cask "lifesize" do
     regex(/Lifesize[._-]v?(\d+(?:\.\d+)+)-mac\.zip/i)
   end
 
+  auto_updates true
+
   app "Lifesize.app"
 
   zap trash: [
