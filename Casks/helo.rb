@@ -1,6 +1,5 @@
 cask "helo" do
   arch = Hardware::CPU.intel? ? "" : "-arm64"
-  livecheck_arch = Hardware::CPU.intel? ? "mac" : "apple-silicon"
 
   version "1.6.2"
 
@@ -17,8 +16,8 @@ cask "helo" do
   homepage "https://usehelo.com/"
 
   livecheck do
-    url "https://usehelo.com/download/latest/#{livecheck_arch}"
-    strategy :header_match
+    url "https://helo.fra1.digitaloceanspaces.com/helo/latest-mac.yml"
+    strategy :electron_builder
   end
 
   auto_updates true
