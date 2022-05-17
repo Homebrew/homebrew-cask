@@ -9,7 +9,7 @@ cask "wolfram-engine" do
   homepage "https://www.wolfram.com/engine/"
 
   livecheck do
-    url "https://account.wolfram.com/download/public/wolfram-engine/desktop/MAC"
+    url :url
     strategy :header_match
     regex(%r{/v?(\d+(?:\.\d+)+)/WolframEngine[._-]v?\d+(?:\.\d+)+[._-]MAC(?:_EXP)?\.dmg}i)
   end
