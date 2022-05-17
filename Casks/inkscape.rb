@@ -4,12 +4,12 @@ cask "inkscape" do
   version "1.2"
 
   if Hardware::CPU.intel?
-    sha256 "c05e2ebf1742391c4c3ad5374819f3b5f2ae1cc9c94d860200ce3a36375c528c"
+    sha256 "189fb5b3fb9a12b115784620113234e6bc4aca537e88d98200bbcd5255ca3193"
   else
     sha256 "9a3fce6630b7268e1548f7f1d96dc7cf0f0614284895d6e09eeba503b804d372"
   end
 
-  url "https://inkscape.org/gallery/item/33441/Inkscape-#{version}.0_#{arch}.dmg"
+  url "https://media.inkscape.org/dl/resources/file/Inkscape-#{version}.0_#{arch}.dmg"
   name "Inkscape"
   desc "Vector graphics editor"
   homepage "https://inkscape.org/"
