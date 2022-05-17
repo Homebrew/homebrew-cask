@@ -11,7 +11,7 @@ cask "teamviewer-quickjoin" do
   livecheck do
     url "https://dl.teamviewer.com/download/TeamViewerQJ.dmg"
     strategy :header_match
-    regex(%r{/version[._-]v?(\d+)x/TeamViewerQJ\.dmg}/i)
+    regex(%r{/version[._-]v?(\d+)x/TeamViewerQJ\.dmg}i)
   end
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
