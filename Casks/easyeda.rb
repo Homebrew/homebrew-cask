@@ -14,7 +14,7 @@ cask "easyeda" do
 
   app "EasyEDA.app"
 
-  uninstall delete: [
+  zap trash: [
     "~/Library/Application Support/EasyEDA",
     "~/Library/Logs/EasyEDA",
     "~/Library/Preferences/com.easyeda.editor.helper.plist",
