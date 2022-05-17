@@ -16,4 +16,9 @@ cask "bike" do
   depends_on macos: ">= :mojave"
 
   app "Bike.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.hogbaysoftware.Bike",
+    "~/Library/Containers/com.hogbaysoftware.Bike",
+  ]
 end
