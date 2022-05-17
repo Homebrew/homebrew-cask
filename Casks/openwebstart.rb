@@ -1,6 +1,8 @@
 cask "openwebstart" do
   arch = Hardware::CPU.intel? ? "x64" : "aarch64"
+  
   version "1.6.0"
+  
   if Hardware::CPU.intel?
     sha256 "c2a71ce2e22adbf96aab869f0c96b2d26f839eace0d6692bf861070334fb2898"
   else
