@@ -28,8 +28,7 @@ cask "mega" do
             ]
 
   zap trash: [
-    "~/Library/Preferences/com.company.MEGA#{version.major} Helper.plist",
-    "~/Library/Preferences/com.company.MEGA#{version.major}.plist",
-    "~/Library/Saved Application State/com.company.MEGA#{version.major}.savedState",
+    "~/Library/Preferences/com.company.MEGA*",
+    "~/Library/Saved Application State/com.company.MEGA*",
   ]
 end
