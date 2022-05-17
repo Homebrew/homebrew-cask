@@ -5,6 +5,7 @@ cask "lifesize" do
   url "https://download.lifesizecloud.com/Lifesize-#{version}-mac.zip",
       verified: "download.lifesizecloud.com/"
   name "lifesize"
+  desc "Cloud contact and video conferencing"
   homepage "https://www.lifesize.com/"
 
   livecheck do
