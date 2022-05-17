@@ -1,15 +1,8 @@
 cask "dbgate" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  version "4.8.8"
+  sha256 "b054b6fc63437e732a272c70e83c1117ca69c0470fd31417143596e6739e6137"
 
-  version "4.8.2"
-
-  if Hardware::CPU.intel?
-    sha256 "3642012fbf57a10535b384631adb4c2ced2dae89ef3ef3e34aed755896427a28"
-  else
-    sha256 "99fb96ca2aaf835e56cc4037ee2bed848dd9847cfbc44cdc77f1605305e9d785"
-  end
-
-  url "https://github.com/dbgate/dbgate/releases/download/v#{version}/dbgate-#{version}-mac_#{arch}.dmg",
+  url "https://github.com/dbgate/dbgate/releases/download/v#{version}/dbgate-#{version}-mac_universal.dmg",
       verified: "github.com/dbgate/dbgate/"
   name "DbGate"
   desc "Database manager for MySQL, PostgreSQL, SQL Server, MongoDB, SQLite and others"

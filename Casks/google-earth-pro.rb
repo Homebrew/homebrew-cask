@@ -1,5 +1,5 @@
 cask "google-earth-pro" do
-  version "7.3.4.8573"
+  version "7.3.4.8642"
   sha256 :no_check
 
   url "https://dl.google.com/earth/client/advanced/current/GoogleEarthProMac-Intel.dmg"

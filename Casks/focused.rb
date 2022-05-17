@@ -1,5 +1,5 @@
 cask "focused" do
-  version "3.2,1825"
+  version "3.4,1839"
   sha256 :no_check
 
   url "https://www.codebots.co.uk/download/Focused"

@@ -13,7 +13,7 @@ cask "sourcetree" do
         verified: "atlassian.com/software/sourcetree/"
   else
     version "4.1.8,244"
-    sha256 "0f06a943308417f9c67ac69cc6841cac1128d343c03446c41637e357f5b941cd"
+    sha256 "c0cb5fda296dd97f211f42914693722279dc39d7f14b93717f1452431614f2e0"
 
     url "https://product-downloads.atlassian.com/software/sourcetree/ga/Sourcetree_#{version.csv.first}_#{version.csv.second}.zip",
         verified: "atlassian.com/software/sourcetree/"
@@ -24,7 +24,7 @@ cask "sourcetree" do
   homepage "https://www.sourcetreeapp.com/"
 
   livecheck do
-    url "https://product-downloads.atlassian.com/software/sourcetree/Appcast/SparkleAppcastGroup0.xml"
+    url "https://product-downloads.atlassian.com/software/sourcetree/Appcast/SparkleAppcast.xml"
     strategy :sparkle
   end
 

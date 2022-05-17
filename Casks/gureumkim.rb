@@ -1,6 +1,6 @@
 cask "gureumkim" do
-  version "1.11.1"
-  sha256 "f1e7db79b49a7675dbfc8ff57b4b55eaa55b3018803c6c46671c88b402b496c2"
+  version "1.12.2"
+  sha256 "387bd38d7778bdd5b0efb914fa123a1459619665305c7d83bcd9cad7e32dde0e"
 
   url "https://github.com/gureum/gureum/releases/download/#{version}/Gureum-#{version}.pkg",
       verified: "github.com/gureum/gureum/"

@@ -1,6 +1,6 @@
 cask "duo-connect" do
-  version "1.1.1"
-  sha256 "ba54b65d5a4f8c0a79702f6d370e76fb14cb50148bc3f83b8ff29a4ac9997e78"
+  version "2.0.2"
+  sha256 "9b5b480c13186c5ce84c41cbb23179639cd5115e3e81a3a4b9d196a391ea119a"
 
   url "https://dl.duosecurity.com/DuoConnect-#{version}.pkg",
       verified: "dl.duosecurity.com/"
@@ -17,5 +17,11 @@ cask "duo-connect" do
 
   pkg "DuoConnect-#{version}.pkg"
 
-  uninstall pkgutil: "com.duo.connect.bin"
+  uninstall launchctl: [
+    "com.duo.connect.tcp",
+    "com.duo.connect.tcp.plist",
+    "com.duo.connect.tun",
+    "com.duo.connect.tun.plist",
+  ],
+            pkgutil:   "com.duo.connect.bin"
 end

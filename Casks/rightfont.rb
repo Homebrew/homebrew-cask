@@ -1,5 +1,5 @@
 cask "rightfont" do
-  version "5.9.3,2859"
+  version "6.0.6,3088"
   sha256 :no_check
 
   url "https://rightfontapp.com/update/rightfont.zip"
@@ -15,16 +15,16 @@ cask "rightfont" do
   auto_updates true
   depends_on macos: ">= :yosemite"
 
-  app "RightFont #{version.major}.app"
+  app "RightFont.app"
 
   zap trash: [
     "~/Library/Application Support/RightFont",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.rightfontapp.rightfont#{version.major}.sfl2",
-    "~/Library/Application Support/com.rightfontapp.RightFont#{version.major}",
-    "~/Library/Caches/com.rightfontapp.RightFont#{version.major}",
-    "~/Library/Logs/RightFont #{version.major}",
-    "~/Library/Preferences/com.rightfontapp.RightFont#{version.major}.plist",
-    "~/Library/WebKit/com.rightfontapp.RightFont#{version.major}",
-    "~/RightFont",
-  ]
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.rightfontapp.rightfont*.sfl2",
+    "~/Library/Application Support/com.rightfontapp.RightFont*",
+    "~/Library/Caches/com.rightfontapp.RightFont*",
+    "~/Library/Logs/RightFont*",
+    "~/Library/Preferences/com.rightfontapp.RightFont*.plist",
+    "~/Library/WebKit/com.rightfontapp.RightFont*",
+  ],
+      rmdir: "~/RightFont"
 end

@@ -8,7 +8,7 @@ cask "speedify" do
   homepage "https://speedify.com/"
 
   livecheck do
-    url "https://downloads.speedify.com/speedify.php?platform=osx"
+    url "https://downloads.speedify.com/SpeedifyInstaller.dmg"
     strategy :extract_plist
   end
 

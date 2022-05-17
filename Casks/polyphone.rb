@@ -1,11 +1,22 @@
 cask "polyphone" do
-  version "2.2,690"
-  sha256 "bb44e3061c9617e7b2c7ef08a93fda59d0a3f94b3057a353d317f872d10f17b8"
+  version "2.3.1,905"
+  sha256 "46d3abf42f88cc157d7f2d751619d7c599789ebef65b2d31f5873342f1184e9d"
 
-  url "https://www.polyphone-soundfonts.com/en/download/file/#{version.csv.second}-polyphone-#{version.csv.first.dots_to_hyphens}-app-zip/latest/download"
-  appcast "https://www.polyphone-soundfonts.com/en/download"
+  url "https://www.polyphone-soundfonts.com/download/file/#{version.csv.second}-polyphone-#{version.csv.first.dots_to_hyphens}-dmg/latest/download"
   name "Polyphone"
+  desc "Soundfont editor for quickly designing musical instruments"
   homepage "https://polyphone-soundfonts.com/"
 
-  app "polyphone-#{version.csv.first}.app"
+  livecheck do
+    url "https://www.polyphone-soundfonts.com/download"
+    regex(/(\d+)[._-]polyphone[._-]v?(\d+(?:-\d+)+)[._-]dmg/i)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
+      next if match.blank?
+
+      "#{match[2].tr("-", ".")},#{match[1]}"
+    end
+  end
+
+  app "polyphone.app"
 end

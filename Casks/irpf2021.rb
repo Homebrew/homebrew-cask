@@ -8,8 +8,8 @@ cask "irpf2021" do
   homepage "https://www.gov.br/receitafederal/pt-br/assuntos/meu-imposto-de-renda"
 
   livecheck do
-    url "http://downloadirpf.receita.fazenda.gov.br/irpf/2021/irpf/update/latest.xml"
-    regex(%r{<pkgver>(\d+(\.\d+)+)</pkgver>}i)
+    url "https://www.gov.br/receitafederal/pt-br/centrais-de-conteudo/download/pgd/dirpf"
+    regex(/href=.*?IRPF2021[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
   depends_on macos: ">= :sierra"

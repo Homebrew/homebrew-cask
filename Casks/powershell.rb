@@ -1,12 +1,12 @@
 cask "powershell" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "7.2.3"
+  version "7.2.4"
 
   if Hardware::CPU.intel?
-    sha256 "2c2172fd3ddf039020acdf21ed39b9c84c45d952ca7133f84e0ab4d73e971301"
+    sha256 "518252b377b5b79066c4d338ff082888a45aa974c65bce8180ca6dea1e67adae"
   else
-    sha256 "0504bac6c3aab585740aca403d052ecd277c486cb2813c45ba86617a3bf5ab54"
+    sha256 "2697ef9fda6586bb903c903e566bf47bbf73907d712bbcd7432d747a00db86c5"
   end
 
   url "https://github.com/PowerShell/PowerShell/releases/download/v#{version}/powershell-#{version}-osx-#{arch}.pkg"

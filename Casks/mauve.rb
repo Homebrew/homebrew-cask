@@ -4,7 +4,12 @@ cask "mauve" do
 
   url "https://darlinglab.org/mauve/snapshots/#{version.major}/#{version.dots_to_hyphens}/MacOS/Mauve-snapshot_#{version.dots_to_hyphens}.dmg"
   name "Mauve"
+  desc "System for constructing multiple genome alignments"
   homepage "https://darlinglab.org/mauve/mauve.html"
 
   app "Mauve.app"
+
+  caveats do
+    discontinued
+  end
 end

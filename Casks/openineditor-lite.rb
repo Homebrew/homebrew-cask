@@ -1,6 +1,6 @@
 cask "openineditor-lite" do
-  version "1.2.4"
-  sha256 "a678ec01afccc94022700dbf663e252f975369b804855fccdc6c4a873dffc572"
+  version "1.2.5"
+  sha256 "745f81ba178795d44e97c8c60b8b28022f7258f70f673555da0da3a34637519d"
 
   url "https://github.com/Ji4n1ng/OpenInTerminal/releases/download/v#{version}/OpenInEditor-Lite.app.zip"
   name "OpenInEditor-Lite"

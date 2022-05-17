@@ -1,6 +1,6 @@
 cask "the-unarchiver" do
-  version "4.3.4,137,1646240113"
-  sha256 "1ef28dcccdc4285551febbf3f67b6b7cc6a65718d6821d0ad5037ca5e44f53af"
+  version "4.3.5,139,1652457131"
+  sha256 "4602bf08296747614fdcabfa68f420836dec9c8ebe9286a93b4c509a1e567c62"
 
   url "https://dl.devmate.com/com.macpaw.site.theunarchiver/#{version.csv.second}/#{version.csv.third}/TheUnarchiver-#{version.csv.second}.zip",
       verified: "devmate.com/com.macpaw.site.theunarchiver/"

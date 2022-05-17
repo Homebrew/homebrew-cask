@@ -1,6 +1,6 @@
 cask "vienna" do
-  version "3.7.2,7555"
-  sha256 "168b5df56b7f53fb877717c3a06d7451d0cdab767fe0ad7afa950da1d0bfa573"
+  version "3.7.3,7560"
+  sha256 "73ccf2bcea6884099708b323966a2307df8f0208264fda58ba4426bd87530d9d"
 
   url "https://github.com/ViennaRSS/vienna-rss/releases/download/v%2F#{version.csv.first}/Vienna#{version.csv.first}.tar.gz",
       verified: "github.com/ViennaRSS/vienna-rss/"
@@ -18,8 +18,8 @@ cask "vienna" do
   app "Vienna.app"
 
   zap trash: [
-    "~/Library/Application Support/Vienna",
     "~/Library/Application Scripts/uk.co.opencommunity.vienna2",
+    "~/Library/Application Support/Vienna",
     "~/Library/Caches/uk.co.opencommunity.vienna2",
     "~/Library/Cookies/uk.co.opencommunity.vienna2.binarycookies",
     "~/Library/HTTPStorages/uk.co.opencommunity.vienna2.binarycookies",

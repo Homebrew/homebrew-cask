@@ -1,16 +1,23 @@
 cask "deltawalker" do
-  version "2.6.3"
-  sha256 "9c9ffa07ff60a1da15f6154884cab1a26a5dcc59caa0ca0bf928f3bcbc32320f"
+  arch = Hardware::CPU.intel? ? "x64" : "aarch64"
 
-  url "https://deltawalker.s3.amazonaws.com/DeltaWalker-#{version}.dmg",
+  version "2.6.4"
+
+  if Hardware::CPU.intel?
+    sha256 "8d508521c98c4dec3a7affe1190e4911818032ffc82a17a7fb4a64b0a097246f"
+  else
+    sha256 "f92abbf7b971a7e1d986fe0991e26daa3121449f428f380af89fe06eaa7cccea"
+  end
+
+  url "https://deltawalker.s3.amazonaws.com/DeltaWalker-#{version}_#{arch}.dmg",
       verified: "deltawalker.s3.amazonaws.com/"
   name "DeltaWalker"
   desc "Tool to compare and synchronize files and folders"
   homepage "http://www.deltawalker.com/"
 
   livecheck do
-    url "http://www.deltawalker.com/download"
-    regex(/href=.*?DeltaWalker[._-]?v?(\d+(?:\.\d+)+)\.dmg/i)
+    url "http://www.deltawalker.com/content/download.html"
+    regex(/href=.*?DeltaWalker[._-]?v?(\d+(?:\.\d+)+)_#{arch}\.dmg/i)
   end
 
   app "DeltaWalker.app"

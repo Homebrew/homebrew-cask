@@ -1,12 +1,12 @@
 cask "docker" do
   arch = Hardware::CPU.intel? ? "amd64" : "arm64"
 
-  version "4.7.1,77678"
+  version "4.8.1,78998"
 
   if Hardware::CPU.intel?
-    sha256 "194bb59c7015ddea680993be42ee572ccd1a7e4b7f8f00293fa398b98f2926aa"
+    sha256 "77b4d29026e1efd18d2e62213e85ce5cf10cb61463cb0df535c27aa14c0e384d"
   else
-    sha256 "ce5aea6a2c30c10a81b9768cfe09c24d4e33a36d355b3703d590ca6c4498e73f"
+    sha256 "25a24ab115280bff6a1cb5f6ec298f5efbdc9479f383e7dc4f48a75d6db6e30e"
   end
 
   url "https://desktop.docker.com/mac/main/#{arch}/#{version.csv.second}/Docker.dmg"
@@ -48,11 +48,14 @@ cask "docker" do
 
   uninstall delete:    [
     "/Library/PrivilegedHelperTools/com.docker.vmnetd",
+    "/usr/local/bin/com.docker.cli",
+    "/usr/local/bin/docker-compose-v1",
     "/usr/local/bin/docker-compose",
     "/usr/local/bin/docker-credential-desktop",
     "/usr/local/bin/docker-credential-ecr-login",
     "/usr/local/bin/docker-credential-osxkeychain",
     "/usr/local/bin/docker",
+    "/usr/local/bin/hub-tool",
     "/usr/local/bin/hyperkit",
     "/usr/local/bin/kubectl.docker",
     "/usr/local/bin/kubectl",

@@ -1,7 +1,7 @@
 cask "sizzy" do
   arch = Hardware::CPU.intel? ? "intel" : "arm64"
 
-  version "59.0.0"
+  version "60.1.0"
   sha256 :no_check
 
   url "https://proxy.sizzy.co/updates/download/mac?arch=#{arch}"

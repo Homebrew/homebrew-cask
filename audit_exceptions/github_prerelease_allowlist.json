@@ -7,6 +7,7 @@
   "drop-to-gif": "all",
   "duplicati": "all",
   "extraterm": "all",
+  "ferdium": "all",
   "freetube": "all",
   "ghdl": "all",
   "graphsketcher": "all",
@@ -34,5 +35,6 @@
   "steveschow-gfxcardstatus": "all",
   "themeengine": "all",
   "toggl-track": "all",
+  "universal-android-debloater": "all",
   "xit": "all"
 }

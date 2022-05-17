@@ -1,5 +1,5 @@
 cask "eddie" do
-  version "2.20.0"
+  version "2.21.6"
 
   if Hardware::CPU.intel?
     if MacOS.version <= :mojave
@@ -8,13 +8,13 @@ cask "eddie" do
       url "https://eddie.website/download/?platform=macos-10.9&arch=x64&ui=ui&format=disk.dmg&version=#{version}",
           verified: "eddie.website/"
     else
-      sha256 "3f960bfd47ef5847197012bf0455003f6b4999b9b6c52e58f61e8d5c2e81d263"
+      sha256 "1ad3dfffbc092bae9a1c8daa90761e3b7aab9a4e08e1335e4893b270251bd085"
 
       url "https://eddie.website/download/?platform=macos-10.15&arch=x64&ui=ui&format=disk.dmg&version=#{version}",
           verified: "eddie.website/"
     end
   else
-    sha256 "0e326ab63b0cd20415fc14d5cc9549d5656fdca5d9518e0babed4e0b6821539c"
+    sha256 "c358a461c5de62c09edbe44eaf4760ac293271e7fa125ecb2f20e3db26000db4"
 
     url "https://eddie.website/download/?platform=macos-10.15&arch=arm64&ui=ui&format=disk.dmg&version=#{version}",
         verified: "eddie.website/"

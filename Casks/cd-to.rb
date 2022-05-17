@@ -1,11 +1,27 @@
 cask "cd-to" do
-  version "3.1.3"
-  sha256 "821cf3b1f4a0af0d89e71317a5a3271b89e569adf84c9b609d6f159d643c568b"
+  if MacOS.version <= :big_sur
+    version "3.1"
+    sha256 "2871b5324210a04eb13b27aa69ab572215a6ac11a33ca96de8e8526b39f77113"
+  else
+    version "3.1.3"
+    sha256 "821cf3b1f4a0af0d89e71317a5a3271b89e569adf84c9b609d6f159d643c568b"
+  end
 
   url "https://github.com/jbtule/cdto/releases/download/v#{version}/cdto_#{version.dots_to_underscores}.zip"
   name "cd to"
   desc "Finder Toolbar app to open the current directory in the Terminal"
   homepage "https://github.com/jbtule/cdto"
+
+  if MacOS.version <= :big_sur
+    livecheck do
+      skip "Legacy version for Big Sur and earlier"
+    end
+  else
+    livecheck do
+      url :url
+      strategy :github_latest
+    end
+  end
 
   depends_on macos: ">= :mojave"
 
