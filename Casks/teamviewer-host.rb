@@ -10,7 +10,7 @@ cask "teamviewer-host" do
   livecheck do
     url "https://dl.teamviewer.com/download/TeamViewerHost.dmg"
     strategy :header_match
-    regex(%r{/version[._-]v?(\d+)x/TeamViewerHost\.dmg}/i)
+    regex(%r{/version[._-]v?(\d+)x/TeamViewerHost\.dmg}i)
   end
 
   auto_updates true
