@@ -10,8 +10,8 @@ cask "timings" do
   app "Timings.app"
 
   zap trash: [
-    "~/Library/Preferences/com.mediaatelier.Timings.plist",
     "~/Library/Application Support/Timings",
     "~/Library/Caches/com.mediaatelier.Timings",
+    "~/Library/Preferences/com.mediaatelier.Timings.plist",
   ]
 end
