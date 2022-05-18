@@ -14,7 +14,7 @@ cask "mysql-shell" do
 
   depends_on macos: ">= :catalina"
 
-  pkg "mysql-shell-#{version}-macos11-x86-64bit.pkg"
+  pkg "mysql-shell-#{version}-macos12-x86-64bit.pkg"
 
   uninstall pkgutil: "com.mysql.shell"
 
