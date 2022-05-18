@@ -1,12 +1,12 @@
 cask "docker" do
   arch = Hardware::CPU.intel? ? "amd64" : "arm64"
 
-  version "4.8.1,78998"
+  version "4.8.2,79419"
 
   if Hardware::CPU.intel?
-    sha256 "77b4d29026e1efd18d2e62213e85ce5cf10cb61463cb0df535c27aa14c0e384d"
+    sha256 "b6b11cb1d9ed2ccd231bdbd86e809777d83b2a1e7307ed4fa02e676ebda9c756"
   else
-    sha256 "25a24ab115280bff6a1cb5f6ec298f5efbdc9479f383e7dc4f48a75d6db6e30e"
+    sha256 "56470c5ab594057371b7b46a584a537cefd9301701544209ae7cc9c335ffaa2a"
   end
 
   url "https://desktop.docker.com/mac/main/#{arch}/#{version.csv.second}/Docker.dmg"
