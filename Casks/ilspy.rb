@@ -1,8 +1,8 @@
 cask "ilspy" do
-  version "7.0-rc2"
-  sha256 "ee2b7838d11be19063b5fbe625e91677d36c716d4c5e3d6a5f3bb78783260ebb"
+  version "7.2-rc"
+  sha256 "480f0fe2b5dc6ad4d0df3d4c9ecd44429b97e0c8b5bac8bc99c2ac2a8e3025ff"
 
-  url "https://github.com/icsharpcode/AvaloniaILSpy/releases/download/v#{version}/osx-x64.zip"
+  url "https://github.com/icsharpcode/AvaloniaILSpy/releases/download/v#{version}/macOS.x64.Release.zip"
   name "ILSpy"
   desc "Avalonia-based .NET decompiler"
   homepage "https://github.com/icsharpcode/AvaloniaILSpy"
