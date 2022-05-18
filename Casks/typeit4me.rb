@@ -1,8 +1,8 @@
 cask "typeit4me" do
-  version "6.3.4,247"
-  sha256 "da31d8199e9c8d558b2ae1da2de520aae83e2299510d828bc3a87e6fc1cdca8a"
+  version "6.3.8,256"
+  sha256 "f1010b68dabd05cd1df5566fa1bb4381f897eef09f273912ae0b6913ff9e62b5"
 
-  url "https://ettoresoftware.store/download/TypeIt4Meb#{version.csv.second}.zip"
+  url "https://ettoresoftware.store/download/TypeIt4Me#{version.csv.first}b#{version.csv.second}.zip"
   name "TypeIt4Me"
   desc "Text expander"
   homepage "https://ettoresoftware.store/mac-apps/typeit4me/"
@@ -14,5 +14,5 @@ cask "typeit4me" do
 
   auto_updates true
 
-  app "TypeIt4Me.app"
+  app "TypeIt4Me#{version.csv.first}.app"
 end
