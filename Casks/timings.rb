@@ -14,4 +14,8 @@ cask "timings" do
     "~/Library/Caches/com.mediaatelier.Timings",
     "~/Library/Preferences/com.mediaatelier.Timings.plist",
   ]
+
+  caveats do
+    discontinued
+  end
 end
