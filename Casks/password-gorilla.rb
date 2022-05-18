@@ -8,7 +8,7 @@ cask "password-gorilla" do
   homepage "https://github.com/zdia/gorilla"
 
   livecheck do
-    url "https://gorilla.dp100.com/downloads/"
+    url "http://gorilla.dp100.com/downloads/"
     regex(/gorilla\.mac\.(\d+)\.zip/i)
   end
 
