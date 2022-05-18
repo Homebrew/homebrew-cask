@@ -1,5 +1,5 @@
 cask "treesheets" do
-  version "1.0,1"
+  version "1.0"
   sha256 :no_check
 
   url "https://strlen.com/treesheets/treesheets_osx.zip"
