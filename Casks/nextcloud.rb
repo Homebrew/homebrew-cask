@@ -18,8 +18,9 @@ cask "nextcloud" do
   homepage "https://nextcloud.com/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://github.com/nextcloud/desktop/releases/"
+    strategy :page_match
+    regec(/Nextcloud[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
   depends_on macos: ">= :yosemite"
