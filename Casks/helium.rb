@@ -1,9 +1,9 @@
 cask "helium" do
-  version "1.0"
-  sha256 :no_check
+  version "1.0.0"
+  sha256 "30abcdcb04e53f24948897acfd24899c7cdfca564b71b023224ae13f11365bbd"
 
-  url "https://download.clockworkmod.com/carbon/carbon-mac.zip",
-      verified: "download.clockworkmod.com/carbon/"
+  url "https://github.com/koush/CarbonResources/releases/download/v#{version}/carbon-mac.zip",
+      verified: "github.com/koush/CarbonResources/"
   name "Helium"
   homepage "https://github.com/koush/support-wiki/wiki/Helium-Desktop-Installer-and-Android-App"
 
