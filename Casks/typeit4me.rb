@@ -14,5 +14,5 @@ cask "typeit4me" do
 
   auto_updates true
 
-  app "TypeIt4Me.app"
+  app "TypeIt4Me#{version.csv.first}.app"
 end
