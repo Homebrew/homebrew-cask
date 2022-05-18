@@ -1,6 +1,6 @@
 cask "baidunetdisk" do
-  version "4.9.0"
-  sha256 "5e8d4db9d15c7b306a006c4608d28906bb09629ec16db043d7ce722296a5a619"
+  version "4.9.1"
+  sha256 "00618715aacbbf3e56a438411dd319ab26d5ba853d002567bf5627959aa1a40e"
 
   url "https://issuepcdn.baidupcs.com/issue/netdisk/MACguanjia/BaiduNetdisk_mac_#{version}.dmg",
       verified: "issuepcdn.baidupcs.com/issue/netdisk/MACguanjia/"
