@@ -4,7 +4,13 @@ cask "osbuddy" do
 
   url "http://cdn.rsbuddy.com/OSBuddy.dmg"
   name "OSBuddy"
+  desc "RuneScape toolkit"
   homepage "https://rsbuddy.com/osbuddy"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   app "OSBuddy.app"
 end
