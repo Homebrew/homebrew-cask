@@ -7,5 +7,10 @@ cask "cajviewer" do
   name "CAJ云阅读"
   homepage "https://cajviewer.cnki.net/cajcloud/cajdownload.html"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "CAJ云阅读.app"
 end
