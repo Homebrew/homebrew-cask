@@ -7,7 +7,7 @@ cask "bilibili" do
   name "哔哩哔哩"
   desc "Official bilibili video streaming and sharing platform"
   homepage "https://app.bilibili.com/"
-  
+
   livecheck do
     skip "No version information available"
   end
