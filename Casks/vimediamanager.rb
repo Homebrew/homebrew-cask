@@ -4,6 +4,7 @@ cask "vimediamanager" do
 
   url "https://github.com/vidalvanbergen/ViMediaManager/releases/download/v#{version}/vimediamanager.zip"
   name "ViMediaManager"
+  desc "Manage digital artifacts for your movie, television and anime collections"
   homepage "https://github.com/vidalvanbergen/ViMediaManager"
 
   livecheck do
