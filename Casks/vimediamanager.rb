@@ -1,15 +1,16 @@
 cask "vimediamanager" do
-  version "0.7a22"
-  sha256 "dbb251822ba45a7a81847e863b092fcd06a811b184b39f17ad0754662d327b4b"
+  version "0.7a23"
+  sha256 "e5c1a6960f60936edc0b07cf4b9fdddbf013fa6840162ab3c4b0aa266a17d570"
 
-  url "https://github.com/vidalvanbergen/ViMediaManager/releases/download/v#{version}/ViMediaManager.dmg"
+  url "https://github.com/vidalvanbergen/ViMediaManager/releases/download/v#{version}/vimediamanager.zip"
   name "ViMediaManager"
+  desc "Manage digital artifacts for your movie, television and anime collections"
   homepage "https://github.com/vidalvanbergen/ViMediaManager"
 
   livecheck do
     url :url
     strategy :github_latest
-    regex(%r{href=.*?/v?(\d+(?:\.\d+)*[a-z]\d+)/ViMediaManager\.dmg}i)
+    regex(%r{href=.*?/v?(\d+(?:\.\d+)+[a-z]\d+)["' >]}i)
   end
 
   app "ViMediaManager.app"
