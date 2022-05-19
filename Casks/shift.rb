@@ -1,6 +1,6 @@
 cask "shift" do
-  version "7.2.14"
-  sha256 "9505ebd91a95613f51f256e0871474dd343b19d41fbdd1afb0361e8a0fbc992d"
+  version "7.2.17"
+  sha256 "15c6bb9988860295ebcbd390d21c8d2a3a5c0bd6bddc779fc7d1edb3d056b9f5"
 
   url "https://update.tryshift.com/download/version/#{version}/osx_64"
   name "Shift"
@@ -13,4 +13,14 @@ cask "shift" do
   end
 
   app "Shift.app"
+
+  zap trash: [
+    "~/Library/Application Support/.Shift",
+    "~/Library/Application Support/Shift",
+    "~/Library/Caches/com.rdbrck.shift.ShipIt",
+    "~/Library/Caches/com.rdbrck.shift",
+    "~/Library/HTTPStorages/com.rdbrck.shift",
+    "~/Library/Preferences/com.rdbrck.shift.plist",
+    "~/Library/Saved Application State/com.rdbrck.shift.savedState",
+  ]
 end

@@ -13,6 +13,8 @@ cask "kitty" do
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/kitty.wrapper.sh"
   binary shimscript, target: "kitty"
+  binary "#{appdir}/kitty.app/Contents/Resources/terminfo/78/xterm-kitty",
+         target: "#{ENV.fetch("TERMINFO", "#{ENV["HOME"]}/.terminfo")}/78/xterm-kitty"
 
   preflight do
     File.write shimscript, <<~EOS

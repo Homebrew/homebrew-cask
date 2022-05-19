@@ -1,12 +1,12 @@
 cask "eclipse-php" do
   arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
-  version "4.22.0,2021-12"
+  version "4.23.0,2022-03"
 
   if Hardware::CPU.intel?
-    sha256 "9a6fb55f6bbc51401324241cf5598d228de4b417c12eadaa40ec85fba41164e0"
+    sha256 "80df02cf62160599002fc58e91ed0005e39112fb633df39d06febf4d955da2d7"
   else
-    sha256 "63224429da78386946381c6cec4808d07b5485f9878246dccd9713a331012b6c"
+    sha256 "aeb6c3bcdb6ccfd3286c1676d94d3b7adcedf5d248cdf7a5d18ef3bbb40ef93b"
   end
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-php-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&r=1"

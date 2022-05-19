@@ -1,5 +1,5 @@
 cask "robofont" do
-  version "4.1,2111241049"
+  version "4.2,2204191146"
   sha256 :no_check
 
   url "https://static.typemytype.com/robofont/RoboFont.dmg",

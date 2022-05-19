@@ -1,6 +1,6 @@
 cask "cernbox" do
-  version "2.9.2.6339"
-  sha256 "d92630b087da39a50b4a38dc57544bb2eb26d0462b8667a50b40d4ffc01542a1"
+  version "2.10.1.7479"
+  sha256 "eee944815b4513b4940d80fedaf09a798af7769cc11e1757b278d5f89c2d344a"
 
   url "https://cernbox.cern.ch/cernbox/doc/MacOSX/cernbox-#{version}.pkg"
   name "CERNBox Client"

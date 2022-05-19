@@ -6,8 +6,8 @@ cask "nextcloud" do
     url "https://github.com/nextcloud/desktop/releases/download/v#{version.major_minor_patch}/Nextcloud-#{version}.pkg",
         verified: "github.com/nextcloud/desktop/"
   else
-    version "3.5.0"
-    sha256 "3a6abc34321bb8a4b31943b02e08cb7aaa9411df6129072592a571691b7fa9ee"
+    version "3.5.1"
+    sha256 "594b98e1a316b931542c35cb7c179842469fc49c1fe4fad67d2744dac961d8c4"
 
     url "https://github.com/nextcloud/desktop/releases/download/v#{version}/Nextcloud-#{version}.pkg",
         verified: "github.com/nextcloud/desktop/"
@@ -18,8 +18,9 @@ cask "nextcloud" do
   homepage "https://nextcloud.com/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://github.com/nextcloud/desktop/releases/"
+    strategy :page_match
+    regex(/Nextcloud[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
   depends_on macos: ">= :yosemite"

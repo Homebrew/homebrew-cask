@@ -17,6 +17,9 @@ cask "cave-story" do
     end
 
     url "https://www.cavestory.org/downloads/cavestory_#{version.csv.first.no_dots}_r#{version.csv.second}.dmg"
+
+    # Renamed for consistency: app name is different in the Finder and in a shell.
+    app "Doukutsu.app", target: "Cave Story.app"
   end
   language "ja" do
     if MacOS.version <= :mojave
@@ -36,17 +39,17 @@ cask "cave-story" do
     end
 
     url "https://www.nakiwo.com/downloads/doukutsu#{version.dots_to_underscores}.dmg",
-        verified: "nakiwo.com/"
+        verified: "nakiwo.com/downloads/"
+
+    # Renamed for consistency: app name is different in the Finder and in a shell.
+    app "Doukutsu.app", target: "洞窟物語.app"
   end
 
-  name "Pixel Cave Story"
+  name "Cave Story"
   name "Doukutsu"
   name "洞窟物語"
   desc "Action-adventure game reminiscent of classic 8- and 16-bit games"
   homepage "https://www.cavestory.org/"
-
-  # Renamed for consistency: app name is different in the Finder and in a shell.
-  app "Doukutsu.app", target: "Cave Story.app"
 
   zap trash: "~/Library/Preferences/com.nakiwo.Doukutsu.plist"
 end

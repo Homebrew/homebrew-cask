@@ -1,12 +1,12 @@
 cask "wavebox" do
   arch = Hardware::CPU.intel? ? "mac" : "macarm64"
 
-  version "10.98.9.2"
+  version "10.101.21.2"
 
   if Hardware::CPU.intel?
-    sha256 "30a7549de1046a0fd64af5a179433e16b91fe6da1e58f0d1f98bbb6b9c0a9740"
+    sha256 "670e14cb8929fdc3880c9d70784638e8813850c83d7406783f2c45a7e7f33c94"
   else
-    sha256 "3745f2131bd5cb89cec96337af4734b4ac42ff0773973e35ab762587ce58b304"
+    sha256 "0c2fee9c334bb059d7b069ea2c40864ae87b9909413ae0d78002241010ee8201"
   end
 
   url "https://download.wavebox.app/stable/#{arch}/Install%20Wavebox%20#{version}.dmg",

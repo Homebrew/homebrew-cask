@@ -1,6 +1,6 @@
 cask "syntax-highlight" do
-  version "2.1.11"
-  sha256 "b08edc88f35b4d0334814e5a5f88979db67be67723192421e86cd686a9d78076"
+  version "2.1.12"
+  sha256 "9aef702d2081fec8e03dc409a93732ad57859e05861fb5498db0026e24b461f5"
 
   url "https://github.com/sbarex/SourceCodeSyntaxHighlight/releases/download/#{version}/Syntax.Highlight.zip"
   name "Syntax Highlight"

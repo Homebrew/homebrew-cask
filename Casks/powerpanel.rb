@@ -10,12 +10,7 @@ cask "powerpanel" do
 
   livecheck do
     url :homepage
-    strategy :page_match do |page|
-      match = page[%r{href=.*?/PPP_Mac[._-]v?(\d+(?:.\d+)*)\.dmg}i, 1]
-      next if match.blank?
-
-      match
-    end
+    regex(%r{href=.*?/PPP_Mac[._-]v?(\d+(?:.\d+)*)\.dmg}i)
   end
 
   depends_on macos: ">= :mojave"

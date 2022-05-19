@@ -8,6 +8,12 @@ cask "quodlibet" do
   desc "Music player and music library manager"
   homepage "https://quodlibet.readthedocs.io/"
 
+  livecheck do
+    url "https://github.com/quodlibet/quodlibet/releases/"
+    strategy :page_match
+    regex(/QuodLibet[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+  end
+
   app "QuodLibet.app"
 
   zap trash: [

@@ -1,12 +1,12 @@
 cask "dynobase" do
   arch = Hardware::CPU.intel? ? "" : "-arm64"
 
-  version "1.9.1"
+  version "1.9.3"
 
   if Hardware::CPU.intel?
-    sha256 "69f7cee32cbc2c1bab7d6bf74b447cbcd5d1773a5b93c9a3aa41b4c9109b3046"
+    sha256 "2b3f8b01c6c1a4f84dd1566181910c20156484fa6a593f16e87f7f5d0dc52d79"
   else
-    sha256 "84b54af88257207dacda050bf84c9c8b1560debcb55592928ac662ee83eb1cf6"
+    sha256 "899ae8cc8076c70f15bed821693813b9679880669e9b5d55df58527dd8926f7e"
   end
 
   url "https://github.com/Dynobase/dynobase/releases/download/#{version}/Dynobase-#{version}#{arch}.dmg",

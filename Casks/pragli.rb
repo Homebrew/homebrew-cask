@@ -1,8 +1,8 @@
 cask "pragli" do
-  version "21.9.2"
+  version "22.5.4"
   sha256 :no_check
 
-  url "https://storage.googleapis.com/always-on-cdf01.appspot.com/dist/Pragli.dmg",
+  url "https://storage.googleapis.com/always-on-cdf01.appspot.com/dist/Pesto%20(Pragli).dmg",
       verified: "storage.googleapis.com/always-on-cdf01.appspot.com/"
   name "Pragli"
   desc "Virtual office for remote teams"
@@ -13,7 +13,7 @@ cask "pragli" do
     strategy :electron_builder
   end
 
-  app "Pragli.app"
+  app "Pesto (Pragli).app"
 
   zap trash: [
     "~/Library/Application Support/Pragli",

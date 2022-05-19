@@ -12,5 +12,5 @@ cask "gactions" do
     regex(%r{href=.*?/v?(\d+(?:\.\d+)*)/release/gactions[._-]sdk[._-]darwin\.t}i)
   end
 
-  binary "aog_cli/gactions"
+  binary "gactions-sdk/gactions"
 end

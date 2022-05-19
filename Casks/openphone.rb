@@ -1,6 +1,6 @@
 cask "openphone" do
-  version "3.4.14"
-  sha256 "d0a4fb440bfe63e5d319658a2322b3f141b4423793d2cbb5cf3ec7524293fd06"
+  version "3.5.1"
+  sha256 "e5be4e2a56fe3495f491c468171b390be6423f8becd831283daf5bd56e8dedf0"
 
   url "https://download.openphone.co/OpenPhone-#{version}.dmg"
   name "OpenPhone"

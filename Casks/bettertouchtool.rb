@@ -1,6 +1,6 @@
 cask "bettertouchtool" do
-  version "3.772,1913"
-  sha256 "a29a188576661fd41844aba7f8a51c7332ec42f0f1b301186a92b85f9154c634"
+  version "3.781,1924"
+  sha256 "b6db0b4d921458368a1e2f17b20bc46f128d8a184d70de9dfd83394631d5b90f"
 
   url "https://folivora.ai/releases/btt#{version.csv.first}-#{version.csv.second}.zip"
   name "BetterTouchTool"
@@ -20,6 +20,8 @@ cask "bettertouchtool" do
   auto_updates true
 
   app "BetterTouchTool.app"
+
+  uninstall quit: "com.hegenberg.BetterTouchTool"
 
   zap trash: [
     "~/Library/Application Support/BetterTouchTool",

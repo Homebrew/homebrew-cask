@@ -1,11 +1,11 @@
 cask "xmind-zen" do
-  version "11.1.2,202111071943"
-  sha256 "923ca09d1b81435088680179c50f73bb27342b2a5e97e16d0daaa0433aea5de3"
+  version "12.0.2,202204260739"
+  sha256 "14ff55139fc847c8950bfa5bd5ac9688f81734d4b6f04af12fb7f8804143c88f"
 
   url "https://dl3.xmind.net/XMind-for-macOS-#{version.csv.first}-#{version.csv.second}.dmg"
   name "XMind"
   desc "Mindmap and brainstorming app"
-  homepage "https://www.xmind.net/desktop/"
+  homepage "https://www.xmind.net/"
 
   livecheck do
     url "https://www.xmind.net/zen/download/mac/"

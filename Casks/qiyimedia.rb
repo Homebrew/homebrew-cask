@@ -1,5 +1,5 @@
 cask "qiyimedia" do
-  version "13.4.5,20220427174100"
+  version "13.5.0,20220512171701"
   sha256 :no_check
 
   url "https://static-d.iqiyi.com/ext/common/iQIYIMedia_271.dmg"

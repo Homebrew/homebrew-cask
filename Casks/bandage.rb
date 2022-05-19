@@ -1,11 +1,18 @@
 cask "bandage" do
-  version "0.8.1"
-  sha256 "13e90e5824b61bd4abe62afa8785a28627714bf7a3d4dad3edb4b8f9854d3b6d"
+  arch = Hardware::CPU.intel? ? "x86-64" : "aarch64"
 
-  url "https://github.com/rrwick/Bandage/releases/download/v#{version}/Bandage_Mac_v#{version.dots_to_underscores}.zip",
+  version "0.9.0"
+
+  if Hardware::CPU.intel?
+    sha256 "26e775c638bc4da1eb3a1b6e835a3916f64d89cad04050f70ccc41f847488238"
+  else
+    sha256 "0bf30966957a5949bf40595ae05d56bb84e504ee8d25e346ccad631c4588e815"
+  end
+
+  url "https://github.com/rrwick/Bandage/releases/download/v#{version}/Bandage_macOS-#{arch}_v#{version}.zip",
       verified: "github.com/rrwick/Bandage/"
   name "Bandage"
-  desc "Bioinformatics Application for Navigating De novo Assembly Graphs"
+  desc "Bioinformatics app for navigating de novo assembly graphs"
   homepage "https://rrwick.github.io/Bandage/"
 
   app "Bandage.app"

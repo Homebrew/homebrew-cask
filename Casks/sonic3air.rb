@@ -1,6 +1,6 @@
 cask "sonic3air" do
-  version "21.09.28.0"
-  sha256 "689c7de10c6a6f4c795902e470e63f3e49017970387d34ca932a66b33e1ee79c"
+  version "22.05.15.0"
+  sha256 "849cacb3ffccaa7d030ee9e36677e4c055a66481657fb950bdfbc727ded6815d"
 
   url "https://projects.sappharad.com/s3air_mac/sonic3air_mac_#{version.major_minor_patch.no_dots}.dmg",
       verified: "projects.sappharad.com/s3air_mac/"
