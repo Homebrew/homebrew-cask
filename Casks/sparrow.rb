@@ -1,6 +1,4 @@
 cask "sparrow" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
-
   version "1.6.4"
 
   if Hardware::CPU.intel?
