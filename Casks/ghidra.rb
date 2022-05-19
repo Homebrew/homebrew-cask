@@ -23,8 +23,7 @@ cask "ghidra" do
     FileUtils.mv(staged_path, "#{caskroom_path}/#{version.csv.first}-#{version.csv.second}")
     # Remove the quarantine flag, otherwise 'decompile' and 'demangler_gnu_...' gets blocked
     system_command "xattr",
-               args: ["-dr", "com.apple.quarantine", "#{caskroom_path}/#{version.csv.first}-#{version.csv.second}"]
-
+                   args: ["-dr", "com.apple.quarantine", "#{caskroom_path}/#{version.csv.first}-#{version.csv.second}"]
   end
 
   uninstall_preflight do
