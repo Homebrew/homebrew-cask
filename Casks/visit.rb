@@ -6,10 +6,10 @@ cask "visit" do
     url "https://github.com/visit-dav/visit/releases/download/v#{version}/visit#{version}.darwin-x86_64-10.13.dmg",
         verified: "github.com/visit-dav/visit/"
   else
-    version "3.2.1"
-    sha256 "c9679ef9f4911b204766047f186113c162efcbc2351dca96cfa01bbd24b93961"
+    version "3.2.2"
+    sha256 "0fdb598367ec3b0f2009a090d4fbedb99d0c76f4e685c8ff77f7f0e54952670c"
 
-    url "https://github.com/visit-dav/visit/releases/download/v#{version}/visit#{version}.darwin-x86_64-10_14.dmg",
+    url "https://github.com/visit-dav/visit/releases/download/v#{version}/VisIt-#{version}.dmg",
         verified: "github.com/visit-dav/visit/"
   end
 
