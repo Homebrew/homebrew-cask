@@ -9,7 +9,7 @@ cask "sparrow" do
     sha256 "c43606663bd176c8a335fb9121b5e706b396d604149c6c4f732cfbf00d1d44c4"
   end
 
-  url "https://github.com/sparrowwallet/sparrow/releases/download/#{version}/Sparrow-#{version}-#{arch}.dmg",
+  url "https://github.com/sparrowwallet/sparrow/releases/download/#{version}/Sparrow-#{version}-#{Hardware::CPU.arch}.dmg",
       verified: "github.com/sparrowwallet/sparrow/"
   name "Sparrow Bitcoin Wallet"
   desc "Bitcoin wallet application"
