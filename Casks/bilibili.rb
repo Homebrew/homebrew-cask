@@ -1,6 +1,6 @@
 cask "bilibili" do
   version "1.1.2"
-  sha256 "4a23bdaf5cefaed8365fd29b056ac5246e3a48d952fb13a834690f82a20364dc"
+  sha256 :no_check
 
   url "https://dl.hdslb.com/mobile/fixed/pc_electron_mac/bili_mac.dmg",
       verified: "dl.hdslb.com/"
