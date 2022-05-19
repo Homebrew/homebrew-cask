@@ -1,6 +1,6 @@
 cask "serial" do
-  version "2.0.12,02001.27.50"
-  sha256 "48e23a1d0b8e18579ae158d908c95e56a50ee98d1d26e536ae15bea887558d02"
+  version "2.0.13,02001.37.50"
+  sha256 "4064c9e2c2e87b1a07b89d62534dcf6592e596c77f2b20f3f34ab463648ee154"
 
   url "https://download.decisivetactics.com/downloads/serial/Serial_#{version.csv.first}.zip"
   name "Serial"
