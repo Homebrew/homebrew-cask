@@ -2,7 +2,7 @@ cask "sparrow" do
   arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
   version "1.6.4"
-  
+
   if Hardware::CPU.intel?
     sha256 "6e8cec928e87b7033ccdee8099f24258fb723daf172569002270d9d8559000af"
   else
