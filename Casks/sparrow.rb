@@ -1,8 +1,15 @@
 cask "sparrow" do
-  version "1.6.3"
-  sha256 "ff9373cb4b39663231f2b927f6de35f91d27f36788aecb95a1c70992fd100367"
+  arch = Hardware::CPU.intel? "x86_64" : "aarch64"
 
-  url "https://github.com/sparrowwallet/sparrow/releases/download/#{version}/Sparrow-#{version}.dmg",
+  version "1.6.4"
+   
+  if Hardware::CPU.intel?
+    sha256 "6e8cec928e87b7033ccdee8099f24258fb723daf172569002270d9d8559000af"
+  else
+    sha256 "c43606663bd176c8a335fb9121b5e706b396d604149c6c4f732cfbf00d1d44c4"
+  end
+
+  url "https://github.com/sparrowwallet/sparrow/releases/download/#{version}/Sparrow-#{version}-#{arch}.dmg",
       verified: "github.com/sparrowwallet/sparrow/"
   name "Sparrow Bitcoin Wallet"
   desc "Bitcoin wallet application"
