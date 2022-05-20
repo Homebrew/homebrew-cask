@@ -1,19 +1,27 @@
 cask "bilibili" do
-  version "2.56"
-  sha256 "62784fa27396644337c5ee63d6e3ad32e3436aed7eb79009a306ef6100527452"
+  version "1.1.2"
+  sha256 :no_check
 
-  url "https://github.com/typcn/bilibili-mac-client/releases/download/#{version}/Bilibili.dmg"
+  url "https://dl.hdslb.com/mobile/fixed/pc_electron_mac/bili_mac.dmg",
+      verified: "https://dl.hdslb.com/mobile/fixed/pc_electron_mac/"
   name "Bilibili"
-  desc "Unofficial bilibili client"
-  homepage "https://github.com/typcn/bilibili-mac-client/"
+  name "哔哩哔哩"
+  desc "Official bilibili client"
+  homepage "https://www.bilibili.com/"
+
+  livecheck do
+    url "http://api.bilibili.com/x/elec-frontend/update/latest-mac.yml"
+    regex(/version: ([\d.]+)/i)
+  end
 
   auto_updates true
 
-  app "Bilibili.app"
+  app "哔哩哔哩.app"
 
   zap trash: [
-    "~/Library/Application Support/com.typcn.bilibili",
-    "~/Library/Application Support/com.crashlytics/com.typcn.bilibili",
-    "~/Library/WebKit/com.typcn.bilibili",
+    "~/Library/Application Support/bilibili",
+    "~/Library/Logs/bilibili",
+    "~/Library/Saved Application State/com.bilibili.bilibiliPC.savedState",
+    "~/Library/Preferences/com.bilibili.bilibiliPC.plist",
   ]
 end
