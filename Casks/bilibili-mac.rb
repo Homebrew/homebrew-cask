@@ -4,8 +4,8 @@ cask "bilibili-mac" do
 
   url "https://dl.hdslb.com/mobile/fixed/pc_electron_mac/bili_mac.dmg",
       verified: "dl.hdslb.com/"
-  name "Bilibili"
-  name "哔哩哔哩"
+  name "Bilibili-mac"
+  name "哔哩哔哩Mac官方客户端"
   desc "Official bilibili video streaming and sharing platform"
   homepage "https://app.bilibili.com/"
 
