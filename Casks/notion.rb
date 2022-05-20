@@ -4,11 +4,10 @@ cask "notion" do
 
   if Hardware::CPU.intel?
     sha256 "99aa55754601b055b8b85cc337c12a7c0e7a9fcd076dec86b400ca45c1eee1cc"
-    version "2.0.21"
   else
-    sha256 "3c4da14261821bbe2d769741f19ac5edc57130591f0e20f2080468b73a488947"
-    version "2.0.20"
+    sha256 "4ed2cafa1c3732c126c7ccd5776154fd3b51e88e0d10a955b518cee10910aa8f"
   end
+  version "2.0.21"
 
   url "https://desktop-release.notion-static.com/Notion-#{version}#{arch}.dmg",
       verified: "desktop-release.notion-static.com/"
