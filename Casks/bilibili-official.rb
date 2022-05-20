@@ -10,7 +10,8 @@ cask "bilibili-official" do
   homepage "https://app.bilibili.com/"
 
   livecheck do
-    skip "No version information available"
+    url "http://api.bilibili.com/x/elec-frontend/update/latest-mac.yml"
+    regex(/version: ([\d.]+)/i)
   end
 
   auto_updates true
