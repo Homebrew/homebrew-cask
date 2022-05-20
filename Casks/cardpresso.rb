@@ -4,7 +4,7 @@ cask "cardpresso" do
 
   url "https://www.cardpresso.com/downloads/cardpresso_releases/for_mac_osx/cardPresso#{version}.dmg"
   name "cardpresso"
-  desc "Card software tool for professional card production."
+  desc "Card software tool for professional card production"
   homepage "https://www.cardpresso.com/"
 
   livecheck do
