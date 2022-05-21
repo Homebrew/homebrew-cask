@@ -4,14 +4,14 @@ cask "bilibili-official" do
 
   url "https://dl.hdslb.com/mobile/fixed/pc_electron_mac/bili_mac.dmg",
       verified: "dl.hdslb.com/"
-  name "Bilibili-official"
+  name "Bilibili"
   name "哔哩哔哩官方客户端"
   desc "Official bilibili video streaming and sharing platform"
   homepage "https://app.bilibili.com/"
 
   livecheck do
     url "http://api.bilibili.com/x/elec-frontend/update/latest-mac.yml"
-    regex(/version: ([\d.]+)/i)
+    strategy :electron_builder
   end
 
   auto_updates true
@@ -19,8 +19,8 @@ cask "bilibili-official" do
   app "哔哩哔哩.app"
 
   zap trash: [
-    "~/Library/Application Support/bilibili/",
-    "~/Library/Saved Application State/com.bilibili.bilibiliPC.savedState/",
+    "~/Library/Application Support/bilibili",
     "~/Library/Preferences/com.bilibili.bilibiliPC.plist",
+    "~/Library/Saved Application State/com.bilibili.bilibiliPC.savedState",
   ]
 end
