@@ -15,7 +15,7 @@ cask "playdate-simulator" do
 
   depends_on macos: ">= :catalina"
 
-  pkg "PlaydateSDK-1.11.1.pkg"
+  pkg "PlaydateSDK-#{version}.pkg"
 
   uninstall pkgutil: "date.play.sdk"
 
