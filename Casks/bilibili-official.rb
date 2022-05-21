@@ -14,12 +14,11 @@ cask "bilibili-official" do
     strategy :electron_builder
   end
 
-  auto_updates true
-
   app "哔哩哔哩.app"
 
   zap trash: [
     "~/Library/Application Support/bilibili",
+    "~/Library/Logs/bilibili",
     "~/Library/Preferences/com.bilibili.bilibiliPC.plist",
     "~/Library/Saved Application State/com.bilibili.bilibiliPC.savedState",
   ]
