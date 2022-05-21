@@ -18,6 +18,7 @@ cask "santa" do
               "com.google.santa",
               "com.google.santa.bundleservice",
               "com.google.santa.metricservice",
+              "com.google.santa.syncservice",
               "com.google.santad",
             ],
             pkgutil:   "com.google.santa"
