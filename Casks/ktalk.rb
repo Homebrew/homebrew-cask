@@ -18,9 +18,7 @@ cask "ktalk" do
   app "Толк.app"
 
   uninstall quit:      "kontur.talk",
-            launchctl: [
-              "kontur.talk",
-            ]
+            launchctl: "kontur.talk"
 
   zap trash: [
     "~/Library/Application Support/ktalk",
