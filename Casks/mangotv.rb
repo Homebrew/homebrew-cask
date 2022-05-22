@@ -1,9 +1,10 @@
-cask "imgotv" do
+cask "mangotv" do
   version "6.4.6_1"
   sha256 "af68f7ec41444eb274ce7bc4d8e2c6b39b36f2d20b8299d507b0a3cd41e1b967"
 
   url "https://download.imgo.tv/app/mac/#{version}/mgtv-mango.dmg",
       verified: "download.imgo.tv/"
+  name "MangoTV"
   name "芒果TV"
   desc "Mango TV video app"
   homepage "https://www.mgtv.com/app/"
