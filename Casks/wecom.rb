@@ -1,4 +1,4 @@
-cask "wechatwork" do
+cask "WeCom" do
   if Hardware::CPU.intel?
     version "4.0.6.90539"
     sha256 "2ead9f3083492edf07bec85c4e41f0a8ae8219869786708e883b80d2c35c7238"
@@ -8,7 +8,7 @@ cask "wechatwork" do
   end
 
   url "https://dldir1.qq.com/foxmail/wecom-mac/update/WeCom_#{version}.dmg"
-  name "WeChat Work"
+  name "WeCom"
   name "企业微信"
   desc "Messaging and calling application"
   homepage "https://work.weixin.qq.com/"
