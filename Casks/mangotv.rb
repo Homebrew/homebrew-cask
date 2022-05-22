@@ -6,7 +6,7 @@ cask "mangotv" do
       verified: "download.imgo.tv/"
   name "MangoTV"
   name "芒果TV"
-  desc "Mango TV video app"
+  desc "Internet video platform"
   homepage "https://www.mgtv.com/app/"
 
   livecheck do
