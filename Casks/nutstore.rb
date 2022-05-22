@@ -1,30 +1,26 @@
 cask "nutstore" do
-    version "5.1.6"
-    sha256 :no_check
-  
-    url "https://www.jianguoyun.com/static/exe/installer/NutstoreOSXInstaller.dmg"
-    name "Nutstore"
-    homepage "https://www.jianguoyun.com/"
-  
-    livecheck do
-      url :url
-      strategy :extract_plist
-    end
-  
-    installer manual: "Nutstore Installer.app"
-  
-    uninstall launchctl:  "net.nutstore.agent",
-              quit:       [
-                "net.nutstore.NutstoreJavaBE",
-                "net.nutstore.osxapp",
-                "net.nutstore.osxapp.FinderSyncExtension",
-              ],
-              login_item: "Nutstore",
-              delete:     "/Applications/Nutstore.app"
-  
-    zap trash: [
-      "~/Library/Saved Application State/net.nutstore.osxapp.nutstoreInstaller.savedState",
-      "~/Library/Preferences/net.nutstore.osxapp.plist",
-      "~/Library/Preferences/net.nutstore.NutstoreJavaBE.plist",
-    ]
-  end
+  version :latest
+  sha256 :no_check
+
+  url "https://www.jianguoyun.com/static/exe/installer/NutstoreOSXInstaller.dmg"
+  name "Nutstore"
+  desc "Cloud storage service platform"
+  homepage "https://www.jianguoyun.com/"
+
+  installer manual: "Nutstore Installer.app"
+
+  uninstall launchctl:  "net.nutstore.agent",
+            quit:       [
+              "net.nutstore.NutstoreJavaBE",
+              "net.nutstore.osxapp",
+              "net.nutstore.osxapp.FinderSyncExtension",
+            ],
+            login_item: "Nutstore",
+            delete:     "/Applications/Nutstore.app"
+
+  zap trash: [
+    "~/Library/Saved Application State/net.nutstore.osxapp.nutstoreInstaller.savedState",
+    "~/Library/Preferences/net.nutstore.osxapp.plist",
+    "~/Library/Preferences/net.nutstore.NutstoreJavaBE.plist",
+  ]
+end
