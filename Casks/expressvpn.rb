@@ -16,7 +16,7 @@ cask "expressvpn" do
 
   uninstall launchctl: "com.expressvpn.ExpressVPN.agent",
             script:    {
-              executable: "#{appdir}/ExpressVPN.app/Contents/Resources/uninstall.tool",
+              executable: "/Applications/ExpressVPN.app/Contents/Resources/uninstall.tool",
               input:      ["Yes"],
               sudo:       true,
             },
