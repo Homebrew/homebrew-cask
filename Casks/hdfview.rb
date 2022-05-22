@@ -4,20 +4,17 @@ cask "hdfview" do
 
   url "https://support.hdfgroup.org/ftp/HDF5/releases/HDF-JAVA/hdfview-#{version}/bin/HDFView-#{version}-osx1013_64.tar.gz"
   name "HDFView"
-  desc "Is a visual tool for browsing and editing HDF files"
+  desc "Tool for browsing and editing HDF files"
   homepage "https://confluence.hdfgroup.org/display/support"
 
   livecheck do
-    url "https://confluence.hdfgroup.org/display/support/HDFView+3.2.0#files"
-    strategy :page_match
-    regex(%r{href=.*?/HDFView-(\d+(?:\.\d+)*)-osx1013_64\.tar\.gz}i)
+    url "https://confluence.hdfgroup.org/display/support/Download+HDFView"
+    regex(/HDFView\+(\d+(?:\.\d+)+)/i)
   end
 
   container nested: "HDFView-#{version}.dmg"
 
   app "HDFView.app"
 
-  zap trash: [
-    "~/Library/Preferences/HDFView.hdfgroup.org.plist",
-  ]
+  zap trash: "~/Library/Preferences/HDFView.hdfgroup.org.plist"
 end
