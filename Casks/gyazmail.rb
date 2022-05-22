@@ -9,12 +9,7 @@ cask "gyazmail" do
 
   livecheck do
     url "http://gyazsquare.com/gyazmail/download.php"
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/GyazMail-(\d+)(\d+)(\d+)\.dmg}i)
-      next if match.blank?
-
-      "#{match[1]}.#{match[2]}.#{match[3]}"
-    end
+    regex(/Download\s*GyazMail\s*v?(\d+(?:\.\d+)+)/i)
   end
 
   app "GyazMail.app"
