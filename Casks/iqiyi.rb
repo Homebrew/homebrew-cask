@@ -1,4 +1,4 @@
-cask "qiyimedia" do
+cask "iqiyi" do
   version "13.5.0,20220512171701"
   sha256 :no_check
 
