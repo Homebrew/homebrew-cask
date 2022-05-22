@@ -4,14 +4,11 @@ cask "contour" do
 
   url "https://github.com/contour-terminal/contour/releases/download/v#{version}/contour-#{version}-osx.dmg"
   name "Contour"
-  desc "Modern terminal emulator, for everyday use"
+  desc "Terminal emulator"
   homepage "https://github.com/contour-terminal/contour/"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 
   app "Contour.app"
   binary "#{appdir}/Contour.app/Contents/MacOS/contour"
+
+  zap trash: "~/.config/contour"
 end
