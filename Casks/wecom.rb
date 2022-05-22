@@ -1,4 +1,4 @@
-cask "WeCom" do
+cask "wecom" do
   if Hardware::CPU.intel?
     version "4.0.6.90539"
     sha256 "2ead9f3083492edf07bec85c4e41f0a8ae8219869786708e883b80d2c35c7238"
