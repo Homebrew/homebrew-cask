@@ -24,6 +24,7 @@ cask "sdm" do
 
   zap trash: [
     "~/.sdm",
+    "/usr/local/bin/sdm",
     "~/Library/Application Support/SDM",
     "~/Library/Caches/com.electron.sdm*",
     "~/Library/Preferences/com.electron.sdm.plist",
