@@ -1,4 +1,6 @@
 cask "webull" do
+  dl_arch, livecheck_arch = Hardware::CPU.intel? ? ["us", "qt_mac_global"] : ["u_M1", "qt_m1_global"]
+
   if Hardware::CPU.intel?
     version "5.10.0"
     sha256 "4c4c641149ccab2701f19f154aa9ace2c8570423a676246db04582c4889ef767"
@@ -7,14 +9,12 @@ cask "webull" do
     sha256 "f93d33869f5f76fec7f1f65f73e38703e72391d2051fcaf928ac36802d7dbd05"
   end
 
-  dl_arch = Hardware::CPU.intel? ? "us" : "u_M1"
   url "https://u1sweb.webullfinance.com/us/desktop/Webull%20Desktop%20#{version}_#{dl_arch}.dmg",
-      verified: "u1sweb.webullfinance.com"
+      verified: "u1sweb.webullfinance.com/us/desktop/"
   name "Webull"
   desc "Desktop client for Webull Financial LLC"
   homepage "https://webull.com/"
 
-  livecheck_arch = Hardware::CPU.intel? ? "qt_mac_global" : "qt_m1_global"
   livecheck do
     url "https://infoapi.webullfintech.com/api/operation/appver/last?platform=#{livecheck_arch}&osv=10.15"
     strategy :page_match do |page|
