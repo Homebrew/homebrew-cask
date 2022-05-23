@@ -14,6 +14,8 @@ cask "adrive" do
     strategy :extract_plist
   end
 
+  auto_updates true
+
   app "aDrive.app"
 
   zap trash: [
