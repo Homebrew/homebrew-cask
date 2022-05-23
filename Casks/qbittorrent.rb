@@ -3,8 +3,8 @@ cask "qbittorrent" do
     version "4.3.2"
     sha256 "dd38e80710978430694c430276a6b7749ef3533cbd0271075bc9eada484ea36b"
   else
-    version "4.4.2"
-    sha256 "8d0444fe4a23af00a25a7756f088aed557968266b21a975fd222c96bd4e9dddd"
+    version "4.4.3"
+    sha256 "0e4f47e9e64dbf74b8f5b8847f7d79b7a70992e706ec0ba3e75b9670d686a42e"
   end
 
   url "https://downloads.sourceforge.net/qbittorrent/qbittorrent-mac/qbittorrent-#{version}/qbittorrent-#{version}.dmg",
