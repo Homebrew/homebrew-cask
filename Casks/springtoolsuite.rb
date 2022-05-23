@@ -1,12 +1,12 @@
 cask "springtoolsuite" do
   arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
-  version "4.14.0,4.23.0"
+  version "4.14.1,4.23.0"
 
   if Hardware::CPU.intel?
-    sha256 "973b0b6a332e60649bf2b989f0b2f7f8986f9138641e4cfa11e7ff276a2cc598"
+    sha256 "4f3193cd200e1358af7eee30fdb223f299ddfce3e64b094e4eec505218469286"
   else
-    sha256 "c3d1d80669382688d49b2fc6d06b1f54e30fac0371d020ca07dbdf52472b69d0"
+    sha256 "6cf556be645ead7beea7648b7cd54314f6df1ff5b6dce0da1327fed599f3c762"
   end
 
   url "https://download.springsource.com/release/STS#{version.major}/#{version.csv.first}.RELEASE/dist/e#{version.csv.second.major_minor}/spring-tool-suite-#{version.major}-#{version.csv.first}.RELEASE-e#{version.csv.second}-macosx.cocoa.#{arch}.dmg",

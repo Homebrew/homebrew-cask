@@ -1,8 +1,8 @@
 cask "toinane-colorpicker" do
-  version "2.0.5"
-  sha256 "6459d542b4a0786cb9a81e3bec824fe42c3dbdcff48874e7a02a52e143d4a9e8"
+  version "2.1.0"
+  sha256 "32216d2594a8181b711e41c41ac43569a32da3afc77dbf0547cf976a10875842"
 
-  url "https://github.com/toinane/colorpicker/releases/download/#{version}/Colorpicker-#{version}.dmg",
+  url "https://github.com/toinane/colorpicker/releases/download/#{version}/Colorpicker-Darwin.#{version}.dmg",
       verified: "github.com/toinane/colorpicker/"
   name "Colorpicker"
   desc "Get and save color codes"

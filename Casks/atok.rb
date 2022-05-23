@@ -1,37 +1,34 @@
 cask "atok" do
-  # version <release_year>,<version>,<file_suffix>
-  version "2021,32.1.0,try3"
-  sha256 "6ca2775c73489a88c3190bacccfc8531023682ef355dc4b7b5f7f1bb82383814"
+  version "32.4"
+  sha256 "ba99f2565222f1478ad6242d2f1f942b75a12257cbead95d09b83d17b13823b5"
 
-  url "https://gate.justsystems.com/download/atok/ut/mac/at#{version.csv.second.major}#{version.csv.third}.dmg"
+  url "https://gate.justsystems.com/download/atok/ut/mac/at#{version.dots_to_underscores}.dmg"
   name "ATOK"
   desc "Japanese input method editor (IME) produced by JustSystems"
   homepage "https://www.justsystems.com/jp/products/atokmac/"
 
   livecheck do
     url "https://mypassport.atok.com/install/install_mac.html"
-    strategy :page_match do |page|
-      match = page.match(%r{href="https:.*/mac/at(\d+)(try\d*)\.dmg"}im)
-      next if match.blank?
-
-      "#{version.csv.first},#{match[1]}.#{version.csv.second.minor}.#{version.csv.second.patch},#{match[2]}"
+    regex(/href=.*at[._-]?v?(\d+(?:[._]\d+)+)\.dmg/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| match[0].tr("_", ".") }
     end
   end
 
   pkg "ATOK インストーラ.pkg"
 
   uninstall pkgutil:   [
-    "com.justsystems.atok#{version.csv.second.major}.doc.pkg",
-    "com.justsystems.atok#{version.csv.second.major}.pkg",
-    "com.justsystems.atok#{version.csv.second.major}.quicklook.pkg",
-    "com.justsystems.atok#{version.csv.second.major}.sync.pkg",
+    "com.justsystems.atok#{version.major}.doc.pkg",
+    "com.justsystems.atok#{version.major}.pkg",
+    "com.justsystems.atok#{version.major}.quicklook.pkg",
+    "com.justsystems.atok#{version.major}.sync.pkg",
     "com.justsystems.JustOnlineUpdate.pkg",
     "com.justsystems.pkg.lma",
   ],
             launchctl: [
-              "com.justsystems.atok#{version.csv.second.major}.enabler",
-              "com.justsystems.inputmethod.atok#{version.csv.second.major}",
-              "com.justsystems.launchd.Atok#{version.csv.second.major}.AlBg",
+              "com.justsystems.atok#{version.major}.enabler",
+              "com.justsystems.inputmethod.atok#{version.major}",
+              "com.justsystems.launchd.Atok#{version.major}.AlBg",
               "com.justsystems.launchd.jslmad",
               "com.justsystems.launchd.jslmaUI",
               "com.justsystems.launchd.UpdateChecker",

@@ -1,6 +1,6 @@
 cask "universal-media-server" do
-  version "10.19.0"
-  sha256 "fb4d196c498da31f407a2f1d697227aa4198eaa506f75dc8988303fff234fa33"
+  version "10.21.0.1"
+  sha256 "d48daaa63c443c14dc3c20d8f6ec6114741c470934b46a886056c3be529ecc2f"
 
   url "https://github.com/UniversalMediaServer/UniversalMediaServer/releases/download/#{version}/UMS-#{version}.dmg",
       verified: "github.com/UniversalMediaServer/UniversalMediaServer/"

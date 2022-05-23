@@ -8,15 +8,14 @@ cask "f-bar" do
   end
 
   url "https://apps.eastwest.se/fbar/updates/F-Bar_#{version}.zip",
-      verified:   "apps.eastwest.se/",
-      user_agent: :fake
+      verified: "apps.eastwest.se/fbar/"
   name "F-Bar"
   desc "Manage Laravel Forge servers from the menubar"
   homepage "https://laravel-forge-menubar.com/"
 
   livecheck do
-    url "https://apps.eastwest.se/fbar/updates/FBarAppcast.xml"
-    strategy :sparkle, &:short_version
+    url "https://eastwest.se/apps/fbar/download"
+    strategy :header_match
   end
 
   auto_updates true

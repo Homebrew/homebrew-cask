@@ -1,6 +1,6 @@
 cask "vial" do
-  version "0.5.1"
-  sha256 "914b5ea1ea491d91f30dd98e09940085042682d619c185ee7cfdbff0758ceda9"
+  version "0.5.2"
+  sha256 "71c7c91d373bfaeda683bf5b40fd1e3e04d332730e9786f0dfc596842fbeda75"
 
   url "https://github.com/vial-kb/vial-gui/releases/download/v#{version}/Vial-v#{version}.dmg",
       verified: "https://github.com/vial-kb/vial-gui/"

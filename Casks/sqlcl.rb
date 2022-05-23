@@ -1,6 +1,6 @@
 cask "sqlcl" do
-  version "21.4.1.17.1458"
-  sha256 "7f77f300f1f3ec15c1d758cacc08f0620562985581573804d01af58a1849921b"
+  version "22.1.1.131.0820"
+  sha256 "a23d86d33b9e78680b08a8d06a3ac91533daaa1ee90b2d9a99a891688ffda65a"
 
   url "https://download.oracle.com/otn_software/java/sqldeveloper/sqlcl-#{version}.zip"
   name "sqlcl"
@@ -15,7 +15,7 @@ cask "sqlcl" do
   stage_only true
 
   caveats do
-    depends_on_java "8+"
+    depends_on_java "11+"
     path_environment_variable "#{staged_path}/sqlcl/bin"
   end
 end

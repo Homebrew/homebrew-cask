@@ -1,6 +1,6 @@
 cask "bettertouchtool" do
-  version "3.762,1903"
-  sha256 "c2e0d397bd19ae2b5abcf31d22e3953eebed6eb17966b1f59baef038a760f86e"
+  version "3.785,1928"
+  sha256 "7b6710701861d013f34ba15d1287809b01fe78cda622b07cb57f5154031dbe65"
 
   url "https://folivora.ai/releases/btt#{version.csv.first}-#{version.csv.second}.zip"
   name "BetterTouchTool"
@@ -9,17 +9,17 @@ cask "bettertouchtool" do
 
   livecheck do
     url "https://folivora.ai/releases/"
-    strategy :page_match do |page|
-      page.scan(/btt(\d+(?:[._-]\d+)*)\.zip.*?(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2})/i)
-          .max_by { |(_, time)| Time.parse(time) }
-          .first
-          .tr("-", ",")
+    regex(/btt(\d+(?:[._-]\d+)*)\.zip.*?(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2})/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).max_by { |match| Time.parse(match[1]) }&.first&.tr("-", ",")
     end
   end
 
   auto_updates true
 
   app "BetterTouchTool.app"
+
+  uninstall quit: "com.hegenberg.BetterTouchTool"
 
   zap trash: [
     "~/Library/Application Support/BetterTouchTool",

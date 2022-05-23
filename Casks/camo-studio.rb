@@ -1,6 +1,6 @@
 cask "camo-studio" do
-  version "1.5.1,5687"
-  sha256 "11bf7f5da0f158b41df2e883c0a04a91733b7cd2f675f0632c332883f02f8032"
+  version "1.6.4,7298"
+  sha256 "2985d9ac143a965ccb69755a78e8efd80dae44ce7424fa23ba86649ce333cdda"
 
   url "https://reincubate.com/res/labs/camo/CamoStudioMac-#{version.csv.first}-#{version.csv.second}-Release.app.zip"
   name "Camo Studio"
@@ -18,11 +18,16 @@ cask "camo-studio" do
   app "Camo Studio.app"
 
   uninstall delete: [
+    "/Library/Application Support/Reincubate/Camo",
     "/Library/Audio/Plug-Ins/HAL/ReincubateCamoAudio.driver",
     "/Library/CoreMediaIO/Plug-Ins/DAL/ReincubateCamoDAL.plugin",
-  ]
+    "/Library/LaunchDaemons/com.reincubate.macos.cam.PrivilegedHelper.plist",
+    "/Library/PrivilegedHelperTools/com.reincubate.macos.cam.PrivilegedHelper",
+  ],
+            rmdir:  "/Library/Application Support/Reincubate"
 
   zap trash: [
+    "~/Library/Application Support/CrashReporter/Camo Studio",
     "~/Library/Application Support/Reincubate/Camo",
     "~/Library/Caches/SentryCrash/Camo Studio",
     "~/Library/Caches/com.reincubate.macos.cam",

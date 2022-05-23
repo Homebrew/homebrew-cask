@@ -1,6 +1,6 @@
 cask "lunar" do
-  version "5.6.1"
-  sha256 "c0985af7d9529f3246f4abdbda3a482f7b25d7b6d36ed4ac10e42307501927b2"
+  version "5.6.5"
+  sha256 "17d6f179c1c58ca57f94025bc83476747727d42e7c37831f0ba39856142cee37"
 
   url "https://static.lunar.fyi/releases/Lunar-#{version}.dmg"
   name "Lunar"
@@ -8,12 +8,12 @@ cask "lunar" do
   homepage "https://lunar.fyi/"
 
   livecheck do
-    url "https://static.lunar.fyi/appcast.xml"
+    url "https://static.lunar.fyi/appcast-stable.xml"
     strategy :sparkle
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Lunar.app"
 

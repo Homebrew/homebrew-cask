@@ -1,8 +1,15 @@
 cask "inkscape" do
-  version "1.1.2"
-  sha256 "5af2fcfa65c68c7688b862ba9c509199be21954f28ccfbb7d4004cf93d34f18a"
+  arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
 
-  url "https://media.inkscape.org/dl/resources/file/Inkscape-#{version}.dmg"
+  version "1.2"
+
+  if Hardware::CPU.intel?
+    sha256 "189fb5b3fb9a12b115784620113234e6bc4aca537e88d98200bbcd5255ca3193"
+  else
+    sha256 "9a3fce6630b7268e1548f7f1d96dc7cf0f0614284895d6e09eeba503b804d372"
+  end
+
+  url "https://media.inkscape.org/dl/resources/file/Inkscape-#{version}.0_#{arch}.dmg"
   name "Inkscape"
   desc "Vector graphics editor"
   homepage "https://inkscape.org/"

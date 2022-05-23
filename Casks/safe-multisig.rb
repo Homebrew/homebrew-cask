@@ -1,6 +1,6 @@
 cask "safe-multisig" do
-  version "3.17.2"
-  sha256 "3f2121a86d2d476d0a23785f00f389aa85b9744d279764159ae7b3b30b73588b"
+  version "3.22.1"
+  sha256 "21f8df298f1cfd179f88855297f259b433d624aa29427458746484ce10c80048"
 
   url "https://github.com/gnosis/safe-react/releases/download/v#{version}-desktop/Safe-#{version}.dmg",
       verified: "github.com/gnosis/safe-react/"

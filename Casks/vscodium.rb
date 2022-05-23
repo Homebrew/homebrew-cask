@@ -1,8 +1,15 @@
 cask "vscodium" do
-  version "1.66.2"
-  sha256 "7163ee27353cba1d8477da3a39001db0c67a71bef19799af3e16ff9367c93e10"
+  arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  url "https://github.com/VSCodium/vscodium/releases/download/#{version}/VSCodium.x64.#{version}.dmg"
+  version "1.67.2"
+
+  if Hardware::CPU.intel?
+    sha256 "842e64165069e2d03af290ec7692f2b69bec44f280aa34956a66d29170599499"
+  else
+    sha256 "56e6ea3059530c2e4a216deb7c85845dbafbed07b4ae264b312255e9aa5ef91a"
+  end
+
+  url "https://github.com/VSCodium/vscodium/releases/download/#{version}/VSCodium.#{arch}.#{version}.dmg"
   name "VSCodium"
   desc "Binary releases of VS Code without MS branding/telemetry/licensing"
   homepage "https://github.com/VSCodium/vscodium"

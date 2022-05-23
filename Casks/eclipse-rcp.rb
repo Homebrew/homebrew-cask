@@ -1,12 +1,12 @@
 cask "eclipse-rcp" do
   arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
-  version "4.22.0,2021-12"
+  version "4.23.0,2022-03"
 
   if Hardware::CPU.intel?
-    sha256 "e64b09c51f71327f6822faaf9e459e76a5bebf48ed599876ca55732ff33d89f7"
+    sha256 "a7911cbec145f9a382dd70d8bc7223f07d5904d098d6f41f4cb82dee96b3d699"
   else
-    sha256 "852a41ea297428e240ff97266d2f5deff9719e2352f464a322613b17dbbc34d7"
+    sha256 "10aada748b5cf94cb58a29919d211c96146889a97d9bc1076bb1c696e1e4ed91"
   end
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-rcp-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&r=1"

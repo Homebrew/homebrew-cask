@@ -1,6 +1,6 @@
 cask "ssh-config-editor" do
-  version "2.3.2,91"
-  sha256 "f8086d24d97bb6a8a95698ea4b614c46bffc4b798ae59d5c629bf71c0e5fe3e6"
+  version "2.4,93"
+  sha256 "8d2daac4092540a4e7e7049255c88b175637edbb4339b12ab160ec195222e4cd"
 
   url "https://hejki.org/download/ssheditor/SSHConfigEditor-#{version.csv.second}.dmg"
   name "SSH Config Editor"

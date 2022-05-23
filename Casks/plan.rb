@@ -4,7 +4,13 @@ cask "plan" do
 
   url "https://cdn.getplan.co/plan-latest.dmg"
   name "Plan"
+  desc "Calendar and project manager"
   homepage "https://getplan.co/login"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   app "Plan.app"
 

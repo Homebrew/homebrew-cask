@@ -7,15 +7,9 @@ cask "battery-report" do
   desc "Creates technical summaries of power supplies"
   homepage "https://www.dssw.co.uk/batteryreport/"
 
-  livecheck do
-    url "https://www.dssw.co.uk/batteryreport/dsswbatteryreport.dmg"
-    strategy :header_match do |headers|
-      match = headers["location"].match(/dsswbatteryreport-(\d+)(\d+)(\d+)\.dmg/i)
-      next if match.blank?
-
-      "#{match[1]}.#{match[2]}.#{match[3]}"
-    end
-  end
-
   app "Battery Report.app"
+
+  caveats do
+    discontinued
+  end
 end

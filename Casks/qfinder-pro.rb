@@ -1,6 +1,6 @@
 cask "qfinder-pro" do
-  version "7.6.0.0913"
-  sha256 "04389b47b7c6a5be6819237b92a9649e60cbf26e296c0933b63de16e0416e4c5"
+  version "7.8.0.0421"
+  sha256 "10e07310a1111e9dda23031f93fc524704b5f0cb2a005868e6b6d2c9bb7a71b7"
 
   url "https://download.qnap.com/Storage/Utility/QNAPQfinderProMac-#{version}.dmg"
   name "Qnap Qfinder Pro"
@@ -9,7 +9,7 @@ cask "qfinder-pro" do
 
   livecheck do
     url "https://update.qnap.com/SoftwareRelease.xml"
-    regex(%r{/QNAPQfinderProMac-(\d+(?:\.\d+)*)\.dmg}i)
+    regex(/QNAPQfinderProMac[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   pkg "Qfinder Pro.pkg"

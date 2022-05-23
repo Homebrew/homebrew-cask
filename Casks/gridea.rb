@@ -1,6 +1,6 @@
 cask "gridea" do
-  version "0.9.2"
-  sha256 "401033bd7db5a39be7cea1ece6c51bfcae835f0abb8003431f045d7e636602db"
+  version "0.9.3"
+  sha256 "16c9c9a1fdf4773f165878f995a9eb4b0a9c6eb815410a723170623dd23e4354"
 
   url "https://github.com/getgridea/gridea/releases/download/v#{version}/Gridea-#{version}.dmg",
       verified: "github.com/getgridea/gridea/"

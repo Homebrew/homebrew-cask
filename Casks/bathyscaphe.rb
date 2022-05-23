@@ -1,8 +1,8 @@
 cask "bathyscaphe" do
-  version "3.1.0,1089"
-  sha256 "32f7758d2898fd8cccd1b506c8d78bbff6733640e392eba67c95a6626377a603"
+  version "3.2.1,1101"
+  sha256 "d184edaabe6d8132063dad948665076277de8bb582529724d3c2d053c9af7f98"
 
-  url "https://bitbucket.org/bathyscaphe/public/downloads/BathyScaphe-#{version.csv.first.no_dots}-v#{version.csv.second}.dmg",
+  url "https://bitbucket.org/bathyscaphe/public/downloads/BathyScaphe-#{version.csv.first.no_dots}-v#{version.csv.second}.zip",
       verified: "bitbucket.org/bathyscaphe/public/downloads/"
   name "BathyScaphe"
   desc "2-channel browser"
@@ -10,11 +10,7 @@ cask "bathyscaphe" do
 
   livecheck do
     url "https://bathyscaphe.bitbucket.io/appcast.xml"
-    strategy :sparkle do |item|
-      match = item.url.match(%r{/BathyScaphe-(\d+)-v(\d+)\.dmg}i)
-      major_minor = item.short_version
-      "#{major_minor}.#{match[1].delete_prefix(major_minor.delete("."))},#{match[2]}"
-    end
+    strategy :sparkle
   end
 
   depends_on macos: ">= :sierra"

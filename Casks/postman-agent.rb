@@ -1,12 +1,12 @@
 cask "postman-agent" do
   arch = Hardware::CPU.intel? ? "osx_64" : "osx_arm64"
 
-  version "0.4.4"
+  version "0.4.5"
 
   if Hardware::CPU.intel?
-    sha256 "ac8d40ba2702f942c259993e29b3df2066327d545f0decdfaab46453f803e453"
+    sha256 "65ee3da81f8052747e84782c5f7aec1920682e4e78c30df9b5a6f75036420cff"
   else
-    sha256 "bd580cdc746c4fe76caae9268750bcb11bf033e63563f39183047a2b01d4a790"
+    sha256 "cebc7cfceaaa5e679c328588ddf38fe735c1e19fd27d8dc2624ad906f7183a34"
   end
 
   url "https://dl-agent.pstmn.io/download/version/#{version}/#{arch}",

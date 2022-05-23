@@ -1,8 +1,8 @@
 cask "asana" do
-  version "1.6.0"
+  version "1.7.2"
   sha256 :no_check
 
-  url "https://desktop-downloads.asana.com/darwin_x64/prod/latest/Asana.dmg"
+  url "https://desktop-downloads.asana.com/darwin_universal/prod/latest/Asana.dmg"
   name "Asana"
   desc "Manage team projects and tasks"
   homepage "https://asana.com/"

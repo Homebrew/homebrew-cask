@@ -1,8 +1,15 @@
 cask "uvtools" do
-  version "3.3.2"
-  sha256 "446a9cd31e82220fd1a5b374adc4fd747aa33ce6034ab4eb778065adb31143b8"
+  arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  url "https://github.com/sn4k3/UVtools/releases/download/v#{version}/UVtools_osx-x64_v#{version}.zip"
+  version "3.4.3"
+
+  if Hardware::CPU.intel?
+    sha256 "b2426768d2ffc726daa48c6ad1fecdffec70b9a1fc530de5d3f3e498bf75878f"
+  else
+    sha256 "7c89fe56ab2b72f2e54d510fbd40baed34b3925aa5e5a989064541dc49c676d2"
+  end
+
+  url "https://github.com/sn4k3/UVtools/releases/download/v#{version}/UVtools_osx-#{arch}_v#{version}.zip"
   name "UVtools"
   desc "MSLA/DLP, file analysis, calibration, repair, conversion and manipulation"
   homepage "https://github.com/sn4k3/UVtools"

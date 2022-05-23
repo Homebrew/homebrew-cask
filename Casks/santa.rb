@@ -1,6 +1,6 @@
 cask "santa" do
-  version "2022.3"
-  sha256 "89498c1867b00ad53f04c01c7cd8565d5d64428874803b38919e5f12e71022fe"
+  version "2022.5"
+  sha256 "50a2b8c55f529ce4602d955f18411875ebee6f0b555c7741773016e538310f87"
 
   url "https://github.com/google/santa/releases/download/#{version}/santa-#{version}.dmg"
   name "Santa"
@@ -18,6 +18,7 @@ cask "santa" do
               "com.google.santa",
               "com.google.santa.bundleservice",
               "com.google.santa.metricservice",
+              "com.google.santa.syncservice",
               "com.google.santad",
             ],
             pkgutil:   "com.google.santa"

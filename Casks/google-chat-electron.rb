@@ -1,18 +1,20 @@
 cask "google-chat-electron" do
-  version "2.15.0"
+  arch = Hardware::CPU.intel? ? "darwin-x64" : "darwin-arm64"
+
+  version "2.15.1"
 
   if Hardware::CPU.intel?
-    sha256 "a757dc557990f32a9be8b21fd81995748e8a2ecc56c772681a3cb427000986fb"
-    arch = "darwin-x64"
+    sha256 "671b42125a6100fdf64b07ecde1cd91d8ba1b3caf5530746f96cf4621516eee3"
   else
-    sha256 "aadb3e0db0053330fa0543556781d28dc6ca4e32e0a5060b18778e6d5c346cbd"
-    arch = "darwin-arm64"
+    sha256 "cf490d915018e12cfaca061cb0aef0ac013600b8c112b06a6219cf377268e1fb"
   end
 
   url "https://github.com/ankurk91/google-chat-electron/releases/download/#{version}/google-chat-electron-#{version}-#{arch}.zip"
   name "google-chat-electron"
   desc "Standalone app for Google Chat"
   homepage "https://github.com/ankurk91/google-chat-electron"
+
+  depends_on macos: ">= :catalina"
 
   app "google-chat-electron.app"
 

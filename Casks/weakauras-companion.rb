@@ -1,14 +1,14 @@
 cask "weakauras-companion" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "3.3.4"
+  version "4.0.0"
 
   url "https://github.com/WeakAuras/WeakAuras-Companion/releases/download/v#{version}/WeakAuras-Companion-#{version}-mac-#{arch}.dmg",
       verified: "github.com/WeakAuras/WeakAuras-Companion/"
   if Hardware::CPU.intel?
-    sha256 "aa32f47abe7e51d9f02daceb0e5d0113e526f462c4d3d55443e7ed6da75c1df0"
+    sha256 "4185b8d9f219afe6aeb76961d954e8e401f77796f875ae25b39a491cfbb2fa7a"
   else
-    sha256 "7ae67ed58b022449cae8579442bbc0a4609f50f717fe008d9275b985da26843c"
+    sha256 "6e53cec3ced411aa5a296025b9de9a86bbd469f06bf33eb9a4bcef9ce35e74da"
   end
 
   name "WeakAuras Companion"

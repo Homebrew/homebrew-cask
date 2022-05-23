@@ -1,5 +1,5 @@
 cask "rapidminer-studio" do
-  version "9.10.1"
+  version "9.10.8"
   sha256 :no_check
 
   url "https://releases.rapidminer.com/latest/rapidminer-studio/rapidminer-studio-osx.dmg"

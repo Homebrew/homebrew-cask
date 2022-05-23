@@ -1,6 +1,6 @@
 cask "paddle-easydl" do
-  version "1.1.4,1168"
-  sha256 "a31a592ba0aec4d24abeb8443aee11fd886c79e32366d60ee0afffab2d8d2051"
+  version "1.2.0,1200"
+  sha256 "ca43f45dbb926731d374bcb276b5535b4fc85d3d97b8b152349d44b62ad6e596"
 
   url "https://aip-static.cdn.bcebos.com/paddle-desktop/releases/#{version.csv.first}/%E9%A3%9E%E6%A1%A8EasyDL-#{version.csv.first}.#{version.csv.second}.dmg",
       verified: "aip-static.cdn.bcebos.com/paddle-desktop"
@@ -10,11 +10,9 @@ cask "paddle-easydl" do
 
   livecheck do
     url "https://aip-static.cdn.bcebos.com/paddle-desktop/releases/latest-mac.yml"
-    strategy :page_match do |page|
-      match = page.match(%r{path:.*/飞桨EasyDL-(\d+).(\d+).(\d+).(\d+).zip}i)
-      next if match.blank?
-
-      "#{match[1]}.#{match[2]}.#{match[3]},#{match[4]}"
+    regex(/path:.*?EasyDL[._-]v?(\d+(?:\.\d+)+)[._-](\d{4,})\.zip/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 

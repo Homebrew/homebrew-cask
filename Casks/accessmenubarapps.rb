@@ -8,7 +8,7 @@ cask "accessmenubarapps" do
   homepage "https://www.ortisoft.de/accessmenubarapps/"
 
   livecheck do
-    url "https://www.ortisoft.de/accessmenubarapps/profileInfo.php"
+    url "https://www.ortisoft.de/accessmenubarapps/appcast.xml"
     strategy :sparkle
   end
 
@@ -18,6 +18,7 @@ cask "accessmenubarapps" do
 
   zap trash: [
     "~/Library/Caches/de.ortisoft.AccessMenuBarApps",
+    "~/Library/HTTPStorages/de.ortisoft.AccessMenubarApps",
     "~/Library/Preferences/de.ortisoft.AccessMenuBarApps.plist",
   ]
 end

@@ -1,12 +1,12 @@
 cask "rancher" do
   arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
-  version "1.2.1"
+  version "1.3.0"
 
   if Hardware::CPU.intel?
-    sha256 "00f2c92da9a715ceb0c4e3b58dffe3a346c78ac7ed07564e1a6254c719149c21"
+    sha256 "b333b6083ebed0b6174c021e437675acc7ef661a15bdd4954eff2ac74d5472ce"
   else
-    sha256 "bf883dd850e4386c732b32f033129076146580f6c3a7c410fe177cd1d17830a0"
+    sha256 "a7e9d572abaf57cdf5cf5f5167dd5f8ee57d38af50386d7749cbb812e7b203c1"
   end
 
   url "https://github.com/rancher-sandbox/rancher-desktop/releases/download/v#{version}/Rancher.Desktop-#{version}.#{arch}.dmg",
@@ -16,14 +16,9 @@ cask "rancher" do
   homepage "https://rancherdesktop.io/"
 
   auto_updates true
-  conflicts_with cask:    %w[
+  conflicts_with cask: %w[
     docker
-  ],
-                 formula: %w[
-                   docker
-                   helm
-                   kubernetes-cli
-                 ]
+  ]
 
   app "Rancher Desktop.app"
 
@@ -32,16 +27,12 @@ cask "rancher" do
     "/private/etc/sudoers.d/zzzzz-rancher-desktop-lima", # zzzzz is not a typo
     "/private/var/run/docker.sock",
     "/private/var/run/rancher-desktop-*",
-    "/usr/local/bin/docker",
-    "/usr/local/bin/helm",
-    "/usr/local/bin/kubectl",
-    "/usr/local/bin/nerdctl",
-    "/usr/local/bin/rdctl",
   ],
             quit:   "io.rancherdesktop.app"
 
   zap trash: [
     "~/.kuberlr",
+    "~/.rd",
     "~/Library/Application Support/Caches/rancher-desktop-updater",
     "~/Library/Application Support/Rancher Desktop",
     "~/Library/Application Support/rancher-desktop",

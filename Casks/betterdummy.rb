@@ -1,8 +1,8 @@
 cask "betterdummy" do
-  version "1.0.13"
-  sha256 "23a46ea3607045a74f9d1ebae5b8034964bb2d217a56d2f0dd8a298e03c4a7ed"
+  version "1.1.12"
+  sha256 "5cea95221f26c93e548509214392d3697cb38b5b2c696aaf1a17cdd89a246a20"
 
-  url "https://github.com/waydabber/BetterDummy/releases/download/v#{version}/BetterDummy-v#{version}.zip"
+  url "https://github.com/waydabber/BetterDummy/releases/download/v#{version}/BetterDummy-v#{version}.dmg"
   name "betterdummy"
   desc "Dummy Display for Apple Silicon Macs to achieve custom resolutions"
   homepage "https://github.com/waydabber/BetterDummy"

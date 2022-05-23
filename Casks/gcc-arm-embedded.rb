@@ -8,7 +8,7 @@ cask "gcc-arm-embedded" do
   url "https://developer.arm.com/-/media/Files/downloads/gnu/#{version}/binrel/gcc-arm-#{version}-darwin-x86_64-arm-none-eabi.pkg"
   name "GCC ARM Embedded"
   desc "Pre-built GNU bare-metal toolchain for 32-bit Arm processors"
-  homepage "https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain"
+  homepage "https://developer.arm.com/Tools%20and%20Software/GNU%20Toolchain"
 
   livecheck do
     url "https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/downloads"

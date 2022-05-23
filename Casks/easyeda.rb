@@ -1,6 +1,6 @@
 cask "easyeda" do
-  version "6.5.1"
-  sha256 "88e96c1624099ce37bc6ee9f0d3242adaf61c9e028566d5d6583d6a95bde0470"
+  version "6.5.5"
+  sha256 "740d856738fd70fd2f866f5ddc4000cff824407529016eb7e18c65befb09751c"
 
   url "https://image.easyeda.com/files/easyeda-mac-darwin-#{version}.zip"
   name "EasyEDA"
@@ -14,7 +14,7 @@ cask "easyeda" do
 
   app "EasyEDA.app"
 
-  uninstall delete: [
+  zap trash: [
     "~/Library/Application Support/EasyEDA",
     "~/Library/Logs/EasyEDA",
     "~/Library/Preferences/com.easyeda.editor.helper.plist",

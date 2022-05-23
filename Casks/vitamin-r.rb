@@ -3,8 +3,8 @@ cask "vitamin-r" do
     version "2.58"
     sha256 "c6c631430b44359aa022d9ca5ca6e98dbdf7258f2ceae0353f344a035682661e"
   else
-    version "4.08"
-    sha256 "606adda1773359e8c19b5b9617d24b8192464e7d838f4a8d1270d83c83457fde"
+    version "4.10"
+    sha256 "e7ed6e08312e3ce12fb0c480c865dfeb997588f1e908becde3bef9b3b175d322"
   end
 
   url "https://www.publicspace.net/download/signedVitamin#{version.major}.zip"
@@ -21,9 +21,13 @@ cask "vitamin-r" do
 
   app "Vitamin-R #{version.major}.app"
 
+  uninstall login_item: "Vitamin-R #{version.major}"
+
   zap trash: [
     "~/Library/Application Support/Vitamin-R",
     "~/Library/Caches/net.publicspace.dist.vitaminr#{version.major}",
+    "~/Library/HTTPStorages/net.publicspace.dist.vitaminr#{version.major}",
+    "~/Library/HTTPStorages/net.publicspace.dist.vitaminr#{version.major}.binarycookies",
     "~/Library/Preferences/net.publicspace.dist.vitaminr#{version.major}.plist",
   ]
 end
