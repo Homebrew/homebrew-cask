@@ -1,7 +1,7 @@
 cask "apparency" do
   if MacOS.version <= :mojave
     version "1.3"
-    url "https://www.mothersruin.com/software/downloads/Apparency-1.3.dmg"
+    url "https://www.mothersruin.com/software/downloads/Apparency-#{version}.dmg"
     sha256 "31704bc2d9594bf185bd6dfa6541c986749d524ecdab11cff18c5a5c095e0157"
   else
     version "1.4.1,218"
