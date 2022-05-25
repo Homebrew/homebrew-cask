@@ -5,6 +5,7 @@ cask "multifirefox" do
   url "https://mff_sparkle.s3.amazonaws.com/MultiFirefox_#{version}.zip",
       verified: "mff_sparkle.s3.amazonaws.com/"
   name "MultiFirefox"
+  desc "Launcher utility to run multiple versions of Firefox side-by-side"
   homepage "https://davemartorana.com/multifirefox/"
 
   livecheck do
