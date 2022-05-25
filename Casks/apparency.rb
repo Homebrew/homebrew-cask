@@ -1,8 +1,14 @@
 cask "apparency" do
-  version "1.4.1,218"
-  sha256 :no_check
+  if MacOS.version <= :mojave
+    version "1.3"
+    url "https://www.mothersruin.com/software/downloads/Apparency-1.3.dmg"
+    sha256 "31704bc2d9594bf185bd6dfa6541c986749d524ecdab11cff18c5a5c095e0157"
+  else
+    version "1.4.1,218"
+    url "https://mothersruin.com/software/downloads/Apparency.dmg"
+    sha256 :no_check
+  end
 
-  url "https://mothersruin.com/software/downloads/Apparency.dmg"
   name "Apparency"
   desc "Inspect application bundles"
   homepage "https://www.mothersruin.com/software/Apparency/"
@@ -15,7 +21,7 @@ cask "apparency" do
     end
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :mojave"
 
   app "Apparency.app"
 
