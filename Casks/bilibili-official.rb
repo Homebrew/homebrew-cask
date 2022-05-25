@@ -15,7 +15,6 @@ cask "bilibili-official" do
   end
 
   auto_updates true
-
   app "哔哩哔哩.app"
 
   zap trash: [
