@@ -12,6 +12,8 @@ cask "maczip" do
     strategy :header_match
   end
 
+  auto_updates true
+
   app "MacZip.app"
 
   zap trash: [
