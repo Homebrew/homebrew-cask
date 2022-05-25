@@ -6,11 +6,11 @@ cask "keyboardholder" do
       verified: "github.com/leaves615/KeyboardHolder/"
   name "KeyboardHolder"
   desc "Switch input method per application"
-  homepage "http://keyboardholder.leavesc.com/"
+  homepage "https://keyboardholder.leavesc.com/"
 
   livecheck do
-    url "https://keyboardholder.leavesc.com/distribute/update.xml"
-    strategy :sparkle
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   app "KeyboardHolder.app"
