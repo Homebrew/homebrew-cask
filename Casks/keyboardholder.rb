@@ -8,11 +8,6 @@ cask "keyboardholder" do
   desc "Switch input method per application"
   homepage "https://keyboardholder.leavesc.com/"
 
-  livecheck do
-    url :stable
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
-  end
-
   app "KeyboardHolder.app"
 
   zap trash: [
