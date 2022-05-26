@@ -11,7 +11,7 @@ cask "roam-research" do
 
   url "https://roam-electron-deploy.s3.us-east-2.amazonaws.com/Roam+Research-#{version}#{arch}.dmg",
       verified: "roam-electron-deploy.s3.us-east-2.amazonaws.com"
-  name "roam-research"
+  name "Roam Research"
   desc "Note-taking tool for networked thought"
   homepage "https://roamresearch.com/"
 
