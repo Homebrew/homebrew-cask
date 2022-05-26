@@ -8,8 +8,8 @@ cask "piezo" do
   homepage "https://rogueamoeba.com/piezo/"
 
   livecheck do
-    url "https://rogueamoeba.com/piezo/releasenotes.php"
-    regex(/ra-version=["']?(\d+(?:\.\d+)+)["' >]/i)
+    url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=1231&bundleid=com.rogueamoeba.Piezo&platform=osx&version=#{version.no_dots}8000"
+    strategy :sparkle
   end
 
   auto_updates true
