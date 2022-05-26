@@ -9,7 +9,7 @@ cask "julia" do
 
   livecheck do
     url "https://julialang.org/downloads/"
-    regex(/href=.*?julia[._-]v?(\d+(?:\.\d+)+).*\.dmg/i)
+    regex(/href=.*?julia[._-]v?(\d+(?:\.\d+)+)[._-]mac64\.dmg/i)
   end
 
   app "Julia-#{version.major_minor}.app"
