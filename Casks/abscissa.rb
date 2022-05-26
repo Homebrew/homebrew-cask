@@ -12,5 +12,7 @@ cask "abscissa" do
     regex(/href=.*?Abscissa-(\d+(?:\.\d+)+)\.zip/i)
   end
 
+  depends_on macos: ">= :sierra"
+
   app "Abscissa.app"
 end
