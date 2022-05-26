@@ -20,6 +20,7 @@ cask "bilibili-official" do
 
   zap trash: [
     "~/Library/Application Support/bilibili",
+    "~/Library/Logs/bilibili",
     "~/Library/Preferences/com.bilibili.bilibiliPC.plist",
     "~/Library/Saved Application State/com.bilibili.bilibiliPC.savedState",
   ]
