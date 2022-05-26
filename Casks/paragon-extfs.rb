@@ -4,7 +4,7 @@ cask "paragon-extfs" do
 
   url "https://dl.paragon-software.com/demo/trial_extfs.dmg"
   name "extFS for Mac by Paragon Software"
-  desc "Read/write support for ext2/3/4"
+  desc "Read/write support for ext2/3/4 formatted volumes"
   homepage "https://www.paragon-software.com/home/extfs-mac/"
 
   installer manual: "FSInstaller.app"
