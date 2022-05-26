@@ -1,8 +1,8 @@
 cask "ammonite" do
-  version "1.22.2,532"
-  sha256 "53d3d86478d8f33e688ca069d5f078ea68b84d9fa1d2fc4bb20d9796e84ffbec"
+  version "1.23.1,589"
+  sha256 "830fba369f3fece384b25bf3eab335e052f23fc6c4aec58a2f2febc79db6480a"
 
-  url "https://www.soma-zone.com/download/files/Ammonite-#{version.csv.first}.tar.bz2"
+  url "https://www.soma-zone.com/download/files/Ammonite-#{version.csv.first}.tar.xz"
   name "Ammonite"
   desc "Tag visualizer and search utility"
   homepage "https://www.soma-zone.com/Ammonite/"
