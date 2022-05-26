@@ -10,8 +10,12 @@ cask "xee" do
 
   livecheck do
     url "https://updates.devmate.com/cx.c3.Xee3.xml"
-    strategy :sparkle do |item|
-      "#{item.short_version},#{item.version},#{item.url[%r{/([^/]+)/[^/]+\.zip}i, 1]}"
+    regex(%r{/(\d+)/Xee\d*?[_-]v?(\d+(?:\.\d+)*)\.(?:dmg|zip)}i)
+    strategy :sparkle do |item, regex|
+      match = item.url.match(regex)
+      next if match.blank?
+
+      "#{item.short_version},#{match[2]},#{match[1]}"
     end
   end
 
