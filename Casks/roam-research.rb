@@ -21,4 +21,9 @@ cask "roam-research" do
   end
 
   app "Roam Research.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.roam-research.desktop-app.plist",
+    "~/Library/Saved Application State/com.roam-research.desktop-app.savedState",
+  ]
 end
