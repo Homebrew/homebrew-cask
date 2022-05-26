@@ -10,8 +10,12 @@ cask "captin" do
 
   livecheck do
     url "https://updates.devmate.com/com.100hps.captin.xml"
-    strategy :sparkle do |item|
-      "#{item.short_version},#{item.version},#{item.url[%r{/(\d+)/Captin-\d+\.dmg}i, 1]}"
+    regex(%r{/(\d+)/Captin\d*?[_-]v?(\d+(?:\.\d+)*)\.(?:dmg|zip)}i)
+    strategy :sparkle do |item, regex|
+      match = item.url.match(regex)
+      next if match.blank?
+
+      "#{item.short_version},#{match[2]},#{match[1]}"
     end
   end
 
