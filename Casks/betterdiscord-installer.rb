@@ -4,9 +4,11 @@ cask "betterdiscord-installer" do
 
   url "https://github.com/BetterDiscord/Installer/releases/download/v#{version}/BetterDiscord-Mac.zip",
       verified: "github.com/BetterDiscord/Installer/"
-  name "betterdiscord"
+  name "BetterDiscord"
   desc "Installer for BetterDiscord"
   homepage "https://betterdiscord.app/"
+
+  depends_on cask: "discord"
 
   app "BetterDiscord.app"
 
