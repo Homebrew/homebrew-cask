@@ -8,8 +8,8 @@ cask "airfoil" do
   homepage "https://www.rogueamoeba.com/airfoil/mac/"
 
   livecheck do
-    url "https://rogueamoeba.com/support/knowledgebase/releasenotes/?showCategory=Airfoil+for+Mac"
-    regex(/Get\s+Airfoil\s+v?(\d+(?:\.\d+)+)[" <]/i)
+    url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&bundleid=com.rogueamoeba.airfoil&platform=osx&version=0"
+    strategy :sparkle
   end
 
   auto_updates true
