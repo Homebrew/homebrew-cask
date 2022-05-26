@@ -8,7 +8,7 @@ cask "airfoil" do
   homepage "https://www.rogueamoeba.com/airfoil/mac/"
 
   livecheck do
-    url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&bundleid=com.rogueamoeba.airfoil&platform=osx&version=0"
+    url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=1231&bundleid=com.rogueamoeba.airfoil&platform=osx&version=#{version.no_dots}8000"
     strategy :sparkle
   end
 
