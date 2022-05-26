@@ -16,7 +16,8 @@ cask "roam-research" do
   homepage "https://roamresearch.com/"
 
   livecheck do
-    skip "No version information available"
+    url "https://roam-electron-deploy.s3.us-east-2.amazonaws.com/latest-mac.yml"
+    strategy :electron_builder
   end
 
   app "Roam Research.app"
