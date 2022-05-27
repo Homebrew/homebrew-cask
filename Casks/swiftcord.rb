@@ -15,4 +15,11 @@ cask "swiftcord" do
   depends_on macos: ">= :monterey"
 
   app "Swiftcord.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.cryptoalgo.swiftcord",
+    "~/Library/Caches/com.cryptoalgo.swiftcord",
+    "~/Library/Containers/com.cryptoalgo.swiftcord",
+    "~/Library/Saved Application State/com.cryptoalgo.swiftcord.savedState",
+  ]
 end
