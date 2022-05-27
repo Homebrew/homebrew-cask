@@ -18,5 +18,7 @@ cask "paragon-extfs" do
               ["KILL", "com.paragon-software.extfs.notification-agent"],
             ]
 
+  depends_on macos: ">= :sierra"
+
   zap trash: "~/Library/Preferences/com.paragon-software.extfs.fsapp.plist"
 end
