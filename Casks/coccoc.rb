@@ -1,8 +1,15 @@
 cask "coccoc" do
-  version "87.0.4280.148,87.0.148"
-  sha256 :no_check
+  rpath = Hardware::CPU.intel? ? "mac" : "mac/arm64"
 
-  url "https://files.coccoc.com/browser/mac/coccoc.dmg"
+  version "106.0.136"
+
+  if Hardware::CPU.intel?
+    sha256 "757d28a0fe69a37b6c2ed4f6824e7eb8aa154cdbe82a3e3d5f1e414fdd9d6682"
+  else
+    sha256 "ac92688d110bc88e69caa9b052f4121f17a8334e773738c3403004b31749b819"
+  end
+
+  url "https://files-cdn.coccoc.com/browser/#{rpath}/coccoc.dmg"
   name "Cốc Cốc"
   desc "Chromium-based web browser"
   homepage "https://coccoc.com/"
