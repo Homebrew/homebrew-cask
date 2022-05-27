@@ -5,6 +5,7 @@ cask "react-studio" do
   url "https://s3.amazonaws.com/sc.neonto.com/ReactStudio_v#{version.csv.first.no_dots}_build#{version.csv.second}.zip",
       verified: "s3.amazonaws.com/sc.neonto.com/"
   name "ReactStudio"
+  desc "App design environment"
   homepage "https://reactstudio.com/"
 
   livecheck do
@@ -27,8 +28,7 @@ cask "react-studio" do
     "~/Library/Application Support/React Studio",
     "~/Library/Caches/com.neonto.ReactStudio",
     "~/Library/Cookies/com.neonto.ReactStudio.binarycookies",
-    "~/Library/Preferences/com.neonto.ReactStudio.plist",
-    "~/Library/Preferences/com.neonto.ReactStudio.plist.*",
+    "~/Library/Preferences/com.neonto.ReactStudio.plist*",
     "~/Library/Saved Application State/com.neonto.ReactStudio.savedState",
   ]
 end
