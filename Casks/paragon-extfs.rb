@@ -7,11 +7,6 @@ cask "paragon-extfs" do
   desc "Read/write support for ext2/3/4 formatted volumes"
   homepage "https://www.paragon-software.com/home/extfs-mac/"
 
-  livecheck do
-    skip "No version information available"
-  end
-
-  auto_updates true
   depends_on macos: ">= :sierra"
 
   installer manual: "Install extFS for Mac.app"
