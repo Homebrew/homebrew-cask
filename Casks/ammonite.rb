@@ -13,4 +13,9 @@ cask "ammonite" do
   end
 
   app "Ammonite.app"
+
+  zap trash: [
+    "~/Library/Logs/Ammonite",
+    "~/Library/Preferences/com.soma-zone.Ammonite.plist",
+  ]
 end
