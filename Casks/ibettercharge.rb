@@ -10,8 +10,12 @@ cask "ibettercharge" do
 
   livecheck do
     url "https://updates.devmate.com/com.softorino.iBetterCharge.xml"
-    strategy :sparkle do |item|
-      "#{item.short_version},#{item.url[%r{/(\d+)/iBetterCharge-(?:\d+(?:\.\d+)*)\.zip}i, 1]}"
+    regex(%r{/(\d+)/iBetterCharge\d*?[_-]v?(\d+(?:\.\d+)*)\.(?:dmg|zip)}i)
+    strategy :sparkle do |item, regex|
+      match = item.url.match(regex)
+      next if match.blank?
+
+      "#{match[2]},#{match[1]}"
     end
   end
 
