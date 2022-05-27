@@ -1,11 +1,16 @@
 cask "paragon-ntfs" do
   version "15.9.314"
-  sha256 :no_check
+  sha256 :no_check # required as upstream package is updated in-place
 
-  url "https://dl.paragon-software.com/demo/ntfsmac15_trial.dmg"
+  url "https://dl.paragon-software.com/demo/ntfsmac#{version.major}_trial.dmg"
   name "Microsoft NTFS for Mac by Paragon Software"
   desc "Read/write support for NTFS formatted volumes"
   homepage "https://www.paragon-software.com/home/ntfs-mac/"
+  
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"
