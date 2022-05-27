@@ -1,5 +1,5 @@
 cask "paragon-extfs" do
-  version "11.6.237"
+  version :latest
   sha256 :no_check
 
   url "https://dl.paragon-software.com/demo/trial_extfs.dmg"
