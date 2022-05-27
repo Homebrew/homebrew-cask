@@ -1,18 +1,18 @@
 cask "coccoc" do
-  rpath = Hardware::CPU.intel? ? "mac" : "mac/arm64"
+  arch = Hardware::CPU.intel? ? "" : "/arm64"
 
-  version "106.0.136"
+  version "100.0.4896.136,100.0.136"
+  sha256 :no_check
 
-  if Hardware::CPU.intel?
-    sha256 "757d28a0fe69a37b6c2ed4f6824e7eb8aa154cdbe82a3e3d5f1e414fdd9d6682"
-  else
-    sha256 "ac92688d110bc88e69caa9b052f4121f17a8334e773738c3403004b31749b819"
-  end
-
-  url "https://files-cdn.coccoc.com/browser/#{rpath}/coccoc.dmg"
+  url "https://files-cdn.coccoc.com/browser/mac#{arch}/coccoc.dmg"
   name "Cốc Cốc"
   desc "Chromium-based web browser"
   homepage "https://coccoc.com/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   app "CocCoc.app"
 
