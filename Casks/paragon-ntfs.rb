@@ -3,18 +3,18 @@ cask "paragon-ntfs" do
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://dl.paragon-software.com/demo/ntfsmac#{version}_trial.dmg"
-  name "Paragon NTFS for Mac"
-  desc "Paragon read-write NTFS driver"
-  homepage "https://www.paragon-software.com/ufsdhome/ntfs-mac/"
+  name "Microsoft NTFS for Mac by Paragon Software"
+  desc "Read/write support for NTFS formatted volumes"
+  homepage "https://www.paragon-software.com/home/ntfs-mac/"
 
   livecheck do
-    url :homepage
-    regex(%r{href=.*?/ntfsmac(\d+)_trial\.dmg}i)
+    skip "No version information available"
   end
 
   auto_updates true
+  depends_on macos: ">= :sierra"
 
-  installer manual: "FSInstaller.app"
+  installer manual: "Install NTFS for Mac.app"
 
   uninstall kext:      "com.paragon-software.filesystems.ntfs",
             launchctl: "com.paragon-software.ntfs*",
@@ -23,14 +23,7 @@ cask "paragon-ntfs" do
             signal:    [
               ["KILL", "com.paragon-software.ntfs.FSMenuApp"],
               ["KILL", "com.paragon-software.ntfs.notification-agent"],
-            ],
-            delete:    [
-              "/Library/Application Support/Paragon Software/com.paragon-software.kernelio.kext",
-              "/Library/Application Support/Paragon Software/uc.ntfs",
-              "/Library/LaunchDaemons/com.paragon-software.installer.plist",
-              "/Library/PrivilegedHelperTools/com.paragon-software.installer",
-            ],
-            rmdir:     "/Library/Application Support/Paragon Software/"
+            ]
 
   zap trash: [
     "~/Library/Application Support/com.paragon-software.ntfs.*",
