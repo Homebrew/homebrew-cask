@@ -5,12 +5,17 @@ cask "ssh-tunnel-manager" do
   url "https://dl.devmate.com/org.tynsoe.sshtunnelmanager/#{version.csv.first}/#{version.csv.second}/SSHTunnelManager-#{version.csv.first}.zip",
       verified: "dl.devmate.com/org.tynsoe.sshtunnelmanager/"
   name "SSH Tunnel Manager"
+  desc "Application for managing SSH tunnels"
   homepage "https://tynsoe.org/stm/"
 
   livecheck do
     url "https://updates.devmate.com/org.tynsoe.sshtunnelmanager.xml"
-    strategy :sparkle do |item|
-      "#{item.version},#{item.url[%r{/(\d+)/SSHTunnelManager-(?:\d+(?:\.\d+)*)\.zip}i, 1]}"
+    regex(%r{/(\d+)/SSHTunnelManager\d*?[_-]v?(\d+(?:\.\d+)*)\.(?:dmg|zip)}i)
+    strategy :sparkle do |item, regex|
+      match = item.url.match(regex)
+      next if match.blank?
+
+      "#{match[2]},#{match[1]}"
     end
   end
 
