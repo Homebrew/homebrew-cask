@@ -8,8 +8,7 @@ cask "paragon-extfs" do
   homepage "https://www.paragon-software.com/home/extfs-mac/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    skip "No version information available"
   end
 
   auto_updates true
