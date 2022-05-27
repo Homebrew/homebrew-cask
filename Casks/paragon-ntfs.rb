@@ -6,7 +6,7 @@ cask "paragon-ntfs" do
   name "Microsoft NTFS for Mac by Paragon Software"
   desc "Read/write support for NTFS formatted volumes"
   homepage "https://www.paragon-software.com/home/ntfs-mac/"
-  
+
   livecheck do
     skip "No version information available"
   end
