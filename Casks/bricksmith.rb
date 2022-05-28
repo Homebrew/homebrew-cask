@@ -5,6 +5,7 @@ cask "bricksmith" do
   url "https://downloads.sourceforge.net/bricksmith/bricksmith/Bricksmith%20#{version.major_minor}/BricksmithComplete#{version.major_minor}.zip",
       verified: "downloads.sourceforge.net/bricksmith/"
   name "Bricksmith"
+  desc "Virtual Lego modeling"
   homepage "https://bricksmith.sourceforge.io/"
 
   livecheck do
