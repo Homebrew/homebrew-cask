@@ -63,7 +63,7 @@ jobs:
             fi
           fi
           
-          if ! brew uninstall --cask julia && ! rm -r /Applications/Julia-*.app; then
+          if ! brew uninstall --cask --force julia && ! rm -r /Applications/Julia-*.app; then
             echo '::warning::Removing Julia is no longer necessary.'
           fi
 
