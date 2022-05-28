@@ -5,7 +5,7 @@ cask "rustdesk" do
   url "https://github.com/rustdesk/rustdesk/releases/download/#{version}/rustdesk-#{version}.dmg",
       verified: "github.com/rustdesk/rustdesk/"
   name "RustDesk"
-  desc "Open source virtual / remote desktop infrastructure for everyone"
+  desc "Open source virtual/remote desktop application"
   homepage "https://rustdesk.com/"
 
   depends_on macos: ">= :mojave"
