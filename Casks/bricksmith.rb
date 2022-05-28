@@ -14,4 +14,6 @@ cask "bricksmith" do
   end
 
   app "Bricksmith/Bricksmith.app"
+
+  zap trash: "~/Library/Preferences/com.AllenSmith.Bricksmith.plist"
 end
