@@ -10,7 +10,7 @@ cask "blisk" do
 
   livecheck do
     url "https://blisk.io/download/?os=mac"
-    regex(%r{href=.*?/BliskInstaller[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    regex(/href=.*?BliskInstaller[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "Blisk.app"
