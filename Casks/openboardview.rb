@@ -1,6 +1,6 @@
 cask "openboardview" do
-  version "9.0.0"
-  sha256 "2ec52824758d7592d1131de27b808d924f294f0cad9fc57a3cce9fda762f3caf"
+  version "9.0.3"
+  sha256 "811b61906614317ac8ffa0e0287abc5c5fe6cb6316f9a6cd1cdfc1620495d178"
 
   url "https://github.com/OpenBoardView/OpenBoardView/releases/download/#{version}/OpenBoardView-#{version}-Darwin.dmg",
       verified: "github.com/OpenBoardView/OpenBoardView/"
