@@ -22,10 +22,11 @@ cask "microsoft-excel" do
   desc "Spreadsheet software"
   homepage "https://products.office.com/en-US/excel"
 
-  livecheck do
-    url "https://go.microsoft.com/fwlink/p/?linkid=525135"
-    strategy :header_match
-  end
+  # Temporarily removed because there is no fwlink for this update package
+  #livecheck do
+  #  url "https://go.microsoft.com/fwlink/p/?linkid=525135"
+  #  strategy :header_match
+  #end
 
   auto_updates true
   conflicts_with cask: "microsoft-office"
