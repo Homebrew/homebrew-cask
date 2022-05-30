@@ -1,11 +1,15 @@
 cask "sol" do
   version "1.1.20"
-  sha256 :no_check
+  sha256 "e7880031cec94a31825aaaac994bdf8e5711763c35e50938fc2c8b3d9868be98"
 
-  url "https://github.com/ospfranco/sol/releases/latest/download/Sol.zip"
+  url "https://github.com/ospfranco/sol/releases/download/#{version}/Sol.zip"
   name "Sol"
-  desc "Creative Open Source Launcher"
+  desc "Launcher & command palette"
   homepage "https://github.com/ospfranco/sol"
+
+  livecheck do
+    skip "Sol does not currently support livecheck."
+  end
 
   depends_on macos: ">= :mojave"
 
