@@ -8,12 +8,9 @@ cask "curio" do
   homepage "https://zengobi.com/curio/"
 
   livecheck do
-    url "https://www.zengobi.com/curio/download/"
-    strategy :header_match do |headers|
-      match = headers["location"].match(/Curio(\d+)\.zip/i)
-      next if match.blank?
-
-      "#{match[1][0..1]},#{match[1]}"
+    url "https://www.zengobi.com/curio/appcasts/Curio#{version.major}.xml"
+    strategy :sparkle do |item|
+      #{item.version}
     end
   end
 
