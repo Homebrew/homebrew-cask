@@ -15,6 +15,11 @@ cask "openemu" do
   name "OpenEmu"
   desc "Retro video game emulation"
   homepage "https://openemu.org/"
+  
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
   conflicts_with cask: "openemu-experimental"
