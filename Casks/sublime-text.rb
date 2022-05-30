@@ -8,7 +8,7 @@ cask "sublime-text" do
   homepage "https://www.sublimetext.com/"
 
   livecheck do
-    url "https://www.sublimetext.com/download"
+    url "https://www.sublimetext.com/download_thanks?target=mac"
     regex(/href=.*?v?(\d+)_mac\.zip/i)
     strategy :page_match do |page, regex|
       match = page.match(regex)[1]
