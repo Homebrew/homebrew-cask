@@ -3,7 +3,7 @@ cask "ngrok" do
 
   if Hardware::CPU.intel?
     version "3.0.4,8TxeB1dzvEz,a"
-    sha256 "1424c01ee692ae8561ede345a5147f95575e1e32791e9a860cf8ce864b506b59"
+    sha256 "487241b21e81a27268e48c4a2a97e48e92ad81ce7b07ba4fa643d40d80d46248"
   else
     version "3.0.4,iTxqEHJZruy,a"
     sha256 "abb8eea3954fb3ac44b07b78d5d36ffa70819355ffc8d75fb9ffc9e29d46b9a4"
