@@ -1,6 +1,6 @@
 cask "session-manager-plugin" do
-  version "1.2.323.0"
-  sha256 "16ea14ac10d787eda8993b11e7dc8dc2bf4f04a565c374f56c0c5bb038488666"
+  version "1.2.331.0"
+  sha256 "14f70c34f8ed3a82698632461ecc408357a711541256261120346d17d6c25af3"
 
   url "https://s3.amazonaws.com/session-manager-downloads/plugin/#{version}/mac/session-manager-plugin.pkg",
       verified: "s3.amazonaws.com/session-manager-downloads/"
