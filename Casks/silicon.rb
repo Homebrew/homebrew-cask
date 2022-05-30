@@ -7,6 +7,11 @@ cask "silicon" do
   desc "Identify Intel-only apps"
   homepage "https://github.com/DigiDNA/Silicon"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
