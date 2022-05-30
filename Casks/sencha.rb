@@ -4,6 +4,7 @@ cask "sencha" do
 
   url "https://trials.sencha.com/cmd/#{version.major_minor_patch}/jre/SenchaCmd-#{version}-osx.app.zip"
   name "Sencha Cmd"
+  desc "Productivity and performance optimization tool for Sencha Ext JS"
   homepage "https://www.sencha.com/products/sencha-cmd/"
 
   livecheck do
