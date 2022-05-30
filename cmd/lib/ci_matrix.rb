@@ -8,9 +8,9 @@ module CiMatrix
   MAX_JOBS = 256
 
   RUNNERS = {
-    { symbol: :catalina, name: "macos-10.15" } => 0.9,
-    { symbol: :big_sur,  name: "macos-11" }    => 0.1,
-    { symbol: :monterey,  name: "macos-12" }   => 0.1,
+    { symbol: :catalina, name: "macos-10.15" } => 0,
+    { symbol: :big_sur,  name: "macos-11" }    => 0.9,
+    { symbol: :monterey, name: "macos-12" }    => 0.1,
   }.freeze
 
   # This string uses regex syntax and is intended to be interpolated into
@@ -57,7 +57,9 @@ module CiMatrix
   end
 
   def self.random_runner(avalible_runners = RUNNERS)
-    avalible_runners.max_by { |(_, weight)| rand ** (1.0 / weight) }.first
+    avalible_runners.reject { |_, weight| weight.zero? }
+                    .max_by { |(_, weight)| rand ** (1.0 / weight) }
+                    .first
   end
 
   def self.runners(path)
