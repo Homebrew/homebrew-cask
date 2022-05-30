@@ -15,6 +15,7 @@ cask "iina" do
       next if match.blank?
 
       "#{match[1]}"
+    end
   end
 
   auto_updates true
