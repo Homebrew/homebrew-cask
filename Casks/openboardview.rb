@@ -6,7 +6,7 @@ cask "openboardview" do
       verified: "github.com/OpenBoardView/OpenBoardView/"
   name "OpenBoardView"
   homepage "https://openboardview.org/"
-  desc ".brd files viewer, intended as a drop-in replacement for the \"Test_Link\" software and \"Landrex\""
+  desc "File viewer for .brd files"
 
   livecheck do
     url :url
