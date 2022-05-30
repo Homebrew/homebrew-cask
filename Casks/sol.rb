@@ -8,7 +8,8 @@ cask "sol" do
   homepage "https://github.com/ospfranco/sol"
 
   livecheck do
-    skip "Sol does not currently support livecheck."
+    url :url
+    strategy :github_latest
   end
 
   depends_on macos: ">= :mojave"
