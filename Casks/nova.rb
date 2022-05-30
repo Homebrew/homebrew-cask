@@ -18,10 +18,13 @@ cask "nova" do
 
   app "Nova.app"
   binary "#{appdir}/Nova.app/Contents/SharedSupport/nova"
+  artifact "#{appdir}/Nova.app/Contents/Resources/nova_completions.txt",
+           target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_nova"
 
   uninstall delete: [
     "/Library/LaunchDaemons/com.panic.NovaPrivilegedHelper.plist",
     "/Library/PrivilegedHelperTools/com.panic.NovaPrivilegedHelper",
+    "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_nova",
   ]
 
   zap trash: [
