@@ -1,5 +1,5 @@
 cask "sublime-text" do
-  version "4.126"
+  version "4126"
   sha256 "06e47f404b3e1c14d505bfbd0b884f8d5a62c9f376a62f735a693dc31d9cc212"
 
   url "https://download.sublimetext.com/sublime_text_build_#{version.no_dots}_mac.zip"
