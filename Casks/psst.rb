@@ -1,5 +1,5 @@
 cask "psst" do
-  version :latest
+  version "0.1.0,20220530.150233"
   sha256 :no_check
 
   url "https://nightly.link/jpochyla/psst/workflows/build/master/Psst%2Dx64.dmg.zip",
@@ -8,13 +8,18 @@ cask "psst" do
   desc "Fast Spotify client with native GUI"
   homepage "https://github.com/jpochyla/psst"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Psst.app"
 
   zap trash: [
-    "~/Library/Caches/Psst",
     "~/Library/Application Support/Psst",
-    "~/Library/Saved Application State/com.jpochyla.psst.savedState",
-    "~/Library/HTTPStorages/com.jpochyla.psst",
     "~/Library/Caches/com.jpochyla.psst",
+    "~/Library/Caches/Psst",
+    "~/Library/HTTPStorages/com.jpochyla.psst",
+    "~/Library/Saved Application State/com.jpochyla.psst.savedState",
   ]
 end
