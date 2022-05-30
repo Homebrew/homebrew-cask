@@ -22,8 +22,8 @@ cask "sol" do
   zap trash: [
     "~/Library/Application Scripts/com.ospfranco.sol-LaunchAtLoginHelper",
     "~/Library/Application Support/com.ospfranco.sol",
-    "~/Library/HTTPStorages/com.ospfranco.sol",
     "~/Library/Containers/com.ospfranco.sol-LaunchAtLoginHelper",
+    "~/Library/HTTPStorages/com.ospfranco.sol",
     "~/Library/Preferences/com.ospfranco.sol.plist",
   ]
 end
