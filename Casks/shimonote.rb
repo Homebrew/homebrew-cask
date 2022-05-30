@@ -9,7 +9,7 @@ cask "shimonote" do
     sha256 "32b6f98e5bc205df0937bb55be87c0fd0d2a879c02d0b642a795d2fe6725dc7d"
   end
 
-  url "https://as.smvm.cn/panther/shimo/release/darwin/#{arch}/\%e7\%9f\%b3\%e5\%a2\%a8\%e6\%96\%87\%e6\%a1\%a3_v#{version.csv.first}-release.#{version.csv.second}_darwin-#{arch}.zip",
+  url "https://as.smvm.cn/panther/shimo/release/darwin/#{arch}/\%e7\%9f\%b3\%e5\%a2\%a8\%e6\%96\%87\%e6\%a1\%a3_v#{version.csv.first}-release.#{version.csv.second}.shimo_darwin-#{arch}.zip",
       verified: "as.smvm.cn/panther/shimo/release/darwin/"
   name "Shimonote"
   desc "Document editor"
@@ -17,7 +17,7 @@ cask "shimonote" do
 
   livecheck do
     url "https://as.smvm.cn/panther/shimo/release/darwin/#{arch}/shimo-mac.yml"
-    regex(/石墨文档[._-]v?(\d+(?:\.\d+)+)-release\.(\h+)_darwin-#{arch}\.zip/i)
+    regex(/石墨文档[._-]v?(\d+(?:\.\d+)+)-release\.(\h+).shimo_darwin-#{arch}\.zip/i)
     strategy :electron_builder do |item|
       match = item["path"].match(regex)
       next if match.blank?
