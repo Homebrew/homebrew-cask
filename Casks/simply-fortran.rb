@@ -23,7 +23,7 @@ cask "simply-fortran" do
 
   livecheck do
     url "https://simplyfortran.com/download/?platform=macos"
-    regex(/href=.*?simplyfortran[._-]v?(\d+(?:\.\d+)+)[._-]#{url_string}\.dmg/i)
+    regex(/href=.*?simplyfortran[._-]v?(\d+(?:\.\d+)+)#{url_string}\.dmg/i)
   end
 
   app "Simply Fortran.app"
