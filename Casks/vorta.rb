@@ -1,6 +1,6 @@
 cask "vorta" do
-  version "0.8.3"
-  sha256 "d71b374037b3e94dbd58b682e39a9cf969c1abae7e843d12d2158877d7bb964a"
+  version "0.8.6"
+  sha256 "ba9cdcbe566502241c1d3d254190d33b7b1a7d91bb9a63d8599f7d703d7fa466"
 
   url "https://github.com/borgbase/vorta/releases/download/v#{version}/vorta-#{version}.dmg"
   name "Vorta"
