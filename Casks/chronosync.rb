@@ -16,6 +16,9 @@ cask "chronosync" do
 
   pkg "Install.pkg"
 
-  uninstall quit:    "com.econtechnologies.chronosync",
+  uninstall quit:    [
+    "com.econtechnologies.chronosync",
+    "com.econtechnologies.backgrounder.chronosync",
+  ],
             pkgutil: "com.econtechnologies.pkg.ChronoSyncApplication"
 end
