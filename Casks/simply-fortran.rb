@@ -1,6 +1,6 @@
 cask "simply-fortran" do
   url_string = if MacOS.version <= :big_sur
-    ".legacy"
+    "-x86_64.legacy"
   else
     Hardware::CPU.intel? ? "-x86_64" : "-arm64"
   end
