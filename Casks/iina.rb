@@ -2,19 +2,14 @@ cask "iina" do
   version "1.3.0"
   sha256 "78959388f2a3f027c0187aa6702cba2d1019919ebca1f5bfba417f9b1d6528f8"
 
-  url "https://github.com/iina/iina/releases/download/v#{version}/IINA.v#{version}.dmg"
+  url "https://github.com/iina/iina/releases/download/v#{version}/IINA.v#{version}.dmg", verified: "github.com/iina/iina/"
   name "IINA"
   desc "Free and open-source media player"
-  homepage "https://github.com/iina/iina"
+  homepage "https://iina.io/"
 
   livecheck do
-    url "https://github.com/iina/iina/releases/latest"
-    strategy :page_match do |page|
-      match = page.match(/(\d+(?:\.\d+)+)/i)
-      next if match.blank?
-
-      (match[1]).to_s
-    end
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true
