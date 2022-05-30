@@ -1,5 +1,5 @@
 cask "chronosync" do
-  version "10.1.0"
+  version "10.2.0"
   sha256 :no_check
 
   url "https://downloads.econtechnologies.com/CS4_Download.dmg"
@@ -12,8 +12,13 @@ cask "chronosync" do
     regex(/VERSION=(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on macos: ">= :sierra"
+
   pkg "Install.pkg"
 
-  uninstall quit:    "com.econtechnologies.chronosync",
+  uninstall quit:    [
+    "com.econtechnologies.chronosync",
+    "com.econtechnologies.backgrounder.chronosync",
+  ],
             pkgutil: "com.econtechnologies.pkg.ChronoSyncApplication"
 end
