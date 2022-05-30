@@ -2,7 +2,8 @@ cask "iina" do
   version "1.3.0"
   sha256 "78959388f2a3f027c0187aa6702cba2d1019919ebca1f5bfba417f9b1d6528f8"
 
-  url "https://github.com/iina/iina/releases/download/v#{version}/IINA.v#{version}.dmg", verified: "github.com/iina/iina/"
+  url "https://github.com/iina/iina/releases/download/v#{version}/IINA.v#{version}.dmg",
+      verified: "github.com/iina/iina/"
   name "IINA"
   desc "Free and open-source media player"
   homepage "https://iina.io/"
