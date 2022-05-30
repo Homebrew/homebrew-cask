@@ -10,7 +10,7 @@ cask "curio" do
   livecheck do
     url "https://www.zengobi.com/curio/appcasts/Curio#{version.major}.xml"
     strategy :sparkle do |item|
-      #{item.version}
+      "#{item.version}"
     end
   end
 
