@@ -12,6 +12,8 @@ cask "chronosync" do
     regex(/VERSION=(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on macos: ">= :sierra"
+
   pkg "Install.pkg"
 
   uninstall quit:    "com.econtechnologies.chronosync",
