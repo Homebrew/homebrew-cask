@@ -1,3 +1,4 @@
+# typed: false
 # frozen_string_literal: true
 
 require "cask/cask_loader"
@@ -82,6 +83,8 @@ module CiMatrix
     tap.extend(ChangedFiles)
 
     changed_files = tap.changed_files
+
+    odie "No files were modified by the PR" if changed_files[:modified_files].blank?
 
     ruby_files_in_wrong_directory =
       changed_files[:modified_ruby_files] - (
