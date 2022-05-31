@@ -5,8 +5,8 @@ cask "openboardview" do
   url "https://github.com/OpenBoardView/OpenBoardView/releases/download/#{version}/OpenBoardView-#{version}-Darwin.dmg",
       verified: "github.com/OpenBoardView/OpenBoardView/"
   name "OpenBoardView"
-  homepage "https://openboardview.org/"
   desc "File viewer for .brd files"
+  homepage "https://openboardview.org/"
 
   livecheck do
     url :url
