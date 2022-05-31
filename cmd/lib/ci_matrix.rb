@@ -81,6 +81,8 @@ module CiMatrix
 
     changed_files = tap.changed_files
 
+    odie "ERROR" if changed_files[:modified_files].blank?
+
     ruby_files_in_wrong_directory =
       changed_files[:modified_ruby_files] - (
       changed_files[:modified_cask_files] +
