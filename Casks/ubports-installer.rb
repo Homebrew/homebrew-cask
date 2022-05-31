@@ -8,12 +8,10 @@ cask "ubports-installer" do
   desc "Application to install ubports on mobile devices"
   homepage "https://ubports.com/"
 
-  # This Ubuntu Touch installer URL redirects to the appropriate file on GitHub.
-  # NOTE: This is the x64 URL, so this `livecheck` block may need to be updated
-  # if/when they publish an ARM64 dmg.
   livecheck do
-    url "https://devices.ubuntu-touch.io/installer/dmg"
-    strategy :header_match
+    url :url
+    regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)+(?:-beta)?)["' >]}i)
+    strategy :github_latest
   end
 
   app "ubports-installer.app"
