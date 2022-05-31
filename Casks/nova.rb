@@ -3,7 +3,7 @@ cask "nova" do
   sha256 "682e78d38ad3043a27b292721539a9446ed3363993d3374c62b82b79818a83e4"
 
   url "https://download-cdn.panic.com/nova/Nova%20#{version}.zip",
-      verified: "https://download-cdn.panic.com/nova/"
+      verified: "download-cdn.panic.com/nova/"
   name "Panic Nova"
   desc "Native code editor"
   homepage "https://nova.app/"
@@ -24,7 +24,6 @@ cask "nova" do
   uninstall delete: [
     "/Library/LaunchDaemons/com.panic.NovaPrivilegedHelper.plist",
     "/Library/PrivilegedHelperTools/com.panic.NovaPrivilegedHelper",
-    "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_nova",
   ]
 
   zap trash: [
