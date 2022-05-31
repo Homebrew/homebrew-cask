@@ -5,7 +5,13 @@ cask "skala-preview" do
   url "https://bjango.s3.amazonaws.com/files/skalapreview/skalapreview#{version}.zip",
       verified: "bjango.s3.amazonaws.com/"
   name "Skala Preview"
+  desc "Design preview tool"
   homepage "https://bjango.com/mac/skalapreview/"
+
+  livecheck do
+    url "https://download.bjango.com/skalapreview/"
+    strategy :header_match
+  end
 
   app "Skala Preview.app"
 end
