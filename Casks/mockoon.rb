@@ -8,6 +8,7 @@ cask "mockoon" do
   desc "Create mock APIs in seconds"
   homepage "https://mockoon.com/"
 
+  # a regex is required to skip tags that relate to mockoon cli
   livecheck do
     url :url
     strategy :git
