@@ -3,10 +3,10 @@ cask "psst" do
   sha256 :no_check
 
   url "https://nightly.link/jpochyla/psst/workflows/build/master/Psst%2Dx64.dmg.zip",
-      verified: "https://nightly.link/jpochyla/psst/"
+      verified: "nightly.link/jpochyla/psst/workflows/build/master/"
   name "Psst"
-  desc "Fast Spotify client with native GUI"
-  homepage "https://github.com/jpochyla/psst"
+  desc "Spotify client"
+  homepage "https://github.com/jpochyla/psst/"
 
   livecheck do
     url :url
