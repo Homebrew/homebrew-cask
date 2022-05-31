@@ -21,7 +21,10 @@ cask "private-internet-access" do
   }
 
   uninstall quit:      "com.privateinternetaccess.vpn",
-            delete:    "/Applications/Private Internet Access.app",
+            delete:    [
+              "/Applications/Private Internet Access.app",
+              "/usr/local/bin/piactl",
+            ],
             launchctl: "com.privateinternetaccess.vpn.installhelper"
 
   # The uninstall script should only be used with --zap because it removes all preference files
