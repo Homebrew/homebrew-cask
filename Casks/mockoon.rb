@@ -8,6 +8,12 @@ cask "mockoon" do
   desc "Create mock APIs in seconds"
   homepage "https://mockoon.com/"
 
+  livecheck do
+    url :url
+    strategy :git
+    regex(/^v?(\d+(?:\.\d+)+)/i)
+  end
+
   auto_updates true
 
   app "Mockoon.app"
