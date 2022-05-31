@@ -2,13 +2,14 @@ cask "sol" do
   version "1.1.23"
   sha256 "340adfea88a1022d7ae21bfc010adc95b3854bac17115b4aa74bb9231519d0ef"
 
-  url "https://github.com/ospfranco/sol/raw/main/releases/#{version}.zip"
+  url "https://raw.githubusercontent.com/ospfranco/sol/main/releases/#{version}.zip",
+      verified: "raw.githubusercontent.com/ospfranco/sol/"
   name "Sol"
   desc "Launcher & command palette"
   homepage "https://github.com/ospfranco/sol"
 
   livecheck do
-    url "https://github.com/ospfranco/sol/raw/main/releases/appcast.xml"
+    url "https://raw.githubusercontent.com/ospfranco/sol/main/releases/appcast.xml"
     strategy :sparkle, &:short_version
   end
 
