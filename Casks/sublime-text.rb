@@ -1,8 +1,8 @@
 cask "sublime-text" do
-  version "4.126"
+  version "4,4126"
   sha256 "06e47f404b3e1c14d505bfbd0b884f8d5a62c9f376a62f735a693dc31d9cc212"
 
-  url "https://download.sublimetext.com/sublime_text_build_#{version.no_dots}_mac.zip"
+  url "https://download.sublimetext.com/sublime_text_build_#{version.csv.second}_mac.zip"
   name "Sublime Text"
   desc "Text editor for code, markup and prose"
   homepage "https://www.sublimetext.com/"
@@ -11,10 +11,7 @@ cask "sublime-text" do
     url "https://www.sublimetext.com/download_thanks?target=mac"
     regex(/href=.*?v?(\d+)_mac\.zip/i)
     strategy :page_match do |page, regex|
-      match = page.match(regex)[1]
-      next if match.blank?
-
-      "#{match[0]}.#{match[1..]}"
+      page.scan(regex).map { |match| "#{match[0][0]},#{match[0]}" }
     end
   end
 
