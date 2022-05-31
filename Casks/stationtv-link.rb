@@ -4,7 +4,13 @@ cask "stationtv-link" do
 
   url "http://download.pixela.co.jp/products/tv_capture/stationtv_link/data/stationtvlink_#{version.no_dots}.dmg"
   name "StationTV® Link"
+  desc "DVR and Media Server"
   homepage "http://www.pixela.co.jp/products/tv_capture/stationtv_link/"
+
+  livecheck do
+    url "http://www.pixela.co.jp/products/tv_capture/stationtv_link/support.html#download-mac"
+    regex(/\[Ver\.(\d+(?:\.\d+)+)\]/i)
+  end
 
   app "StationTV Link.app"
 end
