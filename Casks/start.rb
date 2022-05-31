@@ -3,7 +3,7 @@ cask "start" do
   livecheck_arch = Hardware::CPU.intel? ? "" : "-arm"
 
   if Hardware::CPU.intel?
-    version "0.301.6-170"
+    version "0.301.9-173"
     sha256 "65c42018e7128a9c3e454c7decfd53b162d7a4adb48bf1d5efd3b2d12849f3a0"
   else
     version "0.301.6-54"
