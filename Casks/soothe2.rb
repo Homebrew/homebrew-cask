@@ -1,7 +1,7 @@
 cask "soothe2" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
-  version "1.2.2"
-  sha256 "9f49f4a958bde5e2898cabbd803f2409ea5763a10e528de5fb752bd2388dddd9"
+  version "1.3.0"
+  sha256 "8cf9e5c0d5ba16594b90edf04c434e21250217bdffb5aaba9cc9565186cb8df2"
 
   url "https://oeksound.ams3.cdn.digitaloceanspaces.com/soothe2_v#{version.no_dots}_Mac.dmg",
       verified: "oeksound.ams3.cdn.digitaloceanspaces.com/"
@@ -10,11 +10,11 @@ cask "soothe2" do
   homepage "https://oeksound.com/plugins/soothe2/"
 
   livecheck do
-    url "https://oeksound.com/downloads/soothe2/"
-    regex(/latest\sversion:\s(\d+(?:\.\d+)+)/i)
+    url "https://oeksound.com/changelog/soothe2/"
+    regex(/<h3>v?(\d+(?:\.\d+)+)[" <]/i)
   end
 
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :high_sierra"
 
   pkg "soothe2.pkg"
 
