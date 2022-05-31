@@ -1,12 +1,12 @@
 cask "decrediton" do
   arch = Hardware::CPU.intel? ? "amd64" : "arm64"
 
-  version "1.7.2"
+  version "1.7.3"
 
   if Hardware::CPU.intel?
-    sha256 "2cff49751267a1a284df4fc73295e6a729f0f2a1858187772c0ae61981e6a5bd"
+    sha256 "106a0d417163c9c247b5a658e7dda691290af8b9651dcecb99f83cfcda5683a8"
   else
-    sha256 "7a68aaa273564e8d7b96af4624c0c476415f6977ab446288127010cf340f2a38"
+    sha256 "b29286210fe17fe159b5ccb24f0be572da9235acc6b9093356091d52a218848d"
   end
 
   url "https://github.com/decred/decred-binaries/releases/download/v#{version}/decrediton-#{arch}-v#{version}.dmg"
