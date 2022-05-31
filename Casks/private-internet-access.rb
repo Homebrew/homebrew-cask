@@ -24,7 +24,7 @@ cask "private-internet-access" do
             delete:    "/Applications/Private Internet Access.app",
             launchctl: "com.privateinternetaccess.vpn.installhelper"
 
-  # The uninstall script should only be used when with --zap because it removes all preferences
+  # The uninstall script should only be used with --zap because it removes all preference files
   zap script: {
     executable: "/Applications/Private Internet Access.app/Contents/Resources/vpn-installer.sh",
     args:       ["uninstall"],
