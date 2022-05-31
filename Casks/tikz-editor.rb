@@ -6,5 +6,11 @@ cask "tikz-editor" do
   name "TikZ Editor"
   homepage "https://github.com/fredokun/TikZ-Editor"
 
+  livecheck do
+    url :homepage
+    regex(/href=.*?TikZ%20Editor[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    strategy :page_match
+  end
+
   app "TikZ Editor.app"
 end
