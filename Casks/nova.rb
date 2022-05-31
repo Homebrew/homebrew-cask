@@ -24,6 +24,7 @@ cask "nova" do
   uninstall delete: [
     "/Library/LaunchDaemons/com.panic.NovaPrivilegedHelper.plist",
     "/Library/PrivilegedHelperTools/com.panic.NovaPrivilegedHelper",
+    "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_nova",
   ]
 
   zap trash: [
