@@ -6,5 +6,10 @@ cask "sonoair" do
   name "SonoAir"
   homepage "https://sonoair.mihosoft.eu/"
 
+  livecheck do
+    url "https://sonoair.mihosoft.eu/download.html"
+    regex(%r{href=.*?/([^/]+)/SonoAir\.zip}i)
+  end
+
   app "SonoAir.app"
 end
