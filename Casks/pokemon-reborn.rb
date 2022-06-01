@@ -12,5 +12,5 @@ cask "pokemon-reborn" do
     regex(/Updated to v?(\d+(?:\.\d+)+)["< ]/i)
   end
 
-  app "Pokémon Reborn.app"
+  app "Pokemon Reborn/Pokémon Reborn.app"
 end
