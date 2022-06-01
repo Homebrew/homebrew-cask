@@ -20,5 +20,11 @@ cask "munki" do
             launchctl: [
               "com.googlecode.munki.app_usage_monitor",
               "com.googlecode.munki.appusaged",
+              "com.googlecode.munki.logouthelper",
+              "com.googlecode.munki.ManagedSoftwareCenter",
+              "com.googlecode.munki.managedsoftwareupdate-check",
+              "com.googlecode.munki.managedsoftwareupdate-install",
+              "com.googlecode.munki.managedsoftwareupdate-manualcheck",
+              "com.googlecode.munki.munki-notifier",
             ]
 end
