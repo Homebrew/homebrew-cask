@@ -15,7 +15,7 @@ cask "prezi-video" do
   auto_updates true
   depends_on macos: ">= :catalina"
 
-  pkg "Install Prezi Video.pkg"
+  pkg "Prezi_Video.pkg"
 
   uninstall quit:      "com.prezi.PreziCast",
             launchctl: "com.prezi.prezivideo.vcam.assistant",
