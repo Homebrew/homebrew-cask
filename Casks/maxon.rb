@@ -1,19 +1,15 @@
 cask "maxon" do
-  version "2.1.0,5"
-  sha256 "c0d9e9ace0e7d19bb27d9d26d10b5f2688acf16c17c76d30884da1468813bc36"
+  version "3.1"
+  sha256 "7e7ba5ef683d84dac6645eea1fa32e7d737f1225865adaec27da11bf17cf96a2"
 
-  url "https://package-cf.redgiant.com/macos/maxon/products/fuse/mxa-combo-installer/#{version.major}/#{version.minor}/#{version.patch}/0/Maxon-#{version.major_minor_patch}-mac-b#{version.csv.second}.zip",
-      verified: "package-cf.redgiant.com/macos/maxon/products/fuse/mxa-combo-installer/"
+  url "https://mx-app-blob-prod.maxon.net/mx-package-production/installer/macos/maxon/maxonapp/releases/#{version}/Maxon_App_#{version}_Mac.zip"
   name "Maxon App"
   desc "Install, use, and try Maxon products"
   homepage "https://www.maxon.net/en/downloads/"
 
   livecheck do
-    url "https://link.redgiant.com/store/api/v2/package/manifests?platform=macos&org=maxon&type=products&family=fuse"
-    regex(/"filename".+"Maxon[._-]v?(\d+(?:\.\d+)+)-mac-b(\d+)\.zip"/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
-    end
+    url "https://packages.maxon.net/manifests?platform=macos&org=maxon&type=products&family=fuse"
+    regex(/"filename".+"Maxon_App[._-]v?(\d+(?:\.\d+)+)_Mac\.zip"/i)
   end
 
   installer script: {
