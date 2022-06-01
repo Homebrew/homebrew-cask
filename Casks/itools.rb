@@ -7,10 +7,5 @@ cask "itools" do
   name "iTools"
   homepage "https://pro.itools.cn/mac/english"
 
-  livecheck do
-    url "http://dl2.itools.hk/update/iTools64ForMacCast.xml"
-    strategy :sparkle
-  end
-
   app "iTools.app"
 end
