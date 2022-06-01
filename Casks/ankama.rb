@@ -1,5 +1,5 @@
 cask "ankama" do
-  version "3.6.11"
+  version "3.6.12"
   sha256 :no_check
 
   url "https://launcher.cdn.ankama.com/installers/production/Ankama%20Launcher-Setup.dmg"

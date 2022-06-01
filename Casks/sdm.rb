@@ -1,6 +1,6 @@
 cask "sdm" do
-  version "15.53.0,7698C3413FD545D66766F0D1539EA3D0DB985C33"
-  sha256 "9c5816a17bd52a1914fcbaf51b909749330ada852f112f90207db07fa1e87905"
+  version "15.55.0,D9367C6BF85E91DC82F646E1193DC624C8437602"
+  sha256 "C0F6AD1E805CAEA235B9448A599D88BE73A0AD852DA7AD0C3E9DC75FF4358429"
 
   url "https://sdm-releases-production.s3.amazonaws.com/builds/sdm-gui/#{version.csv.first}/darwin/universal/#{version.csv.second}/SDM-#{version.csv.first}.universal.zip",
       verified: "sdm-releases-production.s3.amazonaws.com/builds/sdm-gui/"
@@ -24,6 +24,7 @@ cask "sdm" do
 
   zap trash: [
     "~/.sdm",
+    "/usr/local/bin/sdm",
     "~/Library/Application Support/SDM",
     "~/Library/Caches/com.electron.sdm*",
     "~/Library/Preferences/com.electron.sdm.plist",

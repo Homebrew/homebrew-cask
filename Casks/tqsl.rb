@@ -1,6 +1,6 @@
 cask "tqsl" do
-  version "2.6.2"
-  sha256 "22ade04a194f1afa2247a4211cecf07a74bcd09d7b1249468ff53d2486b92510"
+  version "2.6.3"
+  sha256 "b894493a0884b2d0f6c0f014124538d93c8d1aa605e2be473daa62d336a7e787"
 
   url "https://www.arrl.org/tqsl/tqsl-#{version}.pkg"
   name "Trusted QSL"

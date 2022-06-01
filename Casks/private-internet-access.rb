@@ -20,13 +20,22 @@ cask "private-internet-access" do
     sudo:       true,
   }
 
-  uninstall script: {
+  uninstall quit:      "com.privateinternetaccess.vpn",
+            delete:    [
+              "/Applications/Private Internet Access.app",
+              "/usr/local/bin/piactl",
+            ],
+            launchctl: [
+              "com.privateinternetaccess.vpn.installhelper",
+              "com.privateinternetaccess.vpn.daemon",
+            ]
+
+  # The uninstall script should only be used with --zap because it removes all preference files
+  zap script: {
     executable: "/Applications/Private Internet Access.app/Contents/Resources/vpn-installer.sh",
     args:       ["uninstall"],
     sudo:       true,
-  }
-
-  zap trash: [
+  }, trash: [
     "~/Library/Application Support/com.privateinternetaccess.vpn",
     "~/Library/LaunchAgents/com.privateinternetaccess.vpn",
     "~/Library/LaunchAgents/com.privateinternetaccess.vpn.client.plist",

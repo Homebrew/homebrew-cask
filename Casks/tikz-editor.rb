@@ -4,7 +4,14 @@ cask "tikz-editor" do
 
   url "https://github.com/downloads/fredokun/TikZ-Editor/TikZ%20Editor-#{version}.dmg"
   name "TikZ Editor"
+  desc "Editor for the LaTeX graphic package TikZ"
   homepage "https://github.com/fredokun/TikZ-Editor"
+
+  livecheck do
+    url :homepage
+    regex(/href=.*?TikZ%20Editor[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    strategy :page_match
+  end
 
   app "TikZ Editor.app"
 end

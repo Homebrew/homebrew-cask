@@ -1,12 +1,12 @@
 cask "lens" do
   arch = Hardware::CPU.intel? ? "" : "-arm64"
 
-  version "5.4.6,20220428.1"
+  version "5.5.2,20220530.1"
 
   if Hardware::CPU.intel?
-    sha256 "c995abf6de195ec391492feaa5fbcdf5080d3aa3ef4f83d1f2b7766950516771"
+    sha256 "3df7829ee9038b801780a42b7222cc02ca782f0fad1cdc9ad79bcda12753b177"
   else
-    sha256 "91aecc8da9716eb1e63e813fe3b888b55509ca7854e36bc11036df172beb0047"
+    sha256 "064a7ccdf545908a4b940df9ce230653d0ed2aea68b2064e98f6bfe8f0a54065"
   end
 
   url "https://api.k8slens.dev/binaries/Lens-#{version.csv.first}-latest.#{version.csv.second}#{arch}.dmg"

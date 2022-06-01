@@ -1,15 +1,16 @@
 cask "iina" do
-  version "1.2.0,129"
-  sha256 "91b87e80055f097a1cb7a8c91979deb5303315f2067552cbe7387f48bfc42736"
+  version "1.3.0"
+  sha256 "6e2693e46c3fbc644eac6ed1d4b241e4475508e5d3ee5bbe791320cf84d342d5"
 
-  url "https://dl.iina.io/IINA.v#{version.csv.first}.dmg"
+  url "https://github.com/iina/iina/releases/download/v#{version}/IINA.v#{version}.dmg",
+      verified: "github.com/iina/iina/"
   name "IINA"
   desc "Free and open-source media player"
   homepage "https://iina.io/"
 
   livecheck do
-    url "https://www.iina.io/appcast.xml"
-    strategy :sparkle
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true

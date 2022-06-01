@@ -1,6 +1,6 @@
 cask "josm" do
-  version "18427"
-  sha256 "733dce4f4dd2b6f272f5760188fc71fa7cf7e8ed1c83e5eb2ffb9ce76fc6ff57"
+  version "18463"
+  sha256 "9fb1a551660e017c381b9f5206c3bc1d9d4e6a2516c333ac89444f14162adf51"
 
   url "https://github.com/JOSM/josm/releases/download/#{version}-tested/JOSM-macOS-java17-#{version}.zip",
       verified: "github.com/JOSM/josm/"
