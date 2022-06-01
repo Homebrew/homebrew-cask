@@ -13,7 +13,7 @@ cask "photozoom-pro" do
     regex(%r{PhotoZoom.+Version\s(\d+(?:\.\d+)+).+</td>}i)
   end
 
-  pkg "PhotoZoom Pro #{version} Installer.pkg"
+  pkg "PhotoZoom Pro #{version.major} Installer.pkg"
 
-  uninstall pkgutil: "com.benvista.pkg.PhotoZoom-Pro-#{version}.app"
+  uninstall pkgutil: "com.benvista.pkg.PhotoZoom-Pro-#{version.major}.app"
 end
