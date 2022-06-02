@@ -27,6 +27,7 @@ cask "start" do
   app "START.app"
 
   uninstall quit: "com.tencent.start.mac.Start"
+  
 
   zap trash: [
     "~/Library/Caches/com.tencent.start.mac.Start",
