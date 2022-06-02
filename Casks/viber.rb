@@ -1,5 +1,5 @@
 cask "viber" do
-  version "17.6.0,17615"
+  version "17.7.0,1770"
   sha256 :no_check
 
   url "https://download.viber.com/desktop/mac/Viber.dmg"
