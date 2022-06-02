@@ -17,8 +17,7 @@ cask "start" do
   homepage "https://start.qq.com/"
 
   livecheck do
-    url "https://api.start.qq.com/cfg/get?biztypes=macos-update-info#{livecheck_arch}"
-    regex(%r{.*/START-Installer-([.\d\-]+)\.dmg}i)
+    skip "No version information available"
   end
 
   auto_updates true
