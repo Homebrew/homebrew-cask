@@ -55,6 +55,9 @@ cask "docker" do
     "/usr/local/bin/docker-credential-ecr-login",
     "/usr/local/bin/docker-credential-osxkeychain",
     "/usr/local/bin/docker",
+    "/usr/local/share/zsh/site-functions/_docker"
+    "/usr/local/share/zsh/site-functions/_docker_compose"
+    "/usr/local/share/zsh/site-functions/_docker-compose"
     "/usr/local/bin/hub-tool",
     "/usr/local/bin/hyperkit",
     "/usr/local/bin/kubectl.docker",
