@@ -1,6 +1,5 @@
 cask "start" do
   url_arch = Hardware::CPU.intel? ? "" : "m1/"
-  livecheck_arch = Hardware::CPU.intel? ? "" : "-arm"
 
   if Hardware::CPU.intel?
     version "0.301.9-173"
