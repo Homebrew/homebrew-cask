@@ -58,6 +58,7 @@ cask "docker" do
     "/usr/local/share/zsh/site-functions/_docker",
     "/usr/local/share/zsh/site-functions/_docker_compose",
     "/usr/local/share/zsh/site-functions/_docker-compose",
+    "/usr/local/share/fish/vendor_completions.d/docker.fish",
     "/usr/local/bin/hub-tool",
     "/usr/local/bin/hyperkit",
     "/usr/local/bin/kubectl.docker",
