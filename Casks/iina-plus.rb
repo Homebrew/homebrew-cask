@@ -7,7 +7,7 @@ cask "iina-plus" do
   desc "Extra danmaku support for iina (iina 弹幕支持)"
   homepage "https://github.com/xjbeta/iina-plus"
 
-  auto_updates true`
+  auto_updates true
 
   app "iina+.app"
 
