@@ -11,10 +11,10 @@ cask "tweetbot" do
   livecheck do
     url "https://tapbots.net/tweetbot4/update.plist"
     regex(%r{
-      <key>shortVersion</key>.*\n.*<string>(\d+(?:\.\d+)+)</string>
-      (?:.*\n){3}.*
-      <key>version</key>.*\n.*<integer>(\d+)</integer>
-    }ix)
+      <key>shortVersion</key>.*?<string>(\d+(?:\.\d+)+)</string>
+      .*?
+      <key>version</key>.*?<integer>(\d+)</integer>
+    }imx)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
