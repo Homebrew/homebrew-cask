@@ -9,7 +9,7 @@ cask "electron-cash" do
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?/Electron[._-]Cash[._-]v?(\d+(?:\.\d+)+)[._-]macosx\.dmg}i)
+    regex(/href=.*?Electron[._-]Cash[._-]v?(\d+(?:\.\d+)+)[._-]macosx\.dmg/i)
   end
 
   app "Electron-Cash.app"
