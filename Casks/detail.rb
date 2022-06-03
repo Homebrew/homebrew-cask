@@ -23,7 +23,10 @@ cask "detail" do
     "co.detail.HAL",
     "co.detail.mac",
   ],
-            delete:  "/Library/CoreMediaIO/Plug-Ins/DAL/Detail Camera.plugin"
+            delete:  [
+              "/Library/CoreMediaIO/Plug-Ins/DAL/Detail Camera.plugin",
+              "/Library/Audio/Plug-Ins/HAL/Detail Audio.driver",
+            ]
 
   zap trash: [
     "~/Library/Application Support/co.detail.mac",
@@ -33,6 +36,7 @@ cask "detail" do
     "~/Library/co.detail.library",
     "~/Library/HTTPStorages/co.detail.mac",
     "~/Library/Preferences/co.detail.mac.plist",
+    "~/Library/Saved Application State/co.detail.mac.savedState",
     "~/Library/WebKit/co.detail.mac",
   ],
       rmdir: "~/Documents/Detail"
