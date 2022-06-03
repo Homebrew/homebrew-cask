@@ -10,8 +10,13 @@ cask "tweetbot" do
 
   livecheck do
     url "https://tapbots.net/tweetbot4/update.plist"
-    strategy :extract_plist do |version|
-      "#{version.values.map(&:short_version).compact.first},#{version.values.map(&:version).compact.first}"
+    regex(%r{
+      <key>shortVersion</key>.*\n.*<string>(\d+(?:\.\d+)+)</string>
+      (?:.*\n){3}.*
+      <key>version</key>.*\n.*<integer>(\d+)</integer>
+    }ix)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 
