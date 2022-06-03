@@ -7,7 +7,7 @@ cask "android-messages-desktop" do
   desc "Desktop client for Android Messages"
   homepage "https://github.com/OrangeDrangon/android-messages-desktop"
 
-  app "AndroidMessages.app"
+  app "Android Messages.app"
 
   zap trash: "~/Library/Application Support/android-messages-desktop"
 end
