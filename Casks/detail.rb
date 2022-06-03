@@ -20,6 +20,7 @@ cask "detail" do
 
   uninstall pkgutil: [
     "co.detail.DAL",
+    "co.detail.HAL",
     "co.detail.mac",
   ],
             delete:  "/Library/CoreMediaIO/Plug-Ins/DAL/Detail Camera.plugin"
