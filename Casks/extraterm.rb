@@ -13,7 +13,7 @@ cask "extraterm" do
     strategy :github_latest
   end
 
-  app "extraterm-#{version}-darwin-x64/ExtratermQt.app"
+  app "extratermqt-#{version}-darwin-x64/ExtratermQt.app"
 
   zap trash: [
     "~/Library/Application Support/extraterm",
