@@ -21,7 +21,7 @@ cask "mysql-connector-python" do
 
   depends_on macos: ">= :big_sur"
 
-  pkg "mysql-connector-python-#{version}-#{arch}.pkg"
+  pkg "mysql-connector-python-#{version}-macos12-#{arch}.pkg"
 
   uninstall pkgutil: "com.oracle.mysql.connector.python"
 end
