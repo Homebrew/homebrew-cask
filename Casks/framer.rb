@@ -7,7 +7,7 @@ cask "framer" do
   url "https://updates.framer.com/electron/darwin/#{arch}/Framer.zip"
   name "Framer"
   desc "Tool that helps teams design every part of the product experience"
-  homepage "https://www.framer.com/desktop/"
+  homepage "https://www.framer.com/desktop/downloads/"
 
   livecheck do
     url :url
