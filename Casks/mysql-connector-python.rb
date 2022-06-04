@@ -23,5 +23,10 @@ cask "mysql-connector-python" do
 
   pkg "mysql-connector-python-#{version}-macos12-#{arch}.pkg"
 
-  uninstall pkgutil: "com.oracle.mysql.connector.python"
+  uninstall pkgutil: [
+    "com.mysql.connector-python",
+    "com.mysql.connector-python-py3.8",
+    "com.mysql.connector-python-py3.9",
+    "com.oracle.mysql.connector.python",
+  ]
 end
