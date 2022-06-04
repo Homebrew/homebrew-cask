@@ -1,7 +1,4 @@
-# typed: false
-# frozen_string_literal: true
-
-cask "gama-platform" do
+cask "gama" do
   arch = Hardware::CPU.intel? ? "" : "_M1"
 
   version "1.8.2-RC1"
@@ -12,17 +9,17 @@ cask "gama-platform" do
     sha256 "caa594a482abc148fff5a0235a12b6ddf9809e8851a7acf08057e482c67650c4"
   end
 
-  url "https://github.com/gama-platform/gama/releases/download/#{version}/GAMA_#{version}_MacOS#{arch}.dmg", verified: "github.com"
+  url "https://github.com/gama-platform/gama/releases/download/#{version}/GAMA_#{version}_MacOS#{arch}.dmg",
+      verified: "github.com/gama-platform/gama/"
   name "GAMA Platform"
   desc "IDE for building spatially explicit agent-based simulations"
   homepage "https://gama-platform.org/"
+
+  conflicts_with cask: "gama-jdk"
 
   app "Gama.app"
 
   caveats do
     depends_on_java "17"
   end
-
-  conflicts_with cask: "gama-platform-jdk"
-
 end
