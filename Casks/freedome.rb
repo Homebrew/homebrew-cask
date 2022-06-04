@@ -1,5 +1,5 @@
 cask "freedome" do
-  version "2.43.809.0"
+  version "2.51.154.0"
   sha256 :no_check
 
   url "https://download.sp.f-secure.com/freedome/installer/2/Freedome.pkg"
