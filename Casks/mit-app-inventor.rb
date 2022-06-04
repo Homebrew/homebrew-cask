@@ -6,6 +6,11 @@ cask "mit-app-inventor" do
   name "MIT App Inventor"
   homepage "https://appinventor.mit.edu/explore/ai2/mac"
 
+  livecheck do
+    url :homepage
+    regex(/href=.*?aisetup[._-]mac[._-]v?(\d+(?:\.\d+)+(?:rc\d+)?)/i)
+  end
+
   pkg "MITAppInventorSetup.pkg"
 
   uninstall launchctl: "edu.mit.appinventor.aiStarter",
