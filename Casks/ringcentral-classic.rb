@@ -4,6 +4,7 @@ cask "ringcentral-classic" do
 
   url "https://downloads.ringcentral.com/glip/rc/#{version}/mac/RingCentral%20Classic-#{version}.dmg"
   name "RingCentral Classic"
+  desc "VOIP and message application"
   homepage "https://www.ringcentral.com/apps/rc-classic"
 
   livecheck do
