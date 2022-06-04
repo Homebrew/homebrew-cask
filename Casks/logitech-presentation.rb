@@ -7,6 +7,11 @@ cask "logitech-presentation" do
   name "Logitech Presentation"
   homepage "https://support.logitech.com/en_au/product/spotlight-presentation-remote"
 
+  livecheck do
+    url "https://support.logi.com/api/v2/help_center/en-us/articles.json?label_names=webcontent=productdownload,websoftware=ee425650-8e0b-11e9-8db1-773d1e87aeb4"
+    regex(/href=.*?LogiPresentation[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+  end
+
   auto_updates true
   depends_on macos: ">= :sierra"
 
