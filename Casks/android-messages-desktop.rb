@@ -1,4 +1,4 @@
-cask "android-messages-desktop" do
+cask "orangedrangon-android-messages" do
   version "5.3.4"
   sha256 "691ea0bb054a51f73058c7b65be2146a14f127898d6927198f1ba3cfe0ba280b"
 
@@ -6,6 +6,8 @@ cask "android-messages-desktop" do
   name "Android Messages Desktop"
   desc "Desktop client for Android Messages"
   homepage "https://github.com/OrangeDrangon/android-messages-desktop"
+
+  conflicts_with cask: "android-messages"
 
   app "Android Messages.app"
 
