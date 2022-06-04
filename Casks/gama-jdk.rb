@@ -1,4 +1,4 @@
-cask "gama" do
+cask "gama-jdk" do
   arch = Hardware::CPU.intel? ? "" : "_M1"
 
   version "1.8.2-RC1"
@@ -11,9 +11,11 @@ cask "gama" do
 
   url "https://github.com/gama-platform/gama/releases/download/#{version}/GAMA_#{version}_MacOS#{arch}_with_JDK.dmg",
       verified: "github.com/gama-platform/gama/"
-  name "GAMA Platform"
+  name "GAMA Platform with embedded JDK"
   desc "IDE for building spatially explicit agent-based simulations"
   homepage "https://gama-platform.org/"
+
+  conflicts_with cask: "gama"
 
   app "Gama.app"
 end
