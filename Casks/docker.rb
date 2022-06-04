@@ -57,6 +57,11 @@ cask "docker" do
     "/usr/local/bin/kubectl",
     "/usr/local/bin/notary",
     "/usr/local/bin/vpnkit",
+    "/usr/local/share/zsh/site-functions/_docker",
+    "/usr/local/share/zsh/site-functions/_docker_compose",
+    "/usr/local/share/zsh/site-functions/_docker-compose",
+    "/usr/local/share/fish/vendor_completions.d/docker.fish",
+    "/usr/local/etc/bash_completion.d/docker",
   ],
             launchctl: [
               "com.docker.helper",
