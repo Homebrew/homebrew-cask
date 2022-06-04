@@ -2,7 +2,7 @@ cask "amazon-luna" do
   version "1.6500.5339.0"
   sha256 :no_check
 
-  url "https://amazon.com/luna/download/client/mac"
+  url "https://www.amazon.com/luna/download/client/mac"
   name "Amazon Luna"
   desc "Play your favorite games straight from the cloud"
   homepage "https://www.amazon.com/luna/"
