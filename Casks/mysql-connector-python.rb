@@ -19,10 +19,9 @@ cask "mysql-connector-python" do
     regex(/href=.*?mysql[._-]connector[._-]python[._-]v?(\d+(?:\.\d+)+)[._-]macos12[._-]#{arch}\.dmg/i)
   end
 
-  # despite the "10.15" in the download name, this is compatible with 10.14 and above
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :big_sur"
 
-  pkg "mysql-connector-python-#{version}.pkg"
+  pkg "mysql-connector-python-#{version}-#{arch}.pkg"
 
   uninstall pkgutil: "com.oracle.mysql.connector.python"
 end
