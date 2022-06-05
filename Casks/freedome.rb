@@ -19,6 +19,7 @@ cask "freedome" do
             launchctl: [
               "com.f-secure.freedome.gui",
               "com.f-secure.freedome.uninstall",
+              "com.f-secure.fsvpn-ike-agent.production.macos",
               "com.f-secure.fsvpn-service-helper.production",
               "com.f-secure.fsvpn-service.production",
               "com.f-secure.fsvpn-upstream.production",
