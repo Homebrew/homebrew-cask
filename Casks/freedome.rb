@@ -23,5 +23,6 @@ cask "freedome" do
               "com.f-secure.fsvpn-service-helper.production",
               "com.f-secure.fsvpn-service.production",
               "com.f-secure.fsvpn-upstream.production",
+              "fsvpn-ike-agent.production.macos",
             ]
 end
