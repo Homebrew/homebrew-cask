@@ -14,6 +14,8 @@ cask "maestral" do
   app "Maestral.app"
   binary "#{appdir}/Maestral.app/Contents/MacOS/maestral-cli", target: "maestral"
 
+  uninstall quit: "com.samschott.maestral"
+
   zap trash: [
     "~/Library/Application Support/maestral",
     "~/Library/LaunchAgents/com.samschott.maestral.maestral.plist",
