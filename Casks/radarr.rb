@@ -20,6 +20,10 @@ cask "radarr" do
     strategy :github_latest
   end
 
+  postflight do
+    `codesign --force --deep -s - /Applications/Radarr.app`
+  end
+
   depends_on macos: ">= :high_sierra"
 
   app "Radarr.app"
