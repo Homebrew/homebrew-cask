@@ -33,8 +33,12 @@ cask "docker" do
   ]
 
   app "Docker.app"
+  binary "#{appdir}/Docker.app/Contents/Resources/etc/docker",
+         target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/docker"
   binary "#{appdir}/Docker.app/Contents/Resources/etc/docker-compose.bash-completion",
          target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/docker-compose"
+  binary "#{appdir}/Docker.app/Contents/Resources/etc/_docker",
+         target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_docker"
   binary "#{appdir}/Docker.app/Contents/Resources/etc/docker-compose.zsh-completion",
          target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_docker_compose"
   binary "#{appdir}/Docker.app/Contents/Resources/etc/docker.fish",
@@ -59,9 +63,10 @@ cask "docker" do
     "/usr/local/bin/vpnkit",
     "/usr/local/share/zsh/site-functions/_docker",
     "/usr/local/share/zsh/site-functions/_docker_compose",
-    "/usr/local/share/zsh/site-functions/_docker-compose",
     "/usr/local/share/fish/vendor_completions.d/docker.fish",
+    "/usr/local/share/fish/vendor_completions.d/docker-compose.fish",
     "/usr/local/etc/bash_completion.d/docker",
+    "/usr/local/etc/bash_completion.d/docker-compose",
   ],
             launchctl: [
               "com.docker.helper",
