@@ -13,6 +13,8 @@ cask "firefly" do
     regex(/^desktop[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
+  auto_updates true
+
   app "Firefly.app"
 
   uninstall quit: "org.iota.firefly"
