@@ -13,8 +13,6 @@ cask "ktalk" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :yosemite"
-
   app "Толк.app"
 
   uninstall quit:      "kontur.talk",
