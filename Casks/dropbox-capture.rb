@@ -1,5 +1,5 @@
 cask "dropbox-capture" do
-  version "77.0.8"
+  version "78.0.2"
   sha256 :no_check
 
   url "https://clientupdates.dropboxstatic.com/dbx-releng/dropbox_capture/mac/Dropbox_Capture.dmg",
