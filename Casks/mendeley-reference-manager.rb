@@ -12,8 +12,6 @@ cask "mendeley-reference-manager" do
     strategy :electron_builder
   end
 
-  depends_on macos: ">= :yosemite"
-
   app "Mendeley Reference Manager.app"
 
   zap trash: [
