@@ -12,7 +12,7 @@ cask "duplicate-file-finder" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :sierra"
 
   app "Duplicate File Finder #{version.major}.app"
 
