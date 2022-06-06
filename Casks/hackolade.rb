@@ -13,8 +13,6 @@ cask "hackolade" do
     regex(/Current\sversion:\sv?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :yosemite"
-
   pkg "Hackolade-mac-setup-signed.pkg"
 
   uninstall pkgutil: "com.hackolade.pkg.Hackolade"
