@@ -19,7 +19,7 @@ cask "waterfox" do
     regex(/^G?(\d+(?:\.\d+)+)$/i)
   end
 
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :sierra"
 
   app "Waterfox.app"
 
