@@ -12,8 +12,6 @@ cask "goodsync" do
     regex(/GoodSync\s+for\s+Mac\s+v?\s*(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :yosemite"
-
   app "GoodSync.app"
 
   zap trash: [
