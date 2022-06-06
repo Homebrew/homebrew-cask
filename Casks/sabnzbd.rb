@@ -13,8 +13,6 @@ cask "sabnzbd" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :yosemite"
-
   app "SABnzbd.app"
 
   zap trash: "~/Library/Application Support/SABnzbd"
