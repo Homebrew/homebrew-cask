@@ -9,7 +9,6 @@ cask "coin-wallet" do
   homepage "https://coin.space/"
 
   auto_updates true
-  depends_on macos: ">= :yosemite"
 
   app "Coin Wallet.app"
 
