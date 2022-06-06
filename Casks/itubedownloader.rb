@@ -13,7 +13,5 @@ cask "itubedownloader" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :yosemite"
-
   app "iTubeDownloader.app"
 end
