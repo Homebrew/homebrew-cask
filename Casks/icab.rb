@@ -15,7 +15,7 @@ cask "icab" do
 
   depends_on macos: ">= :high_sierra"
 
-  app "iCab #{version.major_minor}/iCab.app"
+  app "iCab #{version}/iCab.app"
 
   zap trash: [
     "~/Library/Application Support/iCab",
