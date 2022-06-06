@@ -16,7 +16,7 @@ cask "xlplayer" do
     end
   end
 
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :high_sierra"
 
   app "XLPlayer.app"
 

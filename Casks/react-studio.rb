@@ -1,13 +1,25 @@
 cask "react-studio" do
-  version "1.7.35,404"
-  sha256 "f0706819d1c4dfd1c64173a2c4a0d91d3de6c0d93b0428241ad1c07d6fd99906"
+  version "1.8.14,426"
+  sha256 "88e4874ca5f14a6fb442b0aeb371e48d5c8e1ced24099cf5c021771482a44423"
 
   url "https://s3.amazonaws.com/sc.neonto.com/ReactStudio_v#{version.csv.first.no_dots}_build#{version.csv.second}.zip",
       verified: "s3.amazonaws.com/sc.neonto.com/"
-  appcast "https://www.macupdater.net/cgi-bin/extract_text/send_post_request.cgi?url=https://reactstudio.com/api/download/reactstudio",
-          must_contain: version.csv.first.no_dots
   name "ReactStudio"
+  desc "App design environment"
   homepage "https://reactstudio.com/"
+
+  livecheck do
+    url "https://c1.neonto.com/studio/verinfo_reactstudio"
+    strategy :page_match do |page|
+      json_data = JSON.parse(page)
+      next if json_data.blank?
+
+      version = json_data["latestVersionDescription"]
+      build = json_data["latestVersion"].to_i
+
+      "#{version},#{build}"
+    end
+  end
 
   app "React Studio.app"
 
@@ -16,8 +28,7 @@ cask "react-studio" do
     "~/Library/Application Support/React Studio",
     "~/Library/Caches/com.neonto.ReactStudio",
     "~/Library/Cookies/com.neonto.ReactStudio.binarycookies",
-    "~/Library/Preferences/com.neonto.ReactStudio.plist",
-    "~/Library/Preferences/com.neonto.ReactStudio.plist.*",
+    "~/Library/Preferences/com.neonto.ReactStudio.plist*",
     "~/Library/Saved Application State/com.neonto.ReactStudio.savedState",
   ]
 end

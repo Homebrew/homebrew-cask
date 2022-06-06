@@ -4,6 +4,7 @@ cask "nutstore" do
 
   url "https://www.jianguoyun.com/static/exe/installer/NutstoreOSXInstaller.dmg"
   name "Nutstore"
+  desc "Cloud storage service platform"
   homepage "https://www.jianguoyun.com/"
 
   installer manual: "Nutstore Installer.app"

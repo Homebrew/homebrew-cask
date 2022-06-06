@@ -23,7 +23,6 @@ cask "wpsoffice-cn" do
     end
   end
 
-  auto_updates true
   conflicts_with cask: "wpsoffice"
   depends_on macos: ">= :sierra"
 

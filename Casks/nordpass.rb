@@ -14,7 +14,7 @@ cask "nordpass" do
   end
 
   auto_updates true
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :el_capitan"
 
   app "NordPass.app"
 

@@ -13,8 +13,6 @@ cask "knotes" do
     regex(%r{href=.*?/Knotes[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  depends_on macos: ">= :yosemite"
-
   app "Knotes.app"
 
   zap trash: [

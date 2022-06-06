@@ -1,6 +1,6 @@
 cask "detail" do
-  version "2.2.13"
-  sha256 "c3e5b72bc7f80e7f4d95b38062f2557c27c7c913f12b398fae5e43cb9954fdc1"
+  version "3.0.0"
+  sha256 "2a4f0e00b8b8220b4a66b77edd4f2b55cda6c1107f465ab22d15a5124fb45517"
 
   url "https://detail-builds.s3.amazonaws.com/mac/#{version}/Detail.pkg",
       verified: "detail-builds.s3.amazonaws.com/mac/"
@@ -20,9 +20,13 @@ cask "detail" do
 
   uninstall pkgutil: [
     "co.detail.DAL",
+    "co.detail.HAL",
     "co.detail.mac",
   ],
-            delete:  "/Library/CoreMediaIO/Plug-Ins/DAL/Detail Camera.plugin"
+            delete:  [
+              "/Library/CoreMediaIO/Plug-Ins/DAL/Detail Camera.plugin",
+              "/Library/Audio/Plug-Ins/HAL/Detail Audio.driver",
+            ]
 
   zap trash: [
     "~/Library/Application Support/co.detail.mac",
@@ -32,6 +36,7 @@ cask "detail" do
     "~/Library/co.detail.library",
     "~/Library/HTTPStorages/co.detail.mac",
     "~/Library/Preferences/co.detail.mac.plist",
+    "~/Library/Saved Application State/co.detail.mac.savedState",
     "~/Library/WebKit/co.detail.mac",
   ],
       rmdir: "~/Documents/Detail"

@@ -1,9 +1,8 @@
 cask "sdm" do
-  version "15.53.0,7698C3413FD545D66766F0D1539EA3D0DB985C33"
-  sha256 "9c5816a17bd52a1914fcbaf51b909749330ada852f112f90207db07fa1e87905"
+  version "15.56.0,4DF801E88B49CC9016DC0A278C53CB30BBB2B060"
+  sha256 "dc436d7df37aee616c084988cbfa591ed8818af7e570879582a3e869cba04806"
 
-  url "https://sdm-releases-production.s3.amazonaws.com/builds/sdm-gui/#{version.csv.first}/darwin/universal/#{version.csv.second}/SDM-#{version.csv.first}.universal.zip",
-      verified: "sdm-releases-production.s3.amazonaws.com/builds/sdm-gui/"
+  url "https://downloads.strongdm.com/builds/sdm-gui/#{version.csv.first}/darwin/universal/#{version.csv.second}/SDM-#{version.csv.first}.universal.zip"
   name "sdm"
   desc "Strongdm client"
   homepage "https://www.strongdm.com/"
@@ -24,6 +23,7 @@ cask "sdm" do
 
   zap trash: [
     "~/.sdm",
+    "/usr/local/bin/sdm",
     "~/Library/Application Support/SDM",
     "~/Library/Caches/com.electron.sdm*",
     "~/Library/Preferences/com.electron.sdm.plist",

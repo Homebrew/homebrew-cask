@@ -13,7 +13,6 @@ cask "bootstrap-studio" do
   end
 
   auto_updates true
-  depends_on macos: ">= :yosemite"
 
   app "Bootstrap Studio.app"
 

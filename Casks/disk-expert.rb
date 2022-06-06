@@ -12,8 +12,6 @@ cask "disk-expert" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :yosemite"
-
   app "Disk Expert #{version.major}.app"
 
   zap trash: [

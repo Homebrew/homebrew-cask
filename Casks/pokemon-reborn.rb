@@ -1,15 +1,16 @@
 cask "pokemon-reborn" do
-  version "18.4.1"
-  sha256 "050321012415d213ce8f140710b6f21cb2c4f226603b6cb430e885660cc5feec"
+  version "19.12"
+  sha256 :no_check # required as upstream package is updated in-place
 
-  url "https://www.rebornevo.com/downloads/Reborn#{version}%204%20Fruits.zip"
+  url "https://www.rebornevo.com/downloads/Reborn#{version.major}-Mac.zip"
   name "Pokemon Reborn"
+  desc "Third-party Pokemon game"
   homepage "https://www.rebornevo.com/"
 
   livecheck do
     url "https://www.rebornevo.com/pr/download/"
-    regex(%r{href=.*?/Reborn(\d+(?:\.\d+)*)%204%20Fruits\.zip}i)
+    regex(/Updated to v?(\d+(?:\.\d+)+)["< ]/i)
   end
 
-  app "Pokemon Reborn.app"
+  app "Pokemon Reborn/Pokémon Reborn.app"
 end

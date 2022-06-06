@@ -25,8 +25,6 @@ cask "ipsecuritas" do
     regex(%r{href=.*?/ipSecuritas[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  depends_on macos: ">= :yosemite"
-
   app "IPSecuritas.app"
 
   zap trash: [

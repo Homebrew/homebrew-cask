@@ -8,16 +8,6 @@ cask "sketchbook" do
   desc "Draw, paint, & sketch application"
   homepage "https://www.sketchbook.com/"
 
-  livecheck do
-    url "https://www.autodesk.com/products/sketchbook/free-download"
-    strategy :page_match do |page|
-      match = page.match(%r{sketchbook_(\d+)/sketchbook_v?(\d+(?:\.\d+)*)_mac\.dmg}i)
-      next if match.blank?
-
-      "#{match[2]},#{match[1]}"
-    end
-  end
-
   pkg "SketchBook_v#{version.csv.first}_mac.pkg"
 
   uninstall quit:    "com.autodesk.SketchBook",
@@ -28,4 +18,12 @@ cask "sketchbook" do
     "~/Library/Preferences/com.autodesk.SketchBook.plist",
     "~/Library/Application Support/Autodesk/SketchBook",
   ]
+
+  caveats do
+    discontinued
+
+    <<~EOS
+      Sketchbook is now handled by Sketchbook, Inc. and Autodesk no longer provides downloads. The app appears to only be available through app stores at this point (see https://www.sketchbook.com/apps).
+    EOS
+  end
 end

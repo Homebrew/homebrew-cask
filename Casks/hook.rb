@@ -1,6 +1,6 @@
 cask "hook" do
-  version "3.5,2022.04"
-  sha256 "c82bbc8f3b285ce986a6c56a62af2f12cbcbb1381a3c1204747595652375bffd"
+  version "3.6,2022.06"
+  sha256 "7474b46d1aa6c33b47ce416a47b73685c06a81854c3823c532d59b3a52eb8200"
 
   url "https://hookproductivity.com/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/Hook-productivity-app-#{version.csv.first}.dmg_.zip",
       user_agent: :fake

@@ -45,7 +45,6 @@ cask "openzfs" do
   end
 
   conflicts_with cask: "openzfs-dev"
-  depends_on macos: ">= :yosemite"
 
   postflight do
     set_ownership "/usr/local/zfs"

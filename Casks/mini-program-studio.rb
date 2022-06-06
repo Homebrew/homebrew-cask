@@ -1,8 +1,15 @@
 cask "mini-program-studio" do
-  version "2.7.2,1073c5f0-0f2c-43f1-b3cb-6b701612b514"
-  sha256 "148a47881366a129971cd55e0abbae1900b900579aa04544efecf8e47957477c"
+  arch = Hardware::CPU.intel? ? "-x64" : "-arm64-arm64"
 
-  url "https://gw.alipayobjects.com/os/volans-demo/#{version.csv.second}/MiniProgramStudio-#{version.csv.first}.dmg",
+  if Hardware::CPU.intel?
+    version "2.9.1,64838471-01a5-4d01-8895-b82f93a8ea6d"
+    sha256 "cc43729681adcf233981ac4d36e3e5eb50eb75f2d9eaccec1658da2de4f95891"
+  else
+    version "2.9.1,db0a5e6d-b8df-4a9f-b17e-8c8222b5f8b7"
+    sha256 "3326024c093f66c15ebd32f70e0d226ae9215ddc68538d399549216faa6bb92f"
+  end
+
+  url "https://gw.alipayobjects.com/os/volans-demo/#{version.csv.second}/MiniProgramStudio-#{version.csv.first}#{arch}.dmg",
       verified: "gw.alipayobjects.com/"
   name "Mini Program Studio"
   name "小程序开发者工具"
@@ -20,7 +27,8 @@ cask "mini-program-studio" do
       next if major_minor.blank?
 
       # Get major_minor_patch of latest stable release
-      dynamic_regex = %r{href=.*?/([a-z\d-]+)/MiniProgramStudio[._-]v?(#{major_minor}\.(?:\d+(?:\.\d+)*))\.dmg}i
+      # https://gw.alipayobjects.com/os/volans-demo/64838471-01a5-4d01-8895-b82f93a8ea6d/MiniProgramStudio-2.9.1-x64.dmg
+      dynamic_regex = %r{href.*?/([a-z\d-]+)/MiniProgramStudio[._-]v?(#{major_minor}\.(?:\d+(?:\.\d+)*))#{arch}\.dmg}i
       page.scan(dynamic_regex).map do |match|
         (match[0] && match[1]) ? "#{match[1]},#{match[0]}" : ""
       end

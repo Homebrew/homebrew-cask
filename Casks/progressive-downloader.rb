@@ -12,8 +12,6 @@ cask "progressive-downloader" do
     regex(%r{href=.*?/(\d+(?:\.\d+)+)/PSD\.dmg}i)
   end
 
-  depends_on macos: ">= :yosemite"
-
   app "Progressive Downloader.app"
 
   zap trash: [

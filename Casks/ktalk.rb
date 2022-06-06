@@ -13,14 +13,16 @@ cask "ktalk" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :yosemite"
-
   app "Толк.app"
 
-  uninstall quit: "kontur.talk"
+  uninstall quit:      "kontur.talk",
+            launchctl: "kontur.talk"
 
   zap trash: [
     "~/Library/Application Support/ktalk",
+    "~/Library/LaunchAgents/Толк.plist",
     "~/Library/Logs/ktalk",
+    "~/Library/Preferences/kontur.talk.plist",
+    "~/Library/Saved Application State/kontur.talk.savedState",
   ]
 end

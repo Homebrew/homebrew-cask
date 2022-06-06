@@ -4,11 +4,14 @@ cask "stand" do
 
   url "https://f001.backblazeb2.com/file/stand-app/#{version}/Stand.zip",
       verified: "f001.backblazeb2.com/file/stand-app/"
-  appcast "https://getstandapp.com/",
-          must_contain: version.major_minor
   name "Stand"
   desc "Reminds you to stand up once an hour"
   homepage "https://getstandapp.com/"
+
+  livecheck do
+    url "https://determined-darwin-06bd0d.netlify.app/feed.xml"
+    strategy :sparkle, &:short_version
+  end
 
   depends_on macos: ">= :catalina"
 

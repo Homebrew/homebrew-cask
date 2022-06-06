@@ -1,6 +1,6 @@
 cask "gnucash" do
-  version "4.10-3"
-  sha256 "398f761690854ae54c7741c23e9ec4f0cf72bb1021c918e7c6b36786cbadb4d6"
+  version "4.10-4"
+  sha256 "b357f0520e7137f6bb1a257898039599640ec5d69c97281ba6106e780331b10d"
 
   url "https://github.com/Gnucash/gnucash/releases/download/#{version.hyphens_to_dots.major_minor}/Gnucash-Intel-#{version}.dmg",
       verified: "github.com/Gnucash/gnucash/"

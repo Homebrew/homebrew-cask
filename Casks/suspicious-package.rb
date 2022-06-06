@@ -33,8 +33,6 @@ cask "suspicious-package" do
     end
   end
 
-  depends_on macos: ">= :yosemite"
-
   app "Suspicious Package.app"
   binary "#{appdir}/Suspicious Package.app/Contents/SharedSupport/spkg"
 

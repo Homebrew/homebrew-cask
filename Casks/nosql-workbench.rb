@@ -1,6 +1,6 @@
 cask "nosql-workbench" do
-  version "3.2.2"
-  sha256 "7c266b429e4a0ddd026d4e7cdb7305320442deb959bcb1adbce833e293d8d5a1"
+  version "3.3.0"
+  sha256 "9febf815d5f80120c2d4a27bd9f78de69e609b405d51eb0d3bff04708c0eadae"
 
   url "https://s3.amazonaws.com/nosql-workbench/NoSQL%20Workbench-mac-#{version}.dmg",
       verified: "s3.amazonaws.com/nosql-workbench/"

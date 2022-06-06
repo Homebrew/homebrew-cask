@@ -12,8 +12,6 @@ cask "taskade" do
     regex(%r{href=.*?/Taskade[._-]v?(\d+(?:\.\d+)+)[._-]universal\.dmg}i)
   end
 
-  depends_on macos: ">= :yosemite"
-
   app "Taskade.app"
 
   zap trash: [

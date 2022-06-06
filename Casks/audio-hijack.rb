@@ -8,8 +8,8 @@ cask "audio-hijack" do
   homepage "https://www.rogueamoeba.com/audiohijack/"
 
   livecheck do
-    url "https://www.rogueamoeba.com/audiohijack/releasenotes.php"
-    regex(/ra-version="(\d+(?:\.\d+)+)"/i)
+    url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=1231&bundleid=com.rogueamoeba.audiohijack&platform=osx&version=#{version.no_dots}8000"
+    strategy :sparkle
   end
 
   auto_updates true

@@ -1,6 +1,6 @@
 cask "sigil" do
-  version "1.9.2"
-  sha256 "45905292f0b055581f63f75fc6c1d5f6ac85070b131f674cd5b75cf64c1c1462"
+  version "1.9.10"
+  sha256 "43674bb4325f1ef879b156bd4475096f8d42f14f66d3c14f23bc4f86804acdad"
 
   url "https://github.com/Sigil-Ebook/Sigil/releases/download/#{version}/Sigil.app-#{version}-Mac.txz",
       verified: "github.com/Sigil-Ebook/Sigil/"

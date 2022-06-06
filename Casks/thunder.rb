@@ -15,7 +15,7 @@ cask "thunder" do
   end
 
   auto_updates true
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :high_sierra"
 
   app "Thunder.app"
 

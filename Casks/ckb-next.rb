@@ -16,4 +16,8 @@ cask "ckb-next" do
     "org.ckb-next.daemon",
   ],
             launchctl: "org.ckb-next.daemon"
+
+  caveats do
+    discontinued
+  end
 end
