@@ -15,6 +15,11 @@ cask "gama" do
   desc "IDE for building spatially explicit agent-based simulations"
   homepage "https://gama-platform.org/"
 
+  livecheck do
+    url "https://gama-platform.org/download"
+    regex(/GAMA[._-]v?(\d+(?:.\d+)*(?:[._-]RC\d+))[._-]MacOS#{arch}[._-]with[._-]JDK\.dmg/i)
+  end
+
   conflicts_with cask: "gama-jdk"
 
   app "Gama.app"
