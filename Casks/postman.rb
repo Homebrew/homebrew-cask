@@ -1,7 +1,7 @@
 cask "postman" do
   arch = Hardware::CPU.intel? ? "osx_64" : "osx_arm64"
 
-  version "9.19.3"
+  version "9.20.3"
   sha256 :no_check
 
   url "https://dl.pstmn.io/download/latest/#{arch}",
