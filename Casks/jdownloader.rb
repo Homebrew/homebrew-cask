@@ -1,5 +1,5 @@
 cask "jdownloader" do
-  version "46144"
+  version "46157"
   sha256 :no_check
 
   url "http://installer.jdownloader.org/clean/JD2Setup.dmg",
