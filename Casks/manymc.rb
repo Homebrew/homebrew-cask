@@ -1,6 +1,6 @@
 cask "manymc" do
-  version "0.1.0"
-  sha256 "7426ab9bbc6a24dc5bb991d6bc5a982bdc56b229be52fe4423d64b5140b3ce84"
+  version "0.1.1"
+  sha256 "b109bb36c4b01c72d709e813720d43301b1eb3c012e755e3c9b04526381e61d3"
 
   url "https://github.com/MinecraftMachina/ManyMC/releases/download/v#{version}/ManyMC.zip"
   name "ManyMC"
@@ -14,7 +14,11 @@ cask "manymc" do
 
   zap trash: [
     "~/Library/Application Support/ManyMC",
+    "~/Library/Preferences/org.manymc.ManyMC.plist",
     "~/Library/Preferences/org.multimc.ManyMC.plist",
+    "~/Library/Preferences/org.polymc.ManyMC.plist",
+    "~/Library/Saved Application State/org.manymc.ManyMC.savedState",
     "~/Library/Saved Application State/org.multimc.ManyMC.savedState",
+    "~/Library/Saved Application State/org.polymc.ManyMC.savedState",
   ]
 end
