@@ -15,9 +15,18 @@ cask "start" do
   desc "Tencent cloud gaming platform"
   homepage "https://start.qq.com/"
 
-  livecheck do
-    url :homepage
-    regex(%r{.*installer/#{arch}START-Installer[._-]v?(\d+(?:[.-]\d+)+)\.dmg}i)
+  # Upstream is replacing the intel version of the app on the homepage with javascript after page load.
+  # The arm64 version is not being replaced - so a split livecheck is required.
+  if Hardware::CPU.intel?
+    livecheck do
+      url "https://api.start.qq.com/cfg/get?biztypes=macos-update-info"
+      regex(%r{.*/START-Installer[._-]v?(\d+(?:[.-]\d+)+)\.dmg}i)
+    end
+  else
+    livecheck do
+      url :homepage
+      regex(%r{.*installer/#{arch}START-Installer[._-]v?(\d+(?:[.-]\d+)+)\.dmg}i)
+    end
   end
 
   auto_updates true
