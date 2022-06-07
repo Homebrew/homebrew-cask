@@ -15,6 +15,10 @@ cask "gama-jdk" do
   desc "IDE for building spatially explicit agent-based simulations"
   homepage "https://gama-platform.org/"
 
+  livecheck do
+    cask "gama"
+  end
+
   conflicts_with cask: "gama"
 
   app "Gama.app"
