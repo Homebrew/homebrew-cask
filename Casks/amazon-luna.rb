@@ -1,5 +1,5 @@
 cask "amazon-luna" do
-  version "1.6500.5339.0"
+  version "1.6600.5374.0"
   sha256 :no_check
 
   url "https://www.amazon.com/luna/download/client/mac"
