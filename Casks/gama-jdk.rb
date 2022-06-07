@@ -16,7 +16,8 @@ cask "gama-jdk" do
   homepage "https://gama-platform.org/"
 
   livecheck do
-    cask "gama"
+    url "https://gama-platform.org/download"
+    regex(/GAMA[._-]v?(\d+(?:.\d+)*(?:[._-]RC\d+))[._-]MacOS#{arch}[._-]with[._-]JDK\.dmg/i)
   end
 
   conflicts_with cask: "gama"
