@@ -14,7 +14,14 @@ cask "manymc" do
 
   zap trash: [
     "~/Library/Application Support/ManyMC",
+    # <= v0.0.9
     "~/Library/Preferences/org.multimc.ManyMC.plist",
     "~/Library/Saved Application State/org.multimc.ManyMC.savedState",
+    # == v0.1.0
+    "~/Library/Preferences/org.polymc.ManyMC.plist",
+    "~/Library/Saved Application State/org.polymc.ManyMC.savedState",
+    # >= v0.1.1
+    "~/Library/Preferences/org.manymc.ManyMC.plist",
+    "~/Library/Saved Application State/org.manymc.ManyMC.savedState",
   ]
 end
