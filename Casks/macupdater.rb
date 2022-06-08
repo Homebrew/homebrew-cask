@@ -1,5 +1,5 @@
 cask "macupdater" do
-  version "2.2.1,13495"
+  version "2.2.1,13510"
   sha256 :no_check
 
   url "https://www.corecode.io/downloads/macupdater_latest.dmg"
