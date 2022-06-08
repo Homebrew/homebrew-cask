@@ -4,6 +4,7 @@ cask "komet" do
 
   url "https://zgcoder.net/software/komet/Komet_#{version.csv.first}_#{version.csv.second}.tar.xz"
   name "Komet"
+  desc "Commit message editor"
   homepage "https://zgcoder.net/#komet"
 
   livecheck do
