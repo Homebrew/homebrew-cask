@@ -11,7 +11,7 @@ cask "bitwarden" do
   livecheck do
     url :url
     strategy :github_latest
-    regex(%r{href=.*?/tag/desktop-v?(\d+(?:\.\d+)+)["' >]}i)
+    regex(/href=.*?Bitwarden[._-]v?(\d+(?:\.\d+)+)-universal\.dmg/i)
   end
 
   auto_updates true
