@@ -1,5 +1,6 @@
 cask "wechatwebdevtools" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
+
   version "1.06.2206020"
 
   if Hardware::CPU.intel?
