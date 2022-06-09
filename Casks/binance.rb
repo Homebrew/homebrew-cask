@@ -5,7 +5,7 @@ cask "binance" do
   url "https://ftp.binance.com/electron-desktop/mac/production/binance-#{version}.dmg"
   name "Binance"
   desc "Cryptocurrency exchange"
-  homepage "http://binance.com/"
+  homepage "https://binance.com/"
 
   livecheck do
     url "https://ftp.binance.com/electron-desktop/mac/production/latest-mac.yml"
