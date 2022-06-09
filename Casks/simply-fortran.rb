@@ -9,7 +9,7 @@ cask "simply-fortran" do
     version "3.25.3754"
     sha256 "eefcde488f42eaed99dd64215b7ec05bb2daf6c824418cede10c63a74128a220"
   elsif Hardware::CPU.intel?
-    version "3.24.3734"
+    version "3.25.3754"
     sha256 "b4913da2ef5ff4c962f29ed897c9afcb1cbcad7dee0647683227ada899b965a2"
   else
     version "3.25.3754"
