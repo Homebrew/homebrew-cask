@@ -1,6 +1,6 @@
 cask "blink1control" do
-  version "2.2.5"
-  sha256 "2d0a2f71c2d5ebe74cb0c07ea5941b31211d9187c4025eb129130047d85a8969"
+  version "2.2.7"
+  sha256 "525b958ddf0de299296a58bce9493649586a82da687511b6d9d4ac222927a2f5"
 
   url "https://github.com/todbot/Blink1Control2/releases/download/v#{version}/Blink1Control#{version.major}-#{version}-mac-x64.dmg",
       verified: "github.com/todbot/Blink1Control2/"
