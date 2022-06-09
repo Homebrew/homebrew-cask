@@ -1,11 +1,11 @@
 cask "binance" do
-  version "1.35.0"
-  sha256 "54f96812be05a9936e3f1aa4846f68346f23f8151940877aa97ee9031ff94f92"
+  version "1.36.0"
+  sha256 "125ea44910724ea396f6cc5438119cb35d1353bea0fd59b4342df611a31146cf"
 
   url "https://ftp.binance.com/electron-desktop/mac/production/binance-#{version}.dmg"
   name "Binance"
   desc "Cryptocurrency exchange"
-  homepage "http://binance.com/"
+  homepage "https://binance.com/"
 
   livecheck do
     url "https://ftp.binance.com/electron-desktop/mac/production/latest-mac.yml"
