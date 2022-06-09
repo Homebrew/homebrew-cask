@@ -1,5 +1,5 @@
 cask "sofa-server" do
-  version "1.3.4,2020.0327.100116"
+  version "1.5,2022.0518.153152"
   sha256 :no_check
 
   url "https://flavio.tordini.org/files/sofa/sofa-server.dmg"
