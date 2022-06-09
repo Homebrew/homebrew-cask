@@ -6,14 +6,14 @@ cask "simply-fortran" do
   end
 
   if MacOS.version <= :big_sur
-    version "3.24.3735"
+    version "3.25.3754"
     sha256 "1b854b1bf5d982d43385cea735b0112ffa17f900e2ed8e42da1c01a9df5ca804"
   elsif Hardware::CPU.intel?
     version "3.24.3734"
     sha256 "b4913da2ef5ff4c962f29ed897c9afcb1cbcad7dee0647683227ada899b965a2"
   else
-    version "3.24.3735"
-    sha256 "c548c5911b5e23699bcfee2756da5d8680f8654a4833437542524e6cc2eb992a"
+    version "3.25.3754"
+    sha256 "d0d6a723ac2d18a4a5878594b58028c6c45711d837a6e02152bb7d9c85adefa2"
   end
 
   url "https://download.simplyfortran.com/#{version.major_minor}/macos/simplyfortran-#{version}#{url_string}.dmg"
