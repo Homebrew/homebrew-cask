@@ -1,5 +1,5 @@
 cask "superduper" do
-  version "3.6.1,124"
+  version "3.6.2,125"
   sha256 :no_check
 
   url "https://shirtpocket.s3.amazonaws.com/SuperDuper/SuperDuper!.dmg",
