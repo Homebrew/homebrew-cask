@@ -11,7 +11,7 @@ cask "sonixd" do
 
   url "https://github.com/jeffvli/sonixd/releases/download/v#{version}/Sonixd-#{version}-mac-#{arch}.dmg"
   name "Sonixd"
-  desc "Desktop client for Subsonic-API and Jellyfin 0.8.0+ compatible music servers"
+  desc "Desktop client for Subsonic-API and Jellyfin music servers"
   homepage "https://github.com/jeffvli/sonixd"
 
   livecheck do
