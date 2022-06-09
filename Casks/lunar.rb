@@ -1,6 +1,6 @@
 cask "lunar" do
-  version "5.6.6"
-  sha256 "c77f2ec0d1d7e41631e8c0a2477f2f803eaf71d2c69cd78c400297df0c7b1529"
+  version "5.6.7"
+  sha256 "71a0976f653906af51b242e6ae43d2a73240b16cd91a4ba25e3c7080f3cae8b2"
 
   url "https://static.lunar.fyi/releases/Lunar-#{version}.dmg"
   name "Lunar"
