@@ -8,8 +8,8 @@ cask "touch-portal" do
   homepage "https://www.touch-portal.com/"
 
   livecheck do
-    url :homepage
-    regex(/\.dmg.*\n.*<br><span .*>v?(\d+(?:\.\d+)*)/i)
+    url :url
+    strategy :extract_plist
   end
 
   app "TouchPortal.app"
