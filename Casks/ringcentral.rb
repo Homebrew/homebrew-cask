@@ -2,7 +2,7 @@ cask "ringcentral" do
   version "22.2.20"
   sha256 :no_check
 
-  url "https://app.ringcentral.com/downloads/RingCentral.pkg"
+  url "https://app.ringcentral.com/download/RingCentral.pkg"
   name "RingCentral"
   desc "Team messaging, video meetings, and a business phone"
   homepage "https://www.ringcentral.com/download.html"
