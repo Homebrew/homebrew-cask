@@ -1,5 +1,5 @@
 cask "whatroute" do
-  version "2.5.2,11785"
+  version "2.5.2,11795"
   sha256 "4c7918d3e08c5e216f9fae2ee4dfebc8445f1191638bdbcb5154e1087fd2f529"
 
   url "https://downloads.whatroute.net/software/whatroute-#{version.csv.first}.zip"
