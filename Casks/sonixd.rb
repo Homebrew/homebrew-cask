@@ -1,6 +1,3 @@
-# typed: false
-# frozen_string_literal: true
-
 cask "sonixd" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
