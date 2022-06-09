@@ -1,6 +1,6 @@
 cask "ktalk" do
-  version "2022.2.3"
-  sha256 "18d13adff23d2019ef89af55e2419a7a3fd7e2d430f505495bd3e9c4e06020f5"
+  version "2022.3.1"
+  sha256 "d9bb5e299167025e8a3774942bd29f78b5a086f9e496a2d52ce83ebc10cf7f57"
 
   url "https://st.skbkontur.ru/content/talk-app/ktalk.#{version}-mac.dmg",
       verified: "st.skbkontur.ru/"
