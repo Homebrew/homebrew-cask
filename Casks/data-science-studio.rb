@@ -1,6 +1,6 @@
 cask "data-science-studio" do
-  version "1.3.3"
-  sha256 "0bb3a571c618fa15d7d40f981910d8e33839400d2b495450ace4c2743034b67d"
+  version "1.3.4"
+  sha256 "d1f96bedfd8b73d30bd1508ca7d4b0c4ea6936abdef2523563b8119b00cc58cc"
 
   url "https://cdn.downloads.dataiku.com/public/launcher/macos/DataScienceStudio-#{version}-mac.zip"
   name "Dataiku Data Science Studio"
