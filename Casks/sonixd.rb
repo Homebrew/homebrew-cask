@@ -14,13 +14,6 @@ cask "sonixd" do
   desc "Desktop client for Subsonic-API and Jellyfin music servers"
   homepage "https://github.com/jeffvli/sonixd"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
-  auto_updates false
-
   app "Sonixd.app"
 
   zap trash: [
