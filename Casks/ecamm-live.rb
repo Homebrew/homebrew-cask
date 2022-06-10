@@ -8,4 +8,21 @@ cask "ecamm-live" do
   homepage "https://www.ecamm.com/"
 
   app "Ecamm Live v#{version}/Ecamm Live.app"
+
+  uninstall delete: [
+    "/Library/Application Support/EcammLive/EcammLiveAudioXPCHelper.xpc",
+    "/Library/LaunchDaemons/com.ecamm.EcammAudioXPCHelper.plist",
+  ],
+            rmdir:  [
+              "/Library/Application Support/EcammLive",
+            ]
+
+  zap trash: [
+    "~/Library/Application Support/com.ecamm.EcammLive",
+    "~/Library/Application Support/EcammLive",
+    "~/Library/HTTPStorages/com.ecamm.EcammLive",
+    "~/Library/HTTPStorages/com.ecamm.EcammLive.binarycookies",
+    "~/Library/Preferences/com.ecamm.EcammLive.plist",
+    "~/Library/WebKit/com.ecamm.EcammLive",
+  ]
 end
