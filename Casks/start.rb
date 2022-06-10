@@ -2,11 +2,11 @@ cask "start" do
   arch = Hardware::CPU.intel? ? "" : "m1/"
 
   if Hardware::CPU.intel?
-    version "0.301.16-180"
-    sha256 "e0ac956a3f069a89860a3d061b04ad751cb6b00975656498eaaa69cd334aed82"
+    version "0.301.17-181"
+    sha256 "f452bbd83a4ebbf5ce1bdd4d9e31312183852ebc1d431edd685ad515d812278e"
   else
-    version "0.301.16-64"
-    sha256 "dd5cf416e0de17be02cd9ade221be5196adb43d2fec650d6a3f8ce843b7b2fa4"
+    version "0.301.17-65"
+    sha256 "2a8659b5407e090d61d755da66e6cc3549e47b720b544bdddd4c1dea193cc772"
   end
 
   url "https://imgcdn.start.qq.com/cdn/mac.client/installer/#{arch}START-Installer-#{version}.dmg"
