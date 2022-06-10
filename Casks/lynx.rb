@@ -2,8 +2,7 @@ cask "lynx" do
   version "7.6.6.0"
   sha256 :no_check
 
-  url "https://downloads.lynxcloud.app/lynx-whiteboard/releases/macx/lynx-whiteboard.pkg",
-      verified: "downloads.lynxcloud.app/lynx-whiteboard/releases/macx/"
+  url "https://downloads.lynxcloud.app/lynx-whiteboard/releases/macx/lynx-whiteboard.pkg"
   name "LYNX Whiteboard by Clevertouch"
   desc "Cross platform presentation and productivity app"
   homepage "https://www.lynxcloud.app/"
