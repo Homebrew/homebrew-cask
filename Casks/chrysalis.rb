@@ -1,6 +1,6 @@
 cask "chrysalis" do
-  version "0.10.1"
-  sha256 "3e33f7a0548ce003a0079f22e504b7da52e7f767c12dd6158f17675ad1199bd5"
+  version "0.10.2"
+  sha256 "37cdfc76d1e380b2e35e3bd4c98b6b682cc09a213d888539eca4771cd09aca0a"
 
   url "https://github.com/keyboardio/Chrysalis/releases/download/v#{version}/Chrysalis-#{version}.dmg"
   name "Chrysalis"
