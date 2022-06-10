@@ -1,6 +1,6 @@
 cask "hackolade" do
-  version "6.0.8"
-  sha256 "a67a06113624b0ca94e789ac49d371b5c1b59ed24c5ab711d1a2bd0da510b481"
+  version "6.1.2"
+  sha256 "693d5269ab043ad72f01fd3859db8a47f5c4174a075f9e4af8504e52c48b8b22"
 
   url "https://s3-eu-west-1.amazonaws.com/hackolade/previous/v#{version}/Hackolade-mac-setup-signed.pkg",
       verified: "s3-eu-west-1.amazonaws.com/hackolade/"
@@ -12,8 +12,6 @@ cask "hackolade" do
     url "https://hackolade.com/download.html"
     regex(/Current\sversion:\sv?(\d+(?:\.\d+)+)/i)
   end
-
-  depends_on macos: ">= :yosemite"
 
   pkg "Hackolade-mac-setup-signed.pkg"
 

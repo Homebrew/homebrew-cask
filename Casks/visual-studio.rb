@@ -1,23 +1,26 @@
 cask "visual-studio" do
-  version "8.10.23.7"
-  sha256 "ed2d530d9ea56019beeb119f7ae75bee0dff4270a0e4528829d89a1bcad94cd2"
+  version "17.0.1.5"
+  sha256 "859d5813f3246b76142382daee8cda9de9ad51a6adfd8f3186b7875f44f6d5e9"
 
-  url "https://dl.xamarin.com/VsMac/VisualStudioForMac-#{version}.dmg",
-      verified: "dl.xamarin.com/VsMac/"
+  url "https://download.visualstudio.microsoft.com/download/pr/cab47504-5097-4fdf-8ed7-5fdb093bf822/e54984b39bdecaf75637240a84802183/visualstudioformacinstaller-#{version}.dmg"
   name "Microsoft Visual Studio"
   desc "Integrated development environment"
-  homepage "https://www.visualstudio.com/vs/visual-studio-mac/"
+  homepage "https://visualstudio.microsoft.com/vs/mac/"
 
   livecheck do
-    url "https://docs.microsoft.com/en-us/visualstudio/releasenotes/vs2019-mac-relnotes"
-    regex(/Visual\s*Studio\s*\d+\s+for\s+Mac\s+version\s+\d+(?:\.\d+)*\s+\((\d+(?:\.\d+)+)\)/i)
+    url "https://aka.ms/vs/mac/download"
+    strategy :header_match do |headers|
+      headers["location"][%r{/visualstudioformacinstaller-(\d+(?:\.\d+)+).dmg}i, 1]
+    end
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
   depends_on cask: "homebrew/cask-versions/mono-mdk-for-visual-studio"
 
-  app "Visual Studio.app"
+  installer manual: "Install Visual Studio for Mac.app"
+
+  uninstall delete: "/Applications/Visual Studio.app"
 
   zap trash: [
     "/Applications/Xamarin Profiler.app",
@@ -25,10 +28,17 @@ cask "visual-studio" do
     "~/Library/Application Support/CrashReporter/VisualStudio*",
     "~/Library/Application Support/VisualStudio",
     "~/Library/Caches/VisualStudio",
+    "~/Library/Caches/VisualStudioInstaller",
+    "~/Library/Caches/XamarinInstaller",
     "~/Library/Developer/Xamarin",
     "~/Library/Logs/VisualStudio",
+    "~/Library/Logs/VisualStudioInstaller",
+    "~/Library/Logs/XamarinInstaller",
+    "~/Library/MonoAndroid",
+    "~/Library/MonoTouch",
     "~/Library/Preferences/Visual*Studio",
     "~/Library/Preferences/Xamarin",
     "~/Library/VisualStudio",
+    "~/Library/Xamarin.Mac",
   ]
 end

@@ -30,7 +30,6 @@ cask "microsoft-outlook" do
   auto_updates true
   conflicts_with cask: "microsoft-office"
   depends_on cask: "microsoft-auto-update"
-  depends_on macos: ">= :yosemite"
 
   pkg "Microsoft_Outlook_#{version}_Installer.pkg",
       choices: [

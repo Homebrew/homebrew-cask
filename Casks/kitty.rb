@@ -1,6 +1,6 @@
 cask "kitty" do
-  version "0.25.0"
-  sha256 "0ee17b9f61a1cb6006b393083d3fde5983340b2155f681253f4365193402b01e"
+  version "0.25.2"
+  sha256 "a1a964ab100ff92cbc5ce50c63699199050572474c2b1f34bec84de673d31a7f"
 
   url "https://github.com/kovidgoyal/kitty/releases/download/v#{version}/kitty-#{version}.dmg"
   name "kitty"
@@ -13,8 +13,6 @@ cask "kitty" do
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/kitty.wrapper.sh"
   binary shimscript, target: "kitty"
-  binary "#{appdir}/kitty.app/Contents/Resources/terminfo/78/xterm-kitty",
-         target: "#{ENV.fetch("TERMINFO", "#{ENV["HOME"]}/.terminfo")}/78/xterm-kitty"
 
   preflight do
     File.write shimscript, <<~EOS

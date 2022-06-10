@@ -7,8 +7,6 @@ cask "infinity" do
   desc "Customizable work management platform"
   homepage "https://startinfinity.com/"
 
-  depends_on macos: ">= :yosemite"
-
   app "Infinity.app"
 
   uninstall quit: [

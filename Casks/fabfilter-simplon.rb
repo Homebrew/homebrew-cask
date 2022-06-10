@@ -17,7 +17,7 @@ cask "fabfilter-simplon" do
     end
   end
 
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :sierra"
 
   pkg "FabFilter Simplon #{version} Installer.pkg"
 

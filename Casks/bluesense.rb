@@ -11,8 +11,6 @@ cask "bluesense" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :yosemite"
-
   app "BlueSense.app"
 
   zap trash: [

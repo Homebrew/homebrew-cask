@@ -22,7 +22,6 @@ cask "softube-central" do
     "com.softube.Console1OSD_Release",
   ],
             pkgutil: [
-              "com.softube.pkg.*",
               "com.softube.installerdaemon.helper",
               "org.softube.com.softubecentral",
             ]

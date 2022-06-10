@@ -1,7 +1,7 @@
 cask "dropbox" do
   arch = Hardware::CPU.intel? ? "" : "&arch=arm64"
 
-  version "148.4.4519"
+  version "150.4.5000"
   sha256 :no_check
 
   url "https://www.dropbox.com/download?plat=mac&full=1#{arch}"

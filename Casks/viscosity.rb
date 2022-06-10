@@ -4,7 +4,7 @@ cask "viscosity" do
 
   url "https://swupdate.sparklabs.com/download/mac/release/viscosity/Viscosity%20#{version}.dmg"
   name "Viscosity"
-  desc "VPN client for secure internet access and private browsing"
+  desc "OpenVPN client with AppleScript support"
   homepage "https://www.sparklabs.com/viscosity/"
 
   livecheck do
@@ -13,7 +13,7 @@ cask "viscosity" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "Viscosity.app"
 
@@ -26,8 +26,8 @@ cask "viscosity" do
 
   zap trash: [
     "~/Library/Application Support/Viscosity",
-    "~/Library/Caches/com.viscosityvpn.Viscosity",
-    "~/Library/Cookies/com.viscosityvpn.Viscosity.binarycookies",
+    "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.viscosityvpn.Viscosity",
+    "~/Library/HTTPStorages/com.viscosityvpn.Viscosity",
     "~/Library/Preferences/com.viscosityvpn.Viscosity.plist",
   ]
 end

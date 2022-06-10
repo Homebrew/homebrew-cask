@@ -12,7 +12,7 @@ on:
       - labeled
       - unlabeled
   schedule:
-    - cron: '0 */3 * * *' # every 3 hours
+    - cron: '30 */3 * * *' # every 3 hours (30 minutes past the hour)
 
 jobs:
   rerun-workflow:

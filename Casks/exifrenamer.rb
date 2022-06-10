@@ -9,11 +9,9 @@ cask "exifrenamer" do
 
   livecheck do
     url "https://www.qdev.de/versions/ExifRenamer.txt"
-    strategy :page_match do |page|
-      version = page.split
-      next if version.blank?
-
-      "#{version[0]},#{version[1].tr("()", "")}"
+    regex(/v?(\d+(?:\.\d+)+)(?:\s*\((\d+(?:\.\d+)*)\))?/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]}#{"," + match[1] if match[1]}" }
     end
   end
 

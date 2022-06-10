@@ -1,12 +1,12 @@
 cask "drovio" do
   arch = Hardware::CPU.intel? ? "macos" : "macos_silicon"
 
-  version "3.2.7"
+  version "3.2.8"
 
   if Hardware::CPU.intel?
-    sha256 "cca03898d8eb9719c60f45e9aa88982d96c78b280086319ccdaf7c2865f33b48"
+    sha256 "c785e3feec2dc208b9b92c5b5d7011caeb19cf8604fbf245ec38cbbfa47f7723"
   else
-    sha256 "32d0f3ac8f5b99f7fe3de3a374540f3848e44955f2017018a42d487f0bb02bda"
+    sha256 "5788816bcd8d762d5f2ef656e4558bcf0a3d23fbb76e65b93c6930e3b257f574"
   end
 
   url "https://repository.drovio.com/stable/drovio/#{arch}/#{version.major}.x/#{version}/drovio.dmg"

@@ -1,12 +1,12 @@
 cask "dbeaver-community" do
   arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
-  version "22.0.4"
+  version "22.1.0"
 
   if Hardware::CPU.intel?
-    sha256 "3f20c2569c332578c272107bf5c481db6e2f8526676530d66df6fdd1a74b491b"
+    sha256 "c4bd8e3920bd6f5792365133048e52eab3b75175a058f2da6a97e279e8e33a91"
   else
-    sha256 "26c8dc4f7ed904bd36b6335d43c25542ccd5bbf1b302595f56deed27c2b51d5d"
+    sha256 "2756cc90ec2882de207fada132989327e800f98663a338d08b3ffa26c0712854"
   end
 
   url "https://dbeaver.io/files/#{version}/dbeaver-ce-#{version}-macos-#{arch}.dmg"

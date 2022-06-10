@@ -3,11 +3,11 @@ cask "voov-meeting" do
   postarch = Hardware::CPU.intel? ? "mac" : "mac_arm64"
 
   if Hardware::CPU.intel?
-    version "3.3.4.510,ba15ec11a1077e12ee1bd957a8de8792"
-    sha256 "cf6e629ee08667702ab725783682099ccef14f0546be3f66cd58d713979474ef"
+    version "3.7.0.590,be624b69a9db9410195acc9ec0686885"
+    sha256 "be5016805e02e668111d70ea84109cc5b2388cfd72f5236239ace4e8bc1ab1aa"
   else
-    version "3.3.4.510,9fe93ee38c6f34bccd832dccb22e5dcf"
-    sha256 "78fd96217f46a8fd64991ed953f6b13274d7e76b2314217744703caf55c83f36"
+    version "3.7.0.590,747ce62c8d3c838f84873c8570b5e9eb"
+    sha256 "6eb5c1984d991d361ba77d79ce741f1a0151c66d5918e415749cf4a2cb325d86"
   end
 
   url "https://updatecdn.meeting.qq.com/#{version.csv.second}/VooVMeeting_1410000198_#{version.csv.first}.publish.#{arch}.dmg",

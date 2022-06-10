@@ -1,6 +1,6 @@
 cask "cnkiexpress" do
-  version "0.1.21"
-  sha256 "65aa05aa50c7d1a26c9e653739ac05d2fd3db459d2c90ea2ece1877626862435"
+  version "0.1.22"
+  sha256 "74d5d7ba6ae6c6c312c9e23e4f8ced0d45b73d746bc4b12966d1fe320736257a"
 
   url "https://download.cnki.net/cnkiexpress/\%E5\%85\%A8\%E7\%90\%83\%E5\%AD\%A6\%E6\%9C\%AF\%E5\%BF\%AB\%E6\%8A\%A5-#{version}.dmg"
   name "CNKIExpress"

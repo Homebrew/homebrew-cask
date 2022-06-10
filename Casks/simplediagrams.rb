@@ -4,13 +4,14 @@ cask "simplediagrams" do
 
   url "https://www.simplediagrams.com/download/simplediagrams_installer_#{version.dots_to_underscores}.dmg"
   name "SimpleDiagrams"
+  desc "Diagramming app"
   homepage "https://www.simplediagrams.com/"
 
   livecheck do
     url "https://www.simplediagrams.com/downloads"
-    strategy :page_match do |page|
-      v = page[%r{href=.*?/simplediagrams_installer_(\d+(?:_\d+)*)\.dmg}i, 1]
-      v.tr("_", ".")
+    regex(/simplediagrams[._-]installer[._-]v?(\d+(?:[._]\d+)+)\.dmg/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| match[0].tr("_", ".") }
     end
   end
 

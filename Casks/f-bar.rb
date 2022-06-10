@@ -19,7 +19,6 @@ cask "f-bar" do
   end
 
   auto_updates true
-  depends_on macos: ">= :yosemite"
 
   app "F-Bar.app"
 

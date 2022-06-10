@@ -13,8 +13,6 @@ cask "postico" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :yosemite"
-
   app "Postico.app"
 
   zap trash: [

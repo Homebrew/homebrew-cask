@@ -5,6 +5,7 @@ cask "ios-app-signer" do
   url "https://github.com/DanTheMan827/ios-app-signer/releases/download/#{version}/iOS.App.Signer.app.zip",
       verified: "github.com/DanTheMan827/ios-app-signer/"
   name "iOS App Signer"
+  desc "App for (re)signing iOS apps and bundling them"
   homepage "https://dantheman827.github.io/ios-app-signer/"
 
   livecheck do

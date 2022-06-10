@@ -802,7 +802,7 @@ cask "libreoffice-language-pack" do
   end
 
   depends_on cask: "libreoffice"
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :sierra"
 
   installer manual: "LibreOffice Language Pack.app"
 

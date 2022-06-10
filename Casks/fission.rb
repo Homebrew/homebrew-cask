@@ -8,8 +8,8 @@ cask "fission" do
   homepage "https://rogueamoeba.com/fission/"
 
   livecheck do
-    url "https://rogueamoeba.com/fission/releasenotes.php"
-    regex(/ra-version=["']?(\d+(?:\.\d+)+)["' >]/i)
+    url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=1231&bundleid=com.rogueamoeba.fission&platform=osx&version=#{version.no_dots}8000"
+    strategy :sparkle
   end
 
   depends_on macos: ">= :high_sierra"

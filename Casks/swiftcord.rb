@@ -5,6 +5,7 @@ cask "swiftcord" do
   url "https://github.com/SwiftcordApp/Swiftcord/releases/download/v#{version.csv.first}/Swiftcord.#{version.csv.first}.dmg"
   name "Swiftcord"
   desc "Native Discord client built in SwiftUI, light on your RAM and CPU"
+
   homepage "https://github.com/SwiftcordApp/Swiftcord"
 
   livecheck do

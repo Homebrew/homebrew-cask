@@ -1,6 +1,6 @@
 cask "balsamiq-wireframes" do
-  version "4.5.2"
-  sha256 "bec9299021b4c73d8d8cb535c1be8eb4b7a9b15fffbf32890267b454e4b17fa5"
+  version "4.5.3"
+  sha256 "82eb63d24e0f7284bf9c70750ca4c7e4b4d0763295478f336505342fbf33b9e3"
 
   url "https://builds.balsamiq.com/bwd/Balsamiq%20Wireframes%20#{version}.dmg"
   name "Balsamiq Wireframes"

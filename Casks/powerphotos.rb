@@ -31,7 +31,6 @@ cask "powerphotos" do
   end
 
   auto_updates true
-  depends_on macos: ">= :yosemite"
 
   app "PowerPhotos.app"
 end

@@ -8,8 +8,8 @@ cask "soundsource" do
   homepage "https://rogueamoeba.com/soundsource/"
 
   livecheck do
-    url "https://rogueamoeba.com/soundsource/releasenotes.php"
-    regex(/ra-version=["']?(\d+(?:\.\d+)+)["' >]/i)
+    url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=1231&bundleid=com.rogueamoeba.soundsource&platform=osx&version=#{version.no_dots}8000"
+    strategy :sparkle
   end
 
   auto_updates true

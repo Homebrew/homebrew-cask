@@ -1,8 +1,15 @@
 cask "qobuz" do
-  version "6.0.5,036"
-  sha256 "efad7e4df503651f567615471651c3b0da97aeb7506a8c24341c3477d293bd1a"
+  arch = Hardware::CPU.intel? ? "x64/elCapitan_sierra" : "arm64/bigsur"
 
-  url "https://desktop.qobuz.com/releases/darwin/x64/elCapitan_sierra/#{version.csv.first}-b#{version.csv.second}/Qobuz.dmg"
+  version "6.1.0,020"
+
+  if Hardware::CPU.intel?
+    sha256 "c447e9faff69929d080fc4aacbe8338f1f17a1582a7948cd7f050d939aafb0a7"
+  else
+    sha256 "42b588a28daa04c75318db867c1e027ffd52303bcc1c2ed1dfc5c61ba22d5f4f"
+  end
+
+  url "https://desktop.qobuz.com/releases/darwin/#{arch}/#{version.csv.first}-b#{version.csv.second}/Qobuz.dmg"
   name "Qobuz"
   desc "Catalogue of hi-res music for streaming and download"
   homepage "https://www.qobuz.com/applications"

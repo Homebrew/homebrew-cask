@@ -1,15 +1,15 @@
 cask "shimonote" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "2.5.8,3a8635b"
+  version "2.5.9,92910e9"
 
   if Hardware::CPU.intel?
-    sha256 "df0d218917c2ab3f0c10edafbd18804e8cafc92f752601d7e93198f79a816f3b"
+    sha256 "f367a7944af30d68e79652cf615b4a0f1d354c87fb9851518bea19bec0c88072"
   else
-    sha256 "14570abd17f9aa077502e8af9b2e15a980657241714e2b7c5c9e533844493f14"
+    sha256 "32b6f98e5bc205df0937bb55be87c0fd0d2a879c02d0b642a795d2fe6725dc7d"
   end
 
-  url "https://as.smvm.cn/panther/shimo/release/darwin/#{arch}/\%e7\%9f\%b3\%e5\%a2\%a8\%e6\%96\%87\%e6\%a1\%a3_v#{version.csv.first}-release.#{version.csv.second}_darwin-#{arch}.zip",
+  url "https://as.smvm.cn/panther/shimo/release/darwin/#{arch}/\%e7\%9f\%b3\%e5\%a2\%a8\%e6\%96\%87\%e6\%a1\%a3_v#{version.csv.first}-release.#{version.csv.second}.shimo_darwin-#{arch}.zip",
       verified: "as.smvm.cn/panther/shimo/release/darwin/"
   name "Shimonote"
   desc "Document editor"
@@ -17,7 +17,7 @@ cask "shimonote" do
 
   livecheck do
     url "https://as.smvm.cn/panther/shimo/release/darwin/#{arch}/shimo-mac.yml"
-    regex(/石墨文档[._-]v?(\d+(?:\.\d+)+)-release\.(\h+)_darwin-#{arch}\.zip/i)
+    regex(/石墨文档[._-]v?(\d+(?:\.\d+)+)-release\.(\h+).shimo_darwin-#{arch}\.zip/i)
     strategy :electron_builder do |item|
       match = item["path"].match(regex)
       next if match.blank?

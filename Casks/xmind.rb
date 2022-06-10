@@ -13,6 +13,8 @@ cask "xmind" do
     regex(/XMind[._-]for[._-]macOS[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
   end
 
+  conflicts_with cask: "homebrew/cask-versions/xmind8"
+
   app "XMind.app"
 
   zap trash: [

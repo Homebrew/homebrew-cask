@@ -1,6 +1,6 @@
 cask "optimus-player" do
-  version "1.4,12"
-  sha256 "6709f0789f1bc189c38c1770da6a410a17063f431268cb808444832820b24941"
+  version "1.5,13"
+  sha256 "7da0cbb3fb8ab98d4871ecb285e8754d4c8eae489256b7c7280e54c2f82a984f"
 
   url "https://download.optimusplayer.com/Optimus%20Player%20#{version.csv.first}.dmg"
   name "Optimus Player"

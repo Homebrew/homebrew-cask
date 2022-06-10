@@ -1,6 +1,6 @@
 cask "fuwari" do
-  version "0.6.0"
-  sha256 "b9094bfb586408dec8f2860fd462f6079d94c5b3bb735b6842d88ff90217577e"
+  version "1.0.0"
+  sha256 "a294c82b3ec288b2adf828c42bdfa42144efed9aae5c66e03d0708ff9ba71acb"
 
   url "https://github.com/kentya6/Fuwari/releases/download/v#{version}/Fuwari.v#{version}.zip",
       verified: "github.com/kentya6/Fuwari/"

@@ -12,8 +12,6 @@ cask "izip" do
     regex(%r{<li>Version:\s*(\d+(?:\.\d+)+)</li>}i)
   end
 
-  depends_on macos: ">= :yosemite"
-
   app "iZip.app"
 
   zap trash: "~/Library/Preferences/com.codeius.izip.plist"

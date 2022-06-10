@@ -14,7 +14,5 @@ cask "neo4j" do
     regex(%r{href=.*?/neo4j-desktop/.*?flavour=osx.*?release=(\d+(?:\.\d+)+)}i)
   end
 
-  depends_on macos: ">= :yosemite"
-
   app "Neo4j Desktop.app"
 end

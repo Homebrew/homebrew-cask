@@ -1,12 +1,12 @@
 cask "fishing-funds" do
   arch = Hardware::CPU.intel? ? "" : "-arm64"
 
-  version "6.0.1"
+  version "6.0.2"
 
   if Hardware::CPU.intel?
-    sha256 "3de1cc9d2ef307127d148cf312922007f1285f37d90c8aa026f7ab9056395bdf"
+    sha256 "6df350effe876ab6ac5eab9de9eb4a1f88c9181349310608514e964d01c20d6d"
   else
-    sha256 "b5b35fafa3036eb2146f66ca455e792d77b6573d290e7406122626fc610a3f5e"
+    sha256 "357b05f6b21b8016483e5cd5fc3d077251bef293ede19a2bab2f4cbb28d45078"
   end
 
   url "https://github.com/1zilc/fishing-funds/releases/download/v#{version}/Fishing-Funds-#{version}#{arch}.dmg",

@@ -17,7 +17,7 @@ cask "fabfilter-volcano" do
     end
   end
 
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :sierra"
 
   pkg "FabFilter Volcano #{version} Installer.pkg"
 
