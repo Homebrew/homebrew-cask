@@ -1,10 +1,10 @@
 cask "swiftcord" do
-  version "0.4.0,7"
+  version "0.4.1,8"
   sha256 "391c57db0800fc30aa9500d83752b143e2f7b9a0253ffbad2a81554ce0531caa"
 
   url "https://github.com/SwiftcordApp/Swiftcord/releases/download/v#{version.csv.first}/Swiftcord.#{version.csv.first}.dmg"
   name "Swiftcord"
-  desc "Native Discord client built in Swift & SwiftUI"
+  desc "Native Discord client built in SwiftUI, light on your RAM and CPU"
   homepage "https://github.com/SwiftcordApp/Swiftcord"
 
   livecheck do
