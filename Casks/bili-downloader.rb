@@ -1,6 +1,6 @@
 cask "bili-downloader" do
-  version "1.6.20220521"
-  sha256 "ebfb5cb55f9662259b5fa2d9ffbcab93b5407b8b505c79c5bb3d47bfced85aed"
+  version "1.6.20220610"
+  sha256 "57e4b328de09519d0c518505763529e080873573d6307f988365e8fbef940a6b"
 
   url "https://github.com/JimmyLiang-lzm/biliDownloader_GUI/releases/download/V#{version}/BiliDownloader_for_MacOS_X.dmg"
   name "BiliDownloader"

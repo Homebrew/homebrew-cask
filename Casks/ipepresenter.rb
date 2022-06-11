@@ -8,7 +8,5 @@ cask "ipepresenter" do
   desc "Make presentations from PDFs"
   homepage "https://ipepresenter.otfried.org/"
 
-  depends_on macos: ">= :yosemite"
-
   app "IpePresenter.app"
 end

@@ -4,7 +4,13 @@ cask "pablodraw" do
 
   url "http://download.picoe.ca/pablodraw/#{version.major_minor}/PabloDrawMac-#{version}.zip"
   name "PabloDraw"
+  desc "Ansi/Ascii text and RIPscrip editor/viewer"
   homepage "http://picoe.ca/products/pablodraw/"
+
+  livecheck do
+    url :homepage
+    regex(/href=.*?PabloDrawMac[._-]v?(\d+(?:\.\d+)+)\.zip/i)
+  end
 
   app "PabloDraw.app"
 

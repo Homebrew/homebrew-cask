@@ -1,5 +1,5 @@
 cask "firmaec" do
-  version "2.10.1"
+  version "2.11.0"
   sha256 :no_check
 
   url "https://www.firmadigital.gob.ec/firmaec/FirmaEC.zip"

@@ -13,7 +13,7 @@ cask "clover" do
     strategy :electron_builder
   end
 
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :el_capitan"
 
   app "Clover.app"
 

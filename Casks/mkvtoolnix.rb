@@ -27,7 +27,6 @@ cask "mkvtoolnix" do
   end
 
   conflicts_with formula: "mkvtoolnix"
-  depends_on macos: ">= :yosemite"
 
   app "MKVToolNix-#{version}.app"
   binary "#{appdir}/MKVToolNix-#{version}.app/Contents/MacOS/mkvextract"

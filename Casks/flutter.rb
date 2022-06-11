@@ -1,12 +1,12 @@
 cask "flutter" do
   arch = Hardware::CPU.intel? ? "_" : "_arm64_"
 
-  version "3.0.1"
+  version "3.0.2"
 
   if Hardware::CPU.intel?
-    sha256 "20d96acdc49f877e533697300228b58108b18a970e29184d8477c01889218ce9"
+    sha256 "7fc88b2944495c20e013c83c4e0bfcd40d258d9fb52ddbde5c0771e207c9ff29"
   else
-    sha256 "f34e34f8cf247d4f6fde3f7e9e6753d15ff7f6e88bda232df13c009514896163"
+    sha256 "734874caac4928d86a7bba8aa843e5c0577ccb1051df551db41dd1e4d64b6d9e"
   end
 
   url "https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos#{arch}#{version}-stable.zip",

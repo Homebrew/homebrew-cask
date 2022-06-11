@@ -12,8 +12,6 @@ cask "ccleaner" do
     regex(/CCleaner\s*for\s*Mac\s*v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :yosemite"
-
   pkg "Install CCleaner.pkg"
 
   uninstall quit:      "com.piriform.ccleaner",

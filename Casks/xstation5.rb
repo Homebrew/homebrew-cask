@@ -1,7 +1,7 @@
 cask "xstation5" do
   # NOTE: "5" is not a version number, but an intrinsic part of the product name
-  version "2.37.0-Build.3"
-  sha256 "6b6a1114770c8537702359779d2fb053cf26d31bd2708def4dd1170187b5cc38"
+  version "2.38.0-Build.3"
+  sha256 "039e1a4760e8a5a3de6095798025c9438724c31dee6b97f3c817dfb6eabc9505"
 
   url "https://desktopxstation5.xtb.com/prod/update/mac/xStation5-#{version}-mac.zip"
   name "xStation5"

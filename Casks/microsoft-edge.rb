@@ -2,12 +2,12 @@ cask "microsoft-edge" do
   folder = Hardware::CPU.intel? ? "C1297A47-86C4-4C1F-97FA-950631F94777" : "03adf619-38c6-4249-95ff-4a01c0ffc962"
   linkid = Hardware::CPU.intel? ? "2069148" : "2093504"
 
-  version "101.0.1210.53"
+  version "102.0.1245.39"
 
   if Hardware::CPU.intel?
-    sha256 "8b1d9a652845b15777c6af02ebe7ce81f3ac66042bd8ea0091830d465dcf6222"
+    sha256 "ec48251f586bb3bcbf90e4b94ac1553787a335b1997add1e6742e767ac3eb355"
   else
-    sha256 "aecec9484951ea93078b77e057dabf2c16f89db36940c091db9be3aaa8306383"
+    sha256 "91c742288b8a4549cea14fa5237396ebd0ade2f761634fad114294f4f3547767"
   end
 
   url "https://officecdn-microsoft-com.akamaized.net/pr/#{folder}/MacAutoupdate/MicrosoftEdge-#{version}.pkg",
@@ -36,6 +36,7 @@ cask "microsoft-edge" do
 
   zap trash: [
     "~/Library/Application Support/Microsoft Edge",
+    "~/Library/Application Support/Microsoft/EdgeUpdater",
     "~/Library/Caches/Microsoft Edge",
     "~/Library/Preferences/com.microsoft.edgemac.plist",
     "~/Library/Saved Application State/com.microsoft.edgemac.savedState",

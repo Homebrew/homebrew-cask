@@ -1,9 +1,9 @@
 cask "bitwarden" do
-  version "1.33.0"
-  sha256 "75853b87565c5bb729260f56ad8d7cf890c143efc265fc11f9ee9b64d840e2d4"
+  version "2022.5.1"
+  sha256 "cd2adc73ddf91cc0d22484505e680bb44bc4821d3b3d1a2668370ed26ad1818c"
 
-  url "https://github.com/bitwarden/desktop/releases/download/v#{version}/Bitwarden-#{version}-universal-mac.zip",
-      verified: "github.com/bitwarden/desktop/"
+  url "https://github.com/bitwarden/clients/releases/download/desktop-v#{version}/Bitwarden-#{version}-universal.dmg",
+      verified: "github.com/bitwarden/clients/"
   name "Bitwarden"
   desc "Desktop password and login vault"
   homepage "https://bitwarden.com/"
@@ -11,6 +11,7 @@ cask "bitwarden" do
   livecheck do
     url :url
     strategy :github_latest
+    regex(/href=.*?Bitwarden[._-]v?(\d+(?:\.\d+)+)-universal\.dmg/i)
   end
 
   auto_updates true

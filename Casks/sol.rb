@@ -1,15 +1,16 @@
 cask "sol" do
-  version "1.1.20"
-  sha256 "e7880031cec94a31825aaaac994bdf8e5711763c35e50938fc2c8b3d9868be98"
+  version "1.1.26"
+  sha256 "bf0e9aef1281901bf763715d4a7438b83ebed96a18998b3c2a4dcff53aaec91b"
 
-  url "https://github.com/ospfranco/sol/releases/download/#{version}/Sol.zip"
+  url "https://raw.githubusercontent.com/ospfranco/sol/main/releases/#{version}.zip",
+      verified: "raw.githubusercontent.com/ospfranco/sol/"
   name "Sol"
   desc "Launcher & command palette"
   homepage "https://github.com/ospfranco/sol"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://raw.githubusercontent.com/ospfranco/sol/main/releases/appcast.xml"
+    strategy :sparkle, &:short_version
   end
 
   depends_on macos: ">= :mojave"

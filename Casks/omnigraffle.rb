@@ -55,7 +55,6 @@ cask "omnigraffle" do
   homepage "https://www.omnigroup.com/omnigraffle/"
 
   auto_updates true
-  depends_on macos: ">= :yosemite"
 
   app "OmniGraffle.app"
 

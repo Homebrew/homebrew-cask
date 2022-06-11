@@ -1,13 +1,13 @@
 cask "blender" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "3.1.2"
+  version "3.2.0"
 
   url "https://download.blender.org/release/Blender#{version.major_minor}/blender-#{version}-macos-#{arch}.dmg"
   if Hardware::CPU.intel?
-    sha256 "e5a075577a0ec24dcd11b269fc95684189b358802f61d611c376241497e47fdb"
+    sha256 "af3222a0782bbef0f10d77abf2e3bd458779266b9b5d5b527d0e3197ae0e8dca"
   else
-    sha256 "ea0a07ef58b87726503c9599acf8b90c4958d91ad5a02d35d04102c31004c262"
+    sha256 "f6a7327a9dd8e1d8aa6a34ad1327677344131c4d483f85eca5ae54d002bfbadf"
   end
 
   name "Blender"

@@ -7,5 +7,10 @@ cask "google-analytics-opt-out" do
   desc "Prevent website visitor's data from being used by Google Analytics JavaScript"
   homepage "https://tools.google.com/dlpage/gaoptout"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Google Analytics Opt Out.app"
 end

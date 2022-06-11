@@ -1,12 +1,12 @@
 cask "podman-desktop" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "0.0.3"
+  version "0.0.4"
 
   if Hardware::CPU.intel?
-    sha256 "43a52fcc39ef210cf9f98f525a09fe11b8d9ca8746463d406fd72e5f627eb1f6"
+    sha256 "16599a7252992d3f9dbe097f0b147189afb791bca5698bbc8bef830fbe1e91f0"
   else
-    sha256 "a79678e6f24aeb710f8d05d6d93fb5256b17922d5060c7e46c8950a7c32f4435"
+    sha256 "d78f4e5d2a213daf4288196f8970aa161dfe73f2c26ad4c7a3f9fa433591de4e"
   end
 
   url "https://github.com/containers/podman-desktop/releases/download/v#{version}/podman-desktop-#{version}-#{arch}.dmg",

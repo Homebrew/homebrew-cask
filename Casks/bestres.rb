@@ -19,7 +19,5 @@ cask "bestres" do
     end
   end
 
-  depends_on macos: ">= :yosemite"
-
   app "BestRes.app"
 end

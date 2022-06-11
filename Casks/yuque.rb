@@ -1,12 +1,12 @@
 cask "yuque" do
   arch = Hardware::CPU.intel? ? "" : "-arm64"
 
-  version "1.2.5"
+  version "1.3.5"
 
   if Hardware::CPU.intel?
-    sha256 "ab592f54dd8623a5ae38615e04e59a73d329993bba9920827701c848909f9006"
+    sha256 "09caddd53ee72b19560d31eea667e22c22fab3f5389b9a25f9ff4e012f630f0e"
   else
-    sha256 "f0c5e6bc886dd14f4f920733e55a389d20f178acd9dd59d5053e1ec65bed027c"
+    sha256 "2a13951a86d3aa79fb85d2f82cd279407db15b88b72c391584a24605e4eadefc"
   end
 
   url "https://app.nlark.com/yuque-desktop/#{version}/Yuque-#{version}#{arch}.dmg",

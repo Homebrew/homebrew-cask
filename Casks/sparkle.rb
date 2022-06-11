@@ -14,4 +14,5 @@ cask "sparkle" do
   end
 
   app "Sparkle Test App.app"
+  binary "sparkle.app/Contents/MacOS/sparkle"
 end

@@ -1,6 +1,6 @@
 cask "unipro-ugene" do
-  version "42.0"
-  sha256 "85772440daccc67df73654c3bf3beb976933de6d26e722b3c000d01edce335f6"
+  version "43.0"
+  sha256 "4b581f5441aa257ba77abef56175af60cc334adda0cfddd47e6557a51a1ef36f"
 
   url "https://github.com/ugeneunipro/ugene/releases/download/#{version}/ugene-#{version}-mac-x86-64.dmg",
       verified: "github.com/ugeneunipro/ugene/"

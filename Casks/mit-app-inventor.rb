@@ -4,7 +4,13 @@ cask "mit-app-inventor" do
 
   url "https://appinventor.mit.edu/dist/MIT_App_Inventor_Setup_#{version}.dmg"
   name "MIT App Inventor"
+  desc "Android emulator"
   homepage "https://appinventor.mit.edu/explore/ai2/mac"
+
+  livecheck do
+    url :homepage
+    regex(/href=.*?aisetup[._-]mac[._-]v?(\d+(?:\.\d+)+(?:rc\d+)?)/i)
+  end
 
   pkg "MITAppInventorSetup.pkg"
 

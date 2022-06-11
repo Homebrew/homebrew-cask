@@ -21,7 +21,7 @@ cask "apache-couchdb" do
     regex(%r{href=.*?/(\d+(?:\.\d+)+)/mac/3.2.2-1/Apache[._-]?CouchDB\.zip}i)
   end
 
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :mojave"
 
   app "Apache CouchDB.app"
 

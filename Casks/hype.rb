@@ -12,8 +12,6 @@ cask "hype" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :yosemite"
-
   # Renamed for consistency: app name is different in the Finder and in a shell
   app "Hype#{version.major}.app", target: "Hype #{version.major}.app"
 
