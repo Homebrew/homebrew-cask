@@ -4,13 +4,13 @@ cask "mongodb-realm-studio" do
 
   url "https://github.com/realm/realm-studio/releases/download/v#{version}/Realm.Studio-#{version}.dmg",
       verified: "github.com/realm/realm-studio/"
-  name "MongoDB Realm Studio"
+  name "Realm Studio"
   desc "Tool for the Realm Database and Realm Platform"
   homepage "https://realm.io/products/realm-studio/"
 
   auto_updates true
 
-  app "MongoDB Realm Studio.app"
+  app "Realm Studio.app"
 
   zap delete: [
     "~/Library/Application Support/Realm Studio",
