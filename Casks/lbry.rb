@@ -11,7 +11,7 @@ cask "lbry" do
   livecheck do
     url :url
     strategy :github_latest
-    regex(/href=.*?\/lbry\-desktop\/releases\/tag\/v?(\d+(?:\.\d+)+)["' >]/i)
+    regex(/href=.*?\/lbry-desktop\/releases\/tag\/v?(\d+(?:\.\d+)+)["' >]/i)
   end
 
   depends_on macos: ">= :mojave"
