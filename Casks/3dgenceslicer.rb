@@ -10,7 +10,7 @@ cask "3dgenceslicer" do
   livecheck do
     url "http://support.3dgence.com/software.html"
     regex(
-      %r{href=.*?/3DGence(?:[._-]|%20)Slicer(?:[._-]|%20)(\d+(?:\.\d+)+)(?:[._-]|%20)\(v?\.?(\d+(?:\.\d+)+)\)\.dmg}i,
+      %r{href=.*?/3DGence(?:[._-]|%20)?Slicer(?:[._-]|%20)(\d+(?:\.\d+)+)(?:[._-]|%20)\(v?\.?(\d+(?:\.\d+)+)\)\.dmg}i,
     )
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|
