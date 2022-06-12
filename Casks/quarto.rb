@@ -1,6 +1,6 @@
 cask "quarto" do
-  version "0.9.566"
-  sha256 "1ab43e2129c50b3a915e7469fa943c829e2a94f8116566fc14b130f544ea56f0"
+  version "0.9.573"
+  sha256 "83486b9758704c628d83dbacca9f9c4ef6609b66c075f399d7b94b18e238ed9d"
 
   url "https://github.com/quarto-dev/quarto-cli/releases/download/v#{version}/quarto-#{version}-macos.pkg",
       verified: "github.com/quarto-dev/quarto-cli/"
