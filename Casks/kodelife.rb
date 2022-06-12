@@ -8,7 +8,7 @@ cask "kodelife" do
   homepage "https://hexler.net/software/kodelife"
 
   livecheck do
-    url "https://hexler.net/pub/kodelife/appcast.xml"
+    url "https://hexler.net/kodelife/appcast/macos"
     strategy :sparkle
   end
 
