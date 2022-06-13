@@ -9,7 +9,7 @@ cask "elephicon" do
   end
 
   url "https://github.com/sprout2000/elephicon/releases/download/v#{version}/Elephicon-#{version}-darwin-#{arch}.zip"
-  name "elephicon"
+  name "Elephicon"
   desc "Create Apple ICNS and Microsoft ICO files from PNG"
   homepage "https://github.com/sprout2000/elephicon"
 
