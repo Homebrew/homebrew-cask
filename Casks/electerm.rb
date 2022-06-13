@@ -1,12 +1,12 @@
 cask "electerm" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "1.21.74"
+  version "1.21.88"
 
   if Hardware::CPU.intel?
-    sha256 "4012231bc98bbd3dca72eb6a736374ee6508c7c3114f4cf677f50804408a9791"
+    sha256 "2e8a6c53a32d7e1060289980e3b7f0501ca53bc5ea38db366dc0bf168eecc21f"
   else
-    sha256 "fb297777c744de8768d0beed35f2fc9127974ca94bff5651f5b6979c60804c18"
+    sha256 "1b5ab2aa52a9ed42f8b4d695524ca393e5838869c7f4ecc0742997ccc19dd1a7"
   end
 
   url "https://github.com/electerm/electerm/releases/download/v#{version}/electerm-#{version}-mac-#{arch}.dmg"
