@@ -1,6 +1,6 @@
 cask "streamlabs-obs" do
-  version "1.9.0"
-  sha256 "132b2c525d87929c69334644b7fb4eae5026c8016cd4cdbcded9cd6fe4945519"
+  version "1.9.1"
+  sha256 "3a22b70a3d875e56d52412954c67f9e69d45e87682941971a1cdd57e2ad50801"
 
   url "https://slobs-cdn.streamlabs.com/Streamlabs+Desktop-#{version}.dmg"
   name "Streamlabs Desktop"
