@@ -1,6 +1,6 @@
 cask "sleek" do
-  version "1.1.9"
-  sha256 "0c4eb74e37ded0585ccfd74b532d2b2b7a1179cca0213b9f2cbf7f27903c92fe"
+  version "1.2.0"
+  sha256 "b69eb966b96d351d3b50514cbc0cc869a886a63a240b5f3be6a97fc82bf50afe"
 
   url "https://github.com/ransome1/sleek/releases/download/v#{version}/sleek-#{version}-mac.dmg"
   name "sleek"
