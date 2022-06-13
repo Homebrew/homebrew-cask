@@ -15,4 +15,10 @@ cask "phpwebstudy" do
   auto_updates true
 
   app "PhpWebStudy.app"
+
+  zap trash: [
+    "~/Library/Application Support/PhpWebStudy",
+    "~/Library/Logs/PhpWebStudy",
+    "~/Library/PhpWebStudy",
+  ]
 end
