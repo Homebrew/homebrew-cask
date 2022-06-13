@@ -14,8 +14,10 @@ cask "tailscale" do
   zap trash: [
     'Library/Tailscale',
     '~/Library/Group Containers/W5364U7YZB.io.tailscale.ipn.macsys',
+    '~/Library/Containers/io.tailscale.ipn.macos.network-extension',
     '~/Library/Containers/io.tailscale.ipn.macsys.share-extension',
     '~/Library/Containers/io.tailscale.ipn.macsys',
+    '~/Library/Containers/Tailscale',
     '~/Library/Application Scripts/W5364U7YZB.io.tailscale.ipn.macsys',
     '~/Library/Application Scripts/io.tailscale.ipn.macsys.share-extension',
     '~/Library/Application Scripts/io.tailscale.ipn.macsys',
