@@ -9,7 +9,7 @@ cask "tailscale" do
 
   livecheck do
     url "https://pkgs.tailscale.com/stable/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   app "Tailscale.app"
