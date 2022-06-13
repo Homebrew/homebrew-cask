@@ -1,18 +1,18 @@
 cask "ears" do
-  version "1.3.1,18"
-  sha256 "c67da49f54f18c43ce04127ab48ec1a5cf8421ff174a2d5b453cd585b70dd9f5"
+  version "1.4,19"
+  sha256 "372606dca51f9371e2e61ad2d7c6031e90ec2a1bb3ca8e992c5b003b4abc9127"
 
-  url "https://download.clickontyler.com/ears/ears_#{version.csv.second}.zip"
+  url "https://get.retina.studio/ears/ears_#{version.csv.second}.dmg"
   name "Ears"
   desc "Instant audio switcher"
-  homepage "https://clickontyler.com/ears/"
+  homepage "https://retina.studio/ears/"
 
   livecheck do
-    url "https://shine.clickontyler.com/appcast.php?id=50"
+    url "https://dash.retina.studio/appcast.php?id=50"
     strategy :sparkle
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :big_sur"
 
   app "Ears.app"
 
@@ -20,9 +20,11 @@ cask "ears" do
 
   zap trash: [
     "~/Library/Application Support/Ears",
-    "~/Library/Application Support/com.clickontyler.Ears",
+    "~/Library/Saved Application State/com.clickontyler.Ears.savedState",
     "~/Library/Caches/com.clickontyler.Ears",
     "~/Library/Preferences/com.clickontyler.Ears.plist",
     "~/Library/WebKit/com.clickontyler.Ears",
+    "~/Library/HTTPStorages/com.clickontyler.Ears",
+    "~/Library/HTTPStorages/com.clickontyler.Ears.binarycookies",
   ]
 end
