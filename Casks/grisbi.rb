@@ -3,7 +3,7 @@ cask "grisbi" do
   sha256 "75620ff25fd60b9fe8fe3422aed494e23d83a0a6f75d483f6f01f04d183ab21b"
 
   url "https://downloads.sourceforge.net/grisbi/#{version.major_minor}.x/#{version}/Grisbi-#{version}.dmg",
-      verified: "downloads.sourceforge.net/grisbi"
+      verified: "downloads.sourceforge.net/grisbi/"
   name "Grisbi"
   desc "Personal financial management program"
   homepage "https://www.grisbi.org/"
