@@ -8,9 +8,11 @@ cask "zerotier-one" do
   homepage "https://www.zerotier.com/download.shtml"
 
   livecheck do
-    url "https://github.com/zerotier/ZeroTierOne"
-    strategy :github_latest
+    url "https://www.zerotier.com/download/"
+    regex(/latest\sversion:\s(\d+(?:\.\d+)+)/i)
   end
+
+  depends_on macos: ">= :high_sierra"
 
   pkg "ZeroTier One.pkg"
 
