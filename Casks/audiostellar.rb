@@ -8,14 +8,14 @@ cask "audiostellar" do
   homepage "https://audiostellar.xyz/"
 
   livecheck do
-    url "https://audiostellar.xyz/downloads/"
-    regex(%r{href=.*?/downloads/(\d+(?:\.\d+)+)/})
+    url :homepage
+    regex(/AudioStellar[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "AudioStellar.app"
 
   zap trash: [
-    "~/Library/Saved Application State/xyz.audiostellar.savedState",
     "~/Library/Preferences/xyz.audiostellar.plist",
+    "~/Library/Saved Application State/xyz.audiostellar.savedState",
   ]
 end
