@@ -9,8 +9,8 @@ cask "front" do
     sha256 "7702ce89d5093d56f0781c4f02dd61a0fb49af0455a4958bda0f470ad361f1a5"
   end
 
-  url "https://dl.frontapp.com/desktop/builds/#{version}/Front-#{version}-#{arch}.zip"
-  verified "dl.frontapp.com/desktop/builds"
+  url "https://dl.frontapp.com/desktop/builds/#{version}/Front-#{version}-#{arch}.zip",
+      verified: "dl.frontapp.com/desktop/builds"
   name "Front"
   desc "Customer communication platform"
   homepage "https://front.com/"
