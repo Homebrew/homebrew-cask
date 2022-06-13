@@ -5,8 +5,14 @@ cask "cerebro" do
   url "https://github.com/cerebroapp/cerebro/releases/download/v#{version}/cerebro-#{version}.dmg",
       verified: "github.com/cerebroapp/cerebro/"
   name "Cerebro"
-  desc "Open-source productivity booster with a brain"
+  desc "Productivity booster with a brain"
   homepage "https://cerebroapp.com/"
+
+  livecheck do
+    url "https://github.com/cerebroapp/cerebro/releases/"
+    strategy :page_match
+    regex(/cerebro[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+  end
 
   app "Cerebro.app"
 
