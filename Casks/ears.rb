@@ -20,11 +20,12 @@ cask "ears" do
 
   zap trash: [
     "~/Library/Application Support/Ears",
-    "~/Library/Saved Application State/com.clickontyler.Ears.savedState",
+    "~/Library/Application Support/com.clickontyler.Ears",
     "~/Library/Caches/com.clickontyler.Ears",
-    "~/Library/Preferences/com.clickontyler.Ears.plist",
-    "~/Library/WebKit/com.clickontyler.Ears",
     "~/Library/HTTPStorages/com.clickontyler.Ears",
     "~/Library/HTTPStorages/com.clickontyler.Ears.binarycookies",
+    "~/Library/Preferences/com.clickontyler.Ears.plist",
+    "~/Library/Saved Application State/com.clickontyler.Ears.savedState",
+    "~/Library/WebKit/com.clickontyler.Ears",
   ]
 end
