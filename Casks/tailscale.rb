@@ -19,5 +19,6 @@ cask "tailscale" do
     '~/Library/Application Scripts/W5364U7YZB.io.tailscale.ipn.macsys',
     '~/Library/Application Scripts/io.tailscale.ipn.macsys.share-extension',
     '~/Library/Application Scripts/io.tailscale.ipn.macsys',
+    ]
 
 end
