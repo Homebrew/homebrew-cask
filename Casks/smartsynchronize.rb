@@ -1,12 +1,12 @@
 cask "smartsynchronize" do
   arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
-  version "4.3.0"
+  version "4.3.1"
 
   if Hardware::CPU.intel?
-    sha256 "22041d221c32b23e6be76a089e72ddc7fe1f52fac190fac949f29fff7b05d498"
+    sha256 "a35c74d2f0965a4471888bde7e962569f85bd62a6707dd6ab0dff4e99265a287"
   else
-    sha256 "e52c0b57bd4c31023cb0dc84f0f45369e27ee8b96fc6b20768b2f8831469db9d"
+    sha256 "27aa45524cfc673e566d2a2eb7ba382cfb436d13a08e69a7f35466cffe2b2857"
   end
 
   url "https://www.syntevo.com/downloads/smartsynchronize/smartsynchronize-#{arch}-#{version.dots_to_underscores}.dmg"
