@@ -15,4 +15,13 @@ cask "elephicon" do
   homepage "https://github.com/sprout2000/elephicon/"
 
   app "Elephicon.app"
+  
+  zap trash: [
+    "~/Library/Application Support/Elephicon",
+    "~/Library/Logs/Elephicon",
+    "~/Library/Caches/jp.wassabie64.Elephicon",
+    "~/Library/Caches/jp.wassabie64.Elephicon.ShipIt",
+    "~/Library/Preferences/jp.wassabie64.Elephicon.plist",
+    "~/Library/Saved Application State/jp.wassabie64.Elephicon.savedState",
+  ]
 end
