@@ -15,7 +15,7 @@ cask "elephicon" do
   homepage "https://github.com/sprout2000/elephicon/"
 
   app "Elephicon.app"
-  
+
   zap trash: [
     "~/Library/Application Support/Elephicon",
     "~/Library/Logs/Elephicon",
