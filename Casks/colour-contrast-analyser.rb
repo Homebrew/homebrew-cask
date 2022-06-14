@@ -9,7 +9,7 @@ cask "colour-contrast-analyser" do
   homepage "https://www.tpgi.com/color-contrast-checker/"
 
   livecheck do
-    url "https://github.com/ThePacielloGroup/CCAe/"
+    url :url
     strategy :github_latest
   end
 
