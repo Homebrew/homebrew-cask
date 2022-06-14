@@ -3,7 +3,7 @@ cask "tencent-meeting" do
 
   if Hardware::CPU.intel?
     version "3.8.5.451,da109baa04865d571c53801b350bbee0"
-    sha256 "9f9dc51b24ad850dc255032612e570189d9eba873ae2a0e504096e4f955171b"
+    sha256 "9f9dc51b24ad850dc255032612e570189d9eba873ae2a0e504096e4f955171b3"
   else
     version "3.8.5.451,dd83ae7aa1a2c2da91271f23381659b1"
     sha256 "897e336bce54c3060f480c371be71736e5ce1e5c981fed3a7182e40b4f47501c"
