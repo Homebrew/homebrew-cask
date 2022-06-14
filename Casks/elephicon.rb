@@ -18,9 +18,9 @@ cask "elephicon" do
 
   zap trash: [
     "~/Library/Application Support/Elephicon",
-    "~/Library/Logs/Elephicon",
     "~/Library/Caches/jp.wassabie64.Elephicon",
     "~/Library/Caches/jp.wassabie64.Elephicon.ShipIt",
+    "~/Library/Logs/Elephicon",
     "~/Library/Preferences/jp.wassabie64.Elephicon.plist",
     "~/Library/Saved Application State/jp.wassabie64.Elephicon.savedState",
   ]
