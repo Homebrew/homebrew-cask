@@ -44,7 +44,8 @@ cask "microsoft-excel" do
     "com.microsoft.package.Microsoft_Excel.app",
     "com.microsoft.pkg.licensing",
   ],
-            launchctl: "com.microsoft.office.licensingV2.helper"
+            launchctl: "com.microsoft.office.licensingV2.helper",
+            quit:      "com.microsoft.autoupdate2"
 
   zap trash: [
     "~/Library/Application Scripts/com.microsoft.Excel",
