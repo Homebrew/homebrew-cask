@@ -9,7 +9,7 @@ cask "banksiagui" do
 
   livecheck do
     url "https://banksiagui.com/download/"
-    regex(/BanksiaGui[._-]v?(\d+(?:\.\d+)+)[._-]mac\.zip/i)
+    regex(/BanksiaGui[._-]v?(\d+(?:\.\d+)+\w?)[._-]mac\.zip/i)
   end
 
   app "BanksiaGui.app"
