@@ -8,8 +8,8 @@ cask "grammarly-desktop" do
   homepage "https://www.grammarly.com/desktop"
 
   livecheck do
-    url "https://download-mac.grammarly.com/appcast.xml"
-    strategy :sparkle
+    url "https://download-mac.grammarly.com/Grammarly.dmg"
+    strategy :extract_plist
   end
 
   app "Grammarly Installer.app", target: "Grammarly Desktop.app"
