@@ -1,6 +1,6 @@
 cask "prepros" do
-  version "7.4.3"
-  sha256 "4d0cc8b0f99d2848bb710c91cbf5f7e489558f5d0128f67cc9282b3f325aa270"
+  version "7.6.0"
+  sha256 "bc11e9b6127e487dc9b33b583e74565dab18c569c4ae627df28f78ad8da75355"
 
   url "https://downloads.prepros.io/v#{version.major}/Prepros-#{version}.zip"
   name "Prepros"
