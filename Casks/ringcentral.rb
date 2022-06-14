@@ -1,5 +1,5 @@
 cask "ringcentral" do
-  version "22.2.20"
+  version "22.2.22"
   if Hardware::CPU.intel?
     url "https://app.ringcentral.com/download/RingCentral.pkg"
   else

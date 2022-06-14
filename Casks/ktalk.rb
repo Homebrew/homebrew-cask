@@ -13,6 +13,8 @@ cask "ktalk" do
     strategy :header_match
   end
 
+  auto_updates true
+
   app "Толк.app"
 
   uninstall quit:      "kontur.talk",

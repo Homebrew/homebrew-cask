@@ -8,8 +8,8 @@ cask "birdfont" do
       regex(%r{Mac\s*OS\s*10\.12.*?/birdfont[._-]v?(\d+(?:\.\d+)+)[._-]free\.dmg}i)
     end
   else
-    version "4.29.10"
-    sha256 "06a28fc574258d91614134ffd4def7355dc14dd4a3968e7641e5e1896317f84b"
+    version "4.29.13"
+    sha256 "c0dda48115752439f10c01111244aa8816e9dadd35956b1affc0970760e89be4"
 
     livecheck do
       url "https://birdfont.org/purchase.php"
