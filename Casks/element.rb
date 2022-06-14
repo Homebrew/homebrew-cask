@@ -9,8 +9,8 @@ cask "element" do
   homepage "https://element.io/get-started"
 
   livecheck do
-    url "https://github.com/vector-im/riot-desktop"
-    strategy :github_latest
+    url "https://packages.riot.im/desktop/install/macos"
+    regex(/Element[._-]\(?(\d+(?:\.\d+)*)[._-]universal\.dmg/i)
   end
 
   auto_updates true
