@@ -9,8 +9,8 @@ cask "accordance" do
   homepage "https://www.accordancebible.com/"
 
   livecheck do
-    url "https://accordancefiles1.com/xml/appcast_#{version.major}.xml"
-    strategy :sparkle
+    url "https://accordancebible.com/accordance-installers/"
+    regex(%r{href=.*?/Accordance_([0-9]+(\.[0-9]+)+)\.dmg}i)
   end
 
   auto_updates true
