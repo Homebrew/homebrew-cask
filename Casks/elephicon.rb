@@ -14,6 +14,8 @@ cask "elephicon" do
   desc "Create Apple ICNS and Microsoft ICO files from PNG"
   homepage "https://github.com/sprout2000/elephicon/"
 
+  auto_updates true
+
   app "Elephicon.app"
 
   zap trash: [
