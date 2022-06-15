@@ -21,7 +21,4 @@ cask "eclipse-installer" do
 
   app "Eclipse Installer.app"
 
-  caveats do
-    depends_on_java
-  end
 end
