@@ -1,5 +1,5 @@
 cask "webex-meetings" do
-  version "2206.0101.4206.4"
+  version "2206.0901.4206.5"
   sha256 :no_check
 
   if Hardware::CPU.intel?
