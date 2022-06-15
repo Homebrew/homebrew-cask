@@ -5,11 +5,11 @@ cask "visual-studio-code" do
     version "1.55.2"
     sha256 "be3a1ebfac2c6c5e882714304adc518aff8bac6b663e194a9e73524c62065b94"
   else
-    version "1.68.0"
+    version "1.68.1"
     if Hardware::CPU.intel?
-      sha256 "572e7d2be3908a4b4a20489f0fb84c6c750842c19a47685d7d104f6e66b4e04b"
+      sha256 "34ab4f6740e105cfac50e14ec3d2a4d97248325f33351b98f4dd2ac08b594cfa"
     else
-      sha256 "707021ca0ee167ac02f4a1d1b4e7a514ea12ec6baf808124be327e426b27bc03"
+      sha256 "ec6dfb6bc68edd39ea01aff6d623e4ab0e2141189dd964b4be3ce452add4cfad"
     end
   end
 
