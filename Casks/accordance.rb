@@ -10,7 +10,7 @@ cask "accordance" do
 
   livecheck do
     url "https://accordancebible.com/accordance-installers/"
-    regex(%r{href=.*?/Accordance_([0-9]+(\.[0-9]+)+)\.dmg}i)
+    regex(/href=.*?Accordance[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   auto_updates true
