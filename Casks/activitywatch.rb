@@ -10,7 +10,7 @@ cask "activitywatch" do
 
   livecheck do
     url "https://activitywatch.net/downloads/"
-    regex(%r{href=.*?/activitywatch-v([0-9]+(\.[0-9]+)+)-macos-x86_64\.dmg}i)
+    regex(/href=.*?activitywatch[._-]v?(\d+(?:\.\d+)+)-macos-x86_64\.dmg/i)
   end
 
   app "ActivityWatch.app"
