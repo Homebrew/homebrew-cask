@@ -8,5 +8,10 @@ cask "double-commander" do
   desc "File manager"
   homepage "https://doublecmd.sourceforge.io/"
 
+  livecheck do
+    url "https://sourceforge.net/projects/doublecmd/rss"
+    regex(%r{url=.*?/doublecmd/files/OldFiles/.*?[-_/](\d+(?:[-.]\d+)+)[-_/%.].}i)
+  end
+
   app "Double Commander.app"
 end
