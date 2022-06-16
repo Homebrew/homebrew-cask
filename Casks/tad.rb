@@ -1,6 +1,6 @@
 cask "tad" do
-  version "0.10.0"
-  sha256 "d7f8139004d5727fddae1899bb668f3b5b619e66ce3978ef4c00edbc418c0857"
+  version "0.10.1"
+  sha256 "4e15088dee92097ae80595c3f147c6761f192ba65eb9639e67abacfd8bb5d7b9"
 
   url "https://github.com/antonycourtney/tad/releases/download/v#{version}/Tad-#{version}.dmg",
       verified: "github.com/antonycourtney/tad/"
