@@ -1,8 +1,5 @@
 cask "mkvtoolnix" do
-  if MacOS.version <= :yosemite
-    version "24.0.0"
-    sha256 "758da621d3a92358885333b767d64b024197a8147a339b1a0d14e938673452f9"
-  elsif MacOS.version <= :el_capitan
+  if MacOS.version <= :el_capitan
     version "29.0.0"
     sha256 "209578d5d25adb37a2cf857139afb35a421a64b104c2d59af0476d609037244d"
   elsif MacOS.version <= :high_sierra
