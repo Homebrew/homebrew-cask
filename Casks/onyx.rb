@@ -1,8 +1,5 @@
 cask "onyx" do
-  if MacOS.version <= :yosemite
-    version "3.0.2"
-    sha256 "9672a1b300501ec7c726508561c885f2b5e82069ef65145796dc40b0d386a8b0"
-  elsif MacOS.version <= :el_capitan
+  if MacOS.version <= :el_capitan
     version "3.1.9"
     sha256 "7f8df2c9e97eb465aba88b000fa2f58958421efeba1239303ff0071e9b7b0536"
   elsif MacOS.version <= :sierra
