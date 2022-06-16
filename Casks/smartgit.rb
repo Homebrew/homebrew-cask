@@ -1,9 +1,5 @@
 cask "smartgit" do
-  if MacOS.version <= :yosemite
-    arch = "macosx"
-    version "18.1.5"
-    sha256 "52de2c0f4e4d529063da4c4f9f9de4eed425109139d7ba026944535eb3f0e0b7"
-  elsif MacOS.version <= :sierra
+  if MacOS.version <= :sierra
     arch = "macosx"
     version "20.2.6"
     sha256 "af5fbf8db26edde3d996d99c6e82287332598359fe63ff2cd97c712a1685a2ea"
