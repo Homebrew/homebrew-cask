@@ -14,25 +14,10 @@ cask "background-music" do
 
   pkg "BackgroundMusic-#{version}.pkg"
 
-  uninstall_postflight do
-    system_command "/bin/launchctl",
-                   args:         [
-                     "kickstart",
-                     "-kp",
-                     "system/com.apple.audio.coreaudiod",
-                   ],
-                   sudo:         true,
-                   must_succeed: true
-  end
-
-  uninstall delete:    [
-    "/Library/Application Support/Background Music",
-    "/Library/Audio/Plug-Ins/HAL/Background Music Device.driver",
-    "/usr/local/libexec/BGMXPCHelper.xpc",
-  ],
-            pkgutil:   "com.bearisdriving.BGM",
-            quit:      "com.bearisdriving.BGM.App",
-            launchctl: "com.bearisdriving.BGM.XPCHelper"
+  uninstall script: {
+    executable: "/Applications/Background Music.app/Contents/Resources/uninstall.sh",
+    sudo:       true,
+  }
 
   zap trash: "~/Library/Preferences/com.bearisdriving.BGM.App.plist"
 end
