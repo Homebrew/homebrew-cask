@@ -1,8 +1,5 @@
 cask "coteditor" do
-  if MacOS.version <= :yosemite
-    version "3.2.8"
-    sha256 "73dd20d27b75c7b0c46242a465adb3df5b5f0b901f42c5a9a85777a57c4a17d6"
-  elsif MacOS.version <= :el_capitan
+  if MacOS.version <= :el_capitan
     version "3.5.4"
     sha256 "0b2cbf38cc531268e3691f307445e05ae5da64b48ceaf86c4d16b993c9be3e9f"
   elsif MacOS.version <= :mojave
