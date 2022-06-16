@@ -1,8 +1,5 @@
 cask "texpad" do
-  if MacOS.version <= :yosemite
-    version "1.7.45,237,1487350"
-    sha256 "5973da0e221a9f9168228d628e25b1f788bcdc9ca8cae86cb02089804f3240f5"
-  elsif MacOS.version <= :el_capitan
+  if MacOS.version <= :el_capitan
     version "1.8.5,404,f8f30e5"
     sha256 "676a1b071142c022cdfda57668c811f7747b36ded442548073fe6dda1b9ca934"
   elsif MacOS.version <= :high_sierra

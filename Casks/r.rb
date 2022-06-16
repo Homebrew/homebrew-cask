@@ -1,9 +1,5 @@
 cask "r" do
-  if MacOS.version <= :yosemite
-    version "3.3.3"
-    sha256 "77d7a145d1f7d5c3f5bd7310ae2beb7349118528d938e519845ce7d205b4c864"
-    url "https://cloud.r-project.org/bin/macosx/R-#{version}.pkg"
-  elsif MacOS.version <= :sierra
+  if MacOS.version <= :sierra
     version "3.6.3.nn"
     sha256 "f2b771e94915af0fe0a6f042bc7a04ebc84fb80cb01aad5b7b0341c4636336dd"
     url "https://cloud.r-project.org/bin/macosx/R-#{version}.pkg"
