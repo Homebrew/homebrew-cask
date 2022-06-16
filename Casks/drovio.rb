@@ -1,26 +1,20 @@
 cask "drovio" do
-  arch = Hardware::CPU.intel? ? "macos" : "macos_silicon"
+  version "3.3.0"
 
-  version "3.2.8"
+  sha256 "ecec1df322f61c9ad44c957803e6d75803ffcf14e6537d1b70f74cd001884d5c"
 
-  if Hardware::CPU.intel?
-    sha256 "c785e3feec2dc208b9b92c5b5d7011caeb19cf8604fbf245ec38cbbfa47f7723"
-  else
-    sha256 "5788816bcd8d762d5f2ef656e4558bcf0a3d23fbb76e65b93c6930e3b257f574"
-  end
-
-  url "https://repository.drovio.com/stable/drovio/#{arch}/#{version.major}.x/#{version}/drovio.dmg"
+  url "https://repository.drovio.com/stable/drovio/macos_universal/#{version.major}.x/#{version}/drovio.dmg"
   name "Drovio"
   desc "Remote pair programming and team collaboration tool"
   homepage "https://www.drovio.com/"
 
   livecheck do
-    url "https://repository.drovio.com/stable/drovio/#{arch}/latest_version/release.json"
+    url "https://repository.drovio.com/stable/drovio/macos_universal/latest_version/release.json"
     regex(/"version"\s*:\s*"(\d+(?:\.\d+)+)"/i)
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   app "Drovio.app"
 
