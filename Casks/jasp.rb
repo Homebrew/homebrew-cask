@@ -1,6 +1,6 @@
 cask "jasp" do
-  version "0.16.2.0"
-  sha256 "098aef1ca79f7d1fcde17d49190d7f34bcf9d409ecc9ff93fec5817aca6e55ae"
+  version "0.16.3.0"
+  sha256 "f59d226ff4803c0f56e2abda8e3b10b66d107f5ec1dfe440aef688562cb8f031"
 
   url "https://static.jasp-stats.org/JASP-#{version}-macOS-x86_64.dmg"
   name "JASP"
