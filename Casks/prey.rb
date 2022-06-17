@@ -14,7 +14,7 @@ cask "prey" do
   pkg "prey-mac-#{version}-x64.pkg"
 
   preflight do
-    ENV["API_KEY"] = ENV["HOMEBREW_PREY_SETUP_API_KEY"]
+    ENV["API_KEY"] = ENV.fetch("HOMEBREW_PREY_SETUP_API_KEY", nil)
   end
 
   uninstall pkgutil:   "com.prey.agent",
