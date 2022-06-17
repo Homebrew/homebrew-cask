@@ -1,12 +1,12 @@
 cask "superhuman" do
   arch = Hardware::CPU.intel? ? "" : "-arm64"
 
-  version "12.1.3"
+  version "12.1.5"
 
   if Hardware::CPU.intel?
-    sha256 "69f0fa2311b8af1f5038739715738261656f2b7662f09114e64469f47a6c0a4f"
+    sha256 "76f05c1954e58bb141c8aafa5934cba7aeb031424aacd60be4b3131331abedb4"
   else
-    sha256 "2e6d6e43b5656b962fb60124ec5ad55fb9d6fb85112fe313e602c499b5d05da0"
+    sha256 "29042a22aeb0e8d86d7cb5c213cc4128e2d9982b710f253f545d87d06a95b1a5"
   end
 
   url "https://storage.googleapis.com/download.superhuman.com/supertron-update/Superhuman-#{version}#{arch}-latest-mac.zip",
