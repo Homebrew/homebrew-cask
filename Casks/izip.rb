@@ -9,7 +9,7 @@ cask "izip" do
 
   livecheck do
     url "https://www.izip.com/download"
-    regex(%r{<li>Version\s*(\d+(?:\.\d+)+)</li>}i)
+    regex(%r{<li>Version:?\s*(\d+(?:\.\d+)+)</li>}i)
   end
 
   app "iZip.app"
