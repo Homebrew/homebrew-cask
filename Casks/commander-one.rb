@@ -1,5 +1,5 @@
 cask "commander-one" do
-  version "3.4,3571"
+  version "3.4.1,3580"
   sha256 :no_check
 
   url "https://cdn.electronic.us/products/commander/mac/download/commander.dmg",
