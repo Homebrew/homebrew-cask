@@ -10,7 +10,7 @@ cask "betwixt" do
   app "Betwixt-darwin-x64/Betwixt.app"
 
   uninstall_postflight do
-    cert = "#{ENV["HOME"]}/Library/Application Support/betwixt/ssl/certs/ca.pem"
+    cert = "#{Dir.home}/Library/Application Support/betwixt/ssl/certs/ca.pem"
     next unless File.exist? cert
 
     stdout, * = system_command "/usr/bin/openssl",
