@@ -4,9 +4,18 @@ cask "twitch-studio" do
 
   url "https://live.release.spotlight.twitchsvc.net/installer/mac/twitchstudio.dmg",
       verified: "live.release.spotlight.twitchsvc.net/"
-  name "twitch-studio"
+  name "Twitch Studio"
   desc "Free streaming software designed for new streamers"
   homepage "https://www.twitch.tv/broadcast/studio/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist do |versions|
+      versions.values.map(&:short_version).compact.first
+    end
+  end
+
+  auto_updates true
 
   app "Twitch Studio.app"
 
