@@ -3,8 +3,8 @@ cask "notion" do
   livecheck_folder = Hardware::CPU.intel? ? "mac" : "apple-silicon"
 
   if Hardware::CPU.intel?
-    version "2.0.22"
-    sha256 "be1ff56a39f1c1967162ebfde86ced8f0f408fbe99bb88982fa12de10feda54c"
+    version "2.0.23"
+    sha256 "8081b230e2e2d7f9a439c17c6a0b9fc281c52cad65358f211149792e9cdd47c1"
   else
     version "2.1.0"
     sha256 "3811d30ee2ca40fe7f88df71e578838ea668d79bf3eb01b453baf3a82a6e333c"
