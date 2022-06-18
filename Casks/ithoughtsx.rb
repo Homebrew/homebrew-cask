@@ -1,5 +1,5 @@
 cask "ithoughtsx" do
-  version "5.30.0"
+  version "9.0.0"
   sha256 :no_check
 
   url "https://cdn.toketaware.com?download=iThoughtsX.zip",

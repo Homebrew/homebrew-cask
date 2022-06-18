@@ -2,8 +2,8 @@ cask "mini-program-studio" do
   arch = Hardware::CPU.intel? ? "-x64" : "-arm64-arm64"
 
   if Hardware::CPU.intel?
-    version "2.9.1,64838471-01a5-4d01-8895-b82f93a8ea6d"
-    sha256 "cc43729681adcf233981ac4d36e3e5eb50eb75f2d9eaccec1658da2de4f95891"
+    version "3.0.2,5b62b07a-3d4e-4127-95d4-d3420bb869c1"
+    sha256 "23eb62f4cee0769b516caff79c77da15039a2d0fac4102d17f76d18b1cfcd909"
   else
     version "2.9.1,db0a5e6d-b8df-4a9f-b17e-8c8222b5f8b7"
     sha256 "3326024c093f66c15ebd32f70e0d226ae9215ddc68538d399549216faa6bb92f"

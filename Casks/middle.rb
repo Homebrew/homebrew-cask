@@ -1,6 +1,6 @@
 cask "middle" do
-  version "1.7.4,81"
-  sha256 "a49ee03b8a228cefd34d2bed2606efa2f8e2101b8139ba3a42be894a3c48e5d3"
+  version "1.7.5,82"
+  sha256 "853e7f1f6ae448bfe5afe54ed044067c13ed2b2e99812d6b9e7f6e1e66c5ada5"
 
   url "https://middleclick.app/downloads/Middle#{version.csv.first}.dmg"
   name "Middle"

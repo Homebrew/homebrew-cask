@@ -1,6 +1,6 @@
 cask "teamdrive" do
-  version "4.7.4.3178"
-  sha256 "cef8bbb1c4d59fcf866c40eac9512d916982a009ec12efa509a32e21767c21a3"
+  version "4.7.5.3196"
+  sha256 "ad4a1f41aa5fa0d3c692aebac6214113537a30dd763f410aad4cfdd100f4f919"
 
   url "https://download.teamdrive.net/#{version}/TMDR/mac/Install-TeamDrive-#{version}_TMDR.dmg",
       verified: "teamdrive.net/"

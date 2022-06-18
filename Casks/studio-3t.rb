@@ -2,12 +2,12 @@ cask "studio-3t" do
   arch = Hardware::CPU.intel? ? "" : "-aarch64"
   livecheckarch = Hardware::CPU.intel? ? "" : "_aarch64"
 
-  version "2022.4.1"
+  version "2022.5.0"
 
   if Hardware::CPU.intel?
-    sha256 "3a4e65a79b07e0be06e9d50f555ec4209ad9bc65439bb03f98278841dcd4c824"
+    sha256 "251c3d8c3a97317f711062dc2fed3bb5866b782f3564e451e67de3f12464cd6b"
   else
-    sha256 "ab56f86ea8c49ce16ca1c1f7a99727524f4b09ee70a943fd10874c5cd2a41350"
+    sha256 "3ce67da2360c9c1d190dbaa8548df6931a52f961f33367f381dbf0aa21e45aa9"
   end
 
   url "https://download.studio3t.com/studio-3t/mac#{arch}/#{version}/Studio-3T.dmg"

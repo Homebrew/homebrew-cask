@@ -1,8 +1,5 @@
 cask "maintenance" do
-  if MacOS.version <= :yosemite
-    version "2.0.7"
-    sha256 "5c926159c0610fe705b0f23b56672f1c5e46c970f92013839c772147379520f9"
-  elsif MacOS.version <= :el_capitan
+  if MacOS.version <= :el_capitan
     version "2.1.8"
     sha256 "f27f5d0736e80cd80c85dcc5390dfeb893183424fe65b32b08e280c90b22b24c"
   elsif MacOS.version <= :sierra

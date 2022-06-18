@@ -1,10 +1,14 @@
 cask "ringcentral" do
-  version "22.1.31"
+  version "22.2.22"
+  if Hardware::CPU.intel?
+    url "https://app.ringcentral.com/download/RingCentral.pkg"
+  else
+    url "https://app.ringcentral.com/download/RingCentral-arm.pkg"
+  end
   sha256 :no_check
 
-  url "https://app.ringcentral.com/downloads/RingCentral.pkg"
   name "RingCentral"
-  desc "Team messaging, video meetings, and a business phone"
+  desc "Team messaging, video meetings, and business phone"
   homepage "https://www.ringcentral.com/download.html"
 
   livecheck do

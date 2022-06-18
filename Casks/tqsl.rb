@@ -12,8 +12,6 @@ cask "tqsl" do
     regex(%r{href=.*?/tqsl[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
   end
 
-  depends_on macos: ">= :yosemite"
-
   pkg "tqsl-#{version}.pkg"
 
   uninstall pkgutil: "org.arrl.tqsl"

@@ -1,12 +1,12 @@
 cask "slite" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "1.2.11"
+  version "1.2.12"
 
   if Hardware::CPU.intel?
-    sha256 "6f925e8ff26dbc89e1344e4e07a93304000c7558ff68537b644db13788d0e4a6"
+    sha256 "0bc0181337b5cd43664f08921e2aded199c10b302d407fe5a8605ce80fadbed4"
   else
-    sha256 "fe5df18780cb0c51a4d5997423d3ddc55a0b3e60c261451e01dd4d39d63cfd81"
+    sha256 "a0204a62db2f5f8731302fc5821665face8b78251deca79355452f1948738361"
   end
 
   url "https://download.todesktop.com/20062929x31pwfi/Slite%20#{version}-#{arch}-mac.zip",

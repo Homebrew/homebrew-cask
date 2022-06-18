@@ -1,9 +1,9 @@
 cask "quit-all" do
-  version "1.1.1"
-  sha256 "7a038e61cb54448ab67df2fbafffe4f4a8d80a2b9ef3bfdd7fca3cb956ed36e5"
+  version "1.2"
+  sha256 "890209a7ce37045a970c38a07eb6a7f0490c69a1f888d1fce04597a5c5c123e1"
 
   url "https://amicoapps.com/wp-content/updates/quitall-#{version}.zip"
-  name "Quit All"
+  name "QuitAll"
   desc "Quickly quit one, some, or all apps"
   homepage "https://amicoapps.com/app/quit-all/"
 
@@ -14,7 +14,7 @@ cask "quit-all" do
 
   depends_on macos: ">= :catalina"
 
-  app "Quit All.app"
+  app "QuitAll.app"
 
   zap trash: [
     "~/Library/Application Support/com.quitallapp.quitall-paddle",

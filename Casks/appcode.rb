@@ -1,12 +1,12 @@
 cask "appcode" do
   arch = Hardware::CPU.intel? ? "" : "-aarch64"
 
-  version "2022.1.1,221.5591.52"
+  version "2022.1.2,221.5787.30"
 
   if Hardware::CPU.intel?
-    sha256 "0875d0c80c876622df7d4c6d6377d384bd6be4c5bed11d612467a0958870dfe9"
+    sha256 "32865825514600d600e479317f446f4a60508308273745f8a1cb07bd93b4114b"
   else
-    sha256 "0eaf59b15599cf80a333a613330cbc5aa7fb1cd284367ea1083e3b478676bc3c"
+    sha256 "b06797b2ded8ec26a72dbc1fa4d3192bbd1055af54121ccd0999258c413586ab"
   end
 
   url "https://download.jetbrains.com/objc/AppCode-#{version.csv.first}#{arch}.dmg"

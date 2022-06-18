@@ -7,7 +7,7 @@ cask "intel-haxm" do
   desc "Hardware-assisted virtualization engine (hypervisor)"
   homepage "https://github.com/intel/haxm"
 
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :sierra"
   depends_on arch: :x86_64
 
   installer script: {

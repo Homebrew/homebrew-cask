@@ -1,6 +1,6 @@
 cask "fme" do
-  version "2022.0.0.2,22343"
-  sha256 "c35b891554578c37e0be70333aa9364064999f647ddebb10f03974bf662ce0b0"
+  version "2022.0.1,22346"
+  sha256 "7ce54789338551e2794b203e9342c6f3dd1811a0901521d63ca88e3b3f381821"
 
   url "https://downloads.safe.com/fme/#{version.major}/fme-desktop-#{version.csv.first}-b#{version.csv.second}-macosx.pkg"
   name "FME Desktop"

@@ -12,8 +12,6 @@ cask "memory-cleaner" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :yosemite"
-
   app "Memory Cleaner #{version.major}.app"
 
   zap trash: [

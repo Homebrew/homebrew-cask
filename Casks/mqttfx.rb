@@ -1,15 +1,15 @@
 cask "mqttfx" do
-  version "1.7.1"
-  sha256 "544b6ac0afefb80b5a56c2a6f2411f999862fb8f0f20502c912f28a9d1aa3b4a"
+  version "5.2.0"
+  sha256 "7c2805dde4eb128cfdf993fea08e3bb7573234bf61b66fd0fecfe3f3bb3d1f47"
 
-  url "https://www.jensd.de/apps/mqttfx/#{version}/mqttfx-#{version}-macos.dmg",
-      verified: "jensd.de/apps/mqttfx/"
+  url "https://download.softblade.de/mqttfx-#{version}-macos.dmg"
   name "MQTT.fx"
-  homepage "http://www.mqttfx.org/"
+  desc "IoT route testing tool"
+  homepage "https://softblade.de/en/welcome/"
 
   livecheck do
-    url "https://www.jensd.de/apps/mqttfx/appcast.xml"
-    strategy :sparkle
+    url "https://softblade.de/en/download-2/"
+    regex(/href=.*?mqttfx[._-]v?(\d+(?:\.\d+)+)-macos\.dmg/i)
   end
 
   installer script: {

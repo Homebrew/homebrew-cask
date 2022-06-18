@@ -6,8 +6,8 @@ cask "notion" do
     version "2.0.22"
     sha256 "be1ff56a39f1c1967162ebfde86ced8f0f408fbe99bb88982fa12de10feda54c"
   else
-    version "2.0.21"
-    sha256 "4ed2cafa1c3732c126c7ccd5776154fd3b51e88e0d10a955b518cee10910aa8f"
+    version "2.1.0"
+    sha256 "3811d30ee2ca40fe7f88df71e578838ea668d79bf3eb01b453baf3a82a6e333c"
   end
 
   url "https://desktop-release.notion-static.com/Notion-#{version}#{arch}.dmg",

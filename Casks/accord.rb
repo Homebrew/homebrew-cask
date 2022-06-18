@@ -1,6 +1,6 @@
 cask "accord" do
-  version "1.2"
-  sha256 "934c313087769d4321767c33e1f1ab9c439b58c30afa79e67b69a8aaf34d81c6"
+  version "1.3.1"
+  sha256 "645ce99c275aa027d30ad9a758d11075dceb5f1d19e92a9af6574ad9c760fe15"
 
   url "https://github.com/evelyneee/accord/releases/download/v#{version}/Accord.zip"
   name "accord"
@@ -12,7 +12,7 @@ cask "accord" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Accord.app"
 

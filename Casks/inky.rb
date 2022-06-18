@@ -1,6 +1,6 @@
 cask "inky" do
-  version "0.12.0"
-  sha256 "3d7901d9dbe3d3ccca1a585321ec65d5aa5a298532c0d667a5285940035d38f8"
+  version "0.13.0"
+  sha256 "4f7045589de7163f384b1d79dafd18f2567d74390d7c28e0242076fba2f45438"
 
   url "https://github.com/inkle/inky/releases/download/#{version}/Inky_mac.dmg",
       verified: "github.com/inkle/inky/"

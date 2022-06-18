@@ -1,12 +1,12 @@
 cask "sentinel" do
   arch = Hardware::CPU.intel? ? "amd64" : "arm64"
 
-  version "0.18.10"
+  version "0.18.11"
 
   if Hardware::CPU.intel?
-    sha256 "c79d982cf24bbce38bcdbf7deb752ff629d76bba33c9f2b04f48be957113885d"
+    sha256 "267f2d2d2bf62476c6b40f112b7c222966da4ee27098cadb99e4446b48e9b68a"
   else
-    sha256 "5b116ef4dabaa58677f7a496b55511b091e3fd486d1ed7167e485e9f169f5a42"
+    sha256 "c6c638426c8ef50b5b8500e082a0e8b116f7311f2ee24d24336f22d64b23c5a0"
   end
 
   url "https://releases.hashicorp.com/sentinel/#{version}/sentinel_#{version}_darwin_#{arch}.zip"

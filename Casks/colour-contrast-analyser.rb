@@ -6,7 +6,12 @@ cask "colour-contrast-analyser" do
       verified: "github.com/ThePacielloGroup/CCAe/"
   name "Colour Contrast Analyser (CCA)"
   desc "Color contrast checker"
-  homepage "https://developer.paciellogroup.com/resources/contrastanalyser/"
+  homepage "https://www.tpgi.com/color-contrast-checker/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Colour Contrast Analyser (CCA).app"
 end

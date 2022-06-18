@@ -1,12 +1,12 @@
 cask "roam-research" do
   arch = Hardware::CPU.intel? ? "" : "-arm64"
 
-  version "0.0.14"
+  version "0.0.15"
 
   if Hardware::CPU.intel?
-    sha256 "e2e94fc056e3fa187b8f2e6bce6eb40253b7e2c0bea64730199667ab2c183e52"
+    sha256 "c270b957cb7ba0c9fa7b7ff8ff9a2fbe2ed3c8dba24ee2584dfa487022e1cc51"
   else
-    sha256 "b8508ca6d392cd5cc7c350325547e832db1ae552bdf75c9d86460e8e429f8ec9"
+    sha256 "4407df5ac97d3013dbf113d09da33d01264d94f8f4c30d5546afe237e6af5834"
   end
 
   url "https://roam-electron-deploy.s3.us-east-2.amazonaws.com/Roam+Research-#{version}#{arch}.dmg",

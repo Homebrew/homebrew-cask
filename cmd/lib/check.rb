@@ -105,7 +105,7 @@ module Check
 
     installed_kexts = diff[:installed_kexts]
                       .added
-                      .grep_v(/^com\.(softraid\.driver\.SoftRAID|com\.highpoint-tech\.kext\.*)/)
+                      .grep_v(/^com\.(softraid\.driver\.SoftRAID|highpoint-tech\.kext\.*)/)
     if installed_kexts.any?
       message = "Some kernel extensions are still installed, add them to #{Formatter.identifier("uninstall kext:")}\n"
       message += installed_kexts.join("\n")

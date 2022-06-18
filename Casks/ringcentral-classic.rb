@@ -4,7 +4,13 @@ cask "ringcentral-classic" do
 
   url "https://downloads.ringcentral.com/glip/rc/#{version}/mac/RingCentral%20Classic-#{version}.dmg"
   name "RingCentral Classic"
+  desc "VOIP and message application"
   homepage "https://www.ringcentral.com/apps/rc-classic"
+
+  livecheck do
+    url "https://downloads.ringcentral.com/glip/rc/GlipForMac"
+    strategy :header_match
+  end
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "Glip.app", target: "RingCentral Classic.app"
