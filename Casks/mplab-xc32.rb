@@ -9,7 +9,7 @@ cask "mplab-xc32" do
 
   livecheck do
     url "https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers"
-    regex(%r{href=.*?xc32[._-]v?(\d+(?:\.\d+)+)-osx-installer\.dmg}i)
+    regex(%r{href=.*?downloads/en/DeviceDoc/xc32[._-]v?(\d+(?:\.\d+)+)-osx-installer\.dmg}i)
   end
 
   installer script: {
