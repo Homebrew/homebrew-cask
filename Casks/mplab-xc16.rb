@@ -8,8 +8,8 @@ cask "mplab-xc16" do
   homepage "https://www.microchip.com/mplab/compilers"
 
   livecheck do
-    url "https://www.microchip.com/mplabxc16osx"
-    strategy :header_match
+    url "https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers"
+    regex(%r{href=.*?downloads/en/.*?xc16[._-]v?(\d+(?:\.\d+)+).*?\.dmg}i)
   end
 
   installer script: {
