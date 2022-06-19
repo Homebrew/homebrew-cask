@@ -8,6 +8,12 @@ cask "mtgaprotracker" do
   desc "Advanced Magic: The Gathering Arena tracking tool"
   homepage "https://mtgarena.pro/mtga-pro-tracker/"
 
+  livecheck do
+    url "https://github.com/Razviar/mtgap/"
+    strategy :page_match
+    regex(/Mac\sversion.*?(\d+(?:\.\d+)+)/i)
+  end
+
   app "mtgaprotracker.app"
 
   zap trash: [
