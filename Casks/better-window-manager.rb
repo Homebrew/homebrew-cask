@@ -11,7 +11,5 @@ cask "better-window-manager" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :yosemite"
-
   app "Better Window Manager.app"
 end

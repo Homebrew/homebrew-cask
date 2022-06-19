@@ -16,7 +16,7 @@ cask "box-tools" do
   ]
   apps.each do |a|
     app "Install Box Tools.app/Contents/Resources/Box #{a}.app",
-        target: "#{ENV["HOME"]}/Library/Application Support/Box/Box Edit/Box #{a}.app"
+        target: "#{Dir.home}/Library/Application Support/Box/Box Edit/Box #{a}.app"
   end
 
   uninstall quit: [

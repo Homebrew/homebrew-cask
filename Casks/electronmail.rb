@@ -1,6 +1,6 @@
 cask "electronmail" do
-  version "5.0.0"
-  sha256 "edf315a34171a38bdc4b3c930deb17d9f50fb23c69273d2b63a39aee62338a06"
+  version "5.0.1"
+  sha256 "ebf13fc69f51d7517e256a7c078b6f2dbb87e4f14e845c2eb50d4a1d4284452a"
 
   url "https://github.com/vladimiry/ElectronMail/releases/download/v#{version}/electron-mail-#{version}-mac-x64.dmg"
   name "ElectronMail"

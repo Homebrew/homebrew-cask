@@ -13,8 +13,6 @@ cask "boom-3d" do
     strategy :extract_plist
   end
 
-  depends_on macos: ">= :yosemite"
-
   app "Boom 3D.app"
 
   uninstall launchctl: [

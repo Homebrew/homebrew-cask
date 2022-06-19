@@ -1,12 +1,12 @@
 cask "portfolioperformance" do
   arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
-  version "0.58.3"
+  version "0.58.4"
 
   if Hardware::CPU.intel?
-    sha256 "3371afbccd7681711ba8d2c36c58a93a6335e7321d7669dc1e052ba505766293"
+    sha256 "62b6f49a894fd1653f6d032c885dfefc5abf39fdd8f6a9e89d4c6efd9345314d"
   else
-    sha256 "97a98900582dff1cede4f082f50e0a5e55a653de9eb36335b1fdc4f0c20e074a"
+    sha256 "15f7ba8879e64fdf868ddf81efd648ebccae254698c1c0ee88eab525cf0c15d8"
   end
 
   url "https://github.com/buchen/portfolio/releases/download/#{version}/PortfolioPerformance-#{version}-#{arch}.dmg",

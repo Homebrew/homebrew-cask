@@ -8,8 +8,6 @@ cask "ipe" do
   desc "Drawing editor for creating figures in PDF format"
   homepage "https://ipe.otfried.org/"
 
-  depends_on macos: ">= :yosemite"
-
   app "Ipe.app"
 
   zap trash: [

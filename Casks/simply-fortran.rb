@@ -5,15 +5,14 @@ cask "simply-fortran" do
     Hardware::CPU.intel? ? "-x86_64" : "-arm64"
   end
 
+  version "3.25.3754"
+
   if MacOS.version <= :big_sur
-    version "3.24.3735"
-    sha256 "1b854b1bf5d982d43385cea735b0112ffa17f900e2ed8e42da1c01a9df5ca804"
+    sha256 "eefcde488f42eaed99dd64215b7ec05bb2daf6c824418cede10c63a74128a220"
   elsif Hardware::CPU.intel?
-    version "3.24.3734"
-    sha256 "b4913da2ef5ff4c962f29ed897c9afcb1cbcad7dee0647683227ada899b965a2"
+    sha256 "4fb8a416887056cf7248d73ed88cec95066548d2b5f053235fc79bb41d9064bf"
   else
-    version "3.24.3735"
-    sha256 "c548c5911b5e23699bcfee2756da5d8680f8654a4833437542524e6cc2eb992a"
+    sha256 "d0d6a723ac2d18a4a5878594b58028c6c45711d837a6e02152bb7d9c85adefa2"
   end
 
   url "https://download.simplyfortran.com/#{version.major_minor}/macos/simplyfortran-#{version}#{url_string}.dmg"

@@ -1,6 +1,6 @@
 cask "silentknight" do
-  version "1.19,2022.04"
-  sha256 "4ddcd4b1e7d7e5e64f7e72e7672cb481e8f7be8e1590ab7c69b88d101392625b"
+  version "1.21,2022.06"
+  sha256 "c1cbb734f620e073f1c08c473edaa036c2b5ccdca02baa99ca117f86c10ad505"
 
   url "https://eclecticlightdotcom.files.wordpress.com/#{version.csv.second.major}/#{version.csv.second.minor}/silentknight#{version.csv.first.no_dots}.zip",
       verified: "eclecticlightdotcom.files.wordpress.com/"

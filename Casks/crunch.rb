@@ -1,6 +1,6 @@
 cask "crunch" do
-  version "4.0.0"
-  sha256 "6969fcb91e5a93b9d9e604cca2e6a98b6ebdcc7dde0c53803c25d379d3e4e729"
+  version "5.0.0"
+  sha256 "80ebe4ddfbd6813535910c518e0594db7c23061e1a0f5c6c30382db1fc25b347"
 
   url "https://github.com/chrissimpkins/Crunch/releases/download/v#{version}/Crunch-Installer.dmg"
   name "Crunch"

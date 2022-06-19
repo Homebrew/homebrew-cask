@@ -1,12 +1,12 @@
 cask "docker" do
   arch = Hardware::CPU.intel? ? "amd64" : "arm64"
 
-  version "4.8.2,79419"
+  version "4.9.1,81317"
 
   if Hardware::CPU.intel?
-    sha256 "b6b11cb1d9ed2ccd231bdbd86e809777d83b2a1e7307ed4fa02e676ebda9c756"
+    sha256 "c43b43b8a24165df9ac96c7072782d9b283d63df3963237f94ab9fc494fa6d55"
   else
-    sha256 "56470c5ab594057371b7b46a584a537cefd9301701544209ae7cc9c335ffaa2a"
+    sha256 "186a77b9ff2958253c5aad07db0e00e12864c492a6aaa653744401182cd94138"
   end
 
   url "https://desktop.docker.com/mac/main/#{arch}/#{version.csv.second}/Docker.dmg"
@@ -33,15 +33,15 @@ cask "docker" do
   ]
 
   app "Docker.app"
-  binary "#{appdir}/Docker.app/Contents/Resources/etc/docker.bash-completion",
+  binary "#{appdir}/Docker.app/Contents/Resources/etc/docker",
          target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/docker"
   binary "#{appdir}/Docker.app/Contents/Resources/etc/docker-compose.bash-completion",
          target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/docker-compose"
-  binary "#{appdir}/Docker.app/Contents/Resources/etc/docker.zsh-completion",
+  binary "#{appdir}/Docker.app/Contents/Resources/etc/_docker",
          target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_docker"
   binary "#{appdir}/Docker.app/Contents/Resources/etc/docker-compose.zsh-completion",
          target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_docker_compose"
-  binary "#{appdir}/Docker.app/Contents/Resources/etc/docker.fish-completion",
+  binary "#{appdir}/Docker.app/Contents/Resources/etc/docker.fish",
          target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/docker.fish"
   binary "#{appdir}/Docker.app/Contents/Resources/etc/docker-compose.fish-completion",
          target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/docker-compose.fish"
@@ -61,6 +61,12 @@ cask "docker" do
     "/usr/local/bin/kubectl",
     "/usr/local/bin/notary",
     "/usr/local/bin/vpnkit",
+    "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_docker",
+    "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_docker_compose",
+    "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/docker.fish",
+    "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/docker-compose.fish",
+    "#{HOMEBREW_PREFIX}/etc/bash_completion.d/docker",
+    "#{HOMEBREW_PREFIX}/etc/bash_completion.d/docker-compose",
   ],
             launchctl: [
               "com.docker.helper",

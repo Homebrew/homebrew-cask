@@ -1,15 +1,5 @@
 cask "cocktail" do
-  if MacOS.version <= :yosemite
-    version "8.9.2"
-    sha256 "acc7d191313fa0eb4109ae56f62f73e7ed6685f7d7d438d5138b85d68e40edd8"
-
-    url "https://www.maintain.se/downloads/sparkle/yosemite/Cocktail_#{version}.zip"
-
-    livecheck do
-      url "https://www.maintain.se/downloads/sparkle/yosemite/yosemite.xml"
-      strategy :sparkle
-    end
-  elsif MacOS.version <= :el_capitan
+  if MacOS.version <= :el_capitan
     version "9.7"
     sha256 "ca6b4a264ca60a08ff45761f82b0b6161cbe3412bd6cbeedd5dbecebc8d26712"
 
@@ -70,8 +60,8 @@ cask "cocktail" do
       regex(/macOS\s*11(?:\.\d+)*.*?(\d+(?:\.\d+)+)/i)
     end
   else
-    version "15.3.1"
-    sha256 "b7cd93577ebad23492b398884ad1fa98a66374a4406604127f7a87f658b5334d"
+    version "15.3.2"
+    sha256 "68691897c71f007411d0c6f376b93b54a708382d3ee9a9565e7be7d3c15b8d07"
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}ME.dmg"
 

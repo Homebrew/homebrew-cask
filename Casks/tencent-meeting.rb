@@ -2,11 +2,11 @@ cask "tencent-meeting" do
   arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
 
   if Hardware::CPU.intel?
-    version "3.7.8.428,1429a132028e21c73ae97dff10ccebbd"
-    sha256 "f7f591b947f3b8861ae5ab5319a18699c10f0b000bcc4a3ccb14bdd14c3c7713"
+    version "3.8.6.474,52ef4845fed86a9bbc514f03fd1fa3da"
+    sha256 "d3a165e01e2af3fb8c36874155a9cf55fc5c2572cb6ae4adb252046f01c7515f"
   else
-    version "3.7.8.428,b554ca7731015ff9819dd9090a36aea4"
-    sha256 "490c6ddc2c09822f6c043a2f1bd45b21c160606bf5acddd947a649a43f83108d"
+    version "3.8.6.474,6bcbdea6aced8739f04edbb90cf4a9a7"
+    sha256 "8416bc532ffc9e904124ba99472aa71e73ec3a675a5be91663fbb4e516b3b2a1"
   end
 
   url "https://updatecdn.meeting.qq.com/cos/#{version.csv.second}/TencentMeeting_0300000000_#{version.csv.first}.publish.#{arch}.dmg",
@@ -17,10 +17,6 @@ cask "tencent-meeting" do
   homepage "https://meeting.tencent.com/"
 
   livecheck do
-    # curl -H 'Content-Type: application/json' \
-    #   --data-binary \
-    #   '[{"instance":"mac","type":"0300000000"},{"instance":"mac_arm64","type":"0300000000"}]' \
-    #   https://meeting.tencent.com/wemeet-webapi/v2/config/query-download-info
     skip "No version information available"
   end
 

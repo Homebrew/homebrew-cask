@@ -14,9 +14,9 @@ cask "sonic3air" do
   end
 
   app "Sonic 3 AIR.app"
-  artifact "Manual.pdf", target: "#{ENV["HOME"]}/Library/Application Support/sonic3air/Manual.pdf"
-  artifact "doc", target: "#{ENV["HOME"]}/Library/Application Support/sonic3air/doc"
-  artifact "bonus", target: "#{ENV["HOME"]}/Library/Application Support/sonic3air/bonus"
+  artifact "Manual.pdf", target: "#{Dir.home}/Library/Application Support/sonic3air/Manual.pdf"
+  artifact "doc", target: "#{Dir.home}/Library/Application Support/sonic3air/doc"
+  artifact "bonus", target: "#{Dir.home}/Library/Application Support/sonic3air/bonus"
 
   zap trash: "~/Library/Application Support/sonic3air"
 end

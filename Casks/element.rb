@@ -1,6 +1,6 @@
 cask "element" do
-  version "1.10.13"
-  sha256 "dc20902fc96d9e245bc8420670d5badc367433ec3be04837885505850394f5cd"
+  version "1.10.15"
+  sha256 "1d9c1c60839f63d029e5583b0ba69647a26b7c7d18d932f68fafdf2310e26999"
 
   url "https://packages.riot.im/desktop/install/macos/Element-#{version}-universal.dmg",
       verified: "packages.riot.im/desktop/"
@@ -9,8 +9,8 @@ cask "element" do
   homepage "https://element.io/get-started"
 
   livecheck do
-    url "https://github.com/vector-im/riot-desktop"
-    strategy :github_latest
+    url "https://packages.riot.im/desktop/install/macos"
+    regex(/Element[._-]\(?(\d+(?:\.\d+)*)[._-]universal\.dmg/i)
   end
 
   auto_updates true

@@ -1,12 +1,12 @@
 cask "wireshark" do
   url_arch, livecheck_arch = Hardware::CPU.intel? ? ["Intel", "x86-"] : ["Arm", "arm"]
 
-  version "3.6.5"
+  version "3.6.6"
 
   if Hardware::CPU.intel?
-    sha256 "585f2ac9eea45c69384f700bfb8a6d009fab40f43e4ca699fe3018b5161a8db8"
+    sha256 "1ddd2b1fc9a8de008c09c02a2179f4280e8f1ac925a7e1d2ec9b4f0fc41f7614"
   else
-    sha256 "805364720514e8d8938f48bb0c84da4b3ab3e82fdb3d1167a4189ddf8a7801cb"
+    sha256 "f6c0a0b122828a3b3bf6fbe7aa857e629649e1396d79a188ceba052270880e0b"
   end
 
   url "https://2.na.dl.wireshark.org/osx/Wireshark%20#{version}%20#{url_arch}%2064.dmg"

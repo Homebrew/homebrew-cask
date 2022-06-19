@@ -9,7 +9,7 @@ cask "nanosaur" do
   homepage "https://pangeasoft.net/nano/"
 
   app "Nanosaur.app"
-  artifact "Documentation", target: "#{ENV["HOME"]}/Library/Application Support/Nanosaur"
+  artifact "Documentation", target: "#{Dir.home}/Library/Application Support/Nanosaur"
 
   zap trash: "~/Library/Preferences/Nanosaur"
 end

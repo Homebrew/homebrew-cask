@@ -7,6 +7,11 @@ cask "deviceinfo" do
   desc "Display device information"
   homepage "https://github.com/CoreNion/DeviceInfo/"
 
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
+
   depends_on macos: ">= :sierra"
 
   app "DeviceInfo.app"

@@ -9,7 +9,7 @@ cask "megazeux" do
   homepage "https://www.digitalmzx.com/"
 
   app "MegaZeux.app"
-  artifact "Documentation", target: "#{ENV["HOME"]}/Library/Application Support/MegaZeux/Documentation"
+  artifact "Documentation", target: "#{Dir.home}/Library/Application Support/MegaZeux/Documentation"
 
   zap trash: [
     "~/.megazeux-config",

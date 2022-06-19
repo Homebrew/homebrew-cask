@@ -8,8 +8,8 @@ cask "mplab-xc8" do
   homepage "https://www.microchip.com/mplab/compilers"
 
   livecheck do
-    url "https://www.microchip.com/mplabxc8osx"
-    strategy :header_match
+    url "https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers"
+    regex(%r{href=.*?downloads/en/DeviceDoc/xc8[._-]v?(\d+(?:\.\d+)+)-full-install-macos-x64-installer\.dmg}i)
   end
 
   installer script: {

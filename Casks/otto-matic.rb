@@ -9,7 +9,7 @@ cask "otto-matic" do
   homepage "https://pangeasoft.net/otto/"
 
   app "Otto Matic.app"
-  artifact "Documentation", target: "#{ENV["HOME"]}/Library/Application Support/OttoMatic"
+  artifact "Documentation", target: "#{Dir.home}/Library/Application Support/OttoMatic"
 
   zap trash: [
     "~/Library/Preferences/OttoMatic",

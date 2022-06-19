@@ -9,7 +9,7 @@ cask "bugdom" do
   homepage "https://pangeasoft.net/bug/"
 
   app "Bugdom.app"
-  artifact "Documentation", target: "#{ENV["HOME"]}/Library/Application Support/Bugdom"
+  artifact "Documentation", target: "#{Dir.home}/Library/Application Support/Bugdom"
 
   zap trash: [
     "~/Library/Preferences/Bugdom",

@@ -12,9 +12,9 @@ cask "contour" do
   binary "#{appdir}/Contour.app/Contents/Resources/shell-integration.zsh",
          target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_contour"
   binary "#{appdir}/Contour.app/Contents/Resources/terminfo/63/contour",
-         target: "#{ENV.fetch("TERMINFO", "#{ENV["HOME"]}/.terminfo")}/63/contour"
+         target: "#{ENV.fetch("TERMINFO", "#{Dir.home}/.terminfo")}/63/contour"
   binary "#{appdir}/Contour.app/Contents/Resources/terminfo/63/contour-latest",
-         target: "#{ENV.fetch("TERMINFO", "#{ENV["HOME"]}/.terminfo")}/63/contour-latest"
+         target: "#{ENV.fetch("TERMINFO", "#{Dir.home}/.terminfo")}/63/contour-latest"
 
   zap trash: "~/.config/contour"
 end

@@ -1,6 +1,6 @@
 cask "baidunetdisk" do
-  version "4.9.1"
-  sha256 "00618715aacbbf3e56a438411dd319ab26d5ba853d002567bf5627959aa1a40e"
+  version "4.10.1"
+  sha256 "f6608a58a42890c5d74175a3594330d70644484efaffad59f989199610eaf01f"
 
   url "https://issuepcdn.baidupcs.com/issue/netdisk/MACguanjia/BaiduNetdisk_mac_#{version}.dmg",
       verified: "issuepcdn.baidupcs.com/issue/netdisk/MACguanjia/"
@@ -15,7 +15,6 @@ cask "baidunetdisk" do
   end
 
   auto_updates true
-  depends_on macos: ">= :yosemite"
 
   app "BaiduNetdisk_mac.app"
 
