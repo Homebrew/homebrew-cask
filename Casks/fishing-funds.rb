@@ -7,7 +7,6 @@ cask "fishing-funds" do
     sha256 "a955fd666ca33a4e79f9cc96ee715587785c11f5b07266cdb00878b596511a85"
   else
     sha256 "94a9c1962a09b8df6c3fd6686f6d21597d4de230cd047f3ff37ee6a21e58124c"
-
   end
 
   url "https://github.com/1zilc/fishing-funds/releases/download/v#{version}/Fishing-Funds-#{version}#{arch}.dmg",
