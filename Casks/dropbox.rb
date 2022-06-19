@@ -53,7 +53,7 @@ cask "dropbox" do
     "~/Library/HTTPStorages/com.dropbox.DropboxMacUpdate",
     "~/Library/Group Containers/com.dropbox.client.crashpad",
     "~/Library/Group Containers/com.getdropbox.dropbox.garcon",
-    "~/Library/Group Containers/G7HH3F8CAK.com.getdropbox.dropbox.sync",
+    "~/Library/Group Containers/*.com.getdropbox.dropbox.sync",
     "~/Library/LaunchAgents/com.dropbox.DropboxMacUpdate.agent.plist",
     "~/Library/Logs/Dropbox_debug.log",
     "~/Library/Preferences/com.dropbox.DropboxMacUpdate.plist",
