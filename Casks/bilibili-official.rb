@@ -10,7 +10,7 @@ cask "bilibili-official" do
   homepage "https://app.bilibili.com/"
 
   livecheck do
-    url "http://api.bilibili.com/x/elec-frontend/update/latest-mac.yml"
+    url "http://api.bilibili.com/x/elec-frontend/update/latest.yml"
     strategy :electron_builder
   end
 
