@@ -7,6 +7,11 @@ cask "redis-pro" do
   desc "Redis desktop"
   homepage "https://github.com/cmushroom/redis-pro"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "redis-pro.app"
 
   zap trash: [
