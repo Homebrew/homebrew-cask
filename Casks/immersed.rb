@@ -1,5 +1,5 @@
 cask "immersed" do
-  version "16.5,138"
+  version "16.6,139"
   sha256 :no_check
 
   url "https://immersed.com/dl/Immersed.dmg"
