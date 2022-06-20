@@ -1,11 +1,11 @@
 cask "ableton-live-suite" do
   arch = MacOS.version >= :mojave ? "universal" : "intel"
-  version "11.1.5"
+  version "11.1.6"
 
   if MacOS.version >= :mojave
-    sha256 "bbce5e7a5c5632f88fb319df2daaf7ba1b9b0a1af0e94f60ee21d9dd059bf1a7"
+    sha256 "41e2fc386c47e395bc2cdf397238ac3cb2fa0ace9bb1cbb18bfa3358778dfdc1"
   else
-    sha256 "0e1779d22c087993a4e5f11f9f2a83a429dccfafa92c5e7aa05c87219de39c90"
+    sha256 "ae6f2c978009d7baa86b53d41be8a5eafda27bcb3a0bf102ebff629b4ebe091f"
   end
 
   url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_suite_#{version}_#{arch}.dmg"
