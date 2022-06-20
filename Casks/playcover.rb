@@ -2,8 +2,7 @@ cask "playcover" do
   if MacOS.version <= :big_sur
     version "0.9.2"
     sha256 "cbcc51a37079219d171ac7eb41eb51c7469192628db5db2359670ee25831d87a"
-    url "https://github.com/iVoider/PlayCover/releases/download/#{version}/PlayCover.#{version}.zip",
-        verified: "github.com/iVoider/PlayCover/"
+    url "https://github.com/iVoider/PlayCover/releases/download/1.0.1/PlayCover1.0.1.dmg"
 
     livecheck do
       skip "Last supported version for Big Sur"
