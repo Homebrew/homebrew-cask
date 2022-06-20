@@ -13,11 +13,12 @@ cask "dixa" do
     strategy :github_latest
   end
 
+  app "Dixa.app"
+
   zap trash: [
     "~/Library/Application Support/Dixa",
     "~/Library/Logs/Dixa",
     "~/Library/Preferences/dixa.plist",
     "~/Library/Saved Application State/dixa.savedState",
   ]
-  app "Dixa.app"
 end
