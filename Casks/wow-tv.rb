@@ -15,7 +15,7 @@ cask "wow-tv" do
     end
   end
 
-  app "Sky Ticket.app"
+  app "WOW.app"
 
   zap trash: [
     "~/Library/Logs/WOW",
