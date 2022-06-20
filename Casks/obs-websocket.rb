@@ -7,6 +7,11 @@ cask "obs-websocket" do
   desc "Remote-control OBS Studio through WebSockets"
   homepage "https://github.com/Palakis/obs-websocket"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   pkg "obs-websocket-#{version}-macOS.pkg"
 
   uninstall pkgutil: "fr.palakis.obs-websocket"
