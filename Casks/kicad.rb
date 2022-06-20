@@ -1,6 +1,6 @@
 cask "kicad" do
   version "6.0.6-0"
-  sha256 "e2ca1de4c6103ed6abfae3778bc5e591708c863ed6f7a3f97b7434f15bcc712b"
+  sha256 "3b57fcf07a4e1b835f1762ade88813db5858f5a2d931ea95f5f6da988edf7064"
 
   url "https://kicad-downloads.s3.cern.ch/osx/stable/kicad-unified-#{version}.dmg",
       verified: "kicad-downloads.s3.cern.ch/"
