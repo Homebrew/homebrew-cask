@@ -5,7 +5,7 @@ cask "miaoyan" do
   url "https://github.com/tw93/MiaoYan/releases/download/V#{version}/MiaoYan.dmg",
       verified: "github.com/tw93/MiaoYan"
   name "MiaoYan"
-  desc "⛷ Lightweight Markdown app to help you write great sentences"
+  desc "Markdown editor"
   homepage "https://miaoyan.app/"
 
   app "MiaoYan.app"
