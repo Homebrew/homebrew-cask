@@ -5,7 +5,7 @@ cask "dixa" do
   url "https://github.com/dixahq/dixa-desktop-app-release/releases/download/v#{version}/dixa-#{version}.dmg",
       verified: "github.com/dixahq/dixa-desktop-app-release"
   name "Dixa"
-  desc "Software-as-a-service platform born to unifiy customer service channels in one interface"
+  desc "Customer service platform"
   homepage "https://dixa.com/"
 
   livecheck do
