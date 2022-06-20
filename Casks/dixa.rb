@@ -14,12 +14,10 @@ cask "dixa" do
   end
 
   zap trash: [
-  "~/Library/Application Support/Dixa",
-  "~/Library/Logs/Dixa",
-  "~/Library/Preferences/dixa.plist",
-  "~/Library/Saved Application State/dixa.savedState",
-]
-
-
+    "~/Library/Application Support/Dixa",
+    "~/Library/Logs/Dixa",
+    "~/Library/Preferences/dixa.plist",
+    "~/Library/Saved Application State/dixa.savedState",
+  ]
   app "Dixa.app"
 end
