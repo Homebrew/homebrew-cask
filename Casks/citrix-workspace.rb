@@ -1,5 +1,5 @@
 cask "citrix-workspace" do
-  version "22.04.0.44,2204"
+  version "22.06.0.39,2206"
   sha256 :no_check
 
   url "https://downloadplugins.citrix.com/Mac/CitrixWorkspaceApp.dmg"
