@@ -14,7 +14,8 @@ cask "tailscale" do
 
   app "Tailscale.app"
 
-  uninstall login_item: "Tailscale"
+  uninstall login_item: "Tailscale",
+            quit: "io.tailscale.ipn.macsys"
 
   zap trash: [
     "Library/Tailscale",
