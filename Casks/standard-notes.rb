@@ -9,8 +9,8 @@ cask "standard-notes" do
     sha256 "0957ea6f00124dba2edf4ef427343e917c5f1e96f86d915a4c65aef763868127"
   end
 
-  url "https://github.com/standardnotes/desktop/releases/download/v#{version}/Standard-Notes-#{version}-mac-#{arch}.zip",
-      verified: "github.com/standardnotes/desktop/"
+  url "https://github.com/standardnotes/app/releases/download/v#{version}/Standard-Notes-#{version}-mac-#{arch}.zip",
+      verified: "github.com/standardnotes/app/"
   name "Standard Notes"
   desc "Free, open-source, and completely encrypted notes app"
   homepage "https://standardnotes.org/"
