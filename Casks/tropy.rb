@@ -1,12 +1,12 @@
 cask "tropy" do
   arch = Hardware::CPU.intel? ? "" : "-arm64"
 
-  version "1.11.1"
+  version "1.12.0"
 
   if Hardware::CPU.intel?
-    sha256 "4351ebdf5284f6f4f3d5707f1ba19659cd12c291d70d031b81182f6a30d2819d"
+    sha256 "ef8e62028cd991ed8e668797035286f4e5220190a9d70591fe7e853be90b862d"
   else
-    sha256 "289b8e92f03d5917c72d56a2f5b021233e42f4ed50ab0d9c6464d98bb8a5514d"
+    sha256 "d730a8747596a1a6d0c869cadbdc3bdff5ed371e05b205fad6b397dc5a4b872f"
   end
 
   url "https://github.com/tropy/tropy/releases/download/v#{version}/tropy-#{version}#{arch}.dmg",
