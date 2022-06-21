@@ -16,7 +16,7 @@ cask "manictime" do
 
   livecheck do
     url "https://www.manictime.com/mac/download"
-    regex(/manictime[._-]v?(\d+(?:\.\d+)+).*?\.dmg/i)
+    regex(/manictime[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
   depends_on macos: ">= :mojave"
