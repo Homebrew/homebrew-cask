@@ -8,6 +8,11 @@ cask "mysteriumvpn" do
   desc "VPN client"
   homepage "https://www.mysteriumvpn.com/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "MysteriumVPN.app"
 
   zap trash: [
