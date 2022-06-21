@@ -7,6 +7,10 @@ cask "betterdummy" do
   desc "Deprecated: Now BetterDisplay"
   homepage "https://github.com/waydabber/BetterDummy"
 
+  livecheck do
+    skip "Deprecated - migrate to betterdisplay cask"
+  end
+
   auto_updates true
 
   app "BetterDummy.app"
