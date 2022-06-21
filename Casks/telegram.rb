@@ -27,6 +27,8 @@ cask "telegram" do
     "~/Library/Application Scripts/*.ru.keepcoder.Telegram.TelegramShare",
     "~/Library/Application Scripts/ru.keepcoder.Telegram",
     "~/Library/Application Scripts/ru.keepcoder.Telegram.TelegramShare",
+    "~/Library/Application Support/ru.keepcoder.Telegram",
+    "~/Library/Caches/com.plausiblelabs.crashreporter.data/ru.keepcoder.Telegram",
     "~/Library/Caches/ru.keepcoder.Telegram",
     "~/Library/Containers/ru.keepcoder.Telegram",
     "~/Library/Containers/ru.keepcoder.Telegram.TelegramShare",
