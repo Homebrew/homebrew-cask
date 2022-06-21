@@ -1,12 +1,12 @@
 cask "dropbox-capture" do
   arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
 
-  version "78.0.2"
+  version "79.0.7"
 
   if Hardware::CPU.intel?
-    sha256 "de8d64f5a3c3057796d23f9e1804ab9495f451d9b767fa0359cd8663670554a9"
+    sha256 "3eabe7eb12494cba7f16820485a53f8b94ca6d4eac4c301798839e0f1c2ac4df"
   else
-    sha256 "2fe7b0e743cf706d88c2045b8d77624d1bdc4d86229aaa1eb7118646b8740aa1"
+    sha256 "98ea3e15953808a51c8873afd6dd81e8f6030308e0e2047e07810d5822455584"
   end
 
   url "https://edge.dropboxstatic.com/dbx-releng/products/dropbox-capture/#{version}/mac.#{arch}/Dropbox_Capture.dmg",
