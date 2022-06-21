@@ -1,8 +1,8 @@
 cask "ui" do
   version "0.52.1,fc1b9e29d90248a4b4ebe7e3b53dec8a"
-  sha256 "1ddf876c2701669415ab1c634feee336e2825a876a20c5f69835c57d0b09a48b"
+  sha256 "1ddf876c2701669415ab1c634feee336e2825a876a20c5f69835c57d0b09a48b,ecae"
 
-  url "https://fw-download.ubnt.com/data/uid-ui-desktop-app/ecae-macOS-#{version.csv.first}-#{version.csv.second}.pkg",
+  url "https://fw-download.ubnt.com/data/uid-ui-desktop-app/#{version.csv.third}-macOS-#{version.csv.first}-#{version.csv.second}.pkg",
       verified: "fw-download.ubnt.com/data/uid-ui-desktop-app/"
   name "UI Desktop"
   desc "Corporate Wi-Fi, VPN, SSO, and HR Application"
@@ -14,7 +14,7 @@ cask "ui" do
 
   depends_on macos: ">= :mojave"
 
-  pkg "ecae-macOS-#{version.csv.first}-#{version.csv.second}.pkg"
+  pkg "#{version.csv.third}-macOS-#{version.csv.first}-#{version.csv.second}.pkg"
 
   uninstall pkgutil:   [
     "com.ui.uid.desktop",
