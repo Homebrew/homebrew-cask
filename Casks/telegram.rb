@@ -1,6 +1,6 @@
 cask "telegram" do
-  version "8.8,232641"
-  sha256 "f6ce8e610d17814e5691ae032428b791a6d4266f37a061cb7d555aa7cdd063eb"
+  version "8.8,232668"
+  sha256 "890983dd17f4435c8534ac7a34f35960d7ba95b33d54914c4afda3e99f273772"
 
   url "https://osx.telegram.org/updates/Telegram-#{version.csv.first}.#{version.csv.second}.app.zip"
   name "Telegram for macOS"
@@ -27,6 +27,8 @@ cask "telegram" do
     "~/Library/Application Scripts/*.ru.keepcoder.Telegram.TelegramShare",
     "~/Library/Application Scripts/ru.keepcoder.Telegram",
     "~/Library/Application Scripts/ru.keepcoder.Telegram.TelegramShare",
+    "~/Library/Application Support/ru.keepcoder.Telegram",
+    "~/Library/Caches/com.plausiblelabs.crashreporter.data/ru.keepcoder.Telegram",
     "~/Library/Caches/ru.keepcoder.Telegram",
     "~/Library/Containers/ru.keepcoder.Telegram",
     "~/Library/Containers/ru.keepcoder.Telegram.TelegramShare",
