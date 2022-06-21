@@ -4,13 +4,8 @@ cask "betterdummy" do
 
   url "https://github.com/waydabber/BetterDummy/releases/download/v#{version}/BetterDummy-v#{version}.dmg"
   name "betterdummy"
-  desc "Dummy Display for Apple Silicon Macs to achieve custom resolutions"
+  desc "Deprecated: Now BetterDisplay"
   homepage "https://github.com/waydabber/BetterDummy"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 
   auto_updates true
 
