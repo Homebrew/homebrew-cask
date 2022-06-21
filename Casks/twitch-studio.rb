@@ -1,5 +1,5 @@
 cask "twitch-studio" do
-  version "0.108.4"
+  version "0.109.9"
   sha256 :no_check
 
   url "https://live.release.spotlight.twitchsvc.net/installer/mac/twitchstudio.dmg",
