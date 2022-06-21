@@ -1,6 +1,6 @@
 cask "atok" do
-  version "32.4"
-  sha256 "ba99f2565222f1478ad6242d2f1f942b75a12257cbead95d09b83d17b13823b5"
+  version "32.5"
+  sha256 "0b30a38812406623ea2ce5371b59f4dc897358a2210079c2512c597e768ad421"
 
   url "https://gate.justsystems.com/download/atok/ut/mac/at#{version.dots_to_underscores}.dmg"
   name "ATOK"
