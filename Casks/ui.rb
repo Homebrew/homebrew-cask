@@ -18,11 +18,17 @@ cask "ui" do
 
   uninstall pkgutil:   [
     "com.ui.uid.desktop",
+    "com.ui.uid.mac",
   ],
 
             launchctl: [
               "application.com.ui.uid.desktop.25686722.25686727",
               "com.ui.uid.desktop.startup",
+              "com.ui.uid.desktop.privilegedtool",
+            ],
+
+            quit:      [
+              "com.ui.uid.desktop",
             ]
 
   zap trash: [
