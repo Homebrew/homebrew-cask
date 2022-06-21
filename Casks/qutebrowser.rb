@@ -20,11 +20,10 @@ cask "qutebrowser" do
     EOS
   end
 
-  uninstall rmdir: "~/.qutebrowser"
-
-  zap trash: [
-    "~/Library/Application Support/qutebrowser",
-    "~/Library/Caches/qutebrowser",
-    "~/Library/Preferences/qutebrowser",
-  ]
+  zap rmdir: "~/.qutebrowser",
+      trash: [
+        "~/Library/Application Support/qutebrowser",
+        "~/Library/Caches/qutebrowser",
+        "~/Library/Preferences/qutebrowser",
+      ]
 end
