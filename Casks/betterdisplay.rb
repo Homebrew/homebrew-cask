@@ -4,7 +4,7 @@ cask "betterdisplay" do
 
   url "https://github.com/waydabber/BetterDisplay/releases/download/v#{version}/BetterDisplay-v#{version}.dmg"
   name "BetterDisplay"
-  desc "Display Management, Custom Resolutions, Brightness Adjustment and Dummy Displays for Macs (formerly BetterDummy)"
+  desc "Management, Custom Resolution, Brightness & Dummy Displays (fka BetterDummy)"
   homepage "https://github.com/waydabber/BetterDisplay"
 
   livecheck do
