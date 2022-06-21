@@ -15,6 +15,11 @@ cask "standard-notes" do
   desc "Free, open-source, and completely encrypted notes app"
   homepage "https://standardnotes.org/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
 
   app "Standard Notes.app"
