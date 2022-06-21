@@ -8,12 +8,10 @@ cask "pym-player" do
   homepage "https://pym.uce.pl/pym-player/"
 
   livecheck do
-    url :homepage
-    strategy :page_match do |page|
-      match = page.match(/Wersja:.*?\s*(\d+(?:\.\d+)*).*?\((\d+)\)/i)
-      next if match.blank?
-
-      "#{match[1]},8A#{match[2]}"
+    url "https://pym.uce.pl/downloads/"
+    regex(/href=.*?PYMPlayer[._-]?v?([^.]+)\.dmg.*v[^\d]*(\d+(?:\.\d+)+)["< ]/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match.second},#{match.first}" }
     end
   end
 
