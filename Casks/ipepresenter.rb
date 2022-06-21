@@ -8,5 +8,10 @@ cask "ipepresenter" do
   desc "Make presentations from PDFs"
   homepage "https://ipepresenter.otfried.org/"
 
+  livecheck do
+    url :homepage
+    regex(/href=.*?ipepresenter[._-](\d+(?:\.\d+)+)[._-]mac\.dmg/i)
+  end
+
   app "IpePresenter.app"
 end
