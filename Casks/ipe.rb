@@ -8,6 +8,11 @@ cask "ipe" do
   desc "Drawing editor for creating figures in PDF format"
   homepage "https://ipe.otfried.org/"
 
+  livecheck do
+    url :homepage
+    regex(/href=.*?ipe[._-](\d+(?:\.\d+)+)[._-]mac\.dmg/i)
+  end
+
   app "Ipe.app"
 
   zap trash: [
