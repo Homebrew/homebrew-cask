@@ -20,16 +20,12 @@ cask "ui" do
     "com.ui.uid.desktop",
     "com.ui.uid.mac",
   ],
-
             launchctl: [
               "application.com.ui.uid.desktop.25686722.25686727",
-              "com.ui.uid.desktop.startup",
               "com.ui.uid.desktop.privilegedtool",
+              "com.ui.uid.desktop.startup",
             ],
-
-            quit:      [
-              "com.ui.uid.desktop",
-            ]
+            quit:      "com.ui.uid.desktop"
 
   zap trash: [
     "~/Library/Application Support/com.ui.uid.desktop/",
