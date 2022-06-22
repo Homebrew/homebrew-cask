@@ -16,9 +16,8 @@ cask "standard-notes" do
   homepage "https://standardnotes.org/"
 
   livecheck do
-    url "https://github.com/standardnotes/app/releases/"
-    strategy :page_match
-    regex(/standard[._-]notes[._-]v?(\d+(?:\.\d+)+)[._-]mac[._-]#{arch}.zip/i)
+    url "https://github.com/standardnotes/app/releases/latest"
+    strategy :header_match
   end
 
   auto_updates true
