@@ -2,8 +2,8 @@ cask "ngrok" do
   arch = Hardware::CPU.intel? ? "amd64" : "arm64"
 
   if Hardware::CPU.intel?
-    version "3.0.4,8TxeB1dzvEz,a"
-    sha256 "487241b21e81a27268e48c4a2a97e48e92ad81ce7b07ba4fa643d40d80d46248"
+    version "3.0.5,kDrytDaoX6f,a"
+    sha256 "c93d7db70be016558d8f3147a39d08e2120ae1c974cd65a60c2ed4cc42bfe129"
   else
     version "3.0.5,4TgG8D5ExeX,a"
     sha256 "4ea876c44fe8f0bf98add52054454e6c7effba7d616dd93bb34038fa3d2fbf8a"
