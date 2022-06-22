@@ -1,11 +1,16 @@
 cask "dmg-canvas" do
-  version "3.0"
+  version "3.0.17,300026"
   sha256 :no_check
 
-  url "https://www.araelium.com/dmgcanvas/downloads/DMGCanvas.dmg"
+  url "https://arweb-assets.s3.amazonaws.com/downloads/dmgcanvas/DMGCanvas.dmg"
   name "DMG Canvas"
   desc "Stylized disk images made easy"
   homepage "https://www.araelium.com/dmgcanvas"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   app "DMG Canvas.app"
 end
