@@ -1,4 +1,4 @@
-cask "wow-tv" do
+cask "wow" do
   version "8.11.0"
   sha256 "c5bd58ad0c31452fb28948e2c7afe49536602e4b5c06331ec073004d2d8f328a"
 
