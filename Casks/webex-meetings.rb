@@ -13,8 +13,8 @@ cask "webex-meetings" do
   homepage "https://www.webex.com/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://help.webex.com/en-us/article/mqkve8/Webex-App-|-Release-notes"
+    regex(/Mac[._-—](\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
