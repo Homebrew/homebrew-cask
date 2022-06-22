@@ -9,7 +9,7 @@ cask "etrecheckpro" do
 
   livecheck do
     url "https://etrecheck.com/details"
-    regex(/Changes\sin\sEtreCheckPro\sversion\s(\d+(?:\.\d+)+)/i)
+    regex(/EtreCheckPro\sversion\s(\d+(?:\.\d+)+)/i)
   end
 
   app "EtreCheckPro.app"
