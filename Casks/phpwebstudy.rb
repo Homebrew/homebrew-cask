@@ -1,6 +1,6 @@
 cask "phpwebstudy" do
-  version "1.0.19"
-  sha256 "1d16ae84284f5c6757f843fb5afa62283bdfe6170fca21f5b76ccfdbdf650dee"
+  version "1.0.20"
+  sha256 "6e7489167c3dd32431e017c622a97aa6f424a9aacdfd80281366d2a944a9df54"
 
   url "https://github.com/xpf0000/PhpWebStudy/releases/download/v#{version}/PhpWebStudy-#{version}-universal-mac.zip",
       verified: "github.com/xpf0000/PhpWebStudy/"
