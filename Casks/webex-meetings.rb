@@ -20,8 +20,6 @@ cask "webex-meetings" do
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
-  pkg "Cisco_Webex_Meetings.pkg"
-
   uninstall quit:      [
     "com.cisco.webex.webexmta",
     "com.cisco.webexmeetingsapp",
