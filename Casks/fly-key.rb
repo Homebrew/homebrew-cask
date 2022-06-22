@@ -4,13 +4,12 @@ cask "fly-key" do
 
   url "https://cdn.better365.cn/FlyKey/FlyKey#{version}.dmg"
   name "FlyKey"
-  desc "Show Shortcuts in One Click, Superb Shortcuts Tips"
+  desc "One-click display of shortcuts"
   homepage "https://www.better365.cn/FlyKey.html"
 
   livecheck do
-    # url "https://www.better365.cn/FlyKey.html"
-    # regex(/href="https\:\/\/cdn\.better365\.cn\/FlyKey\/FlyKey(\d+(?:\.\d+)+\w*)\.dmg"/i)
-    skip "No version information available"
+    url "https://www.better365.cn/FlyKey.xml"
+    strategy :sparkle, &:short_version
   end
 
   pkg "FlyKey#{version}.pkg"
