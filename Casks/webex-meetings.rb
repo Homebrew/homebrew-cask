@@ -1,11 +1,11 @@
 cask "webex-meetings" do
-  version "2206.0908.4207.1"
+  version "42.6.0.22565"
   sha256 :no_check
 
   if Hardware::CPU.intel?
-    url "https://akamaicdn.webex.com/client/webexapp.dmg"
+    url "https://binaries.webex.com/WebexTeamsDesktop-MACOS-Gold/Webex.dmg"
   else
-    url "https://akamaicdn.webex.com/client/Cisco_Webex_Meetings.pkg"
+    url "https://binaries.webex.com/WebexDesktop-MACOS-Apple-Silicon-Gold/Webex.dmg"
   end
 
   name "Webex Meetings"
@@ -18,6 +18,7 @@ cask "webex-meetings" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   pkg "Cisco_Webex_Meetings.pkg"
 
