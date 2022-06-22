@@ -5,7 +5,7 @@ cask "ableton-live-standard" do
   if MacOS.version >= :mojave
     sha256 "de8cf6049d6457f435b8c0a4908e4ba698aa9f49b60eb85366fd41a805af94fd"
   else
-    sha256 "1da2aeb846cd75c7ee7a98a62b61eaf6cf4f8adddd1dec0b9abf392b4ab23f44"
+    sha256 "51bffe5e3ab58c943cabbd605964e74c26535e9b993a3cb76b7a7d230150ec75"
   end
 
   url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_standard_#{version}_#{arch}.dmg"
