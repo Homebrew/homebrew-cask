@@ -26,6 +26,7 @@ cask "citrix-workspace" do
     "com.citrix.ctxusbd",
     "com.citrix.ctxworkspaceupdater",
     "com.citrix.ReceiverHelper",
+    "com.citrix.safariadapter",
     "com.citrix.ServiceRecords",
   ],
             quit:      [
