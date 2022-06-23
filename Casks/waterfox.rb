@@ -1,12 +1,12 @@
 cask "waterfox" do
   arch = Hardware::CPU.intel? ? "Setup" : "ARM.Setup"
 
-  version "4.1.2.1"
+  version "4.1.3"
 
   if Hardware::CPU.intel?
-    sha256 "8b67aac3f5dba133bbfe823243563d38b5a19fd2b030521ba2f100e155fadd9c"
+    sha256 "c077e9377c75d86d20ce85523e6557d3550730a3995c08395cb279b20152d86f"
   else
-    sha256 "8757ae18628b77e6c5d2fa12d33c5e550fee3e35a1006e381806c87467bdfb12"
+    sha256 "88cce369851a02ee76585c124a3078f8f523968aeb95a5ff19506e892cab1f64"
   end
 
   url "https://github.com/WaterfoxCo/Waterfox/releases/download/G#{version}/Waterfox.G#{version}.#{arch}.dmg", verified: "github.com/WaterfoxCo/Waterfox/"
