@@ -1,8 +1,9 @@
 cask "remarkable" do
-  version "2.12.2.251"
-  sha256 "9b4c44f6133c9f9f2ecce3fc123a19cf64038a6ec06c68c947751d4cf0553f03"
+  version "2.14.0.607"
+  sha256 "f1861d6706a8fefbad3e6b95cfd6f2b3ac90cde4cf50a7d27d24017515272429"
 
-  url "https://downloads.remarkable.com/desktop/production/mac/reMarkable-#{version}.dmg"
+  url "https://updates-download.cloud.remarkable.engineering/sparkle/reMarkableMacOs/Staging_9fb83f4b-c3d3-4d4d-83ca-8970001ea9a3/39780352/reMarkable-#{version}.dmg",
+      verified: "updates-download.cloud.remarkable.engineering"
   name "Remarkable"
   desc "View, Screen Share, organize, import, and download files to a reMarkable device"
   homepage "https://remarkable.com/"
