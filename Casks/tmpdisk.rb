@@ -4,15 +4,10 @@ cask "tmpdisk" do
 
   url "https://github.com/imothee/tmpdisk/releases/download/v#{version}/TmpDisk.dmg"
   name "TmpDisk"
-  desc "Ram Disk Management App"
+  desc "Ram disk management"
   homepage "https://github.com/imothee/tmpdisk"
-
-  livecheck do
-    url :stable
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
-  end
 
   app "TmpDisk.app"
 
-  zap trash: ["~/Library/Preferences/com.imothee.TmpDisk.plist"]
+  zap trash: "~/Library/Preferences/com.imothee.TmpDisk.plist"
 end
