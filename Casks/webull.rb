@@ -1,12 +1,12 @@
 cask "webull" do
-  dl_arch, livecheck_arch = Hardware::CPU.intel? ? ["us", "qt_mac_global"] : ["usm1", "qt_m1_global"]
+  dl_arch, livecheck_arch = Hardware::CPU.intel? ? ["us", "qt_mac_global"] : ["us_M1", "qt_m1_global"]
 
-  version "5.10.5"
+  version "6.0.0"
 
   if Hardware::CPU.intel?
-    sha256 "ab818bc24ce34d511584e66253dc8fd5f1e74829c2e13320194753ac881f8300"
+    sha256 "12ea140e53148150d990459db08af969d51950673aaf35da8d35e9293c78ff55"
   else
-    sha256 "e777371e5a4207ca45d74939b5d148d8146f8ff53b53961f71dc9468d8ac0e16"
+    sha256 "6217a66348807a612b0afb475fec5288752d232730321bc1442b854e9c5da6c8"
   end
 
   url "https://u1sweb.webullfinance.com/us/desktop/Webull%20Desktop%20#{version}_#{dl_arch}.dmg",
