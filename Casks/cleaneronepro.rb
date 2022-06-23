@@ -21,12 +21,8 @@ cask "cleaneronepro" do
     "/Library/LaunchDaemons/com.trendmicro.TrendCleanerPro.HelperTool.plist",
     "/Library/PrivilegedHelperTools/com.trendmicro.TrendCleanerPro.HelperTool",
   ],
-            launchctl: [
-              "com.trendmicro.TrendCleanerPro.HelperTool",
-            ],
-            quit:      [
-              "com.trendmicro.TrendCleanerPro",
-            ]
+            launchctl: "com.trendmicro.TrendCleanerPro.HelperTool",
+            quit:      "com.trendmicro.TrendCleanerPro"
 
   zap trash: [
     "~/Library/Application Support/com.trendmicro.TrendCleanerPro",
