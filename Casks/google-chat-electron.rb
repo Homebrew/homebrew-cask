@@ -1,12 +1,12 @@
 cask "google-chat-electron" do
   arch = Hardware::CPU.intel? ? "darwin-x64" : "darwin-arm64"
 
-  version "2.16.3"
+  version "2.17.0"
 
   if Hardware::CPU.intel?
-    sha256 "7d7bee2fdad32c6bf9e83e53732e76820757522aa85c685c36205d789e9c5a8a"
+    sha256 "22072ea560d555a198517ed826b5ec055da5fb2237d3e7ef0f7cf27c2eb7aec1"
   else
-    sha256 "3420b0e6fb1f854e34f70514d62c517a5ed5194cbc7ed7be44e134d4d4cfcf8f"
+    sha256 "c0afc381dc583968e193a00e9666606733e062b6b9cda2fff7e3610ac7b59f80"
   end
 
   url "https://github.com/ankurk91/google-chat-electron/releases/download/#{version}/google-chat-electron-#{version}-#{arch}.zip"
