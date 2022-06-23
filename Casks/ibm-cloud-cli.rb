@@ -1,6 +1,6 @@
 cask "ibm-cloud-cli" do
-  version "2.7.0"
-  sha256 "72448c796dcb7e432b0be705b3f998b62e45c29c0da1a1f21bcb8482a29cf666"
+  version "2.8.0"
+  sha256 "12f1ac4b96784503f8f6e3ab13584acde4c43205ad1b47c64a9a1b9dede67c7a"
 
   url "https://download.clis.cloud.ibm.com/ibm-cloud-cli/#{version}/IBM_Cloud_CLI_#{version}.pkg"
   name "IBM Cloud CLI"
