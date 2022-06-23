@@ -1,15 +1,15 @@
 cask "min" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch = Hardware::CPU.intel? ? "x86" : "arm64"
 
-  version "1.24.0"
+  version "1.25.0"
 
   if Hardware::CPU.intel?
-    sha256 "c8238dae0401afe743a2c3080ef852c6bacf9c2a7d832e9c13bcb3d06ea35761"
+    sha256 "0b94b4585dba349f9763a2638ba3f51f3a7937c947a41f846bee8f341ee5dbdc"
   else
-    sha256 "4c72c73214b97edaaac631e38c09096c6b07080145c03fda36bbbd07956dc78e"
+    sha256 "ab78b9d00b360fb600ca3e735fb036426f6fe96e9700e3f3136c81eb9800e449"
   end
 
-  url "https://github.com/minbrowser/min/releases/download/v#{version}/Min-v#{version}-darwin-#{arch}.zip",
+  url "https://github.com/minbrowser/min/releases/download/v#{version}/min-v#{version}-mac-#{arch}.zip",
       verified: "github.com/minbrowser/min/"
   name "Min"
   desc "Minimal browser that protects privacy"
