@@ -1,6 +1,6 @@
 cask "nitro-pdf-pro" do
-  version "13.2.1"
-  sha256 "2b59fba1eedec9f2c01c2d1c19544beeca23e7f943f5dcf495674b4466e1a2d2"
+  version "13.3.0"
+  sha256 "c1f12be884e56cc2407faad1c0213a868a5d6a39aff11ac4af09ea1296d6c663"
 
   url "https://downloads.gonitro.com/macos/Nitro%20PDF%20Pro%20Retail_#{version}.dmg",
       verified: "downloads.gonitro.com/macos/"
