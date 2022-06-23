@@ -2,7 +2,7 @@ cask "cleaneronepro" do
   version "6.6.2,4920"
   sha256 "a2bc0802fcfe778e988e9d7b808a6ac07859693e20cbd5913ea6b35a1ef08182"
 
-  url "https://files.trendmicro.com/products/CleanerOnePro/COPG0001/CleanerOnePro_#{version.csv.first.split(".")[0]}_#{version.csv.first.split(".")[1]}_#{version.csv.first.split(".")[2]}.zip"
+  url "https://files.trendmicro.com/products/CleanerOnePro/COPG0001/CleanerOnePro_#{version.csv.first.dots_to_underscores}.zip"
   name "cleaneronepro"
   desc "All-in-one Cleaner App"
   homepage "https://cleanerone.trendmicro.com/"
