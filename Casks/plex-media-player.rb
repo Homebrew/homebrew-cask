@@ -22,6 +22,7 @@ cask "plex-media-player" do
     <<~EOS
       This software has been deprecated in favor of Plex for Desktop (plex cask) and Plex HTPC (plex-htpc cask).
     EOS
+  end
 
   zap trash: [
     "~/Library/Application Support/Plex Media Player",
