@@ -20,7 +20,7 @@ cask "plex-media-player" do
     discontinued
 
     <<~EOS
-      This software has been deprecated in favor of Plex for Desktop (plex cask) and Plex HTPC.
+      This software has been deprecated in favor of Plex for Desktop (plex cask) and Plex HTPC (plex-htpc cask).
     EOS
 
   zap trash: [
