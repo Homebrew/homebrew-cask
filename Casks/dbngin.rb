@@ -1,6 +1,6 @@
 cask "dbngin" do
-  version "5.0,50"
-  sha256 "36538bdd086ad4b911c3064aa90673e3622ca638fcd866edec0aea6c835551bf"
+  version "5.1,52"
+  sha256 "a7c4b55b1138cb4934e34c1f29604670a66fd2ce815a3df8380b0159157ad8f7"
 
   url "https://dbngin-osx-builds.s3.amazonaws.com/#{version.csv.second}/DBngin.dmg",
       verified: "dbngin-osx-builds.s3.amazonaws.com/"
