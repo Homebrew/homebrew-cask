@@ -20,7 +20,11 @@ cask "plex-media-player" do
     discontinued
 
     <<~EOS
-      This software has been deprecated in favor of Plex for Desktop (plex cask) and Plex HTPC (plex-htpc cask).
+      #{name} has been deprecated in favor of Plex for Desktop and Plex HTPC.
+      
+        brew install --cask plex
+        OR
+        brew install --cask plex-htpc
     EOS
   end
 
