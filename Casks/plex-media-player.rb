@@ -7,26 +7,9 @@ cask "plex-media-player" do
   desc "Home media player"
   homepage "https://www.plex.tv/"
 
-  livecheck do
-    url "https://plex.tv/api/downloads/3.json"
-    regex(%r{/PlexMediaPlayer-(\d+(?:\.\d+)*-[0-9a-f]+)-macosx-x86_64\.zip}i)
-  end
-
   auto_updates true
 
   app "Plex Media Player.app"
-
-  caveats do
-    discontinued
-
-    <<~EOS
-      #{name} has been deprecated in favor of Plex for Desktop and Plex HTPC.
-      
-        brew install --cask plex
-        OR
-        brew install --cask plex-htpc
-    EOS
-  end
 
   zap trash: [
     "~/Library/Application Support/Plex Media Player",
@@ -35,4 +18,16 @@ cask "plex-media-player" do
     "~/Library/Saved Application State/tv.plex.Plex Media Player.savedState",
     "~/Library/Preferences/tv.plex.Plex Media Player.plist",
   ]
+
+  caveats do
+    discontinued
+
+    <<~EOS
+      #{name} has been deprecated in favor of Plex for Desktop and Plex HTPC.
+
+        brew install --cask plex
+        OR
+        brew install --cask plex-htpc
+    EOS
+  end
 end
