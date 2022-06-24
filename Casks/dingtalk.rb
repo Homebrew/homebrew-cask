@@ -4,8 +4,8 @@ cask "dingtalk" do
     sha256 "c02feeaae10141aec010e10ac7c3ca22c171f84ac27f30911e3e610d719b5a8d"
     url "https://dtapp-pub.dingtalk.com/dingtalk-desktop/mac_dmg/Release/DingTalk_v#{version}.dmg"
   else
-    version "6.5.22.3"
-    sha256 "c01f61fb0762668dec1a5022b123360b4e4e418f34e1cd5e45cf98b5477b18c2"
+    version "6.5.22.5"
+    sha256 "63d0184c2743c83cde970c845b501735fb8596248d767d2e6f09979e0b28298c"
     url "https://dtapp-pub.dingtalk.com/dingtalk-desktop/mac_dmg/Release/M1-Beta/DingTalk-ARM64-#{version}.dmg"
   end
 
