@@ -1,16 +1,19 @@
 cask "windscribe" do
   version "2.3.16"
-  sha256 :no_check
+  sha256 "993c137d8d5518e92baa927ea17f37dd112bd92a4e1b5564309a321c39cfddcf"
 
-  url "https://assets.windscribe.com/desktop/mac/Windscribe.dmg"
+  url "https://assets.totallyacdn.com/desktop/mac/Windscribe_#{version.major_minor}.dmg",
+      verified: "assets.totallyacdn.com/desktop/mac"
   name "Windscribe"
   desc "VPN client for secure internet access and private browsing"
   homepage "https://windscribe.com/"
 
   livecheck do
     url "https://windscribe.com/changelog/mac"
-    regex(/Windscribe\.dmg">\s*v(\d+(?:\.\d+)+)/i)
+    regex(/.*?Windscribe[._-].*?\d.dmg.*?v(\d+(?:\.\d+)+)/i)
   end
+
+  auto_updates true
 
   installer manual: "WindscribeInstaller.app"
 
