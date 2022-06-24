@@ -15,6 +15,11 @@ cask "windows95" do
   desc "Electron Windows 95"
   homepage "https://github.com/felixrieseberg/windows95"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
 
   app "windows95.app"
