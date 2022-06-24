@@ -16,6 +16,13 @@ cask "plex-media-player" do
 
   app "Plex Media Player.app"
 
+  caveats do
+    discontinued
+
+    <<~EOS
+      This software has been deprecated in favor of Plex for Desktop (plex cask) and Plex HTPC.
+    EOS
+
   zap trash: [
     "~/Library/Application Support/Plex Media Player",
     "~/Library/Caches/Plex Media Player",
