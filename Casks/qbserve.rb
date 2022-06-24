@@ -4,11 +4,12 @@ cask "qbserve" do
 
   url "https://qotoqot.com/qbserve/app/Qbserve-#{version}.zip"
   name "Qbserve"
+  desc "Automatic time tracker"
   homepage "https://qotoqot.com/qbserve/"
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?/Qbserve-(\d+(?:\.\d+)*)\.zip}i)
+    regex(%r{href=.*?/Qbserve[._-]v?(\d+(?:\.\d+)+)\.zip}i)
   end
 
   auto_updates true
