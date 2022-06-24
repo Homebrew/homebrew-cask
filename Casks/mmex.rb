@@ -10,7 +10,6 @@ cask "mmex" do
 
   livecheck do
     url :url
-    regex(%r{url=.*?/mmex[._-]v?(\d+(?:\.\d+)+)[._-]?Darwin\.dmg}i)
   end
 
   app "MMEX.app"
