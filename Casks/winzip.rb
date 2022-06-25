@@ -8,9 +8,16 @@ cask "winzip" do
   homepage "https://www.winzip.com/mac/en/winzip.html"
 
   livecheck do
-    url :url
-    strategy :extract_plist
-  end
+    url "https://www.winzip.com/en/download/"
+    regex(/href=.*?winzipmacedition[._-]?v?(\d+)\.dmg/i)
+    strategy :page_match do |page, regex|
+      major_version = page[regex, 1]
+      next if major_version.blank?
 
+      cask = CaskLoader.load("winzip")
+      download_url = "https://download.winzip.com/winzipmacedition#{major_version}.dmg"
+      Homebrew::Livecheck::Strategy::ExtractPlist.find_versions(cask: cask, url: download_url)[:matches].values
+    end
+  end
   app "WinZip.app"
 end
