@@ -9,8 +9,8 @@ cask "gama" do
     sha256 "caa594a482abc148fff5a0235a12b6ddf9809e8851a7acf08057e482c67650c4"
   end
 
-  url "https://github.com/gama-platform/gama/releases/download/#{version}/GAMA_#{version}_MacOS#{arch}.dmg",
-      verified: "github.com/gama-platform/gama/"
+  url "https://github.com/gama-platform/gama.resources/releases/download/#{version}/GAMA_#{version}_MacOS#{arch}.dmg",
+      verified: "github.com/gama-platform/gama.resources/"
   name "GAMA Platform"
   desc "IDE for building spatially explicit agent-based simulations"
   homepage "https://gama-platform.org/"
