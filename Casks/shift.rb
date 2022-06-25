@@ -1,5 +1,5 @@
 cask "shift" do
-  version "8.0.41"
+  version "7.2.18"
   sha256 "6d779264fad6736675f56c74a9cbd8d778baba7234123f42d7182cfb15667cc0"
 
   url "https://update.tryshift.com/download/version/#{version}/osx_64"
