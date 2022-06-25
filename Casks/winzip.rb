@@ -19,5 +19,6 @@ cask "winzip" do
       Homebrew::Livecheck::Strategy::ExtractPlist.find_versions(cask: cask, url: download_url)[:matches].values
     end
   end
+
   app "WinZip.app"
 end
