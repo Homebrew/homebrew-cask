@@ -1,6 +1,6 @@
 cask "windscribe" do
-  version "2.3.16"
-  sha256 "993c137d8d5518e92baa927ea17f37dd112bd92a4e1b5564309a321c39cfddcf"
+  version "2.4.11"
+  sha256 "a9b9df3132d28e3887b8a1b173e2227a431385caf64c92840adc9568b416a959"
 
   url "https://assets.totallyacdn.com/desktop/mac/Windscribe_#{version.major_minor}.dmg",
       verified: "assets.totallyacdn.com/desktop/mac"
