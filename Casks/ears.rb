@@ -1,8 +1,8 @@
 cask "ears" do
-  version "1.4,19"
-  sha256 "372606dca51f9371e2e61ad2d7c6031e90ec2a1bb3ca8e992c5b003b4abc9127"
+  version "1.5,20"
+  sha256 "7c2832c77b55a6df37e802f83721b412a7912e73cc4636d6de3fbc29414cef28"
 
-  url "https://get.retina.studio/ears/ears_#{version.csv.second}.dmg"
+  url "https://get.retina.studio/ears/ears_#{version.csv.second}.zip"
   name "Ears"
   desc "Instant audio switcher"
   homepage "https://retina.studio/ears/"
