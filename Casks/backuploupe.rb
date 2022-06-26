@@ -1,6 +1,6 @@
 cask "backuploupe" do
-  version "3.7,2416"
-  sha256 "2186f50af4b714db051bba1b392e3554a3d0fa3c3274483db09f7e6a9de38e77"
+  version "3.7.1,2426"
+  sha256 "063f68a324a51b2a613736efc3a69f16a50cf20ad0966b3e8107c7cf9731e683"
 
   url "https://www.soma-zone.com/download/files/BackupLoupe-#{version.csv.first}.tar.xz"
   name "BackupLoupe"
