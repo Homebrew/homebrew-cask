@@ -17,6 +17,8 @@ cask "betterdisplay" do
 
   app "BetterDisplay.app"
 
+  uninstall quit: "me.waydabber.BetterDummy"
+
   zap trash: [
     "~/Library/Application Support/BetterDummy",
     "~/Library/Caches/me.waydabber.BetterDummy",
