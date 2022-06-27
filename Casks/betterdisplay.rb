@@ -16,7 +16,7 @@ cask "betterdisplay" do
   auto_updates true
 
   app "BetterDisplay.app"
-  
+
   uninstall quit: "me.waydabber.BetterDummy"
 
   zap trash: [
