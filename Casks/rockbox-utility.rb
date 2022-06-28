@@ -9,8 +9,7 @@ cask "rockbox-utility" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(/RockboxUtility-v(\d+(?:\.\d+)*)\.dmg/i)
+    regex(/RockboxUtility[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "RockboxUtility.app"
