@@ -4,7 +4,7 @@ cask "rockbox-utility" do
 
   url "https://download.rockbox.org/rbutil/macosx/RockboxUtility-v#{version}.dmg"
   name "Rockbox Utility"
-  desc "Automated installer tool for Rockbox"
+  desc "Automated installer for the Rockbox digital music player firmware"
   homepage "https://www.rockbox.org/wiki/RockboxUtility"
 
   livecheck do
