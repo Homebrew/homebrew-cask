@@ -4,7 +4,7 @@ cask "tidal" do
   if Hardware::CPU.intel?
     version "2.30.0"
   else
-    version "2.31.2"
+    version "2.32.0"
   end
 
   sha256 :no_check
