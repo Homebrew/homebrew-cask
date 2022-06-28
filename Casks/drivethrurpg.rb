@@ -1,5 +1,5 @@
 cask "drivethrurpg" do
-  version "3.2.6.0"
+  version "3.3.0.0"
   sha256 "558091905cf17303491f8e454caa77a13079c8e142ddc910e373dfdaf26ec424"
 
   url "https://dtrpg-library-app.s3.us-east-2.amazonaws.com/DriveThruRPG_v#{version}.dmg",
