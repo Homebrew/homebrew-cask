@@ -4,8 +4,14 @@ cask "rockbox-utility" do
 
   url "https://download.rockbox.org/rbutil/macosx/RockboxUtility-v#{version}.dmg"
   name "Rockbox Utility"
-  desc "An automated installer tool for Rockbox"
+  desc "Automated installer tool for Rockbox"
   homepage "https://www.rockbox.org/wiki/RockboxUtility"
+
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(/RockboxUtility-v(\d+(?:\.\d+)*)\.dmg/i)
+  end
 
   app "RockboxUtility.app"
 end
