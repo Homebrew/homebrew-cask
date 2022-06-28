@@ -13,4 +13,10 @@ cask "rockbox-utility" do
   end
 
   app "RockboxUtility.app"
+
+  zap trash: [
+    "~/.config/rockbox.org",
+    "~/Library/Preferences/org.rockbox.rbutil.plist",
+    "~/Library/Saved Application State/org.rockbox.rbutil.savedState",
+  ]
 end
