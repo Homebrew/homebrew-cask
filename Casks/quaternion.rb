@@ -7,6 +7,12 @@ cask "quaternion" do
   desc "IM client for Matrix"
   homepage "https://github.com/quotient-im/Quaternion"
 
+  livecheck do
+    url "https://github.com/quotient-im/Quaternion/releases"
+    strategy :page_match
+    regex(/href=.*?quaternion[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+  end
+
   depends_on macos: ">= :high_sierra"
 
   app "quaternion.app"
