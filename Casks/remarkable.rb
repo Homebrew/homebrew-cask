@@ -3,7 +3,7 @@ cask "remarkable" do
   sha256 "e70aef4218e4ae27a0df095d32f489aa9d89cc2bb3de1da6ab2989d1bb4c6300"
 
   url "https://updates-download.cloud.remarkable.engineering/sparkle/reMarkableMacOs/Staging_9fb83f4b-c3d3-4d4d-83ca-8970001ea9a3/#{version.csv.second}/reMarkable-#{version.csv.first}.dmg",
-      verified: "updates-download.cloud.remarkable.engineering"
+      verified: "updates-download.cloud.remarkable.engineering/sparkle/reMarkableMacOs/"
   name "Remarkable"
   desc "View, Screen Share, organize, import, and download files to a reMarkable device"
   homepage "https://remarkable.com/"
