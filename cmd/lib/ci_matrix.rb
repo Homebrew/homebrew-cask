@@ -37,7 +37,7 @@ module CiMatrix
     # Preform same checks as `brew install` would
     required_macos = if args.count > 1
       { versions: args, comparator: "==" }
-    elsif MacOS::Version::SYMBOLS.key?(args.first)
+    elsif MacOSVersions::SYMBOLS.key?(args.first)
       { versions: [args.first], comparator: "==" }
     elsif /^\s*(?<comparator><|>|[=<>]=)\s*:?(?<version>\S+)\s*$/ =~ args.first
       { versions: [version.to_sym], comparator: comparator }
