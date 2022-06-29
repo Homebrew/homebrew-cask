@@ -14,7 +14,7 @@ cask "pure-writer" do
     regex(/href=.*?PureWriter[._-]v?(\d+(?:\.\d+)+)-macOS\.dmg/i)
   end
 
-  pkg "PureWriter-#{version}.pkg"
+  pkg "Pure Writer-#{version}.pkg"
 
   uninstall pkgutil: "com.drakeet.purewriter"
 
