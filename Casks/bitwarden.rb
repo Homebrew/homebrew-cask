@@ -9,8 +9,8 @@ cask "bitwarden" do
   homepage "https://bitwarden.com/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://github.com/bitwarden/clients/releases"
+    strategy :page_match
     regex(/href=.*?Bitwarden[._-]v?(\d+(?:\.\d+)+)-universal\.dmg/i)
   end
 
