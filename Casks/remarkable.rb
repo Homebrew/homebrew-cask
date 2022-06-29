@@ -12,7 +12,7 @@ cask "remarkable" do
     url "https://get-updates.cloud.remarkable.engineering/sparkle/reMarkableMacOs/Prod/appcast.xml"
     regex(%r{([^/]+)/reMarkable[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match.second},#{match.first} " }
+      page.scan(regex).map { |match| "#{match.second},#{match.first}" }
     end
   end
 
