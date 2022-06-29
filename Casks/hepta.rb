@@ -15,6 +15,11 @@ cask "hepta" do
   desc "Note-taking tool for visual learning"
   homepage "https://heptabase.com/"
 
+  livecheck do
+    url "https://github.com/heptameta/project-meta/releases"
+    strategy :github_latest
+  end
+
   app "Hepta.app"
 
   zap trash: [
