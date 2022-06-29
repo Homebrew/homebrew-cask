@@ -1,4 +1,4 @@
-cask "rockbox-utility" do
+cask "rockboxutility" do
   version "1.5.1"
   sha256 "b979b6aa7ab2894f32425114213d7f9efa803ee41523df6658739b3029058841"
 
