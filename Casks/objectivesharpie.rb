@@ -18,7 +18,7 @@ cask "objectivesharpie" do
     end
   end
 
-  pkg "ObjectiveSharpie-#{version}.pkg"
+  pkg "objectivesharpie-#{version.csv.first}.pkg"
 
   uninstall pkgutil: "com.xamarin.ObjectiveSharpie"
 end
