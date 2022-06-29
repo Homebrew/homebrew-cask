@@ -1,12 +1,18 @@
 cask "pure-writer" do
-  version "1.4.0"
-  sha256 "5b89db4b166123fc997796e9a12e50d9dd53ab357ff8f71e488e29ea9a9969c0"
+  version "1.5.3"
+  sha256 "1924099569ce3049a22d23cb889a11276de1d175cb6ef301a64d9fc34448ce60"
 
-  url "https://github.com/PureWriter/desktop/releases/download/#{version}/PureWriter-#{version}-macOS.dmg",
+  url "https://github.com/PureWriter/desktop/releases/download/1.5.2/PureWriter-#{version}-macOS.dmg",
       verified: "github.com/PureWriter/desktop/"
   name "Pure Writer Desktop"
   desc "Desktop version of the Android app"
   homepage "https://writer.drakeet.com/desktop"
+
+  livecheck do
+    url "https://github.com/PureWriter/desktop/releases"
+    strategy :page_match
+    regex(/href=.*?PureWriter[._-]v?(\d+(?:\.\d+)+)-macOS\.dmg/i)
+  end
 
   pkg "PureWriter-#{version}.pkg"
 
