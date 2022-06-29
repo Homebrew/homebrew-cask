@@ -1,6 +1,6 @@
 cask "fontlab" do
-  version "7.2.0.7644"
-  sha256 "26d3f9f2d300edf4973d27ac56006fd600195452e2995770f6157fa9f0620be8"
+  version "8.0.0.8200"
+  sha256 "68007ff0d3277a1dea6e64ea402bd923592b3575387864b1dfb95e32893ae658"
 
   url "https://fontlab.s3.amazonaws.com/fontlab-#{version.major}/#{version.split(".").last}/FontLab-#{version.major}-Mac-Install-#{version.split(".").last}.dmg",
       verified: "fontlab.s3.amazonaws.com/"
@@ -14,6 +14,7 @@ cask "fontlab" do
   end
 
   auto_updates true
+  depends_on macos: ">= :mojave"
 
   app "FontLab #{version.major}.app"
 end
