@@ -15,9 +15,9 @@ cask "switchresx" do
   prefpane "SwitchResX Installer.app/Contents/Resources/SwitchResX.prefPane"
 
   uninstall quit:   [
-    "fr.madrau.switchresx.app",
-    "fr.madrau.switchresx.daemon", # note, daemon does not :quit cleanly
-  ],
+              "fr.madrau.switchresx.app",
+              "fr.madrau.switchresx.daemon", # note, daemon does not :quit cleanly
+            ],
             signal: [
               ["INT",  "fr.madrau.switchresx.daemon"],
               ["KILL", "fr.madrau.switchresx.daemon"],
