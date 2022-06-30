@@ -9,10 +9,10 @@ cask "idrive" do
   pkg "IDrive.pkg"
 
   uninstall launchctl: [
-    "IDSyncDaemon",
-    "IDWifiManager",
-    "IDriveDaemon",
-  ],
+              "IDSyncDaemon",
+              "IDWifiManager",
+              "IDriveDaemon",
+            ],
             pkgutil:   "com.profsoftnet.idrive.*",
             quit:      [
               "com.prosfotnet.IDWifiManager",
