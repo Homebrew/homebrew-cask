@@ -19,10 +19,10 @@ cask "paragon-camptune" do
   app "Paragon CampTune.app"
 
   uninstall delete: [
-    "/Library/Application Support/Paragon Software/com.paragon-software.camptunex.helper",
-    "/Library/Application Support/Paragon Software/com.paragon-software.camptunex.helper-data",
-    "/Library/Application Support/Paragon Software/uc.camptunex",
-  ],
+              "/Library/Application Support/Paragon Software/com.paragon-software.camptunex.helper",
+              "/Library/Application Support/Paragon Software/com.paragon-software.camptunex.helper-data",
+              "/Library/Application Support/Paragon Software/uc.camptunex",
+            ],
             rmdir:  "/Library/Application Support/Paragon Software/"
 
   zap trash: [
