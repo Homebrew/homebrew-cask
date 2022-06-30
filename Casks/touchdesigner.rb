@@ -15,7 +15,7 @@ cask "touchdesigner" do
   homepage "https://derivative.ca/"
 
   livecheck do
-    url "https://derivative.ca/colorbox/download/release-download"
+    url "https://derivative.ca/download/archive"
     regex(/href=.*?TouchDesigner[._-]?v?(\d+(?:\.\d+)+)\.#{arch}\.dmg/i)
   end
 
