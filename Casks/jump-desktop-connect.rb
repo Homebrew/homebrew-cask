@@ -28,12 +28,12 @@ cask "jump-desktop-connect" do
             ]
 
   zap trash: [
-    "~/Library/Application Support/com.p5sys.jump.connect",
-    "~/Library/Caches/com.p5sys.jump.connect",
-    "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.p5sys.jump.connect",
-    "~/Library/Caches/Jump Desktop/jump.connect",
-    "~/Library/HTTPStorages/com.p5sys.jump.connect",
-    "~/Library/Preferences/com.p5sys.jump.connect.plist",
-  ],
+        "~/Library/Application Support/com.p5sys.jump.connect",
+        "~/Library/Caches/com.p5sys.jump.connect",
+        "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.p5sys.jump.connect",
+        "~/Library/Caches/Jump Desktop/jump.connect",
+        "~/Library/HTTPStorages/com.p5sys.jump.connect",
+        "~/Library/Preferences/com.p5sys.jump.connect.plist",
+      ],
       rmdir: "~/Library/Caches/Jump Desktop"
 end
