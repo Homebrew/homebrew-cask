@@ -14,12 +14,12 @@ cask "outset" do
   pkg "outset-#{version}.pkg"
 
   uninstall launchctl: [
-    "com.github.outset.boot",
-    "com.github.outset.cleanup",
-    "com.github.outset.login",
-    "com.github.outset.login-privileged",
-    "com.github.outset.on-demand",
-  ],
+              "com.github.outset.boot",
+              "com.github.outset.cleanup",
+              "com.github.outset.login",
+              "com.github.outset.login-privileged",
+              "com.github.outset.on-demand",
+            ],
             pkgutil:   "com.github.outset"
 
   caveats do
