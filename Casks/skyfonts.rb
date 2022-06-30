@@ -15,9 +15,9 @@ cask "skyfonts" do
   installer manual: "Install SkyFonts.app"
 
   uninstall quit:      [
-    "com.mti.Monotype-SkyFonts",
-    "com.mti.Monotype-SkyFontsHelper",
-  ],
+              "com.mti.Monotype-SkyFonts",
+              "com.mti.Monotype-SkyFontsHelper",
+            ],
             launchctl: "com.mti.Monotype-SkyFontsHelper",
             delete:    "/Applications/Skyfonts"
 end
