@@ -11,10 +11,10 @@ cask "private-eye" do
   # We intentionally unload the kext twice as a workaround
   # See https://github.com/Homebrew/homebrew-cask/pull/1802#issuecomment-34171151
   uninstall early_script: {
-    executable:   "/sbin/kextunload",
-    args:         ["-b", "com.radiosilenceapp.nke.PrivateEye"],
-    must_succeed: false,
-  },
+              executable:   "/sbin/kextunload",
+              args:         ["-b", "com.radiosilenceapp.nke.PrivateEye"],
+              must_succeed: false,
+            },
             quit:         "com.radiosilenceapp.PrivateEye",
             kext:         "com.radiosilenceapp.nke.PrivateEye",
             pkgutil:      "com.radiosilenceapp.privateEye.*",
