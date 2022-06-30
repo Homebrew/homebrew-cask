@@ -17,8 +17,8 @@ cask "devilutionx" do
   app "devilutionx.app"
 
   zap trash: [
-    "~/Library/Application Support/CrashReporter/devilutionX_*.plist",
-    "~/Library/Application Support/diasurgical/devilution",
-  ],
+        "~/Library/Application Support/CrashReporter/devilutionX_*.plist",
+        "~/Library/Application Support/diasurgical/devilution",
+      ],
       rmdir: "~/Library/Application Support/diasurgical"
 end
