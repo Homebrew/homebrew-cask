@@ -16,9 +16,9 @@ cask "plasticscm-cloud-edition" do
   pkg "plasticscm-cloud-#{version}.pkg"
 
   uninstall launchctl: [
-    "com.codicesoftware.plasticscm.macplastic",
-    "com.codicesoftware.plasticscm.server",
-  ],
+              "com.codicesoftware.plasticscm.macplastic",
+              "com.codicesoftware.plasticscm.server",
+            ],
             quit:      "com.codicesoftware.plasticscm",
             pkgutil:   [
               "com.codicesoftware.plasticscm.macplastic",
