@@ -10,9 +10,9 @@ cask "eset-cyber-security-pro" do
   pkg "Resources/Installer.pkg"
 
   uninstall script:    {
-    executable: "/Applications/ESET Cyber Security Pro.app/Contents/Helpers/Uninstaller.app/Contents/Scripts/uninstall.sh",
-    sudo:       true,
-  },
+              executable: "/Applications/ESET Cyber Security Pro.app/Contents/Helpers/Uninstaller.app/Contents/Scripts/uninstall.sh",
+              sudo:       true,
+            },
             pkgutil:   [
               "com.eset.esetCyberSecurityPro.com.eset.esets_gui.pkg",
               "com.eset.esetCyberSecurityPro.pkgid2.pkg",
