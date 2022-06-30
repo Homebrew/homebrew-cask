@@ -19,8 +19,8 @@ cask "unity-hub" do
   uninstall quit: "com.unity3d.unityhub"
 
   zap trash: [
-    "~/Library/Preferences/com.unity3d.unityhub.plist",
-    "~/Library/Preferences/com.unity3d.unityhub.helper.plist",
-  ],
+        "~/Library/Preferences/com.unity3d.unityhub.plist",
+        "~/Library/Preferences/com.unity3d.unityhub.helper.plist",
+      ],
       rmdir: "/Applications/Unity/Hub"
 end
