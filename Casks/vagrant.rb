@@ -16,10 +16,10 @@ cask "vagrant" do
   pkg "vagrant.pkg"
 
   uninstall script:  {
-    executable: "uninstall.tool",
-    input:      ["Yes"],
-    sudo:       true,
-  },
+              executable: "uninstall.tool",
+              input:      ["Yes"],
+              sudo:       true,
+            },
             pkgutil: "com.vagrant.vagrant"
 
   zap trash: "~/.vagrant.d"
