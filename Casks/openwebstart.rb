@@ -26,13 +26,14 @@ cask "openwebstart" do
     set_ownership "/Applications/OpenWebStart"
   end
 
-  uninstall script: {
-    executable:   "/Applications/OpenWebStart/OpenWebStart Uninstaller.app/Contents/MacOS/JavaApplicationStub",
-    args:         ["-q"],
-    sudo:         true,
-    print_stderr: false,
-  },
-            delete: "/Applications/OpenWebStart"
+  uninstall \
+    script: {
+      executable:   "/Applications/OpenWebStart/OpenWebStart Uninstaller.app/Contents/MacOS/JavaApplicationStub",
+      args:         ["-q"],
+      sudo:         true,
+      print_stderr: false,
+    },
+    delete: "/Applications/OpenWebStart"
 
   zap trash: [
     "~/.cache/icedtea-web",
