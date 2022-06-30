@@ -16,9 +16,9 @@ cask "mechvibes" do
   app "Mechvibes.app"
 
   zap trash: [
-    "~/Library/Application Support/Mechvibes",
-    "~/Library/Preferences/com.electron.mechvibes.plist",
-    "~/Library/Saved Application State/com.electron.mechvibes.savedState",
-  ],
+        "~/Library/Application Support/Mechvibes",
+        "~/Library/Preferences/com.electron.mechvibes.plist",
+        "~/Library/Saved Application State/com.electron.mechvibes.savedState",
+      ],
       rmdir: "~/mechvibes_custom"
 end
