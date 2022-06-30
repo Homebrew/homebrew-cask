@@ -18,9 +18,9 @@ cask "microsoft-teams" do
   pkg "Teams_osx.pkg"
 
   uninstall pkgutil:   [
-    "com.microsoft.MSTeamsAudioDevice",
-    "com.microsoft.teams",
-  ],
+              "com.microsoft.MSTeamsAudioDevice",
+              "com.microsoft.teams",
+            ],
             launchctl: "com.microsoft.teams.TeamsUpdaterDaemon",
             delete:    [
               "/Library/Logs/Microsoft/Teams",
@@ -28,15 +28,15 @@ cask "microsoft-teams" do
             ]
 
   zap trash: [
-    "~/Library/Application Support/com.microsoft.teams",
-    "~/Library/Application Support/Microsoft/Teams",
-    "~/Library/Application Support/Teams",
-    "~/Library/Caches/com.microsoft.teams",
-    "~/Library/Cookies/com.microsoft.teams.binarycookies",
-    "~/Library/Logs/Microsoft Teams",
-    "~/Library/Preferences/com.microsoft.teams.plist",
-    "~/Library/Saved Application State/com.microsoft.teams.savedState",
-    "~/Library/WebKit/com.microsoft.teams",
-  ],
+        "~/Library/Application Support/com.microsoft.teams",
+        "~/Library/Application Support/Microsoft/Teams",
+        "~/Library/Application Support/Teams",
+        "~/Library/Caches/com.microsoft.teams",
+        "~/Library/Cookies/com.microsoft.teams.binarycookies",
+        "~/Library/Logs/Microsoft Teams",
+        "~/Library/Preferences/com.microsoft.teams.plist",
+        "~/Library/Saved Application State/com.microsoft.teams.savedState",
+        "~/Library/WebKit/com.microsoft.teams",
+      ],
       rmdir: "~/Library/Application Support/Microsoft"
 end
