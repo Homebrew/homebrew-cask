@@ -19,9 +19,9 @@ cask "unite" do
   app "Unite.app"
 
   zap trash: [
-    "~/Library/Application Support/Unite",
-    "~/Library/Application Support/com.BZG.unite.*",
-    "~/Library/Preferences/com.BZG.unite.*",
-  ],
+        "~/Library/Application Support/Unite",
+        "~/Library/Application Support/com.BZG.unite.*",
+        "~/Library/Preferences/com.BZG.unite.*",
+      ],
       rmdir: "/Users/Shared/Unite"
 end
