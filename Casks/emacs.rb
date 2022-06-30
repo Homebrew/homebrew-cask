@@ -13,9 +13,9 @@ cask "emacs" do
   end
 
   conflicts_with cask:    [
-    "homebrew/cask-versions/emacs-nightly",
-    "homebrew/cask-versions/emacs-pretest",
-  ],
+                   "homebrew/cask-versions/emacs-nightly",
+                   "homebrew/cask-versions/emacs-pretest",
+                 ],
                  formula: "emacs"
 
   app "Emacs.app"
