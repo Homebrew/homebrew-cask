@@ -17,10 +17,10 @@ cask "speedify" do
   app "Speedify.app"
 
   uninstall launchctl: [
-    "me.connectify.SMJobBlessHelper",
-    "SpeedifyService",
-    "SwitchboardService",
-  ],
+              "me.connectify.SMJobBlessHelper",
+              "SpeedifyService",
+              "SwitchboardService",
+            ],
             script:    "#{appdir}/Speedify.app/Contents/Resources/uninstall-speedify-service.sh"
 
   zap trash: "~/Library/Speedify"
