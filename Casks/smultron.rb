@@ -1,5 +1,5 @@
 cask "smultron" do
-  version "12.5.3,12530"
+  version "13.2,13200"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://www.peterborgapps.com/downloads/Smultron#{version.major}.zip"
@@ -8,12 +8,12 @@ cask "smultron" do
   homepage "https://www.peterborgapps.com/smultron/"
 
   livecheck do
-    url "https://www.peterborgapps.com/updates/smultron#{version.major}.plist"
+    url :url
     strategy :extract_plist
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :monterey"
 
   app "Smultron.app"
 
