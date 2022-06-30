@@ -29,9 +29,9 @@ cask "ivpn" do
   end
 
   uninstall delete:    [
-    "/Library/Application Support/IVPN",
-    "/Library/PrivilegedHelperTools/net.ivpn.client.Helper",
-  ],
+              "/Library/Application Support/IVPN",
+              "/Library/PrivilegedHelperTools/net.ivpn.client.Helper",
+            ],
             launchctl: "net.ivpn.client.Helper",
             quit:      "net.ivpn.client.IVPN"
 
