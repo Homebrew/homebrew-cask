@@ -19,11 +19,11 @@ cask "adobe-acrobat-pro" do
   pkg "Acrobat DC/Acrobat DC Installer.pkg"
 
   uninstall pkgutil:   [
-    "com.adobe.acrobat.DC.*",
-    "com.adobe.PDApp.AdobeApplicationManager.installer.pkg",
-    "com.adobe.AcroServicesUpdater",
-    "com.adobe.armdc.app.pkg",
-  ],
+              "com.adobe.acrobat.DC.*",
+              "com.adobe.PDApp.AdobeApplicationManager.installer.pkg",
+              "com.adobe.AcroServicesUpdater",
+              "com.adobe.armdc.app.pkg",
+            ],
             launchctl: [
               "Adobe_Genuine_Software_Integrity_Service",
               "com.adobe.AAM.Startup-1.0",
