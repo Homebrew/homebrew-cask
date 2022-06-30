@@ -34,18 +34,18 @@ cask "microsoft-office" do
       ]
 
   uninstall pkgutil:   [
-    "com.microsoft.OneDrive",
-    "com.microsoft.package.DFonts",
-    "com.microsoft.package.Frameworks",
-    "com.microsoft.package.Microsoft_AutoUpdate.app",
-    "com.microsoft.package.Microsoft_Excel.app",
-    "com.microsoft.package.Microsoft_OneNote.app",
-    "com.microsoft.package.Microsoft_Outlook.app",
-    "com.microsoft.package.Microsoft_PowerPoint.app",
-    "com.microsoft.package.Microsoft_Word.app",
-    "com.microsoft.package.Proofing_Tools",
-    "com.microsoft.pkg.licensing",
-  ],
+              "com.microsoft.OneDrive",
+              "com.microsoft.package.DFonts",
+              "com.microsoft.package.Frameworks",
+              "com.microsoft.package.Microsoft_AutoUpdate.app",
+              "com.microsoft.package.Microsoft_Excel.app",
+              "com.microsoft.package.Microsoft_OneNote.app",
+              "com.microsoft.package.Microsoft_Outlook.app",
+              "com.microsoft.package.Microsoft_PowerPoint.app",
+              "com.microsoft.package.Microsoft_Word.app",
+              "com.microsoft.package.Proofing_Tools",
+              "com.microsoft.pkg.licensing",
+            ],
             # Frameworks, DFonts and ProofingTools remain in each application after pkg uninstall, delete them
             delete:    [
               "/Applications/Microsoft Excel.app",
