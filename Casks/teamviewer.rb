@@ -41,9 +41,9 @@ cask "teamviewer" do
     uninstall delete: "#{staged_path}/#{token}"
   else
     uninstall delete:    [
-      "/Applications/TeamViewer.app",
-      "/Library/Preferences/com.teamviewer.teamviewer.preferences.plist",
-    ],
+                "/Applications/TeamViewer.app",
+                "/Library/Preferences/com.teamviewer.teamviewer.preferences.plist",
+              ],
               pkgutil:   [
                 "com.teamviewer.remoteaudiodriver",
                 "com.teamviewer.teamviewer.*",
