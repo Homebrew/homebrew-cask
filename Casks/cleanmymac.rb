@@ -19,9 +19,9 @@ cask "cleanmymac" do
   app "CleanMyMac X.app"
 
   uninstall delete:     [
-    "/Library/LaunchDaemons/com.macpaw.CleanMyMac#{version.major}.Agent.plist",
-    "/Library/PrivilegedHelperTools/com.macpaw.CleanMyMac#{version.major}.Agent",
-  ],
+              "/Library/LaunchDaemons/com.macpaw.CleanMyMac#{version.major}.Agent.plist",
+              "/Library/PrivilegedHelperTools/com.macpaw.CleanMyMac#{version.major}.Agent",
+            ],
             launchctl:  [
               "com.macpaw.CleanMyMac#{version.major}.Agent",
               "com.macpaw.CleanMyMac#{version.major}.HealthMonitor",
