@@ -20,10 +20,10 @@ cask "sound-control" do
   app "Sound Control.app"
 
   uninstall launchctl: [
-    "com.staticz.soundsiphon.bridgedaemon",
-    "com.staticz.audio.soundsiphon.playeragent",
-    "com.static.soundsiphon.inputagent",
-  ],
+              "com.staticz.soundsiphon.bridgedaemon",
+              "com.staticz.audio.soundsiphon.playeragent",
+              "com.static.soundsiphon.inputagent",
+            ],
             quit:      "com.staticz.SoundControl"
 
   zap trash: [
