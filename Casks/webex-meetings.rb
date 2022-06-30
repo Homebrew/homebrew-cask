@@ -21,9 +21,9 @@ cask "webex-meetings" do
   depends_on macos: ">= :high_sierra"
 
   uninstall quit:      [
-    "com.cisco.webex.webexmta",
-    "com.cisco.webexmeetingsapp",
-  ],
+              "com.cisco.webex.webexmta",
+              "com.cisco.webexmeetingsapp",
+            ],
             delete:    [
               "/Applications/Cisco Webex Meetings.app",
               "/Applications/Webex", # App seems to get installed here on macOS < 10.15
