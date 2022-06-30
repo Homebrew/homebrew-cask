@@ -31,11 +31,11 @@ cask "sage" do
   pkg "Recommended_#{version.csv.first.dots_to_underscores}.pkg"
 
   uninstall quit:    [
-    "org.computop.sage",
-    "org.computop.SageMath",
-    "com.tcltk.tcllibrary",
-    "com.tcltk.tklibrary",
-  ],
+              "org.computop.sage",
+              "org.computop.SageMath",
+              "com.tcltk.tcllibrary",
+              "com.tcltk.tklibrary",
+            ],
             pkgutil: [
               "org.computop.SageMath.#{version.csv.first.dots_to_underscores}.bin",
               "org.computop.SageMath.#{version.csv.first.dots_to_underscores}.share",
