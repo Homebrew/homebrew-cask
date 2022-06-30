@@ -24,9 +24,9 @@ cask "the-archive-browser" do
   app "The Archive Browser.app"
 
   zap trash: [
-    "~/Library/Cookies/cx.c3.thearchivebrowser.binarycookies",
-    "~/Library/Preferences/cx.c3.thearchivebrowser.plist",
-  ],
+        "~/Library/Cookies/cx.c3.thearchivebrowser.binarycookies",
+        "~/Library/Preferences/cx.c3.thearchivebrowser.plist",
+      ],
       rmdir: [
         "~/Library/Application Support/The Archive Browser",
         "~/Library/Caches/cx.c3.thearchivebrowser",
