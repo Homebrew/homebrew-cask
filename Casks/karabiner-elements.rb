@@ -50,9 +50,9 @@ cask "karabiner-elements" do
 
   if MacOS.version <= :mojave
     uninstall signal:    [
-      ["TERM", "org.pqrs.Karabiner-Menu"],
-      ["TERM", "org.pqrs.Karabiner-NotificationWindow"],
-    ],
+                ["TERM", "org.pqrs.Karabiner-Menu"],
+                ["TERM", "org.pqrs.Karabiner-NotificationWindow"],
+              ],
               pkgutil:   "org.pqrs.Karabiner-Elements",
               launchctl: [
                 "org.pqrs.karabiner.agent.karabiner_grabber",
@@ -68,9 +68,9 @@ cask "karabiner-elements" do
               delete:    "/Library/Application Support/org.pqrs/"
   else
     uninstall early_script: {
-      executable: "/Library/Application Support/org.pqrs/Karabiner-DriverKit-VirtualHIDDevice/scripts/uninstall/remove_files.sh",
-      sudo:       true,
-    },
+                executable: "/Library/Application Support/org.pqrs/Karabiner-DriverKit-VirtualHIDDevice/scripts/uninstall/remove_files.sh",
+                sudo:       true,
+              },
               signal:       [
                 ["TERM", "org.pqrs.Karabiner-Menu"],
                 ["TERM", "org.pqrs.Karabiner-NotificationWindow"],
