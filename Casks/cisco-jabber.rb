@@ -15,14 +15,14 @@ cask "cisco-jabber" do
   pkg "Install_Cisco-Jabber-Mac.pkg"
 
   uninstall pkgutil: [
-    "com.cisco.Jabber",
-    "com.cisco.pkg.jabberplugin",
-    "com.jabra.CiscoJabberPlugin",
-    "com.logitech.LogiUCPlugin",
-    "com.PlantronicsPlugin.CiscoJabberPlugin",
-    "com.Sennheiser.pkg.SennheiserSDKv789904MacSDKv8602",
-    "com.sennheiser.CiscoJabberPlugin",
-  ],
+              "com.cisco.Jabber",
+              "com.cisco.pkg.jabberplugin",
+              "com.jabra.CiscoJabberPlugin",
+              "com.logitech.LogiUCPlugin",
+              "com.PlantronicsPlugin.CiscoJabberPlugin",
+              "com.Sennheiser.pkg.SennheiserSDKv789904MacSDKv8602",
+              "com.sennheiser.CiscoJabberPlugin",
+            ],
             delete:  [
               "/Applications/Cisco Jabber.app",
               "/Library/Logs/Jabber/",
