@@ -36,10 +36,10 @@ cask "mplabx-ide" do
   end
 
   uninstall script: {
-    executable: "Uninstall_MPLAB_X_IDE_v#{version}.app/Contents/MacOS/installbuilder.sh",
-    args:       ["--mode", "unattended"],
-    input:      ["y", 3],
-    sudo:       true,
-  },
+              executable: "Uninstall_MPLAB_X_IDE_v#{version}.app/Contents/MacOS/installbuilder.sh",
+              args:       ["--mode", "unattended"],
+              input:      ["y", 3],
+              sudo:       true,
+            },
             delete: "/Applications/microchip"
 end
