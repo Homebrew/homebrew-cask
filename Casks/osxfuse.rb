@@ -20,10 +20,10 @@ cask "osxfuse" do
   end
 
   uninstall pkgutil: [
-    "com.github.osxfuse.pkg.Core",
-    "com.github.osxfuse.pkg.MacFUSE",
-    "com.github.osxfuse.pkg.PrefPane",
-  ],
+              "com.github.osxfuse.pkg.Core",
+              "com.github.osxfuse.pkg.MacFUSE",
+              "com.github.osxfuse.pkg.PrefPane",
+            ],
             kext:    "com.github.osxfuse.filesystems.osxfuse"
 
   zap trash: "~/Library/Caches/com.github.osxfuse.OSXFUSEPrefPane"
