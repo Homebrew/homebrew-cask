@@ -41,9 +41,9 @@ cask "microsoft-word" do
       ]
 
   uninstall pkgutil:   [
-    "com.microsoft.package.Microsoft_Word.app",
-    "com.microsoft.pkg.licensing",
-  ],
+              "com.microsoft.package.Microsoft_Word.app",
+              "com.microsoft.pkg.licensing",
+            ],
             launchctl: "com.microsoft.office.licensingV2.helper",
             quit:      "com.microsoft.autoupdate2"
 
