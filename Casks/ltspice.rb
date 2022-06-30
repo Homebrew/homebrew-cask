@@ -17,9 +17,9 @@ cask "ltspice" do
   uninstall pkgutil: "com.analog.LTspice.App"
 
   zap trash: [
-    "~/Documents/LTspice/examples",
-    "~/Library/Application Support/LTspice",
-    "~/Library/Preferences/com.analog.LTspice.App.plist",
-  ],
+        "~/Documents/LTspice/examples",
+        "~/Library/Application Support/LTspice",
+        "~/Library/Preferences/com.analog.LTspice.App.plist",
+      ],
       rmdir: "~/Documents/LTspice"
 end
