@@ -29,12 +29,12 @@ cask "audiogridder-plugin" do
   ]
 
   zap trash: [
-    "~/.audiogridder/audiogridder.winpos",
-    "~/.audiogridder/audiogridderplugin.cfg",
-    "~/Library/Logs/AudioGridder/Fx",
-    "~/Library/Logs/AudioGridder/Instrument",
-    "~/Library/Logs/AudioGridder/Midi",
-  ],
+        "~/.audiogridder/audiogridder.winpos",
+        "~/.audiogridder/audiogridderplugin.cfg",
+        "~/Library/Logs/AudioGridder/Fx",
+        "~/Library/Logs/AudioGridder/Instrument",
+        "~/Library/Logs/AudioGridder/Midi",
+      ],
       rmdir: [
         "~/.audiogridder",
         "~/Library/Logs/AudioGridder",
