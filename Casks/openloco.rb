@@ -1,6 +1,6 @@
 cask "openloco" do
-  version "22.05.1"
-  sha256 "78f8f71923eac767034d286db87f0219203cfa2fb8413dbd95f2439e4ed339f6"
+  version "22.06"
+  sha256 "c42c784ac82718a57a7e4d3a31169d2a1a9a684391c4668acfe242f03938b0d6"
 
   url "https://github.com/OpenLoco/OpenLoco/releases/download/v#{version}/openloco-v#{version}-macos.zip"
   name "OpenLoco"
