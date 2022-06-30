@@ -11,14 +11,14 @@ cask "surge-xt" do
   pkg "surge-xt-macOS-#{version}.pkg"
 
   uninstall pkgutil: [
-    "com.surge-synth-team.surge-xt-fx.app.pkg",
-    "com.surge-synth-team.surge-xt-fx.component.pkg",
-    "com.surge-synth-team.surge-xt-fx.vst3.pkg",
-    "com.surge-synth-team.surge-xt.app.pkg",
-    "com.surge-synth-team.surge-xt.component.pkg",
-    "com.surge-synth-team.surge-xt.resources.pkg",
-    "com.surge-synth-team.surge-xt.vst3.pkg",
-  ],
+              "com.surge-synth-team.surge-xt-fx.app.pkg",
+              "com.surge-synth-team.surge-xt-fx.component.pkg",
+              "com.surge-synth-team.surge-xt-fx.vst3.pkg",
+              "com.surge-synth-team.surge-xt.app.pkg",
+              "com.surge-synth-team.surge-xt.component.pkg",
+              "com.surge-synth-team.surge-xt.resources.pkg",
+              "com.surge-synth-team.surge-xt.vst3.pkg",
+            ],
             delete:  [
               "/Applications/Surge XT Effects.app",
               "/Applications/Surge XT.app",
