@@ -18,9 +18,9 @@ cask "letter-opener" do
   pkg "Install Letter Opener.pkg"
 
   uninstall pkgutil:   [
-    "pkg.app.letteropener.*",
-    "com.restoroot.Letter-Opener",
-  ],
+              "pkg.app.letteropener.*",
+              "com.restoroot.Letter-Opener",
+            ],
             launchctl: [
               "app.letteropener.agent",
               "app.letteropener.softwareupdate.agent",
