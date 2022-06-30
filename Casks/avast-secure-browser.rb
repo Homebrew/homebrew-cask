@@ -19,13 +19,13 @@ cask "avast-secure-browser" do
             pkgutil: "com.avast.browser"
 
   zap trash: [
-    "~/Library/Application Support/AVAST Software/Browser",
-    "~/Library/Caches/AVAST Software/Browser",
-    "~/Library/Caches/com.avast.browser",
-    "~/Library/Preferences/com.avast.AvastSecureBrowser.plist",
-    "~/Library/Preferences/com.avast.browser.plist",
-    "~/Library/Saved Application State/com.avast.browser.savedState",
-  ],
+        "~/Library/Application Support/AVAST Software/Browser",
+        "~/Library/Caches/AVAST Software/Browser",
+        "~/Library/Caches/com.avast.browser",
+        "~/Library/Preferences/com.avast.AvastSecureBrowser.plist",
+        "~/Library/Preferences/com.avast.browser.plist",
+        "~/Library/Saved Application State/com.avast.browser.savedState",
+      ],
       rmdir: [
         "~/Library/Application Support/AVAST Software",
         "~/Library/Caches/AVAST Software",
