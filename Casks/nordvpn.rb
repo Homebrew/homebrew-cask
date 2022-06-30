@@ -18,9 +18,9 @@ cask "nordvpn" do
   pkg "NordVPN.pkg"
 
   uninstall quit:       [
-    "com.nordvpn.macos",
-    "com.nordvpn.macos.NordVPNLauncher",
-  ],
+              "com.nordvpn.macos",
+              "com.nordvpn.macos.NordVPNLauncher",
+            ],
             launchctl:  [
               "com.nordvpn.macos.helper",
               "com.nordvpn.NordVPN.Helper",
