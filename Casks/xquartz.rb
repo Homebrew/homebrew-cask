@@ -23,16 +23,16 @@ cask "xquartz" do
             pkgutil:   "org.xquartz.X11"
 
   zap trash: [
-    "~/.Xauthority",
-    "~/Library/Application Support/XQuartz",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.xquartz.x11.sfl*",
-    "~/Library/Caches/org.xquartz.X11",
-    "~/Library/Cookies/org.xquartz.X11.binarycookies",
-    "~/Library/Logs/X11/org.xquartz.log",
-    "~/Library/Logs/X11/org.xquartz.log.old",
-    "~/Library/Preferences/org.xquartz.X11.plist",
-    "~/Library/Saved Application State/org.xquartz.X11.savedState",
-  ],
+        "~/.Xauthority",
+        "~/Library/Application Support/XQuartz",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.xquartz.x11.sfl*",
+        "~/Library/Caches/org.xquartz.X11",
+        "~/Library/Cookies/org.xquartz.X11.binarycookies",
+        "~/Library/Logs/X11/org.xquartz.log",
+        "~/Library/Logs/X11/org.xquartz.log.old",
+        "~/Library/Preferences/org.xquartz.X11.plist",
+        "~/Library/Saved Application State/org.xquartz.X11.savedState",
+      ],
       rmdir: [
         "~/.fonts",
         "~/Library/Logs/X11",
