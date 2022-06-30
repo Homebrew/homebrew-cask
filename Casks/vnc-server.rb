@@ -20,9 +20,9 @@ cask "vnc-server" do
   end
 
   uninstall launchctl: [
-    "com.realvnc.vncserver",
-    "com.realvnc.vncserver.peruser",
-  ],
+              "com.realvnc.vncserver",
+              "com.realvnc.vncserver.peruser",
+            ],
             pkgutil:   [
               "com.realvnc.vncserver.pkg",
             ]
