@@ -17,10 +17,10 @@ cask "adobe-acrobat-reader" do
   pkg "AcroRdrDC_#{version.no_dots}_MUI.pkg"
 
   uninstall pkgutil:   [
-    "com.adobe.acrobat.DC.reader.*",
-    "com.adobe.armdc.app.pkg",
-    "com.adobe.RdrServicesUpdater",
-  ],
+              "com.adobe.acrobat.DC.reader.*",
+              "com.adobe.armdc.app.pkg",
+              "com.adobe.RdrServicesUpdater",
+            ],
             delete:    "/Applications/Adobe Acrobat Reader DC.app",
             quit:      [
               "com.adobe.AdobeRdrCEF",
