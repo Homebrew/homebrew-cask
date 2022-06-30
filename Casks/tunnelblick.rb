@@ -28,9 +28,9 @@ cask "tunnelblick" do
   end
 
   uninstall launchctl: [
-    "net.tunnelblick.tunnelblick.LaunchAtLogin",
-    "net.tunnelblick.tunnelblick.tunnelblickd",
-  ],
+              "net.tunnelblick.tunnelblick.LaunchAtLogin",
+              "net.tunnelblick.tunnelblick.tunnelblickd",
+            ],
             delete:    "/Library/Application Support/Tunnelblick",
             quit:      "net.tunnelblick.tunnelblick"
 
