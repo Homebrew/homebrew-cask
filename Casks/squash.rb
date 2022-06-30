@@ -15,4 +15,9 @@ cask "squash" do
   end
 
   app "Squash.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.realmacsoftware.squash3",
+    "~/Library/Containers/com.realmacsoftware.squash3",
+  ]
 end
