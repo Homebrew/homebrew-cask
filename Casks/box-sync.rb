@@ -17,8 +17,8 @@ cask "box-sync" do
             ]
 
   zap trash: [
-    "~/Library/Application Support/Box/Box Sync",
-    "~/Library/Logs/Box/Box Sync",
-  ],
+        "~/Library/Application Support/Box/Box Sync",
+        "~/Library/Logs/Box/Box Sync",
+      ],
       rmdir: "~/Library/Application Support/Box"
 end
