@@ -42,15 +42,15 @@ cask "parallels" do
   end
 
   uninstall delete: [
-    "/usr/local/bin/prl_convert",
-    "/usr/local/bin/prl_disk_tool",
-    "/usr/local/bin/prl_perf_ctl",
-    "/usr/local/bin/prlcore2dmp",
-    "/usr/local/bin/prlctl",
-    "/usr/local/bin/prlexec",
-    "/usr/local/bin/prlsrvctl",
-    "/Library/Preferences/Parallels",
-  ],
+              "/usr/local/bin/prl_convert",
+              "/usr/local/bin/prl_disk_tool",
+              "/usr/local/bin/prl_perf_ctl",
+              "/usr/local/bin/prlcore2dmp",
+              "/usr/local/bin/prlctl",
+              "/usr/local/bin/prlexec",
+              "/usr/local/bin/prlsrvctl",
+              "/Library/Preferences/Parallels",
+            ],
             signal: ["TERM", "com.parallels.desktop.console"]
 
   zap trash: [
