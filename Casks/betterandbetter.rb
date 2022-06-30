@@ -15,9 +15,9 @@ cask "betterandbetter" do
   pkg "BetterAndBetter#{version}Beta.pkg"
 
   uninstall pkgutil:   [
-    "cn.better365.BetterAndBetter",
-    "cn.better365.BetterAndBetterHelper",
-  ],
+              "cn.better365.BetterAndBetter",
+              "cn.better365.BetterAndBetterHelper",
+            ],
             launchctl: "cn.better365.BetterAndBetterHelper",
             quit:      "cn.better365.BetterAndBetter"
 
