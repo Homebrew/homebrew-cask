@@ -4,7 +4,7 @@ cask "tdr-kotelnikov" do
 
   url "https://www.tokyodawn.net/labs/Kotelnikov/#{version}/TDR%20Kotelnikov.zip?x24775"
   name "tdr-kotelnikov"
-  desc "TDR Kotelnikov is a wideband dynamics processor combining high fidelity dynamic range control with deep musical flexibility."
+  desc "Wideband dynamics processor combining range control with flexibility"
   homepage "https://www.tokyodawn.net/tdr-kotelnikov/"
 
   livecheck do
@@ -17,6 +17,6 @@ cask "tdr-kotelnikov" do
     "com.TokyoDawnLabs.TDRKotelnikov.VST",
     "com.TokyoDawnLabs.TDRKotelnikov.VST3",
     "com.TokyoDawnLabs.TDRKotelnikov.AU",
-    "com.TokyoDawnLabs.TDRKotelnikov.AAX"
+    "com.TokyoDawnLabs.TDRKotelnikov.AAX",
   ]
 end
