@@ -15,11 +15,11 @@ cask "anydesk" do
   app "AnyDesk.app"
 
   uninstall quit:   [
-    "com.philandro.anydesk",
-    "com.philandro.anydesk.Helper",
-    "com.philandro.anydesk.service",
-    "com.philandro.anydesk.Frontend",
-  ],
+              "com.philandro.anydesk",
+              "com.philandro.anydesk.Helper",
+              "com.philandro.anydesk.service",
+              "com.philandro.anydesk.Frontend",
+            ],
             delete: [
               "/Library/LaunchAgents/com.philandro.anydesk.Frontend.plist",
               "/Library/LaunchDaemons/com.philandro.anydesk.Helper.plist",
