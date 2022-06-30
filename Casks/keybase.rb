@@ -27,9 +27,9 @@ cask "keybase" do
   end
 
   uninstall delete:    [
-    "/Library/Logs/keybase*",
-    "/Library/PrivilegedHelperTools/keybase.Helper",
-  ],
+              "/Library/Logs/keybase*",
+              "/Library/PrivilegedHelperTools/keybase.Helper",
+            ],
             launchctl: "keybase.Helper",
             signal:    [
               ["TERM", "keybase.Electron"],
@@ -43,11 +43,11 @@ cask "keybase" do
             }
 
   zap trash: [
-    "~/Library/Application Support/Keybase",
-    "~/Library/Caches/Keybase",
-    "~/Library/Group Containers/keybase",
-    "~/Library/Logs/Keybase*",
-    "~/Library/Preferences/keybase*",
-  ],
+        "~/Library/Application Support/Keybase",
+        "~/Library/Caches/Keybase",
+        "~/Library/Group Containers/keybase",
+        "~/Library/Logs/Keybase*",
+        "~/Library/Preferences/keybase*",
+      ],
       rmdir: "/keybase"
 end
