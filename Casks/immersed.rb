@@ -29,9 +29,9 @@ cask "immersed" do
   end
 
   uninstall delete: [
-    "/Library/Audio/Plug-Ins/HAL/ImmersedAudio.driver",
-    "/Library/CoreMediaIO/Plug-Ins/DAL/ImmersedCamera.plugin",
-  ],
+              "/Library/Audio/Plug-Ins/HAL/ImmersedAudio.driver",
+              "/Library/CoreMediaIO/Plug-Ins/DAL/ImmersedCamera.plugin",
+            ],
             quit:   "team.Immersed"
 
   zap trash: [
