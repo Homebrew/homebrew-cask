@@ -23,11 +23,11 @@ cask "rancher" do
   app "Rancher Desktop.app"
 
   uninstall delete: [
-    "/opt/rancher-desktop",
-    "/private/etc/sudoers.d/zzzzz-rancher-desktop-lima", # zzzzz is not a typo
-    "/private/var/run/docker.sock",
-    "/private/var/run/rancher-desktop-*",
-  ],
+              "/opt/rancher-desktop",
+              "/private/etc/sudoers.d/zzzzz-rancher-desktop-lima", # zzzzz is not a typo
+              "/private/var/run/docker.sock",
+              "/private/var/run/rancher-desktop-*",
+            ],
             quit:   "io.rancherdesktop.app"
 
   zap trash: [
