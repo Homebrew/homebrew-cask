@@ -17,9 +17,9 @@ cask "backblaze" do
   installer manual: "Backblaze Installer.app"
 
   uninstall launchctl: [
-    "com.backblaze.bzbmenu",
-    "com.backblaze.bzserv",
-  ],
+              "com.backblaze.bzbmenu",
+              "com.backblaze.bzserv",
+            ],
             delete:    [
               "#{appdir}/Backblaze.app",
               "/Library/Logs/DiagnosticReports/bzbmenu_*.*_resource.diag",
