@@ -23,9 +23,9 @@ cask "controllermate" do
   pkg "#temp#/ControllerMate.sparkle_interactive.pkg"
 
   uninstall launchctl: [
-    "com.orderedbytes.ControllerMateHelper",
-    "com.orderedbytes.ControllerMate.KextHelper",
-  ],
+              "com.orderedbytes.ControllerMateHelper",
+              "com.orderedbytes.ControllerMate.KextHelper",
+            ],
             kext:      [
               "com.orderedbytes.driver.CMUSBDevices",
               "com.orderedbytes.driver.ControllerMateFamily",
