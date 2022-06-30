@@ -15,10 +15,10 @@ cask "lrtimelapse" do
   pkg "LRTimelapse #{version} Installer.pkg"
 
   uninstall script:  {
-    executable: "/usr/local/LRTimelapse/uninstall.sh",
-    input:      "\n",
-    sudo:       true,
-  },
+              executable: "/usr/local/LRTimelapse/uninstall.sh",
+              input:      "\n",
+              sudo:       true,
+            },
             pkgutil: [
               "com.lrtimelapse.LRAddons",
               "com.lrtimelapse.LRTimelapse#{version.major}",
