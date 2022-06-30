@@ -54,9 +54,9 @@ cask "mactex" do
       ]
 
   uninstall pkgutil: [
-    "org.tug.mactex.gui#{version.major}",
-    "org.tug.mactex.texlive#{version.major}",
-  ],
+              "org.tug.mactex.gui#{version.major}",
+              "org.tug.mactex.texlive#{version.major}",
+            ],
             delete:  [
               "/usr/local/texlive/#{version.major}",
               "/Applications/TeX",
@@ -66,28 +66,28 @@ cask "mactex" do
             ]
 
   zap trash: [
-    "/usr/local/texlive/texmf-local",
-    # TexShop:
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/texshop.sfl*",
-    "~/Library/Application Support/TeXShop",
-    "~/Library/Caches/com.apple.helpd/Generated/TeXShop Help*",
-    "~/Library/Caches/TeXShop",
-    "~/Library/Preferences/TeXShop.plist",
-    "~/Library/TeXShop",
-    # BibDesk:
-    "~/Library/Application Support/BibDesk",
-    "~/Library/Caches/com.apple.helpd/Generated/edu.ucsd.cs.mmccrack.bibdesk.help*",
-    "~/Library/Caches/edu.ucsd.cs.mmccrack.bibdesk",
-    "~/Library/Cookies/edu.ucsd.cs.mmccrack.bibdesk.binarycookies",
-    "~/Library/Preferences/edu.ucsd.cs.mmccrack.bibdesk.plist",
-    # LaTeXiT:
-    "~/Library/Caches/fr.chachatelier.pierre.LaTeXiT",
-    "~/Library/Cookies/fr.chachatelier.pierre.LaTeXiT.binarycookies",
-    "~/Library/Preferences/fr.chachatelier.pierre.LaTeXiT.plist",
-    # TeX Live Utility:
-    "~/Library/Application Support/TeX Live Utility",
-    "~/Library/Caches/com.apple.helpd/Generated/TeX Live Utility Help*",
-  ],
+        "/usr/local/texlive/texmf-local",
+        # TexShop:
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/texshop.sfl*",
+        "~/Library/Application Support/TeXShop",
+        "~/Library/Caches/com.apple.helpd/Generated/TeXShop Help*",
+        "~/Library/Caches/TeXShop",
+        "~/Library/Preferences/TeXShop.plist",
+        "~/Library/TeXShop",
+        # BibDesk:
+        "~/Library/Application Support/BibDesk",
+        "~/Library/Caches/com.apple.helpd/Generated/edu.ucsd.cs.mmccrack.bibdesk.help*",
+        "~/Library/Caches/edu.ucsd.cs.mmccrack.bibdesk",
+        "~/Library/Cookies/edu.ucsd.cs.mmccrack.bibdesk.binarycookies",
+        "~/Library/Preferences/edu.ucsd.cs.mmccrack.bibdesk.plist",
+        # LaTeXiT:
+        "~/Library/Caches/fr.chachatelier.pierre.LaTeXiT",
+        "~/Library/Cookies/fr.chachatelier.pierre.LaTeXiT.binarycookies",
+        "~/Library/Preferences/fr.chachatelier.pierre.LaTeXiT.plist",
+        # TeX Live Utility:
+        "~/Library/Application Support/TeX Live Utility",
+        "~/Library/Caches/com.apple.helpd/Generated/TeX Live Utility Help*",
+      ],
       rmdir: "/usr/local/texlive"
 
   caveats <<~EOS
