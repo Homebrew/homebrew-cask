@@ -18,11 +18,6 @@ cask "kicad" do
   suite "KiCad"
   artifact "demos", target: "/Library/Application Support/kicad/demos"
 
-  uninstall delete: [
-    "#{appdir}/KiCad",
-    "/Library/Application Support/kicad/demos",
-  ]
-
   zap trash: [
     "/Library/Application Support/kicad",
     "~/Library/Application Support/kicad",
