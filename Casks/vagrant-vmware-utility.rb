@@ -16,9 +16,9 @@ cask "vagrant-vmware-utility" do
   pkg "VagrantVMwareUtility.pkg"
 
   uninstall script:  {
-    executable: "uninstall.tool",
-    input:      ["Yes"],
-    sudo:       true,
-  },
+              executable: "uninstall.tool",
+              input:      ["Yes"],
+              sudo:       true,
+            },
             pkgutil: "com.vagrant.vagrant-vmware-utility"
 end
