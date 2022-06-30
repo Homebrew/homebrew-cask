@@ -15,10 +15,11 @@ cask "colorchecker-camera-calibration" do
 
   pkg "ColorCheckerCameraCalibration.pkg"
 
-  uninstall pkgutil: [
-    "com.xrite.colorcheckercameracalibration.colorcheckercameracalibration.XRiteColorCheckerCameraCalibration.pkg",
-    "com.xrite.colorcheckercameracalibration.colorcheckercameracalibration.Help.pkg",
-    "com.xrite.colorcheckercameracalibration.colorcheckercameracalibration.mac.pkg",
-  ],
-            delete:  "/System/Applications/ColorChecker Camera Calibration.app"
+  uninstall \
+    pkgutil: [
+      "com.xrite.colorcheckercameracalibration.colorcheckercameracalibration.XRiteColorCheckerCameraCalibration.pkg",
+      "com.xrite.colorcheckercameracalibration.colorcheckercameracalibration.Help.pkg",
+      "com.xrite.colorcheckercameracalibration.colorcheckercameracalibration.mac.pkg",
+    ],
+    delete:  "/System/Applications/ColorChecker Camera Calibration.app"
 end
