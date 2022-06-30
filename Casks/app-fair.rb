@@ -14,14 +14,14 @@ cask "app-fair" do
   binary "#{appdir}/App Fair.app/Contents/MacOS/App Fair", target: "app-fair"
 
   zap trash: [
-    "~/Library/Application Scripts/app.App-Fair",
-    "~/Library/Application Support/app.App-Fair",
-    "~/Library/Caches/app.App-Fair",
-    "~/Library/Containers/app.App-Fair",
-    "~/Library/HTTPStorages/app.App-Fair",
-    "~/Library/HTTPStorages/app.App-Fair.binarycookies",
-    "~/Library/Preferences/app.App-Fair.plist",
-    "~/Library/Saved Application State/app.App-Fair.savedState",
-  ],
+        "~/Library/Application Scripts/app.App-Fair",
+        "~/Library/Application Support/app.App-Fair",
+        "~/Library/Caches/app.App-Fair",
+        "~/Library/Containers/app.App-Fair",
+        "~/Library/HTTPStorages/app.App-Fair",
+        "~/Library/HTTPStorages/app.App-Fair.binarycookies",
+        "~/Library/Preferences/app.App-Fair.plist",
+        "~/Library/Saved Application State/app.App-Fair.savedState",
+      ],
       rmdir: "/Applications/App Fair"
 end
