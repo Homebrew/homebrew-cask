@@ -5,12 +5,8 @@ cask "simplesynth" do
   url "https://notahat.s3.amazonaws.com/SimpleSynth-#{version}.zip",
       verified: "notahat.s3.amazonaws.com/"
   name "SimpleSynth"
-  homepage "https://notahat.com/simplesynth/"
-
-  livecheck do
-    url :homepage
-    regex(%r{href=.*?/SimpleSynth-(\d+(?:\.\d+)*)\.zip}i)
-  end
+  desc "Small and fast synth"
+  homepage "https://github.com/notahat/simplesynth"
 
   app "SimpleSynth.app"
 end
