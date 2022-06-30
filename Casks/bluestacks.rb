@@ -26,28 +26,28 @@ cask "bluestacks" do
   end
 
   uninstall launchctl: [
-    "com.BlueStacks.AppPlayer.bstservice_helper",
-    "com.BlueStacks.AppPlayer.Service",
-    "com.BlueStacks.AppPlayer.UninstallWatcher",
-    "com.BlueStacks.AppPlayer.Updater",
-  ],
+              "com.BlueStacks.AppPlayer.bstservice_helper",
+              "com.BlueStacks.AppPlayer.Service",
+              "com.BlueStacks.AppPlayer.UninstallWatcher",
+              "com.BlueStacks.AppPlayer.Updater",
+            ],
             delete:    [
               "/Applications/BlueStacks.app",
               "/Library/PrivilegedHelperTools/com.BlueStacks.AppPlayer.bstservice_helper",
             ]
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bluestacks.bluestacks.sfl*",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bluestacks.bluestacks-support-tool.sfl*",
-    "~/Library/BlueStacks",
-    "~/Library/Caches/com.bluestacks.BlueStacks",
-    "~/Library/Caches/com.bluestacks.BlueStacks-Support-Tool",
-    "~/Library/Caches/KSCrashReports/BlueStacks",
-    "~/Library/Logs/BlueStacks",
-    "~/Library/Preferences/com.BlueStacks.AppPlayer.DiagnosticTimestamp.txt",
-    "~/Library/Preferences/com.BlueStacks.AppPlayer.plist",
-    "~/Library/Preferences/com.BlueStacks.AppPlayer.SavedFrame.plist",
-    "~/Library/Preferences/com.bluestacks.BlueStacks.plist",
-  ],
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bluestacks.bluestacks.sfl*",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bluestacks.bluestacks-support-tool.sfl*",
+        "~/Library/BlueStacks",
+        "~/Library/Caches/com.bluestacks.BlueStacks",
+        "~/Library/Caches/com.bluestacks.BlueStacks-Support-Tool",
+        "~/Library/Caches/KSCrashReports/BlueStacks",
+        "~/Library/Logs/BlueStacks",
+        "~/Library/Preferences/com.BlueStacks.AppPlayer.DiagnosticTimestamp.txt",
+        "~/Library/Preferences/com.BlueStacks.AppPlayer.plist",
+        "~/Library/Preferences/com.BlueStacks.AppPlayer.SavedFrame.plist",
+        "~/Library/Preferences/com.bluestacks.BlueStacks.plist",
+      ],
       rmdir: "~/Library/Caches/KSCrashReports"
 end
