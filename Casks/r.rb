@@ -31,9 +31,9 @@ cask "r" do
   end
 
   uninstall pkgutil: [
-    "org.r-project*",
-    "org.R-project*",
-  ],
+              "org.r-project*",
+              "org.R-project*",
+            ],
             delete:  [
               "/Library/Frameworks/R.Framework",
               "/usr/bin/R",
