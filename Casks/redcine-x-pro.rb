@@ -19,8 +19,8 @@ cask "redcine-x-pro" do
   pkg "REDCINE-X_PRO_Build_#{version.major_minor}.pkg"
 
   uninstall pkgutil: [
-    "com.red.pkg.REDCINE-X PRO",
-    "com.red.pkg.SupportLibs",
-  ],
+              "com.red.pkg.REDCINE-X PRO",
+              "com.red.pkg.SupportLibs",
+            ],
             delete:  "/Applications/REDCINE-X Professional"
 end
