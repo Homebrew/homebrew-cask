@@ -10,9 +10,9 @@ cask "iceberg" do
   pkg "Iceberg.mpkg"
 
   uninstall pkgutil: [
-    "fr.white.iceberg.pkg.*",
-    "fr.whitebox.pkg.*",
-  ],
+              "fr.white.iceberg.pkg.*",
+              "fr.whitebox.pkg.*",
+            ],
             script:  {
               executable: "uninstall.sh",
               sudo:       true,
