@@ -24,14 +24,14 @@ cask "gpg-suite" do
 
   uninstall_postflight do
     ["gpg", "gpg2", "gpg-agent"].map { |exec_name| "/usr/local/bin/#{exec_name}" }.each do |exec|
-      File.rm(exec) if File.exist?(exec) && File.readlink(exec).include?("MacGPG2")
+      FileUtils.rm_rf(exec) && File.readlink(exec).include?("MacGPG2")
     end
   end
 
   uninstall script:    {
-    executable: "#{staged_path}/Uninstall.app/Contents/Resources/GPG Suite Uninstaller.app/Contents/Resources/uninstall.sh",
-    sudo:       true,
-  },
+              executable: "#{staged_path}/Uninstall.app/Contents/Resources/GPG Suite Uninstaller.app/Contents/Resources/uninstall.sh",
+              sudo:       true,
+            },
             pkgutil:   "org.gpgtools.*",
             quit:      [
               "com.apple.mail",
