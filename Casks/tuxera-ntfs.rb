@@ -17,9 +17,9 @@ cask "tuxera-ntfs" do
   pkg ".packages/Flat/Install Tuxera NTFS.mpkg"
 
   uninstall quit:    [
-    "com.tuxera.Tuxera-NTFS",
-    "com.tuxera.filesystems.ntfs.agent",
-  ],
+              "com.tuxera.Tuxera-NTFS",
+              "com.tuxera.filesystems.ntfs.agent",
+            ],
             pkgutil: [
               "com.tuxera.pkg.Tuxera_NTFS",
               "com.tuxera.pkg.Tuxera_NTFS_compat",
