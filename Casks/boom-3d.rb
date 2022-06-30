@@ -16,9 +16,9 @@ cask "boom-3d" do
   app "Boom 3D.app"
 
   uninstall launchctl: [
-    "com.globaldelight.Boom3D",
-    "com.globaldelight.Boom3DHelper",
-  ],
+              "com.globaldelight.Boom3D",
+              "com.globaldelight.Boom3DHelper",
+            ],
             quit:      "com.globaldelight.Boom3D"
 
   zap trash: [
