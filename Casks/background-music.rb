@@ -26,10 +26,10 @@ cask "background-music" do
   end
 
   uninstall delete:    [
-    "/Library/Application Support/Background Music",
-    "/Library/Audio/Plug-Ins/HAL/Background Music Device.driver",
-    "/usr/local/libexec/BGMXPCHelper.xpc",
-  ],
+              "/Library/Application Support/Background Music",
+              "/Library/Audio/Plug-Ins/HAL/Background Music Device.driver",
+              "/usr/local/libexec/BGMXPCHelper.xpc",
+            ],
             pkgutil:   "com.bearisdriving.BGM",
             quit:      "com.bearisdriving.BGM.App",
             launchctl: "com.bearisdriving.BGM.XPCHelper"
