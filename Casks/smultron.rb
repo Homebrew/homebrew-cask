@@ -8,8 +8,16 @@ cask "smultron" do
   homepage "https://www.peterborgapps.com/smultron/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url :homepage
+    regex(/href=.*?Smultron[._-]?v?(\d+)\.zip/i)
+    strategy :page_match do |page, regex|
+      major_version = page[regex, 1]
+      next if major_version.blank?
+
+      cask = CaskLoader.load("smultron")
+      download_url = "https://www.peterborgapps.com/downloads/Smultron#{major_version}.zip"
+      Homebrew::Livecheck::Strategy::ExtractPlist.find_versions(cask: cask, url: download_url)[:matches].values
+    end
   end
 
   auto_updates true
