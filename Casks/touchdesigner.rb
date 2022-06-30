@@ -4,7 +4,7 @@ cask "touchdesigner" do
   version "2022.25370"
 
   if Hardware::CPU.intel?
-    sha256 "cf0a32363378adda9caf2449de013885a7ee60e9501472fcdfa94817783063ce"
+    sha256 "02952854ffa0f4d9c8f4a171e4a6f142dd48d1bc39129578959a129ddab67264"
   else
     sha256 "02952854ffa0f4d9c8f4a171e4a6f142dd48d1bc39129578959a129ddab67264"
   end
