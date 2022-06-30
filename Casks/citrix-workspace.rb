@@ -22,13 +22,13 @@ cask "citrix-workspace" do
   pkg "Install Citrix Workspace.pkg"
 
   uninstall launchctl: [
-    "com.citrix.AuthManager_Mac",
-    "com.citrix.ctxusbd",
-    "com.citrix.ctxworkspaceupdater",
-    "com.citrix.ReceiverHelper",
-    "com.citrix.safariadapter",
-    "com.citrix.ServiceRecords",
-  ],
+              "com.citrix.AuthManager_Mac",
+              "com.citrix.ctxusbd",
+              "com.citrix.ctxworkspaceupdater",
+              "com.citrix.ReceiverHelper",
+              "com.citrix.safariadapter",
+              "com.citrix.ServiceRecords",
+            ],
             quit:      [
               "Citrix.ServiceRecords",
               "com.citrix.receiver.nomas",
