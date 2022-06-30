@@ -7,5 +7,12 @@ cask "squash" do
   desc "Batch image processor, resizer, and converter"
   homepage "https://www.realmacsoftware.com/squash/"
 
+  livecheck do
+    url "https://update.devant.io/v1/feed/4ad73d1f-7ab7-4f7f-b9df-8d2d906ef718/"
+    strategy :sparkle do |item|
+      "#{item.short_version},#{item.version}"
+    end
+  end
+
   app "Squash.app"
 end
