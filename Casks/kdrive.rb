@@ -21,9 +21,9 @@ cask "kdrive" do
   end
 
   uninstall quit:      [
-    "com.infomaniak.drive.desktopclient",
-    "com.infomaniak.drive.desktopclient.Extension",
-  ],
+              "com.infomaniak.drive.desktopclient",
+              "com.infomaniak.drive.desktopclient.Extension",
+            ],
             pkgutil:   "com.infomaniak.drive.desktopclient",
             launchctl: "864VDCS2QY.com.infomaniak.drive.desktopclient.LoginItemAgent"
 
