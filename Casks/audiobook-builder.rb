@@ -8,8 +8,8 @@ cask "audiobook-builder" do
   homepage "https://www.splasm.com/audiobookbuilder/"
 
   livecheck do
-    url :homepage
-    regex(/Version\s*(\d+(?:\.\d+)+)/i)
+    url "https://www.splasm.com/audiobookbuilder/update.html"
+    regex(/class=.*["' >]Audiobook\sBuilder\s?(\d+(?:\.\d+)+)</i)
   end
 
   depends_on macos: ">= :el_capitan"
