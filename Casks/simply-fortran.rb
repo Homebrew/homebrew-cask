@@ -8,7 +8,7 @@ cask "simply-fortran" do
   version "3.25.3757"
 
   if MacOS.version <= :big_sur
-    sha256 "eefcde488f42eaed99dd64215b7ec05bb2daf6c824418cede10c63a74128a220"
+    sha256 "0975462a1593bdc976dc87d6a9da88b97d8268a1a97caebeefd359e56ef73195"
   elsif Hardware::CPU.intel?
     sha256 "cd177191c7a96d59c0e9c3bb271808a2b471d1001fca17b85cb420aaf55ee05a"
   else
