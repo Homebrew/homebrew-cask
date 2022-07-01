@@ -1,16 +1,9 @@
 cask "mweb-pro" do
   version "4.3.1"
+  sha256 "040086b134f45895914c0e00f38f4ef744803dc367245c1163329ae46b4f1b73"
 
-  if MacOS.version <= :catalina
-    url "https://cdn.mwebapp.cn/MWebPro#{version.no_dots}_catalina.dmg",
-        verified: "cdn.mwebapp.cn/"
-    sha256 "e1df728f869455815dc659a1b9be1edee5037eb5ffd5dbf40735a45550de865b"
-  else
-    url "https://cdn.mwebapp.cn/MWebPro#{version.no_dots}.dmg",
-        verified: "cdn.mwebapp.cn/"
-    sha256 "040086b134f45895914c0e00f38f4ef744803dc367245c1163329ae46b4f1b73"
-  end
-
+  url "https://cdn.mwebapp.cn/MWebPro#{version.no_dots}.dmg",
+      verified: "cdn.mwebapp.cn/"
   name "MWeb Pro"
   desc "Markdown writing, note taking, and static blog generator app"
   homepage "https://www.mweb.im/"
