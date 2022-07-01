@@ -8,6 +8,11 @@ cask "app-fair" do
   desc "Catalog of free and commercial native desktop applications"
   homepage "https://appfair.app/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :monterey"
 
   app "App Fair.app"
