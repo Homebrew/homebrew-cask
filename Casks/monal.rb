@@ -1,5 +1,5 @@
 cask "monal" do
-  version "5.2.0,794"
+  version "5.2.0,795"
   sha256 :no_check
 
   url "https://monal.im/macOS/Monal-macOS.zip"
