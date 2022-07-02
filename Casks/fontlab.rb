@@ -1,6 +1,6 @@
 cask "fontlab" do
-  version "8.0.0.8200"
-  sha256 "68007ff0d3277a1dea6e64ea402bd923592b3575387864b1dfb95e32893ae658"
+  version "8.0.0.8203"
+  sha256 "521f1fb91f6248ca9ad42a659bf44e284a273b8113c0fbaa2dddbb73a91d4af1"
 
   url "https://fontlab.s3.amazonaws.com/fontlab-#{version.major}/#{version.split(".").last}/FontLab-#{version.major}-Mac-Install-#{version.split(".").last}.dmg",
       verified: "fontlab.s3.amazonaws.com/"
