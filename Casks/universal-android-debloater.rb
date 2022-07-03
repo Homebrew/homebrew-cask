@@ -1,6 +1,6 @@
 cask "universal-android-debloater" do
-  version "0.5"
-  sha256 "2c029731a354e44f1afeec3284d0c2017a35e7ac1f2ddc09da0c4c2e7525aac8"
+  version "0.5.1"
+  sha256 "9b22d3da881482067fda33c46409b99a34b48ba13a8fb789007de2125772cc32"
 
   url "https://github.com/0x192/universal-android-debloater/releases/download/#{version}/uad_gui-macos-opengl.tar.gz"
   name "Universal Android Debloater"
@@ -8,6 +8,7 @@ cask "universal-android-debloater" do
   desc "GUI which uses ADB to debloat non-rooted Android devices"
   homepage "https://github.com/0x192/universal-android-debloater"
 
+  auto_updates true
   depends_on cask: "android-platform-tools"
 
   binary "uad_gui-macos-opengl", target: "uad"
