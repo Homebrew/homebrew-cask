@@ -8,7 +8,8 @@ cask "tdr-vos-slickeq" do
   homepage "https://www.tokyodawn.net/tdr-vos-slickeq/"
 
   livecheck do
-    skip "No version information available"
+    url :homepage
+    regex(%r{Latest\sversion:\s<strong>(\d+(?:\.\d+)+)</strong>}i)
   end
 
   pkg "TDR VOS SlickEQ.pkg"
