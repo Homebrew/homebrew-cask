@@ -24,6 +24,7 @@ cask "espanso" do
   binary "#{appdir}/Espanso.app/Contents/MacOS/espanso"
 
   zap trash: [
+    "~/Library/Application Support/espanso",
     "~/Library/Caches/espanso",
     "~/Library/LaunchAgents/com.federicoterzi.espanso.plist",
     "~/Library/Preferences/com.federicoterzi.espanso.plist",
