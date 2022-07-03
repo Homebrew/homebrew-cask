@@ -114,8 +114,8 @@ cask "gpg-suite-pinentry" do
       ]
 
   uninstall_postflight do
-    ["gpg", "gpg2", "gpg-agent"].map { |exec_name| "/usr/local/bin/#{exec_name}" }.each do |exec|
-      FileUtils.rm_rf(exec) && File.readlink(exec).include?("MacGPG2")
+    ["gpg", "gpg2", "gpg-agent"].map { |exec_name| Pathname("/usr/local/bin")/exec_name }.each do |exec|
+      exec.unlink if exec.exist? && exec.readlink.to_s.include("MacGPG2")
     end
   end
 
