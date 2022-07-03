@@ -4,11 +4,12 @@ cask "tdr-nova" do
 
   url "https://www.tokyodawn.net/labs/Nova/#{version}/TDR%20Nova.zip?x24775"
   name "TDR Nova"
-  desc "NOVA is a parallel dynamic equalizer"
+  desc "Parallel dynamic equalizer"
   homepage "https://www.tokyodawn.net/tdr-nova/5/"
 
   livecheck do
-    skip "No version information available"
+    url :homepage
+    regex(%r{Latest\sversion:\s<strong>(\d+(?:\.\d+)+)</strong>}i)
   end
 
   pkg "TDR Nova.pkg"
