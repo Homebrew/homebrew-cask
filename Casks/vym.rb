@@ -7,6 +7,12 @@ cask "vym" do
   desc "Generate and manipulate maps which show your thoughts"
   homepage "https://sourceforge.net/projects/vym/"
 
+  livecheck do
+    url "https://sourceforge.net/projects/vym/rss"
+    strategy :page_match
+    regex(/.*?osx11-vym-(\d+(?:\.\d+)+).*?\.zip/i)
+  end
+
   app "vym.app"
 
   zap trash: "~/Library/Preferences/com.insilmaril.vym.plist"

@@ -1,6 +1,6 @@
 cask "p4" do
-  version "2022.1,2285021"
-  sha256 "439ae2480441cec2b9bfbba2a646745d785e0a5ff4648669381d87bffade2619"
+  version "2022.1,2305383"
+  sha256 "58454f04a735cfa7ea477d4154e69be7f9909dccd242f374fe77a77e99b10c00"
 
   url "https://cdist2.perforce.com/perforce/r#{version.major[-2..]}.#{version.minor}/bin.macosx1015x86_64/p4"
   name "Perforce Helix Command-Line Client (P4)"

@@ -1,12 +1,12 @@
 cask "standard-notes" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "3.22.17"
+  version "3.23.21"
 
   if Hardware::CPU.intel?
-    sha256 "97a4b38c6d10299b5b28695b1b5a2f097b6982002f318316c70c390d23a40f3d"
+    sha256 "528e34305177cbe8f2ab17709dac1fc6ca92a9a69b64f10c1b027a3853a42a94"
   else
-    sha256 "bd55b24c097a81f77fd280d88d03be4d2718f932445f1cbeff027b52025a4120"
+    sha256 "0e5e8a761deadabeb6a63c9b42c88a75cfec215d1a0cf53fe7d5f47cf4bf4d86"
   end
 
   url "https://github.com/standardnotes/app/releases/download/%40standardnotes%2Fdesktop%40#{version}/standard-notes-#{version}-mac-#{arch}.zip",

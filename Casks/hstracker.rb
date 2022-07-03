@@ -1,6 +1,6 @@
 cask "hstracker" do
-  version "2.1.9"
-  sha256 "291e7cb8abafbe046a228885fbfe897b76f7fb4da11e563a7b7b5d6352bc4fb1"
+  version "2.1.11"
+  sha256 "a826e3d5ccdc825f7ea7d6cd9572b24a4950627351d5589491711be334d85028"
 
   url "https://github.com/HearthSim/HSTracker/releases/download/#{version}/HSTracker.app.zip",
       verified: "github.com/HearthSim/HSTracker/"

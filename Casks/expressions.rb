@@ -1,6 +1,6 @@
 cask "expressions" do
-  version "1.3.3"
-  sha256 "cce8506474d9c071ce9e945c7709e21cadcab2e962805b3b3ba61246723195ad"
+  version "1.3.5"
+  sha256 "764073e2b8caf23263e77ea53000236b51353fb97d2d9339b59a3a5621d47210"
 
   url "https://www.apptorium.com/public/products/expressions/releases/Expressions-#{version}.zip"
   name "Expressions"
