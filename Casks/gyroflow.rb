@@ -9,6 +9,7 @@ cask "gyroflow" do
   homepage "https://gyroflow.xyz/"
 
   app "Gyroflow.app"
+  depends_on macos: ">= :mojave"
 
   zap trash: "~/Library/Caches/Gyroflow/"
 end
