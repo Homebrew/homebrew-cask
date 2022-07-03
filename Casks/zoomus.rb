@@ -8,6 +8,10 @@ cask "zoomus" do
   desc "Temporary makeshift alias for the video communication tool Zoom"
   homepage "https://www.zoom.us/"
 
+  livecheck do
+    skip "This cask been renamed to 'zoom'"
+  end
+
   depends_on cask: "zoom"
 
   stage_only true
