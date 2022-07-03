@@ -9,8 +9,8 @@ cask "espanso" do
     sha256 "46137b5e7316a1c85574d45468b510e14a58cd495d5eb74de74f482dd241c447"
   end
 
-  url "https://github.com/federico-terzi/espanso/releases/download/v#{version}/Espanso-Mac-#{arch}.zip",
-      verified: "github.com/federico-terzi/espanso/"
+  url "https://github.com/espanso/espanso/releases/download/v#{version}/Espanso-Mac-#{arch}.zip",
+      verified: "github.com/espanso/espanso/"
   name "Espanso"
   desc "Cross-platform Text Expander written in Rust"
   homepage "https://espanso.org/"
