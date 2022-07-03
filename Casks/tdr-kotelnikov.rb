@@ -8,7 +8,8 @@ cask "tdr-kotelnikov" do
   homepage "https://www.tokyodawn.net/tdr-kotelnikov/"
 
   livecheck do
-    skip "No version information available"
+    url :homepage
+    regex(%r{Latest\sversion:\s<strong>(\d+(?:\.\d+)+)</strong>}i)
   end
 
   pkg "TDR Kotelnikov.pkg"
