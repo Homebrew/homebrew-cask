@@ -4,7 +4,7 @@ cask "tdr-nova" do
 
   url "https://www.tokyodawn.net/labs/Nova/#{version}/TDR%20Nova.zip?x24775"
   name "TDR Nova"
-  desc "NOVA is a parallel dynamic equalizer."
+  desc "NOVA is a parallel dynamic equalizer"
   homepage "https://www.tokyodawn.net/tdr-nova/5/"
 
   livecheck do
@@ -17,6 +17,6 @@ cask "tdr-nova" do
     "com.TokyoDawnLabs.TDRNova.VST",
     "com.TokyoDawnLabs.TDRNova.AAX",
     "com.TokyoDawnLabs.TDRNova.AU",
-    "com.TokyoDawnLabs.TDRNova.VST3"
+    "com.TokyoDawnLabs.TDRNova.VST3",
   ]
 end
