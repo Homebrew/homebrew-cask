@@ -9,8 +9,9 @@ cask "bluewallet" do
   homepage "https://bluewallet.io/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://github.com/BlueWallet/BlueWallet/releases/"
+    strategy :page_match
+    regex(/href=.*?BlueWallet.(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   depends_on macos: ">= :catalina"
