@@ -8,7 +8,7 @@ cask "bing-wallpaper" do
   homepage "https://bingwallpaper.microsoft.com/"
 
   livecheck do
-    url "https://testedgewelcomeenglish.azurewebsites.net/BingWallpaperMAC/sparkletestcast.xml"
+    url "https://go.microsoft.com/fwlink/?linkid=2181295"
     strategy :extract_plist
   end
 
