@@ -4,7 +4,7 @@ cask "yousician" do
 
   url "https://public.yousician.com/Builds/Yousician.dmg"
   name "Yousician"
-  desc "Is a fun way to learn the guitar, piano, bass, ukulele or singing"
+  desc "Musical instrument learning tool"
   homepage "https://yousician.com/"
 
   app "Yousician Launcher.app"
