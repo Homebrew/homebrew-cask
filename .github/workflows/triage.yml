@@ -6,6 +6,9 @@ concurrency:
   group: "triage-${{ github.event.number }}"
   cancel-in-progress: true
 
+permissions:
+  contents: read
+
 jobs:
   triage:
     runs-on: ubuntu-latest
