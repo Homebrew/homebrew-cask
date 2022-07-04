@@ -8,7 +8,7 @@ cask "yousician" do
   homepage "https://yousician.com/"
 
   app "Yousician Launcher.app"
-  
+
   zap trash: [
     "~/Library/Application Support/unity.Yousician.Yousician",
     "~/Library/Caches/com.yousician.launcher",
