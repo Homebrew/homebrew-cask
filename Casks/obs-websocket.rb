@@ -14,5 +14,5 @@ cask "obs-websocket" do
 
   pkg "obs-websocket-#{version}-macOS.pkg"
 
-  uninstall pkgutil: "fr.palakis.obs-websocket"
+  uninstall pkgutil: "com.obsproject.obs-websocket"
 end
