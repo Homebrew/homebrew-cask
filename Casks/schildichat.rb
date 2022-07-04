@@ -8,6 +8,12 @@ cask "schildichat" do
   desc "Matrix client based on Element with a more traditional IM experience"
   homepage "https://schildi.chat/desktop/"
 
+  livecheck do
+    url "https://github.com/SchildiChat/schildichat-desktop/releases"
+    strategy :page_match
+    regex(/href=.*?SchildiChat-(\d+(?:\.\d+).+)-universal.*?\.dmg/i)
+  end
+
   app "SchildiChat.app"
 
   zap trash: "~/Library/Application Support/SchildiChat"
