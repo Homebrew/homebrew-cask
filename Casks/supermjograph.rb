@@ -9,8 +9,8 @@ cask "supermjograph" do
   homepage "https://www.mjograph.net/"
 
   livecheck do
-    url "https://sourceforge.net/projects/mjograph/files/latest/download"
-    strategy :header_match
+    url "https://sourceforge.net/projects/mjograph/rss"
+    strategy :page_match
     regex(/SuperMjograph[._-](\d+(?:\.\d+)+)\.zip/i)
   end
 
