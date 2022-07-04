@@ -12,7 +12,7 @@ cask "omegat" do
     url "https://sourceforge.net/projects/omegat/rss?path=/OmegaT%20-%20Standard"
   end
 
-  conflicts_with cask: "omegat-latest"
+  conflicts_with cask: "homebrew/cask-versions/omegat-latest"
 
   app "OmegaT_#{version}_Mac_Notarized/OmegaT.app"
 
