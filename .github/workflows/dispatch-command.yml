@@ -4,6 +4,9 @@ on:
   issue_comment:
     types: [created]
 
+permissions:
+  contents: read
+
 jobs:
   dispatch-command:
     if: startsWith(github.repository, 'Homebrew/')

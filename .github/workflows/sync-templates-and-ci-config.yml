@@ -10,6 +10,9 @@ concurrency:
   group: sync-templates-and-ci-config
   cancel-in-progress: true
 
+permissions:
+  contents: read
+
 jobs:
   sync-templates-and-ci-config:
     if: github.repository == 'Homebrew/homebrew-cask'

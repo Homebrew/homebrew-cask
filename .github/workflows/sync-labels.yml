@@ -2,6 +2,9 @@ name: Sync labels.
 
 on: label
 
+permissions:
+  contents: read
+
 jobs:
   sync-labels:
     if: github.repository == 'Homebrew/homebrew-cask'
