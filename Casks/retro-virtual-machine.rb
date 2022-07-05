@@ -6,10 +6,10 @@ cask "retro-virtual-machine" do
       verified: "static.retrovm.org/release/"
   name "Retro Virtual Machine"
   desc "ZX Spectrum and Amstrad CPC emulator"
-  homepage "http://www.retrovirtualmachine.org/en/"
+  homepage "https://www.retrovirtualmachine.org/en/"
 
   livecheck do
-    url "http://www.retrovirtualmachine.org/en/downloads"
+    url "https://www.retrovirtualmachine.org/en/downloads"
     strategy :page_match do |page|
       match = page.match(/RetroVirtualMachine\.(\d+(?:\.\d+)*)\.beta-(\d+(?:\..\d+)*)\.macos\.dmg/i)
       next if match.blank?
