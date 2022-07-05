@@ -14,4 +14,12 @@ cask "gamma-control" do
   end
 
   app "Gamma Control.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/ca.michelf.GammaControl.6",
+    "~/Library/Application Scripts/ca.michelf.GammaControl.Launcher",
+    "~/Library/Containers/ca.michelf.GammaControl.6",
+    "~/Library/Containers/ca.michelf.GammaControl.Launcher",
+  ]
+
 end
