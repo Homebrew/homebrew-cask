@@ -13,7 +13,7 @@ cask "wirecast" do
 
   preflight do
     system_command "/usr/bin/hdiutil",
-                   args: ["attach", "#{HOMEBREW_CACHE}/Cask/Wirecast--#{version}.dmg", "-shadow"],
+                   args:  ["attach", "#{HOMEBREW_CACHE}/Cask/Wirecast--#{version}.dmg", "-shadow"],
                    input: "y"
   end
 
@@ -26,6 +26,6 @@ cask "wirecast" do
     "~/Library/Logs/Wirecast",
     "~/Library/Preferences/Wirecast",
     "~/Library/Preferences/net.telestream.wirecast.plist",
-    "~/Library/Saved Applicate State/net.telestream.wirecast.savedState"
-  ]  
+    "~/Library/Saved Applicate State/net.telestream.wirecast.savedState",
+  ]
 end
