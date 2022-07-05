@@ -1,5 +1,5 @@
 cask "pdf-reader-pro" do
-  version "2.8.10.1"
+  version "2.8.11.1"
   sha256 :no_check
 
   url "https://www.pdfreaderpro.com/downloads/PDFReaderPro.dmg"
