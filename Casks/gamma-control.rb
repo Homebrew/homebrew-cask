@@ -14,4 +14,4 @@ cask "gamma-control" do
     end
 
     app "Gamma Control.app"
-  end
+end
