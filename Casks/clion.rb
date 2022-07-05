@@ -30,7 +30,8 @@ cask "clion" do
 
   uninstall_postflight do
     ENV["PATH"].split(File::PATH_SEPARATOR).map { |path| File.join(path, "clion") }.each do |path|
-      if File.readlines(path).grep(/# see com.intellij.idea.SocketLock for the server side of this interface/).any?
+      if File.readable?(path) &&
+         File.readlines(path).grep(/# see com.intellij.idea.SocketLock for the server side of this interface/).any?
         File.delete(path)
       end
     end
