@@ -1,15 +1,14 @@
 cask "pdf-expert" do
-  version "2.5.21,761"
-  sha256 "7906dc0b154c928a2b6c5c341336a1fec5f9c6ba059de08b8c91eca160f94ff6"
+  version "3.0.23,844"
+  sha256 "23c3ce60f27b36edfbe5727a7e4c17d737ce2df1aa17b735924cff1443adebb6"
 
-  url "https://d1ke680phyeohy.cloudfront.net/versions/#{version.csv.second}/PDFExpert.dmg",
-      verified: "d1ke680phyeohy.cloudfront.net/versions/"
+  url "https://downloads.pdfexpert.com/pem#{version.major}/versions/#{version.csv.second}/PDFExpert.zip"
   name "PDF Expert"
   desc "PDF reader, editor and annotator"
   homepage "https://pdfexpert.com/"
 
   livecheck do
-    url "https://d1ke680phyeohy.cloudfront.net/release/appcast.xml"
+    url "https://downloads.pdfexpert.com/paid/appcast.xml"
     strategy :sparkle
   end
 
