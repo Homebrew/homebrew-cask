@@ -21,5 +21,4 @@ cask "gamma-control" do
     "~/Library/Containers/ca.michelf.GammaControl.6",
     "~/Library/Containers/ca.michelf.GammaControl.Launcher",
   ]
-
 end
