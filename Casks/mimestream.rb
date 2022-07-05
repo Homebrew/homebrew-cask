@@ -1,9 +1,8 @@
 cask "mimestream" do
-  version "0.35.4"
-  sha256 "5a8b219091edb0c1958420b87117ec9d4a85065b5b089fd8086235cc20c143f1"
+  version "0.36.0"
+  sha256 "4e05afed58de85a87b1e1115e6b7ffbb4eb960931c77dfbcbdc276b2394a8418"
 
-  url "https://storage.googleapis.com/mimestream-releases/Mimestream_#{version}.dmg",
-      verified: "storage.googleapis.com/mimestream-releases/"
+  url "https://download.mimestream.com/Mimestream_#{version}.dmg"
   name "Mimestream"
   desc "Native app email client for Gmail"
   homepage "https://mimestream.com/"
