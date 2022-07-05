@@ -9,16 +9,13 @@ cask "gamma-control" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/gamma-control-(\d+(?:\.\d+)*)\.zip}i)
+    regex(/href=.*?gamma-control[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
   app "Gamma Control.app"
 
   zap trash: [
-    "~/Library/Application Scripts/ca.michelf.GammaControl.6",
-    "~/Library/Application Scripts/ca.michelf.GammaControl.Launcher",
-    "~/Library/Containers/ca.michelf.GammaControl.6",
-    "~/Library/Containers/ca.michelf.GammaControl.Launcher",
+    "~/Library/Application Scripts/ca.michelf.GammaControl.*",
+    "~/Library/Containers/ca.michelf.GammaControl.*",
   ]
 end
