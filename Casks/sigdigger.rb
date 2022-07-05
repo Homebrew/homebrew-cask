@@ -1,6 +1,6 @@
 cask "sigdigger" do
-  version "0.1.0"
-  sha256 "8bb40df2f187031f6d24d5890cd14bb43a7d572330849ca0d052648f34df5c13"
+  version "0.3.0"
+  sha256 "18314d22fdc0d41061312b02d088f6cb903292c741d1e4f6aa3371c804406c98"
 
   url "https://github.com/BatchDrake/SigDigger/releases/download/v#{version}/SigDigger-#{version}-x86_64.dmg",
       verified: "github.com/BatchDrake/SigDigger/"
