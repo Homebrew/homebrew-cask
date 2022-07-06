@@ -2,7 +2,6 @@ cask "ringcentral" do
   arch = Hardware::CPU.intel? ? "" : "-arm"
 
   version "22.2.22"
-
   if Hardware::CPU.intel?
     url "https://app.ringcentral.com/download/RingCentral.pkg"
   else
