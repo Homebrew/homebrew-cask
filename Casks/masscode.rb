@@ -1,7 +1,8 @@
 cask "masscode" do
+  version "2.7.0"
+  
   arch = Hardware::CPU.intel? ? "" : "-arm64"
 
-  version "2.7.0"
   if Hardware::CPU.intel?
     sha256 "58dbb36f2a18dca9e8fb54f1d0996915f31448eb4b56dcb352ddbf8ebc228d60"
   else
