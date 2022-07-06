@@ -7,25 +7,27 @@ cask "wirecast" do
   desc "Live video streaming production tool"
   homepage "https://www.telestream.net/wirecast/"
 
+  livecheck do
+    url "https://www.telestream.net/wirecast/versions.htm"
+    regex(/Wirecast[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+  end
+
   depends_on macos: ">= :catalina"
 
   app "Wirecast.app"
 
-  preflight do
-    system_command "/usr/bin/hdiutil",
-                   args:  ["attach", "#{HOMEBREW_CACHE}/Cask/Wirecast--#{version}.dmg", "-shadow"],
-                   input: "y"
-  end
+  uninstall delete: [
+              "/Library/LaunchDaemons/net.telestream.LicensingHelper.plist",
+              "/Library/Preferences/net.telestream.wirecast.plist",
+              "/Library/PriviledgedHelperTools/net.telestream.LicensingHelper",
+            ]
 
   zap trash: [
-    "/Library/LaunchDaemons/net.telestream.LicensingHelper.plist",
-    "/Library/Preferences/net.telestream.wirecast.plist",
-    "/Library/PriviledgedHelperTools/net.telestream.LicensingHelper",
-    "~/Library/Caches/net.telestream.wirecast/",
-    "~/Library/HTTPStorages/net.telestream.wirecast",
-    "~/Library/Logs/Wirecast",
-    "~/Library/Preferences/Wirecast",
-    "~/Library/Preferences/net.telestream.wirecast.plist",
-    "~/Library/Saved Applicate State/net.telestream.wirecast.savedState",
-  ]
+        "~/Library/Caches/net.telestream.wirecast/",
+        "~/Library/HTTPStorages/net.telestream.wirecast",
+        "~/Library/Logs/Wirecast",
+        "~/Library/Preferences/Wirecast",
+        "~/Library/Preferences/net.telestream.wirecast.plist",
+        "~/Library/Saved Applicate State/net.telestream.wirecast.savedState",
+      ]
 end
