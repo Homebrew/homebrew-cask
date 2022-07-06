@@ -1,6 +1,6 @@
 cask "squeak" do
-  version "6.0,22101"
-  sha256 "3351329c12ebe541ac2600c26014a4ff1201a8a9d028fdc2cf4d7fe5e4c60808"
+  version "6.0,22104"
+  sha256 "c586e4c39c380dba69e86e15b4d0c029a7406ed852f62341802f3409e2870356"
 
   url "https://files.squeak.org/#{version.csv.first}/Squeak#{version.csv.first}-#{version.csv.second}-64bit/Squeak#{version.csv.first}-#{version.csv.second}-64bit-All-in-One.zip"
   name "Squeak"
