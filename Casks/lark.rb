@@ -2,8 +2,8 @@ cask "lark" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
   if Hardware::CPU.intel?
-    version "5.11.11,b514c3"
-    sha256 "958be2f0026db38fc2607389fbf5ccde48311093656f6ffe3009edfdfc77f8b5"
+    version "5.13.10,64f569"
+    sha256 "77e9fd1fa92a9ccd42b12fd1cafd9d980e569e10658378e82900542b49ce9eed"
   else
     version "5.11.11,b7417a"
     sha256 "cbfb082b329cd5947dbde17a4b27ea40e348bd32dd487f70fac936d48d3a17a1"
