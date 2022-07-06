@@ -7,8 +7,8 @@ cask "copyq" do
       skip "Legacy version for Catalina and earlier"
     end
   else
-    version "6.1.0"
-    sha256 "88b4018029c9c344b0a9ac104d37af188b897a8265a26267386f27987458d5e1"
+    version "6.2.0"
+    sha256 "20fcdcbb5c5bc50aa27e455f988cc3aa4b6650656af81f2d3a798295d107c4d8"
   end
 
   url "https://github.com/hluk/CopyQ/releases/download/v#{version}/CopyQ.dmg.zip",
