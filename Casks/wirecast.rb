@@ -2,7 +2,7 @@ cask "wirecast" do
   version "15.0.3"
   sha256 "1056602c4a4218a0b0b678323de48cf6e59a44c9c873d9cb31581495ea10a38a"
 
-  url "https://www.telestream.net/download-files/wirecast/15-0/Wirecast-#{version}.dmg"
+  url "https://www.telestream.net/download-files/wirecast/#{version.major_minor.dots_to_hyphens}/Wirecast-#{version}.dmg"
   name "Wirecast"
   desc "Live video streaming production tool"
   homepage "https://www.telestream.net/wirecast/"
