@@ -14,8 +14,4 @@ cask "vale-server" do
   app "Vale Server.app"
 
   zap trash: "~/Library/Application Support/Vale Server"
-  
-  caveats do
-    discontinued
-  end
 end
