@@ -12,7 +12,7 @@ cask "calhash" do
 
   url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete(".")}/CalHash.dmg"
   name "CalHash"
-  desc "Utility that you can use to calculate and compare the checksum for a file"
+  desc "Calculate and compare file checksums"
   homepage "https://www.titanium-software.fr/en/calhash.html"
 
   livecheck do
