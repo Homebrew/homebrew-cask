@@ -12,7 +12,7 @@ cask "headlamp" do
   url "https://github.com/kinvolk/headlamp/releases/download/v#{version}/Headlamp-#{version}-mac-#{arch}.dmg",
       verified: "github.com/kinvolk/headlamp/"
   name "Headlamp"
-  desc "Easy-to-use and extensible web UI for Kubernetes"
+  desc "UI for Kubernetes"
   homepage "https://kinvolk.github.io/headlamp"
 
   auto_updates false
