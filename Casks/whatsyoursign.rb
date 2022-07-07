@@ -11,10 +11,10 @@ cask "whatsyoursign" do
   installer manual: "WhatsYourSign Installer.app"
 
   uninstall delete: [
-    "/Applications/WhatsYourSign.app",
-    "~/Library/Application Scripts/com.objective-see.WhatsYourSignExt.FinderSync",
-    "~/Library/Containers/com.objective-see.WhatsYourSignExt.FinderSync",
-  ],
+              "/Applications/WhatsYourSign.app",
+              "~/Library/Application Scripts/com.objective-see.WhatsYourSignExt.FinderSync",
+              "~/Library/Containers/com.objective-see.WhatsYourSignExt.FinderSync",
+            ],
             script: {
               executable:   "/usr/bin/pluginkit",
               args:         [

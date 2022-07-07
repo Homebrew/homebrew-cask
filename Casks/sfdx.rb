@@ -1,15 +1,25 @@
 cask "sfdx" do
-  version "7.71.0-4193fb4acc"
-  sha256 "140913c08c0522e6a2cc29bcfae63e65c587684c3c81f5b20d1716c8353bce39"
+  version "7.157.0"
+  sha256 :no_check
 
-  url "https://developer.salesforce.com/media/salesforce-cli/sfdx-cli/channels/stable/sfdx-cli-v#{version}.pkg"
-  appcast "https://developer.salesforce.com/media/salesforce-cli/manifest.json"
+  url "https://developer.salesforce.com/media/salesforce-cli/sfdx/channels/stable/sfdx.pkg"
   name "Salesforce DX CLI"
+  desc "SalesForce CLI tools"
   homepage "https://developer.salesforce.com/tools/sfdxcli"
 
-  pkg "sfdx-cli-v#{version}.pkg"
+  livecheck do
+    url "https://github.com/forcedotcom/cli/blob/main/releasenotes/sfdx/README.md"
+    strategy :page_match
+    regex(/(\d+(?:\.\d+)+).*?[stable]\]/i)
+  end
 
-  uninstall pkgutil: "com.salesforce.developer.cli",
+  pkg "sfdx.pkg"
+
+  uninstall pkgutil: [
+
+              "com.salesforce.developer.cli",
+              "com.salesforce.cli",
+            ],
             delete:  "/usr/local/bin/sfdx"
 
   zap trash: [

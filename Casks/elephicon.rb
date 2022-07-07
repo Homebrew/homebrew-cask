@@ -1,12 +1,12 @@
 cask "elephicon" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "1.9.7"
+  version "1.9.12"
 
   if Hardware::CPU.intel?
-    sha256 "a67a15d952ebc5c0b2262f23968a5b12c69b74725f05533667f7674964b5a41c"
+    sha256 "c4d31c844f1c866ad0185aefd351fa30f1555c74637d8d5cab1595d55298ec3a"
   else
-    sha256 "c1bfddb4b4104b836857b808b5a7909471aac090a4a12a227b4e3d23445b0b6a"
+    sha256 "849127a9bcc874d28ba67fdf918ef119d02e25f877d2d0f56285a0114c76facd"
   end
 
   url "https://github.com/sprout2000/elephicon/releases/download/v#{version}/Elephicon-#{version}-darwin-#{arch}.zip"

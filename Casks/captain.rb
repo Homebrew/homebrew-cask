@@ -1,16 +1,19 @@
 cask "captain" do
-  version "9.0.0"
-  sha256 :no_check
+  arch = Hardware::CPU.intel? ? "" : "-arm64"
 
-  url "https://getcaptain.co/downloads/Captain.dmg"
-  name "Captain"
+  version "10.0.2"
+
+  if Hardware::CPU.intel?
+    sha256 "32301cc0375862312401b9783beb7cc74c4d386e231a0202d3c4f238ad5066e4"
+  else
+    sha256 "0ee461a6232bd1fc61def3361359274702fe785723c8dea76dd11e43c63b33a9"
+  end
+
+  url "https://github.com/RickWong/Captain/releases/download/v#{version}/Captain-#{version}#{arch}.dmg",
+      verified: "github.com/RickWong/Captain"
+  name "captain"
   desc "Manage Docker containers from the menu bar"
   homepage "https://getcaptain.co/"
-
-  livecheck do
-    url :homepage
-    regex(/Download\sCaptain\sv?(\d+(?:\.\d+)+)[\s<]/i)
-  end
 
   app "Captain.app"
 

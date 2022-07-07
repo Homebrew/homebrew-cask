@@ -16,5 +16,5 @@ cask "packages" do
 
   pkg "packages/Packages.pkg"
 
-  uninstall script: "Extras/uninstall.sh"
+  uninstall script: { executable: "Extras/uninstall.sh", sudo: true }
 end

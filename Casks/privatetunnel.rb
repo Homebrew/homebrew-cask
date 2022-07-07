@@ -21,11 +21,11 @@ cask "privatetunnel" do
   pkg "Private_Tunnel_#{version.csv.first.dots_to_underscores}(#{version.csv.second})_Installer_signed.pkg"
 
   uninstall pkgutil:   [
-    "org.openvpn.privatetunnel.pkg",
-    "org.openvpn.privatetunnel_framework.pkg",
-    "org.openvpn.privatetunnel_launch.pkg",
-    "org.openvpn.privatetunnel_uninstall.pkg",
-  ],
+              "org.openvpn.privatetunnel.pkg",
+              "org.openvpn.privatetunnel_framework.pkg",
+              "org.openvpn.privatetunnel_launch.pkg",
+              "org.openvpn.privatetunnel_uninstall.pkg",
+            ],
             delete:    "/Applications/Private Tunnel.app",
             quit:      "org.openvpn.proivatetunnel.app",
             launchctl: "org.openvpn.privatetunnel"

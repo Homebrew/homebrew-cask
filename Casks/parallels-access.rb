@@ -30,12 +30,12 @@ cask "parallels-access" do
   end
 
   uninstall launchctl: [
-    "com.parallels.mobile.audioloader",
-    "com.parallels.mobile.dispatcher.launchdaemon",
-    "com.parallels.mobile.kextloader.launchdaemon",
-    "com.parallels.mobile.prl_deskctl_agent.launchagent",
-    "com.parallels.mobile.startgui.launchagent",
-  ],
+              "com.parallels.mobile.audioloader",
+              "com.parallels.mobile.dispatcher.launchdaemon",
+              "com.parallels.mobile.kextloader.launchdaemon",
+              "com.parallels.mobile.prl_deskctl_agent.launchagent",
+              "com.parallels.mobile.startgui.launchagent",
+            ],
             quit:      "com.parallels.inputmethod.ParallelsIM",
             signal:    [
               ["TERM", "com.parallels.mobile"],

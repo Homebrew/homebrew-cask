@@ -1,6 +1,6 @@
 cask "btcpayserver-vault" do
-  version "2.0.2"
-  sha256 "a1aae06f78d5f984b0b9e433a8e62b7b50523b92779e45bd3057229a465324c6"
+  version "2.0.3"
+  sha256 "da9957912cf611bfe3c32bac9727f16c99932166738c65537a1ef8e1987ea8cf"
 
   url "https://github.com/btcpayserver/BTCPayServer.Vault/releases/download/Vault%2Fv#{version}/BTCPayServerVault-osx-x64-#{version}.dmg"
   name "BTCPayServer Vault"

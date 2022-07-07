@@ -1,12 +1,12 @@
 cask "dcv-viewer" do
   arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
 
-  version "2022.0.4131"
+  version "2022.1.4241"
 
   if Hardware::CPU.intel?
-    sha256 "9e0af1027a876a50c4e937b1239e90b03c470e5829409c6ff9cb451cef2b827a"
+    sha256 "117c07d73ee22f7c6ff666e357bb02b2365e2ccca4cbf825d7478e57d5854d37"
   else
-    sha256 "71e13832d54e3386de3d5548bfaefe5b18d08d344d1f31d346a6f1ddc34701c6"
+    sha256 "7d96d4af131e36b0f9e33e24360e3020e715ed0fa78054c33bb1c491cec991c8"
   end
 
   url "https://d1uj6qtbmh3dt5.cloudfront.net/#{version.major_minor}/Clients/nice-dcv-viewer-#{version}.#{arch}.dmg",

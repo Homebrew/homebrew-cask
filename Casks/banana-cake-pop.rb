@@ -1,12 +1,12 @@
 cask "banana-cake-pop" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "1.0.0-preview.35"
+  version "1.0.0-preview.42"
 
   if Hardware::CPU.intel?
-    sha256 "21fb558047a76ea49f4618131710aebf193b5707811bc66d73ff9eb8beeb4e3e"
+    sha256 "0b28a5545975fab169b985ac9c70db9561fa0f5b876c838f91ad2129eb9e90b3"
   else
-    sha256 "39c92663a322459d350695b73c7fe3a72e486e725239c6858a8e717f8e2a8214"
+    sha256 "264e01672b79bade0eaf3951737dc3ead15d5fbeebf55afa0e98c04ee476343f"
   end
 
   url "https://download.chillicream.com/bananacakepop/BananaCakePop-#{version}-mac-#{arch}.dmg"

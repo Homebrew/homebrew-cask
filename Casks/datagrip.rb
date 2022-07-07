@@ -30,7 +30,7 @@ cask "datagrip" do
 
   uninstall_postflight do
     ENV["PATH"].split(File::PATH_SEPARATOR).map { |path| File.join(path, "datagrip") }.each do |path|
-      if File.exist?(path) &&
+      if File.readable?(path) &&
          File.readlines(path).grep(/# see com.intellij.idea.SocketLock for the server side of this interface/).any?
         File.delete(path)
       end

@@ -1,17 +1,17 @@
 cask "anki" do
   arch = Hardware::CPU.intel? ? "intel" : "apple"
-  version "2.1.53"
+  version "2.1.54"
 
   if Hardware::CPU.intel?
     if MacOS.version >= :mojave
-      sha256 "90ea470354ff6fb15d6aea5836b18d0e4f7e6292c3192a11354222052c896996"
+      sha256 "92eb39f59f4e7b8b1b025178b337a0ef9d619521144748a32b3e2b8df1c45a00"
       qtversion = 6
     else
-      sha256 "a421b2b344f092d620af68d8c4530e9bddb2347697bfed82c06c20c258c0c5c1"
+      sha256 "edc44e5862384bb1c419033267c78167809253090c0302f07114c00c223db07a"
       qtversion = 5
     end
   else
-    sha256 "273a7e4444f0f10ab81edd95f84b168c53e01e045b75b8e1ed48a208099aac16"
+    sha256 "44e229181dd6db5b6d5a3f9c4647f4ae92c5acee0b47af99c8646c6a5cf927e1"
     qtversion = 6
   end
 

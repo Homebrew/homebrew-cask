@@ -10,6 +10,9 @@ concurrency:
   group: autopublish
   cancel-in-progress: true
 
+permissions:
+  contents: read
+
 jobs:
   autopublish:
     if: github.repository == 'Homebrew/homebrew-cask'

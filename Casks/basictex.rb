@@ -35,9 +35,9 @@ cask "basictex" do
             ]
 
   zap trash: [
-    "/usr/local/texlive/texmf-local",
-    "~/Library/texlive/#{version.major}basic",
-  ],
+        "/usr/local/texlive/texmf-local",
+        "~/Library/texlive/#{version.major}basic",
+      ],
       rmdir: [
         "/usr/local/texlive",
         "~/Library/texlive",

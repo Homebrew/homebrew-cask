@@ -4,9 +4,13 @@ cask "goldendict" do
 
   url "https://downloads.sourceforge.net/goldendict/GoldenDict-#{version}-372-gc3ff15f(Qt_5121).dmg",
       verified: "downloads.sourceforge.net/goldendict/"
-  appcast "https://sourceforge.net/projects/goldendict/rss"
   name "GoldenDict"
+  desc "Feature-rich dictionary lookup program"
   homepage "http://goldendict.org/"
+
+  livecheck do
+    url "https://github.com/goldendict/goldendict"
+  end
 
   depends_on macos: ">= :sierra"
 

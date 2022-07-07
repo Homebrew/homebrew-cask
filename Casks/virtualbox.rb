@@ -53,20 +53,20 @@ cask "virtualbox" do
   end
 
   uninstall script:  {
-    executable: "VirtualBox_Uninstall.tool",
-    args:       ["--unattended"],
-    sudo:       true,
-  },
+              executable: "VirtualBox_Uninstall.tool",
+              args:       ["--unattended"],
+              sudo:       true,
+            },
             pkgutil: "org.virtualbox.pkg.*",
             delete:  "/usr/local/bin/vboximg-mount"
 
   zap trash: [
-    "/Library/Application Support/VirtualBox",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.virtualbox.app.virtualbox*",
-    "~/Library/Preferences/org.virtualbox.app.VirtualBox*",
-    "~/Library/Saved Application State/org.virtualbox.app.VirtualBox*",
-    "~/Library/VirtualBox",
-  ],
+        "/Library/Application Support/VirtualBox",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.virtualbox.app.virtualbox*",
+        "~/Library/Preferences/org.virtualbox.app.VirtualBox*",
+        "~/Library/Saved Application State/org.virtualbox.app.VirtualBox*",
+        "~/Library/VirtualBox",
+      ],
       rmdir: "~/VirtualBox VMs"
 
   caveats do

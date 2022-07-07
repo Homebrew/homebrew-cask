@@ -1,6 +1,6 @@
 cask "qlc-plus" do
-  version "4.12.4"
-  sha256 "63f744f7b55ba9b992aa481cda9049b24f9f568072404a71afe4a4f0a7b71469"
+  version "4.12.5"
+  sha256 "23d76cfa302d19f074250431efe372930cc61a69065da734f32dc39659920553"
 
   url "https://qlcplus.org/downloads/#{version}/QLC+_#{version}.dmg"
   name "Q Light Controller+"

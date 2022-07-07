@@ -18,13 +18,13 @@ cask "textbuddy" do
   app "TextBuddy.app"
 
   zap trash: [
-    "~/Library/Application Support/com.clickontyler.TextBuddy",
-    "~/Library/Caches/CloudKit/com.clickontyler.TextBuddy",
-    "~/Library/Caches/com.clickontyler.TextBuddy",
-    "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.clickontyler.TextBuddy",
-    "~/Library/HTTPStorages/com.clickontyler.TextBuddy",
-    "~/Library/HTTPStorages/com.clickontyler.TextBuddy.binarycookies",
-    "~/Library/Preferences/com.clickontyler.TextBuddy.plist",
-  ],
+        "~/Library/Application Support/com.clickontyler.TextBuddy",
+        "~/Library/Caches/CloudKit/com.clickontyler.TextBuddy",
+        "~/Library/Caches/com.clickontyler.TextBuddy",
+        "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.clickontyler.TextBuddy",
+        "~/Library/HTTPStorages/com.clickontyler.TextBuddy",
+        "~/Library/HTTPStorages/com.clickontyler.TextBuddy.binarycookies",
+        "~/Library/Preferences/com.clickontyler.TextBuddy.plist",
+      ],
       rmdir: "~/Library/Caches/com.plausiblelabs.crashreporter.data"
 end

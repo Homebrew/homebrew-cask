@@ -26,13 +26,13 @@ cask "vyprvpn" do
             kext:      "com.goldenfrog.VyprVPNMalwareFilter"
 
   zap trash:     [
-    "/Library/LaunchDaemons/vyrpvpnservice.plist",
-    "/Library/PrivilegedHelperTools/vyprvpnservice",
-    "~/Library/Caches/com.goldenfrog.VyprVPN",
-    "~/Library/LaunchAgents/com.goldenfrog.VyprVPNUserAgent.plist",
-    "~/Library/Logs/GoldenFrog/VyprVPN.log",
-    "~/Library/Preferences/com.goldenfrog.VyprVPN.plist",
-  ],
+        "/Library/LaunchDaemons/vyrpvpnservice.plist",
+        "/Library/PrivilegedHelperTools/vyprvpnservice",
+        "~/Library/Caches/com.goldenfrog.VyprVPN",
+        "~/Library/LaunchAgents/com.goldenfrog.VyprVPNUserAgent.plist",
+        "~/Library/Logs/GoldenFrog/VyprVPN.log",
+        "~/Library/Preferences/com.goldenfrog.VyprVPN.plist",
+      ],
       kext:      [
         "net.sf.tuntaposx.tap",
         "net.sf.tuntaposx.tun",

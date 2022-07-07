@@ -19,8 +19,8 @@ cask "lazarus" do
   pkg "Lazarus-#{version}-0-x86_64-macosx.pkg"
 
   uninstall pkgutil: [
-    "org.freepascal.pkg.fpcsrc-320-laz",
-    "org.lazarus-ide.pkg.LazarusIDE",
-  ],
+              "org.freepascal.pkg.fpcsrc-320-laz",
+              "org.lazarus-ide.pkg.LazarusIDE",
+            ],
             delete:  "/Applications/Lazarus.app"
 end

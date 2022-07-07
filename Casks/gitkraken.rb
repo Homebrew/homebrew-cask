@@ -16,7 +16,7 @@ cask "gitkraken" do
   homepage "https://www.gitkraken.com/"
 
   livecheck do
-    url "https://support.gitkraken.com/release-notes/current/"
+    url "https://help.gitkraken.com/gitkraken-client/current/"
     regex(/Version\s(\d+(?:\.\d+)+)/i)
   end
 

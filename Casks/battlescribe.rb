@@ -15,11 +15,11 @@ cask "battlescribe" do
   pkg "BattleScribe_#{version}_Installer.pkg"
 
   uninstall pkgutil: [
-    "net.battlescribe.desktop.dataeditor",
-    "net.battlescribe.desktop.dataindexer",
-    "net.battlescribe.desktop.jre",
-    "net.battlescribe.desktop.rostereditor",
-  ],
+              "net.battlescribe.desktop.dataeditor",
+              "net.battlescribe.desktop.dataindexer",
+              "net.battlescribe.desktop.jre",
+              "net.battlescribe.desktop.rostereditor",
+            ],
             delete:  [
               "/Applications/BattleScribe Tools/",
               "/Applications/BattleScribe.app",

@@ -24,16 +24,16 @@ cask "native-access" do
             ]
 
   zap trash: [
-    "/Library/Application Support/Native Instruments/Service Center/NativeAccess.xml",
-    "~/Library/Application Support/Native Instruments/Native Access*",
-    "~/Library/Application Support/Native Instruments/Service Center",
-    "~/Library/Application Support/CrashReporter/Native Access_*.plist",
-    "~/Library/Caches/Native Instruments/Native Access*",
-    "~/Library/Preferences/com.native-instruments.Native Access.plist",
-    "~/Library/Preferences/com.native-instruments.Shared.plist",
-    "/private/var/folders/*/*/*/com.native-instruments.Native Access",
-    "/private/var/folders/*/*/*/metalink-*.meta4",
-  ],
+        "/Library/Application Support/Native Instruments/Service Center/NativeAccess.xml",
+        "~/Library/Application Support/Native Instruments/Native Access*",
+        "~/Library/Application Support/Native Instruments/Service Center",
+        "~/Library/Application Support/CrashReporter/Native Access_*.plist",
+        "~/Library/Caches/Native Instruments/Native Access*",
+        "~/Library/Preferences/com.native-instruments.Native Access.plist",
+        "~/Library/Preferences/com.native-instruments.Shared.plist",
+        "/private/var/folders/*/*/*/com.native-instruments.Native Access",
+        "/private/var/folders/*/*/*/metalink-*.meta4",
+      ],
       rmdir: [
         "/Library/Application Support/Native Instruments/*",
         "/Library/Application Support/Native Instruments",

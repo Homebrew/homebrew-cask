@@ -8,6 +8,11 @@ cask "pomatez" do
   desc "Pomodoro timer"
   homepage "https://roldanjr.github.io/pomatez"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Pomatez.app"
 
   zap trash: "~/Library/Application Support/pomatez"

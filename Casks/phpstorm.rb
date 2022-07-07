@@ -1,12 +1,12 @@
 cask "phpstorm" do
   arch = Hardware::CPU.intel? ? "" : "-aarch64"
 
-  version "2022.1.2,221.5787.33"
+  version "2022.1.3,221.5921.28"
 
   if Hardware::CPU.intel?
-    sha256 "29695fccbb2057d0394f30fb334781e1838a0acff86497143498e90ed773b016"
+    sha256 "306e3bb8224bfb538d02fa33c777d744d369814f460fe254150d722507827abf"
   else
-    sha256 "4e5e78199ccf9b95f0b45b5c50169062a2b6f14685f4bc53569bab1aa72f442a"
+    sha256 "68c6093701f86b6a31601e159569629ceea87c7db20b8b98089bf8efadb0310e"
   end
 
   url "https://download.jetbrains.com/webide/PhpStorm-#{version.csv.first}#{arch}.dmg"
@@ -30,7 +30,7 @@ cask "phpstorm" do
 
   uninstall_postflight do
     ENV["PATH"].split(File::PATH_SEPARATOR).map { |path| File.join(path, "pstorm") }.each do |path|
-      if File.exist?(path) &&
+      if File.readable?(path) &&
          File.readlines(path).grep(/# see com.intellij.idea.SocketLock for the server side of this interface/).any?
         File.delete(path)
       end

@@ -16,10 +16,10 @@ cask "soundflower" do
 
   # early_script is a workaround for a slowly unloading kext, see private-eye Cask
   uninstall early_script: {
-    executable:   "/sbin/kextunload",
-    args:         ["-b", "com.Cycling74.driver.Soundflower"],
-    must_succeed: false,
-  },
+              executable:   "/sbin/kextunload",
+              args:         ["-b", "com.Cycling74.driver.Soundflower"],
+              must_succeed: false,
+            },
             pkgutil:      "com.cycling74.soundflower.*",
             kext:         "com.Cycling74.driver.Soundflower"
 

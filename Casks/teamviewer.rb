@@ -7,7 +7,7 @@ cask "teamviewer" do
       strategy :sparkle
     end
   else
-    version "15.30.3"
+    version "15.31.5"
 
     livecheck do
       url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=10.15.1&type=1&channel=1"
@@ -41,9 +41,9 @@ cask "teamviewer" do
     uninstall delete: "#{staged_path}/#{token}"
   else
     uninstall delete:    [
-      "/Applications/TeamViewer.app",
-      "/Library/Preferences/com.teamviewer.teamviewer.preferences.plist",
-    ],
+                "/Applications/TeamViewer.app",
+                "/Library/Preferences/com.teamviewer.teamviewer.preferences.plist",
+              ],
               pkgutil:   [
                 "com.teamviewer.remoteaudiodriver",
                 "com.teamviewer.teamviewer.*",

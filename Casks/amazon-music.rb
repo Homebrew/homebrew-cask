@@ -21,9 +21,9 @@ cask "amazon-music" do
   }
 
   uninstall quit:      [
-    "com.amazon.music",
-    "com.amazon.music-renderer",
-  ],
+              "com.amazon.music",
+              "com.amazon.music-renderer",
+            ],
             delete:    "/Applications/Amazon Music.app",
             launchctl: [
               "com.amazon.music",

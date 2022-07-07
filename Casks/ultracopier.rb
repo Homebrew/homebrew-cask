@@ -1,6 +1,6 @@
 cask "ultracopier" do
-  version "2.2.6.0"
-  sha256 "1a84a3f03a4df124a8cc98e01ad455b300f66bcdc1675661eb25762a56084d38"
+  version "2.2.6.1"
+  sha256 "b9293f95d9a11dc69070eb6ca2f5c0acf41b65071c09639bed83aa84f2199c9d"
 
   url "https://cdn.confiared.com/ultracopier.first-world.info/files/#{version}/ultracopier-mac-os-x-#{version}.dmg",
       verified: "cdn.confiared.com/ultracopier.first-world.info/files/"
@@ -9,7 +9,7 @@ cask "ultracopier" do
   homepage "http://ultracopier.first-world.info/"
 
   livecheck do
-    url "http://ultracopier.first-world.info/download-all.html"
+    url "https://ultracopier.first-world.info/#download"
     regex(/ultracopier[._-]mac[._-]os[._-]x[._-](\d+(?:\.\d+)+)\.dmg/i)
   end
 

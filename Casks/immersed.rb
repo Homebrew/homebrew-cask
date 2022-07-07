@@ -1,5 +1,5 @@
 cask "immersed" do
-  version "16.5,138"
+  version "16.6,139"
   sha256 :no_check
 
   url "https://immersed.com/dl/Immersed.dmg"
@@ -29,9 +29,9 @@ cask "immersed" do
   end
 
   uninstall delete: [
-    "/Library/Audio/Plug-Ins/HAL/ImmersedAudio.driver",
-    "/Library/CoreMediaIO/Plug-Ins/DAL/ImmersedCamera.plugin",
-  ],
+              "/Library/Audio/Plug-Ins/HAL/ImmersedAudio.driver",
+              "/Library/CoreMediaIO/Plug-Ins/DAL/ImmersedCamera.plugin",
+            ],
             quit:   "team.Immersed"
 
   zap trash: [

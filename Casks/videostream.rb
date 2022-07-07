@@ -11,9 +11,9 @@ cask "videostream" do
   pkg "Videostream.pkg"
 
   uninstall launchctl: [
-    "com.videostream.launcher",
-    "com.videostream.updater.#{version}",
-  ],
+              "com.videostream.launcher",
+              "com.videostream.updater.#{version}",
+            ],
             pkgutil:   "com.videostream",
             signal:    ["TERM", "com.videostream"]
 end

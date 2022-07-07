@@ -17,10 +17,10 @@ cask "qfinder-pro" do
   uninstall pkgutil: "qnap.com.Qfinder"
 
   zap trash: [
-    "~/Library/Application Support/QNAP/QfinderPro",
-    "~/Library/Preferences/QNAP/Qfinder.plist",
-    "~/Library/Saved Application State/qnap.com.qfinder.savedState",
-  ],
+        "~/Library/Application Support/QNAP/QfinderPro",
+        "~/Library/Preferences/QNAP/Qfinder.plist",
+        "~/Library/Saved Application State/qnap.com.qfinder.savedState",
+      ],
       rmdir: [
         "~/Library/Application Support/QNAP",
         "~/Library/Preferences/QNAP",

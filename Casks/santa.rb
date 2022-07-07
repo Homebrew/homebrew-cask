@@ -10,9 +10,9 @@ cask "santa" do
   pkg "santa-#{version}.pkg"
 
   uninstall delete:    [
-    "/Applications/Santa.app",
-    "/usr/local/bin/santactl",
-  ],
+              "/Applications/Santa.app",
+              "/usr/local/bin/santactl",
+            ],
             kext:      "com.google.santa-driver",
             launchctl: [
               "com.google.santa",

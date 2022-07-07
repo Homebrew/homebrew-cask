@@ -1,12 +1,12 @@
 cask "wiznote" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "0.1.81"
+  version "0.1.83"
 
   if Hardware::CPU.intel?
-    sha256 "156a972c7b86dee5d7d6498e546b5328bac02e9ab9d73e064a2063c0a64e7679"
+    sha256 "3a94e649cdfa05f36306591204c091f7efdf7f209337a0464219ad02823b20aa"
   else
-    sha256 "56b4329ad573c9fd71fa604c7a4e9bf71a2d505e7af3c17fa38e12e9e95bd51b"
+    sha256 "2afd42ff3cc996f0d9122cd8aac1e590d5b53d7eb90d6f17221311bbfb7dd48d"
   end
 
   url "https://get.wiz.cn/x/wiznote-desktop-#{version}-mac-#{arch}.dmg"
@@ -17,7 +17,7 @@ cask "wiznote" do
   livecheck do
     url "https://url.wiz.cn/u/mac64_new"
     strategy :header_match
-    regex(/wiznote[._-]desktop[._-]?(\d+(?:\.\d+)+)[._-]mac[._-]#{arch}.dmg/i)
+    regex(/wiznote[._-]desktop[._-]?(\d+(?:\.\d+)+).*?\.dmg/i)
   end
 
   auto_updates true

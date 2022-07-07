@@ -1,12 +1,12 @@
 cask "hepta" do
   arch = Hardware::CPU.intel? ? "mac" : "arm64-mac"
 
-  version "0.157.0"
+  version "0.166.1"
 
   if Hardware::CPU.intel?
-    sha256 "4ca273d2d19432a71e6456773569a2e6872e91079da01fd0302714f2f46defb2"
+    sha256 "737641af52160710c540bd22ae0a36fd618a5c9e13594e8c127dde137c988a2c"
   else
-    sha256 "f544790db5cc3da09fb614d018644363826f9ce96064e646de60ccce2d6ad1fd"
+    sha256 "a8fb62a8850478fac742302e90a65041dc4face87abd57670c4c8417b9ff26ad"
   end
 
   url "https://github.com/heptameta/project-meta/releases/download/v#{version}/Hepta-#{version}-#{arch}.zip",
@@ -14,6 +14,11 @@ cask "hepta" do
   name "Hepta"
   desc "Note-taking tool for visual learning"
   homepage "https://heptabase.com/"
+
+  livecheck do
+    url "https://github.com/heptameta/project-meta/releases"
+    strategy :github_latest
+  end
 
   app "Hepta.app"
 

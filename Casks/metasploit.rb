@@ -1,6 +1,6 @@
 cask "metasploit" do
-  version "6.2.4,20220618103001"
-  sha256 "739b487576bb31e8ee1c2df0de2bfa676e40ac6bbf809c50da0207b82da8614f"
+  version "6.2.6,20220706103000"
+  sha256 "02afcf7bfa387ee3dacc8872cc3f312be2f0eed29d9a68a8a6acdf1c070bdac0"
 
   url "https://osx.metasploit.com/metasploit-framework-#{version.csv.first}%2B#{version.csv.second}-1rapid7-1.x86_64.pkg"
   name "Metasploit Framework"
@@ -33,10 +33,10 @@ cask "metasploit" do
   binary "/opt/metasploit-framework/bin/msfvenom"
 
   uninstall script: {
-    executable: "/opt/metasploit-framework/bin/msfremove",
-    input:      ["y"],
-    sudo:       true,
-  },
+              executable: "/opt/metasploit-framework/bin/msfremove",
+              input:      ["y"],
+              sudo:       true,
+            },
             rmdir:  "/opt/metasploit-framework"
 
   zap trash: "~/.msf4"

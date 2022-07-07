@@ -1,14 +1,15 @@
 cask "qbserve" do
-  version "1.88"
-  sha256 "b5fe36245f5268b8a5a2a68848627fa6fcd9c7a8dbf05502f1eba8c9815d5adc"
+  version "1.89"
+  sha256 "517a975eb915c90df9ac9a49c0e009e0926008890b747ceba20a1476c80e58b1"
 
   url "https://qotoqot.com/qbserve/app/Qbserve-#{version}.zip"
   name "Qbserve"
+  desc "Automatic time tracker"
   homepage "https://qotoqot.com/qbserve/"
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?/Qbserve-(\d+(?:\.\d+)*)\.zip}i)
+    regex(%r{href=.*?/Qbserve[._-]v?(\d+(?:\.\d+)+)\.zip}i)
   end
 
   auto_updates true

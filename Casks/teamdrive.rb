@@ -21,9 +21,9 @@ cask "teamdrive" do
   }
 
   uninstall script: {
-    executable: "/Applications/TeamDrive/uninstall.app/Contents/MacOS/osx-x86_64",
-    args:       ["--mode", "unattended"],
-  },
+              executable: "/Applications/TeamDrive/uninstall.app/Contents/MacOS/osx-x86_64",
+              args:       ["--mode", "unattended"],
+            },
             signal: [
               ["QUIT", "com.teamdrive.teamdrive3"],
               ["KILL", "com.teamdrive.teamdrive3"],

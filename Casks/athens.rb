@@ -15,6 +15,11 @@ cask "athens" do
   desc "Self-hosted knowledge graph"
   homepage "https://www.athensresearch.org/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Athens.app"
 
   zap trash: [

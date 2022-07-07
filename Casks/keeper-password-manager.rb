@@ -1,5 +1,5 @@
 cask "keeper-password-manager" do
-  version "16.6.1,1653093871519"
+  version "16.7.0,1655510967550"
   sha256 :no_check
 
   url "https://keepersecurity.com/desktop_electron/Darwin/KeeperSetup.dmg"

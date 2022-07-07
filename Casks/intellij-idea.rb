@@ -1,12 +1,12 @@
 cask "intellij-idea" do
   arch = Hardware::CPU.intel? ? "" : "-aarch64"
 
-  version "2022.1.2,221.5787.30"
+  version "2022.1.3,221.5921.22"
 
   if Hardware::CPU.intel?
-    sha256 "5c7d0aba801c631b96440480298d03804b69f51dcaa068aac50857cff9999d6e"
+    sha256 "7297867bb7c5041015ff2e68415e35537c37bf500c53a5e003c82fc6af9515ab"
   else
-    sha256 "c6571d270ddef0659b261bc29ee74cc02ac550863fbf5fb905aa37a20a4bd9f0"
+    sha256 "0f0ec167c0394b7d4969cb0b95e08e2b469e811a1aa515971bc84d5ef4d54def"
   end
 
   url "https://download.jetbrains.com/idea/ideaIU-#{version.csv.first}#{arch}.dmg"
@@ -30,7 +30,7 @@ cask "intellij-idea" do
 
   uninstall_postflight do
     ENV["PATH"].split(File::PATH_SEPARATOR).map { |path| File.join(path, "idea") }.each do |path|
-      if File.exist?(path) &&
+      if File.readable?(path) &&
          File.readlines(path).grep(/# see com.intellij.idea.SocketLock for the server side of this interface/).any?
         File.delete(path)
       end

@@ -4,6 +4,9 @@ on:
   repository_dispatch:
     types: [rebase-command]
 
+permissions:
+  contents: read
+
 jobs:
   rebase_pull_request:
     name: Rebase Pull Request

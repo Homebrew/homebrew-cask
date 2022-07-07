@@ -15,9 +15,9 @@ cask "ecamm-live" do
   app "Ecamm Live v#{version}/Ecamm Live.app"
 
   uninstall delete: [
-    "/Library/Application Support/EcammLive/EcammLiveAudioXPCHelper.xpc",
-    "/Library/LaunchDaemons/com.ecamm.EcammAudioXPCHelper.plist",
-  ],
+              "/Library/Application Support/EcammLive/EcammLiveAudioXPCHelper.xpc",
+              "/Library/LaunchDaemons/com.ecamm.EcammAudioXPCHelper.plist",
+            ],
             rmdir:  "/Library/Application Support/EcammLive"
 
   zap trash: [

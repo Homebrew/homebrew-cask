@@ -1,6 +1,6 @@
 cask "teamviewermeeting" do
-  version "15.30.2"
-  sha256 "9743d2bd815df59c1b50a1ddfcdbdd4c49ddb4c2a506e5e3312a286ab06889c2"
+  version "15.30.3"
+  sha256 "a7c62973704ed6f4751b72def70d99870acea7249fa1bd5bc1bcdaac238f539c"
 
   url "https://dl.teamviewer.com/teamviewermeeting/installer/mac/#{version}/TeamViewerMeeting.dmg"
   name "TeamViewerMeeting"

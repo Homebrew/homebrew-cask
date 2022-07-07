@@ -7,11 +7,6 @@ cask "betterdummy" do
   desc "Dummy Display for Apple Silicon Macs to achieve custom resolutions"
   homepage "https://github.com/waydabber/BetterDummy"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
 
   app "BetterDummy.app"
@@ -23,4 +18,15 @@ cask "betterdummy" do
     "~/Library/Containers/me.waydabber.BetterDummy",
     "~/Library/Preferences/me.waydabber.BetterDummy.plist",
   ]
+
+  caveats do
+    discontinued
+
+    <<~EOS
+      #{token} has been renamed 'betterdisplay',
+      install betterdisplay to continue receiving updates;
+
+        brew install --cask betterdisplay
+    EOS
+  end
 end

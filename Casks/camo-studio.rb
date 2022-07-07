@@ -18,22 +18,22 @@ cask "camo-studio" do
   app "Camo Studio.app"
 
   uninstall delete: [
-    "/Library/Application Support/Reincubate/Camo",
-    "/Library/Audio/Plug-Ins/HAL/ReincubateCamoAudio.driver",
-    "/Library/CoreMediaIO/Plug-Ins/DAL/ReincubateCamoDAL.plugin",
-    "/Library/LaunchDaemons/com.reincubate.macos.cam.PrivilegedHelper.plist",
-    "/Library/PrivilegedHelperTools/com.reincubate.macos.cam.PrivilegedHelper",
-  ],
+              "/Library/Application Support/Reincubate/Camo",
+              "/Library/Audio/Plug-Ins/HAL/ReincubateCamoAudio.driver",
+              "/Library/CoreMediaIO/Plug-Ins/DAL/ReincubateCamoDAL.plugin",
+              "/Library/LaunchDaemons/com.reincubate.macos.cam.PrivilegedHelper.plist",
+              "/Library/PrivilegedHelperTools/com.reincubate.macos.cam.PrivilegedHelper",
+            ],
             rmdir:  "/Library/Application Support/Reincubate"
 
   zap trash: [
-    "~/Library/Application Support/CrashReporter/Camo Studio",
-    "~/Library/Application Support/Reincubate/Camo",
-    "~/Library/Caches/SentryCrash/Camo Studio",
-    "~/Library/Caches/com.reincubate.macos.cam",
-    "~/Library/HTTPStorages/com.reincubate.macos.cam",
-    "~/Library/Preferences/com.reincubate.macos.cam.plist",
-    "~/Library/WebKit/com.reincubate.macos.cam",
-  ],
+        "~/Library/Application Support/CrashReporter/Camo Studio",
+        "~/Library/Application Support/Reincubate/Camo",
+        "~/Library/Caches/SentryCrash/Camo Studio",
+        "~/Library/Caches/com.reincubate.macos.cam",
+        "~/Library/HTTPStorages/com.reincubate.macos.cam",
+        "~/Library/Preferences/com.reincubate.macos.cam.plist",
+        "~/Library/WebKit/com.reincubate.macos.cam",
+      ],
       rmdir: "~/Library/Application Support/Reincubate"
 end

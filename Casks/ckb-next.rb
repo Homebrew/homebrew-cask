@@ -12,9 +12,9 @@ cask "ckb-next" do
   pkg "ckb-next.mpkg"
 
   uninstall pkgutil:   [
-    "org.ckb-next.ckb",
-    "org.ckb-next.daemon",
-  ],
+              "org.ckb-next.ckb",
+              "org.ckb-next.daemon",
+            ],
             launchctl: "org.ckb-next.daemon"
 
   caveats do

@@ -19,9 +19,9 @@ cask "nordlocker" do
   pkg "NordLocker.pkg"
 
   uninstall quit:       [
-    "com.nordlocker.macos",
-    "com.nordlocker.macos.launcher",
-  ],
+              "com.nordlocker.macos",
+              "com.nordlocker.macos.launcher",
+            ],
             launchctl:  [
               "com.nordlocker.nordfs.Mounter.Helper",
               "com.nordlocker.macos.launcher",

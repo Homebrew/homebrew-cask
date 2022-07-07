@@ -33,11 +33,11 @@ cask "skype-for-business" do
             login_item: "Skype for Business"
 
   zap trash: [
-    "/Library/Internet Plug-Ins/MeetingJoinPlugin.plugin",
-    "~/Library/Application Support/com.microsoft.SkypeForBusinessTAP",
-    "~/Library/Application Support/Skype for Business",
-    "~/Library/Preferences/com.microsoft.SkypeForBusinessTAP.plist",
-    "~/Library/Preferences/com.microsoft.SkypeForBusinessTAP.debuglogging.plist",
-  ],
+        "/Library/Internet Plug-Ins/MeetingJoinPlugin.plugin",
+        "~/Library/Application Support/com.microsoft.SkypeForBusinessTAP",
+        "~/Library/Application Support/Skype for Business",
+        "~/Library/Preferences/com.microsoft.SkypeForBusinessTAP.plist",
+        "~/Library/Preferences/com.microsoft.SkypeForBusinessTAP.debuglogging.plist",
+      ],
       rmdir: "/Library/Application Support/Microsoft"
 end

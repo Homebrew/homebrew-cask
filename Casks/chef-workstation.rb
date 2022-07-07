@@ -1,12 +1,12 @@
 cask "chef-workstation" do
   arch, macos_version = Hardware::CPU.intel? ? ["x86_64", "10.15"] : ["arm64", "11"]
 
-  version "22.6.973"
+  version "22.7.1006"
 
   if Hardware::CPU.intel?
-    sha256 "ee255856f8a8422e59f8397ae0ad07122822ac39c583f5e1eeee1f075a38a916"
+    sha256 "6706e3c22248b1a0727f382e26c115d808457f04677f97a09432bfd77d2e5d92"
   else
-    sha256 "328512e5a146d5ee8f4e12c034c16f353a29c2768889b32126741d3a36049b97"
+    sha256 "f01815513f0e820dc036cabf1bef04b4beca37b1869b3a3e8b206942b6d0469d"
   end
 
   url "https://packages.chef.io/files/stable/chef-workstation/#{version}/mac_os_x/#{macos_version}/chef-workstation-#{version}-1.#{arch}.dmg"

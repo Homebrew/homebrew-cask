@@ -10,9 +10,9 @@ cask "bartender" do
     url "https://macbartender.com/B2/updates/#{version.csv.first.dots_to_hyphens}/Bartender%20#{version.major}.zip",
         referer: "https://www.macbartender.com"
   else
-    version "4.1.51,41051"
-    sha256 "f56c8bdbe845352fa550409eb4392cc14191c8705d65b367f3bf3e4cd74cef17"
-    url "https://macbartender.com/B2/updates/#{version.csv.first.major}-#{version.csv.first.minor}-#{version.csv.first.patch.rjust(2, "0")}/Bartender%20#{version.major}.dmg",
+    version "4.2.0,42000"
+    sha256 "b6c0172af9bd24bf10114eb7528ff7de40e9ba6fbb14bce92fa9a2f8e92edb0a"
+    url "https://macbartender.com/B2/updates/#{version.csv.first.major}-#{version.csv.first.minor}-#{version.csv.first.patch.rjust(1, "0")}/Bartender%20#{version.major}.dmg",
         referer: "https://www.macbartender.com"
   end
 
@@ -30,11 +30,11 @@ cask "bartender" do
   app "Bartender #{version.major}.app"
 
   uninstall delete:    [
-    "/Library/Audio/Plug-Ins/HAL/BartenderAudioPlugIn.plugin",
-    "/Library/PrivilegedHelperTools/com.surteesstudios.Bartender.BartenderInstallHelper",
-    "/Library/ScriptingAdditions/BartenderHelper.osax",
-    "/System/Library/ScriptingAdditions/BartenderSystemHelper.osax",
-  ],
+              "/Library/Audio/Plug-Ins/HAL/BartenderAudioPlugIn.plugin",
+              "/Library/PrivilegedHelperTools/com.surteesstudios.Bartender.BartenderInstallHelper",
+              "/Library/ScriptingAdditions/BartenderHelper.osax",
+              "/System/Library/ScriptingAdditions/BartenderSystemHelper.osax",
+            ],
             launchctl: "com.surteesstudios.Bartender.BartenderInstallHelper",
             quit:      "com.surteesstudios.Bartender"
 
