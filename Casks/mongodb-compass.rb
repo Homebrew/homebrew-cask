@@ -12,6 +12,7 @@ cask "mongodb-compass" do
     regex(/"version"\s*:\s*"(\d+(?:\.\d+)+)\s*\(Stable/i)
   end
 
+  auto_updates true
   app "MongoDB Compass.app"
 
   zap trash: [
