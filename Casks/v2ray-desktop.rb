@@ -3,7 +3,7 @@ cask "v2ray-desktop" do
   sha256 "717e9df880ef74e4f760c75e8983cb63112f1f9a301c4dc61c16217742f1dd3f"
 
   url "https://github.com/Dr-Incognito/V2Ray-Desktop/releases/download/#{version}/V2Ray-Desktop-v#{version}-macOS-x86_64.dmg"
-  name "v2ray-desktop"
+  name "V2Ray Desktop"
   desc "Cross-platform proxy GUI client"
   homepage "https://github.com/Dr-Incognito/V2Ray-Desktop"
 
