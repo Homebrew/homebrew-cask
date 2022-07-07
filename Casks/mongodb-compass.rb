@@ -13,6 +13,7 @@ cask "mongodb-compass" do
   end
 
   auto_updates true
+
   app "MongoDB Compass.app"
 
   zap trash: [
