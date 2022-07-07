@@ -17,7 +17,7 @@ cask "calhash" do
 
   livecheck do
     url :homepage
-    regex(/>\s*CalHash\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s.-]*\s+#{MacOS.version}\s*</i)
+    regex(/>\s*CalHash\s+v?(\d+(?:\.\d+)+)\s+for/i)
   end
 
   # Unusual case: The software may stop working, or may be dangerous to run, on the latest macOS release.
