@@ -1,5 +1,6 @@
 cask "start" do
   arch = Hardware::CPU.intel? ? "" : "m1/"
+  livecheck_arch = Hardware::CPU.intel? ? "" : "-arm"
 
   if Hardware::CPU.intel?
     version "0.301.19-183"
@@ -16,8 +17,8 @@ cask "start" do
   homepage "https://start.qq.com/"
 
   livecheck do
-    url :homepage
-    regex(%r{.*installer/#{arch}START-Installer[._-]v?(\d+(?:[.-]\d+)+)\.dmg}i)
+    url "https://api.start.qq.com/cfg/get?biztypes=macos-update-info#{livecheck_arch}"
+    regex(/START-Installer[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
   end
 
   auto_updates true
