@@ -1,6 +1,6 @@
 cask "sonic-pi" do
-  version "3.3.1"
-  sha256 "ab7ae6784c82ad2ad30c1d79ca8e23f7a207778e99e9827e2917c20c1c6ce8e5"
+  version "4.0.0"
+  sha256 "c33327eccf940863ec35ad4c9954b4c66a91add17b7a84f259cfd936af8815c7"
 
   url "https://sonic-pi.net/files/releases/v#{version}/Sonic-Pi-for-Mac-x64-v#{version}.dmg"
   name "Sonic Pi"
