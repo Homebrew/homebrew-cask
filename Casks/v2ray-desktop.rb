@@ -4,7 +4,7 @@ cask "v2ray-desktop" do
 
   url "https://github.com/Dr-Incognito/V2Ray-Desktop/releases/download/#{version}/V2Ray-Desktop-v#{version}-macOS-x86_64.dmg"
   name "V2Ray Desktop"
-  desc "Cross-platform proxy GUI client"
+  desc "GUI client that supports Shadowsocks(R), V2Ray, and Trojan protocols"
   homepage "https://github.com/Dr-Incognito/V2Ray-Desktop"
 
   app "V2Ray-Desktop.app"
