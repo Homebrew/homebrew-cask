@@ -15,7 +15,7 @@ cask "black-light" do
   app "BLack Light.app"
 
   zap trash: [
-    "~/Library/Application Scripts/ca.michelf.black-light",
-    "~/Library/Containers/ca.michelf.black-light",
+    "~/Library/Application Scripts/com.michelf.black-light",
+    "~/Library/Containers/com.michelf.black-light",
   ]
 end
