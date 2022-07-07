@@ -12,7 +12,7 @@ cask "calhash" do
 
   url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete(".")}/CalHash.dmg"
   name "CalHash"
-  desc "CalHash is a utility that you can use to calculate and compare the checksum (also known as a message-digest-fingerprint) for a file."
+  desc "Utility that you can use to calculate and compare the checksum for a file"
   homepage "https://www.titanium-software.fr/en/calhash.html"
 
   livecheck do
