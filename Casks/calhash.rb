@@ -12,12 +12,12 @@ cask "calhash" do
 
   url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete(".")}/CalHash.dmg"
   name "CalHash"
-  desc "Utility that you can use to calculate and compare the checksum for a file"
+  desc "Calculate and compare file checksums"
   homepage "https://www.titanium-software.fr/en/calhash.html"
 
   livecheck do
     url :homepage
-    regex(/>\s*CalHash\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s.-]*\s+#{MacOS.version}\s*</i)
+    regex(/>\s*CalHash\s+v?(\d+(?:\.\d+)+)\s+for/i)
   end
 
   # Unusual case: The software may stop working, or may be dangerous to run, on the latest macOS release.
