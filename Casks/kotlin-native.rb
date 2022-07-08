@@ -1,12 +1,12 @@
 cask "kotlin-native" do
   arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
-  version "1.7.0"
+  version "1.7.10"
 
   if Hardware::CPU.intel?
-    sha256 "b39a85a6e59e91eecb09f51290dc9704e816752275f9cb3a83b994d68b14fc9f"
+    sha256 "4e9470c25e0c6b3b79e86a59c7eca4d79c5a28ca515e80db93504535b2332a00"
   else
-    sha256 "5f1f4c1fb4090c27db3caf5f03953566855bb8ba08272cbb40414c9420fd257c"
+    sha256 "c02be577f541a5c73e1af75534006eea6e09cf67b3a886f323dae6f0406bcb3e"
   end
 
   url "https://github.com/JetBrains/kotlin/releases/download/v#{version}/kotlin-native-macos-#{arch}-#{version}.tar.gz",
