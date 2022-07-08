@@ -1,12 +1,12 @@
 cask "hepta" do
   arch = Hardware::CPU.intel? ? "mac" : "arm64-mac"
 
-  version "0.166.1"
+  version "0.168.0"
 
   if Hardware::CPU.intel?
-    sha256 "737641af52160710c540bd22ae0a36fd618a5c9e13594e8c127dde137c988a2c"
+    sha256 "3fb78765ee89e15397c7d940d807c4eb18438fcb3156a85bb04f0589f3c7712f"
   else
-    sha256 "a8fb62a8850478fac742302e90a65041dc4face87abd57670c4c8417b9ff26ad"
+    sha256 "9377438b7e8c025bfa48449c07bc887fab5329613100b0229425e8eb407f29ec"
   end
 
   url "https://github.com/heptameta/project-meta/releases/download/v#{version}/Hepta-#{version}-#{arch}.zip",
