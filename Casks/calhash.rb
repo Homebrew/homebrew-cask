@@ -23,7 +23,7 @@ cask "calhash" do
   desc "Calculate and compare file checksums"
   homepage "https://www.titanium-software.fr/en/calhash.html"
 
-  depends_on macos: "<= :monterey"
+  depends_on macos: "= :monterey"
 
   app "CalHash.app"
 
