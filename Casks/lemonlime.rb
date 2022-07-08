@@ -4,7 +4,7 @@ cask "lemonlime" do
 
   url "https://github.com/Project-LemonLime/Project_LemonLime/releases/download/#{version}/lemon-Release.dmg"
   name "lemonlime"
-  desc "A tiny judging environment for OI contest based on Lemon + LemonPlus"
+  desc "Tiny judging environment for OI contest based on Lemon + LemonPlus"
   homepage "https://github.com/Project-LemonLime/Project_LemonLime"
 
   app "lemon.app"
