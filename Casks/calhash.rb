@@ -23,11 +23,6 @@ cask "calhash" do
   desc "Calculate and compare file checksums"
   homepage "https://www.titanium-software.fr/en/calhash.html"
 
-  livecheck do
-    url :homepage
-    regex(/>\s*CalHash\s+v?(\d+(?:\.\d+)+)\s+for/i)
-  end
-
   depends_on macos: "<= :monterey"
 
   app "CalHash.app"
