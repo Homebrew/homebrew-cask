@@ -1,5 +1,5 @@
 cask "devutils" do
-  version "1.15.0,132"
+  version "1.15,132"
   sha256 "364231fe0bc2fff59608c1aeae1cfc952a86890ad3f8c4128ca400b39ed73417"
 
   url "https://devutils.app/archives/DevUtils-#{version.csv.first}.dmg"
