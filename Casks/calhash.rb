@@ -16,6 +16,10 @@ cask "calhash" do
   else
     version "1.1.7"
     sha256 "bbcbbc3d3f47751d5f021603691404e0886ae999e85812c2fe55b0e98d104a04"
+
+    livecheck do
+      skip "Legacy version for Monterey"
+    end
   end
 
   url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete(".")}/CalHash.dmg"
@@ -23,7 +27,7 @@ cask "calhash" do
   desc "Calculate and compare file checksums"
   homepage "https://www.titanium-software.fr/en/calhash.html"
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: "<= :monterey"
 
   app "CalHash.app"
 
