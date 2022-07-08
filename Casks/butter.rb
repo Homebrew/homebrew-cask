@@ -8,4 +8,8 @@ cask "butter" do
   homepage "https://github.com/harukasan/butter"
 
   app "Butter.app"
+
+  caveats do
+    discontinued
+  end
 end
