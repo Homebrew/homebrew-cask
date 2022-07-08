@@ -15,8 +15,6 @@ cask "headlamp" do
   desc "UI for Kubernetes"
   homepage "https://kinvolk.github.io/headlamp"
 
-  auto_updates false
-
   app "Headlamp.app"
 
   uninstall quit: "com.kinvolk.headlamp"
