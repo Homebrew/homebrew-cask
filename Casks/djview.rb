@@ -1,11 +1,12 @@
 cask "djview" do
-  version "4.12,3"
-  sha256 "f846b1488414f2063c1097768c5ca1d8a4dd8889749de03b108ce7c0941b9c3e"
+  version "4.12,2"
+  sha256 "c65460282d7d43c239d262551d415e0cf5873d4b8cbd845e434f2134cdd0a859"
 
-  url "https://downloads.sourceforge.net/djvu/DjVuLibre-3.5.28%2BDjView-#{version.csv.first}-intel64-#{version.csv.second}.dmg",
+  url "https://downloads.sourceforge.net/djvu/DjVuLibre-3.5.28%2BDjView-#{version.csv.first}-universal-#{version.csv.second}.dmg",
       verified: "downloads.sourceforge.net/djvu/"
   appcast "https://sourceforge.net/projects/djvu/rss"
   name "DjView"
+  desc "DjVu viewer and browser plugin"
   homepage "https://djvu.sourceforge.io/"
 
   app "DjView.app"
