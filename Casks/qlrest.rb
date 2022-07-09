@@ -6,10 +6,9 @@ cask "qlrest" do
   name "QLRest"
   homepage "https://github.com/cluther/qlrest"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
-
   qlplugin "QLRest.qlgenerator"
+
+  caveats do
+    discontinued
+  end
 end
