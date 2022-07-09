@@ -9,7 +9,7 @@ cask "black-light-pro" do
 
   livecheck do
     url :homepage
-    regex(/href=.*?black-light-pro[._-]v?(\d+(?:\.\d+)+)\.zip/i)
+    regex(/href=.*?black[._-]light[._-]pro[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
   app "BLack Light Pro.app"
