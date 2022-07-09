@@ -3,7 +3,7 @@ cask "feishu" do
 
   if Hardware::CPU.intel?
     version "5.16.5,511dd9"
-    sha256 "0c84f4fd7e0a105557f0390560f73565d1539e79490473152f02fa18900d3298"
+    sha256 "445c829ebf35d47cd3f093603a5cef82278604efa149a957a39813a739746ac4"
   else
     version "5.16.5,0ecde1"
     sha256 "fd287ceed1bba09e08a6b732127279ab2d0aa150c54270e5d1d74654cd4b9ac3"
