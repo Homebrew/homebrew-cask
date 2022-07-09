@@ -8,4 +8,11 @@ cask "lemonlime" do
   homepage "https://github.com/Project-LemonLime/Project_LemonLime"
 
   app "lemon.app"
+
+  zap trash: [
+    "~/Documents/Project_LemonLime",
+    "~/Library/Preferences/com.github.lemonlime.plist",
+    "~/Library/Preferences/com.lemonlime.lemon.plist",
+    "~/Library/Saved Application State/com.github.lemonlime.savedState",
+  ]
 end
