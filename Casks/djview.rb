@@ -6,7 +6,7 @@ cask "djview" do
       verified: "downloads.sourceforge.net/djvu/"
   appcast "https://sourceforge.net/projects/djvu/rss"
   name "DjView"
-  desc "DjView4 is a new portable DjVu viewer and browser plugin"
+  desc "DjVu viewer and browser plugin"
   homepage "https://djvu.sourceforge.io/"
 
   app "DjView.app"
