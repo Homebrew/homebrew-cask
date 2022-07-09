@@ -1,6 +1,6 @@
 cask "bob" do
-  version "0.10.2"
-  sha256 "ae52bafb160836fa53f1f152d259fa5b8b958fb31469cdda90538c1e92b2b078"
+  version "0.10.3"
+  sha256 "2e3ff79c0a7f7090ba17382d0e76a1299291d58bd97a3e4816b7eac3f020948d"
 
   url "https://github.com/ripperhe/Bob/releases/download/v#{version}/Bob.zip"
   name "Bob"
