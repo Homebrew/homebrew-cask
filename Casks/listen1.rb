@@ -2,14 +2,14 @@ cask "listen1" do
   # NOTE: "1" is not a version number, but an intrinsic part of the product name
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "2.23.0"
+  version "2.24.0"
 
   url "https://github.com/listen1/listen1_desktop/releases/download/v#{version}/Listen1_#{version}_mac_#{arch}.dmg",
       verified: "github.com/listen1/listen1_desktop/"
   if Hardware::CPU.intel?
-    sha256 "9574e20c3e7332be7496ff63c3919a659f5626212648841e8943786143245c61"
+    sha256 "2327464903b24cdd620d1ecbad8e039cd1f6f200f4286b05d6d799e7cc125a29"
   else
-    sha256 "f678d40a4635a826978fd940bc6e3b1e7bca55791fa50a13a7d55998ebe70ff0"
+    sha256 "8fd3e5c832dbdd02cbb9c68edcc902dd6749e67ea62d4d98ff155890c2aee954"
   end
 
   name "Listen 1"
