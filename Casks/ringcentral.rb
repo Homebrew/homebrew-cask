@@ -11,7 +11,7 @@ cask "ringcentral" do
 
   url "https://app.ringcentral.com/download/RingCentral#{arch}.pkg"
   name "RingCentral"
-  desc "Call, meet, and message all in one app."
+  desc "Call, meet, and message all in one app"
   homepage "https://www.ringcentral.com/download.html"
 
   livecheck do
