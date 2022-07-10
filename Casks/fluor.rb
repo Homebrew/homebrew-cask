@@ -1,6 +1,11 @@
 cask "fluor" do
-  version "2.5.1"
-  sha256 "adcb2651ab81bc10e4682ef264724b27137444f10f1bbb867e7d0bd7b6063d46"
+  if MacOS.version < :big_sur
+    version "2.5.0"
+    sha256 "bd7cc7ce2c2f9ac839c8d39bd600c2863c924c938c1c9e2d865bb7124ee84209"
+  else
+    version "2.5.1"
+    sha256 "adcb2651ab81bc10e4682ef264724b27137444f10f1bbb867e7d0bd7b6063d46"
+  end
 
   url "https://github.com/Pyroh/Fluor/releases/download/#{version}/Fluor.#{version}.dmg"
   name "Fluor"
