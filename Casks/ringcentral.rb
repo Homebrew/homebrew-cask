@@ -2,11 +2,16 @@ cask "ringcentral" do
   arch = Hardware::CPU.intel? ? "" : "-arm"
 
   version "22.2.30"
-  sha256 :no_check
+
+  if Hardware::CPU.intel?
+    sha256 "6ca9570a066f8b4d05261445e9a0792bc979978e84c9e5d849890cec27b351c4"
+  else
+    sha256 "ce1fb8ba48c93e65fca450667786b4b98aa000ff274ca890e3de36efdabcc22b"
+  end
 
   url "https://app.ringcentral.com/download/RingCentral#{arch}.pkg"
   name "RingCentral"
-  desc "Team messaging, video meetings, and business phone"
+  desc "Communicate your way with team messaging, video meetings, and a modern business phone—all in one place."
   homepage "https://www.ringcentral.com/download.html"
 
   livecheck do
