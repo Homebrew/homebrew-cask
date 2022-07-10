@@ -15,6 +15,10 @@ cask "headlamp" do
   desc "UI for Kubernetes"
   homepage "https://kinvolk.github.io/headlamp"
 
+  livecheck do
+    url "https://github.com/kinvolk/headlamp.git"
+  end
+
   app "Headlamp.app"
 
   uninstall quit: "com.kinvolk.headlamp"
