@@ -15,6 +15,8 @@ cask "vienna" do
     end
   end
 
+  auto_updates true
+
   app "Vienna.app"
 
   zap trash: [
