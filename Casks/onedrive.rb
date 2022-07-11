@@ -24,6 +24,7 @@ cask "onedrive" do
               "com.microsoft.OneDriveStandaloneUpdater",
               "com.microsoft.OneDriveStandaloneUpdaterDaemon",
               "com.microsoft.OneDriveUpdaterDaemon",
+              "com.microsoft.SyncReporter",
             ],
             pkgutil:   "com.microsoft.OneDrive",
             quit:      [
