@@ -1,5 +1,5 @@
 cask "fluor" do
-  if MacOS.version < :big_sur
+  if MacOS.version <= :catalina
     version "2.5.0"
     sha256 "bd7cc7ce2c2f9ac839c8d39bd600c2863c924c938c1c9e2d865bb7124ee84209"
   else
