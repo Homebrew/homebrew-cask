@@ -1,6 +1,6 @@
 cask "swiftcord" do
-  version "0.4.2,9"
-  sha256 "f8af3765835a9f116a551ec65ec12764395c10460dc118a83abb6639cff84056"
+  version "0.4.3,10"
+  sha256 "10413e0c7ead0ad4d5a56b744dc25baa4651a8b7e25523d97f46620fe171a206"
 
   url "https://github.com/SwiftcordApp/Swiftcord/releases/download/v#{version.csv.first}/Swiftcord.#{version.csv.first}.dmg"
   name "Swiftcord"
@@ -17,9 +17,9 @@ cask "swiftcord" do
   app "Swiftcord.app"
 
   zap trash: [
-    "~/Library/Application Scripts/com.cryptoalgo.swiftcord",
-    "~/Library/Caches/com.cryptoalgo.swiftcord",
-    "~/Library/Containers/com.cryptoalgo.swiftcord",
-    "~/Library/Saved Application State/com.cryptoalgo.swiftcord.savedState",
+    "~/Library/Application Scripts/io.cryptoalgo.swiftcord",
+    "~/Library/Caches/io.cryptoalgo.swiftcord",
+    "~/Library/Containers/io.cryptoalgo.swiftcord",
+    "~/Library/Saved Application State/io.cryptoalgo.swiftcord.savedState",
   ]
 end
