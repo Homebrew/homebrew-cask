@@ -15,5 +15,10 @@ cask "masscode" do
   desc "Open-source code snippets manager for developers"
   homepage "https://masscode.io/"
 
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
+
   app "massCode.app"
 end
