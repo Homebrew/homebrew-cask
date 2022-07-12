@@ -1,6 +1,6 @@
 cask "archipelago" do
-  version "4.2.1"
-  sha256 "2d07dd0301eb4e4fb113bf8c42a079fb902208d862c6d4ad06a12af543ef56c7"
+  version "4.2.2"
+  sha256 "0e5009ad2d4114e282a97909c4ada4d19f51f4f8e57f6b109b2fcf77b66afe54"
 
   url "https://github.com/npezza93/archipelago/releases/download/v#{version}/Archipelago-#{version}.dmg"
   name "Archipelago"
