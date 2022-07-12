@@ -44,6 +44,7 @@ cask "microsoft-powerpoint" do
               "com.microsoft.package.Microsoft_PowerPoint.app",
               "com.microsoft.pkg.licensing",
             ],
+            delete:    "/Applications/Microsoft PowerPoint.app",
             launchctl: "com.microsoft.office.licensingV2.helper",
             quit:      "com.microsoft.autoupdate2"
 
