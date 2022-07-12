@@ -1,6 +1,6 @@
 cask "slicer" do
-  version "5.0.2,62871f83e8408647b39fedad"
-  sha256 "a080618e5d41e3338a47d73b121aa2424c442c32b3e25d2ddab128a4dc48b945"
+  version "5.0.3,62cc8ff3aa08d161a31c260a"
+  sha256 "45cafff1d60cf1d225285b1a59260b164062cf5bde802cbadcaef8d00b177270"
 
   url "https://slicer-packages.kitware.com/api/v1/item/#{version.csv.second}/download",
       verified: "slicer-packages.kitware.com/"
