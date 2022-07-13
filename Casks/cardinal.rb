@@ -9,5 +9,11 @@ cask "cardinal" do
 
   pkg "Cardinal-macOS-universal-#{version}.pkg"
 
-  uninstall pkgutil: "studio.kx.distrho.cardinal"
+  uninstall pkgutil: [
+    "studio.kx.distrho.cardinal.resources",
+    "studio.kx.distrho.plugins.cardinal.components",
+    "studio.kx.distrho.plugins.cardinal.lv2bundles",
+    "studio.kx.distrho.plugins.cardinal.vst2bundles",
+    "studio.kx.distrho.plugins.cardinal.vst3bundles",
+  ]
 end
