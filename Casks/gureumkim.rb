@@ -5,7 +5,7 @@ cask "gureumkim" do
   url "https://github.com/gureum/gureum/releases/download/#{version}/Gureum-#{version}.pkg",
       verified: "github.com/gureum/gureum/"
   name "구름 입력기"
-  desc "libhangul-based keyboard input"
+  desc "Libhangul-based keyboard input"
   homepage "https://gureum.io/"
 
   livecheck do
