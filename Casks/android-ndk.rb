@@ -13,8 +13,6 @@ cask "android-ndk" do
     regex(/Latest.*?r(\d+[a-z]?)\b(?!\s+Preview)/i)
   end
 
-  conflicts_with cask: "crystax-ndk"
-
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/ndk_exec.sh"
   preflight do
