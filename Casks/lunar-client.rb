@@ -1,6 +1,6 @@
 cask "lunar-client" do
-  version "2.12.3"
-  sha256 "a620e0300b6b266753ec7e2b23407c275e3c5dc19b09f1e74324130e93a7ad91"
+  version "2.12.6"
+  sha256 "44998582e389a78ee09a05a0a2c2f69011306c5ad6e5229110e597b51b0f66e5"
 
   url "https://launcherupdates.lunarclientcdn.com/Lunar%20Client%20v#{version}.dmg",
       verified: "launcherupdates.lunarclientcdn.com/"
