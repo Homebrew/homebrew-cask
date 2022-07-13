@@ -7,8 +7,8 @@ cask "couchbase-server-enterprise" do
 
     app "couchbase-server-enterprise_#{version}/Couchbase Server.app"
   else
-    version "7.1.0"
-    sha256 "9e887b9d6fa58d705720da86e273fe7c93ffea697a3714ffc8d67a5e8056ff06"
+    version "7.1.1"
+    sha256 "1537d4daf37cf0a99abeda8bf41facd18a42bd5946af7a114b342c89f53eb2b8"
 
     url "https://packages.couchbase.com/releases/#{version}/couchbase-server-enterprise_#{version}-macos_x86_64.dmg"
 

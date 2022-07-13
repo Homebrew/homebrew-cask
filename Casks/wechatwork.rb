@@ -1,7 +1,7 @@
 cask "wechatwork" do
   if Hardware::CPU.intel?
-    version "4.0.8.90588"
-    sha256 "bd108ac8b5098967e248a41c9155bfd9b5cc7fa785f7dc84d13304e79be07dd2"
+    version "4.0.9.90599"
+    sha256 "ba400a08c969b80593d3ff4a78d153ba786fb0a3a1635c63fd1f2dd436efe16c"
   else
     version "4.0.8.99136"
     sha256 "72934414882bfdde9ed9b4f7fae8092b17ea77cce87548d8cf615984e77e01b4"

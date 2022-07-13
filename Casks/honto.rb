@@ -1,5 +1,5 @@
 cask "honto" do
-  version "6.56.0,20220303"
+  version "6.58.0,20220531"
   sha256 :no_check
 
   url "https://dl.honto.jp/macapp/honto.dmg"

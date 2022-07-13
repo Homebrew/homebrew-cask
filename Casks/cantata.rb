@@ -7,14 +7,11 @@ cask "cantata" do
   desc "Qt5 Graphical MPD Client"
   homepage "https://github.com/cdrummond/cantata"
 
-  # We need to check all releases since not all releases are for macOS.
-  livecheck do
-    url "https://github.com/CDrummond/cantata/releases"
-    strategy :page_match
-    regex(%r{href=.*?/Cantata[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
-  end
-
   depends_on macos: ">= :sierra"
 
   app "Cantata.app"
+
+  caveats do
+    discontinued
+  end
 end

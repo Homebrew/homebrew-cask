@@ -1,6 +1,6 @@
 cask "weektodo" do
-  version "1.8.0"
-  sha256 "4a103e80ad590849ce10167016da1f3abb611918984d427e8e56c0f852ee75d9"
+  version "1.8.5"
+  sha256 "e259667a7c8ffce0b24d010453566e5e440950ba947c1da708268a19a8b8ccbb"
 
   url "https://github.com/Zuntek/WeekToDoWeb/releases/download/v#{version}/WeekToDo-#{version}.dmg",
       verified: "github.com/Zuntek/WeekToDoWeb/"

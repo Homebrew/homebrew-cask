@@ -1,11 +1,11 @@
 cask "publii" do
   arch = Hardware::CPU.intel? ? "intel" : "apple-silicon"
-  version "0.40.0"
+  version "0.40.1"
 
   if Hardware::CPU.intel?
-    sha256 "3ac0fe18153fd565ce3e4da76a2bbae58c05675ca2d41224e04fc34403b6e2b5"
+    sha256 "a41f8b2a6c942d2d3d31af86be81fb2944011641a3f789573db41876aae17a46"
   else
-    sha256 "0906693aa1324ce28548ce98f5a67bc2fd42c64c80d858406e66b41ca61a5fe8"
+    sha256 "56c37a9c7583b5cec70d862faedd0adab20809e73330aa723c8f9a62e05cc2fa"
   end
 
   url "https://cdn.getpublii.com/Publii-#{version}-#{arch}.dmg"
