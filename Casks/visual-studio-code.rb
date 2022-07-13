@@ -1,12 +1,12 @@
 cask "visual-studio-code" do
   arch = Hardware::CPU.intel? ? "darwin" : "darwin-arm64"
 
-  version "1.68.1"
+  version "1.69.1"
 
   if Hardware::CPU.intel?
-    sha256 "34ab4f6740e105cfac50e14ec3d2a4d97248325f33351b98f4dd2ac08b594cfa"
+    sha256 "2cb83c42743c04710bace165f4bdc93e7fd9959d9bd67ae5be6d64f8fd971dd3"
   else
-    sha256 "ec6dfb6bc68edd39ea01aff6d623e4ab0e2141189dd964b4be3ce452add4cfad"
+    sha256 "fe46d3cd110d5c16a4846025e6962c17ad3727dab1b4f473017403a9487e09b5"
   end
 
   url "https://update.code.visualstudio.com/#{version}/#{arch}/stable"

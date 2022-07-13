@@ -1,12 +1,12 @@
 cask "razorsql" do
   arch = Hardware::CPU.intel? ? "" : "_aarch64"
 
-  version "10.0.5"
+  version "10.0.6"
 
   if Hardware::CPU.intel?
-    sha256 "bb629d69527b692c4dfaf5df145262006e0bff4b6c82b11a58248d20c075cd5e"
+    sha256 "c3c4e054d5fdeec336ee4d959f017694fee7855c94eef1efd04e67f97e0e359e"
   else
-    sha256 "3eaebf9f2260e6d882f16175dcb47e42b7772f71e726cc4f7a5e79d0f2fc4f09"
+    sha256 "6fc6b39f0c32d0cbe93b73b7c6358ee4861bc4cebe4bc6bf33edf88c3fab2fc7"
   end
 
   url "https://s3.dualstack.us-east-1.amazonaws.com/downloads.razorsql.com/downloads/#{version.dots_to_underscores}/razorsql#{version.dots_to_underscores}#{arch}.dmg",
