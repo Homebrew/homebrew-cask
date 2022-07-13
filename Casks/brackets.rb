@@ -9,7 +9,7 @@ cask "brackets" do
   homepage "https://brackets.io/"
 
   livecheck do
-    url "https://github.com/brackets-cont/brackets/releases"
+    url :url
     strategy :github_latest
     regex(%r{href=.*?/brackets\.(\d+(?:\.\d+)+)\.dmg}i)
   end
