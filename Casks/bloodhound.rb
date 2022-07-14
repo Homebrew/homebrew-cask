@@ -19,10 +19,5 @@ cask "bloodhound" do
   caveats <<~EOS
     According to https://github.com/BloodHoundAD/BloodHound/issues/504
     this app will not work with quarantine attributes.
-    To use this cask, install it with:
-
-      brew install --cask --no-quarantine #{token}
-
-    WARNING: quarantining is a macOS security feature and you disable it at your own risk!
   EOS
 end
