@@ -22,11 +22,6 @@ cask "universal-gcode-platform" do
 
   caveats <<~EOS
     According to https://github.com/winder/Universal-G-Code-Sender/issues/1351#issuecomment-579110056
-    the UGS developers do not sign their code and this app will not work with quarantine attributes.
-    To use this cask, install it with:
-
-      brew install --cask --no-quarantine #{token}
-
-    WARNING: quarantining is a macOS security feature and you disable it at your own risk!
+    the UGS developers do not sign their code and this app might need manual changes.
   EOS
 end
