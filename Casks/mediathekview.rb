@@ -1,12 +1,12 @@
 cask "mediathekview" do
   arch = Hardware::CPU.intel? ? "mac" : "mac-as"
 
-  version "13.9.0"
+  version "13.9.1"
 
   if Hardware::CPU.intel?
-    sha256 "5805aaff8af84bad15e8180b102a93418057d5726dc7d66217ffe266e34e4ba5"
+    sha256 "4529bbed37b3736623b5083e99088866bfec98973383df2553c27175738072a9"
   else
-    sha256 "627498a86405e1750ab6b42395ed56d99e56bb0cc24d3c92dde0302b607c50b1"
+    sha256 "4eb0e2de15f1852b66ac16b84b6fdba1c3dfc18e19a646763c4e636a7c7932b0"
   end
 
   url "https://download.mediathekview.de/stabil/MediathekView-#{version}-#{arch}.dmg"
