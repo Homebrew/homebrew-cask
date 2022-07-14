@@ -1,12 +1,12 @@
 cask "clay" do
   arch = Hardware::CPU.intel? ? "" : "-arm64"
 
-  version "1.9.6"
+  version "1.9.7"
 
   if Hardware::CPU.intel?
-    sha256 "4ad06f447486de6376ee3ee57cbb0f19a44cc794d0992e587af103deff18c8db"
+    sha256 "ac5a78c8cc6102c72cb337e19da69ab02382d913180debf1a56fbf8ab9744944"
   else
-    sha256 "ab8929259da524a7a6d3fcc6357a464b6b983861123e89006938ddea0d816525"
+    sha256 "8a6de66302805908839841b91ee77f831ad9472c26a6c95b64c0053fc6641096"
   end
 
   url "https://assets.clay.earth/desktop/mac/Clay-#{version}#{arch}.dmg"
