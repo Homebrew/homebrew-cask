@@ -1,6 +1,6 @@
 cask "radar" do
-  version "2.4.2"
-  sha256 "4cfc82b552b2b8c6cedc3d5ca58c404828b515e0138dfd46695d51876bccd8b1"
+  version "2.4.3"
+  sha256 "c5d926e0364381d638a2305c92d1e82c49c95d77155dfc8fe7967b41767b0eb6"
 
   url "https://getradar.co/download/v#{version}.dmg"
   name "Radar"
