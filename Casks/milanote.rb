@@ -9,7 +9,7 @@ cask "milanote" do
   homepage "https://www.milanote.com/"
 
   livecheck do
-    url "https://www.milanote.com/download-mac-app"
+    url "https://www.milanote.com/download-desktop-app"
     regex(/href=.*?Milanote[._-]?v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
