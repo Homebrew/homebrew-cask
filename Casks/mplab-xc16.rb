@@ -1,15 +1,15 @@
 cask "mplab-xc16" do
-  version "2.00"
-  sha256 "df1c619ebc35f360fcb7f809983fdb81613ebb153b324ac14ba1d654817456e7"
+  version "2.09"
+  sha256 "508a659eae771f59082167f1661c173d3db2cbfab371a2883f21b671f8801872"
 
-  url "https://ww1.microchip.com/downloads/en/DeviceDoc/xc16-v#{version}-full-install-osx64-installer.dmg"
+  url "https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/SoftwareTools/xc16-v#{version}-full-install-osx64-installer.dmg"
   name "MPLab XC16 Compiler"
   desc "Compiler for 16-bit PIC and SAM MCUs and MPUs"
   homepage "https://www.microchip.com/mplab/compilers"
 
   livecheck do
-    url "https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers"
-    regex(%r{href=.*?downloads/en/DeviceDoc/xc16[._-]v?(\d+(?:\.\d+)+)-full-install-osx64-installer\.dmg}i)
+    url "https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers/downloads-documentation"
+    regex(%r{href=.*?ProductDocuments/SoftwareTools/xc16[._-]v?(\d+(?:\.\d+)+)-full-install-osx64-installer\.dmg}i)
   end
 
   installer script: {
