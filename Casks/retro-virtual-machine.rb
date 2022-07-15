@@ -2,8 +2,8 @@ cask "retro-virtual-machine" do
   version "2.0,1.r7"
   sha256 "75e94f2df589ead3fb1eab529713312a17dc16e6b2ba547594cd9d5975def566"
 
-  url "https://retrovirtualmachine.ams3.digitaloceanspaces.com/release/beta#{version.csv.second.major}/macos/RetroVirtualMachine.#{version.csv.first}.beta-#{version.csv.second}.macos.dmg",
-      verified: "retrovirtualmachine.ams3.digitaloceanspaces.com/"
+  url "https://static.retrovm.org/release/beta#{version.csv.second.major}/macos/RetroVirtualMachine.#{version.csv.first}.beta-#{version.csv.second}.macos.dmg",
+      verified: "static.retrovm.org/release/"
   name "Retro Virtual Machine"
   desc "ZX Spectrum and Amstrad CPC emulator"
   homepage "https://www.retrovirtualmachine.org/en/"

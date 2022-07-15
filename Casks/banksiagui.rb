@@ -7,9 +7,10 @@ cask "banksiagui" do
   desc "Chess GUI"
   homepage "https://banksiagui.com/"
 
+  # The homepage uses a WordPress anti-crawler protection plugin which
+  # returns a 403 error when trying to run livecheck
   livecheck do
-    url "https://banksiagui.com/download/"
-    regex(/BanksiaGui[._-]v?(\d+(?:\.\d+)+\w?)[._-]mac\.zip/i)
+    skip "Version information can't be retrieved due to anti-crawler protection"
   end
 
   app "BanksiaGui.app"

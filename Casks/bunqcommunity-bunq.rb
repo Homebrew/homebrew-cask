@@ -5,7 +5,12 @@ cask "bunqcommunity-bunq" do
   url "https://github.com/bunqCommunity/bunqDesktop/releases/download/#{version}/bunqDesktop-#{version}.dmg",
       verified: "github.com/bunqCommunity/bunqDesktop/"
   name "bunqDesktop"
+  desc "Unofficial desktop application for the bunq API"
   homepage "https://bunqdesk.top/"
 
   app "bunqDesktop.app"
+
+  caveats do
+    discontinued
+  end
 end

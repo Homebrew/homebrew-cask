@@ -1,15 +1,22 @@
 cask "shift" do
-  version "7.2.18"
-  sha256 "6d779264fad6736675f56c74a9cbd8d778baba7234123f42d7182cfb15667cc0"
+  arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  url "https://update.tryshift.com/download/version/#{version}/osx_64"
+  version "8.0.45.438"
+
+  if Hardware::CPU.intel?
+    sha256 "938d87866304be57893da845359d89ae3d2e37d3ed61a6a7dac5def5614c44f9"
+  else
+    sha256 "573497d254e8ad832cb0070dda15952d49c4b7b4f1e0bb8f7540d08fe9803a23"
+  end
+
+  url "https://updates.tryshift.com/v#{version.major_minor_patch}/stable/shift-v#{version}-stable-#{arch}.dmg"
   name "Shift"
   desc "Workstation to streamline your accounts, apps, and workflows"
   homepage "https://tryshift.com/"
 
   livecheck do
     url "https://tryshift.com/download/?platform=mac"
-    regex(%r{href=.*?version/(\d+(?:[._-]\d+)+)[._-]stable/osx[._-]64}i)
+    regex(/href=.*?(\d+(?:[._-]\d+)+)[._-]stable.*?\.dmg/i)
   end
 
   app "Shift.app"

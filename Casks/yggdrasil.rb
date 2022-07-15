@@ -1,12 +1,12 @@
 cask "yggdrasil" do
   arch = Hardware::CPU.intel? ? "amd64" : "arm64"
 
-  version "0.4.3"
+  version "0.4.4"
 
   if Hardware::CPU.intel?
-    sha256 "5685029a2aede8250dc18886bcb2f905e2f78fcd528dce7140d78bc58ca78cd8"
+    sha256 "bbeb5ce175dfa009e3f54f08261a7554c6caf4a6143eb9993ff94bbf9d9f7cff"
   else
-    sha256 "d91dbd7e5995ca075a8b40f7070aaf3bf197e51efb5cfab0242b893795feb7dc"
+    sha256 "72c2cb3b1b4f3db27a60c948c930c56ebc25eb382fb6350bc137572b49617aaf"
   end
 
   url "https://github.com/yggdrasil-network/yggdrasil-go/releases/download/v#{version}/yggdrasil-#{version}-macos-#{arch}.pkg"

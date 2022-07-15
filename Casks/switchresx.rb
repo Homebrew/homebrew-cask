@@ -12,7 +12,7 @@ cask "switchresx" do
     regex(/SwitchResX\s*(\d+(?:\.\d+)*)/i)
   end
 
-  prefpane "SwitchResX Installer.app/Contents/Resources/SwitchResX.prefPane"
+  prefpane "SwitchResX Installer.app/Contents/Plugins/SwitchResX.prefPane"
 
   uninstall quit:   [
               "fr.madrau.switchresx.app",

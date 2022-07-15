@@ -12,8 +12,8 @@ cask "microsoft-powerpoint" do
     version "16.54.21101001"
     sha256 "75a57c82b46d0e2558c454f19610576b7a48baf1ccc5cd1fa61b69cca5bf0bd1"
   else
-    version "16.62.22061100"
-    sha256 "ad531fd716a81b53bdbb59f8591d4eece2de61b4b4fcfc39a1abf36c1b6b3d6f"
+    version "16.63.22070801"
+    sha256 "07a9b3fa1f8e11ea0f9fed8e8355fd7ef8eef176171165cd52f1f2bbf3802f99"
   end
 
   url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_PowerPoint_#{version}_Installer.pkg",
@@ -44,6 +44,7 @@ cask "microsoft-powerpoint" do
               "com.microsoft.package.Microsoft_PowerPoint.app",
               "com.microsoft.pkg.licensing",
             ],
+            delete:    "/Applications/Microsoft PowerPoint.app",
             launchctl: "com.microsoft.office.licensingV2.helper",
             quit:      "com.microsoft.autoupdate2"
 

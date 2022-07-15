@@ -8,6 +8,12 @@ cask "nym-wallet" do
   desc "Use to bond coins or interact with your Nym node or delegate to other nodes"
   homepage "https://nymtech.net/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+    regex(/wallet[._-]v?(\d+(?:\.\d+)+).*?dmg/i)
+  end
+
   depends_on macos: ">= :big_sur"
 
   app "nym-wallet.app"

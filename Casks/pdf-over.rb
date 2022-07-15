@@ -1,5 +1,5 @@
 cask "pdf-over" do
-  version "4.4.0,1"
+  version "4.4.1"
   sha256 :no_check
 
   url "https://technology.a-sit.at/technology/download/pdf-over-mac/"

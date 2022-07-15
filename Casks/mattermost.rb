@@ -19,6 +19,8 @@ cask "mattermost" do
     regex(%r{href=.*?/mattermost[._-]desktop[._-]v?(\d+(?:\.\d+)+)[._-]mac[._-]#{arch}\.dmg}i)
   end
 
+  depends_on macos: ">= :catalina"
+
   app "Mattermost.app"
 
   zap trash: [
