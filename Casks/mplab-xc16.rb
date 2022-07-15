@@ -19,7 +19,7 @@ cask "mplab-xc16" do
       "--unattendedmodeui", "none",
       "--ModifyAll", "0",
       "--netservername", '""',
-      "--LicenseType", "FreeMode",
+      "--LicenseType", "WorkstationMode",
       "--prefix", staged_path.to_s
     ],
     input:      ["y"],
