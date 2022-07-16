@@ -1,6 +1,6 @@
 cask "windterm" do
   version "2.4.1"
-  sha256 "8dcf18887b4c2b43c39c6c7b32ca093df986f9192334021891488b5a2256b903"
+  sha256 "0d7a0b30c63d24198c0d3c1e89a66f51a25fa6fe4dcf9f6a1b7a2058d61971c2"
 
   url "https://github.com/kingToolbox/WindTerm/releases/download/2.4.0/WindTerm_#{version}_Mac_Portable_x86_64.dmg"
   name "WindTerm"
