@@ -1,6 +1,6 @@
 cask "tigervpn" do
   version "3.5.3"
-  sha256 "9039576697a2d9b0524b116650de4e0942223374155be16e180433f8577c57c6"
+  sha256 "992a145829a3df337d63ed65c4da09f65ad1978d53f85fee5c558fae6a25dfc6"
 
   url "https://www.tigervpn.com/assets/apps/tigerVPN_MAC_v#{version}.dmg"
   name "tigerVPN"
