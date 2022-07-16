@@ -2,11 +2,10 @@ cask "mark-text" do
   version "0.17.1"
   sha256 "83320faad3b217079f6638b1f4169ffc37465f255a93e262d1646f2a5f53f263"
 
-  url "https://github.com/marktext/marktext/releases/download/v#{version}/marktext-x64.dmg",
-      verified: "github.com/marktext/marktext/"
+  url "https://github.com/marktext/marktext/releases/download/v#{version}/marktext-x64.dmg"
   name "MarkText"
   desc "Simple and elegant markdown editor"
-  homepage "https://marktext.app/"
+  homepage "https://github.com/marktext/marktext"
 
   app "MarkText.app"
 
