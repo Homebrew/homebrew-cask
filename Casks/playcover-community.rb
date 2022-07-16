@@ -18,5 +18,6 @@ cask "playcover-community" do
     "~/Library/Containers/io.playcover.PlayCover",
     "~/Library/Preferences/io.playcover.PlayCover.plist",
     "~/Library/Saved Application State/io.playcover.PlayCover.savedState",
+    "~/Library/Frameworks/PlayTools.framework"
   ]
 end
