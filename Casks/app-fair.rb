@@ -5,7 +5,7 @@ cask "app-fair" do
   url "https://github.com/App-Fair/App/releases/download/#{version}/App-Fair-macOS.zip",
       verified: "github.com/App-Fair/App/"
   name "App Fair"
-  desc "Catalog of free and commercial native desktop applications"
+  desc "Open-source browser and installer for macOS apps and Homebrew casks"
   homepage "https://appfair.app/"
 
   depends_on macos: ">= :monterey"
