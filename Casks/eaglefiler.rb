@@ -13,4 +13,13 @@ cask "eaglefiler" do
   end
 
   app "EagleFiler.app"
+
+  zap trash: [
+    "~/Library/Application Support/EagleFiler",
+    "~/Library/Caches/com.c-command.EagleFiler",
+    "~/Library/Logs/EagleFiler",
+    "~/Library/PDF Services/Save PDF to EagleFiler",
+    "~/Library/Preferences/com.c-command.EagleFiler.plist",
+    "~/Library/Saved Application State/com.c-command.EagleFiler.savedState",
+  ]
 end
