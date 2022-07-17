@@ -6,8 +6,8 @@ cask "calibre" do
     version "5.44.0"
     sha256 "89d7772ba1b95d219b34e285353340a174a013e06b4d8ad370433b3b98c94ad4"
   else
-    version "6.0.0"
-    sha256 "0c0ece2e79605c625562d08bdbb7fdf389c01a95328f87f9a395df316e31d535"
+    version "6.1.0"
+    sha256 "5b9cb00a46b48cc03b5c843b5a3da9298f231f6fdb76eb418f038ce53490e99f"
   end
 
   url "https://download.calibre-ebook.com/#{version}/calibre-#{version}.dmg"

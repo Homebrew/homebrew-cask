@@ -17,8 +17,13 @@ cask "coderunner" do
   app "CodeRunner.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.krill.CodeRunner.CodeRunnerThumbs/",
     "~/Library/Application Support/CodeRunner",
+    "~/Library/Autosave Information/com.krill.CodeRunner.plist",
     "~/Library/Caches/com.krill.CodeRunner",
+    "~/Library/Containers/com.krill.CodeRunner.CodeRunnerThumbs",
+    "~/Library/HTTPStorages/com.krill.CodeRunner",
+    "~/Library/Preferences/com.krill.CodeRunner.plist",
     "~/Library/Saved Application State/com.krill.CodeRunner.savedState",
   ]
 end

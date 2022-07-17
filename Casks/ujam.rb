@@ -1,6 +1,6 @@
 cask "ujam" do
-  version "0.3.7"
-  sha256 "b0cdf6bd0a48d3cf58a6a94cf5cf258e733fb33462909e2bd5df5976d3a47c62"
+  version "0.3.9"
+  sha256 "f1b0deab764665a104d68447047e6ef77510bf6dc0b23a794583e83897f385c4"
 
   url "https://software.ujam.com/ujamapp/UJAM-#{version}.dmg"
   name "UJAM"

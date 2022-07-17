@@ -1,6 +1,6 @@
 cask "psychopy" do
-  version "2022.2.1"
-  sha256 "d5f8d20d148262ab952b1fcf6f772e1bf898f6a89e7e65fac01818065e32d142"
+  version "2022.2.2"
+  sha256 "12922048a6e0d406aead7d2f0e769da0fe840f286b04ce06c7e9bfed08cd0c84"
 
   url "https://github.com/psychopy/psychopy/releases/download/#{version.major_minor_patch}/StandalonePsychoPy-#{version}-macOS.dmg"
   name "PsychoPy"

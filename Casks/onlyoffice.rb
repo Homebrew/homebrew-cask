@@ -1,12 +1,12 @@
 cask "onlyoffice" do
   arch = Hardware::CPU.intel? ? "x86_64" : "arm"
 
-  version "7.1.0"
+  version "7.1.1"
 
   if Hardware::CPU.intel?
-    sha256 "97ec1035147d9587f20f87fa1b92b14947cad2dc304f3a7f71c12cb3d8535237"
+    sha256 "f0384110b6ebafb046c6df0d730edc5c6687564c760f84bb9e812a7f836c3abc"
   else
-    sha256 "1aebbfe203b51ca3c400b1e9232df4290210f2f22d35a361b91792eb18c8a5a2"
+    sha256 "0d17c802acdb2bc7aa9af7bec05fdae1db6691a9df72e948ce010077c993b4b0"
   end
 
   url "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v#{version}/ONLYOFFICE-#{arch}.dmg",

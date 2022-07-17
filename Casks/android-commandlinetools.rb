@@ -17,7 +17,7 @@ cask "android-commandlinetools" do
                  formula: "proguard"
 
   android_sdk_root = "#{HOMEBREW_PREFIX}/share/android-commandlinetools"
-  android_clt_dir = "#{android_sdk_root}/cmdline-tools/homebrew"
+  android_clt_dir = "#{android_sdk_root}/cmdline-tools/latest"
 
   binary "#{android_clt_dir}/bin/apkanalyzer"
   binary "#{android_clt_dir}/bin/avdmanager"

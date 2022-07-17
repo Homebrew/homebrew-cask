@@ -22,7 +22,7 @@ cask "microsoft-office" do
     onedrive
   ]
   depends_on cask: "microsoft-auto-update"
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :catalina"
 
   pkg "Microsoft_Office_#{version}_Installer.pkg",
       choices: [

@@ -1,12 +1,12 @@
 cask "shift" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "8.0.44.425"
+  version "8.0.45.438"
 
   if Hardware::CPU.intel?
-    sha256 "9d120330a5d3b912f05d1250a87e96226b585c1c089046ed98f77ae978f42fa5"
+    sha256 "938d87866304be57893da845359d89ae3d2e37d3ed61a6a7dac5def5614c44f9"
   else
-    sha256 "dd2667a827a7ee58f66fdc68b71efa8cc4b93c7559b72c059fbda08f78fbc54e"
+    sha256 "573497d254e8ad832cb0070dda15952d49c4b7b4f1e0bb8f7540d08fe9803a23"
   end
 
   url "https://updates.tryshift.com/v#{version.major_minor_patch}/stable/shift-v#{version}-stable-#{arch}.dmg"
