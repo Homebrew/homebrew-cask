@@ -26,6 +26,8 @@ cask "lyricsx" do
     "~/Library/Application Scripts/3665V726AE.group.ddddxxx.LyricsX",
     "~/Library/Application Scripts/ddddxxx.LyricsX",
     "~/Library/Application Scripts/ddddxxx.LyricsXHelper",
+    "~/Library/Containers/ddddxxx.LyricsX",
     "~/Library/Group Containers/3665V726AE.group.ddddxxx.LyricsX",
+    "~/Library/Preferences/ddddxxx.LyricsX.plist",
   ]
 end
