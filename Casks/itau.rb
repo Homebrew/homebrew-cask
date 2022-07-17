@@ -1,10 +1,18 @@
 cask "itau" do
-  version "2.1.2.18"
+  arch = Hardware::CPU.intel? ? "" : "_m1"
+
+  version "2.3.2.9"
   sha256 :no_check
 
-  url "https://guardiao.itau.com.br/UpdateServer/aplicativoitau.dmg"
+  url "https://guardiao.itau.com.br/UpdateServer/aplicativoitau#{arch}.dmg"
   name "Itau"
+  desc "Banking & credit card management"
   homepage "https://www.itau.com.br/computador/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   app "Itau.app"
 
