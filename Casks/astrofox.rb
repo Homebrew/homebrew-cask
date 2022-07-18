@@ -9,10 +9,16 @@ cask "astrofox" do
 
   livecheck do
     url "https://astrofox.io/download"
-    regex(/href=.*?Astrofox[._-]?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/href=.*?Astrofox[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   auto_updates true
 
   app "Astrofox.app"
+  
+  zap trash: [
+    "~/Library/Application Support/Astrofox",
+    "~/Library/Preferences/io.astrofox.app.plist",
+    "~/Library/Saved Application State/io.astrofox.app.savedState",
+  ]
 end
