@@ -15,7 +15,7 @@ cask "astrofox" do
   auto_updates true
 
   app "Astrofox.app"
-  
+
   zap trash: [
     "~/Library/Application Support/Astrofox",
     "~/Library/Preferences/io.astrofox.app.plist",
