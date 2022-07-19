@@ -12,6 +12,8 @@ cask "tailscale" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
+
   app "Tailscale.app"
 
   uninstall login_item: "Tailscale",
