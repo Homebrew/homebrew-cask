@@ -1,15 +1,15 @@
 cask "easyeda" do
-  version "6.5.5"
-  sha256 "740d856738fd70fd2f866f5ddc4000cff824407529016eb7e18c65befb09751c"
+  version "6.5.8"
+  sha256 "06bc354e438b03a6824bb4100032d87509aee09d111b6edb646e96bcfb6e76d8"
 
-  url "https://image.easyeda.com/files/easyeda-mac-darwin-#{version}.zip"
+  url "https://image.easyeda.com/files/easyeda-mac-x64-#{version}.zip"
   name "EasyEDA"
   desc "PCB design tool"
   homepage "https://easyeda.com/"
 
   livecheck do
     url "https://easyeda.com/page/download"
-    regex(%r{href=.*?/easyeda[._-]mac[._-]darwin[._-]v?(\d+(?:\.\d+)+)\.zip}i)
+    regex(%r{href=.*?/easyeda[._-]mac[._-]x64[._-]v?(\d+(?:\.\d+)+)\.zip}i)
   end
 
   app "EasyEDA.app"
