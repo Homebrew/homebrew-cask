@@ -9,7 +9,6 @@ cask "ved" do
 
   livecheck do
     url "https://tolp.nl/ved/files/download/mac/"
-    strategy :page_match
     regex(/href=.*?ved[ ._-]v?(\d+(?:\.\d+)+)[ ._-]mac\.dmg/i)
   end
 
