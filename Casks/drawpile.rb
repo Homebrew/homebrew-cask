@@ -7,11 +7,8 @@ cask "drawpile" do
     sha256 "fe7f93c2f3ec9505b8a4f044093b67bae0c80fc8d6613ba2d0dfad5243cfdf44"
 
     livecheck do
-      url "drawpile.net/download/"
-      regex(/href=.*?drawpile%20(\d+(?:\.\d+)+)\.dmg.*?Drawpile/i)
-      strategy :page_match do |page, regex|
-        page.scan(regex).join
-      end
+      url "https://drawpile.net/files/osx/"
+      regex(/href=.*?Drawpile[ ._-]v?(\d+(?:\.\d+)+)\.dmg/i)
     end
   end
 
