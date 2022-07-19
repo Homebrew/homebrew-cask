@@ -16,10 +16,8 @@ cask "calhash" do
   homepage "https://www.titanium-software.fr/en/calhash.html"
 
   livecheck do
-    url :url
-    strategy :extract_plist do |versions|
-      versions.values.map(&:short_version).compact.first
-    end
+    url :homepage
+    regex(/>\s*CalHash\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s.-]*\s+#{MacOS.version}\s*</i)
   end
 
   depends_on macos: "<= :monterey"
