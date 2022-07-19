@@ -24,6 +24,8 @@ cask "superslicer" do
     end
   end
 
+  depends_on formula: "zstd"
+
   app "SuperSlicer.app"
 
   zap trash: "~/Library/Application Support/SuperSlicer"
