@@ -8,7 +8,7 @@ cask "pablodraw" do
   homepage "https://github.com/cwensley/pablodraw/"
 
   livecheck do
-    url "https://github.com/cwensley/pablodraw/releases/"
+    url :url
     strategy :github_latest
   end
 
