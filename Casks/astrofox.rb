@@ -8,8 +8,8 @@ cask "astrofox" do
   homepage "https://astrofox.io/"
 
   livecheck do
-    url "https://astrofox.io/download"
-    regex(/href=.*?Astrofox[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    url "https://files.astrofox.io/download/latest-mac.yml"
+    strategy :electron_builder
   end
 
   auto_updates true
