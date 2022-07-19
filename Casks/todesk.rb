@@ -2,14 +2,14 @@ cask "todesk" do
   version "4.2.2"
   sha256 "e6ce86082b96cd8abd0a66e2720d296c8f2087f99e8830212e61725d79c4d0b6"
 
-  url "https://dl.todesk.com/macos/ToDesk_#{version}.pkg", verified: "dl.todesk.com/macos/"
+  url "https://dl.todesk.com/macos/ToDesk_#{version}.pkg"
   name "ToDesk"
   desc "Remote control software"
-  homepage "http://www.todesk.net.cn/"
+  homepage "https://www.todesk.com/"
 
   livecheck do
-    url "https://www.todesk.com/js/common.js"
-    regex(/URL\s*=.*?ToDesk[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
+    url "https://www.todesk.com/download"
+    regex(/href=.*?ToDesk[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
   auto_updates true
