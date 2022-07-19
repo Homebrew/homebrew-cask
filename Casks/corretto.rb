@@ -1,12 +1,12 @@
 cask "corretto" do
   arch = Hardware::CPU.intel? ? "x64" : "aarch64"
 
-  version "18.0.1.10.1"
+  version "18.0.2.9.1"
 
   if Hardware::CPU.intel?
-    sha256 "1ca515910ec5a7fbe24b77fcbba5ddbbba6a7c5c0dafbc85f193173bb4199088"
+    sha256 "4534fc0e2b6d1b06cc9a127552b5acd395a68a4df0dc95bf08154313f2508337"
   else
-    sha256 "bfdd9b2c41f51e1f536ac57f9416190a238fe56b5ff5dcbae2f8f5bcf941ddaf"
+    sha256 "8c8aaf1a639f78647eec88699bf4bc9b0aab230407042ee12602b4e4c5c9f04d"
   end
 
   url "https://corretto.aws/downloads/resources/#{version.sub(/-\d+/, "")}/amazon-corretto-#{version}-macosx-#{arch}.pkg"
