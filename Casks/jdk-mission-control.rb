@@ -1,6 +1,6 @@
 cask "jdk-mission-control" do
-  version "8.2.0,06"
-  sha256 "2b60ede6015701794617af06ec1efcd7487a5614e36b6b5cab3e071d882fbaa2"
+  version "8.2.1,03"
+  sha256 "0d320e08f5430ecd4389c66accaac2fdc4a33de236ddb26facf256f1bf93bca8"
 
   url "https://download.java.net/java/GA/jmc#{version.major}/#{version.csv.second}/binaries/jmc-#{version.csv.first}_osx-x64.tar.gz"
   name "JDK Mission Control"
