@@ -1,6 +1,6 @@
 cask "multipass" do
-  version "1.10.0"
-  sha256 "2c5471a387556900249cdfd492ad84b9227977ae294984ea7d26fbef26932027"
+  version "1.10.1"
+  sha256 "fe589d40ee8a4970a7fa1d2c78627c8eb538797401bd47309fa8d3ea5f922f71"
 
   url "https://github.com/canonical/multipass/releases/download/v#{version}/multipass-#{version}+mac-Darwin.pkg"
   name "Multipass"
