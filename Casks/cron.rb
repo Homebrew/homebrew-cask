@@ -20,6 +20,8 @@ cask "cron" do
     strategy :electron_builder
   end
 
+  auto_updates true
+
   app "Cron.app"
 
   zap trash: [
