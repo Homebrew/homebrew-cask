@@ -1,12 +1,12 @@
 cask "uvtools" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "3.5.3"
+  version "3.5.5"
 
   if Hardware::CPU.intel?
-    sha256 "bad7db644f27779680c90cc9f1d40cd3c69d79675450baf0941b546bdc9aebbe"
+    sha256 "ceef9ca70b2e7dfaab97abfbe1f9b28dd8983e160cbb789037e2402180705ee1"
   else
-    sha256 "5d9a0d7a812eb13ab2f4e2b0d47fbd02fb7a271afbbf5768207627f2430b46ff"
+    sha256 "792efa831d8106e80fc440d5c9f21137f5edde456b236ad91fb6eba9af9fdbb7"
   end
 
   url "https://github.com/sn4k3/UVtools/releases/download/v#{version}/UVtools_osx-#{arch}_v#{version}.zip"

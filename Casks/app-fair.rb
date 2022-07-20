@@ -1,12 +1,17 @@
 cask "app-fair" do
-  version "0.8.70"
-  sha256 "96762cc0c781ee7f58a5bfcc39415d998624737444c147a7eb39f723c30a8503"
+  version "0.8.79"
+  sha256 "53c5100a5709447a6a85de6c1ae8f9a7062af82ee0397471e5838f2f51a9bffa"
 
   url "https://github.com/App-Fair/App/releases/download/#{version}/App-Fair-macOS.zip",
       verified: "github.com/App-Fair/App/"
   name "App Fair"
   desc "Catalog of free and commercial native desktop applications"
   homepage "https://appfair.app/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   depends_on macos: ">= :monterey"
 

@@ -23,20 +23,16 @@ cask "google-cloud-sdk" do
   binary "#{token}/bin/gcloud"
   binary "#{token}/bin/git-credential-gcloud.sh", target: "git-credential-gcloud"
   binary "#{token}/bin/gsutil"
+  binary "#{staged_path}/#{token}/completion.bash.inc",
+         target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/#{token}"
+  binary "#{staged_path}/#{token}/completion.zsh.inc",
+         target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_#{token}"
 
   # Not actually necessary, since it would be deleted anyway.
   # It is present to make clear an uninstall was not forgotten and that for this cask it is indeed this simple.
   uninstall delete: "#{staged_path}/#{token}"
 
   caveats <<~EOS
-    To install shell completions, add this to your profile:
-
-      for bash users
-        source "#{staged_path}/#{token}/completion.bash.inc"
-
-      for zsh users
-        source "#{staged_path}/#{token}/completion.zsh.inc"
-
     To add gcloud components to your PATH, add this to your profile:
 
       for bash users

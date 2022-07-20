@@ -1,12 +1,12 @@
 cask "altair-graphql-client" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "4.5.1"
+  version "4.5.3"
 
   if Hardware::CPU.intel?
-    sha256 "8eb0f8abb4627809a5503559198d70af01d80086acbc5be2664ba40e9534c8e3"
+    sha256 "8e4a159426fbcc47b325c7610c452d4bccdd7b50a04420fd270d32786a91f736"
   else
-    sha256 "82929a111e7991ef18467d25dab81c9c65e322e8680a182ab4c45c2ce1a04e4b"
+    sha256 "6ac3a9d36a65cf1c8b335e48c647c6218a37741cd59e920422d274f2e9467795"
   end
 
   url "https://github.com/imolorhe/altair/releases/download/v#{version}/altair_#{version}_#{arch}_mac.zip",

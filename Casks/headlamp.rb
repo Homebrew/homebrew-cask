@@ -1,12 +1,12 @@
 cask "headlamp" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "0.10.1"
+  version "0.11.0"
 
   if Hardware::CPU.intel?
-    sha256 "a5a124a3915e978f29b9c1050e5d25fcf0d24012552d88e753a3d8a5b0d7e558"
+    sha256 "54dbc17a841edb67f4ff6a3c1e89ad3489f8af5aa29af0e9186ae99d6635f7d4"
   else
-    sha256 "ef7a9ef40ea79c1da865d68a39dca08aa89d3800d035efa13b30973842c9188b"
+    sha256 "d86fe4b981208f7e7ef779edf47aa20a33a6ae2c53849076d56a91c19636573e"
   end
 
   url "https://github.com/kinvolk/headlamp/releases/download/v#{version}/Headlamp-#{version}-mac-#{arch}.dmg",

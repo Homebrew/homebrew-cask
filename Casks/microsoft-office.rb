@@ -1,6 +1,6 @@
 cask "microsoft-office" do
-  version "16.62.22061100"
-  sha256 "b3a1798618446b25fdd5f7958213556c1a75369fb5a41f7f27d3c97518f6b7e0"
+  version "16.63.22070801"
+  sha256 "4c0e722e203fb5752888689cc895cf8d94af6ae759488ff69e7b23bd1d9b1abe"
 
   url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Office_#{version}_Installer.pkg",
       verified: "officecdnmac.microsoft.com/"
@@ -22,7 +22,7 @@ cask "microsoft-office" do
     onedrive
   ]
   depends_on cask: "microsoft-auto-update"
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :catalina"
 
   pkg "Microsoft_Office_#{version}_Installer.pkg",
       choices: [

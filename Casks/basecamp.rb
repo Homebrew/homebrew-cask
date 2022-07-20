@@ -1,6 +1,6 @@
 cask "basecamp" do
-  version "3,2.3.4"
-  sha256 "8c05e20ffa6c7cee1e7109916a089f6561f4cfc9b2457e5d0c95b35bd72a71e0"
+  version "3,2.3.5"
+  sha256 "7553020b9406cc59fa0d76b009a1721983e4c0c305f402c0b865d19a772d87b8"
 
   url "https://bc#{version.major}-desktop.s3.amazonaws.com/mac/basecamp#{version.major}-#{version.csv.second}.zip",
       verified: "bc3-desktop.s3.amazonaws.com/"

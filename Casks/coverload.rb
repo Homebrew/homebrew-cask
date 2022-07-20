@@ -1,6 +1,6 @@
 cask "coverload" do
-  version "2.2.0-757"
-  sha256 "ff8656a105aa315df33a0e9bfc38f1f284f26da773302dfbdd194f6b493cc73f"
+  version "2.2.1-763"
+  sha256 "a8f2328b0ff8b17fbd2e91879b512f49e9cfd7ceaa9c3fbf3c9fb94ac2d7ee9d"
 
   url "https://s3-us-west-2.amazonaws.com/coverloadapp.com/Uploads/CoverLoad-#{version}.zip",
       verified: "s3-us-west-2.amazonaws.com/coverloadapp.com/Uploads/"

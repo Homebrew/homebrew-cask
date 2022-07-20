@@ -1,6 +1,6 @@
 cask "font-smoothing-adjuster" do
-  version "1.3.1"
-  sha256 "87d501fc56383417ec1ec7862e714fdbc5c04173b7e48c4246b54b98781f6ec4"
+  version "2.0.0"
+  sha256 "187401950b827c58262a9bb86878c5dd5820550c00ca414f971ce82837d7419f"
 
   url "https://font-smoothing-adjuster-updates.s3.eu-west-2.amazonaws.com/Font+Smoothing+Adjuster+#{version}.dmg",
       verified: "font-smoothing-adjuster-updates.s3.eu-west-2.amazonaws.com"

@@ -2,9 +2,12 @@ cask "calibre" do
   if MacOS.version <= :high_sierra
     version "3.48.0"
     sha256 "68829cd902b8e0b2b7d5cf7be132df37bcc274a1e5720b4605d2dd95f3a29168"
-  else
+  elsif MacOS.version <= :mojave
     version "5.44.0"
     sha256 "89d7772ba1b95d219b34e285353340a174a013e06b4d8ad370433b3b98c94ad4"
+  else
+    version "6.1.0"
+    sha256 "5b9cb00a46b48cc03b5c843b5a3da9298f231f6fdb76eb418f038ce53490e99f"
   end
 
   url "https://download.calibre-ebook.com/#{version}/calibre-#{version}.dmg"
