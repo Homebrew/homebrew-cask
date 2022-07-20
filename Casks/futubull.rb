@@ -10,7 +10,7 @@ cask "futubull" do
 
   livecheck do
     url "https://www.futunn.com/download/history?client=11"
-    regex(/FTNNForMac[._-]v?(\d+(?:\.\d+)+)[._-]Website\.dmg/i)
+    regex(/FTNN[._-]v?(\d+(?:\.\d+)+)[._-]Website\.dmg/i)
   end
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
