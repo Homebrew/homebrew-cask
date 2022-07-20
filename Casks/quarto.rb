@@ -8,6 +8,11 @@ cask "quarto" do
   desc "Scientific and technical publishing system built on Pandoc"
   homepage "https://www.quarto.org/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :el_capitan"
 
   pkg "quarto-#{version}-macos.pkg"
