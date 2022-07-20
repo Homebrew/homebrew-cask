@@ -4,6 +4,7 @@ cask "combine-pdfs" do
 
   url "https://www.monkeybreadsoftware.de/Software/CombinePDFs/CombinePDFs#{version.no_dots}.zip"
   name "Combine PDFs"
+  desc "PDF file editor"
   homepage "https://www.monkeybreadsoftware.de/Software/CombinePDFs.shtml"
 
   livecheck do
