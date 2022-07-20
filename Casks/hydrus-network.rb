@@ -1,6 +1,6 @@
 cask "hydrus-network" do
-  version "491"
-  sha256 "2b2940518d07f5f72b173ac0a469dccee79769066c97dd226365c1350908b863"
+  version "492"
+  sha256 "b37289d3278a01405cff1feeee9de3b58d9f3cc880676b30f2b9ca280469d691"
 
   url "https://github.com/hydrusnetwork/hydrus/releases/download/v#{version}/Hydrus.Network.#{version}.-.macOS.-.App.dmg",
       verified: "github.com/hydrusnetwork/hydrus/"
