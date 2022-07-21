@@ -1,4 +1,4 @@
-cask "v2ray-desktop" do
+cask "v2ray-unofficial" do
   version "2.4.0"
   sha256 "717e9df880ef74e4f760c75e8983cb63112f1f9a301c4dc61c16217742f1dd3f"
 
