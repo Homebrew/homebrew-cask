@@ -1,6 +1,6 @@
 cask "obsidian" do
-  version "0.15.6"
-  sha256 "81a14d1dbcae8420b280db81413c66268757fb8b9f6eeaa39a9fcd648e6e1f88"
+  version "0.15.8"
+  sha256 "1ade99d2e85828475a88268a38e6b0eda372d5106e316439bf9794e9c76b9ac2"
 
   url "https://github.com/obsidianmd/obsidian-releases/releases/download/v#{version}/Obsidian-#{version}-universal.dmg",
       verified: "github.com/obsidianmd/"
