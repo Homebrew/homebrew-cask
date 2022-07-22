@@ -1,6 +1,6 @@
 cask "jetbrains-space" do
-  version "2022.1.1"
-  sha256 "09496ccc18a5f4e384ff59c992dc9b13d056384904182469a5369a3d0e3716fa"
+  version "2022.1.2"
+  sha256 "29be16125e54481dc65686c09d6660ea76c61c271063452f817128577acef22a"
 
   url "https://download-cdn.jetbrains.com/space/jetbrains-space-#{version}.zip"
   name "JetBrains Space"
