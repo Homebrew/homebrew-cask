@@ -14,7 +14,7 @@ cask "todesk" do
 
   auto_updates true
 
-  installer manual: "ToDesk_#{version}.pkg"
+  pkg "ToDesk_#{version}.pkg"
 
   uninstall delete:    "/Applications/ToDesk.app",
             launchctl: [
@@ -33,3 +33,4 @@ cask "todesk" do
     "~/Library/Preferences/com.youqu.todesk.mac.plist",
     "~/Library/ToDesk",
   ]
+end
