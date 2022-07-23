@@ -1,6 +1,6 @@
 cask "nova" do
   version "9.4"
-  sha256 :no-check
+  sha256 :no_check
 
   url "https://download.panic.com/nova/Nova-Latest.zip",
       verified: "download.panic.com/nova/"
