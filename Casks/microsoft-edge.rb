@@ -35,11 +35,23 @@ cask "microsoft-edge" do
   uninstall pkgutil: "com.microsoft.edgemac"
 
   zap trash: [
+        "~/Library/Application Scripts/com.microsoft.edgemac.wdgExtension",
         "~/Library/Application Support/Microsoft Edge",
+        "~/Library/Application Support/Microsoft Edge Beta",
+        "~/Library/Application Support/Microsoft Edge Canary",
+        "~/Library/Application Support/Microsoft Edge Dev",
         "~/Library/Application Support/Microsoft/EdgeUpdater",
+        "~/Library/Caches/com.microsoft.edgemac",
+        "~/Library/Caches/com.microsoft.EdgeUpdater",
         "~/Library/Caches/Microsoft Edge",
+        "~/Library/Containers/com.microsoft.edgemac.wdgExtension",
+        "~/Library/HTTPStorages/com.microsoft.edgemac",
+        "~/Library/HTTPStorages/com.microsoft.edgemac.binarycookies",
+        "~/Library/HTTPStorages/com.microsoft.EdgeUpdater",
+        "~/Library/Microsoft/EdgeUpdater",
         "~/Library/Preferences/com.microsoft.edgemac.plist",
         "~/Library/Saved Application State/com.microsoft.edgemac.savedState",
+        "~/Library/WebKit/com.microsoft.edgemac",
       ],
       rmdir: "/Library/Application Support/Microsoft"
 end
