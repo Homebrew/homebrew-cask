@@ -5,10 +5,10 @@ cask "vmware-fusion" do
 
     url "https://download3.vmware.com/software/FUS-#{version.csv.first.no_dots}/VMware-Fusion-#{version.csv.first}-#{version.csv.second}_x86.dmg"
   else
-    version "12.1.2-17964953"
+    version "12.1.2,17964953"
     sha256 "873049d4080168b56085c5b67be1d4eeb14debc0e6cf176dbd52c78518d0b883"
 
-    url "https://download3.vmware.com/software/fusion/file/VMware-Fusion-#{version}.dmg"
+    url "https://download3.vmware.com/software/fusion/file/VMware-Fusion-#{version.csv.first}-#{version.csv.second}.dmg"
   end
 
   name "VMware Fusion"
@@ -18,7 +18,11 @@ cask "vmware-fusion" do
   livecheck do
     url "https://softwareupdate.vmware.com/cds/vmw-desktop/fusion.xml"
     strategy :page_match do |page|
-      scan = page.scan(%r{fusion/(\d+(?:\.\d+)+)/(\d+)/x86}i)
+      scan = if MacOS.version >= :big_sur
+        page.scan(%r{fusion/(\d+(?:\.\d+)+)/(\d+)/x86}i)
+      else
+        page.scan(%r{fusion/(\d+(?:\.\d+)+)/(\d+)/core}i)
+      end
       scan.map { |v| "#{v[0]},#{v[1]}" }
     end
   end
