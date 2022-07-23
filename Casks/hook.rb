@@ -26,8 +26,11 @@ cask "hook" do
             quit:      "com.cogsciapps.hook"
 
   zap trash: [
+    "~/Library/Application Support/com.cogsciapps.hook",
     "~/Library/Caches/com.cogsciapps.hook",
+    "~/Library/HTTPStorages/com.cogsciapps.hook",
     "~/Library/Logs/com.cogsciapps.hook",
     "~/Library/Preferences/com.cogsciapps.hook.plist",
+    "~/Library/WebKit/com.cogsciapps.hook",
   ]
 end
