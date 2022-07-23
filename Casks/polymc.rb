@@ -1,6 +1,6 @@
 cask "polymc" do
-  version "1.3.2"
-  sha256 "acb792c1dfd06e641dc1b1dc10367e7c1da59bf376c1090740db71e146f1de62"
+  version "1.4.0"
+  sha256 "6977e7c5a49cdf30b7fd5fd9b1de4297680d944af27489d67a045287f4f20125"
 
   url "https://github.com/PolyMC/PolyMC/releases/download/#{version}/PolyMC-macOS-#{version}.tar.gz",
       verified: "github.com/PolyMC/PolyMC/"
