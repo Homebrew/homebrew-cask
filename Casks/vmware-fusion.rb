@@ -1,8 +1,16 @@
 cask "vmware-fusion" do
-  version "12.2.4,20071091"
-  sha256 "0b0516f4d5f70e759ae08a40d2e14f487c0b66d84ee467e38972ad013e1f6c7f"
+  if MacOS.version >= :big_sur
+    version "12.2.4,20071091"
+    sha256 "0b0516f4d5f70e759ae08a40d2e14f487c0b66d84ee467e38972ad013e1f6c7f"
 
-  url "https://download3.vmware.com/software/FUS-#{version.csv.first.no_dots}/VMware-Fusion-#{version.csv.first}-#{version.csv.second}_x86.dmg"
+    url "https://download3.vmware.com/software/FUS-#{version.csv.first.no_dots}/VMware-Fusion-#{version.csv.first}-#{version.csv.second}_x86.dmg"
+  else
+    version "12.1.2-17964953"
+    sha256 "873049d4080168b56085c5b67be1d4eeb14debc0e6cf176dbd52c78518d0b883"
+
+    url "https://download3.vmware.com/software/fusion/file/VMware-Fusion-#{version}.dmg"
+  end
+
   name "VMware Fusion"
   desc "Create, manage, and run virtual machines"
   homepage "https://www.vmware.com/products/fusion.html"
@@ -17,7 +25,7 @@ cask "vmware-fusion" do
 
   auto_updates true
   conflicts_with cask: "vmware-fusion-tech-preview"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :catalina"
 
   app "VMware Fusion.app"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/VMware OVF Tool/ovftool"
