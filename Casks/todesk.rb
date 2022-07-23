@@ -14,7 +14,7 @@ cask "todesk" do
 
   auto_updates true
 
-  pkg "ToDesk_#{version}.pkg"
+  installer manual: "ToDesk_#{version}.pkg"
 
   uninstall delete:    "/Applications/ToDesk.app",
             launchctl: [
