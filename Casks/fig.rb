@@ -43,6 +43,7 @@ cask "fig" do
     "~/Library/Application Support/fig",
     "~/Library/Caches/com.mschrage.fig",
     "~/Library/Caches/fig",
+    "~/Library/HTTPStorages/com.mschrage.fig",
     "~/Library/Preferences/com.mschrage.fig.*",
     "~/Library/WebKit/com.mschrage.fig",
   ]
