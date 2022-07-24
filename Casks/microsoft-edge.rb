@@ -37,9 +37,6 @@ cask "microsoft-edge" do
   zap trash: [
         "~/Library/Application Scripts/com.microsoft.edgemac.wdgExtension",
         "~/Library/Application Support/Microsoft Edge",
-        "~/Library/Application Support/Microsoft Edge Beta",
-        "~/Library/Application Support/Microsoft Edge Canary",
-        "~/Library/Application Support/Microsoft Edge Dev",
         "~/Library/Application Support/Microsoft/EdgeUpdater",
         "~/Library/Caches/com.microsoft.edgemac",
         "~/Library/Caches/com.microsoft.EdgeUpdater",
