@@ -18,10 +18,10 @@ cask "ccprofiler" do
   pkg "ccProfiler.pkg"
 
   uninstall pkgutil: [
-              "com.xrite.xritedeviceservices.installer.pkg",
-              "com.calibrite.ccprofiler.pkg"
-            ]
-            
+    "com.xrite.xritedeviceservices.installer.pkg",
+    "com.calibrite.ccprofiler.pkg",
+  ]
+
   caveats do
     reboot
   end
