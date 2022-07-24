@@ -1,8 +1,8 @@
 cask "nova" do
   version "9.4"
-  sha256 :no_check
+  sha256 "249a3fe550d10598309a922c728e6957a2c32de6337fb57bec1401fde6407640"
 
-  url "https://download.panic.com/nova/Nova-Latest.zip",
+  url "https://download.panic.com/nova/Nova-#{version}.zip",
       verified: "download.panic.com/nova/"
   name "Panic Nova"
   desc "Native code editor"
