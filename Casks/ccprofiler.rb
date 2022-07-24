@@ -10,7 +10,7 @@ cask "ccprofiler" do
 
   livecheck do
     url "https://calibrite.com/us/software-downloads/"
-    regex(%r{\d\.\d\.\d(?=/mac/ccProfiler)}i)
+    regex(%r{href=.*?v?(\d+(?:\.\d+)+)/mac/ccProfiler\.zip}i)
   end
 
   depends_on macos: ">= :catalina"
