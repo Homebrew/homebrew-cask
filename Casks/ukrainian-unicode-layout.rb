@@ -1,6 +1,6 @@
 cask "ukrainian-unicode-layout" do
-  version "1.2.0"
-  sha256 "224f7ce62722df4817d994a706179695589f0679164f0c48af08e2a518ac6fc6"
+  version "1.2.2"
+  sha256 "f5159ebc4f8aad0efd454d9080f7cd705a2132d57f64c10abb3d5e50ba772ab5"
 
   url "https://github.com/korzhyk/macOS-Ukrainian-Unicode-Layout/archive/#{version}.tar.gz"
   name "Ukrainian Unicode Layout"
