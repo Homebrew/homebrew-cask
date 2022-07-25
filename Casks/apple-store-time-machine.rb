@@ -1,4 +1,4 @@
-cask "appple-store-time-machine" do
+cask "apple-store-time-machine" do
   version "1.0"
   sha256 ""
 
