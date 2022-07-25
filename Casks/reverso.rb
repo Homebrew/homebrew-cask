@@ -4,7 +4,7 @@ cask "reverso" do
 
   url "https://cdn.reverso.net/download/reverso/desktop/macos/distrib/Reverso_#{version.csv.first}.#{version.csv.second}.zip"
   name "Reverso"
-  desc "Translate text from any app or website in just one click"
+  desc "Text translation application"
   homepage "https://context.reverso.net/translation/windows-mac-app"
 
   livecheck do
