@@ -8,4 +8,10 @@ cask "apple-store-time-machine" do
   homepage "https://departmentmap.store/timemachine/"
 
   app "Shop Different.app"
+
+  zap trash: [
+    "~/Library/Logs/Michael Steeber/Shop Different",
+    "~/Library/Preferences/com.MichaelSteeber.ShopDifferent.plist",
+    "~/Library/Saved Application State/com.MichaelSteeber.ShopDifferent.savedState",
+  ]
 end
