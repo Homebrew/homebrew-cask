@@ -1,6 +1,6 @@
 cask "polypad" do
   version "1.3.0"
-  sha256 :no_check 
+  sha256 :no_check
 
   url "https://get.polypad.io/download/mac"
   name "Polypad"
@@ -14,4 +14,3 @@ cask "polypad" do
 
   app "Polypad.app"
 end
-
