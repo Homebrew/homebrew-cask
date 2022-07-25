@@ -1,6 +1,6 @@
 cask "netxms-console" do
-  version "4.1.404"
-  sha256 "f633d7f322d3fc4da9c5b2a3c8843fa19a2117162ebae5ae08c6e12513da36e0"
+  version "4.1.420"
+  sha256 "6e7ac82eb699588cbd2e9f7d3cea7e442a4a991a283f142fe76737a9313637e8"
 
   url "https://netxms.org/download/releases/#{version.major_minor}/nxmc-#{version}.dmg"
   name "NetXMS Management Console"
