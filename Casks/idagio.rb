@@ -8,7 +8,7 @@ cask "idagio" do
   homepage "https://www.idagio.com/"
 
   livecheck do
-    url "https://www.idagio.com/download"
+    url "https://app.idagio.com/download"
     regex(/href=.*?IDAGIO[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
