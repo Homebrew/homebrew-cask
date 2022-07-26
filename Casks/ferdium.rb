@@ -1,12 +1,12 @@
 cask "ferdium" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "6.0.1-nightly.1"
+  version "6.0.0"
 
   if Hardware::CPU.intel?
-    sha256 "dfd2cf9825ff98843a9a01d673a24315c95efa17e08a8d4f23b647fbae079ec7"
+    sha256 "131c29c39275143d294b022581556cf9ac2ed458efc13fea06f677205d854da1"
   else
-    sha256 "7b816c3c6bda3fc38510375347919a0ed22f79f0821f93f7f938a5c64bc43dd5"
+    sha256 "c9b4a05a0654e57065df2b2d56738178d83345f4de157ef72daa950b48e51188"
   end
 
   url "https://github.com/ferdium/ferdium-app/releases/download/v#{version}/Ferdium-mac-#{version}-#{arch}.dmg",
@@ -14,6 +14,11 @@ cask "ferdium" do
   name "Ferdium"
   desc "Multi-platform multi-messaging app"
   homepage "https://ferdium.org/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
 
