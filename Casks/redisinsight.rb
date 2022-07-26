@@ -1,7 +1,7 @@
 cask "redisinsight" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "2.4.0"
+  version "2.6.0"
   sha256 :no_check
 
   url "https://download.redisinsight.redis.com/latest/RedisInsight-v#{version.major}-mac-#{arch}.dmg"
