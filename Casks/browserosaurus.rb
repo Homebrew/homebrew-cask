@@ -18,6 +18,8 @@ cask "browserosaurus" do
 
   app "Browserosaurus.app"
 
+  uninstall quit: "com.browserosaurus"
+
   zap trash: [
     "~/Library/Application Support/Browserosaurus",
     "~/Library/Preferences/com.browserosaurus.plist",
