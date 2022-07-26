@@ -13,7 +13,7 @@ cask "polypad" do
     strategy :electron_builder
   end
 
-  zap trash: "~/Library/Application Support/Polypad"
-
   app "Polypad.app"
+
+  zap trash: "~/Library/Application Support/Polypad"
 end
