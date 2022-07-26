@@ -2,7 +2,8 @@ cask "ipvanish-vpn" do
   version "3.3.0,67479"
   sha256 :no_check
 
-  url "https://s3.amazonaws.com/ipvanish-apps/software/osx/IPVanish.dmg"
+  url "https://s3.amazonaws.com/ipvanish-apps/software/osx/IPVanish.dmg",
+      verified: "s3.amazonaws.com/ipvanish-apps/software/osx/"
   name "IPVanish"
   desc "VPN client"
   homepage "https://www.ipvanish.com/"
