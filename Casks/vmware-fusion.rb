@@ -23,7 +23,7 @@ cask "vmware-fusion" do
       else
         page.scan(%r{fusion/(\d+(?:\.\d+)+)/(\d+)/core}i)
       end
-      scan.map { |v| "#{v[0]},#{v[1]}" }
+      scan.map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 
