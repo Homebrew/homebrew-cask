@@ -5,7 +5,7 @@ cask "ccprofiler" do
   url "https://downloads.xrite.com/Downloads/Software/ccProfiler/v#{version}/mac/ccProfiler.zip",
       verified: "xrite.com"
   name "ccProfiler"
-  desc "Monitor colibration for Calibrite ColorChecker Display Pro & Plus"
+  desc "Monitor calibration for Calibrite ColorChecker Display Pro & Plus"
   homepage "https://calibrite.com/"
 
   livecheck do
