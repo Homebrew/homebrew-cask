@@ -1,15 +1,15 @@
 cask "ipvanish-vpn" do
   version "3.3.0,67479"
-  sha256 "d738cc5db300b512c2329d349e5c4df7dfaba78935e09b89a90f98974ddada5f"
+  sha256 :no_check
 
-  url "https://www.ipvanish.com/software/osx/IPVanish_v#{version.csv.first}_b67497.zip"
+  url "https://s3.amazonaws.com/ipvanish-apps/software/osx/IPVanish.dmg"
   name "IPVanish"
   desc "VPN client"
   homepage "https://www.ipvanish.com/"
 
   livecheck do
-    url "https://www.ipvanish.com/software/osx/updates.xml"
-    strategy :sparkle
+    url :url
+    strategy :extract_plist
   end
 
   depends_on macos: ">= :high_sierra"
