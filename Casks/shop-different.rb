@@ -1,4 +1,4 @@
-cask "apple-store-time-machine" do
+cask "shop-different" do
   version "1.0"
   sha256 :no_check
 
