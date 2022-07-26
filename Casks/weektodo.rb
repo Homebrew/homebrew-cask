@@ -8,6 +8,11 @@ cask "weektodo" do
   desc "Weekly planner app focused on privacy"
   homepage "https://weektodo.me/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "WeekToDo.app"
 
   zap trash: [
