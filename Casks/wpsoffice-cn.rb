@@ -1,12 +1,12 @@
 cask "wpsoffice-cn" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "4.5.0,7402"
+  version "4.5.0,7405"
 
   if Hardware::CPU.intel?
-    sha256 "d190a1fd4c4215d476615a38e72f2d4160ba3f21481dc5fb72419cb6858ab29c"
+    sha256 "5fb9579b32f8d8654f0f964fc7d810d768aa6910e37175b1a0815a8f04fc717c"
   else
-    sha256 "a59e051085059df239b16350a08cfba215ef536ff6364de7b55f90735951ca20"
+    sha256 "fb948f187d9cf5294cbe9672685b796885508d19979440078657a3e28ebad3f5"
   end
 
   url "https://package.mac.wpscdn.cn/mac_wps_pkg/#{version.csv.first}/WPS_Office_#{version.csv.first}(#{version.csv.second})_#{arch}.dmg",
