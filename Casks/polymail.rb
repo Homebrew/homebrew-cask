@@ -1,6 +1,6 @@
 cask "polymail" do
   arch = Hardware::CPU.intel? ? "" : "-arm64"
-  
+
   version "2.2.6"
 
   if Hardware::CPU.intel?
@@ -11,6 +11,7 @@ cask "polymail" do
 
   url "https://sparkle-updater.polymail.io/macos#{arch}/builds/Polymail-v#{version}.zip"
   name "Polymail"
+  desc "Email productivity application"
   homepage "https://polymail.io/"
 
   livecheck do
