@@ -15,7 +15,7 @@ cask "polymail" do
   homepage "https://polymail.io/"
 
   livecheck do
-    url "https://sparkle-updater.polymail.io/osx#{arch}/Polymail-Latest.zip"
+    url "https://sparkle-updater.polymail.io/macos#{arch}/Polymail-Latest.zip"
     strategy :header_match
   end
 
