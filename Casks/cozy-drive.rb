@@ -1,6 +1,6 @@
 cask "cozy-drive" do
-  version "3.35.0"
-  sha256 "84b2366c637617fbbe03479bbe59104dc3d853508bc578a1d9e5e4e3d1457b70"
+  version "3.36.0"
+  sha256 "feabd1880bb9dc9e1d9aa551e294ff6516ce42a58601327cf429cc3728e70c04"
 
   url "https://github.com/cozy-labs/cozy-desktop/releases/download/v#{version}/Cozy-Drive-#{version}.dmg",
       verified: "github.com/cozy-labs/cozy-desktop"
