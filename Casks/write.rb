@@ -18,5 +18,8 @@ cask "write" do
 
   app "Write.app"
 
-  zap trash: "~/Library/Saved Application State/com.styluslabs.write3mac.savedState"
+  zap trash: [
+    "~/.config/styluslabs",
+    "~/Library/Saved Application State/com.styluslabs.write3mac.savedState",
+  ]
 end
