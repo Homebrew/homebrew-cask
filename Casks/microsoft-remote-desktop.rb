@@ -29,6 +29,7 @@ cask "microsoft-remote-desktop" do
             quit:      [
               "com.microsoft.autoupdate2",
               "com.microsoft.autoupdate.fba",
+              "com.microsoft.errorreporting",
             ]
 
   zap trash: [
