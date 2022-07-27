@@ -6,7 +6,7 @@ cask "itau" do
   if Hardware::CPU.intel?
     version "2.2.2.10"
   else
-    version "2.3.2.9"
+    version "2.3.2.10"
   end
 
   url "https://guardiao.itau.com.br/UpdateServer/aplicativoitau#{arch}.dmg"
