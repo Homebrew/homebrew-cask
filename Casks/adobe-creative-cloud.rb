@@ -1,12 +1,12 @@
 cask "adobe-creative-cloud" do
   arch = Hardware::CPU.intel? ? "osx10" : "macarm64"
 
-  version "5.7.0.1307"
+  version "5.8.0.592"
 
   if Hardware::CPU.intel?
-    sha256 "f39b1f6d639437ed326d6fc233332b53e5bd18b75ed2659cbf7228520fa21d45"
+    sha256 "2935c858424b2dc9e02380651c4a16c14f882002fd3a370fc30e63feac0573da"
   else
-    sha256 "d0555814838ded447232c0196654b12497ad7d3ae80b17d7f042a8fd5a75a9a0"
+    sha256 "8ee0f88bd18067286a42daa68b5e9d098718cb7c55cdcc35c9f7400af7faed07"
   end
 
   url "https://ccmdl.adobe.com/AdobeProducts/KCCC/CCD/#{version.major_minor_patch.dots_to_underscores}/#{arch}/ACCCx#{version.dots_to_underscores}.dmg"
