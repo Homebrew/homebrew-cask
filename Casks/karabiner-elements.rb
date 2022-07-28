@@ -1,12 +1,20 @@
 cask "karabiner-elements" do
-  if MacOS.version <= :el_capitan
+  version "14.6.0"
+  sha256 "37e03ff5fc848fb47303f43453615f3388848d4ae935a6868430a73c7f8d9346"
+
+  url "https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg",
+      verified: "github.com/pqrs-org/Karabiner-Elements/"
+
+  on_el_capitan :or_older do
     version "11.6.0"
     sha256 "c1b06252ecc42cdd8051eb3d606050ee47b04532629293245ffdfa01bbc2430d"
 
     url "https://pqrs.org/osx/karabiner/files/Karabiner-Elements-#{version}.dmg"
 
     pkg "Karabiner-Elements.sparkle_guided.pkg"
-  elsif MacOS.version <= :mojave
+  end
+
+  on_mojave :or_older do
     version "12.10.0"
     sha256 "53252f7d07e44f04972afea2a16ac595552c28715aa65ff4a481a1c18c8be2f4"
 
@@ -14,7 +22,9 @@ cask "karabiner-elements" do
         verified: "github.com/pqrs-org/Karabiner-Elements/"
 
     pkg "Karabiner-Elements.sparkle_guided.pkg"
-  elsif MacOS.version <= :catalina
+  end
+
+  on_catalina :or_older do
     version "13.7.0"
     sha256 "9ac5e53a71f3a00d7bdb2f5f5f001f70b6b8b7b2680e10a929e0e4c488c8734b"
 
@@ -26,29 +36,23 @@ cask "karabiner-elements" do
     end
 
     pkg "Karabiner-Elements.pkg"
-  else
-    version "14.6.0"
-    sha256 "37e03ff5fc848fb47303f43453615f3388848d4ae935a6868430a73c7f8d9346"
-
-    url "https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg",
-        verified: "github.com/pqrs-org/Karabiner-Elements/"
-
-    livecheck do
-      url "https://pqrs.org/osx/karabiner/files/karabiner-elements-appcast.xml"
-      strategy :sparkle
-    end
-
-    pkg "Karabiner-Elements.pkg"
   end
 
   name "Karabiner Elements"
   desc "Keyboard customizer"
   homepage "https://pqrs.org/osx/karabiner/"
 
+  livecheck do
+    url "https://pqrs.org/osx/karabiner/files/karabiner-elements-appcast.xml"
+    strategy :sparkle
+  end
+
   auto_updates true
   depends_on macos: ">= :el_capitan"
 
-  if MacOS.version <= :mojave
+  pkg "Karabiner-Elements.pkg"
+
+  on_mojave :or_older do
     uninstall signal:    [
                 ["TERM", "org.pqrs.Karabiner-Menu"],
                 ["TERM", "org.pqrs.Karabiner-NotificationWindow"],
@@ -66,7 +70,9 @@ cask "karabiner-elements" do
                 sudo:       true,
               },
               delete:    "/Library/Application Support/org.pqrs/"
-  else
+  end
+
+  on_catalina :or_newer do
     uninstall early_script: {
                 executable: "/Library/Application Support/org.pqrs/Karabiner-DriverKit-VirtualHIDDevice/scripts/uninstall/remove_files.sh",
                 sudo:       true,
