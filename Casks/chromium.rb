@@ -2,7 +2,11 @@ cask "chromium" do
   version :latest
   sha256 :no_check
 
-  arch = Hardware::CPU.intel? ? "Mac" : "Mac_Arm"
+  arch = "Mac_Arm"
+
+  on_intel do
+    arch = "Mac"
+  end
 
   url "https://download-chromium.appspot.com/dl/#{arch}?type=snapshots",
       verified: "download-chromium.appspot.com/dl/"
