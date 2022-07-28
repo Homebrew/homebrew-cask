@@ -4,6 +4,7 @@ cask "tlv" do
 
   url "https://github.com/tableau/tableau-log-viewer/releases/download/v#{version}/tlv-osx-#{version}.dmg"
   name "Tableau Log Viewer"
+  desc "Tool for working with Tableau logs"
   homepage "https://github.com/tableau/tableau-log-viewer"
 
   app "tlv.app"
