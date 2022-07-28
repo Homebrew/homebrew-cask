@@ -1,19 +1,21 @@
 cask "sourcetree" do
-  if MacOS.version <= :sierra
+  version "4.1.9,245"
+  sha256 "54a5848acd01e84949e1ba61f8ca90d661ad11b65e504c615bd2ce5999501ffc"
+
+  url "https://product-downloads.atlassian.com/software/sourcetree/ga/Sourcetree_#{version.csv.first}_#{version.csv.second}.zip",
+      verified: "atlassian.com/software/sourcetree/"
+
+  on_sierra :or_older do
     version "2.7.6a"
     sha256 "d60614e9ab603e0ed158b6473c36e7944b2908d9943e332c505eba03dc1d829e"
 
     url "https://downloads.atlassian.com/software/sourcetree/Sourcetree_#{version}.zip",
         verified: "atlassian.com/software/sourcetree/"
-  elsif MacOS.version <= :high_sierra
+  end
+
+  on_high_sierra :or_older do
     version "3.2.1,225"
     sha256 "4bd82affa3402814c3d07ff613fbc8f45da8b0cda294d498ffbb0667bf729c9f"
-
-    url "https://product-downloads.atlassian.com/software/sourcetree/ga/Sourcetree_#{version.csv.first}_#{version.csv.second}.zip",
-        verified: "atlassian.com/software/sourcetree/"
-  else
-    version "4.1.9,245"
-    sha256 "54a5848acd01e84949e1ba61f8ca90d661ad11b65e504c615bd2ce5999501ffc"
 
     url "https://product-downloads.atlassian.com/software/sourcetree/ga/Sourcetree_#{version.csv.first}_#{version.csv.second}.zip",
         verified: "atlassian.com/software/sourcetree/"
