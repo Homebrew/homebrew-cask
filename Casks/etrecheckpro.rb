@@ -12,6 +12,8 @@ cask "etrecheckpro" do
     regex(/EtreCheckPro\sversion\s(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "EtreCheckPro.app"
 
   zap trash: [
