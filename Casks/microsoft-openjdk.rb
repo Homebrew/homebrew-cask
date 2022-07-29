@@ -1,12 +1,12 @@
 cask "microsoft-openjdk" do
   arch = Hardware::CPU.intel? ? "x64" : "aarch64"
 
-  version "17.0.3"
+  version "17.0.4"
 
   if Hardware::CPU.intel?
-    sha256 "c88f2a01e88901538991c4198dbe4661a63e278e2a2a0df180e70737b2d14c60"
+    sha256 "aa526efd06e2683861754538a3d48accbb2aba2eb49be277fb030aa9e321273a"
   else
-    sha256 "b202672c16acbcd1063aadee86f7316f7880f84e9625ad16d4594908ce59fa39"
+    sha256 "24546bbd3ae9b74009da4961b655a5511ac2ea693d4f68d72f6036da1036fe5f"
   end
 
   url "https://aka.ms/download-jdk/microsoft-jdk-#{version}-macos-#{arch}.pkg",
