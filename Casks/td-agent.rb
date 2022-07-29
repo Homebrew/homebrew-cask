@@ -1,6 +1,6 @@
 cask "td-agent" do
-  version "4.3.2"
-  sha256 "dd6c0d2bdef0056a30d6422b843ed207465b3b87772e16c1f604dde5800db00b"
+  version "4.4.0"
+  sha256 "de943a10e3729304c3037fe56ab36fe5654bf7e5096c1b38d74fea86b94e4c47"
 
   url "https://s3.amazonaws.com/packages.treasuredata.com/#{version.major}/macosx/td-agent-#{version}.dmg",
       verified: "s3.amazonaws.com/packages.treasuredata.com/"
