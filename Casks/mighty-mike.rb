@@ -6,13 +6,12 @@ cask "mightymike" do
       verified: "github.com/jorio/MightyMike/"
   name "Mighty Mike"
   desc "Top-down action game from Pangea Software (a.k.a. Power Pete)"
-  homepage "https://pangeasoft.net/mightymike/"
+  homepage "https://jorio.itch.io/mightymike"
 
   app "Mighty Mike.app"
   artifact "Documentation", target: "#{Dir.home}/Library/Application Support/MightyMike"
 
   zap trash: [
-    "~/Library/Application Support/MightyMike",
     "~/Library/Preferences/MightyMike",
     "~/Library/Saved Application State/io.jor.mightymike.savedState",
   ]
