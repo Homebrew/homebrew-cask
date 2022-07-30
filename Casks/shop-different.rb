@@ -7,6 +7,11 @@ cask "shop-different" do
   desc "3D reconstruction of Apple Retail Stores on their opening days"
   homepage "https://departmentmap.store/timemachine/"
 
+  livecheck do
+    url "https://departmentmap.store/timemachine/"
+    regex(%r{href=.*?/Shop\+Different\+(\d+(?:\.\d+)+)\.dmg}i)
+  end
+
   app "Shop Different.app"
 
   zap trash: [
