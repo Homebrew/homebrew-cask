@@ -15,8 +15,8 @@ cask "idafree" do
   homepage "https://hex-rays.com/ida-free/"
 
   livecheck do
-    url "https://hex-rays.com/download-center/"
-    regex(/>\s*IDA\s*v?(\d+(?:\.\d+)+)\s+Free\s*</i)
+    url "https://hex-rays.com/ida-free/"
+    regex(/>.*?IDA\s*v?(\d+(?:\.\d+)+).*?</i)
   end
 
   installer script: {
