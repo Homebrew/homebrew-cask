@@ -1,12 +1,12 @@
 cask "gather" do
   arch = Hardware::CPU.intel? ? "" : "-arm64"
 
-  version "0.3.2"
+  version "0.3.3"
 
   if Hardware::CPU.intel?
-    sha256 "40fb91d142429b651b7d2c4b77d3628603bd3953bacfbe35478025f4da3ed123"
+    sha256 "c82591d95e3f58df820d30104ca0a386a8c481b4da3af34c3d96e3dea2fa8dbc"
   else
-    sha256 "eaf7046e35bdebbce46e19b96ac02db6c3e26bbb43c29bce875c674c67f293d8"
+    sha256 "6b20da327d30a8fe72d9fd9f9690b0fb4e7f41ce36f12986e5658152cad2ca45"
   end
 
   url "https://github.com/gathertown/gather-town-desktop-releases/releases/download/v#{version}/Gather-#{version}#{arch}-mac.zip",
