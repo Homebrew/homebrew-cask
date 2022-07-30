@@ -8,7 +8,7 @@ cask "roblox" do
   desc "Online multiplayer game platform"
   homepage "https://www.roblox.com/"
 
-  installer script: "Roblox.app/Contents/MacOS/Roblox"
+  installer manual: "Roblox.app"
 
   uninstall quit:   "com.roblox.RobloxPlayer",
             delete: "/Applications/Roblox.app"
