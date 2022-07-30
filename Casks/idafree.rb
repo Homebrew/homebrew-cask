@@ -4,7 +4,7 @@ cask "idafree" do
   version "7.7"
 
   if Hardware::CPU.intel?
-    sha256 "75f623b3f438aac5d5207fc48fee14db262db6dcf0393d3f636d1117f480f337"
+    sha256 "def16362e338ef3ace4ed91cb1bfb2f1ffef220a9988e32d3468c17736c1f851"
   else
     sha256 "1594c4dc719d888d4c1cb5da5faf45793d5923b5a8830346ed785f4abab0cc2b"
   end
