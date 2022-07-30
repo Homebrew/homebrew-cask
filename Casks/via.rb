@@ -5,6 +5,7 @@ cask "via" do
   url "https://github.com/the-via/releases/releases/download/v#{version}/via-#{version}-mac.dmg",
       verified: "github.com/the-via/releases/"
   name "VIA"
+  desc "Keyboard configurator"
   homepage "https://caniusevia.com/"
 
   app "VIA.app"
