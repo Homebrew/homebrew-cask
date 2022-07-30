@@ -4,9 +4,9 @@ cask "livebook" do
   version "0.6.3"
 
   if Hardware::CPU.intel?
-    sha256 "ebdabcf39edd640092aa5d2ccc985a4cb3426ac1cfb674b8751c48b7e26aba04"
+    sha256 "a28bbdba1acba0cbc80209248a051fb57692d4e52cd57ed0eb0ebed33e180bd7"
   else
-    sha256 "f3d205950b4cfeec57a3594f724bc4751661c4ff8fd8410cc046480c31d00840"
+    sha256 "4ade56b044cd6386a50df54dc7033367cb9d72f7645bdb42bad331d806203ccf"
   end
 
   url "https://github.com/livebook-dev/livebook/releases/download/v#{version}/LivebookInstall-#{version}-macos-#{arch}.dmg",
