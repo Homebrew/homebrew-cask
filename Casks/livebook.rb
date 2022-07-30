@@ -12,7 +12,7 @@ cask "livebook" do
   url "https://github.com/livebook-dev/livebook/releases/download/v#{version}/LivebookInstall-#{version}-macos-#{arch}.dmg",
       verified: "github.com/livebook-dev/livebook"
   name "Livebook"
-  desc "Code notebook for Elixir Developers"
+  desc "Code notebooks for Elixir Developers"
   homepage "https://livebook.dev/"
 
   app "Livebook.app"
