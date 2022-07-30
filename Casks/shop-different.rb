@@ -1,6 +1,6 @@
 cask "shop-different" do
   version "1.0.1"
-  sha256 :no_check
+  sha256 "513f2d0a9492ca7efd36dfc921229be4771bf86f3734faf5a13218e6a6d8173c"
 
   url "https://files.departmentmap.store/file/AppleStoreTimeMachine/Shop+Different+#{version}.dmg"
   name "Apple Store Time Machine"
