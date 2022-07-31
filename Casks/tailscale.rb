@@ -13,6 +13,7 @@ cask "tailscale" do
   end
 
   auto_updates true
+  conflicts_with formula: "tailscale"
 
   app "Tailscale.app"
   binary "#{appdir}/Tailscale.app/Contents/MacOS/Tailscale", target: "tailscale"
