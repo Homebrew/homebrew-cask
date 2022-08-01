@@ -19,6 +19,8 @@ cask "idafree" do
     regex(/>.*?IDA\s*v?(\d+(?:\.\d+)+).*?</i)
   end
 
+  depends_on macos: ">= :catalina"
+
   installer script: {
     executable: "#{arch}#{version.no_dots}_mac.app/Contents/MacOS/installbuilder.sh",
     args:       ["--mode", "unattended", "--installpassword", ""],
