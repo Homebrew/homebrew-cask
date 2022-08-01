@@ -1,6 +1,6 @@
 cask "radicle-upstream" do
   version "0.3.2"
-  sha256 "f197b3858ed84506019afd25a3e1b5d61b9858cea4f4e460a21c0fd5aafc0d8e"
+  sha256 "d52d9c101c4c59fb414ef736c49e5f751ee1be5b407d3bf26e097bb01ffca29d"
 
   url "https://releases.radicle.xyz/radicle-upstream-#{version}.dmg"
   name "Radicle Upstream"
