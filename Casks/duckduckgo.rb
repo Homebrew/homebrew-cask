@@ -16,4 +16,13 @@ cask "duckduckgo" do
   depends_on macos: ">= :catalina"
 
   app "DuckDuckGo.app"
+
+  zap trash: [
+    "~/Library/Caches/com.duckduckgo.macos.browser",
+    "~/Library/Containers/com.duckduckgo.macos.browser",
+    "~/Library/HTTPStorages/com.duckduckgo.macos.browser",
+    "~/Library/Preferences/com.duckduckgo.macos.browser.plist",
+    "~/Library/Saved Application State/com.duckduckgo.macos.browser.savedState",
+    "~/Library/WebKit/com.duckduckgo.macos.browser",
+  ]
 end
