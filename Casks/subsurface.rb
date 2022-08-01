@@ -18,6 +18,8 @@ cask "subsurface" do
     regex(/href=.*?Subsurface[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Subsurface.app"
 
   zap trash: [
