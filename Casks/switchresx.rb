@@ -1,5 +1,5 @@
 cask "switchresx" do
-  version "4.12"
+  version "4.12.1"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://www.madrau.com/data/switchresx/SwitchResX#{version.major}.zip"
@@ -12,7 +12,7 @@ cask "switchresx" do
     regex(/SwitchResX\s*(\d+(?:\.\d+)*)/i)
   end
 
-  prefpane "SwitchResX Installer.app/Contents/Resources/SwitchResX.prefPane"
+  prefpane "SwitchResX Installer.app/Contents/Plugins/SwitchResX.prefPane"
 
   uninstall quit:   [
               "fr.madrau.switchresx.app",

@@ -16,4 +16,8 @@ cask "devdocs" do
     "~/Library/Preferences/sh.egoist.devdocs.plist",
     "~/Library/Saved Application State/sh.egoist.devdocs.savedState",
   ]
+
+  caveats do
+    discontinued
+  end
 end

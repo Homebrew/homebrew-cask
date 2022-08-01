@@ -25,10 +25,12 @@ cask "twitterrific" do
     "~/Library/Application Scripts/com.iconfactory.Phoenix",
     "~/Library/Application Scripts/com.iconfactory.Phoenix.Fixerrific",
     "~/Library/Application Scripts/com.iconfactory.Phoenix.ShareExtension",
+    "~/Library/Application Scripts/*.com.iconfactory.Twitterrific",
     "~/Library/Caches/com.iconfactory.Phoenix",
     "~/Library/Containers/com.iconfactory.Phoenix",
     "~/Library/Containers/com.iconfactory.Phoenix.Fixerrific",
     "~/Library/Containers/com.iconfactory.Phoenix.ShareExtension",
+    "~/Library/Group Containers/*.com.iconfactory.Twitterrific",
     "~/Library/Saved Application State/com.iconfactory.Phoenix.savedState",
   ]
 end

@@ -1,12 +1,12 @@
 cask "webstorm" do
   arch = Hardware::CPU.intel? ? "" : "-aarch64"
 
-  version "2022.1.3,221.5921.27"
+  version "2022.2,222.3345.108"
 
   if Hardware::CPU.intel?
-    sha256 "85c73a9c5415eecb18d11e22e8b6aced4c16908aaec129c5a1a7241e5f354c2a"
+    sha256 "e9a16626aa7c7998d87f9d8c37de7f89f61b6864977d1efae3f63d606f0544aa"
   else
-    sha256 "60de3524c32fbc6dde2989b7ffcfce861c069ce79bded6206dbc587c94f411a2"
+    sha256 "ee3faafe603550063c25911cf58682968d75cb24f90fbcca47e98d8e102a0ae4"
   end
 
   url "https://download.jetbrains.com/webstorm/WebStorm-#{version.csv.first}#{arch}.dmg"

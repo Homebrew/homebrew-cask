@@ -1,6 +1,6 @@
 cask "binance" do
-  version "1.37.0"
-  sha256 "4983a94136550e3fa5fd4b46f2771cdfeaf631d27db23174a449f0da5a616ac6"
+  version "1.38.0"
+  sha256 "19e470ad2c0400a8b0df0eb8b83dd7c193c3adbed2d0e618841347c88a970668"
 
   url "https://ftp.binance.com/electron-desktop/mac/production/binance-#{version}.dmg"
   name "Binance"

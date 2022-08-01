@@ -1,12 +1,12 @@
 cask "superslicer" do
   arch = Hardware::CPU.intel? ? "" : "arm_"
 
-  version "2.3.57.12,220401"
-
   if Hardware::CPU.intel?
-    sha256 "00c7398b3d5487ba594cffd449e4e4af4e7d6ae8cb8dd59531d4d37ea0b6f51a"
+    version "2.4.58.3,220714"
+    sha256 "4fb4a65d2f56bf75867257ea40a7b32515fbb598e992c69ee8a94ef4579781c5"
   else
-    sha256 "eecd1698635b66930756ab71a294bac6b95f5254d930bf42706c63bbaa1def07"
+    version "2.4.58.3,220715"
+    sha256 "c1cfb77477e0ddaddbafbdfa9e31a345a8da590790350aca23c180fd081c645a"
   end
 
   url "https://github.com/supermerill/SuperSlicer/releases/download/#{version.csv.first}/SuperSlicer_#{version.csv.first}_macos_#{arch}#{version.csv.second}.dmg"
@@ -17,12 +17,14 @@ cask "superslicer" do
   livecheck do
     url "https://github.com/supermerill/SuperSlicer/releases/latest"
     strategy :page_match do |page|
-      match = page.match(%r{href=.*?/SuperSlicer_(\d+(?:\.\d+)+)_macos_(\d+)\.dmg}i)
+      match = page.match(%r{href=.*?/SuperSlicer_(\d+(?:\.\d+)+)_macos_#{arch}(\d+)\.dmg}i)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
     end
   end
+
+  depends_on formula: "zstd"
 
   app "SuperSlicer.app"
 

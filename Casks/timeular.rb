@@ -1,6 +1,6 @@
 cask "timeular" do
-  version "4.12.0"
-  sha256 "9c6ae385e621d33b422a05bc9aa1f49701e5a003f4fd7d02b4e9d0e93c042fb5"
+  version "5.0.1"
+  sha256 "11dcbced66f47522299bacfeb00250f126eff954af64df67f9fe547df8b00fec"
 
   url "https://timeular-desktop-packages.s3.amazonaws.com/mac/production/Timeular-#{version}.dmg",
       verified: "timeular-desktop-packages.s3.amazonaws.com/"

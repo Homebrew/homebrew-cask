@@ -15,4 +15,8 @@ cask "clean-me" do
   depends_on macos: ">= :sierra"
 
   app "Clean Me.app"
+
+  caveats do
+    discontinued
+  end
 end

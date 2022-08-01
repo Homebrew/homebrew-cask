@@ -1,6 +1,6 @@
 cask "padloc" do
-  version "3.1.3"
-  sha256 "168dc11c372db5d9c09a0283cd19840d6dac6f76ec241ed400620103dd53b36a"
+  version "4.0.0"
+  sha256 "b1d2bb585b07133289b4de2a5cba61569af65b47664f39cf200e461179a1ee99"
 
   url "https://github.com/padloc/padloc/releases/download/v#{version}/Padloc-#{version}.dmg",
       verified: "github.com/padloc/padloc/"

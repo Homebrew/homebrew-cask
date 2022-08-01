@@ -1,6 +1,6 @@
 cask "pdf-expert" do
-  version "3.0.23,844"
-  sha256 "23c3ce60f27b36edfbe5727a7e4c17d737ce2df1aa17b735924cff1443adebb6"
+  version "3.0.25,850"
+  sha256 "628c0c0d4fe13fa378ee088046f3e84b16ec7d4cbd7eb016e570683dd316cf44"
 
   url "https://downloads.pdfexpert.com/pem#{version.major}/versions/#{version.csv.second}/PDFExpert.zip"
   name "PDF Expert"
@@ -8,7 +8,7 @@ cask "pdf-expert" do
   homepage "https://pdfexpert.com/"
 
   livecheck do
-    url "https://downloads.pdfexpert.com/paid/appcast.xml"
+    url "https://downloads.pdfexpert.com/pem3/release/appcast.xml"
     strategy :sparkle
   end
 

@@ -1,6 +1,5 @@
 cask "voov-meeting" do
   arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
-  postarch = Hardware::CPU.intel? ? "mac" : "mac_arm64"
 
   if Hardware::CPU.intel?
     version "3.7.0.590,be624b69a9db9410195acc9ec0686885"
@@ -19,13 +18,7 @@ cask "voov-meeting" do
 
   # See https://github.com/Homebrew/homebrew-cask/pull/120458#issuecomment-1068393782
   livecheck do
-    url "https://bonjour.swoosh.run/post/https:voovmeeting.com/wemeet-webapi/v2/config/query-download-info?[{\"instance\":\"#{postarch}\",\"type\":\"1410000198\"}]"
-    strategy :page_match do |page|
-      match = page.match(/.*md5":"(.*?)".*version":"(.*?)"/i)
-      next if match.blank?
-
-      "#{match[2]},#{match[1]}"
-    end
+    skip "Requires POST request to retrieve version"
   end
 
   app "VooV Meeting.app"

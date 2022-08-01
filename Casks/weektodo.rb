@@ -1,12 +1,17 @@
 cask "weektodo" do
-  version "1.8.5"
-  sha256 "e259667a7c8ffce0b24d010453566e5e440950ba947c1da708268a19a8b8ccbb"
+  version "1.9.0"
+  sha256 "28938c60426ebc1fc35f0cd44e43298cf410030bf0a5f0f27fbe0c68dde19cdb"
 
   url "https://github.com/Zuntek/WeekToDoWeb/releases/download/v#{version}/WeekToDo-#{version}.dmg",
       verified: "github.com/Zuntek/WeekToDoWeb/"
   name "WeekToDo"
   desc "Weekly planner app focused on privacy"
   homepage "https://weektodo.me/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "WeekToDo.app"
 

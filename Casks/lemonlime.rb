@@ -1,6 +1,6 @@
 cask "lemonlime" do
-  version "0.3.3"
-  sha256 "d3da9c4eeaa11d7c61e5da9bf5b48aade2c2446f7c6332e095d81f9cf6726b54"
+  version "0.3.4"
+  sha256 "e752b5b67e54c141145f9d74a47da5ac1cfa8c23da4018247a2c1dee9dac9d53"
 
   url "https://github.com/Project-LemonLime/Project_LemonLime/releases/download/#{version}/lemon-Release.dmg"
   name "lemonlime"

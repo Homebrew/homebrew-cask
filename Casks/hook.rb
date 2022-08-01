@@ -1,6 +1,6 @@
 cask "hook" do
-  version "3.6.1,2022.06"
-  sha256 "f4c08856e64e1dd6eb03abad30b7a4dcba81f3391e8399fbeb28e45bf2f90412"
+  version "3.7.1,2022.07"
+  sha256 "0fd1413e2f1f5b88e422c29159338bb301ecf1ba641914d6eca3d5874c11be31"
 
   url "https://hookproductivity.com/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/Hook-productivity-app-#{version.csv.first}.dmg_.zip",
       user_agent: :fake
@@ -26,8 +26,11 @@ cask "hook" do
             quit:      "com.cogsciapps.hook"
 
   zap trash: [
+    "~/Library/Application Support/com.cogsciapps.hook",
     "~/Library/Caches/com.cogsciapps.hook",
+    "~/Library/HTTPStorages/com.cogsciapps.hook",
     "~/Library/Logs/com.cogsciapps.hook",
     "~/Library/Preferences/com.cogsciapps.hook.plist",
+    "~/Library/WebKit/com.cogsciapps.hook",
   ]
 end

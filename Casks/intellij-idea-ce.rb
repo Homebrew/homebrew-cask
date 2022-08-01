@@ -1,12 +1,12 @@
 cask "intellij-idea-ce" do
   arch = Hardware::CPU.intel? ? "" : "-aarch64"
 
-  version "2022.1.3,221.5921.22"
+  version "2022.2,222.3345.118"
 
   if Hardware::CPU.intel?
-    sha256 "63637f764018d50717a54c7088be6038f14fbdc8240b3e84fddecf9747471f01"
+    sha256 "43d52e7e1008944c9ea1a47fa16091d4e4a39906bbc10ebabd425604f199d68d"
   else
-    sha256 "b436120ee2bb380f30e29582c3958e110d9c85186bde6af6fe5c571c75e99df8"
+    sha256 "0c53734c0a0776dbf7c28663c078d94de9162738bf8e61ad7044fca496a936cf"
   end
 
   url "https://download.jetbrains.com/idea/ideaIC-#{version.csv.first}#{arch}.dmg"

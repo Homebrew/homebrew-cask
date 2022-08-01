@@ -1,6 +1,6 @@
 cask "fig" do
-  version "1.0.58,472"
-  sha256 "6f80b5ef9cf34dfe508df3a1c81f073e17ac5d27b84322f5e42067396a09e4ec"
+  version "1.0.59,486"
+  sha256 "99c1aaaaacf23581d826049e2992e0e4e151aac82a4ffcd92eb15019106f123f"
 
   url "https://versions.withfig.com/fig%20#{version.csv.second}.dmg",
       verified: "versions.withfig.com/"
@@ -43,6 +43,7 @@ cask "fig" do
     "~/Library/Application Support/fig",
     "~/Library/Caches/com.mschrage.fig",
     "~/Library/Caches/fig",
+    "~/Library/HTTPStorages/com.mschrage.fig",
     "~/Library/Preferences/com.mschrage.fig.*",
     "~/Library/WebKit/com.mschrage.fig",
   ]
