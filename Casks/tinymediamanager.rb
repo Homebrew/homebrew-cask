@@ -1,6 +1,6 @@
 cask "tinymediamanager" do
-  version "4.3"
-  sha256 "ee961edb701a22295fe0802d4f83f1f954b96237ab036aae49754ee6358b78f6"
+  version "4.3.1"
+  sha256 "f4c8f3c9190c2fe04a2b97b6b096cbc33136b5a43302e09dd8b496c1bc2370e3"
 
   url "https://release.tinymediamanager.org/v#{version.major}/dist/tmm_#{version}_macos-x86_64.zip"
   name "tinyMediaManager"
