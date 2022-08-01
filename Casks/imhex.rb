@@ -8,16 +8,11 @@ cask "imhex" do
   desc "Hex editor for reverse engineers"
   homepage "https://imhex.werwolv.net/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   app "imhex.app"
 
   zap trash: [
     "~/Library/Application Support/imhex",
-    "~/Library/Saved Application State/net.WerWolv.ImHex.savedState",
     "~/Library/Preferences/net.WerWolv.ImHex.plist",
+    "~/Library/Saved Application State/net.WerWolv.ImHex.savedState",
   ]
 end
