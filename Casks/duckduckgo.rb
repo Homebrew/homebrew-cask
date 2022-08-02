@@ -4,7 +4,7 @@ cask "duckduckgo" do
 
   url "https://staticcdn.duckduckgo.com/macos-desktop-browser/duckduckgo-#{version}.dmg"
   name "DuckDuckGo"
-  desc "Official DuckDuckGo Browser desktop app"
+  desc "Web browser focusing on privacy"
   homepage "https://duckduckgo.com/"
 
   livecheck do
