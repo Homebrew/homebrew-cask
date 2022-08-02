@@ -12,5 +12,5 @@ cask "treesheets" do
     strategy :extract_plist
   end
 
-  app "TreeSheetsBeta/TreeSheets.app"
+  app "TreeSheets.app"
 end
