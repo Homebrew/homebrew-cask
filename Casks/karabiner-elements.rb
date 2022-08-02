@@ -27,8 +27,8 @@ cask "karabiner-elements" do
 
     pkg "Karabiner-Elements.pkg"
   else
-    version "14.4.0"
-    sha256 "aeb73c7f853adebb51015e44a982ce7a871c98e04cfb806afd2beab4303f464c"
+    version "14.6.0"
+    sha256 "37e03ff5fc848fb47303f43453615f3388848d4ae935a6868430a73c7f8d9346"
 
     url "https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg",
         verified: "github.com/pqrs-org/Karabiner-Elements/"
@@ -50,9 +50,9 @@ cask "karabiner-elements" do
 
   if MacOS.version <= :mojave
     uninstall signal:    [
-      ["TERM", "org.pqrs.Karabiner-Menu"],
-      ["TERM", "org.pqrs.Karabiner-NotificationWindow"],
-    ],
+                ["TERM", "org.pqrs.Karabiner-Menu"],
+                ["TERM", "org.pqrs.Karabiner-NotificationWindow"],
+              ],
               pkgutil:   "org.pqrs.Karabiner-Elements",
               launchctl: [
                 "org.pqrs.karabiner.agent.karabiner_grabber",
@@ -68,9 +68,9 @@ cask "karabiner-elements" do
               delete:    "/Library/Application Support/org.pqrs/"
   else
     uninstall early_script: {
-      executable: "/Library/Application Support/org.pqrs/Karabiner-DriverKit-VirtualHIDDevice/scripts/uninstall/remove_files.sh",
-      sudo:       true,
-    },
+                executable: "/Library/Application Support/org.pqrs/Karabiner-DriverKit-VirtualHIDDevice/scripts/uninstall/remove_files.sh",
+                sudo:       true,
+              },
               signal:       [
                 ["TERM", "org.pqrs.Karabiner-Menu"],
                 ["TERM", "org.pqrs.Karabiner-NotificationWindow"],

@@ -7,7 +7,5 @@ cask "sketchpacks" do
   name "Sketchpacks"
   homepage "https://sketchpacks.com/"
 
-  depends_on macos: ">= :yosemite"
-
   app "Sketchpacks.app"
 end

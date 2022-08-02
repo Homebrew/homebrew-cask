@@ -1,6 +1,6 @@
 cask "plasticscm-cloud-edition" do
-  version "11.0.16.6949"
-  sha256 "ca97dc91957766655e701c3ac3e8f0e733da64a6c80b34ede0000b28ce47ef86"
+  version "11.0.16.7248"
+  sha256 "62da211e0491f4784ece9a9710fbc33e293e28843a9171557ab8a67a5535e185"
 
   url "https://s3.eu-west-2.amazonaws.com/plastic-releases/releases/#{version}/plasticscm/osx/plasticscm-cloud-#{version}.pkg.zip",
       verified: "s3.eu-west-2.amazonaws.com/plastic-releases/"
@@ -16,9 +16,9 @@ cask "plasticscm-cloud-edition" do
   pkg "plasticscm-cloud-#{version}.pkg"
 
   uninstall launchctl: [
-    "com.codicesoftware.plasticscm.macplastic",
-    "com.codicesoftware.plasticscm.server",
-  ],
+              "com.codicesoftware.plasticscm.macplastic",
+              "com.codicesoftware.plasticscm.server",
+            ],
             quit:      "com.codicesoftware.plasticscm",
             pkgutil:   [
               "com.codicesoftware.plasticscm.macplastic",

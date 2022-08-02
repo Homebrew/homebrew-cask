@@ -1,6 +1,6 @@
 cask "the-archive" do
-  version "1.7.5"
-  sha256 "1c3b89131c119d50bc33efcabfb3e73d7c7dd0d81c7c52b0741cfa3220fe5570"
+  version "1.7.7"
+  sha256 "650e68f9a94b925c85d4fdef1189e5cb98814c278c0c4e671f2049c661956a37"
 
   url "https://dlyfuw95744jo.cloudfront.net/TheArchive-v#{version}.dmg",
       verified: "dlyfuw95744jo.cloudfront.net/"

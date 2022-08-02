@@ -13,4 +13,11 @@ cask "cloudmounter" do
   end
 
   app "CloudMounter.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.eltima.cloudmounter",
+    "~/Library/Caches/com.eltima.cloudmounter",
+    "~/Library/Logs/CloudMounter.log",
+    "~/Library/Preferences/com.eltima.cloudmounter.plist",
+  ]
 end

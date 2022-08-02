@@ -1,6 +1,6 @@
 cask "fme" do
-  version "2022.0.0.2,22343"
-  sha256 "c35b891554578c37e0be70333aa9364064999f647ddebb10f03974bf662ce0b0"
+  version "2022.1,22618"
+  sha256 "34775adb4cfbdae6e70d8b68dce1f795114a504e14aa24e6dbdfeed30a7bfb2e"
 
   url "https://downloads.safe.com/fme/#{version.major}/fme-desktop-#{version.csv.first}-b#{version.csv.second}-macosx.pkg"
   name "FME Desktop"
@@ -20,9 +20,9 @@ cask "fme" do
   pkg "fme-desktop-#{version.csv.first}-b#{version.csv.second}-macosx.pkg"
 
   uninstall pkgutil: [
-    "com.safesoftware.pkg.engine.fme-desktop-#{version.major_minor}-b#{version.csv.second}-macosx",
-    "com.safesoftware.pkg.apps.fme-desktop-#{version.major_minor}-b#{version.csv.second}-macosx",
-  ],
+              "com.safesoftware.pkg.engine.fme-desktop-#{version.major_minor}-b#{version.csv.second}-macosx",
+              "com.safesoftware.pkg.apps.fme-desktop-#{version.major_minor}-b#{version.csv.second}-macosx",
+            ],
             delete:  [
               "/Applications/FME #{version.major_minor}",
               "/Library/FME/#{version.major_minor}",

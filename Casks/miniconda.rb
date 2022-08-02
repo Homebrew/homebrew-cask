@@ -5,7 +5,7 @@ cask "miniconda" do
   if Hardware::CPU.intel?
     sha256 "007bae6f18dc7b6f2ca6209b5a0c9bd2f283154152f82becf787aac709a51633"
   else
-    sha256 "c788378ba4bfe75bd1cdebe127b0bce89a0c4dc44310b24d9e7fb2b730206586"
+    sha256 "4bd112168cc33f8a4a60d3ef7e72b52a85972d588cd065be803eb21d73b625ef"
   end
 
   url "https://repo.anaconda.com/miniconda/Miniconda3-#{version}-MacOSX-#{arch}.sh",

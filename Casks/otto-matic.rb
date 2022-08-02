@@ -6,10 +6,10 @@ cask "otto-matic" do
       verified: "github.com/jorio/OttoMatic/"
   name "Otto Matic"
   desc "Science fiction 3D action/adventure game from Pangea Software"
-  homepage "https://pangeasoft.net/otto/"
+  homepage "https://jorio.itch.io/ottomatic"
 
   app "Otto Matic.app"
-  artifact "Documentation", target: "#{ENV["HOME"]}/Library/Application Support/OttoMatic"
+  artifact "Documentation", target: "#{Dir.home}/Library/Application Support/OttoMatic"
 
   zap trash: [
     "~/Library/Preferences/OttoMatic",

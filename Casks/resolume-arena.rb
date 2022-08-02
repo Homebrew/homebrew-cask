@@ -1,6 +1,6 @@
 cask "resolume-arena" do
-  version "7.11.3,13855"
-  sha256 "b6d82ca35d11631a7fb2d45266b38fc6347864c7dd05fa8a47523c116fa71c74"
+  version "7.13.1,16350"
+  sha256 "b1d467fdc06198953908021057e2d3ab4658b0116375a6e67a35f2cfd06703f3"
 
   url "https://dd5sgwxv3xok.cloudfront.net/Resolume_Arena_#{version.major_minor_patch.dots_to_underscores}_rev_#{version.csv.second}_Installer.dmg",
       verified: "dd5sgwxv3xok.cloudfront.net/"
@@ -19,14 +19,14 @@ cask "resolume-arena" do
   pkg "Resolume Arena Installer.pkg"
 
   uninstall pkgutil:   [
-    "com.resolume.pkg.ResolumeArena.*",
-    "com.resolume.pkg.ResolumeDXV",
-    "com.resolume.pkg.ResolumeQuickLook",
-    "com.resolume.pkg.ResolumeAlley",
-    "com.resolume.pkg.ResolumeWireNodes",
-    "com.resolume.pkg.ResolumeCommon",
-    "com.resolume.pkg.ResolumeWire",
-  ],
+              "com.resolume.pkg.ResolumeArena.*",
+              "com.resolume.pkg.ResolumeDXV",
+              "com.resolume.pkg.ResolumeQuickLook",
+              "com.resolume.pkg.ResolumeAlley",
+              "com.resolume.pkg.ResolumeWireNodes",
+              "com.resolume.pkg.ResolumeCommon",
+              "com.resolume.pkg.ResolumeWire",
+            ],
             delete:    "/Applications/Resolume Arena #{version.major}",
             signal:    ["TERM", "com.resolume.arena"],
             launchctl: "com.resolume.arena"

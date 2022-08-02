@@ -8,15 +8,13 @@ cask "whatsyoursign" do
   desc "Shows a files cryptographic signing information"
   homepage "https://objective-see.com/products/whatsyoursign.html"
 
-  depends_on macos: ">= :yosemite"
-
   installer manual: "WhatsYourSign Installer.app"
 
   uninstall delete: [
-    "/Applications/WhatsYourSign.app",
-    "~/Library/Application Scripts/com.objective-see.WhatsYourSignExt.FinderSync",
-    "~/Library/Containers/com.objective-see.WhatsYourSignExt.FinderSync",
-  ],
+              "/Applications/WhatsYourSign.app",
+              "~/Library/Application Scripts/com.objective-see.WhatsYourSignExt.FinderSync",
+              "~/Library/Containers/com.objective-see.WhatsYourSignExt.FinderSync",
+            ],
             script: {
               executable:   "/usr/bin/pluginkit",
               args:         [

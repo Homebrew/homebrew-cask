@@ -1,13 +1,13 @@
 cask "segger-embedded-studio-for-arm" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "6.30"
+  version "6.32b"
 
   url "https://www.segger.com/downloads/embedded-studio/Setup_EmbeddedStudio_ARM_v#{version.no_dots}_macos_#{arch}.dmg"
   if Hardware::CPU.intel?
-    sha256 "9ade323f0a4a998aa365934f7b9add917f8b8bafe917e33aca8a822e77e0724d"
+    sha256 "688b8547a85c223601b0722ca8834c13ffab67413831ea6c266fd48457e323ad"
   else
-    sha256 "682d794dd3344b17f9ecdcab7905e9021f98177435a1b850ec55d7072901c79f"
+    sha256 "727800ba3d3d25ed3225d9d4c234c4e2c89566a0818aa432591723bf70a78bf4"
   end
 
   name "SEGGER Embedded Studio for ARM"

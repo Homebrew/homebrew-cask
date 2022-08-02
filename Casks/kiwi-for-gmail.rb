@@ -12,8 +12,6 @@ cask "kiwi-for-gmail" do
     strategy :extract_plist
   end
 
-  depends_on macos: ">= :yosemite"
-
   app "Kiwi for Gmail.app"
 
   zap trash: [

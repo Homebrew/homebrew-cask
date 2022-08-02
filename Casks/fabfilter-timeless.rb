@@ -17,7 +17,7 @@ cask "fabfilter-timeless" do
     end
   end
 
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :sierra"
 
   pkg "FabFilter Timeless #{version} Installer.pkg"
 

@@ -1,9 +1,5 @@
 cask "suspicious-package" do
-  if MacOS.version <= :yosemite
-    version "3.2"
-    url "https://www.mothersruin.com/software/downloads/SuspiciousPackage-#{version}.dmg"
-    sha256 "b8b038663f071ad55ea21ccf3a8aa09ae54a1bd1586a803e7e5413a1a3fecaae"
-  elsif MacOS.version <= :sierra
+  if MacOS.version <= :sierra
     version "3.4.1"
     url "https://www.mothersruin.com/software/downloads/SuspiciousPackage-#{version}.dmg"
     sha256 "e4673a0c590e7dcb711789d98fcadd2283c2152d262b7809dfd8c8a1b3e9094b"
@@ -32,8 +28,6 @@ cask "suspicious-package" do
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
-
-  depends_on macos: ">= :yosemite"
 
   app "Suspicious Package.app"
   binary "#{appdir}/Suspicious Package.app/Contents/SharedSupport/spkg"

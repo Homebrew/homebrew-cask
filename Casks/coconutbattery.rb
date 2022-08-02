@@ -1,26 +1,18 @@
 cask "coconutbattery" do
-  if MacOS.version <= :yosemite
-    version "3.6.4"
-    sha256 "8e289fb4a75cb117fc1d7861020c9ab2384b09dfd18f066c7fadfc9d42c3ac56"
+  version "3.9.8,0733d026"
+  sha256 "6311dfb1ec093b43d05712d0a8abaf4ad87570b0d98c46b8c347db410575cfff"
 
-    url "https://www.coconut-flavour.com/downloads/coconutBattery_#{version}.zip"
-  else
-    version "3.9.7,bef5cec9"
-    sha256 "44e6c55fbbbd16ac0541301ada7c46eeffd85a6e5fd2baac46b421d588ba6101"
-
-    url "https://www.coconut-flavour.com/downloads/coconutBattery_#{version.csv.first.no_dots}_#{version.csv.second}.zip"
-
-    livecheck do
-      url "https://coconut-flavour.com/updates/coconutBattery.xml"
-      strategy :sparkle do |item|
-        "#{item.version},#{item.url[/_\d+_(.*?)\./i, 1]}"
-      end
-    end
-  end
-
+  url "https://www.coconut-flavour.com/downloads/coconutBattery_#{version.csv.first.no_dots}_#{version.csv.second}.zip"
   name "coconutBattery"
   desc "Tool to show live information about the batteries in various devices"
   homepage "https://www.coconut-flavour.com/coconutbattery/"
+
+  livecheck do
+    url "https://coconut-flavour.com/updates/coconutBattery.xml"
+    strategy :sparkle do |item|
+      "#{item.version},#{item.url[/_\d+_(.*?)\./i, 1]}"
+    end
+  end
 
   auto_updates true
   depends_on macos: ">= :sierra"

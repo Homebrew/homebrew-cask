@@ -1,9 +1,8 @@
 cask "preform" do
-  version "3.24.1,122_18421"
-  sha256 "d501df920ceff2fc34681b13954ea3a0cd46761d82e2ac7a05abca72fc5aec7a"
+  version "3.26.0,153_21258"
+  sha256 "e21c0aeb5084f5fff83e4ef93b78e2b26005c4e1040743ab1c55db52a6762723"
 
-  url "https://s3.amazonaws.com/FormlabsReleases/Release/#{version.csv.first}/PreForm_mac_#{version.csv.first}_release_releaser_#{version.csv.second}.dmg",
-      verified: "s3.amazonaws.com/FormlabsReleases/"
+  url "https://downloads.formlabs.com/PreForm/Release/#{version.csv.first}/PreForm_mac_#{version.csv.first}_release_releaser_#{version.csv.second}.dmg"
   name "PreForm"
   desc "3D printing setup, management, and monitoring"
   homepage "https://formlabs.com/tools/preform/"

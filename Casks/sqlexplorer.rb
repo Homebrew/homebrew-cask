@@ -4,9 +4,15 @@ cask "sqlexplorer" do
 
   url "https://downloads.sourceforge.net/eclipsesql/SQL%20Explorer%20RCP%20%28exc%20JRE%29/#{version}/sqlexplorer_rcp-#{version}.macosx.cocoa.x86.tgz",
       verified: "downloads.sourceforge.net/eclipsesql/"
-  appcast "https://sourceforge.net/projects/eclipsesql/rss"
   name "Eclipse SQL Explorer"
+  desc "SQL Client for JDBC compliant databases"
   homepage "https://eclipsesql.sourceforge.io/"
+
+  livecheck do
+    url "https://sourceforge.net/projects/eclipsesql/rss"
+    strategy :page_match
+    regex(/.*?rcp[._-](\d+(?:\.\d+)+).macosx.*?\.tgz/i)
+  end
 
   app "SQLExplorer/sqlexplorer.app"
 end

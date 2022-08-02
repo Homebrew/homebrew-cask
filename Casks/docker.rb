@@ -1,12 +1,12 @@
 cask "docker" do
   arch = Hardware::CPU.intel? ? "amd64" : "arm64"
 
-  version "4.8.2,79419"
+  version "4.11.0,83626"
 
   if Hardware::CPU.intel?
-    sha256 "b6b11cb1d9ed2ccd231bdbd86e809777d83b2a1e7307ed4fa02e676ebda9c756"
+    sha256 "1aa207c2f81a4dda6583dabb23fcc39fbfacee0f41058fca9d0e482c4210ce96"
   else
-    sha256 "56470c5ab594057371b7b46a584a537cefd9301701544209ae7cc9c335ffaa2a"
+    sha256 "43116a26c0edb50d7bb4920d609b91d7d5b278f823b2ea85ff370920fbca0fce"
   end
 
   url "https://desktop.docker.com/mac/main/#{arch}/#{version.csv.second}/Docker.dmg"
@@ -47,21 +47,27 @@ cask "docker" do
          target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/docker-compose.fish"
 
   uninstall delete:    [
-    "/Library/PrivilegedHelperTools/com.docker.vmnetd",
-    "/usr/local/bin/com.docker.cli",
-    "/usr/local/bin/docker-compose-v1",
-    "/usr/local/bin/docker-compose",
-    "/usr/local/bin/docker-credential-desktop",
-    "/usr/local/bin/docker-credential-ecr-login",
-    "/usr/local/bin/docker-credential-osxkeychain",
-    "/usr/local/bin/docker",
-    "/usr/local/bin/hub-tool",
-    "/usr/local/bin/hyperkit",
-    "/usr/local/bin/kubectl.docker",
-    "/usr/local/bin/kubectl",
-    "/usr/local/bin/notary",
-    "/usr/local/bin/vpnkit",
-  ],
+              "/Library/PrivilegedHelperTools/com.docker.vmnetd",
+              "/usr/local/bin/com.docker.cli",
+              "/usr/local/bin/docker-compose-v1",
+              "/usr/local/bin/docker-compose",
+              "/usr/local/bin/docker-credential-desktop",
+              "/usr/local/bin/docker-credential-ecr-login",
+              "/usr/local/bin/docker-credential-osxkeychain",
+              "/usr/local/bin/docker",
+              "/usr/local/bin/hub-tool",
+              "/usr/local/bin/hyperkit",
+              "/usr/local/bin/kubectl.docker",
+              "/usr/local/bin/kubectl",
+              "/usr/local/bin/notary",
+              "/usr/local/bin/vpnkit",
+              "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_docker",
+              "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_docker_compose",
+              "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/docker.fish",
+              "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/docker-compose.fish",
+              "#{HOMEBREW_PREFIX}/etc/bash_completion.d/docker",
+              "#{HOMEBREW_PREFIX}/etc/bash_completion.d/docker-compose",
+            ],
             launchctl: [
               "com.docker.helper",
               "com.docker.vmnetd",
@@ -69,26 +75,26 @@ cask "docker" do
             quit:      "com.docker.docker"
 
   zap trash: [
-    "/usr/local/bin/docker-compose.backup",
-    "/usr/local/bin/docker.backup",
-    "~/.docker",
-    "~/Library/Application Scripts/com.docker.helper",
-    "~/Library/Application Support/com.bugsnag.Bugsnag/com.docker.docker",
-    "~/Library/Application Support/Docker Desktop",
-    "~/Library/Caches/com.docker.docker",
-    "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.docker.docker",
-    "~/Library/Caches/KSCrashReports/Docker",
-    "~/Library/Containers/com.docker.docker",
-    "~/Library/Containers/com.docker.helper",
-    "~/Library/Group Containers/group.com.docker",
-    "~/Library/HTTPStorages/com.docker.docker.binarycookies",
-    "~/Library/Logs/Docker Desktop",
-    "~/Library/Preferences/com.docker.docker.plist",
-    "~/Library/Preferences/com.electron.docker-frontend.plist",
-    "~/Library/Preferences/com.electron.dockerdesktop.plist",
-    "~/Library/Saved Application State/com.electron.docker-frontend.savedState",
-    "~/Library/Saved Application State/com.electron.dockerdesktop.savedState",
-  ],
+        "/usr/local/bin/docker-compose.backup",
+        "/usr/local/bin/docker.backup",
+        "~/.docker",
+        "~/Library/Application Scripts/com.docker.helper",
+        "~/Library/Application Support/com.bugsnag.Bugsnag/com.docker.docker",
+        "~/Library/Application Support/Docker Desktop",
+        "~/Library/Caches/com.docker.docker",
+        "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.docker.docker",
+        "~/Library/Caches/KSCrashReports/Docker",
+        "~/Library/Containers/com.docker.docker",
+        "~/Library/Containers/com.docker.helper",
+        "~/Library/Group Containers/group.com.docker",
+        "~/Library/HTTPStorages/com.docker.docker.binarycookies",
+        "~/Library/Logs/Docker Desktop",
+        "~/Library/Preferences/com.docker.docker.plist",
+        "~/Library/Preferences/com.electron.docker-frontend.plist",
+        "~/Library/Preferences/com.electron.dockerdesktop.plist",
+        "~/Library/Saved Application State/com.electron.docker-frontend.savedState",
+        "~/Library/Saved Application State/com.electron.dockerdesktop.savedState",
+      ],
       rmdir: [
         "~/Library/Caches/com.plausiblelabs.crashreporter.data",
         "~/Library/Caches/KSCrashReports",

@@ -1,6 +1,6 @@
 cask "licecap" do
-  version "1.31"
-  sha256 "704cd237b261d355b1ed86f19f286a5a5ad7581ef563cb1c84a5df1266b48f2d"
+  version "1.32"
+  sha256 "115c40eb710085969a72a24d5d84ae2c05260192cc68a22e73e99e148c6638da"
 
   url "https://www.cockos.com/licecap/licecap#{version.no_dots}.dmg"
   name "LICEcap"

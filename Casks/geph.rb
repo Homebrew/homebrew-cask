@@ -6,11 +6,11 @@ cask "geph" do
       verified: "f001.backblazeb2.com/file/geph4-dl/"
   name "Geph"
   desc "Modular Internet censorship circumvention system"
-  homepage "https://geph.io/"
+  homepage "https://geph.io/en/"
 
   livecheck do
-    url "https://github.com/geph-official/geph4"
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    url :homepage
+    regex(/href=.*?geph[._-]macos[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "Geph.app"

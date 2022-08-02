@@ -1,12 +1,12 @@
 cask "inkstitch" do
-  version "2.1.2"
+  version "2.2.0"
 
   if MacOS.version <= :high_sierra
     sha256 "3d6dfc5539c86840715e8edf03e79dee11fe2a85b91043a81a9c09ea050a75f7"
     url "https://github.com/inkstitch/inkstitch/releases/download/v#{version}/inkstitch-v#{version}-sierra-osx.pkg",
         verified: "github.com/inkstitch/inkstitch/"
   else
-    sha256 "655ce58e8cc94d50ba971d763a4522c70629ddf221e3ab6a92a4a386c5569cb2"
+    sha256 "44706a29277ed14bee11c3bbdae748ac8b97d203b0a1232c278611f918ac1cfb"
     url "https://github.com/inkstitch/inkstitch/releases/download/v#{version}/inkstitch-v#{version}-osx.pkg",
         verified: "github.com/inkstitch/inkstitch/"
   end
@@ -31,7 +31,7 @@ cask "inkstitch" do
 
   preflight do
     system_command "/bin/mkdir",
-                   args: ["-p", "#{ENV["HOME"]}/Library/Application Support" \
+                   args: ["-p", "#{Dir.home}/Library/Application Support" \
                                 "/org.inkscape.Inkscape/config/inkscape/extensions"]
   end
 

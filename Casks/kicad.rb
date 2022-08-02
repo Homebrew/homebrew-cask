@@ -1,6 +1,6 @@
 cask "kicad" do
-  version "6.0.5-0"
-  sha256 "1bd65d294ef099b6bb4640feef38be486c7fa3fa474a9d0b335f8983dae965d0"
+  version "6.0.7-1"
+  sha256 "f23dd7c823b288fc2e207869f5178a5a7451d5381f4414f226be2b1a457ac5f2"
 
   url "https://kicad-downloads.s3.cern.ch/osx/stable/kicad-unified-#{version}.dmg",
       verified: "kicad-downloads.s3.cern.ch/"
@@ -17,11 +17,6 @@ cask "kicad" do
 
   suite "KiCad"
   artifact "demos", target: "/Library/Application Support/kicad/demos"
-
-  uninstall delete: [
-    "#{appdir}/KiCad",
-    "/Library/Application Support/kicad/demos",
-  ]
 
   zap trash: [
     "/Library/Application Support/kicad",

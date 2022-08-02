@@ -1,5 +1,5 @@
 cask "gotiengviet" do
-  version "2.2,30"
+  version "2.3,31"
   sha256 :no_check
 
   url "https://www.trankynam.com/gotv/downloads/GoTiengViet.dmg"

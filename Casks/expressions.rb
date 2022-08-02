@@ -1,8 +1,8 @@
 cask "expressions" do
-  version "1.3.3"
-  sha256 "cce8506474d9c071ce9e945c7709e21cadcab2e962805b3b3ba61246723195ad"
+  version "1.3.6.58"
+  sha256 "bc1ebc01e10877825870ceee9ed72509977a6578b5969448f779a1658109107e"
 
-  url "https://www.apptorium.com/public/products/expressions/releases/Expressions-#{version}.zip"
+  url "https://cdn.apptorium.com/products/expressions/releases/Expressions-#{version}.zip"
   name "Expressions"
   desc "Regular expressions manager app"
   homepage "https://www.apptorium.com/expressions"

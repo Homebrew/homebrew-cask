@@ -12,5 +12,14 @@ cask "omegat" do
     url "https://sourceforge.net/projects/omegat/rss?path=/OmegaT%20-%20Standard"
   end
 
+  conflicts_with cask: "homebrew/cask-versions/omegat-latest"
+
   app "OmegaT_#{version}_Mac_Notarized/OmegaT.app"
+
+  zap trash: [
+    "~/Library/Application Support/OmegaT",
+    "~/Library/Caches/OmegaT",
+    "~/Library/Preferences/OmegaT",
+    "~/Library/Saved Application State/org.omegat.OmegaT.savedState",
+  ]
 end

@@ -1,15 +1,16 @@
 cask "atomic-wallet" do
-  version "2.46.4"
-  sha256 "c76fcb373d2cc0a1e01b6c369ee1c4fcb8a9651938839d4ffcfdc3eb802a1d3b"
+  version "2.50.1-1206"
+  sha256 "f37f12f3c9e118ba39726c016dd1c01cc711716fba8dd80312f0c067f8f571d7"
 
-  url "https://releases.atomicwallet.io/AtomicWallet-#{version}.zip"
+  url "https://get.atomicwallet.io/download/atomicwallet-#{version}.dmg"
   name "Atomic Wallet"
   desc "Manage Bitcoin, Ethereum, XRP, Litecoin, XLM and over 300 other coins and tokens"
   homepage "https://atomicwallet.io/"
 
   livecheck do
-    url "https://releases.atomicwallet.io/latest-mac.yml"
-    strategy :electron_builder
+    url "https://get.atomicwallet.io/download/"
+    strategy :page_match
+    regex(/href=.*?atomicwallet[._-](\d+(?:\.\d+)+[._-]\d+)\.dmg/i)
   end
 
   app "Atomic Wallet.app"

@@ -1,6 +1,6 @@
 cask "sqlcl" do
-  version "22.1.1.131.0820"
-  sha256 "a23d86d33b9e78680b08a8d06a3ac91533daaa1ee90b2d9a99a891688ffda65a"
+  version "22.2.1.201.1451"
+  sha256 "b478af0eb8a1bd864d47c06d242bc662ffc030f651781acd88469f5a839c18c7"
 
   url "https://download.oracle.com/otn_software/java/sqldeveloper/sqlcl-#{version}.zip"
   name "sqlcl"
@@ -9,7 +9,7 @@ cask "sqlcl" do
 
   livecheck do
     url "https://www.oracle.com/tools/downloads/sqlcl-downloads.html"
-    regex(/href=.*?sqlcl[._-]v?(\d+(?:\.\d+)+)\.zip/i)
+    regex(/p>Version.*?(\d+(?:\.\d+)+)/i)
   end
 
   stage_only true

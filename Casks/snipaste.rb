@@ -19,5 +19,8 @@ cask "snipaste" do
 
   uninstall quit: "com.Snipaste"
 
-  zap trash: "~/Library/Preferences/com.Snipaste.plist"
+  zap trash: [
+    "~/.snipaste/",
+    "~/Library/Preferences/com.Snipaste.plist",
+  ]
 end

@@ -13,18 +13,18 @@ cask "rightfont" do
   end
 
   auto_updates true
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :high_sierra"
 
   app "RightFont.app"
 
   zap trash: [
-    "~/Library/Application Support/RightFont",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.rightfontapp.rightfont*.sfl2",
-    "~/Library/Application Support/com.rightfontapp.RightFont*",
-    "~/Library/Caches/com.rightfontapp.RightFont*",
-    "~/Library/Logs/RightFont*",
-    "~/Library/Preferences/com.rightfontapp.RightFont*.plist",
-    "~/Library/WebKit/com.rightfontapp.RightFont*",
-  ],
+        "~/Library/Application Support/RightFont",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.rightfontapp.rightfont*.sfl2",
+        "~/Library/Application Support/com.rightfontapp.RightFont*",
+        "~/Library/Caches/com.rightfontapp.RightFont*",
+        "~/Library/Logs/RightFont*",
+        "~/Library/Preferences/com.rightfontapp.RightFont*.plist",
+        "~/Library/WebKit/com.rightfontapp.RightFont*",
+      ],
       rmdir: "~/RightFont"
 end

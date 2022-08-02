@@ -8,7 +8,16 @@ cask "activitywatch" do
   desc "Time tracker"
   homepage "https://activitywatch.net/"
 
+  livecheck do
+    url "https://activitywatch.net/downloads/"
+    regex(/href=.*?activitywatch[._-]v?(\d+(?:\.\d+)+)-macos-x86_64\.dmg/i)
+  end
+
   app "ActivityWatch.app"
 
-  zap trash: "~/Library/Application Support/activitywatch"
+  zap trash: [
+    "~/Library/Application Support/activitywatch",
+    "~/Library/Caches/activitywatch",
+    "~/Library/Logs/activitywatch",
+  ]
 end

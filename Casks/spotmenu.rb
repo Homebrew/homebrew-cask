@@ -12,8 +12,8 @@ cask "spotmenu" do
   app "SpotMenu.app"
 
   uninstall quit:       [
-    "com.KMikiy.SpotMenu",
-  ],
+              "com.KMikiy.SpotMenu",
+            ],
             login_item: [
               "SpotMenu",
             ]

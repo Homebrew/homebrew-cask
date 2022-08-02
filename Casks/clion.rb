@@ -1,12 +1,12 @@
 cask "clion" do
   arch = Hardware::CPU.intel? ? "" : "-aarch64"
 
-  version "2022.1.1,221.5591.52"
+  version "2022.2,222.3345.126"
 
   if Hardware::CPU.intel?
-    sha256 "ff640a96a91027c608efd620cb5a0281fc37aaa91bb8eb489dc07f7bf4ce80bf"
+    sha256 "27f92a2513ff55a3c354e46e0562c900dbab68e26455be51c3eeb42995aa2ac1"
   else
-    sha256 "a46b280cf91c0b7ab384d79afe01e1af1f6ee1de421121ccb9bd2103ad6701ba"
+    sha256 "b25375ef2d6daa75c83d624633e18850529f0a6a72ae54bbb6a22f9343cc2c86"
   end
 
   url "https://download.jetbrains.com/cpp/CLion-#{version.csv.first}#{arch}.dmg"
@@ -30,7 +30,7 @@ cask "clion" do
 
   uninstall_postflight do
     ENV["PATH"].split(File::PATH_SEPARATOR).map { |path| File.join(path, "clion") }.each do |path|
-      if File.exist?(path) &&
+      if File.readable?(path) &&
          File.readlines(path).grep(/# see com.intellij.idea.SocketLock for the server side of this interface/).any?
         File.delete(path)
       end

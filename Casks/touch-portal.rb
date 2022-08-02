@@ -1,5 +1,5 @@
 cask "touch-portal" do
-  version "3.0.10"
+  version "3.1.3"
   sha256 :no_check
 
   url "https://www.touch-portal.com/downloads/TouchPortalMacRelease.dmg"
@@ -8,8 +8,8 @@ cask "touch-portal" do
   homepage "https://www.touch-portal.com/"
 
   livecheck do
-    url :homepage
-    regex(/\.dmg.*\n.*<br><span .*>v?(\d+(?:\.\d+)*)/i)
+    url :url
+    strategy :extract_plist
   end
 
   app "TouchPortal.app"

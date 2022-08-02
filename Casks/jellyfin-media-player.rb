@@ -1,6 +1,6 @@
 cask "jellyfin-media-player" do
-  version "1.6.1"
-  sha256 "f77a7de591237e67a205a80b6809d9bbe4688c5a03ed6503be5c1ccb1866df65"
+  version "1.7.1"
+  sha256 "613e4e29bc27d973a9fd35780d534dbc07e072f7c41542439b9582a09a97505b"
 
   url "https://github.com/jellyfin/jellyfin-media-player/releases/download/v#{version}/JellyfinMediaPlayer-#{version}-macos.dmg",
       verified: "github.com/jellyfin/jellyfin-media-player/"

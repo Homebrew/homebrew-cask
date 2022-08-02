@@ -20,6 +20,4 @@ cask "diskmaker-x" do
   name "DiskMaker X"
   desc "Tool to build a system install disk"
   homepage "https://diskmakerx.com/"
-
-  depends_on macos: ">= :yosemite"
 end

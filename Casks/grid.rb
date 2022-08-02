@@ -15,9 +15,9 @@ cask "grid" do
   app "Grid.app"
 
   uninstall quit:      [
-    "app.macgrid.Grid",
-    "app.macgrid.GridLaunchAtLogin",
-  ],
+              "app.macgrid.Grid",
+              "app.macgrid.GridLaunchAtLogin",
+            ],
             launchctl: "app.macgrid.GridLaunchAtLogin"
 
   zap trash: [

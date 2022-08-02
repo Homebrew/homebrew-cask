@@ -12,7 +12,5 @@ cask "bluegriffon" do
     regex(%r{href=['"]?(\d+(?:\.\d+)+)/}i)
   end
 
-  depends_on macos: ">= :yosemite"
-
   app "BlueGriffon.app"
 end

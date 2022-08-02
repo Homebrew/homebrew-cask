@@ -14,8 +14,6 @@ cask "macdropany" do
     regex(%r{href=.*?/MacDropAny\.(\d+(?:\.\d+)*)\.zip}i)
   end
 
-  depends_on macos: ">= :yosemite"
-
   app "MacDropAny.app"
 
   zap trash: "~/Library/Services/Sync via MacDropAny.workflow"

@@ -1,6 +1,6 @@
 cask "fotokasten" do
-  version "3.56.0,220223.1141"
-  sha256 "8a292b9d3e48b1ec63e8880687299145f86c5c93fca82ebbcd48ea1c92a8d695"
+  version "3.61.0,220518.0954"
+  sha256 "97e76cd2c59ec8928860238f75d14e2aaa28e30e300da4aaede8ef25daea8c7b"
 
   url "https://cdn.fotokasten.de/installer/ftk_de/de/mac/fotokasten.de_#{version.csv.first}.dmg"
   name "Fotokasten"

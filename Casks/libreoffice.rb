@@ -1,12 +1,12 @@
 cask "libreoffice" do
   arch, folder = Hardware::CPU.intel? ? ["x86-64", "x86_64"] : ["aarch64", "aarch64"]
 
-  version "7.3.3"
+  version "7.3.5"
 
   if Hardware::CPU.intel?
-    sha256 "fb2f9bb90eee34a22af3a2bf2854ef5b76098302b3c41d13d4f543f0d72b994f"
+    sha256 "9534e444b3102a653f3d0c0e3fb54efb20caf2c91ce121b2db00d2531ab8b7fa"
   else
-    sha256 "50ed3deb8d9c987516e2687ebb865bca15486c69da79f1b6d74381e43f2ec863"
+    sha256 "dfd30d5d520959ee1b65a620d748a0ac5535d1a9e811f83fa35a14dc8d3d736d"
   end
 
   url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/#{folder}/LibreOffice_#{version}_MacOS_#{arch}.dmg",

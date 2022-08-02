@@ -10,6 +10,9 @@ concurrency:
   group: sync-templates-and-ci-config
   cancel-in-progress: true
 
+permissions:
+  contents: read
+
 jobs:
   sync-templates-and-ci-config:
     if: github.repository == 'Homebrew/homebrew-cask'
@@ -51,7 +54,7 @@ jobs:
           HOMEBREW_GPG_PASSPHRASE: ${{ secrets.BREWTESTBOT_GPG_SIGNING_SUBKEY_PASSPHRASE }}
 
       - name: Create pull request
-        uses: peter-evans/create-pull-request@f094b77505fb89581e68a1163fbd2fffece39da1
+        uses: peter-evans/create-pull-request@923ad837f191474af6b1721408744feb989a4c27
         with:
           path: vendor/${{ matrix.repo }}
           token: ${{ secrets.HOMEBREW_CASK_SYNC_TOKEN }}

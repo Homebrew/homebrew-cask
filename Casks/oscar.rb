@@ -1,6 +1,6 @@
 cask "oscar" do
-  version "1.3.1"
-  sha256 "5378de6b994e5a526de3912e14ad9ce26d22f38e8c5d8371371b3966295f4438"
+  version "1.4.0"
+  sha256 "edee3693bcf0804f1ddb912031dc7a2940c48abc01909a6d5a1beef94f329ea1"
 
   url "https://www.apneaboard.com/OSCAR/OSCAR-#{version}.dmg",
       verified: "apneaboard.com/OSCAR/"

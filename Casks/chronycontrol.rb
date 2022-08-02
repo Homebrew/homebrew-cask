@@ -15,9 +15,9 @@ cask "chronycontrol" do
   app "ChronyControl.app"
 
   uninstall launchctl: [
-    "org.tuxfamily.chronyd",
-    "org.tuxfamily.chronyc",
-  ],
+              "org.tuxfamily.chronyd",
+              "org.tuxfamily.chronyc",
+            ],
             delete:    [
               "/etc/chrony.d",
               "/var/db/chrony",

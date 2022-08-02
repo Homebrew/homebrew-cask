@@ -1,12 +1,17 @@
 cask "mysteriumvpn" do
-  version "10.9.0"
-  sha256 "da4fd2e6c8ac3deaa3221ef30fb7a28321dcf5456e22733d5109f4c9f7b3a647"
+  version "10.13.1"
+  sha256 "f03da50edb88a6796740c27a1f1b20c108bd52aea1921722e68905308b81122f"
 
-  url "https://github.com/mysteriumnetwork/mysterium-vpn-desktop/releases/download/#{version}/MysteriumVPN-#{version}.dmg",
+  url "https://github.com/mysteriumnetwork/mysterium-vpn-desktop/releases/download/#{version}/MysteriumVPN-#{version}-universal.dmg",
       verified: "github.com/mysteriumnetwork/mysterium-vpn-desktop/"
   name "Mysterium VPN"
   desc "VPN client"
   homepage "https://www.mysteriumvpn.com/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "MysteriumVPN.app"
 

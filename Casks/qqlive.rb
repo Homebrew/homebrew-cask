@@ -1,6 +1,6 @@
 cask "qqlive" do
-  version "2.39.1.53272"
-  sha256 "f7a8641c2b33b6fe1e4b5204c4c2abb8bce5eb873b1c4cad2e6caaa031960e34"
+  version "2.50.1.53369"
+  sha256 "69bcb1a7e0071ba3a74df871b1f071e3af86445558e878ed642bd108b7cb41f5"
 
   url "https://dldir1.qq.com/qqtv/mac/QQLive_distribute_universal_#{version}.dmg"
   name "QQLive"
@@ -15,7 +15,7 @@ cask "qqlive" do
   end
 
   auto_updates true
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :el_capitan"
 
   app "QQLive.app"
 

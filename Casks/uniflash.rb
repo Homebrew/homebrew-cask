@@ -1,8 +1,8 @@
 cask "uniflash" do
-  version "7.0.0.3615"
-  sha256 "d858da86d2ebbedd8c85173663eaf877e284e92f685a463dcbf2fa2efcd47ca7"
+  version "8.0.0.4026"
+  sha256 "d423e518c4a5050261fb0f4dda8e54bd5c866588ea3966cb50e2103833dce85a"
 
-  url "https://downloads.ti.com/ccs/esd/uniflash/uniflash_sl.#{version}.dmg"
+  url "https://dr-download.ti.com/software-development/software-programming-tool/MD-QeJBJLj8gq/#{version.major_minor_patch}/uniflash_sl.#{version}.dmg"
   name "TI UniFlash"
   desc "Flash tool for microcontrollers"
   homepage "https://www.ti.com/tool/UNIFLASH"

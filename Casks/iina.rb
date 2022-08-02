@@ -1,6 +1,6 @@
 cask "iina" do
   version "1.3.0"
-  sha256 "6e2693e46c3fbc644eac6ed1d4b241e4475508e5d3ee5bbe791320cf84d342d5"
+  sha256 "b50c416828005e1eec0dc8066c961efcc389e6be1a5a595541ea62d48d31a391"
 
   url "https://github.com/iina/iina/releases/download/v#{version}/IINA.v#{version}.dmg",
       verified: "github.com/iina/iina/"

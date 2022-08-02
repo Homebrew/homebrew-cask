@@ -9,4 +9,8 @@ cask "jedit" do
   homepage "http://www.jedit.org/"
 
   app "jEdit.app"
+
+  caveats do
+    depends_on_java "11+"
+  end
 end

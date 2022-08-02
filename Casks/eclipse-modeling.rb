@@ -1,12 +1,12 @@
 cask "eclipse-modeling" do
   arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
-  version "4.23.0,2022-03"
+  version "4.24.0,2022-06"
 
   if Hardware::CPU.intel?
-    sha256 "865491d49178e5114005d3479926101ba420925c0f337270c90476f4a157bed4"
+    sha256 "5b0823ae92a3c1fcecb6434f8729f30f4cbfe25e79131625597ddd6d42f4cfb0"
   else
-    sha256 "b87d011c1d6e739619b76d101958d2393025d958330539db08d410d9f1032cb2"
+    sha256 "efe4598f84ef21de4c8f002dc07c40383c2e4f03665892801f6f575bbc92ea25"
   end
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-modeling-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&r=1"

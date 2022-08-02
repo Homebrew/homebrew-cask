@@ -1,6 +1,6 @@
 cask "microsoft-office" do
-  version "16.61.22050700"
-  sha256 "8fd1593ef575e2c15cffca619af7564b1f6d158c98f9348ccc1ce002e472ffc4"
+  version "16.63.22070801"
+  sha256 "4c0e722e203fb5752888689cc895cf8d94af6ae759488ff69e7b23bd1d9b1abe"
 
   url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Office_#{version}_Installer.pkg",
       verified: "officecdnmac.microsoft.com/"
@@ -22,7 +22,7 @@ cask "microsoft-office" do
     onedrive
   ]
   depends_on cask: "microsoft-auto-update"
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :catalina"
 
   pkg "Microsoft_Office_#{version}_Installer.pkg",
       choices: [
@@ -34,18 +34,18 @@ cask "microsoft-office" do
       ]
 
   uninstall pkgutil:   [
-    "com.microsoft.OneDrive",
-    "com.microsoft.package.DFonts",
-    "com.microsoft.package.Frameworks",
-    "com.microsoft.package.Microsoft_AutoUpdate.app",
-    "com.microsoft.package.Microsoft_Excel.app",
-    "com.microsoft.package.Microsoft_OneNote.app",
-    "com.microsoft.package.Microsoft_Outlook.app",
-    "com.microsoft.package.Microsoft_PowerPoint.app",
-    "com.microsoft.package.Microsoft_Word.app",
-    "com.microsoft.package.Proofing_Tools",
-    "com.microsoft.pkg.licensing",
-  ],
+              "com.microsoft.OneDrive",
+              "com.microsoft.package.DFonts",
+              "com.microsoft.package.Frameworks",
+              "com.microsoft.package.Microsoft_AutoUpdate.app",
+              "com.microsoft.package.Microsoft_Excel.app",
+              "com.microsoft.package.Microsoft_OneNote.app",
+              "com.microsoft.package.Microsoft_Outlook.app",
+              "com.microsoft.package.Microsoft_PowerPoint.app",
+              "com.microsoft.package.Microsoft_Word.app",
+              "com.microsoft.package.Proofing_Tools",
+              "com.microsoft.pkg.licensing",
+            ],
             # Frameworks, DFonts and ProofingTools remain in each application after pkg uninstall, delete them
             delete:    [
               "/Applications/Microsoft Excel.app",
@@ -61,7 +61,8 @@ cask "microsoft-office" do
               "com.microsoft.OneDriveStandaloneUpdater",
               "com.microsoft.OneDriveStandaloneUpdaterDaemon",
               "com.microsoft.OneDriveUpdaterDaemon",
-            ]
+            ],
+            quit:      "com.microsoft.autoupdate2"
 
   zap trash: [
     "~/Library/Application Scripts/com.microsoft.errorreporting",

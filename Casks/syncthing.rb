@@ -1,18 +1,12 @@
 cask "syncthing" do
-  version "1.20.1-1"
-  sha256 "cb30510e035c7abbe8d0d4ca9a6718ce95b2aa6042efd84f2dd506a6eea67317"
+  version "1.20.3-1"
+  sha256 "92cf4d7806759e8951760fc2f01cc951ab7fb59431bd7d1b99ac9c4543fba8f5"
 
   url "https://github.com/syncthing/syncthing-macos/releases/download/v#{version}/Syncthing-#{version}.dmg",
       verified: "github.com/syncthing/syncthing-macos/"
   name "Syncthing"
   desc "Real time file synchronization software"
   homepage "https://syncthing.net/"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-    regex(%r{href=.*?/tag/v?(\d+(?:[._-]\d+)+)["' >]}i)
-  end
 
   auto_updates true
   depends_on macos: ">= :sierra"

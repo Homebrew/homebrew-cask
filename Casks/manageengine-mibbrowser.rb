@@ -4,7 +4,12 @@ cask "manageengine-mibbrowser" do
 
   url "https://www.manageengine.com/products/mibbrowser-free-tool/#{version.csv.second}/ManageEngine_MibBrowser_FreeTool.dmg"
   name "ManageEngine MibBrowser"
+  desc "Tool for monitoring SNMP enabled devices"
   homepage "https://www.manageengine.com/products/mibbrowser-free-tool/"
+
+  livecheck do
+    skip "No version information available"
+  end
 
   app "ManageEngine MibBrowser.app"
 end

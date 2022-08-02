@@ -1,7 +1,7 @@
 cask "dropbox" do
   arch = Hardware::CPU.intel? ? "" : "&arch=arm64"
 
-  version "149.4.4568"
+  version "153.4.3932"
   sha256 :no_check
 
   url "https://www.dropbox.com/download?plat=mac&full=1#{arch}"
@@ -29,20 +29,31 @@ cask "dropbox" do
 
   zap trash: [
     "~/.dropbox",
+    "~/Library/Application Scripts/com.dropbox.alternatenotificationservice",
+    "~/Library/Application Scripts/com.dropbox.client.crashpad",
     "~/Library/Application Scripts/com.dropbox.foldertagger",
+    "~/Library/Application Scripts/com.getdropbox.dropbox.fileprovider",
     "~/Library/Application Scripts/com.getdropbox.dropbox.garcon",
+    "~/Library/Application Scripts/G7HH3F8CAK.com.getdropbox.dropbox.sync",
     "~/Library/Application Support/Dropbox",
+    "~/Library/Application Support/DropboxElectron/",
+    "~/Library/Application Support/FileProvider/com.getdropbox.dropbox.fileprovider",
     "~/Library/Caches/CloudKit/com.apple.bird/iCloud.com.getdropbox.Dropbox",
     "~/Library/Caches/com.dropbox.DropboxMacUpdate",
     "~/Library/Caches/com.getdropbox.dropbox",
     "~/Library/Caches/com.getdropbox.DropboxMetaInstaller",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.dropbox.DropboxMacUpdate",
     "~/Library/Containers/com.dropbox.activityprovider",
+    "~/Library/Containers/com.dropbox.alternatenotificationservice",
     "~/Library/Containers/com.dropbox.foldertagger",
+    "~/Library/Containers/com.getdropbox.dropbox.fileprovider",
     "~/Library/Containers/com.getdropbox.dropbox.garcon",
     "~/Library/Dropbox",
+    "~/Library/HTTPStorages/com.getdropbox.dropbox",
+    "~/Library/HTTPStorages/com.dropbox.DropboxMacUpdate",
     "~/Library/Group Containers/com.dropbox.client.crashpad",
     "~/Library/Group Containers/com.getdropbox.dropbox.garcon",
+    "~/Library/Group Containers/*.com.getdropbox.dropbox.sync",
     "~/Library/LaunchAgents/com.dropbox.DropboxMacUpdate.agent.plist",
     "~/Library/Logs/Dropbox_debug.log",
     "~/Library/Preferences/com.dropbox.DropboxMacUpdate.plist",

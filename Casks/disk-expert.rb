@@ -1,6 +1,6 @@
 cask "disk-expert" do
-  version "3.7.1,366"
-  sha256 "ae2f6b7df2bbe14955a5451e30bdef22c1fe51cf0bd7b48da2cb4a9b5149c162"
+  version "3.8,372"
+  sha256 "1d2d2adbb080de90db79f806f911f7bedc6178d39503502a7046b363799b3922"
 
   url "https://nektony.com/pro-support/disk-expert/update/update_#{version.csv.first}b#{version.csv.second}.zip"
   name "Disk Expert"
@@ -11,8 +11,6 @@ cask "disk-expert" do
     url "https://nektony.com/pro-support/disk-expert/update/update.xml"
     strategy :sparkle
   end
-
-  depends_on macos: ">= :yosemite"
 
   app "Disk Expert #{version.major}.app"
 

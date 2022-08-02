@@ -1,12 +1,12 @@
 cask "appcode" do
   arch = Hardware::CPU.intel? ? "" : "-aarch64"
 
-  version "2022.1.1,221.5591.52"
+  version "2022.1.4,221.6008.18"
 
   if Hardware::CPU.intel?
-    sha256 "0875d0c80c876622df7d4c6d6377d384bd6be4c5bed11d612467a0958870dfe9"
+    sha256 "cfe9e6861a6f1ee74e0628733e171534e87ead124af45c0fe264fa2b93f4a476"
   else
-    sha256 "0eaf59b15599cf80a333a613330cbc5aa7fb1cd284367ea1083e3b478676bc3c"
+    sha256 "f379ba2ba5bdbd11a73615ba2268311f73c830b65531c282cce7179080bd80d1"
   end
 
   url "https://download.jetbrains.com/objc/AppCode-#{version.csv.first}#{arch}.dmg"
@@ -30,7 +30,7 @@ cask "appcode" do
 
   uninstall_postflight do
     ENV["PATH"].split(File::PATH_SEPARATOR).map { |path| File.join(path, "appcode") }.each do |path|
-      if File.exist?(path) &&
+      if File.readable?(path) &&
          File.readlines(path).grep(/# see com.intellij.idea.SocketLock for the server side of this interface/).any?
         File.delete(path)
       end

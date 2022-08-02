@@ -1,6 +1,6 @@
 cask "enclave" do
-  version "2022.04.22"
-  sha256 "f835a183111992548c6dc247a101cd0f6b8625e093cc0e6f83a904616d917905"
+  version "2022.06.20"
+  sha256 "93fff245b9b5df4c572bfb0f60afa5b6581eaaf0d31ed0383b9715201c8aad58"
 
   url "https://release.enclave.io/enclave_osx-installer-x64-stable-#{version}.pkg"
   name "Enclave"
@@ -11,8 +11,6 @@ cask "enclave" do
     url "https://install.enclave.io/latest/osx-homebrew-version.txt"
     regex(/(\d+(?:\.\d+)*)/i)
   end
-
-  depends_on macos: ">= :yosemite"
 
   pkg "enclave_osx-installer-x64-stable-#{version}.pkg"
   binary "/Applications/enclave/enclave"

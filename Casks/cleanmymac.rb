@@ -1,6 +1,6 @@
 cask "cleanmymac" do
-  version "4.10.6,41006.0.2205091658"
-  sha256 "bc6bfcc7bbfe70d21fee4fa615837026c2a5de9d4b317a19f2530a434dc785bc"
+  version "4.11.1,41101.0.2207131611"
+  sha256 "a0f7f0788f1cc2b95c218128721ffeede45feeb4a0a40fc85b96f3c72008c2c1"
 
   url "https://dl.devmate.com/com.macpaw.CleanMyMac#{version.major}/CleanMyMacX.dmg",
       verified: "dl.devmate.com/"
@@ -19,9 +19,9 @@ cask "cleanmymac" do
   app "CleanMyMac X.app"
 
   uninstall delete:     [
-    "/Library/LaunchDaemons/com.macpaw.CleanMyMac#{version.major}.Agent.plist",
-    "/Library/PrivilegedHelperTools/com.macpaw.CleanMyMac#{version.major}.Agent",
-  ],
+              "/Library/LaunchDaemons/com.macpaw.CleanMyMac#{version.major}.Agent.plist",
+              "/Library/PrivilegedHelperTools/com.macpaw.CleanMyMac#{version.major}.Agent",
+            ],
             launchctl:  [
               "com.macpaw.CleanMyMac#{version.major}.Agent",
               "com.macpaw.CleanMyMac#{version.major}.HealthMonitor",

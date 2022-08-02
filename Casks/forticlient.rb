@@ -24,11 +24,11 @@ cask "forticlient" do
   end
 
   uninstall quit:      [
-    "com.fortinet.FctMiscAgent",
-    "com.fortinet.FortiClient",
-    "com.fortinet.FortiClient.helper",
-    "com.fortinet.FortiClientAgent",
-  ],
+              "com.fortinet.FctMiscAgent",
+              "com.fortinet.FortiClient",
+              "com.fortinet.FortiClient.helper",
+              "com.fortinet.FortiClientAgent",
+            ],
             pkgutil:   [
               "com.fortinet.forticlient.FortiClient",
               "com.fortinet.forticlient.FortiClientx86",

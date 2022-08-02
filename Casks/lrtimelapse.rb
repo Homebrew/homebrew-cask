@@ -1,6 +1,6 @@
 cask "lrtimelapse" do
-  version "6.0.4"
-  sha256 "103563eca84c08bcf3d6d897057228d6a9e79bd650d96048fe58cd0edb47e528"
+  version "6.0.6"
+  sha256 "6be54186664fa9a4b06a02f306c297e6bd180127f27e51ca78967a9b285c1cc8"
 
   url "https://lrtimelapse.com/files/lrtimelapse-#{version.major}-mac/?version=#{version.dots_to_hyphens}"
   name "LRTimelapse"
@@ -15,10 +15,10 @@ cask "lrtimelapse" do
   pkg "LRTimelapse #{version} Installer.pkg"
 
   uninstall script:  {
-    executable: "/usr/local/LRTimelapse/uninstall.sh",
-    input:      "\n",
-    sudo:       true,
-  },
+              executable: "/usr/local/LRTimelapse/uninstall.sh",
+              input:      "\n",
+              sudo:       true,
+            },
             pkgutil: [
               "com.lrtimelapse.LRAddons",
               "com.lrtimelapse.LRTimelapse#{version.major}",

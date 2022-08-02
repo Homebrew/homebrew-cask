@@ -13,7 +13,5 @@ cask "noun-project" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :yosemite"
-
   app "Noun Project.app"
 end

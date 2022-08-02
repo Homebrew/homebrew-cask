@@ -7,7 +7,5 @@ cask "ios-saver" do
   name "iOS 8 Lockscreen for OSX"
   homepage "http://littleendiangamestudios.com/project/ios-8-screen-saver/"
 
-  depends_on macos: ">= :yosemite"
-
   screen_saver "iOS Saver.saver"
 end

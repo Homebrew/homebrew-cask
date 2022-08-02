@@ -1,12 +1,12 @@
 cask "ivpn" do
   arch = Hardware::CPU.intel? ? "" : "-arm64"
 
-  version "3.8.7"
+  version "3.9.0"
 
   if Hardware::CPU.intel?
-    sha256 "e1e9d166b55af4103a85198b4d195622a1a1820b8d39f4201b9ff012a6b3bab1"
+    sha256 "1401aebc95034a9f4ec78fec99cac37ea8af9f0723e2ad40848f02414c0749c8"
   else
-    sha256 "7ea309b19f344d291395b362feaa190271d5ac4c37f4480978cb6b8e442323b2"
+    sha256 "68f44e4bdc734cf659268ab4905d09384b7c7d7899f3a71fba6ae71732579bb4"
   end
 
   url "https://repo.ivpn.net/macos/bin/IVPN-#{version}#{arch}.dmg"
@@ -29,9 +29,9 @@ cask "ivpn" do
   end
 
   uninstall delete:    [
-    "/Library/Application Support/IVPN",
-    "/Library/PrivilegedHelperTools/net.ivpn.client.Helper",
-  ],
+              "/Library/Application Support/IVPN",
+              "/Library/PrivilegedHelperTools/net.ivpn.client.Helper",
+            ],
             launchctl: "net.ivpn.client.Helper",
             quit:      "net.ivpn.client.IVPN"
 

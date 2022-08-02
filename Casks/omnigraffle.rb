@@ -1,13 +1,5 @@
 cask "omnigraffle" do
-  if MacOS.version <= :yosemite
-    version "6.6.2"
-    sha256 "f0b05a654686c42703cddef646a2519235b45d26bd06988a6e644aa96c0eb828"
-    url "https://downloads.omnigroup.com/software/MacOSX/10.10/OmniGraffle-#{version}.dmg"
-
-    livecheck do
-      skip "Legacy version for Yosemite"
-    end
-  elsif MacOS.version <= :el_capitan
+  if MacOS.version <= :el_capitan
     version "7.5"
     sha256 "d8d8963a85ee34270d7d0148aaaa7aee75bc7d3fffc1bb89e64626546c943d34"
     url "https://downloads.omnigroup.com/software/MacOSX/10.11/OmniGraffle-#{version}.dmg"
@@ -55,7 +47,6 @@ cask "omnigraffle" do
   homepage "https://www.omnigroup.com/omnigraffle/"
 
   auto_updates true
-  depends_on macos: ">= :yosemite"
 
   app "OmniGraffle.app"
 

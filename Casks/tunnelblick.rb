@@ -20,7 +20,6 @@ cask "tunnelblick" do
   end
 
   auto_updates true
-  depends_on macos: ">= :yosemite"
 
   app "Tunnelblick.app"
 
@@ -29,9 +28,9 @@ cask "tunnelblick" do
   end
 
   uninstall launchctl: [
-    "net.tunnelblick.tunnelblick.LaunchAtLogin",
-    "net.tunnelblick.tunnelblick.tunnelblickd",
-  ],
+              "net.tunnelblick.tunnelblick.LaunchAtLogin",
+              "net.tunnelblick.tunnelblick.tunnelblickd",
+            ],
             delete:    "/Library/Application Support/Tunnelblick",
             quit:      "net.tunnelblick.tunnelblick"
 

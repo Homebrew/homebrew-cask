@@ -1,11 +1,11 @@
 cask "paddle-easydl" do
-  version "1.2.0,1200"
-  sha256 "ca43f45dbb926731d374bcb276b5535b4fc85d3d97b8b152349d44b62ad6e596"
+  version "2.1.0,1463"
+  sha256 "9c9bc5ee9d33c4c159bc23055351acdfd0592d523ee7c0e7462a09498d8232f2"
 
   url "https://aip-static.cdn.bcebos.com/paddle-desktop/releases/#{version.csv.first}/%E9%A3%9E%E6%A1%A8EasyDL-#{version.csv.first}.#{version.csv.second}.dmg",
       verified: "aip-static.cdn.bcebos.com/paddle-desktop"
   name "飞桨EasyDL"
-  desc "飞桨EasyDL-桌面版 提供本地一站式模型训练与部署能力，支持零基础定制高精度模型，本地高效管理数据与模型，一键安装即可使用"
+  desc "Local one-stop model training and deployment platform"
   homepage "https://ai.baidu.com/easydl/paddle"
 
   livecheck do
@@ -24,7 +24,7 @@ cask "paddle-easydl" do
 
   zap trash: [
     "~/Library/Application Support/paddle-desktop",
-    "~/Library/Preferences/com.baidu.paddle.desktop",
     "~/Library/Logs/paddle-desktop",
+    "~/Library/Preferences/com.baidu.paddle.desktop",
   ]
 end

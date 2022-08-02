@@ -7,6 +7,11 @@ cask "diffmerge" do
   desc "Visually compare and merge files"
   homepage "https://www.sourcegear.com/diffmerge/"
 
+  livecheck do
+    url "https://www.sourcegear.com/diffmerge/downloads.html"
+    regex(/href=.*?DiffMerge[._-]v?(\d+(?:\.\d+)+)\.intel\.stable\.dmg/i)
+  end
+
   app "DiffMerge.app"
   binary "Extras/diffmerge.sh", target: "diffmerge"
   manpage "Extras/diffmerge.1"

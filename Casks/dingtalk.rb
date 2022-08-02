@@ -1,11 +1,11 @@
 cask "dingtalk" do
   if Hardware::CPU.intel?
-    version "6.5.10.5"
-    sha256 "ba55e734fcddbd82e9cf210dc07b84965ef76b54476d191c94ebd1836d652aaa"
+    version "6.5.30.16"
+    sha256 "7a664ef4b8940f7cee706ccbd67fe4cf537d6a7535a3cd92f1cd2fd445c5bb04"
     url "https://dtapp-pub.dingtalk.com/dingtalk-desktop/mac_dmg/Release/DingTalk_v#{version}.dmg"
   else
-    version "6.5.12.2"
-    sha256 "ef9b1afdf2d564a074a1bd05a1dd50fb81710e5e1a71496c1bbf83f1276b1d6a"
+    version "6.5.32.10"
+    sha256 "f10fcd3cb849cb7b7d8faae73a26d0ad121fe8e768435c7587ad3d736326ac63"
     url "https://dtapp-pub.dingtalk.com/dingtalk-desktop/mac_dmg/Release/M1-Beta/DingTalk-ARM64-#{version}.dmg"
   end
 

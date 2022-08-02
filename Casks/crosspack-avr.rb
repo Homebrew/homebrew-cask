@@ -15,10 +15,10 @@ cask "crosspack-avr" do
   pkg "CrossPack-AVR.pkg"
 
   uninstall script:  {
-    executable: "/usr/local/CrossPack-AVR/uninstall",
-    input:      ["Yes"],
-    sudo:       true,
-  },
+              executable: "/usr/local/CrossPack-AVR/uninstall",
+              input:      ["Yes"],
+              sudo:       true,
+            },
             pkgutil: "at.obdev.CrossPack-AVR"
 
   caveats do

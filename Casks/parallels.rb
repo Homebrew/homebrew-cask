@@ -1,6 +1,6 @@
 cask "parallels" do
-  version "17.1.3-51565"
-  sha256 "f42369d9ce20039fd7c1c2aeb61f87ee469abd3ab26e98c8d71db6c9e8ce696d"
+  version "17.1.4-51567"
+  sha256 "8232f140e4c5b95821bf5063fb37db356f7bab520ddabbab4a73d08b5de0cd10"
 
   url "https://download.parallels.com/desktop/v#{version.major}/#{version}/ParallelsDesktop-#{version}.dmg"
   name "Parallels Desktop"
@@ -42,15 +42,15 @@ cask "parallels" do
   end
 
   uninstall delete: [
-    "/usr/local/bin/prl_convert",
-    "/usr/local/bin/prl_disk_tool",
-    "/usr/local/bin/prl_perf_ctl",
-    "/usr/local/bin/prlcore2dmp",
-    "/usr/local/bin/prlctl",
-    "/usr/local/bin/prlexec",
-    "/usr/local/bin/prlsrvctl",
-    "/Library/Preferences/Parallels",
-  ],
+              "/usr/local/bin/prl_convert",
+              "/usr/local/bin/prl_disk_tool",
+              "/usr/local/bin/prl_perf_ctl",
+              "/usr/local/bin/prlcore2dmp",
+              "/usr/local/bin/prlctl",
+              "/usr/local/bin/prlexec",
+              "/usr/local/bin/prlsrvctl",
+              "/Library/Preferences/Parallels",
+            ],
             signal: ["TERM", "com.parallels.desktop.console"]
 
   zap trash: [

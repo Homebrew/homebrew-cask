@@ -13,8 +13,6 @@ cask "boom" do
     strategy :extract_plist
   end
 
-  depends_on macos: ">= :yosemite"
-
   app "Boom 2.app"
 
   uninstall kext:      "com.globaldelight.driver.Boom2Device",

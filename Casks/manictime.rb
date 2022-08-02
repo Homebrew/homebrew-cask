@@ -1,20 +1,27 @@
 cask "manictime" do
-  version "2.2.0"
-  sha256 "8bbb13a603e1c3286e51b2eb8bedfce9963c8e388ef982650b743032fc0896ea"
+  arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  url "https://cdn.manictime.com/setup/mac/v#{version.dots_to_underscores}/ManicTime-osx-x64-v#{version}.dmg"
+  version "2.3.0"
+
+  if Hardware::CPU.intel?
+    sha256 "2ececb9dfcadfd82fa4f994ae12f09ca5df0d40977b5b0720157aead93ae2b3d"
+  else
+    sha256 "11dac09661c4a22881c8b6a042c144127aaa0b92ab6321ebe1ea136f5201bf02"
+  end
+
+  url "https://cdn.manictime.com/setup/mac/v#{version.dots_to_underscores}/manictime-#{version}-osx-#{arch}.dmg"
   name "ManicTime"
   desc "Time tracker that automatically collects computer usage data"
   homepage "https://www.manictime.com/Mac"
 
   livecheck do
     url "https://www.manictime.com/mac/download"
-    regex(/ManicTime[._-]osx[._-]x64[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/manictime[._-]v?(\d+(?:\.\d+)+)[._-]osx[._-]#{arch}\.dmg/i)
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
-  pkg "ManicTime-osx-x64-v#{version}.pkg"
+  pkg "manictime-#{version}-osx-#{arch}.pkg"
 
   uninstall pkgutil: "com.finkit.manictime.tracker"
 

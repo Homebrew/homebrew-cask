@@ -1,6 +1,6 @@
 cask "thunder" do
-  version "4.2.1.65254"
-  sha256 "7d9f5fc6248ce8f9b0b283705469a66ea462eb184e49af4cd697da67bd862b84"
+  version "5.0.2.65548"
+  sha256 "659920891c110a75131777a398a635b346cf5ef0d39ea400ae07996c421c2c49"
 
   url "https://down.sandai.net/mac/thunder_#{version}.dmg",
       verified: "down.sandai.net/mac/"
@@ -15,7 +15,7 @@ cask "thunder" do
   end
 
   auto_updates true
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :high_sierra"
 
   app "Thunder.app"
 

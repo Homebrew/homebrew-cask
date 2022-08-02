@@ -6,8 +6,8 @@ cask "nextcloud" do
     url "https://github.com/nextcloud/desktop/releases/download/v#{version.major_minor_patch}/Nextcloud-#{version}.pkg",
         verified: "github.com/nextcloud/desktop/"
   else
-    version "3.5.1"
-    sha256 "594b98e1a316b931542c35cb7c179842469fc49c1fe4fad67d2744dac961d8c4"
+    version "3.5.3"
+    sha256 "7da949bb4adf812ba3ff594ed5fbb39c49d85f841f47ce018630156b0b3cffb0"
 
     url "https://github.com/nextcloud/desktop/releases/download/v#{version}/Nextcloud-#{version}.pkg",
         verified: "github.com/nextcloud/desktop/"
@@ -22,8 +22,6 @@ cask "nextcloud" do
     strategy :page_match
     regex(/Nextcloud[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
   end
-
-  depends_on macos: ">= :yosemite"
 
   pkg "Nextcloud-#{version}.pkg"
   binary "/Applications/Nextcloud.app/Contents/MacOS/nextcloudcmd"

@@ -6,8 +6,6 @@ cask "nomad" do
   name "NoMAD"
   homepage "https://nomad.menu/"
 
-  depends_on macos: ">= :yosemite"
-
   pkg "NoMAD.pkg"
 
   uninstall pkgutil: "com.trusourcelabs.NoMAD"

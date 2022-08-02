@@ -1,6 +1,6 @@
 cask "keybase" do
-  version "5.9.2,20220131221715,a25f15e42b"
-  sha256 "dfdba447f395862a6efa38b061b202b49e0a1c549c8a24c53fb189567564e376"
+  version "6.0.1,20220609162338,0fc9feea3d"
+  sha256 "eda297371c83ce8f58e93be20a19ed9112e4e6755022ed709a8180bdfbd1449d"
 
   url "https://prerelease.keybase.io/darwin-updates/Keybase-#{version.csv.first}-#{version.csv.second}%2B#{version.csv.third}.zip"
   name "Keybase"
@@ -27,9 +27,9 @@ cask "keybase" do
   end
 
   uninstall delete:    [
-    "/Library/Logs/keybase*",
-    "/Library/PrivilegedHelperTools/keybase.Helper",
-  ],
+              "/Library/Logs/keybase*",
+              "/Library/PrivilegedHelperTools/keybase.Helper",
+            ],
             launchctl: "keybase.Helper",
             signal:    [
               ["TERM", "keybase.Electron"],
@@ -43,11 +43,11 @@ cask "keybase" do
             }
 
   zap trash: [
-    "~/Library/Application Support/Keybase",
-    "~/Library/Caches/Keybase",
-    "~/Library/Group Containers/keybase",
-    "~/Library/Logs/Keybase*",
-    "~/Library/Preferences/keybase*",
-  ],
+        "~/Library/Application Support/Keybase",
+        "~/Library/Caches/Keybase",
+        "~/Library/Group Containers/keybase",
+        "~/Library/Logs/Keybase*",
+        "~/Library/Preferences/keybase*",
+      ],
       rmdir: "/keybase"
 end

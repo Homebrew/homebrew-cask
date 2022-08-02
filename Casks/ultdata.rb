@@ -8,7 +8,6 @@ cask "ultdata" do
   homepage "https://www.tenorshare.com/products/iphone-data-recovery.html"
 
   auto_updates true
-  depends_on macos: ">= :yosemite"
 
   app "UltData.app"
 

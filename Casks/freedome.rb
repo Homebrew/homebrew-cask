@@ -1,5 +1,5 @@
 cask "freedome" do
-  version "2.43.809.0"
+  version "2.53.324.0"
   sha256 :no_check
 
   url "https://download.sp.f-secure.com/freedome/installer/2/Freedome.pkg"
@@ -19,8 +19,10 @@ cask "freedome" do
             launchctl: [
               "com.f-secure.freedome.gui",
               "com.f-secure.freedome.uninstall",
+              "com.f-secure.fsvpn-ike-agent.production.macos",
               "com.f-secure.fsvpn-service-helper.production",
               "com.f-secure.fsvpn-service.production",
               "com.f-secure.fsvpn-upstream.production",
+              "fsvpn-ike-agent.production.macos",
             ]
 end

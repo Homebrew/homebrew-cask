@@ -1,6 +1,6 @@
 cask "adobe-acrobat-reader" do
-  version "22.001.20112"
-  sha256 "b625975542f1ebc2c46a172276bdf2305a7d9d8d7cfc1c8ce3eff12467fa2e7f"
+  version "22.001.20169"
+  sha256 "3329f1d68e74dbd541152dd6b20cc81fb4d7102b396b091921586068bc8055cf"
 
   url "https://ardownload2.adobe.com/pub/adobe/reader/mac/AcrobatDC/#{version.no_dots}/AcroRdrDC_#{version.no_dots}_MUI.dmg"
   name "Adobe Acrobat Reader DC"
@@ -17,10 +17,10 @@ cask "adobe-acrobat-reader" do
   pkg "AcroRdrDC_#{version.no_dots}_MUI.pkg"
 
   uninstall pkgutil:   [
-    "com.adobe.acrobat.DC.reader.*",
-    "com.adobe.armdc.app.pkg",
-    "com.adobe.RdrServicesUpdater",
-  ],
+              "com.adobe.acrobat.DC.reader.*",
+              "com.adobe.armdc.app.pkg",
+              "com.adobe.RdrServicesUpdater",
+            ],
             delete:    "/Applications/Adobe Acrobat Reader DC.app",
             quit:      [
               "com.adobe.AdobeRdrCEF",

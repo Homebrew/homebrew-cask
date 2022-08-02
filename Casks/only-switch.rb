@@ -1,6 +1,6 @@
 cask "only-switch" do
-  version "2.3"
-  sha256 "408b2186704fecf67005a69d5d1cfbbd34eef438b089409bb3bb658fc8b0ff8c"
+  version "2.3.5"
+  sha256 "1ae759f65d1836ad12015897cb60f0fd5da82862c6528f014e5489ef888529ab"
 
   url "https://github.com/jacklandrin/OnlySwitch/releases/download/release_#{version}/OnlySwitch.dmg"
   name "OnlySwitch"

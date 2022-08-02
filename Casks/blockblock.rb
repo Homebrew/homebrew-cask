@@ -41,5 +41,10 @@ cask "blockblock" do
   desc "Monitors common persistence locations"
   homepage "https://objective-see.com/products/blockblock.html"
 
-  zap trash: "~/Library/Preferences/com.objectiveSee.BlockBlock.plist"
+  zap trash: [
+    "~/Library/Caches/com.objective-see.blockblock.helper",
+    "~/Library/HTTPStorages/com.objective-see.blockblock.helper",
+    "~/Library/Preferences/com.objectiveSee.BlockBlock.plist",
+    "~/Library/Preferences/com.objective-see.blockblock.helper.plist",
+  ]
 end

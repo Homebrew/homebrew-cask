@@ -11,6 +11,9 @@ concurrency:
   group: cache
   cancel-in-progress: true
 
+permissions:
+  contents: read
+
 jobs:
   update:
     if: startsWith(github.repository, 'Homebrew/')

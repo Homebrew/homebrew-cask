@@ -1,6 +1,6 @@
 cask "ipe" do
-  version "7.2.24"
-  sha256 "af72be083497359d9ee61b716a7b8d718fa773383f44227d334323c4ab33275f"
+  version "7.2.26"
+  sha256 "93b9b39373b7dffa44b17e7f99bb1078d2d5742e50ff2940d8feef9a8b42e0fe"
 
   url "https://github.com/otfried/ipe/releases/download/v#{version}/ipe-#{version}-mac.dmg",
       verified: "github.com/otfried/ipe/"
@@ -8,7 +8,10 @@ cask "ipe" do
   desc "Drawing editor for creating figures in PDF format"
   homepage "https://ipe.otfried.org/"
 
-  depends_on macos: ">= :yosemite"
+  livecheck do
+    url :homepage
+    regex(/href=.*?ipe[._-](\d+(?:\.\d+)+)[._-]mac\.dmg/i)
+  end
 
   app "Ipe.app"
 

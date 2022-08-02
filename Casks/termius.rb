@@ -1,7 +1,7 @@
 cask "termius" do
   arch = Hardware::CPU.intel? ? "mac" : "mac-arm64"
 
-  version "7.41.3"
+  version "7.45.3"
   sha256 :no_check
 
   url "https://autoupdate.termius.com/#{arch}/Termius.dmg"
@@ -15,7 +15,7 @@ cask "termius" do
   end
 
   auto_updates true
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :el_capitan"
 
   app "Termius.app"
 

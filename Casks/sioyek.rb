@@ -1,8 +1,8 @@
 cask "sioyek" do
-  version "1.3.0"
-  sha256 "5e60b2d438f72db22b6400dab790015f480765ed5d2f5cc3697b63faada90f29"
+  version "1.4.0"
+  sha256 "3049c03c62b02896ef8bf027281168c439f01a341b586a92a286e7449218d56d"
 
-  url "https://github.com/ahrm/sioyek/releases/download/v#{version}/sioyek-mac.zip",
+  url "https://github.com/ahrm/sioyek/releases/download/v#{version}/sioyek-release-mac.zip",
       verified: "github.com/ahrm/sioyek/"
   name "Sioyek"
   desc "PDF viewer designed for reading research papers and technical books"

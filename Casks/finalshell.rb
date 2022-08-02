@@ -1,5 +1,5 @@
 cask "finalshell" do
-  version "3.9.4"
+  version "3.9.5"
   sha256 :no_check
 
   url "https://www.hostbuf.com/downloads/finalshell_install.pkg"

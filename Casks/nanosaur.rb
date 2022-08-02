@@ -5,11 +5,14 @@ cask "nanosaur" do
   url "https://github.com/jorio/Nanosaur/releases/download/v#{version}/Nanosaur-#{version}-mac.dmg",
       verified: "github.com/jorio/Nanosaur/"
   name "Nanosaur"
-  desc "Science fiction 3rd person shooter game from Pangea Software"
-  homepage "https://pangeasoft.net/nano/"
+  desc "Dinosaur 3rd person shooter game from Pangea Software"
+  homepage "https://jorio.itch.io/nanosaur"
 
   app "Nanosaur.app"
-  artifact "Documentation", target: "#{ENV["HOME"]}/Library/Application Support/Nanosaur"
+  artifact "Documentation", target: "#{Dir.home}/Library/Application Support/Nanosaur"
 
-  zap trash: "~/Library/Preferences/Nanosaur"
+  zap trash: [
+    "~/Library/Preferences/Nanosaur",
+    "~/Library/Saved Application State/io.jor.nanosaur.savedState",
+  ]
 end

@@ -1,5 +1,5 @@
 cask "nordpass" do
-  version "4.22.22"
+  version "4.27.16"
   sha256 :no_check
 
   url "https://downloads.npass.app/mac/NordPass.dmg",
@@ -14,7 +14,7 @@ cask "nordpass" do
   end
 
   auto_updates true
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :el_capitan"
 
   app "NordPass.app"
 

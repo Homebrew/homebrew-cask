@@ -1,5 +1,5 @@
 cask "tuxera-ntfs" do
-  version "2021"
+  version "2021.1"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://tuxera.com/mac/tuxerantfs_#{version}.dmg"
@@ -17,9 +17,9 @@ cask "tuxera-ntfs" do
   pkg ".packages/Flat/Install Tuxera NTFS.mpkg"
 
   uninstall quit:    [
-    "com.tuxera.Tuxera-NTFS",
-    "com.tuxera.filesystems.ntfs.agent",
-  ],
+              "com.tuxera.Tuxera-NTFS",
+              "com.tuxera.filesystems.ntfs.agent",
+            ],
             pkgutil: [
               "com.tuxera.pkg.Tuxera_NTFS",
               "com.tuxera.pkg.Tuxera_NTFS_compat",

@@ -3,8 +3,8 @@ cask "microsoft-auto-update" do
     version "4.40.21101001"
     sha256 "f638f7e0da9ee659c323f2ede0f176804bfe9a615a8f8b6320bd2e69d91ef2b2"
   else
-    version "4.47.22050700"
-    sha256 "82873fea5ac7d5fdc86a1ca66f6064858bd635cfed00072a013a6949dddaaa24"
+    version "4.49.22070801"
+    sha256 "2749a0163267e8e24d212be09012fcb2c09e840ebc2047507d5088da9629ec04"
   end
 
   url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_AutoUpdate_#{version}_Updater.pkg"
@@ -15,6 +15,7 @@ cask "microsoft-auto-update" do
   livecheck do
     url "https://go.microsoft.com/fwlink/?linkid=830196"
     strategy :header_match
+    regex(/Microsoft[._-]AutoUpdate[._-]v?(\d+(?:\.\d+)+)[._-]Updater\.pkg/i)
   end
 
   auto_updates true
@@ -22,10 +23,10 @@ cask "microsoft-auto-update" do
   pkg "Microsoft_AutoUpdate_#{version}_Updater.pkg"
 
   uninstall quit:      [
-    "com.microsoft.autoupdate2",
-    "com.microsoft.autoupdate.fba",
-    "com.microsoft.errorreporting",
-  ],
+              "com.microsoft.autoupdate2",
+              "com.microsoft.autoupdate.fba",
+              "com.microsoft.errorreporting",
+            ],
             launchctl: [
               "com.microsoft.autoupdate.helpertool",
               "com.microsoft.autoupdate.helper",
@@ -44,19 +45,19 @@ cask "microsoft-auto-update" do
             ]
 
   zap trash: [
-    "~/Library/Application Support/Microsoft AutoUpdate",
-    "~/Library/Caches/Microsoft/uls/com.microsoft.autoupdate.fba",
-    "~/Library/Caches/Microsoft/uls/com.microsoft.autoupdate2",
-    "~/Library/Caches/com.microsoft.autoupdate.fba",
-    "~/Library/Caches/com.microsoft.autoupdate2",
-    "~/Library/Cookies/com.microsoft.autoupdate.fba.binarycookies",
-    "~/Library/Cookies/com.microsoft.autoupdate2.binarycookies",
-    "~/Library/HTTPStorages/com.microsoft.autoupdate.fba",
-    "~/Library/HTTPStorages/com.microsoft.autoupdate2",
-    "~/Library/Preferences/com.microsoft.autoupdate.fba.plist",
-    "~/Library/Preferences/com.microsoft.autoupdate2.plist",
-    "~/Library/Saved Application State/com.microsoft.autoupdate2.savedState",
-  ],
+        "~/Library/Application Support/Microsoft AutoUpdate",
+        "~/Library/Caches/Microsoft/uls/com.microsoft.autoupdate.fba",
+        "~/Library/Caches/Microsoft/uls/com.microsoft.autoupdate2",
+        "~/Library/Caches/com.microsoft.autoupdate.fba",
+        "~/Library/Caches/com.microsoft.autoupdate2",
+        "~/Library/Cookies/com.microsoft.autoupdate.fba.binarycookies",
+        "~/Library/Cookies/com.microsoft.autoupdate2.binarycookies",
+        "~/Library/HTTPStorages/com.microsoft.autoupdate.fba",
+        "~/Library/HTTPStorages/com.microsoft.autoupdate2",
+        "~/Library/Preferences/com.microsoft.autoupdate.fba.plist",
+        "~/Library/Preferences/com.microsoft.autoupdate2.plist",
+        "~/Library/Saved Application State/com.microsoft.autoupdate2.savedState",
+      ],
       rmdir: [
         "~/Library/Caches/Microsoft/uls",
         "~/Library/Caches/Microsoft",

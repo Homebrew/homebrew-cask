@@ -1,9 +1,5 @@
 cask "omniplan" do
-  if MacOS.version <= :yosemite
-    version "2.4.3"
-    sha256 "afbe0b97cdc0147b9cbd71121468529da9230936bb1f8b9329c6d920e9c202a2"
-    url "https://downloads.omnigroup.com/software/MacOSX/10.10/OmniPlan-#{version}.dmg"
-  elsif MacOS.version <= :el_capitan
+  if MacOS.version <= :el_capitan
     version "3.7.3"
     sha256 "1a3ab3a1ea22bdbdf9c1afda8cafc9a2fdf60cb4414f142b621c8758f81720bd"
     url "https://downloads.omnigroup.com/software/MacOSX/10.11/OmniPlan-#{version}.dmg"
@@ -36,7 +32,6 @@ cask "omniplan" do
 
   auto_updates true
   conflicts_with cask: "homebrew/cask-versions/omniplan3"
-  depends_on macos: ">= :yosemite"
 
   app "OmniPlan.app"
 

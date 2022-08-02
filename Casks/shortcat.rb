@@ -1,15 +1,18 @@
 cask "shortcat" do
-  version "0.7.11,91"
-  sha256 "bb62fcb6c644c1ccca356d0ac1ede1b29ebbc1cebe5809e186b3ba295ed51b07"
+  version "0.9.4,157"
+  sha256 "6ca901a8f850363c07825bbe985ee3adb06eedcfbe568afc9374beeff794f730"
 
-  url "https://files.shortcatapp.com/v#{version.csv.first}/Shortcat.zip"
+  url "https://files.shortcat.app/releases/v#{version.csv.first}/Shortcat.zip"
   name "Sproutcube Shortcat"
-  homepage "https://shortcatapp.com/"
+  desc "App that enables mouse-free UI interaction"
+  homepage "https://shortcat.app/"
 
   livecheck do
-    url "https://shortcatapp.com/updates/appcast.xml"
+    url "https://updates.shortcat.app/appcast.xml"
     strategy :sparkle
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "Shortcat.app"
 

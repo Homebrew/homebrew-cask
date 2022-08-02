@@ -12,7 +12,5 @@ cask "removebg" do
     regex(%r{/removebg[._-]for[._-]mac[._-](\d+(?:\.\d+)+)\.dmg}i)
   end
 
-  depends_on macos: ">= :yosemite"
-
   app "remove.bg.app"
 end

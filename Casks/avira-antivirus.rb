@@ -13,9 +13,9 @@ cask "avira-antivirus" do
   pkg "Avira_Antivirus.pkg"
 
   uninstall script:  {
-    executable: "/Applications/Utilities/Avira-Uninstall.app/Contents/MacOS/Avira-Uninstall",
-    sudo:       true,
-  },
+              executable: "/Applications/Utilities/Avira-Uninstall.app/Contents/MacOS/Avira-Uninstall",
+              sudo:       true,
+            },
             pkgutil: "com.avira.pkg.AviraMacSecurity"
 
   zap trash: "~/Library/Saved Application State/com.avira.controlcenter.savedState"

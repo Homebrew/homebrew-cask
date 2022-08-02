@@ -18,9 +18,9 @@ cask "softube-central" do
   pkg "Softube Central-#{version}.pkg"
 
   uninstall quit:    [
-    "org.softube.com.softubecentral",
-    "com.softube.Console1OSD_Release",
-  ],
+              "org.softube.com.softubecentral",
+              "com.softube.Console1OSD_Release",
+            ],
             pkgutil: [
               "com.softube.installerdaemon.helper",
               "org.softube.com.softubecentral",

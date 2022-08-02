@@ -1,12 +1,12 @@
 cask "tabby" do
   arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
 
-  version "1.0.178"
+  version "1.0.183"
 
   if Hardware::CPU.intel?
-    sha256 "79fbb5e0b2b91fb1a658ce217dfa0945d1c1326c792e0ed8384e6931daaca270"
+    sha256 "43ba5fb3d776f2d2ed1128c377aaa9d3420d792579cc9389c32e75b1f9c87a6c"
   else
-    sha256 "4531b3df34beb75150f16ee25e3087d6561d801f115529a2de9e0d28923488c0"
+    sha256 "cfef3fd184b1bdf5070b5aec7dbeae3aa835f624a233e90e200170d51c7ef5a9"
   end
 
   url "https://github.com/Eugeny/tabby/releases/download/v#{version}/tabby-#{version}-macos-#{arch}.zip",

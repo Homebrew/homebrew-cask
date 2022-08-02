@@ -19,8 +19,6 @@ cask "trim-enabler" do
     end
   end
 
-  depends_on macos: ">= :yosemite"
-
   app "Trim Enabler.app"
 
   uninstall delete:    "/Library/PrivilegedHelperTools/org.cindori.TEHelper",

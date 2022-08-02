@@ -15,9 +15,9 @@ cask "cold-turkey-blocker" do
   pkg "Cold_Turkey_Mac_Installer.pkg"
 
   uninstall launchctl: [
-    "launchkeep.cold-turkey",
-    "launchkeep.cold-turkey-all-users",
-  ],
+              "launchkeep.cold-turkey",
+              "launchkeep.cold-turkey-all-users",
+            ],
             pkgutil:   [
               "com.getcoldturkey.coldturkeyblocker",
               "com.getcoldturkey.blocker-chrome-ext",

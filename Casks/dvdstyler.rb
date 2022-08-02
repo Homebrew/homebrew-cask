@@ -13,7 +13,5 @@ cask "dvdstyler" do
     regex(/DVDStyler[._-]?(\d+(?:\.\d+)+)[._-]?MacOSX\.dmg/i)
   end
 
-  depends_on macos: ">= :yosemite"
-
   app "DVDStyler.app"
 end

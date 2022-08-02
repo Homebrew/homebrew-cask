@@ -8,8 +8,6 @@ cask "clipy" do
   desc "Clipboard extension app"
   homepage "https://clipy-app.com/"
 
-  depends_on macos: ">= :yosemite"
-
   app "Clipy.app"
 
   uninstall quit: "com.clipy-app.Clipy"

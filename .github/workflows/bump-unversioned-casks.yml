@@ -21,6 +21,9 @@ env:
   HOMEBREW_DEVELOPER: 1
   HOMEBREW_NO_AUTO_UPDATE: 1
 
+permissions:
+  contents: read
+
 jobs:
   bump-unversioned-casks:
     if: startsWith(github.repository, 'Homebrew/')

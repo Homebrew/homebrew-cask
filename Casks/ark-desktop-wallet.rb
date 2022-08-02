@@ -9,4 +9,8 @@ cask "ark-desktop-wallet" do
   homepage "https://ark.io/"
 
   app "Ark Desktop Wallet.app"
+
+  caveats do
+    discontinued
+  end
 end

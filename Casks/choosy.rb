@@ -31,8 +31,6 @@ cask "choosy" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :yosemite"
-
   uninstall pkgutil: "com.choosyosx.Choosy",
             quit:    "com.choosyosx.Choosy"
 

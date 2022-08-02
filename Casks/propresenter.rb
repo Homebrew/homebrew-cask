@@ -1,6 +1,6 @@
 cask "propresenter" do
-  version "7.9.1,118030598"
-  sha256 "4e30cae8879b65ba40879b81206e2df1b513d409cf1e128c151fb057670783a3"
+  version "7.9.2,118030852"
+  sha256 "61e77b2035c6350c80e8c94464dbeb74dc8cb0466410c74cb910ac9cda2a2cd3"
 
   url "https://renewedvision.com/downloads/propresenter/mac/ProPresenter_#{version.csv.first}_#{version.csv.second}.zip"
   name "ProPresenter"
@@ -8,7 +8,7 @@ cask "propresenter" do
   homepage "https://www.renewedvision.com/propresenter.php"
 
   livecheck do
-    url "https://api.renewedvision.com/v1/pro/upgrade?platform=macos&osVersion=0&appVersion=0&buildNumber=0&includeNotes=0"
+    url "https://api.renewedvision.com/v1/pro/upgrade?platform=macos&osVersion=#{MacOS.full_version}&appVersion=0&buildNumber=0&includeNotes=0"
     regex(%r{/ProPresenter_(\d+(?:\.\d+)+)_(\d+)\.zip}i)
     strategy :page_match do |page, regex|
       match = page.match(regex)
@@ -24,15 +24,15 @@ cask "propresenter" do
   app "ProPresenter.app"
 
   zap trash: [
-    "/Library/Application Support/RenewedVision",
-    "/Library/Caches/com.renewedvision.ProPresenter#{version.major}",
-    "/Users/Shared/Renewed Vision Media",
-    "~/Library/Application Support/RenewedVision/ProPresenter#{version.major}",
-    "~/Library/Caches/com.renewedvision.ProPresenter#{version.major}",
-    "~/Library/Caches/KSCrashReports/ProPresenter #{version.major}",
-    "~/Library/Caches/Sessions/ProPresenter #{version.major}",
-    "~/Library/Preferences/com.renewedvision.ProPresenter#{version.major}.plist",
-  ],
+        "/Library/Application Support/RenewedVision",
+        "/Library/Caches/com.renewedvision.ProPresenter#{version.major}",
+        "/Users/Shared/Renewed Vision Media",
+        "~/Library/Application Support/RenewedVision/ProPresenter#{version.major}",
+        "~/Library/Caches/com.renewedvision.ProPresenter#{version.major}",
+        "~/Library/Caches/KSCrashReports/ProPresenter #{version.major}",
+        "~/Library/Caches/Sessions/ProPresenter #{version.major}",
+        "~/Library/Preferences/com.renewedvision.ProPresenter#{version.major}.plist",
+      ],
       rmdir: [
         "~/Library/Application Support/RenewedVision",
         "~/Library/Caches/KSCrashReports",

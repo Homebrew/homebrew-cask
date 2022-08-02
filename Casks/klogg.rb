@@ -1,8 +1,8 @@
 cask "klogg" do
-  version "20.12.0.813"
-  sha256 "a1814e017aed78d3a75071e5416563c10628035d949783537acd176b62783e1e"
+  version "22.06.0.1289"
+  sha256 "e5df7722d0d851852dd9cc3449dd42d1fef3e74edda8c20dc04b38cb852b0fec"
 
-  url "https://github.com/variar/klogg/releases/download/v#{version.major_minor}/klogg-#{version}-OSX.dmg"
+  url "https://github.com/variar/klogg/releases/download/v#{version.major_minor}/klogg-#{version}-OSX-Qt5.dmg"
   name "Klogg"
   desc "Fast, advanced log explorer"
   homepage "https://github.com/variar/klogg"
@@ -10,7 +10,7 @@ cask "klogg" do
   livecheck do
     url :url
     strategy :github_latest
-    regex(%r{href=.*?/klogg-(\d+(?:\.\d+)*)-OSX\.dmg}i)
+    regex(%r{href=.*?/klogg-(\d+(?:\.\d+)*)-OSX-Qt5\.dmg}i)
   end
 
   app "klogg.app"

@@ -1,12 +1,12 @@
 cask "rubymine" do
   arch = Hardware::CPU.intel? ? "" : "-aarch64"
 
-  version "2022.1.1,221.5591.54"
+  version "2022.2,222.3345.111"
 
   if Hardware::CPU.intel?
-    sha256 "6473b150721c9a10dac176137cc908e7e1ebc3325af5e625c00295cedff23b73"
+    sha256 "d806254af68425089d40a7a302ce10c87283a25399e7b667e8d261b3958f4fbb"
   else
-    sha256 "fb0a09e01f04ae0c74e5f3f7f47217af93059ff11c02ece142b0bdfb13fabcf6"
+    sha256 "c7650443f16ab9cc0b3f6fc701164633bab079f11eeb7aa93b78f2ddc73640a0"
   end
 
   url "https://download.jetbrains.com/ruby/RubyMine-#{version.csv.first}#{arch}.dmg"
@@ -30,7 +30,7 @@ cask "rubymine" do
 
   uninstall_postflight do
     ENV["PATH"].split(File::PATH_SEPARATOR).map { |path| File.join(path, "mine") }.each do |path|
-      if File.exist?(path) &&
+      if File.readable?(path) &&
          File.readlines(path).grep(/# see com.intellij.idea.SocketLock for the server side of this interface/).any?
         File.delete(path)
       end

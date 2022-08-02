@@ -1,8 +1,15 @@
 cask "groestlcoin-core" do
-  version "22.0"
-  sha256 "f737c9b9be23adcb2350890e46d7436d61d783944a83241b50467ba098f718d5"
+  arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
 
-  url "https://github.com/groestlcoin/groestlcoin/releases/download/v#{version}/groestlcoin-#{version}-osx-signed.dmg",
+  version "23.0"
+
+  if Hardware::CPU.intel?
+    sha256 "82e6a1862974ca51bd65aeb79f3e5eb5327b5da1f687921e9fb573c83293051c"
+  else
+    sha256 "7df0f66ee01e0f2e5faade6bd900e4a96f970cc56043a1a428dd9bf34dc5777b"
+  end
+
+  url "https://github.com/groestlcoin/groestlcoin/releases/download/v#{version}/groestlcoin-#{version}-#{arch}-apple-darwin.dmg",
       verified: "github.com/groestlcoin/groestlcoin/"
   name "Groestlcoin Core"
   desc "Groestlcoin client and wallet"

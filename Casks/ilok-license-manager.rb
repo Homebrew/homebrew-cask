@@ -17,10 +17,10 @@ cask "ilok-license-manager" do
   pkg "License Support.pkg"
 
   uninstall pkgutil:   [
-    "com.paceap.pkg.eden.iLokLicenseManager",
-    "com.paceap.pkg.eden.licensed",
-    "com.paceap.pkg.eden.activationexperience",
-  ],
+              "com.paceap.pkg.eden.iLokLicenseManager",
+              "com.paceap.pkg.eden.licensed",
+              "com.paceap.pkg.eden.activationexperience",
+            ],
             launchctl: [
               "com.paceap.eden.licensed",
               "com.paceap.eden.licensed.agent",

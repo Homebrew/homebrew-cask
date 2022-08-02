@@ -1,6 +1,6 @@
 cask "wrike" do
-  version "3.3.15"
-  sha256 "fa5b15bb7fcc28c7ca45eac0660c89852f5b7728ee389660b71972402a2da639"
+  version "3.3.16"
+  sha256 "7f925650a7d1d092022b23d78448f4e9c9e357467063cad27d957a2aa2c031a1"
 
   url "https://dl.wrike.com/download/WrikeDesktopApp.v#{version}.dmg"
   name "Wrike"

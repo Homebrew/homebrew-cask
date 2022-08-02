@@ -1,6 +1,6 @@
 cask "firefly" do
-  version "1.6.0"
-  sha256 "c0b448d3f4fdca952d9b3bf813a6e54d769b5cf7c6f7654711b6d78a35588f0e"
+  version "1.6.5"
+  sha256 "07be9f0a3c645bd0d9566b7fcc77befd406e727e60aaf2d7f752ab287d3e5ee3"
 
   url "https://github.com/iotaledger/firefly/releases/download/desktop-#{version}/firefly-desktop-#{version}.dmg",
       verified: "github.com/iotaledger/firefly/"
@@ -10,8 +10,11 @@ cask "firefly" do
 
   livecheck do
     url :url
-    regex(/^desktop[._-]v?(\d+(?:\.\d+)+)$/i)
+    regex(/href=.*?firefly-desktop[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    strategy :github_latest
   end
+
+  auto_updates true
 
   app "Firefly.app"
 

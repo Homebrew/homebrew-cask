@@ -1,9 +1,5 @@
 cask "omnioutliner" do
-  if MacOS.version <= :yosemite
-    version "4.6.1"
-    sha256 "47652e8b46be40a5fc71eff16d7b621fa99bc07951f11f5445cacea5ee15ff2a"
-    url "https://downloads.omnigroup.com/software/MacOSX/10.10/OmniOutliner-#{version}.dmg"
-  elsif MacOS.version <= :el_capitan
+  if MacOS.version <= :el_capitan
     version "5.1.4"
     sha256 "91817e87a29c6a86f64b22f36e292b354aab89f63a070eeab117f4fbb2704ff0"
     url "https://downloads.omnigroup.com/software/MacOSX/10.11/OmniOutliner-#{version}.dmg"

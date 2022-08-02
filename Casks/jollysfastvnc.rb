@@ -1,5 +1,5 @@
 cask "jollysfastvnc" do
-  version "1.58,1925902"
+  version "1.64,22052516"
   sha256 :no_check
 
   url "https://www.jinx.de/JollysFastVNC_files/JollysFastVNC.current.dmg"

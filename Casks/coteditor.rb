@@ -1,8 +1,5 @@
 cask "coteditor" do
-  if MacOS.version <= :yosemite
-    version "3.2.8"
-    sha256 "73dd20d27b75c7b0c46242a465adb3df5b5f0b901f42c5a9a85777a57c4a17d6"
-  elsif MacOS.version <= :el_capitan
+  if MacOS.version <= :el_capitan
     version "3.5.4"
     sha256 "0b2cbf38cc531268e3691f307445e05ae5da64b48ceaf86c4d16b993c9be3e9f"
   elsif MacOS.version <= :mojave
@@ -12,8 +9,8 @@ cask "coteditor" do
     version "4.0.9"
     sha256 "969e891f4a36146c317150806fee01559d177f956734595c73537affc8897e79"
   else
-    version "4.2.2"
-    sha256 "da8ccf7192837b66937a46da0acd6f47ed87812844b5f8dad8999a37d647bb62"
+    version "4.3.2"
+    sha256 "abb88e86b938fea173ee458c5aa393daff6ae3dc3302fc3ed83628f322566623"
   end
 
   url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg",

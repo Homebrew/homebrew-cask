@@ -1,15 +1,16 @@
 cask "banksiagui" do
-  version "0.53"
-  sha256 "5edf3c0796072fd2e7b04198ed6c018f4012e5dc0b7fcde6f40093f0a3952a83"
+  version "0.54a"
+  sha256 "1bd1b1526f0431b086f0480d4e10887601c6b4a514e954fb0c46971150286970"
 
   url "https://banksiagui.com/dl/BanksiaGui-#{version}-mac.zip"
   name "BanksiaGui"
   desc "Chess GUI"
   homepage "https://banksiagui.com/"
 
+  # The homepage uses a WordPress anti-crawler protection plugin which
+  # returns a 403 error when trying to run livecheck
   livecheck do
-    url "https://banksiagui.com/download/"
-    regex(/BanksiaGui[._-]v?(\d+(?:\.\d+)+)[._-]mac\.zip/i)
+    skip "Version information can't be retrieved due to anti-crawler protection"
   end
 
   app "BanksiaGui.app"

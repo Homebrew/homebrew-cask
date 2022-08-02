@@ -11,14 +11,12 @@ cask "bluesense" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :yosemite"
-
   app "BlueSense.app"
 
   zap trash: [
-    "~/Library/Preferences/com.inspira.bluesense.plist",
-    "~/Library/Application Support/BlueSense",
-    "~/Library/Caches/com.inspira.bluesense",
-  ],
+        "~/Library/Preferences/com.inspira.bluesense.plist",
+        "~/Library/Application Support/BlueSense",
+        "~/Library/Caches/com.inspira.bluesense",
+      ],
       rmdir: "~/Library/Application Scripts/com.inspira.bluesense"
 end

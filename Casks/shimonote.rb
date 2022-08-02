@@ -1,12 +1,12 @@
 cask "shimonote" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "2.5.9,92910e9"
+  version "2.5.13,66be574"
 
   if Hardware::CPU.intel?
-    sha256 "f367a7944af30d68e79652cf615b4a0f1d354c87fb9851518bea19bec0c88072"
+    sha256 "6798b0441ec654b8f46a6818e8d77ed086257239e6bf11e802e8fe865e55a8a5"
   else
-    sha256 "32b6f98e5bc205df0937bb55be87c0fd0d2a879c02d0b642a795d2fe6725dc7d"
+    sha256 "20b460eb53653b0f391b3bc359c1e538127c4b9c8572dca8444063b2fb90cb17"
   end
 
   url "https://as.smvm.cn/panther/shimo/release/darwin/#{arch}/\%e7\%9f\%b3\%e5\%a2\%a8\%e6\%96\%87\%e6\%a1\%a3_v#{version.csv.first}-release.#{version.csv.second}.shimo_darwin-#{arch}.zip",

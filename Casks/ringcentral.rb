@@ -1,10 +1,12 @@
 cask "ringcentral" do
-  version "22.1.31"
+  arch = Hardware::CPU.intel? ? "" : "-arm"
+
+  version "22.2.34"
   sha256 :no_check
 
-  url "https://app.ringcentral.com/downloads/RingCentral.pkg"
+  url "https://app.ringcentral.com/download/RingCentral#{arch}.pkg"
   name "RingCentral"
-  desc "Team messaging, video meetings, and a business phone"
+  desc "Team messaging, video meetings, and business phone"
   homepage "https://www.ringcentral.com/download.html"
 
   livecheck do
@@ -12,7 +14,7 @@ cask "ringcentral" do
     strategy :electron_builder
   end
 
-  pkg "RingCentral.pkg"
+  pkg "RingCentral#{arch}.pkg"
 
   uninstall delete:  "/Applications/RingCentral.app",
             quit:    "RingCentral",

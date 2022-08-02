@@ -1,5 +1,5 @@
 cask "backblaze" do
-  version "8.0.1.596"
+  version "8.0.1.602"
   sha256 :no_check
 
   url "https://secure.backblaze.com/mac/install_backblaze.dmg"
@@ -17,9 +17,9 @@ cask "backblaze" do
   installer manual: "Backblaze Installer.app"
 
   uninstall launchctl: [
-    "com.backblaze.bzbmenu",
-    "com.backblaze.bzserv",
-  ],
+              "com.backblaze.bzbmenu",
+              "com.backblaze.bzserv",
+            ],
             delete:    [
               "#{appdir}/Backblaze.app",
               "/Library/Logs/DiagnosticReports/bzbmenu_*.*_resource.diag",

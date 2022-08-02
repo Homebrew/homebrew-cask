@@ -1,17 +1,12 @@
 cask "mmex" do
-  version "1.5.14"
-  sha256 "5ba182cba4d1fa2e4fd08979c07495a049e404e6446579d2581274463a2ea517"
+  version "1.5.18"
+  sha256 "1894a3e36367f3a35ddf7333d9dee39944f9016e6b6abf6c76e7dfc901d550ee"
 
-  url "https://downloads.sourceforge.net/moneymanagerex/mmex-#{version}-Darwin.dmg",
-      verified: "downloads.sourceforge.net/moneymanagerex/"
+  url "https://github.com/moneymanagerex/moneymanagerex/releases/download/v#{version}/mmex-#{version}-Darwin.dmg",
+      verified: "github.com/moneymanagerex/moneymanagerex/"
   name "Money Manager Ex"
   desc "Money management application"
   homepage "https://www.moneymanagerex.org/"
-
-  livecheck do
-    url :url
-    regex(%r{url=.*?/mmex[._-]v?(\d+(?:\.\d+)+)[._-]?Darwin\.dmg}i)
-  end
 
   app "MMEX.app"
 

@@ -9,7 +9,7 @@ cask "mightymike" do
   homepage "https://pangeasoft.net/mightymike/"
 
   app "Mighty Mike.app"
-  artifact "Documentation", target: "#{ENV["HOME"]}/Library/Application Support/MightyMike"
+  artifact "Documentation", target: "#{Dir.home}/Library/Application Support/MightyMike"
 
   zap trash: [
     "~/Library/Application Support/MightyMike",

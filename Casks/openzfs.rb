@@ -1,9 +1,5 @@
 cask "openzfs" do
-  if MacOS.version <= :yosemite
-    version "2.1.0,352"
-    sha256 "4a2029f59b6cc96e898e81aeb448b3306b2d23d0984af4decdf0e53a9de042f5"
-    pkg "OpenZFSonOsX-#{version.csv.first}-Yosemite-10.10.pkg"
-  elsif MacOS.version <= :el_capitan
+  if MacOS.version <= :el_capitan
     version "2.1.0,353"
     sha256 "66d74b3650ca3e099bcbec71733ad53664ba7f797a45920e73e0decb89de1a0d"
     pkg "OpenZFSonOsX-#{version.csv.first}-El.Capitan-10.11.pkg"
@@ -45,7 +41,6 @@ cask "openzfs" do
   end
 
   conflicts_with cask: "openzfs-dev"
-  depends_on macos: ">= :yosemite"
 
   postflight do
     set_ownership "/usr/local/zfs"

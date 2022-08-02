@@ -12,8 +12,6 @@ cask "easytether" do
     regex(%r{href=.*?/easytether[._-]yosemite[._-]b?(\d+(?:\.\d+)*)\.pkg}i)
   end
 
-  depends_on macos: ">= :yosemite"
-
   pkg "easytether-yosemite-b#{version}.pkg"
 
   uninstall pkgutil:   "com.mobile-stream.pkg.EasyTether",

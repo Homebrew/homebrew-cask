@@ -1,7 +1,7 @@
 cask "coccoc" do
   arch = Hardware::CPU.intel? ? "" : "/arm64"
 
-  version "100.0.4896.136,100.0.136"
+  version "103.0.5060.134,103.0.134"
   sha256 :no_check
 
   url "https://files-cdn.coccoc.com/browser/mac#{arch}/coccoc.dmg"

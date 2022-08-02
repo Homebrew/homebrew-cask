@@ -17,7 +17,7 @@ cask "fabfilter-one" do
     end
   end
 
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :sierra"
 
   pkg "FabFilter One #{version} Installer.pkg"
 

@@ -5,7 +5,7 @@ cask "sqlpro-for-postgres" do
   url "https://d3fwkemdw8spx3.cloudfront.net/postgres/SQLProPostgres.#{version}.app.zip",
       verified: "d3fwkemdw8spx3.cloudfront.net/postgres/"
   name "SQLPro for Postgres"
-  desc "Lightweight PostgresSQL database client"
+  desc "Lightweight PostgreSQL database client"
   homepage "https://www.macpostgresclient.com/SQLProPostgres"
 
   livecheck do

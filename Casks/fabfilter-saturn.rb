@@ -17,7 +17,7 @@ cask "fabfilter-saturn" do
     end
   end
 
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :sierra"
 
   pkg "FabFilter Saturn #{version} Installer.pkg"
 

@@ -7,6 +7,12 @@ cask "jandi-statusbar" do
   desc "Github Contributions in your status bar"
   homepage "https://github.com/techinpark/Jandi"
 
+  livecheck do
+    url "https://github.com/techinpark/Jandi/releases"
+    strategy :page_match
+    regex(%r{href=.*?(\d+(?:\.\d+)+)/jandi\.dmg}i)
+  end
+
   app "jandi.app"
 
   zap trash: [

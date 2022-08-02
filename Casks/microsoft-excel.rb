@@ -12,8 +12,8 @@ cask "microsoft-excel" do
     version "16.54.21101001"
     sha256 "e09fe9f49a36b37af3745673a385be4de9ae8ec774965fd1753f8479a775fc54"
   else
-    version "16.61.22050700"
-    sha256 "2a1bfef7f002aa47add8f80711e59a78d88029f5d374cd8ff0ce9b7b3c3158f4"
+    version "16.63.22070801"
+    sha256 "6bc4ca5739c55f1561e7e2111723920af019cfbccc13523b4aaaf74809f27514"
   end
 
   url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Excel_#{version}_Installer.pkg",
@@ -30,7 +30,6 @@ cask "microsoft-excel" do
   auto_updates true
   conflicts_with cask: "microsoft-office"
   depends_on cask: "microsoft-auto-update"
-  depends_on macos: ">= :yosemite"
 
   pkg "Microsoft_Excel_#{version}_Installer.pkg",
       choices: [
@@ -42,10 +41,11 @@ cask "microsoft-excel" do
       ]
 
   uninstall pkgutil:   [
-    "com.microsoft.package.Microsoft_Excel.app",
-    "com.microsoft.pkg.licensing",
-  ],
-            launchctl: "com.microsoft.office.licensingV2.helper"
+              "com.microsoft.package.Microsoft_Excel.app",
+              "com.microsoft.pkg.licensing",
+            ],
+            launchctl: "com.microsoft.office.licensingV2.helper",
+            quit:      "com.microsoft.autoupdate2"
 
   zap trash: [
     "~/Library/Application Scripts/com.microsoft.Excel",

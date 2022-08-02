@@ -1,6 +1,6 @@
 cask "xonotic" do
-  version "0.8.2"
-  sha256 "a22f7230f486c5825b55cfdadd73399c9b0fae98c9e081dd8ac76eca08359ad5"
+  version "0.8.5"
+  sha256 "0f92aa238362aeb059b9d9026a9bd38d6217423a35c19f126fb39e38736e37e5"
 
   url "https://dl.xonotic.org/xonotic-#{version}.zip"
   name "Xonotic"

@@ -13,15 +13,13 @@ cask "duo-connect" do
     regex(%r{href=.*?/DuoConnect[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
   end
 
-  depends_on macos: ">= :yosemite"
-
   pkg "DuoConnect-#{version}.pkg"
 
   uninstall launchctl: [
-    "com.duo.connect.tcp",
-    "com.duo.connect.tcp.plist",
-    "com.duo.connect.tun",
-    "com.duo.connect.tun.plist",
-  ],
+              "com.duo.connect.tcp",
+              "com.duo.connect.tcp.plist",
+              "com.duo.connect.tun",
+              "com.duo.connect.tun.plist",
+            ],
             pkgutil:   "com.duo.connect.bin"
 end

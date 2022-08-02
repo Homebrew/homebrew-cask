@@ -6,7 +6,7 @@ cask "anaconda" do
   if Hardware::CPU.intel?
     sha256 "1a10c06660ebe1204e538b4e9d810142441af9dfd74b077eee2761ec6e675f39"
   else
-    sha256 "457b10272f807879ab4289ffb93d7dcb695362b417bb7c80d24892c8d8557b29"
+    sha256 "a12119931945a9a1453993582259cc67318a9a75a15731e5ccc15365e7f88a36"
   end
 
   url "https://repo.anaconda.com/archive/Anaconda3-#{version}-MacOSX-#{arch}.sh"

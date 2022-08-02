@@ -8,11 +8,6 @@ cask "readyapi" do
   desc "Automated API Testing Platform"
   homepage "https://smartbear.com/product/ready-api/overview/"
 
-  livecheck do
-    url "https://dl.eviware.com/version-update/readyapi-updates.xml"
-    regex(/fileName=.*?ReadyAPI[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
-  end
-
   installer script: {
     executable: "ReadyAPI #{version} Installer.app/Contents/MacOS/JavaApplicationStub",
     args:       ["-q"],
@@ -27,4 +22,8 @@ cask "readyapi" do
     "~/Library/Application Support/ReadyAPI-#{version}",
     "~/Library/Preferences/com.smartbear.ready.plist",
   ]
+
+  caveats do
+    discontinued
+  end
 end

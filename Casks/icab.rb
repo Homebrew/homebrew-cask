@@ -1,6 +1,6 @@
 cask "icab" do
-  version "6.1.2"
-  sha256 "b4816ac973bb2dfaaf4281763b178bf1b596bf8d3390d1d8491e177df4fbc900"
+  version "6.1.4"
+  sha256 "273c67581cdeff984b954a87f401fc5f8aa4b54f93a1d1c44e45cce3cd84ab27"
 
   url "https://icab.clauss-net.de/icab/iCab_#{version}.zip",
       verified: "icab.clauss-net.de/icab/"
@@ -15,7 +15,7 @@ cask "icab" do
 
   depends_on macos: ">= :high_sierra"
 
-  app "iCab #{version.major_minor}/iCab.app"
+  app "iCab #{version}/iCab.app"
 
   zap trash: [
     "~/Library/Application Support/iCab",

@@ -1,6 +1,6 @@
 cask "contour" do
-  version "0.3.1.200"
-  sha256 "2108bded1ebde8d6558c0ff07180190259006e6451da290c8fd7f42e84a67908"
+  version "0.3.2.202"
+  sha256 "6f84d2c091fe4bbad567048a484039ae70671fd2d8db76bab0fc99d1f8121c6b"
 
   url "https://github.com/contour-terminal/contour/releases/download/v#{version}/contour-#{version}-osx.dmg"
   name "Contour"
@@ -12,9 +12,9 @@ cask "contour" do
   binary "#{appdir}/Contour.app/Contents/Resources/shell-integration.zsh",
          target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_contour"
   binary "#{appdir}/Contour.app/Contents/Resources/terminfo/63/contour",
-         target: "#{ENV.fetch("TERMINFO", "#{ENV["HOME"]}/.terminfo")}/63/contour"
+         target: "#{ENV.fetch("TERMINFO", "#{Dir.home}/.terminfo")}/63/contour"
   binary "#{appdir}/Contour.app/Contents/Resources/terminfo/63/contour-latest",
-         target: "#{ENV.fetch("TERMINFO", "#{ENV["HOME"]}/.terminfo")}/63/contour-latest"
+         target: "#{ENV.fetch("TERMINFO", "#{Dir.home}/.terminfo")}/63/contour-latest"
 
   zap trash: "~/.config/contour"
 end

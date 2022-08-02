@@ -1,6 +1,6 @@
 cask "kdrive" do
-  version "3.3.4.20220504"
-  sha256 "267118d289ac00d4c5c6ae199506abadd70cf1906117e6686817c65e97f11742"
+  version "3.3.5.20220608"
+  sha256 "129938bbef19a6514d6de9a13be670f4ddaab4f63a5a81bba9220b830ba9bcce"
 
   url "https://download.storage.infomaniak.com/drive/desktopclient/kDrive-#{version}.pkg"
   name "kDrive"
@@ -21,9 +21,9 @@ cask "kdrive" do
   end
 
   uninstall quit:      [
-    "com.infomaniak.drive.desktopclient",
-    "com.infomaniak.drive.desktopclient.Extension",
-  ],
+              "com.infomaniak.drive.desktopclient",
+              "com.infomaniak.drive.desktopclient.Extension",
+            ],
             pkgutil:   "com.infomaniak.drive.desktopclient",
             launchctl: "864VDCS2QY.com.infomaniak.drive.desktopclient.LoginItemAgent"
 

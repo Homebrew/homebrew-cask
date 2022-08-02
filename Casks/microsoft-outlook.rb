@@ -12,8 +12,8 @@ cask "microsoft-outlook" do
     version "16.54.21101001"
     sha256 "c7b3ced52462b611a9762941088fa05e42d79b26349ca62b705a9bcbce00b41e"
   else
-    version "16.61.22050700"
-    sha256 "751f3c127488b77ba00b64786cd6b932f6e98768d6c589cf785a704769c22e45"
+    version "16.63.22070801"
+    sha256 "62657ab78d8ecda4c391a8b5d58c986f17e72b8943b6c3e58a4e0b81e1eaa089"
   end
 
   url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Outlook_#{version}_Installer.pkg",
@@ -30,7 +30,6 @@ cask "microsoft-outlook" do
   auto_updates true
   conflicts_with cask: "microsoft-office"
   depends_on cask: "microsoft-auto-update"
-  depends_on macos: ">= :yosemite"
 
   pkg "Microsoft_Outlook_#{version}_Installer.pkg",
       choices: [
@@ -42,10 +41,11 @@ cask "microsoft-outlook" do
       ]
 
   uninstall pkgutil:   [
-    "com.microsoft.package.Microsoft_Outlook.app",
-    "com.microsoft.pkg.licensing",
-  ],
-            launchctl: "com.microsoft.office.licensingV2.helper"
+              "com.microsoft.package.Microsoft_Outlook.app",
+              "com.microsoft.pkg.licensing",
+            ],
+            launchctl: "com.microsoft.office.licensingV2.helper",
+            quit:      "com.microsoft.autoupdate2"
 
   zap trash: [
     "~/Library/Application Scripts/com.microsoft.Outlook",

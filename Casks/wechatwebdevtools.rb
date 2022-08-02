@@ -1,8 +1,15 @@
 cask "wechatwebdevtools" do
-  version "1.05.2204250"
-  sha256 "d46828cfa36bc0a084503f671e6f3bdfde6031f4b73e90c5dc9e8dae9d62c559"
+  arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  url "https://dldir1.qq.com/WechatWebDev/release/p-ae42ee2cde4d42ee80ac60b35f183a99/wechat_devtools_#{version}.dmg"
+  version "1.06.2208010"
+
+  if Hardware::CPU.intel?
+    sha256 "e13b9cab93476d9076847ca74342fcc785854487a9044db6315426775a625942"
+  else
+    sha256 "04db8963a098baf726effecfdaf0bf42db24bc7f4e4100243a0d3bd891edb2e5"
+  end
+
+  url "https://dldir1.qq.com/WechatWebDev/release/be1ec64cf6184b0fa64091919793f068/wechat_devtools_#{version}_darwin_#{arch}.dmg"
   name "Wechat DevTools"
   name "微信开发者工具"
   desc "Wechat DevTools for Official Account and Mini Program development"

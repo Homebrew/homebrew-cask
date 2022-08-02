@@ -1,6 +1,6 @@
 cask "get-backup-pro" do
-  version "3.6.6,1626"
-  sha256 "d73f88d387b0b3567f712d90c76c6eeca217112a98b1cebfda9587ef5e272055"
+  version "3.6.8,1667"
+  sha256 "e680424a4d65a28639007dfef26ef48c07a11364011b13bf1c984b42b7ba63a2"
 
   url "https://belightsoft.s3.amazonaws.com/updates/Get+Backup+Pro+#{version.major}.zip",
       verified: "belightsoft.s3.amazonaws.com/updates/"

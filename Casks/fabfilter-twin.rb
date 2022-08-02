@@ -17,7 +17,7 @@ cask "fabfilter-twin" do
     end
   end
 
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :sierra"
 
   pkg "FabFilter Twin #{version} Installer.pkg"
 

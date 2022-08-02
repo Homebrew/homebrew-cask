@@ -15,6 +15,11 @@ cask "iconset" do
   desc "Organize icon sets and packs in one place"
   homepage "https://iconset.io/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Iconset.app"
 
   zap trash: [

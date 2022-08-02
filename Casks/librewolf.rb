@@ -2,11 +2,11 @@ cask "librewolf" do
   arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
   if Hardware::CPU.intel?
-    version "100.0.2,1,6b8461deccb01d1f6b626106b8608067"
-    sha256 "89faf4a7c74178bde9dc0bc9d49f629f4bbbebd27169774a3e71271ab928dc2c"
+    version "103.0,3,86c7d9aa23a32976facfc9da57bdea32"
+    sha256 "731788d512899fdaafdcb42ac1ac3a008531d3d7c5f3bc0abe0bf63be71447b4"
   else
-    version "100.0.2,1,d538ebb251812e2c1e806f88f08b8574"
-    sha256 "dac72cacb40c3b2fdffa537c4bf8cfa4566cf764f985ea6a078dd3b075f7d6f7"
+    version "103.0,3,f2cfec7d578118457396d70719819b20"
+    sha256 "2baaccf611a42ec026345bf6750fd3cbc81cb9995db6adfee5ddee0f98b02016"
   end
 
   url "https://gitlab.com/librewolf-community/browser/macos/uploads/#{version.csv.third}/librewolf-#{version.csv.first}-#{version.csv.second}.en-US.mac.#{arch}.dmg",

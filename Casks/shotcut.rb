@@ -1,12 +1,12 @@
 cask "shotcut" do
   arch = Hardware::CPU.intel? ? "macos" : "macos-ARM64"
 
-  version "22.04.25"
+  version "22.06.23"
 
   if Hardware::CPU.intel?
-    sha256 "56a08a2d49828409ecbcf261434ea04a1f5871f637130e2fa08ba80240e045b0"
+    sha256 "dda1d9f6ebb1013452055214d3d297bfd30adc3d1f97a764c15b15c36f98d1a2"
   else
-    sha256 "415ab4aab0e3a7f048ab13172832650202c636522b294b502e23eff39e060c88"
+    sha256 "d68ab8eaf435deebdc5d7abc2a60915fc58d51d21977d72c89ddb46d4d511759"
   end
 
   url "https://github.com/mltframework/shotcut/releases/download/v#{version}/shotcut-#{arch}-#{version.no_dots}.dmg",

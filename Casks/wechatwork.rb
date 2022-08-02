@@ -1,10 +1,10 @@
 cask "wechatwork" do
   if Hardware::CPU.intel?
-    version "4.0.6.90539"
-    sha256 "2ead9f3083492edf07bec85c4e41f0a8ae8219869786708e883b80d2c35c7238"
+    version "4.0.9.90603"
+    sha256 "41dba6d0640c15deffc2f20d0141341ea00aa3329aa0b7417157e350cb12a3b7"
   else
-    version "4.0.6.99101"
-    sha256 "51f115fb3ab77cccc081b1f8b06d4adfef59ee00491f1683ec306eedb0705d68"
+    version "4.0.9.99149"
+    sha256 "729454773c96dc4b4d577ef09cb3015a67d0978cfd9c3934c44906399f47be08"
   end
 
   url "https://dldir1.qq.com/foxmail/wecom-mac/update/WeCom_#{version}.dmg"

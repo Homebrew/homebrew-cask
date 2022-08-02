@@ -17,12 +17,12 @@ cask "slik" do
   app "Slik.app"
 
   zap trash: [
-    "~/Library/Preferences/io.inspira.slik.plist",
-    "~/Library/Application Support/Slik",
-    "~/Library/Application Support/io.inspira.slik/com.crashlytics",
-    "~/Library/Caches/io.inspira.slik",
-    "~/Library/Saved Application State/io.inspira.slik.savedState",
-  ],
+        "~/Library/Preferences/io.inspira.slik.plist",
+        "~/Library/Application Support/Slik",
+        "~/Library/Application Support/io.inspira.slik/com.crashlytics",
+        "~/Library/Caches/io.inspira.slik",
+        "~/Library/Saved Application State/io.inspira.slik.savedState",
+      ],
       rmdir: [
         "~/Library/Application Support/io.inspira.slik",
         "~/Library/Application Scripts/io.inspira.slik",

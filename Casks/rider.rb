@@ -1,12 +1,12 @@
 cask "rider" do
   arch = Hardware::CPU.intel? ? "" : "-aarch64"
 
-  version "2022.1.1,221.5591.20"
+  version "2022.1.2,221.5787.36"
 
   if Hardware::CPU.intel?
-    sha256 "9eb7ba29f887b6d45babdf9a9e8bac7edd936f866ff8263d5fcf77a457bd1960"
+    sha256 "ddcf6544e7302632a117ec00cf2e20688b53a47319114418fa55f7304bf49b82"
   else
-    sha256 "a12a1c0fa775a7105e21e6f4fe747a81f771d1629b9eb6786aad69491e812aff"
+    sha256 "81ce9020cc2b20f50ce73efe80969b054fce2a62a1736aed877a1141eaf07d4b"
   end
 
   url "https://download.jetbrains.com/rider/JetBrains.Rider-#{version.csv.first}#{arch}.dmg"
@@ -30,7 +30,7 @@ cask "rider" do
 
   uninstall_postflight do
     ENV["PATH"].split(File::PATH_SEPARATOR).map { |path| File.join(path, "rider") }.each do |path|
-      if File.exist?(path) &&
+      if File.readable?(path) &&
          File.readlines(path).grep(/# see com.intellij.idea.SocketLock for the server side of this interface/).any?
         File.delete(path)
       end

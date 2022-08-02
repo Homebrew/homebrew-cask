@@ -24,13 +24,13 @@ cask "audiogridder-server" do
   uninstall pkgutil: "com.e47.pkg.server"
 
   zap trash: [
-    "~/.audiogridder/audiogridder.winpos",
-    "~/.audiogridder/audiogridderserver.cache",
-    "~/.audiogridder/audiogridderserver.cfg",
-    "~/Library/Logs/AudioGridder/Master",
-    "~/Library/Logs/AudioGridder/Scan",
-    "~/Library/Logs/AudioGridder/Server",
-  ],
+        "~/.audiogridder/audiogridder.winpos",
+        "~/.audiogridder/audiogridderserver.cache",
+        "~/.audiogridder/audiogridderserver.cfg",
+        "~/Library/Logs/AudioGridder/Master",
+        "~/Library/Logs/AudioGridder/Scan",
+        "~/Library/Logs/AudioGridder/Server",
+      ],
       rmdir: [
         "~/.audiogridder",
         "~/Library/Logs/AudioGridder",

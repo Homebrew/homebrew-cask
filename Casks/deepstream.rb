@@ -1,6 +1,6 @@
 cask "deepstream" do
-  version "6.1.2"
-  sha256 "ad6b1497f99e15a1443f9741b0b41a6a2124ea6a3fbab919c3049f05d869d6bd"
+  version "6.2.1"
+  sha256 "83781555d25924ecbf1adb3022d4180e83a81240d3746b47bd8beb8beb035648"
 
   url "https://github.com/deepstreamIO/deepstream.io/releases/download/v#{version}/deepstream.io-mac-#{version}.pkg",
       verified: "github.com/deepstreamIO/deepstream.io/"

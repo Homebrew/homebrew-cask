@@ -1,16 +1,16 @@
 cask "start" do
-  url_arch = Hardware::CPU.intel? ? "" : "m1/"
+  arch = Hardware::CPU.intel? ? "" : "m1/"
   livecheck_arch = Hardware::CPU.intel? ? "" : "-arm"
 
   if Hardware::CPU.intel?
-    version "0.301.6-170"
-    sha256 "65c42018e7128a9c3e454c7decfd53b162d7a4adb48bf1d5efd3b2d12849f3a0"
+    version "0.301.24-188"
+    sha256 "780324b94d5e3cc21204ea35a55af4b992187424588cf95a48961826a7e79565"
   else
-    version "0.301.6-54"
-    sha256 "e6aac4925c9517df3e342ae6f8434996d65cb72decfbe603c8b96d20327eb564"
+    version "0.301.24-72"
+    sha256 "6edcb7a51630f1e25b8453d2e8c441f58b07e0dcddfdd128ab9b83322b887ef6"
   end
 
-  url "https://imgcdn.start.qq.com/cdn/mac.client/installer/#{url_arch}START-Installer-#{version}.dmg"
+  url "https://imgcdn.start.qq.com/cdn/mac.client/installer/#{arch}START-Installer-#{version}.dmg"
   name "START"
   name "腾讯云游戏"
   desc "Tencent cloud gaming platform"
@@ -18,7 +18,7 @@ cask "start" do
 
   livecheck do
     url "https://api.start.qq.com/cfg/get?biztypes=macos-update-info#{livecheck_arch}"
-    regex(%r{.*/START-Installer-([.\d\-]+)\.dmg}i)
+    regex(/START-Installer[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
   end
 
   auto_updates true

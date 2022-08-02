@@ -2,11 +2,11 @@ cask "dotnet" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
   if Hardware::CPU.intel?
-    version "6.0.5,7c76eb47-a0a0-4fe8-b60d-bb0c01fcd595,604061381c1f121f016d37b9a1e80435"
-    sha256 "ec235844e86cf48c32698bbe8d2bc7377d202d8c0d34e1f6574bb2621b2d45a9"
+    version "6.0.7,3da50ef8-7b22-4f08-95e9-3641416fdc08,ee91bcdbbbb117803e315f673c9d19f1"
+    sha256 "9aba5aca71ada681a77a9058a5d5c2fdfed7d6a197ba416c88e8093906abbdeb"
   else
-    version "6.0.5,7102a180-c397-40b4-b4e7-887d5473d4c4,6a280e559749a9f55216f7571753a70a"
-    sha256 "bc4b271faa8c7882011b042f6e704906ec6d3d7dcddcca34df202d3fdef2ce4b"
+    version "6.0.7,ba8b5982-2d85-4b0f-a933-13b1dcca3e2d,a367458c007ef00bf1544754578cf54c"
+    sha256 "31140e6597f8943ee4b4cf25fd560fa4db586ab76770bb9a578ed6efab694ba4"
   end
 
   url "https://download.visualstudio.microsoft.com/download/pr/#{version.csv.second}/#{version.csv.third}/dotnet-runtime-#{version.csv.first}-osx-#{arch}.pkg"

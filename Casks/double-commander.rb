@@ -9,4 +9,8 @@ cask "double-commander" do
   homepage "https://doublecmd.sourceforge.io/"
 
   app "Double Commander.app"
+
+  caveats do
+    discontinued
+  end
 end

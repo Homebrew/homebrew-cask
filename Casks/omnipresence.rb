@@ -1,9 +1,5 @@
 cask "omnipresence" do
-  if MacOS.version <= :yosemite
-    version "1.4.1"
-    sha256 "409bf272e7c4dc488f68abadb3e2ef15d4accde10f8ee9babd8b23f522bfe323"
-    url "https://downloads.omnigroup.com/software/MacOSX/10.10/OmniPresence-#{version}.dmg"
-  elsif MacOS.version <= :el_capitan
+  if MacOS.version <= :el_capitan
     version "1.5.2"
     sha256 "82d3c6978e644dc7defafd3706a02d15c500e8254ca22076a5095bdd94b786d1"
     url "https://downloads.omnigroup.com/software/MacOSX/10.11/OmniPresence-#{version}.dmg"

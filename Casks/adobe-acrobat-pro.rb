@@ -1,5 +1,5 @@
 cask "adobe-acrobat-pro" do
-  version "22.001.20112"
+  version "22.001.20169"
   sha256 :no_check
 
   url "https://trials.adobe.com/AdobeProducts/APRO/Acrobat_HelpX/osx10/Acrobat_DC_Web_WWMUI.dmg",
@@ -19,11 +19,11 @@ cask "adobe-acrobat-pro" do
   pkg "Acrobat DC/Acrobat DC Installer.pkg"
 
   uninstall pkgutil:   [
-    "com.adobe.acrobat.DC.*",
-    "com.adobe.PDApp.AdobeApplicationManager.installer.pkg",
-    "com.adobe.AcroServicesUpdater",
-    "com.adobe.armdc.app.pkg",
-  ],
+              "com.adobe.acrobat.DC.*",
+              "com.adobe.PDApp.AdobeApplicationManager.installer.pkg",
+              "com.adobe.AcroServicesUpdater",
+              "com.adobe.armdc.app.pkg",
+            ],
             launchctl: [
               "Adobe_Genuine_Software_Integrity_Service",
               "com.adobe.AAM.Startup-1.0",

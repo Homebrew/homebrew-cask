@@ -1,6 +1,6 @@
 cask "busycal" do
-  version "2022.2.2,2022-05-27-22-37"
-  sha256 "669343cc8700083258e826765b50ae06b93026fedeed8c07c53c16924a0a88d0"
+  version "2022.3.1,2022-07-28-14-57"
+  sha256 "0e627cafdae59c94e765b3633b3ff69e91ca4d36e4489f530577d984980f855a"
 
   url "https://7e968b6ce8a839f034d9-23cfb9eddcb7b94cb43ba95f95a76900.ssl.cf1.rackcdn.com/bcl-#{version.csv.first}-#{version.csv.second}.zip",
       verified: "7e968b6ce8a839f034d9-23cfb9eddcb7b94cb43ba95f95a76900.ssl.cf1.rackcdn.com/"
@@ -25,7 +25,8 @@ cask "busycal" do
 
   uninstall pkgutil: "com.busymac.busycal3.pkg",
             quit:    "N4RA379GBW.com.busymac.busycal3.alarm",
-            signal:  ["TERM", "com.busymac.busycal3"]
+            signal:  ["TERM", "com.busymac.busycal3"],
+            delete:  "/Applications/BusyCal.app"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.busymac.busycal#{version.major}.sfl*",

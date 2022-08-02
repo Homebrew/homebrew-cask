@@ -17,8 +17,6 @@ cask "openvpn-connect" do
     end
   end
 
-  depends_on macos: ">= :yosemite"
-
   pkg "OpenVPN_Connect_#{version.csv.first.dots_to_underscores}(#{version.csv.second})_Installer_signed.pkg"
 
   uninstall quit:       "org.openvpn.client.app",

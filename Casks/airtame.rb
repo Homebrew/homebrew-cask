@@ -1,6 +1,6 @@
 cask "airtame" do
-  version "4.3.3"
-  sha256 "61eb82f9c290ed33597fe65eaea9f856fdcc2bb110c3c1d1b6036e5296bdda0e"
+  version "4.4.0"
+  sha256 "dadc6558eb7f59e206e0f86558333d980dde5ea3af6c38948fdbf9c3ebcf3c3f"
 
   url "https://downloads-cdn.airtame.com/app/latest/mac/Airtame-#{version}.dmg"
   name "Airtame"

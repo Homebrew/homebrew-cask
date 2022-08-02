@@ -17,7 +17,7 @@ cask "fabfilter-pro-c" do
     end
   end
 
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :sierra"
 
   pkg "FabFilter Pro-C #{version} Installer.pkg"
 

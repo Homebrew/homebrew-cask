@@ -1,15 +1,15 @@
 cask "webull" do
-  dl_arch, livecheck_arch = Hardware::CPU.intel? ? ["us", "qt_mac_global"] : ["usm1", "qt_m1_global"]
+  dl_arch, livecheck_arch = Hardware::CPU.intel? ? ["us_x64", "qt_mac_global"] : ["us_arm64", "qt_m1_global"]
 
-  version "5.10.5"
+  version "6.0.5"
 
   if Hardware::CPU.intel?
-    sha256 "ab818bc24ce34d511584e66253dc8fd5f1e74829c2e13320194753ac881f8300"
+    sha256 "8e5fa82ff254c503d2d3635f8b53cf4fae7cfb16e5f587bc23e4d697c0462f60"
   else
-    sha256 "e777371e5a4207ca45d74939b5d148d8146f8ff53b53961f71dc9468d8ac0e16"
+    sha256 "371b955bd7fb189a26d9d59cefa8a847e6059dc37e25aeb84add011a1e846c96"
   end
 
-  url "https://u1sweb.webullfinance.com/us/desktop/Webull%20Desktop%20#{version}_#{dl_arch}.dmg",
+  url "https://u1sweb.webullfinance.com/us/desktop/Webull%20Desktop_#{version}_#{dl_arch}_signed.dmg",
       verified: "u1sweb.webullfinance.com/us/desktop/"
   name "Webull"
   desc "Desktop client for Webull Financial LLC"
@@ -17,12 +17,11 @@ cask "webull" do
 
   livecheck do
     url "https://infoapi.webullfintech.com/api/operation/appver/last?platform=#{livecheck_arch}&osv=10.15"
-    strategy :page_match do |page|
-      JSON.parse(page)["latestAppVersion"]
-    end
+    strategy :page_match
+    regex(/Webull%20Desktop[._-](\d+(?:\.\d+)+).*?.dmg/i)
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   app "Webull Desktop.app"
 

@@ -1,6 +1,6 @@
 cask "rotki" do
-  version "1.23.4"
-  sha256 "d299513c62a355ed524087642f1850664d6b7d0178ab0da113384061082434c5"
+  version "1.25.1"
+  sha256 "f5248a0a75bd41239e1bd0c73b3cdd9d3cb8de74b2e95272f7e32c62c2beb8b5"
 
   url "https://github.com/rotki/rotki/releases/download/v#{version}/rotki-darwin_x64-v#{version}.dmg",
       verified: "github.com/rotki/rotki/"

@@ -17,11 +17,11 @@ cask "qudedup-extract-tool" do
   uninstall pkgutil: "com.qnap.pkg.QuDedupExTool"
 
   zap trash: [
-    "~/Library/Application Support/QNAP/QuDedup Extract Tool",
-    "~/Library/Preferences/QNAP/QuDedup Extract Tool.plist",
-    "~/Library/Preferences/com.qnap.QuDedupExTool.plist",
-    "~/Library/Saved Application State/com.qnap.QuDedupExTool.savedState",
-  ],
+        "~/Library/Application Support/QNAP/QuDedup Extract Tool",
+        "~/Library/Preferences/QNAP/QuDedup Extract Tool.plist",
+        "~/Library/Preferences/com.qnap.QuDedupExTool.plist",
+        "~/Library/Saved Application State/com.qnap.QuDedupExTool.savedState",
+      ],
       rmdir: [
         "~/Library/Application Support/QNAP",
         "~/Library/Preferences/QNAP",

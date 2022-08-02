@@ -1,12 +1,12 @@
 cask "rancher" do
   arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
-  version "1.3.0"
+  version "1.5.0"
 
   if Hardware::CPU.intel?
-    sha256 "b333b6083ebed0b6174c021e437675acc7ef661a15bdd4954eff2ac74d5472ce"
+    sha256 "080c3eb05e01285413f984e53dbf6204df9b9b3485208b7887353688796c6def"
   else
-    sha256 "a7e9d572abaf57cdf5cf5f5167dd5f8ee57d38af50386d7749cbb812e7b203c1"
+    sha256 "80213de560777407c444fb80df01bd3b2dddcc2bddcc6f63c6a632a9cb05a41b"
   end
 
   url "https://github.com/rancher-sandbox/rancher-desktop/releases/download/v#{version}/Rancher.Desktop-#{version}.#{arch}.dmg",
@@ -23,11 +23,11 @@ cask "rancher" do
   app "Rancher Desktop.app"
 
   uninstall delete: [
-    "/opt/rancher-desktop",
-    "/private/etc/sudoers.d/zzzzz-rancher-desktop-lima", # zzzzz is not a typo
-    "/private/var/run/docker.sock",
-    "/private/var/run/rancher-desktop-*",
-  ],
+              "/opt/rancher-desktop",
+              "/private/etc/sudoers.d/zzzzz-rancher-desktop-lima", # zzzzz is not a typo
+              "/private/var/run/docker.sock",
+              "/private/var/run/rancher-desktop-*",
+            ],
             quit:   "io.rancherdesktop.app"
 
   zap trash: [

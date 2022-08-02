@@ -1,6 +1,6 @@
 cask "xquartz" do
-  version "2.8.1"
-  sha256 "0eb477f3f8f3795738df9a6a8a15e3858fe21fe9d7103b8d13861bb3aa509e3b"
+  version "2.8.2"
+  sha256 "f270dac14cf355026268d2a5a00d903c5102b69e0d2db2a7e47142f7eb76e025"
 
   url "https://github.com/XQuartz/XQuartz/releases/download/XQuartz-#{version}/XQuartz-#{version}.dmg",
       verified: "github.com/XQuartz/XQuartz/"
@@ -23,16 +23,16 @@ cask "xquartz" do
             pkgutil:   "org.xquartz.X11"
 
   zap trash: [
-    "~/.Xauthority",
-    "~/Library/Application Support/XQuartz",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.xquartz.x11.sfl*",
-    "~/Library/Caches/org.xquartz.X11",
-    "~/Library/Cookies/org.xquartz.X11.binarycookies",
-    "~/Library/Logs/X11/org.xquartz.log",
-    "~/Library/Logs/X11/org.xquartz.log.old",
-    "~/Library/Preferences/org.xquartz.X11.plist",
-    "~/Library/Saved Application State/org.xquartz.X11.savedState",
-  ],
+        "~/.Xauthority",
+        "~/Library/Application Support/XQuartz",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.xquartz.x11.sfl*",
+        "~/Library/Caches/org.xquartz.X11",
+        "~/Library/Cookies/org.xquartz.X11.binarycookies",
+        "~/Library/Logs/X11/org.xquartz.log",
+        "~/Library/Logs/X11/org.xquartz.log.old",
+        "~/Library/Preferences/org.xquartz.X11.plist",
+        "~/Library/Saved Application State/org.xquartz.X11.savedState",
+      ],
       rmdir: [
         "~/.fonts",
         "~/Library/Logs/X11",

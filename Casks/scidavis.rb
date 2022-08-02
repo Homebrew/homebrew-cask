@@ -13,7 +13,5 @@ cask "scidavis" do
     regex(%r{/scidavis[._-]v?(\d+(?:\.\d+)+)[._-]mac[._-]dist\.dmg}i)
   end
 
-  depends_on macos: ">= :yosemite"
-
   app "scidavis.app"
 end

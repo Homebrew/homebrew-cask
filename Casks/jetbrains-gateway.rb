@@ -1,12 +1,12 @@
 cask "jetbrains-gateway" do
   arch = Hardware::CPU.intel? ? "" : "-aarch64"
 
-  version "221.5591.55"
+  version "222.3345.108"
 
   if Hardware::CPU.intel?
-    sha256 "33eea67f6fc7a8a3c10d1677788a1af84f8c8f374a37e3993b74f11769938c73"
+    sha256 "88ec942ef586ca9a658844ab673aabd72b115668fbfcf720f8c4fc6d680c37fb"
   else
-    sha256 "d5a1d742a126eeac83f19ba2d65c76ef2e2d70b147041e38d9ef589b0e163dc9"
+    sha256 "fc789fe114eddac6137f470bf58ccb27bf70979c4b7552c62f1d5790e4c33200"
   end
 
   url "https://download.jetbrains.com/idea/gateway/JetBrainsGateway-#{version}#{arch}.dmg"

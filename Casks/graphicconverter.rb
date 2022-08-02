@@ -1,6 +1,6 @@
 cask "graphicconverter" do
-  version "11.6.1,5515"
-  sha256 "39b9b6c882c8df0fb0ca0e8108a400e8e58088c3c3b9bc5236c7ca30ce195320"
+  version "11.6.2,5538"
+  sha256 "39021b0538bab26a6c25abd295e9ba1f833ccb419ccaa70ee8a1389e0533d126"
 
   url "https://www.lemkesoft.info/files/graphicconverter/gc#{version.major}_build#{version.csv.second}.zip",
       verified: "lemkesoft.info/"
@@ -8,13 +8,12 @@ cask "graphicconverter" do
   desc "For browsing, enhancing and converting images"
   homepage "https://www.lemkesoft.de/en/products/graphicconverter/"
 
-  # TODO: Return to using the `Sparkle` strategy once all `item`s are passed
-  # into the `strategy` and we can omit items using the `beta` channel.
+  # The Sparkle feed can contain items on the "beta" channel, so we restrict
+  # matching to the default channel.
   livecheck do
     url "https://www.lemkesoft.info/sparkle/graphicconverter/graphicconverter#{version.major}.xml"
-    regex(/<title>Version\s+(\d+(?:\.\d+)+)\s+Build\s+(\d+)(?:<|\s+\()/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+    strategy :sparkle do |items|
+      items.find { |item| item.channel.nil? }&.nice_version
     end
   end
 

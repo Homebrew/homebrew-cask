@@ -1,6 +1,6 @@
 cask "alfred" do
-  version "4.6.6,1303"
-  sha256 "cc5c561f66e02e2e27cac4fd61874c749f0bb33cd35510e9e4914c58fe9f717a"
+  version "5.0.1,2067"
+  sha256 "6429d531c5a15e3a6b956be08b01bc6e206a783c1918837755734470564868fd"
 
   url "https://cachefly.alfredapp.com/Alfred_#{version.csv.first}_#{version.csv.second}.dmg"
   name "Alfred"
@@ -18,6 +18,7 @@ cask "alfred" do
   end
 
   auto_updates true
+  depends_on macos: ">= :mojave"
 
   app "Alfred #{version.major}.app"
 

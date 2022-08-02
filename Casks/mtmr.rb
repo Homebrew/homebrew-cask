@@ -1,14 +1,15 @@
 cask "mtmr" do
-  version "0.27,433"
+  version "0.27.0"
   sha256 "cf0b1b8cb9d6758cd0b69d2c4c5f9f1a067416126a7daa76a8d94fea8189d608"
 
-  url "https://mtmr.app/MTMR%20#{version.csv.first}.dmg"
+  url "https://github.com/Toxblh/MTMR/releases/download/v#{version}/MTMR.#{version.major_minor}.dmg"
   name "My TouchBar. My rules"
-  homepage "https://mtmr.app/"
+  desc "TouchBar customization app"
+  homepage "https://github.com/Toxblh/MTMR"
 
   livecheck do
-    url "https://mtmr.app/appcast.xml"
-    strategy :sparkle
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true

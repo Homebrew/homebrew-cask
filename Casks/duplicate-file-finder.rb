@@ -1,6 +1,6 @@
 cask "duplicate-file-finder" do
-  version "6.16,573"
-  sha256 "e4e0d8404b048582a66c1407fb3a6b633572ff9154c3ac23f05b9144b6275a68"
+  version "6.17,581"
+  sha256 "ebcc6835753dba5448290258a42eac3be488dc093df9c96a49bb3f2528a6bc21"
 
   url "https://nektony.com/pro-support/duplicates-finder-site/update/DFFS_v#{version.csv.first}b#{version.csv.second}.zip"
   name "Duplicate File Finder"
@@ -12,7 +12,7 @@ cask "duplicate-file-finder" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :yosemite"
+  depends_on macos: ">= :sierra"
 
   app "Duplicate File Finder #{version.major}.app"
 

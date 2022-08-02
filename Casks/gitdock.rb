@@ -1,6 +1,6 @@
 cask "gitdock" do
-  version "0.1.25"
-  sha256 "03bd47fe846670690ddbcb9de9eb15e563ef0a977f36331b641c071d5683676f"
+  version "0.1.28"
+  sha256 "61db6153159ab9a1f0e6303e71e1e50acd4f7d4cdb77c58218ffab4884bb017f"
 
   url "https://gitlab.com/mvanremmerden/gitdock/-/releases/v#{version}/downloads/GitDock-#{version}.dmg"
   name "GitDock"

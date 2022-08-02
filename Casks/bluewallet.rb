@@ -8,6 +8,12 @@ cask "bluewallet" do
   desc "Bitcoin wallet and Lightning wallet"
   homepage "https://bluewallet.io/"
 
+  livecheck do
+    url "https://github.com/BlueWallet/BlueWallet/releases/"
+    strategy :page_match
+    regex(/href=.*?BlueWallet.(\d+(?:\.\d+)+)\.dmg/i)
+  end
+
   depends_on macos: ">= :catalina"
 
   app "BlueWallet.app"
