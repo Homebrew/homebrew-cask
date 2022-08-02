@@ -1,6 +1,6 @@
 cask "v2ray-unofficial" do
-  version "2.4.0"
-  sha256 "717e9df880ef74e4f760c75e8983cb63112f1f9a301c4dc61c16217742f1dd3f"
+  version "2.3.1"
+  sha256 "c1f900950e4650190dc2bf67ad8fc51b4602be214b4807233d1175dfca855ea6"
 
   url "https://github.com/Dr-Incognito/V2Ray-Desktop/releases/download/#{version}/V2Ray-Desktop-v#{version}-macOS-x86_64.dmg"
   name "V2Ray Desktop"
