@@ -4,9 +4,14 @@ cask "rubymotion" do
 
   url "http://www.rubymotion.com/files/RubyMotion%20Installer.zip"
   name "RubyMotion"
+  desc "Write cross-platform native apps in Ruby"
   homepage "http://www.rubymotion.com/"
 
   installer manual: "RubyMotion Installer.app"
 
   uninstall pkgutil: "com.hipbyte.rubymotion.pkg"
+
+  caveats do
+    free_license "http://www.rubymotion.com/download/starter/"
+  end
 end
