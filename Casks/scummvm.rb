@@ -1,6 +1,6 @@
 cask "scummvm" do
-  version "2.5.1"
-  sha256 "583226d08db6ca10b05f42c9c00625d6ee583ab4c80011e07428484c0a21cace"
+  version "2.6.0"
+  sha256 "21e7c9575a76bd2e00b3ee8e45119d3cd6919e4f1dd31eb39e51d08b55683c3b"
 
   url "https://downloads.scummvm.org/frs/scummvm/#{version}/scummvm-#{version}-macosx.dmg"
   name "ScummVM"

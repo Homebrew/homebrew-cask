@@ -8,4 +8,8 @@ cask "mojibar" do
   homepage "https://github.com/muan/mojibar"
 
   app "Mojibar-darwin-x64/Mojibar.app"
+
+  caveats do
+    discontinued
+  end
 end

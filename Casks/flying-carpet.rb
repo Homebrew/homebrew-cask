@@ -7,5 +7,10 @@ cask "flying-carpet" do
   desc "File transfer over ad-hoc wifi"
   homepage "https://github.com/spieglt/flyingcarpet"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Flying Carpet.app"
 end
