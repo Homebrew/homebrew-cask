@@ -15,6 +15,8 @@ cask "squash" do
     end
   end
 
+  auto_updates true
+
   app "Squash.app"
 
   zap trash: [
