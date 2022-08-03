@@ -23,6 +23,8 @@ cask "nextcloud" do
     regex(/Nextcloud[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
+  auto_updates true
+
   pkg "Nextcloud-#{version}.pkg"
   binary "/Applications/Nextcloud.app/Contents/MacOS/nextcloudcmd"
 
