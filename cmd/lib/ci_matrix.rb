@@ -8,8 +8,8 @@ module CiMatrix
   MAX_JOBS = 256
 
   RUNNERS = {
-    { symbol: :big_sur,  name: "macos-11" }    => 0.9,
-    { symbol: :monterey, name: "macos-12" }    => 0.1,
+    { symbol: :big_sur,  name: "macos-11" } => 0.9,
+    { symbol: :monterey, name: "macos-12" } => 0.1,
   }.freeze
 
   # This string uses regex syntax and is intended to be interpolated into
