@@ -5,15 +5,16 @@ cask "moderndeck" do
   url "https://github.com/dangeredwolf/ModernDeck/releases/download/v#{version}/ModernDeck-universal.dmg",
       verified: "github.com/dangeredwolf/ModernDeck"
   name "ModernDeck"
-  desc "A modified version of TweetDeck with a material inspired theme"
+  desc "Modified version of TweetDeck with a material inspired theme"
   homepage "https://moderndeck.app/"
 
-livecheck do
+  livecheck do
     url :url
     strategy :github_latest
-end
+  end
 
   auto_updates true
   depends_on macos: ">= :el_capitan"
+
   app "ModernDeck.app"
 end
