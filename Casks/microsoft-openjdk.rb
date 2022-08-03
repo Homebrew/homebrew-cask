@@ -4,9 +4,9 @@ cask "microsoft-openjdk" do
   version "17.0.4"
 
   if Hardware::CPU.intel?
-    sha256 "aa526efd06e2683861754538a3d48accbb2aba2eb49be277fb030aa9e321273a"
+    sha256 "9d42c26bca136197f4424897b23ddf3051b210f26ae004643636b769f712697e"
   else
-    sha256 "24546bbd3ae9b74009da4961b655a5511ac2ea693d4f68d72f6036da1036fe5f"
+    sha256 "cfcb6c6587ead87550c8d5f4d744dc0f39c554505906dbe33bb9670f92ca7692"
   end
 
   url "https://aka.ms/download-jdk/microsoft-jdk-#{version}-macos-#{arch}.pkg",
