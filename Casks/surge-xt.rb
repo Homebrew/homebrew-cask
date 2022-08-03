@@ -26,6 +26,7 @@ cask "surge-xt" do
               "org.surge-synth-team.surge-xt.app.pkg",
               "org.surge-synth-team.surge-xt.component.pkg",
               "org.surge-synth-team.surge-xt.resources.pkg",
+              "org.surge-synth-team.surge-xt.vst3.pkg",
               "org.surge-synth-team.surge-xt.clap.pkg",
             ],
             delete:  [
