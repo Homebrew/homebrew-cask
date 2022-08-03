@@ -1,12 +1,12 @@
 cask "idafree" do
   arch = Hardware::CPU.intel? ? "idafree" : "arm_idafree"
 
-  version "7.7"
+  version "8.0"
 
   if Hardware::CPU.intel?
-    sha256 "def16362e338ef3ace4ed91cb1bfb2f1ffef220a9988e32d3468c17736c1f851"
+    sha256 "51017c0047b5b06d6cd46c93a65583d4fbf086502de884ebcb8d72033b65e5a0"
   else
-    sha256 "1594c4dc719d888d4c1cb5da5faf45793d5923b5a8830346ed785f4abab0cc2b"
+    sha256 "73354d6e4f2fae739943ac2b10b7d98e871ad8004c40e779a2f8b9ab0e40f194"
   end
 
   url "https://out7.hex-rays.com/files/#{arch}#{version.no_dots}_mac.app.zip"
