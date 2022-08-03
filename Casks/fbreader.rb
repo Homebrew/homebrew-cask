@@ -12,7 +12,9 @@ cask "fbreader" do
     regex(/>Current\s*version:.*?\(v?(\d+(?:\.\d+)+)\).*?</i)
   end
 
-  app "FBReader.app"
+  pkg "FBReader.pkg"
+
+  uninstall pkgutil: "com.fbreader"
 
   zap trash: "~/.FBReader"
 end
