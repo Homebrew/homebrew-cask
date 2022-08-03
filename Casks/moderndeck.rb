@@ -5,7 +5,7 @@ cask "moderndeck" do
   url "https://github.com/dangeredwolf/ModernDeck/releases/download/v#{version}/ModernDeck-universal.dmg",
       verified: "github.com/dangeredwolf/ModernDeck"
   name "ModernDeck"
-  desc "ModernDeck takes TweetDeck to the next level with a Material-inspired theme, customization and performance enhancements, and more. Available as a desktop app or a browser extension."
+  desc "ModernDeck takes TweetDeck to the next level."
   homepage "https://moderndeck.app/"
 
 livecheck do
