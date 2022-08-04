@@ -18,7 +18,6 @@ cask "surge-xt" do
               "com.surge-synth-team.surge-xt.component.pkg",
               "com.surge-synth-team.surge-xt.resources.pkg",
               "com.surge-synth-team.surge-xt.vst3.pkg",
-
               "org.surge-synth-team.surge-xt-fx.app.pkg",
               "org.surge-synth-team.surge-xt-fx.component.pkg",
               "org.surge-synth-team.surge-xt-fx.vst3.pkg",
