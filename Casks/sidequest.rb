@@ -1,12 +1,12 @@
 cask "sidequest" do
   arch = Hardware::CPU.intel? ? "" : "-arm64"
 
-  version "0.10.28"
+  version "0.10.30"
 
   if Hardware::CPU.intel?
-    sha256 "0d063dd765f9409d587406a097ad236b6fd048844154c750ebd61cb8be366e28"
+    sha256 "80c17aa903281d9f118b0d2f36b8fc1772fd6407a7b1dfb36bb1ec9009df8149"
   else
-    sha256 "1e6405857c4ff7f0f0d9e299f3a4fc87456d2a96a7e10d0ad1c635ef85a38ddb"
+    sha256 "c2ee70020593f072a5229033c045d3b17dec6ef6921996c667dd2c6a2a8eb546"
   end
 
   url "https://github.com/SideQuestVR/SideQuest/releases/download/v#{version}/SideQuest-#{version}#{arch}.dmg",
