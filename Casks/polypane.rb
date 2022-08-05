@@ -1,12 +1,12 @@
 cask "polypane" do
   arch = Hardware::CPU.intel? ? "" : "-arm64"
 
-  version "10.0.0"
+  version "10.0.1"
 
   if Hardware::CPU.intel?
-    sha256 "c0885997a6b0181a68d563e323e880f2a04ca3b001fbaa2e13fb2b1e81c32fb3"
+    sha256 "303929e6821f4d5c124c10c257104c5fd90fd4a6cbd13c68a288dee4dcc1fd00"
   else
-    sha256 "81d4f3c1b042a05e60bcb0e8c1238b7ca04c372810460456f6b1f47714a55060"
+    sha256 "bf3933c7461d952e19fab0e444712c24567abc64680092bff108993c15a8a205"
   end
 
   url "https://github.com/firstversionist/polypane/releases/download/v#{version}/Polypane-#{version}#{arch}.dmg",
