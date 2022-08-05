@@ -1,12 +1,12 @@
 cask "vscodium" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "1.69.2"
+  version "1.70.0"
 
   if Hardware::CPU.intel?
-    sha256 "c77aa39d405ee627dbd671a0514eb97bf7aae9206fee113c9253c552719ef0d2"
+    sha256 "8866219c7126608b0e2c342fec1a54ff55dfc2bd0b0c0ba463ac33504a0991a2"
   else
-    sha256 "5ba6bbbb5e89a8ffc0100913493fc525278eafa7431fafcff33cc7fe2e16de09"
+    sha256 "5a834999b39df29e624db4a55bf57edc183bb87d7afe32c698c073ca7be301be"
   end
 
   url "https://github.com/VSCodium/vscodium/releases/download/#{version}/VSCodium.#{arch}.#{version}.dmg"
