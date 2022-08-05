@@ -1,12 +1,12 @@
 cask "masscode" do
   arch = Hardware::CPU.intel? ? "" : "-arm64"
 
-  version "2.10.0"
+  version "3.0.0"
 
   if Hardware::CPU.intel?
-    sha256 "dc6297fdda10434c1bcaf882c677d783db5106f82c6a39cca172fe4503f9040c"
+    sha256 "ed2793d4cea25f117af8dc5dda5bd6dbd99ccdbdf9a07b15d6ca7edadc11352c"
   else
-    sha256 "180f58ebd83fcead99c271f66e8212650c9bf634d2ac862c17e78422acd56f40"
+    sha256 "59bf939e2fd7b705a1b017987abbc57563d9ec767ba21d20b600ca6c0e1d1753"
   end
 
   url "https://github.com/massCodeIO/massCode/releases/download/v#{version}/massCode-#{version}#{arch}.dmg",
