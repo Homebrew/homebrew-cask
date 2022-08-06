@@ -16,7 +16,7 @@ cask "yubihsm2-sdk" do
 
   livecheck do
     url "https://developers.yubico.com/YubiHSM2/Releases/"
-    regex(%r{href=.*?/yubihsm2-sdk-(\d\d\d\d-[^-]+)-darwin-#{arch}\.pkg}i)
+    regex(%r{href=.*?/yubihsm2-sdk[._-]v?(\d+(?:[.-]\d+)+)-darwin-#{arch}\.pkg}i)
   end
 
   pkg "yubihsm2-sdk-#{version}-darwin-#{arch}.pkg"
