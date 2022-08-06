@@ -9,8 +9,8 @@ cask "protonmail-bridge" do
   homepage "https://protonmail.com/bridge/"
 
   livecheck do
-    url "https://protonmail.com/download/current_version_darwin.json"
-    regex(/"Version"\s*:\s*"(\d+(?:\.\d+)+)"/i)
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true
