@@ -5,8 +5,8 @@ cask "runelite" do
     version "2.4.4"
     sha256 "62f8a097ddbc6dffcee85c6e3b8b2f386b97395e878f575198dad1386df47c28"
   else
-    version "2.4.2"
-    sha256 "6deceeb1460259622d0f6d35e2527f94d1613b5a5bc40ebade25b617a970a411"
+    version "2.4.4"
+    sha256 "b233def430723a3f6b7229fefb2361a198aeafbdc485358295f1d662f97df766"
   end
 
   url "https://github.com/runelite/launcher/releases/download/#{version}/RuneLite-#{arch}.dmg",
