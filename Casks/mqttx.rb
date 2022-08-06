@@ -1,12 +1,12 @@
 cask "mqttx" do
   arch = Hardware::CPU.intel? ? "" : "arm64-"
 
-  version "1.8.1"
+  version "1.8.2"
 
   if Hardware::CPU.intel?
-    sha256 "b7c2096b497e9595c1ab3ecad1c5b96f66c3210090d240f16a494376fb2e9a20"
+    sha256 "4e1659a4a20e67f065e638cff65051334465992231f3eb49e8327bf27d5fbd5e"
   else
-    sha256 "2a5ef52d78746194898ecaab218c58d76a1db30101a79aa635678634da5fdc7e"
+    sha256 "a2da4692f4be5d845605bf3d8d08e44fc521f5bdcc0e55523f9dc4c676f718ee"
   end
 
   url "https://github.com/emqx/MQTTX/releases/download/v#{version}/MQTTX-#{version}-#{arch}mac.zip",
