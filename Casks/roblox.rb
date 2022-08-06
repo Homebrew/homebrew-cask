@@ -8,6 +8,22 @@ cask "roblox" do
   desc "Online multiplayer game platform"
   homepage "https://www.roblox.com/"
 
+  livecheck do
+    url "https://clientsettingscdn.roblox.com/v1/client-version/MacPlayer"
+    regex(/version[._-]([^"]+)/i)
+    strategy :page_match do |page, regex|
+      client_version = page[regex, 1]
+      next if client_version.blank?
+
+      cask = CaskLoader.load("roblox")
+      download_url = "https://setup.rbxcdn.com/mac/version-#{client_version}-Roblox.dmg"
+      main_version = Homebrew::Livecheck::Strategy::ExtractPlist.find_versions(cask: cask, url: download_url)[:matches].values.first
+      next if main_version.blank?
+
+      "#{main_version},#{client_version}"
+    end
+  end
+
   installer manual: "Roblox.app"
 
   uninstall quit:   "com.roblox.RobloxPlayer",
