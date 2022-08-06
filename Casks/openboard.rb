@@ -1,6 +1,6 @@
 cask "openboard" do
   version "1.6.3"
-  sha256 "f412ffd1ee956906a389fc9eec19f2046234d785cef24e50882e6b9ced266291"
+  sha256 "b50fb2ad4933b9ce081b9dfdb0ceb5f0169128663ba17e77859b2ca1ba460c20"
 
   url "https://github.com/OpenBoard-org/OpenBoard/releases/download/v#{version}/OpenBoard-#{version}.dmg",
       verified: "github.com/OpenBoard-org/OpenBoard/"
