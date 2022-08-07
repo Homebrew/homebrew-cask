@@ -12,6 +12,8 @@ cask "phoenix" do
 
   app "Phoenix.app"
 
+  uninstall login_item: "Phoenix"
+
   zap trash: [
     "~/Library/Application Support/Phoenix/storage.json",
     "~/Library/Preferences/org.khirviko.Phoenix.plist",
