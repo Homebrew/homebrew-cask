@@ -14,4 +14,11 @@ cask "gittyup" do
   end
 
   app "Gittyup.app"
+
+  zap trash: [
+    "~/Library/Application Support/Gittyup",
+    "~/Library/Preferences/com.Murmele.Gittyup.plist",
+    "~/Library/Preferences/com.github.gittyup.Gittyup.plist",
+    "~/Library/Saved Application State/com.Murmele.Gittyup.savedState",
+  ]
 end
