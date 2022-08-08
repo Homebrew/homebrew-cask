@@ -15,6 +15,11 @@ cask "kap" do
   desc "Open-source screen recorder built with web technology"
   homepage "https://getkap.co/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
   depends_on macos: ">= :sierra"
 
