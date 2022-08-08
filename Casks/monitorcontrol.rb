@@ -16,6 +16,11 @@ cask "monitorcontrol" do
   else
     version "4.1.0"
     sha256 "89ac4cf63efc4aad441f94c2636e3437e0f96c6eaaba4d9d663f13ee7b7d013a"
+
+    livecheck do
+      url "https://monitorcontrol.app/appcast.xml"
+      strategy :sparkle, &:short_version
+    end
   end
 
   url "https://github.com/MonitorControl/MonitorControl/releases/download/v#{version}/MonitorControl.#{version}.dmg"
