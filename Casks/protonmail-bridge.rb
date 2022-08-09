@@ -15,7 +15,7 @@ cask "protonmail-bridge" do
 
   auto_updates true
 
-  app "ProtonMail Bridge.app"
+  app "Proton Mail Bridge.app"
 
   uninstall launchctl: "ProtonMail Bridge",
             quit:      "com.protonmail.bridge"
