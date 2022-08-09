@@ -17,13 +17,7 @@ cask "balenaetcher" do
 
   app "balenaEtcher.app"
 
-  uninstall quit: [
-    "com.github.Squirrel",
-    "com.github.electron.framework",
-    "io.balena.etcher.*",
-    "org.mantle.Mantle",
-    "org.reactivecocoa.ReactiveCocoa",
-  ]
+  uninstall quit: "io.balena.etcher.*"
 
   zap trash: [
     "~/Library/Application Support/balena-etcher",
