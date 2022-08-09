@@ -4,8 +4,8 @@ cask "protonmail-bridge" do
 
   url "https://github.com/ProtonMail/proton-bridge/releases/download/v#{version}/Bridge-Installer.dmg",
       verified: "github.com/ProtonMail/proton-bridge/"
-  name "ProtonMail Bridge"
-  desc "Bridges ProtonMail to email clients supporting IMAP and SMTP protocols"
+  name "Proton Mail Bridge"
+  desc "Bridges Proton Mail to email clients supporting IMAP and SMTP protocols"
   homepage "https://protonmail.com/bridge/"
 
   livecheck do
@@ -17,12 +17,12 @@ cask "protonmail-bridge" do
 
   app "Proton Mail Bridge.app"
 
-  uninstall launchctl: "ProtonMail Bridge",
+  uninstall launchctl: "Proton Mail Bridge",
             quit:      "com.protonmail.bridge"
 
   zap trash: [
     "~/Library/Application Support/protonmail",
     "~/Library/Caches/protonmail",
-    "~/Library/Caches/ProtonMail Bridge",
+    "~/Library/Caches/Proton Mail Bridge",
   ]
 end
