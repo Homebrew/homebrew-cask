@@ -1,5 +1,5 @@
 cask "ogdesign-eagle" do
-  arch = Hardware::CPU.intel? ? "" : "M1-"
+  arch arm: "M1-"
 
   version "3.0,9"
 
