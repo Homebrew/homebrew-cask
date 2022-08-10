@@ -1,5 +1,5 @@
 cask "feishu" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
   version "5.17.6,1a2b3c4d"
 
