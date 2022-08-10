@@ -1,6 +1,6 @@
 cask "projector" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
-  archapp = Hardware::CPU.intel? ? "" : "-arm"
+  arch arm: "arm64", intel: "x64"
+  archapp = on_arch_conditional arm: "-arm"
 
   version "1.1.0"
 
