@@ -1,7 +1,7 @@
 cask "chia" do
-  version "1.5.0"
+  arch arm: "-arm64"
 
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  version "1.5.0"
 
   if Hardware::CPU.intel?
     sha256 "0db183c1ffb31badbc77899f2cdafaca33eca5432d2f3f01c4cf21f614b663c5"
