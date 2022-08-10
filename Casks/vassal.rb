@@ -1,5 +1,5 @@
 cask "vassal" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
+  arch arm: "aarch64", intel: "x86_64"
 
   version "3.6.7"
 
