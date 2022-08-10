@@ -1,5 +1,5 @@
 cask "inkscape" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
+  arch arm: "arm64", intel: "x86_64"
 
   version "1.2.1"
 
