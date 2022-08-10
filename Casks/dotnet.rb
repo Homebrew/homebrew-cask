@@ -1,5 +1,5 @@
 cask "dotnet" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
   if Hardware::CPU.intel?
     version "6.0.7,3da50ef8-7b22-4f08-95e9-3641416fdc08,ee91bcdbbbb117803e315f673c9d19f1"
