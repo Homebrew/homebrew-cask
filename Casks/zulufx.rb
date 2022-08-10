@@ -1,6 +1,6 @@
 cask "zulufx" do
-  arch = Hardware::CPU.intel? ? "x64" : "aarch64"
-  choice = Hardware::CPU.intel? ? "x86" : "arm"
+  arch arm: "aarch64", intel: "x64"
+  choice = on_arch_conditional arm: "arm", intel: "x86"
 
   version "17.0.4,17.36.13-ca"
 
