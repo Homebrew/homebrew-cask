@@ -1,5 +1,5 @@
 cask "epic" do
-  arch = Hardware::CPU.intel? ? "" : "m1"
+  arch arm: "m1"
 
   version "103.0.5060.53"
 
