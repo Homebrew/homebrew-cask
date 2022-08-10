@@ -1,5 +1,5 @@
 cask "lens" do
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  arch arm: "-arm64"
 
   version "6.0.1,20220810.2"
 
