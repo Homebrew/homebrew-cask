@@ -1,5 +1,5 @@
 cask "kotlin-native" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
+  arch arm: "aarch64", intel: "x86_64"
 
   version "1.7.10"
 
