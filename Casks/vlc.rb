@@ -1,5 +1,5 @@
 cask "vlc" do
-  arch = Hardware::CPU.intel? ? "intel64" : "arm64"
+  arch arm: "arm64", intel: "intel64"
 
   version "3.0.17.3"
 
