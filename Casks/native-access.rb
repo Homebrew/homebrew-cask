@@ -1,5 +1,6 @@
 cask "native-access" do
-  arch = Hardware::CPU.intel? ? "Intel" : "M1"
+  arch arm: "M1", intel: "Intel"
+
   version "2.2.0"
   sha256 :no_check
 
