@@ -1,5 +1,5 @@
 cask "hepta" do
-  arch = Hardware::CPU.intel? ? "mac" : "arm64-mac"
+  arch arm: "arm64-mac", intel: "mac"
 
   version "0.183.0"
 
