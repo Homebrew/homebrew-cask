@@ -5,7 +5,7 @@ cask "kaleidoscope" do
   url "https://updates.kaleidoscope.app/v#{version.major}/prod/Kaleidoscope-#{version.csv.first}-#{version.csv.second}.app.zip"
   name "Kaleidoscope"
   desc "Spot and merge differences in text and image files or folders"
-  homepage "https://www.kaleidoscope.app/"
+  homepage "https://kaleidoscope.app/"
 
   livecheck do
     url "https://updates.kaleidoscope.app/v#{version.major}/prod/appcast"
