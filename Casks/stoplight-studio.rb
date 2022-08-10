@@ -1,5 +1,5 @@
 cask "stoplight-studio" do
-  arch = Hardware::CPU.intel? ? "mac" : "mac-arm64"
+  arch arm: "mac-arm64", intel: "mac"
 
   version "2.8.1,7959.git-777e356"
 
