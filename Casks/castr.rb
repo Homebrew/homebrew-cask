@@ -1,5 +1,5 @@
 cask "castr" do
-  arch = Hardware::CPU.intel? ? "mac" : "arm64-mac"
+  arch arm: "arm64-mac", intel: "mac"
 
   version "1.0.0"
 
