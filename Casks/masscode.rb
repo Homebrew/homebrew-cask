@@ -1,5 +1,5 @@
 cask "masscode" do
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  arch arm: "-arm64"
 
   version "3.1.0"
 
