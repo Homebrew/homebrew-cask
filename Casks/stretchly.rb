@@ -1,5 +1,5 @@
 cask "stretchly" do
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  arch arm: "-arm64"
 
   version "1.11.0"
 
