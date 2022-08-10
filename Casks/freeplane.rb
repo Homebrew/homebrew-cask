@@ -1,5 +1,5 @@
 cask "freeplane" do
-  arch = Hardware::CPU.intel? ? "intel" : "apple"
+  arch arm: "apple", intel: "intel"
 
   version "1.10.3"
 
