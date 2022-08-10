@@ -1,5 +1,5 @@
 cask "bitcoin-core" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
+  arch arm: "arm64", intel: "x86_64"
 
   version "23.0"
 
