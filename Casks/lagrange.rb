@@ -1,5 +1,5 @@
 cask "lagrange" do
-  arch = Hardware::CPU.intel? ? "macos10.13-x86_64" : "macos11.0-arm64"
+  arch arm: "macos11.0-arm64", intel: "macos10.13-x86_64"
 
   version "1.13.7"
 
