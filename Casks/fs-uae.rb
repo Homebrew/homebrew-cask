@@ -1,5 +1,5 @@
 cask "fs-uae" do
-  arch = Hardware::CPU.intel? ? "x86-64" : "ARM64"
+  arch arm: "ARM64", intel: "x86-64"
 
   version "3.1.66"
 
