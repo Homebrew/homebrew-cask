@@ -1,5 +1,5 @@
 cask "lark" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
   if Hardware::CPU.intel?
     version "5.15.10,cd30fe"
