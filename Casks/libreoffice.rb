@@ -1,5 +1,6 @@
 cask "libreoffice" do
-  arch, folder = Hardware::CPU.intel? ? ["x86-64", "x86_64"] : ["aarch64", "aarch64"]
+  arch arm: "aarch64", intel: "x86-64"
+  folder = on_arch_conditional arm: "aarch64", intel: "x86_64"
 
   version "7.3.5"
 
