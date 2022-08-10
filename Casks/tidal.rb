@@ -1,5 +1,5 @@
 cask "tidal" do
-  arch = Hardware::CPU.intel? ? "" : ".arm64"
+  arch arm: ".arm64"
 
   if Hardware::CPU.intel?
     version "2.30.0"
