@@ -1,5 +1,5 @@
 cask "unity" do
-  arch = Hardware::CPU.intel? ? "" : "Arm64"
+  arch arm: "Arm64"
 
   version "2022.1.10f1,9aa0f82c4f96"
 
