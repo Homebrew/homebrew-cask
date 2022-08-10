@@ -1,5 +1,5 @@
 cask "mediathekview" do
-  arch = Hardware::CPU.intel? ? "mac" : "mac-as"
+  arch arm: "mac-as", intel: "mac"
 
   version "13.9.1"
 
