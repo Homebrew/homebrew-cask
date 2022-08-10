@@ -1,5 +1,5 @@
 cask "pycharm-edu" do
-  arch = Hardware::CPU.intel? ? "" : "-aarch64"
+  arch arm: "-aarch64"
 
   version "2022.1.3,221.6008.17"
 
