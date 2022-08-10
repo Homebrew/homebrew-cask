@@ -1,4 +1,6 @@
 cask "eclipse-java" do
+  arch arm: "aarch64", intel: "x86_64"
+
   version "4.24.0,2022-06"
 
   if Hardware::CPU.intel?
@@ -6,8 +8,6 @@ cask "eclipse-java" do
   else
     sha256 "387983833dd7f8296e4bcdba063258a6c9194dba2cb0ed6cddf4b4157369b445"
   end
-
-  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-java-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&r=1"
   name "Eclipse IDE for Java Developers"
