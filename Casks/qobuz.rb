@@ -1,5 +1,5 @@
 cask "qobuz" do
-  arch = Hardware::CPU.intel? ? "x64/elCapitan_sierra" : "arm64/bigsur"
+  arch arm: "arm64/bigsur", intel: "x64/elCapitan_sierra"
 
   version "6.1.1,039"
 
