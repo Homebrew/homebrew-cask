@@ -1,5 +1,5 @@
 cask "shadow" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
   version "5.0.1155.9211"
   sha256 :no_check
