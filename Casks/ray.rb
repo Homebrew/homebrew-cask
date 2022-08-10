@@ -1,6 +1,6 @@
 cask "ray" do
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
-  folder = Hardware::CPU.intel? ? "" : "arm64/"
+  arch arm: "-arm64"
+  folder = on_arch_conditional arm: "arm64/"
 
   version "2.0.1"
 
