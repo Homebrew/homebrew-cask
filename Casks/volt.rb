@@ -1,5 +1,5 @@
 cask "volt" do
-  arch = Hardware::CPU.intel? ? "macos" : "macos_arm64"
+  arch arm: "macos_arm64", intel: "macos"
 
   version "0.87"
 
