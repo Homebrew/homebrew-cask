@@ -1,5 +1,5 @@
 cask "mps" do
-  arch = Hardware::CPU.intel? ? "macos" : "macos-aarch64"
+  arch arm: "macos-aarch64", intel: "macos"
 
   version "2021.3.1,213.7172.958"
 
