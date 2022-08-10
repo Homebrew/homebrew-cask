@@ -1,5 +1,5 @@
 cask "eloston-chromium" do
-  arch = Hardware::CPU.intel? ? "x86-64" : "arm64"
+  arch arm: "arm64", intel: "x86-64"
 
   if Hardware::CPU.intel?
     version "104.0.5112.81-1.1,1659612354"
