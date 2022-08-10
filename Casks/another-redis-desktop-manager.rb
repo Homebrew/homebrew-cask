@@ -1,5 +1,5 @@
 cask "another-redis-desktop-manager" do
-  arch = Hardware::CPU.intel? ? "." : "-M1-arm64-"
+  arch arm: "-M1-arm64-", intel: "."
 
   version "1.5.7"
 
