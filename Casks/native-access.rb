@@ -10,7 +10,7 @@ cask "native-access" do
   livecheck do
     url "https://community.native-instruments.com/discussion/4823/official-update-status-native-access-current-version-2-0-8"
     strategy :page_match
-    regex(%r{current version: \d\.\d+\.\d+})
+    regex(/current version: \d\.\d+\.\d+/i)
   end
 
   auto_updates true
