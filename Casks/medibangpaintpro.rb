@@ -1,6 +1,6 @@
 cask "medibangpaintpro" do
-  version "28.1"
-  sha256 "efa02b5245d260a7d841cc87695195db865e79ac30922131feb9fbd4a6f3a0a6"
+  version "28.2"
+  sha256 "fb66ff79ce0437d8ee4a6395f65ac91bbdb72a74f17f5bf12851897a342e6d61"
 
   url "https://medibangpaint.com/static/installer/MediBangPaintPro/MediBangPaintPro-#{version}.dmg"
   name "MediBang Paint Pro"

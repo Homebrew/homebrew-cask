@@ -1,6 +1,6 @@
 cask "combine-pdfs" do
-  version "5.6.0"
-  sha256 "51c00784839deb5c41969f2d438e60dc0ee0de63e273079f01ed4f93f61550c8"
+  version "5.6.1"
+  sha256 "c0840985ce6a8ff8e90dc0d92137af57fb9229b1b53ad8728faf847f464f288f"
 
   url "https://www.monkeybreadsoftware.de/Software/CombinePDFs/CombinePDFs#{version.no_dots}.zip"
   name "Combine PDFs"

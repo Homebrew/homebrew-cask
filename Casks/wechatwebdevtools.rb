@@ -1,12 +1,12 @@
 cask "wechatwebdevtools" do
   arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
-  version "1.06.2207210"
+  version "1.06.2208010"
 
   if Hardware::CPU.intel?
-    sha256 "891ec7a5bf011b03e025d09f94b3c59f735d5fe8b29f980cc63b7754fe8c728c"
+    sha256 "e13b9cab93476d9076847ca74342fcc785854487a9044db6315426775a625942"
   else
-    sha256 "e5def38681471079646a31897a0d9b6b0b07fc2145ffeadc134e79c80c2a9885"
+    sha256 "04db8963a098baf726effecfdaf0bf42db24bc7f4e4100243a0d3bd891edb2e5"
   end
 
   url "https://dldir1.qq.com/WechatWebDev/release/be1ec64cf6184b0fa64091919793f068/wechat_devtools_#{version}_darwin_#{arch}.dmg"

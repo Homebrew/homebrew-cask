@@ -1,12 +1,12 @@
 cask "jquake" do
   arch = Hardware::CPU.intel? ? "intel" : "arm64"
 
-  version "1.6.2"
+  version "1.7.0"
 
   if Hardware::CPU.intel?
-    sha256 "1a2ce77c84d730457b9e1309e4edc64ecd0c6021f3cfeb7ae124ab7a76eb2688"
+    sha256 "cdd83b6e34fdb1a34a8b5342788cc2a39654ae206bb4e920a03d38c9a014ec77"
   else
-    sha256 "c02f0e078bebdce582ee9c04d7facf530c072c682a0f85240393f93cc80b4d92"
+    sha256 "f6bd8be37f3e1647afd52479ba90bdcab1280d60675144cc802e1e90c9245318"
   end
 
   url "https://fleneindre.github.io/downloads/JQuake_#{version}_mac_#{arch}.dmg",
