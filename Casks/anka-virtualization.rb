@@ -1,5 +1,5 @@
 cask "anka-virtualization" do
-  arch = Hardware::CPU.intel? ? "intel" : "arm"
+  arch arm: "arm", intel: "intel"
 
   if Hardware::CPU.intel?
     version "2.5.7.148"
