@@ -1,5 +1,5 @@
 cask "gitkraken" do
-  arch = Hardware::CPU.intel? ? "darwin" : "darwin-arm64"
+  arch arm: "darwin-arm64", intel: "darwin"
 
   version "8.8.0"
 
