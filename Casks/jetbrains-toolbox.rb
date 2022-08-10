@@ -1,5 +1,5 @@
 cask "jetbrains-toolbox" do
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  arch arm: "-arm64"
 
   version "1.25,1.25.12627"
 
