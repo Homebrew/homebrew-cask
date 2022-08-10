@@ -1,8 +1,8 @@
 cask "molotov" do
-  version "4.5.0"
+  arch arm: "-arm64"
+  arch_folder = on_arch_conditional arm: "m1/"
 
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
-  arch_folder = Hardware::CPU.intel? ? "" : "m1/"
+  version "4.5.0"
 
   if Hardware::CPU.intel?
     sha256 "9366230de159a4b5dffe29e1823b6e3bc0d6e6fd2ddc2c4f1b9e9764319cf995"
