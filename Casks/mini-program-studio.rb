@@ -1,5 +1,5 @@
 cask "mini-program-studio" do
-  arch = Hardware::CPU.intel? ? "-x64" : "-arm64"
+  arch arm: "-arm64", intel: "-x64"
 
   if Hardware::CPU.intel?
     version "3.1.3,ae1bb1b2-16bc-4e53-92af-78ebe212ab33"
