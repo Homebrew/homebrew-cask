@@ -1,5 +1,5 @@
 cask "chromedriver" do
-  arch = Hardware::CPU.intel? ? "mac64" : "mac64_m1"
+  arch arm: "mac64_m1", intel: "mac64"
 
   version "104.0.5112.79"
 
