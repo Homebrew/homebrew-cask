@@ -1,5 +1,5 @@
 cask "mattermost" do
-  arch = Hardware::CPU.intel? ? "x64" : "m1"
+  arch arm: "m1", intel: "x64"
 
   version "5.1.1"
 
