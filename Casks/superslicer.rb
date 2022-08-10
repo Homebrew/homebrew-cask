@@ -1,5 +1,5 @@
 cask "superslicer" do
-  arch = Hardware::CPU.intel? ? "" : "arm_"
+  arch arm: "arm_"
 
   if Hardware::CPU.intel?
     version "2.4.58.3,220714"
