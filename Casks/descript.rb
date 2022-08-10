@@ -1,5 +1,5 @@
 cask "descript" do
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  arch arm: "-arm64"
 
   version "44.2.0-release.20220726.11"
 
