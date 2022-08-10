@@ -1,6 +1,6 @@
 cask "start" do
-  arch = Hardware::CPU.intel? ? "" : "m1/"
-  livecheck_arch = Hardware::CPU.intel? ? "" : "-arm"
+  arch arm: "m1/"
+  livecheck_arch = on_arch_conditional arm: "-arm"
 
   if Hardware::CPU.intel?
     version "0.301.29-193"
