@@ -1,5 +1,5 @@
 cask "tinkerwell" do
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  arch arm: "-arm64"
 
   version "3.6.0"
 
