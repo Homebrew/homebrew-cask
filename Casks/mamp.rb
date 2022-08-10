@@ -1,5 +1,5 @@
 cask "mamp" do
-  arch = Hardware::CPU.intel? ? "Intel-x86" : "M1-arm"
+  arch arm: "M1-arm", intel: "Intel-x86"
 
   version "6.6"
 
