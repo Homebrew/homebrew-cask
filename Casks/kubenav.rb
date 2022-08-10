@@ -1,5 +1,5 @@
 cask "kubenav" do
-  arch = Hardware::CPU.intel? ? "amd64" : "arm64"
+  arch arm: "arm64", intel: "amd64"
 
   version "3.9.0"
 
