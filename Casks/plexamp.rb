@@ -1,5 +1,5 @@
 cask "plexamp" do
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  arch arm: "-arm64"
 
   version "4.3.0"
 
