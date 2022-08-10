@@ -1,5 +1,5 @@
 cask "itau" do
-  arch = Hardware::CPU.intel? ? "" : "_m1"
+  arch arm: "_m1"
 
   sha256 :no_check
 
