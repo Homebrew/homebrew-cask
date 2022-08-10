@@ -1,5 +1,5 @@
 cask "intellij-idea" do
-  arch = Hardware::CPU.intel? ? "" : "-aarch64"
+  arch arm: "-aarch64"
 
   version "2022.2,222.3345.118"
 
