@@ -1,6 +1,6 @@
 cask "notion" do
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
-  livecheck_folder = Hardware::CPU.intel? ? "mac" : "apple-silicon"
+  arch arm: "-arm64"
+  livecheck_folder = on_arch_conditional arm: "apple-silicon", intel: "mac"
 
   if Hardware::CPU.intel?
     version "2.0.24"
