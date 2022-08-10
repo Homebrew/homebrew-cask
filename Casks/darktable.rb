@@ -1,5 +1,5 @@
 cask "darktable" do
-  arch = Hardware::CPU.intel? ? "" : "_arm64"
+  arch arm: "_arm64"
 
   version "4.0.0"
 
