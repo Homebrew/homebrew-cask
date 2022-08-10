@@ -1,5 +1,5 @@
 cask "coccoc" do
-  arch = Hardware::CPU.intel? ? "" : "/arm64"
+  arch arm: "/arm64"
 
   version "103.0.5060.134,103.0.134"
   sha256 :no_check
