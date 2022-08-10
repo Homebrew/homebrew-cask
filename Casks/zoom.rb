@@ -1,5 +1,5 @@
 cask "zoom" do
-  arch = Hardware::CPU.intel? ? "" : "arm64/"
+  arch arm: "arm64/"
 
   version "5.11.3.9065"
 
