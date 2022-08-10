@@ -1,5 +1,5 @@
 cask "voov-meeting" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
+  arch arm: "arm64", intel: "x86_64"
 
   if Hardware::CPU.intel?
     version "3.7.0.590,be624b69a9db9410195acc9ec0686885"
