@@ -1,5 +1,5 @@
 cask "eclipse-installer" do
-  arch = Hardware::CPU.intel? ? "mac64" : "aarch64"
+  arch arm: "aarch64", intel: "mac64"
 
   version "4.24.0,2022-06"
 
