@@ -1,5 +1,5 @@
 cask "webex" do
-  arch = Hardware::CPU.intel? ? "TeamsDesktop-MACOS" : "Desktop-MACOS-Apple-Silicon"
+  arch arm: "Desktop-MACOS-Apple-Silicon", intel: "TeamsDesktop-MACOS"
 
   version "42.7.0.22904"
   sha256 :no_check
