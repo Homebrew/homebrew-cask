@@ -1,5 +1,5 @@
 cask "rar" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm"
+  arch arm: "arm", intel: "x64"
 
   version "6.12"
 
