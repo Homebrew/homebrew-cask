@@ -1,5 +1,5 @@
 cask "espanso" do
-  arch = Hardware::CPU.intel? ? "Intel" : "M1"
+  arch arm: "M1", intel: "Intel"
 
   version "2.1.6-beta"
 
