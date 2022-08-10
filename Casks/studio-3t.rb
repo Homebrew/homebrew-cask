@@ -1,6 +1,6 @@
 cask "studio-3t" do
-  arch = Hardware::CPU.intel? ? "" : "-aarch64"
-  livecheckarch = Hardware::CPU.intel? ? "" : "_aarch64"
+  arch arm: "-aarch64"
+  livecheckarch = on_arch_conditional arm: "_aarch64"
 
   version "2022.7.1"
 
