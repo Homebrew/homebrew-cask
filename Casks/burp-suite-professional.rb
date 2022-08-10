@@ -1,5 +1,5 @@
 cask "burp-suite-professional" do
-  arch = Hardware::CPU.intel? ? "MacOsx" : "MacOsArm64"
+  arch arm: "MacOsArm64", intel: "MacOsx"
 
   version "2022.8.1"
 
