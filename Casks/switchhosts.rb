@@ -1,5 +1,6 @@
 cask "switchhosts" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
+
   version "4.1.2.6086"
 
   if Hardware::CPU.intel?
