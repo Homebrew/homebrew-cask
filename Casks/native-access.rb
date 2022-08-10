@@ -7,6 +7,11 @@ cask "native-access" do
   name "Native Access"
   desc "Administration tool for Native Instruments products"
   homepage "https://native-instruments.com/specials/native-access-2"
+  livecheck do
+    url "https://community.native-instruments.com/discussion/4823/official-update-status-native-access-current-version-2-0-8"
+    strategy :page_match
+    regex(current version: \d\.\d+\.\d+)
+  end
 
   auto_updates true
   depends_on macos: ">= :mojave"
