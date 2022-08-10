@@ -1,5 +1,5 @@
 cask "weka" do
-  arch = Hardware::CPU.intel? ? "osx" : "arm-osx"
+  arch arm: "arm-osx", intel: "osx"
 
   version "3.8.6"
 
