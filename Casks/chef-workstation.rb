@@ -1,5 +1,6 @@
 cask "chef-workstation" do
-  arch, macos_version = Hardware::CPU.intel? ? ["x86_64", "10.15"] : ["arm64", "11"]
+  arch arm: "arm64", intel: "x86_64"
+  macos_version = on_arch_conditional arm: "11", intel: "10.15"
 
   version "22.7.1006"
 
