@@ -1,5 +1,5 @@
 cask "ghost-browser" do
-  arch = Hardware::CPU.intel? ? "" : "_arm64"
+  arch arm: "_arm64"
 
   version "2.1.4.3"
 
