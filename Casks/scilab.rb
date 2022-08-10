@@ -1,5 +1,5 @@
 cask "scilab" do
-  prefix = Hardware::CPU.intel? ? "" : "accelerate-" # there is also an "openblas-" version
+  prefix = on_arch_conditional arm: "accelerate-" # there is also an "openblas-" version
 
   version "6.1.1"
 
