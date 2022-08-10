@@ -1,5 +1,6 @@
 cask "wireshark" do
-  url_arch, livecheck_arch = Hardware::CPU.intel? ? ["Intel", "x86-"] : ["Arm", "arm"]
+  arch arm: "Arm", intel: "Intel"
+  livecheck_arch = on_arch_conditional arm: "arm", intel: "x86-"
 
   version "3.6.7"
 
@@ -9,7 +10,7 @@ cask "wireshark" do
     sha256 "ccf2511b3c55ce845b477a975908add1511addb309599eb50f40003a3f6eb8aa"
   end
 
-  url "https://2.na.dl.wireshark.org/osx/Wireshark%20#{version}%20#{url_arch}%2064.dmg"
+  url "https://2.na.dl.wireshark.org/osx/Wireshark%20#{version}%20#{arch}%2064.dmg"
   name "Wireshark"
   desc "Network protocol analyzer"
   homepage "https://www.wireshark.org/"
