@@ -1,5 +1,5 @@
 cask "waterfox" do
-  arch = Hardware::CPU.intel? ? "Setup" : "ARM.Setup"
+  arch arm: "ARM.Setup", intel: "Setup"
 
   version "4.1.4"
 
