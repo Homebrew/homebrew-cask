@@ -1,5 +1,6 @@
 cask "publii" do
-  arch = Hardware::CPU.intel? ? "intel" : "apple-silicon"
+  arch arm: "apple-silicon", intel: "intel"
+
   version "0.40.2"
 
   if Hardware::CPU.intel?
