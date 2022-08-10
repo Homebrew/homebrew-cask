@@ -1,5 +1,5 @@
 cask "touchdesigner" do
-  arch = Hardware::CPU.intel? ? "intel" : "arm64"
+  arch arm: "arm64", intel: "intel"
 
   version "2022.26590"
 
