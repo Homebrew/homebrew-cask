@@ -1,5 +1,5 @@
 cask "texmacs" do
-  arch = Hardware::CPU.intel? ? "" : "-arm"
+  arch arm: "-arm"
 
   version "2.1.2"
 
