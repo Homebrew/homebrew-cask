@@ -1,5 +1,5 @@
 cask "scenebuilder" do
-  arch = Hardware::CPU.intel? ? "" : "-aarch64"
+  arch arm: "-aarch64"
 
   version "18.0.0"
 
