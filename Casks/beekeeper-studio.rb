@@ -1,7 +1,7 @@
 cask "beekeeper-studio" do
-  version "3.6.2"
+  arch arm: "-arm64"
 
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  version "3.6.2"
 
   if Hardware::CPU.intel?
     sha256 "cdbeb8c32e11cd9c76360e17e0692d95d548464fbb414cfc0a1a84d802624a6f"
