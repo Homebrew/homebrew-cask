@@ -1,5 +1,5 @@
 cask "angry-ip-scanner" do
-  arch = Hardware::CPU.intel? ? "X86" : "Arm64"
+  arch arm: "Arm64", intel: "X86"
 
   version "3.8.2"
 
