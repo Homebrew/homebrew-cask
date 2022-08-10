@@ -1,5 +1,5 @@
 cask "min" do
-  arch = Hardware::CPU.intel? ? "x86" : "arm64"
+  arch arm: "arm64", intel: "x86"
 
   version "1.25.1"
 
