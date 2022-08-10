@@ -1,5 +1,5 @@
 cask "razorsql" do
-  arch = Hardware::CPU.intel? ? "" : "_aarch64"
+  arch arm: "_aarch64"
 
   version "10.0.7"
 
