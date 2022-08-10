@@ -1,5 +1,5 @@
 cask "onlyoffice" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "arm"
+  arch arm: "arm", intel: "x86_64"
 
   version "7.1.1"
 
