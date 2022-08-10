@@ -1,5 +1,5 @@
 cask "adobe-creative-cloud" do
-  arch = Hardware::CPU.intel? ? "osx10" : "macarm64"
+  arch arm: "macarm64", intel: "osx10"
 
   version "5.8.0.592"
 
