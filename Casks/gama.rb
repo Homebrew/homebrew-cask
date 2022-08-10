@@ -1,5 +1,5 @@
 cask "gama" do
-  arch = Hardware::CPU.intel? ? "" : "_M1"
+  arch arm: "_M1"
 
   version "1.8.2-RC2"
 
