@@ -1,6 +1,6 @@
 cask "windows95" do
   # NOTE: "95" is not a version number, but an intrinsic part of the product name
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
   version "3.0.0"
 
