@@ -1,5 +1,5 @@
 cask "postman" do
-  arch = Hardware::CPU.intel? ? "osx64" : "osx_arm64"
+  arch arm: "osx_arm64", intel: "osx64"
 
   version "9.27.0"
 
