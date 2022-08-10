@@ -13,4 +13,11 @@ cask "understand" do
   end
 
   app "Understand.app"
+
+  zap trash: [
+    "~/Library/Application Support/SciTools",
+    "~/Library/Preferences/com.scitools.License.plist",
+    "~/Library/Preferences/com.scitools.Understand.plist",
+    "~/Library/Saved Application State/com.scitools.Understand.savedState",
+  ]
 end
