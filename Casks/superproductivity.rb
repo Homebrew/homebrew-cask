@@ -22,7 +22,5 @@ cask "superproductivity" do
     "~/Library/Logs/superProductivity",
     "~/Library/Preferences/com.super-productivity.app.plist",
     "~/Library/Saved Application State/com.super-productivity.app.savedState",
-    "/var/db/receipts/com.super-productivity.app.bom",
-    "/var/db/receipts/com.super-productivity.app.plist",
   ]
 end
