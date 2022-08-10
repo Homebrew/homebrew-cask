@@ -1,5 +1,5 @@
 cask "idafree" do
-  arch = Hardware::CPU.intel? ? "idafree" : "arm_idafree"
+  arch arm: "arm_idafree", intel: "idafree"
 
   version "8.0"
 
