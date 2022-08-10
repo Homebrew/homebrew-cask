@@ -1,5 +1,5 @@
 cask "shotcut" do
-  arch = Hardware::CPU.intel? ? "macos" : "macos-ARM64"
+  arch arm: "macos-ARM64", intel: "macos"
 
   version "22.06.23"
 
