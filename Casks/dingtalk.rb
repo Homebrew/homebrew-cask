@@ -1,4 +1,6 @@
 cask "dingtalk" do
+  arch arm: "qd=2022mac-m1"
+
   if Hardware::CPU.intel?
     version "6.5.30.16"
     sha256 "7a664ef4b8940f7cee706ccbd67fe4cf537d6a7535a3cd92f1cd2fd445c5bb04"
@@ -15,12 +17,7 @@ cask "dingtalk" do
   homepage "https://www.dingtalk.com/"
 
   livecheck do
-    livecheck_url = if Hardware::CPU.intel?
-      "https://www.dingtalk.com/mac/d/"
-    else
-      "https://www.dingtalk.com/mac/d/qd=2022mac-m1"
-    end
-    url livecheck_url
+    url "https://www.dingtalk.com/mac/d/#{arch}"
 
     strategy :header_match
   end
