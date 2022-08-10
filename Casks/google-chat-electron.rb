@@ -1,5 +1,5 @@
 cask "google-chat-electron" do
-  arch = Hardware::CPU.intel? ? "darwin-x64" : "darwin-arm64"
+  arch arm: "darwin-arm64", intel: "darwin-x64"
 
   version "2.18.0"
 
