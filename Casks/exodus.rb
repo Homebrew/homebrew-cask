@@ -1,5 +1,5 @@
 cask "exodus" do
-  arch = Hardware::CPU.intel? ? "macos" : "macos-arm64"
+  arch arm: "macos-arm64", intel: "macos"
 
   version "22.7.29"
 
