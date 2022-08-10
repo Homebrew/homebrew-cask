@@ -1,5 +1,5 @@
 cask "syncovery" do
-  arch = Hardware::CPU.intel? ? "" : "-Apple"
+  arch arm: "-Apple"
 
   version "9.47w"
 
