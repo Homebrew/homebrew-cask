@@ -1,5 +1,5 @@
 cask "wing-personal" do
-  arch = Hardware::CPU.intel? ? "intel" : "arm64"
+  arch arm: "arm64", intel: "intel"
 
   version "8.3.3.0"
 
