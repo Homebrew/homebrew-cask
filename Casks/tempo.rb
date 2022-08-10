@@ -1,5 +1,5 @@
 cask "tempo" do
-  arch = Hardware::CPU.intel? ? "release" : "release-arm64"
+  arch arm: "release-arm64", intel: "release"
 
   version "6.0.0"
 
