@@ -1,5 +1,5 @@
 cask "mysql-connector-python" do
-  arch = Hardware::CPU.intel? ? "x86-64bit" : "arm64"
+  arch arm: "arm64", intel: "x86-64bit"
 
   version "8.0.30"
 
