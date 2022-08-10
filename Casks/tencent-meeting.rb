@@ -1,5 +1,5 @@
 cask "tencent-meeting" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
+  arch arm: "arm64", intel: "x86_64"
 
   if Hardware::CPU.intel?
     version "3.10.4.445,76dddacec583bb87a2105c0089f24c7b"
