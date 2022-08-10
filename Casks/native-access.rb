@@ -1,14 +1,15 @@
 cask "native-access" do
-  version "1.13.3.136"
+  arch = Hardware::CPU.intel? ? "Intel" : "M1"
+  version "2.2.0"
   sha256 :no_check
 
-  url "https://native-instruments.com/fileadmin/downloads/Native_Access_Installer.dmg"
+  url "https://native-instruments.com/fileadmin/downloads/Native-Access_2_Mac_#{arch}.dmg"
   name "Native Access"
   desc "Administration tool for Native Instruments products"
-  homepage "https://native-instruments.com/specials/native-access"
+  homepage "https://native-instruments.com/specials/native-access-2"
 
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   app "Native Access.app"
 
