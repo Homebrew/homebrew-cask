@@ -1,5 +1,5 @@
 cask "librewolf" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
+  arch arm: "aarch64", intel: "x86_64"
 
   if Hardware::CPU.intel?
     version "103.0.2,1,87f3819691b7d2c7b0dd08e6793ef91f"
