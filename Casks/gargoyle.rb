@@ -1,5 +1,5 @@
 cask "gargoyle" do
-  arch = Hardware::CPU.intel? ? "mac-intel" : "mac-arm64"
+  arch arm: "mac-arm64", intel: "mac-intel"
 
   version "2022.1"
 
