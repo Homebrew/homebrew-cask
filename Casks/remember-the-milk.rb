@@ -1,5 +1,5 @@
 cask "remember-the-milk" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
   version "1.3.11"
 
