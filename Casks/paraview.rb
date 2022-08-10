@@ -1,6 +1,6 @@
 cask "paraview" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
-  min_macos_version = Hardware::CPU.intel? ? "10.13" : "11.0"
+  arch arm: "arm64", intel: "x86_64"
+  min_macos_version = on_arch_conditional arm: "11.0", intel: "10.13"
 
   version "5.10.1"
 
