@@ -1,5 +1,5 @@
 cask "localxpose" do
-  arch = Hardware::CPU.intel? ? "amd64" : "arm64"
+  arch arm: "arm64", intel: "amd64"
 
   version "22.8.4"
   sha256 :no_check
