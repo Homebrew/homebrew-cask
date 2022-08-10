@@ -1,5 +1,5 @@
 cask "flutter" do
-  arch = Hardware::CPU.intel? ? "_" : "_arm64_"
+  arch arm: "_arm64_", intel: "_"
 
   version "3.0.5"
 
