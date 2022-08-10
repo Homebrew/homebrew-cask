@@ -1,5 +1,5 @@
 cask "openwebstart" do
-  arch = Hardware::CPU.intel? ? "x64" : "aarch64"
+  arch arm: "aarch64", intel: "x64"
 
   version "1.6.0"
 
