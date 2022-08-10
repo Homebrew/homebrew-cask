@@ -1,5 +1,5 @@
 cask "bandage" do
-  arch = Hardware::CPU.intel? ? "x86-64" : "aarch64"
+  arch arm: "aarch64", intel: "x86-64"
 
   version "0.9.0"
 
