@@ -1,5 +1,5 @@
 cask "visual-paradigm" do
-  arch = Hardware::CPU.intel? ? "WithJRE" : "AArch64"
+  arch arm: "AArch64", intel: "WithJRE"
 
   version "17.0,20220801"
 
