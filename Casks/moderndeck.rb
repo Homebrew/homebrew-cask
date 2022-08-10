@@ -17,4 +17,9 @@ cask "moderndeck" do
   depends_on macos: ">= :el_capitan"
 
   app "ModernDeck.app"
+
+  zap trash: [
+    "~/Library/Application Support/ModernDeck",
+    "~/Library/Logs/ModernDeck",
+  ]
 end
