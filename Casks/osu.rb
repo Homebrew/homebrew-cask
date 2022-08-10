@@ -1,5 +1,5 @@
 cask "osu" do
-  arch = Hardware::CPU.intel? ? "Intel" : "Apple.Silicon"
+  arch arm: "Apple.Silicon", intel: "Intel"
 
   version "2022.810.2"
 
