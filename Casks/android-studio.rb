@@ -1,5 +1,5 @@
 cask "android-studio" do
-  arch = Hardware::CPU.intel? ? "mac" : "mac_arm"
+  arch arm: "mac_arm", intel: "mac"
 
   version "2021.2.1.16"
 
