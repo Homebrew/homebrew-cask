@@ -1,5 +1,5 @@
 cask "prowlarr" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
   version "0.4.3.1921"
 
