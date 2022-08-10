@@ -1,5 +1,5 @@
 cask "blobsaver" do
-  arch = Hardware::CPU.intel? ? "intel" : "arm"
+  arch arm: "arm", intel: "intel"
 
   version "3.2.1"
 
