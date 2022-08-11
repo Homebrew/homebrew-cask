@@ -1,5 +1,5 @@
 cask "visual-studio-code" do
-  arch arm: "darwin-arm64", intel: "darwin"
+  arch = Hardware::CPU.intel? ? "darwin" : "darwin-arm64"
 
   version "1.70.1"
 
