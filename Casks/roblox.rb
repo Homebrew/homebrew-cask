@@ -18,6 +18,8 @@ cask "roblox" do
     end
   end
 
+  auto_updates true
+
   installer manual: "Roblox.app"
 
   uninstall quit:   "com.roblox.RobloxPlayer",
