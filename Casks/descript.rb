@@ -4,7 +4,7 @@ cask "descript" do
   version "45.1.0-release.20220802.6"
 
   if Hardware::CPU.intel?
-    sha256 "6bdc79411ec21d6844e5d06fe2651dccc1723e49bda860c6bcbbebf499e18905"
+    sha256 "b6396707bb77868b45403f7d4a2618b59698c810ff18d92b5f2ebef51b9d73ac"
   else
     sha256 "6bdc79411ec21d6844e5d06fe2651dccc1723e49bda860c6bcbbebf499e18905"
   end
