@@ -10,6 +10,11 @@ cask "gns3" do
   desc "GUI for the Dynamips Cisco router emulator"
   homepage "https://www.gns3.com/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :high_sierra"
 
   app "GNS3.app"
