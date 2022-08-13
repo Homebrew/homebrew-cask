@@ -1,6 +1,6 @@
 cask "feed-the-beast" do
-  version "202207271710,0f9644f5fc"
-  sha256 "70dd050c48e18680461593368fd2a5b92f84f2f61ecb4d1eefa4be3e05fef57e"
+  version "202208131844,e5790011d3"
+  sha256 "926c0e6cd0b439a73c770559754fa13e599d2704ac37f8e592fb899f7efc58b9"
 
   url "https://apps.modpacks.ch/FTBApp/release/#{version.csv.first}-#{version.csv.second}-release/FTBA_macos_#{version.csv.first}-#{version.csv.second}-release.dmg",
       verified: "apps.modpacks.ch/FTBApp/"
