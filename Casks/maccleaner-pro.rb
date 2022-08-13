@@ -1,5 +1,5 @@
 cask "maccleaner-pro" do
-  version "2.9,342"
+  version "2.9.1,346"
   sha256 :no_check
 
   url "https://nektony.com/download/mac-cleaner-pro/dmg/mac-cleaner-pro.dmg"
