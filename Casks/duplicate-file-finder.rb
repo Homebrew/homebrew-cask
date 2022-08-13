@@ -1,6 +1,6 @@
 cask "duplicate-file-finder" do
-  version "6.17,581"
-  sha256 "ebcc6835753dba5448290258a42eac3be488dc093df9c96a49bb3f2528a6bc21"
+  version "6.17.2,586"
+  sha256 "3ce52dc70047eabd7c4ae6abca23749f8ab5d1d52d2c0ad1c51a9c1ba84bd9e3"
 
   url "https://nektony.com/pro-support/duplicates-finder-site/update/DFFS_v#{version.csv.first}b#{version.csv.second}.zip"
   name "Duplicate File Finder"
