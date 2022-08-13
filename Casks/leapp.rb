@@ -1,12 +1,12 @@
 cask "leapp" do
   arch arm: "-arm64"
 
-  version "0.13.2"
+  version "0.13.4"
 
   if Hardware::CPU.intel?
-    sha256 "324d61919de4762f5aca599a3a4c406211dff59ffbb22c0176df0c6d9ca89c46"
+    sha256 "b166e133c673dacc628d802f2a08426d2bd0b49451dcf215a011134b10b7cc35"
   else
-    sha256 "08cf0aec2faebaedf95027ad0b8a1892dbe042ce88f3e1bf20e248e56a75076a"
+    sha256 "f58025ac1ae75d60113c54e9d7efd1e54ed3c32f2a94abff32fd8988ded0735f"
   end
 
   url "https://asset.noovolari.com/#{version}/Leapp-#{version}#{arch}.dmg",
