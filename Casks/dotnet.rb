@@ -2,8 +2,8 @@ cask "dotnet" do
   arch arm: "arm64", intel: "x64"
 
   if Hardware::CPU.intel?
-    version "6.0.7,3da50ef8-7b22-4f08-95e9-3641416fdc08,ee91bcdbbbb117803e315f673c9d19f1"
-    sha256 "9aba5aca71ada681a77a9058a5d5c2fdfed7d6a197ba416c88e8093906abbdeb"
+    version "6.0.8,5cda9364-6621-40a0-9519-c460a37571c6,a73481f3abf7bd0325420d2ce740bfed"
+    sha256 "b401bf0279e076a7e3187858f7be9613fe06b0260565155e5e0118e24ba3e0a2"
   else
     version "6.0.8,9beccd15-f764-41af-babc-e88839269b89,fe9ee487d0d52feb9a9213da780f19d8"
     sha256 "48077415a07f66e809230fed5b9b39bd0118cff1751c68ad270779b0786c1d1a"
