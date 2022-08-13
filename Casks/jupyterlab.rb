@@ -9,6 +9,11 @@ cask "jupyterlab" do
 
   app "JupyterLab.app"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   uninstall pkgutil: "com.electron.jupyterlab-desktop",
             delete:  [
               "/Applications/JupyterLab.app",
