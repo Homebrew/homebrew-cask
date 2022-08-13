@@ -16,6 +16,7 @@ cask "tailscale" do
   conflicts_with formula: "tailscale"
 
   app "Tailscale.app"
+  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/tailscale.wrapper.sh"
   binary shimscript, target: "tailscale"
 
