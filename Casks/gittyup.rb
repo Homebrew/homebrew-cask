@@ -1,6 +1,6 @@
 cask "gittyup" do
-  version "1.1.1"
-  sha256 "d73f876fee2eed4fbbcbc309fa57101332b572f60b648e6c176b04e336f7b03a"
+  version "1.1.2"
+  sha256 "eeaead8c6cc16867c7e16e476a8d401736839bd84801665473ccb6a35e5462f7"
 
   url "https://github.com/Murmele/Gittyup/releases/download/stable/Gittyup-#{version}.dmg",
       verified: "github.com/Murmele/Gittyup/"
