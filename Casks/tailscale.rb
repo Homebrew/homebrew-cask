@@ -16,7 +16,15 @@ cask "tailscale" do
   conflicts_with formula: "tailscale"
 
   app "Tailscale.app"
-  binary "#{appdir}/Tailscale.app/Contents/MacOS/Tailscale", target: "tailscale"
+  shimscript = "#{staged_path}/tailscale.wrapper.sh"
+  binary shimscript, target: "tailscale"
+
+  preflight do
+    File.write shimscript, <<~EOS
+      #!/bin/sh
+      exec '#{appdir}/Tailscale.app/Contents/MacOS/Tailscale' "$@"
+    EOS
+  end
 
   uninstall login_item: "Tailscale",
             quit:       "io.tailscale.ipn.macsys"
