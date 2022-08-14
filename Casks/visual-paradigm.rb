@@ -1,12 +1,12 @@
 cask "visual-paradigm" do
   arch arm: "AArch64", intel: "WithJRE"
 
-  version "17.0,20220801"
+  version "17.0,20220816"
 
   if Hardware::CPU.intel?
-    sha256 "224ae7ee55a81fc6e49a4f9b0018e42584bcce75c6115d1dbeec8d9c3d691f83"
+    sha256 "af1dea5f6b629d2e0e0a7347c53cd612d2ee8063084f272a79a2bbb085593f96"
   else
-    sha256 "626e638df254baf90ef77fed388101817d872e8bcafb79f163bde6ef06ca333d"
+    sha256 "3e50ce8a3aed5374df2e85f5102b705d3e434f625816c974ed721262fb556549"
   end
 
   url "https://www.visual-paradigm.com/downloads/vp#{version.csv.first}/#{version.csv.second}/Visual_Paradigm_#{version.csv.first.dots_to_underscores}_#{version.csv.second}_OSX_#{arch}.dmg"
