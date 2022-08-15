@@ -3,9 +3,10 @@ cask "epic" do
 
   version "103.0.5060.53"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "d3e352ae9cd7aa342ff8d9b89f87be9b94e7887c38ac5fb9b92e9e2089a721ba"
-  else
+  end
+  on_arm do
     sha256 "445d5344376c5f586350fb53ed04f7535dd48c48029e0f4a18a5b9be45995b8f"
   end
 
