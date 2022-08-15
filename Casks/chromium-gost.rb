@@ -8,4 +8,9 @@ cask "chromium-gost" do
   homepage "https://github.com/deemru/Chromium-Gost"
 
   app "Chromium-Gost.app"
+
+  zap trash: [
+    "~/Library/Application Support/Chromium",
+    "~/Library/Caches/Chromium",
+  ]
 end
