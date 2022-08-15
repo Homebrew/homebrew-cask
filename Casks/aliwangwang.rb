@@ -11,7 +11,7 @@ cask "aliwangwang" do
   livecheck do
     url "https://g.alicdn.com/im/ww-home/0.0.5/detail.min.js"
     strategy :page_match do |page|
-      match = page.match(%r{AliWangWang[._-]v?\((\d+(?:\.\d+)+\w+)\)\.dmg})
+      match = page.match(/AliWangWang[._-]v?\((\d+(?:\.\d+)+\w+)\)\.dmg/i)
       next if match.blank?
 
       (match[1]).to_s
