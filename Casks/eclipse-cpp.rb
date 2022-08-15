@@ -3,9 +3,10 @@ cask "eclipse-cpp" do
 
   version "4.24.0,2022-06"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "5e90b3bb9da55e77d0d5c3f87c28535250a67d9e9707c3fce9dd1186bffb6a8d"
-  else
+  end
+  on_arm do
     sha256 "b68caf64918b286858294c88802a0d333515245bf8f45c0fa0cb4297fc771332"
   end
 
