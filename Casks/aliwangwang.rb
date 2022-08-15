@@ -5,13 +5,13 @@ cask "aliwangwang" do
   url "https://download.alicdn.com/wangwang/AliWangWang_(#{version}).dmg",
       verified: "download.alicdn.com/wangwang/"
   name "AliWangwang"
-  desc "For buyer's edition"
+  desc "Shopping communication tool"
   homepage "https://pages.tmall.com/wow/qnww/act/index"
 
   livecheck do
     url "https://g.alicdn.com/im/ww-home/0.0.5/detail.min.js"
     strategy :page_match do |page|
-      match = page.match(%r{https://download\.alicdn\.com/wangwang/AliWangWang_\((\d+(?:\.\d+)+\w+)\)\.dmg})
+      match = page.match(%r{AliWangWang[._-]v?\((\d+(?:\.\d+)+\w+)\)\.dmg})
       next if match.blank?
 
       (match[1]).to_s
