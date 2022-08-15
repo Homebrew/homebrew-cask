@@ -1,22 +1,13 @@
 cask "aliwangwang" do
-  version "10.01.02M"
-  sha256 "5a13d4890944a2a64b862cda41f9786e344b5e520e218dc37e9090ae282b0d8a"
+  version "10.01.03M"
+  sha256 "90a223cd0e244cdd58f53abafc8ab3293db01be94c3e7437189195afbd3df44e"
 
   url "https://download.alicdn.com/wangwang/AliWangWang_(#{version}).dmg",
       verified: "download.alicdn.com/wangwang/"
+  appcast "https://jdy.tmall.com/version/check?version=#{version}&nick=cask&platform=macww"
   name "AliWangwang"
   desc "Shopping communication tool"
   homepage "https://pages.tmall.com/wow/qnww/act/index"
-
-  livecheck do
-    url "https://g.alicdn.com/im/ww-home/0.0.5/detail.min.js"
-    strategy :page_match do |page|
-      match = page.match(/AliWangWang[._-]v?\((\d+(?:\.\d+)+\w+)\)\.dmg/i)
-      next if match.blank?
-
-      (match[1]).to_s
-    end
-  end
 
   auto_updates true
 
