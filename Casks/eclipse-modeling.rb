@@ -3,9 +3,10 @@ cask "eclipse-modeling" do
 
   version "4.24.0,2022-06"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "5b0823ae92a3c1fcecb6434f8729f30f4cbfe25e79131625597ddd6d42f4cfb0"
-  else
+  end
+  on_arm do
     sha256 "efe4598f84ef21de4c8f002dc07c40383c2e4f03665892801f6f575bbc92ea25"
   end
 
