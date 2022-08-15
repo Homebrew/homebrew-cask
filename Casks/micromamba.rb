@@ -16,6 +16,11 @@ cask "micromamba" do
   desc "Tiny version of the Mamba cross-platform package manager"
   homepage "https://mamba.readthedocs.io/en/latest/installation.html#micromamba"
 
+  livecheck do
+    url "https://api.anaconda.org/release/conda-forge/micromamba/latest"
+    regex(%r{micromamba/(\d+(?:\.\d+)+)/osx-#{arch}/}i)
+  end
+
   binary "bin/micromamba"
 
   caveats <<~EOS
