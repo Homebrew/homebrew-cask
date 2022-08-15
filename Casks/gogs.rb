@@ -3,9 +3,10 @@ cask "gogs" do
 
   version "0.12.10"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "c1825303c05ea38af0dbb1db3abfc91f94c4df37f74ec4eb36d3cef526c776fc"
-  else
+  end
+  on_arm do
     sha256 "63aaee6f0679486621bab27bb4245bc3ff910f71bffebe2985f3181bd43bbf40"
   end
 
