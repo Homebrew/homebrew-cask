@@ -3,9 +3,10 @@ cask "lens" do
 
   version "6.0.1,20220810.2"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "70e95fd69f41a123006e7da17983eaf88670b0c76a0c0a532612d442caf6d861"
-  else
+  end
+  on_arm do
     sha256 "ae8c9d62db5501515e4a3b653c49fe797cf272dd2b8f243bba98d215670a8f05"
   end
 
