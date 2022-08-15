@@ -1,4 +1,4 @@
-cask "mightymike" do
+cask "mighty-mike" do
   version "3.0.1"
   sha256 "8c772b2777ac29b52775c9ce8b4281406fe62f0d4565d478112c15408b3a2efc"
 
