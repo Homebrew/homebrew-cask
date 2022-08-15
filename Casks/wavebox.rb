@@ -3,9 +3,10 @@ cask "wavebox" do
 
   version "10.104.7.2"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "0a18ef2124f999fc5f7f0878408865cd6aa01a1386603eba1a5064a5107421d4"
-  else
+  end
+  on_arm do
     sha256 "eba0a22d5f3b1785de79e97605312e853b5863c8206d64a4d7f936f552476dd9"
   end
 
