@@ -1,10 +1,11 @@
 cask "tencent-meeting" do
   arch arm: "arm64", intel: "x86_64"
 
-  if Hardware::CPU.intel?
+  on_intel do
     version "3.10.4.445,76dddacec583bb87a2105c0089f24c7b"
     sha256 "f126aa4bee8cb19214a8e41b1e1d7d664be15e7ea0d6e6ebf605dbfb6bb16116"
-  else
+  end
+  on_arm do
     version "3.10.4.445,f587a1297117ae13b11cdc906e33312f"
     sha256 "a8d973b16ae42c593389a6b36c5dbca2f23f5a2776ec10b63dc67cec205de457"
   end
