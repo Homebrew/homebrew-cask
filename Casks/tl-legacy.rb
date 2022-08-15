@@ -8,4 +8,9 @@ cask "tl-legacy" do
   homepage "https://tlaun.ch/"
 
   app "TL Legacy.app"
+
+  zap trash: [
+               '~/Library/Saved Application State/ru.turikhay.tlauncher.legacy.savedState',
+               '/Library/Application Support/minecraft'
+             ]
 end
