@@ -3,9 +3,10 @@ cask "clion" do
 
   version "2022.2,222.3345.126"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "27f92a2513ff55a3c354e46e0562c900dbab68e26455be51c3eeb42995aa2ac1"
-  else
+  end
+  on_arm do
     sha256 "b25375ef2d6daa75c83d624633e18850529f0a6a72ae54bbb6a22f9343cc2c86"
   end
 

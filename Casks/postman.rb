@@ -3,9 +3,10 @@ cask "postman" do
 
   version "9.27.0"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "466b65935f1aae11571d902e7bbdf7ff130c2382a29b33c4789c5ee88c7bf1b2"
-  else
+  end
+  on_arm do
     sha256 "b92de2cc5a72c5fb47acf2b4a7fc4bb1338a902b9bc75ff4ef4c4538f17e2260"
   end
 

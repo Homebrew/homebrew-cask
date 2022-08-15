@@ -3,9 +3,10 @@ cask "openwebstart" do
 
   version "1.6.0"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "c2a71ce2e22adbf96aab869f0c96b2d26f839eace0d6692bf861070334fb2898"
-  else
+  end
+  on_arm do
     sha256 "c4b738e7a0ddc76d6a40a913bede9f205d421b7b596b329ecb96438a7d048b72"
   end
 

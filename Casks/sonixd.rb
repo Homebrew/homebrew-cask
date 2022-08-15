@@ -3,9 +3,10 @@ cask "sonixd" do
 
   version "0.15.3"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "384889e0abccdd75771624f874d812a1ed49f50e2f51af03e0bcb286940059dc"
-  else
+  end
+  on_arm do
     sha256 "f2382d64fa216c7fb7734043c77be5b45e1dd5f214da3cca0a5d3c34c2e7acda"
   end
 

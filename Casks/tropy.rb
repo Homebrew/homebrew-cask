@@ -3,9 +3,10 @@ cask "tropy" do
 
   version "1.12.0"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "ef8e62028cd991ed8e668797035286f4e5220190a9d70591fe7e853be90b862d"
-  else
+  end
+  on_arm do
     sha256 "d730a8747596a1a6d0c869cadbdc3bdff5ed371e05b205fad6b397dc5a4b872f"
   end
 

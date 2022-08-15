@@ -3,9 +3,10 @@ cask "radarr" do
 
   version "4.1.0.6175"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "85094096ef10c789e6b7ac59208f02cb3de0a02dd1acf358cb569e2ff9df984d"
-  else
+  end
+  on_arm do
     sha256 "cba7916c86a54d59b35506677620a4f9dc3de4aa45cea916d0b62d194244e93c"
   end
 

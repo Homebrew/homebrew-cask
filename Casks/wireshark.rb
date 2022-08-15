@@ -4,9 +4,10 @@ cask "wireshark" do
 
   version "3.6.7"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "930fd418cf4b966b1299ceacd888ebd0705cf44269027cf375acc94cb7af49e8"
-  else
+  end
+  on_arm do
     sha256 "ccf2511b3c55ce845b477a975908add1511addb309599eb50f40003a3f6eb8aa"
   end
 

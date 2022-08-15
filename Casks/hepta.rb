@@ -3,9 +3,10 @@ cask "hepta" do
 
   version "0.184.2"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "1d2cca07e9b7d8e67e4291577431e43a6fb0fc8060a4b38d8f2855fab3fef09c"
-  else
+  end
+  on_arm do
     sha256 "e3770be0f58df496aef0316a85c1bcbb873cdba584854b7f9fbdf47ba33eb241"
   end
 

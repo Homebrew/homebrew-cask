@@ -3,9 +3,10 @@ cask "microsoft-openjdk" do
 
   version "17.0.4"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "9d42c26bca136197f4424897b23ddf3051b210f26ae004643636b769f712697e"
-  else
+  end
+  on_arm do
     sha256 "cfcb6c6587ead87550c8d5f4d744dc0f39c554505906dbe33bb9670f92ca7692"
   end
 

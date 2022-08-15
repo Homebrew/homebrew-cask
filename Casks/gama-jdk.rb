@@ -3,9 +3,10 @@ cask "gama-jdk" do
 
   version "1.8.2-RC2"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "0d161a6aa13a3d40f1643d551b594cdd58d6ef3a81e10ea9ff2d9bc1070f21ac"
-  else
+  end
+  on_arm do
     sha256 "c903608dd09cf511e721bceaa1f521e772a2ea9801eb135b182aa3b1a3053d88"
   end
 

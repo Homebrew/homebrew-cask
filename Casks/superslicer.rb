@@ -3,9 +3,10 @@ cask "superslicer" do
 
   version "2.4.58.4,220811"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "594f10459f4d3b2081ae89ef170bc9aa9ad13ebe62bbf2acac3311c58c114026"
-  else
+  end
+  on_arm do
     sha256 "ddd5f3822c69faefc31124fad194c536d6c4f0ea661e7e5427559c4ba9c4c1f4"
   end
 

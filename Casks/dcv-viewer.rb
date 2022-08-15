@@ -3,9 +3,10 @@ cask "dcv-viewer" do
 
   version "2022.1.4279"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "036bab4870ffb2f0240f8813910a1f72e3718b4fa552cda8311f20cd8ed25e7d"
-  else
+  end
+  on_arm do
     sha256 "9d9929a66d8e9e7b43e1e455c246f4da465a28945880416efb35e70066fea33a"
   end
 

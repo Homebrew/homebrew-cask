@@ -3,9 +3,10 @@ cask "texmacs" do
 
   version "2.1.2"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "db1f9a525554d76794e0339cc19fb4d45eee79bce5f7a176c8dc8b8667181b08"
-  else
+  end
+  on_arm do
     sha256 "d0a5abf3dafba31073ffc3bbfbeff5300453954a54495affee8a16a2f9196587"
   end
 

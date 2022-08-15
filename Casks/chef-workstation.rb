@@ -4,9 +4,10 @@ cask "chef-workstation" do
 
   version "22.7.1006"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "6706e3c22248b1a0727f382e26c115d808457f04677f97a09432bfd77d2e5d92"
-  else
+  end
+  on_arm do
     sha256 "f01815513f0e820dc036cabf1bef04b4beca37b1869b3a3e8b206942b6d0469d"
   end
 

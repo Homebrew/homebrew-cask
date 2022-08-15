@@ -3,9 +3,10 @@ cask "electron-fiddle" do
 
   version "0.29.2"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "5cc91b5c2f30125b04e720a690fd670a10cd4c91b653e7b1d14895701e636076"
-  else
+  end
+  on_arm do
     sha256 "8a5b77213f134fcf034fe1953e1c4a6800dd14258d3285c2cae7ff6a0028ecf9"
   end
 

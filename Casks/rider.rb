@@ -3,9 +3,10 @@ cask "rider" do
 
   version "2022.2.1,222.3739.37"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "13cdaa0f83e645a0a08bc3dd05522441e591b247af853b22c8ca5bbce047a125"
-  else
+  end
+  on_arm do
     sha256 "96e539ba43d7dcecb9e709c1b1483b4c832fbff4b9fd77f6e91b266a91125a55"
   end
 

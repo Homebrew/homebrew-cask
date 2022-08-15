@@ -3,9 +3,10 @@ cask "datagrip" do
 
   version "2022.2.1,222.3345.126"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "7cd7bcdc7588a88459dcda5bab0e7c97751b8d7a87a37c5af8e08072fc9beb03"
-  else
+  end
+  on_arm do
     sha256 "01d8de1225fb4a74f22752edf74038405f02d27565f01816d8e751d7989a75bb"
   end
 

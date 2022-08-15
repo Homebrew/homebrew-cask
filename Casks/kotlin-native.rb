@@ -3,9 +3,10 @@ cask "kotlin-native" do
 
   version "1.7.10"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "4e9470c25e0c6b3b79e86a59c7eca4d79c5a28ca515e80db93504535b2332a00"
-  else
+  end
+  on_arm do
     sha256 "c02be577f541a5c73e1af75534006eea6e09cf67b3a886f323dae6f0406bcb3e"
   end
 

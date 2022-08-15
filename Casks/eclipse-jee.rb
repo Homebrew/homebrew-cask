@@ -3,9 +3,10 @@ cask "eclipse-jee" do
 
   version "4.24.0,2022-06"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "84fdae52853e84fe530f002482a5ddddfc1a88932e93c341001192fc54daa8b1"
-  else
+  end
+  on_arm do
     sha256 "a2ccb1dd0180d241dd2e3c49507fe6d3d5535606862081b436d90194970f736b"
   end
 

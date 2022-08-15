@@ -3,9 +3,10 @@ cask "tabby" do
 
   version "1.0.183"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "43ba5fb3d776f2d2ed1128c377aaa9d3420d792579cc9389c32e75b1f9c87a6c"
-  else
+  end
+  on_arm do
     sha256 "cfef3fd184b1bdf5070b5aec7dbeae3aa835f624a233e90e200170d51c7ef5a9"
   end
 

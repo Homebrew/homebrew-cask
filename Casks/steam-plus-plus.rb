@@ -3,9 +3,10 @@ cask "steam-plus-plus" do
 
   version "2.8.3"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "9d07681cb51e68c945b017b684f7394caef94a256a5bbe5e81fe27670e41ea4f"
-  else
+  end
+  on_arm do
     sha256 "c9172e46fcabaa7868e53448cbe4d79be9c0ed3a1c892bf1707e52f1501e1688"
   end
 

@@ -4,9 +4,10 @@ cask "tempo" do
   version "6.0.0"
 
   url "https://download.yourtempo.co/#{arch}/Tempo-#{version}.dmg"
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "acfe86aedce23077a34de27717f38920bf4eafb740841088ab31b685fec4e3af"
-  else
+  end
+  on_arm do
     sha256 "67260ec4260e30da28abc20d847282f08e09d8bce00730594c598caf3a63bdb7"
   end
 

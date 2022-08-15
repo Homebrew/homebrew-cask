@@ -3,9 +3,10 @@ cask "mediathekview" do
 
   version "13.9.1"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "4529bbed37b3736623b5083e99088866bfec98973383df2553c27175738072a9"
-  else
+  end
+  on_arm do
     sha256 "4eb0e2de15f1852b66ac16b84b6fdba1c3dfc18e19a646763c4e636a7c7932b0"
   end
 

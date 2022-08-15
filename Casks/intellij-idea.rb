@@ -3,9 +3,10 @@ cask "intellij-idea" do
 
   version "2022.2,222.3345.118"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "45b1ec724c8d72746d2b7f05fd229e6ef68fb82e38f420a1a0ae47faae1086a1"
-  else
+  end
+  on_arm do
     sha256 "d790aec60c065725d704c834a0cb76fe7643c00186019990688f9a90b64fef3b"
   end
 

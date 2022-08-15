@@ -3,9 +3,10 @@ cask "fishing-funds" do
 
   version "6.2.2"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "9ec3b8358db25252db93f902f6f14d50029a31516052a9f9017385c7f02294e4"
-  else
+  end
+  on_arm do
     sha256 "f88f88ea326b2605cbaba4d8b837e0a8dd6497f6c209b42fb8c29c15eec4a7ec"
   end
 

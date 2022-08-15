@@ -3,9 +3,10 @@ cask "electron" do
 
   version "20.0.2"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "2b7f0b77ffa49efca1c50de071d1647bba0838aea34a028edaef9cf43ef6ab4c"
-  else
+  end
+  on_arm do
     sha256 "c23b791936391d9a31d5b0a2c48e1cd6b5b42526dcd61a73162a90396095c08f"
   end
 

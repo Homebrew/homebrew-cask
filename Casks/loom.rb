@@ -3,9 +3,10 @@ cask "loom" do
 
   version "0.139.2"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "99463bf9fc29aaa91035095e6555697272d9e57b37f4538156206ed5a92cd256"
-  else
+  end
+  on_arm do
     sha256 "95f2920d04eedbece570871ae2ce4a7a88d95d2ad71e11518553a33abfe8835a"
   end
 

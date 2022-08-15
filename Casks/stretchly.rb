@@ -3,9 +3,10 @@ cask "stretchly" do
 
   version "1.11.0"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "06afceb398eb479d9221333f6f1c5218844565343e653dd9a01b874c0cd13bb7"
-  else
+  end
+  on_arm do
     sha256 "40a40989c3d74dca1e6957be95cc9552e786ebb8fc07685d57e82ba42a7b6b7d"
   end
 

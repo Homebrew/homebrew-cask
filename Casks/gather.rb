@@ -3,9 +3,10 @@ cask "gather" do
 
   version "0.3.5"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "f1fc59e1c70e02eb9b23e16689432556636c8f06c31431dab0c69786b670632f"
-  else
+  end
+  on_arm do
     sha256 "ce2e0cd5792fae69b5c1f66d95f54145316e5305cd35402f954d03c06b828e3a"
   end
 

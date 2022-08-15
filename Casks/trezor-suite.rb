@@ -3,9 +3,10 @@ cask "trezor-suite" do
 
   version "22.7.3"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "6a0614b2aeec086344adccec8be6bcb026cbc12177eb42514ca16c9e45e271c2"
-  else
+  end
+  on_arm do
     sha256 "3b0910bfbdcc78f73544f897396e602af7c3438c08c17be190f8b87a6e69b768"
   end
 

@@ -3,9 +3,10 @@ cask "masscode" do
 
   version "3.2.0"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "9816615f089592f62af1fcb6e7ec3c2f3cc2f2344053c2e11f7f23b95b642bac"
-  else
+  end
+  on_arm do
     sha256 "e758d959852d735d7ebd0de106d37605c8067bfe6723bd697afbc042ddb4059e"
   end
 

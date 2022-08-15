@@ -3,9 +3,10 @@ cask "razorsql" do
 
   version "10.0.7"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "707dad5843d8b77015f8a5bab2407909a8c623c7aaff300529bfebdadfef42be"
-  else
+  end
+  on_arm do
     sha256 "8e65cc0be44bc8e9f91b2de1831bc348a6f7fc30bb1f79b9383a4799311d833d"
   end
 

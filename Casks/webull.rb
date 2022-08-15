@@ -4,9 +4,10 @@ cask "webull" do
 
   version "6.0.5"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "8e5fa82ff254c503d2d3635f8b53cf4fae7cfb16e5f587bc23e4d697c0462f60"
-  else
+  end
+  on_arm do
     sha256 "371b955bd7fb189a26d9d59cefa8a847e6059dc37e25aeb84add011a1e846c96"
   end
 

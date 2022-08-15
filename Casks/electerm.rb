@@ -3,9 +3,10 @@ cask "electerm" do
 
   version "1.22.30"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "7036861bce6abe98a9fbd56e72f68b0ba591f10de01180d09e76c7a0de37b2c2"
-  else
+  end
+  on_arm do
     sha256 "8d1521d79234b56b023cff76d3f8b0b808abef98e5951f00798322042e40bb2b"
   end
 

@@ -3,9 +3,10 @@ cask "blobsaver" do
 
   version "3.2.1"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "341dad87e5a36f7f6c1f14050a4f44128afa2da5651abea761af59054d5029c8"
-  else
+  end
+  on_arm do
     sha256 "0e510dd7315af465a9f1f333e7f303e16871fa9964ae9c1632145d38b6e32e04"
   end
 

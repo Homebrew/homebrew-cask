@@ -3,9 +3,10 @@ cask "dbeaver-enterprise" do
 
   version "22.1.0"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "0d7392dcb7f220fd77680388a3578684e63983efe6b2691f16dc3d1471883e3f"
-  else
+  end
+  on_arm do
     sha256 "026cfcdca2d619821f3a7d41f8ae36f8f6e1e3c294897311be203f0581b69b98"
   end
 

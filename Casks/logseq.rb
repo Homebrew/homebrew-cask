@@ -3,9 +3,10 @@ cask "logseq" do
 
   version "0.8.0"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "f5268e716636e981ea5d6d88bf638c9179261a158b793b8394ec74e5e3cd2a75"
-  else
+  end
+  on_arm do
     sha256 "aef0809d98795f9ba38c68be07d43538fb680141dd4eecfc330c6b346249ff57"
   end
 

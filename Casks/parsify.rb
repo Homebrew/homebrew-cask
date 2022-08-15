@@ -3,9 +3,10 @@ cask "parsify" do
 
   version "1.9.3"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "1c42a8d7e96f08b54afe7fd279dfb44fd8b757c52be6ce9c7a03902371d2f6a6"
-  else
+  end
+  on_arm do
     sha256 "bf59ca43fd4f380aed968374b4cb7ddae675353306ee3e29a30a44e98fb5f25b"
   end
 

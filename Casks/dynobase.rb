@@ -3,9 +3,10 @@ cask "dynobase" do
 
   version "1.10.8"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "5233d55f06a62de362c39451ca4bebbd8eeb6d31effd664aa6253b41772345bf"
-  else
+  end
+  on_arm do
     sha256 "4b00de2f8bb92f0a607cf80750a6b965d63038c2bdb86b6766bdd423142b7523"
   end
 

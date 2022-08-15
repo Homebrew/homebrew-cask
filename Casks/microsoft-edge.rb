@@ -5,9 +5,10 @@ cask "microsoft-edge" do
 
   version "104.0.1293.54"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "3dd856028f80a91afa15d5d75399c91f2c716bf9a27e470e05301de0f4dad216"
-  else
+  end
+  on_arm do
     sha256 "0332dbecaa2128c4c6b4a98ba0c089900b6d85dab4a6e54ab6dba194acbbc7d4"
   end
 

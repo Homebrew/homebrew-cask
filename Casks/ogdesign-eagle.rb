@@ -3,9 +3,10 @@ cask "ogdesign-eagle" do
 
   version "3.0,9"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "22f741b6951d153483b86be328e5f2f5bf101175097c650e7f59a7be619ac076"
-  else
+  end
+  on_arm do
     sha256 "42024f78248291446ec511b140bc72acc7f46c47e5df39f3d4e0179d9eede822"
   end
 

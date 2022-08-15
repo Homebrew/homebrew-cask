@@ -5,9 +5,10 @@ cask "zulip" do
 
   url "https://github.com/zulip/zulip-desktop/releases/download/v#{version}/Zulip-#{version}-#{arch}.dmg",
       verified: "github.com/zulip/zulip-desktop/"
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "ac6f1aadc02dfe1ba04193f67f5f081b6f22d2bfde40c18956071e6cec9c390f"
-  else
+  end
+  on_arm do
     sha256 "c2bd27cea8654eb58d2b6a6bd1688a799f718accb607d7142416c7f90644b70c"
   end
 

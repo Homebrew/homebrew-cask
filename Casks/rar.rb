@@ -3,9 +3,10 @@ cask "rar" do
 
   version "6.12"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "f607ca12bdc313884c5a6f504fbf662a0511bf39fe04a9b2a694c986cd34bb67"
-  else
+  end
+  on_arm do
     sha256 "491f345712a02eb26a3b424658c30652e22e2201a0c5c547fb97c25a756a264b"
   end
 

@@ -3,9 +3,10 @@ cask "kui" do
 
   version "11.5.0"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "4dd77b53f2378e32ceb94d52e9fe07799f06f9acef537de053ec6f75dca3ef08"
-  else
+  end
+  on_arm do
     sha256 "5706d72d5f0cef72260901081d448d56c2ae8cff3090eb2e25cdf77dad016ae1"
   end
 

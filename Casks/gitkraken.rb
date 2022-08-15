@@ -3,9 +3,10 @@ cask "gitkraken" do
 
   version "8.8.0"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "a7b1762ede268e49ae93d5377d7711d7c7bc88c1a592bd7da8117b6f8bfa79c4"
-  else
+  end
+  on_arm do
     sha256 "51f5fa33b4d5d22f3474bfb7409ff5538cf23b05c8fc00c444103459fd04263e"
   end
 

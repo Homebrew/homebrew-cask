@@ -1,9 +1,10 @@
 cask "tidal" do
   arch arm: ".arm64"
 
-  if Hardware::CPU.intel?
+  on_intel do
     version "2.30.0"
-  else
+  end
+  on_arm do
     version "2.32.0"
   end
 

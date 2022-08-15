@@ -3,9 +3,10 @@ cask "staruml" do
 
   version "5.0.2"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "0df2006e175e8cfccf17bc3ca27d505177fab2cf7dda97b2299f1841b3bd98fe"
-  else
+  end
+  on_arm do
     sha256 "abf41ab3d32d1b33ba6a3938e21ee8fba73766ceda0ee26a5ccafd3a11984596"
   end
 

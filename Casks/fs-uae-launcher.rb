@@ -3,9 +3,10 @@ cask "fs-uae-launcher" do
 
   version "3.1.66"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "89dc35917fceeebee62d7bfaa80c3384b6daf0600908d46ba3508855195effb2"
-  else
+  end
+  on_arm do
     sha256 "03c720ee5f3293c6e4002dd593af9518b05873f869da73bfb8480128a8b586d2"
   end
 

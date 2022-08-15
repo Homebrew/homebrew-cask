@@ -1,10 +1,11 @@
 cask "dotnet" do
   arch arm: "arm64", intel: "x64"
 
-  if Hardware::CPU.intel?
+  on_intel do
     version "6.0.8,5cda9364-6621-40a0-9519-c460a37571c6,a73481f3abf7bd0325420d2ce740bfed"
     sha256 "b401bf0279e076a7e3187858f7be9613fe06b0260565155e5e0118e24ba3e0a2"
-  else
+  end
+  on_arm do
     version "6.0.8,9beccd15-f764-41af-babc-e88839269b89,fe9ee487d0d52feb9a9213da780f19d8"
     sha256 "48077415a07f66e809230fed5b9b39bd0118cff1751c68ad270779b0786c1d1a"
   end

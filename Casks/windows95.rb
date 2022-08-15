@@ -5,9 +5,10 @@ cask "windows95" do
   version "3.0.0"
 
   url "https://github.com/felixrieseberg/windows95/releases/download/v#{version}/windows95-darwin-#{arch}-#{version}.zip"
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "182f2eadf1c32159351e383130f4945ee87238ee9f6417ef5291d1a8f93be255"
-  else
+  end
+  on_arm do
     sha256 "9197c0c3e7774f8cd9b57a87fd7ac5980cc0f0fae8ba944052f48ef4905996d0"
   end
 

@@ -3,9 +3,10 @@ cask "miniforge" do
 
   version "4.13.0-1"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "9996677f0ca0bfa6399e9a5688556bfaff544389ea123e2ac6e6252d3a1d0658"
-  else
+  end
+  on_arm do
     sha256 "57bef67a4c80bfef04223eb76ee1b49b1bdfd5eeb46ebcf49e65d6c308c84a98"
   end
 

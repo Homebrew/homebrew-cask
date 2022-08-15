@@ -3,9 +3,10 @@ cask "leapp" do
 
   version "0.13.4"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "b166e133c673dacc628d802f2a08426d2bd0b49451dcf215a011134b10b7cc35"
-  else
+  end
+  on_arm do
     sha256 "f58025ac1ae75d60113c54e9d7efd1e54ed3c32f2a94abff32fd8988ded0735f"
   end
 

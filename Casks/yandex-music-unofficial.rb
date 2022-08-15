@@ -3,9 +3,10 @@ cask "yandex-music-unofficial" do
 
   version "1.6.3"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "22326821e1650d0dd2c2728b3735baeb48cecd652df533526d0788227342fec9"
-  else
+  end
+  on_arm do
     sha256 "4e60274811142c60b40f34de846ca6ea425f00fbe67ee057e697aeeebc5a68c1"
   end
 

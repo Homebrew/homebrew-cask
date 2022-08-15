@@ -3,9 +3,10 @@ cask "cron" do
 
   version "1.109.0"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "24ec3d5a709313979ab8cd658e03cfee4ce4dec6201943c2fd8d467376328c43"
-  else
+  end
+  on_arm do
     sha256 "d01ada02ea7232147ca2f053a7e000bf00e3bd4ab91800e3e58f438460b7180b"
   end
 

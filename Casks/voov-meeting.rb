@@ -1,10 +1,11 @@
 cask "voov-meeting" do
   arch arm: "arm64", intel: "x86_64"
 
-  if Hardware::CPU.intel?
+  on_intel do
     version "3.7.0.590,be624b69a9db9410195acc9ec0686885"
     sha256 "be5016805e02e668111d70ea84109cc5b2388cfd72f5236239ace4e8bc1ab1aa"
-  else
+  end
+  on_arm do
     version "3.7.0.590,747ce62c8d3c838f84873c8570b5e9eb"
     sha256 "6eb5c1984d991d361ba77d79ce741f1a0151c66d5918e415749cf4a2cb325d86"
   end

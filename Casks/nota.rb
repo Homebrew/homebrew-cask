@@ -3,9 +3,10 @@ cask "nota" do
 
   version "0.38.1"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "548e174254dc7fb76faf7c345021354d0f252098af3c88db674985f2a3b2dbea"
-  else
+  end
+  on_arm do
     sha256 "4369ddf0d3f99500b1cc754777279575c026e560a13d30eee9ce25c03e8bf370"
   end
 

@@ -3,9 +3,10 @@ cask "standard-notes" do
 
   version "3.23.83"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "d6578b95b14bbe75f7f760852b12881d8d190ad9ca352a182a4092f5588a6267"
-  else
+  end
+  on_arm do
     sha256 "d72ae66293e788b712066d8e961f8889362b5243e7f21738fa1321cfd084276d"
   end
 

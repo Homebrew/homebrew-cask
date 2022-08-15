@@ -3,9 +3,10 @@ cask "pycharm-ce" do
 
   version "2022.2,222.3345.131"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "98010c6fb4156df9d3e2c6dac8620c1d0b6529bdc01ff091e731c5bea503ce58"
-  else
+  end
+  on_arm do
     sha256 "aa9d00a852ca03eebdb6c2ecbd9180f4a75a1bc253d3d7fad969c8e52f0218ea"
   end
 

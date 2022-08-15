@@ -3,9 +3,10 @@ cask "eclipse-rcp" do
 
   version "4.24.0,2022-06"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "4736e9dd5b2f6458ecd3388436e9b99741106a4bedd100285e27ae1e221a4581"
-  else
+  end
+  on_arm do
     sha256 "5951a0f157c7f19975ae9100d0a7e399152fd892d8f8017cd1d2d0440b308cc9"
   end
 

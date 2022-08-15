@@ -3,9 +3,10 @@ cask "1password" do
 
   version "8.8.0"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "330ea9c88f24c0487c7ecfc887c0fac7e12fb3f3a636c02bfec610333f46091a"
-  else
+  end
+  on_arm do
     sha256 "0bd29ad4d9057d7a7ffffb60b55ceae6be4f3429165bec1c5b38efa13637f0e2"
   end
 

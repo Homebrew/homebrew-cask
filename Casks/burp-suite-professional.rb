@@ -3,9 +3,10 @@ cask "burp-suite-professional" do
 
   version "2022.8.1"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "50a3e0431ac88f2a07aed20dd0bfd546fa3fd5de2314aeb9fc88da7f5c8c3897"
-  else
+  end
+  on_arm do
     sha256 "ad49de9e4e330ce2226da37c69ccebf3e39cba566d68d1561c049d58c923a635"
   end
 

@@ -3,9 +3,10 @@ cask "phpstorm" do
 
   version "2022.2,222.3345.135"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "f12241941a3076f22bb49193829c4412d45b20520a0617c0ee9bf8d94dca4575"
-  else
+  end
+  on_arm do
     sha256 "797888d4da4c63b89700cede2200808d715597d5fa6cac498d137c367f9192e3"
   end
 

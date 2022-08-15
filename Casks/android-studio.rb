@@ -3,9 +3,10 @@ cask "android-studio" do
 
   version "2021.2.1.16"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "df46f2199fcf4c7e6b882ba16151ea1d2dd48a15f5c87d30224f1b5401d2b648"
-  else
+  end
+  on_arm do
     sha256 "d4e06bcc6f614cd4b261fc6034529edb205b31b0e56824490a91350c3640806a"
   end
 

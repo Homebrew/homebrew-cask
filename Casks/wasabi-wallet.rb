@@ -3,9 +3,10 @@ cask "wasabi-wallet" do
 
   version "2.0.1.4"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "d2a7076104d5473479b100f3039944efbf7fa599173af43a7dab3c32e7937fc1"
-  else
+  end
+  on_arm do
     sha256 "cd4f7ed70f4470e5f052fc5e42d9afcab090ba5f8896488fd022bb59d30aa101"
   end
 
