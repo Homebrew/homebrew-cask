@@ -3,9 +3,10 @@ cask "scenebuilder" do
 
   version "18.0.0"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "280a1bf776e39e93d611276d67560b9c0e195c6011ca7c5fd34a2b961165c66b"
-  else
+  end
+  on_arm do
     sha256 "1dfcfd12ce4af94da53f6607c2f28e75bd6b1527b795404b21ae0b6b2f24e4ea"
   end
 
