@@ -3,9 +3,10 @@ cask "sidequest" do
 
   version "0.10.31"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "6639bf7b29b7cdf274c667d4ff490d600b3732d8323cd052703080a4b4ada80f"
-  else
+  end
+  on_arm do
     sha256 "9d060ae49beb33bb70cbc0253f5ef5b33275ffc146b23d2461b60bf084ae08fa"
   end
 
