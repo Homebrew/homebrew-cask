@@ -3,9 +3,10 @@ cask "oracle-jdk" do
 
   version "18.0.2"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "3f95ffebee60c76c4603624da0f36510c3ebd46b1dfadb7ca342821c40e89845"
-  else
+  end
+  on_arm do
     sha256 "00605dd95e5c6ead01a884a4a70fc544847c78ad67136cdc6850b92978d3510e"
   end
 
