@@ -3,9 +3,10 @@ cask "qobuz" do
 
   version "6.1.1,040"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "256731c921c8d676d971136979fef1c78f5af21a186a62a6842dceed87a5bb33"
-  else
+  end
+  on_arm do
     sha256 "94228106ff86bff90580539625d335ec66051368d278a2771e097cce0e171852"
   end
 
