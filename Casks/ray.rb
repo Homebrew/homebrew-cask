@@ -4,9 +4,10 @@ cask "ray" do
 
   version "2.0.1"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "d2a2eda635147a34d136312505f77a3e09123289aa0919e2e942935e379bc7a9"
-  else
+  end
+  on_arm do
     sha256 "75dd6a77e02f9c6c84b1bb95918f706d97a3a3fc6ae8fa0e74c1c0155ba12e78"
   end
 
