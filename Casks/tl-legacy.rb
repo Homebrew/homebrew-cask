@@ -11,6 +11,6 @@ cask "tl-legacy" do
 
   zap trash: [
     "~/Library/Saved Application State/ru.turikhay.tlauncher.legacy.savedState",
-    "/Library/Application Support/minecraft",
+    "~/Library/Application Support/minecraft",
   ]
 end
