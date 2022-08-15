@@ -3,9 +3,10 @@ cask "panwriter" do
 
   version "0.8.4"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "d0e4431d02a7f6185f12958f805ffba97b212f6fc7e2baff0564ac6e5fea0cf0"
-  else
+  end
+  on_arm do
     sha256 "06bf44d2dd81c16dcbc82aefb6f1f71379ffe9abf95ba6de1fcef3ea1b66a886"
   end
 
