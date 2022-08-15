@@ -3,9 +3,10 @@ cask "idafree" do
 
   version "8.0"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "51017c0047b5b06d6cd46c93a65583d4fbf086502de884ebcb8d72033b65e5a0"
-  else
+  end
+  on_arm do
     sha256 "73354d6e4f2fae739943ac2b10b7d98e871ad8004c40e779a2f8b9ab0e40f194"
   end
 
