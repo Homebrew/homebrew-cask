@@ -3,9 +3,10 @@ cask "ivpn" do
 
   version "3.9.8"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "b64e2fe7ea8296a63cb3e75274c73379731d64dc492778214e6f3ae728e330d1"
-  else
+  end
+  on_arm do
     sha256 "f915d4954c3f8be86f523b057bca2d976c221628458a8d4ffccfe520417e73f5"
   end
 
