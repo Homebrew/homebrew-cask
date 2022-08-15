@@ -3,9 +3,10 @@ cask "scilab" do
 
   version "6.1.1"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "b417aace594cba882b19c2711aa125d8374d5da8b0a24df2873592765598e457"
-  else
+  end
+  on_arm do
     sha256 "2f87710fc47c6d8e6777ee280ece589342e536c17290b9c033ea0dfcef3b4912"
   end
 
