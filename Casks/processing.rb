@@ -1,8 +1,17 @@
 cask "processing" do
-  version "4.0.1,1286"
-  sha256 "4d64fe42a6c5c0863cc82e93a036e73731999ee9448be45bc322f91b0010bb6b"
+  arch arm: "aarch64", intel: "x64"
 
-  url "https://github.com/processing/processing4/releases/download/processing-#{version.csv.second}-#{version.csv.first}/processing-#{version.csv.first}-macosx.zip",
+  version "4.0.1,1286"
+
+  on_intel do
+    sha256 "6cabb7acd3b98adc4f4d9cf749cf2f3c4c2379c802862634a77fd91c6ca901c2"
+  end
+
+  on_arm do
+    sha256 "aa5b3f8e277fada2f73086677fde16aa7d7a08cd5e8d02ba5227952b295460aa"
+  end
+
+  url "https://github.com/processing/processing4/releases/download/processing-#{version.csv.second}-#{version.csv.first}/processing-#{version.csv.first}-macosx-#{arch}.zip",
       verified: "github.com/processing/processing4/"
   name "Processing"
   desc "Flexible software sketchbook and a language for learning how to code"
@@ -22,6 +31,7 @@ cask "processing" do
     "homebrew/cask-versions/processing3",
     "homebrew/cask-versions/processing-beta",
   ]
+  depends_on macos: ">= :catalina"
 
   app "Processing.app"
 
