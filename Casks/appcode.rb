@@ -3,9 +3,10 @@ cask "appcode" do
 
   version "2022.2,222.3345.144"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "68f929177be0b90bebec53615750a765cb10c917925286a1d82a71e7c3e3b737"
-  else
+  end
+  on_arm do
     sha256 "94f2e968ff184b94be516e26cf750c35e5e3d13a3a4edba583f8b1aab05473cc"
   end
 
