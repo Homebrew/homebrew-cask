@@ -3,9 +3,10 @@ cask "syncovery" do
 
   version "9.47w"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "51dde7d0d28d90167eea9696a021a7adc153c6b730678b9a11bbd4b05f129ac0"
-  else
+  end
+  on_arm do
     sha256 "402861d78da8902888f1bedaaa790bf0d2e10876c1fd060854f096a8fda02427"
   end
 
