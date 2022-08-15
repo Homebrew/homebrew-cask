@@ -3,9 +3,10 @@ cask "superhuman" do
 
   version "12.1.6"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "0338447d733fc3d666556dd26d9e3ee1f664b6a7e8d7a1f36ba2a2e7495a8d3c"
-  else
+  end
+  on_arm do
     sha256 "5fdd0502e50ba2f1458d75106feab07d6f815990f369a9d4ce4189f6f7ac3fc5"
   end
 
