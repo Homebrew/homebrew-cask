@@ -3,9 +3,10 @@ cask "polypane" do
 
   version "10.0.1"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "303929e6821f4d5c124c10c257104c5fd90fd4a6cbd13c68a288dee4dcc1fd00"
-  else
+  end
+  on_arm do
     sha256 "bf3933c7461d952e19fab0e444712c24567abc64680092bff108993c15a8a205"
   end
 
