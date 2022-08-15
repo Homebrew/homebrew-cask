@@ -3,9 +3,10 @@ cask "browserosaurus" do
 
   version "19.0.1"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "1d940ebd00e52e21435fcbe3b03829d21674bb9d956e6dc9e93f7a9be799f54f"
-  else
+  end
+  on_arm do
     sha256 "f65f11f9f91e01aabc4f1dc90b1a7221bd537bb1d7a7c74bd27f0a11cfd9b282"
   end
 
