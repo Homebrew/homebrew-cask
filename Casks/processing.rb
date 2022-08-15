@@ -40,6 +40,7 @@ cask "processing" do
   zap trash: [
     "~/Library/Processing",
     "~/Preferences/org.processing.app.plist",
+    "~/Preferences/org.processing.four.plist",
     "~/Preferences/processing.app.tools.plist",
   ]
 end
