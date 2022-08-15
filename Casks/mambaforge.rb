@@ -3,9 +3,10 @@ cask "mambaforge" do
 
   version "4.13.0-1"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "bc42d606b67ace370847deb849e7d1ea2879b0be78bb1be51b020c3cb4e5bef2"
-  else
+  end
+  on_arm do
     sha256 "6263560d2b0902942841667721dad3621c05f704f6b080d968ad355aeca51486"
   end
 
