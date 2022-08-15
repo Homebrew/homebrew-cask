@@ -22,11 +22,11 @@ cask "loginputmac" do
 
   zap trash: [
     "~/Documents/落格输入法",
-    "~/Library/Application Support/LogInputMac3",
-    "~/Library/Application Support/com.logcg.inputmethod.LogInputMac3",
-    "~/Library/Caches/com.logcg.inputmethod.LogInputMac3",
-    "~/Library/HTTPStorages/com.logcg.inputmethod.LogInputMac3",
-    "~/Library/Preferences/com.logcg.inputmethod.LogInputMac3.plist",
-    "~/Library/Saved Application State/com.logcg.inputmethod.LogInputMac3.Settings.savedState",
+    "~/Library/Application Support/LogInputMac#{version.major}",
+    "~/Library/Application Support/com.logcg.inputmethod.LogInputMac#{version.major}",
+    "~/Library/Caches/com.logcg.inputmethod.LogInputMac#{version.major}",
+    "~/Library/HTTPStorages/com.logcg.inputmethod.LogInputMac#{version.major}",
+    "~/Library/Preferences/com.logcg.inputmethod.LogInputMac#{version.major}.plist",
+    "~/Library/Saved Application State/com.logcg.inputmethod.LogInputMac#{version.major}.Settings.savedState",
   ]
 end
