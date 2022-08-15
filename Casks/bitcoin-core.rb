@@ -3,9 +3,10 @@ cask "bitcoin-core" do
 
   version "23.0"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "52eefbaf8cfd292822e470a48a51e1eb51081d43a0a16db7441f34a017ff6097"
-  else
+  end
+  on_arm do
     sha256 "a3059280451d17a77d2260e4671c884be93a14dbff6b6cd19a3c9c8c54421e97"
   end
 
