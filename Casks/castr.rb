@@ -5,9 +5,10 @@ cask "castr" do
 
   url "https://download.todesktop.com/210610elr9v3cm6/Castr%20#{version}-#{arch}-update.zip",
       verified: "download.todesktop.com/210610elr9v3cm6/"
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "7fb499498d4dfb44d0f80a339933ac7f22071ed1c6f65f2164819926c54d9736"
-  else
+  end
+  on_arm do
     sha256 "2d4c5b61f0018f2fa3d63000d070bfdab68d3faccb8e8901e7a50e6a1c4c0a84"
   end
 
