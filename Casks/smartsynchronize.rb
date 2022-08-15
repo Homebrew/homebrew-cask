@@ -3,9 +3,10 @@ cask "smartsynchronize" do
 
   version "4.3.1"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "a35c74d2f0965a4471888bde7e962569f85bd62a6707dd6ab0dff4e99265a287"
-  else
+  end
+  on_arm do
     sha256 "27aa45524cfc673e566d2a2eb7ba382cfb436d13a08e69a7f35466cffe2b2857"
   end
 
