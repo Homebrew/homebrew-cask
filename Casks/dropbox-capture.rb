@@ -3,9 +3,10 @@ cask "dropbox-capture" do
 
   version "82.0.7"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "94283a6802ac965e9aaf0f18445c3ce8d51d5636f983426192f4bb65361cb21a"
-  else
+  end
+  on_arm do
     sha256 "6b8d1fd88bebb33eb92e9772d23c5b1ed7639ee7b180a8f7bc1a5add2f34641d"
   end
 
