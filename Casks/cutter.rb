@@ -3,9 +3,10 @@ cask "cutter" do
 
   version "2.1.0"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "d17451bc7904d010546b73c755a3dc0bc9e9116421448a033720b0a1018392f2"
-  else
+  end
+  on_arm do
     sha256 "720d132cde1df3f23c9a11a447e253657587b95a1d8554859cbcd96baa3fcc13"
   end
 
