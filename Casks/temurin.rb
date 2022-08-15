@@ -3,9 +3,10 @@ cask "temurin" do
 
   version "18.0.2,9"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "aa78eba86b8bda6e1b38240707fc27792065046ff9e13f1b6a52eefa1dfa854c"
-  else
+  end
+  on_arm do
     sha256 "006ee54d7537758036fa0020d92856c8305e1c3e24f63ff89236827abf2431b9"
   end
 
