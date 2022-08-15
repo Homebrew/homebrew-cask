@@ -1,11 +1,12 @@
 cask "athens" do
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  arch arm: "-arm64"
 
   version "1.0.0"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "322744478e3277216a129dd162e04ae24587d71eedafa6681b30a976b2521c9b"
-  else
+  end
+  on_arm do
     sha256 "c5bd8759f3f6f10a91ed950acc25d51cc9bc5e70515515e36a1e3fec2579e375"
   end
 

@@ -1,11 +1,12 @@
 cask "superproductivity" do
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  arch arm: "-arm64"
 
   version "7.11.5"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "5c6b50db6109939ad1f902c4d2123aae81bce0299095ebc31249e9e6ca452a6f"
-  else
+  end
+  on_arm do
     sha256 "67665f0d3786c6d3be8705af67f1ffcfc987b38f61415f07ea940b1e95e8dd47"
   end
 

@@ -1,11 +1,12 @@
 cask "vieb" do
-  arch = Hardware::CPU.intel? ? "" : "arm64-"
+  arch arm: "arm64-"
 
   version "8.1.0"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "cfb9cd50f41b5d9919e94fb38d421565ccf221bddc8e82342ff37eca190c56c5"
-  else
+  end
+  on_arm do
     sha256 "b3e272d0b6950a7835c920aeaf0a787db57797591192943ae1c8ca50fd4c7e79"
   end
 

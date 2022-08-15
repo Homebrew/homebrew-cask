@@ -1,11 +1,12 @@
 cask "raindropio" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
   version "5.5.10"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "29688c40f374e6739674364e6d185477fc7d243d6e44cde0511ebb07a3d1e8aa"
-  else
+  end
+  on_arm do
     sha256 "bf63030598416520d234ef99673128ef5cc8f29904733aa47e10e8557575b4ca"
   end
 

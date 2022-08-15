@@ -1,5 +1,5 @@
 cask "miro" do
-  arch = Hardware::CPU.intel? ? "darwin" : "darwin-arm64"
+  arch arm: "darwin-arm64", intel: "darwin"
 
   version "0.7.17"
   sha256 :no_check

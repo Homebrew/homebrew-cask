@@ -1,11 +1,12 @@
 cask "tagspaces" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
   version "4.4.3"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "f40a73828459b5dd5cd31063bd0cfdfeef4736e2a6594951ca1658060bd6965d"
-  else
+  end
+  on_arm do
     sha256 "62faf39ce08575421d3a9d67763399c2ee4a1bca09ebae3401b747fa0867e8dd"
   end
 

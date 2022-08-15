@@ -1,11 +1,12 @@
 cask "lagrange" do
-  arch = Hardware::CPU.intel? ? "macos10.13-x86_64" : "macos11.0-arm64"
+  arch arm: "macos11.0-arm64", intel: "macos10.13-x86_64"
 
   version "1.13.7"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "25e118c0bb8d8f362ecf0f0a7df536daa378e85df11b156072c0087df61e0004"
-  else
+  end
+  on_arm do
     sha256 "a61d269771d1dc0c449fa19f4d4efe4247276686bb51c7391f444b8df72b0826"
   end
 

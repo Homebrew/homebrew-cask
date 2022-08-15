@@ -1,11 +1,12 @@
 cask "dbeaver-community" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
+  arch arm: "aarch64", intel: "x86_64"
 
   version "22.1.4"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "fb468daed2cb968b358bffef92db7642dc6a52b12e32c158b90d52d11416ceac"
-  else
+  end
+  on_arm do
     sha256 "8fdd802a859f8c57ea729e22dfdb01831c59e97819372a0000dbc3064771bc8a"
   end
 

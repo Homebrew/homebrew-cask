@@ -1,11 +1,12 @@
 cask "filebot" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
   version "4.9.6"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "38935215702be042aae44effad9cd5e82139ece8ecdb55ee86515b875064873a"
-  else
+  end
+  on_arm do
     sha256 "e1804ce4e402dcdda5a8417294d7317217a5eca57569f4fa47f9f701a0a7c61e"
   end
 

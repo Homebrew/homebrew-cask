@@ -1,11 +1,12 @@
 cask "gargoyle" do
-  arch = Hardware::CPU.intel? ? "mac-intel" : "mac-arm64"
+  arch arm: "mac-arm64", intel: "mac-intel"
 
   version "2022.1"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "68448156799315e9204079559b451b6012f8e2d7e1368e32412b1f32f01157e4"
-  else
+  end
+  on_arm do
     sha256 "46c286890de2fef2ce517f277a0fe3c88c7a75cc2283542e7b9c1d24353cddf8"
   end
 

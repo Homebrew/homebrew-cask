@@ -1,12 +1,13 @@
 cask "brave-browser" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
-  folder = Hardware::CPU.intel? ? "stable" : "stable-arm64"
+  arch arm: "arm64", intel: "x64"
+  folder = on_arch_conditional arm: "stable-arm64", intel: "stable"
 
   version "1.42.88.0,142.88"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "3fa4ae81ea619140906164d114526419a783bb34017a69c5de6b4114eee0df00"
-  else
+  end
+  on_arm do
     sha256 "4b68f30c0eb65595f021d50c3bd3ec648d683172068d9c6228f0a398441496f5"
   end
 

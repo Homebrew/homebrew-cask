@@ -1,11 +1,12 @@
 cask "pushplaylabs-sidekick" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
-  livecheck_folder = Hardware::CPU.intel? ? "mac" : "macm1"
+  arch arm: "arm64", intel: "x64"
+  livecheck_folder = on_arch_conditional arm: "macm1", intel: "mac"
 
-  if Hardware::CPU.intel?
+  on_intel do
     version "102.25.1.21533,3ac4758"
     sha256 "fa48db88e50cd31f06ae87f076b5bd961c50372e0582bda88f971a33cdf4b3e5"
-  else
+  end
+  on_arm do
     version "102.25.1.21535,be38449"
     sha256 "5342d32ce047096842215c0cb4cdbbc1d91fc342b9805160d0ee07450967330c"
   end

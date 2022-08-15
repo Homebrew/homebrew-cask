@@ -1,11 +1,12 @@
 cask "manictime" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
   version "2.3.0"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "2ececb9dfcadfd82fa4f994ae12f09ca5df0d40977b5b0720157aead93ae2b3d"
-  else
+  end
+  on_arm do
     sha256 "11dac09661c4a22881c8b6a042c144127aaa0b92ab6321ebe1ea136f5201bf02"
   end
 

@@ -1,11 +1,12 @@
 cask "anaconda" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
+  arch arm: "arm64", intel: "x86_64"
 
   version "2022.05"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "1a10c06660ebe1204e538b4e9d810142441af9dfd74b077eee2761ec6e675f39"
-  else
+  end
+  on_arm do
     sha256 "a12119931945a9a1453993582259cc67318a9a75a15731e5ccc15365e7f88a36"
   end
 

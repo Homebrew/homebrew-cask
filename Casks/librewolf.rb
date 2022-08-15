@@ -1,10 +1,11 @@
 cask "librewolf" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
+  arch arm: "aarch64", intel: "x86_64"
 
-  if Hardware::CPU.intel?
+  on_intel do
     version "103.0.2,1,87f3819691b7d2c7b0dd08e6793ef91f"
     sha256 "13f083d5b7073c0cf170a1a1f22d24617ad0bd23840c0b0ee7f21637ca8c418e"
-  else
+  end
+  on_arm do
     version "103.0.2,1,1434cd50ad6132a1a9799b9d837dd28f"
     sha256 "266b6a8878b2ea5cf4dc0fbb5e45a8658227d92f19ef81e98114e49dead20105"
   end

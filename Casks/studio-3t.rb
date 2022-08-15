@@ -1,12 +1,13 @@
 cask "studio-3t" do
-  arch = Hardware::CPU.intel? ? "" : "-aarch64"
-  livecheckarch = Hardware::CPU.intel? ? "" : "_aarch64"
+  arch arm: "-aarch64"
+  livecheckarch = on_arch_conditional arm: "_aarch64"
 
   version "2022.7.1"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "ed39cf3f1b18f0181799d372acc699a1aa29330394952611d02be1409420bddb"
-  else
+  end
+  on_arm do
     sha256 "447b6e3fae8dfbd2d6e1f39a3fb4ffa2e002fe5d5aa022219fead9a43c7a7082"
   end
 

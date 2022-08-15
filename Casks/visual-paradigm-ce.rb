@@ -1,12 +1,13 @@
 cask "visual-paradigm-ce" do
-  arch = Hardware::CPU.intel? ? "WithJRE" : "AArch64"
+  arch arm: "AArch64", intel: "WithJRE"
 
-  version "17.0,20220801"
+  version "17.0,20220816"
 
-  if Hardware::CPU.intel?
-    sha256 "f7d4db8b65982054ea2ee803b3c92e60ea5e7b9816fa4536f763e7061e17458c"
-  else
-    sha256 "3bed108ac6f210cc04bc13b5cc80399d88961505793282bf0a9bc33c0d1cc046"
+  on_intel do
+    sha256 "06521bb728f5aa338dd583daf789d5bc512884f1b4e043805cd09dfdb9926112"
+  end
+  on_arm do
+    sha256 "647b1a1facf321fff64af6591905df4f2293a675d56d0dcac0c8e6a74b03172d"
   end
 
   url "https://www.visual-paradigm.com/downloads/vpce/Visual_Paradigm_CE_#{version.csv.first.dots_to_underscores}_#{version.csv.second}_OSX_#{arch}.dmg"

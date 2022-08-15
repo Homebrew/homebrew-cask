@@ -1,11 +1,12 @@
 cask "yubihsm2-sdk" do
-  arch = Hardware::CPU.intel? ? "amd64" : "arm64"
+  arch arm: "arm64", intel: "amd64"
 
   version "2022-06"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "fddd316127c460a604372ebbf41f01e3b9ef50b28ee5686915b663dd8f88cdc0"
-  else
+  end
+  on_arm do
     sha256 "7363999e43afc4471853a4d7254de71e4d5f5c84d5e2febd1693d7bf22a1e525"
   end
 

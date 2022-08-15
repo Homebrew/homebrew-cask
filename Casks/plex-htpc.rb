@@ -1,6 +1,6 @@
 cask "plex-htpc" do
-  version "1.22.1.3169,33807d7b"
-  sha256 "d1819da2773d5ad055b9432099b4d7b5dd63b4405aaf93cea4256267d5b14011"
+  version "1.23.2.3194,7787f5be"
+  sha256 "f0dc70ee74ba8a7c66f0c033eecf9bd63d50be0a4723d98c0d0e28bc09477f69"
 
   url "https://downloads.plex.tv/htpc/#{version.csv.first}-#{version.csv.second}/macos/PlexHTPC-#{version.csv.first}-#{version.csv.second}-x86_64.zip"
   name "Plex HTPC"

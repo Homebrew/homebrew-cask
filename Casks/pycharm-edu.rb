@@ -1,11 +1,12 @@
 cask "pycharm-edu" do
-  arch = Hardware::CPU.intel? ? "" : "-aarch64"
+  arch arm: "-aarch64"
 
   version "2022.1.3,221.6008.17"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "9ab4087c65c315cc095a882221b3748bc66b3b9f6699563cde02a49f857ee4d0"
-  else
+  end
+  on_arm do
     sha256 "46e498610a3a026ebaa3269c5cc35fd9e75bf35dca4d45d739828036059edad1"
   end
 

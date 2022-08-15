@@ -1,11 +1,12 @@
 cask "mqttx" do
-  arch = Hardware::CPU.intel? ? "" : "arm64-"
+  arch arm: "arm64-"
 
   version "1.8.2"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "4e1659a4a20e67f065e638cff65051334465992231f3eb49e8327bf27d5fbd5e"
-  else
+  end
+  on_arm do
     sha256 "a2da4692f4be5d845605bf3d8d08e44fc521f5bdcc0e55523f9dc4c676f718ee"
   end
 

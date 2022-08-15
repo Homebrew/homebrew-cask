@@ -1,11 +1,12 @@
 cask "clash-for-windows" do
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  arch arm: "-arm64"
 
   version "0.19.26"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "6572b20a7cee1ecea9826bf0f5bcc04dd93771cb26b205b64cb28646be6313eb"
-  else
+  end
+  on_arm do
     sha256 "c859cce3e780cf7a3c52be32ea96d266ad3b1e9925e1c4438e3e7fb70f6b8b77"
   end
 

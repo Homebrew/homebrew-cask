@@ -1,11 +1,12 @@
 cask "google-chat-electron" do
-  arch = Hardware::CPU.intel? ? "darwin-x64" : "darwin-arm64"
+  arch arm: "darwin-arm64", intel: "darwin-x64"
 
   version "2.18.0"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "1f1182a94d92ce7b5f8aad936bd4497f3b62c588dba8ea67280da27c43797fe3"
-  else
+  end
+  on_arm do
     sha256 "81201263cc7a3a3e07106dce5b23148a8a7c21420d6bd862575a92af58f07cba"
   end
 

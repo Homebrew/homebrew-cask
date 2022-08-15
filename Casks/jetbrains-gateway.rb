@@ -1,11 +1,12 @@
 cask "jetbrains-gateway" do
-  arch = Hardware::CPU.intel? ? "" : "-aarch64"
+  arch arm: "-aarch64"
 
   version "222.3345.108"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "88ec942ef586ca9a658844ab673aabd72b115668fbfcf720f8c4fc6d680c37fb"
-  else
+  end
+  on_arm do
     sha256 "fc789fe114eddac6137f470bf58ccb27bf70979c4b7552c62f1d5790e4c33200"
   end
 

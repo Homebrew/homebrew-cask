@@ -1,6 +1,6 @@
 cask "iconjar" do
-  version "2.10.0,50258"
-  sha256 "3e59648e6d664b1f64f0918e38a6e5af637f18563526ad06cfe8142e2bbd81cb"
+  version "2.11.0,50391"
+  sha256 "f103883f624c49eef19297ec35fa00bc7d907e090712414f8b1f1ecebe456ee2"
 
   url "https://geticonjar.com/releases/IconJar.app.#{version.csv.second}.zip"
   name "IconJar"

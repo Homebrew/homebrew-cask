@@ -1,5 +1,5 @@
 cask "dropbox" do
-  arch = Hardware::CPU.intel? ? "" : "&arch=arm64"
+  arch arm: "&arch=arm64"
 
   version "154.4.5363"
   sha256 :no_check

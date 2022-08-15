@@ -1,11 +1,12 @@
 cask "another-redis-desktop-manager" do
-  arch = Hardware::CPU.intel? ? "." : "-M1-arm64-"
+  arch arm: "-M1-arm64-", intel: "."
 
   version "1.5.7"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "54ac63e0a21ae9e057ea0aaa711a3b8ede810209c9335cc9fa3de5916dbabed5"
-  else
+  end
+  on_arm do
     sha256 "5d53fa0f7fdcc8a29c4ddb84a80105b16f85dde69b0f8e2cc23c5a5b7f70a3be"
   end
 

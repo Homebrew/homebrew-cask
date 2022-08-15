@@ -1,12 +1,13 @@
 cask "projector" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
-  archapp = Hardware::CPU.intel? ? "" : "-arm"
+  arch arm: "arm64", intel: "x64"
+  archapp = on_arch_conditional arm: "-arm"
 
   version "1.1.0"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "a509d7fe44ffdfbb6fb81058172558b47591ac5ac25376782574cf99be58397b"
-  else
+  end
+  on_arm do
     sha256 "a2f51be000977500a0b1e08a6f357495c98600f542d5cd9cdd8e88cc3785679a"
   end
 

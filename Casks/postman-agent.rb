@@ -1,11 +1,12 @@
 cask "postman-agent" do
-  arch = Hardware::CPU.intel? ? "osx_64" : "osx_arm64"
+  arch arm: "osx_arm64", intel: "osx_64"
 
   version "0.4.7"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "d479f55963ce5fe56f67fb03f349732790511c3c6943e256e6193bae15498af1"
-  else
+  end
+  on_arm do
     sha256 "e76fb6b2c1198c9591be5a711d22d9391a6859ad059b45af111f0f385be16190"
   end
 

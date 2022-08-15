@@ -1,11 +1,12 @@
 cask "blockbench" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
   version "4.3.1"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "6a18203516ec827f119a78f637825448a3931fd6caad0d81992087478ac83d9e"
-  else
+  end
+  on_arm do
     sha256 "c121000d3c330bb8080977806f90a746a5c85680957dc736f8389f4fcc0fc145"
   end
 

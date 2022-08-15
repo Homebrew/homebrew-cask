@@ -1,11 +1,12 @@
 cask "wpsoffice-cn" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
   version "4.6.0,7438"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "5bef1c67a0b0ed9015d991880e4f843810101da047115e8d8855503786924f0e"
-  else
+  end
+  on_arm do
     sha256 "ac79eacd0d389d68de69cce914ce10b9871efd37dbe5864cd8a9eb242ffb3634"
   end
 

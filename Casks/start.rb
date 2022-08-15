@@ -1,11 +1,12 @@
 cask "start" do
-  arch = Hardware::CPU.intel? ? "" : "m1/"
-  livecheck_arch = Hardware::CPU.intel? ? "" : "-arm"
+  arch arm: "m1/"
+  livecheck_arch = on_arch_conditional arm: "-arm"
 
-  if Hardware::CPU.intel?
+  on_intel do
     version "0.301.29-193"
     sha256 "fcbfb60dd562ef3b1c5c0198f987b0dbdd95b287b9019b3a63e1a671cb25d313"
-  else
+  end
+  on_arm do
     version "0.301.29-77"
     sha256 "097d7b55bf13761f8d0142a5a486077205bbcb49dd65e55ba6ed667095d26a2c"
   end

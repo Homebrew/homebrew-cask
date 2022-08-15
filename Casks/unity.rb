@@ -1,11 +1,12 @@
 cask "unity" do
-  arch = Hardware::CPU.intel? ? "" : "Arm64"
+  arch arm: "Arm64"
 
   version "2022.1.10f1,9aa0f82c4f96"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "b6753fd2cd3d9404920d8cfe64c21617826397a502f7eb36b429eb49c206706e"
-  else
+  end
+  on_arm do
     sha256 "fcc5a3d8e074661223fcc552b109dded62d9cd59aaec5057d623eebdd49b24f5"
   end
 

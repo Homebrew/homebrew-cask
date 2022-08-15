@@ -1,11 +1,12 @@
 cask "prosys-opc-ua-browser" do
-  arch = Hardware::CPU.intel? ? "x64" : "aarch64"
+  arch arm: "aarch64", intel: "x64"
 
   version "4.2.0,33"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "fa4ce0dd4ed9222a9e2a24ec68934969b4f6a8bc852ef165dcd50ceb2cccc2c4"
-  else
+  end
+  on_arm do
     sha256 "92972a00ba8eb2738322947d26a4f2a1f5e4e6db3ab0f46bfdcf8fedb4ae22a9"
   end
 

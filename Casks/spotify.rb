@@ -1,5 +1,5 @@
 cask "spotify" do
-  arch = Hardware::CPU.intel? ? "" : "ARM64"
+  arch arm: "ARM64"
 
   version "1.1.91.824,07f1e963,9"
   sha256 :no_check

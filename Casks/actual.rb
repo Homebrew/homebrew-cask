@@ -1,11 +1,12 @@
 cask "actual" do
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  arch arm: "-arm64"
 
   version "0.0.148"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "95159e54c011aba02f64b0d126a497b99544e1086429a11e67587e3ffc0533d4"
-  else
+  end
+  on_arm do
     sha256 "df9e2139a3a5b1355f1ed1a28863115ac574eb15ec856d6e95de13b02bc26ae0"
   end
 

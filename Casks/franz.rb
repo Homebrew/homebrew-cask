@@ -1,11 +1,12 @@
 cask "franz" do
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  arch arm: "-arm64"
 
   version "5.9.2"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "9b6907c132624c645e9d39bc9822a239b0e3a7507d40bcc97bf2be6ca3fc171f"
-  else
+  end
+  on_arm do
     sha256 "700342d6d3a6b532e5e7a3767c8b97d9bcfc9eb0959098f02d3b13462fdcfb7d"
   end
 

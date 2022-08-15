@@ -1,11 +1,12 @@
 cask "rubymine" do
-  arch = Hardware::CPU.intel? ? "" : "-aarch64"
+  arch arm: "-aarch64"
 
   version "2022.2,222.3345.111"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "d806254af68425089d40a7a302ce10c87283a25399e7b667e8d261b3958f4fbb"
-  else
+  end
+  on_arm do
     sha256 "c7650443f16ab9cc0b3f6fc701164633bab079f11eeb7aa93b78f2ddc73640a0"
   end
 

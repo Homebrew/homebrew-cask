@@ -1,5 +1,5 @@
 cask "yandex" do
-  arch = Hardware::CPU.intel? ? "" : "&arch=arm64"
+  arch arm: "&arch=arm64"
 
   version "22.7.3"
   sha256 :no_check

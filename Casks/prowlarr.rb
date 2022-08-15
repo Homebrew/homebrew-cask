@@ -1,11 +1,12 @@
 cask "prowlarr" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
   version "0.4.3.1921"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "e028d4bd5c304566c7f2d9ad9a5c335948c724b3d6c4ad99176d470a2d57787d"
-  else
+  end
+  on_arm do
     sha256 "4a792231a66b177019374a735ccdc86d9d403fd155a7788b352a428e881324f5"
   end
 

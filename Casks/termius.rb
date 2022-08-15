@@ -1,5 +1,5 @@
 cask "termius" do
-  arch = Hardware::CPU.intel? ? "mac" : "mac-arm64"
+  arch arm: "mac-arm64", intel: "mac"
 
   version "7.46.2"
   sha256 :no_check

@@ -1,11 +1,12 @@
 cask "darktable" do
-  arch = Hardware::CPU.intel? ? "" : "_arm64"
+  arch arm: "_arm64"
 
   version "4.0.0"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "addab784af18bafa303340e754c00084c126e61c3d5b93006f8e6d602f838203"
-  else
+  end
+  on_arm do
     sha256 "5bcd8e088065bc20815022f494ca1ca0613446562843f378ad60f68ae6917cb7"
   end
 

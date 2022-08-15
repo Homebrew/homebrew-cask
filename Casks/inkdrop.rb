@@ -1,11 +1,12 @@
 cask "inkdrop" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
   version "5.5.1"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "c81e7f26d2b3984058309d65aaad2451d710838fd3f9c9ebb50eb465e70b8133"
-  else
+  end
+  on_arm do
     sha256 "83f386ccc721378ba100435938fc53e8105ba572e1b39e5b9615b532f9ab3bb4"
   end
 

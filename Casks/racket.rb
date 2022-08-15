@@ -1,11 +1,12 @@
 cask "racket" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
+  arch arm: "aarch64", intel: "x86_64"
 
   version "8.6"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "10c5d35239fe4737cc643633f1802ae309b227c1a055f990d4cc0d76f3317b66"
-  else
+  end
+  on_arm do
     sha256 "fe1527b2f73b1b0f1123179454e200b3819baf875ade3458135411e04992d1a0"
   end
 

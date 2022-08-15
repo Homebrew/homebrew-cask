@@ -1,11 +1,12 @@
 cask "jetbrains-toolbox" do
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  arch arm: "-arm64"
 
   version "1.25,1.25.12627"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "0f0ce719cbacfd83d10608a07795b3102a57e7fc1652864098fda599fca5323f"
-  else
+  end
+  on_arm do
     sha256 "e420c5660d1ff4d9d725c85a7e432f898b7030d478373e8cc6e3798f767d6191"
   end
 

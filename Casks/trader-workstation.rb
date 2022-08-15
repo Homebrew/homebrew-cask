@@ -1,9 +1,10 @@
 cask "trader-workstation" do
-  version "10.17.1s"
+  arch arm: "arm", intel: "x64"
+  os = on_arch_conditional arm: "macos", intel: "macosx"
+
+  version "10.17.1t"
   sha256 :no_check
 
-  arch = Hardware::CPU.intel? ? "x64" : "arm"
-  os = Hardware::CPU.intel? ? "macosx" : "macos"
   url "https://download2.interactivebrokers.com/installers/tws/latest/tws-latest-#{os}-#{arch}.dmg"
   name "Trader Workstation"
   desc "Trading software"
