@@ -3,9 +3,10 @@ cask "vassal" do
 
   version "3.6.7"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "d5c01584a97aaee4aef222b0f07ada24ada823a7a515a79c357084b1ecddd8a2"
-  else
+  end
+  on_arm do
     sha256 "0b1e00f631aba7b8d79185d8e96065e32af6dae994d8461e1a3fe5f513d9f66e"
   end
 
