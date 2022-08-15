@@ -3,9 +3,10 @@ cask "groestlcoin-core" do
 
   version "23.0"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "82e6a1862974ca51bd65aeb79f3e5eb5327b5da1f687921e9fb573c83293051c"
-  else
+  end
+  on_arm do
     sha256 "7df0f66ee01e0f2e5faade6bd900e4a96f970cc56043a1a428dd9bf34dc5777b"
   end
 
