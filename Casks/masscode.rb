@@ -4,7 +4,7 @@ cask "masscode" do
   version "3.3.0"
 
   on_intel do
-    sha256 "9816615f089592f62af1fcb6e7ec3c2f3cc2f2344053c2e11f7f23b95b642bac"
+    sha256 "4d299e8705fee5e761938d95e3794dcfbee3e0e9d10ee7c9b3efa672c5e86841"
   end
   on_arm do
     sha256 "73dd77635943f0c20bc9a87d28f05a3aad906993697f2a697d1d3f028bc5d4b4"
