@@ -3,9 +3,10 @@ cask "kap" do
 
   version "3.5.5"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "8b6bf654cd140719bd810b65485bd6b490bc90a0ed0dc70336acbd3fa2f240c0"
-  else
+  end
+  on_arm do
     sha256 "b9a36a9fb882eee232a89077c9bbd2776517f5f858b714c14ca745b564e60420"
   end
 
