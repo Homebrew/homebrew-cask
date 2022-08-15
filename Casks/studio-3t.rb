@@ -5,7 +5,7 @@ cask "studio-3t" do
   version "2022.7.2"
 
   on_intel do
-    sha256 "ed39cf3f1b18f0181799d372acc699a1aa29330394952611d02be1409420bddb"
+    sha256 "2ad327073416c9937edff4b9bb93627ad8882e29b8293c461f5f53bbab25d839"
   end
   on_arm do
     sha256 "f2d7a1d66d3b938c1497d5b81add6cc69816dc9b0907c45facab75f53a3db1dc"
