@@ -3,9 +3,10 @@ cask "yuque" do
 
   version "1.5.3"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "bceac42348e8b38cf258cf430c2c50f9bf0996ce7119c17ada012f8154d14e71"
-  else
+  end
+  on_arm do
     sha256 "ccb7a030ecaeb3f2833244c42ec26331dac920947a9c1729a0e9b69be071b1e0"
   end
 
