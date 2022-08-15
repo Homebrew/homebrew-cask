@@ -3,9 +3,10 @@ cask "runelite" do
 
   version "2.4.4"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "62f8a097ddbc6dffcee85c6e3b8b2f386b97395e878f575198dad1386df47c28"
-  else
+  end
+  on_arm do
     sha256 "b233def430723a3f6b7229fefb2361a198aeafbdc485358295f1d662f97df766"
   end
 
