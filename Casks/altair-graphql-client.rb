@@ -3,9 +3,10 @@ cask "altair-graphql-client" do
 
   version "4.6.2"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "296a49790cfa1c4cefb02de20ef5ad0c6ea450e747d53b790daa9f9e3b662a7a"
-  else
+  end
+  on_arm do
     sha256 "214f82239db4649ab469860c3cb1921fd12e4581b81d91c9be3fbd82567ced18"
   end
 
