@@ -4,7 +4,7 @@ cask "vieb" do
   version "9.0.0"
 
   on_intel do
-    sha256 "cfb9cd50f41b5d9919e94fb38d421565ccf221bddc8e82342ff37eca190c56c5"
+    sha256 "ce68fd4485e58472a0f6b1461cab301d6e11ffb9a38f1ada8d0d22b08edd8cb0"
   end
   on_arm do
     sha256 "a20c80a9b1f8842dc7985a5a1d1409e7b63bcc04e9495ce7a6b21c9471d70fc6"
