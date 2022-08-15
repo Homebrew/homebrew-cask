@@ -3,9 +3,10 @@ cask "roam-research" do
 
   version "0.0.15"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "c270b957cb7ba0c9fa7b7ff8ff9a2fbe2ed3c8dba24ee2584dfa487022e1cc51"
-  else
+  end
+  on_arm do
     sha256 "4407df5ac97d3013dbf113d09da33d01264d94f8f4c30d5546afe237e6af5834"
   end
 
