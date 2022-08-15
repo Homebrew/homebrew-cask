@@ -3,9 +3,10 @@ cask "zoom" do
 
   version "5.11.5.9788"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "c4f7713199e18745cb497b98d65770131fa8bb3adcb33c00e31e42441c68f958"
-  else
+  end
+  on_arm do
     sha256 "a043c17dd2f4ac177c4d9d9fdcabe93777f514c9b042b030440a316b05a28dcc"
   end
 
