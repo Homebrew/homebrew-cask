@@ -3,9 +3,10 @@ cask "shutter-encoder" do
 
   version "16.2"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "0b303ded4c58ddad0cc40cc31963041eabc374f63d9b0aa6284b3883eab5c82e"
-  else
+  end
+  on_arm do
     sha256 "59af85baa47c37c4ebd5e6bd244ff8473e5960187fb90496109d03f3338ef2ad"
   end
 
