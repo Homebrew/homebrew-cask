@@ -4,9 +4,10 @@ cask "paraview" do
 
   version "5.10.1"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "21d28f0bfd4129a5e394990e981ad79d27c4613f3da9f171417c17af785ebcba"
-  else
+  end
+  on_arm do
     sha256 "1b6bdf86fee03525b1978b4312624bcc522796bbf5675f370797c5f21e189e5d"
   end
 
