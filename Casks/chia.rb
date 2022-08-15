@@ -3,9 +3,10 @@ cask "chia" do
 
   version "1.5.0"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "0db183c1ffb31badbc77899f2cdafaca33eca5432d2f3f01c4cf21f614b663c5"
-  else
+  end
+  on_arm do
     sha256 "d5e18d5571fc5ae5185cdf55d2abae0a41d4f3fade57f15775ac876e7463be0f"
   end
 
