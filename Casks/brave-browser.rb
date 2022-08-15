@@ -2,10 +2,10 @@ cask "brave-browser" do
   arch arm: "arm64", intel: "x64"
   folder = on_arch_conditional arm: "stable-arm64", intel: "stable"
 
-  version "1.42.88.0,142.88"
+  version "1.42.95.0,142.95"
 
   on_intel do
-    sha256 "3fa4ae81ea619140906164d114526419a783bb34017a69c5de6b4114eee0df00"
+    sha256 "127d6210e9b2d3a70ea02b2e91f255fd160e5c3be0fe8a5a15ecfe9e29a38160"
   end
   on_arm do
     sha256 "4b68f30c0eb65595f021d50c3bd3ec648d683172068d9c6228f0a398441496f5"
