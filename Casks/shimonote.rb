@@ -3,9 +3,10 @@ cask "shimonote" do
 
   version "2.5.13,66be574"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "6798b0441ec654b8f46a6818e8d77ed086257239e6bf11e802e8fe865e55a8a5"
-  else
+  end
+  on_arm do
     sha256 "20b460eb53653b0f391b3bc359c1e538127c4b9c8572dca8444063b2fb90cb17"
   end
 
