@@ -3,9 +3,10 @@ cask "mattermost" do
 
   version "5.1.1"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "d7bae51221884dce113b9b5cf23efc1245fc6ad2210a1754c0ee266e644da0cf"
-  else
+  end
+  on_arm do
     sha256 "787e011ade5f058e1037a271fd974855bc1ee43ed5a31d810d8e86759a678d02"
   end
 
