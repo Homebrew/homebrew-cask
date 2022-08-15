@@ -3,9 +3,10 @@ cask "stellarium" do
 
   version "0.22.2"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "5e8c2ee315f8c00a393e7bd22461f9b48355538cec39e1bb771e92a5795bcfb4"
-  else
+  end
+  on_arm do
     sha256 "74acc44f96597d11d92f94015efd19cd18c2ce76e850d90f44c40d636f72ea5f"
   end
 
