@@ -3,9 +3,10 @@ cask "front" do
 
   version "3.36.14"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "5a522a2a6ff8df26f672101e12c412bb7dc4551801a450f502842cbeafb50df6"
-  else
+  end
+  on_arm do
     sha256 "2d194488f26c0d38b255228f69f287d8bf676e651c0e74f4a97ae99accef94d4"
   end
 
