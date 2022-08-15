@@ -18,14 +18,11 @@ cask "micromamba" do
   binary "bin/micromamba"
 
   caveats <<~EOS
-
     Please run the following to setup your shell:
       micromamba shell init -s <your-shell> -p ~/micromamba
     and restart your terminal.
 
-
-    For more information, see:#{" "}
+    For more information, see:
       https://mamba.readthedocs.io/en/latest/installation.html#micromamba
-
   EOS
 end
