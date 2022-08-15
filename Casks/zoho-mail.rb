@@ -3,9 +3,10 @@ cask "zoho-mail" do
 
   version "1.4.1"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "8301dd5071e1091917aaa45bf7f16944b2c22cbf3435f28282cb0be57f115076"
-  else
+  end
+  on_arm do
     sha256 "607c5c4614a37493d7dd5a2e06adf627a7f8e548acc81b2f60b637b78fecfbd5"
   end
 
