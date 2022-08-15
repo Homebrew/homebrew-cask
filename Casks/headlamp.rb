@@ -3,9 +3,10 @@ cask "headlamp" do
 
   version "0.11.1"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "df3bd1c32cac93b1ce917b3a32a5548107babb1cd64ce4278e0271f6fda08c61"
-  else
+  end
+  on_arm do
     sha256 "e6d9b5f6c7dd34ef2d81a235f61231f4906ac3a81c86878816d6a7610f7b65ad"
   end
 
