@@ -3,9 +3,10 @@ cask "powershell" do
 
   version "7.2.6"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "07ca6ddfbb6a9d98671c2f166cee93df2844f2a2c4132f59e71ac9869577564d"
-  else
+  end
+  on_arm do
     sha256 "05952e8ca2a4f2633d43eddac3a64ee3f1f1edf90ecbf7ef8b638e4bc72075f0"
   end
 
