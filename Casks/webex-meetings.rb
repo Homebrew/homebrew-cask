@@ -2,9 +2,10 @@ cask "webex-meetings" do
   version "42.8.0.23214"
   sha256 :no_check
 
-  if Hardware::CPU.intel?
+  on_intel do
     url "https://binaries.webex.com/WebexTeamsDesktop-MACOS-Gold/Webex.dmg"
-  else
+  end
+  on_arm do
     url "https://binaries.webex.com/WebexDesktop-MACOS-Apple-Silicon-Gold/Webex.dmg"
   end
 
