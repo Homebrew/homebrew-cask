@@ -3,9 +3,10 @@ cask "banana-cake-pop" do
 
   version "1.0.0-preview.42"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "0b28a5545975fab169b985ac9c70db9561fa0f5b876c838f91ad2129eb9e90b3"
-  else
+  end
+  on_arm do
     sha256 "264e01672b79bade0eaf3951737dc3ead15d5fbeebf55afa0e98c04ee476343f"
   end
 
