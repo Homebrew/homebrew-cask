@@ -3,9 +3,10 @@ cask "springtoolsuite" do
 
   version "4.15.3,4.24.0"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "9e69a29355e039ce9a0bb9441a515aabb212ef04131d45e9537710225a026b32"
-  else
+  end
+  on_arm do
     sha256 "8ad1d2c34d7c1b9b6854f89fbb65503463d41ce5953dd433a932da08d103e63f"
   end
 
