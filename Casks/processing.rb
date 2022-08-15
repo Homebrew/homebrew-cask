@@ -11,7 +11,7 @@ cask "processing" do
     sha256 "aa5b3f8e277fada2f73086677fde16aa7d7a08cd5e8d02ba5227952b295460aa"
   end
 
-  url "https://github.com/processing/processing4/releases/download/processing-#{version.csv.second}-#{version.csv.first}/processing-#{version.csv.first}-macosx-#{arch}.zip",
+  url "https://github.com/processing/processing4/releases/download/processing-#{version.csv.second}-#{version.csv.first}/processing-#{version.csv.first}-macos-#{arch}.zip",
       verified: "github.com/processing/processing4/"
   name "Processing"
   desc "Flexible software sketchbook and a language for learning how to code"
