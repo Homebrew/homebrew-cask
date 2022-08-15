@@ -3,9 +3,10 @@ cask "hyper" do
 
   version "3.2.3"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "08efdaf559d482441fb61557f4e2d0a406f9a96d5489692ebab5ab3fbf0f0915"
-  else
+  end
+  on_arm do
     sha256 "90b9ce0bc19fa03d0cfec2ec00f2dd0d74eea3d0a91ab4285bcfd83cbeeefca4"
   end
 
