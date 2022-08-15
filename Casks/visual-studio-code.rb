@@ -3,9 +3,10 @@ cask "visual-studio-code" do
 
   version "1.70.1"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "92e6ec523bb7b26a8fb8fc67737478442f4185b87845dfa8840a7760650912ca"
-  else
+  end
+  on_arm do
     sha256 "687f6fdb62486cbc12c3e1d2978c4bf67575ca1257e84a14950cb3d125e1164c"
   end
 
