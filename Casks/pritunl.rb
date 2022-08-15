@@ -3,9 +3,10 @@ cask "pritunl" do
 
   version "1.2.3236.80"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "47281dab7501d10db66249636f29bec2d4c9b2e9f4971f9fc9967b97f20a60d9"
-  else
+  end
+  on_arm do
     sha256 "d26c375da9b16febace3fea6781405086d3e45129256ad638d54fdb688253f29"
   end
 
