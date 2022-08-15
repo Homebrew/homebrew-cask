@@ -3,9 +3,10 @@ cask "espanso" do
 
   version "2.1.6-beta"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "63322c649d4b6aa3c4bfeddd99a1c2c095c77051271238faaaa19ede4f7e9576"
-  else
+  end
+  on_arm do
     sha256 "46137b5e7316a1c85574d45468b510e14a58cd495d5eb74de74f482dd241c447"
   end
 
