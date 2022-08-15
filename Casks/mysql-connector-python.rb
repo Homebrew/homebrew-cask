@@ -3,9 +3,10 @@ cask "mysql-connector-python" do
 
   version "8.0.30"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "673b43fbe5cf3ea4b8997bcb29a4e79390607434e81682e9b15466b502a43aa8"
-  else
+  end
+  on_arm do
     sha256 "bbe251a4a9bea7a73ca1aa0112d8de0ac44f69fe45e3453a3a5c4b02e4661d0b"
   end
 
