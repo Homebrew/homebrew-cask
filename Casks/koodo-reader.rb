@@ -3,9 +3,10 @@ cask "koodo-reader" do
 
   version "1.4.7"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "66bcea2c2eaab9c04240dfa6c78288b543e9ec01529527a249150587507e35af"
-  else
+  end
+  on_arm do
     sha256 "6affaf67a8026564ddf7e22dba3b9b7622c47792d34940eb09bd8a22a182c570"
   end
 
