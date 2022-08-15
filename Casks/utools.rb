@@ -3,9 +3,10 @@ cask "utools" do
 
   version "3.0.1"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "8a062e029b4d8222a344ed044029d474b00cc2e0ff3643f6103eb6c49735e17e"
-  else
+  end
+  on_arm do
     sha256 "eb5a92efcc2d0eb634922d41337c416d0b9b4f81b50689cc71e777a5b7c5fb08"
   end
 
