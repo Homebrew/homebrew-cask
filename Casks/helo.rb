@@ -3,9 +3,10 @@ cask "helo" do
 
   version "1.6.2"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "a22704a4b8f5bc13a9f1c8f6e893657576c20308fe7372ae87306d58d70dca48"
-  else
+  end
+  on_arm do
     sha256 "b1ef0c2c300d7c644f91cfc664bb28b3066b86257984b0407b52dd0e7ed59d0d"
   end
 
