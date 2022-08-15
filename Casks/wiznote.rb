@@ -3,9 +3,10 @@ cask "wiznote" do
 
   version "0.1.83"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "3a94e649cdfa05f36306591204c091f7efdf7f209337a0464219ad02823b20aa"
-  else
+  end
+  on_arm do
     sha256 "2afd42ff3cc996f0d9122cd8aac1e590d5b53d7eb90d6f17221311bbfb7dd48d"
   end
 
