@@ -3,9 +3,10 @@ cask "polymail" do
 
   version "2.2.6"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "7f0545b2a99ab9fa515b6f78437a53226e6e1f788a8ed411e6bbd3fff5c09249"
-  else
+  end
+  on_arm do
     sha256 "e5d7ddf964e817ca604612d85ffe26381eb9d3f73962b40af32b5ef071833a2b"
   end
 
