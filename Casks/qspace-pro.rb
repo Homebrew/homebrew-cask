@@ -17,4 +17,17 @@ cask "qspace-pro" do
   depends_on macos: ">= :sierra"
 
   app "QSpace Pro.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.jinghaoshe.qspace.pro.StashShelfShareExtension",
+    "~/Library/Application Support/com.jinghaoshe.qspace.pro",
+    "~/Library/Caches/com.jinghaoshe.qspace.pro",
+    "~/Library/Containers/com.jinghaoshe.qspace.pro.StashShelfShareExtension",
+    "~/Library/HTTPStorages/com.jinghaoshe.qspace.pro",
+    "~/Library/HTTPStorages/com.jinghaoshe.qspace.pro.binarycookies",
+    "~/Library/Preferences/com.jinghaoshe.qspace.pro.plist",
+    "~/Library/Saved Application State/com.jinghaoshe.qspace.pro.savedState",
+    "~/Library/WebKit/com.jinghaoshe.qspace.pro",
+    "~/QSpace",
+  ]
 end
