@@ -3,9 +3,10 @@ cask "coscreen" do
 
   version "4.0.67"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "b59f60e405b713f3fd81cdae656fed4d2f3d8c23e70555f4368e52d9e90a7aa2"
-  else
+  end
+  on_arm do
     sha256 "0cec123742472ed4010650a928b25ce4a05ac596cc8ffe231618dda144c197e1"
   end
 
