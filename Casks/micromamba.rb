@@ -10,10 +10,11 @@ cask "micromamba" do
     sha256 "b39fb2f9f2bed41c5ad885f41f49ba751a4ba5ee01ee96ca8293a84aa603d1b2"
   end
 
-  url "https://micro.mamba.pm/api/micromamba/osx-#{arch}/#{version}"
+  url "https://micro.mamba.pm/api/micromamba/osx-#{arch}/#{version}",
+      verified: "micro.mamba.pm/api/micromamba/"
   name "micromamba"
-  desc "Tiny Version of the Mamba cross-platform package manager"
-  homepage "www.github.com/mamba-org/mamba"
+  desc "Tiny version of the Mamba cross-platform package manager"
+  homepage "https://mamba.readthedocs.io/en/latest/installation.html#micromamba"
 
   binary "bin/micromamba"
 
