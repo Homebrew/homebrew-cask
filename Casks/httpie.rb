@@ -3,16 +3,17 @@ cask "httpie" do
 
   version "2022.12.0"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "3f6b841c16159ed9c6361dbe165e4a5afdba34dbe70aa95f719faf39d699783b"
-  else
+  end
+  on_arm do
     sha256 "934f08b885c7fa483dcf3ee83a569224d9a199a1c86917544024daaad16890cc"
   end
 
   url "https://github.com/httpie/desktop/releases/download/v#{version}/HTTPie-#{version}#{arch}.dmg",
       verified: "github.com/httpie/desktop/"
   name "HTTPie for Desktop"
-  desc "Desktop wrapper for human-friendly command-line HTTP client HTTPie"
+  desc "Desktop wrapper for HTTPie"
   homepage "https://httpie.io/product"
 
   livecheck do
