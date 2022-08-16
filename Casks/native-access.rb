@@ -1,7 +1,7 @@
 cask "native-access" do
   arch arm: "M1", intel: "Intel"
 
-  version "2.2.0"
+  version "2.3.0"
   sha256 :no_check
 
   url "https://native-instruments.com/fileadmin/downloads/Native-Access_2_Mac_#{arch}.dmg"
