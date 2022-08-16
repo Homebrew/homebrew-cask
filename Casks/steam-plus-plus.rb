@@ -4,7 +4,7 @@ cask "steam-plus-plus" do
   version "2.8.4"
 
   on_intel do
-    sha256 "9d07681cb51e68c945b017b684f7394caef94a256a5bbe5e81fe27670e41ea4f"
+    sha256 "dbe227f9d2d819698744cca32b6c52473b88058249480a226501adde8c395b86"
   end
   on_arm do
     sha256 "b321b7b549680bdfcac8201dd5f1945120f3b30fca033f035387e182801dce74"
