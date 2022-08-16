@@ -11,7 +11,7 @@ cask "jupyterlab" do
     url :url
     strategy :github_latest
   end
-  
+
   app "JupyterLab.app"
 
   uninstall pkgutil: "com.electron.jupyterlab-desktop",
