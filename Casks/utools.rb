@@ -4,7 +4,7 @@ cask "utools" do
   version "3.0.2"
 
   on_intel do
-    sha256 "8a062e029b4d8222a344ed044029d474b00cc2e0ff3643f6103eb6c49735e17e"
+    sha256 "9b07b20a0c93e2ec3facdbe2b30d9eda9f62dee72eda972d124e3db6b074dd08"
   end
   on_arm do
     sha256 "71fea8e3436b4ec3ecfe4e48cbb0cd0a95335632a8a521be5ceac70d34179b70"
