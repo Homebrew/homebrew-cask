@@ -9,8 +9,7 @@ cask "qspace-pro" do
 
   livecheck do
     url "https://qspace.awehunt.com/en-us/index.html"
-    strategy :page_match
-    regex(%r{href=.*?/QSpace%20Pro_V(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/QSpace%20Pro[._-]V?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   auto_updates true
