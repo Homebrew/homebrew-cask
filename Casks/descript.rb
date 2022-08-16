@@ -1,13 +1,13 @@
 cask "descript" do
   arch arm: "-arm64"
 
-  version "45.1.0-release.20220802.6"
+  version "46.2.0-release.20220816.4"
 
   on_intel do
-    sha256 "b6396707bb77868b45403f7d4a2618b59698c810ff18d92b5f2ebef51b9d73ac"
+    sha256 "c9ce6dd8a5083074512524bf5b418aba333651ad66c425804f2178dc30c23c14"
   end
   on_arm do
-    sha256 "6bdc79411ec21d6844e5d06fe2651dccc1723e49bda860c6bcbbebf499e18905"
+    sha256 "1966ed6228f54b3cc95ba85e020f6a27ade504be0118090083076c92ffc9f5f9"
   end
 
   url "https://electron.descript.com/Descript-#{version}#{arch}.dmg"
