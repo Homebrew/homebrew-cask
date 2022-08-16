@@ -1,13 +1,13 @@
 cask "steam-plus-plus" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.8.3"
+  version "2.8.4"
 
   on_intel do
-    sha256 "9d07681cb51e68c945b017b684f7394caef94a256a5bbe5e81fe27670e41ea4f"
+    sha256 "dbe227f9d2d819698744cca32b6c52473b88058249480a226501adde8c395b86"
   end
   on_arm do
-    sha256 "c9172e46fcabaa7868e53448cbe4d79be9c0ed3a1c892bf1707e52f1501e1688"
+    sha256 "b321b7b549680bdfcac8201dd5f1945120f3b30fca033f035387e182801dce74"
   end
 
   url "https://github.com/BeyondDimension/SteamTools/releases/download/#{version}/Steam++_macos_#{arch}_v#{version}.dmg",
