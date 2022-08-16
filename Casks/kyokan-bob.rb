@@ -1,6 +1,6 @@
 cask "kyokan-bob" do
   arch arm: "arm64", intel: "x86"
-  
+
   version "1.0.0"
 
   on_intel do
