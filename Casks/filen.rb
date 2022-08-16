@@ -10,8 +10,8 @@ cask "filen" do
   homepage "https://filen.io/"
 
   livecheck do
-    url "https://github.com/FilenCloudDienste/filen-desktop"
-    strategy :git
+    url "https://cdn.filen.io/desktop/release/latest-mac.yml"
+    strategy :electron_builder
   end
 
   app "Filen.app"
