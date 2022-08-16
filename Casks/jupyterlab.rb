@@ -10,6 +10,7 @@ cask "jupyterlab" do
   livecheck do
     url :url
     strategy :github_latest
+    regex(%r{href=.*?/tag/v?(\d+(?:[.-]\d+)+)["' >]}i)
   end
 
   app "JupyterLab.app"
