@@ -5,7 +5,7 @@ cask "segger-embedded-studio-for-arm" do
 
   url "https://www.segger.com/downloads/embedded-studio/Setup_EmbeddedStudio_ARM_v#{version.no_dots}_macos_#{arch}.dmg"
   on_intel do
-    sha256 "688b8547a85c223601b0722ca8834c13ffab67413831ea6c266fd48457e323ad"
+    sha256 "4c0b2ed14f46c5df4f560b1f8d0411d4070cd965cbe02801f55c7f93686c574e"
   end
   on_arm do
     sha256 "4a5ab3761dca0c75cfe902253a5c93ce8b1b32161b386593319a812cf7efacff"
