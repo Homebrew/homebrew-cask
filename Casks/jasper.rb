@@ -1,7 +1,8 @@
 cask "jasper" do
+  arch arm: "arm64", intel: "x64"
+
   version "1.1.0"
 
-  arch arm: "arm64", intel: "x64"
   on_intel do
     sha256 "06a8acb5ae64201651ab6ff12af8c435d36ee7ad26b9277a006d2b4f40f0ff85"
   end
