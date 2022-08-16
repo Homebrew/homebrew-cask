@@ -1,6 +1,6 @@
 cask "vienna" do
-  version "3.7.4,7565"
-  sha256 "f42a5971703984a85d76cc9a65df44ab4816fd387a017c3b2a8e9eaaf70f85b9"
+  version "3.8.1,7830"
+  sha256 "aeb7a976c1446bbc98ab3b63c5b00c44fcb20f028e8e5d2caf760c6fe6b52380"
 
   url "https://github.com/ViennaRSS/vienna-rss/releases/download/v%2F#{version.csv.first}/Vienna#{version.csv.first}.tar.gz",
       verified: "github.com/ViennaRSS/vienna-rss/"
