@@ -11,7 +11,7 @@ cask "filen" do
 
   livecheck do
     url "https://github.com/FilenCloudDienste/filen-desktop/releases/latest/"
-    strategy :github_latest
+    strategy :git
   end
 
   app "Filen.app"
