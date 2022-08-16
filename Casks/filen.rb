@@ -10,7 +10,7 @@ cask "filen" do
   homepage "https://filen.io/"
 
   livecheck do
-    url "https://github.com/FilenCloudDienste/filen-desktop/releases/latest/"
+    url "https://github.com/FilenCloudDienste/filen-desktop"
     strategy :git
   end
 
