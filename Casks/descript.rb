@@ -4,7 +4,7 @@ cask "descript" do
   version "46.1.0-release.20220813.3"
 
   on_intel do
-    sha256 "b6396707bb77868b45403f7d4a2618b59698c810ff18d92b5f2ebef51b9d73ac"
+    sha256 "01f3815524890b7d11c000e6362ff271bb556a1ebe072a47ab40d8bda1b1b31a"
   end
   on_arm do
     sha256 "51a341379af0a3317b644ec1c51ba835a2d766d5c9bae5a5ed27f94cc4050e76"
