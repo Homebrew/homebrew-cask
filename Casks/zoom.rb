@@ -7,7 +7,7 @@ cask "zoom" do
     sha256 "e97c9906c6d375b9da0e846ce4273b9baa33ba42a766c37d9c15f542201f93ab"
   end
   on_arm do
-    sha256 "a043c17dd2f4ac177c4d9d9fdcabe93777f514c9b042b030440a316b05a28dcc"
+    sha256 "3e0e3a8006c2e4e83b85f1201c23e96358e53a338392153dfb51dae235594540"
   end
 
   url "https://cdn.zoom.us/prod/#{version}/#{arch}Zoom.pkg"
