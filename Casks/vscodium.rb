@@ -4,7 +4,7 @@ cask "vscodium" do
   version "1.70.1.22228"
 
   on_intel do
-    sha256 "3f7123c87c6486016512ab70714bf7928a419accc207b9a4caddd3e7e6e44fa8"
+    sha256 "8f39c5183f9454b0d226a3c6544fe5d390b3a1d04dc16ecec9b37ba9d4927024"
   end
   on_arm do
     sha256 "b7ca5e15160fce428dc49ba6020623c34ab0e64587481c2fc0a1973f3d852413"
