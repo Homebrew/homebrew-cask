@@ -9,7 +9,7 @@ cask "aethersx2" do
 
   livecheck do
     url "https://www.aethersx2.com/archive/?dir=desktop/mac"
-    regex(/AetherSX2[._-]((?:v\d+(?:\.\d+)|alpha)[._-]\d+)[._-]mac\.zip/i)
+    regex(/AetherSX2[._-](v\d+(?:\.\d+)[._-]\d+)[._-]mac\.zip/i)
   end
 
   depends_on arch: :arm64
