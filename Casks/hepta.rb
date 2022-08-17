@@ -4,7 +4,7 @@ cask "hepta" do
   version "0.186.1"
 
   on_intel do
-    sha256 "302ba70b1d8c65a43d28e36f011812831c480bd2e45eaf1bb4662b85af6e26cc"
+    sha256 "367467fc9ba7f7d587307307d0d9084a5bf0610a66e7359b53ad37adfdce7b0b"
   end
   on_arm do
     sha256 "a819c10195985c2770d9d563ca1daf83ec0197e85bb5ab037ed785f19109944d"
