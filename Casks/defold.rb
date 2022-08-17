@@ -9,8 +9,8 @@ cask "defold" do
   homepage "https://defold.com/"
 
   livecheck do
-    url "https://github.com/defold/defold/releases/"
-    regex(%r{href=.*?/tag/(\d+(?:\.\d+)+).*?stable</a>}i)
+    url "https://github.com/defold/defold/releases?q=prerelease%3Afalse"
+    regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)+)["' >]}i)
     strategy :page_match
   end
 
