@@ -12,7 +12,7 @@ cask "ipremoteutility" do
     regex(/href=.*?IPRemoteUtility[._-]v?(\d+(?:\.\d+)+)-macOSX\.zip/i)
   end
 
-  container nested: "IPRemoteUtility-#{version}-macOSX/IPRemoteUtility-#{version}.dmg"
+  container nested: "IPRemoteUtility-#{version}-Rotary-macOSX/IPRemoteUtility-#{version}-Rotary.dmg"
 
   app "IPRemoteUtility.app"
 end
