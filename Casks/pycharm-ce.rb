@@ -7,7 +7,7 @@ cask "pycharm-ce" do
     sha256 "8c2b322cab74cbf52dbe33e0fd9be63fe320d1ade2446790c4eec7309b590eea"
   end
   on_arm do
-    sha256 "aa9d00a852ca03eebdb6c2ecbd9180f4a75a1bc253d3d7fad969c8e52f0218ea"
+    sha256 "c3abc618614be830dbf41479b74ae489aa44290d9bbb11e3c4d2cdffb4d569b6"
   end
 
   url "https://download.jetbrains.com/python/pycharm-community-#{version.csv.first}#{arch}.dmg"
