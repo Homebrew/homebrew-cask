@@ -11,6 +11,7 @@ cask "rubick2" do
   app "rubick2.app"
 
   zap trash: [
+    "~/rubick",
     "~/Library/Application Support/rubick",
     "~/Library/Preferences/com.muwoo.rubick.plist",
   ]
