@@ -4,7 +4,7 @@ cask "jasper" do
   version "1.1.1"
 
   on_intel do
-    sha256 "06a8acb5ae64201651ab6ff12af8c435d36ee7ad26b9277a006d2b4f40f0ff85"
+    sha256 "8c30e53b39ab87c94eff5c76c52b7403125efeb33b76e0cc6250c134aaf55fe3"
   end
   on_arm do
     sha256 "860a6d48cfc4542a0060746e10d2bfe06a3da66a0a3aeef028f02454afb3cd66"
