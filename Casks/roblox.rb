@@ -1,8 +1,8 @@
 cask "roblox" do
   version "0.539.0.5390403,d937a525133a45cc"
-  sha256 "ec64a7a49192aaaa113cc2fe160f2198c1552805cee8cdbbfe910107d9d312c6"
+  sha256 "f68cfbccc5cf82d2acad713feeb9423b78e5668143500a44e63d00ab419ae48c"
 
-  url "https://setup.rbxcdn.com/mac/version-#{version.csv.second}-Roblox.dmg",
+  url "https://setup.rbxcdn.com/mac/version-#{version.csv.second}-RobloxPlayer.zip",
       verified: "setup.rbxcdn.com/"
   name "Roblox"
   desc "Online multiplayer game platform"
@@ -20,7 +20,7 @@ cask "roblox" do
 
   auto_updates true
 
-  installer manual: "Roblox.app"
+  app "RobloxPlayer.app", target: "Roblox.app"
 
   uninstall quit:   "com.roblox.RobloxPlayer",
             delete: "/Applications/Roblox.app"
