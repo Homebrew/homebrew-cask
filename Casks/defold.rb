@@ -8,6 +8,12 @@ cask "defold" do
   desc "Game engine for development of desktop, mobile and web games"
   homepage "https://defold.com/"
 
+  livecheck do
+    url "https://github.com/defold/defold/releases/"
+    regex(%r{href=.*?/tag/(\d+(?:\.\d+)+).*?stable</a>}i)
+    strategy :page_match
+  end
+
   auto_updates true
   conflicts_with cask: [
     "homebrew/cask-versions/defold-beta",
