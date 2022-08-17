@@ -1,13 +1,13 @@
 cask "vscodium" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.70.1"
+  version "1.70.1.22228"
 
   on_intel do
     sha256 "3f7123c87c6486016512ab70714bf7928a419accc207b9a4caddd3e7e6e44fa8"
   end
   on_arm do
-    sha256 "49d8fd0606d09aa29fb42fafe6da7f5cc92150e73d45eb53527aa844e59ce52d"
+    sha256 "b7ca5e15160fce428dc49ba6020623c34ab0e64587481c2fc0a1973f3d852413"
   end
 
   url "https://github.com/VSCodium/vscodium/releases/download/#{version}/VSCodium.#{arch}.#{version}.dmg"
