@@ -1,13 +1,13 @@
 cask "intellij-idea" do
   arch arm: "-aarch64"
 
-  version "2022.2,222.3345.118"
+  version "2022.2.1,222.3739.54"
 
   on_intel do
-    sha256 "45b1ec724c8d72746d2b7f05fd229e6ef68fb82e38f420a1a0ae47faae1086a1"
+    sha256 "e54a026da11d05d9bb0172f4ef936ba2366f985b5424e7eecf9e9341804d65bf"
   end
   on_arm do
-    sha256 "d790aec60c065725d704c834a0cb76fe7643c00186019990688f9a90b64fef3b"
+    sha256 "f7b56525adf96d0ac290eebebd08a53b962a799db65942e07cd437aef655fa0e"
   end
 
   url "https://download.jetbrains.com/idea/ideaIU-#{version.csv.first}#{arch}.dmg"
