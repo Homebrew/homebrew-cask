@@ -1,10 +1,10 @@
 cask "goland" do
   arch arm: "-aarch64"
 
-  version "2022.2.1,222.3345.146"
+  version "2022.2.2,222.3739.57"
 
   on_intel do
-    sha256 "e03f93161a3a786c4550fa8bc30233a32fb54569674aefabb7ad169bc025840a"
+    sha256 "e11f07aebf849ed942c4b8658c11c70ce81b4138186a0301c0ec7cd236f1ff51"
   end
   on_arm do
     sha256 "d078d456508d3a47d33564e27bbf1269e4d98763aa23e74eaae741b517127b40"
