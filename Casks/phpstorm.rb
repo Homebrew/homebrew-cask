@@ -1,13 +1,13 @@
 cask "phpstorm" do
   arch arm: "-aarch64"
 
-  version "2022.2,222.3345.135"
+  version "2022.2.1,222.3739.61"
 
   on_intel do
-    sha256 "f12241941a3076f22bb49193829c4412d45b20520a0617c0ee9bf8d94dca4575"
+    sha256 "ba9cc863c2247e6404b015fac085e8b3427b29aba3d7cb07940840f7c5e3b647"
   end
   on_arm do
-    sha256 "797888d4da4c63b89700cede2200808d715597d5fa6cac498d137c367f9192e3"
+    sha256 "b553e1f0249b4d7f89cacdac7bada758895cd35aec8ddac5f81017f61ddc44fb"
   end
 
   url "https://download.jetbrains.com/webide/PhpStorm-#{version.csv.first}#{arch}.dmg"
