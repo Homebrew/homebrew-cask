@@ -4,9 +4,9 @@ cask "goxel" do
 
   url "https://github.com/guillaumechereau/goxel/releases/download/v#{version}/goxel-#{version}-mac.zip",
       verified: "https://github.com/guillaumechereau/goxel"
-  name "goxel"
+  name "Goxel"
   desc "Open Source Voxel Editor"
   homepage "https://goxel.xyz/"
 
-  app "goxel.app"
+  app "Goxel.app"
 end
