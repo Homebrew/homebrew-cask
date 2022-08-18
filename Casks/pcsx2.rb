@@ -14,7 +14,7 @@ cask "pcsx2" do
     regex(/pcsx2[._-]v?(\d+(?:\.\d+)+)[._-]macos[._-]Qt\.t/i)
   end
 
-  app "PCSX2.app"
+  app "PCSX2-v#{version}.app"
 
   zap trash: [
     "~/Library/Application Support/PCSX2",
