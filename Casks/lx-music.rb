@@ -1,13 +1,13 @@
 cask "lx-music" do
   arch arm: "-arm64"
 
-  version "1.22.1"
+  version "1.22.2"
 
   on_intel do
-    sha256 "e74158b77f2da4a9b6e0530f7fa7a9f34c66b479922d8708eb06fb475dd3a218"
+    sha256 "7d44b3c072fb0cb6e6e5949f8087222da0393782cbfebf896872516ab0e96b2a"
   end
   on_arm do
-    sha256 "462ffb39ae422debc1d23b70f0ea123dc995627d4a3a7b526d0e0d07511ea3fd"
+    sha256 "8f30eb1264e300d0bcd543d61b7d84dcfd06c8e372cc7daed1c4645aeba81bc4"
   end
 
   url "https://github.com/lyswhut/lx-music-desktop/releases/download/v#{version}/lx-music-desktop-#{version}#{arch}.dmg"
