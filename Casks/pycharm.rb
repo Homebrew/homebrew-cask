@@ -8,7 +8,7 @@ cask "pycharm" do
     sha256 "6636139dc9c0e28b90517e91d1c1924e218b5d33d9418cca888b05c11fbf54d9"
   end
   on_arm do
-    sha256 "6a75dcbc0976d995ebb55ede81bd7ebab4fc97bac3259f21d7314744a5ff794d"
+    sha256 "416ca961042b9c3ae8b23039cc3b84b64e941c1d82478bca3e327089efa4f4d2"
   end
 
   name "PyCharm"
