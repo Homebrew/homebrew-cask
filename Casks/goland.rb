@@ -7,7 +7,7 @@ cask "goland" do
     sha256 "e11f07aebf849ed942c4b8658c11c70ce81b4138186a0301c0ec7cd236f1ff51"
   end
   on_arm do
-    sha256 "d078d456508d3a47d33564e27bbf1269e4d98763aa23e74eaae741b517127b40"
+    sha256 "7098f05847c0524bc90b00766c71c2f1cc1442983da956c79ee1445b48da73fd"
   end
 
   url "https://download.jetbrains.com/go/goland-#{version.csv.first}#{arch}.dmg"
