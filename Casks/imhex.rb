@@ -1,6 +1,6 @@
 cask "imhex" do
-  version "1.21.1"
-  sha256 "d130fc5d0c32a7757777d671e812b5bed8abb4f658800d3ab62e7f5abbf2c728"
+  version "1.21.2"
+  sha256 "8b8bea053b2645b78faebe6708dac79e9008bb224ed9315307d8e23f40c44918"
 
   url "https://github.com/WerWolv/ImHex/releases/download/v#{version}/imhex-#{version}-Darwin.dmg",
       verified: "github.com/WerWolv/ImHex/"
