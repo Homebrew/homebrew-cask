@@ -9,4 +9,10 @@ cask "goxel" do
   homepage "https://goxel.xyz/"
 
   app "Goxel.app"
+
+  zap trash: [
+    "~/Library/Application Support/Goxel",
+    "~/Library/Preferences/com.noctuasoftware.goxel.plist",
+    "~/Library/Saved Application State/com.noctuasoftware.goxel.savedState",
+  ]
 end
