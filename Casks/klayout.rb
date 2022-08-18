@@ -1,18 +1,18 @@
 cask "klayout" do
-  version "0.27.10"
+  version "0.27.11"
 
   if MacOS.version <= :catalina
-    sha256 "5ee0c7c1ceb56188d9f3ce53d994c5c67e5c49a0531160d35d9db5d79dc7f5d2"
+    sha256 "372c53e6ec7f79cdf86612fa8d3a8a719a7d75eedc940e61b71bc15d22a53b26"
 
     url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Catalina-1-qt5Brew-RsysPhb38.dmg",
         verified: "klayout.org/downloads/MacOS/"
   elsif MacOS.version <= :big_sur
-    sha256 "19b8dc49b560f05d6a3f8cfe675f27923867e4a2a47c66cf75806ec1ad7eae82"
+    sha256 "ca8939d4838f59412fc446209df249dda47e4b576c49856e9657318145bfc290"
 
     url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-BigSur-1-qt5Brew-RsysPhb38.dmg",
         verified: "klayout.org/downloads/MacOS/"
   else
-    sha256 "ec19992f86cf2ee5ff21857a3b4bd0dbbefa090144cebefe5e5bccc5e4083ef3"
+    sha256 "b08e25589576bbf056fdcaa1562129583cabd3e72778da0a1a3cc25c394b8add"
 
     url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Monterey-1-qt5Brew-RsysPhb38.dmg",
         verified: "klayout.org/downloads/MacOS/"

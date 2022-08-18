@@ -12,6 +12,8 @@ cask "babeledit" do
     regex(%r{babeledit/download/v?(\d+(?:\.\d+)+)/mac-64}i)
   end
 
+  auto_updates true
+
   app "BabelEdit.app"
 
   zap trash: "~/Library/Preferences/de.code-and-web.BabelEdit.plist"

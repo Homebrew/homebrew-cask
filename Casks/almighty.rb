@@ -1,8 +1,8 @@
 cask "almighty" do
-  version "2.3.3,43"
+  version "2.3.7,48"
   sha256 :no_check
 
-  url "https://almighty-app.s3.eu-north-1.amazonaws.com/Almighty.app.zip",
+  url "https://almighty-app.s3.eu-north-1.amazonaws.com/Almighty.zip",
       verified: "almighty-app.s3.eu-north-1.amazonaws.com/"
   name "almighty"
   desc "Settings and tweaks configurator"
@@ -14,6 +14,7 @@ cask "almighty" do
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "Almighty.app"
 

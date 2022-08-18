@@ -1,9 +1,10 @@
 cask "libreoffice-language-pack" do
-  arch, folder = Hardware::CPU.intel? ? ["x86-64", "x86_64"] : ["aarch64", "aarch64"]
+  arch arm: "aarch64", intel: "x86-64"
+  folder = on_arch_conditional arm: "aarch64", intel: "x86_64"
 
   version "7.3.5"
 
-  if Hardware::CPU.intel?
+  on_intel do
     language "af" do
       sha256 "0e56ad36785bca79296966c0eb0eadf87fd3918f27165cec9ad73447a2238e38"
       "af"
@@ -396,7 +397,8 @@ cask "libreoffice-language-pack" do
       sha256 "872f52ef73bab8f1de22bfdce094958afc2c65095cc59e5af28e7f5324d0cbe1"
       "zu"
     end
-  else
+  end
+  on_arm do
     language "af" do
       sha256 "399c9307d68eb4640a6be2cc0bf3547ba7839a1ad03268f5bea32e4d43392d33"
       "af"

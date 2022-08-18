@@ -1,11 +1,12 @@
 cask "portfolioperformance" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
+  arch arm: "aarch64", intel: "x86_64"
 
   version "0.59.0"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "30816629463882bd8520d209cd6e042df210418e1895e4bf580a880cb13f9fbd"
-  else
+  end
+  on_arm do
     sha256 "6b3a3747e37cc46f089a2e3cfaa423c153817f083e43821d1ed4f9e7efc37d86"
   end
 

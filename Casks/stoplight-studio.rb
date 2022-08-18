@@ -1,11 +1,12 @@
 cask "stoplight-studio" do
-  arch = Hardware::CPU.intel? ? "mac" : "mac-arm64"
+  arch arm: "mac-arm64", intel: "mac"
 
   version "2.8.1,7959.git-777e356"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "8a933c3b633e12da3b8a85e43b004223a3c00ee348a0817d0348ecaf5a586c54"
-  else
+  end
+  on_arm do
     sha256 "d0b50a7da3798b7b797dcb46a1bf2cddcee06269f6ab363724e64bdd3ddf82a0"
   end
 

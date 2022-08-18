@@ -1,11 +1,12 @@
 cask "figma" do
-  arch = Hardware::CPU.intel? ? "mac" : "mac-arm"
+  arch arm: "mac-arm", intel: "mac"
 
   version "116.2.4"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "60e3db6ef10e328577072338add87fd7a3480604ff1da82935de59557e48ad65"
-  else
+  end
+  on_arm do
     sha256 "4a46d7abd0237626641453b9a126727868a8c55e16eeac18b16022ec4fcecac6"
   end
 

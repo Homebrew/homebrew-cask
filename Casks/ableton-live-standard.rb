@@ -1,5 +1,5 @@
 cask "ableton-live-standard" do
-  arch = MacOS.version >= :mojave ? "universal" : "intel"
+  arch = (MacOS.version >= :mojave) ? "universal" : "intel"
   version "11.1.6"
 
   if MacOS.version >= :mojave

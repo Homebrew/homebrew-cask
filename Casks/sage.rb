@@ -1,11 +1,12 @@
 cask "sage" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
+  arch arm: "arm64", intel: "x86_64"
 
   version "9.6,1.4.2"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "c1ecace231226798e95ee4d7a3f301943ca9bbcef58834addb16ca8f4132430f"
-  else
+  end
+  on_arm do
     sha256 "54a37b6391651ff04b4512cbf311422ab92e3373580a01d0e89349bc370f2562"
   end
 

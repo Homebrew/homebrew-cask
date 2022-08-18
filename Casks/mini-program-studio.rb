@@ -1,10 +1,11 @@
 cask "mini-program-studio" do
-  arch = Hardware::CPU.intel? ? "-x64" : "-arm64"
+  arch arm: "-arm64", intel: "-x64"
 
-  if Hardware::CPU.intel?
+  on_intel do
     version "3.1.3,ae1bb1b2-16bc-4e53-92af-78ebe212ab33"
     sha256 "99bf5553598eb1d89051f790e757c5002ccc17953c7d5503ae21430fc7b27551"
-  else
+  end
+  on_arm do
     version "3.1.3,ba8539d7-cec1-4201-992f-0f02b02d5b28"
     sha256 "bde711b94089c3ab09d5726dd30cb9b1a01e45304bf431216613f1265574d597"
   end

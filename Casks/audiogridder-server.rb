@@ -1,11 +1,12 @@
 cask "audiogridder-server" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
+  arch arm: "arm64", intel: "x86_64"
 
   version "1.1.1"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "072e52bd56fedb1c481961beacca99096e3a65ba36339bdd78155fd1f1d133ea"
-  else
+  end
+  on_arm do
     sha256 "26be020b2ba57d7a0102a152099fcc5e993ce4bbcb23f47d80d5d9f24421658b"
   end
 

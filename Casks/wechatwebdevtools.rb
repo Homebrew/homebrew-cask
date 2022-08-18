@@ -1,11 +1,12 @@
 cask "wechatwebdevtools" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
   version "1.06.2208010"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "e13b9cab93476d9076847ca74342fcc785854487a9044db6315426775a625942"
-  else
+  end
+  on_arm do
     sha256 "04db8963a098baf726effecfdaf0bf42db24bc7f4e4100243a0d3bd891edb2e5"
   end
 

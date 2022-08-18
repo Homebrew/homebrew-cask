@@ -1,5 +1,6 @@
 cask "miniconda" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
+  arch arm: "arm64", intel: "x86_64"
+
   version "py39_4.12.0"
 
   if Hardware::CPU.intel?

@@ -1,6 +1,6 @@
 cask "connectiq" do
-  version "4.1.4,2022-06-07,f86da2dee"
-  sha256 "a1f51e4372f7e380f9bac8d81a00a0c54f6d6809dc1150a1c0011631cd26b47d"
+  version "4.1.5,2022-08-03,6e17bf167"
+  sha256 "93cf9eb0c499decbc6a398bf9b3bcbeabbd3e7e1e29bf291e152c4efecd0673e"
 
   url "https://developer.garmin.com/downloads/connect-iq/sdks/connectiq-sdk-mac-#{version.tr(",", "-")}.dmg"
   name "Garmin Connect IQ SDK"

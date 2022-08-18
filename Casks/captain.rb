@@ -1,11 +1,12 @@
 cask "captain" do
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  arch arm: "-arm64"
 
   version "10.0.3"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "32209eaa21e8917470d37456388395d79aefac911bceed044011284fb222d186"
-  else
+  end
+  on_arm do
     sha256 "a0a380f4d38d7330bfea534ed8ecc44ebf48971843549017aa5551bd659fb121"
   end
 

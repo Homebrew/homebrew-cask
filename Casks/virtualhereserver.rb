@@ -1,5 +1,5 @@
 cask "virtualhereserver" do
-  version "4.4.1"
+  version "4.4.2"
   sha256 :no_check
 
   if MacOS.version <= :mojave

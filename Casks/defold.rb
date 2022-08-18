@@ -8,6 +8,14 @@ cask "defold" do
   desc "Game engine for development of desktop, mobile and web games"
   homepage "https://defold.com/"
 
+  # Alpha releases are labeled as "pre-release" but beta releases aren't, so we
+  # can't use the `GithubLatest` strategy here.
+  livecheck do
+    url "https://github.com/defold/defold/releases?q=prerelease%3Afalse"
+    regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)+)["' >]}i)
+    strategy :page_match
+  end
+
   auto_updates true
   conflicts_with cask: [
     "homebrew/cask-versions/defold-beta",

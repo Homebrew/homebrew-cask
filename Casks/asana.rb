@@ -1,5 +1,5 @@
 cask "asana" do
-  version "1.8.0"
+  version "1.9.0"
   sha256 :no_check
 
   url "https://desktop-downloads.asana.com/darwin_universal/prod/latest/Asana.dmg"

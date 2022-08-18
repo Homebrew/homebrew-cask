@@ -1,11 +1,12 @@
 cask "uvtools" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
   version "3.5.6"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "6d5a70f2e8a274a6135718a6bf943f52958a604429168369cb9f9243c5c1e9a8"
-  else
+  end
+  on_arm do
     sha256 "2d7f7587651311386a7eb0fb10922b4edee47aef2f93f4ad97c8cf4912fd9874"
   end
 

@@ -1,10 +1,11 @@
 cask "dosbox-x" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
+  arch arm: "arm64", intel: "x86_64"
 
-  if Hardware::CPU.intel?
+  on_intel do
     version "2022.08.0,20220801110113"
     sha256 "ac684024318271c551f5cffbc18cb44ef9e5470a35f64b726e7ed890b0d03e7a"
-  else
+  end
+  on_arm do
     version "2022.08.0,20220801125416"
     sha256 "4a0f664c8b6c35db153682c7bad747faf4d033da10039e5eb247e0f526e1aaeb"
   end

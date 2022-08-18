@@ -1,5 +1,6 @@
 cask "anki" do
-  arch = Hardware::CPU.intel? ? "intel" : "apple"
+  arch arm: "apple", intel: "intel"
+
   version "2.1.54"
 
   if Hardware::CPU.intel?

@@ -1,11 +1,12 @@
 cask "eclipse-platform" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
+  arch arm: "aarch64", intel: "x86_64"
 
   version "4.24,202206070700"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "b33bcf7427eb9b969093b8a6cd3e2fb7e357acbc994cbc4baa95e739ab4425cd"
-  else
+  end
+  on_arm do
     sha256 "dd8988a3d60aedc8bc21de79bc5ef299037c0da8d23bdc367ecaf9f3799340d5"
   end
 

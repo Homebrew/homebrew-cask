@@ -1,15 +1,17 @@
 cask "webull" do
-  dl_arch, livecheck_arch = Hardware::CPU.intel? ? ["us_x64", "qt_mac_global"] : ["us_arm64", "qt_m1_global"]
+  arch arm: "us_arm64", intel: "us_x64"
+  livecheck_arch = on_arch_conditional arm: "qt_m1_global", intel: "qt_mac_global"
 
   version "6.0.5"
 
-  if Hardware::CPU.intel?
+  on_intel do
     sha256 "8e5fa82ff254c503d2d3635f8b53cf4fae7cfb16e5f587bc23e4d697c0462f60"
-  else
+  end
+  on_arm do
     sha256 "371b955bd7fb189a26d9d59cefa8a847e6059dc37e25aeb84add011a1e846c96"
   end
 
-  url "https://u1sweb.webullfinance.com/us/desktop/Webull%20Desktop_#{version}_#{dl_arch}_signed.dmg",
+  url "https://u1sweb.webullfinance.com/us/desktop/Webull%20Desktop_#{version}_#{arch}_signed.dmg",
       verified: "u1sweb.webullfinance.com/us/desktop/"
   name "Webull"
   desc "Desktop client for Webull Financial LLC"
