@@ -14,6 +14,11 @@ cask "screaming-frog-seo-spider" do
   desc "SEO site audit tool"
   homepage "https://www.screamingfrog.co.uk/seo-spider/"
 
+  livecheck do
+    url "https://www.screamingfrog.co.uk/wp-content/themes/screamingfrog/inc/download-modal.php"
+    regex(%r{href=.*?/ScreamingFrogSEOSpider[._-]v?(\d+(?:\.\d+)+)-(aarch64|x86_64)\.dmg}i)
+  end
+
   app "Screaming Frog SEO Spider.app"
 
   caveats do
