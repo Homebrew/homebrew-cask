@@ -1,12 +1,22 @@
 cask "poi" do
-  version "10.9.0"
-  sha256 "c6deb80f7fe7dc6e34ed21a01d11be38c54affd043d7e73677aa5c4dd15f0ed7"
+  arch arm: "-arm64", intel: ""
+
+  version "10.9.1"
+
+  on_intel do
+    sha256 "5eff9c247998274c8aff80cec4935794c9080ea1d31a90d26d12d2284cd35dfb"
+  end
+  on_arm do
+    sha256 "5eff9c247998274c8aff80cec4935794c9080ea1d31a90d26d12d2284cd35dfb"
+  end
 
   url "https://github.com/poooi/poi/releases/download/v#{version}/poi-#{version}.dmg",
       verified: "github.com/poooi/poi/"
   name "poi"
   desc "Scalable KanColle browser and tool"
   homepage "https://poi.moe/"
+
+  depends_on macos: ">= :high_sierra"
 
   app "poi.app"
 
