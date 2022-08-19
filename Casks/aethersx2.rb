@@ -1,15 +1,15 @@
 cask "aethersx2" do
-  version "2278"
-  sha256 "717764c8a76f48315d4c880b32dfb815cc3538e7947a53a8c76e027fda881168"
+  version "1.1-2596"
+  sha256 "bb97a8c29edd80430d813889455c2d745b522d4b0f73caa6d0eca37d94d35f3c"
 
-  url "https://aethersx2.com/archive/desktop/mac/AetherSX2-alpha-#{version}-mac.zip"
+  url "https://aethersx2.com/archive/desktop/mac/AetherSX2-v#{version}-mac.zip"
   name "AetherSX2"
   desc "Sony PlayStation 2 emulator for ARM based Macs"
   homepage "https://aethersx2.com/"
 
   livecheck do
     url "https://www.aethersx2.com/archive/?dir=desktop/mac"
-    regex(/AetherSX2[._-]alpha[._-](\d+)[._-]mac\.zip/i)
+    regex(/AetherSX2[._-]v?(\d+(?:\.\d+)[._-]\d+)[._-]mac\.zip/i)
   end
 
   depends_on arch: :arm64
