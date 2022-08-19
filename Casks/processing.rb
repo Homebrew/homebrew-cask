@@ -6,7 +6,6 @@ cask "processing" do
   on_intel do
     sha256 "6cabb7acd3b98adc4f4d9cf749cf2f3c4c2379c802862634a77fd91c6ca901c2"
   end
-
   on_arm do
     sha256 "aa5b3f8e277fada2f73086677fde16aa7d7a08cd5e8d02ba5227952b295460aa"
   end
@@ -27,9 +26,8 @@ cask "processing" do
   end
 
   conflicts_with cask: [
-    "homebrew/cask-versions/processing3",
     "homebrew/cask-versions/processing2",
-    "homebrew/cask-versions/processing-beta",
+    "homebrew/cask-versions/processing3",
   ]
   depends_on macos: ">= :catalina"
 
