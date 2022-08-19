@@ -1,13 +1,13 @@
 cask "yandex-music-unofficial" do
   arch arm: "-arm64"
 
-  version "1.6.3"
+  version "1.7.0"
 
   on_intel do
-    sha256 "22326821e1650d0dd2c2728b3735baeb48cecd652df533526d0788227342fec9"
+    sha256 "2134d6cedbc5df0a1c936c6168c6fd1826fc696290257f7084d7604bda16842c"
   end
   on_arm do
-    sha256 "4e60274811142c60b40f34de846ca6ea425f00fbe67ee057e697aeeebc5a68c1"
+    sha256 "465efa83db9e9f98d1b32f76584b900aa039dd46bd1664f11b0ad78b59ceb2d2"
   end
 
   url "https://github.com/juvirez/yandex-music-app/releases/download/v#{version}/Yandex-Music-Unofficial-#{version}#{arch}.dmg",
