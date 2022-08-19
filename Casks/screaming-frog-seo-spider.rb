@@ -1,15 +1,22 @@
 cask "screaming-frog-seo-spider" do
-  version "16.7"
-  sha256 "6379947949b879a7a9a88da1c2b5022491cd9865f7d5bb4d88aae7be3fd6df18"
+  arch arm: "aarch64", intel: "x86_64"
 
-  url "https://download.screamingfrog.co.uk/products/seo-spider/ScreamingFrogSEOSpider-#{version}.dmg"
+  version "17.0"
+
+  if Hardware::CPU.intel?
+    sha256 "349449bf2e9299cb988da4e6f46fbe3acbd7380c5d1a128d764ad1a1ab1c8aa8"
+  else
+    sha256 "7dbeec31e9ba7461d7d182e5a70861283ca4cc409863b8b45351923b836b49c0"
+  end
+
+  url "https://download.screamingfrog.co.uk/products/seo-spider/ScreamingFrogSEOSpider-#{version}-#{arch}.dmg"
   name "Screaming Frog SEO Spider"
   desc "SEO site audit tool"
   homepage "https://www.screamingfrog.co.uk/seo-spider/"
 
   livecheck do
     url "https://www.screamingfrog.co.uk/wp-content/themes/screamingfrog/inc/download-modal.php"
-    regex(%r{href=.*?/ScreamingFrogSEOSpider[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    regex(%r{href=.*?/ScreamingFrogSEOSpider[._-]v?(\d+(?:\.\d+)+)-(aarch64|x86_64)\.dmg}i)
   end
 
   app "Screaming Frog SEO Spider.app"
