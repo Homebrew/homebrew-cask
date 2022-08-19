@@ -19,4 +19,14 @@ cask "loginputmac" do
 
   uninstall pkgutil: "com.logcg.pkg.LoginputMac#{version.major}",
             quit:    "com.logcg.inputmethod.LogInputMac#{version.major}"
+
+  zap trash: [
+    "~/Documents/落格输入法",
+    "~/Library/Application Support/LogInputMac#{version.major}",
+    "~/Library/Application Support/com.logcg.inputmethod.LogInputMac#{version.major}",
+    "~/Library/Caches/com.logcg.inputmethod.LogInputMac#{version.major}",
+    "~/Library/HTTPStorages/com.logcg.inputmethod.LogInputMac#{version.major}",
+    "~/Library/Preferences/com.logcg.inputmethod.LogInputMac#{version.major}.plist",
+    "~/Library/Saved Application State/com.logcg.inputmethod.LogInputMac#{version.major}.Settings.savedState",
+  ]
 end
