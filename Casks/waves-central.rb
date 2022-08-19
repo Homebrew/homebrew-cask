@@ -12,6 +12,8 @@ cask "waves-central" do
     strategy :electron_builder
   end
 
+  auto_updates true
+
   app "Waves Central.app"
 
   zap trash: [
