@@ -11,14 +11,14 @@ cask "julia" do
     sha256 "8e113a42fe4eac7b75023136674452f6f09590717755417cd137258707e96540"
   end
 
-  url "https://julialang-s3.julialang.org/bin/mac/#{arch}/#{version.major_minor}/julia-#{version}-mac#{midfix}64.dmg"
+  url "https://julialang-s3.julialang.org/bin/mac/#{arch}/#{version.major_minor}/julia-#{version}-mac#{midfix}.dmg"
   name "Julia"
   desc "Programming language for technical computing"
   homepage "https://julialang.org/"
 
   livecheck do
     url "https://julialang.org/downloads/"
-    regex(/href=.*?julia[._-]v?(\d+(?:\.\d+)+)[._-]mac#{midfix}64\.dmg/i)
+    regex(/href=.*?julia[._-]v?(\d+(?:\.\d+)+)[._-]mac#{midfix}\.dmg/i)
   end
 
   app "Julia-#{version.major_minor}.app"
