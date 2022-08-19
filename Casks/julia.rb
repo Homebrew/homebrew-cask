@@ -1,6 +1,6 @@
 cask "julia" do
   arch arm: "aarch64", intel: "x64"
-  midfix = on_arch_conditional arm: arch
+  midfix = on_arch_conditional arm: "aarch"
 
   version "1.8.0"
 
