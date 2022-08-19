@@ -27,10 +27,12 @@ cask "iina" do
     "~/Library/Caches/com.colliderli.iina",
     "~/Library/Containers/com.colliderli.iina.OpenInIINA",
     "~/Library/Cookies/com.colliderli.iina.binarycookies",
+    "~/Library/HTTPStorages/com.colliderli.iina",
     "~/Library/Logs/com.colliderli.iina",
     "~/Library/Logs/DiagnosticReports/IINA*.crash",
     "~/Library/Preferences/com.colliderli.iina.plist",
     "~/Library/Safari/Extensions/Open in IINA*.safariextz",
     "~/Library/Saved Application State/com.colliderli.iina.savedState",
+    "~/Library/WebKit/com.colliderli.iina",
   ]
 end
