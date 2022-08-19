@@ -17,9 +17,9 @@ cask "filen" do
   app "Filen.app"
 
   zap trash: [
-    "~/Library/Preferences/io.filen.desktop.plist",
     "~/Library/Application Support/filen-desktop",
-    "~/Library/Saved Application State/io.filen.desktop.savedState",
     "~/Library/Logs/filen-desktop",
+    "~/Library/Preferences/io.filen.desktop.plist",
+    "~/Library/Saved Application State/io.filen.desktop.savedState",
   ]
 end
