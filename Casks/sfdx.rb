@@ -1,5 +1,5 @@
 cask "sfdx" do
-  version "7.163.0"
+  version "7.164.2"
   sha256 :no_check
 
   url "https://developer.salesforce.com/media/salesforce-cli/sfdx/channels/stable/sfdx.pkg"
