@@ -8,5 +8,10 @@ cask "cncjs" do
   desc "Interface for CNC milling controllers"
   homepage "https://cnc.js.org/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "CNCjs.app"
 end
