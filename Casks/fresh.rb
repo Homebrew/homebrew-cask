@@ -15,4 +15,13 @@ cask "fresh" do
   depends_on macos: ">= :high_sierra"
 
   app "Fresh.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.ironic.fresh4",
+    "~/Library/Application Support/Fresh",
+    "~/Library/Caches/com.ironic.fresh4",
+    "~/Library/Containers/com.ironic.fresh4",
+    "~/Library/HTTPStorages/com.ironic.fresh4",
+    "~/Library/Preferences/com.ironic.fresh4.plist",
+  ]
 end
