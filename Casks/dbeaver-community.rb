@@ -1,13 +1,13 @@
 cask "dbeaver-community" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "22.1.4"
+  version "22.1.5"
 
   on_intel do
-    sha256 "fb468daed2cb968b358bffef92db7642dc6a52b12e32c158b90d52d11416ceac"
+    sha256 "81d2f1cbbe40d6bc6ad1f8b442a3f1d384a77a06cf3d694153679d32d6b9f8f2"
   end
   on_arm do
-    sha256 "8fdd802a859f8c57ea729e22dfdb01831c59e97819372a0000dbc3064771bc8a"
+    sha256 "ec2f141678c659b1616af38d345642f1619e5e42272969ab9cbdcca9bba790fa"
   end
 
   url "https://dbeaver.io/files/#{version}/dbeaver-ce-#{version}-macos-#{arch}.dmg"
