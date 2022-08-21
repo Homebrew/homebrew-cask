@@ -9,7 +9,7 @@ cask "vuescan" do
 
   livecheck do
     url "https://www.hamrick.com/vuescan/vuescan.htm"
-    regex(/VueScan\s+v?(\d+(?:\.\d+)+)\s+Release\s+Notes/i)
+    regex(%r{href=.*?vuescan-versions/(\d+(?:\.\d+)+)\.html}i)
   end
 
   app "VueScan.app"
