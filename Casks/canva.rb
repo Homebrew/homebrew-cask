@@ -1,13 +1,13 @@
 cask "canva" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.49.0"
+  version "1.50.0"
 
   on_intel do
-    sha256 "999f3345f222d2c3fdc2aef4726c3593e5fa966d63537f93695d4ad3c171ec86"
+    sha256 "9045f9daca5fd8dd7912b5df58fc73ad9ef09e1e09284687519ac1456f8b1abf"
   end
   on_arm do
-    sha256 "254d6d1fdac6c4f966f92d771b3e01a7a3d89c7d71fb5fb0debf0753f50862ae"
+    sha256 "304f8f200c55c3939f2b332ae947956fcc04aa33f94daaea73e7a54a5ffce30c"
   end
 
   url "https://desktop-release.canva-deploy.com/Canva-#{version}-#{arch}.dmg",
