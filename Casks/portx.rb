@@ -1,15 +1,24 @@
 cask "portx" do
-  version "2.1.2,10.29"
-  sha256 "F1057E2465E32AA5BF732B85DCCF0B3DEBE6EBA5A7617CCC8CA1F78BE2F1ED0D"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://cdn.netsarang.net/0ac7ea20/PortX-#{version.csv.first}.dmg",
+  version "2.1.3,10.30"
+
+  on_intel do
+    sha256 "D03E5C1928DF7BCBE79FDC7DCB3F4CC8BF5EF2B067CB456D1C73CD166F879C2C"
+  end
+
+  on_arm do
+    sha256 "0F1AE65B280B8A00CE57E917DE0D5A048509A50306CAD97042BB82713114EEA8"
+  end
+
+  url "https://cdn.netsarang.net/0ac7ea20/PortX-#{version.csv.first}-#{arch}.dmg",
       verified: "cdn.netsarang.net/"
   name "portx"
   desc "SSH Client"
   homepage "https://portx.online/"
 
   livecheck do
-    url "https://cdn.netsarang.net/0ac7ea20/PortX-latest.dmg"
+    url "https://cdn.netsarang.net/0ac7ea20/PortX-latest-#{arch}.dmg"
     strategy :extract_plist
   end
 
