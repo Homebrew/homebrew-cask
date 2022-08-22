@@ -1,13 +1,13 @@
 cask "zoom" do
   arch arm: "arm64/"
 
-  version "5.11.6.9890"
+  version "5.11.9.10046"
 
   on_intel do
-    sha256 "e97c9906c6d375b9da0e846ce4273b9baa33ba42a766c37d9c15f542201f93ab"
+    sha256 "229a926ee45a66abfcb628bc862ddd7457899431b112d0eb29432fe6e4a64a3a"
   end
   on_arm do
-    sha256 "3e0e3a8006c2e4e83b85f1201c23e96358e53a338392153dfb51dae235594540"
+    sha256 "82382d92c043dcb5f04d044137e438417ca5c54fc2028dcc6556d409b56af9ab"
   end
 
   url "https://cdn.zoom.us/prod/#{version}/#{arch}Zoom.pkg"
