@@ -1,13 +1,13 @@
 cask "athens" do
   arch arm: "-arm64"
 
-  version "1.0.0"
+  version "2.0.0"
 
   on_intel do
-    sha256 "322744478e3277216a129dd162e04ae24587d71eedafa6681b30a976b2521c9b"
+    sha256 "50596cfd8dcdc6502efe30e818429dc7cf109f5968fc30d14d26669ce0f53971"
   end
   on_arm do
-    sha256 "c5bd8759f3f6f10a91ed950acc25d51cc9bc5e70515515e36a1e3fec2579e375"
+    sha256 "1d1c289feb1e0182dbace1d5ff9d71107a2f76b20a3327ff82a4887a832637b6"
   end
 
   url "https://github.com/athensresearch/athens/releases/download/v#{version}/Athens-#{version}#{arch}.dmg",
