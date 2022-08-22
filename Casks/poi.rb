@@ -1,13 +1,13 @@
 cask "poi" do
   arch arm: "-arm64", intel: ""
 
-  version "10.9.1"
+  version "10.9.2"
 
   on_intel do
-    sha256 "5eff9c247998274c8aff80cec4935794c9080ea1d31a90d26d12d2284cd35dfb"
+    sha256 "eab57d10b4e8002231cbfb502589d97fcea9edce85c21850bdd5cbc574ccfa19"
   end
   on_arm do
-    sha256 "80dab844d0f974f5aed73f964fcaf8a4e9d7874068afe09aab7fd96363cb2131"
+    sha256 "217444a15bcfaae1dc75807fcf139c66d0b6295fa1f461a45f811bae09008a77"
   end
 
   url "https://github.com/poooi/poi/releases/download/v#{version}/poi-#{version}#{arch}.dmg",
