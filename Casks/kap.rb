@@ -2,13 +2,8 @@ cask "kap" do
   arch arm: "arm64", intel: "x64"
 
   version "3.5.5"
-
-  on_intel do
-    sha256 "8b6bf654cd140719bd810b65485bd6b490bc90a0ed0dc70336acbd3fa2f240c0"
-  end
-  on_arm do
-    sha256 "b9a36a9fb882eee232a89077c9bbd2776517f5f858b714c14ca745b564e60420"
-  end
+  sha256 arm:   "b9a36a9fb882eee232a89077c9bbd2776517f5f858b714c14ca745b564e60420",
+         intel: "8b6bf654cd140719bd810b65485bd6b490bc90a0ed0dc70336acbd3fa2f240c0"
 
   url "https://github.com/wulkano/kap/releases/download/v#{version.major_minor_patch}/Kap-#{version}-#{arch}.dmg",
       verified: "github.com/wulkano/kap/"
