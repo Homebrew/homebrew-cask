@@ -1,10 +1,13 @@
 cask "wechatwork" do
-  if Hardware::CPU.intel?
-    version "4.0.9.90603"
-    sha256 "41dba6d0640c15deffc2f20d0141341ea00aa3329aa0b7417157e350cb12a3b7"
-  else
-    version "4.0.9.99149"
-    sha256 "729454773c96dc4b4d577ef09cb3015a67d0978cfd9c3934c44906399f47be08"
+  arch arm: "_arm64"
+
+  on_intel do
+    version "4.0.12.90612"
+    sha256 "20b887dda7f3c6cb74a12506dece04b8e6adf28c9c80d455ed6ae21f470e7b25"
+  end
+  on_arm do
+    version "4.0.12.99158"
+    sha256 "33e9b07a42983aba31dfef0511008be43395735b85f05372128a22da8a88740a"
   end
 
   url "https://dldir1.qq.com/foxmail/wecom-mac/update/WeCom_#{version}.dmg"
@@ -14,13 +17,8 @@ cask "wechatwork" do
   homepage "https://work.weixin.qq.com/"
 
   livecheck do
-    if Hardware::CPU.intel?
-      url "https://work.weixin.qq.com/wework_admin/commdownload?platform=mac"
-      strategy :header_match
-    else
-      url :homepage
-      regex(%r{href=.*/wecom-mac/update/WeCom[-_.](\d+(?:\.\d+)+)\.dmg}i)
-    end
+    url "https://work.weixin.qq.com/wework_admin/commdownload?platform=mac#{arch}"
+    strategy :header_match
   end
 
   auto_updates true

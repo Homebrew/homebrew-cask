@@ -1,8 +1,8 @@
 cask "holavpn" do
-  version "2.73,1.200.461"
-  sha256 "a717a781d00252bcf117a351e9a9376e67a3287df703cee3c9f949cb4c093770"
+  version "2.74,1.200.814"
+  sha256 "6cac5febe683b965ef0fd66318546504c6f0ef82020abce3cd44ee0f0ed22295"
 
-  url "https://cdn4.hola.org/static/HolaVPN#{version.csv.first.major}E-#{version.csv.first}-#{version.csv.second}-noc.dmg"
+  url "https://cdn4.hola.org/static/HolaVPN#{version.csv.first.major}E-#{version.csv.first}-#{version.csv.second}.dmg"
   name "Hola VPN"
   desc "Peer-to-peer VPN"
   homepage "https://hola.org/"
@@ -10,7 +10,7 @@ cask "holavpn" do
   livecheck do
     url "https://hola.org/download"
     strategy :page_match do |page|
-      page.scan(/href=.*?HolaVPN#{version.csv.first.major}E[._-]v?(\d+(?:\.\d+)+)[_-](\d+(?:\.\d+)+)-noc\.dmg/i).map do |match|
+      page.scan(/href=.*?HolaVPN#{version.csv.first.major}E[._-]v?(\d+(?:\.\d+)+)[_-](\d+(?:\.\d+)+)\.dmg/i).map do |match|
         "#{match[0]},#{match[1]}"
       end
     end

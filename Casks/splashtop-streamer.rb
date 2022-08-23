@@ -1,6 +1,6 @@
 cask "splashtop-streamer" do
-  version "3.5.0.2"
-  sha256 "13a2e6d60e384188dddbe700de231a777f46d8f89f8f1f1aee6d88f017774817"
+  version "3.5.2.0"
+  sha256 "c41616eb9974073697a5aea2f82d93e872bdc56915e42cc4d4fd56b9a01e7527"
 
   url "https://d17kmd0va0f0mp.cloudfront.net/mac/Splashtop_Streamer_Mac_INSTALLER_v#{version}.dmg",
       verified: "d17kmd0va0f0mp.cloudfront.net/"
@@ -9,8 +9,8 @@ cask "splashtop-streamer" do
   homepage "https://www.splashtop.com/downloads"
 
   livecheck do
-    url "https://www.splashtop.com/wp-content/themes/responsive/downloadx.php?platform=mac"
-    regex(/v?(\d+(?:\.\d+)+)\.dmg/i)
+    url "https://redirect.splashtop.com/srs/mac"
+    strategy :header_match
   end
 
   auto_updates true

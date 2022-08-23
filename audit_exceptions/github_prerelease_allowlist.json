@@ -22,7 +22,6 @@
   "my-budget": "all",
   "nuclear": "all",
   "pock": "all",
-  "protonmail-bridge": "all",
   "prowlarr": "all",
   "ql-ansilove": "all",
   "profilecreator": "all",
@@ -35,5 +34,6 @@
   "themeengine": "all",
   "toggl-track": "all",
   "universal-android-debloater": "all",
+  "virtualbuddy": "all",
   "xit": "all"
 }

@@ -1,8 +1,11 @@
 cask "hackolade" do
-  version "6.3.0"
-  sha256 :no_check
+  arch arm: "ARM64", intel: ""
 
-  url "https://s3-eu-west-1.amazonaws.com/hackolade/current/Hackolade-mac-setup-signed.pkg",
+  version "6.4.1"
+  sha256 arm:   "cb8a87760e10e3e38777a59c68305b5be2ff453a529080eb95372f4b17fcf08b",
+         intel: "df11bee9e746cf00c57bebdeba016c9dc660fee7bcd56ae4d68a9d8ee61d0210"
+
+  url "https://s3-eu-west-1.amazonaws.com/hackolade/previous/v#{version}/Hackolade-mac#{arch}-setup-signed.pkg",
       verified: "s3-eu-west-1.amazonaws.com/hackolade/"
   name "Hackolade"
   desc "Data Modeling for NoSQL databases, storage formats, REST APIs, and JSON in RDBMS"
@@ -13,7 +16,7 @@ cask "hackolade" do
     regex(/Current\sversion:\sv?(\d+(?:\.\d+)+)/i)
   end
 
-  pkg "Hackolade-mac-setup-signed.pkg"
+  pkg "Hackolade-mac#{arch}-setup-signed.pkg"
 
   uninstall pkgutil: "com.hackolade.pkg.Hackolade"
 

@@ -1,13 +1,9 @@
 cask "ogdesign-eagle" do
-  arch = Hardware::CPU.intel? ? "" : "M1-"
+  arch arm: "M1-"
 
-  version "3.0,8"
-
-  if Hardware::CPU.intel?
-    sha256 "bbb33440aa0ac425c25d2ad29f61a479ab7431cc9aa2f170d16a2397cc1bc0c8"
-  else
-    sha256 "6ceb0f6427731385584e02816123db4125d8a730becd3cd1225f3aee7d9e6c40"
-  end
+  version "3.0,10"
+  sha256 arm:   "611268fb1725e2d3aebf7092ea81498a1c2d4d85d915508e72ec3b9ee3e8c67c",
+         intel: "63429c2e31d558bf37ff748972dbf031cf8fd0b0aaab8cf8177cd6ebd87a1210"
 
   url "https://r2-app.eagle.cool/releases/Eagle-#{version.csv.first}-#{arch}build#{version.csv.second}.dmg"
   name "Eagle"

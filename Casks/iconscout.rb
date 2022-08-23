@@ -1,6 +1,6 @@
 cask "iconscout" do
-  version "1.0.3"
-  sha256 "db57125f638de130c9e344cdc79b2e3dcb1e2ba670b41aad7dc150adb4d7aacf"
+  version "1.0.4"
+  sha256 "6798ac8fe13bc92962d14e61943553daaf9f7107b351836a9549c8d3d7be38ea"
 
   url "https://iconscout.com/download/v#{version}/Iconscout-#{version}.dmg"
   name "Iconscout"

@@ -1,11 +1,11 @@
 cask "kaleidoscope" do
-  version "3.5.1,2075"
-  sha256 "8b3d2e210369bb46b8c0205661bd46e737200b6db748df2e9e15e6f3ed50fb44"
+  version "3.6.1,2080"
+  sha256 "51430985dc239d7d6b8f90c0f4fdf58eb810a6ce54c0591f4c56936e79bab60e"
 
   url "https://updates.kaleidoscope.app/v#{version.major}/prod/Kaleidoscope-#{version.csv.first}-#{version.csv.second}.app.zip"
   name "Kaleidoscope"
   desc "Spot and merge differences in text and image files or folders"
-  homepage "https://www.kaleidoscope.app/"
+  homepage "https://kaleidoscope.app/"
 
   livecheck do
     url "https://updates.kaleidoscope.app/v#{version.major}/prod/appcast"
@@ -20,7 +20,6 @@ cask "kaleidoscope" do
   depends_on macos: ">= :big_sur"
 
   app "Kaleidoscope.app"
-  binary "#{appdir}/Kaleidoscope.app/Contents/Resources/bin/ksdiff"
 
   zap trash: [
     "~/Library/Application Support/app.kaleidoscope.v*",

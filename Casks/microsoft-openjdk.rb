@@ -24,3 +24,4 @@ cask "microsoft-openjdk" do
 
   uninstall pkgutil: "com.microsoft.#{version.major}.jdk"
 end
+

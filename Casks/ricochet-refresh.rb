@@ -1,6 +1,6 @@
 cask "ricochet-refresh" do
-  version "3.0.11"
-  sha256 "dc1145c0e05709eb01b2dfdf41b8a0603516889aad4b359d5fe5d09c072f4d0e"
+  version "3.0.13"
+  sha256 "efdf07d361ddfe3f950175133c337d7f40c9022a1a3ccd560fd7e200b0cb0895"
 
   url "https://github.com/blueprint-freespeech/ricochet-refresh/releases/download/v#{version}-release/ricochet-refresh-#{version}-macos-x86_64.dmg",
       verified: "github.com/blueprint-freespeech/ricochet-refresh/"

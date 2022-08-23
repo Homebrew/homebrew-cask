@@ -1,5 +1,5 @@
 cask "ringcentral" do
-  arch = Hardware::CPU.intel? ? "" : "-arm"
+  arch arm: "-arm"
 
   version "22.2.34"
   sha256 :no_check

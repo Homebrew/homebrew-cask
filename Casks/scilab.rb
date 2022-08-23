@@ -1,13 +1,9 @@
 cask "scilab" do
-  prefix = Hardware::CPU.intel? ? "" : "accelerate-" # there is also an "openblas-" version
+  prefix = on_arch_conditional arm: "accelerate-" # there is also an "openblas-" version
 
   version "6.1.1"
-
-  if Hardware::CPU.intel?
-    sha256 "b417aace594cba882b19c2711aa125d8374d5da8b0a24df2873592765598e457"
-  else
-    sha256 "2f87710fc47c6d8e6777ee280ece589342e536c17290b9c033ea0dfcef3b4912"
-  end
+  sha256 arm:   "2f87710fc47c6d8e6777ee280ece589342e536c17290b9c033ea0dfcef3b4912",
+         intel: "b417aace594cba882b19c2711aa125d8374d5da8b0a24df2873592765598e457"
 
   url "https://www.utc.fr/~mottelet/scilab/download/#{version}/scilab-#{version}-#{prefix}#{Hardware::CPU.arch}.dmg",
       verified: "utc.fr/~mottelet/scilab/"

@@ -11,4 +11,8 @@ cask "seaglass" do
   depends_on macos: ">= :high_sierra"
 
   app "Seaglass.app"
+
+  caveats do
+    discontinued
+  end
 end

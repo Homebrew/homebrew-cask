@@ -1,8 +1,11 @@
 cask "visual-paradigm" do
-  version "17.0,20220801"
-  sha256 "224ae7ee55a81fc6e49a4f9b0018e42584bcce75c6115d1dbeec8d9c3d691f83"
+  arch arm: "AArch64", intel: "WithJRE"
 
-  url "https://www.visual-paradigm.com/downloads/vp#{version.csv.first}/#{version.csv.second}/Visual_Paradigm_#{version.csv.first.dots_to_underscores}_#{version.csv.second}_OSX_WithJRE.dmg"
+  version "17.0,20220816"
+  sha256 arm:   "3e50ce8a3aed5374df2e85f5102b705d3e434f625816c974ed721262fb556549",
+         intel: "af1dea5f6b629d2e0e0a7347c53cd612d2ee8063084f272a79a2bbb085593f96"
+
+  url "https://www.visual-paradigm.com/downloads/vp#{version.csv.first}/#{version.csv.second}/Visual_Paradigm_#{version.csv.first.dots_to_underscores}_#{version.csv.second}_OSX_#{arch}.dmg"
   name "Visual Paradigm"
   desc "UML CASE Tool supporting UML 2, SysML and Business Process Modeling Notation"
   homepage "https://www.visual-paradigm.com/"

@@ -1,6 +1,6 @@
 cask "archy" do
-  version "2.10.0"
-  sha256 "1987c8f0f913c8f7385c5d8a1a16e6338991fcd3671492c57729a6b6f7b03fae"
+  version "2.12.0"
+  sha256 "91d37f74d0d20603901a4f1ebc63aa9b865bf7e352751e07ea4f0a852db57aaf"
 
   url "https://sdk-cdn.mypurecloud.com/archy/#{version}/archy-macos.zip",
       verified: "sdk-cdn.mypurecloud.com/archy/"

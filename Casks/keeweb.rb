@@ -1,16 +1,12 @@
 cask "keeweb" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
   version "1.18.7"
+  sha256 arm:   "6e4870b1660b91e735eaf30e7d751c7bb8dfae623d5b6c47899bd4d5ab1e6cae",
+         intel: "f99146aebc34b59ec5ea56ffde2048c860feb69d69b958643efd7485fa7a0135"
 
   url "https://github.com/keeweb/keeweb/releases/download/v#{version}/KeeWeb-#{version}.mac.#{arch}.dmg",
       verified: "github.com/keeweb/keeweb/"
-  if Hardware::CPU.intel?
-    sha256 "f99146aebc34b59ec5ea56ffde2048c860feb69d69b958643efd7485fa7a0135"
-  else
-    sha256 "6e4870b1660b91e735eaf30e7d751c7bb8dfae623d5b6c47899bd4d5ab1e6cae"
-  end
-
   name "KeeWeb"
   desc "Password manager compatible with KeePass"
   homepage "https://keeweb.info/"

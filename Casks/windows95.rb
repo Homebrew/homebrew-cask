@@ -1,16 +1,12 @@
 cask "windows95" do
   # NOTE: "95" is not a version number, but an intrinsic part of the product name
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
   version "3.0.0"
+  sha256 arm:   "9197c0c3e7774f8cd9b57a87fd7ac5980cc0f0fae8ba944052f48ef4905996d0",
+         intel: "182f2eadf1c32159351e383130f4945ee87238ee9f6417ef5291d1a8f93be255"
 
   url "https://github.com/felixrieseberg/windows95/releases/download/v#{version}/windows95-darwin-#{arch}-#{version}.zip"
-  if Hardware::CPU.intel?
-    sha256 "182f2eadf1c32159351e383130f4945ee87238ee9f6417ef5291d1a8f93be255"
-  else
-    sha256 "9197c0c3e7774f8cd9b57a87fd7ac5980cc0f0fae8ba944052f48ef4905996d0"
-  end
-
   name "Windows 95"
   desc "Electron Windows 95"
   homepage "https://github.com/felixrieseberg/windows95"

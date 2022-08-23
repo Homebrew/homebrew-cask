@@ -1,6 +1,6 @@
 cask "pixelorama" do
-  version "0.10.1"
-  sha256 "eb7cc92ca887f1751e62681409472502d337059417de762d09226ccee839248e"
+  version "0.10.2"
+  sha256 "7f5673d99a03eba5cd4635aa83937d2f37c8cb24705293f1b16ea096d5a58f81"
 
   url "https://github.com/Orama-Interactive/Pixelorama/releases/download/v#{version}/Pixelorama.Mac.dmg",
       verified: "github.com/Orama-Interactive/Pixelorama/"

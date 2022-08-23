@@ -1,13 +1,9 @@
 cask "descript" do
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  arch arm: "-arm64"
 
-  version "44.2.0-release.20220726.11"
-
-  if Hardware::CPU.intel?
-    sha256 "1ee2ee176ce7409010e3a73011334bb31db57539a78c429781467f395be36b8d"
-  else
-    sha256 "6f44232f49e9a5ce04ba9711b4857e6616538faf2d253fc3aae3a6d97f414151"
-  end
+  version "46.3.1-release.20220818.24"
+  sha256 arm:   "c9e64565838719db2f3de293545d3af53c4185704fbc46b2937768c1a28c66aa",
+         intel: "4dfd46815ab1d7a83e5d17c24d8ab3427c5ae52c6e09826db4a9968671f8d7be"
 
   url "https://electron.descript.com/Descript-#{version}#{arch}.dmg"
   name "Descript"

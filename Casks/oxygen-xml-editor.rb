@@ -1,5 +1,5 @@
 cask "oxygen-xml-editor" do
-  arch = Hardware::CPU.intel? ? "" : "-aarch64"
+  arch arm: "-aarch64"
 
   version "24.1,2022072507"
   sha256 :no_check

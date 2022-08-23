@@ -1,13 +1,9 @@
 cask "wasabi-wallet" do
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  arch arm: "-arm64"
 
-  version "2.0.1.3"
-
-  if Hardware::CPU.intel?
-    sha256 "db6274be5155d3a022dacc834a13acd4b930081e643d07f3d9beb32db4c29156"
-  else
-    sha256 "3c055e7ee878adc01fa39ba82dfce59839af8bb2df4a857d81021606984e7928"
-  end
+  version "2.0.1.4"
+  sha256 arm:   "cd4f7ed70f4470e5f052fc5e42d9afcab090ba5f8896488fd022bb59d30aa101",
+         intel: "d2a7076104d5473479b100f3039944efbf7fa599173af43a7dab3c32e7937fc1"
 
   url "https://github.com/zkSNACKs/WalletWasabi/releases/download/v#{version}/Wasabi-#{version.chomp(".0")}#{arch}.dmg"
   name "Wasabi Wallet"

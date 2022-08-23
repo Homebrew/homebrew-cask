@@ -5,7 +5,13 @@ cask "lazpaint" do
   url "https://github.com/bgrabitmap/lazpaint/releases/download/v#{version}/lazpaint#{version}_macos64.dmg",
       verified: "github.com/bgrabitmap/lazpaint/"
   name "LazPaint"
+  desc "Image editor written in Lazarus"
   homepage "https://bgrabitmap.github.io/lazpaint/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "LazPaint.app"
 end

@@ -13,12 +13,11 @@ cask "obsidian" do
     strategy :github_latest
   end
 
-  auto_updates true
-
   app "Obsidian.app"
 
   zap trash: [
     "~/Library/Application Support/obsidian",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/md.obsidian.sfl2",
     "~/Library/Preferences/md.obsidian.plist",
     "~/Library/Saved Application State/md.obsidian.savedState",
   ]

@@ -1,13 +1,9 @@
 cask "zoom" do
-  arch = Hardware::CPU.intel? ? "" : "arm64/"
+  arch arm: "arm64/"
 
-  version "5.11.3.9065"
-
-  if Hardware::CPU.intel?
-    sha256 "8fad6e2afc52ae23d87157f1580ca929d6e7e4f075349139b8fa0de1e3a8804b"
-  else
-    sha256 "0401e47bb01969c437677aa17670ca0ecb99feea287522738f1c575daf6a0f23"
-  end
+  version "5.11.9.10046"
+  sha256 arm:   "82382d92c043dcb5f04d044137e438417ca5c54fc2028dcc6556d409b56af9ab",
+         intel: "229a926ee45a66abfcb628bc862ddd7457899431b112d0eb29432fe6e4a64a3a"
 
   url "https://cdn.zoom.us/prod/#{version}/#{arch}Zoom.pkg"
   name "Zoom.us"

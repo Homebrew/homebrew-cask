@@ -1,19 +1,20 @@
 cask "yandex-music-unofficial" do
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  arch arm: "-arm64"
 
-  version "1.6.3"
-
-  if Hardware::CPU.intel?
-    sha256 "22326821e1650d0dd2c2728b3735baeb48cecd652df533526d0788227342fec9"
-  else
-    sha256 "4e60274811142c60b40f34de846ca6ea425f00fbe67ee057e697aeeebc5a68c1"
-  end
+  version "1.7.0"
+  sha256 arm:   "465efa83db9e9f98d1b32f76584b900aa039dd46bd1664f11b0ad78b59ceb2d2",
+         intel: "2134d6cedbc5df0a1c936c6168c6fd1826fc696290257f7084d7604bda16842c"
 
   url "https://github.com/juvirez/yandex-music-app/releases/download/v#{version}/Yandex-Music-Unofficial-#{version}#{arch}.dmg",
       verified: "github.com/juvirez/yandex-music-app/"
   name "Yandex Music Unofficial"
   desc "Unofficial app for Yandex Music"
   homepage "https://yandex-music.juvs.dev/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
 

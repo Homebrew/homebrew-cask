@@ -1,6 +1,6 @@
 cask "thunder" do
-  version "5.0.2.65548"
-  sha256 "659920891c110a75131777a398a635b346cf5ef0d39ea400ae07996c421c2c49"
+  version "5.0.2.65551"
+  sha256 "7424c02088ca9f09e69acf276305f7f2007b9f5b3500ae4d4c5feadf01183047"
 
   url "https://down.sandai.net/mac/thunder_#{version}.dmg",
       verified: "down.sandai.net/mac/"

@@ -1,13 +1,9 @@
 cask "canva" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
-  version "1.48.0"
-
-  if Hardware::CPU.intel?
-    sha256 "b5c54d21b8b168fe2010f24d92b47f406b5680b9dbd5973dd3d44ec92f5cfdab"
-  else
-    sha256 "47ecb8c556a08af2ff0cf7519b0a1dc43d04fbb9f952d501bf9698e8ab8ffac9"
-  end
+  version "1.50.0"
+  sha256 arm:   "304f8f200c55c3939f2b332ae947956fcc04aa33f94daaea73e7a54a5ffce30c",
+         intel: "9045f9daca5fd8dd7912b5df58fc73ad9ef09e1e09284687519ac1456f8b1abf"
 
   url "https://desktop-release.canva-deploy.com/Canva-#{version}-#{arch}.dmg",
       verified: "desktop-release.canva-deploy.com/"

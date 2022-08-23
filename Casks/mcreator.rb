@@ -1,6 +1,6 @@
 cask "mcreator" do
-  version "2022.1.20510"
-  sha256 "72709a456ebd4f70b8d8a07bfa84f8485760f2e83f5b60590ea136819635e355"
+  version "2022.2.34517"
+  sha256 "fb88ca5a85fff0724ad18bc6b1045c162237993d08576269d9281eddb3dd37ff"
 
   url "https://github.com/MCreator/MCreator/releases/download/#{version}/MCreator.#{version.major_minor}.Mac.64bit.dmg",
       verified: "github.com/MCreator/MCreator/"

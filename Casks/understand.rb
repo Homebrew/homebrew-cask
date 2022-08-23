@@ -1,6 +1,6 @@
 cask "understand" do
-  version "6.2.1112"
-  sha256 "06355f4b47efea9930822358eb919b6214829d7c6c575e76eaa397becf8bb99e"
+  version "6.2.1114"
+  sha256 "d6123a7b2d12509b866478f6ba83cf053f7228cc9225b7361a8f51622b891225"
 
   url "https://latest.scitools.com/Understand/Understand-#{version}-MacOSX-x86.dmg"
   name "SciTools Understand"
@@ -13,4 +13,11 @@ cask "understand" do
   end
 
   app "Understand.app"
+
+  zap trash: [
+    "~/Library/Application Support/SciTools",
+    "~/Library/Preferences/com.scitools.License.plist",
+    "~/Library/Preferences/com.scitools.Understand.plist",
+    "~/Library/Saved Application State/com.scitools.Understand.savedState",
+  ]
 end

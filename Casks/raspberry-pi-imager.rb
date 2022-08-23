@@ -14,5 +14,9 @@ cask "raspberry-pi-imager" do
 
   app "Raspberry Pi Imager.app"
 
-  zap trash: "~/Library/Saved Application State/org.raspberrypi.imagingutility.savedState"
+  zap trash: [
+    "~/Library/Caches/Raspberry Pi",
+    "~/Library/Preferences/org.raspberrypi.Imager.plist",
+    "~/Library/Saved Application State/org.raspberrypi.imagingutility.savedState",
+  ]
 end

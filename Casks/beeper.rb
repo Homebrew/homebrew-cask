@@ -1,7 +1,7 @@
 cask "beeper" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
-  version "3.20.14"
+  version "3.22.25"
   sha256 :no_check
 
   url "https://download.beeper.com/mac/dmg/#{arch}"
