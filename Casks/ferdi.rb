@@ -2,13 +2,8 @@ cask "ferdi" do
   arch arm: "-arm64"
 
   version "5.8.1"
-
-  on_intel do
-    sha256 "fa802e2627dc2c9c5ccface1f9c830c5a2e0e9ae7a7339716651010e39928a50"
-  end
-  on_arm do
-    sha256 "ec7ccceba08f1c581290d6ce4f5fa5478bed2c713c592d0298856f7b2719f35d"
-  end
+  sha256 arm:   "ec7ccceba08f1c581290d6ce4f5fa5478bed2c713c592d0298856f7b2719f35d",
+         intel: "fa802e2627dc2c9c5ccface1f9c830c5a2e0e9ae7a7339716651010e39928a50"
 
   url "https://github.com/getferdi/ferdi/releases/download/v#{version}/Ferdi-#{version}#{arch}.dmg",
       verified: "github.com/getferdi/ferdi/"
