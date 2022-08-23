@@ -10,4 +10,11 @@ cask "cider" do
   auto_updates true
 
   app "Cider.app"
+
+  zap trash: [
+    "~/Library/Application Support/Cider",
+    "~/Library/Preferences/cider.plist",
+    "~/Library/Saved Application State/cider.savedState",
+    "~/Library/Logs/Cider",
+  ]
 end
