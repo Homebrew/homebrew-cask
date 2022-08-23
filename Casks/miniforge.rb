@@ -2,13 +2,8 @@ cask "miniforge" do
   arch arm: "arm64", intel: "x86_64"
 
   version "4.13.0-1"
-
-  on_intel do
-    sha256 "9996677f0ca0bfa6399e9a5688556bfaff544389ea123e2ac6e6252d3a1d0658"
-  end
-  on_arm do
-    sha256 "57bef67a4c80bfef04223eb76ee1b49b1bdfd5eeb46ebcf49e65d6c308c84a98"
-  end
+  sha256 arm:   "57bef67a4c80bfef04223eb76ee1b49b1bdfd5eeb46ebcf49e65d6c308c84a98",
+         intel: "9996677f0ca0bfa6399e9a5688556bfaff544389ea123e2ac6e6252d3a1d0658"
 
   url "https://github.com/conda-forge/miniforge/releases/download/#{version}/Miniforge3-#{version}-MacOSX-#{arch}.sh"
   name "miniforge"
