@@ -2,13 +2,8 @@ cask "espanso" do
   arch arm: "M1", intel: "Intel"
 
   version "2.1.6-beta"
-
-  on_intel do
-    sha256 "63322c649d4b6aa3c4bfeddd99a1c2c095c77051271238faaaa19ede4f7e9576"
-  end
-  on_arm do
-    sha256 "46137b5e7316a1c85574d45468b510e14a58cd495d5eb74de74f482dd241c447"
-  end
+  sha256 arm:   "46137b5e7316a1c85574d45468b510e14a58cd495d5eb74de74f482dd241c447",
+         intel: "63322c649d4b6aa3c4bfeddd99a1c2c095c77051271238faaaa19ede4f7e9576"
 
   url "https://github.com/espanso/espanso/releases/download/v#{version}/Espanso-Mac-#{arch}.zip",
       verified: "github.com/espanso/espanso/"
