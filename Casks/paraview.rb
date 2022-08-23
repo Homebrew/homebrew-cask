@@ -3,13 +3,8 @@ cask "paraview" do
   min_macos_version = on_arch_conditional arm: "11.0", intel: "10.13"
 
   version "5.10.1"
-
-  on_intel do
-    sha256 "21d28f0bfd4129a5e394990e981ad79d27c4613f3da9f171417c17af785ebcba"
-  end
-  on_arm do
-    sha256 "1b6bdf86fee03525b1978b4312624bcc522796bbf5675f370797c5f21e189e5d"
-  end
+  sha256 arm:   "1b6bdf86fee03525b1978b4312624bcc522796bbf5675f370797c5f21e189e5d",
+         intel: "21d28f0bfd4129a5e394990e981ad79d27c4613f3da9f171417c17af785ebcba"
 
   url "https://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v#{version.major_minor}&type=binary&os=macOS&downloadFile=ParaView-#{version}-MPI-OSX#{min_macos_version}-Python3.9-#{arch}.dmg",
       user_agent: :fake
