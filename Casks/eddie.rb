@@ -1,22 +1,17 @@
 cask "eddie" do
+  arch arm: "arm64", intel: "x64"
+
   version "2.21.8"
+  sha256 arm:   "04edf9a6aa7311a62eb6827db44c7ed8ee677a0e2581d08a76f2bf004cf3ec0f",
+         intel: "9aecfd234ca1b19eee6518b1142643764a503d28b8ee3d873085fda22d25af85"
 
-  if Hardware::CPU.intel?
-    if MacOS.version <= :mojave
-      sha256 "a446563a6beb6f91542d6afbd6f90f6745b7a36fef363a13506cff9d8f078c78"
+  url "https://eddie.website/download/?platform=macos-10.15&arch=#{arch}&ui=ui&format=disk.dmg&version=#{version}",
+      verified: "eddie.website/"
 
-      url "https://eddie.website/download/?platform=macos-10.9&arch=x64&ui=ui&format=disk.dmg&version=#{version}",
-          verified: "eddie.website/"
-    else
-      sha256 "9aecfd234ca1b19eee6518b1142643764a503d28b8ee3d873085fda22d25af85"
+  on_mojave :or_older do
+    sha256 "a446563a6beb6f91542d6afbd6f90f6745b7a36fef363a13506cff9d8f078c78"
 
-      url "https://eddie.website/download/?platform=macos-10.15&arch=x64&ui=ui&format=disk.dmg&version=#{version}",
-          verified: "eddie.website/"
-    end
-  else
-    sha256 "04edf9a6aa7311a62eb6827db44c7ed8ee677a0e2581d08a76f2bf004cf3ec0f"
-
-    url "https://eddie.website/download/?platform=macos-10.15&arch=arm64&ui=ui&format=disk.dmg&version=#{version}",
+    url "https://eddie.website/download/?platform=macos-10.9&arch=#{arch}&ui=ui&format=disk.dmg&version=#{version}",
         verified: "eddie.website/"
   end
 
