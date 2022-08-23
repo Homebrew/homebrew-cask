@@ -2,13 +2,8 @@ cask "publii" do
   arch arm: "apple-silicon", intel: "intel"
 
   version "0.40.2"
-
-  on_intel do
-    sha256 "c5826a1e570ca626df913d72b70a55b5df745a6801991fa2f3707fb68a43cf80"
-  end
-  on_arm do
-    sha256 "eeb32bfd07375bbc5227e6c0e04268683411eaf19583bba75c0a2114fddc04f2"
-  end
+  sha256 arm:   "eeb32bfd07375bbc5227e6c0e04268683411eaf19583bba75c0a2114fddc04f2",
+         intel: "c5826a1e570ca626df913d72b70a55b5df745a6801991fa2f3707fb68a43cf80"
 
   url "https://cdn.getpublii.com/Publii-#{version}-#{arch}.dmg"
   name "Publii"
