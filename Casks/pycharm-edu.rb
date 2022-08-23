@@ -2,13 +2,8 @@ cask "pycharm-edu" do
   arch arm: "-aarch64"
 
   version "2022.1.3,221.6008.17"
-
-  on_intel do
-    sha256 "9ab4087c65c315cc095a882221b3748bc66b3b9f6699563cde02a49f857ee4d0"
-  end
-  on_arm do
-    sha256 "46e498610a3a026ebaa3269c5cc35fd9e75bf35dca4d45d739828036059edad1"
-  end
+  sha256 arm:   "46e498610a3a026ebaa3269c5cc35fd9e75bf35dca4d45d739828036059edad1",
+         intel: "9ab4087c65c315cc095a882221b3748bc66b3b9f6699563cde02a49f857ee4d0"
 
   url "https://download.jetbrains.com/python/pycharm-edu-#{version.csv.first}#{arch}.dmg"
   name "Jetbrains PyCharm Educational Edition"
