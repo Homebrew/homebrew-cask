@@ -2,13 +2,8 @@ cask "audiogridder-plugin" do
   arch arm: "arm64", intel: "x86_64"
 
   version "1.1.1"
-
-  on_intel do
-    sha256 "4ac6631df3ef05301305a0e299337987c2a2d2f8558edccd41936552c95a8ea9"
-  end
-  on_arm do
-    sha256 "63bbb5ddc1eaca8295147648f72b2841e38ef5a3bf0a9146e644214ef8147eb8"
-  end
+  sha256 arm:   "63bbb5ddc1eaca8295147648f72b2841e38ef5a3bf0a9146e644214ef8147eb8",
+         intel: "4ac6631df3ef05301305a0e299337987c2a2d2f8558edccd41936552c95a8ea9"
 
   url "https://audiogridder.com/releases/AudioGridderPlugin_#{version}_macOS-#{arch}.pkg"
   name "AudioGridder Plugin"
