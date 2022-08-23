@@ -2,13 +2,8 @@ cask "waterfox" do
   arch arm: "ARM.Setup", intel: "Setup"
 
   version "4.1.4"
-
-  on_intel do
-    sha256 "5b36be9e137031ec9dc567c5e47aeef39bfb852841e3294316f29d41af0cc6dc"
-  end
-  on_arm do
-    sha256 "4a602c1ffb65c9131b4be40318f19232547efc12346ab73f53b016cd122f494c"
-  end
+  sha256 arm:   "4a602c1ffb65c9131b4be40318f19232547efc12346ab73f53b016cd122f494c",
+         intel: "5b36be9e137031ec9dc567c5e47aeef39bfb852841e3294316f29d41af0cc6dc"
 
   url "https://github.com/WaterfoxCo/Waterfox/releases/download/G#{version}/Waterfox.G#{version}.#{arch}.dmg", verified: "github.com/WaterfoxCo/Waterfox/"
   name "Waterfox"

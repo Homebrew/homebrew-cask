@@ -2,13 +2,8 @@ cask "ivpn" do
   arch arm: "-arm64"
 
   version "3.9.8"
-
-  on_intel do
-    sha256 "b64e2fe7ea8296a63cb3e75274c73379731d64dc492778214e6f3ae728e330d1"
-  end
-  on_arm do
-    sha256 "f915d4954c3f8be86f523b057bca2d976c221628458a8d4ffccfe520417e73f5"
-  end
+  sha256 arm:   "f915d4954c3f8be86f523b057bca2d976c221628458a8d4ffccfe520417e73f5",
+         intel: "b64e2fe7ea8296a63cb3e75274c73379731d64dc492778214e6f3ae728e330d1"
 
   url "https://repo.ivpn.net/macos/bin/IVPN-#{version}#{arch}.dmg"
   name "IVPN"

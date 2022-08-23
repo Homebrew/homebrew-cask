@@ -2,13 +2,8 @@ cask "wing-personal" do
   arch arm: "arm64", intel: "intel"
 
   version "8.3.3.0"
-
-  on_intel do
-    sha256 "06214808731fe6e267a7509254a62ffabf529d15f0a6ea0c45acbcd16191162c"
-  end
-  on_arm do
-    sha256 "9ef3113269f165c8a3235827cb39321fe488557440569c2060ff5b136b58a53a"
-  end
+  sha256 arm:   "9ef3113269f165c8a3235827cb39321fe488557440569c2060ff5b136b58a53a",
+         intel: "06214808731fe6e267a7509254a62ffabf529d15f0a6ea0c45acbcd16191162c"
 
   url "https://wingware.com/pub/wing-personal/#{version}/wing-personal-#{version}-#{arch}.dmg"
   name "Wing Personal"

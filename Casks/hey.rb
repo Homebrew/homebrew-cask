@@ -2,13 +2,8 @@ cask "hey" do
   arch arm: "-arm64"
 
   version "1.2.5"
-
-  on_intel do
-    sha256 "a13b0fca4db8c054d37414c32887b07ddc4870c525cc60ac38d29f0ffc1c4cb1"
-  end
-  on_arm do
-    sha256 "e52204ea81ed2ad30bdd0fac3e38f243f1e26c3e74a1911b9f7e602f7c78701a"
-  end
+  sha256 arm:   "e52204ea81ed2ad30bdd0fac3e38f243f1e26c3e74a1911b9f7e602f7c78701a",
+         intel: "a13b0fca4db8c054d37414c32887b07ddc4870c525cc60ac38d29f0ffc1c4cb1"
 
   url "https://hey-desktop.s3.amazonaws.com/HEY-#{version}#{arch}.dmg",
       verified: "hey-desktop.s3.amazonaws.com/"
