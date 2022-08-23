@@ -1,8 +1,16 @@
 cask "headset" do
-  version "4.1.1"
-  sha256 "b73c5deefdf57c81ef2c950040f113177ecc21eae6be160bd6be16c3f7929288"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://github.com/headsetapp/headset-electron/releases/download/v#{version}/Headset-#{version}.dmg",
+  version "4.1.2"
+
+  on_intel do
+    sha256 "5252c69b2c3bc02692b013a41d6f4c5638fe01e7dcfcacc6b55908441b1176e7"
+  end
+  on_arm do
+    sha256 "fa58608c4d3f4ffa2dedd07225661fe8a9f7b059391c7d2cab09c94c5016cf1b"
+  end
+
+  url "https://github.com/headsetapp/headset-electron/releases/download/v#{version}/Headset-#{version}-#{arch}.dmg",
       verified: "github.com/headsetapp/headset-electron/"
   name "Headset"
   desc "Music player powered by YouTube and Reddit"
