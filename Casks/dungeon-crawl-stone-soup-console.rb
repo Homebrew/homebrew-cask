@@ -1,8 +1,8 @@
 cask "dungeon-crawl-stone-soup-console" do
-  version "0.28.0"
-  sha256 "902cbd333db64ab89f7f33d8c621e6de8330d4b626ba5ecf0cf3c514c52d68ca"
+  version "0.29.0"
+  sha256 "397dab2cb5917a133a64157b97ba5f82753b794029013e7eb8dc22aac8f0de38"
 
-  url "https://github.com/crawl/crawl/releases/download/#{version}/dcss-#{version}-macos-console.zip",
+  url "https://github.com/crawl/crawl/releases/download/#{version}/dcss-#{version}-macos-console-universal.zip",
       verified: "github.com/crawl/crawl/releases/"
   name "Dungeon Crawl Stone Soup"
   desc "Game of dungeon exploration, combat and magic"
