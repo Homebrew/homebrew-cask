@@ -6,8 +6,8 @@ cask "calhash" do
     version "1.1.1"
     sha256 "66b2de6f514119b3ddf915310b94486d24d3cc6733c74af97e367b76cb2d7478"
   else
-    version "1.1.7"
-    sha256 "bbcbbc3d3f47751d5f021603691404e0886ae999e85812c2fe55b0e98d104a04"
+    version "1.1.8"
+    sha256 "52d28938f2901cd2365261f856b6a4f41d5a6d2357dd43cb1193102d5bbfce40"
   end
 
   url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete(".")}/CalHash.dmg"
