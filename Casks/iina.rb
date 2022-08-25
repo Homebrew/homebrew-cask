@@ -8,11 +8,6 @@ cask "iina" do
   desc "Free and open-source media player"
   homepage "https://iina.io/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on macos: ">= :el_capitan"
 
