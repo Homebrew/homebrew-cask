@@ -1,9 +1,9 @@
 cask "mambaforge" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "4.13.0-1"
-  sha256 arm:   "6263560d2b0902942841667721dad3621c05f704f6b080d968ad355aeca51486",
-         intel: "bc42d606b67ace370847deb849e7d1ea2879b0be78bb1be51b020c3cb4e5bef2"
+  version "4.14.0-0"
+  sha256 arm:   "35d05a65e19b8e5d596964936ddd6023ae66d664a25ba291a52fec18f06a73b6",
+         intel: "949f046b4404cc8e081807b048050e6642d8db5520c20d5158a7ef721fbf76c5"
 
   url "https://github.com/conda-forge/miniforge/releases/download/#{version}/Mambaforge-#{version}-MacOSX-#{arch}.sh"
   name "mambaforge"
