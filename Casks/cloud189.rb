@@ -10,7 +10,7 @@ cask "cloud189" do
 
   livecheck do
     url :url
-    strategy :header_match
+    strategy :extract_plist
   end
 
   app "天翼云盘.app"
