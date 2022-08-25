@@ -7,6 +7,11 @@ cask "iina" do
   name "IINA"
   desc "Free and open-source media player"
   homepage "https://iina.io/"
+  
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   auto_updates true
   depends_on macos: ">= :el_capitan"
