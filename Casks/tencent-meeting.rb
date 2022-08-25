@@ -1,5 +1,6 @@
 cask "tencent-meeting" do
   version "3.10.7.413"
+  
   arch arm: "arm64", intel: "x86_64"
 
   on_intel do
