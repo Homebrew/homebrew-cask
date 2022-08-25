@@ -2,13 +2,21 @@ cask "ocenaudio" do
   version "3.11.14"
   sha256 :no_check
 
-  if MacOS.version <= :high_sierra
-    url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_sierra.dmg"
-  elsif MacOS.version <= :catalina
-    url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_mojave.dmg"
-  elsif Hardware::CPU.intel?
-    url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_bigsur.dmg"
-  else
+  on_intel do
+    on_high_sierra :or_older do
+      url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_sierra.dmg"
+    end
+    on_mojave do
+      url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_mojave.dmg"
+    end
+    on_catalina do
+      url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_mojave.dmg"
+    end
+    on_big_sur :or_newer do
+      url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_bigsur.dmg"
+    end
+  end
+  on_arm do
     url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_bigsur_arm64.dmg"
   end
 
