@@ -1,6 +1,6 @@
 cask "confluent-cli" do
-  version "2.24.1"
-  sha256 "d4e47541b0c0c53d491d3c0a276e10448c5d279fc808b5aca714156399bcbbb0"
+  version "2.24.2"
+  sha256 "7363d32d84df54153d56d93d4003cc2ef47e11161cce8a6ab503f451c82fc2cf"
 
   url "https://s3-us-west-2.amazonaws.com/confluent.cloud/confluent-cli/archives/#{version}/confluent_v#{version}_darwin_amd64.tar.gz",
       verified: "s3-us-west-2.amazonaws.com/confluent.cloud/confluent-cli/archives/"
