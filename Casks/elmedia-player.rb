@@ -1,5 +1,5 @@
 cask "elmedia-player" do
-  version "8.6,3150"
+  version "8.7,3175"
   sha256 :no_check
 
   url "https://cdn.electronic.us/products/elmedia/mac/download/elmediaplayer.dmg"
