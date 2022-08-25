@@ -1,7 +1,7 @@
 cask "dropbox" do
   arch arm: "&arch=arm64"
 
-  version "155.4.5493"
+  version "155.4.5495"
   sha256 :no_check
 
   url "https://www.dropbox.com/download?plat=mac&full=1#{arch}"
