@@ -4,7 +4,7 @@
 require "forwardable"
 
 APPLE_LAUNCHJOBS_REGEX =
-  /\A(?:application\.)?com\.apple\.(installer|Preview|Safari|systemevents|systempreferences)(?:\.|$)/.freeze
+  /\A(?:application\.)?com\.apple\.(installer|Preview|Safari|systemevents|systempreferences|Terminal)(?:\.|$)/.freeze
 
 module Check
   CHECKS = {
