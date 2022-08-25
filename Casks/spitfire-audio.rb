@@ -9,7 +9,7 @@ cask "spitfire-audio" do
   homepage "https://www.spitfireaudio.com/info/library-manager/"
 
   livecheck do
-    url "https://www.spitfireaudio.com/library-manager/download/mac/"
+    url "https://www2.spitfireaudio.com/library-manager/download/mac/"
     strategy :header_match do |headers|
       match = headers["location"].match(%r{/(\d+)/.*-(\d+(?:\.\d+)+)\.dmg}i)
       next if match.blank?
