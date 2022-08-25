@@ -8,7 +8,7 @@ cask "melodics" do
   homepage "https://melodics.com/"
 
   livecheck do
-    url "https://web-cdn.melodics.com/download/osxupdatescastv#{version.major}.xml"
+    url "https://web-cdn.melodics.com/download/osxupdatescastv2.xml"
     strategy :sparkle do |item|
       "#{item.version},#{item.url[%r{/(\h+(?:-\h+)+)\.zip}i, 1]}"
     end
