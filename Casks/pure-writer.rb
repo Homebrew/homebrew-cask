@@ -16,7 +16,7 @@ cask "pure-writer" do
     end
   end
 
-  pkg "Pure Writer-#{version}.pkg"
+  pkg "Pure Writer-#{version.csv.second}.pkg"
 
   uninstall pkgutil: "com.drakeet.purewriter"
 
