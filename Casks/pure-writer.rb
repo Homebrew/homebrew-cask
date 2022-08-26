@@ -1,6 +1,6 @@
 cask "pure-writer" do
-  version "1.5.3,1.5.2"
-  sha256 "1924099569ce3049a22d23cb889a11276de1d175cb6ef301a64d9fc34448ce60"
+  version "1.6.0,1.6.0"
+  sha256 "69ee93d99c4946b4ebeffdea5d3b5b4f77e9df6645ffe019cbb7f1e23a033912"
 
   url "https://github.com/PureWriter/desktop/releases/download/#{version.csv.second}/PureWriter-#{version.csv.first}-macOS.dmg",
       verified: "github.com/PureWriter/desktop/"
@@ -16,7 +16,7 @@ cask "pure-writer" do
     end
   end
 
-  pkg "Pure Writer-#{version}.pkg"
+  pkg "Pure Writer-#{version.csv.second}.pkg"
 
   uninstall pkgutil: "com.drakeet.purewriter"
 
