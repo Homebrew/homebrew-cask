@@ -1,9 +1,9 @@
 cask "headset" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.2.0"
-  sha256 arm:   "28a9d96d8bf7beebc6a93e77ac166fe16283c72e07171dd0ceb33df6d78bc2a2",
-         intel: "532dcb484b119b74bdc30c72856d072df03c9b64546d3912a7dd3d371733dff6"
+  version "4.2.1"
+  sha256 arm:   "63c6b9b45e7de083eee9267546b5695648d70b088da3488cffa0ca5897691d61",
+         intel: "1fa8274db4738f363b741df1dc5004ca87b947e81d3732eefbea5bce39c6ce57"
 
   url "https://github.com/headsetapp/headset-electron/releases/download/v#{version}/Headset-#{version}-#{arch}.dmg",
       verified: "github.com/headsetapp/headset-electron/"
