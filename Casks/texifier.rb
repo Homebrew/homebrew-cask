@@ -1,6 +1,6 @@
 cask "texifier" do
-  version "1.9.11,692,31230eb"
-  sha256 "9a331dd961594e4ca236a8c641a5849117653cf1bcb3bf6fb165dd370ae4d486"
+  version "1.9.11,696,9fd036a"
+  sha256 "96275fdf3d317eb4dd04d6e035930f597bba2ab73f5d62f85fdb5405f46ff1da"
 
   url "https://download.texifier.com/apps/osx/updates/Texifier_#{version.csv.first.dots_to_underscores}__#{version.csv.second}__#{version.csv.third}.dmg"
   name "Texpad"
@@ -8,7 +8,7 @@ cask "texifier" do
   homepage "https://www.texifier.com/mac"
 
   livecheck do
-    url "https://www.texpad.com/static-collected/upgrades/texpadappcast.xml"
+    url "https://www.texifier.com/apps/updates/texifier/stable-appcast.xml"
     strategy :sparkle do |item|
       "#{item.short_version},#{item.version},#{item.url[/_([^_]+)\.dmg/i, 1]}"
     end
