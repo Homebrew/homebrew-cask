@@ -4,7 +4,7 @@ cask "qt-designer" do
 
   url "https://build-system.fman.io/static/public/files/Qt%20Designer.dmg"
   name "Qt Designer"
-  desc "A tool for quickly building graphical user interfaces with widgets from the Qt GUI framework"
+  desc "Create Python GUIs with Qt in minutes"
   homepage "https://build-system.fman.io/qt-designer-download"
 
   depends_on macos: ">= :sierra"
