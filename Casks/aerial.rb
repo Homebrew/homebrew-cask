@@ -1,6 +1,6 @@
 cask "aerial" do
-  version "3.1.0"
-  sha256 "a79125223be1661ad8de18c1fc487eef53701a332411bfaa65b73dcef130103a"
+  version "3.1.1"
+  sha256 "7e8401179f51a40796b9ed1d398640ef2c09c8d5c22d93bcd392bbabf550718a"
 
   url "https://github.com/JohnCoates/Aerial/releases/download/v#{version}/Aerial.saver.zip"
   name "Aerial Screensaver"
