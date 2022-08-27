@@ -4,6 +4,7 @@ cask "cinebench" do
 
   url "https://http.maxon.net/pub/cinebench/CinebenchR#{version}.dmg"
   name "Cinebench"
+  desc "Hardware benchmarking utility"
   homepage "https://www.maxon.net/products/cinebench/"
 
   livecheck do
