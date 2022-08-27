@@ -52,7 +52,7 @@ cask "gcc-arm-embedded" do
             delete:  [
               "/Applications/ArmGNUToolchain/#{version}/arm-none-eabi",
             ],
-            rmdir: [
+            rmdir:   [
               "/Applications/ArmGNUToolchain/#{version}",
               "/Applications/ArmGNUToolchain",
             ]
