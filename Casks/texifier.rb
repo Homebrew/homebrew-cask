@@ -1,23 +1,14 @@
-cask "texpad" do
-  if MacOS.version <= :el_capitan
-    version "1.8.5,404,f8f30e5"
-    sha256 "676a1b071142c022cdfda57668c811f7747b36ded442548073fe6dda1b9ca934"
-  elsif MacOS.version <= :high_sierra
-    version "1.8.15,529,346c842"
-    sha256 "480bf4a3e8fd809c1eb07cb00099ed0d362996738a872efb42cb179488e8c1e1"
-  else
-    version "1.9.9,680,c9a035e"
-    sha256 "43cd70ec07f8602bc7228696d16ea288eeef70755a5355823d0963ec57540f04"
-  end
+cask "texifier" do
+  version "1.9.11,696,9fd036a"
+  sha256 "96275fdf3d317eb4dd04d6e035930f597bba2ab73f5d62f85fdb5405f46ff1da"
 
-  url "https://download.texpadapp.com/apps/osx/updates/Texpad_#{version.csv.first.dots_to_underscores}__#{version.csv.second}__#{version.csv.third}.dmg",
-      verified: "download.texpadapp.com/"
+  url "https://download.texifier.com/apps/osx/updates/Texifier_#{version.csv.first.dots_to_underscores}__#{version.csv.second}__#{version.csv.third}.dmg"
   name "Texpad"
   desc "LaTeX editor"
-  homepage "https://www.texpad.com/mac"
+  homepage "https://www.texifier.com/mac"
 
   livecheck do
-    url "https://www.texpad.com/static-collected/upgrades/texpadappcast.xml"
+    url "https://www.texifier.com/apps/updates/texifier/stable-appcast.xml"
     strategy :sparkle do |item|
       "#{item.short_version},#{item.version},#{item.url[/_([^_]+)\.dmg/i, 1]}"
     end
@@ -25,7 +16,7 @@ cask "texpad" do
 
   auto_updates true
 
-  app "Texpad.app"
+  app "Texifier.app"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vallettaventures.texpad.sfl2",
