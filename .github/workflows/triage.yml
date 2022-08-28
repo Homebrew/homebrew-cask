@@ -36,3 +36,11 @@ jobs:
 
             - label: bump-cask-pr
               pr_body_content: Created with `brew bump-cask-pr`
+
+            - label: missing description
+              path: Casks/.+
+              missing_content: \n  desc .+\n
+
+            - label: appcast migration needed
+              path: Casks/.+
+              content: \n  appcast .+\n
