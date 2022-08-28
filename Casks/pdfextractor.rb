@@ -1,11 +1,15 @@
 cask "pdfextractor" do
-  version "1.1.4,10104"
+  version "1.5"
   sha256 :no_check
 
   url "https://pdfextractor-app.com/PDFExtractor.dmg"
-  appcast "https://pdfextractor-app.com/releases.php"
   name "PDFExtractor"
   homepage "https://pdfextractor-app.com/"
+
+  livecheck do
+    url "https://pdfextractor-app.com/releases.php"
+    regex(/Version\s+(\d+(?:\.\d+)+)/i)
+  end
 
   auto_updates true
 
