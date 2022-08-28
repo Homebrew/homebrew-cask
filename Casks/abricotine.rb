@@ -1,8 +1,8 @@
 cask "abricotine" do
-  version "0.7.0"
-  sha256 "ccd48b7967dabb6e59872010222f60f455ac195b3c549c206d0c1ed3237fc3c2"
+  version "1.1.4"
+  sha256 "3831f239b5e52374addac1740abb3d4e4a47b91771f5bd21a91adf7a103ca9de"
 
-  url "https://github.com/brrd/Abricotine/releases/download/#{version}/Abricotine-#{version}-osx-x64.zip",
+  url "https://github.com/brrd/Abricotine/releases/download/v#{version}/Abricotine-#{version}-mac.zip",
       verified: "github.com/brrd/Abricotine/"
   name "abricotine"
   desc "Markdown editor with inline preview"
@@ -12,10 +12,13 @@ cask "abricotine" do
   livecheck do
     url "https://github.com/brrd/Abricotine/releases"
     strategy :page_match
-    regex(%r{href=.*?/Abricotine-(\d+(?:\.\d+)+)-osx-x64\.zip}i)
+    regex(%r{href=.*?/Abricotine-(\d+(?:\.\d+)+)-mac\.zip}i)
   end
 
-  app "Abricotine-darwin-x64/Abricotine.app"
+  app "Abricotine.app"
 
-  zap trash: "~/Library/Application Support/Abricotine"
+  zap trash: [
+    "~/Library/Application Support/Abricotine",
+    "~/Library/Preferences/com.electron.abricotine.plist",
+  ]
 end
