@@ -3,14 +3,9 @@ cask "logisim-evolution" do
   sha256 "e94ba07fa606c927e6ec68c6d276cd6decb5988f00639f36a6507e847a7c3342"
 
   url "https://github.com/logisim-evolution/logisim-evolution/releases/download/v#{version}/Logisim-evolution-#{version}.dmg"
-  name "Logisim-evolution"
+  name "Logisim Evolution"
   desc "Digital logic designer and simulator"
   homepage "https://github.com/logisim-evolution/logisim-evolution"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 
   app "Logisim-evolution.app"
 
