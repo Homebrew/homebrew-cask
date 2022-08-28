@@ -1,5 +1,5 @@
 cask "wowup" do
-  arch arm: "arm64", intel: "mac"
+  arch arm: "arm64"
 
   version "2.8.3"
   sha256 arm:   "5aca79b30fa90307c6d78b45207b1b7f277798596b7f94fd9464dd8ed0c9a6d5",
