@@ -1,13 +1,20 @@
 cask "banking-4" do
   # NOTE: "4" is not a version number, but an intrinsic part of the product name
-  version "7.8.0,8000"
+  version "7.8.8,8251"
   sha256 :no_check
 
   url "https://subsembly.com/download/MacBanking4.pkg"
-  appcast "https://subsembly.com/banking4-macos-updates.php"
   name "Banking 4"
   desc "German accounting software"
   homepage "https://subsembly.com/banking4.html"
+
+  livecheck do
+    url "https://subsembly.com/banking4-macos-updates.php"
+    strategy :page_match do |page|
+      page.scan(/<h\d[^>]*>\s*(\d+(?:\.\d+)+)\.(\d{3,})/i)
+          .map { |match| "#{match[0]},#{match[1]}" }
+    end
+  end
 
   auto_updates true
 
