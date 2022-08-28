@@ -15,7 +15,7 @@ cask "contexts" do
   livecheck do
     url "https://contexts.co/appcasts/stable.xml"
     strategy :sparkle do |item|
-      item.version.split("").join(".")
+      item.version.chars.join(".")
     end
   end
 
