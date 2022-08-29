@@ -13,5 +13,10 @@ cask "gather" do
 
   app "Gather.app"
 
-  zap trash: "~/Library/Application Support/Gather"
+  zap trash: [
+    "~/Library/Application Support/Gather",
+    "~/Library/Logs/Gather",
+    "~/Library/Preferences/com.gather.Gather.plist",
+    "~/Library/Saved Application State/com.gather.Gather.savedState",
+  ]
 end
