@@ -1,6 +1,6 @@
 cask "mysteriumvpn" do
-  version "10.13.2"
-  sha256 "580dce596a2d0b47a569ca4414154e59930f4e3edfad53b586a2f37d0502b371"
+  version "10.13.3"
+  sha256 "dba4dab1ae90cee21d79db6fcf6d5cad5066bf6f25f8063504904c008adbe100"
 
   url "https://github.com/mysteriumnetwork/mysterium-vpn-desktop/releases/download/#{version}/MysteriumVPN-#{version}-universal.dmg",
       verified: "github.com/mysteriumnetwork/mysterium-vpn-desktop/"
