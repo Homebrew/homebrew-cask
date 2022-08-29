@@ -1,6 +1,6 @@
 cask "paddle-easydl" do
-  version "2.1.1,1464"
-  sha256 "1afe1a52eacacbc3f9a347598debffef78fb2cb5091592795df193cfabccf33e"
+  version "2.1.2,1474"
+  sha256 "2b8074cf8382776f95923637112f7a40d706001e8a8964175bbb37ee3403fa6c"
 
   url "https://aip-static.cdn.bcebos.com/paddle-desktop/releases/#{version.csv.first}/%E9%A3%9E%E6%A1%A8EasyDL-#{version.csv.first}.#{version.csv.second}.dmg",
       verified: "aip-static.cdn.bcebos.com/paddle-desktop"
