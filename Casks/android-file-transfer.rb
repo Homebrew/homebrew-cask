@@ -22,5 +22,5 @@ cask "android-file-transfer" do
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.google.android.mtpviewer.sfl*",
         "~/Library/Preferences/com.google.android.mtpviewer.plist",
       ],
-      rmdir: "~/Library/Application Support/Google/"
+      rmdir: "~/Library/Application Support/Google"
 end
