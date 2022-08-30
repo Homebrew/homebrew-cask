@@ -1,6 +1,6 @@
 cask "middleclick" do
-  version "2.5"
-  sha256 "50bb016602e8e792a8a6b53053a4ec4129ca89926a44fc1ac898f3d11102aada"
+  version "2.5.0.1"
+  sha256 "4aecf835dcc3ccf3936e05e6cde7c3b5fa8e6d00bf9ebba52d3a608d7ba957b0"
 
   url "https://github.com/artginzburg/MiddleClick-BigSur/releases/download/#{version}/MiddleClick.zip"
   name "MiddleClick"
