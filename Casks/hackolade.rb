@@ -1,11 +1,10 @@
 cask "hackolade" do
-  arch arm: "ARM64", intel: ""
+  arch arm: "ARM64"
 
-  version "6.4.1"
-  sha256 arm:   "cb8a87760e10e3e38777a59c68305b5be2ff453a529080eb95372f4b17fcf08b",
-         intel: "df11bee9e746cf00c57bebdeba016c9dc660fee7bcd56ae4d68a9d8ee61d0210"
+  version "6.4.2"
+  sha256 :no_check
 
-  url "https://s3-eu-west-1.amazonaws.com/hackolade/previous/v#{version}/Hackolade-mac#{arch}-setup-signed.pkg",
+  url "https://s3-eu-west-1.amazonaws.com/hackolade/current/Hackolade-mac#{arch}-setup-signed.pkg",
       verified: "s3-eu-west-1.amazonaws.com/hackolade/"
   name "Hackolade"
   desc "Data Modeling for NoSQL databases, storage formats, REST APIs, and JSON in RDBMS"
