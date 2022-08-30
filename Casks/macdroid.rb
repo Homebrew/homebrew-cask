@@ -1,5 +1,5 @@
 cask "macdroid" do
-  version "1.5,128"
+  version "1.6,130"
   sha256 :no_check
 
   url "https://cdn.electronic.us/products/macdroid/mac/download/macdroid.dmg",
