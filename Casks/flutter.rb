@@ -3,7 +3,7 @@ cask "flutter" do
 
   version "3.3.0"
   sha256 arm:   "ad3b620aef65d43f54c5432a7f3a72304de639c7cf393a8a8796aa1094476b2e",
-         intel: "5dfc3a9adc9093fa74952971cb0b4f88f1e1acbb0be928aa0ba0d8d6104c7810"
+         intel: "f461df043b4a1b2dedcf31c11db5e5286b2b014804d2df445b85c6bb6ce0844b"
 
   url "https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos#{arch}#{version}-stable.zip",
       verified: "storage.googleapis.com/flutter_infra_release/releases/stable/macos/"
