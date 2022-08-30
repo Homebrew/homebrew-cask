@@ -9,8 +9,8 @@ cask "splashtop-personal" do
   homepage "https://www.splashtop.com/personal"
 
   livecheck do
-    url "https://www.splashtop.com/wp-content/themes/responsive/downloadx.php?product=stp&platform=mac-client"
-    regex(/v(\d+(?:\.\d+)+)\.dmg/i)
+    url "https://redirect.splashtop.com/stp-src/mac"
+    strategy :header_match
   end
 
   pkg "Splashtop Personal.pkg"
