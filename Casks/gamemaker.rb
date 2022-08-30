@@ -31,4 +31,9 @@ cask "gamemaker" do
   end
 
   uninstall pkgutil: "com.yoyogames.gms2"
+
+  zap trash: [
+    "/Users/Shared/GameMakerStudio2",
+    "/var/db/receipts/com.yoyogames.gms2.*"
+  ]
 end
