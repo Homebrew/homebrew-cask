@@ -1,16 +1,12 @@
 cask "inform" do
-  version "6M62"
-  sha256 "202420d1b0ad16ea56327446b0920978be05befafa3ed6b71ac7b2dd1f42c36a"
+  version "10.1.1"
+  sha256 "74cb35f6352821b94322cb990e9bc9129e7e4449f8e7322422d875df80657cd5"
 
-  url "http://inform7.com/apps/#{version}/I7-#{version}-OSX-Interim.dmg"
+  url "https://github.com/ganelson/inform/releases/download/v#{version}/Inform_#{version.dots_to_underscores}_macOS_1_82_1.dmg",
+      verified: "github.com/ganelson/inform"
   name "Inform"
   desc "Writing system for interactive fiction based on natural language"
-  homepage "http://inform7.com/"
-
-  livecheck do
-    url "http://inform7.com/downloads/"
-    regex(%r{href=.*?/I7[._-]v?(\d+M\d+)[._-]OSX[._-]Interim\.dmg}i)
-  end
+  homepage "https://ganelson.github.io/inform-website"
 
   app "Inform.app"
 end
