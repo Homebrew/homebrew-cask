@@ -15,4 +15,10 @@ cask "languagetool" do
   depends_on macos: ">= :big_sur"
 
   app "LanguageTool for Desktop.app"
+
+  zap trash: [
+              '~/Library/Preferences/org.languagetool.desktop.plist',
+              '~/Library/Application Support/LanguageTool for Desktop',
+              '~/Library/Caches/org.languagetool.desktop',
+              ]
 end
