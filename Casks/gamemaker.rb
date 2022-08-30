@@ -3,7 +3,7 @@ cask "gamemaker" do
   sha256 "6d9414b73bbbd162d0277b07ef507ae3c78fe6307351f0883e04bfb2e586f036"
 
   url "https://gms.yoyogames.com/GameMaker-#{version}.pkg",
-      verified: "https://gms.yoyogames.com/"
+      verified: "gms.yoyogames.com/"
   name "GameMaker"
   desc "Complete development tool for making 2D games"
   homepage "https://gamemaker.io/"
@@ -32,8 +32,5 @@ cask "gamemaker" do
 
   uninstall pkgutil: "com.yoyogames.gms2"
 
-  zap trash: [
-    "/Users/Shared/GameMakerStudio2",
-    "/var/db/receipts/com.yoyogames.gms2.*",
-  ]
+  zap trash: "/Users/Shared/GameMakerStudio2"
 end
