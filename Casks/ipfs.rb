@@ -1,6 +1,6 @@
 cask "ipfs" do
-  version "0.22.0"
-  sha256 "309fe7941f19614f84b06a032ea1c176ae779e442261c112803698ec45a507b4"
+  version "0.23.0"
+  sha256 "2ddfec0f2febb9d37225e30021b7ca2a5744044314acc718c92cc7a92f78c1f2"
 
   url "https://github.com/ipfs/ipfs-desktop/releases/download/v#{version}/IPFS-Desktop-#{version}.dmg"
   name "IPFS Desktop"
