@@ -5,7 +5,7 @@ cask "languagetool-for-desktop" do
   url "https://languagetool.org/download/mac-app/LanguageToolDesktop-latest.dmg"
   name "LanguageTool for Desktop"
   desc "Grammar, spelling and style suggestions in all the writing apps"
-  homepage "https://languagetool.org"
+  homepage "https://languagetool.org/"
 
   depends_on macos: ">= :big_sur"
 
