@@ -5,7 +5,7 @@ cask "gamemaker" do
   url "https://gms.yoyogames.com/GameMaker-#{version}.pkg",
       verified: "https://gms.yoyogames.com/"
   name "GameMaker"
-  desc "Complete development tool for making 2D games, used by indie developers, professional studios, and educators worldwide"
+  desc "Complete development tool for making 2D games"
   homepage "https://gamemaker.io/"
 
   livecheck do
