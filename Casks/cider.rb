@@ -9,9 +9,9 @@ cask "cider" do
   homepage "https://cider.sh/"
 
   livecheck do
-    url "https://github.com/ciderapp/cider-releases/releases?q=prerelease%3Afalse&expanded=true"
+    url :url
     regex(/href=.*?Cider[._-]v?(\d+(?:\.\d+)+[^"' >]*?)(?:[._-]universal)?\.dmg/i)
-    strategy :page_match
+    strategy :github_latest
   end
 
   auto_updates true
