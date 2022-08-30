@@ -1,5 +1,6 @@
 cask "hackolade" do
   arch arm: "ARM64"
+
   version "6.4.2"
   sha256 :no_check
 
