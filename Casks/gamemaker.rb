@@ -34,6 +34,6 @@ cask "gamemaker" do
 
   zap trash: [
     "/Users/Shared/GameMakerStudio2",
-    "/var/db/receipts/com.yoyogames.gms2.*"
+    "/var/db/receipts/com.yoyogames.gms2.*",
   ]
 end
