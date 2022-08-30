@@ -17,8 +17,8 @@ cask "languagetool" do
   app "LanguageTool for Desktop.app"
 
   zap trash: [
-              '~/Library/Preferences/org.languagetool.desktop.plist',
-              '~/Library/Application Support/LanguageTool for Desktop',
-              '~/Library/Caches/org.languagetool.desktop',
-              ]
+    "~/Library/Application Support/LanguageTool for Desktop",
+    "~/Library/Caches/org.languagetool.desktop",
+    "~/Library/Preferences/org.languagetool.desktop.plist",
+  ]
 end
