@@ -1,6 +1,6 @@
 cask "metasploit" do
-  version "6.2.15,20220829103112"
-  sha256 "e1cbd84673b4ea2ef9f063c1d19194fe1e5791bc4e65e3a17d9517fbedc63003"
+  version "6.2.15,20220830103235"
+  sha256 "68102788a36fc07e75cd9482f2e5408fc8ce84b454775b3ed209c753bd42899b"
 
   url "https://osx.metasploit.com/metasploit-framework-#{version.csv.first}%2B#{version.csv.second}-1rapid7-1.x86_64.pkg"
   name "Metasploit Framework"
