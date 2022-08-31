@@ -12,6 +12,7 @@ cask "nutstore" do
     strategy :page_match do |page|
       match = page.match(%r{Mac\s(\d+(?:\.\d+)*)}i)
       next if match.blank?
+      
       "#{match[1]}"
     end
   end
