@@ -8,6 +8,12 @@ cask "appflowy" do
   desc "Open-source project and knowledge management tool"
   homepage "https://www.appflowy.io/"
 
+  livecheck do
+    url "https://www.appflowy.io/whatsnew"
+    strategy :page_match
+    regex(%r{href=.*?tag/v?(\d+(?:\.\d+)+)})
+  end
+
   app "AppFlowy.app"
 
   zap trash: [
