@@ -8,6 +8,11 @@ cask "flacon" do
   desc "Open source audio file encoder"
   homepage "https://flacon.github.io/"
 
+  livecheck do
+    url "https://flacon.github.io/download/feed.xml"
+    strategy :sparkle
+  end
+
   auto_updates true
 
   app "Flacon.app"
