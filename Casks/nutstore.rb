@@ -9,12 +9,8 @@ cask "nutstore" do
 
   livecheck do
     url "https://help.jianguoyun.com/?page_id=2467"
-    strategy :page_match do |page|
-      match = page.match(%r{Mac\s(\d+(?:\.\d+)*)}i)
-      next if match.blank?
-      
-      "#{match[1]}"
-    end
+    strategy :page_match
+    regex(%r{Mac\s(\d+(?:\.\d+)*)\s}i)
   end
 
   installer manual: "Nutstore Installer.app"
