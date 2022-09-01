@@ -2,8 +2,8 @@ cask "livebook" do
   arch arm: "aarch64", intel: "x86_64"
 
   version "0.6.3"
-  sha256 arm:   "4ade56b044cd6386a50df54dc7033367cb9d72f7645bdb42bad331d806203ccf",
-         intel: "a28bbdba1acba0cbc80209248a051fb57692d4e52cd57ed0eb0ebed33e180bd7"
+  sha256 arm:   "dc841aaecaabe01ed83f3192d5daccdf0c1ce53a0e89dbc19d71f22510780d5e",
+         intel: "103cc9274b600f69c45a5d73e1743e8080c62d8ee82274efa4d6b08ea8ce0c37"
 
   url "https://github.com/livebook-dev/livebook/releases/download/v#{version}/LivebookInstall-#{version}-macos-#{arch}.dmg",
       verified: "github.com/livebook-dev/livebook"
