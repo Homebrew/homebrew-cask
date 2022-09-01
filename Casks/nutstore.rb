@@ -1,11 +1,16 @@
 cask "nutstore" do
-  version :latest
+  version "5.1.7"
   sha256 :no_check
 
   url "https://www.jianguoyun.com/static/exe/installer/NutstoreOSXInstaller.dmg"
   name "Nutstore"
   desc "Cloud storage service platform"
   homepage "https://www.jianguoyun.com/"
+
+  livecheck do
+    url "https://help.jianguoyun.com/?p=1419"
+    regex(%r{Mac(?:/Linux)?\s+(\d+(?:\.\d+)+)}i)
+  end
 
   installer manual: "Nutstore Installer.app"
 
