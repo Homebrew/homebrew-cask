@@ -9,7 +9,7 @@ cask "nutstore" do
 
   livecheck do
     url "https://help.jianguoyun.com/?p=1419"
-    regex(Mac[._-](\d+(?:\.\d+)*))
+    regex(Mac\s(\d+(?:\.\d+)*)/i)
   end
 
   installer manual: "Nutstore Installer.app"
