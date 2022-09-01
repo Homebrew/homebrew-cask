@@ -4,7 +4,7 @@ cask "vivaldi" do
 
   url "https://downloads.vivaldi.com/stable/Vivaldi.#{version}.universal.dmg"
   name "Vivaldi"
-  desc "Web browser focusing on customization and control"
+  desc "Web browser with built-in email client focusing on customization and control"
   homepage "https://vivaldi.com/"
 
   livecheck do
@@ -13,7 +13,7 @@ cask "vivaldi" do
   end
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :high_sierra"
 
   app "Vivaldi.app"
 
