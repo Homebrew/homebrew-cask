@@ -10,7 +10,6 @@ cask "appflowy" do
 
   livecheck do
     url "https://www.appflowy.io/whatsnew"
-    strategy :page_match
     regex(%r{href=.*?tag/v?(\d+(?:\.\d+)+)})
   end
 
