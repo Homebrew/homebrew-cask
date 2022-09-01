@@ -8,8 +8,13 @@ cask "reflect" do
   url "https://github.com/team-reflect/reflect-electron-updates/releases/download/v#{version}/Reflect-darwin-#{arch}-#{version}.zip",
       verified: "github.com/team-reflect/reflect-electron-updates/"
   name "Reflect Notes"
-  desc "Your thoughts connected. Keep track of your notes, books, and meetings"
+  desc "Note taking app for meetings, ideas, journalling, and research"
   homepage "https://reflect.app/"
 
   app "Reflect.app"
+
+  zap trash: [
+    "~/Library/Application Support/Reflect",
+    "~/Library/Preferences/app.reflect.ReflectDesktop.plist"
+  ]
 end
