@@ -8,9 +8,8 @@ cask "nutstore" do
   homepage "https://www.jianguoyun.com/"
 
   livecheck do
-    url "https://help.jianguoyun.com/?page_id=2467"
-    strategy :page_match
-    regex(%r{Mac.*?(\d+(?:\.\d+)*)}i)
+    url "https://help.jianguoyun.com/?p=1419"
+    regex(Mac[._-](\d+(?:\.\d+)*))
   end
 
   installer manual: "Nutstore Installer.app"
