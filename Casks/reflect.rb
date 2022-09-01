@@ -15,6 +15,6 @@ cask "reflect" do
 
   zap trash: [
     "~/Library/Application Support/Reflect",
-    "~/Library/Preferences/app.reflect.ReflectDesktop.plist"
+    "~/Library/Preferences/app.reflect.ReflectDesktop.plist",
   ]
 end
