@@ -1,6 +1,6 @@
 cask "youku" do
-  version "1.9.8.07127"
-  sha256 "f7574b703c76305ec7c1e3f9121e3a8c62e332c3aa032cdac3f82456dd9ffa37"
+  version "1.9.8.1.090210"
+  sha256 "d978273dd9c1ab3ee9f45522c438d0f2ac956a4158c456b06195808a250f840a"
 
   url "https://pcclient.download.youku.com/ikumac/youkumac_#{version}.dmg"
   name "Youku"
