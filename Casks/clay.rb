@@ -1,9 +1,9 @@
 cask "clay" do
   arch arm: "-arm64"
 
-  version "1.10.0"
-  sha256 arm:   "5ff0142d0f2ffd8a7b2081731c801156979893c809e6f245e2f54c896df4021a",
-         intel: "ac6a6155e1304b7efcf5fefa80e3778026763be69361c52c9386ec3530e00822"
+  version "1.10.2"
+  sha256 arm:   "7af50b6ed6aaf9c2b2082024ec8e27daaf85d4e9786e3e3661c7b9d0955a0ab5",
+         intel: "d72ce5bb54b205e9ad5eda35a7c237c1be2c1c44a22b88956a606276b78c499a"
 
   url "https://assets.clay.earth/desktop/mac/Clay-#{version}#{arch}.dmg"
   name "clay"
