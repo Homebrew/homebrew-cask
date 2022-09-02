@@ -8,10 +8,12 @@ cask "cider" do
   desc "Open source and community oriented Apple Music client"
   homepage "https://cider.sh/"
 
+  # Only some beta releases are labeled as "pre-release", so we
+  # can't use the `GithubLatest` strategy here.
   livecheck do
-    url :url
-    regex(/href=.*?Cider[._-]v?(\d+(?:\.\d+)+[^"' >]*?)(?:[._-]universal)?\.dmg/i)
-    strategy :github_latest
+    url "https://github.com/ciderapp/cider-releases/releases?q=prerelease%3Afalse"
+    regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)+)["' >]}i)
+    strategy :page_match
   end
 
   auto_updates true
