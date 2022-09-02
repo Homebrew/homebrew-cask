@@ -11,7 +11,7 @@ cask "obs" do
   homepage "https://obsproject.com/"
 
   livecheck do
-    url :homepage
+    url "https://obsproject.com/download/"
     regex(%r{href=.*?/obs[._-]studio[._-]v?(\d+(?:\.\d+)+).*?\.dmg}i)
   end
 
