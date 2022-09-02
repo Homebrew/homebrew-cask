@@ -1,8 +1,8 @@
 cask "xmind" do
-  version "12.0.3-202206241746"
-  sha256 "5d103542849310d4cccb44d06482c46e4a44dbde8fb861587aad967d5cd1ff0b"
+  version "22.08.2196"
+  sha256 "3db92b44efad4fdaed73d82685620b053e558b3c47e074a5f24fcbe2fe802e50"
 
-  url "https://dl3.xmind.net/XMind-for-macOS-#{version}.dmg"
+  url "https://dl3.xmind.net/Xmind-for-macOS-#{version}.dmg"
   name "XMind"
   desc "Mind mapping and brainstorming tool"
   homepage "https://www.xmind.net/"
