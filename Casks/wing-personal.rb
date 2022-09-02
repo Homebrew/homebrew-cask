@@ -11,8 +11,8 @@ cask "wing-personal" do
   homepage "https://www.wingware.com/"
 
   livecheck do
-    url "https://wingware.com/pub/wing-personal/"
-    regex(%r{href="(\d+(?:\.\d+)+)/"}i)
+    url "https://wingware.com/downloads/wing-personal"
+    regex(%r{href=.*?/pub/wing-personal/v?(\d+(?:\.\d+)+)}i)
   end
 
   depends_on macos: ">= :high_sierra"
