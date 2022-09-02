@@ -1,9 +1,9 @@
 cask "yuque" do
   arch arm: "-arm64"
 
-  version "1.5.3"
-  sha256 arm:   "ccb7a030ecaeb3f2833244c42ec26331dac920947a9c1729a0e9b69be071b1e0",
-         intel: "bceac42348e8b38cf258cf430c2c50f9bf0996ce7119c17ada012f8154d14e71"
+  version "1.6.3"
+  sha256 arm:   "aa011dd6383f693b4e0db07b9e7261d1961d03f3b9f20e9f956f1917099a0638",
+         intel: "b72965de938e9399907bbd53c4e80bd6c6beae4c9eccf4b2aa335b87ee6ad1e9"
 
   url "https://app.nlark.com/yuque-desktop/#{version}/Yuque-#{version}#{arch}.dmg",
       verified: "app.nlark.com/yuque-desktop/"
