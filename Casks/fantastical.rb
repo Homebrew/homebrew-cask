@@ -18,7 +18,10 @@ cask "fantastical" do
   app "Fantastical.app"
 
   uninstall launchctl: "com.flexibits.fantastical#{version.major}.mac.launcher",
-            quit:      "com.flexibits.fantastical#{version.major}.mac"
+            quit:      [
+              "85C27NK92C.com.flexibits.fantastical#{version.major}.mac.helper",
+              "com.flexibits.fantastical#{version.major}.mac",
+            ]
 
   zap trash: [
     "~/Library/Application Scripts/com.flexibits.fantastical#{version.major}.*",
