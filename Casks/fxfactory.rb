@@ -10,12 +10,12 @@ cask "fxfactory" do
 
   livecheck do
     url "https://fxfactory.com/download/"
-    regex(/FxFactory-\d+-(\d+)\.zip.*FxFactory\s(\d+(?:\.\d+)+)/i)
+    regex(/FxFactory[._-]v?(\d+(?:\.\d+)+)[._-](\d+).zip/i)
     strategy :page_match do |page, regex|
       match = page.match(regex)
       next if match.blank?
 
-      "#{match[2]},#{match[1]}"
+      "#{match[1]},#{match[2]}"
     end
   end
 
