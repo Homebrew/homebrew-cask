@@ -9,4 +9,13 @@ cask "bluebubbles" do
   homepage "https://bluebubbles.app/"
 
   app "BlueBubbles.app"
+
+  zap trash: [
+    "~/Library/Application Support/@bluebubbles",
+    "~/Library/Application Support/bluebubbles-server",
+    "~/Library/Logs/@bluebubbles",
+    "~/Library/Logs/bluebubbles-server",
+    "~/Library/Preferences/com.BlueBubbles.BlueBubbles-Server.plist",
+    "~/Library/Saved Application State/com.BlueBubbles.BlueBubbles-Server.savedState",
+  ]
 end
