@@ -8,4 +8,9 @@ cask "lectrote" do
   homepage "https://github.com/erkyrath/lectrote"
 
   app "Lectrote.app"
+
+  zap trash: [
+    "~/Library/Application Support/Lectrote",
+    "~/Library/Preferences/com.eblong.lectrote.plist",
+  ]
 end
