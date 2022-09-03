@@ -9,7 +9,7 @@ cask "powerpanel" do
   homepage "https://www.cyberpowersystems.com/products/software/power-panel-personal/"
 
   livecheck do
-    url :homepage
+    url "https://www.cyberpowersystems.com/product/software/power-panel-personal/powerpanel-personal-mac/"
     regex(%r{href=.*?/PPP_Mac[._-]v?(\d+(?:.\d+)*)\.dmg}i)
   end
 
