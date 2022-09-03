@@ -1,8 +1,8 @@
 cask "fxfactory" do
-  version "7.2.8,6999"
-  sha256 "4f0ec77c2fa9cb3483db3e66f75b256d7f82ac5f292d1825f6ccaf37db9a304b"
+  version "8.0.3,7195"
+  sha256 "f42e82a8e40cf3add57375f1b47f65bb1e5cda7858e2853a82b6da2e6a060b29"
 
-  url "https://fxfactory.s3.amazonaws.com/noiseindustries/fxfactory/FxFactory_#{version.csv.first.no_dots}_#{version.csv.second}.zip",
+  url "https://fxfactory.s3.amazonaws.com/noiseindustries/fxfactory/FxFactory-#{version.csv.first}_#{version.csv.second}.zip",
       verified: "fxfactory.s3.amazonaws.com/noiseindustries/"
   name "FxFactory"
   desc "Browse, install and purchase effects and plugins from a huge catalog"
