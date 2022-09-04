@@ -5,7 +5,7 @@ cask "macforge" do
   url "https://github.com/w0lfschild/app_updates/raw/master/MacForge1/MacForge.#{version}.zip",
       verified: "github.com/w0lfschild/app_updates"
   name "MacForge"
-  desc "Plugin, App, and Theme store which includes plugin injection for macOS"
+  desc "Plugin, App, and Theme store which includes plugin injection"
   homepage "https://www.macenhance.com/macforge"
 
   livecheck do
