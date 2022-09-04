@@ -1,9 +1,9 @@
 cask "sabaki" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.52.1"
-  sha256 arm:   "93e791a2278c542581846ae2331766415a630e86b8dabda36cf5d9e0823087d2",
-         intel: "231dcfcf635daecd17d78df71f606e32f0521d51125219f2a498b08fb13d9e6f"
+  version "0.52.2"
+  sha256 arm:   "e2cf00aa5ca0c2a675db847978466ba87ac2af9db33209ba7774be545b0f904c",
+         intel: "5e1a38772cc6926b1880341df128ae2f6172b29128cbb206782c84df6d7ec743"
 
   url "https://github.com/SabakiHQ/Sabaki/releases/download/v#{version}/sabaki-v#{version}-mac-#{arch}.7z",
       verified: "github.com/SabakiHQ/Sabaki/"
