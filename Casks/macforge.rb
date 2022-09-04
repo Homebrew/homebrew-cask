@@ -10,9 +10,7 @@ cask "macforge" do
 
   livecheck do
     url "https://raw.githubusercontent.com/w0lfschild/app_updates/master/MacForge1/appcast.xml"
-    strategy :sparkle do |item|
-      item.short_version
-    end
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
