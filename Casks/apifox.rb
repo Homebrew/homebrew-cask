@@ -7,13 +7,12 @@ cask "apifox" do
 
   url "https://cdn.apifox.cn/download/#{version}/Apifox#{arch}-#{version}.dmg"
   name "Apifox"
-  desc "Postman + Swagger + Mock + Jmeter = Apifox"
+  desc "Platform for API documentation, debugging, Mock and testing"
   homepage "https://www.apifox.cn/"
 
   livecheck do
     url "https://cdn.apifox.cn/download/mac/latest-mac.yml"
-    strategy :page_match
-    regex(/version: (\d+(?:\.\d+)(?:\.\d+))/i)
+    strategy :electron_builder
   end
 
   auto_updates true
