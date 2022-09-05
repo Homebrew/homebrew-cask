@@ -15,6 +15,8 @@ cask "eqmac" do
 
   auto_updates true
 
+  app "eqMac.app"
+
   zap trash: [
     "~/Library/Caches/com.bitgapp.eqmac",
     "~/Library/Preferences/com.bitgapp.eqmac.plist",
