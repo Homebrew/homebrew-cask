@@ -5,7 +5,7 @@ cask "douyin" do
   url "https://www.douyin.com/download/pc/obj/douyin-pc-client/#{version.csv.second}/releases/#{version.csv.third}/#{version.csv.first}/darwin-universal/douyin-v#{version.csv.first}-darwin-universal.dmg"
   name "Douyin"
   name "抖音"
-  desc "A social software for music creative short videos"
+  desc "Social software for creating music short videos"
   homepage "https://www.douyin.com/"
 
   livecheck do
