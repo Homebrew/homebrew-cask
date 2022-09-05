@@ -1,9 +1,9 @@
 cask "remnote" do
   arch arm: "-arm64", intel: ""
 
-  version "1.8.21"
-  sha256 arm:   "94cfca3b49dd7f48c0015c16870d496c6fe4c13e144cb5236bd5610794c7d040",
-         intel: "faab83de71426fd5fd9cff65b215385bf3b3b4abea12af28739754e56c849b15"
+  version "1.8.22"
+  sha256 arm:   "d3f4a1f99710957e1d710d95897c56c93d5a033a00e45cfcd3c66de977a71391",
+         intel: "7984799dea8bc21d1cd848ef9c0eb76145ee84adb709c727c7bf274cc9e7bfcf"
 
   url "https://download.remnote.io/RemNote-#{version}#{arch}.dmg",
       verified: "remnote.io"
