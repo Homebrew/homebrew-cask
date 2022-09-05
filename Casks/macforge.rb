@@ -16,4 +16,30 @@ cask "macforge" do
   auto_updates true
 
   app "MacForge.app"
+
+  uninstall launchctl: "com.macenhance.MacForge.Injector",
+            quit:      [
+              "com.macenhance.MacForge",
+              "com.macenhance.MacForge.PreferenceLoader",
+              "com.macenhance.MacForgeDockTile",
+              "com.macenhance.MacForgeHelper",
+              "com.macenhance.SIPKit",
+            ]
+
+  zap trash: [
+    "/Library/Application Support/MacEnhance",
+    "/Library/LaunchDaemons/com.macenhance.MacForge.Injector.plist",
+    "/Library/PrivilegedHelperTools/com.macenhance.MacForge.Injector",
+    "~/Library/Application Support/MacEnhance",
+    "~/Library/Application Support/com.macenhance.MacForge",
+    "~/Library/Caches/com.macenhance.MacForge",
+    "~/Library/Caches/com.macenhance.MacForgeHelper",
+    "~/Library/HTTPStorages/com.macenhance.MacForge",
+    "~/Library/HTTPStorages/com.macenhance.MacForge.binarycookies",
+    "~/Library/HTTPStorages/com.macenhance.MacForgeHelper",
+    "~/Library/Preferences/com.macenhance.MacForge.plist",
+    "~/Library/Preferences/com.macenhance.MacForgeHelper.plist",
+    "~/Library/Saved Application State/com.macenhance.MacForge.savedState",
+    "~/Library/WebKit/com.macenhance.MacForge",
+  ]
 end
