@@ -9,13 +9,17 @@ cask "douyin" do
   homepage "https://www.douyin.com/"
 
   livecheck do
-    skip "No version information available"
+    url "https://www.douyin.com/downloadpage"
+    strategy :page_match do |page|
+      match = page.match(%r{douyin[._-]pc[._-]client/(\d+)/releases/(\d+)/(\d+(?:\.\d+)+)/darwin[._-]universal}i)
+      next if match.blank?
+
+      "#{match[3]},#{match[1]},#{match[2]}"
+    end
   end
 
   app "抖音.app"
 
-  zap trash: [
-    "~/Library/Preferences/com.bytedance.douyin.desktop.plist",
-  ],
-    rmdir: "~/Library/Application Support/抖音"
+  zap trash: "~/Library/Preferences/com.bytedance.douyin.desktop.plist",
+      rmdir: "~/Library/Application Support/抖音"
 end
