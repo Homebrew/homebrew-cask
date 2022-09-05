@@ -5,13 +5,13 @@ cask "unblah" do
   url "https://github.com/akaalias/getunblah/releases/download/v#{version}/Unblah.dmg",
       verified: "github.com/akaalias/getunblah/"
   name "Unblah"
-  desc "An app for those (like myself) who talk too much, or too little, when they get nervous in meetings"
+  desc "Keep track of how long you've been speaking"
   homepage "https://unblah.me/"
-
-  app "Unblah.app"
 
   livecheck do
     url :url
     strategy :github_latest
   end
+
+  app "Unblah.app"
 end
