@@ -16,8 +16,6 @@ cask "utools" do
     regex(/uTools[._-]v?(\d+(?:\.\d+)*)\.dmg/i)
   end
 
-  auto_updates true
-
   app "uTools.app"
 
   zap trash: [
