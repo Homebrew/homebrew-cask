@@ -50,7 +50,7 @@ cask "gcc-aarch64-embedded" do
 
   uninstall pkgutil: "arm-gnu-toolchain-#{version}-darwin-x86_64-aarch64-none-elf",
             delete:  [
-              "/Applications/ArmGNUToolchain/#{version}/arch64-none-elf",
+              "/Applications/ArmGNUToolchain/#{version}/aarch64-none-elf",
             ],
             rmdir:   [
               "/Applications/ArmGNUToolchain/#{version}",
