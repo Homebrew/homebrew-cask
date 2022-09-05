@@ -17,9 +17,9 @@ cask "macforge" do
 
   app "MacForge.app"
 
-  uninstall launchctl: "com.macenhance.MacForge.Injector",
+  uninstall launchctl:  "com.macenhance.MacForge.Injector",
             login_item: "MacForgeHelper",
-            quit:      [
+            quit:       [
               "com.macenhance.MacForge",
               "com.macenhance.MacForge.PreferenceLoader",
               "com.macenhance.MacForgeDockTile",
