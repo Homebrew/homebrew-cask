@@ -12,9 +12,8 @@ cask "notesnook" do
   homepage "https://notesnook.com/"
 
   livecheck do
-    url "https://github.com/streetwriters/notesnook/releases/"
-    strategy :page_match
-    regex(/Notesnook Desktop v(\d+(?:\.\d+)+)/i)
+    url "https://notesnook.com/releases/darwin/latest-mac.yml"
+    strategy :electron_builder
   end
 
   app "Notesnook.app"
