@@ -8,7 +8,7 @@ cask "notesnook" do
   url "https://github.com/streetwriters/notesnook/releases/download/v#{version}/notesnook_#{arch}.dmg",
       verified: "github.com/streetwriters/notesnook/"
   name "Notesnook"
-  desc "Fully open source & end-to-end encrypted note taking alternative to Evernote"
+  desc "Privacy-focused note taking app"
   homepage "https://notesnook.com/"
 
   livecheck do
