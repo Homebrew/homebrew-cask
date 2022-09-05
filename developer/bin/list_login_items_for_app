@@ -34,7 +34,7 @@ def usage
 end
 
 def process_args
-  if /^-+h(?:elp)?$/.match?(ARGV.first)
+  if /^-+h(?:elp)?$/.match(ARGV.first)
     puts usage
     exit 0
   elsif ARGV.length == 1
