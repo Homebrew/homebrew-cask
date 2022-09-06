@@ -2,7 +2,6 @@ cask "keet" do
   arch arm: "Apple-Silicon", intel: "Intel"
 
   version "1.1.0"
-  # see https://keet.io/downloads/#{version}/checksums.txt
   sha256  arm:   "20f22af8f9546c7431a1a653ac6fdab3eed6b2c3d48c03d865d948852f071f55",
           intel: "1d2afbe8e1df0b640d7527cb0a6a3bb8fafa6c026b6f4aa1137f7ca3dd619956"
 
@@ -13,8 +12,7 @@ cask "keet" do
 
   livecheck do
     url "https://keet.io/downloads/"
-    strategy :page_match
-    regex(%r{href=["'](\d+\.\d+\.\d+[^/]*)/["']>}i)
+    regex(/(\d+(?:\.\d+)+)/i)
   end
 
   app "Keet.app"
