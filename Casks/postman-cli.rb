@@ -22,7 +22,5 @@ cask "postman-cli" do
 
   binary "postman-cli", target: "postman"
 
-  zap trash: [
-    "~/.postman/",
-  ]
+  zap trash: "~/.postman"
 end
