@@ -1,7 +1,7 @@
 cask "localxpose" do
   arch arm: "arm64", intel: "amd64"
 
-  version "22.9.1"
+  version "22.9.2"
   sha256 :no_check
 
   url "https://api.localxpose.io/api/v2/downloads/loclx-darwin-#{arch}.zip"
