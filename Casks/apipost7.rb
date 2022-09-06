@@ -12,8 +12,7 @@ cask "apipost7" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(/client=Mac&arch=x64&version=(\d+(?:\.\d+)*)/i)
+    regex(/client=Mac&arch=#{arch}&version=(\d+(?:\.\d+)*)/i)
   end
 
   auto_updates true
