@@ -4,6 +4,7 @@ cask "pivy" do
 
   url "https://github.com/joyent/pivy/releases/download/v#{version}/pivy-#{version}-macos12.pkg"
   name "pivy"
+  desc "Client for PIV cards"
   homepage "https://github.com/joyent/pivy"
 
   pkg "pivy-#{version}-macos12.pkg"
