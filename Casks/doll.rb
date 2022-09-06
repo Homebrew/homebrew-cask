@@ -4,12 +4,12 @@ cask "doll" do
 
   url "https://github.com/xiaogdgenuine/Doll/releases/download/v#{version}/Doll.#{version}.dmg"
   name "Doll"
-  desc "Utility to show apps badges from the dock in the menu bar on notifications"
+  desc "Utility to show apps badges from the dock in the menu bar"
   homepage "https://github.com/xiaogdgenuine/Doll/"
+
+  depends_on macos: ">= :big_sur"
 
   app "Doll.app"
 
-  zap trash: [
-    "~/Library/Preferences/com.xiaogd.Doll.plist",
-  ]
+  zap trash: "~/Library/Preferences/com.xiaogd.Doll.plist"
 end
