@@ -1,4 +1,4 @@
-cask "apipost7" do
+cask "apipost" do
   arch arm: "arm64", intel: "x64"
 
   version "7.0.0"
@@ -16,13 +16,14 @@ cask "apipost7" do
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
-  app "ApiPost7.app"
+  app "ApiPost#{version.major}.app"
 
   zap trash: [
-    "~/Library/Application Support/ApiPost7",
-    "~/Library/Logs/ApiPost7",
-    "~/Library/Preferences/com.apipost.apipost.fe.desctop.cn.7.x.plist",
-    "~/Library/Saved Application State/com.apipost.apipost.fe.desctop.cn.7.x.savedState",
+    "~/Library/Application Support/ApiPost#{version.major}",
+    "~/Library/Logs/ApiPost#{version.major}",
+    "~/Library/Preferences/com.apipost.apipost.fe.desctop.cn.#{version.major}.x.plist",
+    "~/Library/Saved Application State/com.apipost.apipost.fe.desctop.cn.#{version.major}.x.savedState",
   ]
 end
