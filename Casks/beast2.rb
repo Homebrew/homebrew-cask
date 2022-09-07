@@ -10,4 +10,12 @@ cask "beast2" do
   homepage "https://www.beast2.org/"
 
   suite "BEAST #{version}"
+
+  zap trash: [
+    "~/Library/Application Support/BEAST/2.7/",
+    "~/Library/Preferences/beast.app.beauti.Beauti.plist",
+    "~/Library/Saved Application State/beastfx.app.beast.BeastMain.savedState",
+    "~/Library/Preferences/tracer.plist",
+    "~/Library/Preferences/viz.DensiTree.plist",
+  ]
 end
