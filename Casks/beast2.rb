@@ -1,5 +1,5 @@
 cask "beast2" do
-  # note: "2" is not a version number, but an intrinsic part of the product name
+  # NOTE: "2" is not a version number, but an intrinsic part of the product name
   version "2.7.0"
   sha256 "656fee774e82ddbdf630b8787cf90912ab2bca8c1972bbe83ac1305fa3b608cd"
 
