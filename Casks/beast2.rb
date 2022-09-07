@@ -12,10 +12,10 @@ cask "beast2" do
   suite "BEAST #{version}"
 
   zap trash: [
-    "~/Library/Application Support/BEAST/2.7/",
+    "~/Library/Application Support/BEAST",
     "~/Library/Preferences/beast.app.beauti.Beauti.plist",
-    "~/Library/Saved Application State/beastfx.app.beast.BeastMain.savedState",
     "~/Library/Preferences/tracer.plist",
     "~/Library/Preferences/viz.DensiTree.plist",
+    "~/Library/Saved Application State/beastfx.app.beast.BeastMain.savedState",
   ]
 end
