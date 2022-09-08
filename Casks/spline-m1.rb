@@ -10,4 +10,8 @@ cask "spline-m1" do
   depends_on arch: :arm64
 
   app "Spline.app"
+  
+  zap trash: [
+    "~/Library/Preferences/com.design.spline.plist",
+  ]
 end
