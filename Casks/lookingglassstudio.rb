@@ -1,4 +1,4 @@
-cask "looking-glass-studio" do
+cask "lookingglassstudio" do
   version "1.5.0"
   sha256 "6d6f4422b0872702ff170862f897da83ae18629b77e2f0ced49a4070822ccef4"
 
