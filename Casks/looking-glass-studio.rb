@@ -8,4 +8,9 @@ cask "looking-glass-studio" do
   homepage "https://look.glass/"
 
   app "LookingGlassStudio.app"
+  
+  zap trash: [
+    "~/Library/Application Support/LookingGlassStudio",
+    "~/Library/Preferences/com.lookingglassfactory.studio.plist",
+    ]
 end
