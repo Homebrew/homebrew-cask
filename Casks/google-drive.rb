@@ -1,5 +1,5 @@
 cask "google-drive" do
-  version "62.0.2"
+  version "63.0.5"
   sha256 :no_check
 
   url "https://dl.google.com/drive-file-stream/GoogleDrive.dmg"
