@@ -1,4 +1,4 @@
-cask "quixel-bridge" do
+cask "bridge" do
   version "2022.0.6"
   sha256 :no_check
 
