@@ -1,6 +1,6 @@
 cask "airbuddy" do
-  version "2.5.4,576"
-  sha256 "e98c1699920e494772e16e36bee49012a812efad7bdb38e792a57c445d1e1ddd"
+  version "2.5.5,581"
+  sha256 "63a89f1cfa600906f19c699849d3811e6f9db546ba623712b3d3556cb9b67d7c"
 
   url "https://su.airbuddy.app/kCRSAmcjBc/AirBuddy_v#{version.csv.first}-#{version.csv.second}.dmg"
   name "AirBuddy"
