@@ -1,5 +1,5 @@
 cask "videoduke" do
-  version "2.8.1,592"
+  version "2.8.2,595"
   sha256 :no_check
 
   url "https://cdn.eltima.com/download/videoduke.dmg"
