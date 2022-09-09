@@ -5,7 +5,7 @@ cask "tidal" do
     version "2.30.0"
   end
   on_arm do
-    version "2.32.0"
+    version "2.33.2"
   end
 
   sha256 :no_check
