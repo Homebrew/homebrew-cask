@@ -1,9 +1,9 @@
 cask "yandex-music-unofficial" do
   arch arm: "-arm64"
 
-  version "1.7.0"
-  sha256 arm:   "465efa83db9e9f98d1b32f76584b900aa039dd46bd1664f11b0ad78b59ceb2d2",
-         intel: "2134d6cedbc5df0a1c936c6168c6fd1826fc696290257f7084d7604bda16842c"
+  version "1.7.1"
+  sha256 arm:   "d6e3b2a906db15a188e5189d997dc6f597b6004ff7bcd33232c0c3b73976c67c",
+         intel: "ff537bc41e7c73916100dc8f4fb58672973b89f31818ac1a01d70e1d4ee750c1"
 
   url "https://github.com/juvirez/yandex-music-app/releases/download/v#{version}/Yandex-Music-Unofficial-#{version}#{arch}.dmg",
       verified: "github.com/juvirez/yandex-music-app/"
