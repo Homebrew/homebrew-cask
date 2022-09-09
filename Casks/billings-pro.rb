@@ -1,5 +1,5 @@
 cask "billings-pro" do
-  version "1.7.18,37803"
+  version "1.7.19,37903"
   sha256 :no_check
 
   url "https://www.marketcircle.com/appcasts/releases/latest-billingspro.zip"
