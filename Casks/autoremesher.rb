@@ -8,8 +8,8 @@ cask "autoremesher" do
   homepage "https://github.com/huxingyi/autoremesher/"
 
   livecheck do
-    url "https://github.com/huxingyi/autoremesher/releases/"
-    strategy :header_match
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+(?:-beta\.?\d*)?)$/i)
   end
 
   app "autoremesher-1.0.0-beta.3.app"
