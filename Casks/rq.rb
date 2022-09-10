@@ -4,7 +4,13 @@ cask "rq" do
 
   url "https://github.com/dflemstr/rq/releases/download/v#{version}/rq-v#{version}-x86_64-apple-darwin.tar.gz"
   name "rq"
+  desc "Record analysis and transformation tool"
   homepage "https://github.com/dflemstr/rq"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   binary "rq"
 end
