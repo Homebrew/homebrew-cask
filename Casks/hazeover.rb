@@ -9,7 +9,7 @@ cask "hazeover" do
       skip "Legacy version for Big Sur and below"
     end
   else
-    version "1.9.1,1089"
+    version "1.9.2,1109"
     sha256 :no_check
 
     url "https://hazeover.com/HazeOver.dmg"
