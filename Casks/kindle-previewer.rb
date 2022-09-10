@@ -1,5 +1,5 @@
 cask "kindle-previewer" do
-  version "3.67.0"
+  version "3.67"
   sha256 :no_check
 
   url "https://d2bzeorukaqrvt.cloudfront.net/KindlePreviewerInstaller.pkg",
@@ -9,8 +9,9 @@ cask "kindle-previewer" do
   homepage "https://www.amazon.com/Kindle-Previewer/b?ie=UTF8&node=21381691011"
 
   livecheck do
-    url :homepage
-    regex(/Kindle\s*Previewer\s*(\d+(?:\.\d+)+)/i)
+    # url :homepage
+    # regex(/Kindle\s*Previewer\s*(\d+(?:\.\d+)+)/i)
+    skip "Requires :browser user agent"
   end
 
   auto_updates true
