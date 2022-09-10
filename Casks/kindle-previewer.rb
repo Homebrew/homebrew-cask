@@ -9,8 +9,9 @@ cask "kindle-previewer" do
   homepage "https://www.amazon.com/Kindle-Previewer/b?ie=UTF8&node=21381691011"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    # url :homepage
+    # regex(/Kindle\s*Previewer\s*(\d+(?:\.\d+)+)/i)
+    skip "Requires :browser user agent"
   end
 
   auto_updates true
