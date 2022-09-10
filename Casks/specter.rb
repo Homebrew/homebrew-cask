@@ -9,8 +9,9 @@ cask "specter" do
   homepage "https://specter.solutions/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://github.com/cryptoadvance/specter-desktop/releases/"
+    regex(%r{v?(\d+(?:\.\d+)+)/Specter.*?\.dmg}i)
+    strategy :page_match
   end
 
   depends_on macos: ">= :catalina"
