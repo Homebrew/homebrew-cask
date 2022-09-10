@@ -11,5 +11,10 @@ cask "vassal" do
   desc "Board game engine"
   homepage "https://www.vassalengine.org/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "VASSAL.app"
 end
