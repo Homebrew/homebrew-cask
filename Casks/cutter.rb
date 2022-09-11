@@ -1,9 +1,9 @@
 cask "cutter" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2.1.0"
-  sha256 arm:   "720d132cde1df3f23c9a11a447e253657587b95a1d8554859cbcd96baa3fcc13",
-         intel: "d17451bc7904d010546b73c755a3dc0bc9e9116421448a033720b0a1018392f2"
+  version "2.1.1"
+  sha256 arm:   "0ede37de0f345f633d83de31e912098a7e11cd6b44a2a3106bb9650e4ab54bf4",
+         intel: "f901bfa610f600a021d7ef851c087869ab42c174b1afd1cb30dcd9cc9cbdf068"
 
   url "https://github.com/rizinorg/cutter/releases/download/v#{version}/Cutter-v#{version}-macOS-#{arch}.dmg",
       verified: "github.com/rizinorg/cutter/"
