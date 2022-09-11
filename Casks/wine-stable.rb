@@ -16,7 +16,7 @@ cask "wine-stable" do
     # url "https://github.com/Gcenx/macOS_Wine_builds/releases/"
     # regex(/wine[._-]stable[._-]v?(\d+(?:\.\d+)+)[._-]osx64\.t/i)
     # strategy :page_match
-    skip "Stable builds are currently blocked an upstream bug"
+    skip "Stable builds are currently blocked by an upstream bug"
   end
 
   conflicts_with cask: [
