@@ -1,6 +1,3 @@
-# typed: false
-# frozen_string_literal: true
-
 cask "laconvolver" do
   version "0.4"
   sha256 "20c79ebe117936d1abb1bc700018b4253072e3e8567041805ea71cbdecf51242"
@@ -12,8 +9,7 @@ cask "laconvolver" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(/href="LAConvolver(\d+(?:\.\d+)*)\.zip"/)
+    regex(/href="LAConvolverv?(\d+(?:\.\d+)*)\.zip"/)
   end
 
   audio_unit_plugin "LAConvolver/LAConvolver.component"
