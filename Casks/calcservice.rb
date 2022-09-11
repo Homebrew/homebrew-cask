@@ -9,7 +9,7 @@ cask "calcservice" do
 
   livecheck do
     url "https://www.devontechnologies.com/support/download"
-    regex(%r{<td>CalcService</td><td>(\d+(?:\.\d+)+)</td>}i)
+    regex(%r{href=.*?v?(\d+(?:\.\d+)+)/CalcService\.app\.zip}i)
   end
 
   depends_on macos: ">= :el_capitan"
