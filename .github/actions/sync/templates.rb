@@ -19,7 +19,7 @@ puts 'Detecting changes…'
   '.github/*.md',
   '.github/*.yml',
   '.github/ISSUE_TEMPLATE/*.{md,yml}',
-  '.github/workflows/{cache,ci,dispatch-command,rebase,rerun-workflow,review,triage}.yml',
+  '.github/workflows/{cache,ci,dispatch-command,publish-commit-casks,rebase,rerun-workflow,review,triage}.yml',
   '.gitignore',
   '.travis.yml',
   'Casks/.rubocop.yml',
