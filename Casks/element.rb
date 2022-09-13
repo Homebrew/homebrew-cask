@@ -11,8 +11,8 @@ cask "element" do
   homepage "https://element.io/get-started"
 
   livecheck do
-    url "https://packages.riot.im/desktop/install/macos"
-    regex(/Element[._-]\(?(\d+(?:\.\d+)*)[._-]universal\.dmg/i)
+    url "https://github.com/vector-im/element-desktop/releases/tag"
+    regex(/v(\d+(?:\.\d+)*)/i)
   end
 
   auto_updates true
