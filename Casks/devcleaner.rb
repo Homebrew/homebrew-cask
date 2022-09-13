@@ -9,14 +9,14 @@ cask "devcleaner" do
 
   livecheck do
     url "https://github.com/vashpan/xcode-dev-cleaner/releases/latest"
-    regex(%r{href=.*DevCleaner[._-]v?(\d+(?:[.-]\d+)+)\.zip}i)
+    regex(/DevCleaner[._-]v?(\d+(?:[.-]\d+)+)\.zip/i)
   end
 
   app "DevCleaner.app"
 
   zap trash: [
-    "~/Library/Containers/com.oneminutegames.XcodeCleaner",
     "~/Library/Application Scripts/com.oneminutegames.XcodeCleaner",
     "~/Library/Application Support/CrashReporter/DevCleaner*.plist",
+    "~/Library/Containers/com.oneminutegames.XcodeCleaner",
   ]
 end
