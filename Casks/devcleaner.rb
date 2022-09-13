@@ -9,7 +9,7 @@ cask "devcleaner" do
 
   livecheck do
     url "https://github.com/vashpan/xcode-dev-cleaner/releases/latest"
-    regex(%r{href=.*releases/download/.*/DevCleaner-(.*)\.zip}i)
+    regex(%r{href=.*DevCleaner[._-]v?(\d+(?:[.-]\d+)+)\.zip}i)
   end
 
   app "DevCleaner.app"
