@@ -2,7 +2,7 @@ cask "spotify" do
   arch arm: "ARM64"
 
   version "1.1.93.896,3ae3b4f3,10"
-  sha256 :no_check
+  sha256 "354427a2e113bc6318362ea70f81ae09b8e84205ebb9f1acc7bc9a292adf52d1"
 
   url "https://download.scdn.co/Spotify#{arch}.dmg",
       verified: "download.scdn.co/"
