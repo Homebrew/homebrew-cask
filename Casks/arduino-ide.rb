@@ -15,10 +15,7 @@ cask "arduino-ide" do
     end
   end
 
-  conflicts_with cask: [
-    "arduino-ide-beta",
-    "arduino-ide-nightly",
-  ]
+  conflicts_with cask: "arduino-ide-nightly"
 
   app "Arduino IDE.app"
 
