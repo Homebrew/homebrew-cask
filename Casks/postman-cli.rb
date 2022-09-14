@@ -1,7 +1,7 @@
 cask "postman-cli" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.0.15"
+  version "0.0.17"
   sha256 arm:   "78a05c6f8911f64502804fad45b06ad4c055966c2980692de04b722cdd296092",
          intel: "78a05c6f8911f64502804fad45b06ad4c055966c2980692de04b722cdd296092"
 
