@@ -1,18 +1,16 @@
 cask "element" do
-  # NOTE: currently the file version and application version diverge, for unknown reasons!
   version "1.11.5"
-  file_version = "1.11.2"
-  sha256 "bfa6585340a69b0185f758e546a05697a76f0f19ca8986b58a1661f2b7a34f61"
+  sha256 :no_check
 
-  url "https://packages.riot.im/desktop/install/macos/Element-#{file_version}-universal.dmg",
-      verified: "packages.riot.im/desktop/"
+  url "https://packages.riot.im/desktop/install/macos/Element.dmg",
+      verified: "packages.riot.im/desktop/install/macos/"
   name "Element"
   desc "Matrix collaboration client"
   homepage "https://element.io/get-started"
 
   livecheck do
-    url "https://github.com/vector-im/element-desktop/releases/tag"
-    regex(/v(\d+(?:\.\d+)*)/i)
+    url :url
+    strategy :extract_plist
   end
 
   auto_updates true
