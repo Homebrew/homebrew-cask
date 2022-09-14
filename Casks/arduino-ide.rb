@@ -1,4 +1,4 @@
-cask "arduino-ide-beta" do
+cask "arduino-ide" do
   version "2.0.0"
   sha256 "fdab408c9227d25664ffd7fdc120520f0ca3fba0d2604f3bb86354e2dd9b7590"
 
@@ -9,9 +9,9 @@ cask "arduino-ide-beta" do
 
   livecheck do
     url "https://www.arduino.cc/en/software/"
-    regex(/href=.*?arduino[._-]ide[._-]v?(\d+(?:\.\d+)+)macos[._-]64bit\.dmg/i)
+    regex(/href=.*?arduino[._-]ide[._-]?(\d+(?:\.\d+)+)[._-]macos[._-]64bit\.dmg/i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]}" }
+      page.scan(regex).map { |match| (match[0]).to_s }
     end
   end
 
