@@ -1,6 +1,6 @@
 cask "nova" do
-  version "9.5"
-  sha256 "1a3b77a19b5ef5a9c439c612c1826fdb89c273304440a5ed1a309440480c26b3"
+  version "9.6"
+  sha256 "fde34c19a80e166809c7ecaba1b7d0c73a148c0fbbb2a15f65e211e2fb1c5747"
 
   url "https://download-keycdn.panic.com/nova/Nova%20#{version}.zip",
       verified: "download-keycdn.panic.com/nova/"
