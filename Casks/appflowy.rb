@@ -4,14 +4,9 @@ cask "appflowy" do
 
   url "https://github.com/AppFlowy-IO/AppFlowy/releases/download/#{version}/Appflowy-macos-x86_64.zip",
       verified: "github.com/AppFlowy-IO/AppFlowy/"
-  name "appflowy"
+  name "AppFlowy"
   desc "Open-source project and knowledge management tool"
   homepage "https://www.appflowy.io/"
-
-  livecheck do
-    url "https://www.appflowy.io/whatsnew"
-    regex(%r{href=.*?tag/v?(\d+(?:\.\d+)+)})
-  end
 
   app "AppFlowy.app"
 
