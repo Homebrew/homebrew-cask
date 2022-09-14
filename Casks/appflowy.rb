@@ -8,6 +8,11 @@ cask "appflowy" do
   desc "Open-source project and knowledge management tool"
   homepage "https://www.appflowy.io/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "AppFlowy.app"
 
   zap trash: [
