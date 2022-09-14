@@ -6,8 +6,8 @@ cask "ngrok" do
     sha256 "e1748fe15ea1802dbb4529c92bbd0197c6add67b940738db30b8924db8b9dfa0"
   end
   on_arm do
-    version "3.0.7,3qk13uQpAwh,a"
-    sha256 "c0294214fab0ef18111b2e00c2f76c0c90ec291f0fca43cf46a6745b6d9765ec"
+    version "3.1.0,7gHuLibjv89,a"
+    sha256 "be754cbeddd23201f2e3fdb8258e53624ad0600211a084f918e86274bad85864"
   end
 
   url "https://bin.equinox.io/#{version.csv.third}/#{version.csv.second}/ngrok-v#{version.major}-#{version.csv.first}-stable-darwin-#{arch}.zip",
