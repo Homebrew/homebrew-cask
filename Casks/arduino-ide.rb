@@ -1,0 +1,29 @@
+cask "arduino-ide-beta" do
+  version "2.0.0"
+  sha256 "fdab408c9227d25664ffd7fdc120520f0ca3fba0d2604f3bb86354e2dd9b7590"
+
+  url "https://downloads.arduino.cc/arduino-ide/arduino-ide_#{version.csv.first}_macOS_64bit.dmg"
+  name "Arduino IDE"
+  desc "Electronics prototyping platform"
+  homepage "https://www.arduino.cc/en/software"
+
+  livecheck do
+    url "https://www.arduino.cc/en/software/"
+    regex(/href=.*?arduino[._-]ide[._-]v?(\d+(?:\.\d+)+)macos[._-]64bit\.dmg/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]}" }
+    end
+  end
+
+  conflicts_with cask: [
+    "arduino-ide-beta",
+    "arduino-ide-nightly",
+  ]
+
+  app "Arduino IDE.app"
+
+  zap trash: [
+    "~/Library/Application Support/arduino-ide",
+    "~/.arduinoIDE",
+  ]
+end
