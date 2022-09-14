@@ -2,7 +2,7 @@ cask "tidal" do
   arch arm: ".arm64"
 
   on_intel do
-    version "2.30.0"
+    version "2.32.0"
   end
   on_arm do
     version "2.33.2"
