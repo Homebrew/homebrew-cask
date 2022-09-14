@@ -6,8 +6,8 @@ cask "dotnet" do
     sha256 "b401bf0279e076a7e3187858f7be9613fe06b0260565155e5e0118e24ba3e0a2"
   end
   on_arm do
-    version "6.0.8,9beccd15-f764-41af-babc-e88839269b89,fe9ee487d0d52feb9a9213da780f19d8"
-    sha256 "48077415a07f66e809230fed5b9b39bd0118cff1751c68ad270779b0786c1d1a"
+    version "6.0.9,24ad61bd-2192-4637-a663-d4aaa39bfc21,03ce9a8420868b0f0777f35ac6faec98"
+    sha256 "39f8912b4a38575a6e6fe48b6321b4fe41fb1bc91f719138f51ac16cb8b797ff"
   end
 
   url "https://download.visualstudio.microsoft.com/download/pr/#{version.csv.second}/#{version.csv.third}/dotnet-runtime-#{version.csv.first}-osx-#{arch}.pkg"
