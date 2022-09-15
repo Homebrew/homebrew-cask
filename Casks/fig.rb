@@ -1,6 +1,6 @@
 cask "fig" do
-  version "1.0.61,518"
-  sha256 "a18a2dd2aeee0d4701b0d63a61e90d066ff19ca8e361bd1f98658f1feea82e40"
+  version "1.0.61,523"
+  sha256 "645f4b3e59902c1cae7660dd559e3126596e550590d5a393f342fb048e0b0c08"
 
   url "https://versions.withfig.com/fig%20#{version.csv.second}.dmg",
       verified: "versions.withfig.com/"
