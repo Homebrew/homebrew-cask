@@ -1,9 +1,9 @@
 cask "padloc" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.0.2"
-  sha256 arm:   "a872d1782d09f2236d27288f2370d193935acc4798ad58656304bf6890128125",
-         intel: "a2e84055403f35e141a46afc2ef7765e20c210572d26ae8de903fe47fa1db9ed"
+  version "4.1.0"
+  sha256 arm:   "02d56d5afb49f274ddb9ba2f29364312e2c592cb55a69105d1bc5dafb594ae2c",
+         intel: "317f3df2719493615780b31312749aad1fbfc6ed90e40bb546604a6a896755be"
 
   url "https://github.com/padloc/padloc/releases/download/v#{version}/padloc_#{version}_macos_electron_#{arch}.dmg",
       verified: "github.com/padloc/padloc/"

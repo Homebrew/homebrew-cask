@@ -1,5 +1,5 @@
 cask "adobe-acrobat-pro" do
-  version "22.002.20191"
+  version "22.002.20212"
   sha256 :no_check
 
   url "https://trials.adobe.com/AdobeProducts/APRO/Acrobat_HelpX/osx10/Acrobat_DC_Web_WWMUI.dmg",

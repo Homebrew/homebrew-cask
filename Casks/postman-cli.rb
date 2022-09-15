@@ -1,12 +1,12 @@
 cask "postman-cli" do
-  arch intel: "osx_64", arm: "osx_arm64"
+  arch arm: "arm64", intel: "x64"
 
-  version "0.0.4"
-  sha256 arm:   "31bf3f2d222e824538fc602621a1d6ca037384f6f8fc5867bb6f026d3dc491b7",
-         intel: "31bf3f2d222e824538fc602621a1d6ca037384f6f8fc5867bb6f026d3dc491b7"
+  version "0.0.17"
+  sha256 arm:   "78a05c6f8911f64502804fad45b06ad4c055966c2980692de04b722cdd296092",
+         intel: "78a05c6f8911f64502804fad45b06ad4c055966c2980692de04b722cdd296092"
 
-  url "https://dl-cli.pstmn.io/download/version/#{version}/#{arch}",
-      verified: "dl-cli.pstmn.io/download/version/"
+  url "https://dl-cli.pstmn.io/download/postman-cli-cli-#{version}-macos-#{arch}.zip",
+      verified: "dl-cli.pstmn.io/download/"
   name "Postman CLI"
   desc "CLI for command-line API management on Postman"
   homepage "https://www.postman.com/downloads/"

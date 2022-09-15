@@ -1,5 +1,5 @@
 cask "geomap" do
-  version "3.6.14"
+  version "3.6.15"
   sha256 :no_check
 
   url "http://www.geomapapp.org/MapApp/GeoMapApp.dmg"

@@ -12,6 +12,9 @@ cask "nutstore" do
     regex(%r{Mac(?:/Linux)?\s+(\d+(?:\.\d+)+)}i)
   end
 
+  auto_updates true
+  depends_on macos: ">= :el_capitan"
+
   installer manual: "Nutstore Installer.app"
 
   uninstall launchctl:  "net.nutstore.agent",
@@ -24,8 +27,8 @@ cask "nutstore" do
             delete:     "/Applications/Nutstore.app"
 
   zap trash: [
-    "~/Library/Saved Application State/net.nutstore.osxapp.nutstoreInstaller.savedState",
-    "~/Library/Preferences/net.nutstore.osxapp.plist",
     "~/Library/Preferences/net.nutstore.NutstoreJavaBE.plist",
+    "~/Library/Preferences/net.nutstore.osxapp.plist",
+    "~/Library/Saved Application State/net.nutstore.osxapp.nutstoreInstaller.savedState",
   ]
 end

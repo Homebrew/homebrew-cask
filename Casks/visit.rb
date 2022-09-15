@@ -7,7 +7,7 @@ cask "visit" do
         verified: "github.com/visit-dav/visit/"
   else
     version "3.3.0"
-    sha256 "9c8c8fc753612afdc08517ec657cb184c729b3c70cccb78dc3910d936a34f26d"
+    sha256 "81cd0da08740b1598bb0cc9a0ba58246d0589c02dc2455e3fdfafa7ea020df90"
 
     url "https://github.com/visit-dav/visit/releases/download/v#{version}/VisIt-#{version}.dmg",
         verified: "github.com/visit-dav/visit/"

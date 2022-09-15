@@ -4,11 +4,12 @@ cask "fanny" do
 
   url "https://fannywidget.com/FannyWidget.zip"
   name "FannyWidget"
+  desc "Notification Center widget and menu bar application to monitor fans"
   homepage "https://fannywidget.com/"
 
   livecheck do
-    url "https://github.com/DanielStormApps/Fanny/releases"
-    strategy :git
+    url :homepage
+    regex(%r{href=.*?FannyWidget\.zip["' >].*?v?(\d+(?:\.\d+)+).*?</a>}im)
   end
 
   depends_on macos: ">= :high_sierra"

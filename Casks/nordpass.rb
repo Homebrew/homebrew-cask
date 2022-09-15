@@ -1,5 +1,5 @@
 cask "nordpass" do
-  version "4.29.7"
+  version "4.30.11"
   sha256 :no_check
 
   url "https://downloads.npass.app/mac/NordPass.dmg",
