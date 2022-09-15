@@ -18,8 +18,13 @@ cask "deckset" do
   zap trash: [
     "~/Library/Application Support/Deckset",
     "~/Library/Application Support/com.unsignedinteger.Deckset-Paddle",
+    "~/Library/Caches/com.apple.helpd/Generated/com.unsignedinteger.Deckset.Helpbook*2.0.20",
+    "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.unsignedinteger.Deckset-Paddle",
+    "~/Library/Caches/com.unsignedinteger.Deckset-Paddle",
+    "~/Library/HTTPStorages/com.unsignedinteger.Deckset-Paddle",
+    "~/Library/HTTPStorages/com.unsignedinteger.Deckset-Paddle.binarycookies",
     "~/Library/Preferences/com.unsignedinteger.Deckset-Paddle.plist",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.unsignedinteger.deckset-paddle.sfl*",
-    "~/Library/Caches/com.unsignedinteger.Deckset-Paddle",
+    "~/Library/Saved Application State/com.unsignedinteger.Deckset-Paddle.savedState",
   ]
 end
