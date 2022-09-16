@@ -1,7 +1,7 @@
 cask "shadow" do
   arch arm: "arm64", intel: "x64"
 
-  version "5.0.1155.9211"
+  version "5.0.1168.9369"
   sha256 :no_check
 
   url "https://update.shadow.tech/launcher/prod/mac/#{arch}/Shadow.dmg"

@@ -1,9 +1,9 @@
 cask "appcode" do
   arch arm: "-aarch64"
 
-  version "2022.2.1,222.3739.57"
-  sha256 arm:   "4927f0b9c5ff8cb49ca02cff39584dba783c8c97fdd9e6cd1d72ad4f7653ba19",
-         intel: "00b749b4bf78a815b68b39e2bd4baf0f05700b84d7f2c099a542f86e194a0b35"
+  version "2022.2.2,222.4167.29"
+  sha256 arm:   "aa80c6f8800f8b2e6190d9f653ee032efe17ee4880b22a4e0efb83475114d333",
+         intel: "de6906e1c758531e8f46f5db2a43f0265e5f78e5cee384d755104101dfd0370a"
 
   url "https://download.jetbrains.com/objc/AppCode-#{version.csv.first}#{arch}.dmg"
   name "AppCode"
