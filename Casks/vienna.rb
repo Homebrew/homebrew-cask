@@ -8,6 +8,11 @@ cask "vienna" do
   desc "RSS and Atom reader"
   homepage "https://www.vienna-rss.com/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
 
   app "Vienna.app"
