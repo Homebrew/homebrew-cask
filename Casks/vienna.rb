@@ -1,3 +1,6 @@
+# typed: false
+# frozen_string_literal: true
+
 cask "vienna" do
   version "3.8.3,7857"
   sha256 "e7505b1387d00a4df1bcd66a7cc22c92885816681d0bc5006f2e7f081bfd0378"
