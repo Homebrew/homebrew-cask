@@ -1,22 +1,12 @@
-# typed: false
-# frozen_string_literal: true
-
 cask "vienna" do
-  version "3.8.3,7857"
+  version "3.8.3"
   sha256 "e7505b1387d00a4df1bcd66a7cc22c92885816681d0bc5006f2e7f081bfd0378"
 
-  url "https://github.com/ViennaRSS/vienna-rss/releases/download/v%2F#{version.csv.first}/Vienna#{version.csv.first}.tgz",
+  url "https://github.com/ViennaRSS/vienna-rss/releases/download/v%2F#{version}/Vienna#{version}.tgz",
       verified: "github.com/ViennaRSS/vienna-rss/"
   name "Vienna"
   desc "RSS and Atom reader"
   homepage "https://www.vienna-rss.com/"
-
-  livecheck do
-    url "https://www.vienna-rss.com/sparkle-files/changelog.xml"
-    strategy :sparkle do |item|
-      "#{item.short_version.sub(/ :[^:]+:/, "")},#{item.version}"
-    end
-  end
 
   auto_updates true
 
