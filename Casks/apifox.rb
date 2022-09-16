@@ -11,7 +11,7 @@ cask "apifox" do
   homepage "https://www.apifox.cn/"
 
   livecheck do
-    url "https://cdn.apifox.cn/download/mac/latest-mac.yml?noCache=" + (Time.new.to_f * 1000).to_i
+    url "https://cdn.apifox.cn/download/mac/latest-mac.yml?noCache=" + (Time.new.to_f * 1000).to_i.to_s
     strategy :electron_builder
   end
 
