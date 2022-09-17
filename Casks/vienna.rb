@@ -10,8 +10,9 @@ cask "vienna" do
 
   livecheck do
     url "https://www.vienna-rss.com/sparkle-files/changelog.xml"
-    strategy :sparkle do |item|
-      item.short_version.sub(/ :[^:]+:/, "").to_s
+    regex(/Vienna[._-]?v?(\d+(?:\.\d+)+)\.t/i)
+    strategy :sparkle do |items, regex|
+      items.map { |item| item.url[regex, 1] }
     end
   end
 
