@@ -11,7 +11,7 @@ cask "vienna" do
   livecheck do
     url "https://www.vienna-rss.com/sparkle-files/changelog.xml"
     strategy :sparkle do |item|
-      "#{item.short_version.sub(/ :[^:]+:/, "")}"
+      item.short_version.sub(/ :[^:]+:/, "").to_s
     end
   end
 
