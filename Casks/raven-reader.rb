@@ -1,6 +1,6 @@
 cask "raven-reader" do
-  version "1.0.74"
-  sha256 "9d37e7787476dfd5ccf9eebfbc06c41124d0338ae3b2d90f94740620143b24d4"
+  version "1.0.75"
+  sha256 "bb290869b0799f496b0a5ceaed021bcb1995ff6cb9e17177d5bae6f2c2212ec5"
 
   url "https://download.helloefficiency.com/ravenreader/Raven%20Reader-#{version}.dmg",
       verified: "download.helloefficiency.com/ravenreader/"
