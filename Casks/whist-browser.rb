@@ -15,5 +15,13 @@ cask "whist-browser" do
     strategy :extract_plist
   end
 
+  auto_updates true
+
   app "Whist Browser.app"
+
+  zap trash: [
+    "~/Library/Application Support/Whist/Whist-Browser",
+    "~/Library/Preferences/com.whisttechnologies.whist.plist",
+    "~/Library/Saved Application State/com.whisttechnologies.whist.savedState",
+  ]
 end
