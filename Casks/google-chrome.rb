@@ -1,6 +1,6 @@
 cask "google-chrome" do
   version "105.0.5195.125"
-  sha256 :no_check
+  sha256 "20608ad289183f8fa20b193624a048fe204f590866e12efecd185e92f59ccc8a"
 
   url "https://dl.google.com/chrome/mac/universal/stable/GGRO/googlechrome.dmg"
   name "Google Chrome"
