@@ -1,6 +1,6 @@
 cask "cardinal" do
-  version "22.07"
-  sha256 "2d9207193a82bdcd0c237f667579d86db44664d96cabac98687e901d3485f0e6"
+  version "22.09"
+  sha256 "17cbec77f843ab2d1061c392f8ba22620a23fdf419510e8eb0e340bda79c6656"
 
   url "https://github.com/DISTRHO/Cardinal/releases/download/#{version}/Cardinal-macOS-universal-#{version}.pkg"
   name "Cardinal"
