@@ -11,8 +11,11 @@ cask "cardinal" do
 
   uninstall pkgutil: [
     "studio.kx.distrho.cardinal.resources",
+    "studio.kx.distrho.plugins.cardinal.clapbundles",
     "studio.kx.distrho.plugins.cardinal.components",
+    "studio.kx.distrho.plugins.cardinal.jack",
     "studio.kx.distrho.plugins.cardinal.lv2bundles",
+    "studio.kx.distrho.plugins.cardinal.native",
     "studio.kx.distrho.plugins.cardinal.vst2bundles",
     "studio.kx.distrho.plugins.cardinal.vst3bundles",
   ]
