@@ -5,11 +5,11 @@ cask "mutesync" do
 
   on_arm do
     url "https://mutesync.s3.us-west-2.amazonaws.com/mutesync-#{version}-arm64.dmg",
-      verified: "mutesync.s3.us-west-2.amazonaws.com/"
+        verified: "mutesync.s3.us-west-2.amazonaws.com/"
   end
   on_intel do
     url "https://mutesync.s3.us-west-2.amazonaws.com/mutesync-#{version}.dmg",
-      verified: "mutesync.s3.us-west-2.amazonaws.com/"
+        verified: "mutesync.s3.us-west-2.amazonaws.com/"
   end
 
   name "mütesync"
