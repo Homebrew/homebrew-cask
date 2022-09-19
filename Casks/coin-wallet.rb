@@ -1,6 +1,6 @@
 cask "coin-wallet" do
-  version "5.9.0"
-  sha256 "d211e5de79cf39d9770e80a338f503eeebe4b56b13ade78c2997c7afe6568917"
+  version "5.9.1"
+  sha256 "ca4f63d3d384ecad89b77d127227680120165e323f74721b5d34dd8b24f6239f"
 
   url "https://github.com/CoinSpace/CoinSpace/releases/download/v#{version}/Coin.Wallet.dmg",
       verified: "github.com/CoinSpace/CoinSpace/"
