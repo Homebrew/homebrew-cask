@@ -1,15 +1,26 @@
 cask "oxwu" do
-  arch arm: "arm", intel: "intel"
-
-  on_intel do
+    on_intel do
     version "3.0.0"
-    sha256 "f901d96c4856fb045edf26ce339dfac4c302d36a4e202d8365fef35e3c70b467"
-    url "http://eew.earthquake.tw/releases/autoupdates/OXWU-osx64-#{version}.zip"
+    sha256 :no_check
+    url "https://eew.earthquake.tw/releases/OXWU-Setup-osx64.dmg"
+
+    caveats do
+      discontinued
+
+      <<~EOS
+        Development has ended on the Intel version.
+      EOS
+    end
   end
   on_arm do
-    version :latest
+    version "4.0.2"
     sha256 :no_check
     url "https://eew.earthquake.tw/releases/mac/arm64/oxwu-mac-arm64.dmg"
+
+    livecheck do
+      url "https://eew.earthquake.tw/releases/mac/arm64/latest-mac.yml"
+      strategy :electron_builder
+    end
   end
 
   name "OX Wake Up"
