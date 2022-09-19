@@ -1,14 +1,14 @@
 cask "qq" do
-  version "6.8.2.21241_966"
-  sha256 "e6bc2827b3f73b10b548cb956ca280ebd0d22e08aafa95db6297324a26740f81"
+  version "6.8.3.4068"
+  sha256 "78a7f3d4c9c7a799bba7f8220fa165ba5eec746fca1e53532f34db04f79b9cd8"
 
-  url "https://dldir1.qq.com/qqfile/QQforMac/QQ_#{version}_EXP.dmg"
+  url "https://dldir1.qq.com/qqfile/qq/QQNT/QQ_#{version}_EXP.dmg"
   name "QQ"
   desc "Instant messaging tool"
   homepage "https://im.qq.com/macqq/"
 
   livecheck do
-    url "https://im.qq.com/rainbow/"
+    url :homepage
     regex(/QQ[._-]v?(\d+(?:[._]\d+)+)[._-]EXP\.dmg/i)
   end
 
