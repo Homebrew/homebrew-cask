@@ -7,6 +7,11 @@ cask "middleclick" do
   desc "Utility to extend trackpad functionality"
   homepage "https://github.com/artginzburg/MiddleClick-BigSur"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "MiddleClick.app"
 
   uninstall login_item: "MiddleClick",
