@@ -2,14 +2,14 @@ cask "qq" do
   version "6.8.3.4068"
   sha256 "78a7f3d4c9c7a799bba7f8220fa165ba5eec746fca1e53532f34db04f79b9cd8"
 
-  url "https://dldir1.qq.com/qqfile/qq/QQNT/QQ_#{version}_EXP.dmg"
+  url "https://dldir1.qq.com/qqfile/qq/QQNT/QQ_#{version}_exp.dmg"
   name "QQ"
   desc "Instant messaging tool"
   homepage "https://im.qq.com/macqq/"
 
   livecheck do
     url :homepage
-    regex(/QQ[._-]v?(\d+(?:[._]\d+)+)[._-]EXP\.dmg/i)
+    regex(/QQ[._-]v?(\d+(?:[._]\d+)+)[._-]exp\.dmg/i)
   end
 
   auto_updates true
