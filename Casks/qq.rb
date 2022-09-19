@@ -5,11 +5,11 @@ cask "qq" do
   url "https://dldir1.qq.com/qqfile/qq/QQNT/QQ_#{version}_exp.dmg"
   name "QQ"
   desc "Instant messaging tool"
-  homepage "https://im.qq.com/macqq/"
+  homepage "https://im.qq.com/macqq/index.shtml"
 
   livecheck do
     url :homepage
-    regex(/QQ[._-]v?(\d+(?:[._]\d+)+)[._-]exp\.dmg/i)
+    regex(%r{\sv\s(\d+(?:\.\d+)+)}i)
   end
 
   auto_updates true
