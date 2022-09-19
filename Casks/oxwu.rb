@@ -28,7 +28,7 @@ cask "oxwu" do
   homepage "https://eew.earthquake.tw/"
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :el_capitan"
 
   app "地牛Wake Up!.app"
 
