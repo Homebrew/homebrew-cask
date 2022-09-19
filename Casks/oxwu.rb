@@ -1,5 +1,5 @@
 cask "oxwu" do
-    on_intel do
+  on_intel do
     version "3.0.0"
     sha256 :no_check
     url "https://eew.earthquake.tw/releases/OXWU-Setup-osx64.dmg"
