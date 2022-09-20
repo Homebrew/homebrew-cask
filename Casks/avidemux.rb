@@ -7,9 +7,9 @@ cask "avidemux" do
         verified: "sourceforge.net/avidemux/"
   else
     version "2.8.1"
-    sha256 "816645f5eb2c903019d563ea5c684b5afbbdc1e52c90da9b387406559baf6574"
+    sha256 "b0b8890114172d531d138f6c1413f0393c0e5a87530168106a12d6b11ae44833"
 
-    url "https://downloads.sourceforge.net/avidemux/avidemux/#{version}/Avidemux_#{version}_BigSur_Qt6.dmg",
+    url "https://downloads.sourceforge.net/avidemux/avidemux/#{version}/Avidemux_#{version}v2_Monterey_Qt6.dmg",
         verified: "sourceforge.net/avidemux/"
   end
 
