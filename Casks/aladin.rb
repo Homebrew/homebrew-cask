@@ -1,5 +1,5 @@
 cask "aladin" do
-  version "12.000"
+  version "12.001"
   sha256 :no_check
 
   url "https://aladin.u-strasbg.fr/java/download/Aladin.dmg"
