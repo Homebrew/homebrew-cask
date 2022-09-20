@@ -1,16 +1,16 @@
 cask "element" do
-  version "1.11.2"
-  sha256 "ffecde430594c14dc9b71b70be376ce7515f20e00529128a0f256830de99a094"
+  version "1.11.5"
+  sha256 :no_check
 
-  url "https://packages.riot.im/desktop/install/macos/Element-#{version}-universal.dmg",
-      verified: "packages.riot.im/desktop/"
+  url "https://packages.riot.im/desktop/install/macos/Element.dmg",
+      verified: "packages.riot.im/desktop/install/macos/"
   name "Element"
   desc "Matrix collaboration client"
   homepage "https://element.io/get-started"
 
   livecheck do
-    url "https://packages.riot.im/desktop/install/macos"
-    regex(/Element[._-]\(?(\d+(?:\.\d+)*)[._-]universal\.dmg/i)
+    url :url
+    strategy :extract_plist
   end
 
   auto_updates true

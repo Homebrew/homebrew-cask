@@ -1,6 +1,6 @@
 cask "dictionaries" do
-  version "1.7,382,1615218055"
-  sha256 "fa5db82ef3927a3440e46f5190163c6ffcba4a073e6aeb8a12ba4d347c594581"
+  version "1.8,390,1663318178"
+  sha256 "90f906f8efc907855e6e170392446bb1734fabc5b4204861206735735a162825"
 
   url "https://dl.devmate.com/io.dictionaries.Dictionaries/#{version.csv.second}/#{version.csv.third}/Dictionaries-#{version.csv.second}.zip",
       verified: "dl.devmate.com/io.dictionaries.Dictionaries/"

@@ -6,10 +6,10 @@ cask "avidemux" do
     url "https://downloads.sourceforge.net/avidemux/avidemux/#{version}/Avidemux_#{version}_Mojava_64Bits_Qt5.dmg",
         verified: "sourceforge.net/avidemux/"
   else
-    version "2.8.0"
-    sha256 "23994f8e863dbe59a70d91f162b56cab14930c22925aa40007db07d01ced8e12"
+    version "2.8.1"
+    sha256 "816645f5eb2c903019d563ea5c684b5afbbdc1e52c90da9b387406559baf6574"
 
-    url "https://downloads.sourceforge.net/avidemux/avidemux/#{version}/Avidemux_#{version}_Catalina_64Bits_Qt6.dmg",
+    url "https://downloads.sourceforge.net/avidemux/avidemux/#{version}/Avidemux_#{version}_BigSur_Qt6.dmg",
         verified: "sourceforge.net/avidemux/"
   end
 
