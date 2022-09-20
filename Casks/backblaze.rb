@@ -1,5 +1,5 @@
 cask "backblaze" do
-  version "8.0.1.602"
+  version "8.5.0.628"
   sha256 :no_check
 
   url "https://secure.backblaze.com/mac/install_backblaze.dmg"
