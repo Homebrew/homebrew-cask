@@ -17,4 +17,13 @@ cask "plugdata" do
     "com.Octagon.lv2.pkg.PlugData",
     "com.Octagon.vst3.pkg.PlugData",
   ]
+
+  zap trash: [
+    "~/Library/Application Support/PlugData.settings",
+    "~/Library/Caches/PlugData",
+    "~/Library/Caches/com.PlugData.PlugDataStandalone",
+    "~/Library/HTTPStorages/com.PlugData.PlugDataStandalone",
+    "~/Library/PlugData",
+    "~/Library/Preferences/com.PlugData.PlugDataStandalone.plist",
+  ]
 end
