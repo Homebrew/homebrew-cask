@@ -44,8 +44,11 @@ cask "pycharm-ce" do
     "~/Library/Logs/JetBrains/PyCharmCE#{version.major_minor}",
     "~/Library/Logs/PyCharm#{version.major_minor}",
     "~/Library/Logs/PyCharmCE#{version.major_minor}",
+    "~/Library/Preferences/com.jetbrains.pycharm.ce.plist",
+    "~/Library/Preferences/jetbrains.jetprofile.asset.plist",
     "~/Library/Preferences/PyCharm#{version.major_minor}",
     "~/Library/Preferences/PyCharmCE#{version.major_minor}",
+    "~/Library/Saved Application State/com.jetbrains.pycharm.ce.savedState",
     "~/Library/Saved Application State/com.jetbrains.pycharm.savedState",
   ]
 end
