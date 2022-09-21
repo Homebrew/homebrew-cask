@@ -1,11 +1,8 @@
 cask "clay" do
-  arch arm: "-arm64"
+  version "2.0.0"
+  sha256 "b103d6321502ee4be5bb67b7465c6c3dde704275e0112cd48f9d926efbd6a738"
 
-  version "1.12.5"
-  sha256 arm:   "212cc82fd8bd247c4c2f2aa6b9dfdcf57e32f8b4e151b4d1cdc09c0887c4ddb0",
-         intel: "e42e216be55e9b1c2dbc92684e55078c9ab1195007f5b2cb839aa4a38afabcb1"
-
-  url "https://assets.clay.earth/desktop/mac/Clay-#{version}#{arch}.dmg"
+  url "https://assets.clay.earth/desktop/mac/Clay-#{version}-universal.dmg"
   name "clay"
   desc "Private rolodex to remember people better"
   homepage "https://clay.earth/"
