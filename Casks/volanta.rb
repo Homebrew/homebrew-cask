@@ -5,7 +5,7 @@ cask "volanta" do
   url "https://cdn.volanta.app/software/volanta-app/#{version.csv.first}-#{version.csv.second}/volanta-#{version.csv.first}.dmg"
   name "Volanta"
   desc "Personal flight tracker"
-  homepage "https://volanta.app/roadmap/"
+  homepage "https://volanta.app/"
 
   livecheck do
     url "https://api.volanta.app/api/v1/ClientUpdate/latest-mac.yml"
