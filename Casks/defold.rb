@@ -1,8 +1,8 @@
 cask "defold" do
-  version "1.3.5"
-  sha256 "4f07a004761370bd1c781c3f966a27b2b8e22f16f654c66424255c2e47dbed6c"
+  version "1.3.6"
+  sha256 "732882a2b8e32da97288f15591d1e45b36b0f45d843a5899746ad3ae1bf71185"
 
-  url "https://github.com/defold/defold/releases/download/#{version}/Defold-x86_64-darwin.dmg",
+  url "https://github.com/defold/defold/releases/download/#{version}/Defold-x86_64-macos.dmg",
       verified: "github.com/defold/defold/"
   name "Defold"
   desc "Game engine for development of desktop, mobile and web games"
