@@ -18,12 +18,10 @@ cask "dbvisualizer" do
   depends_on macos: ">= :el_capitan"
 
   app "DbVisualizer.app"
-  installer script: {
-    executable: "DbVisualizer.app/Contents/MacOS/JavaApplicationStub",
-    args:       ["-q", "-dir", staged_path.to_s],
-  }
 
-  uninstall signal: [["TERM", "com.dbvis.DbVisualizer"]]
-
-  zap trash: "~/.dbvis"
+  zap trash: [
+    "~/.dbvis",
+    "~/Library/Preferences/com.dbvis.DbVisualizer.plist",
+    "~/Library/Saved Application State/com.dbvis.DbVisualizer.savedState",
+  ]
 end
