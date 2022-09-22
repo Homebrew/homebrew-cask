@@ -13,4 +13,8 @@ cask "lunacy" do
   end
 
   app "Lunacy.app"
+
+  zap trash: [
+    '~/.local/share/Icons8/Lunacy'
+  ]
 end
