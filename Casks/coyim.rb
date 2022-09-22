@@ -6,7 +6,7 @@ cask "coyim" do
       verified: "github.com/coyim/coyim/"
   name "CoyIM"
   desc "Secure chat client"
-  homepage "https://coy.im"
+  homepage "https://coy.im/"
 
   app "CoyIM.app"
 end
