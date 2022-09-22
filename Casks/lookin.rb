@@ -4,6 +4,7 @@ cask "lookin" do
 
   url "https://cdn.lookin.work/release/Lookin-#{version.csv.first.dots_to_hyphens}.zip"
   name "Lookin"
+  desc "App for iOS view debugging"
   homepage "https://lookin.work/"
 
   livecheck do
