@@ -1,9 +1,9 @@
 cask "electronmail" do
   arch arm: "arm64", intel: "x64"
 
-  version "5.1.0"
-  sha256 arm:   "983e8d7ef24cc6efc32cc0606217522e23db399a8493f4bcd4dc3f2423a476a5",
-         intel: "ae227cbc3716c5afea3c3a5d450f382120f5ad796502c91bfd131483a45796a2"
+  version "5.1.1"
+  sha256 arm:   "550d06c34c980e540e84e4ca55a67727b52ddc2f023b3e0681bcfbe64df997b0",
+         intel: "79ed0143b54018b0a7914089ffc2156423d332f0287e26cd9b00d05b71fa27c2"
 
   url "https://github.com/vladimiry/ElectronMail/releases/download/v#{version}/electron-mail-#{version}-mac-#{arch}.dmg"
   name "ElectronMail"
