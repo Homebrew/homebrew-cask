@@ -1,9 +1,10 @@
 cask "lookin" do
   version "1.0.1,8"
-  sha256 "59368d8cd30e52e1852c79dce8bde02014d5bd282ae6306d0efed176e581a719"
+  sha256 "7932c8f7dce671170f464e6ecd5daa0eff847e31838e3570d308e46638e00670"
 
   url "https://cdn.lookin.work/release/Lookin-#{version.csv.first.dots_to_hyphens}.zip"
   name "Lookin"
+  desc "App for iOS view debugging"
   homepage "https://lookin.work/"
 
   livecheck do
