@@ -1,7 +1,7 @@
 cask "oxygen-xml-editor" do
   arch arm: "-aarch64"
 
-  version "24.1,2022072507"
+  version "24.1,2022092207"
   sha256 :no_check
 
   url "https://www.oxygenxml.com/InstData/Editor/MacOSX/VM/oxygen-openjdk#{arch}.dmg"
