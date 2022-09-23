@@ -11,7 +11,7 @@ cask "aleph-one" do
   livecheck do
     url :url
     strategy :github_latest
-    regex(%r{href=.*?/AlephOne-(\d+)-Mac\.dmg}i)
+    regex(%r{expanded_assets/release[._-](\d+(?:\d+)+)}i)
   end
 
   app "Aleph One.app"
