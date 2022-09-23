@@ -60,8 +60,8 @@ cask "cocktail" do
       regex(/macOS\s*11(?:\.\d+)*.*?(\d+(?:\.\d+)+)/i)
     end
   else
-    version "15.3.6"
-    sha256 "cbd0c61397c4cbd689801ecaa579a51a3ffcb6a96357fec1b1d915e69c9461ee"
+    version "15.3.7"
+    sha256 "74f0199b99a871ffa7f7be4f96496e5aa03d950dc3a6a8fb948391c770f8e026"
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}ME.dmg"
 
