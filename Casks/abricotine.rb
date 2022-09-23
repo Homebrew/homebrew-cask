@@ -10,9 +10,9 @@ cask "abricotine" do
 
   # We need to check all releases since not all releases are for macOS.
   livecheck do
-    url "https://github.com/brrd/Abricotine/releases"
+    url "https://github.com/brrd/Abricotine/releases?q=prerelease%3Afalse"
     strategy :page_match
-    regex(%r{href=.*?/Abricotine-(\d+(?:\.\d+)+)-mac\.zip}i)
+    regex(%r{expanded_assets/v(\d+(?:\.\d+)+)}i)
   end
 
   app "Abricotine.app"
