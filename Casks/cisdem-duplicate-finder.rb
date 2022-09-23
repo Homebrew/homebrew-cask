@@ -3,9 +3,14 @@ cask "cisdem-duplicate-finder" do
   sha256 :no_check
 
   url "https://download.cisdem.com/cisdem-duplicatefinder.dmg"
-  name "cisdem-duplicate-finder"
+  name "Cisdem Duplicate Finder"
   desc "Duplicate Finder"
   homepage "https://www.cisdem.com/duplicate-finder.html"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   depends_on macos: ">= :el_capitan"
 
