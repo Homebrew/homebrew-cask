@@ -1,6 +1,6 @@
 cask "0-ad" do
-  version "0.0.25b-alpha"
-  sha256 "d1a2073dee3435d8a78bf289206248c9ed6be5e17f4ba1ac8412caf6d0eae0b0"
+  version "0.0.26-alpha"
+  sha256 "f8f0f9237d33f3b2acabc1d5b50ee6da32768231d5610a2ff52d1e65df76bf2c"
 
   url "https://releases.wildfiregames.com/0ad-#{version}-osx64.dmg",
       verified: "releases.wildfiregames.com/"
