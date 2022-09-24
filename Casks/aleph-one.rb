@@ -10,7 +10,7 @@ cask "aleph-one" do
 
   livecheck do
     url :homepage
-    regex(%r{expanded_assets/release[._-](\d(?:\d+))}i)
+    regex(%r{href=.*?/AlephOne[._-]v?(\d+(?:\.\d+)*)[._-]Mac\.dmg}i)
   end
 
   app "Aleph One.app"
