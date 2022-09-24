@@ -1,6 +1,6 @@
 cask "usage" do
-  version "1.4.5.2"
-  sha256 "cd7d6516f7ec0b9d020afcdac6b7e430f92a5089de040cf31dbf06dbacae9d3c"
+  version "1.4.6"
+  sha256 "1a782b03b08b544eb1277c18576ce14e9388510f53f6e3bda4a6793bd2780c66"
 
   url "https://mediaatelier.com/Usage/Usage_#{version}.dmg"
   name "Usage"
