@@ -1,8 +1,8 @@
 cask "cheatsheet" do
   version "1.6.4"
-  sha256 "ae9bd05e21a7528e050938c927e09500120e2a1b19da540504883ddcfb1b5d68"
+  sha256 "0af341585bc93a6935266e280c2661642cd8496ceb37ccad4056ecf2f002ea34"
 
-  url "https://mediaatelier.com/CheatSheet/CheatSheet_#{version}.zip"
+  url "https://www.mediaatelier.com/CheatSheet/CheatSheet_#{version}.dmg"
   name "CheatSheet"
   desc "Tool to list all active shortcuts of the current application"
   homepage "https://www.mediaatelier.com/CheatSheet/"
