@@ -1,6 +1,6 @@
 cask "dcp-o-matic-editor" do
-  version "2.16.24"
-  sha256 "ddf2cab2ac4619ca6491b7b6819599b172acab07ee6fa03a5d8f07dac2496cec"
+  version "2.16.26"
+  sha256 "2157b3a21f54d5efd24c5cadeb390ea6abc3355b98c4d3ed66f81f0bf0a4ae6b"
 
   url "https://dcpomatic.com/dl.php?id=osx-10.10-editor&version=#{version}"
   name "DCP-o-matic Editor"
