@@ -9,8 +9,7 @@ cask "aleph-one" do
   homepage "https://alephone.lhowon.org/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url :homepage
     regex(%r{expanded_assets/release[._-](\d(?:\d+))}i)
   end
 
