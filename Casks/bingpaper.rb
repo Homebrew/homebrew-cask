@@ -7,16 +7,6 @@ cask "bingpaper" do
   desc "Use the Bing daily photo as your wallpaper"
   homepage "https://github.com/pengsrc/BingPaper"
 
-  livecheck do
-    url "https://github.com/pengsrc/BingPaper/releases/latest"
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/BingPaper\.v?(\d+(?:\.\d+)+)\.build\.(\d+)\.zip}i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
-    end
-  end
-
   depends_on macos: ">= :catalina"
 
   app "BingPaper.app"
@@ -31,4 +21,8 @@ cask "bingpaper" do
         "~/Library/Containers/io.pjw.mac.BingPaper",
         "~/Library/Containers/io.pjw.mac.BingPaperLoginItem",
       ]
+
+  caveats do
+    discontinued
+  end
 end
