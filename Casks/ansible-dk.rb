@@ -8,17 +8,11 @@ cask "ansible-dk" do
   desc "Omnibus-based toolkit for working on Ansible-based infrastructure code"
   homepage "https://github.com/omniti-labs/ansible-dk"
 
-  livecheck do
-    url "https://github.com/omniti-labs/ansible-dk/releases/latest"
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/ansible-dk-(\d+(?:\.\d+)+)-(\d+)\.dmg}i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
-    end
-  end
-
   pkg "ansible-dk-#{version.major_minor_patch}-1.pkg"
 
   uninstall pkgutil: "com.omniti.labs.ansible-dk"
+
+  caveats do
+    discontinued
+  end
 end
