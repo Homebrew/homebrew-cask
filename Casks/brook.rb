@@ -1,6 +1,6 @@
 cask "brook" do
   version "20220707"
-  sha256 "561781e131e28ed70f84138384123e3d434556ad599f83255cfb8185352ace88"
+  sha256 "7a643ea5931b468a17c0f752a3c39242721b0f1f538a5de1afeef82034a09c70"
 
   url "https://github.com/txthinking/brook/releases/download/v#{version}/Brook.dmg"
   name "Brook"
@@ -9,8 +9,8 @@ cask "brook" do
 
   livecheck do
     url :url
+    regex(%r{href=["']?[^"' >]*?/tag/v?(\d+)["' >]}i)
     strategy :github_latest
-    regex(%r{href=.*?/v?(\d+)/Brook\.dmg}i)
   end
 
   app "Brook.app"
