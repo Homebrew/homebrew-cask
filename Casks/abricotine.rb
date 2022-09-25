@@ -8,13 +8,6 @@ cask "abricotine" do
   desc "Markdown editor with inline preview"
   homepage "https://abricotine.brrd.fr/"
 
-  # We need to check all releases since not all releases are for macOS.
-  livecheck do
-    url "https://github.com/brrd/Abricotine/releases"
-    strategy :page_match
-    regex(%r{href=.*?/Abricotine-(\d+(?:\.\d+)+)-mac\.zip}i)
-  end
-
   app "Abricotine.app"
 
   zap trash: [
