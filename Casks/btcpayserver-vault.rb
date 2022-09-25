@@ -9,8 +9,8 @@ cask "btcpayserver-vault" do
 
   livecheck do
     url :url
+    regex(%r{href=["']?[^"' >]*?/tag/Vault/v?(\d+(?:\.\d+)+)["' >]}i)
     strategy :github_latest
-    regex(%r{href=.*?/BTCPayServerVault-osx-x64-(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "BTCPayServer Vault.app"
