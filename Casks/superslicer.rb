@@ -11,12 +11,13 @@ cask "superslicer" do
   homepage "https://github.com/supermerill/SuperSlicer"
 
   livecheck do
-    url "https://github.com/supermerill/SuperSlicer/releases/expanded_assets/#{version.csv.first}"
+    url "https://github.com/supermerill/SuperSlicer/tags"
+
     strategy :page_match do |page|
-      match = page.match(%r{href=.*?/SuperSlicer_(\d+(?:\.\d+)+)_macos_(\d+)\.dmg}i)
+      match = page.match(%r{href=["']?[^"' >]*?/tag/v?(\d+(?:\.\d+)+)["' >]}i)
       next if match.blank?
 
-      "#{match[1]},#{match[2]}"
+      "#{match[1]},#{version.csv.second}"
     end
   end
 
