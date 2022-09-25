@@ -11,14 +11,7 @@ cask "superslicer" do
   homepage "https://github.com/supermerill/SuperSlicer"
 
   livecheck do
-    url "https://github.com/supermerill/SuperSlicer/tags"
-
-    strategy :page_match do |page|
-      match = page.match(%r{href=["']?[^"' >]*?/tag/v?(\d+(?:\.\d+)+)["' >]}i)
-      next if match.blank?
-
-      "#{match[1]},#{version.csv.second}"
-    end
+    skip "Requires checking separate GitHub release asset list HTML"
   end
 
   depends_on formula: "zstd"
