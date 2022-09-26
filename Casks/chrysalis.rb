@@ -10,7 +10,6 @@ cask "chrysalis" do
   livecheck do
     url :url
     strategy :github_latest
-    regex(%r{href=.*?/Chrysalis-(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "Chrysalis.app"
