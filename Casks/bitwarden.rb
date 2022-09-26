@@ -9,9 +9,8 @@ cask "bitwarden" do
   homepage "https://bitwarden.com/"
 
   livecheck do
-    url "https://github.com/bitwarden/clients/releases"
-    strategy :page_match
-    regex(/href=.*?Bitwarden[._-]v?(\d+(?:\.\d+)+)-universal\.dmg/i)
+    url "https://vault.bitwarden.com/download/?app=desktop&platform=macos&variant=dmg"
+    strategy :header_match
   end
 
   auto_updates true
