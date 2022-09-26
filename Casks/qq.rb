@@ -9,7 +9,7 @@ cask "qq" do
 
   livecheck do
     url :homepage
-    regex(%r{QQNT/QQ[._-]v?(\d+(?:\.\d+)+)[._-]exp\.dmg}i)
+    regex(%r{v\s(\d+(?:\.\d+)+)\s}i)
   end
 
   auto_updates true
