@@ -15,4 +15,12 @@ cask "cisdem-duplicate-finder" do
   depends_on macos: ">= :el_capitan"
 
   app "Cisdem Duplicate Finder.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.cisdem.duplicatefinder",
+    "~/Library/Application Support/com.cisdem.duplicatefinder",
+    "~/Library/Caches/com.cisdem.duplicatefinder",
+    "~/Library/HTTPStorages/com.cisdem.duplicatefinder",
+    "~/Library/Preferences/com.cisdem.duplicatefinder.plist",
+  ]
 end
