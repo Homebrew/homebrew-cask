@@ -1,6 +1,6 @@
 cask "dbgate" do
-  version "5.1.2"
-  sha256 "f5cb4306bb484e3a06e7066e3870e2a1457c4f8563ba51401f783b9ef0a1d011"
+  version "5.1.3"
+  sha256 "d3eefc0ab8c29dddc573577658cbfd82244bd3aaf14e225399d013adb05c5922"
 
   url "https://github.com/dbgate/dbgate/releases/download/v#{version}/dbgate-#{version}-mac_universal.dmg",
       verified: "github.com/dbgate/dbgate/"
