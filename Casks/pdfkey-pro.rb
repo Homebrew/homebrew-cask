@@ -1,5 +1,5 @@
 cask "pdfkey-pro" do
-  version "4.5.0"
+  version "4.5,40500"
   sha256 :no_check
 
   url "https://pdfkey.com/PDFKeyPro.dmg"
