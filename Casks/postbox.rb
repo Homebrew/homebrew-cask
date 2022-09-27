@@ -1,6 +1,6 @@
 cask "postbox" do
-  version "7.0.57"
-  sha256 "f91d2659d0bea3bfd13f6109a895192dc288338332fbfa72ccd8cbe0722351a7"
+  version "7.0.58"
+  sha256 "fcb3ab2b7669924a34fb17c1bec4252044a1e47b4c74cd47385ed7b5dd414e81"
 
   url "https://d3nx85trn0lqsg.cloudfront.net/mac/postbox-#{version}-mac64.dmg",
       verified: "d3nx85trn0lqsg.cloudfront.net/mac/"
