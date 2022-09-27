@@ -1,5 +1,5 @@
 cask "detectx-swift" do
-  version "1.0982"
+  version "1.0983"
   sha256 :no_check
 
   url "https://s3.amazonaws.com/sqwarq.com/PublicZips/DetectX_Swift.dmg",
