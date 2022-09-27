@@ -5,6 +5,7 @@ cask "bitrix24" do
 
   url "https://dl.bitrix24.com/b24/bitrix24_desktop.dmg"
   name "Bitrix24"
+  desc "Online workspace for your business"
   homepage "https://www.bitrix24.com/apps/mobile-and-desktop-apps.php#desktop_app"
 
   livecheck do
