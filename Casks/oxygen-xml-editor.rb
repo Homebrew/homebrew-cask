@@ -20,5 +20,11 @@ cask "oxygen-xml-editor" do
     end
   end
 
+  depends_on macos: ">= :sierra"
+
   suite "Oxygen XML Editor"
+
+  caveats do
+    license "https://www.oxygenxml.com/eula.html"
+  end
 end
