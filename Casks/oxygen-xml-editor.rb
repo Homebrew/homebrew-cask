@@ -20,12 +20,7 @@ cask "oxygen-xml-editor" do
     end
   end
 
-  on_arm do
-    depends_on macos: ">= :big_sur"
-  end
-  on_intel do
-    depends_on macos: ">= :sierra"
-  end
+  depends_on macos: ">= :sierra"
 
   suite "Oxygen XML Editor"
 
