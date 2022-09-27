@@ -1,12 +1,17 @@
 cask "bitrix24" do
   # NOTE: "24" is not a version number, but an intrinsic part of the product name
-  version "11.1.41.57"
+  version "14.0.16.70"
   sha256 :no_check
 
   url "https://dl.bitrix24.com/b24/bitrix24_desktop.dmg"
-  appcast "https://www.bitrix24.com/osx_version.php"
   name "Bitrix24"
+  desc "Online workspace for your business"
   homepage "https://www.bitrix24.com/apps/mobile-and-desktop-apps.php#desktop_app"
+
+  livecheck do
+    url "https://www.bitrix24.com/osx_version.php"
+    strategy :sparkle
+  end
 
   app "Bitrix24.app"
 end
