@@ -1,6 +1,6 @@
 cask "silo" do
-  version "2022.2.0"
-  sha256 "07a1efac469aa6755be784b5d365df106f445c945852a9d9a150e39d515ca1b6"
+  version "2022.3.0"
+  sha256 "8115ede9bc050ea701c0e5847b1b48a57f67d64a791e06e39223a85640a5229e"
 
   url "https://nevercenter.com/silo/download/filearchive/Install_Silo_#{version.major}_#{version.minor}#{version.patch}_mac.dmg"
   name "Silo"
