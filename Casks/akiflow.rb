@@ -13,4 +13,11 @@ cask "akiflow" do
   end
 
   app "Akiflow.app"
+
+  zap trash: [
+    "~/Library/Application Support/Akiflow",
+    "~/Library/Preferences/Akiflow",
+    "~/Library/Preferences/com.akiflow.akiflow.plist",
+    "~/Library/Saved Application State/com.akiflow.akiflow.savedState",
+  ]
 end
