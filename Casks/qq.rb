@@ -1,6 +1,6 @@
 cask "qq" do
-  version "6.8.3.4068"
-  sha256 "78a7f3d4c9c7a799bba7f8220fa165ba5eec746fca1e53532f34db04f79b9cd8"
+  version "6.8.5.4200"
+  sha256 "d2904a9e5635fb13024b38e4cc7bdeb8fc1ff069f81324fc4d41451331c8a74a"
 
   url "https://dldir1.qq.com/qqfile/qq/QQNT/QQ_#{version}_exp.dmg"
   name "QQ"
@@ -8,7 +8,7 @@ cask "qq" do
   homepage "https://im.qq.com/macqq/index.shtml"
 
   livecheck do
-    url :homepage
+    url "https://im.qq.com/rainbow/ntQQDownload/"
     regex(%r{QQNT/QQ[._-]v?(\d+(?:\.\d+)+)[._-]exp\.dmg}i)
   end
 
