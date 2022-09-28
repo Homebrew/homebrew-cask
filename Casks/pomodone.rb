@@ -4,6 +4,7 @@ cask "pomodone" do
 
   url "https://app.pomodoneapp.com/installers/PomoDoneApp-#{version}.dmg"
   name "PomoDone"
+  desc "Pomodoro time tracker"
   homepage "https://pomodoneapp.com/"
 
   livecheck do
