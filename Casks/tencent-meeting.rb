@@ -31,4 +31,3 @@ cask "tencent-meeting" do
     "~/Library/Preferences/com.tencent.meeting.plist",
   ]
 end
-
