@@ -1,5 +1,5 @@
 cask "avidemux" do
-  if MacOS.version <= :mojave
+  if MacOS.version <= :big_sur
     version "2.7.4"
     sha256 "a5c5028ecc954b6658b4c0e6b04c1c186c42a12530e66a5379f51fe7a3ebfcd8"
 
