@@ -8,8 +8,8 @@ cask "qq" do
   homepage "https://im.qq.com/macqq/index.shtml"
 
   livecheck do
-    url :homepage
-    regex(%r{v\s(\d+(?:\.\d+)+)}i)
+    url "https://im.qq.com/rainbow/ntQQDownload/"
+    regex(%r{QQNT/QQ[._-]v?(\d+(?:\.\d+)+)[._-]exp\.dmg}i)
   end
 
   auto_updates true
