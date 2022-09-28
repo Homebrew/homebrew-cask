@@ -7,5 +7,10 @@ cask "akiflow" do
   desc "Time Blocking platform to save 2 hours every day"
   homepage "https://akiflow.com/"
 
+  livecheck do
+    url "https://akiflow.com/releases/download"
+    strategy :header_match
+  end
+
   app "Akiflow.app"
 end
