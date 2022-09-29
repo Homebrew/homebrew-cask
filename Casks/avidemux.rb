@@ -5,6 +5,10 @@ cask "avidemux" do
 
     url "https://downloads.sourceforge.net/avidemux/avidemux/#{version}/Avidemux_#{version}_Mojava_64Bits_Qt5.dmg",
         verified: "sourceforge.net/avidemux/"
+
+    livecheck do
+      skip "Legacy version for Big Sur and earlier"
+    end
   else
     version "2.8.1"
     sha256 "b0b8890114172d531d138f6c1413f0393c0e5a87530168106a12d6b11ae44833"
