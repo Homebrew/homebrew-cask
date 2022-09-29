@@ -17,7 +17,7 @@ cask "podman-desktop" do
   end
 
   depends_on formula: "podman"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :catalina"
 
   app "Podman Desktop.app"
 
