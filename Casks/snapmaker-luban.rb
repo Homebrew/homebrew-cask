@@ -8,11 +8,6 @@ cask "snapmaker-luban" do
   desc "3D printing software"
   homepage "https://luban.xyz/"
 
-  livecheck do
-    url "https://snapmaker.oss-cn-beijing.aliyuncs.com/snapmaker.com/download/luban/latest-mac.yml"
-    strategy :electron_builder
-  end
-
   auto_updates true
 
   app "Snapmaker Luban.app"
@@ -20,8 +15,8 @@ cask "snapmaker-luban" do
   zap trash: [
     "~/Library/Caches/com.snapmaker.luban",
     "~/Library/Caches/com.snapmaker.luban.ShipIt",
-    "~/Library/Preferences/com.snapmaker.luban.plist",
-    "~/Library/Preferences/com.snapmaker.luban.helper.plist",
     "~/Library/Preferences/ByHost/com.snapmaker.luban.ShipIt.*.plist",
+    "~/Library/Preferences/com.snapmaker.luban.helper.plist",
+    "~/Library/Preferences/com.snapmaker.luban.plist",
   ]
 end
