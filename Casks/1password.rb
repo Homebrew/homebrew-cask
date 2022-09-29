@@ -22,10 +22,13 @@ cask "1password" do
   app "1Password.app"
 
   zap trash: [
-    "~/Library/Application Scripts/2BUA8C4S2C.com.1password.browser-helper",
-    "~/Library/Application Scripts/2BUA8C4S2C.com.1password.1password",
+    "~/Library/Application Scripts/2BUA8C4S2C.com.1password.*",
+    "~/Library/Application Support/1Password",
+    "~/Library/Application Support/CrashReporter/1Password*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.1password.1password.sfl2",
     "~/Library/Containers/2BUA8C4S2C.com.1password.browser-helper",
     "~/Library/Containers/com.1password.1password",
     "~/Library/Group Containers/2BUA8C4S2C.com.1password",
+    "~/Library/Saved Application State/com.1password.1password.savedState",
   ]
 end
