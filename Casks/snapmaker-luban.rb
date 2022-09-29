@@ -1,11 +1,11 @@
 cask "snapmaker-luban" do
   version "4.4.0"
-  sha256 "6d37bbb0d0cb62116b36cf7d55119eabe3f9697518957da7b84cf279d787af06"
+  sha256 "2d5f0414ee91a1dc7673ce5b4175e1baaad5d769e45a88a38240d131184c647f"
 
-  url "https://snapmaker.oss-cn-beijing.aliyuncs.com/snapmaker.com/download/luban/Snapmaker-Luban-#{version}-mac.zip",
-      verified: "snapmaker.oss-cn-beijing.aliyuncs.com"
+  url "https://github.com/Snapmaker/Luban/releases/download/v#{version}/Snapmaker-Luban-#{version}-mac.zip",
+      verified: "github.com/Snapmaker/Luban/"
   name "Snapmaker Luban"
-  desc "Intuitive and Powerful 3D Printing Software"
+  desc "3D printing software"
   homepage "https://luban.xyz/"
 
   livecheck do
