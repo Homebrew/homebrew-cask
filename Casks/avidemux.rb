@@ -1,10 +1,14 @@
 cask "avidemux" do
-  if MacOS.version <= :mojave
+  if MacOS.version <= :big_sur
     version "2.7.4"
     sha256 "a5c5028ecc954b6658b4c0e6b04c1c186c42a12530e66a5379f51fe7a3ebfcd8"
 
     url "https://downloads.sourceforge.net/avidemux/avidemux/#{version}/Avidemux_#{version}_Mojava_64Bits_Qt5.dmg",
         verified: "sourceforge.net/avidemux/"
+
+    livecheck do
+      skip "Legacy version for Big Sur and earlier"
+    end
   else
     version "2.8.1"
     sha256 "b0b8890114172d531d138f6c1413f0393c0e5a87530168106a12d6b11ae44833"
