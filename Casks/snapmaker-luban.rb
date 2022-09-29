@@ -10,7 +10,7 @@ cask "snapmaker-luban" do
 
   livecheck do
     url "https://snapmaker.oss-cn-beijing.aliyuncs.com/snapmaker.com/download/luban/latest-mac.yml"
-    regex(/version: (\d+(?:\.\d+)+)/i)
+    strategy :electron_builder
   end
 
   auto_updates true
