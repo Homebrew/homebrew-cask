@@ -20,7 +20,7 @@ cask "micromamba" do
 
   caveats <<~EOS
     Please run the following to setup your shell:
-      micromamba shell init -s <your-shell> -p ~/micromamba
+      #{HOMEBREW_PREFIX}/bin/micromamba shell init -s <your-shell> -p ~/micromamba
     and restart your terminal.
 
     For more information, see:
