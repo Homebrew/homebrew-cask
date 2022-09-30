@@ -8,7 +8,7 @@ cask "notesnook" do
   url "https://github.com/streetwriters/notesnook/releases/download/v#{version}/notesnook_mac_#{arch}.dmg",
       verified: "github.com/streetwriters/notesnook/"
   name "Notesnook"
-  desc "End-to-end encrypted notepad"
+  desc "Privacy-focused note taking app"
   homepage "https://notesnook.com/"
 
   livecheck do
