@@ -1,22 +1,15 @@
 cask "dictionaries" do
-  version "1.8,390,1663318178"
-  sha256 "90f906f8efc907855e6e170392446bb1734fabc5b4204861206735735a162825"
+  version "2.0"
+  sha256 "bdddac7d12b9a30a1bea5d7150a2fa41b83461fbfcc8d3b6ae2fb99d4fe2b20e"
 
-  url "https://dl.devmate.com/io.dictionaries.Dictionaries/#{version.csv.second}/#{version.csv.third}/Dictionaries-#{version.csv.second}.zip",
-      verified: "dl.devmate.com/io.dictionaries.Dictionaries/"
+  url "https://download.dictionaries.io/mac/Dictionaries-#{version}.zip"
   name "Dictionaries"
   desc "Translate words without ever opening a dictionary"
   homepage "https://dictionaries.io/"
 
   livecheck do
-    url "https://updates.devmate.com/io.dictionaries.Dictionaries.xml"
-    regex(%r{/(\d+)/Dictionaries\d*?[_-]v?(\d+(?:\.\d+)*)\.(?:dmg|zip)}i)
-    strategy :sparkle do |item, regex|
-      match = item.url.match(regex)
-      next if match.blank?
-
-      "#{item.short_version},#{match[2]},#{match[1]}"
-    end
+    url "https://download.dictionaries.io/mac/"
+    regex(%r{href=.*?/Dictionaries-(\d+(?:\.\d+)+)\.zip}i)
   end
 
   app "Dictionaries.app"
@@ -25,4 +18,14 @@ cask "dictionaries" do
     "~/Library/Containers/io.dictionaries.Dictionaries",
     "~/Library/Preferences/io.dictionaries.Dictionaries.plist",
   ]
+
+  caveats do
+    license "https://dictionaries.io/terms"
+
+    <<~EOS
+      Version 2 is a major upgrade and requires a new license.
+      Previous versions of the application are discontinued and won't receive updates anymore.
+      See https://dictionaries.io/version2 for more details
+    EOS
+  end
 end
