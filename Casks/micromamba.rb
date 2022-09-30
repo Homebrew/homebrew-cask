@@ -1,9 +1,9 @@
 cask "micromamba" do
   arch arm: "arm64", intel: "64"
 
-  version "0.25.1"
-  sha256 arm:   "b39fb2f9f2bed41c5ad885f41f49ba751a4ba5ee01ee96ca8293a84aa603d1b2",
-         intel: "bd80ed9cb39748a40ae7dfd124aa18e453bf4793e281daf687710c81272e8be1"
+  version "0.26.0"
+  sha256 arm:   "4989c0a5c94d0917d7e1941036ea3adf3da287c4e8249ac680fc41134210ea60",
+         intel: "08b52c26ce58c5c0cb94ed420333a09897c48855ed5ed781f50a2ef7801349d7"
 
   url "https://micro.mamba.pm/api/micromamba/osx-#{arch}/#{version}",
       verified: "micro.mamba.pm/api/micromamba/"
@@ -20,7 +20,7 @@ cask "micromamba" do
 
   caveats <<~EOS
     Please run the following to setup your shell:
-      micromamba shell init -s <your-shell> -p ~/micromamba
+      #{HOMEBREW_PREFIX}/bin/micromamba shell init -s <your-shell> -p ~/micromamba
     and restart your terminal.
 
     For more information, see:
