@@ -8,6 +8,11 @@ cask "gdevelop" do
   desc "Open-source, cross-platform game engine designed to be used by everyone"
   homepage "https://gdevelop.io/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "GDevelop #{version.major}.app"
 
   zap trash: [
