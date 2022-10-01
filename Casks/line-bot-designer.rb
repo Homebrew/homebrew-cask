@@ -14,4 +14,8 @@ cask "line-bot-designer" do
   end
 
   app "LINE Bot Designer.app"
+
+  caveats do
+    discontinued
+  end
 end
