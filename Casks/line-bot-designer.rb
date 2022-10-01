@@ -8,11 +8,6 @@ cask "line-bot-designer" do
   desc "Prototype LINE bots"
   homepage "https://developers.line.biz/en/"
 
-  livecheck do
-    url "https://developers.line.biz/en/docs/messaging-api/download-bot-designer/"
-    regex(/LINE%20Bot%20Designer[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
-  end
-
   app "LINE Bot Designer.app"
 
   caveats do
