@@ -1,5 +1,5 @@
 cask "accurics" do
-  version "1.0.41"
+  version "1.0.42"
   sha256 "55ed7150504c5854aec2c2a03d496d04f8286031cdad5eadf302229af0415c4f"
 
   url "https://downloads.accurics.com/cli/#{version}/accurics-cli.dmg",
