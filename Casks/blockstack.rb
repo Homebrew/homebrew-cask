@@ -15,4 +15,8 @@ cask "blockstack" do
   depends_on macos: ">= :sierra"
 
   app "Blockstack.app"
+
+  caveats do
+    discontinued
+  end
 end
