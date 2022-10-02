@@ -1,5 +1,5 @@
 cask "pokemon-trading-card-game-online" do
-  version "2.89.0.5595"
+  version "2.92.0.5691"
   sha256 :no_check
 
   url "https://tcgo-installer.s3.amazonaws.com/PokemonInstaller_Mac.dmg",
