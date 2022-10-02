@@ -5,14 +5,14 @@ cask "blockstack" do
   url "https://github.com/blockstack/blockstack-browser/releases/download/v#{version}/Blockstack-for-macOS-v#{version}.dmg",
       verified: "github.com/blockstack/blockstack-browser/"
   name "Blockstack"
+  desc "Explore the Blockstack internet"
   homepage "https://blockstack.org/"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 
   depends_on macos: ">= :sierra"
 
   app "Blockstack.app"
+
+  caveats do
+    discontinued
+  end
 end
