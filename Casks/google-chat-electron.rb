@@ -10,6 +10,11 @@ cask "google-chat-electron" do
   desc "Standalone app for Google Chat"
   homepage "https://github.com/ankurk91/google-chat-electron"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :catalina"
 
   app "google-chat-electron.app"
