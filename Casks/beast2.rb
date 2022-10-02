@@ -9,6 +9,11 @@ cask "beast2" do
   desc "Bayesian evolutionary analysis by sampling trees"
   homepage "https://www.beast2.org/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   suite "BEAST #{version}"
 
   zap trash: [
