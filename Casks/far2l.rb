@@ -14,10 +14,12 @@ cask "far2l" do
   desc "Unix fork of FAR Manager v2"
   homepage "https://github.com/elfmz/far2l"
 
+  # This check should be updated to avoid unstable versions if/when stable
+  # versions become available in the future.
   livecheck do
     url "https://github.com/elfmz/far2l/releases"
+    regex(%r{href=["']?[^"' >]*?/tree/[^"' >]*?(\d+(?:\.\d+)+)(?:[._-]?(?:alpha|beta))?["' >]}i)
     strategy :page_match
-    regex(/far2l[._-](\d+(?:\.\d+)+)[._-](alpha|beta)[._-]MacOS[._-]10\.(11|15)\.dmg/i)
   end
 
   depends_on macos: ">= :el_capitan"
