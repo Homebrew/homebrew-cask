@@ -10,7 +10,7 @@ cask "firefly" do
 
   livecheck do
     url :url
-    regex(/href=.*?firefly-desktop[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(%r{href=.*?/tag/desktop[._-]v?(\d+(?:\.\d+)+)["' >]}i)
     strategy :github_latest
   end
 
