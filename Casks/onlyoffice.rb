@@ -12,9 +12,9 @@ cask "onlyoffice" do
   homepage "https://www.onlyoffice.com/"
 
   livecheck do
-    url "https://github.com/ONLYOFFICE/DesktopEditors/releases/"
-    strategy :page_match
-    regex(%r{v?(\d+(?:\.\d+)+)/ONLYOFFICE-#{arch}\.dmg}i)
+    url :url
+    regex(%r{href=["']?[^"' >]*?/tag/[^"' >]*?(\d+(?:\.\d+)+)["' >]}i)
+    strategy :github_latest
   end
 
   auto_updates true
