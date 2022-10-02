@@ -17,15 +17,12 @@ cask "eloston-chromium" do
   homepage "https://ungoogled-software.github.io/ungoogled-chromium-binaries/"
 
   livecheck do
-    url "https://github.com/kramred/ungoogled-chromium-macos/releases/"
-    strategy :page_match do |page|
-      match = page.match(%r{
-        releases/download/(\d+(?:[.-]\d+)+)[._-]#{arch}[._-]{2}(\d+)/
-        ungoogled[._-]chromium[._-](\d+(?:[.-]\d+)+)[._-]#{arch}[._-]macos\.dmg
-      }xi)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
+    url "https://github.com/kramred/ungoogled-chromium-macos/releases?q=prerelease%3Afalse"
+    regex(%r{href=["']?[^"' >]*?/tree/v?(\d+(?:[.-]\d+)+)(?:[._-]#{arch})?(?:[._-]+?(\d+(?:\.\d+)*))?["' >]}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map do |match|
+        (match.length > 1) ? "#{match[0]},#{match[1]}" : match[0]
+      end
     end
   end
 
