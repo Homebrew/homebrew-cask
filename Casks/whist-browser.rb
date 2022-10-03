@@ -1,7 +1,7 @@
 cask "whist-browser" do
   arch arm: "arm64", intel: "x64"
 
-  version "102.1.41.11,300.15"
+  version "102.1.41.11,300.16"
   sha256 :no_check
 
   url "https://whist-browser-macos-#{arch}-prod.s3.amazonaws.com/Whist-latest-#{arch}.dmg",
