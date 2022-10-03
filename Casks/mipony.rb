@@ -4,7 +4,13 @@ cask "mipony" do
 
   url "https://download.mipony.net/downloads/mac/Mipony-Installer.pkg"
   name "Mipony"
+  desc "Download manager"
   homepage "https://www.mipony.net/en/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   pkg "Mipony-Installer.pkg"
 
