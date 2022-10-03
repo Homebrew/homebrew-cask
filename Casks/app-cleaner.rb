@@ -1,5 +1,5 @@
 cask "app-cleaner" do
-  version "7.8.2,883"
+  version "8.0,1886"
   sha256 :no_check
 
   url "https://nektony.com/download/app-cleaner-uninstaller/app-cleaner-uninstaller.dmg"
@@ -8,7 +8,7 @@ cask "app-cleaner" do
   homepage "https://nektony.com/mac-app-cleaner"
 
   livecheck do
-    url "https://nektony.com/pro-support/app-cleaner/update/update.xml"
+    url "https://download.nektony.com/pro-support/v3/app-cleaner/update/update.xml"
     strategy :sparkle
   end
 
