@@ -1,6 +1,6 @@
 cask "querious" do
-  version "3.3"
-  sha256 "66cedc5213800c9298495e623c7ab7595d49c7ce69f7b17ee3e85f281a1d0982"
+  version "3.3.1"
+  sha256 "38fae26c271359ea7d40d7ac9ff16c2bbb13433c1d6ce3178acb1e8e3f998742"
 
   url "https://www.araelium.com/querious/downloads/versions/Querious#{version}.zip"
   name "Querious #{version.major}"
