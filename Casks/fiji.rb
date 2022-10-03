@@ -13,5 +13,7 @@ cask "fiji" do
     regex(/(\d{8}-\d{4})/i)
   end
 
+  auto_updates true
+
   app "Fiji.app"
 end
