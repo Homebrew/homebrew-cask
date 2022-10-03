@@ -1,13 +1,13 @@
 cask "framer" do
   arch arm: "arm64", intel: "x64"
 
-  version "2022.22.1"
+  version "2022.39.1"
   sha256 :no_check
 
   url "https://updates.framer.com/electron/darwin/#{arch}/Framer.zip"
   name "Framer"
   desc "Tool that helps teams design every part of the product experience"
-  homepage "https://www.framer.com/desktop/downloads/"
+  homepage "https://www.framer.com/"
 
   livecheck do
     url :url
