@@ -4,6 +4,7 @@ cask "programmer-dvorak" do
 
   url "https://kaufmann.no/downloads/macos/ProgrammerDvorak-#{version.dots_to_underscores}.pkg.zip"
   name "Programmer Dvorak"
+  desc "Keyboard layout for programmers"
   homepage "https://kaufmann.no/roland/dvorak/"
 
   livecheck do
@@ -25,10 +26,9 @@ cask "programmer-dvorak" do
 
   uninstall pkgutil: "com.apple.keyboardlayout.Programmer Dvorak",
             delete:  [
-              "/Library/Keyboard Layouts/Programmer Dvorak.bundle/",
               "/Library/Caches/com.apple.IntlDataCache*",
+              "/Library/Keyboard Layouts/Programmer Dvorak.bundle",
               "/System/Library/Caches/com.apple.IntlDataCache.le*",
-              "/private/var/folders/*/*/-Caches-/com.apple.IntlDataCache.le*",
             ]
 
   caveats do
