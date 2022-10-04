@@ -10,8 +10,7 @@ cask "inso" do
 
   livecheck do
     url "https://github.com/Kong/insomnia/releases?q=prerelease%3Afalse+Inso+CLI"
-    regex(%r{href=["']?[^"' >]*?/tag/lib@v?(\d+(?:\.\d+)+)["' >]}i)
-    strategy :github_latest
+    regex(%r{lib@v?(\d+(?:\.\d+)+)}i)
   end
 
   conflicts_with cask: "homebrew/cask-versions/inso-beta"
