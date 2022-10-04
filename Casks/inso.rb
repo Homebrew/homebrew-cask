@@ -9,7 +9,6 @@ cask "inso" do
   homepage "https://insomnia.rest/products/inso"
 
   livecheck do
-    url "https://github.com/Kong/insomnia/releases?q=prerelease%3Afalse+Inso+CLI"
     regex(%r{lib@v?(\d+(?:\.\d+)+)}i)
   end
 
