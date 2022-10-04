@@ -4,7 +4,7 @@ cask "samplebrain" do
 
   url "https://static.thentrythis.org/samplebrain/samplebrain_#{version}_macintel.app.zip"
   name "samplebrain"
-  desc "A custom sample mashing app designed by Aphex Twin"
+  desc "Custom sample mashing app designed by Aphex Twin"
   homepage "https://thentrythis.org/projects/samplebrain/"
 
   app "samplebrain.app"
