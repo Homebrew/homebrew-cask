@@ -7,9 +7,9 @@ cask "qlvideo" do
   homepage "https://github.com/Marginal/QLVideo"
 
   livecheck do
-    url "https://github.com/Marginal/QLVideo/releases/latest"
+    url "https://api.github.com/repos/Marginal/QLVideo/releases"
     strategy :page_match do |page|
-      match = page.match(%r{href=.*?/QLVideo_(\d+?)(\d+)\.pkg}i)
+      match = page.match(/QLVideo_(\d+?)(\d+)\.pkg/i)
       next if match.blank?
 
       "#{match[1]}.#{match[2]}"
