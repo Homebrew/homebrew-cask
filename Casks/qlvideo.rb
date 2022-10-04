@@ -4,6 +4,7 @@ cask "qlvideo" do
 
   url "https://github.com/Marginal/QLVideo/releases/download/rel-#{version.no_dots}/QLVideo_#{version.no_dots}.pkg"
   name "QuickLook Video"
+  desc "QuickLook generator for video files"
   homepage "https://github.com/Marginal/QLVideo"
 
   livecheck do
