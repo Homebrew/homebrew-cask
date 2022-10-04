@@ -10,11 +10,9 @@ cask "gargoyle" do
   desc "IO layer for interactive fiction players"
   homepage "https://github.com/garglk/garglk"
 
-  # We need to check all releases since not all releases are for macOS.
   livecheck do
-    url "https://github.com/garglk/garglk/releases"
-    strategy :page_match
-    regex(/href=.*?gargoyle[._-]v?(\d+(?:\.\d+)+)-#{arch}\.dmg/i)
+    url :url
+    strategy :github_latest
   end
 
   app "Gargoyle.app"
