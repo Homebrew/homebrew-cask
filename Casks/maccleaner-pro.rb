@@ -14,7 +14,7 @@ cask "maccleaner-pro" do
 
   depends_on macos: ">= :el_capitan"
 
-  app "MacCleaner #{version.major} Pro"
+  app "MacCleaner Pro"
 
   zap trash: [
     "~/Library/Application Scripts/com.nektony.MacCleaner-PRO-SII",
