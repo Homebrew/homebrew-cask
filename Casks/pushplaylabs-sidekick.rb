@@ -3,12 +3,12 @@ cask "pushplaylabs-sidekick" do
   livecheck_folder = on_arch_conditional arm: "macm1", intel: "mac"
 
   on_intel do
-    version "104.29.2.24655,a1bd6de"
-    sha256 "5032f0d1bc1d6cd28e2e274a8a8c609db87ba391e21932621af9f8c84d080bcf"
+    version "104.29.3.24853,7d82970"
+    sha256 "24bb27fd59e822e6023da7b95202659624f25671a0da5fbcf2087f75316739f4"
   end
   on_arm do
-    version "104.29.2.24654,9fd1641"
-    sha256 "64491b0c1d38e136341b660fab3f68bc1a222ef73f3fa2e8939371d02cb78a66"
+    version "104.29.3.24852,ebd959c"
+    sha256 "34ae40e632eabfc0b9fbb0348d300f4705af0beb7edab0019cafb7e1d19de386"
   end
 
   url "https://fast-cdn.meetsidekick.com/builds/sidekick-mac-release-#{arch}-#{version.csv.first}-#{version.csv.second}-df.dmg"
