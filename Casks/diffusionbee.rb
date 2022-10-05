@@ -4,9 +4,11 @@ cask "diffusionbee" do
 
   url "https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/releases/download/#{version}/DiffusionBee-#{version}-arm64.dmg",
       verified: "github.com/divamgupta/diffusionbee-stable-diffusion-ui"
-  name "diffusionbee"
-  desc "Run Stable Diffusion locally on your M1 Mac"
+  name "Diffusion Bee"
+  desc "Run Stable Diffusion locally"
   homepage "https://diffusionbee.com/"
+
+  depends_on arch: :arm64
 
   app "DiffusionBee.app"
 
