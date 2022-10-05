@@ -6,8 +6,8 @@ cask "openrct2" do
     url "https://github.com/OpenRCT2/OpenRCT2/releases/download/v#{version}/OpenRCT2-#{version}-macos-x86-64.zip",
         verified: "github.com/OpenRCT2/OpenRCT2/"
   else
-    version "0.4.1"
-    sha256 "c0c4e91ab2ded14872c2e3e82549479ac5b82a44d9377403deba5a8e92077db6"
+    version "0.4.2"
+    sha256 "6f16c13fc14b710ae676b300ab628e171906a4b2f508dd5e5e33c4d79767583a"
     url "https://github.com/OpenRCT2/OpenRCT2/releases/download/v#{version}/OpenRCT2-#{version}-macos-universal.zip",
         verified: "github.com/OpenRCT2/OpenRCT2/"
   end
