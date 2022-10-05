@@ -11,12 +11,5 @@ cask "laravel-kit" do
   desc "Desktop Laravel admin panel app"
   homepage "https://tmdh.github.io/laravel-kit"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
-  auto_updates false
-
   app "Laravel Kit.app"
 end
