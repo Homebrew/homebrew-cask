@@ -5,10 +5,18 @@ cask "calibre" do
   on_high_sierra :or_older do
     version "3.48.0"
     sha256 "68829cd902b8e0b2b7d5cf7be132df37bcc274a1e5720b4605d2dd95f3a29168"
+
+    livecheck do
+      skip "Legacy version for High Sierra and earlier"
+    end
   end
   on_mojave :or_older do
     version "5.44.0"
     sha256 "89d7772ba1b95d219b34e285353340a174a013e06b4d8ad370433b3b98c94ad4"
+
+    livecheck do
+      skip "Legacy version for Mojave"
+    end
   end
 
   url "https://download.calibre-ebook.com/#{version}/calibre-#{version}.dmg"
