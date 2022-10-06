@@ -12,7 +12,7 @@ cask "battery" do
   app "Battery.app"
 
   license "MIT"
-  zap trash: [
+  uninstall delete: [
     "~/.battery",
     "~/Library/Application Support/battery",
     "~/Library/LaunchAgents/battery.plist",
