@@ -11,6 +11,10 @@ cask "bartender" do
 
     url "https://macbartender.com/B2/updates/#{version.dots_to_hyphens}/Bartender%20#{version.major}.zip",
         referer: "https://www.macbartender.com"
+
+    livecheck do
+      skip "Legacy version for El Capitan and earlier"
+    end
   end
   on_catalina :or_older do
     version "3.1.25,31125"
@@ -18,6 +22,10 @@ cask "bartender" do
 
     url "https://macbartender.com/B2/updates/#{version.csv.first.dots_to_hyphens}/Bartender%20#{version.major}.zip",
         referer: "https://www.macbartender.com"
+
+    livecheck do
+      skip "Legacy version for Sierra through Catalina"
+    end
   end
 
   name "Bartender"
