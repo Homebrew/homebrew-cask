@@ -1,22 +1,13 @@
 cask "calibre" do
-  version "6.6.1"
-  sha256 "473944fd3db5af232e8c3101b4e8e060e1b37b3dd191e2df2e6e2e82c6d7026a"
-
-  on_high_sierra :or_older do
+  if MacOS.version <= :high_sierra
     version "3.48.0"
     sha256 "68829cd902b8e0b2b7d5cf7be132df37bcc274a1e5720b4605d2dd95f3a29168"
-
-    livecheck do
-      skip "Legacy version for High Sierra and earlier"
-    end
-  end
-  on_mojave :or_older do
+  elsif MacOS.version <= :mojave
     version "5.44.0"
     sha256 "89d7772ba1b95d219b34e285353340a174a013e06b4d8ad370433b3b98c94ad4"
-
-    livecheck do
-      skip "Legacy version for Mojave"
-    end
+  else
+    version "6.6.1"
+    sha256 "473944fd3db5af232e8c3101b4e8e060e1b37b3dd191e2df2e6e2e82c6d7026a"
   end
 
   url "https://download.calibre-ebook.com/#{version}/calibre-#{version}.dmg"
