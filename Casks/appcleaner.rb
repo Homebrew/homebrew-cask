@@ -5,10 +5,6 @@ cask "appcleaner" do
   on_sierra :or_older do
     version "3.4"
     sha256 "0c60d929478c1c91e0bad76d3c04795665c07a05e45e33321db845429c9aefa8"
-
-    livecheck do
-      skip "Legacy version for Sierra and earlier"
-    end
   end
 
   url "https://www.freemacsoft.net/downloads/AppCleaner_#{version.csv.first}.zip"
