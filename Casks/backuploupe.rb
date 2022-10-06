@@ -12,6 +12,8 @@ cask "backuploupe" do
     strategy :sparkle
   end
 
+  auto_updates true
+
   app "BackupLoupe.app"
 
   uninstall delete: [
