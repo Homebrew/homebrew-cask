@@ -10,4 +10,15 @@ cask "battery" do
   depends_on arch: :arm64
 
   app "Battery.app"
+
+  license "MIT"
+  zap trash: [
+    "~/.battery",
+    "~/Library/Application Support/battery",
+    "~/Library/LaunchAgents/battery.plist",
+    "~/Library/Preferences/co.palokaj.battery.plist",
+    "~/Library/Preferences/org.mentor.Battery.plist",
+    "~/Library/Saved Application State/co.palokaj.battery.savedState",
+    "/usr/local/bin/smc",
+  ]
 end
