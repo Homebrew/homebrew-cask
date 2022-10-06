@@ -9,6 +9,10 @@ cask "apparency" do
     sha256 "31704bc2d9594bf185bd6dfa6541c986749d524ecdab11cff18c5a5c095e0157"
 
     url "https://www.mothersruin.com/software/downloads/Apparency-#{version}.dmg"
+
+    livecheck do
+      skip "Legacy version for Mojave and earlier"
+    end
   end
 
   name "Apparency"
