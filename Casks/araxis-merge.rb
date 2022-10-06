@@ -1,38 +1,19 @@
 cask "araxis-merge" do
-  version "2022.5786"
-  sha256 "a8a65089d7965a3ecdf3b65dbeaed54f4f31d0bc7b85c9d970aa999ab5cfa4df"
-
-  on_el_capitan :or_older do
+  if MacOS.version <= :el_capitan
     version "2018.5008"
     sha256 "db47fa9e0d90313a3eb0239248e2cb23489d3ca695ebe9a1299e188efd4a4bb2"
-
-    livecheck do
-      skip "Legacy version for El Capitan and earlier"
-    end
-  end
-  on_sierra do
+  elsif MacOS.version <= :sierra
     version "2019.5137"
     sha256 "e3be039c7e6c8a42c172b8d18cfdad0d98fe05b1a74d1e6801d323752c0438b2"
-
-    livecheck do
-      skip "Legacy version for Sierra"
-    end
-  end
-  on_high_sierra do
+  elsif MacOS.version <= :high_sierra
     version "2020.5350"
     sha256 "916cbada651214ce55282ccb93923e22ab17a1ee1227217f5dd949b8f7de7fcb"
-
-    livecheck do
-      skip "Legacy version for High Sierra"
-    end
-  end
-  on_mojave do
+  elsif MacOS.version <= :mojave
     version "2021.5602"
     sha256 "06c56e6d08057090f3718b6db560e2a79551f953d4c83c0fad8b60f415c59347"
-
-    livecheck do
-      skip "Legacy version for Mojave"
-    end
+  else
+    version "2022.5786"
+    sha256 "a8a65089d7965a3ecdf3b65dbeaed54f4f31d0bc7b85c9d970aa999ab5cfa4df"
   end
 
   url "https://www.araxis.com/download/Merge#{version}-macOS.dmg"
