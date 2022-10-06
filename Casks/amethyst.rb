@@ -10,6 +10,10 @@ cask "amethyst" do
     sha256 "9fd1ac2cfb8159b2945a4482046ee6d365353df617f4edbabc4e8cadc448c1e7"
 
     url "https://ianyh.com/amethyst/versions/Amethyst-#{version}.zip"
+
+    livecheck do
+      skip "Legacy version for El Capitan and earlier"
+    end
   end
 
   name "Amethyst"
