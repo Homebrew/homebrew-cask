@@ -9,9 +9,9 @@ cask "yacreader" do
   homepage "https://www.yacreader.com/"
 
   livecheck do
-    url "https://github.com/YACReader/yacreader/releases"
+    url "https://www.yacreader.com/downloads"
     strategy :page_match
-    regex(%r{href=.*?/YACReader[._-]v?(\d+(?:\.\d+)+)[._-]MacOSX[._-]Intel\.dmg}i)
+    regex(%r{href=.*?/YACReader[._-]v?(\d+(?:\.\d+)+)[._-]MacOSX[._-]Intel\.Qt6\.dmg}i)
   end
 
   app "YACReader.app"
