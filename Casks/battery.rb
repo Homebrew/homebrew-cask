@@ -11,14 +11,14 @@ cask "battery" do
 
   app "Battery.app"
 
-  license "MIT"
-  uninstall delete: [
+  uninstall delete: "/usr/local/bin/smc"
+
+  zap trash: [
     "~/.battery",
     "~/Library/Application Support/battery",
     "~/Library/LaunchAgents/battery.plist",
     "~/Library/Preferences/co.palokaj.battery.plist",
     "~/Library/Preferences/org.mentor.Battery.plist",
     "~/Library/Saved Application State/co.palokaj.battery.savedState",
-    "/usr/local/bin/smc",
   ]
 end
