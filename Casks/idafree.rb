@@ -1,9 +1,9 @@
 cask "idafree" do
   arch arm: "arm_idafree", intel: "idafree"
 
-  version "8.0"
-  sha256 arm:   "afc2093e26521af320d7f4515bd618fb5c9132965981558e874fc375e0554f48",
-         intel: "70137e02202e218034d2eb6e6e23aa41728b022186a71b987c3754aa20219357"
+  version "8.1"
+  sha256 arm:   "962c595b6b1b10f5710cc3d5e298179f1c5a5b5971893c09ff84ed8df9a7c6ec",
+         intel: "3ac543a77f5d3b03a1285b7ba4f5dd3dafa603bad9a99a0a1ab55bc7920cfb27"
 
   url "https://out7.hex-rays.com/files/#{arch}#{version.no_dots}_mac.app.zip"
   name "IDA Free"
