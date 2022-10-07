@@ -1,14 +1,13 @@
 cask "calhash" do
-  version "1.1.8"
-  sha256 "52d28938f2901cd2365261f856b6a4f41d5a6d2357dd43cb1193102d5bbfce40"
-
-  on_catalina :or_older do
+  if MacOS.version <= :catalina
     version "1.0.5"
     sha256 "bb15c18839837bdeda203a8a916b09b4f2b971e5bba10b603f290130939d3bf7"
-  end
-  on_big_sur :or_older do
+  elsif MacOS.version <= :big_sur
     version "1.1.1"
     sha256 "66b2de6f514119b3ddf915310b94486d24d3cc6733c74af97e367b76cb2d7478"
+  else
+    version "1.1.8"
+    sha256 "52d28938f2901cd2365261f856b6a4f41d5a6d2357dd43cb1193102d5bbfce40"
   end
 
   url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete(".")}/CalHash.dmg"
