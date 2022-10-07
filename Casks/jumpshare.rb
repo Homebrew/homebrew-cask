@@ -1,6 +1,6 @@
 cask "jumpshare" do
-  version "3.2.3,136"
-  sha256 "0a5519561eb16a1e3030c8e9e3bcc5ece5d5ce05af219c4ba19577057f83ba28"
+  version "3.2.4,138"
+  sha256 "6770c83ca24f3e3d255b5b1762b6971d3a155a49e17be9599b6a2aab3952184b"
 
   url "https://d21hi1or3tbtjm.cloudfront.net/desktop/mac/updates/Jumpshare-#{version.csv.first}.tar.bz2",
       verified: "d21hi1or3tbtjm.cloudfront.net/"
