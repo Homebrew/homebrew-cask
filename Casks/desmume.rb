@@ -1,8 +1,8 @@
 cask "desmume" do
-  version "0_9_13"
+  version "0.9.13"
   sha256 "d42e4bbf8f96b6bfdb3c8be6cf469b606a3b105352460636b1051b8dd0365ebc"
 
-  url "https://github.com/TASEmulators/desmume/releases/download/release_#{version}/desmume-#{version.tr("_", ".")}-macOS.dmg",
+  url "https://github.com/TASEmulators/desmume/releases/download/release_#{version.tr(".", "_")}/desmume-#{version}-macOS.dmg",
       verified: "github.com/TASEmulators/desmume/"
   name "DeSmuME"
   desc "Nintendo DS emulator"
@@ -10,8 +10,10 @@ cask "desmume" do
 
   livecheck do
     url :url
-    regex(%r{href=.*?/tag/release[._-]v?(\d+(?:_\d+)+)["' >]}i)
-    strategy :github_latest
+    regex(%r{href=["']?[^"' >]*?/tag/[^"' >]*?(\d+(?:[._-]\d+)+[a-z]?)["' >]}i)
+    strategy :github_latest do |page, regex|
+      page.scan(regex).map { |match| match[0].tr("_", ".") }
+    end
   end
 
   app "DeSmuME.app"
