@@ -9,11 +9,9 @@ cask "mcreator" do
   homepage "https://mcreator.net/"
 
   livecheck do
-    url "https://github.com/MCreator/MCreator/releases/"
-    regex(%r{v?(\d+(?:\.\d+)+)/MCreator\.v?(\d+(?:\.\d+)+)\.Mac\.64bit\.dmg}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| match[0].to_s }
-    end
+    url "https://mcreator.net/changelog/"
+    regex(/>v?(\d+(?:\.\d+)+)</i)
+    strategy :page_match
   end
 
   app "MCreator.app"
