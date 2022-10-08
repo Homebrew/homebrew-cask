@@ -9,7 +9,7 @@ cask "subsync" do
   homepage "https://subsync.online/"
 
   livecheck do
-    url "https://github.com/sc0ty/subsync/releases/"
+    url "https://subsync.online/en/download.html"
     strategy :page_match
     regex(%r{href=.*?/subsync[._-]v?(\d+(?:\.\d+)+)-mac-x86_64\.dmg}i)
   end
