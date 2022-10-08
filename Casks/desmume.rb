@@ -9,9 +9,11 @@ cask "desmume" do
   homepage "https://desmume.org/"
 
   livecheck do
-    url "https://github.com/TASEmulators/desmume/releases/"
-    strategy :page_match
-    regex(/desmume[._-]v?(\d+(?:\.\d+)+)[._-]macOS\.dmg/i)
+    url :url
+    regex(%r{href=["']?[^"' >]*?/tag/[^"' >]*?(\d+(?:[._-]\d+)+[a-z]?)["' >]}i)
+    strategy :github_latest do |page, regex|
+      page.scan(regex).map { |match| match[0].tr("_", ".") }
+    end
   end
 
   app "DeSmuME.app"
