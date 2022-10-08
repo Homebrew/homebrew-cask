@@ -9,7 +9,7 @@ cask "insomnia" do
   homepage "https://insomnia.rest/"
 
   livecheck do
-    regex(/core@v?(\d+(?:\.\d+)+)/i)
+    regex(/core@v?(\d+(?:\.\d+)+)(?!.)/i)
   end
 
   auto_updates true
