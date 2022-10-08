@@ -12,8 +12,7 @@ cask "darktable" do
   homepage "https://www.darktable.org/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://www.darktable.org/install/"
     regex(/href=.*?darktable[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
