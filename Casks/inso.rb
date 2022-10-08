@@ -9,7 +9,7 @@ cask "inso" do
   homepage "https://insomnia.rest/products/inso"
 
   livecheck do
-    regex(/lib@v?(\d+(?:\.\d+)+)/i)
+    regex(/lib@v?(\d+(?:\.\d+)+)(?!.)/i)
   end
 
   conflicts_with cask: "homebrew/cask-versions/inso-beta"
