@@ -7,6 +7,12 @@ cask "only-switch" do
   desc "System and utility switches"
   homepage "https://github.com/jacklandrin/OnlySwitch"
 
+  livecheck do
+    url :url
+    regex(%r{href=["']?[^"' >]*?/tag/release[._-]v?(\d+(?:\.\d+)+)["' >]}i)
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :monterey"
 
   app "Only Switch.app"
