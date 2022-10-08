@@ -11,7 +11,6 @@ cask "metaz" do
   livecheck do
     url :homepage
     regex(/href=.*?MetaZ[._-]v?(.+)\.zip/i)
-    strategy :page_match
   end
 
   app "MetaZ.app"
