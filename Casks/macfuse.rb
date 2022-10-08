@@ -10,8 +10,8 @@ cask "macfuse" do
 
   livecheck do
     url :url
+    regex(%r{href=["']?[^"' >]*?/tag/macfuse[._-]v?(\d+(?:\.\d+)+)["' >]}i)
     strategy :github_latest
-    regex(%r{href=.*?/macfuse[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   auto_updates true
