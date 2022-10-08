@@ -12,7 +12,7 @@ cask "oracle-jdk" do
 
   livecheck do
     url "https://www.oracle.com/java/technologies/javase/#{version.major}u-relnotes.html"
-    regex(/<li>\s*JDK\s*v?(\d+(?:\.\d+)*)/i)
+    regex(/\n<li>\s*JDK\s*v?(\d+(?:\.\d+)*)/i)
   end
 
   depends_on macos: ">= :mojave"
