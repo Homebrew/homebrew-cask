@@ -24,6 +24,7 @@ cask "apparency" do
   depends_on macos: ">= :mojave"
 
   app "Apparency.app"
+  binary "#{appdir}/Apparency.app/Contents/MacOS/appy"
 
   zap trash: [
     "~/Library/Application Scripts/com.mothersruin.Apparency",
