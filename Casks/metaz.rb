@@ -9,9 +9,9 @@ cask "metaz" do
   homepage "https://metaz.maven-group.org/"
 
   livecheck do
-    url :url
+    url :homepage
     regex(/href=.*?MetaZ[._-]v?(.+)\.zip/i)
-    strategy :github_latest
+    strategy :page_match
   end
 
   app "MetaZ.app"
