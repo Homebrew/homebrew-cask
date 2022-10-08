@@ -11,7 +11,6 @@ cask "mcreator" do
   livecheck do
     url "https://mcreator.net/changelog/"
     regex(/>v?(\d+(?:\.\d+)+)</i)
-    strategy :page_match
   end
 
   app "MCreator.app"
