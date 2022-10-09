@@ -36,8 +36,5 @@ cask "krisp" do
     "~/Library/HTTPStorages/ai.krisp.krispMac.uninstaller",
     "~/Library/Preferences/ai.krisp.krispMac.plist",
     "~/Library/LaunchAgents/ai.krisp.krispMac.cameraAssistant.plist",
-    "/var/db/receipts/ai.krisp.krispMac.*",
-    "/var/db/receipts/ai.krisp.krispMacLaunch.*",
-    "/var/db/receipts/ai.krisp.krispMacVideo.*",
   ]
 end
