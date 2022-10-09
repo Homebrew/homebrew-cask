@@ -14,4 +14,6 @@ cask "datovka" do
   end
 
   app "datovka.app"
+
+  zap trash: "~/Library/Saved Application State/cz.nic.datovka.savedState"
 end
