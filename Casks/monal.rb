@@ -1,15 +1,15 @@
 cask "monal" do
-  version "5.3.3,821"
+  version "821"
   sha256 :no_check
 
-  url "https://monal.im/macOS/Monal-macOS.zip"
+  url "https://downloads.monal-im.org/monal-im/beta/macOS/Monal-#{version}.zip"
   name "Monal"
   desc "Tool to securely connect to chat servers"
-  homepage "https://monal.im/"
+  homepage "https://monal-im.org/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://downloads.monal-im.org/monal-im/beta/macOS/latest.txt"
+    regex(/^(\d+)$/i)
   end
 
   depends_on macos: ">= :catalina"
