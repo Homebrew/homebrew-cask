@@ -27,4 +27,14 @@ cask "krisp" do
               "ai.krisp.krispMacLaunch",
               "ai.krisp.krispMacVideo",
             ]
+
+  zap trash: [
+    "~/Library/Application Scripts/ai.krisp.krispMac.LaunchHelper",
+    "~/Library/Application Support/ai.krisp.krispMac",
+    "~/Library/Caches/ai.krisp.krispMac",
+    "~/Library/Containers/ai.krisp.krispMac.LaunchHelper",
+    "~/Library/HTTPStorages/ai.krisp.krispMac.uninstaller",
+    "~/Library/LaunchAgents/ai.krisp.krispMac.cameraAssistant.plist",
+    "~/Library/Preferences/ai.krisp.krispMac.plist",
+  ]
 end
