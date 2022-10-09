@@ -34,7 +34,7 @@ cask "krisp" do
     "~/Library/Caches/ai.krisp.krispMac",
     "~/Library/Containers/ai.krisp.krispMac.LaunchHelper",
     "~/Library/HTTPStorages/ai.krisp.krispMac.uninstaller",
-    "~/Library/Preferences/ai.krisp.krispMac.plist",
     "~/Library/LaunchAgents/ai.krisp.krispMac.cameraAssistant.plist",
+    "~/Library/Preferences/ai.krisp.krispMac.plist",
   ]
 end
