@@ -27,6 +27,7 @@ cask "krisp" do
               "ai.krisp.krispMacLaunch",
               "ai.krisp.krispMacVideo",
             ]
+
   zap trash: [
     "~/Library/Application Scripts/ai.krisp.krispMac.LaunchHelper",
     "~/Library/Application Support/ai.krisp.krispMac",
