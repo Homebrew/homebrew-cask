@@ -10,6 +10,11 @@ cask "kui" do
   desc "Hybrid command-line/UI development experience for cloud-native development"
   homepage "https://github.com/kubernetes-sigs/kui"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Kui-darwin-#{arch}/Kui.app"
   binary "#{appdir}/Kui.app/Contents/Resources/kubectl-kui"
 
