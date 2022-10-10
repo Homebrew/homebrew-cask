@@ -15,14 +15,15 @@ cask "v2rayu" do
 
   app "V2rayU.app"
 
-  uninstall delete:    [
-              "~/Library/LaunchAgents/yanue.v2rayu.v2ray-core.plist",
-              "~/Library/Preferences/net.yanue.V2rayU.plist",
-              "~/Library/Logs/V2rayU.log",
-              "~/.V2rayU/",
-            ],
-            launchctl: [
-              "yanue.v2rayu.v2ray-core",
-              "yanue.v2rayu.http",
-            ]
+  uninstall launchctl: [
+    "yanue.v2rayu.v2ray-core",
+    "yanue.v2rayu.http",
+  ]
+
+  zap trash: [
+    "~/Library/LaunchAgents/yanue.v2rayu.v2ray-core.plist",
+    "~/Library/Preferences/net.yanue.V2rayU.plist",
+    "~/Library/Logs/V2rayU.log",
+    "~/.V2rayU/",
+  ]
 end
