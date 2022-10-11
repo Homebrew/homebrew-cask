@@ -21,7 +21,7 @@ cask "nomachine" do
             launchctl: [
               "com.nomachine.nxnode",
               "com.nomachine.nxplayer",
-              "come.nomachine.nxrunner",
+              "com.nomachine.nxrunner",
               "com.nomachine.nxserver",
               "com.nomachine.localnxserver",
               "com.nomachine.uninstall",
