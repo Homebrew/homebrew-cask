@@ -32,6 +32,7 @@ cask "nomachine" do
               "com.nomachine.nxserver",
               "com.nomachine.localnxserver",
               "com.nomachine.uninstall",
+              "com.nomachine.server"
             ]
 
   zap trash: [
