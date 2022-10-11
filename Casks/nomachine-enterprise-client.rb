@@ -23,6 +23,7 @@ cask "nomachine-enterprise-client" do
             ],
 
             launchctl: [
-              "com.nomachine.*",
+              "com.nomachine.uninstall",
+              "com.nomachine.launchconf",
             ]
 end
