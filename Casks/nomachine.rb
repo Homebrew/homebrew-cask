@@ -33,6 +33,7 @@ cask "nomachine" do
               "com.nomachine.localnxserver",
               "com.nomachine.uninstall",
               "com.nomachine.server",
+              "com.nomachine.nxlaunchconf",
             ]
 
   zap trash: [
