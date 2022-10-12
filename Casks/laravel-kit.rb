@@ -2,10 +2,10 @@ cask "laravel-kit" do
   arch arm: "-arm64", intel: ""
 
   version "2.0.7"
-  sha256 arm:   "906209ab2ac81803caffa95227c414dabe7161f5dba075500507d7241b11828a",
-         intel: "fe0a3f8a210c646bfd6e449046a18523f4e4ca2d68d65ade14773b889e6b39d8"
+  sha256 arm:   "f4e91f92e5e85609567c173812a7dcfdae6c1b1103dca71a9b56890fa27e1198",
+         intel: "7f3073655b32191360c378897a819fe4560ffad1e784469bad7a9089d0b31ca4"
 
-  url "https://github.com/tmdh/laravel-kit/releases/download/v#{version}/laravel-kit-#{version}#{arch}-mac.zip",
+  url "https://github.com/tmdh/laravel-kit/releases/download/v#{version}/laravel-kit-#{version}#{arch}.dmg",
       verified: "github.com/tmdh/laravel-kit/"
   name "Laravel Kit"
   desc "Desktop Laravel admin panel app"
