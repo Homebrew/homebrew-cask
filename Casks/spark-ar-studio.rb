@@ -14,7 +14,7 @@ cask "spark-ar-studio" do
     end
   end
 
-  app "Spark AR Studio.app"
+  app "Meta Spark Studio.app"
 
   zap trash: [
     "~/Library/Caches/com.facebook.arstudio.skylight",
