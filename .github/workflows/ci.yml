@@ -36,7 +36,7 @@ jobs:
         id: generate-matrix
         run: |
           brew tap homebrew/cask
-          brew ruby -- "$(brew --repository homebrew/cask)/cmd/lib/generate-matrix.rb" "${{ github.event.pull_request.url }}"
+          brew ruby -- "$(brew --repository homebrew/cask)/cmd/lib/generate-matrix.rb" "${{ github.event.pull_request.url }}" "${GITHUB_OUTPUT}"
 
   test:
     name: ${{ matrix.name }}
@@ -65,14 +65,14 @@ jobs:
               echo '::warning::Removing Visual Studio is no longer necessary.'
             fi
           fi
-          
+
           if ! brew uninstall --cask julia && ! rm -r /Applications/Julia-*.app; then
             echo '::warning::Removing Julia is no longer necessary.'
           fi
 
           if ! rm /usr/local/share/man/man1/al.1 || \
              ! sudo rm /etc/paths.d/mono-commands || \
-             ! sudo rm -r /Library/Frameworks/Mono.framework || \
+             ! sudo rm -r /Library/Frameworks/Mono.framework || \
              ! sudo pkgutil --forget com.xamarin.mono-MDK.pkg; then
             echo '::warning::Uninstalling Mono is no longer necessary.'
           fi
@@ -168,13 +168,16 @@ jobs:
             cask_dependencies = cask_and_formula_dependencies.select { |d| d.is_a?(Cask::Cask) }.map(&:full_name)
             formula_dependencies = cask_and_formula_dependencies.select { |d| d.is_a?(Formula) }.map(&:full_name)
 
-            puts "::set-output name=was_installed::#{JSON.generate(was_installed)}"
-            puts "::set-output name=manual_installer::#{JSON.generate(manual_installer)}"
-            puts "::set-output name=macos_requirement_satisfied::#{JSON.generate(macos_requirement_satisfied)}"
-            puts "::set-output name=cask_conflicts::#{JSON.generate(cask_conflicts)}"
-            puts "::set-output name=cask_dependencies::#{JSON.generate(cask_dependencies)}"
-            puts "::set-output name=formula_conflicts::#{JSON.generate(formula_conflicts)}"
-            puts "::set-output name=formula_dependencies::#{JSON.generate(formula_dependencies)}"
+            github_output = ENV.fetch("GITHUB_OUTPUT") { raise "GITHUB_OUTPUT is not defined" }
+            File.open(github_output, "a") do |f|
+              f.puts "was_installed=#{JSON.generate(was_installed)}"
+              f.puts "manual_installer=#{JSON.generate(manual_installer)}"
+              f.puts "macos_requirement_satisfied=#{JSON.generate(macos_requirement_satisfied)}"
+              f.puts "cask_conflicts=#{JSON.generate(cask_conflicts)}"
+              f.puts "cask_dependencies=#{JSON.generate(cask_dependencies)}"
+              f.puts "formula_conflicts=#{JSON.generate(formula_conflicts)}"
+              f.puts "formula_dependencies=#{JSON.generate(formula_dependencies)}"
+            end
           EOF
         if: always() && steps.fetch.outcome == 'success' && matrix.cask
 
@@ -199,8 +202,11 @@ jobs:
       - name: Take snapshot of installed and running apps and services
         id: snapshot
         run: |
-          brew ruby -r "$(brew --repository homebrew/cask)/cmd/lib/check.rb" <<'EOF'
-            puts "::set-output name=before::#{JSON.generate(Check.all)}"
+          brew ruby -r "$(brew --repository homebrew/cask)/cmd/lib/check.rb" <<'EOF' -- $GITHUB_OUTPUT
+            github_output, = ARGV
+            File.open(github_output, "a") do |f|
+              f.puts "before=#{JSON.generate(Check.all)}"
+            end
           EOF
         if: always() && steps.info.outcome == 'success'
 

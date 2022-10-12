@@ -5,7 +5,7 @@ require "utils/github/api"
 
 require_relative "ci_matrix"
 
-pr_url, = ARGV
+pr_url, github_output, = ARGV
 
 labels = if pr_url
   pr = GitHub::API.open_rest(pr_url)
@@ -42,4 +42,7 @@ end
 syntax_job[:name] += " (#{syntax_job[:runner]})"
 
 puts JSON.pretty_generate(matrix)
-puts "::set-output name=matrix::#{JSON.generate(matrix)}"
+
+File.open(github_output, "a") do |f|
+  f.puts "matrix=#{JSON.generate(matrix)}"
+end

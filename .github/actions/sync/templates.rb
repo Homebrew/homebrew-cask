@@ -63,4 +63,7 @@ modified_paths.each do |modified_path|
 end
 puts
 
-puts '::set-output name=pull_request::true'
+github_output = ENV.fetch("GITHUB_OUTPUT") { raise "GITHUB_OUTPUT is not defined" }
+File.open(github_output, "a") do |f|
+  f.puts "pull_request=true"
+end
