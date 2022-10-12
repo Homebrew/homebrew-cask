@@ -1,6 +1,6 @@
 cask "detail" do
-  version "3.4.0"
-  sha256 "82daf6a81f1bd94527620bc6e09a03ab7e618993a3dbad9fbac35327bef7bed0"
+  version "3.4.1"
+  sha256 "8481188321764822613326e5205b862b5ce2c0794a5274432c2f524712142def"
 
   url "https://detail-builds.s3.amazonaws.com/mac/#{version}/Detail.pkg",
       verified: "detail-builds.s3.amazonaws.com/mac/"
