@@ -1,5 +1,5 @@
 cask "spark-ar-studio" do
-  version "147"
+  version "148"
   sha256 :no_check
 
   url "https://www.facebook.com/sparkarmacos/download/"
@@ -14,7 +14,7 @@ cask "spark-ar-studio" do
     end
   end
 
-  app "Spark AR Studio.app"
+  app "Meta Spark Studio.app"
 
   zap trash: [
     "~/Library/Caches/com.facebook.arstudio.skylight",
