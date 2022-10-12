@@ -1,6 +1,6 @@
 cask "easyeda" do
-  version "6.5.15"
-  sha256 "6f6d69f566e95a6e34f61469cd9a28a29cd6d4eabbd3ab75530306ebdc1eed4f"
+  version "6.5.17"
+  sha256 "6b90f2b82beb3f8ead2406429dc60dcd29e859b6d959e82b6dbee399ed8c10fc"
 
   url "https://image.easyeda.com/files/easyeda-mac-x64-#{version}.zip"
   name "EasyEDA"
