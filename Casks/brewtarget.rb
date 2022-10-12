@@ -7,5 +7,5 @@ cask "brewtarget" do
   desc "Beer recipe creation tool"
   homepage "https://github.com/Brewtarget/brewtarget/"
 
-  app "brewtarget.app"
+  app "brewtarget_#{version}.app"
 end
