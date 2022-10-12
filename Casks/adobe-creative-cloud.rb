@@ -12,7 +12,7 @@ cask "adobe-creative-cloud" do
 
   livecheck do
     url "https://helpx.adobe.com/creative-cloud/release-note/cc-release-notes.html"
-    regex(/Version\s*(\d+(?:\.\d+)+),?\s+(?:(?:was\s+)?released|for\s+macOS)/i)
+    regex(/Version.(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
