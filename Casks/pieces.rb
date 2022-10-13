@@ -15,4 +15,3 @@ cask "pieces" do
 
   binary "pieces"
 end
-
