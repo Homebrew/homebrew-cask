@@ -19,16 +19,20 @@ cask "free-gpgmail" do
   # cask `version` (based on the execution environment). As such, this won't
   # surface a new major version and that will need to be handled manually.
   livecheck do
-    url "https://github.com/Free-GPGMail/Free-GPGMail/releases?q=prerelease%3Afalse"
+    url "https://github.com/Free-GPGMail/Free-GPGMail/releases/latest"
     regex(/href=.*?Free-GPGMail[._-]v?(\d+)[_-](\d+(?:\.\d+)+)([_-][^"' >]+?)?[._-]mailbundle\.zip/i)
-    strategy :page_match do |page, regex|
-      version_suffix = version.csv.third&.sub(/^[_-]/, "")
-      page.scan(regex).map do |match|
-        next if match[0] != version.csv.first
-        next if match[2]&.sub(/^[_-]/, "") != version_suffix
+    strategy :header_match do |headers, regex|
+      next if headers["location"].blank?
 
-        "#{match[0]},#{match[1]},#{match[2]}"
-      end
+      # Identify the latest tag from the response's `location` header
+      latest_tag = File.basename(headers["location"])
+      next if latest_tag.blank?
+
+      # Fetch the assets list HTML for the latest tag and match within it
+      assets_page = Homebrew::Livecheck::Strategy.page_content(
+        @url.sub(%r{/releases/?.+}, "/releases/expanded_assets/#{latest_tag}"),
+      )
+      assets_page[:content]&.scan(regex)&.map { |match| "#{match[0]},#{match[1]}," }
     end
   end
 
