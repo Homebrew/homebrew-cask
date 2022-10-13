@@ -7,6 +7,11 @@ cask "chipmunk" do
   desc "Log analysis tool"
   homepage "https://github.com/esrlabs/chipmunk/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
 
   app "chipmunk.app"
