@@ -1,6 +1,6 @@
 cask "protopie" do
-  version "7.3.0"
-  sha256 "c3e81a9d11c6d3304996d5355e908bb117abd70da839d39b43c3c00ed6b5dd07"
+  version "7.3.1"
+  sha256 "090bbb4b2da573fed22181110ebef0d2a7f21214c492e47b86ba5a82efbf1e4d"
 
   url "https://release.protopie.io/ProtoPie-#{version}.dmg"
   name "ProtoPie"
