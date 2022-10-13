@@ -1,6 +1,6 @@
 cask "silnite" do
-  version "7,2022.06"
-  sha256 "f4123d7063f9d48747581fda77605b5141dc16adcb3a17e3930ffaacc375767b"
+  version "8a,2022.10"
+  sha256 "8a301e41f4a20bf1243d943d4890303eaf1c4bcc26c3067d0a353ea11bbf5a1b"
 
   url "https://eclecticlightdotcom.files.wordpress.com/#{version.csv.second.major}/#{version.csv.second.minor}/silnite#{version.csv.first}.zip",
       verified: "eclecticlightdotcom.files.wordpress.com/"
@@ -20,7 +20,8 @@ cask "silnite" do
 
   depends_on macos: ">= :el_capitan"
 
-  pkg "silnite#{version.csv.first}/silniteInstaller.pkg"
+  # Revert to #{version.csv.first} with next release
+  pkg "silnite#{version.csv.first.chomp("a")}/silniteInstaller.pkg"
 
   uninstall pkgutil: "co.eclecticlight.pkg.silniteInstaller"
 end
