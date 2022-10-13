@@ -4,7 +4,7 @@ cask "sparkmailapp" do
 
   url "https://downloads.sparkmailapp.com/Spark3/mac/dist/#{version}/Spark.zip"
   name "Spark Mail"
-  desc "Fast, cross-platform email designed to filter out the noise - so you can focus on what's important"
+  desc "Fast, cross-platform email designed to filter out the noise - so you can focus on what's important."
   homepage "https://sparkmailapp.com/"
 
   livecheck do
