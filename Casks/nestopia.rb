@@ -2,7 +2,7 @@ cask "nestopia" do
   version "1.4.4"
   sha256 :no_check
 
-  url "https://www.bannister.org/software/dlq/nestopia-144.zip"
+  url "https://www.bannister.org/software/dlq/nestopia-#{version.no_dots}.zip"
   name "Nestopia"
   desc "Nintendo Entertainment System (NES) emulator"
   homepage "https://www.bannister.org/software/nestopia.htm"
