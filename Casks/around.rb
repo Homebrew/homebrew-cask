@@ -1,8 +1,10 @@
 cask "around" do
+  arch arm: "-arm64"
+
   version "0.59.35"
   sha256 :no_check
 
-  url "https://downloads.around.co/Around-mac-installer.zip"
+  url "https://downloads.around.co/Around#{arch}.dmg"
   name "Around"
   desc "Video calls designed for energy, ideas and action"
   homepage "https://www.around.co/"
@@ -14,10 +16,9 @@ cask "around" do
 
   auto_updates true
 
-  installer manual: "Install Around.app"
+  app "Around.app"
 
-  uninstall quit:   "co.teamport.around",
-            delete: "/Applications/Around.app"
+  uninstall quit: "co.teamport.around"
 
   zap trash: [
     "~/Library/Application Support/Around",
