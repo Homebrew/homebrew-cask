@@ -1,6 +1,6 @@
 cask "nestopia" do
   version "1.4.4"
-  sha256 :no_check
+  sha256 "fa05e849e68898abd851c18894b8fe22fb3ad7a17006f5584977f4d8b3bc4754"
 
   url "https://www.bannister.org/software/dlq/nestopia-#{version.no_dots}.zip"
   name "Nestopia"
