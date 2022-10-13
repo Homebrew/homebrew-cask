@@ -1,11 +1,11 @@
 cask "pieces" do
-  version "1.2.1"
-  sha256 "a8248ab589b38a322b83bb77c03e752e32f2e6b83b4a9030affd0f5825c6da27"
+  version "1.2.3"
+  sha256 "6c8c484cd796338d3fec91b247e75bcd26c1bef284c74950157bdb5d2ab5702e"
 
-  url "https://storage.googleapis.com/app-releases-59612ba/pieces-cli/release/pieces-#{version}.tar.gz", verified: "storage.googleapis.com/app-releases-59612ba/pieces-cli/"
+  url "https://storage.googleapis.com/app-releases-59612ba/pieces-cli/release/pieces-mac-#{version}.tar.gz", verified: "storage.googleapis.com/app-releases-59612ba/pieces-cli/"
   name "pieces"
-  desc "A command line tool for Pieces.app"
-  homepage "https://code.pieces.app"
+  desc "Command-line tool for Pieces.app"
+  homepage "https://code.pieces.app/"
 
   livecheck do
     url "https://code.pieces.app/cli-version"
@@ -15,3 +15,4 @@ cask "pieces" do
 
   binary "pieces"
 end
+
