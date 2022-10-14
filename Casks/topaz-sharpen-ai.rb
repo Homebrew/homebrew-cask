@@ -3,7 +3,7 @@ cask "topaz-sharpen-ai" do
   sha256 :no_check
 
   url "https://downloads.topazlabs.com/deploy/TopazSharpenAI/latest/TopazSharpenAI-Full-Installer.dmg"
-  name "topaz-sharpen-ai"
+  name "Topaz Sharpen AI"
   desc "AI-powered image sharpener that produces natural results"
   homepage "https://www.topazlabs.com/sharpen-ai"
 
