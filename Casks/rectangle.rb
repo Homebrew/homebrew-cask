@@ -1,6 +1,6 @@
 cask "rectangle" do
-  version "0.59,65"
-  sha256 "e8ae07278a968dffc1b28c66496c8efca9b7059ba30a7309dbfc423241f74da2"
+  version "0.60,66"
+  sha256 "c95dc3835a755e56f586e90946d5ad05450cdb3d88fe66f53797bc12da98c3fe"
 
   url "https://github.com/rxhanson/Rectangle/releases/download/v#{version.csv.first}/Rectangle#{version.csv.first}.dmg",
       verified: "github.com/rxhanson/Rectangle/"
