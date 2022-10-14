@@ -1,6 +1,6 @@
 cask "mullvadvpn" do
-  version "2022.4"
-  sha256 "5eaf48182a13985b224f8c37047851f792ec27d51c9c0fbcf1195d7740e9fcff"
+  version "2022.5"
+  sha256 "cb24d235878da53172440bce652243ef8e2d33b93e5e93e810dec6e981041792"
 
   url "https://github.com/mullvad/mullvadvpn-app/releases/download/#{version}/MullvadVPN-#{version}.pkg",
       verified: "github.com/mullvad/mullvadvpn-app/"
