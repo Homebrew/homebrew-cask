@@ -9,7 +9,7 @@ cask "planet" do
   homepage "https://www.planetable.xyz/"
 
   livecheck do
-    url :stable
+    url :url
     regex(/^release-(\d+(?:[.-]\d+)+)$/i)
   end
 
@@ -17,7 +17,5 @@ cask "planet" do
 
   app "Planet.app"
 
-  zap trash: [
-    "~/Library/Containers/xyz.planetable.Planet",
-  ]
+  zap trash: "~/Library/Containers/xyz.planetable.Planet"
 end
