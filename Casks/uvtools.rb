@@ -9,6 +9,16 @@ cask "uvtools" do
   name "UVtools"
   desc "MSLA/DLP, file analysis, calibration, repair, conversion and manipulation"
   homepage "https://github.com/sn4k3/UVtools"
+  license "AGPL-3.0"
+   
+  livecheck do
+    url "https://api.github.com/repos/sn4k3/UVtools/releases/latest"
+	strategy :page_match
+    regex(/"tag_name":\s*"v?(\d+\.\d+\.\d+)"/im)
+  end
+  
+  depends_on macos: ">= :catalina"
+  depends_on formula: "mono-libgdiplus"
 
   app "UVtools.app"
 
