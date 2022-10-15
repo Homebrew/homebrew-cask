@@ -16,7 +16,7 @@ cask "uvtools" do
     regex(/"tag_name":\s*"v?(\d+\.\d+\.\d+)"/im)
   end
 
-  auto_updates: true
+  auto_updates true
   depends_on macos: ">= :catalina"
   depends_on formula: "mono-libgdiplus"
 
