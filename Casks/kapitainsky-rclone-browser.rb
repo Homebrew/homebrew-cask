@@ -4,6 +4,7 @@ cask "kapitainsky-rclone-browser" do
 
   url "https://github.com/kapitainsky/RcloneBrowser/releases/download/#{version.csv.first}/rclone-browser-#{version.csv.first}-#{version.csv.second}-macos.dmg"
   name "Rclone Browser"
+  desc "GUI for rclone"
   homepage "https://github.com/kapitainsky/RcloneBrowser"
 
   livecheck do
