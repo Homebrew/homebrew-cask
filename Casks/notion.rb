@@ -3,12 +3,12 @@ cask "notion" do
   livecheck_folder = on_arch_conditional arm: "apple-silicon", intel: "mac"
 
   on_intel do
-    version "2.1.3"
-    sha256 "3e291c88b59e82c931933802c21fe2940054dceb1bfa46bc59d054216c369fcf"
+    version "2.1.4"
+    sha256 "826e27aa6d55f7769c690b5ce3e626c357ad7aad5df0b4364fc1a95f13916f7d"
   end
   on_arm do
-    version "2.1.3"
-    sha256 "470438318c8f54d67c54942cab13b7079965d973c39e847197cd4dc00ac85e69"
+    version "2.1.4"
+    sha256 "0c4f70d4575e4b9b7924810e78c9fca61cec530385ecef1b378bde6525513cea"
   end
 
   url "https://desktop-release.notion-static.com/Notion-#{version}#{arch}.dmg",
