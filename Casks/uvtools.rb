@@ -11,9 +11,8 @@ cask "uvtools" do
   homepage "https://github.com/sn4k3/UVtools"
 
   livecheck do
-    url "https://api.github.com/repos/sn4k3/UVtools/releases/latest"
-    strategy :page_match
-    regex(/"tag_name":\s*"v?(\d+\.\d+\.\d+)"/im)
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true
