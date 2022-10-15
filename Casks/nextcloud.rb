@@ -5,10 +5,6 @@ cask "nextcloud" do
 
     url "https://github.com/nextcloud/desktop/releases/download/v#{version.major_minor_patch}/Nextcloud-#{version}.pkg",
         verified: "github.com/nextcloud/desktop/"
-
-    livecheck do
-      skip "Legacy version for El Capitan and earlier"
-    end
   else
     version "3.6.0"
     sha256 "bf4d6da4df3453658bd4b14bfcda450109a8ac85005f23785af8ccac54a5f3d3"
