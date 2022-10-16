@@ -23,7 +23,7 @@ cask "swiftcord" do
     "~/Library/Saved Application State/io.cryptoalgo.swiftcord.savedState",
   ]
 
-  caveats "If you're updating from an older version of Swiftcord, you might get stuck on the loading screen "\
-          "due to a bug in the new account storage system. Clicking the logout button that appears after ~30s "\
+  caveats "If you're updating from an older version of Swiftcord, you might get stuck on the loading screen " \
+          "due to a bug in the new account storage system. Clicking the logout button that appears after ~30s " \
           "is a workaround which will allow you to log in again. You'll only have to do this once."
 end
