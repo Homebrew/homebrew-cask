@@ -1,6 +1,6 @@
 cask "swiftcord" do
-  version "0.4.6,13"
-  sha256 "9f6c8c858818187ec8c1ca8e41224eaec06b17e390f9697d3ea256f21f5dea3c"
+  version "0.5.1,15"
+  sha256 "e526fd9f9cca51f3a6d881d57ea5779eaab4900b23ee63dcc7fd8fb131ada1cd"
 
   url "https://github.com/SwiftcordApp/Swiftcord/releases/download/v#{version.csv.first}/Swiftcord.#{version.csv.first}.dmg"
   name "Swiftcord"
@@ -22,4 +22,8 @@ cask "swiftcord" do
     "~/Library/Containers/io.cryptoalgo.swiftcord",
     "~/Library/Saved Application State/io.cryptoalgo.swiftcord.savedState",
   ]
+
+  caveats "If you're updating from an older version of Swiftcord, you might get stuck on the loading screen "\
+          "due to a bug in the new account storage system. Clicking the logout button that appears after ~30s "\
+          "is a workaround which will allow you to log in again. You'll only have to do this once."
 end
