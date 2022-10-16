@@ -1,5 +1,5 @@
 cask "gdat" do
-  version "2022r07"
+  version "2022r08"
   sha256 :no_check
 
   url "https://drive.google.com/uc?export=download&id=1lnA5hFiCV9qzreQE7a5YzdeValaicTHD"
