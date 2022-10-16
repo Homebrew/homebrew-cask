@@ -14,7 +14,7 @@ cask "anydo" do
 
   depends_on macos: ">= :catalina"
 
-  app "Any.do.app"
+  app "Anydo.app"
 
   zap trash: [
     "~/Library/Application Support/@anydo",
