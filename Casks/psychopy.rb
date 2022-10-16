@@ -10,7 +10,6 @@ cask "psychopy" do
   livecheck do
     url :url
     strategy :github_latest
-    regex(%r{href=.+/StandalonePsychoPy[._-]v?(\d+(?:\.\d+)+)[._-]macOS\.dmg}i)
   end
 
   app "PsychoPy.app"
