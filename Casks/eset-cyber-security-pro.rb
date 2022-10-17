@@ -8,8 +8,8 @@ cask "eset-cyber-security-pro" do
   homepage "https://www.eset.com/"
 
   livecheck do
-    url "https://www.eset.com/int/home/cyber-security-pro/download/?type=13554&tx_esetdownloads_ajax%5Bproduct%5D=83&tx_esetdownloads_ajax%5Bplugin_id%5D=34398"
-    regex(/eset[._-]cybersecurity[._-]pro[._-]en\.dmg","full[._-]version":"v?(\d+(?:\.\d+)+)/i)
+    url "https://help.eset.com/latestVersions/"
+    regex(%r{ESET\sCyber\sSecurity\sPro</p>\n.*/span>\sv?(\d+(?:\.\d+)+)}i)
   end
 
   pkg "Resources/Installer.pkg"

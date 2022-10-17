@@ -1,6 +1,6 @@
 cask "devcleaner" do
-  version "2.3.1-425"
-  sha256 "d31a01b35e77e5bf6a7a87fde660712c46c69baefd83cfdf62403e1c221ff2cc"
+  version "2.3.2-437"
+  sha256 "82bd2fcafd38865cad1d6ff93d95576991bbde455f0b9b3aaec26acbbf884000"
 
   url "https://github.com/vashpan/xcode-dev-cleaner/releases/download/#{version.sub(/-\d+/, "")}/DevCleaner-#{version}.zip"
   name "DevCleaner"
