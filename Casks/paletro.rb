@@ -4,6 +4,7 @@ cask "paletro" do
 
   url "https://appmakes.io/paletro/download/Paletro-#{version}.dmg"
   name "Paletro"
+  desc "Command palette in any application"
   homepage "https://appmakes.io/paletro"
 
   livecheck do
