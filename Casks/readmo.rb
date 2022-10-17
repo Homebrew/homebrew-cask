@@ -9,6 +9,7 @@ cask "readmo" do
 
   livecheck do
     url "https://readmoo.com/download/osx"
+    strategy :header_match
   end
 
   app "Readmoo看書.app"
