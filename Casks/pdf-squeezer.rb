@@ -1,5 +1,5 @@
 cask "pdf-squeezer" do
-  version "4.3.2,636b"
+  version "4.3.3,642b"
   sha256 :no_check
 
   url "https://www.witt-software.com/downloads/pdfsqueezer/PDF%20Squeezer.dmg"
