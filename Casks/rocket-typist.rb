@@ -4,6 +4,7 @@ cask "rocket-typist" do
 
   url "https://witt-software.com/downloads/rockettypist/Rocket%20Typist.dmg"
   name "Rocket Typist"
+  desc "Text expander for common phrases"
   homepage "https://witt-software.com/rockettypist/"
 
   livecheck do
