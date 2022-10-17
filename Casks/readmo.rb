@@ -15,7 +15,7 @@ cask "readmo" do
   app "Readmoo看書.app"
 
   zap trash: [
-    "/Users/alex/Library/Logs/Readmoo看書",
-    "/Users/alex/Library/Application\ Support/Readmoo看書"
+    "~/Library/Logs/Readmoo看書",
+    "~/Library/Application Support/Readmoo看書",
   ]
 end
