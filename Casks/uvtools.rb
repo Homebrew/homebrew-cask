@@ -10,14 +10,8 @@ cask "uvtools" do
   desc "MSLA/DLP, file analysis, calibration, repair, conversion and manipulation"
   homepage "https://github.com/sn4k3/UVtools"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on macos: ">= :catalina"
-  depends_on formula: "mono-libgdiplus"
 
   app "UVtools.app"
 
