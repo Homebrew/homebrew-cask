@@ -10,6 +10,9 @@ cask "uvtools" do
   desc "MSLA/DLP, file analysis, calibration, repair, conversion and manipulation"
   homepage "https://github.com/sn4k3/UVtools"
 
+  auto_updates true
+  depends_on macos: ">= :catalina"
+
   app "UVtools.app"
 
   zap trash: [
