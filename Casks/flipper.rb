@@ -8,6 +8,13 @@ cask "flipper" do
   desc "Desktop debugging platform for mobile developers"
   homepage "https://fbflipper.com/"
 
+  livecheck do
+    url "https://www.facebook.com/fbflipper/public/latest.json?version=0.0.0"
+    strategy :page_match do |page|
+      JSON.parse(page)["version"]
+    end
+  end
+
   app "Flipper.app"
 
   zap trash: [
