@@ -7,8 +7,8 @@ cask "anka-virtualization" do
     depends_on macos: ">= :big_sur"
   end
   on_arm do
-    version "3.0.1.144"
-    sha256 "04c39bdc570c95a3a0ab54d8335263d9ee53680d1c7b5952bd15e1dd1c87b681"
+    version "3.1.0.151"
+    sha256 "6648a9cd0be56fcde4b5c150b2a59e8302306c477ad1a335f1dd56cb8b42a0ce"
     depends_on macos: ">= :monterey"
   end
 
