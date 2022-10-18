@@ -1,6 +1,6 @@
 cask "sqlpro-for-mysql" do
-  version "2022.15"
-  sha256 "05a738a786e8a6119331de4dec8fa1fda98ea47bb4a9702950a15453a3ca26dd"
+  version "2022.70"
+  sha256 "396eeb755637503f88d89119db7127d440f1b8ce2358b4d27350311580923a67"
 
   url "https://d3fwkemdw8spx3.cloudfront.net/mysql/SQLProMySQL.#{version}.app.zip",
       verified: "d3fwkemdw8spx3.cloudfront.net/mysql/"

@@ -1,6 +1,6 @@
 cask "weiyun" do
-  version "5.2.1184"
-  sha256 "50024cd35b10dac421b0457ddcfe44a192b456d86624b07dad8d50aec10b139a"
+  version "5.2.1238"
+  sha256 "30075abb9b6538063a8f4d241046d8f1df2ecb74732998af14b6172c90a3cafc"
 
   url "https://dldir1.qq.com/weiyun/electron-update/release/mac/Weiyun-mac-x64-#{version}.dmg",
       verified: "dldir1.qq.com/weiyun/"
@@ -9,7 +9,7 @@ cask "weiyun" do
   homepage "https://www.weiyun.com/"
 
   livecheck do
-    url "https://qzonestyle.gtimg.cn/qzone/qzactStatics/configSystem/data/65/config1.js"
+    url "https://jsonschema.qpic.cn/2993ffb0f5d89de287319113301f3fca/179b0d35c9b088e5e72862a680864254/config"
     regex(/Weiyun[._-]mac[._-]x64[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 

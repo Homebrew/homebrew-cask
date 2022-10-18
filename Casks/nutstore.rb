@@ -1,11 +1,19 @@
 cask "nutstore" do
-  version :latest
+  version "5.1.7"
   sha256 :no_check
 
   url "https://www.jianguoyun.com/static/exe/installer/NutstoreOSXInstaller.dmg"
   name "Nutstore"
   desc "Cloud storage service platform"
   homepage "https://www.jianguoyun.com/"
+
+  livecheck do
+    url "https://help.jianguoyun.com/?p=1419"
+    regex(%r{Mac(?:/Linux)?\s+(\d+(?:\.\d+)+)}i)
+  end
+
+  auto_updates true
+  depends_on macos: ">= :el_capitan"
 
   installer manual: "Nutstore Installer.app"
 
@@ -19,8 +27,8 @@ cask "nutstore" do
             delete:     "/Applications/Nutstore.app"
 
   zap trash: [
-    "~/Library/Saved Application State/net.nutstore.osxapp.nutstoreInstaller.savedState",
-    "~/Library/Preferences/net.nutstore.osxapp.plist",
     "~/Library/Preferences/net.nutstore.NutstoreJavaBE.plist",
+    "~/Library/Preferences/net.nutstore.osxapp.plist",
+    "~/Library/Saved Application State/net.nutstore.osxapp.nutstoreInstaller.savedState",
   ]
 end

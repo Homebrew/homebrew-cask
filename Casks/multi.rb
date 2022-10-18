@@ -1,6 +1,6 @@
 cask "multi" do
-  version "2.2.0"
-  sha256 "8df3d55b420e777cf919f1a27682ca9f2c93bb6b68ba33aa7e85453e94a2eb69"
+  version "2.2.1"
+  sha256 "3562c94f2d2036e375b9ee7b800d24604ac22eeeb937c1439c11c84b476caee2"
 
   url "https://github.com/hkgumbs/multi/releases/download/v#{version}/Multi.#{version}.dmg"
   name "Multi"

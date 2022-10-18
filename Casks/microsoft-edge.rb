@@ -1,14 +1,11 @@
 cask "microsoft-edge" do
-  folder = Hardware::CPU.intel? ? "C1297A47-86C4-4C1F-97FA-950631F94777" : "03adf619-38c6-4249-95ff-4a01c0ffc962"
-  linkid = Hardware::CPU.intel? ? "2069148" : "2093504"
+  folder = on_arch_conditional arm:   "03adf619-38c6-4249-95ff-4a01c0ffc962",
+                               intel: "C1297A47-86C4-4C1F-97FA-950631F94777"
+  linkid = on_arch_conditional arm: "2093504", intel: "2069148"
 
-  version "104.0.1293.47"
-
-  if Hardware::CPU.intel?
-    sha256 "45bdd7eddf65816b17df49ffbe0f49ad5322b4e2385bb73adec70ebd26aee89f"
-  else
-    sha256 "ad01ce6b65fe259761ff51a869fdd0468822c216994998fa2cabf7856bb48ab0"
-  end
+  version "106.0.1370.47"
+  sha256 arm:   "a64db1bb7d32c4ef23b4329a96a87561db9bfbcf80c28bb7e26776091efccf0b",
+         intel: "1c6ca21db337ac8cd0fbc99bfbb0e85b836f40a3406f7a0d10d342aa5055cec6"
 
   url "https://officecdn-microsoft-com.akamaized.net/pr/#{folder}/MacAutoupdate/MicrosoftEdge-#{version}.pkg",
       verified: "officecdn-microsoft-com.akamaized.net/"
@@ -45,8 +42,12 @@ cask "microsoft-edge" do
         "~/Library/HTTPStorages/com.microsoft.edgemac",
         "~/Library/HTTPStorages/com.microsoft.edgemac.binarycookies",
         "~/Library/HTTPStorages/com.microsoft.EdgeUpdater",
+        "~/Library/LaunchAgents/com.microsoft.EdgeUpdater.update.plist",
+        "~/Library/LaunchAgents/com.microsoft.EdgeUpdater.update-internal.*.plist",
+        "~/Library/LaunchAgents/com.microsoft.EdgeUpdater.wake.*.plist",
         "~/Library/Microsoft/EdgeUpdater",
         "~/Library/Preferences/com.microsoft.edgemac.plist",
+        "~/Library/Saved Application State/com.microsoft.edgemac.app.*.savedState/",
         "~/Library/Saved Application State/com.microsoft.edgemac.savedState",
         "~/Library/WebKit/com.microsoft.edgemac",
       ],

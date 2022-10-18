@@ -1,8 +1,8 @@
 cask "airpass" do
-  version "1.0.1"
-  sha256 "dd13d6de4d9b430a38e188a92f371525ceb9e539587003af5ed003597bbdc05c"
+  version "1.0.2"
+  sha256 "a67b569a86cc3cfe0d219a5f5c450a94d7060474c0a36b14329140af772f7db2"
 
-  url "https://github.com/alvesjtiago/airpass/releases/download/#{version}/Airpass.dmg",
+  url "https://github.com/alvesjtiago/airpass/releases/download/#{version}/airpass-#{version}-x64.dmg",
       verified: "github.com/alvesjtiago/airpass/"
   name "Airpass"
   desc "Status bar app to overcome time-constrained WiFi networks"

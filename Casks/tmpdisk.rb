@@ -1,6 +1,6 @@
 cask "tmpdisk" do
-  version "2.0.3"
-  sha256 "52f69996ca66b0f8c1fdf94a7408548e59fcc9e40a9f00b8e692339d79da3aee"
+  version "2.0.4"
+  sha256 "4c50957cf725a648cca2b632681c22e70990428a8ab922ab4c53eedb14154019"
 
   url "https://github.com/imothee/tmpdisk/releases/download/v#{version}/TmpDisk.dmg"
   name "TmpDisk"

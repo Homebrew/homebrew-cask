@@ -9,6 +9,12 @@ cask "sonic-robo-blast-2-kart" do
   desc "Classic styled kart racer, complete with beautiful courses, and wacky items"
   homepage "https://mb.srb2.org/addons/srb2kart.2435/"
 
+  livecheck do
+    url "https://github.com/STJr/Kart-Public/releases/"
+    regex(%r{v?(\d+(?:\.\d+)+)/SRB2Kart.*?macOS\.dmg}i)
+    strategy :page_match
+  end
+
   app "Sonic Robo Blast 2 Kart.app"
 
   zap trash: "~/srb2kart"

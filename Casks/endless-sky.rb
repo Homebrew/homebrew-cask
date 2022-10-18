@@ -1,6 +1,6 @@
 cask "endless-sky" do
-  version "0.9.14"
-  sha256 "c55fe79a7403e7667222a4b1531a51da6dd3d2990ede0e97fd121672164dab4b"
+  version "0.9.16"
+  sha256 "18f280dde67ed0776d8753bbdc8575a923e9dca3434c51fd79f93d3f2f347b4e"
 
   url "https://github.com/endless-sky/endless-sky/releases/download/v#{version}/endless-sky-macos-v#{version}.dmg",
       verified: "github.com/endless-sky/endless-sky/"
@@ -8,5 +8,5 @@ cask "endless-sky" do
   desc "Space exploration, trading, and combat game"
   homepage "https://endless-sky.github.io/"
 
-  app "Endless Sky.app"
+  app "EndlessSky.app"
 end

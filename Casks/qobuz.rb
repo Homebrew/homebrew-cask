@@ -1,13 +1,9 @@
 cask "qobuz" do
-  arch = Hardware::CPU.intel? ? "x64/elCapitan_sierra" : "arm64/bigsur"
+  arch arm: "arm64/bigsur", intel: "x64/elCapitan_sierra"
 
-  version "6.1.1,039"
-
-  if Hardware::CPU.intel?
-    sha256 "f45fc5ad483b546aeb18e001a1128029080ca7c1dab3acba219b8f5ffe46202c"
-  else
-    sha256 "9e7f602c20b97f2a305d182e336359935df6c59acd05f1db96b7b0f9f059ccd6"
-  end
+  version "6.1.2,108"
+  sha256 arm:   "709acd3317b592757c1b6af8f0c0a0134eb4a3562ff1e31ade2b367c62758b49",
+         intel: "d72486d220779a26565aa309032ea8ea124b25a94708c6c45832ede1b55f037c"
 
   url "https://desktop.qobuz.com/releases/darwin/#{arch}/#{version.csv.first}-b#{version.csv.second}/Qobuz.dmg"
   name "Qobuz"

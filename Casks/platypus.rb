@@ -1,6 +1,6 @@
 cask "platypus" do
-  version "5.3,1113"
-  sha256 "efc66e943e6327896d0c1b82b0c1798c9ea17cffa03581e4949541c30d9833b0"
+  version "5.4,1233"
+  sha256 "677ce20096b86c33ae0ca393ae48cceb2dacd4500bf28445e2c202150b9257ad"
 
   url "https://sveinbjorn.org/files/software/platypus/platypus#{version.csv.first}.zip"
   name "Platypus"

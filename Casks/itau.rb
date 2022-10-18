@@ -1,12 +1,13 @@
 cask "itau" do
-  arch = Hardware::CPU.intel? ? "" : "_m1"
+  arch arm: "_m1"
 
   sha256 :no_check
 
-  if Hardware::CPU.intel?
-    version "2.2.2.10"
-  else
-    version "2.3.2.10"
+  on_intel do
+    version "2.2.2.11"
+  end
+  on_arm do
+    version "2.3.2.11"
   end
 
   url "https://guardiao.itau.com.br/UpdateServer/aplicativoitau#{arch}.dmg"

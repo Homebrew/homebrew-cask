@@ -1,17 +1,13 @@
 cask "listen1" do
   # NOTE: "1" is not a version number, but an intrinsic part of the product name
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
-  version "2.24.0"
+  version "2.26.2"
+  sha256 arm:   "fe8b9500196f7e5f623c24d73337d3253fbed5b5d5d678e6a3d398cb3d6441a0",
+         intel: "2f7c70536cf8f866630c1d40a3c58bc590b071a6fcadd5b4bd084da9d9153ec9"
 
   url "https://github.com/listen1/listen1_desktop/releases/download/v#{version}/Listen1_#{version}_mac_#{arch}.dmg",
       verified: "github.com/listen1/listen1_desktop/"
-  if Hardware::CPU.intel?
-    sha256 "2327464903b24cdd620d1ecbad8e039cd1f6f200f4286b05d6d799e7cc125a29"
-  else
-    sha256 "8fd3e5c832dbdd02cbb9c68edcc902dd6749e67ea62d4d98ff155890c2aee954"
-  end
-
   name "Listen 1"
   desc "Search and play songs from a variety of online sources"
   homepage "https://listen1.github.io/listen1/"

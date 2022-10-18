@@ -3,9 +3,13 @@ cask "zdoom" do
   sha256 "4143e6a484c670f26ce56ef758313c7ca18455368e825665023b14fa3b8ee934"
 
   url "https://zdoom.org/files/zdoom/#{version.major_minor}/zdoom-#{version}.dmg"
-  appcast "https://zdoom.org/files/zdoom/"
   name "ZDoom"
   homepage "https://zdoom.org/index"
+
+  livecheck do
+    url "https://zdoom.org/downloads"
+    regex(/\bZDoom[._-]v?(\d+(?:\.\d+)+)/i)
+  end
 
   app "ZDoom.app"
 

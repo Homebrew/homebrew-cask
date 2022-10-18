@@ -1,17 +1,17 @@
 cask "yacreader" do
-  version "9.8.2.2106195"
-  sha256 "19c1d566fe080b9d2350812119ce3d8d28a6d20a6e1f9c3d43d59c89823a0ea1"
+  version "9.9.2.2210021"
+  sha256 "5cde79c68a0a28504c70361a0f5ade587b8010e8f65a14fa5fd3d5d5230438b5"
 
-  url "https://github.com/YACReader/yacreader/releases/download/#{version.major_minor_patch}/YACReader-#{version}.MacOSX-Intel.dmg",
+  url "https://github.com/YACReader/yacreader/releases/download/#{version.major_minor_patch}/YACReader-#{version}.MacOSX-Intel.Qt6.dmg",
       verified: "github.com/YACReader/yacreader/"
   name "YACReader"
   desc "Comic reader"
   homepage "https://www.yacreader.com/"
 
   livecheck do
-    url "https://github.com/YACReader/yacreader/releases"
+    url "https://www.yacreader.com/downloads"
     strategy :page_match
-    regex(%r{href=.*?/YACReader[._-]v?(\d+(?:\.\d+)+)[._-]MacOSX[._-]Intel\.dmg}i)
+    regex(%r{href=.*?/YACReader[._-]v?(\d+(?:\.\d+)+)[._-]MacOSX[._-]Intel\.Qt6\.dmg}i)
   end
 
   app "YACReader.app"

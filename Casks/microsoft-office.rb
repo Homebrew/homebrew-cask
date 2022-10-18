@@ -1,6 +1,6 @@
 cask "microsoft-office" do
-  version "16.63.22070801"
-  sha256 "4c0e722e203fb5752888689cc895cf8d94af6ae759488ff69e7b23bd1d9b1abe"
+  version "16.66.22101101"
+  sha256 "2c6bac94224406f6b7d4ddb210e209fbe43a413b3f3285a078495cd79beba6c7"
 
   url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Office_#{version}_Installer.pkg",
       verified: "officecdnmac.microsoft.com/"
@@ -61,6 +61,7 @@ cask "microsoft-office" do
               "com.microsoft.OneDriveStandaloneUpdater",
               "com.microsoft.OneDriveStandaloneUpdaterDaemon",
               "com.microsoft.OneDriveUpdaterDaemon",
+              "com.microsoft.SyncReporter",
             ],
             quit:      "com.microsoft.autoupdate2"
 

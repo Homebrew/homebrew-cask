@@ -9,9 +9,9 @@ cask "waterfox-classic" do
   homepage "https://classic.waterfox.net/"
 
   livecheck do
-    url "https://github.com/WaterfoxCo/Waterfox-Classic/releases/"
-    strategy :page_match
-    regex(/Waterfox[._-]Classic[._-]v?(\d+(?:\.\d+)+)[._-]Setup\.dmg/i)
+    url :url
+    regex(%r{href=["']?[^"' >]*?/tag/v?(\d+(?:\.\d+)+)-classic["' >]}i)
+    strategy :github_latest
   end
 
   app "Waterfox Classic.app"

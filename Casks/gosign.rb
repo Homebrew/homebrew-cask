@@ -1,11 +1,11 @@
 cask "gosign" do
-  version "1.2.6"
+  version "1.2.9"
   sha256 :no_check
 
   url "https://rinnovofirma.infocert.it/gosign/download/darwin/latest"
   name "GoSign Desktop"
   desc "Digital signature and time stamp app"
-  homepage "https://www.firma.infocert.it/prodotti/gosign.php"
+  homepage "https://www.firma.infocert.it/prodotti/gosign/"
 
   livecheck do
     url :url

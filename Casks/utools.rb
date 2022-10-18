@@ -1,13 +1,9 @@
 cask "utools" do
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  arch arm: "-arm64"
 
-  version "2.6.3"
-
-  if Hardware::CPU.intel?
-    sha256 "e663a81aa0e1571ebc94200fac64e35455a4199f4a06d813b8a4a2645f9098b4"
-  else
-    sha256 "07750a30bc8187addb926797d5bbbc62a876d0a6495eccf5313acc716b6a8d24"
-  end
+  version "3.0.3"
+  sha256 arm:   "5be8b86a044b21ad48bfd196e7ecbaf9262c885d8f094f84b8074af793eb2d9a",
+         intel: "2e4518e03a3f4ad470f5abdf42ff640ac4deac6ffafd0672c0a22caf89b632fa"
 
   url "https://publish.u-tools.cn/version2/uTools-#{version}#{arch}.dmg",
       verified: "publish.u-tools.cn/"
@@ -19,8 +15,6 @@ cask "utools" do
     url :homepage
     regex(/uTools[._-]v?(\d+(?:\.\d+)*)\.dmg/i)
   end
-
-  auto_updates true
 
   app "uTools.app"
 

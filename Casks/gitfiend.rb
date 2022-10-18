@@ -1,6 +1,6 @@
 cask "gitfiend" do
-  version "0.35.3"
-  sha256 "128c1bcfac29662b92ca3d8909b6f6e6aae8e74649587eeb994474c5c61c6c39"
+  version "0.37.2"
+  sha256 "ca2df6866d9e7bafb415f285150eedaec6e83af8f9cd72fd7821e3db596897b6"
 
   url "https://gitfiend.com/resources/GitFiend-#{version}.dmg"
   name "GitFiend"

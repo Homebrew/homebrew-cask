@@ -1,6 +1,6 @@
 cask "filemaker-pro" do
-  version "19.5.2.201"
-  sha256 "151e2fe4e1d1c63c51f65ca6a2db1539934d3ffbe6a40a656d0d41b27225cf43"
+  version "19.5.4.401"
+  sha256 "243d73f3a35d9d1a76abf5ef4fc0b23842bb3511ee8b03c0d9ce96e23e90c886"
 
   url "https://downloads.claris.com/esd/fmp_#{version}.dmg"
   name "FileMaker Pro"

@@ -4,13 +4,13 @@ cask "freac" do
   if MacOS.version <= :catalina
     sha256 "379d1b1fe7476e924bbecf2f06496709c6be75e2eb2d3de1d7b1b5fcbbf44f9e"
 
-    url "https://github.com/enzo1982/freac/releases/download/v#{version.csv.first}/freac-#{version.delete(",")}-macos10.dmg",
+    url "https://github.com/enzo1982/freac/releases/download/v#{version.csv.first}/freac-#{version}-macos10.dmg",
         verified: "github.com/enzo1982/freac/"
 
     livecheck do
-      url "https://github.com/enzo1982/freac/releases/latest"
+      url "https://www.freac.org/downloads-mainmenu-33"
       strategy :page_match do |page|
-        page.scan(%r{href=.*?/freac[._-](\d+(?:\.\d+)+)([A-z]*)-macos10\.dmg}i).map do |match|
+        page.scan(%r{href=.*?/freac[._-](\d+(?:\.\d+)+)[._-]macos10\.dmg}i).map do |match|
           match[1].blank? ? match[0] : "#{match[0]},#{match[1]}"
         end
       end
@@ -18,13 +18,13 @@ cask "freac" do
   else
     sha256 "634c86b1290d98f727d7b8a91e75045f381fa320ff814f8e440d83412dee2918"
 
-    url "https://github.com/enzo1982/freac/releases/download/v#{version.csv.first}/freac-#{version.delete(",")}-macos11.dmg",
+    url "https://github.com/enzo1982/freac/releases/download/v#{version.csv.first}/freac-#{version}-macos11.dmg",
         verified: "github.com/enzo1982/freac/"
 
     livecheck do
-      url "https://github.com/enzo1982/freac/releases/latest"
+      url "https://www.freac.org/downloads-mainmenu-33"
       strategy :page_match do |page|
-        page.scan(%r{href=.*?/freac[._-](\d+(?:\.\d+)+)([A-z]*)-macos11\.dmg}i).map do |match|
+        page.scan(%r{href=.*?/freac[._-](\d+(?:\.\d+)+)[._-]macos11\.dmg}i).map do |match|
           match[1].blank? ? match[0] : "#{match[0]},#{match[1]}"
         end
       end

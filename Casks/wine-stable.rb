@@ -11,10 +11,12 @@ cask "wine-stable" do
   desc "Compatibility layer to run Windows applications"
   homepage "https://wiki.winehq.org/MacOS"
 
+  # See https://bugs.winehq.org/show_bug.cgi?id=52354
   livecheck do
-    url "https://github.com/Gcenx/macOS_Wine_builds/releases/"
-    regex(/wine[._-]stable[._-]v?(\d+(?:\.\d+)+)[._-]osx64\.t/i)
-    strategy :page_match
+    # url "https://github.com/Gcenx/macOS_Wine_builds/releases/"
+    # regex(/wine[._-]stable[._-]v?(\d+(?:\.\d+)+)[._-]osx64\.t/i)
+    # strategy :page_match
+    skip "Stable builds are currently blocked by an upstream bug"
   end
 
   conflicts_with cask: [

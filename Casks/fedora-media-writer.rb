@@ -1,6 +1,6 @@
 cask "fedora-media-writer" do
-  version "5.0.2"
-  sha256 "124465274a38e55b059d27f9c847aed25a3a947c7af2278e293df65d77d71198"
+  version "5.0.3"
+  sha256 "628e774ba4c17b748bb88465d52ddc0e4014604840a7799ec4f051a30a6e7df2"
 
   url "https://github.com/FedoraQt/MediaWriter/releases/download/#{version}/FedoraMediaWriter-osx-#{version}.unnotarized.dmg",
       verified: "github.com/FedoraQt/MediaWriter/"

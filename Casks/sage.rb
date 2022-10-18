@@ -1,28 +1,18 @@
 cask "sage" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
+  arch arm: "arm64", intel: "x86_64"
 
-  version "9.6,1.4.2"
+  version "9.7,1.5.1"
+  sha256 arm:   "78f0e3916719af452839452709777fee9c0e5ce688e164cdeb921a72f391e449",
+         intel: "ebed7e3f173880894c14bf7c0355667ebbe9afeb219388e35be1ffccf2580dd6"
 
-  if Hardware::CPU.intel?
-    sha256 "c1ecace231226798e95ee4d7a3f301943ca9bbcef58834addb16ca8f4132430f"
-  else
-    sha256 "54a37b6391651ff04b4512cbf311422ab92e3373580a01d0e89349bc370f2562"
-  end
-
-  url "https://github.com/3-manifolds/Sage_macOS/releases/download/v#{version.csv.second}/SageMath-#{version.csv.first}-#{version.csv.second}_#{arch}.dmg",
+  url "https://github.com/3-manifolds/Sage_macOS/releases/download/v#{version.csv.second}/SageMath-#{version.csv.first}_#{arch}.dmg",
       verified: "github.com/3-manifolds/Sage_macOS/"
   name "Sage"
   desc "Mathematics software system"
   homepage "https://www.sagemath.org/"
 
   livecheck do
-    url "https://github.com/3-manifolds/Sage_macOS/releases/latest"
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/v?(\d+(?:\.\d+)+)/SageMath[._-]v?(\d+(?:\.\d+)+)[._-].*?#{arch}\.dmg}i)
-      next if match.blank?
-
-      "#{match[2]},#{match[1]}"
-    end
+    skip "Requires checking separate GitHub release asset list HTML"
   end
 
   depends_on macos: ">= :high_sierra"

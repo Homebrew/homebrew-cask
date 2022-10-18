@@ -1,6 +1,6 @@
 cask "virtualbox-extension-pack" do
-  version "6.1.36"
-  sha256 "3c84f0177a47a1969aff7c98e01ddceedd50348f56cc52d63f4c2dd38ad2ca75"
+  version "7.0.0"
+  sha256 "e32555a2d2482c1e1126747f967742364ddfdfd49fce3107a9627780f373ffd7"
 
   url "https://download.virtualbox.org/virtualbox/#{version}/Oracle_VM_VirtualBox_Extension_Pack-#{version}.vbox-extpack"
   name "Oracle VirtualBox Extension Pack"

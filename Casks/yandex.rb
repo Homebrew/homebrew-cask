@@ -1,7 +1,7 @@
 cask "yandex" do
-  arch = Hardware::CPU.intel? ? "" : "&arch=arm64"
+  arch arm: "&arch=arm64"
 
-  version "22.7.0"
+  version "22.9.1"
   sha256 :no_check
 
   url "https://browser.yandex.ru/download/?os=mac#{arch}&full=1",

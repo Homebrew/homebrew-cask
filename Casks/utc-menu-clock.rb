@@ -1,8 +1,8 @@
 cask "utc-menu-clock" do
-  version "1.2.3"
-  sha256 "54b3b5c9a3609d771e5b1b2569c5fa7251914f4a0c16c33f5050ca38629f69be"
+  version "1.3"
+  sha256 "099a638a7a45cb9085d29e75769caf44ed142fd74b9e4665fca2de7e4a641081"
 
-  url "https://github.com/netik/UTCMenuClock/raw/master/downloads/UTCMenuClock_v#{version}.zip"
+  url "https://github.com/netik/UTCMenuClock/raw/master/downloads/UTCMenuClock_v#{version}_universal.zip"
   name "UTCMenuClock"
   desc "Menu bar clock"
   homepage "https://github.com/netik/UTCMenuClock"
@@ -10,7 +10,7 @@ cask "utc-menu-clock" do
   livecheck do
     url "https://github.com/netik/UTCMenuClock/tree/master/downloads"
     strategy :page_match
-    regex(%r{href=.*?/UTCMenuClock[._-]v?(\d+(?:\.\d+)+)\.zip}i)
+    regex(%r{href=.*?/UTCMenuClock[._-]v?(\d+(?:\.\d+)+)[._-]universal\.zip}i)
   end
 
   app "UTCMenuClock.app"

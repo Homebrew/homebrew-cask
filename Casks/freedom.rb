@@ -1,6 +1,6 @@
 cask "freedom" do
-  version "2.11,2027"
-  sha256 "36e1da36a9744366e44acd08481362ec8d9b613325552dcd1f5d468dc7d93cf3"
+  version "2.12.1,2055.1"
+  sha256 "0f502490c6f050bf9946f732dc3814fdb2a1bb818e65df82fbb62eb6c95c28f9"
 
   url "https://cdn.freedom.to/installers/updates/mac/#{version.csv.first}/Freedom.zip"
   name "Freedom"

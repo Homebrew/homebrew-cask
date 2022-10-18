@@ -1,14 +1,15 @@
 cask "laravel-kit" do
-  version "2.0.6"
-  sha256 "62c7ca0541b70009c842c672833a7ba269ae8abf4493b52fec9c18465d86ee8c"
+  arch arm: "-arm64", intel: ""
 
-  url "https://github.com/tmdh/laravel-kit/releases/download/v#{version}/laravel-kit-#{version}-mac.zip",
+  version "2.0.7"
+  sha256 arm:   "f4e91f92e5e85609567c173812a7dcfdae6c1b1103dca71a9b56890fa27e1198",
+         intel: "7f3073655b32191360c378897a819fe4560ffad1e784469bad7a9089d0b31ca4"
+
+  url "https://github.com/tmdh/laravel-kit/releases/download/v#{version}/laravel-kit-#{version}#{arch}.dmg",
       verified: "github.com/tmdh/laravel-kit/"
   name "Laravel Kit"
   desc "Desktop Laravel admin panel app"
   homepage "https://tmdh.github.io/laravel-kit"
-
-  auto_updates true
 
   app "Laravel Kit.app"
 end

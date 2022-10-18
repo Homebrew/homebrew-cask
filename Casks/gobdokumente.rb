@@ -9,7 +9,7 @@ cask "gobdokumente" do
       skip "Legacy version for catalina and earlier"
     end
   else
-    version "2.0"
+    version "2.1"
     sha256 :no_check
     url "https://download.moapp.software/GoBDokumente_BS.zip",
         verified: "download.moapp.software/"

@@ -1,6 +1,6 @@
 cask "typora" do
-  version "1.3.7"
-  sha256 "88731f0eace5784915a9e221724eca5c7460076d43290dd3444e8ad1c5e5ba5e"
+  version "1.4.4"
+  sha256 "362529796594880534667d2dade62bf94ea0f8751476b99e263e64fab69cdd91"
 
   url "https://download.typora.io/mac/Typora-#{version}.dmg"
   name "Typora"

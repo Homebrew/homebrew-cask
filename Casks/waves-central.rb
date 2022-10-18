@@ -1,5 +1,5 @@
 cask "waves-central" do
-  version "13.2.4"
+  version "13.3.1"
   sha256 :no_check
 
   url "https://cf-installers.waves.com/WavesCentral/Install_Waves_Central.dmg"
@@ -11,6 +11,8 @@ cask "waves-central" do
     url "https://register.waves.com/Autoupdate/Updates/ByProductId/1/latest-mac.yml"
     strategy :electron_builder
   end
+
+  auto_updates true
 
   app "Waves Central.app"
 

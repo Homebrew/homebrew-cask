@@ -9,9 +9,8 @@ cask "marathon" do
   homepage "https://alephone.lhowon.org/"
 
   livecheck do
-    url :url
-    strategy :github_latest
-    regex(%r{href=.*?/Marathon-(\d+)-Mac\.dmg}i)
+    url :homepage
+    regex(%r{href=.*?/Marathon[._-]v?(\d+(?:\.\d+)*)[._-]Mac\.dmg}i)
   end
 
   app "Marathon.app"

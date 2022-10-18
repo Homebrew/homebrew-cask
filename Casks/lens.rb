@@ -1,15 +1,11 @@
 cask "lens" do
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  arch arm: "-arm64"
 
-  version "6.0.0,20220728.2"
+  version "2022.10.131529"
+  sha256 arm:   "a167087f79079b050a37c27df55b7a7b6aebb59ef893cdb3e33fb12a3e1e4459",
+         intel: "4335537eefe0d63daba9c4982ec363e34ae01f7fd38e392042cb1ae65ab190f3"
 
-  if Hardware::CPU.intel?
-    sha256 "4f305fa4e6dc2666b142d001beaf0d5a2e0922d9ae29b133369d241519a99110"
-  else
-    sha256 "af7307dce532f45c7df85419919f34c4341f6761c58a42445b84c37b454948a6"
-  end
-
-  url "https://api.k8slens.dev/binaries/Lens-#{version.csv.first}-latest.#{version.csv.second}#{arch}.dmg"
+  url "https://api.k8slens.dev/binaries/Lens-#{version}-latest#{arch}.dmg"
   name "Lens"
   desc "Kubernetes IDE"
   homepage "https://k8slens.dev/"
@@ -17,7 +13,7 @@ cask "lens" do
   livecheck do
     url "https://lens-binaries.s3.amazonaws.com/ide/latest-mac.yml"
     strategy :electron_builder do |data|
-      data["version"].sub("-latest.", ",")
+      data["version"].sub("-latest", "")
     end
   end
 

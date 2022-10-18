@@ -1,6 +1,6 @@
 cask "gridtracker" do
-  version "1.22.0725,1.22.0725"
-  sha256 "5c8c350c63af2c25c637f27e60c41c4a8bea2170a6d5524096adf1aeb5702ee6"
+  version "1.22.1010,1.22.1010"
+  sha256 "007f9e614e63f5c26ceb4249ec44c8c73e032022e018d80e4f040eac89f92e1c"
 
   url "https://storage.googleapis.com/gt_download/v#{version.csv.second}/GridTracker-#{version.csv.first}-mac-x64.zip",
       verified: "storage.googleapis.com/gt_download/"

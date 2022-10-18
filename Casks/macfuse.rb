@@ -1,6 +1,6 @@
 cask "macfuse" do
-  version "4.4.0"
-  sha256 "db347d5a57d32d8556e82386eea9ef155fd877890eb3db547e49bb137d976a43"
+  version "4.4.1"
+  sha256 "2a2d0f37ec5fcff547c5efa7d08539103a0b46bc16080c2b41a7e749f6e65c61"
 
   url "https://github.com/osxfuse/osxfuse/releases/download/macfuse-#{version}/macfuse-#{version}.dmg",
       verified: "github.com/osxfuse/osxfuse/"
@@ -10,8 +10,8 @@ cask "macfuse" do
 
   livecheck do
     url :url
+    regex(%r{href=["']?[^"' >]*?/tag/macfuse[._-]v?(\d+(?:\.\d+)+)["' >]}i)
     strategy :github_latest
-    regex(%r{href=.*?/macfuse[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   auto_updates true

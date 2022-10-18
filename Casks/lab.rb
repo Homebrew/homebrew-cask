@@ -7,13 +7,9 @@ cask "lab" do
   desc "React UI component design tool"
   homepage "https://github.com/c8r/lab/"
 
-  livecheck do
-    url "https://github.com/c8r/lab/releases/"
-    regex(%r{download/(.*)/Lab[._-]?(\d+(?:\.\d+)*)[._-]?mac\.zip}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
-    end
-  end
-
   app "Lab.app"
+
+  caveats do
+    discontinued
+  end
 end

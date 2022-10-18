@@ -1,8 +1,8 @@
 cask "devilutionx" do
   version "1.4.1"
-  sha256 "cba8f68cefa11554e5ce3907899cb777517a0841dad1b7c2128d62175f4fa344"
+  sha256 "84de4c78ce7a84320ab251af791c490816c75d4bda423c6add1a3bb52327a0e1"
 
-  url "https://github.com/diasurgical/devilutionX/releases/download/#{version}/devilutionx-macos-universal.zip"
+  url "https://github.com/diasurgical/devilutionX/releases/download/#{version}/devilutionx-macos-x86_64.dmg"
   name "DevilutionX"
   desc "Diablo build for modern operating systems"
   homepage "https://github.com/diasurgical/devilutionX/"

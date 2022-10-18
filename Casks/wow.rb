@@ -1,6 +1,6 @@
 cask "wow" do
-  version "8.12.0"
-  sha256 "b6bfa40a475967bc7eedd169915e010ae1ebb59438d262a3fa191c2e4d06c471"
+  version "8.12.2"
+  sha256 "e336beab755bdfbbf37c5ff2758cf1160152454edab7201359ffa8e895a54fc0"
 
   url "https://web.static.nowtv.com/watch/player/wowtv/de/#{version}/WOW-Mac.dmg",
       verified: "web.static.nowtv.com/watch/player/wowtv/"

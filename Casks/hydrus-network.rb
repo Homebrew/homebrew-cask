@@ -1,6 +1,6 @@
 cask "hydrus-network" do
-  version "494"
-  sha256 "4dd352db610ec1a4a2de390ccfba071de9bf3ec01ed4b43de6945c6ef5726551"
+  version "502a"
+  sha256 "d0b05f0c9a216f67f169150e5138a24b1f6dc964637fe0778284bc53d572f2a5"
 
   url "https://github.com/hydrusnetwork/hydrus/releases/download/v#{version}/Hydrus.Network.#{version}.-.macOS.Qt5.-.App.dmg",
       verified: "github.com/hydrusnetwork/hydrus/"
@@ -10,8 +10,8 @@ cask "hydrus-network" do
 
   livecheck do
     url :url
+    regex(%r{href=["']?[^"' >]*?/tree/v?(\d+(?:\.\d+)*[a-z]?)[^"' >]*?["' >]}i)
     strategy :github_latest
-    regex(%r{href=.*?/tag/v?(\d+\h*)["' >]}i)
   end
 
   app "Hydrus Network.app"

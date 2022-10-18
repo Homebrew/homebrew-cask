@@ -1,6 +1,6 @@
 cask "progressive-downloader" do
-  version "5.3"
-  sha256 "61094da70e77fcd43eb5111c1a9fdb09e383a6ba0edcc2f34ac869ac98ec06fd"
+  version "5.4"
+  sha256 "5bbb85f1273d54e87189c0862a728fa4ba7bdf41ae8a99552251d198cf435c86"
 
   url "https://www.macpsd.net/update/#{version}/PSD.dmg"
   name "Progressive Downloader"

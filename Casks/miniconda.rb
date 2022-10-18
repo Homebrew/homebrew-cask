@@ -1,12 +1,9 @@
 cask "miniconda" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
-  version "py39_4.12.0"
+  arch arm: "arm64", intel: "x86_64"
 
-  if Hardware::CPU.intel?
-    sha256 "007bae6f18dc7b6f2ca6209b5a0c9bd2f283154152f82becf787aac709a51633"
-  else
-    sha256 "4bd112168cc33f8a4a60d3ef7e72b52a85972d588cd065be803eb21d73b625ef"
-  end
+  version "py39_4.12.0"
+  sha256 arm:   "4bd112168cc33f8a4a60d3ef7e72b52a85972d588cd065be803eb21d73b625ef",
+         intel: "007bae6f18dc7b6f2ca6209b5a0c9bd2f283154152f82becf787aac709a51633"
 
   url "https://repo.anaconda.com/miniconda/Miniconda3-#{version}-MacOSX-#{arch}.sh",
       verified: "repo.anaconda.com/miniconda/"
@@ -19,11 +16,7 @@ cask "miniconda" do
   # https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-#{arch}.sh
   livecheck do
     url "https://repo.anaconda.com/miniconda/"
-    if Hardware::CPU.intel?
-      regex(/>\s*Miniconda3-(py39[._-]\d+(?:\.\d+)+)-MacOSX-#{arch}\.sh\s*</i)
-    else
-      regex(/>\s*Miniconda3-(py38[._-]\d+(?:\.\d+)+)-MacOSX-#{arch}\.sh\s*</i)
-    end
+    regex(/>\s*Miniconda3-(py39[._-]\d+(?:\.\d+)+)-MacOSX-#{arch}\.sh\s*</i)
   end
 
   auto_updates true

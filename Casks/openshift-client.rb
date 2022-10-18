@@ -1,13 +1,10 @@
 cask "openshift-client" do
-  version "4.10.26"
+  arch arm: "-arm64"
 
-  if Hardware::CPU.intel?
-    sha256 "5af55db66a87a0df1cadc1537be9d0c2877039ddd6bd49ab786b440bb21347d7"
-  else
-    sha256 "8f9a68fbaad6cd07c4535873d852481ae29b7d9a4236a2c6b0840b9f2b32164d"
-  end
+  version "4.11.9"
+  sha256 arm:   "4ec1f14fa015e770b2fbf4e05ffb268a1754a3d99c7c3b5382d99608129e0258",
+         intel: "8c037c687d868174ccd25583880ff8934724e38bb340e25b87581818c7ed2795"
 
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
   url "https://mirror.openshift.com/pub/openshift-v#{version.major}/clients/ocp/#{version}/openshift-client-mac#{arch}.tar.gz"
   name "Openshift Client"
   desc "Red Hat OpenShift Container Platform command-line client"

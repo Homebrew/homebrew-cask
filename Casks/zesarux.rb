@@ -9,8 +9,8 @@ cask "zesarux" do
 
   livecheck do
     url :url
+    regex(%r{href=["']?[^"' >]*?/tag/ZEsarUX-(\d+(?:\.\d+)+)["' >]}i)
     strategy :github_latest
-    regex(/href=.*?ZEsarUX[._-]macos[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "ZEsarUX.app"

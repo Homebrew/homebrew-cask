@@ -10,7 +10,6 @@ cask "brewlet" do
   livecheck do
     url :url
     strategy :github_latest
-    regex(%r{href=.*?/v([^/]+)/Brewlet\.zip}i)
   end
 
   app "Brewlet.app"

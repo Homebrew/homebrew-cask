@@ -1,6 +1,6 @@
 cask "universal-gcode-platform" do
-  version "2.0.11"
-  sha256 "5a1ab4c6cdc4425c6fac233be3fdb3865b1b0c817df1dcb8f2f231f0b2a81b1f"
+  version "2.0.12"
+  sha256 "07dc8d2946b3c1f8de5d7cb58c8bd94ca379bb9fd8f306a898f76fd68d34806e"
 
   url "https://ugs.jfrog.io/ugs/UGS/v#{version}/ugs-platform-app-ios.dmg",
       verified: "https://ugs.jfrog.io/ugs/UGS/"

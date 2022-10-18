@@ -47,7 +47,7 @@ jobs:
 
       - name: Cache gems
         if: github.event.inputs.self_hosted != 'true'
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ${{steps.set-up-homebrew.outputs.gems-path}}
           key: ${{runner.os}}-rubygems-v2-${{steps.set-up-homebrew.outputs.gems-hash}}

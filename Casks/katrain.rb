@@ -7,7 +7,9 @@ cask "katrain" do
   desc "Tool for analyzing games and playing go with AI feedback from KataGo"
   homepage "https://github.com/sanderland/katrain"
 
-  depends_on formula: "katago" if Hardware::CPU.arm?
+  on_arm do
+    depends_on formula: "katago"
+  end
 
   app "KaTrain.app"
 

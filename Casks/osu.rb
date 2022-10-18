@@ -1,13 +1,9 @@
 cask "osu" do
-  arch = Hardware::CPU.intel? ? "Intel" : "Apple.Silicon"
+  arch arm: "Apple.Silicon", intel: "Intel"
 
-  version "2022.731.1"
-
-  if Hardware::CPU.intel?
-    sha256 "ec625b7e72ee8755a5f8f847626a49908adbcc1c55f29a016bbb3991c493ef6c"
-  else
-    sha256 "d1801c91052c7e622c7c44a30fe8f95f816a948160723655c9c02d3fcfb20aac"
-  end
+  version "2022.1008.2"
+  sha256 arm:   "72e9975d9360959e557029c6a338d57ce7da03a44fe76810daeff81304a6b489",
+         intel: "7221f359b8ea50dcc45aa9305076e79baae2cf606cddcfb25bf3405fa1b9d508"
 
   url "https://github.com/ppy/osu/releases/download/#{version}/osu.app.#{arch}.zip"
   name "osu!"
@@ -16,7 +12,7 @@ cask "osu" do
 
   livecheck do
     url :url
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    strategy :github_latest
   end
 
   depends_on macos: ">= :sierra"

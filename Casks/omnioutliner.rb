@@ -22,7 +22,7 @@ cask "omnioutliner" do
   end
 
   name "OmniOutliner"
-  desc "Note taking applciation and information organizer"
+  desc "Note taking application and information organizer"
   homepage "https://www.omnigroup.com/omnioutliner/"
 
   livecheck do

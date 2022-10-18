@@ -1,6 +1,6 @@
 cask "netbeans" do
-  version "14"
-  sha256 "4dc627a377679504044d39fa10c410e9559d70c122a3cee0fc17ddceaf605d17"
+  version "15"
+  sha256 "dad421adeea83e772cfe774850817541d096fdbb244b74cfa51305b1a54c58f9"
 
   url "https://dlcdn.apache.org/netbeans/netbeans-installers/#{version}/Apache-NetBeans-#{version}-bin-macosx.dmg"
   name "NetBeans IDE"

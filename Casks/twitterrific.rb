@@ -1,6 +1,6 @@
 cask "twitterrific" do
-  version "5.4.9,182"
-  sha256 "c5d6f58ded7eb9d326a8890d2f47c3416c518bd668ee33e17a689345ccd680ac"
+  version "5.4.10,189"
+  sha256 "7bda86aca6cba5bf1fa44e993409d194d6bde8095d5709721022f4bff622d5a5"
 
   url "https://downloads.iconfactory.com/phoenix/Twitterrific-#{version.csv.first}+#{version.csv.second}.zip",
       verified: "downloads.iconfactory.com/phoenix/"

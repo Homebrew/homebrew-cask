@@ -8,15 +8,14 @@ cask "sourcetrail" do
   desc "Code source explorer"
   homepage "https://www.sourcetrail.com/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   app "Sourcetrail.app"
 
   zap trash: [
     "~/Library/Application Support/Sourcetrail",
     "~/Library/Saved Application State/com.sourcetrail.savedState",
   ]
+
+  caveats do
+    discontinued
+  end
 end

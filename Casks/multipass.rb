@@ -8,9 +8,8 @@ cask "multipass" do
   homepage "https://github.com/canonical/multipass/"
 
   livecheck do
-    url "https://github.com/canonical/multipass/releases/"
-    strategy :page_match
-    regex(/multipass[._-]?(\d+(?:\.\d+)*)\+mac[._-]?Darwin\.pkg/i)
+    url :url
+    strategy :github_latest
   end
 
   depends_on macos: ">= :mojave"

@@ -1,13 +1,9 @@
 cask "gather" do
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  arch arm: "-arm64"
 
-  version "0.3.3"
-
-  if Hardware::CPU.intel?
-    sha256 "c82591d95e3f58df820d30104ca0a386a8c481b4da3af34c3d96e3dea2fa8dbc"
-  else
-    sha256 "6b20da327d30a8fe72d9fd9f9690b0fb4e7f41ce36f12986e5658152cad2ca45"
-  end
+  version "0.3.17"
+  sha256 arm:   "18a32b014ea92afe81098ed8beb0bac26cf5f05e9bb00f18c4810c5baf15edd7",
+         intel: "70f3ce1af659934684b672e745a73298c9c75a5c96746e102462f8da61cdedcd"
 
   url "https://github.com/gathertown/gather-town-desktop-releases/releases/download/v#{version}/Gather-#{version}#{arch}-mac.zip",
       verified: "github.com/gathertown/gather-town-desktop-releases"
@@ -17,5 +13,10 @@ cask "gather" do
 
   app "Gather.app"
 
-  zap trash: "~/Library/Application Support/Gather"
+  zap trash: [
+    "~/Library/Application Support/Gather",
+    "~/Library/Logs/Gather",
+    "~/Library/Preferences/com.gather.Gather.plist",
+    "~/Library/Saved Application State/com.gather.Gather.savedState",
+  ]
 end

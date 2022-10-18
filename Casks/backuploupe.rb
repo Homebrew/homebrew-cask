@@ -1,6 +1,6 @@
 cask "backuploupe" do
-  version "3.7.1,2426"
-  sha256 "063f68a324a51b2a613736efc3a69f16a50cf20ad0966b3e8107c7cf9731e683"
+  version "3.8,2455"
+  sha256 "662bc039f23c6fd60e92d7fd799f7e56cb3245fd70e7e3034e712ec29d8304b2"
 
   url "https://www.soma-zone.com/download/files/BackupLoupe-#{version.csv.first}.tar.xz"
   name "BackupLoupe"
@@ -11,6 +11,8 @@ cask "backuploupe" do
     url "https://www.soma-zone.com/BackupLoupe/a/appcast-update-#{version.major}.xml"
     strategy :sparkle
   end
+
+  auto_updates true
 
   app "BackupLoupe.app"
 

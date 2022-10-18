@@ -1,7 +1,7 @@
 cask "dropbox" do
-  arch = Hardware::CPU.intel? ? "" : "&arch=arm64"
+  arch arm: "&arch=arm64"
 
-  version "154.4.5363"
+  version "159.4.5870"
   sha256 :no_check
 
   url "https://www.dropbox.com/download?plat=mac&full=1#{arch}"
@@ -34,6 +34,7 @@ cask "dropbox" do
     "~/Library/Application Scripts/com.dropbox.foldertagger",
     "~/Library/Application Scripts/com.getdropbox.dropbox.fileprovider",
     "~/Library/Application Scripts/com.getdropbox.dropbox.garcon",
+    "~/Library/Application Scripts/com.getdropbox.dropbox.TransferExtension",
     "~/Library/Application Scripts/G7HH3F8CAK.com.getdropbox.dropbox.sync",
     "~/Library/Application Support/Dropbox",
     "~/Library/Application Support/DropboxElectron/",
@@ -48,6 +49,7 @@ cask "dropbox" do
     "~/Library/Containers/com.dropbox.foldertagger",
     "~/Library/Containers/com.getdropbox.dropbox.fileprovider",
     "~/Library/Containers/com.getdropbox.dropbox.garcon",
+    "~/Library/Containers/com.getdropbox.dropbox.TransferExtension",
     "~/Library/Dropbox",
     "~/Library/HTTPStorages/com.getdropbox.dropbox",
     "~/Library/HTTPStorages/com.dropbox.DropboxMacUpdate",

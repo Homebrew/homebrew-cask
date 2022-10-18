@@ -4,10 +4,11 @@ cask "cinebench" do
 
   url "https://http.maxon.net/pub/cinebench/CinebenchR#{version}.dmg"
   name "Cinebench"
+  desc "Hardware benchmarking utility"
   homepage "https://www.maxon.net/products/cinebench/"
 
   livecheck do
-    url "https://www.maxon.net/en/downloads"
+    url "https://www.maxon.net/_nuxt/static/1661539108/en/downloads/payload.js"
     regex(/href=.*?cinebench-r(\d+(?:\.\d+)*)-downloads/i)
   end
 

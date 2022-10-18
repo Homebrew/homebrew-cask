@@ -1,6 +1,6 @@
 cask "cityofzion-neon" do
-  version "2.12.9"
-  sha256 "c938f283f3967ab36826fde6162bf4d46b6e2fc00024bbf08f31c99061c9e242"
+  version "2.14.2"
+  sha256 "ab450d35833c179831f60efff964a404c8c7c2d83ca5504c87f0d698c85fb65c"
 
   url "https://github.com/CityOfZion/neon-wallet/releases/download/v#{version}/Neon.#{version}.dmg"
   name "Neon Wallet"

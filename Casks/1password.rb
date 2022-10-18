@@ -1,13 +1,9 @@
 cask "1password" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
+  arch arm: "aarch64", intel: "x86_64"
 
-  version "8.8.0"
-
-  if Hardware::CPU.intel?
-    sha256 "330ea9c88f24c0487c7ecfc887c0fac7e12fb3f3a636c02bfec610333f46091a"
-  else
-    sha256 "0bd29ad4d9057d7a7ffffb60b55ceae6be4f3429165bec1c5b38efa13637f0e2"
-  end
+  version "8.9.4"
+  sha256 arm:   "9e1a1c130b6be9c312492b4f6bb4be83c4b03d2b495563db940dc76ea27caba4",
+         intel: "fb6150439162074377d0933f32d9df6b4e0ad9765a7f7aff5b5fa2f1528db250"
 
   url "https://downloads.1password.com/mac/1Password-#{version}-#{arch}.zip"
   name "1Password"
@@ -26,10 +22,13 @@ cask "1password" do
   app "1Password.app"
 
   zap trash: [
-    "~/Library/Application Scripts/2BUA8C4S2C.com.1password.browser-helper",
-    "~/Library/Application Scripts/2BUA8C4S2C.com.1password.1password",
+    "~/Library/Application Scripts/2BUA8C4S2C.com.1password.*",
+    "~/Library/Application Support/1Password",
+    "~/Library/Application Support/CrashReporter/1Password*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.1password.1password.sfl2",
     "~/Library/Containers/2BUA8C4S2C.com.1password.browser-helper",
     "~/Library/Containers/com.1password.1password",
     "~/Library/Group Containers/2BUA8C4S2C.com.1password",
+    "~/Library/Saved Application State/com.1password.1password.savedState",
   ]
 end

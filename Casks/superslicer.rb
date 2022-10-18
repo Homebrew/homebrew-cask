@@ -1,27 +1,17 @@
 cask "superslicer" do
-  arch = Hardware::CPU.intel? ? "" : "arm_"
+  arch arm: "_arm", intel: ""
 
-  if Hardware::CPU.intel?
-    version "2.4.58.3,220714"
-    sha256 "4fb4a65d2f56bf75867257ea40a7b32515fbb598e992c69ee8a94ef4579781c5"
-  else
-    version "2.4.58.3,220715"
-    sha256 "c1cfb77477e0ddaddbafbdfa9e31a345a8da590790350aca23c180fd081c645a"
-  end
+  version "2.4.58.5,220924"
+  sha256 arm:   "c65d21e51ac57eb75c915ae172a642f48d63584f6bdd8a280aa2443319a66010",
+         intel: "95652e91bef57c73f38c0c78f2fcc9dfce429516f5de516b5e8ac5db20d20132"
 
-  url "https://github.com/supermerill/SuperSlicer/releases/download/#{version.csv.first}/SuperSlicer_#{version.csv.first}_macos_#{arch}#{version.csv.second}.dmg"
+  url "https://github.com/supermerill/SuperSlicer/releases/download/#{version.csv.first}/SuperSlicer_#{version.csv.first}_macos#{arch}_#{version.csv.second}.dmg"
   name "SuperSlicer"
   desc "Convert 3D models into G-code instructions or PNG layers"
   homepage "https://github.com/supermerill/SuperSlicer"
 
   livecheck do
-    url "https://github.com/supermerill/SuperSlicer/releases/latest"
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/SuperSlicer_(\d+(?:\.\d+)+)_macos_#{arch}(\d+)\.dmg}i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
-    end
+    skip "Requires checking separate GitHub release asset list HTML"
   end
 
   depends_on formula: "zstd"

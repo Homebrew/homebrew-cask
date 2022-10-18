@@ -10,5 +10,14 @@ cask "editaro" do
 
   app "Editaro.app"
 
-  zap trash: "~/Library/ApplicationSupport/Editaro"
+  zap trash: [
+    "~/Library/Application Support/Editaro",
+    "~/Library/Caches/com.electron.editaro",
+    "~/Library/Caches/com.electron.editaro.ShipIt",
+    "~/Library/HTTPStorages/com.electron.editaro",
+    "~/Library/Logs/Editaro",
+    "~/Library/Preferences/com.electron.editaro.helper.plist",
+    "~/Library/Preferences/com.electron.editaro.plist",
+    "~/Library/Saved Application State/com.electron.editaro.savedState",
+  ]
 end

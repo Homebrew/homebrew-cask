@@ -34,4 +34,16 @@ cask "vmware-horizon-client" do
   depends_on macos: ">= :sierra"
 
   app "VMware Horizon Client.app"
+
+  zap trash: [
+    "/Library/Preferences/com.vmware.horizon.plist",
+    "~/Library/Application Support/VMware Horizon View Client",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vmware.horizon.sfl2",
+    "~/Library/Caches/com.vmware.horizon",
+    "~/Library/Logs/VMware Horizon Client",
+    "~/Library/Preferences/com.vmware.horizon.keyboard.plist",
+    "~/Library/Preferences/com.vmware.horizon.plist",
+    "~/Library/Saved Application State/com.vmware.horizon.savedState",
+    "~/Library/WebKit/com.vmware.horizon",
+  ]
 end

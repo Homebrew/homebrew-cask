@@ -1,8 +1,8 @@
 cask "todesk" do
-  version "4.3.0.1"
-  sha256 "64edc76090439ba8481d8216a6f6bf4b6dc7100407f47e8bc3049c5573062e69"
+  version "4.3.1.1"
+  sha256 "1149ad70503f116d07c7e87874601cbba5e0733f6b94f25ebf7fe055a4207bfe"
 
-  url "https://dl.todesk.com/macos/ToDeskk_v#{version}.pkg"
+  url "https://dl.todesk.com/macos/ToDesk_#{version}.pkg"
   name "ToDesk"
   desc "Remote control software"
   homepage "https://www.todesk.com/"
@@ -14,7 +14,7 @@ cask "todesk" do
 
   auto_updates true
 
-  pkg "ToDeskk_v#{version}.pkg"
+  pkg "ToDesk_#{version}.pkg"
 
   uninstall delete:    "/Applications/ToDesk.app",
             launchctl: [

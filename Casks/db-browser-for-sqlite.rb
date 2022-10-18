@@ -9,9 +9,8 @@ cask "db-browser-for-sqlite" do
   homepage "https://sqlitebrowser.org/"
 
   livecheck do
-    url "https://github.com/sqlitebrowser/sqlitebrowser/releases"
-    strategy :page_match
-    regex(%r{href=.*?/DB\.Browser\.for\.SQLite-(\d+(?:\.\d+)+)(?:-v\d+)?\.dmg}i)
+    url :url
+    strategy :github_latest
   end
 
   app "DB Browser for SQLite.app"

@@ -1,6 +1,6 @@
 cask "teacode" do
-  version "1.1"
-  sha256 "a972f075b059b98c84d00fd591ac479b9298b47cc995f131f7ee60687fd53b84"
+  version "1.1.43"
+  sha256 "7e49e18d70799477e7d58f14a8312324494b484a0b93a3679fb43c58eff59dd9"
 
   url "https://www.apptorium.com/public/products/teacode/releases/TeaCode-#{version}.zip"
   name "TeaCode"
