@@ -1,9 +1,9 @@
 cask "docker" do
   arch arm: "arm64", intel: "amd64"
 
-  version "4.12.0,85629"
-  sha256 arm:   "7eb63b4819cd1f87c61d5e8f54613692e07fb203d81bcf8d66f5de55489d3b81",
-         intel: "41085009458ba1741c6a86c414190780ff3b288879aa27821fc4a985d229653c"
+  version "4.13.0,89412"
+  sha256 arm:   "f33037ef7b02946d5714012398848654bd7a759ee729b0346acc46a8e73a76ed",
+         intel: "5a9e7b810bc9937a0945f9cbbb7ec00c2c5c386b5897c59c1c93187eaf0f2081"
 
   url "https://desktop.docker.com/mac/main/#{arch}/#{version.csv.second}/Docker.dmg"
   name "Docker Desktop"
