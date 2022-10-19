@@ -1,0 +1,20 @@
+cask "prismlauncher" do
+  version "5.0"
+  sha256 "e6858fb3d484fa60df7ae7c415da1c23697149c1ede7e4a5e0f0cd1ca40dc4a6"
+
+  url "https://github.com/PrismLauncher/PrismLauncher/releases/download/#{version}/PrismLauncher-macOS-#{version}.tar.gz"
+  name "Prism Launcher"
+  desc "Minecraft launcher"
+  homepage "https://prismlauncher.org/"
+
+  depends_on macos: ">= :high_sierra"
+
+  app "PrismLauncher.app"
+
+  zap trash: [
+    "~/Library/Application Support/PrismLauncher/metacache",
+    "~/Library/Application Support/PrismLauncher/PrismLauncher-*.log",
+    "~/Library/Application Support/PrismLauncher/prismlauncher.cfg",
+    "~/Library/Saved Application State/org.prismlauncher.PrismLauncher.savedState",
+  ]
+end
