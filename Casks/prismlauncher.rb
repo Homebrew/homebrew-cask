@@ -2,7 +2,8 @@ cask "prismlauncher" do
   version "5.0"
   sha256 "e6858fb3d484fa60df7ae7c415da1c23697149c1ede7e4a5e0f0cd1ca40dc4a6"
 
-  url "https://github.com/PrismLauncher/PrismLauncher/releases/download/#{version}/PrismLauncher-macOS-#{version}.tar.gz"
+  url "https://github.com/PrismLauncher/PrismLauncher/releases/download/#{version}/PrismLauncher-macOS-#{version}.tar.gz",
+      verified: "github.com/PrismLauncher/PrismLauncher"
   name "Prism Launcher"
   desc "Minecraft launcher"
   homepage "https://prismlauncher.org/"
