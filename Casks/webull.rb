@@ -2,9 +2,9 @@ cask "webull" do
   arch arm: "global_arm64", intel: "global_x64"
   livecheck_arch = on_arch_conditional arm: "qt_m1_global", intel: "qt_mac_global"
 
-  version "6.3.0"
-  sha256 arm:   "a8be82a1abad155e77045c2c9bcc3b16082390b0584dd910ae1801b19ab87170",
-         intel: "5626deef7fd80588bea31ce01234e693ccf058fa9d1380f000eba101ebc1fff9"
+  version "6.4.1"
+  sha256 arm:   "349d4eac91f12ba4a7184fa77258277d6fa10b0eac48b30070f159072da2a1e0",
+         intel: "d23dfa01e3ea1f71b16ec4d5da84c519ad760c62c205ba974d703be12421a70f"
 
   url "https://u1sweb.webullfintech.com/us/desktop/Webull%20Desktop_#{version}_#{arch}signed.dmg",
       verified: "u1sweb.webullfintech.com/us/desktop/"
