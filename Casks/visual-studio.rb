@@ -1,8 +1,8 @@
 cask "visual-studio" do
-  version "17.3.0.215"
-  sha256 "9b1ae2baedb7dedd934c728bbde638aa001d514e7f7e828e7de61910edf2b41f"
+  version "17.3.8.4"
+  sha256 "788f5aa9387d8644c3f458bb58076723b7e7fa4efaa6837aa842185e6ff3eaa5"
 
-  url "https://download.visualstudio.microsoft.com/download/pr/698239af-0344-43ed-868e-dc936ff9107b/c52e8c47bb47adab5d6b6b64d5d888e8/visualstudioformacinstaller-#{version}.dmg"
+  url "https://download.visualstudio.microsoft.com/download/pr/9f141bc3-da1f-4d6f-9f5d-fbadc4044e77/439376ea8c332d391037716579d25aa6/visualstudioformacinstaller-#{version}.dmg"
   name "Microsoft Visual Studio"
   desc "Integrated development environment"
   homepage "https://visualstudio.microsoft.com/vs/mac/"
