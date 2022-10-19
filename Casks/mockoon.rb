@@ -1,6 +1,6 @@
 cask "mockoon" do
-  version "1.20.0"
-  sha256 "700fca17da2b249e35da254672e0eed995a255b7e9c28d184118fed4e5584336"
+  version "1.21.0"
+  sha256 "e5f83b169e3b52081461602efc4326fde02abc0af7d420797491127a6d494f37"
 
   url "https://github.com/mockoon/mockoon/releases/download/v#{version}/mockoon.setup.#{version}.universal.dmg",
       verified: "github.com/mockoon/mockoon/"
