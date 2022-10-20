@@ -16,5 +16,7 @@ cask "plexamp" do
     strategy :electron_builder
   end
 
+  auto_updates true
+
   app "Plexamp.app"
 end
