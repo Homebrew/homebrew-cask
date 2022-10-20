@@ -14,6 +14,8 @@ cask "prism" do
   desc "Minecraft launcher"
   homepage "https://prismlauncher.org/"
 
+  depends_on macos: ">= :high_sierra"
+
   app "PrismLauncher.app"
 
   zap trash: [
