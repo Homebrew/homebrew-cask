@@ -9,6 +9,7 @@ cask "genesis-plus" do
 
   livecheck do
     url :homepage
+    regex(/<h2>Genesis\s+Plus\s+v?(\d+(?:\.\d+)+)[" <]/i)
   end
 
   depends_on macos: ">= :mojave"
