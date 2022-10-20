@@ -1,4 +1,4 @@
-cask "prism" do
+cask "prismlauncher" do
   version "5.0"
 
   if MacOS.version < :catalina
