@@ -1,4 +1,4 @@
-cask "prism" do
+cask "prismlauncher" do
   version "5.0"
 
   if MacOS.version < :catalina
@@ -13,6 +13,9 @@ cask "prism" do
   name "Prism Launcher"
   desc "Minecraft launcher"
   homepage "https://prismlauncher.org/"
+
+  auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "PrismLauncher.app"
 
