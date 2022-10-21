@@ -1,15 +1,12 @@
 cask "jamulus" do
-  arch arm: "_arm64"
+  version "3.9.1"
+  sha256 "724f15fd564737fe06c717aa678a8c3817a006f7105bb13b71d5b650ed8c7cc5"
 
-  version "3.9.0"
-  sha256 arm:   "353ed99c0497f2b2b668a910ab4f954a7ba51b8bca8c205c8f1c47db98e87fd5",
-         intel: "65f04e749c997bde9e1d814cd0423dd6a3fb6868ed1c62e5f8a8f9f2a1a5160c"
-
-  url "https://downloads.sourceforge.net/llcon/jamulus_#{version}_mac#{arch}.dmg",
+  url "https://downloads.sourceforge.net/llcon/jamulus_#{version}_mac.dmg",
       verified: "downloads.sourceforge.net/llcon/"
 
   on_mojave :or_older do
-    sha256 "156555cdbd1ff618375f7c9d03a4da5fbd7d19ed57d67db8675ba6f57170e228"
+    sha256 "6c645ba373205f774a09df59565e39808868b7ef3fb296a56f616ef90e74aefe"
 
     url "https://downloads.sourceforge.net/llcon/jamulus_#{version}_mac_legacy.dmg",
         verified: "downloads.sourceforge.net/llcon/"
