@@ -12,6 +12,8 @@ cask "grammarly-desktop" do
     strategy :extract_plist
   end
 
+  auto_updates true
+
   app "Grammarly Installer.app", target: "Grammarly Desktop.app"
 
   zap trash: [
