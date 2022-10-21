@@ -10,9 +10,6 @@ cask "gridtracker" do
   livecheck do
     url "https://gridtracker.org/release.html"
     regex(%r{href=.*?/GridTracker[._-]v?(\d+(?:\.\d+)+)-mac-x64\.zip}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match.second},#{match.first}" }
-    end
   end
 
   depends_on macos: ">= :mojave"
