@@ -7,7 +7,12 @@ cask "oversight" do
   name "OverSight"
   desc "Monitors computer mic and webcam"
   homepage "https://objective-see.com/products/oversight.html"
-
+  
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+  
   depends_on macos: ">= :catalina"
 
   installer script: {
