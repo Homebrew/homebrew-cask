@@ -8,8 +8,10 @@ cask "shottr" do
   homepage "https://shottr.cc/"
 
   livecheck do
-    url :homepage
-    regex(/Shottr-(\d+(?:\.\d+)+)\.dmg/i)
+    url "https://shottr.cc/api/version.json"
+    strategy :page_match do |page|
+      JSON.parse(page)["latestVersion"]
+    end
   end
 
   depends_on macos: ">= :catalina"
