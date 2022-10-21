@@ -1,20 +1,21 @@
 cask "ui" do
-  version "0.56.3,79aba98f601b49818f3dae0e3d34b754,98a0"
-  sha256 "d2c338cf371af24f57d511e33b2bec995399d63d803d0fd258d8a2cbb0bcca9c"
+  version "98a0-macOS-0.56.3-79aba98f601b49818f3dae0e3d34b754"
+  sha256 :no_check
 
-  url "https://fw-download.ubnt.com/data/uid-ui-desktop-app/#{version.csv.third}-macOS-#{version.csv.first}-#{version.csv.second}.pkg",
-      verified: "fw-download.ubnt.com/data/uid-ui-desktop-app/"
+  url "https://api-gw.uid.alpha.ui.com:443/location/api/v1/public/fw/download/latest/?app=UI-DESKTOP-MACOS"
   name "UI Desktop"
   desc "Corporate Wi-Fi, VPN, SSO, and HR Application"
   homepage "https://www.ui.com/uid"
 
   livecheck do
-    skip "No version information available"
+    url :url
+    strategy :header_match
+    regex(/(\w+[._-]macOS[._-]\d+(?:\.\d+)+[._-]\w+)\.pkg/i)
   end
 
   depends_on macos: ">= :mojave"
 
-  pkg "#{version.csv.third}-macOS-#{version.csv.first}-#{version.csv.second}.pkg"
+  pkg "#{version}.pkg"
 
   uninstall pkgutil:   [
               "com.ui.uid.desktop",
