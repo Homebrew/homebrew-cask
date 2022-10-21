@@ -1,6 +1,6 @@
 cask "cityofzion-neon" do
   arch arm: "arm64", intel: "x64"
-  
+
   version "2.16.16"
   sha256 arm:   "bf8a2614eaae39af61482a2fe70dc1b106be378d189623cb917f126ba3e870f0",
          intel: "f4a8be1c0d503a1847665d6e3e5e20763d889396e3bc3da22676db3500aaa7f9"
