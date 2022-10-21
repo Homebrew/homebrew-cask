@@ -1,6 +1,6 @@
 cask "diffusionbee" do
-  version "1.2.0"
-  sha256 "81e43f7d3416d6fd1ddd5fa8428d51383c91cd4810d3ae020bc636b568878e2f"
+  version "1.3.1"
+  sha256 "bc7995d2ad125fd4900994f5c15e553af6efbbdfbf6104f06e92190c8c27ce3a"
 
   url "https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/releases/download/#{version}/DiffusionBee-#{version}-arm64.dmg",
       verified: "github.com/divamgupta/diffusionbee-stable-diffusion-ui"
