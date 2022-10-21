@@ -7,7 +7,7 @@ cask "artisan" do
         verified: "github.com/artisan-roaster-scope/artisan/"
   else
     sha256 "4b65aac2cddb3ab95bbc8020f2d0cb49dadf3d31277e63285d02ae047d72f530"
-    url "https://github.com/artisan-roaster-scope/artisan/releases/download/v#{version}/artisan-mac-lecacy-#{version}.dmg",
+    url "https://github.com/artisan-roaster-scope/artisan/releases/download/v#{version}/artisan-mac-legacy-#{version}.dmg",
         verified: "github.com/artisan-roaster-scope/artisan/"
   end
 
