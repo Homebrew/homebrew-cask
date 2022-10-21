@@ -1,6 +1,6 @@
 cask "remarkable" do
-  version "2.15.0.643,42139648,Dev"
-  sha256 "1829af522e566f4e848f391a4af18979b1e2d3109a4d1ffb717cda2bfc81851d"
+  version "3.0.0.657,43057152,Dev"
+  sha256 "6e5237906e339f66f1038d5c7c646fcc9c4ae34b8bdf7507fe4e459699d2bfa1"
 
   url "https://updates-download.cloud.remarkable.engineering/sparkle/reMarkableMacOs/#{version.csv.third}/#{version.csv.second}/reMarkable-#{version.csv.first}.dmg",
       verified: "updates-download.cloud.remarkable.engineering/sparkle/reMarkableMacOs/"
