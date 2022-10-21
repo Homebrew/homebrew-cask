@@ -9,7 +9,9 @@ cask "ssh-config-editor" do
 
   livecheck do
     url "https://hejki.org/download/ssheditor/appcast#{version.major}.xml"
-    strategy :sparkle
+    strategy :sparkle do |items|
+      items.find { |item| item.channel.nil? }&.nice_version
+    end
   end
 
   auto_updates true
