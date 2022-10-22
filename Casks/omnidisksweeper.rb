@@ -6,11 +6,11 @@ cask "omnidisksweeper" do
   elsif MacOS.version <= :high_sierra
     version "1.11"
     sha256 "f06b150239e5c5ee27615b1e8bd6ec2c87c61c4cda575547f124ff84986b6f37"
-    url "https://downloads.omnigroup.com/software/MacOSX/10.13/OmniDiskSweeper-#{version.csv.first}(n).dmg"
+    url "https://downloads.omnigroup.com/software/MacOSX/10.13/OmniDiskSweeper-#{version}(n).dmg"
   else
-    version "1.13"
-    sha256 "bf572a47079cd4dea44f7ae2f14bb9a75e2548ad6066757d33564c21a0003821"
-    url "https://downloads.omnigroup.com/software/MacOSX/10.14/OmniDiskSweeper-#{version}.dmg"
+    version "1.14"
+    sha256 "0b1ccb9c9c47306a3e8c9147f61a3ca1d329338612f438f863b19cc34dbca0f1"
+    url "https://downloads.omnigroup.com/software/macOS/11/OmniDiskSweeper-#{version}.dmg"
   end
 
   name "OmniDiskSweeper"
@@ -23,6 +23,7 @@ cask "omnidisksweeper" do
   end
 
   auto_updates true
+  depends_on macos: ">= :sierra"
 
   app "OmniDiskSweeper.app"
 
