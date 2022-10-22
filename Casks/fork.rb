@@ -9,13 +9,10 @@ cask "fork" do
 
   livecheck do
     url "https://git-fork.com/update/feed.xml"
-    strategy :sparkle do |item|
-      item.url[%r{/Fork-(\d+(?:\.\d+)+)\.dmg}i, 1]
-    end
+    strategy :sparkle
   end
 
   auto_updates true
-  conflicts_with cask: "homebrew/cask-versions/fork-dev"
 
   app "Fork.app"
   binary "#{appdir}/Fork.app/Contents/Resources/fork_cli", target: "fork"
