@@ -4,12 +4,8 @@ cask "zdoom" do
 
   url "https://zdoom.org/files/zdoom/#{version.major_minor}/zdoom-#{version}.dmg"
   name "ZDoom"
+  desc "Source port of Doom"
   homepage "https://zdoom.org/index"
-
-  livecheck do
-    url "https://zdoom.org/downloads"
-    regex(/\bZDoom[._-]v?(\d+(?:\.\d+)+)/i)
-  end
 
   app "ZDoom.app"
 
