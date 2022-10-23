@@ -1,8 +1,8 @@
 cask "threads" do
-  version "2.1.9"
-  sha256 "3fca6f20c8cf573948e31bab84c10af977a321396ac8bcefcfc3bca2a23459b3"
+  version "2.2.0"
+  sha256 "4c2e4d1e33821610a4723307a8ba9292b944e73118d09ceba5c5090faa9170ac"
 
-  url "https://downloads.threads.com/mac/Threads-#{version}.dmg"
+  url "https://starupdate.threads.com/download/version/#{version}/Threads-darwin-#{version}.zip"
   name "Threads"
   desc "Communication tool for focused discussions and decision taking"
   homepage "https://threads.com/"
