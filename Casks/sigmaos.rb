@@ -1,6 +1,6 @@
 cask "sigmaos" do
-  version "0.27.0.5"
-  sha256 "0c314ccb0b59ba193809b62305816cd393d1c17d5c2f08e9d11ed630096490ad"
+  version "0.27.0.6"
+  sha256 "e0fbbde9085794224bd68022865bbae5bddf99c5c346e1032194c7c6355debb8"
 
   url "https://releases.sigmaos.com/SigmaOS-#{version}.dmg"
   name "sigmaos"
