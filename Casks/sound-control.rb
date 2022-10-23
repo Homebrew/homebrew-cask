@@ -1,6 +1,6 @@
 cask "sound-control" do
-  version "2.6.6,5156"
-  sha256 "66900cc692671a51dbb809773d8fdbf56050970e9ef66fc0fc23684d99a31dc2"
+  version "2.7.0,5156"
+  sha256 "1ba6f8f52a10c668b123fcbc434123794b2d652bacfb87b3efa213381bf807e7"
 
   url "https://staticz.com/download/#{version.csv.second}/"
   name "Sound Control"
