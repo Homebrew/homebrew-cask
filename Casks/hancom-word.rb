@@ -3,7 +3,7 @@ cask "hancom-word" do
   sha256 :no_check
 
   url "https://cdn.hancom.com/pds/hnc/DOWN/HancomDocs/HwpMac_HancomDocs.pkg",
-    referer: "https://hancom.com/mypage/myIndivPrdtList.do"
+      referer: "https://hancom.com/mypage/myIndivPrdtList.do"
   name "Hacom Word Processor 2022"
   desc "Word processor"
   homepage "https://office.hancom.com/"
