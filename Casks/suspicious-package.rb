@@ -12,7 +12,7 @@ cask "suspicious-package" do
     url "https://www.mothersruin.com/software/downloads/SuspiciousPackage-#{version}.dmg"
     sha256 "844708fb75f8aa102f3ede8ddef3c20180f469b7bc8ec65bbc0370ce9f7db33c"
   else
-    version "4.2.1,932"
+    version "4.3,996"
     url "https://www.mothersruin.com/software/downloads/SuspiciousPackage.dmg"
     sha256 :no_check
   end
