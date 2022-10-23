@@ -10,5 +10,8 @@ cask "hancom-word" do
 
   pkg "HwpMac_HancomDocs.pkg"
 
-  uninstall quit: "com.hancom.office.hwp12.mac.general"
+  uninstall quit:    "com.hancom.office.hwp12.mac.general",
+            pkgutil: [
+              "com.hancom.office.hwp12.mac.general",
+            ]
 end
