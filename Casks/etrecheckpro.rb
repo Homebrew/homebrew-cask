@@ -8,7 +8,7 @@ cask "etrecheckpro" do
   homepage "https://etrecheck.com/"
 
   livecheck do
-    url "https://etrecheck.com/details"
+    url "https://etrecheck.com/en/details.html"
     regex(/EtreCheckPro\sversion\s(\d+(?:\.\d+)+)/i)
   end
 
