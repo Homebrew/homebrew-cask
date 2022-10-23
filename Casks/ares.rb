@@ -4,7 +4,7 @@ cask "ares" do
 
   url "https://github.com/ares-emulator/ares/releases/download/v#{version}/ares-macos.zip",
       verified: "https://github.com/ares-emulator/ares"
-  name "Ares Multi System Emulator"
+  name "ares"
   desc "Cross-platform, multi-system emulator, focusing on accuracy and preservation"
   homepage "https://ares-emu.net/"
 
