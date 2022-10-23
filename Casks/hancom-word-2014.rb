@@ -12,7 +12,7 @@ cask "hancom-word-2014" do
 
   uninstall quit:    "com.hancom.office.hwp.mac.general",
             pkgutil: [
-              "com.haansoft.HancomOfficeHanword.Hanword.pkg",
-              "kr.co.hancom.hancomOfficeHwp.HancomQuicklook.pkg",
+              "com.haansoft.hanwordQuickLookGenerator",
+              "com.hancom.office.hwp.mac.general",
             ]
 end
