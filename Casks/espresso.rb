@@ -1,9 +1,9 @@
 cask "espresso" do
-  version "5.8"
-  sha256 "f502323db472164d98c098ad300ad47d35d350fcbcaed7e4d3342722642cef04"
+  version "5.9"
+  sha256 "4f9fe96665c02bb60b3694a3488658e9add77f34b03fe21257963b714db9761c"
 
-  url "https://downloads.kangacode.com/Espresso/Espresso_#{version}.zip",
-      verified: "downloads.kangacode.com/"
+  url "https://downloads.espressoapps.au/Espresso/Espresso_#{version}.zip",
+      verified: "downloads.espressoapps.au/"
   name "Espresso"
   desc "Website editor focusing on flair and efficiency"
   homepage "https://espressoapp.com/"
