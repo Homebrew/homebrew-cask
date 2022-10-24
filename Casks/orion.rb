@@ -2,9 +2,11 @@ cask "orion" do
   version "0.99,121"
 
   if MacOS.version <= :mojave
+    version "0.99,120.1"
     macos_version_string = "10_14"
     sha256 "128d53fdd986853312823e376d0c15effe90a6d85662e279f7bd2398d7fbc443"
   elsif MacOS.version <= :catalina
+    version "0.99,120.1"
     macos_version_string = "10_15"
     sha256 "74ea7eb46d9177ccbcd64ce24b87e08d6b4feeb1d5f1804bdd4bc075d33353eb"
   elsif MacOS.version <= :big_sur
