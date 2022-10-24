@@ -11,6 +11,11 @@ cask "rancher" do
   desc "Kubernetes and container management on the desktop"
   homepage "https://rancherdesktop.io/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
   conflicts_with cask: %w[
     docker
