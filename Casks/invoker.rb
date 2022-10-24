@@ -2,8 +2,8 @@ cask "invoker" do
   arch arm: "arm64", intel: "x64"
 
   version "2.10.0"
-  sha256  arm:   "9891d409c43f7b71287059952b543890c59fa3ae45938ceb24bc155c1b785a70",
-          intel: "fca565c3a6a603e349cb30371682c2e8afd380d23ab7c4f261c5ca3a6a7b7e80"
+  sha256  arm:   "86270d221a3da8917a8ace738070d5583d5d43f7a7efae64d2e15d049e0ab54b",
+          intel: "7b5d2323aaac1ae0c0fd142698c340f741ce0a57ccd9839bca4aaece0913544d"
 
   url "https://invokerdev.fra1.digitaloceanspaces.com/invoker/Invoker-#{version}-#{arch}.dmg",
       verified: "invokerdev.fra1.digitaloceanspaces.com/invoker/"
