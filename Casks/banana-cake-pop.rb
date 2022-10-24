@@ -1,9 +1,9 @@
 cask "banana-cake-pop" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.0.1"
-  sha256 arm:   "b0406aac93f117f18dfd8dafd2de5461165250e875d7062e97e3b1e0e63aee1d",
-         intel: "e60b80506ec8e832d996a7407f4c5ec8c69264ac11446baac2fc6879ca953240"
+  version "2.0.2"
+  sha256 arm:   "913e695acc21b4ed69716a85437dc9476476fc5469e29c16bf2ef7a596b86ff9",
+         intel: "aa40405657a81094c8c7ecc33675ab88b3266c2b807d938a1d8e0e85dc6caf77"
 
   url "https://download.chillicream.com/bananacakepop/BananaCakePop-#{version}-mac-#{arch}.dmg"
   name "Banana Cake Pop"
