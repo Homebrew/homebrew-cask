@@ -1,6 +1,6 @@
 cask "ludwig" do
-  version "2.1.2"
-  sha256 "df9d529ac2d6b9092f46243e5141c19e8b4e2fd5f9b179e3165b18ea780b0e60"
+  version "2.1.3"
+  sha256 "d9509673a72498fd729b9c243d3f026ce11cadefbd4c3addd426610dc2b10807"
 
   url "https://desktop.ludwig.guru/download/#{version}/osx_64"
   name "ludwig"
