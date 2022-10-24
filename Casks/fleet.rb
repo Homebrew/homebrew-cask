@@ -1,6 +1,3 @@
-# typed: false
-# frozen_string_literal: true
-
 cask "fleet" do
   arch arm: "aarch64", intel: "x64"
   arch_suffix = on_arch_conditional arm: "-aarch64"
