@@ -9,7 +9,7 @@ cask "orion" do
     sha256 "74ea7eb46d9177ccbcd64ce24b87e08d6b4feeb1d5f1804bdd4bc075d33353eb"
   elsif MacOS.version <= :big_sur
     macos_version_string = "11_0"
-    sha256 "61d29b02d1d5e2d430ea3497cb40b7792dec45029487f1778d56f1bf9e333876"
+    sha256 "25c7a674b5842dcfd6a94c69d386c2a670c7219289facb26efaf8927cdef8c63"
   else
     macos_version_string = "12_0"
     sha256 "dd178dbc6a5e3ecc497b109b7227273ceb14e1fd26c72d0960c012fe5785a036"
