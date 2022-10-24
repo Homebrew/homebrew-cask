@@ -1,17 +1,17 @@
-cask "hook" do
-  version "3.9,2022.10"
-  sha256 "2f5f97aee398fcada87d23b116c3bdf2c98e05f1f340411acefff978cc71240a"
+cask "hookmark" do
+  version "4.0,2022.10"
+  sha256 "805e004a1f5d81f9d2fdb2b8236ea29610daadfeebbd9305e732e3388b86ded7"
 
-  url "https://hookproductivity.com/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/Hook-productivity-app-#{version.csv.first}.dmg_.zip",
+  url "https://hookproductivity.com/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/Hookmark-app-#{version.csv.first}.dmg_.zip",
       user_agent: :fake
   name "Hook"
   desc "Link and retrieve key information"
   homepage "https://hookproductivity.com/"
 
   livecheck do
-    url :homepage
+    url "https://hookproductivity.com/download"
     strategy :page_match do |page|
-      match = page.match(%r{href=.*?/(\d+)/(\d+)/Hook-productivity-app-(\d+(?:\.\d+)*(?:-\d+)*)\.dmg}i)
+      match = page.match(%r{href=.*?/(\d+)/(\d+)/Hookmark[._-]app[._-](\d+(?:\.\d+)*(?:-\d+)*)\.dmg}i)
       next if match.blank?
 
       "#{match[3]},#{match[1]}.#{match[2]}"
@@ -19,8 +19,9 @@ cask "hook" do
   end
 
   auto_updates true
+  depends_on macos: ">= :el_capitan"
 
-  app "Hook.app"
+  app "Hookmark.app"
 
   uninstall launchctl: "com.cogsciapps.hookautolaunchhelper",
             quit:      "com.cogsciapps.hook"
