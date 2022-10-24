@@ -1,6 +1,6 @@
 cask "syncroom" do
-  version "1.5.2"
-  sha256 "78e9cd16f2484aecc1eb9d14084f04058bc15a4d2b4d1dd3e1b7b3028e897df8"
+  version "1.5.3"
+  sha256 "3fd96720f4060eb5675fdac7f8b72e101fed7f166be9245cba09e8388f6dafaa"
 
   url "https://syncroom.yamaha.com/play/dl/app/SYNCROOM-JP-mac-#{version}.zip"
   name "SYNCROOM"
