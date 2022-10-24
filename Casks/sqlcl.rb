@@ -1,8 +1,8 @@
 cask "sqlcl" do
-  version "22.2.1.201.1451"
-  sha256 "b478af0eb8a1bd864d47c06d242bc662ffc030f651781acd88469f5a839c18c7"
+  version "22.3.1.285.1825"
+  sha256 :no_check
 
-  url "https://download.oracle.com/otn_software/java/sqldeveloper/sqlcl-#{version}.zip"
+  url "https://download.oracle.com/otn_software/java/sqldeveloper/sqlcl-latest.zip"
   name "sqlcl"
   desc "Oracle SQLcl is the modern command-line interface for the Oracle Database"
   homepage "https://www.oracle.com/sqlcl"
