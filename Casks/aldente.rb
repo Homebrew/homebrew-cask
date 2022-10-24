@@ -1,6 +1,6 @@
 cask "aldente" do
-  version "1.19"
-  sha256 "e5c9c25ac3a915b3d06e19d5d73fc47ae4ee2b696565c085b622d7be735384c5"
+  version "1.19.1"
+  sha256 "9af54d1faff6e8aa677fe4d3ee49e19cfc302f5c02e7db6756b5bbff0f9fc81d"
 
   url "https://github.com/davidwernhart/AlDente/releases/download/#{version}/AlDente.dmg"
   name "AlDente"
