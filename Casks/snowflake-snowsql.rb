@@ -9,8 +9,8 @@ cask "snowflake-snowsql" do
   homepage "https://snowflake.com/"
 
   livecheck do
-    url "https://docs.snowflake.com/en/release-notes/client-change-log-snowsql.html"
-    regex(/>\s*SnowSQL\s*v?(\d+(?:\.\d+)+)\s*</i)
+    url "https://sfc-repo.snowflakecomputing.com/snowsql/bootstrap/1.2/darwin_x86_64/index.html"
+    regex(/">snowsql-(\d+(?:\.\d+)+)-darwin_x86_64.pkg<\/a>/)
   end
 
   pkg "snowsql-#{version}-darwin_x86_64.pkg"
