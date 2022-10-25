@@ -9,7 +9,7 @@ cask "reflex" do
 
   livecheck do
     url "https://stuntsoftware.com/reflex/"
-    regex(/href=.*?reflex_([0-9.]+)\.zip/i)
+    regex(/href=.*?reflex[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
   depends_on macos: ">= :mojave"
