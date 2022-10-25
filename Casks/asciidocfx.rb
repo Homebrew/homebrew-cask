@@ -1,9 +1,9 @@
 cask "asciidocfx" do
   arch arm: "_M1"
 
-  version "1.8.0"
-  sha256 arm:   "5835c695c574f7e351293a7e5da509739f79a2bc49929e025849e982d88d8d98",
-         intel: "841c8e88c3796d165df325ee2d0c7d8e379f1b9b31d2be6fef27e507ec895a16"
+  version "1.8.1"
+  sha256 arm:   "fdaa0c6fec852fb40c3faac8618072fb07ea1e89f0ee3190bb29727fb8097c3a",
+         intel: "1ab321db65058f627583d35630b5164b57db40ed97707c8ddf6dac298ca3e148"
 
   url "https://github.com/asciidocfx/AsciidocFX/releases/download/v#{version}/AsciidocFX_Mac#{arch}.dmg",
       verified: "github.com/asciidocfx/AsciidocFX/"
