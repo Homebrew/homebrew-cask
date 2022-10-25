@@ -21,7 +21,7 @@ cask "anka-virtualization" do
   livecheck do
     url "https://veertu.com/downloads/anka-virtualization-#{livecheck_folder}"
     strategy :header_match
-    regex(/Anka[._-]?v?(\d+(?:\.\d+)+)\.pkg/i)
+    regex(/Anka[._-]?v?(\d+(?:\.\d+)+)#{arch}\.pkg/i)
   end
 
   pkg "Anka-#{version}#{arch}.pkg"
