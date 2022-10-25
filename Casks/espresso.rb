@@ -1,6 +1,6 @@
 cask "espresso" do
-  version "5.9"
-  sha256 "4f9fe96665c02bb60b3694a3488658e9add77f34b03fe21257963b714db9761c"
+  version "5.9.1"
+  sha256 "1bd6bc510ecb4aea724ced65716f7597c0fe2749ee1fd8f05fccad56336fa61e"
 
   url "https://downloads.espressoapps.au/Espresso/Espresso_#{version}.zip",
       verified: "downloads.espressoapps.au/"
