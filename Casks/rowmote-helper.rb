@@ -8,11 +8,12 @@ cask "rowmote-helper" do
   homepage "https://regularrateandrhythm.com/apps/rowmote-pro/"
 
   livecheck do
-    url :homepage
+    url "http://www.regularrateandrhythm.com/apps/rowmote-pro/rowmote-helper-versions.php"
     regex(/Rowmote\s+Helper\s+v?(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
+  depends_on macos: ">= :el_capitan"
 
   app "Rowmote Helper.app"
 end
