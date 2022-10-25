@@ -9,7 +9,7 @@ cask "snowflake-snowsql" do
   homepage "https://snowflake.com/"
 
   livecheck do
-    url "https://sfc-repo.snowflakecomputing.com/snowsql/bootstrap/1.2/darwin_x86_64/index.html"
+    url "https://sfc-repo.snowflakecomputing.com/snowsql/bootstrap/#{version.major_minor}/darwin_x86_64/index.html"
     regex(%r{">snowsql-(\d+(?:\.\d+)+)-darwin_x86_64.pkg</a>})
   end
 
