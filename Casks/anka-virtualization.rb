@@ -24,7 +24,7 @@ cask "anka-virtualization" do
     regex(/Anka[._-]?v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
-  pkg "Anka-#{version}.pkg"
+  pkg "Anka-#{version}#{arch}.pkg"
 
   uninstall launchctl: [
               "com.veertu.anka.ankakbd",
