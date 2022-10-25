@@ -8,7 +8,7 @@ cask "fleet" do
 
   url "https://download.jetbrains.com/fleet/installers/macos_#{arch}/Fleet-#{version}#{arch_suffix}.dmg"
   name "Fleet"
-  desc "Next-generation IDE by JetBrains"
+  desc "Hybrid IDE and text editor"
   homepage "https://www.jetbrains.com/fleet/"
 
   livecheck do
