@@ -8,7 +8,7 @@ cask "bankid" do
   homepage "https://install.bankid.com/"
 
   livecheck do
-    url "https://install.bankid.com/FileDownloader?fileId=Mac"
+    url "https://install.bankid.com/api/file-download/Mac"
     strategy :header_match
   end
 
