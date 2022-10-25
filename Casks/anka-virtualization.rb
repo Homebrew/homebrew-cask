@@ -1,5 +1,6 @@
 cask "anka-virtualization" do
-  arch arm: "arm", intel: "intel"
+  arch arm: "-arm", intel: ""
+  livecheck_folder = on_arch_conditional arm: "arm", intel: "intel"
 
   on_intel do
     version "2.5.7.148"
@@ -12,13 +13,13 @@ cask "anka-virtualization" do
     depends_on macos: ">= :monterey"
   end
 
-  url "https://downloads.veertu.com/anka/Anka-#{version}.pkg"
+  url "https://downloads.veertu.com/anka/Anka-#{version}#{arch}.pkg"
   name "Anka Virtualization"
   desc "CLI tool for managing and creating virtual machines"
   homepage "https://veertu.com/"
 
   livecheck do
-    url "https://veertu.com/downloads/anka-virtualization-#{arch}"
+    url "https://veertu.com/downloads/anka-virtualization-#{livecheck_folder}"
     strategy :header_match
     regex(/Anka[._-]?v?(\d+(?:\.\d+)+)\.pkg/i)
   end
