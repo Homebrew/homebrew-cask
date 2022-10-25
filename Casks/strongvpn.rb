@@ -5,6 +5,7 @@ cask "strongvpn" do
   url "https://static.colomovers.com/mac/StrongVPN.dmg",
       verified: "static.colomovers.com/"
   name "StrongVPN"
+  desc "VPN app with support for multiple protocols"
   homepage "https://strongvpn.com/vpn-apps/macos/"
 
   livecheck do
