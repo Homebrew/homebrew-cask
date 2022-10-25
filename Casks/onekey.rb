@@ -11,6 +11,11 @@ cask "onekey" do
   desc "Crypto wallet"
   homepage "https://onekey.so/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
 
   app "OneKey.app"
