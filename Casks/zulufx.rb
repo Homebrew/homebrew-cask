@@ -2,9 +2,9 @@ cask "zulufx" do
   arch arm: "aarch64", intel: "x64"
   choice = on_arch_conditional arm: "arm", intel: "x86"
 
-  version "17.0.4.1,17.36.17-ca"
-  sha256 arm:   "16f5747b06ca385a2698c0cef4d310e5d081af9ee3b4b61f39fda3cbc432dd4c",
-         intel: "3453d2a63590a54ab5486a1ad0c1ea79a3367ab41a779e185b5dbe7226d411d6"
+  version "17.0.5,17.38.21-ca"
+  sha256 arm:   "c118d74f223a57d14b4607cd59ea5dcd94c443f2a5fbbf17746931350324a755",
+         intel: "da720e89bbb6a5881d80f9fccfea4232dbfb51789ca5df3c16ab7e385282e1a1"
 
   url "https://cdn.azul.com/zulu/bin/zulu#{version.csv.second}-fx-jdk#{version.csv.first}-macosx_#{arch}.dmg",
       referer: "https://www.azul.com/downloads/"
