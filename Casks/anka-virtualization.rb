@@ -2,8 +2,8 @@ cask "anka-virtualization" do
   arch arm: "arm", intel: "intel"
 
   on_intel do
-    version "2.5.7.148"
-    sha256 "e600e8144f5ca5134aa94785bc9bbc567193b1065944573df9cc9daf7d8f796e"
+    version "3.1.1.152"
+    sha256 "a1fd1558fc7ba5f9b3c9eb3636e33b1b5c99be79dd6521a491e14b101810e004"
     depends_on macos: ">= :big_sur"
   end
   on_arm do
