@@ -10,7 +10,7 @@ cask "color-studio" do
   app "Color Studio/Color Studio.app"
 
   zap trash: [
-    "~/Library/Containers/com.bernaferrari.colorstudio",
     "~/Library/Application Scripts/com.bernaferrari.colorstudio",
+    "~/Library/Containers/com.bernaferrari.colorstudio",
   ]
 end
