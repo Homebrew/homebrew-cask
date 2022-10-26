@@ -8,4 +8,14 @@ cask "picfindr" do
   homepage "https://softorino.com/picfindr/"
 
   app "PicFindr.app"
+
+  zap trash: [
+    "/Users/Shared/PicFindr",
+    "~/Library/Application Support/PicFindr",
+    "~/Library/Caches/com.softorino.picfindr",
+    "~/Library/HTTPStorages/com.softorino.picfindr",
+    "~/Library/HTTPStorages/com.softorino.picfindr.binarycookies",
+    "~/Library/Preferences/com.softorino.picfindr.plist",
+    "~/Library/Saved Application State/com.softorino.picfindr.savedState",
+  ]
 end
