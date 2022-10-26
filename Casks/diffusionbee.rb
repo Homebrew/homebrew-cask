@@ -1,14 +1,15 @@
 cask "diffusionbee" do
-  version "1.3.1"
-  sha256 "bc7995d2ad125fd4900994f5c15e553af6efbbdfbf6104f06e92190c8c27ce3a"
+  arch arm: "arm64", intel: "intel"
 
-  url "https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/releases/download/#{version}/DiffusionBee-#{version}-arm64.dmg",
+  version "1.4.0"
+  sha256 arm:   "d34a5771041828c1525a980f3e03349199cd9186dfa4eaa376829659421402d4",
+         intel: "84a0893c125b7803629180f11da26b75b98583f8e2eb39e2abc352991cb9e1ce"
+
+  url "https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/releases/download/#{version}/DiffusionBee-#{version}-#{arch}_SD1.5MPS.dmg",
       verified: "github.com/divamgupta/diffusionbee-stable-diffusion-ui"
   name "Diffusion Bee"
   desc "Run Stable Diffusion locally"
   homepage "https://diffusionbee.com/"
-
-  depends_on arch: :arm64
 
   app "DiffusionBee.app"
 
