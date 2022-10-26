@@ -1,6 +1,6 @@
 cask "banking-4" do
   # NOTE: "4" is not a version number, but an intrinsic part of the product name
-  version "7.9.1,8280"
+  version "7.9.2,8334"
   sha256 :no_check
 
   url "https://subsembly.com/download/MacBanking4.pkg"
