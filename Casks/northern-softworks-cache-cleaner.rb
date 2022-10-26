@@ -1,4 +1,4 @@
-cask "ventura-cache-cleaner" do
+cask "northern-softworks-cache-cleaner" do
   version "18.0"
   sha256 :no_check
 
