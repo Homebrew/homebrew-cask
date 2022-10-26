@@ -3,8 +3,7 @@ cask "northern-softworks-cache-cleaner" do
   sha256 :no_check
 
   url "https://www.northernsoftworks.com/downloads/nscc.dmg"
-  name "Ventura Cache Cleaner"
-  name "VCC"
+  name "Northern Softworks Cache Cleaner"
   desc "General purpose system maintenance tool"
   homepage "https://www.northernsoftworks.com/venturacachecleaner.html"
 
