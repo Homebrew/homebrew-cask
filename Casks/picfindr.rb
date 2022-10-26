@@ -7,6 +7,11 @@ cask "picfindr" do
   desc "Search engine & manager for free stock images"
   homepage "https://softorino.com/picfindr/"
 
+  livecheck do
+    url "https://api.softorino.com/live/app-manager/v3/pfm/mac/updates"
+    strategy :sparkle
+  end
+
   app "PicFindr.app"
 
   zap trash: [
