@@ -28,7 +28,7 @@ cask "iterm2" do
     "homebrew/cask-versions/iterm2-legacy",
     "homebrew/cask-versions/iterm2-nightly",
   ]
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :catalina"
 
   app "iTerm.app"
 
