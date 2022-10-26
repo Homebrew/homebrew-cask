@@ -1,6 +1,6 @@
 cask "toggl-track" do
-  version "7.5.441"
-  sha256 "95bed62de497a9ef0009083aea23a715cc1836230f0a207d0e08f0aa7d604619"
+  version "7.5.461"
+  sha256 "db8626a20260927dc20785ce0a2cef62dc897045f9793abebce4a04fe2785882"
 
   url "https://github.com/toggl-open-source/toggldesktop/releases/download/v#{version}/TogglDesktop-#{version.dots_to_underscores}.dmg",
       verified: "github.com/toggl-open-source/toggldesktop/"
