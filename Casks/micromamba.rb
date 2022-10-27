@@ -2,8 +2,8 @@ cask "micromamba" do
   arch arm: "arm64", intel: "64"
 
   version "0.27.0"
-  sha256 arm:   "4514ca08786692a7b4619fa7c215830e5b6cc6b7077b1c463f4a54b5c82b04e4",
-         intel: "3c1a5ebb151668ce683fb74073bce5e01740663d5917769adb6d2703441b4531"
+  sha256 arm:   "cefcbab3c6e5b1cf2157211af64a9c054bbf842e632f48cfd14889b11c3f09c3",
+         intel: "32eb83ad09f9c97c230793ef5572ee8cbcf425bcc3683b0035303867c11025aa"
 
   url "https://micro.mamba.pm/api/micromamba/osx-#{arch}/#{version}",
       verified: "micro.mamba.pm/api/micromamba/"
