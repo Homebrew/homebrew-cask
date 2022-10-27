@@ -9,8 +9,7 @@ cask "toggl-track" do
   homepage "https://www.toggl.com/track/toggl-desktop/"
 
   livecheck do
-    url "https://toggl-open-source.github.io/toggldesktop/assets/releases/darwin_stable_appcast.xml"
-    strategy :sparkle
+    url "https://github.com/toggl-open-source/toggldesktop"
   end
 
   auto_updates true
