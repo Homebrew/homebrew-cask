@@ -8,7 +8,7 @@ cask "google-earth-pro" do
   homepage "https://www.google.com/earth/"
 
   livecheck do
-    url :url
+    url "https://dl.google.com/earth/client/advanced/current/GoogleEarthProMac-Intel.dmg"
     strategy :extract_plist
   end
 
