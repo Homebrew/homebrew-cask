@@ -1,6 +1,6 @@
 cask "picfindr" do
-  version "1.1.10"
-  sha256 "78a804b40b3d570aed0d64a402d48cda06f9a002c050c32845752df2c4a9b0e1"
+  version "1.1.13"
+  sha256 "d1fa04695d2014dddef580e5531c557235eb4519db8da946f92772bd8e743216"
 
   url "https://ushining.softorino.com/shine_uploads/picfindr_#{version}.dmg"
   name "picfindr"
