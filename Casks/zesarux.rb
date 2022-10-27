@@ -1,6 +1,6 @@
 cask "zesarux" do
-  version "10.1"
-  sha256 "f315abdd014219793ecde1f8aa2268e2d76126db3ea00b46a913ca1717250b68"
+  version "10.2"
+  sha256 "caf8d7b124ef75ba0217c396a08560f60682f2b019157546c900887a7987101e"
 
   url "https://github.com/chernandezba/zesarux/releases/download/ZEsarUX-#{version}/ZEsarUX_macos-#{version}.dmg"
   name "ZEsarUX"
