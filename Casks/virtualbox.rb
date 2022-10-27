@@ -1,8 +1,15 @@
 cask "virtualbox" do
-  version "7.0.2,154219"
-  sha256 "2027a2334d4ffb32820864378667fd5277be9290b863517da785036a70325768"
+  on_intel do
+    version "7.0.2,154219"
+    sha256 "2027a2334d4ffb32820864378667fd5277be9290b863517da785036a70325768"
+    url "https://download.virtualbox.org/virtualbox/#{version.csv.first}/VirtualBox-#{version.csv.first}-#{version.csv.second}-OSX.dmg"
+  end
+  on_arm do
+    version "7.0.2,BETA4,154219"
+    sha256 "c5b85d3168faabc269035d82d2510b92937d4e389ef93139b4333960cd683582"
+    url "https://download.virtualbox.org/virtualbox/#{version.csv.first}/VirtualBox-#{version.csv.first}_#{version.csv.second}-#{version.csv.third}-macOSArm64.dmg"
+  end
 
-  url "https://download.virtualbox.org/virtualbox/#{version.csv.first}/VirtualBox-#{version.csv.first}-#{version.csv.second}-OSX.dmg"
   name "Oracle VirtualBox"
   desc "Virtualizer for x86 hardware"
   homepage "https://www.virtualbox.org/"
