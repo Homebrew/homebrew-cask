@@ -10,6 +10,7 @@ cask "toggl-track" do
 
   livecheck do
     url "https://github.com/toggl-open-source/toggldesktop"
+    strategy :github_latest
   end
 
   auto_updates true
