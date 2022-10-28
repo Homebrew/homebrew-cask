@@ -1,8 +1,8 @@
 cask "itch" do
   version "25.5.1"
-  sha256 "a36ff884911923d4af3bf59954e1871723d75f71b58c46fc68096eb252e90b88"
+  sha256 :no_check
 
-  url "https://broth.itch.ovh/itch/darwin-amd64/#{version}/archive/default",
+  url "https://broth.itch.ovh/install-itch/darwin-amd64/LATEST/archive/default",
       verified: "broth.itch.ovh/"
   name "itch.io"
   desc "Game client for itch.io"
