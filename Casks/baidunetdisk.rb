@@ -1,19 +1,12 @@
 cask "baidunetdisk" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.14.7"
+  version "4.14.8"
+  sha256 arm:   "02eced9026beeec75cdd89e32a688485df157fc035dbe6bd1e51a0999cdf01e2",
+         intel: "bdacdaeca6bbd087bdd494a3e3274e5e9614a1abc2b52d33d7057d9cfdb01315"
 
-  on_intel do
-    sha256 "716d9a658661d2fcfdf7e84aca3db3b2f5e27c4468673ba73166a9a874c53b98"
-    url "https://issuepcdn.baidupcs.com/issue/netdisk/MACguanjia/#{version}/BaiduNetdisk_mac_#{version}_#{arch}.dmg",
-        verified: "issuepcdn.baidupcs.com/issue/netdisk/MACguanjia/"
-  end
-  on_arm do
-    sha256 "3853603b2383c16473023fde4ae77cb0a70055067b7205ae7aa42b2fb8d25ca8"
-    url "https://issuepcdn.baidupcs.com/issue/netdisk/MACguanjia/#{version}/BaiduNetdisk_mac_#{version}_#{arch}.dmg",
-        verified: "issuepcdn.baidupcs.com/issue/netdisk/MACguanjia/"
-  end
-
+  url "https://issuepcdn.baidupcs.com/issue/netdisk/MACguanjia/#{version}/BaiduNetdisk_mac_#{version}_#{arch}.dmg",
+      verified: "issuepcdn.baidupcs.com/issue/netdisk/MACguanjia/"
   name "Baidu NetDisk"
   name "百度网盘"
   desc "Cloud storage service"
