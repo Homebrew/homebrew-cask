@@ -1,18 +1,21 @@
 cask "orion" do
-  version "0.99,120.1"
+  version "0.99,121"
 
   if MacOS.version <= :mojave
     macos_version_string = "10_14"
-    sha256 "128d53fdd986853312823e376d0c15effe90a6d85662e279f7bd2398d7fbc443"
+    sha256 ""
   elsif MacOS.version <= :catalina
     macos_version_string = "10_15"
-    sha256 "74ea7eb46d9177ccbcd64ce24b87e08d6b4feeb1d5f1804bdd4bc075d33353eb"
+    sha256 ""
   elsif MacOS.version <= :big_sur
     macos_version_string = "11_0"
-    sha256 "61d29b02d1d5e2d430ea3497cb40b7792dec45029487f1778d56f1bf9e333876"
-  else
+    sha256 "25c7a674b5842dcfd6a94c69d386c2a670c7219289facb26efaf8927cdef8c63"
+  elsif MacOS.version <= :monterey
     macos_version_string = "12_0"
-    sha256 "3403dd4933540f1c8e534da063096cb8e89879dfa6724df9911b4d392356a40b"
+    sha256 "dd178dbc6a5e3ecc497b109b7227273ceb14e1fd26c72d0960c012fe5785a036"
+  else
+    macos_version_string = "13_0"
+    sha256 "c14c6ba313330d36e996f6e62ca21753f020da28b658c5a1afb4302d2ec62a84"
   end
   url "https://browser.kagi.com/updates/#{macos_version_string}/#{version.csv.second}.zip"
   name "Orion Browser"
