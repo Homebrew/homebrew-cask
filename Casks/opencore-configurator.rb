@@ -18,7 +18,10 @@ cask "opencore-configurator" do
   app "OpenCore Configurator.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.altervista.mackie100projects.opencore-configurator.sfl2",
+    "~/Library/Application Support/org.altervista.mackie100projects.OpenCore-Configurator",
     "~/Library/Caches/org.altervista.mackie100projects.OpenCore-Configurator",
+    "~/Library/HTTPStorages/org.altervista.mackie100projects.OpenCore-Configurator",
     "~/Library/Preferences/org.altervista.mackie100projects.OpenCore-Configurator.plist",
   ]
 end
