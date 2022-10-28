@@ -8,6 +8,11 @@ cask "rotki" do
   desc "Portfolio tracking and accounting tool"
   homepage "https://rotki.com/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "rotki.app"
 
   zap trash: [
