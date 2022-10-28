@@ -18,7 +18,8 @@ cask "arc" do
     end
   end
 
-  depends_on macos: ">= :catalina"
+  auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "Arc.app"
 
