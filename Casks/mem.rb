@@ -1,15 +1,15 @@
 cask "mem" do
-  version "0.31.0"
-  sha256 "c199756b8e2ee8d77c2d9aa982a87cf0f77a59ce440f4d5682a5c37a4c3ca037"
+  version "0.39.0"
+  sha256 "ca84b358df3ec7ce29022926bd6b2c548e05263bd9263b17892f41affe557df1"
 
-  url "https://storage.googleapis.com/mem-desktop/Mem-#{version}.dmg",
-      verified: "storage.googleapis.com/mem-desktop/"
+  url "https://storage.googleapis.com/mem-desktop-stable-releases/Mem-#{version}.dmg",
+      verified: "storage.googleapis.com/mem-desktop-stable-releases/"
   name "Mem"
   desc "Capture and access information from anywhere"
   homepage "https://get.mem.ai/"
 
   livecheck do
-    url "https://storage.googleapis.com/mem-desktop/latest-mac.yml"
+    url "https://storage.googleapis.com/mem-desktop-stable-releases/latest-mac.yml"
     strategy :electron_builder
   end
 
