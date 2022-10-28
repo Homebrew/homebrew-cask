@@ -1,6 +1,6 @@
 cask "nagstamon" do
-  version "3.8.0"
-  sha256 "99912e45dd8940dd508f31e775a4f1a2729d65fb7d4e072448b2f9e02daaaaf5"
+  version "3.10.0"
+  sha256 "c70ba59f57d03467fa52b54fa4da885ef05b16c660f72a8c1dc24de6b49cf71e"
 
   url "https://github.com/HenriWahl/Nagstamon/releases/download/v#{version}/Nagstamon.#{version}.dmg",
       verified: "github.com/HenriWahl/Nagstamon/"
