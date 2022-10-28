@@ -9,8 +9,8 @@ cask "itch" do
   homepage "https://itch.io/app"
 
   livecheck do
-    url "https://github.com/itchio/itch/releases"
-    strategy :github_latest
+    url "https://broth.itch.ovh/itch/darwin-amd64"
+    regex(/(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
