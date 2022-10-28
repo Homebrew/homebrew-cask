@@ -14,7 +14,7 @@ cask "paragon-ntfs" do
   auto_updates true
   depends_on macos: ">= :sierra"
 
-  installer manual: "Install NTFS for Mac.app"
+  installer manual: "FSInstaller.app"
 
   uninstall kext:      "com.paragon-software.filesystems.ntfs",
             launchctl: "com.paragon-software.ntfs*",
@@ -29,7 +29,7 @@ cask "paragon-ntfs" do
     "~/Library/Application Support/com.paragon-software.ntfs.*",
     "~/Library/Caches/com.paragon-software.ntfs.fsapp",
     "~/Library/HTTPStorages/com.paragon-software.ntfs.*",
-    "~/Library/Preferences/com.paragon-software.ntfs.fsapp.plist",
+    "~/Library/Preferences/com.paragon-software.ntfs.*",
     "~/Library/Saved Application State/com.paragon-software.ntfs.fsapp.savedState",
     "~/Library/WebKit/com.paragon-software.ntfs.fsapp",
   ]
