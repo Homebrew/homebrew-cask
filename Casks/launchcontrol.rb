@@ -35,6 +35,11 @@ cask "launchcontrol" do
     "~/Library/Caches/com.apple.helpd/Generated/com.soma-zone.LaunchControl.help*",
     "~/Library/Caches/com.apple.helpd/Generated/LaunchControl Help*",
     "~/Library/Caches/com.soma-zone.LaunchControl",
+    "~/Library/HTTPStorages/com.soma-zone.LaunchControl",
+    "~/Library/Logs/LaunchControl",
     "~/Library/Preferences/com.soma-zone.LaunchControl.plist",
+    "~/Library/Preferences/com.soma-zone.LaunchControl.shared.plist",
+    "~/Library/Saved Application State/com.soma-zone.LaunchControl.savedState",
+    "~/Library/WebKit/com.soma-zone.LaunchControl",
   ]
 end
