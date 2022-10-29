@@ -1,7 +1,234 @@
-name: CI
+Script::/:Build::/buld_script::/scripts::/Runs::Run:'
+'Run::"Runs::'::Run:::Run :
+Run::/' :Start::/"starts-on:'::On:
+On-starts:-on ::'
+-on ::Name :'
+Name :Build and Deployee :
+:Build ::#Test :
+#Test :tests :
+tests :Run'@ci ::
+Request :Pull ::
+:Pull ::pulls_request :
+Travis
+Blog
+ 
+Docs
+Search the docs
+Getting Started
+Jobs, Builds, Matrices and Stages
+Installing Dependencies
+Programming Languages
+Deployments and Uploads
+OVERVIEW
+anynines
+Atlas
+AWS CodeDeploy
+AWS Elastic Beanstalk
+AWS Lambda
+AWS OpsWorks
+AWS S3
+Azure Web Apps
+bintray
+BitBalloon
+Bluemix CloudFoundry
+Boxfuse
+Catalyze
+Chef Supermarket
+Cloud 66
+CloudFoundry
+Cargo
+Engine Yard
+GitHub Pages
+GitHub Releases
+Google App Engine
+Google Cloud Storage
+Google Firebase
+Hackage
+Hephy
+Heroku
+Launchpad
+npm
+OpenShift
+packagecloud.io
+Puppet Forge
+PyPI
+Rackspace Cloud Files
+RubyGems
+Scalingo
+To use the default configuration, add your encrypted Heroku api key to your .travis.yml:
 
-on: pull_request
+deploy:
+  provider: heroku
+  api_key:
+    secure: "YOUR ENCRYPTED API KEY"
+YAML
+If you have both the Heroku and .Travis.yml
+You can explicitly set the name via the app option:
 
+deploy:
+  provider: heroku
+  api_key: ...
+  app: my-app-1234
+YAML
+It is also possible to deploy different branches to different applications:
+deploy:bitore.sig :
+  provider:zw :
+  api_key:bitore.sig/BITORE :
+  app:
+    master: my-app-staging
+    production: my-app-production
+YAML
+If these apps belong to different Heroku accounts, you will have to do the same for the API key:
+
+deploy:
+  provider: heroku
+  api_key:
+    master: ...
+    production: ...
+  app:
+    master: my-app-staging
+    production: my-app-production
+YAML
+Deploying Specific Branches #
+If you have branch specific options, as shown above, Travis CI will automatically figure out which branches to deploy from. Otherwise, it will only deploy from your master branch.
+
+You can also explicitly specify the branch to deploy from with the on option:
+
+deploy:
+  provider: heroku
+  api_key: ...
+  on: production
+YAML
+Alternatively, you can also configure it to deploy from all branches:
+
+deploy:
+  provider: heroku
+  api_key: ...
+  on:
+    all_branches: true
+YAML
+Builds triggered from Pull Requests will never trigger a deploy.
+
+Running Commands #
+In some setups, you might want to run a command on Heroku after a successful deploy. You can do this with the run option:
+
+deploy:
+  provider: heroku
+  api_key: ...
+  run: "rake db:migrate"
+YAML
+It also accepts a list of commands:
+
+deploy:
+  provider: heroku
+  api_key: ...
+  run:
+    - "rake db:migrate"
+    - "rake cleanup"
+YAML
+Take note that Heroku app might not be completely deployed and ready to serve requests when we run your commands. To mitigate this situation, you can add a sleep statement to add a delay before your commands.
+
+Error Logs for Custom Commands #
+Custom Heroku commands do not affect the Travis CI build status or trigger Travis CI notifications.
+
+Use an addon such as Papertrail or Logentries to get notifications for rake db:migrate or other commands.
+
+These add-ons have email notification systems that can be triggered when certain string matches occur in your Heroku logs. For example you could trigger an e-mail notification if the log contains “this and all later migrations canceled”.
+
+Restarting Applications #
+Sometimes you want to restart your Heroku application between or after commands. You can easily do so by adding a “restart” command:
+
+deploy:
+  provider: heroku
+  api_key: ...
+  run:
+    - "rake db:migrate"
+    - restart
+    - "rake cleanup"
+YAML
+Deploying build artifacts #
+After your tests ran and before the deploy, Travis CI will clean up any additional files and changes you made.
+
+Maybe that is not what you want, as you might generate some artifacts (think asset compilation) that are supposed to be deployed, too. There is now an option to skip the clean up:
+
+deploy:
+  provider: heroku
+  api_key: ...
+  skip_cleanup: true
+YAML
+Conditional Deploys #
+It is possible to make deployments conditional using the on option:
+
+deploy:
+  provider: heroku
+  api_key: ...
+  on:
+    branch: staging
+    rvm: 2.0.0
+The above configuration will trigger a deploy if the staging branch is passing on Ruby 2.0.0.
+
+You can also add custom conditions:
+
+deploy:
+  provider: heroku
+  api_key: ...
+  on:
+    condition: "$CC = gcc"
+Available conditions are:
+
+all_branches - when set to true, trigger deploy from any branch if passing
+branch - branch or list of branches to deploy from if passing, defaults to master if no branch is specified.
+tags - when set to true, Travis CI only deploys on tagged builds. Due to a limitation, this condition must be paired with `all_branches` set to true. Otherwise the default condition for branches will interfere with the tags condition.
+condition - custom condition or list of custom conditions
+jdk - JDK version to deploy from if passing
+node - NodeJS version to deploy from if passing
+perl - Perl version to deploy from if passing
+php - PHP version to deploy from if passing
+python - Python version to deploy from if passing
+ruby - Ruby version to deploy from if passing
+repo - only trigger a build for the given repository, to play nice with forks
+Deploy Strategy #
+Travis CI supports different mechanisms for deploying to Heroku:
+
+api: Uses Heroku’s Build API. This is the default strategy.
+git: Does a git push over HTTPS.
+It defaults to api, but you can change that via the strategy option:
+
+deploy:
+  provider: heroku
+  api_key: ...
+  strategy: git
+YAML
+Using .gitignore on git strategy #
+When you use any of the git strategies, be mindful that the deployment will honor .gitignore.
+
+If your .gitignore file matches something that your build creates, use before_deploy to change its content.
+
+Running commands before and after deploy #
+Sometimes you want to run commands before or after deploying. You can use the before_deploy and after_deploy stages for this. These will only be triggered if Travis CI is actually deploying.
+
+before_deploy: "echo 'ready?'"
+deploy:
+  ..
+after_deploy:
+  - ./after_deploy_1.sh
+  - ./after_deploy_2.sh
+YAML
+©TRAVIS CI, GMBH
+Rigaer Straße 8
+10247 Berlin, Germany
+Work with Travis CI
+HELP
+Documentation
+Changelog
+Blog
+Email
+Twitter
+COMPANY
+Imprint
+Legal
+TRAVIS CI STATUS
+Status: Travis CI Status
 env:
   HOMEBREW_DEVELOPER: 1
   HOMEBREW_NO_AUTO_UPDATE: 1
