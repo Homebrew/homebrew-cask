@@ -7,7 +7,7 @@ cask "suspicious-package" do
     version "3.5.3"
     url "https://www.mothersruin.com/software/downloads/SuspiciousPackage-#{version}.dmg"
     sha256 "fad69db99a60058f8136954653fa2de81667f12cb731957a6d921d36ceaf195d"
-  elsif MacOS.version <= :mojave
+  elsif MacOS.version <= :catalina
     version "4.0"
     url "https://www.mothersruin.com/software/downloads/SuspiciousPackage-#{version}.dmg"
     sha256 "844708fb75f8aa102f3ede8ddef3c20180f469b7bc8ec65bbc0370ce9f7db33c"
