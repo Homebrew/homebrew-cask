@@ -2,8 +2,8 @@ cask "eloston-chromium" do
   arch arm: "arm64", intel: "x86-64"
 
   on_intel do
-    version "107.0.5304.62-1.1,1666811784"
-    sha256 "a40987c86d24c19d6cafae7c38322903e64b19f6d2a4854135c55c68865bb069"
+    version "107.0.5304.88-1.1,1667030894"
+    sha256 "25ca9c6b74a41a22ed94880011e3b8cae9fcf9b5f6fa13ca8f5d6c1dd2fd9a0e"
   end
   on_arm do
     version "107.0.5304.62-1.1,1667001684"
