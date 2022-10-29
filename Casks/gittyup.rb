@@ -1,8 +1,8 @@
 cask "gittyup" do
-  version "1.2.0.1"
+  version "1.2.0"
   sha256 "9e6c25f9d24e642c8f15794745ae4f04cf24cfcaf57c2a7dfed97093e4ccdd1d"
 
-  url "https://github.com/Murmele/Gittyup/releases/download/stable/Gittyup-#{version}.dmg",
+  url "https://github.com/Murmele/Gittyup/releases/download/gittyup_v#{version}/Gittyup-#{version}.dmg",
       verified: "github.com/Murmele/Gittyup/"
   name "gittyup"
   desc "Graphical Git client"
