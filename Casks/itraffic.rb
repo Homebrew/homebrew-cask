@@ -1,6 +1,6 @@
 cask "itraffic" do
-  version "0.1.4"
-  sha256 "cd26a9b5d41a8b2faa59e72c8b21f7514c158f0e09c384926370e584655d19a5"
+  version "0.1.5"
+  sha256 "45e49c0bc3278d446a37fbe844e0f13eba215b7904a2eb950aaf7aba8d7bbba2"
 
   url "https://github.com/foamzou/ITraffic-monitor-for-mac/releases/download/v#{version}/ITraffic-v#{version}.zip"
   name "itraffic"

@@ -9,9 +9,8 @@ cask "imgotv" do
   homepage "https://www.mgtv.com/app/"
 
   livecheck do
-    url :homepage
-    strategy :page_match
-    regex(/mgtv[._-]mango[._-](\d+(?:\.\d+)+)\.dmg/i)
+    url "https://pcconf.api.mgtv.com/getPcDownloadUrl?lastp=ch_home"
+    strategy :header_match
   end
 
   depends_on macos: ">= :sierra"

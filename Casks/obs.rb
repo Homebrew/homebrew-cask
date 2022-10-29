@@ -16,6 +16,7 @@ cask "obs" do
   end
 
   auto_updates true
+  conflicts_with cask: "homebrew/cask-versions/obs-beta"
   depends_on macos: ">= :catalina"
 
   app "OBS.app"

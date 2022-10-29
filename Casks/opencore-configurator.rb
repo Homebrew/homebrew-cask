@@ -1,5 +1,5 @@
 cask "opencore-configurator" do
-  version "2.62.1.0"
+  version "2.63.0.0"
   sha256 :no_check
 
   url "https://mackie100projects.altervista.org/apps/opencoreconf/download-new-build.php?version=last",
@@ -18,7 +18,10 @@ cask "opencore-configurator" do
   app "OpenCore Configurator.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.altervista.mackie100projects.opencore-configurator.sfl2",
+    "~/Library/Application Support/org.altervista.mackie100projects.OpenCore-Configurator",
     "~/Library/Caches/org.altervista.mackie100projects.OpenCore-Configurator",
+    "~/Library/HTTPStorages/org.altervista.mackie100projects.OpenCore-Configurator",
     "~/Library/Preferences/org.altervista.mackie100projects.OpenCore-Configurator.plist",
   ]
 end
