@@ -4,7 +4,7 @@ cask "workspace-one-intelligent-hub" do
 
   url "https://packages.vmware.com/wsone/VMwareWorkspaceONEIntelligentHub.pkg",
       verified: "packages.vmware.com/wsone/"
-  name "workspace-one-intelligent-hub"
+  name "Workspace ONE Intelligent Hub"
   desc "VMware workspace"
   homepage "https://www.getwsone.com/"
 
@@ -13,21 +13,23 @@ cask "workspace-one-intelligent-hub" do
     strategy :extract_plist
   end
 
+  depends_on macos: ">= :catalina"
+
   pkg "VMwareWorkspaceONEIntelligentHub.pkg"
 
   uninstall pkgutil:   [
               "com.air-watch.pkg.OSXAgent",
-              "com.airwatch.munki.python",
               "com.airwatch.munki.admin",
               "com.airwatch.munki.core",
+              "com.airwatch.munki.python",
             ],
             launchctl: [
-              "com.vmware.uem.hubd",
               "com.airwatch.awcmd",
               "com.airwatch.mac.agent",
               "com.vmware.hub.flagd",
-              "com.vmware.hubupdateagent",
               "com.vmware.hub.hubupdatedaemon",
+              "com.vmware.hubupdateagent",
+              "com.vmware.uem.hubd",
               "com.vmware.uem.hublogd",
             ]
 
