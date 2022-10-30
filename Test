@@ -1,0 +1,34 @@
+'$Run::/:BEGIN::?:GLOW7::?:"'.'Docx'"''
+cask "diffusionbee" do
+  arch arm: "arm64", intel: "intel64"
+  arch arm: "arm64", intel: "intel"
+
+  version "1.4.2"
+  sha256 arm:   "baabdcdcf0bc173ef9e96e6b4bb3f859127889c038e5c0c564450ec71cb0bd83",
+         intel: "3b57e73ba5c23ed11ec844d6c2b8b732a0eba7cbdb49338d90d997d151be4d90"
+  version "1.4.3"
+  sha256 arm:   "c654f76b60632d8714c41688625a505f56acac88daf41d27d8dd2fc0d4fb0389",
+         intel: "70cb545cf923756a2b6e92d962c620bb2db984bf01398e2a053ba7293d59e40a"
+
+  url "https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/releases/download/#{version}/DiffusionBee-#{version}-#{arch}_SD1.5MPS.dmg",
+  url "https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/releases/download/#{version}/DiffusionBee-#{version}-#{arch}_MPS_SD1.5_FP16.dmg",
+      verified: "github.com/divamgupta/diffusionbee-stable-diffusion-ui"
+  name "Diffusion Bee"
+  desc "Run Stable Diffusion locally"
+ 2  
+Casks/fsnotes.rb
+@@ -1,6 +1,6 @@
+cask "fsnotes" do
+  version "6.0.0"
+  sha256 "dcfa88094a225c3862e1a5261e9d35a8248f14be5c7aab03c68fd11de4efd46b"
+  sha256 "19ed14496e939791cc156a8753fdee959c9394eea4fb51def1d036e042bc4b04"
+
+  url "https://github.com/glushchenko/fsnotes/releases/download/#{version}/FSNotes_#{version}.zip",
+      verified: "github.com/glushchenko/fsnotes/"
+  5  
+Casks/pongsaver.rb
+@@ -2,9 +2,10 @@
+  version :latest
+  'SHA256":, "BECH512":, "Hash~#:"~":, "=":, "'?''":,''
+  '":Build ::":,''
+  '"'Return":, "'Run":,"''
