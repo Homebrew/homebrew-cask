@@ -7,8 +7,8 @@ cask "silentknight" do
       skip "Legacy version for Mojave and earlier"
     end
   else
-    version "2.01,2022.10"
-    sha256 "b213de14a22fb4ef49209f300036e0fa9d578f990fd3d2b503e4c5321847a579"
+    version "2.02,2022.10"
+    sha256 "bd9d6cc175cdf86971a1a1bd39051fa82299ae79c6eee502b9125326649b4d04"
 
     livecheck do
       url "https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
