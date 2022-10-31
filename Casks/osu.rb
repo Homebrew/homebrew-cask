@@ -1,9 +1,9 @@
 cask "osu" do
   arch arm: "Apple.Silicon", intel: "Intel"
 
-  version "2022.1022.0"
-  sha256 arm:   "77cab34d103b0ca609e14551e1d98d47c44de7b916ef249f68940d8fa749dd2f",
-         intel: "8ac8fa3f11684558e6140aab9b046a41e8642a85e55072008da801e621fe6f26"
+  version "2022.1031.0"
+  sha256 arm:   "0802d24f5519a462e3f505cfc3d3e1c6107fdd76f0afda865165eed002564648",
+         intel: "adc30e07d96bddd1dd7e39a2394033b4b468961ef4ec3900d1987fa8dea74b37"
 
   url "https://github.com/ppy/osu/releases/download/#{version}/osu.app.#{arch}.zip"
   name "osu!"
