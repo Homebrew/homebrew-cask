@@ -1,8 +1,8 @@
 cask "pure-writer" do
-  version "1.6.0,1.6.0"
-  sha256 "69ee93d99c4946b4ebeffdea5d3b5b4f77e9df6645ffe019cbb7f1e23a033912"
+  version "1.6.0,1.6.2"
+  sha256 "af79a9981cf0c688c35e79d1b69b40ab7a5e221607ae3dc986075a548de6301d"
 
-  url "https://github.com/PureWriter/desktop/releases/download/#{version.csv.second}/PureWriter-#{version.csv.first}-macOS.dmg",
+  url "https://github.com/PureWriter/desktop/releases/download/#{version.csv.first}/PureWriter-#{version.csv.second}-macOS.dmg",
       verified: "github.com/PureWriter/desktop/"
   name "Pure Writer Desktop"
   desc "Desktop version of the Android app"
