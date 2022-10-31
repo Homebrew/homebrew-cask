@@ -13,6 +13,7 @@ cask "workspace-one-intelligent-hub" do
     strategy :extract_plist
   end
 
+  auto_updates true
   depends_on macos: ">= :catalina"
 
   pkg "VMwareWorkspaceONEIntelligentHub.pkg"
