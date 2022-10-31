@@ -3,8 +3,8 @@ cask "launchcontrol" do
     version "1.52.7,1959"
     sha256 "1f9039a66a8ac17573c6501a59bb01e02fd78ec70eea3316bff03f87370773e5"
   else
-    version "2.0,2267"
-    sha256 "1b6c814eba927d8899eb815cf43cf748b6b2e3de33f042862c25816af0c33a89"
+    version "2.0.1,2277"
+    sha256 "4f260e9bd4450abfed038098fffbc7f6de488da95e68fc38857597466d9db8cb"
   end
 
   url "https://www.soma-zone.com/download/files/LaunchControl-#{version.csv.first}.tar.xz"
@@ -13,7 +13,7 @@ cask "launchcontrol" do
   homepage "https://www.soma-zone.com/LaunchControl/"
 
   livecheck do
-    url "https://www.soma-zone.com/LaunchControl/a/appcast_update.xml"
+    url "https://www.soma-zone.com/LaunchControl/a/appcast-update-2.xml"
     strategy :sparkle
   end
 
