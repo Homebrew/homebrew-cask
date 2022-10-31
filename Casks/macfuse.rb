@@ -9,9 +9,8 @@ cask "macfuse" do
   homepage "https://osxfuse.github.io/"
 
   livecheck do
-    url :url
-    regex(%r{href=["']?[^"' >]*?/tag/macfuse[._-]v?(\d+(?:\.\d+)+)["' >]}i)
-    strategy :github_latest
+    url "https://osxfuse.github.io/releases/CurrentRelease.plist"
+    regex(/macfuse[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   auto_updates true
