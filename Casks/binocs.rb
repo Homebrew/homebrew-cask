@@ -16,4 +16,6 @@ cask "binocs" do
   end
 
   binary "binocs"
+
+  zap trash: ["~/.binocs"]
 end
