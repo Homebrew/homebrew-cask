@@ -2,7 +2,7 @@ cask "stellarium" do
   version "1.1"
 
   if MacOS.version <= :catalina
-    sha256 "92649cdc75b2135a62faaf85f4b1617c8c8c850f160c8191f627cd32e1147ec2"
+    sha256 "f3b6b4cbcb7322c6c5d3ff861ed3fde4d261eb03e7c8a197714874ee570a8769"
 
     url "https://github.com/Stellarium/stellarium/releases/download/v#{version.major_minor_patch}/Stellarium-#{version}-x86_64.zip",
         verified: "github.com/Stellarium/stellarium/"
