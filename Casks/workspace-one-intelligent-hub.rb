@@ -12,6 +12,8 @@ cask "workspace-one-intelligent-hub" do
     url :url
     strategy :extract_plist
   end
+  
+  auto_updates true
 
   depends_on macos: ">= :catalina"
 
