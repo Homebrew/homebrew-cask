@@ -10,8 +10,7 @@ cask "stellarium" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(%r{href=.*?/Stellarium-(\d+(?:\.\d+)*)-macOS\.zip}i)
+    regex(%r{href=.*?/Stellarium[._-]v?(\d+(?:\.\d+)*)[._-]macOS\.zip}i)
   end
 
   depends_on macos: ">= :big_sur"
