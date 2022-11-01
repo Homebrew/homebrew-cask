@@ -17,7 +17,7 @@ cask "prismlauncher" do
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
-  app "PrismLauncher.app"
+  app "Prism Launcher.app"
 
   zap trash: [
     "~/Library/Application Support/PrismLauncher/metacache",
