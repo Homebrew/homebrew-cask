@@ -17,9 +17,12 @@ cask "onyx" do
   elsif MacOS.version <= :big_sur
     version "4.0.2"
     sha256 "18659c76972690bb58f1c1b850ae2c6c9991fdeb9c22790daa1b18c9fa74cb8e"
-  else
+  elsif Macos.version <= :monterey
     version "4.2.5"
     sha256 "2bcf742aed7c19c479f424acbe9bde18d2b7fba6bd57446878f5a91831175579"
+  else
+    version "4.3.0"
+    sha256 "7a717cc23a5433da0164a999508ba17d8569286a727e148a263a49ac99f9604b"
   end
 
   url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete(".")}/OnyX.dmg"
