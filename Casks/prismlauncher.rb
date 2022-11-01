@@ -2,7 +2,7 @@ cask "prismlauncher" do
   version "5.1"
 
   if MacOS.version < :catalina
-    sha256 "54816a644e0c9a0275837529a691c46481cf548ef140318bddb96f87a4b5152d"
+    sha256 "722615ebe5daaca94194432c4928a7fd05fcccec3d304f782ddcf4372c2f61bc"
     url "https://github.com/PrismLauncher/PrismLauncher/releases/download/#{version}/PrismLauncher-macOS-Legacy-#{version}.tar.gz",
         verified: "github.com/PrismLauncher/PrismLauncher"
   else
