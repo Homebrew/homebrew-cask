@@ -14,6 +14,8 @@ cask "ilok-license-manager" do
     end
   end
 
+  depends_on macos ">= :sierra"
+
   pkg "License Support.pkg"
 
   uninstall pkgutil:   [
