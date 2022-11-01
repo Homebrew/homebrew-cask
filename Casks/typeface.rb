@@ -12,5 +12,7 @@ cask "typeface" do
     strategy :sparkle
   end
 
+  depends_on macos: ">= :sierra"
+
   app "Typeface.app"
 end
