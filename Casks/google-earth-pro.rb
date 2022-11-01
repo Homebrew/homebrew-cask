@@ -1,6 +1,6 @@
 cask "google-earth-pro" do
-  version "7.3.6.9264"
-  sha256 "2475fc66e672ee42724a282a5471d11532f0285d403ea704565e0bfffa34710c"
+  version "7.3.6.9275"
+  sha256 :no_check # required as upstream package is updated in-place
 
   url "https://dl.google.com/dl/earth/client/advanced/current/googleearthpromac-intel-#{version.major_minor_patch}.dmg"
   name "Google Earth Pro"
