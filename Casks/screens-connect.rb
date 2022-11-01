@@ -12,7 +12,7 @@ cask "screens-connect" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :high_sierra"
 
   app "Screens Connect.app"
 
