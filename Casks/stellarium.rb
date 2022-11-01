@@ -8,6 +8,12 @@ cask "stellarium" do
   desc "Tool to render realistic skies in real time on the screen"
   homepage "https://stellarium.org/"
 
+  livecheck do
+    url :homepage
+    strategy :page_match
+    regex(%r{href=.*?/Stellarium-(\d+(?:\.\d+)*)-macOS\.zip}i)
+  end
+
   depends_on macos: ">= :big_sur"
 
   app "Stellarium.app"
