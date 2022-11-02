@@ -10,8 +10,8 @@ cask "beast2" do
   homepage "https://www.beast2.org/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://www.beast2.org/download-mac/"
+    regex(/location=.*?BEAST[._-]v?(\d+(?:\.\d+)+)\.Mac\.dmg/i)
   end
 
   suite "BEAST #{version}"

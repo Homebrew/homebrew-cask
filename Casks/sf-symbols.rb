@@ -5,8 +5,8 @@ cask "sf-symbols" do
 
     url "https://devimages-cdn.apple.com/design/resources/download/SF-Symbols.dmg"
   else
-    version "3.3"
-    sha256 "351135280b21d3c5ca958e362bfde3207a1e548b1ff427876c2c42301c86c7bc"
+    version "4"
+    sha256 "479b66ce7eb308ca0eff826675325e11e7932fcca407d065261822be5c2ec8cb"
 
     url "https://devimages-cdn.apple.com/design/resources/download/SF-Symbols-#{version}.dmg"
   end
@@ -17,7 +17,7 @@ cask "sf-symbols" do
 
   livecheck do
     url "https://developer.apple.com/sf-symbols/"
-    regex(%r{href=.*?/SF-Symbols-(\d+(?:\.\d+)+)\.dmg}i)
+    regex(%r{href=.*?/SF-Symbols-(\d+(?:\.\d+)*)\.dmg}i)
   end
 
   auto_updates true

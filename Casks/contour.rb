@@ -1,6 +1,6 @@
 cask "contour" do
-  version "0.3.6.240"
-  sha256 "ad25deed7beaae34f01851c923497a287d1e1e33e4bbd8e49d6b69988d928399"
+  version "0.3.7.245"
+  sha256 "340842301fe5489b9d95e4cfc1bd5617c71290cc7b1a5e6274edbc379d519da1"
 
   url "https://github.com/contour-terminal/contour/releases/download/v#{version}/contour-#{version}-osx.dmg"
   name "Contour"

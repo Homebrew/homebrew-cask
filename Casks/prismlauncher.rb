@@ -1,12 +1,12 @@
 cask "prismlauncher" do
-  version "5.0"
+  version "5.1"
 
   if MacOS.version < :catalina
-    sha256 "54816a644e0c9a0275837529a691c46481cf548ef140318bddb96f87a4b5152d"
+    sha256 "722615ebe5daaca94194432c4928a7fd05fcccec3d304f782ddcf4372c2f61bc"
     url "https://github.com/PrismLauncher/PrismLauncher/releases/download/#{version}/PrismLauncher-macOS-Legacy-#{version}.tar.gz",
         verified: "github.com/PrismLauncher/PrismLauncher"
   else
-    sha256 "e6858fb3d484fa60df7ae7c415da1c23697149c1ede7e4a5e0f0cd1ca40dc4a6"
+    sha256 "bd81c77efde42138515cb76fe0c407f46dbef83f00860e5a56ece79dec32f5ef"
     url "https://github.com/PrismLauncher/PrismLauncher/releases/download/#{version}/PrismLauncher-macOS-#{version}.tar.gz",
         verified: "github.com/PrismLauncher/PrismLauncher"
   end
@@ -17,7 +17,7 @@ cask "prismlauncher" do
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
-  app "PrismLauncher.app"
+  app "Prism Launcher.app"
 
   zap trash: [
     "~/Library/Application Support/PrismLauncher/metacache",

@@ -1,6 +1,6 @@
 cask "viscosity" do
-  version "1.10.3"
-  sha256 "e0f670a5a93b93c4fe3a0505b836858d2c86fa42dde0474d29d477f90fa49582"
+  version "1.10.4"
+  sha256 "03c44acff62830603d4deb15ce4d53e3102e4522a078fbe252ac2feb41e57ab2"
 
   url "https://swupdate.sparklabs.com/download/mac/release/viscosity/Viscosity%20#{version}.dmg"
   name "Viscosity"

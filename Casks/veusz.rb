@@ -1,6 +1,6 @@
 cask "veusz" do
-  version "3.4.0.1"
-  sha256 "d075c19b89125e491501398af65a06b7a591774ee79b7dbf2c354d64d5010ef0"
+  version "3.5"
+  sha256 "c1662705d76eef2afb56f3bf34ea882c8893ae66280c68e014605095963b63e9"
 
   url "https://github.com/veusz/veusz/releases/download/veusz-#{version.major_minor}/veusz-#{version}-AppleOSX.dmg",
       verified: "github.com/veusz/veusz/"

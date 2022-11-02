@@ -226,8 +226,7 @@ cask "firefox" do
 
   app "Firefox.app"
 
-  uninstall quit:   "org.mozilla.firefox",
-            delete: "/Library/Logs/DiagnosticReports/firefox_*"
+  uninstall quit: "org.mozilla.firefox"
 
   zap trash: [
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.firefox.sfl*",
@@ -241,6 +240,7 @@ cask "firefox" do
         "~/Library/Preferences/org.mozilla.firefox.plist",
         "~/Library/Saved Application State/org.mozilla.firefox.savedState",
         "~/Library/WebKit/org.mozilla.firefox",
+        "/Library/Logs/DiagnosticReports/firefox_*",
       ],
       rmdir: [
         "~/Library/Application Support/Mozilla", #  May also contain non-Firefox data
