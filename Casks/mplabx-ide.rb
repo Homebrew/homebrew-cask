@@ -12,8 +12,8 @@ cask "mplabx-ide" do
     regex(/href=.*?MPLABX[._-]v?(\d+(?:\.\d+)+)-osx-installer\.dmg/i)
   end
 
-  app "mplab_ide.app", target: "microchip/mplab_ide.app"
-  app "mplab_ipe.app", target: "microchip/mplab_ipe.app"
+  app "mplab_ide.app"
+  app "mplab_ipe.app"
   installer script: {
     executable: "MPLABX-v#{version}-osx-installer.app/Contents/MacOS/installbuilder.sh",
     args:       [
@@ -32,14 +32,12 @@ cask "mplabx-ide" do
 
   postflight do
     set_ownership staged_path.to_s
-    set_ownership "/Applications/microchip"
   end
 
   uninstall script: {
-              executable: "Uninstall_MPLAB_X_IDE_v#{version}.app/Contents/MacOS/installbuilder.sh",
-              args:       ["--mode", "unattended"],
-              input:      ["y", 3],
-              sudo:       true,
-            },
-            delete: "/Applications/microchip"
+    executable: "Uninstall_MPLAB_X_IDE_v#{version}.app/Contents/MacOS/installbuilder.sh",
+    args:       ["--mode", "unattended"],
+    input:      ["y", 3],
+    sudo:       true,
+  }
 end
