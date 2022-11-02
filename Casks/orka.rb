@@ -1,6 +1,6 @@
 cask "orka" do
-  version "2.2.0"
-  sha256 "30c8c8fa063329c82d0b88918c357362155487e125448826462188b465f0dedf"
+  version "2.3.0"
+  sha256 "f1c537a6026cd389367af0edc572965dd8920a9b2397ee1664b3905680f6fef5"
 
   url "https://cli-builds-public.s3-eu-west-1.amazonaws.com/official/#{version}/macos/orka.pkg",
       verified: "cli-builds-public.s3-eu-west-1.amazonaws.com/official/"
