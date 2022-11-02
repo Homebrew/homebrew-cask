@@ -2,14 +2,20 @@ cask "fig" do
   version "2.7.2"
   sha256 "1bbd96e832f47d387d236a47c65e0530f5916509466d4bb0ca17599351562728"
 
-  url "https://repo.fig.io/generic/stable/asset/#{version.csv.second}/universal/fig.dmg",
-      verified: "repo.fig.io/"
+  url "https://repo.fig.io/generic/stable/asset/#{version}/universal/fig.dmg"
   name "fig"
   desc "Reimagine your terminal"
   homepage "https://fig.io/"
 
+  livecheck do
+    url "https://repo.fig.io/generic/stable/index.json"
+    strategy :page_match do |page|
+      JSON.parse(page)["hints"]["livecheck"]
+    end
+  end
+
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "Fig.app"
   binary "#{appdir}/Fig.app/Contents/MacOS/fig-darwin-universal", target: "fig"
