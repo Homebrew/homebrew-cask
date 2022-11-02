@@ -1,9 +1,9 @@
 cask "binocs" do
   arch arm: "arm64", intel: "amd64"
 
-  version "0.7.2"
-  sha256 arm:   "183181127923af570a81558f8b26babcbe47e9fd42d2ff46409526156110b108",
-         intel: "0a66664c8255c0e87d1a38420e13c1a0ee038c0ae64eace4cc4f731f033ca4a7"
+  version "0.7.3"
+  sha256 arm:   "b9847ab788db65227d60bda2b7e08786519b7ed5d3fd952ed1e5e0b62b7edc04",
+         intel: "ae61a9793f852eef713f4084b2f246941ec03ba5c4ae8809992d45816bd1e3c0"
 
   url "https://download.binocs.sh/binocs_#{version}_darwin_#{arch}.gz"
   name "Binocs"
