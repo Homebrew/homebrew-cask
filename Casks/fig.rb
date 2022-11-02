@@ -1,17 +1,12 @@
 cask "fig" do
-  version "1.0.62,542"
-  sha256 "0c70a157cf16785e8175fce7efc1bb6a2e056a099b9da5c673a7904f4b205e07"
+  version "2.7.2"
+  sha256 "1bbd96e832f47d387d236a47c65e0530f5916509466d4bb0ca17599351562728"
 
-  url "https://versions.withfig.com/fig%20#{version.csv.second}.dmg",
-      verified: "versions.withfig.com/"
+  url "https://repo.fig.io/generic/stable/asset/#{version.csv.second}/universal/fig.dmg",
+      verified: "repo.fig.io/"
   name "fig"
   desc "Reimagine your terminal"
   homepage "https://fig.io/"
-
-  livecheck do
-    url "https://versions.withfig.com/appcast.xml"
-    strategy :sparkle
-  end
 
   auto_updates true
   depends_on macos: ">= :high_sierra"
@@ -33,7 +28,7 @@ cask "fig" do
             quit:
                        [
                          "com.mschrage.fig",
-                         "io.fig.input-method.cursor",
+                         "io.fig.cursor",
                        ]
 
   zap trash: [
