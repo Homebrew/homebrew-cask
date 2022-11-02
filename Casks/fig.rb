@@ -14,7 +14,7 @@ cask "fig" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "Fig.app"
   binary "#{appdir}/Fig.app/Contents/MacOS/fig-darwin-universal", target: "fig"
