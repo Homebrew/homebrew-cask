@@ -18,6 +18,7 @@ cask "brave-browser" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Brave Browser.app"
 
