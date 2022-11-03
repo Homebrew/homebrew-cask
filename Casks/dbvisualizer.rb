@@ -12,7 +12,7 @@ cask "dbvisualizer" do
 
   livecheck do
     url "https://www.dbvis.com/download"
-    regex(/Latest\s*Version:\s*(\d+(?:\.\d+)+)/i)
+    regex(/href=.*?dbvis[._-](\d+(?:\.\d+)+)/i)
   end
 
   depends_on macos: ">= :el_capitan"
