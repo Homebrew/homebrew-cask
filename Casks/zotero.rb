@@ -1,6 +1,6 @@
 cask "zotero" do
-  version "6.0.16"
-  sha256 "ea7743e568b350fda331b334ea1364255f498188b7ff11cb1780efecfe81b174"
+  version "6.0.17"
+  sha256 "1e147d51d2bd1c7a3510cb3ed78b0b3311f8a15ffb78bfd6739b859dd75add0a"
 
   url "https://download.zotero.org/client/release/#{version}/Zotero-#{version}.dmg"
   name "Zotero"
