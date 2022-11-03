@@ -8,8 +8,13 @@ cask "dvc" do
   homepage "https://dvc.org/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://dvc.org/"
+    strategy :page_match do |page|
+      match = page.match(/download/osx/dvc-(\d+(?:\.\d+)+)-(\d+)/i)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
+    end
   end
 
   depends_on macos: ">= :mojave"
