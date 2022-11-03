@@ -40,6 +40,6 @@ cask "ghidra" do
   zap trash: "~/.ghidra"
 
   caveats do
-    depends_on_java "11+"
+    depends_on_java "17+"
   end
 end
