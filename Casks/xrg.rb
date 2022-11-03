@@ -1,6 +1,6 @@
 cask "xrg" do
-  version "3.1.0"
-  sha256 "97d78bbd010cbf61df9dc3fc99030a17567216b313c9297c285de2497b6cc765"
+  version "3.2.0"
+  sha256 "6fd44ec881808be1ff4716183b9d87ca32e8893c66da33214776d407ebff5e64"
 
   url "https://download.gauchosoft.com/xrg/XRG-release-#{version}.zip"
   name "XRG"
