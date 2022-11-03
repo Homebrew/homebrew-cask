@@ -1,6 +1,6 @@
 cask "one-switch" do
-  version "1.27,374"
-  sha256 "0933f0a9bb4c2654f0fd04871f56b6ec46e0cd9f1ea7980a04b963ca2721ab8e"
+  version "1.28,380"
+  sha256 "5ee181bea58130c1bfca712352719d9534ad8b88643fa71fb1ea4ad5ccebfaab"
 
   url "https://fireball.studio/api/release_manager/downloads/studio.fireball.OneSwitch/#{version.csv.second}.zip"
   name "One Switch"
@@ -12,7 +12,7 @@ cask "one-switch" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :catalina"
 
   app "One Switch.app"
 end
