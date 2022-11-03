@@ -10,11 +10,6 @@ cask "openlens" do
   desc "Open source build of Lens Kubernetes IDE"
   homepage "https://github.com/MuhammedKalkan/OpenLens/"
 
-  livecheck do
-    url "https://raw.githubusercontent.com/MuhammedKalkan/OpenLens/main/version"
-    regex(/^(\d+\.\d+\.\d+)$/i)
-  end
-
   auto_updates true
 
   app "OpenLens.app"
