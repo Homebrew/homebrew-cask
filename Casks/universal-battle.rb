@@ -1,5 +1,5 @@
 cask "universal-battle" do
-  version "1.5.52,220607220"
+  version "1.5.56,221102020"
   sha256 :no_check
 
   url "https://universalbattle2.com/builds/Mac.zip"
