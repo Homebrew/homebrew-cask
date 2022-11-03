@@ -15,6 +15,7 @@ cask "cleanmymac" do
 
   auto_updates true
   conflicts_with cask: "cleanmymac-zh"
+  depends_on macos: ">= :sierra"
 
   app "CleanMyMac X.app"
 
