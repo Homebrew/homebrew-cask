@@ -12,7 +12,5 @@ cask "principle" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :high_sierra"
-
   app "Principle.app"
 end
