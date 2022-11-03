@@ -2,7 +2,7 @@ cask "roonbridge" do
   version "1.0"
   sha256 :no_check
 
-  url "https://download.roonlabs.com/builds/RoonBridge.dmg"
+  url "https://download.roonlabs.net/builds/RoonBridge.dmg"
   name "Roon Bridge"
   desc "Music player network extender"
   homepage "https://roonlabs.com/"
