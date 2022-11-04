@@ -4,10 +4,17 @@ cask "mixin" do
 
   url "https://github.com/MixinNetwork/flutter-app/releases/download/v#{version}/mixin_#{version}.dmg"
   name "Mixin Messenger Desktop"
-  desc "Cryptocurrency wallet"
+  desc "An open source cryptocurrency wallet, which supports almost all popular cryptocurrencies"
   homepage "https://github.com/MixinNetwork/flutter-app"
 
   auto_updates true
 
   app "Mixin.app"
+  
+  zap trash: [
+        "~/Library/Application Scripts/one.mixin.messenger.desktop",
+        "~/Library/Application Support/one.mixin.messenger.desktop",
+        "~/Library/Containers/one.mixin.messenger.desktop",
+        "~/Library/Saved Application State/one.mixin.messenger.desktop.savedState"
+      ],
 end
