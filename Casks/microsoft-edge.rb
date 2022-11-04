@@ -3,9 +3,9 @@ cask "microsoft-edge" do
                                intel: "C1297A47-86C4-4C1F-97FA-950631F94777"
   linkid = on_arch_conditional arm: "2093504", intel: "2069148"
 
-  version "107.0.1418.28"
-  sha256 arm:   "52dd23b9e1325793368989311b72a22760c413469020155ecced82e602eb6ca7",
-         intel: "f51269727d7779ea15c867a038477e6db2004d05ce5c773d88d60a9e5d895e18"
+  version "107.0.1418.35"
+  sha256 arm:   "261bc952d99d474dbd20e469c9e3cb0e76d2859ab04b1b5f2d6d0dcaee77448e",
+         intel: "e7d4e4af9b22b13a905614568fafa08442fbc4145d32fc2db4a1638b391769f0"
 
   url "https://officecdn-microsoft-com.akamaized.net/pr/#{folder}/MacAutoupdate/MicrosoftEdge-#{version}.pkg",
       verified: "officecdn-microsoft-com.akamaized.net/"
