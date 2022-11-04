@@ -15,7 +15,7 @@ cask "xmind" do
 
   conflicts_with cask: "homebrew/cask-versions/xmind8"
 
-  app "XMind.app"
+  app "Xmind.app"
 
   zap trash: [
     "~/Library/Saved Application State/org.xmind.cathy.application.savedState",
