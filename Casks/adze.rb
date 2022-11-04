@@ -15,4 +15,9 @@ cask "adze" do
   depends_on macos: ">= :sierra"
 
   app "Adze.app"
+
+  zap trash: [
+    "~/Library/Caches/com.Kobot.Adze",
+    "~/Library/Preferences/com.Kobot.Adze.plist",
+  ]
 end
