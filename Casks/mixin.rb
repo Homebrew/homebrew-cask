@@ -10,11 +10,11 @@ cask "mixin" do
   auto_updates true
 
   app "Mixin.app"
-  
+
   zap trash: [
-        "~/Library/Application Scripts/one.mixin.messenger.desktop",
-        "~/Library/Application Support/one.mixin.messenger.desktop",
-        "~/Library/Containers/one.mixin.messenger.desktop",
-        "~/Library/Saved Application State/one.mixin.messenger.desktop.savedState"
-      ],
+    "~/Library/Application Scripts/one.mixin.messenger.desktop",
+    "~/Library/Application Support/one.mixin.messenger.desktop",
+    "~/Library/Containers/one.mixin.messenger.desktop",
+    "~/Library/Saved Application State/one.mixin.messenger.desktop.savedState",
+  ]
 end
