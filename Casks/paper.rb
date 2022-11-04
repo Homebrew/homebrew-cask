@@ -5,7 +5,7 @@ cask "paper" do
   url "https://s3.nsns.in/dl/paper-v#{version}.dmg",
       verified: "s3.nsns.in/"
   name "pap.er"
-  desc "pap.er, 4K 5K HD Wallpaper Application"
+  desc "4K 5K HD Wallpaper Application"
   homepage "https://paper.photos/"
 
   livecheck do
