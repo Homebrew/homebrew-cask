@@ -17,9 +17,7 @@ cask "rancher" do
   end
 
   auto_updates true
-  conflicts_with cask: %w[
-    docker
-  ]
+  conflicts_with cask: "docker"
 
   app "Rancher Desktop.app"
 
