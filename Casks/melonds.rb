@@ -1,5 +1,4 @@
 cask "melonds" do
-
   version "0.9.5"
   sha256 "71ff3297cb26b7f8a29cad5cee41a3225017d785c75869a4e3ece563a8c286e9"
 
