@@ -1,9 +1,9 @@
 cask "simply-fortran" do
   arch arm: "-arm64", intel: "-x86_64"
 
-  version "3.25.3757"
-  sha256 arm:   "de1c523a1c4a2d2be2623eaa89b117ddca4bbd7edacdda6830e930d2463a3208",
-         intel: "cd177191c7a96d59c0e9c3bb271808a2b471d1001fca17b85cb420aaf55ee05a"
+  version "3.26.3806"
+  sha256 arm:   "886dd1432bf070be8c4ba87e1585962ff3ca480b93797674c7886bf557c8867b",
+         intel: "95f4f0fdd2926e7cc5f0b81538ceb35c31f01cd65f72d5705ebcb0e8ef1f2bbd"
 
   url "https://download.simplyfortran.com/#{version.major_minor}/macos/simplyfortran-#{version}#{arch}.dmg"
 
