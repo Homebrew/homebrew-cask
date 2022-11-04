@@ -4,7 +4,7 @@ cask "mixin" do
 
   url "https://github.com/MixinNetwork/flutter-app/releases/download/v#{version}/mixin_#{version}.dmg"
   name "Mixin Messenger Desktop"
-  desc "An open source cryptocurrency wallet, which supports almost all popular cryptocurrencies"
+  desc "Cryptocurrency wallet"
   homepage "https://github.com/MixinNetwork/flutter-app"
 
   auto_updates true
