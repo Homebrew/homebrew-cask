@@ -1,6 +1,6 @@
 cask "fig" do
-  version "2.7.2"
-  sha256 "1bbd96e832f47d387d236a47c65e0530f5916509466d4bb0ca17599351562728"
+  version "2.7.4"
+  sha256 "759150afe49fbca2ede68b76f652817dcfce30e7d32db129a8e2189124b73cfb"
 
   url "https://repo.fig.io/generic/stable/asset/#{version}/universal/fig.dmg"
   name "fig"
@@ -15,7 +15,7 @@ cask "fig" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :high_sierra"
 
   app "Fig.app"
   binary "#{appdir}/Fig.app/Contents/MacOS/fig-darwin-universal", target: "fig"
@@ -23,7 +23,7 @@ cask "fig" do
   uninstall script:
                        {
                          executable: "#{appdir}/Fig.app/Contents/MacOS/fig-darwin-universal",
-                         args:       ["app", "uninstall"],
+                         args:       ["app", "uninstall", "--no-open"],
                        },
             launchctl:
                        [
