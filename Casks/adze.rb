@@ -10,7 +10,7 @@ cask "adze" do
   livecheck do
     url "https://getadze.com/static/main/updates/adze.xml"
     strategy :sparkle
-  emd
+  end
 
   depends_on macos: ">= :sierra"
 
