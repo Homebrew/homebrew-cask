@@ -15,7 +15,7 @@ cask "fig" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :high_sierra"
 
   app "Fig.app"
   binary "#{appdir}/Fig.app/Contents/MacOS/fig-darwin-universal", target: "fig"
@@ -23,7 +23,7 @@ cask "fig" do
   uninstall script:
                        {
                          executable: "#{appdir}/Fig.app/Contents/MacOS/fig-darwin-universal",
-                         args:       ["app", "uninstall"],
+                         args:       ["app", "uninstall", "--no-open"],
                        },
             launchctl:
                        [
