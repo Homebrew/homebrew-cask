@@ -1,11 +1,11 @@
 cask "paper" do
-  version "5.1.1"
-  sha256 "419a19535da009533c661ec4da35df9a806558783131d458aed9fe6b22c7313b"
+  version "5.1.2"
+  sha256 "dbdb7bf4abba1b08d66bb3f90786cc9e9bd1296d7b99dd3e34cfdbdc51189364"
 
   url "https://s3.nsns.in/dl/paper-v#{version}.dmg",
       verified: "s3.nsns.in/"
   name "pap.er"
-  desc "4K 5K HD Wallpaper Application"
+  desc "Pap.er, 4K 5K HD Wallpaper Application"
   homepage "https://paper.photos/"
 
   livecheck do
@@ -14,6 +14,8 @@ cask "paper" do
   end
 
   depends_on macos: ">= :big_sur"
+
+  auto_updates true
 
   app "pap.er.app"
 
