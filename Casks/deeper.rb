@@ -17,9 +17,12 @@ cask "deeper" do
   elsif MacOS.version <= :big_sur
     version "2.7.1"
     sha256 "e4de32606e76da69805cf3288821117efe5fb4c6e2fa6759e41dd25c6173dc5c"
-  else
+  elsif MacOS.version <= :monterey
     version "2.8.0"
     sha256 "d7cff6143a6689e332ae68b5495ee1d62c65be2040393daf05f400eeb17ecba8"
+  else
+    version "2.8.5"
+    sha256 "7b8c0f24d882bb3248101c1d8b469a8364a350bc68224e69fc9de85673397760"
   end
 
   url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete(".")}/Deeper.dmg"
@@ -32,8 +35,8 @@ cask "deeper" do
     regex(/>\s*Deeper\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s.-]*\s+#{MacOS.version}\s*</i)
   end
 
-  # Unusual case: The software may stop working, or may be dangerous to run, on the latest macOS release.
-  depends_on macos: "<= :monterey"
+  # This software has releases for specific versions of macOS. Running a version for a different OS is dangerous.
+  depends_on macos: "<= :ventura"
 
   app "Deeper.app"
 
