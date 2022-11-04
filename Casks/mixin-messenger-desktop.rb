@@ -6,6 +6,7 @@ cask "mixin-messenger-desktop" do
       verified: "github.com/MixinNetwork/flutter-app/releases/download/"
   name "Mixin Messenger Desktop"
   name "Mixin"
+  desc "💻 Mixin Messenger desktop app for macOS, iPadOS, Linux, and Windows powered by Flutter/Dart."
   homepage "https://github.com/MixinNetwork/flutter-app"
 
   auto_updates true
