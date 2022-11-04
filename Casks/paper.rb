@@ -13,9 +13,8 @@ cask "paper" do
     regex(/href=.*?paper[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  depends_on macos: ">= :big_sur"
-
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "pap.er.app"
 
