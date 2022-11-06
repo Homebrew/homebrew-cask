@@ -1,5 +1,5 @@
 cask "klayout" do
-  version "0.27.11"
+  version "0.27.12"
 
   if MacOS.version <= :catalina
     macos_version_string = "Catalina"
@@ -11,7 +11,7 @@ cask "klayout" do
 
   else
     macos_version_string = "Monterey"
-    sha256 "b08e25589576bbf056fdcaa1562129583cabd3e72778da0a1a3cc25c394b8add"
+    sha256 "cc74ae26712ad9146247bfe8e367fb4506223a3080c6eb037ee2d718baa56b8a"
 
   end
   url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-#{macos_version_string}-1-qt5Brew-RsysPhb38.dmg",
