@@ -1,6 +1,6 @@
 cask "gyazmail" do
-  version "1.7"
-  sha256 "325071ed1754632b148063b53ed2219dac4c5153d5bbb6272a809a2f6ab9018e"
+  version "1.7.1"
+  sha256 "002ad687dedfc9eea6391b4241312e35b6143d5caa0a813d8fe4e323a568fbfb"
 
   url "http://gyazsquare.com/download/GyazMail-#{version.no_dots}.dmg"
   name "GyazMail"
