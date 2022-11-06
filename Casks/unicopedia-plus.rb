@@ -15,4 +15,8 @@ cask "unicopedia-plus" do
     "~/Library/Saved Application State/com.electron.unicopedia-plus.savedState",
     "~/Library/Saved Application State/com.tonton-pixel.unicopedia-plus.savedState",
   ]
+
+  caveats do
+    discontinued
+  end
 end
