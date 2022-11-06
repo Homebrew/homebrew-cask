@@ -1,20 +1,20 @@
 cask "qq" do
-  version "6.8.6.4823"
-  sha256 "793955ee4e4adee6dd79ac1868fd6934f3f50f6820f7407ae0137f5692b31a56"
+  version "6.8.8.6097"
+  sha256 "64f8a0e7b9b029f52eedc65edf77575fdc5d11c7354f557913ef82ad98ea055d"
 
-  url "https://dldir1.qq.com/qqfile/qq/QQNT/QQ_#{version}_exp.dmg"
+  url "https://dldir1.qq.com/qqfile/qq/QQNT/QQ_#{version}.dmg"
   name "QQ"
   desc "Instant messaging tool"
   homepage "https://im.qq.com/macqq/index.shtml"
 
   livecheck do
     url "https://im.qq.com/rainbow/ntQQDownload/"
-    regex(%r{QQNT/QQ[._-]v?(\d+(?:\.\d+)+)[._-]exp\.dmg}i)
+    regex(%r{QQNT/QQ[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   auto_updates true
 
-  app "QQ-NT.app"
+  app "QQ.app"
 
   uninstall quit: "com.tencent.qq"
 
