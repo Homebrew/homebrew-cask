@@ -9,9 +9,8 @@ cask "brackets" do
   homepage "https://brackets.io/"
 
   livecheck do
-    url :url
-    strategy :github_latest
-    regex(%r{href=.*?/brackets\.(\d+(?:\.\d+)+)\.dmg}i)
+    url :homepage
+    regex(/brackets\.(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "Brackets.app"
