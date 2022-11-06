@@ -8,6 +8,11 @@ cask "mymonero" do
   desc "Wallet for the Monero cryptocurrency"
   homepage "https://mymonero.com/"
 
+  livecheck do
+    url "https://mymonero.com/assets/js/application.js"
+    regex(/desktopVersionString.*?v?(\d+(?:\.\d+)+)/i)
+  end
+
   app "MyMonero.app"
 
   zap trash: [
