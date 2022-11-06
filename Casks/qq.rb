@@ -14,7 +14,7 @@ cask "qq" do
 
   auto_updates true
 
-  app "QQ-NT.app"
+  app "QQ.app"
 
   uninstall quit: "com.tencent.qq"
 
