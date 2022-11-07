@@ -1,6 +1,6 @@
 cask "xpra" do
-  version "4.4.1,0"
-  sha256 "9f3c5ffbfb5c2e3137da4a01ccbe554d42fcabfea5f8830c3ca10806cd5c816d"
+  version "4.4.2,0"
+  sha256 "879ff49efe377811739858453c7f8bc18b24cffc4adc078dfaa121dd8205fcf3"
 
   url "https://www.xpra.org/dists/osx/x86_64/Xpra-Python3-x86_64-#{version.csv.first}-r#{version.csv.second}.pkg"
   name "Xpra"
