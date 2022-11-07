@@ -18,8 +18,8 @@ cask "jump-desktop-connect" do
             signal:    [["QUIT", "com.p5sys.jump.connect"]],
             pkgutil:   "com.p5sys.jump.connect",
             launchctl: [
-              "com.p5sys.jump.connect.agent",
-              "com.p5sys.jump.connect.service",
+              "application.com.p5sys.jump.connect.agent*",
+              "application.com.p5sys.jump.connect.service*",
             ],
             delete:    [
               "/Applications/Jump Desktop Connect.app",
