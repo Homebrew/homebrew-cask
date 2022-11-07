@@ -1,11 +1,11 @@
 cask "freeplane" do
   arch arm: "apple", intel: "intel"
 
-  version "1.10.4"
-  sha256 arm:   "63c4af9141d49a21c4efe0a523010e169cc586882119439db2de202278b72a82",
-         intel: "734d835e26763f7472df3f10918ae42a3b049645dbcfc3f8418a6aac5e2e12c1"
+  version "1.10.5"
+  sha256 arm:   "09dea4ac7dce253302870efdfe5db055b9f1c7f1ab6fc1928968c23faba0eb91",
+         intel: "f19f66a6d860d3d883a5d8800c17d5fb291a9725d3309f9e4de46fda8fc22d69"
 
-  url "https://downloads.sourceforge.net/freeplane/Freeplane-#{version}-verified-#{arch}.dmg",
+  url "https://downloads.sourceforge.net/freeplane/Freeplane-#{version}-#{arch}.dmg",
       verified: "downloads.sourceforge.net/freeplane/"
   name "Freeplane"
   desc "Mind mapping and knowledge management software"
@@ -14,7 +14,7 @@ cask "freeplane" do
   livecheck do
     url "https://sourceforge.net/projects/freeplane/rss?path=/freeplane%20stable"
     strategy :page_match
-    regex(%r{/freeplane%20stable/Freeplane[._-]v?(\d+(?:\.\d+)+)[._-]verified(?:[._-]#{arch})?\.dmg}i)
+    regex(%r{/freeplane%20stable/Freeplane[._-]v?(\d+(?:\.\d+)+)(?:[._-]#{arch})?\.dmg}i)
   end
 
   app "Freeplane.app"
