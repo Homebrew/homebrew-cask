@@ -9,6 +9,7 @@ cask "simply-fortran" do
 
   on_intel do
     on_big_sur :or_older do
+      version "3.25.3757"
       sha256 "0975462a1593bdc976dc87d6a9da88b97d8268a1a97caebeefd359e56ef73195"
 
       url "https://download.simplyfortran.com/#{version.major_minor}/macos/simplyfortran-#{version}-x86_64.legacy.dmg"
