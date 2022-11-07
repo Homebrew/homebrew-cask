@@ -1,6 +1,6 @@
 cask "unison" do
-  version "2.52.1,4.14.0"
-  sha256 "d2c87075e460d74641ae8a955703de5cf5344d9affdf4e2f6a8fc5d971c4246c"
+  version "2.53.0,4.14.0"
+  sha256 "da2692e0b7d486e16288f4a36d68840239af7aec8cd1e0bcd2c7034c59c0c4e0"
 
   url "https://github.com/bcpierce00/unison/releases/download/v#{version.csv.first}/Unison-v#{version.csv.first}.ocaml-#{version.csv.second}.macos-10.15.app.tar.gz",
       verified: "github.com/bcpierce00/unison/"
