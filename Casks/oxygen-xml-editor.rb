@@ -1,5 +1,5 @@
 cask "oxygen-xml-editor" do
-  version "25.0,2022101006"
+  version "25.0,2022110706"
   sha256 :no_check
 
   url "https://www.oxygenxml.com/InstData/Editor/MacOSX/VM/oxygen-openjdk.dmg"
