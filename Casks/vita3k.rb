@@ -9,4 +9,8 @@ cask "vita3k" do
   homepage "https://vita3k.org/"
 
   app "Vita3K.app"
+
+  zap trash: [
+    "~/Library/Application Support/Vita3K",
+  ]
 end
