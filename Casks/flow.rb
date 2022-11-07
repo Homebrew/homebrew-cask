@@ -4,7 +4,13 @@ cask "flow" do
 
   url "https://cdn.getflow.com/darwin_x64/Flow.zip"
   name "Flow"
+  desc "Task and project management software"
   homepage "https://www.getflow.com/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   app "Flow.app"
 end
