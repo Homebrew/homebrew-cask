@@ -2,12 +2,12 @@ cask "dotnet-sdk" do
   arch arm: "arm64", intel: "x64"
 
   on_intel do
-    version "6.0.402,f55a179b-7084-41b9-98e3-408a3c317158,5445f9e747fa29ce0be3240017d28322"
-    sha256 "54b1996c0879e9ea2c7490cd49e4f51de4c5f97c8c3c1535005e1efcf0bfc90c"
+    version "7.0.100,11810c49-a615-40ec-b869-2eb2eae30f7b,4b0b7700fa0e8307b5f99c1d372d95bb"
+    sha256 "3311f8b5bf78cd8cbf2350a4385708ce3ac111333760835bb93dab98c5867b00"
   end
   on_arm do
-    version "6.0.402,1816a0af-0621-4608-b21a-9852ce83d788,04675dad54b50d6778db98f226f1b944"
-    sha256 "43890a8fb8e9b0426b5cf0cac4e1954bc231c6e4c9dcde35e1ec12f93e900925"
+    version "7.0.100,4f0bd204-39be-492a-be5e-4bda7f569963,b245763ad54175dd87e260e394ec9c0d"
+    sha256 "9ea8807a2bd7db29bbad7a3ba235bffe0999bea4fd2b4deec9e71da8da309d17"
   end
 
   url "https://download.visualstudio.microsoft.com/download/pr/#{version.csv.second}/#{version.csv.third}/dotnet-sdk-#{version.csv.first}-osx-#{arch}.pkg"
