@@ -8,12 +8,6 @@ cask "balenaetcher" do
   desc "Tool to flash OS images to SD cards & USB drives"
   homepage "https://balena.io/etcher"
 
-  livecheck do
-    skip "balenaetcher is no longer updated in homebrew-cask due to the maintenance demand."
-  end
-
-  auto_updates true
-
   app "balenaEtcher.app"
 
   uninstall quit: "io.balena.etcher.*"
