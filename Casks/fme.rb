@@ -1,8 +1,8 @@
 cask "fme" do
-  version "2022.1.3,22630"
-  sha256 "4756a1bfbd6478dcdfbd2a1ddffd460672f8f326d5f7d5b7c1d680af376a7547"
+  version "2022.2,22765"
+  sha256 "c2021613f7ee0df4deccc6e63f9caeb65d8e6d8230e463c94b91b1b75b6215c3"
 
-  url "https://downloads.safe.com/fme/#{version.major}/fme-desktop-#{version.csv.first}-b#{version.csv.second}-macosx.pkg"
+  url "https://downloads.safe.com/fme/#{version.major}/fme-desktop-#{version.csv.first}-b#{version.csv.second}-macosx-x64.pkg"
   name "FME Desktop"
   desc "Platform for integrating spatial data"
   homepage "https://www.safe.com/"
@@ -10,18 +10,18 @@ cask "fme" do
   livecheck do
     url "https://www.safe.com/api/downloads/"
     strategy :page_match do |page|
-      match = page.match(/fme-desktop-(\d+(?:\.\d+)+)-b(\d+)-macosx\.pkg/i)
+      match = page.match(/fme-desktop-(\d+(?:\.\d+)+)-b(\d+)-macosx-x64\.pkg/i)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
     end
   end
 
-  pkg "fme-desktop-#{version.csv.first}-b#{version.csv.second}-macosx.pkg"
+  pkg "fme-desktop-#{version.csv.first}-b#{version.csv.second}-macosx-x64.pkg"
 
   uninstall pkgutil: [
-              "com.safesoftware.pkg.engine.fme-desktop-#{version.major_minor}-b#{version.csv.second}-macosx",
-              "com.safesoftware.pkg.apps.fme-desktop-#{version.major_minor}-b#{version.csv.second}-macosx",
+              "com.safesoftware.pkg.engine.fme-desktop-#{version.major_minor}-b#{version.csv.second}-macosx-x64",
+              "com.safesoftware.pkg.apps.fme-desktop-#{version.major_minor}-b#{version.csv.second}-macosx-x64",
             ],
             delete:  [
               "/Applications/FME #{version.major_minor}",
