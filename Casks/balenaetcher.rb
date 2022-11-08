@@ -9,7 +9,7 @@ cask "balenaetcher" do
   homepage "https://balena.io/etcher"
 
   livecheck do
-    skip "balenaetcher is no longer updated in homebrew-cask due to the maintenance demand of multiple stable releases per day."
+    skip "balenaetcher is no longer updated in homebrew-cask due to the maintenance demand."
   end
 
   auto_updates true
