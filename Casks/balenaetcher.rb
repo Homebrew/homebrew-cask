@@ -2,7 +2,7 @@ cask "balenaetcher" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/balena-io/etcher/releases/download/v1.8.14/balenaEtcher-1.8.4.dmg",
+  url "https://github.com/balena-io/etcher/releases/download/v1.8.14/balenaEtcher-1.8.14.dmg",
       verified: "github.com/balena-io/etcher/"
   name "Etcher"
   desc "Tool to flash OS images to SD cards & USB drives"
