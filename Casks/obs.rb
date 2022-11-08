@@ -11,8 +11,8 @@ cask "obs" do
   homepage "https://obsproject.com/"
 
   livecheck do
-    url "https://obsproject.com/download/"
-    regex(%r{href=.*?/obs[._-]studio[._-]v?(\d+(?:\.\d+)+).*?\.dmg}i)
+    url "https://obsproject.com/osx_update/stable/updates_#{arch}.xml"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
