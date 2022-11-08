@@ -1,6 +1,6 @@
 cask "bootstrap-studio" do
-  version "6.2.0"
-  sha256 "f4808d15f7403970e8ecd1f60173e4bbadb4ec0b21e4abc768a2ad0d1a74b6e7"
+  version "6.2.1"
+  sha256 "2f504663e5ca5288acc92ee38f27b4c7ee1fb9551655c0a34707ee8207b07132"
 
   url "https://bootstrapstudio.io/releases/desktop/#{version}/Bootstrap%20Studio.dmg"
   name "Bootstrap Studio"
