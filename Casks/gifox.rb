@@ -1,9 +1,9 @@
 cask "gifox" do
-  version "2.4.2,020402.00"
-  sha256 "1360a03e6710f9d2aa5f789e2110e3e10d3c581f6524b82c7c1077287912953d"
+  version "2.5.0,020500.00"
+  sha256 "2321f5bfe47a3b0f10abab379745b2078e65f4b997497f9789fac2c8f15cf348"
 
-  url "https://d3si16icyi9iar.cloudfront.net/gifox/#{version.csv.second}.dmg",
-      verified: "d3si16icyi9iar.cloudfront.net/gifox/"
+  url "https://d1fqctmfkpkkcg.cloudfront.net/gifox/#{version.csv.second}.dmg",
+      verified: "d1fqctmfkpkkcg.cloudfront.net/gifox/"
   name "gifox"
   desc "App to record the screen"
   homepage "https://gifox.io/"
