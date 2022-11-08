@@ -1,6 +1,6 @@
 cask "balenaetcher" do
-  version "1.8.10"
-  sha256 "46a6e1457575e932ddad377c21ad8b7c6d04fb8e0c37b9671c34a789fbf9ed04"
+  version "1.8.14"
+  sha256 "4c3ca69f01e72c0c0e677cb1572bb887cc3cc146cfbe1aaf198cbab2266ed68d"
 
   url "https://github.com/balena-io/etcher/releases/download/v#{version}/balenaEtcher-#{version}.dmg",
       verified: "github.com/balena-io/etcher/"
@@ -9,8 +9,7 @@ cask "balenaetcher" do
   homepage "https://balena.io/etcher"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    skip "homebrew-cask has discontinued support due to extremely frequent releases"
   end
 
   auto_updates true
@@ -25,4 +24,9 @@ cask "balenaetcher" do
     "~/Library/Preferences/io.balena.etcher.plist",
     "~/Library/Saved Application State/io.balena.etcher.savedState",
   ]
+
+  caveats <<~EOS
+    Support for future updates of #{token} has been discontinued in homebrew-cask
+    due to extremely frequent stable releases.
+  EOS
 end
