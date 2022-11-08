@@ -2,7 +2,7 @@ cask "duet" do
   version "3.0.1.0"
   sha256 "d3aab0a50f4408d47aa2d3c7036965d45c18982f8c80cce5ef8d1ad86904238d"
 
-  url "https://duet.nyc3.cdn.digitaloceanspaces.com/Mac/#{version.major_minor.dots_to_underscores}/duet-#{version.dots_to_hyphens}.zip",
+  url "https://duet.nyc3.cdn.digitaloceanspaces.com/Mac/#{version.major_minor}/duet-#{version.dots_to_hyphens}.zip",
       verified: "duet.nyc3.cdn.digitaloceanspaces.com/Mac/"
   name "Duet"
   desc "Tool for using an iPad as a second display"
