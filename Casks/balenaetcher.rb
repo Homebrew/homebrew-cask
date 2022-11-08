@@ -8,6 +8,10 @@ cask "balenaetcher" do
   desc "Tool to flash OS images to SD cards & USB drives"
   homepage "https://balena.io/etcher"
 
+  livecheck do
+    skip "homebrew-cask has discontinued support due to extremely frequent releases"
+  end
+
   auto_updates true
 
   app "balenaEtcher.app"
@@ -21,11 +25,8 @@ cask "balenaetcher" do
     "~/Library/Saved Application State/io.balena.etcher.savedState",
   ]
 
-  caveats do
-    <<~EOS
-      Support for future updates of #{token} has been discontinued in homebrew-cask
-      due to extremely frequent stable releases.
-    EOS
-    discontinued
-  end
+  caveats <<~EOS
+    Support for future updates of #{token} has been discontinued in homebrew-cask
+    due to extremely frequent stable releases.
+  EOS
 end
