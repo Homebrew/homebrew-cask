@@ -17,7 +17,7 @@ cask "fme" do
     end
   end
 
-  pkg "fme-desktop-#{version.csv.first}-b#{version.csv.second}-macosx.pkg"
+  pkg "fme-desktop-#{version.csv.first}-b#{version.csv.second}-macosx-x64.pkg"
 
   uninstall pkgutil: [
               "com.safesoftware.pkg.engine.fme-desktop-#{version.major_minor}-b#{version.csv.second}-macosx",
