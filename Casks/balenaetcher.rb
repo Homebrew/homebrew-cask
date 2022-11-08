@@ -26,6 +26,6 @@ cask "balenaetcher" do
   ]
 
   caveats <<~EOS
-    #{token} is no longer updated in homebrew-cask due to multiple stable releases per day.
+    #{token} is no longer updated in homebrew-cask due to the maintenance demand of multiple stable releases per day.
   EOS
 end
