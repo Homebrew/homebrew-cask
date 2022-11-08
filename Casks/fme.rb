@@ -20,8 +20,8 @@ cask "fme" do
   pkg "fme-desktop-#{version.csv.first}-b#{version.csv.second}-macosx-x64.pkg"
 
   uninstall pkgutil: [
-              "com.safesoftware.pkg.engine.fme-desktop-#{version.major_minor}-b#{version.csv.second}-macosx",
-              "com.safesoftware.pkg.apps.fme-desktop-#{version.major_minor}-b#{version.csv.second}-macosx",
+              "com.safesoftware.pkg.engine.fme-desktop-#{version.major_minor}-b#{version.csv.second}-macosx-x64",
+              "com.safesoftware.pkg.apps.fme-desktop-#{version.major_minor}-b#{version.csv.second}-macosx-x64",
             ],
             delete:  [
               "/Applications/FME #{version.major_minor}",
