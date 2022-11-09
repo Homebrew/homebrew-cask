@@ -8,7 +8,10 @@ cask "paragon-ntfs" do
   homepage "https://www.paragon-software.com/home/ntfs-mac/"
 
   livecheck do
-    skip "No version information available"
+    url :url
+    strategy :extract_plist do |versions|
+      versions.values.map(&:short_version).compact.first
+    end
   end
 
   auto_updates true
