@@ -1,9 +1,9 @@
 cask "lookingglassbridge" do
   arch arm: "m1", intel: "x64"
 
-  version "2.0.6"
-  sha256 arm:   "66d1df8fbc90743df2010c56aca7a5ebc4422498cdf146b845c8aab6698d9a15",
-         intel: "62ca176b62de3e84ae97e6e7a4040a48b126b94ca13ac0a91475e35c09939bbd"
+  version "2.0.9"
+  sha256 arm:   "527d453c3f8243fd3987abff943bdad1e2a7cd1058e2e958c755f26a858914e6",
+         intel: "7ab4c50b3c2e7fca35c020b20b9327a3e1bb3155fa70f43421ff8d5498015dbb"
 
   url "https://dhtk4bwj5r21z.cloudfront.net/HoloPlayService/PublicLinks/#{version}/LookingGlassBridge-#{version}_#{arch}.pkg",
       verified: "dhtk4bwj5r21z.cloudfront.net/HoloPlayService/PublicLinks/"
@@ -20,7 +20,8 @@ cask "lookingglassbridge" do
 
   pkg "LookingGlassBridge-#{version}_#{arch}.pkg"
 
-  uninstall pkgutil: "com..LookingGlassBridge.LookingGlassBridgePkg"
+  uninstall launchctl: "LookingGlassBridge",
+            pkgutil:   "com..LookingGlassBridge.LOOKINGGLASSBRIDGEPKG"
 
   zap trash: "~/Library/Logs/DiagnosticReports/LookingGlassBridge*"
 end
