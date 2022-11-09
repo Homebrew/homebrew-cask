@@ -20,7 +20,7 @@ cask "lookingglassbridge" do
 
   pkg "LookingGlassBridge-#{version}_#{arch}.pkg"
 
-  uninstall launchtl: "LookingGlassBridge",
+  uninstall launchctl: "LookingGlassBridge",
             pkgutil:  "com..LookingGlassBridge.LOOKINGGLASSBRIDGEPKG"
 
   zap trash: "~/Library/Logs/DiagnosticReports/LookingGlassBridge*"
