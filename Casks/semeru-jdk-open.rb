@@ -11,17 +11,11 @@ cask "semeru-jdk-open" do
   desc "Production-ready JDK with the OpenJDK class libraries and the Eclipse OpenJ9 JVM"
   homepage "https://developer.ibm.com/languages/java/semeru-runtimes"
 
-  livecheck do
-    url "https://github.com/ibmruntimes/semeru#{version.major}-binaries/releases"
-    strategy :github_latest do |page|
-      match = page.match(%r{href=.*?/tag/jdk[._-](\d+(?:[._+]\d+)+)[._-]([^&]+)&quot;}i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
-    end
-  end
-
   pkg "ibm-semeru-open-jdk_#{arch}_mac_#{version.csv.first.tr("+", "_")}_#{version.csv.second}.pkg"
 
   uninstall pkgutil: "net.ibm-semeru-open.#{version.major}.jdk"
+
+  caveats do
+    discontinued
+  end
 end
