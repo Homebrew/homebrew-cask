@@ -11,4 +11,10 @@ cask "ankerslicer" do
   homepage "https://www.ankermake.com/software"
 
   app "AnkerSlicer.app"
+
+  zap trash: [
+    "~/Library/Application Support/AnkerSlicer",
+    "~/Library/Caches/AnkerSlicer",
+    "~/Library/Preferences/com.ankerslicer.AnkerMake_64bit_fp.plist",
+  ]
 end
