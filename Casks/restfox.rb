@@ -10,11 +10,6 @@ cask "restfox" do
   desc "Offline-first web HTTP client"
   homepage "https://restfox.dev/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
 
   app "Restfox.app"
