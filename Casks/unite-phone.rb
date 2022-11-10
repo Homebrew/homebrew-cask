@@ -16,7 +16,7 @@ cask "unite-phone" do
   app "Unite Phone.app"
 
   zap trash: [
-    '/Library/Logs/DiagnosticReports/Unite Phone Helper*',
-    '~/Library/Application Support/Unite Phone',
+    "/Library/Logs/DiagnosticReports/Unite Phone Helper*",
+    "~/Library/Application Support/Unite Phone",
   ]
 end
