@@ -7,7 +7,7 @@ cask "restfox" do
   url "https://github.com/flawiddsouza/Restfox/releases/download/v#{version}/Restfox-darwin-x64-#{version}.zip",
       verified: "github.com/flawiddsouza/Restfox/releases/download/"
   name "Restfox"
-  desc " Offline-first web HTTP client"
+  desc "Offline-first web HTTP client"
   homepage "https://restfox.dev/"
 
   livecheck do
