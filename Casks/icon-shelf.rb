@@ -11,11 +11,6 @@ cask "icon-shelf" do
   desc "Icon manager for web developers"
   homepage "https://icon-shelf.github.io/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
 
   app "Icon Shelf.app"
