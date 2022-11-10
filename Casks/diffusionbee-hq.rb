@@ -5,14 +5,13 @@ cask "diffusionbee-hq" do
   url "https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/releases/download/#{version}/DiffusionBee-#{version}-arm64_TF_SD1.4_FP32.dmg",
       verified: "github.com/divamgupta/diffusionbee-stable-diffusion-ui"
   name "Diffusion Bee"
-  desc "Run Stable Diffusion locally. HQ Version for Apple Silicon."
+  desc "Run Stable Diffusion locally. HQ Version for Apple Silicon"
   homepage "https://diffusionbee.com/"
 
+  conflicts_with cask: "diffusionbee"
   depends_on arch: :arm64
 
   app "DiffusionBee.app"
-
-  conflicts_with cask: "diffusionbee"
 
   zap trash: [
     "~/.diffusionbee",

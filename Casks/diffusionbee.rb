@@ -11,9 +11,9 @@ cask "diffusionbee" do
   desc "Run Stable Diffusion locally"
   homepage "https://diffusionbee.com/"
 
-  app "DiffusionBee.app"
-
   conflicts_with cask: "diffusionbee-hq"
+
+  app "DiffusionBee.app"
 
   zap trash: [
     "~/.diffusionbee",
