@@ -13,6 +13,8 @@ cask "diffusionbee" do
 
   app "DiffusionBee.app"
 
+  conflicts_with cask: "diffusionbee-hq"
+
   zap trash: [
     "~/.diffusionbee",
     "~/Library/Application Support/DiffusionBee",
