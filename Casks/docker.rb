@@ -1,9 +1,9 @@
 cask "docker" do
   arch arm: "arm64", intel: "amd64"
 
-  version "4.13.1,90346"
-  sha256 arm:   "21a2bd82ade4b4776d3a4c28524e114733f172e9cd4f1da2193487db217c319f",
-         intel: "9147ca38d46c59a758ac53560814c91c4deda9b0c4c63adfa3df76f37bacbf00"
+  version "4.14.0,91374"
+  sha256 arm:   "38be55c1dc0686e17c761c4953892ff21ffc5cddef19171e428ca2c0224f3b95",
+         intel: "f554d67e1189efdc5e85e4c28bc4b82a979914016bfb5cc83cde719d557ce062"
 
   url "https://desktop.docker.com/mac/main/#{arch}/#{version.csv.second}/Docker.dmg"
   name "Docker Desktop"
@@ -27,6 +27,7 @@ cask "docker" do
     hyperkit
     kubernetes-cli
   ]
+  depends_on macos: ">= :catalina"
 
   app "Docker.app"
   binary "#{appdir}/Docker.app/Contents/Resources/etc/docker.bash-completion",
