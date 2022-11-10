@@ -19,7 +19,5 @@ cask "restfox" do
 
   app "Restfox.app"
   
-  zap trash: [
-    "~/Library/Application Support/Restfox",
-  ]
+  zap trash: "~/Library/Application Support/Restfox"
 end
