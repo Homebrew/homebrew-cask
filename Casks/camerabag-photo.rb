@@ -1,6 +1,6 @@
 cask "camerabag-photo" do
-  version "2022.4.0"
-  sha256 "8d1777d18a08718f482d2452646f268549f92899e074faa8392772b392db2e83"
+  version "2023.0.0"
+  sha256 "7b6d79c3b702b90dfd30ee55caa9495750605954e280570161efbe13e5355883"
 
   url "https://nevercenter.com/camerabag/download/filearchive/Install_CameraBag_Photo_#{version.dots_to_underscores}_mac.dmg"
   name "CameraBag"
