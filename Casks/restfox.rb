@@ -13,6 +13,6 @@ cask "restfox" do
   auto_updates true
 
   app "Restfox.app"
-  
+
   zap trash: "~/Library/Application Support/Restfox"
 end
