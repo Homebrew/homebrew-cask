@@ -8,6 +8,16 @@ cask "microsoft-teams" do
   desc "Meet, chat, call, and collaborate in just one place"
   homepage "https://teams.microsoft.com/downloads"
 
+  # Microsoft releases multiple versions and builds of Teams, as listed here:
+  #   https://raw.githubusercontent.com/ItzLevvie/MicrosoftTeams-msinternal/master/defconfig
+  # and here:
+  #   https://raw.githubusercontent.com/ItzLevvie/MicrosoftTeams-msinternal/master/defconfig2
+  #
+  # We only track the "production build"/"Public (R4) build" version,
+  # which agrees with the version reported by `livecheck`.
+  #
+  # Any pull request that updates this Cask to a version that
+  # differs from the `livecheck` version will be closed.
   livecheck do
     url "https://aka.ms/teamsmac"
     strategy :header_match
