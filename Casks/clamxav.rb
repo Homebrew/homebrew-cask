@@ -1,6 +1,6 @@
 cask "clamxav" do
-  version "3.5.1,9488"
-  sha256 "706d0f5d9b03a0ce62b41d5df20faf9df154f402e5829210042e831a0767c4ab"
+  version "3.5.2,9513"
+  sha256 "66a03fc8f524116b95a926197aed24a6eacfcc5c3259d0f61c06ce43dd2e9f79"
 
   url "https://cdn.clamxav.com/ClamXAVdownloads/ClamXAV_#{version.csv.first}_#{version.csv.second}.zip"
   name "ClamXAV"
