@@ -3,7 +3,7 @@ cask "free-gpgmail" do
     version "5,2022.2,"
     sha256 "43e349ae21213e36f48677551215f61a9d183907ef0596c4b54d1d745bb7cb27"
   elsif MacOS.version <= :big_sur
-    version "5,2022.2,_signed"
+    version "5,2022.2,-signed"
     sha256 "1935b0f65a5351c1c84870f316d0b97331c40ca50c13a912a703a68a08dabc4e"
   elsif MacOS.version == :monterey
     version "6,2022.2,"
@@ -41,5 +41,6 @@ cask "free-gpgmail" do
 
   artifact "Free-GPGMail_#{version.csv.first}.mailbundle", target: "#{Dir.home}/Library/Mail/Bundles/Free-GPGMail_#{version.csv.first}.mailbundle"
 
-  uninstall delete: "~/Library/Mail/Bundles/Free-GPGMail_#{version.csv.first}.mailbundle"
+  uninstall quit:   "org.gpgtools.gpgmail.upgrader",
+            delete: "~/Library/Mail/Bundles/Free-GPGMail_#{version.csv.first}.mailbundle"
 end
