@@ -1,5 +1,5 @@
 cask "icon-shelf" do
-  arch arm: "-arm64", intel: ""
+  arch arm: "-arm64"
 
   version "0.1.17"
   sha256 arm:   "7a5bc6f4af0658d9ae6a6449946b95aea9a5a19a5fd779973d8c3a6590347147",
