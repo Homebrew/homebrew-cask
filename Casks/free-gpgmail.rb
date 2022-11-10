@@ -8,7 +8,7 @@ cask "free-gpgmail" do
   elsif MacOS.version == :monterey
     version "6,2022.2,"
     sha256 "605b292cf10fbbb5fbedefbd0e1a889c616d2d057dd862bed51899d217840489"
-  elsif MacOS.version >= :ventura 
+  elsif MacOS.version >= :ventura
     version "7,2022.2,"
     sha256 "4a5ba8a2954e81cfc81ec825b876970972b33110818e9e9d6f2712f009c5bf21"
   end
