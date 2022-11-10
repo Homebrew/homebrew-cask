@@ -1,6 +1,6 @@
 cask "todesk" do
-  version "4.5.0.0"
-  sha256 "33bfb21f797a8e8bdbbaf8a6cc9d05adb7da25f70f0c13b3de4a42a68c3a1385"
+  version "4.5.0.2"
+  sha256 "48b9e1e4082ab4a4dcf714d784318c99d1b715e97ff3da3b3f79c0dc8d7ab7b1"
 
   url "https://dl.todesk.com/macos/ToDesk_#{version}.pkg"
   name "ToDesk"
