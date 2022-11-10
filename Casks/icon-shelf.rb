@@ -8,7 +8,7 @@ cask "icon-shelf" do
   url "https://github.com/Icon-Shelf/icon-shelf/releases/download/v#{version}/Icon-Shelf-#{version}#{arch}.dmg",
       verified: "github.com/Icon-Shelf/icon-shelf/"
   name "Icon Shelf"
-  desc "Icon manager for web developer"
+  desc "Icon manager for web developers"
   homepage "https://icon-shelf.github.io/"
 
   livecheck do
