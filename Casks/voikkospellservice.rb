@@ -13,4 +13,6 @@ cask "voikkospellservice" do
   service "VoikkoSpellService.app"
 
   uninstall signal: ["TERM", "org.puimula.VoikkoSpellService"]
+
+  zap trash: ["~/Library/Spelling/Finnish"]
 end
