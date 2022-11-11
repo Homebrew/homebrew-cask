@@ -1,6 +1,6 @@
 cask "trunk-io" do
-  version "1.2.2"
-  sha256 "f80f4552a73117fce38b64060f9d1abd848089be2cabcbba479d18cd16a294c7"
+  version "1.2.3"
+  sha256 "6ab59e81eeb57dbecd8984882f765a0d0afbe5011b0c327bad581d4542aa3f80"
 
   url "https://trunk.io/releases/launcher/#{version}/trunk"
   name "Trunk Launcher"
