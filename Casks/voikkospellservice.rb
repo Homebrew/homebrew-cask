@@ -1,6 +1,6 @@
 cask "voikkospellservice" do
   version "1.1.0b1"
-  sha256 "c1dec3cda95ed77de2e6246e5e16b4425f40c576a2409d272ea85fb2bc22f285"
+  sha256 "146f0f8a31e7b1b40a2fa8a6eec77fcdbf5553a7e66d32a16492afcb7b2e9b23"
 
   url "https://github.com/walokra/osxspell/releases/download/#{version}/VoikkoSpellService-#{version}.dmg",
       verified: "github.com/walokra/osxspell/"
