@@ -1,6 +1,6 @@
 cask "lapce" do
-  version "0.2.2"
-  sha256 "c0ad99dff1b338818d38c415eaa1908c50fc59c41856014ace4d69e44463a9cc"
+  version "0.2.3"
+  sha256 "8dae216fdeff3f9967d93c13847e9b012df69c6f77985f9f01b67d00b684000e"
 
   url "https://github.com/lapce/lapce/releases/download/v#{version}/Lapce-macos.dmg",
       verified: "github.com/lapce/lapce/"
