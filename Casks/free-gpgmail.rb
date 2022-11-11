@@ -1,11 +1,11 @@
 cask "free-gpgmail" do
   if MacOS.version <= :catalina
-    version "5,2022.2,"
+    version "5,2022.2,-unsigned"
     sha256 "43e349ae21213e36f48677551215f61a9d183907ef0596c4b54d1d745bb7cb27"
   elsif MacOS.version <= :big_sur
     version "5,2022.2,-signed"
     sha256 "1935b0f65a5351c1c84870f316d0b97331c40ca50c13a912a703a68a08dabc4e"
-  elsif MacOS.version == :monterey
+  elsif MacOS.version <= :monterey
     version "6,2022.2,"
     sha256 "605b292cf10fbbb5fbedefbd0e1a889c616d2d057dd862bed51899d217840489"
   elsif MacOS.version >= :ventura
