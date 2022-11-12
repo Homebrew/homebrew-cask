@@ -1,6 +1,6 @@
 cask "ghidra" do
-  version "10.2,20221101"
-  sha256 "a5163f50bd6ce725c4c8638f7505b64bb603ea6bfe3f7d9ed4e403236716f787"
+  version "10.2.1,20221110"
+  sha256 "f683cfbb583641d27f9dca3c1a59b4172ecd10155d8771bbb28a2e0eaa7c80bb"
 
   url "https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_#{version.csv.first}_build/ghidra_#{version.csv.first}_PUBLIC_#{version.csv.second}.zip",
       verified: "github.com/NationalSecurityAgency/ghidra/"
