@@ -9,13 +9,14 @@ cask "opensoundmeter" do
   homepage "https://opensoundmeter.com/"
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "OpenSoundMeter.app"
 
   zap trash: [
     "~/.config/opensoundmeter",
     "~/Library/Caches/OpenSoundMeter",
-    "~/Library/Saved Application State/com.opensoundmeter.OpenSoundMeter.savedState",
     "~/Library/Preferences/com.opensoundmeter.OpenSoundMeter.plist",
+    "~/Library/Saved Application State/com.opensoundmeter.OpenSoundMeter.savedState",
   ]
 end
