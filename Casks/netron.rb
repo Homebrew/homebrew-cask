@@ -1,6 +1,6 @@
 cask "netron" do
-  version "6.1.5"
-  sha256 "e3b62439d5a07abb283a47e0dc7a2302b35079be41958550677e91a044aa734e"
+  version "6.1.7"
+  sha256 "a0a523d2541fa082a415791cb6a06773ef8785dec6543e4b5f832ab3f44cb18e"
 
   url "https://github.com/lutzroeder/netron/releases/download/v#{version}/Netron-#{version}-mac.zip"
   name "Netron"
