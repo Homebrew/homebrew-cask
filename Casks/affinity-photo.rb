@@ -13,6 +13,7 @@ cask "affinity-photo" do
   end
 
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "Affinity Photo #{version.major}.app"
 
