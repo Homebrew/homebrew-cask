@@ -19,5 +19,10 @@ cask "natron" do
   desc "Open-source node-graph based video compositing software"
   homepage "https://NatronGitHub.github.io/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Natron.app"
 end
