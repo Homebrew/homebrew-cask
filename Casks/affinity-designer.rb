@@ -22,7 +22,7 @@ cask "affinity-designer" do
     "~/Library/Caches/com.seriflabs.affinitydesigner2",
     "~/Library/HTTPStorages/com.seriflabs.affinitydesigner2",
     "~/Library/Preferences/com.seriflabs.affinitydesigner2.plist",
-    "~/Library/WebKit/com.seriflabs.affinitydesigner2",
     "~/Library/Saved Application State/com.seriflabs.affinitydesigner2.savedState",
+    "~/Library/WebKit/com.seriflabs.affinitydesigner2",
   ]
 end

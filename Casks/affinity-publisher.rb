@@ -22,7 +22,7 @@ cask "affinity-publisher" do
     "~/Library/Caches/com.seriflabs.affinitypublisher2",
     "~/Library/HTTPStorages/com.seriflabs.affinitypublisher2",
     "~/Library/Preferences/com.seriflabs.affinitypublisher2.plist",
-    "~/Library/WebKit/com.seriflabs.affinitypublisher2",
     "~/Library/Saved Application State/com.seriflabs.affinitypublisher2.savedState",
+    "~/Library/WebKit/com.seriflabs.affinitypublisher2",
   ]
 end

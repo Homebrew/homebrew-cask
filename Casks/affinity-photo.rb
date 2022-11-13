@@ -22,7 +22,7 @@ cask "affinity-photo" do
     "~/Library/Caches/com.seriflabs.affinityphoto2",
     "~/Library/HTTPStorages/com.seriflabs.affinityphoto2",
     "~/Library/Preferences/com.seriflabs.affinityphoto2.plist",
-    "~/Library/WebKit/com.seriflabs.affinityphoto2",
     "~/Library/Saved Application State/com.seriflabs.affinityphoto2.savedState",
+    "~/Library/WebKit/com.seriflabs.affinityphoto2",
   ]
 end
