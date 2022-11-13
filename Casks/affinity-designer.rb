@@ -19,5 +19,6 @@ cask "affinity-designer" do
   zap trash: [
     "~/Library/Application Support/Affinity Designer",
     "~/Library/Caches/com.seriflabs.affinitydesigner",
+    "~/Library/Saved Application State/com.seriflabs.affinitydesigner.savedState"
   ]
 end

@@ -19,5 +19,6 @@ cask "affinity-photo" do
   zap trash: [
     "~/Library/Application Support/Affinity Photo",
     "~/Library/Caches/com.seriflabs.affinityphoto",
+    "~/Library/Saved Application State/com.seriflabs.affinityphoto.savedState"
   ]
 end

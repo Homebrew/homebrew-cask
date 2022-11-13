@@ -19,5 +19,6 @@ cask "affinity-publisher" do
   zap trash: [
     "~/Library/Application Support/Affinity Publisher",
     "~/Library/Caches/com.seriflabs.affinitypublisher",
+    "~/Library/Saved Application State/com.seriflabs.affinitypublisher.savedState"
   ]
 end
