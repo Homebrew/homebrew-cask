@@ -7,5 +7,10 @@ cask "quiet-reader" do
   desc "Free app that let's you read articles or text highlights distraction free"
   homepage "https://quietreader.app/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Quiet Reader.app"
 end
