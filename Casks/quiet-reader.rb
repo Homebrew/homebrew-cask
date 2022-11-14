@@ -4,7 +4,7 @@ cask "quiet-reader" do
 
   url "https://quietreader.app/Quiet%20Reader.dmg"
   name "Quiet Reader"
-  desc "Free app that let's you read articles or text highlights distraction free"
+  desc "Read articles or text highlights distraction free"
   homepage "https://quietreader.app/"
 
   livecheck do
@@ -12,11 +12,11 @@ cask "quiet-reader" do
     strategy :extract_plist
   end
 
-  zap trash: [
-    "~/Library/Preferences/io.zeppelinlabs.quiet-reader.plist",
-    "~/Library/Application Support/Quiet Reader",
-    "~/Library/Saved Application State/io.zeppelinlabs.quiet-reader.savedState"
-  ]
-
   app "Quiet Reader.app"
+
+  zap trash: [
+    "~/Library/Application Support/Quiet Reader",
+    "~/Library/Preferences/io.zeppelinlabs.quiet-reader.plist",
+    "~/Library/Saved Application State/io.zeppelinlabs.quiet-reader.savedState",
+  ]
 end
