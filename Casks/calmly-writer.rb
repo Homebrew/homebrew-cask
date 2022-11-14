@@ -1,14 +1,14 @@
 cask "calmly-writer" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.0.47"
+  version "2.0.48"
 
   on_intel do
-    sha256 "fcd785c5feccc6a2c962a40aabf02ab6b65b529c32613214aa0a83e57de50f39"
+    sha256 "91aca349f688ebcf6dc1f113ba4de205023fcc77d76f5d044c04370373a6db65"
     url "https://www.calmlywriter.com/releases/Calmly%20Writer-#{version}.dmg"
   end
   on_arm do
-    sha256 "6660815161a934865289bb502390e25d4a94ac30760a73075d9873d3b374ccda"
+    sha256 "cc5f8064c7422ee384b271cbbaed5008af5d1d9dea379be273fbcc4025ac4756"
     url "https://www.calmlywriter.com/releases/Calmly%20Writer-#{version}-#{arch}.dmg"
   end
 
