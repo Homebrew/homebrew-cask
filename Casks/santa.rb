@@ -7,6 +7,11 @@ cask "santa" do
   desc "Binary authorization system"
   homepage "https://github.com/google/santa"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   pkg "santa-#{version}.pkg"
 
   uninstall delete:    [
