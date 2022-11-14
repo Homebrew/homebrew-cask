@@ -12,5 +12,11 @@ cask "quiet-reader" do
     strategy :extract_plist
   end
 
+  zap trash: [
+    "~/Library/Preferences/io.zeppelinlabs.quiet-reader.plist",
+    "~/Library/Application Support/Quiet Reader",
+    "~/Library/Saved Application State/io.zeppelinlabs.quiet-reader.savedState"
+  ]
+
   app "Quiet Reader.app"
 end
