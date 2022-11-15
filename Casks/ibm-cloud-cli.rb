@@ -11,10 +11,6 @@ cask "ibm-cloud-cli" do
     url "https://github.com/IBM-Cloud/ibm-cloud-cli-release"
   end
 
-  depends_on cask: "docker"
-  depends_on formula: "helm"
-  depends_on formula: "kubernetes-cli"
-
   pkg "IBM_Cloud_CLI_#{version}.pkg"
 
   uninstall pkgutil: "com.ibm.cloud.cli",
