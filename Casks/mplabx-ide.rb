@@ -1,6 +1,6 @@
 cask "mplabx-ide" do
-  version "6.00"
-  sha256 "aaebb401dbd9d9e2fd576cc88807f6dee6702b4d2fe0812a0a486e84e49bedd3"
+  version "6.05"
+  sha256 "13fd0da992178e0962d7c09075d15d85f2a41ad573747c0bb2dc8e1caf7ed696"
 
   url "https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/SoftwareTools/MPLABX-v#{version}-osx-installer.dmg"
   name "MPLab X IDE"
