@@ -3,8 +3,8 @@ cask "microsoft-auto-update" do
     version "4.40.21101001"
     sha256 "f638f7e0da9ee659c323f2ede0f176804bfe9a615a8f8b6320bd2e69d91ef2b2"
   else
-    version "4.52.22100900"
-    sha256 "c55d8421f3bf30962109ad3569c2ec4ec2bf8db28c91c74350e030065b136ee0"
+    version "4.53.22111300"
+    sha256 "92f8f93becea72124f4803533441262504c3ed97c068a840f3dff9b7c86be036"
   end
 
   url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_AutoUpdate_#{version}_Updater.pkg"
