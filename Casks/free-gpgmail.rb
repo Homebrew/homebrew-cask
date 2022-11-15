@@ -1,16 +1,16 @@
 cask "free-gpgmail" do
   if MacOS.version <= :catalina
-    version "5,2022.2,-unsigned"
+    version "5,2022.2-unsigned"
     sha256 "43e349ae21213e36f48677551215f61a9d183907ef0596c4b54d1d745bb7cb27"
   elsif MacOS.version <= :big_sur
-    version "5,2022.2,-signed"
+    version "5,2022.2-signed"
     sha256 "1935b0f65a5351c1c84870f316d0b97331c40ca50c13a912a703a68a08dabc4e"
   elsif MacOS.version <= :monterey
-    version "6,2022.2,"
+    version "6,2022.2"
     sha256 "605b292cf10fbbb5fbedefbd0e1a889c616d2d057dd862bed51899d217840489"
   elsif MacOS.version >= :ventura
-    version "7,2022.2,"
-    sha256 "4a5ba8a2954e81cfc81ec825b876970972b33110818e9e9d6f2712f009c5bf21"
+    version "7,2022.2.1"
+    sha256 "2a99bff4afe5b75ed0e7236abbec06c2eac0ac29b35f0e26672e5151e95ab4c2"
   end
 
   url "https://github.com/Free-GPGMail/Free-GPGMail/releases/download/v#{version.csv.second}/Free-GPGMail_#{version.csv.first}-#{version.csv.second}#{version.csv.third}.mailbundle.zip"
@@ -30,7 +30,7 @@ cask "free-gpgmail" do
         next if match[0] != version.csv.first
         next if match[2]&.sub(/^[_-]/, "") != version_suffix
 
-        "#{match[0]},#{match[1]},#{match[2]}"
+        "#{match[0]},#{match[1]}"
       end
     end
   end
