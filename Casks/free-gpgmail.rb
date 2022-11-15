@@ -9,8 +9,8 @@ cask "free-gpgmail" do
     version "6,2022.2,"
     sha256 "605b292cf10fbbb5fbedefbd0e1a889c616d2d057dd862bed51899d217840489"
   elsif MacOS.version >= :ventura
-    version "7,2022.2,"
-    sha256 "4a5ba8a2954e81cfc81ec825b876970972b33110818e9e9d6f2712f009c5bf21"
+    version "7,2022.2.1,"
+    sha256 "2a99bff4afe5b75ed0e7236abbec06c2eac0ac29b35f0e26672e5151e95ab4c2"
   end
 
   url "https://github.com/Free-GPGMail/Free-GPGMail/releases/download/v#{version.csv.second}/Free-GPGMail_#{version.csv.first}-#{version.csv.second}#{version.csv.third}.mailbundle.zip"
