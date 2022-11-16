@@ -1,11 +1,11 @@
 cask "eclipse-installer" do
-  arch arm: "aarch64", intel: "mac64"
+  arch arm: "mac-aarch64", intel: "mac64"
 
   version "4.25.0,2022-09"
-  sha256 arm:   "5836c85d1592c9d28ff8ea2c4cb0abea76ca5e24af4e5f60e7c4b4065c683fd7",
-         intel: "4005fcf9ef11813d8ea8cabd21153c639a6e951d42f73c2941b3f119dcd668b9"
+  sha256 arm:   "a7f3bc7bc48ca1c313e548c7cbf5ec63ec33d88d8b2c6184d07e8f99bffdb20d",
+         intel: "ae7caff2e72323d506ca1a9a7ff773a1a8ef9b3f60738d52a19b8ff43244d3ac"
 
-  url "https://eclipse.org/downloads/download.php?file=/oomph/epp/#{version.csv.second}/R/eclipse-inst-#{arch}.tar.gz&r=1"
+  url "https://www.eclipse.org/downloads/download.php?file=/oomph/epp/#{version.csv.second}/R/eclipse-inst-jre-#{arch}.dmg&r=1"
   name "Eclipse Installer"
   name "Eclipse IDE installer"
   desc "Install and update your Eclipse Development Environment"
