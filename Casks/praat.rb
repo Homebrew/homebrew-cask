@@ -1,16 +1,29 @@
 cask "praat" do
-  version "6.2.23"
-  sha256 "5dcf08d7d89e1dd64a32eefe04cd305e776285edf2699030ea0a424d21406736"
+  version "6.3,6300"
+  sha256 "4230b6945a0fb90af66bb7168749202d3dfeb94e2b11cdff38ba646755fc1783"
 
-  url "https://github.com/praat/praat/releases/download/v#{version}/praat#{version.no_dots}_mac.dmg",
+  url "https://github.com/praat/praat/releases/download/v#{version.csv.first}/praat#{version.csv.second}_mac.dmg",
       verified: "github.com/praat/praat/"
   name "Praat"
   desc "Doing phonetics by computer"
   homepage "https://www.fon.hum.uva.nl/praat/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://github.com/praat/praat/releases/latest"
+    regex(%r{href=.*?(\d+(?:\.\d+)+)/praat(\d+)[._-]mac\.dmg}i)
+    strategy :header_match do |headers, regex|
+      next if headers["location"].blank?
+
+      # Identify the latest tag from the response's `location` header
+      latest_tag = File.basename(headers["location"])
+      next if latest_tag.blank?
+
+      # Fetch the assets list HTML for the latest tag and match within it
+      assets_page = Homebrew::Livecheck::Strategy.page_content(
+        @url.sub(%r{/releases/?.+}, "/releases/expanded_assets/#{latest_tag}"),
+      )
+      assets_page[:content]&.scan(regex)&.map { |match| "#{match[0]},#{match[1]}" }
+    end
   end
 
   app "Praat.app"
