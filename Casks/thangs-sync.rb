@@ -1,6 +1,6 @@
 cask "thangs-sync" do
   version "1.1.45"
-  sha256 "72f15a38bbaa521e3930a334cd3515377cd0c6a7c01ff5987adb4ff18acb4bcc"
+  sha256 :no_check
 
   url "https://thangs.com/api/system/sync-client-location?type=mac"
   name "Thangs Sync"
