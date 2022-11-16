@@ -10,7 +10,7 @@ cask "windscribe" do
 
   livecheck do
     url "https://windscribe.com/changelog/mac"
-    regex(/.*?Windscribe[._-].*?\d.dmg.*?v(\d+(?:\.\d+)+)/i)
+    regex(%r{>\sv?(\d+(?:\.\d+)+)</a>\s</h3>}i)
   end
 
   auto_updates true
