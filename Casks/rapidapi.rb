@@ -1,16 +1,21 @@
-cask "paw" do
-  version "3.4.0,3004000012"
-  sha256 "d393c6fb175d8e5f671361e1e2e4578fbab0eb6a03a2226507cad953a8a819da"
+cask "rapidapi" do
+  version "4.0.0,4000000007"
+  sha256 "581f0a769247c0b7ba633fe4c5f4b6cb647014d6f400a8bcd5e9ff8ca6fbab9d"
 
-  url "https://cdn-builds.paw.cloud/paw/Paw-#{version.csv.first}.zip"
-  name "Paw"
+  url "https://cdn-builds.paw.cloud/paw/RapidAPI-#{version.csv.first}.zip"
+  name "RapidAPI"
   desc "HTTP client that helps testing and describing APIs"
   homepage "https://paw.cloud/"
 
-  auto_updates true
-  depends_on macos: ">= :sierra"
+  livecheck do
+    url "https://paw.cloud/api/v2/updates/appcast"
+    strategy :sparkle
+  end
 
-  app "Paw.app"
+  auto_updates true
+  depends_on macos: ">= :catalina"
+
+  app "RapidAPI.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.luckymarmot.Paw",
@@ -19,15 +24,4 @@ cask "paw" do
     "~/Library/Preferences/com.luckymarmot.Paw.plist",
     "~/Library/Saved Application State/com.luckymarmot.Paw.savedState",
   ]
-
-  caveats do
-    discontinued
-
-    <<~EOS
-      #{token} has been renamed 'rapidapi',
-      install rapidapi to continue receiving updates;
-
-        brew install --cask rapidapi
-    EOS
-  end
 end
