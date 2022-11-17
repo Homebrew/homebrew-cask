@@ -7,7 +7,7 @@ cask "osu" do
 
   url "https://github.com/ppy/osu/releases/download/#{version}/osu.app.#{arch}.zip"
   name "osu!"
-  desc "A free-to-win rhythm game. Rhythm is just a click away!"
+  desc "Free-to-win rhythm game. Rhythm is just a click away!"
   homepage "https://github.com/ppy/osu/"
 
   livecheck do
