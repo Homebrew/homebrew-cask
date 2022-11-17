@@ -9,8 +9,7 @@ cask "akiflow" do
 
   livecheck do
     url "https://akiflow.com/releases/download"
-    regex(/href=.*?Akiflow[._-](\d+(?:\.\d+)+)[._-]universal\.dmg/i)
-    strategy :page_match
+    strategy :header_match
   end
 
   app "Akiflow.app"
