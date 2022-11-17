@@ -1,6 +1,6 @@
 cask "waterfox-classic" do
-  version "2022.08"
-  sha256 "9960899abd24d1802640d1be98d099a5ecf49c9cf18a59f1a98962234b7f92f8"
+  version "2022.11"
+  sha256 "ab9ea75eac79efa8da273c1a44798b77a71a9e7633bb70a69af3b7f50b44544a"
 
   url "https://github.com/WaterfoxCo/Waterfox-Classic/releases/download/#{version}-classic/Waterfox.Classic.#{version}.Setup.dmg",
       verified: "github.com/WaterfoxCo/Waterfox-Classic/"
