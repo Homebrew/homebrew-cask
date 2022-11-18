@@ -6,7 +6,7 @@ cask "vmware-fusion" do
 
     url "https://download3.vmware.com/software/fusion/file/VMware-Fusion-#{version.csv.first}-#{version.csv.second}.dmg"
   elsif MacOS.version <= :big_sur
-    livecheck_folder = "x86"
+    livecheck_folder = "core"
     version "12.2.4,20071091"
     sha256 "0b0516f4d5f70e759ae08a40d2e14f487c0b66d84ee467e38972ad013e1f6c7f"
 
