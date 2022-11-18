@@ -1,5 +1,5 @@
 cask "loopback" do
-  version "2.2.10"
+  version "2.2.11"
   sha256 :no_check
 
   url "https://rogueamoeba.com/loopback/download/Loopback.zip"
@@ -13,7 +13,7 @@ cask "loopback" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :catalina"
 
   app "Loopback.app"
   installer script: {
