@@ -16,7 +16,7 @@ cask "thangs-sync" do
   app "Thangs Sync.app"
 
   zap trash: [
-        '~/Library/Preferences/com.ThangsSyncClient.app.plist',
-        '~/Library/Application Support/thangs-sync-client',
-      ]
+    '~/Library/Application Support/thangs-sync-client',
+    '~/Library/Preferences/com.ThangsSyncClient.app.plist',
+  ]
 end
