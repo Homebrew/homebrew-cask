@@ -1,6 +1,6 @@
 cask "cleaneronepro" do
-  version "6.6.5,4961"
-  sha256 "4b99ea1bf13116036b3d5fe443babe72d7c61d5eda19cb5a97db91a61586f7e5"
+  version "6.6.6,5034"
+  sha256 "923048ba0083ebbe1f827ed35470b1a098acd3b6b765aa7de26b70c849cd93da"
 
   url "https://files.trendmicro.com/products/CleanerOnePro/COPG0001/CleanerOnePro_#{version.csv.first.dots_to_underscores}.zip"
   name "cleaneronepro"
