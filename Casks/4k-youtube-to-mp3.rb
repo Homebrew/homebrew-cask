@@ -1,7 +1,7 @@
 cask "4k-youtube-to-mp3" do
   # NOTE: "3" is not a version number, but an intrinsic part of the product name
-  version "4.7.0"
-  sha256 "fc6b64a49290312645ccfbd6914e6df4126419588e2b94f4f4c4d8284a19ebbc"
+  version "4.7.1"
+  sha256 "bca138c27db13f24c0015b151aa1d1be63ffa3f26d4622c4e7aba47b0476e810"
 
   url "https://dl.4kdownload.com/app/4kyoutubetomp3_#{version}.dmg"
   name "4K YouTube to MP3"
