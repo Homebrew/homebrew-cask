@@ -20,6 +20,9 @@ cask "julia" do
 
   zap trash: [
     "~/.julia",
+    "~/Library/Logs/Julia",
+    "~/Library/Preferences/com.github.Julia.plist",
     "~/Library/Preferences/julia.plist",
+    "~/Library/Saved Application State/com.github.Julia.savedState",
   ]
 end
