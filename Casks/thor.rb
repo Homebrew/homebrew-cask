@@ -7,6 +7,11 @@ cask "thor" do
   desc "Utility to switch between applications"
   homepage "https://github.com/gbammc/Thor/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
 
   app "Thor.app"
