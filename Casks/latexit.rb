@@ -25,5 +25,6 @@ cask "latexit" do
     "~/Library/Cookies/fr.chachatelier.pierre.LaTeXiT.binarycookies",
     "~/Library/Group Containers/7SFX84GNR7.fr.chachatelier.pierre.LaTeXiT",
     "~/Library/Preferences/fr.chachatelier.pierre.LaTeXiT.plist",
+    "~/Library/Saved Application State/fr.chachatelier.pierre.LaTeXiT.savedState",
   ]
 end
