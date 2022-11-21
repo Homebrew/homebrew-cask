@@ -1,6 +1,6 @@
 cask "default-folder-x" do
-  version "5.7.1,5469"
-  sha256 "15b97b83d0d81e8faf86c9a4d8059d2dc04e752d3afefd5bdb620334c7a20fe1"
+  version "5.7.2,5592"
+  sha256 "8e8b5ebb3f0d36605b127ed749f1e3350f39d8a5b1308bc6c4a1f3066af87622"
 
   url "https://www.stclairsoft.com/download/DefaultFolderX-#{version.csv.first}.dmg"
   name "Default Folder X"
@@ -13,6 +13,7 @@ cask "default-folder-x" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Default Folder X.app"
 
