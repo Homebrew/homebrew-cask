@@ -1,9 +1,9 @@
 cask "browserosaurus" do
   arch arm: "arm64", intel: "x64"
 
-  version "19.3.0"
-  sha256 arm:   "fcbee7a05ee6fb5c64181d112de23b1a2fbd27f6fb1ffe1b65f98cf15a84359a",
-         intel: "e82de6399fb2e2447b3527782b67fb1fcef2a34b826a486ee288e755176dfef5"
+  version "19.3.2"
+  sha256 arm:   "0f151452239b34e8c7613579640ed7e2f87e9c47f41eaee464eb2d3dfdcbb576",
+         intel: "87746f39ac5501ab62a2b989398d492e788be6c72894bb1c012f54a0a05a85ab"
 
   url "https://github.com/will-stone/browserosaurus/releases/download/v#{version}/Browserosaurus-darwin-#{arch}-#{version}.zip"
   name "Browserosaurus"
