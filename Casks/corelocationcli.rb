@@ -4,6 +4,7 @@ cask "corelocationcli" do
 
   url "https://github.com/fulldecent/corelocationcli/releases/download/#{version}/CoreLocationCLI.zip"
   name "Core Location CLI"
+  desc "Prints location information from CoreLocation"
   homepage "https://github.com/fulldecent/corelocationcli"
 
   binary "CoreLocationCLI"
