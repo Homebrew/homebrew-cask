@@ -1,6 +1,6 @@
 cask "rwts-pdfwriter" do
   version "2.0"
-  sha256 "8e653359009f07f107a02b02ac99d198528c87fc280964c772f90fed7d9557d3"
+  sha256 "3ceb2219db6f279b2c6b1bc53a34b2ac6a919c4650143a825408ba59489e7915"
 
   url "https://github.com/rodyager/RWTS-PDFwriter/releases/download/v#{version}/RWTS-PDFwriter.pkg"
   name "RWTS PDFwriter"
