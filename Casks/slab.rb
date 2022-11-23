@@ -6,15 +6,17 @@ cask "slab" do
          intel: "a6450d2de819bb06771f14feb416d067977c17f887e4886d05df718f94f09257"
 
   url "https://slab.com/downloads/releases/Slab-darwin-#{arch}.dmg"
-  name "slab"
+  name "Slab"
   desc "Knowledge management for organizations"
   homepage "https://slab.com/"
 
   livecheck do
-    skip "No version information available"
+    url :url
+    strategy :extract_plist
   end
 
   auto_updates true
+  depends_on macos: ">= :el_capitan"
 
   app "Slab.app"
 
