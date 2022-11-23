@@ -15,7 +15,9 @@ cask "readmoreading" do
   app "Readmoo看書.app"
 
   zap trash: [
-    "~/Library/Logs/Readmoo看書",
     "~/Library/Application Support/Readmoo看書",
+    "~/Library/Logs/Readmoo看書",
+    "~/Library/Preferences/com.readmoo.electron.plist",
+    "~/Library/Saved Application State/com.readmoo.electron.savedState",
   ]
 end
