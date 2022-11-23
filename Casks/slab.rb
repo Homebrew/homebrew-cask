@@ -11,8 +11,7 @@ cask "slab" do
   homepage "https://slab.com/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://github.com/slab/desktop-releases/"
   end
 
   auto_updates true
