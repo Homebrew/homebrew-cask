@@ -1,6 +1,6 @@
 cask "emby-server" do
-  version "4.7.9.0"
-  sha256 "562028520eb9a9f0f155bdbef073e4b8f9f48abc77103483422882a95a848bcc"
+  version "4.7.10.0"
+  sha256 "2c6d6832bc78cceb00ffdddca94cf06fee500bb5c32b45e54a8a1a18709380c0"
 
   url "https://github.com/MediaBrowser/Emby.Releases/releases/download/#{version}/embyserver-osx-x64-#{version}.zip",
       verified: "github.com/MediaBrowser/Emby.Releases/"
