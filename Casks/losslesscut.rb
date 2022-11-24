@@ -1,5 +1,5 @@
 cask "losslesscut" do
-  arch arm: "arm64", intel: "x86"
+  arch arm: "arm64", intel: "x64"
 
   version "3.48.2"
   sha256 arm:   "f76ec249cce014971b0499b67185ee705462764180b5ca30a0b3259b619369f7",
