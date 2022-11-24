@@ -15,4 +15,12 @@ cask "typeface" do
   depends_on macos: ">= :sierra"
 
   app "Typeface.app"
+
+  uninstall quit: "com.criminalbird.typeface.standalone"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.criminalbird.typeface.standalone",
+    "~/Library/Containers/com.criminalbird.typeface.standalone",
+    "~/Library/Preferences/com.criminalbird.typeface.standalone.plist",
+  ]
 end
