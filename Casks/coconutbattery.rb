@@ -1,6 +1,6 @@
 cask "coconutbattery" do
-  version "3.9.10,8CB62F0B"
-  sha256 "0452fbbddba4ed6b0499a94ad8ee71d8f1ad14942c96728798519869b6b222d6"
+  version "3.9.10,DD1A0568"
+  sha256 "bd7ef81a37ea569d952e903ddb42b67bc830c68d5b22326f0021e3d12ebeab25"
 
   url "https://www.coconut-flavour.com/downloads/coconutBattery_#{version.csv.first.no_dots}_#{version.csv.second}.zip"
   name "coconutBattery"
