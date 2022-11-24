@@ -1,6 +1,6 @@
 cask "pushplaylabs-sidekick" do
-  version "1.0.68"
-  sha256 "5ba0c905bbd9676c2fa712b4a0143af600c8339d4d296e8a2454df14c3109978"
+  version "1.0.69"
+  sha256 "62a586b4be51dc667ee3221eae59abe3a38c7fc6bcbc21a6c149f59c36e3a907"
 
   url "https://fast-cdn.meetsidekick.com/builds/sidekick-mac-installer-#{version}.pkg"
   name "Sidekick"
