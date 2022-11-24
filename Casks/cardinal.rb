@@ -1,6 +1,6 @@
 cask "cardinal" do
-  version "22.07"
-  sha256 "2d9207193a82bdcd0c237f667579d86db44664d96cabac98687e901d3485f0e6"
+  version "22.10"
+  sha256 "8124eed0df57a16e7bce51412f111f14b668882102047cdb619717c52cacbf87"
 
   url "https://github.com/DISTRHO/Cardinal/releases/download/#{version}/Cardinal-macOS-universal-#{version}.pkg"
   name "Cardinal"
@@ -11,8 +11,11 @@ cask "cardinal" do
 
   uninstall pkgutil: [
     "studio.kx.distrho.cardinal.resources",
+    "studio.kx.distrho.plugins.cardinal.clapbundles",
     "studio.kx.distrho.plugins.cardinal.components",
+    "studio.kx.distrho.plugins.cardinal.jack",
     "studio.kx.distrho.plugins.cardinal.lv2bundles",
+    "studio.kx.distrho.plugins.cardinal.native",
     "studio.kx.distrho.plugins.cardinal.vst2bundles",
     "studio.kx.distrho.plugins.cardinal.vst3bundles",
   ]

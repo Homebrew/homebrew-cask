@@ -1,6 +1,6 @@
 cask "mmhmm" do
-  version "2.3.2,1657772000"
-  sha256 "6406870a1cc08046c0e69220b37f390f535c32b7041d3544ac37a6127a5fd734"
+  version "2.3.3,1661402000"
+  sha256 "81b4cf7d1de85172ea0bfd9be41ed4990ca98c5de713c5e73b99bb4bd7fabf77"
 
   url "https://updates.mmhmm.app/mac/production/mmhmm_#{version.csv.first}.zip"
   name "mmhmm"

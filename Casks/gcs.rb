@@ -1,8 +1,11 @@
 cask "gcs" do
-  version "4.37.1"
-  sha256 "5bf8c91a4315b3b0893aa9b70c6f0a46cbffbe20430fb0325ac1ba8501ea5308"
+  arch arm: "apple", intel: "intel"
 
-  url "https://github.com/richardwilkes/gcs/releases/download/v#{version}/GCS-#{version}.dmg",
+  version "5.4.0"
+  sha256 arm:   "12dba13b5defad59d27ab73ed9718a1763d7a284f3f68afb6e9dabdfa6ed6f15",
+         intel: "fe2bac648129948afa245aeca27104f2e55e8c316cfbce586251ed564d8b873c"
+
+  url "https://github.com/richardwilkes/gcs/releases/download/v#{version}/gcs-#{version}-macos-#{arch}.dmg",
       verified: "github.com/richardwilkes/gcs/"
   name "gcs"
   desc "Character sheet editor for the GURPS Fourth Edition roleplaying game"

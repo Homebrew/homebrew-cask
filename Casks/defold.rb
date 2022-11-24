@@ -1,12 +1,20 @@
 cask "defold" do
-  version "1.3.4"
-  sha256 "5a22302ab5aabd61d3023b188242a9c3464f72aefeff555a6a0ec3ca9de755ba"
+  version "1.4.0"
+  sha256 "be0d302426ed6219a320b6d7e4ec0b3a7158fe95b89fb1f8f693b15fdf447c9a"
 
-  url "https://github.com/defold/defold/releases/download/#{version}/Defold-x86_64-darwin.dmg",
+  url "https://github.com/defold/defold/releases/download/#{version}/Defold-x86_64-macos.dmg",
       verified: "github.com/defold/defold/"
   name "Defold"
   desc "Game engine for development of desktop, mobile and web games"
   homepage "https://defold.com/"
+
+  # Alpha releases are labeled as "pre-release" but beta releases aren't, so we
+  # can't use the `GithubLatest` strategy here.
+  livecheck do
+    url "https://github.com/defold/defold/releases?q=prerelease%3Afalse"
+    regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)+)["' >]}i)
+    strategy :page_match
+  end
 
   auto_updates true
   conflicts_with cask: [

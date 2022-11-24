@@ -1,6 +1,6 @@
 cask "metaimage" do
-  version "2.0.10,f2797a39-8b55-4822-95f3-db85220ea3a7"
-  sha256 "b7f9cc972470185f3f135a6d190faabddedf3f6264e09608be8dbc0593cdcf73"
+  version "2.2.0,acede811-999b-4380-9844-a7093c6a3b8e"
+  sha256 "46ed6c74ab08907078f6c4f27de7cf837ac97a299e96d5334181567e8ffb2a4a"
 
   url "https://neededapps.nyc3.digitaloceanspaces.com/media/public/#{version.csv.second}.zip",
       verified: "neededapps.nyc3.digitaloceanspaces.com/media/public/"
@@ -19,7 +19,7 @@ cask "metaimage" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :big_sur"
 
   app "MetaImage.app"
 

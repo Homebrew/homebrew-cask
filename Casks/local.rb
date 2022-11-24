@@ -1,8 +1,11 @@
 cask "local" do
-  version "6.4.2,6012"
-  sha256 "bf45931af4bcced57c4aac81f916fb6466ee5fc5ff33788ae70b81c53ae052aa"
+  arch arm: "mac-arm64", intel: "mac"
 
-  url "https://cdn.localwp.com/releases-stable/#{version.csv.first}+#{version.csv.second}/local-#{version.csv.first}-mac.dmg"
+  version "6.5.2,6204"
+  sha256  arm:   "1d4ca4aba5368807e9c35bf676c2463a464aebec348d89e49b37f217c0c51c56",
+          intel: "9e3a3a2646ac5f0ea18827be402387f4c2c78e3b94a9c7ed19d78f3bb2d2a29c"
+
+  url "https://cdn.localwp.com/releases-stable/#{version.csv.first}+#{version.csv.second}/local-#{version.csv.first}-#{arch}.dmg"
   name "Local"
   desc "WordPress local development tool by Flywheel"
   homepage "https://localwp.com/"

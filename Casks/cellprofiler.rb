@@ -1,6 +1,6 @@
 cask "cellprofiler" do
   version "4.2.4"
-  sha256 "09661c3318496c0e6c3e61450f67d311e24866a861effa344a8462772977e19b"
+  sha256 "de2e186f34a0425dfd710c077bb73a4c9f1036c336cdf2d37656ebf9f1a81ecf"
 
   url "https://github.com/CellProfiler/CellProfiler/releases/download/v#{version}/CellProfiler-macOS-#{version}.zip",
       verified: "github.com/CellProfiler/CellProfiler/"

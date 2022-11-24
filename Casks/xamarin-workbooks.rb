@@ -13,4 +13,8 @@ cask "xamarin-workbooks" do
   pkg "XamarinInteractive-#{version}.pkg"
 
   uninstall pkgutil: "com.xamarin.Inspector"
+
+  caveats do
+    discontinued
+  end
 end

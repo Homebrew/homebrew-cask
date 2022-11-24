@@ -1,16 +1,11 @@
 cask "pycharm" do
   arch arm: "-aarch64"
 
-  version "2022.2,222.3345.131"
+  version "2022.2.4,222.4459.20"
+  sha256 arm:   "34967ce10f511ab37e1015e0f88f225bf6c2b513c8bea1310bb791030df02110",
+         intel: "92f0d58caed295aa87d31d6f724d5cc82b9524ecbe6f1015e6e2ef31de0a28b5"
 
   url "https://download.jetbrains.com/python/pycharm-professional-#{version.csv.first}#{arch}.dmg"
-  on_intel do
-    sha256 "606b373498b47682941ddf06493161685f33f51bf2b9a405b3535d2b3f99853f"
-  end
-  on_arm do
-    sha256 "6a75dcbc0976d995ebb55ede81bd7ebab4fc97bac3259f21d7314744a5ff794d"
-  end
-
   name "PyCharm"
   name "PyCharm Professional"
   desc "IDE for professional Python development"

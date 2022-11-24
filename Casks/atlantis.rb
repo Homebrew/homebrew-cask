@@ -1,6 +1,6 @@
 cask "atlantis" do
-  version "0.9.9.7"
-  sha256 "64a5066991c50c32426e539d10b4bc89db5af435bd86fedf7938d4a19907fe76"
+  version "0.9.9.8"
+  sha256 "bdd3f69c3ac2071757f31fec0d7a18c45539018e85b6dbb4babbdc8ecfcddc33"
 
   url "https://www.riverdark.net/atlantis/downloads/Atlantis-#{version}.zip"
   name "Atlantis"

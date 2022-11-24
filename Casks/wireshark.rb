@@ -2,14 +2,9 @@ cask "wireshark" do
   arch arm: "Arm", intel: "Intel"
   livecheck_arch = on_arch_conditional arm: "arm", intel: "x86-"
 
-  version "3.6.7"
-
-  on_intel do
-    sha256 "930fd418cf4b966b1299ceacd888ebd0705cf44269027cf375acc94cb7af49e8"
-  end
-  on_arm do
-    sha256 "ccf2511b3c55ce845b477a975908add1511addb309599eb50f40003a3f6eb8aa"
-  end
+  version "4.0.1"
+  sha256 arm:   "0a751a5780d76bacd10ffebaa8a3984fdf9d6a5773b68b7ff002eea189506c62",
+         intel: "ebcd964f791b59734559ba3859cd58ba354d36d51d59f13fda710197f057355b"
 
   url "https://2.na.dl.wireshark.org/osx/Wireshark%20#{version}%20#{arch}%2064.dmg"
   name "Wireshark"
@@ -24,7 +19,7 @@ cask "wireshark" do
   auto_updates true
   conflicts_with cask:    "wireshark-chmodbpf",
                  formula: "wireshark"
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   app "Wireshark.app"
   pkg "Add Wireshark to the system path.pkg"

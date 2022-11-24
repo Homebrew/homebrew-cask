@@ -1,13 +1,13 @@
 cask "fmail2" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
-  version "1.1.1,17"
-  sha256 "c1783a96349848845ecc80b538c9515d700da6cd3d2631a75ca7f8f9ac59693e"
+  version "1.3.3,34"
+  sha256 "970dedb7e5d763f3587bbd23d8acf5c1dec74337b1e8d8b998e84ceb8bc68120"
 
   url "https://arievanboxel.fr/fmail2/sparkle/FMail2_#{version.csv.first.no_dots}.zip",
       verified: "arievanboxel.fr"
   name "fmail2"
   desc "Unofficial 'light' native application for Fastmail"
-  homepage "https://fmail-app.fr/tabs/main.html"
+  homepage "https://fmail-app.fr/"
 
   livecheck do
     url "https://arievanboxel.fr/fmail2/sparkle/appcast.xml"

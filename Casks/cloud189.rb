@@ -9,7 +9,8 @@ cask "cloud189" do
   homepage "https://cloud.189.cn/web/static/download-client/index.html"
 
   livecheck do
-    skip "No version information available"
+    url :url
+    strategy :extract_plist
   end
 
   app "天翼云盘.app"

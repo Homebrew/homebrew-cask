@@ -2,13 +2,8 @@ cask "deltawalker" do
   arch arm: "aarch64", intel: "x64"
 
   version "2.6.4"
-
-  on_intel do
-    sha256 "8d508521c98c4dec3a7affe1190e4911818032ffc82a17a7fb4a64b0a097246f"
-  end
-  on_arm do
-    sha256 "f92abbf7b971a7e1d986fe0991e26daa3121449f428f380af89fe06eaa7cccea"
-  end
+  sha256 arm:   "f92abbf7b971a7e1d986fe0991e26daa3121449f428f380af89fe06eaa7cccea",
+         intel: "8d508521c98c4dec3a7affe1190e4911818032ffc82a17a7fb4a64b0a097246f"
 
   url "https://deltawalker.s3.amazonaws.com/DeltaWalker-#{version}_#{arch}.dmg",
       verified: "deltawalker.s3.amazonaws.com/"

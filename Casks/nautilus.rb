@@ -4,11 +4,11 @@ cask "nautilus" do
 
   url "https://nautilusdev.com/release/Nautilus-#{version}.dmg"
   name "Nautilus"
+  desc "Docker Compose charting tool"
   homepage "https://nautilusdev.com/"
 
   livecheck do
-    url "https://github.com/oslabs-beta/nautilus"
-    strategy :git
+    url "https://github.com/open-source-labs/nautilus"
   end
 
   app "Nautilus.app"

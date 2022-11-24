@@ -1,6 +1,6 @@
 cask "fbreader" do
   version "1.999.16"
-  sha256 "a2c1bdb5b39452cbd1d241639c34d8f4384363e41a34ae90539e839b1423a9c9"
+  sha256 "4f487bc18f8171e5b6a7af915834acb3d177b53640aa243a5f468ce89ac95513"
 
   url "https://fbreader.org/static/packages/macos/FBReader-#{version}.dmg"
   name "FBReader"

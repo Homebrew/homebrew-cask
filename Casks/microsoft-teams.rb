@@ -1,6 +1,6 @@
 cask "microsoft-teams" do
-  version "1.5.00.17261"
-  sha256 "5ca56404d36418bb40cb3b9fdb8f2c8286268009bd99e72d4fe555dd0bda3ab8"
+  version "1.5.00.31156"
+  sha256 "43aa75079e86d6a6ef7a1b92d7963e0e8c61a31bbfd7bbca695837aade4f4518"
 
   url "https://statics.teams.cdn.office.net/production-osx/#{version}/Teams_osx.pkg",
       verified: "statics.teams.cdn.office.net/production-osx/"
@@ -8,6 +8,16 @@ cask "microsoft-teams" do
   desc "Meet, chat, call, and collaborate in just one place"
   homepage "https://teams.microsoft.com/downloads"
 
+  # Microsoft releases multiple versions and builds of Teams, as listed here:
+  #   https://raw.githubusercontent.com/ItzLevvie/MicrosoftTeams-msinternal/master/defconfig
+  # and here:
+  #   https://raw.githubusercontent.com/ItzLevvie/MicrosoftTeams-msinternal/master/defconfig2
+  #
+  # We only track the "production build"/"Public (R4) build" version,
+  # which agrees with the version reported by `livecheck`.
+  #
+  # Any pull request that updates this Cask to a version that
+  # differs from the `livecheck` version will be closed.
   livecheck do
     url "https://aka.ms/teamsmac"
     strategy :header_match

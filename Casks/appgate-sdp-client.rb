@@ -3,8 +3,8 @@ cask "appgate-sdp-client" do
     version "5.3.3"
     sha256 "935c87fcec29c6c7ab28ced0b3da8bb98db7f6b51303c3d651c53b14fc17fcbd"
   else
-    version "6.0.1"
-    sha256 "34f9308b099d03de611411741d9ead2e57d3cc1eca7f15c3aeff69ab2c783095"
+    version "6.0.3"
+    sha256 "ff8f7f3f2f934d935ec3353ab8ca544e8b0a2ccd3a608bc16fe3f5ed8b935bf9"
 
     livecheck do
       url :homepage

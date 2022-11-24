@@ -1,6 +1,6 @@
 cask "iina" do
-  version "1.3.0"
-  sha256 "b50c416828005e1eec0dc8066c961efcc389e6be1a5a595541ea62d48d31a391"
+  version "1.3.1"
+  sha256 "c646642a2884cb0516922170e0f6d4990b12b41d6244b08d53f318dbb9518c2f"
 
   url "https://github.com/iina/iina/releases/download/v#{version}/IINA.v#{version}.dmg",
       verified: "github.com/iina/iina/"
@@ -27,10 +27,12 @@ cask "iina" do
     "~/Library/Caches/com.colliderli.iina",
     "~/Library/Containers/com.colliderli.iina.OpenInIINA",
     "~/Library/Cookies/com.colliderli.iina.binarycookies",
+    "~/Library/HTTPStorages/com.colliderli.iina",
     "~/Library/Logs/com.colliderli.iina",
     "~/Library/Logs/DiagnosticReports/IINA*.crash",
     "~/Library/Preferences/com.colliderli.iina.plist",
     "~/Library/Safari/Extensions/Open in IINA*.safariextz",
     "~/Library/Saved Application State/com.colliderli.iina.savedState",
+    "~/Library/WebKit/com.colliderli.iina",
   ]
 end

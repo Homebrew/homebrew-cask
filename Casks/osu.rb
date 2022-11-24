@@ -1,14 +1,9 @@
 cask "osu" do
   arch arm: "Apple.Silicon", intel: "Intel"
 
-  version "2022.810.2"
-
-  on_intel do
-    sha256 "eafa5b429bafb893d3279f57485d8fd88f0c8bc46e0c253e8484c6fabb41f595"
-  end
-  on_arm do
-    sha256 "65331f11cfbb220ab6b7f3baf99df02e749beaa971a76c4b93238936e98dbeec"
-  end
+  version "2022.1123.0"
+  sha256 arm:   "ba09f5e12e1d112b1780f4d61eccc531ecaf62c05393a6797dc6fa6e2f8ad861",
+         intel: "798e4c7e03c671fdd70e4620549650e26c13e99061d36d2899e2812b532be10b"
 
   url "https://github.com/ppy/osu/releases/download/#{version}/osu.app.#{arch}.zip"
   name "osu!"
@@ -17,7 +12,7 @@ cask "osu" do
 
   livecheck do
     url :url
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    strategy :github_latest
   end
 
   depends_on macos: ">= :sierra"

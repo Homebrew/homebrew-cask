@@ -1,6 +1,6 @@
 cask "nym-wallet" do
-  version "1.0.7"
-  sha256 "564a23de42a5e9d0c0bc7863b1b4b6607fb812d15eeb92b179f8a4b7e6ce7992"
+  version "1.1.0"
+  sha256 "1d928573788bf9b851b31476150cb7747e5e964fed4825976cb22d961608a9f8"
 
   url "https://github.com/nymtech/nym/releases/download/nym-wallet-v#{version}/nym-wallet_#{version}_x64.dmg",
       verified: "github.com/nymtech/nym/"
@@ -9,9 +9,9 @@ cask "nym-wallet" do
   homepage "https://nymtech.net/"
 
   livecheck do
-    url :url
+    url "https://github.com/nymtech/nym/releases?q=prerelease%3Afalse"
     regex(/href=.*?nym-wallet[._-]v?(\d+(?:\.\d+)+).*?\.dmg/i)
-    strategy :github_latest
+    strategy :page_match
   end
 
   depends_on macos: ">= :big_sur"

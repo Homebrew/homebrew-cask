@@ -1,6 +1,8 @@
 cask "openvpn-connect" do
-  version "3.3.6,4368"
-  sha256 "58fe9415e1efa72f55a079c5d89354ade132313107655ceaa3541121c1b3c432"
+  arch arm: "arm64", intel: "x86_64"
+
+  version "3.4.0,4506"
+  sha256 "1ac8104eb5d0dcd9e8c0490f6c3e30c8fc5645e640b4c3ec32cf4c2e506f7896"
 
   url "https://swupdate.openvpn.net/downloads/connect/openvpn-connect-#{version.csv.first}.#{version.csv.second}_signed.dmg"
   name "OpenVPN Connect client"
@@ -17,7 +19,7 @@ cask "openvpn-connect" do
     end
   end
 
-  pkg "OpenVPN_Connect_#{version.csv.first.dots_to_underscores}(#{version.csv.second})_Installer_signed.pkg"
+  pkg "OpenVPN_Connect_#{version.csv.first.dots_to_underscores}(#{version.csv.second})_#{arch}_Installer_signed.pkg"
 
   uninstall quit:       "org.openvpn.client.app",
             launchctl:  [

@@ -1,6 +1,6 @@
 cask "usenapp" do
-  version "1.22,358"
-  sha256 "cb5112ee26aa55394a8e40fa79b459fbef0610dd5a9d58743a4113e0ef012953"
+  version "1.24.1,363"
+  sha256 "9bae7ecee0134cd2213b3e4a8dc81a922effaf77d956f08735713db89865946e"
 
   url "https://www.usenapp.com/download/Usenapp-#{version.csv.first}.dmg"
   name "Usenapp"
@@ -12,7 +12,7 @@ cask "usenapp" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :high_sierra"
 
   app "Usenapp.app"
 

@@ -1,6 +1,6 @@
 cask "iqmol" do
-  version "2.15.3"
-  sha256 "e554f4effa035f70fde6fc3914ce2af89e84c88cb7308066c3d0869fb75b1011"
+  version "3.0.1"
+  sha256 "65f7eae2e62cdd597c99ef90d185590d75c789850491afebd12c8ea344bd51a1"
 
   url "http://iqmol.org/downloads/IQmol-#{version}.dmg"
   name "IQmol"

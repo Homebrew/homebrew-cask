@@ -1,32 +1,23 @@
 cask "pushplaylabs-sidekick" do
-  arch arm: "arm64", intel: "x64"
-  livecheck_folder = on_arch_conditional arm: "macm1", intel: "mac"
+  version "1.0.69"
+  sha256 "62a586b4be51dc667ee3221eae59abe3a38c7fc6bcbc21a6c149f59c36e3a907"
 
-  on_intel do
-    version "102.25.1.21533,3ac4758"
-    sha256 "fa48db88e50cd31f06ae87f076b5bd961c50372e0582bda88f971a33cdf4b3e5"
-  end
-  on_arm do
-    version "102.25.1.21535,be38449"
-    sha256 "5342d32ce047096842215c0cb4cdbbc1d91fc342b9805160d0ee07450967330c"
-  end
-
-  url "https://fast-cdn.meetsidekick.com/builds/sidekick-mac-release-#{arch}-#{version.csv.first}-#{version.csv.second}-df.dmg"
+  url "https://fast-cdn.meetsidekick.com/builds/sidekick-mac-installer-#{version}.pkg"
   name "Sidekick"
   desc "Browser designed for modern work"
   homepage "https://www.meetsidekick.com/"
 
   livecheck do
-    url "https://api.meetsidekick.com/downloads/df/#{livecheck_folder}"
-    strategy :header_match do |headers|
-      match = headers["location"].match(/[_-](\d+(?:\.\d+)+)[_-](.+)[._-](?:default|df)\.dmg/i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
-    end
+    url "https://api.meetsidekick.com/downloads/df/mac"
+    regex(/(\d+(?:\.\d+)+)\.pkg/i)
+    strategy :header_match
   end
 
-  app "Sidekick.app"
+  pkg "sidekick-mac-installer-#{version}.pkg"
+
+  uninstall delete:  "/Applications/Sidekick.app",
+            pkgutil: "org.Sidekick.#{version}",
+            quit:    "com.pushplaylabs.sidekick"
 
   zap trash: [
     "~/Library/Application Support/Sidekick",

@@ -1,5 +1,5 @@
 cask "photosweeper-x" do
-  version "4.5.0,4500"
+  version "4.6.0,4600"
   sha256 :no_check
 
   url "https://overmacs.com/downloads/PhotoSweeper_X.dmg"

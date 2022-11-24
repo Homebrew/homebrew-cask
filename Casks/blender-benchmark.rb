@@ -1,6 +1,6 @@
 cask "blender-benchmark" do
-  version "3.0.0,2.0"
-  sha256 "d6fd4dd6f203331661a6139a9c0d00806dda750d9aefd13670d87d4336204d08"
+  version "3.1.0,2.0"
+  sha256 "b7a77c636ac4bbb32bc5469fe8ae1429bb13a7af9cb6690094c38271de30b3bc"
 
   url "https://opendata.blender.org/cdn/BlenderBenchmark#{version.csv.second}/launcher/benchmark-launcher-#{version.csv.first}-macos.dmg"
   name "Blender Open Data Benchmark"

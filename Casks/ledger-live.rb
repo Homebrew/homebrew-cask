@@ -1,6 +1,6 @@
 cask "ledger-live" do
-  version "2.45.1"
-  sha256 "bc0247220ab10128509210099fd4f8559be30ced59d783d34a178416b5d07b8a"
+  version "2.49.2"
+  sha256 "606a7ab4e32f16f971991a362e1b5948a88d9835424e24dd115a17d28e238ae0"
 
   url "https://download.live.ledger.com/ledger-live-desktop-#{version}-mac.dmg"
   name "Ledger Live"

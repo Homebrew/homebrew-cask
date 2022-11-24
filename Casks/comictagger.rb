@@ -1,6 +1,6 @@
 cask "comictagger" do
-  version "1.4.6"
-  sha256 "71998f14c1a4d95447b7aecfcdeca6276a09df2dc442f99ba85caaedc9e065ac"
+  version "1.5.4"
+  sha256 "54aa48e325eed22c53748fd98243a045b0f2a69e3fbcca80ff05f95ca1c5eec3"
 
   url "https://github.com/davide-romanini/comictagger/releases/download/#{version}/ComicTagger-#{version}-osx-10.15.7-x86_64.app.zip"
   name "ComicTagger"

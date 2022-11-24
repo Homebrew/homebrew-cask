@@ -1,25 +1,19 @@
 cask "darktable" do
-  arch arm: "_arm64"
+  arch arm: "arm64", intel: "x86_64"
 
-  version "4.0.0"
+  version "4.0.1.1"
+  sha256 arm:   "961af68e76fb274b0451bf287a9eb243f917ef68b933d48963534bfe328a955f",
+         intel: "f4914a6c49a2e3a815c75b199d8da31a3160e179e8272e8fb1075ce48b188e65"
 
-  on_intel do
-    sha256 "addab784af18bafa303340e754c00084c126e61c3d5b93006f8e6d602f838203"
-  end
-  on_arm do
-    sha256 "5bcd8e088065bc20815022f494ca1ca0613446562843f378ad60f68ae6917cb7"
-  end
-
-  url "https://github.com/darktable-org/darktable/releases/download/release-#{version.major_minor_patch}/darktable-#{version}#{arch}.dmg",
+  url "https://github.com/darktable-org/darktable/releases/download/release-#{version.major_minor_patch}/darktable-#{version}_#{arch}.dmg",
       verified: "github.com/darktable-org/darktable/"
   name "darktable"
   desc "Photography workflow application and raw developer"
   homepage "https://www.darktable.org/"
 
   livecheck do
-    url :url
-    strategy :github_latest
-    regex(/href=.*?darktable[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    url "https://www.darktable.org/install/"
+    regex(/href=.*?darktable[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
   app "darktable.app"

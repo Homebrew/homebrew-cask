@@ -1,6 +1,6 @@
 cask "wezterm" do
-  version "20220807-113146,c2fee766"
-  sha256 "7952d9cf5ac05aea66e502a4c71d3f4836e2400f18dc8492521fe35162c2f53e"
+  version "20221119-145034,49b9839f"
+  sha256 "6b7fd6abe5ccf129584bb2f0887a83c07c3ae4aba82fbb820a7d8e092a9835d4"
 
   url "https://github.com/wez/wezterm/releases/download/#{version.csv.first}-#{version.csv.second}/WezTerm-macos-#{version.csv.first}-#{version.csv.second}.zip",
       verified: "github.com/wez/wezterm/"
@@ -10,12 +10,9 @@ cask "wezterm" do
 
   livecheck do
     url :url
-    regex(%r{href=.*?/WezTerm-macos-(\d{8}-\d{6})-([0-9a-f]+)\.zip}i)
+    regex(%r{href=["']?[^"' >]*?/tag/[^"' >]*?(\d+(?:[.-]\d+)+)-(\h+)["' >]}i)
     strategy :github_latest do |page, regex|
-      match = page.match(regex)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 

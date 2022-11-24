@@ -1,16 +1,20 @@
 cask "visual-studio" do
-  version "17.3.0.215"
-  sha256 "9b1ae2baedb7dedd934c728bbde638aa001d514e7f7e828e7de61910edf2b41f"
+  version "17.4.0.445,2d54b9b7-b1ca-46a5-b018-1e368bc5a574,ddadd52e7c6e8a15b6d7c57531bc1375"
+  sha256 "506615e0911a5cb0f388094f9a5d02910f6368c9551f84d4d078880b31095882"
 
-  url "https://download.visualstudio.microsoft.com/download/pr/698239af-0344-43ed-868e-dc936ff9107b/c52e8c47bb47adab5d6b6b64d5d888e8/visualstudioformacinstaller-#{version}.dmg"
+  url "https://download.visualstudio.microsoft.com/download/pr/#{version.csv.second}/#{version.csv.third}/visualstudioformacinstaller-#{version.csv.first}.dmg"
   name "Microsoft Visual Studio"
   desc "Integrated development environment"
   homepage "https://visualstudio.microsoft.com/vs/mac/"
 
   livecheck do
     url "https://aka.ms/vs/mac/download"
-    strategy :header_match do |headers|
-      headers["location"][%r{/visualstudioformacinstaller-(\d+(?:\.\d+)+).dmg}i, 1]
+    regex(%r{/download/pr/([^/]+)/([^/]+)/visualstudioformacinstaller-(\d+(?:\.\d+)+).dmg}i)
+    strategy :header_match do |headers, regex|
+      match = headers["location"].match(regex)
+      next if match.blank?
+
+      "#{match[3]},#{match[1]},#{match[2]}"
     end
   end
 

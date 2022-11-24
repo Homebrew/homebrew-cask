@@ -17,9 +17,12 @@ cask "maintenance" do
   elsif MacOS.version <= :big_sur
     version "2.8.2"
     sha256 "e5f35a36eb1fcf46d599719c8ae2123e232f64b23a7741aaa4bf9ca3c78b76f9"
+  elsif MacOS.version <= :monterey
+    version "2.9.2"
+    sha256 "04a6d9ff584cc7abbffdfa15730de58e1fc18dd76ffc05a099776ae3c56d4c18"
   else
-    version "2.9.0"
-    sha256 "9ccf0da8469b5c26f7ed26ef7450790b611f237b61e92ac4b5c8b1b047184330"
+    version "2.9.6"
+    sha256 "2db89537db2cd26512642a100ced953e152f217ab70351536941928f550a7442"
   end
 
   url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete(".")}/Maintenance.dmg"
@@ -32,8 +35,8 @@ cask "maintenance" do
     regex(/>\s*Maintenance\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s.-]*\s+#{MacOS.version}\s*</i)
   end
 
-  # Unusual case: The software may stop working, or may be dangerous to run, on the latest macOS release.
-  depends_on macos: "<= :monterey"
+  # This software has releases for specific versions of macOS. Running a version for a different OS is dangerous.
+  depends_on macos: "<= :ventura"
 
   app "Maintenance.app"
 end

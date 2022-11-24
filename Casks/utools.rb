@@ -1,14 +1,9 @@
 cask "utools" do
   arch arm: "-arm64"
 
-  version "3.0.1"
-
-  on_intel do
-    sha256 "8a062e029b4d8222a344ed044029d474b00cc2e0ff3643f6103eb6c49735e17e"
-  end
-  on_arm do
-    sha256 "eb5a92efcc2d0eb634922d41337c416d0b9b4f81b50689cc71e777a5b7c5fb08"
-  end
+  version "3.1.0"
+  sha256 arm:   "f6a1d4f52ea1c7c1621c85c3fd89e5f1c5ba954073a24784e52ec5df6e8fac54",
+         intel: "2d73cfb1a5b06758beffa1ade9ced5d6d4feb9ea03916726927dd0f5e484cbfa"
 
   url "https://publish.u-tools.cn/version2/uTools-#{version}#{arch}.dmg",
       verified: "publish.u-tools.cn/"
@@ -20,8 +15,6 @@ cask "utools" do
     url :homepage
     regex(/uTools[._-]v?(\d+(?:\.\d+)*)\.dmg/i)
   end
-
-  auto_updates true
 
   app "uTools.app"
 

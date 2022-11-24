@@ -1,6 +1,6 @@
 cask "versions" do
-  version "2.4.1,2032"
-  sha256 "75521751729563a8df7105fb45763575312fda7c2143bf97a8c4016157c12bdf"
+  version "2.4.2,2033"
+  sha256 "46e99fbd02ae1bec63e33508d7cfac219868ad28ccd33f4eba2f0ac05a013699"
 
   url "https://updates.versionsapp.com/v#{version.major}/prod/Versions-#{version.csv.first}-#{version.csv.second}.zip"
   name "Versions"

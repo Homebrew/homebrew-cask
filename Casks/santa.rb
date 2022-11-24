@@ -1,11 +1,16 @@
 cask "santa" do
-  version "2022.7"
-  sha256 "97cf5122cdfa7c3b0606cb2f64322221c270795ccd1ca14d467fdb409a7c925a"
+  version "2022.10"
+  sha256 "667564da72b0515bf0dc8097465e914ee701a10024847dc6a5bc8f5c113baf52"
 
   url "https://github.com/google/santa/releases/download/#{version}/santa-#{version}.dmg"
   name "Santa"
   desc "Binary authorization system"
   homepage "https://github.com/google/santa"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   pkg "santa-#{version}.pkg"
 

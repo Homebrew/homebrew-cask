@@ -1,6 +1,6 @@
 cask "remix-ide" do
-  version "1.3.4"
-  sha256 "017f862e7dc0583a2a6f162e3842f1ab1f5d9d08499962c4d577ad1a49db5630"
+  version "1.3.5"
+  sha256 "2af7fbbbaab22e23d71ca5c555236cc1aa065626cc47feba8c2a9f7a28f0ad80"
 
   url "https://github.com/ethereum/remix-desktop/releases/download/v#{version}/Remix-IDE-#{version}.dmg",
       verified: "github.com/ethereum/remix-desktop/"

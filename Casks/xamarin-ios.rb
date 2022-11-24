@@ -1,6 +1,6 @@
 cask "xamarin-ios" do
-  version "15.12.0.2"
-  sha256 "00a102a997360728e7fad37950b73918c54de10696b979e5f90ef75a560c314d"
+  version "16.0.0.72"
+  sha256 "e077a472e0aa71611dfeaec3e6a8d64042823ea883dbd55b2b7b64bb034c0888"
 
   url "https://dl.xamarin.com/MonoTouch/Mac/xamarin.ios-#{version}.pkg"
   name "Xamarin.iOS"

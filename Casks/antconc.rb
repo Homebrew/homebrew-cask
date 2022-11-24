@@ -1,6 +1,6 @@
 cask "antconc" do
-  version "4.1.1"
-  sha256 "b49c55a156cb3a699ecd4e0e06948d0cace76d98c6aa1b8d4bec0ad70ff5f029"
+  version "4.1.4"
+  sha256 "c8f53b630e1ef4574973247b00967add2db9b77b6ab13236107e1f5c3a110bde"
 
   url "https://www.laurenceanthony.net/software/antconc/releases/AntConc#{version.no_dots}/AntConc.dmg"
   name "AntConc"

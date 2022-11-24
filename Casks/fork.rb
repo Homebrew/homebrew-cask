@@ -1,6 +1,6 @@
 cask "fork" do
-  version "2.20.2"
-  sha256 "61169ad13228cf360af0632f88de2d5615e5413e16071b003e30e91566c95590"
+  version "2.23.1"
+  sha256 "7ab62a3f2b9ffe749fcf9b107f522fecd87a8b0e1926a7b0ce29621ee521c401"
 
   url "https://cdn.fork.dev/mac/Fork-#{version}.dmg"
   name "Fork"
@@ -9,13 +9,10 @@ cask "fork" do
 
   livecheck do
     url "https://git-fork.com/update/feed.xml"
-    strategy :sparkle do |item|
-      item.url[%r{/Fork-(\d+(?:\.\d+)+)\.dmg}i, 1]
-    end
+    strategy :sparkle
   end
 
   auto_updates true
-  conflicts_with cask: "homebrew/cask-versions/fork-dev"
 
   app "Fork.app"
   binary "#{appdir}/Fork.app/Contents/Resources/fork_cli", target: "fork"

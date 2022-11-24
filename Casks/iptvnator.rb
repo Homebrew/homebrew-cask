@@ -1,6 +1,6 @@
 cask "iptvnator" do
-  version "0.10.0"
-  sha256 "9c1d719e5fdb787433181b262a5096581c5167b77156b67b7f4cfea314d90ea2"
+  version "0.11.1"
+  sha256 "f125a29d43e696b89fa875d8d29402eefc3b799aad9d3536bcea52221c48f73f"
 
   url "https://github.com/4gray/iptvnator/releases/download/v#{version}/IPTVnator-#{version}-universal.dmg"
   name "IPTVnator"
@@ -9,7 +9,7 @@ cask "iptvnator" do
 
   livecheck do
     url :url
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    strategy :github_latest
   end
 
   app "iptvnator.app"

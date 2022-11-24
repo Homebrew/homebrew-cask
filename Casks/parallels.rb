@@ -1,6 +1,6 @@
 cask "parallels" do
-  version "18.0.0-53049"
-  sha256 "3068aa0af3acbbfb0acfa24724518fe5b4f5d976279b691331d3a27e583db1eb"
+  version "18.1.0-53311"
+  sha256 "d9138f1480e8576fec315b1585c4b29f49b541530235bdfdf56cca77f728cf0b"
 
   url "https://download.parallels.com/desktop/v#{version.major}/#{version}/ParallelsDesktop-#{version}.dmg"
   name "Parallels Desktop"
@@ -19,8 +19,9 @@ cask "parallels" do
     "homebrew/cask-versions/parallels14",
     "homebrew/cask-versions/parallels15",
     "homebrew/cask-versions/parallels16",
+    "homebrew/cask-versions/parallels17",
   ]
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :mojave"
 
   app "Parallels Desktop.app"
 

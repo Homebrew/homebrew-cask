@@ -2,13 +2,8 @@ cask "gama" do
   arch arm: "_M1"
 
   version "1.8.2-RC2"
-
-  on_intel do
-    sha256 "64557bc82b5557dfde221d88f81bbba46e5ac1b66f1538561b72dd863578b6aa"
-  end
-  on_arm do
-    sha256 "d49eeb2122f171b4b0dd85777e20d1c5cd169a145bf128bdd5e5d269e21a197a"
-  end
+  sha256 arm:   "d49eeb2122f171b4b0dd85777e20d1c5cd169a145bf128bdd5e5d269e21a197a",
+         intel: "64557bc82b5557dfde221d88f81bbba46e5ac1b66f1538561b72dd863578b6aa"
 
   url "https://github.com/gama-platform/gama.resources/releases/download/#{version}/GAMA_#{version}_MacOS#{arch}.dmg",
       verified: "github.com/gama-platform/gama.resources/"

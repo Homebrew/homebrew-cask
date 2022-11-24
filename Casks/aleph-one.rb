@@ -9,9 +9,8 @@ cask "aleph-one" do
   homepage "https://alephone.lhowon.org/"
 
   livecheck do
-    url :url
-    strategy :github_latest
-    regex(%r{href=.*?/AlephOne-(\d+)-Mac\.dmg}i)
+    url :homepage
+    regex(%r{href=.*?/AlephOne[._-]v?(\d+(?:\.\d+)*)[._-]Mac\.dmg}i)
   end
 
   app "Aleph One.app"

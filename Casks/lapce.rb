@@ -1,6 +1,6 @@
 cask "lapce" do
-  version "0.1.3"
-  sha256 "edb15bcb9c8b79d0b7c52621ffdebb41a4e6df6016ebefeb2f6e1e89beec76af"
+  version "0.2.4"
+  sha256 "fd4cb9578e3c07788ff9839c7f111a6ce2c1058d99eb51bab67c77d4a012c390"
 
   url "https://github.com/lapce/lapce/releases/download/v#{version}/Lapce-macos.dmg",
       verified: "github.com/lapce/lapce/"
@@ -9,6 +9,7 @@ cask "lapce" do
   homepage "https://lapce.dev/"
 
   app "Lapce.app"
+  binary "#{appdir}/Lapce.app/Contents/MacOS/lapce"
 
   uninstall quit: "io.lapce"
 

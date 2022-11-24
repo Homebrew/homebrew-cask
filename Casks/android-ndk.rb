@@ -1,6 +1,6 @@
 cask "android-ndk" do
-  version "25"
-  sha256 "9f98307baa55edc404fe9ef772973dd557cde3223f518b2edd3cb7988ee94178"
+  version "25b"
+  sha256 "fc41bab49d4c1fe9239bfd06e4eb7cda8348635aaa3568fec942f43a9d5eb04b"
 
   url "https://dl.google.com/android/repository/android-ndk-r#{version}-darwin.dmg",
       verified: "dl.google.com/android/repository/"

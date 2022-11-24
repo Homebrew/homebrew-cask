@@ -1,6 +1,6 @@
 cask "soundtoys" do
-  version "5.3.7.16421"
-  sha256 "5f11f1c6f7d7ecaa7e988c8d34f45b7ef907d9c8165cf6072cb06a3c4a1fbe92"
+  version "5.3.8.16762"
+  sha256 "ed60fe3a9f613055b486a6c742505db0f8e80827edde5d9a8be8fd2bc8b3b13b"
 
   url "https://storage.googleapis.com/soundtoys-download/versions/version_#{version.dots_to_underscores}/Soundtoys#{version.major}_#{version}.dmg",
       verified: "https://storage.googleapis.com/soundtoys-download/"

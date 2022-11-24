@@ -1,15 +1,15 @@
 cask "qq" do
-  version "6.8.1.21222_963"
-  sha256 "cda06abb596b747a890f88dfae7489ccfa940d26f8a16a7a9993c54dd219d948"
+  version "6.8.8.6244"
+  sha256 "17ccc7389fa9b777a8302be456576b8adaa871b56dcb22a730e14a74b5b387fd"
 
-  url "https://dldir1.qq.com/qqfile/QQforMac/QQ_#{version}_EXP.dmg"
+  url "https://dldir1.qq.com/qqfile/qq/QQNT/QQ_#{version}.dmg"
   name "QQ"
   desc "Instant messaging tool"
-  homepage "https://im.qq.com/macqq/"
+  homepage "https://im.qq.com/macqq/index.shtml"
 
   livecheck do
-    url "https://im.qq.com/rainbow/"
-    regex(/QQ[._-]v?(\d+(?:[._]\d+)+)[._-]EXP\.dmg/i)
+    url "https://im.qq.com/rainbow/ntQQDownload/"
+    regex(%r{QQNT/QQ[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   auto_updates true

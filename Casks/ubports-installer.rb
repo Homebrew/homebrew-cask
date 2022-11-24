@@ -1,6 +1,6 @@
 cask "ubports-installer" do
-  version "0.9.6-beta"
-  sha256 "99a60a920617326d67f8d58c7e58d5d9e95091111d227e545ab4080faf34ced2"
+  version "0.9.7-beta"
+  sha256 "0800c9151d7abbd207404644ae4707f20d9b487586b0184952566cabc01f4dda"
 
   url "https://github.com/ubports/ubports-installer/releases/download/#{version}/ubports-installer_#{version}_mac_x64.dmg",
       verified: "github.com/ubports/ubports-installer/"

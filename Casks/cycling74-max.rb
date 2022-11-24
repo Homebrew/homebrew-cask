@@ -1,6 +1,6 @@
 cask "cycling74-max" do
-  version "8.3.1_220510"
-  sha256 "cec916bc8a48abf98c2a2a9b4af0509fe2433b9dbabe245c0fc7be69962448fb"
+  version "8.5.1_221108"
+  sha256 "1c5a61c0c9fbce084af9b60c1c030c059915797937b94b8ea9a1a82798fadd5f"
 
   url "https://akiaj5esl75o5wbdcv2a-maxmspjitter.s3.amazonaws.com/Max#{version.no_dots}.dmg",
       verified: "akiaj5esl75o5wbdcv2a-maxmspjitter.s3.amazonaws.com/"

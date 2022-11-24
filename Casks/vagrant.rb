@@ -1,6 +1,6 @@
 cask "vagrant" do
-  version "2.3.0"
-  sha256 "65a5fee8bcfa4bbd3be444efbcd997110a49f5ccc1fffc4457c0110ab51adecb"
+  version "2.3.3"
+  sha256 "3b54146c340690b5802d709825549f850673d2fb134b73e67e1fedb7cba60376"
 
   url "https://releases.hashicorp.com/vagrant/#{version}/vagrant_#{version}_darwin_amd64.dmg",
       verified: "hashicorp.com/vagrant/"

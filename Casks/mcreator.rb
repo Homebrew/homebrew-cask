@@ -1,6 +1,6 @@
 cask "mcreator" do
-  version "2022.2.33511"
-  sha256 "d390bed0341b8dc69252570818afa2fe6ed103a38bf877243c3783731b06c9b2"
+  version "2022.3.48217"
+  sha256 "441802aa0b26b19b7c55e85d6df4fef45bdb46fa8e12227771a67bccb1a523ee"
 
   url "https://github.com/MCreator/MCreator/releases/download/#{version}/MCreator.#{version.major_minor}.Mac.64bit.dmg",
       verified: "github.com/MCreator/MCreator/"
@@ -9,11 +9,8 @@ cask "mcreator" do
   homepage "https://mcreator.net/"
 
   livecheck do
-    url "https://github.com/MCreator/MCreator/releases/"
-    regex(%r{v?(\d+(?:\.\d+)+)/MCreator\.v?(\d+(?:\.\d+)+)\.Mac\.64bit\.dmg}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| match[0].to_s }
-    end
+    url "https://mcreator.net/changelog/"
+    regex(/>v?(\d+(?:\.\d+)+)</i)
   end
 
   app "MCreator.app"

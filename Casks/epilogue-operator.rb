@@ -1,5 +1,5 @@
 cask "epilogue-operator" do
-  version "0.8.2"
+  version "0.9.0"
   sha256 :no_check
 
   url "https://epilogue.nyc3.cdn.digitaloceanspaces.com/releases/software/Operator/release/mac/Operator.dmg",

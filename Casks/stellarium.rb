@@ -1,22 +1,19 @@
 cask "stellarium" do
-  arch arm: "arm64", intel: "x86_64"
+  version "1.1.1"
+  sha256 "961a5c9a0eefd06457ebc0ebf24c45dee9d9e1a51ab8fa4c6931584225381578"
 
-  version "0.22.2"
-
-  on_intel do
-    sha256 "5e8c2ee315f8c00a393e7bd22461f9b48355538cec39e1bb771e92a5795bcfb4"
-  end
-  on_arm do
-    sha256 "74acc44f96597d11d92f94015efd19cd18c2ce76e850d90f44c40d636f72ea5f"
-  end
-
-  url "https://github.com/Stellarium/stellarium/releases/download/v#{version.major_minor_patch}/Stellarium-#{version}-#{arch}.zip",
+  url "https://github.com/Stellarium/stellarium/releases/download/v#{version.major_minor}/Stellarium-#{version}-macOS.zip",
       verified: "github.com/Stellarium/stellarium/"
   name "Stellarium"
   desc "Tool to render realistic skies in real time on the screen"
   homepage "https://stellarium.org/"
 
-  depends_on macos: ">= :sierra"
+  livecheck do
+    url :homepage
+    regex(%r{href=.*?/Stellarium[._-]v?(\d+(?:\.\d+)*)[._-]macOS\.zip}i)
+  end
+
+  depends_on macos: ">= :big_sur"
 
   app "Stellarium.app"
 

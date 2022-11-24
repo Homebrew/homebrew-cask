@@ -1,6 +1,6 @@
 cask "tidgi" do
-  version "0.7.7"
-  sha256 "c0a338265d76f22ad25b1239226ea853bc364776c6438a23b513b68c49f95f5a"
+  version "0.7.11"
+  sha256 "441ae2a5a45ef42b7e7530a5cb6e5b16aec42b0bfbeb87cb4b277aa358f1a19d"
 
   url "https://github.com/tiddly-gittly/TidGi-Desktop/releases/download/v#{version}/TidGi-darwin-x64-#{version}.zip"
   name "TidGi"

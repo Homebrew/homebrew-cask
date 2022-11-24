@@ -1,16 +1,11 @@
 cask "remember-the-milk" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.3.11"
+  version "1.4.0"
+  sha256 arm:   "130c85c2261f89b59a24aac3dd81603fafe3a05ff78cc09e471292a177864632",
+         intel: "7b75faf3ef2c739ccd590bfaddba66d51333f701a1368539ebfd87b5f440d227"
 
   url "https://www.rememberthemilk.com/download/mac/RememberTheMilk-#{version}-#{arch}.zip"
-  on_intel do
-    sha256 "6bab4f70f87a95764e646788bef3449877a3938768b5a9b92ade946b348c95d2"
-  end
-  on_arm do
-    sha256 "5585a2ff3d09867c870c8255dc91e3235012f2f0dbeac3e38beeab6f0cee0f2b"
-  end
-
   name "Remember The Milk"
   desc "To-do app"
   homepage "https://www.rememberthemilk.com/"

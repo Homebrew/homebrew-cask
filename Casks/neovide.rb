@@ -1,6 +1,6 @@
 cask "neovide" do
-  version "0.10.0"
-  sha256 "9bdd79cd4729231ca2ac2a4a57f8426b61780dd0254cc0537ef972e0add8c953"
+  version "0.10.3"
+  sha256 "fa8ba98289bb36951bd6ae14a24ec4137cecec98bcb16b5776f5820ad7c85459"
 
   url "https://github.com/neovide/neovide/releases/download/#{version}/Neovide.dmg.zip"
   name "neovide"

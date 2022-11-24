@@ -1,6 +1,6 @@
 cask "mu-editor" do
-  version "1.1.1"
-  sha256 "3cb81559e97ee8813d126810fb11f981b32981d22e1767204f43b1a33f6e9f11"
+  version "1.2.0"
+  sha256 "306bef4ebfafd1dcf928bc260d5d57e64efbccb537b27f5818a9fc12437726b6"
 
   url "https://github.com/mu-editor/mu/releases/download/v#{version}/MuEditor-osx-#{version}.dmg",
       verified: "github.com/mu-editor/mu/"

@@ -1,14 +1,9 @@
 cask "rancher" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "1.5.1"
-
-  on_intel do
-    sha256 "dbfee08284312d53a0fb5fa3b7359e8ed42d13cdc553f5439f5b9db52da4a7a2"
-  end
-  on_arm do
-    sha256 "4ac3defdbdbd5a48655e7c4514692fdf248afb2d26ac7e5c5c0487b92fb4659a"
-  end
+  version "1.6.2"
+  sha256 arm:   "ad457f9195ae28a11bc069d36cc2cbdfa2d6ac304295b5fa48dbd36f25d1fbfc",
+         intel: "5891e39209d8993842e9cebdf5c34d01297d1f1c8834605f6af539e56b82dd12"
 
   url "https://github.com/rancher-sandbox/rancher-desktop/releases/download/v#{version}/Rancher.Desktop-#{version}.#{arch}.dmg",
       verified: "github.com/rancher-sandbox/rancher-desktop/"
@@ -16,10 +11,13 @@ cask "rancher" do
   desc "Kubernetes and container management on the desktop"
   homepage "https://rancherdesktop.io/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
-  conflicts_with cask: %w[
-    docker
-  ]
+  conflicts_with cask: "docker"
 
   app "Rancher Desktop.app"
 

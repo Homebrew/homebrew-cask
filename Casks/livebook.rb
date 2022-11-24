@@ -1,16 +1,8 @@
 cask "livebook" do
-  arch arm: "aarch64", intel: "x86_64"
+  version "0.7.2"
+  sha256 "65628e0583bc31b76301c50b5313440117cbe4e6290e1bf51860f01f55aa97f2"
 
-  version "0.6.3"
-
-  on_intel do
-    sha256 "a28bbdba1acba0cbc80209248a051fb57692d4e52cd57ed0eb0ebed33e180bd7"
-  end
-  on_arm do
-    sha256 "4ade56b044cd6386a50df54dc7033367cb9d72f7645bdb42bad331d806203ccf"
-  end
-
-  url "https://github.com/livebook-dev/livebook/releases/download/v#{version}/LivebookInstall-#{version}-macos-#{arch}.dmg",
+  url "https://github.com/livebook-dev/livebook/releases/download/v#{version}/LivebookInstall-v#{version}-macos-universal.dmg",
       verified: "github.com/livebook-dev/livebook"
   name "Livebook"
   desc "Code notebooks for Elixir Developers"

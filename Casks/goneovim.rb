@@ -1,6 +1,6 @@
 cask "goneovim" do
-  version "0.6.2"
-  sha256 "a43b3a83d9f67c62b8fe0d74164ad6424ce417a5a813862273c121102631ba0d"
+  version "0.6.3"
+  sha256 "458f0355d3353aab39bbc7fd17b1ea1ed55d699d79abf85b96fb6177c0d78d83"
 
   url "https://github.com/akiyosi/goneovim/releases/download/v#{version}/Goneovim-v#{version}-macos.tar.bz2"
   name "Goneovim"

@@ -2,13 +2,8 @@ cask "bandage" do
   arch arm: "aarch64", intel: "x86-64"
 
   version "0.9.0"
-
-  on_intel do
-    sha256 "26e775c638bc4da1eb3a1b6e835a3916f64d89cad04050f70ccc41f847488238"
-  end
-  on_arm do
-    sha256 "0bf30966957a5949bf40595ae05d56bb84e504ee8d25e346ccad631c4588e815"
-  end
+  sha256 arm:   "0bf30966957a5949bf40595ae05d56bb84e504ee8d25e346ccad631c4588e815",
+         intel: "26e775c638bc4da1eb3a1b6e835a3916f64d89cad04050f70ccc41f847488238"
 
   url "https://github.com/rrwick/Bandage/releases/download/v#{version}/Bandage_macOS-#{arch}_v#{version}.zip",
       verified: "github.com/rrwick/Bandage/"

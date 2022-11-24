@@ -2,13 +2,8 @@ cask "mockuuups-studio" do
   arch arm: "arm64-"
 
   version "3.7.0"
-
-  on_intel do
-    sha256 "1b5897be81511a1a8dc7fd3f19824adc3186898fae9bdaed7e1bcd3469e22dcf"
-  end
-  on_arm do
-    sha256 "deefb92a749360fc2c524c427b3c462f0220a8fa5797fe2d634a009f476a03da"
-  end
+  sha256 arm:   "deefb92a749360fc2c524c427b3c462f0220a8fa5797fe2d634a009f476a03da",
+         intel: "1b5897be81511a1a8dc7fd3f19824adc3186898fae9bdaed7e1bcd3469e22dcf"
 
   url "https://binaries.mockuuups.com/Mockuuups%20Studio-#{version}-#{arch}mac.zip",
       verified: "mockuuups.com/"

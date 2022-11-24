@@ -1,14 +1,15 @@
 cask "playcover-community" do
-  version "1.0.7"
-  sha256 "83577fb7683091e018b186ace8f9d85c50fdf7e2c4f665589f26b9e36d4b6e1f"
+  version "1.1.1"
+  sha256 "c4964d398be423618526bb2191f55aecbc23fa5233429fc0a0c6bb71255b78a8"
 
   url "https://github.com/PlayCover/PlayCover/releases/download/#{version}/PlayCover_#{version}.dmg"
   name "PlayCover"
   desc "Sideload iOS apps and games"
   homepage "https://github.com/PlayCover/PlayCover"
 
+  auto_updates true
   depends_on arch: :arm64
-  depends_on macos: :monterey
+  depends_on macos: ">= :monterey"
 
   app "PlayCover.app"
 

@@ -1,6 +1,6 @@
 cask "virtualbox" do
-  version "6.1.36,152435"
-  sha256 "f97b303b86afb799da497bf6f5d8b3510963057a39231bc5df007eed7179b085"
+  version "7.0.4,154605"
+  sha256 "3194a9beea323452b5259cb4a6212d49cfaa597bca7687d668c959f1e22a6ec9"
 
   url "https://download.virtualbox.org/virtualbox/#{version.csv.first}/VirtualBox-#{version.csv.first}-#{version.csv.second}-OSX.dmg"
   name "Oracle VirtualBox"
@@ -68,8 +68,4 @@ cask "virtualbox" do
         "~/Library/VirtualBox",
       ],
       rmdir: "~/VirtualBox VMs"
-
-  caveats do
-    kext
-  end
 end

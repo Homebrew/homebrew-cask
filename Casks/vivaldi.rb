@@ -1,10 +1,10 @@
 cask "vivaldi" do
-  version "5.4.2753.33"
-  sha256 "e4069c0916faa34124019055155f67b143eb1a07be84615079a0da2a7a335135"
+  version "5.5.2805.44"
+  sha256 "c940381713e6cacba34e83efbd95abc0ef183f39f6201e4f8d6b42087bab1398"
 
   url "https://downloads.vivaldi.com/stable/Vivaldi.#{version}.universal.dmg"
   name "Vivaldi"
-  desc "Web browser focusing on customization and control"
+  desc "Web browser with built-in email client focusing on customization and control"
   homepage "https://vivaldi.com/"
 
   livecheck do
@@ -13,7 +13,7 @@ cask "vivaldi" do
   end
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :high_sierra"
 
   app "Vivaldi.app"
 
