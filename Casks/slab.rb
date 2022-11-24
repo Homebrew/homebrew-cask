@@ -5,14 +5,11 @@ cask "slab" do
   sha256 arm:   "db5ace5e12ecf840628fa52f5632362ba8fbf853c03038c9a2ede9e5aea102d2",
          intel: "a6450d2de819bb06771f14feb416d067977c17f887e4886d05df718f94f09257"
 
-  url "https://slab.com/downloads/releases/Slab-darwin-#{arch}.dmg"
+  url "https://github.com/slab/desktop-releases/releases/download/v#{version}/Slab-#{version}-darwin-#{arch}.dmg",
+      verified: "github.com/slab/desktop-releases/"
   name "Slab"
   desc "Knowledge management for organizations"
   homepage "https://slab.com/"
-
-  livecheck do
-    url "https://github.com/slab/desktop-releases/"
-  end
 
   auto_updates true
   depends_on macos: ">= :el_capitan"
