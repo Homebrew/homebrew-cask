@@ -1,6 +1,6 @@
 cask "prince" do
-  version "14.4"
-  sha256 "42b43ce64f08b50971c7c501087a91cb3209ae85199621aaa5f82958b6ae7a1f"
+  version "15"
+  sha256 "93f76dea495e4401f1de82ee4b14f62b4ac76b4c91cdbb6b9f6c1450e5f103ae"
 
   url "https://www.princexml.com/download/prince-#{version}-macos.zip"
   name "Prince"
