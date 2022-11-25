@@ -1,9 +1,9 @@
 cask "smartgit" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "22.1.0"
-  sha256 arm:   "9ea2c33fde1193ca45f15aee0e9dd342493ded5efb02421a4aaa432847de1d11",
-         intel: "a6bbaaf0b89a2723c68c601203d7a317e23a50a2d3f311d742fc5f32679c4af2"
+  version "22.1.1"
+  sha256 arm:   "9ef88e84769a3ea696a6d18515f6ed3710f85014c3eff9fe177eae1d28e7c94b",
+         intel: "bcd01e38b81a12bb4c740728c2ba3d7988e5b9e0ef01f98aa71a18903eee8d67"
 
   url "https://www.syntevo.com/downloads/smartgit/smartgit-#{arch}-#{version.dots_to_underscores}.dmg"
 
