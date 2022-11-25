@@ -1,9 +1,9 @@
 cask "lagrange" do
   arch arm: "macos11.0-arm64", intel: "macos10.13-x86_64"
 
-  version "1.13.8"
-  sha256 arm:   "274dfdee9e2e57415540db79eff9a439e1f438dbc85ed1a05935d3eb7afc38d3",
-         intel: "514f0a6af87fefd027ab06e3174303f40ff3fb0765c7e18391e111453868fa80"
+  version "1.14.0"
+  sha256 arm:   "e8f344f1998658bf91274fe9cc1aa6dbd199dc8eca89e6272ac38c40252e3e4e",
+         intel: "e31522b14ebcb1cb0adf1c1b4656efb2348ba121a9cecbd436d05ac86ef848cb"
 
   url "https://github.com/skyjake/lagrange/releases/download/v#{version}/lagrange_v#{version}_#{arch}.tbz",
       verified: "github.com/skyjake/lagrange/"
