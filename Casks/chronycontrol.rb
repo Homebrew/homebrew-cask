@@ -12,18 +12,21 @@ cask "chronycontrol" do
     strategy :sparkle
   end
 
+  auto_updates true
+  depends_on macos: ">= :high_sierra"
+
   app "ChronyControl.app"
 
   uninstall launchctl: [
-              "org.tuxfamily.chronyd",
               "org.tuxfamily.chronyc",
+              "org.tuxfamily.chronyd",
             ],
             delete:    [
-              "/etc/chrony.d",
-              "/var/db/chrony",
-              "/Library/LaunchDaemons/org.tuxfamily.chronyd",
               "/Library/LaunchDaemons/org.tuxfamily.chronyc",
+              "/Library/LaunchDaemons/org.tuxfamily.chronyd",
+              "/var/db/chrony",
             ]
 
-  zap trash: "/var/log/chrony"
+  zap trash: ["/etc/chrony.d",
+              "/var/log/chrony"]
 end
