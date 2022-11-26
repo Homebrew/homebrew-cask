@@ -17,7 +17,7 @@ cask "ankerslicer" do
 
   depends_on macos: ">= :big_sur"
 
-  app "AnkerSlicer.app"
+  app "AnkerMake.app"
 
   zap trash: [
     "~/Library/Application Support/AnkerSlicer",
