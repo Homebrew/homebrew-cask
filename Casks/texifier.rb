@@ -8,7 +8,7 @@ cask "texifier" do
   homepage "https://www.texifier.com/mac"
 
   livecheck do
-    url "https://www.texifier.com/apps/updates/texifier/stable-appcast.xml"
+    url "https://www.texifier.com/apps/updates/texifier/appcast-stable.xml"
     strategy :sparkle do |item|
       "#{item.short_version},#{item.version},#{item.url[/_([^_]+)\.dmg/i, 1]}"
     end
