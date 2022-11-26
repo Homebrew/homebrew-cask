@@ -1,8 +1,8 @@
 cask "languagetool" do
-  version "1.0,36"
-  sha256 "f14d58e1d0a2b14fb2ad7deb2a2739d7c41f9c628d95e49087434bd458d42e61"
+  version "1.0"
+  sha256 :no_check
 
-  url "https://languagetool.org/download/mac-app/LanguageToolDesktop-#{version.csv.first}.dmg"
+  url "https://languagetool.org/download/mac-app/LanguageToolDesktop-latest.dmg"
   name "LanguageTool for Desktop"
   desc "Grammar, spelling and style suggestions in all the writing apps"
   homepage "https://languagetool.org/"
