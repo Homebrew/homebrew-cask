@@ -27,6 +27,8 @@ cask "chronycontrol" do
               "/var/db/chrony",
             ]
 
-  zap trash: ["/etc/chrony.d",
-              "/var/log/chrony"]
+  zap trash: [
+    "/etc/chrony.d",
+    "/var/log/chrony",
+  ]
 end
