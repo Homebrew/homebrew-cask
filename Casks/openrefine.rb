@@ -9,8 +9,8 @@ cask "openrefine" do
   homepage "https://openrefine.org/"
 
   livecheck do
-    url "https://openrefine.org/download.html"
-    regex(/href=.*?openrefine.*?(\d+(?:\.\d+)+).*?dmg/i)
+    url "https://github.com/OpenRefine/OpenRefine"
+    strategy :github_latest
   end
 
   app "OpenRefine.app"
