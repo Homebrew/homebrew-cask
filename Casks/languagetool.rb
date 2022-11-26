@@ -1,5 +1,5 @@
 cask "languagetool" do
-  version "1.0"
+  version "1.0,36"
   sha256 :no_check
 
   url "https://languagetool.org/download/mac-app/LanguageToolDesktop-latest.dmg"
