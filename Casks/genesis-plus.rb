@@ -1,8 +1,8 @@
 cask "genesis-plus" do
-  version "1.3.4"
-  sha256 "9217fce1f150a1a1e63d6bef73df0d8f9aecb97255b7aced61d2032ef3c7c126"
+  version "1.3.5"
+  sha256 "bb7e8afd907de697efe639ceee90043eee30a402627b99224a80dd83c852be39"
 
-  url "https://www.bannister.org/software/dlq/gplus-#{version.no_dots}.zip"
+  url "https://www.bannister.org/software/dlh/gplus-#{version.no_dots}.zip"
   name "Genesis Plus"
   desc "Sega Genesis/MegaDrive emulator"
   homepage "https://www.bannister.org/software/gplus.htm"
