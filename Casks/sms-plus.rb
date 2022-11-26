@@ -1,8 +1,8 @@
 cask "sms-plus" do
-  version "1.3.6"
-  sha256 "54133000ce64dcddffa16c6ac774f3208507b1fe77d6d190e8f3d671c26744dd"
+  version "1.3.7"
+  sha256 "f9dfd7223102cb12df8d2fd8ac0b15aab2e2f699978ff9d68974c7cbd6b33c59"
 
-  url "https://www.bannister.org/software/dlq/smsplus-#{version.no_dots}.zip"
+  url "https://www.bannister.org/software/dlh/smsplus-#{version.no_dots}.zip"
   name "SMS Plus"
   desc "Sega Master System and Game Gear emulator"
   homepage "https://www.bannister.org/software/sms.htm"
