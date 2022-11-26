@@ -17,7 +17,7 @@ cask "weektodo" do
 
   zap trash: [
     "~/Library/Application Support/WeekToDo",
-    "~/Library/Preferences/com.aone.keka.plist",
+    "~/Library/Preferences/weektodo-app.netlify.app.plist",
     "~/Library/Saved Application State/weektodo-app.netlify.app.savedState",
   ]
 end
