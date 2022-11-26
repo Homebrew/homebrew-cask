@@ -14,7 +14,7 @@ cask "jump-desktop-connect" do
 
   pkg ".jdc.sparkle_guided.pkg"
 
-  uninstall script:  {
+  uninstall script:    {
               executable: "killall",
               args:       ["JumpConnect"],
               sudo:       true,
