@@ -20,8 +20,12 @@ cask "ankerslicer" do
   app "AnkerMake.app"
 
   zap trash: [
+    "~/Library/Application Support/AnkerMake",
     "~/Library/Application Support/AnkerSlicer",
+    "~/Library/Caches/AnkerMake",
     "~/Library/Caches/AnkerSlicer",
+    "~/Library/Preferences/com.anker.pcankerwork.plist",
+    "~/Library/Preferences/com.ankermake.AnkerMake_64bit_fp.plist",
     "~/Library/Preferences/com.ankerslicer.AnkerMake_64bit_fp.plist",
   ]
 end
