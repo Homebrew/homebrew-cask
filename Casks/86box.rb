@@ -1,6 +1,6 @@
 cask "86box" do
-  version "3.7.1,4032"
-  sha256 "174b7b11c40557980ca13af8d6a35dd976e6418842416ee78598fcf84210d36e"
+  version "3.11,4311"
+  sha256 "8e9d434c0fb460a2e6ca0b40bdbbfc5191d8827764757d19bf6a1560a58cdad7"
 
   url "https://github.com/86Box/86Box/releases/download/v#{version.csv.first}/86Box-macOS-x86_64+arm64-b#{version.csv.second}.zip",
       verified: "github.com/86Box/86Box/"
