@@ -11,6 +11,11 @@ cask "openwebstart" do
   desc "Tool to run Java Web Start-based applications after the release of Java 11"
   homepage "https://openwebstart.com/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   installer script: {
     executable:   "#{staged_path}/OpenWebStart Installer.app/Contents/MacOS/JavaApplicationStub",
     args:         ["-q"],
