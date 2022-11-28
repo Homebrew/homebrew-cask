@@ -1,9 +1,9 @@
 cask "kotlin-native" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "1.7.21"
-  sha256 arm:   "f75e1a68e193b0cd9df56f15166fb4e721641b408065531b620cf204d78922e5",
-         intel: "9530cadcf05cfd6111ef35725115009283b1a0292427261b78d43853c35ccd44"
+  version "1.7.22"
+  sha256 arm:   "4ffcd76c77cc824eff8addd5e2a73da4f3bbd3584fa9ef282b3f669c45426b1e",
+         intel: "153fa411fa8c993ce2635e2504e9b102cb05362cc794b66ef9def26a78b427b5"
 
   url "https://github.com/JetBrains/kotlin/releases/download/v#{version}/kotlin-native-macos-#{arch}-#{version}.tar.gz",
       verified: "github.com/JetBrains/kotlin/"
