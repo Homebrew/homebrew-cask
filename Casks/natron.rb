@@ -1,5 +1,5 @@
 cask "natron" do
-  version "2.4.4"
+  version "2.5.0"
 
   if MacOS.version <= :mojave
     sha256 "3439b15559ef8f2e0f52aafb2973be1584922a35ec398d20a74011ec838b9bf0"
@@ -10,7 +10,7 @@ cask "natron" do
     url "https://github.com/NatronGitHub/Natron/releases/download/v#{version}/Natron-#{version}-macOS1015-x86_64.dmg",
         verified: "github.com/NatronGitHub/Natron/"
   else
-    sha256 "798fa4bbf3027070dcfcef725e218c1c1e9c7d0967055a326fae0b1bfa544e88"
+    sha256 "7a4452378914056a70ad04af9be41476f6ce428a5d7a6ddbfcc0c0195e7abdca"
     url "https://github.com/NatronGitHub/Natron/releases/download/v#{version}/Natron-#{version}-macOS12-x86_64.dmg",
         verified: "github.com/NatronGitHub/Natron/"
   end
