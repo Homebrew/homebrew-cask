@@ -3,7 +3,7 @@ cask "megxeditor" do
   sha256 "a08d3f34b26dc8d1153319af64410c770c38abc4e29ed1ebd728bf7c14121c25"
 
   url "https://www.rjmmusic.com/downloads/MEGX/MEGXEditor-#{version}.dmg"
-  name "RJ Music Mini Effect Gizmo X Editor"
+  name "RJM Music Mini Effect Gizmo X Editor"
   desc "Editor software to configure RJM mini effect gizmo X MIDI audio loop switcher"
   homepage "https://www.rjmmusic.com/"
 
