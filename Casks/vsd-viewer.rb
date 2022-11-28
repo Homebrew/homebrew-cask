@@ -1,5 +1,5 @@
 cask "vsd-viewer" do
-  version "6.15.1,556"
+  version "6.16,562"
   sha256 :no_check
 
   url "https://nektony.com/download/vsdviewer.dmg"
