@@ -13,4 +13,9 @@ cask "finch" do
   pkg "Finch-v#{version}-#{arch}.pkg"
 
   uninstall pkgutil: "org.Finch.v#{version}"
+
+  zap trash: [
+    "~/.finch",
+    "org.Finch.v0.1.0",
+  ]
 end
