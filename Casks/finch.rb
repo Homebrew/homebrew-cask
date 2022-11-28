@@ -6,15 +6,11 @@ cask "finch" do
          intel: "b2a37b7e0225018017838d34339a699f3a52df9c34b33637283ef402fcb9c55c"
 
   url "https://github.com/runfinch/finch/releases/download/v#{version}/Finch-v#{version}-#{arch}.pkg"
-  name "finch"
+  name "Finch"
   desc "Open source container development tool"
   homepage "https://github.com/runfinch/finch"
 
-  # pkg cannot be installed automatically
-  installer manual: "Finch-v#{version}-#{arch}.pkg"
+  pkg "Finch-v#{version}-#{arch}.pkg"
 
-  livecheck do
-    url :stable
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
-  end
+  uninstall pkgutil: "org.Finch.v#{version}"
 end
