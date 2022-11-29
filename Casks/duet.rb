@@ -1,7 +1,7 @@
 cask "duet" do
   if MacOS.version <= :big_sur
-    version "2.4.6.0"
-    sha256 "771bbb7fa08f38270eb0efacc553faf4bf10f558101bdf18cab3fd909cbd871b"
+    version "2.4.6.1"
+    sha256 "9ae7ce90aae986b45f359a1985fcc7fbb35c4c987728ac908c1f2dca9f543066"
     url "https://duet.nyc3.cdn.digitaloceanspaces.com/Mac/#{version.major_minor.dots_to_underscores}/duet-#{version.dots_to_hyphens}.zip",
         verified: "duet.nyc3.cdn.digitaloceanspaces.com/Mac/"
 
