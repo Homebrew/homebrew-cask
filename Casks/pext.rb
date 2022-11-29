@@ -8,5 +8,10 @@ cask "pext" do
   desc "Python-based extendable tool"
   homepage "https://pext.io/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Pext.app"
 end
