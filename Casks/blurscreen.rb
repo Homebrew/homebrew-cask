@@ -3,7 +3,7 @@ cask "blurscreen" do
   sha256 :no_check
 
   url "https://www.blurscreen.app/assets/BlurScreen-v2.pkg"
-  name "blurscreen"
+  name "BlurScreen"
   desc "Blur any part of your screen"
   homepage "https://www.blurscreen.app/"
 
@@ -19,9 +19,7 @@ cask "blurscreen" do
 
   uninstall quit:    "com.sanskar.blurscreen",
             pkgutil: "com.sanskar.blurscreen",
-            delete:  [
-              "/Applications/BlurScreen.app",
-            ]
+            delete:  "/Applications/BlurScreen.app"
 
   zap trash: [
     "~/Library/Caches/com.sanskar.blurscreen",
