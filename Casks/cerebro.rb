@@ -8,11 +8,6 @@ cask "cerebro" do
   desc "Open-source launcher"
   homepage "https://cerebroapp.vercel.app/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   app "Cerebro.app"
 
   uninstall quit: "cerebro"
