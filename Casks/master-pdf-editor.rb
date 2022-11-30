@@ -8,7 +8,7 @@ cask "master-pdf-editor" do
   homepage "https://code-industry.net/masterpdfeditor/"
 
   livecheck do
-    url :url
+    url "https://code-industry.net/public/MasterPDFEditor.dmg"
     strategy :extract_plist
   end
 
