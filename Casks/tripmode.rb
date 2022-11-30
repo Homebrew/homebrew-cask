@@ -10,11 +10,13 @@ cask "tripmode" do
       skip
     end
   else
-    version "3.1.3,1303"
-    sha256 "93a3d1fa2ba00053c144f0224fbc5054ba419a42bd0169d509e13c7a9f805727"
+    version "3.2.0,1355"
+    sha256 "0569f7954d562e259ac27bea096c312da5556393c742c6a993c3d716bf080369"
 
     url "https://tripmode-updates.ch/app/TripMode-#{version.csv.first}-#{version.csv.second}.zip",
         verified: "tripmode-updates.ch/"
+
+    depends_on macos: ">= :big_sur"
 
     livecheck do
       url "https://tripmode-updates.ch/app/appcast-v#{version.major}.xml"
