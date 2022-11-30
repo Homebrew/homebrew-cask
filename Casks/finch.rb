@@ -12,7 +12,12 @@ cask "finch" do
 
   pkg "Finch-v#{version}-#{arch}.pkg"
 
-  uninstall pkgutil: "org.Finch.v#{version}"
+  uninstall pkgutil: "org.Finch.v#{version}",
+            delete: [
+              "/opt/finch/",
+              "/private/var/run/finch-lima",
+              "/private/etc/sudoers.d/finch-lima",
+            ]
 
   zap trash: "~/.finch"
 end
