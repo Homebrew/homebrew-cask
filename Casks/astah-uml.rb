@@ -1,6 +1,6 @@
 cask "astah-uml" do
-  version "8.5.0,39c620"
-  sha256 "23e7f4bc00039a7d6abcd1fa2ce5c16afe6f13527eae0715200fb17ddb4b632b"
+  version "9.0.0,1778f1"
+  sha256 "88a44841fc0db89b6984c498cbaf9f248a0d2b0ed72c3ad5070ecbee2c20a3c2"
 
   url "https://cdn.change-vision.com/files/astah-uml-#{version.csv.first.dots_to_underscores}-#{version.csv.second}-MacOs.dmg",
       verified: "cdn.change-vision.com/files/"
@@ -21,7 +21,7 @@ cask "astah-uml" do
 
   pkg "astah uml ver #{version.csv.first.dots_to_underscores}.pkg"
 
-  uninstall pkgutil: "com.change-vision.astahuml.astahUML.pkg"
+  uninstall pkgutil: "com.change-vision.astah.uml"
 
   zap trash: "~/Library/Preferences/com.change-vision.astah.uml.plist"
 end
