@@ -16,6 +16,8 @@ cask "tripmode" do
     url "https://tripmode-updates.ch/app/TripMode-#{version.csv.first}-#{version.csv.second}.zip",
         verified: "tripmode-updates.ch/"
 
+    depends_on macos: ">= :big_sur"
+
     livecheck do
       url "https://tripmode-updates.ch/app/appcast-v#{version.major}.xml"
       strategy :sparkle
