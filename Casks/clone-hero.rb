@@ -1,8 +1,8 @@
 cask "clone-hero" do
-  version "0.23.2.2"
-  sha256 "ae8102f503596822c45a2b3c12e48e218473f1525772bbe824139ce48a23a5ea"
+  version "1.0.0.4080"
+  sha256 "7b7d170b344773ce8355a0c3274e4adc1715e7cd978e210d3c701af22df00d5c"
 
-  url "https://dl.clonehero.net/clonehero-v.#{version.sub(/^\d+\./, "")}/clonehero-mac.dmg"
+  url "https://pubdl.clonehero.net/clonehero-v#{version}-final/clonehero-mac-universal.dmg"
   name "Clone Hero"
   desc "Guitar Hero clone"
   homepage "https://clonehero.net/"
