@@ -12,6 +12,8 @@ cask "ecamm-live" do
     strategy :sparkle
   end
 
+  depends_on macos: ">= :sierra"
+
   app "Ecamm Live v#{version}/Ecamm Live.app"
 
   uninstall delete: [
