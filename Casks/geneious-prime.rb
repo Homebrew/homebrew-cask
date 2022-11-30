@@ -8,8 +8,8 @@ cask "geneious-prime" do
   homepage "https://www.geneious.com/"
 
   livecheck do
-    url "https://www.geneious.com/download/"
-    regex(/data-version="Prime\s*(\d+(?:\.\d+)+)/i)
+    url "https://assets.geneious.com/documentation/geneious/release_notes.html"
+    regex(/href="#v?(\d+(?:\.\d+)+)">/i)
   end
 
   app "Geneious Prime.app"
