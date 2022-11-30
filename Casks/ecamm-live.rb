@@ -1,5 +1,5 @@
 cask "ecamm-live" do
-  version "3.10.6"
+  version "3.10.7"
   sha256 :no_check
 
   url "https://downloads.ecamm.com/EcammLive.zip"
@@ -11,6 +11,8 @@ cask "ecamm-live" do
     url "https://www.ecamm.com/appcasts/ecammlive.xml"
     strategy :sparkle
   end
+
+  depends_on macos: ">= :sierra"
 
   app "Ecamm Live v#{version}/Ecamm Live.app"
 
