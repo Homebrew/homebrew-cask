@@ -1,6 +1,6 @@
 cask "twist" do
-  version "1.0.8"
-  sha256 "17fe52934f6e1eda80546f7a0045edc31e6555e47475cfda8c80bd6a8fdc619a"
+  version "1.0.9"
+  sha256 "a4c87eabaf7b47bc8da2b7498c2358ba9df287e0ce521b84830c4add31d66c31"
 
   url "https://downloads.twist.com/mac/Twist-#{version}.dmg"
   name "Twist"
