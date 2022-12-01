@@ -10,7 +10,7 @@ cask "keycue" do
 
   livecheck do
     url "https://www.ergonis.com/products/keycue/history.html"
-    regex(/<h\d>\s*?KeyCue\s+?v?(\d+(?:\.\d+)+)/i)
+    regex(/<h\d.*?KeyCue\sv?(\d+(?:\.\d+)+)/i)
   end
 
   app "KeyCue.app"
