@@ -1,9 +1,9 @@
 cask "burp-suite-professional" do
   arch arm: "MacOsArm64", intel: "MacOsx"
 
-  version "2022.11.2"
-  sha256 arm:   "36fedf7537ae897ac584cc86da0fc6abf59988c4923d3ea4011ca74d4943147b",
-         intel: "7473ec337588ad35f6b6845ae890306201882734ca6f34c587b6f54a99ecdb81"
+  version "2022.11.3"
+  sha256 arm:   "dab2db95eba69c85e823a61a444105bb6ed589be0e05096122d2c412fa16198b",
+         intel: "d7b8bc97920211c9b35d41d022ae1673b0a16ec9a9d02fa6f634ad87b3d0a561"
 
   url "https://portswigger.net/burp/releases/download?product=pro&version=#{version}&type=#{arch}"
   name "Burp Suite Professional"
