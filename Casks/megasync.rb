@@ -1,9 +1,8 @@
 cask "megasync" do
-  arch arm: "Arm64", intel: ""
+  arch arm: "Arm64"
 
   version "4.8.1"
-  sha256 arm:   "517204874ad554c582481eed965f3b0dd0954ca3957f1e5b62cf0f139a5e7cb7",
-         intel: "fe931e6f20afbe8c89e8953dcb8bfd77f42cc2ef7ba0c88e585946c2dbdd0fb2"
+  sha256 :no_check
 
   url "https://mega.nz/MEGAsyncSetup#{arch}.dmg"
   name "MEGAsync"
