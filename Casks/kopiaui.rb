@@ -16,9 +16,9 @@ cask "kopiaui" do
   zap trash: [
     "~/Library/Application Support/kopia",
     "~/Library/Caches/kopia",
-    "~/Library/Preferences/io.kopia.ui.plist",
     "~/Library/Logs/kopia",
     "~/Library/Logs/kopia-ui",
+    "~/Library/Preferences/io.kopia.ui.plist",
     "~/Library/Saved Application State/io.kopia.ui.savedState",
   ]
 end
