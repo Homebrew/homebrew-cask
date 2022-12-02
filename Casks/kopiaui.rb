@@ -8,7 +8,7 @@ cask "kopiaui" do
   url "https://github.com/kopia/kopia/releases/download/v#{version}/KopiaUI-#{version}#{arch}.dmg",
       verified: "github.com/kopia/kopia/"
   name "KopiaUI"
-  desc "Fast and secure open-source backup with GUI"
+  desc "Backup/restore tool"
   homepage "https://kopia.io/"
 
   app "KopiaUI.app"
