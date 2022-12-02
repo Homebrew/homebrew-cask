@@ -4,7 +4,7 @@ cask "buzz" do
 
   url "https://github.com/chidiwilliams/buzz/releases/download/v#{version}/Buzz-#{version}-mac.dmg"
   name "buzz"
-  desc "Transcribes and translates audio offline on your PC. Powered by OpenAI's Whisper"
+  desc "Transcribes and translates audio"
   homepage "https://github.com/chidiwilliams/buzz"
 
   app "Buzz.app"
