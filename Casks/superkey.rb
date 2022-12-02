@@ -4,7 +4,7 @@ cask "superkey" do
 
   url "https://superkey.app/downloads/Superkey#{version}.dmg"
   name "Superkey"
-  desc ""
+  desc "Search and click text anywhere on screen"
   homepage "https://superkey.app/"
 
   livecheck do
@@ -21,8 +21,8 @@ cask "superkey" do
 
   zap trash: [
     "~/Library/Application Scripts/com.knollsoft.SuperkeyLauncher",
-    "~/Library/Application Support/Superkey",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.knollsoft.superkeylauncher.sfl2",
+    "~/Library/Application Support/Superkey",
     "~/Library/Caches/com.knollsoft.Superkey",
     "~/Library/Containers/com.knollsoft.SuperkeyLauncher",
     "~/Library/HTTPStorages/com.knollsoft.Superkey",
