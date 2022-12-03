@@ -9,9 +9,10 @@ cask "kekaexternalhelper" do
   homepage "https://github.com/aonez/Keka/wiki/Default-application"
 
   livecheck do
-    url "https://www.keka.io/en/"
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/v?(\d+(?:\.\d+)*)/KekaExternalHelper-v?(\d+(?:\.\d+)*)\.zip}i)
+    url "https://d.keka.io/helper/"
+    regex(%r{v?(\d+(?:\.\d+)*)/KekaExternalHelper-v?(\d+(?:\.\d+)*)\.zip}i)
+    strategy :header_match do |headers, regex|
+      match = headers["location"]&.match(regex)
       next if match.blank?
 
       "#{match[2]},#{match[1]}"
