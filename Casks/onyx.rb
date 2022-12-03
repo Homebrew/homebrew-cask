@@ -18,8 +18,8 @@ cask "onyx" do
     version "4.0.2"
     sha256 "18659c76972690bb58f1c1b850ae2c6c9991fdeb9c22790daa1b18c9fa74cb8e"
   elsif MacOS.version <= :monterey
-    version "4.2.5"
-    sha256 "2bcf742aed7c19c479f424acbe9bde18d2b7fba6bd57446878f5a91831175579"
+    version "4.2.6"
+    sha256 "d4826b98de0d5437dd4d2085df54ff3ab84cc7f14fad2b382388ab2ec2b023fe"
   else
     version "4.3.2"
     sha256 "40f3686fa4fa1b0d55636ce63d4f43f43cfd6b0f84af0e5ca8adfc0f35e15858"
