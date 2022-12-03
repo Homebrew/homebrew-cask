@@ -11,8 +11,8 @@ cask "bzflag" do
   homepage "https://www.bzflag.org/"
 
   livecheck do
-    url "https://github.com/BZFlag-Dev/bzflag"
-    strategy :github_latest
+    url :homepage
+    regex(%r{Download\s(\d+(?:\.\d+)+)\sfor</.*?\n\s*macOS}i)
   end
 
   app "BZFlag-#{version}.app"
