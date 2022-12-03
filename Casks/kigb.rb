@@ -1,8 +1,8 @@
 cask "kigb" do
-  version "2.0.8"
-  sha256 "bdfe885e3621594bde4cd86a6e4161754b9a9268c956acaf5172cc75da285022"
+  version "2.0.9"
+  sha256 "d14607524b9843cb70e6818df61faa213cdaebb79ac355a52e3ab283393e9c2b"
 
-  url "https://www.bannister.org/software/dlq/kigb-#{version.no_dots}.zip"
+  url "https://www.bannister.org/software/dlh/kigb-#{version.no_dots}.zip"
   name "KiGB"
   desc "Nintendo Game Boy/Game Boy Color emulator"
   homepage "https://www.bannister.org/software/kigb.htm"

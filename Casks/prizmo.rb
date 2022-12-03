@@ -1,6 +1,6 @@
 cask "prizmo" do
-  version "4.3.1,4.277.1375"
-  sha256 "3a0b8258fdd2e36026e81dfef927f2bb12b451293cc243cc2d859670efc5a6cf"
+  version "4.4.1,4.277.1378"
+  sha256 "25ab7d5072b464afc11cd96da433ef169ba77551910ec4c4f08e3986d012f858"
 
   url "https://creaceed.s3.amazonaws.com/downloads/prizmo#{version.major}_#{version.csv.first}.zip",
       verified: "creaceed.s3.amazonaws.com/downloads/"

@@ -1,5 +1,5 @@
 cask "jump-desktop-connect" do
-  version "6.7.69,60769"
+  version "6.8.91,60891"
   sha256 :no_check
 
   url "https://mirror.jumpdesktop.com/downloads/connect/JumpDesktopConnect.dmg"
@@ -14,8 +14,11 @@ cask "jump-desktop-connect" do
 
   pkg ".jdc.sparkle_guided.pkg"
 
-  uninstall quit:      "com.p5sys.jump.connect",
-            signal:    [["QUIT", "com.p5sys.jump.connect"]],
+  uninstall script:    {
+              executable: "killall",
+              args:       ["JumpConnect"],
+              sudo:       true,
+            },
             pkgutil:   "com.p5sys.jump.connect",
             launchctl: [
               "com.p5sys.jump.connect.service",

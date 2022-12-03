@@ -1,9 +1,9 @@
 cask "jdk-mission-control" do
   arch arm: "aarch64", intel: "x64"
 
-  version "8.2.1,03"
-  sha256 arm:   "e974cdee33b762a5841af7df4b9bd7e837fe70c17ba0c4288b94d15c15303c0d",
-         intel: "0d320e08f5430ecd4389c66accaac2fdc4a33de236ddb26facf256f1bf93bca8"
+  version "8.3.0,05"
+  sha256 arm:   "0dbd05efe465c42b6b9ebdb5221c8e4e992ef23650b10a3009b7622167fc2dd7",
+         intel: "aa35042cade725c8f6490f61819c0ee24802a1d47b93a1a18fd34924d2546bb7"
 
   url "https://download.java.net/java/GA/jmc#{version.major}/#{version.csv.second}/binaries/jmc-#{version.csv.first}_osx-#{arch}.tar.gz"
   name "JDK Mission Control"

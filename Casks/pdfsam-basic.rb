@@ -8,6 +8,11 @@ cask "pdfsam-basic" do
   desc "Extracts pages, splits, merges, mixes and rotates PDF files"
   homepage "https://pdfsam.org/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "PDFsam Basic.app"
 
   zap trash: [

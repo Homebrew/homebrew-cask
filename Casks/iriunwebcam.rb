@@ -1,6 +1,6 @@
 cask "iriunwebcam" do
-  version "2.7.3"
-  sha256 "d6d4f5b0a7b5cc442a3915bb21c24f617c060ffc110c6e15541c640f90fd08d7"
+  version "2.7.4"
+  sha256 "f8d99e14d141c9c722ace426c76845713f5cd3fdafce9953686db8c979eab42d"
 
   url "https://1758658189.rsc.cdn77.org/IriunWebcam-#{version}.pkg",
       verified: "1758658189.rsc.cdn77.org/"

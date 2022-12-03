@@ -14,7 +14,10 @@ cask "transmission" do
   end
 
   auto_updates true
-  conflicts_with cask: "homebrew/cask-versions/transmission-nightly"
+  conflicts_with cask: [
+    "homebrew/cask-versions/transmission-beta",
+    "homebrew/cask-versions/transmission-nightly",
+  ]
 
   app "Transmission.app"
 

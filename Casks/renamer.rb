@@ -1,6 +1,6 @@
 cask "renamer" do
-  version "6.1.0,61000"
-  sha256 "b18ccc113060b2b8d4744feddaea793710969548bf9989e2a076dbaed485b552"
+  version "6.1.1,61006"
+  sha256 "e64a05c9d857e6745f53e55e99587b875c821540e1d5be95e0db0fa9f354cf94"
 
   url "https://storage.googleapis.com/incrediblebee/apps/Renamer-#{version.major}/Renamer-#{version.csv.first}.zip",
       verified: "storage.googleapis.com/incrediblebee/"
@@ -13,7 +13,7 @@ cask "renamer" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :big_sur"
 
   app "Renamer.app"
 

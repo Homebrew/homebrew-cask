@@ -1,6 +1,6 @@
 cask "astah-professional" do
-  version "8.5.0,39c620"
-  sha256 "84310f7c69dbc4eef2a3a8f815ba10ff919c26b8fa82fe8b3c7831d4dfb94153"
+  version "9.0.0,1778f1"
+  sha256 "7c43cc3f2ed289c0acd07035245f32e27b9535317a7abdafa9a2578245c01cd6"
 
   url "https://cdn.change-vision.com/files/astah-professional-#{version.csv.first.dots_to_underscores}-#{version.csv.second}-MacOs.dmg",
       verified: "cdn.change-vision.com/files/"
@@ -23,5 +23,5 @@ cask "astah-professional" do
 
   pkg "astah professional ver #{version.csv.first.dots_to_underscores}.pkg"
 
-  uninstall pkgutil: "com.change-vision.astahprofessional.astahprofessional.pkg"
+  uninstall pkgutil: "com.change-vision.astah.professional"
 end

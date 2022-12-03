@@ -1,6 +1,6 @@
 cask "xournal-plus-plus" do
-  version "1.1.2"
-  sha256 "04b0b8080e904ed3d17b8e6526ad5e4342befa966866e7fb347d33e0e122039a"
+  version "1.1.3"
+  sha256 "4393fa726cb1d0afb93318701ed6e4abaa0add683e4122fdaebca3c5567c346f"
 
   url "https://github.com/xournalpp/xournalpp/releases/download/v#{version}/xournalpp-#{version}-macos.zip"
   name "Xournal++"

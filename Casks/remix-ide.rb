@@ -8,6 +8,11 @@ cask "remix-ide" do
   desc "Desktop version of Remix web IDE used for Ethereum smart contract development"
   homepage "https://remix-project.org/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Remix IDE.app"
 
   zap trash: [

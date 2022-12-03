@@ -1,9 +1,9 @@
 cask "apipost" do
   arch arm: "arm64", intel: "x64"
 
-  version "7.0.7"
-  sha256 arm:   "cdb0a3a3c80fab754a7f596b5d4e74e22b00d96fc2e97d76143d43b52e96012f",
-         intel: "e252f2cc9c2ba27430e2b8166e2e3c24bc3fcea240754b4a95517770e6d66fe5"
+  version "7.0.10"
+  sha256 arm:   "d76d30ba85f54c6e441c7c0b2cd4c9cd22f90e12871041c21f4d644acc50da0b",
+         intel: "c1451aae355e398ce98a6ee41aa9af6234e0c8e885254f5c84ea835037eb13a5"
 
   url "https://www.apipost.cn/dl.php?client=Mac&arch=#{arch}&version=#{version}"
   name "Apipost"
