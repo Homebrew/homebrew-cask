@@ -8,8 +8,7 @@ cask "akiflow" do
   homepage "https://akiflow.com/"
 
   livecheck do
-    url "https://akiflow.com/releases/download"
-    strategy :header_match
+    skip "Constantly changes between download page and direct download"
   end
 
   app "Akiflow.app"
