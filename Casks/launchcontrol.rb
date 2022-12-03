@@ -1,7 +1,7 @@
 cask "launchcontrol" do
   if MacOS.version <= :catalina
     version "1.52.7,1959"
-    sha256 "1f9039a66a8ac17573c6501a59bb01e02fd78ec70eea3316bff03f87370773e5"
+    sha256 "16c3d89e41a99cbf43e6996681358e8e7a4bc63fa770b9f8c0bc72c5356a0b8a"
   else
     version "2.0.2,2309"
     sha256 "5b7114f1bd8fcb1d7c8f33f627f96044c3764c4063ee217933accf7974b1a8bb"
