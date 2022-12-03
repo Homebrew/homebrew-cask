@@ -1,6 +1,6 @@
 cask "sqlitestudio" do
-  version "3.4.0"
-  sha256 "7064c72165cd2294b12ac3050a12502529238abc05da1abb0d9022d76cbf79d4"
+  version "3.4.1"
+  sha256 "390515c168fc9392881c62ed72343bda457baab66cf9865796786b0f5642f1ad"
 
   url "https://github.com/pawelsalawa/sqlitestudio/releases/download/#{version}/SQLiteStudio-#{version}.dmg",
       verified: "github.com/pawelsalawa/sqlitestudio/releases/download/"
