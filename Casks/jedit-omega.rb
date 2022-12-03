@@ -7,14 +7,14 @@ cask "jedit-omega" do
     sha256 "03790fa4e034e9a6201e765315f1f3432a44a1896916115bbade769ad7606fbe"
   end
 
-  url "http://download.artman21.co.jp/product/JeditOmega/JeditOmega#{version.no_dots}.dmg",
-      verified: "artman21.co.jp/"
+  url "http://www.artman21.org/download/JeditOmega#{version.no_dots}.dmg",
+      verified: "artman21.org/"
   name "Jedit Ω"
   desc "Text editor"
-  homepage "http://www.artman21.com/en/jeditOmega/"
+  homepage "https://www.artman21.com/en/sparkle/jeditomega.html"
 
   livecheck do
-    url "http://www.artman21.com/en/jeditOmega/download.html"
+    url "https://www.artman21.com/en/sparkle/jedit-download.html"
     regex(/Rev[._-](\d+(?:\.\d+)+)/i)
   end
 
