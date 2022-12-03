@@ -1,8 +1,8 @@
 cask "openvpn-connect" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "3.4.0,4506"
-  sha256 "1ac8104eb5d0dcd9e8c0490f6c3e30c8fc5645e640b4c3ec32cf4c2e506f7896"
+  version "3.4.1,4522"
+  sha256 "48c97a3c7251176ee4337f2b3100e8098367ba8cacdbaf35d8538169a52c06e5"
 
   url "https://swupdate.openvpn.net/downloads/connect/openvpn-connect-#{version.csv.first}.#{version.csv.second}_signed.dmg"
   name "OpenVPN Connect client"
