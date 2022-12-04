@@ -1,6 +1,6 @@
 cask "protonmail-bridge" do
   version "2.3.0"
-  sha256 "no_check"
+  sha256 :no_check
 
   url "https://proton.me/download/bridge/Bridge-Installer.dmg"
   name "Proton Mail Bridge"
