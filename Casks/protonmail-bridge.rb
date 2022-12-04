@@ -6,7 +6,7 @@ cask "protonmail-bridge" do
       verified: "github.com/ProtonMail/proton-bridge/"
   name "Proton Mail Bridge"
   desc "Bridges Proton Mail to email clients supporting IMAP and SMTP protocols"
-  homepage "https://protonmail.com/bridge/"
+  homepage "https://proton.me/mail/bridge"
 
   livecheck do
     url :url
