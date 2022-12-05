@@ -1,17 +1,17 @@
 cask "klayout" do
-  version "0.27.12"
+  version "0.27.13"
 
   if MacOS.version <= :catalina
     macos_version_string = "Catalina"
-    sha256 "021ac2b52527fa6ce7c6f477f530e78a46fefeab91dda5ef72f89afdf668996a"
+    sha256 "25d38cba66f4009f8ed19a755ec73863721a6f2e3b2d57257f077bf71ec5beba"
 
   elsif MacOS.version <= :big_sur
     macos_version_string = "BigSur"
-    sha256 "7921206602623e18f525fd3e13176e14d465ebc88a59a4112325bdea43a48a83"
+    sha256 "d0216355390d83954611461ecd93d7cab0a819f7b0f98327b1c42d92da022fa7"
 
   else
     macos_version_string = "Monterey"
-    sha256 "cc74ae26712ad9146247bfe8e367fb4506223a3080c6eb037ee2d718baa56b8a"
+    sha256 "9326b5a1f7fe6f07f71ed6a1b3538d49c5c10184c1c57b77a527bd988a4dfb3c"
 
   end
   url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-#{macos_version_string}-1-qt5Brew-RsysPhb38.dmg",
