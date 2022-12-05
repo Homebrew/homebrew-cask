@@ -1,6 +1,6 @@
 cask "tap-forms" do
-  version "5.3.32,9nSyKAcTQqMvIKrM44JA"
-  sha256 "5f3955d9446f4b9205394afc674af8aa1e518c689a7689a3c6ef9c41cb0d2919"
+  version "5.3.33,S4MSD0zJS1m5jZtKnsd0"
+  sha256 "403492a6bbecd498a02bb1959c7539145472a61c5648553ed2d12be2f9bcddb5"
 
   url "https://paddle.s3.amazonaws.com/fulfillment_downloads/9234/503174/#{version.csv.second}_Tap%20Forms%20Install%20#{version.csv.first}.dmg",
       verified: "paddle.s3.amazonaws.com/"
