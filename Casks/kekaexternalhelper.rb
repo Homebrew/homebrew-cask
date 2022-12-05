@@ -8,15 +8,13 @@ cask "kekaexternalhelper" do
   desc "Helper application for the Keka file archiver"
   homepage "https://github.com/aonez/Keka/wiki/Default-application"
 
+  # We can identify the version from the `location` header of the first
+  # response from https://d.keka.io/helper/ but we need to be able to either not
+  # follow redirections (i.e., omit `--location` from curl args) or iterate
+  # through the headers for all responses (not the hash of merged headers,
+  # where only the last `location` header is available).
   livecheck do
-    url "https://d.keka.io/helper/"
-    regex(%r{v?(\d+(?:\.\d+)*)/KekaExternalHelper-v?(\d+(?:\.\d+)*)\.zip}i)
-    strategy :header_match do |headers, regex|
-      match = headers["location"]&.match(regex)
-      next if match.blank?
-
-      "#{match[2]},#{match[1]}"
-    end
+    skip "Cannot identify version without access to all headers"
   end
 
   app "KekaExternalHelper.app"
