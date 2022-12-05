@@ -16,9 +16,9 @@ cask "nutstore" do
   depends_on macos: ">= :el_capitan"
 
   installer script: {
-      executable: "坚果云安装程序.app/Contents/MacOS/NutstoreOnlineInstaller",
-      args:       ["-q"],
-    }
+    executable: "坚果云安装程序.app/Contents/MacOS/NutstoreOnlineInstaller",
+    args:       ["-q"],
+  }
 
   uninstall launchctl:  "net.nutstore.agent",
             quit:       [
