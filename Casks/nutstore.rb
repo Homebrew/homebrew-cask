@@ -15,7 +15,10 @@ cask "nutstore" do
   auto_updates true
   depends_on macos: ">= :el_capitan"
 
-  installer manual: "Nutstore Installer.app"
+  installer script: {
+    executable: "坚果云安装程序.app/Contents/MacOS/NutstoreOnlineInstaller",
+    args:       ["-q"],
+  }
 
   uninstall launchctl:  "net.nutstore.agent",
             quit:       [
