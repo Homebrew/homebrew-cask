@@ -1,5 +1,5 @@
 cask "kindavim" do
-  version "45.0.0"
+  version "2828.46.0"
   sha256 :no_check
 
   url "https://kindavim.app/releases/kindaVim.zip"
@@ -9,7 +9,9 @@ cask "kindavim" do
 
   livecheck do
     url "https://kindavim.app/releases/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle do |item|
+      item.version.to_s
+    end
   end
 
   depends_on macos: ">= :monterey"
