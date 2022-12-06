@@ -1,5 +1,5 @@
 cask "macrorecorder" do
-  version "2.0.81"
+  version "2.0.82"
   sha256 :no_check
 
   url "https://www.macrorecorder.com/MacroRecorderSetup.dmg"
