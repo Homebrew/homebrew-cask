@@ -15,5 +15,7 @@ cask "clash-for-windows" do
     strategy :github_latest
   end
 
+  auto_updates true
+
   app "Clash for Windows.app"
 end
