@@ -1,6 +1,6 @@
 cask "centered" do
-  version "5.5.2"
-  sha256 "b727234d395e612690ebbe17b00aa9ced535fb4e5627691f8937944a4767dc37"
+  version "5.6.0"
+  sha256 "8b503826a2efdeaf31b7001859994c043605c551918ca8546c308582f07d336f"
 
   url "https://d3ni5jxar6n4fz.cloudfront.net/Centered-#{version}-universal.dmg",
       verified: "d3ni5jxar6n4fz.cloudfront.net/"
