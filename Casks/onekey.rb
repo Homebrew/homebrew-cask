@@ -1,9 +1,9 @@
 cask "onekey" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.20.0"
-  sha256 arm:   "6139034afdfbaaa7eb7213cccdfb56d064e107c4c3a567cab22f8424177c0159",
-         intel: "2bdde85e207cd02b9a73ce24c341c0d0129f6770cc6b8363a9c43d4e3b729b8c"
+  version "3.21.0"
+  sha256 arm:   "9957ef1235289f9ddbe79b5a2bb42e81682861e3db9d4d6564864cb5b10d2f27",
+         intel: "6d5a4b2f75ed08fbf1563d84f6ea487cb28908727f4ec21725184116173fdf89"
 
   url "https://github.com/OneKeyHQ/app-monorepo/releases/download/v#{version}/OneKey-Wallet-#{version}-mac-#{arch}.dmg",
       verified: "github.com/OneKeyHQ/app-monorepo/"
