@@ -6,10 +6,10 @@ cask "macs-fan-control" do
       verified: "github.com/crystalidea/macs-fan-control/"
   name "Macs Fan Control"
   desc "Controls and monitors all fans on Apple computers"
-  homepage "https://www.crystalidea.com/macs-fan-control"
+  homepage "https://crystalidea.com/macs-fan-control"
 
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "Macs Fan Control.app"
 
