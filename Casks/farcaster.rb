@@ -15,7 +15,7 @@ cask "farcaster" do
   app "Farcaster.app"
 
   zap trash: [
-    "~/Library/Application\ Support/farcaster-client",
+    "~/Library/Application Support/farcaster-client",
     "~/Library/Preferences/org.erb.FarcasterClient.plist",
   ]
 end
