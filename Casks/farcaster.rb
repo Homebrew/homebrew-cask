@@ -9,7 +9,7 @@ cask "farcaster" do
 
   livecheck do
     url "https://s3.amazonaws.com/downloads.farcaster.xyz/latest-mac.yml"
-    stategy :electron_builder
+    strategy :electron_builder
   end
 
   app "Farcaster.app"
