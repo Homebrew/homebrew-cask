@@ -10,7 +10,7 @@ cask "qlvideo" do
   livecheck do
     url "https://api.github.com/repos/Marginal/QLVideo/releases"
     strategy :page_match do |page|
-      match = page.match(/QLVideo_(\d+?)(\d+)\.pkg/i)
+      match = page.match(/QLVideo[._-]v?(\d+?)(\d+)\.dmg/i)
       next if match.blank?
 
       "#{match[1]}.#{match[2]}"
