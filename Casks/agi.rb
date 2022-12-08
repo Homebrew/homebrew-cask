@@ -17,10 +17,5 @@ cask "agi" do
 
   app "AGI.app"
 
-  zap trash: [
-    "~/.agic",
-    "~/Library/Application Scripts/com.apple.siri.parsec.HashtagImagesApp.HashtagImagesExtension",
-    "~/Library/Containers/com.apple.siri.parsec.HashtagImagesApp.HashtagImagesExtension",
-    "~/Library/Staging",
-  ]
+  zap trash: "~/.agic"
 end
