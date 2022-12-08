@@ -8,13 +8,8 @@ cask "qlvideo" do
   homepage "https://github.com/Marginal/QLVideo"
 
   livecheck do
-    url "https://api.github.com/repos/Marginal/QLVideo/releases"
-    strategy :page_match do |page|
-      match = page.match(/QLVideo[._-]v?(\d+?)(\d+)\.dmg/i)
-      next if match.blank?
-
-      "#{match[1]}.#{match[2]}"
-    end
+    url :url
+    strategy :github_latest
   end
 
   app "QuickLook Video.app"
