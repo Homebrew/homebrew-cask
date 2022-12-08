@@ -9,7 +9,7 @@ cask "owncloud" do
 
   livecheck do
     url "https://owncloud.com/desktop-app/"
-    regex(%r{href=.*?/owncloud[._-]v?(\d+(?:\.\d+)+)-x86_64\.pkg}i)
+    regex(%r{href=.*?/owncloud[._-]v?(\d+(?:\.\d+)+)[._-]x86[._-]64\.pkg}i)
   end
 
   auto_updates true
