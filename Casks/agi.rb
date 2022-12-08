@@ -16,4 +16,11 @@ cask "agi" do
   auto_updates true
 
   app "AGI.app"
+
+  zap trash: [
+    "~/.agic",
+    "~/Library/Application Scripts/com.apple.siri.parsec.HashtagImagesApp.HashtagImagesExtension",
+    "~/Library/Containers/com.apple.siri.parsec.HashtagImagesApp.HashtagImagesExtension",
+    "~/Library/Staging",
+  ]
 end
