@@ -4,8 +4,13 @@ cask "farcaster" do
 
   url "https://downloads.farcaster.xyz/Farcaster-latest.dmg"
   name "Farcaster"
-  desc "App for Farcaster which is a sufficiently decentralized social network"
+  desc "Decentralized social network"
   homepage "https://www.farcaster.xyz/"
+
+  livecheck do
+    url "https://s3.amazonaws.com/downloads.farcaster.xyz/latest-mac.yml"
+    stategy :electron_builder
+  end
 
   app "Farcaster.app"
 end
