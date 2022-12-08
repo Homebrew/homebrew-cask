@@ -9,4 +9,3 @@ cask "farcaster" do
 
   app "Farcaster.app"
 end
-
