@@ -1,8 +1,8 @@
 cask "orange" do
-  version "3.33.0"
-  sha256 "3f6e7c91e1b490876193dae25d9460cd8337b88a943a5096e027669be4c34271"
+  version "3.34.0"
+  sha256 "d27bf04355c1791625e89b1960497d85923c04b3445d92a68e946b1755fa8259"
 
-  url "https://download.biolab.si/download/files/Orange#{version.major}-#{version}-Python3.8.8.dmg",
+  url "https://download.biolab.si/download/files/Orange#{version.major}-#{version}-Python3.9.12.dmg",
       verified: "download.biolab.si/download/"
   name "Orange"
   desc "Component-based data mining software"
