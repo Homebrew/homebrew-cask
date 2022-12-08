@@ -1,5 +1,4 @@
 cask "launchcontrol" do
-
   version "2.0.3,2310"
   sha256 "bd73e6836ba5b27df04b296d8a47df019e22e2bcc67619b11645a919c0f3dd8f"
 
@@ -13,8 +12,8 @@ cask "launchcontrol" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :big_sur"
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "LaunchControl.app"
 
