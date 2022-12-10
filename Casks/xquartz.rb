@@ -9,7 +9,7 @@ cask "xquartz" do
   homepage "https://www.xquartz.org/"
 
   livecheck do
-    url "https://www.xquartz.org/releases/sparkle/release.xml"
+    url "https://www.xquartz.org/releases/sparkle-r1/release.xml"
     strategy :sparkle do |item|
       item.short_version.delete_prefix("XQuartz-")
     end
