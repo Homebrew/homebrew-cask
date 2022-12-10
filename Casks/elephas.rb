@@ -1,16 +1,18 @@
 cask "elephas" do
-  # use_beta as a selector if beta or latest version is installed
-  use_beta = true
-
   version :latest
   sha256 :no_check
 
-  version_suffix = use_beta && "beta" || "latest"
-
-  url "https://elephas.app/downloads/Elephas_#{version_suffix}.dmg"
+  url "https://elephas.app/downloads/Elephas_#{version}.dmg"
   name "elephas"
-  desc "Personal AI Writing Assistant for Mac"
+  desc "Personal AI Writing Assistant"
   homepage "https://elephas.app/"
 
   app "Elephas.app"
+
+  zap trash: [
+    "~/Library/Application Support/Elephas",
+    "~/Library/Caches/com.kamban.elephas",
+    "~/Library/HTTPStorages/com.kamban.elephas",
+    "~/Library/Preferences/com.kamban.elephas.plist",
+  ]
 end
