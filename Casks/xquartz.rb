@@ -17,15 +17,15 @@ cask "xquartz" do
 
   auto_updates true
 
-  pkg "XQuartz.pkg"
+  pkg "XQuartz-#{version}.pkg"
 
   uninstall launchctl: "org.xquartz.privileged_startx",
             pkgutil:   "org.xquartz.X11"
 
   zap trash: [
         "~/.Xauthority",
-        "~/Library/Application Support/XQuartz",
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.xquartz.x11.sfl*",
+        "~/Library/Application Support/XQuartz",
         "~/Library/Caches/org.xquartz.X11",
         "~/Library/Cookies/org.xquartz.X11.binarycookies",
         "~/Library/Logs/X11/org.xquartz.log",
