@@ -7,12 +7,11 @@ cask "sidekick" do
   desc "Location-based settings manager"
   homepage "http://oomphalot.com/sidekick/"
 
-  livecheck do
-    url "http://updates.oomphalot.com/?app=Sidekick"
-    strategy :sparkle, &:short_version
-  end
-
   auto_updates true
 
   app "Sidekick.app"
+
+  caveats do
+    discontinued
+  end
 end
