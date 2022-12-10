@@ -7,12 +7,12 @@ cask "cursr" do
 
   url "https://github.com/bitgapp/Cursr/releases/download/v#{version}/Cursr-mac-#{arch}.dmg",
       verified: "github.com/bitgapp/Cursr/"
-  name "Cursr.app"
+  name "Cursr"
   desc "Customize mouse movements between multiple displays"
   homepage "https://cursr.app/"
 
   livecheck do
-    url "https://github.com/bitgapp/Cursr/releases"
+    url :url
     strategy :github_latest
   end
 
@@ -20,5 +20,6 @@ cask "cursr" do
 
   zap trash: [
     "~/Library/Application Support/cursr",
+    "~/Library/Preferences/com.bitgapp.cursr.plist",
   ]
 end
