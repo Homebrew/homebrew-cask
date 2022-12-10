@@ -1,5 +1,5 @@
 cask "metadatics" do
-  version "1.6.8,314"
+  version "1.6.9,315"
   sha256 :no_check
 
   url "https://www.markvapps.com/applications/metadatics/metadatics.zip"
