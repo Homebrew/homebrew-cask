@@ -15,8 +15,8 @@ cask "choosy" do
 
     pkg "Choosy.pkg"
   else
-    version "2.2.1"
-    sha256 "71fe3c3c592d449063189a575a39b1f00735ee20cf1de94552896f5f8e93bf47"
+    version "2.3"
+    sha256 "b4fd6073b43ba7ce8697c6b3f400f2abec9196e10c6488d52970ed989ddb2a76"
 
     pkg "Choosy.pkg"
   end
@@ -30,6 +30,8 @@ cask "choosy" do
     url "https://www.choosyosx.com/sparkle/feed"
     strategy :sparkle
   end
+
+  depends_on macos: ">= :big_sur"
 
   uninstall pkgutil: "com.choosyosx.Choosy",
             quit:    "com.choosyosx.Choosy"
