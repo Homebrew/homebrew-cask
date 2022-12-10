@@ -9,9 +9,7 @@ cask "qwerty-fr" do
   homepage "https://qwerty-fr.org/"
 
   livecheck do
-    url "https://github.com/qwerty-fr/qwerty-fr/releases/"
-    regex(%r{v?(\d+(?:\.\d+)+)/qwerty-fr.*?mac\.zip}i)
-    strategy :page_match
+    skip "No reliable way to get version info"
   end
 
   depends_on macos: ">= :sierra"
