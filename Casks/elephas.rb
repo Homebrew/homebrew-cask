@@ -12,6 +12,7 @@ cask "elephas" do
     strategy :extract_plist
   end
 
+  conflicts_with cask: "homebrew/cask-versions/elephas-beta"
   depends_on macos: ">= :catalina"
 
   app "Elephas.app"
