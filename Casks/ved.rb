@@ -5,7 +5,7 @@ cask "ved" do
   url "https://tolp.nl/ved/files/download/mac/ved_#{version}_mac.dmg"
   name "ved"
   desc "External level editor for VVVVVV"
-  homepage "https://tolp.nl/ved/
+  homepage "https://tolp.nl/ved/"
 
   app "Ved.app"
 
