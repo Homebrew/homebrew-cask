@@ -5,12 +5,7 @@ cask "ved" do
   url "https://tolp.nl/ved/files/download/mac/ved_#{version}_mac.dmg"
   name "ved"
   desc "External level editor for VVVVVV"
-  homepage "https://tolp.nl/ved/"
-
-  livecheck do
-    url "https://tolp.nl/ved/files/download/mac/"
-    regex(/href=.*?ved[ ._-]v?(\d+(?:\.\d+)+)[ ._-]mac\.dmg/i)
-  end
+  homepage "https://tolp.nl/ved/
 
   app "Ved.app"
 
