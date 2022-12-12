@@ -1,17 +1,5 @@
 cask "araxis-merge" do
-  on_el_capitan :or_older do
-    version "2018.5008"
-    sha256 "db47fa9e0d90313a3eb0239248e2cb23489d3ca695ebe9a1299e188efd4a4bb2"
-  end
-  on_sierra do
-    version "2019.5137"
-    sha256 "e3be039c7e6c8a42c172b8d18cfdad0d98fe05b1a74d1e6801d323752c0438b2"
-  end
-  on_high_sierra do
-    version "2020.5350"
-    sha256 "916cbada651214ce55282ccb93923e22ab17a1ee1227217f5dd949b8f7de7fcb"
-  end
-  on_mojave do
+  on_mojave :or_older do
     version "2021.5602"
     sha256 "06c56e6d08057090f3718b6db560e2a79551f953d4c83c0fad8b60f415c59347"
   end
@@ -37,7 +25,7 @@ cask "araxis-merge" do
     end
   end
 
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :mojave"
 
   app "Araxis Merge.app"
   binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxisgitdiff"
