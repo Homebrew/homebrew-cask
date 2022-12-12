@@ -1,5 +1,5 @@
 cask "appgate-sdp-client" do
-  on_mojave do
+  on_mojave :or_older do
     version "5.4.3"
     sha256 "cb40c9dbfc1c6df1c611d9538ce22447cf234945a15ccf5acc7c09b877bc4137"
 
