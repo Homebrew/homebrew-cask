@@ -14,4 +14,8 @@ cask "ankerwork" do
   end
 
   app "AnkerWork.app"
+
+  zap trash: [
+    "~/Library/Application Support/AnkerWork",
+  ]
 end
