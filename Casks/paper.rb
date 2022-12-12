@@ -1,6 +1,6 @@
 cask "paper" do
-  version "5.2.4"
-  sha256 "fc23a72a759298ede4989383c83ca823ad538157b8ff61f88d2404c8d4a481ca"
+  version "5.2.5"
+  sha256 "ef1f6f8848ca225fea03814b5431c1ae4177538c8ae3b0c7eeb80c7bc104b74c"
 
   url "https://s3.nsns.in/dl/paper-v#{version}.dmg",
       verified: "s3.nsns.in/"
