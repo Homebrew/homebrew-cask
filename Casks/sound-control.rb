@@ -1,6 +1,6 @@
 cask "sound-control" do
-  version "2.7.2,5156"
-  sha256 "828ac3d191f5a3770543ad74526948c631279b6749ba96609040286c563c337a"
+  version "2.7.3,5156"
+  sha256 "eaafbeafb371f6e3cd1c076e8d5a38e24927d5a24bbf018853739fdf7ab189cf"
 
   url "https://staticz.com/download/#{version.csv.second}/"
   name "Sound Control"
@@ -15,7 +15,7 @@ cask "sound-control" do
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :catalina"
 
   app "Sound Control.app"
 
