@@ -1,9 +1,9 @@
 cask "baidunetdisk" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.15.0"
-  sha256 arm:   "5a55bfdd355562156348e2a47440451dfebced73858b2e8ae581425e03fc8c05",
-         intel: "d0d29cedf99f1a95cb0ee14ff6cff8b82dfee4337fb33cc3a6f90a6428571d65"
+  version "4.16.2"
+  sha256 arm:   "d3b13794c5e7128ce3dc0251a753a430b024d00fae79cec3d61929fbc85626b3",
+         intel: "0a0d60a41b98b79a006ca7ef11bcc4bdeefbf5c1ba35efb436ea832b472c70a2"
 
   url "https://issuepcdn.baidupcs.com/issue/netdisk/MACguanjia/#{version}/BaiduNetdisk_mac_#{version}_#{arch}.dmg",
       verified: "issuepcdn.baidupcs.com/issue/netdisk/MACguanjia/"
