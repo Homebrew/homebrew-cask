@@ -7,7 +7,7 @@ cask "cd-to" do
       skip "Legacy version"
     end
   end
-  on_monterey :or_older do
+  on_monterey :or_newer do
     version "3.1.3"
     sha256 "821cf3b1f4a0af0d89e71317a5a3271b89e569adf84c9b609d6f159d643c568b"
 
