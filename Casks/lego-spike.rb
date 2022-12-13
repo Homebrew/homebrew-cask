@@ -11,4 +11,9 @@ cask "lego-spike" do
   depends_on arch: :x86_64
 
   app "Spike.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.lego.education.spikenext",
+    "~/Library/Containers/com.lego.education.spikenext",
+  ]
 end
