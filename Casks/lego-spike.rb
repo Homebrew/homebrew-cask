@@ -1,6 +1,3 @@
-# typed: false
-# frozen_string_literal: true
-
 cask "lego-spike" do
   version "3.2.0"
   sha256 "9a4aca2d7a8963eb4279ca5c215a828f64bb93c3983497dd18b77ae76b88a677"
