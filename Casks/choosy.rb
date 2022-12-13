@@ -9,7 +9,7 @@ cask "choosy" do
       skip "Legacy version"
     end
   end
-  on_high_sierra :or_older do
+  on_sierra do
     version "1.3"
     sha256 "cb1f40df11ac1b52354f4b81367462d2646a6d023c64bafe5022fcec52f796cd"
 
@@ -19,7 +19,17 @@ cask "choosy" do
       skip "Legacy version"
     end
   end
-  on_mojave :or_older do
+  on_high_sierra do
+    version "1.3"
+    sha256 "cb1f40df11ac1b52354f4b81367462d2646a6d023c64bafe5022fcec52f796cd"
+
+    prefpane "Choosy.prefPane"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_mojave do
     version "2.1"
     sha256 "758da621d3a92358885333b767d64b024197a8147a339b1a0d14e938673452f9"
 
