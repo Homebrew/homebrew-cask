@@ -7,8 +7,12 @@ cask "spike" do
   desc "Develop with Scratch and Python for your LEGO Spike set"
   homepage "https://education.lego.com/"
 
+  livecheck do
+    url "https://education.lego.com/page-data/en-au/downloads/spike-app/software/page-data.json"
+    regex(/SPIKE[._-]APP[._-]\d+[._-]macOS[._-]+v?(\d+(?:\.\d+)+)[._-]Global\.dmg/i)
+  end
+
   depends_on macos: ">= :catalina"
-  depends_on arch: :x86_64
 
   app "Spike.app"
 
