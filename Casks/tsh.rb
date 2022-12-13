@@ -17,5 +17,6 @@ cask "tsh" do
   pkg "tsh-#{version}.pkg"
 
   uninstall pkgutil: "(.*).com.gravitational.teleport.tsh"
+
   zap trash: "~/.tsh"
 end
