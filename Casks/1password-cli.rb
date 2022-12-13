@@ -20,4 +20,4 @@ cask "1password-cli" do
   uninstall pkgutil: "com.1password.op"
 
   zap trash: "~/.op"
-end
+end 
