@@ -12,8 +12,8 @@ cask "microsoft-powerpoint" do
     version "16.54.21101001"
     sha256 "75a57c82b46d0e2558c454f19610576b7a48baf1ccc5cd1fa61b69cca5bf0bd1"
   else
-    version "16.67.22111300"
-    sha256 "ebbca0a4e1119e7d2f4d3bb3fb93f8c9cb0ed9bb2a2d90a51e8f9ce133ac9323"
+    version "16.68.22121100"
+    sha256 "3b778477a123566245448e2f29fb75e7f791ee1caa3c4d501d10a55270e03a1c"
   end
 
   url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_PowerPoint_#{version}_Installer.pkg",
