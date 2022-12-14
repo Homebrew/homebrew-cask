@@ -6,11 +6,11 @@ cask "paper" do
       verified: "s3.nsns.in/"
   name "pap.er"
   desc "Pap.er, 4K 5K HD Wallpaper Application"
-  homepage "https://paper.photos/"
+  homepage "https://paper.meiyuan.in/"
 
   livecheck do
     url :homepage
-    regex(/href=.*?paper[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/paper[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   auto_updates true
