@@ -1,9 +1,9 @@
 cask "inkdrop" do
   arch arm: "arm64", intel: "x64"
 
-  version "5.5.2"
-  sha256 arm:   "913f6c181a1164d79068f57297d39a5564a27808ba464e7fb0ae1b3035fff611",
-         intel: "c4aa3592c153ad86bf674e706a1848e643307a8263c53ae831088d178a842232"
+  version "5.5.3"
+  sha256 arm:   "6fef4312c90014aaf29367abe9fa5e679316b25e88218309a3213feee47c8eb7",
+         intel: "8d88dcdd1bc9968b7b48516f711401044a7eebc3a755b500fbef45545eab4327"
 
   url "https://d3ip0rje8grhnl.cloudfront.net/v#{version}/Inkdrop-#{version}-#{arch}-Mac.zip",
       verified: "d3ip0rje8grhnl.cloudfront.net/"
