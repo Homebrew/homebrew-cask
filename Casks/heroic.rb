@@ -1,5 +1,6 @@
 cask "heroic" do
   version "2.5.2"
+  arch arm: "arm64", intel: "x64"
 
   on_intel do
     url "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v#{version}/Heroic-#{version}-macOS-x64.dmg"
