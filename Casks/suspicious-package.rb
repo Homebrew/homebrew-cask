@@ -32,7 +32,7 @@ cask "suspicious-package" do
     depends_on macos: ">= :mojave"
   end
   on_big_sur :or_newer do
-    version "4.3,996"
+    version "4.3.1,999"
     sha256 :no_check
 
     url "https://www.mothersruin.com/software/downloads/SuspiciousPackage.dmg"
