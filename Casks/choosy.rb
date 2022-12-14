@@ -39,7 +39,17 @@ cask "choosy" do
       skip "Legacy version"
     end
   end
-  on_catalina :or_newer do
+  on_catalina do
+    version "2.2.1"
+    sha256 "71fe3c3c592d449063189a575a39b1f00735ee20cf1de94552896f5f8e93bf47"
+
+    pkg "Choosy.pkg"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_big_sur :or_newer do
     version "2.3"
     sha256 "b4fd6073b43ba7ce8697c6b3f400f2abec9196e10c6488d52970ed989ddb2a76"
 
