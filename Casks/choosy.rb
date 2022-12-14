@@ -59,6 +59,8 @@ cask "choosy" do
       url "https://www.choosyosx.com/sparkle/feed"
       strategy :sparkle
     end
+
+    depends_on macos: ">= :big_sur"
   end
 
   url "https://downloads.choosyosx.com/choosy_#{version}.zip"
