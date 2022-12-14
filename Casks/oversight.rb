@@ -1,6 +1,6 @@
 cask "oversight" do
-  version "2.1.3"
-  sha256 "929154c23f9b523f1bfe78cecb8b5310f439038f52a3b203a5dc6df59ea5e19b"
+  version "2.1.4"
+  sha256 "b8daf11d49a96ca1ff2ee7deafa37294fb24c6387271427310b0bc4b70f0dfc6"
 
   url "https://github.com/objective-see/OverSight/releases/download/v#{version}/OverSight_#{version}.zip",
       verified: "github.com/objective-see/OverSight"
