@@ -1,18 +1,16 @@
 cask "height" do
   version "0.21.0"
-  # Skip because the URL is unversioned.
-  sha256 :no_check
+  sha256 "f6e3b4e219bd3d924d17adab65c30cd19366c35855e191888573060d51c5178d"
 
-  url "https://height.app/download/mac"
+  url "https://storage.googleapis.com/height-statics/_app/Height-#{version}-universal.dmg",
+      verified: "storage.googleapis.com/height-statics/_app/"
   name "Height"
   desc "All-in-one project management tool"
   homepage "https://height.app/"
 
   livecheck do
-    url :url
-    strategy :header_match do |headers|
-      headers["location"][/Height[._-]v?(\d+(?:\.\d+)+)[._-]universal\.dmg/i, 1]
-    end
+    url "https://storage.googleapis.com/height-statics/_app/latest-mac.yml"
+    strategy :electron_builder
   end
 
   auto_updates true
@@ -20,8 +18,8 @@ cask "height" do
   app "Height.app"
 
   zap trash: [
-    "~/Library/Application Support/Height",
     "~/Library/Application Support/Caches/height-electron-updater",
+    "~/Library/Application Support/Height",
     "~/Library/Caches/app.height",
     "~/Library/Caches/app.height.ShipIt",
     "~/Library/Preferences/app.height.plist",
