@@ -3,7 +3,7 @@ cask "dash" do
     version "4.6.7"
     sha256 "e2b5eb996645b25f12ccae15e24b1b0d8007bc5fed925e14ce7be45a2b693fb6"
   end
-  on_catalina :or_newer do
+  on_mojave :or_newer do
     version "6.4.0,1006"
     sha256 "165b17939f1501bfe6fe6e363a7246fbc276b51d1769f80e41828551d1cbd8ed"
   end
