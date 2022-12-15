@@ -69,7 +69,7 @@ cask "openzfs" do
       post_id, version = match.first
 
       post_url = "https://openzfsonosx.org/forum/viewtopic.php?f=20&t=#{post_id}"
-      download_id_regex = /href=.*file.php\?id=(\d+).+OpenZFSonOsX[._-]v?#{version}-#{arch}/i
+      download_id_regex = /href=.*file.php\?id=(\d+).+OpenZFSonOsX[._-]v?#{version}-#{arch}\.pkg/i
 
       download_id = Homebrew::Livecheck::Strategy::PageMatch
                     .find_versions(url: post_url, regex: download_id_regex)[:matches].values.first
