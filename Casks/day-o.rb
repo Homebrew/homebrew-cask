@@ -10,6 +10,7 @@ cask "day-o" do
 
   url "https://shauninman.com/assets/downloads/Day-#{version.major_minor}.zip"
   name "Day-O"
+  desc "Menu bar calendar"
   homepage "https://shauninman.com/archive/2020/04/08/day_o_mac_menu_bar_clock_for_catalina"
 
   livecheck do
