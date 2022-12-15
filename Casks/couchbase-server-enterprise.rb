@@ -6,6 +6,10 @@ cask "couchbase-server-enterprise" do
     url "https://packages.couchbase.com/releases/#{version}/couchbase-server-enterprise_#{version}-macos_x86_64.zip"
 
     app "couchbase-server-enterprise_#{version}/Couchbase Server.app"
+
+    livecheck do
+      skip "Legacy version"
+    end
   end
   on_sierra :or_newer do
     version "7.1.3"
@@ -14,16 +18,16 @@ cask "couchbase-server-enterprise" do
     url "https://packages.couchbase.com/releases/#{version}/couchbase-server-enterprise_#{version}-macos_x86_64.dmg"
 
     app "Couchbase Server.app"
+
+    livecheck do
+      url "https://www.couchbase.com/downloads"
+      regex(/couchbase[._-]server[._-]enterprise[._-]v?(\d+(:?\.\d+)+)[._-]macos[._-]x86[._-]64\.dmg/i)
+    end
   end
 
   name "Couchbase Server"
   desc "Distributed NoSQL cloud database"
   homepage "https://www.couchbase.com/"
-
-  livecheck do
-    url "https://www.couchbase.com/downloads"
-    regex(/osx.*?couchbase-server-enterprise-version.*?(\d+(:?\.\d+)+)\s\(Current\)/im)
-  end
 
   conflicts_with cask: "couchbase-server-community"
 end
