@@ -41,7 +41,6 @@ cask "teamviewer" do
   on_big_sur :or_newer do
     pkg "Install TeamViewer.app/Contents/Resources/Install TeamViewer.pkg"
   end
-  
   on_mojave :or_older do
     uninstall delete:    [
                 "/Applications/TeamViewer.app",
