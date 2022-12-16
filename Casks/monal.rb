@@ -1,17 +1,18 @@
 cask "monal" do
-  version "5.2.0,795"
-  sha256 :no_check
+  version "840"
+  sha256 "b09d24e78a1adf7d183ea4a727f461609bab6fdc0430f92200bd7fc6553713fe"
 
-  url "https://monal.im/macOS/Monal-macOS.zip"
+  url "https://downloads.monal-im.org/monal-im/stable/macOS/Monal-#{version}.zip"
   name "Monal"
   desc "Tool to securely connect to chat servers"
-  homepage "https://monal.im/"
+  homepage "https://monal-im.org/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://downloads.monal-im.org/monal-im/stable/macOS/latest.txt"
+    regex(/^(\d+)$/i)
   end
 
+  conflicts_with cask: "homebrew/cask-versions/monal-beta"
   depends_on macos: ">= :catalina"
 
   app "Monal.app"

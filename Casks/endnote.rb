@@ -1,5 +1,5 @@
 cask "endnote" do
-  version "20.3"
+  version "20.4"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://download.endnote.com/downloads/#{version.major}/EndNote#{version.major}Installer.dmg"

@@ -1,5 +1,5 @@
 cask "treesheets" do
-  version "1.0"
+  version "2022.08.02,20220802020630"
   sha256 :no_check
 
   url "https://strlen.com/treesheets/treesheets_osx.zip"
@@ -12,5 +12,5 @@ cask "treesheets" do
     strategy :extract_plist
   end
 
-  app "TreeSheetsBeta/TreeSheets.app"
+  app "TreeSheets.app"
 end

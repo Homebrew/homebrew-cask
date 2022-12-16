@@ -1,6 +1,6 @@
 cask "imdone" do
-  version "1.29.4"
-  sha256 "6d5cfe1044f35f71c5a083f289042908c4ea5e0c8544f91c250885e2aaef2821"
+  version "1.29.5"
+  sha256 "9efa92e35ce27e8c3d72dd0d5038314df19dc76102c3165582c7fa49edd420ef"
 
   url "https://imdone.io/downloads/imdone-#{version}.dmg"
   name "imdone"

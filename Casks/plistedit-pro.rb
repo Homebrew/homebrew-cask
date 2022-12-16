@@ -9,7 +9,9 @@ cask "plistedit-pro" do
 
   livecheck do
     url "https://www.fatcatsoftware.com/plisteditpro/downloads/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle do |items|
+      items.find { |item| item.channel.nil? }&.nice_version
+    end
   end
 
   auto_updates true

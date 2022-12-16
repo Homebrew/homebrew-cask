@@ -1,6 +1,6 @@
 cask "ultimaker-cura" do
-  version "5.0.0"
-  sha256 "0ff946a01aab0201851a16435d8f6cf371284a4e45b8adb6b4dec9dd06522294"
+  version "5.2.1"
+  sha256 "2d8a48bd060f822ad7ef2ec1e4a1853d10e7478460738406fc376c594bd08061"
 
   url "https://github.com/Ultimaker/Cura/releases/download/#{version}/Ultimaker-Cura-#{version}-mac.dmg",
       verified: "github.com/Ultimaker/Cura/"

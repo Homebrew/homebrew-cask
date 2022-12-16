@@ -1,13 +1,9 @@
 cask "vieb" do
-  arch = Hardware::CPU.intel? ? "" : "arm64-"
+  arch arm: "arm64-"
 
-  version "8.1.0"
-
-  if Hardware::CPU.intel?
-    sha256 "cfb9cd50f41b5d9919e94fb38d421565ccf221bddc8e82342ff37eca190c56c5"
-  else
-    sha256 "b3e272d0b6950a7835c920aeaf0a787db57797591192943ae1c8ca50fd4c7e79"
-  end
+  version "9.5.0"
+  sha256 arm:   "721dd6627d1e7a8c7210378a8c3427d50f69e423ff31a58075308089b63bdd49",
+         intel: "881a30184898346b1ccb34e0b04826a28f57b6b133af9543c8b37b0f211d04b7"
 
   url "https://github.com/Jelmerro/Vieb/releases/download/#{version}/Vieb-#{version}-#{arch}mac.zip",
       verified: "github.com/Jelmerro/Vieb/"

@@ -1,13 +1,9 @@
 cask "eclipse-ide" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
+  arch arm: "aarch64", intel: "x86_64"
 
-  version "4.24.0,2022-06"
-
-  if Hardware::CPU.intel?
-    sha256 "3488dc593a7e0b5dd80a313fbf84a6679b5927d00cd7ccad292fa202e3892ef5"
-  else
-    sha256 "aafc3b9d70aa5d4c0174a9e169645c9617704991be50f65358975d06e30a9968"
-  end
+  version "4.26.0,2022-12"
+  sha256 arm:   "428c2a87b51b6e3bbd904a95c4d1881804ba7cb52a36202cda4a64a39e704a54",
+         intel: "03ee61dcdba5923fc1820be8a334584cdb92d99b3540c29aa20ce6b9ae0723b1"
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-committers-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&r=1"
   name "Eclipse IDE for Eclipse Committers"

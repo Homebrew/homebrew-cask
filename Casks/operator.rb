@@ -1,6 +1,6 @@
 cask "operator" do
-  version "1.6.0"
-  sha256 "3da2ed81d1a0c2cac8ef5ff9d24698a4c4dc0a1986901969e534b8d694b01642"
+  version "1.7.1"
+  sha256 "fa695f41fbd8c613d14901f3942c6f5604143d22ad51563842e8a5058a547cb5"
 
   url "https://s3.amazonaws.com/operator.versions/release-builds/#{version}/prelude-operator-#{version}-x64.dmg",
       verified: "s3.amazonaws.com/operator.versions/"

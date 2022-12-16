@@ -1,8 +1,8 @@
 cask "insync" do
-  version "3.7.9.50368"
-  sha256 "c329885afe3eeba1118ffa4087706529ef09b932c0144c9f91dd26611efb2631"
+  version "3.8.3.50473"
+  sha256 "61d4f088f103bdad709ca671adbb578dba6ea1abb4b8ac441d2c272714d9ca74"
 
-  url "http://s.insynchq.com/builds/Insync-#{version}.dmg"
+  url "http://cdn.insynchq.com/builds/mac/Insync-#{version}.dmg"
   name "Insync"
   desc "Manage your Google Drive and OneDrive files"
   homepage "https://www.insynchq.com/"

@@ -1,16 +1,32 @@
 cask "inform" do
-  version "6M62"
-  sha256 "202420d1b0ad16ea56327446b0920978be05befafa3ed6b71ac7b2dd1f42c36a"
+  version "10.1.2,1_82_3"
+  sha256 "01160096f0d19b1674c56c2dd2c8dc6f39b09cdccc1452b549843690c82b4a94"
 
-  url "http://inform7.com/apps/#{version}/I7-#{version}-OSX-Interim.dmg"
+  url "https://github.com/ganelson/inform/releases/download/v#{version.csv.first}/Inform_#{version.csv.first.dots_to_underscores}_macOS_#{version.csv.second}.dmg",
+      verified: "github.com/ganelson/inform"
   name "Inform"
   desc "Writing system for interactive fiction based on natural language"
-  homepage "http://inform7.com/"
+  homepage "https://ganelson.github.io/inform-website"
 
   livecheck do
-    url "http://inform7.com/downloads/"
-    regex(%r{href=.*?/I7[._-]v?(\d+M\d+)[._-]OSX[._-]Interim\.dmg}i)
+    url "https://github.com/ganelson/inform/releases/latest"
+    regex(%r{href=.*?/v?(\d+(?:\.\d+)+)/.*?macOS[._-](\d+(?:_\d+)+)\.dmg}i)
+    strategy :header_match do |headers, regex|
+      next if headers["location"].blank?
+
+      # Identify the latest tag from the response's `location` header
+      latest_tag = File.basename(headers["location"])
+      next if latest_tag.blank?
+
+      # Fetch the assets list HTML for the latest tag and match within it
+      assets_page = Homebrew::Livecheck::Strategy.page_content(
+        @url.sub(%r{/releases/?.+}, "/releases/expanded_assets/#{latest_tag}"),
+      )
+      assets_page[:content]&.scan(regex)&.map { |match| "#{match[0]},#{match[1]}" }
+    end
   end
+
+  depends_on macos: ">= :mojave"
 
   app "Inform.app"
 end

@@ -1,16 +1,12 @@
 cask "castr" do
-  arch = Hardware::CPU.intel? ? "mac" : "arm64-mac"
+  arch arm: "arm64", intel: "x64"
 
-  version "1.0.0"
+  version "1.3.0"
+  sha256 arm:   "9ac93c4764c84e740c4abf8d8bcd84636c8194c3c33b6cda7b7955442599b6c2",
+         intel: "4038e8c100d1e2d80714b4f9a9b5c7739aeb61e9e9fd2a0e9be257b2a04b8b70"
 
-  url "https://download.todesktop.com/210610elr9v3cm6/Castr%20#{version}-#{arch}-update.zip",
+  url "https://download.todesktop.com/210610elr9v3cm6/Castr%20#{version}-#{arch}.dmg",
       verified: "download.todesktop.com/210610elr9v3cm6/"
-  if Hardware::CPU.intel?
-    sha256 "7fb499498d4dfb44d0f80a339933ac7f22071ed1c6f65f2164819926c54d9736"
-  else
-    sha256 "2d4c5b61f0018f2fa3d63000d070bfdab68d3faccb8e8901e7a50e6a1c4c0a84"
-  end
-
   name "castr"
   desc "Desktop application for controlling Castr streaming platform"
   homepage "https://castr.io/"

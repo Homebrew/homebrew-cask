@@ -17,4 +17,9 @@ cask "night-owl" do
   depends_on macos: ">= :mojave"
 
   app "Night Owl.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.YoruFukurouProject.YoruFukurou",
+    "~/Library/Containers/com.YoruFukurouProject.YoruFukurou",
+  ]
 end

@@ -9,8 +9,8 @@ cask "camera-live" do
 
   livecheck do
     url :url
+    regex(%r{href=["']?[^"' >]*?/tag/v?(\d+)["' >]}i)
     strategy :github_latest
-    regex(%r{href=.*?/(\d+(?:\.\d+)*)/Camera\.Live\.zip}i)
   end
 
   app "Camera Live.app"

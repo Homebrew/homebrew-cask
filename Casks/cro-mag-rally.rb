@@ -6,7 +6,7 @@ cask "cro-mag-rally" do
       verified: "github.com/jorio/CroMagRally/"
   name "Cro-Mag Rally"
   desc "Prehistoric-themed 3D racing game from Pangea Software"
-  homepage "https://pangeasoft.net/cromag/"
+  homepage "https://jorio.itch.io/cromagrally"
 
   app "Cro-Mag Rally.app"
   artifact "Documentation", target: "#{Dir.home}/Library/Application Support/CroMagRally"

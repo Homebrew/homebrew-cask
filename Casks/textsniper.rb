@@ -1,6 +1,6 @@
 cask "textsniper" do
-  version "1.7.0"
-  sha256 "311323aa7606600f5c45446f5c832e81fac072d11241342288ff2eceeb190887"
+  version "1.9.0"
+  sha256 "fb7297aafaff8e3d9d300301beda6c40f06988cee6bf93e8e16b033d8701e07a"
 
   url "https://s3.amazonaws.com/textsniper.app/TextSniper#{version}.dmg",
       verified: "s3.amazonaws.com/textsniper.app/"

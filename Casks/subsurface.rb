@@ -1,15 +1,12 @@
 cask "subsurface" do
-  version "5.0.8"
+  version "5.0.10"
 
   if MacOS.version <= :mojave
     sha256 "b718acc583a986bc36df77b7b076dac0e19f193f6579c55ff802d448cea7c2b3"
     url "https://subsurface-divelog.org/downloads/Subsurface-#{version}-10.13+14.dmg"
-  elsif MacOS.version <= :big_sur
-    sha256 "8bdce1b52ebf3128c43c09b59f02ff2de7130761448e777d06fb539236f4b862"
-    url "https://subsurface-divelog.org/downloads/Subsurface-#{version}-10.15+11.0.dmg"
   else
-    sha256 "8bdce1b52ebf3128c43c09b59f02ff2de7130761448e777d06fb539236f4b862"
-    url "https://subsurface-divelog.org/downloads/Subsurface-#{version}.dmg"
+    sha256 "c94ae7f1c63e558c6ac7896f4e6ea1514ac65f023ee2246ad69614b8747a9581"
+    url "https://subsurface-divelog.org/downloads/Subsurface-#{version}-qt6-universal.dmg"
   end
 
   name "Subsurface"
@@ -20,6 +17,8 @@ cask "subsurface" do
     url "https://subsurface.github.io/download/"
     regex(/href=.*?Subsurface[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Subsurface.app"
 

@@ -1,11 +1,17 @@
 cask "visualboyadvance-m" do
-  version "2.1.4"
-  sha256 "9127149a452b6e67280c99eb133480fc22095a2ceafdb049d1df9324c35d9197"
+  version "2.1.5"
+  sha256 "f85344df22dbacf2014e0c43a8f221916d284ce2c8d362dd11ae1bf4d7c8d2e1"
 
-  url "https://github.com/visualboyadvance-m/visualboyadvance-m/releases/download/v#{version}/visualboyadvance-m-Mac-64bit.zip",
+  url "https://github.com/visualboyadvance-m/visualboyadvance-m/releases/download/v#{version}/visualboyadvance-m-Mac-x86_64.zip",
       verified: "github.com/visualboyadvance-m/visualboyadvance-m/"
   name "Visual Boy Advance - M"
+  desc "Game Boy Advance emulator"
   homepage "https://vba-m.com/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "visualboyadvance-m.app"
 

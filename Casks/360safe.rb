@@ -7,10 +7,9 @@ cask "360safe" do
   desc "Protection and antivirus security"
   homepage "https://www.360totalsecurity.com/features/360-total-security-mac/"
 
-  livecheck do
-    url "https://www.360totalsecurity.com/en/version/360-total-security-mac/"
-    regex(/version-history-list.*?(\d+(?:\.\d+)+)/i)
-  end
-
   app "360Safe.app"
+
+  caveats do
+    discontinued
+  end
 end

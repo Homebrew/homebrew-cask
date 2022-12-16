@@ -1,8 +1,8 @@
 cask "setapp" do
-  version "3.6.0,1656508911"
-  sha256 "3ca5a4ba4fe023e5785c0b8f636e1aab8eee7f3fa143a43c3b6c70ad138e1dfb"
+  version "3.16.1,18,1670836217"
+  sha256 "9873e3a831d09ca9fd4f7ed39088897c8b345756565fcad62ba173323d42483f"
 
-  url "https://dl.devmate.com/com.setapp.DesktopClient/#{version.csv.first}/#{version.csv.second}/Setapp-#{version.csv.first}.zip",
+  url "https://dl.devmate.com/com.setapp.DesktopClient/#{version.csv.second}/#{version.csv.third}/Setapp-#{version.csv.second}.zip",
       verified: "devmate.com/com.setapp.DesktopClient/"
   name "Setapp"
   desc "Collection of apps available by subscription"
@@ -11,7 +11,7 @@ cask "setapp" do
   livecheck do
     url "https://s3-us-west-2.amazonaws.com/updateinfo.devmate.com/com.setapp.DesktopClient/updates.xml"
     strategy :sparkle do |item|
-      "#{item.short_version},#{item.url[%r{/(\d+)/Setapp-(?:\d+(?:\.\d+)*)\.zip}i, 1]}"
+      "#{item.short_version},#{item.version},#{item.url[%r{/(\d+)/Setapp-(?:\d+(?:\.\d+)*)\.zip}i, 1]}"
     end
   end
 

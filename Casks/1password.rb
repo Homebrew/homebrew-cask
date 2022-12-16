@@ -1,13 +1,9 @@
 cask "1password" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
+  arch arm: "aarch64", intel: "x86_64"
 
-  version "8.7.3"
-
-  if Hardware::CPU.intel?
-    sha256 "216944843bf357c5799b3335dd5cf35381eadef95dd9d1bfa7650374fcd0667e"
-  else
-    sha256 "a147c2878e96818b0e16785daec32821d835a9004bbbd287076dddf8dcdc9114"
-  end
+  version "8.9.11"
+  sha256 arm:   "59aff7b43a22fd865c9379708f871108d72b5d8317245dc82cb50f94ffc72233",
+         intel: "dce518f9a233b7646851d86a8eca16d63d273f06447bfde77c072badc8b4131d"
 
   url "https://downloads.1password.com/mac/1Password-#{version}-#{arch}.zip"
   name "1Password"
@@ -16,7 +12,7 @@ cask "1password" do
 
   livecheck do
     url "https://app-updates.agilebits.com/product_history/OPM#{version.major}"
-    regex(%r{href=.*?/1Password[._-]?v?(\d+(?:.\d+)*)(?:[._-]?\d[._-]?PRODUCTION)?[._-]?\$ARCH\.zip}i)
+    regex(%r{href=.*?/1Password[._-]?v?(\d+(?:.\d+)*)(?:[._-]\d+[._-]?PRODUCTION)?[._-]?\$ARCH\.zip}i)
   end
 
   auto_updates true
@@ -26,10 +22,13 @@ cask "1password" do
   app "1Password.app"
 
   zap trash: [
-    "~/Library/Application Scripts/2BUA8C4S2C.com.1password.browser-helper",
-    "~/Library/Application Scripts/2BUA8C4S2C.com.1password.1password",
+    "~/Library/Application Scripts/2BUA8C4S2C.com.1password.*",
+    "~/Library/Application Support/1Password",
+    "~/Library/Application Support/CrashReporter/1Password*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.1password.1password.sfl2",
     "~/Library/Containers/2BUA8C4S2C.com.1password.browser-helper",
     "~/Library/Containers/com.1password.1password",
     "~/Library/Group Containers/2BUA8C4S2C.com.1password",
+    "~/Library/Saved Application State/com.1password.1password.savedState",
   ]
 end

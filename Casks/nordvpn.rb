@@ -1,6 +1,6 @@
 cask "nordvpn" do
-  version "7.7.3,194"
-  sha256 "93e3e431ba6472f407853818c75c5dc7c3534058b74e341cf493d55c18776375"
+  version "7.13.0,209"
+  sha256 "b4e82142b974d61a82c3f7a63519f618dc13467506009c9b1eccbca2f1d4c5c1"
 
   url "https://downloads.nordcdn.com/apps/macos/generic/NordVPN-OpenVPN/#{version.csv.first}/NordVPN.pkg",
       verified: "downloads.nordcdn.com/"
@@ -14,6 +14,7 @@ cask "nordvpn" do
   end
 
   auto_updates true
+  depends_on macos: ">= :sierra"
 
   pkg "NordVPN.pkg"
 

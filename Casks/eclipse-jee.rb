@@ -1,13 +1,9 @@
 cask "eclipse-jee" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
+  arch arm: "aarch64", intel: "x86_64"
 
-  version "4.24.0,2022-06"
-
-  if Hardware::CPU.intel?
-    sha256 "84fdae52853e84fe530f002482a5ddddfc1a88932e93c341001192fc54daa8b1"
-  else
-    sha256 "a2ccb1dd0180d241dd2e3c49507fe6d3d5535606862081b436d90194970f736b"
-  end
+  version "4.26.0,2022-12"
+  sha256 arm:   "c6c869fce960f22c1820ad2f646d0d1e9cdcb1f05957676dcbdc5fad24aede09",
+         intel: "810f22b4e24d620f4290034d93cedeb774a4ce63ed165b66dd66c3be6e34ee82"
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-jee-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&r=1"
   name "Eclipse IDE for Java EE Developers"

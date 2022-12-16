@@ -1,15 +1,15 @@
 cask "ultracopier" do
-  version "2.2.6.1"
-  sha256 "b9293f95d9a11dc69070eb6ca2f5c0acf41b65071c09639bed83aa84f2199c9d"
+  version "2.2.6.4"
+  sha256 "73f32c18026586820a10ba1131fef260cdf31b9d1a671a21c2e509ef6b4b0078"
 
-  url "https://cdn.confiared.com/ultracopier.first-world.info/files/#{version}/ultracopier-mac-os-x-#{version}.dmg",
-      verified: "cdn.confiared.com/ultracopier.first-world.info/files/"
+  url "https://cdn.confiared.com/ultracopier.herman-brule.com/files/#{version}/ultracopier-mac-os-x-#{version}.dmg",
+      verified: "cdn.confiared.com/ultracopier.herman-brule.com/files/"
   name "ultracopier"
   desc "Replacement for files copy dialogs"
-  homepage "http://ultracopier.first-world.info/"
+  homepage "https://ultracopier.herman-brule.com/"
 
   livecheck do
-    url "https://ultracopier.first-world.info/#download"
+    url "https://ultracopier.herman-brule.com/#download"
     regex(/ultracopier[._-]mac[._-]os[._-]x[._-](\d+(?:\.\d+)+)\.dmg/i)
   end
 

@@ -1,5 +1,5 @@
 cask "lastpass" do
-  version "4.98.1,1268"
+  version "4.106.0,1291"
   sha256 :no_check
 
   url "https://download.cloud.lastpass.com/mac/LastPass.dmg"
@@ -13,7 +13,7 @@ cask "lastpass" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "LastPass.app"
 

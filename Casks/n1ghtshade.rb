@@ -1,8 +1,8 @@
 cask "n1ghtshade" do
-  version "RC3"
-  sha256 "b9a5138511d6164bb2dfe0002dbc9f31ae157e45d7097edbd4f804172645e00e"
+  version "1.0"
+  sha256 "e1fb23833e9261244e52bb318f456fccbe1482082cdd0995f63babd47af2b746"
 
-  url "https://github.com/synackuk/n1ghtshade/releases/download/#{version}/n1ghtshade-macos.zip"
+  url "https://github.com/synackuk/n1ghtshade/releases/download/#{version}/n1ghtshade.app.zip"
   name "n1ghtshade"
   desc "Permits the downgrade/jailbreak of 32-bit iOS devices"
   homepage "https://github.com/synackuk/n1ghtshade"

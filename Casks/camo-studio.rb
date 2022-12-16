@@ -1,6 +1,6 @@
 cask "camo-studio" do
-  version "1.7.0,7547"
-  sha256 "e06772458454050fd53e2c78fd46d187b9bb0ec10aedfe92c39bdb94e613a3d0"
+  version "1.9.1,8495"
+  sha256 "a14364c439779bcd881145476fba881198a8ce41183b47667f16d5db0af72c5b"
 
   url "https://reincubate.com/res/labs/camo/CamoStudioMac-#{version.csv.first}-#{version.csv.second}-Release.app.zip"
   name "Camo Studio"

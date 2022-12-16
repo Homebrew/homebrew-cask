@@ -1,6 +1,6 @@
 cask "betterdisplay" do
-  version "1.2.7"
-  sha256 "3c472a048418de592df14371a6d4e24c591bdc14f748640c0103513c3fba7e95"
+  version "1.3.9"
+  sha256 "4f21ee6889ec2714cb9864961365e771e0f18bc5d4d08d9cb994999a70f39d99"
 
   url "https://github.com/waydabber/BetterDisplay/releases/download/v#{version}/BetterDisplay-v#{version}.dmg",
       verified: "github.com/waydabber/BetterDisplay"
@@ -14,6 +14,7 @@ cask "betterdisplay" do
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "BetterDisplay.app"
 

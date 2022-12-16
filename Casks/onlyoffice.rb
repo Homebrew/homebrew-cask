@@ -1,13 +1,9 @@
 cask "onlyoffice" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "arm"
+  arch arm: "arm", intel: "x86_64"
 
-  version "7.1.0"
-
-  if Hardware::CPU.intel?
-    sha256 "97ec1035147d9587f20f87fa1b92b14947cad2dc304f3a7f71c12cb3d8535237"
-  else
-    sha256 "1aebbfe203b51ca3c400b1e9232df4290210f2f22d35a361b91792eb18c8a5a2"
-  end
+  version "7.2.1"
+  sha256 arm:   "9df33392d8dbcb194bfa1530feb3209521b1dd0724ac3bbd70ccb0bd9b28547b",
+         intel: "76cb93699f88aac0c4fe3efc86dd0c779368a90d3dd1c278bb92c296eded4a9d"
 
   url "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v#{version}/ONLYOFFICE-#{arch}.dmg",
       verified: "github.com/ONLYOFFICE/DesktopEditors/"
@@ -16,9 +12,9 @@ cask "onlyoffice" do
   homepage "https://www.onlyoffice.com/"
 
   livecheck do
-    url "https://github.com/ONLYOFFICE/DesktopEditors/releases/"
-    strategy :page_match
-    regex(%r{v?(\d+(?:\.\d+)+)/ONLYOFFICE-#{arch}\.dmg}i)
+    url :url
+    regex(%r{href=["']?[^"' >]*?/tag/[^"' >]*?(\d+(?:\.\d+)+)["' >]}i)
+    strategy :github_latest
   end
 
   auto_updates true

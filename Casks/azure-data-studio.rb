@@ -1,6 +1,6 @@
 cask "azure-data-studio" do
-  version "1.37.0"
-  sha256 "310657581853e5ba4dc828e07b5085108e154337a45219c5456545d27860cb10"
+  version "1.40.1"
+  sha256 "f922da3606e7f62ab971cf4949c9ddcb3727692ca6d2efbce2657d48095c4aef"
 
   url "https://azuredatastudio-update.azurewebsites.net/#{version}/darwin/stable",
       verified: "azuredatastudio-update.azurewebsites.net/"

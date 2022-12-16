@@ -1,6 +1,6 @@
 cask "agenda" do
-  version "14.1.1,231"
-  sha256 "3ad2cc6e46ad53dace68816a04a7bcc992aa9b2f6a51b050b07d58d955ec2ac8"
+  version "16.1,261"
+  sha256 "ac020c982fa29c3ecac34b784f4ef4c93b98549d7312ca92e233ee76d9ce44b4"
 
   url "https://downloads.agenda.com/Agenda_#{version.csv.first}.zip"
   name "Agenda"
@@ -12,7 +12,7 @@ cask "agenda" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   app "Agenda.app"
 

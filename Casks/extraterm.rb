@@ -1,8 +1,8 @@
 cask "extraterm" do
-  version "0.64.0"
-  sha256 "f289799b3b91a9863bfebb28d6af9a15d474f953ac68d66f1bcdfe740d4fa977"
+  version "0.68.0"
+  sha256 "e3f45b3f85cb725aa5e0b39f618bb0236abab834bb8c8673304f4b710b4f4a47"
 
-  url "https://github.com/sedwards2009/extraterm/releases/download/v#{version}/extratermqt-#{version}-darwin-x64.zip",
+  url "https://github.com/sedwards2009/extraterm/releases/download/v#{version}/ExtratermQt_#{version}.dmg",
       verified: "github.com/sedwards2009/extraterm/"
   name "extraterm"
   desc "Swiss army chainsaw of terminal emulators"
@@ -13,7 +13,7 @@ cask "extraterm" do
     strategy :github_latest
   end
 
-  app "extratermqt-#{version}-darwin-x64/ExtratermQt.app"
+  app "ExtratermQt.app"
 
   zap trash: [
     "~/Library/Application Support/extraterm",

@@ -1,8 +1,8 @@
 cask "poedit" do
-  version "3.1,6458"
-  sha256 "0f8fdfb720e5e80acd94069193f74f15848c0221ce85cc2162b5fbd7e414e7ae"
+  version "3.2.2,6555"
+  sha256 "059a8726434b19a3661db324ef3004fd9943024687f701fb354573220cd9c260"
 
-  url "https://download.poedit.net/Poedit-#{version.major_minor}.zip"
+  url "https://download.poedit.net/Poedit-#{version.csv.first}.zip"
   name "Poedit"
   desc "Translation editor"
   homepage "https://poedit.net/"

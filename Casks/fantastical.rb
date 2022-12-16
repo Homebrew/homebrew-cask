@@ -1,6 +1,6 @@
 cask "fantastical" do
-  version "3.6.6,1454"
-  sha256 "bd91c006c35c6cdaadc53fd7be7dcef35016f42496d6aa0a6398daee1a29ffc1"
+  version "3.7.5,1544"
+  sha256 "9d862a8698968b277093f3416fe8f25c1f7dc6674360c483f0bc187978d390b1"
 
   url "https://cdn.flexibits.com/Fantastical_#{version.csv.first}.zip"
   name "Fantastical"
@@ -13,12 +13,15 @@ cask "fantastical" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :big_sur"
 
   app "Fantastical.app"
 
   uninstall launchctl: "com.flexibits.fantastical#{version.major}.mac.launcher",
-            quit:      "com.flexibits.fantastical#{version.major}.mac"
+            quit:      [
+              "85C27NK92C.com.flexibits.fantastical#{version.major}.mac.helper",
+              "com.flexibits.fantastical#{version.major}.mac",
+            ]
 
   zap trash: [
     "~/Library/Application Scripts/com.flexibits.fantastical#{version.major}.*",

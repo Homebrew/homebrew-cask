@@ -1,13 +1,9 @@
 cask "zettlr" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
   version "2.3.0"
-
-  if Hardware::CPU.intel?
-    sha256 "73ee8fbcf481b1cf68a3456f3c215be8a7d8835342220cc44fba6fa0440f37fc"
-  else
-    sha256 "0236d873d0d1477e480334fe8e68b795a8a7eb61cdbbf72d300143773e98955d"
-  end
+  sha256 arm:   "0236d873d0d1477e480334fe8e68b795a8a7eb61cdbbf72d300143773e98955d",
+         intel: "73ee8fbcf481b1cf68a3456f3c215be8a7d8835342220cc44fba6fa0440f37fc"
 
   url "https://github.com/Zettlr/Zettlr/releases/download/v#{version}/Zettlr-#{version}-#{arch}.dmg"
   name "Zettlr"
@@ -18,6 +14,7 @@ cask "zettlr" do
 
   zap trash: [
     "~/Library/Application Support/zettlr",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.zettlr.app.sfl2",
     "~/Library/Logs/Zettlr",
     "~/Library/Preferences/com.zettlr.app.plist",
     "~/Library/Saved Application State/com.zettlr.app.savedState",

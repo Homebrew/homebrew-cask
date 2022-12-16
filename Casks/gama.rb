@@ -1,13 +1,9 @@
 cask "gama" do
-  arch = Hardware::CPU.intel? ? "" : "_M1"
+  arch arm: "_M1"
 
-  version "1.8.2-RC1"
-
-  if Hardware::CPU.intel?
-    sha256 "1695e73f4d333a72e77ce1b1b74e68bbb21428403c397b6d2628109bfbbd2225"
-  else
-    sha256 "caa594a482abc148fff5a0235a12b6ddf9809e8851a7acf08057e482c67650c4"
-  end
+  version "1.8.2-RC2"
+  sha256 arm:   "d49eeb2122f171b4b0dd85777e20d1c5cd169a145bf128bdd5e5d269e21a197a",
+         intel: "64557bc82b5557dfde221d88f81bbba46e5ac1b66f1538561b72dd863578b6aa"
 
   url "https://github.com/gama-platform/gama.resources/releases/download/#{version}/GAMA_#{version}_MacOS#{arch}.dmg",
       verified: "github.com/gama-platform/gama.resources/"

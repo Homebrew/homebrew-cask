@@ -1,8 +1,11 @@
 cask "padloc" do
-  version "3.1.3"
-  sha256 "168dc11c372db5d9c09a0283cd19840d6dac6f76ec241ed400620103dd53b36a"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://github.com/padloc/padloc/releases/download/v#{version}/Padloc-#{version}.dmg",
+  version "4.2.0"
+  sha256 arm:   "1220695a3ddc63f5a4f6c602db78a07d903de1b8270faa1cf30e651acf059777",
+         intel: "2021b84b68d50553140f7f5ca47c747f56adbc0fa44c015d0eb55d0e7fcb10ba"
+
+  url "https://github.com/padloc/padloc/releases/download/v#{version}/padloc_#{version}_macos_electron_#{arch}.dmg",
       verified: "github.com/padloc/padloc/"
   name "Padloc"
   desc "Modern password manager"

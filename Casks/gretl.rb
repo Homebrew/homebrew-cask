@@ -1,6 +1,6 @@
 cask "gretl" do
-  version "2022a"
-  sha256 "d911dbeccfe586c373a3aaf6d79d65ea931f1d48d27a02398c587f44b36c756a"
+  version "2022c"
+  sha256 "54b34b2b51eda30b5eb7932ff25f641a1fd9a884bd25e40e60d8c6bb2fff9db1"
 
   url "https://downloads.sourceforge.net/gretl/gretl-#{version}-macos-intel.pkg",
       verified: "downloads.sourceforge.net/gretl/"

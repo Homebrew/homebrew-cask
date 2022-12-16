@@ -1,8 +1,8 @@
 cask "vagrant" do
-  version "2.2.19"
-  sha256 "6307be217813a11c9e106448bf232803031e434a08c8b2df8c62fdc9e8543845"
+  version "2.3.4"
+  sha256 "8fd27ac9b6faa7a42fcf4b74b25150301f957e9251a1f193d1195b31464fe054"
 
-  url "https://releases.hashicorp.com/vagrant/#{version}/vagrant_#{version}_x86_64.dmg",
+  url "https://releases.hashicorp.com/vagrant/#{version}/vagrant_#{version}_darwin_amd64.dmg",
       verified: "hashicorp.com/vagrant/"
   name "Vagrant"
   desc "Development environment"

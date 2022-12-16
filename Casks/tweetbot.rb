@@ -27,7 +27,10 @@ cask "tweetbot" do
 
   zap trash: [
     "~/Library/Application Scripts/com.tapbots.Tweetbot#{version.major}Mac",
+    "~/Library/Application Scripts/*.com.tapbots.Tweetbot#{version.major}Mac",
+    "~/Library/Application Scripts/com.tapbots.Tweetbot#{version.major}Mac.SharingExtension",
     "~/Library/Containers/com.tapbots.Tweetbot#{version.major}Mac",
+    "~/Library/Containers/com.tapbots.Tweetbot#{version.major}Mac.SharingExtension",
     "~/Library/Group Containers/*.com.tapbots.Tweetbot#{version.major}Mac",
   ]
 end

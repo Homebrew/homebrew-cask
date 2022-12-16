@@ -8,9 +8,7 @@ cask "jandi-statusbar" do
   homepage "https://github.com/techinpark/Jandi"
 
   livecheck do
-    url "https://github.com/techinpark/Jandi/releases"
-    strategy :page_match
-    regex(%r{href=.*?(\d+(?:\.\d+)+)/jandi\.dmg}i)
+    skip "No reliable way to get version info"
   end
 
   app "jandi.app"

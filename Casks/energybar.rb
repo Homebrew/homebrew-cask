@@ -4,15 +4,14 @@ cask "energybar" do
 
   url "https://github.com/billziss-gh/EnergyBar/releases/download/v#{version.major_minor}/EnergyBar-#{version}.zip"
   name "EnergyBar"
+  desc "Touch Bar widget application"
   homepage "https://github.com/billziss-gh/EnergyBar"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-    regex(%r{href=.*?/EnergyBar-(\d+(?:\.\d+)*)\.zip}i)
-  end
 
   depends_on macos: ">= :high_sierra"
 
   app "EnergyBar.app"
+
+  caveats do
+    discontinued
+  end
 end

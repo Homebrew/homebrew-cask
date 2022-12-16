@@ -1,15 +1,15 @@
 cask "plex-media-server" do
-  version "1.27.2.5929,a806c5905"
-  sha256 "44bc8b7576b0c71b60783714cc170eebf53fa9cafc425805ae5f9de0f9af0983"
+  version "1.30.0.6486,629d58034"
+  sha256 "0cebe3ad8d5fe2092ccc7148764915c2a9ad8f93b447f1c498328e74eee8d2b3"
 
-  url "https://downloads.plex.tv/plex-media-server-new/#{version.csv.first}-#{version.csv.second}/macos/PlexMediaServer-#{version.csv.first}-#{version.csv.second}-x86_64.zip"
+  url "https://downloads.plex.tv/plex-media-server-new/#{version.csv.first}-#{version.csv.second}/macos/PlexMediaServer-#{version.csv.first}-#{version.csv.second}-universal.zip"
   name "Plex Media Server"
   desc "Home media server"
   homepage "https://www.plex.tv/"
 
   livecheck do
     url "https://plex.tv/api/downloads/5.json"
-    regex(%r{href=.*?/PlexMediaServer-(\d+(?:\.\d+)*)-([\da-f]+)-x86_64\.zip}i)
+    regex(%r{href=.*?/PlexMediaServer-(\d+(?:\.\d+)*)-([\da-f]+)-universal\.zip}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end

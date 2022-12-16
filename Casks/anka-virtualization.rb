@@ -1,28 +1,30 @@
 cask "anka-virtualization" do
-  arch = Hardware::CPU.intel? ? "intel" : "arm"
+  arch arm: "-arm", intel: ""
+  livecheck_folder = on_arch_conditional arm: "arm", intel: "intel"
 
-  if Hardware::CPU.intel?
-    version "2.5.6.147"
-    sha256 "a2723999d02b4fc3d41aab7e9276463f1ccd95a1823068917264cced8d842bdb"
+  on_intel do
+    version "2.5.7.148"
+    sha256 "e600e8144f5ca5134aa94785bc9bbc567193b1065944573df9cc9daf7d8f796e"
     depends_on macos: ">= :big_sur"
-  else
-    version "3.0.1.144"
-    sha256 "04c39bdc570c95a3a0ab54d8335263d9ee53680d1c7b5952bd15e1dd1c87b681"
+  end
+  on_arm do
+    version "3.2.0.153"
+    sha256 "83d881b76136b64064fa6201906c75404e4df618360ca08b9765e39b890bf388"
     depends_on macos: ">= :monterey"
   end
 
-  url "https://downloads.veertu.com/anka/Anka-#{version}.pkg"
+  url "https://downloads.veertu.com/anka/Anka-#{version}#{arch}.pkg"
   name "Anka Virtualization"
   desc "CLI tool for managing and creating virtual machines"
   homepage "https://veertu.com/"
 
   livecheck do
-    url "https://veertu.com/downloads/anka-virtualization-#{arch}"
+    url "https://veertu.com/downloads/anka-virtualization-#{livecheck_folder}"
     strategy :header_match
-    regex(/Anka[._-]?v?(\d+(?:\.\d+)+)\.pkg/i)
+    regex(/Anka[._-]?v?(\d+(?:\.\d+)+)#{arch}\.pkg/i)
   end
 
-  pkg "Anka-#{version}.pkg"
+  pkg "Anka-#{version}#{arch}.pkg"
 
   uninstall launchctl: [
               "com.veertu.anka.ankakbd",

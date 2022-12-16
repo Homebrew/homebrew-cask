@@ -1,13 +1,9 @@
 cask "sonixd" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
-  version "0.15.2"
-
-  if Hardware::CPU.intel?
-    sha256 "7c31a36472b176a13087588ed6d6b80df983be1fbc4c92fa6692a4f10b275c50"
-  else
-    sha256 "35b7c9a1355d14867c1873411385ba401cfed6ba2941be2ce77143c2609ad62d"
-  end
+  version "0.15.3"
+  sha256 arm:   "f2382d64fa216c7fb7734043c77be5b45e1dd5f214da3cca0a5d3c34c2e7acda",
+         intel: "384889e0abccdd75771624f874d812a1ed49f50e2f51af03e0bcb286940059dc"
 
   url "https://github.com/jeffvli/sonixd/releases/download/v#{version}/Sonixd-#{version}-mac-#{arch}.dmg"
   name "Sonixd"

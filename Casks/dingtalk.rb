@@ -1,11 +1,14 @@
 cask "dingtalk" do
-  if Hardware::CPU.intel?
-    version "6.5.20.18"
-    sha256 "3cd4231e8fbc905083433406be400a8de478d5f79933cacee89e4b32e61a5786"
+  arch arm: "qd=2022mac-m1"
+
+  on_intel do
+    version "6.5.50.10"
+    sha256 "0da289463bd98773971de86a63ea73c9b71c8fc000592f7034ecf85f289f7c1f"
     url "https://dtapp-pub.dingtalk.com/dingtalk-desktop/mac_dmg/Release/DingTalk_v#{version}.dmg"
-  else
-    version "6.5.22.8"
-    sha256 "1cfd4d6e79d60e378417255fb102b8116113a507589e9cb27cd3a4ac462169e1"
+  end
+  on_arm do
+    version "6.5.52.7"
+    sha256 "5bdf2d4abe53ee3d37f7200dbc0794586639168bab470c923bb1887384196f42"
     url "https://dtapp-pub.dingtalk.com/dingtalk-desktop/mac_dmg/Release/M1-Beta/DingTalk-ARM64-#{version}.dmg"
   end
 
@@ -15,12 +18,7 @@ cask "dingtalk" do
   homepage "https://www.dingtalk.com/"
 
   livecheck do
-    livecheck_url = if Hardware::CPU.intel?
-      "https://www.dingtalk.com/mac/d/"
-    else
-      "https://www.dingtalk.com/mac/d/qd=2022mac-m1"
-    end
-    url livecheck_url
+    url "https://www.dingtalk.com/mac/d/#{arch}"
 
     strategy :header_match
   end

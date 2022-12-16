@@ -1,6 +1,6 @@
 cask "tinderbox" do
-  version "9.2.1"
-  sha256 "40f3b03175fa00628957151c26c2b4755ace3510825003a4c8a13dbbe44224f8"
+  version "9.5.1"
+  sha256 "f98ff75e600bd10ef1e5e80eb69bbdf5ae5d844c0fd7118ac877ca7e549987df"
 
   url "https://www.eastgate.com/download/tbx#{version.no_dots}.dmg"
   name "Tinderbox"

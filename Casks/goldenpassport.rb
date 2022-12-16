@@ -1,6 +1,6 @@
 cask "goldenpassport" do
-  version "0.1.6"
-  sha256 "1f6192700950275b0ebd9ab55d482516c1874efcdce85d97ce4dba1b374d06f4"
+  version "0.1.7"
+  sha256 "696a2cd0c6245502727b2cab0f0a2d92c636fca6e4c3c1fbfa289e152cadc46c"
 
   url "https://github.com/stanzhai/GoldenPassport/releases/download/v#{version}/GoldenPassport.zip"
   name "GoldenPassport"

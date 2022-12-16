@@ -1,7 +1,7 @@
 cask "kid3" do
   # NOTE: "3" is not a version number, but an intrinsic part of the product name (ID3 tags)
-  version "3.9.1"
-  sha256 "7228e15373e5f3c58d928bd0267dc51bc2f505b64ba86fddd627c6631b7bab37"
+  version "3.9.2"
+  sha256 "f29bdd539c2cdfae0f5a4ee10e567a23f882c6eba6cae788a10ee4d9d6391b9b"
 
   url "https://downloads.sourceforge.net/kid3/kid3-#{version}-Darwin.dmg",
       verified: "downloads.sourceforge.net/kid3/"

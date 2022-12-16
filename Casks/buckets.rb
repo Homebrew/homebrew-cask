@@ -1,6 +1,6 @@
 cask "buckets" do
-  version "0.66.3"
-  sha256 "ec509712d72034448f3e2763f681eeed9eeed7fdccd5ee8c9ea0683cd61c09e9"
+  version "0.68.0"
+  sha256 "54d86f8a8661ae7b1bbeb077af89643f39f2764710401fd60bd9857455237feb"
 
   url "https://github.com/buckets/application/releases/download/v#{version}/Buckets-#{version}.dmg",
       verified: "github.com/buckets/application/"

@@ -8,8 +8,8 @@ cask "rawtherapee" do
   homepage "https://rawtherapee.com/"
 
   livecheck do
-    url "https://github.com/Beep6581/RawTherapee"
-    strategy :git
+    url "https://rawtherapee.com/shared/builds/mac/"
+    regex(/href=.*?RawTherapee[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "RawTherapee.app"

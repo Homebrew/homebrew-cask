@@ -16,4 +16,8 @@ cask "ndm" do
     "~/Library/Preferences/net.720kb.ndm.plist",
     "~/Library/Saved Application State/net.720kb.ndm.savedState",
   ]
+
+  caveats do
+    discontinued
+  end
 end

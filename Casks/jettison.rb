@@ -1,6 +1,6 @@
 cask "jettison" do
-  version "1.8.4,3396"
-  sha256 "b69dde9d18d0f499789327123d9f26fa9742522364973a1ceed725620d1fd56b"
+  version "1.8.5,3603"
+  sha256 "cf0a44348f68921364b67b10969b82db853c607c2c10d45b62ea76b5d3fd43b2"
 
   url "https://stclairsoft.com/download/Jettison-#{version.csv.first}.dmg"
   name "Jettison"

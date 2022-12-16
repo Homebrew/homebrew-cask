@@ -1,8 +1,11 @@
 cask "gimp" do
-  version "2.10.32"
-  sha256 "e5547fc01168270bd1ba5380cff610966da229e44f311138f12168cb2f34d3c8"
+  arch arm: "arm64", intel: "x86_64"
 
-  url "https://download.gimp.org/pub/gimp/v#{version.major_minor}/osx/gimp-#{version}-x86_64.dmg"
+  version "2.10.32-1"
+  sha256 arm:   "4c3ae0ce49920fa3a8dd247888cd90fba8fd4a216f8759e8daa14754d25a5ed7",
+         intel: "5669ca1f0ce63b0b7c2efd1ac1998116e5ea367b376d453f8341a5d28093f87f"
+
+  url "https://download.gimp.org/gimp/v#{version.major_minor}/osx/gimp-#{version}-#{arch}.dmg"
   name "GIMP"
   name "GNU Image Manipulation Program"
   desc "Free and open-source image editor"
@@ -10,14 +13,16 @@ cask "gimp" do
 
   livecheck do
     url "https://www.gimp.org/downloads/"
-    regex(%r{href=.*?/gimp[._-]v?(\d+(?:\.\d+)+)[._-]x86[._-]64\.dmg}i)
+    regex(%r{href=.*?/gimp[._-]v?(\d+(?:\.\d+)+(-\d)?)[._-]#{arch}\.dmg}i)
   end
 
-  app "GIMP-#{version.major_minor}.app"
-  binary "#{appdir}/GIMP-#{version.major_minor}.app/Contents/MacOS/gimp"
+  conflicts_with cask: "homebrew/cask-versions/gimp-dev"
+
+  app "GIMP.app"
+  binary "#{appdir}/GIMP.app/Contents/MacOS/gimp"
 
   postflight do
-    set_permissions "#{appdir}/GIMP-#{version.major_minor}.app/Contents/MacOS/gimp", "a+rx"
+    set_permissions "#{appdir}/GIMP.app/Contents/MacOS/gimp", "a+rx"
   end
 
   zap trash: [
