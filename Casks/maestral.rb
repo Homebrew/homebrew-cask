@@ -8,6 +8,11 @@ cask "maestral" do
   desc "Open-source Dropbox client"
   homepage "https://maestral.app/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
