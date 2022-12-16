@@ -21,7 +21,10 @@ cask "ultimaker-cura" do
   zap trash: [
     "~/.cura",
     "~/Library/Application Support/cura",
+    "~/Library/Caches/Ultimaker B.V./Ultimaker-Cura",
+    "~/Library/Logs/cura",
     "~/Library/Preferences/nl.ultimaker.cura.dmg.plist",
+    "~/Library/Preferences/nl.ultimaker.cura.plist",
     "~/Library/Saved Application State/nl.ultimaker.cura.dmg.savedState",
   ]
 end

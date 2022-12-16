@@ -25,6 +25,9 @@ cask "boinc" do
     "~/Library/Caches/edu.berkeley.boinc",
     "~/Library/Preferences/BOINC Manager Preferences",
     "~/Library/Preferences/edu.berkeley.boinc.plist",
+    "~/Library/Saved Application State/edu.berkeley.boinc.savedState",
+    "~/Library/WebKit/edu.berkeley.boinc",
+    "/Library/Application Support/BOINC Data",
     "/Library/Screen Savers/BOINCSaver.saver",
   ]
 end
