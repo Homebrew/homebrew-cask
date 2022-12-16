@@ -1,8 +1,6 @@
 cask "spotify" do
   arch arm: "ARM64"
 
-  sha256 :no_check
-
   on_intel do
     version "1.2.0.1165,abf054ab,1083"
     sha256 "f53b3ad3ae186997636d1376f2a91972bc131feeb776b0bf8d47d318bbe904d7"
