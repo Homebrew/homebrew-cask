@@ -9,7 +9,7 @@ cask "anki" do
       verified: "github.com/ankitects/anki/"
 
   on_high_sierra :or_older do
-    sha256 "edc44e5862384bb1c419033267c78167809253090c0302f07114c00c223db07a"
+    sha256 "96c26b84e0045e295ee1d68e2b943f94f3feed0fc618f1cdbedb20ae00bc8a8f"
 
     url "https://github.com/ankitects/anki/releases/download/#{version}/anki-#{version}-mac-#{arch}-qt5.dmg",
         verified: "github.com/ankitects/anki/"
