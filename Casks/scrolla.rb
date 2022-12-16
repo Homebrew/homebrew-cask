@@ -2,7 +2,7 @@ cask "scrolla" do
   version "2828.1.0"
   sha256 :no_check
 
-  url "https://scrolla.app/releases/scrolla.zip"
+  url "https://scrolla.app/releases/Scrolla.zip"
   name "Scrolla"
   desc "Scroll with the keyboard using Vim motions"
   homepage "https://scrolla.app/"
