@@ -13,7 +13,7 @@ cask "molotov" do
 
   livecheck do
     url "https://desktop-auto-upgrade.molotov.tv/mac/#{arch_folder}manifest.json"
-    regex(%r{/Molotov-v?(\d+(?:\.\d+)+)#{arch}-mac\.zip}i)
+    regex(%r{/Molotov-v?(\d+(?:\.\d+)+)-mac\.zip}i)
   end
 
   app "Molotov.app"
