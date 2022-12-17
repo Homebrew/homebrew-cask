@@ -9,7 +9,7 @@ cask "scene-maestro" do
 
   livecheck do
     url :homepage
-    regex(/href=.*?scene[._-]maestro[._-]v?(\d+(?:\.\d+)+)\.zip/i)
+    regex(/href=.*?scene-maestro[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
   app "Scene Maestro.app"
