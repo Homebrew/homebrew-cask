@@ -4,7 +4,7 @@ cask "vero" do
 
   url "https://vero.co/download/desktop/beta/macos"
   name "vero"
-  desc "Ad-free, Algorithm-free Social."
+  desc "Ad-free, Algorithm-free Social"
   homepage "https://vero.co/"
 
   livecheck do
