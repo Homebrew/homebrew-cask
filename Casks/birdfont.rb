@@ -26,4 +26,9 @@ cask "birdfont" do
   depends_on macos: ">= :sierra"
 
   app "BirdFontNonCommercial.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/org.birdfont.birdfont",
+    "~/Library/Containers/org.birdfont.birdfont",
+  ]
 end
