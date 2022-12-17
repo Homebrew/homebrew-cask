@@ -8,11 +8,12 @@ cask "duplicacy-cli" do
   url "https://github.com/gilbertchen/duplicacy/releases/download/v#{version}/duplicacy_osx_#{arch}_#{version}",
       verified: "github.com/gilbertchen/duplicacy/"
   name "Duplicacy Command Line Version"
-  desc "Duplicacy is a new generation cross-platform cloud backup tool"
+  desc "Cloud backup tool"
   homepage "https://duplicacy.com/"
 
-  binary "duplicacy_osx_#{arch}_#{version}",
-         target: "duplicacy"
+  conflicts_with cask: "duplicacy"
+
+  binary "duplicacy_osx_#{arch}_#{version}", target: "duplicacy"
 
   zap trash: "~/.duplicacy"
 end
