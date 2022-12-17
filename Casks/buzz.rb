@@ -1,11 +1,16 @@
 cask "buzz" do
-  version "0.5.8"
-  sha256 "03383d814ad28cb9268dc01d5f6c9d92487382ee3459ebd58dec6aa35eee4a42"
+  version "0.6.4"
+  sha256 "0d883782511844dacd041ab7ea6736a6cf12a3dbb9ae5b94172ee82a403a5e47"
 
   url "https://github.com/chidiwilliams/buzz/releases/download/v#{version}/Buzz-#{version}-mac.dmg"
   name "buzz"
   desc "Transcribes and translates audio"
   homepage "https://github.com/chidiwilliams/buzz"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Buzz.app"
 

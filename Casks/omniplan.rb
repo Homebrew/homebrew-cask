@@ -16,8 +16,8 @@ cask "omniplan" do
     sha256 "157cbea0055a87b2c078c336ea9f5d9aaa9caa242c92265f410e5d7ac534883f"
     url "https://downloads.omnigroup.com/software/MacOSX/10.14/OmniPlan-#{version}.dmg"
   else
-    version "4.5.1"
-    sha256 "c5ab675ca72dcb87aa121deac291b393fc4c76519717796410d3e52bf56d17ed"
+    version "4.5.2"
+    sha256 "7612aeba84c0a3e7e840672a239ca42a522f96a98e70b57c059d25e70e5bde1d"
     url "https://downloads.omnigroup.com/software/macOS/11/OmniPlan-#{version}.dmg"
   end
 

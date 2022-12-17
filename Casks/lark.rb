@@ -2,12 +2,12 @@ cask "lark" do
   arch arm: "arm64", intel: "x64"
 
   on_intel do
-    version "5.24.11,9bc784e9"
-    sha256 "fecaf76456a9269f0abfe27f2b389ae57752d3a0dc6e509e13e78fe71e20e9f3"
+    version "5.25.8,b4d5300e"
+    sha256 "b652f4c51eaefbc54ece4ac72865783f013e9647c79c4a021c33a89a473ba130"
   end
   on_arm do
-    version "5.24.11,9688b129"
-    sha256 "dd10141bf77b7511bce09426bff115f34a9a96a2b92ac777b5d6847d96d34962"
+    version "5.25.8,d333f55e"
+    sha256 "35f6bc01d35cbe81f676cbe424146613d5e9752faff78798671a3e8a520c1df2"
   end
 
   url "https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/#{version.csv.second}/Lark-darwin_#{arch}-#{version.csv.first}-signed.dmg",

@@ -32,7 +32,7 @@ cask "mplabx-ide" do
 
   postflight do
     set_ownership staged_path.to_s
-    set_ownership "/Applications/microchip/mplabx"
+    set_ownership "/Applications/microchip/mplabx/#{version}"
   end
 
   uninstall script: {
@@ -41,5 +41,16 @@ cask "mplabx-ide" do
               input:      ["y", 3],
               sudo:       true,
             },
-            delete: "/Applications/microchip"
+            delete: [
+              "/Applications/microchip/mplabx/#{version}",
+              # The below version number needs to be updated
+              # manually each time this Cask is updated
+              "/Applications/microchip/mplabcomm/3.51.00",
+            ],
+            rmdir:  [
+              "/Applications/microchip/mplabx",
+              "/Applications/microchip/mplabcomm",
+            ]
+
+  zap trash: "/Applications/microchip"
 end

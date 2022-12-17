@@ -1,9 +1,9 @@
 cask "openlens" do
   arch arm: "-arm64"
 
-  version "6.2.4"
-  sha256 arm:   "a2f7b54fb35338db9e44f13975ea9f4499dfa568eb321c4993da207578f5b80e",
-         intel: "1b8c6287b077342925cebc978e7b005660925bcab75f0befebaeec60ea1c040a"
+  version "6.2.5"
+  sha256 arm:   "487d3232515069d71fca2e7506c449cb4aad3669e0f345d66272a97b5507702b",
+         intel: "edb95dd9c105ccdc5e64b94432175ad5812502eb8a1b36fa8a2bb6a2b1f3c00a"
 
   url "https://github.com/MuhammedKalkan/OpenLens/releases/download/v#{version}/OpenLens-#{version}#{arch}.dmg"
   name "OpenLens"

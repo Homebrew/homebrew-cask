@@ -1,6 +1,6 @@
 cask "kugoumusic" do
-  version "3.0.4"
-  sha256 "bbfb1fb9fc2f16eca871749b6471f282e4e47da8053facf05b3d7f9df9dfed80"
+  version "3.0.8"
+  sha256 "6e2a87e8bb3e3c102c4fbaf31ba97cbfb290f4fd5e23fb813a7e1c3ed35bc7a2"
 
   url "http://downmini.kugou.com/mac/Kugou_V#{version}.dmg"
   name "Kugou Music"
