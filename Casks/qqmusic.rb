@@ -22,7 +22,10 @@ cask "qqmusic" do
     "~/Library/Application Support/com.tencent.QQMusicMac",
     "~/Library/Caches/com.tencent.QQMusicMac",
     "~/Library/Containers/com.tencent.QQMusicMac",
+    "~/Library/HTTPStorages/com.tencent.QQMusicMac",
+    "~/Library/HTTPStorages/com.tencent.QQMusicMac.binarycookies",
     "~/Library/Preferences/com.tencent.QQMusicMac.plist",
     "~/Library/Saved Application State/com.tencent.QQMusicMac.savedState",
+    "~/Library/WebKit/com.tencent.QQMusicMac",
   ]
 end
