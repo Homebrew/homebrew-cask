@@ -14,5 +14,9 @@ cask "librepcb" do
 
   app "librepcb.app"
 
-  zap trash: "~/Library/Saved Application State/com.yourcompany.librepcb.savedState"
+  zap trash: [
+    "~/Library/Preferences/org.librepcb.LibrePCB.plist",
+    "~/Library/Saved Application State/com.yourcompany.librepcb.savedState",
+    "~/Library/Saved Application State/org.librepcb.LibrePCB.savedState",
+  ]
 end
