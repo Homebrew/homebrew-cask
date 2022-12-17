@@ -24,7 +24,10 @@ cask "brave-browser" do
 
   zap trash: [
     "~/Library/Application Support/BraveSoftware/Brave-Browser",
+    "~/Library/Caches/BraveSoftware",
+    "~/Library/Caches/com.brave.Browser",
     "~/Library/Preferences/com.brave.Browser.plist",
     "~/Library/Saved Application State/com.brave.Browser.savedState",
+    "~/Library/HTTPStorages/com.brave.Browser",
   ]
 end
