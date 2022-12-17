@@ -1,6 +1,6 @@
 cask "sioyek" do
-  version "1.5.0"
-  sha256 "07ea7a1b42a5a3f83fe08c3d6107fab62444675b067d02f1a34ad24697a320a7"
+  version "2.0.0"
+  sha256 "0f81831d4fa0d57e7e7e56a40ab6fa6488950b7d6a944aa29918be42cfc46b8a"
 
   url "https://github.com/ahrm/sioyek/releases/download/v#{version}/sioyek-release-mac.zip",
       verified: "github.com/ahrm/sioyek/"
