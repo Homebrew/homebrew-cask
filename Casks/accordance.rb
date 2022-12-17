@@ -1,9 +1,9 @@
 cask "accordance" do
   version "14.0.3"
-  sha256 "8b4cffd81f0b1895b7ae9dbe47a1bdbf1807e3046cab164906574d2a57dad893"
+  sha256 "97ab4841dfaa8c0dde7f8b24a5988e97e6738cf43cc2df4caae49f5ef779c2a0"
 
-  url "https://accordancefiles1.com/products/Accordance#{version.major}_installer.dmg",
-      verified: "accordancefiles1.com/"
+  url "https://aaeaa95e7a277e07438c-1bc4b418142835c9d827936172799c04.ssl.cf1.rackcdn.com/Acc_#{version}.zip",
+      verified: "aaeaa95e7a277e07438c-1bc4b418142835c9d827936172799c04.ssl.cf1.rackcdn.com/"
   name "Accordance Bible Software"
   desc "Bible study software"
   homepage "https://www.accordancebible.com/"
