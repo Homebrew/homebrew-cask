@@ -10,17 +10,12 @@ cask "vincelwt-chatgpt" do
   desc "Menu bar application for ChatGPT"
   homepage "https://github.com/vincelwt/chatgpt-mac"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   app "Chatgpt.app"
 
   zap trash: [
+    "~/Library/Application Scripts/chatgpt-mac",
     "~/Library/Caches/com.vincelwt.chatgptmac",
     "~/Library/Caches/com.vincelwt.chatgptmac.ShipIt",
     "~/Library/Preferences/com.vincelwt.chatgptmac.plist",
-    "~/Library/Application Scripts/chatgpt-mac",
   ]
 end
