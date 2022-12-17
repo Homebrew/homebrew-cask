@@ -26,8 +26,8 @@ cask "brave-browser" do
     "~/Library/Application Support/BraveSoftware/Brave-Browser",
     "~/Library/Caches/BraveSoftware",
     "~/Library/Caches/com.brave.Browser",
+    "~/Library/HTTPStorages/com.brave.Browser",
     "~/Library/Preferences/com.brave.Browser.plist",
     "~/Library/Saved Application State/com.brave.Browser.savedState",
-    "~/Library/HTTPStorages/com.brave.Browser",
   ]
 end
