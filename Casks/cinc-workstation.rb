@@ -1,6 +1,6 @@
 cask "cinc-workstation" do
-  version "22.6.973"
-  sha256 "23c30a66cacca88aab2aee03530dc1f0404c61ba27c69851ca105a2854111789"
+  version "22.10.1013"
+  sha256 "11064b253617fd62e27eb38324dc3cd7c60bbe65ab8d358d340deae64c039729"
 
   url "http://downloads.cinc.sh/files/stable/cinc-workstation/#{version}/mac_os_x/10.15/cinc-workstation-#{version}-1.x86_64.dmg"
   name "Cinc Workstation"

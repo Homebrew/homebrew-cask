@@ -1,13 +1,9 @@
 cask "zoom" do
-  arch = Hardware::CPU.intel? ? "" : "arm64/"
+  arch arm: "arm64/"
 
-  version "5.11.1.8356"
-
-  if Hardware::CPU.intel?
-    sha256 "ea6b47503272c94ad57bf548790f26d5aaee8c5ceade5d2edb61e26001fa448b"
-  else
-    sha256 "51e68267cc9d21dadb5db83570df6d4459eb1eb92296e1fab7646fa4fea79733"
-  end
+  version "5.12.9.13190"
+  sha256 arm:   "04d273e3c2b1d7b9779f810df1b5bc58bf0abd7751086a220a10639f1f405039",
+         intel: "50de8e48debd6e641f8936d2728417afe1463d0e0fb07d893d1154d540b56ea0"
 
   url "https://cdn.zoom.us/prod/#{version}/#{arch}Zoom.pkg"
   name "Zoom.us"
@@ -67,7 +63,6 @@ cask "zoom" do
     "~/Library/Logs/zoom.us",
     "~/Library/Logs/zoominstall.log",
     "~/Library/Logs/ZoomPhone",
-    "~/Library/Mobile Documents/iCloud~us~zoom~videomeetings",
     "~/Library/Preferences/us.zoom.airhost.plist",
     "~/Library/Preferences/us.zoom.caphost.plist",
     "~/Library/Preferences/us.zoom.Transcode.plist",

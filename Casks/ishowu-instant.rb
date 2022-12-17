@@ -1,6 +1,6 @@
 cask "ishowu-instant" do
-  version "1.4.10,1405"
-  sha256 "758c812bbc8ed09427de1c4c91501d954b541eb2fedb3902c5e42d79a510a735"
+  version "1.4.13,1427"
+  sha256 "c4ba92e5e8ac61e089679361cef2af1bd31ee275d5b78f9afd133491ea02e37c"
 
   url "https://www.shinywhitebox.com/downloads/instant/iShowU_Instant_#{version.csv.first}.dmg"
   name "iShowU Instant"

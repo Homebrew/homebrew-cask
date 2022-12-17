@@ -6,8 +6,8 @@ cask "sip" do
     version "2.4.1"
     sha256 "9e8e69b8874891fab4fcc44edfb9b6ff2e510a1f41c87e9faea6060fc3f33073"
   else
-    version "2.6"
-    sha256 "1d57b924534f43870f8713bf3cdd24837bcdef9afa9f5af83e8b7e5f82221b6b"
+    version "2.7.1"
+    sha256 "074c7a1b5e4ebfabdc43b6583a96da9dfaf02f1a93a468b616dc14833ea1705d"
   end
 
   url "https://sipapp.fra1.digitaloceanspaces.com/updates/v#{version.major}/sip-#{version}.dmg",

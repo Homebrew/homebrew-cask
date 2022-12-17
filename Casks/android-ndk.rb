@@ -1,6 +1,6 @@
 cask "android-ndk" do
-  version "24"
-  sha256 "9b67b1aec07aaf707ca167332982d3d86eff901df0843cefa2a3b347fb463333"
+  version "25b"
+  sha256 "fc41bab49d4c1fe9239bfd06e4eb7cda8348635aaa3568fec942f43a9d5eb04b"
 
   url "https://dl.google.com/android/repository/android-ndk-r#{version}-darwin.dmg",
       verified: "dl.google.com/android/repository/"
@@ -10,10 +10,8 @@ cask "android-ndk" do
 
   livecheck do
     url "https://developer.android.com/ndk/downloads"
-    regex(/Latest\s+r(\d+[a-z]?)\b(?!\s+Preview)/i)
+    regex(/Latest.*?r(\d+[a-z]?)\b(?!\s+Preview)/i)
   end
-
-  conflicts_with cask: "crystax-ndk"
 
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/ndk_exec.sh"

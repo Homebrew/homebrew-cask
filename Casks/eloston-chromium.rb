@@ -1,12 +1,13 @@
 cask "eloston-chromium" do
-  arch = Hardware::CPU.intel? ? "x86-64" : "arm64"
+  arch arm: "arm64", intel: "x86-64"
 
-  if Hardware::CPU.intel?
-    version "103.0.5060.53-1.1,1655884980"
-    sha256 "1003f91a00da4b3051c0ffc87913efb267ae9b799421b1a82ba506ff08e46910"
-  else
-    version "103.0.5060.53-1.1,1655922667"
-    sha256 "9da5ef44539f75ae656eac5f03156a02b7c9554804af355d6058b0f69460bba1"
+  on_intel do
+    version "108.0.5359.99-1.1,1670691018"
+    sha256 "950e0c1e4943b9c178cadde22d3e178c07f6aff7f4a54f81a39a0941eff2c099"
+  end
+  on_arm do
+    version "108.0.5359.99-1.1,1670751721"
+    sha256 "c491ad69fc7572b798d28b15cafd2697d0dfa4366152a682f84444baba361248"
   end
 
   url "https://github.com/kramred/ungoogled-chromium-macos/releases/download/#{version.csv.first}_#{arch}__#{version.csv.second}/ungoogled-chromium_#{version.csv.first}_#{arch}-macos.dmg",
@@ -16,15 +17,12 @@ cask "eloston-chromium" do
   homepage "https://ungoogled-software.github.io/ungoogled-chromium-binaries/"
 
   livecheck do
-    url "https://github.com/kramred/ungoogled-chromium-macos/releases/"
-    strategy :page_match do |page|
-      match = page.match(%r{
-        releases/download/(\d+(?:[.-]\d+)+)[._-]#{arch}[._-]{2}(\d+)/
-        ungoogled[._-]chromium[._-](\d+(?:[.-]\d+)+)[._-]#{arch}[._-]macos\.dmg
-      }xi)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
+    url "https://github.com/kramred/ungoogled-chromium-macos/releases?q=prerelease%3Afalse"
+    regex(%r{href=["']?[^"' >]*?/tree/v?(\d+(?:[.-]\d+)+)(?:[._-]#{arch})?(?:[._-]+?(\d+(?:\.\d+)*))?["' >]}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map do |match|
+        (match.length > 1) ? "#{match[0]},#{match[1]}" : match[0]
+      end
     end
   end
 

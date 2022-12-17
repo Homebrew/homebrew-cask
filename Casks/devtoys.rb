@@ -1,6 +1,6 @@
 cask "devtoys" do
-  version "0.0.10"
-  sha256 "176393a804c90d2aa9155e73b0ad0599380e05dd44d5ec2b35265687e6ffd080"
+  version "0.0.11"
+  sha256 "84f6b354546b1731204deb48daed53caacab277b524bcdd8d5e47d53fc47b413"
 
   url "https://github.com/ObuchiYuki/DevToysMac/releases/download/#{version}/DevToys.app.zip"
   name "DevToys"

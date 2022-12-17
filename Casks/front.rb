@@ -1,13 +1,9 @@
 cask "front" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
-  version "3.35.21"
-
-  if Hardware::CPU.intel?
-    sha256 "1a9bd64ad0149daa731c922561624740ea8bf6b9df51ca409c63262550e30647"
-  else
-    sha256 "bd53faf197401e967ae9b45e11abbcbaca10b0ceae20c54681030da68e4db5d0"
-  end
+  version "3.39.22"
+  sha256 arm:   "a7a66819f50bc243962728f8762775a06422489ce7e3b9e793db22dc0cd82ca5",
+         intel: "bf07d47ddcbb2ff962d9ca9f717ba958d39a6143b491ba0d9221cd047cf57602"
 
   url "https://dl.frontapp.com/desktop/builds/#{version}/Front-#{version}-#{arch}.zip",
       verified: "dl.frontapp.com/desktop/builds"

@@ -1,8 +1,8 @@
 cask "vnote" do
-  version "3.13.1"
-  sha256 "a07e31e1a39bac5bd535f84d75bc76147e194b955634970a803e33a7e7dbbab1"
+  version "3.15.1"
+  sha256 "846110bf9b2eb804dba2038ca7318fa99675330f9cac538f6e455ad0f99b9035"
 
-  url "https://github.com/vnotex/vnote/releases/download/v#{version}/vnote-mac-x64_v#{version}.zip",
+  url "https://github.com/vnotex/vnote/releases/download/v#{version}/vnote-mac-x64-qt5.15.2_v#{version}.dmg",
       verified: "github.com/vnotex/vnote/"
   name "VNote"
   desc "Note-taking platform"

@@ -1,13 +1,9 @@
 cask "docker" do
-  arch = Hardware::CPU.intel? ? "amd64" : "arm64"
+  arch arm: "arm64", intel: "amd64"
 
-  version "4.10.1,82475"
-
-  if Hardware::CPU.intel?
-    sha256 "8be8e5245d6a8dbf7b8cb580fb7d99f04cc143c95323695c0d9be4f85dd60b0e"
-  else
-    sha256 "b3d4ef222325bde321045f3b8d946c849cd2812e9ad52a801000a95edb8af57b"
-  end
+  version "4.15.0,93002"
+  sha256 arm:   "fc8609d57fb8c8264122f581c0f66497e46e171f8027d85d90213527d6226362",
+         intel: "bee41d646916e579b16b7fae014e2fb5e5e7b5dbaf7c1949821fd311d3ce430b"
 
   url "https://desktop.docker.com/mac/main/#{arch}/#{version.csv.second}/Docker.dmg"
   name "Docker Desktop"
@@ -31,6 +27,7 @@ cask "docker" do
     hyperkit
     kubernetes-cli
   ]
+  depends_on macos: ">= :catalina"
 
   app "Docker.app"
   binary "#{appdir}/Docker.app/Contents/Resources/etc/docker.bash-completion",

@@ -8,6 +8,7 @@ cask "betterdummy" do
   homepage "https://github.com/waydabber/BetterDummy"
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "BetterDummy.app"
 

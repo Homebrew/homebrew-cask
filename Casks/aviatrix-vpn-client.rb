@@ -9,8 +9,8 @@ cask "aviatrix-vpn-client" do
   homepage "https://docs.aviatrix.com/Downloads/samlclient.html"
 
   livecheck do
-    url :homepage
-    regex(/>\s*Latest\s*version:\s*(\d+(?:\.\d+)+)/i)
+    url "https://read.docs.aviatrix.com/HowTos/Aviatrix_VPN_Client_Release_Notes.html"
+    regex(/dt>(\d+(?:\.\d+)+)/i)
   end
 
   pkg "AVPNC_mac.pkg"

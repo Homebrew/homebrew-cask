@@ -1,6 +1,6 @@
 cask "banksiagui" do
-  version "0.54a"
-  sha256 "1bd1b1526f0431b086f0480d4e10887601c6b4a514e954fb0c46971150286970"
+  version "0.55"
+  sha256 "4917730ce916905fa92b97733665f11cb88a85ab80f59bda6e48bd57fed4e210"
 
   url "https://banksiagui.com/dl/BanksiaGui-#{version}-mac.zip"
   name "BanksiaGui"

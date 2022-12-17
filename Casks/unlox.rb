@@ -3,10 +3,14 @@ cask "unlox" do
   sha256 :no_check
 
   url "https://unlox.it/download/"
-  appcast "https://unlox.it/download/update.php"
   name "Unlox"
   desc "Unlock your computer with your fingerprint"
   homepage "https://unlox.it/get"
+
+  livecheck do
+    url "https://unlox.it/download/update.php"
+    strategy :sparkle, &:version
+  end
 
   depends_on macos: ">= :high_sierra"
 

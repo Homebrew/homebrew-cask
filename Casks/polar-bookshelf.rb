@@ -8,10 +8,9 @@ cask "polar-bookshelf" do
   desc "Integrated reading environment"
   homepage "https://getpolarized.io/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   app "Polar.app"
+
+  caveats do
+    discontinued
+  end
 end

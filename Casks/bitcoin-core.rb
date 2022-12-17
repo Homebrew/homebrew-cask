@@ -1,13 +1,9 @@
 cask "bitcoin-core" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
+  arch arm: "arm64", intel: "x86_64"
 
-  version "23.0"
-
-  if Hardware::CPU.intel?
-    sha256 "52eefbaf8cfd292822e470a48a51e1eb51081d43a0a16db7441f34a017ff6097"
-  else
-    sha256 "a3059280451d17a77d2260e4671c884be93a14dbff6b6cd19a3c9c8c54421e97"
-  end
+  version "24.0.1"
+  sha256 arm:   "4cc2fe2e2f5e6068ecbf922564f2356a5388e4d00d8f852062f589b9577a21de",
+         intel: "0c3359c6700b30d0973cb6baa3dd93933e772ab56ed5eebcf509249d6c9f8b34"
 
   url "https://bitcoincore.org/bin/bitcoin-core-#{version}/bitcoin-#{version}-#{arch}-apple-darwin.dmg"
   name "Bitcoin Core"
@@ -16,7 +12,7 @@ cask "bitcoin-core" do
 
   livecheck do
     url "https://github.com/bitcoin/bitcoin"
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    strategy :github_latest
   end
 
   # Renamed for consistency: app name is different in the Finder and in a shell.

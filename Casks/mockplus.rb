@@ -1,8 +1,8 @@
 cask "mockplus" do
-  version "3.6.2.2"
-  sha256 "dfae251a12ab7b1b41e269827f31c28a4e251ebfccf6884c904e9c923366f48a"
+  version "3.7.1.0"
+  sha256 "f9ac9457ed78346be7bd4513e1dfacb0ef730331128f3d6c43a787bfe4a96a70"
 
-  url "https://d3h2k7ug3o5pb3.cloudfront.net/software/macos/MockplusClassic_v#{version}_auto.dmg",
+  url "https://d3h2k7ug3o5pb3.cloudfront.net/software/macos/MockplusClassic_v#{version}.zip",
       verified: "d3h2k7ug3o5pb3.cloudfront.net/software/macos/"
   name "Mockplus"
   name "摩客"

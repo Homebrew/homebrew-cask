@@ -1,5 +1,5 @@
 cask "wormhole" do
-  version "1.5.9"
+  version "1.6.1"
   sha256 :no_check
 
   url "https://files.octopusgame.com/os/WormholeInstaller.dmg",

@@ -1,6 +1,6 @@
 cask "berrycast" do
-  version "0.36.3"
-  sha256 "615eb55c6319c41a246b6022ce123af60d81572308c9d4fc2719901a1398b630"
+  version "0.36.9"
+  sha256 "1f062bbe64ba61587489cecd506b6f636e2bcf5c33cc1ff2574a37f659e923d6"
 
   url "https://media.berrycast.app/desktop-installer/Berrycast-#{version}-latest.dmg",
       verified: "media.berrycast.app/"

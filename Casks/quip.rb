@@ -1,6 +1,6 @@
 cask "quip" do
-  version "7.63.1"
-  sha256 "5154e1bbc6f978c0a377c70c4a2866b02a406c1e8183e1618a97ed8386de3a4f"
+  version "7.73.0"
+  sha256 "34bd68a1a6a3e46ec89a22dac9868e3170031579090e27ef2acd5ffb8da9e9cb"
 
   url "https://quip-clients.com/macosx_#{version}.dmg",
       verified: "quip-clients.com/"

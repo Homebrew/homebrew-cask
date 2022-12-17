@@ -1,15 +1,11 @@
 cask "shimonote" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
-  version "2.5.9,92910e9"
+  version "3.1.1,6d78b4a"
+  sha256 arm:   "ec741ed9d38b2df97925c4ea001c4d71a00dc5a5fd58b60cc1fd256fc36fa6d8",
+         intel: "13686d576d2fffc6438a803949f8f954613ef5723f0d198308b99b8ac4bdf9ac"
 
-  if Hardware::CPU.intel?
-    sha256 "f367a7944af30d68e79652cf615b4a0f1d354c87fb9851518bea19bec0c88072"
-  else
-    sha256 "32b6f98e5bc205df0937bb55be87c0fd0d2a879c02d0b642a795d2fe6725dc7d"
-  end
-
-  url "https://as.smvm.cn/panther/shimo/release/darwin/#{arch}/\%e7\%9f\%b3\%e5\%a2\%a8\%e6\%96\%87\%e6\%a1\%a3_v#{version.csv.first}-release.#{version.csv.second}.shimo_darwin-#{arch}.zip",
+  url "https://as.smvm.cn/panther/shimo/release/darwin/#{arch}/%e7%9f%b3%e5%a2%a8%e6%96%87%e6%a1%a3_v#{version.csv.first}-release.#{version.csv.second}.shimo_darwin-#{arch}.zip",
       verified: "as.smvm.cn/panther/shimo/release/darwin/"
   name "Shimonote"
   desc "Document editor"

@@ -1,5 +1,5 @@
 cask "name-mangler" do
-  version "3.7.3,3327"
+  version "3.8,3339"
   sha256 :no_check
 
   url "https://manytricks.com/download/namemangler"

@@ -1,6 +1,6 @@
 cask "obs-websocket" do
-  version "5.0.0"
-  sha256 "f7cb0dfc2a9cfa2cdd9793ec28ee9fdab79d6a4fe339a95a2a602133bc5cd6ad"
+  version "5.0.1"
+  sha256 "baf54b5dad9bc355c3af960ce94ddf8e88ed86c7d23d86e41baa8377cb1d4d06"
 
   url "https://github.com/obsproject/obs-websocket/releases/download/#{version}/obs-websocket-#{version}-macOS.pkg"
   name "obs-websocket"

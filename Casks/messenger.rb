@@ -1,18 +1,15 @@
 cask "messenger" do
-  version "153.17.110,374858241"
-  sha256 "0deaac01eb5d537b168a220970787789320f94a1efd795d61aee826bd7b3772f"
+  version "171.0.0.29.105,426844812"
+  sha256 :no_check
 
-  url "https://www.facebook.com/messenger/desktop/update/#{version.csv.second}.zip",
-      verified: "facebook.com/messenger/desktop/"
+  url "https://www.messenger.com/messenger/desktop/downloadV2/?platform=mac"
   name "Facebook Messenger"
   desc "Native desktop app for Messenger (formerly Facebook Messenger)"
   homepage "https://www.messenger.com/desktop"
 
   livecheck do
-    url "https://www.facebook.com/messenger/desktop/update/latest-mac.yml"
-    strategy :electron_builder do |yml|
-      "#{yml["version"]},#{yml["path"][%r{/(\d+)\.zip}i, 1]}"
-    end
+    url "https://www.facebook.com/messenger/desktop/zeratul/update.xml?target=zeratul&platform=mac"
+    strategy :sparkle
   end
 
   auto_updates true

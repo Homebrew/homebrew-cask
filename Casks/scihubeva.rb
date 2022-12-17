@@ -1,6 +1,6 @@
 cask "scihubeva" do
-  version "5.1.2"
-  sha256 "73c0bc514318f79a7ed58b41c6c99ffe392426bd81979fc464e4b83a882e0a66"
+  version "6.0.0"
+  sha256 "3aa3e0fc66a3231d3848bd601b8d50737c389a59c24a75d7f0d341a353fd4c9e"
 
   url "https://github.com/leovan/SciHubEVA/releases/download/v#{version}/SciHubEVA-v#{version}.dmg"
   name "SciHubEVA"

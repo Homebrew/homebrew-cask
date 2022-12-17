@@ -1,6 +1,6 @@
 cask "doughnut" do
-  version "1.1.1"
-  sha256 "e50a64f6325bc88378f04848213ff745360d6a84a7533e7ad93b5abe53015ba9"
+  version "2.0.1"
+  sha256 "56e2a41087ee9793b667feaa1bef2e96e20cee6ff7cd8bee4a9acbd1ca1e8aeb"
 
   url "https://github.com/dyerc/Doughnut/releases/download/v#{version}/Doughnut-#{version}.dmg"
   name "Doughnut"

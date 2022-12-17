@@ -1,13 +1,9 @@
 cask "beekeeper-studio" do
-  version "3.5.1"
+  arch arm: "-arm64"
 
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
-
-  if Hardware::CPU.intel?
-    sha256 "e40e35720560caca55567abc9e26c4371541889b8cb94b789fb05842540c0508"
-  else
-    sha256 "528603085263f60d3337cab6c8a6ad465173431eda6979d927c4241a611e897e"
-  end
+  version "3.7.10"
+  sha256 arm:   "d5d12dc763c507419ae3d0959432ce4c2394ccd41c034cb6e76f3ab4f36c0d19",
+         intel: "990ecdbe1f44ceb574d65ee03d7f297f09f1acfa0d638246dea9928781d8b151"
 
   url "https://github.com/beekeeper-studio/beekeeper-studio/releases/download/v#{version}/Beekeeper-Studio-#{version}#{arch}.dmg",
       verified: "github.com/beekeeper-studio/beekeeper-studio/"

@@ -1,6 +1,6 @@
 cask "pktriot" do
-  version "0.14.1"
-  sha256 "0125326a08181dd3682f1e0f60f9288e7abcd948a5ba1b38e6e256a1c7d700aa"
+  version "0.15.0"
+  sha256 "bab8fb1d1973df536bf77bd184567b561bc19180324420da8d40380d4dfb6c9b"
 
   url "https://download.packetriot.com/macos/pktriot-#{version}.macos.tar.gz"
   name "pktriot"

@@ -1,6 +1,6 @@
 cask "neteasemusic" do
-  version "2.3.8.872"
-  sha256 "53f2b9265056533fe5416386846ae1f946c4af95b76ef05eedcdaeef236ce4b8"
+  version "2.3.12_956"
+  sha256 "11d34c281c38be1a728b5ec562a665d39517b5d4e26ecc51e3e8b34cab7e6f33"
 
   url "https://d1.music.126.net/dmusic/NeteaseMusic_#{version}_web.dmg",
       verified:   "d1.music.126.net/",
@@ -16,6 +16,7 @@ cask "neteasemusic" do
   livecheck do
     url "https://music.163.com/api/osx/download/latest"
     strategy :header_match
+    regex(/NeteaseMusic[._-]v?(\d+(?:[._]\d+)+)_web/i)
   end
 
   depends_on macos: ">= :sierra"

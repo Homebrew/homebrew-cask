@@ -1,6 +1,6 @@
 cask "airtool" do
-  version "2.3.7,15"
-  sha256 "e2dc413053109e3af40ec7b3e6a15101735ba79988237a300381563d475af47c"
+  version "2.4.2,18"
+  sha256 "3c12a07bf1960d1f66fa35d4dbaf5093ee3863e44f428dc83945440d7b3fb0fd"
 
   url "https://www.intuitibits.com/downloads/Airtool_#{version.csv.first}.pkg"
   name "Airtool"

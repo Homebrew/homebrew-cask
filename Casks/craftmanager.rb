@@ -1,5 +1,5 @@
 cask "craftmanager" do
-  version "1.2.4,406"
+  version "1.3.2,495"
   sha256 :no_check
 
   url "https://craft-assets.invisionapp.com/CraftManager/production/CraftManager.zip"
@@ -13,7 +13,7 @@ cask "craftmanager" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "CraftManager.app"
 

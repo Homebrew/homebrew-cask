@@ -4,7 +4,12 @@ cask "patchwork" do
 
   url "https://github.com/ssbc/patchwork/releases/download/v#{version}/Patchwork-#{version}.dmg"
   name "Patchwork"
+  desc "Decentralized messaging and sharing app using Secure Scuttlebutt"
   homepage "https://github.com/ssbc/patchwork"
 
   app "Patchwork.app"
+
+  caveats do
+    discontinued
+  end
 end

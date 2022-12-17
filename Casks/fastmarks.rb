@@ -1,6 +1,6 @@
 cask "fastmarks" do
-  version "1.1.0,5"
-  sha256 "fbcb15f2b78e471022769039fbaa7fd20185533891f06d5820fc5158230def8e"
+  version "1.2,7"
+  sha256 "de741937b2b45cbcc6e7e4be265a82c5413e2416481f3346707bd8910836e2f2"
 
   url "https://get.retina.studio/fastmarks/fastmarks_#{version.csv.second}.zip"
   name "Fastmarks"

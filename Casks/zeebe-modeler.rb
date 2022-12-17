@@ -9,4 +9,8 @@ cask "zeebe-modeler" do
   homepage "https://zeebe.io/"
 
   app "Zeebe Modeler.app"
+
+  caveats do
+    discontinued
+  end
 end

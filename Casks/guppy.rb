@@ -10,4 +10,8 @@ cask "guppy" do
   app "Guppy.app"
 
   zap trash: "~/Library/Application Support/Guppy"
+
+  caveats do
+    discontinued
+  end
 end

@@ -1,6 +1,6 @@
 cask "tailscale" do
-  version "1.26.2"
-  sha256 "d0bb43f7e9974236f1679d1bb84893f40f6afc7b62b4858e7fd963d04348b757"
+  version "1.34.1"
+  sha256 "d2f6276e3e2eb507892a5230a5eab75acd304def3c2e8d40c72a412be4962dc6"
 
   url "https://pkgs.tailscale.com/stable/Tailscale-#{version}-macos.zip"
   name "Tailscale"
@@ -12,7 +12,21 @@ cask "tailscale" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
+  conflicts_with formula: "tailscale"
+  depends_on macos: ">= :catalina"
+
   app "Tailscale.app"
+  # shim script (https://github.com/caskroom/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/tailscale.wrapper.sh"
+  binary shimscript, target: "tailscale"
+
+  preflight do
+    File.write shimscript, <<~EOS
+      #!/bin/sh
+      exec '#{appdir}/Tailscale.app/Contents/MacOS/Tailscale' "$@"
+    EOS
+  end
 
   uninstall login_item: "Tailscale",
             quit:       "io.tailscale.ipn.macsys"

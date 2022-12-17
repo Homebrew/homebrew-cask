@@ -1,13 +1,9 @@
 cask "prowlarr" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
-  version "0.4.2.1879"
-
-  if Hardware::CPU.intel?
-    sha256 "cd7a2870c65c1028b1ab3bcb036c654d42d8629d8f13e2ef786c9b93e1d82a15"
-  else
-    sha256 "256279aebd7b293c7f1dbb8335574a7dd518e76da077a0885361b4b8b8bf0d0b"
-  end
+  version "0.4.10.2111"
+  sha256 arm:   "060d968c21103fff88c4770f2edf281624d5f53856c34a742cba51340d5425f5",
+         intel: "8fdee05c689666c964faf4d223d8053bc120344e6edd24f1f1d74fdb9f4d6149"
 
   url "https://github.com/Prowlarr/Prowlarr/releases/download/v#{version}/Prowlarr.develop.#{version}.osx-app-core-#{arch}.zip",
       verified: "github.com/Prowlarr/Prowlarr/"

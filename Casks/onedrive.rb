@@ -1,6 +1,6 @@
 cask "onedrive" do
-  version "22.121.0605.0002"
-  sha256 "dc55a6e695fa69a308e6178019a7f0b2d2a225fb326fa92d4da3c679ced1b90d"
+  version "22.238.1114.0002"
+  sha256 "0be9f0c997b05f90b01ed2a6837de34889f739f4dc74e177e492addab38484d4"
 
   url "https://oneclient.sfx.ms/Mac/Prod/#{version}/universal/OneDrive.pkg",
       verified: "oneclient.sfx.ms/Mac/Prod/"
@@ -24,6 +24,7 @@ cask "onedrive" do
               "com.microsoft.OneDriveStandaloneUpdater",
               "com.microsoft.OneDriveStandaloneUpdaterDaemon",
               "com.microsoft.OneDriveUpdaterDaemon",
+              "com.microsoft.SyncReporter",
             ],
             pkgutil:   "com.microsoft.OneDrive",
             quit:      [

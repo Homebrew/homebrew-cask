@@ -1,6 +1,6 @@
 cask "retroarch" do
-  version "1.10.3"
-  sha256 "d957c59f5f23b4f8daf88108533d1b6f3ee0b43c82e37a2e75dfa3437a7fcd30"
+  version "1.14.0"
+  sha256 "543740daefdbc28e2378ca32551a4bbd3f5c9f0d99108192c557875f5cfaf195"
 
   url "https://buildbot.libretro.com/stable/#{version}/apple/osx/x86_64/RetroArch.dmg"
   name "RetroArch"

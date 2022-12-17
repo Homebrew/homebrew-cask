@@ -1,8 +1,8 @@
 cask "nuclino" do
-  version "1.5.0"
-  sha256 "3558cdd638c3bf3a2cf5130267f092960389050ea5336e133d8e66154a4ba1c3"
+  version "1.6.4"
+  sha256 "74c351a3e3b4e3c37e1fa9ef0cd9a8af13a36ea3e75daf3f397002bd52d68f60"
 
-  url "https://s3.eu-central-1.amazonaws.com/repository.nuclino.com/mac/Nuclino-#{version}.dmg",
+  url "https://s3.eu-central-1.amazonaws.com/repository.nuclino.com/mac/Nuclino-#{version}-x64.dmg",
       verified: "s3.eu-central-1.amazonaws.com/repository.nuclino.com/"
   name "Nuclino"
   desc "Collaborative wiki and knowledgebase"

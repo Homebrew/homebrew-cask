@@ -1,23 +1,18 @@
 cask "ogdesign-eagle" do
-  arch = Hardware::CPU.intel? ? "build" : "M1-build"
+  arch arm: "M1-"
 
-  version "3.0,5"
+  version "3.0,30"
+  sha256 arm:   "52d5b1d65282a53a7b3ae946f4479e1f798096be6adf0bfc26e12a1c52c30521",
+         intel: "d781e77225c9a967b91fad59c290872d90a2e64cbbe834c71b2bbeb3942cfcd8"
 
-  if Hardware::CPU.intel?
-    sha256 "dff7bca95f56e3ac94770df9d2caf8ed01066d39215e218379550a8804353b4e"
-  else
-    sha256 "1f8670cbec7625e8fb8d34a25e1fa2981489b41986aee877e37856fddaa152ed"
-  end
-
-  url "https://eagleapp.s3-accelerate.amazonaws.com/releases/Eagle-#{version.csv.first}-#{arch}#{version.csv.second}.dmg",
-      verified: "eagleapp.s3-accelerate.amazonaws.com/"
+  url "https://r2-app.eagle.cool/releases/Eagle-#{version.csv.first}-#{arch}build#{version.csv.second}.dmg"
   name "Eagle"
   desc "Organize all your reference images in one place"
   homepage "https://eagle.cool/macOS"
 
   livecheck do
     url "https://eagle.cool/check-for-update"
-    regex(/Eagle[._-]v?(\d+(?:\.\d+)+)-#{arch}(\d+(?:\.\d+)*)\.dmg/i)
+    regex(/Eagle[._-]v?(\d+(?:\.\d+)+)-#{arch}build(\d+(?:\.\d+)*)\.dmg/i)
     strategy :page_match do |page, regex|
       match = page.match(regex)
       next if match.blank?

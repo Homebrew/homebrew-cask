@@ -1,6 +1,6 @@
 cask "alfred" do
-  version "4.6.7,1305"
-  sha256 "9f30310921bd7a7d52d321599674fab916dce36762711e5ad3830d233dcca5aa"
+  version "5.0.6,2110"
+  sha256 "ce2638d6bf2f169e89f5515d51c92cdd2db8a9fd687462de41fc0b113bf34b9a"
 
   url "https://cachefly.alfredapp.com/Alfred_#{version.csv.first}_#{version.csv.second}.dmg"
   name "Alfred"
@@ -18,10 +18,12 @@ cask "alfred" do
   end
 
   auto_updates true
+  depends_on macos: ">= :mojave"
 
   app "Alfred #{version.major}.app"
 
-  uninstall quit: "com.runningwithcrayons.Alfred"
+  uninstall login_item: "Alfred#{version.major}",
+            quit:       "com.runningwithcrayons.Alfred"
 
   zap trash: [
     "~/Library/Application Support/Alfred",

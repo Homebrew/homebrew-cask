@@ -5,7 +5,12 @@ cask "soundcleod" do
   url "https://github.com/salomvary/soundcleod/releases/download/v#{version}/SoundCleod-#{version}.dmg",
       verified: "github.com/salomvary/soundcleod/"
   name "SoundCleod"
+  desc "Unofficial SoundCloud desktop app"
   homepage "https://soundcleod.com/"
 
   app "SoundCleod.app"
+
+  caveats do
+    discontinued
+  end
 end

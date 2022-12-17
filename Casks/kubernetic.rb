@@ -1,6 +1,6 @@
 cask "kubernetic" do
-  version "4.2.0"
-  sha256 "bac0c8b17f84a5abc1d9895c26db1a13a28be2982241eb42f7ebf9730a1e4446"
+  version "4.4.0"
+  sha256 "176f3210c3b53b882dee831af622010cf1ba74b54d4d71cdfe4ab4bc4eef17ed"
 
   url "https://kubernetic.s3.amazonaws.com/Kubernetic-#{version}.dmg",
       verified: "kubernetic.s3.amazonaws.com/"

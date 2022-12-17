@@ -4,8 +4,8 @@ cask "iterm2" do
     version "3.3.12"
     sha256 "6811b520699e8331b5d80b5da1e370e0ed467e68bc56906f08ecfa986e318167"
   else
-    version "3.4.16"
-    sha256 "b0941a008ead9f680e9f4937698b9b849acbb4e30ed1f3f100e3616cd6d49c0b"
+    version "3.4.18"
+    sha256 "76727347acb1f2856f9b6702c6ba486594da87f857afec3ee4cba48f7cac219c"
   end
 
   url "https://iterm2.com/downloads/stable/iTerm2-#{version.dots_to_underscores}.zip"
@@ -28,7 +28,7 @@ cask "iterm2" do
     "homebrew/cask-versions/iterm2-legacy",
     "homebrew/cask-versions/iterm2-nightly",
   ]
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :catalina"
 
   app "iTerm.app"
 

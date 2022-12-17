@@ -1,13 +1,9 @@
 cask "eclipse-php" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
+  arch arm: "aarch64", intel: "x86_64"
 
-  version "4.24.0,2022-06"
-
-  if Hardware::CPU.intel?
-    sha256 "2015ee61c3fa86d652d2473a6313ac2b91727f9c5f296d6de9bdae65846f0a21"
-  else
-    sha256 "614a00936254bb3141192e04aedd27d952a5aca909748bfe4ac4cdbe7e4c34cd"
-  end
+  version "4.26.0,2022-12"
+  sha256 arm:   "14faac0a2bb72648ce16939816fe7ff7cbb0410561b6564b13ea58755c0f83e4",
+         intel: "5998bf1e2f736ecc16c4d291d54edb4baf5fb43cd8da89b4c1259efaa1541e3d"
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-php-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&r=1"
   name "Eclipse IDE for PHP Developers"

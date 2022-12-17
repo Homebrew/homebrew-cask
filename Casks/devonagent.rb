@@ -1,6 +1,6 @@
 cask "devonagent" do
-  version "3.11.5"
-  sha256 "f7be6f9eac577e30bbe2c230c83fa865cdb8234c89aa7f36f6dd8368b1b4d915"
+  version "3.11.6"
+  sha256 "ae57b6329c8678af440991ae3d329092ad196322d909ab0a0893726113b5748a"
 
   url "https://download.devontechnologies.com/download/devonagent/#{version}/DEVONagent_Pro.app.zip"
   name "DEVONagent Pro"

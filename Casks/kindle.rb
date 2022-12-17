@@ -1,8 +1,8 @@
 cask "kindle" do
-  version "1.37.65278"
-  sha256 "1e611c27dae14ef6b07f6126e82d2bb5d9a6c38e983ed8ade9cc5a4753f9a832"
+  version "1.39.65301"
+  sha256 "5d5280ce79f8ce62410c605edad9f01631fc9e3cebeb7ab7c33d1aa65bdf5a8b"
 
-  url "https://kindleformac.s3.amazonaws.com/#{version.patch}/KindleForMac-#{version}.dmg",
+  url "https://kindleformac.s3.amazonaws.com/#{version.patch}/KindleForMac-installer-#{version}.dmg",
       verified: "kindleformac.s3.amazonaws.com/"
   name "Kindle for Mac"
   desc "Interface for reading and syncing eBooks"

@@ -7,8 +7,8 @@ cask "mounty" do
       skip "newer versions only available for Big Sur or higher"
     end
   else
-    version "1.14"
-    sha256 "78eceb653ba33ed3f4c511ef880ea0be8cafb7c52eb46e4804e24a7b991c552a"
+    version "1.15"
+    sha256 "8c678c87aa609a7222ca229acb3a650d4a4e2db9fa9ce89a09a9d45ea1b19af1"
 
     livecheck do
       url :homepage

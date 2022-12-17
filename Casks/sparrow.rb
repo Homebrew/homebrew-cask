@@ -1,13 +1,9 @@
 cask "sparrow" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
+  arch arm: "aarch64", intel: "x86_64"
 
-  version "1.6.5"
-
-  if Hardware::CPU.intel?
-    sha256 "3fd0f2563365da4b573c8aad9a8170451b08c116f84dbb156a02c92344acd411"
-  else
-    sha256 "baa086bc20f200a3a38ee8f35053c4b064b43d1db5f8240ea5e700256eb56e03"
-  end
+  version "1.7.1"
+  sha256 arm:   "5449471cf598f2a7d5fb5f9dedcfb9817248770048ceabfd496c541cea5ace84",
+         intel: "85371bfd962a840431eab363cebff83eed231f43c06e524eccc8cf8652460d77"
 
   url "https://github.com/sparrowwallet/sparrow/releases/download/#{version}/Sparrow-#{version}-#{arch}.dmg",
       verified: "github.com/sparrowwallet/sparrow/"

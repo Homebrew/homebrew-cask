@@ -1,8 +1,11 @@
 cask "remnote" do
-  version "1.8.3"
-  sha256 "bdcf87672f4836b18d8566de8cc71d004660719f2586f09b8fadc279342c65bd"
+  arch arm: "-arm64", intel: ""
 
-  url "https://download.remnote.io/RemNote-#{version}.dmg",
+  version "1.8.52"
+  sha256 arm:   "18b3e49babdb8a789d93dcc3f1ff403f7c9f2209bb6859c971e4df6c51bfa363",
+         intel: "6fe3db58df49b19b32448eaf1f6bffa408d6db6161486f5787ef7c0357f2a07b"
+
+  url "https://download.remnote.io/RemNote-#{version}#{arch}.dmg",
       verified: "remnote.io"
   name "RemNote"
   desc "Spaced-repetition powered note-taking tool"

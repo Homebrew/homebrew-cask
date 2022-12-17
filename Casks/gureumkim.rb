@@ -1,10 +1,11 @@
 cask "gureumkim" do
-  version "1.12.2"
-  sha256 "387bd38d7778bdd5b0efb914fa123a1459619665305c7d83bcd9cad7e32dde0e"
+  version "1.13.0"
+  sha256 "c94d68fa9b9a5c523443775e004b4d93c926d0e7f4a1364bd15d60ee34131bef"
 
   url "https://github.com/gureum/gureum/releases/download/#{version}/Gureum-#{version}.pkg",
       verified: "github.com/gureum/gureum/"
   name "구름 입력기"
+  desc "Libhangul-based keyboard input"
   homepage "https://gureum.io/"
 
   livecheck do

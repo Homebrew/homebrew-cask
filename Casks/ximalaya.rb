@@ -1,21 +1,21 @@
 cask "ximalaya" do
-  version "3.0.1,1656297120"
-  sha256 "a8cffac06945ff8e4ef21b2611329ab9f5adfd481cf9bf509ba887f6dfc4396f"
+  version "3.3.0,GKwRIRwHbMumACAAAAHfp-fu,4331,65,D4"
+  sha256 "1acb8ac7ba5bd81d7c1afcd3d350fd221ffa390f9ce80d5a9abcc6eef69af192"
 
-  url "https://s1.xmcdn.com/yx/ximalaya-pc-client/#{version.csv.first}/download/mac-x64/Ximalaya_#{version.csv.first}_#{version.csv.second}_x64.dmg",
-      verified: "s1.xmcdn.com/yx/ximalaya-pc-client/"
+  url "https://nativedl.pcdn.xmcdn.com/storages/#{version.csv.third}-audiofreehighqps/#{version.csv.fourth}/#{version.csv.fifth}/#{version.csv.second}.dmg?ct=application/octet-stream&filename=Ximalaya_#{version.csv.first}_x64_c_99",
+      verified: "nativedl.pcdn.xmcdn.com/storages/"
   name "ximalaya"
   name "喜马拉雅"
   desc "Platform for podcasting and audio-sharing"
   homepage "https://www.ximalaya.com/"
 
   livecheck do
-    url "https://www.ximalaya.com/down/lite?client=mac"
+    url "https://www.ximalaya.com/down/lite/v2?client=mac&channelId=99"
     strategy :header_match do |headers|
-      match = headers["location"].match(%r{/Ximalaya[_-](\d+(?:\.\d+)+)[_-](\d+)_x64\.dmg}i)
+      match = headers["location"].match(%r{storages/(.+)-aud.*?/(.+)/(.+)/(.+)\.dmg.*?Ximalaya[._-](\d+(?:\.\d+)+)}i)
       next if match.blank?
 
-      "#{match[1]},#{match[2]}"
+      "#{match[5]},#{match[4]},#{match[1]},#{match[2]},#{match[3]}"
     end
   end
 

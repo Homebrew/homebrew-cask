@@ -1,6 +1,6 @@
 cask "cursorsense" do
-  version "2.3"
-  sha256 "3b8b02db4538b6697ec437b1ab701647a59cbd7144113b1ec5fd98423beb9a5f"
+  version "2.3.2"
+  sha256 "b0c78b892659d673cb5d529564190d51aa0562ebfe0e2b7d72cea64b130fc41a"
 
   url "https://plentycom.jp/ctrl/files_cs/CursorSense#{version}.dmg"
   name "CursorSense"

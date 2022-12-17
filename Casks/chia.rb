@@ -1,13 +1,9 @@
 cask "chia" do
-  version "1.4.0"
+  arch arm: "-arm64"
 
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
-
-  if Hardware::CPU.intel?
-    sha256 "80d2cb26e90306b7fea7ca9fb00dfb1a89df1ae3f6e0d9c53f792c9edd8359f7"
-  else
-    sha256 "8b3b810a45ca899f21acabc188e681da43e9c5342d913768666dd1dc7231b0c2"
-  end
+  version "1.6.1"
+  sha256 arm:   "cdc43374a2126d4ec93caf8003561cc10390104e1bde3256dc1cd667dab1e328",
+         intel: "2cd660fbd91bd44c2fed4938a5907881e6db803a2b9474238a168c3cccb49cbd"
 
   url "https://github.com/Chia-Network/chia-blockchain/releases/download/#{version}/Chia-#{version}#{arch}.dmg",
       verified: "github.com/Chia-Network/chia-blockchain/"

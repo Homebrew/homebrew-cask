@@ -1,6 +1,6 @@
 cask "librepcb" do
-  version "0.1.6"
-  sha256 "583324fa0621cfaeb488f077f458c450c49fb9960321c6b3f90f2ee5cf581ba5"
+  version "0.1.7"
+  sha256 "e984bbf8306f5e8f4a2da145fe6f0d151502282120c4dab6fc91c61a45970aac"
 
   url "https://download.librepcb.org/releases/#{version}/librepcb-#{version}-mac-x86_64.dmg"
   name "LibrePCB"

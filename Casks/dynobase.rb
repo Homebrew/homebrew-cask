@@ -1,23 +1,32 @@
 cask "dynobase" do
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  arch arm: "arm64", intel: "x64"
 
-  version "1.10.2"
+  version "2.1.1,221204n6n4soe1v"
+  sha256 arm:   "e9b221dfbbdef1bb6ec233d39e027ab00995547f6b2f6cef8839af8692faf795",
+         intel: "e238923233ae468959b40b31979e6d5a65871ad697087cb953e451144bbca36a"
 
-  if Hardware::CPU.intel?
-    sha256 "985e1730d2479025aeacd619ba4d2df205ed276169e56bd42c9658c1da7335b2"
-  else
-    sha256 "5d439a82f12fb27cb3cd930b714667c63eff9233668133b1fc8a99dde35d838c"
-  end
-
-  url "https://github.com/Dynobase/dynobase/releases/download/v#{version}/Dynobase-#{version}#{arch}.dmg",
+  url "https://github.com/Dynobase/dynobase/releases/download/v#{version.csv.first}/Dynobase.#{version.csv.first}.-.Build.#{version.csv.second}-#{arch}.dmg",
       verified: "github.com/Dynobase/dynobase/"
   name "Dynobase"
   desc "GUI Client for DynamoDB"
   homepage "https://dynobase.dev/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://github.com/Dynobase/dynobase/releases/latest"
+    regex(/Dynobase[._-](\d+(?:\.\d+)+)[._-]+Build[._-](\S+)[._-]#{arch}\.dmg/i)
+    strategy :header_match do |headers, regex|
+      next if headers["location"].blank?
+
+      # Identify the latest tag from the response's `location` header
+      latest_tag = File.basename(headers["location"])
+      next if latest_tag.blank?
+
+      # Fetch the assets list HTML for the latest tag and match within it
+      assets_page = Homebrew::Livecheck::Strategy.page_content(
+        @url.sub(%r{/releases/?.+}, "/releases/expanded_assets/#{latest_tag}"),
+      )
+      assets_page[:content]&.scan(regex)&.map { |match| "#{match[0]},#{match[1]}" }
+    end
   end
 
   app "Dynobase.app"

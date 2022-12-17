@@ -9,8 +9,8 @@ cask "outline-manager" do
   homepage "https://www.getoutline.org/"
 
   livecheck do
-    url "https://raw.githubusercontent.com/Jigsaw-Code/outline-releases/master/manager/latest-mac.yml"
-    strategy :electron_builder
+    url :url
+    strategy :github_latest
   end
 
   app "Outline Manager.app"

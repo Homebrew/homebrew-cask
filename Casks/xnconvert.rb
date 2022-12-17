@@ -1,5 +1,5 @@
 cask "xnconvert" do
-  version "1.94"
+  version "1.96.0"
   sha256 :no_check
 
   url "https://download.xnview.com/XnConvert-mac.dmg"

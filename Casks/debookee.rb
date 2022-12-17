@@ -1,5 +1,5 @@
 cask "debookee" do
-  version "8.1.3,3315"
+  version "8.1.4,3321"
   sha256 :no_check
 
   url "https://www.iwaxx.com/debookee/debookee.zip",

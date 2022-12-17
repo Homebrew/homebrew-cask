@@ -1,13 +1,9 @@
 cask "plexamp" do
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  arch arm: "-arm64"
 
-  version "4.2.2"
-
-  if Hardware::CPU.intel?
-    sha256 "00dbdfe45829233f06b57f8a68bde6e1be0384e430d0c77e043b6be3090635ab"
-  else
-    sha256 "3d11773b2a428eef8115c1b21878df4a7f97b8c13396a2653685bf4d92581933"
-  end
+  version "4.6.1"
+  sha256 arm:   "b8e07c6e5ab1f25dedaa6ff8abf2b87735f2338cf6a29eb1def887145e61ab22",
+         intel: "2d2e6bc32f2591f44abc4608a07942d951fec6fa9c415e3375767d9d13e4be25"
 
   url "https://plexamp.plex.tv/plexamp.plex.tv/desktop/Plexamp-#{version}#{arch}.dmg",
       verified: "plexamp.plex.tv/"
@@ -19,6 +15,8 @@ cask "plexamp" do
     url "https://plexamp.plex.tv/plexamp.plex.tv/desktop/latest-mac.yml"
     strategy :electron_builder
   end
+
+  auto_updates true
 
   app "Plexamp.app"
 end

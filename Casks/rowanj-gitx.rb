@@ -8,18 +8,12 @@ cask "rowanj-gitx" do
   desc "Native graphical client for the git version control system"
   homepage "https://rowanj.github.io/gitx/"
 
-  livecheck do
-    url "https://github.com/rowanj/gitx/releases/latest"
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?%2F(\d+(?:\.\d+)*)%2F(\d+)/GitX-dev-\d+\.dmg}i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
-    end
-  end
-
   conflicts_with cask: "gitx"
 
   app "GitX.app"
   binary "#{appdir}/GitX.app/Contents/Resources/gitx"
+
+  caveats do
+    discontinued
+  end
 end

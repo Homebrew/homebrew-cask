@@ -1,9 +1,9 @@
 cask "adobe-acrobat-reader" do
-  version "22.001.20142"
-  sha256 "7ddbe52a41133904fec1dda159c303c50e04c7185dd85a566377626554e77c93"
+  version "22.003.20281"
+  sha256 "43ccafc2cd8321119720b21c5b2821ac9d7e71c7eeb4eb85f09687ebceb0eefe"
 
   url "https://ardownload2.adobe.com/pub/adobe/reader/mac/AcrobatDC/#{version.no_dots}/AcroRdrDC_#{version.no_dots}_MUI.dmg"
-  name "Adobe Acrobat Reader DC"
+  name "Adobe Acrobat Reader"
   desc "View, print, and comment on PDF documents"
   homepage "https://acrobat.adobe.com/us/en/acrobat/pdf-reader.html"
 
@@ -21,7 +21,10 @@ cask "adobe-acrobat-reader" do
               "com.adobe.armdc.app.pkg",
               "com.adobe.RdrServicesUpdater",
             ],
-            delete:    "/Applications/Adobe Acrobat Reader DC.app",
+            delete:    [
+              "/Applications/Adobe Acrobat Reader.app",
+              "/Library/Preferences/com.adobe.reader.DC.WebResource.plist",
+            ],
             quit:      [
               "com.adobe.AdobeRdrCEF",
               "com.adobe.AdobeRdrCEFHelper",
@@ -37,8 +40,7 @@ cask "adobe-acrobat-reader" do
     "~/Library/Caches/com.adobe.Reader",
     "~/Library/HTTPStorages/com.adobe.Reader.binarycookies",
     "~/Library/Preferences/com.adobe.AdobeRdrCEFHelper.plist",
-    "~/Library/Preferences/com.adobe.crashreporter.plist",
     "~/Library/Preferences/com.adobe.Reader.plist",
-    "/Library/Preferences/com.adobe.reader.DC.WebResource.plist",
+    "~/Library/Preferences/com.adobe.crashreporter.plist",
   ]
 end

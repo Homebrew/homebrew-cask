@@ -6,7 +6,7 @@ cask "bugdom" do
       verified: "github.com/jorio/Bugdom/"
   name "Bugdom"
   desc "Bug-themed 3D action/adventure game from Pangea Software"
-  homepage "https://pangeasoft.net/bug/"
+  homepage "https://jorio.itch.io/bugdom"
 
   app "Bugdom.app"
   artifact "Documentation", target: "#{Dir.home}/Library/Application Support/Bugdom"

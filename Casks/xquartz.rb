@@ -1,15 +1,15 @@
 cask "xquartz" do
-  version "2.8.2"
-  sha256 "f270dac14cf355026268d2a5a00d903c5102b69e0d2db2a7e47142f7eb76e025"
+  version "2.8.3"
+  sha256 "2a88a67505f1d0e2b29c865715a0c6a68ba79eb2abeb831e341805ab1eb2f89e"
 
-  url "https://github.com/XQuartz/XQuartz/releases/download/XQuartz-#{version}/XQuartz-#{version}.dmg",
+  url "https://github.com/XQuartz/XQuartz/releases/download/XQuartz-#{version}/XQuartz-#{version}.pkg",
       verified: "github.com/XQuartz/XQuartz/"
   name "XQuartz"
   desc "Open-source version of the X.Org X Window System"
   homepage "https://www.xquartz.org/"
 
   livecheck do
-    url "https://www.xquartz.org/releases/sparkle/release.xml"
+    url "https://www.xquartz.org/releases/sparkle-r1/release.xml"
     strategy :sparkle do |item|
       item.short_version.delete_prefix("XQuartz-")
     end
@@ -17,15 +17,15 @@ cask "xquartz" do
 
   auto_updates true
 
-  pkg "XQuartz.pkg"
+  pkg "XQuartz-#{version}.pkg"
 
   uninstall launchctl: "org.xquartz.privileged_startx",
             pkgutil:   "org.xquartz.X11"
 
   zap trash: [
         "~/.Xauthority",
-        "~/Library/Application Support/XQuartz",
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.xquartz.x11.sfl*",
+        "~/Library/Application Support/XQuartz",
         "~/Library/Caches/org.xquartz.X11",
         "~/Library/Cookies/org.xquartz.X11.binarycookies",
         "~/Library/Logs/X11/org.xquartz.log",

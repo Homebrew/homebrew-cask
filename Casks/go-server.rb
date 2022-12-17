@@ -1,6 +1,6 @@
 cask "go-server" do
-  version "22.1.0,13913"
-  sha256 "a91aff87a71d439855660020c4a8d2ee975ab3c169276aa4c7db8a41faddd07e"
+  version "22.3.0,15301"
+  sha256 "55393bf29bf099968761dcbea73081c4b9d499beb459ba391c13ac574a5c9e82"
 
   url "https://download.gocd.io/binaries/#{version.csv.first}-#{version.csv.second}/osx/go-server-#{version.csv.first}-#{version.csv.second}-osx.zip",
       verified: "download.gocd.io/binaries/"

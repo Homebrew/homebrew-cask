@@ -6,8 +6,8 @@ cask "nextcloud" do
     url "https://github.com/nextcloud/desktop/releases/download/v#{version.major_minor_patch}/Nextcloud-#{version}.pkg",
         verified: "github.com/nextcloud/desktop/"
   else
-    version "3.5.2"
-    sha256 "8587373d902562b2a14f16dae22b99b3f6275e3be9f6c5e172518b284304f3d7"
+    version "3.6.4"
+    sha256 "4ed053762554672f128c09a822dc0e9eaa166e0f1287caa7cd23b7df120eeb3f"
 
     url "https://github.com/nextcloud/desktop/releases/download/v#{version}/Nextcloud-#{version}.pkg",
         verified: "github.com/nextcloud/desktop/"
@@ -18,15 +18,30 @@ cask "nextcloud" do
   homepage "https://nextcloud.com/"
 
   livecheck do
-    url "https://github.com/nextcloud/desktop/releases/"
-    strategy :page_match
+    url "https://github.com/nextcloud/desktop/releases/latest"
     regex(/Nextcloud[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
+    strategy :header_match do |headers, regex|
+      next if headers["location"].blank?
+
+      # Identify the latest tag from the response's `location` header
+      latest_tag = File.basename(headers["location"])
+      next if latest_tag.blank?
+
+      # Fetch the assets list HTML for the latest tag and match within it
+      assets_page = Homebrew::Livecheck::Strategy.page_content(
+        @url.sub(%r{/releases/?.+}, "/releases/expanded_assets/#{latest_tag}"),
+      )
+      assets_page[:content]&.scan(regex)&.map { |match| match[0] }
+    end
   end
+
+  auto_updates true
 
   pkg "Nextcloud-#{version}.pkg"
   binary "/Applications/Nextcloud.app/Contents/MacOS/nextcloudcmd"
 
-  uninstall pkgutil: "com.nextcloud.desktopclient"
+  uninstall pkgutil: "com.nextcloud.desktopclient",
+            delete:  "/Applications/Nextcloud.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.nextcloud.desktopclient.FinderSyncExt",

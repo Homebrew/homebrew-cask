@@ -1,6 +1,6 @@
 cask "supertuxkart" do
-  version "1.3"
-  sha256 "50d24b00dbe009003ae3ba1e7a2cfea2b1e998ac762bee9382acef43e490fea5"
+  version "1.4"
+  sha256 "21a7fb34132036c5810a8b48527513981d98d09d27d33b15e2f428bdc492c89d"
 
   url "https://github.com/supertuxkart/stk-code/releases/download/#{version}/SuperTuxKart-#{version}-mac.zip",
       verified: "github.com/supertuxkart/stk-code"

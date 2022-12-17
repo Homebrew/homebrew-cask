@@ -1,19 +1,20 @@
 cask "masscode" do
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  arch arm: "-arm64"
 
-  version "2.7.1"
-
-  if Hardware::CPU.intel?
-    sha256 "4f91b64ceed0b5c73e9873264deb85ff054ec5b3912baf34982421b7eb3edf4c"
-  else
-    sha256 "283fab2a8c0179a54da9a5560221ddaa4328ebef3c5014a43a13c56126f3b8a0"
-  end
+  version "3.4.1"
+  sha256 arm:   "b9508b32b6b8606bd0bbcab482b9a75ef87186db181b48f1242c8ef83b6ee288",
+         intel: "622ed42307902b194bf223f6b33a6c2c0cef11d23480986dfa30cd1be128edd9"
 
   url "https://github.com/massCodeIO/massCode/releases/download/v#{version}/massCode-#{version}#{arch}.dmg",
       verified: "https://github.com/massCodeIO/massCode/"
   name "massCode"
   desc "Open-source code snippets manager for developers"
   homepage "https://masscode.io/"
+
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
 
   app "massCode.app"
 end

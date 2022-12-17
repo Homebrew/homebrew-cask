@@ -1,17 +1,22 @@
 cask "widelands" do
-  version "1.0"
-  sha256 "1b690a7b001b16aab5bf5685b89714e2c02c6866914aba8ad5bde103f2ead789"
+  arch arm: "12-Arm", intel: "11"
 
-  url "https://launchpad.net/widelands/#{version.major}.x/#{version}/+download/widelands_10.9_#{version}.dmg",
-      verified: "launchpad.net/widelands/"
+  version "1.1"
+  sha256 arm:   "c1591517559e881f622435a6c464dd9be19a41ebdad307e70b070fdcdaf34eda",
+         intel: "d31b8532a1d506d9b8ac39988479da0919ed43a87b4ef8d4f001734fb98c8120"
+
+  url "https://github.com/widelands/widelands/releases/download/v#{version}/Widelands-#{version}-MacOS#{arch}.dmg",
+      verified: "github.com/widelands/widelands/"
   name "Widelands"
   desc "Free real-time strategy game like Settlers II"
   homepage "https://www.widelands.org/"
 
   livecheck do
     url "https://www.widelands.org/wiki/Download/"
-    regex(/href=.*?widelands[._-]10\.9[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/href=.*?Widelands[._-]v?(\d+(?:\.\d+)+)[._-]MacOS#{arch}\.dmg/i)
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "Widelands.app"
 
