@@ -53,5 +53,6 @@ cask "microsoft-word" do
     "~/Library/Application Support/CrashReporter/Microsoft Word_*.plist",
     "~/Library/Containers/com.microsoft.Word",
     "~/Library/Preferences/com.microsoft.Word.plist",
+    "~/Library/Saved Application State/com.microsoft.Word.savedState",
   ]
 end
