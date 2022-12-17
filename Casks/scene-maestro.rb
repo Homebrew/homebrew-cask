@@ -4,12 +4,12 @@ cask "scene-maestro" do
 
   url "https://sceni.ca/download/scene-maestro/scene-maestro-#{version}.zip"
   name "Scene Maestro"
-  desc "Conduct an orchestra of screens"
+  desc "Remote control video playback on Scenica Player-equipped hosts"
   homepage "https://sceni.ca/en/scene-maestro/"
 
   livecheck do
     url :homepage
-    regex(/href=.*?scene-maestro[._-]v?(\d+(?:\.\d+)+)\.zip/i)
+    regex(/href=.*?scene[._-]maestro[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
   app "Scene Maestro.app"
