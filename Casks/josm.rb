@@ -20,5 +20,6 @@ cask "josm" do
     "~/Library/JOSM",
     "~/Library/Caches/JOSM",
     "~/Library/Preferences/JOSM",
+    "~/Library/Saved Application State/de.openstreetmap.josm.savedState",
   ]
 end
