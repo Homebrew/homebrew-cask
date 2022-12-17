@@ -16,7 +16,7 @@ cask "scene-maestro" do
 
   zap trash: [
     "~/Library/Caches/Scene Maestro",
-    "~/Library/Preferences/ByHost/ca.sceni.SceneMaestro.B97E4AB2-D53B-5F4B-8160-0481CF87A038.plist",
+    "~/Library/Preferences/ByHost/ca.sceni.SceneMaestro.*.plist",
     "~/Library/Preferences/ca.sceni.SceneMaestro.plist",
   ]
 end
