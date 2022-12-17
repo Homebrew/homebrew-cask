@@ -23,5 +23,10 @@ cask "kicad" do
     "~/Library/Application Support/kicad",
     "~/Library/Preferences/kicad",
     "~/Library/Preferences/org.kicad-pcb.*",
+    "~/Library/Saved Application State/org.kicad-pcb.bitmap2component.savedState",
+    "~/Library/Saved Application State/org.kicad-pcb.eeschema.savedState",
+    "~/Library/Saved Application State/org.kicad-pcb.kicad.savedState",
+    "~/Library/Saved Application State/org.kicad-pcb.pcb_calculator.savedState",
+    "~/Library/Saved Application State/org.kicad-pcb.pl_editor.savedState",
   ]
 end
