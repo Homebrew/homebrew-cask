@@ -9,12 +9,10 @@ cask "scenica-player" do
 
   livecheck do
     url :homepage
-    regex(/href=.*?scenica-player[._-]v?(\d+(?:\.\d+)+)\.zip/i)
+    regex(/href=.*?scenica[._-]player[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
   app "Scenica Player.app"
 
-  zap trash: [
-    "~/Library/Preferences/ByHost/ca.sceni.Player.B97E4AB2-D53B-5F4B-8160-0481CF87A038.plist",
-  ]
+  zap trash: "~/Library/Preferences/ByHost/ca.sceni.Player.*.plist"
 end
