@@ -46,8 +46,7 @@ cask "powerphotos" do
     url "https://www.fatcatsoftware.com/powerphotos/PowerPhotos_#{version.no_dots}.zip"
 
     livecheck do
-      url "https://www.fatcatsoftware.com/powerphotos/powerphotos_appcast.xml"
-      strategy :sparkle
+      skip "Legacy version"
     end
   end
   on_big_sur :or_newer do
@@ -57,8 +56,8 @@ cask "powerphotos" do
     url "https://www.fatcatsoftware.com/powerphotos/PowerPhotos.zip"
 
     livecheck do
-      url "https://www.fatcatsoftware.com/powerphotos_downloads/"
-      regex(%r{href="/powerphotos/.*?PowerPhotos (\d+(?:\.\d+)+)}i)
+      url "https://www.fatcatsoftware.com/powerphotos/downloads/appcast.xml"
+      strategy :sparkle
     end
   end
 
