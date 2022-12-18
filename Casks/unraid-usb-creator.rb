@@ -15,4 +15,3 @@ cask "unraid-usb-creator" do
 
   app "Unraid USB Creator.app"
 end
-  
