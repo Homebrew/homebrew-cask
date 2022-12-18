@@ -17,10 +17,10 @@ cask "bean" do
 
   depends_on macos: ">= :high_sierra"
 
+  app "Bean-Install-#{version.dots_to_hyphens}/Bean.app"
+
   zap trash: [
     "~/Library/Preferences/com.bean-osx.Bean.plist",
     "~/Library/Saved Application State/com.bean-osx.Bean.savedState",
   ]
-
-  app "Bean-Install-#{version.dots_to_hyphens}/Bean.app"
 end
