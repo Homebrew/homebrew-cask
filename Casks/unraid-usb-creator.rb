@@ -9,6 +9,7 @@ cask "unraid-usb-creator" do
 
     livecheck do
         url "https://unraid.net/download"
+        strategy :page_match
       end      
   
     app "Unraid USB Creator.app"
