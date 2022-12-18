@@ -11,7 +11,7 @@ cask "unraid-usb-creator" do
     url "https://unraid.net/download"
     strategy :page_match
     regex(/href=.*?Unraid[._-]USB[._-]Creator[._-]macOS[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
-  end      
+  end
 
   app "Unraid USB Creator.app"
 end
