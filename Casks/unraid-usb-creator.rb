@@ -6,6 +6,10 @@ cask "unraid-usb-creator" do
     name "Unraid USB Creator"
     desc "Utility for installing Unraid on a USB drive"
     homepage "https://unraid.net"
+
+    livecheck do
+        url "https://unraid.net/download"
+      end      
   
     app "Unraid USB Creator.app"
 end
