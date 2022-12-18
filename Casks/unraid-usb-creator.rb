@@ -9,9 +9,10 @@ cask "unraid-usb-creator" do
 
     livecheck do
         url "https://unraid.net/download"
-        strategy :header_match
+        strategy :page_match
+        regex(/href=.*?Unraid[._-]USB[._-]Creator[._-]macOS[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
       end      
-  
+
     app "Unraid USB Creator.app"
 end
   
