@@ -50,7 +50,7 @@ cask "powerphotos" do
     end
   end
   on_big_sur :or_newer do
-    version "2.1.2"
+    version "2.1.2,1923"
     sha256 :no_check
 
     url "https://www.fatcatsoftware.com/powerphotos/PowerPhotos.zip"
@@ -59,6 +59,8 @@ cask "powerphotos" do
       url "https://www.fatcatsoftware.com/powerphotos/downloads/appcast.xml"
       strategy :sparkle
     end
+
+    depends_on macos: ">= :big_sur"
   end
 
   name "PowerPhotos"
