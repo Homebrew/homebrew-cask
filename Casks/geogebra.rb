@@ -1,6 +1,6 @@
 cask "geogebra" do
-  version "6.0.749.0"
-  sha256 "4d0d06051eb584574775d50ca8f7cab30e9a70fcdd1be34c60da39442b8a9baf"
+  version "6.0.751.0"
+  sha256 "f2a47d325c64363e1dcc00dcab282145ae9b3ee1c7bd5f0b6314c90f1b8db80a"
 
   url "https://download.geogebra.org/installers/#{version.major_minor}/GeoGebra-Classic-#{version.major}-MacOS-Portable-#{version.dots_to_hyphens}.zip"
   name "GeoGebra"
