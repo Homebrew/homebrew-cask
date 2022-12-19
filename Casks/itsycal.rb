@@ -6,6 +6,7 @@ cask "itsycal" do
     livecheck do
       skip "Legacy version"
     end
+  end
   on_high_sierra do
     version "0.11.17"
     sha256 "fda1ba5611deaf4d5b834118b3af37ea9c5d08d1f8c813d04e7dd0552a270e11"
@@ -13,6 +14,7 @@ cask "itsycal" do
     livecheck do
       skip "Legacy version"
     end
+  end
   on_mojave :or_newer do
     version "0.13.4,2228"
     sha256 "35509500d22571a4b5e6b48d9de5740a1bcf7d74808d1218d31daf77ddd04a66"
