@@ -32,6 +32,8 @@ cask "itsycal" do
       url "https://itsycal.s3.amazonaws.com/itsycal.xml"
       strategy :sparkle
     end
+
+    depends_on macos: ">= :mojave"
   end
 
   name "Itsycal"
