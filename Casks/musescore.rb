@@ -46,7 +46,7 @@ cask "musescore" do
     "~/Library/Caches/org.musescore.MuseScore",
     "~/Library/Preferences/org.musescore.MuseScore.plist",
     "~/Library/Preferences/org.musescore.MuseScore3.plist",
-    "~/Library/Preferences/org.musescore.MuseScore4.plist",
+    "~/Library/Preferences/org.musescore.MuseScore#{version.major}.plist",
     "~/Library/Saved Application State/org.musescore.MuseScore.savedState",
   ]
 end
