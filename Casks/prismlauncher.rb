@@ -2,7 +2,7 @@ cask "prismlauncher" do
   version "6.1"
 
   on_mojave :or_older do
-    sha256 "3508decfc5bc1b094f624b77faf1dab327faf577ec6e60b647cbda27dd35f549"
+    sha256 "42f75b14efbcd3b3b38cecfb93f5adb266b682cf0576bfa212091d10bf0d10c6"
 
     url "https://github.com/PrismLauncher/PrismLauncher/releases/download/#{version}/PrismLauncher-macOS-Legacy-#{version}.tar.gz",
         verified: "github.com/PrismLauncher/PrismLauncher"
