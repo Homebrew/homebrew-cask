@@ -1,6 +1,6 @@
 cask "saoimageds9" do
   # NOTE: "9" is not a version number, but an intrinsic part of the product name
-  version "8.4"
+  version "8.4.1"
 
   if MacOS.version <= :mojave
     sha256 "bfe57aa62f1c36ec6ba00e6423bf84b2ce1b34d1af60dffc3adc141caa67d878"
@@ -16,7 +16,7 @@ cask "saoimageds9" do
     url "https://ds9.si.edu/download/macosbigsurarm64/SAOImageDS9%20#{version}.dmg",
         verified: "ds9.si.edu/download/"
   else
-    sha256 "b7fb04166b23ecb552f207f770e513bc32ef61b940c4641549147615ff6966de"
+    sha256 "b48565cdaadca1c1363173fac685cd75a68351c914792b2f43c6cb66b3316eed"
     url "https://ds9.si.edu/download/macosbigsurx86/SAOImageDS9%20#{version}.dmg",
         verified: "ds9.si.edu/download/"
   end
