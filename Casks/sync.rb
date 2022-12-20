@@ -1,6 +1,7 @@
 cask "sync" do
   version "2.1.4"
-  sha256 :no_check
+  # https://sync.com/download/sync-packages/osx/VERSION_NUMBER/cur/Sync.dmg.sha256
+  sha256 "50995f191977aee9a656416ad90eec8c7a4e1dbc64e05bc35b5a9326c774b253"
 
   url "https://www.sync.com/download/apple/Sync.dmg"
   name "Sync"
