@@ -23,5 +23,7 @@ cask "sunsama" do
   zap trash: [
     "~/Library/Application Support/Sunsama",
     "~/Library/Logs/Sunsama",
+    "~/Library/Preferences/com.sunsama.native-app.plist",
+    "~/Library/Saved Application State/com.sunsama.native-app.savedState",
   ]
 end
