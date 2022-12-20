@@ -16,17 +16,6 @@ cask "loopback" do
   depends_on macos: ">= :catalina"
 
   app "Loopback.app"
-  installer script: {
-    executable: "Loopback.app/Contents/Resources/aceinstaller",
-    args:       ["install", "--silent"],
-    sudo:       true,
-  }
-
-  uninstall script: {
-    executable: "Loopback.app/Contents/Resources/aceinstaller",
-    args:       ["uninstall", "--silent"],
-    sudo:       true,
-  }
 
   zap trash: [
     "~/Library/Application Support/Loopback",
