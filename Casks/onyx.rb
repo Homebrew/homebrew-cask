@@ -42,8 +42,8 @@ cask "onyx" do
     depends_on macos: :monterey
   end
   on_ventura do
-    version "4.3.3"
-    sha256 "003a1beade5cb33ce5d8e20d14dae2aa1ac051f2f0dec6cc95ceefb1b3a51b60"
+    version "4.3.4"
+    sha256 "650399a6648d46a2c6a5f365b00a809133c83c2beff216a0332760f772e55dbe"
 
     depends_on macos: :ventura
   end
