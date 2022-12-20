@@ -8,8 +8,6 @@ cask "opencore-patcher" do
   desc "Boot loader to inject/patch current features for unsupported Macs"
   homepage "https://dortania.github.io/OpenCore-Legacy-Patcher/"
 
-  auto_updates true
-
   app "OpenCore-Patcher.app"
 
   uninstall delete: "/Library/LaunchAgents/com.dortania.opencore-legacy-patcher.auto-patch.plist"
