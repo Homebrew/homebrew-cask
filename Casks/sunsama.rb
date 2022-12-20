@@ -8,7 +8,7 @@ cask "sunsama" do
   url "https://download.todesktop.com/2003096gmmnl0g1/Sunsama%20#{version}-#{arch}.dmg",
       verified: "download.todesktop.com/2003096gmmnl0g1/"
   name "Sunsama"
-  desc "Daily planner for busy professionals"
+  desc "Daily planner and calendar"
   homepage "https://www.sunsama.com/desktop"
 
   livecheck do
