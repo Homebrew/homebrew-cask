@@ -1,7 +1,7 @@
 cask "coccoc" do
   arch arm: "/arm64"
 
-  version "106.0.5249.130,106.0.130"
+  version "107.0.5304.132,107.0.132"
   sha256 :no_check
 
   url "https://files-cdn.coccoc.com/browser/mac#{arch}/coccoc.dmg"
