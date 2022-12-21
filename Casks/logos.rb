@@ -26,5 +26,7 @@ cask "logos" do
 
   zap trash: [
     "~/Library/Preferences/com.logos.Logos.plist",
+    "~/Library/Preferences/com.logos.LogosCEF.plist",
+    "~/Library/Preferences/com.logos.LogosIndexer.plist",
   ]
 end
