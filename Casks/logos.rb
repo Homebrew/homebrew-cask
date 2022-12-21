@@ -1,5 +1,5 @@
 cask "logos" do
-  arch arm: "-arm", intel: ""
+  arch arm: "-arm"
 
   version "10.1.0.0056"
   sha256 arm:   "ae992c1e6ecbce8113044aa31838c4bc91b87083585c75ae7271eaaff13ad5db",
@@ -17,7 +17,7 @@ cask "logos" do
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :big_sur"
 
   app "Logos.app"
 
