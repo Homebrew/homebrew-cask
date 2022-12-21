@@ -1,6 +1,6 @@
 cask "pomatez" do
-  version "1.2.1"
-  sha256 "f36450c031967059554a2ff7457b9b94b5914f9b82c2289f547056e5723ead3e"
+  version "1.2.2"
+  sha256 "05e115fff64f4ebe5bfc3cbd8fe8cf2fcb8339d6216bfeb347c9342e260ac81c"
 
   url "https://github.com/roldanjr/pomatez/releases/download/v#{version}/Pomatez-v#{version}-mac.dmg",
       verified: "github.com/roldanjr/pomatez/"
