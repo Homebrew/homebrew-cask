@@ -1,8 +1,13 @@
 cask "openemu" do
-  if MacOS.version <= :high_sierra
+  on_high_sierra :or_older do
     version "2.0.9.1"
     sha256 "c6036374104e8cefee1be12fe941418e893a7f60a1b2ddaae37e477b94873790"
-  else
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_mojave :or_newer do
     version "2.3.3"
     sha256 "a732c538287c99774ce939f840952d6713ac204e2a81baa760b1d4ef9cca1a73"
   end

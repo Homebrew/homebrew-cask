@@ -1,6 +1,6 @@
 cask "pext" do
-  version "0.34"
-  sha256 "0a1d64ba551c53dd768ea2e3c9d187e5f1356e9994e2c55544bfff7e3e13c814"
+  version "0.35"
+  sha256 "eab9c61d0a05b131bec175f08b7c5ef7e4aed07c90405f7b1b14ce8b4a11b605"
 
   url "https://github.com/Pext/Pext/releases/download/v#{version}/Pext-#{version}.dmg",
       verified: "github.com/Pext/Pext/"

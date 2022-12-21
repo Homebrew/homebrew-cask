@@ -8,7 +8,7 @@ cask "rawtherapee" do
   homepage "https://rawtherapee.com/"
 
   livecheck do
-    url "https://rawtherapee.com/downloads/"
+    url "https://rawtherapee.com/shared/builds/mac/"
     regex(/href=.*?RawTherapee[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 

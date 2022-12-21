@@ -9,9 +9,7 @@ cask "cubicsdr" do
   homepage "https://cubicsdr.com/"
 
   livecheck do
-    url "https://github.com/cjcliffe/CubicSDR/releases/"
-    strategy :page_match
-    regex(/CubicSDR[._-]v?(\d+(?:\.\d+)+)[._-]Darwin\.dmg/i)
+    skip "No reliable way to get version info"
   end
 
   app "CubicSDR.app"

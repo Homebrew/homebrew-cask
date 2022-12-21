@@ -1,6 +1,6 @@
 cask "after-dark-classic" do
-  version "1.2"
-  sha256 "714762326b7887d8136af2e563d3a1d883f56a242db7ca5db62ea251601db89d"
+  version "1.3"
+  sha256 "4a0973a807232dc37c6994b6c46487ef86af7c3f08b946a74b181735865f0739"
 
   url "https://www.infinisys.co.jp/archive/online/online_afterdark#{version.no_dots}e.dmg"
   name "After Dark Classic Set"

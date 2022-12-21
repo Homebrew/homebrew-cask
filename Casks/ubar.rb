@@ -18,6 +18,8 @@ cask "ubar" do
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ca.brawer.ubar.sfl*",
     "~/Library/Application Support/uBar",
     "~/Library/Caches/ca.brawer.uBar",
+    "~/Library/HTTPStorages/ca.brawer.uBar",
     "~/Library/Preferences/ca.brawer.uBar.plist",
+    "~/Library/WebKit/ca.brawer.uBar",
   ]
 end

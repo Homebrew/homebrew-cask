@@ -39,7 +39,11 @@ cask "adobe-acrobat-pro" do
     "~/Library/Application Support/Adobe/Acrobat/",
     "~/Library/Caches/Acrobat",
     "~/Library/Caches/com.adobe.Acrobat.Pro",
+    "~/Library/HTTPStorages/com.adobe.Acrobat.Pro",
+    "~/Library/HTTPStorages/com.adobe.Acrobat.Pro.binarycookies",
     "~/Library/Preferences/Adobe/Acrobat/",
     "~/Library/Preferences/com.adobe.Acrobat.Pro.plist",
+    "~/Library/Saved Application State/com.adobe.Acrobat.Pro.savedState",
+    "~/Library/WebKit/com.adobe.Acrobat.Pro",
   ]
 end

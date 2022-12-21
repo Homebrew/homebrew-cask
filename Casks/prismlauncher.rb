@@ -1,15 +1,19 @@
 cask "prismlauncher" do
-  version "5.2"
+  version "6.1"
 
-  if MacOS.version < :catalina
-    sha256 "45649d7db58d5e65a8e47897649898762819d431d01bc506574048d028189222"
+  on_mojave :or_older do
+    sha256 "42f75b14efbcd3b3b38cecfb93f5adb266b682cf0576bfa212091d10bf0d10c6"
+
     url "https://github.com/PrismLauncher/PrismLauncher/releases/download/#{version}/PrismLauncher-macOS-Legacy-#{version}.tar.gz",
         verified: "github.com/PrismLauncher/PrismLauncher"
-  else
-    sha256 "9bbf29b4c3f829d0fe55bd9cb96ba463c9840cc3663c3dffb5f1cfde99a62f6a"
+  end
+  on_catalina :or_newer do
+    sha256 "bb8be539d1a48492f79cd7c4e80a47d0ad58c50e51fb1447129304175b35ffac"
+
     url "https://github.com/PrismLauncher/PrismLauncher/releases/download/#{version}/PrismLauncher-macOS-#{version}.tar.gz",
         verified: "github.com/PrismLauncher/PrismLauncher"
   end
+
   name "Prism Launcher"
   desc "Minecraft launcher"
   homepage "https://prismlauncher.org/"

@@ -1,15 +1,18 @@
 cask "pinegrow" do
-  version "6.21"
-  sha256 "d2c037f70a07a2ad4fc049a8e2bc6393593b12933a8c18ccb58a8c713899f9d5"
+  arch arm: "ARM64", intel: "X64"
 
-  url "https://download.pinegrow.com/PinegrowMac.#{version}.dmg"
+  version "7.04"
+  sha256 arm:   "cebab44e3c12f697fe79358a82693badbf740bf42459c7a5ddac78c412bc84f7",
+         intel: "76ab4b9f3b2b3de90a87dcc72ae2459bbfaf04c32ec36c197cad47a409feb966"
+
+  url "https://download.pinegrow.com/PinegrowMac#{arch}.#{version}.dmg"
   name "Pinegrow"
   desc "Web editor"
   homepage "https://pinegrow.com/"
 
   livecheck do
-    url :homepage
-    regex(%r{href=.*?/PinegrowMac[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    url "https://docs.pinegrow.com/wp-json/wp/v2/pages/1698"
+    regex(%r{href=.*?/PinegrowMac#{arch}[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "Pinegrow.app"

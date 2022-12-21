@@ -1,9 +1,9 @@
 cask "thedesk" do
   arch arm: "arm64", intel: "x64"
 
-  version "23.0.1"
-  sha256 arm:   "a41189097769a589a83f521c1ef7d73e80733e082bd407d2a15d75998328826d",
-         intel: "287586d97f2318cc83c32d1f85cbf8f8db9777763197d2f11dbc70bfc66c9497"
+  version "23.0.3"
+  sha256 arm:   "55475f5574dff5c3ca73a561c15951527551da47ba977f4c3f2a6d6540389601",
+         intel: "a69be8db2f3f9ea84a1b5ad31ea91730008aa193728ae15731784ee4ced8378c"
 
   url "https://github.com/cutls/TheDesk/releases/download/v#{version}/TheDesk-#{version}-#{arch}.dmg",
       verified: "github.com/cutls/TheDesk/"

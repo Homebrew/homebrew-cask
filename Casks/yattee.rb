@@ -1,6 +1,6 @@
 cask "yattee" do
-  version "1.3.5"
-  sha256 "9af45198d24310cfb750623e1c8adc46a087f1d7995ce9bf42682195bb6fa917"
+  version "1.4.2"
+  sha256 "8999692b9fcd5a1655df38c1218f9ef441dbd3e1b511f58288749db0d38f4ba3"
 
   url "https://github.com/yattee/yattee/releases/download/v#{version}/Yattee-#{version}-macOS.zip"
   name "Yattee"

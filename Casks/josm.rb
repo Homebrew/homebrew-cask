@@ -17,8 +17,9 @@ cask "josm" do
   app "JOSM.app"
 
   zap trash: [
-    "~/Library/JOSM",
     "~/Library/Caches/JOSM",
+    "~/Library/JOSM",
     "~/Library/Preferences/JOSM",
+    "~/Library/Saved Application State/de.openstreetmap.josm.savedState",
   ]
 end

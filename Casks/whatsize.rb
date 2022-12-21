@@ -1,6 +1,6 @@
 cask "whatsize" do
-  version "7.7.6,7760"
-  sha256 "63f0239238729499962815af6f2ce898649d6065820d08a0f8acdece9cbf6e12"
+  version "7.7.7,7770"
+  sha256 "a6c07db1868e408eafad89aba68a4f775f62583152874f61fc17615b19bdb502"
 
   url "https://www.whatsizemac.com/software/whatsize#{version.major}/whatsize_#{version.csv.first}.tgz"
   name "WhatSize"

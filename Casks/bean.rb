@@ -1,6 +1,6 @@
 cask "bean" do
-  version "3.4.7"
-  sha256 "6aa95b5dcd9c4f5d18631dd17e491ecb4bc33af85bb97d60c627e438bd5c49a9"
+  version "3.5.0"
+  sha256 "1ff7937807013970b3d38384cbb0181c9a64c31eb314e532d61cd96b9c5bb4f6"
 
   url "https://www.bean-osx.com/releases/Bean-Install-#{version.dots_to_hyphens}.zip"
   name "Bean"
@@ -18,4 +18,9 @@ cask "bean" do
   depends_on macos: ">= :high_sierra"
 
   app "Bean-Install-#{version.dots_to_hyphens}/Bean.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.bean-osx.Bean.plist",
+    "~/Library/Saved Application State/com.bean-osx.Bean.savedState",
+  ]
 end

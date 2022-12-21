@@ -1,8 +1,11 @@
 cask "logos" do
-  version "9.17.0.0018"
-  sha256 "3a3911976746d5af706c83f2e6599e75b5d77961de98483c72139d7a5d1d5bc4"
+  arch arm: "-arm"
 
-  url "https://downloads.logoscdn.com/LBS#{version.major}/Installer/#{version}/LogosMac.dmg",
+  version "10.1.0.0056"
+  sha256 arm:   "ae992c1e6ecbce8113044aa31838c4bc91b87083585c75ae7271eaaff13ad5db",
+         intel: "0bffc3463c81e4448b4125e4418b68ca5aab4ae011faf8ecbfd905c09d3c0631"
+
+  url "https://downloads.logoscdn.com/LBS#{version.major}/Installer/#{version}/LogosMac#{arch}.dmg",
       verified: "downloads.logoscdn.com/"
   name "Logos"
   desc "Bible study software"
@@ -14,7 +17,7 @@ cask "logos" do
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :big_sur"
 
   app "Logos.app"
 

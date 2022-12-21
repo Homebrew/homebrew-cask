@@ -1,6 +1,6 @@
 cask "bitrix24" do
   # NOTE: "24" is not a version number, but an intrinsic part of the product name
-  version "14.0.16.70"
+  version "14.2.12.72"
   sha256 :no_check
 
   url "https://dl.bitrix24.com/b24/bitrix24_desktop.dmg"
@@ -12,6 +12,8 @@ cask "bitrix24" do
     url "https://www.bitrix24.com/osx_version.php"
     strategy :sparkle
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Bitrix24.app"
 end

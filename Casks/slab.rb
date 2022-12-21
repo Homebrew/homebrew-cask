@@ -1,9 +1,9 @@
 cask "slab" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.3.0"
-  sha256 arm:   "db5ace5e12ecf840628fa52f5632362ba8fbf853c03038c9a2ede9e5aea102d2",
-         intel: "a6450d2de819bb06771f14feb416d067977c17f887e4886d05df718f94f09257"
+  version "1.4.0"
+  sha256 arm:   "d4824c5c13e1887c329e752a1a5c66503cc20b1673fbb1b3ec65cc2e0488104a",
+         intel: "c664d7ca4e43af8320d196c1021ec9485efaceccf690ec3995faf8dcf5dda598"
 
   url "https://github.com/slab/desktop-releases/releases/download/v#{version}/Slab-#{version}-darwin-#{arch}.dmg",
       verified: "github.com/slab/desktop-releases/"

@@ -1,8 +1,8 @@
 cask "pushplaylabs-sidekick" do
-  version "1.0.69"
-  sha256 "62a586b4be51dc667ee3221eae59abe3a38c7fc6bcbc21a6c149f59c36e3a907"
+  version "1.0.75"
+  sha256 "2a8e6c420ac6d16ad7b1bedeaffd779a7bd637218980d9798f3535677fa26dda"
 
-  url "https://fast-cdn.meetsidekick.com/builds/sidekick-mac-installer-#{version}.pkg"
+  url "https://cdn.meetsidekick.com/browser-builds/sidekick-mac-installer-#{version}.pkg"
   name "Sidekick"
   desc "Browser designed for modern work"
   homepage "https://www.meetsidekick.com/"
