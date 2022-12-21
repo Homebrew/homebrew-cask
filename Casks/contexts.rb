@@ -26,6 +26,8 @@ cask "contexts" do
   desc "Allows switching between application windows"
   homepage "https://contexts.co/"
 
+  auto_updates true
+
   app "Contexts.app"
 
   uninstall quit: "com.contextsformac.Contexts"

@@ -1,7 +1,7 @@
 cask "vpn-tracker-365" do
   # NOTE: "365" is not a version number, but an intrinsic part of the product name
-  version "22.4.1,220413"
-  sha256 "efa04e1db6c4a1cd7c3a0ceef5c936ac6a273e6db51d5aecb953620282451fcc"
+  version "22.4.2,220423"
+  sha256 "0b72496128f8866a7a65cda93cbd19e7795aa9b6fc7ed401c5626d0e90f1a918"
 
   url "https://download.equinux.com/files/other/VPN%20Tracker%20365%20-%20#{version.csv.first}%20#{version.csv.second}.zip",
       verified: "download.equinux.com/files/other/"

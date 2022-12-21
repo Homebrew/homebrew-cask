@@ -1,6 +1,6 @@
 cask "jabref" do
-  version "5.7"
-  sha256 "7b4b44bb99744915a01ed019d6587e7d1d32997e2d63f276c64de7fb1b4f5494"
+  version "5.8"
+  sha256 "c740d700a5db6c937dbb75629c2a98124fd0809ea6351fd4c7ffb9446ab61cf5"
 
   url "https://github.com/JabRef/jabref/releases/download/v#{version}/JabRef-#{version}.dmg",
       verified: "github.com/JabRef/jabref/"

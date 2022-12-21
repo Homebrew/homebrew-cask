@@ -1,9 +1,9 @@
 cask "aws-vault" do
   arch arm: "arm64", intel: "amd64"
 
-  version "6.6.0"
-  sha256 arm:   "7c624f16a60f6d48900d7aa7f17add991376f1d280e8a5168094e19098797c35",
-         intel: "eeb7b8dbdba7bb18fcf32e1c422683d5fd444c6c3b5eb41e760bbfcb2036df6c"
+  version "6.6.1"
+  sha256 arm:   "fbbc0f3fabc9fc62c84e62b2a1a97efe4eaed7626963130b85849bb85785d5ff",
+         intel: "682f163a77b7f6d4bed578fc541cead49486f71b237ef2b013960befa44fd654"
 
   url "https://github.com/99designs/aws-vault/releases/download/v#{version}/aws-vault-darwin-#{arch}.dmg"
   name "aws-vault"

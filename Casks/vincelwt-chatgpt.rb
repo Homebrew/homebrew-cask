@@ -6,11 +6,16 @@ cask "vincelwt-chatgpt" do
          intel: "f2c1bbe1e37836e9615e0061fd41d16c2ab16e60440aee3af4f62f8d346ec330"
 
   url "https://github.com/vincelwt/chatgpt-mac/releases/download/v#{version}/Chatgpt-#{version}-#{arch}.dmg"
-  name "ChatGPT"
+  name "ChatGPT for Mac"
   desc "Menu bar application for ChatGPT"
   homepage "https://github.com/vincelwt/chatgpt-mac"
 
   app "Chatgpt.app"
 
-  zap trash: "~/Library/Application Scripts/chatgpt-mac"
+  zap trash: [
+    "~/Library/Application Scripts/chatgpt-mac",
+    "~/Library/Caches/com.vincelwt.chatgptmac",
+    "~/Library/Caches/com.vincelwt.chatgptmac.ShipIt",
+    "~/Library/Preferences/com.vincelwt.chatgptmac.plist",
+  ]
 end
