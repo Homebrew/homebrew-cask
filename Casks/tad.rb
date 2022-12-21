@@ -8,6 +8,11 @@ cask "tad" do
   desc "Desktop application for viewing and analyzing tabular data"
   homepage "https://www.tadviewer.com/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Tad.app"
   binary "#{appdir}/Tad.app/Contents/Resources/tad.sh", target: "tad"
 
