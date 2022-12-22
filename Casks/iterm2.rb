@@ -1,9 +1,11 @@
 cask "iterm2" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
-  if MacOS.version <= :high_sierra
+  on_high_sierra :or_older do
     version "3.3.12"
     sha256 "6811b520699e8331b5d80b5da1e370e0ed467e68bc56906f08ecfa986e318167"
-  else
+  end
+  
+  on_mojave :or_newer do
     version "3.4.18"
     sha256 "76727347acb1f2856f9b6702c6ba486594da87f857afec3ee4cba48f7cac219c"
   end
