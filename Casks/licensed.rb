@@ -1,10 +1,18 @@
 cask "licensed" do
-  version "3.9.1"
+  version "1.5"
   sha256 :no_check
 
   url "https://amarsagoo.info/licensed/Licensed.dmg"
   name "Licensed"
+  desc "SOftware license manager"
   homepage "https://amarsagoo.info/licensed/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Licensed.app"
 end
