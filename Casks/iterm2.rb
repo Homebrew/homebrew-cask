@@ -11,21 +11,21 @@ cask "iterm2" do
   on_mojave :or_newer do
     version "3.4.18"
     sha256 "76727347acb1f2856f9b6702c6ba486594da87f857afec3ee4cba48f7cac219c"
+
+    livecheck do
+      # workaround for
+      # - https://github.com/Homebrew/homebrew-cask/pull/104019
+      # - https://github.com/gnachman/iterm2-website/issues/82
+      # url "https://iterm2.com/appcasts/final_modern.xml"
+      url "https://raw.githubusercontent.com/gnachman/iterm2-website/master/source/appcasts/final_modern.xml"
+      strategy :sparkle
+    end
   end
 
   url "https://iterm2.com/downloads/stable/iTerm2-#{version.dots_to_underscores}.zip"
   name "iTerm2"
   desc "Terminal emulator as alternative to Apple's Terminal app"
   homepage "https://www.iterm2.com/"
-
-  livecheck do
-    # workaround for
-    # - https://github.com/Homebrew/homebrew-cask/pull/104019
-    # - https://github.com/gnachman/iterm2-website/issues/82
-    # url "https://iterm2.com/appcasts/final_modern.xml"
-    url "https://raw.githubusercontent.com/gnachman/iterm2-website/master/source/appcasts/final_modern.xml"
-    strategy :sparkle
-  end
 
   auto_updates true
   conflicts_with cask: [
