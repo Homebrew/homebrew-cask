@@ -2,10 +2,18 @@ cask "touch-bar-simulator" do
   on_high_sierra :or_older do
     version "1.2.0"
     sha256 "4abe55de716ae56a41031cdb1d3b27bf6b1efae18b33b80bb0419669a9a76aa1"
+
+    livecheck do
+      skip "Legacy version"
+    end
   end
   on_mojave do
     version "3.2.0"
     sha256 "bdfaf740392bddb3e9b281a30efab27e03638d3428ba555650dca517153c13c6"
+
+    livecheck do
+      skip "Legacy version"
+    end
   end
   on_catalina :or_newer do
     version "4.2.0"
