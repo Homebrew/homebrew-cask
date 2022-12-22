@@ -26,6 +26,7 @@ cask "overt" do
     "~/Library/Caches/OpenStore_v3",
     "~/Library/Caches/Overt_v4",
     "~/Library/Caches/Overt_v5",
+    "~/Library/Caches/Overt_v6",
     "~/Library/Preferences/app.getopenstore.OpenStore.plist",
     "~/Library/Preferences/app.getovert.Overt.plist",
   ]
