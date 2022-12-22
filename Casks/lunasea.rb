@@ -1,6 +1,6 @@
 cask "lunasea" do
-  version "10.2.1"
-  sha256 "2b73eb5e68e8a3888b572dc98a6812e7b40ff8e36c9284fb8703b08f2378e0ce"
+  version "10.2.2"
+  sha256 "61ef622b70c31550ec6f700eba1e938c23fb97717344e8876d56e2d856a51be4"
 
   url "https://github.com/JagandeepBrar/LunaSea/releases/download/v#{version}/lunasea-macos-amd64.zip",
       verified: "github.com/JagandeepBrar/LunaSea/"
