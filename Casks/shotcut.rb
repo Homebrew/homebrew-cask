@@ -1,9 +1,9 @@
 cask "shotcut" do
   arch arm: "macos-ARM64", intel: "macos"
 
-  version "22.11.25"
-  sha256 arm:   "548c88cf2dd8f32b53748926cb99da1d2218c084335958ed6159106e3429dc34",
-         intel: "17b21eb2a206e7f11e32a8c1182cacaeaddeadb754fc06122371c2d458e5dd63"
+  version "22.12.21"
+  sha256 arm:   "b473b7c553179e3a8bf0e2a0a21bc60df918b0f997a793e4c4a7586a6875c6d5",
+         intel: "f13b73d965ca2b8de2e436d9adfbd688fd7e213c356fa5a0c38352979203b890"
 
   url "https://github.com/mltframework/shotcut/releases/download/v#{version}/shotcut-#{arch}-#{version.no_dots}.dmg",
       verified: "github.com/mltframework/shotcut/"
