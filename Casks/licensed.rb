@@ -4,7 +4,7 @@ cask "licensed" do
 
   url "https://amarsagoo.info/licensed/Licensed.dmg"
   name "Licensed"
-  desc "SOftware license manager"
+  desc "Software license manager"
   homepage "https://amarsagoo.info/licensed/"
 
   livecheck do
