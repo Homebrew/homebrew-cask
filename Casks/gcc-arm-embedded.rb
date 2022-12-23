@@ -1,9 +1,9 @@
 cask "gcc-arm-embedded" do
   # Exists as a cask because it is impractical as a formula:
   # https://github.com/Homebrew/homebrew-core/pull/45780#issuecomment-569246452
-  version "11.3.rel1"
-  gcc_version = "11.3.1"
-  sha256 "97621c58f246f38135da38f6ca8197a23190c01650c8265be3346895c3fc34d2"
+  version "12.2.rel1"
+  gcc_version = "12.2.1"
+  sha256 "318df42eca9231e4dd69591181f925307f0cfbb83c878152d8a2b735f275193c"
 
   url "https://developer.arm.com/-/media/Files/downloads/gnu/#{version}/binrel/arm-gnu-toolchain-#{version}-darwin-x86_64-arm-none-eabi.pkg"
   name "GCC ARM Embedded"
