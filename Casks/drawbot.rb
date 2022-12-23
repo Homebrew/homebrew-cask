@@ -1,6 +1,6 @@
 cask "drawbot" do
-  version "3.128"
-  sha256 "164b2bb7cb10ea1c526faa1315785827f2bfe35603696692d8bb7c554358aed1"
+  version "3.129"
+  sha256 "bd0af33cc188133224066ee8a85c81a926ba4c3c1da994749b10d0b8b0eb02b7"
 
   url "https://github.com/typemytype/drawbot/releases/download/#{version}/DrawBot.dmg",
       verified: "github.com/typemytype/drawbot/"
