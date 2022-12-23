@@ -2,9 +2,9 @@ cask "lantern" do
   version :latest
   sha256 :no_check
 
-  url "https://getlantern.org/lantern-installer.dmg"
+  url "https://s3.amazonaws.com/lantern/lantern-installer.dmg"
   name "Lantern"
-  homepage "https://getlantern.org/"
+  homepage "https://lantern.io/"
 
   app "Lantern.app"
 
