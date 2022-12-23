@@ -4,6 +4,7 @@ cask "lantern" do
 
   url "https://s3.amazonaws.com/lantern/lantern-installer.dmg"
   name "Lantern"
+  desc "Open Internet For All"
   homepage "https://lantern.io/"
 
   app "Lantern.app"
