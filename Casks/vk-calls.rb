@@ -7,16 +7,15 @@ cask "vk-calls" do
   name "VK Calls"
   desc "Platform for video calls of any purpose"
   homepage "https://calls.vk.com/"
-  
+
   auto_updates true
   depends_on macos: ">= :high_sierra"
-  
+
   app "VK Calls.app"
-  
+
   zap trash: [
     "~/Library/Application Support/VK Calls",
     "~/Library/Preferences/com.vk.calls.native.1.plist",
     "~/Library/Saved Application State/com.vk.calls.native.1.savedState",
   ]
 end
-  
