@@ -1,6 +1,6 @@
 cask "nym-wallet" do
-  version "1.1.4"
-  sha256 "639dac7bf8069465b5a5191e92c842f5372b899789cd7edf9ae29e386fdbc45f"
+  version "1.1.5"
+  sha256 "3cc24d263f1b324f8c503c448c1f7635e7f470574ff65a98aa5f350e6535728d"
 
   url "https://github.com/nymtech/nym/releases/download/nym-wallet-v#{version}/nym-wallet_#{version}_x64.dmg",
       verified: "github.com/nymtech/nym/"
