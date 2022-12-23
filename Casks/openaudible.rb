@@ -16,6 +16,8 @@ cask "openaudible" do
     strategy :github_latest
   end
 
+  auto_updates false
+
   app "OpenAudible.app"
 
   zap trash: "/Library/OpenAudible"
