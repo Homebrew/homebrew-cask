@@ -1,6 +1,6 @@
 cask "busycal" do
-  version "2022.4.7,2022-12-21-04-59"
-  sha256 "5c15713fb9066bcab4884d79d5a3359b675d228cc2a7c1955c533c48b0689108"
+  version "2022.4.7,2022-12-23-00-23"
+  sha256 "af296fee6df0f08d84cbda592070db67a79ca8d7165aaf98feba3ac2f67a3073"
 
   url "https://7e968b6ce8a839f034d9-23cfb9eddcb7b94cb43ba95f95a76900.ssl.cf1.rackcdn.com/bcl-#{version.csv.first}-#{version.csv.second}.zip",
       verified: "7e968b6ce8a839f034d9-23cfb9eddcb7b94cb43ba95f95a76900.ssl.cf1.rackcdn.com/"
@@ -23,10 +23,11 @@ cask "busycal" do
 
   pkg "BusyCal Installer.pkg"
 
-  uninstall pkgutil: "com.busymac.busycal3.pkg",
-            quit:    "N4RA379GBW.com.busymac.busycal3.alarm",
-            signal:  ["TERM", "com.busymac.busycal3"],
-            delete:  "/Applications/BusyCal.app"
+  uninstall launchctl: "N4RA379GBW.com.busymac.busycal3.alarm",
+            pkgutil:   "com.busymac.busycal3.pkg",
+            quit:      "N4RA379GBW.com.busymac.busycal3.alarm",
+            signal:    ["TERM", "com.busymac.busycal3"],
+            delete:    "/Applications/BusyCal.app"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.busymac.busycal#{version.major}.sfl*",
