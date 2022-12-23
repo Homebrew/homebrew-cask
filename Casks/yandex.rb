@@ -1,7 +1,7 @@
 cask "yandex" do
   arch arm: "&arch=arm64"
 
-  version "22.11.3"
+  version "22.11.5"
   sha256 :no_check
 
   url "https://browser.yandex.ru/download/?os=mac#{arch}&full=1",
