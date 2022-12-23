@@ -7,8 +7,8 @@ cask "secretive" do
       skip "Legacy version for macOS Catalina"
     end
   else
-    version "2.2.0"
-    sha256 "82307c6debf36e0619d46b4054c2be201a7d78ff98efdb3c4612bfb1d83b008f"
+    version "2.3.0"
+    sha256 "08c796de4fa84e424aabfe7b8f6719aab41738d186cf338149bf7ab9fee56157"
   end
 
   url "https://github.com/maxgoedjen/secretive/releases/download/v#{version}/Secretive.zip"
