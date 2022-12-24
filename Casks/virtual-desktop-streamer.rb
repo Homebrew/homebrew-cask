@@ -26,7 +26,7 @@ cask "virtual-desktop-streamer" do
       opoo "Unable to forcibly close Virtual Desktop Streamer"
   end
 
-  uninstall quit: "com.virtualDesktopInc.Mac.Streamer",
+  uninstall quit:      "com.virtualDesktopInc.Mac.Streamer",
             pkgutil:   [
               "com.VirtualDesktop.AudioDriver",
               "com.VirtualDesktop.Libs",
@@ -39,7 +39,7 @@ cask "virtual-desktop-streamer" do
               "com.VirtualDesktop.launch",
               "com.VirtualDesktop.uninstall",
             ],
-            delete: "/usr/local/bin/virtualdesktop/"
+            delete:    "/usr/local/bin/virtualdesktop/"
 
   zap trash: [
     "/tmp/.vdready",
