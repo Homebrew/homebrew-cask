@@ -3,9 +3,13 @@ cask "virtual-desktop-streamer" do
   sha256 :no_check
 
   url "https://download.vrdesktop.net/files/VirtualDesktop.Streamer.Setup.dmg"
-  name "virtual-desktop-streamer"
+  name "Virtual Desktop Streamer"
   desc "VR Virtual Desktop Streamer"
   homepage "https://www.vrdesktop.net/"
+
+  livecheck do
+    skip "No version information available"
+  end
 
   pkg "Virtual Desktop.pkg"
 
@@ -34,17 +38,16 @@ cask "virtual-desktop-streamer" do
               "com.VirtualDesktop.autoinstall",
               "com.VirtualDesktop.launch",
               "com.VirtualDesktop.uninstall",
-            ], delete: [
-              "/usr/local/bin/virtualdesktop/",
-            ]
+            ],
+            delete: "/usr/local/bin/virtualdesktop/"
 
   zap trash: [
+    "/tmp/.vdready",
+    "/tmp/.vdrequestclean",
+    "/tmp/.vdupdatedetail",
     "~/Library/Caches/com.virtualDesktopInc.Mac.Streamer",
     "~/Library/HTTPStorages/com.virtualDesktopInc.Mac.Streamer",
     "~/Library/Preferences/com.virtualDesktopInc.Mac.Streamer.plist",
     "~/Library/Saved Application State/com.virtualDesktopInc.Mac.Streamer.savedState",
-    "/tmp/.vdready",
-    "/tmp/.vdupdatedetail",
-    "/tmp/.vdrequestclean",
   ]
 end
