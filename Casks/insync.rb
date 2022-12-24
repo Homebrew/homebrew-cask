@@ -8,7 +8,7 @@ cask "insync" do
   homepage "https://www.insynchq.com/"
 
   livecheck do
-    url :homepage
+    url "https://cdn.insynchq.com/web/webflow/js/mac_download_links.js"
     regex(/Insync[._-]?v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
