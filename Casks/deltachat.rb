@@ -8,8 +8,8 @@ cask "deltachat" do
   homepage "https://delta.chat/"
 
   livecheck do
-    url "https://github.com/deltachat/deltachat-desktop"
-    strategy :github_latest
+    url "https://delta.chat/en/download"
+    regex(/href=.*?DeltaChat[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "DeltaChat.app"
