@@ -10,7 +10,7 @@ cask "universal-gcode-platform" do
 
   livecheck do
     url "https://github.com/winder/Universal-G-Code-Sender"
-    strategy :git
+    strategy :github_latest
   end
 
   app "Universal Gcode Platform.app"
