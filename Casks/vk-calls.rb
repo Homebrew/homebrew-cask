@@ -1,5 +1,5 @@
 cask "vk-calls" do
-  version "1.1.10103,10103"
+  version "1.1.10103"
   sha256 :no_check
 
   url "https://vkcalls-native-ac.vk-apps.com/latest/vk-calls.dmg",
