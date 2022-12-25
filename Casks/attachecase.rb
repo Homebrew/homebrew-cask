@@ -20,4 +20,9 @@ cask "attachecase" do
   depends_on macos: ">= :mojave"
 
   app "AttacheCase.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/dev.hibara.attachecase",
+    "~/Library/Containers/dev.hibara.attachecase",
+  ]
 end
