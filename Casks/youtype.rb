@@ -20,7 +20,7 @@ cask "youtype" do
   uninstall quit: "com.AVKorotkov.YouType"
 
   zap trash: [
-    "~/Library/Preferences/com.AVKorotkov.YouType.plist",
     "~/Library/Caches/com.AVKorotkov.YouType",
+    "~/Library/Preferences/com.AVKorotkov.YouType.plist",
   ]
 end
