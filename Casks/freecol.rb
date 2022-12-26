@@ -6,7 +6,7 @@ cask "freecol" do
       verified: "sourceforge.net/freecol/"
   name "FreeCol"
   desc "Turn-based strategy game"
-  homepage "http://www.freecol.org/"
+  homepage "https://www.freecol.org/"
 
   app "FreeCol.app"
 end
