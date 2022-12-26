@@ -26,4 +26,12 @@ cask "iconchanger" do
   end
 
   app "IconChanger 2022-12-22 11-45-17/IconChanger.app"
+
+  zap trash: [
+    "~/.iconchanger",
+    "~/Library/Caches/com.zhuhaoyu.IconChanger",
+    "~/Library/HTTPStorages/com.zhuhaoyu.IconChanger",
+    "~/Library/Preferences/com.zhuhaoyu.IconChanger.plist",
+    "~/Library/Saved Application State/com.zhuhaoyu.IconChanger.savedState",
+  ]
 end
