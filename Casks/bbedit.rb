@@ -9,7 +9,7 @@ cask "bbedit" do
   homepage "https://www.barebones.com/products/bbedit/"
 
   livecheck do
-    url "http://versioncheck.barebones.com/BBEdit.xml"
+    url "https://versioncheck.barebones.com/BBEdit.xml"
     regex(/BBEdit[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
