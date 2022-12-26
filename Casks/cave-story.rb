@@ -13,7 +13,7 @@ cask "cave-story" do
       sha256 "30e32c5123b984d0733a1e1e510a1255d511e69b694c4227119c69161ba1dc55"
 
       livecheck do
-        url "http://www.cavestory.org/downloads/"
+        url "https://www.cavestory.org/downloads/"
         regex(/href=.*?cavestory[._-]?v?(\d{3})[._-]?r(\d+)\.dmg/i)
         strategy :page_match do |page, regex|
           page.scan(regex).map { |match| "#{match[0].chars.join(".")},#{match[1]}" }
