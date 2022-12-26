@@ -9,7 +9,7 @@ cask "slicer" do
   homepage "https://www.slicer.org/"
 
   livecheck do
-    url "http://download.slicer.org"
+    url "https://download.slicer.org"
     strategy :page_match do |page|
       match = page.scan(%r{href=.*?/bitstream/(\d+\w+).*?\n?.*?version\s*(\d+(?:\.\d+)+)}im)
       next if match.blank?
