@@ -11,7 +11,7 @@ cask "eclipse-platform" do
   homepage "https://eclipse.org/"
 
   livecheck do
-    url "http://download.eclipse.org/eclipse/downloads/"
+    url "https://download.eclipse.org/eclipse/downloads/"
     regex(%r{href=.*/R-(\d+(?:\.\d+)*)-(\d+)/}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
