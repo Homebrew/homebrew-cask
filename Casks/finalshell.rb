@@ -8,7 +8,7 @@ cask "finalshell" do
   homepage "https://www.hostbuf.com/"
 
   livecheck do
-    url "http://www.hostbuf.com/t/989.html"
+    url "https://www.hostbuf.com/t/989.html"
     regex(/版本号(\d+(?:\.\d+)+)/i)
   end
 
