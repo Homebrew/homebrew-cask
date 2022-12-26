@@ -2,7 +2,7 @@ cask "overdrive-media-console" do
   version "1.2"
   sha256 :no_check
 
-  url "http://static.od-cdn.com/ODMediaConsoleSetup.dmg",
+  url "https://static.od-cdn.com/ODMediaConsoleSetup.dmg",
       verified: "static.od-cdn.com/"
   name "OverDrive Media Console"
   desc "Get eBooks, audiobooks, and videos from your local library"
