@@ -5,7 +5,7 @@ cask "a-slower-speed-of-light" do
   url "https://web.mit.edu/gambit/summer12/speedoflight/#{version}/A_Slower_Speed_of_Light.dmg"
   name "A Slower Speed of Light"
   desc "First-person game"
-  homepage "http://gamelab.mit.edu/games/a-slower-speed-of-light/"
+  homepage "https://gamelab.mit.edu/games/a-slower-speed-of-light/"
 
   livecheck do
     url :homepage
