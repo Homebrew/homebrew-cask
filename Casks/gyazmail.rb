@@ -2,10 +2,10 @@ cask "gyazmail" do
   version "1.7.1"
   sha256 "002ad687dedfc9eea6391b4241312e35b6143d5caa0a813d8fe4e323a568fbfb"
 
-  url "http://gyazsquare.com/download/GyazMail-#{version.no_dots}.dmg"
+  url "https://gyazsquare.com/download/GyazMail-#{version.no_dots}.dmg"
   name "GyazMail"
   desc "Email client"
-  homepage "http://gyazsquare.com/gyazmail/"
+  homepage "https://gyazsquare.com/gyazmail/"
 
   livecheck do
     url "https://gyazsquare.com/gyazmail/download/"
