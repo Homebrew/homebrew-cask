@@ -6,7 +6,7 @@ cask "melonds" do
       verified: "github.com/melonDS-emu/melonDS/"
   name "melonDS"
   desc "Nintendo DS and DSi emulator"
-  homepage "http://melonds.kuribo64.net/"
+  homepage "https://melonds.kuribo64.net/"
 
   app "melonDS.app"
 
