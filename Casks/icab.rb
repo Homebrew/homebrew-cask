@@ -6,10 +6,10 @@ cask "icab" do
       verified: "icab.clauss-net.de/icab/"
   name "iCab"
   desc "Alternative web browser"
-  homepage "http://www.icab.de/"
+  homepage "https://www.icab.de/"
 
   livecheck do
-    url "http://www.icab.de/download.html"
+    url "https://www.icab.de/download.html"
     regex(/iCab\sv?(\d+(?:\.\d+)+)/i)
   end
 
