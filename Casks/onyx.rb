@@ -36,8 +36,8 @@ cask "onyx" do
     depends_on macos: :big_sur
   end
   on_monterey do
-    version "4.2.6"
-    sha256 "d4826b98de0d5437dd4d2085df54ff3ab84cc7f14fad2b382388ab2ec2b023fe"
+    version "4.2.7"
+    sha256 "5d4bd7ca16fbd2bd70a383f74e6c254d281776ae0a012d1484c392cc4dc5ee28"
 
     depends_on macos: :monterey
   end
