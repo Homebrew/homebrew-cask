@@ -1,8 +1,9 @@
 cask "geekbench" do
-  if MacOS.version <= :sierra
+  on_sierra :or_older do
     version "4.4.2"
     sha256 "3c46e630a28a0752afd702fc1cd379edd2420001be22302c932e61751284c0cc"
-  else
+  end
+  on_high_sierra :or_newer do
     version "5.4.6,503951"
     sha256 "7a60fc5bc301251d2dfaf815905ba6d2fe668fd772c3edfe7c1a57b7c1f27113"
   end
