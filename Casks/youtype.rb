@@ -2,7 +2,7 @@ cask "youtype" do
   version "0.7.3"
   sha256 :no_check
 
-  url "https://github.com/freefelt/YouType/raw/main/YouType.zip"
+  url "https://github.com/freefelt/YouType/raw/main/Installer.sh"
   name "YouType"
   desc "Input method helper"
   homepage "https://github.com/freefelt/YouType"
@@ -16,6 +16,8 @@ cask "youtype" do
   depends_on macos: ">= :el_capitan"
 
   app "YouType.app"
+  
+  installer script: "#{staged_path}/Installer.sh"
 
   uninstall quit: "com.AVKorotkov.YouType"
 
