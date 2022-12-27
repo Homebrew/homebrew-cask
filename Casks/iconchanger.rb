@@ -4,7 +4,7 @@ cask "iconchanger" do
 
   url "https://github.com/underthestars-zhy/IconChanger/releases/download/v#{version.csv.first}/IconChanger.#{version.csv.second}.#{version.csv.third}.zip"
   name "IconChanger"
-  desc "App that can change you app's icon by simplifying the icon changing process"
+  desc "Change you app's icon"
   homepage "https://github.com/underthestars-zhy/IconChanger"
 
   livecheck do
@@ -25,7 +25,7 @@ cask "iconchanger" do
     end
   end
 
-  app "IconChanger 2022-12-22 11-45-17/IconChanger.app"
+  app "IconChanger #{version.csv.second} #{version.csv.third}/IconChanger.app"
 
   zap trash: [
     "~/.iconchanger",
