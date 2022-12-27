@@ -16,7 +16,6 @@ cask "youtype" do
   depends_on macos: ">= :el_capitan"
 
   app "YouType.app"
-  
   installer script: "#{staged_path}/Installer.sh"
 
   uninstall quit: "com.AVKorotkov.YouType"
