@@ -65,7 +65,7 @@ jobs:
               echo '::warning::Removing Visual Studio is no longer necessary.'
             fi
           fi
-          
+
           if ! brew uninstall --cask julia && ! rm -r /Applications/Julia-*.app; then
             echo '::warning::Removing Julia is no longer necessary.'
           fi
@@ -136,7 +136,7 @@ jobs:
       - name: Run brew audit --cask${{ (matrix.cask && ' ') || ' --tap ' }}${{ matrix.cask.token || matrix.tap }}
         id: audit
         run: |
-          brew audit --cask ${{ join(matrix.audit_args, ' ') }}${{ (matrix.cask && ' --signing ') || ' --tap ' }}'${{ matrix.cask.path || matrix.tap }}'
+          brew audit --cask ${{ join(matrix.audit_args, ' ') }}${{ (matrix.cask && ' --signing ') || ' --tap ' }}'${{ matrix.cask.token || matrix.tap }}'
         timeout-minutes: 30
         if: >
           always() && steps.readall.outcome == 'success' &&
