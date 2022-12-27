@@ -1,10 +1,11 @@
 cask "jedit-omega" do
-  if MacOS.version <= :el_capitan
+  on_el_capitan :or_older do
     version "1.32"
     sha256 "251697fe6b76419b2cef41a89a2cb7d2e3f8caab0bc1ae82aed6c14a366fdad9"
-  else
+  end
+  on_sierra :or_newer do
     version "2.49"
-    sha256 "9c583f2861c6e3d2bcfb855cbfdcec35551db20d20fa1c348b57e60a9601d33c"
+    sha256 "c31154aec59a430b4e0b87158f61a04e810f004b6ad70fee433711a8db6a5cd0"
   end
 
   url "http://www.artman21.org/download/JeditOmega#{version.no_dots}.dmg",
