@@ -3,9 +3,9 @@ cask "menubarx" do
   sha256 "e1cb2c886d95e10d19013c4ded09672cc6e94a390a4dcb4c1b4c42dea5518684"
 
   url "https://menubarx-1251679148.file.myqcloud.com/download/MenubarX-#{version.csv.first}.dmg",
-      verified: "menubarx-1251679148.file.myqcloud.com"
+      verified: "menubarx-1251679148.file.myqcloud.com/download/"
   name "MenubarX"
-  desc "Powerful menu bar browser"
+  desc "Menu bar browser"
   homepage "https://menubarx.app/"
 
   livecheck do
