@@ -1,7 +1,7 @@
 cask "simply-fortran" do
   arch arm: "-arm64", intel: "-x86_64"
 
-  if MacOS.version <= :big_sur
+  on_big_sur :or_older do
     version "3.25.3757"
     sha256 "0975462a1593bdc976dc87d6a9da88b97d8268a1a97caebeefd359e56ef73195"
 
@@ -10,7 +10,8 @@ cask "simply-fortran" do
     livecheck do
       skip "Legacy version"
     end
-  else
+  end
+  on_monterey :or_newer do
     version "3.26.3806"
     sha256 arm:   "886dd1432bf070be8c4ba87e1585962ff3ca480b93797674c7886bf557c8867b",
            intel: "95f4f0fdd2926e7cc5f0b81538ceb35c31f01cd65f72d5705ebcb0e8ef1f2bbd"
