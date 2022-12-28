@@ -17,6 +17,7 @@ cask "vpn-enabler" do
 
   name "VPN Enabler"
   homepage "https://cutedgesystems.com/"
+  desc "VPN settings utility"
 
   depends_on macos: ">= :el_capitan"
 
