@@ -3,7 +3,7 @@ cask "mini-program-studio" do
 
   on_intel do
     version "3.3.3,4ddf7f5b-73cd-42dd-806f-5fd90a8327b8"
-    sha256 "d5dae572b6c6eef431f07aa2a452e5c8c8f0b6b84af596c3fdf08e88bdee4da3"
+    sha256 "539f1f259a1095e1d1639f27db6e7ef218e89a956d1aa394d8c143804b82f965"
   end
   on_arm do
     version "3.3.3,473624af-67c4-4f44-938a-b84217d1db3b"
