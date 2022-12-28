@@ -1,17 +1,21 @@
 cask "microsoft-word" do
-  if MacOS.version <= :el_capitan
+  on_el_capitan :or_older do
     version "16.16.20101200"
     sha256 "0c61b7db7a6a13653270795c085a909aa54668e8de2f2ca749257ce6aa5957d1"
-  elsif MacOS.version <= :sierra
+  end
+  on_sierra do
     version "16.30.19101301"
     sha256 "6abd7939b0d935023ebb8fabeb206c4cbbe8eb8f9a3ff7d318448d2ba5f332e4"
-  elsif MacOS.version <= :high_sierra
+  end
+  on_high_sierra do
     version "16.43.20110804"
     sha256 "3d957d534fb2142f6e95a688552890a31f0d942796f0128ca837a3e98405d413"
-  elsif MacOS.version <= :mojave
+  end
+  on_mojave do
     version "16.54.21101001"
     sha256 "7f3ed397b517aac3637d8b8f8b4233f9e7132941f0657eaca8ec423ac068616e"
-  else
+  end
+  on_catalina :or_newer do
     version "16.68.22121100"
     sha256 "2eb51e0c1ab59df6fbc0362a4dae20346abb1cd8d4a92fa27984b66e79fd8290"
   end
