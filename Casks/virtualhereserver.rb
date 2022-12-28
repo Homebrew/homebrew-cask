@@ -2,11 +2,12 @@ cask "virtualhereserver" do
   version "4.4.7"
   sha256 :no_check
 
-  if MacOS.version <= :mojave
+  on_mojave :or_older do
     url "https://www.virtualhere.com/sites/default/files/usbserver/VirtualHereServer.dmg"
 
     app "VirtualHereServer.app"
-  else
+  end
+  on_catalina :or_newer do
     url "https://www.virtualhere.com/sites/default/files/usbserver/VirtualHereServerUniversal.dmg"
 
     app "VirtualHereServerUniversal.app"
