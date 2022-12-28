@@ -1,11 +1,12 @@
 cask "ncar-ncl" do
   version "6.6.2"
 
-  if MacOS.version <= :high_sierra
+  on_high_sierra :or_older do
     sha256 "4e937a6de4303a4928f0f42390d991b12a37659726d15b9da7e8072db74e1867"
     url "https://www.earthsystemgrid.org/api/v1/dataset/ncl.#{version.no_dots}.dap/file/ncl_ncarg-#{version}-MacOS_10.13_64bit_gnu710.tar.gz",
         verified: "earthsystemgrid.org/api/v1/dataset/ncl."
-  else
+  end
+  on_mojave :or_newer do
     sha256 "e2cd644f6b1bb41f55480b8818319e60c450998e31e5e489c69a5e84f3d1f359"
     url "https://www.earthsystemgrid.org/api/v1/dataset/ncl.#{version.no_dots}.dap/file/ncl_ncarg-#{version}-MacOS_10.14_64bit_gnu730.tar.gz",
         verified: "earthsystemgrid.org/api/v1/dataset/ncl."
