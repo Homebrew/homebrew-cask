@@ -1,20 +1,58 @@
 cask "karabiner-elements" do
-  if MacOS.version <= :el_capitan
+  on_el_capitan :or_older do
     version "11.6.0"
     sha256 "c1b06252ecc42cdd8051eb3d606050ee47b04532629293245ffdfa01bbc2430d"
 
     url "https://pqrs.org/osx/karabiner/files/Karabiner-Elements-#{version}.dmg"
 
+    livecheck do
+      skip "Legacy version"
+    end
+
+    depends_on macos: ">= :el_capitan"
+
     pkg "Karabiner-Elements.sparkle_guided.pkg"
-  elsif MacOS.version <= :mojave
+  end
+  on_sierra do
     version "12.10.0"
     sha256 "53252f7d07e44f04972afea2a16ac595552c28715aa65ff4a481a1c18c8be2f4"
 
     url "https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg",
         verified: "github.com/pqrs-org/Karabiner-Elements/"
 
+    livecheck do
+      skip "Legacy version"
+    end
+
     pkg "Karabiner-Elements.sparkle_guided.pkg"
-  elsif MacOS.version <= :catalina
+  end
+  on_high_sierra do
+    version "12.10.0"
+    sha256 "53252f7d07e44f04972afea2a16ac595552c28715aa65ff4a481a1c18c8be2f4"
+
+    url "https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg",
+        verified: "github.com/pqrs-org/Karabiner-Elements/"
+
+    livecheck do
+      skip "Legacy version"
+    end
+
+    pkg "Karabiner-Elements.sparkle_guided.pkg"
+  end
+  on_mojave do
+    version "12.10.0"
+    sha256 "53252f7d07e44f04972afea2a16ac595552c28715aa65ff4a481a1c18c8be2f4"
+
+    url "https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg",
+        verified: "github.com/pqrs-org/Karabiner-Elements/"
+
+    livecheck do
+      skip "Legacy version"
+    end
+
+    pkg "Karabiner-Elements.sparkle_guided.pkg"
+  end
+  on_catalina do
     version "13.7.0"
     sha256 "9ac5e53a71f3a00d7bdb2f5f5f001f70b6b8b7b2680e10a929e0e4c488c8734b"
 
@@ -22,11 +60,12 @@ cask "karabiner-elements" do
         verified: "github.com/pqrs-org/Karabiner-Elements/"
 
     livecheck do
-      skip "newer versions only available for Big Sur or higher"
+      skip "Legacy version"
     end
 
     pkg "Karabiner-Elements.pkg"
-  else
+  end
+  on_big_sur :or_newer do
     version "14.10.0"
     sha256 "385204d476cbff5d76d30a141ed4fa552bef4255430c984f38e48ed4e39be6c3"
 
@@ -38,6 +77,8 @@ cask "karabiner-elements" do
       strategy :sparkle
     end
 
+    depends_on macos: ">= :big_sur"
+
     pkg "Karabiner-Elements.pkg"
   end
 
@@ -46,9 +87,8 @@ cask "karabiner-elements" do
   homepage "https://pqrs.org/osx/karabiner/"
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
 
-  if MacOS.version <= :mojave
+  on_mojave :or_older do
     uninstall signal:    [
                 ["TERM", "org.pqrs.Karabiner-Menu"],
                 ["TERM", "org.pqrs.Karabiner-NotificationWindow"],
@@ -66,7 +106,8 @@ cask "karabiner-elements" do
                 sudo:       true,
               },
               delete:    "/Library/Application Support/org.pqrs/"
-  else
+  end
+  on_catalina :or_newer do
     uninstall early_script: {
                 executable: "/Library/Application Support/org.pqrs/Karabiner-DriverKit-VirtualHIDDevice/scripts/uninstall/remove_files.sh",
                 sudo:       true,
