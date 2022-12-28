@@ -1,8 +1,9 @@
 cask "microsoft-auto-update" do
-  if MacOS.version <= :el_capitan
+  on_el_capitan :or_older do
     version "4.40.21101001"
     sha256 "f638f7e0da9ee659c323f2ede0f176804bfe9a615a8f8b6320bd2e69d91ef2b2"
-  else
+  end
+  on_sierra :or_newer do
     version "4.54.22121100"
     sha256 "7641fd3ce6aeac6fa568d52fa5e400428a4814dc49d40f1750f65894d317a5b1"
   end
