@@ -1,10 +1,11 @@
 cask "subsurface" do
   version "5.0.10"
 
-  if MacOS.version <= :mojave
+  on_mojave :or_older do
     sha256 "b718acc583a986bc36df77b7b076dac0e19f193f6579c55ff802d448cea7c2b3"
     url "https://subsurface-divelog.org/downloads/Subsurface-#{version}-10.13+14.dmg"
-  else
+  end
+  on_catalina :or_newer do
     sha256 "c94ae7f1c63e558c6ac7896f4e6ea1514ac65f023ee2246ad69614b8747a9581"
     url "https://subsurface-divelog.org/downloads/Subsurface-#{version}-qt6-universal.dmg"
   end
