@@ -1,13 +1,13 @@
 cask "stack-stack" do
-  version "3.42.0"
+  version "3.43.2"
 
   on_intel do
-    sha256 "487a92610df958e4bb4c62929941eeb972922f9fd88cdc67861f155db36ad1a3"
+    sha256 "5846b9af905bdbaef11f04c099a0d0015ab62077ca4d17f33946ca473ef9dd91"
 
     url "https://binaries.getstack.app/builds/prod/Stack-#{version}.dmg"
   end
   on_arm do
-    sha256 "634a32ae49660e56bf10eecfdec5db1a8322559a2cd292ade60c32e998d0d232"
+    sha256 "2615a79ea08750e3fd4f60b376f8a4e617d578e4c21863a55af0adccc8504dc5"
 
     url "https://binaries.getstack.app/builds/prod/mac/arm64/Stack%20#{version}-arm64.dmg"
   end
