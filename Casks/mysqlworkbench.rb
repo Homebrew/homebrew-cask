@@ -1,17 +1,20 @@
 cask "mysqlworkbench" do
-  if MacOS.version <= :sierra
+  on_sierra :or_older do
     version "6.3.10"
     sha256 "29857bf84bebb7c4442ce147e44602d00f8c001e3c09b3a6e3af356767e08d2c"
     url "https://cdn.mysql.com/Downloads/MySQLGUITools/mysql-workbench-community-#{version}-macos-x86_64.dmg"
-  elsif MacOS.version <= :high_sierra
+  end
+  on_high_sierra do
     version "8.0.16"
     sha256 "3478800290e2797d294e3721fdaea4c41ddc1917f2b59ec94a935e16c18dc5d2"
     url "https://downloads.mysql.com/archives/get/p/#{version.major}/file/mysql-workbench-community-#{version}-macos-x86_64.dmg"
-  elsif MacOS.version <= :mojave
+  end
+  on_mojave do
     version "8.0.21"
     sha256 "7d812551cc1cc38e1d5f588e6c91b07f1778c78a04bfe94dafac3a23ea425e88"
     url "https://downloads.mysql.com/archives/get/p/#{version.major}/file/mysql-workbench-community-#{version}-macos-x86_64.dmg"
-  elsif MacOS.version <= :catalina
+  end
+  on_catalina do
     version "8.0.22"
     sha256 "4e27de82d869043cf80e803f1a57cc041a91cabddf0aa6a6c054d68af1837d48"
     url "https://downloads.mysql.com/archives/get/p/#{version.major}/file/mysql-workbench-community-#{version}-macos-x86_64.dmg"
@@ -19,7 +22,8 @@ cask "mysqlworkbench" do
     livecheck do
       skip "newer versions only available for Big Sur or higher"
     end
-  else
+  end
+  on_big_sur :or_newer do
     version "8.0.31"
     sha256 "6807ac1138c424c57d7e912c08301a838a90935dd0fc7a5658d3ded23f98a865"
     url "https://cdn.mysql.com/Downloads/MySQLGUITools/mysql-workbench-community-#{version}-macos-x86_64.dmg"
