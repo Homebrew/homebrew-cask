@@ -1,6 +1,6 @@
 cask "ares" do
-  version "130.1"
-  sha256 "34f80476cdc6acca4718e0af14171ab90193f6c5269d10b8443edf3d2f0f7558"
+  version "131"
+  sha256 "62ffe2d3b5cafbc77645365c6229218720190126c57ffbddab19d4fcf8066db2"
 
   url "https://github.com/ares-emulator/ares/releases/download/v#{version}/ares-macos.zip",
       verified: "https://github.com/ares-emulator/ares"
@@ -10,8 +10,7 @@ cask "ares" do
 
   livecheck do
     url :homepage
-    strategy :page_match
-    regex(/ares\sv?(\d+(?:\.\d+)+)/i)
+    regex(/ares\sv?(\d+(?:\.?\d+)+)/i)
   end
 
   depends_on macos: ">= :el_capitan"
