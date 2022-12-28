@@ -2,9 +2,10 @@ cask "spideroakone" do
   version "7.5.0"
   sha256 :no_check
 
-  if MacOS.version == :high_sierra
+  on_high_sierra :or_older do
     url "https://spideroak.com/release/spideroak/osx_hs"
-  else
+  end
+  on_mojave :or_newer do
     url "https://spideroak.com/release/spideroak/osx"
   end
 
@@ -16,6 +17,8 @@ cask "spideroakone" do
     url :url
     strategy :header_match
   end
+
+  depends_on macos: ">= :high_sierra"
 
   pkg "SpiderOakONE.pkg"
 
