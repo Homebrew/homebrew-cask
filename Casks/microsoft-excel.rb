@@ -1,17 +1,21 @@
 cask "microsoft-excel" do
-  if MacOS.version <= :el_capitan
+  on_el_capitan :or_older do
     version "16.16.20101200"
     sha256 "bdd23b696d54e5ffeb40f30a9bd7f968d2936380ab78a6eaf29d05f5fc8eb78e"
-  elsif MacOS.version <= :sierra
+  end
+  on_sierra do
     version "16.30.19101301"
     sha256 "9886b661067f4a99de544d140980fb0f8ef2f4871baa519024781fb814a02fe5"
-  elsif MacOS.version <= :high_sierra
+  end
+  on_high_sierra do
     version "16.43.20110804"
     sha256 "2711a1b8864f7474458086b4b0a56673fee0097d2049f276788c50e004c47d72"
-  elsif MacOS.version <= :mojave
+  end
+  on_mojave do
     version "16.54.21101001"
     sha256 "e09fe9f49a36b37af3745673a385be4de9ae8ec774965fd1753f8479a775fc54"
-  else
+  end
+  on_catalina :or_newer do
     version "16.68.22121100"
     sha256 "ec860e52e57e903cf1e41a783c8b21ba90e6d8c47c737522b9afb3b3e4358eb6"
   end
