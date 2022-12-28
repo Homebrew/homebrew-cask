@@ -1,17 +1,21 @@
 cask "microsoft-powerpoint" do
-  if MacOS.version <= :el_capitan
+  on_el_capitan :or_older do
     version "16.16.20101200"
     sha256 "0c898068408082124f7fe45717e3fb4b4f5647b609b54dc5fa6c90e295f499c3"
-  elsif MacOS.version <= :sierra
+  end
+  on_sierra do
     version "16.30.19101301"
     sha256 "d0b16f96bb390a225c52808952a66f0e02bf3f355234cbe733b250d37bb44c72"
-  elsif MacOS.version <= :high_sierra
+  end
+  on_high_sierra do
     version "16.43.20110804"
     sha256 "a89e0aed18e5b1e56293b1f9eaccc3e3f5089eb37a9eec64bb6f3a3fa90587eb"
-  elsif MacOS.version <= :mojave
+  end
+  on_mojave do
     version "16.54.21101001"
     sha256 "75a57c82b46d0e2558c454f19610576b7a48baf1ccc5cd1fa61b69cca5bf0bd1"
-  else
+  end
+  on_catalina :or_newer do
     version "16.68.22121100"
     sha256 "3b778477a123566245448e2f29fb75e7f791ee1caa3c4d501d10a55270e03a1c"
   end
