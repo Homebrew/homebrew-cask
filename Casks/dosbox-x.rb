@@ -2,15 +2,15 @@ cask "dosbox-x" do
   arch arm: "arm64", intel: "x86_64"
 
   on_intel do
-    version "2022.08.0,20220801110113"
-    sha256 "ac684024318271c551f5cffbc18cb44ef9e5470a35f64b726e7ed890b0d03e7a"
+    version "2022.12.26,20221226190321"
+    sha256 "af254d87679beefaf2f30d1f7b3bc1a1f59473e76da9d620c452f0aa1f8db53b"
   end
   on_arm do
-    version "2022.08.0,20220801125416"
-    sha256 "4a0f664c8b6c35db153682c7bad747faf4d033da10039e5eb247e0f526e1aaeb"
+    version "2022.12.26,20201226002957"
+    sha256 "5beb7cae06cebf36fcfa39012c9ed45c517498f759d4cf2b900b137298e44e79"
   end
 
-  url "https://github.com/joncampbell123/dosbox-x/releases/download/dosbox-x-windows-v#{version.csv.first}/dosbox-x-macosx-#{arch}-#{version.csv.second}.zip",
+  url "https://github.com/joncampbell123/dosbox-x/releases/download/dosbox-x-v#{version.csv.first}/dosbox-x-macosx-#{arch}-#{version.csv.second}.zip",
       verified: "github.com/joncampbell123/dosbox-x/"
   name "DOSBox-X"
   desc "Fork of the DOSBox project"
@@ -18,7 +18,7 @@ cask "dosbox-x" do
 
   livecheck do
     url "https://github.com/joncampbell123/dosbox-x/releases/latest"
-    regex(%r{href=".*?/dosbox-x-windows-v?(\d+(?:\.\d+)+)/dosbox-x-macosx-#{arch}-([^/]+)\.zip"}i)
+    regex(%r{href=".*?/dosbox-x-v?(\d+(?:\.\d+)+)/dosbox-x-macosx-#{arch}-([^/]+)\.zip"}i)
     strategy :header_match do |headers, regex|
       next if headers["location"].blank?
 
