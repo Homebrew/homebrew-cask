@@ -1,6 +1,6 @@
 cask "stellarium" do
-  version "1.1.1"
-  sha256 "961a5c9a0eefd06457ebc0ebf24c45dee9d9e1a51ab8fa4c6931584225381578"
+  version "1.2"
+  sha256 "4700f8da7b523b9fdc03222272f26dfbb3d9a94e1bab560868d70e90c601a309"
 
   url "https://github.com/Stellarium/stellarium/releases/download/v#{version.major_minor}/Stellarium-#{version}-macOS.zip",
       verified: "github.com/Stellarium/stellarium/"
