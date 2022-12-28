@@ -1,11 +1,12 @@
 cask "nextcloud" do
-  if MacOS.version <= :el_capitan
+  on_el_capitan :or_older do
     version "2.6.5.20200710-legacy"
     sha256 "4c67e50361dd5596fb884002d1ed907fe109d607fba2cabe07e505addd164519"
 
     url "https://github.com/nextcloud/desktop/releases/download/v#{version.major_minor_patch}/Nextcloud-#{version}.pkg",
         verified: "github.com/nextcloud/desktop/"
-  else
+  end
+  on_sierra :or_newer do
     version "3.6.4"
     sha256 "4ed053762554672f128c09a822dc0e9eaa166e0f1287caa7cd23b7df120eeb3f"
 
