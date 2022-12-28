@@ -1,9 +1,9 @@
 cask "universal-gcode-platform" do
-  version "2.0.12"
-  sha256 "07dc8d2946b3c1f8de5d7cb58c8bd94ca379bb9fd8f306a898f76fd68d34806e"
+  version "2.0.13"
+  sha256 "7335d068c9b1be6f2e70fca49a8dbfc5b3ef7c030c7aace24b85c55437ee6263"
 
-  url "https://ugs.jfrog.io/ugs/UGS/v#{version}/ugs-platform-app-ios.dmg",
-      verified: "https://ugs.jfrog.io/ugs/UGS/"
+  url "https://github.com/winder/Universal-G-Code-Sender/releases/download/v#{version}/ios-ugs-platform-app-#{version}.dmg",
+      verified: "github.com/winder/Universal-G-Code-Sender/"
   name "Universal G-code Sender (Platform version)"
   desc "G-code sender for CNC (compatible with GRBL, TinyG, g2core and Smoothieware)"
   homepage "https://winder.github.io/ugs_website/"
