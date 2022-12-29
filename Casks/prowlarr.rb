@@ -20,7 +20,5 @@ cask "prowlarr" do
 
   app "Prowlarr.app"
 
-  zap trash: [
-    "~/.config/Prowlarr",
-  ]
+  zap trash: "~/.config/Prowlarr"
 end
