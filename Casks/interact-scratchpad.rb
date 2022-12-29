@@ -2,12 +2,14 @@ cask "interact-scratchpad" do
   on_big_sur :or_older do
     version "2.0.4"
     sha256 :no_check
+
     url "https://s3.us-west-2.amazonaws.com/downloads.agiletortoise.com/Interact+Scratchpad-#{version.major_minor}.app.zip",
         verified: "s3.us-west-2.amazonaws.com/downloads.agiletortoise.com/"
   end
   on_monterey :or_newer do
     version "2.1.2"
     sha256 :no_check
+
     url "https://s3-us-west-2.amazonaws.com/downloads.agiletortoise.com/Interact+Scratchpad.app.zip",
         verified: "s3-us-west-2.amazonaws.com/downloads.agiletortoise.com/"
   end
