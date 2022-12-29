@@ -1,9 +1,13 @@
+# typed: strict
+# frozen_string_literal: true
+
 cask "macupdate" do
-  version "6.4.1,450525"
+  version "6.4.1.450526"
   sha256 :no_check
 
   url "https://www.macupdate.com/mud-download"
   name "MacUpdate Desktop"
+  desc "Updates software from website"
   homepage "https://www.macupdate.com/desktop"
 
   app "MacUpdate Desktop.app"
