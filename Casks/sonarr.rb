@@ -21,8 +21,6 @@ cask "sonarr" do
   end
 
   zap trash: [
-    "~/Library/Application Support/Sonarr",
-    "~/Library/Preferences/tv.sonarr.Sonarr.plist",
-    "~/.config/NzbDrone",
+    "~/.config/Sonarr",
   ]
 end
