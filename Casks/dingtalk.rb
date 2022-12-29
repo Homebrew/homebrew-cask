@@ -2,8 +2,8 @@ cask "dingtalk" do
   arch arm: "qd=2022mac-m1"
 
   on_intel do
-    version "6.5.50.10"
-    sha256 "0da289463bd98773971de86a63ea73c9b71c8fc000592f7034ecf85f289f7c1f"
+    version "7.0.0.3"
+    sha256 "18652c96f26388c6ade0fb63d1c89f487b40fe3a6df40b47803b1f22f8a69361"
     url "https://dtapp-pub.dingtalk.com/dingtalk-desktop/mac_dmg/Release/DingTalk_v#{version}.dmg"
   end
   on_arm do
