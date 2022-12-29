@@ -4,7 +4,13 @@ cask "macupdate" do
 
   url "https://www.macupdate.com/mud-download"
   name "MacUpdate Desktop"
+  desc "Software updater"
   homepage "https://www.macupdate.com/desktop"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   app "MacUpdate Desktop.app"
 
