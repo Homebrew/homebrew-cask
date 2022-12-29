@@ -18,7 +18,7 @@ cask "mail-assistant" do
   app "Mail Assistant.app"
 
   zap trash: [
-  "~/Library/Application Scripts/maccatalyst.com.agiletortoise.Mail-Assistant",
-  "~/Library/Containers/maccatalyst.com.agiletortoise.Mail-Assistant",
+    "~/Library/Application Scripts/maccatalyst.com.agiletortoise.Mail-Assistant",
+    "~/Library/Containers/maccatalyst.com.agiletortoise.Mail-Assistant",
   ]
 end
