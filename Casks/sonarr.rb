@@ -16,10 +16,6 @@ cask "sonarr" do
 
   app "Sonarr.app"
 
-  preflight do
-    set_permissions "#{staged_path}/Sonarr.app", "0755"
-  end
-
   zap trash: [
     "~/.config/Sonarr",
   ]
