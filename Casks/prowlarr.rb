@@ -15,5 +15,7 @@ cask "prowlarr" do
 
   app "Prowlarr.app"
 
-  # No zap stanza required
+  zap trash: [
+    "~/.config/Prowlarr",
+  ]
 end
