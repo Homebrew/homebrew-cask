@@ -7,8 +7,8 @@ cask "dingtalk" do
     url "https://dtapp-pub.dingtalk.com/dingtalk-desktop/mac_dmg/Release/DingTalk_v#{version}.dmg"
   end
   on_arm do
-    version "6.5.52.7"
-    sha256 "5bdf2d4abe53ee3d37f7200dbc0794586639168bab470c923bb1887384196f42"
+    version "7.0.2.2"
+    sha256 "7610f361af4fded8b17829b069fa8380e9dd59d615d4a0620f8c50596b108d30"
     url "https://dtapp-pub.dingtalk.com/dingtalk-desktop/mac_dmg/Release/M1-Beta/DingTalk-ARM64-#{version}.dmg"
   end
 
