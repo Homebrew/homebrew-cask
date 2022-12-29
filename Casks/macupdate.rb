@@ -1,11 +1,16 @@
 cask "macupdate" do
-  version "6.4.1.450526"
+  version "6.4.1,450525"
   sha256 :no_check
 
   url "https://www.macupdate.com/mud-download"
   name "MacUpdate Desktop"
-  desc "Updates software from website"
+  desc "Software updater"
   homepage "https://www.macupdate.com/desktop"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   app "MacUpdate Desktop.app"
 
