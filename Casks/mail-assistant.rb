@@ -1,5 +1,5 @@
 cask "mail-assistant" do
-  version "v0.2.1"
+  version "0.2.1"
   sha256 :no_check
 
   url "https://s3-us-west-2.amazonaws.com/downloads.agiletortoise.com/Mail+Assistant.app.zip",
@@ -7,6 +7,11 @@ cask "mail-assistant" do
   name "mail-assistant"
   desc "Companion tool for Drafts to allow sending HTML formatted email"
   homepage "https://docs.getdrafts.com/misc/mail-assistant"
+
+  livecheck do
+    url :homepage
+    regex(%r{Download\s+Mail\s+Assistant</strong>.*</a>.*\(v?(\d+(?:\.\d+)+)[, <]}im)
+  end
 
   depends_on macos: ">= :big_sur"
 
