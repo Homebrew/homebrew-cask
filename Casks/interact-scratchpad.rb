@@ -3,7 +3,7 @@ cask "interact-scratchpad" do
     version "2.0.4"
     sha256 :no_check
     url "https://s3.us-west-2.amazonaws.com/downloads.agiletortoise.com/Interact+Scratchpad-2.0.app.zip",
-        verified: "s3-us-west-2.amazonaws.com/downloads.agiletortoise.com/"
+        verified: "s3.us-west-2.amazonaws.com/downloads.agiletortoise.com/"
   else
     version "2.1.2"
     sha256 :no_check
