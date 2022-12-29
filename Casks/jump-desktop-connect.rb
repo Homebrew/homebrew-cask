@@ -17,6 +17,7 @@ cask "jump-desktop-connect" do
   uninstall signal:    [["QUIT", "com.p5sys.jump.connect"]],
             pkgutil:   "com.p5sys.jump.connect",
             launchctl: [
+              "application.com.p5sys.jump.connect.*",
               "com.p5sys.jump.connect.service",
               "com.p5sys.jump.connect.agent",
             ],
