@@ -13,7 +13,7 @@ cask "interact-scratchpad" do
   end
 
   name "Interact Scratchpad"
-  desc "Menu bar utility to ease the creation of contacts from snippets of text"
+  desc "Menu bar utility to create contacts from snippets of text"
   homepage "https://docs.getdrafts.com/docs/misc/interact-scratchpad"
 
   livecheck do
