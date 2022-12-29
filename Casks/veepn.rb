@@ -12,6 +12,8 @@ cask "veepn" do
     strategy :sparkle
   end
 
+  depends_on macos: ">= :mojave"
+
   app "VeePN.app"
 
   uninstall launchctl: "com.veepn.macos.helper",
