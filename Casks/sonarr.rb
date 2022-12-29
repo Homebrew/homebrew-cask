@@ -16,7 +16,5 @@ cask "sonarr" do
 
   app "Sonarr.app"
 
-  zap trash: [
-    "~/.config/Sonarr",
-  ]
+  zap trash: "~/.config/Sonarr"
 end
