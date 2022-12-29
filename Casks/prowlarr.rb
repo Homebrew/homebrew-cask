@@ -11,9 +11,16 @@ cask "prowlarr" do
   desc "Indexer manager/proxy for various PVR apps"
   homepage "https://prowlarr.com/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :high_sierra"
 
   app "Prowlarr.app"
 
-  # No zap stanza required
+  zap trash: [
+    "~/.config/Prowlarr",
+  ]
 end
