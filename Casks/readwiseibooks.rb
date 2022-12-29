@@ -3,9 +3,14 @@ cask "readwiseibooks" do
   sha256 :no_check
 
   url "https://readwise.io/ibooks/download"
-  name "readwiseibooks"
-  desc "Readwise Tool to import highlights from Apple Books"
+  name "Readwise iBooks"
+  desc "Import highlights from Apple Books to Readwise"
   homepage "https://readwise.io/ibooks"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   app "Readwise_iBooks.app"
 
