@@ -16,4 +16,9 @@ cask "mail-assistant" do
   depends_on macos: ">= :big_sur"
 
   app "Mail Assistant.app"
+
+  zap trash: [
+  "~/Library/Application Scripts/maccatalyst.com.agiletortoise.Mail-Assistant",
+  "~/Library/Containers/maccatalyst.com.agiletortoise.Mail-Assistant",
+  ]
 end
