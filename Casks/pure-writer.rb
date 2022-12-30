@@ -1,6 +1,6 @@
 cask "pure-writer" do
-  version "1.6.0,1.6.2"
-  sha256 "af79a9981cf0c688c35e79d1b69b40ab7a5e221607ae3dc986075a548de6301d"
+  version "1.7.0,1.7.0"
+  sha256 "f700ec8d28ce53cf44c1fe9c0b41d880e1ab7ea5ae56540e777c73084489366c"
 
   url "https://github.com/PureWriter/desktop/releases/download/#{version.csv.first}/PureWriter-#{version.csv.second}-macOS.dmg",
       verified: "github.com/PureWriter/desktop/"
