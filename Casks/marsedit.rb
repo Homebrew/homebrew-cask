@@ -12,24 +12,15 @@ cask "marsedit" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :catalina"
 
   app "MarsEdit.app"
 
   zap trash: [
-    "/var/db/receipts/com.red-sweater.marsedit5.bom",
-    "/var/db/receipts/com.red-sweater.marsedit5.plist",
-    "~/Library/Application Scripts/com.red-sweater.im.edia.Aperture",
-    "~/Library/Application Scripts/com.red-sweater.im.edia.Aperture",
-    "~/Library/Application Scripts/com.red-sweater.im.edia.iPhoto",
-    "~/Library/Application Scripts/com.red-sweater.marsedit5",
-    "~/Library/Application Scripts/com.red-sweater.marsedit5.MarsEdit-Share-Extension",
-    "~/Library/Application Scripts/com.red-sweater.marsedit5.micropost-extension",
+    "~/Library/Application Scripts/com.red-sweater.*",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.red-sweater.marsedit5.sfl2",
     "~/Library/Caches/com.apple.helpd/Generated/com.red-sweater.marsedit5.help*",
-    "~/Library/Containers/com.red-sweater.marsedit5.MarsEdit-Share-Extension",
-    "~/Library/Containers/com.red-sweater.marsedit5.micropost-extension",
-    "~/Library/Containers/com.red-sweater.marsedit5.Send-to-MarsEdit",
+    "~/Library/Containers/com.red-sweater.marsedit5.*",
     "~/Library/Group Containers/493CVA9A35.com.red-sweater",
   ]
 end
