@@ -9,7 +9,7 @@ cask "trunk-io" do
 
   livecheck do
     url "https://trunk.io/releases/trunk"
-    regex(/TRUNK[._-]LAUNCHER[._-VERSION="v?(\d+(?:\.\d+)+)"/i)
+    regex(/TRUNK[._-]LAUNCHER[._-]VERSION="v?(\d+(?:\.\d+)+)"/i)
   end
 
   binary "trunk"
