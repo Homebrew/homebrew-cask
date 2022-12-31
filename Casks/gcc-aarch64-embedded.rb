@@ -12,7 +12,7 @@ cask "gcc-aarch64-embedded" do
 
   livecheck do
     url "https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/downloads"
-    regex(/href=.*?arm[._-]gnu[._-]toolchain[._-]v?(\d+\.\d+\.\w+)[._-]darwin[._-](?:\w+)[._-]aarch64[._-]none[._-]elf.pkg/i)
+    regex(/href=.*?arm-gnu-toolchain-(\d+\.\d+\.\w+)-darwin-(?:\w+)-aarch64-none-elf.pkg/i)
   end
 
   pkg "arm-gnu-toolchain-#{version}-darwin-x86_64-aarch64-none-elf.pkg"
