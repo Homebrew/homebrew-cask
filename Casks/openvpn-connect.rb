@@ -40,7 +40,7 @@ cask "openvpn-connect" do
             ],
             login_item: "OpenVPN Connect"
 
-  zap trash: [
+  zap trash:  [
         "~/Library/Application Support/OpenVPN Connect",
         "~/Library/Logs/OpenVPN Connect",
         "~/Library/Preferences/org.openvpn.client.app.helper.plist",
