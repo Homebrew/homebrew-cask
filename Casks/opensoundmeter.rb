@@ -8,6 +8,11 @@ cask "opensoundmeter" do
   desc "Sound measurement application for tuning audio systems in real-time"
   homepage "https://opensoundmeter.com/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
