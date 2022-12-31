@@ -24,7 +24,5 @@ cask "intune-company-portal" do
               "com.microsoft.CompanyPortalMac",
               "com.microsoft.CompanyPortal",
             ],
-            delete:  [
-              "/Applications/Company Portal.app",
-            ]
+            delete:  "/Applications/Company Portal.app"
 end
