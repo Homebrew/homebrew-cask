@@ -49,9 +49,7 @@ cask "gcc-arm-embedded" do
   binary "#{appdir}/ArmGNUToolchain/#{version}/arm-none-eabi/bin/arm-none-eabi-strip"
 
   uninstall pkgutil: "arm-gnu-toolchain-#{version}-darwin-x86_64-arm-none-eabi",
-            delete:  [
-              "/Applications/ArmGNUToolchain/#{version}/arm-none-eabi",
-            ],
+            delete:  "/Applications/ArmGNUToolchain/#{version}/arm-none-eabi",
             rmdir:   [
               "/Applications/ArmGNUToolchain/#{version}",
               "/Applications/ArmGNUToolchain",
