@@ -1,6 +1,6 @@
 cask "fbreader" do
-  version "1.999.16"
-  sha256 "4f487bc18f8171e5b6a7af915834acb3d177b53640aa243a5f468ce89ac95513"
+  version "2.0"
+  sha256 "6c32838b4e24f7b1660dfbe2cee05b24a0d6d706336e3025d5055b683ffe0387"
 
   url "https://fbreader.org/static/packages/macos/FBReader-#{version}.dmg"
   name "FBReader"
@@ -9,7 +9,7 @@ cask "fbreader" do
 
   livecheck do
     url :homepage
-    regex(/>Current\s*version:.*?\(v?(\d+(?:\.\d+)+)\).*?</i)
+    regex(%r{>Current\s*version:\sv?(\d+(?:\.\d+)+).*?</h}i)
   end
 
   pkg "FBReader.pkg"
