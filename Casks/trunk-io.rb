@@ -9,12 +9,10 @@ cask "trunk-io" do
 
   livecheck do
     url "https://trunk.io/releases/trunk"
-    regex(/TRUNK_LAUNCHER_VERSION="(\d+(?:\.\d+)+)"/i)
+    regex(/TRUNK[._-]LAUNCHER[._-]VERSION="v?(\d+(?:\.\d+)+)"/i)
   end
 
   binary "trunk"
 
-  zap trash: [
-    "~/.cache/trunk",
-  ]
+  zap trash: "~/.cache/trunk"
 end
