@@ -14,7 +14,7 @@ cask "cernbox" do
 
   pkg "cernbox-#{version}.pkg"
 
-  uninstall signal:     [["TERM", "ch.cern.cernbox"]],
+  uninstall signal:     ["TERM", "ch.cern.cernbox"],
             login_item: "cernbox",
             pkgutil:    "ch.cern.cernbox"
 end
