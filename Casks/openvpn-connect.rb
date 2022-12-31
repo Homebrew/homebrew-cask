@@ -12,7 +12,7 @@ cask "openvpn-connect" do
   livecheck do
     url "https://openvpn.net/downloads/openvpn-connect-v#{version.major}-macos.dmg"
     strategy :header_match do |headers|
-      match = headers["location"].match(%r{/openvpn-connect-(\d+(?:\.\d+)+)\.(\d+)_signed\.dmg}i)
+      match = headers["location"].match(%r{/openvpn[._-]connect[._-]v?(\d+(?:\.\d+)+)\.(\d+)[._-]signed\.dmg}i)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
@@ -27,10 +27,10 @@ cask "openvpn-connect" do
               "org.openvpn.helper",
             ],
             pkgutil:    [
+              "org.openvpn.client.pkg",
               "org.openvpn.client_framework.pkg",
               "org.openvpn.client_launch.pkg",
               "org.openvpn.client_uninstall.pkg",
-              "org.openvpn.client.pkg",
               "org.openvpn.helper_framework.pkg",
               "org.openvpn.helper_launch.pkg",
             ],
@@ -38,18 +38,17 @@ cask "openvpn-connect" do
               "/Applications/OpenVPN Connect",
               "/Applications/OpenVPN Connect.app",
             ],
-            login_item: [
-              "OpenVPN Connect",
-            ]
+            login_item: "OpenVPN Connect"
 
-  zap trash: [
-    "~/Library/Application Support/OpenVPN Connect",
-    "~/Library/Logs/OpenVPN Connect",
-    "~/Library/Preferences/org.openvpn.client.app.helper.plist",
-    "~/Library/Preferences/org.openvpn.client.app.plist",
-    "~/Library/Saved Application State/org.openvpn.client.app.savedState",
-  ], script: {
-    executable: "security",
-    args:       ["delete-keychain", "openvpn.keychain-db"],
-  }
+  zap trash:  [
+        "~/Library/Application Support/OpenVPN Connect",
+        "~/Library/Logs/OpenVPN Connect",
+        "~/Library/Preferences/org.openvpn.client.app.helper.plist",
+        "~/Library/Preferences/org.openvpn.client.app.plist",
+        "~/Library/Saved Application State/org.openvpn.client.app.savedState",
+      ],
+      script: {
+        executable: "security",
+        args:       ["delete-keychain", "openvpn.keychain-db"],
+      }
 end
