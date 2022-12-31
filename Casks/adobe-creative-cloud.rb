@@ -36,9 +36,7 @@ cask "adobe-creative-cloud" do
 
   uninstall early_script: {
               executable:   "/usr/bin/pluginkit",
-              args:         [
-                "-r", "/Applications/Utilities/Adobe Sync/CoreSync/Core Sync.app/Contents/PlugIns/ACCFinderSync.appex"
-              ],
+              args:         ["-r", "/Applications/Utilities/Adobe Sync/CoreSync/Core Sync.app/Contents/PlugIns/ACCFinderSync.appex"],
               must_succeed: false,
               print_stderr: false,
             },
@@ -50,7 +48,7 @@ cask "adobe-creative-cloud" do
               "com.adobe.ccxprocess",
             ],
             quit:         "com.adobe.acc.AdobeCreativeCloud",
-            signal:       [["QUIT", "com.adobe.accmac"]],
+            signal:       ["QUIT", "com.adobe.accmac"],
             script:       {
               executable:   "/usr/bin/pkill",
               args:         ["Adobe Desktop Service", "AdobeIPCBroker", "AdobeCRDaemon"],
