@@ -12,7 +12,7 @@ cask "gcc-arm-embedded" do
 
   livecheck do
     url "https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/downloads"
-    regex(/href=.*?arm-gnu-toolchain-(\d+\.\d+\.\w+)-darwin-(?:\w+)-arm-none-eabi.pkg/i)
+    regex(/href=.*?arm[._-]gnu[._-]toolchain[._-]v?(\d+\.\d+\.\w+)[._-]darwin[._-](?:\w+)[._-]arm[._-]none[._-]eabi.pkg/i)
   end
 
   pkg "arm-gnu-toolchain-#{version}-darwin-x86_64-arm-none-eabi.pkg"
@@ -49,9 +49,7 @@ cask "gcc-arm-embedded" do
   binary "#{appdir}/ArmGNUToolchain/#{version}/arm-none-eabi/bin/arm-none-eabi-strip"
 
   uninstall pkgutil: "arm-gnu-toolchain-#{version}-darwin-x86_64-arm-none-eabi",
-            delete:  [
-              "/Applications/ArmGNUToolchain/#{version}/arm-none-eabi",
-            ],
+            delete:  "/Applications/ArmGNUToolchain/#{version}/arm-none-eabi",
             rmdir:   [
               "/Applications/ArmGNUToolchain/#{version}",
               "/Applications/ArmGNUToolchain",
