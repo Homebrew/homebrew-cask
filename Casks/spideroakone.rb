@@ -22,9 +22,7 @@ cask "spideroakone" do
 
   pkg "SpiderOakONE.pkg"
 
-  uninstall signal:  [
-              ["TERM", "com.spideroak.orange.client"],
-            ],
+  uninstall signal:  ["TERM", "com.spideroak.orange.client"],
             pkgutil: "org.python.python"
 
   zap trash: "~/Library/Application Support/SpiderOakONE"
