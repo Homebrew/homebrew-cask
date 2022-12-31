@@ -5,7 +5,7 @@ cask "appgate-sdp-client" do
 
     livecheck do
       url "https://www.appgate.com/support/software-defined-perimeter-support/sdp-v5-4"
-      regex(%r{href=.*?/Appgate-SDP[._-](\d+(?:\.\d+)+)[._-]Installer\.dmg}i)
+      regex(%r{href=.*?/Appgate[._-]SDP[._-]v?(\d+(?:\.\d+)+)[._-]Installer\.dmg}i)
     end
   end
   on_catalina do
@@ -14,7 +14,7 @@ cask "appgate-sdp-client" do
 
     livecheck do
       url "https://www.appgate.com/support/software-defined-perimeter-support/sdp-v6-0"
-      regex(%r{href=.*?/Appgate-SDP[._-](\d+(?:\.\d+)+)[._-]Installer\.dmg}i)
+      regex(%r{href=.*?/Appgate[._-]SDP[._-]v?(\d+(?:\.\d+)+)[._-]Installer\.dmg}i)
     end
   end
   on_big_sur :or_newer do
@@ -23,7 +23,7 @@ cask "appgate-sdp-client" do
 
     livecheck do
       url :homepage
-      regex(%r{href=.*?/Appgate-SDP[._-](\d+(?:\.\d+)+)[._-]Installer\.dmg}i)
+      regex(%r{href=.*?/Appgate[._-]SDP[._-]v?(\d+(?:\.\d+)+)[._-]Installer\.dmg}i)
       strategy :page_match do |page, regex|
         support_versions =
           page.scan(%r{href=["']?([^"' >]*?/software-defined-perimeter-support/sdp[._-]v?(\d+(?:[.-]\d+)+))["' >]}i)
@@ -65,9 +65,7 @@ cask "appgate-sdp-client" do
               "com.cyxtera.appgate.helper",
               "com.cyxtera.appgate.sdp",
             ],
-            signal:    [
-              ["QUIT", "com.cyxtera.appgate"],
-            ],
+            signal:    ["QUIT", "com.cyxtera.appgate"],
             pkgutil:   "com.appgate.pkg.appgatetun.component"
 
   zap trash: [
