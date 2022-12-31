@@ -14,7 +14,7 @@ cask "jump-desktop-connect" do
 
   pkg ".jdc.sparkle_guided.pkg"
 
-  uninstall signal:    [["QUIT", "com.p5sys.jump.connect"]],
+  uninstall signal:    ["QUIT", "com.p5sys.jump.connect"],
             pkgutil:   "com.p5sys.jump.connect",
             launchctl: [
               "application.com.p5sys.jump.connect.*",
