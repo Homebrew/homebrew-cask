@@ -16,6 +16,7 @@ cask "lapce" do
   zap trash: [
     "~/.lapce",
     "~/Library/Application Support/Lapce",
+    "~/Library/Application Support/dev.lapce.Lapce-Stable",
     "~/Library/Saved Application State/io.lapce.savedState",
   ]
 end
