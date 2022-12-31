@@ -7,7 +7,7 @@ cask "infinity" do
   desc "Customizable work management platform"
   homepage "https://startinfinity.com/"
 
-  livecheck do 
+  livecheck do
     url :url
     strategy :extract_plist
   end
