@@ -50,7 +50,7 @@ cask "adobe-creative-cloud" do
               "com.adobe.ccxprocess",
             ],
             quit:         "com.adobe.acc.AdobeCreativeCloud",
-            signal:       [["QUIT", "com.adobe.accmac"]],
+            signal:       ["QUIT", "com.adobe.accmac"],
             script:       {
               executable:   "/usr/bin/pkill",
               args:         ["Adobe Desktop Service", "AdobeIPCBroker", "AdobeCRDaemon"],
