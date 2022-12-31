@@ -5,7 +5,7 @@ cask "knock" do
   url "https://knock-updates.s3.amazonaws.com/Knock.zip",
       verified: "knock-updates.s3.amazonaws.com/"
   name "Knock"
-  desc"Unlock with AppleWatch
+  desc "Unlock with AppleWatch"
   homepage "http://www.knocktounlock.com/"
 
   livecheck do
