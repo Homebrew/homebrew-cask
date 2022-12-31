@@ -26,7 +26,7 @@ cask "winclone" do
                    sudo: true
   end
 
-  uninstall signal:  [["TERM", "com.twocanoes.Winclone#{version.major}"]],
+  uninstall signal:  ["TERM", "com.twocanoes.Winclone#{version.major}"],
             pkgutil: "com.twocanoes.pkg.Winclone*"
 
   zap trash: [
