@@ -2,7 +2,7 @@ cask "catoclient" do
   version "5.2.0.205"
   sha256 "342a0da1c3a939679cdb7b72e826eecbd99bb6dd9443102fe8fd99181410dd71"
 
-  url "https://clients.catonetworks.com/macos/5.2.0.205/CatoClient.pkg"
+  url "https://clients.catonetworks.com/macos/#{version}/CatoClient.pkg"
   name "Cato Client"
   desc "VPN client"
   homepage "https://www.catonetworks.com/"
