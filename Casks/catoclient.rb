@@ -12,18 +12,21 @@ cask "catoclient" do
     strategy :header_match
   end
 
+  depends_on macos: ">= :catalina"
+
   pkg "CatoClient.pkg"
 
-  uninstall pkgutil: "com.catonetworks.pkg.CatoClient"
+  uninstall quit:    "com.catonetworks.mac.CatoClient",
+            pkgutil: "com.catonetworks.pkg.CatoClient"
 
   zap trash: [
-    "~/Library/Application Scripts/CKGSB8CH43.com.catonetworks.mac.CatoClient/",
-    "~/Library/Application Scripts/com.catonetworks.mac.CatoClient.CatoClientExtension/",
-    "~/Library/Application Scripts/com.catonetworks.mac.CatoClient/",
-    "~/Library/Containers/com.catonetworks.mac.CatoClient.CatoClientExtension/",
-    "~/Library/Containers/com.catonetworks.mac.CatoClient/",
-    "~/Library/Group Containers/CKGSB8B8CH43.com.catonetworks.mac.CatoClient/",
-    "~/Library/Group Containers/CKGSB8B8CH43.group/",
-    "~/Library/Saved Application State/com.catonetworks.mac.CatoClient.savedState/",
+    "~/Library/Application Scripts/CKGSB8CH43.com.catonetworks.mac.CatoClient",
+    "~/Library/Application Scripts/com.catonetworks.mac.CatoClient.CatoClientExtension",
+    "~/Library/Application Scripts/com.catonetworks.mac.CatoClient",
+    "~/Library/Containers/com.catonetworks.mac.CatoClient.CatoClientExtension",
+    "~/Library/Containers/com.catonetworks.mac.CatoClient",
+    "~/Library/Group Containers/CKGSB8B8CH43.com.catonetworks.mac.CatoClient",
+    "~/Library/Group Containers/CKGSB8B8CH43.group",
+    "~/Library/Saved Application State/com.catonetworks.mac.CatoClient.savedState",
   ]
 end
