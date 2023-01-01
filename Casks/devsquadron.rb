@@ -1,17 +1,17 @@
 cask "devsquadron" do
   arch arm: "arm", intel: "intel"
 
-  version "0.0.0"
-  sha256 arm:   "9d8f62b4a0560f088c4169eccd0d3f88cb8f0f5b8aaaba61f721db576d898322",
-         intel: "eb60640da7afdc75c722c1e0ac7262147f043ed8cd69388db3cfe52d5d8a3a7e"
+  version "0.0.1"
+  sha256 arm:   "13f365237bf287279562b351fd7811c08cade967c28e7f9859426bfdec743325",
+         intel: "5f01baf4293a64963453ef5e4fb5abf7d04491d1f1fbc0ad879a71c9d9611e7f"
 
-  url "https://developersquadron.com/api/downloads/devsquadron/v#{version}/macos-#{arch}.tar.xz"
-  name "Devsquadron"
-  desc "Enterprise grade project management"
+  url "https://developersquadron.com/downloads/devsquadron/v#{version}/macos-#{arch}.tar.xz"
+  name "devsquadron"
+  desc "Project management for power users and users"
   homepage "https://developersquadron.com/"
 
   livecheck do
-    url "https://developersquadron.com/api/downloads/"
+    url "https://developersquadron.com/downloads/devsquadron/"
     regex(/v?(\d+(?:\.\d+)+)/i)
   end
 
