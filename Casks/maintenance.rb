@@ -65,7 +65,7 @@ cask "maintenance" do
     end
   end
   on_ventura :or_newer do
-    version "2.9.7"
+    version "2.9.8"
     url "https://www.titanium-software.fr/download/13/Maintenance.dmg"
 
     livecheck do
