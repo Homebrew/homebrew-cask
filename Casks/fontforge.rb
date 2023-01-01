@@ -1,6 +1,6 @@
 cask "fontforge" do
-  version "2022-03-08,74e2eca"
-  sha256 "79f770c692287520fdd6001ec97af7d67b79eed985bf1e44bb97ab57fcedc517"
+  version "2023-01-01,a1dad3e"
+  sha256 "b87479dbb8f8f9131ea37983aae63542f016aa182232be5c6a56976350b3ebfd"
 
   url "https://github.com/fontforge/fontforge/releases/download/#{version.csv.first.no_hyphens}/FontForge-#{version.csv.first}-#{version.csv.second}.app.dmg",
       verified: "github.com/fontforge/fontforge/"
