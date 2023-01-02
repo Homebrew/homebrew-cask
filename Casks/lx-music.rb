@@ -1,9 +1,9 @@
 cask "lx-music" do
   arch arm: "-arm64"
 
-  version "2.0.0"
-  sha256 arm:   "b9a7d925851ba9865f9fd84ef775a27cafbd1756a9f342b8a229fc4e343c3ec3",
-         intel: "1d88e5e072d61e2167e5d7a7f3823fb3c34f4d273a68451b8c521cb430dbd716"
+  version "2.0.1"
+  sha256 arm:   "002505137da022add28c9c988b44f1ba2f7e61c3498b3092d8802c7515a498b4",
+         intel: "a8ff1f4742eccdc7785fbb33d2b2e75cdf46e8bbcac2c31819bbaba8e2032b69"
 
   url "https://github.com/lyswhut/lx-music-desktop/releases/download/v#{version}/lx-music-desktop-#{version}#{arch}.dmg"
   name "LX Music Assistant Desktop Edition"
