@@ -1,6 +1,6 @@
 cask "podpisuj" do
-  version "5.6.51"
-  sha256 "9ba5d8532232ccf11fb810d1adfaa5f2e03d59c05ef1308f13ee84e8c5d69cb3"
+  version "5.6.52"
+  sha256 "9bfff422b9514f44f09741384a72f1da1fa7f495f0b7a6491524b1ce72942e79"
 
   url "https://www.podpisuj.sk/staticweb/install/podpisuj-#{version}.dmg"
   name "Podpisuj"
