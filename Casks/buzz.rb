@@ -1,6 +1,6 @@
 cask "buzz" do
-  version "0.6.4"
-  sha256 "0d883782511844dacd041ab7ea6736a6cf12a3dbb9ae5b94172ee82a403a5e47"
+  version "0.7.0"
+  sha256 "09d0430947a9699517dcbedc6774411a61802372eae693adccbe8a9fdcfe5e04"
 
   url "https://github.com/chidiwilliams/buzz/releases/download/v#{version}/Buzz-#{version}-mac.dmg"
   name "buzz"
