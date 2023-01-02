@@ -1,14 +1,10 @@
 cask "openrgb" do
   version "0.8,fb88964"
 
-  on_intel do
-    sha256 "3d04b3caf0253e23a6fa7f854ee070cea7e589f3f1972d1975b512660d97fb1d"
-    url "https://openrgb.org/releases/release_#{version.before_comma}/OpenRGB_#{version.before_comma}_MacOS_Intel_#{version.after_comma}.zip"
-  end
-  on_arm do
-    sha256 "564a08138900d3e96bd045dba45bf3ac740720eb66d413cf4564f36218e177ea"
-    url "https://openrgb.org/releases/release_#{version.before_comma}/OpenRGB_#{version.before_comma}_MacOS_ARM64_#{version.after_comma}.zip"
-  end
+  arch arm: "ARM64", intel: "Intel"
+  sha256 arm: "564a08138900d3e96bd045dba45bf3ac740720eb66d413cf4564f36218e177ea",
+                intel: "3d04b3caf0253e23a6fa7f854ee070cea7e589f3f1972d1975b512660d97fb1d"
+    url "https://openrgb.org/releases/release_#{version.before_comma}/OpenRGB_#{version.before_comma}_MacOS_#{arch}_#{version.after_comma}.zip"
 
   name "OpenRGB"
   desc "Open source RGB lighting control that doesn't depend on manufacturer software"
