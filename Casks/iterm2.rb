@@ -9,8 +9,8 @@ cask "iterm2" do
     end
   end
   on_mojave :or_newer do
-    version "3.4.18"
-    sha256 "76727347acb1f2856f9b6702c6ba486594da87f857afec3ee4cba48f7cac219c"
+    version "3.4.19"
+    sha256 "e06563714ea0582f8a69653ef5024957483c174d7387b0e8d70369db98406832"
 
     livecheck do
       # workaround for
