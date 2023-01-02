@@ -23,4 +23,10 @@ cask "openrgb" do
   end
 
   app "OpenRGB.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.yourcompany.OpenRGB.plist",
+    "~/Library/Saved Application State/com.yourcompany.OpenRGB.savedState",
+    "~/.config/OpenRGB",
+  ]
 end
