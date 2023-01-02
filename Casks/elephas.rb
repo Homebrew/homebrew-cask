@@ -1,5 +1,5 @@
 cask "elephas" do
-  version "4.6.3"
+  version "4.6.4"
   sha256 :no_check
 
   url "https://elephas.app/downloads/Elephas_latest.dmg"
