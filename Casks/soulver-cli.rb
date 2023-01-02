@@ -11,5 +11,5 @@ cask "soulver-cli" do
 
   binary "soulver"
 
-  zap trash: "/opt/homebrew/bin/SoulverCore_SoulverCore.bundle"
+  zap trash: "#{HOMEBREW_PREFIX}/SoulverCore_SoulverCore.bundle"
 end
