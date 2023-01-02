@@ -10,5 +10,6 @@ cask "soulver-cli" do
   depends_on macos: ">= :monterey"
 
   binary "soulver"
-  zap trash: ["/opt/homebrew/bin/SoulverCore_SoulverCore.bundle"]
+
+  zap trash: "/opt/homebrew/bin/SoulverCore_SoulverCore.bundle"
 end
