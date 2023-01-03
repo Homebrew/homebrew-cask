@@ -12,6 +12,7 @@ cask "vpn-by-google-one" do
     strategy :extract_plist
   end
 
+  auto_updates true
   depends_on macos: ">= :big_sur"
 
   pkg "VpnByGoogleOne.pkg"
