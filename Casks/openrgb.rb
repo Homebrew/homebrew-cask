@@ -11,8 +11,8 @@ cask "openrgb" do
   homepage "https://openrgb.org/"
 
   livecheck do
-    url "https://gitlab.com/CalcProgrammer1/OpenRGB/-/releases.json"
-    regex(%r{/releases/release_([^/]+)/OpenRGB_\1+_MacOS_Intel_([a-f0-9]+).zip}i)
+    url "https://openrgb.org/releases.html"
+    regex(/href=.*?OpenRGB[._-]v?(\d+(?:\.\d+)+)[._-]MacOS[._-]#{arch}[._-](\h+)\.zip/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
