@@ -1,6 +1,3 @@
-# typed: false
-# frozen_string_literal: true
-
 cask "vpn-by-google-one" do
   version :latest
   sha256 :no_check
