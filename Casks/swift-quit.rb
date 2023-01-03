@@ -1,5 +1,5 @@
 cask "swift-quit" do
-  version "1.2"
+  version "1.0"
   sha256 :no_check
 
   url "https://swiftquit.com/downloads/Swift%20Quit.zip"
@@ -11,6 +11,8 @@ cask "swift-quit" do
     url :url
     strategy :extract_plist
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "Swift Quit.app"
 
