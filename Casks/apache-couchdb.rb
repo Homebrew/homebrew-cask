@@ -16,6 +16,7 @@ cask "apache-couchdb" do
     regex(%r{href=.*?/(\d+(?:\.\d+)*)/mac/(arm64|x86_64)/Apache-CouchDB\.zip}i)
   end
 
+  # see https://neighbourhood.ie/download-apache-couchdb-mac/
   depends_on macos: ">= :ventura"
 
   app "Apache CouchDB.app"
