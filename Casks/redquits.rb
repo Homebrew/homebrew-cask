@@ -1,14 +1,19 @@
 cask "redquits" do
-  version "2"
-  sha256 "9a81e75338d3eb009afd20d0a8e909c7075ef1cd891674470d3c40f30a15bf1f"
+  version "2.0"
+  sha256 :no_check
 
-  url "https://redquits.s3.amazonaws.com/RedQuits_v#{version}.pkg",
+  url "https://redquits.s3.amazonaws.com/RedQuits_v#{version.major}.pkg",
       verified: "redquits.s3.amazonaws.com/"
   name "RedQuits"
   desc "Quit an app when closing the last window"
   homepage "http://carsten-mielke.com/redquits.html"
 
-  pkg "RedQuits_v2.pkg"
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
+  pkg "RedQuits_v#{version.major}.pkg"
 
   uninstall pkgutil: "com.carsten-mielke.RedQuits"
 
