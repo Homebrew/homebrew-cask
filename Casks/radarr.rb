@@ -10,13 +10,14 @@ cask "radarr" do
   name "Radarr"
   desc "Fork of Sonarr to work with movies à la Couchpotato"
   homepage "https://radarr.video/"
-
+  
   livecheck do
     url :url
     strategy :github_latest
   end
   
   auto_updates true
+  
   depends_on macos: ">= :catalina"
 
   app "Radarr.app"
