@@ -2,12 +2,12 @@ cask "webull" do
   arch arm: "global_arm64", intel: "global_x64"
   livecheck_arch = on_arch_conditional arm: "qt_m1_global", intel: "qt_mac_global"
 
-  version "6.6.5"
-  sha256 arm:   "5507e50f0f35801ee48e9f8c1a63185c49c4c6bfb87a27a0f569ebddde71db3b",
-         intel: "8502d6ec16ccccbcd53358701fb3724f2081e43d64e40a8461328847f325824a"
+  version "6.7.0"
+  sha256 arm:   "b8567d85786353c11f7c3f8f4d86cf66099d314d358fac83dc4e54730f3f724f",
+         intel: "6f3b527bf7c43745aad0027e672708401a01f84ff39dc45b03b7294cabe1863c"
 
-  url "https://u1sweb.webullfintech.com/us/desktop/Webull%20Desktop_#{version}_#{arch}signed.dmg",
-      verified: "u1sweb.webullfintech.com/us/desktop/"
+  url "https://u1sweb.webullfintech.com/us/Webull%20Desktop_#{version}_#{arch}signed.dmg",
+      verified: "u1sweb.webullfintech.com/us/"
   name "Webull"
   desc "Desktop client for Webull Financial LLC"
   homepage "https://webull.com/"
