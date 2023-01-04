@@ -1,6 +1,6 @@
 cask "watchfacestudio" do
-  version "1.3.12,aac4d495-5ece-42ee-b80f-de38ff061809"
-  sha256 "ed7146d1b569f13c3acc0322462cf7f213bb6cf1e485417e7d88a37c9c267602"
+  version "1.3.13,2ba81234-16fb-42ce-bdae-e1be6bc228c0"
+  sha256 "d5457e4eb591c9cdd99ee95ced58aebf58fed8286ae210d172b6ceb4d378f8ee"
 
   url "https://developer.samsung.com/watchfacestudio/file/#{version.csv.second}"
   name "Watch Face Studio"
