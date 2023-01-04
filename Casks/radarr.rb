@@ -15,8 +15,9 @@ cask "radarr" do
     url :url
     strategy :github_latest
   end
-
-  depends_on macos: ">= :high_sierra"
+  
+  auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "Radarr.app"
 
