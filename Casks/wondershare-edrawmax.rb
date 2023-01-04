@@ -1,5 +1,5 @@
 cask "wondershare-edrawmax" do
-  version "12.0.5"
+  version "12.0.6"
   sha256 :no_check
 
   language "zh", "CN" do
