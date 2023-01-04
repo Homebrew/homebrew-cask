@@ -1,5 +1,5 @@
 cask "powder" do
-  version "96.2"
+  version "97.0"
   sha256 :no_check
 
   url "https://powdertoy.co.uk/Download/powder.dmg"
@@ -12,5 +12,5 @@ cask "powder" do
     regex(%r{macOS</dt>\n\t*<dd class="Version">(\d+(?:\.\d+)*)}i)
   end
 
-  app "Powder.app"
+  app "The Powder Toy.app"
 end
