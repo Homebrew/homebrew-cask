@@ -1,11 +1,11 @@
 cask "prowlarr" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.0.1.2210"
-  sha256 arm:   "68d912f8ade1c4bacb693f299060fcb32b2338fad424c4487ef69b171181f994",
-         intel: "b600369d9a43be76e57d5c2d6f66acb278d3a7259ce84eb69d2d27af6a723d7a"
+  version "1.0.1.2220"
+  sha256 arm:   "b3b3fc4a225fe034ede4735f643f5802426a08ade042c9849ae0803326248ec6",
+         intel: "89b94668ad9ed701c28e3b10061aa1e27c9be04023ba1ca2a78a7ca1f79e2dc0"
 
-  url "https://github.com/Prowlarr/Prowlarr/releases/download/v#{version}/Prowlarr.develop.#{version}.osx-app-core-#{arch}.zip",
+  url "https://github.com/Prowlarr/Prowlarr/releases/download/v#{version}/Prowlarr.master.#{version}.osx-app-core-#{arch}.zip",
       verified: "github.com/Prowlarr/Prowlarr/"
   name "Prowlarr"
   desc "Indexer manager/proxy for various PVR apps"
