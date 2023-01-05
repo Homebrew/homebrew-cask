@@ -7,6 +7,9 @@ cask "mmhmm-studio" do
   desc "Virtual video presentation software"
   homepage "https://www.mmhmm.app/product"
 
+  # This appcast sometimes uses a newer pubDate for an older version, so we
+  # have to ignore the default `Sparkle` strategy sorting (which involves the
+  # pubDate) and simply work with the version numbers.
   livecheck do
     url "https://updates.mmhmm.app/mac/production/sparkle.xml"
     strategy :sparkle
