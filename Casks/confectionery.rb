@@ -4,7 +4,7 @@ cask "confectionery" do
 
   url "https://confectioneryapp.com/download"
   name "Confectionery"
-  desc "Take delicious screenshots of your websites"
+  desc "Website screenshot tool"
   homepage "https://confectioneryapp.com/"
 
   livecheck do
