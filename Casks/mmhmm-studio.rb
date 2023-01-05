@@ -12,7 +12,9 @@ cask "mmhmm-studio" do
   # pubDate) and simply work with the version numbers.
   livecheck do
     url "https://updates.mmhmm.app/mac/production/sparkle.xml"
-    strategy :sparkle
+    strategy :sparkle do |items|
+      items.map(&:nice_version)
+    end
   end
 
   auto_updates true
