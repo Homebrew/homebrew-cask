@@ -8,8 +8,8 @@ cask "daisydisk" do
   homepage "https://daisydiskapp.com/"
 
   livecheck do
-    url "https://daisydiskapp.com/downloads/appcastReleaseNotes.php?appEdition=Standard&osVersion=10.15"
-    regex(/>\s*?Version\s+?v?(\d+(?:\.\d+)+)\s*?</i)
+    url "https://daisydiskapp.com/downloads/appcastFeed.php"
+    strategy :sparkle
   end
 
   auto_updates true
