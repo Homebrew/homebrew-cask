@@ -7,7 +7,7 @@ cask "racket" do
 
   url "https://mirror.racket-lang.org/installers/#{version}/racket-#{version}-#{arch}-macosx-cs.dmg"
   name "Racket"
-  desc "Modern programming language in the Lisp/Scheme family"
+  desc "The Racket distribution includes an incremental native-code compiler, and implementations of the Racket language, Typed Racket & several other languages, IDE, documentation and many other tools."
   homepage "https://racket-lang.org/"
 
   livecheck do
