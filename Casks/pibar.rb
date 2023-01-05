@@ -1,6 +1,6 @@
 cask "pibar" do
-  version "1.1.1"
-  sha256 "4badcd4056f879e35cf749ce4e2a142a127fd198eec5ddcb15da63a2a0b3c64c"
+  version "1.1.2"
+  sha256 "61808096da94b8e7f857e48b0bd499f28ad9f3822ba0d0fed29be9d6b1163949"
 
   url "https://s3.amazonaws.com/amiantos/PiBar-#{version}.zip",
       verified: "s3.amazonaws.com/amiantos"
