@@ -1,6 +1,6 @@
 cask "babeledit" do
-  version "4.0.1"
-  sha256 "eedc6a99250128c6af2bf244148e9b49fa0059136faa4731ec57a8ebd49d22f1"
+  version "4.0.2"
+  sha256 "e0bd673abbbe600d5555fff6f3f7975b59d22a133f3b9f09f5beeaa0e84ea014"
 
   url "https://www.codeandweb.com/download/babeledit/#{version}/BabelEdit-#{version}.dmg"
   name "BabelEdit"
