@@ -1,10 +1,10 @@
-cask "mmhmm-desktop" do
+cask "mmhmm" do
   version "1.0.3,1668556000"
   sha256 :no_check
 
   url "https://updates.mmhmm.app/mac/hybrid/beta/mmhmm.pkg"
-  name "mmhmm desktop"
-  desc "Present with a virtual camera with camera effects"
+  name "mmhmm Desktop"
+  desc "Virtual video presentation software"
   homepage "https://www.mmhmm.app/product"
 
   livecheck do
@@ -21,10 +21,10 @@ cask "mmhmm-desktop" do
             quit:    "app.mmhmm.hybrid"
 
   zap trash: [
-    "~/Library/Preferences/app.mmhmm.hybrid.plist",
-    "~/Library/Caches/app.mmhmm.hybrid",
-    "~/Library/Saved Application State/app.mmhmm.hybrid.savedState",
     "~/Library/Application Support/mmhmm",
+    "~/Library/Caches/app.mmhmm.hybrid",
     "~/Library/Caches/mmhmm",
+    "~/Library/Preferences/app.mmhmm.hybrid.plist",
+    "~/Library/Saved Application State/app.mmhmm.hybrid.savedState",
   ]
 end
