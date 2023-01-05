@@ -50,7 +50,7 @@ cask "powerphotos" do
     end
   end
   on_big_sur :or_newer do
-    version "2.1.2,1923"
+    version "2.1.3,1937"
     sha256 :no_check
 
     url "https://www.fatcatsoftware.com/powerphotos/PowerPhotos.zip"
