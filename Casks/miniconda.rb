@@ -1,9 +1,9 @@
 cask "miniconda" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "py39_4.12.0"
-  sha256 arm:   "4bd112168cc33f8a4a60d3ef7e72b52a85972d588cd065be803eb21d73b625ef",
-         intel: "007bae6f18dc7b6f2ca6209b5a0c9bd2f283154152f82becf787aac709a51633"
+  version "py310_22.11.1-1"
+  sha256 arm:   "22eec9b7d3add25ac3f9b60621d8f3d8df3e63d4aa0ae5eb846b558d7ba68333",
+         intel: "7406579393427eaf9bc0e094dcd3c66d1e1b93ee9db4e7686d0a72ea5d7c0ce5"
 
   url "https://repo.anaconda.com/miniconda/Miniconda3-#{version}-MacOSX-#{arch}.sh",
       verified: "repo.anaconda.com/miniconda/"
@@ -32,8 +32,8 @@ cask "miniconda" do
   uninstall delete: "#{caskroom_path}/base"
 
   zap trash: [
-    "~/.condarc",
     "~/.conda",
+    "~/.condarc",
     "~/.continuum",
   ]
 
