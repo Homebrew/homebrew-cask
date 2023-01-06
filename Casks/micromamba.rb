@@ -1,9 +1,9 @@
 cask "micromamba" do
   arch arm: "arm64", intel: "64"
 
-  version "1.1.0,0"
-  sha256 arm:   "60db09ba82e9680639e9d4d710f3eb33c2ec6c3c736206b8c2301f9ff7345193",
-         intel: "9d81b30827c6c3c71d08dc617b0979a7d511178875af559660c82fee0c990fd2"
+  version "1.1.0,1"
+  sha256 arm:   "20b11014f87251b889b7b1deffba7c4684f5e63f83d78f125061249dacaddd73",
+         intel: "4ef6890653367a963adf519500b289143e93223fab248d4f9617e4a488ca9c0e"
 
   url "https://api.anaconda.org/download/conda-forge/micromamba/#{version.csv.first}/osx-#{arch}/micromamba-#{version.csv.first}-#{version.csv.second}.tar.bz2",
       verified: "api.anaconda.org/download/conda-forge/micromamba/"
