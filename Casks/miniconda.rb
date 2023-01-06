@@ -11,12 +11,12 @@ cask "miniconda" do
   desc "Minimal installer for conda"
   homepage "https://conda.io/miniconda.html"
 
-  # This regex restricts matching to a specific Python version. This will need
-  # to be updated when the prefix changes in the latest version at the top of:
-  # https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-#{arch}.sh
   livecheck do
     url "https://repo.anaconda.com/miniconda/"
-    regex(/>\s*Miniconda3-(py39[._-]\d+(?:\.\d+)+)-MacOSX-#{arch}\.sh\s*</i)
+    strategy do |content|
+      sha256 = content.scan(/>Miniconda3-latest-MacOSX-#{arch}\.sh<.{,99}>(\w{64})</im).first.first
+      content.scan(/>Miniconda3-(py\d+_[\d.-]+)-MacOSX-#{arch}\.sh<.{,99}>#{sha256}</im).first.first
+    end
   end
 
   auto_updates true
