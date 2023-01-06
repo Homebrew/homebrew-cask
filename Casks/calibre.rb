@@ -16,8 +16,8 @@ cask "calibre" do
     end
   end
   on_catalina :or_newer do
-    version "6.10.0"
-    sha256 "5217739e24e2b7632491fe43697369bd0d6faa57eb44e143e3a7c1edb6806414"
+    version "6.11.0"
+    sha256 "d7c40f3f35ba9043c13303632526f135b2c4086471a5c09ceb8b397c55c076fa"
 
     livecheck do
       url "https://github.com/kovidgoyal/calibre"
