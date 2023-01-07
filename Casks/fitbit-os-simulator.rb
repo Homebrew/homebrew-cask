@@ -1,6 +1,6 @@
 cask "fitbit-os-simulator" do
-  version "0.9.2"
-  sha256 "966ba0934d8b2ac237251dea0e19472b2bb4b654b4f3fcb0091b7a150b92c3af"
+  version "0.9.5"
+  sha256 "bf5862a7aabdddb5d01c75f2babdfe880ca60fcae346ccdaaa5fba0bfba382a6"
 
   url "https://simulator-updates.fitbit.com/Fitbit%20OS%20Simulator-latest-#{version}.dmg"
   name "Fitbit OS Simulator"
