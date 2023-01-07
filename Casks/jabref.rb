@@ -8,5 +8,10 @@ cask "jabref" do
   desc "Reference manager to edit, manage and search BibTeX files"
   homepage "https://www.jabref.org/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "JabRef.app"
 end
