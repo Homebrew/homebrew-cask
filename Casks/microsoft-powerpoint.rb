@@ -17,7 +17,7 @@ cask "microsoft-powerpoint" do
   end
   on_catalina do
     version "16.66.22101101"
-    sha256 "f311c90fdd538628c73a2b72ea7dbc8e47c0dcb70b6376daff68d9c4708369a1"
+    sha256 "bea8c4790445f726debd0f64d24fbdac59e3a9b51e95c092fb31da3913164540"
   end
   on_big_sur :or_newer do
     version "16.68.22121100"
