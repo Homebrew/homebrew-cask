@@ -17,7 +17,7 @@ cask "microsoft-excel" do
   end
   on_catalina do
     version "16.66.22101101"
-    sha256 "104a613aa3f4fcd3031dcdd0c445dcdbfdde208268750fb2ab6fba4e0f42c8a9"
+    sha256 "94148628c6f143f07555b3d2a70cea61cef817d963539d281b092834496f8f16"
   end
   on_big_sur :or_newer do
     version "16.68.22121100"
