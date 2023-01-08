@@ -17,7 +17,7 @@ cask "microsoft-word" do
   end
   on_catalina do
     version "16.66.22101101"
-    sha256 "72557bb37386a097672462e4cf267e91e43c5582aeb0fc70c443a6499341bc9d"
+    sha256 "5a6a75d9a5b46cceeff5a1b7925c0eab6e4976cba529149b7b291a0355e7a7c9"
   end
   on_big_sur :or_newer do
     version "16.68.22121100"
