@@ -16,4 +16,10 @@ cask "ideamaker" do
   end
 
   app "ideaMaker.app"
+
+  zap trash: [
+    "~/Library/Application Support/ideaMaker",
+    "~/Library/Preferences/com.raise3d.ideaMaker.plist",
+    "~/Library/Saved Application State/com.raise3d.ideaMaker.savedState",
+  ]
 end
