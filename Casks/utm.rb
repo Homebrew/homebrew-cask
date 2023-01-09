@@ -17,6 +17,7 @@ cask "utm" do
   conflicts_with cask: "homebrew/cask-versions/utm-beta"
 
   app "UTM.app"
+  binary "#{appdir}/UTM.app/Contents/MacOS/utmctl"
 
   uninstall quit: "com.utmapp.UTM"
 
