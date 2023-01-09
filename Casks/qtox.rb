@@ -9,7 +9,7 @@ cask "qtox" do
   homepage "https://qtox.github.io/"
 
   app "qTox.app"
-  
+
   zap trash: [
     "~/Library/Preferences/chat.tox.qtox.plist",
     "~/Library/Saved Application State/chat.tox.qtox.savedState",
