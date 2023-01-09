@@ -1,5 +1,5 @@
 cask "balenaetcher" do
-  version :latest
+  version "1.13.1"
   sha256 :no_check
 
   url "https://github.com/balena-io/etcher/releases/download/v1.8.14/balenaEtcher-1.8.14.dmg",
