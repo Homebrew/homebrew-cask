@@ -8,7 +8,7 @@ cask "aptakube" do
   homepage "https://aptakube.com/"
 
   livecheck do
-    url "https://releases.aptakube.com/latest.json"
+    url "https://aptakube.com/api/latest"
     regex(/"version": "(\d+(?:\.\d+)+)"/i)
   end
 
