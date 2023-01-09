@@ -4,7 +4,7 @@ cask "shiori" do
 
   url "https://aki-null.net/shiori/release/Shiori_#{version}.zip"
   name "Shiori"
-  desc "Shiori is a Pinboard and Delicious OS X client that allows you to find and add bookmarks."
+  desc "Pinboard and Delicious client that allows you to find and add bookmarks"
   homepage "https://aki-null.net/shiori/"
 
   livecheck do
