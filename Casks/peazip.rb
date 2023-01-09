@@ -14,7 +14,7 @@ cask "peazip" do
   app "peazip.app", target: "PeaZip.app"
 
   zap trash: [
-  "~/Library/Preferences/com.company.peazip.plist",
-  "~/Library/Saved Application State/com.company.peazip.savedState",
+    "~/Library/Preferences/com.company.peazip.plist",
+    "~/Library/Saved Application State/com.company.peazip.savedState",
   ]
 end
