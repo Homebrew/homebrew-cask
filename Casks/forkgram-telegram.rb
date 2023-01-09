@@ -12,4 +12,8 @@ cask "forkgram-telegram" do
 
   # Renamed to avoid conflict with telegram
   app "Telegram.app", target: "Forkgram.app"
+  
+  zap trash: [
+    "~/Library/Application Support/Forkgram Desktop",
+  ]
 end
