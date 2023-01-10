@@ -20,6 +20,10 @@ cask "lyx" do
     regex(/LyX-(\d+(?:\.\d+)*)\+qt5/i)
   end
 
+  if MacOS.version >= :monterey
+    depends_on formula: "python"
+  end
+  
   app "LyX.app"
   binary "#{appdir}/LyX.app/Contents/MacOS/inkscape", target: "lyx-inkscape"
   binary "#{appdir}/LyX.app/Contents/MacOS/lyx"
