@@ -26,4 +26,8 @@ cask "maccy" do
         "~/Library/Application Scripts/org.p0deje.Maccy",
         "~/Library/Containers/org.p0deje.Maccy",
       ]
+
+  caveats <<~EOS
+    Login Item will not work with the quarantine attribute.
+  EOS
 end
