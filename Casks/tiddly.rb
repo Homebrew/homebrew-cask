@@ -1,6 +1,6 @@
 cask "tiddly" do
-  version "0.0.15"
-  sha256 "2846b4ad2f156bfcc55d49690c4a08e14762037b17884fde9eb3228ffcf8db15"
+  version "0.0.16"
+  sha256 "5453bb8ccb8e1fcb7b97a2afc287a194dd1b0ac28d675951c4710322b98f3836"
 
   url "https://github.com/Jermolene/TiddlyDesktop/releases/download/v#{version}/tiddlydesktop-mac64-v#{version}.zip"
   name "TiddlyWiki"
