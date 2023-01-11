@@ -4,6 +4,7 @@ cask "shadowsocksx-ng" do
 
   url "https://github.com/shadowsocks/ShadowsocksX-NG/releases/download/v#{version}/ShadowsocksX-NG.dmg"
   name "ShadowsocksX-NG"
+  desc "Tunneling proxy"
   homepage "https://github.com/shadowsocks/ShadowsocksX-NG/"
 
   conflicts_with cask: "shadowsocksx"
