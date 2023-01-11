@@ -1,6 +1,6 @@
 cask "gridtracker" do
-  version "1.22.1226"
-  sha256 "fde1ba94c7dc33d19965047b08054ac2c24df636cad10e315f123fff0a4ae8e4"
+  version "1.23.0110"
+  sha256 "4cbe5b383e42107d2fc9fd1dbd00f686a9e4d92f83ea3a207bf2c429e7fa8485"
 
   url "https://downloads.gridtracker.org/v#{version}/GridTracker-#{version}-mac-x64.zip"
   name "GridTracker"
