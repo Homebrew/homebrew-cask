@@ -8,6 +8,11 @@ cask "snapmaker-luban" do
   desc "3D printing software"
   homepage "https://luban.xyz/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
 
   app "Snapmaker Luban.app"
