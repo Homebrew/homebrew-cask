@@ -7,9 +7,9 @@ cask "slimhud" do
   desc "Replacement for the volume, brightness and keyboard backlight HUDs"
   homepage "https://github.com/AlexPerathoner/SlimHUD/"
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :high_sierra"
 
   app "SlimHUD.app"
 
-  zap trash: "~/Library/Preferences/AlexP.SlimHUD.plist"
+  zap trash: "~/Library/Preferences/com.alexpera.SlimHUD.plist"
 end
