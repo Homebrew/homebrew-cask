@@ -1,6 +1,6 @@
 cask "snapmaker-luban" do
-  version "4.4.0"
-  sha256 "2d5f0414ee91a1dc7673ce5b4175e1baaad5d769e45a88a38240d131184c647f"
+  version "4.5.0"
+  sha256 "f29c71c9ffbd68a3dc9ca4bd41d9d6b10f7391b53460c19d8caf83858a1c2742"
 
   url "https://github.com/snapmaker/luban/releases/download/v#{version}/Snapmaker-Luban-#{version}-mac.zip",
       verified: "github.com/snapmaker/luban/"
