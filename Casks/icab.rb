@@ -1,15 +1,15 @@
 cask "icab" do
-  version "6.1.4"
-  sha256 "273c67581cdeff984b954a87f401fc5f8aa4b54f93a1d1c44e45cce3cd84ab27"
+  version "6.1.5"
+  sha256 "c35d3ecd0b8b4868d3a8e895294e287fa0ba628334778df178bf6255418f7cab"
 
   url "https://icab.clauss-net.de/icab/iCab_#{version}.zip",
       verified: "icab.clauss-net.de/icab/"
   name "iCab"
   desc "Alternative web browser"
-  homepage "http://www.icab.de/"
+  homepage "https://www.icab.de/"
 
   livecheck do
-    url "http://www.icab.de/download.html"
+    url "https://www.icab.de/download.html"
     regex(/iCab\sv?(\d+(?:\.\d+)+)/i)
   end
 

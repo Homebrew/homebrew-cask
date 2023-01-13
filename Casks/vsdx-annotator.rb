@@ -1,5 +1,5 @@
 cask "vsdx-annotator" do
-  version "1.15.1,556"
+  version "1.16.1,563"
   sha256 :no_check
 
   url "https://nektony.com/download/vsdxannotator.dmg"
@@ -12,7 +12,7 @@ cask "vsdx-annotator" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "VSDX Annotator.app"
 

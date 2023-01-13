@@ -1,6 +1,6 @@
 cask "akiflow" do
-  version "2.28.11"
-  sha256 "2d22398a44fe581f7177707df319d3ba35e1b805b4a9206b958f6583c86f8717"
+  version "2.29.16"
+  sha256 "93b1ea44fbf83a48ef384e84dff29eaeb519b90eca6df4884d22930efbc4c293"
 
   url "https://akiflow.com/releases/Akiflow-#{version}-universal.dmg"
   name "Akiflow"
@@ -8,8 +8,7 @@ cask "akiflow" do
   homepage "https://akiflow.com/"
 
   livecheck do
-    url "https://akiflow.com/releases/download"
-    strategy :header_match
+    skip "Constantly changes between download page and direct download"
   end
 
   app "Akiflow.app"

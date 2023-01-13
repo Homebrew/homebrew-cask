@@ -1,6 +1,6 @@
 cask "reverso" do
-  version "2.5.0,329"
-  sha256 "d2ec548f6e53c3beabced29575cdc87cd81c9bd260fe482958710a0bd909bcd5"
+  version "2.7.0,377"
+  sha256 "f02c7b08458d515f4cdb8294ad369fdb50ca22f356bf167040709d21b50cedfa"
 
   url "https://cdn.reverso.net/download/reverso/desktop/macos/distrib/Reverso_#{version.csv.first}.#{version.csv.second}.zip"
   name "Reverso"

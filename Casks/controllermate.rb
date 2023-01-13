@@ -1,11 +1,13 @@
 cask "controllermate" do
-  if MacOS.version <= :el_capitan
+  on_el_capitan :or_older do
     version "4.9.10"
     sha256 "4f24f5763e96b0b0e959197dba5cc064928b59b74d49210bf5a484f4f9766d38"
-  elsif MacOS.version <= :sierra
+  end
+  on_sierra do
     version "4.10.4"
     sha256 "fdeb37ca8df145d927b9daef6dfa22ef6d1535f9ad1459c4f4ffcb52fbc19c3b"
-  else
+  end
+  on_high_sierra :or_newer do
     version "4.11.1"
     sha256 "dd95d0b2abd6c23148092c96593fb303befc374c6a912afad57efb48b0a1e04b"
   end
@@ -13,12 +15,8 @@ cask "controllermate" do
   url "https://orderedbytes.s3.amazonaws.com/ControllerMate#{version.no_dots}.zip",
       verified: "orderedbytes.s3.amazonaws.com/"
   name "ControllerMate"
+  desc "Create virtual mouse, tablet, and joystick devices"
   homepage "https://www.orderedbytes.com/controllermate/"
-
-  livecheck do
-    url "https://www.orderedbytes.com/sparkle/appcast_cm460.xml"
-    strategy :sparkle
-  end
 
   pkg "#temp#/ControllerMate.sparkle_interactive.pkg"
 
@@ -49,6 +47,7 @@ cask "controllermate" do
   ]
 
   caveats do
+    discontinued
     reboot
   end
 end

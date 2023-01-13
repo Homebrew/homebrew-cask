@@ -2,11 +2,13 @@ cask "jitouch" do
   version :latest
   sha256 :no_check
 
-  if MacOS.version <= :el_capitan
+  on_el_capitan :or_older do
     url "https://www.jitouch.com/jitouch_el_capitan.zip"
-  elsif MacOS.version <= :sierra
+  end
+  on_sierra do
     url "https://www.jitouch.com/jitouch_sierra.zip"
-  else
+  end
+  on_high_sierra :or_newer do
     url "https://www.jitouch.com/jitouch_mojave.zip"
   end
 

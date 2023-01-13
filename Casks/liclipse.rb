@@ -1,6 +1,6 @@
 cask "liclipse" do
-  version "8.2.0,ycuiec8ypcpkj1v"
-  sha256 "6cd5a9bc3e0b37c564bf5436caf757e76850512b70a4cea387c0b8a587bd80ee"
+  version "9.0.1,5ao858sjvo8gibh"
+  sha256 "bbba6f686ecb62a6b32ffd695358d4729a0db81bc5578a7fe5973bebafa1a8df"
 
   url "https://www.mediafire.com/file/#{version.csv.second}/liclipse_#{version.csv.first}_macosx.cocoa.x86_64.tar.gz",
       verified: "mediafire.com/file/"

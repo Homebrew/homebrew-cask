@@ -1,9 +1,9 @@
 cask "openaudible" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "3.6"
-  sha256 arm:   "734577d0cbfa922848da4ca7e296e020c5026b6d4f16c3b88daea59b4453c1d2",
-         intel: "7019710116465aebf2b620ec5d77c308a0f41258cd3ce9724676bace4f47f1a0"
+  version "3.6.3"
+  sha256 arm:   "fbd286aa141852081f438fa06c9ed1053453dce2d773cb9aaa3ee984cf7a2618",
+         intel: "455b03a543b030bfc5de5daf80e71e7f1bb7bf2a6c6c4c883817007b35750284"
 
   url "https://github.com/openaudible/openaudible/releases/download/v#{version}/OpenAudible_#{version}_#{arch}.dmg",
       verified: "github.com/openaudible/openaudible/"

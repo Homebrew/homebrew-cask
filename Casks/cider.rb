@@ -1,6 +1,6 @@
 cask "cider" do
-  version "1.5.6"
-  sha256 "4dadcda0a36d7712c13a7c9430fd814037d34b35c38760d01920299366885047"
+  version "1.6.0"
+  sha256 "eb133236dccbf521fbb31371050d11e9ec7ce30ac15f7d9a0581d5a521d0e7ba"
 
   url "https://github.com/ciderapp/cider-releases/releases/download/v#{version}/Cider-#{version}-universal.dmg",
       verified: "github.com/ciderapp/cider-releases"

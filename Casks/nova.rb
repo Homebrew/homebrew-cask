@@ -1,6 +1,6 @@
 cask "nova" do
-  version "9.6"
-  sha256 "fde34c19a80e166809c7ecaba1b7d0c73a148c0fbbb2a15f65e211e2fb1c5747"
+  version "10.6"
+  sha256 "b41e17c7fb7018d41c202c00e0745dcb68c9275d4681888e729a10898f8e428c"
 
   url "https://download-keycdn.panic.com/nova/Nova%20#{version}.zip",
       verified: "download-keycdn.panic.com/nova/"
@@ -14,17 +14,13 @@ cask "nova" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Nova.app"
-  binary "#{appdir}/Nova.app/Contents/SharedSupport/nova"
-  artifact "#{appdir}/Nova.app/Contents/Resources/nova_completions.txt",
-           target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_nova"
 
   uninstall delete: [
     "/Library/LaunchDaemons/com.panic.NovaPrivilegedHelper.plist",
     "/Library/PrivilegedHelperTools/com.panic.NovaPrivilegedHelper",
-    "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_nova",
   ]
 
   zap trash: [

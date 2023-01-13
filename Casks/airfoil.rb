@@ -1,5 +1,5 @@
 cask "airfoil" do
-  version "5.11.1"
+  version "5.11.4"
   sha256 :no_check
 
   url "https://rogueamoeba.com/airfoil/mac/download/Airfoil.zip"
@@ -13,7 +13,7 @@ cask "airfoil" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "Airfoil/Airfoil Satellite.app"
   app "Airfoil/Airfoil.app"

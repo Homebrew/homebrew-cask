@@ -1,11 +1,17 @@
 cask "only-switch" do
-  version "2.3.7"
-  sha256 "2a9ea3c7777560244535a370c1093f859643bafe772a9d272e11f9dd3efa0791"
+  version "2.3.10"
+  sha256 "71ff81b3eca8fec2931b8a7e6c91c91cbe55c229edc943546e863b49fbd8f6ed"
 
   url "https://github.com/jacklandrin/OnlySwitch/releases/download/release_#{version}/OnlySwitch.dmg"
   name "OnlySwitch"
   desc "System and utility switches"
   homepage "https://github.com/jacklandrin/OnlySwitch"
+
+  livecheck do
+    url :url
+    regex(%r{href=["']?[^"' >]*?/tag/release[._-]v?(\d+(?:\.\d+)+)["' >]}i)
+    strategy :github_latest
+  end
 
   depends_on macos: ">= :monterey"
 

@@ -1,8 +1,8 @@
 cask "hydrus-network" do
-  version "499"
-  sha256 "827094dcdc66dc0828b962682d81f98c13be5a4749c5f0a8740fa2a1af4e32de"
+  version "513"
+  sha256 "716bd57ffce09b4e9f51d57dff3d1c12f42be4b8d3e2aae775e95fbc2006816b"
 
-  url "https://github.com/hydrusnetwork/hydrus/releases/download/v#{version}/Hydrus.Network.#{version}.-.macOS.Qt5.-.App.dmg",
+  url "https://github.com/hydrusnetwork/hydrus/releases/download/v#{version}/Hydrus.Network.#{version}.-.macOS.-.App.dmg",
       verified: "github.com/hydrusnetwork/hydrus/"
   name "hydrus-network"
   desc "Personal booru-style media tagger to organize your media"
@@ -10,8 +10,8 @@ cask "hydrus-network" do
 
   livecheck do
     url :url
+    regex(%r{href=["']?[^"' >]*?/tree/v?(\d+(?:\.\d+)*[a-z]?)[^"' >]*?["' >]}i)
     strategy :github_latest
-    regex(%r{href=.*?/tag/v?(\d+\h*)["' >]}i)
   end
 
   app "Hydrus Network.app"

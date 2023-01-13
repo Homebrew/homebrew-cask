@@ -1,9 +1,9 @@
 cask "remember-the-milk" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.3.11"
-  sha256 arm:   "5585a2ff3d09867c870c8255dc91e3235012f2f0dbeac3e38beeab6f0cee0f2b",
-         intel: "6bab4f70f87a95764e646788bef3449877a3938768b5a9b92ade946b348c95d2"
+  version "1.4.1"
+  sha256 arm:   "669bfec9df17ac3f5a46a0acd54190805752fd2194de337c8e48ccba5c093430",
+         intel: "5c7418f9b67d8b9f0765f12e0454323997c6afc7d00a1d7a90c9fa4eb2ed92ad"
 
   url "https://www.rememberthemilk.com/download/mac/RememberTheMilk-#{version}-#{arch}.zip"
   name "Remember The Milk"

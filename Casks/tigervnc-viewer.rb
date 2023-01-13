@@ -10,7 +10,7 @@ cask "tigervnc-viewer" do
 
   livecheck do
     url "https://github.com/TigerVNC/tigervnc"
-    strategy :git
+    strategy :github_latest
   end
 
   app "TigerVNC Viewer #{version}.app"

@@ -1,5 +1,5 @@
 cask "memory" do
-  version "2022.06,395"
+  version "2023.01,434"
   sha256 :no_check
 
   url "https://memorymacapp.s3.amazonaws.com/Memory.zip",
@@ -14,7 +14,7 @@ cask "memory" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :mojave"
 
   app "Memory.app"
 

@@ -4,8 +4,10 @@ cask "sanesidebuttons" do
 
   url "https://github.com/thealpa/SaneSideButtons/releases/download/#{version}/SaneSideButtons.dmg"
   name "sanesidebuttons"
-  desc "Enables system-wide navigation functionality for side buttons"
+  desc "Menu bar app that enables system-wide navigation using side mouse buttons"
   homepage "https://github.com/thealpa/SaneSideButtons"
+
+  depends_on macos: ">= :big_sur"
 
   app "SaneSideButtons.app"
 

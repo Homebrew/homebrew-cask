@@ -5,13 +5,13 @@ cask "wkhtmltopdf" do
   url "https://github.com/wkhtmltopdf/packaging/releases/download/#{version}/wkhtmltox-#{version}.macos-cocoa.pkg",
       verified: "github.com/wkhtmltopdf/packaging/"
   name "wkhtmltopdf"
+  desc "HTML to PDF renderer"
   homepage "https://wkhtmltopdf.org/"
 
-  # We need to check all releases since not all releases are for macOS.
   livecheck do
-    url "https://github.com/wkhtmltopdf/packaging/releases"
-    strategy :page_match
+    url "https://wkhtmltopdf.org/downloads.html"
     regex(/href=.*?wkhtmltox-(\d+(?:\.\d+)*-\d+)\.macos-cocoa\.pkg/i)
+    strategy :page_match
   end
 
   pkg "wkhtmltox-#{version}.macos-cocoa.pkg"

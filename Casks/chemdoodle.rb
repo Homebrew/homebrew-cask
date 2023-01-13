@@ -1,8 +1,11 @@
 cask "chemdoodle" do
-  version "11.10.0"
-  sha256 "ddf5b0f29a5b1cdc5e71c1a4858108fab4497019f7c7b21282795a959bfcc139"
+  arch arm: "aarch64", intel: "x64"
 
-  url "https://www.ichemlabs.com/downloads/ChemDoodle-macos-#{version}.dmg"
+  version "11.12.0"
+  sha256 arm:   "e04115f90e3f6d6cdf2ba4e73134ee9f780a9d0f9be46f940ff3ce92a23e5f46",
+         intel: "75803a20ea2c7dbd338dc82dbf452444ed3ba1fb641cb795370d86a73435f43b"
+
+  url "https://www.ichemlabs.com/downloads/ChemDoodle-macos-#{arch}-#{version}.dmg"
   name "ChemDoodle"
   name "ChemDoodle 2D"
   desc "2D chemical drawing, publishing and informatics"
@@ -10,7 +13,7 @@ cask "chemdoodle" do
 
   livecheck do
     url "https://www.ichemlabs.com/download#chemdoodle/osx-installation-instructions/"
-    regex(%r{href=.*?/ChemDoodle[._-]macos[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    regex(%r{href=.*?/ChemDoodle[._-]macos[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   depends_on macos: ">= :el_capitan"

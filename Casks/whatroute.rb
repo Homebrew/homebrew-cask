@@ -1,6 +1,6 @@
 cask "whatroute" do
-  version "2.5.5,11809"
-  sha256 "9a94b935927b15eed6488107e6c05870cb99fda8a75ccaa95a8d0fc7c96f4e85"
+  version "2.6.0,11811"
+  sha256 "1ca675ab344154f7a92b56b37a6f13cfe3471dad0c621c014dab5d6f576210d3"
 
   url "https://downloads.whatroute.net/software/whatroute-#{version.csv.first}.zip"
   name "WhatRoute"
@@ -12,7 +12,7 @@ cask "whatroute" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :high_sierra"
 
   app "WhatRoute.app"
 

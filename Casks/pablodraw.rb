@@ -8,8 +8,7 @@ cask "pablodraw" do
   homepage "https://github.com/cwensley/pablodraw/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    skip "No reliable way to get version info"
   end
 
   app "PabloDraw.app"

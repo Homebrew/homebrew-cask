@@ -1,5 +1,5 @@
 cask "physics-101" do
-  version "9.1,9.9.9.3.9"
+  version "9.2.2"
   sha256 :no_check
 
   url "https://praetersoftware.com/download/physics101/Physics101.dmg"

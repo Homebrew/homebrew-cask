@@ -15,9 +15,7 @@ cask "franz" do
 
   app "Franz.app"
 
-  uninstall signal: [
-              ["QUIT", "com.meetfranz.franz"],
-            ],
+  uninstall signal: ["QUIT", "com.meetfranz.franz"],
             delete: "/Library/Logs/DiagnosticReports/Franz Helper_.*wakeups_resource.diag"
 
   zap trash: [

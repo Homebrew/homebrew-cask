@@ -1,6 +1,6 @@
 cask "bricklink-studio" do
-  version "2.22.9_2"
-  sha256 "c981781268238457fb406bef063de691a37fc2792b50f87de66edf83fadae4c0"
+  version "2.22.12_1"
+  sha256 "c6ba7aeb9505adb284dcc7feb525c121858182afc13152b9abaffa514502fe41"
 
   url "https://blstudio.s3.amazonaws.com/Studio#{version.major}.0/Archive/#{version}/Studio+#{version.major}.0.pkg",
       verified: "blstudio.s3.amazonaws.com/"

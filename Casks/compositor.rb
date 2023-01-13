@@ -1,6 +1,6 @@
 cask "compositor" do
-  version "1.18.0"
-  sha256 "3ee0fba6af6b40bb59b9d8a8a5adef608cbd0a25f3f2f68dbe04529f96e9ca23"
+  version "1.23.0"
+  sha256 "4b8884a8249bed7cafc5de44dadbf112f525a5ccb95046ab4ca74980f73f29f8"
 
   url "https://compositorapp.com/updates/Compositor_#{version}.zip"
   name "Compositor"
@@ -12,7 +12,7 @@ cask "compositor" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :sierra"
 
   app "Compositor.app"
 

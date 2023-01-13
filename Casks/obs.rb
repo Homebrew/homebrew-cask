@@ -1,9 +1,9 @@
 cask "obs" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "28.0.2"
-  sha256 arm:   "84a1eade1510814eb78f5cff31a3a256361eae36f33defdb70a71b7e7ba6b7a9",
-         intel: "bb8b67957389dc52db50c3222a2ce25239eb50cb58e7b5d7ca563810cff3e063"
+  version "29.0.0"
+  sha256 arm:   "b06753c7398857afc37a7e398a74e92728dfce3d515964ee21a0a9cc32bcc81b",
+         intel: "6e8eb451d22d66c7e06cdfcd9b95e0ce91f595994f02b6319d876bd3ee583770"
 
   url "https://cdn-fastly.obsproject.com/downloads/obs-studio-#{version}-macos-#{arch}.dmg"
   name "OBS"
@@ -11,11 +11,12 @@ cask "obs" do
   homepage "https://obsproject.com/"
 
   livecheck do
-    url "https://obsproject.com/download/"
-    regex(%r{href=.*?/obs[._-]studio[._-]v?(\d+(?:\.\d+)+).*?\.dmg}i)
+    url "https://obsproject.com/osx_update/stable/updates_#{arch}.xml"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
+  conflicts_with cask: "homebrew/cask-versions/obs-beta"
   depends_on macos: ">= :catalina"
 
   app "OBS.app"

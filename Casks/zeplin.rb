@@ -1,5 +1,5 @@
 cask "zeplin" do
-  version "4.3.6,1628"
+  version "4.6.3,1732"
   sha256 :no_check
 
   url "https://api.zeplin.io/urls/download-mac"
@@ -13,7 +13,7 @@ cask "zeplin" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "Zeplin.app"
 

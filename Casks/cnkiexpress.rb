@@ -1,8 +1,8 @@
 cask "cnkiexpress" do
-  version "0.2.25"
-  sha256 "65a5d52ecf8b052f7528c1a88a2779f56ba3166082ef9ad7619b36665215871f"
+  version "0.2.31"
+  sha256 "6d58da523349fb63f2a01ffef162325396a24984e55a8409b8eb48de9b1c242e"
 
-  url "https://download.cnki.net/cnkiexpress/\%E5\%85\%A8\%E7\%90\%83\%E5\%AD\%A6\%E6\%9C\%AF\%E5\%BF\%AB\%E6\%8A\%A5-#{version}.dmg"
+  url "https://download.cnki.net/cnkiexpress/%E5%85%A8%E7%90%83%E5%AD%A6%E6%9C%AF%E5%BF%AB%E6%8A%A5-#{version}.dmg"
   name "CNKIExpress"
   name "全球学术快报"
   desc "Academic application"

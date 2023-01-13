@@ -1,6 +1,6 @@
 cask "macwinzipper" do
-  version "2.7"
-  sha256 "37ff612125d80acf39a873e087a301c524708bb0c4af64be55a335555af23d62"
+  version "2.7.1"
+  sha256 "b17b6d8338fe6658aa2f9db5566ed8cbc15a936e0e8f883b22cc7c3e561bb18b"
 
   url "https://tida.co.jp/files/MacWinZipper-#{version}.dmg"
   name "MacWinZipper"

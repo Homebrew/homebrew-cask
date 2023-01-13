@@ -1,6 +1,6 @@
 cask "manyverse" do
-  version "0.2209.2-beta"
-  sha256 "356b8b1fe52c8e47c3a765b437e78c6766db1fbace9a2990667eb283e2e94b67"
+  version "0.2301.6-beta"
+  sha256 "57e986f6bc1f765fa5c77109dc21e5c78cd635d89396928b54ba28cd14c0c987"
 
   url "https://github.com/staltz/manyverse/releases/download/v#{version}/Manyverse-#{version}.dmg",
       verified: "github.com/staltz/manyverse/"
@@ -10,7 +10,8 @@ cask "manyverse" do
 
   livecheck do
     url :url
-    regex(/^v?(\d+(?:\.\d+)+(?:-beta)?)$/i)
+    regex(%r{href=["']?[^"' >]*?/tag/v?(\d+(?:\.\d+)+-beta)["' >]}i)
+    strategy :github_latest
   end
 
   app "Manyverse.app"

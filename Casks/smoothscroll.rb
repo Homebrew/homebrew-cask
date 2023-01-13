@@ -1,5 +1,5 @@
 cask "smoothscroll" do
-  version "1.5.7,10507.1"
+  version "1.6.0,10600.1"
   sha256 :no_check
 
   url "https://www.smoothscroll.net/mac/download/SmoothScroll.app.zip"
@@ -12,7 +12,7 @@ cask "smoothscroll" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "SmoothScroll.app"
 end

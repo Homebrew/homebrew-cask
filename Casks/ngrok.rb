@@ -30,5 +30,8 @@ cask "ngrok" do
     set_permissions "#{staged_path}/ngrok", "0755"
   end
 
-  zap trash: "~/.ngrok#{version.major}"
+  zap trash: [
+    "~/.ngrok#{version.major}",
+    "~/Library/Application Support/ngrok",
+  ]
 end

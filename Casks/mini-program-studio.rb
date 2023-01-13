@@ -2,12 +2,12 @@ cask "mini-program-studio" do
   arch arm: "-arm64", intel: "-x64"
 
   on_intel do
-    version "3.1.3,ae1bb1b2-16bc-4e53-92af-78ebe212ab33"
-    sha256 "99bf5553598eb1d89051f790e757c5002ccc17953c7d5503ae21430fc7b27551"
+    version "3.3.3,4ddf7f5b-73cd-42dd-806f-5fd90a8327b8"
+    sha256 "539f1f259a1095e1d1639f27db6e7ef218e89a956d1aa394d8c143804b82f965"
   end
   on_arm do
-    version "3.1.3,ba8539d7-cec1-4201-992f-0f02b02d5b28"
-    sha256 "bde711b94089c3ab09d5726dd30cb9b1a01e45304bf431216613f1265574d597"
+    version "3.3.3,473624af-67c4-4f44-938a-b84217d1db3b"
+    sha256 "9e73204f12cba2657551363669b08194f0060cfeaa456ab987540d1aa3cba790"
   end
 
   url "https://gw.alipayobjects.com/os/volans-demo/#{version.csv.second}/MiniProgramStudio-#{version.csv.first}#{arch}.dmg",

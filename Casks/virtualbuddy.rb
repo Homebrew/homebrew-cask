@@ -8,17 +8,11 @@ cask "virtualbuddy" do
   homepage "https://github.com/insidegui/VirtualBuddy"
 
   livecheck do
-    url "https://github.com/insidegui/VirtualBuddy/releases"
-    strategy :page_match do |page|
-      match = page.match(/href=.*?VirtualBuddy[._-]v?(\d+(?:\.\d+)+)[._-](\d+)\.dmg/i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
-    end
+    skip "No reliable way to get version info"
   end
 
   depends_on arch: :arm64
-  depends_on macos: :monterey
+  depends_on macos: ">= :monterey"
 
   app "VirtualBuddy.app"
 

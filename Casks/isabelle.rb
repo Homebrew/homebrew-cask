@@ -1,6 +1,6 @@
 cask "isabelle" do
-  version "2021-1"
-  sha256 "6cf1ca71345f780890f8ab4032d87e5a4d1e7e0fecacfb510ffa02c777d23458"
+  version "2022"
+  sha256 "28444505089e1e88da5c659b3e9b68cf7a234fb8ad9fa74345beacb352cf042d"
 
   url "https://www.cl.cam.ac.uk/research/hvg/Isabelle/dist/Isabelle#{version}_macos.tar.gz"
   name "Isabelle"

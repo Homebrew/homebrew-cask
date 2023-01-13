@@ -1,16 +1,23 @@
 cask "mkvtoolnix" do
-  if MacOS.version <= :el_capitan
+  on_el_capitan :or_older do
     version "29.0.0"
     sha256 "209578d5d25adb37a2cf857139afb35a421a64b104c2d59af0476d609037244d"
-  elsif MacOS.version <= :high_sierra
+  end
+  on_sierra do
     version "41.0.0"
     sha256 "2eb34d57209f6dc4d8ec9809028affb0ce8a7edad8370b36abf8996edbb9ac86"
-  elsif MacOS.version <= :mojave
+  end
+  on_high_sierra do
+    version "41.0.0"
+    sha256 "2eb34d57209f6dc4d8ec9809028affb0ce8a7edad8370b36abf8996edbb9ac86"
+  end
+  on_mojave do
     version "53.0.0"
     sha256 "bb6d0ba4e0052b2831de0ae29ef3d0d4c7b4d0933b258455c248c1a1c5f913a0"
-  else
-    version "70.0.0"
-    sha256 "2a9c5488a0d026c162087a78d5131617e9a8bac033f53bb83338f9d970b49cf0"
+  end
+  on_catalina :or_newer do
+    version "73.0.0"
+    sha256 "deab03fdc4b3c4662e1a4575b9e270d8ee2cda35329aed3e01952ab7e8773b30"
   end
 
   url "https://mkvtoolnix.download/macos/MKVToolNix-#{version}.dmg"

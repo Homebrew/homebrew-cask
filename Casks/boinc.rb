@@ -1,6 +1,6 @@
 cask "boinc" do
-  version "7.20.2"
-  sha256 "34bbcfca18915294e5da18110a0e8c302effa1dbe1ae0eca9dd5e40d3a8b3a98"
+  version "7.20.4"
+  sha256 "7434428fa4bba8b7d7103d7c937c5ea2291644d8e3eace60583d0ec2bc4ea59c"
 
   url "https://boinc.berkeley.edu/dl/boinc_#{version}_macOSX_universal.zip"
   name "Berkeley Open Infrastructure for Network Computing"
@@ -25,6 +25,9 @@ cask "boinc" do
     "~/Library/Caches/edu.berkeley.boinc",
     "~/Library/Preferences/BOINC Manager Preferences",
     "~/Library/Preferences/edu.berkeley.boinc.plist",
+    "~/Library/Saved Application State/edu.berkeley.boinc.savedState",
+    "~/Library/WebKit/edu.berkeley.boinc",
+    "/Library/Application Support/BOINC Data",
     "/Library/Screen Savers/BOINCSaver.saver",
   ]
 end

@@ -1,5 +1,5 @@
 cask "loopback" do
-  version "2.2.9"
+  version "2.2.12"
   sha256 :no_check
 
   url "https://rogueamoeba.com/loopback/download/Loopback.zip"
@@ -13,20 +13,9 @@ cask "loopback" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :catalina"
 
   app "Loopback.app"
-  installer script: {
-    executable: "Loopback.app/Contents/Resources/aceinstaller",
-    args:       ["install", "--silent"],
-    sudo:       true,
-  }
-
-  uninstall script: {
-    executable: "Loopback.app/Contents/Resources/aceinstaller",
-    args:       ["uninstall", "--silent"],
-    sudo:       true,
-  }
 
   zap trash: [
     "~/Library/Application Support/Loopback",

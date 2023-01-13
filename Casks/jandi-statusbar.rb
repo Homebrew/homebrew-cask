@@ -1,6 +1,6 @@
 cask "jandi-statusbar" do
-  version "1.8"
-  sha256 "d37903613a7e1f9a6c9038fc70569015154ad03a6162b5f32d995f4c7004c856"
+  version "1.12"
+  sha256 "65db1d0f7a4c2cff8097dad6fcfe4f7c7a57124bfb5358fe1f7996b977f7934f"
 
   url "https://github.com/techinpark/Jandi/releases/download/v#{version}/jandi.dmg"
   name "jandi"
@@ -8,9 +8,7 @@ cask "jandi-statusbar" do
   homepage "https://github.com/techinpark/Jandi"
 
   livecheck do
-    url "https://github.com/techinpark/Jandi/releases"
-    strategy :page_match
-    regex(%r{href=.*?(\d+(?:\.\d+)+)/jandi\.dmg}i)
+    skip "No reliable way to get version info"
   end
 
   app "jandi.app"

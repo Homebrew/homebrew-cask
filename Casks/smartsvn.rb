@@ -1,6 +1,6 @@
 cask "smartsvn" do
-  version "14.2.1"
-  sha256 "65be0f560c929e4ba747bb09778ea4ad6b104477d81c226459909905846df0c0"
+  version "14.2.2"
+  sha256 "43d8ec95ce3e8b4a40a08a0ceff76c9d06f282ab3d211e2e6e37a7bb61ec8a3a"
 
   url "https://www.smartsvn.com/downloads/smartsvn/smartsvn-x86_64-#{version.dots_to_underscores}.dmg"
   name "SmartSVN"

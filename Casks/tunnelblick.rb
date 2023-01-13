@@ -8,14 +8,11 @@ cask "tunnelblick" do
   desc "Free and open-source OpenVPN client"
   homepage "https://www.tunnelblick.net/"
 
-  # We need to check all releases since the current latest release is a beta version.
   livecheck do
     url "https://github.com/Tunnelblick/Tunnelblick/releases"
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/Tunnelblick[._-]v?(\d+(?:\.\d+)*[a-z]?)_build_(\d+)\.dmg}i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
+    regex(/Tunnelblick\s+?(\d+(?:\.\d+)*[a-z]?)\s+?\(build\s+?(\d+)/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 

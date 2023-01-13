@@ -8,11 +8,6 @@ cask "tipp10" do
   desc "Free touch typing tutor"
   homepage "https://www.tipp10.com/"
 
-  livecheck do
-    url "https://www.tipp10.com/en/download/"
-    regex(/Version\s+(\d+(?:\.\d+)+).*?DMG/i)
-  end
-
   depends_on macos: "<= :mojave"
 
   app "TIPP10.app"

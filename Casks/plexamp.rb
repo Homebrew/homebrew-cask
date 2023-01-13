@@ -1,9 +1,9 @@
 cask "plexamp" do
   arch arm: "-arm64"
 
-  version "4.4.0"
-  sha256 arm:   "70979b076b948a3d3685ab1e67be51e98254a9df2223b5e50429bf77605238c7",
-         intel: "d5e5c6cb8b3bb4ff0b0be2e93f40a7067450fa386ac5ec39dd2e3bbf77219a09"
+  version "4.6.1"
+  sha256 arm:   "b8e07c6e5ab1f25dedaa6ff8abf2b87735f2338cf6a29eb1def887145e61ab22",
+         intel: "2d2e6bc32f2591f44abc4608a07942d951fec6fa9c415e3375767d9d13e4be25"
 
   url "https://plexamp.plex.tv/plexamp.plex.tv/desktop/Plexamp-#{version}#{arch}.dmg",
       verified: "plexamp.plex.tv/"
@@ -15,6 +15,8 @@ cask "plexamp" do
     url "https://plexamp.plex.tv/plexamp.plex.tv/desktop/latest-mac.yml"
     strategy :electron_builder
   end
+
+  auto_updates true
 
   app "Plexamp.app"
 end

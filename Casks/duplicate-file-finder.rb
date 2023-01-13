@@ -1,8 +1,8 @@
 cask "duplicate-file-finder" do
-  version "6.17.2,586"
-  sha256 "3ce52dc70047eabd7c4ae6abca23749f8ab5d1d52d2c0ad1c51a9c1ba84bd9e3"
+  version "6.17.3,588"
+  sha256 "27a1aa5c6d4ebe8ef54b8baabb79041550ad460a366f89282f68bf5c3001d9a8"
 
-  url "https://nektony.com/pro-support/duplicates-finder-site/update/DFFS_v#{version.csv.first}b#{version.csv.second}.zip"
+  url "https://download.nektony.com/pro-support/duplicates-finder-site/update/dffs_v#{version.csv.first}b#{version.csv.second}.zip"
   name "Duplicate File Finder"
   desc "Find and remove unwanted duplicate files and folders"
   homepage "https://nektony.com/duplicate-finder-free"

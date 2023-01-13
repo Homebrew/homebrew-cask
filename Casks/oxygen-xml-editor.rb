@@ -1,10 +1,8 @@
 cask "oxygen-xml-editor" do
-  arch arm: "-aarch64"
-
-  version "24.1,2022092207"
+  version "25.0,2022121306"
   sha256 :no_check
 
-  url "https://www.oxygenxml.com/InstData/Editor/MacOSX/VM/oxygen-openjdk#{arch}.dmg"
+  url "https://www.oxygenxml.com/InstData/Editor/MacOSX/VM/oxygen-openjdk.dmg"
   name "oXygen XML Editor"
   desc "Tools for XML editing, including Oxygen XML Developer and Author"
   homepage "https://www.oxygenxml.com/xml_editor.html"

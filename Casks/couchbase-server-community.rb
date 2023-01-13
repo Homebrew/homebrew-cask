@@ -9,7 +9,7 @@ cask "couchbase-server-community" do
 
   livecheck do
     url "https://www.couchbase.com/downloads"
-    regex(/osx.*?couchbase-server-community-version.*?(\d+(:?\.\d+)+)\s\(Current\)/im)
+    regex(/couchbase[._-]server[._-]community[._-]v?(\d+(:?\.\d+)+)[._-]macos[._-]x86[._-]64\.dmg/i)
   end
 
   conflicts_with cask: "couchbase-server-enterprise"

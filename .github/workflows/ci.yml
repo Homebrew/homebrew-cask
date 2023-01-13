@@ -65,7 +65,7 @@ jobs:
               echo '::warning::Removing Visual Studio is no longer necessary.'
             fi
           fi
-          
+
           if ! brew uninstall --cask julia && ! rm -r /Applications/Julia-*.app; then
             echo '::warning::Removing Julia is no longer necessary.'
           fi
@@ -117,24 +117,29 @@ jobs:
         id: gems
         run: brew install-bundler-gems
 
+      - name: Run brew readall ${{ matrix.tap }}
+        id: readall
+        run: brew readall '${{ matrix.tap }}'
+        if: always() && steps.gems.outcome == 'success'
+
       - name: Run brew style ${{ matrix.tap }}
         run: brew style '${{ matrix.tap }}'
-        if: always() && steps.gems.outcome == 'success' && !matrix.cask
+        if: always() && steps.readall.outcome == 'success' && !matrix.cask
 
       - name: Run brew fetch --cask ${{ matrix.cask.token }}
         id: fetch
         run: |
           brew fetch --cask --retry --force '${{ matrix.cask.path }}'
         timeout-minutes: 30
-        if: always() && steps.gems.outcome == 'success' && matrix.cask
+        if: always() && steps.readall.outcome == 'success' && matrix.cask
 
       - name: Run brew audit --cask${{ (matrix.cask && ' ') || ' --tap ' }}${{ matrix.cask.token || matrix.tap }}
         id: audit
         run: |
-          brew audit --cask ${{ join(matrix.audit_args, ' ') }}${{ (matrix.cask && ' ') || ' --tap ' }}'${{ matrix.cask.path || matrix.tap }}'
+          brew audit --cask ${{ join(matrix.audit_args, ' ') }}${{ (matrix.cask && ' --signing ') || ' --tap ' }}'${{ matrix.cask.token || matrix.tap }}'
         timeout-minutes: 30
         if: >
-          always() && steps.gems.outcome == 'success' &&
+          always() && steps.readall.outcome == 'success' &&
           (!matrix.cask || steps.fetch.outcome == 'success') &&
           !matrix.skip_audit
 

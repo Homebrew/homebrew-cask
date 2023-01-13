@@ -1,6 +1,6 @@
 cask "xprocheck" do
-  version "1.1,2022.09"
-  sha256 "b32e43e0aa21674d3dabb0a1fbb63e678c002e53f2bb2da2fb6b865eae736787"
+  version "1.3,2022.12"
+  sha256 "07dfad39797bf3a4e5fcaf60b3ec806c282187b2199b67e5689bc758675b4352"
 
   url "https://eclecticlightdotcom.files.wordpress.com/#{version.csv.second.major}/#{version.csv.second.minor}/xprocheck#{version.csv.first.no_dots}.zip",
       verified: "eclecticlightdotcom.files.wordpress.com/"

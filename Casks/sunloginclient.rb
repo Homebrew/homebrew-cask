@@ -1,8 +1,8 @@
 cask "sunloginclient" do
-  version "12.5.1.46673"
-  sha256 "bee6c4dd52c1d300b012bce1b70cc3bcce29c0feccdfb57ba6cb248e4433468f"
+  version "12.5.2.46788"
+  sha256 "783f1e5b5243b9db8e40677b2552113e884366bcae17f45daf4a8f06708a1b3e"
 
-  url "https://down.oray.com/sunlogin/mac/SunloginClient#{version}.dmg"
+  url "https://down.oray.com/sunlogin/mac/SunloginClient_#{version}.dmg"
   name "Sunlogin Client"
   name "向日葵个人版"
   desc "Remote desktop control and monitoring tool"

@@ -1,14 +1,17 @@
 cask "uvtools" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.6.6"
-  sha256 arm:   "5a84bda9f2bbb33c782b595922bf2f53219e42da1414dc7c18f5da25fe73e43c",
-         intel: "75dce6ab067eada2ddc83dbde221726aa01264a00f9b039304a61dc375d7155b"
+  version "3.10.0"
+  sha256 arm:   "a0d047bbe3171e6093d19d0b174c1ddb1020e8f70f44b96d8015277910de80f5",
+         intel: "a72c2ecf18becd895d6e61abaaf1764c563c8b6702ef45dae4e0857a352c12ee"
 
   url "https://github.com/sn4k3/UVtools/releases/download/v#{version}/UVtools_osx-#{arch}_v#{version}.zip"
   name "UVtools"
   desc "MSLA/DLP, file analysis, calibration, repair, conversion and manipulation"
   homepage "https://github.com/sn4k3/UVtools"
+
+  auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "UVtools.app"
 

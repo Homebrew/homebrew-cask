@@ -8,8 +8,8 @@ module CiMatrix
   MAX_JOBS = 256
 
   RUNNERS = {
-    { symbol: :big_sur,  name: "macos-11" } => 0.9,
-    { symbol: :monterey, name: "macos-12" } => 0.1,
+    { symbol: :big_sur,  name: "macos-11" } => 0.0,
+    { symbol: :monterey, name: "macos-12" } => 1.0,
   }.freeze
 
   # This string uses regex syntax and is intended to be interpolated into
@@ -65,9 +65,13 @@ module CiMatrix
     cask_content = path.read
     filtered_runners = filter_runners(cask_content)
 
-    if cask_content.match?(/\bMacOS\s*\.version\b/m) &&
-       filtered_runners.keys.any? { |runner| cask_content.include?(runner[:symbol].inspect) }
-      # If the cask depends on `MacOS.version`, test it on every possible macOS version.
+    macos_version_found = cask_content.match?(/\bMacOS\s*\.version\b/m)
+    filtered_macos_found = filtered_runners.keys.any? do |runner|
+      (macos_version_found && cask_content.include?(runner[:symbol].inspect)) ||
+        cask_content.include?("on_#{runner[:symbol]}")
+    end
+    if filtered_macos_found
+      # If the cask varies on a MacOS version, test it on every possible macOS version.
       filtered_runners.keys
     else
       # Otherwise, select a runner based on weighted random sample.
@@ -102,7 +106,7 @@ module CiMatrix
     jobs = modified_cask_files.count
     odie "Maximum job matrix size exceeded: #{jobs}/#{MAX_JOBS}" if jobs > MAX_JOBS
 
-    changed_files[:modified_cask_files].flat_map do |path|
+    modified_cask_files.flat_map do |path|
       cask_token = path.basename(".rb")
 
       appcast_arg = if labels.include?("ci-skip-appcast")

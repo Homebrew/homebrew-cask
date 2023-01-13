@@ -1,18 +1,15 @@
 cask "waterfox" do
-  arch arm: "ARM.Setup", intel: "Setup"
+  version "5.1.1"
+  sha256 "6e7f0b2d77417649884830d10cb9a5e2c90d634d5eb0cb53a09c9e3a7c3cc1f9"
 
-  version "4.1.5"
-  sha256 arm:   "7aa1cbf8f626f4e52dc8ee0715b30825e09706e8fef2ad1030e17098014a1f6e",
-         intel: "5c1d58681c7ce6622ec4ff302bf1d2e0ed57d5f5fb589c3553b56e4c85ef7897"
-
-  url "https://github.com/WaterfoxCo/Waterfox/releases/download/G#{version}/Waterfox.G#{version}.#{arch}.dmg", verified: "github.com/WaterfoxCo/Waterfox/"
+  url "https://cdn1.waterfox.net/waterfox/releases/G#{version}/Darwin_x86_64-aarch64/Waterfox%20G#{version}.dmg"
   name "Waterfox"
   desc "Web browser"
   homepage "https://www.waterfox.net/"
 
   livecheck do
-    url :url
-    regex(/^G?(\d+(?:\.\d+)+)$/i)
+    url "https://cdn1.waterfox.net/waterfox/releases/latest/macos"
+    strategy :header_match
   end
 
   depends_on macos: ">= :sierra"

@@ -1,12 +1,13 @@
 cask "copyq" do
-  if MacOS.version <= :catalina
+  on_catalina :or_older do
     version "5.0.0"
     sha256 "7201ff51d1258c8eae03580262a96bbee7d65c6e2133b0d5d6f10f95f031edd4"
 
     livecheck do
-      skip "Legacy version for Catalina and earlier"
+      skip "Legacy version"
     end
-  else
+  end
+  on_big_sur :or_newer do
     version "6.3.2"
     sha256 "0a2b5a66163675f427194d479088f6a6547c08c15566e3790bc3064348f92230"
   end

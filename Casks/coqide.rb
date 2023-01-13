@@ -9,9 +9,7 @@ cask "coqide" do
   homepage "https://coq.inria.fr/"
 
   livecheck do
-    url "https://github.com/coq/coq/releases"
-    strategy :page_match
-    regex(/href=.*?coq[._-]?v?(\d+(?:\.\d+)+)-installer-macos\.dmg/i)
+    skip "No reliable way to get version info"
   end
 
   depends_on macos: ">= :sierra"

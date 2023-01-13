@@ -1,20 +1,25 @@
 cask "qq" do
-  version "6.8.5.4200"
-  sha256 "d2904a9e5635fb13024b38e4cc7bdeb8fc1ff069f81324fc4d41451331c8a74a"
+  version "6.9.2-7809,3b118efd"
+  sha256 "6035eb5f8825d269e71323d5f8a31d721912c94476ed303bdd169f495aa0aa6b"
 
-  url "https://dldir1.qq.com/qqfile/qq/QQNT/QQ_#{version}_exp.dmg"
+  url "https://dldir1.qq.com/qqfile/qq/QQNT/#{version.csv.second}/QQ_v#{version.csv.first}.dmg"
   name "QQ"
   desc "Instant messaging tool"
   homepage "https://im.qq.com/macqq/index.shtml"
 
   livecheck do
     url "https://im.qq.com/rainbow/ntQQDownload/"
-    regex(%r{QQNT/QQ[._-]v?(\d+(?:\.\d+)+)[._-]exp\.dmg}i)
+    regex(%r{QQNT/([a-z0-9]+)/QQ[._-]v?(\d+(?:\.\d+)+-\d+)\.dmg}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map do |match|
+        "#{match[1]},#{match[0]}"
+      end
+    end
   end
 
   auto_updates true
 
-  app "QQ-NT.app"
+  app "QQ.app"
 
   uninstall quit: "com.tencent.qq"
 

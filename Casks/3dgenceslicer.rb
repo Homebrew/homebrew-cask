@@ -1,6 +1,6 @@
 cask "3dgenceslicer" do
-  version "3.2.0,4.0"
-  sha256 "fc9b95d9602c3f2a5b89e5eb539f1a4e75cf8d0d04763c9122a4ee394721d3ca"
+  version "3.3.0,4.0"
+  sha256 "b1b34d7582950a288e6ce4d216d7383cea4b4d71962817d632d8be6d1253871a"
 
   url "https://cloud.3dgence.com/downloads/slicer/3DGenceSlicer-#{version.csv.second}-(v#{version.csv.first}).dmg"
   name "3DGence Slicer"
@@ -8,7 +8,7 @@ cask "3dgenceslicer" do
   homepage "https://3dgence.com/"
 
   livecheck do
-    url "http://support.3dgence.com/software.html"
+    url "https://support.3dgence.com/software.html"
     regex(
       %r{href=.*?/3DGence(?:[._-]|%20)?Slicer(?:[._-]|%20)(\d+(?:\.\d+)+)(?:[._-]|%20)\(v?\.?(\d+(?:\.\d+)+)\)\.dmg}i,
     )

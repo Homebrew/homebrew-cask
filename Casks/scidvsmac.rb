@@ -5,7 +5,7 @@ cask "scidvsmac" do
   url "https://downloads.sourceforge.net/scidvspc/ScidvsMac-#{version}.dmg"
   name "Scid vs. Mac"
   desc "Chess toolkit"
-  homepage "http://scidvspc.sourceforge.net/"
+  homepage "https://scidvspc.sourceforge.net/"
 
   livecheck do
     url :homepage

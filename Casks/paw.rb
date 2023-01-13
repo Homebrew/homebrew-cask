@@ -7,11 +7,6 @@ cask "paw" do
   desc "HTTP client that helps testing and describing APIs"
   homepage "https://paw.cloud/"
 
-  livecheck do
-    url "https://paw.cloud/api/v2/updates/appcast"
-    strategy :sparkle
-  end
-
   auto_updates true
   depends_on macos: ">= :sierra"
 
@@ -24,4 +19,15 @@ cask "paw" do
     "~/Library/Preferences/com.luckymarmot.Paw.plist",
     "~/Library/Saved Application State/com.luckymarmot.Paw.savedState",
   ]
+
+  caveats do
+    discontinued
+
+    <<~EOS
+      #{token} has been renamed 'rapidapi',
+      install rapidapi to continue receiving updates;
+
+        brew install --cask rapidapi
+    EOS
+  end
 end

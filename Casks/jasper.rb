@@ -1,9 +1,9 @@
 cask "jasper" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.1.1"
-  sha256 arm:   "860a6d48cfc4542a0060746e10d2bfe06a3da66a0a3aeef028f02454afb3cd66",
-         intel: "8c30e53b39ab87c94eff5c76c52b7403125efeb33b76e0cc6250c134aaf55fe3"
+  version "1.1.2"
+  sha256 arm:   "093af7d5b6d86e3b808ca03e0c03984acc1acb23e4f5c1bf33ba1a1c9dbf91da",
+         intel: "dbbe65c2323d11bb94ec5bf0168b39e1c4cc61f040bd62c50200b07c77942437"
 
   url "https://github.com/jasperapp/jasper/releases/download/v#{version}/jasper_v#{version}_mac_#{arch}.zip",
       verified: "github.com/jasperapp/jasper/"

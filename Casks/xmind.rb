@@ -1,6 +1,6 @@
 cask "xmind" do
-  version "22.08.2196"
-  sha256 "3db92b44efad4fdaed73d82685620b053e558b3c47e074a5f24fcbe2fe802e50"
+  version "22.11.3656"
+  sha256 "3937b72d592b740bb7a7cc618560c3ecd278f32b20b71d336d65aeb32afa9921"
 
   url "https://dl3.xmind.net/Xmind-for-macOS-#{version}.dmg"
   name "XMind"
@@ -15,7 +15,7 @@ cask "xmind" do
 
   conflicts_with cask: "homebrew/cask-versions/xmind8"
 
-  app "XMind.app"
+  app "Xmind.app"
 
   zap trash: [
     "~/Library/Saved Application State/org.xmind.cathy.application.savedState",

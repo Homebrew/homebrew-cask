@@ -1,13 +1,18 @@
 cask "beast2" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
-  version "2.7.0"
-  sha256 "656fee774e82ddbdf630b8787cf90912ab2bca8c1972bbe83ac1305fa3b608cd"
+  version "2.7.3"
+  sha256 "34d7044979185c53729e290b348fb33e12cf0641a337da8544c5cc24fac76a89"
 
   url "https://github.com/CompEvol/beast2/releases/download/v#{version}/BEAST.v#{version}.Mac.dmg",
       verified: "github.com/CompEvol/beast2/"
   name "BEAST2"
   desc "Bayesian evolutionary analysis by sampling trees"
   homepage "https://www.beast2.org/"
+
+  livecheck do
+    url "https://www.beast2.org/download-mac/"
+    regex(/location=.*?BEAST[._-]v?(\d+(?:\.\d+)+)\.Mac\.dmg/i)
+  end
 
   suite "BEAST #{version}"
 

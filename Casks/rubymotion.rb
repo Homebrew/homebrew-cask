@@ -11,9 +11,7 @@ cask "rubymotion" do
 
   uninstall pkgutil: "com.hipbyte.rubymotion.pkg"
 
-  zap trash: [
-    "~/.rubymotion",
-  ]
+  zap trash: "~/.rubymotion"
 
   caveats do
     free_license "http://www.rubymotion.com/download/starter/"

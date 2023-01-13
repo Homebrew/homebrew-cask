@@ -1,21 +1,21 @@
 cask "owncloud" do
-  version "2.11.1.8438"
-  sha256 "e501a22bdcd84469380bf9b59bbefade44e33307b4fc5e6105f2cdf56650d00c"
+  version "3.0.0.9215"
+  sha256 "c264c38182cf0e7083e486edf5f41682ac4970f80563fac181a309e91f5eface"
 
-  url "https://download.owncloud.com/desktop/ownCloud/stable/#{version}/mac/ownCloud-#{version}.pkg"
+  url "https://download.owncloud.com/desktop/ownCloud/stable/#{version}/mac/ownCloud-#{version}-x86_64.pkg"
   name "ownCloud"
   desc "Desktop syncing client for ownCloud"
   homepage "https://owncloud.com/"
 
   livecheck do
     url "https://owncloud.com/desktop-app/"
-    regex(%r{href=.*?/owncloud[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
+    regex(%r{href=.*?/owncloud[._-]v?(\d+(?:\.\d+)+)[._-]x86[._-]64\.pkg}i)
   end
 
   auto_updates true
   depends_on macos: ">= :sierra"
 
-  pkg "ownCloud-#{version}.pkg"
+  pkg "ownCloud-#{version}-x86_64.pkg"
 
   uninstall pkgutil: [
     "com.ownCloud.client",

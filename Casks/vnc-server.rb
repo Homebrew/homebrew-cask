@@ -1,6 +1,6 @@
 cask "vnc-server" do
-  version "6.10.1"
-  sha256 "6e2ef6685e49434b252dbf8795c0a4ef5ffeeb29c1fa6f656d84fa6ccc3ca3d2"
+  version "6.11.0"
+  sha256 "e640cfa4691db78647d906b8aa4c2e9931753d2a437051238f43aa4aa77053a8"
 
   url "https://www.realvnc.com/download/file/vnc.files/VNC-Server-#{version}-MacOSX-x86_64.pkg"
   name "Real VNC Server"
@@ -9,7 +9,7 @@ cask "vnc-server" do
 
   livecheck do
     url "https://www.realvnc.com/en/connect/download/vnc/macos/"
-    regex(%r{href=.*?/VNC-Server-(\d+(?:\.\d+)*)-MacOSX-x86_64\.pkg}i)
+    regex(%r{href=.*?/VNC[._-]Server[._-]v?(\d+(?:\.\d+)*)[._-]MacOSX[._-]x86[._-]64\.pkg}i)
   end
 
   pkg "VNC-Server-#{version}-MacOSX-x86_64.pkg"
@@ -23,9 +23,7 @@ cask "vnc-server" do
               "com.realvnc.vncserver",
               "com.realvnc.vncserver.peruser",
             ],
-            pkgutil:   [
-              "com.realvnc.vncserver.pkg",
-            ]
+            pkgutil:   "com.realvnc.vncserver.pkg"
 
   zap trash: [
     "/Library/Logs/vncserver.log.bak",

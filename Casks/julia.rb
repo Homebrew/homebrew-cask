@@ -1,9 +1,9 @@
 cask "julia" do
   arch arm: "aarch64", intel: "x64"
 
-  version "1.8.1"
-  sha256 arm:   "ef489c069304e9d8edbcddb8cecdcd4c52f1f74e818607a95cb268913e05f94f",
-         intel: "3274c3b3dbcb6d34e428797e143380b5c58db6688a5d44f0939f6319bcf3c18a"
+  version "1.8.5"
+  sha256 arm:   "7f6a23a4a1d864f69e65b1542fd3d1cf324d59c922ac43804b1ba077b9cc475d",
+         intel: "22afd5e28a8a809dc7be0bc99cf491391a31af5669b173cf3318e433274148db"
 
   url "https://julialang-s3.julialang.org/bin/mac/#{arch}/#{version.major_minor}/julia-#{version}-mac#{arch.delete_prefix("x")}.dmg"
   name "Julia"
@@ -20,6 +20,9 @@ cask "julia" do
 
   zap trash: [
     "~/.julia",
+    "~/Library/Logs/Julia",
+    "~/Library/Preferences/com.github.Julia.plist",
     "~/Library/Preferences/julia.plist",
+    "~/Library/Saved Application State/com.github.Julia.savedState",
   ]
 end

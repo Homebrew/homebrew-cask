@@ -14,6 +14,7 @@ cask "zettlr" do
 
   zap trash: [
     "~/Library/Application Support/zettlr",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.zettlr.app.sfl2",
     "~/Library/Logs/Zettlr",
     "~/Library/Preferences/com.zettlr.app.plist",
     "~/Library/Saved Application State/com.zettlr.app.savedState",

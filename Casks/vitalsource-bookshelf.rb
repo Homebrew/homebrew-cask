@@ -1,8 +1,8 @@
 cask "vitalsource-bookshelf" do
-  version "10.2.0.1984"
-  sha256 "189c6e58d62ecb56ceabe15d0d57b4a0bb80dc92701b623c10e1fc62fa14445c"
+  version "10.2.1.2013"
+  sha256 "9debd25c152ee1f8f85b1c929c85a6236bdc1f34bc431036ffdd80aeb4207104"
 
-  url "https://downloads.vitalbook.com/vsti/bookshelf/#{version.major_minor}/mac/bookshelf/VitalSource-Bookshelf_#{version}.dmg",
+  url "https://downloads.vitalbook.com/vsti/bookshelf/#{version.major_minor_patch}/mac/bookshelf/VitalSource-Bookshelf_#{version}.dmg",
       verified: "downloads.vitalbook.com/vsti/bookshelf"
   name "VitalSource Bookshelf"
   desc "Access eTextbooks"

@@ -1,30 +1,21 @@
 cask "rotato" do
-  version "112,1604697138"
-  sha256 "4d68cbb8832e23d306f34123a65de3788c70e3f6eb49c055136febc8f864405c"
+  version "138.2"
+  sha256 "5d6b024594628cc8d4d09300c4fd9b6b6ec2ee5c6b3fbfb3a396d416cfa8b990"
 
-  url "https://dl.devmate.com/com.mortenjust.Rendermock/#{version.csv.first}/#{version.csv.second}/DesignCamera-#{version.csv.first}.zip",
-      verified: "dl.devmate.com/com.mortenjust.Rendermock/"
+  url "https://rotato.app/api/releases/download/#{version}"
   name "Rotato"
   desc "Mockup generator & animator 3D"
   homepage "https://rotato.app/"
 
   livecheck do
-    url "https://updates.devmate.com/com.mortenjust.Rendermock.xml"
-    regex(%r{/(\d+)/DesignCamera\d*?[_-]v?(\d+(?:\.\d+)*)\.(?:dmg|zip)}i)
-    strategy :sparkle do |item, regex|
-      match = item.url.match(regex)
-      next if match.blank?
-
-      "#{match[2]},#{match[1]}"
-    end
+    url "https://api.appcenter.ms/v0.1/public/sparkle/apps/a62ce1b5-fb95-4615-a1b0-fd246b7ce1ed"
+    strategy :sparkle
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "Rotato.app"
-
-  uninstall quit: "com.mortenjust.Rendermock"
 
   zap trash: [
     "~/Library/Application Support/com.mortenjust.Rendermock",

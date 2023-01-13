@@ -1,6 +1,6 @@
 cask "veepn" do
-  version "2.2.0,918493"
-  sha256 "6d55af3b8150821cd7de5f62a3d986e0dcc29e1415d2d4a947f6c40748ac63b0"
+  version "2.2.2,918496"
+  sha256 "3d7a0790b514d17c1bc2dcb2a504ff8d8ddffde0596afbf129529c19ee99874c"
 
   url "https://download.veepn.com/mac/VeePN_v#{version.csv.first}.dmg"
   name "VeePN"
@@ -11,6 +11,8 @@ cask "veepn" do
     url "https://download.veepn.com/mac/appcast.xml"
     strategy :sparkle
   end
+
+  depends_on macos: ">= :mojave"
 
   app "VeePN.app"
 

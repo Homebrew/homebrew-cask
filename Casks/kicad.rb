@@ -1,6 +1,6 @@
 cask "kicad" do
-  version "6.0.8-1"
-  sha256 "367c541f6a2f317f3edb652d922f2b448b7399e640532601fbd84bfe9d8ac00d"
+  version "6.0.10-0"
+  sha256 "05427ee48570ab84b919753f164b36efd000bb6100e7b4d5ca88224b0b6acb53"
 
   url "https://kicad-downloads.s3.cern.ch/osx/stable/kicad-unified-#{version}.dmg",
       verified: "kicad-downloads.s3.cern.ch/"
@@ -23,5 +23,10 @@ cask "kicad" do
     "~/Library/Application Support/kicad",
     "~/Library/Preferences/kicad",
     "~/Library/Preferences/org.kicad-pcb.*",
+    "~/Library/Saved Application State/org.kicad-pcb.bitmap2component.savedState",
+    "~/Library/Saved Application State/org.kicad-pcb.eeschema.savedState",
+    "~/Library/Saved Application State/org.kicad-pcb.kicad.savedState",
+    "~/Library/Saved Application State/org.kicad-pcb.pcb_calculator.savedState",
+    "~/Library/Saved Application State/org.kicad-pcb.pl_editor.savedState",
   ]
 end

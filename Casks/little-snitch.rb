@@ -1,6 +1,6 @@
 cask "little-snitch" do
-  version "5.4.1"
-  sha256 "dd10a2269158a68f0fce32bb82fa5f5cc2ff22402aeaac68c3e774a905f483e5"
+  version "5.5"
+  sha256 "3d52ce0cd326839cf4756441f48dcff5611dbe574b68a36b18ed938677677415"
 
   url "https://www.obdev.at/downloads/littlesnitch/LittleSnitch-#{version}.dmg"
   name "Little Snitch"

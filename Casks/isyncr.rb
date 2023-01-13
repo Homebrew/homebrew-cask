@@ -1,8 +1,9 @@
 cask "isyncr" do
-  if MacOS.version <= :mojave
+  on_mojave :or_older do
     version "5.14.12"
     sha256 "b4f0ddd19ba49924e00226ff09d543928e13a4e8ec10d2b9cb53e227aeaf2953"
-  else
+  end
+  on_catalina :or_newer do
     version "6.1.0"
     sha256 "29d8e06de375a41efcdd378dec9f7f08a92212325270fb462aae5593a1217fbc"
   end

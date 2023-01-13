@@ -1,8 +1,8 @@
 cask "missive" do
-  version "10.31.2"
-  sha256 "8becbe5ec9739be3078a1625782cedd2d85db704400c44b3868e55ce401a4596"
+  version "10.39.0"
+  sha256 "17f32be95ea61a5ff3cc5a886465b23d85f77c57add322c8d0d56933ac7f5214"
 
-  url "https://d1weoh55n7oehu.cloudfront.net/#{version}/Missive-#{version}.dmg",
+  url "https://d1weoh55n7oehu.cloudfront.net/stable/Missive-#{version}.dmg",
       verified: "d1weoh55n7oehu.cloudfront.net/"
   name "Missive"
   desc "Team inbox and chat tool"

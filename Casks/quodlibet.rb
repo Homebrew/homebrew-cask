@@ -9,7 +9,7 @@ cask "quodlibet" do
   homepage "https://quodlibet.readthedocs.io/"
 
   livecheck do
-    url "https://github.com/quodlibet/quodlibet/releases/"
+    url "https://quodlibet.readthedocs.io/en/latest/downloads.html"
     strategy :page_match
     regex(/QuodLibet[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end

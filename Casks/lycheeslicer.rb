@@ -1,6 +1,6 @@
 cask "lycheeslicer" do
-  version "4.1.0"
-  sha256 "1c618ad90b33da27a27d7e0cc008927487692f710329c5717cdb3f9d44027c77"
+  version "5.0.1"
+  sha256 "03a7578f7665fd6934ad8de60405c5a49a70f3f2955a8ef47f682bfc563c7e04"
 
   url "https://mango-lychee.nyc3.cdn.digitaloceanspaces.com/LycheeSlicer-#{version}.dmg",
       verified: "mango-lychee.nyc3.cdn.digitaloceanspaces.com/"

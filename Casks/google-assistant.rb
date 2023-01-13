@@ -1,6 +1,6 @@
 cask "google-assistant" do
-  version "1.0.0"
-  sha256 "43056591c48bb33fb574740f7c502d0be4533801e4490d9f533445244152aea5"
+  version "1.1.0"
+  sha256 "fe95491bb55136e62b4a85ad49e648d03e662df8445c417bade70d95d711116b"
 
   url "https://github.com/Melvin-Abraham/Google-Assistant-Unofficial-Desktop-Client/releases/download/v#{version}/Google-Assistant-#{version}.dmg"
   name "Google Assistant Unofficial Desktop Client"

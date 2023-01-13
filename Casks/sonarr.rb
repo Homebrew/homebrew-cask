@@ -16,13 +16,5 @@ cask "sonarr" do
 
   app "Sonarr.app"
 
-  preflight do
-    set_permissions "#{staged_path}/Sonarr.app", "0755"
-  end
-
-  zap trash: [
-    "~/Library/Application Support/Sonarr",
-    "~/Library/Preferences/tv.sonarr.Sonarr.plist",
-    "~/.config/NzbDrone",
-  ]
+  zap trash: "~/.config/Sonarr"
 end

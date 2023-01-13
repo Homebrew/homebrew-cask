@@ -2,9 +2,10 @@ cask "x2goclient" do
   version "4.1.2.2"
   sha256 :no_check
 
-  if MacOS.version <= :sierra
+  on_sierra :or_older do
     url "https://code.x2go.org/releases/X2GoClient_latest_macosx_10_11.dmg"
-  else
+  end
+  on_high_sierra :or_newer do
     url "https://code.x2go.org/releases/X2GoClient_latest_macosx_10_13.dmg"
   end
 

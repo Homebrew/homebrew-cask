@@ -1,5 +1,5 @@
 cask "launchpad-manager" do
-  version "1.0.10"
+  version "1.0.13"
   sha256 :no_check
 
   url "http://launchpadmanager.com/download_yosemite.php/LaunchpadManagerYosemite.dmg"

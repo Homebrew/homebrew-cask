@@ -1,6 +1,6 @@
 cask "gamemaker" do
-  version "2022.8.1.37"
-  sha256 "1bf1ef19451410fe7e7f3ebeaf2954da8aa291c2e1d521930b576b9b3346d922"
+  version "2022.11.1.56"
+  sha256 "a99772719154d133029c8edaadcfe42d547fbc018f5fe641792fe11d3d1780fb"
 
   url "https://gms.yoyogames.com/GameMaker-#{version}.pkg",
       verified: "gms.yoyogames.com/"
@@ -30,7 +30,8 @@ cask "gamemaker" do
       opoo "Unable to forcibly close GameMaker.app"
   end
 
-  uninstall pkgutil: "com.yoyogames.gms2"
+  uninstall delete:  "/Applications/GameMaker.app",
+            pkgutil: "com.yoyogames.gms2"
 
   zap trash: "/Users/Shared/GameMakerStudio2"
 end

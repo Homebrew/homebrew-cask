@@ -1,12 +1,17 @@
 cask "jabref" do
-  version "5.7"
-  sha256 "7b4b44bb99744915a01ed019d6587e7d1d32997e2d63f276c64de7fb1b4f5494"
+  version "5.9"
+  sha256 "53db743600453ecca840547ddd43323c16d34bdd7ce69ce50b8f58bd1c27f3ad"
 
   url "https://github.com/JabRef/jabref/releases/download/v#{version}/JabRef-#{version}.dmg",
       verified: "github.com/JabRef/jabref/"
   name "JabRef"
   desc "Reference manager to edit, manage and search BibTeX files"
   homepage "https://www.jabref.org/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "JabRef.app"
 end
