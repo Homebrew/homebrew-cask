@@ -4,7 +4,6 @@ cask "snapmaker-luban" do
 
   url "https://github.com/snapmaker/luban/releases/download/v#{version}/Snapmaker-Luban-#{version}-mac.zip",
       verified: "github.com/snapmaker/luban/"
-  # appcast "https://github.com/snapmaker/luban/releases.atom"
   name "Snapmaker Luban"
   desc "3D printing software"
   homepage "https://luban.xyz/"
