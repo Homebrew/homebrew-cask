@@ -1,6 +1,6 @@
 cask "topaz-gigapixel-ai" do
-  version "6.2.2"
-  sha256 "00862d8a76817e8e10a769f6255e6c45cc44e27715334cea063ddca331a041e1"
+  version "6.3.0"
+  sha256 "483dbbc3d6a50d5f0503bf2f1914bf0297a9853663f8b346d7a325a4e3aa47d6"
 
   url "https://downloads.topazlabs.com/deploy/TopazGigapixelAI/#{version}/TopazGigapixelAI-#{version}-osx-Full-Installer.dmg"
   name "Topaz Gigapixel AI"
