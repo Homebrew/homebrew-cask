@@ -1,7 +1,7 @@
 cask "kdiff3" do
   # NOTE: "3" is not a version number, but an intrinsic part of the product name
-  version "1.9.6"
-  sha256 "bcf7a2a8d3967e37d9e79baa6ed18475b2031387c495b2e4cebd0872bf352d54"
+  version "1.10.0"
+  sha256 "cb15fbddc8b7f186889816deb10a8d2248d9dd97601853f51409669e1a4467b9"
 
   url "https://download.kde.org/stable/kdiff3/kdiff3-#{version}-macos-64-en.dmg"
   name "KDiff3"
