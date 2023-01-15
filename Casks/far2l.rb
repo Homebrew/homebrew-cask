@@ -1,6 +1,6 @@
 cask "far2l" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
-  version "2.4.1"
+  version "2.5.0"
 
   on_mojave :or_older do
     url "https://github.com/elfmz/far2l/releases/download/v_#{version}/far2l-#{version}-beta-MacOS-10.11.dmg"
@@ -8,7 +8,7 @@ cask "far2l" do
   end
   on_catalina :or_newer do
     url "https://github.com/elfmz/far2l/releases/download/v_#{version}/far2l-#{version}-beta-MacOS-10.15.dmg"
-    sha256 "7bcce47fda76eeac00e24b36d8b80f80d30241f0f1d21b22034f93f788bba66d"
+    sha256 "9cdde68842f5bfd8e0eda9fdab6507e47eeda2b7a8a6941a8a5966fe89a97435"
   end
 
   name "far2l"
