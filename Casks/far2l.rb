@@ -4,7 +4,7 @@ cask "far2l" do
 
   on_mojave :or_older do
     url "https://github.com/elfmz/far2l/releases/download/v_#{version}/far2l-#{version}-beta-MacOS-10.11.dmg"
-    sha256 "f2c1740d1ce950aa7643c44184339ec13056d5a41169c536cb58616014229d3e"
+    sha256 "475f1823652c6e59ff5fe4af448c27b6f88a8f38ac0f358a6620d8aaf5f43c99"
   end
   on_catalina :or_newer do
     url "https://github.com/elfmz/far2l/releases/download/v_#{version}/far2l-#{version}-beta-MacOS-10.15.dmg"
