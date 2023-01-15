@@ -9,7 +9,7 @@ cask "oka-unarchiver" do
 
   livecheck do
     url :homepage
-    regex(/"softwareVersion":\s"(\d+(?:\.\d+)+)"/i)
+    regex(/"softwareVersion":\s"v?(\d+(?:\.\d+)+)"/i)
   end
 
   auto_updates true
