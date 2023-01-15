@@ -8,8 +8,8 @@ cask "oka-unarchiver" do
   homepage "https://okaapps.com/product/1441507725"
 
   livecheck do
-    url "https://okaapps.com/product/1441507725"
-    regex(/"softwareVersion": "(\d+(?:\.\d+)+)"/i)
+    url :homepage
+    regex(/"softwareVersion":\s"(\d+(?:\.\d+)+)"/i)
   end
 
   auto_updates true
@@ -18,15 +18,8 @@ cask "oka-unarchiver" do
   app "Oka Unarchiver 2 Website.app", target: "Oka Unarchiver.app"
 
   zap trash: [
-    "~/Library/Application Scripts/UFC6W2DD6Z.com.chenhaowu.mac.utility.website.zip",
-    "~/Library/Application Scripts/com.chenhaowu.mac.utility.website.zip",
-    "~/Library/Application Scripts/com.chenhaowu.mac.utility.website.zip.MZPreviewExtension",
-    "~/Library/Application Scripts/com.chenhaowu.mac.utility.website.zip.MZThumbnailProviderExtension",
-    "~/Library/Application Scripts/com.chenhaowu.mac.utility.website.zip.finderSyncExtension",
-    "~/Library/Containers/com.chenhaowu.mac.utility.website.zip",
-    "~/Library/Containers/com.chenhaowu.mac.utility.website.zip.MZPreviewExtension",
-    "~/Library/Containers/com.chenhaowu.mac.utility.website.zip.MZThumbnailProviderExtension",
-    "~/Library/Containers/com.chenhaowu.mac.utility.website.zip.finderSyncExtension",
-    "~/Library/Group Containers/UFC6W2DD6Z.com.chenhaowu.mac.utility.website.zip",
+    "~/Library/Application Scripts/*com.chenhaowu.mac.utility.website.zip*",
+    "~/Library/Containers/*com.chenhaowu.mac.utility.website.zip*",
+    "~/Library/Group Containers/*com.chenhaowu.mac.utility.website.zip*",
   ]
 end
