@@ -15,7 +15,7 @@ cask "oka-unarchiver" do
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
-  app "Oka Unarchiver 2 Website.app", target: "Oka Unarchiver.app"
+  app "Oka Unarchiver #{version.major} Website.app", target: "Oka Unarchiver.app"
 
   zap trash: [
     "~/Library/Application Scripts/*com.chenhaowu.mac.utility.website.zip*",
