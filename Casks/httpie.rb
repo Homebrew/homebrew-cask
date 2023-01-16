@@ -1,4 +1,4 @@
-cask "httpie-desktop" do
+cask "httpie" do
   arch arm: "-arm64"
 
   version "2023.1.1"
