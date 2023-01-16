@@ -16,6 +16,8 @@ cask "notesnook" do
     strategy :electron_builder
   end
 
+  auto_updates true
+
   app "Notesnook.app"
 
   zap trash: [
