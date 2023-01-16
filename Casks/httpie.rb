@@ -8,7 +8,7 @@ cask "httpie" do
   url "https://github.com/httpie/desktop/releases/download/v#{version}/HTTPie-#{version}#{arch}.dmg",
       verified: "github.com/httpie/desktop/"
   name "HTTPie for Desktop"
-  desc "Desktop wrapper for HTTPie"
+  desc "Testing client for REST, GraphQL, and HTTP APIs"
   homepage "https://httpie.io/product"
 
   livecheck do
