@@ -1,9 +1,9 @@
 cask "nheko" do
   arch arm: "apple-silicon", intel: "intel"
 
-  version "0.11.0"
-  sha256 arm:   "116b087b47162865f662bfa1f31827364896f14649db243e3a3924c761424f4d",
-         intel: "870191d4ae911e02c7c7b7105a06edfdfb76661fdd10843a6870f697b68af414"
+  version "0.11.1"
+  sha256 arm:   "5a3d2a82033a0caa1f14d9599204e56ac8673ab4f230099a683eccae429b81ee",
+         intel: "8a2cd11d8f08fda375ab1a17a45187cc74073488edc8de81551358b25353f72e"
 
   url "https://github.com/Nheko-Reborn/nheko/releases/download/v#{version}/nheko-v#{version}-#{arch}.dmg",
       verified: "github.com/Nheko-Reborn/nheko/"
