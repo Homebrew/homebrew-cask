@@ -1,5 +1,5 @@
 cask "maccpuid" do
-  version "3.1"
+  version "3.2"
   sha256 :no_check
 
   url "https://software.intel.com/content/dam/develop/public/us/en/documents/maccpuid.zip"
