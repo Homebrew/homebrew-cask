@@ -9,7 +9,7 @@ cask "maccpuid" do
 
   livecheck do
     url "https://software.intel.com/content/www/us/en/develop/download/download-maccpuid.html"
-    strategy :sparkle
+    regex(/name="DownloadVersion"\s+content="v?(\d+(?:\.\d+)+)[ "<]/i)
   end
 
   app "MacCPUID.app"
