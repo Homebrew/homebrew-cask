@@ -1,9 +1,9 @@
 cask "corretto" do
   arch arm: "aarch64", intel: "x64"
 
-  version "19.0.1.10.1"
-  sha256 arm:   "c0543d0bb5e243873f66e8fba1c34bbdef7cafdbd8b631d0f10ce4f7db5db8c8",
-         intel: "2fc2fb430fb999dcc3b0c8f0f56c424e22fe957d53cf6e27d56761fd82720ef7"
+  version "19.0.2.7.1"
+  sha256 arm:   "fec96e45c0599e71ba69f30c1ac86a60b6110eed812121bd694f1b029b4d2a35",
+         intel: "d2450be57ebb821d5ce244b2328c645852ad3e68575e0ccf163219fc8f6f7f68"
 
   url "https://corretto.aws/downloads/resources/#{version.sub(/-\d+/, "")}/amazon-corretto-#{version}-macosx-#{arch}.pkg"
   name "AWS Corretto JDK"
