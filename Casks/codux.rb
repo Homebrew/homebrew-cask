@@ -24,11 +24,9 @@ cask "codux" do
     end
   end
 
+  depends_on macos: ">= :catalina"
+
   app "Codux.app"
 
-  zap trash: [
-    "~/Library/Application Support/Codux",
-    "~/Library/Caches/Homebrew/Cask/*codux*.zip",
-    "~/Library/Caches/Homebrew/downloads/*Codux*.zip",
-  ]
+  zap trash: "~/Library/Application Support/Codux"
 end
