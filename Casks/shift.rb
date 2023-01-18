@@ -1,9 +1,9 @@
 cask "shift" do
   arch arm: "arm64", intel: "x64"
 
-  version "8.2.0.594"
-  sha256 arm:   "adcfe801576845f4c375ae5da9d277b01efe744080db75db0193e80344e6e6da",
-         intel: "3b798cb7ed55f2c5bbcdc9d37cf8f194649180415fc92d2e0f6bc4c96c1c6e89"
+  version "8.2.3.632"
+  sha256 arm:   "272806b86d10bfd7ed3da31ddbe58bd17dd33fbacc0054786d99fd4b8383f7e6",
+         intel: "e6255006aff91f0ce5d42c14f09e88706fd1312acb7a74f6977c88f4cb8bf8dc"
 
   url "https://updates.tryshift.com/v#{version.major_minor_patch}/stable/shift-v#{version}-stable-#{arch}.dmg"
   name "Shift"
