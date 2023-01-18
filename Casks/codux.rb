@@ -25,4 +25,10 @@ cask "codux" do
   end
 
   app "Codux.app"
+
+  zap trash: [
+    "~/Library/Application Support/Codux",
+    "~/Library/Caches/Homebrew/Cask/*codux*.zip",
+    "~/Library/Caches/Homebrew/downloads/*Codux*.zip",
+  ]
 end
