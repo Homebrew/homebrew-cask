@@ -13,7 +13,7 @@ cask "google-cloud-sdk" do
     executable: "#{token}/install.sh",
     args:       [
       "--bash-completion", "false",
-      "--install-python", "false"
+      "--install-python", "false",
       "--path-update", "false",
       "--quiet",
       "--rc-path", "false",
