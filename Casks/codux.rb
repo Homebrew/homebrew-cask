@@ -1,16 +1,27 @@
 cask "codux" do
-  version "14.1.0"
-  sha256 :no_check
+  arch arm: "arm64-arm", intel: "x64-dmg"
 
-  url "https://95610582-f2db-4cc9-be23-c529650d1ad9.filesusr.com/archives/b478ab_#{on_intel ? "4886668678ca41e2bcafc6403e4f7f6d" : "d61c0ea5192e4c558ebcc75d5403dbec"}.zip?dn=Codux-#{version}.#{on_intel ? "x64-dmg" : "arm64-arm"}.zip", verified: "https://95610582-f2db-4cc9-be23-c529650d1ad9.filesusr.com/"
+  on_arm do
+    version "14.1.0,b478ab_d61c0ea5192e4c558ebcc75d5403dbec"
+    sha256 "1113d39324d6e921c64455c5d4060da455f78f3dff5553a7eb97a8f902a7f937"
+  end
+  on_intel do
+    version "14.1.0,b478ab_4886668678ca41e2bcafc6403e4f7f6d"
+    sha256 "b76a4e3516bb8af9b4bec20056be74b98780786071a5ef1a835c88753a6b57f5"
+  end
+
+  url "https://95610582-f2db-4cc9-be23-c529650d1ad9.filesusr.com/archives/#{version.csv.second}.zip?dn=Codux-#{version.csv.first}.#{arch}.zip"
+      verified: "https://95610582-f2db-4cc9-be23-c529650d1ad9.filesusr.com/"
   name "Codux"
   desc "React IDE built to visually edit component styling and layouts"
   homepage "https://www.codux.com/"
 
   livecheck do
     url "https://www.codux.com/download/"
-    strategy :page_match
-    regex(/href=.*?dn=Codux-(\d{1,4}\.\d{1,2}\.\d{1,2})/i)
+    regex(%r{archives/(.+)\.zip\?dn=Codux[._-]v?(\d+(?:\.\d+)+).#{arch}\.zip}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
+    end
   end
 
   app "Codux.app"
