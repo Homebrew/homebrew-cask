@@ -23,9 +23,9 @@ cask "google-cloud-sdk" do
   binary "#{token}/bin/gcloud"
   binary "#{token}/bin/git-credential-gcloud.sh", target: "git-credential-gcloud"
   binary "#{token}/bin/gsutil"
-  binary "#{staged_path}/#{token}/completion.bash.inc",
+  binary "#{token}/completion.bash.inc",
          target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/#{token}"
-  binary "#{staged_path}/#{token}/completion.zsh.inc",
+  binary "#{token}/completion.zsh.inc",
          target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_#{token}"
 
   # Not actually necessary, since it would be deleted anyway.
