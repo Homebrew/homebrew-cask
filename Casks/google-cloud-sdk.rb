@@ -12,9 +12,12 @@ cask "google-cloud-sdk" do
   installer script: {
     executable: "#{token}/install.sh",
     args:       [
-      "--usage-reporting", "false", "--bash-completion", "false", "--path-update", "false",
-      "--rc-path", "false", "--quiet",
+      "--bash-completion", "false",
       "--install-python", "false"
+      "--path-update", "false",
+      "--quiet",
+      "--rc-path", "false",
+      "--usage-reporting", "false",
     ],
   }
   binary "#{token}/bin/anthoscli"
