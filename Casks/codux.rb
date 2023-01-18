@@ -1,5 +1,5 @@
 cask "codux" do
-  arch arm: "arm64-dmg", intel: "x64-dmg"
+  arch arm: "arm64", intel: "x64"
 
   on_arm do
     version "14.2.2,e855c7_0f725c10eb7d4b50848510cbd2c31a5d"
@@ -10,7 +10,7 @@ cask "codux" do
     sha256 "488f5f4b5ed403e5e210308b7db4e4c35f3f68c40467c31f1c79c22bc8413371"
   end
 
-  url "https://95610582-f2db-4cc9-be23-c529650d1ad9.filesusr.com/archives/#{version.csv.second}.zip?dn=Codux-#{version.csv.first}.#{arch}.zip",
+  url "https://95610582-f2db-4cc9-be23-c529650d1ad9.filesusr.com/archives/#{version.csv.second}.zip?dn=Codux-#{version.csv.first}.#{arch}-dmg.zip",
       verified: "95610582-f2db-4cc9-be23-c529650d1ad9.filesusr.com/archives/"
   name "Codux"
   desc "React IDE built to visually edit component styling and layouts"
@@ -18,7 +18,7 @@ cask "codux" do
 
   livecheck do
     url "https://www.codux.com/download/"
-    regex(%r{archives/(.+)\.zip\?dn=Codux[._-]v?(\d+(?:\.\d+)+)\.#{arch}\.zip}i)
+    regex(%r{archives/(.+)\.zip\?dn=Codux[._-]v?(\d+(?:\.\d+)+)\.#{arch}[._-]dmg\.zip}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
