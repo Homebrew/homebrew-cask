@@ -17,7 +17,7 @@ cask "google-cloud-sdk" do
       "--path-update", "false",
       "--quiet",
       "--rc-path", "false",
-      "--usage-reporting", "false",
+      "--usage-reporting", "false"
     ],
   }
   binary "#{token}/bin/anthoscli"
