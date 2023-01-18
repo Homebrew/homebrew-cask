@@ -10,8 +10,8 @@ cask "codux" do
     sha256 "b76a4e3516bb8af9b4bec20056be74b98780786071a5ef1a835c88753a6b57f5"
   end
 
-  url "https://95610582-f2db-4cc9-be23-c529650d1ad9.filesusr.com/archives/#{version.csv.second}.zip?dn=Codux-#{version.csv.first}.#{arch}.zip"
-      verified: "https://95610582-f2db-4cc9-be23-c529650d1ad9.filesusr.com/"
+  url "https://95610582-f2db-4cc9-be23-c529650d1ad9.filesusr.com/archives/#{version.csv.second}.zip?dn=Codux-#{version.csv.first}.#{arch}.zip",
+      verified: "95610582-f2db-4cc9-be23-c529650d1ad9.filesusr.com/archives/"
   name "Codux"
   desc "React IDE built to visually edit component styling and layouts"
   homepage "https://www.codux.com/"
