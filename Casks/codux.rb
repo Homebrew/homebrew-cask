@@ -18,7 +18,7 @@ cask "codux" do
 
   livecheck do
     url "https://www.codux.com/download/"
-    regex(%r{archives/(.+)\.zip\?dn=Codux[._-]v?(\d+(?:\.\d+)+)\.#{arch}[._-]dmg\.zip}i)
+    regex(%r{archives/(.+?)\.zip\?dn=Codux[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}[._-]dmg\.zip}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
