@@ -8,8 +8,7 @@ cask "protonmail-import-export" do
   homepage "https://proton.me/support/export-emails-import-export-app"
 
   livecheck do
-    url "https://raw.githubusercontent.com/ProtonMail/proton-bridge/master/Changelog.md"
-    regex(/##\s\[IE\s(\d+(?:\.\d+)*)\]/i)
+    skip "vendor removed from repo, plans to refactor"
   end
 
   auto_updates true
