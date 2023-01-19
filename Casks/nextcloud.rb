@@ -7,8 +7,8 @@ cask "nextcloud" do
         verified: "github.com/nextcloud/desktop/"
   end
   on_sierra :or_newer do
-    version "3.6.5"
-    sha256 "d2251464f4eefcfc144a358a4a4ddce9b4acbb730622e87f7c01ee4f33e4c6fb"
+    version "3.6.4"
+    sha256 "4ed053762554672f128c09a822dc0e9eaa166e0f1287caa7cd23b7df120eeb3f"
 
     url "https://github.com/nextcloud/desktop/releases/download/v#{version}/Nextcloud-#{version}.pkg",
         verified: "github.com/nextcloud/desktop/"
