@@ -1,6 +1,6 @@
 cask "bambu-studio" do
-  version "01.04.00.18"
-  sha256 "1a44dcd9f1dd7a86533b63e5c9a7bbf700cc5b5234eed832f65ee22d1403c1a0"
+  version "01.04.02.13"
+  sha256 "c5b05e2ad477a30ef3863b046ed817a76c849f4ccc27559a2cc7d0bbc206c19b"
 
   url "https://public-cdn.bambulab.com/upgrade/studio/software/#{version}/Bambu_Studio_mac-v#{version}.dmg"
   name "Bambu Studio"
