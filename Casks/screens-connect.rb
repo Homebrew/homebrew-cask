@@ -12,6 +12,7 @@ cask "screens-connect" do
     strategy :sparkle
   end
 
+  auto_updates true
   depends_on macos: ">= :monterey"
 
   app "Screens Connect.app"
