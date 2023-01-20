@@ -9,7 +9,7 @@ cask "linphone" do
 
   livecheck do
     url "https://download.linphone.org/releases/macosx/app/"
-    regex(/Linphone-(\d+(?:\.\d+)+)-mac\.dmg/i)
+    regex(/Linphone[._-]v?(\d+(?:\.\d+)+)[._-]mac\.dmg/i)
   end
 
   app "Linphone.app"
