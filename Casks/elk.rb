@@ -11,8 +11,8 @@ cask "elk" do
   homepage "https://github.com/elk-zone/elk-native"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://github.com/elk-zone/elk-native/releases/"
+    regex(/elk[._-]native[._-]v?(\d+(?:\.\d+)+)/i)
   end
 
   app "Elk.app"
