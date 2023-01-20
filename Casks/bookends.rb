@@ -9,7 +9,7 @@ cask "bookends" do
 
   livecheck do
     url :homepage
-    regex(/version\s*(\d+(?:\.\d+)+)/i)
+    regex(/appversion = " in v\. (\d+(?:\.\d+)+)"/i)
   end
 
   depends_on macos: ">= :high_sierra"
