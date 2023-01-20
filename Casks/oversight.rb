@@ -8,7 +8,7 @@ cask "oversight" do
   desc "Monitors computer mic and webcam"
   homepage "https://objective-see.com/products/oversight.html"
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :monterey"
 
   installer script: {
     executable: "#{staged_path}/OverSight Installer.app/Contents/MacOS/OverSight Installer",

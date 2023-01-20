@@ -1,7 +1,7 @@
 cask "freac" do
   version "1.1.6"
 
-  if MacOS.version <= :catalina
+  on_catalina :or_older do
     sha256 "379d1b1fe7476e924bbecf2f06496709c6be75e2eb2d3de1d7b1b5fcbbf44f9e"
 
     url "https://github.com/enzo1982/freac/releases/download/v#{version.csv.first}/freac-#{version}-macos10.dmg",
@@ -15,7 +15,8 @@ cask "freac" do
         end
       end
     end
-  else
+  end
+  on_big_sur :or_newer do
     sha256 "634c86b1290d98f727d7b8a91e75045f381fa320ff814f8e440d83412dee2918"
 
     url "https://github.com/enzo1982/freac/releases/download/v#{version.csv.first}/freac-#{version}-macos11.dmg",

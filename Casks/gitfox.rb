@@ -1,6 +1,6 @@
 cask "gitfox" do
-  version "3.2.1,7764"
-  sha256 "f048b19c366fba30478d111770c32e0a32ca091ddb30279b2e1590eab3c7ed37"
+  version "3.3.0,7799"
+  sha256 "14665207f8051bcd135444ee4c361a26cbc36245eab14ba643dd56b8aa1492c8"
 
   url "https://storage.googleapis.com/gitfox/builds/retail/#{version.csv.second}/Gitfox.#{version.csv.second}.zip",
       verified: "storage.googleapis.com/gitfox/"
@@ -20,15 +20,18 @@ cask "gitfox" do
   binary "#{appdir}/Gitfox.app/Contents/SharedSupport/bin/gitfox-cli", target: "gitfox"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bytieful.gitfox-retail.sfl2",
     "~/Library/Application Support/com.bytieful.Gitfox",
     "~/Library/Application Support/com.bytieful.Gitfox-retail",
     "~/Library/Application Support/Gitfox",
     "~/Library/Caches/com.bytieful.Gitfox",
     "~/Library/Caches/com.bytieful.Gitfox-retail",
     "~/Library/Caches/com.crashlytics.data/com.bytieful.Gitfox",
+    "~/Library/HTTPStorages/com.bytieful.Gitfox-retail",
     "~/Library/Preferences/com.bytieful.Gitfox.*",
     "~/Library/Preferences/com.bytieful.Gitfox-retail.plist",
     "~/Library/Saved Application State/com.bytieful.Gitfox-retail.savedState",
     "~/Library/WebKit/com.bytieful.Gitfox",
+    "~/Library/WebKit/com.bytieful.Gitfox-retail",
   ]
 end

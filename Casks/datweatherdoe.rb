@@ -8,8 +8,8 @@ cask "datweatherdoe" do
     end
   end
   on_big_sur :or_newer do
-    version "3.1.0"
-    sha256 "19eac800249b286f7543991ab297c808aa9f96ee1412a0f133bd20278b129ede"
+    version "3.2.1"
+    sha256 "02629b648f570bf794dd2a29c055fc7eb21d58de3b9afaf6a5e0942590e43428"
 
     livecheck do
       url :url

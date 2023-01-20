@@ -1,6 +1,6 @@
 cask "tsh" do
-  version "11.1.2"
-  sha256 "3a9efbc794fc4a64b17d7a6f95fd777f5fac457f9456ac5faaace7aa9e966fc2"
+  version "11.2.1"
+  sha256 "4dd5a977fc81ed3b9afcf958f32e32876efcf97db33baeb4e8a64bb28269e280"
 
   url "https://get.gravitational.com/tsh-#{version}.pkg"
   name "Teleport TSH"

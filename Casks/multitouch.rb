@@ -1,6 +1,6 @@
 cask "multitouch" do
-  version "1.27.9,164"
-  sha256 "1798fccb9b0de4ba92c53b137f4eee540cf597c17b7989352f25b3bf8c27ac1e"
+  version "1.27.11,166"
+  sha256 "1ebd4f933a44f041b9ed298abf9acdeee041718fe5f319faed8089a59c59c571"
 
   url "https://multitouch.app/downloads/multitouch#{version.csv.first}.dmg"
   name "Multitouch"
@@ -13,7 +13,7 @@ cask "multitouch" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   app "Multitouch.app"
 

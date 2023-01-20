@@ -20,9 +20,7 @@ cask "logitech-presentation" do
 
   uninstall delete:     "/Applications/Logitech Presentation",
             login_item: "LogiPresentation",
-            signal:     [
-              ["KILL", "LogiPresentation"],
-            ]
+            signal:     ["KILL", "LogiPresentation"]
 
   zap trash: "/Library/Application Support/Logitech.localized/Logitech Presentation.localiz"
 end

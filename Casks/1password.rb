@@ -1,9 +1,9 @@
 cask "1password" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "8.9.11"
-  sha256 arm:   "59aff7b43a22fd865c9379708f871108d72b5d8317245dc82cb50f94ffc72233",
-         intel: "dce518f9a233b7646851d86a8eca16d63d273f06447bfde77c072badc8b4131d"
+  version "8.9.13"
+  sha256 arm:   "270dca3d86375793631a0edde88efcee76175844c4dcf020f5414ab38057f67b",
+         intel: "5f9e42abf51951d5b179a318941191c8f915ee9480b1e01aaf4f995686ec87dc"
 
   url "https://downloads.1password.com/mac/1Password-#{version}-#{arch}.zip"
   name "1Password"
@@ -22,13 +22,26 @@ cask "1password" do
   app "1Password.app"
 
   zap trash: [
-    "~/Library/Application Scripts/2BUA8C4S2C.com.1password.*",
+    "~/Library/Application Scripts/2BUA8C4S2C.com.1password*",
+    "~/Library/Application Scripts/com.1password.1password-launcher",
     "~/Library/Application Support/1Password",
+    "~/Library/Application Support/Arc/User Data/NativeMessagingHosts/com.1password.1password.json",
     "~/Library/Application Support/CrashReporter/1Password*",
+    "~/Library/Application Support/Google/Chrome Beta/NativeMessagingHosts/com.1password.1password.json",
+    "~/Library/Application Support/Google/Chrome Canary/NativeMessagingHosts/com.1password.1password.json",
+    "~/Library/Application Support/Google/Chrome Dev/NativeMessagingHosts/com.1password.1password.json",
+    "~/Library/Application Support/Google/Chrome/NativeMessagingHosts/com.1password.1password.json",
+    "~/Library/Application Support/Microsoft Edge Beta/NativeMessagingHosts/com.1password.1password.json",
+    "~/Library/Application Support/Microsoft Edge Canary/NativeMessagingHosts/com.1password.1password.json",
+    "~/Library/Application Support/Microsoft Edge Dev/NativeMessagingHosts/com.1password.1password.json",
+    "~/Library/Application Support/Microsoft Edge/NativeMessagingHosts/com.1password.1password.json",
+    "~/Library/Application Support/Mozilla/NativeMessagingHosts/com.1password.1password.json",
+    "~/Library/Application Support/Vivaldi/NativeMessagingHosts/com.1password.1password.json",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.1password.1password.sfl2",
     "~/Library/Containers/2BUA8C4S2C.com.1password.browser-helper",
-    "~/Library/Containers/com.1password.1password",
+    "~/Library/Containers/com.1password.1password*",
     "~/Library/Group Containers/2BUA8C4S2C.com.1password",
+    "~/Library/Preferences/com.1password.1password.plist",
     "~/Library/Saved Application State/com.1password.1password.savedState",
   ]
 end

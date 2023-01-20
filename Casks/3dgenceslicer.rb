@@ -8,7 +8,7 @@ cask "3dgenceslicer" do
   homepage "https://3dgence.com/"
 
   livecheck do
-    url "http://support.3dgence.com/software.html"
+    url "https://support.3dgence.com/software.html"
     regex(
       %r{href=.*?/3DGence(?:[._-]|%20)?Slicer(?:[._-]|%20)(\d+(?:\.\d+)+)(?:[._-]|%20)\(v?\.?(\d+(?:\.\d+)+)\)\.dmg}i,
     )

@@ -1,5 +1,5 @@
 cask "aviatrix-vpn-client" do
-  version "2.14.14"
+  version "2.16.42"
   sha256 :no_check
 
   url "https://aviatrix-download.s3.amazonaws.com/AviatrixVPNClient/AVPNC_mac.pkg",
@@ -10,7 +10,7 @@ cask "aviatrix-vpn-client" do
 
   livecheck do
     url "https://read.docs.aviatrix.com/HowTos/Aviatrix_VPN_Client_Release_Notes.html"
-    regex(/dt>(\d+(?:\.\d+)+)/i)
+    regex(/strong>(\d+(?:\.\d+)+)/i)
   end
 
   pkg "AVPNC_mac.pkg"

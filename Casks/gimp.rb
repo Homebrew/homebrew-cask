@@ -5,7 +5,7 @@ cask "gimp" do
   sha256 arm:   "4c3ae0ce49920fa3a8dd247888cd90fba8fd4a216f8759e8daa14754d25a5ed7",
          intel: "5669ca1f0ce63b0b7c2efd1ac1998116e5ea367b376d453f8341a5d28093f87f"
 
-  url "https://download.gimp.org/gimp/v#{version.major_minor}/osx/gimp-#{version}-#{arch}.dmg"
+  url "https://download.gimp.org/gimp/v#{version.major_minor}/macos/gimp-#{version}-#{arch}.dmg"
   name "GIMP"
   name "GNU Image Manipulation Program"
   desc "Free and open-source image editor"

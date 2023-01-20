@@ -19,7 +19,7 @@ cask "suspicious-package" do
       skip "Legacy version"
     end
   end
-  on_catalina do
+  on_mojave do
     version "4.0"
     sha256 "844708fb75f8aa102f3ede8ddef3c20180f469b7bc8ec65bbc0370ce9f7db33c"
 
@@ -28,8 +28,16 @@ cask "suspicious-package" do
     livecheck do
       skip "Legacy version"
     end
+  end
+  on_catalina do
+    version "4.2.1"
+    sha256 "5c05df9bf3d56758a3eefa972597e3138afdea4c3774f91fe2849482b7112823"
 
-    depends_on macos: ">= :mojave"
+    url "https://www.mothersruin.com/software/downloads/SuspiciousPackage-#{version}.dmg"
+
+    livecheck do
+      skip "Legacy version"
+    end
   end
   on_big_sur :or_newer do
     version "4.3.1,999"

@@ -2,10 +2,10 @@ cask "parsec" do
   version "150.86.8"
   sha256 :no_check
 
-  url "https://builds.parsecgaming.com/package/parsec-macos.pkg"
+  url "https://builds.parsec.app/package/parsec-macos.pkg"
   name "Parsec"
   desc "Remote desktop"
-  homepage "https://parsecgaming.com/"
+  homepage "https://parsec.app/"
 
   livecheck do
     url :url

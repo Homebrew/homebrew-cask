@@ -1,9 +1,9 @@
 cask "darktable" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "4.0.1.1"
-  sha256 arm:   "961af68e76fb274b0451bf287a9eb243f917ef68b933d48963534bfe328a955f",
-         intel: "f4914a6c49a2e3a815c75b199d8da31a3160e179e8272e8fb1075ce48b188e65"
+  version "4.2.0"
+  sha256 arm:   "7cbc03cc0e9a4a1769e4321815ed99384de8c063990eb5d746ffbd7599e32193",
+         intel: "89308cb7222ec0d0b539771dd90284e98b35bae4b53c8f3aa1b2feb861536b82"
 
   url "https://github.com/darktable-org/darktable/releases/download/release-#{version.major_minor_patch}/darktable-#{version}_#{arch}.dmg",
       verified: "github.com/darktable-org/darktable/"

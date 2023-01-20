@@ -1,14 +1,14 @@
 cask "insync" do
-  version "3.8.3.50473"
-  sha256 "61d4f088f103bdad709ca671adbb578dba6ea1abb4b8ac441d2c272714d9ca74"
+  version "3.8.4.50481"
+  sha256 "766ea065cce79c54ab83f8df2f52090eef03bb97f2f559136ad31e4d69881cb1"
 
-  url "http://cdn.insynchq.com/builds/mac/Insync-#{version}.dmg"
+  url "https://cdn.insynchq.com/builds/mac/Insync-#{version}.dmg"
   name "Insync"
   desc "Manage your Google Drive and OneDrive files"
   homepage "https://www.insynchq.com/"
 
   livecheck do
-    url :homepage
+    url "https://cdn.insynchq.com/web/webflow/js/mac_download_links.js"
     regex(/Insync[._-]?v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 

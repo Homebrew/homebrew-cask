@@ -1,13 +1,23 @@
 cask "lingon-x" do
-  if MacOS.version <= :high_sierra
+  on_high_sierra :or_older do
     version "6.6.5"
     sha256 "b0231b1a98dcc8f5c4234b419c9f5331407b8cce29b33f0ea2e32b12595adfa8"
-  elsif MacOS.version <= :big_sur
+  end
+  on_mojave do
     version "8.4.9"
     sha256 "c1c839e8dc13bd295f2080980c5bea22299c33f3333b7c6981161b46d6f021d8"
-  else
-    version "9.1.2"
-    sha256 "9b522288fac8acd43cd48012bce490953e898f3d7c1fa39d32087a296c95c7f5"
+  end
+  on_catalina do
+    version "8.4.9"
+    sha256 "c1c839e8dc13bd295f2080980c5bea22299c33f3333b7c6981161b46d6f021d8"
+  end
+  on_big_sur do
+    version "8.4.9"
+    sha256 "c1c839e8dc13bd295f2080980c5bea22299c33f3333b7c6981161b46d6f021d8"
+  end
+  on_monterey :or_newer do
+    version "9.1.3"
+    sha256 "d308de5a4753bd9b7a60dfe3a8fd7767b52989b7deb081e12a0833d4d38eb1a4"
   end
 
   url "https://www.peterborgapps.com/downloads/LingonX#{version.major}.zip"
@@ -25,8 +35,8 @@ cask "lingon-x" do
   app "Lingon X.app"
 
   zap trash: [
-    "~/Library/Application Scripts/com.peterborgapps.LingonX#{version.major}",
+    "~/Library/Application Scripts/com.peterborgapps.LingonX*",
     "~/Library/Application Support/Lingon X",
-    "~/Library/Containers/com.peterborgapps.LingonX#{version.major}",
+    "~/Library/Containers/com.peterborgapps.LingonX*",
   ]
 end

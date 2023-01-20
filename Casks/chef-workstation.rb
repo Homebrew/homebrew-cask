@@ -2,9 +2,9 @@ cask "chef-workstation" do
   arch arm: "arm64", intel: "x86_64"
   macos_version = on_arch_conditional arm: "11", intel: "10.15"
 
-  version "22.10.1013"
-  sha256 arm:   "73448e48114993ae96fb3bbc2dde140b832f82ea48e4530845c38acaccfe719b",
-         intel: "639593ad86dc5f83eae955b1ac658aa20020f5a8565bde47df4ea60ba548d5bd"
+  version "22.12.1024"
+  sha256 arm:   "57785b204ed5d6089a05de175a87643824eec4fba80fdb88425fd0471e51a987",
+         intel: "30800ba3971f056211f3bbca3864eaceb6bdd1a5adc4331eadf0d6c4ecc32cc2"
 
   url "https://packages.chef.io/files/stable/chef-workstation/#{version}/mac_os_x/#{macos_version}/chef-workstation-#{version}-1.#{arch}.dmg"
   name "Chef Workstation"
@@ -22,7 +22,10 @@ cask "chef-workstation" do
 
   uninstall quit:      "sh.chef.chef-workstation",
             pkgutil:   "com.getchef.pkg.chef-workstation",
-            launchctl: "io.chef.chef-workstation.app",
+            launchctl: [
+              "io.chef.chef-workstation",
+              "io.chef.chef-workstation.app",
+            ],
             script:    {
               executable: "/opt/chef-workstation/bin/uninstall_chef_workstation",
               sudo:       true,

@@ -1,9 +1,9 @@
 cask "appcode" do
   arch arm: "-aarch64"
 
-  version "2022.3,223.7571.236"
-  sha256 arm:   "9d5d4107a60e4e0562d6d9ce8117bee59a9fe618a907bf1a477c3aeb1a5a10db",
-         intel: "e43fee6ca311f739ef074c6c4ee2a6ccc391b4722e01cf02720ee7f786b9be37"
+  version "2022.3.1,223.8214.66"
+  sha256 arm:   "8027ecc71214fc06e447a6f01679b30b2c3377bce2140b968189ef4e0386871d",
+         intel: "9ae5fd60f8f28b4081edf49379dd03d10bcd37cb0dc0032b5b029fedaa3b32af"
 
   url "https://download.jetbrains.com/objc/AppCode-#{version.csv.first}#{arch}.dmg"
   name "AppCode"
@@ -39,4 +39,8 @@ cask "appcode" do
     "~/Library/Logs/AppCode#{version.major_minor}",
     "~/Library/Preferences/AppCode#{version.major_minor}",
   ]
+
+  caveats do
+    discontinued
+  end
 end

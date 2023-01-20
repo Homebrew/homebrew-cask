@@ -14,6 +14,9 @@ cask "makemkv" do
 
   app "MakeMKV.app"
   binary "#{appdir}/MakeMKV.app/Contents/MacOS/makemkvcon"
+  binary "#{appdir}/MakeMKV.app/Contents/MacOS/mmccextr"
+  binary "#{appdir}/MakeMKV.app/Contents/MacOS/mmgplsrv"
+  binary "#{appdir}/MakeMKV.app/Contents/MacOS/sdftool"
 
   zap trash: [
     "~/Library/MakeMKV",

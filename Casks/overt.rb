@@ -1,9 +1,9 @@
 cask "overt" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.5.3"
-  sha256 arm:   "ddd6b67695b15bbca1cb1a0d2d281d1c9809cd0c49dfc8724a06108c5fea51ec",
-         intel: "42696c2eab8458580b0be2ca94a05ef53e0487c6c4774c9b5789f9daba34a377"
+  version "0.5.5"
+  sha256 arm:   "a5716243310ea53d5d906f4e644051850c1b58f15ef2629437d38b5c457b5731",
+         intel: "25e6c58f98bb61095090e9cc30037c0824b34261844067d60bf5f8e8bd0aabb8"
 
   url "https://github.com/GetOvert/Overt/releases/download/v#{version}/Overt-darwin-#{arch}-#{version}.zip",
       verified: "github.com/GetOvert/Overt/"
@@ -26,6 +26,7 @@ cask "overt" do
     "~/Library/Caches/OpenStore_v3",
     "~/Library/Caches/Overt_v4",
     "~/Library/Caches/Overt_v5",
+    "~/Library/Caches/Overt_v6",
     "~/Library/Preferences/app.getopenstore.OpenStore.plist",
     "~/Library/Preferences/app.getovert.Overt.plist",
   ]

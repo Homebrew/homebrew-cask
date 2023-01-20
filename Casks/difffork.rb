@@ -4,9 +4,13 @@ cask "difffork" do
 
   url "https://dotfork.s3.amazonaws.com/DiffFork.app.zip",
       verified: "dotfork.s3.amazonaws.com/"
-  appcast "http://dotfork.com/"
   name "DiffFork"
-  homepage "http://dotfork.com/"
+  desc "Compare both folders and files, present the differences in a visual format"
+  homepage "https://dotfork.com/"
 
   app "DiffFork.app"
+
+  caveats do
+    discontinued
+  end
 end

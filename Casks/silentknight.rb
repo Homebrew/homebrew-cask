@@ -1,12 +1,13 @@
 cask "silentknight" do
-  if MacOS.version <= :mojave
+  on_mojave :or_older do
     version "1.21,2022.06"
     sha256 "c1cbb734f620e073f1c08c473edaa036c2b5ccdca02baa99ca117f86c10ad505"
 
     livecheck do
-      skip "Legacy version for Mojave and earlier"
+      skip "Legacy version"
     end
-  else
+  end
+  on_catalina :or_newer do
     version "2.03,2022.11"
     sha256 "44cbf2a45c76bc9a4e6ad3b496de030a75a58edb787e2c3c3270137b5a21c542"
 

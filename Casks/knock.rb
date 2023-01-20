@@ -5,6 +5,7 @@ cask "knock" do
   url "https://knock-updates.s3.amazonaws.com/Knock.zip",
       verified: "knock-updates.s3.amazonaws.com/"
   name "Knock"
+  desc "Unlock with AppleWatch"
   homepage "http://www.knocktounlock.com/"
 
   livecheck do
@@ -15,12 +16,10 @@ cask "knock" do
   app "Knock.app"
 
   zap trash: [
-        "~/Library/Preferences/com.knock.mac.plist",
-        "~/Library/Logs/Knock",
-        "~/Library/Caches/com.knock.mac",
         "~/Library/Caches/com.crashlytics.data/com.knock.mac",
+        "~/Library/Caches/com.knock.mac",
+        "~/Library/Logs/Knock",
+        "~/Library/Preferences/com.knock.mac.plist",
       ],
-      rmdir: [
-        "~/Library/Caches/com.crashlytics.data",
-      ]
+      rmdir: "~/Library/Caches/com.crashlytics.data"
 end

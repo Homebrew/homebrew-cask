@@ -9,10 +9,10 @@ cask "deltawalker" do
       verified: "deltawalker.s3.amazonaws.com/"
   name "DeltaWalker"
   desc "Tool to compare and synchronize files and folders"
-  homepage "http://www.deltawalker.com/"
+  homepage "https://www.deltawalker.com/"
 
   livecheck do
-    url "http://www.deltawalker.com/content/download.html"
+    url "https://www.deltawalker.com/content/download.html"
     regex(/href=.*?DeltaWalker[._-]?v?(\d+(?:\.\d+)+)_#{arch}\.dmg/i)
   end
 

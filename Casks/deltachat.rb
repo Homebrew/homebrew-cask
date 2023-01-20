@@ -1,6 +1,6 @@
 cask "deltachat" do
-  version "1.34.0"
-  sha256 "29e9bfd6e1254b6db37d727d488db10f1362fffd998e187b4325c7776861e4d3"
+  version "1.34.1"
+  sha256 "e246bc688ea7215e1fe6bda28f5305246e280e47e927fe5c259ffe503f106f5e"
 
   url "https://download.delta.chat/desktop/v#{version}/DeltaChat-#{version}.dmg"
   name "DeltaChat"
@@ -8,8 +8,8 @@ cask "deltachat" do
   homepage "https://delta.chat/"
 
   livecheck do
-    url "https://github.com/deltachat/deltachat-desktop"
-    strategy :github_latest
+    url "https://delta.chat/en/download"
+    regex(/href=.*?DeltaChat[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "DeltaChat.app"
