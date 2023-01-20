@@ -16,4 +16,12 @@ cask "elk" do
   end
 
   app "Elk.app"
+
+  zap trash: [
+    "~/Library/Application Support/zone.elk.native",
+    "~/Library/Caches/zone.elk.native",
+    "~/Library/HTTPStorages/zone.elk.native.binarycookies",
+    "~/Library/Logs/zone.elk.native",
+    "~/Library/WebKit/zone.elk.native",
+  ]
 end
