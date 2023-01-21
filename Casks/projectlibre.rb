@@ -9,4 +9,12 @@ cask "projectlibre" do
   homepage "https://www.projectlibre.com/"
 
   app "ProjectLibre.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.projectlibre1.dialog.plist",
+    "~/Library/Preferences/com.projectlibre1.main.plist",
+    "~/Library/Preferences/com.projectlibre1.preference.plist",
+    "~/Library/Preferences/com.projectlibre1.util.plist",
+    "~/Library/Preferences/org.projectlibre1.util.plist",
+  ]
 end
