@@ -13,7 +13,7 @@ cask "elk" do
   livecheck do
     url :url
     strategy :github_latest
-    regex(%r{href=.*?/tag/elk-native-v?(\d+(?:\.\d+)+)["' >]}i)
+    regex(%r{href=.*?/tag/elk[._-]native[._-]v?(\d+(?:\.\d+)+)["' >]}i)
   end
 
   app "Elk.app"
