@@ -1,8 +1,8 @@
 cask "katrain" do
-  version "1.12.1"
-  sha256 "d0f5f04a2e577432121e47f1e127f1f266d058ce57c21a6b64949796b8719f33"
+  version "1.12.2"
+  sha256 "57d2270f7b0043778ed78bdcffaac59555f5c5b09fc89fc3a2b3cb50e6b804d3"
 
-  url "https://github.com/sanderland/katrain/releases/download/v#{version}/KaTrain.dmg"
+  url "https://github.com/sanderland/katrain/releases/download/v#{version}/KaTrainOSX.dmg"
   name "KaTrain"
   desc "Tool for analyzing games and playing go with AI feedback from KataGo"
   homepage "https://github.com/sanderland/katrain"
