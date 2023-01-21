@@ -19,5 +19,8 @@ cask "opera" do
   zap trash: [
     "~/Library/Application Support/com.operasoftware.Opera/",
     "~/Library/Preferences/com.operasoftware.Opera.plist",
+    "~/Library/Caches/com.operasoftware.Installer.Opera",
+    "~/Library/Caches/com.operasoftware.Opera",
+    "~/Library/Saved Application State/com.operasoftware.Opera.savedState",
   ]
 end
