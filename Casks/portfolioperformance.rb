@@ -19,4 +19,10 @@ cask "portfolioperformance" do
   auto_updates true
 
   app "PortfolioPerformance.app"
+
+  zap trash: [
+    "~/Library/Preferences/name.abuchen.portfolio.distro.product.plist",
+    "~/Library/Caches/name.abuchen.portfolio.distro.product",
+    "~/Library/Application Support/name.abuchen.portfolio.product",
+  ]
 end
