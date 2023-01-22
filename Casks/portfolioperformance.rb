@@ -21,8 +21,8 @@ cask "portfolioperformance" do
   app "PortfolioPerformance.app"
 
   zap trash: [
-    "~/Library/Preferences/name.abuchen.portfolio.distro.product.plist",
-    "~/Library/Caches/name.abuchen.portfolio.distro.product",
     "~/Library/Application Support/name.abuchen.portfolio.product",
+    "~/Library/Caches/name.abuchen.portfolio.distro.product",
+    "~/Library/Preferences/name.abuchen.portfolio.distro.product.plist",
   ]
 end
