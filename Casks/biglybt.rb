@@ -1,8 +1,11 @@
 cask "biglybt" do
-  version "3.2.0.0"
-  sha256 "fa21d851206f13a59d63a8cbfed60c40b49b4cde4f35ba71bfb13e2f35ad9c5a"
+  arch arm: "Silicon", intel: "Intel"
 
-  url "https://github.com/BiglySoftware/BiglyBT/releases/download/v#{version}/GitHub_BiglyBT_Installer.dmg",
+  version "3.2.0.0"
+  sha256 arm:   "798448e858da8a674414d8713775b036d4c352a6ad429447fdd16bee00acab52",
+         intel: "e8f0600a02cf361d65e2abd9bf652154b572a0281849dc0ace64167ece9b3151"
+
+  url "https://github.com/BiglySoftware/BiglyBT/releases/download/v#{version}/GitHub_BiglyBT_Mac_#{arch}_Installer.dmg",
       verified: "github.com/BiglySoftware/BiglyBT/"
   name "biglybt"
   desc "Bittorrent client based on the Azureus open source project"

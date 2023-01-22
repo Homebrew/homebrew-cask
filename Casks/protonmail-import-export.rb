@@ -7,11 +7,6 @@ cask "protonmail-import-export" do
   desc "Import emails to your secure ProtonMail inbox or make offline backups"
   homepage "https://proton.me/support/export-emails-import-export-app"
 
-  livecheck do
-    url "https://raw.githubusercontent.com/ProtonMail/proton-bridge/master/Changelog.md"
-    regex(/##\s\[IE\s(\d+(?:\.\d+)*)\]/i)
-  end
-
   auto_updates true
 
   app "ProtonMail Import-Export app.app"
@@ -24,4 +19,8 @@ cask "protonmail-import-export" do
     "~/Library/Caches/ProtonMail Import-Export app",
     "~/Library/Preferences/com.protonmail.import-export.ProtonMail Import-Export app.plist",
   ]
+
+  caveats do
+    discontinued
+  end
 end

@@ -27,4 +27,10 @@ cask "ganttproject" do
   end
 
   app "GanttProject.app"
+
+  zap trash: [
+    "~/.ganttproject",
+    "~/.ganttproject.d",
+    "~/Library/Preferences/com.bardsoftware.ganttproject.plist",
+  ]
 end
