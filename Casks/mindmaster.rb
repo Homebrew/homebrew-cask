@@ -8,4 +8,9 @@ cask "mindmaster" do
   homepage "https://www.edrawsoft.com/mindmaster/"
 
   app "MindMaster.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.edrawsoft.mindmaster.plist",
+    "~/Library/Saved Application State/com.edrawsoft.mindmaster.savedState",
+  ]
 end
