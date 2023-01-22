@@ -9,7 +9,7 @@ cask "vnc-server" do
 
   livecheck do
     url "https://www.realvnc.com/en/connect/download/vnc/macos/"
-    regex(%r{href=.*?/VNC-Server-(\d+(?:\.\d+)*)-MacOSX-x86_64\.pkg}i)
+    regex(%r{href=.*?/VNC[._-]Server[._-]v?(\d+(?:\.\d+)*)[._-]MacOSX[._-]x86[._-]64\.pkg}i)
   end
 
   pkg "VNC-Server-#{version}-MacOSX-x86_64.pkg"
@@ -23,9 +23,7 @@ cask "vnc-server" do
               "com.realvnc.vncserver",
               "com.realvnc.vncserver.peruser",
             ],
-            pkgutil:   [
-              "com.realvnc.vncserver.pkg",
-            ]
+            pkgutil:   "com.realvnc.vncserver.pkg"
 
   zap trash: [
     "/Library/Logs/vncserver.log.bak",

@@ -24,8 +24,8 @@ cask "mysqlworkbench" do
     end
   end
   on_big_sur :or_newer do
-    version "8.0.31"
-    sha256 "6807ac1138c424c57d7e912c08301a838a90935dd0fc7a5658d3ded23f98a865"
+    version "8.0.32"
+    sha256 "746549812eae490c94501de2c4b784c178cd936049e5853bb264fea8b802b081"
     url "https://cdn.mysql.com/Downloads/MySQLGUITools/mysql-workbench-community-#{version}-macos-x86_64.dmg"
 
     livecheck do

@@ -1,6 +1,6 @@
 cask "plex" do
-  version "1.60.1.3413,533a7645"
-  sha256 "fb8d1d2528fbe7781131e380d4e8af15a8474032dd7cc331024df39873cffa0c"
+  version "1.62.2.3451,fb8ac0ae"
+  sha256 "65931e0429e8e441e28159b890610fc62cf4f1d87d21931646378b9b234276f9"
 
   url "https://downloads.plex.tv/plex-desktop/#{version.csv.first}-#{version.csv.second}/macos/Plex-#{version.csv.first}-#{version.csv.second}-x86_64.zip"
   name "Plex"

@@ -1,8 +1,8 @@
 cask "vk-calls" do
   version "1.1.10103"
-  sha256 :no_check
+  sha256 "94f74d1607f55c7420dc6e9048d9eacf1eade663503c0b589bc25d3da117cb6a"
 
-  url "https://vkcalls-native-ac.vk-apps.com/latest/vk-calls.dmg",
+  url "https://vkcalls-native-ac.vk-apps.com/#{version}/vk-calls.dmg",
       verified: "vkcalls-native-ac.vk-apps.com"
   name "VK Calls"
   desc "Platform for video calls of any purpose"

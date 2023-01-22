@@ -7,10 +7,9 @@ cask "a-slower-speed-of-light" do
   desc "First-person game"
   homepage "https://gamelab.mit.edu/games/a-slower-speed-of-light/"
 
-  livecheck do
-    url :homepage
-    regex(/title=.*?Download\s*v?(\d+(?:\.\d+)*)\s*For\s*Mac"/i)
-  end
-
   app "A Slower Speed of Light.app"
+
+  caveats do
+    discontinued
+  end
 end

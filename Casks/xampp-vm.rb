@@ -8,10 +8,9 @@ cask "xampp-vm" do
   desc "Virtual machine with apache distribution containing MySQL, PHP, and Perl"
   homepage "https://www.apachefriends.org/index.html"
 
-  livecheck do
-    url "https://www.apachefriends.org/download.html"
-    regex(%r{href=.*?/xampp[._-]osx[._-]v?(\d+(?:\.\d+)+-\d+)[._-]vm\.dmg}i)
-  end
-
   app "xampp-osx-#{version}-vm.app"
+
+  caveats do
+    discontinued
+  end
 end

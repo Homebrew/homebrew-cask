@@ -13,4 +13,6 @@ cask "jameica" do
   end
 
   app "jameica.app"
+
+  zap trash: "~/.jameica.properties"
 end

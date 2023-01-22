@@ -1,9 +1,9 @@
 cask "hyper" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.3.0"
-  sha256 arm:   "ab9f95b41e74dcb26a88ca162423074905d5e0509d826115c0f52927f254e0ef",
-         intel: "793438488751a834edd1062532f87f79a5cce0829172f4bc90967467e279174a"
+  version "3.4.1"
+  sha256 arm:   "7d2440fdd93fde4101e603fe2de46732b54292a868ad17dbcb55288e6f8430a8",
+         intel: "aa6ab73fdc60f60d428eb0247b270f958e58709249077b5102c7ab24aff19683"
 
   url "https://github.com/vercel/hyper/releases/download/v#{version}/Hyper-#{version}-mac-#{arch}.zip",
       verified: "github.com/vercel/hyper/"

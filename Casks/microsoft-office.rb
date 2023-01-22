@@ -1,8 +1,8 @@
 cask "microsoft-office" do
-  version "16.68.22121100"
-  sha256 "cfa93fbb5598b506594d4e3d6198995eb36034cf4462acf914e61c6f5b47f481"
+  version "16.69.23010700"
+  sha256 "6c606142087c676b91b796508f14e948f87640bf3cab0bc73f203fa112222e79"
 
-  url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Office_#{version}_Installer.pkg",
+  url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_365_and_Office_#{version}_Installer.pkg",
       verified: "officecdnmac.microsoft.com/"
   name "Microsoft Office"
   desc "Office suite"
@@ -10,6 +10,7 @@ cask "microsoft-office" do
 
   livecheck do
     url "https://go.microsoft.com/fwlink/p/?linkid=525133"
+    regex(/(\d+(?:\.\d+)+)/i)
     strategy :header_match
   end
 
@@ -24,7 +25,7 @@ cask "microsoft-office" do
   depends_on cask: "microsoft-auto-update"
   depends_on macos: ">= :catalina"
 
-  pkg "Microsoft_Office_#{version}_Installer.pkg",
+  pkg "Microsoft_365_and_Office_#{version}_Installer.pkg",
       choices: [
         {
           "choiceIdentifier" => "com.microsoft.autoupdate", # Office16_all_autoupdate.pkg

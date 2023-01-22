@@ -1,85 +1,64 @@
 cask "maintenance" do
   sha256 :no_check
 
-  on_el_capitan :or_older do
+  on_el_capitan do
     version "2.1.8"
-    url "https://www.titanium-software.fr/download/10.11/Maintenance.dmg"
+    sha256 "f27f5d0736e80cd80c85dcc5390dfeb893183424fe65b32b08e280c90b22b24c"
 
-    livecheck do
-      url :homepage
-      regex(/>\s*Maintenance\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s.-]*\s+10\.11\s*</i)
-    end
+    depends_on macos: :el_capitan
   end
   on_sierra do
     version "2.3.0"
-    url "https://www.titanium-software.fr/download/1012/Maintenance.dmg"
+    sha256 "8fde91742126d10234451a3c973461f5d84c771e52c6ee14aff93f1d66a0dbca"
 
-    livecheck do
-      url :homepage
-      regex(/>\s*Maintenance\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s.-]*\s+10\.12\s*</i)
-    end
+    depends_on macos: :sierra
   end
   on_high_sierra do
     version "2.4.2"
-    url "https://www.titanium-software.fr/download/1013/Maintenance.dmg"
+    sha256 "94c7a322d4d796afc5e52534f3564a562240d9c0ec0a60de210e68372fef2137"
 
-    livecheck do
-      url :homepage
-      regex(/>\s*Maintenance\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s.-]*\s+10\.13\s*</i)
-    end
+    depends_on macos: :high_sierra
   end
   on_mojave do
     version "2.5.6"
-    url "https://www.titanium-software.fr/download/1014/Maintenance.dmg"
+    sha256 "d3b0152ce543b84ed597daba3360f74c3f20b4fb2b41d71005f3a7b311d4d681"
 
-    livecheck do
-      url :homepage
-      regex(/>\s*Maintenance\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s.-]*\s+10\.14\s*</i)
-    end
+    depends_on macos: :mojave
   end
   on_catalina do
     version "2.7.1"
-    url "https://www.titanium-software.fr/download/1015/Maintenance.dmg"
+    sha256 "833e658f862f0a58dc6a073c70a67bed071b835167f73fc24e80386a36bfd38b"
 
-    livecheck do
-      url :homepage
-      regex(/>\s*Maintenance\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s.-]*\s+10\.15\s*</i)
-    end
+    depends_on macos: :catalina
   end
   on_big_sur do
     version "2.8.2"
-    url "https://www.titanium-software.fr/download/11/Maintenance.dmg"
+    sha256 "e5f35a36eb1fcf46d599719c8ae2123e232f64b23a7741aaa4bf9ca3c78b76f9"
 
-    livecheck do
-      url :homepage
-      regex(/>\s*Maintenance\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s.-]*\s+11\s*</i)
-    end
+    depends_on macos: :big_sur
   end
   on_monterey do
     version "2.9.2"
-    url "https://www.titanium-software.fr/download/12/Maintenance.dmg"
+    sha256 "04a6d9ff584cc7abbffdfa15730de58e1fc18dd76ffc05a099776ae3c56d4c18"
 
-    livecheck do
-      url :homepage
-      regex(/>\s*Maintenance\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s.-]*\s+12\s*</i)
-    end
+    depends_on macos: :monterey
   end
-  on_ventura :or_newer do
-    version "2.9.7"
-    url "https://www.titanium-software.fr/download/13/Maintenance.dmg"
+  on_ventura do
+    version "2.9.8"
+    sha256 "99b36dc94c3c3390f66d433c10787473f98b6c600ed75d5a9c5d08bc70eb1e95"
 
-    livecheck do
-      url :homepage
-      regex(/>\s*Maintenance\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s.-]*\s+13\s*</i)
-    end
+    depends_on macos: :ventura
   end
 
+  url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete(".")}/Maintenance.dmg"
   name "Maintenance"
   desc "Operating system maintenance and cleaning utility"
   homepage "https://www.titanium-software.fr/en/maintenance.html"
 
-  # This software has releases for specific versions of macOS. Running a version for a different OS is dangerous.
-  depends_on macos: "<= :ventura"
+  livecheck do
+    url :homepage
+    regex(/>\s*Maintenance\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s.-]*\s+#{MacOS.version}\s*</i)
+  end
 
   app "Maintenance.app"
 end

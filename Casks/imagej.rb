@@ -2,7 +2,7 @@ cask "imagej" do
   version "1.53"
 
   on_intel do
-    sha256 "4093259645569f5dc04ef5576a5f54ab878c0923f48c03b866f5d56f2edc078f"
+    sha256 "5d405f30e779e4dac5e8a669d0cf8a5c1f0afa5f17b4908885e561817705e422"
 
     url "https://wsr.imagej.net/distros/osx/ij#{version.no_dots}-osx-java8.zip",
         verified: "wsr.imagej.net/distros/osx/"

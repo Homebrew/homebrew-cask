@@ -1,15 +1,15 @@
 cask "master-pdf-editor" do
-  version "5.8.70"
-  sha256 "4a6dfa609b712ed115f0a88f133fcedea26dbf397d288a1f4327131de5145569"
+  version "5.9.20"
+  sha256 :no_check
 
-  url "https://code-industry.net/public/MasterPDFEditor-#{version}.dmg"
+  url "https://code-industry.net/public/MasterPDFEditor.dmg"
   name "Master PDF Editor"
   desc "PDF editor"
   homepage "https://code-industry.net/masterpdfeditor/"
 
   livecheck do
-    url "https://code-industry.net/public/MasterPDFEditor.dmg"
-    strategy :extract_plist
+    url "https://code-industry.net/get-masterpdfeditor"
+    regex(%r{>Version\s(\d+(?:\.\d+)+).*?macOS.*?</h}i)
   end
 
   auto_updates true

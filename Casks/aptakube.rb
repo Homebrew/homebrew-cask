@@ -1,6 +1,6 @@
 cask "aptakube" do
-  version "0.9.2"
-  sha256 "33adf93b2d3802a80791906a7172e42e13c3b7b4ac81a372bb7e5ad6e83edf4b"
+  version "1.0.2"
+  sha256 "04d78b0b49068417e325798270a895ab7b54d735fb2d8024bf079c026fe0b08b"
 
   url "https://releases.aptakube.com/Aptakube_#{version}_universal.dmg"
   name "Aptakube"
@@ -8,7 +8,7 @@ cask "aptakube" do
   homepage "https://aptakube.com/"
 
   livecheck do
-    url "https://releases.aptakube.com/latest.json"
+    url "https://aptakube.com/api/latest"
     regex(/"version": "(\d+(?:\.\d+)+)"/i)
   end
 
