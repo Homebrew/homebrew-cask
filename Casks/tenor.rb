@@ -16,6 +16,8 @@ cask "tenor" do
 
   app "Tenor.app"
 
+  uninstall quit: "com.riffsy.GIF-for-Mac"
+
   zap trash: [
     "~/Library/Caches/tenor-*",
     "~/Library/HTTPStorages/com.tenorshare.ReiBoot",
@@ -24,6 +26,4 @@ cask "tenor" do
     "~/Library/Preferences/com.riffsy.GIF-for-Mac.plist",
     "~/Library/Caches/com.crashlytics.data/com.riffsy.GIF-for-Mac",
   ]
-
-  uninstall quit: "com.riffsy.GIF-for-Mac"
 end
