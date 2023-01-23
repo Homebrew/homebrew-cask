@@ -6,7 +6,7 @@ cask "vagrant-vmware-utility" do
       verified: "releases.hashicorp.com/vagrant-vmware-utility/"
   name "Vagrant VMware Utility"
   desc "Gives Vagrant VMware plugin access to various VMware functionalities"
-  homepage "https://www.vagrantup.com/vmware/downloads.html"
+  homepage "https://developer.hashicorp.com/vagrant/docs/providers/vmware"
 
   livecheck do
     url "https://releases.hashicorp.com/vagrant-vmware-utility/"
