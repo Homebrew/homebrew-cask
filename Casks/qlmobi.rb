@@ -4,6 +4,7 @@ cask "qlmobi" do
 
   url "https://github.com/bfabiszewski/QLMobi/releases/download/v#{version}/QLMobi.qlgenerator.zip"
   name "QLMobi"
+  desc "Quick Look plugin for Kindle ebook formats"
   homepage "https://github.com/bfabiszewski/QLMobi"
 
   qlplugin "QLMobi.qlgenerator"
