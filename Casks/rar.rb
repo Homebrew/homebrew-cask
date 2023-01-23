@@ -1,9 +1,9 @@
 cask "rar" do
   arch arm: "arm", intel: "x64"
 
-  version "6.12"
-  sha256 arm:   "491f345712a02eb26a3b424658c30652e22e2201a0c5c547fb97c25a756a264b",
-         intel: "f607ca12bdc313884c5a6f504fbf662a0511bf39fe04a9b2a694c986cd34bb67"
+  version "6.20"
+  sha256 arm:   "62e0624568e32f780ac114da21e8810206d5c692b9914ecbaf28cb33be7b2c72",
+         intel: "29b1545b70852dbe393cc45d10481c1f2f46101dc7a84919c02af43372760d1e"
 
   url "https://www.rarlab.com/rar/rarmacos-#{arch}-#{version.no_dots}.tar.gz"
   name "RAR Archiver"
