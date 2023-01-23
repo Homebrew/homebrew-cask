@@ -1,5 +1,5 @@
 cask "tutanota" do
-  version "3.106.5"
+  version "3.107.3"
   sha256 :no_check
 
   url "https://mail.tutanota.com/desktop/tutanota-desktop-mac.dmg"
