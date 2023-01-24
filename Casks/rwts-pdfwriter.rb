@@ -7,6 +7,10 @@ cask "rwts-pdfwriter" do
   desc "Print driver for printing documents directly to a pdf file"
   homepage "https://github.com/rodyager/RWTS-PDFwriter"
 
+  livecheck do
+    url "https://github.com/rodyager/RWTS-PDFwriter.git"
+  end
+
   installer manual: "RWTS-PDFwriter.pkg"
 
   uninstall script: "/Library/Printers/RWTS/PDFwriter/uninstall"
