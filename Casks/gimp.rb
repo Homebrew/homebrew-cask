@@ -19,10 +19,14 @@ cask "gimp" do
   conflicts_with cask: "homebrew/cask-versions/gimp-dev"
 
   app "GIMP.app"
-  binary "#{appdir}/GIMP.app/Contents/MacOS/gimp"
+  shimscript = "#{staged_path}/gimp.wrapper.sh"
+  binary shimscript, target: "gimp"
 
-  postflight do
-    set_permissions "#{appdir}/GIMP.app/Contents/MacOS/gimp", "a+rx"
+  preflight do
+    File.write shimscript, <<~EOS
+      #!/bin/sh
+      "#{appdir}/GIMP.app/Contents/MacOS/gimp" "$@"
+    EOS
   end
 
   zap trash: [
