@@ -5,6 +5,7 @@ cask "sherlock" do
   url "https://dl.devmate.com/io.inspiredcode.Sherlock/Sherlock.dmg",
       verified: "dl.devmate.com/io.inspiredcode.Sherlock/"
   name "Sherlock"
+  desc "iOS simulator visual debugger"
   homepage "https://sherlock.inspiredcode.io/"
 
   livecheck do
