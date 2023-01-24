@@ -1,6 +1,6 @@
 cask "purei-play" do
-  version "2023-01-10,70a126e3"
-  sha256 "8df5a83eb6d8e28c1cbf6e567f6d8622280cfae1503656a0c73ef4bb4dbf82c5"
+  version "2023-01-20,3b8fb86f"
+  sha256 "c1aeec8e2c5a70efe29fb6f5b91f1caae0fcb1c92e7a304c0cd9ec179a52086b"
 
   url "https://s3.us-east-2.amazonaws.com/playbuilds/#{version.csv.second}/Play.dmg",
       verified: "https://s3.us-east-2.amazonaws.com/playbuilds/"
