@@ -2,7 +2,7 @@ cask "rekordbox" do
   version "6.6.9,20230111110322"
   sha256 "9b15cfb832896a6c3997f9dd19d57ce041527105c98bd81fce1e55264b1e893c"
 
-  url "https://cdn.rekordbox.com/files/20230111110322/Install_rekordbox_6_6_9.pkg_.zip"
+  url "https://cdn.rekordbox.com/files/#{version.csv.second}/Install_rekordbox_#{version.csv.first.dots_to_underscores}.pkg_.zip"
   name "rekordbox"
   desc "Free Dj app to prepare and manage your music files"
   homepage "https://rekordbox.com/en/"
