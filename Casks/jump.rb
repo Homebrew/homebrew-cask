@@ -1,6 +1,6 @@
 cask "jump" do
-  version "8.9.10,80910"
-  sha256 "b21d07f9d1573f49ccc09d96fa0480a1b1680d7047ae1e55d84d09998b97075f"
+  version "8.9.11,80911"
+  sha256 "72c5501e56e5caf2e85059e34e7db99edf31f2286c333ce9c64551d6f447c680"
 
   url "https://mirror.jumpdesktop.com/downloads/jdm/JumpDesktopMac-#{version.csv.first}.zip"
   name "Jump Desktop"
