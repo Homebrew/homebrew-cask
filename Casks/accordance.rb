@@ -1,6 +1,6 @@
 cask "accordance" do
-  version "14.0.3"
-  sha256 "97ab4841dfaa8c0dde7f8b24a5988e97e6738cf43cc2df4caae49f5ef779c2a0"
+  version "14.0.4"
+  sha256 "b3831a9b9339cef560fb737107300f3f2030858a179d27761cd9a8b48c4d1ddf"
 
   url "https://aaeaa95e7a277e07438c-1bc4b418142835c9d827936172799c04.ssl.cf1.rackcdn.com/Acc_#{version}.zip",
       verified: "aaeaa95e7a277e07438c-1bc4b418142835c9d827936172799c04.ssl.cf1.rackcdn.com/"
