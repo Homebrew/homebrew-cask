@@ -1,9 +1,9 @@
 cask "powershell" do
   arch arm: "arm64", intel: "x64"
 
-  version "7.3.1"
-  sha256 arm:   "adb1e56fff1e3b4bd1403e75089b92ef8b7432dca6fe48cf94ed84a16936cd7e",
-         intel: "b6c8d4f8ed0cd1854cd00fe8a7816428093e71fddc30546a3406c07f409c02ae"
+  version "7.3.2"
+  sha256 arm:   "85813314b764a3b43c49e00a39eeb79c558c41bb3b6e72adf99e819a37105ed4",
+         intel: "60703630e29d5dbb8660ae164931a345319a62650105313abe174ce87eb05106"
 
   url "https://github.com/PowerShell/PowerShell/releases/download/v#{version}/powershell-#{version}-osx-#{arch}.pkg"
   name "PowerShell"
