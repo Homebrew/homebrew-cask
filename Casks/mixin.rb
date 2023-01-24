@@ -7,6 +7,11 @@ cask "mixin" do
   desc "Cryptocurrency wallet"
   homepage "https://github.com/MixinNetwork/flutter-app"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
 
   app "Mixin.app"
