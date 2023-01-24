@@ -14,7 +14,7 @@ cask "ultimaker-cura" do
     strategy :github_latest
   end
 
-  app "Ultimaker-Cura.app"
+  app "UltiMaker Cura.app"
 
   uninstall quit: "nl.ultimaker.cura.dmg"
 
