@@ -10,9 +10,9 @@ cask "reactide" do
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?v?(\d+(?:\.\d+)+(-beta|-alpha)?)/Reactide-(\d+(?:\.\d+)+)}i)
+    regex(%r{href=.*?v?(\d+(?:\.\d+)+(?:-beta|-alpha)?)/Reactide-(\d+(?:\.\d+)+)}i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[2]},#{match[0]}" }
+      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
 
