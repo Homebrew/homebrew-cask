@@ -1,8 +1,8 @@
 cask "anydo" do
-  version "5.0.18"
-  sha256 "41dde3f73e41942ab1f551406dbb29af6068ec6895882abdce61aa21e8ef2b48"
+  version "5.0.19"
+  sha256 "d317a09940c6c52880a20e07ba64ef6c807b98d4cac787edf684c293fe11d460"
 
-  url "https://electron-app.any.do/Anydo-#{version}.dmg"
+  url "https://electron-app.any.do/Anydo-#{version}-universal.dmg"
   name "Any.do"
   desc "Reminder, planner & calendar"
   homepage "https://www.any.do/"
