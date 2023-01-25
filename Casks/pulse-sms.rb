@@ -6,7 +6,7 @@ cask "pulse-sms" do
       verified: "github.com/maplemedia/pulse-sms-desktop/"
   name "Pulse SMS"
   desc "Desktop client for Pulse SMS"
-  homepage "https://messenger.klinkerapps.com/overview/platform-mac.html"
+  homepage "https://home.pulsesms.app/overview/"
 
   app "Pulse SMS.app"
 
