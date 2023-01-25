@@ -5,6 +5,7 @@ cask "localdev" do
   url "https://pantheon-localdev.s3.amazonaws.com/Localdev-v#{version}.dmg",
       verified: "pantheon-localdev.s3.amazonaws.com/"
   name "Localdev"
+  desc "Development interface for Pantheon"
   homepage "https://pantheon.io/localdev"
 
   app "Localdev.app"
