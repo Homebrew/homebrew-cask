@@ -14,4 +14,10 @@ cask "serene" do
   end
 
   app "Serene.app"
+
+  zap trash: [
+    "~/Library/Application Support/Serene",
+    "~/Library/Logs/Serene",
+    "~/Library/Saved Application State/com.vh.sereneapp.savedState",
+  ]
 end
