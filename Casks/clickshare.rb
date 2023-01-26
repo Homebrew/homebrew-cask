@@ -1,6 +1,6 @@
 cask "clickshare" do
-  version "4.26.0.12"
-  sha256 "4520ee1c505db88d7480004986c190c37a33b1e5e90d473959a9748373e88317"
+  version "4.27.2.4"
+  sha256 "d36a6a63bbaee2d0e0927c49ae24b1ad47cdeaef4e8554586204fe491528b42f"
 
   url "https://www.barco.com/services/website/en/TdeFiles/Download?FileNumber=R3306192&TdeType=3&MajorVersion=#{format("%02d", version.major)}&MinorVersion=#{format("%02d", version.minor)}&PatchVersion=#{format("%02d", version.patch)}&BuildVersion=#{format("%03d", version.split(".").last)}"
   name "ClickShare"

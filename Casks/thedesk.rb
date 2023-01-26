@@ -1,6 +1,6 @@
 cask "thedesk" do
-  version "23.0.5"
-  sha256 "88e089902e377c02a44998e4fb13687b6ce60e44918eed31afd2f94b49daa104"
+  version "24.0.7"
+  sha256 "f8f4edbe6e0e5fbf57ab4d7371ef334d717110dc3a96c5bb71fbd75cec9878d4"
 
   url "https://github.com/cutls/TheDesk/releases/download/v#{version}/TheDesk-#{version}-universal.dmg",
       verified: "github.com/cutls/TheDesk/"

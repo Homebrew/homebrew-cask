@@ -15,4 +15,13 @@ cask "swinsian" do
   auto_updates true
 
   app "Swinsian.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.swinsian.SwinsianArtworkTagReader/",
+    "~/Library/Application Scripts/com.swinsian.SwinsianChapterReader/",
+    "~/Library/Application Support/Swinsian/",
+    "~/Library/Containers/com.swinsian.SwinsianArtworkTagReader/",
+    "~/Library/Containers/com.swinsian.SwinsianChapterReader/",
+    "~/Library/Preferences/com.swinsian.Swinsian.plist",
+  ]
 end

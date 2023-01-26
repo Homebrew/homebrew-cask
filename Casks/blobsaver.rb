@@ -11,6 +11,7 @@ cask "blobsaver" do
   homepage "https://github.com/airsquared/blobsaver"
 
   app "blobsaver.app"
+  binary "#{appdir}/blobsaver.app/Contents/MacOS/blobsaver"
 
   zap trash: "~/Library/Preferences/airsquared.blobsaver.app.plist"
 end

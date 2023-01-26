@@ -1,5 +1,5 @@
 cask "farcaster" do
-  version "0.5.8"
+  version "0.5.10"
   sha256 :no_check
 
   url "https://downloads.farcaster.xyz/Farcaster-latest.dmg"
