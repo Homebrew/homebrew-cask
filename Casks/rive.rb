@@ -15,7 +15,7 @@ cask "rive" do
   app "Rive.app"
 
   zap trash: [
-    "~/Library/Containers/app.rive.editor",
     "~/Library/Application Scripts/app.rive.editor",
+    "~/Library/Containers/app.rive.editor",
   ]
 end
