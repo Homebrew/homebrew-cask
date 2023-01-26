@@ -9,7 +9,7 @@ cask "vk-calls" do
   homepage "https://calls.vk.com/"
 
   livecheck do
-    url :url
+    url "https://vkcalls-native-ac.vk-apps.com/latest/vk-calls.dmg"
     strategy :extract_plist
   end
 
