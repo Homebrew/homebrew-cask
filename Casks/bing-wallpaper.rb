@@ -1,8 +1,8 @@
 cask "bing-wallpaper" do
-  version "1.1.2,23"
-  sha256 "a8a7ff495afeb3c47604b76988c3565e66610d1718945a577e34c28eb0ed8cd1"
+  version "1.1.3,24"
+  sha256 "0c7194da0c12c92c8a4edb8e298ed4e523b3d2db5610cdc43a9255e92f58ebfa"
 
-  url "https://download.microsoft.com/download/9/1/1/911276db-dcd3-4129-9639-375613697b11/Mac/Installer/#{version.csv.first}/Bing/Flight1/MW011/Defaults/Bing%20Wallpaper.pkg"
+  url "https://download.microsoft.com/download/9/4/a/94aa841f-5578-4856-8a8c-83ff78eb2d1f/Installer/#{version.csv.first}/MSN/Flight2/MW021/Bing%20Wallpaper.pkg"
   name "Bing Wallpaper"
   desc "Use the Bing daily image as your wallpaper"
   homepage "https://bingwallpaper.microsoft.com/"
