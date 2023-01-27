@@ -42,4 +42,6 @@ end
 syntax_job[:name] += " (#{syntax_job[:runner]})"
 
 puts JSON.pretty_generate(matrix)
-puts "::set-output name=matrix::#{JSON.generate(matrix)}"
+File.open(ENV.fetch("GITHUB_OUTPUT"), "a") do |f|
+  f.puts "matrix=#{JSON.generate(matrix)}"
+end
