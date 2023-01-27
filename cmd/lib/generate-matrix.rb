@@ -43,5 +43,5 @@ syntax_job[:name] += " (#{syntax_job[:runner]})"
 
 puts JSON.pretty_generate(matrix)
 File.open(ENV['GITHUB_OUTPUT'], 'a') do |f|
-  puts "matrix=#{JSON.generate(matrix)}"
+  f.puts "matrix=#{JSON.generate(matrix)}"
 end

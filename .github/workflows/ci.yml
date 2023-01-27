@@ -174,13 +174,13 @@ jobs:
             formula_dependencies = cask_and_formula_dependencies.select { |d| d.is_a?(Formula) }.map(&:full_name)
 
             File.open(ENV['GITHUB_OUTPUT'], 'a') do |f|
-              puts "was_installed=#{JSON.generate(was_installed)}"
-              puts "manual_installer=#{JSON.generate(manual_installer)}"
-              puts "macos_requirement_satisfied=#{JSON.generate(macos_requirement_satisfied)}"
-              puts "cask_conflicts=#{JSON.generate(cask_conflicts)}"
-              puts "cask_dependencies=#{JSON.generate(cask_dependencies)}"
-              puts "formula_conflicts=#{JSON.generate(formula_conflicts)}"
-              puts "formula_dependencies=#{JSON.generate(formula_dependencies)}"
+              f.puts "was_installed=#{JSON.generate(was_installed)}"
+              f.puts "manual_installer=#{JSON.generate(manual_installer)}"
+              f.puts "macos_requirement_satisfied=#{JSON.generate(macos_requirement_satisfied)}"
+              f.puts "cask_conflicts=#{JSON.generate(cask_conflicts)}"
+              f.puts "cask_dependencies=#{JSON.generate(cask_dependencies)}"
+              f.puts "formula_conflicts=#{JSON.generate(formula_conflicts)}"
+              f.puts "formula_dependencies=#{JSON.generate(formula_dependencies)}"
             end
           EOF
         if: always() && steps.fetch.outcome == 'success' && matrix.cask
@@ -208,7 +208,7 @@ jobs:
         run: |
           brew ruby -r "$(brew --repository homebrew/cask)/cmd/lib/check.rb" <<'EOF'
             File.open(ENV['GITHUB_OUTPUT'], 'a') do |f|
-              puts "before=#{JSON.generate(Check.all)}"
+              f.puts "before=#{JSON.generate(Check.all)}"
             end
           EOF
         if: always() && steps.info.outcome == 'success'
