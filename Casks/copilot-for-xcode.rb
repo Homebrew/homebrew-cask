@@ -12,13 +12,11 @@ cask "copilot-for-xcode" do
   app "Copilot for Xcode.app"
 
   zap trash: [
-    "~/Library/Application Scripts/5YKZ4Y3DAW.group.com.intii.CopilotForXcode",
-    "~/Library/Application Scripts/com.intii.CopilotForXcode.EditorExtension",
+    "~/Library/Application Scripts/*com.intii.CopilotForXcode*",
     "~/Library/Application Support/com.intii.CopilotForXcode",
     "~/Library/Containers/com.intii.CopilotForXcode.EditorExtension",
-    "~/Library/Group Containers/5YKZ4Y3DAW.group.com.intii.CopilotForXcode",
-    "~/Library/Group Containers/5YKZ4Y3DAW.group.com.intii.CopilotForXcode.plist",
-    "~/Library/Preferences/5YKZ4Y3DAW.group.com.intii.CopilotForXcode.plist",
+    "~/Library/Group Containers/*group.com.intii.CopilotForXcode*",
     "~/Library/LaunchAgents/com.intii.CopilotForXcode.XPCService.plist",
+    "~/Library/Preferences/5YKZ4Y3DAW.group.com.intii.CopilotForXcode.plist",
   ]
 end
