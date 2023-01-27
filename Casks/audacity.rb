@@ -1,9 +1,9 @@
 cask "audacity" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "3.2.3"
-  sha256 arm:   "426cf06082926b060796051e12367d7cb304ee007f6861d8c35e758ff5f362ad",
-         intel: "719ba4b7c848131a624786f74795fca369197370db3455efaaa30136ed13e85f"
+  version "3.2.4"
+  sha256 arm:   "1d8060026405c34a6868f81ac7f4271be9c233802abc438803e8c8777b7f9e25",
+         intel: "69f8fcb2777d1da4e0b758cf3ffa595bc767dcbb0f039debe428f5819ceedeae"
 
   url "https://github.com/audacity/audacity/releases/download/Audacity-#{version}/audacity-macOS-#{version}-#{arch}.dmg",
       verified: "github.com/audacity/audacity/"
