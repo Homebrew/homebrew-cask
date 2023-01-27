@@ -14,7 +14,7 @@ else
   []
 end
 
-tap = Tap.from_path(Dir.pwd)
+tap = Tap.fetch(ENV.fetch("GITHUB_REPOSITORY"))
 
 runner = CiMatrix.random_runner[:name]
 syntax_job = {
