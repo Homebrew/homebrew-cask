@@ -30,13 +30,6 @@ jobs:
         with:
           test-bot: false
 
-      # Workaround until the `cache` action uses the changes from
-      # https://github.com/actions/toolkit/pull/580.
-      - name: Unlink workspace
-        run: |
-          rm "${GITHUB_WORKSPACE}"
-          mkdir "${GITHUB_WORKSPACE}"
-
       - name: Cache Homebrew Gems
         id: cache
         uses: actions/cache@v3
