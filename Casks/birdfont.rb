@@ -9,8 +9,8 @@ cask "birdfont" do
     end
   end
   on_catalina :or_newer do
-    version "5.0.3"
-    sha256 "e353967d9ac81edbf3dbf638b29fed81295751da7b80eff84e78f5faf84b449e"
+    version "5.0.9"
+    sha256 "0e7751ab7afc89b0bf287f5a333e885fc67f4bde8b0720f7066d26e47caa144e"
 
     livecheck do
       url "https://birdfont.org/purchase.php"
