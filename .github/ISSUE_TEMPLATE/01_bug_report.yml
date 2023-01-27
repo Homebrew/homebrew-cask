@@ -36,7 +36,7 @@ body:
       required: true
   - type: textarea
     attributes:
-      label: Output of `brew doctor --verbose`
+      label: Output of `brew doctor` and `brew config`
       render: shell
     validations:
       required: true
