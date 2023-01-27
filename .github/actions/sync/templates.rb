@@ -63,6 +63,6 @@ modified_paths.each do |modified_path|
 end
 puts
 
-File.open(ENV['GITHUB_OUTPUT'], 'a') do |f|
+File.open(ENV.fetch('GITHUB_OUTPUT'), 'a') do |f|
   f.puts('pull_request=true')
 end

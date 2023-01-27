@@ -173,7 +173,7 @@ jobs:
             cask_dependencies = cask_and_formula_dependencies.select { |d| d.is_a?(Cask::Cask) }.map(&:full_name)
             formula_dependencies = cask_and_formula_dependencies.select { |d| d.is_a?(Formula) }.map(&:full_name)
 
-            File.open(ENV['GITHUB_OUTPUT'], 'a') do |f|
+            File.open(ENV.fetch("GITHUB_OUTPUT"), "a") do |f|
               f.puts "was_installed=#{JSON.generate(was_installed)}"
               f.puts "manual_installer=#{JSON.generate(manual_installer)}"
               f.puts "macos_requirement_satisfied=#{JSON.generate(macos_requirement_satisfied)}"
@@ -207,7 +207,7 @@ jobs:
         id: snapshot
         run: |
           brew ruby -r "$(brew --repository homebrew/cask)/cmd/lib/check.rb" <<'EOF'
-            File.open(ENV['GITHUB_OUTPUT'], 'a') do |f|
+            File.open(ENV.fetch("GITHUB_OUTPUT"), "a") do |f|
               f.puts "before=#{JSON.generate(Check.all)}"
             end
           EOF
