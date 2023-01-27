@@ -26,6 +26,8 @@ cask "gittyup" do
     end
   end
 
+  auto_updates true
+
   app "Gittyup.app"
 
   zap trash: [
