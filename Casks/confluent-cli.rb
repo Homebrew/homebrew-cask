@@ -1,8 +1,11 @@
 cask "confluent-cli" do
-  version "2.38.0"
-  sha256 "9b5519761b74659b1b7e5a4e37ad0e7428909a5a91908fd9f1a94a83e9da761c"
+  arch arm: "arm64", intel: "amd64"
 
-  url "https://s3-us-west-2.amazonaws.com/confluent.cloud/confluent-cli/archives/#{version}/confluent_v#{version}_darwin_amd64.tar.gz",
+  version "3.0.0"
+  sha256 arm:   "5274e870f521f8bbb42923e0dd98d4fef052d3b35c68b989dea0b155b81f5743",
+         intel: "b66b45ae7e6b8785abf958cb4eb1d92579aed75fdad1a09cb94c195311c93cac"
+
+  url "https://s3-us-west-2.amazonaws.com/confluent.cloud/confluent-cli/archives/#{version}/confluent_#{version}_darwin_#{arch}.tar.gz",
       verified: "s3-us-west-2.amazonaws.com/confluent.cloud/confluent-cli/archives/"
   name "Confluent CLI"
   desc "Enables developers to manage Confluent Cloud or Confluent Platform"
