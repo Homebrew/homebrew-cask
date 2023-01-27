@@ -2,8 +2,8 @@ cask "spybuster" do
   version "2.9.53,160"
   sha256 :no_check
 
-  url "https://dl.devmate.com/com.macpaw-labs.snitch/160/1658826378/SpyBuster-160.zip",
-      verified: "devmate.com/"
+  url "https://dl.devmate.com/com.macpaw-labs.snitch/SpyBuster.zip",
+      verified: "dl.devmate.com/com.macpaw-labs.snitch/"
   name "SpyBuster"
   desc "Anti-spyware tool"
   homepage "https://spybuster.app/"
