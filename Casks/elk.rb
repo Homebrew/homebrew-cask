@@ -1,9 +1,9 @@
 cask "elk" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.2.1"
-  sha256 arm:   "55aeefa3706495344b98757c470a88f067f71d3ba3da5791f02e495a87936634",
-         intel: "6ead714773b0bf0575b9822d31c18692a43ac9dd5b074c996e617b1e0a1da7fe"
+  version "0.3.0"
+  sha256 arm:   "623889c29fc7c708d121db73eb8475389daa115e262dbb38c5f58902bd424097",
+         intel: "7088f83531ce3de7a3173499b05e9368661fa5f8d405fc888cea278b557e2b04"
 
   url "https://github.com/elk-zone/elk-native/releases/download/elk-native-v#{version}/Elk_#{version}_macos_#{arch}.dmg"
   name "Elk Native"
