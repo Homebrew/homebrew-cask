@@ -9,9 +9,9 @@ cask "duo-device-health" do
   homepage "https://duo.com/demos/download-and-install-device-health"
 
   livecheck do
-    url :url
+    url "https://dl.duosecurity.com/DuoDeviceHealth-latest.pkg"
     strategy :header_match
-    regex(/DuoDeviceHealth-(\d+(?:\.\d+)*)\.pkg/i)
+    regex(/DuoDeviceHealth[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
   auto_updates true
@@ -19,8 +19,5 @@ cask "duo-device-health" do
 
   pkg "DuoDeviceHealth-#{version}.pkg"
 
-  uninstall pkgutil: [
-    "com.duosecurity.duo-device-health",
-    "com.duosecurity.duoappupdater",
-  ]
+  uninstall pkgutil: "com.duosecurity.duo-device-health"
 end
