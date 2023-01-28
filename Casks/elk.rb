@@ -23,6 +23,7 @@ cask "elk" do
     "~/Library/Caches/zone.elk.native",
     "~/Library/HTTPStorages/zone.elk.native.binarycookies",
     "~/Library/Logs/zone.elk.native",
+    "~/Library/Saved Application State/zone.elk.native.savedState",
     "~/Library/WebKit/zone.elk.native",
   ]
 end
