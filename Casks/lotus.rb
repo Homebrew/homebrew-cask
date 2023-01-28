@@ -8,4 +8,13 @@ cask "lotus" do
   homepage "https://getlotus.app/"
 
   app "Lotus.app"
+
+  zap trash: [
+    "~/Library/Application Support/Lotus",
+    "~/Library/Caches/com.vadimdemedes.Lotus",
+    "~/Library/Caches/com.vadimdemedes.Lotus.ShipIt",
+    "~/Library/HTTPStorages/com.vadimdemedes.Lotus",
+    "~/Library/Preferences/com.vadimdemedes.Lotus.plist",
+    "~/Library/Saved Application State/com.vadimdemedes.Lotus.savedState",
+  ]
 end
