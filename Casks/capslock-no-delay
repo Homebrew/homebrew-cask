@@ -1,0 +1,16 @@
+cask "capslocknodelay" do
+  version "v1.0.8"
+  sha256 :no_check
+
+  url "https://github.com/gkpln3/CapsLockNoDelay/releases/download/V1.0.8/CapsLockNoDelay.dmg",
+      verified: "github.com/gkpln3/CapsLockNoDelay/"
+  name "CapsLockNoDelay"
+  desc "Removes annoying delay when pressing the caps lock on Mac OS"
+  homepage "https://github.com/gkpln3/CapsLockNoDelay"
+
+  app "CapsLockNoDelay.app"
+
+  zap trash: [
+    "~/Library/Containers/gkpln3.CapsLockNoDelay"
+  ]
+end
