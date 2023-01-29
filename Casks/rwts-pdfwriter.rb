@@ -9,6 +9,8 @@ cask "rwts-pdfwriter" do
 
   pkg "RWTS-PDFwriter.pkg"
 
-  uninstall script: { executable: "/Library/Printers/RWTS/PDFwriter/uninstall",
-                      sudo:       true }
+  uninstall script: {
+    executable: "/Library/Printers/RWTS/PDFwriter/uninstall",
+    sudo:       true,
+  }
 end
