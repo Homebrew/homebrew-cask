@@ -47,6 +47,7 @@ cask "google-drive" do
         "~/Library/Preferences/com.google.drivefs.plist",
         "~/Library/Preferences/com.google.drivefs.settings.plist",
         "~/Library/Preferences/Google Drive File Stream Helper.plist",
+        "~/Library/CloudStorage/GoogleDrive-*",
       ],
       launchctl: [
         "com.google.keystone.agent",
