@@ -5,7 +5,7 @@ cask "capslocknodelay" do
   url "https://github.com/gkpln3/CapsLockNoDelay/releases/download/V1.0.8/CapsLockNoDelay.dmg",
       verified: "github.com/gkpln3/CapsLockNoDelay/"
   name "CapsLockNoDelay"
-  desc "Removes annoying delay when pressing the caps lock on Mac OS"
+  desc "Removes delay when pressing the caps lock"
   homepage "https://github.com/gkpln3/CapsLockNoDelay"
 
   app "CapsLockNoDelay.app"
