@@ -2,14 +2,14 @@ cask "plugdata" do
   version "0.6.4"
   sha256 "3812d9137ef7cee59984a90fd712d296c8a6e59b5038fc39313693c04d15f11f"
 
-  url "https://github.com/timothyschoen/PlugData/releases/download/v#{version}/PlugData-MacOS-Universal.pkg"
+  url "https://github.com/timothyschoen/PlugData/releases/download/v#{version}/plugdata-macOS-Universal.pkg"
   name "PlugData"
   desc "Plugin wrapper for PureData"
   homepage "https://github.com/timothyschoen/PlugData"
 
   auto_updates true
 
-  pkg "PlugData-MacOS-Universal.pkg"
+  pkg "plugData-macOS-Universal.pkg"
 
   uninstall pkgutil: [
     "com.plugdata.app.pkg.plugdata",
