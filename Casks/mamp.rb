@@ -1,9 +1,9 @@
 cask "mamp" do
   arch arm: "M1-arm", intel: "Intel-x86"
 
-  version "6.7"
-  sha256 arm:   "bf3412d5d9a0f889e056bdf18861909cbf4df312e1767e298e45c8d9befcdb3a",
-         intel: "a70b40249130a7e43a494997ff9e17cc3bd3403302e5b9385eb79844fae7e8dc"
+  version "6.8"
+  sha256 arm:   "4c010dfbe6bcf1472d1bd2128dac3de69cfebac41960e8dbeb7a7c963a810190",
+         intel: "c1875435e79a0b7b7c7fdc2ec46fb488598424268c08ff7780eceeaf3adb882b"
 
   url "https://downloads.mamp.info/MAMP-PRO/releases/#{version}/MAMP_MAMP_PRO_#{version}-#{arch}.pkg"
   name "MAMP"
