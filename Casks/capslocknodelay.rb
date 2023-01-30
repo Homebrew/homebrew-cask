@@ -9,5 +9,7 @@ cask "capslocknodelay" do
 
   app "CapsLockNoDelay.app"
 
+  uninstall quit: "gkpln3.CapsLockNoDelay"
+
   zap trash: "~/Library/Containers/gkpln3.CapsLockNoDelay"
 end
