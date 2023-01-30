@@ -10,7 +10,5 @@ cask "capslocknodelay" do
 
   app "CapsLockNoDelay.app"
 
-  zap trash: [
-    "~/Library/Containers/gkpln3.CapsLockNoDelay"
-  ]
+  zap trash: "~/Library/Containers/gkpln3.CapsLockNoDelay"
 end
