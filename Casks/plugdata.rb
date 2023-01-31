@@ -9,7 +9,7 @@ cask "plugdata" do
 
   auto_updates true
 
-  pkg "plugData-macOS-Universal.pkg"
+  pkg "plugdata-macOS-Universal.pkg"
 
   uninstall pkgutil: [
     "com.plugdata.app.pkg.plugdata",
