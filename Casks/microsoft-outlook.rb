@@ -20,8 +20,8 @@ cask "microsoft-outlook" do
     sha256 "bddede85956713be21fdb5ab72be07ecefd05552752e8e60c649e6a15fd0a2c2"
   end
   on_big_sur :or_newer do
-    version "16.69.23010700"
-    sha256 "a4bb58f81773a7fd502b240ff94ece1e2c546f2ad45e40bd253dddbfb99b805b"
+    version "16.69.23011802"
+    sha256 "98671579ccd34371e260784314b08ce85865f9d37ded1a2ae98b53fff154f0a5"
   end
 
   url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Outlook_#{version}_Installer.pkg",
@@ -31,8 +31,8 @@ cask "microsoft-outlook" do
   homepage "https://products.office.com/en-us/outlook/email-and-calendar-software-microsoft-outlook"
 
   livecheck do
-    url "https://go.microsoft.com/fwlink/p/?linkid=525137"
-    strategy :header_match
+    url "https://learn.microsoft.com/en-us/officeupdates/update-history-office-for-mac"
+    regex(%r{href="[^"]+/MacAutoupdate/Microsoft[._-]Outlook[._-]([.\d]+)[._-](?:Updater|Installer)\.pkg"}i)
   end
 
   auto_updates true
