@@ -8,7 +8,7 @@ cask "geotag" do
   homepage "https://www.snafu.org/GeoTag/"
 
   livecheck do
-    url "https://www.snafu.org/GeoTag/"
+    url :homepage
     regex(/href=.*?GeoTag[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
