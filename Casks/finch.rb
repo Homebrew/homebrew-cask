@@ -12,10 +12,13 @@ cask "finch" do
 
   pkg "Finch-v#{version}-#{arch}.pkg"
 
-  uninstall script: {
-    executable: "/Applications/Finch/uninstall.sh",
-    sudo:       true,
-  }
+  uninstall delete:  [
+              "/opt/finch",
+              "/private/var/run/finch-lima",
+              "/private/etc/sudoers.d/finch-lima",
+              "/Applications/Finch",
+            ],
+            pkgutil: "org.Finch.v#{version}"
 
   zap trash: "~/.finch"
 end
