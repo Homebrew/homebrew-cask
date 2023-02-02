@@ -4,7 +4,7 @@ cask "pokemon-tcg-live" do
 
   url "https://installer.studio-prod.pokemon.com/installer/PokemonTCGLiveInstaller_Mac.dmg"
   name "Pokemon Trading Card Game Live"
-  desc "Experience the newest way to play the Pokémon Trading Card Game!"
+  desc "Play the Pokémon Trading Card Game"
   homepage "https://tcg.pokemon.com/en-us/tcgl/"
 
   livecheck do
