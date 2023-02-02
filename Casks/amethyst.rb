@@ -9,8 +9,8 @@ cask "amethyst" do
     end
   end
   on_sierra :or_newer do
-    version "0.16.1"
-    sha256 "52663893e6547d2dd85ba15b871ec222ce4f62dc7150e5ff20d592f9b85a47c5"
+    version "0.17.0"
+    sha256 "c3f0e29b57916d1282c9b4d8cf10f973c36e31340ef618ed8ff1ec1896e799a4"
     url "https://github.com/ianyh/Amethyst/releases/download/v#{version}/Amethyst.zip",
         verified: "github.com/ianyh/Amethyst/"
 
