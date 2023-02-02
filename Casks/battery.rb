@@ -1,6 +1,6 @@
 cask "battery" do
-  version "1.0.3"
-  sha256 "71e699bcf634f481a0b1c54a2035a04e9e9fec4463c9dbfe95d0370a89aaaabc"
+  version "1.0.4"
+  sha256 "cf17f65795e85495c6ad0665c527e7c80c249c512f2da8b49e9be598083cb94f"
 
   url "https://github.com/actuallymentor/battery/releases/download/v#{version}/battery-#{version}-arm64.dmg"
   name "Battery"
