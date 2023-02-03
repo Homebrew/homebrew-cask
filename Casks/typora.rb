@@ -9,7 +9,7 @@ cask "typora" do
 
   livecheck do
     url "https://www.typora.io/download/dev_update.xml"
-    regex(/Typora-(\d+(?:\.\d+)+)\.dmg/i)
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
