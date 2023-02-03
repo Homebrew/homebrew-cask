@@ -2,7 +2,7 @@ cask "panoply" do
   version "5.2.3"
   sha256 "b8cfdf1098104ccfef5e0980aefbb8ca3d080845cf602fc11cf44ac837cbc16a"
 
-  url "https://www.giss.nasa.gov/tools/panoply/download/PanoplyMacOS-#{version}.dmg"
+  url "https://www.giss.nasa.gov/tools/panoply/download/PanoplyMacOS-#{arch}#{version}.dmg"
   name "Panoply netCDF, HDF and GRIB Data Viewer"
   desc "Plot geo-referenced data from netCDF, HDF, and GRIB"
   homepage "https://www.giss.nasa.gov/tools/panoply/"
