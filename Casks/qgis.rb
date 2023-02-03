@@ -1,6 +1,6 @@
 cask "qgis" do
-  version "3.28.2,20221216_124853"
-  sha256 "8254cd00f8f2deb35661df28037b59fd86124b738a72c0239ef216ec918f516d"
+  version "3.28.3,20230131_115807"
+  sha256 "d156e647553d96c7edee973909f945f30f9d1666067af27eabede48caf653776"
 
   url "https://qgis.org/downloads/macos/pr/qgis_pr_final-#{version.csv.first.dots_to_underscores}_#{version.csv.second}.dmg"
   name "QGIS"
