@@ -1,5 +1,5 @@
 cask "prismlauncher" do
-  version "6.1"
+  version "6.2"
 
   on_mojave :or_older do
     sha256 "c6c2b68d2210d672eb2042b23814e79405300770a15c5c18eeaf7dbdb86ed6ce"
