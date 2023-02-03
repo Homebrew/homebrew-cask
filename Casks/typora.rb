@@ -1,6 +1,6 @@
 cask "typora" do
-  version "1.4.8"
-  sha256 "fb4caf8eb17513ba1d9a8dcbdf5ec591076f80ab9d6cbdacc71569dcc0a068b8"
+  version "1.5.5"
+  sha256 "a4db40148a62a32692a99b43512db0f68a38bf973b797cdf59e7f8dbb86badc3"
 
   url "https://download.typora.io/mac/Typora-#{version}.dmg"
   name "Typora"
@@ -9,11 +9,11 @@ cask "typora" do
 
   livecheck do
     url "https://www.typora.io/download/dev_update.xml"
-    regex(/Typora-(\d+(?:\.\d+)+)\.dmg/i)
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :big_sur"
 
   app "Typora.app"
 
