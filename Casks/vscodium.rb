@@ -1,9 +1,9 @@
 cask "vscodium" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.74.3.23010"
-  sha256 arm:   "cbc07a2ca0c6b2c567440763a69c2b78eae409ab8fe723b04e5c8c6f83641d52",
-         intel: "13246a49859e3fb70138e15ad41a48fb2cd22d58010d0044989aa7d4ae5ef0b0"
+  version "1.75.0.23033"
+  sha256 arm:   "dee405606874abb01596e7dcdddf73648a17383a043a5a0a2fa426678143eefb",
+         intel: "831c8f9cf8bbb4059801485a08697362012e9364bab2d401deec410501054159"
 
   url "https://github.com/VSCodium/vscodium/releases/download/#{version}/VSCodium.#{arch}.#{version}.dmg"
   name "VSCodium"
