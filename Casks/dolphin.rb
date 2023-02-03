@@ -12,7 +12,13 @@ cask "dolphin" do
     strategy :git
   end
 
+  conflicts_with cask: [
+    "homebrew/cask-versions/dolphin-beta",
+    "homebrew/cask-versions/dolphin-dev",
+  ]
+
   app "Dolphin.app"
+  app "Dolphin Updater.app"
 
   zap trash: [
     "~/Library/Application Support/Dolphin",
