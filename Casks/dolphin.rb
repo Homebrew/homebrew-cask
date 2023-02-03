@@ -18,7 +18,6 @@ cask "dolphin" do
   ]
 
   app "Dolphin.app"
-  app "Dolphin Updater.app"
 
   zap trash: [
     "~/Library/Application Support/Dolphin",
