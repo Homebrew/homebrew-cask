@@ -9,10 +9,10 @@ cask "vnc-server" do
 
   livecheck do
     url "https://www.realvnc.com/en/connect/download/vnc/macos/"
-    regex(%r{href=.*?/VNC[._-]Server[._-]v?(\d+(?:\.\d+)*)[._-]MacOSX[._-]x86[._-]64\.pkg}i)
+    regex(%r{href=.*?/VNC[._-]Server[._-]v?(\d+(?:\.\d+)*)[._-]MacOSX[._-]universal\.pkg}i)
   end
 
-  pkg "VNC-Server-#{version}-MacOSX-x86_64.pkg"
+  pkg "VNC-Server-#{version}-MacOSX-universal.pkg"
 
   uninstall_preflight do
     system_command "/Applications/RealVNC/Uninstall VNC Server.app/Contents/Resources/uninstaller.sh",
