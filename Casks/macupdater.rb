@@ -13,6 +13,7 @@ cask "macupdater" do
   end
 
   auto_updates true
+  depends_on macos: ">= :ventura"
 
   app "MacUpdater.app"
   binary "#{appdir}/MacUpdater.app/Contents/Resources/macupdater_client"
