@@ -26,7 +26,9 @@ cask "cog" do
   uninstall quit: "org.cogx.cog"
 
   zap trash: [
+    "~/Library/Application Scripts/org.cogx.cog",
     "~/Library/Application Support/Cog",
     "~/Library/Caches/org.cogx.cog",
+    "~/Library/Preferences/org.cogx.cog.plist",
   ]
 end
