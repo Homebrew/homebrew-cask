@@ -8,10 +8,12 @@ cask "jitouch" do
   desc "Multi-touch gestures editor"
   homepage "https://www.jitouch.com/"
 
+  depends_on macos: ">= :high_sierra"
+
   pkg "Install-Jitouch.pkg"
 
-  uninstall quit    "com.jitouch.Jitouch",
-            pkgutil "com.jitouch.Jitouch"
+  uninstall quit:    "com.jitouch.Jitouch",
+            pkgutil: "com.jitouch.Jitouch"
 
   zap trash: "~/Library/Preferences/com.jitouch.Jitouch.plist"
 end
