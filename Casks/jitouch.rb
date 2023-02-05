@@ -3,22 +3,10 @@ cask "jitouch" do
   desc "Multi-touch gestures editor"
   homepage "https://www.jitouch.com/"
   
-  depends_on macos: :snow_leopard
+  depends_on macos: :el_capitan
   
   if MacOS.version <= :mojave
-    if MacOS.version <= :snow_leopard
-      version "2.42"
-      sha256 :no_check
-      url "https://www.jitouch.com/jitouch.zip"
-    elsif MacOS.version <= :mountain_lion
-      version "2.52"
-      sha256 :no_check
-      url "https://www.jitouch.com/jitouch_mountain_lion.zip"
-    elsif MacOS.version <= :mavericks
-      version "2.53"
-      sha256 :no_check
-      url "https://www.jitouch.com/jitouch_mavericks.zip"
-    elsif MacOS.version <= :el_capitan
+    if MacOS.version <= :el_capitan
       version "2.63"
       sha256 :no_check
       url "https://www.jitouch.com/jitouch_el_capitan.zip"
