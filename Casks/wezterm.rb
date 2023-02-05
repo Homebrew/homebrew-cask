@@ -18,7 +18,7 @@ cask "wezterm" do
 
   conflicts_with cask: "homebrew/cask-versions/wezterm-nightly"
 
-  app "WezTerm-macos-#{version.csv.first}-#{version.csv.second}/WezTerm.app"
+  app "WezTerm.app"
 
   %w[
     wezterm
