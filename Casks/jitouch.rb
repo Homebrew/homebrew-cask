@@ -23,7 +23,7 @@ cask "jitouch" do
     prefpane "jitouch/Jitouch.prefPane"
   else
     version "2.82.1"
-    sha256 "b75739545f7b79b63e284ae00c08be810a80bb18f124d857108a7b86914641d6"
+    sha256 "3f5194a4da6fe19d17c843fa8a876131f7878905dcbb2e1d740d34d286d740c4"
     url "https://github.com/JitouchApp/Jitouch/releases/download/v#{version}/Install-Jitouch.pkg", verified: "github.com/JitouchApp/Jitouch/"
     
     livecheck do
