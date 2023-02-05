@@ -32,6 +32,7 @@ cask "jitouch" do
     end
     
     pkg "Install-Jitouch.pkg"
+    uninstall pkgutil: "com.jitouch.Jitouch"
   end
 
   zap trash: "~/Library/Preferences/com.jitouch.Jitouch.plist"
