@@ -1,7 +1,6 @@
 cask "vmware-fusion" do
-  livecheck_folder = "x86"
-  version "13.0.0,20802013"
-  sha256 "40bb9fbd4b2a18b48138a7fb3285d89187d50caab10506cff81b367b6edc858d"
+  version "13.0.1,21139760"
+  sha256 "e92ebc38fd5b1a693168f837a31932558a641c84fb57ad72f55e47c8ac4332df"
 
   url "https://download3.vmware.com/software/FUS-#{version.csv.first.no_dots}/VMware-Fusion-#{version.csv.first}-#{version.csv.second}_universal.dmg"
   name "VMware Fusion"
@@ -10,7 +9,7 @@ cask "vmware-fusion" do
 
   livecheck do
     url "https://softwareupdate.vmware.com/cds/vmw-desktop/fusion.xml"
-    regex(%r{fusion/(\d+(?:\.\d+)+)/(\d+)/#{livecheck_folder}}i)
+    regex(%r{fusion/(\d+(?:\.\d+)+)/(\d+)/x86}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
