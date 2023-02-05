@@ -3,7 +3,7 @@ cask "jitouch" do
   desc "Multi-touch gestures editor"
   homepage "https://www.jitouch.com/"
   
-  depends_on macos: :el_capitan
+  depends_on macos: ">= :el_capitan"
   
   if MacOS.version <= :mojave
     if MacOS.version <= :el_capitan
