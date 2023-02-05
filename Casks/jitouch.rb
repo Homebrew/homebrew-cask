@@ -43,7 +43,7 @@ cask "jitouch" do
       strategy :github_latest
     end
     
-    pkg: "Install-Jitouch.pkg"
+    pkg "Install-Jitouch.pkg"
   end
 
   zap trash: "~/Library/Preferences/com.jitouch.Jitouch.plist"
