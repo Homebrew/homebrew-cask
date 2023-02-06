@@ -5,6 +5,7 @@ on: pull_request
 env:
   HOMEBREW_DEVELOPER: 1
   HOMEBREW_NO_AUTO_UPDATE: 1
+  HOMEBREW_NO_INSTALL_FROM_API: 1
   HOMEBREW_GITHUB_API_TOKEN: ${{ github.token }}
 
 concurrency:
