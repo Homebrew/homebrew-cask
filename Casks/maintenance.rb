@@ -44,8 +44,8 @@ cask "maintenance" do
     depends_on macos: :monterey
   end
   on_ventura do
-    version "2.9.8"
-    sha256 "99b36dc94c3c3390f66d433c10787473f98b6c600ed75d5a9c5d08bc70eb1e95"
+    version "2.9.9"
+    sha256 "7c0b1d0444d16a6c4ac369cedccb49ac86026c648d590db17cb26f9b40d99314"
 
     depends_on macos: :ventura
   end

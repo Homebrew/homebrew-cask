@@ -16,7 +16,9 @@ cask "wezterm" do
     end
   end
 
-  app "WezTerm-macos-#{version.csv.first}-#{version.csv.second}/WezTerm.app"
+  conflicts_with cask: "homebrew/cask-versions/wezterm-nightly"
+
+  app "WezTerm.app"
 
   %w[
     wezterm
@@ -25,6 +27,15 @@ cask "wezterm" do
     strip-ansi-escapes
   ].each do |tool|
     binary "#{appdir}/WezTerm.app/Contents/MacOS/#{tool}"
+  end
+
+  preflight do
+    # Move "WezTerm-macos-#{version}/WezTerm.app" out of the subfolder
+    staged_subfolder = staged_path.glob(["WezTerm-*", "wezterm-*"]).first
+    if staged_subfolder
+      FileUtils.mv(staged_subfolder/"WezTerm.app", staged_path)
+      FileUtils.rm_rf(staged_subfolder)
+    end
   end
 
   zap trash: [
