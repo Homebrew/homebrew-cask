@@ -5,7 +5,7 @@ cask "zoom-for-it-admins" do
   url "https://cdn.zoom.us/prod/#{version}/ZoomInstallerIT.pkg"
   name "Zoom for IT Admins"
   desc "Video communication and virtual meeting platform"
-  homepage "https://www.zoom.us"
+  homepage "https://www.zoom.us/"
 
   livecheck do
     cask "zoom"
