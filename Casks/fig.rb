@@ -1,6 +1,6 @@
 cask "fig" do
-  version "2.13.1"
-  sha256 "9e496d5136cc6685fcf3b1917a56617f20179735285f74a9ef0cbf2c2f0556ec"
+  version "2.14.0"
+  sha256 "8ff27e4225141d3880ccec85f38ea9e372f9a9e5c9795cb88552bc8c5a78d674"
 
   url "https://repo.fig.io/generic/stable/asset/#{version}/universal/fig.dmg"
   name "fig"
