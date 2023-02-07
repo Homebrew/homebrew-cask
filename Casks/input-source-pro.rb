@@ -1,15 +1,15 @@
 cask "input-source-pro" do
-  version "2.1.15-beta,380"
+  version "2.1.15-beta"
   sha256 "a080357ee16f2b7289bd5079bf65a50093698e8832f917901cc56485696e0da7"
 
-  url "https://inputsource.pro/beta/Input%20Source%20Pro%20#{version.csv.first}.dmg"
+  url "https://inputsource.pro/beta/Input%20Source%20Pro%20#{version}.dmg"
   name "Input Source Pro"
   desc "Tool for multi-language users"
   homepage "https://inputsource.pro/"
 
   livecheck do
     url "https://inputsource.pro/beta/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
