@@ -1,11 +1,15 @@
 cask "website-watchman" do
-  version "2.13.0,2.13.01"
+  version "3.1.8"
   sha256 :no_check
 
   url "https://peacockmedia.software/mac/watchman/watchman.dmg"
-  appcast "https://peacockmedia.software/mac/watchman/"
   name "Website Watchman"
   homepage "https://peacockmedia.software/mac/watchman/"
+
+  livecheck do
+    url :homepage
+    regex(/Version\s+(\d+(?:\.\d+)*)\s*released/i)
+  end
 
   app "Website Watchman.app"
 end

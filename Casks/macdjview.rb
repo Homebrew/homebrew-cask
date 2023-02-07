@@ -4,9 +4,12 @@ cask "macdjview" do
 
   url "https://downloads.sourceforge.net/windjview/MacDjView/#{version}/MacDjView-#{version}.dmg.gz",
       verified: "downloads.sourceforge.net/windjview/"
-  appcast "https://sourceforge.net/projects/windjview/rss?path=/MacDjView"
   name "MacDjView"
   homepage "https://windjview.sourceforge.io/"
+
+  livecheck do
+    url "https://sourceforge.net/projects/windjview/rss?path=/MacDjView"
+  end
 
   depends_on macos: "<= :mojave"
 

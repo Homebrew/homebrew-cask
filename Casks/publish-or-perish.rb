@@ -1,11 +1,15 @@
 cask "publish-or-perish" do
-  version "7.28.3033.7654,2020.12.14.1151"
+  version "8.0.3590"
   sha256 :no_check
 
   url "https://harzing.com/download/PoP7Mac.pkg"
-  appcast "https://harzing.com/download/pop7mac.txt"
   name "Harzing Publish or Perish"
   homepage "https://harzing.com/resources/publish-or-perish"
+
+  livecheck do
+    url "https://harzing.com/download/pop7mac.txt"
+    regex(/Version=(\d+(?:\.\d+)*)/i)
+  end
 
   depends_on macos: ">= :high_sierra"
 

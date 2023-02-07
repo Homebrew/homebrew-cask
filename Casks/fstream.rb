@@ -3,9 +3,13 @@ cask "fstream" do
   sha256 :no_check
 
   url "https://www.sourcemac.com/fstream_FStream.tgz"
-  appcast "https://www.sourcemac.com/sparkle.php?id=156&content=xml"
   name "FStream"
   homepage "https://www.sourcemac.com/?page=fstream"
+
+  livecheck do
+    url "https://www.sourcemac.com/sparkle.php?id=156&content=xml"
+    strategy :sparkle
+  end
 
   app "FStream.app"
 end

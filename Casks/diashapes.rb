@@ -4,9 +4,12 @@ cask "diashapes" do
 
   url "https://downloads.sourceforge.net/dia-installer/diashapes/#{version}/diashapes-#{version}.dmg",
       verified: "sourceforge.net/dia-installer/diashapes/"
-  appcast "https://sourceforge.net/projects/dia-installer/rss?path=/diashapes"
   name "Dia"
   homepage "http://dia-installer.de/"
+
+  livecheck do
+    url "https://sourceforge.net/projects/dia-installer/rss?path=/diashapes"
+  end
 
   app "Diashapes.app"
 end
