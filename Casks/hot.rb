@@ -1,6 +1,6 @@
 cask "hot" do
-  version "1.8.0"
-  sha256 "2e43e3c2e6e2d56e5e78db83a6e841a3c6ca0a026e6f20d0d821db506d6cd427"
+  version "1.9.1"
+  sha256 "2c104b0d9e9e6966abc2be33d8785050663cfe3dee1e3fa5fa3d8a3fb41dedd3"
 
   url "https://github.com/macmade/Hot/releases/download/#{version}/Hot.app.zip"
   name "Hot"
