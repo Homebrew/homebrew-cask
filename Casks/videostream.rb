@@ -7,11 +7,6 @@ cask "videostream" do
   desc "Stream media from your computer to Chromecast"
   homepage "https://getvideostream.com/"
 
-  livecheck do
-    url "https://videostream-cdn.s3.amazonaws.com/videostream-native-updates/macOS/manifest.json"
-    regex(/CurrentVersion:\s*'([^']+)'/)
-  end
-
   pkg "Videostream.pkg"
 
   uninstall launchctl: [
