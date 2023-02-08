@@ -7,11 +7,6 @@ cask "nvidia-geforce-now" do
   desc "Cloud gaming platform"
   homepage "https://www.nvidia.com/en-us/geforce-now/download/"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
-
   depends_on macos: ">= :el_capitan"
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
