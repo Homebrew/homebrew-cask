@@ -9,7 +9,7 @@ cask "coherence" do
   homepage "https://bzgapps.com/coherence"
 
   livecheck do
-    url "https://bzgdownloads.s3.amazonaws.com/Coherence/App+Cast/Coherence+X+#{version.major}+appcast.xml"
+    url "https://bzgdownloads.s3.amazonaws.com/Coherence/App+Cast/appcast#{version.major}.xml"
     strategy :sparkle
   end
 
