@@ -1,8 +1,11 @@
 cask "phpwebstudy" do
-  version "1.0.28"
-  sha256 "d9534728010f51d7e31ec2d223d8ffb43a9d56d031b2b0e188fc44bc9a224eec"
+  arch arm: "-arm64"
 
-  url "https://github.com/xpf0000/PhpWebStudy/releases/download/v#{version}/PhpWebStudy-#{version}-universal-mac.zip",
+  version "1.0.33"
+  sha256 arm:   "62f4c91de1655b333623fc018b9ebb7c1ad453827f831372be89264993118016",
+         intel: "7723a0ae99f5e966107eccc5ca8b5556b77827b82bf337585968592e7bb1f1d7"
+
+  url "https://github.com/xpf0000/PhpWebStudy/releases/download/v#{version}/PhpWebStudy-#{version}#{arch}-mac.zip",
       verified: "github.com/xpf0000/PhpWebStudy/"
   name "PhpWebStudy"
   desc "PHP and Web develop environment manager"

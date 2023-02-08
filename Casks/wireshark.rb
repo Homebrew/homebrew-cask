@@ -2,9 +2,9 @@ cask "wireshark" do
   arch arm: "Arm", intel: "Intel"
   livecheck_arch = on_arch_conditional arm: "arm", intel: "x86-"
 
-  version "3.6.8"
-  sha256 arm:   "ae1735b05050da20d1a8d2d5c209bcd20743745ac23473bf034631f5b963970a",
-         intel: "c1e54f1af933486ac60da94bb1a366df5125959ef416e1a93c2a2fb9de78efa0"
+  version "4.0.3"
+  sha256 arm:   "6f942be07fbbdaf53118e457ccb0392b00c2b5854167d77884a7b3492eb8b6a6",
+         intel: "aca5a032af016e5bf61f2b64dfc3c64cb3c51276768ca5fc8cb5f5cd264b559a"
 
   url "https://2.na.dl.wireshark.org/osx/Wireshark%20#{version}%20#{arch}%2064.dmg"
   name "Wireshark"

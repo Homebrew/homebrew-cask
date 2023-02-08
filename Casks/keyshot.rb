@@ -1,6 +1,6 @@
 cask "keyshot" do
-  version "11.2.1.5"
-  sha256 "5be175a764bc7d64cf41fd1bc8bd429a55cb720b45c45469df495e18604111ab"
+  version "11.3.2.3"
+  sha256 "0c6d96efd6edd6754d58ca29c83aa4cd4fa03a71724d7df7b51bb6624252b920"
 
   url "https://download.keyshot.com/keyshot#{version.major}/keyshot_mac64_#{version}.pkg"
   name "KeyShot"

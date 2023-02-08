@@ -1,21 +1,26 @@
 cask "sitesucker-pro" do
-  if MacOS.version <= :mojave
+  on_mojave :or_older do
     version "3.2.7"
     sha256 "dd61a113ad86b580e0faf97b4aa86290e038bb3e098f2d19e67fc9e194ce1a3e"
-  else
-    version "5.0.4"
-    sha256 "e2fbbb01c3d90e10f97897ecf09c3356ef6e17d61a593fb770c58c04cef8eb7a"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_catalina :or_newer do
+    version "5.1.2"
+    sha256 "79c1ec2fc740b72fed05381270d28f6799dbe36abcff97f56c6211a23f408dc8"
+
+    livecheck do
+      url "https://ricks-apps.com/osx/sitesucker/history.html"
+      regex(/Version\s*(\d+(?:\.\d+)+)/i)
+    end
   end
 
   url "https://ricks-apps.com/osx/sitesucker/archive/#{version.major}.x/#{version.major_minor}.x/#{version}/SiteSucker_Pro_#{version}.dmg"
   name "SiteSucker Pro"
   desc "Website downloader tool"
   homepage "https://ricks-apps.com/osx/sitesucker/index.html"
-
-  livecheck do
-    url "https://ricks-apps.com/osx/sitesucker/history.html"
-    regex(/Version\s*(\d+(?:\.\d+)+)/i)
-  end
 
   auto_updates true
   depends_on macos: ">= :mojave"

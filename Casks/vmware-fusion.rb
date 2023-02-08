@@ -1,25 +1,15 @@
 cask "vmware-fusion" do
-  if MacOS.version <= :catalina
-    livecheck_folder = "core"
-    version "12.1.2,17964953"
-    sha256 "873049d4080168b56085c5b67be1d4eeb14debc0e6cf176dbd52c78518d0b883"
+  version "13.0.1,21139760"
+  sha256 "e92ebc38fd5b1a693168f837a31932558a641c84fb57ad72f55e47c8ac4332df"
 
-    url "https://download3.vmware.com/software/fusion/file/VMware-Fusion-#{version.csv.first}-#{version.csv.second}.dmg"
-  else
-    livecheck_folder = "x86"
-    version "12.2.4,20071091"
-    sha256 "0b0516f4d5f70e759ae08a40d2e14f487c0b66d84ee467e38972ad013e1f6c7f"
-
-    url "https://download3.vmware.com/software/FUS-#{version.csv.first.no_dots}/VMware-Fusion-#{version.csv.first}-#{version.csv.second}_x86.dmg"
-  end
-
+  url "https://download3.vmware.com/software/FUS-#{version.csv.first.no_dots}/VMware-Fusion-#{version.csv.first}-#{version.csv.second}_universal.dmg"
   name "VMware Fusion"
   desc "Create, manage, and run virtual machines"
   homepage "https://www.vmware.com/products/fusion.html"
 
   livecheck do
     url "https://softwareupdate.vmware.com/cds/vmw-desktop/fusion.xml"
-    regex(%r{fusion/(\d+(?:\.\d+)+)/(\d+)/#{livecheck_folder}}i)
+    regex(%r{fusion/(\d+(?:\.\d+)+)/(\d+)/x86}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
@@ -27,7 +17,7 @@ cask "vmware-fusion" do
 
   auto_updates true
   conflicts_with cask: "vmware-fusion-tech-preview"
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :monterey"
 
   app "VMware Fusion.app"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/VMware OVF Tool/ovftool"
@@ -97,8 +87,4 @@ cask "vmware-fusion" do
     "~/Library/Saved Application State/com.vmware.fusion.savedState",
     "~/Library/WebKit/com.vmware.fusion",
   ]
-
-  caveats do
-    kext if MacOS.version == :catalina
-  end
 end

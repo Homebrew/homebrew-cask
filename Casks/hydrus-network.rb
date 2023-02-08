@@ -1,8 +1,8 @@
 cask "hydrus-network" do
-  version "500"
-  sha256 "488f3c35e1361ebdb4c9e77b8a7921ba5b119a41092276f7fa20f1c680730f6c"
+  version "514"
+  sha256 "d94a12f464096559b74643aac23e8d6f49680323a5e0e49f898b182bd93444f3"
 
-  url "https://github.com/hydrusnetwork/hydrus/releases/download/v#{version}/Hydrus.Network.#{version}.-.macOS.Qt5.-.App.dmg",
+  url "https://github.com/hydrusnetwork/hydrus/releases/download/v#{version}/Hydrus.Network.#{version}.-.macOS.-.App.dmg",
       verified: "github.com/hydrusnetwork/hydrus/"
   name "hydrus-network"
   desc "Personal booru-style media tagger to organize your media"

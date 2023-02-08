@@ -1,6 +1,6 @@
 cask "thorium" do
-  version "2.1.0"
-  sha256 "924fe26c6ddb12a65c05de7573138ef10a3a482801341f5aecf39619d5d5db53"
+  version "2.2.0"
+  sha256 "a9d39609190a5db06de10edc3d94b069ed89737681f395cad8c1877d52c77c2a"
 
   url "https://github.com/edrlab/thorium-reader/releases/download/v#{version}/Thorium-#{version}.dmg",
       verified: "github.com/edrlab/thorium-reader/"

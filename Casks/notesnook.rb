@@ -1,9 +1,9 @@
 cask "notesnook" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.2.1"
-  sha256 arm:   "cfed7325c97508b14f68a6eadf3554a47121072555467feb3212eac451e3d7ab",
-         intel: "8372d60fedcc957445d1e6c250c651c3bf98b554c129b3469910b7cbea48142a"
+  version "2.4.0"
+  sha256 arm:   "b4cd0ea5acb6595034bd8819e3c0ef2593e0e4d086ba17b2ae4aaaf6f0cec192",
+         intel: "0511e01c0d51394c42b256f1df03cd177bd9039c68b7bc0186b502a7b673ccf9"
 
   url "https://github.com/streetwriters/notesnook/releases/download/v#{version}/notesnook_mac_#{arch}.dmg",
       verified: "github.com/streetwriters/notesnook/"
@@ -15,6 +15,8 @@ cask "notesnook" do
     url "https://notesnook.com/releases/darwin/latest-mac.yml"
     strategy :electron_builder
   end
+
+  auto_updates true
 
   app "Notesnook.app"
 

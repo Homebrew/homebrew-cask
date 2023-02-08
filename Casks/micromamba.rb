@@ -1,19 +1,22 @@
 cask "micromamba" do
   arch arm: "arm64", intel: "64"
 
-  version "0.26.0"
-  sha256 arm:   "4989c0a5c94d0917d7e1941036ea3adf3da287c4e8249ac680fc41134210ea60",
-         intel: "08b52c26ce58c5c0cb94ed420333a09897c48855ed5ed781f50a2ef7801349d7"
+  version "1.3.0,0"
+  sha256 arm:   "953834727eb3f9ab24f22d87675c8e27fb1ed4fe33890095bb39d4246dfe67a6",
+         intel: "15bee7d131a4b63af3929877062813ad77c649a8844e08b081347ce0b7f45510"
 
-  url "https://micro.mamba.pm/api/micromamba/osx-#{arch}/#{version}",
-      verified: "micro.mamba.pm/api/micromamba/"
+  url "https://api.anaconda.org/download/conda-forge/micromamba/#{version.csv.first}/osx-#{arch}/micromamba-#{version.csv.first}-#{version.csv.second}.tar.bz2",
+      verified: "api.anaconda.org/download/conda-forge/micromamba/"
   name "micromamba"
   desc "Tiny version of the Mamba cross-platform package manager"
   homepage "https://mamba.readthedocs.io/en/latest/installation.html#micromamba"
 
   livecheck do
     url "https://api.anaconda.org/release/conda-forge/micromamba/latest"
-    regex(%r{micromamba/(\d+(?:\.\d+)+)/osx-#{arch}/}i)
+    regex(%r{osx-#{arch}/micromamba-(\d+(?:\.\d+)+)-(\d)\.t}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+    end
   end
 
   binary "bin/micromamba"

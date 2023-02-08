@@ -1,6 +1,6 @@
 cask "sparkle" do
-  version "2.2.2"
-  sha256 "babbe8f1582479c5c14792b893ba78a5751c5964cb2326588ae7125708bda09c"
+  version "2.3.1"
+  sha256 "5f07032732736981b3244bbdca140886ef0d07a3149140de2cf78bbfaa070a75"
 
   url "https://github.com/sparkle-project/Sparkle/releases/download/#{version}/Sparkle-#{version}.tar.xz",
       verified: "github.com/sparkle-project/Sparkle/"

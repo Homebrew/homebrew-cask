@@ -8,9 +8,8 @@ cask "copytranslator" do
   desc "Tool that translates text in real-time while copying"
   homepage "https://copytranslator.github.io/"
 
-  # We need to check all releases since not all releases are for macOS.
   livecheck do
-    url "https://github.com/CopyTranslator/CopyTranslator/releases"
+    url "https://github.com/CopyTranslator/CopyTranslator/blob/master/docs/.vuepress/public/wiki/mac.md"
     strategy :page_match
     regex(%r{href=.*?/copytranslator[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end

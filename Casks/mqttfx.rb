@@ -8,7 +8,7 @@ cask "mqttfx" do
   homepage "https://softblade.de/en/welcome/"
 
   livecheck do
-    url "https://softblade.de/en/download-2/"
+    url "https://softblade.de/download/"
     regex(/href=.*?mqttfx[._-]v?(\d+(?:\.\d+)+)-macos\.dmg/i)
   end
 

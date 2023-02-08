@@ -5,7 +5,7 @@ cask "treesheets" do
   url "https://strlen.com/treesheets/treesheets_osx.zip"
   name "TreeSheets"
   desc "Hierarchical spreadsheet and outline application"
-  homepage "http://strlen.com/treesheets/"
+  homepage "https://strlen.com/treesheets/"
 
   livecheck do
     url :url

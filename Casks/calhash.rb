@@ -1,13 +1,27 @@
 cask "calhash" do
-  if MacOS.version <= :catalina
+  on_catalina do
     version "1.0.5"
     sha256 "bb15c18839837bdeda203a8a916b09b4f2b971e5bba10b603f290130939d3bf7"
-  elsif MacOS.version <= :big_sur
+
+    depends_on macos: :catalina
+  end
+  on_big_sur do
     version "1.1.1"
     sha256 "66b2de6f514119b3ddf915310b94486d24d3cc6733c74af97e367b76cb2d7478"
-  else
-    version "1.1.8"
-    sha256 "52d28938f2901cd2365261f856b6a4f41d5a6d2357dd43cb1193102d5bbfce40"
+
+    depends_on macos: :big_sur
+  end
+  on_monterey do
+    version "1.1.9"
+    sha256 "6a8b9ddd3ed4acf4e8a84c8fe78a6ed783c526d84d38bf00acaf1b37311bf223"
+
+    depends_on macos: :monterey
+  end
+  on_ventura do
+    version "1.2.0"
+    sha256 "b09df7b7c93b0bd0476a0e5c2dd665f94b0eeec5dbfe64b593765a5de002c537"
+
+    depends_on macos: :ventura
   end
 
   url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete(".")}/CalHash.dmg"
@@ -19,8 +33,6 @@ cask "calhash" do
     url :homepage
     regex(/>\s*CalHash\s+v?(\d+(?:\.\d+)+)\s+for\s+[\w\s.-]*\s+#{MacOS.version}\s*</i)
   end
-
-  depends_on macos: "<= :monterey"
 
   app "CalHash.app"
 

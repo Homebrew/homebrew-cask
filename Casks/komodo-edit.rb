@@ -7,15 +7,9 @@ cask "komodo-edit" do
   desc "Text editor"
   homepage "https://www.activestate.com/komodo-edit/"
 
-  livecheck do
-    url "https://www.activestate.com/komodo-ide/downloads/edit"
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/Komodo-Edit-(\d+(?:\.\d+)*)-(\d+)-macosx-x86_64\.dmg}i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
-    end
-  end
-
   app "Komodo Edit #{version.major}.app"
+
+  caveats do
+    discontinued
+  end
 end

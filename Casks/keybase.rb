@@ -1,14 +1,22 @@
 cask "keybase" do
-  version "6.0.1,20220609162338,0fc9feea3d"
-  sha256 "eda297371c83ce8f58e93be20a19ed9112e4e6755022ed709a8180bdfbd1449d"
+  arch arm: "arm64-"
 
-  url "https://prerelease.keybase.io/darwin-updates/Keybase-#{version.csv.first}-#{version.csv.second}%2B#{version.csv.third}.zip"
+  on_arm do
+    version "6.0.4,20230113195947,6e1343b357"
+    sha256 "f1bd79665b11a392f1b48c595e42442f593126ed0ffe1c862c71d7f7de87f99d"
+  end
+  on_intel do
+    version "6.0.4,20230113191846,6e1343b357"
+    sha256 "eaaeb2797f81375ddea1de92b8f1ec41b8110a684804a802a27ad2a5ec65f9ef"
+  end
+
+  url "https://prerelease.keybase.io/darwin-#{arch}updates/Keybase-#{version.csv.first}-#{version.csv.second}%2B#{version.csv.third}.zip"
   name "Keybase"
   desc "End-to-end encryption software"
   homepage "https://keybase.io/"
 
   livecheck do
-    url "https://prerelease.keybase.io/update-darwin-prod-v2.json"
+    url "https://prerelease.keybase.io/update-darwin-#{arch}prod-v2.json"
     strategy :page_match do |page|
       match = page.match(/Keybase[._-]v?(\d+(?:\.\d+)+)[._-](\d+)%2B([0-9a-f]+)\.zip/i)
       next if match.blank?

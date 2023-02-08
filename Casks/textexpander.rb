@@ -1,8 +1,8 @@
 cask "textexpander" do
-  version "6.8.5,685.6"
-  sha256 "08533d2c787ceaa04d34ba42e73fea3b7798134f33191acef68d68d38b604958"
+  version "7.4.1,741.2"
+  sha256 "ad16c8ba5bde8fef6c4d8d9fdf816ef127364ec2a3858c662d45a53ecf2450ef"
 
-  url "https://cdn.textexpander.com/mac/#{version.csv.second}/TextExpander_#{version.csv.first}.zip",
+  url "https://cdn.textexpander.com/mac/#{version.csv.second}/TextExpander_#{version.csv.first}.dmg",
       verified: "cdn.textexpander.com/mac/"
   name "TextExpander"
   desc "Inserts pre-made snippets of text anywhere"
@@ -14,7 +14,7 @@ cask "textexpander" do
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :catalina"
 
   app "TextExpander.app"
 

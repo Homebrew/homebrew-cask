@@ -1,5 +1,5 @@
 cask "mediahuman-audio-converter" do
-  version "2.0"
+  version "2.1.1"
   sha256 :no_check
 
   url "https://www.mediahuman.com/download/MHAudioConverter.dmg"

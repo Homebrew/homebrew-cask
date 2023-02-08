@@ -1,6 +1,6 @@
 cask "silicon" do
-  version "1.0.4"
-  sha256 "25d113f4709a6b0af6f8ef626879e3ef9bebc9922b81b9df2411785eec001210"
+  version "1.0.5"
+  sha256 "f8f6acfdc8378bca0429d52e34d48275c22213617dbe09055798132921c10586"
 
   url "https://github.com/DigiDNA/Silicon/releases/download/#{version}/Silicon.app.zip"
   name "Silicon"

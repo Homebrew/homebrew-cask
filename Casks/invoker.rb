@@ -1,8 +1,11 @@
 cask "invoker" do
-  version "2.9.0"
-  sha256 "a78d2e38977aaa8c1d37c5af76fa60cb3dbf1b18a0bff281e5b69751c12e3acb"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://invokerdev.fra1.digitaloceanspaces.com/invoker/Invoker-#{version}.dmg",
+  version "2.11.0"
+  sha256  arm:   "033ea9bc6a0e4e9bd0ab9de8308b62dbb48f659bf4638b14ad30198990716ffc",
+          intel: "2362dc8274f3e6db732c9bba59843f056e961f3762aa63be474418ca9d750c94"
+
+  url "https://invokerdev.fra1.digitaloceanspaces.com/invoker/Invoker-#{version}-#{arch}.dmg",
       verified: "invokerdev.fra1.digitaloceanspaces.com/invoker/"
   name "Invoker"
   desc "Utility for managing Laravel applications"

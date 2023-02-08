@@ -1,6 +1,6 @@
 cask "gpg-suite" do
-  version "2022.1"
-  sha256 "d1a17bb4c8c62960d7ae7ff352a3647bc3109b8989dae4ed7b51cf8a71048768"
+  version "2022.2"
+  sha256 "11e4e0964d788bab4cceda7b6af696bf17a85510338322543867bd1c934cca70"
 
   url "https://releases.gpgtools.org/GPG_Suite-#{version}.dmg"
   name "GPG Suite"

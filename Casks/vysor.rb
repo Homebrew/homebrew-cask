@@ -9,7 +9,7 @@ cask "vysor" do
   homepage "https://www.vysor.io/"
 
   livecheck do
-    url "http://vysornuts.clockworkmod.com/download/mac"
+    url "https://vysornuts.clockworkmod.com/download/mac"
     strategy :header_match
   end
 

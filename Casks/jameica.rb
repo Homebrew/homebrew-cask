@@ -1,6 +1,6 @@
 cask "jameica" do
-  version "2.10.2"
-  sha256 "3b9f7676ab5dd2956350b734c5faf7a39eab8d9dc75ac5a95bc71ac8091c6ed5"
+  version "2.10.3"
+  sha256 "ad780572225c38dea186f59e9bbfd7f195f1424c21efa5ba723bb506a852a2cf"
 
   url "https://www.willuhn.de/products/jameica/releases/current/jameica/jameica-macos64-#{version}.zip"
   name "Jameica"
@@ -13,4 +13,6 @@ cask "jameica" do
   end
 
   app "jameica.app"
+
+  zap trash: "~/.jameica.properties"
 end

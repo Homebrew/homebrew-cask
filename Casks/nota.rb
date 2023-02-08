@@ -1,9 +1,9 @@
 cask "nota" do
   arch arm: "arm64-mac", intel: "mac"
 
-  version "0.38.1"
-  sha256 arm:   "4369ddf0d3f99500b1cc754777279575c026e560a13d30eee9ce25c03e8bf370",
-         intel: "548e174254dc7fb76faf7c345021354d0f252098af3c88db674985f2a3b2dbea"
+  version "0.39.1"
+  sha256 arm:   "4f6e68e950a82554a8f4e88655d4af28e979bb297f15eb86004f576080500dd8",
+         intel: "50aafba3e31eeb1900b537abc44cfb6a643495ae09260d1a92c259427f214172"
 
   url "https://github.com/notaapp/releases/releases/download/#{version}/Nota-#{version}-#{arch}.zip",
       verified: "github.com/notaapp/releases/"

@@ -1,8 +1,10 @@
 cask "megasync" do
-  version "4.7.1"
+  arch arm: "Arm64"
+
+  version "4.8.6"
   sha256 :no_check
 
-  url "https://mega.nz/MEGAsyncSetup.dmg"
+  url "https://mega.nz/MEGAsyncSetup#{arch}.dmg"
   name "MEGAsync"
   desc "Syncs files between computers and MEGA Cloud drives"
   homepage "https://mega.nz/sync"

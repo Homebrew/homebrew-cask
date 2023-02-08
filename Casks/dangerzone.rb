@@ -1,6 +1,6 @@
 cask "dangerzone" do
-  version "0.3.2"
-  sha256 "95fa7bc2feff03715d33b84fd5a51d0271ffb07902ee616de0106513e4a411d8"
+  version "0.4.0"
+  sha256 "552df48cd9ef54345698499419a35bdd74a7397564e244f1364165c7f9ba4b65"
 
   url "https://github.com/freedomofpress/dangerzone/releases/download/v#{version}/Dangerzone-#{version}.dmg",
       verified: "github.com/freedomofpress/dangerzone/"

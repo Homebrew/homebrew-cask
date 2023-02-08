@@ -9,7 +9,7 @@ cask "poker-copilot" do
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?/pokercopilot_macos[._-]v?(\d+(?:[._]\d+)+)_build_(\d+)\.dmg}i)
+    regex(%r{href=.*?/pokercopilot_macos[._-]v?(\d+(?:[._]\d+)+)[._-]build[._-](\d+)\.dmg}i)
     strategy :page_match do |page|
       page.scan(regex).map { |match| "#{match[0].tr("_", ".")},#{match[1]}" }
     end
@@ -19,7 +19,5 @@ cask "poker-copilot" do
 
   app "Poker Copilot.app"
 
-  zap trash: [
-    "~/Library/Application Support/com.barbarysoftware.pokercopilot",
-  ]
+  zap trash: "~/Library/Application Support/com.barbarysoftware.pokercopilot"
 end

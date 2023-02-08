@@ -1,6 +1,6 @@
 cask "fantastical" do
-  version "3.7.1,1512"
-  sha256 "1b8f3c3761df3c5c1865c67c17ebc7d33c844fc98ac2c0640b7203c540b2b2ff"
+  version "3.7.7,1558"
+  sha256 "da9b9d4d98ff9da712ff003310751d687d794448167d25d219d35fffd9349d56"
 
   url "https://cdn.flexibits.com/Fantastical_#{version.csv.first}.zip"
   name "Fantastical"
@@ -13,7 +13,7 @@ cask "fantastical" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :big_sur"
 
   app "Fantastical.app"
 

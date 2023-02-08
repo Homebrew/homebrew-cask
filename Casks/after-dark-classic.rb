@@ -1,22 +1,31 @@
 cask "after-dark-classic" do
-  version "1.0"
-  sha256 :no_check
+  version "1.3"
+  sha256 "4a0973a807232dc37c6994b6c46487ef86af7c3f08b946a74b181735865f0739"
 
-  url "https://www.infinisys.co.jp/archive/online/online_afterdarkclassicset_e.dmg.gz"
+  url "https://www.infinisys.co.jp/archive/online/online_afterdark#{version.no_dots}e.dmg"
   name "After Dark Classic Set"
+  desc "Classic After Dark screensaver set"
   homepage "https://en.infinisys.co.jp/product/afterdarkclassicset/index.shtml"
 
-  pkg "ClassicSet.pkg"
+  livecheck do
+    url :homepage
+    regex(/After\sDark\sClassic\sSet\s(\d+(?:\.\d+)+)/i)
+  end
+
+  pkg "AfterDark.pkg"
 
   uninstall pkgutil: [
-    "jp.co.infinisys.flyingToastersmowingmanAndBoris.Boris.pkg",
-    "jp.co.infinisys.flyingToastersmowingmanAndBoris.FlyingToasters.pkg",
-    "jp.co.infinisys.flyingToastersmowingmanAndBoris.MowingMan.pkg",
+    "jp.co.infinisys.afterdark.boris11.pkg",
+    "jp.co.infinisys.afterdark.flyingtoasters12.pkg",
+    "jp.co.infinisys.afterdark.mowingman11.pkg",
   ]
 
   zap trash: [
-    "~/Library/Preferences/ByHost/jp.co.infinisys.boris.*.plist",
-    "~/Library/Preferences/ByHost/jp.co.infinisys.flyingtoasters.*.plist",
-    "~/Library/Preferences/ByHost/jp.co.infinisys.mowingman.*.plist",
+    "~/Library/Containers/com.apple.ScreenSaver.Engine.legacyScreenSaver/" \
+    "Data/Library/Preferences/ByHost/jp.co.infinisys.boris11.*.plist",
+    "~/Library/Containers/com.apple.ScreenSaver.Engine.legacyScreenSaver/" \
+    "Data/Library/Preferences/ByHost/jp.co.infinisys.flyingscreensaver12.*.plist",
+    "~/Library/Containers/com.apple.ScreenSaver.Engine.legacyScreenSaver/" \
+    "Data/Library/Preferences/ByHost/jp.co.infinisys.mowingman11.*.plist",
   ]
 end

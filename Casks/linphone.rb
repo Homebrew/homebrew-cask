@@ -1,6 +1,6 @@
 cask "linphone" do
-  version "4.4.10"
-  sha256 "0026215a012f3943d2ef14a776c92d1721b7c73487b3ab33c49c7d5787021cf9"
+  version "5.0.10"
+  sha256 "ac85eb024954c40bb430a9da9eee7658f3b33fa1c9e171120bd5b072d161c7aa"
 
   url "https://download.linphone.org/releases/macosx/app/Linphone-#{version}-mac.dmg"
   name "Linphone"
@@ -8,8 +8,8 @@ cask "linphone" do
   homepage "https://www.linphone.org/"
 
   livecheck do
-    url "https://www.linphone.org/releases/macosx/RELEASE"
-    regex(%r{/Linphone-(\d+(?:\.\d+)+)-mac\.dmg}i)
+    url "https://download.linphone.org/releases/macosx/app/"
+    regex(/Linphone[._-]v?(\d+(?:\.\d+)+)[._-]mac\.dmg/i)
   end
 
   app "Linphone.app"

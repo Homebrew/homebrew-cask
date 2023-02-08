@@ -11,11 +11,18 @@ cask "freeorion" do
   livecheck do
     url "https://github.com/freeorion/freeorion/releases/latest"
     regex(%r{href=.*?/FreeOrion_v?(\d+(?:\.\d+)*)_(\d+(?:-\d+)*)\.([0-9a-f]+)_MacOSX_(?:\d+(?:\.\d+)*)\.dmg}i)
-    strategy :page_match do |page, regex|
-      match = page.match(regex)
-      next if match.blank?
+    strategy :header_match do |headers, regex|
+      next if headers["location"].blank?
 
-      "#{match[1]},#{match[2]},#{match[3]}"
+      # Identify the latest tag from the response's `location` header
+      latest_tag = File.basename(headers["location"])
+      next if latest_tag.blank?
+
+      # Fetch the assets list HTML for the latest tag and match within it
+      assets_page = Homebrew::Livecheck::Strategy.page_content(
+        @url.sub(%r{/releases/?.+}, "/releases/expanded_assets/#{latest_tag}"),
+      )
+      assets_page[:content]&.scan(regex)&.map { |match| "#{match[0]},#{match[1]},#{match[2]}" }
     end
   end
 

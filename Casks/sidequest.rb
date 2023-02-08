@@ -1,9 +1,9 @@
 cask "sidequest" do
   arch arm: "-arm64"
 
-  version "0.10.32"
-  sha256 arm:   "76e77a38972ddda0a79ae6cd7fdd4ccc3e9d1faf657d7d0480ac91b387781a97",
-         intel: "fd8b8e6ca7a07af501c1660edff52d3e1d888527c57425e42ba9f38ea1c7f75f"
+  version "0.10.33"
+  sha256 arm:   "a4276c9b9b7f939f0f0e7104cacfb3a27c3aa48174277d4b3d86318bf938367f",
+         intel: "2dd11bb6edd4bb041d0b7357d317d2b5825b3675b63954c5edb38508ed3bc85b"
 
   url "https://github.com/SideQuestVR/SideQuest/releases/download/v#{version}/SideQuest-#{version}#{arch}.dmg",
       verified: "github.com/SideQuestVR/SideQuest/"

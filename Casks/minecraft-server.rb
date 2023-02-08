@@ -1,6 +1,6 @@
 cask "minecraft-server" do
-  version "1.19.2,f69c284232d7c7580bd89a5a4931c3581eae1378"
-  sha256 "b26727069ef5f61c704add9a378ac90e3d271fd7876c0bd3dcfbe9fd0bec4d96"
+  version "1.19.3,c9df48efed58511cdd0213c56b9013a7b5c9ac1f"
+  sha256 "4ebd3ad142512953d0193ae3a1d1a30c896907de7c68780977151f6cc79f1e1b"
 
   url "https://launcher.mojang.com/v#{version.major}/objects/#{version.csv.second}/server.jar",
       verified: "launcher.mojang.com/"

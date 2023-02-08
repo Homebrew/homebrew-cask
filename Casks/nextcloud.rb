@@ -1,13 +1,14 @@
 cask "nextcloud" do
-  if MacOS.version <= :el_capitan
+  on_el_capitan :or_older do
     version "2.6.5.20200710-legacy"
     sha256 "4c67e50361dd5596fb884002d1ed907fe109d607fba2cabe07e505addd164519"
 
     url "https://github.com/nextcloud/desktop/releases/download/v#{version.major_minor_patch}/Nextcloud-#{version}.pkg",
         verified: "github.com/nextcloud/desktop/"
-  else
-    version "3.6.0"
-    sha256 "bf4d6da4df3453658bd4b14bfcda450109a8ac85005f23785af8ccac54a5f3d3"
+  end
+  on_sierra :or_newer do
+    version "3.7.1"
+    sha256 "1d51d299321e518191eb1da31a530d1389b9a5055d4508fb1f653171ddc00b9f"
 
     url "https://github.com/nextcloud/desktop/releases/download/v#{version}/Nextcloud-#{version}.pkg",
         verified: "github.com/nextcloud/desktop/"
@@ -18,9 +19,21 @@ cask "nextcloud" do
   homepage "https://nextcloud.com/"
 
   livecheck do
-    url "https://github.com/nextcloud/desktop/releases/"
-    strategy :page_match
+    url "https://github.com/nextcloud/desktop/releases/latest"
     regex(/Nextcloud[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
+    strategy :header_match do |headers, regex|
+      next if headers["location"].blank?
+
+      # Identify the latest tag from the response's `location` header
+      latest_tag = File.basename(headers["location"])
+      next if latest_tag.blank?
+
+      # Fetch the assets list HTML for the latest tag and match within it
+      assets_page = Homebrew::Livecheck::Strategy.page_content(
+        @url.sub(%r{/releases/?.+}, "/releases/expanded_assets/#{latest_tag}"),
+      )
+      assets_page[:content]&.scan(regex)&.map { |match| match[0] }
+    end
   end
 
   auto_updates true

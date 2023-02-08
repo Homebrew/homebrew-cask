@@ -1,9 +1,9 @@
 cask "sage" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "9.7,1.5"
-  sha256 arm:   "5005e80c8cee707e76896ec1e9799bae3375a700cab77e56ca3878ebb80a3050",
-         intel: "e9097c58492b7c24ea3518d76ad2e9aca5a9ae2f27bc27a285e45c62ab6526a9"
+  version "9.7,1.5.3"
+  sha256 arm:   "77f1080a0c90dbe2c66c839a4f5c83d87f6953083967904575808064a611f25e",
+         intel: "48b9424cffe1a2b737eea297b453c4275c9d25fb63493876e0911200ef14319f"
 
   url "https://github.com/3-manifolds/Sage_macOS/releases/download/v#{version.csv.second}/SageMath-#{version.csv.first}_#{arch}.dmg",
       verified: "github.com/3-manifolds/Sage_macOS/"
@@ -12,7 +12,21 @@ cask "sage" do
   homepage "https://www.sagemath.org/"
 
   livecheck do
-    skip "Requires checking separate GitHub release asset list HTML"
+    url "https://github.com/3-manifolds/Sage_macOS/releases/latest"
+    regex(%r{href=.*?/v?(\d+(?:\.\d+)+)/SageMath[._-]v?(\d+(?:\.\d+)+)[._-].*?#{arch}\.dmg}i)
+    strategy :header_match do |headers, regex|
+      next if headers["location"].blank?
+
+      # Identify the latest tag from the response's `location` header
+      latest_tag = File.basename(headers["location"])
+      next if latest_tag.blank?
+
+      # Fetch the assets list HTML for the latest tag and match within it
+      assets_page = Homebrew::Livecheck::Strategy.page_content(
+        @url.sub(%r{/releases/?.+}, "/releases/expanded_assets/#{latest_tag}"),
+      )
+      assets_page[:content]&.scan(regex)&.map { |match| "#{match[1]},#{match[0]}" }
+    end
   end
 
   depends_on macos: ">= :high_sierra"

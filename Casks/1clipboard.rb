@@ -8,8 +8,8 @@ cask "1clipboard" do
   homepage "http://1clipboard.io/"
 
   livecheck do
-    url "http://1clipboard.io/download/darwin/"
-    regex(%r{/v?(\d+(?:\.\d+)+)/1Clipboard\.zip}i)
+    url "https://1clipboard.io/download/darwin/1Clipboard.dmg"
+    strategy :extract_plist
   end
 
   app "1Clipboard.app"

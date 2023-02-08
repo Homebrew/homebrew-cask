@@ -1,18 +1,11 @@
 cask "brewtarget" do
-  version "2.3.0"
-  sha256 "f1b3b33029f7d7cd873a1cdbf0741da22085f53dcefa2943dcfa8d35eda89fdd"
+  version "3.0.5"
+  sha256 "ff9d3733a308b729da45463502873c815849594f9c47f470197f18bf5261df9d"
 
-  url "https://launchpad.net/brewtarget/trunk/#{version}/+download/Brewtarget-#{version}.dmg",
-      verified: "launchpad.net/brewtarget/"
+  url "https://github.com/Brewtarget/brewtarget/releases/download/v#{version}/brewtarget_#{version}_x86_64.dmg"
   name "brewtarget"
-  homepage "http://www.brewtarget.org/"
+  desc "Beer recipe creation tool"
+  homepage "https://github.com/Brewtarget/brewtarget/"
 
-  # We need to check all releases since not all releases are for macOS.
-  livecheck do
-    url "https://github.com/Brewtarget/brewtarget/releases"
-    strategy :page_match
-    regex(%r{href=.*?/Brewtarget[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
-  end
-
-  app "brewtarget.app"
+  app "Brewtarget.app"
 end

@@ -1,16 +1,19 @@
 cask "confluent-cli" do
-  version "2.27.0"
-  sha256 "430bf64d331e51c72ca51c4867cd8f18b68e88b5521b911f7c55fe9513f30d21"
+  arch arm: "arm64", intel: "amd64"
 
-  url "https://s3-us-west-2.amazonaws.com/confluent.cloud/confluent-cli/archives/#{version}/confluent_v#{version}_darwin_amd64.tar.gz",
+  version "3.1.0"
+  sha256 arm:   "bbfc1b76da9c2723ecdcfacddc5ebe3aa3e43d119006b60a55bdf70f8539a293",
+         intel: "868b3c223ad9fe4fd86d0139d9172ed64a29ef4a245435867d26e1d97d59456e"
+
+  url "https://s3-us-west-2.amazonaws.com/confluent.cloud/confluent-cli/archives/#{version}/confluent_#{version}_darwin_#{arch}.tar.gz",
       verified: "s3-us-west-2.amazonaws.com/confluent.cloud/confluent-cli/archives/"
   name "Confluent CLI"
   desc "Enables developers to manage Confluent Cloud or Confluent Platform"
   homepage "https://docs.confluent.io/confluent-cli/current/overview.html"
 
   livecheck do
-    url "https://docs.confluent.io/confluent-cli/current/_static/documentation_options.js"
-    regex(/VERSION:\s'(\d+(?:\.\d+)+)'/i)
+    url "https://s3-us-west-2.amazonaws.com/confluent.cloud?prefix=confluent-cli/archives/&delimiter=/"
+    regex(%r{<Prefix>confluent-cli/archives/(\d+(?:\.\d+)+)/</Prefix>}i)
   end
 
   binary "confluent/confluent"

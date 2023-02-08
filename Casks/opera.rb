@@ -1,6 +1,6 @@
 cask "opera" do
-  version "91.0.4516.20"
-  sha256 "afc21148e115b0a575834583526a302cd34bf4e18d368801f5e5c182e9690fa2"
+  version "95.0.4635.25"
+  sha256 "92fa0d65461541b49ebc526852d5314550e33c7ff48ad5f6ac5cb1b2c7c12c49"
 
   url "https://get.geo.opera.com/pub/opera/desktop/#{version}/mac/Opera_#{version}_Setup.dmg"
   name "Opera"
@@ -17,7 +17,10 @@ cask "opera" do
   app "Opera.app"
 
   zap trash: [
-    "~/Library/Application Support/com.operasoftware.Opera/",
+    "~/Library/Application Support/com.operasoftware.Opera",
+    "~/Library/Caches/com.operasoftware.Installer.Opera",
+    "~/Library/Caches/com.operasoftware.Opera",
     "~/Library/Preferences/com.operasoftware.Opera.plist",
+    "~/Library/Saved Application State/com.operasoftware.Opera.savedState",
   ]
 end

@@ -1,10 +1,11 @@
 cask "dash" do
-  if MacOS.version <= :high_sierra
+  on_high_sierra :or_older do
     version "4.6.7"
     sha256 "e2b5eb996645b25f12ccae15e24b1b0d8007bc5fed925e14ce7be45a2b693fb6"
-  else
-    version "6.3.2,1002"
-    sha256 "1f11155aad90527ac144dc6449761d17df7ead22395aaab673b384da27bc11eb"
+  end
+  on_mojave :or_newer do
+    version "6.4.0,1006"
+    sha256 "165b17939f1501bfe6fe6e363a7246fbc276b51d1769f80e41828551d1cbd8ed"
   end
 
   url "https://kapeli.com/downloads/v#{version.major}/Dash.zip"

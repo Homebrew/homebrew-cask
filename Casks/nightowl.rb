@@ -1,17 +1,18 @@
 cask "nightowl" do
-  version "0.3.0"
+  version "0.3.2,16"
   sha256 :no_check
 
-  url "https://nightowl.kramser.xyz/files/NightOwl.dmg"
+  url "https://nightowlapp.co/files/NightOwl.dmg"
   name "NightOwl"
   desc "Utility to toggle dark mode"
-  homepage "https://nightowl.kramser.xyz/"
+  homepage "https://nightowlapp.co/"
 
   livecheck do
-    url "https://nightowl.kramser.xyz/api/public_update"
-    regex(/"version":\s*"(\d+(?:\.\d+)*)/i)
+    url :url
+    strategy :extract_plist
   end
 
+  auto_updates true
   depends_on macos: ">= :mojave"
 
   app "NightOwl.app"

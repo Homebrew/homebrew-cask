@@ -1,6 +1,6 @@
 cask "quicken" do
-  version "6.9.0,609.45401.100"
-  sha256 "b49567ad5a2612747a19c77e9194db4be781de30ba6046e41a8b50a88340ec77"
+  version "6.11.3,611.47347.100"
+  sha256 "4d37fca59279a791368d31a4e6435f9187c8eb74d8e394bb38b639bc9dc019b9"
 
   url "https://download.quicken.com/mac/Quicken/001/Release/031A96D9-EFE6-4520-8B6A-7F465DDAA3E4/Quicken-#{version.csv.second}/Quicken-#{version.csv.second}.zip"
   name "Quicken"

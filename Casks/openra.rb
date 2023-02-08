@@ -13,6 +13,8 @@ cask "openra" do
     regex(/^release[._-]v?(\d+(?:[.-]\d+)*)$/i)
   end
 
+  conflicts_with cask: "homebrew/cask-versions/openra-playtest"
+
   app "OpenRA - Dune 2000.app"
   app "OpenRA - Red Alert.app"
   app "OpenRA - Tiberian Dawn.app"

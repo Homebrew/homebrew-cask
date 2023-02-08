@@ -1,8 +1,8 @@
 cask "ipfs" do
-  version "0.23.0"
-  sha256 "2ddfec0f2febb9d37225e30021b7ca2a5744044314acc718c92cc7a92f78c1f2"
+  version "0.26.0"
+  sha256 "187705b09fd050c1e6e2a7f1ca1d1350f618bab8384379b771eba0865be90902"
 
-  url "https://github.com/ipfs/ipfs-desktop/releases/download/v#{version}/IPFS-Desktop-#{version}.dmg"
+  url "https://github.com/ipfs/ipfs-desktop/releases/download/v#{version}/ipfs-desktop-#{version}-mac.dmg"
   name "IPFS Desktop"
   desc "Menu bar application for the IPFS peer-to-peer network"
   homepage "https://github.com/ipfs/ipfs-desktop"
@@ -13,6 +13,7 @@ cask "ipfs" do
   end
 
   auto_updates true
+  depends_on macos: ">= :el_capitan"
 
   app "IPFS Desktop.app"
 

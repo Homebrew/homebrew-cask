@@ -2,12 +2,13 @@ cask "gitx" do
   version "0.7.1"
   sha256 :no_check
 
-  url "http://frim.frim.nl/GitXStable.app.zip"
+  url "https://gitx.frim.nl/Downloads/GitXStable.app.zip"
   name "GitX"
-  homepage "http://gitx.frim.nl/"
+  desc "Git GUI"
+  homepage "https://gitx.frim.nl/"
 
   livecheck do
-    url "http://gitx.frim.nl/Downloads/appcast.xml"
+    url "https://gitx.frim.nl/Downloads/appcast.xml"
     strategy :sparkle
   end
 

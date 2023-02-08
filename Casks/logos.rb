@@ -1,20 +1,23 @@
 cask "logos" do
-  version "9.16.0.0006"
-  sha256 "cb09f2a515c4d5194645de2f6af08435de5dc61dde3c92e6f92354fb2931271d"
+  arch arm: "-arm"
 
-  url "https://downloads.logoscdn.com/LBS#{version.major}/Installer/#{version}/LogosMac.dmg",
+  version "22.0.0.0023"
+  sha256 arm:   "67bd10f2fa4ec1fecf4f11762ba83a17bc32c0ac4edcad10c5a48eaafb4d8388",
+         intel: "ee5228683d371ccc875ae067cd844b76985597b718eb74aea6f092545953827e"
+
+  url "https://downloads.logoscdn.com/LBS10/Installer/#{version}/LogosMac#{arch}.dmg",
       verified: "downloads.logoscdn.com/"
   name "Logos"
   desc "Bible study software"
   homepage "https://www.logos.com/"
 
   livecheck do
-    url "https://clientservices.logos.com/update/v1/feed/logos#{version.major}-mac/stable.xml"
+    url "https://clientservices.logos.com/update/v1/feed/logos10-mac/stable.xml"
     regex(%r{<logos:version[^>]*>(\d+(?:\.\d+)+)</logos:version>}i)
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :big_sur"
 
   app "Logos.app"
 

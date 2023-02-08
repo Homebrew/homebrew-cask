@@ -1,9 +1,9 @@
 cask "google-chat-electron" do
   arch arm: "darwin-arm64", intel: "darwin-x64"
 
-  version "2.19.0"
-  sha256 arm:   "1e5e7e9fc0e0b26dd4639c43ce7fa9de17a547215da1148896a0499b2330247d",
-         intel: "b1899a43f4e3016ef94efee9fabd398bc8b5771bcbe5e6c6a77fcfd168a23e8b"
+  version "2.20.0"
+  sha256 arm:   "ab5a996c01eef382367a3d8f1fef2216dde3ff09cd3169a5d094c715eb49d091",
+         intel: "8fc8f51f80a188f3dc851df0958aae12c8648670346980afac8ceab3c05b225d"
 
   url "https://github.com/ankurk91/google-chat-electron/releases/download/#{version}/google-chat-electron-#{version}-#{arch}.zip"
   name "google-chat-electron"
@@ -21,4 +21,8 @@ cask "google-chat-electron" do
     "~/Library/Preferences/com.electron.google-chat-electron.plist",
     "~/Library/Saved Application State/com.electron.google-chat-electron.savedState",
   ]
+
+  caveats do
+    discontinued
+  end
 end

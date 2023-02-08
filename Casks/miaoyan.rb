@@ -1,6 +1,6 @@
 cask "miaoyan" do
-  version "1.6.4"
-  sha256 "214b67f479978fdf9de0a300602e71ab56efdaf5878984a83d78cf9f676e98e2"
+  version "1.8.0"
+  sha256 "a910c631b77d97c4bd43945f886d55cb30b0414f2aa22df471d09d12441b5201"
 
   url "https://github.com/tw93/MiaoYan/releases/download/V#{version}/MiaoYan.dmg",
       verified: "github.com/tw93/MiaoYan"

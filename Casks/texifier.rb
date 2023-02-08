@@ -1,6 +1,6 @@
 cask "texifier" do
-  version "1.9.12,700,bb0511f"
-  sha256 "68e54874158c56dcc9e722ae62e540041a960c5f15e00793800c5b6c70a13823"
+  version "1.9.18,735,78a0ba6"
+  sha256 "79f0a3104c024c81c4394693831a09fcc51a3a738443682b9d5e979b7eccfeb5"
 
   url "https://download.texifier.com/apps/osx/updates/Texifier_#{version.csv.first.dots_to_underscores}__#{version.csv.second}__#{version.csv.third}.dmg"
   name "Texifier"
@@ -8,13 +8,14 @@ cask "texifier" do
   homepage "https://www.texifier.com/mac"
 
   livecheck do
-    url "https://www.texifier.com/apps/updates/texifier/stable-appcast.xml"
+    url "https://www.texifier.com/apps/updates/texifier/appcast-stable.xml"
     strategy :sparkle do |item|
       "#{item.short_version},#{item.version},#{item.url[/_([^_]+)\.dmg/i, 1]}"
     end
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "Texifier.app"
 

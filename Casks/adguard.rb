@@ -1,6 +1,6 @@
 cask "adguard" do
-  version "2.8.1.1147"
-  sha256 "a1dc335b7111a8133778df571304a83e9816204d9d8a9392d464b96d480eeec0"
+  version "2.9.2.1234"
+  sha256 "b5feba01b2dfb740693106cef591a906eef1452d80c1b2bb8372afb5023718f9"
 
   url "https://static.adguard.com/mac/release/AdGuard-#{version}.dmg"
   name "AdGuard"
@@ -16,7 +16,7 @@ cask "adguard" do
 
   auto_updates true
   conflicts_with cask: "homebrew/cask-versions/adguard-nightly"
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   pkg "AdGuard.pkg"
 

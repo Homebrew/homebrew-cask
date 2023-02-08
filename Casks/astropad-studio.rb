@@ -1,6 +1,6 @@
 cask "astropad-studio" do
-  version "5.0.0,4220"
-  sha256 "28079980bf282545af4689be02ab6b7f9b0d495c1e076e79a4df444d02fdb45b"
+  version "5.2.1,4459"
+  sha256 "4641d148065a55982339bfdc648861ffc8fc30ff2c043ed9a40c8911baeb9aae"
 
   url "https://downloads.astropad.com/studio/mac/AstropadStudio-#{version.major_minor_patch}.#{version.csv.second}.dmg"
   name "Astropad Studio"

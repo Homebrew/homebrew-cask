@@ -1,6 +1,6 @@
 cask "utm" do
-  version "3.2.4"
-  sha256 "7a351f2fa507a8cbac55f6a094694e0cab457ca6cdc336752e6464712ce27aca"
+  version "4.1.5"
+  sha256 "60e9937f9d1452fbe1e27a169e657a5aca164ae6b4b6959380b4e0f8276bddb4"
 
   url "https://github.com/utmapp/UTM/releases/download/v#{version}/UTM.dmg",
       verified: "github.com/utmapp/UTM/"
@@ -17,6 +17,7 @@ cask "utm" do
   conflicts_with cask: "homebrew/cask-versions/utm-beta"
 
   app "UTM.app"
+  binary "#{appdir}/UTM.app/Contents/MacOS/utmctl"
 
   uninstall quit: "com.utmapp.UTM"
 

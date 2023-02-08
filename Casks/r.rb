@@ -2,9 +2,9 @@ cask "r" do
   arch arm: "-arm64"
   folder = on_arch_conditional arm: "big-sur-arm64/base/", intel: "base/"
 
-  version "4.2.1"
-  sha256 arm:   "9a746270ef98bf038e3cbbc6e962fd3b7081786c49c59d37398261749ba5c693",
-         intel: "972d1e514baa873e4cda238f18163230fcd44d507f4b89d98cf5409e08b16bf9"
+  version "4.2.2"
+  sha256 arm:   "a0fa5cdd3d3e14e0420d9605b5bfbad80267d1805c1f5a92672c157337d739c1",
+         intel: "df8db457fcc8aafbe1b084f87ec9fa8763fbcf909f9a252d05c28eb4c2aff0ff"
 
   url "https://cloud.r-project.org/bin/macosx/#{folder}R-#{version}#{arch}.pkg"
 

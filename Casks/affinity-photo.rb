@@ -1,9 +1,9 @@
 cask "affinity-photo" do
-  version "1.10.5"
+  version "2.0.4"
   sha256 :no_check
 
-  url "https://store.serif.com/download/075b51/"
-  name "Affinity Photo"
+  url "https://store.serif.com/download/89007d/"
+  name "Affinity Photo #{version.major}"
   desc "Professional image editing software"
   homepage "https://affinity.serif.com/en-us/photo/"
 
@@ -13,11 +13,16 @@ cask "affinity-photo" do
   end
 
   auto_updates true
+  depends_on macos: ">= :catalina"
 
-  app "Affinity Photo.app"
+  app "Affinity Photo #{version.major}.app"
 
   zap trash: [
-    "~/Library/Application Support/Affinity Photo",
-    "~/Library/Caches/com.seriflabs.affinityphoto",
+    "~/Library/Application Support/Affinity Photo 2",
+    "~/Library/Caches/com.seriflabs.affinityphoto2",
+    "~/Library/HTTPStorages/com.seriflabs.affinityphoto2",
+    "~/Library/Preferences/com.seriflabs.affinityphoto2.plist",
+    "~/Library/Saved Application State/com.seriflabs.affinityphoto2.savedState",
+    "~/Library/WebKit/com.seriflabs.affinityphoto2",
   ]
 end

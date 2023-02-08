@@ -2,15 +2,11 @@ cask "ui-browser" do
   version "3.0.2"
   sha256 "a5695d3046a2230a0e56cbda68829802801d74afc39d4320161fef668b3a0376"
 
-  url "https://pfiddlesoft.com/uibrowser/downloads/UIBrowser#{version.no_dots}.dmg"
+  url "https://s3.amazonaws.com/latenightsw.com/UIBrowser/UIBrowser#{version.no_dots}.dmg",
+      verified: "s3.amazonaws.com/latenightsw.com/"
   name "UI Browser"
   desc "Assistant for Apple's Accessibility and AppleScript GUI scripting"
-  homepage "https://pfiddlesoft.com/uibrowser/"
-
-  livecheck do
-    url "https://pfiddlesoft.com/uibrowser/index-downloads.html"
-    regex(/href=.*?UI\s+Browser\s+(\d+(?:\.\d+)+)/i)
-  end
+  homepage "https://latenightsw.com/freeware/ui-browser/"
 
   depends_on macos: ">= :sierra"
 
@@ -20,4 +16,8 @@ cask "ui-browser" do
     "~/Library/Caches/com.apple.helpd/Generated/com.pfiddlesoft.uibrowser.help*",
     "~/Library/Preferences/com.pfiddlesoft.uibrowser.plist",
   ]
+
+  caveats do
+    discontinued
+  end
 end

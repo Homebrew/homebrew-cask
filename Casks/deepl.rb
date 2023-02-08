@@ -1,19 +1,33 @@
 cask "deepl" do
-  version "3.5.251434"
-  sha256 :no_check
+  on_catalina :or_older do
+    version "3.7.292629"
+    sha256 "efcac4988a606d9793a3bdb8e7e73dce8e3d06ed2249a4434eb54c1624b40b87"
 
-  url "https://appdownload.deepl.com/macos/DeepL.dmg"
+    livecheck do
+      url "https://appdownload.deepl.com/macos/update.json"
+      strategy :page_match do |page|
+        JSON.parse(page)["currentRelease"]
+      end
+    end
+  end
+  on_big_sur :or_newer do
+    version "4.0.332521"
+    sha256 "f851cad1680d7f5280f6ced8bef559d61e6a8c6664d1bcdb0d82e167f8ca7b0e"
+
+    livecheck do
+      url "https://appdownload.deepl.com/macos/bigsur/update.json"
+      strategy :page_match do |page|
+        JSON.parse(page)["currentRelease"]
+      end
+    end
+  end
+
+  url "https://appdownload.deepl.com/macos/#{version}/DeepL_#{version}.zip"
   name "DeepL"
   desc "Trains AIs to understand and translate texts"
   homepage "https://www.deepl.com/"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
-
   auto_updates true
-  depends_on macos: ">= :high_sierra"
 
   app "DeepL.app"
 

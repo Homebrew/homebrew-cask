@@ -2,9 +2,9 @@ cask "windows95" do
   # NOTE: "95" is not a version number, but an intrinsic part of the product name
   arch arm: "arm64", intel: "x64"
 
-  version "3.0.0"
-  sha256 arm:   "9197c0c3e7774f8cd9b57a87fd7ac5980cc0f0fae8ba944052f48ef4905996d0",
-         intel: "182f2eadf1c32159351e383130f4945ee87238ee9f6417ef5291d1a8f93be255"
+  version "3.1.1"
+  sha256 arm:   "f269b76a0f8454a163053caae3d306ca7dc38d8eedd2bc343c9f363a1a88f02f",
+         intel: "574198aa286094be84a1dab896d1a5d23a7f4173ec212bddcad3c9830a36fe31"
 
   url "https://github.com/felixrieseberg/windows95/releases/download/v#{version}/windows95-darwin-#{arch}-#{version}.zip"
   name "Windows 95"

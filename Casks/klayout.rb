@@ -1,31 +1,54 @@
 cask "klayout" do
-  version "0.27.11"
+  version "0.28.3"
 
-  if MacOS.version <= :catalina
-    sha256 "372c53e6ec7f79cdf86612fa8d3a8a719a7d75eedc940e61b71bc15d22a53b26"
+  on_catalina :or_older do
+    sha256 "aa9d1de4cfbaeadc37ec3c47a3185319abdf36cdd854c4d259da5e36f48c277e"
 
-    url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Catalina-1-qt5Brew-RsysPhb38.dmg",
+    url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Catalina-1-qt5Brew-RsysPhb39.dmg",
         verified: "klayout.org/downloads/MacOS/"
-  elsif MacOS.version <= :big_sur
-    sha256 "ca8939d4838f59412fc446209df249dda47e4b576c49856e9657318145bfc290"
 
-    url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-BigSur-1-qt5Brew-RsysPhb38.dmg",
-        verified: "klayout.org/downloads/MacOS/"
-  else
-    sha256 "b08e25589576bbf056fdcaa1562129583cabd3e72778da0a1a3cc25c394b8add"
+    livecheck do
+      url "https://www.klayout.de/build.html"
+      regex(/href=.*?HW[._-]klayout[._-](\d+(?:\.\d+)+)[._-]macOS[._-]Catalina.*?\.dmg/i)
+    end
+  end
+  on_big_sur do
+    sha256 "a2843c628adb822c643d46af5a5ff8399e441922b916faba8cf40dc477f5228a"
 
-    url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Monterey-1-qt5Brew-RsysPhb38.dmg",
+    url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-BigSur-1-qt5Brew-RsysPhb39.dmg",
         verified: "klayout.org/downloads/MacOS/"
+
+    livecheck do
+      url "https://www.klayout.de/build.html"
+      regex(/href=.*?HW[._-]klayout[._-](\d+(?:\.\d+)+)[._-]macOS[._-]BigSur.*?\.dmg/i)
+    end
+  end
+  on_monterey do
+    sha256 "c0c462f4f0f306cb252acd97e24b105e5a64734f3b97ad0d4ab2c91749a714bf"
+
+    url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Monterey-1-qt5Brew-RsysPhb39.dmg",
+        verified: "klayout.org/downloads/MacOS/"
+
+    livecheck do
+      url "https://www.klayout.de/build.html"
+      regex(/href=.*?HW[._-]klayout[._-](\d+(?:\.\d+)+)[._-]macOS[._-]Monterey.*?\.dmg/i)
+    end
+  end
+  on_ventura :or_newer do
+    sha256 "2c94770b3e363ccb17236fda61d184afc1744d1e206651b81ab6d26fcb47feb0"
+
+    url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Ventura-1-qt5Brew-RsysPhb39.dmg",
+        verified: "klayout.org/downloads/MacOS/"
+
+    livecheck do
+      url "https://www.klayout.de/build.html"
+      regex(/href=.*?HW[._-]klayout[._-](\d+(?:\.\d+)+)[._-]macOS[._-]Ventura.*?\.dmg/i)
+    end
   end
 
   name "KLayout"
   desc "IC design layout viewer and editor"
   homepage "https://www.klayout.de/"
-
-  livecheck do
-    url "https://www.klayout.de/development.html"
-    regex(%r{<b>Version\s+(\d+(?:\.\d+)+)</b>}i)
-  end
 
   depends_on macos: ">= :catalina"
 

@@ -13,7 +13,7 @@ cask "oxwu" do
     end
   end
   on_arm do
-    version "4.0.2"
+    version "4.1.0"
     sha256 :no_check
     url "https://eew.earthquake.tw/releases/mac/arm64/oxwu-mac-arm64.dmg"
 

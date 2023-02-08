@@ -1,11 +1,8 @@
 cask "wpsoffice-cn" do
-  arch arm: "arm64", intel: "x64"
+  version "5.2.0,7734"
+  sha256 "f4a9d8c79113d7be9f96edb8e4ff35316002b755be0420d2beae899aa07a0e9c"
 
-  version "4.6.1,7451"
-  sha256 arm:   "9470547b1795f8c2d489f557f4ca712c1e0500429c84debe8a368a70ae5e0bde",
-         intel: "c6c7f8a14c5ec4ae5c3188001b10c816dd3097f104ea6c2786148daa3ef31f0b"
-
-  url "https://package.mac.wpscdn.cn/mac_wps_pkg/#{version.csv.first}/WPS_Office_#{version.csv.first}(#{version.csv.second})_#{arch}.dmg",
+  url "https://package.mac.wpscdn.cn/mac_wps_pkg/#{version.csv.first}/WPS_Office_#{version.csv.first}(#{version.csv.second})_universal.dmg",
       verified: "package.mac.wpscdn.cn/mac_wps_pkg/"
   name "WPS Office"
   desc "All-in-one office service platform in Chinese"
@@ -13,7 +10,7 @@ cask "wpsoffice-cn" do
 
   livecheck do
     url :homepage
-    regex(/href=.*?WPS_Office[._-]v?(\d+(?:\.\d+)+)[_(](\d+)[_)]*#{arch}\.dmg/i)
+    regex(/href=.*?WPS_Office[._-]v?(\d+(?:\.\d+)+)[_(](\d+)[_)]*universal\.dmg/i)
     strategy :page_match do |page|
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end

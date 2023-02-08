@@ -12,12 +12,6 @@ cask "projector" do
   desc "Common and client-related code for running Swing applications remotely"
   homepage "https://lp.jetbrains.com/projector/"
 
-  livecheck do
-    url "https://github.com/JetBrains/projector-client/releases/"
-    strategy :page_match
-    regex(/projector[._-]darwin[._-]signed[._-]#{arch}[._-]launcher[._-]v?(\d+(?:\.\d+)+)\.zip/i)
-  end
-
   depends_on macos: ">= :high_sierra"
 
   app "projector#{archapp}.app"
@@ -27,4 +21,8 @@ cask "projector" do
     "~/Library/Preferences/com.electron.projector.plist",
     "~/Library/Saved Application State/com.electron.projector.savedState",
   ]
+
+  caveats do
+    discontinued
+  end
 end

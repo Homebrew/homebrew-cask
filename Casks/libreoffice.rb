@@ -2,9 +2,9 @@ cask "libreoffice" do
   arch arm: "aarch64", intel: "x86-64"
   folder = on_arch_conditional arm: "aarch64", intel: "x86_64"
 
-  version "7.4.1"
-  sha256 arm:   "c78862b0388dba6cff2a46be4043b6ae8206045eb066a9efd86dd601d9ace192",
-         intel: "53c968d453b2d17c08d06050e0c98fdad318074e41504c051f925bc0796b1ce2"
+  version "7.5.0"
+  sha256 arm:   "c417c5e02142a1d4b79c81f1ae2a61ef65ce6e504f66f67484e80f1ac2f6d97b",
+         intel: "957db2309a648cef123a4e1f0ae00249cd5cfdb1dee925a9dd36cc2d4cb04f73"
 
   url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/#{folder}/LibreOffice_#{version}_MacOS_#{arch}.dmg",
       verified: "download.documentfoundation.org/libreoffice/stable/"
@@ -22,7 +22,6 @@ cask "libreoffice" do
 
   app "LibreOffice.app"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/gengal"
-  binary "#{appdir}/LibreOffice.app/Contents/MacOS/regmerge"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/regview"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/senddoc"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/uno"

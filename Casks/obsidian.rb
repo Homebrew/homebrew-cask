@@ -1,6 +1,6 @@
 cask "obsidian" do
-  version "0.15.9"
-  sha256 "5694a09c18dcbe4c5e67c69720d32cf2fa6ddf8a3481a6e7e722868972a52ae1"
+  version "1.1.9"
+  sha256 "c7ef561bddfc61014ffc717b07dc4434e5c549d3ab3c5389d6e7f15e3de45e9b"
 
   url "https://github.com/obsidianmd/obsidian-releases/releases/download/v#{version}/Obsidian-#{version}-universal.dmg",
       verified: "github.com/obsidianmd/"
@@ -12,6 +12,8 @@ cask "obsidian" do
     url :url
     strategy :github_latest
   end
+
+  auto_updates true
 
   app "Obsidian.app"
 

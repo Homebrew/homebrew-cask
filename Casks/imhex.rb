@@ -1,6 +1,6 @@
 cask "imhex" do
-  version "1.23.2"
-  sha256 "32c7f29e124c97e9e2f4e57a2d896e2e55a21da47206f9b2e14a549b33aced3b"
+  version "1.26.2"
+  sha256 "1f829950e4dc24041ff171dc2a1d36979edfad3df7c2e78167f10a1eea010a35"
 
   url "https://github.com/WerWolv/ImHex/releases/download/v#{version}/imhex-#{version}-macOS.dmg",
       verified: "github.com/WerWolv/ImHex/"

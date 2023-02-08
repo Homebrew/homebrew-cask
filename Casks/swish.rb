@@ -1,8 +1,8 @@
 cask "swish" do
-  version "1.8.1,50"
-  sha256 "eae5c25104dbae9368fdcdb8b05c42f4bab671659183e66df25f6bb5b67e9aba"
+  version "1.10,57"
+  sha256 "0ffc43a1cef2ee71f7262a85851f79838fd10f7393b86f73df106a599e1e6293"
 
-  url "https://github.com/chrenn/swish-dl/releases/download/#{version.csv.first}/Swish.zip",
+  url "https://github.com/chrenn/swish-dl/releases/download/#{version.csv.first}/Swish.dmg",
       verified: "github.com/chrenn/swish-dl/"
   name "Swish"
   desc "Control windows and applications right from your trackpad"

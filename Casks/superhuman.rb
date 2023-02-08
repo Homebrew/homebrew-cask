@@ -1,9 +1,9 @@
 cask "superhuman" do
   arch arm: "-arm64"
 
-  version "13.0.11"
-  sha256 arm:   "4d040a0da4777f51a80ecdcaad888e571da6c6ba4f25118900de67a36138f304",
-         intel: "71c7e4b76b1382b8a006a8f4a798a2259458af610a14228d471a7ed7debd5ae8"
+  version "14.0.4"
+  sha256 arm:   "38bf74be88d79c2c0ad01b93844ef7a179f17b9a6cdf4a1c4850058ae96f1392",
+         intel: "88a47d44937870c40c6bf6a19c68262cbeb9e66cab3377ffabb52cc0a545f7a9"
 
   url "https://storage.googleapis.com/download.superhuman.com/supertron-update/Superhuman-#{version}#{arch}-latest-mac.zip",
       verified: "storage.googleapis.com/download.superhuman.com/"

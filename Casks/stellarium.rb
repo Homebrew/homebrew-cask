@@ -1,23 +1,19 @@
 cask "stellarium" do
-  version "1.0"
+  version "1.2"
+  sha256 "4700f8da7b523b9fdc03222272f26dfbb3d9a94e1bab560868d70e90c601a309"
 
-  if MacOS.version <= :catalina
-    sha256 "92649cdc75b2135a62faaf85f4b1617c8c8c850f160c8191f627cd32e1147ec2"
-
-    url "https://github.com/Stellarium/stellarium/releases/download/v#{version.major_minor_patch}/Stellarium-#{version}-x86_64.zip",
-        verified: "github.com/Stellarium/stellarium/"
-  else
-    sha256 "59c7ca0541322194085fcb6290d9a7637154b290b2c2ca4d504cc1bd3e2aeb72"
-
-    url "https://github.com/Stellarium/stellarium/releases/download/v#{version.major_minor_patch}/Stellarium-#{version}-macOS.zip",
-        verified: "github.com/Stellarium/stellarium/"
-  end
-
+  url "https://github.com/Stellarium/stellarium/releases/download/v#{version.major_minor}/Stellarium-#{version}-macOS.zip",
+      verified: "github.com/Stellarium/stellarium/"
   name "Stellarium"
   desc "Tool to render realistic skies in real time on the screen"
   homepage "https://stellarium.org/"
 
-  depends_on macos: ">= :sierra"
+  livecheck do
+    url :homepage
+    regex(%r{href=.*?/Stellarium[._-]v?(\d+(?:\.\d+)*)[._-]macOS\.zip}i)
+  end
+
+  depends_on macos: ">= :big_sur"
 
   app "Stellarium.app"
 

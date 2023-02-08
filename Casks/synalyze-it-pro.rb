@@ -1,6 +1,6 @@
 cask "synalyze-it-pro" do
-  version "1.26"
-  sha256 "a156ee04537e3e48f4907019cbcfff01dacad1703a646bd9d185f45e74b68a10"
+  version "1.32"
+  sha256 "cdf639e201a7e859050f61d0b31a598e71f1df9795613bed351e619596f31fc9"
 
   url "https://www.synalyze-it.com/Downloads/SynalyzeItProTA_#{version}.zip",
       verified: "synalyze-it.com/Downloads/"
@@ -12,6 +12,8 @@ cask "synalyze-it-pro" do
     url "https://www.synalyze-it.com/SynalyzeItPro/appcast.xml"
     strategy :sparkle
   end
+
+  depends_on macos: ">= :mojave"
 
   app "Synalyze It! Pro.app"
 end

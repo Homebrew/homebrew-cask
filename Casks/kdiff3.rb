@@ -1,16 +1,16 @@
 cask "kdiff3" do
   # NOTE: "3" is not a version number, but an intrinsic part of the product name
-  version "1.9.4"
-  sha256 "9cfb02c73cba644d9f778947a98d0e61a08db027b15149059e7df99566a19862"
+  version "1.10.0"
+  sha256 "cb15fbddc8b7f186889816deb10a8d2248d9dd97601853f51409669e1a4467b9"
 
-  url "https://download.kde.org/stable/kdiff3/kdiff3-#{version}-macos-64-clang.dmg"
+  url "https://download.kde.org/stable/kdiff3/kdiff3-#{version}-macos-64-en.dmg"
   name "KDiff3"
   desc "Utility for comparing and merging files and directories"
   homepage "https://invent.kde.org/sdk/kdiff3"
 
   livecheck do
     url "https://download.kde.org/stable/kdiff3/"
-    regex(/href=["']?kdiff3[._-]v?(\d+(?:\.\d+)+)[._-]macos[._-]64[._-]clang\.dmg/i)
+    regex(/href=["']?kdiff3[._-]v?(\d+(?:\.\d+)+)[._-]macos[._-]64[._-]en\.dmg/i)
   end
 
   app "kdiff3.app"

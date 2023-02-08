@@ -1,9 +1,9 @@
 cask "affinity-designer" do
-  version "1.10.5"
+  version "2.0.4"
   sha256 :no_check
 
-  url "https://store.serif.com/download/aa4dee/"
-  name "Affinity Designer"
+  url "https://store.serif.com/download/60f51f/"
+  name "Affinity Designer #{version.major}"
   desc "Professional graphic design software"
   homepage "https://affinity.serif.com/en-us/designer/"
 
@@ -13,11 +13,16 @@ cask "affinity-designer" do
   end
 
   auto_updates true
+  depends_on macos: ">= :catalina"
 
-  app "Affinity Designer.app"
+  app "Affinity Designer #{version.major}.app"
 
   zap trash: [
-    "~/Library/Application Support/Affinity Designer",
-    "~/Library/Caches/com.seriflabs.affinitydesigner",
+    "~/Library/Application Support/Affinity Designer 2",
+    "~/Library/Caches/com.seriflabs.affinitydesigner2",
+    "~/Library/HTTPStorages/com.seriflabs.affinitydesigner2",
+    "~/Library/Preferences/com.seriflabs.affinitydesigner2.plist",
+    "~/Library/Saved Application State/com.seriflabs.affinitydesigner2.savedState",
+    "~/Library/WebKit/com.seriflabs.affinitydesigner2",
   ]
 end
