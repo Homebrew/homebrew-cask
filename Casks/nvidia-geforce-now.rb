@@ -1,5 +1,5 @@
 cask "nvidia-geforce-now" do
-  version :latest
+  version "2.0.48.108"
   sha256 :no_check
 
   url "https://download.nvidia.com/gfnpc/GeForceNOW-release.dmg"
@@ -7,6 +7,7 @@ cask "nvidia-geforce-now" do
   desc "Cloud gaming platform"
   homepage "https://www.nvidia.com/en-us/geforce-now/download/"
 
+  auto_updates true
   depends_on macos: ">= :el_capitan"
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
