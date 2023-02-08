@@ -1,5 +1,5 @@
 cask "videostream" do
-  version "0.5.0"
+  version "0.4.3"
   sha256 :no_check
 
   url "https://cdn.getvideostream.com/videostream-native-updates/macOS/Videostream.pkg"
@@ -20,4 +20,8 @@ cask "videostream" do
             ],
             pkgutil:   "com.videostream",
             signal:    ["TERM", "com.videostream"]
+
+  caveats do
+    discontinued
+  end
 end
