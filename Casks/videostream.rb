@@ -1,12 +1,16 @@
 cask "videostream" do
-  version "0.4.3"
+  version "0.5.0"
   sha256 :no_check
 
   url "https://cdn.getvideostream.com/videostream-native-updates/macOS/Videostream.pkg"
-  appcast "https://videostream-cdn.s3.amazonaws.com/videostream-native-updates/macOS/manifest.json"
   name "Videostream"
   desc "Stream media from your computer to Chromecast"
   homepage "https://getvideostream.com/"
+
+  livecheck do
+    url "https://videostream-cdn.s3.amazonaws.com/videostream-native-updates/macOS/manifest.json"
+    regex(/CurrentVersion:\s*'([^']+)'/)
+  end
 
   pkg "Videostream.pkg"
 
