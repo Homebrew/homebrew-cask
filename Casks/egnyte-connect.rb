@@ -24,6 +24,7 @@ cask "egnyte-connect" do
               "com.egnyte.EgnyteDriveLauncherHelper",
               "com.egnyte.EgnyteFS.Mounter.Helper",
             ],
+            quit:      "com.egnyte.Egnyte-Drive",
             delete:    [
               "/Library/Filesystems/egnytefs.fs",
             ]
