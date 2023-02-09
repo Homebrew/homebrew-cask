@@ -4,6 +4,7 @@ cask "zwift" do
 
   url "https://cdn.zwift.com/app/ZwiftOSX.dmg"
   name "Zwift"
+  desc "Indoor cycling game"
   homepage "https://www.zwift.com/"
 
   livecheck do
