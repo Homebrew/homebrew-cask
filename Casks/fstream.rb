@@ -4,6 +4,7 @@ cask "fstream" do
 
   url "https://www.sourcemac.com/fstream_FStream.tgz"
   name "FStream"
+  desc "WebRadio listener/recorder software"
   homepage "https://www.sourcemac.com/?page=fstream"
 
   livecheck do
