@@ -7,5 +7,10 @@ cask "switch" do
   desc "Multiple format audio file converter"
   homepage "https://www.nch.com.au/switch/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Switch.app"
 end
