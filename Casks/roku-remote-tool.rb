@@ -6,6 +6,11 @@ cask "roku-remote-tool" do
   name "Roku Remote Tool"
   homepage "https://devtools.web.roku.com/RokuRemote/electron.html"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "roku_remote_tool.app"
 
   uninstall delete: [
