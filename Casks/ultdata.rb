@@ -7,6 +7,11 @@ cask "ultdata" do
   desc "iPhone data recovery software"
   homepage "https://www.tenorshare.com/products/iphone-data-recovery.html"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   auto_updates true
 
   app "UltData.app"
