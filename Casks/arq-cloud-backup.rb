@@ -4,11 +4,12 @@ cask "arq-cloud-backup" do
 
   url "https://www.arqbackup.com/download/arqcloudbackup/ArqCloudBackup.dmg"
   name "Arq Cloud Backup"
+  desc "Backup software"
   homepage "https://www.arqbackup.com/"
 
   livecheck do
     url "https://www.arqbackup.com/download/arqcloudbackup/arqcloudbackup_release_notes.html"
-    regex(/Version\s+(\d+(?:\.\d+)*)/i)
+    regex(/Version\s+(\d+(?:\.\d+)+)/i)
   end
 
   pkg "Install Arq Cloud Backup.pkg"
