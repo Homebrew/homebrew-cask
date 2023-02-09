@@ -4,11 +4,12 @@ cask "cisdem-data-recovery" do
 
   url "https://download.cisdem.com/cisdem-datarecovery.dmg"
   name "Cisdem Data Recovery"
+  desc "Recover lost data"
   homepage "https://www.cisdem.com/data-recovery-mac.html"
 
   livecheck do
     url "https://www.cisdem.com/js/notes/data-recovery-mac.js"
-    regex(/(\d+(?:\.\d+)*)\s+\(\d+(?:-\d+)+\)/)
+    regex(/(\d+(?:\.\d+)+)\s+\(\d+(?:-\d+)+\)/)
   end
 
   depends_on macos: ">= :sierra"
