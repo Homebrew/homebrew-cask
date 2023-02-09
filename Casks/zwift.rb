@@ -6,6 +6,11 @@ cask "zwift" do
   name "Zwift"
   homepage "https://www.zwift.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   pkg "ZwiftInstaller.pkg"
 
   uninstall quit:    "com.zwift.ZwiftLauncher",
