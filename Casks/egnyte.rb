@@ -1,8 +1,8 @@
 cask "egnyte" do
-  version "0.4.1_2025"
+  version "0.4.1,2025"
   sha256 "de55ccb4b271bc1d2f27e71843a04f4b5dd4b083e5c6d8cef5e592a24f2f1eb9"
 
-  url "https://egnyte-cdn.egnyte.com/desktopapp/mac/en-us/#{version.underscores_to_dots.major_minor_patch}/Egnyte_#{version}.dmg"
+  url "https://egnyte-cdn.egnyte.com/desktopapp/mac/en-us/#{version.csv.first}/Egnyte_#{version.tr(",","_")}.dmg"
   name "Egnyte"
   desc "Real-time access to your files and folders stored in the cloud"
   homepage "https://www.egnyte.com/"
@@ -10,10 +10,10 @@ cask "egnyte" do
   livecheck do
     url "https://helpdesk.egnyte.com/hc/en-us/articles/205237150-Desktop-App-Installers"
     strategy :page_match do |page|
-      match = page.match(/Egnyte_(\d+(?:\.\d+)+)_(\d+)\.dmg/i)
+      match = page.match(/Egnyte[._-]v?(\d+(?:\.\d+)+)_(\d+)\.dmg/i)
       next if match.blank?
 
-      "#{match[1]}_#{match[2]}"
+      "#{match[1]},#{match[2]}"
     end
   end
 
