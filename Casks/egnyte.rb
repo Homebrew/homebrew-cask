@@ -9,8 +9,9 @@ cask "egnyte" do
 
   livecheck do
     url "https://helpdesk.egnyte.com/hc/en-us/articles/205237150-Desktop-App-Installers"
-    strategy :page_match do |page|
-      match = page.match(/Egnyte[._-]v?(\d+(?:\.\d+)+)_(\d+)\.dmg/i)
+    regex(/Egnyte[._-]v?(\d+(?:\.\d+)+)_(\d+)\.dmg/i)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
