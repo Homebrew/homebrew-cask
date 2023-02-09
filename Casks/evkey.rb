@@ -9,7 +9,7 @@ cask "evkey" do
   homepage "https://evkeyvn.com/"
 
   livecheck do
-    url "https://github.com/lamquangminh/EVKey/releases/download/Release/EVKeyMac.zip"
+    url :url
     strategy :extract_plist
   end
 
