@@ -1,5 +1,5 @@
 cask "jandi" do
-  version "1.4.6,201106"
+  version "1.6.0,202302"
   sha256 :no_check
 
   url "https://cdn.jandi.com/jandi-pc/download/JANDI.dmg"
