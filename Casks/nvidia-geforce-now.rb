@@ -9,7 +9,7 @@ cask "nvidia-geforce-now" do
 
   livecheck do
     url "https://ota.nvidia.com/release/available?product=GFN-mac&channel=OFFICIAL&version=#{version.major_minor_patch}"
-    regex(/"version":"(\d+.\d+.\d+.\d+)"/i)
+    regex(/"version":"v?(\d+(?:\.\d+)+)"/i)
   end
 
   depends_on macos: ">= :el_capitan"
