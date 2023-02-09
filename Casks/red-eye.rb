@@ -4,7 +4,7 @@ cask "red-eye" do
 
   url "https://www.hexedbits.com/downloads/redeye.zip"
   name "Red Eye"
-  desc "Tool to prevent the system from going into sleep mode""
+  desc "Tool to prevent the system from going into sleep mode"
   homepage "https://www.hexedbits.com/redeye/"
 
   livecheck do
