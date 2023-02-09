@@ -4,11 +4,12 @@ cask "iceberg" do
 
   url "http://s.sudre.free.fr/Software/files/Iceberg.dmg"
   name "Iceberg"
+  desc "Integrated packaging environment"
   homepage "http://s.sudre.free.fr/Software/Iceberg.html"
 
   livecheck do
     url "http://s.sudre.free.fr/Software/documentation/Iceberg/English.lproj/documentation/Release%20Notes.html"
-    regex(/Version\s+(\d+(?:\.\d+)*)/)
+    regex(/Version\s+(\d+(?:\.\d+)+)/)
   end
 
   pkg "Iceberg.mpkg"
