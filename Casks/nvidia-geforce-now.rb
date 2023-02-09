@@ -8,8 +8,8 @@ cask "nvidia-geforce-now" do
   homepage "https://www.nvidia.com/en-us/geforce-now/download/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://ota.nvidia.com/release/available?product=GFN-mac&channel=OFFICIAL&version=#{version.major_minor_patch}"
+    regex(/"version":"v?(\d+(?:\.\d+)+)"/i)
   end
 
   depends_on macos: ">= :el_capitan"
