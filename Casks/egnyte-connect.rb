@@ -3,9 +3,8 @@ cask "egnyte-connect" do
   sha256 "8a8cb5dbc7484e8cf701eee845418e771603d61826b160d34b67b292b103eb83"
 
   url "https://egnyte-cdn.egnyte.com/egnytedrive/mac/en-us/#{version.underscores_to_dots.major_minor_patch}/EgnyteConnect_#{version}.pkg"
-
   name "Egnyte Connect"
-  desc "The Egnyte Desktop App provides fast real-time access to your files and folders stored in the cloud from your computer."
+  desc "Egnyte Desktop App provides fast real-time access to your files and folders stored in the cloud from your computer"
   homepage "https://www.egnyte.com/file-access/desktop-access"
 
   livecheck do
@@ -20,21 +19,21 @@ cask "egnyte-connect" do
 
   pkg "EgnyteConnect_#{version}.pkg"
 
-  uninstall pkgutil: "com.egnyte.Egnyte-Drive.inst",
+  uninstall pkgutil:   "com.egnyte.Egnyte-Drive.inst",
             launchctl: "com.egnyte.EgnyteFS.Mounter.Helper",
             delete:    [
               "/Library/Filesystems/egnytefs.fs",
             ]
 
   zap trash: [
-        "~/Library/Application Scripts/com.egnyte.Egnyte-Drive.FinderSyc.EgnyteFinderSync",
-        "~/Library/Application Support/Egnyte Connect",
-        "~/Library/Caches/SentryCrash/Egnyte Connect",
-        "~/Library/Caches/SentryCrash/EgnyteDriveFS",
-        "~/Library/Caches/com.egnyte.Egnyte-Drive",
-        "~/Library/Caches/com.egnyte.cloudfs.EgnyteDriveFS",
-        "~/Library/Containers/com.egnyte.Egnyte-Drive.FinderSyc.EgnyteFinderSync",
-        "~/Library/HTTPStorages/com.egnyte.Egnyte-Drive",
-        "~/Library/HTTPStorages/com.egnyte.cloudfs.EgnyteDriveFS",
-      ]
+    "~/Library/Application Scripts/com.egnyte.Egnyte-Drive.FinderSyc.EgnyteFinderSync",
+    "~/Library/Application Support/Egnyte Connect",
+    "~/Library/Caches/SentryCrash/Egnyte Connect",
+    "~/Library/Caches/SentryCrash/EgnyteDriveFS",
+    "~/Library/Caches/com.egnyte.Egnyte-Drive",
+    "~/Library/Caches/com.egnyte.cloudfs.EgnyteDriveFS",
+    "~/Library/Containers/com.egnyte.Egnyte-Drive.FinderSyc.EgnyteFinderSync",
+    "~/Library/HTTPStorages/com.egnyte.Egnyte-Drive",
+    "~/Library/HTTPStorages/com.egnyte.cloudfs.EgnyteDriveFS",
+  ]
 end
