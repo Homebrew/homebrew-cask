@@ -4,11 +4,12 @@ cask "massreplaceit" do
 
   url "http://www.hexmonkeysoftware.com/files/MassReplaceIt.dmg"
   name "MassReplaceIt"
+  desc "Find and replace utility"
   homepage "http://www.hexmonkeysoftware.com/"
 
   livecheck do
     url :homepage
-    regex(/MassReplaceIt\s+(\d+(?:\.\d+)*)/)
+    regex(/MassReplaceIt\s+(\d+(?:\.\d+)+)/)
   end
 
   app "MassReplaceIt.app"
