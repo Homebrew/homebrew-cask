@@ -36,7 +36,10 @@ cask "egnyte-connect" do
     "~/Library/Caches/com.egnyte.Egnyte-Drive",
     "~/Library/Caches/com.egnyte.cloudfs.EgnyteDriveFS",
     "~/Library/Containers/com.egnyte.Egnyte-Drive.FinderSyc.EgnyteFinderSync",
+    "~/Library/Group Containers/FELUD555VC.group.com.egnyte.Egnyte-Drive",
     "~/Library/HTTPStorages/com.egnyte.Egnyte-Drive",
     "~/Library/HTTPStorages/com.egnyte.cloudfs.EgnyteDriveFS",
+    "~/Library/Preferences/com.egnyte.Egnyte-Drive.plist",
+    "~/Library/Preferences/com.egnyte.cloudfs.EgnyteDriveFS.plist",
   ]
 end
