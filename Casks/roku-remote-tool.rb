@@ -5,6 +5,7 @@ cask "roku-remote-tool" do
   url "https://devtools.web.roku.com/RokuRemote/app/roku-remote-tool-mac.zip"
   name "Roku Remote Tool"
   homepage "https://devtools.web.roku.com/RokuRemote/electron.html"
+  desc "Tool for configuring a Roku remote"
 
   livecheck do
     url :url
