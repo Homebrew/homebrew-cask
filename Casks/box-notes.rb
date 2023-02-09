@@ -5,6 +5,7 @@ cask "box-notes" do
   url "https://e3.boxcdn.net/box-installers/boxnotes/mac/latest/Box%20Notes.zip",
       verified: "e3.boxcdn.net/box-installers/"
   name "Box Notes"
+  desc "Online notes for secure, real-time collaboration"
   homepage "https://www.box.com/resources/downloads/notes"
 
   livecheck do
