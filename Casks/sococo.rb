@@ -6,5 +6,10 @@ cask "sococo" do
   name "Sococo"
   homepage "https://app.sococo.com/a/download"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Sococo.app"
 end
