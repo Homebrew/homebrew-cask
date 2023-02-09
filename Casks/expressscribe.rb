@@ -1,5 +1,5 @@
 cask "expressscribe" do
-  version "9.22"
+  version "11.10"
   sha256 :no_check
 
   url "https://www.nch.com.au/scribe/scribemaci.zip"
