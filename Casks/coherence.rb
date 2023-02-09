@@ -20,7 +20,7 @@ cask "coherence" do
 
   zap trash: [
     "~/Library/Application Support/Coherence X",
-    "~/Library/Application Support/ccom.BZG.CoherenceX4",
-    "~/Library/Preferences/com.BZG.CoherenceX4.*",
+    "~/Library/Application Support/ccom.BZG.CoherenceX*",
+    "~/Library/Preferences/com.BZG.CoherenceX*",
   ]
 end
