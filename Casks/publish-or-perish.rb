@@ -4,11 +4,12 @@ cask "publish-or-perish" do
 
   url "https://harzing.com/download/PoP7Mac.pkg"
   name "Harzing Publish or Perish"
+  desc "Retrieves and analyzes academic citations"
   homepage "https://harzing.com/resources/publish-or-perish"
 
   livecheck do
     url "https://harzing.com/download/pop7mac.txt"
-    regex(/Version=(\d+(?:\.\d+)*)/i)
+    regex(/Version=(\d+(?:\.\d+)+)/i)
   end
 
   depends_on macos: ">= :high_sierra"
