@@ -7,6 +7,11 @@ cask "winx-hd-video-converter" do
   desc "HD video converter"
   homepage "https://www.winxdvd.com/hd-video-converter-for-mac/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Winx HD Video Converter for Mac.app"
 
   zap trash: [
