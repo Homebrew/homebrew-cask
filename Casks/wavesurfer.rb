@@ -4,6 +4,7 @@ cask "wavesurfer" do
 
   url "https://downloads.sourceforge.net/wavesurfer/wavesurfer-#{version}-macos.dmg"
   name "WaveSurfer"
+  desc "Tool for sound visualization and manipulation"
   homepage "https://sourceforge.net/projects/wavesurfer/"
 
   livecheck do
