@@ -4,6 +4,7 @@ cask "fugu" do
 
   url "https://downloads.sourceforge.net/fugussh/Unstable/fugu-#{version}/Fugu-#{version}.zip"
   name "Fugu"
+  desc "Frontend for OpenSSH's sftp/scp tools"
   homepage "https://sourceforge.net/projects/fugussh/"
 
   app "Fugu.app"
