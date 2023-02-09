@@ -4,6 +4,7 @@ cask "ebibookreader" do
 
   url "https://haishin.ebookjapan.jp/contents/appli/reader/ebiBookReader.dmg"
   name "ebi.BookReader"
+  desc "Ebook reader"
   homepage "https://www.ebookjapan.jp/ebj/reader/mac/"
 
   pkg "ebibookreader.pkg"
