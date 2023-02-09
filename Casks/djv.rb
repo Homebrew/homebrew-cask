@@ -5,6 +5,7 @@ cask "djv" do
   url "https://downloads.sourceforge.net/djv/djv-stable/#{version}/DJV-#{version}-Darwin.dmg",
       verified: "downloads.sourceforge.net/djv/"
   name "DJV Imaging"
+  desc "Review software for VFX, animation, and film production"
   homepage "https://djv.sourceforge.io/"
 
   livecheck do
