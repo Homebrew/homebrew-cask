@@ -5,6 +5,7 @@ cask "macdjview" do
   url "https://downloads.sourceforge.net/windjview/MacDjView/#{version}/MacDjView-#{version}.dmg.gz",
       verified: "downloads.sourceforge.net/windjview/"
   name "MacDjView"
+  desc "DjVu viewer"
   homepage "https://windjview.sourceforge.io/"
 
   livecheck do
