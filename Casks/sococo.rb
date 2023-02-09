@@ -4,8 +4,8 @@ cask "sococo" do
 
   url "https://s.sococo.com/rs/client/mac/sococo-client-mac.dmg"
   name "Sococo"
-  homepage "https://app.sococo.com/a/download"
   desc "Online workplace client"
+  homepage "https://app.sococo.com/a/download"
 
   livecheck do
     url :url
