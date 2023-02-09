@@ -2,7 +2,7 @@ cask "egnyte" do
   version "0.4.1,2025"
   sha256 "de55ccb4b271bc1d2f27e71843a04f4b5dd4b083e5c6d8cef5e592a24f2f1eb9"
 
-  url "https://egnyte-cdn.egnyte.com/desktopapp/mac/en-us/#{version.csv.first}/Egnyte_#{version.tr(",","_")}.dmg"
+  url "https://egnyte-cdn.egnyte.com/desktopapp/mac/en-us/#{version.csv.first}/Egnyte_#{version.csv.first}_#{version.csv.second}.dmg"
   name "Egnyte"
   desc "Real-time access to your files and folders stored in the cloud"
   homepage "https://www.egnyte.com/"
