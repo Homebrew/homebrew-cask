@@ -5,6 +5,7 @@ cask "nodeclipse" do
   url "https://downloads.sourceforge.net/nodeclipse/Enide-#{version.major}/#{version.minor}/Enide-#{version.major}-#{version.minor}-macosx-x64-#{version.csv.second}.zip",
       verified: "sourceforge.net/nodeclipse/"
   name "Nodeclipse"
+  desc "Node.js tooling with Eclipse"
   homepage "https://nodeclipse.github.io/"
 
   livecheck do
