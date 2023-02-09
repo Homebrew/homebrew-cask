@@ -4,9 +4,13 @@ cask "displaycal" do
 
   url "https://downloads.sourceforge.net/dispcalgui/release/#{version}/DisplayCAL-#{version}.pkg",
       verified: "sourceforge.net/dispcalgui/"
-  appcast "https://sourceforge.net/projects/dispcalgui/rss?path=/release"
   name "DisplayCAL"
+  desc "Display calibration and characterization powered by ArgyllCMS"
   homepage "https://displaycal.net/"
+
+  livecheck do
+    url "https://sourceforge.net/projects/dispcalgui/rss?path=/release"
+  end
 
   auto_updates true
   depends_on formula: "argyll-cms"

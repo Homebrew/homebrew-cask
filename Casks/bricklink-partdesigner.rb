@@ -1,13 +1,17 @@
 cask "bricklink-partdesigner" do
-  version "1.0.6_5"
+  version "2.23.1_1"
   sha256 :no_check
 
   url "https://dzncyaxjqx7p3.cloudfront.net/PartDesigner/PartDesigner.pkg",
       verified: "dzncyaxjqx7p3.cloudfront.net/"
-  appcast "https://bricklink.com/v3/studio/partdesigner.page"
   name "PartDesigner"
   desc "Design your own LEGO parts"
   homepage "https://bricklink.com/v3/studio/partdesigner.page"
+
+  livecheck do
+    url "https://bricklink.com/v3/studio/partdesigner.page"
+    regex(/"strVersion"\s*:\s*"([^"]+)"/)
+  end
 
   auto_updates true
   depends_on cask: "bricklink-studio"

@@ -3,9 +3,14 @@ cask "voicemac" do
   sha256 :no_check
 
   url "https://download.mrgeckosmedia.com/VoiceMac.zip"
-  appcast "https://mrgeckosmedia.com/applications/appcast/VoiceMac"
   name "VoiceMac"
+  desc "Google Voice client"
   homepage "https://mrgeckosmedia.com/applications/info/VoiceMac"
+
+  livecheck do
+    url "https://mrgeckosmedia.com/applications/appcast/VoiceMac"
+    strategy :sparkle
+  end
 
   app "VoiceMac/VoiceMac.app"
 
