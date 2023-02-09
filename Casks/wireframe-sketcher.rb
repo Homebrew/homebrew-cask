@@ -4,8 +4,8 @@ cask "wireframe-sketcher" do
 
   url "https://wireframesketcher.com/downloads/WireframeSketcher-latest-macosx.zip"
   name "WireframeSketcher"
-  homepage "https://wireframesketcher.com/"
   desc "Tool for creating wireframes, mockups and prototypes"
+  homepage "https://wireframesketcher.com/"
 
   livecheck do
     url :url
