@@ -5,6 +5,7 @@ cask "displaycal" do
   url "https://downloads.sourceforge.net/dispcalgui/release/#{version}/DisplayCAL-#{version}.pkg",
       verified: "sourceforge.net/dispcalgui/"
   name "DisplayCAL"
+  desc "Display calibration and characterization powered by ArgyllCMS"
   homepage "https://displaycal.net/"
 
   livecheck do
