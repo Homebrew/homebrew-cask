@@ -4,7 +4,13 @@ cask "dwgsee" do
 
   url "https://www.dwgsee.com/download/dwgseemac.dmg"
   name "DWGSee"
+  desc "DWG viewer and editor"
   homepage "https://www.dwgsee.com/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   app "DWGSee.app"
 end
