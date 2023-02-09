@@ -7,6 +7,11 @@ cask "zenbeats" do
   desc "Music creation app"
   homepage "https://www.roland.com/us/products/zenbeats/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   pkg "Zenbeats_Installer.pkg"
 
   uninstall pkgutil: "jp.co.roland.zenbeats"
