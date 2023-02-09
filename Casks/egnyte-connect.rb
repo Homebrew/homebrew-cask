@@ -4,7 +4,7 @@ cask "egnyte-connect" do
 
   url "https://egnyte-cdn.egnyte.com/egnytedrive/mac/en-us/#{version.underscores_to_dots.major_minor_patch}/EgnyteConnect_#{version}.pkg"
   name "Egnyte Connect"
-  desc "Egnyte Desktop App provides fast real-time access to your files and folders stored in the cloud from your computer"
+  desc "Real-time access to your files and folders stored in the cloud"
   homepage "https://www.egnyte.com/file-access/desktop-access"
 
   livecheck do
