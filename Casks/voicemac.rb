@@ -4,6 +4,7 @@ cask "voicemac" do
 
   url "https://download.mrgeckosmedia.com/VoiceMac.zip"
   name "VoiceMac"
+  desc "Google Voice client"
   homepage "https://mrgeckosmedia.com/applications/info/VoiceMac"
 
   livecheck do
