@@ -7,5 +7,10 @@ cask "flixtools" do
   desc "Downloads subtitles for movies"
   homepage "https://www.flixtools.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "FlixTools.app"
 end
