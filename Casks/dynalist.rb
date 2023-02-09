@@ -1,5 +1,5 @@
 cask "dynalist" do
-  version :latest
+  version "1.0.6"
   sha256 :no_check
 
   url "https://dynalist.io/standalone/download?file=Dynalist.dmg"
