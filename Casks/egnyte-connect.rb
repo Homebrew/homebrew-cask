@@ -20,7 +20,10 @@ cask "egnyte-connect" do
   pkg "EgnyteConnect_#{version}.pkg"
 
   uninstall pkgutil:   "com.egnyte.Egnyte-Drive.inst",
-            launchctl: "com.egnyte.EgnyteFS.Mounter.Helper",
+            launchctl: [
+              "com.egnyte.EgnyteDriveLauncherHelper",
+              "com.egnyte.EgnyteFS.Mounter.Helper",
+            ],
             delete:    [
               "/Library/Filesystems/egnytefs.fs",
             ]
