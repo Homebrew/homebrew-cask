@@ -6,5 +6,10 @@ cask "wireframe-sketcher" do
   name "WireframeSketcher"
   homepage "https://wireframesketcher.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "WireframeSketcher.app"
 end
