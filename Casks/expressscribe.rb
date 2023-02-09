@@ -4,7 +4,13 @@ cask "expressscribe" do
 
   url "https://www.nch.com.au/scribe/scribemaci.zip"
   name "Express Scribe Transcription Software"
+  desc "Foot pedal controlled digital transcription audio player"
   homepage "https://www.nch.com.au/scribe/index.html"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   app "ExpressScribe.app"
 
