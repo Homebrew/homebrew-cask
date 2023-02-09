@@ -1,5 +1,5 @@
 cask "roku-remote-tool" do
-  version "3.2.22.1288"
+  version "4.0.5.1327"
   sha256 :no_check
 
   url "https://devtools.web.roku.com/RokuRemote/app/roku-remote-tool-mac.zip"
