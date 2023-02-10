@@ -7,5 +7,10 @@ cask "ondesoft-audiobook-converter" do
   desc "Audiobook converter"
   homepage "https://www.ondesoft.com/audible-audiobook-converter.html"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Ondesoft AudioBook Converter.app"
 end
