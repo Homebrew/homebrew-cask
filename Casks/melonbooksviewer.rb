@@ -1,5 +1,5 @@
 cask "melonbooksviewer" do
-  version "1.1.0"
+  version "1.2.0"
   sha256 :no_check
 
   url "https://www.melonbooks.co.jp/user_data/packages/default/app/melonbooks-viewer-mac.zip"
