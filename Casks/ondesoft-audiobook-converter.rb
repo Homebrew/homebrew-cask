@@ -1,5 +1,5 @@
 cask "ondesoft-audiobook-converter" do
-  version "7.0.5"
+  version "7.0.6"
   sha256 :no_check
 
   url "https://www.ondesoft.com/download/odaudiobookconverter_mac.dmg"
