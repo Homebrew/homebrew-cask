@@ -1,5 +1,5 @@
 cask "aimersoft-video-converter-ultimate" do
-  version "11.6.6.1"
+  version "11.6.7.1"
   sha256 :no_check
 
   url "https://download.aimersoft.com/cbs_down/aimer-mac-video-converter-ultimate_full747.dmg"
