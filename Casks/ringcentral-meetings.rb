@@ -7,6 +7,11 @@ cask "ringcentral-meetings" do
   desc "Video conferencing, screen sharing, and team messaging platform"
   homepage "https://www.ringcentral.com/online-meetings/overview.html"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   pkg "RCMeetingsClientSetup.pkg"
 
   uninstall delete:  "/Applications/RingCentral Meetings.app",
