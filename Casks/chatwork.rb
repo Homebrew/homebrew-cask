@@ -4,6 +4,7 @@ cask "chatwork" do
 
   url "https://desktop-app.chatwork.com/installer/ChatWork.dmg"
   name "ChatWork"
+  desc "Group chat software"
   homepage "https://www.chatwork.com/"
 
   livecheck do
