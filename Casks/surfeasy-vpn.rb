@@ -4,6 +4,7 @@ cask "surfeasy-vpn" do
 
   url "https://updates.surfeasy.com/downloads/se0212/SurfEasyVPN-Installer.dmg"
   name "SurfEasy VPN"
+  desc "VPN client"
   homepage "https://www.surfeasy.com/"
 
   livecheck do
