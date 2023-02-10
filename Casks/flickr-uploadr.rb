@@ -4,6 +4,7 @@ cask "flickr-uploadr" do
 
   url "https://downloads.flickr.com/uploadr/FlickrUploadr.dmg"
   name "Flickr Uploadr"
+  desc "Photo upload tool"
   homepage "https://www.flickr.com/tools/"
 
   livecheck do
