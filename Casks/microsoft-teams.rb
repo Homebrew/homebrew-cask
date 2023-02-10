@@ -33,6 +33,7 @@ cask "microsoft-teams" do
             ],
             launchctl: "com.microsoft.teams.TeamsUpdaterDaemon",
             delete:    [
+              "/Applications/Microsoft Teams.app",
               "/Library/Logs/Microsoft/Teams",
               "/Library/Preferences/com.microsoft.teams.plist",
             ]
