@@ -8,6 +8,11 @@ cask "hancom-word" do
   desc "Word processor"
   homepage "https://office.hancom.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   pkg "HwpMac_HancomDocs.pkg"
 
   uninstall quit:    "com.hancom.office.hwp12.mac.general",
