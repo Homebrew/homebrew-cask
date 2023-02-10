@@ -25,6 +25,7 @@
   "java": "homebrew/core",
   "jenkins": "homebrew/core",
   "lunchy": "homebrew/core",
+  "micromamba": "homebrew/core",
   "minikube": "homebrew/core",
   "mitmproxy": "homebrew/core",
   "mosh": "homebrew/core",

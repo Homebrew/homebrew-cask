@@ -1,11 +1,16 @@
 cask "ultdata" do
-  version "9.6.2.1"
+  version "9.7.17.4"
   sha256 :no_check
 
   url "https://download.tenorshare.com/downloads/ultdata-ios-mac.dmg"
   name "UltData"
   desc "iPhone data recovery software"
   homepage "https://www.tenorshare.com/products/iphone-data-recovery.html"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   auto_updates true
 

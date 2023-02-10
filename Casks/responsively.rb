@@ -1,6 +1,6 @@
 cask "responsively" do
-  version "0.19.1"
-  sha256 "d3ebafd5bce9a0d6ff680e196ba1fb0325f40ebffb998c284ba647d64748ea67"
+  version "1.0.1"
+  sha256 "4488eb12af4d453e0224fbc6a875aa400d5a6421fe4e1b9330df464a2e1b37d7"
 
   url "https://github.com/responsively-org/responsively-app/releases/download/v#{version}/ResponsivelyApp-#{version}.dmg",
       verified: "github.com/responsively-org/responsively-app/"

@@ -1,12 +1,17 @@
 cask "balenaetcher" do
-  version :latest
-  sha256 :no_check
+  version "1.14.3"
+  sha256 "dba60c537c1bf6a0ee3454d987db52e69b7b394a80cfa4bccf54653923a8552f"
 
-  url "https://github.com/balena-io/etcher/releases/download/v1.8.14/balenaEtcher-1.8.14.dmg",
+  url "https://github.com/balena-io/etcher/releases/download/v#{version}/balenaEtcher-#{version}.dmg",
       verified: "github.com/balena-io/etcher/"
   name "Etcher"
   desc "Tool to flash OS images to SD cards & USB drives"
   homepage "https://balena.io/etcher"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "balenaEtcher.app"
 
@@ -18,8 +23,4 @@ cask "balenaetcher" do
     "~/Library/Preferences/io.balena.etcher.plist",
     "~/Library/Saved Application State/io.balena.etcher.savedState",
   ]
-
-  caveats <<~EOS
-    #{token} is no longer updated in homebrew-cask due to the maintenance demand of multiple stable releases per day.
-  EOS
 end
