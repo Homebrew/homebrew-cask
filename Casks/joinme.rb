@@ -4,7 +4,7 @@ cask "joinme" do
 
   url "https://secure.join.me/Download.aspx?installer=mac&webdownload=true"
   name "join.me"
-  desc "Online conferencing software" 
+  desc "Online conferencing software"
   homepage "https://www.join.me/"
 
   livecheck do
