@@ -1,5 +1,5 @@
 cask "ringcentral-meetings" do
-  version :latest
+  version "21.1.53852.0426"
   sha256 :no_check
 
   url "https://dn.ringcentral.com/data/web/download/RCMeetings/1210/RCMeetingsClientSetup.pkg"
