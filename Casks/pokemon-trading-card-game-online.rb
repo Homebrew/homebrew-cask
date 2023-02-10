@@ -8,6 +8,11 @@ cask "pokemon-trading-card-game-online" do
   desc "Play the Pokemon TCG online"
   homepage "https://www.pokemon.com/us/pokemon-tcg/play-online/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Pokemon Trading Card Game Online.app"
 
   zap trash: [
