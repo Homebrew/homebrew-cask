@@ -8,5 +8,10 @@ cask "mylio" do
   desc "Photo organizer"
   homepage "https://mylio.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Mylio.app"
 end
