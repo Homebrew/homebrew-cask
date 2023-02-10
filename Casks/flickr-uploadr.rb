@@ -6,5 +6,10 @@ cask "flickr-uploadr" do
   name "Flickr Uploadr"
   homepage "https://www.flickr.com/tools/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Flickr Uploadr.app"
 end
