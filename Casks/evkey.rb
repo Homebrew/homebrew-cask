@@ -9,8 +9,8 @@ cask "evkey" do
   homepage "https://evkeyvn.com/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url :homepage
+    regex(/EVKeyMac\.zip.*?v?(\d+(?:\.\d+)+))/)
   end
 
   app "EVKey.app"
