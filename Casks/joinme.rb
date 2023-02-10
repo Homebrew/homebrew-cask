@@ -6,6 +6,11 @@ cask "joinme" do
   name "join.me"
   homepage "https://www.join.me/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "join.me.app"
 
   zap trash: [
