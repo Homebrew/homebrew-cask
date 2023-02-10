@@ -5,7 +5,7 @@ cask "encryptr" do
   url "https://spideroak.com/release/Encryptr/osx"
   name "SpiderOak Encryptr"
   desc "Zero-knowledge cloud-based password manager"
-  homepage "https://spideroak.com/encryptr/"
+  homepage "https://spideroak.support/hc/en-us/categories/115000424503-Encryptr-Password-Manager"
 
   livecheck do
     url :url
