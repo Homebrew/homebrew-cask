@@ -4,6 +4,7 @@ cask "teensy" do
 
   url "https://www.pjrc.com/teensy/teensy.dmg"
   name "Teensy"
+  desc "Firmware flashing utility"
   homepage "https://pjrc.com/teensy/loader_mac.html"
 
   livecheck do
