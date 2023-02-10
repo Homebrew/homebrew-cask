@@ -18,4 +18,8 @@ cask "encryptr" do
     "~/Library/Preferences/org.devgeeks.encryptr.plist",
     "~/Library/Saved Application State/org.devgeeks.encryptr.savedState",
   ]
+
+  caveats do
+    discontinued
+  end
 end
