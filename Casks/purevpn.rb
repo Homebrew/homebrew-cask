@@ -8,6 +8,11 @@ cask "purevpn" do
   desc "VPN client"
   homepage "https://www.purevpn.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   pkg "PureVPN.pkg"
 
   uninstall quit:    "com.purevpn.app.mac",
