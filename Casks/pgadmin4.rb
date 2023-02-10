@@ -1,6 +1,6 @@
 cask "pgadmin4" do
-  version "6.19"
-  sha256 "776b7266237276b12b4664e7674c417711907ffd9c5fa8b5ae8304719f5fc811"
+  version "6.20"
+  sha256 "753ab4dd7708f48763c5957169ade33bab1305066ab971df03c04deb8290b453"
 
   url "https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v#{version}/macos/pgadmin4-#{version}.dmg",
       verified: "ftp.postgresql.org/pub/pgadmin/pgadmin4/"
