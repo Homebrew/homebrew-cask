@@ -7,6 +7,11 @@ cask "chrome-remote-desktop-host" do
   desc "Remotely access another computer through the Google Chrome browser"
   homepage "https://chrome.google.com/webstore/detail/chrome-remote-desktop/inomeogfingihgjfjlpeplalcfajhgai"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   pkg "Chrome Remote Desktop Host.pkg"
 
   uninstall script:  {
