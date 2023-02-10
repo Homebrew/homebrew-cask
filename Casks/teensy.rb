@@ -6,5 +6,10 @@ cask "teensy" do
   name "Teensy"
   homepage "https://pjrc.com/teensy/loader_mac.html"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "teensy.app"
 end
