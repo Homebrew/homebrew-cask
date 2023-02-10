@@ -6,5 +6,10 @@ cask "surfeasy-vpn" do
   name "SurfEasy VPN"
   homepage "https://www.surfeasy.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "SurfEasy VPN.app"
 end
