@@ -8,6 +8,11 @@ cask "box-drive" do
   desc "Client for the Box cloud storage service"
   homepage "https://www.box.com/drive"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   auto_updates true
   conflicts_with cask: "box-sync"
 
