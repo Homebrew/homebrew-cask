@@ -10,7 +10,9 @@ cask "box-drive" do
 
   livecheck do
     url :url
-    strategy :extract_plist
+    strategy :extract_plist do |item|
+      item["com.box.desktop"].version
+    end
   end
 
   auto_updates true
