@@ -8,7 +8,7 @@ cask "egnyte" do
   homepage "https://www.egnyte.com/"
 
   livecheck do
-    url "https://helpdesk.egnyte.com/hc/en-us/articles/205237150-Desktop-App-Installers"
+    url "https://helpdesk.egnyte.com/api/v2/help_center/en-us/articles/205237150/"
     regex(/Egnyte[._-]v?(\d+(?:\.\d+)+)_(\d+)\.dmg/i)
     strategy :page_match do |page, regex|
       match = page.match(regex)
