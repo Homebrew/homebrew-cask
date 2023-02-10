@@ -6,5 +6,10 @@ cask "chatwork" do
   name "ChatWork"
   homepage "https://www.chatwork.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "ChatWork.app"
 end
