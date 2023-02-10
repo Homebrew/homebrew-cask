@@ -7,6 +7,11 @@ cask "encryptr" do
   desc "Zero-knowledge cloud-based password manager"
   homepage "https://spideroak.com/encryptr/"
 
+  livecheck do
+    url :url
+    strategy :header_match
+  end
+
   app "Encryptr.app"
 
   zap trash: [
