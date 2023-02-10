@@ -7,5 +7,10 @@ cask "aimersoft-video-converter-ultimate" do
   desc "Video converter app"
   homepage "https://www.aimersoft.com/video-converter-ultimate.html"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Aimersoft Video Converter Ultimate.app"
 end
