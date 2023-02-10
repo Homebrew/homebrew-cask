@@ -21,4 +21,5 @@ cask "android-platform-tools" do
   binary "#{staged_path}/platform-tools/make_f2fs"
   binary "#{staged_path}/platform-tools/make_f2fs_casefold"
   binary "#{staged_path}/platform-tools/mke2fs"
+  
 end
