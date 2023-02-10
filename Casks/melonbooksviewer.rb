@@ -5,6 +5,7 @@ cask "melonbooksviewer" do
   url "https://www.melonbooks.co.jp/user_data/packages/default/app/melonbooks-viewer-mac.zip"
   name "Melonbooks Viewer"
   name "メロンブックス 電子書籍"
+  desc "e-book viewer"
   homepage "https://www.melonbooks.co.jp/ebook/list.php?category_id=77"
 
   livecheck do
