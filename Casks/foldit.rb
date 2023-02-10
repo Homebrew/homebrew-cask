@@ -1,5 +1,5 @@
 cask "foldit" do
-  version :latest
+  version "1.0"
   sha256 :no_check
 
   url "https://fold.it/portal/files/app/Foldit-macos_x64.dmg"
