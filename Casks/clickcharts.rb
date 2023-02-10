@@ -8,5 +8,10 @@ cask "clickcharts" do
   desc "Diagram and flowchart software"
   homepage "https://www.nchsoftware.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "ClickCharts.app"
 end
