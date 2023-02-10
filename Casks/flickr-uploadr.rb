@@ -1,5 +1,5 @@
 cask "flickr-uploadr" do
-  version "1.1.2,2121"
+  version "1.2,2142"
   sha256 :no_check
 
   url "https://downloads.flickr.com/uploadr/FlickrUploadr.dmg"
