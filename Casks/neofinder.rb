@@ -1,6 +1,6 @@
 cask "neofinder" do
-  version "8.2"
-  sha256 "b681f1f8db4267985a9f7a9c54d19111d43f47a26c297faf957c3a7168d37f55"
+  version "8.3"
+  sha256 "8cc585a280097dd795218f61e6b5341ff511acabd441a59481d87c422e38a8c8"
 
   url "https://www.wfs-apps.de/updates/neofinder-mac.#{version}.zip",
       verified: "wfs-apps.de/"
@@ -13,7 +13,7 @@ cask "neofinder" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :sierra"
 
   app "NeoFinder.app"
 
