@@ -1,5 +1,5 @@
 cask "now-tv-player" do
-  version "8.14.0"
+  version "8.15.0"
   sha256 :no_check
 
   url "https://web.static.nowtv.com/watch/player/nowtv/gb/latest/NOWTVPlayer-Mac.dmg"
