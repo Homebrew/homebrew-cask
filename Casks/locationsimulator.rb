@@ -1,6 +1,6 @@
 cask "locationsimulator" do
-  version "0.1.9.7"
-  sha256 "852a25723f1f9d86fedd8e2450e844fd4fe59d5f9439ad156887752df05fae66"
+  version "0.1.9.8"
+  sha256 "851f2d2f127670e4ebd5beca727e531192cacb2fe06ab28a121643e55fd4b674"
 
   url "https://github.com/Schlaubischlump/LocationSimulator/releases/download/v#{version}/LocationSimulator.app.zip"
   name "LocationSimulator"
