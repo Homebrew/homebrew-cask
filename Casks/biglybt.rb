@@ -1,9 +1,9 @@
 cask "biglybt" do
   arch arm: "Silicon", intel: "Intel"
 
-  version "3.2.0.0"
-  sha256 arm:   "798448e858da8a674414d8713775b036d4c352a6ad429447fdd16bee00acab52",
-         intel: "e8f0600a02cf361d65e2abd9bf652154b572a0281849dc0ace64167ece9b3151"
+  version "3.3.0.0"
+  sha256 arm:   "8fa8df6b63e5f3e106b8f77cb0ab2badff8909fbae6d14a01d2869e20bcbca5f",
+         intel: "bf3abc01006e6fe90c84347e9c5bc23bfdb9b6b396f8581b5bdbcc8c3a002347"
 
   url "https://github.com/BiglySoftware/BiglyBT/releases/download/v#{version}/GitHub_BiglyBT_Mac_#{arch}_Installer.dmg",
       verified: "github.com/BiglySoftware/BiglyBT/"
