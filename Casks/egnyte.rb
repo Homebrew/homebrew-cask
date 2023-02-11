@@ -4,7 +4,7 @@ cask "egnyte" do
 
   url "https://egnyte-cdn.egnyte.com/desktopapp/mac/en-us/#{version.csv.first}/Egnyte_#{version.csv.first}_#{version.csv.second}.dmg"
   name "Egnyte"
-  desc "Real-time access to your files and folders stored in the cloud"
+  desc "Client for the Egnyte cloud storage service"
   homepage "https://www.egnyte.com/"
 
   livecheck do
