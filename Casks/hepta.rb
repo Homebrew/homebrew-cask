@@ -1,9 +1,9 @@
 cask "hepta" do
   arch arm: "arm64-mac", intel: "mac"
 
-  version "0.261.0"
-  sha256 arm:   "b82e39c97ad82e806e99ba3298b3fa23bc9085304357688055ab163b8720374d",
-         intel: "487297b68cbeef0ec575a9fa3df21959702bce76b05e093a952ac6feba02c051"
+  version "0.263.0"
+  sha256 arm:   "9a90215ce9130b094963f8b3d8967f2813ab13c3cbe52c300becda574d694cca",
+         intel: "18923993b3c0f643ccb3de083a828df474b11449a3ee1b8e2f64c1be10543b56"
 
   url "https://github.com/heptameta/project-meta/releases/download/v#{version}/Hepta-#{version}-#{arch}.zip",
       verified: "github.com/heptameta/project-meta/"
