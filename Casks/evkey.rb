@@ -10,7 +10,7 @@ cask "evkey" do
 
   livecheck do
     url :homepage
-    regex(/EVKeyMac\.zip.*?v?(\d+(?:\.\d+)+)/i)
+    regex(/EVKeyMac\.zip.*?v?(\d+(?:\.\d+)+)/gi)
   end
 
   app "EVKey.app"
