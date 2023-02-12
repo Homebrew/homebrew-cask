@@ -813,4 +813,8 @@ cask "libreoffice-language-pack" do
   # and that for this cask it is indeed this simple.
   # See https://github.com/Homebrew/homebrew-cask/pull/52893
   uninstall delete: "#{staged_path}/#{token}"
+
+  caveats <<~EOS
+    #{token} cannot be upgraded, use brew reinstall --cask #{token} instead
+  EOS
 end

@@ -1,5 +1,5 @@
 cask "sirimote" do
-  version "1.4.4,34"
+  version "1.4.5,35"
   sha256 :no_check
 
   url "https://eternalstorms.at/sirimote/SiriMote.zip"

@@ -1,6 +1,6 @@
 cask "shortcat" do
-  version "0.11.1,174"
-  sha256 "6a2d3cf21754c81f4e92c65410fa5d3a24f2149cb6f6f36146ab4f91962ca5b1"
+  version "0.11.4,178"
+  sha256 "d2e840194e72f7ca0e2c094ced4bb8756c8af3945f351e5cf33dd4ecb1e2f20f"
 
   url "https://files.shortcat.app/releases/v#{version.csv.first}/Shortcat.zip"
   name "Sproutcube Shortcat"

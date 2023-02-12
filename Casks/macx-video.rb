@@ -3,10 +3,14 @@ cask "macx-video" do
   sha256 :no_check
 
   url "https://www.videoproc.com/download/macxvideo.dmg"
-  appcast "https://www.videoproc.com/macxvideo/"
   name "macXvideo"
   desc "4K video processing software"
   homepage "https://www.videoproc.com/macxvideo/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   app "macXvideo.app"
 

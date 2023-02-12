@@ -1,11 +1,16 @@
 cask "zenbeats" do
-  version "2.2.2,8612"
+  version "3.1.3,9279"
   sha256 :no_check
 
   url "https://static.roland.com/assets/media/pkg/Zenbeats_Installer.pkg"
   name "Zenbeats"
   desc "Music creation app"
   homepage "https://www.roland.com/us/products/zenbeats/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   pkg "Zenbeats_Installer.pkg"
 

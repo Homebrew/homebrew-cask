@@ -1,6 +1,6 @@
 cask "kekaexternalhelper" do
-  version "1.1.2,1.2.50"
-  sha256 "4fb629045b9d887a6adb3280e791ff8ac7843b40b475bb88ece5c25c6cd5d70f"
+  version "1.1.3,1.2.59"
+  sha256 "a330bc6fcd00a93dfd95c52cdbdbbec5af0a0f091be0fc0efea58931906f43b6"
 
   url "https://github.com/aonez/Keka/releases/download/v#{version.csv.second}/KekaExternalHelper-v#{version.csv.first}.zip"
   name "Keka External Helper"

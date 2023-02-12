@@ -1,6 +1,6 @@
 cask "moderndeck" do
-  version "9.4.5"
-  sha256 "0033851c0c8435e567bdf85a99aff8f7979d7982b84bd77ed4dc07d62eb602d6"
+  version "10.0.0"
+  sha256 "f4f09af5ae7a71bbcb3e660ba6ab664fe33c016bc14f94e129a2013f16e208b6"
 
   url "https://github.com/dangeredwolf/ModernDeck/releases/download/v#{version}/ModernDeck-universal.dmg",
       verified: "github.com/dangeredwolf/ModernDeck"

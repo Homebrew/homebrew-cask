@@ -1,5 +1,5 @@
 cask "box-drive" do
-  version "2.19.294"
+  version "2.30.88"
   sha256 :no_check
 
   url "https://e3.boxcdn.net/box-installers/desktop/releases/mac/Box.pkg",
@@ -7,6 +7,13 @@ cask "box-drive" do
   name "Box Drive"
   desc "Client for the Box cloud storage service"
   homepage "https://www.box.com/drive"
+
+  livecheck do
+    url :url
+    strategy :extract_plist do |item|
+      item["com.box.desktop"].version
+    end
+  end
 
   auto_updates true
   conflicts_with cask: "box-sync"

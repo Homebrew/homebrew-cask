@@ -1,7 +1,7 @@
 cask "filen" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.0.15"
+  version "2.0.16"
   sha256 :no_check
 
   url "https://cdn.filen.io/desktop/release/filen_#{arch}.dmg"
