@@ -7,5 +7,10 @@ cask "nifty" do
   desc "Desktop app for the Nifty project management platform"
   homepage "https://niftypm.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Nifty.app"
 end
