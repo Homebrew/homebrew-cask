@@ -4,7 +4,7 @@ cask "nifty" do
 
   url "https://niftypm.com/apps/Nifty.dmg"
   name "Nifty"
-  desc "Desktop app for the Nifty project management platform"
+  desc "Client for the Nifty project management platform"
   homepage "https://niftypm.com/"
 
   livecheck do
