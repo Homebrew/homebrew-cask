@@ -2,8 +2,9 @@ cask "ithoughtsx" do
   version "9.3.0"
   sha256 :no_check
 
-  url "https://cdn.toketaware.com/?download=iThoughtsX.zip",
-      referer: "https://www.toketaware.com/"
+  url "https://cdn.toketaware.com?download=iThoughtsX.zip",
+      referer: "https://www.toketaware.com/",
+      user_agent: :fake
   name "iThoughtsX"
   desc "Mind mapping tool"
   homepage "https://www.toketaware.com/ithoughts-osx"
