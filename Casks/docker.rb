@@ -67,6 +67,7 @@ cask "docker" do
             ],
             launchctl: [
               "com.docker.helper",
+              "com.docker.socket",
               "com.docker.vmnetd",
             ],
             quit:      "com.docker.docker"
