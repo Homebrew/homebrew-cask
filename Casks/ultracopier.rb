@@ -1,6 +1,6 @@
 cask "ultracopier" do
-  version "2.2.6.5"
-  sha256 "93040d8f70f87bdf318af307ac55e90feaa17c7c212fb70950d30b6c7071333e"
+  version "2.2.6.6"
+  sha256 "b1d09ceb60a331167021ad4bce6fce6b467ffb32db64d8dab3289f7a5f559133"
 
   url "https://cdn.confiared.com/ultracopier.herman-brule.com/files/#{version}/ultracopier-mac-os-x-#{version}.dmg",
       verified: "cdn.confiared.com/ultracopier.herman-brule.com/files/"
