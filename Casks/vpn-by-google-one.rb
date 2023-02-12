@@ -1,5 +1,5 @@
 cask "vpn-by-google-one" do
-  version "1.1.0.3"
+  version "1.2.1.1"
   sha256 :no_check
 
   url "https://dl.google.com/google-one/VpnByGoogleOne.dmg"
