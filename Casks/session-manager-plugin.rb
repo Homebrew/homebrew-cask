@@ -14,7 +14,7 @@ cask "session-manager-plugin" do
   end
 
   pkg "session-manager-plugin.pkg"
-  binary "/usr/local/sessionmanagerplugin/bin/session-manager-plugin"
+  binary "$(brew --prefix)/sessionmanagerplugin/bin/session-manager-plugin"
 
   uninstall pkgutil: "session-manager-plugin"
 end
