@@ -3,7 +3,7 @@ cask "ithoughtsx" do
   sha256 :no_check
 
   url "https://cdn.toketaware.com?download=iThoughtsX.zip",
-      referer: "https://www.toketaware.com/",
+      referer:    "https://www.toketaware.com/",
       user_agent: :fake
   name "iThoughtsX"
   desc "Mind mapping tool"
