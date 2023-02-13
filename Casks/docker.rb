@@ -27,7 +27,7 @@ cask "docker" do
     hyperkit
     kubernetes-cli
   ]
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Docker.app"
   binary "#{appdir}/Docker.app/Contents/Resources/etc/docker.bash-completion",
