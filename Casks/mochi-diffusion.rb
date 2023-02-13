@@ -4,12 +4,10 @@ cask "mochi-diffusion" do
 
   url "https://github.com/godly-devotion/MochiDiffusion/releases/download/v#{version}/MochiDiffusion_v#{version}.dmg"
   name "Mochi Diffusion"
-  desc "Run Stable Diffusion on Mac natively"
+  desc "Run Stable Diffusion natively"
   homepage "https://github.com/godly-devotion/MochiDiffusion"
 
   app "Mochi Diffusion.app"
 
-  zap trash: [
-    "~/Library/Application Support/MochiDiffusion",
-  ]
+  zap trash: "~/Library/Application Support/MochiDiffusion"
 end
