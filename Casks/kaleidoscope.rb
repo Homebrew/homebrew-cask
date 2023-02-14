@@ -16,10 +16,23 @@ cask "kaleidoscope" do
   end
 
   auto_updates true
-  conflicts_with cask: "homebrew/cask-versions/kaleidoscope2"
+  conflicts_with cask: [
+    "ksdiff",
+    "homebrew/cask-versions/kaleidoscope2",
+    "homebrew/cask-versions/ksdiff2",
+  ]
   depends_on macos: ">= :big_sur"
 
   app "Kaleidoscope.app"
+
+  postflight do
+    contents = "#{appdir}/Kaleidoscope.app/Contents"
+    system_command "#{contents}/Resources/Integration/scripts/install_ksdiff",
+                   args: ["#{contents}/MacOS", "#{HOMEBREW_PREFIX}/bin"]
+  end
+
+  uninstall quit:    "app.kaleidoscope.v#{version.major}",
+            pkgutil: "app.kaleidoscope.uninstall_ksdiff"
 
   zap trash: [
     "~/Library/Application Support/app.kaleidoscope.v*",
