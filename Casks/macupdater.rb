@@ -8,7 +8,7 @@ cask "macupdater" do
     depends_on macos: ">= :mojave"
   end
   on_ventura :or_newer do
-    version "3.0.0,15453"
+    version "3.0.1,15495"
     sha256 :no_check
 
     url "https://www.corecode.io/downloads/macupdater_latest.dmg"
