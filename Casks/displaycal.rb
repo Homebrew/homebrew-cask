@@ -24,4 +24,11 @@ cask "displaycal" do
     "~/Library/Logs/dispcalGUI",
     "~/Library/Preferences/dispcalGUI",
   ]
+
+  caveats do
+    <<~EOS
+      If #{token} asks for argyll-cms, do not choose to download.
+      Instead, select "Browse" and point #{token} to your #{HOMEBREW_PREFIX}/bin.
+    EOS
+  end
 end
