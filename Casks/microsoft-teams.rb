@@ -24,6 +24,7 @@ cask "microsoft-teams" do
   end
 
   auto_updates true
+  conflicts_with cask: "microsoft-office-businesspro"
 
   pkg "Teams_osx.pkg"
 
