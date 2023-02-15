@@ -26,9 +26,9 @@ cask "microsoft-defender" do
       ]
 
   uninstall script:  {
-    executable: "/Library/Application Support/Microsoft/Defender/uninstall/uninstall",
-    sudo:       true,
-  },
+              executable: "/Library/Application Support/Microsoft/Defender/uninstall/uninstall",
+              sudo:       true,
+            },
             pkgutil: [
               "com.microsoft.dlp.agent",
               "com.microsoft.dlp.daemon",
