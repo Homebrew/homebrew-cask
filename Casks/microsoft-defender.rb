@@ -25,10 +25,16 @@ cask "microsoft-defender" do
         },
       ]
 
-  uninstall script: {
+  uninstall script:  {
     executable: "/Library/Application Support/Microsoft/Defender/uninstall/uninstall",
     sudo:       true,
-  }
+  },
+            pkgutil: [
+              "com.microsoft.dlp.agent",
+              "com.microsoft.dlp.daemon",
+              "com.microsoft.dlp.ux",
+            ],
+            quit:    "com.microsoft.autoupdate2"
 
   zap trash: [
     "~/Library/Group Containers/*.com.microsoft.wdav/MicrosoftDefender.sqlite*",
