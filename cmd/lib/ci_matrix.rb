@@ -114,6 +114,7 @@ module CiMatrix
 
       audit_exceptions = []
       audit_exceptions << "repository" if labels.include?("ci-skip-repository")
+      audit_exceptions << ["download","signing"] if labels.include?("ci-skip-fetch")
 
       # TODO: Replace with `except`.
       audit_args << if labels.include?("ci-skip-appcast")
