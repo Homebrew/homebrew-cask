@@ -19,7 +19,7 @@ cask "microsoft-defender" do
   pkg "Microsoft Defender.pkg",
       choices: [
         {
-          "choiceIdentifier" => "com.microsoft.autoupdate", # Office16_all_autoupdate.pkg
+          "choiceIdentifier" => "com.microsoft.autoupdate",
           "choiceAttribute"  => "selected",
           "attributeSetting" => 0,
         },
@@ -37,7 +37,7 @@ cask "microsoft-defender" do
             quit:    "com.microsoft.autoupdate2"
 
   zap trash: [
-    "~/Library/Group Containers/*.com.microsoft.wdav/MicrosoftDefender.sqlite*",
+    "~/Library/Group Containers/*com.microsoft.wdav/MicrosoftDefender.sqlite*",
     "~/Library/Logs/Microsoft/Defender",
   ]
 end
