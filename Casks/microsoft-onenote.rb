@@ -18,6 +18,8 @@ cask "microsoft-onenote" do
   ]
   depends_on macos: ">= :catalina"
 
+  pkg "Microsoft_OneNote_#{version}_Updater.pkg"
+
   uninstall pkgutil: "com.microsoft.package.Microsoft_OneNote.app",
             delete:  "/Applications/Microsoft OneNote.app"
 
