@@ -3,8 +3,8 @@ cask "anka-virtualization" do
   livecheck_folder = on_arch_conditional arm: "arm", intel: "intel"
 
   on_intel do
-    version "3.2.0.154"
-    sha256 "40697e490de1450beba828a8015e339a91de3899729385c1116e5d898984aaf3"
+    version "3.2.1.155"
+    sha256 "5d78b31d318238d5289a887922ebdb65bdda20ea25fcb2dfab82a24cce4aabc6"
   end
   on_arm do
     version "3.2.0.153"
