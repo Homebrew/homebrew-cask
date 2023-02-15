@@ -36,7 +36,10 @@ cask "microsoft-excel" do
   end
 
   auto_updates true
-  conflicts_with cask: "microsoft-office"
+  conflicts_with cask: %w[
+    microsoft-office
+    microsoft-office-businesspro
+  ]
   depends_on cask: "microsoft-auto-update"
 
   pkg "Microsoft_Excel_#{version}_Installer.pkg",
