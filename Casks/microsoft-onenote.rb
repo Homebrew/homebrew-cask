@@ -17,7 +17,7 @@ cask "microsoft-onenote" do
   depends_on macos: ">= :catalina"
 
   uninstall pkgutil:   "com.microsoft.package.Microsoft_OneNote.app",
-            delete:    "/Applications/Microsoft OneNote.app",
+            delete:    "/Applications/Microsoft OneNote.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.microsoft.onenote.mac",
