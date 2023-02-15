@@ -68,6 +68,7 @@ cask "microsoft-office-businesspro" do
               "com.microsoft.OneDriveStandaloneUpdaterDaemon",
               "com.microsoft.OneDriveUpdaterDaemon",
               "com.microsoft.SyncReporter",
+              "com.microsoft.teams.TeamsUpdaterDaemon",
             ],
             quit:      "com.microsoft.autoupdate2"
 
