@@ -19,7 +19,7 @@ cask "microsoft-defender" do
   pkg "Microsoft Defender.pkg",
       choices: [
         {
-          "choiceIdentifier" => "com.microsoft.autoupdate",
+          "choiceIdentifier" => "com.microsoft.package.Microsoft_AutoUpdate.app",
           "choiceAttribute"  => "selected",
           "attributeSetting" => 0,
         },
