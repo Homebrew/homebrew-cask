@@ -16,13 +16,11 @@ cask "microsoft-onenote" do
   conflicts_with cask: "microsoft-office"
   depends_on macos: ">= :catalina"
 
-  uninstall pkgutil:   "com.microsoft.package.Microsoft_OneNote.app",
-            delete:    "/Applications/Microsoft OneNote.app"
+  uninstall pkgutil: "com.microsoft.package.Microsoft_OneNote.app",
+            delete:  "/Applications/Microsoft OneNote.app"
 
   zap trash: [
-    "~/Library/Application Scripts/com.microsoft.onenote.mac",
-    "~/Library/Application Scripts/com.microsoft.onenote.mac.shareextension",
-    "~/Library/Containers/com.microsoft.onenote.mac",
-    "~/Library/Containers/com.microsoft.onenote.mac.shareextension",
+    "~/Library/Application Scripts/com.microsoft.onenote.mac*",
+    "~/Library/Containers/com.microsoft.onenote.mac*",
   ]
 end
