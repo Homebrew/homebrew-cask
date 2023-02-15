@@ -17,6 +17,8 @@ cask "microsoft-office" do
   auto_updates true
   conflicts_with cask: %w[
     microsoft-excel
+    microsoft-office-businesspro
+    microsoft-onenote
     microsoft-outlook
     microsoft-powerpoint
     microsoft-word
