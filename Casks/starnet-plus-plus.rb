@@ -17,12 +17,11 @@ cask "starnet-plus-plus" do
     end
   end
 
-  share = "#{HOMEBREW_PREFIX}/share"
-  libs = [
+  bin_path = "#{staged_path}/StarNetv#{version.csv.first}CLI_MacOS"
+  bins = [
     "starnet++",
     "libtensorflow.2.dylib",
     "libtensorflow_framework.2.dylib",
-    "starnet#{version.csv.first}_weights.pb",
   ]
 
   shimscript = "#{staged_path}/starnet_wrapper.sh"
@@ -39,22 +38,19 @@ cask "starnet-plus-plus" do
       trap cleanup RETURN EXIT SIGINT SIGKILL
 
       # the binary hardcodes the weights path so we have to symlink it to the CWD
-      ln -sf "#{share}/starnet#{version.csv.first}_weights.pb" .#{" "}
+      ln -sf "#{bin_path}/starnet#{version.csv.first}_weights.pb" .
 
       # define a load path since the libs are not in the same dir as the bin
-      DYLD_LIBRARY_PATH=#{share} command "#{share}/starnet++" "$@"
+      DYLD_LIBRARY_PATH=#{bin_path} command #{bin_path}/starnet++ $@
     EOS
   end
 
   postflight do
-    set_permissions "#{staged_path}/StarNetv#{version.csv.first}CLI_MacOS/starnet++", "0755"
-    libs.each do |af|
-      system_command "xattr", args: ["-c", "#{staged_path}/StarNetv#{version.csv.first}CLI_MacOS/#{af}"]
-      File.symlink "#{staged_path}/StarNetv#{version.csv.first}CLI_MacOS/#{af}", "#{share}/#{af}"
+    set_permissions "#{bin_path}/starnet++", "0755"
+    bins.each do |bin|
+      system_command "xattr", args: ["-c", "#{bin_path}/#{bin}"]
     end
   end
-
-  uninstall_postflight { File.unlink(*libs.map { |af| "#{share}/#{af}" }) }
 
   caveats do
     requires_rosetta
