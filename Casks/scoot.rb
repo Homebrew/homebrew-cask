@@ -8,4 +8,10 @@ cask "scoot" do
   homepage "https://github.com/mjrusso/scoot"
 
   app "Scoot.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.mjrusso.Scoot",
+    "~/Library/Containers/com.mjrusso.Scoot",
+    "~/Library/Preferences/com.mjrusso.Scoot.plist",
+  ]
 end
