@@ -9,7 +9,7 @@ cask "snapmaker-luban" do
       verified: "github.com/snapmaker/luban/"
   name "Snapmaker Luban"
   desc "3D printing software"
-  homepage "https://luban.xyz/"
+  homepage "https://snapmaker.com/snapmaker-luban"
 
   livecheck do
     url :url
