@@ -1,5 +1,5 @@
 cask "pulsar" do
-  arch intel: "Intel", arm: "Silicon"
+  arch arm: "Silicon", intel: "Intel"
 
   version "1.102.0"
   sha256 arm:   "07fb1e91ae99bfbc40833ec19339d05de708e6a41ec4a68c697f2e028490f68d",
