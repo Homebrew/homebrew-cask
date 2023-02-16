@@ -8,8 +8,11 @@ cask "parallels" do
   homepage "https://www.parallels.com/products/desktop/"
 
   livecheck do
-    url "https://www.parallels.com/directdownload/pd#{version.major}/image/"
-    strategy :header_match
+    url "https://kb.parallels.com/en/129060"
+    regex(/(v?\d+(?:\.\d+)+\s*\(\d+\)|\(v?\d+(?:\.\d+)+-\d+\))/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| match.first.strip.tr("()", "").gsub(/\s+/, "-") }
+    end
   end
 
   auto_updates true
