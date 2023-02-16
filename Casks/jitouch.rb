@@ -17,9 +17,9 @@ cask "jitouch" do
             launchctl: "com.jitouch.Jitouch.agent"
 
   zap trash: [
-    "~/Library/Preferences/com.jitouch.Jitouch.plist",
     "~/Library/LaunchAgents/com.jitouch.Jitouch.plist",
     "~/Library/Logs/com.jitouch.Jitouch.log",
     "~/Library/Logs/com.jitouch.Jitouch.prefpane.log",
+    "~/Library/Preferences/com.jitouch.Jitouch.plist",
   ]
 end
