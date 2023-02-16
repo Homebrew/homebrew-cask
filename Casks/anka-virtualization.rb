@@ -7,8 +7,8 @@ cask "anka-virtualization" do
     sha256 "5d78b31d318238d5289a887922ebdb65bdda20ea25fcb2dfab82a24cce4aabc6"
   end
   on_arm do
-    version "3.2.0.153"
-    sha256 "83d881b76136b64064fa6201906c75404e4df618360ca08b9765e39b890bf388"
+    version "3.2.1.157"
+    sha256 "22d4e83a0c848028d01ae6a626ceb11b6ff19cbb36f4aafd0c146533a4639065"
   end
 
   url "https://downloads.veertu.com/anka/Anka-#{version}#{arch}.pkg"
