@@ -7,18 +7,15 @@ cask "mediainfoex" do
   desc "Display file information in Finder contextual menu"
   homepage "https://github.com/sbarex/MediaInfo"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  depends_on macos: ">= :catalina"
 
   app "MediaInfoEx.app"
 
   zap trash: [
     "~/Library/Application Scripts/org.sbarex.MediaInfo",
     "~/Library/Application Scripts/org.sbarex.MediaInfo.Finder-Extension",
-    "~/Library/Containers/org.sbarex.MediaInfo",
     "~/Library/Containers/MediaInfo Finder Extension",
+    "~/Library/Containers/org.sbarex.MediaInfo",
     "~/Library/Preferences/org.sbarex.MediaInfo.plist",
   ]
 end
