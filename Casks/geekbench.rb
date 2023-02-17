@@ -1,7 +1,7 @@
 cask "geekbench" do
   on_sierra :or_older do
-    version "4.4.2"
-    sha256 "3c46e630a28a0752afd702fc1cd379edd2420001be22302c932e61751284c0cc"
+    version "4.4.4,401571"
+    sha256 "1fc2b87742cd27deaa184a753a57bfc5a8c81de34524e9fd318d6875be6ac5c9"
   end
   on_high_sierra do
     version "5.5.1,503987"
