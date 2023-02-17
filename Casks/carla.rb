@@ -1,6 +1,6 @@
 cask "carla" do
   version "2.5.3"
-  sha256 "e69145e1b3b9232d8ec31da9a23cf96163563e63"
+  sha256 "8e0a5800bb16895a6d55bce5aad2a792d720ca53192f344e4936cb7595689c7a"
 
   url "https://github.com/falkTX/Carla-Releases/releases/download/v#{version}/Carla-#{version}-macos-universal.dmg",
       verified: "github.com/falkTX/Carla-releases/"
