@@ -1,5 +1,5 @@
 cask "mathpix-snipping-tool" do
-  version "3.4.1,341.5"
+  version "3.4.1"
   sha256 :no_check
 
   url "https://mathpix.com/dmg/snip.dmg"
@@ -9,7 +9,7 @@ cask "mathpix-snipping-tool" do
 
   livecheck do
     url "https://mathpix.com/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
