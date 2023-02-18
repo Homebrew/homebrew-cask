@@ -2,21 +2,24 @@ cask "command-tab-plus" do
   version "2.6"
   sha256 :no_check
 
-  url "https://noteifyapp.com/download/Command-Tab%20Plus.dmg"
+  url "https://macplus-software.com/downloads/Command-Tab%20Plus%20#{cersion.major}.zip",
+      verified: "macplus-software.com/downloads/"
   name "Command-Tab Plus"
   desc "Keyboard-centric application and window switcher"
   homepage "https://noteifyapp.com/command-tab-plus/"
 
   livecheck do
-    url "https://macplus-software.com/downloads/Command-Tab.xml"
-    strategy :sparkle
+    url "https://macplus-software.com/downloads/CommandTabPlus#{version.major}.xml"
+    strategy :sparkle, &:short_version
   end
 
-  app "Command-Tab Plus 2.app"
+  depends_on macos: ">= :sierra"
+
+  app "Command-Tab Plus #{version.major}.app"
 
   zap trash: [
-    "~/Library/Application Support/com.sergey-gerasimenko.Command-Tab-Plus-2",
-    "~/Library/Caches/com.sergey-gerasimenko.Command-Tab-Plus-2",
-    "~/Library/Preferences/com.sergey-gerasimenko.Command-Tab-Plus-2.plist",
+    "~/Library/Application Support/com.sergey-gerasimenko.Command-Tab-Plus-#{version.major}",
+    "~/Library/Caches/com.sergey-gerasimenko.Command-Tab-Plus-#{version.major}",
+    "~/Library/Preferences/com.sergey-gerasimenko.Command-Tab-Plus-#{version.major}.plist",
   ]
 end
