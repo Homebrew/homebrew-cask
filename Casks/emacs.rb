@@ -26,6 +26,7 @@ cask "emacs" do
   binary "#{appdir}/Emacs.app/Contents/MacOS/bin-#{arch}/ebrowse"
   binary "#{appdir}/Emacs.app/Contents/MacOS/bin-#{arch}/emacsclient"
   binary "#{appdir}/Emacs.app/Contents/MacOS/bin-#{arch}/etags"
+  manpage "#{appdir}/Emacs.app/Contents/Resources/man/man1/ctags.1.gz"
   manpage "#{appdir}/Emacs.app/Contents/Resources/man/man1/ebrowse.1.gz"
   manpage "#{appdir}/Emacs.app/Contents/Resources/man/man1/emacs.1.gz"
   manpage "#{appdir}/Emacs.app/Contents/Resources/man/man1/emacsclient.1.gz"
