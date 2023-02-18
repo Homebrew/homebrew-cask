@@ -1,5 +1,5 @@
 cask "command-tab-plus" do
-  version "1.130,380"
+  version "2.6"
   sha256 :no_check
 
   url "https://noteifyapp.com/download/Command-Tab%20Plus.dmg"
@@ -12,11 +12,11 @@ cask "command-tab-plus" do
     strategy :sparkle
   end
 
-  app "Command-Tab Plus.app"
+  app "Command-Tab Plus 2.app"
 
   zap trash: [
-    "/Users/Shared/Command-Tab Plus",
-    "~/Library/Application Support/Command-Tab Plus",
-    "~/Library/Caches/com.sergey-gerasimenko.Command-Tab",
+    "~/Library/Application Support/com.sergey-gerasimenko.Command-Tab-Plus-2",
+    "~/Library/Caches/com.sergey-gerasimenko.Command-Tab-Plus-2",
+    "~/Library/Preferences/com.sergey-gerasimenko.Command-Tab-Plus-2.plist",
   ]
 end
