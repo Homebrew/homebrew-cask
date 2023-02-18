@@ -24,8 +24,8 @@ cask "calibre" do
     end
   end
   on_big_sur :or_newer do
-    version "6.13.0"
-    sha256 "72b43141688b62c74c91fca4ac42e1f19e1f00cdea57174dbc26d56049270466"
+    version "6.13"
+    sha256 "f06a08f3dba594ec0f486283ab675aa177462a13d2df4f37dae4c68e99a7feba"
 
     livecheck do
       url "https://github.com/kovidgoyal/calibre"
