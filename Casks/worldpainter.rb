@@ -7,12 +7,12 @@ cask "worldpainter" do
   desc "Interactive map generator for Minecraft"
   homepage "https://www.worldpainter.net/"
 
-  depends_on macos: ">= :el_capitan"
-
   livecheck do
     url :homepage
     regex(%r{href=.*?/files/worldpainter[._-]v?(\d+(?:\.\d+)+)\.tgz}i)
   end
+
+  depends_on macos: ">= :el_capitan"
 
   app "WorldPainter.app"
 end
