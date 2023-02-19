@@ -20,7 +20,8 @@ cask "obs" do
   depends_on macos: ">= :catalina"
 
   app "OBS.app"
-
+  binary "#{appdir}/OBS.app/Contents/MacOS/OBS"
+  
   uninstall delete: "/Library/CoreMediaIO/Plug-Ins/DAL/obs-mac-virtualcam.plugin"
 
   zap trash: [
