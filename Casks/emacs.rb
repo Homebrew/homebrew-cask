@@ -21,7 +21,7 @@ cask "emacs" do
                  formula: "emacs"
 
   app "Emacs.app"
-  binary "#{appdir}/Emacs.app/Contents/MacOS/Emacs-#{arch}", target: "emacs"
+  binary "#{appdir}/Emacs.app/Contents/MacOS/Emacs", target: "emacs"
   binary "#{appdir}/Emacs.app/Contents/MacOS/bin-#{arch}/ctags"
   binary "#{appdir}/Emacs.app/Contents/MacOS/bin-#{arch}/ebrowse"
   binary "#{appdir}/Emacs.app/Contents/MacOS/bin-#{arch}/emacsclient"
