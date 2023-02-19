@@ -13,7 +13,7 @@ cask "betaflight-configurator" do
   end
 
   app "Betaflight Configurator.app"
-  
+
   zap trash: [
     "~/Library/Application Support/betaflight-configurator",
     "~/Library/Caches/betaflight-configurator",
