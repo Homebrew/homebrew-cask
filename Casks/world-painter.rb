@@ -1,4 +1,4 @@
-cask "world-painter" do
+cask "worldpainter" do
   version "2.15.18"
   sha256 "0b86e4d8d623acd4c27f3b1f5b3c4d1502713a24599dde8704d5b98da24d0892"
 
@@ -7,10 +7,11 @@ cask "world-painter" do
   desc "Interactive map generator for Minecraft"
   homepage "https://www.worldpainter.net/"
 
+  depends_on macos: ">= :el_capitan"
+
   livecheck do
-    url "https://www.worldpainter.net/"
-    strategy :page_match
-    regex(%r{href=.*?/files/worldpainter_(\d+(?:\.\d+)*)\.tgz}i)
+    url :homepage
+    regex(%r{href=.*?/files/worldpainter[._-]v?(\d+(?:\.\d+)+)\.tgz}i)
   end
 
   app "WorldPainter.app"
