@@ -4,13 +4,13 @@ cask "codeedit" do
 
   url "https://github.com/CodeEditApp/CodeEdit/releases/download/#{version.csv.first}/CodeEdit-#{version.csv.second}.dmg",
       verified: "github.com/CodeEditApp/CodeEdit/"
-  name "codeedit"
+  name "CodeEdit"
   desc "Code editor"
   homepage "https://www.codeedit.app/"
 
   livecheck do
     url "https://github.com/CodeEditApp/CodeEdit/releases/latest"
-    regex(%r{href=.*?(\d+(?:\.\d+)+-alpha.\d+)/CodeEdit-([a-f0-9]+)\.dmg}i)
+    regex(%r{href=.*?v?(\d+(?:\.\d+)+[._-]alpha[._-]\d+)/CodeEdit[._-]([a-f0-9]+)\.dmg}i)
     strategy :header_match do |headers, regex|
       next if headers["location"].blank?
 
@@ -25,6 +25,8 @@ cask "codeedit" do
       assets_page[:content]&.scan(regex)&.map { |match| "#{match[0]},#{match[1]}" }
     end
   end
+
+  depends_on macos: ">= :monterey"
 
   app "CodeEdit.app"
 end
