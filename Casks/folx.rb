@@ -34,4 +34,8 @@ cask "folx" do
     "~/Library/Preferences/com.eltima.FolxAgent.plist",
     "~/Library/Saved Application State/com.eltima.Folx3.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
