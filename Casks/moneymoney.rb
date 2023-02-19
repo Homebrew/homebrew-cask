@@ -8,7 +8,7 @@ cask "moneymoney" do
   homepage "https://moneymoney-app.com/"
 
   livecheck do
-    url "https://service.moneymoney-app.com/1/Appcast.xml"
+    url "https://service.moneymoney-app.com/1/MoneyMoney.zip"
     strategy :sparkle
   end
 
