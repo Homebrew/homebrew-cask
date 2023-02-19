@@ -225,7 +225,8 @@ cask "firefox" do
   depends_on macos: ">= :sierra"
 
   app "Firefox.app"
-
+  binary "#{appdir}/Firefox.app/Contents/MacOS/firefox", target: "firefox"
+  
   uninstall quit: "org.mozilla.firefox"
 
   zap trash: [
