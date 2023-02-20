@@ -1,6 +1,6 @@
 cask "gamemaker" do
-  version "2023.1.0.58"
-  sha256 "da3d59046f74fb1338937c755d764151dd77f6fd08c4c710a6b19c837d26f08c"
+  version "2023.1.1.62"
+  sha256 "af201be480e440e27cdccd6be02e2aea5b356a67f309eb7cb85d8a9f0b7230d3"
 
   url "https://gms.yoyogames.com/GameMaker-#{version}.pkg",
       verified: "gms.yoyogames.com/"
@@ -24,10 +24,10 @@ cask "gamemaker" do
     ohai "Attempting to close com.yoyogames.gms2 to avoid unwanted user intervention" unless retries < 3
     return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/GameMaker.app"]
 
-    rescue RuntimeError
-      sleep 1
-      retry unless (retries -= 1).zero?
-      opoo "Unable to forcibly close GameMaker.app"
+  rescue RuntimeError
+    sleep 1
+    retry unless (retries -= 1).zero?
+    opoo "Unable to forcibly close GameMaker.app"
   end
 
   uninstall delete:  "/Applications/GameMaker.app",
