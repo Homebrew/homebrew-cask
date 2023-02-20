@@ -1,6 +1,6 @@
 cask "owncloud" do
-  version "3.1.0.9872"
-  sha256 "58ca7de26fa3b308deae891e86377e78f0eaec51357eef0cfc3e4400c5891fd8"
+  version "3.2.0.10193"
+  sha256 "f241deb1d7e3867031867257ad8b99121eeca2b7112f3a89dc4d99e1297cc740"
 
   url "https://download.owncloud.com/desktop/ownCloud/stable/#{version}/mac/ownCloud-#{version}-x86_64.pkg"
   name "ownCloud"
