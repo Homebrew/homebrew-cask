@@ -29,4 +29,15 @@ cask "codeedit" do
   depends_on macos: ">= :monterey"
 
   app "CodeEdit.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/austincondiff.CodeEdit.OpenWithCodeEdit",
+    "~/Library/Application Support/CodeEdit",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/austincondiff.codeedit.sfl2",
+    "~/Library/Caches/austincondiff.CodeEdit",
+    "~/Library/Containers/austincondiff.CodeEdit.OpenWithCodeEdit",
+    "~/Library/HTTPStorages/austincondiff.CodeEdit",
+    "~/Library/Preferences/austincondiff.CodeEdit.plist",
+    "~/Library/Saved Application State/austincondiff.CodeEdit.savedState",
+  ]
 end
