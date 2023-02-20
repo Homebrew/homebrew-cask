@@ -20,10 +20,10 @@ cask "virtual-desktop-streamer" do
     ohai "Attempting to close the Streamer app to avoid unwanted user intervention" unless retries < 3
     return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/Virtual Desktop Streamer.app"]
 
-    rescue RuntimeError
-      sleep 1
-      retry unless (retries -= 1).zero?
-      opoo "Unable to forcibly close Virtual Desktop Streamer"
+  rescue RuntimeError
+    sleep 1
+    retry unless (retries -= 1).zero?
+    opoo "Unable to forcibly close Virtual Desktop Streamer"
   end
 
   uninstall quit:      "com.virtualDesktopInc.Mac.Streamer",
