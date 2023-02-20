@@ -24,10 +24,10 @@ cask "gamemaker" do
     ohai "Attempting to close com.yoyogames.gms2 to avoid unwanted user intervention" unless retries < 3
     return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/GameMaker.app"]
 
-    rescue RuntimeError
-      sleep 1
-      retry unless (retries -= 1).zero?
-      opoo "Unable to forcibly close GameMaker.app"
+  rescue RuntimeError
+    sleep 1
+    retry unless (retries -= 1).zero?
+    opoo "Unable to forcibly close GameMaker.app"
   end
 
   uninstall delete:  "/Applications/GameMaker.app",
