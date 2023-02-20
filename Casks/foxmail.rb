@@ -18,9 +18,7 @@ cask "foxmail" do
   app "Foxmail.app"
 
   zap trash: [
-    "~/Library/Containers/com.tencent.Foxmail.LaunchHelper/",
-    "~/Library/Containers/com.tencent.Foxmail/",
-    "~/Library/Application Scripts/com.tencent.Foxmail.LaunchHelper/",
-    "~/Library/Application Scripts/com.tencent.Foxmail/",
+    "~/Library/Application Scripts/com.tencent.Foxmail*",
+    "~/Library/Containers/com.tencent.Foxmail*",
   ]
 end
