@@ -6,7 +6,7 @@ cask "wine-stable" do
   # the new maintainers that will eventually be pushed to Winehq.
   # See https://www.winehq.org/pipermail/wine-devel/2021-July/191504.html
   url "https://github.com/Gcenx/macOS_Wine_builds/releases/download/#{version}/wine-stable-#{version}-osx64.tar.xz",
-      verified: "https://github.com/Gcenx/macOS_Wine_builds/"
+      verified: "github.com/Gcenx/macOS_Wine_builds/"
   name "WineHQ-stable"
   desc "Compatibility layer to run Windows applications"
   homepage "https://wiki.winehq.org/MacOS"
