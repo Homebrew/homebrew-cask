@@ -33,6 +33,17 @@ cask "ghidra" do
     FileUtils.mv(staged_path, "#{caskroom_path}/#{version.csv.first}-#{version.csv.second}")
   end
 
+  postflight do
+    [
+      "GPL/DemanglerGnu/os/mac_x86_64/demangler_gnu_v2_24",
+      "GPL/DemanglerGnu/os/mac_x86_64/demangler_gnu_v2_33_1",
+      "Ghidra/Features/Decompiler/os/mac_x86_64/decompile",
+      "Ghidra/Features/Decompiler/os/mac_x86_64/sleigh",
+    ].each do |binary|
+      system "xattr", "-d", "com.apple.quarantine", "#{caskroom_path}/#{version.csv.first}-#{version.csv.second}/ghidra_#{version.csv.first}_PUBLIC/#{binary}"
+    end
+  end
+
   uninstall_preflight do
     FileUtils.mv("#{caskroom_path}/#{version.csv.first}-#{version.csv.second}", staged_path)
   end
