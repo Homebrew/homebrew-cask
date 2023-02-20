@@ -24,8 +24,8 @@ cask "trader-workstation" do
     ohai "Stopping all running instances of Trader Workstation prior to uninstall"
     system_command "/usr/bin/pkill", args: ["-f", "/Applications/Trader Workstation/Trader Workstation.app"]
 
-    rescue RuntimeError
-      ohai "No running instances of Trader Workstation found"
+  rescue RuntimeError
+    ohai "No running instances of Trader Workstation found"
   end
 
   uninstall quit:   "com.install4j.5889-6375-8446-2021",
