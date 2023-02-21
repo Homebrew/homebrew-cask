@@ -5,7 +5,7 @@ cask "fmail2" do
 
   url "https://arievanboxel.fr/fmail2/sparkle/FMail2_#{version.no_dots}.zip",
       verified: "arievanboxel.fr/fmail2/sparkle/"
-  name FMail2"
+  name "FMail2"
   desc "Unofficial native application for Fastmail"
   homepage "https://fmail-app.fr/"
 
