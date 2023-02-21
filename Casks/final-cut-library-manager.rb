@@ -5,6 +5,7 @@ cask "final-cut-library-manager" do
   url "http://cdn.arcticwhiteness.com/finalcutlibrarymanager/download/zips/FinalCutLibraryManager_#{version.major_minor}.zip"
   name "Arctic Whiteness Final Cut Library Manager"
   name "FCPX Library Manager"
+  desc "Displays Final Cut Pro X libraries"
   homepage "https://www.arcticwhiteness.com/finalcutlibrarymanager/"
 
   livecheck do
