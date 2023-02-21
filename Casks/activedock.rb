@@ -1,5 +1,5 @@
 cask "activedock" do
-  version "2.400,2400"
+  version "2.400"
   sha256 :no_check
 
   url "https://macplus-software.com/downloads/ActiveDock.zip",
@@ -10,10 +10,10 @@ cask "activedock" do
 
   livecheck do
     url "https://macplus-software.com/downloads/ActiveDock.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   depends_on macos: ">= :high_sierra"
 
-  app "ActiveDock #{version.csv.first.major}.app"
+  app "ActiveDock #{version.major}.app"
 end
