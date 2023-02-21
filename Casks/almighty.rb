@@ -1,5 +1,5 @@
 cask "almighty" do
-  version "2.4.4,57"
+  version "2.4.4"
   sha256 :no_check
 
   url "https://almighty-app.s3.eu-north-1.amazonaws.com/Almighty.zip",
@@ -10,7 +10,7 @@ cask "almighty" do
 
   livecheck do
     url "https://raw.githubusercontent.com/onmyway133/archives/master/AlmightyCast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
