@@ -15,4 +15,8 @@ cask "worldpainter" do
   depends_on macos: ">= :el_capitan"
 
   app "WorldPainter.app"
+
+  zap trash: [
+    "~/Library/Application Support/WorldPainter",
+  ]
 end
