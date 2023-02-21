@@ -1,22 +1,40 @@
 cask "wine-stable" do
-  version "7.0"
-  sha256 "cecf2e804e1b4d9c237c25ef4087c931220454f4e68eaad6b4660f1264bac10b"
+  version "8.0"
+  sha256 "d483dca9562a927db502dbf8e10f777f04e39028582256c8f1939dac99794ebd"
 
   # Current winehq packages are deprecated and these are packages from
   # the new maintainers that will eventually be pushed to Winehq.
   # See https://www.winehq.org/pipermail/wine-devel/2021-July/191504.html
   url "https://github.com/Gcenx/macOS_Wine_builds/releases/download/#{version}/wine-stable-#{version}-osx64.tar.xz",
-      verified: "https://github.com/Gcenx/macOS_Wine_builds/"
+      verified: "github.com/Gcenx/macOS_Wine_builds/"
   name "WineHQ-stable"
   desc "Compatibility layer to run Windows applications"
   homepage "https://wiki.winehq.org/MacOS"
 
-  # See https://bugs.winehq.org/show_bug.cgi?id=52354
+  # NOTE: This approach involves multiple requests and should be avoided
+  # whenever possible. If upstream starts reliably providing `wine-stable` zip
+  # files in every release, we should switch to `url :url` with
+  # `strategy :github_latest`.
   livecheck do
-    # url "https://github.com/Gcenx/macOS_Wine_builds/releases/"
-    # regex(/wine[._-]stable[._-]v?(\d+(?:\.\d+)+)[._-]osx64\.t/i)
-    # strategy :page_match
-    skip "Stable builds are currently blocked by an upstream bug"
+    url "https://github.com/Gcenx/macOS_Wine_builds/releases?q=prerelease%3Afalse"
+    regex(%r{/v?(\d+(?:\.\d+)+)/wine-stable[._-][^"' >]*?\.t}i)
+    strategy :page_match do |page, regex|
+      # Collect the release tags on the page
+      tags = page.scan(%r{href=["']?[^"' >]*?/releases/tag/([^"' >]*?)["' >]}i)&.flatten&.uniq
+
+      max_reqs = 4
+      tags.each_with_index do |tag, i|
+        break if i >= max_reqs
+
+        # Fetch the assets list HTML for the tag and match within it
+        assets_page = Homebrew::Livecheck::Strategy.page_content(
+          @url.sub(%r{/releases/?.+}, "/releases/expanded_assets/#{tag}"),
+        )
+        matches = assets_page[:content]&.scan(regex)&.map { |match| match[0] }
+
+        break matches if matches.present?
+      end
+    end
   end
 
   conflicts_with cask: [

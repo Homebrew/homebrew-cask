@@ -1,5 +1,5 @@
 cask "swift-quit" do
-  version "1.0"
+  version "1.3"
   sha256 :no_check
 
   url "https://swiftquit.com/downloads/Swift%20Quit.zip"

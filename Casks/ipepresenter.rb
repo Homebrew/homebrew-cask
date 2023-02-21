@@ -14,4 +14,8 @@ cask "ipepresenter" do
   end
 
   app "IpePresenter.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

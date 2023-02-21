@@ -1,15 +1,15 @@
 cask "snapmaker-luban" do
   arch arm: "-arm64", intel: "-x64"
 
-  version "4.5.1"
-  sha256 arm:   "02cf589030c4894c63b0823ad69b69ec7c6ac74d4dc697e231a430e3e3f53e4e",
-         intel: "be308982cc03831401ee975fb67de86a9a364866470d68e384d2da04d6692055"
+  version "4.6.1"
+  sha256 arm:   "b9b854e61f20fc8e081618af7d0cddccfc4c6fd520d451f829d3eacc8146f353",
+         intel: "ac2a0f4305e6b4c09058dfb50d2ddae683d5438ac591630d98e39e54057c1e68"
 
   url "https://github.com/snapmaker/luban/releases/download/v#{version}/Snapmaker-Luban-#{version}-mac#{arch}.dmg",
       verified: "github.com/snapmaker/luban/"
   name "Snapmaker Luban"
   desc "3D printing software"
-  homepage "https://luban.xyz/"
+  homepage "https://snapmaker.com/snapmaker-luban"
 
   livecheck do
     url :url

@@ -12,9 +12,9 @@ cask "simply-fortran" do
     end
   end
   on_monterey :or_newer do
-    version "3.27.3841"
-    sha256 arm:   "5a671f7893c814d91a765c64bdebbd07b4cc8060e378f50304d6149a38a1ee8d",
-           intel: "d71200317b0246a2f3052c69f6410cec0a2fe7a24e6e7fd1867e3cb941d6df70"
+    version "3.28.3879"
+    sha256 arm:   "1334e4cf131f20cc3b1aafa3767d2f422c5e94ef1077af96c71a32a09d28cd4b",
+           intel: "052e44afda4eb52e07677071d62d8005fdbe5ebdd163b35a3229f56c5c3b07fd"
 
     url "https://download.simplyfortran.com/#{version.major_minor}/macos/simplyfortran-#{version}#{arch}.dmg"
 

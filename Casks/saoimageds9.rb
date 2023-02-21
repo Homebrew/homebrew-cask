@@ -1,5 +1,5 @@
 cask "saoimageds9" do
-  arch intel: "x86", arm: "arm64"
+  arch arm: "arm64", intel: "x86"
 
   # NOTE: "9" is not a version number, but an intrinsic part of the product name
   version "8.4.1"
@@ -38,7 +38,7 @@ cask "saoimageds9" do
 
   livecheck do
     url "https://sites.google.com/cfa.harvard.edu/saoimageds9/download"
-    regex(/href=.*?SAOImageDS9%2520v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/href=.*?SAOImageDS9%20v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   depends_on macos: ">= :mojave"

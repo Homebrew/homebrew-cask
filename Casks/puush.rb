@@ -3,9 +3,14 @@ cask "puush" do
   sha256 :no_check
 
   url "https://puush.me/dl/puush.zip"
-  appcast "https://puush.me/dl/puush.xml?hax=jax"
   name "puush"
+  desc "Share screenshots"
   homepage "https://puush.me/"
+
+  livecheck do
+    url "https://puush.me/dl/puush.xml?hax=jax"
+    strategy :sparkle
+  end
 
   app "puush.app"
 end

@@ -18,8 +18,8 @@ cask "appgate-sdp-client" do
     end
   end
   on_big_sur :or_newer do
-    version "6.1.1"
-    sha256 "e3637fda0b8c7d2429fbdf0af0f8525710c4f6425a138b7591e83d54c069ed8d"
+    version "6.1.2"
+    sha256 "18a886de5470729f329f232f2155a05a887befa02b0524f9e31887817cbfd72b"
 
     livecheck do
       url :homepage

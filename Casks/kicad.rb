@@ -1,21 +1,26 @@
 cask "kicad" do
-  version "6.0.11-0"
-  sha256 "fb8afd799d3dda41b55cb1f78420fba9ade285a109c7ed08faf9d1632064b33c"
+  version "7.0.0-0"
+  sha256 "f524e3bfde7eedda85324abfc82b841ae7577e545e37c8025b8dbdf3727cd5f2"
 
-  url "https://kicad-downloads.s3.cern.ch/osx/stable/kicad-unified-#{version}.dmg",
-      verified: "kicad-downloads.s3.cern.ch/"
+  url "https://kicad-downloads.s3.cern.ch/osx/stable/kicad-unified-universal-#{version}.dmg",
+      verified: "kicad-downloads.s3.cern.ch/osx/stable/"
   name "KiCad"
   desc "Electronics design automation suite"
   homepage "https://kicad.org/"
 
   livecheck do
     url "https://kicad-downloads.s3.cern.ch/?delimiter=/&prefix=osx/stable/"
-    regex(/kicad-unified-(\d+(?:.\d+)*)\.dmg/i)
+    regex(/kicad[._-]unified[._-]universal[._-]v?(\d+(?:.\d+)+)\.dmg/i)
   end
 
   depends_on macos: ">= :catalina"
 
   suite "KiCad"
+  binary "KiCad/KiCad.app/Contents/MacOS/dxf2idf"
+  binary "KiCad/KiCad.app/Contents/MacOS/idf2vrml"
+  binary "KiCad/KiCad.app/Contents/MacOS/idfcyl"
+  binary "KiCad/KiCad.app/Contents/MacOS/idfrect"
+  binary "KiCad/KiCad.app/Contents/MacOS/kicad-cli"
   artifact "demos", target: "/Library/Application Support/kicad/demos"
 
   zap trash: [
@@ -23,10 +28,6 @@ cask "kicad" do
     "~/Library/Application Support/kicad",
     "~/Library/Preferences/kicad",
     "~/Library/Preferences/org.kicad-pcb.*",
-    "~/Library/Saved Application State/org.kicad-pcb.bitmap2component.savedState",
-    "~/Library/Saved Application State/org.kicad-pcb.eeschema.savedState",
-    "~/Library/Saved Application State/org.kicad-pcb.kicad.savedState",
-    "~/Library/Saved Application State/org.kicad-pcb.pcb_calculator.savedState",
-    "~/Library/Saved Application State/org.kicad-pcb.pl_editor.savedState",
+    "~/Library/Saved Application State/org.kicad-pcb.*",
   ]
 end

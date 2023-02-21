@@ -109,15 +109,20 @@ module CiMatrix
     modified_cask_files.flat_map do |path|
       cask_token = path.basename(".rb")
 
-      appcast_arg = if labels.include?("ci-skip-appcast")
+      audit_args = ["--online"]
+      audit_args << "--new-cask" if changed_files[:added_files].include?(path)
+
+      audit_exceptions = []
+      audit_exceptions << "repository" if labels.include?("ci-skip-repository")
+
+      # TODO: Replace with `except`.
+      audit_args << if labels.include?("ci-skip-appcast")
         "--no-appcast"
       else
         "--appcast"
       end
 
-      audit_args = [appcast_arg, "--online"]
-
-      audit_args << "--new-cask" if changed_files[:added_files].include?(path)
+      audit_args << "--except" << audit_exceptions.join(",") if audit_exceptions.any?
 
       runners(path).map do |runner|
         {

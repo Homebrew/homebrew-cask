@@ -1,11 +1,11 @@
 cask "zoom-for-it-admins" do
-  version "5.13.6.14918"
-  sha256 "dcee4993ec093857f01fdee566d285d9a3351321571ace1b48a1badb49d336c3"
+  version "5.13.7.15481"
+  sha256 "ff12a0d1cd78b791f74367f77197aaad4f140a9dabbb29838f54bdbd6614936a"
 
   url "https://cdn.zoom.us/prod/#{version}/ZoomInstallerIT.pkg"
   name "Zoom for IT Admins"
   desc "Video communication and virtual meeting platform"
-  homepage "https://support.zoom.us/hc/en-us/articles/115001799006-Mass-Deployment-with-Preconfigured-Settings-for-Mac"
+  homepage "https://www.zoom.us/"
 
   livecheck do
     cask "zoom"

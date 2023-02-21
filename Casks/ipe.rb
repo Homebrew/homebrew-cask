@@ -22,4 +22,8 @@ cask "ipe" do
     "~/Library/Preferences/org.otfried.ipe.Ipe.plist",
     "~/Library/Saved Application State/org.otfried.ipe.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

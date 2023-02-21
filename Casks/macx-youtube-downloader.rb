@@ -1,5 +1,5 @@
 cask "macx-youtube-downloader" do
-  version "5.2.4,20230109"
+  version "5.2.5,20230210"
   sha256 :no_check
 
   url "https://www.macxdvd.com/download/macx-youtube-downloader-free.dmg"

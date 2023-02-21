@@ -1,6 +1,6 @@
 cask "latest" do
-  version "0.8.3,820"
-  sha256 "ecd8161f44719285b62e845bc60fbf1cfe93e9a571c8f8745971bfc69fd69551"
+  version "0.9,935"
+  sha256 "4c8b29bfba9da175de7418fd490222ebdffebd63719123f0e7548ca5cade8f89"
 
   url "https://max.codes/latest/#{version.csv.first}.zip"
   name "Latest"

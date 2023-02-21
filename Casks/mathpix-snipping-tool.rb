@@ -1,8 +1,8 @@
 cask "mathpix-snipping-tool" do
   version "3.4.1,341.5"
-  sha256 :no_check
+  sha256 "94c945ef33a46ec9fa1fda675cd636386118a22f04f9a4ce2bc8cc250be53723"
 
-  url "https://mathpix.com/dmg/snip.dmg"
+  url "https://mathpix.com/dmg/SnippingTool-v#{version.csv.first}.#{version.csv.second}.dmg"
   name "Mathpix Snipping Tool"
   desc "Scanner app for math and science"
   homepage "https://mathpix.com/"

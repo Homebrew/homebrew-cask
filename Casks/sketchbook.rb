@@ -3,7 +3,7 @@ cask "sketchbook" do
   sha256 "a96042dc95483cd6fac849a9f60a22980204ee4ee0a26b0804b0aa6ab23b842a"
 
   url "https://download.autodesk.com/us/support/files/sketchbook/sketchbook_#{version.csv.second}/sketchbook_v#{version.csv.first}_mac.dmg",
-      verified: "https://download.autodesk.com/us/support/files/sketchbook"
+      verified: "download.autodesk.com/us/support/files/sketchbook/"
   name "Autodesk Sketchbook"
   desc "Draw, paint, & sketch application"
   homepage "https://www.sketchbook.com/"
@@ -14,9 +14,9 @@ cask "sketchbook" do
             pkgutil: ".*SketchBook.*"
 
   zap trash: [
+    "~/Library/Application Support/Autodesk/SketchBook",
     "~/Library/Caches/com.autodesk.SketchBook",
     "~/Library/Preferences/com.autodesk.SketchBook.plist",
-    "~/Library/Application Support/Autodesk/SketchBook",
   ]
 
   caveats do

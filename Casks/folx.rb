@@ -19,8 +19,14 @@ cask "folx" do
   app "Folx.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.eltima.Folx3.FolxSafariExtension",
     "~/Library/Application Support/Eltima Software/Folx3",
+    "~/Library/Application Support/Folx",
+    "~/Library/Application Support/Google/Chrome/NativeMessagingHosts/com.eltima.folx.host.json",
+    "~/Library/Application Support/Mozilla/NativeMessagingHosts/com.eltima.folx.host.json",
     "~/Library/Caches/com.eltima.Folx3",
+    "~/Library/Containers/com.eltima.Folx3.FolxSafariExtension",
+    "~/Library/HTTPStorages/com.eltima.Folx3",
     "~/Library/Internet Plug-Ins/Folx3Plugin.plugin",
     "~/Library/Logs/Folx.log",
     "~/Library/Logs/Folx3.log",
@@ -28,4 +34,8 @@ cask "folx" do
     "~/Library/Preferences/com.eltima.FolxAgent.plist",
     "~/Library/Saved Application State/com.eltima.Folx3.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

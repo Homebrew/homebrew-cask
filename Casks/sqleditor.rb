@@ -1,6 +1,6 @@
 cask "sqleditor" do
-  version "3.7.7,10868"
-  sha256 "a3a9971413e74091aafce45d7e054a8e70f692d5731acfc8cd585ca34dc97ead"
+  version "4.0.2,11115"
+  sha256 "f3572050909493ba355dcdf4384bd973cefb54309ccc5327ed90b6014f814e6e"
 
   url "https://www.malcolmhardie.com/sqleditor/releases/#{version.csv.first}/SQLEditor-#{version.csv.first.dots_to_hyphens}.zip"
   name "SQLEditor"
