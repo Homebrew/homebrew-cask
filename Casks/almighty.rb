@@ -4,7 +4,7 @@ cask "almighty" do
 
   url "https://almighty-app.s3.eu-north-1.amazonaws.com/Almighty.zip",
       verified: "almighty-app.s3.eu-north-1.amazonaws.com/"
-  name "almighty"
+  name "Almighty"
   desc "Settings and tweaks configurator"
   homepage "https://onmyway133.com/almighty/"
 
