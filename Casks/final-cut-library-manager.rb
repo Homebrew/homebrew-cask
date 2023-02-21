@@ -13,5 +13,7 @@ cask "final-cut-library-manager" do
     strategy :sparkle
   end
 
+  depends_on macos: ">= :sierra"
+
   app "Final Cut Library Manager.app"
 end
