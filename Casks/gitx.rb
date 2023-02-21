@@ -10,6 +10,11 @@ cask "gitx" do
   desc "Git GUI"
   homepage "https://github.com/gitx/gitx"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   conflicts_with cask: "rowanj-gitx"
 
   app "GitX.app"
