@@ -17,7 +17,7 @@ cask "libreoffice" do
     regex(%r{href="(\d+(?:\.\d+)+)/"}i)
   end
 
-  conflicts_with cask: "homebrew/cask-versions/libreoffice-still"
+  conflicts_with cask: ["libreoffice-still","libreoffice-still-language-pack"]
   depends_on macos: ">= :sierra"
 
   app "LibreOffice.app"
