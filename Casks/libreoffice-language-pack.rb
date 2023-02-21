@@ -803,10 +803,18 @@ cask "libreoffice-language-pack" do
     cask "libreoffice"
   end
 
+  conflicts_with cask: ["libreoffice-still", "libreoffice-still-language-pack"]
   depends_on cask: "libreoffice"
   depends_on macos: ">= :sierra"
-  conflicts_with cask: ["libreoffice-still","libreoffice-still-language-pack"]
-  
+
+  # Start the silent install
+  installer script: {
+    executable: "#{staged_path}/SilentInstall.sh",
+    sudo:       true,
+  }
+  # Leave the possibility of using the .app if the script does not find the installation path of libreoffice
+  installer manual: "LibreOffice Language Pack.app"
+
   preflight do
     File.write "#{staged_path}/SilentInstall.sh", <<~EOS
       #!/bin/bash
@@ -820,28 +828,21 @@ cask "libreoffice-language-pack" do
             echo "Removing Quarantine flag on $pathOfApp before installing language pack "
             xattr -d com.apple.quarantine $pathOfApp
           fi
-          /usr/bin/tar -C $pathOfApp -xjf "#{staged_path}/LibreOffice\ Language\ Pack.app/Contents/Resources/tarball.tar.bz2" && touch $pathOfApp
+          /usr/bin/tar -C $pathOfApp -xjf "#{staged_path}/LibreOffice Language Pack.app/Contents/Resources/tarball.tar.bz2" && touch $pathOfApp
       else    echo 'Silent installation cannot match the prerequisite'
       fi
     EOS
     # Make the script executable
-    system_command '/bin/chmod',
-    args:          ["u+x", "#{staged_path}/SilentInstall.sh"]
-  end 
-  
-  # Start the silent install
-  installer script: {
-    executable: "#{staged_path}/SilentInstall.sh",
-    sudo: true
-  }
-  # Leave the possibility of using the .app if the script does not find the installation path of libreoffice
-  installer manual: "LibreOffice Language Pack.app"
+    system_command "/bin/chmod",
+                   args: ["u+x", "#{staged_path}/SilentInstall.sh"]
+  end
 
   # Not actually necessary, since it would be deleted anyway.
   # It is present to make clear an uninstall was not forgotten
   # and that for this cask it is indeed this simple.
   # See https://github.com/Homebrew/homebrew-cask/pull/52893
-  uninstall delete: ["#{staged_path}/#{token}","#{staged_path}/SilentInstall.sh"]
+  uninstall delete: ["#{staged_path}/#{token}", "#{staged_path}/SilentInstall.sh"]
+
   caveats <<~EOS
     #{token} cannot be upgraded, use brew reinstall --cask #{token} instead
   EOS
