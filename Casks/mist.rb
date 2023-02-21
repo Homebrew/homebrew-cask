@@ -27,6 +27,6 @@ cask "mist" do
     "/Users/Shared/Mist",
     "~/Library/Caches/com.ninxsoft.mist",
     "~/Library/Preferences/com.ninxsoft.mist.plist",
-    "~/Library/Saved Application State/com.ninxsoft.mist.savedState", 
+    "~/Library/Saved Application State/com.ninxsoft.mist.savedState",
   ]
 end
