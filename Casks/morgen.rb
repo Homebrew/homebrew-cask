@@ -8,14 +8,15 @@ cask "morgen" do
   url "https://download.todesktop.com/210203cqcj00tw1/Morgen%20#{version}-#{arch}.dmg",
       verified: "download.todesktop.com/210203cqcj00tw1/"
   name "Morgen"
-  desc "All-in-one Calendars, Tasks and Scheduler"
+  desc "All-in-one calendars, tasks and scheduler"
   homepage "https://morgen.so/"
 
   livecheck do
-    url "https://dl.todesktop.com/210203cqcj00tw1/mac/dmg/#{arch}"
-    strategy :header_match
-    regex(/Morgen v?(\d+(?:\.\d+)+) - Build .*#{arch}\.dmg/i)
+    url "https://download.todesktop.com/210203cqcj00tw1/latest-mac.yml"
+    strategy :electron_builder
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Morgen.app"
 
