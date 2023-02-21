@@ -7,5 +7,10 @@ cask "send-anywhere" do
   desc "File sharing app"
   homepage "https://send-anywhere.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Send Anywhere.app"
 end
