@@ -9,8 +9,8 @@ cask "final-cut-library-manager" do
   homepage "https://www.arcticwhiteness.com/finalcutlibrarymanager/"
 
   livecheck do
-    url "https://www.arcticwhiteness.com/finalcutlibrarymanager/download/appcast.xml"
-    strategy :sparkle
+    url "https://www.arcticwhiteness.com/finalcutlibrarymanager/download/"
+    regex(/href=.*?FinalCutLibraryManager[._-]v?(\d+(?:\.\d+)+)\.(?:t|zip)/i)
   end
 
   depends_on macos: ">= :sierra"
