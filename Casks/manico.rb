@@ -1,6 +1,6 @@
 cask "manico" do
-  version "3.2,446"
-  sha256 "5cd7c1b30bd88863988c65ce2629ed597a8be27b198ee9e13c121179d2fd0537"
+  version "3.3,454"
+  sha256 "a29e25c3eeb78a0b374f341c10b14a0dcbe6056b055b61ad09ecb3d2b5f8bdeb"
 
   url "https://manico.im/api/release_manager/downloads/im.manico.Manico/#{version.csv.second}.zip"
   name "Manico"
@@ -12,7 +12,7 @@ cask "manico" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Manico.app"
 
