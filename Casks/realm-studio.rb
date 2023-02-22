@@ -1,4 +1,4 @@
-cask "mongodb-realm-studio" do
+cask "realm-studio" do
   version "13.0.2"
   sha256 "39f8a9bc620084190e511c86d1f3aafac1abb18234d803b8a6573838a6541b1a"
 
