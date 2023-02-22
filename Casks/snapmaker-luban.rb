@@ -1,9 +1,9 @@
 cask "snapmaker-luban" do
   arch arm: "-arm64", intel: "-x64"
 
-  version "4.6.1"
-  sha256 arm:   "b9b854e61f20fc8e081618af7d0cddccfc4c6fd520d451f829d3eacc8146f353",
-         intel: "ac2a0f4305e6b4c09058dfb50d2ddae683d5438ac591630d98e39e54057c1e68"
+  version "4.6.2"
+  sha256 arm:   "dd007ecafa6b60bc0fbdb990bc999fe9235320db06264da41cc9efff24b1cacc",
+         intel: "dab20eda619b3852e2a7878c9dcb8888db8d28e7cb20f00b5cca3cc1f7609db4"
 
   url "https://github.com/snapmaker/luban/releases/download/v#{version}/Snapmaker-Luban-#{version}-mac#{arch}.dmg",
       verified: "github.com/snapmaker/luban/"
