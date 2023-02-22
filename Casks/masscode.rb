@@ -6,9 +6,9 @@ cask "masscode" do
          intel: "0721db8ab72cc2891442719d9c096066f4765482db66faa21f8122b249d942d7"
 
   url "https://github.com/massCodeIO/massCode/releases/download/v#{version}/massCode-#{version}#{arch}.dmg",
-      verified: "https://github.com/massCodeIO/massCode/"
+      verified: "github.com/massCodeIO/massCode/"
   name "massCode"
-  desc "Open-source code snippets manager for developers"
+  desc "Code snippets manager for developers"
   homepage "https://masscode.io/"
 
   livecheck do
