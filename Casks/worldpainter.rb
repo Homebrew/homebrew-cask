@@ -16,7 +16,5 @@ cask "worldpainter" do
 
   app "WorldPainter.app"
 
-  zap trash: [
-    "~/Library/Application Support/WorldPainter",
-  ]
+  zap trash: "~/Library/Application Support/WorldPainter"
 end
