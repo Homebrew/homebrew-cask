@@ -16,4 +16,5 @@ cask "oak9cli" do
 
    auto_updates true
    container nested: "oak9"
+   zap trash: "./oak9"
 end
