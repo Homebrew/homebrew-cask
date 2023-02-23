@@ -3,7 +3,7 @@ cask "remote-desktop-manager" do
   sha256 "5ef4e549136506f2da7e544988800f90b5991169528fedf8eb5718ad2e327d46"
 
   url "https://cdn.devolutions.net/download/Mac/Devolutions.RemoteDesktopManager.Mac.#{version}.dmg",
-      verified: "devolutions.net/"
+      verified: "cdn.devolutions.net/download/Mac/"
   name "Remote Desktop Manager"
   desc "Centralizes all remote connections on a single platform"
   homepage "https://mac.remotedesktopmanager.com/"
