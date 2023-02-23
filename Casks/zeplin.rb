@@ -1,5 +1,5 @@
 cask "zeplin" do
-  version "4.6.5,1767"
+  version "4.6.6"
   sha256 :no_check
 
   url "https://api.zeplin.io/urls/download-mac"
@@ -9,7 +9,7 @@ cask "zeplin" do
 
   livecheck do
     url "https://api.appcenter.ms/v0.1/public/sparkle/apps/8926efff-e734-b6d3-03d0-9f41d90c34fc"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
