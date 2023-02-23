@@ -12,5 +12,7 @@ cask "meta" do
     strategy :sparkle
   end
 
+  auto_updates true
+
   app "Meta.app"
 end
