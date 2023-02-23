@@ -1,7 +1,7 @@
 cask "duet" do
   on_big_sur :or_older do
-    version "2.4.6.1"
-    sha256 "9ae7ce90aae986b45f359a1985fcc7fbb35c4c987728ac908c1f2dca9f543066"
+    version "2.4.7.1"
+    sha256 "3e91729e333ab3e2984bec4c1194e7022d016d91c79cd21509bc00b42b9559bd"
 
     livecheck do
       url "https://updates.duetdisplay.com/latestMac"
