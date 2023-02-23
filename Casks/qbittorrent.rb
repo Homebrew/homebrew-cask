@@ -14,7 +14,7 @@ cask "qbittorrent" do
     livecheck do
       url "https://sourceforge.net/projects/qbittorrent/rss?path=/qbittorrent-mac"
       strategy :page_match
-      regex(/qbittorrent-(\d+(?:\.\d+)+)\.dmg/i)
+      regex(/qbittorrent[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
     end
   end
 
@@ -24,6 +24,7 @@ cask "qbittorrent" do
   desc "Peer to peer Bitorrent client"
   homepage "https://www.qbittorrent.org/"
 
+  conflicts_with cask: "homebrew/cask-versions/qbittorrent-lt20"
   depends_on macos: ">= :high_sierra"
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
