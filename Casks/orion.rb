@@ -1,61 +1,61 @@
 cask "orion" do
-  version "0.99,123.1"
+  version "0.99,123.3"
 
   on_mojave do
-    sha256 "8763dd9d18e5c87228d790e72e6f1744cd6bff18f309be28cab9069d732e9cef"
+    sha256 "7164c435e517f7c354c4bbe37d7524e924fdfda51c6368838c01b45edcd955b7"
 
     url "https://browser.kagi.com/updates/10_14/#{version.csv.second}.zip"
 
     livecheck do
-      url "https://browser.kagi.com/updates/10_14/appcast.xml"
+      url "https://cdn.kagi.com/updates/10_14/appcast.xml"
       strategy :sparkle
     end
 
     depends_on macos: :mojave
   end
   on_catalina do
-    sha256 "d028b0703d2ae40167767dcebb06389bf5fb2cef37d6b854cd9fc37a8ee07eed"
+    sha256 "2279a4bfddc6b5e4a5c3d96e45d4bc7da878a3363601ca5a662d4f87941de132"
 
     url "https://browser.kagi.com/updates/10_15/#{version.csv.second}.zip"
 
     livecheck do
-      url "https://browser.kagi.com/updates/10_15/appcast.xml"
+      url "https://cdn.kagi.com/updates/10_15/appcast.xml"
       strategy :sparkle
     end
 
     depends_on macos: :catalina
   end
   on_big_sur do
-    sha256 "c69ccec5e9e3357fe3067ac07de64f22444a9d80be1317ebd8b28ff335e4ee77"
+    sha256 "c15aff1f0f419ca02440983c242292a73ec61a316b2fa5490c8fa81a402723bd"
 
     url "https://browser.kagi.com/updates/11_0/#{version.csv.second}.zip"
 
     livecheck do
-      url "https://browser.kagi.com/updates/11_0/appcast.xml"
+      url "https://cdn.kagi.com/updates/11_0/appcast.xml"
       strategy :sparkle
     end
 
     depends_on macos: :big_sur
   end
   on_monterey do
-    sha256 "a213e35dc0e01206f57d03fd08686e27d677563160395b0f69afbe809cc6f235"
+    sha256 "e6f6056025309e54b7b2f96129b023d4d9b26065e24f4db451c6b866986018a5"
 
     url "https://browser.kagi.com/updates/12_0/#{version.csv.second}.zip"
 
     livecheck do
-      url "https://browser.kagi.com/updates/12_0/appcast.xml"
+      url "https://cdn.kagi.com/updates/12_0/appcast.xml"
       strategy :sparkle
     end
 
     depends_on macos: :monterey
   end
   on_ventura do
-    sha256 "0e3a7a273f75cc65f9347fd54be2dd614e16f2c457b7349b6f988414667674d4"
+    sha256 "53d3449acd70d06d5185866820db683aa6b4cfc0f72ad0dc7cd42959d265a200"
 
     url "https://browser.kagi.com/updates/13_0/#{version.csv.second}.zip"
 
     livecheck do
-      url "https://browser.kagi.com/updates/13_0/appcast.xml"
+      url "https://cdn.kagi.com/updates/13_0/appcast.xml"
       strategy :sparkle
     end
 
