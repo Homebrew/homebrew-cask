@@ -1,5 +1,5 @@
 cask "loginputmac" do
-  version "3.2.6,9711"
+  version "3.2.6"
   sha256 "bcc309f376af214fd3aec56fedf7318e0518cefd4f7cb221a212823e59b93af9"
 
   url "https://loginput-mac2.totest.top/loginputmac#{version.major}_latest.dmg",
@@ -10,7 +10,7 @@ cask "loginputmac" do
 
   livecheck do
     url "https://im.logcg.com/appcast#{version.major}.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
