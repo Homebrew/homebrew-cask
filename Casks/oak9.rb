@@ -1,4 +1,5 @@
-cask "oak9cli" do
+cask "oak9" do
+  # NOTE: "9" is not a version number, but an intrinsic part of the product name
   version "0.11.16"
   sha256 "cef527114243a2d48390f8ed454e56cf83f20135511f4f0eabf3dbed660c8ee2"
 
