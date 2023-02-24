@@ -25,4 +25,6 @@ cask "fx-cast-bridge" do
   pkg "fx_cast_bridge-#{version}-#{arch}.pkg"
 
   uninstall pkgutil: "tf.matt.fx_cast_bridge"
+
+  # No zap stanza required
 end
