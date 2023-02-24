@@ -16,6 +16,6 @@ cask "bruno" do
   zap trash: [
     "~/Library/Application Support/bruno",
     "~/Library/Preferences/com.usebruno.app.plist",
-    "~/Library/Saved Application State/com.usebruno.app.savedState"
+    "~/Library/Saved Application State/com.usebruno.app.savedState",
   ]
 end
