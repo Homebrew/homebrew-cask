@@ -11,14 +11,29 @@ cask "fx-cast-bridge" do
   desc "Bridge helper for fx_cast Firefox extension to enable Chromecast support"
   homepage "https://hensm.github.io/fx_cast/"
 
+  # NOTE: This approach involves multiple requests and should be avoided
+  # whenever possible. If upstream starts reliably providing `fx_cast_bridge`
+  # pkg files in every release, we should switch to `url :url` with
+  # `strategy :github_latest`.
   livecheck do
-    url "https://github.com/hensm/fx_cast/releases"
-    strategy :github_latest do |page|
-      # look for the latest bridge release since some releases are bridge-only
-      # or extension-only, falling back to version if none is found
-      found = page.scan(/href=.*?fx_cast_bridge[._-]?(\d{4}.\d{4}.\d{4})[._-]\w{3,5}\.pkg/i)
-                  .map { |match| match&.first }
-      found.empty? ? version : found
+    url "https://github.com/hensm/fx_cast/releases?q=prerelease%3Afalse"
+    regex(%r{/v?(\d+(?:\.\d+)+)/fx_cast_bridge[._-][^"' >]*?\.pkg}i)
+    strategy :page_match do |page, regex|
+      # Collect the release tags on the page
+      tags = page.scan(%r{href=["']?[^"' >]*?/releases/tag/([^"' >]*?)["' >]}i)&.flatten&.uniq
+
+      max_reqs = 4
+      tags.each_with_index do |tag, i|
+        break if i >= max_reqs
+
+        # Fetch the assets list HTML for the tag and match within it
+        assets_page = Homebrew::Livecheck::Strategy.page_content(
+          @url.sub(%r{/releases/?.+}, "/releases/expanded_assets/#{tag}"),
+        )
+        matches = assets_page[:content]&.scan(regex)&.map { |match| match[0] }
+
+        break matches if matches.present?
+      end
     end
   end
 
