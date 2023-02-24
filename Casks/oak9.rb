@@ -9,8 +9,6 @@ cask "oak9" do
   desc "Component of oak9's security compliance SaaS product"
   homepage "https://oak9.io/"
 
-  auto_updates true
-
   binary "oak9"
 
   zap trash: "./oak9"
