@@ -8,9 +8,7 @@ cask "parallels-virtualization-sdk" do
   homepage "https://www.parallels.com/products/desktop/download/"
 
   livecheck do
-    url "https://www.parallels.com/download/pvsdk/"
-    strategy :header_match
-    regex(%r{/parallelsvirtualizationsdk-?(\d+(?:\.\d+)+-\d+)(?:-mac)?\.dmg}i)
+    cask "parallels"
   end
 
   pkg "Parallels Virtualization SDK.pkg"
