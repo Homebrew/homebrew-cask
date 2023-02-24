@@ -33,15 +33,15 @@ cask "itsycal" do
     end
   end
   on_mojave :or_newer do
-    version "0.13.4,2228"
+    version "0.13.4"
     sha256 "35509500d22571a4b5e6b48d9de5740a1bcf7d74808d1218d31daf77ddd04a66"
 
-    url "https://itsycal.s3.amazonaws.com/Itsycal-#{version.csv.first}.zip",
+    url "https://itsycal.s3.amazonaws.com/Itsycal-#{version}.zip",
         verified: "itsycal.s3.amazonaws.com/"
 
     livecheck do
       url "https://itsycal.s3.amazonaws.com/itsycal.xml"
-      strategy :sparkle
+      strategy :sparkle, &:short_version
     end
 
     depends_on macos: ">= :mojave"
