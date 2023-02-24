@@ -113,7 +113,7 @@ module CiMatrix
       audit_args << "--new-cask" if changed_files[:added_files].include?(path)
 
       audit_exceptions = []
-      audit_exceptions << "repository" if labels.include?("ci-skip-repository")
+      audit_exceptions << ["github_repository", "gitlab_repository", "bitbucket_repository"] if labels.include?("ci-skip-repository")
 
       # TODO: Replace with `except`.
       audit_args << if labels.include?("ci-skip-appcast")
