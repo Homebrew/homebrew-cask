@@ -12,4 +12,10 @@ cask "bruno" do
   homepage "https://www.usebruno.com/"
 
   app "Bruno.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.usebruno.app.plist",
+    "~/Library/Application Support/bruno",
+    "~/Library/Saved Application State/com.usebruno.app.savedState"
+  ]
 end
