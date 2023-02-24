@@ -11,7 +11,7 @@ cask "orion" do
       strategy :sparkle
     end
 
-    depends_on macos: :mojave
+    depends_on macos: ">= :mojave"
   end
   on_catalina do
     sha256 "2279a4bfddc6b5e4a5c3d96e45d4bc7da878a3363601ca5a662d4f87941de132"
@@ -67,7 +67,6 @@ cask "orion" do
   homepage "https://browser.kagi.com/"
 
   auto_updates true
-  depends_on macos: ">= :mojave"
 
   app "Orion.app"
 
