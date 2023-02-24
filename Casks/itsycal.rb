@@ -10,7 +10,7 @@ cask "itsycal" do
       skip "Legacy version"
     end
   end
-  on__sierra do
+  on_sierra do
     version "0.11.17"
     sha256 "fda1ba5611deaf4d5b834118b3af37ea9c5d08d1f8c813d04e7dd0552a270e11"
 
