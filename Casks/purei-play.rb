@@ -10,9 +10,8 @@ cask "purei-play" do
 
   livecheck do
     url "https://services.purei.org/api/builds"
-    strategy :page_match do |page|
-      build = JSON.parse(page)
-      "#{build["commitDate"][/^(\d+(?:-\d+)+)T/i, 1]},#{build["commitHash"]}"
+    strategy :json do |json|
+      "#{json["commitDate"][/^(\d+(?:-\d+)+)T/i, 1]},#{json["commitHash"]}"
     end
   end
 
