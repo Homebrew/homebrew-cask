@@ -12,8 +12,8 @@ cask "intellij-idea" do
 
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=IIU&latest=true&type=release"
-    strategy :page_match do |page|
-      JSON.parse(page)["IIU"].map do |release|
+    strategy :json do |json|
+      json["IIU"].map do |release|
         "#{release["version"]},#{release["build"]}"
       end
     end
