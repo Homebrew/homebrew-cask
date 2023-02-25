@@ -10,8 +10,8 @@ cask "wow" do
 
   livecheck do
     url "https://web.static.nowtv.com/watch/player/wowtv/de/latest/update.json"
-    strategy :page_match do |page|
-      JSON.parse(page)["platforms"]["darwin"]["version"]
+    strategy :json do |json|
+      json["platforms"]["darwin"]["version"]
     end
   end
 
