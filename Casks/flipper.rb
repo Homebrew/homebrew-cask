@@ -10,8 +10,8 @@ cask "flipper" do
 
   livecheck do
     url "https://www.facebook.com/fbflipper/public/latest.json?version=0.0.0"
-    strategy :page_match do |page|
-      JSON.parse(page)["version"]
+    strategy :json do |json|
+      json["version"]
     end
   end
 
