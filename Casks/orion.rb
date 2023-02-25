@@ -1,7 +1,7 @@
 cask "orion" do
   version "0.99,123.3"
 
-  on_mojave do
+  on_mojave :or_older do
     sha256 "7164c435e517f7c354c4bbe37d7524e924fdfda51c6368838c01b45edcd955b7"
 
     url "https://browser.kagi.com/updates/10_14/#{version.csv.second}.zip"
@@ -11,7 +11,7 @@ cask "orion" do
       strategy :sparkle
     end
 
-    depends_on macos: :mojave
+    depends_on macos: ">= :mojave"
   end
   on_catalina do
     sha256 "2279a4bfddc6b5e4a5c3d96e45d4bc7da878a3363601ca5a662d4f87941de132"
