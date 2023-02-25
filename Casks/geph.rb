@@ -1,6 +1,6 @@
 cask "geph" do
-  version "4.7.6"
-  sha256 "5ca98c49c09169c12fd4a738c929d673666890a1ae9e82bdd8ae4299999bf553"
+  version "4.7.7"
+  sha256 "8cb9f3e2a37fcf72db70a8a5d538aeb540a60966dbfd97d0b086dd49a9ea9cd1"
 
   url "https://sos-ch-dk-2.exo.io/utopia/geph-releases/macos-stable/#{version}/geph-macos.dmg",
       verified: "sos-ch-dk-2.exo.io/utopia/geph-releases/"
