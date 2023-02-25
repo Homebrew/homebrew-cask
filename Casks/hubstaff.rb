@@ -10,7 +10,7 @@ cask "hubstaff" do
   livecheck do
     url "https://app.hubstaff.com/appcast.xml"
     strategy :sparkle do |item|
-      "#{item.short_version.split("-").first},#{item.url[%r{/(\d+)[._-]standard[._-]mac[._-]os[._-]x[._-]v?(?:\d(?:-\d+)*)[._-]release}i, 1]}"
+      "#{item.short_version.split("-").first},#{item.url[%r{/(\d+)(?:-standard)?-mac.*?-release}i, 1]}"
     end
   end
 
