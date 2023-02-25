@@ -125,6 +125,10 @@ module CiMatrix
         "--appcast"
       end
 
+      if labels.include?("ci-skip-livecheck")
+        audit_exceptions << ["hosting_with_livecheck", "livecheck_version", "livecheck_min_os"]
+      end
+
       audit_args << "--except" << audit_exceptions.join(",") if audit_exceptions.any?
 
       runners(path).map do |runner|
