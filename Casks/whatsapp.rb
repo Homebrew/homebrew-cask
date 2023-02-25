@@ -9,8 +9,8 @@ cask "whatsapp" do
 
   livecheck do
     url "https://web.whatsapp.com/desktop/mac/releases"
-    strategy :page_match do |page|
-      JSON.parse(page)["name"]
+    strategy :json do |json|
+      json["name"]
     end
   end
 
