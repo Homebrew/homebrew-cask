@@ -9,8 +9,8 @@ cask "mymonero" do
   homepage "https://mymonero.com/"
 
   livecheck do
-    url "https://mymonero.com/assets/js/application.js"
-    regex(/desktopVersionString.*?v?(\d+(?:\.\d+)+)/i)
+    url :url
+    strategy :github_latest
   end
 
   app "MyMonero.app"
