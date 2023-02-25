@@ -9,8 +9,8 @@ cask "grids" do
 
   livecheck do
     url "https://gridsapp.net/appcast.json"
-    strategy :page_match do |page|
-      JSON.parse(page)["version"]["mac"]
+    strategy :json do |json|
+      json["version"]["mac"]
     end
   end
 
