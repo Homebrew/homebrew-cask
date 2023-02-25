@@ -12,8 +12,8 @@ cask "webstorm" do
 
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=WS&latest=true&type=release"
-    strategy :page_match do |page|
-      JSON.parse(page)["WS"].map do |release|
+    strategy :json do |json|
+      json["WS"].map do |release|
         "#{release["version"]},#{release["build"]}"
       end
     end
