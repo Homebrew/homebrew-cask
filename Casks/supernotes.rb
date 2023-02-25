@@ -9,8 +9,8 @@ cask "supernotes" do
 
   livecheck do
     url "https://api.supernotes.app/v1/"
-    strategy :page_match do |page|
-      JSON.parse(page)["version"]
+    strategy :json do |json|
+      json["version"]
     end
   end
 
