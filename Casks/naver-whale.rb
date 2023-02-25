@@ -12,8 +12,8 @@ cask "naver-whale" do
 
   livecheck do
     url "https://cv.whale.naver.com/version/latest_version"
-    strategy :page_match do |page|
-      JSON.parse(page)["message"]["@version"]
+    strategy :json do |json|
+      json["message"]["@version"]
     end
   end
 
