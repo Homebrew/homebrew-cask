@@ -2,7 +2,7 @@ cask "hubstaff" do
   version "1.6.12,5358"
   sha256 "0b991cace99b0a3cb0a6bb54495a5036c953c78e5949010a94f589d295bc7a35"
 
-  url "https://app.hubstaff.com/download/#{version.csv.second}-mac-os-x-#{version.csv.first.dots_to_hyphens}-release"
+  url "https://app.hubstaff.com/download/#{version.csv.second}-standard-mac-os-x-#{version.csv.first.dots_to_hyphens}-release"
   name "Hubstaff"
   desc "Work time tracker"
   homepage "https://hubstaff.com/"
