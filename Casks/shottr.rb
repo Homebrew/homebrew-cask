@@ -15,8 +15,8 @@ cask "shottr" do
   livecheck do
     url "https://shottr.cc/api/version.json"
     regex(/Shottr[._-]v?(\d+(?:\.\d+)+)/i)
-    strategy :page_match do |page, regex|
-      JSON.parse(page)["package"][regex, 1]
+    strategy :json do |json, regex|
+      json["package"][regex, 1]
     end
   end
 

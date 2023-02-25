@@ -12,8 +12,8 @@ cask "burp-suite" do
 
   livecheck do
     url "https://portswigger.net/burp/releases/data"
-    strategy :page_match do |page|
-      all_versions = JSON.parse(page)["ResultSet"]["Results"]
+    strategy :json do |json|
+      all_versions = json["ResultSet"]["Results"]
       next if all_versions.blank?
 
       all_versions.map do |item|

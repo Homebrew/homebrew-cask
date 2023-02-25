@@ -10,8 +10,8 @@ cask "box-notes" do
 
   livecheck do
     url "https://notes.services.box.com/updates/latest?platform=darwin&v=#{version.major}.0.0"
-    strategy :page_match do |page|
-      JSON.parse(page)["version"]
+    strategy :json do |json|
+      json["version"]
     end
   end
 

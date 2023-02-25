@@ -10,8 +10,8 @@ cask "hbuilderx" do
 
   livecheck do
     url "https://download1.dcloud.net.cn/hbuilderx/release.json"
-    strategy :page_match do |page|
-      JSON.parse(page)["version"]
+    strategy :json do |json|
+      json["version"]
     end
   end
 

@@ -9,8 +9,8 @@ cask "fig" do
 
   livecheck do
     url "https://repo.fig.io/generic/stable/index.json"
-    strategy :page_match do |page|
-      JSON.parse(page)["hints"]["livecheck"]
+    strategy :json do |json|
+      json["hints"]["livecheck"]
     end
   end
 

@@ -10,8 +10,8 @@ cask "soundtoys" do
 
   livecheck do
     url "https://storage.googleapis.com/soundtoys-download/download.json"
-    strategy :page_match do |page|
-      JSON.parse(page)["Soundtoys5_Mac"]["fullversion"]
+    strategy :json do |json|
+      json["Soundtoys5_Mac"]["fullversion"]
     end
   end
 

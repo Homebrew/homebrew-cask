@@ -12,8 +12,8 @@ cask "goland" do
 
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=GO&latest=true&type=release"
-    strategy :page_match do |page|
-      JSON.parse(page)["GO"].map do |release|
+    strategy :json do |json|
+      json["GO"].map do |release|
         "#{release["version"]},#{release["build"]}"
       end
     end

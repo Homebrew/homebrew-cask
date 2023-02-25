@@ -10,8 +10,8 @@ cask "splice" do
 
   livecheck do
     url "https://api.splice.com/v2/desktop/darwin/stable/latest?v=0.0.0"
-    strategy :page_match do |page|
-      JSON.parse(page)["name"]
+    strategy :json do |json|
+      json["name"]
     end
   end
 

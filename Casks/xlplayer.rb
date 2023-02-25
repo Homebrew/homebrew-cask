@@ -11,8 +11,8 @@ cask "xlplayer" do
 
   livecheck do
     url "https://static-xl.a.88cdn.com/json/xunlei_video_version_mac.json"
-    strategy :page_match do |page|
-      JSON.parse(page)["version"]
+    strategy :json do |json|
+      json["version"]
     end
   end
 
