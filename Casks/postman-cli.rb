@@ -13,8 +13,8 @@ cask "postman-cli" do
 
   livecheck do
     url "https://dl-cli.pstmn.io/api/version/latest"
-    strategy :page_match do |page|
-      JSON.parse(page)["version"]
+    strategy :json do |json|
+      json["version"]
     end
   end
 
