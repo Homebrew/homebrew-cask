@@ -12,7 +12,7 @@ cask "pdfelement" do
     regex(%r{<Version>(\d+(?:\.\d+)+)</Version>}i)
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   app "PDFelement.app"
 
