@@ -20,7 +20,6 @@ cask "fleet" do
     end
   end
 
-  auto_updates true
   depends_on macos: ">= :high_sierra"
 
   app "Fleet.app"
