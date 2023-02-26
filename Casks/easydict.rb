@@ -4,13 +4,8 @@ cask "easydict" do
 
   url "https://github.com/tisfeng/Easydict/releases/download/#{version}/Easydict.dmg"
   name "Easydict"
-  desc "Dictionary and Translator App for looking up words and translating text"
-  homepage "https://github.com/tisfeng/Easydict"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  desc "Dictionary and translator app"
+  homepage "https://github.com/tisfeng/Easydict/"
 
   auto_updates true
 
