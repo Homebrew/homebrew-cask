@@ -26,6 +26,7 @@ cask "fleet" do
   app "Fleet.app"
 
   zap trash: [
+    "~/.fleet",
     "~/Library/Application Support/JetBrains/Fleet",
     "~/Library/Caches/JetBrains/Fleet",
     "~/Library/Logs/JetBrains/Fleet",
