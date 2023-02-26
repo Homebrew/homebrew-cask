@@ -804,7 +804,7 @@ cask "libreoffice-language-pack" do
   end
 
   depends_on cask: "libreoffice"
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   installer manual: "LibreOffice Language Pack.app"
 
@@ -813,6 +813,8 @@ cask "libreoffice-language-pack" do
   # and that for this cask it is indeed this simple.
   # See https://github.com/Homebrew/homebrew-cask/pull/52893
   uninstall delete: "#{staged_path}/#{token}"
+
+  # No zap stanza required
 
   caveats <<~EOS
     #{token} cannot be upgraded, use brew reinstall --cask #{token} instead
