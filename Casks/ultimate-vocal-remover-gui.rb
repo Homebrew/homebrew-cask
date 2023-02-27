@@ -11,7 +11,5 @@ cask "ultimate-vocal-remover-gui" do
   desc "Uses state-of-the-art source separation models to remove vocals from audio files"
   homepage "https://github.com/Anjok07/ultimatevocalremovergui"
 
-  depends_on arch: :arm64
-
   app "Ultimate Vocal Remover.app"
 end
