@@ -1,10 +1,10 @@
-cask "microsoft-teams" do
-  version "1.6.00.1159"
-  sha256 "2168d0464ad52462e2214536d3092b50f816a49c2381df780559f39e3b51569f"
+cask "microsoft-teams-nightly" do
+  version "1.6.00.5855"
+  sha256 "ba39f2d75c49b6b027451a61a4acaa75996495ca718999f37a8f8c7180a7574b"
 
-  url "https://statics.teams.cdn.office.net/production-osx/#{version}/Teams_osx.pkg",
-      verified: "statics.teams.cdn.office.net/production-osx/"
-  name "Microsoft Teams"
+  url "https://staticsint.teams.cdn.office.net/production-osx/#{version}/Teams_osx.pkg",
+      verified: "staticsint.teams.cdn.office.net/production-osx/"
+  name "Microsoft Teams (nightly)"
   desc "Meet, chat, call, and collaborate in just one place"
   homepage "https://teams.microsoft.com/downloads"
 
@@ -13,18 +13,13 @@ cask "microsoft-teams" do
   # and here:
   #   https://raw.githubusercontent.com/ItzLevvie/MicrosoftTeams-msinternal/master/defconfig2
   #
-  # We only track the "production build"/"Public (R4) build" version,
-  # which agrees with the version reported by `livecheck`.
+  # We only track the "nightly" build
   #
-  # Any pull request that updates this Cask to a version that
-  # differs from the `livecheck` version will be closed.
-  livecheck do
-    url "https://aka.ms/teamsmac"
-    strategy :header_match
-  end
-
   auto_updates true
-  conflicts_with cask: "microsoft-office-businesspro"
+  conflicts_with cask: [
+    "microsoft-office-businesspro",
+    "microsoft-teams",
+  ]
 
   pkg "Teams_osx.pkg"
 
@@ -50,5 +45,5 @@ cask "microsoft-teams" do
         "~/Library/Saved Application State/com.microsoft.teams.savedState",
         "~/Library/WebKit/com.microsoft.teams",
       ],
-      rmdir: "~/Library/Application Support/Microsoft"
+      rmdir: "~/Library/Application Support/Microsoft/Teams"
 end
