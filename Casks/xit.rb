@@ -1,9 +1,9 @@
 cask "xit" do
   on_big_sur :or_older do
-    url "https://github.com/Uncommon/Xit/releases/download/#{version}/Xit.zip"
-
     version "1.0b16"
     sha256 "0e9897d16a5a613a4da9861c907e1f0922df446cc88628e13271793a6c94b229"
+
+    url "https://github.com/Uncommon/Xit/releases/download/#{version}/Xit.zip"
 
     depends_on macos: ">= :mojave"
 
