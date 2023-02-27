@@ -40,7 +40,7 @@ module CiMatrix
       { versions: [args.first], comparator: "==" }
     elsif /^\s*(?<comparator><|>|[=<>]=)\s*:?(?<version>\S+)\s*$/ =~ args.first
       { versions: [version.to_sym], comparator: comparator }
-    else # rubocop:disable Lint/DuplicateBranch
+    else
       { versions: [args.first], comparator: "==" }
     end
 
