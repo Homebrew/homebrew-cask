@@ -12,6 +12,8 @@ cask "mochi-diffusion" do
     strategy :sparkle
   end
 
+  depends_on macos: ">= :ventura"
+
   app "Mochi Diffusion.app"
 
   zap trash: "~/Library/Application Support/MochiDiffusion"
