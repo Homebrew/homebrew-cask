@@ -1,5 +1,6 @@
 cask "ultimate-vocal-remover-gui" do
-  arch arm: "arm64"
+  arch arm:   "arm64",
+       intel: "x86_64"
 
   version "5.5.0"
   sha256 arm:   "51f7927c04dea12e9e8acee9326eb195c5532c5142437633b0fbcaa92c5f4613",
