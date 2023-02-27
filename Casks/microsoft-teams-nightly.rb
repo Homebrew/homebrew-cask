@@ -1,6 +1,6 @@
 cask "microsoft-teams-nightly" do
-  version "1.6.00.5855"
-  sha256 "ba39f2d75c49b6b027451a61a4acaa75996495ca718999f37a8f8c7180a7574b"
+  version :latest
+  sha256 :no_check
 
   url "https://staticsint.teams.cdn.office.net/production-osx/#{version}/Teams_osx.pkg",
       verified: "staticsint.teams.cdn.office.net/production-osx/"
