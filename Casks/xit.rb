@@ -17,7 +17,7 @@ cask "xit" do
 
   depends_on macos: ">= :monterey"
 
-  app "Xit.app"
+  app "Xit#{arch} #{version}/Xit.app"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.uncommonplace.xit.sfl*",
