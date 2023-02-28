@@ -7,6 +7,11 @@ cask "binary-ninja" do
   desc "Reverse engineering platform"
   homepage "https://binary.ninja/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Binary Ninja.app"
 
   zap trash: "~/Library/Application Support/Binary Ninja"
