@@ -11,8 +11,8 @@ cask "tripmode" do
     end
   end
   on_big_sur :or_newer do
-    version "3.2.0,1355"
-    sha256 "0569f7954d562e259ac27bea096c312da5556393c742c6a993c3d716bf080369"
+    version "3.2.1,1370"
+    sha256 "ee9221ac098bad74b98f657ab91b5ca2bb0244aa516b244b2dba2cd9bb681e07"
 
     url "https://tripmode-updates.ch/app/TripMode-#{version.csv.first}-#{version.csv.second}.zip",
         verified: "tripmode-updates.ch/"
