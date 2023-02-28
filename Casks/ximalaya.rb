@@ -20,4 +20,12 @@ cask "ximalaya" do
   end
 
   app "喜马拉雅.app"
+
+  zap trash: [
+    "~/Library/Application Support/喜马拉雅",
+    "~/Library/Application Support/Ximalaya SetUp",
+    "~/Library/Logs/喜马拉雅",
+    "~/Library/Preferences/com.gemd.iting.plist",
+    "~/Library/Saved Application State/com.gemd.iting.savedState"
+  ]
 end
