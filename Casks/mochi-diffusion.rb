@@ -7,6 +7,7 @@ cask "mochi-diffusion" do
   desc "Run Stable Diffusion natively"
   homepage "https://github.com/godly-devotion/MochiDiffusion"
 
+  auto_updates true
   depends_on macos: ">= :ventura"
 
   app "Mochi Diffusion.app"
