@@ -9,7 +9,7 @@ cask "scummvm" do
 
   livecheck do
     url "https://www.scummvm.org/downloads/"
-    regex(%r{href=.*?/scummvm-(\d+(?:\.\d+)+)-macosx\.dmg}i)
+    regex(%r{href=.*?/scummvm[._-]v?(\d+(?:\.\d+)+)[._-]macosx\.dmg}i)
   end
 
   app "ScummVM.app"
