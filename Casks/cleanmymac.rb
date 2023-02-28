@@ -1,5 +1,5 @@
 cask "cleanmymac" do
-  version "4.12.5,41205.0.2302100834"
+  version "4.12.6"
   sha256 "3b03dd8aa363e88985f12af687cd65044e765926e51c0843258636d57a01c768"
 
   url "https://dl.devmate.com/com.macpaw.CleanMyMac#{version.major}/CleanMyMacX.dmg",
@@ -10,7 +10,7 @@ cask "cleanmymac" do
 
   livecheck do
     url "https://updates.devmate.com/com.macpaw.CleanMyMac#{version.major}.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
