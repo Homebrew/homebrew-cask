@@ -47,4 +47,4 @@ jobs:
 
             - label: missing zap
               path: Casks/.+
-              missing_content: \n  zap .+\n
+              missing_content: zap .+\n
