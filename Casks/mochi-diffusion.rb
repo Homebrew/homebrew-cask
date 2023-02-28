@@ -7,11 +7,6 @@ cask "mochi-diffusion" do
   desc "Run Stable Diffusion natively"
   homepage "https://github.com/godly-devotion/MochiDiffusion"
 
-  livecheck do
-    url "https://github.com/godly-devotion/MochiDiffusion/raw/main/.sparkle/appcast.xml"
-    strategy :sparkle
-  end
-
   depends_on macos: ">= :ventura"
 
   app "Mochi Diffusion.app"
