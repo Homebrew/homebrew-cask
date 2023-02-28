@@ -4,7 +4,7 @@ cask "tripmode" do
     sha256 "db409c94cbe8f03749e38a9e4acf58efbf7363fb2ca3aff7a316574d9f2b2737"
 
     url "https://tripmode-updates.ch/app/TripMode-#{version.csv.first}-#{version.csv.second}-app.dmg",
-        verified: "tripmode-updates.ch/"
+        verified: "tripmode-updates.ch/app/"
 
     livecheck do
       skip "Legacy version"
@@ -15,7 +15,7 @@ cask "tripmode" do
     sha256 "ee9221ac098bad74b98f657ab91b5ca2bb0244aa516b244b2dba2cd9bb681e07"
 
     url "https://tripmode-updates.ch/app/TripMode-#{version.csv.first}-#{version.csv.second}.zip",
-        verified: "tripmode-updates.ch/"
+        verified: "tripmode-updates.ch/app/"
 
     depends_on macos: ">= :big_sur"
 
@@ -45,8 +45,8 @@ cask "tripmode" do
     "~/Library/Application Scripts/com.alix-sarl.TripMode",
     "~/Library/Application Scripts/P39EL2R8C4.com.alix-sarl.TripMode",
     "~/Library/Application Support/Tripmode",
-    "~/Library/Caches/com.apple.helpd/Generated/ch.tripmode.TripMode.help*#{version.csv.first}",
     "~/Library/Caches/ch.tripmode.TripMode",
+    "~/Library/Caches/com.apple.helpd/Generated/ch.tripmode.TripMode.help*#{version.csv.first}",
     "~/Library/Group Containers/P39EL2R8C4.com.alix-sarl.TripMode",
     "~/Library/Preferences/ch.tripmode.TripMode.plist",
   ]
