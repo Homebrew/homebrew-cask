@@ -11,7 +11,7 @@ cask "tableau-prep" do
   livecheck do
     url "https://www.tableau.com/downloads/prep/mac"
     strategy :header_match do |headers|
-      headers["location"][/TableauPrep-(\d+(?:-\d+)+)\.dmg/i, 1].tr("-", ".")
+      headers["location"][/TableauPrep[._-]v?(\d+(?:-\d+)+)\.dmg/i, 1].tr("-", ".")
     end
   end
 
