@@ -13,4 +13,6 @@ cask "ultimate-vocal-remover" do
   depends_on macos: ">= :catalina"
 
   app "Ultimate Vocal Remover.app"
+
+  # No zap stanza required
 end
