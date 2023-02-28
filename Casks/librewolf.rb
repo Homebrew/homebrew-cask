@@ -27,6 +27,7 @@ cask "librewolf" do
   end
 
   app "LibreWolf.app"
+  binary "#{appdir}/LibreWolf.app/Contents/MacOS/librewolf"
 
   zap trash: [
     "~/.librewolf",

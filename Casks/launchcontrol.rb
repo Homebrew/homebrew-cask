@@ -27,6 +27,7 @@ cask "launchcontrol" do
   auto_updates true
 
   app "LaunchControl.app"
+  binary "#{appdir}/LaunchControl.app/Contents/MacOS/fdautil"
 
   uninstall delete:    "/Library/PrivilegedHelperTools/com.soma-zone.LaunchControl.Helper",
             launchctl: "com.soma-zone.LaunchControl.Helper",

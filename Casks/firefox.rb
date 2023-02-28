@@ -225,6 +225,7 @@ cask "firefox" do
   depends_on macos: ">= :sierra"
 
   app "Firefox.app"
+  binary "#{appdir}/Firefox.app/Contents/MacOS/firefox"
 
   uninstall quit: "org.mozilla.firefox"
 
