@@ -9,7 +9,7 @@ cask "alfaview" do
 
   livecheck do
     url "https://production-alfaview-assets.alfaview.com/stable/mac/version.info"
-    regex(/alfaview-mac-production[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/alfaview[._-]mac[._-]production[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   depends_on macos: ">= :high_sierra"
