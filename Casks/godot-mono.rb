@@ -16,4 +16,10 @@ cask "godot-mono" do
   depends_on formula: "mono"
 
   app "Godot_mono.app"
+
+  zap trash: [
+    "~/Library/Application Support/Godot",
+    "~/Library/Caches/Godot",
+    "~/Library/Saved Application State/org.godotengine.godot.savedState",
+  ]
 end
