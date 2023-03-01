@@ -1,6 +1,6 @@
 cask "webex-meetings" do
   on_intel do
-    version "2302.1604.4303.2"
+    version "2302.2206.4303.3"
     sha256 :no_check
 
     url "https://akamaicdn.webex.com/client/webexapp.dmg"
