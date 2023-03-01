@@ -1,15 +1,15 @@
 cask "ditto" do
-  version "1.11.0,1728"
+  version "1.11.0"
   sha256 "4d585dd698ebc0f2fb03c787f92d11ccfa2389a2657ff5a12ee9d16230204404"
 
-  url "https://download.airsquirrels.com/Ditto/App/Mac/Ditto-#{version.csv.first}.dmg"
+  url "https://download.airsquirrels.com/Ditto/App/Mac/Ditto-#{version}.dmg"
   name "Ditto"
   desc "Screen mirroring and digital signage"
   homepage "https://www.airsquirrels.com/ditto"
 
   livecheck do
     url "https://updates.goditto.com/DittoConnect/Mac/"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   app "Ditto.app"
