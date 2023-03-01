@@ -1,6 +1,6 @@
 cask "cleanmymac-zh" do
-  version "4.12.5,41205.0.2302100825"
-  sha256 "7f2400ac9b3fd49a9e9ebba2050f9ed2236e5f90db758a652913bf38672bbf95"
+  version "4.12.6"
+  sha256 "c337fbfc63d95af4a71bf02b7f0a1cd1bf079db2076bc1d559bfd5e6012e7a1a"
 
   url "https://dl.devmate.com/com.macpaw.zh.CleanMyMac#{version.major}/CleanMyMacXChinese.dmg",
       verified: "dl.devmate.com/"
@@ -10,7 +10,7 @@ cask "cleanmymac-zh" do
 
   livecheck do
     url "https://updates.devmate.com/com.macpaw.zh.CleanMyMac#{version.major}.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
