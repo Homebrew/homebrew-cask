@@ -1,7 +1,7 @@
 cask "openlens" do
   arch arm: "-arm64"
 
-  version "6.3.0"
+  version "6.4.0"
   sha256 arm:   "caa79871cbb262cd7ffd7fe3e2096d419d57178697edff1405158437718ca4c9",
          intel: "a058d639903982fe8e06b9a820dee3745756524010dcfe13c482920f6ac5debf"
 
