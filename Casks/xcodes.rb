@@ -5,10 +5,10 @@ cask "xcodes" do
   url "https://github.com/RobotsAndPencils/XcodesApp/releases/download/v#{version.csv.first}b#{version.csv.second}/Xcodes.zip"
   name "Xcodes"
   desc "Install and switch between multiple versions of Xcode"
-  homepage "https://www.xcodes.app"
+  homepage "https://github.com/RobotsAndPencils/XcodesApp"
 
   livecheck do
-    url "https://www.xcodes.app/appcast.xml"
+    url "https://github.com/RobotsAndPencils/XcodesApp/appcast.xml"
     strategy :sparkle
   end
 
