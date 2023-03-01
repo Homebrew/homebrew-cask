@@ -1,6 +1,6 @@
 cask "gpg-suite-no-mail" do
-  version "2022.2"
-  sha256 "11e4e0964d788bab4cceda7b6af696bf17a85510338322543867bd1c934cca70"
+  version "2023.1"
+  sha256 "fe082d0f7283f3b59cbe67f8949cc520b8d2fd6ffcc8e9e60392c101c88e2ee0"
 
   url "https://releases.gpgtools.org/GPG_Suite-#{version}.dmg"
   name "GPG Suite (without GPG Mail)"
