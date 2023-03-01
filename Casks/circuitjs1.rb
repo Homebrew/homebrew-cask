@@ -8,6 +8,11 @@ cask "circuitjs1" do
   desc "Electronic circuit simulator"
   homepage "https://www.falstad.com/circuit/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "CircuitJS1.app"
 
   zap trash: [
