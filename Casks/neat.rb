@@ -6,7 +6,7 @@ cask "neat" do
          intel: "d0b19076140d2ae131b8f0ab64763b1a5c5398e8dbcbf1ee7146811737c16c2f"
 
   url "https://github.com/neat-run/activity-feed-public/releases/download/v#{version}/Neat-#{version}#{arch}.dmg",
-      verified: "https://github.com/neat-run/activity-feed-public/releases"
+      verified: "github.com/neat-run/activity-feed-public/releases"
   name "Neat"
   desc "GitHub and Linear notifications on your desktop and menu bar"
   homepage "https://neat.run/"

@@ -6,7 +6,7 @@ cask "coscreen" do
          intel: "752bf26f9089f14d5494b4d56335e364418eb592c32f713d448450f368f7b580"
 
   url "https://update.coscreen.org/CoScreen-#{version}-stable-#{arch}.dmg",
-      verified: "https://update.coscreen.org/"
+      verified: "update.coscreen.org/"
   name "CoScreen"
   desc "Collaboration tool with multi-user screen sharing"
   homepage "https://www.coscreen.co/"
