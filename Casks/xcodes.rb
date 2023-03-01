@@ -8,7 +8,7 @@ cask "xcodes" do
   homepage "https://github.com/RobotsAndPencils/XcodesApp"
 
   livecheck do
-    url "https://github.com/RobotsAndPencils/XcodesApp/appcast.xml"
+    url "https://robotsandpencils.github.io/XcodesApp/appcast.xml"
     strategy :sparkle
   end
 
