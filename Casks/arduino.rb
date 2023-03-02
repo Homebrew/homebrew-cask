@@ -12,7 +12,7 @@ cask "arduino" do
 
   conflicts_with cask: "homebrew/cask-versions/arduino-nightly"
 
-  app "Arduino.app"
+  app "Arduino IDE.app"
   binary "#{appdir}/Arduino.app/Contents/Java/arduino-builder"
 
   zap trash: [
