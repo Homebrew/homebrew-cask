@@ -1,6 +1,6 @@
 cask "via" do
-  version "2.1.0"
-  sha256 "cedba024906fa33ef3c3b706145ebebaca50e4a57e80efc9fae518ff982060df"
+  version "2.2.0"
+  sha256 "072eb193fa0a1ed9c53484b6315e26623c87ff2951cdad8c1df22d931bde3687"
 
   url "https://github.com/the-via/releases/releases/download/v#{version}/via-#{version}-mac.dmg",
       verified: "github.com/the-via/releases/"
