@@ -13,7 +13,7 @@ cask "godot-mono" do
     regex(/^v?(\d+(?:\.\d+)+)[._-]stable$/i)
   end
 
-  depends_on formula: "mono"
+  depends_on cask: "dotnet-sdk"
 
   app "Godot_mono.app"
 
