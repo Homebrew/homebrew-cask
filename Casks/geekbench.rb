@@ -16,8 +16,8 @@ cask "geekbench" do
     sha256 "04b06cb642e51230a3dfd07ce2d3a4ea696cb349583737622749174dc8747313"
   end
   on_big_sur :or_newer do
-    version "6.0.0,602754"
-    sha256 "42c443ac203c49dce0646f847042b207560c0eb092673a47224cca5c4233f40b"
+    version "6.0.1,603050"
+    sha256 "6d025ca2d2983076891968d636a8f0bb9a5703868ea1eabe24142615500aaa12"
   end
 
   url "https://cdn.geekbench.com/Geekbench-#{version.csv.first}-Mac.zip"
