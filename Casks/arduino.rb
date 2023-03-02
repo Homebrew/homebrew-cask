@@ -1,8 +1,11 @@
 cask "arduino" do
-  version "1.8.19"
-  sha256 "1d5f4aa4c82c8cf8d858c413928be55963ccd1203552d8dc07f4ca123f814c01"
+  arch arm: "arm64", intel: "64bit"
 
-  url "https://downloads.arduino.cc/arduino-#{version}-macosx.zip"
+  version "2.0.4"
+  sha256 arm:   "aa55f52258c6e461611ebf15d1ba31e171814cbee500d37566f8cab2b05eb6ed",
+         intel: "1d093666225eae2f512d603103199e9953983965b6ec6ac7d8e1960bd1c9fe71"
+
+  url "https://downloads.arduino.cc/arduino-ide/arduino-ide_#{version}_macOS_#{arch}.zip"
   name "Arduino"
   desc "Electronics prototyping platform"
   homepage "https://www.arduino.cc/"
