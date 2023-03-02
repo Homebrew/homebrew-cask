@@ -1,9 +1,9 @@
 cask "clay" do
-  version "2.5.0"
-  sha256 "b5eafda56409a7fde89f2d43b976b5d0854733beeeaaeaf1c26d9555d99e7356"
+  version "2.6.1"
+  sha256 "efe362614279daa9e5eff0e74d8bbcae5c6f24a2177299ae40673dd6cf9eb2e4"
 
   url "https://assets.clay.earth/desktop/mac/Clay-#{version}-universal.dmg"
-  name "clay"
+  name "Clay"
   desc "Private rolodex to remember people better"
   homepage "https://clay.earth/"
 
