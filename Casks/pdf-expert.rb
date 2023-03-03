@@ -25,8 +25,8 @@ cask "pdf-expert" do
     "~/Library/Caches/com.readdle.PDFExpert-Installer",
     "~/Library/Caches/com.readdle.PDFExpert-Mac",
     "~/Library/HTTPStorages/com.readdle.PDFExpert-Installer",
-    "~/Library/HTTPStorages/com.readdle.PDFExpert-Mac.binarycookies",
     "~/Library/HTTPStorages/com.readdle.PDFExpert-Mac",
+    "~/Library/HTTPStorages/com.readdle.PDFExpert-Mac.binarycookies",
     "~/Library/PDF Expert",
     "~/Library/Preferences/com.readdle.PDFExpert-Mac.plist",
   ]
