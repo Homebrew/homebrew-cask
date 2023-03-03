@@ -1,5 +1,5 @@
 cask "mutesync" do
-  arch arm: "-arm64", intel: ""
+  arch arm: "-arm64"
 
   version "5.5.0"
   sha256 arm:   "5cf35844ad24334917db3b684f7c0dce6342981a5efc68d5531eb185dcaae6db",

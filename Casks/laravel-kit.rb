@@ -1,5 +1,5 @@
 cask "laravel-kit" do
-  arch arm: "-arm64", intel: ""
+  arch arm: "-arm64"
 
   version "2.0.8"
   sha256 arm:   "f5cc20ce507ca6bef4e6de99d7e00aee12f55d9ef01dab85be7f1a6074b8a045",
