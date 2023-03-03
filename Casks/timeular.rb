@@ -16,4 +16,10 @@ cask "timeular" do
   auto_updates true
 
   app "Timeular.app"
+
+  zap trash: [
+    "~/Library/Application Support/Timeular",
+    "~/Library/Logs/Timeular",
+    "~/Library/Preferences/com.timeular.zei.plist",
+  ]
 end
