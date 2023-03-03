@@ -1,5 +1,5 @@
 cask "tastyworks" do
-  arch arm: "-aarch64"
+  arch arm: "-aarch64", intel: ""
 
   version "1.26.1"
   sha256 arm:   "2b5944cbfa2d4f6e52ffdf06c1c46bb208b4504fb69afe2007e8aaa1cc3a2d0e",
