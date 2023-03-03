@@ -1,6 +1,5 @@
 cask "wireshark-chmodbpf" do
   arch arm: "Arm", intel: "Intel"
-  livecheck_arch = on_arch_conditional arm: "arm", intel: "x86-"
 
   version "4.0.4"
   sha256 arm:   "6434479defbb2edd6457b9f395c119799310e4675f9fe1145df40c1266bda5e4",
