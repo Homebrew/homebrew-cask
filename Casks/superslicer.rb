@@ -1,5 +1,5 @@
 cask "superslicer" do
-  arch arm: "_arm", intel: ""
+  arch arm: "_arm"
 
   version "2.4.58.5,220924"
   sha256 arm:   "c65d21e51ac57eb75c915ae172a642f48d63584f6bdd8a280aa2443319a66010",
