@@ -2,7 +2,7 @@ cask "iconchamp" do
   version "1.0.1"
   sha256 :no_check
 
-  url "https://github.com/MacEnhance/appcast/blob/master/IconChamp/IconChamp.zip?raw=true",
+  url "https://github.com/MacEnhance/appcast/raw/master/IconChamp/IconChamp.zip",
       verified: "github.com/MacEnhance/appcast/"
   name "IconChamp"
   desc "Icon theming app for Big Sur and Monterey"
@@ -25,13 +25,13 @@ cask "iconchamp" do
             ]
 
   zap trash: [
-    "~/Library/Application Support/IconChamp",
+    "/Users/Shared/IconChamp",
     "~/Library/Application Support/com.macenhance.IconChamp",
+    "~/Library/Application Support/IconChamp",
     "~/Library/Caches/com.macenhance.IconChamp",
     "~/Library/HTTPStorages/com.macenhance.IconChamp",
     "~/Library/HTTPStorages/com.macenhance.IconChamp.binarycookies",
     "~/Library/Preferences/com.macenhance.IconChamp.plist",
     "~/Library/Saved Application State/com.macenhance.IconChamp.savedState",
-    "/Users/Shared/IconChamp",
   ]
 end
