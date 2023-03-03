@@ -1,6 +1,10 @@
 cask "wireshark-chmodbpf" do
+  arch arm: "Arm", intel: "Intel"
+  livecheck_arch = on_arch_conditional arm: "arm", intel: "x86-"
+
   version "4.0.4"
-  sha256 "86f14b2b839a9d2793ce9c0531ddab70e31475541fa9744f26ac8b1227dd29cc"
+  sha256 arm:   "6434479defbb2edd6457b9f395c119799310e4675f9fe1145df40c1266bda5e4",
+         intel: "86f14b2b839a9d2793ce9c0531ddab70e31475541fa9744f26ac8b1227dd29cc"
 
   url "https://www.wireshark.org/download/osx/Wireshark%20#{version}%20Intel%2064.dmg"
   name "Wireshark-ChmodBPF"
@@ -8,8 +12,7 @@ cask "wireshark-chmodbpf" do
   homepage "https://www.wireshark.org/"
 
   livecheck do
-    url "https://www.wireshark.org/update/0/Wireshark/0.0.0/macOS/x86-64/en-US/stable.xml"
-    strategy :sparkle
+    cask "wireshark"
   end
 
   conflicts_with cask: "wireshark"
