@@ -29,4 +29,6 @@ cask "texworks" do
   depends_on macos: ">= :catalina"
 
   app "TeXworks.app"
+
+  zap trash: "~/Library/Preferences/org.tug.TeXworks.plist"
 end
