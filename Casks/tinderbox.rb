@@ -15,4 +15,13 @@ cask "tinderbox" do
   depends_on macos: ">= :high_sierra"
 
   app "Tinderbox #{version.major}.app"
+
+  zap trash: [
+    "~/Library/Application Support/Tinderbox",
+    "~/Library/Caches/com.eastgate.Tinderbox-9",
+    "~/Library/Preferences/Tinderbox™ Preferences",
+    "~/Library/Preferences/com.eastgate.Tinderbox-9.plist",
+    "~/Library/Saved Application State/com.eastgate.Tinderbox-9.savedState",
+    "~/Library/WebKit/com.eastgate.Tinderbox-9",
+  ]
 end
