@@ -1,8 +1,8 @@
 cask "p4v" do
-  version "2022.3,2408367"
-  sha256 "e991594742d9f767e75064f48010077b5248a7971fe1b6c12ea9aed244a696ef"
+  version "2023.1,2411289"
+  sha256 "fa583b742e193deb7c34f82351764afde8c647d85085a65309ad6d326f917adc"
 
-  url "https://cdist2.perforce.com/perforce/r#{version.major[-2..]}.#{version.minor}/bin.macosx1015x86_64/P4V.dmg"
+  url "https://www.perforce.com/downloads/perforce/r#{version.major[-2..]}.#{version.minor}/bin.macosx12u/P4V.dmg"
   name "Perforce Helix Visual Client"
   name "P4Merge"
   name "P4V"
