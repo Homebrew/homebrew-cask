@@ -1,5 +1,5 @@
 cask "netxms-console" do
-  arch arm: "-aarch64", intel: ""
+  arch arm: "-aarch64"
 
   version "4.3.1"
   sha256 arm:   "7ba749db7a79ed891a21a5cd41393e8887e49c5ee29a993e815a1492d31401a5",
