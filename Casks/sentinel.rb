@@ -16,4 +16,6 @@ cask "sentinel" do
   end
 
   binary "sentinel"
+
+  # No zap stanza required
 end
