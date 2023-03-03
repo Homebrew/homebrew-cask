@@ -1,14 +1,14 @@
-cask "tastyworks" do
-  arch arm: "-aarch64", intel: ""
+cask "tastytrade" do
+  arch arm: "-aarch64"
 
-  version "1.26.1"
-  sha256 arm:   "2b5944cbfa2d4f6e52ffdf06c1c46bb208b4504fb69afe2007e8aaa1cc3a2d0e",
-         intel: "6860c20aadb5a3c203260c5a1616cfec76849100b68fa6f26dd94e5edc24484b"
+  version "2.0.0"
+  sha256 arm:   "2737f202880bc91c68e9094619d75b4d7c7d6f38e38b4d95af6ac9a46d3bfb96",
+         intel: "0932f6f2e64528b2800a5358f583f07b808836c8d3034d3745bc9b1220f3c75e"
 
-  url "https://download.tastyworks.com/desktop-#{version.major}.x.x/#{version}/tastyworks-#{version}#{arch}.dmg"
-  name "tastyworks"
-  desc "Desktop trading platform for the tastyworks brokerage"
-  homepage "https://tastyworks.com/"
+  url "https://download.tastytrade.com/desktop-#{version.major}.x.x/#{version}/tastytrade-#{version}#{arch}.dmg"
+  name "tastytrade"
+  desc "Desktop trading platform"
+  homepage "https://tastytrade.com/technology/"
 
   livecheck do
     skip "No version information available"
@@ -16,10 +16,10 @@ cask "tastyworks" do
 
   auto_updates true
 
-  app "tastyworks.app"
+  app "tastytrade.app"
 
   zap trash: [
-    "~/Library/Application Support/tastyworks",
-    "~/Library/Saved Application State/com.tastyworks.desktop.savedState",
+    "~/Library/Application Support/tastytrade",
+    "~/Library/Saved Application State/com.tastytrade.desktop.savedState",
   ]
 end
