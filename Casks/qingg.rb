@@ -10,7 +10,7 @@ cask "qingg" do
 
   livecheck do
     url "https://qingg.im/sparkle/appcast.php"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
