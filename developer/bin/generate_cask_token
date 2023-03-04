@@ -370,7 +370,7 @@ def warnings
 end
 
 def report
-  puts "Proposed Simplified App name: #{simplified_app_name}" if $debug
+  puts "Proposed Simplified App name: #{simplified_app_name}" if $debug # rubocop:disable Style/GlobalVars
   puts "Proposed token:               #{cask_token}"
   puts "Proposed file name:           #{cask_file_name}"
   puts "Cask Header Line:             cask \"#{cask_token}\" do"
@@ -402,7 +402,7 @@ if /^-+h(elp)?$/i.match?(ARGV.first)
 end
 
 if /^-+debug?$/i.match?(ARGV.first)
-  $debug = 1
+  $debug = 1 # rubocop:disable Style/GlobalVars
   ARGV.shift
 end
 
