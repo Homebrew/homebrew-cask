@@ -30,6 +30,7 @@ cask "lingon-x" do
     regex(%r{<key>version</key>\s*\n\s*<string>(\d+(?:\.\d+)+)</string>}i)
   end
 
+  auto_updates true
   depends_on macos: ">= :high_sierra"
 
   app "Lingon X.app"
