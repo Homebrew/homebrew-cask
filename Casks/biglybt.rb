@@ -11,6 +11,7 @@ cask "biglybt" do
   desc "Bittorrent client based on the Azureus open source project"
   homepage "https://www.biglybt.com/"
 
+  auto_updates true
   depends_on macos: ">= :el_capitan"
 
   preflight do
