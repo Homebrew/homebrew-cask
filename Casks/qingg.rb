@@ -2,7 +2,7 @@ cask "qingg" do
   version "2.13"
   sha256 "03cfd70f401a4e724daf487b7af9c8ee0aa9cde2aa2d27ba3caf126107d43019"
 
-  url "https://qingg.im/download/Qingg-#{version.csv.first}.dmg"
+  url "https://qingg.im/download/Qingg-#{version}.dmg"
   name "QinggIM"
   name "清歌输入法"
   desc "Wubi input method"
