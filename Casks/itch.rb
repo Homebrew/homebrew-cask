@@ -9,8 +9,8 @@ cask "itch" do
   homepage "https://itch.io/app"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://broth.itch.ovh/itch/darwin-amd64"
+    regex(%r{href=.*?/v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
   auto_updates true
