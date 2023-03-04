@@ -22,7 +22,7 @@ cask "vmware-fusion" do
     "homebrew/cask-versions/vmware-fusion10",
     "homebrew/cask-versions/vmware-fusion11",
     "homebrew/cask-versions/vmware-fusion12",
-    "homebrew/cask-versions/vmware-fusion-tech-preview"
+    "homebrew/cask-versions/vmware-fusion-tech-preview",
   ]
   depends_on macos: ">= :monterey"
 
