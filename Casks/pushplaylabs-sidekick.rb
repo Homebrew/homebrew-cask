@@ -7,7 +7,7 @@ cask "pushplaylabs-sidekick" do
     sha256 "305a50310fce321a4f2af338e8b6c1895e2e086759a3e838fbf4f08797b7c219"
   end
   on_intel do
-    version "108.37.1.30134,00627b5"
+    version "108.37.4.30626,94c412a"
     sha256 "0e543f89316d49d719248160cbb50a3c75e9b94faa64a3f2f7544207c7fa0f23"
   end
 
