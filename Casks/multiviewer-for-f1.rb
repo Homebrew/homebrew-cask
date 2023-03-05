@@ -17,10 +17,14 @@ cask "multiviewer-for-f1" do
 
   livecheck do
     url "https://api.multiviewer.dev/api/v1/releases/latest"
-    regex(/v?(\d+(?:\.\d+)+)/i)
-    strategy :json do |json|
-      json["downloads"].select { |item| (item["platform"] == "darwin_#{arch}") && (item["type"] == "download") }
-                       .map { |item| "#{item["url"][regex, 1]},#{item["id"]}" }
+    regex(%r{/([^/]+?)/MultiViewer[._-]for[._-]F1[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg}i)
+    strategy :json do |json, regex|
+      json["downloads"].map do |item|
+        match = item["url"]&.match(regex)
+        next if match.blank?
+
+        "#{match[2]},#{match[1]}"
+      end
     end
   end
 
