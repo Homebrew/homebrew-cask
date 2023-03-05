@@ -9,7 +9,7 @@ cask "vmware-fusion" do
 
   livecheck do
     url "https://www.vmware.com/go/getfusion"
-    regex(%r{VMWare[-_.]Fusion[-_.](\d+(?:\.\d+)+)[-_.](\d+)}i)
+    regex(/VMWare[-_.]Fusion[-_.](\d+(?:\.\d+)+)[-_.](\d+)/i)
     strategy :header_match do |headers, regex|
       next if headers["location"].blank?
 
