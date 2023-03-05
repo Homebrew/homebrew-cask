@@ -13,4 +13,10 @@ cask "mixxx" do
   end
 
   app "Mixxx.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/org.mixxx.mixxx",
+    "~/Library/Containers/org.mixxx.mixxx",
+    "~/Music/Mixxx",
+  ]
 end
