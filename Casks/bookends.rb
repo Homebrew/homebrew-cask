@@ -15,4 +15,11 @@ cask "bookends" do
   depends_on macos: ">= :high_sierra"
 
   app "Bookends.app"
+
+  zap trash: [
+    "~/Library/Application Support/Bookends",
+    "~/Library/Caches/com.sonnysoftware.bookends2",
+    "~/Library/HTTPStorages/com.sonnysoftware.bookends2",
+    "~/Library/Saved Application State/com.sonnysoftware.bookends2.savedState",
+  ]
 end
