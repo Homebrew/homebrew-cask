@@ -8,10 +8,13 @@ cask "vmware-fusion" do
   homepage "https://www.vmware.com/products/fusion.html"
 
   livecheck do
-    url "https://softwareupdate.vmware.com/cds/vmw-desktop/fusion.xml"
-    regex(%r{fusion/(\d+(?:\.\d+)+)/(\d+)/x86}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+    url "https://www.vmware.com/go/getfusion"
+    regex(%r{VMWare[-_.]Fusion[-_.](\d+(?:\.\d+)+)[-_.](\d+)}i)
+    strategy :header_match do |headers, regex|
+      next if headers["location"].blank?
+
+      match = headers["location"].match(regex)
+      "#{match[1]},#{match[2]}"
     end
   end
 
