@@ -19,7 +19,7 @@ cask "mfiles" do
 
   app "爱传送.app"
 
-  zap trash: [
-    "~/Library/Preferences/com.windtune.itransfer.plist",
-  ]
+  uninstall signal: ["TERM", "com.windtune.itransfer"]
+
+  zap trash: "~/Library/Preferences/com.windtune.itransfer.plist"
 end
