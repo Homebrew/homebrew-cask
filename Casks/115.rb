@@ -23,5 +23,7 @@ cask "115" do
   zap trash: [
     "~/Library/Application Support/115",
     "~/Library/Application Support/115DocViewer",
+    "~/Library/Saved Application State/org.115pc.115Desktop.savedState",
+    "~/Library/Saved Application State/org.115pc.115DocViewer.savedState",
   ]
 end
