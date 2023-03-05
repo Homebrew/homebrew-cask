@@ -53,6 +53,12 @@ jobs:
         with:
           test-bot: false
 
+      - name: Enable debug mode
+        run: |
+          echo 'HOMEBREW_DEBUG=1' >> "${GITHUB_ENV}"
+          echo 'HOMEBREW_VERBOSE=1' >> "${GITHUB_ENV}"
+        if: runner.debug
+
       - name: Check out Pull Request
         uses: actions/checkout@v3
         with:
