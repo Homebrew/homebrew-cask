@@ -6,13 +6,16 @@ cask "115browser" do
   name "115Browser"
   name "115浏览器"
   desc "Web browser"
-  homepage "https://pc.115.com/browser.html"
+  homepage "https://pc.115.com/browser.html#mac"
 
   livecheck do
-    url "https://appversion.115.com/1/web/1.0/api/chrome?callback=get_version"
-    regex(/115br_(\d+(\.\d+)+).dmg/i)
+    url "https://appversion.115.com/1/web/1.0/api/chrome"
+    strategy :json do |json|
+      json["data"]["mac"]["version_code"]
+    end
   end
 
+  auto_updates true
   depends_on macos: ">= :sierra"
 
   app "115Browser.app"
