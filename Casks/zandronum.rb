@@ -1,6 +1,6 @@
 cask "zandronum" do
   version "3.1"
-  sha256 "586dccf52bfb27a6fc019dea99fcd1cce203b85e14ca908268c33a95ae6947ff"
+  sha256 "2adcc9eca3ed7119bb8c28de371318b99ae691a0412f3fcacd4f577955d39933"
 
   url "https://zandronum.com/downloads/zandronum#{version}-macosx.dmg"
   name "Zandronum"
@@ -9,7 +9,7 @@ cask "zandronum" do
 
   livecheck do
     url "https://zandronum.com/downloads/"
-    regex(/href=.*?zandronum[._-]?v?(\d+(?:\.\d+)+)-macosx\.dmg/i)
+    regex(/href=.*?zandronum[._-]?v?(\d+(?:\.\d+)+)[._-]macosx\.dmg/i)
   end
 
   app "Zandronum.app"
