@@ -9,7 +9,7 @@ cask "zandronum" do
 
   livecheck do
     url "https://zandronum.com/downloads/"
-    regex(/href=.*?zandronum[._-]?v?(\d+(?:\.\d+)+)-macosx\.dmg/i)
+    regex(/href=.*?zandronum[._-]?v?(\d+(?:\.\d+)+)[._-]macosx\.dmg/i)
   end
 
   app "Zandronum.app"
