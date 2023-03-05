@@ -1,5 +1,5 @@
 cask "obs-advanced-scene-switcher" do
-  arch arm: "arm64", intel: "universal"
+  arch arm: "arm64", intel: "x86_64"
 
   version "1.20.5"
   sha256 arm:   "086227b8c7a4fbbcbe16bc7926bbaeaf43a93777afffe1193114349ab0c7fe5c",
