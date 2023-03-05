@@ -1,6 +1,6 @@
 cask "swift-quit" do
-  version "1.3"
-  sha256 "4809143dc46da3b4f968eb58f354250a821afff4611e8c807717bd039c8013e7"
+  version "1.4"
+  sha256 "90b82027e10fb1692ca848282ac761c32f3120c4d85663c0c691c01cc46b01c7"
 
   url "https://github.com/onebadidea/swiftquit/releases/download/v#{version}/Swift.Quit.zip",
       verified: "github.com/onebadidea/swiftquit/"
