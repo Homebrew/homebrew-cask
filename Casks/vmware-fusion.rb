@@ -14,7 +14,7 @@ cask "vmware-fusion" do
       next if headers["location"].blank?
 
       match = headers["location"].match(regex)
-      "#{match[1]},#{match[2]}"
+      "#{match[1]},#{match[2]}" if match
     end
   end
 
