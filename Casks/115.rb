@@ -20,10 +20,16 @@ cask "115" do
 
   app "115电脑版.app"
 
+  uninstall quit: "org.115pc.115Desktop"
+
   zap trash: [
     "~/Library/Application Support/115",
     "~/Library/Application Support/115DocViewer",
+    "~/Library/Application Support/115Player",
     "~/Library/Saved Application State/org.115pc.115Desktop.savedState",
     "~/Library/Saved Application State/org.115pc.115DocViewer.savedState",
+    "~/Library/Saved Application State/org.115pc.115Music.savedState",
+    "~/Library/Saved Application State/org.115pc.115Photo.savedState",
+    "~/Library/Saved Application State/org.115pc.115Player.savedState",
   ]
 end
