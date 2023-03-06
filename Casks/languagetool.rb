@@ -1,15 +1,15 @@
 cask "languagetool" do
-  version "1.2,41"
-  sha256 "2cb20dee32a2caea441b34fcf8d4595ddbc6b66ed0fc6311d575a4591b09cc73"
+  version "1.2.1"
+  sha256 "8852eee2f40f85586417035d89a68d3ed3ec459131f1cb38839d6d4d7bd80639"
 
-  url "https://languagetool.org/download/mac-app/LanguageToolDesktop-#{version.csv.first}.dmg"
+  url "https://languagetool.org/download/mac-app/LanguageToolDesktop-#{version}.dmg"
   name "LanguageTool for Desktop"
   desc "Grammar, spelling and style suggestions in all the writing apps"
   homepage "https://languagetool.org/"
 
   livecheck do
     url "https://languagetool.org/download/mac-app/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   depends_on macos: ">= :big_sur"
