@@ -1,8 +1,8 @@
 cask "battery" do
   version "1.1.1"
-  sha256 "77dc7806ff483d77b420a30b981ad6753870faa1"
+  sha256 "8bff5e7b35f9c20eca7deb6fd178c4606471edde03a55e5e28e4ea38deb81b65"
 
-  url "https://github.com/actuallymentor/battery/releases/download/v#{version}/battery-#{version}-arm64.dmg"
+  url "https://github.com/actuallymentor/battery/releases/download/v#{version}/battery-#{version}-mac-arm64.dmg"
   name "Battery"
   desc "CLI for managing the battery charging status"
   homepage "https://github.com/actuallymentor/battery/"
