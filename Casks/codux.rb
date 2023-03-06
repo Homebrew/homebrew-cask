@@ -2,8 +2,8 @@ cask "codux" do
   arch arm: "arm64", intel: "x64"
 
   on_arm do
-    version "14.2.4,e855c7_bd824fbb49d14b57b06330810e9f024d"
-    sha256 "bb725f2433c6070f6f38ba3435ec41aa6f6dd147740bda185afa0fae7d735bc4"
+    version "15.0.1,69fb62_41cf0b5ce8924a39b668e4a8ac5b0d2b"
+    sha256 "3eb53782b4927fb3a53ccc0a7060cf6278fd72f53eba981ab1adbd1b8eee584e"
   end
   on_intel do
     version "14.2.4,e855c7_c89f5bba780e4d4197eb755459920b86"
