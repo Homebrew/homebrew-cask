@@ -1,11 +1,11 @@
 cask "deeper" do
   sha256 :no_check
 
-  on_el_capitan :or_older do
+  on_el_capitan do
     version "2.1.4"
     url "https://www.titanium-software.fr/download/1011/Deeper.dmg"
 
-    depends_on macos: :el_captain
+    depends_on macos: :el_capitan
   end
   on_sierra do
     version "2.2.3"
@@ -43,7 +43,7 @@ cask "deeper" do
 
     depends_on macos: :monterey
   end
-  on_ventura :or_newer do
+  on_ventura do
     version "2.8.8"
     url "https://www.titanium-software.fr/download/13/Deeper.dmg"
 
