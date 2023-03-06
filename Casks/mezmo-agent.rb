@@ -11,7 +11,7 @@ cask "mezmo-agent" do
     url "https://logdna-agent-build-bin.s3.amazonaws.com/#{version}/logdna-agent-#{version}-#{arch}.pkg",
         verified: "https://logdna-agent-build-bin.s3.amazonaws.com/"
     name "Mezmo Agent"
-    desc "Agent streams from log files to your Mezmo account"
+    desc "Streams from log files to your Mezmo account"
     homepage "https://mezmo.com/"
 
     livecheck do
