@@ -9,7 +9,7 @@ cask "gamma-control" do
 
   livecheck do
     url :homepage
-    regex(/href=.*?gamma-control[._-]v?(\d+(?:\.\d+)+)\.zip/i)
+    regex(/href=.*?gamma[._-]control[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
   app "Gamma Control.app"
