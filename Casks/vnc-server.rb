@@ -2,7 +2,7 @@ cask "vnc-server" do
   version "7.0.1"
   sha256 "6e11b777248fce80246f218db5075ffa5f5ca78cd7b36e04277d1c10d236697c"
 
-  url "https://www.realvnc.com/download/file/vnc.files/VNC-Server-#{version}-MacOSX-universal.pkg"
+  url "https://downloads.realvnc.com/download/file/vnc.files/VNC-Server-#{version}-MacOSX-universal.pkg"
   name "Real VNC Server"
   desc "Remote desktop server application"
   homepage "https://www.realvnc.com/"
