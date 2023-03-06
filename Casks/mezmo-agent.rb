@@ -23,6 +23,10 @@ cask "mezmo-agent" do
     uninstall pkgutil:   "com.logdna.logdna-agent",
               launchctl: "com.logdna.logdna-agentd"
 
+    zap trash: [
+      "~/usr/local/bin/logdna-agent",
+    ]
+
     caveats <<~EOS
       To always run logdna-agent in the background, use the command:
       sudo launchctl load -w /Library/LaunchDaemons/com.logdna.logdna-agent.plist
