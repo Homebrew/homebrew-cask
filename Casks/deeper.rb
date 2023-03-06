@@ -1,38 +1,45 @@
 cask "deeper" do
   on_el_capitan :or_older do
     version "2.1.4"
+    url "https://www.titanium-software.fr/download/1011/Deeper.dmg"
     sha256 "3dc9607644872da14a0b6f20722e36d0cb6cb7ab2528f86de1cf059086cf2848"
   end
   on_sierra do
     version "2.2.3"
+    url "https://www.titanium-software.fr/download/1012/Deeper.dmg"
     sha256 "33fee21b65279e4459b6469dbc68f0c6df91663ed26d6b62042b21883efda0ed"
   end
   on_high_sierra do
     version "2.3.3"
+    url "https://www.titanium-software.fr/download/1013/Deeper.dmg"
     sha256 "08ac5820428bcce74548786e8fda947edfaa31cf4a822d5c443835e73a11dd3b"
   end
   on_mojave do
     version "2.4.8"
+    url "https://www.titanium-software.fr/download/1014/Deeper.dmg"
     sha256 "13dbe7bd680963aca91c40a4fd1e16648b63538f3213692db22dd91a3e3f2c89"
   end
   on_catalina do
     version "2.6.0"
+    url "https://www.titanium-software.fr/download/1015/Deeper.dmg"
     sha256 "302c91c7995364bd02b71613ed440c1480d905637ba02da661cc4e53402643b3"
   end
   on_big_sur do
     version "2.7.1"
+    url "https://www.titanium-software.fr/download/11/Deeper.dmg"
     sha256 "e4de32606e76da69805cf3288821117efe5fb4c6e2fa6759e41dd25c6173dc5c"
   end
   on_monterey do
     version "2.8.0"
+    url "https://www.titanium-software.fr/download/12/Deeper.dmg"
     sha256 "d7cff6143a6689e332ae68b5495ee1d62c65be2040393daf05f400eeb17ecba8"
   end
   on_ventura :or_newer do
     version "2.8.8"
+    url "https://www.titanium-software.fr/download/13/Deeper.dmg"
     sha256 "e9f65bec5c085134870d0b7f15fc691228b32ae4f7026ef10a877562b66fc036"
   end
 
-  url "https://www.titanium-software.fr/download/#{MacOS.version.to_s.delete(".")}/Deeper.dmg"
   name "Deeper"
   desc "Tool to enable and disable hidden functions of Finder and other apps"
   homepage "https://www.titanium-software.fr/en/deeper.html"
