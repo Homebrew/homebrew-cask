@@ -16,4 +16,12 @@ cask "4k-youtube-to-mp3" do
   depends_on macos: ">= :high_sierra"
 
   app "4K YouTube to MP3.app"
+
+  zap trash: [
+    "~/Library/Application Support/4kdownload.com",
+    "~/Library/Preferences/com.4kdownload.4K Video to MP3.plist",
+    "~/Library/Preferences/com.4kdownload.4K YouTube to MP3.plist",
+    "~/Library/Preferences/com.4kdownload.ApplicationDirectories.plist",
+    "~/Library/Saved Application State/com.openmedia.4kyoutubetomp3.savedState",
+  ]
 end
