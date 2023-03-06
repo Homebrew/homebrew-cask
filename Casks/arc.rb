@@ -9,7 +9,7 @@ cask "arc" do
 
   livecheck do
     url "https://releases.arc.net/updates.xml"
-    regex(%r{/Arc-(\d+(?:\.\d+)+)-(\d+).zip}i)
+    regex(%r{/Arc[._-]v?(\d+(?:\.\d+)+)[._-](\d+).zip}i)
     strategy :sparkle do |item, regex|
       match = item.url.match(regex)
       next if match.blank?
@@ -26,8 +26,8 @@ cask "arc" do
   uninstall quit: "company.thebrowser.Browser"
 
   zap trash: [
-    "~/Library/Caches/company.thebrowser.Browser",
     "~/Library/Caches/CloudKit/company.thebrowser.Browser",
+    "~/Library/Caches/company.thebrowser.Browser",
     "~/Library/HTTPStorages/company.thebrowser.Browser",
     "~/Library/HTTPStorages/company.thebrowser.Browser.binarycookies",
     "~/Library/Preferences/company.thebrowser.Browser.plist",
