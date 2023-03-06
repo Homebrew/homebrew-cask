@@ -13,4 +13,12 @@ cask "chatwork" do
   end
 
   app "ChatWork.app"
+
+  zap trash: [
+    "~/Library/Application Support/Chatwork",
+    "~/Library/Caches/com.electron.chatwork",
+    "~/Library/Caches/com.electron.chatwork.ShipIt",
+    "~/Library/HTTPStorages/com.electron.chatwork",
+    "~/Library/Preferences/com.electron.chatwork.plist",
+  ]
 end
