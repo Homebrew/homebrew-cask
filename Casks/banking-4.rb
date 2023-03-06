@@ -21,4 +21,9 @@ cask "banking-4" do
   pkg "MacBanking4.pkg"
 
   uninstall pkgutil: "com.subsembly.Banking4"
+
+  zap trash: [
+    "~/Library/Group Containers/*.com.Subsembly.Banking4XData",
+    "~/Library/Preferences/com.subsembly.Banking4.plist",
+  ]
 end
