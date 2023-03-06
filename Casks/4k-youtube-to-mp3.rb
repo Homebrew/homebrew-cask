@@ -17,11 +17,11 @@ cask "4k-youtube-to-mp3" do
 
   app "4K YouTube to MP3.app"
 
-zap trash: [
+  zap trash: [
     "~/Library/Application Support/4kdownload.com",
     "~/Library/Preferences/com.4kdownload.4K Video to MP3.plist",
     "~/Library/Preferences/com.4kdownload.4K YouTube to MP3.plist",
     "~/Library/Preferences/com.4kdownload.ApplicationDirectories.plist",
-    "~/Library/Saved Application State/com.openmedia.4kyoutubetomp3.savedState"
+    "~/Library/Saved Application State/com.openmedia.4kyoutubetomp3.savedState",
   ]
 end
