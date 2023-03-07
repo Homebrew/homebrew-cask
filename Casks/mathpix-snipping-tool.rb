@@ -20,8 +20,8 @@ cask "mathpix-snipping-tool" do
   zap trash: [
     "~/Library/Application Support/com.mathpix.snipping-tool-noappstore",
     "~/Library/Caches/com.crashlytics.data/com.mathpix.snipping-tool-noappstore",
-    "~/Library/Caches/io.fabric.sdk.mac.data/com.mathpix.snipping-tool-noappstore",
     "~/Library/Caches/com.mathpix.snipping-tool-noappstore",
+    "~/Library/Caches/io.fabric.sdk.mac.data/com.mathpix.snipping-tool-noappstore",
     "~/Library/Preferences/com.mathpix.snipping-tool-noappstore.plist",
   ]
 end
