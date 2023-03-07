@@ -17,4 +17,6 @@ cask "tidelift" do
   postflight do
     set_permissions "#{staged_path}/tidelift", "+x"
   end
+
+  # No zap stanza required
 end
