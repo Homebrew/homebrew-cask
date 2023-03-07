@@ -29,4 +29,8 @@ cask "simply-fortran" do
   homepage "https://simplyfortran.com/"
 
   app "Simply Fortran.app"
+
+  zap trash: [
+    "~/Library/Saved Application State/com.approximatrix.simplyfortran.savedState",
+  ]
 end
