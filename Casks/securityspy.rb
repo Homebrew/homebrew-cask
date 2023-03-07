@@ -18,7 +18,7 @@ cask "securityspy" do
 
   zap trash: [
     "~/Library/Application Support/SecuritySpy",
-    "~/Library/Preferences/SecuritySpy Preferences v81",
+    "~/Library/Preferences/SecuritySpy Preferences*",
     "~/Library/Saved Application State/com.bensoftware.SecuritySpy.savedState",
     "~/SecuritySpy",
   ]
