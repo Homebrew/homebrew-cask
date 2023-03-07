@@ -21,4 +21,8 @@ cask "softmaker-freeoffice" do
   pkg "softmaker-freeoffice-#{version.csv.first}.pkg"
 
   uninstall pkgutil: "com.SoftMaker.FreeOffice#{version.csv.first}"
+
+  zap trash: [
+    "~/Library/Saved Application State/SoftMaker*",
+  ]
 end
