@@ -1,5 +1,5 @@
 cask "raycast" do
-  version "1.48.6"
+  version "1.48.7"
   sha256 :no_check
 
   url "https://api.raycast.app/v2/download"
