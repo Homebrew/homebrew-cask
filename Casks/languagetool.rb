@@ -16,6 +16,8 @@ cask "languagetool" do
 
   app "LanguageTool for Desktop.app"
 
+  uninstall quit: "org.languagetool.desktop"
+
   zap trash: [
     "~/Library/Application Support/LanguageTool for Desktop",
     "~/Library/Caches/org.languagetool.desktop",
