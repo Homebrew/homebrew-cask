@@ -1,15 +1,19 @@
 cask "webull" do
-  version "6.9.0"
-  sha256 "788907cffc24106430e8fd83eeb227dba8e649919e5bd95e2795ded1be068ff7"
+  arch arm: "global_arm64", intel: "global_x64"
+  livecheck_arch = on_arch_conditional arm: "qt_m1_global", intel: "qt_mac_global"
 
-  url "https://u1sweb.webullfintech.com/us/Webull%20Desktop_#{version}_global_universalsigned.dmg",
+  version "6.9.1"
+  sha256 arm:   "e9e4061e26b5ec52f1e2f9eaa7683d4a314475f8aa4d99e50efd3dd71c01658f",
+         intel: "7cbc30f31508d95832e4706fec2c1681c68af994480102226285316aa80db632"
+
+  url "https://u1sweb.webullfintech.com/us/Webull%20Desktop_#{version}_#{arch}signed.dmg",
       verified: "u1sweb.webullfintech.com/us/"
   name "Webull"
   desc "Desktop client for Webull Financial LLC"
   homepage "https://webull.com/"
 
   livecheck do
-    url "https://infoapi.webullfintech.com/api/operation/appver/last?platform=qt_mac_global&osv=10.15"
+    url "https://infoapi.webullfintech.com/api/operation/appver/last?platform=#{livecheck_arch}&osv=10.15"
     strategy :page_match
     regex(/Webull%20Desktop[._-](\d+(?:\.\d+)+).*?.dmg/i)
   end
