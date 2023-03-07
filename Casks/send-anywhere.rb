@@ -13,4 +13,10 @@ cask "send-anywhere" do
   end
 
   app "Send Anywhere.app"
+
+  zap trash: [
+    "~/Library/Application Support/Send Anywhere",
+    "~/Library/Logs/Send Anywhere",
+    "~/Library/Preferences/com.estmob.osx.sendanywhere.plist",
+  ]
 end
