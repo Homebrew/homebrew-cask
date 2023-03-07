@@ -25,6 +25,6 @@ cask "segger-embedded-studio-for-arm" do
   ]
 
   zap trash: [
-    "/Applications/SEGGER Embedded Studio for ARM 7.10a/",
+    "/Applications/SEGGER Embedded Studio for ARM*",
   ]
 end
