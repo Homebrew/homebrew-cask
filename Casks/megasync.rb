@@ -21,6 +21,7 @@ cask "megasync" do
 
   uninstall launchctl:  "mega.mac.megaupdater",
             login_item: "MEGAsync"
+            quit: "mega.mac"
 
   zap trash: [
     "~/Library/Application Scripts/mega.mac.MEGAShellExtFinder",
