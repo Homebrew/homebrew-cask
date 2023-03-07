@@ -1,7 +1,7 @@
 cask "perimeter81" do
   # NOTE: "81" is not a version number, but an intrinsic part of the product name
-  version "8.0.4.116"
-  sha256 "48be8a6437053f1ae04273877a2e880676208b88a40045f4455485ecd5e76655"
+  version "9.0.1.9"
+  sha256 "6d2a58c53e29bc6aadd56425f820e9ca323cea995fff3a62d03e5e2bf8a1e5ad"
 
   url "https://static.perimeter81.com/agents/mac/Perimeter81_#{version}.pkg"
   name "Perimeter 81"
@@ -9,7 +9,8 @@ cask "perimeter81" do
   homepage "https://perimeter81.com/"
 
   livecheck do
-    skip "No version information available"
+    url "https://support.perimeter81.com/v1/docs/en/downloading-the-agent/"
+    regex(/href=.*?Perimeter81_(.*)\.pkg/i)
   end
 
   pkg "Perimeter81_#{version}.pkg"
