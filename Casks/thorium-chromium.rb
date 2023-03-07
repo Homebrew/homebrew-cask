@@ -1,4 +1,4 @@
-cask "thorium-chromium" do
+cask "alex313031-thorium" do
   arch arm: "arm64", intel: "x64"
 
   version "M109.0.5414.120-2"
