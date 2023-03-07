@@ -1,6 +1,6 @@
 cask "tigervnc-viewer" do
-  version "1.13.0"
-  sha256 "14e84c37c13d1068cbf69a57f04196c0a276c5f4f83c7a44a2cf7197228f50eb"
+  version "1.13.1"
+  sha256 "d823197320e6903458f9039cb9d4dbf5d739ef7f9c18ccabfb68bc3fffe57b9d"
 
   url "https://downloads.sourceforge.net/tigervnc/TigerVNC-#{version}.dmg",
       verified: "downloads.sourceforge.net/tigervnc/"
