@@ -17,16 +17,16 @@ cask "fantastical" do
 
   app "Fantastical.app"
 
-  uninstall launchctl: "com.flexibits.fantastical#{version.major}.mac.launcher",
+  uninstall launchctl: "com.flexibits.fantastical*.mac.launcher",
             quit:      [
-              "85C27NK92C.com.flexibits.fantastical#{version.major}.mac.helper",
-              "com.flexibits.fantastical#{version.major}.mac",
+              "*.com.flexibits.fantastical*.mac.helper",
+              "com.flexibits.fantastical*.mac",
             ]
 
   zap trash: [
-    "~/Library/Application Scripts/com.flexibits.fantastical#{version.major}.*",
+    "~/Library/Application Scripts/com.flexibits.fantastical*",
     "~/Library/Application Scripts/com.flexibits.fbcaldav.*",
-    "~/Library/Containers/com.flexibits.fantastical#{version.major}.*",
+    "~/Library/Containers/com.flexibits.fantastical*",
     "~/Library/Containers/com.flexibits.fbcaldav.*",
     "~/Library/Preferences/com.flexibits.fantastical.plist",
   ]
