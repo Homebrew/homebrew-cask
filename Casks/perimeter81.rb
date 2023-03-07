@@ -10,7 +10,7 @@ cask "perimeter81" do
 
   livecheck do
     url "https://support.perimeter81.com/v1/docs/en/downloading-the-agent/"
-    regex(/href=.*?Perimeter81_(.*)\.pkg/i)
+    regex(/href=.*?Perimeter81[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
   pkg "Perimeter81_#{version}.pkg"
@@ -18,11 +18,11 @@ cask "perimeter81" do
   uninstall pkgutil:   "com.safervpn.osx.smb",
             signal:    ["TERM", "com.safervpn.osx.smb"],
             launchctl: [
-              "system/com.perimeter81d",
+              "com.perimeter81.osx.HelperTool",
+              "com.perimeter81.Perimeter81",
               "com.perimeter81d",
               "com.perimeter81d.app",
-              "com.perimeter81.Perimeter81",
-              "com.perimeter81.osx.HelperTool",
+              "system/com.perimeter81d",
             ],
             delete:    [
               "/Library/PrivilegedHelperTools/com.perimeter81.osx.HelperTool",
@@ -31,8 +31,8 @@ cask "perimeter81" do
 
   zap trash: [
     "~/Library/Application Support/com.safervpn.osx.smb",
-    "~/Library/Caches/Perimeter 81",
     "~/Library/Caches/com.safervpn.osx.smb",
+    "~/Library/Caches/Perimeter 81",
     "~/Library/Preferences/com.safervpn.osx.smb.plist",
     "~/Library/Saved Application State/com.safervpn.osx.smb.savedState",
   ]
