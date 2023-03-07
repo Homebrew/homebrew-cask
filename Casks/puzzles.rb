@@ -1,5 +1,5 @@
 cask "puzzles" do
-  version "20230302.c0f715f"
+  version "20230306.0156900"
   sha256 :no_check
 
   url "https://www.chiark.greenend.org.uk/~sgtatham/puzzles/Puzzles.dmg"
@@ -13,4 +13,9 @@ cask "puzzles" do
   end
 
   app "Puzzles.app"
+
+  zap trash: [
+    "~/Library/Caches/com.apple.helpd/Generated/Puzzles Help*",
+    "~/Library/Saved Application State/uk.org.greenend.chiark.sgtatham.puzzles.savedState",
+  ]
 end
