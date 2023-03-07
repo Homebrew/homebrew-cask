@@ -1,5 +1,5 @@
 cask "thorium-chromium" do
-  arch arm: "arm64", intel: "x86-64"
+  arch arm: "arm64", intel: "x64"
 
   version "M109.0.5414.120-2"
   sha256 arm:   "1d49f062c8806b282aadec0504bc7b756a2805c82cae41e675206acfae198610",
