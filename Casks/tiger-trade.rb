@@ -22,4 +22,9 @@ cask "tiger-trade" do
   depends_on macos: ">= :sierra"
 
   app "Tiger Trade.app"
+
+  zap trash: [
+    "~/Library/Containers/com.itiger.TigerTrade-Mac",
+    "~/Library/Application Scripts/com.itiger.TigerTrade-Mac",
+  ]
 end
