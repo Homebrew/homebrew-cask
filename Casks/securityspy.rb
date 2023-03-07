@@ -15,4 +15,11 @@ cask "securityspy" do
   depends_on macos: ">= :high_sierra"
 
   app "SecuritySpy.app"
+
+  zap trash: [
+    "~/Library/Application Support/SecuritySpy",
+    "~/Library/Preferences/SecuritySpy Preferences v81",
+    "~/Library/Saved Application State/com.bensoftware.SecuritySpy.savedState",
+    "~/SecuritySpy",
+  ]
 end
