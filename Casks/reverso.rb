@@ -19,14 +19,10 @@ cask "reverso" do
   uninstall quit: "com.softissimo.ReversoContext.macosapp"
 
   zap trash: [
+    "~/Library/Application Scripts/com.softissimo.ReversoContext.*",
     "~/Library/Application Scripts/group.com.softissimo.ReversoExchange",
-    "~/Library/Application Scripts/com.softissimo.ReversoContext.macosapp.Reverso-Translate-in-Context",
-    "~/Library/Application Scripts/com.softissimo.ReversoContext.Auto-Launcher-Reverso",
-    "~/Library/Application Scripts/com.softissimo.ReversoContext.macosapp.helper",
     "~/Library/Caches/com.softissimo.ReversoContext.macosapp",
-    "~/Library/Containers/com.softissimo.ReversoContext.macosapp.Reverso-Translate-in-Context",
-    "~/Library/Containers/com.softissimo.ReversoContext.Auto-Launcher-Reverso",
-    "~/Library/Containers/com.softissimo.ReversoContext.macosapp.helper",
+    "~/Library/Containers/com.softissimo.ReversoContext.*",
     "~/Library/Group Containers/group.com.softissimo.ReversoExchange",
     "~/Library/Preferences/com.softissimo.ReversoContext.macosapp.plist",
   ]
