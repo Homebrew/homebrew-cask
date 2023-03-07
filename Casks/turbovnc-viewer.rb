@@ -18,4 +18,6 @@ cask "turbovnc-viewer" do
               executable: "/opt/TurboVNC/bin/uninstall",
               sudo:       true,
             }
+
+  # No zap stanza required
 end
