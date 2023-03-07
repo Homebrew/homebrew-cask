@@ -15,7 +15,7 @@ cask "languagetool" do
   depends_on macos: ">= :big_sur"
 
   app "LanguageTool for Desktop.app"
-  
+
   uninstall quit: "org.languagetool.desktop"
 
   zap trash: [
