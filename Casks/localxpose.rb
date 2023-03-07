@@ -11,8 +11,8 @@ cask "localxpose" do
 
   livecheck do
     url "https://api.localxpose.io/api/v2/downloads/darwin-#{arch}.json"
-    strategy :page_match do |page|
-      JSON.parse(page)["Version"]
+    strategy :json do |json|
+      json["Version"]
     end
   end
 

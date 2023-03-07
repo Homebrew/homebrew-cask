@@ -1,7 +1,7 @@
 cask "4k-youtube-to-mp3" do
   # NOTE: "3" is not a version number, but an intrinsic part of the product name
-  version "4.8.1"
-  sha256 "61d37049d6c003ba1ebb6108088804108b28f9b2dd85eca778c5eae173793b6b"
+  version "4.8.2"
+  sha256 "2249d54e024e8014a18833f81662de67f85b40a50060178c442a6d0716a7651f"
 
   url "https://dl.4kdownload.com/app/4kyoutubetomp3_#{version}.dmg"
   name "4K YouTube to MP3"
@@ -16,4 +16,12 @@ cask "4k-youtube-to-mp3" do
   depends_on macos: ">= :high_sierra"
 
   app "4K YouTube to MP3.app"
+
+  zap trash: [
+    "~/Library/Application Support/4kdownload.com",
+    "~/Library/Preferences/com.4kdownload.4K Video to MP3.plist",
+    "~/Library/Preferences/com.4kdownload.4K YouTube to MP3.plist",
+    "~/Library/Preferences/com.4kdownload.ApplicationDirectories.plist",
+    "~/Library/Saved Application State/com.openmedia.4kyoutubetomp3.savedState",
+  ]
 end

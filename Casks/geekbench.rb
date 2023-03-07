@@ -1,33 +1,33 @@
 cask "geekbench" do
   on_sierra :or_older do
-    version "4.4.4,401571"
+    version "4.4.4"
     sha256 "1fc2b87742cd27deaa184a753a57bfc5a8c81de34524e9fd318d6875be6ac5c9"
   end
   on_high_sierra do
-    version "5.5.1,503987"
+    version "5.5.1"
     sha256 "04b06cb642e51230a3dfd07ce2d3a4ea696cb349583737622749174dc8747313"
   end
   on_mojave do
-    version "5.5.1,503987"
+    version "5.5.1"
     sha256 "04b06cb642e51230a3dfd07ce2d3a4ea696cb349583737622749174dc8747313"
   end
   on_catalina do
-    version "5.5.1,503987"
+    version "5.5.1"
     sha256 "04b06cb642e51230a3dfd07ce2d3a4ea696cb349583737622749174dc8747313"
   end
   on_big_sur :or_newer do
-    version "6.0.0,602754"
-    sha256 "42c443ac203c49dce0646f847042b207560c0eb092673a47224cca5c4233f40b"
+    version "6.0.1"
+    sha256 "6d025ca2d2983076891968d636a8f0bb9a5703868ea1eabe24142615500aaa12"
   end
 
-  url "https://cdn.geekbench.com/Geekbench-#{version.csv.first}-Mac.zip"
+  url "https://cdn.geekbench.com/Geekbench-#{version}-Mac.zip"
   name "Geekbench"
   desc "Tool to measure the computer system's performance"
   homepage "https://www.geekbench.com/"
 
   livecheck do
     url "https://www.primatelabs.com/appcast/geekbench#{version.major}.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

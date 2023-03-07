@@ -3,7 +3,7 @@ cask "orka-vm-tools" do
   sha256 "8bd9d016e2a54f25ad952291833bd88394561a1ab84979799933390f0b208eac"
 
   url "https://orka-tools.s3.amazonaws.com/orka-vm-tools/official/#{version}/orka-vm-tools.pkg",
-      verified: "https://orka-tools.s3.amazonaws.com/orka-vm-tools/official/"
+      verified: "orka-tools.s3.amazonaws.com/orka-vm-tools/official/"
   name "Orka VM TOOLS"
   desc "Orchestration with Kubernetes on Apple"
   homepage "https://orkadocs.macstadium.com/docs"

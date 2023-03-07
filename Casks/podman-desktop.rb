@@ -6,7 +6,7 @@ cask "podman-desktop" do
          intel: "61c29f3ffdda9646837e2a3c9e0e1b77b4fbabee873ba81737144c126d6401cc"
 
   url "https://github.com/containers/podman-desktop/releases/download/v#{version}/podman-desktop-#{version}-#{arch}.dmg",
-      verified: "https://github.com/containers/podman-desktop"
+      verified: "github.com/containers/podman-desktop"
   name "Podman Desktop"
   desc "Browse, manage, inspect containers and images"
   homepage "https://podman-desktop.io/"

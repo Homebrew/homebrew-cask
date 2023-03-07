@@ -1,5 +1,5 @@
 cask "clickcharts" do
-  version "6.93"
+  version "8.07"
   sha256 :no_check
 
   url "https://www.nchsoftware.com/chart/clickchartspmaci.zip",
@@ -14,4 +14,12 @@ cask "clickcharts" do
   end
 
   app "ClickCharts.app"
+
+  zap trash: [
+    "~/Library/Application Support/ClickCharts",
+    "~/Library/Application Support/ClickChartsSubStatAbort",
+    "~/Library/Caches/ClickChartsCounts.txt",
+    "~/Library/LaunchAgents/com.nchsoftware.clickcharts.schedule.LikeSurvey.plist",
+    "~/Library/Preferences/ByHost/com.nchsoftware.clickcharts.*.plist",
+  ]
 end

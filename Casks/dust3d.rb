@@ -1,6 +1,6 @@
 cask "dust3d" do
-  version "1.0.0-rc.6"
-  sha256 "bc2714e22a9c1ad712a9dc8fca806b50d1f47142da7e02e5a74ff95c402959aa"
+  version "1.0.0-rc.7"
+  sha256 "18245da976677629331bbdf47efe6b56dd95c9cb789c3f70c1c657156d5db982"
 
   url "https://github.com/huxingyi/dust3d/releases/download/#{version}/dust3d-#{version}.dmg",
       verified: "github.com/huxingyi/dust3d/"

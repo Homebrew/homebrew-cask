@@ -1,5 +1,5 @@
 cask "bookends" do
-  version "14.1.7"
+  version "14.1.8"
   sha256 :no_check
 
   url "https://www.sonnysoftware.com/bookends-for-mac/downloads/Bookends.dmg"
@@ -15,4 +15,11 @@ cask "bookends" do
   depends_on macos: ">= :high_sierra"
 
   app "Bookends.app"
+
+  zap trash: [
+    "~/Library/Application Support/Bookends",
+    "~/Library/Caches/com.sonnysoftware.bookends2",
+    "~/Library/HTTPStorages/com.sonnysoftware.bookends2",
+    "~/Library/Saved Application State/com.sonnysoftware.bookends2.savedState",
+  ]
 end

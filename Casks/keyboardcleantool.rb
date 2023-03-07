@@ -7,5 +7,10 @@ cask "keyboardcleantool" do
   desc "Blocks all Keyboard and TouchBar input"
   homepage "https://folivora.ai/keyboardcleantool"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "KeyboardCleanTool.app"
 end

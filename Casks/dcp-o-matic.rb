@@ -1,6 +1,6 @@
 cask "dcp-o-matic" do
-  version "2.16.42"
-  sha256 "76f7519c9a91ee00e749cebb5cff373dd9a59cc0ab922d22d3e9b5c412279161"
+  version "2.16.46"
+  sha256 "80bc96e344b731b746775a1cbe9ae96863e0d820f2bd6dd69ebd1624ed7b1104"
 
   url "https://dcpomatic.com/dl.php?id=osx-10.10-main&version=#{version}"
   name "DCP-o-matic"

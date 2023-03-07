@@ -12,8 +12,8 @@ cask "appcode" do
 
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=AC&latest=true&type=release"
-    strategy :page_match do |page|
-      JSON.parse(page)["AC"].map do |release|
+    strategy :json do |json|
+      json["AC"].map do |release|
         "#{release["version"]},#{release["build"]}"
       end
     end

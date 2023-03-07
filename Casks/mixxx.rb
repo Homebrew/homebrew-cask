@@ -1,6 +1,6 @@
 cask "mixxx" do
-  version "2.3.3"
-  sha256 "cf971b89eed87e46670c4e4135954a4757217502c2958efd54b5a0636c6f5962"
+  version "2.3.4"
+  sha256 "a85c576a186c2252caa581ae45d78874515a60ebdcc8e50bfc1bcd569973670b"
 
   url "https://downloads.mixxx.org/releases/#{version}/mixxx-#{version}-macosintel.dmg"
   name "Mixxx"
@@ -13,4 +13,10 @@ cask "mixxx" do
   end
 
   app "Mixxx.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/org.mixxx.mixxx",
+    "~/Library/Containers/org.mixxx.mixxx",
+    "~/Music/Mixxx",
+  ]
 end
