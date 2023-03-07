@@ -812,24 +812,27 @@ cask "libreoffice-language-pack" do
     executable: "#{staged_path}/SilentInstall.sh",
     sudo:       true,
   }
-  # Leave the possibility of using the .app if the script does not find the installation path of libreoffice
-  installer manual: "LibreOffice Language Pack.app"
 
   preflight do
     File.write "#{staged_path}/SilentInstall.sh", <<~EOS
       #!/bin/bash
       pathOfApp=$(mdfind "kMDItemContentType == 'com.apple.application-bundle' && kMDItemFSName == 'LibreOffice.app'")
       if [[ $(mdls --raw --name kMDItemFSName --name kMDItemVersion $pathOfApp | xargs -0) == "LibreOffice.app #{version}"* ]]
-          then
+      then
+        #Test if the .app have quarantine attribute, or if they are already launched once.
+        if [[ $(xattr -l $pathOfApp) != *'com.apple.quarantine'* || $(xattr -p com.apple.quarantine $pathOfApp) != '0181;'* ]]
+        then
           echo "Silent installation has started, you didn't need to use the .app"
-          if [[ $(xattr -l $pathOfApp) == *'com.apple.quarantine'* ]]
-          then
-            #If the com.apple.quarantine attirbute is present, the .app become corrupted after install.
-            echo "Removing Quarantine flag on $pathOfApp before installing language pack "
-            xattr -d com.apple.quarantine $pathOfApp
-          fi
+          echo "Add language pack support for $pathOfApp"
           /usr/bin/tar -C $pathOfApp -xjf "#{staged_path}/LibreOffice Language Pack.app/Contents/Resources/tarball.tar.bz2" && touch $pathOfApp
-      else    echo 'Silent installation cannot match the prerequisite'
+        else
+          echo "You need to run $pathOfApp once before you can silently install language pack"
+          echo "or you can also reinstall libreoffice with --no-quarantine parameters"
+        fi
+      else
+        echo 'Silent installation cannot match the prerequisite'
+        echo "To complete the installation of Cask #{token}, you must also run the installer at:"
+        echo "#{staged_path}/LibreOffice Language Pack.app"
       fi
     EOS
     # Make the script executable
