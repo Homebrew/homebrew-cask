@@ -22,4 +22,6 @@ cask "prince" do
       exec '#{staged_path}/prince-#{version}-macos/lib/prince/bin/prince' --prefix '#{staged_path}/prince-#{version}-macos/lib/prince' "$@"
     EOS
   end
+
+  # No zap stanza required
 end
