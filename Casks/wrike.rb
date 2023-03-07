@@ -13,4 +13,11 @@ cask "wrike" do
   end
 
   app "Wrike for Mac.app"
+
+  zap trash: [
+    "~/Library/Application Support/Wrike",
+    "~/Library/Logs/Wrike",
+    "~/Library/Preferences/com.wrike.Wrike.plist",
+    "~/Library/Saved Application State/com.wrike.Wrike.savedState",
+  ]
 end
