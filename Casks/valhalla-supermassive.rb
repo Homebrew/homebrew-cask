@@ -9,7 +9,11 @@ cask "valhalla-supermassive" do
   homepage "https://valhalladsp.com/shop/reverb/valhalla-supermassive/"
 
   livecheck do
-    skip "No version information available"
+    url "https://valhalladsp.com/demos-downloads/"
+    regex(/href=.*?ValhallaSupermassiveOSX[._-]v?(\d+(?:[._]\d+)+)\.zip/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| match&.first&.tr("_", ".") }
+    end
   end
 
   pkg "ValhallaSupermassiveOSX.pkg"
