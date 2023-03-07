@@ -24,7 +24,7 @@ cask "tiger-trade" do
   app "Tiger Trade.app"
 
   zap trash: [
-    "~/Library/Containers/com.itiger.TigerTrade-Mac",
     "~/Library/Application Scripts/com.itiger.TigerTrade-Mac",
+    "~/Library/Containers/com.itiger.TigerTrade-Mac",
   ]
 end
