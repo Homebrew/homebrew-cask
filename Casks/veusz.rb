@@ -27,4 +27,9 @@ cask "veusz" do
   end
 
   app "Veusz.app"
+
+  zap trash: [
+    "~/Library/Preferences/org.veusz.veusz-feedback.plist",
+    "~/Library/Preferences/org.veusz.veusz.plist",
+  ]
 end
