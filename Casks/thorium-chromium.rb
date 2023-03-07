@@ -26,6 +26,8 @@ cask "thorium-chromium" do
 
   app "Thorium.app"
 
+  conflicts_with cask: "thorium"
+
   zap trash: [
     "~/Library/Application Support/Thorium",
     "~/Library/Caches/Thorium",
