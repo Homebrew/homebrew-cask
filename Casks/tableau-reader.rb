@@ -20,4 +20,10 @@ cask "tableau-reader" do
     "com.tableausoftware.FLEXNet.*",
     "com.tableausoftware.Reader.app",
   ]
+
+  zap trash: [
+    "/Library/Preferences/com.tableau.Tableau-Reader-2022.4.plist",
+    "~/Library/Preferences/com.tableau.Tableau-Reader-2022.4.plist",
+    "~/Library/Saved Application State/com.tableausoftware.tableaureader.savedState",
+  ]
 end
