@@ -24,9 +24,9 @@ cask "alex313031-thorium" do
     end
   end
 
-  app "Thorium.app"
-
   conflicts_with cask: "thorium"
+
+  app "Thorium.app"
 
   zap trash: [
     "~/Library/Application Support/Thorium",
