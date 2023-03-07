@@ -1,6 +1,6 @@
 cask "mathpix-snipping-tool" do
-  version "3.4.1,341.5"
-  sha256 "94c945ef33a46ec9fa1fda675cd636386118a22f04f9a4ce2bc8cc250be53723"
+  version "3.4.2,342.4"
+  sha256 "dfbd8aef66c5eb9e06f7f6cb6935d90a907d00876e98cd39d9e344e03a0f5879"
 
   url "https://mathpix.com/dmg/SnippingTool-v#{version.csv.first}.#{version.csv.second}.dmg"
   name "Mathpix Snipping Tool"
@@ -20,8 +20,8 @@ cask "mathpix-snipping-tool" do
   zap trash: [
     "~/Library/Application Support/com.mathpix.snipping-tool-noappstore",
     "~/Library/Caches/com.crashlytics.data/com.mathpix.snipping-tool-noappstore",
-    "~/Library/Caches/io.fabric.sdk.mac.data/com.mathpix.snipping-tool-noappstore",
     "~/Library/Caches/com.mathpix.snipping-tool-noappstore",
+    "~/Library/Caches/io.fabric.sdk.mac.data/com.mathpix.snipping-tool-noappstore",
     "~/Library/Preferences/com.mathpix.snipping-tool-noappstore.plist",
   ]
 end
