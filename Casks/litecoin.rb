@@ -25,4 +25,10 @@ cask "litecoin" do
   uninstall_preflight do
     set_permissions "#{appdir}/Litecoin-Qt.app", "0755"
   end
+
+  zap trash: [
+    "~/Library/Application Support/Litecoin",
+    "~/Library/Preferences/org.litecoin.Litecoin-Qt.plist",
+    "~/Library/Saved Application State/org.litecoin.Litecoin-Qt.savedState",
+  ]
 end
