@@ -13,4 +13,9 @@ cask "puzzles" do
   end
 
   app "Puzzles.app"
+
+  zap trash: [
+    "~/Library/Caches/com.apple.helpd/Generated/Puzzles Help*20230306.0156900",
+    "~/Library/Saved Application State/uk.org.greenend.chiark.sgtatham.puzzles.savedState",
+  ]
 end
