@@ -4,6 +4,7 @@ cask "lazy" do
 
   url "https://www.lazy-app.com/download/lazy.pkg"
   name "Lazy"
+  desc "Control your environment from your keyboard"
   homepage "https://www.lazy-app.com/"
 
   pkg "lazy.pkg"
