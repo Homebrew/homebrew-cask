@@ -1,5 +1,5 @@
 cask "securityspy" do
-  version "5.5.5"
+  version "5.5.6"
   sha256 :no_check
 
   url "https://www.bensoftware.com/securityspy/SecuritySpy.dmg"
@@ -15,4 +15,11 @@ cask "securityspy" do
   depends_on macos: ">= :high_sierra"
 
   app "SecuritySpy.app"
+
+  zap trash: [
+    "~/Library/Application Support/SecuritySpy",
+    "~/Library/Preferences/SecuritySpy Preferences*",
+    "~/Library/Saved Application State/com.bensoftware.SecuritySpy.savedState",
+    "~/SecuritySpy",
+  ]
 end
