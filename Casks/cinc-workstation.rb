@@ -1,9 +1,9 @@
 cask "cinc-workstation" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "23.2.1028"
-  sha256 arm:   "1ead98dc474d86aefa2e3739a74181404176a6094f4d41ced4d6a215e8a961be",
-         intel: "6fb7b01f65169e85ba273f97a14817549c688250a9314f3f9644702c708044ab"
+  version "23.3.1030"
+  sha256 arm:   "34af2159dd049cec3f6978057a9e849fe1452e6b65c5842f611f6776220cdf5b",
+         intel: "6a8dc001be3ad1e6d6296c85f3c35e97b918748f817099ce9232294de881ea5f"
 
   url "http://downloads.cinc.sh/files/stable/cinc-workstation/#{version}/mac_os_x/11/cinc-workstation-#{version}-1.#{arch}.dmg"
   name "Cinc Workstation"
