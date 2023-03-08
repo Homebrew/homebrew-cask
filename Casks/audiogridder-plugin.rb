@@ -15,15 +15,15 @@ cask "audiogridder-plugin" do
   pkg "AudioGridderPlugin_#{version}_macOS-universal.pkg"
 
   uninstall pkgutil: [
+    "com.e47.audiogridder.aax",
+    "com.e47.audiogridder.au",
+    "com.e47.audiogridder.plugintray",
+    "com.e47.audiogridder.vst",
+    "com.e47.audiogridder.vst3",
     "com.e47.pkg.aax",
     "com.e47.pkg.au",
     "com.e47.pkg.vst",
     "com.e47.pkg.vst3",
-    "com.e47.audiogridder.aax",
-    "com.e47.audiogridder.au",
-    "com.e47.audiogridder.vst",
-    "com.e47.audiogridder.vst3",
-    "com.e47.audiogridder.plugintray",
   ]
 
   zap trash: [
