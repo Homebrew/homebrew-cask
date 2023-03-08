@@ -1,5 +1,5 @@
 cask "origami-studio" do
-  version "135.0.0.5.150"
+  version "136.0.0.8.165"
   sha256 :no_check
 
   url "https://facebook.com/designtools/origami/",
@@ -16,4 +16,13 @@ cask "origami-studio" do
   depends_on macos: ">= :sierra"
 
   app "Origami Studio.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.facebook.Origami-Studio",
+    "~/Library/Caches/com.facebook.Origami-Studio",
+    "~/Library/HTTPStorages/com.facebook.Origami-Studio",
+    "~/Library/Logs/com.facebook.Origami-Studio",
+    "~/Library/Preferences/com.facebook.Origami-Studio.plist",
+    "~/Library/Saved Application State/com.facebook.Origami-Studio.savedState",
+  ]
 end
