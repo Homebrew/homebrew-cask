@@ -8,7 +8,7 @@ cask "alex313031-thorium" do
   url "https://github.com/Alex313031/Thorium-Special/releases/download/#{version}/Thorium_MacOS_#{arch}.dmg",
       verified: "github.com/Alex313031/Thorium-Special/"
   name "Thorium"
-  desc "Thorium - The fastest browser on Earth"
+  desc "Web browser"
   homepage "https://thorium.rocks/"
 
   # NOTE: This approach involves multiple requests and should be avoided
