@@ -16,4 +16,13 @@ cask "origami-studio" do
   depends_on macos: ">= :sierra"
 
   app "Origami Studio.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.facebook.Origami-Studio",
+    "~/Library/Caches/com.facebook.Origami-Studio",
+    "~/Library/HTTPStorages/com.facebook.Origami-Studio",
+    "~/Library/Logs/com.facebook.Origami-Studio",
+    "~/Library/Preferences/com.facebook.Origami-Studio.plist",
+    "~/Library/Saved Application State/com.facebook.Origami-Studio.savedState",
+  ]
 end
