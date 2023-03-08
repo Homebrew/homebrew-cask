@@ -9,15 +9,15 @@ cask "cmake" do
 
   livecheck do
     url "https://cmake.org/files/LatestRelease/"
-    regex(/href=.*?cmake[._-]v?(\d+(?:\.\d+)+)-macos-universal\.dmg/i)
+    regex(/href=.*?cmake[._-]v?(\d+(?:\.\d+)+)[._-]macos[._-]universal\.dmg/i)
   end
 
   conflicts_with formula: "cmake"
 
   app "CMake.app"
   binary "#{appdir}/CMake.app/Contents/bin/ccmake"
-  binary "#{appdir}/CMake.app/Contents/bin/cmake-gui"
   binary "#{appdir}/CMake.app/Contents/bin/cmake"
+  binary "#{appdir}/CMake.app/Contents/bin/cmake-gui"
   binary "#{appdir}/CMake.app/Contents/bin/cpack"
   binary "#{appdir}/CMake.app/Contents/bin/ctest"
   manpage "#{appdir}/CMake.app/Contents/man/man1/ccmake.1"
