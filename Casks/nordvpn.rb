@@ -1,5 +1,5 @@
 cask "nordvpn" do
-  version "7.16.1,214"
+  version "7.16.1"
   sha256 "9262fb7226b95205c03ba115f3697824eb966e07a56550a97af449134e9deeb6"
 
   url "https://downloads.nordcdn.com/apps/macos/generic/NordVPN-OpenVPN/#{version.csv.first}/NordVPN.pkg",
@@ -10,7 +10,7 @@ cask "nordvpn" do
 
   livecheck do
     url "https://downloads.nordcdn.com/apps/macos/generic/NordVPN-OpenVPN/latest/update_pkg.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
