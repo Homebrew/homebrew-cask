@@ -12,7 +12,7 @@ cask "audiogridder-server" do
     regex(/(\d+(?:\.\d+)+)/i)
   end
 
-  pkg "AudioGridderServer_#{version}_macOS-#{arch}.pkg"
+  pkg "AudioGridderServer_#{version}_macOS-universal.pkg"
 
   uninstall pkgutil: [
     "com.e47.pkg.server",
