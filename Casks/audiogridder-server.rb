@@ -15,27 +15,27 @@ cask "audiogridder-server" do
   pkg "AudioGridderServer_#{version}_macOS-universal.pkg"
 
   uninstall pkgutil: [
-    "com.e47.pkg.server",
     "com.e47.audiogridder.server",
+    "com.e47.pkg.server",
   ]
 
   zap trash: [
         "~/.audiogridder/audiogridder.winpos",
-        "~/.audiogridder/audiogridderserver.winpos",
-        "~/.audiogridder/audiogridderserver.cache",
-        "~/.audiogridder/audiogridderserver.crash",
-        "~/.audiogridder/audiogridderserver.layouts",
-        "~/.audiogridder/audiogridderserver.cfg",
-        "~/.audiogridder/audiogridderserver*.winpos",
         "~/.audiogridder/audiogridderserver*.cache",
+        "~/.audiogridder/audiogridderserver*.cfg",
         "~/.audiogridder/audiogridderserver*.crash",
         "~/.audiogridder/audiogridderserver*.layouts",
-        "~/.audiogridder/audiogridderserver*.cfg",
+        "~/.audiogridder/audiogridderserver*.winpos",
+        "~/.audiogridder/audiogridderserver.cache",
+        "~/.audiogridder/audiogridderserver.cfg",
+        "~/.audiogridder/audiogridderserver.crash",
+        "~/.audiogridder/audiogridderserver.layouts",
+        "~/.audiogridder/audiogridderserver.winpos",
         "~/Library/Logs/AudioGridder/Master",
-        "~/Library/Logs/AudioGridder/Scan",
-        "~/Library/Logs/AudioGridder/Server",
         "~/Library/Logs/AudioGridder/Sandbox-Chain",
         "~/Library/Logs/AudioGridder/Sandbox-Plugin",
+        "~/Library/Logs/AudioGridder/Scan",
+        "~/Library/Logs/AudioGridder/Server",
       ],
       rmdir: [
         "~/.audiogridder",
