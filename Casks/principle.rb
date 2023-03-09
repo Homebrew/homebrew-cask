@@ -13,4 +13,12 @@ cask "principle" do
   end
 
   app "Principle.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.danielhooper.principle",
+    "~/Library/Caches/com.danielhooper.principle",
+    "~/Library/HTTPStorages/com.danielhooper.principle",
+    "~/Library/Preferences/com.danielhooper.principle.plist",
+    "~/Library/Saved Application State/com.danielhooper.principle.savedState",
+  ]
 end
