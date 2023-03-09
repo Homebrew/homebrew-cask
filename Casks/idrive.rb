@@ -1,9 +1,10 @@
 cask "idrive" do
-  version :latest
+  version "6.7.4.41"
   sha256 :no_check
 
   url "https://www.idrive.com/downloads/IDrive.dmg"
   name "iDrive"
+  desc "Cloud backup and storage solution"
   homepage "https://www.idrive.com/"
 
   pkg "IDrive.pkg"
