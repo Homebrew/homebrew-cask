@@ -6,5 +6,10 @@ cask "window-switch" do
   name "Window Switch"
   homepage "https://xpra.org/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Window-Switch.app"
 end

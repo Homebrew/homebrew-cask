@@ -6,6 +6,11 @@ cask "anonymousvpn" do
   name "Anonymous VPN"
   homepage "https://www.anonymousvpn.org/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   pkg "AnonymousVPN.pkg"
 
   uninstall pkgutil:   "org.anonymousvpn.pkg",

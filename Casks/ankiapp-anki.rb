@@ -7,6 +7,11 @@ cask "ankiapp-anki" do
   desc "Spaced Repetition Flashcard App"
   homepage "https://www.ankiapp.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "AnkiApp.app"
 
   zap trash: [

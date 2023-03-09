@@ -6,5 +6,10 @@ cask "appstore-quickview" do
   name "App...Store Quickview"
   homepage "https://www.marcmoini.com/aq_en.html"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "App...Store Quickview.app"
 end

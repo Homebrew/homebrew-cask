@@ -6,5 +6,10 @@ cask "pashua" do
   name "Pashua"
   homepage "https://www.bluem.net/en/mac/pashua/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Pashua.app"
 end

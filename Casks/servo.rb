@@ -6,5 +6,10 @@ cask "servo" do
   name "Servo"
   homepage "https://servo.org/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Servo.app"
 end

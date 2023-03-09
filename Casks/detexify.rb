@@ -7,6 +7,11 @@ cask "detexify" do
   name "Detexify"
   homepage "https://detexify.kirelabs.org/classify.html"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Detexify.app"
 
   zap trash: "~/Library/Preferences/org.kirelabs.Detexify-Mac.plist"

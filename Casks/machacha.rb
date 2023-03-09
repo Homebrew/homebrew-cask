@@ -6,6 +6,11 @@ cask "machacha" do
   name "MacHacha"
   homepage "http://www.julifos.com/soft/machacha/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "MacHacha.app"
 
   zap trash: [

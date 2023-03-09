@@ -6,6 +6,11 @@ cask "tyke" do
   name "Tyke"
   homepage "https://tyke.app/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "tyke.app"
 
   uninstall quit: "org.torrez.tyke"
