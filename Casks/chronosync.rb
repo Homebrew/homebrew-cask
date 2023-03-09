@@ -21,4 +21,11 @@ cask "chronosync" do
               "com.econtechnologies.backgrounder.chronosync",
             ],
             pkgutil: "com.econtechnologies.pkg.ChronoSyncApplication"
+
+  zap trash: [
+    "~/Library/Saved Application State/com.econtechnologies.chronosync.savedState",
+    "~/Library/Preferences/com.econtechnologies.backgrounder.chronosync.plist",
+    "~/Library/Preferences/com.econtechnologies.chronosync.plist",
+    "~/Library/Logs/ChronoSync",
+  ]
 end
