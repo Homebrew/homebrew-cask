@@ -16,9 +16,7 @@ cask "irpf2023" do
 
   installer manual: "IRPF2023.app"
 
-  uninstall delete: [
-    "/Applications/IRPF2023",
-  ]
+  uninstall delete: "/Applications/IRPF2023"
 
   # No zap stanza required
 
