@@ -1,6 +1,6 @@
 cask "nordlocker" do
-  version "4.3.0"
-  sha256 "8179be737db9aafa77c345853e1e9f2c64914f5e3e0d177a95581cc5f7b8cf93"
+  version "4.4.0"
+  sha256 "f86595d7e1b6fa554361895e08771d0e0dce719eba2c580e906e286c0b23116d"
 
   url "https://downloads.nordcdn.com/apps/macos/generic/NordLocker/#{version}/NordLocker.pkg",
       verified: "downloads.nordcdn.com/apps/macos/generic/NordLocker/"
