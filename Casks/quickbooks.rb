@@ -22,15 +22,14 @@ cask "quickbooks" do
   app "QuickBooks #{version.csv.second}.app"
 
   zap trash: [
-    "~/Library/Application Support/QuickBooks 2023",
-    "~/Library/Application Support/com.intuit.QuickBooks2023",
-    "~/Library/Caches/com.intuit.QuickBooks2023",
-    "~/Library/HTTPStorages/com.intuit.QuickBooks2023",
-    "~/Library/HTTPStorages/com.intuit.QuickBooks2023.binarycookies",
+    "~/Library/Application Support/QuickBooks #{version.csv.second}",
+    "~/Library/Application Support/com.intuit.QuickBooks#{version.csv.second}",
+    "~/Library/Caches/com.intuit.QuickBooks#{version.csv.second}",
+    "~/Library/HTTPStorages/com.intuit.QuickBooks#{version.csv.second}*",
     "~/Library/Logs/QuickBooks",
-    "~/Library/Preferences/ByHost/com.intuit.QuickBooks2023.*",
-    "~/Library/Preferences/com.intuit.QuickBooks2023.plist",
-    "~/Library/Saved Application State/com.intuit.QuickBooks2023.savedState",
-    "~/Library/WebKit/com.intuit.QuickBooks2023",
+    "~/Library/Preferences/ByHost/com.intuit.QuickBooks#{version.csv.second}.*",
+    "~/Library/Preferences/com.intuit.QuickBooks#{version.csv.second}.plist",
+    "~/Library/Saved Application State/com.intuit.QuickBooks#{version.csv.second}.savedState",
+    "~/Library/WebKit/com.intuit.QuickBooks#{version.csv.second}",
   ]
 end
