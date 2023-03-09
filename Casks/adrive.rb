@@ -1,5 +1,5 @@
 cask "adrive" do
-  version "4.0.1"
+  version "4.1.0"
   sha256 :no_check
 
   url "https://yunpan.aliyun.com/downloads/apps/desktop/aDrive.dmg",
