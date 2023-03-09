@@ -23,4 +23,6 @@ cask "lazarus" do
               "org.lazarus-ide.pkg.LazarusIDE",
             ],
             delete:  "/Applications/Lazarus.app"
+
+  zap trash: "~/.lazarus"
 end
