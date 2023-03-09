@@ -1,5 +1,5 @@
 cask "dockview" do
-  version "1.3.7,137"
+  version "1.3.8,138"
   sha256 :no_check
 
   url "https://macplus-software.com/downloads/DockViewStandard.zip",
