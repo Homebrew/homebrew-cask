@@ -1,6 +1,6 @@
 cask "grandtotal" do
-  version "8.0.5.10"
-  sha256 "1abdff5b9e6bee5cbee3ea4cac3cc9209766f5ef1d760404043f3a190f4b4222"
+  version "8.0.6"
+  sha256 "17887851745446bf3e33daef33bdea3bcef9d7f024f608933011dfa745b53d9f"
 
   url "https://www.mediaatelier.com/GrandTotal#{version.major}/GrandTotal_#{version}.dmg"
   name "GrandTotal"
@@ -21,6 +21,8 @@ cask "grandtotal" do
 
   zap trash: [
     "~/Library/Application Support/com.mediaatelier.GrandTotal3",
+    "~/Library/Caches/com.mediaatelier.GrandTotal3",
+    "~/Library/HTTPStorages/com.mediaatelier.GrandTotal3",
     "~/Library/Preferences/com.mediaatelier.GrandTotal3.plist",
     "~/Library/Saved Application State/com.mediaatelier.GrandTotal3.savedState",
   ]
