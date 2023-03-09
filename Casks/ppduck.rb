@@ -13,4 +13,10 @@ cask "ppduck" do
   end
 
   app "PPDuck#{version.major}.app"
+
+  zap trash: [
+    "~/Library/Application Support/PPDuck3",
+    "~/Library/Logs/PPDuck3",
+    "~/Library/Preferences/com.weiju.ppduck.plist",
+  ]
 end
