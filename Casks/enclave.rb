@@ -9,7 +9,7 @@ cask "enclave" do
 
   livecheck do
     url "https://install.enclave.io/latest/osx-homebrew-version.txt"
-    regex(/(\d+(?:\.\d+)*)/i)
+    regex(/(\d+(?:\.\d+)*(?:\.hotfix\d+)?)/i)
   end
 
   pkg "enclave_osx-installer-x64-stable-#{version}.pkg"
