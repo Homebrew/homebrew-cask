@@ -17,4 +17,13 @@ cask "purevpn" do
 
   uninstall quit:    "com.purevpn.app.mac",
             pkgutil: "com.purevpn.mac.installer"
+
+  zap trash: [
+    "~/Library/Application Support/com.purevpn.app.mac",
+    "~/Library/Caches/com.purevpn.app.mac",
+    "~/Library/HTTPStorages/com.purevpn.app.mac",
+    "~/Library/HTTPStorages/com.purevpn.app.mac.binarycookies",
+    "~/Library/Preferences/com.purevpn.app.mac.plist",
+    "~/Library/Saved Application State/com.purevpn.app.mac.savedState",
+  ]
 end
