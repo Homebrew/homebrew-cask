@@ -21,6 +21,8 @@ cask "grandtotal" do
 
   zap trash: [
     "~/Library/Application Support/com.mediaatelier.GrandTotal3",
+    "~/Library/Caches/com.mediaatelier.GrandTotal3",
+    "~/Library/HTTPStorages/com.mediaatelier.GrandTotal3",
     "~/Library/Preferences/com.mediaatelier.GrandTotal3.plist",
     "~/Library/Saved Application State/com.mediaatelier.GrandTotal3.savedState",
   ]
