@@ -9,4 +9,10 @@ cask "protege" do
   homepage "https://protege.stanford.edu/"
 
   app "Protege-#{version}/Protégé.app"
+
+  zap trash: [
+    "~/.Protege",
+    "~/Library/Preferences/protege_preferences.*",
+    "~/Library/Saved Application State/edu.stanford.protege.savedState",
+  ]
 end
