@@ -16,9 +16,5 @@ cask "presentation" do
 
   uninstall pkgutil: "fr.imag.iihm.blanch.osx-presentation"
 
-  zap trash: [
-    "~/Library/Saved Application State/SoftMaker.PresentationsFree2021.savedState",
-    "/var/db/receipts/fr.imag.iihm.blanch.osx-presentation.bom",
-    "/var/db/receipts/fr.imag.iihm.blanch.osx-presentation.plist",
-  ]
+  zap trash: "~/Library/Saved Application State/SoftMaker.PresentationsFree2021.savedState"
 end
