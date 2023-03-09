@@ -8,8 +8,8 @@ cask "mounty" do
     end
   end
   on_big_sur :or_newer do
-    version "1.15"
-    sha256 "8c678c87aa609a7222ca229acb3a650d4a4e2db9fa9ce89a09a9d45ea1b19af1"
+    version "1.16"
+    sha256 "ec7b255133e7c613578f078dce0d5c0ea09ead4f73ad82603d683be3be4b83cb"
 
     livecheck do
       url :homepage
