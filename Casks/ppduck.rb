@@ -1,6 +1,6 @@
 cask "ppduck" do
-  version "3.10.13"
-  sha256 "0332e5e628907a041202588ed56551246c08042b91a66dd4d6e6fafd55384640"
+  version "3.10.14"
+  sha256 "95b0adb47bff7ae078078edeb2ee666ce0ad8e5411f0658cb65e67dc639ef58a"
 
   url "https://download.ppduck.com/PPDuck#{version.major}_#{version}.dmg"
   name "PPDuck"
@@ -13,4 +13,10 @@ cask "ppduck" do
   end
 
   app "PPDuck#{version.major}.app"
+
+  zap trash: [
+    "~/Library/Application Support/PPDuck#{version.major}",
+    "~/Library/Logs/PPDuck#{version.major}",
+    "~/Library/Preferences/com.weiju.ppduck.plist",
+  ]
 end
