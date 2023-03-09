@@ -15,7 +15,6 @@ cask "rawtherapee" do
   depends_on macos: ">= :big_sur"
 
   container nested: "RawTherapee_macOS_11.7_Universal_#{version}_folder/RawTherapee_macOS_11.7_Universal_#{version}.dmg"
-
   app "RawTherapee.app"
 
   zap trash: "~/Library/Application Support/RawTherapee"
