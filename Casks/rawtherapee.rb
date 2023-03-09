@@ -7,10 +7,7 @@ cask "rawtherapee" do
   desc "RAW photo processer"
   homepage "https://rawtherapee.com/"
 
-  livecheck do
-    url "https://rawtherapee.com/shared/builds/mac/"
-    regex(/href=.*?RawTherapee_\w+[._-]v?(\d+(?:\.\d+)+)\.zip/i)
-  end
+  container nested: "RawTherapee_macOS_11.7_Universal_5.9_folder/RawTherapee_macOS_11.7_Universal_5.9.dmg"
 
   app "RawTherapee.app"
 
