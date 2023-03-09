@@ -1,5 +1,5 @@
 cask "touchswitcher" do
-  version "1.4.4,152"
+  version "1.4.5,157"
   sha256 :no_check
 
   url "https://hazeover.com/touchswitcher/TouchSwitcher.zip"
