@@ -4,6 +4,7 @@ cask "idrive" do
 
   url "https://www.idrive.com/downloads/IDrive.dmg"
   name "iDrive"
+  desc "Cloud backup and storage solution"
   homepage "https://www.idrive.com/"
 
   pkg "IDrive.pkg"
