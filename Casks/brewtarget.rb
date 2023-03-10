@@ -1,11 +1,11 @@
 cask "brewtarget" do
-  version "3.0.6"
-  sha256 "157bfc624b307afc237cb958acc54ac39012e4cdf00c24a8ce9fa65f8d3f77e2"
+  version "3.0.7"
+  sha256 "dcf2eef2713ec7a7f2017123bb2e506368835561972e851dbfa7cddb313e5dab"
 
-  url "https://github.com/Brewtarget/brewtarget/releases/download/v#{version}/brewtarget_#{version}_x86_64.dmg"
+  url "https://github.com/Brewtarget/brewtarget/releases/download/v#{version}/brewtarget_#{version}.dmg"
   name "brewtarget"
   desc "Beer recipe creation tool"
   homepage "https://github.com/Brewtarget/brewtarget/"
 
-  app "Brewtarget.app"
+  app "brewtarget_#{version}.app"
 end
