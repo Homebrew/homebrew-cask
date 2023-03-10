@@ -14,4 +14,9 @@ cask "niftyman" do
   end
 
   app "Niftyman.app"
+
+  zap trash: [
+    "~/Library/Application Support/Niftyman",
+    "~/Library/Preferences/com.shadowfax.niftyman.plist",
+  ]
 end
