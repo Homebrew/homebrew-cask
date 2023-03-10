@@ -1,15 +1,15 @@
 cask "doppler" do
-  version "2.1.7,7198"
+  version "2.1.7"
   sha256 :no_check
 
   url "https://updates.brushedtype.co/doppler-macos/download"
   name "Doppler"
-  desc "Built for people who buy music"
+  desc "Music player"
   homepage "https://brushedtype.co/doppler/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://updates.brushedtype.co/doppler-macos/appcast.xml"
+    strategy :sparkle, &:short_version
   end
 
   depends_on macos: ">= :big_sur"
