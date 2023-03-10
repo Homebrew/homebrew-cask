@@ -11,6 +11,11 @@ cask "gather" do
   desc "Virtual video-calling space"
   homepage "https://gather.town/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Gather.app"
 
   zap trash: [
