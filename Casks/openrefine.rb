@@ -1,6 +1,6 @@
 cask "openrefine" do
-  version "3.7.0"
-  sha256 "bd602034ff26aa65a2e416ce349051515ecf6f17597cb4a45e79a7f0f99d6618"
+  version "3.7.1"
+  sha256 "68046ba4eb7d2de48d2245cf8fd5018cb4fd214348904c88b9b42c5ddeeacc60"
 
   url "https://github.com/OpenRefine/OpenRefine/releases/download/#{version}/openrefine-mac-#{version}.dmg",
       verified: "github.com/OpenRefine/OpenRefine/"
