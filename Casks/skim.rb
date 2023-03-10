@@ -1,6 +1,6 @@
 cask "skim" do
-  version "1.6.14,144"
-  sha256 "c545725c6df315c1e5b4986c59120a93de2571ea13f9f5f4d75fc4aa3c9e9f2e"
+  version "1.6.15,145"
+  sha256 "748eb3a4c4ebf54c43c35706ec8a233e5602e0640c91db743c49d66dc565826a"
 
   url "https://downloads.sourceforge.net/skim-app/Skim/Skim-#{version.csv.first}/Skim-#{version.csv.first}.dmg",
       verified: "downloads.sourceforge.net/skim-app/"
