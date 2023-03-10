@@ -15,4 +15,9 @@ cask "mediahuman-youtube-downloader" do
   auto_updates true
 
   app "MediaHuman YouTube Downloader.app"
+
+  zap trash: [
+    "~/Library/Saved Application State/com.mediahuman.YouTube Downloader.savedState",
+    "~/Library/Preferences/com.mediahuman.YouTube Downloader.plist",
+  ]
 end
