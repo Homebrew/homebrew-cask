@@ -39,4 +39,13 @@ cask "munki" do
               "com.googlecode.munki.managedsoftwareupdate-manualcheck",
               "com.googlecode.munki.munki-notifier",
             ]
+
+  zap trash: [
+    "/Library/LaunchDaemons/com.googlecode.munki.appusaged.plist",
+    "/Library/LaunchDaemons/com.googlecode.munki.authrestartd.plist",
+    "/Library/LaunchDaemons/com.googlecode.munki.logouthelper.plist",
+    "/Library/LaunchDaemons/com.googlecode.munki.managedsoftwareupdate-check.plist",
+    "/Library/LaunchDaemons/com.googlecode.munki.managedsoftwareupdate-install.plist",
+    "/Library/LaunchDaemons/com.googlecode.munki.managedsoftwareupdate-manualcheck.plist",
+  ]
 end
