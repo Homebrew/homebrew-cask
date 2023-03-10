@@ -1,8 +1,8 @@
 cask "videofusion" do
-  version "3.7.3.8165"
-  sha256 "47b7ea8f74bcd594fa9e66009ef4ef33b10112607c77f7d740a9844ef7f1fea3"
+  version "3.9.0.8399"
+  sha256 "5a57e95b6f6316bea74cdeede985016af47bb674e85a1733c9bc46fb672bc38d"
 
-  url "https://lf3-package.vlabstatic.com/obj/faceu-packages/Jianying_#{version.dots_to_underscores}_jianyingpro_0.dmg",
+  url "https://lf3-package.vlabstatic.com/obj/faceu-packages/Jianying_#{version.dots_to_underscores}_jianyingpro_0_creatortool.dmg",
       verified: "lf3-package.vlabstatic.com/obj/faceu-packages/"
   name "VideoFusion"
   name "剪映专业版"
