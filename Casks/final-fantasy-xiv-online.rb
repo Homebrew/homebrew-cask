@@ -10,7 +10,7 @@ cask "final-fantasy-xiv-online" do
 
   livecheck do
     url "https://na.finalfantasyxiv.com/mac/download/"
-    regex(%r{href="https://gdl.square-enix.com/ffxiv/inst/([^/]*)/FINAL[._-]FANTASY[._-]XIV[._-]ONLINE[._-]x64.dmg"}i)
+    regex(%r{href="https://download.finalfantasyxiv.com/inst/([^/]*)/FINAL[._-]FANTASY[._-]XIV[._-]ONLINE[._-]x64.dmg"}i)
   end
 
   auto_updates true
