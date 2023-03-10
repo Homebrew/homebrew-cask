@@ -11,7 +11,10 @@ cask "little-navmap" do
   app "Little Navmap.app"
   app "Little Navconnect.app"
 
-  zap trash: "~/Library/Saved Application State/com.yourcompany.littlenavmap.savedState"
+  zap trash: [
+    "~/Library/Saved Application State/com.yourcompany.littlenavmap.savedState",
+    "~/.config/ABarthel",
+  ]
 
   caveats "The X-Plane plugin will be at #{staged_path} after installation."
 end
