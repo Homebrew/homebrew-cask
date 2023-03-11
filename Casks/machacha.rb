@@ -4,6 +4,7 @@ cask "machacha" do
 
   url "http://www.julifos.com/soft/machacha/machacha.dmg"
   name "MacHacha"
+  desc "Split archives into smaller parts and join them when requested"
   homepage "http://www.julifos.com/soft/machacha/"
 
   livecheck do
