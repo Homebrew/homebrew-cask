@@ -1,4 +1,4 @@
-cask "copytr" do
+cask "copytranslator" do
   version "11.0.0"
   sha256 "b05cd929b0e285d0b5300f71a575b20287f3c814043138ce04e1bcfc4d1dff96"
 
