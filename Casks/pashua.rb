@@ -4,6 +4,7 @@ cask "pashua" do
 
   url "https://www.bluem.net/files/Pashua.dmg"
   name "Pashua"
+  desc "Native dialogs for scripting languages"
   homepage "https://www.bluem.net/en/mac/pashua/"
 
   livecheck do
