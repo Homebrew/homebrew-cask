@@ -4,6 +4,7 @@ cask "window-switch" do
 
   url "https://xpra.org/dists/osx/x86/Window-Switch.dmg"
   name "Window Switch"
+  desc "Persistent remote display server and client"
   homepage "https://xpra.org/"
 
   livecheck do
