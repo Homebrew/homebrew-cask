@@ -4,7 +4,7 @@ cask "moneymanager" do
 
   url "https://download.realbyteapps.com/MoneyManager-#{version}.dmg"
   name "MoneyManager"
-  desc "Easy Money Manager Mac Version"
+  desc "Easy Money Manager"
   homepage "https://realbyteapps.com/"
 
   livecheck do
