@@ -1,5 +1,5 @@
 cask "idrive" do
-  version "6.7.4.41"
+  version "latest"
   sha256 :no_check
 
   url "https://www.idrive.com/downloads/IDrive.dmg"
