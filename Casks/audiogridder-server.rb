@@ -1,6 +1,6 @@
 cask "audiogridder-server" do
-  version "1.2.0"
-  sha256 "ef0abf7cfd82d619e41b2bde1177352136e00333520a7e2ce07825219b2f6fd0"
+  version "1.2.0_1"
+  sha256 "ba69f70ee4fd7eb2e962cc203310f1a38f26f0f8432dc232f78af1734c0e699a"
 
   url "https://audiogridder.com/releases/AudioGridderServer_#{version}_macOS-universal.pkg"
   name "AudioGridder Server"

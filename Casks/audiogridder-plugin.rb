@@ -1,6 +1,6 @@
 cask "audiogridder-plugin" do
-  version "1.2.0"
-  sha256 "1b819a603708e02e0e4624f51821b327ef6e30829266656982c1f051a5714633"
+  version "1.2.0_1"
+  sha256 "8e0a46eef57f5df0263b169397c63fcf61966b8ae96fa5eaededdef71a8af250"
 
   url "https://audiogridder.com/releases/AudioGridderPlugin_#{version}_macOS-universal.pkg"
   name "AudioGridder Plugin"
@@ -9,7 +9,7 @@ cask "audiogridder-plugin" do
 
   livecheck do
     url "https://audiogridder.com/releases/latest.txt"
-    regex(/(\d+(?:\.\d+)+)/i)
+    regex(/(\d+(?:.\d+)+)/i)
   end
 
   pkg "AudioGridderPlugin_#{version}_macOS-universal.pkg"
