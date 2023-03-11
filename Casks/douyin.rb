@@ -18,6 +18,8 @@ cask "douyin" do
     end
   end
 
+  auto_updates true
+
   app "抖音.app"
 
   zap trash: "~/Library/Preferences/com.bytedance.douyin.desktop.plist",
