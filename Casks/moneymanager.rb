@@ -4,13 +4,12 @@ cask "moneymanager" do
 
   url "https://download.realbyteapps.com/MoneyManager-#{version}.dmg"
   name "MoneyManager"
-  desc "Easy Money Manager"
+  desc "Finance manager"
   homepage "https://realbyteapps.com/"
 
   livecheck do
-    url "https://download.realbyteapps.com/mac.html"
-    strategy :page_match
-    regex(%r{href =.*?/MoneyManager-(\d+(?:\.\d+)*)\.dmg}i)
+    url "https://download.realbyteapps.com/latest-mac.yml"
+    strategy :electron_builder
   end
 
   app "MoneyManager.app"
