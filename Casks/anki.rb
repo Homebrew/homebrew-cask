@@ -1,9 +1,9 @@
 cask "anki" do
   arch arm: "apple", intel: "intel"
 
-  version "2.1.57"
-  sha256 arm:   "f202ed168a8956f87535f692a4d787f3e61e70c967f80ed4caa7925d6544b66a",
-         intel: "36108c997b998fe225fe18596616e4ede2ec99b7e7a98952460c37df121bbfc3"
+  version "2.1.60"
+  sha256 arm:   "cbaee7c65b32293d4fb81abc28c87c35ab692d588295a37a04830ca2b6a529d4",
+         intel: "0d066c2a427c48c005a59dbf6954408a099bb1d9d6efd8d6ee8b4f39df18feff"
 
   url "https://github.com/ankitects/anki/releases/download/#{version}/anki-#{version}-mac-#{arch}-qt6.dmg",
       verified: "github.com/ankitects/anki/"

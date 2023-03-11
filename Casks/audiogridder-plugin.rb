@@ -1,11 +1,8 @@
 cask "audiogridder-plugin" do
-  arch arm: "arm64", intel: "x86_64"
+  version "1.2.0"
+  sha256 "1b819a603708e02e0e4624f51821b327ef6e30829266656982c1f051a5714633"
 
-  version "1.1.1"
-  sha256 arm:   "63bbb5ddc1eaca8295147648f72b2841e38ef5a3bf0a9146e644214ef8147eb8",
-         intel: "4ac6631df3ef05301305a0e299337987c2a2d2f8558edccd41936552c95a8ea9"
-
-  url "https://audiogridder.com/releases/AudioGridderPlugin_#{version}_macOS-#{arch}.pkg"
+  url "https://audiogridder.com/releases/AudioGridderPlugin_#{version}_macOS-universal.pkg"
   name "AudioGridder Plugin"
   desc "VST2/VST3/AU/AAX DSP Server Plugin"
   homepage "https://audiogridder.com/"
@@ -15,9 +12,14 @@ cask "audiogridder-plugin" do
     regex(/(\d+(?:\.\d+)+)/i)
   end
 
-  pkg "AudioGridderPlugin_#{version}_macOS-#{arch}.pkg"
+  pkg "AudioGridderPlugin_#{version}_macOS-universal.pkg"
 
   uninstall pkgutil: [
+    "com.e47.audiogridder.aax",
+    "com.e47.audiogridder.au",
+    "com.e47.audiogridder.plugintray",
+    "com.e47.audiogridder.vst",
+    "com.e47.audiogridder.vst3",
     "com.e47.pkg.aax",
     "com.e47.pkg.au",
     "com.e47.pkg.vst",
@@ -27,9 +29,11 @@ cask "audiogridder-plugin" do
   zap trash: [
         "~/.audiogridder/audiogridder.winpos",
         "~/.audiogridder/audiogridderplugin.cfg",
+        "~/.audiogridder/audiogridderplugintray.cfg",
         "~/Library/Logs/AudioGridder/Fx",
         "~/Library/Logs/AudioGridder/Instrument",
         "~/Library/Logs/AudioGridder/Midi",
+        "~/Library/Logs/AudioGridder/Tray",
       ],
       rmdir: [
         "~/.audiogridder",

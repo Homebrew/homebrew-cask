@@ -1,16 +1,16 @@
 cask "nordlocker" do
-  version "4.2.0,169"
-  sha256 "e10449cd70a8457e6deec61d06a4f109d428c7f71c9c52e1caf288c23e880677"
+  version "4.4.0"
+  sha256 "f86595d7e1b6fa554361895e08771d0e0dce719eba2c580e906e286c0b23116d"
 
-  url "https://downloads.nordcdn.com/apps/macos/generic/NordLocker/#{version.csv.first}/NordLocker.pkg",
-      verified: "https://downloads.nordcdn.com/"
+  url "https://downloads.nordcdn.com/apps/macos/generic/NordLocker/#{version}/NordLocker.pkg",
+      verified: "downloads.nordcdn.com/apps/macos/generic/NordLocker/"
   name "NordLocker"
   desc "Store and sync files securely"
   homepage "https://nordlocker.com/"
 
   livecheck do
     url "https://downloads.nordcdn.com/apps/macos/generic/NordLocker/latest/update_pkg.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
@@ -23,8 +23,8 @@ cask "nordlocker" do
               "com.nordlocker.macos.launcher",
             ],
             launchctl:  [
-              "com.nordlocker.nordfs.Mounter.Helper",
               "com.nordlocker.macos.launcher",
+              "com.nordlocker.nordfs.Mounter.Helper",
             ],
             delete:     "/Library/PrivilegedHelperTools/com.nordlocker.nordfs.Mounter.Helper",
             login_item: "NordLocker",

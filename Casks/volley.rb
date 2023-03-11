@@ -1,6 +1,6 @@
 cask "volley" do
-  version "1.2.0"
-  sha256 "745ef76b1c867054917018826ceb3215e74cdf7678c524fae262718c53a6b1b1"
+  version "1.3.1"
+  sha256 "bbc2c8652d89869a48a67b3e3d9b65bf7fd00a5a5919f706dcb00c7b2507bc3c"
 
   url "https://s3.amazonaws.com/pieces.volley.app/downloads/Volley-#{version}.dmg",
       verified: "s3.amazonaws.com/pieces.volley.app/"

@@ -77,8 +77,8 @@ cask "cocktail" do
     end
   end
   on_ventura :or_newer do
-    version "16.3"
-    sha256 "9b0e4afdc9f5ab9184f32bb2e56775492b83d5b9434547493b5732543319c6fc"
+    version "16.3.1"
+    sha256 "b05f6dffd2aede9ee32fc914f6c234caba4cf6be299f8bf9f40ee92087d08480"
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}VE.dmg"
 

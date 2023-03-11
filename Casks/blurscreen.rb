@@ -26,10 +26,10 @@ cask "blurscreen" do
     ohai "Attempting to close BlurScreen.app to avoid unwanted user intervention" unless retries < 3
     return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/BlurScreen.app"]
 
-    rescue RuntimeError
-      sleep 1
-      retry unless (retries -= 1).zero?
-      opoo "Unable to forcibly close BlurScreen.app"
+  rescue RuntimeError
+    sleep 1
+    retry unless (retries -= 1).zero?
+    opoo "Unable to forcibly close BlurScreen.app"
   end
 
   uninstall quit:    "com.sanskar.blurscreen",

@@ -2,9 +2,9 @@ cask "fleet" do
   arch arm: "aarch64", intel: "x64"
   arch_suffix = on_arch_conditional arm: "-aarch64"
 
-  version "1.14.78"
-  sha256 arm:   "593fe65fde8a6cb6a5b880b8fc132d18fb146cec356fd3a887690db49e7bb8ab",
-         intel: "eea429104e309eb2853039df5b80df31d0fcdeeadee88cf7a54c2e62a6d83347"
+  version "1.15.69"
+  sha256 arm:   "e4a306a798438c541897412399a2f636e3aff5ff3b7eef04ffee9c186b46ae5c",
+         intel: "71b97e5a93a0768417b7b5c7107625ac0383935e52df1ff7492af745c158123a"
 
   url "https://download.jetbrains.com/fleet/installers/macos_#{arch}/Fleet-#{version}#{arch_suffix}.dmg"
   name "Fleet"
@@ -20,12 +20,12 @@ cask "fleet" do
     end
   end
 
-  auto_updates true
   depends_on macos: ">= :high_sierra"
 
   app "Fleet.app"
 
   zap trash: [
+    "~/.fleet",
     "~/Library/Application Support/JetBrains/Fleet",
     "~/Library/Caches/JetBrains/Fleet",
     "~/Library/Logs/JetBrains/Fleet",

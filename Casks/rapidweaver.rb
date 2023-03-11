@@ -1,6 +1,6 @@
 cask "rapidweaver" do
-  version "9.0.0,21034"
-  sha256 "d097b873da4f8b09d500a9d200b1a1b8f4d36334264379435ad52cfd49680917"
+  version "9.1.0,21042"
+  sha256 "db5b0489a343a7fbd59870abe8ca2bbf2abf2a724abca669ca9014515664b9d0"
 
   url "https://dl.devant.io/v1/3c53887f-427a-4af7-9144-ee16178c62f4/#{version.csv.second}/RapidWeaver.zip",
       verified: "dl.devant.io/v1/3c53887f-427a-4af7-9144-ee16178c62f4/"

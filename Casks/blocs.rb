@@ -1,5 +1,5 @@
 cask "blocs" do
-  version "5.0.5,506"
+  version "5.0.6"
   sha256 :no_check
 
   url "https://blocsapp.com/download/Blocs.zip"
@@ -9,7 +9,7 @@ cask "blocs" do
 
   livecheck do
     url "https://blocsapp.com/update/v#{version.major}/info.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

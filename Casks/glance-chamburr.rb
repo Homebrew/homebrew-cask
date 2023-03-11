@@ -1,6 +1,6 @@
 cask "glance-chamburr" do
-  version "1.4.2"
-  sha256 "cfe1577d10a58525ef40db69e2cac6ad6397d5e0540b74ca0d9bdc71361dccdf"
+  version "1.5.0"
+  sha256 "26d3f18c332a8be6ab4c9dda513348c036d438bf676e76d3d4e4c6ef28137388"
 
   url "https://github.com/chamburr/glance/releases/download/v#{version}/Glance-#{version}.dmg"
   name "Glance"

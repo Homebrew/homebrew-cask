@@ -1,6 +1,6 @@
 cask "tuple" do
-  version "0.99.8,2023-01-30,29515be42"
-  sha256 "d131cb340f6a881b0582c5474a3f4245a864dc5bf9fde50e20960bbaf46e5fd3"
+  version "0.99.10,2023-02-15,6d3448b75"
+  sha256 "9b9b0b4ab49802d6f20ee4cd07d7b7f406bb78dc98d1eaac1a35dbc4f578bd55"
 
   url "https://d32ifkf9k9ezcg.cloudfront.net/production/sparkle/tuple-#{version.tr(",", "-")}.zip",
       verified: "d32ifkf9k9ezcg.cloudfront.net/"

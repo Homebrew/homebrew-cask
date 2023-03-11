@@ -16,6 +16,11 @@ cask "kicad" do
   depends_on macos: ">= :catalina"
 
   suite "KiCad"
+  binary "KiCad/KiCad.app/Contents/MacOS/dxf2idf"
+  binary "KiCad/KiCad.app/Contents/MacOS/idf2vrml"
+  binary "KiCad/KiCad.app/Contents/MacOS/idfcyl"
+  binary "KiCad/KiCad.app/Contents/MacOS/idfrect"
+  binary "KiCad/KiCad.app/Contents/MacOS/kicad-cli"
   artifact "demos", target: "/Library/Application Support/kicad/demos"
 
   zap trash: [

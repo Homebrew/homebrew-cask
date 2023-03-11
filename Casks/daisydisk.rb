@@ -2,7 +2,7 @@ cask "daisydisk" do
   version "4.24"
   sha256 :no_check
 
-  url "https://www.daisydiskapp.com/downloads/DaisyDisk.zip"
+  url "https://daisydiskapp.com/download/DaisyDisk.zip"
   name "DaisyDisk"
   desc "Disk space visualizer"
   homepage "https://daisydiskapp.com/"

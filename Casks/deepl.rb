@@ -5,8 +5,8 @@ cask "deepl" do
 
     livecheck do
       url "https://appdownload.deepl.com/macos/update.json"
-      strategy :page_match do |page|
-        JSON.parse(page)["currentRelease"]
+      strategy :json do |json|
+        json["currentRelease"]
       end
     end
   end
@@ -16,8 +16,8 @@ cask "deepl" do
 
     livecheck do
       url "https://appdownload.deepl.com/macos/bigsur/update.json"
-      strategy :page_match do |page|
-        JSON.parse(page)["currentRelease"]
+      strategy :json do |json|
+        json["currentRelease"]
       end
     end
   end

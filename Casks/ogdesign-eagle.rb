@@ -1,14 +1,15 @@
 cask "ogdesign-eagle" do
   arch arm: "M1-"
 
-  version "3.0,32"
-  sha256 arm:   "7f8569b1898f919d16b9f8dc34e6921225074f2318a07c8f1e96c2078f88855a",
-         intel: "ee2d8f8f8c75e737013c66874c805b95781d1ce507a1cc075be030fc05e261f1"
+  version "3.0,38"
+  sha256 arm:   "9815737ceb97516436141abbcd3e27befaae99ab83ae8d5b816e03c6de8edc98",
+         intel: "60fd04f4b523fcbbe3dcb7e812184b837f8a263c75dd47268a20f95c0b18b66d"
 
-  url "https://r2-app.eagle.cool/releases/Eagle-#{version.csv.first}-#{arch}build#{version.csv.second}.dmg"
+  url "https://eaglefile.oss-cn-shenzhen.aliyuncs.com/releases/Eagle-#{version.csv.first}-#{arch}build#{version.csv.second}.dmg",
+      verified: "eaglefile.oss-cn-shenzhen.aliyuncs.com/releases/"
   name "Eagle"
   desc "Organize all your reference images in one place"
-  homepage "https://eagle.cool/macOS"
+  homepage "https://eagle.cool/"
 
   livecheck do
     url "https://eagle.cool/check-for-update"

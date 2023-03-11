@@ -1,6 +1,6 @@
 cask "texworks" do
-  version "0.6.7,202202261118,23c4c74"
-  sha256 "b802c24a4a3435f704ffcca58b89df175d0fa90e4fea62be2731a489dcf32649"
+  version "0.6.8,202302181247,6b1c6ab"
+  sha256 "9c7585bb2dc3ecf7f190d1af09d063801f912d7be8825e503bd11d69f2f3081e"
 
   url "https://github.com/TeXworks/texworks/releases/download/release-#{version.csv.first}/TeXworks-macos10.15-#{version.csv.first}-#{version.csv.second}-git_#{version.csv.third}.dmg",
       verified: "github.com/TeXworks/texworks/"
@@ -29,4 +29,6 @@ cask "texworks" do
   depends_on macos: ">= :catalina"
 
   app "TeXworks.app"
+
+  zap trash: "~/Library/Preferences/org.tug.TeXworks.plist"
 end

@@ -1,9 +1,9 @@
 cask "ideamaker" do
   arch arm: "-arm64"
 
-  version "4.3.1.6452"
-  sha256 arm:   "2B40ADC5B8E4AB372D560E32F796C8B2931545E4D905B51DE7B5F7AF96DFB148",
-         intel: "A26C935CEAB65E44DF2FA15D1667E6E2E09006ACF7087A9849D2BB6CEC31E3C0"
+  version "4.3.2.6470"
+  sha256 arm:   "2d2646b5b268dc5b5f1e48811e315c96d1444b278334710a0df73ccdded7c3a5",
+         intel: "1b38d2b3899c6c5bd09fcdab1f1db382f7fa28b0cc884374d7d06b6298a5fc23"
 
   url "https://download.raise3d.com/ideamaker/release/#{version.major_minor_patch}/install_ideaMaker_#{version}#{arch}.dmg"
   name "ideaMaker"

@@ -36,9 +36,9 @@ cask "microsoft-outlook" do
   end
 
   auto_updates true
-  conflicts_with cask: %w[
-    microsoft-office
-    microsoft-office-businesspro
+  conflicts_with cask: [
+    "microsoft-office",
+    "microsoft-office-businesspro",
   ]
   depends_on cask: "microsoft-auto-update"
 
