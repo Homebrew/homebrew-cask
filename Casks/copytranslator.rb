@@ -10,8 +10,7 @@ cask "copytranslator" do
 
   livecheck do
     url "https://copytranslator.github.io/download/mac.html"
-    strategy :page_match
-    regex(%r{href=.*?/copytranslator[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    strategy :sparkle
   end
 
   depends_on macos: ">= :sierra"
