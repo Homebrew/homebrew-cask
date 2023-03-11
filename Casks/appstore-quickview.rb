@@ -4,6 +4,7 @@ cask "appstore-quickview" do
 
   url "https://www.marcmoini.com/App...StoreQuickview.zip"
   name "App...Store Quickview"
+  desc "Quickview for the App Store"
   homepage "https://www.marcmoini.com/aq_en.html"
 
   livecheck do
