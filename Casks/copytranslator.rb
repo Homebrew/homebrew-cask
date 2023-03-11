@@ -8,6 +8,12 @@ cask "copytranslator" do
   desc "Tool that translates text in real-time while copying"
   homepage "https://copytranslator.github.io/"
 
+  livecheck do
+    url "https://copytranslator.github.io/download/mac.html"
+    strategy :page_match
+    regex(%r{href=.*?/copytranslator[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+  end
+
   depends_on macos: ">= :sierra"
 
   app "copytranslator.app"
