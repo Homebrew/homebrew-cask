@@ -8,6 +8,11 @@ cask "vk-messenger" do
   desc "Messenger app"
   homepage "https://vk.com/messenger"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "VK Messenger.app"
 
   zap trash: [
