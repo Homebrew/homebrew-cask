@@ -15,6 +15,4 @@ cask "presentation" do
   pkg "osx-presentation-#{version}.pkg"
 
   uninstall pkgutil: "fr.imag.iihm.blanch.osx-presentation"
-
-  zap trash: "~/Library/Saved Application State/SoftMaker.PresentationsFree2021.savedState"
 end
