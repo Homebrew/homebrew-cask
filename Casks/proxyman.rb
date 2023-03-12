@@ -4,7 +4,7 @@ cask "proxyman" do
 
   url "https://download.proxyman.io/#{version.csv.second}/Proxyman_#{version.csv.first}.dmg"
   name "Proxyman"
-  desc "Modern and intuitive HTTP Debugging Proxy app"
+  desc "HTTP debugging proxy app"
   homepage "https://proxyman.io/"
 
   livecheck do
@@ -36,12 +36,12 @@ cask "proxyman" do
     "~/.proxyman*",
     "~/Library/Application Support/com.proxyman",
     "~/Library/Application Support/com.proxyman.NSProxy",
-    "~/Library/Caches/Proxyman",
     "~/Library/Caches/com.proxyman.NSProxy",
+    "~/Library/Caches/Proxyman",
     "~/Library/Cookies/com.proxyman.binarycookies",
     "~/Library/Cookies/com.proxyman.NSProxy.binarycookies",
-    "~/Library/Preferences/com.proxyman.plist",
     "~/Library/Preferences/com.proxyman.NSProxy.plist",
+    "~/Library/Preferences/com.proxyman.plist",
     "~/Library/Saved Application State/com.proxyman.NSProxy.savedState",
   ]
 end
