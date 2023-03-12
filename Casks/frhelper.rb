@@ -1,8 +1,8 @@
 cask "frhelper" do
-  version "4.3.0,2023-02-13"
+  version "4.3.0"
   sha256 "fc5b9336231c41a44197389dcff32c9ebcffc1a5f6f902b711f79dda173c42c9"
 
-  url "https://static.frdic.com/pkg/fhmac.dmg?v=#{version.csv.second}",
+  url "https://static.frdic.com/pkg/fhmac.dmg",
       verified:   "static.frdic.com/",
       user_agent: :fake
   name "Frhelper"
@@ -12,9 +12,7 @@ cask "frhelper" do
 
   livecheck do
     url "https://www.eudic.net/update/frhelper_mac.xml"
-    strategy :sparkle do |items|
-      items.map { |item| "#{item.short_version},#{item.pub_date.strftime("%Y-%m-%d")}" }
-    end
+    strategy :sparkle, &:short_version
   end
 
   app "Frhelper.app"
