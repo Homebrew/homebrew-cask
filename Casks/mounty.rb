@@ -8,8 +8,11 @@ cask "mounty" do
     end
   end
   on_big_sur :or_newer do
-    version "1.16"
-    sha256 "ec7b255133e7c613578f078dce0d5c0ea09ead4f73ad82603d683be3be4b83cb"
+    version "2.0"
+    sha256 "52bfb90e54368c62ad6fb980af610c6b30094426bbd22853265a8788e7e4e8eb"
+
+    depends_on cask: "macfuse"
+    depends_on formula: "ntfs-3g-mac"
 
     livecheck do
       url :homepage
