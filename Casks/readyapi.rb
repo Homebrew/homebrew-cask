@@ -6,14 +6,14 @@ cask "readyapi" do
          intel: "a2965e93e23872dded3bb2995f5d4ad0c29777742efd3d6b597bc15ae7a2c797"
 
   url "https://dl.eviware.com/ready-api/#{version}/ReadyAPI-#{arch}-#{version}.dmg",
-      verified: "https://dl.eviware.com/ready-api/"
+      verified: "dl.eviware.com/ready-api/"
   name "ReadyAPI Desktop"
   desc "Automated API testing platform"
   homepage "https://smartbear.com/product/ready-api/overview/"
 
   livecheck do
     url "https://support.smartbear.com/readyapi/docs/general-info/whats-new.html"
-    regex(/ReadyAPI\s(\d+(?:\.\d+)+)/i)
+    regex(/(\d+(?:\.\d+)+)\s\(latest\sversion\)/i)
   end
 
   installer script: {
