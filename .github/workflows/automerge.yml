@@ -1,0 +1,32 @@
+name: Automerge
+
+on:
+  schedule:
+    - cron: 0 * * * *
+  pull_request_target:
+    types:
+      - opened
+      - synchronized
+      - reopened
+      - edited
+      - labeled
+      - unlabeled
+      - ready_for_review
+
+concurrency:
+  group: automerge
+
+permissions: {}
+
+jobs:
+  automerge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: reitermarkus/automerge@425ebea2b423fd8312f38b10b54cbc00a375b12a
+        with:
+          token: ${{secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN}}
+          merge-method: squash
+          do-not-merge-labels: automerge-skip,do not merge
+          required-labels: bump-cask-pr
+          pull-request-author-associations: MEMBER,OWNER
+          dry-run: true
