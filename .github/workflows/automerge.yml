@@ -1,4 +1,4 @@
-name: Automerge
+name: Enable auto-merge
 
 on:
   schedule:
@@ -22,10 +22,12 @@ jobs:
   automerge:
     runs-on: ubuntu-latest
     steps:
-      - uses: reitermarkus/automerge@425ebea2b423fd8312f38b10b54cbc00a375b12a
+      - uses: reitermarkus/automerge@c4674ad9c3cdb43136d8f96d69ae7444dd74acb0
         with:
           token: ${{secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN}}
           merge-method: squash
+          squash-commit-title: ${pull_request.title} (#${pull_request.number})
+          squash-commit-message: '\n'
           do-not-merge-labels: automerge-skip,do not merge
           required-labels: bump-cask-pr
           pull-request-author-associations: MEMBER,OWNER
