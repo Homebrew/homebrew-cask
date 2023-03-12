@@ -3,9 +3,9 @@ cask "readyapi" do
   sha256 "4cc64f880880b822734b5da80a0c708f936f0eb1ea097f8b108b5d7583cdef4a"
 
   url "https://dl.eviware.com/ready-api/#{version}/ReadyAPI-#{version}.dmg",
-      verified: "dl.eviware.com/ready-api"
+      verified: "dl.eviware.com/ready-api/"
   name "ReadyAPI Desktop"
-  desc "Automated API Testing Platform"
+  desc "Automated API testing platform"
   homepage "https://smartbear.com/product/ready-api/overview/"
 
   installer script: {
