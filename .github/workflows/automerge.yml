@@ -20,6 +20,7 @@ permissions: {}
 
 jobs:
   automerge:
+    if: startsWith(github.repository, 'Homebrew/')
     runs-on: ubuntu-latest
     steps:
       - uses: reitermarkus/automerge@c4674ad9c3cdb43136d8f96d69ae7444dd74acb0
