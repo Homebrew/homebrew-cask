@@ -7,5 +7,10 @@ cask "sneek" do
   name "Sneek"
   homepage "https://sneek.io/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Sneek.app"
 end
