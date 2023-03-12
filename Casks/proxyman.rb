@@ -4,7 +4,7 @@ cask "proxyman" do
 
   url "https://download.proxyman.io/#{version.csv.second}/Proxyman_#{version.csv.first}.dmg"
   name "Proxyman"
-  desc "HTTP debugging proxy app"
+  desc "HTTP debugging proxy"
   homepage "https://proxyman.io/"
 
   livecheck do
