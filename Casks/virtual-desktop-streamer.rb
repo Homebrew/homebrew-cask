@@ -1,5 +1,5 @@
 cask "virtual-desktop-streamer" do
-  version "1.25.10"
+  version "1.26.4"
   sha256 :no_check
 
   url "https://download.vrdesktop.net/files/VirtualDesktop.Streamer.Setup.dmg"
