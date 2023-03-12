@@ -6,7 +6,7 @@ cask "vitalsource-bookshelf" do
       verified: "downloads.vitalbook.com/vsti/bookshelf/"
   name "VitalSource Bookshelf"
   desc "Access etextbooks"
-  homepage "https://www.vitalsource.com/bookshelf-features"
+  homepage "https://support.vitalsource.com/hc/en-gb/p/download"
 
   livecheck do
     skip "No version information available"
