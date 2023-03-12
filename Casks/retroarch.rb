@@ -18,7 +18,7 @@ cask "retroarch" do
 
   zap trash: [
     "~/Documents/RetroArch/",
-    "~/Library/Saved Application State/com.libretro.RetroArch.savedState",
     "~/Library/Application Support/RetroArch",
+    "~/Library/Saved Application State/com.libretro.RetroArch.savedState",
   ]
 end
