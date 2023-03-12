@@ -31,4 +31,3 @@ jobs:
           do-not-merge-labels: automerge-skip,do not merge
           required-labels: bump-cask-pr
           pull-request-author-associations: MEMBER,OWNER
-          dry-run: true
