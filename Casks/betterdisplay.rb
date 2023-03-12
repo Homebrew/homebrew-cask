@@ -1,6 +1,6 @@
 cask "betterdisplay" do
-  version "1.4.3"
-  sha256 "6e2a3b23a1d7c84a1788bffb51ac67c8d566f777bf4cee56244b6ffbedd350ea"
+  version "1.4.6"
+  sha256 "501203d2b655a9e5f07f2bfb27f4b22d0e64f166e7a84f45ee550068e7612c29"
 
   url "https://github.com/waydabber/BetterDisplay/releases/download/v#{version}/BetterDisplay-v#{version}.dmg",
       verified: "github.com/waydabber/BetterDisplay"
