@@ -19,7 +19,7 @@ jobs:
   generate-matrix:
     outputs:
       matrix: ${{ steps.generate-matrix.outputs.matrix }}
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - name: Set up Homebrew
         id: set-up-homebrew
@@ -79,7 +79,7 @@ jobs:
 
           if ! rm /usr/local/share/man/man1/al.1 || \
              ! sudo rm /etc/paths.d/mono-commands || \
-             ! sudo rm -r /Library/Frameworks/Mono.framework || \
+             ! sudo rm -r /Library/Frameworks/Mono.framework || \
              ! sudo pkgutil --forget com.xamarin.mono-MDK.pkg; then
             echo '::warning::Uninstalling Mono is no longer necessary.'
           fi
@@ -100,39 +100,51 @@ jobs:
         if: runner.os == 'macOS'
 
       - name: Cache Homebrew Gems
+        id: cache
         uses: actions/cache@v3
         with:
           path: ${{ steps.set-up-homebrew.outputs.gems-path }}
-          key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
-          restore-keys: ${{ runner.os }}-rubygems-
+          key: ${{ matrix.runner }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
+          restore-keys: ${{ matrix.runner }}-rubygems-
 
       - name: Install Homebrew Gems
         id: gems
         run: brew install-bundler-gems
+        if: steps.cache.outputs.cache-hit != 'true'
 
       - name: Run brew readall ${{ matrix.tap }}
         id: readall
         run: brew readall '${{ matrix.tap }}'
-        if: always() && steps.gems.outcome == 'success'
+        if: >
+          always() &&
+          contains(fromJSON('["success", "skipped"]'), steps.gems.outcome) &&
+          !matrix.skip_readall
 
       - name: Run brew style ${{ matrix.tap }}
         run: brew style '${{ matrix.tap }}'
-        if: always() && steps.readall.outcome == 'success' && !matrix.cask
+        if: >
+          always() &&
+          contains(fromJSON('["success", "skipped"]'), steps.readall.outcome) &&
+          !matrix.cask
 
       - name: Run brew fetch --cask ${{ matrix.cask.token }}
         id: fetch
         run: |
           brew fetch --cask --retry --force '${{ matrix.cask.path }}'
         timeout-minutes: 30
-        if: always() && steps.readall.outcome == 'success' && matrix.cask
+        if: >
+          always() &&
+          contains(fromJSON('["success", "skipped"]'), steps.readall.outcome) &&
+          matrix.cask
 
       - name: Run brew audit --cask${{ (matrix.cask && ' ') || ' --tap ' }}${{ matrix.cask.token || matrix.tap }}
         id: audit
         run: |
-          brew audit --cask ${{ join(matrix.audit_args, ' ') }}${{ (matrix.cask && ' --signing ') || ' --tap ' }}'${{ matrix.cask.token || matrix.tap }}'
+          brew audit --cask ${{ join(matrix.audit_args, ' ') }}${{ (matrix.cask && ' ') || ' --tap ' }}'${{ matrix.cask.token || matrix.tap }}'
         timeout-minutes: 30
         if: >
-          always() && steps.readall.outcome == 'success' &&
+          always() &&
+          contains(fromJSON('["success", "skipped"]'), steps.readall.outcome) &&
           (!matrix.cask || steps.fetch.outcome == 'success') &&
           !matrix.skip_audit
 

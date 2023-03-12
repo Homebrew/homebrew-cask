@@ -112,6 +112,8 @@ module CiMatrix
       audit_args = ["--online"]
       audit_args << "--new-cask" if changed_files[:added_files].include?(path)
 
+      audit_args << "--signing"
+
       audit_exceptions = []
 
       # TODO: Replace with `except`.
@@ -144,6 +146,7 @@ module CiMatrix
           },
           audit_args:   audit_args,
           skip_install: labels.include?("ci-skip-install"),
+          skip_readall: false,
           runner:       runner[:name],
         }
       end

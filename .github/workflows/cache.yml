@@ -19,10 +19,11 @@ jobs:
     if: startsWith(github.repository, 'Homebrew/')
     strategy:
       matrix:
-        os:
-          - macos-11.0
+        runner:
+          - macos-11
+          - macos-12
           - ubuntu-latest
-    runs-on: ${{ matrix.os }}
+    runs-on: ${{ matrix.runner }}
     steps:
       - name: Set up Homebrew
         id: set-up-homebrew
@@ -35,8 +36,8 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ${{ steps.set-up-homebrew.outputs.gems-path }}
-          key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
-          restore-keys: ${{ runner.os }}-rubygems-
+          key: ${{ matrix.runner }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
+          restore-keys: ${{ matrix.runner }}-rubygems-
 
       - name: Install Homebrew Gems
         id: gems
