@@ -7,5 +7,10 @@ cask "emacsclient" do
   desc "Chrome/Firefox extension that facilitates org-capture in emacs"
   homepage "https://github.com/sprig/org-capture-extension"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "EmacsClient.app"
 end

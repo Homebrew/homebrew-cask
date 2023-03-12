@@ -6,6 +6,11 @@ cask "private-eye" do
   name "Private Eye"
   homepage "https://radiosilenceapp.com/private-eye"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   pkg "Private_Eye_for_OS_X_10.9_and_later.pkg"
 
   # We intentionally unload the kext twice as a workaround

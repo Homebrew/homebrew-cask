@@ -8,5 +8,10 @@ cask "zoho-docs" do
   desc "Sync files to/from Zoho Docs"
   homepage "https://www.zoho.com/docs/desktop-sync.html"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Zoho Docs.app"
 end
