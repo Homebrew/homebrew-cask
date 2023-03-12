@@ -15,4 +15,10 @@ cask "retroarch" do
   conflicts_with cask: "retroarch-metal"
 
   app "RetroArch.app"
+
+  zap trash: [
+    "~/Documents/RetroArch/",
+    "~/Library/Saved Application State/com.libretro.RetroArch.savedState",
+    "~/Library/Application Support/RetroArch",
+  ]
 end
