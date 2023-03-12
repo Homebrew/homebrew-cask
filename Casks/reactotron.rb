@@ -7,6 +7,11 @@ cask "reactotron" do
   desc "Desktop app for inspecting React JS and React Native projects"
   homepage "https://github.com/infinitered/reactotron"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
 
   app "Reactotron.app"
