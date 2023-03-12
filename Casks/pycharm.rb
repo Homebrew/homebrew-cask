@@ -3,7 +3,7 @@ cask "pycharm" do
 
   version "2022.3.3,223.8836.34"
   sha256 arm:   "d53b7ea764cd89cea81ebefe630a151627d4d71657868bd35296fd994524105a",
-         intel: "bfdddcdcfb92bc14f4ae1cbf07143e19dcc185b28ee30e501ff8f9b2dd82728d"
+         intel: "290ab690c193563e0b2afc88e9d01feca319e2bc366a3677c8870ac8ba8d7e6f"
 
   url "https://download.jetbrains.com/python/pycharm-professional-#{version.csv.first}#{arch}.dmg"
   name "PyCharm"
