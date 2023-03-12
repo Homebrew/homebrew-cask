@@ -34,4 +34,10 @@ cask "tiled" do
       exec '#{appdir}/Tiled.app/Contents/MacOS/Tiled' "$@"
     EOS
   end
+
+  zap trash: [
+    "~/Library/Application Support/Tiled",
+    "~/Library/Preferences/Tiled",
+    "~/Library/Preferences/org.mapeditor.Tiled.plist",
+  ]
 end
