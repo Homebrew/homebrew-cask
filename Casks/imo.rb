@@ -5,6 +5,7 @@ cask "imo" do
   url "https://static-web.imoim.net/as/indigo-static/macos/#{version}/Imo.dmg",
       verified: "static-web.imoim.net/as/indigo-static/macos/"
   name "Imo Messanger"
+  desc "Video calls and chat"
   homepage "https://imo.im/"
 
   app "Imo.app"
