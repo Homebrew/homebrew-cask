@@ -1,6 +1,6 @@
 cask "retroarch" do
-  version "1.14.0"
-  sha256 "543740daefdbc28e2378ca32551a4bbd3f5c9f0d99108192c557875f5cfaf195"
+  version "1.15.0"
+  sha256 "b171b3fe6284671a8b9b04cdad82cae6e14eee84faa63be160f754f175fe179c"
 
   url "https://buildbot.libretro.com/stable/#{version}/apple/osx/x86_64/RetroArch.dmg"
   name "RetroArch"
@@ -15,4 +15,10 @@ cask "retroarch" do
   conflicts_with cask: "retroarch-metal"
 
   app "RetroArch.app"
+
+  zap trash: [
+    "~/Documents/RetroArch/",
+    "~/Library/Application Support/RetroArch",
+    "~/Library/Saved Application State/com.libretro.RetroArch.savedState",
+  ]
 end

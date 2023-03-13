@@ -44,3 +44,7 @@ jobs:
             - label: appcast migration needed
               path: Casks/.+
               content: \n  appcast .+\n
+
+            - label: missing zap
+              path: Casks/.+
+              missing_content: zap .+\n

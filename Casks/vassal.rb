@@ -1,9 +1,9 @@
 cask "vassal" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "3.6.11"
-  sha256 arm:   "b7f419d922ea3a99b6c3188bcaf0a553923d085db73a481393a19eaf7fd4fd82",
-         intel: "35cd3e3e936ff59330e956ac8041b8096a5d1fba8436b0bcb434ca0adfa769bb"
+  version "3.6.14"
+  sha256 arm:   "c391f17bf0bb30d9eea3f0d86f8766c9471fbb34e3693f8699d8b164e452f557",
+         intel: "f74bae876fcc7f36b18fac72303751de31d625f6c73e0e37dbe2e7722cac58f7"
 
   url "https://github.com/vassalengine/vassal/releases/download/#{version}/VASSAL-#{version}-macos-#{arch}.dmg",
       verified: "github.com/vassalengine/vassal/"

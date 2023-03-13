@@ -1,6 +1,6 @@
 cask "tableau" do
-  version "2022.4.0"
-  sha256 "d94206594ccd9851cd7eeb62463e6040646869257aecdebf6856cbe84fb28ff2"
+  version "2022.4.1"
+  sha256 "66ca8360954ad637de76c412647619f745a1001cabce9386af2e08494672226b"
 
   url "https://downloads.tableau.com/tssoftware/TableauDesktop-#{version.dots_to_hyphens}.dmg"
   name "Tableau Desktop"
@@ -14,7 +14,7 @@ cask "tableau" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :mojave"
 
   pkg "Tableau Desktop.pkg"
 

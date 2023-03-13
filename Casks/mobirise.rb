@@ -1,5 +1,5 @@
 cask "mobirise" do
-  version "5.7.0"
+  version "5.8.0"
   sha256 :no_check
 
   url "https://download.mobirise.com/MobiriseSetup.dmg"

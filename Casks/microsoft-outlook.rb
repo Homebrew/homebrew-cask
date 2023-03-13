@@ -20,8 +20,8 @@ cask "microsoft-outlook" do
     sha256 "bddede85956713be21fdb5ab72be07ecefd05552752e8e60c649e6a15fd0a2c2"
   end
   on_big_sur :or_newer do
-    version "16.69.23010700"
-    sha256 "a4bb58f81773a7fd502b240ff94ece1e2c546f2ad45e40bd253dddbfb99b805b"
+    version "16.70.23021201"
+    sha256 "338601203bd1705dace7c9b67bc45f077f899a4b8e6e53964a4dc0fbda9a4525"
   end
 
   url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Outlook_#{version}_Installer.pkg",
@@ -36,7 +36,10 @@ cask "microsoft-outlook" do
   end
 
   auto_updates true
-  conflicts_with cask: "microsoft-office"
+  conflicts_with cask: [
+    "microsoft-office",
+    "microsoft-office-businesspro",
+  ]
   depends_on cask: "microsoft-auto-update"
 
   pkg "Microsoft_Outlook_#{version}_Installer.pkg",

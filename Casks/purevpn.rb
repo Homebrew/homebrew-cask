@@ -1,5 +1,5 @@
 cask "purevpn" do
-  version "9.3.0,6"
+  version "9.5.0,5"
   sha256 :no_check
 
   url "https://purevpn-dialer-assets.s3.amazonaws.com/mac-2.0/packages/Production/PureVPN.pkg",
@@ -17,4 +17,13 @@ cask "purevpn" do
 
   uninstall quit:    "com.purevpn.app.mac",
             pkgutil: "com.purevpn.mac.installer"
+
+  zap trash: [
+    "~/Library/Application Support/com.purevpn.app.mac",
+    "~/Library/Caches/com.purevpn.app.mac",
+    "~/Library/HTTPStorages/com.purevpn.app.mac",
+    "~/Library/HTTPStorages/com.purevpn.app.mac.binarycookies",
+    "~/Library/Preferences/com.purevpn.app.mac.plist",
+    "~/Library/Saved Application State/com.purevpn.app.mac.savedState",
+  ]
 end

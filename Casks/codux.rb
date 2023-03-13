@@ -2,12 +2,12 @@ cask "codux" do
   arch arm: "arm64", intel: "x64"
 
   on_arm do
-    version "14.2.4,e855c7_bd824fbb49d14b57b06330810e9f024d"
-    sha256 "bb725f2433c6070f6f38ba3435ec41aa6f6dd147740bda185afa0fae7d735bc4"
+    version "15.0.1,69fb62_41cf0b5ce8924a39b668e4a8ac5b0d2b"
+    sha256 "3eb53782b4927fb3a53ccc0a7060cf6278fd72f53eba981ab1adbd1b8eee584e"
   end
   on_intel do
-    version "14.2.4,e855c7_c89f5bba780e4d4197eb755459920b86"
-    sha256 "67fdb41b3b2a892c33820a6d92bdeb277c9865862719e824ce430dce56450cc4"
+    version "15.0.1,69fb62_e4820649c90740fca49ccaac57aef75e"
+    sha256 "ddcd353e359f4e98b99e5dc4be31d2dd10a73b58b870165820ac5fc9cc257595"
   end
 
   url "https://95610582-f2db-4cc9-be23-c529650d1ad9.filesusr.com/archives/#{version.csv.second}.zip?dn=Codux-#{version.csv.first}.#{arch}-dmg.zip",

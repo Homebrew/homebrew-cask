@@ -9,8 +9,8 @@ cask "audiorelay" do
 
   livecheck do
     url "https://api.audiorelay.net/Downloads"
-    strategy :page_match do |page|
-      JSON.parse(page)["macOs"]["version"]
+    strategy :json do |json|
+      json["macOs"]["version"]
     end
   end
 

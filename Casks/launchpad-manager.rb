@@ -7,6 +7,11 @@ cask "launchpad-manager" do
   desc "Tool to manage the launchpad"
   homepage "http://launchpadmanager.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Launchpad Manager.app"
 
   zap trash: [

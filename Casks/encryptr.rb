@@ -3,15 +3,10 @@ cask "encryptr" do
   sha256 :no_check
 
   url "https://spideroak.com/release/Encryptr/osx",
-      verified: "https://spideroak.com/"
+      verified: "spideroak.com/"
   name "SpiderOak Encryptr"
   desc "Zero-knowledge cloud-based password manager"
   homepage "https://spideroak.support/hc/en-us/categories/115000424503-Encryptr-Password-Manager"
-
-  livecheck do
-    url :url
-    strategy :header_match
-  end
 
   app "Encryptr.app"
 

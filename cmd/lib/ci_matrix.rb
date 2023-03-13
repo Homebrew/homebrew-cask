@@ -112,14 +112,26 @@ module CiMatrix
       audit_args = ["--online"]
       audit_args << "--new-cask" if changed_files[:added_files].include?(path)
 
+      audit_args << "--signing"
+
       audit_exceptions = []
-      audit_exceptions << "repository" if labels.include?("ci-skip-repository")
 
       # TODO: Replace with `except`.
       audit_args << if labels.include?("ci-skip-appcast")
         "--no-appcast"
       else
         "--appcast"
+      end
+
+      if labels.include?("ci-skip-livecheck")
+        audit_exceptions << ["hosting_with_livecheck", "livecheck_version", "livecheck_min_os"]
+      end
+
+      audit_exceptions << "livecheck_min_os" if labels.include?("ci-skip-livecheck-min-os")
+
+      if labels.include?("ci-skip-repository")
+        audit_exceptions << ["github_repository", "gitlab_repository",
+                             "bitbucket_repository"]
       end
 
       audit_args << "--except" << audit_exceptions.join(",") if audit_exceptions.any?
@@ -134,6 +146,7 @@ module CiMatrix
           },
           audit_args:   audit_args,
           skip_install: labels.include?("ci-skip-install"),
+          skip_readall: false,
           runner:       runner[:name],
         }
       end

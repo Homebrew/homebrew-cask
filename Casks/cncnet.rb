@@ -7,5 +7,12 @@ cask "cncnet" do
   name "CnCNet: Classic Command & Conquer"
   homepage "https://cncnet.org/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist do |item|
+      item["CnCNet459984781Wine.wineskin.prefs"].short_version
+    end
+  end
+
   app "CnCNet.app"
 end

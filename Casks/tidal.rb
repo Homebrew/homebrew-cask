@@ -12,8 +12,8 @@ cask "tidal" do
 
   livecheck do
     url "https://download.tidal.com/desktop/mac/update-#{arch}.json"
-    strategy :page_match do |page|
-      JSON.parse(page)["currentRelease"]
+    strategy :json do |json|
+      json["currentRelease"]
     end
   end
 

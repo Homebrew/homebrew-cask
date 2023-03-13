@@ -3,7 +3,7 @@ cask "snes9x" do
   sha256 "dc0fce0eb7db92e6d8827309f595a83e7fa77c84a18fe9c4df541d2dedfd7d1b"
 
   url "https://github.com/snes9xgit/snes9x/releases/download/#{version}/snes9x-#{version}-macos.zip",
-      verified: "https://github.com/snes9xgit/snes9x/"
+      verified: "github.com/snes9xgit/snes9x/"
   name "Snes9x"
   desc "Video game console emulator"
   homepage "https://www.snes9x.com/"

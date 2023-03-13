@@ -1,6 +1,6 @@
 cask "onedrive" do
-  version "23.011.0115.0004"
-  sha256 "b58c72f968dc7ba5536bac1baa19fc699eb88ec36ec81ca24607b15e89c73038"
+  version "23.023.0129.0002"
+  sha256 "64adc0c0b973f6d725cdd77c552df777130b00041baacbcd646664ddade3ec05"
 
   url "https://oneclient.sfx.ms/Mac/Installers/#{version}/universal/OneDrive.pkg",
       verified: "oneclient.sfx.ms/Mac/Installers/"
@@ -14,7 +14,10 @@ cask "onedrive" do
   end
 
   auto_updates true
-  conflicts_with cask: "microsoft-office"
+  conflicts_with cask: [
+    "microsoft-office",
+    "microsoft-office-businesspro",
+  ]
   depends_on macos: ">= :sierra"
 
   pkg "OneDrive.pkg"

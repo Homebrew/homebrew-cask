@@ -9,8 +9,8 @@ cask "gitfiend" do
 
   livecheck do
     url "https://gitfiend.com/app-info"
-    strategy :page_match do |page|
-      JSON.parse(page)["version"]
+    strategy :json do |json|
+      json["version"]
     end
   end
 

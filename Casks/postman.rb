@@ -1,9 +1,9 @@
 cask "postman" do
   arch arm: "osx_arm64", intel: "osx64"
 
-  version "10.9.4"
-  sha256 arm:   "cbf0725b051cdae08abaef4269ab124166ce24ab2274d03a8b47e82e44ec40ac",
-         intel: "51f07f27011574d4b4ea2a4ca909ac14e23d111249b6e5a2b01ed7e4d68aa175"
+  version "10.11.1"
+  sha256 arm:   "354f006cbe5a10bac84668fca9755315631b38fc977fbeecc04d8a24c376f87f",
+         intel: "27d69913549adb916fda10cc31bc1f4bee1dd8dba5a96e56fa0da49578d53ef9"
 
   url "https://dl.pstmn.io/download/version/#{version}/#{arch}",
       verified: "dl.pstmn.io/download/version/"
@@ -13,8 +13,8 @@ cask "postman" do
 
   livecheck do
     url "https://dl.pstmn.io/api/version/latest"
-    strategy :page_match do |page|
-      JSON.parse(page)["version"]
+    strategy :json do |json|
+      json["version"]
     end
   end
 

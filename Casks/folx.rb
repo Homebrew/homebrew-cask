@@ -3,7 +3,7 @@ cask "folx" do
   sha256 :no_check
 
   url "https://cdn.electronic.us/products/folx/mac/download/downloader_mac.dmg",
-      verified: "https://cdn.electronic.us/products/folx/"
+      verified: "cdn.electronic.us/products/folx/"
   name "Folx"
   desc "Download manager with a torrent client"
   homepage "https://mac.eltima.com/download-manager.html"
@@ -34,4 +34,8 @@ cask "folx" do
     "~/Library/Preferences/com.eltima.FolxAgent.plist",
     "~/Library/Saved Application State/com.eltima.Folx3.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

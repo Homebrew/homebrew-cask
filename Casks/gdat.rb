@@ -9,7 +9,7 @@ cask "gdat" do
   homepage "https://www.getgdat.com/"
 
   livecheck do
-    url "https://sites.google.com/view/genealogical-dna-analysis-tool/home/download"
+    url "https://sites.google.com/view/genealogical-dna-analysis-tool/home_1/download"
     regex(/Genealogical DNA Analysis Tool (\d+(?:.\d+)+)/i)
   end
 

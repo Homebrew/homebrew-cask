@@ -1,6 +1,6 @@
 cask "utm" do
-  version "4.1.5"
-  sha256 "60e9937f9d1452fbe1e27a169e657a5aca164ae6b4b6959380b4e0f8276bddb4"
+  version "4.1.6"
+  sha256 "774c44343f79bbf3c59ca7e880bc0edaf2e0bfeb50b9b31e6bc5d648946e645e"
 
   url "https://github.com/utmapp/UTM/releases/download/v#{version}/UTM.dmg",
       verified: "github.com/utmapp/UTM/"
@@ -22,10 +22,8 @@ cask "utm" do
   uninstall quit: "com.utmapp.UTM"
 
   zap trash: [
-    "~/Library/Application Scripts/com.utmapp.QEMUHelper",
-    "~/Library/Application Scripts/com.utmapp.UTM",
-    "~/Library/Containers/com.utmapp.QEMUHelper",
-    "~/Library/Containers/com.utmapp.UTM",
+    "~/Library/Application Scripts/*com.utmapp*",
+    "~/Library/Containers/com.utmapp*",
     "~/Library/Group Containers/*.com.utmapp.UTM",
     "~/Library/Preferences/com.utmapp.UTM.plist",
     "~/Library/Saved Application State/com.utmapp.UTM.savedState",

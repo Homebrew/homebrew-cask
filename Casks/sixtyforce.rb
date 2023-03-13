@@ -7,6 +7,11 @@ cask "sixtyforce" do
   desc "N64 emulator"
   homepage "https://sixtyforce.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "sixtyforce.app"
 
   zap trash: [

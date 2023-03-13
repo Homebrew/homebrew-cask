@@ -96,6 +96,7 @@ clean_sources () {
     /usr/bin/egrep -vi '^org\.mantle\.Mantle' |                                                              \
     /usr/bin/egrep -vi '^org\.mozilla\.(crashreporter|plugincontainer|universalchardet|updater)' |           \
     /usr/bin/egrep -vi '^org\.python\.(python|PythonLauncher|buildapplet)' |                                 \
+    /usr/bin/egrep -vi '^org\.qt-project\.Qt' |                                                              \
     /usr/bin/egrep -vi '^org\.reactivecocoa\.ReactiveCocoa' |                                                \
     /usr/bin/egrep -vi '^org\.remotesensing\.libtiff' |                                                      \
     /usr/bin/egrep -vi '^org\.vafer\.FeedbackReporter'   |                                                   \

@@ -1,5 +1,5 @@
 cask "splice" do
-  version "4.2.3"
+  version "4.2.5"
   sha256 :no_check
 
   url "https://splicedesktop.s3.amazonaws.com/darwin/stable/Splice.app.zip",
@@ -10,8 +10,8 @@ cask "splice" do
 
   livecheck do
     url "https://api.splice.com/v2/desktop/darwin/stable/latest?v=0.0.0"
-    strategy :page_match do |page|
-      JSON.parse(page)["name"]
+    strategy :json do |json|
+      json["name"]
     end
   end
 

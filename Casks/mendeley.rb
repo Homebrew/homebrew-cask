@@ -13,4 +13,12 @@ cask "mendeley" do
   end
 
   app "Mendeley Desktop.app"
+
+  zap trash: [
+    "~/Library/Application Support/Mendeley Desktop",
+    "~/Library/Application Support/Mendeley Ltd.",
+    "~/Library/Caches/Mendeley Desktop",
+    "~/Library/Preferences/com.mendeley.Mendeley Desktop.plist",
+    "~/Library/Saved Application State/com.mendeley.desktop.savedState",
+  ]
 end

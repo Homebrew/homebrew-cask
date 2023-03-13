@@ -1,6 +1,6 @@
 cask "ganache" do
-  version "2.5.4"
-  sha256 "1053a5405b8448ebbe7d2e34423e3393fbe9e3e5df7e96305eb34c41495f8ce1"
+  version "2.7.0"
+  sha256 "e5465539a85ebb869df0a5e7894445dacc8c7006b7468aed7ebb809392fbe6d5"
 
   url "https://github.com/trufflesuite/ganache-ui/releases/download/v#{version}/Ganache-#{version}-mac.dmg",
       verified: "github.com/trufflesuite/ganache-ui/"

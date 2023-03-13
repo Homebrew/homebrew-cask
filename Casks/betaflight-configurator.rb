@@ -13,4 +13,11 @@ cask "betaflight-configurator" do
   end
 
   app "Betaflight Configurator.app"
+
+  zap trash: [
+    "~/Library/Application Support/betaflight-configurator",
+    "~/Library/Caches/betaflight-configurator",
+    "~/Library/Preferences/com.nw-builder.betaflight-configurator.plist",
+    "~/Library/Saved Application State/com.nw-builder.betaflight-configurator.savedState",
+  ]
 end

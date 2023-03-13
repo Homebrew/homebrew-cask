@@ -1,6 +1,6 @@
 cask "topaz-denoise-ai" do
-  version "3.7.0"
-  sha256 "d30f98889f7f5b68141ade1a9724797352541b17dab4b968bf0e66035a6dcfda"
+  version "3.7.2"
+  sha256 "1ea955c36d8918b41c5be2d2684ccdc27ec3ae0f46834b788ccbfa7a33b30a76"
 
   url "https://downloads.topazlabs.com/deploy/TopazDeNoiseAI/#{version}/TopazDeNoiseAI-#{version}-osx-Full-Installer.dmg"
   name "Topaz DeNoise AI"
