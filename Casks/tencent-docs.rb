@@ -1,8 +1,14 @@
 cask "tencent-docs" do
   arch arm: "Arm64", intel: "X64"
 
-  version "2.4.14"
-  sha256 :no_check
+  on_arm do
+    version "2.4.14"
+    sha256 "a0c94d7aaf219c556bb5ee51f9527bfb2a90efc3ff832ddf75a480111913865b"
+  end
+  on_intel do
+    version "2.4.14"
+    sha256 "441e30fd73fee970fa4b349bcdc594b905c3073034f620a26a43aea2d5a0646e"
+  end
 
   url "https://down.qq.com/qqweb/mac_docs/MacTencentDocs#{arch}.dmg"
   name "Tencent Docs"
