@@ -8,4 +8,9 @@ cask "ariang" do
   homepage "https://github.com/mayswind/AriaNg-Native"
 
   app "AriaNg Native.app"
+
+  zap trash: [
+    "~/Library/Preferences/net.mayswind.ariang.plist",
+    "~/Library/Saved Application State/net.mayswind.ariang.savedState",
+  ]
 end
