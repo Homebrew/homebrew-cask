@@ -17,4 +17,14 @@ cask "blocs" do
   container nested: "Blocs/Blocs-#{version.major}.dmg"
 
   app "Blocs.app"
+
+  zap trash: [
+    "~/Library/Application Support/Blocs",
+    "~/Library/Application Support/Blocs 5",
+    "~/Library/Caches/com.cazoobi.Blocs-5",
+    "~/Library/HTTPStorages/com.cazoobi.Blocs-5",
+    "~/Library/HTTPStorages/com.cazoobi.Blocs-5.binarycookies",
+    "~/Library/Preferences/com.cazoobi.Blocs-5.plist",
+    "~/Library/Saved Application State/com.cazoobi.Blocs-5.savedState",
+  ]
 end
