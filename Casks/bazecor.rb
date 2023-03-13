@@ -4,8 +4,8 @@ cask "bazecor" do
 
   url "https://github.com/Dygmalab/Bazecor/releases/download/bazecor-#{version}/Bazecor-#{version}.dmg",
       verified: "github.com/Dygmalab/Bazecor"
-  name "bazecor"
-  desc "Graphical configurator for Dygma Raise"
+  name "Bazecor"
+  desc "Graphical configurator for Dygma Raise keyboards"
   homepage "https://dygma.com/pages/programmable-split-keyboard"
 
   app "Bazecor.app"
