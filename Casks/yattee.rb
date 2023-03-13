@@ -7,6 +7,11 @@ cask "yattee" do
   desc "Alternative and privacy-friendly YouTube frontend"
   homepage "https://github.com/yattee/yattee"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :big_sur"
 
   app "Yattee.app"
