@@ -13,8 +13,7 @@ cask "x-moto" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
-  # Renamed for consistency: app name is different in the Finder and in a shell.
-  app "X-Moto.app", target: "X-Moto.app"
+  app "X-Moto.app"
 
   zap trash: "~/Library/Saved Application State/net.sourceforge.xmoto.savedState"
 end
