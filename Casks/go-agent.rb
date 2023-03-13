@@ -1,11 +1,11 @@
 cask "go-agent" do
-  arch arm: "aarch64"
+  arch arm: "-aarch64"
 
   version "23.1.0,16079"
   sha256 arm:   "5e35587c2fc89135f40a5f919ee1c273e88c7be48c55735abaead34a98d7d157",
          intel: "262b9c935548c1404634226d3f839a0fab84adf1715c6917e96786d4d9c6fc61"
 
-  url "https://download.gocd.org/binaries/#{version.csv.first}-#{version.csv.second}/osx/go-agent-#{version.csv.first}-#{version.csv.second}-osx-#{arch}.zip"
+  url "https://download.gocd.org/binaries/#{version.csv.first}-#{version.csv.second}/osx/go-agent-#{version.csv.first}-#{version.csv.second}-osx#{arch}.zip"
   name "Go Agent"
   name "GoCD Agent"
   desc "Agent for the Go Continuous Delivery platform"
