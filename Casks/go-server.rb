@@ -1,8 +1,11 @@
 cask "go-server" do
-  version "23.1.0,16079"
-  sha256 "f36e5dcb5d6ec8aa58daa34055e4ecbd205d0554b33e94d1f5ec0370e0adc6a1"
+  arch arm: "aarch64"
 
-  url "https://download.gocd.io/binaries/#{version.csv.first}-#{version.csv.second}/osx/go-server-#{version.csv.first}-#{version.csv.second}-osx.zip",
+  version "23.1.0,16079"
+  sha256 arm:   "1caf1bc387d4b2333011f005eabd1d4bdc7d5228128cd434c92538ec4c43e6b3",
+         intel: "f36e5dcb5d6ec8aa58daa34055e4ecbd205d0554b33e94d1f5ec0370e0adc6a1"
+
+  url "https://download.gocd.io/binaries/#{version.csv.first}-#{version.csv.second}/osx/go-server-#{version.csv.first}-#{version.csv.second}-osx-#{arch}.zip",
       verified: "download.gocd.io/binaries/"
   name "Go Server"
   name "GoCD Server"
@@ -18,4 +21,6 @@ cask "go-server" do
   end
 
   binary "go-server-#{version.csv.first}/bin/go-server"
+
+  # No zap stanza required
 end
