@@ -20,11 +20,11 @@ cask "blocs" do
 
   zap trash: [
     "~/Library/Application Support/Blocs",
-    "~/Library/Application Support/Blocs 5",
-    "~/Library/Caches/com.cazoobi.Blocs-5",
-    "~/Library/HTTPStorages/com.cazoobi.Blocs-5",
-    "~/Library/HTTPStorages/com.cazoobi.Blocs-5.binarycookies",
-    "~/Library/Preferences/com.cazoobi.Blocs-5.plist",
-    "~/Library/Saved Application State/com.cazoobi.Blocs-5.savedState",
+    "~/Library/Application Support/Blocs *",
+    "~/Library/Caches/com.cazoobi.Blocs-*",
+    "~/Library/HTTPStorages/com.cazoobi.Blocs-*",
+    "~/Library/HTTPStorages/com.cazoobi.Blocs-*.binarycookies",
+    "~/Library/Preferences/com.cazoobi.Blocs-*.plist",
+    "~/Library/Saved Application State/com.cazoobi.Blocs-*.savedState",
   ]
 end
