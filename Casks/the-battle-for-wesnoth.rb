@@ -14,4 +14,9 @@ cask "the-battle-for-wesnoth" do
   end
 
   app "The Battle for Wesnoth.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/org.wesnoth.Wesnoth",
+    "~/Library/Containers/org.wesnoth.Wesnoth",
+  ]
 end
