@@ -23,4 +23,13 @@ cask "expressvpn" do
               sudo:       true,
             },
             pkgutil:   "com.expressvpn.ExpressVPN"
+
+  zap trash: [
+    "/Library/Application Support/com.expressvpn.ExpressVPN",
+    "/Library/LaunchDaemons/com.expressvpn.expressvpnd.plist",
+    "~/Library/Application Support/com.expressvpn.ExpressVPN",
+    "~/Library/HTTPStorages/com.expressvpn.ExpressVPN",
+    "~/Library/Logs/ExpressVPN",
+    "~/Library/Preferences/com.expressvpn.ExpressVPN.plist",
+  ]
 end
