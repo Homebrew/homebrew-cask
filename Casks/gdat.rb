@@ -10,11 +10,12 @@ cask "gdat" do
 
   livecheck do
     url "https://www.getgdat.com/home/download"
-    regex(%r{Genealogical DNA Analysis Tool (\d+(?:.\d+)+).*drive.google.com/file/d/([^/]+).*?Mac}i)
+    regex(%r{Genealogical\s+DNA\s+Analysis\s+Tool\s+(\d+r\d+).+drive\.google\.com/file/d/([^/]+).+?>\s*Mac}im)
     strategy :page_match do |page, regex|
       match = page.match(regex)
+      next if match.blank?
 
-      "#{match[1]},#{match[2]}" if match
+      "#{match[1]},#{match[2]}"
     end
   end
 
