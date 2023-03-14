@@ -12,7 +12,7 @@ cask "mounty" do
     sha256 "52bfb90e54368c62ad6fb980af610c6b30094426bbd22853265a8788e7e4e8eb"
 
     depends_on cask: "macfuse"
-    depends_on formula: "gromgit/fuse/ntfs-3g-mac"
+    caveats "Mounty Version 2 is depending on ntfs-3g-mac, you need to install this package before using Mounty.\nTo install, please issue\n\n$ brew tap gromgit/homebrew-fuse\n$ brew install ntfs-3g-mac"
 
     livecheck do
       url :homepage
