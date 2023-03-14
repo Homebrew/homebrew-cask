@@ -1,5 +1,5 @@
 cask "direqual" do
-  version "5.2,52001"
+  version "5.2,52002"
   sha256 :no_check
 
   url "https://naarakstudio.com/download/DirEqual.dmg"
