@@ -12,6 +12,7 @@ cask "mounty" do
     sha256 "52bfb90e54368c62ad6fb980af610c6b30094426bbd22853265a8788e7e4e8eb"
 
     depends_on cask: "macfuse"
+    depends_on "gromgit/fuse/ntfs-3g-mac"
 
     livecheck do
       url :homepage
