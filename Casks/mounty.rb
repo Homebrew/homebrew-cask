@@ -11,8 +11,7 @@ cask "mounty" do
     version "2.0"
     sha256 "52bfb90e54368c62ad6fb980af610c6b30094426bbd22853265a8788e7e4e8eb"
 
-    depends_on cask: "macfuse"
-    caveats "Mounty Version 2 is depending on ntfs-3g-mac, you need to install this package before using Mounty.\nTo install, please issue\n\n$ brew tap gromgit/homebrew-fuse\n$ brew install ntfs-3g-mac"
+    caveats "To fetch all dependencies, better issue:\n$ brew install gromgit/fuse/mounty"
 
     livecheck do
       url :homepage
