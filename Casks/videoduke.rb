@@ -1,5 +1,5 @@
 cask "videoduke" do
-  version "2.11.1"
+  version "2.11.1,718"
   sha256 :no_check
 
   url "https://cdn.eltima.com/download/videoduke.dmg"
@@ -9,7 +9,7 @@ cask "videoduke" do
 
   livecheck do
     url "https://cdn.eltima.com/download/videoduke-update/videoduke.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle
   end
 
   auto_updates true
