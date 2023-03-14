@@ -3,13 +3,13 @@ cask "start" do
   folder_arch = on_arch_conditional arm: "m1/"
   livecheck_arch = on_arch_conditional arm: "-arm"
 
-  on_intel do
-    version "0.301.10519-7"
-    sha256 "a0c0fde038d7a39a22eb4951247ec0a85f4d7c2b87a8bacda9c97e04f54a8593"
-  end
   on_arm do
     version "0.301.12888-20"
     sha256 "71e8036622e9dee0631089656b67d1fa8f352633b06642fed3d773637ee6e713"
+  end
+  on_intel do
+    version "0.301.10519-7"
+    sha256 "a0c0fde038d7a39a22eb4951247ec0a85f4d7c2b87a8bacda9c97e04f54a8593"
   end
 
   url "https://imgcdn.start.qq.com/cdn/mac.client/installer/#{folder_arch}START-Installer-#{arch}-#{version}.dmg"
