@@ -1,9 +1,9 @@
 cask "sonixd" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.15.4"
-  sha256 arm:   "6b9ea6054a920172383a56738ae9e0d005abe84dad1b2226de1f3f2d3d892bcd",
-         intel: "f2e0d163c468674b13be511e68d146abcc814175a3d005023c5797d4502f8ed6"
+  version "0.15.5"
+  sha256 arm:   "3f94302f8ad5a444eea21863c68e4e54305ed1eb15c2789bde92c1daf02baba7",
+         intel: "12d5a3f5af551481a4a5ea54bb93b085a4ecd63ff1c3abb3685bf3751030ba2c"
 
   url "https://github.com/jeffvli/sonixd/releases/download/v#{version}/Sonixd-#{version}-mac-#{arch}.dmg"
   name "Sonixd"
