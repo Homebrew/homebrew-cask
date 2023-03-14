@@ -15,4 +15,15 @@ cask "pagico" do
   depends_on macos: ">= :el_capitan"
 
   app "Pagico.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.pagico.mac.Pagico-Extension-for-Safari",
+    "~/Library/Application Support/Pagico",
+    "~/Library/Caches/com.pagico.mac",
+    "~/Library/Containers/com.pagico.mac.Pagico-Extension-for-Safari",
+    "~/Library/HTTPStorages/com.pagico.mac",
+    "~/Library/PagicoHelpers",
+    "~/Library/Preferences/com.pagico.mac.plist",
+    "~/Library/WebKit/com.pagico.mac",
+  ]
 end
