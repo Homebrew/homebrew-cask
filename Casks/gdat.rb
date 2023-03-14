@@ -12,7 +12,7 @@ cask "gdat" do
     url "https://www.getgdat.com/home/download"
     strategy :page_match do |page|
       match = page.match(
-        %r{Genealogical DNA Analysis Tool (\d+(?:.\d+)+).*drive.google.com/file/d/([^/]+).*?Mac 64 Bit}i,
+        %r{Genealogical DNA Analysis Tool (\d+(?:.\d+)+).*drive.google.com/file/d/([^/]+).*?Mac}i,
       )
 
       "#{match[1]},#{match[2]}" if match
