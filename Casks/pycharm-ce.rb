@@ -1,7 +1,7 @@
 cask "pycharm-ce" do
   arch arm: "-aarch64"
 
-  version "2022.3.3,223.8836.34"
+  version "2022.3.3,223.8836.43"
   sha256 arm:   "270388941ad525c5a96e885b3450a345e34ec82c2360c82554aa1d3537bc0fd9",
          intel: "2681947868b6f64a9b528fb2083347cd15f1094f1e880a25eaa1c96eb7a1406f"
 
