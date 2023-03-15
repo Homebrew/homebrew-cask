@@ -14,7 +14,7 @@ on:
       - ready_for_review
 
 concurrency:
-  group: automerge-${{ github.ref }}
+  group: ${{ github.workflow }}-${{ github.ref }}
 
 permissions: {}
 
