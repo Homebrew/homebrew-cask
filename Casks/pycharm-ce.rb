@@ -1,9 +1,9 @@
 cask "pycharm-ce" do
   arch arm: "-aarch64"
 
-  version "2022.3.2,223.8617.48"
-  sha256 arm:   "5a0fcb9fdc94896cd5651d9d60fa708596aebe374bc35944b3ff6133f4eb5aae",
-         intel: "0a5a396b71533ab7ec77b2f10e08a20a970ac5712cfeb3378728020ec84be416"
+  version "2022.3.3,223.8836.34"
+  sha256 arm:   "270388941ad525c5a96e885b3450a345e34ec82c2360c82554aa1d3537bc0fd9",
+         intel: "2681947868b6f64a9b528fb2083347cd15f1094f1e880a25eaa1c96eb7a1406f"
 
   url "https://download.jetbrains.com/python/pycharm-community-#{version.csv.first}#{arch}.dmg"
   name "Jetbrains PyCharm Community Edition"
@@ -35,8 +35,8 @@ cask "pycharm-ce" do
   end
 
   zap trash: [
-    "~/Library/Application Support/PyCharm#{version.major_minor}",
     "~/Library/Application Support/JetBrains/PyCharmCE#{version.major_minor}",
+    "~/Library/Application Support/PyCharm#{version.major_minor}",
     "~/Library/Caches/com.apple.python/Applications/PyCharm CE.app",
     "~/Library/Caches/JetBrains/PyCharmCE#{version.major_minor}",
     "~/Library/Caches/PyCharm#{version.major_minor}",

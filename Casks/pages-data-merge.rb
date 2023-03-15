@@ -7,5 +7,10 @@ cask "pages-data-merge" do
   name "Pages Data Merge"
   homepage "https://iworkautomation.com/pages/script-tags-data-merge.html"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Pages Data Merge.app"
 end

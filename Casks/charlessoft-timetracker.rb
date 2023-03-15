@@ -7,4 +7,8 @@ cask "charlessoft-timetracker" do
   homepage "https://charlessoft.com/"
 
   app "TimeTracker.app"
+
+  caveats do
+    discontinued
+  end
 end

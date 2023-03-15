@@ -1,6 +1,6 @@
 cask "amazon-music" do
-  version "9.4.1,24150213_92b38a1e0250c9b09a53fc29f510a1d7"
-  sha256 "eb890c6bd4cedc3a8187aa5cee424be8153c60dbaa2a8856e203504012fa261c"
+  version "9.4.2,24180302_e1b342c417888b01d20db472a074b408"
+  sha256 "b39070995ea4aac909efb394740b722d53c848e66b9aa5817b249bbc31ba4f62"
 
   url "https://d2j9xt6n9dg5d3.cloudfront.net/mac/#{version.csv.second}/Amazon+Music+Installer.dmg",
       verified: "d2j9xt6n9dg5d3.cloudfront.net/mac/"

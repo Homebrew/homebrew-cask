@@ -6,6 +6,11 @@ cask "opera-neon" do
   name "Opera Neon"
   homepage "https://www.opera.com/computer/neon"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Opera Neon.app"
 
   zap trash: [
