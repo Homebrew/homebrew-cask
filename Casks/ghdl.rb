@@ -1,8 +1,8 @@
 cask "ghdl" do
-  version :latest
-  sha256 :no_check
+  version "3.0.0"
+  sha256 "4fabe56ecb5affa39ebc5a7de5de43eb020b1cc3c0ab3ff1bc4354505cd4ee8e"
 
-  url "https://github.com/ghdl/ghdl/releases/download/v3.0.0/ghdl-macos-11-mcode.tgz"
+  url "https://github.com/ghdl/ghdl/releases/download/v#{version}/ghdl-macos-11-mcode.tgz"
   name "ghdl"
   desc "VHDL 2008/93/87 simulator"
   homepage "https://github.com/ghdl/ghdl/"
