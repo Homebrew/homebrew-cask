@@ -1,5 +1,5 @@
 cask "element" do
-  version "1.11.24"
+  version "1.11.25"
   sha256 :no_check
 
   url "https://packages.riot.im/desktop/install/macos/Element.dmg",
