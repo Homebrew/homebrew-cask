@@ -6,7 +6,7 @@ cask "gather" do
          intel: "9ec0cea9a7e2af2de3226303c425c8e5fa3f4f72d3eddd35bf0275cc0eaed3b2"
 
   url "https://github.com/gathertown/gather-town-desktop-releases/releases/download/v#{version}/Gather-#{version}#{arch}-mac.zip",
-      verified: "github.com/gathertown/gather-town-desktop-releases"
+      verified: "github.com/gathertown/gather-town-desktop-releases/"
   name "Gather Town"
   desc "Virtual video-calling space"
   homepage "https://gather.town/"
