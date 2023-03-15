@@ -10,7 +10,8 @@ cask "outline-manager" do
 
   livecheck do
     url :stable
-    regex(/^(?:manager-)?v?(\d+(?:\.\d+)+)$/i)
+    regex(%r{href=["']?[^"' >]*?/tag/(?:manager[._-])?v?(\d+(?:\.\d+)+)["' >]}i)
+    strategy :github_latest
   end
 
   app "Outline Manager.app"
