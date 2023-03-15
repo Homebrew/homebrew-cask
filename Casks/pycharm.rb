@@ -1,7 +1,7 @@
 cask "pycharm" do
   arch arm: "-aarch64"
 
-  version "2022.3.3,223.8836.34"
+  version "2022.3.3,223.8836.43"
   sha256 arm:   "d53b7ea764cd89cea81ebefe630a151627d4d71657868bd35296fd994524105a",
          intel: "290ab690c193563e0b2afc88e9d01feca319e2bc366a3677c8870ac8ba8d7e6f"
 
