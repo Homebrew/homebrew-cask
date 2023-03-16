@@ -7,5 +7,10 @@ cask "ghdl" do
   desc "VHDL 2008/93/87 simulator"
   homepage "https://github.com/ghdl/ghdl/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   binary "bin/ghdl"
 end
