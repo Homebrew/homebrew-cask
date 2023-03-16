@@ -1,5 +1,5 @@
 cask "wechat" do
-  version "3.7.1.4,255441"
+  version "3.7.1.4"
   sha256 :no_check
 
   url "https://dldir1.qq.com/weixin/mac/WeChatMac.dmg"
@@ -12,7 +12,7 @@ cask "wechat" do
   #   https://github.com/Homebrew/homebrew-cask/pull/90907#issuecomment-710107547
   livecheck do
     url "https://dldir1.qq.com/weixin/mac/mac-release.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
