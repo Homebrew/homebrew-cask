@@ -1,23 +1,36 @@
 cask "zed" do
-  version "0.77.3"
+  version "0.77.3,95639680"
   sha256 "7a10a5d6131fb8578908fb19d3a8c0dd0babecfeda81e57abc7c823ce57db7ae"
 
-  url "zed"
+  url "https://zed.dev/api/releases/#{version.csv.second}/Zed.dmg" do |json|
+    JSON.parse(json)["redirectURL"]
+  end
   name "zed"
-  desc ""
-  homepage "https://https://zed.dev/"
-livecheck do
-  url "https://zed.dev/_next/data/OOybEEg-80Z5ImnWgZJFJ/download.json"
-  regex(%r{version":"(\d+\.\d+\.\d)}i)
-end
+  desc "Multiplayer code editor"
+  homepage "https://zed.dev/"
+
+  livecheck do
+    url "https://zed.dev/_next/data/OOybEEg-80Z5ImnWgZJFJ/download.json"
+    strategy :json do |json|
+      v = json["pageProps"]["latestRelease"]["version"]
+      id = json["pageProps"]["latestRelease"]["id"]
+      next if v.blank? || id.blank?
+
+      "#{v},#{id}"
+    end
+  end
+
+  auto_updates true
+  depends_on macos: ">= :catalina"
+
   app "Zed.app"
 
   zap trash: [
-  "/Library/Application Support/Logitech.localized",
-  "~/Library/Application Support/Zed",
-  "~/Library/Logs/Zed",
-  "~/Library/Preferences/org.jabref.customizedbiblatextypes.plist",
-  "~/Library/Preferences/org.jabref.customizedbibtextypes.plist",
-  "~/Library/Saved Application State/dev.zed.Zed.savedState",
-]
+    "/Library/Application Support/Logitech.localized",
+    "~/Library/Application Support/Zed",
+    "~/Library/Logs/Zed",
+    "~/Library/Preferences/org.jabref.customizedbiblatextypes.plist",
+    "~/Library/Preferences/org.jabref.customizedbibtextypes.plist",
+    "~/Library/Saved Application State/dev.zed.Zed.savedState",
+  ]
 end
