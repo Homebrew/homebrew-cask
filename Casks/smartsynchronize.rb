@@ -24,4 +24,10 @@ cask "smartsynchronize" do
 
   app "SmartSynchronize.app"
   binary "#{appdir}/SmartSynchronize.app/Contents/MacOS/SmartSynchronize"
+
+  zap trash: [
+    "~/Library/Preferences/SmartSynchronize",
+    "~/Library/Preferences/com.syntevo.smartsynchronize.plist",
+    "~/Library/Saved Application State/com.syntevo.smartsynchronize.savedState",
+  ]
 end
