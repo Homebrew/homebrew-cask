@@ -13,4 +13,10 @@ cask "psychopy" do
   end
 
   app "PsychoPy.app"
+
+  zap trash: [
+    "~/.psychopy3",
+    "~/Library/Preferences/org.opensciencetools.psychopy.plist",
+    "~/Library/Saved Application State/org.opensciencetools.psychopy.savedState",
+  ]
 end
