@@ -17,6 +17,8 @@ cask "screaming-frog-seo-spider" do
 
   app "Screaming Frog SEO Spider.app"
 
+  zap trash: "~/Library/Application Support/uk.co.screamingfrog.seospider.ui.b/"
+
   caveats do
     depends_on_java "7+"
   end
