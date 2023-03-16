@@ -26,4 +26,9 @@ cask "springtoolsuite" do
   auto_updates true
 
   app "SpringToolSuite#{version.major}.app"
+
+  zap trash: [
+    "~/Library/Preferences/org.springframework.boot.ide.branding.sts#{version.major}.plist",
+    "~/Library/Saved Application State/org.springframework.boot.ide.branding.sts#{version.major}.savedState",
+  ]
 end
