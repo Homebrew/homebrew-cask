@@ -1,5 +1,5 @@
 cask "website-watchman" do
-  version "3.1.8"
+  version "3.2.0"
   sha256 :no_check
 
   url "https://peacockmedia.software/mac/watchman/watchman.dmg"
