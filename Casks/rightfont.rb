@@ -8,7 +8,7 @@ cask "rightfont" do
   homepage "https://rightfontapp.com/"
 
   livecheck do
-    url "https://rightfontapp.com/update/appcast#{version.major}.xml"
+    url "https://rightfontapp.com/update/appcast.xml"
     strategy :sparkle, &:short_version
   end
 
