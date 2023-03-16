@@ -17,9 +17,12 @@ cask "bookends" do
   app "Bookends.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.microsoft.Word/Bookends.scpt",
     "~/Library/Application Support/Bookends",
     "~/Library/Caches/com.sonnysoftware.bookends2",
+    "~/Library/Group Containers/UBF8T346G9.Office/User Content.localized/Startup.localized/Word/Bookends.dotm",
     "~/Library/HTTPStorages/com.sonnysoftware.bookends2",
+    "~/Library/PDF Services/Save PDF to Bookends",
     "~/Library/Saved Application State/com.sonnysoftware.bookends2.savedState",
   ]
 end
