@@ -12,7 +12,7 @@ cask "mousepose" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :mojave"
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   # Original discussion: https://github.com/Homebrew/homebrew-cask/pull/15708
