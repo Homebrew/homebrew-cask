@@ -13,4 +13,12 @@ cask "youtube-to-mp3" do
   end
 
   app "YouTube to MP3.app"
+
+  zap trash: [
+    "~/Library/Application Support/MediaHuman/",
+    "~/Library/Caches/MediaHuman/",
+    "~/Library/Preferences/com.mediahuman.plist",
+    "~/Library/Preferences/com.mediahuman.YouTube to MP3.plist",
+    "~/Library/Saved Application State/com.mediahuman.YouTube to MP3.savedState",
+  ]
 end
