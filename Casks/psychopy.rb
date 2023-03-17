@@ -1,6 +1,6 @@
 cask "psychopy" do
-  version "2023.1.0"
-  sha256 "d41000e843b3eb44c9db5f95612f849f032250928f0773dbf846b34f8f7e09d4"
+  version "2023.1.1"
+  sha256 "1d2ddd64c151cf66dea98d034233140f3762d142fa44e7648851ba1693c9fd38"
 
   url "https://github.com/psychopy/psychopy/releases/download/#{version.major_minor_patch}/StandalonePsychoPy-#{version}-macOS.dmg"
   name "PsychoPy"
@@ -13,4 +13,10 @@ cask "psychopy" do
   end
 
   app "PsychoPy.app"
+
+  zap trash: [
+    "~/.psychopy3",
+    "~/Library/Preferences/org.opensciencetools.psychopy.plist",
+    "~/Library/Saved Application State/org.opensciencetools.psychopy.savedState",
+  ]
 end
