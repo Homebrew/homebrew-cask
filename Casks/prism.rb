@@ -12,6 +12,7 @@ cask "prism" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: ">= :sierra"
 
   app "Prism #{version.major}.app"
