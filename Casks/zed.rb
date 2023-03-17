@@ -5,7 +5,7 @@ cask "zed" do
   url "https://zed.dev/api/releases/#{version.csv.second}/Zed.dmg" do |json|
     JSON.parse(json)["redirectURL"]
   end
-  name "zed"
+  name "Zed"
   desc "Multiplayer code editor"
   homepage "https://zed.dev/"
 
@@ -26,11 +26,9 @@ cask "zed" do
   app "Zed.app"
 
   zap trash: [
-    "/Library/Application Support/Logitech.localized",
+    "~/.config/Zed",
     "~/Library/Application Support/Zed",
     "~/Library/Logs/Zed",
-    "~/Library/Preferences/org.jabref.customizedbiblatextypes.plist",
-    "~/Library/Preferences/org.jabref.customizedbibtextypes.plist",
     "~/Library/Saved Application State/dev.zed.Zed.savedState",
   ]
 end
