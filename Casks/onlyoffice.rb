@@ -1,9 +1,9 @@
 cask "onlyoffice" do
   arch arm: "arm", intel: "x86_64"
 
-  version "7.3.0"
-  sha256 arm:   "2ad0d6126b480a12e227183557510fd80ec175d3da2eb468d5b3abc3814aad5d",
-         intel: "a5a3d5435c6ff0363f389488bb813c2d49e71a639c2a677d3069575f7ffc53f3"
+  version "7.3.3"
+  sha256 arm:   "163b2de9622c169a7df36ddc1214db17703b6669e560690498ce3134cc2adade",
+         intel: "5dcbe6c26bcf81f14fb35460433b37eb912db7aa9d1e8fdab5f0aca30e05696c"
 
   url "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v#{version}/ONLYOFFICE-#{arch}.dmg",
       verified: "github.com/ONLYOFFICE/DesktopEditors/"
@@ -20,4 +20,10 @@ cask "onlyoffice" do
   auto_updates true
 
   app "ONLYOFFICE.app"
+
+  zap trash: [
+    "~/Library/Application Support/asc.onlyoffice.ONLYOFFICE",
+    "~/Library/Preferences/asc.onlyoffice.ONLYOFFICE.plist",
+    "~/Library/Preferences/asc.onlyoffice.editors-helper-renderer.plist",
+  ]
 end
