@@ -1,9 +1,9 @@
 cask "paddle-easydl" do
-  version "2.1.6,1550"
-  sha256 "3cf5a0648fdc5223a008f90db14382c55780a087b09ca2f08ca98708d9e22819"
+  version "2.2.0,1561"
+  sha256 "f1059bb932bd0d6fcfa905c9f5aee8b53311c985820216e10362669ae07d6548"
 
   url "https://aip-static.cdn.bcebos.com/paddle-desktop/releases/#{version.csv.first}/%E9%A3%9E%E6%A1%A8EasyDL-#{version.csv.first}.#{version.csv.second}.dmg",
-      verified: "aip-static.cdn.bcebos.com/paddle-desktop"
+      verified: "aip-static.cdn.bcebos.com/paddle-desktop/releases/"
   name "飞桨EasyDL"
   desc "Local one-stop model training and deployment platform"
   homepage "https://ai.baidu.com/easydl/paddle"
