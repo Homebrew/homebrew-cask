@@ -13,4 +13,13 @@ cask "linphone" do
   end
 
   app "Linphone.app"
+
+  zap trash: [
+    "~/Documents/linphone",
+    "~/Library/Application Support/linphone",
+    "~/Library/Preferences/com.belledonnecommunications.linphone.plist",
+    "~/Library/Preferences/com.linphone.linphone.plist",
+    "~/Library/Preferences/linphone",
+    "~/Library/Saved Application State/com.belledonnecommunications.linphone.savedState",
+  ]
 end
