@@ -12,7 +12,7 @@ cask "screaming-frog-seo-spider" do
 
   livecheck do
     url "https://www.screamingfrog.co.uk/wp-content/themes/screamingfrog/inc/download-modal.php"
-    regex(%r{href=.*?/ScreamingFrogSEOSpider[._-]v?(\d+(?:\.\d+)+)-(aarch64|x86_64)\.dmg}i)
+    regex(%r{href=.*?/ScreamingFrogSEOSpider[._-]v?(\d+(?:\.\d+)+)[._-]${arch}\.dmg}i)
   end
 
   app "Screaming Frog SEO Spider.app"
