@@ -16,4 +16,11 @@ cask "eclipse-cpp" do
 
   # Renamed to avoid conflict with other Eclipse.
   app "Eclipse.app", target: "Eclipse CPP.app"
+
+  zap trash: [
+    "~/.eclipse",
+    "~/eclipse-workspace",
+    "~/Library/Preferences/epp.package.cpp.plist",
+    "~/Library/Saved Application State/epp.package.cpp.savedState",
+  ]
 end
