@@ -1,5 +1,5 @@
 cask "mylio" do
-  version "22.1.7551"
+  version "22.1.7558"
   sha256 :no_check
 
   url "https://myliodownloads.s3.amazonaws.com/Mylio.dmg",
@@ -14,4 +14,12 @@ cask "mylio" do
   end
 
   app "Mylio.app"
+
+  zap trash: [
+    "~/Library/Application Support/Mylio",
+    "~/Library/Caches/mylollc.Mylio",
+    "~/Library/HTTPStorages/mylollc.Mylio",
+    "~/Library/Preferences/mylollc.Mylio.plist",
+    "~/Mylio",
+  ]
 end
