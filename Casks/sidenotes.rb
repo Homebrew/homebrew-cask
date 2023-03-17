@@ -1,6 +1,6 @@
 cask "sidenotes" do
-  version "1.4.9"
-  sha256 "3d897bb794bc7b1fa46a20aef46709797f158d2a41b057ccd0a97c48f03d9bf4"
+  version "1.4.10"
+  sha256 "80fa102394e03ebe1d466afce1d5f50dd02bef7fbb54308c60e7726ec7cdc342"
 
   url "https://www.apptorium.com/public/products/sidenotes/releases/SideNotes-#{version}.zip"
   name "SideNotes"
@@ -12,7 +12,19 @@ cask "sidenotes" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: ">= :catalina"
 
   app "SideNotes.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.apptorium.SideNotes-paddle*.ShareExtension--Paddle-",
+    "~/Library/Application Support/com.apptorium.SideNotes-paddle",
+    "~/Library/Application Support/SideNotes",
+    "~/Library/Caches/com.apptorium.SideNotes-paddle",
+    "~/Library/Containers/com.apptorium.SideNotes-paddle.ShareExtension--Paddle-",
+    "~/Library/HTTPStorages/com.apptorium.SideNotes-paddle*",
+    "~/Library/Preferences/com.apptorium.SideNotes-paddle.plist",
+    "~/Library/WebKit/com.apptorium.SideNotes-paddle",
+  ]
 end
