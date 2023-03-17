@@ -14,4 +14,12 @@ cask "mylio" do
   end
 
   app "Mylio.app"
+
+  zap trash: [
+    "~/Library/Application Support/Mylio",
+    "~/Library/Caches/mylollc.Mylio",
+    "~/Library/HTTPStorages/mylollc.Mylio",
+    "~/Library/Preferences/mylollc.Mylio.plist",
+    "~/Mylio",
+  ]
 end
