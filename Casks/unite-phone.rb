@@ -9,8 +9,8 @@ cask "unite-phone" do
 
   livecheck do
     url "https://unitephone.nl/unitephone-app/macos"
-    strategy :header_match
     regex(/unite_phone[._-]v?(\d+(?:\.\d+)*)[._-]universal\.dmg/i)
+    strategy :header_match
   end
 
   app "Unite Phone.app"
