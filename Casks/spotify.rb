@@ -1,5 +1,6 @@
 cask "spotify" do
   arch arm: "ARM64"
+
   sha256 :no_check
 
   on_arm do
