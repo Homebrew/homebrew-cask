@@ -16,4 +16,6 @@ cask "mat" do
   end
 
   app "mat.app"
+
+  zap trash: "~/Library/Preferences/org.eclipse.mat.ui.rcp.MemoryAnalyzer.plist"
 end
