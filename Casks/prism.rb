@@ -8,8 +8,8 @@ cask "prism" do
   homepage "https://graphpad.com/"
 
   livecheck do
-    url "https://licenses.graphpad.com/updates?activationCode=&version=#{version}&build=&configuration=full&platform=Mac&osVersion=0"
-    strategy :sparkle, &:short_version
+    url "https://www.graphpad.com/updates"
+    regex(/Prism\s(\d+(?:\.\d+)+)\sRelease\sNotes/i)
   end
 
   auto_updates true
