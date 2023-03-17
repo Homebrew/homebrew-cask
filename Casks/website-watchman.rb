@@ -1,5 +1,5 @@
 cask "website-watchman" do
-  version "3.1.8"
+  version "3.2.0"
   sha256 :no_check
 
   url "https://peacockmedia.software/mac/watchman/watchman.dmg"
@@ -13,4 +13,14 @@ cask "website-watchman" do
   end
 
   app "Website Watchman.app"
+
+  zap trash: [
+    "~/Library/Application Support/Watchman",
+    "~/Library/Caches/com.peacockmedia.watchtower",
+    "~/Library/HTTPStorages/com.peacockmedia.watchtower",
+    "~/Library/HTTPStorages/com.peacockmedia.watchtower.binarycookies",
+    "~/Library/Preferences/com.peacockmedia.watchtower.plist",
+    "~/Library/Saved Application State/com.peacockmedia.watchtower.savedState",
+    "~/Library/WebKit/com.peacockmedia.watchtower",
+  ]
 end
