@@ -3,7 +3,7 @@ cask "threema" do
   sha256 :no_check
 
   url "https://releases.threema.ch/web-electron/v1/release/Threema-Latest.dmg"
-  name "threema"
+  name "Threema"
   desc "End-to-end encrypted instant messaging application"
   homepage "https://threema.ch/"
 
