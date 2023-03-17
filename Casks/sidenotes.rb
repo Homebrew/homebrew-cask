@@ -19,8 +19,8 @@ cask "sidenotes" do
 
   zap trash: [
     "~/Library/Application Scripts/com.apptorium.SideNotes-paddle*.ShareExtension--Paddle-",
-    "~/Library/Application Support/SideNotes",
     "~/Library/Application Support/com.apptorium.SideNotes-paddle",
+    "~/Library/Application Support/SideNotes",
     "~/Library/Caches/com.apptorium.SideNotes-paddle",
     "~/Library/Containers/com.apptorium.SideNotes-paddle.ShareExtension--Paddle-",
     "~/Library/HTTPStorages/com.apptorium.SideNotes-paddle*",
