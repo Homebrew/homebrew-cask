@@ -16,4 +16,11 @@ cask "eclipse-java" do
 
   # Renamed to avoid conflict with other Eclipse.
   app "Eclipse.app", target: "Eclipse Java.app"
+
+  zap trash: [
+    "~/.eclipse",
+    "~/eclipse-workspace",
+    "~/Library/Preferences/epp.package.java.plist",
+    "~/Library/Saved Application State/epp.package.java.savedState",
+  ]
 end
