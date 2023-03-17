@@ -20,4 +20,10 @@ cask "onlyoffice" do
   auto_updates true
 
   app "ONLYOFFICE.app"
+
+  zap trash: [
+    "~/Library/Application Support/asc.onlyoffice.ONLYOFFICE",
+    "~/Library/Preferences/asc.onlyoffice.ONLYOFFICE.plist",
+    "~/Library/Preferences/asc.onlyoffice.editors-helper-renderer.plist",
+  ]
 end
