@@ -1,6 +1,6 @@
 cask "slimhud" do
-  version "1.4.2"
-  sha256 "23867d84760630debe22728ba6d088580c40e41c182a9e576ff7c615a9b239de"
+  version "1.5.0"
+  sha256 "901fd7ccd78dbe3fc68d41bb17c241a126552f6a0e2b0105ccdd8a984c73d007"
 
   url "https://github.com/AlexPerathoner/SlimHUD/releases/download/v#{version}/SlimHUD.zip"
   name "SlimHUD"
