@@ -3,7 +3,7 @@ cask "vk-calls" do
   sha256 "20d4e367e96797b8867c93f8c5b5fa4e0b4e7a53d5a982e391723031394aecf2"
 
   url "https://vkcalls-native-ac.vk-apps.com/#{version}/vk-calls.dmg",
-      verified: "vkcalls-native-ac.vk-apps.com"
+      verified: "vkcalls-native-ac.vk-apps.com/"
   name "VK Calls"
   desc "Platform for video calls of any purpose"
   homepage "https://calls.vk.com/"
