@@ -3,15 +3,15 @@ cask "cryptonomic-galleon" do
   sha256 "84b86cbb32a803e6996de322058086a0cb66625c7cadb7ddfbd373f03f6ceeb2"
 
   url "https://cryptonomic-wallet.nyc3.digitaloceanspaces.com/release_#{version}/Galleon-#{version.delete_suffix("b")}.dmg",
-      verified: "cryptonomic-wallet.nyc3.digitaloceanspaces.com"
+      verified: "cryptonomic-wallet.nyc3.digitaloceanspaces.com/"
   name "Galleon"
   desc "Software wallet for the Tezos blockchain"
   homepage "https://cryptonomic.tech/galleon.html"
 
   livecheck do
     url "https://github.com/Cryptonomic/Deployments/wiki/Galleon%3A-Releases"
-    strategy :page_match
     regex(/Galleon\s*(\d+(?:\.\d+)+\w)/i)
+    strategy :page_match
   end
 
   app "Galleon.app"
