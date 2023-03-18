@@ -1,4 +1,14 @@
 cask "oxwu" do
+  on_arm do
+    version "4.1.0"
+    sha256 :no_check
+    url "https://eew.earthquake.tw/releases/mac/arm64/oxwu-mac-arm64.dmg"
+
+    livecheck do
+      url "https://eew.earthquake.tw/releases/mac/arm64/latest-mac.yml"
+      strategy :electron_builder
+    end
+  end
   on_intel do
     version "3.0.0"
     sha256 :no_check
@@ -10,16 +20,6 @@ cask "oxwu" do
       <<~EOS
         Development has ended on the Intel version.
       EOS
-    end
-  end
-  on_arm do
-    version "4.1.0"
-    sha256 :no_check
-    url "https://eew.earthquake.tw/releases/mac/arm64/oxwu-mac-arm64.dmg"
-
-    livecheck do
-      url "https://eew.earthquake.tw/releases/mac/arm64/latest-mac.yml"
-      strategy :electron_builder
     end
   end
 
