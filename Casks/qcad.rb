@@ -5,14 +5,13 @@ cask "qcad" do
   sha256 arm:   "5f4340e2feb72699b87dbaf8cd8708f54a0cb44874516fdcf21b36fc5a1fb269",
          intel: "cf8578789a17b7f4a550646063e6a12634440b20172f1e21b9cd260b176a4e92"
 
-  url "https://www.qcad.org/archives/qcad/qcad-#{version}-trial-macos-#{arch}.dmg"
-
   on_high_sierra :or_older do
     sha256 "589a84168c38bf57435441511b19fa081b622e009719c4be7cc1385b7dc55eeb"
 
     url "https://www.qcad.org/archives/qcad/qcad-#{version}-trial-macos-10.10-10.13.dmg"
   end
 
+  url "https://www.qcad.org/archives/qcad/qcad-#{version}-trial-macos-#{arch}.dmg"
   name "QCAD"
   desc "Free, open source application for computer aided drafting in 2D"
   homepage "https://www.qcad.org/"
