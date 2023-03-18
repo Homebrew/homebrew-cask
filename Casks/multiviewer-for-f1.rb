@@ -34,6 +34,9 @@ cask "multiviewer-for-f1" do
 
   zap trash: [
     "~/Library/Application Support/MultiViewer for F1",
+    "~/Library/Caches/com.electron.multiviewer-for-f1",
+    "~/Library/Caches/com.electron.multiviewer-for-f1.ShipIt",
+    "~/Library/HTTPStorages/com.electron.multiviewer-for-f1",
     "~/Library/Preferences/com.electron.multiviewer-for-f1.plist",
     "~/Library/Saved Application State/com.electron.multiviewer-for-f1.savedState",
   ]
