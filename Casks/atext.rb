@@ -1,5 +1,5 @@
 cask "atext" do
-  version "2.40.5,122"
+  version "2.40.5"
   sha256 :no_check
 
   url "https://www.trankynam.com/atext/downloads/aText.dmg"
@@ -9,7 +9,7 @@ cask "atext" do
 
   livecheck do
     url "https://www.trankynam.com/atext/aText-Appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
