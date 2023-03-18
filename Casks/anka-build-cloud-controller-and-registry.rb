@@ -9,8 +9,8 @@ cask "anka-build-cloud-controller-and-registry" do
 
   livecheck do
     url "https://veertu.com/downloads/ankacontroller-registry-mac-latest"
-    strategy :header_match
     regex(/AnkaControllerRegistry[._-]?v?(\d+(?:\.\d+)*[._-]\h+)\.pkg/i)
+    strategy :header_match
   end
 
   pkg "AnkaControllerRegistry-#{version}.pkg"

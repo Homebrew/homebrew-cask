@@ -9,8 +9,8 @@ cask "utc-menu-clock" do
 
   livecheck do
     url "https://github.com/netik/UTCMenuClock/tree/master/downloads"
-    strategy :page_match
     regex(%r{href=.*?/UTCMenuClock[._-]v?(\d+(?:\.\d+)+)[._-]universal\.zip}i)
+    strategy :page_match
   end
 
   app "UTCMenuClock.app"

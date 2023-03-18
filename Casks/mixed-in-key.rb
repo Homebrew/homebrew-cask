@@ -9,8 +9,8 @@ cask "mixed-in-key" do
 
   livecheck do
     url :url
-    strategy :header_match
     regex(%r{/Mixed%2BIn%2BKey[._-]v?(\d+(?:\.\d+)+)}i)
+    strategy :header_match
   end
 
   auto_updates true

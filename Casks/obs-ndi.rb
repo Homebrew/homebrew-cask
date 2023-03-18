@@ -9,8 +9,8 @@ cask "obs-ndi" do
 
   livecheck do
     url "https://github.com/Palakis/obs-ndi/releases/"
-    strategy :page_match
     regex(/obs[._-]?ndi[._-]?(\d+(?:\.\d+)*)[._-]?macOS\.pkg/i)
+    strategy :page_match
   end
 
   pkg "obs-ndi-#{version}-macOS.pkg"

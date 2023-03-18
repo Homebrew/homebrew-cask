@@ -10,8 +10,8 @@ cask "copytranslator" do
 
   livecheck do
     url "https://github.com/CopyTranslator/copytranslator.github.io/blob/master/docs/.vuepress/public/wiki/mac.md"
-    strategy :page_match
     regex(%r{href=.*?/copytranslator[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    strategy :page_match
   end
 
   depends_on macos: ">= :sierra"

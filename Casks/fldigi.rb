@@ -9,8 +9,8 @@ cask "fldigi" do
 
   livecheck do
     url "https://sourceforge.net/projects/fldigi/rss?path=/fldigi"
-    strategy :page_match
     regex(/fldigi[._-]v?(\d+(?:\.\d+)+)[._-]u\.dmg/i)
+    strategy :page_match
   end
 
   app "fldigi.app"

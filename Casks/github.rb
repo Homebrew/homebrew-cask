@@ -14,8 +14,8 @@ cask "github" do
 
   livecheck do
     url "https://central.github.com/deployments/desktop/desktop/latest/#{platform}"
-    strategy :header_match
     regex(%r{(\d+(?:\.\d+)[^/]*)/GitHubDesktop[._-]#{arch}\.zip}i)
+    strategy :header_match
   end
 
   auto_updates true

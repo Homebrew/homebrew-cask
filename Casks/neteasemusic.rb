@@ -15,8 +15,8 @@ cask "neteasemusic" do
   # from the XML using a regex pattern on the download URLs.
   livecheck do
     url "https://music.163.com/api/osx/download/latest"
-    strategy :header_match
     regex(/NeteaseMusic[._-]v?(\d+(?:[._]\d+)+)_web/i)
+    strategy :header_match
   end
 
   depends_on macos: ">= :sierra"

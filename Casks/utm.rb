@@ -10,8 +10,8 @@ cask "utm" do
 
   livecheck do
     url :url
-    strategy :github_latest
     regex(%r{href=.*?/tag/v?(\d+(?:[.-]\d+)+)["' >]}i)
+    strategy :github_latest
   end
 
   conflicts_with cask: "homebrew/cask-versions/utm-beta"

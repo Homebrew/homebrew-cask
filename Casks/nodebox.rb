@@ -10,8 +10,8 @@ cask "nodebox" do
 
   livecheck do
     url "https://www.nodebox.net/download"
-    strategy :page_match
     regex(/href=.*?NodeBox[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    strategy :page_match
   end
 
   depends_on macos: ">= :catalina"

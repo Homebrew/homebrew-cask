@@ -9,8 +9,8 @@ cask "enzymex" do
 
   livecheck do
     url "https://nucleobytes.com/versionEnzymeX.txt"
-    strategy :page_match
     regex(/\d+(?:\.\d+)+/)
+    strategy :page_match
   end
 
   app "EnzymeX.app"
