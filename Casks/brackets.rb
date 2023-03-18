@@ -1,6 +1,6 @@
 cask "brackets" do
-  version "2.1.3"
-  sha256 "ccc81a56dab275e45674d29a53012c9a20ccd8163c75701b2360be4a4a83e216"
+  version "2.2.0"
+  sha256 "a8864dd5cc4591d885b0264e88ee2bc9a05962c29369b7c5c1f2f269c50fe1b5"
 
   url "https://github.com/brackets-cont/brackets/releases/download/v#{version}/brackets.#{version}.dmg",
       verified: "github.com/brackets-cont/brackets/"
