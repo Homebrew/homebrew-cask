@@ -6,8 +6,6 @@ cask "transcribe" do
   version "9.21"
   sha256 :no_check
 
-  url "https://www.seventhstring.com/xscribe/transcribe#{arch}.dmg"
-
   on_catalina :or_older do
     version "8.75.2"
     sha256 "f01781100cd3b9987c8f8892145a2eaa358df07b92e10e26f30b6a877f5b352c"
@@ -17,6 +15,7 @@ cask "transcribe" do
     livecheck_version = "10"
   end
 
+  url "https://www.seventhstring.com/xscribe/transcribe#{arch}.dmg"
   name "Transcribe!"
   desc "Transcribes recorded music"
   homepage "https://www.seventhstring.com/xscribe/overview.html"
