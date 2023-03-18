@@ -8,7 +8,7 @@ cask "pdf-squeezer" do
   homepage "https://witt-software.com/pdfsqueezer/"
 
   livecheck do
-    url "https://www.witt-software.com/downloads/pdfsqueezer/pdfsq4-appcast.xml"
+    url "https://www.witt-software.com/downloads/pdfsqueezer/pdfsq#{version.major}-appcast.xml"
     strategy :sparkle, &:short_version
   end
 
