@@ -14,7 +14,7 @@ on:
       - ready_for_review
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.event.pull_request.head.ref || github.ref }}
+  group: ${{ github.workflow }}-${ github.head_ref || github.ref }}
 
 permissions: {}
 
