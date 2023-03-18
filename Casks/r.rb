@@ -6,8 +6,6 @@ cask "r" do
   sha256 arm:   "a0fa5cdd3d3e14e0420d9605b5bfbad80267d1805c1f5a92672c157337d739c1",
          intel: "df8db457fcc8aafbe1b084f87ec9fa8763fbcf909f9a252d05c28eb4c2aff0ff"
 
-  url "https://cloud.r-project.org/bin/macosx/#{folder}R-#{version}#{arch}.pkg"
-
   on_sierra :or_older do
     version "3.6.3.nn"
     sha256 "f2b771e94915af0fe0a6f042bc7a04ebc84fb80cb01aad5b7b0341c4636336dd"
@@ -15,6 +13,7 @@ cask "r" do
     url "https://cloud.r-project.org/bin/macosx/R-#{version}.pkg"
   end
 
+  url "https://cloud.r-project.org/bin/macosx/#{folder}R-#{version}#{arch}.pkg"
   name "R"
   desc "Environment for statistical computing and graphics"
   homepage "https://www.r-project.org/"
