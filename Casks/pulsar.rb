@@ -1,11 +1,11 @@
 cask "pulsar" do
   arch arm: "Silicon", intel: "Intel"
 
-  version "1.102.0"
-  sha256 arm:   "07fb1e91ae99bfbc40833ec19339d05de708e6a41ec4a68c697f2e028490f68d",
-         intel: "b3350445ea50139849312ad03dc535b4ede20ea47c24fa1564814cbc9a186d0e"
+  version "1.103.0"
+  sha256 arm:   "87d540ee1df71e8763e3c615747cd0ef8810861ed46c93b1605edbae63ec9818",
+         intel: "32285e0622f10ded87b98b2df77cd6f0d20465fbaf5b569b703d0d083370e929"
 
-  url "https://github.com/pulsar-edit/pulsar/releases/download/v#{version}/#{arch}.Mac.#{version}.zip",
+  url "https://github.com/pulsar-edit/pulsar/releases/download/v#{version}/#{arch}.Mac.Pulsar-#{version}-mac.zip",
       verified: "github.com/pulsar-edit/pulsar/"
   name "Pulsar"
   desc "Text editor"
