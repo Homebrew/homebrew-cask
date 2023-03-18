@@ -18,8 +18,8 @@ cask "anka-virtualization" do
 
   livecheck do
     url "https://veertu.com/downloads/anka-virtualization-#{livecheck_folder}"
-    strategy :header_match
     regex(/Anka[._-]?v?(\d+(?:\.\d+)+)#{arch}\.pkg/i)
+    strategy :header_match
   end
 
   depends_on macos: ">= :monterey"

@@ -15,8 +15,8 @@ cask "microsoft-auto-update" do
 
   livecheck do
     url "https://go.microsoft.com/fwlink/?linkid=830196"
-    strategy :header_match
     regex(/Microsoft[._-]AutoUpdate[._-]v?(\d+(?:\.\d+)+)[._-]Updater\.pkg/i)
+    strategy :header_match
   end
 
   auto_updates true

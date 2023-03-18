@@ -9,8 +9,8 @@ cask "cakebrewjs" do
 
   livecheck do
     url "https://sourceforge.net/projects/cakebrewjs/rss?"
-    strategy :page_match
     regex(/cakebrewjs-(\d+(?:\.\d+)+)-mac\.zip/i)
+    strategy :page_match
   end
 
   app "cakebrewjs.app"

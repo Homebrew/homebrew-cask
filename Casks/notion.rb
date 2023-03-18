@@ -14,8 +14,8 @@ cask "notion" do
 
   livecheck do
     url "https://www.notion.so/desktop/#{livecheck_folder}/download"
-    strategy :header_match
     regex(/Notion[._-]v?(\d+(?:\.\d+)*?)[^.]*?\.dmg/i)
+    strategy :header_match
   end
 
   auto_updates true

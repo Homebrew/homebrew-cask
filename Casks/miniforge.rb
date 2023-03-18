@@ -12,8 +12,8 @@ cask "miniforge" do
 
   livecheck do
     url :homepage
-    strategy :github_latest
     regex(%r{href=.*?/tag/v?(\d+(?:[.-]\d+)+)["' >]}i)
+    strategy :github_latest
   end
 
   auto_updates true

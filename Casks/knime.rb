@@ -10,8 +10,8 @@ cask "knime" do
 
   livecheck do
     url "https://download.knime.org/analytics-platform/macosx/knime-latest-app.macosx.cocoa.x86_64.dmg"
-    strategy :header_match
     regex(/knime[._-]v?(\d+(?:\.\d+)+).*?\.dmg/i)
+    strategy :header_match
   end
 
   depends_on macos: ">= :high_sierra"
