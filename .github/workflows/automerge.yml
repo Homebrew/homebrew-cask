@@ -14,7 +14,7 @@ on:
       - ready_for_review
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.run_id }}
 
 permissions: {}
 
