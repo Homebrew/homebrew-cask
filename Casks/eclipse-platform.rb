@@ -20,4 +20,10 @@ cask "eclipse-platform" do
 
   # Renamed to avoid conflict with other Eclipse.
   app "Eclipse.app", target: "Eclipse Platform.app"
+
+  zap trash: [
+  "~/.eclipse",
+  "~/Library/Preferences/org.eclipse.sdk.ide.plist",
+  "~/eclipse-workspace",
+]
 end
