@@ -30,4 +30,13 @@ cask "couchbase-server-enterprise" do
   homepage "https://www.couchbase.com/"
 
   conflicts_with cask: "couchbase-server-community"
+
+  zap trash: [
+    "~/Library/Application Support/Couchbase",
+    "~/Library/Caches/com.couchbase.couchbase-server",
+    "~/Library/Logs/Couchbase.log",
+    "~/Library/Logs/CouchbaseServer.log",
+    "~/Library/Preferences/com.couchbase.couchbase-server.plist",
+    "~/Library/Preferences/couchbase-server.ini",
+  ]
 end
