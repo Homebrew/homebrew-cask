@@ -17,6 +17,11 @@ cask "eclipse-installer" do
 
   app "Eclipse Installer.app"
 
+  zap trash: [
+    "~/Library/Preferences/org.eclipse.oomph.setup.installer.product.with-jre.restricted.plist",
+    "~/Library/Saved Application State/org.eclipse.oomph.setup.installer.product.with-jre.restricted.savedState",
+  ]
+
   caveats do
     depends_on_java
   end
