@@ -16,4 +16,10 @@ cask "eclipse-rcp" do
 
   # Renamed to avoid conflict with other Eclipse.
   app "Eclipse.app", target: "Eclipse RCP.app"
+
+  zap trash: [
+    "~/.eclipse",
+    "~/eclipse-workspace",
+    "~/Library/Preferences/epp.package.rcp.plist",
+  ]
 end
