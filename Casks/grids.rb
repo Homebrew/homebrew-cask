@@ -1,6 +1,6 @@
 cask "grids" do
-  version "8.4.1"
-  sha256 "b53cc492c05d450c794f56fa5ad63d57cc02f2d7d7f7c0d0461165500feab919"
+  version "8.5"
+  sha256 "87145186dfe28dd6d1d9bb533badcac9d692a40f55f079ae5a5bb623a2aea450"
 
   url "https://gridsapp.net/bin/Grids_#{version}.zip"
   name "Grids"
