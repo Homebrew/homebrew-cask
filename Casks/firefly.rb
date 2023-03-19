@@ -16,7 +16,7 @@ cask "firefly" do
 
   auto_updates true
 
-  app "Firefly.app"
+  app "Firefly Shimmer.app"
 
   uninstall quit: "org.iota.firefly"
 
