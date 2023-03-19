@@ -23,7 +23,7 @@ cask "bonitastudiocommunity" do
             delete: "/Applications/BonitaStudioCommunity-#{version}.app"
 
   zap trash: [
-    "~/Library/Preferences/org.bonitasoft.studio.product.plist",
     "/Library/Caches/org.bonitasoft.studio.product",
+    "~/Library/Preferences/org.bonitasoft.studio.product.plist",
   ]
 end
