@@ -14,4 +14,13 @@ cask "envkey" do
   end
 
   app "EnvKey.app"
+
+  zap trash: [
+    "~/Library/Application Support/EnvKey",
+    "~/Library/Caches/com.envkey.EnvKeyApp",
+    "~/Library/Caches/com.envkey.EnvKeyApp.ShipIt",
+    "~/Library/HTTPStorages/com.envkey.EnvKeyApp",
+    "~/Library/Logs/EnvKey",
+    "~/Library/Preferences/com.envkey.EnvKeyApp.plist",
+  ]
 end
