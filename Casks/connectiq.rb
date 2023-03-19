@@ -22,4 +22,9 @@ cask "connectiq" do
   binary "connectiq-sdk-mac-#{version.tr(",", "-")}/bin/monkeydo"
   binary "connectiq-sdk-mac-#{version.tr(",", "-")}/bin/monkeydoc"
   binary "connectiq-sdk-mac-#{version.tr(",", "-")}/bin/shell"
+
+  zap trash: [
+    "~/Library/Preferences/com.garmin.connectiq.simulator.plist",
+    "~/Library/Saved Application State/com.garmin.connectiq.simulator.savedState",
+  ]
 end
