@@ -16,4 +16,9 @@ cask "devsquadron" do
   end
 
   binary "bin/macos-#{arch}/ds"
+
+  zap trash: [
+    "~/Library/Application Support/devsquadron",
+    "~/Library/Caches/devsquadron",
+  ]
 end
