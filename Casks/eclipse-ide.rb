@@ -1,4 +1,4 @@
-cask "eclipse-ide" do
+icask "eclipse-ide" do
   arch arm: "aarch64", intel: "x86_64"
 
   version "4.27.0,2023-03"
@@ -22,4 +22,6 @@ cask "eclipse-ide" do
   end
 
   app "Eclipse.app"
+
+  zap trash: "~/Library/Preferences/epp.package.committers.plist"
 end
