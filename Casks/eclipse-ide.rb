@@ -1,4 +1,4 @@
-icask "eclipse-ide" do
+cask "eclipse-ide" do
   arch arm: "aarch64", intel: "x86_64"
 
   version "4.27.0,2023-03"
