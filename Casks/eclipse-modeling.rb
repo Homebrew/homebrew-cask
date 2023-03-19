@@ -16,4 +16,10 @@ cask "eclipse-modeling" do
 
   # Renamed to avoid conflict with other Eclipse.
   app "Eclipse.app", target: "Eclipse Modeling.app"
+
+  zap trash: [
+    "~/.eclipse",
+    "~/eclipse-workspace",
+    "~/Library/Preferences/epp.package.modeling.plist",
+  ]
 end
