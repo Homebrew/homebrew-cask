@@ -1,6 +1,6 @@
 cask "irpf2023" do
-  version "1.0"
-  sha256 "e4394dacef01e06e6fdf40dbe3a54bc526450e5e66a268301e47cc092fa0c7bb"
+  version "1.1"
+  sha256 "8bd5d27c32e3967059d35d0b73f55dc4ba8903e01faeb6c974ab06ae51f2564f"
 
   url "https://downloadirpf.receita.fazenda.gov.br/irpf/2023/irpf/arquivos/IRPF2023-v#{version}.dmg"
   name "IRPF 2023"
