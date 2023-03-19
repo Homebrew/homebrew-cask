@@ -10,4 +10,6 @@ cask "amitv87-pip" do
   depends_on macos: ">= :sierra"
 
   app "PiP.app"
+
+  zap trash: "~/Library/Saved Application State/com.boggyb.PiP.savedState"
 end
