@@ -10,10 +10,8 @@ cask "bonitastudiocommunity" do
 
   livecheck do
     url :url
-    regex(%r{href=["']?[^"' >]*?/tag/[^"' >]*?(\d+(?:[.-]\d+)+)-(\w+)["' >]}i)
-    strategy :github_latest do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]}-#{match[1]}" }
-    end
+    regex(%r{href=["']?[^"' >]*?/tag/[^"' >]*?(\d+(?:[.-]\d+)+(?:-\w+)?)["' >]}i)
+    strategy :github_latest
   end
 
   installer script: {
