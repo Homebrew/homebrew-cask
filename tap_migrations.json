@@ -9,6 +9,7 @@
   "cups-pdf": "homebrew/core",
   "dmd": "homebrew/core",
   "docker-compose": "homebrew/core",
+  "dotnet-sdk": "homebrew/core",
   "exa": "homebrew/core",
   "exiftool": "homebrew/core",
   "fastlane": "homebrew/core",
