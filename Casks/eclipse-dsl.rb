@@ -16,4 +16,10 @@ cask "eclipse-dsl" do
 
   # Renamed to avoid conflict with other Eclipse.
   app "Eclipse.app", target: "Eclipse DSL.app"
+
+  zap trash: [
+    "~/.eclipse",
+    "~/eclipse-workspace",
+    "~/Library/Preferences/epp.package.dsl.plist",
+  ]
 end
