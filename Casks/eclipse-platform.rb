@@ -22,8 +22,8 @@ cask "eclipse-platform" do
   app "Eclipse.app", target: "Eclipse Platform.app"
 
   zap trash: [
-  "~/.eclipse",
-  "~/Library/Preferences/org.eclipse.sdk.ide.plist",
-  "~/eclipse-workspace",
-]
+    "~/.eclipse",
+    "~/Library/Preferences/org.eclipse.sdk.ide.plist",
+    "~/eclipse-workspace",
+  ]
 end
