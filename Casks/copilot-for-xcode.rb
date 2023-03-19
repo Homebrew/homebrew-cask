@@ -1,6 +1,6 @@
 cask "copilot-for-xcode" do
-  version "0.8.5.update.1"
-  sha256 "d945e48503163f82c76128d0c26cd42bc46bd2b40b5ba743486cd1e94a7f3f0f"
+  version "0.8.6"
+  sha256 "03195b4194aaff153a5684b4d7fcc6b07888995cd2519d366908dede85dceeeb"
 
   url "https://github.com/intitni/CopilotForXcode/releases/download/#{version}/Copilot.for.Xcode.app.zip"
   name "Copilot for Xcode"
