@@ -16,5 +16,11 @@ cask "fightcade" do
 
   depends_on macos: ">= :high_sierra"
 
-  app "Fightcade2.app"
+  app "Fightcade#{version.major}.app"
+
+  zap trash: [
+    "~/Library/Application Support/Fightcade",
+    "~/Library/Preferences/com.fightcade2.plist",
+    "~/Library/Saved Application State/com.fightcade2.savedState",
+  ]
 end
