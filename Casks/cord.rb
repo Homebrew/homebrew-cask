@@ -1,8 +1,8 @@
 cask "cord" do
-  version "0.5.7,5701"
+  version "0.5.7"
   sha256 "8f505b12b94167100b3b8b44ed3cee32ffcc94b73dc44fe0ecc896151f114100"
 
-  url "https://downloads.sourceforge.net/cord/cord/#{version.csv.first}/CoRD_#{version.csv.first}.zip",
+  url "https://downloads.sourceforge.net/cord/cord/#{version.csv.first}/CoRD_#{version}.zip",
       verified: "downloads.sourceforge.net/cord/"
   name "CoRD"
   desc "Remote desktop client"
@@ -10,7 +10,7 @@ cask "cord" do
 
   livecheck do
     url "https://cord.sourceforge.io/sparkle.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   app "CoRD.app"

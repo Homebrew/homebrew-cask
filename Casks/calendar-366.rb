@@ -1,15 +1,15 @@
 cask "calendar-366" do
-  version "2.14.1,3463"
+  version "2.14.1"
   sha256 "879a0c670937beb5e43d8273ea1e43c421a7921c8d894b7a7d1c4d26c768c59b"
 
-  url "https://nspektor.com/downloads/Calendar366_v#{version.csv.first}.dmg"
+  url "https://nspektor.com/downloads/Calendar366_v#{version}.dmg"
   name "Calendar 366 II"
   desc "Menu bar calendar for events and reminders"
   homepage "https://nspektor.com/calendar366/mac"
 
   livecheck do
     url "https://nspektor.com/downloads/Calendar366IIAsset.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   depends_on macos: ">= :mojave"
