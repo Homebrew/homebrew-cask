@@ -20,7 +20,7 @@ cask "fightcade" do
 
   zap trash: [
     "~/Library/Application Support/Fightcade",
-    "~/Library/Preferences/com.fightcade2.plist",
-    "~/Library/Saved Application State/com.fightcade2.savedState",
+    "~/Library/Preferences/com.fightcade*.plist",
+    "~/Library/Saved Application State/com.fightcade*.savedState",
   ]
 end
