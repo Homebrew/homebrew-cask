@@ -1,5 +1,5 @@
 cask "blurscreen" do
-  version "1.0,9"
+  version "1.0"
   sha256 :no_check
 
   url "https://www.blurscreen.app/assets/BlurScreen-v2.pkg"
@@ -9,7 +9,7 @@ cask "blurscreen" do
 
   livecheck do
     url "https://www.blurscreen.app/update/mac/blurscreen.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
