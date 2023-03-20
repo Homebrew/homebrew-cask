@@ -1,10 +1,16 @@
 cask "joinme" do
-  version "3.22.0.14903"
+  version "3.23.0.15766"
   sha256 :no_check
 
   url "https://secure.join.me/Download.aspx?installer=mac&webdownload=true"
   name "join.me"
+  desc "Online conferencing software"
   homepage "https://www.join.me/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   app "join.me.app"
 

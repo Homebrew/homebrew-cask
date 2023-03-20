@@ -1,6 +1,6 @@
 cask "sonobus" do
-  version "1.6.1"
-  sha256 "e9a0c34ca324259d1633c8b3b0b47b12281ac5af95fd328e89c6ca57c830127e"
+  version "1.6.2"
+  sha256 "957930a3b48eae4694f49b7015e3faebf99fe0ac280f643c2537ee354cec2881"
 
   url "https://sonobus.net/releases/sonobus-#{version}-mac.dmg"
   name "SonoBus"

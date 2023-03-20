@@ -126,15 +126,15 @@ AFTER_INTERIOR_VERSION_PATS = [
 
 class AppName < String
   def self.remove_trailing_pat
-    @@remove_trailing_pat ||= /(?<=.)(?:#{REMOVE_TRAILING_PATS.join('|')})\Z/i
+    @@remove_trailing_pat ||= /(?<=.)(?:#{REMOVE_TRAILING_PATS.join('|')})\Z/i # rubocop:disable Style/ClassVars
   end
 
   def self.preserve_trailing_pat
-    @@preserve_trailing_pat ||= /(?:#{PRESERVE_TRAILING_PATS.join('|')})\Z/i
+    @@preserve_trailing_pat ||= /(?:#{PRESERVE_TRAILING_PATS.join('|')})\Z/i # rubocop:disable Style/ClassVars
   end
 
   def self.after_interior_version_pat
-    @@after_interior_version_pat ||= /(?:#{AFTER_INTERIOR_VERSION_PATS.join('|')})/i
+    @@after_interior_version_pat ||= /(?:#{AFTER_INTERIOR_VERSION_PATS.join('|')})/i # rubocop:disable Style/ClassVars
   end
 
   def english_from_app_bundle
@@ -370,7 +370,7 @@ def warnings
 end
 
 def report
-  puts "Proposed Simplified App name: #{simplified_app_name}" if $debug
+  puts "Proposed Simplified App name: #{simplified_app_name}" if $debug # rubocop:disable Style/GlobalVars
   puts "Proposed token:               #{cask_token}"
   puts "Proposed file name:           #{cask_file_name}"
   puts "Cask Header Line:             cask \"#{cask_token}\" do"
@@ -402,7 +402,7 @@ if /^-+h(elp)?$/i.match?(ARGV.first)
 end
 
 if /^-+debug?$/i.match?(ARGV.first)
-  $debug = 1
+  $debug = 1 # rubocop:disable Style/GlobalVars
   ARGV.shift
 end
 

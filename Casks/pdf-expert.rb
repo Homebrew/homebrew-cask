@@ -1,6 +1,6 @@
 cask "pdf-expert" do
-  version "3.0.35,890"
-  sha256 "c336bda11b886f6ba6fa0db319c41d1eb34e3bebce1998dacc51602c0f1601e2"
+  version "3.0.36,902"
+  sha256 "47ab7309f26dab88c7c978faf3e67d3180bb479abb328fefc1a4de5616a085c7"
 
   url "https://downloads.pdfexpert.com/pem#{version.major}/versions/#{version.csv.second}/PDFExpert.zip"
   name "PDF Expert"
@@ -25,8 +25,8 @@ cask "pdf-expert" do
     "~/Library/Caches/com.readdle.PDFExpert-Installer",
     "~/Library/Caches/com.readdle.PDFExpert-Mac",
     "~/Library/HTTPStorages/com.readdle.PDFExpert-Installer",
-    "~/Library/HTTPStorages/com.readdle.PDFExpert-Mac.binarycookies",
     "~/Library/HTTPStorages/com.readdle.PDFExpert-Mac",
+    "~/Library/HTTPStorages/com.readdle.PDFExpert-Mac.binarycookies",
     "~/Library/PDF Expert",
     "~/Library/Preferences/com.readdle.PDFExpert-Mac.plist",
   ]

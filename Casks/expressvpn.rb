@@ -1,6 +1,6 @@
 cask "expressvpn" do
-  version "11.19.0.72407"
-  sha256 "8118effc939cc1cdca66190bd0d719e7329723225aaf3614930a12e4065debb7"
+  version "11.23.0.73611"
+  sha256 "461e9b290e10219acab0c7b8b04b8779d0b98728e6b103a5950740876e01c18d"
 
   url "https://www.expressvpn.works/clients/mac/expressvpn_mac_#{version}_release.pkg"
   name "ExpressVPN"
@@ -23,4 +23,13 @@ cask "expressvpn" do
               sudo:       true,
             },
             pkgutil:   "com.expressvpn.ExpressVPN"
+
+  zap trash: [
+    "/Library/Application Support/com.expressvpn.ExpressVPN",
+    "/Library/LaunchDaemons/com.expressvpn.expressvpnd.plist",
+    "~/Library/Application Support/com.expressvpn.ExpressVPN",
+    "~/Library/HTTPStorages/com.expressvpn.ExpressVPN",
+    "~/Library/Logs/ExpressVPN",
+    "~/Library/Preferences/com.expressvpn.ExpressVPN.plist",
+  ]
 end

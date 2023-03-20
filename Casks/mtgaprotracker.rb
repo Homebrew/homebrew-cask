@@ -10,8 +10,8 @@ cask "mtgaprotracker" do
 
   livecheck do
     url "https://github.com/Razviar/mtgap/"
-    strategy :page_match
     regex(/Mac\sversion.*?(\d+(?:\.\d+)+)/i)
+    strategy :page_match
   end
 
   app "mtgaprotracker.app"

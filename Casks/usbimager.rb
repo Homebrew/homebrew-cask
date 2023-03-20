@@ -1,6 +1,6 @@
 cask "usbimager" do
   version "1.0.9"
-  sha256 "6731d6116468aeb607e82d8560ade2d00ae3f9ae94c33b12a44c9aef68b6e610"
+  sha256 "146e6e78457f28d15840c92952c84578b7e2c934fbba0ce965cee53be7382015"
 
   url "https://gitlab.com/bztsrc/usbimager/raw/binaries/usbimager_#{version}-intel-macosx-cocoa.zip",
       verified: "gitlab.com/bztsrc/usbimager/"

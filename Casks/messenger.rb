@@ -1,5 +1,5 @@
 cask "messenger" do
-  version "175.0.0.9.103,439670808"
+  version "182.0.0.9.73"
   sha256 :no_check
 
   url "https://www.messenger.com/messenger/desktop/downloadV2/?platform=mac"
@@ -9,7 +9,7 @@ cask "messenger" do
 
   livecheck do
     url "https://www.facebook.com/messenger/desktop/zeratul/update.xml?target=zeratul&platform=mac"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

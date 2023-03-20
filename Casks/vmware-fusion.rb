@@ -8,19 +8,28 @@ cask "vmware-fusion" do
   homepage "https://www.vmware.com/products/fusion.html"
 
   livecheck do
-    url "https://softwareupdate.vmware.com/cds/vmw-desktop/fusion.xml"
-    regex(%r{fusion/(\d+(?:\.\d+)+)/(\d+)/x86}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+    url "https://www.vmware.com/go/getfusion"
+    regex(/VMWare[-_.]Fusion[-_.](\d+(?:\.\d+)+)[-_.](\d+)/i)
+    strategy :header_match do |headers, regex|
+      next if headers["location"].blank?
+
+      match = headers["location"].match(regex)
+      "#{match[1]},#{match[2]}" if match
     end
   end
 
   auto_updates true
-  conflicts_with cask: "vmware-fusion-tech-preview"
+  conflicts_with cask: [
+    "homebrew/cask-versions/vmware-fusion7",
+    "homebrew/cask-versions/vmware-fusion8",
+    "homebrew/cask-versions/vmware-fusion10",
+    "homebrew/cask-versions/vmware-fusion11",
+    "homebrew/cask-versions/vmware-fusion12",
+    "homebrew/cask-versions/vmware-fusion-tech-preview",
+  ]
   depends_on macos: ">= :monterey"
 
   app "VMware Fusion.app"
-  binary "#{appdir}/VMware Fusion.app/Contents/Library/VMware OVF Tool/ovftool"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vkd/bin/vctl"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmnet-bridge"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmnet-cfgcli"
@@ -32,6 +41,7 @@ cask "vmware-fusion" do
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmrest"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmrun"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmss2core"
+  binary "#{appdir}/VMware Fusion.app/Contents/Library/VMware OVF Tool/ovftool"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-aewp"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-authd"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-cloneBootCamp"
@@ -66,24 +76,24 @@ cask "vmware-fusion" do
     "/Library/Logs/VMware",
     "/Library/Preferences/VMware Fusion",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vmware.fusion.sfl*",
-    "~/Library/Application Support/VMware Fusion",
     "~/Library/Application Support/VMware Fusion Applications Menu",
+    "~/Library/Application Support/VMware Fusion",
     "~/Library/Caches/com.vmware.fusion",
-    "~/Library/Logs/VMware Fusion",
     "~/Library/Logs/VMware Fusion Applications Menu",
+    "~/Library/Logs/VMware Fusion",
     "~/Library/Logs/VMware Graphics Service.log",
     "~/Library/Logs/VMware",
-    "~/Library/Preferences/VMware Fusion",
+    "~/Library/Preferences/com.vmware.fusion.LSSharedFileList.plist",
+    "~/Library/Preferences/com.vmware.fusion.LSSharedFileList.plist.lockfile",
     "~/Library/Preferences/com.vmware.fusion.plist",
     "~/Library/Preferences/com.vmware.fusion.plist.lockfile",
-    "~/Library/Preferences/com.vmware.fusionApplicationsMenu.plist",
     "~/Library/Preferences/com.vmware.fusionApplicationsMenu.helper.plist",
+    "~/Library/Preferences/com.vmware.fusionApplicationsMenu.plist",
     "~/Library/Preferences/com.vmware.fusionDaemon.plist",
     "~/Library/Preferences/com.vmware.fusionDaemon.plist.lockfile",
     "~/Library/Preferences/com.vmware.fusionStartMenu.plist",
     "~/Library/Preferences/com.vmware.fusionStartMenu.plist.lockfile",
-    "~/Library/Preferences/com.vmware.fusion.LSSharedFileList.plist",
-    "~/Library/Preferences/com.vmware.fusion.LSSharedFileList.plist.lockfile",
+    "~/Library/Preferences/VMware Fusion",
     "~/Library/Saved Application State/com.vmware.fusion.savedState",
     "~/Library/WebKit/com.vmware.fusion",
   ]

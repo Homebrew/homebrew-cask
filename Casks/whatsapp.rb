@@ -1,6 +1,6 @@
 cask "whatsapp" do
-  version "2.2305.7"
-  sha256 "82cc918e4b7ce226ba0f2b85ad3b881e87c1f4592b89d5f6d79ccfa0a8656059"
+  version "2.2311.5"
+  sha256 "a6dec06d00bfa4c7a67ac305b7f357843fe34133c0c70a6f8ed4d8d5ce1d7635"
 
   url "https://web.whatsapp.com/desktop/mac/files/release-#{version}.zip"
   name "WhatsApp"
@@ -9,8 +9,8 @@ cask "whatsapp" do
 
   livecheck do
     url "https://web.whatsapp.com/desktop/mac/releases"
-    strategy :page_match do |page|
-      JSON.parse(page)["name"]
+    strategy :json do |json|
+      json["name"]
     end
   end
 

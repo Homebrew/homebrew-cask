@@ -1,11 +1,11 @@
 cask "ableton-live-suite" do
   arch = "intel"
-  version "11.2.7"
+  version "11.2.10"
   sha256 "ae6f2c978009d7baa86b53d41be8a5eafda27bcb3a0bf102ebff629b4ebe091f"
 
   on_mojave :or_newer do
     arch = "universal"
-    sha256 "83d0933ebb24e68dbefb8965a4c9ec47044a5ecc91689bcddc9c4ffdca38593e"
+    sha256 "3690b7ba17cc2ba2389d57724f1f0a09fa2abc38a7a27bfc2ac859f27ad94132"
   end
 
   url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_suite_#{version}_#{arch}.dmg"

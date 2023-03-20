@@ -1,6 +1,6 @@
 cask "dropshare" do
-  version "5.24,5280"
-  sha256 "fe44342b2c08a31529e72eabc6a7bf55f5be17d402e4678366749fa91c77f362"
+  version "5.27,5364"
+  sha256 "b3db4895e0f8ad28aa418010dc9424c138dc6bc44498a2382de200b7c6c53006"
 
   url "https://d2wvuuix8c9e48.cloudfront.net/Dropshare#{version.major}-#{version.csv.second}.app.zip",
       verified: "d2wvuuix8c9e48.cloudfront.net/"

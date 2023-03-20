@@ -1,7 +1,7 @@
 cask "naver-whale" do
   arch arm: "ARM64"
 
-  version "3.18.154.13"
+  version "3.19.166.16"
   sha256 :no_check
 
   url "http://update.whale.naver.net/downloads/installers/NaverWhale#{arch}.dmg",
@@ -12,8 +12,8 @@ cask "naver-whale" do
 
   livecheck do
     url "https://cv.whale.naver.com/version/latest_version"
-    strategy :page_match do |page|
-      JSON.parse(page)["message"]["@version"]
+    strategy :json do |json|
+      json["message"]["@version"]
     end
   end
 

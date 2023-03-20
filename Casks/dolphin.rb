@@ -16,6 +16,7 @@ cask "dolphin" do
     "homebrew/cask-versions/dolphin-beta",
     "homebrew/cask-versions/dolphin-dev",
   ]
+  depends_on macos: ">= :catalina"
 
   app "Dolphin.app"
 

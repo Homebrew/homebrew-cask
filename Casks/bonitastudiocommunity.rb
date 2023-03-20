@@ -8,6 +8,12 @@ cask "bonitastudiocommunity" do
   desc "Business process automation and optimization"
   homepage "https://www.bonitasoft.com/downloads"
 
+  livecheck do
+    url :url
+    regex(%r{href=["']?[^"' >]*?/tag/[^"' >]*?(\d+(?:[.-]\d+)+(?:-\w+)?)["' >]}i)
+    strategy :github_latest
+  end
+
   installer script: {
     executable: "#{staged_path}/BonitaStudioCommunity-#{version}.app/Contents/MacOS/installbuilder.sh",
     args:       ["--mode", "unattended"],
@@ -17,7 +23,7 @@ cask "bonitastudiocommunity" do
             delete: "/Applications/BonitaStudioCommunity-#{version}.app"
 
   zap trash: [
-    "~/Library/Preferences/org.bonitasoft.studio.product.plist",
     "/Library/Caches/org.bonitasoft.studio.product",
+    "~/Library/Preferences/org.bonitasoft.studio.product.plist",
   ]
 end

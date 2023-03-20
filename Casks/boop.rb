@@ -10,8 +10,8 @@ cask "boop" do
 
   livecheck do
     url "https://boop.okat.best/version.json"
-    strategy :page_match do |page|
-      JSON.parse(page)["standalone"]["version"]
+    strategy :json do |json|
+      json["standalone"]["version"]
     end
   end
 

@@ -9,8 +9,8 @@ cask "memo" do
 
   livecheck do
     url "https://raw.githubusercontent.com/btk/memo/master/package.json"
-    strategy :page_match do |page|
-      JSON.parse(page)["version"]
+    strategy :json do |json|
+      json["version"]
     end
   end
 

@@ -1,15 +1,15 @@
 cask "default-folder-x" do
-  version "5.7.4,5640"
-  sha256 "9137f93276409564e99d6a99ae5337215170133c5e59810ea227d44cc3d87f39"
+  version "5.7.5"
+  sha256 "b13e4dad72a3166d7443309ffcc8e1abedffae8ad8affc6262a5a0bd973bbd93"
 
-  url "https://www.stclairsoft.com/download/DefaultFolderX-#{version.csv.first}.dmg"
+  url "https://www.stclairsoft.com/download/DefaultFolderX-#{version}.dmg"
   name "Default Folder X"
   desc "Utility to enhance the Open and Save dialogs in applications"
   homepage "https://www.stclairsoft.com/DefaultFolderX/"
 
   livecheck do
     url "https://www.stclairsoft.com/cgi-bin/sparkle.cgi?DX#{version.major}"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

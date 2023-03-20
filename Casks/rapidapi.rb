@@ -1,15 +1,15 @@
 cask "rapidapi" do
-  version "4.1.1,4001001002"
-  sha256 "3cf4cf76a1fc5f3951e1ee232a420e5ab86389b8d01d5346e8d1e2ec53affe08"
+  version "4.1.5"
+  sha256 "5a710901e96e9eda91197125c53b1b511e2899261737808b602bf667ea32d61f"
 
-  url "https://cdn-builds.paw.cloud/paw/RapidAPI-#{version.csv.first}.zip"
+  url "https://cdn-builds.paw.cloud/paw/RapidAPI-#{version}.zip"
   name "RapidAPI"
   desc "HTTP client that helps testing and describing APIs"
   homepage "https://paw.cloud/"
 
   livecheck do
     url "https://paw.cloud/api/v2/updates/appcast"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

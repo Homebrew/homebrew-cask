@@ -1,6 +1,6 @@
 cask "jupyterlab" do
-  version "3.5.1-1"
-  sha256 "814948ee9b05a8d17d0e08d7d2faab0a7183a9185d144c7734b4e78c21537afa"
+  version "3.6.1-2"
+  sha256 "dee2cefbee2000c53cea8d1d7d5b0411af983a481c99072384f0f6228a8aa3c6"
 
   url "https://github.com/jupyterlab/jupyterlab-desktop/releases/download/v#{version}/JupyterLab-Setup-macOS.dmg"
   name "JupyterLab App"
@@ -9,8 +9,8 @@ cask "jupyterlab" do
 
   livecheck do
     url :url
-    strategy :github_latest
     regex(%r{href=.*?/tag/v?(\d+(?:[.-]\d+)+)["' >]}i)
+    strategy :github_latest
   end
 
   app "JupyterLab.app"

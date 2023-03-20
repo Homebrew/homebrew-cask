@@ -1,6 +1,6 @@
 cask "digital" do
-  version "0.29"
-  sha256 "4d61e2776100ddfe3f8638886e5b33e3b99165eefefaf9ba5c9b9fad1f47f3a7"
+  version "0.30"
+  sha256 "17b780b8c95db7997973252a58e0928ad06517c6c0f0f79534cb5b0515734476"
 
   url "https://github.com/hneemann/Digital/releases/download/v#{version}/Digital.zip"
   name "Digital"

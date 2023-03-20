@@ -1,6 +1,6 @@
 cask "squash" do
-  version "3.1.2,896"
-  sha256 "ab5438b5de59a5b9af98aecef356f30c8a0bf8fb18a3a34d70c6d79e9fca27d4"
+  version "3.1.2,898"
+  sha256 "937771921091689ceac308a7fae2f011d5a98c4469881082adb2c898a57b0ce7"
 
   url "https://dl.devant-cdn.io/v1/app/4ad73d1f-7ab7-4f7f-b9df-8d2d906ef718/Squash-#{version.csv.second}.zip/Squash.zip",
       verified: "dl.devant-cdn.io/v1/app/4ad73d1f-7ab7-4f7f-b9df-8d2d906ef718/"

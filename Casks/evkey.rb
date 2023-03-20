@@ -8,6 +8,11 @@ cask "evkey" do
   desc "Vietnamese keyboard"
   homepage "https://evkeyvn.com/"
 
+  livecheck do
+    url :homepage
+    regex(/EVKeyMac\.zip.*?v?(\d+(?:\.\d+)+)/im)
+  end
+
   app "EVKey.app"
 
   zap trash: [

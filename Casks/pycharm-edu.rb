@@ -13,8 +13,8 @@ cask "pycharm-edu" do
 
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=PCE&latest=true&type=release"
-    strategy :page_match do |page|
-      JSON.parse(page)["PCE"].map do |release|
+    strategy :json do |json|
+      json["PCE"].map do |release|
         "#{release["version"]},#{release["build"]}"
       end
     end

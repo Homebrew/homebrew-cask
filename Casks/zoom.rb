@@ -1,9 +1,9 @@
 cask "zoom" do
   arch arm: "arm64/"
 
-  version "5.13.7.15481"
-  sha256 arm:   "6fa82035e94fed3d8276327284d3ebd1c51637613c76c58586345b48813c3afd",
-         intel: "e8e70702b940c1ab4574a055720f3448617293763f04a62936cbf7b240fb1690"
+  version "5.13.11.16405"
+  sha256 arm:   "7ff3918b2b3b5a772a7c26f034b1945d8960f7145e4f449fd7e04e5e3d4b9d48",
+         intel: "d5d795e28efbe9649cdf8b256998902754b6fc999ecc93a1af333e4fae6a5ce1"
 
   url "https://cdn.zoom.us/prod/#{version}/#{arch}Zoom.pkg"
   name "Zoom.us"
@@ -29,10 +29,10 @@ cask "zoom" do
     ohai "Attempting to close zoom.us.app to avoid unwanted user intervention" unless retries < 3
     return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/zoom.us.app"]
 
-    rescue RuntimeError
-      sleep 1
-      retry unless (retries -= 1).zero?
-      opoo "Unable to forcibly close zoom.us.app"
+  rescue RuntimeError
+    sleep 1
+    retry unless (retries -= 1).zero?
+    opoo "Unable to forcibly close zoom.us.app"
   end
 
   uninstall signal:    ["KILL", "us.zoom.xos"],

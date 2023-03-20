@@ -1,9 +1,9 @@
 cask "springtoolsuite" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "4.17.2,4.26.0"
-  sha256 arm:   "e440a8abb841cde3d01796d1cb65d7bf8577dc1936a95b156616c30bf237371f",
-         intel: "3a9a19d61be8dafa0381264e9d045d56c81ddfffd1580035962ae7a0bc03595a"
+  version "4.18.0,4.27.0"
+  sha256 arm:   "0fb4b42ff7c7fb041c7c03494b1c73d1e085b9d15bf0cbc12af0476f15b8d94a",
+         intel: "27d77d4495cfad30e559762ef8088a09641704b0b75964f2107096f4046e0e88"
 
   url "https://download.springsource.com/release/STS#{version.major}/#{version.csv.first}.RELEASE/dist/e#{version.csv.second.major_minor}/spring-tool-suite-#{version.major}-#{version.csv.first}.RELEASE-e#{version.csv.second}-macosx.cocoa.#{arch}.dmg",
       verified: "download.springsource.com/release/"
@@ -26,4 +26,9 @@ cask "springtoolsuite" do
   auto_updates true
 
   app "SpringToolSuite#{version.major}.app"
+
+  zap trash: [
+    "~/Library/Preferences/org.springframework.boot.ide.branding.sts#{version.major}.plist",
+    "~/Library/Saved Application State/org.springframework.boot.ide.branding.sts#{version.major}.savedState",
+  ]
 end

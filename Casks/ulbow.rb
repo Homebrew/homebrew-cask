@@ -1,6 +1,6 @@
 cask "ulbow" do
-  version "1.8,2022.12"
-  sha256 "95c357a946406f568a57a41c0455af276e3a182ad37d8f7873488e43b086dcee"
+  version "1.10,2023.02"
+  sha256 "3fdafc940c348f611b784229727bc576b889fcad9a3969ecac3a30f2c33c5c0b"
 
   url "https://eclecticlightdotcom.files.wordpress.com/#{version.csv.second.major}/#{version.csv.second.minor}/ulbow#{version.csv.first.no_dots}.zip",
       verified: "eclecticlightdotcom.files.wordpress.com/"

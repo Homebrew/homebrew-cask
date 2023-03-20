@@ -1,9 +1,9 @@
 cask "openrefine" do
-  version "3.6.2"
-  sha256 "460e801446065d8ef25388d18c65aa0ecd3b889175ebe5eecb69179282be35b1"
+  version "3.7.1"
+  sha256 "68046ba4eb7d2de48d2245cf8fd5018cb4fd214348904c88b9b42c5ddeeacc60"
 
-  url "https://oss.sonatype.org/service/local/artifact/maven/content?r=releases&g=org.openrefine&a=openrefine&v=#{version}&c=mac&p=dmg",
-      verified: "oss.sonatype.org/service/local/artifact/maven/"
+  url "https://github.com/OpenRefine/OpenRefine/releases/download/#{version}/openrefine-mac-#{version}.dmg",
+      verified: "github.com/OpenRefine/OpenRefine/"
   name "OpenRefine"
   desc "Tool for working with messy data (previously Google Refine)"
   homepage "https://openrefine.org/"

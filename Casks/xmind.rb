@@ -9,8 +9,8 @@ cask "xmind" do
 
   livecheck do
     url "https://www.xmind.net/zen/download/mac/"
-    strategy :header_match
     regex(/XMind[._-]for[._-]macOS[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
+    strategy :header_match
   end
 
   conflicts_with cask: "homebrew/cask-versions/xmind8"

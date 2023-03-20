@@ -1,6 +1,6 @@
 cask "xlplayer" do
-  version "3.1.0.65222"
-  sha256 "3142bf118eefa19fc61b21623fea6f0ee022c211d4b3fe73e467831c8be87520"
+  version "3.1.2.65821"
+  sha256 "b1b0187fd8bb2a61e6a822b8cd12b6a3d4018b7a9b0f8bb92a06a04cf1539eaf"
 
   url "https://down.sandai.net/mac/player_#{version}.dmg",
       verified: "down.sandai.net/"
@@ -11,8 +11,8 @@ cask "xlplayer" do
 
   livecheck do
     url "https://static-xl.a.88cdn.com/json/xunlei_video_version_mac.json"
-    strategy :page_match do |page|
-      JSON.parse(page)["version"]
+    strategy :json do |json|
+      json["version"]
     end
   end
 

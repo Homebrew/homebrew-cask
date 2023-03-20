@@ -19,6 +19,16 @@ cask "omnidisksweeper" do
       skip "Legacy version"
     end
   end
+  on_mojave do
+    version "1.13"
+    sha256 "bf572a47079cd4dea44f7ae2f14bb9a75e2548ad6066757d33564c21a0003821"
+
+    url "https://downloads.omnigroup.com/software/MacOSX/10.14/OmniDiskSweeper-#{version}.dmg"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
   on_catalina do
     version "1.13"
     sha256 "bf572a47079cd4dea44f7ae2f14bb9a75e2548ad6066757d33564c21a0003821"
@@ -28,8 +38,6 @@ cask "omnidisksweeper" do
     livecheck do
       skip "Legacy version"
     end
-
-    depends_on macos: ">= :mojave"
   end
   on_big_sur :or_newer do
     version "1.14"
@@ -48,6 +56,7 @@ cask "omnidisksweeper" do
   homepage "https://www.omnigroup.com/more/"
 
   auto_updates true
+  depends_on macos: ">= :sierra"
 
   app "OmniDiskSweeper.app"
 

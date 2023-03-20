@@ -7,5 +7,10 @@ cask "roon" do
   desc "Music player"
   homepage "https://roonlabs.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Roon.app"
 end

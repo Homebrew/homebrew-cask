@@ -1,6 +1,6 @@
 cask "fig" do
-  version "2.14.0"
-  sha256 "8ff27e4225141d3880ccec85f38ea9e372f9a9e5c9795cb88552bc8c5a78d674"
+  version "2.14.2"
+  sha256 "7fda3f6857f6bd8e680680e612141f8fc50d4e9e347aedae772f719d93b24655"
 
   url "https://repo.fig.io/generic/stable/asset/#{version}/universal/fig.dmg"
   name "fig"
@@ -9,8 +9,8 @@ cask "fig" do
 
   livecheck do
     url "https://repo.fig.io/generic/stable/index.json"
-    strategy :page_match do |page|
-      JSON.parse(page)["hints"]["livecheck"]
+    strategy :json do |json|
+      json["hints"]["livecheck"]
     end
   end
 

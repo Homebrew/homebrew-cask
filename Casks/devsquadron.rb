@@ -1,9 +1,9 @@
 cask "devsquadron" do
   arch arm: "arm", intel: "intel"
 
-  version "0.0.6"
-  sha256 arm:   "dac7c726bf8970fd164d08f6723b8b477a7f03feaa5bb804c1e4ae6e552a3bbf",
-         intel: "38583faa0d40420ed50b4f9b880c79e2e4ba57837c6f1f13334618a70eeb87c4"
+  version "0.0.10"
+  sha256 arm:   "004637ce7452c35f77b132a8cfae8382e1dc54d5f9e81e2c2e90de3e03f7c5d1",
+         intel: "8fd33b5f5545b2947bf6284230b688139cb0907d6c82a2861b37d9fab536923a"
 
   url "https://developersquadron.serveftp.com/downloads/devsquadron/v#{version}/macos-#{arch}.tar.xz"
   name "devsquadron"
@@ -16,4 +16,9 @@ cask "devsquadron" do
   end
 
   binary "bin/macos-#{arch}/ds"
+
+  zap trash: [
+    "~/Library/Application Support/devsquadron",
+    "~/Library/Caches/devsquadron",
+  ]
 end

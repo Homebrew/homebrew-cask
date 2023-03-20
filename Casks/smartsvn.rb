@@ -1,8 +1,11 @@
 cask "smartsvn" do
-  version "14.2.2"
-  sha256 "43d8ec95ce3e8b4a40a08a0ceff76c9d06f282ab3d211e2e6e37a7bb61ec8a3a"
+  arch arm: "aarch64", intel: "x86_64"
 
-  url "https://www.smartsvn.com/downloads/smartsvn/smartsvn-x86_64-#{version.dots_to_underscores}.dmg"
+  version "14.2.2"
+  sha256 arm:   "7eae47423b65df4a3dbefde3f34175bd123340d537f3694b58e4026fcadf03e7",
+         intel: "43d8ec95ce3e8b4a40a08a0ceff76c9d06f282ab3d211e2e6e37a7bb61ec8a3a"
+
+  url "https://www.smartsvn.com/downloads/smartsvn/smartsvn-#{arch}-#{version.dots_to_underscores}.dmg"
   name "SmartSVN"
   desc "Subversion client"
   homepage "https://www.smartsvn.com/"

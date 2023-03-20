@@ -1,15 +1,20 @@
 cask "gather" do
   arch arm: "-arm64"
 
-  version "0.5.5"
-  sha256 arm:   "6945e221f6f768bd79ffb5c6fcd6f73bf223803f64fee0c17e071d47b4a2555f",
-         intel: "1e67cf6505c8a774c2ede3917723b5ef2785aac30af4ce4c816b141bf2656577"
+  version "0.5.15"
+  sha256 arm:   "ab51d432adb0242821ed4480311edfdff01f20b96961782b801890a7dd662720",
+         intel: "9b2f1969ee0adaebf0340fc75664bf995267bcd636beedc05fe6b02c406f4f4c"
 
   url "https://github.com/gathertown/gather-town-desktop-releases/releases/download/v#{version}/Gather-#{version}#{arch}-mac.zip",
-      verified: "github.com/gathertown/gather-town-desktop-releases"
+      verified: "github.com/gathertown/gather-town-desktop-releases/"
   name "Gather Town"
   desc "Virtual video-calling space"
   homepage "https://gather.town/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Gather.app"
 

@@ -1,6 +1,6 @@
 cask "microsoft-office" do
-  version "16.69.23010700"
-  sha256 "6c606142087c676b91b796508f14e948f87640bf3cab0bc73f203fa112222e79"
+  version "16.71.23031200"
+  sha256 "f7557d6e8237dc916837752e57ecbef4393d85c0d9b7380dc0c0713ac086c1dd"
 
   url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_365_and_Office_#{version}_Installer.pkg",
       verified: "officecdnmac.microsoft.com/"
@@ -17,6 +17,8 @@ cask "microsoft-office" do
   auto_updates true
   conflicts_with cask: %w[
     microsoft-excel
+    microsoft-office-businesspro
+    microsoft-onenote
     microsoft-outlook
     microsoft-powerpoint
     microsoft-word

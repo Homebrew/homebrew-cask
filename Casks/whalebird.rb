@@ -1,8 +1,8 @@
 cask "whalebird" do
-  version "4.7.4"
-  sha256 "ec9d9c0655d8725adebce539191de5bdc71b3c3b6dad71a911459dda7bd72af0"
+  version "5.0.2"
+  sha256 "d7cd43fbeea83f13bba954fafe3aa1b01ed023bdaab29fbd8b1efc2ca6a43794"
 
-  url "https://github.com/h3poteto/whalebird-desktop/releases/download/#{version}/Whalebird-#{version}-darwin-universal.dmg",
+  url "https://github.com/h3poteto/whalebird-desktop/releases/download/v#{version}/Whalebird-#{version}-darwin-universal.dmg",
       verified: "github.com/h3poteto/whalebird-desktop/"
   name "Whalebird"
   desc "Mastodon, Pleroma and Misskey client"

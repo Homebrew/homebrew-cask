@@ -1,9 +1,29 @@
 cask "docker" do
   arch arm: "arm64", intel: "amd64"
 
-  version "4.16.2,95914"
-  sha256 arm:   "838eabe6cc42fe7e4be2cdb4d73924c61fc7982366dac2a9467793845851cb2e",
-         intel: "22eecb8ea07f10892d81cde07d614fb8b342163106133a75c4280a8e28787643"
+  on_catalina :or_older do
+    version "4.15.0,93002"
+    sha256 arm:   "fc8609d57fb8c8264122f581c0f66497e46e171f8027d85d90213527d6226362",
+           intel: "bee41d646916e579b16b7fae014e2fb5e5e7b5dbaf7c1949821fd311d3ce430b"
+
+    depends_on macos: ">= :catalina"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_big_sur :or_newer do
+    version "4.17.0,99724"
+    sha256 arm:   "5e01465d93dfe18d7678a96705e7c26bb654b6766f06373b5cffbf77c641bccc",
+           intel: "eb0531122a62859ce7b029e943fdad365603a916e6c15c107514c1e4a818d7ef"
+
+    depends_on macos: ">= :catalina"
+
+    livecheck do
+      url "https://desktop.docker.com/mac/main/#{arch}/appcast.xml"
+      strategy :sparkle
+    end
+  end
 
   url "https://desktop.docker.com/mac/main/#{arch}/#{version.csv.second}/Docker.dmg"
   name "Docker Desktop"
@@ -11,11 +31,6 @@ cask "docker" do
   name "Docker CE"
   desc "App to build and share containerized applications and microservices"
   homepage "https://www.docker.com/products/docker-desktop"
-
-  livecheck do
-    url "https://desktop.docker.com/mac/main/#{arch}/appcast.xml"
-    strategy :sparkle
-  end
 
   auto_updates true
   conflicts_with formula: %w[
@@ -27,7 +42,6 @@ cask "docker" do
     hyperkit
     kubernetes-cli
   ]
-  depends_on macos: ">= :catalina"
 
   app "Docker.app"
   binary "#{appdir}/Docker.app/Contents/Resources/etc/docker.bash-completion",
@@ -67,6 +81,7 @@ cask "docker" do
             ],
             launchctl: [
               "com.docker.helper",
+              "com.docker.socket",
               "com.docker.vmnetd",
             ],
             quit:      "com.docker.docker"

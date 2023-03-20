@@ -20,6 +20,8 @@ cask "unity" do
     end
   end
 
+  depends_on cask: "unity-hub"
+
   pkg "Unity-#{version.csv.first}.pkg"
 
   uninstall quit:    "com.unity3d.UnityEditor5.x",

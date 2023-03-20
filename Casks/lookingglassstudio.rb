@@ -1,6 +1,6 @@
 cask "lookingglassstudio" do
-  version "1.5.0"
-  sha256 "6d6f4422b0872702ff170862f897da83ae18629b77e2f0ced49a4070822ccef4"
+  version "1.5.1"
+  sha256 "8f7e337ab0aafc0b759840fa1d458f9bcf6df24d3167786a5c6148e3e4262df7"
 
   url "https://dhtk4bwj5r21z.cloudfront.net/HoloPlayStudio/PublicLinks/LookingGlassStudio-#{version}.dmg",
       verified: "dhtk4bwj5r21z.cloudfront.net/HoloPlayStudio/PublicLinks/"

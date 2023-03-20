@@ -7,5 +7,10 @@ cask "movist" do
   desc "Movie Player based on QuickTime & FFmpeg"
   homepage "https://github.com/samiamwork/Movist"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Movist.app"
 end

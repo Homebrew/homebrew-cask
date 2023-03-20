@@ -11,8 +11,8 @@ cask "mockplus" do
 
   livecheck do
     url "https://api.mockplus.com/v6/software/checkNewerVersionForMockupV2?name=MockplusClassic&version=latest&platform=mac"
-    strategy :page_match do |page|
-      JSON.parse(page)["value"]["version"]
+    strategy :json do |json|
+      json["value"]["version"]
     end
   end
 

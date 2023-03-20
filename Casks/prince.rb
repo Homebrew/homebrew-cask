@@ -1,6 +1,6 @@
 cask "prince" do
-  version "15.0.1"
-  sha256 "b05bbd018c3532b1ef101799abf24247cf503caa25a105b18a5091bfccfc020b"
+  version "15.1"
+  sha256 "61854a487562faa5b23e3e0378b4eed3a29f7bab71c06d4b7ceb064f088117fe"
 
   url "https://www.princexml.com/download/prince-#{version}-macos.zip"
   name "Prince"
@@ -22,4 +22,6 @@ cask "prince" do
       exec '#{staged_path}/prince-#{version}-macos/lib/prince/bin/prince' --prefix '#{staged_path}/prince-#{version}-macos/lib/prince' "$@"
     EOS
   end
+
+  # No zap stanza required
 end

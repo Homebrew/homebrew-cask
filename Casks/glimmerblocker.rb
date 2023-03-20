@@ -4,12 +4,8 @@ cask "glimmerblocker" do
 
   url "https://glimmerblocker.org/downloads/GlimmerBlocker-#{version}.dmg"
   name "GlimmerBlocker"
+  desc "HTTP based ad blocker"
   homepage "https://glimmerblocker.org/"
-
-  livecheck do
-    url "https://glimmerblocker.org/site/rss/sparkle-final.xml"
-    strategy :sparkle
-  end
 
   pkg "GlimmerBlocker.pkg"
 
@@ -26,8 +22,12 @@ cask "glimmerblocker" do
     "/Library/Logs/GlimmerBlocker",
   ]
 
-  caveats <<~EOS
-    You must deactivate GlimmerBlocker from the installed preference
-    pane before uninstalling. See https://glimmerblocker.org/wiki/Uninstall.
-  EOS
+  caveats do
+    discontinued
+
+    <<~EOS
+      You must deactivate GlimmerBlocker from the installed preference
+      pane before uninstalling. See https://glimmerblocker.org/wiki/Uninstall.
+    EOS
+  end
 end

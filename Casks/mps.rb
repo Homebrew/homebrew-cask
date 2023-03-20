@@ -12,8 +12,8 @@ cask "mps" do
 
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=MPS&latest=true&type=release"
-    strategy :page_match do |page|
-      JSON.parse(page)["MPS"].map do |release|
+    strategy :json do |json|
+      json["MPS"].map do |release|
         "#{release["version"]},#{release["build"]}"
       end
     end

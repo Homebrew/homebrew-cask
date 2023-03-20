@@ -10,8 +10,8 @@ cask "oss-browser" do
 
   livecheck do
     url :homepage
-    strategy :page_match
     regex(%r{href=.*?/(\d+(?:\.\d+)+)/oss-browser-darwin-x64\.zip}i)
+    strategy :page_match
   end
 
   app "oss-browser-darwin-x64/oss-browser.app"

@@ -1,12 +1,20 @@
 cask "readyapi" do
-  version "3.30.0"
-  sha256 "4cc64f880880b822734b5da80a0c708f936f0eb1ea097f8b108b5d7583cdef4a"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://dl.eviware.com/ready-api/#{version}/ReadyAPI-#{version}.dmg",
-      verified: "dl.eviware.com/ready-api"
+  version "3.44.0"
+  sha256 arm:   "406a9bf1fff015bb8f0d8f4d5d5d271fd7e52af3ae4b89b55a37afda109893b6",
+         intel: "a2965e93e23872dded3bb2995f5d4ad0c29777742efd3d6b597bc15ae7a2c797"
+
+  url "https://dl.eviware.com/ready-api/#{version}/ReadyAPI-#{arch}-#{version}.dmg",
+      verified: "dl.eviware.com/ready-api/"
   name "ReadyAPI Desktop"
-  desc "Automated API Testing Platform"
+  desc "Automated API testing platform"
   homepage "https://smartbear.com/product/ready-api/overview/"
+
+  livecheck do
+    url "https://support.smartbear.com/readyapi/docs/general-info/whats-new.html"
+    regex(/(\d+(?:\.\d+)+)\s\(latest\sversion\)/i)
+  end
 
   installer script: {
     executable: "ReadyAPI #{version} Installer.app/Contents/MacOS/JavaApplicationStub",
@@ -22,8 +30,4 @@ cask "readyapi" do
     "~/Library/Application Support/ReadyAPI-#{version}",
     "~/Library/Preferences/com.smartbear.ready.plist",
   ]
-
-  caveats do
-    discontinued
-  end
 end

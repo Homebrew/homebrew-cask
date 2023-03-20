@@ -1,9 +1,9 @@
 cask "intellij-idea" do
   arch arm: "-aarch64"
 
-  version "2022.3.2,223.8617.56"
-  sha256 arm:   "ea6da172fc8f27b7bad5475f0e1fc3359c492885bba8b6de59be727cb7b65284",
-         intel: "54d51ba7b65f84545faa7f8fc001b2bce48ef3ddb76006a44de9e95c6b395b8c"
+  version "2022.3.3,223.8836.41"
+  sha256 arm:   "627fdf0818f829ffa3c63275d51128ca23f27bca9945508e4743716856329043",
+         intel: "500b38341a13f2365b0052fadc91f83431db27c223036458171298a3bdd4b8b9"
 
   url "https://download.jetbrains.com/idea/ideaIU-#{version.csv.first}#{arch}.dmg"
   name "IntelliJ IDEA Ultimate"
@@ -12,8 +12,8 @@ cask "intellij-idea" do
 
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=IIU&latest=true&type=release"
-    strategy :page_match do |page|
-      JSON.parse(page)["IIU"].map do |release|
+    strategy :json do |json|
+      json["IIU"].map do |release|
         "#{release["version"]},#{release["build"]}"
       end
     end

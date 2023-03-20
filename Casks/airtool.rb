@@ -1,21 +1,21 @@
 cask "airtool" do
-  version "2.4.3,19"
-  sha256 "8f14022f39326f2d8eaab454b47e51cada7ada23205930a8700cb8f5453f4948"
+  version "2.4.4"
+  sha256 "177bb77050fcd3b9248345cf9b12d534133d7f4f421cd1887848ea6ae6343ee8"
 
-  url "https://www.intuitibits.com/downloads/Airtool_#{version.csv.first}.pkg"
+  url "https://www.intuitibits.com/downloads/Airtool_#{version}.pkg"
   name "Airtool"
   desc "Capture Wi-Fi packets"
   homepage "https://www.intuitibits.com/products/airtool/"
 
   livecheck do
     url "https://www.intuitibits.com/appcasts/com.intuitibits.airtool#{version.major}cast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
   depends_on macos: ">= :mojave"
 
-  pkg "Airtool_#{version.csv.first}.pkg"
+  pkg "Airtool_#{version}.pkg"
 
   uninstall_preflight do
     set_ownership "/Library/Application Support/Airtool #{version.major}"

@@ -13,7 +13,7 @@ cask "cnkiexpress" do
 
   livecheck do
     url "https://cajviewer.cnki.net/download.html"
-    regex(%r{href=.*/%E5%85%A8%E7%90%83%E5%AD%A6%E6%9C%AF%E5%BF%AB%E6%8A%A5[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    regex(%r{href=.*/全球学术快报[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   auto_updates true

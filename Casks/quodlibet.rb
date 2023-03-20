@@ -10,8 +10,8 @@ cask "quodlibet" do
 
   livecheck do
     url "https://quodlibet.readthedocs.io/en/latest/downloads.html"
-    strategy :page_match
     regex(/QuodLibet[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    strategy :page_match
   end
 
   app "QuodLibet.app"

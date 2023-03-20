@@ -13,8 +13,8 @@ cask "jquake" do
 
   livecheck do
     url "https://fleneindre.github.io/version.json"
-    strategy :page_match do |page|
-      JSON.parse(page)["version"]
+    strategy :json do |json|
+      json["version"]
     end
   end
 

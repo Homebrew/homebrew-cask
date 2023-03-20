@@ -1,15 +1,15 @@
 cask "rive" do
-  version "0.8.69,56"
-  sha256 "3119f98a43afe8ea1d697b8cc018fcc82859e54a94b58a10c17961879ec7ba89"
+  version "0.8.210"
+  sha256 "dffb56e4320466525239c10495d9d768870fb766345f63e9c3c79a8ba5b545b9"
 
-  url "https://releases.rive.app/macos/#{version.csv.first}/files/Rive.dmg"
+  url "https://releases.rive.app/macos/#{version}/files/Rive.dmg"
   name "Rive"
   desc "Design tool that creates functional graphics"
   homepage "https://rive.app/"
 
   livecheck do
     url "https://releases.rive.app/release.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   app "Rive.app"

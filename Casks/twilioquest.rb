@@ -20,4 +20,8 @@ cask "twilioquest" do
     "~/Library/Preferences/com.electron.twilioquest.plist",
     "~/Library/Saved Application State/com.electron.twilioquest.savedState",
   ]
+
+  caveats do
+    discontinued
+  end
 end

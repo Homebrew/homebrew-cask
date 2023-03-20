@@ -1,13 +1,18 @@
 cask "icollections" do
-  version "6.8.3,68301"
+  version "8.0.5"
   sha256 :no_check
 
   url "https://naarakstudio.com/download/iCollections.dmg"
-  appcast "https://naarakstudio.com/download/icollections/update.ver",
-          must_contain: version.csv.second
   name "iCollections"
   desc "App to help keep the desktop organized"
   homepage "https://naarakstudio.com/icollections/"
+
+  livecheck do
+    url "https://naarakstudio.com/download/icollections/update.ver"
+    strategy :page_match do |page|
+      page.split(":").first[0..2].chars.join(".")
+    end
+  end
 
   depends_on macos: ">= :sierra"
 

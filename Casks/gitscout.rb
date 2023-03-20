@@ -6,6 +6,11 @@ cask "gitscout" do
   name "Gitscout"
   homepage "https://gitscout.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Gitscout.app"
 
   zap trash: [

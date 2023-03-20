@@ -8,6 +8,11 @@ cask "guild-wars2" do
   name "Guild Wars 2"
   homepage "https://www.guildwars2.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Guild Wars 2 64-bit.app"
 
   zap trash: [

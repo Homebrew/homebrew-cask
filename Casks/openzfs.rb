@@ -1,4 +1,16 @@
 cask "openzfs" do
+  on_arm do
+    on_monterey :or_older do
+      arch arm: "Monterey-12-arm64"
+      version "2.1.6,433"
+      sha256 "abb2f09081f9175190471dad5414b2a45c5d12f7e78ec55aa55ffb1e4822e3f8"
+    end
+    on_ventura :or_newer do
+      arch arm: "Ventura-13-arm64"
+      version "2.1.6,434"
+      sha256 "3f9fa7a9d2b101a714f77d9c00f32b9e03f0cbfed9f2301f6eb6efb7fe13fe1e"
+    end
+  end
   on_intel do
     on_el_capitan :or_older do
       arch intel: "EL.CAPITAN-10.11"
@@ -39,18 +51,6 @@ cask "openzfs" do
       arch intel: "Ventura-13"
       version "2.1.6,437"
       sha256 "2343660854284fae1163b9a822981805d1b9b254dee79a18f7be9413cfb27415"
-    end
-  end
-  on_arm do
-    on_monterey :or_older do
-      arch arm: "Monterey-12-arm64"
-      version "2.1.6,433"
-      sha256 "abb2f09081f9175190471dad5414b2a45c5d12f7e78ec55aa55ffb1e4822e3f8"
-    end
-    on_ventura :or_newer do
-      arch arm: "Ventura-13-arm64"
-      version "2.1.6,434"
-      sha256 "3f9fa7a9d2b101a714f77d9c00f32b9e03f0cbfed9f2301f6eb6efb7fe13fe1e"
     end
   end
 
