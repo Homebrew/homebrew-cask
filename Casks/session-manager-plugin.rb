@@ -16,7 +16,8 @@ cask "session-manager-plugin" do
   pkg "session-manager-plugin.pkg"
   binary "/usr/local/sessionmanagerplugin/bin/session-manager-plugin"
   # Add symlink per install instructions
-  bin.install_symlink {HOMEBREW_PREFIX}/sessionmanagerplugin/bin/session-manager-plugin
+  system "ln -s #{HOMEBREW_PREFIX}/sessionmanagerplugin/bin/session-manager-plugin #{HOMEBREW_PREFIX}/bin/sessionmanagerplugin"
+
 
   uninstall pkgutil: "session-manager-plugin"
 
