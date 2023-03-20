@@ -1,9 +1,9 @@
 cask "universal-media-server" do
   arch arm: "-arm"
 
-  version "13.2.0"
-  sha256 arm:   "9f5e311deef41bb48d0b2ed5b8aa95f84256d943d171d91ff46fe85a5914a33e",
-         intel: "d75ae67668d659b7d97d411f9919c2f90070a603e2c2b9c4c4c55f352d87f394"
+  version "13.2.1"
+  sha256 arm:   "ae86c440f814a40c84312f82287084ec5649135802eb4e5826d17abe836e860c",
+         intel: "79fb17733b2d20eeabc75bb1ecf6abd9c1a4d9d9341b088ba34f423f08533965"
 
   url "https://github.com/UniversalMediaServer/UniversalMediaServer/releases/download/#{version}/UMS-#{version}#{arch}.dmg",
       verified: "github.com/UniversalMediaServer/UniversalMediaServer/"
