@@ -1,6 +1,6 @@
 cask "qingg" do
-  version "2.13"
-  sha256 "03cfd70f401a4e724daf487b7af9c8ee0aa9cde2aa2d27ba3caf126107d43019"
+  version "2.14"
+  sha256 "26680dbc411f15c460866f07b2f4a7849d11f2717983688592d2c406cccc0e31"
 
   url "https://qingg.im/download/Qingg-#{version}.dmg"
   name "QinggIM"
