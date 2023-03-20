@@ -8,9 +8,8 @@ cask "rambox" do
   desc "Free and Open Source messaging and emailing app"
   homepage "https://rambox.pro/"
 
-  conflicts_with cask: "homebrew/cask-versions/rambox-ce"
-
   auto_updates true
+  conflicts_with cask: "homebrew/cask-versions/rambox-ce"
 
   app "Rambox.app"
 
