@@ -1,5 +1,5 @@
 cask "frhelper" do
-  version "4.3.0"
+  version "4.3.1"
   sha256 :no_check
 
   url "https://static.frdic.com/pkg/fhmac.dmg",
@@ -14,6 +14,8 @@ cask "frhelper" do
     url "https://www.eudic.net/update/frhelper_mac.xml"
     strategy :sparkle, &:short_version
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Frhelper.app"
 
