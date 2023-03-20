@@ -10,6 +10,8 @@ cask "rambox" do
 
   conflicts_with cask: "homebrew/cask-versions/rambox-ce"
 
+  auto_updates true
+
   app "Rambox.app"
 
   zap trash: [
