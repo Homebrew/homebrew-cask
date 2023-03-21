@@ -15,4 +15,12 @@ cask "sparkle" do
 
   app "Sparkle Test App.app"
   binary "sparkle.app/Contents/MacOS/sparkle"
+
+  zap trash: [
+    "~/Library/Application Scripts/org.sparkle-project.Downloader",
+    "~/Library/Application Scripts/org.sparkle-project.SparkleTestApp",
+    "~/Library/Containers/org.sparkle-project.Downloader",
+    "~/Library/Containers/org.sparkle-project.SparkleTestApp",
+    "~/Library/Preferences/org.sparkle-project.SparkleTestApp.plist",
+  ]
 end
