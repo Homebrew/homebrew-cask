@@ -8,15 +8,13 @@ cask "sqlitestudio" do
   desc "Create, edit, browse SQLite databases"
   homepage "https://sqlitestudio.pl/"
 
-  auto_updates false
-
   app "SQLiteStudio.app"
 
   zap trash: [
     "~/.config/sqlitestudio",
-    "~/Library/Saved Application State/com.yourcompany.SQLiteStudio.savedState",
-    "~/Library/Saved Application State/pl.com.salsoft.SQLiteStudio.savedState",
     "~/Library/Preferences/pl.com.salsoft.SQLiteStudio.plist",
     "~/Library/Preferences/SalSoft/SQLiteStudio/",
+    "~/Library/Saved Application State/com.yourcompany.SQLiteStudio.savedState",
+    "~/Library/Saved Application State/pl.com.salsoft.SQLiteStudio.savedState",
   ]
 end
