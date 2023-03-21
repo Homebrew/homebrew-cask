@@ -22,4 +22,9 @@ cask "active-trader-pro" do
   uninstall quit:    "com.fmr.activetrader",
             pkgutil: "com.fmr.activetrader",
             delete:  "/Applications/Active Trader Pro.app"
+
+  zap trash: [
+    "~/Library/Application Support/Active Trader Pro/",
+    "~/Library/Preferences/com.fmr.activetrader.plist",
+  ]
 end
