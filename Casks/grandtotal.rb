@@ -9,7 +9,7 @@ cask "grandtotal" do
 
   livecheck do
     url "https://www.mediaatelier.com/GrandTotal#{version.major}/feed.php"
-    regex(/GrandTotal[._-]v?(\d+(?:\.\d+)*)\.dmg/i)
+    regex(/GrandTotal[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
     strategy :sparkle do |items, regex|
       items.map { |item| item.url[regex, 1] }
     end
