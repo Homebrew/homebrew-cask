@@ -47,17 +47,17 @@ cask "teamviewer" do
                 "/Library/Preferences/com.teamviewer.teamviewer.preferences.plist",
               ],
               pkgutil:   [
+                "com.teamviewer.AuthorizationPlugin",
                 "com.teamviewer.remoteaudiodriver",
                 "com.teamviewer.teamviewer.*",
-                "com.teamviewer.AuthorizationPlugin",
               ],
               launchctl: [
                 "com.teamviewer.desktop",
                 "com.teamviewer.Helper",
                 "com.teamviewer.service",
+                "com.teamviewer.teamviewer",
                 "com.teamviewer.teamviewer_desktop",
                 "com.teamviewer.teamviewer_service",
-                "com.teamviewer.teamviewer",
               ],
               quit:      "com.teamviewer.TeamViewer"
 
@@ -91,17 +91,17 @@ cask "teamviewer" do
                 "/Library/Preferences/com.teamviewer.teamviewer.preferences.plist",
               ],
               pkgutil:   [
+                "com.teamviewer.AuthorizationPlugin",
                 "com.teamviewer.remoteaudiodriver",
                 "com.teamviewer.teamviewer.*",
-                "com.teamviewer.AuthorizationPlugin",
               ],
               launchctl: [
                 "com.teamviewer.desktop",
                 "com.teamviewer.Helper",
                 "com.teamviewer.service",
+                "com.teamviewer.teamviewer",
                 "com.teamviewer.teamviewer_desktop",
                 "com.teamviewer.teamviewer_service",
-                "com.teamviewer.teamviewer",
               ],
               quit:      "com.teamviewer.TeamViewer"
 
