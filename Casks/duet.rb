@@ -4,7 +4,7 @@ cask "duet" do
     sha256 "3e91729e333ab3e2984bec4c1194e7022d016d91c79cd21509bc00b42b9559bd"
 
     livecheck do
-      url "https://updates.duetdisplay.com/latestMac"
+      url "https://duetdownload.com/Mac/3_4/duet-3-4-0-0.zip"
       strategy :header_match do |headers|
         headers["location"][/duet[._-]v?(\d+(?:-\d+)+)\.zip/i, 1].tr("-", ".")
       end
