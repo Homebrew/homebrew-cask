@@ -8,7 +8,7 @@ cask "teamviewer" do
     end
   end
   on_mojave :or_newer do
-    version "15.39.5"
+    version "15.40.6"
 
     livecheck do
       url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=10.15.1&type=1&channel=1"
@@ -47,17 +47,17 @@ cask "teamviewer" do
                 "/Library/Preferences/com.teamviewer.teamviewer.preferences.plist",
               ],
               pkgutil:   [
+                "com.teamviewer.AuthorizationPlugin",
                 "com.teamviewer.remoteaudiodriver",
                 "com.teamviewer.teamviewer.*",
-                "com.teamviewer.AuthorizationPlugin",
               ],
               launchctl: [
                 "com.teamviewer.desktop",
                 "com.teamviewer.Helper",
                 "com.teamviewer.service",
+                "com.teamviewer.teamviewer",
                 "com.teamviewer.teamviewer_desktop",
                 "com.teamviewer.teamviewer_service",
-                "com.teamviewer.teamviewer",
               ],
               quit:      "com.teamviewer.TeamViewer"
 
@@ -91,17 +91,17 @@ cask "teamviewer" do
                 "/Library/Preferences/com.teamviewer.teamviewer.preferences.plist",
               ],
               pkgutil:   [
+                "com.teamviewer.AuthorizationPlugin",
                 "com.teamviewer.remoteaudiodriver",
                 "com.teamviewer.teamviewer.*",
-                "com.teamviewer.AuthorizationPlugin",
               ],
               launchctl: [
                 "com.teamviewer.desktop",
                 "com.teamviewer.Helper",
                 "com.teamviewer.service",
+                "com.teamviewer.teamviewer",
                 "com.teamviewer.teamviewer_desktop",
                 "com.teamviewer.teamviewer_service",
-                "com.teamviewer.teamviewer",
               ],
               quit:      "com.teamviewer.TeamViewer"
 
