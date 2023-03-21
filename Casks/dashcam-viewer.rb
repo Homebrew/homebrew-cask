@@ -17,4 +17,10 @@ cask "dashcam-viewer" do
   depends_on macos: ">= :mojave"
 
   app "Dashcam Viewer.app"
+
+  zap trash: [
+    "~/Library/Application Support/earthshinesw",
+    "~/Library/Caches/earthshinesw",
+    "~/Library/Preferences/com.earthshinesw.DashcamViewer.plist",
+  ]
 end
