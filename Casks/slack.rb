@@ -1,7 +1,7 @@
 cask "slack" do
   arch arm: "arm64", intel: "x64"
 
-  on_mojave do
+  on_mojave :or_older do
     version "4.29.149"
     sha256 arm:   "367f9d143dc7fc1cbe6813cb0f19cf9de357b8597eb4774b87125779804c3918",
            intel: "13462738f9da5857b5ee00a9172c31bb9b87b35a4492d035b54bb842abca858c"
