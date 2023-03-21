@@ -14,4 +14,9 @@ cask "colour-contrast-analyser" do
   end
 
   app "Colour Contrast Analyser.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.electron.cca.plist",
+    "~/Library/Saved Application State/com.electron.cca.savedState",
+  ]
 end
