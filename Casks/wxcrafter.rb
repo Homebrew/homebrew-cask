@@ -1,6 +1,7 @@
 cask "wxcrafter" do
   version :latest
   sha256 :no_check
+  desc "RAD plugin for developing wxWidgets UI applications"
 
   url "https://codelite.org/downloads/wxCrafter/wxCrafterDownloads.php?osx"
   name "wxCrafter"
@@ -12,4 +13,7 @@ cask "wxcrafter" do
     "~/Library/Application Support/wxcrafter",
     "~/Library/Preferences/wxcrafter.plist",
   ]
+  caveats do
+    discontinued
+  end
 end
