@@ -5,7 +5,7 @@ cask "colour-contrast-analyser" do
   url "https://github.com/ThePacielloGroup/CCAe/releases/download/v#{version}/CCA-x64-#{version}.dmg",
       verified: "github.com/ThePacielloGroup/CCAe/"
   name "Colour Contrast Analyser"
-  desc "Color contrast checker"
+  desc "Colour contrast checker"
   homepage "https://www.tpgi.com/color-contrast-checker/"
 
   livecheck do
