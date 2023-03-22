@@ -2,6 +2,9 @@ cask "ocenaudio" do
   version "3.11.22"
   sha256 :no_check
 
+  on_arm do
+    url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_bigsur_arm64.dmg"
+  end
   on_intel do
     on_high_sierra :or_older do
       url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_sierra.dmg"
@@ -15,9 +18,6 @@ cask "ocenaudio" do
     on_big_sur :or_newer do
       url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_bigsur.dmg"
     end
-  end
-  on_arm do
-    url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_bigsur_arm64.dmg"
   end
 
   name "ocenaudio"
