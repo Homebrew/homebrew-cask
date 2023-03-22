@@ -8,7 +8,7 @@ cask "soundsource" do
   homepage "https://rogueamoeba.com/soundsource/"
 
   livecheck do
-    url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=1231&bundleid=com.rogueamoeba.soundsource&platform=osx&version=#{version.no_dots}8000"
+    url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=1231&bundleid=com.rogueamoeba.soundsource&platform=osx"
     strategy :sparkle
   end
 
