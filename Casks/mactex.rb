@@ -1,5 +1,5 @@
 cask "mactex" do
-  version "2022.0321"
+  version "2023.0314"
   sha256 "dc1983c82de2c68f1c434f734d94343959d1338adb6f55132ccce11c787badc1"
 
   url "https://mirror.ctan.org/systems/mac/mactex/mactex-#{version.no_dots}.pkg",
