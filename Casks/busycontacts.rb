@@ -27,9 +27,12 @@ cask "busycontacts" do
             signal:  ["KILL", "com.busymac.busycontacts"]
 
   zap trash: [
-    "~/Library/Application Scripts/N4RA379GBW.com.busymac.busycontacts",
     "~/Library/Application Scripts/com.busymac.busycontacts",
+    "~/Library/Application Scripts/N4RA379GBW.com.busymac.busycontacts",
+    "~/Library/Application Scripts/N4RA379GBW.com.busymac.contacts/",
+    "~/Library/Application Support/Mail/BusyContacts/",
     "~/Library/Containers/com.busymac.busycontacts",
     "~/Library/Group Containers/N4RA379GBW.com.busymac.busycontacts",
+    "~/Library/Group Containers/N4RA379GBW.com.busymac.contacts",
   ]
 end
