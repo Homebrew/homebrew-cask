@@ -8,7 +8,7 @@ cask "farrago" do
   homepage "https://rogueamoeba.com/farrago/"
 
   livecheck do
-    url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=1231&bundleid=com.rogueamoeba.farrago&platform=osx&version=#{version.no_dots}8000"
+    url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=1231&bundleid=com.rogueamoeba.farrago&platform=osx"
     strategy :sparkle
   end
 
