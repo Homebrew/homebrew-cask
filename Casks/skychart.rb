@@ -11,8 +11,8 @@ cask "skychart" do
 
   livecheck do
     url "https://sourceforge.net/projects/skychart/rss?path=/1-software/"
+    regex(/skychart[._-]v?(\d+(?:.\d+)+)[._-]x86[._-]64[._-]macosx\.dmg/i)
     strategy :page_match
-    regex(/skychart-(\d+(?:.\d+)*)-x86_64-macosx\.dmg/i)
   end
 
   pkg "Install Skychart.pkg"
