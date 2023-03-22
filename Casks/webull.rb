@@ -11,7 +11,6 @@ cask "webull" do
   livecheck do
     url "https://infoapi.webullfintech.com/api/operation/appver/last?platform=qt_mac_global&osv=10.14"
     regex(/Webull%20Desktop[._-](\d+(?:\.\d+)+).*?.dmg/i)
-    strategy :page_match
   end
 
   depends_on macos: ">= :mojave"
