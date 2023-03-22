@@ -6,5 +6,10 @@ cask "parsehub" do
   name "ParseHub"
   homepage "https://www.parsehub.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "ParseHub.app"
 end

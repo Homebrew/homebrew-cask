@@ -6,6 +6,11 @@ cask "apptivate" do
   name "Apptivate"
   homepage "http://www.apptivateapp.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Apptivate.app"
 
   zap trash: [

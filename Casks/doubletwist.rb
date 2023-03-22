@@ -6,6 +6,11 @@ cask "doubletwist" do
   name "doubleTwist"
   homepage "https://www.doubletwist.com/desktop"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "doubleTwist.app"
 
   zap trash: [

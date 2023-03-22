@@ -6,6 +6,11 @@ cask "music-manager" do
   name "Google Play Music Manager"
   homepage "https://play.google.com/music/listen"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   # Renamed for consistency: app name is different in the Finder and in a shell.
   # Original discussion: https://github.com/Homebrew/homebrew-cask/pull/4282
   app "MusicManager.app", target: "Music Manager.app"

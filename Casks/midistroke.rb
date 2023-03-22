@@ -6,6 +6,11 @@ cask "midistroke" do
   name "midiStroke"
   homepage "https://www.charlie-roberts.com/midiStroke/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "midiStroke.app"
 
   zap trash: "~/Library/Application Support/midiStroke"

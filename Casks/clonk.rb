@@ -7,5 +7,10 @@ cask "clonk" do
   name "Clonk Rage"
   homepage "http://www.clonk.de/cr.php"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Clonk.app"
 end
