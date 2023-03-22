@@ -34,4 +34,9 @@ cask "unison" do
   postflight do
     system_command "/usr/bin/defaults", args: ["write", "edu.upenn.cis.Unison", "CheckCltool", "-bool", "false"]
   end
+
+  zap trash: [
+    "~/Library/Application Support/Unison",
+    "~/Library/Preferences/edu.upenn.cis.Unison.plist",
+  ]
 end
