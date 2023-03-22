@@ -8,7 +8,7 @@ cask "airfoil" do
   homepage "https://www.rogueamoeba.com/airfoil/mac/"
 
   livecheck do
-    url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=1231&bundleid=com.rogueamoeba.airfoil&platform=osx&version=#{version.no_dots}8000"
+    url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=1231&bundleid=com.rogueamoeba.airfoil&platform=osx"
     strategy :sparkle
   end
 
@@ -25,8 +25,8 @@ cask "airfoil" do
             ]
 
   zap trash: [
-    "~/Library/Application Support/Airfoil",
     "~/Library/Application Support/Airfoil Satellite",
+    "~/Library/Application Support/Airfoil",
     "~/Library/Caches/com.rogueamoeba.Airfoil",
     "~/Library/Caches/com.rogueamoeba.AirfoilSpeakers",
     "~/Library/Preferences/com.rogueamoeba.Airfoil.plist",
