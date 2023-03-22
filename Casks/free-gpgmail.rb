@@ -26,7 +26,7 @@ cask "free-gpgmail" do
   # surface a new major version and that will need to be handled manually.
   livecheck do
     url "https://github.com/Free-GPGMail/Free-GPGMail/releases?q=prerelease%3Afalse"
-    regex(/.*?Free-GPGMail[._-]v?(\d+)[_-](\d+(?:\.\d+)+)([_-][^"' >]+?)?[._-]mailbundle\.zip/i)
+    regex(/.*?Free-GPGMail[._-]v?(\d+(?:\.\d+)?)[_-](\d+(?:\.\d+)+)([_-][^"' >]+?)?[._-]mailbundle\.zip/i)
     strategy :page_match do |page, regex|
       version_suffix = version.csv.third&.sub(/^[_-]/, "")
       page.scan(regex).map do |match|
