@@ -8,7 +8,7 @@ cask "audio-hijack" do
   homepage "https://www.rogueamoeba.com/audiohijack/"
 
   livecheck do
-    url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=1231&bundleid=com.rogueamoeba.audiohijack&platform=osx&version=#{version.no_dots}8000"
+    url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=1231&bundleid=com.rogueamoeba.audiohijack&platform=osx"
     strategy :sparkle
   end
 
