@@ -9,8 +9,8 @@ cask "vym" do
 
   livecheck do
     url "https://sourceforge.net/projects/vym/rss"
+    regex(/.*?osx11[._-]vym[._-]v?(\d+(?:\.\d+)+).*?\.zip/i)
     strategy :page_match
-    regex(/.*?osx11-vym-(\d+(?:\.\d+)+).*?\.zip/i)
   end
 
   app "vym.app"
