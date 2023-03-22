@@ -1,9 +1,9 @@
 cask "cron" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.111.0"
-  sha256 arm:   "38b83bdb1c9c18cc1b50fe83d7ee5843aed18a58317c150790419d5ddeb50c83",
-         intel: "cbaeec289b359d164483421ae20ac8e1bf1e9462d496efbd7ca0b44f64075d4c"
+  version "1.112.0"
+  sha256 arm:   "730d81f6343228dbeef760c0b90442d91e17414aba19a5ce675fb0a080a6769d",
+         intel: "55fde04956da1b90484439d45adb0d629837f4bc04be992b4f9e6c9dbe78dce5"
 
   url "https://download.todesktop.com/210303leazlircz/Cron%20#{version}-#{arch}-mac.zip",
       verified: "download.todesktop.com/210303leazlircz/"
