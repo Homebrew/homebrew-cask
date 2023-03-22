@@ -8,7 +8,7 @@ cask "wondershare-filmora" do
   homepage "https://filmora.wondershare.com/video-editor-mac/"
 
   livecheck do
-    url "https://cbs.wondershare.com/go.php?m=upgrade_info&pid=718&version=#{version}"
+    url "https://cbs.wondershare.com/go.php?m=upgrade_info&pid=718&version=#{version.major}"
     regex(/<Version>([^<]*)</)
   end
 
