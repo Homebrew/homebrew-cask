@@ -1,5 +1,5 @@
 cask "wondershare-filmora" do
-  version "12.0.9"
+  version "12.1.3"
   sha256 :no_check
 
   url "https://download.wondershare.com/filmora-mac_full718.dmg"
@@ -8,7 +8,7 @@ cask "wondershare-filmora" do
   homepage "https://filmora.wondershare.com/video-editor-mac/"
 
   livecheck do
-    url "https://cbs.wondershare.com/go.php?m=upgrade_info&pid=718&version=#{version}"
+    url "https://cbs.wondershare.com/go.php?m=upgrade_info&pid=718"
     regex(/<Version>([^<]*)</)
   end
 
