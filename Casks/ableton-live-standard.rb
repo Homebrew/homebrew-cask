@@ -1,10 +1,12 @@
 cask "ableton-live-standard" do
-  arch = "intel"
-  version "11.2.11"
-  sha256 "51bffe5e3ab58c943cabbd605964e74c26535e9b993a3cb76b7a7d230150ec75"
+  arch arm: "universal", intel: "intel"
 
+  version "11.2.11"
+
+  on_high_sierra :or_older do
+    sha256 "51bffe5e3ab58c943cabbd605964e74c26535e9b993a3cb76b7a7d230150ec75"
+  end
   on_mojave :or_newer do
-    arch = "universal"
     sha256 "0516a702d0b3c48e8c8a2578717fc74fd411dd77b9f36564f7b50227843d9063"
   end
 
