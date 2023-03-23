@@ -4,6 +4,7 @@ cask "doubletwist" do
 
   url "http://download.doubletwist.com/mac/doubleTwist.dmg"
   name "doubleTwist"
+  desc "Sync your music, videos and pictures over USB or WiFi"
   homepage "https://www.doubletwist.com/desktop"
 
   livecheck do
@@ -15,7 +16,7 @@ cask "doubletwist" do
 
   zap trash: [
     "~/Library/Application Support/doubleTwist",
-    "~/Library/Preferences/com.doubleTwist.desktop.plist",
     "~/Library/Caches/com.doubleTwist.desktop",
+    "~/Library/Preferences/com.doubleTwist.desktop.plist",
   ]
 end
