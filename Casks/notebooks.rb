@@ -15,4 +15,18 @@ cask "notebooks" do
   depends_on macos: ">= :sierra"
 
   app "Notebooks.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/XZ68B7E678.com.aschmid.notebooks2",
+    "~/Library/Application Scripts/com.aschmid.notebooks2.ShareExtension",
+    "~/Library/Application Support/Notebooks",
+    "~/Library/Application Support/com.aschmid.notebooks2",
+    "~/Library/Caches/com.aschmid.notebooks2",
+    "~/Library/Containers/com.aschmid.notebooks2.ShareExtension",
+    "~/Library/Group Containers/XZ68B7E678.com.aschmid.notebooks2",
+    "~/Library/HTTPStorages/com.aschmid.notebooks2",
+    "~/Library/HTTPStorages/com.aschmid.notebooks2.binarycookies",
+    "~/Library/Preferences/com.aschmid.notebooks2.plist",
+    "~/Library/Saved Application State/com.aschmid.notebooks2.savedState",
+  ]
 end
