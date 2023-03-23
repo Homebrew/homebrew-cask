@@ -3,10 +3,12 @@ cask "cursor" do
   sha256 :no_check
 
   url "https://dl.todesktop.com/230313mzl4w4u92/mac/installer/universal",
-      verified: "dl.todesktop.com/230313mzl4w4u92"
+      verified: "dl.todesktop.com/230313mzl4w4u92/mac/installer/"
   name "Cursor"
   desc "Write, edit, and chat about your code with AI"
   homepage "https://www.cursor.so/"
+
+  depends_on macos: ">= :catalina"
 
   installer script: "Install Cursor.app/Contents/MacOS/ToDesktop Installer"
 
