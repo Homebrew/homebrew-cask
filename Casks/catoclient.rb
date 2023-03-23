@@ -16,8 +16,18 @@ cask "catoclient" do
 
   pkg "CatoClient.pkg"
 
-  uninstall quit:    "com.catonetworks.mac.CatoClient",
-            pkgutil: "com.catonetworks.pkg.CatoClient"
+  uninstall delete:    [
+              "/Applications/CatoClient.app",
+              "/Applications/CatoClient.app/Contents/Frameworks/Sparkle.framework/Updater.app",
+              "/Applications/CatoClient.app/Contents/MacOS/UserAgent.app",
+            ],
+            launchctl: [
+              "com.catonetworks.catoclient.UserAgent (com.catonetworks.mac.UserAgent)",
+              "com.catonetworks.mac.UserAgent",
+
+            ],
+            pkgutil:   "com.catonetworks.pkg.CatoClient",
+            quit:      "com.catonetworks.mac.CatoClient"
 
   zap trash: [
     "~/Library/Application Scripts/CKGSB8CH43.com.catonetworks.mac.CatoClient",
