@@ -10,7 +10,7 @@ cask "nitro-pdf-pro" do
 
   livecheck do
     url "https://pdfpen.com/pdfpenpro/download_thanks/"
-    regex(/href=.*?Retail_(\d+(?:\.\d+)*)\.dmg/i)
+    regex(/href=.*?Retail[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   depends_on macos: ">= :sierra"
