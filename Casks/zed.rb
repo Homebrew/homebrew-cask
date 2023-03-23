@@ -1,23 +1,15 @@
 cask "zed" do
-  version "0.77.3,95639680"
-  sha256 "7a10a5d6131fb8578908fb19d3a8c0dd0babecfeda81e57abc7c823ce57db7ae"
+  version "0.78.1"
+  sha256 "60ab002d4381905e23724cfcc845ccec33ab069f4d1e3b72d12c086c92f6521e"
 
-  url "https://zed.dev/api/releases/#{version.csv.second}/Zed.dmg" do |json|
-    JSON.parse(json)["redirectURL"]
-  end
+  url "https://zed.dev/api/releases/stable/#{version}/Zed.dmg"
   name "Zed"
   desc "Multiplayer code editor"
   homepage "https://zed.dev/"
 
   livecheck do
-    url "https://zed.dev/_next/data/OOybEEg-80Z5ImnWgZJFJ/download.json"
-    strategy :json do |json|
-      v = json["pageProps"]["latestRelease"]["version"]
-      id = json["pageProps"]["latestRelease"]["id"]
-      next if v.blank? || id.blank?
-
-      "#{v},#{id}"
-    end
+    url "https://zed.dev/releases"
+    regex(%r{href=.*?/stable/(\d+(?:\.\d+)+)/Zed.dmg}i)
   end
 
   auto_updates true
