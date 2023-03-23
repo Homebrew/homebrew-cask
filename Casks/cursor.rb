@@ -8,6 +8,12 @@ cask "cursor" do
   desc "Write, edit, and chat about your code with AI"
   homepage "https://www.cursor.so/"
 
+  livecheck do
+    url "https://raw.githubusercontent.com/getcursor/cursor/main/package.json"
+    regex(/"Cursor",\n\s*"version":\s"(\d+(?:\.\d+)+)"/i)
+    strategy :page_match
+  end
+
   depends_on macos: ">= :catalina"
 
   installer script: "Install Cursor.app/Contents/MacOS/ToDesktop Installer"
