@@ -4,6 +4,7 @@ cask "music-manager" do
 
   url "https://dl.google.com/dl/androidjumper/mac/6350372/musicmanager.dmg"
   name "Google Play Music Manager"
+  desc "Upload music to the Google Music library"
   homepage "https://play.google.com/music/listen"
 
   livecheck do
