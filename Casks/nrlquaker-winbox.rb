@@ -7,6 +7,11 @@ cask "nrlquaker-winbox" do
   desc "MikroTik Winbox"
   homepage "https://github.com/nrlquaker/winbox-mac/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Winbox-mac.app"
 
   zap trash: "~/Library/Application Support/com.mikrotik.winbox"
