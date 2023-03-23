@@ -8,7 +8,7 @@ cask "teamviewer" do
     end
   end
   on_mojave :or_newer do
-    version "15.40.6"
+    version "15.40.8"
 
     livecheck do
       url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=10.15.1&type=1&channel=1"
