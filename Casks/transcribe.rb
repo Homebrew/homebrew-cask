@@ -13,7 +13,7 @@ cask "transcribe" do
 
     livecheck_version = "10"
   end
-  on_big_sur :or_older do
+  on_monterey :or_older do
     version "9.21"
     url "https://www.seventhstring.com/xscribe/downmo/11_12/transcribe#{arch}.dmg"
   end
