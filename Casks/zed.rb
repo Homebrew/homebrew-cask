@@ -1,21 +1,13 @@
-class ZedDownloadStrategy < CurlDownloadStrategy
-  def _fetch(url:, resolved_url:, timeout:)
-    curl_download url, to: temporary_path
-    redirect_url = JSON.parse(temporary_path.read)["redirectURL"]
-    rm_rf(temporary_path)
-    super(url: url, resolved_url: redirect_url, timeout: timeout)
-  end
-end
-
 cask "zed" do
   version "0.78.1"
-  sha256 :no_check
+  sha256 "60ab002d4381905e23724cfcc845ccec33ab069f4d1e3b72d12c086c92f6521e"
 
-  url "https://zed.dev/api/releases/95639680/Zed.dmg", using: ZedDownloadStrategy
-  name "zed"
+  url "https://zed.dev/api/releases/stable/#{version}/Zed.dmg"
+  name "Zed"
   desc "High-performance multiplayer code editor from the creators of Atom & Tree-sitter"
   homepage "https://zed.dev/"
 
+  auto_updates true
   depends_on macos: ">= :catalina"
 
   app "Zed.app"
@@ -24,7 +16,9 @@ cask "zed" do
 
   zap trash: [
     "~/.config/zed",
+    "~/Library/Application Support/Zed",
+    "~/Library/Logs/Zed",
     "~/Library/Preferences/dev.zed.Zed.plist",
-    "~/Library/Saved Application State/dev.zed.Zed.savedState",
+    "~/Library/Saved Application State/dev.zed.Zed.savedState"
   ]
 end
