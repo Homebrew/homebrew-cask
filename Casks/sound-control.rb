@@ -1,6 +1,6 @@
 cask "sound-control" do
-  version "2.7.3,5156"
-  sha256 "eaafbeafb371f6e3cd1c076e8d5a38e24927d5a24bbf018853739fdf7ab189cf"
+  version "2.7.5,5156"
+  sha256 "bb240f6a2f4887ca7b1693f8d4d43e8b110384eac3514cc815c1ed8958015e58"
 
   url "https://staticz.com/download/#{version.csv.second}/"
   name "Sound Control"
@@ -20,9 +20,9 @@ cask "sound-control" do
   app "Sound Control.app"
 
   uninstall launchctl: [
-              "com.staticz.soundsiphon.bridgedaemon",
-              "com.staticz.audio.soundsiphon.playeragent",
               "com.static.soundsiphon.inputagent",
+              "com.staticz.audio.soundsiphon.playeragent",
+              "com.staticz.soundsiphon.bridgedaemon",
             ],
             quit:      "com.staticz.SoundControl"
 
