@@ -1,6 +1,6 @@
 cask "catoclient" do
-  version "5.2.0.205"
-  sha256 "342a0da1c3a939679cdb7b72e826eecbd99bb6dd9443102fe8fd99181410dd71"
+  version "5.3.0.230"
+  sha256 "627f9ce79d45d0150cb70002b1ede29e673ff9bb6c629dee533b9954653f5a90"
 
   url "https://clients.catonetworks.com/macos/#{version}/CatoClient.pkg"
   name "Cato Client"
