@@ -20,12 +20,7 @@ cask "mark-text" do
   ]
 
   caveats do
-    "The apple silicon (arm) version of #{token} is not signed, and may
-display an error stating it is damaged and can't be openedif it is not
-installed installed using the --no-quarantine option.
-
-You can also use the command:
-    xattr -dr com.apple.quarantine /Applications/MarkText.app
-to allow it to run if installed without the --no-quarantine option."
+    "The apple silicon (arm) version of #{token} is not signed, and will
+display an error stating it is damaged and can't be opened.
   end
 end
