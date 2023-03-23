@@ -1,9 +1,9 @@
 cask "coscreen" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.5.28"
-  sha256 arm:   "dc8d31111f9d2417ebc013b0dad6731a36caec83c8d38c4a3cbdd5eda5649666",
-         intel: "929919a8cd262cdcaff65e636eb8fa55b5d4e288cae776984d75fe3ca7c5758f"
+  version "5.0.6"
+  sha256 arm:   "eb88e6e449b596f85d0ba27f2ee88fcb2c8b676ed7f52f4014ea8a6559985ca2",
+         intel: "8c8f706dc4ed448d823eeb136b30c1342ad5b777e572f7da2dd03af3ede921ec"
 
   url "https://update.coscreen.org/CoScreen-#{version}-stable-#{arch}.dmg",
       verified: "update.coscreen.org/"
