@@ -3,8 +3,8 @@ cask "pushplaylabs-sidekick" do
   livecheck_folder = on_arch_conditional arm: "macm1", intel: "mac"
 
   on_arm do
-    version "108.39.5.31081,1b93739"
-    sha256 "dd7dc201265934f2f24d5292ceb34da1608f092fe7308ca2d47a2aaf7fc2b5b0"
+    version "108.39.6.31209,d5bd592"
+    sha256 "125970b8d3b78ae80ac43b4f3f69c5ca211f117e51545f4837d9c2ea4c2e75aa"
   end
   on_intel do
     version "108.39.1.30920,b8f9c04"
