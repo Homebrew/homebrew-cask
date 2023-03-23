@@ -4,6 +4,7 @@ cask "google-ads-editor" do
 
   url "https://dl.google.com/adwords_editor/Google_AdWords_Editor.dmg"
   name "Google Ads Editor"
+  desc "Managing your campaigns"
   homepage "https://ads.google.com/home/tools/ads-editor/"
 
   livecheck do
