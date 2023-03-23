@@ -1,5 +1,5 @@
 cask "cursor" do
-  version "0.1.3"
+  version "0.1.4"
   sha256 :no_check
 
   url "https://dl.todesktop.com/230313mzl4w4u92/mac/installer/universal",
