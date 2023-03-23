@@ -1,12 +1,9 @@
 cask "transcribe" do
-  arch arm: "_arm"
+  arch intel: "intel", arm: "arm"
 
   livecheck_version = "11"
 
-  version "9.21"
   sha256 :no_check
-
-  url "https://www.seventhstring.com/xscribe/transcribe#{arch}.dmg"
 
   on_catalina :or_older do
     version "8.75.2"
@@ -15,6 +12,16 @@ cask "transcribe" do
     url "https://www.seventhstring.com/xscribe/downmo/transcribe#{version.no_dots}.dmg"
 
     livecheck_version = "10"
+  end
+  on_big_sur :or_older do
+    version "9.21"
+    url "https://www.seventhstring.com/xscribe/downmo/11_12/transcribe#{arch}.dmg"
+  end
+  on_ventura do
+    version "9.25.0"
+    url "https://www.seventhstring.com/xscribe/downmo/transcribe-#{arch}-#{version}.dmg"
+
+    livecheck_version = "13"
   end
 
   name "Transcribe!"
