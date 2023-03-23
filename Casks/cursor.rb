@@ -5,7 +5,7 @@ cask "cursor" do
   url "https://dl.todesktop.com/230313mzl4w4u92/mac/installer/universal",
       verified: "dl.todesktop.com/230313mzl4w4u92"
   name "Cursor"
-  desc "Build Software. Fast. Write, edit, and chat about your code with a powerful AI"
+  desc "Write, edit, and chat about your code with AI"
   homepage "https://www.cursor.so/"
 
   installer script: "Install Cursor.app/Contents/MacOS/ToDesktop Installer"
