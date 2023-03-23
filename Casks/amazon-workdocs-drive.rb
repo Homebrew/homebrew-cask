@@ -22,7 +22,7 @@ cask "amazon-workdocs-drive" do
   uninstall signal:    ["TERM", "com.Amazon.WorkDocs.Drive"],
             pkgutil:   [
               "com.Amazon.WorkDocs.Drive",
-              "com.Amazon.WorkDocs.Drive.pkg.Core",
+              "com.Amazon.WorkDocs.Drive.pkg.core",
             ],
             launchctl: "com.Amazon.WorkDocs.DriveUpdater"
 
