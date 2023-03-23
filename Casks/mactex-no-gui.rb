@@ -1,6 +1,6 @@
 cask "mactex-no-gui" do
-  version "2022.0321"
-  sha256 "dc1983c82de2c68f1c434f734d94343959d1338adb6f55132ccce11c787badc1"
+  version "2023.0314"
+  sha256 "57304ece58618f0dfc6a41be39d1d6e8f688d81247c84a89eb1cc788b280050b"
 
   url "https://mirror.ctan.org/systems/mac/mactex/mactex-#{version.no_dots}.pkg",
       verified: "mirror.ctan.org/systems/mac/mactex/"
@@ -23,13 +23,13 @@ cask "mactex-no-gui" do
       choices: [
         {
           # Ghostscript
-          "choiceIdentifier" => "org.tug.mactex.ghostscript9.55",
+          "choiceIdentifier" => "org.tug.mactex.ghostscript10.00",
           "choiceAttribute"  => "selected",
           "attributeSetting" => 0,
         },
         {
           # Ghostscript Dynamic Library
-          "choiceIdentifier" => "org.tug.mactex.ghostscript9.55-libgs",
+          "choiceIdentifier" => "org.tug.mactex.ghostscript10.00-libgs",
           "choiceAttribute"  => "selected",
           "attributeSetting" => 0,
         },
@@ -59,7 +59,7 @@ cask "mactex-no-gui" do
       rmdir: "/usr/local/texlive"
 
   caveats <<~EOS
-    You must restart your terminal window for the installation of MacTex CLI tools to take effect.
+    You must restart your terminal window for the installation of MacTeX CLI tools to take effect.
     Alternatively, Bash and Zsh users can run the command:
 
       eval "$(/usr/libexec/path_helper)"
