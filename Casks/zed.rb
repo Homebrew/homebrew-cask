@@ -7,6 +7,11 @@ cask "zed" do
   desc "High-performance multiplayer code editor from the creators of Atom & Tree-sitter"
   homepage "https://zed.dev/"
 
+  livecheck do
+    url "https://zed.dev/releases"
+    regex(%r{href=.*?/stable/(\d+(?:\.\d+)+)/Zed.dmg}i)
+  end
+
   auto_updates true
   depends_on macos: ">= :catalina"
 
@@ -19,6 +24,6 @@ cask "zed" do
     "~/Library/Application Support/Zed",
     "~/Library/Logs/Zed",
     "~/Library/Preferences/dev.zed.Zed.plist",
-    "~/Library/Saved Application State/dev.zed.Zed.savedState"
+    "~/Library/Saved Application State/dev.zed.Zed.savedState",
   ]
 end
