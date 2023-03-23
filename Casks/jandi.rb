@@ -7,6 +7,11 @@ cask "jandi" do
   desc "Desktop app for the JANDI collaboration platform"
   homepage "https://www.jandi.com/landing/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "JANDI.app"
 
   uninstall quit: "com.jandi.osx.JANDI"
