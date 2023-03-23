@@ -4,6 +4,7 @@ cask "midistroke" do
 
   url "https://www.charlie-roberts.com/midiStroke/midiStroke.app.zip"
   name "midiStroke"
+  desc "Converts midi note, program or CC messages into keystrokes"
   homepage "https://www.charlie-roberts.com/midiStroke/"
 
   livecheck do
