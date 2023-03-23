@@ -4,6 +4,7 @@ cask "parsehub" do
 
   url "https://www.parsehub.com/static/client/parsehub.dmg"
   name "ParseHub"
+  desc "Web scraping tool"
   homepage "https://www.parsehub.com/"
 
   livecheck do
