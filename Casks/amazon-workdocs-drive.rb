@@ -20,10 +20,7 @@ cask "amazon-workdocs-drive" do
   pkg "AmazonWorkDocsDrive.pkg"
 
   uninstall signal:    ["TERM", "com.Amazon.WorkDocs.Drive"],
-            pkgutil:   [
-              "com.Amazon.WorkDocs.Drive",
-              "com.Amazon.WorkDocs.Drive.pkg.Core",
-            ],
+            pkgutil:   "com.Amazon.WorkDocs.Drive.pkg.core",
             launchctl: "com.Amazon.WorkDocs.DriveUpdater"
 
   zap trash: [
