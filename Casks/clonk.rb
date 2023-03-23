@@ -3,8 +3,9 @@ cask "clonk" do
   sha256 :no_check
 
   url "http://www.clonkx.de/rage/cr_full_mac.zip",
-      verified: "clonkx.de/"
+      verified: "www.clonkx.de/rage/"
   name "Clonk Rage"
+  desc "Single player and multiplayer action game"
   homepage "http://www.clonk.de/cr.php"
 
   livecheck do
