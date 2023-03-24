@@ -12,6 +12,8 @@ cask "data-rescue" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on macos: ">= sierra"
+
   app "Data Rescue.app"
 
   uninstall quit:   "com.prosofteng.DataRescue",
