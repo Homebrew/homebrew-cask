@@ -1,15 +1,15 @@
 cask "hazeover" do
-  version "1.9.3,1120"
+  version "1.9.3"
   sha256 :no_check
 
   url "https://hazeover.com/HazeOver.dmg"
   name "HazeOver"
-  desc "Windows manager and desktop organizer"
+  desc "Windows manager and desktop organiser"
   homepage "https://hazeover.com/"
 
   livecheck do
     url "https://hazeover.com/updates.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   depends_on macos: ">= :monterey"
