@@ -1,9 +1,9 @@
 cask "superlist" do
-  version "0.9.1"
-  sha256 "f5ae0095ccde966e1eb116289020a7dd9b980de91b0bdf4a93e0bbd79490b589"
+  version "0.13.1"
+  sha256 "cdc22a74f5220185e8618aad36a062166339bae627f42e229bc3e41101c0aafa"
 
   url "https://storage.googleapis.com/superlist-appcast/beta/updates/Superlist-#{version}.zip",
-      verified: "storage.googleapis.com/superlist-appcast/"
+      verified: "storage.googleapis.com/superlist-appcast/beta/updates/"
   name "Superlist"
   desc "Collaborative to-do list app"
   homepage "https://www.superlist.com/"

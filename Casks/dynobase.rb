@@ -1,11 +1,11 @@
 cask "dynobase" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.2.1,230111zkqw3z8qf"
-  sha256 arm:   "afa14f4121f13fec9da348587583b5eecb96165e1e7d95df2a952287f22d444c",
-         intel: "b1dcbf568db108e3ef8ee7ed243e67b1c63c5c0638c441032fd192551d529f32"
+  version "2.2.3,230122bksrk6omy,2.2.4"
+  sha256 arm:   "7b96176b19b76662e3469ddec3d1cdd96b8c72df1b5f2e39daaff7a5b8c4ff52",
+         intel: "132d862a01aee32f0b3a1f08318e5bb91556753e021b60aa2b4315acbb267e1b"
 
-  url "https://github.com/Dynobase/dynobase/releases/download/v#{version.csv.first}/Dynobase.#{version.csv.first}.-.Build.#{version.csv.second}-#{arch}.dmg",
+  url "https://github.com/Dynobase/dynobase/releases/download/v#{version.csv.third}/Dynobase.#{version.csv.first}.-.Build.#{version.csv.second}-#{arch}.dmg",
       verified: "github.com/Dynobase/dynobase/"
   name "Dynobase"
   desc "GUI Client for DynamoDB"
@@ -13,7 +13,7 @@ cask "dynobase" do
 
   livecheck do
     url "https://github.com/Dynobase/dynobase/releases/latest"
-    regex(/Dynobase[._-](\d+(?:\.\d+)+)[._-]+Build[._-](\S+)[._-]#{arch}\.dmg/i)
+    regex(%r{(\d+(?:\.\d+)+)/Dynobase[._-](\d+(?:\.\d+)+)[._-]+Build[._-](\S+)[._-]#{arch}\.dmg}i)
     strategy :header_match do |headers, regex|
       next if headers["location"].blank?
 
@@ -25,7 +25,7 @@ cask "dynobase" do
       assets_page = Homebrew::Livecheck::Strategy.page_content(
         @url.sub(%r{/releases/?.+}, "/releases/expanded_assets/#{latest_tag}"),
       )
-      assets_page[:content]&.scan(regex)&.map { |match| "#{match[0]},#{match[1]}" }
+      assets_page[:content]&.scan(regex)&.map { |match| "#{match[1]},#{match[2]},#{match[0]}" }
     end
   end
 

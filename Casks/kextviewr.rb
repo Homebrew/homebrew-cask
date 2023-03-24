@@ -1,9 +1,9 @@
 cask "kextviewr" do
-  version "1.1.0"
-  sha256 "bf57dc55adc7179914a452eeacf553952e86b4e1ff2406875a9a0b21932684ca"
+  version "2.0.0"
+  sha256 "cd92141750812797cffd626f697c133fac84b615b5d4cd5dae56a8160320968e"
 
-  url "https://bitbucket.org/objective-see/deploy/downloads/KextViewr_#{version}.zip",
-      verified: "bitbucket.org/objective-see/"
+  url "https://github.com/objective-see/KextViewr/releases/download/v#{version}/KextViewr_#{version}.zip",
+      verified: "github.com/objective-see/"
   name "KextViewr"
   desc "Display all currently loaded kexts"
   homepage "https://objective-see.com/products/kextviewr.html"

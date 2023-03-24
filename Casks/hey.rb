@@ -1,9 +1,9 @@
 cask "hey" do
   arch arm: "-arm64"
 
-  version "1.2.10"
-  sha256 arm:   "a8fa6d709ba106d1e90829e1132e659c46d31850299dca805993cef1486f29a8",
-         intel: "0b792e8a24f1cb7a77b02be4520c0cf5acb63ce8d32e773d4b75ab63c1999343"
+  version "1.2.11"
+  sha256 arm:   "c924c307042328c59692214b3b3c321cff5c0c4f462225d1c83459098a268ddd",
+         intel: "0cbf19dc198948168af49909a2fd5cb9d6c81110b9107121efa6ffb80828ecf6"
 
   url "https://hey-desktop.s3.amazonaws.com/HEY-#{version}#{arch}-mac.zip",
       verified: "hey-desktop.s3.amazonaws.com/"

@@ -1,6 +1,6 @@
 cask "openlp" do
-  version "3.0.1"
-  sha256 "ee7a1d1c7f1dd7c0af5db44b424179235e059dbaf1aff64ebb392dcccdc756a0"
+  version "3.0.2"
+  sha256 "302b2b80c4a50fe810e206585ae2733025f167d843f46d354a510ad973118206"
 
   url "https://get.openlp.org/#{version}/OpenLP-#{version}.dmg"
   name "OpenLP"

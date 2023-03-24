@@ -1,6 +1,6 @@
 cask "wpsoffice-cn" do
-  version "5.1.1,7662"
-  sha256 "8c002b713c9f86c6876e3d0e1880bfba662a5cbdd33785a1e15e0eee7c832194"
+  version "5.3.0,7852"
+  sha256 "c2aeaa939e136dc5a3d57f9870dffedfaf0216d6da99a4f9a96b228324b6a495"
 
   url "https://package.mac.wpscdn.cn/mac_wps_pkg/#{version.csv.first}/WPS_Office_#{version.csv.first}(#{version.csv.second})_universal.dmg",
       verified: "package.mac.wpscdn.cn/mac_wps_pkg/"

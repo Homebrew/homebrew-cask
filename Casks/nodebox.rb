@@ -5,12 +5,11 @@ cask "nodebox" do
   url "https://github.com/nodebox/nodebox/releases/download/v#{version}/NodeBox-#{version}.dmg",
       verified: "github.com/nodebox/nodebox/"
   name "NodeBox"
-  desc "Node-based data application for visualization and generative design"
+  desc "Node-based data application for visualisation and generative design"
   homepage "https://www.nodebox.net/node/"
 
   livecheck do
     url "https://www.nodebox.net/download"
-    strategy :page_match
     regex(/href=.*?NodeBox[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 

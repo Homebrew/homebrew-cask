@@ -1,6 +1,6 @@
 cask "macvim" do
-  version "174"
-  sha256 "46fb4c55a4e719974d2ffa90d84a137db8775b9687a6659ed79afe26ae1d2675"
+  version "176"
+  sha256 "bafebef360931f8df1057887b00fd8be039a4312c7aa300f0421860953bb880a"
 
   url "https://github.com/macvim-dev/macvim/releases/download/release-#{version}/MacVim.dmg"
   name "MacVim"

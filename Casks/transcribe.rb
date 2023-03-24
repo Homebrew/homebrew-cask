@@ -1,12 +1,5 @@
 cask "transcribe" do
-  arch arm: "_arm"
-
-  livecheck_version = "11"
-
-  version "9.21"
-  sha256 :no_check
-
-  url "https://www.seventhstring.com/xscribe/transcribe#{arch}.dmg"
+  arch arm: "arm", intel: "intel"
 
   on_catalina :or_older do
     version "8.75.2"
@@ -14,24 +7,63 @@ cask "transcribe" do
 
     url "https://www.seventhstring.com/xscribe/downmo/transcribe#{version.no_dots}.dmg"
 
-    livecheck_version = "10"
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_big_sur do
+    version "9.21"
+    sha256 :no_check
+
+    on_arm do
+      url "https://www.seventhstring.com/xscribe/downmo/11_12/transcribe_arm.dmg"
+    end
+    on_intel do
+      url "https://www.seventhstring.com/xscribe/downmo/11_12/transcribe.dmg"
+    end
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_monterey do
+    version "9.21"
+    sha256 :no_check
+
+    on_arm do
+      url "https://www.seventhstring.com/xscribe/downmo/11_12/transcribe_arm.dmg"
+    end
+    on_intel do
+      url "https://www.seventhstring.com/xscribe/downmo/11_12/transcribe.dmg"
+    end
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_ventura do
+    version "9.25.0"
+    sha256 arm:   "9452c3fd911bd1c1e81f45228233adbd370d4b6cc9d2fb5f3e03c06ce6b392a5",
+           intel: "a01f360c9daeecd8369b89600e4d49175e1961bab50afd79faba32f4ac821af8"
+
+    url "https://www.seventhstring.com/xscribe/downmo/transcribe-#{arch}-#{version}.dmg"
+
+    livecheck do
+      url "https://www.seventhstring.com/xscribe/download_mac.html"
+      regex(/transcribe[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    end
   end
 
   name "Transcribe!"
   desc "Transcribes recorded music"
   homepage "https://www.seventhstring.com/xscribe/overview.html"
 
-  livecheck do
-    url "https://www.seventhstring.com/xscribe/download_mac.html"
-    regex(/version\s*(\d+(?:\.\d+)+)\s*for\s*Mac\s*OS\s*#{livecheck_version}/i)
-  end
-
   app "Transcribe!.app"
 
   uninstall quit: "com.seventhstring.transcribe"
 
   zap trash: [
-    "~/Library/Preferences/Transcribe!7 Preferences",
     "~/Library/Preferences/com.seventhstring.transcribe.plist",
+    "~/Library/Preferences/Transcribe!#{version.major} Preferences",
   ]
 end

@@ -19,10 +19,11 @@ jobs:
     if: startsWith(github.repository, 'Homebrew/')
     strategy:
       matrix:
-        os:
-          - macos-11.0
+        runner:
+          - macos-11
+          - macos-12
           - ubuntu-latest
-    runs-on: ${{ matrix.os }}
+    runs-on: ${{ matrix.runner }}
     steps:
       - name: Set up Homebrew
         id: set-up-homebrew
@@ -30,20 +31,13 @@ jobs:
         with:
           test-bot: false
 
-      # Workaround until the `cache` action uses the changes from
-      # https://github.com/actions/toolkit/pull/580.
-      - name: Unlink workspace
-        run: |
-          rm "${GITHUB_WORKSPACE}"
-          mkdir "${GITHUB_WORKSPACE}"
-
       - name: Cache Homebrew Gems
         id: cache
         uses: actions/cache@v3
         with:
           path: ${{ steps.set-up-homebrew.outputs.gems-path }}
-          key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
-          restore-keys: ${{ runner.os }}-rubygems-
+          key: ${{ matrix.runner }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
+          restore-keys: ${{ matrix.runner }}-rubygems-
 
       - name: Install Homebrew Gems
         id: gems

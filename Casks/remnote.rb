@@ -1,5 +1,5 @@
 cask "remnote" do
-  arch arm: "-arm64", intel: ""
+  arch arm: "-arm64"
 
   version "1.8.52"
   sha256 arm:   "18b3e49babdb8a789d93dcc3f1ff403f7c9f2209bb6859c971e4df6c51bfa363",

@@ -1,6 +1,6 @@
 cask "veusz" do
-  version "3.5"
-  sha256 "c1662705d76eef2afb56f3bf34ea882c8893ae66280c68e014605095963b63e9"
+  version "3.6"
+  sha256 "c23d7593724f5398747c6858bc99fdc950633631dfc8d9224730eed682ada8f6"
 
   url "https://github.com/veusz/veusz/releases/download/veusz-#{version.major_minor}/veusz-#{version}-AppleOSX.dmg",
       verified: "github.com/veusz/veusz/"
@@ -27,4 +27,6 @@ cask "veusz" do
   end
 
   app "Veusz.app"
+
+  zap trash: "~/Library/Preferences/org.veusz.veusz*.plist"
 end

@@ -1,6 +1,6 @@
 cask "unison" do
-  version "2.53.0,4.14.0"
-  sha256 "da2692e0b7d486e16288f4a36d68840239af7aec8cd1e0bcd2c7034c59c0c4e0"
+  version "2.53.2,4.14.1"
+  sha256 "c73bf7944dee203f1408a08d591d3187a2480ed543007cf1cfe859ce0b22c148"
 
   url "https://github.com/bcpierce00/unison/releases/download/v#{version.csv.first}/Unison-v#{version.csv.first}.ocaml-#{version.csv.second}.macos-10.15.app.tar.gz",
       verified: "github.com/bcpierce00/unison/"
@@ -34,4 +34,9 @@ cask "unison" do
   postflight do
     system_command "/usr/bin/defaults", args: ["write", "edu.upenn.cis.Unison", "CheckCltool", "-bool", "false"]
   end
+
+  zap trash: [
+    "~/Library/Application Support/Unison",
+    "~/Library/Preferences/edu.upenn.cis.Unison.plist",
+  ]
 end

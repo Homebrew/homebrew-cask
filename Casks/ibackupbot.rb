@@ -6,5 +6,10 @@ cask "ibackupbot" do
   name "iBackupBot"
   homepage "https://www.icopybot.com/itunes-backup-manager.htm"
 
+  livecheck do
+    url :homepage
+    regex(/V\s+(\d+(?:\.\d+)+)/i)
+  end
+
   app "iBackupBot.app"
 end

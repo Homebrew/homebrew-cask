@@ -1,5 +1,5 @@
 cask "wechat" do
-  version "3.6.2.17,24456"
+  version "3.7.0.17,25067"
   sha256 :no_check
 
   url "https://dldir1.qq.com/weixin/mac/WeChatMac.dmg"

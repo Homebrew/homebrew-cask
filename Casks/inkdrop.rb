@@ -13,8 +13,8 @@ cask "inkdrop" do
 
   livecheck do
     url "https://api.inkdrop.app/update/links"
-    strategy :page_match do |page|
-      JSON.parse(page)["version"]
+    strategy :json do |json|
+      json["version"]
     end
   end
 

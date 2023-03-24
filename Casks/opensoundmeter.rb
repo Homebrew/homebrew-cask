@@ -1,6 +1,6 @@
 cask "opensoundmeter" do
-  version "1.2.2"
-  sha256 "572e3866b0e09c6f45b90b22651b1c0bec98e22a92c055eb8a629fe844fa766a"
+  version "1.2.3"
+  sha256 "b4de2eaabb8d65d918f47b92a65476f579117c14f9851ce91df31a71b41bc81c"
 
   url "https://github.com/psmokotnin/osm/releases/download/v#{version}/OpenSoundMeter.dmg",
       verified: "github.com/psmokotnin/osm/"

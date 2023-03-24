@@ -1,6 +1,6 @@
 cask "ximalaya" do
-  version "3.3.2,GMCoOSIHmtAEACAAAAHtXOj6,d30a,C3,5F"
-  sha256 "d9df40de6df0f944f885e6dea3e03986ad8313f32aad6f52048117342da04c63"
+  version "3.3.5,GKwRIRwH308nACAAAAIAdMG8,b404,C3,26"
+  sha256 "8175390adf30cf6d719dc9a6b34daa1d1d5d202a2d3b670c2be3d58d02d41169"
 
   url "https://nativedl.pcdn.xmcdn.com/storages/#{version.csv.third}-audiofreehighqps/#{version.csv.fourth}/#{version.csv.fifth}/#{version.csv.second}.dmg?ct=application/octet-stream&filename=Ximalaya_#{version.csv.first}_x64_c_99",
       verified: "nativedl.pcdn.xmcdn.com/storages/"
@@ -20,4 +20,12 @@ cask "ximalaya" do
   end
 
   app "喜马拉雅.app"
+
+  zap trash: [
+    "~/Library/Application Support/喜马拉雅",
+    "~/Library/Application Support/Ximalaya SetUp",
+    "~/Library/Logs/喜马拉雅",
+    "~/Library/Preferences/com.gemd.iting.plist",
+    "~/Library/Saved Application State/com.gemd.iting.savedState",
+  ]
 end

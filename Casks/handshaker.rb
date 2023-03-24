@@ -1,16 +1,16 @@
 cask "handshaker" do
-  version "2.5.6,408"
-  sha256 "a263e0713a2d6d41b7fb9323fa0b145e35a8fc9086b6ff6253f9b9abda7ede16"
+  version "2.5.6"
+  sha256 "1ac126457138456d37175643595c9d29100643c3c810e20992418247f57ba82d"
 
-  url "http://dl2.smartisan.cn/app/HandShaker.v#{version.csv.first}.dmg",
-      verified: "dl2.smartisan.cn/"
+  url "http://dl2.smartisan.cn/app/HandShaker.v#{version}.zip",
+      verified: "dl2.smartisan.cn/app/"
   name "HandShaker"
   desc "App for managing Android devices"
   homepage "https://www.smartisan.com/apps/"
 
   livecheck do
     url "https://sf.smartisan.com/update.plist"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   app "HandShaker.app"

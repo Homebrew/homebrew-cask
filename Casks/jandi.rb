@@ -1,11 +1,16 @@
 cask "jandi" do
-  version "1.4.6,201106"
+  version "1.6.0,202302"
   sha256 :no_check
 
   url "https://cdn.jandi.com/jandi-pc/download/JANDI.dmg"
   name "JANDI"
   desc "Desktop app for the JANDI collaboration platform"
   homepage "https://www.jandi.com/landing/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   app "JANDI.app"
 

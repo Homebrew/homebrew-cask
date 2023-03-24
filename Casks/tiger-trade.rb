@@ -1,6 +1,6 @@
 cask "tiger-trade" do
-  version "8.4.1,11BB37"
-  sha256 "1846390a649d222fbe9705a16e23f33b65247ea712e3381ebba53a3f2c1ff0de"
+  version "8.6.2,30D878"
+  sha256 "95c97d24e2ab3c14e6bf6140da7f32a76118ff9bc3c8797af14ea59839ee1194"
 
   url "https://s.tigerfintech.com/desktop/cdn/f/TigerTrade_#{version.tr(",", "_")}.dmg",
       verified: "s.tigerfintech.com/"
@@ -22,4 +22,9 @@ cask "tiger-trade" do
   depends_on macos: ">= :sierra"
 
   app "Tiger Trade.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.itiger.TigerTrade-Mac",
+    "~/Library/Containers/com.itiger.TigerTrade-Mac",
+  ]
 end

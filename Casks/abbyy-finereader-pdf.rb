@@ -1,5 +1,5 @@
 cask "abbyy-finereader-pdf" do
-  version "1402.14"
+  version "1402.15"
   sha256 :no_check
 
   url "https://downloads.abbyy.com/fr/fr_mac/current/ABBYY_FineReader_PDF.dmg?secure=5c11NlPrQmIZeGn6dK2PZA=="

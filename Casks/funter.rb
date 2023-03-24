@@ -1,5 +1,5 @@
 cask "funter" do
-  version "6.0.3,337"
+  version "6.0.3"
   sha256 :no_check
 
   url "https://download.nektony.com/download/funter/Funter.dmg"
@@ -9,7 +9,7 @@ cask "funter" do
 
   livecheck do
     url "https://download.nektony.com/pro-support/v3/funter/update/update.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   depends_on macos: ">= :high_sierra"

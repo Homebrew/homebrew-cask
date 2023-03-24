@@ -1,5 +1,5 @@
 cask "battery-buddy" do
-  version "1.0.3,11"
+  version "1.0.3"
   sha256 :no_check
 
   url "https://batterybuddy.app/releases/Battery%20Buddy.zip"
@@ -9,7 +9,7 @@ cask "battery-buddy" do
 
   livecheck do
     url "https://batterybuddy.app/releases/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

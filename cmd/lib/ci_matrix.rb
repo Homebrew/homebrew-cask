@@ -109,15 +109,32 @@ module CiMatrix
     modified_cask_files.flat_map do |path|
       cask_token = path.basename(".rb")
 
-      appcast_arg = if labels.include?("ci-skip-appcast")
+      audit_args = ["--online"]
+      audit_args << "--new-cask" if changed_files[:added_files].include?(path)
+
+      audit_args << "--signing"
+
+      audit_exceptions = []
+
+      # TODO: Replace with `except`.
+      audit_args << if labels.include?("ci-skip-appcast")
         "--no-appcast"
       else
         "--appcast"
       end
 
-      audit_args = [appcast_arg, "--online"]
+      if labels.include?("ci-skip-livecheck")
+        audit_exceptions << ["hosting_with_livecheck", "livecheck_version", "livecheck_min_os"]
+      end
 
-      audit_args << "--new-cask" if changed_files[:added_files].include?(path)
+      audit_exceptions << "livecheck_min_os" if labels.include?("ci-skip-livecheck-min-os")
+
+      if labels.include?("ci-skip-repository")
+        audit_exceptions << ["github_repository", "gitlab_repository",
+                             "bitbucket_repository"]
+      end
+
+      audit_args << "--except" << audit_exceptions.join(",") if audit_exceptions.any?
 
       runners(path).map do |runner|
         {
@@ -129,6 +146,7 @@ module CiMatrix
           },
           audit_args:   audit_args,
           skip_install: labels.include?("ci-skip-install"),
+          skip_readall: false,
           runner:       runner[:name],
         }
       end

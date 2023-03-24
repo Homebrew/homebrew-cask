@@ -1,9 +1,9 @@
 cask "miniforge" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "22.9.0-3"
-  sha256 arm:   "c3065cbfaef72966599fc658a2724f5109b0315f7b9ffc6078fd061b084942f4",
-         intel: "45a1314dad30baececc43b4ecef839a17e43860a6a9c77e87ab1d4297796fa9d"
+  version "22.11.1-4"
+  sha256 arm:   "7be6b8b25eb328d6df048a7b533514097a6d30ff348d0f28671059c98c4c31aa",
+         intel: "d3bd39dc391552a037a95230786c026165c042499fa365aae0da4002d9530731"
 
   url "https://github.com/conda-forge/miniforge/releases/download/#{version}/Miniforge3-#{version}-MacOSX-#{arch}.sh"
   name "miniforge"
@@ -12,8 +12,8 @@ cask "miniforge" do
 
   livecheck do
     url :homepage
-    strategy :github_latest
     regex(%r{href=.*?/tag/v?(\d+(?:[.-]\d+)+)["' >]}i)
+    strategy :github_latest
   end
 
   auto_updates true

@@ -1,6 +1,6 @@
 cask "ghidra" do
-  version "10.2.2,20221115"
-  sha256 "feb8a795696b406ad075e2c554c80c7ee7dd55f0952458f694ea1a918aa20ee3"
+  version "10.2.3,20230208"
+  sha256 "daf4d85ec1a8ca55bf766e97ec43a14b519cbd1060168e4ec45d429d23c31c38"
 
   url "https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_#{version.csv.first}_build/ghidra_#{version.csv.first}_PUBLIC_#{version.csv.second}.zip",
       verified: "github.com/NationalSecurityAgency/ghidra/"
@@ -41,5 +41,6 @@ cask "ghidra" do
 
   caveats do
     depends_on_java "17+"
+    requires_rosetta
   end
 end

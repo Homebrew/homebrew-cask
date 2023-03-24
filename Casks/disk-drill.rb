@@ -1,5 +1,5 @@
 cask "disk-drill" do
-  version "5.0.1043"
+  version "5.1.1114"
   sha256 :no_check
 
   url "https://dl.cleverfiles.com/diskdrill.dmg"
@@ -8,10 +8,11 @@ cask "disk-drill" do
   homepage "https://www.cleverfiles.com/"
 
   livecheck do
-    url "https://www.cleverfiles.com/releases/auto-update/dd2-newestr.xml"
+    url "https://www.cleverfiles.com/releases/auto-update/dd-newestr.xml"
     strategy :sparkle
   end
 
+  auto_updates true
   depends_on macos: ">= :catalina"
 
   app "Disk Drill.app"

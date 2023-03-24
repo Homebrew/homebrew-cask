@@ -1,6 +1,6 @@
 cask "abstract" do
-  version "98.2.6"
-  sha256 "bdab03daf8d0e3e866914fe075af40b4c99592137cf715923f60b61c451d1d0a"
+  version "98.2.10"
+  sha256 "776f7be2b6a4413d4c152f2d8e92af15bcf60ea2659844e48acc5d7a30978c76"
 
   url "https://downloads.goabstract.com/mac/Abstract-#{version}.zip"
   name "Abstract"

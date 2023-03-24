@@ -30,8 +30,7 @@ cask "sf-symbols" do
 
   pkg "SF Symbols.pkg"
 
-  uninstall pkgutil: "com.apple.SFSymbols.plist",
-            delete:  "/Applications/SF Symbols.app"
+  uninstall pkgutil: "com.apple.pkg.SFSymbols"
 
   zap trash: "~/Library/Preferences/com.apple.SFSymbols.plist"
 end

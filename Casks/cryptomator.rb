@@ -1,21 +1,15 @@
 cask "cryptomator" do
-  arch arm:   "-arm64",
-       intel: "-x64"
+  arch arm: "-arm64", intel: "-x64"
 
-  version "1.6.17"
-  sha256 arm:   "9b98791303bc310cbbc78b69dc4cffa1b3d72a860ccf84bf2d7d396d391d4cce",
-         intel: "9ca0e230650b75b7ae424ffad8aaf98ef131facf1ca524b709f497c768e0727d"
+  version "1.7.3"
+  sha256 arm:   "ad6485d9aea0eea70ae2dfae545591e6444e10ae59a4e8879e7ccabb9505dbfe",
+         intel: "5db788e2192153282b1f9cfae6eefccdb81ed52c55320796f324e41d3eaab6fd"
 
   url "https://github.com/cryptomator/cryptomator/releases/download/#{version}/Cryptomator-#{version}#{arch}.dmg",
       verified: "github.com/cryptomator/cryptomator/"
   name "Cryptomator"
   desc "Multi-platform client-side cloud file encryption tool"
   homepage "https://cryptomator.org/"
-
-  livecheck do
-    url "https://cryptomator.org/downloads/mac/thanks/"
-    regex(%r{href=.*?/Cryptomator[._-]v?(\d+(?:\.\d+)+)-x64\.dmg}i)
-  end
 
   depends_on macos: ">= :high_sierra"
 

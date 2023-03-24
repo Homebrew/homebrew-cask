@@ -1,6 +1,6 @@
 cask "geotag" do
-  version "4.99.2"
-  sha256 "0d8400b1183abd41ac63d5ba9fb3a5facfdb163477390682b637c19e58e40689"
+  version "5.0"
+  sha256 "2e4504197e66cba96ae08128cf859c76a84651eb3c1c0584ffe8c21a03532add"
 
   url "https://www.snafu.org/GeoTag/GeoTag-#{version}.dmg"
   name "GeoTag"
@@ -8,7 +8,7 @@ cask "geotag" do
   homepage "https://www.snafu.org/GeoTag/"
 
   livecheck do
-    url "https://www.snafu.org/GeoTag/"
+    url :homepage
     regex(/href=.*?GeoTag[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 

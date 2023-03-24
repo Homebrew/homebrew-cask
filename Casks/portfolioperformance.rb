@@ -1,9 +1,9 @@
 cask "portfolioperformance" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.60.2"
-  sha256 arm:   "52f52c55e8e768c55d70e740a95911fe9fbe7ba1b1e9781ba2bab87c082cded0",
-         intel: "f11d5b36649738cbddfe4213622da8204f9545fef0ff5fc1310ede30b0503fba"
+  version "0.61.4"
+  sha256 arm:   "83efb52535cdc65d4c2576938b77b9a07fd0dd6faad521d57b3fb5dc6404bc22",
+         intel: "2fe43aee1d7d3a8afd93e9ca07d08f313a721342844c6bf1cd274f7581088ae8"
 
   url "https://github.com/buchen/portfolio/releases/download/#{version}/PortfolioPerformance-#{version}-#{arch}.dmg",
       verified: "github.com/buchen/portfolio/"
@@ -13,7 +13,7 @@ cask "portfolioperformance" do
 
   livecheck do
     url :url
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    strategy :github_latest
   end
 
   auto_updates true

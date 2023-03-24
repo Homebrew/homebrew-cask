@@ -7,5 +7,10 @@ cask "macpar-deluxe" do
   desc "Utility to combine binary content files after download"
   homepage "https://gp.home.xs4all.nl/Site/MacPAR_deLuxe.html"
 
+  livecheck do
+    url :homepage
+    regex(/Release\s+notes\s+for\s+version\s+(\d+(?:\.\d+)+)/i)
+  end
+
   app "MacPAR deLuxe.app"
 end

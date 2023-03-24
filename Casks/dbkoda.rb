@@ -7,6 +7,11 @@ cask "dbkoda" do
   name "dbKoda"
   homepage "https://www.dbkoda.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "dbKoda.app"
 
   zap trash: [

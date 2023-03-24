@@ -7,5 +7,10 @@ cask "nsregextester" do
   name "NSRegexTester"
   homepage "https://github.com/aaronvegh/nsregextester"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "NSRegexTester.app"
 end

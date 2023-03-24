@@ -37,14 +37,6 @@ jobs:
         with:
           test-bot: false
 
-      # Workaround until the `cache` action uses the changes from
-      # https://github.com/actions/toolkit/pull/580.
-      - name: Unlink workspace
-        if: github.event.inputs.self_hosted != 'true'
-        run: |
-          mv "${GITHUB_WORKSPACE}" "${GITHUB_WORKSPACE}-link"
-          mkdir "${GITHUB_WORKSPACE}"
-
       - name: Cache gems
         if: github.event.inputs.self_hosted != 'true'
         uses: actions/cache@v3
@@ -52,14 +44,6 @@ jobs:
           path: ${{steps.set-up-homebrew.outputs.gems-path}}
           key: ${{runner.os}}-rubygems-v2-${{steps.set-up-homebrew.outputs.gems-hash}}
           restore-keys: ${{runner.os}}-rubygems-v2-
-
-      # Workaround until the `cache` action uses the changes from
-      # https://github.com/actions/toolkit/pull/580.
-      - name: Re-link workspace
-        if: github.event.inputs.self_hosted != 'true'
-        run: |
-          rmdir "${GITHUB_WORKSPACE}"
-          mv "${GITHUB_WORKSPACE}-link" "${GITHUB_WORKSPACE}"
 
       - name: Install gems
         if: github.event.inputs.self_hosted != 'true'
@@ -107,11 +91,3 @@ jobs:
           token: ${{secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN}}
           pr: ${{github.event.inputs.pull_request}}
           message: "merge failed"
-
-      # Workaround until the `cache` action uses the changes from
-      # https://github.com/actions/toolkit/pull/580.
-      - name: Unlink workspace
-        if: github.event.inputs.self_hosted != 'true'
-        run: |
-          rm "${GITHUB_WORKSPACE}"
-          mkdir "${GITHUB_WORKSPACE}"

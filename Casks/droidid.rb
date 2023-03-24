@@ -6,5 +6,10 @@ cask "droidid" do
   name "DroidID"
   homepage "https://www.suyashsrijan.com/droidid/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "DroidID.app"
 end

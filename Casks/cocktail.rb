@@ -66,8 +66,8 @@ cask "cocktail" do
     end
   end
   on_monterey do
-    version "15.3.9"
-    sha256 "d6a3278369b5deb67b2c667aa861b0c9331241b2ad1c0a3c83e9776642750be6"
+    version "15.4"
+    sha256 "0425a38d56484d04e8c8a12d0be89402656701b78cd1df4bfb396fc1468051c7"
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}ME.dmg"
 
@@ -77,8 +77,8 @@ cask "cocktail" do
     end
   end
   on_ventura :or_newer do
-    version "16.2.1"
-    sha256 "606b307ad985d42f7260bf378470127e3b15bece625950b1dd108330f3aa4781"
+    version "16.3.2"
+    sha256 "1186a649648b9d45f6c8dd03a52d2283a7337aedd7b457b767c251497590dced"
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}VE.dmg"
 

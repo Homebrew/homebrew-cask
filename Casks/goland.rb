@@ -1,9 +1,9 @@
 cask "goland" do
   arch arm: "-aarch64"
 
-  version "2022.3.1,223.8214.59"
-  sha256 arm:   "5873200406e91ca64df50470eb20f907c568f5d95b7488cb4c3b3d3eb8353df4",
-         intel: "296d5da052b59a00b0930cf6eea07eb2e5ed4eb1417ee505b013c6d83ffda2e1"
+  version "2022.3.3,223.8836.34"
+  sha256 arm:   "6414ffacecbdc5f02c5ad30a4ba710c8a9b59753eb27376b0df9856696d7ee5f",
+         intel: "70d98ed21d52f7cabd4a1f8a1153388e8675220118eed9c767a82172b2dc2453"
 
   url "https://download.jetbrains.com/go/goland-#{version.csv.first}#{arch}.dmg"
   name "Goland"
@@ -12,8 +12,8 @@ cask "goland" do
 
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=GO&latest=true&type=release"
-    strategy :page_match do |page|
-      JSON.parse(page)["GO"].map do |release|
+    strategy :json do |json|
+      json["GO"].map do |release|
         "#{release["version"]},#{release["build"]}"
       end
     end

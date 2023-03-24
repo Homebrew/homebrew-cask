@@ -1,6 +1,6 @@
 cask "redcine-x-pro" do
-  version "60.2.2"
-  sha256 "93526dacdcff4d72bdda5411ae700ba8f3b6aeca5d4e201c0db8afe7a98b536d"
+  version "60.3.11"
+  sha256 "9112ac715a1490a03fd250eb59cc87b33659cb25e71c985a143a2917a08d4002"
 
   url "https://downloads.red.com/software/rcx/mac/release/#{version}/REDCINE-X_PRO_Build_#{version}.pkg"
   name "REDCINE-X PRO"

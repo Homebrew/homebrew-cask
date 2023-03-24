@@ -4,9 +4,13 @@ cask "djv" do
 
   url "https://downloads.sourceforge.net/djv/djv-stable/#{version}/DJV-#{version}-Darwin.dmg",
       verified: "downloads.sourceforge.net/djv/"
-  appcast "https://sourceforge.net/projects/djv/rss?path=/djv-stable"
   name "DJV Imaging"
+  desc "Review software for VFX, animation, and film production"
   homepage "https://djv.sourceforge.io/"
+
+  livecheck do
+    url "https://sourceforge.net/projects/djv/rss?path=/djv-stable"
+  end
 
   app "DJV.app"
 end

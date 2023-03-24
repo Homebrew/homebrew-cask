@@ -1,6 +1,6 @@
 cask "ios-app-signer" do
-  version "1.13.1"
-  sha256 "baf6826427706b0b3f685ffb3beced86cf348b74d60e1f81d75c4c3e8a779f47"
+  version "1.14"
+  sha256 "7738a2b75b72ca9493a6f9c8ee4a7a6118fbfc77c61ddf6f02d41bfac8c739d2"
 
   url "https://github.com/DanTheMan827/ios-app-signer/releases/download/#{version}/iOS.App.Signer.app.zip",
       verified: "github.com/DanTheMan827/ios-app-signer/"

@@ -1,8 +1,8 @@
 cask "pokerstars" do
-  version "56.935"
+  version "57.466"
   sha256 :no_check
 
-  url "https://download.pokerstars.net/client/download/"
+  url "https://download.pokerstars.net/PokerStars.net.app.zip"
   name "PokerStars"
   desc "Free-to-play online poker"
   homepage "https://www.pokerstars.net/"

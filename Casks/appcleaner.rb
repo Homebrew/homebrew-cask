@@ -16,16 +16,16 @@ cask "appcleaner" do
     end
   end
   on_mojave :or_newer do
-    version "3.6.7,4301"
+    version "3.6.7"
     sha256 "24c5c2e38b2cfd29573824e81af968b510d116f8e229ff333501937fec6c8470"
 
     livecheck do
       url "https://freemacsoft.net/appcleaner/Updates.xml"
-      strategy :sparkle
+      strategy :sparkle, &:short_version
     end
   end
 
-  url "https://www.freemacsoft.net/downloads/AppCleaner_#{version.csv.first}.zip"
+  url "https://www.freemacsoft.net/downloads/AppCleaner_#{version}.zip"
   name "FreeMacSoft AppCleaner"
   desc "Application uninstaller"
   homepage "https://freemacsoft.net/appcleaner/"

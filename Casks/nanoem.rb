@@ -1,6 +1,6 @@
 cask "nanoem" do
-  version "34.7.0"
-  sha256 "4549f4b91e7b4302d4a61e2e171ca02795873a89f01ec7ebd93bf13767d812c8"
+  version "34.8.1"
+  sha256 "1d55c984c1798663cf9eae6feafaa8cb0db12770994cf0054b0952fb5f9467c2"
 
   url "https://github.com/hkrn/nanoem/releases/download/v#{version}/nanoem-v#{version}-macos.zip"
   name "nanoem"

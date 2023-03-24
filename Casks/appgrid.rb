@@ -9,8 +9,8 @@ cask "appgrid" do
 
   livecheck do
     url :homepage
-    strategy :page_match
     regex(/href=.*?AppGrid[._-]v?(\d+(?:\.\d+)+)\.zip/i)
+    strategy :page_match
   end
 
   app "AppGrid.app"

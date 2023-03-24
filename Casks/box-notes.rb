@@ -4,9 +4,16 @@ cask "box-notes" do
 
   url "https://e3.boxcdn.net/box-installers/boxnotes/mac/latest/Box%20Notes.zip",
       verified: "e3.boxcdn.net/box-installers/"
-  appcast "https://notes.services.box.com/updates/latest?platform=darwin&v=#{version.major}.0.0"
   name "Box Notes"
+  desc "Online notes for secure, real-time collaboration"
   homepage "https://www.box.com/resources/downloads/notes"
+
+  livecheck do
+    url "https://notes.services.box.com/updates/latest?platform=darwin&v=#{version.major}.0.0"
+    strategy :json do |json|
+      json["version"]
+    end
+  end
 
   app "Box Notes.app"
 

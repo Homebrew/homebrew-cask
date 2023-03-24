@@ -1,9 +1,9 @@
 cask "figma" do
   arch arm: "mac-arm", intel: "mac"
 
-  version "116.5.18"
-  sha256 arm:   "cc7643fe2271e531b00327d99214002308021b26528702b261956642dcd14721",
-         intel: "b765bd114938abd0f143638154c03fa2ba3a5fa091bc77321f95515177b4c869"
+  version "116.7.103"
+  sha256 arm:   "8c4e28d7d9d6ae08465d060c0793a9733ba0f43e31a88b9f9e4f541b51814be4",
+         intel: "39ec10b75605c9c1839ce6bed4f84c4b7e523f8b991201e7bcd5c9cb6df05d58"
 
   url "https://desktop.figma.com/#{arch}/Figma-#{version}.zip"
   name "Figma"
@@ -12,8 +12,8 @@ cask "figma" do
 
   livecheck do
     url "https://desktop.figma.com/#{arch}/RELEASE.json"
-    strategy :page_match do |page|
-      JSON.parse(page)["version"]
+    strategy :json do |json|
+      json["version"]
     end
   end
 

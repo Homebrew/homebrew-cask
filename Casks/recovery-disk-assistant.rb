@@ -6,5 +6,10 @@ cask "recovery-disk-assistant" do
   name "Recovery Disk Assistant"
   homepage "https://support.apple.com/kb/DL1433"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Recovery Disk Assistant.app"
 end

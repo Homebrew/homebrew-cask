@@ -1,11 +1,11 @@
 cask "flutter" do
-  arch arm: "_arm64_", intel: "_"
+  arch arm: "_arm64"
 
-  version "3.7.0"
-  sha256 arm:   "6e7132bac441400432129ebb54e5dede6ab76f0dbea58370090249048a2dd013",
-         intel: "501dc6254c1bb158998d5d3bd65f79b8e966f991518da0cc6ed6c6d4e2772ec3"
+  version "3.7.7"
+  sha256 arm:   "0511b9f164a62f467b063e6c83d9c683bb3fb056ee556b2f45e987a2c2f4a260",
+         intel: "78957b52f023a0d811add27eddc59b1a59d27d2ada5df123f39d0315708fb2d5"
 
-  url "https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos#{arch}#{version}-stable.zip",
+  url "https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos#{arch}_#{version}-stable.zip",
       verified: "storage.googleapis.com/flutter_infra_release/releases/stable/macos/"
   name "Flutter SDK"
   desc "UI toolkit for building applications for mobile, web and desktop"

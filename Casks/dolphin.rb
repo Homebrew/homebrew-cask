@@ -12,6 +12,12 @@ cask "dolphin" do
     strategy :git
   end
 
+  conflicts_with cask: [
+    "homebrew/cask-versions/dolphin-beta",
+    "homebrew/cask-versions/dolphin-dev",
+  ]
+  depends_on macos: ">= :catalina"
+
   app "Dolphin.app"
 
   zap trash: [

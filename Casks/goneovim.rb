@@ -14,7 +14,7 @@ cask "goneovim" do
 
   depends_on formula: "neovim"
 
-  app "Goneovim-v#{version}-macos/goneovim.app"
+  app "goneovim-v#{version}-macos/goneovim.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/goneovim.wrapper.sh"
   binary shimscript, target: "goneovim"

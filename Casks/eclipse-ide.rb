@@ -1,9 +1,9 @@
 cask "eclipse-ide" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "4.26.0,2022-12"
-  sha256 arm:   "428c2a87b51b6e3bbd904a95c4d1881804ba7cb52a36202cda4a64a39e704a54",
-         intel: "03ee61dcdba5923fc1820be8a334584cdb92d99b3540c29aa20ce6b9ae0723b1"
+  version "4.27.0,2023-03"
+  sha256 arm:   "fd2148e52394a2c23484a136ee751077e29b484c19d54bc3b841c57886f45075",
+         intel: "fed839a1ab71eae066b0123ce1b5557c661cefecb0b84b5b25b7057b35503ff1"
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-committers-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&r=1"
   name "Eclipse IDE for Eclipse Committers"
@@ -22,4 +22,6 @@ cask "eclipse-ide" do
   end
 
   app "Eclipse.app"
+
+  zap trash: "~/Library/Preferences/epp.package.committers.plist"
 end

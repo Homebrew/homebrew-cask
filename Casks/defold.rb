@@ -1,6 +1,6 @@
 cask "defold" do
-  version "1.4.1"
-  sha256 "63a5afa2e1f38023bb8c0912a185e453332c563f63a9ad80d51112a39bb0d938"
+  version "1.4.3"
+  sha256 "c2d49f385a3fdfa4a4e0acfddbe11967b3fdde3636089161fcc218d73180ff51"
 
   url "https://github.com/defold/defold/releases/download/#{version}/Defold-x86_64-macos.dmg",
       verified: "github.com/defold/defold/"
@@ -18,8 +18,8 @@ cask "defold" do
 
   auto_updates true
   conflicts_with cask: [
-    "homebrew/cask-versions/defold-beta",
     "homebrew/cask-versions/defold-alpha",
+    "homebrew/cask-versions/defold-beta",
   ]
 
   app "Defold.app"
