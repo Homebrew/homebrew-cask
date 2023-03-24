@@ -1,6 +1,6 @@
 cask "historyhound" do
   version "2.3.3"
-  sha256 "02cb0df03d19442355e57df27f36a9dba2be02d7b02059b7ddd608c31f741a38"
+  sha256 "556f8a14ceec9f50776b2c9d87c5c153c6ed4238f8a5c4671fc979a1ea710531"
 
   url "https://www.stclairsoft.com/download/HistoryHound-#{version}.dmg"
   name "HistoryHound"
