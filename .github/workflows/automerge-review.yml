@@ -3,7 +3,7 @@ name: Enable auto-merge for review
 on:
   workflow_run:
     workflows:
-      - automerge
+      - automerge.yml
     types:
       - completed
 
