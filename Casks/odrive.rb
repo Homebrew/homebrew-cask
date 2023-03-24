@@ -16,13 +16,10 @@ cask "odrive" do
 
   pkg "odrivesync.#{version}.pkg"
 
+  # Should also remoce ~/.odrive/bin/ on uninstall, but causes
+  # faulty reinstall unless ~/.odrive is removed entirely.
   uninstall quit:    "com.oxygen.odriveapp",
             pkgutil: "com.oxygen.odrive.*"
 
-  # _should_ also delete ~/.odrive/bin/ (130MB) on uninstall,
-  # but causes faulty reinstall unless ~/.odrive is deleted entirely
-
-  zap trash: [
-    "~/.odrive",
-  ]
+  zap trash: "~/.odrive"
 end
