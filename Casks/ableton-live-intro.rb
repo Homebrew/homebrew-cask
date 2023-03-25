@@ -2,7 +2,7 @@ cask "ableton-live-intro" do
   version "11.2.11"
 
   on_high_sierra :or_older do
-    sha256 "68ae4aa7c1a4286f77de340f5e2556442ea17a73976c3f90c9dce1c75dc8234a"
+    sha256 "ad24ed3cecd392464efd8b6bd3a0b65f8f7b624fdd07b0315e266050d97f77e2"
 
     url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_intro_#{version}_intel.dmg"
   end
