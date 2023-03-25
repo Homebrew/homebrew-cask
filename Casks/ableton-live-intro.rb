@@ -3,7 +3,6 @@ cask "ableton-live-intro" do
   sha256 "70fb6f33c7e03f7c6290c7f5d5a6bee4454df272527c5fdd5dfd045b7d76f1eb"
 
   url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_intro_#{version}_universal.dmg"
-
   name "Ableton Live Intro"
   desc "Sound and music editor"
   homepage "https://www.ableton.com/en/live/"
