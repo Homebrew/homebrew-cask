@@ -1,11 +1,14 @@
 cask "ableton-live-suite" do
-  arch = "intel"
-  version "11.2.11"
-  sha256 "ae6f2c978009d7baa86b53d41be8a5eafda27bcb3a0bf102ebff629b4ebe091f"
+  arch arm: "universal", intel: "intel"
 
+  version "11.2.11"
+
+  on_high_sierra :or_older do
+    sha256 "ae6f2c978009d7baa86b53d41be8a5eafda27bcb3a0bf102ebff629b4ebe091f"
+  end
   on_mojave :or_newer do
-    arch = "universal"
-    sha256 "cbe60f10213e1d73cb1a12b1e3abfc23ead19588d25ec76653734cf81141fbf2"
+    sha256 arm:   "cbe60f10213e1d73cb1a12b1e3abfc23ead19588d25ec76653734cf81141fbf2",
+           intel: "40484b0508166caf5cdee2edb5557d77173c3ba1a4a326621b386f5d28e099f3"
   end
 
   url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_suite_#{version}_#{arch}.dmg"
