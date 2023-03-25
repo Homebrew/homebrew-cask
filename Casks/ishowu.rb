@@ -7,4 +7,8 @@ cask "ishowu" do
   homepage "https://www.shinywhitebox.com/ishowu"
 
   app "iShowU.app"
+
+  caveats do
+    discontinued
+  end
 end

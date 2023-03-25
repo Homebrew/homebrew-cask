@@ -6,5 +6,11 @@ cask "iswiff" do
   name "iSwiff"
   homepage "https://echoone.com/iswiff/"
 
+  depends_on macos: "<= :big_sur"
+
   app "iSwiff.app"
+
+  caveats do
+    discontinued
+  end
 end

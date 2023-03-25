@@ -6,6 +6,10 @@ cask "astro-command-center" do
   name "ASTRO Command Center"
   homepage "https://www.astrogaming.com/"
 
+  livecheck do
+    skip "unversioned QT app"
+  end
+
   app "ASTRO Command Center.app"
 
   zap trash: [

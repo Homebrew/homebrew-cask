@@ -6,5 +6,10 @@ cask "bfxr" do
   name "Bfxr"
   homepage "https://www.bfxr.net/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Bfxr.app"
 end

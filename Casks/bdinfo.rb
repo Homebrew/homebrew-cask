@@ -7,6 +7,11 @@ cask "bdinfo" do
   name "BDInfo"
   homepage "https://www.videohelp.com/software/BDInfo"
 
+  livecheck do
+    url :homepage
+    regex(/BDInfo\s+(\d+(?:\.\d+)+)\s+Mac/i)
+  end
+
   app "BDInfo OSX.app"
 
   zap trash: [

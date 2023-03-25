@@ -11,4 +11,8 @@ cask "bubo" do
   depends_on macos: ">= :sierra"
 
   app "bubo.app"
+
+  caveats do
+    discontinued
+  end
 end
