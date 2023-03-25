@@ -7,7 +7,8 @@ cask "ableton-live-lite" do
     sha256 "fefadad3f6cd5d727f897000374d16da9f709f56991f6fcc257bb8b14d76a65d"
   end
   on_mojave :or_newer do
-    sha256 "cc9ae661a0677cb228cfed7eeb685ef1bf74a0b4aacd2c73082cf0756a39e6a3"
+    sha256 arm:   "cc9ae661a0677cb228cfed7eeb685ef1bf74a0b4aacd2c73082cf0756a39e6a3",
+           intel: "44da4a8f4206e2bc76965cda6947e920252e69e53f294ea5d82cae27b05cbe05"
   end
 
   url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_lite_#{version}_#{arch}.dmg"
