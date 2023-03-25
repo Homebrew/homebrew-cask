@@ -1,15 +1,15 @@
 cask "tg-pro" do
-  version "2.79,14144"
+  version "2.79"
   sha256 "485e4ed589f97fd5075219324fb16e9818c56f1102d01bbe84de22bdfa31a323"
 
-  url "https://www.tunabellysoftware.com/resources/TG%20Pro%20#{version.csv.first}.dmg"
+  url "https://www.tunabellysoftware.com/resources/TG%20Pro%20#{version}.dmg"
   name "TG Pro"
   desc "Temperature monitoring, fan control and diagnostics"
   homepage "https://www.tunabellysoftware.com/tgpro/"
 
   livecheck do
     url "https://www.tunabellysoftware.com/resources/sparkle/tgpro.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
