@@ -3,7 +3,6 @@ cask "ableton-live-standard" do
   sha256 "0516a702d0b3c48e8c8a2578717fc74fd411dd77b9f36564f7b50227843d9063"
 
   url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_standard_#{version}_universal.dmg"
-
   name "Ableton Live Standard"
   desc "Sound and music editor"
   homepage "https://www.ableton.com/en/live/"
