@@ -69,35 +69,35 @@ cask "teamviewer" do
   on_big_sur :or_newer do
     pkg "Install TeamViewer.app/Contents/Resources/Install TeamViewer.pkg"
 
-    uninstall delete: [
-      "/Applications/TeamViewer.app",
-      "/Library/Preferences/com.teamviewer.teamviewer.preferences.plist",
-    ],
-    pkgutil: [
-      "com.teamviewer.AuthorizationPlugin",
-      "com.teamviewer.remoteaudiodriver",
-      "com.teamviewer.teamviewer.*",
-    ],
-    launchctl: [
-      "com.teamviewer.desktop",
-      "com.teamviewer.Helper",
-      "com.teamviewer.service",
-      "com.teamviewer.teamviewer",
-      "com.teamviewer.teamviewer_desktop",
-      "com.teamviewer.teamviewer_service",
-    ],
-    quit:      "com.teamviewer.TeamViewer"
+    uninstall delete:    [
+                "/Applications/TeamViewer.app",
+                "/Library/Preferences/com.teamviewer.teamviewer.preferences.plist",
+              ],
+              pkgutil:   [
+                "com.teamviewer.AuthorizationPlugin",
+                "com.teamviewer.remoteaudiodriver",
+                "com.teamviewer.teamviewer.*",
+              ],
+              launchctl: [
+                "com.teamviewer.desktop",
+                "com.teamviewer.Helper",
+                "com.teamviewer.service",
+                "com.teamviewer.teamviewer",
+                "com.teamviewer.teamviewer_desktop",
+                "com.teamviewer.teamviewer_service",
+              ],
+              quit:      "com.teamviewer.TeamViewer"
 
     zap trash: [
-    "~/Library/Application Support/TeamViewer",
-    "~/Library/Caches/com.teamviewer.TeamViewer",
-    "~/Library/Caches/TeamViewer",
-    "~/Library/Cookies/com.teamviewer.TeamViewer.binarycookies",
-    "~/Library/Logs/TeamViewer",
-    "~/Library/Preferences/com.teamviewer.TeamViewer.plist",
-    "~/Library/Preferences/com.teamviewer.teamviewer.preferences.Machine.plist",
-    "~/Library/Preferences/com.teamviewer.teamviewer.preferences.plist",
-    "~/Library/Saved Application State/com.teamviewer.TeamViewer.savedState",
+      "~/Library/Application Support/TeamViewer",
+      "~/Library/Caches/com.teamviewer.TeamViewer",
+      "~/Library/Caches/TeamViewer",
+      "~/Library/Cookies/com.teamviewer.TeamViewer.binarycookies",
+      "~/Library/Logs/TeamViewer",
+      "~/Library/Preferences/com.teamviewer.TeamViewer.plist",
+      "~/Library/Preferences/com.teamviewer.teamviewer.preferences.Machine.plist",
+      "~/Library/Preferences/com.teamviewer.teamviewer.preferences.plist",
+      "~/Library/Saved Application State/com.teamviewer.TeamViewer.savedState",
     ]
   end
 
