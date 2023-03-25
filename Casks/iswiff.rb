@@ -4,6 +4,7 @@ cask "iswiff" do
 
   url "https://echoone.com/iswiff/iSwiff.zip"
   name "iSwiff"
+  desc "Full screen Flash outside the browser"
   homepage "https://echoone.com/iswiff/"
 
   depends_on macos: "<= :big_sur"

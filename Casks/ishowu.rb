@@ -4,6 +4,7 @@ cask "ishowu" do
 
   url "https://www.shinywhitebox.com/store/file.php?p=1"
   name "iShowU"
+  desc "Screen recorder"
   homepage "https://www.shinywhitebox.com/ishowu"
 
   app "iShowU.app"

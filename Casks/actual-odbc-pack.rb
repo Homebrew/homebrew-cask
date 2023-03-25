@@ -5,6 +5,7 @@ cask "actual-odbc-pack" do
   url "https://actualtechnologies.cachefly.net/Actual_ODBC_Pack.dmg",
       verified: "actualtechnologies.cachefly.net/"
   name "Actual ODBC Driver Pack"
+  desc "Connect to enterprise databases using common desktop applications"
   homepage "https://www.actualtech.com/products.php"
 
   livecheck do
