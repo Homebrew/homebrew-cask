@@ -7,7 +7,7 @@ cask "ableton-live-suite" do
     url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_suite_#{version}_intel.dmg"
   end
   on_mojave :or_newer do
-    sha256 "40484b0508166caf5cdee2edb5557d77173c3ba1a4a326621b386f5d28e099f3"
+    sha256 "cbe60f10213e1d73cb1a12b1e3abfc23ead19588d25ec76653734cf81141fbf2"
 
     url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_suite_#{version}_universal.dmg"
   end
