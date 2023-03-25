@@ -1,16 +1,8 @@
 cask "ableton-live-intro" do
   version "11.2.11"
+  sha256 "70fb6f33c7e03f7c6290c7f5d5a6bee4454df272527c5fdd5dfd045b7d76f1eb"
 
-  on_high_sierra :or_older do
-    sha256 "ad24ed3cecd392464efd8b6bd3a0b65f8f7b624fdd07b0315e266050d97f77e2"
-
-    url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_intro_#{version}_intel.dmg"
-  end
-  on_mojave :or_newer do
-    sha256 "70fb6f33c7e03f7c6290c7f5d5a6bee4454df272527c5fdd5dfd045b7d76f1eb"
-
-    url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_intro_#{version}_universal.dmg"
-  end
+  url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_intro_#{version}_universal.dmg"
 
   name "Ableton Live Intro"
   desc "Sound and music editor"
