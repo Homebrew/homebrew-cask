@@ -1,6 +1,6 @@
 cask "bike" do
-  version "1.10,116"
-  sha256 "2c56f0026bad4520178c4e591400358f1ac31aa54a1975cfc960031156a8cfdd"
+  version "1.10,117"
+  sha256 "db3f758d075494579850803b11f7539206739bd0b2f9e770b1167aaa1392db34"
 
   url "https://www.hogbaysoftware.com/bike/releases/#{version.csv.second}.dmg"
   name "Bike"
