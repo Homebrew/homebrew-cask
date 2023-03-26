@@ -8,6 +8,9 @@ cask "ukrainian-typographic-keyboard" do
   desc "Combined Ukrainian keyboard layout with typographic symbols"
   homepage "https://denysdovhan.com/ukrainian-typographic-keyboard"
 
-  artifact "ukrainian-typographic-keyboard-#{version}/ukrainian-typographic-keyboard.bundle",
-           target: "#{Dir.home}/Library/Keyboard Layouts/ukrainian-typographic-keyboard.bundle"
+  keyboard_layout "ukrainian-typographic-keyboard-#{version}/ukrainian-typographic-keyboard.bundle"
+
+  caveats do
+    reboot
+  end
 end
