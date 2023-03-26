@@ -7,5 +7,10 @@ cask "wowmatrix" do
   desc "WoW AddOn Installer and Updater"
   homepage "https://www.wowmatrix.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "WowMatrix.app"
 end

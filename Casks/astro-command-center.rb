@@ -4,7 +4,12 @@ cask "astro-command-center" do
 
   url "https://update.astrogaming.com/kuiper/ASTROCommandCenter.dmg"
   name "ASTRO Command Center"
+  desc "Full configuration of the adjustable settings for ASTRO devices"
   homepage "https://www.astrogaming.com/"
+
+  livecheck do
+    skip "unversioned QT app"
+  end
 
   app "ASTRO Command Center.app"
 

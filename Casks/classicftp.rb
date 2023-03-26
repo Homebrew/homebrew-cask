@@ -7,6 +7,11 @@ cask "classicftp" do
   desc "FTP File Transfer Software"
   homepage "https://www.nchsoftware.com/classic/index.html"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "ClassicFTP.app"
 
   zap trash: [
