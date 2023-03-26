@@ -14,17 +14,20 @@ cask "switchresx" do
 
   prefpane "SwitchResX Installer.app/Contents/Plugins/SwitchResX.prefPane"
 
-  uninstall quit:   [
+  uninstall quit:      [
               "fr.madrau.switchresx.app",
               "fr.madrau.switchresx.daemon", # note, daemon does not :quit cleanly
             ],
-            signal: [
+            signal:    [
               ["INT",  "fr.madrau.switchresx.daemon"],
               ["KILL", "fr.madrau.switchresx.daemon"],
             ],
-            delete: [
+            delete:    [
               "/Library/ScriptingAdditions/SwitchResX Extensions.osax",
               "/Library/ScriptingAdditions/SwitchResX Menu.osax",
+            ],
+            launchctl: [
+              "fr.madrau.switchresx.helper",
             ]
 
   zap trash: [
