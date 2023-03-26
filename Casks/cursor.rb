@@ -19,5 +19,5 @@ cask "cursor" do
   installer script: "Install Cursor.app/Contents/MacOS/ToDesktop Installer"
 
   uninstall quit:   "com.todesktop.230313mzl4w4u92",
-            delete: "/Applications/Cursor.app/"
+            delete: "/Applications/Cursor.app"
 end
