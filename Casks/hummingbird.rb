@@ -23,4 +23,6 @@ cask "hummingbird" do
   postflight do
     set_ownership("#{staged_path}/hummingbird-macos-#{arch}-#{version}/hummingbird", user: "root")
   end
+
+  # No zap stanza required
 end
