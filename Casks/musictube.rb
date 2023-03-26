@@ -12,6 +12,8 @@ cask "musictube" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Musictube.app"
 
   zap trash: [
