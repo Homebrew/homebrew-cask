@@ -11,4 +11,6 @@ cask "aws-vault" do
   homepage "https://github.com/99designs/aws-vault"
 
   binary "aws-vault"
+
+  # No zap stanza required
 end
