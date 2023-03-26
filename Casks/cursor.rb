@@ -10,8 +10,9 @@ cask "cursor" do
 
   livecheck do
     url "https://raw.githubusercontent.com/getcursor/cursor/main/package.json"
-    regex(/"Cursor",\n\s*"version":\s"(\d+(?:\.\d+)+)"/i)
-    strategy :page_match
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
   depends_on macos: ">= :catalina"
