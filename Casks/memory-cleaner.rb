@@ -12,7 +12,7 @@ cask "memory-cleaner" do
     strategy :sparkle, &:short_version
   end
 
-  app "Memory Cleaner #{version.major}.app"
+  app "Memory Cleaner.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.nektony.Memory-Cleaner-SII",
