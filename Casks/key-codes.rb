@@ -1,5 +1,5 @@
 cask "key-codes" do
-  version "2.2.1,2027"
+  version "2.2.1"
   sha256 :no_check
 
   url "https://manytricks.com/download/keycodes"
@@ -9,7 +9,7 @@ cask "key-codes" do
 
   livecheck do
     url "https://manytricks.com/keycodes/appcast/"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
