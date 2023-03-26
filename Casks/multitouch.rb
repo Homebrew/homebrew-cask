@@ -1,15 +1,15 @@
 cask "multitouch" do
-  version "1.27.11,166"
+  version "1.27.11"
   sha256 "1ebd4f933a44f041b9ed298abf9acdeee041718fe5f319faed8089a59c59c571"
 
-  url "https://multitouch.app/downloads/multitouch#{version.csv.first}.dmg"
+  url "https://multitouch.app/downloads/multitouch#{version}.dmg"
   name "Multitouch"
   desc "Add more gestures for Trackpad and Magic Mouse"
   homepage "https://multitouch.app/"
 
   livecheck do
     url "https://multitouch.app/downloads/updates.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
