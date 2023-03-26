@@ -1,8 +1,8 @@
 cask "hookmark" do
-  version "5.0.2,2023.03.b5331"
+  version "5.0.2,2023.03,b5331"
   sha256 "363a9a3eed1bc0983ce1d74ce43041a4ded0c42a05e0bde84db0e230d9205b66"
 
-  url "https://hookproductivity.com/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/Hookmark-app-#{version.csv.first}-#{version.csv.second.patch}.dmg_.zip",
+  url "https://hookproductivity.com/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/Hookmark-app-#{version.csv.first}-#{version.csv.third}.dmg_.zip",
       user_agent: :fake
   name "Hook"
   desc "Link and retrieve key information"
@@ -14,7 +14,7 @@ cask "hookmark" do
       match = page.match(%r{href=.*?/(\d+)/(\d+)/Hookmark[._-]app[._-](\d+(?:\.\d+)*)-(\S?\d+(?:\.\d+)*)\.dmg}i)
       next if match.blank?
 
-      "#{match[3]},#{match[1]}.#{match[2]}.#{match[4]}"
+      "#{match[3]},#{match[1]}.#{match[2]},#{match[4]}"
     end
   end
 
