@@ -1,6 +1,6 @@
 cask "gpg-suite-pinentry" do
-  version "2023.1"
-  sha256 "fe082d0f7283f3b59cbe67f8949cc520b8d2fd6ffcc8e9e60392c101c88e2ee0"
+  version "2023.2"
+  sha256 "aec0f4a114ea803460f20599aa5437608bc50a869b080a5bcbc185c4d04eda60"
 
   url "https://releases.gpgtools.org/GPG_Suite-#{version}.dmg"
   name "GPG Suite Pinentry"
