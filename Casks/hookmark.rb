@@ -10,8 +10,9 @@ cask "hookmark" do
 
   livecheck do
     url "https://hookproductivity.com/download"
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/(\d+)/(\d+)/Hookmark[._-]app[._-](\d+(?:\.\d+)*)-b(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{href=.*?/(\d+)/(\d+)/Hookmark[._-]app[._-](\d+(?:\.\d+)*)-b(\d+(?:\.\d+)*)\.dmg}i)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
       next if match.blank?
 
       "#{match[3]},#{match[4]},#{match[1]}.#{match[2]}"
