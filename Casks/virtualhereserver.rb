@@ -21,4 +21,6 @@ cask "virtualhereserver" do
     url :homepage
     regex(/Version\s*(\d+(?:\.\d*)*)/i)
   end
+
+  zap trash: "~/Library/Preferences/com.virtualhere.vhusbd.plist"
 end
