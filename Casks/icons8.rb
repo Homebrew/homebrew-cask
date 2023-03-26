@@ -19,7 +19,7 @@ cask "icons8" do
     "~/Library/Caches/com.visualpharm.Icons8",
     "~/Library/Containers/com.visualpharm.StandaloneLoginHelper",
     "~/Library/Preferences/com.visualpharm.Icons8.plist",
-    '~/Library/Application Scripts/com.visualpharm.StandaloneLoginHelper',
-    '~/Library/Application Support/com.visualpharm.Icons8',
+    "~/Library/Application Scripts/com.visualpharm.StandaloneLoginHelper",
+    "~/Library/Application Support/com.visualpharm.Icons8",
   ]
 end
