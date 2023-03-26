@@ -1,6 +1,6 @@
 cask "swiftpm-catalog" do
-  version "1.1.12,32"
-  sha256 "4672f3a3a4f0c1a18c4c8cd8b4e308a2862800287fc021341dafbd24cb834c25"
+  version "1.1.14,34"
+  sha256 "2b4d97d9a796c242c8cfd34d0790f40cd52989d875f78b739d486150d60b53cc"
 
   url "https://zeezide.com/en/products/swiftpmcatalog/archives/SwiftPM%20Catalog.app-#{version.csv.first}-v#{version.csv.second}.zip"
   name "SwiftPM Catalog"
