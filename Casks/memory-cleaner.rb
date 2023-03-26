@@ -1,5 +1,5 @@
 cask "memory-cleaner" do
-  version "4.5,120"
+  version "5.0.3"
   sha256 :no_check
 
   url "https://nektony.com/download/memory-cleaner/dmg/memory-cleaner.dmg"
@@ -8,15 +8,17 @@ cask "memory-cleaner" do
   homepage "https://nektony.com/memory-cleaner"
 
   livecheck do
-    url "https://nektony.com/pro-support/memory-cleaner-x-site/update/update.xml"
-    strategy :sparkle
+    url "https://download.nektony.com/pro-support/v3/memory-cleaner-x-site/update/update.xml"
+    strategy :sparkle, &:short_version
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Memory Cleaner #{version.major}.app"
 
   zap trash: [
-    "~/Library/Application Scripts/com.nektony.Memory-Cleaner-SII.launcher",
     "~/Library/Application Scripts/com.nektony.Memory-Cleaner-SII",
+    "~/Library/Application Scripts/com.nektony.Memory-Cleaner-SII.launcher",
     "~/Library/Application Support/Memory Cleaner",
     "~/Library/Caches/com.nektony.Memory-Cleaner-SII",
     "~/Library/Cookies/com.nektony.Memory-Cleaner-SII.binarycookies",
