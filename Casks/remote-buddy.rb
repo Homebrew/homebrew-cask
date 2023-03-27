@@ -4,6 +4,7 @@ cask "remote-buddy" do
 
   url "https://www.iospirit.com/products/remotebuddy/download/RemoteBuddy.zip"
   name "Remote Buddy"
+  desc "Control apps and web videos from your phone"
   homepage "https://www.iospirit.com/products/remotebuddy/"
 
   livecheck do
@@ -12,4 +13,12 @@ cask "remote-buddy" do
   end
 
   app "Remote Buddy.app"
+
+  zap trash: [
+    "~/Library/Application Support/Remote Buddy",
+    "~/Library/Caches/com.apple.helpd/Generated/com.iospirit.RemoteBuddy.help*",
+    "~/Library/Preferences/ByHost/com.iospirit.RemoteBuddy.*",
+    "~/Library/Preferences/com.iospirit.RemoteBuddy.plist",
+    "~/Library/Saved Application State/com.iospirit.RemoteBuddy.savedState",
+  ]
 end
