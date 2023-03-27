@@ -20,5 +20,6 @@ cask "stats" do
     "~/Library/Containers/eu.exelban.Stats.LaunchAtLogin",
     "~/Library/Cookies/eu.exelban.Stats.binarycookies",
     "~/Library/Preferences/eu.exelban.Stats.plist",
+    "/Library/LaunchDaemons/eu.exelban.Stats.SMC.Helper.plist",
   ]
 end
