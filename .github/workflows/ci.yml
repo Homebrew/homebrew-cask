@@ -44,6 +44,7 @@ jobs:
     needs: generate-matrix
     runs-on: ${{ matrix.runner }}
     strategy:
+      fail-fast: false
       matrix:
         include: ${{ fromJson(needs.generate-matrix.outputs.matrix) }}
     steps:
