@@ -34,21 +34,17 @@ cask "fig" do
               "io.fig.cursor",
             ]
 
-  zap script: {
-        executable: "#{appdir}/Fig.app/Contents/MacOS/fig-darwin-universal",
-        args:       ["_", "brew-uninstall", "--zap"],
-      },
-      trash:  [
-        "~/.fig",
-        "~/.fig.dotfiles.bak",
-        "~/Library/Application Support/com.mschrage.fig",
-        "~/Library/Application Support/fig",
-        "~/Library/Caches/com.mschrage.fig",
-        "~/Library/Caches/fig",
-        "~/Library/HTTPStorages/com.mschrage.fig",
-        "~/Library/Preferences/com.mschrage.fig.*",
-        "~/Library/WebKit/com.mschrage.fig",
-      ]
+  zap trash: [
+    "~/.fig",
+    "~/.fig.dotfiles.bak",
+    "~/Library/Application Support/com.mschrage.fig",
+    "~/Library/Application Support/fig",
+    "~/Library/Caches/com.mschrage.fig",
+    "~/Library/Caches/fig",
+    "~/Library/HTTPStorages/com.mschrage.fig",
+    "~/Library/Preferences/com.mschrage.fig.*",
+    "~/Library/WebKit/com.mschrage.fig",
+  ]
 
   caveats <<~EOS
     Please launch the Fig application to finish setup...
