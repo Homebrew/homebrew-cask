@@ -41,6 +41,9 @@ cask "orbstack" do
         "~/Library/Preferences/dev.krag0n.MacVirt.plist",
         "~/Library/WebKit/dev.kdrag0n.MacVirt",
         "~/Library/Saved Application State/dev.kdrag0n.MacVirt.savedState",
+      ],
+      rmdir:  [
+        "~/OrbStack",
       ]
 
   caveats <<~EOS
