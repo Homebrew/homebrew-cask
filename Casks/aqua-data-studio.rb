@@ -35,4 +35,8 @@ cask "aqua-data-studio" do
   end
 
   app "Aqua Data Studio.app"
+  
+  zap trash: [
+    "~/.datastudio",
+  ]
 end
