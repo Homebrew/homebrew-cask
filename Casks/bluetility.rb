@@ -7,6 +7,11 @@ cask "bluetility" do
   desc "Bluetooth Low Energy browser"
   homepage "https://github.com/jnross/Bluetility"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Bluetility.app"
 
   zap trash: [
