@@ -10,9 +10,10 @@ cask "slicer" do
 
   livecheck do
     url "https://download.slicer.org"
-    strategy :page_match do |page|
-      match = page.scan(%r{href=.*?/bitstream/(\d+\w+).*?\n?.*?version\s*(\d+(?:\.\d+)+)}im)
-      next if match.blank?
+    regex(%r{href=.*?/bitstream/(\h+)["' >].+?["']header["'][^>]*?>\s*v?(\d+(?:\.\d+)+)}im)
+    strategy :page_match do |page, regex|
+      match = page.scan(regex)
+      next unless match.length >= 2
 
       "#{match[1][1]},#{match[1][0]}"
     end
