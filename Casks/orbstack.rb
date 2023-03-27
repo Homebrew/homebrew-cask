@@ -30,11 +30,7 @@ cask "orbstack" do
     args:       ["_internal", "brew-uninstall"],
   }
 
-  zap script: {
-        executable: "#{appdir}/OrbStack.app/Contents/MacOS/bin/orbctl",
-        args:       ["_internal", "brew-uninstall", "--zap"],
-      },
-      trash:  [
+  zap trash: [
         "~/.orbstack",
         "~/Library/Caches/dev.kdrag0n.MacVirt",
         "~/Library/HTTPStorages/dev.kdrag0n.MacVirt",
@@ -42,7 +38,7 @@ cask "orbstack" do
         "~/Library/WebKit/dev.kdrag0n.MacVirt",
         "~/Library/Saved Application State/dev.kdrag0n.MacVirt.savedState",
       ],
-      rmdir:  [
+      rmdir: [
         "~/OrbStack",
       ]
 
