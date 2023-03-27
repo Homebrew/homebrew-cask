@@ -12,4 +12,9 @@ cask "gephi" do
   homepage "https://gephi.org/"
 
   app "Gephi.app"
+
+  zap trash: [
+    "~/Library/Application Support/gephi",
+    "~/Library/Caches/gephi",
+  ]
 end
