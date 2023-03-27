@@ -227,8 +227,6 @@ jobs:
           fromJSON(steps.info.outputs.macos_requirement_satisfied) &&
           !matrix.skip_install
         timeout-minutes: 30
-        env:
-          HOMEBREW_DEBUG: 1
 
       - name: Run brew uninstall --cask ${{ matrix.cask.token }}
         run: brew uninstall --cask '${{ matrix.cask.path }}'
