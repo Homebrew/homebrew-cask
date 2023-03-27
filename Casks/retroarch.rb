@@ -1,6 +1,6 @@
 cask "retroarch" do
   version "1.15.0"
-  sha256 :no_check
+  sha256 :no_check # required as upstream package is often updated in place
 
   url "https://buildbot.libretro.com/stable/#{version}/apple/osx/x86_64/RetroArch.dmg"
   name "RetroArch"
