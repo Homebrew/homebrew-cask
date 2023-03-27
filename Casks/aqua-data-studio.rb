@@ -1,6 +1,6 @@
 cask "aqua-data-studio" do
-  version "22.2.0"
-  sha256 "8cf88ee2fb47b8ea7c0850969874772d1090cefb364e40e7d83e9f63d11c1487"
+  version "22.3.0"
+  sha256 "5f9452967db2ab259ecf9ac18d4c4d4ef3841de4a94269cf190b7119484b604d"
 
   url "https://downloads.aquafold.com/v#{version}/osx/ads-osx-#{version}.tar.gz"
   name "Aquafold Aqua Data Studio"
