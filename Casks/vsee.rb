@@ -3,7 +3,7 @@ cask "vsee" do
   sha256 "0e3b549f2635c79f8cbf41f6e85c6b7cecbabbbbd67acc2f97cfbce574317a84"
 
   url "https://d2q5hugz2rti4w.cloudfront.net/mac/#{version.csv.second}/vseemac.dmg",
-      verified: "d2q5hugz2rti4w.cloudfront.net/"
+      verified: "d2q5hugz2rti4w.cloudfront.net/mac/"
   name "VSee"
   desc "Group video calls, screen sharing and instant messaging"
   homepage "https://vsee.com/"
