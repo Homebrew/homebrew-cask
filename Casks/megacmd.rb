@@ -6,6 +6,12 @@ cask "megacmd" do
   name "MEGAcmd"
   homepage "https://mega.nz/cmd"
 
+  livecheck do
+    url "https://github.com/meganz/MEGAcmd/tags"
+    regex(%r{href=["'].*?(?:[^/]+)/tag/(\d+(?:\.\d+)+)_macOS}i)
+    strategy :page_match
+  end
+
   app "MEGAcmd.app"
   binary "#{appdir}/MEGAcmd.app/Contents/MacOS/MEGAcmdShell", target: "megacmd"
   binary "#{appdir}/MEGAcmd.app/Contents/MacOS/mega-attr"
