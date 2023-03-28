@@ -1,6 +1,6 @@
 cask "chromium-gost" do
-  version "111.0.5563.110"
-  sha256 "a01bba8b7f69ccbc56cbbad181968b886efb9b15eb03e509f2611722ed0d0a24"
+  version "111.0.5563.147"
+  sha256 "50557b0cf9fa9b7dec2e52c160307320b0825e9f2d5b0913dfab522d724c8310"
 
   url "https://github.com/deemru/Chromium-Gost/releases/download/#{version}/chromium-gost-#{version}-macos-amd64.tar.bz2"
   name "Chromium-Gost"
