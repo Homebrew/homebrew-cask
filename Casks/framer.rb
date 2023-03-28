@@ -18,7 +18,7 @@ cask "framer" do
   depends_on macos: ">= :mojave"
 
   app "Framer.app"
-  
+
   zap trash: [
     "~/Library/Application Support/Framer",
     "~/Library/Caches/com.framer.electron",
