@@ -16,6 +16,6 @@ cask "aqua-data-studio" do
 
   zap trash: [
     "~/.datastudio",
-    "~/Library/Saved Application State/com.aquafold.datastudio.DataStudio.savedState"
+    "~/Library/Saved Application State/com.aquafold.datastudio.DataStudio.savedState",
   ]
 end
