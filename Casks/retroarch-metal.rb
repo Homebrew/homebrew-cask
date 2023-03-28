@@ -15,5 +15,9 @@ cask "retroarch-metal" do
 
   app "RetroArch.app"
 
-  zap trash: "~/Library/Application Support/RetroArch"
+  zap trash: [
+    "~/Documents/RetroArch/",
+    "~/Library/Application Support/RetroArch",
+    "~/Library/Saved Application State/com.libretro.RetroArch.savedState",
+  ]
 end
