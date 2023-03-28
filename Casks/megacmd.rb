@@ -8,9 +8,7 @@ cask "megacmd" do
   homepage "https://mega.nz/cmd"
 
   livecheck do
-    url "https://github.com/meganz/MEGAcmd/tags"
-    regex(%r{href=["'].*?(?:[^/]+)/tag/(\d+(?:\.\d+)+)_macOS}i)
-    strategy :page_match
+    regex(/(\d+(?:\.\d+)+)[._-]macOS/i)
   end
 
   app "MEGAcmd.app"
