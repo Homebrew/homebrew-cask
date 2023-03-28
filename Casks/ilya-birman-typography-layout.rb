@@ -12,7 +12,8 @@ cask "ilya-birman-typography-layout" do
     regex(%r{href=.*?/ilya[._-]birman[._-]typolayout[._-]v?(\d+(?:\.\d+)+)[._-]mac\.dmg}i)
   end
 
-  keyboard_layout "Install Ilya Birman Typography Layout.app/Contents/Resources/Layout/Ilya Birman Typography Layout.bundle"
+  keyboard_layout \
+    "Install Ilya Birman Typography Layout.app/Contents/Resources/Layout/Ilya Birman Typography Layout.bundle"
 
   caveats do
     reboot
