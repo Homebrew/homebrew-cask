@@ -4,6 +4,7 @@ cask "megacmd" do
 
   url "https://mega.nz/MEGAcmdSetup.dmg"
   name "MEGAcmd"
+  desc "Command-line access to MEGA services"
   homepage "https://mega.nz/cmd"
 
   livecheck do
