@@ -8,7 +8,7 @@ cask "hummingbird" do
   url "https://eddie.website/repository/hummingbird/#{version}/hummingbird-macos-#{arch}-notarized-#{version}.zip",
       verified: "eddie.website/repository/hummingbird/"
   name "hummingbird"
-  desc "OpenVPN 3 client based on AirVPN's OpenVPN 3 library fork"
+  desc "OpenVPN 3 client"
   homepage "https://airvpn.org/hummingbird"
 
   livecheck do
