@@ -7,6 +7,9 @@ cask "ukrainian-unicode-layout" do
   desc "Installer for Ukrainian Unicode layout"
   homepage "https://github.com/korzhyk/OSX-Ukrainian-Unicode-Layout"
 
-  artifact "macOS-Ukrainian-Unicode-Layout-#{version}",
-           target: "#{Dir.home}/Library/Keyboard Layouts/Ukrainian-Unicode-Layout.bundle"
+  keyboard_layout "macOS-Ukrainian-Unicode-Layout-#{version}"
+
+  caveats do
+    reboot
+  end
 end

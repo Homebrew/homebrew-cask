@@ -8,6 +8,10 @@ cask "eurkey" do
   desc "Keyboard Layout for Europeans, Coders and Translators"
   homepage "https://eurkey.steffen.bruentjen.eu/"
 
-  artifact "EurKEY-Mac-master/EurKEY.icns", target: "/Library/Keyboard Layouts/EurKEY.icns"
-  artifact "EurKEY-Mac-master/EurKEY.keylayout", target: "/Library/Keyboard Layouts/EurKEY.keylayout"
+  keyboard_layout "EurKEY-Mac-master/EurKEY.icns"
+  keyboard_layout "EurKEY-Mac-master/EurKEY.keylayout"
+
+  caveats do
+    reboot
+  end
 end
