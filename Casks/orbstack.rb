@@ -21,5 +21,29 @@ cask "orbstack" do
 
   app "OrbStack.app"
 
-  zap trash: "~/.orbstack"
+  postflight do
+    system_command "#{appdir}/OrbStack.app/Contents/MacOS/bin/orbctl",
+                   args: ["_internal", "brew-postflight"]
+  end
+
+  uninstall script: {
+    executable: "#{appdir}/OrbStack.app/Contents/MacOS/bin/orbctl",
+    args:       ["_internal", "brew-uninstall"],
+  }
+
+  zap trash: [
+        "~/.orbstack",
+        "~/Library/Caches/dev.kdrag0n.MacVirt",
+        "~/Library/HTTPStorages/dev.kdrag0n.MacVirt",
+        "~/Library/Preferences/dev.krag0n.MacVirt.plist",
+        "~/Library/WebKit/dev.kdrag0n.MacVirt",
+        "~/Library/Saved Application State/dev.kdrag0n.MacVirt.savedState",
+      ],
+      rmdir: [
+        "~/OrbStack",
+      ]
+
+  caveats <<~EOS
+    Open the OrbStack app to finish setup.
+  EOS
 end
