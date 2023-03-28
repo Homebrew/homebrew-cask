@@ -18,4 +18,12 @@ cask "framer" do
   depends_on macos: ">= :mojave"
 
   app "Framer.app"
+  
+  zap trash: [
+    "~/Library/Application Support/Framer",
+    "~/Library/Caches/com.framer.electron",
+    "~/Library/Caches/com.framer.electron.ShipIt",
+    "~/Library/Preferences/com.framer.electron.plist",
+    "~/Library/Saved Application State/com.framer.electron.savedState",
+  ]
 end
