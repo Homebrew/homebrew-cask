@@ -17,9 +17,9 @@ cask "i1profiler" do
   pkg "i1Profiler.pkg"
 
   uninstall pkgutil:   [
+              "com.xrite.hasp.installer.*",
               "com.xrite.i1profiler.*",
               "com.xrite.xritedeviceservices.*",
-              "com.xrite.hasp.installer.*",
             ],
             launchctl: [
               "com.aladdin.aksusbd",
