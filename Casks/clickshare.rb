@@ -1,6 +1,6 @@
 cask "clickshare" do
-  version "4.27.2.4"
-  sha256 "d36a6a63bbaee2d0e0927c49ae24b1ad47cdeaef4e8554586204fe491528b42f"
+  version "4.28.0.11"
+  sha256 "9b14dddad05c87a85c7d5fa9f004dc029fcec49abd14f8b8196d675f7ebf2f9e"
 
   url "https://www.barco.com/services/website/en/TdeFiles/Download?FileNumber=R3306192&TdeType=3&MajorVersion=#{format("%02d", version.major)}&MinorVersion=#{format("%02d", version.minor)}&PatchVersion=#{format("%02d", version.patch)}&BuildVersion=#{format("%03d", version.split(".").last)}"
   name "ClickShare"
@@ -12,7 +12,7 @@ cask "clickshare" do
     regex(/td>v?(\d+(?:\.\d+)+)</i)
   end
 
-  container nested:	"ClickShare_Setup.dmg"
+  container nested:	"R3306192_45_ApplicationSw/ClickShare_Setup.dmg"
 
   app "ClickShare.app"
 
