@@ -8,6 +8,8 @@ cask "megacmd" do
   homepage "https://mega.nz/cmd"
 
   livecheck do
+    url "https://github.com/meganz/MEGAcmd/tags"
+    strategy :git
     regex(/(\d+(?:\.\d+)+)[._-]macOS/i)
   end
 
