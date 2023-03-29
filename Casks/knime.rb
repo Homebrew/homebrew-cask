@@ -1,6 +1,6 @@
 cask "knime" do
-  version "4.7.1"
-  sha256 "30ddcd3459a64d920fe6e8ef7a87d699b8e175398bd39cf3ebe5154da7bd216c"
+  version "4.7.2"
+  sha256 "0843ac6ec3ff2b2fc01cd5d97c27a13bc8512ae80b55d1d049cdbb0c17d60b33"
 
   url "https://download.knime.org/analytics-platform/macosx/knime_#{version}.app.macosx.cocoa.x86_64.dmg",
       verified: "download.knime.org/analytics-platform/macosx/"
