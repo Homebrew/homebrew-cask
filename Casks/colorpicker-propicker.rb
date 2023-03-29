@@ -6,5 +6,10 @@ cask "colorpicker-propicker" do
   name "Pro Picker"
   homepage "https://irradiated.net/tool/pro-picker/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   colorpicker "ProPicker.colorPicker"
 end
