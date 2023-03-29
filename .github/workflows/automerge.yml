@@ -3,9 +3,6 @@ name: Enable auto-merge
 on:
   schedule:
     - cron: 0 * * * *
-  pull_request_review:
-    types:
-      - submitted
   pull_request_target:
     types:
       - opened
@@ -15,14 +12,6 @@ on:
       - labeled
       - unlabeled
       - ready_for_review
-  workflow_dispatch:
-    inputs:
-      pull-request:
-        description: Pull Request Number
-        required: false
-      review:
-        description: Review ID
-        required: false
 
 concurrency:
   group: ${{ github.workflow }}-${ github.head_ref || github.ref }}
@@ -47,12 +36,3 @@ jobs:
           pull-request-author-associations: MEMBER,OWNER
           review: ${{ github.event.inputs.review }}
           review-author-associations: MEMBER,OWNER
-          dry-run: ${{ github.event_name == 'workflow_dispatch' }}
-        if: github.event_name != 'pull_request_review'
-      - name: Upload `event.json`
-        uses: actions/upload-artifact@v3
-        if: github.event_name == 'pull_request_review'
-        with:
-          name: event.json
-          path: ${{ github.event_path }}
-          if-no-files-found: error
