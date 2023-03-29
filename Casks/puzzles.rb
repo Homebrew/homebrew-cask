@@ -1,5 +1,5 @@
 cask "puzzles" do
-  version "20230313.adf2a09"
+  version "20230329.4720eeb"
   sha256 :no_check
 
   url "https://www.chiark.greenend.org.uk/~sgtatham/puzzles/Puzzles.dmg"
