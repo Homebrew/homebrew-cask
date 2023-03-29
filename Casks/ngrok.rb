@@ -2,8 +2,8 @@ cask "ngrok" do
   arch arm: "arm64", intel: "amd64"
 
   on_arm do
-    version "3.2.1,ieMpdKGZc6g,a"
-    sha256 "896f37cff976229b39392916f23403349c350f871cb63677cb6b4fbafb97faee"
+    version "3.2.2,dRdWsQNE9tG,a"
+    sha256 "3c4f03856b782f30ed97a5f174307b6fbdfcc1f488c60a0d1a3b73295d07d8b4"
   end
   on_intel do
     version "3.2.2,hoFbK2Q2jz3,a"
