@@ -1,6 +1,6 @@
 cask "hyperbackupexplorer" do
-  version "3.0.0-0149"
-  sha256 "a65568d752fbad15007ea4ca75da8df2fd6e2d574504a9f6e9bb784d45c244ff"
+  version "3.0.1-0154"
+  sha256 "7c05795b08cacdc4597fb037e548b6a71d82f80d8219c4fb7fc59c2dbb82c052"
 
   url "https://global.download.synology.com/download/Utility/HyperBackupExplorer/#{version}/Mac/x86_64/HyperBackupExplorer-#{version}-mac.dmg"
   name "HyperBackupExplorer"
