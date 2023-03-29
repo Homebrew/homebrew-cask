@@ -8,7 +8,7 @@ cask "megacmd" do
   homepage "https://mega.nz/cmd"
 
   livecheck do
-    url "https://github.com/meganz/MEGAcmd/tags"
+    url "https://github.com/meganz/MEGAcmd"
     regex(/(\d+(?:\.\d+)+)[._-]macOS/i)
   end
 
