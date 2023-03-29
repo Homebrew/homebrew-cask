@@ -9,7 +9,6 @@ cask "megacmd" do
 
   livecheck do
     url "https://github.com/meganz/MEGAcmd/tags"
-    strategy :git
     regex(/(\d+(?:\.\d+)+)[._-]macOS/i)
   end
 
