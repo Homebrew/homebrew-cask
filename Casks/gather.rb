@@ -17,7 +17,7 @@ cask "gather" do
   end
 
   auto_updates true
-  
+
   app "Gather.app"
 
   zap trash: [
