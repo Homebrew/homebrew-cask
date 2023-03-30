@@ -2,7 +2,7 @@ cask "rewind" do
   version :latest
   sha256 :no_check
 
-  url "https://download.rewind.ai/Rewind.pkg"
+  url "https://download.rewind.ai/Rewind.dmg"
   name "Rewind"
   desc "Record and search your screen and audio"
   homepage "https://www.rewind.ai/"
@@ -10,7 +10,7 @@ cask "rewind" do
   depends_on arch:  :arm64,
              macos: ">= :monterey"
 
-  pkg "Rewind.pkg"
+  app "Rewind.app"
 
   postflight do
     # Description: Ensure console variant of postinstall is non-interactive.
