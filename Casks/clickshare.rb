@@ -12,7 +12,7 @@ cask "clickshare" do
     regex(/<div[^>]*>\s*v?(\d+(?:\.\d+)+)/i)
     strategy :page_match do |page, regex|
       versions = page.scan(regex).flatten.uniq
-      "#{versions.first},#{versions.count + 1}"
+      "#{versions.first},#{versions.count + 4}"
     end
   end
 
