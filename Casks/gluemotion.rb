@@ -3,7 +3,7 @@ cask "gluemotion" do
   sha256 "0ec7fd451f49de42653f67539f658078732e47ad1e0fc68f35c3972ac8b1447e"
 
   url "https://neededapps.nyc3.digitaloceanspaces.com/media/public/#{version.csv.second}.zip",
-      verified: "neededapps.nyc3.digitaloceanspaces.com"
+      verified: "neededapps.nyc3.digitaloceanspaces.com/media/public/"
   name "GlueMotion"
   desc "Create and correct time lapse movies"
   homepage "https://neededapps.com/gluemotion/"

@@ -6,7 +6,7 @@ cask "remnote" do
          intel: "6fe3db58df49b19b32448eaf1f6bffa408d6db6161486f5787ef7c0357f2a07b"
 
   url "https://download.remnote.io/RemNote-#{version}#{arch}.dmg",
-      verified: "remnote.io"
+      verified: "download.remnote.io/"
   name "RemNote"
   desc "Spaced-repetition powered note-taking tool"
   homepage "https://www.remnote.com/"
