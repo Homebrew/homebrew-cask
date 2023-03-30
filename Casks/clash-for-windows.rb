@@ -18,4 +18,10 @@ cask "clash-for-windows" do
   auto_updates true
 
   app "Clash for Windows.app"
+
+  zap trash: [
+    "~/Library/Application Support/clash_win",
+    "~/Library/Logs/clash_win",
+    "~/Library/Preferences/com.lbyczf.clashwin.plist",
+  ]
 end
