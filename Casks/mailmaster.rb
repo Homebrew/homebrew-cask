@@ -25,7 +25,10 @@ cask "mailmaster" do
 
   zap trash: [
     "~/Library/Application Scripts/com.netease.macmail",
+    "~/Library/Application Scripts/com.netease.macmail-launcher",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.netease.macmail-launcher.sfl2",
     "~/Library/Containers/com.netease.macmail",
+    "~/Library/Containers/com.netease.macmail-launcher",
     "~/Library/Preferences/com.netease.macmail.plist",
     "~/Library/Saved Application State/com.netease.macmail.savedState",
   ]
