@@ -15,4 +15,8 @@ cask "openai-translator" do
   homepage "https://github.com/yetone/openai-translator"
 
   app "OpenAI Translator.app"
+
+zap trash: [
+  "~/Library/Application Support/xyz.yetone.apps.openai-translator",
+]
 end
