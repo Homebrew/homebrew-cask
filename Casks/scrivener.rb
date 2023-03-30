@@ -1,6 +1,6 @@
 cask "scrivener" do
-  version "3.2.3,14869"
-  sha256 "2760233d150b765e8e965e6c618b324069f3ff274c69868eb91d8bd303bc8bb2"
+  version "3.3,15561"
+  sha256 "8d6a1d1e948e76f4b7677a0dacbb61700a7490d550eca820517b55f7b284d6f6"
 
   url "https://scrivener.s3.amazonaws.com/mac_updates/Scrivener_1012_#{version.csv.second}.zip",
       verified: "scrivener.s3.amazonaws.com/"
