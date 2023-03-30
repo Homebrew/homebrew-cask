@@ -9,4 +9,8 @@ cask "fedora-media-writer" do
   homepage "https://docs.fedoraproject.org/en-US/quick-docs/creating-and-using-a-live-installation-image/"
 
   app "Fedora Media Writer.app"
+
+  zap trash: [
+    "~/Library/Saved Application State/org.fedoraproject.MediaWriter.savedState",
+  ]
 end
