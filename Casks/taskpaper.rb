@@ -1,15 +1,15 @@
 cask "taskpaper" do
-  version "3.9,479"
-  sha256 "c2a69a03e75ae0554bdb6a7e6b245d6e80b774ba4d3a93bddf0fef87d4f592b7"
+  version "3.9.1"
+  sha256 "3bb4488a36240a4c4979455a8bbb3c821dd8893cb0ebaaab0460dd6dcaae81e4"
 
-  url "https://www.taskpaper.com/assets/app/TaskPaper-#{version.csv.first}.dmg"
+  url "https://www.taskpaper.com/assets/app/TaskPaper-#{version}.dmg"
   name "TaskPaper"
   desc "App to make lists and help with organization"
   homepage "https://www.taskpaper.com/"
 
   livecheck do
     url "https://www.taskpaper.com/assets/app/TaskPaper.rss"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
