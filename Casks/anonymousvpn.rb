@@ -6,6 +6,10 @@ cask "anonymousvpn" do
   name "Anonymous VPN"
   homepage "https://www.anonymousvpn.org/"
 
+  livecheck do
+    skip "app does not contain a bundle identifier"
+  end
+
   pkg "AnonymousVPN.pkg"
 
   uninstall pkgutil:   "org.anonymousvpn.pkg",
