@@ -1,11 +1,8 @@
 cask "yuque" do
-  arch arm: "-arm64"
+  version "2.6.4.1058"
+  sha256 "3c3e882189505661d424b19cd142c606028b51a0aaa2484c09969bb510542ade"
 
-  version "2.4.2.1017"
-  sha256 arm:   "3e85477b190fefca3ed1c70177ded366cedf4c1cac78ce2740a4aa4e76050d9e",
-         intel: "90c871a04a889dc6f1ae3ed4fd74dfc6aecd327df0a5f0afea3e666bf650b1b7"
-
-  url "https://app.nlark.com/yuque-desktop/#{version}/Yuque-#{version}#{arch}.dmg",
+  url "https://app.nlark.com/yuque-desktop/#{version}/Yuque-#{version}.dmg",
       verified: "app.nlark.com/yuque-desktop/"
   name "Yuque"
   name "语雀"
