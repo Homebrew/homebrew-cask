@@ -3,7 +3,7 @@ cask "valkyrie" do
   sha256 "e667934e6ee3f27d3f81591b830d2be4513c8997f54f5312be56917c0697ce75"
 
   url "https://github.com/NPBruce/valkyrie/releases/download/release/#{version.major_minor}/v#{version}/valkyrie-macos-#{version}.tar.gz",
-      verified: "github.com/NPBruce/valkyrie"
+      verified: "github.com/NPBruce/valkyrie/"
   name "Valkyrie"
   desc "Game Master for Fantasy Flight board games"
   homepage "https://npbruce.github.io/valkyrie/"

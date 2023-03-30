@@ -6,7 +6,7 @@ cask "front" do
          intel: "7c92e9f57ff5e611578b25c5a6d17d766cd4f98ef874d9a20edc6850485d977c"
 
   url "https://dl.frontapp.com/desktop/builds/#{version}/Front-#{version}-#{arch}.zip",
-      verified: "dl.frontapp.com/desktop/builds"
+      verified: "dl.frontapp.com/desktop/builds/"
   name "Front"
   desc "Customer communication platform"
   homepage "https://front.com/"

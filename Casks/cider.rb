@@ -3,7 +3,7 @@ cask "cider" do
   sha256 "eb133236dccbf521fbb31371050d11e9ec7ce30ac15f7d9a0581d5a521d0e7ba"
 
   url "https://github.com/ciderapp/cider-releases/releases/download/v#{version}/Cider-#{version}-universal.dmg",
-      verified: "github.com/ciderapp/cider-releases"
+      verified: "github.com/ciderapp/cider-releases/"
   name "Cider"
   desc "Open source and community oriented Apple Music client"
   homepage "https://cider.sh/"

@@ -3,7 +3,7 @@ cask "inform" do
   sha256 "01160096f0d19b1674c56c2dd2c8dc6f39b09cdccc1452b549843690c82b4a94"
 
   url "https://github.com/ganelson/inform/releases/download/v#{version.csv.first}/Inform_#{version.csv.first.dots_to_underscores}_macOS_#{version.csv.second}.dmg",
-      verified: "github.com/ganelson/inform"
+      verified: "github.com/ganelson/inform/"
   name "Inform"
   desc "Writing system for interactive fiction based on natural language"
   homepage "https://ganelson.github.io/inform-website"

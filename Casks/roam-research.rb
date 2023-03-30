@@ -6,7 +6,7 @@ cask "roam-research" do
          intel: "f04edd739c5f302d86029d9c0d4c54700c34b3ea2ab5878575f24829dcd13fca"
 
   url "https://roam-electron-deploy.s3.us-east-2.amazonaws.com/Roam+Research-#{version}#{arch}.dmg",
-      verified: "roam-electron-deploy.s3.us-east-2.amazonaws.com"
+      verified: "roam-electron-deploy.s3.us-east-2.amazonaws.com/"
   name "Roam Research"
   desc "Note-taking tool for networked thought"
   homepage "https://roamresearch.com/"
