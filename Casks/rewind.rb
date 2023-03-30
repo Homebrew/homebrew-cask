@@ -7,9 +7,6 @@ cask "rewind" do
   desc "Record and search your screen and audio"
   homepage "https://www.rewind.ai/"
 
-  depends_on arch:  :arm64,
-             macos: ">= :monterey"
-
   app "Rewind.app"
 
   postflight do
@@ -26,12 +23,6 @@ cask "rewind" do
     retry unless (retries -= 1).zero?
     opoo "Unable to forcibly close Rewind.app"
   end
-
-  uninstall pkgutil:    "com.memoryvault.MemoryVault",
-            quit:       "com.memoryvault.MemoryVault",
-            launchctl:  "com.rewind.Rewind",
-            delete:     "/Applications/Rewind.app",
-            login_item: "Rewind"
 
   zap trash: [
     "~/Documents/rewind_logs_*.zip",
