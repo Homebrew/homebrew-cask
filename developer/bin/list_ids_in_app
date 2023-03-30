@@ -91,6 +91,7 @@ clean_sources () {
     /usr/bin/egrep -vi '^net\.wafflesoftware\.ShortcutRecorder\.framework' |                                 \
     /usr/bin/egrep -vi '^org\.AFNetworking\.AFNetworking' |                                                  \
     /usr/bin/egrep -vi '^org\.boredzo\.(LMX|ISO8601DateFormatter)' |                                         \
+    /usr/bin/egrep -vi '^org\.cocoapods\.' |                                                                 \
     /usr/bin/egrep -vi '^org\.dribin\.dave\.DDHidLib' |                                                      \
     /usr/bin/egrep -vi '^org\.linkbackproject\.LinkBack' |                                                   \
     /usr/bin/egrep -vi '^org\.mantle\.Mantle' |                                                              \
