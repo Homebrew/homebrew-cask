@@ -9,7 +9,7 @@ cask "touchosc-bridge" do
 
   livecheck do
     url "https://hexler.net/touchosc/bridge-releases"
-    regex(%r{href=.*?/touchosc-bridge-(\d+(?:\.\d+)*)-macos\.dmg}i)
+    regex(%r{href=.*?/touchosc[._-]bridge[._-]v?(\d+(?:\.\d+)+)[._-]macos\.dmg}i)
   end
 
   app "TouchOSC Bridge.app"
