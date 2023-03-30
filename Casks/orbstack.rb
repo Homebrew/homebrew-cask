@@ -20,8 +20,8 @@ cask "orbstack" do
   depends_on macos: ">= :monterey"
 
   app "OrbStack.app"
-  binary "#{appdir}/OrbStack.app/Contents/MacOS/bin/orb", target: "orb"
-  binary "#{appdir}/OrbStack.app/Contents/MacOS/bin/orbctl", target: "orbctl"
+  binary "#{appdir}/OrbStack.app/Contents/MacOS/bin/orb"
+  binary "#{appdir}/OrbStack.app/Contents/MacOS/bin/orbctl"
 
   postflight do
     system_command "#{appdir}/OrbStack.app/Contents/MacOS/bin/orbctl",
