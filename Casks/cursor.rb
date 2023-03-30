@@ -27,6 +27,6 @@ cask "cursor" do
     "~/Library/Application Support/Cursor",
     "~/Library/Logs/Cursor",
     "~/Library/Preferences/com.todesktop.*",
-    "~/Library/Saved Application State/todesktop.com.ToDesktop-Installer.savedState/",
+    "~/Library/Saved Application State/todesktop.com.ToDesktop-Installer.savedState",
   ]
 end
