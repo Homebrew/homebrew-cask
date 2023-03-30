@@ -8,7 +8,7 @@ cask "aircall" do
   homepage "https://aircall.io/"
 
   livecheck do
-    url "https://aircall.io/de/download/"
+    url "https://aircall.io/download/"
     regex(/Aircall[._-](\d+(?:\.\d+)+)\.(dmg|pkg)/i)
   end
 
