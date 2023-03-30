@@ -1,6 +1,6 @@
 cask "touchosc-bridge" do
   version "1.7.3.152"
-  sha256 "eb5b4f24488c0298933fbe1aff8d634cc15dab0083709eef55aa17e913e89f7a"
+  sha256 "fcc6d30e0c2fff5031c6ca8fa731fff832e0f0bb39e370c961b35d0d291c725a"
 
   url "https://hexler.net/pub/touchosc/touchosc-bridge-#{version}-macos.dmg"
   name "TouchOSC Bridge"
