@@ -1,8 +1,14 @@
 cask "spotify" do
   arch arm: "ARM64"
 
-  version "1.2.8.923"
   sha256 :no_check
+
+  on_arm do
+    version "1.2.8.923,4f94bf0d,1547"
+  end
+  on_intel do
+    version "1.2.8.923,g4f94bf0d,1545"
+  end
 
   url "https://download.scdn.co/Spotify#{arch}.dmg",
       verified: "download.scdn.co/"
@@ -16,7 +22,7 @@ cask "spotify" do
       match = items["com.spotify.client"].version.match(/^(\d+(?:\.\d+)+)[._-]g(\h+)[._-](\d+)$/i)
       next if match.blank?
 
-      (match[1]).to_s
+      "#{match[1]},#{match[2]},#{match[3]}"
     end
   end
 
