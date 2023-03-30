@@ -9,7 +9,7 @@ cask "clickshare" do
 
   livecheck do
     url "https://www.barco.com/en/support/software/R3306192"
-    regex(/<div[^>]*>\s*v?(\d+(?:\.\d+)+)</i)
+    regex(/<div[^>]*>\s*v?(\d+(?:\.\d+)+)\s*</div)
     strategy :page_match do |page, regex|
       versions = page.scan(regex).flatten.uniq
       "#{versions.first},#{versions.count + 1}"
