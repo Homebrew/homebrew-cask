@@ -15,8 +15,6 @@ cask "logseq" do
     strategy :github_latest
   end
 
-  auto_updates true
-
   app "Logseq.app"
 
   zap trash: [
