@@ -1,5 +1,5 @@
 cask "cursor" do
-  version "0.1.7"
+  version "0.1.11"
   sha256 :no_check
 
   url "https://dl.todesktop.com/230313mzl4w4u92/mac/installer/universal",
@@ -21,4 +21,12 @@ cask "cursor" do
 
   uninstall quit:   "com.todesktop.230313mzl4w4u92",
             delete: "/Applications/Cursor.app"
+
+  zap trash: [
+    "~/cursor-tutor",
+    "~/Library/Application Support/Cursor",
+    "~/Library/Logs/Cursor",
+    "~/Library/Preferences/com.todesktop.*",
+    "~/Library/Saved Application State/todesktop.com.ToDesktop-Installer.savedState/",
+  ]
 end
