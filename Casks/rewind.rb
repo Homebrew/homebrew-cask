@@ -7,6 +7,9 @@ cask "rewind" do
   desc "Record and search your screen and audio"
   homepage "https://www.rewind.ai/"
 
+  depends_on arch:  :arm64,
+             macos: ">= :monterey"
+
   app "Rewind.app"
 
   postflight do
