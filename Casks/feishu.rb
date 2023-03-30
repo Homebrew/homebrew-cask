@@ -2,8 +2,8 @@ cask "feishu" do
   arch arm: "arm64", intel: "x64"
 
   on_arm do
-    version "6.0.5,6bd3688a"
-    sha256 "62156ddc37e1f8e701fe15ab31645855cb523933bdbc809e5aea45ca7e0b5419"
+    version "6.1.5,f151d281"
+    sha256 "0d4376f3fb999189fbec0011806ad555c8732391ec97926ef638da6fdc973b12"
   end
   on_intel do
     version "6.0.5,8dde8b15"
