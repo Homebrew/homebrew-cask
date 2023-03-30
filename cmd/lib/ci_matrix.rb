@@ -122,13 +122,6 @@ module CiMatrix
 
       audit_exceptions = []
 
-      # TODO: Replace with `except`.
-      audit_args << if labels.include?("ci-skip-appcast")
-        "--no-appcast"
-      else
-        "--appcast"
-      end
-
       if labels.include?("ci-skip-livecheck")
         audit_exceptions << ["hosting_with_livecheck", "livecheck_version", "livecheck_min_os"]
       end
