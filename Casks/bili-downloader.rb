@@ -7,6 +7,11 @@ cask "bili-downloader" do
   desc "BiliBili media downloader"
   homepage "https://github.com/JimmyLiang-lzm/biliDownloader_GUI"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "biliDownloader_GUI.app"
 
   zap trash: "~/Library/Saved Application State/biliDownloader_GUI.savedState"
