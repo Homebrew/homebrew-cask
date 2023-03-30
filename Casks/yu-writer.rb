@@ -16,4 +16,8 @@ cask "yu-writer" do
     "~/Library/Preferences/com.github.yu-writer.helper.plist",
     "~/Library/Preferences/com.github.yu-writer.plist",
   ]
+
+  caveats do
+    discontinued
+  end
 end
