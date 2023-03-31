@@ -10,7 +10,7 @@ cask "popo" do
   livecheck do
     url "https://popo.netease.com/api/open/jsonp/check_version?device=4&callback="
     strategy :page_match do |page|
-      match = page.match(/"version"\s*:\s*"(\d+(?:\.\d+)+)".*?(\d+)\.dmg/i)
+      match = page.match(/["']version["']\s*:\s*["'](\d+(?:\.\d+)+)["'].*?(\d+)\.dmg/i)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
