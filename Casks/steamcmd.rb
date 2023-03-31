@@ -18,6 +18,11 @@ cask "steamcmd" do
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/steamcmd.wrapper.sh"
   binary shimscript, target: "steamcmd"
+  
+  installer script: {
+    executable: shimscript, 
+    args:       ["+quit"],
+  }
 
   preflight do
     # Running for the first time will create a Frameworks symlink in the parent
@@ -33,9 +38,11 @@ cask "steamcmd" do
     EOS
   end
 
-  postflight do
-    system_command shimscript, args: ["+quit"]
-  end
-
   uninstall launchctl: "com.valvesoftware.steamclean"
+  
+  zap rmdir: [
+        "~/Library/Application Support/Steam/logs",
+        "~/Library/Application Support/Steam",
+      ],
+      trash: "~/Library/Application Support/Steam/logs/stderr.txt",
 end
