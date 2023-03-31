@@ -11,10 +11,10 @@ cask "frescobaldi" do
   desc "LilyPond editor"
   homepage "https://frescobaldi.org/"
 
+  # Some GitHub tags do not follow standard versioning pattern
   livecheck do
-    url "https://github.com/frescobaldi/frescobaldi/releases/"
-    regex(/Frescobaldi[._-]v?(\d+(?:\.\d+)+)[._-](?:x86[._-]|arm)64\.dmg/i)
-    strategy :page_match
+    url :url
+    strategy :github_latest
   end
 
   app "Frescobaldi.app"
