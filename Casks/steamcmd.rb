@@ -34,7 +34,7 @@ cask "steamcmd" do
   end
 
   uninstall launchctl: "com.valvesoftware.steamclean"
-  
+
   zap rmdir: [
         "~/Library/Application Support/Steam/logs",
         "~/Library/Application Support/Steam",
