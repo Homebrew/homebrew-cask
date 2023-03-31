@@ -1,7 +1,7 @@
 cask "launchcontrol" do
   on_catalina :or_older do
     version "1.52.7"
-    sha256 "16c3d89e41a99cbf43e6996681358e8e7a4bc63fa770b9f8c0bc72c5356a0b8a"
+    sha256 "760edc3f3238ecbbc9f0c14b17ced9ac2a46c46a4ed8feec6bfb532fced37b7e"
 
     livecheck do
       skip "Legacy version"
