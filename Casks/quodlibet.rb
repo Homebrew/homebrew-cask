@@ -11,14 +11,13 @@ cask "quodlibet" do
   livecheck do
     url "https://quodlibet.readthedocs.io/en/latest/downloads.html"
     regex(/QuodLibet[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
-    strategy :page_match
   end
 
   app "QuodLibet.app"
 
   zap trash: [
+    "~/.quodlibet",
     "~/Library/Preferences/io.github.quodlibet.quodlibet.plist",
     "~/Library/Saved Application State/io.github.quodlibet.quodlibet.savedState",
-    "~/.quodlibet",
   ]
 end

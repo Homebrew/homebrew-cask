@@ -3,7 +3,7 @@ cask "dixa" do
   sha256 "f596b5f2d8ce2a246ae1231830274f309521cdd6b9f45e7daa312218576a5203"
 
   url "https://github.com/dixahq/dixa-desktop-app-release/releases/download/v#{version}/dixa-#{version}.dmg",
-      verified: "github.com/dixahq/dixa-desktop-app-release"
+      verified: "github.com/dixahq/dixa-desktop-app-release/"
   name "Dixa"
   desc "Customer service platform"
   homepage "https://dixa.com/"

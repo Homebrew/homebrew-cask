@@ -1,5 +1,5 @@
 cask "workman" do
-  version :latest
+  version "1.0"
   sha256 :no_check
 
   url "https://github.com/workman-layout/Workman/archive/master.zip",
@@ -8,7 +8,12 @@ cask "workman" do
   desc "Alternative English keyboard layout"
   homepage "https://workmanlayout.org/"
 
-  artifact "Workman-master/mac/Workman.bundle", target: "/Library/Keyboard Layouts/Workman.bundle"
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
+  keyboard_layout "Workman-master/mac/Workman.bundle"
 
   caveats do
     reboot

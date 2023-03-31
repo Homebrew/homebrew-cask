@@ -1,6 +1,6 @@
 cask "icons8" do
   # NOTE: "8" is not a version number, but an intrinsic part of the product name
-  version "5.7.4,57400"
+  version "5.7.4"
   sha256 :no_check
 
   url "https://desktop.icons8.com/updates/mac/Icons8App_for_Mac_OS.dmg"
@@ -10,16 +10,18 @@ cask "icons8" do
 
   livecheck do
     url "https://desktop.icons8.com/updates/mac/icons8_cast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Icons8.app"
 
   zap trash: [
-    "~/Library/Preferences/com.visualpharm.Icons8.plist",
-    "~/Library/Containers/com.visualpharm.StandaloneLoginHelper",
+    "~/Library/Application Scripts/com.visualpharm.StandaloneLoginHelper",
+    "~/Library/Application Support/com.visualpharm.Icons8",
     "~/Library/Caches/com.visualpharm.Icons8",
-    '~/Library/Application\ Support/com.visualpharm.Icons8',
-    '~/Library/Application\ Scripts/com.visualpharm.StandaloneLoginHelper',
+    "~/Library/Containers/com.visualpharm.StandaloneLoginHelper",
+    "~/Library/Preferences/com.visualpharm.Icons8.plist",
   ]
 end

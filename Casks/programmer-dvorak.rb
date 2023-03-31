@@ -15,21 +15,9 @@ cask "programmer-dvorak" do
     end
   end
 
-  pkg "Programmer Dvorak v#{version.major_minor}.pkg"
+  container nested: "Programmer Dvorak v#{version.major_minor}.pkg/Contents/Archive.pax.gz"
 
-  postflight do
-    # clear the layout cache before new layouts are recognized
-    system_command "/bin/rm",
-                   args: ["-f", "--", "/System/Library/Caches/com.apple.IntlDataCache.le*"],
-                   sudo: true
-  end
-
-  uninstall pkgutil: "com.apple.keyboardlayout.Programmer Dvorak",
-            delete:  [
-              "/Library/Caches/com.apple.IntlDataCache*",
-              "/Library/Keyboard Layouts/Programmer Dvorak.bundle",
-              "/System/Library/Caches/com.apple.IntlDataCache.le*",
-            ]
+  keyboard_layout "Library/Keyboard Layouts/Programmer Dvorak.bundle"
 
   caveats do
     reboot

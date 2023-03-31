@@ -1,5 +1,5 @@
 cask "fstream" do
-  version "1.4.9,699"
+  version "1.4.9"
   sha256 :no_check
 
   url "https://www.sourcemac.com/fstream_FStream.tgz"
@@ -9,7 +9,7 @@ cask "fstream" do
 
   livecheck do
     url "https://www.sourcemac.com/sparkle.php?id=156&content=xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   app "FStream.app"

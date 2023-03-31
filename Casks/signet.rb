@@ -3,7 +3,7 @@ cask "signet" do
   sha256 "ea48e77577e46848d5a3861782ddaaf05a725e6a4f14802ee29bc20bd88aeb50"
 
   url "https://eclecticlightdotcom.files.wordpress.com/#{version.csv.second.major}/#{version.csv.second.minor}/#{token}#{version.csv.first.no_dots}.zip",
-      verified: "eclecticlightdotcom.files.wordpress.com"
+      verified: "eclecticlightdotcom.files.wordpress.com/"
   name "Signet"
   desc "Scans and checks bundle signatures"
   homepage "https://eclecticlight.co/taccy-signet-precize-alifix-utiutility-alisma/"

@@ -1,6 +1,6 @@
 cask "stats" do
-  version "2.8.13"
-  sha256 "cc99c685096ca5a5bce664b003da847811cfffdccc8d6297addb677a9a6a1b24"
+  version "2.8.14"
+  sha256 "d34011fc96a9c69935295011f51aa1b55c0c36fdbc27179ed0179c811946c64f"
 
   url "https://github.com/exelban/stats/releases/download/v#{version}/Stats.dmg"
   name "Stats"
@@ -20,5 +20,6 @@ cask "stats" do
     "~/Library/Containers/eu.exelban.Stats.LaunchAtLogin",
     "~/Library/Cookies/eu.exelban.Stats.binarycookies",
     "~/Library/Preferences/eu.exelban.Stats.plist",
+    "/Library/LaunchDaemons/eu.exelban.Stats.SMC.Helper.plist",
   ]
 end

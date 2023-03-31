@@ -1,15 +1,16 @@
 cask "gfxcardstatus" do
-  version "2.5,5482"
+  version "2.5"
   sha256 "70d94cbf5d691c9530e974b5512a106e0bf532ab345fd911199928b8b11a3688"
 
-  url "https://github.com/codykrieger/gfxCardStatus/releases/download/v#{version.csv.first}/gfxCardStatus-#{version.csv.first}.zip",
+  url "https://github.com/codykrieger/gfxCardStatus/releases/download/v#{version}/gfxCardStatus-#{version}.zip",
       verified: "github.com/codykrieger/gfxCardStatus/"
   name "gfxCardStatus"
+  desc "Menu bar app to monitor graphics card usage"
   homepage "https://gfx.io/"
 
   livecheck do
     url "https://gfx.io/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   app "gfxCardStatus.app"

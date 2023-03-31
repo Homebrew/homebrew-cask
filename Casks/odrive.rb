@@ -9,13 +9,16 @@ cask "odrive" do
   homepage "https://www.odrive.com/"
 
   livecheck do
-    # https://docs.odrive.com/docs/odrive-usage-guide#install-desktop-sync
     url "https://www.odrive.com/downloaddesktop?platform=mac"
     strategy :header_match
   end
 
   pkg "odrivesync.#{version}.pkg"
 
-  uninstall quit:    "com.oxygencloud.odrive",
+  # Should also remove ~/.odrive/bin/ on uninstall, but causes
+  # faulty reinstall unless ~/.odrive is removed entirely.
+  uninstall quit:    "com.oxygen.odriveapp",
             pkgutil: "com.oxygen.odrive.*"
+
+  zap trash: "~/.odrive"
 end

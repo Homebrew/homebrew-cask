@@ -3,7 +3,7 @@ cask "macforge" do
   sha256 "5a28c4f43b9b9bb868e26e45096804a1b7ae604fbf3ae857bed63d495a43ec50"
 
   url "https://github.com/w0lfschild/app_updates/raw/master/MacForge1/MacForge.#{version}.zip",
-      verified: "github.com/w0lfschild/app_updates"
+      verified: "github.com/w0lfschild/app_updates/"
   name "MacForge"
   desc "Plugin, App, and Theme store which includes plugin injection"
   homepage "https://www.macenhance.com/macforge"
@@ -14,6 +14,7 @@ cask "macforge" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "MacForge.app"
 

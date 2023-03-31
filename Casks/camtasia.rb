@@ -1,6 +1,6 @@
 cask "camtasia" do
-  version "2022.6.3"
-  sha256 "9295d0b4434e54337b2d49f27f91f0173fb35dca246f002df5553e2a839ee0fe"
+  version "2022.6.5"
+  sha256 "34e4e59c0c1785081dee6d8d205d6df102ba05415cf016af19f3c416f9fe5649"
 
   url "https://download.techsmith.com/camtasiamac/releases/#{version.major[-2..]}#{version.minor_patch.no_dots}/Camtasia.dmg"
   name "Camtasia"
@@ -18,8 +18,8 @@ cask "camtasia" do
   app "Camtasia #{version.major}.app"
 
   zap trash: [
+    "/Users/Shared/TechSmith/Camtasia",
     "~/Library/Application Support/TechSmith/Camtasia#{version.major}",
     "~/Library/Preferences/com.techsmith.camtasia2021.plist",
-    "/Users/Shared/TechSmith/Camtasia",
   ]
 end

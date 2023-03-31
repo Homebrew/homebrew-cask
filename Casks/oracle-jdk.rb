@@ -1,9 +1,9 @@
 cask "oracle-jdk" do
   arch arm: "aarch64", intel: "x64"
 
-  version "19.0.2"
-  sha256 arm:   "1bd6d873e447651f4df8d4c8fb2c092ac6070a27d55bc3ab4c0f8d7efe69b8de",
-         intel: "7af72f5235ad1edf8e49fcf6694004b50d06cc4b34bd2ad0e46c7af38ed57535"
+  version "20"
+  sha256 arm:   "94a2f19bd05baaad6abb82c94714b7588f44de216b1c2281e01b1a903d400eae",
+         intel: "c150e49257554fd33aec2ba19da4dcf5de2ede6c4372d6cd31773868ccea6dcf"
 
   url "https://download.oracle.com/java/#{version.major}/archive/jdk-#{version}_macos-#{arch}_bin.dmg"
   name "Oracle Java Standard Edition Development Kit"

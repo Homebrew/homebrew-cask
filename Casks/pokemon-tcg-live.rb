@@ -1,5 +1,5 @@
 cask "pokemon-tcg-live" do
-  version "1.3.30,165830"
+  version "1.4.0,171699"
   sha256 :no_check
 
   url "https://installer.studio-prod.pokemon.com/installer/PokemonTCGLiveInstaller_Mac.dmg"

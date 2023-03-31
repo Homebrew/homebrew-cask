@@ -1,6 +1,6 @@
 cask "flightgear" do
-  version "2020.3.17"
-  sha256 "4a9b33c639c61c8dd31c011866c3da0a7ee13da8b7cf35e9f40401ff75eb9478"
+  version "2020.3.18"
+  sha256 "d95044660dfda41a300111244e7d5f8b1e11c8a99ad76cbbf22da83b99daf6a6"
 
   url "https://downloads.sourceforge.net/flightgear/FlightGear-#{version}.dmg",
       verified: "sourceforge.net/flightgear/"

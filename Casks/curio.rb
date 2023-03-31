@@ -1,6 +1,6 @@
 cask "curio" do
-  version "25.0,25007"
-  sha256 "a5224032cde4cde3114c6a0973545a4288b2c36fb6293c9ee542a79eb907064e"
+  version "25.0.1,25101"
+  sha256 "4cbb833fc6ceeb7442fb5b0ca25b2cd8670da9fb0e9bded0c118d0db2117cce7"
 
   url "https://www.zengobi.com/downloads/Curio#{version.csv.second.no_dots}.zip"
   name "Curio"

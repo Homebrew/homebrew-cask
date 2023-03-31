@@ -1,10 +1,13 @@
 cask "firebird-emu" do
-  version "1.5"
-  sha256 "966e80c73e8be46bb3c370c781d0480abd50dbefea864a4c0acf4b6a83b62d0f"
+  version "1.6"
+  sha256 "c68aae5b077bd447845f476316fed93cf261ac7221fac0a38dfc0a575a3392d2"
 
-  url "https://github.com/nspire-emus/firebird/releases/download/v#{version}/firebird-macOS.dmg"
+  url "https://github.com/nspire-emus/firebird/releases/download/v#{version}/firebird-emu_macOS.zip"
   name "firebird"
+  desc "TI Nspire calculator emulator"
   homepage "https://github.com/nspire-emus/firebird"
 
   app "firebird-emu.app"
+
+  zap trash: "~/Library/Preferences/org.firebird-emus.firebird-emu.plist"
 end

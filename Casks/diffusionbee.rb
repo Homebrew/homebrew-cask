@@ -6,7 +6,7 @@ cask "diffusionbee" do
          intel: "810627dee0bb8772fa9023e9399ea9dcefa01db135404a67d1da0499be1ea7e3"
 
   url "https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/releases/download/#{version}/DiffusionBee-#{version}-#{arch}_MPS_SD1.5_FP16.dmg",
-      verified: "github.com/divamgupta/diffusionbee-stable-diffusion-ui"
+      verified: "github.com/divamgupta/diffusionbee-stable-diffusion-ui/"
   name "Diffusion Bee"
   desc "Run Stable Diffusion locally"
   homepage "https://diffusionbee.com/"

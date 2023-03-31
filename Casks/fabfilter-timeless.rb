@@ -1,6 +1,6 @@
 cask "fabfilter-timeless" do
-  version "3.03"
-  sha256 "0ddfa32eae4b6a3590675ebe0e8e92f523a59d8167c428292e8f00793ee851f5"
+  version "3.04"
+  sha256 "3401dadd79d577f36fbc34964ad8f9e90dd511872e648a0720c1e0fc0080c490"
 
   url "https://download.fabfilter.com/fftimeless#{version.no_dots}.dmg"
   name "FabFilter Timeless"

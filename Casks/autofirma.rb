@@ -1,24 +1,23 @@
 cask "autofirma" do
-  version "1.7.1"
-  sha256 "83131c5809815742bf23406361b514f8c798d9f9dc344b7a42bc178886dbd0da"
+  arch arm: "M1", intel: "x64"
+  pkg_arch = on_arch_conditional arm: "aarch64", intel: "x64"
 
-  url "https://estaticos.redsara.es/comunes/autofirma/#{version.major}/#{version.minor}/#{version.patch}/AutoFirma_Mac.zip",
+  version "1.8.0"
+  sha256 arm:   "810533e5c95bc41dff6cd674d09170054bf202c4305d40b62559d0e8bf442321",
+         intel: "6e25a93e57b8d00f453822dfed2e6f110a47a18d6e2583fc050c7caae11088f4"
+
+  url "https://estaticos.redsara.es/comunes/autofirma/#{version.major}/#{version.minor}/#{version.patch}/AutoFirma_Mac_#{arch}.zip",
       verified: "estaticos.redsara.es/comunes/autofirma/"
   name "AutoFirma"
   desc "Digital signature editor and validator"
   homepage "https://firmaelectronica.gob.es/Home/Descargas.htm"
 
   livecheck do
-    url :homepage
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/(\d+)/(\d+)/(\d+)/AutoFirma_Mac.zip}i)
-      next if match.blank?
-
-      "#{match[1]}.#{match[2]}.#{match[3]}"
-    end
+    url :url
+    strategy :extract_plist
   end
 
-  pkg "AutoFirma_#{version.dots_to_underscores}.pkg"
+  pkg "AutoFirma_#{version.major}_#{version.minor}_#{pkg_arch}_signed.pkg"
 
   # remove 'Autofirma ROOT' and '127.0.0.1' certificates from keychain (these were installed by pkg)
   uninstall_postflight do

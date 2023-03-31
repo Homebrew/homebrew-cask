@@ -1,6 +1,6 @@
 cask "foxglove-studio" do
-  version "1.44.0"
-  sha256 "05132f84520d11111c234525c22ce383aec868d768928c2f0fe30ce300fda133"
+  version "1.47.0"
+  sha256 "5f4c5715aa3310b66904d06d0306904de15200faf5ad3836c5e9e68d140e20db"
 
   url "https://github.com/foxglove/studio/releases/download/v#{version}/foxglove-studio-#{version}-mac-universal.dmg",
       verified: "github.com/foxglove/studio/"

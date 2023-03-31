@@ -1,14 +1,8 @@
 cask "ableton-live-lite" do
-  arch = "intel"
-  version "11.2.10"
-  sha256 "fefadad3f6cd5d727f897000374d16da9f709f56991f6fcc257bb8b14d76a65d"
+  version "11.2.11"
+  sha256 "cc9ae661a0677cb228cfed7eeb685ef1bf74a0b4aacd2c73082cf0756a39e6a3"
 
-  on_mojave :or_newer do
-    arch = "universal"
-    sha256 "30dc091b579c9ac7f4f0bbe165332733e6355f6d009a2b0f287ac79c1c38b4ed"
-  end
-
-  url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_lite_#{version}_#{arch}.dmg"
+  url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_lite_#{version}_universal.dmg"
   name "Ableton Live Lite"
   desc "Sound and music editor"
   homepage "https://www.ableton.com/en/products/live-lite/"

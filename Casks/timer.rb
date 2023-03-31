@@ -7,6 +7,11 @@ cask "timer" do
   desc "Stopwatch, alarm clock, and clock utility"
   homepage "https://www.apimac.com/mac/timer/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Timer.app"
 
   zap trash: [
