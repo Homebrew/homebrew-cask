@@ -31,6 +31,8 @@ cask "simply-fortran" do
   app "Simply Fortran.app"
 
   zap trash: [
+    "~/.simplyfortran",
+    "~/Library/Caches/com.apple.helpd/Generated/com.approximatrix.simplyfortran.help*3.29",
     "~/Library/Saved Application State/com.approximatrix.simplyfortran.savedState",
   ]
 end
