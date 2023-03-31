@@ -1,8 +1,8 @@
 cask "xctu" do
   version "6.5.12,658"
-  sha256 "98a06c6c4541e3d6636c2274b06cf781f8f1ac1cb195da87d1b2fa56aeab3675"
+  sha256 "8cb7e522a6f9e0724774bcea1480c00d1ea94df80afccdb18ff054e88d4c073a"
 
-  url "https://hub.digi.com/support/products/xctu/?path=/support/asset/xctu-v-#{version.csv.second}-macos-x/"
+  url "https://hub.digi.com/dp/path=/support/asset/xctu-v-#{version.csv.second}-macos-x/"
   name "XCTU"
   desc "Configuration Platform for XBee/RF Solutions"
   homepage "https://www.digi.com/products/embedded-systems/digi-xbee-tools/xctu"
