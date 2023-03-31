@@ -17,6 +17,8 @@ cask "steamcmd" do
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/steamcmd.wrapper.sh"
   binary shimscript, target: "steamcmd"
+  
+  uninstall launchctl: "com.valvesoftware.steamclean"
 
   preflight do
     # Running for the first time will create a Frameworks symlink in the parent
