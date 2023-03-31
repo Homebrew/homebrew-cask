@@ -12,7 +12,7 @@ cask "launchcontrol" do
     sha256 "0b24aacdf58f4a5a6e2c83399dd7179393f9bcc49a4bcb5a947dff8496afc209"
 
     livecheck do
-      url "https://www.soma-zone.com/LaunchControl/a/appcast-update-2.xml"
+      url "https://www.soma-zone.com/LaunchControl/a/appcast-update-#{version.major}.xml"
       strategy :sparkle, &:short_version
     end
 
