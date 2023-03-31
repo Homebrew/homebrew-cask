@@ -1,5 +1,5 @@
 cask "name-mangler" do
-  version "3.8,3339"
+  version "3.8"
   sha256 :no_check
 
   url "https://manytricks.com/download/namemangler"
@@ -9,7 +9,7 @@ cask "name-mangler" do
 
   livecheck do
     url "https://manytricks.com/namemangler/appcast/"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
