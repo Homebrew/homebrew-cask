@@ -1,18 +1,18 @@
-cask "postico" do
-  version "1.5.22,9592"
-  sha256 "8adcbe10a1a077739e56d5c2795b763d9e1c546b773c65fcfd9eb03e0edad8d7"
+cask "postico@2" do
+  version "2.0.1,9593"
+  sha256 "0a8d012ae67e51001c94c87f98274010524e94771d3a7009fb09eaa4e492e29a"
 
-  url "https://downloads.eggerapps.at/postico/postico-#{version.csv.second}.zip"
+  url "https://downloads.eggerapps.at/postico/postico-#{version.csv.second}.dmg"
   name "Postico"
   desc "GUI client for PostgreSQL databases"
-  homepage "https://eggerapps.at/postico/"
+  homepage "https://eggerapps.at/postico2/"
 
   livecheck do
-    url "https://eggerapps.at/postico/download/"
+    url "https://releases.eggerapps.at/postico2/download"
     strategy :extract_plist
   end
 
-  app "Postico.app"
+  app "Postico 2.app"
 
   zap trash: [
     "~/Library/Application Scripts/at.eggerapps.Postico",
