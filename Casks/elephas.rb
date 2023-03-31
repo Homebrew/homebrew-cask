@@ -1,8 +1,8 @@
 cask "elephas" do
-  version "6.2.6"
+  version "7.0.10"
   sha256 :no_check
 
-  url "https://elephas.app/downloads/Elephas_latest.dmg"
+  url "https://assets.elephas.app/Elephas_latest.dmg"
   name "Elephas"
   desc "Personal AI Writing Assistant"
   homepage "https://elephas.app/"
