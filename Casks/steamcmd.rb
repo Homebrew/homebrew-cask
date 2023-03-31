@@ -27,10 +27,10 @@ cask "steamcmd" do
     macos_dir.mkpath
     FileUtils.mv files, macos_dir
 
-    shimscript.write <<~EOS
+    shimscript.write <<~SH
       #!/bin/sh
       exec '#{macos_dir}/steamcmd.sh' "$@"
-    EOS
+    SH
   end
 
   uninstall launchctl: "com.valvesoftware.steamclean"
@@ -39,5 +39,5 @@ cask "steamcmd" do
         "~/Library/Application Support/Steam/logs",
         "~/Library/Application Support/Steam",
       ],
-      trash: "~/Library/Application Support/Steam/logs/stderr.txt",
+      trash: "~/Library/Application Support/Steam/logs/stderr.txt"
 end
