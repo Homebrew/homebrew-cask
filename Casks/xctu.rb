@@ -9,8 +9,9 @@ cask "xctu" do
 
   livecheck do
     url "https://hub.digi.com/support/products/xctu/"
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?xctu[._-]v[._-](\d+[._-]?\w+)[._-]macos-x/.*?v[._]\s*?(\d+(?:\.\d+)+).*?MacOS}i)
+    regex(%r{href=.*?xctu[._-]v[._-](\d+[._-]?\w+)[._-]macos-x/.*?v[._]\s*?(\d+(?:\.\d+)+).*?MacOS}i)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
       next if match.blank?
 
       "#{match[2]},#{match[1]}"
