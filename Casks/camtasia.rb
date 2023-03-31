@@ -18,8 +18,8 @@ cask "camtasia" do
   app "Camtasia #{version.major}.app"
 
   zap trash: [
+    "/Users/Shared/TechSmith/Camtasia",
     "~/Library/Application Support/TechSmith/Camtasia#{version.major}",
     "~/Library/Preferences/com.techsmith.camtasia2021.plist",
-    "/Users/Shared/TechSmith/Camtasia",
   ]
 end
