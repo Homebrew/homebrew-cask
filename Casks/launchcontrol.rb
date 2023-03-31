@@ -1,7 +1,7 @@
 cask "launchcontrol" do
   on_catalina :or_older do
     version "1.52.7"
-    sha256 "16c3d89e41a99cbf43e6996681358e8e7a4bc63fa770b9f8c0bc72c5356a0b8a"
+    sha256 "760edc3f3238ecbbc9f0c14b17ced9ac2a46c46a4ed8feec6bfb532fced37b7e"
 
     livecheck do
       skip "Legacy version"
@@ -12,7 +12,7 @@ cask "launchcontrol" do
     sha256 "0b24aacdf58f4a5a6e2c83399dd7179393f9bcc49a4bcb5a947dff8496afc209"
 
     livecheck do
-      url "https://www.soma-zone.com/LaunchControl/a/appcast-update-2.xml"
+      url "https://www.soma-zone.com/LaunchControl/a/appcast-update-#{version.major}.xml"
       strategy :sparkle, &:short_version
     end
 
