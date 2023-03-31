@@ -9,8 +9,7 @@ cask "element" do
   homepage "https://element.io/get-started"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://github.com/vector-im/element-desktop"
   end
 
   auto_updates true
