@@ -1,15 +1,15 @@
 cask "pacifist" do
-  version "4.0.5,66569"
+  version "4.0.5"
   sha256 "d1fa1218fecea844419238303d67f834477c9897f93801fe092b54eae4644872"
 
-  url "https://www.charlessoft.com/pacifist_download/Pacifist_#{version.csv.first}.dmg"
+  url "https://www.charlessoft.com/pacifist_download/Pacifist_#{version}.dmg"
   name "Pacifist"
   desc "Extract files and folders from package files, disk images, and archives"
   homepage "https://www.charlessoft.com/"
 
   livecheck do
     url "https://www.charlessoft.com/cgi-bin/pacifist_sparkle.cgi"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
