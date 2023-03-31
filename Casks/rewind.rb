@@ -12,21 +12,6 @@ cask "rewind" do
 
   app "Rewind.app"
 
-  postflight do
-    # Description: Ensure console variant of postinstall is non-interactive.
-    # This is because `open "${app_dir}"` is called from the postinstall
-    # script of the package and we don't want any user intervention there.
-    retries ||= 3
-    ohai "The Rewind package postinstall script launches the Rewind app" unless retries < 3
-    ohai "Attempting to close Rewind.app to avoid unwanted user intervention" unless retries < 3
-    return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/Rewind.app"]
-
-  rescue RuntimeError
-    sleep 1
-    retry unless (retries -= 1).zero?
-    opoo "Unable to forcibly close Rewind.app"
-  end
-
   zap trash: [
     "~/Documents/rewind_logs_*.zip",
     "~/Library/Application Support/com.memoryvault.MemoryVault",
