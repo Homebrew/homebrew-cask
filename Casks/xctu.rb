@@ -1,6 +1,6 @@
 cask "xctu" do
-  version "40003027_AE"
-  sha256 "549aa41bca87035df7251765404a6600c0696a260a09d6d35e8e11b783d5fa0a"
+  version "40003027_AK"
+  sha256 "8cb7e522a6f9e0724774bcea1480c00d1ea94df80afccdb18ff054e88d4c073a"
 
   url "https://ftp1.digi.com/support/utilities/#{version}.zip"
   name "XCTU"
