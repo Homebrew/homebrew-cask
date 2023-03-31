@@ -16,4 +16,6 @@ cask "phew" do
 
   app "Phew.app"
   qlplugin "#{appdir}/Phew.app/Contents/Resources/FLIFImages.qlgenerator"
+
+  uninstall delete: "#{appdir}/Phew.app"
 end
