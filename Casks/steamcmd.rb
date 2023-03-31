@@ -5,6 +5,7 @@ cask "steamcmd" do
   url "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_osx.tar.gz",
       verified: "steamcdn-a.akamaihd.net/"
   name "SteamCMD"
+  desc "Command-line client for Steam"
   homepage "https://developer.valvesoftware.com/wiki/SteamCMD"
 
   livecheck do
