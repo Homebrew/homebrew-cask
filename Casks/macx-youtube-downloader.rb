@@ -13,4 +13,10 @@ cask "macx-youtube-downloader" do
   end
 
   app "MacX YouTube Downloader.app"
+
+  zap trash: [
+    "~/Library/Application Support/Digiarty",
+    "~/Library/Caches/com.digiarty.youtubedownloader#{version.major}",
+    "~/Library/Preferences/com.digiarty.youtubedownloader#{version.major}.plist",
+  ]
 end
