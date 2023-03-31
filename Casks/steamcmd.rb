@@ -16,7 +16,7 @@ cask "steamcmd" do
   auto_updates true
 
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
-  shimscript = "#{staged_path}/steamcmd.wrapper.sh"
+  shimscript = staged_path/"steamcmd.wrapper.sh"
   binary shimscript, target: "steamcmd"
 
   preflight do
@@ -27,7 +27,7 @@ cask "steamcmd" do
     macos_dir.mkpath
     FileUtils.mv files, macos_dir
 
-    File.write shimscript, <<~EOS
+    shimscript.write <<~EOS
       #!/bin/sh
       exec '#{macos_dir}/steamcmd.sh' "$@"
     EOS
