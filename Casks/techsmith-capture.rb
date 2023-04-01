@@ -1,5 +1,5 @@
 cask "techsmith-capture" do
-  version "1.3.31,198"
+  version "1.3.31"
   sha256 :no_check
 
   url "https://assets.techsmith.com/techsmithcapture/mac/TechSmithCapture.dmg"
@@ -9,7 +9,7 @@ cask "techsmith-capture" do
 
   livecheck do
     url "https://assets.techsmith.com/techsmithcapture/mac/TechSmithCaptureAppcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

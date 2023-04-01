@@ -1,5 +1,5 @@
 cask "the-clock" do
-  version "4.6.4,20220322"
+  version "4.6.4"
   sha256 :no_check
 
   url "https://seense.com/the_clock/updateapp/the_clock.zip"
@@ -9,7 +9,7 @@ cask "the-clock" do
 
   livecheck do
     url "https://www.seense.com/the_clock/updateapp/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

@@ -1,15 +1,15 @@
 cask "smartreporter-free" do
-  version "3.2.0,2576"
+  version "3.2.0"
   sha256 "5e22b45fea538245d2100b77d45180e3ff978a473e81a8e624bd497a94adefce"
 
-  url "https://www.corecode.io/downloads/smartreporter_#{version.csv.first}.zip"
+  url "https://www.corecode.io/downloads/smartreporter_#{version}.zip"
   name "SMARTReporter Free"
   desc "Drive failure monitoring tool"
   homepage "https://www.corecode.io/smartreporter/"
 
   livecheck do
     url "https://www.corecode.io/smartreporter/smartreporter#{version.major}.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   depends_on macos: ">= :mojave"

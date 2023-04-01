@@ -1,5 +1,5 @@
 cask "yep" do
-  version "4.0.4,404.101"
+  version "4.0.4"
   sha256 :no_check
 
   url "https://www.ironicsoftware.com/downloads/Yep.zip"
@@ -9,7 +9,7 @@ cask "yep" do
 
   livecheck do
     url "https://ironicsoftware.com/downloads/yep.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   app "Yep.app"

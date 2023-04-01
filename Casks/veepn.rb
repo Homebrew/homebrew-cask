@@ -1,15 +1,15 @@
 cask "veepn" do
-  version "2.2.2,918496"
+  version "2.2.2"
   sha256 "3d7a0790b514d17c1bc2dcb2a504ff8d8ddffde0596afbf129529c19ee99874c"
 
-  url "https://download.veepn.com/mac/VeePN_v#{version.csv.first}.dmg"
+  url "https://download.veepn.com/mac/VeePN_v#{version}.dmg"
   name "VeePN"
   desc "VPN client"
   homepage "https://veepn.com/vpn-apps/vpn-for-mac/"
 
   livecheck do
     url "https://download.veepn.com/mac/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   depends_on macos: ">= :mojave"

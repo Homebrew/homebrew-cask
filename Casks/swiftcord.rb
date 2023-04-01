@@ -1,15 +1,15 @@
 cask "swiftcord" do
-  version "0.5.1,15"
+  version "0.5.1"
   sha256 "e526fd9f9cca51f3a6d881d57ea5779eaab4900b23ee63dcc7fd8fb131ada1cd"
 
-  url "https://github.com/SwiftcordApp/Swiftcord/releases/download/v#{version.csv.first}/Swiftcord.#{version.csv.first}.dmg"
+  url "https://github.com/SwiftcordApp/Swiftcord/releases/download/v#{version}/Swiftcord.#{version}.dmg"
   name "Swiftcord"
   desc "Native Discord client built in Swift"
   homepage "https://github.com/SwiftcordApp/Swiftcord"
 
   livecheck do
     url "https://raw.githubusercontent.com/SwiftcordApp/Swiftcord/main/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   depends_on macos: ">= :monterey"
