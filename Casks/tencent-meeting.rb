@@ -19,10 +19,14 @@ cask "tencent-meeting" do
 
   livecheck do
     url %Q(https://meeting.tencent.com/web-service/query-download-info?q=[{"package-type":"app","channel":"0300000000","platform":"mac","arch":"#{arch}"}]&nonce=0000000000000000)
-    regex(%r{/cos/([0-9a-z]{32})/})
+    regex(%r{/cos/(\h+)/TencentMeeting[._-].+?v?(\d+(?:\.\d+)+)})
     strategy :json do |json, regex|
-      info = json["info-list"][0]
-      "#{info["version"]},#{info["url"][regex, 1]}"
+      json["info-list"]&.map do |item|
+        match = item["url"]&.match(regex)
+        next if match.blank?
+
+        "#{match[2]},#{match[1]}"
+      end
     end
   end
 
