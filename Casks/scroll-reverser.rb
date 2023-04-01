@@ -12,6 +12,8 @@ cask "scroll-reverser" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on macos: ">= :sierra"
+
   app "Scroll Reverser.app"
 
   zap trash: [
