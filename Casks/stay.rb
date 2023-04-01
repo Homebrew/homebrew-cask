@@ -12,7 +12,7 @@ cask "stay" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :catalina"
 
   app "Stay.app"
 
