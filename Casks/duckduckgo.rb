@@ -8,7 +8,7 @@ cask "duckduckgo" do
   homepage "https://duckduckgo.com/"
 
   livecheck do
-    url "https://staticcdn.duckduckgo.com/macos-desktop-browser/appcast.xml"
+    url "https://staticcdn.duckduckgo.com/macos-desktop-browser/appcast2.xml"
     strategy :sparkle
   end
 
