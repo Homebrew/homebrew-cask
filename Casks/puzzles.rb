@@ -8,8 +8,8 @@ cask "puzzles" do
   homepage "https://www.chiark.greenend.org.uk/~sgtatham/puzzles/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://www.chiark.greenend.org.uk/~sgtatham/puzzles/devel/"
+    regex(/collection,\sversion\s(\d+(?:\.[\d\w]+)+)/i)
   end
 
   app "Puzzles.app"
