@@ -50,8 +50,8 @@ cask "omnigraffle" do
     end
   end
   on_big_sur :or_newer do
-    version "7.21.3"
-    sha256 "40ec6ae558cf0345277f1d59dffc50ff0072de98f4c6ccff36a5236524c995b0"
+    version "7.21.4"
+    sha256 "9ad515f5171164460ed766fa8c256ddc740e0a794122550dd1f2995c68cfd81e"
 
     url "https://downloads.omnigroup.com/software/macOS/11/OmniGraffle-#{version}.dmg"
 
@@ -69,5 +69,12 @@ cask "omnigraffle" do
 
   app "OmniGraffle.app"
 
-  zap trash: "~/Library/Application Support/The Omni Group/OmniGraffle"
+  zap trash: [
+    "~/Library/Application Scripts/com.omnigroup.OmniGraffle#{version.major}",
+    "~/Library/Application Support/CloudDocs/session/containers/iCloud.com.omnigroup.OmniGraffle.plist",
+    "~/Library/Application Support/CloudDocs/session/containers/iCloud.com.omnigroup.OmniGraffle/",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.omnigroup.omnigraffle#{version.major}.sfl2",
+    "~/Library/Containers/com.omnigroup.OmniGraffle#{version.major}",
+    "~/Library/Mobile Documents/iCloud~com~omnigroup~OmniGraffle",
+  ]
 end
