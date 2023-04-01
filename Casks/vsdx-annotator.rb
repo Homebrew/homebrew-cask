@@ -1,5 +1,5 @@
 cask "vsdx-annotator" do
-  version "1.16.1,563"
+  version "1.16.1"
   sha256 :no_check
 
   url "https://nektony.com/download/vsdxannotator.dmg"
@@ -9,7 +9,7 @@ cask "vsdx-annotator" do
 
   livecheck do
     url "https://nektony.com/promo/vsdx-annotator/update/update.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   depends_on macos: ">= :high_sierra"

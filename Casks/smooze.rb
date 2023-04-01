@@ -1,5 +1,5 @@
 cask "smooze" do
-  version "2.0.0,600"
+  version "2.0.0"
   sha256 :no_check
 
   url "https://smooze.co/updates/Smooze.dmg"
@@ -9,7 +9,7 @@ cask "smooze" do
 
   livecheck do
     url "https://smooze.co/updates/update.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

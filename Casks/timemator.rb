@@ -1,8 +1,8 @@
 cask "timemator" do
-  version "3.0.2,175"
+  version "3.0.2"
   sha256 "dfea3d35568605740a9570d26992e4cbbcf704ca3542f6cc5988766ee39a24f8"
 
-  url "https://s3-eu-west-1.amazonaws.com/catforce-timemator/releases/Timemator_#{version.csv.first}.dmg",
+  url "https://s3-eu-west-1.amazonaws.com/catforce-timemator/releases/Timemator_#{version}.dmg",
       verified: "s3-eu-west-1.amazonaws.com/catforce-timemator/"
   name "Timemator"
   desc "Automatic time-tracking application"
@@ -10,7 +10,7 @@ cask "timemator" do
 
   livecheck do
     url "https://catforce-timemator.s3.amazonaws.com/releases/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

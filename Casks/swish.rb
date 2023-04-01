@@ -1,8 +1,8 @@
 cask "swish" do
-  version "1.10,57"
+  version "1.10"
   sha256 "0ffc43a1cef2ee71f7262a85851f79838fd10f7393b86f73df106a599e1e6293"
 
-  url "https://github.com/chrenn/swish-dl/releases/download/#{version.csv.first}/Swish.dmg",
+  url "https://github.com/chrenn/swish-dl/releases/download/#{version}/Swish.dmg",
       verified: "github.com/chrenn/swish-dl/"
   name "Swish"
   desc "Control windows and applications right from your trackpad"
@@ -10,7 +10,7 @@ cask "swish" do
 
   livecheck do
     url "https://highlyopinionated.co/swish/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
