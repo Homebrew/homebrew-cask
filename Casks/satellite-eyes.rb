@@ -5,13 +5,15 @@ cask "satellite-eyes" do
   url "https://satellite-eyes.s3.amazonaws.com/satellite-eyes-#{version}.zip",
       verified: "satellite-eyes.s3.amazonaws.com/"
   name "Satellite Eyes"
-  desc "Automatically changes your desktop wallpaper to the satellite view of where you are"
+  desc "Changes your desktop wallpaper to the satellite view of where you are"
   homepage "https://satelliteeyes.tomtaylor.co.uk/"
 
   livecheck do
     url "https://satellite-eyes.s3.amazonaws.com/appcast.xml"
     strategy :sparkle, &:short_version
   end
+
+  depends_on macos: ">= :sierra"
 
   app "Satellite Eyes.app"
 end
