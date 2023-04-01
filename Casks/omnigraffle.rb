@@ -69,5 +69,12 @@ cask "omnigraffle" do
 
   app "OmniGraffle.app"
 
-  zap trash: "~/Library/Application Support/The Omni Group/OmniGraffle"
+  zap trash: [
+    "~/Library/Application Scripts/com.omnigroup.OmniGraffle#{version.major}",
+    "~/Library/Application Support/CloudDocs/session/containers/iCloud.com.omnigroup.OmniGraffle.plist",
+    "~/Library/Application Support/CloudDocs/session/containers/iCloud.com.omnigroup.OmniGraffle/",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.omnigroup.omnigraffle#{version.major}.sfl2",
+    "~/Library/Containers/com.omnigroup.OmniGraffle#{version.major}",
+    "~/Library/Mobile Documents/iCloud~com~omnigroup~OmniGraffle",
+  ]
 end
