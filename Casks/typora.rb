@@ -13,6 +13,7 @@ cask "typora" do
   end
 
   auto_updates true
+  conflicts_with cask: "homebrew/cask-versions/typora-dev"
   depends_on macos: ">= :catalina"
 
   app "Typora.app"
