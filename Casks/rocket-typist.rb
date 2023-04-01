@@ -12,7 +12,7 @@ cask "rocket-typist" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :ventura"
 
   app "Rocket Typist.app"
 end
