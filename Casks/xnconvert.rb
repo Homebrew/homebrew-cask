@@ -13,4 +13,6 @@ cask "xnconvert" do
   end
 
   app "XnConvert.app"
+
+  zap trash: "~/Library/Preferences/com.xnview.XnConvert.plist"
 end
