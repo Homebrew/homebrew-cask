@@ -13,7 +13,8 @@ cask "avast-security" do
     regex(%r{<h2>(\d+(?:\.\d+)+).*</h2>}i)
   end
 
-  pkg "Install Avast Security.pkg"
+  # pkg cannot be installed automatically
+  installer manual: "Install Avast Security.pkg"
 
   uninstall script:    {
               executable:   "/Applications/Avast.app/Contents/Backend/hub/uninstall.sh",
