@@ -22,4 +22,10 @@ cask "usmart-trade" do
   end
 
   app "uSMART Trade.app"
+
+  zap trash: [
+    "~/Library/Application Support/uSmart",
+    "~/Library/Preferences/com.usmart.mac.test.plist",
+    "~/Library/Saved Application State/com.usmart.mac.test.savedState",
+  ]
 end
