@@ -18,10 +18,10 @@ cask "activedock" do
   app "ActiveDock #{version.major}.app"
 
   zap trash: [
-    "/Users/razvanazamfirei/Library/Application Support/ActiveDock #{version.major}",
-    "/Users/razvanazamfirei/Library/Application Support/com.sergey-gerasimenko.ActiveDock-#{version.major}",
-    "/Users/razvanazamfirei/Library/Caches/com.sergey-gerasimenko.ActiveDock-#{version.major}",
-    "/Users/razvanazamfirei/Library/HTTPStorages/com.sergey-gerasimenko.ActiveDock-#{version.major}",
-    "/Users/razvanazamfirei/Library/Preferences/com.sergey-gerasimenko.ActiveDock-#{version.major}.plist",
+    "~/Library/Application Support/ActiveDock #{version.major}",
+    "~/Library/Application Support/com.sergey-gerasimenko.ActiveDock-#{version.major}",
+    "~/Library/Caches/com.sergey-gerasimenko.ActiveDock-#{version.major}",
+    "~/Library/HTTPStorages/com.sergey-gerasimenko.ActiveDock-#{version.major}",
+    "~/Library/Preferences/com.sergey-gerasimenko.ActiveDock-#{version.major}.plist",
   ]
 end
