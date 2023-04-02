@@ -2,7 +2,6 @@ cask "virtualbox-arm" do
   version "7.0.6,155176"
   sha256 "0f3c380155a2bf8582058b1d7ae073a7fa76f9c1843f7e78c3dfe6cdcefe73bd"
 
-
   url "https://download.virtualbox.org/virtualbox/#{version.csv.first}/VirtualBox-#{version.csv.first}_BETA4-#{version.csv.second}-macOSArm64.dmg"
   name "Oracle VirtualBox-ARM"
   desc "Virtualizer for ARM hardware"
