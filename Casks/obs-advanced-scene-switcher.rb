@@ -18,4 +18,6 @@ cask "obs-advanced-scene-switcher" do
   uninstall pkgutil: "com.warmuptill.advanced-scene-switcher",
             delete:  "/Library/Application Support/obs-studio/plugins/advanced-scene-switcher.plugin",
             rmdir:   "/Library/Application Support/obs-studio/plugins"
+
+  # No zap stanza required
 end
