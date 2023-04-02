@@ -13,8 +13,8 @@ cask "usmart-trade" do
     regex(%r{
       /(\d{4}\b[._-]\d{2}\b[._-]\d{2}\b)
       /([0-9a-f]{8}\b-[0-9a-f]{4}\b-[0-9a-f]{4}\b-[0-9a-f]{4}\b-[0-9a-f]{12})
-      /uSMART Trade[._-](\d+(?:\.\d+)+)\.dmg
-    }x)
+      /uSMART\sTrade[._-](\d+(?:\.\d+)+)\.dmg
+    }ix)
     strategy :page_match do |page|
       page.scan(regex)
           .map { |match| "#{match[2]},#{match[1]},#{match[0]}" }
