@@ -13,7 +13,7 @@ cask "klayout" do
     end
   end
   on_big_sur do
-    sha256 "300793de11ac048e6e0b5f3925504b2f4970f8bf9c12ec68586d5eb0e34fde8d"
+    sha256 "d104d4a6181ef7132849ed486f939cff7a6a7d32e82290e7080c00885f097cd0"
 
     url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-BigSur-1-qt5Brew-RsysPhb39.dmg",
         verified: "klayout.org/downloads/MacOS/"
@@ -24,7 +24,7 @@ cask "klayout" do
     end
   end
   on_monterey do
-    sha256 "53e52a30ac8aefbc2ac832c7feb7e2ef7d191aa847c7f2c71286c5c0ae821d5d"
+    sha256 "f6218a31342193e2f0bcc771c77132ec3adc83305902b4a3b7c7607eacbb9c50"
 
     url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Monterey-1-qt5Brew-RsysPhb39.dmg",
         verified: "klayout.org/downloads/MacOS/"
