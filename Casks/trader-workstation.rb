@@ -33,4 +33,6 @@ cask "trader-workstation" do
               executable: "/Applications/Trader Workstation/Trader Workstation Uninstaller.app/Contents/MacOS/JavaApplicationStub",
               args:       ["-q"],
             }
+
+  zap trash: "/Applications/Trader Workstation"
 end
