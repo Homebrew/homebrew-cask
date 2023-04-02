@@ -6,7 +6,7 @@ cask "usmart-trade" do
       verified: "jy-common-prd-1257884527.cos.ap-guangzhou.myqcloud.com/admin/app-version-file/"
   name "uSMART Trade"
   desc "Trade Stocks & Options"
-  homepage "https://www.usmart.hk/"
+  homepage "https://www.usmartglobal.com/"
 
   livecheck do
     url "https://www.usmart.hk/en/download"
