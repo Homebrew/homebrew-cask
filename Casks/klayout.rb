@@ -61,4 +61,6 @@ cask "klayout" do
 
   uninstall pkgutil: "klayout.de",
             quit:    "klayout.de"
+
+  zap trash: "~/.klayout"
 end
