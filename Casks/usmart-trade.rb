@@ -10,8 +10,11 @@ cask "usmart-trade" do
 
   livecheck do
     url "https://www.usmart.hk/en/download"
-    regex(%r{/(\d{4}\b[._-]\d{2}\b[._-]\d{2}\b)/([0-9a-f]{8}\b-[0-9a-f]{4}\b-[0-9a-f]{4}\b-[0-9a-f]{4}\b-[0-9a-f]{12})
-/uSMART Trade[._-](\d+(?:\.\d+)+)\.dmg}i)
+    regex(%r{
+      /(\d{4}\b[._-]\d{2}\b[._-]\d{2}\b)
+      /([0-9a-f]{8}\b-[0-9a-f]{4}\b-[0-9a-f]{4}\b-[0-9a-f]{4}\b-[0-9a-f]{12})
+      /uSMART Trade[._-](\d+(?:\.\d+)+)\.dmg
+    }x)
     strategy :page_match do |page|
       page.scan(regex)
           .map { |match| "#{match[2]},#{match[1]},#{match[0]}" }
