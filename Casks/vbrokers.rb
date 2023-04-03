@@ -15,7 +15,7 @@ cask "vbrokers" do
           .map { |match| "#{match[1]},#{match[0]},#{match[2]}" }
     end
   end
-  
+
   # Rename to match displayed name
   app "HSTong.app", target: "VBrokers.app"
 
