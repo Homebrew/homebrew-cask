@@ -4,7 +4,7 @@ cask "vbrokers" do
 
   url "https://r.hstong.com/public/app/Mac/HSTONG_Mac_#{version.csv.second}_#{version.csv.first}_#{version.csv.third}.dmg"
   name "VBrokers"
-  desc "Trading platform by Valuable Capital Limited"
+  desc "Trading platform"
   homepage "https://www.hstong.com/"
 
   livecheck do
@@ -15,7 +15,8 @@ cask "vbrokers" do
           .map { |match| "#{match[1]},#{match[0]},#{match[2]}" }
     end
   end
-
+  
+  # Rename to match displayed name
   app "HSTong.app", target: "VBrokers.app"
 
   zap trash: [
