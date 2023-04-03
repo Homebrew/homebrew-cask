@@ -4,7 +4,7 @@ cask "mullvad-browser" do
 
   url "https://cdn.mullvad.net/browser/#{version}/MullvadBrowser-#{version}-macos_ALL.dmg"
   name "Mullvad Browser"
-  desc "Firefox fork with anti-fingerprinting features from Tor Browser"
+  desc "Web browser focused on privacy and on minimizing tracking and fingerprinting"
   homepage "https://mullvad.net/en/browser"
 
   livecheck do
