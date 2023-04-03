@@ -24,5 +24,5 @@ cask "protokol" do
     "~/Library/Logs/net.hexler.Protokol",
     "~/Library/Preferences/net.hexler.Protokol.plist",
   ],
-      rmdir: "~/Documents/Protokol",
+      rmdir: "~/Documents/Protokol"
 end
