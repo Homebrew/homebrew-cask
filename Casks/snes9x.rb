@@ -8,11 +8,6 @@ cask "snes9x" do
   desc "Video game console emulator"
   homepage "https://www.snes9x.com/"
 
-  livecheck do
-    url :url
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
-  end
-
   app "Snes9x.app"
 
   zap trash: [
