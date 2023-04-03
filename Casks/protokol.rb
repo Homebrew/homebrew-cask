@@ -16,13 +16,13 @@ cask "protokol" do
 
   app "Protokol.app"
 
-  zap rmdir: "~/Documents/Protokol",
-      trash: [
+  zap trash: [
         "~/Library/Application Support/net.hexler.Protokol",
         "~/Library/Caches/net.hexler.Protokol",
         "~/Library/HTTPStorages/net.hexler.Protokol",
         "~/Library/HTTPStorages/net.hexler.Protokol.binarycookies",
         "~/Library/Logs/net.hexler.Protokol",
         "~/Library/Preferences/net.hexler.Protokol.plist",
-      ]
+      ],
+      rmdir: "~/Documents/Protokol"
 end
