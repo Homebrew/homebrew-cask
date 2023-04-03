@@ -6,5 +6,10 @@ cask "rember" do
   name "Rember"
   homepage "https://www.kelleycomputing.net/rember/"
 
+  livecheck do
+    url :homepage
+    regex(/Rember\s*(?:<[^>]+>\s*<[^>]+>)?\s*v[._-](\d+(?:\.\d+)+b?)/i)
+  end
+
   app "Rember.app"
 end

@@ -6,7 +6,16 @@ cask "wonderfultools-screensaver" do
   name "Wonderful Tools Screensaver"
   homepage "https://github.com/aidev1065/Wonderful-Tools-Screensaver/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   screen_saver "WonderfulTools.saver"
 
   zap trash: "~/Library/Caches/WonderfulTools"
+
+  caveats do
+    discontinued
+  end
 end

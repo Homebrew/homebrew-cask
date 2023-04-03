@@ -1,10 +1,15 @@
 cask "license-control-center" do
-  version :latest
+  version "6.12.8.3317"
   sha256 :no_check
 
   url "https://download.steinberg.net/downloads/eLicenserControl.dmg"
   name "eLicenser Control Center"
   homepage "https://www.steinberg.net/en/company/technologies/elicenser.html"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   installer manual: "eLicenserControlSetup.app"
 

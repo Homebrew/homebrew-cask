@@ -1,11 +1,16 @@
 cask "papers" do
-  version :latest
+  version "1.1,107"
   sha256 :no_check
 
   url "https://download.readcube.com/app/Install%20Papers.zip"
   name "ReadCube Papers"
   desc "Reference management software for researchers"
   homepage "https://www.readcube.com/home"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   installer manual: "Papers Installer.app"
 

@@ -1,11 +1,16 @@
 cask "starcraft" do
-  version :latest
+  version "1.18.5.3106"
   sha256 :no_check
 
   url "https://www.battle.net/download/getInstallerForGame?os=MAC&version=LIVE&gameProgram=STARCRAFT",
       verified: "battle.net/"
   name "Starcraft"
   homepage "https://starcraft.com/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   depends_on macos: ">= :el_capitan"
 
