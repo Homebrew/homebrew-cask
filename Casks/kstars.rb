@@ -16,4 +16,11 @@ cask "kstars" do
   depends_on macos: ">= :catalina"
 
   app "kstars.app"
+
+  zap trash: [
+    "~/Library/Application Support/kstars",
+    "~/Library/Caches/kstars",
+    "~/Library/Preferences/kstars",
+    "~/Library/Preferences/kstarsrc",
+  ]
 end
