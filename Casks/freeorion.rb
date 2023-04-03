@@ -13,5 +13,12 @@ cask "freeorion" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :sierra"
+
   app "FreeOrion.app"
+
+  zap trash: [
+    "~/Library/Application Support/FreeOrion",
+    "~/Library/Saved Application State/org.freeorion.FreeOrion.savedState",
+  ]
 end
