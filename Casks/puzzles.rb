@@ -7,11 +7,6 @@ cask "puzzles" do
   desc "Collection of small computer programs which implement one-player puzzle games"
   homepage "https://www.chiark.greenend.org.uk/~sgtatham/puzzles/"
 
-  livecheck do
-    url "https://www.chiark.greenend.org.uk/~sgtatham/puzzles/devel/"
-    regex(/collection,\sversion\s(\d+(?:\.[\d\w]+)+)/i)
-  end
-
   app "Puzzles.app"
 
   zap trash: [
