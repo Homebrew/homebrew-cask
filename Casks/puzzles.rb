@@ -11,7 +11,8 @@ cask "puzzles" do
     url "https://www.chiark.greenend.org.uk/~sgtatham/puzzles/devel/"
     regex(/collection,\s+version\s+(\d+)\.\w+/i)
     strategy :page_match do |page, regex|
-      next version if Date.parse(version) + 5 <= Date.today
+      # Throttle updates to one every 2 days.
+      next version if Date.parse(version) + 2 <= Date.today
       page[regex, 1]
     end
   end
