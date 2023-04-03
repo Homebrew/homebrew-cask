@@ -27,6 +27,7 @@ cask "kotlin-native" do
   binary "kotlin-native-macos-#{arch}-#{version}/bin/kotlinc-native"
   binary "kotlin-native-macos-#{arch}-#{version}/bin/run_konan"
 
+  # No zap stanza required
   caveats do
     depends_on_java "6+"
   end
