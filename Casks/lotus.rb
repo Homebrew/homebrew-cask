@@ -3,7 +3,7 @@ cask "lotus" do
   sha256 :no_check
 
   url "https://app-updates.vadimdemedes.com/lotus/download/osx",
-      verified: "app-updates.vadimdemedes.com/lotus/download/osx"
+      verified: "app-updates.vadimdemedes.com/lotus/download/"
   name "Lotus"
   desc "Keep up with GitHub notifications"
   homepage "https://getlotus.app/"
@@ -25,4 +25,8 @@ cask "lotus" do
     "~/Library/Preferences/com.vadimdemedes.Lotus.plist",
     "~/Library/Saved Application State/com.vadimdemedes.Lotus.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
