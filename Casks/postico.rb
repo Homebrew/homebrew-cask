@@ -1,4 +1,4 @@
-cask "postico@2" do
+cask "postico" do
   version "2.0.1,9593"
   sha256 "0a8d012ae67e51001c94c87f98274010524e94771d3a7009fb09eaa4e492e29a"
 
@@ -8,14 +8,23 @@ cask "postico@2" do
   homepage "https://eggerapps.at/postico2/"
 
   livecheck do
-    url "https://releases.eggerapps.at/postico2/download"
-    strategy :extract_plist
+    url "https://releases.eggerapps.at/postico2/changelog"
+    strategy :page_match do |page|
+      v = page.match(/["']>\n*?(\d+(?:\.\d+)+)/i)
+      build = page.match(/Build\s+(\d+?)</)
+      next if v.blank? || build.blank?
+
+      "#{v[1]},#{build[1]}"
+    end
   end
 
-  app "Postico 2.app"
+  conflicts_with cask: "homebrew/cask-versions/postico1"
+
+  app "Postico #{version.major}.app"
 
   zap trash: [
     "~/Library/Application Scripts/at.eggerapps.Postico",
+    "~/Library/Caches/at.eggerapps.Postico",
     "~/Library/Containers/at.eggerapps.Postico",
     "~/Library/Preferences/at.eggerapps.Postico.plist",
     "~/Library/Saved Application State/at.eggerapps.Postico.savedState",
