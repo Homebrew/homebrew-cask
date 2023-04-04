@@ -1,5 +1,5 @@
 cask "puzzles" do
-  version "20230403"
+  version "20230404"
   sha256 :no_check
 
   url "https://www.chiark.greenend.org.uk/~sgtatham/puzzles/Puzzles.dmg"
@@ -12,7 +12,7 @@ cask "puzzles" do
     regex(/collection,\s+version\s+(\d+)\.\w+/i)
     strategy :page_match do |page, regex|
       # Throttle updates to one every 2 days.
-      next version if Date.parse(version) + 2 < Date.today
+      next version if Date.parse(version) + 2 > Date.today
 
       page[regex, 1]
     end
