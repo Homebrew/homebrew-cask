@@ -8,8 +8,8 @@ cask "dingtalk" do
     sha256 "e7b80cd95c8d0165f95412233140db8ecf5b797b7b4d5f3d9a57e11b03944004"
   end
   on_intel do
-    version "7.0.20.10_29119394"
-    sha256 "a07c3067c295e45fbf0204adb46ca447399ca35fc025b109c79023e4bbeba61a"
+    version "7.0.20.11_29139778"
+    sha256 "92286b58154b1155a7d24c5a628032f9e4c07c71356f097e42481537dc7092d9"
   end
 
   url "https://dtapp-pub.dingtalk.com/dingtalk-desktop/mac_dmg/Release/#{folder}DingTalk_v#{version}_#{arch}.dmg"
