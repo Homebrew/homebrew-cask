@@ -1,4 +1,4 @@
-cask "tip" do
+cask "tinybar" do
   version "0.4.0"
   sha256 "032b1284d3f3ef328d6c1de6cad51b3afba35a4216ad54f3e6724ffdd05bd68d"
 
