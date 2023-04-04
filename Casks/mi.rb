@@ -9,7 +9,7 @@ cask "mi" do
 
   livecheck do
     url "https://www.mimikaki.net/download/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   conflicts_with cask: "homebrew/cask-versions/mi-beta"
