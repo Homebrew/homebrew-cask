@@ -4,8 +4,8 @@ cask "dingtalk" do
   linkid = on_arch_conditional arm: "qd=2022mac-m1"
 
   on_arm do
-    version "7.0.22.4_29119460"
-    sha256 "e162e2170c7696d160ac56aedd748bb0c1e4a3a63d3ca8a30200abd06e9a3e77"
+    version "7.0.22.5_29139817"
+    sha256 "e7b80cd95c8d0165f95412233140db8ecf5b797b7b4d5f3d9a57e11b03944004"
   end
   on_intel do
     version "7.0.20.10_29119394"
