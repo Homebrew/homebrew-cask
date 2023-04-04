@@ -12,7 +12,7 @@ cask "puzzles" do
     regex(/collection,\s+version\s+(\d+)\.\w+/i)
     strategy :page_match do |page, regex|
       # Throttle updates to one every 2 days.
-      next version if Date.parse(version) + 2 < Date.today
+      next version if Date.parse(version) + 2 > Date.today
 
       page[regex, 1]
     end
