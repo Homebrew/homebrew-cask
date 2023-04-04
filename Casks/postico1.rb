@@ -1,4 +1,4 @@
-cask "postico@1" do
+cask "postico1" do
   version "1.5.22,9592"
   sha256 "8adcbe10a1a077739e56d5c2795b763d9e1c546b773c65fcfd9eb03e0edad8d7"
 
@@ -12,7 +12,10 @@ cask "postico@1" do
     strategy :extract_plist
   end
 
-  app "Postico.app"
+  conflicts_with cask: "postico"
+
+  # Rename to prevent confusion with main postico cask
+  app "Postico 2.app", target: "Postico #{version.major}.app"
 
   zap trash: [
     "~/Library/Application Scripts/at.eggerapps.Postico",
