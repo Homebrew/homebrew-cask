@@ -38,9 +38,8 @@ cask "free-gpgmail" do
     end
   end
 
-  auto_updates false
-  depends_on macos: ">= :mojave"
   depends_on cask: "gpg-suite-no-mail"
+  depends_on macos: ">= :mojave"
 
   artifact "Free-GPGMail_#{version.csv.first.major}.mailbundle", target: "#{Dir.home}/Library/Mail/Bundles/Free-GPGMail_#{version.csv.first.major}.mailbundle"
 
