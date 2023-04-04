@@ -4,10 +4,11 @@ cask "beardie" do
 
   url "https://github.com/Stillness-2/beardie/releases/download/v#{version}/Beardie.app.zip"
   name "Beardie"
-  desc "Allows to control various media players with your keyboard"
+  desc "Control various media players with your keyboard"
   homepage "https://github.com/Stillness-2/beardie"
 
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "Beardie.app"
 
