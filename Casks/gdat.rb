@@ -23,5 +23,6 @@ cask "gdat" do
 
   caveats do
     requires_rosetta
+    license "https://www.getgdat.com/home/download/terms-of-use"
   end
 end
