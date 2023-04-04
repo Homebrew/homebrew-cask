@@ -8,13 +8,14 @@ cask "mattermost" do
   url "https://releases.mattermost.com/desktop/#{version}/mattermost-desktop-#{version}-mac-#{arch}.zip"
   name "Mattermost"
   desc "Open-source, self-hosted Slack-alternative"
-  homepage "https://about.mattermost.com/"
+  homepage "https://mattermost.com/"
 
   livecheck do
-    url "https://docs.mattermost.com/install/desktop-app-install.html#macos-10-9"
-    regex(%r{href=.*?/mattermost[._-]desktop[._-]v?(\d+(?:\.\d+)+)[._-]mac[._-]#{arch}\.dmg}i)
+    url "https://github.com/mattermost/desktop/"
+    strategy :github_latest
   end
 
+  autoupdates true
   depends_on macos: ">= :catalina"
 
   app "Mattermost.app"
