@@ -40,7 +40,7 @@ cask "suspicious-package" do
     end
   end
   on_big_sur :or_newer do
-    version "4.3.1,999"
+    version "4.3.2,1065"
     sha256 :no_check
 
     url "https://www.mothersruin.com/software/downloads/SuspiciousPackage.dmg"
