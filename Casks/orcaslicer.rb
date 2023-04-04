@@ -7,7 +7,7 @@ cask "orcaslicer" do
 
   url "https://github.com/SoftFever/OrcaSlicer/releases/download/v#{version}/OrcaSlicer_V#{version}_Mac_#{arch}.zip"
   name "Orca Slicer"
-  desc "Custom fork of Bambu Studio with many custom enhancements"
+  desc "G-code generator for 3D printers"
   homepage "https://github.com/SoftFever/OrcaSlicer"
 
   app "OrcaSlicer.app"
