@@ -8,10 +8,16 @@ cask "minizincide" do
   desc "Open-source constraint modeling language and IDE"
   homepage "https://www.minizinc.org/index.html"
 
+  auto_updates true
   conflicts_with formula: "minizinc"
   depends_on macos: ">= :sierra"
 
   app "MiniZincIDE.app"
   binary "#{appdir}/MiniZincIDE.app/Contents/Resources/minizinc"
   binary "#{appdir}/MiniZincIDE.app/Contents/Resources/mzn2doc"
+
+  zap trash: [
+    "~/Library/Preferences/org.minizinc.MiniZinc IDE (bundled).plist",
+    "~/Library/Saved Application State/org.minizinc.MiniZincIDE.savedState",
+  ]
 end
