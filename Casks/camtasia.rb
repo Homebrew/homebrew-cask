@@ -1,6 +1,6 @@
 cask "camtasia" do
-  version "2022.6.6"
-  sha256 "93c89849683b155b9cd28b34c4449a6492215b4386c96b9fc12b72c8e4aad2ae"
+  version "2022.6.7"
+  sha256 "c85e508df613d053dfb53adbe8b2f5c84cd8111a1b9bd3b0423eb3087cf17567"
 
   url "https://download.techsmith.com/camtasiamac/releases/#{version.major[-2..]}#{version.minor_patch.no_dots}/Camtasia.dmg"
   name "Camtasia"
