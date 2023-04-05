@@ -15,4 +15,14 @@ cask "prezi-next" do
   depends_on macos: ">= :el_capitan"
 
   app "Prezi Next.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.prezi.pitch.desktop",
+    "~/Library/Caches/com.prezi.pitch.desktop",
+    "~/Library/HTTPStorages/com.prezi.pitch.desktop",
+    "~/Library/Logs/Prezi Next",
+    "~/Library/Logs/Prezi Next_debug.log",
+    "~/Library/Preferences/com.prezi.pitch.desktop.plist",
+    "~/Library/Saved Application State/com.prezi.pitch.desktop.savedState",
+  ]
 end
