@@ -42,6 +42,9 @@ cask "google-cloud-sdk" do
          target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_google-cloud-sdk"
 
   preflight do
+    # HACK: Allow existing shell profiles to work by linking the current version to the `latest` directory.
+    FileUtils.ln_s staged_path, (staged_path.dirname/"latest"), force: true
+
     FileUtils.cp_r staged_path/"google-cloud-sdk/.", google_cloud_sdk_root, remove_destination: true
     (staged_path/"google-cloud-sdk").rmtree
     FileUtils.ln_s google_cloud_sdk_root, (staged_path/"google-cloud-sdk")
