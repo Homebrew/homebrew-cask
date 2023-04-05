@@ -16,7 +16,9 @@ cask "geneious-prime" do
 
   zap trash: [
     "~/Geneious #{version.major}.0 Data",
+    "~/Library/Application Support/Geneious",
     "~/Library/Preferences/com.biomatters.*.plist",
+    "~/Library/Preferences/Geneious.in.use.vmoptions",
     "~/Library/Saved Application State/com.biomatters.Geneious.savedState",
   ]
 end
