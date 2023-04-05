@@ -1,5 +1,5 @@
 cask "battle-net" do
-  version :latest
+  version "1.18.5.3106"
   sha256 :no_check
 
   language "en", default: true do
@@ -12,6 +12,11 @@ cask "battle-net" do
   name "Blizzard Battle.net"
   desc "Online gaming platform"
   homepage "https://www.battle.net/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   installer manual: "Battle.net-Setup.app"
 

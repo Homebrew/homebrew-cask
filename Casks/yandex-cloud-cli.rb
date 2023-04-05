@@ -1,11 +1,16 @@
 cask "yandex-cloud-cli" do
-  version :latest
+  version "0.102.0"
   sha256 :no_check
 
   url "https://storage.yandexcloud.net/yandexcloud-yc/install.sh",
       verified: "yandexcloud.net/yandexcloud-yc/"
   name "Yandex Cloud CLI"
   homepage "https://cloud.yandex.com/docs/cli/"
+
+  livecheck do
+    url "https://cloud.yandex.com/en/docs/cli/release-notes"
+    regex(/Version\s+(\d+(?:\.\d+)+)\s+\(/)
+  end
 
   installer script: {
     executable: "install.sh",
