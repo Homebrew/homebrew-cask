@@ -15,4 +15,14 @@ cask "one-switch" do
   depends_on macos: ">= :catalina"
 
   app "One Switch.app"
+
+  zap trash: [
+    "~/Library/Application Support/One Switch",
+    "~/Library/Application Support/studio.fireball.OneSwitch",
+    "~/Library/Caches/studio.fireball.OneSwitch",
+    "~/Library/HTTPStorages/studio.fireball.OneSwitch",
+    "~/Library/HTTPStorages/studio.fireball.OneSwitch.binarycookies",
+    "~/Library/Preferences/studio.fireball.OneSwitch.plist",
+    "~/Library/WebKit/studio.fireball.OneSwitch",
+  ]
 end
