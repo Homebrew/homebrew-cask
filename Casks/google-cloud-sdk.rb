@@ -50,9 +50,7 @@ cask "google-cloud-sdk" do
     FileUtils.ln_s google_cloud_sdk_root, (staged_path/"google-cloud-sdk")
   end
 
-  # Not actually necessary, since it would be deleted anyway.
-  # It is present to make clear an uninstall was not forgotten and that for this cask it is indeed this simple.
-  uninstall delete: "#{staged_path}/google-cloud-sdk"
+  uninstall delete: staged_path.dirname/"latest"
 
   zap trash: [
     google_cloud_sdk_root,
