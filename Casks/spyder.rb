@@ -16,4 +16,11 @@ cask "spyder" do
   depends_on macos: ">= :catalina"
 
   app "Spyder.app"
+
+  zap trash: [
+    "~/.spyder-py3",
+    "~/Library/Application Support/Spyder",
+    "~/Library/Caches/Spyder",
+    "~/Library/Saved Application State/org.spyder-ide.Spyder.savedState",
+  ]
 end
