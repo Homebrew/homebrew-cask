@@ -1,6 +1,6 @@
 cask "prezi-next" do
-  version "1.62.0"
-  sha256 "8532d4fbe78e608a5c6412a048bff1e7537e94da57658e037506ca04bfefa933"
+  version "1.62.1"
+  sha256 "d693ce18fc2bb1cf8bed4642fc5c88a91331d375f0954847435eb89f28a49e52"
 
   url "https://desktopassets.prezi.com/mac/pitch/releases/Prezi_Next_#{version}.dmg"
   name "Prezi Next"
@@ -15,4 +15,14 @@ cask "prezi-next" do
   depends_on macos: ">= :el_capitan"
 
   app "Prezi Next.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.prezi.pitch.desktop",
+    "~/Library/Caches/com.prezi.pitch.desktop",
+    "~/Library/HTTPStorages/com.prezi.pitch.desktop",
+    "~/Library/Logs/Prezi Next",
+    "~/Library/Logs/Prezi Next_debug.log",
+    "~/Library/Preferences/com.prezi.pitch.desktop.plist",
+    "~/Library/Saved Application State/com.prezi.pitch.desktop.savedState",
+  ]
 end
