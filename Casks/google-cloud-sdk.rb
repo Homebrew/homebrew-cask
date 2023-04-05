@@ -39,7 +39,7 @@ cask "google-cloud-sdk" do
   binary "google-cloud-sdk/completion.bash.inc",
          target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/google-cloud-sdk"
   binary "google-cloud-sdk/completion.zsh.inc",
-         target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_google-cloud-sdk"
+         target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_google_cloud_sdk"
 
   preflight do
     # HACK: Allow existing shell profiles to work by linking the current version to the `latest` directory.
