@@ -1,7 +1,7 @@
 cask "chromium" do
   arch arm: "Mac_Arm", intel: "Mac"
 
-  version :latest
+  version "112.0.5615.49"
   sha256 :no_check
 
   url "https://download-chromium.appspot.com/dl/#{arch}?type=snapshots",
