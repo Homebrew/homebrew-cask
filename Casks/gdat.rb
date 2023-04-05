@@ -20,4 +20,9 @@ cask "gdat" do
   end
 
   app "OS X 64 bit/Genealogical DNA Analysis Tool.app"
+
+  caveats do
+    requires_rosetta
+    license "https://www.getgdat.com/home/download/terms-of-use"
+  end
 end
