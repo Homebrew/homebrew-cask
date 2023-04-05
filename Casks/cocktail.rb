@@ -93,4 +93,9 @@ cask "cocktail" do
   homepage "https://www.maintain.se/cocktail/"
 
   app "Cocktail.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.maintain.cocktail.plist",
+    "~/Library/Preferences/com.maintain.cocktail.ventura16.plist",
+  ]
 end
