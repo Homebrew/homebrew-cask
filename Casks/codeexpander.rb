@@ -26,4 +26,12 @@ cask "codeexpander" do
   end
 
   app "CodeExpander.app"
+
+  zap trash: [
+    "~/.codeexpander",
+    "~/Documents/codeexpander",
+    "~/Library/Logs/Codeexpander",
+    "~/Library/Preferences/com.codeexpander.plist",
+    "~/Library/Saved Application State/com.codeexpander.savedState",
+  ]
 end
