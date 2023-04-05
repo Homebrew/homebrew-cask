@@ -8,4 +8,6 @@ cask "codeql" do
   homepage "https://codeql.github.com/"
 
   binary "#{staged_path}/codeql/codeql"
+
+  # No zap stanza required
 end
