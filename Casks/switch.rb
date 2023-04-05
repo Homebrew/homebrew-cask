@@ -13,4 +13,13 @@ cask "switch" do
   end
 
   app "Switch.app"
+
+  zap trash: [
+    "~/Library/Application Support/Switch",
+    "~/Library/Application Support/SwitchSubStatAbort",
+    "~/Library/Caches/com.apple.tiswitcher.cache",
+    "~/Library/Caches/SwitchCounts.txt",
+    "~/Library/Preferences/ByHost/com.nchsoftware.switch.*.plist",
+    "~/Library/Preferences/com.nchsoftware.switch.plist",
+  ]
 end
