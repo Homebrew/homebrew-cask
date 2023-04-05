@@ -5,7 +5,7 @@ cask "carbide-create" do
   url "https://carbide-downloads.website-us-east-1.linodeobjects.com/cc/stable/#{version}/CarbideCreate-#{version}.dmg",
       verified: "carbide-downloads.website-us-east-1.linodeobjects.com/"
   name "Carbide Create"
-  desc "CAD/CAM Software for CNC Routers"
+  desc "CAD/CAM software for CNC routers"
   homepage "https://carbide3d.com/carbidecreate/"
 
   livecheck do
@@ -18,11 +18,8 @@ cask "carbide-create" do
   app "Carbide Create.app"
 
   zap trash: [
-    "~/Library/Preferences/com.carbide-3d.Carbide Create.plist",
     "~/Library/Preferences/Carbide 3D",
-    "~/Library/Preferences/Carbide 3D/Carbide Create",
-    "~/Library/Preferences/Carbide 3D/Carbide Createcarbidecreate_log.txt",
-    "~/Library/Preferences/com.carbide3d.Carbide Create.plist",
+    "~/Library/Preferences/com.carbide*.Carbide Create.plist",
     "~/Library/Saved Application State/com.carbide3d.Carbide Create.savedState",
   ]
 end
