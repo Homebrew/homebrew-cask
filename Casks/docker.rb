@@ -17,7 +17,7 @@ cask "docker" do
     sha256 arm:   "2ae4b2ec556c107f969e51b72ad1920fefa38dbd0d8e3db64815c26b9f2b126d",
            intel: "2e099af08e17666228282b970992160fa423ce8f5fa9e36b79495a1960803091"
 
-    depends_on macos: ">= :catalina"
+    depends_on macos: ">= :big_sur"
 
     livecheck do
       url "https://desktop.docker.com/mac/main/#{arch}/appcast.xml"
