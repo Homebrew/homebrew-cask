@@ -13,11 +13,11 @@ cask "docker" do
     end
   end
   on_big_sur :or_newer do
-    version "4.17.0,99724"
-    sha256 arm:   "5e01465d93dfe18d7678a96705e7c26bb654b6766f06373b5cffbf77c641bccc",
-           intel: "eb0531122a62859ce7b029e943fdad365603a916e6c15c107514c1e4a818d7ef"
+    version "4.18.0,104112"
+    sha256 arm:   "2ae4b2ec556c107f969e51b72ad1920fefa38dbd0d8e3db64815c26b9f2b126d",
+           intel: "2e099af08e17666228282b970992160fa423ce8f5fa9e36b79495a1960803091"
 
-    depends_on macos: ">= :catalina"
+    depends_on macos: ">= :big_sur"
 
     livecheck do
       url "https://desktop.docker.com/mac/main/#{arch}/appcast.xml"
