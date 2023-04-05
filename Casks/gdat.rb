@@ -3,7 +3,7 @@ cask "gdat" do
   sha256 "5079b12f9941de7a9631bba08d9e3470e794553f7d5a044969eafa95febda46c"
 
   url "https://drive.google.com/uc?export=download&id=#{version.csv.second}",
-      verified: "drive.google.com/"
+      verified: "drive.google.com/uc?export=download&id=#{version.csv.second}"
   name "Genealogical DNA Analysis Tool"
   desc "App that utilizes autosomal DNA to aid in the research of family trees"
   homepage "https://www.getgdat.com/"
