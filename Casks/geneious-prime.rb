@@ -13,4 +13,10 @@ cask "geneious-prime" do
   end
 
   app "Geneious Prime.app"
+
+  zap trash: [
+    "~/Geneious #{version.major}.0 Data",
+    "~/Library/Preferences/com.biomatters.*.plist",
+    "~/Library/Saved Application State/com.biomatters.Geneious.savedState",
+  ]
 end
