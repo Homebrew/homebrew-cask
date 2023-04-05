@@ -13,4 +13,14 @@ cask "logmein-client" do
   end
 
   app "LogMeIn Client.app"
+
+  zap trash: [
+    "~/Library/Application Support/LogMeIn Client",
+    "~/Library/Caches/com.logmein.ignition",
+    "~/Library/HTTPStorages/com.logmein.ignition",
+    "~/Library/HTTPStorages/com.logmein.ignition.binarycookies",
+    "~/Library/Logs/LogMeIn Client",
+    "~/Library/Preferences/com.logmein.ignition.plist",
+    "~/Library/Saved Application State/com.logmein.ignition.savedState",
+  ]
 end
