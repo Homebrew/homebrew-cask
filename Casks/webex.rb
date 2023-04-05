@@ -10,8 +10,8 @@ cask "webex" do
   homepage "https://www.webex.com/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://help.webex.com/en-us/article/mqkve8/Webex-App-%7C-Release-notes#"
+    regex(/p["']>mac[-._—]?(\d+(?:\.\d+)*)</i)
   end
 
   auto_updates true
