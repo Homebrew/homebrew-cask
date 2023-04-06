@@ -12,7 +12,7 @@ cask "postico" do
     strategy :page_match do |page|
       v = page[/["']>\n*?(\d+(?:\.\d+)+)/i, 1]
       build = page[/Build\s+(\d+)</, 1]
-      "#{v[1]},#{build[1]}" if v && build
+      "#{v},#{build}" if v && build
     end
   end
 
