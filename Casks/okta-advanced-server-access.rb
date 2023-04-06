@@ -14,6 +14,8 @@ cask "okta-advanced-server-access" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on macos: ">= :high_sierra"
+
   pkg "ScaleFT-#{version}.pkg"
 
   uninstall pkgutil: "com.scaleft.ScaleFT"
