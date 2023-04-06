@@ -9,7 +9,7 @@ cask "stack" do
 
   livecheck do
     url "https://filehosting-client.transip.nl/packages/stack/"
-    regex(%r{href=["'].*?stack/v?((?:2)(?:\.\d+){2}(?:[-_]\d+))["' >]}i)
+    regex(%r{href=["'](?:.*?/)?v?(2(?:[.-]\d+)+)["' >]}i)
   end
 
   app "stack.app"
