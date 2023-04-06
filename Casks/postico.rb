@@ -5,7 +5,7 @@ cask "postico" do
   url "https://downloads.eggerapps.at/postico/postico-#{version.csv.second}.dmg"
   name "Postico"
   desc "GUI client for PostgreSQL databases"
-  homepage "https://eggerapps.at/postico2/"
+  homepage "https://eggerapps.at/postico#{version.major}/"
 
   livecheck do
     url "https://releases.eggerapps.at/postico2/changelog"
