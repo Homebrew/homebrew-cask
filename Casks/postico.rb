@@ -10,11 +10,9 @@ cask "postico" do
   livecheck do
     url "https://releases.eggerapps.at/postico2/changelog"
     strategy :page_match do |page|
-      v = page.match(/["']>\n*?(\d+(?:\.\d+)+)/i)
-      build = page.match(/Build\s+(\d+?)</)
-      next if v.blank? || build.blank?
-
-      "#{v[1]},#{build[1]}"
+      v = page[/["']>\n*?(\d+(?:\.\d+)+)/i, 1]
+      build = page[/Build\s+(\d+)</, 1]
+      "#{v[1]},#{build[1]}" if v && build
     end
   end
 
