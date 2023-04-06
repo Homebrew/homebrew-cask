@@ -8,7 +8,6 @@ cask "minizincide" do
   desc "Open-source constraint modeling language and IDE"
   homepage "https://www.minizinc.org/index.html"
 
-  auto_updates true
   conflicts_with formula: "minizinc"
   depends_on macos: ">= :sierra"
 
