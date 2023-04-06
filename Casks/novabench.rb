@@ -13,4 +13,11 @@ cask "novabench" do
   end
 
   app "Novabench.app"
+
+  zap trash: [
+  "~/Library/Application Support/Novabench",
+  "~/Library/Caches/com.novabench.client",
+  "~/Library/Saved Application State/com.novabench.client.savedState",
+  "~/Library/WebKit/com.novabench.client",
+]
 end
