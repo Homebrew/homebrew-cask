@@ -28,6 +28,8 @@ cask "santa" do
             ],
             pkgutil:   "com.google.santa"
 
+  # No zap stanza required
+
   caveats "For #{token} to use EndpointSecurity, it must be granted Full Disk Access under " \
           "System Preferences → Security & Privacy → Privacy"
 end
