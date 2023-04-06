@@ -96,6 +96,6 @@ cask "cocktail" do
 
   zap trash: [
     "~/Library/Preferences/com.maintain.cocktail.plist",
-    "~/Library/Preferences/com.maintain.cocktail.ventura16.plist",
+    "~/Library/Preferences/com.maintain.cocktail.ventura#{version.major}.plist",
   ]
 end
