@@ -42,12 +42,16 @@ cask "google-cloud-sdk" do
          target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_google_cloud_sdk"
 
   preflight do
-    # HACK: Allow existing shell profiles to work by linking the current version to the `latest` directory.
-    FileUtils.ln_s staged_path, (staged_path.dirname/"latest"), force: true
-
     FileUtils.cp_r staged_path/"google-cloud-sdk/.", google_cloud_sdk_root, remove_destination: true
     (staged_path/"google-cloud-sdk").rmtree
     FileUtils.ln_s google_cloud_sdk_root, (staged_path/"google-cloud-sdk")
+  end
+
+  postflight do
+    # HACK: Allow existing shell profiles to work by linking the current version to the `latest` directory.
+    unless (latest_path = staged_path.dirname/"latest").directory?
+      FileUtils.ln_s staged_path, latest_path, force: true
+    end
   end
 
   uninstall delete: staged_path.dirname/"latest"
@@ -61,12 +65,12 @@ cask "google-cloud-sdk" do
     To add gcloud components to your PATH, add this to your profile:
 
       for bash users
-        source "#{google_cloud_sdk_root}/path.bash.inc"
+        source "$(brew --prefix)/share/google-cloud-sdk/path.bash.inc"
 
       for zsh users
-        source "#{google_cloud_sdk_root}/path.zsh.inc"
+        source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
 
       for fish users
-        source "#{google_cloud_sdk_root}/path.fish.inc"
+        source "$(brew --prefix)/share/google-cloud-sdk/path.fish.inc"
   EOS
 end
