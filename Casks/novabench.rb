@@ -1,5 +1,5 @@
 cask "novabench" do
-  version "5.1.0"
+  version "5.1.1"
   sha256 :no_check
 
   url "https://novabench.com/files/novabench.dmg"
@@ -13,4 +13,11 @@ cask "novabench" do
   end
 
   app "Novabench.app"
+
+  zap trash: [
+    "~/Library/Application Support/Novabench",
+    "~/Library/Caches/com.novabench.client",
+    "~/Library/Saved Application State/com.novabench.client.savedState",
+    "~/Library/WebKit/com.novabench.client",
+  ]
 end
