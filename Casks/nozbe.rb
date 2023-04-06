@@ -9,7 +9,7 @@ cask "nozbe" do
 
   livecheck do
     url "https://nozbe.help/general/release-notes"
-    regex(%r{newest["']>version\s*?(\d+(?:\.\d+)*).*?</}i)
+    regex(%r{id=["']newest["'][^>]*?>\s*version\s*(\d+(?:\.\d+)+)}i)
   end
 
   app "Nozbe.app"
