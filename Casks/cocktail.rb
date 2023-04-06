@@ -77,8 +77,8 @@ cask "cocktail" do
     end
   end
   on_ventura :or_newer do
-    version "16.3.2"
-    sha256 "1186a649648b9d45f6c8dd03a52d2283a7337aedd7b457b767c251497590dced"
+    version "16.3.3"
+    sha256 "053ebb4b9e1d63bbc74eebeafa5a66a6c8c664a306661633cbb0cc8481dbf6e9"
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}VE.dmg"
 
@@ -93,4 +93,9 @@ cask "cocktail" do
   homepage "https://www.maintain.se/cocktail/"
 
   app "Cocktail.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.maintain.cocktail.plist",
+    "~/Library/Preferences/com.maintain.cocktail.ventura#{version.major}.plist",
+  ]
 end
