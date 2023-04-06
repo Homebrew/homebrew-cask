@@ -1,6 +1,6 @@
 cask "my-image-garden" do
-  version "3.6.6,04"
-  sha256 "1b83b4695cd8d84c7807a06a5ba4c7e46cc5cfd73bdaf606a327e7341f573bb2"
+  version "3.6.7,05"
+  sha256 "4165174ad610a8172db60ce15c2bd19ba6f6359792b36ec5aba8b27da25815f3"
 
   url "https://gdlp01.c-wss.com/gds/2/0200006062/#{version.csv.second}/mmig-mac-#{version.csv.first.dots_to_underscores}-ea11.dmg",
       verified: "c-wss.com/"
