@@ -18,8 +18,6 @@ cask "postico" do
     end
   end
 
-  conflicts_with cask: "homebrew/cask-versions/postico1"
-
   app "Postico #{version.major}.app"
 
   zap trash: [
