@@ -14,4 +14,9 @@ cask "openrefine" do
   end
 
   app "OpenRefine.app"
+
+  zap trash: [
+    "~/Library/Application Support/OpenRefine",
+    "~/Library/Saved Application State/com.google.refine.Refine.savedState",
+  ]
 end
