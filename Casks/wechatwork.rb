@@ -2,8 +2,8 @@ cask "wechatwork" do
   arch arm: "_arm64"
 
   on_arm do
-    version "4.1.2.99238"
-    sha256 "6f5bfa37b4c0f5aae34a247518199d4dd2d02ce971f6f7cb25f622e09e69f6ee"
+    version "4.1.3.99242"
+    sha256 "2f809b98fbfdab7d890dc733d76026e6a8ed1b1a4653680d0d18cf544f528a41"
   end
   on_intel do
     version "4.1.2.90682"
