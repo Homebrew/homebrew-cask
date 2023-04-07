@@ -11,7 +11,7 @@ cask "beeper" do
 
   livecheck do
     url :url
-    regex(/Beeper(?:%20|[ ._-])?(\d+(?:\.\d+)+)(?: - Build ([\dA-z]+))?(?:[._-]#{arch})?\.dmg/i)
+    regex(/Beeper\D*?(\d+(?:\.\d+)+)/i)
     strategy :header_match
   end
 
