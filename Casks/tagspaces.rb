@@ -17,4 +17,10 @@ cask "tagspaces" do
   end
 
   app "TagSpaces.app"
+
+  zap trash: [
+    "~/Library/Application Support/TagSpaces",
+    "~/Library/Preferences/org.tagspaces.desktopapp.plist",
+    "~/Library/Saved Application State/org.tagspaces.desktopapp.savedState",
+  ]
 end
