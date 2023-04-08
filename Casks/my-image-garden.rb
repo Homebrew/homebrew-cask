@@ -9,7 +9,7 @@ cask "my-image-garden" do
   homepage "https://support-asia.canon-asia.com/?personal"
 
   livecheck do
-    url "https://pdisp01.c-wss.com/gdl/WWUFORedirectTarget.do?id=MDIwMDAwNjA2MjA0"
+    url "https://pdisp01.c-wss.com/gdl/WWUFORedirectTarget.do?id=MDIwMDAwNjA2MjA1"
     regex(%r{/([^/]+)/mmig-mac[._-]v?(\d+(?:[._]\d+)+)-ea11\.dmg}i)
     strategy :header_match do |headers, regex|
       match = headers["location"].match(regex)
