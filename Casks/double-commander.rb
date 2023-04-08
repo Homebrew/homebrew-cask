@@ -11,10 +11,14 @@ cask "double-commander" do
   desc "File Manager with double panels"
   homepage "https://doublecmd.sourceforge.io/"
 
+  livecheck do
+    skip "No version information available"
+  end
+
   app "Double Commander.app"
 
   preflight do
     system_command "xattr",
-                   args: ["-d", "com.apple.quarantine", "#{staged_path}/Double Commander.app"]
+                   args: ["-cr", "#{staged_path}/Double Commander.app"]
   end
 end
