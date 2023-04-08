@@ -9,10 +9,12 @@ cask "ckan" do
 
   livecheck do
     url :url
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    strategy :github_latest
   end
 
   depends_on cask: "mono-mdk"
 
   app "CKAN.app"
+
+  zap trash: "~/.local/share/CKAN"
 end
