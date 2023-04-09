@@ -8,17 +8,20 @@ cask "double-commander" do
   url "https://downloads.sourceforge.net/doublecmd/doublecmd-#{version.csv.first}-#{version.csv.second}.cocoa.#{arch}.dmg",
       verified: "downloads.sourceforge.net/doublecmd/"
   name "Double Commander"
-  desc "File Manager with double panels"
+  desc "File manager with two panels"
   homepage "https://doublecmd.sourceforge.io/"
 
   livecheck do
-    skip "No version information available"
+    url "https://sourceforge.net/projects/doublecmd/rss"
+    regex(/doublecmd[._-](\d+(?:\.\d+)+)[._-](\d+)\.cocoa/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+    end
   end
 
   app "Double Commander.app"
 
-  preflight do
-    system_command "xattr",
-                   args: ["-cr", "#{staged_path}/Double Commander.app"]
-  end
+  zap trash: [
+    "~/Library/Caches/doublecmd",
+  ]
 end
