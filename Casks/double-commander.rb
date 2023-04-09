@@ -21,7 +21,5 @@ cask "double-commander" do
 
   app "Double Commander.app"
 
-  zap trash: [
-    "~/Library/Caches/doublecmd",
-  ]
+  zap trash: "~/Library/Caches/doublecmd"
 end
