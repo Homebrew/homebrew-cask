@@ -6,8 +6,8 @@ cask "piclist" do
 
   url "https://release.piclist.cn/latest/PicList-#{version}-#{arch}.dmg"
   name "PicList"
-  desc "A simple and powerful cloude storage manage tool."
-  homepage "https://github.com/Kuingsmile/PicList"
+  desc "Simple and powerful cloude storage manage tool"
+  homepage "https://piclist.cn"
 
   livecheck do
     url "https://release.piclist.cn/latest/latest-mac.yml"
