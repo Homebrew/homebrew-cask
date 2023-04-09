@@ -11,13 +11,14 @@ cask "videofusion" do
 
   livecheck do
     url "https://lf3-beecdn.bytetos.com/obj/ies-fe-bee/bee_prod/biz_80/bee_prod_80_bee_publish_3563.json"
+    regex(/(\d+(?:_\d+)+).*\.dmg/i)
     strategy :page_match do |page|
       JSON.parse(page)["mac_download_pkg"]["channel_default"][/(\d+(?:_\d+)+).*\.dmg/i, 1].tr("_", ".")
     end
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :big_sur"
 
   app "VideoFusion-macOS.app"
 
