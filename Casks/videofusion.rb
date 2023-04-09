@@ -1,6 +1,6 @@
 cask "videofusion" do
-  version "3.9.0.8399"
-  sha256 "5a57e95b6f6316bea74cdeede985016af47bb674e85a1733c9bc46fb672bc38d"
+  version "4.0.0.8512"
+  sha256 "7eba1c2363e9908c9ac86780fc266a5c689f39d4cc58df907990a97ba8ce0e88"
 
   url "https://lf3-package.vlabstatic.com/obj/faceu-packages/Jianying_#{version.dots_to_underscores}_jianyingpro_0_creatortool.dmg",
       verified: "lf3-package.vlabstatic.com/obj/faceu-packages/"
