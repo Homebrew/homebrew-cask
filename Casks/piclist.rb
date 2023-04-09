@@ -15,4 +15,6 @@ cask "piclist" do
   end
 
   app "PicList.app"
+
+  zap trash: "~/Library/Application Support/piclist"
 end
