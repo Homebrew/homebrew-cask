@@ -1,6 +1,6 @@
 cask "jamf-migrator" do
-  version "7.1.0"
-  sha256 "199e2c61186426f9d8c183e605d17b2cb17bcaaba5b812b43a42aa5806bcef31"
+  version "7.1.1"
+  sha256 "de8738fe6449ad51bf71001180ac9156b26d636df71a5365ffe5b2beda95f8a3"
 
   url "https://github.com/jamf/JamfMigrator/releases/download/v#{version}/jamf-migrator.zip"
   name "JamfMigrator"
