@@ -1,9 +1,9 @@
 cask "devsquadron" do
   arch arm: "arm", intel: "intel"
 
-  version "0.0.10"
-  sha256 arm:   "004637ce7452c35f77b132a8cfae8382e1dc54d5f9e81e2c2e90de3e03f7c5d1",
-         intel: "8fd33b5f5545b2947bf6284230b688139cb0907d6c82a2861b37d9fab536923a"
+  version "0.0.11"
+  sha256 arm:   "10d346c17b72ed71c8092f6d37d34a261c91d7e05ef2516ce1f4bf9bc16a7909",
+         intel: "992b7b13441d6db99263eed4688cc6fc7af2d318c53edacad7a1236f4e0aad1e"
 
   url "https://developersquadron.serveftp.com/downloads/devsquadron/v#{version}/macos-#{arch}.tar.xz"
   name "devsquadron"
