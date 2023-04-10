@@ -44,7 +44,7 @@ cask "deeper" do
     depends_on macos: :monterey
   end
   on_ventura do
-    version "2.8.8"
+    version "2.8.9"
     url "https://www.titanium-software.fr/download/13/Deeper.dmg"
 
     depends_on macos: :ventura
