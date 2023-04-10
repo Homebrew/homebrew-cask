@@ -2,7 +2,7 @@ cask "frescobaldi" do
   arch arm: "arm64", intel: "x86_64"
 
   version "3.3.0"
-  sha256 arm:   "53de57e3aef74170c617ce96e24b63343d4f4c11cdfcd98cc39e7233c6b168b7",
+  sha256 arm:   "ff7074123b780929343958e7fe6654c5517ea6c875f6c89105620c5da302e791",
          intel: "82f4377c3c9e787a079cfe1cf269c7c3ba41bd933fba4fc4a60347aeb1ed32f0"
 
   url "https://github.com/frescobaldi/frescobaldi/releases/download/v#{version}/Frescobaldi-#{version}-#{arch}.dmg",
