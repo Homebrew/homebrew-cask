@@ -44,7 +44,7 @@ cask "maintenance" do
     depends_on macos: :monterey
   end
   on_ventura do
-    version "3.0.0"
+    version "3.0.1"
     url "https://www.titanium-software.fr/download/13/Maintenance.dmg"
 
     depends_on macos: :ventura
