@@ -16,4 +16,6 @@ cask "orka-vm-tools" do
   pkg "orka-vm-tools.pkg"
 
   uninstall pkgutil: "com.macstadium.orka-vm-tools.pkg"
+
+  # No zap stanza required
 end
