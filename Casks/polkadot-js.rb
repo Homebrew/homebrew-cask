@@ -1,6 +1,6 @@
 cask "polkadot-js" do
-  version "0.125.1"
-  sha256 "cd18fbad7a6139c2c1719e147356e524427372f94a0c84f4cf27a3fd9cb062ca"
+  version "0.126.1"
+  sha256 "491606c6d20e0eda9d1dd032f510f7ba3f9def8c8dc9eb9e463f18105ebed855"
 
   url "https://github.com/polkadot-js/apps/releases/download/v#{version}/Polkadot-JS-Apps-mac-#{version}.dmg",
       verified: "github.com/polkadot-js/apps/"
