@@ -8,7 +8,7 @@ cask "google-ads-editor" do
   homepage "https://ads.google.com/home/tools/ads-editor/"
 
   livecheck do
-    skip "unversioned QT app"
+    skip "unversioned QT application"
   end
 
   app "Google Ads Editor.app"

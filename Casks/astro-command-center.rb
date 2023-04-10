@@ -8,7 +8,7 @@ cask "astro-command-center" do
   homepage "https://www.astrogaming.com/"
 
   livecheck do
-    skip "unversioned QT app"
+    skip "unversioned QT application"
   end
 
   app "ASTRO Command Center.app"
