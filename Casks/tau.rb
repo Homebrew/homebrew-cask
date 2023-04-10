@@ -1,11 +1,12 @@
 cask "tau" do
-  arch arm: "-arm64", intel: ""
+  arch arm: "_arm64"
 
   version "2.32"
   sha256 :no_check
 
   url "http://tau.uoregon.edu/tau#{arch}.dmg"
   name "TAU"
+  desc "Profiling and tracing toolkit"
   homepage "https://www.cs.uoregon.edu/research/tau/home.php"
 
   livecheck do
@@ -14,4 +15,12 @@ cask "tau" do
   end
 
   suite "TAU"
+
+  uninstall delete: "#{staged_path}/TAU/tau/"
+
+  zap trash: "~/.ParaProf"
+
+  caveats do
+    depends_on_java
+  end
 end
