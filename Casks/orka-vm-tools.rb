@@ -1,6 +1,6 @@
 cask "orka-vm-tools" do
-  version "2.4.0"
-  sha256 "8bd9d016e2a54f25ad952291833bd88394561a1ab84979799933390f0b208eac"
+  version "2.4.1"
+  sha256 "98f9f611aa99016b17dc4ea3000b0622bad70f557779a59f4197f179aa298acb"
 
   url "https://orka-tools.s3.amazonaws.com/orka-vm-tools/official/#{version}/orka-vm-tools.pkg",
       verified: "orka-tools.s3.amazonaws.com/orka-vm-tools/official/"
@@ -16,4 +16,6 @@ cask "orka-vm-tools" do
   pkg "orka-vm-tools.pkg"
 
   uninstall pkgutil: "com.macstadium.orka-vm-tools.pkg"
+
+  # No zap stanza required
 end
