@@ -44,7 +44,7 @@ cask "maintenance" do
     depends_on macos: :monterey
   end
   on_ventura do
-    version "3.0.0"
+    version "3.0.1"
     url "https://www.titanium-software.fr/download/13/Maintenance.dmg"
 
     depends_on macos: :ventura
@@ -60,4 +60,10 @@ cask "maintenance" do
   end
 
   app "Maintenance.app"
+
+  zap trash: [
+    "~/Library/Caches/com.apple.helpd/Generated/com.titanium.Maintenance.help*3.0.1",
+    "~/Library/Preferences/com.titanium.Maintenance.plist",
+    "~/Library/Saved Application State/com.titanium.Maintenance.savedState",
+  ]
 end
