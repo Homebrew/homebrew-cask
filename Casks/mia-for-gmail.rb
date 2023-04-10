@@ -1,6 +1,6 @@
 cask "mia-for-gmail" do
-  version "2.4.5"
-  sha256 "31f94c2c5bafc2550adb50ed36919b45c2939bbd691ce1b27b8486d1094600c5"
+  version "2.7.0"
+  sha256 "6983ecf10143d32ee41ecffd3f8ce431a2963adb32b8581d7c2c45db51ba65ae"
 
   url "http://www.sovapps.com/application/notifier-pro-for-gmail/mia.#{version}.zip",
       verified: "sovapps.com/application/notifier-pro-for-gmail/"
