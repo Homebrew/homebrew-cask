@@ -21,7 +21,7 @@ cask "vuze" do
               "/Applications/Vuze.app",
               "/Applications/Uninstaller for Vuze.app",
             ],
-            quit:   "com.azuerus.vuze"
+            quit:   "com.azureus.vuze"
 
   zap trash: "~/Library/Application Support/Vuze"
 end
