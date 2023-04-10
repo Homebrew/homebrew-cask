@@ -1,5 +1,5 @@
 cask "tau" do
-  arch arm: "-arm64", intel: ""
+  arch arm: "_arm64", intel: ""
 
   version "2.32"
   sha256 :no_check
