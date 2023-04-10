@@ -94,6 +94,7 @@ end.freeze
 CASK_LISTS = CASKS_NO_ZAP.each_with_object([]) do |(tap_dir, casks), message|
   message.push("<details><summary>#{tap_dir.dirname.basename.to_path}</summary>")
   message.push("") # Empty line so the markdown still works inside the HTML
+  message.push("| Cask | Downloads |", "| :--- | ---: |") # Table header
 
   # Sort casks by count
   sorted_casks = casks.sort_by { |cask_file| -find_count(cask_name(cask_file), CASK_DATA).delete(",").to_i }
@@ -101,7 +102,7 @@ CASK_LISTS = CASKS_NO_ZAP.each_with_object([]) do |(tap_dir, casks), message|
   sorted_casks.each do |cask_file|
     cask_name = cask_name(cask_file)
     count = find_count(cask_name, CASK_DATA)
-    message.push("* [`#{cask_name}`](#{cask_url(tap_dir, cask_file)}) - Downloads: #{count}")
+    message.push("| [#{cask_name}](#{cask_url(tap_dir, cask_file)}) | #{count} |")
   end
 
   message.push("</details>")
