@@ -8,8 +8,8 @@ cask "agenda" do
   homepage "https://agenda.com/"
 
   livecheck do
-    url "https://downloads.agenda.com/AgendaSparkleAppcast.xml"
-    strategy :sparkle, &:short_version
+    url "https://agenda.community/t/release-notes/34763/61"
+    regex(/version\s+(\d+(?:\.\d+)+)/i)
   end
 
   depends_on macos: ">= :mojave"
