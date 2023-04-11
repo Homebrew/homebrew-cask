@@ -5,11 +5,11 @@ cask "zerotier-one" do
   url "https://download.zerotier.com/RELEASES/#{version}/dist/ZeroTier%20One.pkg"
   name "ZeroTier One"
   desc "Mesh VPN client"
-  homepage "https://www.zerotier.com/download.shtml"
+  homepage "https://www.zerotier.com/"
 
   livecheck do
     url "https://www.zerotier.com/download/"
-    regex(/latest\sversion:\s(\d+(?:\.\d+)+)/i)
+    regex(/latest\s+version\s+.*?(\d+(?:\.\d+)+)/i)
   end
 
   depends_on macos: ">= :high_sierra"
