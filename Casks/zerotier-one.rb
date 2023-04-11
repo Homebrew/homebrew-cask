@@ -9,7 +9,7 @@ cask "zerotier-one" do
 
   livecheck do
     url "https://www.zerotier.com/download/"
-    regex(/latest\s+version\s+.*?(\d+(?:\.\d+)+)/i)
+    regex(%r{latest\s+version\s+.*?(\d+(?:\.\d+)+)}iu)
   end
 
   depends_on macos: ">= :high_sierra"
