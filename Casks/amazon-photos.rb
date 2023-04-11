@@ -1,5 +1,5 @@
 cask "amazon-photos" do
-  version "1.8,299"
+  version "1.9,302"
   sha256 :no_check
 
   url "https://d29x207vrinatv.cloudfront.net/mac/AmazonPhotosInstaller.dmg",
