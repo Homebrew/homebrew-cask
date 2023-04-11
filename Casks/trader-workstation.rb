@@ -34,5 +34,8 @@ cask "trader-workstation" do
               args:       ["-q"],
             }
 
-  zap trash: "/Applications/Trader Workstation"
+  zap trash: [
+    "/Applications/Trader Workstation",
+    "~/Library/Application Support/Trader Workstation",
+  ]
 end

@@ -30,6 +30,7 @@ cask "native-access" do
   zap trash: [
     "~/Library/Application Support/CrashReporter/Native Access_*.plist",
     "~/Library/Application Support/Native Instruments",
+    "~/Library/Application Support/Native Access",
     "~/Library/Caches/Native Instruments/Native Access*",
     "~/Library/Preferences/com.native-instruments.*.plist",
     "~/Library/Saved Application State/com.native-instruments.nativeaccess2.savedState",
