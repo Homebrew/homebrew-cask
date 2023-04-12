@@ -1,5 +1,5 @@
 cask "atext" do
-  version "2.40.5"
+  version "3.11"
   sha256 :no_check
 
   url "https://www.trankynam.com/atext/downloads/aText.dmg"
@@ -8,8 +8,8 @@ cask "atext" do
   homepage "https://www.trankynam.com/atext/"
 
   livecheck do
-    url "https://www.trankynam.com/atext/aText-Appcast.xml"
-    strategy :sparkle, &:short_version
+    url "https://www.trankynam.com/atext/changelog.mac.html"
+    regex(/aText\s*v?(\d+(?:\.\d+)+)["< ]/i)
   end
 
   auto_updates true
