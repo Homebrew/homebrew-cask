@@ -4,7 +4,7 @@ cask "ankama" do
 
   url "https://launcher.cdn.ankama.com/installers/production/Ankama%20Launcher-Setup.dmg"
   name "Ankama Launcher"
-  desc "Ankama game portal"
+  desc "Video game launcher"
   homepage "https://www.ankama.com/en/launcher"
 
   livecheck do
