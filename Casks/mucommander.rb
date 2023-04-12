@@ -8,5 +8,15 @@ cask "mucommander" do
   desc "File manager with a dual-pane interface"
   homepage "https://www.mucommander.com/"
 
+  livecheck do
+    url :url
+    regex(%r{href=.*?/tag/v?(\d+(?:[.-]\d+)+)["' >]}i)
+    strategy :github_latest
+  end
+
   app "muCommander.app"
+
+  zap trash: [
+    "~/Library/Preferences/muCommander",
+  ]
 end
