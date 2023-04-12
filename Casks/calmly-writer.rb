@@ -5,10 +5,12 @@ cask "calmly-writer" do
 
   on_arm do
     sha256 "1e7338c2021c8321046f735756c3f745e36cc063b6c4b3f32fa9a01e460c9bfd"
+
     url "https://www.calmlywriter.com/releases/Calmly%20Writer-#{version}-#{arch}.dmg"
   end
   on_intel do
     sha256 "2857f7ba53afb8929ed85d2483faccd28ad9ea309a7752ef738cb9ed91adc878"
+
     url "https://www.calmlywriter.com/releases/Calmly%20Writer-#{version}.dmg"
   end
 
