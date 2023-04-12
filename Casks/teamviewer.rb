@@ -57,6 +57,7 @@ cask "teamviewer" do
     # This Cask should be installed and uninstalled manually on Catalina.
     # See https://github.com/Homebrew/homebrew-cask/issues/76829
     installer manual: "Install TeamViewer.app/Contents/Resources/Install TeamViewer.pkg"
+
     uninstall delete: "#{staged_path}/#{token}"
 
     caveats <<~EOS
