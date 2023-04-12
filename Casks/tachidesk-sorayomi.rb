@@ -4,8 +4,15 @@ cask "tachidesk-sorayomi" do
 
   url "https://github.com/Suwayomi/Tachidesk-Sorayomi/releases/download/#{version}/tachidesk-sorayomi-#{version}-macos-x64.zip"
   name "Tachidesk Sorayomi"
-  desc "FOSS Manga reader app to read manga from Tachidesk-Server"
+  desc "Manga reader"
   homepage "https://github.com/Suwayomi/Tachidesk-Sorayomi/"
 
+  depends_on macos: ">= :mojave"
+
   app "Tachidesk Sorayomi.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.suwayomi.tachideskSorayomi",
+    "~/Library/Containers/com.suwayomi.tachideskSorayomi",
+  ]
 end
