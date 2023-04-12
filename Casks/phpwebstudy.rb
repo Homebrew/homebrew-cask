@@ -8,7 +8,7 @@ cask "phpwebstudy" do
   url "https://github.com/xpf0000/PhpWebStudy/releases/download/v#{version}/PhpWebStudy-#{version}#{arch}-mac.zip",
       verified: "github.com/xpf0000/PhpWebStudy/"
   name "PhpWebStudy"
-  desc "PHP and Web develop environment manager"
+  desc "PHP and Web development environment manager"
   homepage "https://www.macphpstudy.com/"
 
   livecheck do
