@@ -22,7 +22,9 @@ cask "atext" do
     "~/Library/Caches/com.trankynam.aText",
     "~/Library/Containers/com.trankynam.aText",
     "~/Library/Cookies/com.trankynam.aText.binarycookies",
+    "~/Library/HTTPStorages/com.trankynam.aText",
     "~/Library/Preferences/com.trankynam.aText.plist",
     "~/Library/Saved Application State/com.trankynam.aText.savedState",
+    "~/Library/WebKit/com.trankynam.aText",
   ]
 end
