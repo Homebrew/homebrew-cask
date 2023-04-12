@@ -9,4 +9,8 @@ cask "mucommander" do
   homepage "https://www.mucommander.com/"
 
   app "muCommander.app"
+
+  zap trash: [
+    "~/Library/Preferences/muCommander",
+  ]
 end
