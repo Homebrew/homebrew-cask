@@ -3,7 +3,7 @@ cask "papers" do
 
   version "4.35.2224"
   sha256 arm:   "b446dbdca3c2d6eedd9d54524453ced77da5bc4c8632c7c831b62e0df8f3551c",
-         intel: "4e42ecd4cb197b01bd5c0e891517402a3421e0b0ab8d437523aaf802844b67b1"
+         intel: "af575370f6920349a0c1305cc6ca4a20a013b38d51d7b722beb53c2b78f49ee3"
 
   url "https://update.readcube.com/desktop/updates/Papers_Setup_#{version}-#{arch}.zip"
   name "ReadCube Papers"
