@@ -7,7 +7,7 @@ cask "apifox" do
 
   url "https://cdn.apifox.cn/download/#{version}/Apifox#{arch}-#{version}.dmg"
   name "Apifox"
-  desc "Platform for API documentation, debugging, Mock and testing"
+  desc "Platform for API documentation, debugging, and testing"
   homepage "https://www.apifox.cn/"
 
   livecheck do
