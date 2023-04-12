@@ -9,21 +9,21 @@ cask "saoimageds9" do
 
     url "https://ds9.si.edu/download/macosmojave/SAOImageDS9%20#{version}.dmg",
         verified: "ds9.si.edu/download/",
-        using: :homebrew_curl
+        using:    :homebrew_curl
   end
   on_catalina do
     sha256 "a076aa60f206297ea8f926ba7b267b368ff9e1f0b50f1c7543aa021fc9bfad17"
 
     url "https://ds9.si.edu/download/macoscatalina/SAOImageDS9%20#{version}.dmg",
         verified: "ds9.si.edu/download/",
-        using: :homebrew_curl
+        using:    :homebrew_curl
   end
   on_big_sur do
     sha256 "b48565cdaadca1c1363173fac685cd75a68351c914792b2f43c6cb66b3316eed"
 
     url "https://ds9.si.edu/download/macosbigsurx86/SAOImageDS9%20#{version}.dmg",
         verified: "ds9.si.edu/download/",
-        using: :homebrew_curl
+        using:    :homebrew_curl
   end
   on_monterey do
     sha256 arm:   "bbee664d4b4c3abab017c7971b92c13071161aa30fff95d2dfa9b1c1f4691a67",
