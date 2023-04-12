@@ -26,7 +26,7 @@ jobs:
           token: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
           repository: ${{ github.event.client_payload.github.payload.repository.full_name }}
           comment-id: ${{ github.event.client_payload.github.payload.comment.id }}
-          reaction-type: '+1'
+          reactions: '+1'
 
       - name: Add 👎 Reaction
         if: always() && steps.rebase.outputs.rebased-count != 1
@@ -35,4 +35,4 @@ jobs:
           token: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
           repository: ${{ github.event.client_payload.github.payload.repository.full_name }}
           comment-id: ${{ github.event.client_payload.github.payload.comment.id }}
-          reaction-type: '-1'
+          reactions: '-1'
