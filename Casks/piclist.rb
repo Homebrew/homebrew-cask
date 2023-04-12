@@ -1,9 +1,9 @@
 cask "piclist" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.6.2"
-  sha256 arm:   "06ffe40078e48ab2e7c70a723bb5c1106abdf7648864fe5c611506065f53df73",
-         intel: "72407e791ee341f8cd0ebf040aa1d249ebce5d476e64956d2702d7d5a0a6e611"
+  version "1.7.0"
+  sha256 arm:   "87aef674d15ea168408824e4e97466caec4107d17d873ee65734270ac2829b33",
+         intel: "bab927911b18ed8e626a1416002d76819e112011226e82ad0d6a312444184fd7"
 
   url "https://release.piclist.cn/latest/PicList-#{version}-#{arch}.dmg"
   name "PicList"
