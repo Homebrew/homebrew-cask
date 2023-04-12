@@ -9,8 +9,8 @@ cask "slack-cli" do
   homepage "https://api.slack.com/future/tools/cli"
 
   livecheck do
-    url "https://api.slack.com/future/tools/cli"
-    regex(/href=.*?slack[._-]cli[._-]v?(\d+(?:\.\d+)+)[._-]macOS[._-]64[._-]bit\.tar\.gz/)
+    url "https://api.slack.com/future/changelog"
+    regex(%r{h2.*?v?(\d+(?:\.\d+)+).*?/h2}i)
   end
 
   depends_on formula: "deno"
