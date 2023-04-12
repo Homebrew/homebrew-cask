@@ -14,7 +14,7 @@ cask "natron" do
         verified: "github.com/NatronGitHub/Natron/"
   end
   on_big_sur :or_newer do
-    sha256 "90618183b65cab217b7892d6f0ad3254b7efebc57ef47e77790d8504dbcc7b22"
+    sha256 "aa31fb6963344c281b53ca6e93823885e09f7d115ed5cc311abb833de4647537"
 
     url "https://github.com/NatronGitHub/Natron/releases/download/v#{version}/Natron-#{version}-macOS12-x86_64.dmg",
         verified: "github.com/NatronGitHub/Natron/"
