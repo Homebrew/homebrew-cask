@@ -21,4 +21,10 @@ cask "visual-paradigm" do
   end
 
   app "Visual Paradigm.app"
+
+  zap trash: [
+    "~/Library/Application Support/Visual Paradigm",
+    "~/Library/Application Support/VisualParadigm",
+    "~/Library/Saved Application State/com.install4j.1106-5897-7327-6550.5.savedState",
+  ]
 end
