@@ -1,9 +1,9 @@
 cask "visual-paradigm" do
   arch arm: "AArch64", intel: "WithJRE"
 
-  version "17.0,20230201"
-  sha256 arm:   "23a16caf8ee7dacd2a6f63011cb1efda06cb1ea166f41237e2d421a79516c49f",
-         intel: "0400e70c8d87e34b390b29b3a0f2f0460fe96832239d75dffff2e08b7596e5eb"
+  version "17.0,20230401"
+  sha256 arm:   "5213cfaf52fb3cd4bcceccd48c7d7b604282cf94f8e6971970a6f026c664acda",
+         intel: "a6ebfba1b196f24b32e15bf104a0f3788ea3f73910672999b1d102d81b290a49"
 
   url "https://www.visual-paradigm.com/downloads/vp#{version.csv.first}/#{version.csv.second}/Visual_Paradigm_#{version.csv.first.dots_to_underscores}_#{version.csv.second}_OSX_#{arch}.dmg"
   name "Visual Paradigm"
@@ -21,4 +21,10 @@ cask "visual-paradigm" do
   end
 
   app "Visual Paradigm.app"
+
+  zap trash: [
+    "~/Library/Application Support/Visual Paradigm",
+    "~/Library/Application Support/VisualParadigm",
+    "~/Library/Saved Application State/com.install4j.1106-5897-7327-6550.5.savedState",
+  ]
 end
