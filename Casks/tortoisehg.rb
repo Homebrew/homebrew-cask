@@ -14,4 +14,6 @@ cask "tortoisehg" do
   end
 
   app "TortoiseHg.app"
+
+  zap trash: "~/.config/tortoisehg.org"
 end
