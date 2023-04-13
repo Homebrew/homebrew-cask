@@ -15,4 +15,11 @@ cask "airtame" do
   auto_updates true
 
   app "Airtame.app"
+
+  zap trash: [
+    "~/Library/Application Support/airtame-application",
+    "~/Library/Logs/Airtame",
+    "~/Library/Preferences/com.airtame.airtame-application.plist",
+    "~/Library/Saved Application State/com.airtame.airtame-application.savedState",
+  ]
 end
