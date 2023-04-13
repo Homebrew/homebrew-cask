@@ -2,7 +2,8 @@ cask "elgato-wave-link" do
   version "1.7.1.3162"
   sha256 "96d3b0656933ff93fc0303e262a304d36163cf6714f232702ecd3e3ddae49300"
 
-  url "https://edge.elgato.com/egc/macos/wavelink/#{version.major_minor_patch}/WaveLink_#{version}.pkg"
+  url "https://edge.elgato.com/egc/macos/wavelink/#{version.major_minor_patch}/WaveLink_#{version}.pkg",
+      user_agent: :fake
   name "Elgato Wave Link"
   desc "Software custom-built for content creation"
   homepage "https://www.elgato.com/en/wave-1"
