@@ -5,10 +5,10 @@ cask "gutenprint" do
   url "https://downloads.sourceforge.net/gimp-print/gutenprint-#{version.major_minor}/#{version}/gutenprint-#{version}.dmg"
   name "Gutenprint"
   desc "Drivers for various printers for use with CUPS and GIMP"
-  homepage "http://gimp-print.sourceforge.net/"
+  homepage "https://gimp-print.sourceforge.net/"
 
   livecheck do
-    url "http://gimp-print.sourceforge.net/MacOSX.php"
+    url "https://gimp-print.sourceforge.net/MacOSX.php"
     regex(/gutenprint[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
     strategy :page_match
   end
