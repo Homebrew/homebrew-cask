@@ -4,7 +4,7 @@ cask "folder-colorizer" do
 
   url "https://ushining.softorino.com/shine_uploads/foldercolorizermac_#{version}.dmg"
   name "Folder Colorizer"
-  desc "Folder icon editor & manager"
+  desc "Folder icon editor and manager"
   homepage "https://softorino.com/folder-colorizer-mac/"
 
   livecheck do
