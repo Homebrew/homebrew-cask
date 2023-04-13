@@ -24,6 +24,9 @@ cask "softube-central" do
             pkgutil: [
               "com.softube.installerdaemon.helper",
               "org.softube.com.softubecentral",
+              "com.paceap.pkg.eden.activationexperience",
+              "com.paceap.pkg.eden.iLokLicenseManager",
+              "com.paceap.pkg.eden.licensed",
             ]
 
   zap trash: [
