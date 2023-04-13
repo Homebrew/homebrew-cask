@@ -1,8 +1,8 @@
 cask "softube-central" do
-  version "1.6.1"
-  sha256 "dc908a2036294ec1c2a126a9f5f19b4ff807fbdf41c97a30032111247505d422"
+  version "1.9.0"
+  sha256 "ae3c05350332c638ae566216624f672ab86ad366e88334cba079890e920d8c3f"
 
-  url "https://softubestorage.b-cdn.net/softubecentral/Softube%20Central-#{version}.pkg",
+  url "https://softubestorage.b-cdn.net/softubecentral/Softube%20Central-#{version}-universal.pkg",
       verified: "softubestorage.b-cdn.net/"
   name "Softube Central"
   desc "Installer for installation and license activation of Softube products"
