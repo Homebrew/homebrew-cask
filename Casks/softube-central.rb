@@ -15,7 +15,7 @@ cask "softube-central" do
   auto_updates true
   depends_on cask: "ilok-license-manager"
 
-  pkg "Softube Central-#{version}.pkg"
+  pkg "Softube Central-#{version}-universal.pkg"
 
   uninstall quit:      [
               "com.softube.Console1OSD_Release",
