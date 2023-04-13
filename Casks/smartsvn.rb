@@ -11,8 +11,11 @@ cask "smartsvn" do
   homepage "https://www.smartsvn.com/"
 
   livecheck do
-    url "https://www.smartsvn.com/documents/smartsvn/changelog.txt"
-    regex(/SmartSVN\s+v?(\d+(?:\.\d+)+)/i)
+    url "https://www.smartsvn.com/download/"
+    strategy :page_match do |page|
+      page.scan(/smartsvn-#{arch}-(\d+(?:\_\d+)+).dmg/i)
+          .map { |match| match&.first&.tr("_", ".") }
+    end
   end
 
   depends_on macos: ">= :high_sierra"
