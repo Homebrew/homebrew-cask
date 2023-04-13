@@ -7,7 +7,7 @@ cask "mongodb-compass-isolated-edition" do
 
   url "https://downloads.mongodb.com/compass/mongodb-compass-isolated-#{version}-darwin-#{arch}.dmg"
   name "MongoDB Compass Isolated"
-  desc "Explore and manipulate your MongoDB data"
+  desc "Interactive tool for analyzing MongoDB data"
   homepage "https://www.mongodb.com/products/compass"
 
   livecheck do
