@@ -22,11 +22,11 @@ cask "softube-central" do
               "com.softube.Console1OSD_Release",
             ],
             pkgutil: [
-              "com.softube.installerdaemon.helper",
-              "org.softube.com.softubecentral",
               "com.paceap.pkg.eden.activationexperience",
               "com.paceap.pkg.eden.iLokLicenseManager",
               "com.paceap.pkg.eden.licensed",
+              "com.softube.installerdaemon.helper",
+              "org.softube.com.softubecentral",
             ]
 
   zap trash: [
