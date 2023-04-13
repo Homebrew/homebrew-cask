@@ -13,7 +13,7 @@ cask "smartsvn" do
   livecheck do
     url "https://www.smartsvn.com/download/"
     strategy :page_match do |page|
-      page.scan(/smartsvn-#{arch}-(\d+(?:_\d+)+).dmg/i)
+      page.scan(/smartsvn[._-]#{arch}[._-](\d+(?:_\d+)+).dmg/i)
           .map { |match| match&.first&.tr("_", ".") }
     end
   end
