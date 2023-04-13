@@ -17,16 +17,20 @@ cask "softube-central" do
 
   pkg "Softube Central-#{version}.pkg"
 
-  uninstall quit:    [
-              "org.softube.com.softubecentral",
+  uninstall quit:      [
               "com.softube.Console1OSD_Release",
+              "org.softube.com.softubecentral",
             ],
-            pkgutil: [
+            pkgutil:   [
               "com.paceap.pkg.eden.activationexperience",
               "com.paceap.pkg.eden.iLokLicenseManager",
               "com.paceap.pkg.eden.licensed",
               "com.softube.installerdaemon.helper",
               "org.softube.com.softubecentral",
+            ],
+            launchctl: [
+              "com.paceap.eden.licensed",
+              "com.paceap.eden.licensed.agent",
             ]
 
   zap trash: [
