@@ -31,4 +31,17 @@ cask "synology-drive" do
               "application.com.synology.CloudStationUI*",
             ],
             delete:    "/Applications/Synology Drive Client.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.synology.CloudStationUI.FileProvider",
+    "~/Library/Application Scripts/com.synology.SynologyDrive.FinderHelper*",
+    "~/Library/Application Scripts/group.com.synology.CloudStationUI",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.synology.synologydrive.finderhelper.sfl2",
+    "~/Library/Application Support/FileProvider/com.synology.CloudStationUI.FileProvider",
+    "~/Library/Application Support/SynologyDrive",
+    "~/Library/Containers/com.synology.CloudStationUI.FileProvider",
+    "~/Library/Containers/com.synology.SynologyDrive*",
+    "~/Library/Group Containers/group.com.synology.CloudStationUI",
+    "~/Library/Preferences/com.synology.CloudStationUI.plist",
+  ]
 end
