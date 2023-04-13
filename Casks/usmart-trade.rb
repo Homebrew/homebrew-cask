@@ -5,7 +5,7 @@ cask "usmart-trade" do
   url "https://jy-common-prd-1257884527.cos.ap-guangzhou.myqcloud.com/admin/app-version-file/#{version.csv.third}/#{version.csv.second}/uSMART%20Trade-#{version.csv.first}.dmg",
       verified: "jy-common-prd-1257884527.cos.ap-guangzhou.myqcloud.com/"
   name "uSMART Trade"
-  desc "Trade Stocks & Options"
+  desc "Stock and options trading platform"
   homepage "https://www.usmartglobal.com/"
 
   livecheck do
