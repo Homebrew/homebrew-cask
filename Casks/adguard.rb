@@ -1,6 +1,6 @@
 cask "adguard" do
-  version "2.9.2.1234"
-  sha256 "b5feba01b2dfb740693106cef591a906eef1452d80c1b2bb8372afb5023718f9"
+  version "2.10.0.1272"
+  sha256 "72855b02c74b5432960b4f11ffa0efcad369b58437c16da1c27e8d6878096015"
 
   url "https://static.adguard.com/mac/release/AdGuard-#{version}.dmg"
   name "AdGuard"
