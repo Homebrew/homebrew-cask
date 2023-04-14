@@ -17,10 +17,10 @@ cask "openrocket" do
     strategy :github_latest
   end
 
+  app "OpenRocket.app"
+
   zap trash: [
     "~/Library/Application Support/OpenRocket",
     "~/Library/Preferences/openrocket.favoritepresets.*",
   ]
-
-  app "OpenRocket.app"
 end
