@@ -14,7 +14,7 @@ at_exit { TMP_DIR.rmtree }
 
 # Constants
 ONLINE_ISSUE = "https://github.com/Homebrew/homebrew-cask/issues/88469"
-CASK_REPOS = %w[homebrew-cask homebrew-cask-versions homebrew-cask-drivers].freeze
+CASK_REPOS = %w[homebrew-cask homebrew-cask-versions].freeze
 CASK_JSON_URL = "https://formulae.brew.sh/api/analytics/cask-install/365d.json"
 
 # Download the file and save it to the specified directory
