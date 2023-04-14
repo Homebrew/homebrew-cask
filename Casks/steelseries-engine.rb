@@ -9,7 +9,7 @@ cask "steelseries-engine" do
   homepage "https://steelseries.com/engine"
 
   auto_updates true
-  conflicts_with cask: "homebrew/cask-drivers/steelseries-gg"
+  conflicts_with cask: "steelseries-gg"
   depends_on macos: ">= :sierra"
 
   pkg "SteelSeriesEngine#{version}.pkg"
