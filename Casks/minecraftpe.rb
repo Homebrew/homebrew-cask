@@ -17,4 +17,15 @@ cask "minecraftpe" do
   depends_on macos: ">= :sierra"
 
   app "minecraftpe.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.microsoft.minecraftpe",
+    "~/Library/Application Support/minecraftpe",
+    "~/Library/Caches/com.microsoft.minecraftpe",
+    "~/Library/HTTPStorages/com.microsoft.minecraftpe",
+    "~/Library/HTTPStorages/com.microsoft.minecraftpe.binarycookies",
+    "~/Library/Preferences/com.microsoft.minecraftpe.plist",
+    "~/Library/Saved Application State/com.microsoft.minecraftpe.savedState",
+    "~/Library/WebKit/com.microsoft.minecraftpe",
+  ]
 end
