@@ -1,8 +1,11 @@
 cask "citrix-workspace" do
-  version "23.04.0.36"
-  sha256 :no_check
+  arch arm: "Universal", intel: "Intel"
 
-  url "https://downloadplugins.citrix.com/Mac/CitrixWorkspaceApp.dmg"
+  version "23.04.0.36"
+  sha256 arm:   "8f24b593d3095464af27ddfc85d7b19d38f48d88f2a8afa31694591b00c3cdcf",
+         intel: "29a6267509af5b3ade006799136829d9ab12c32491a192c1941db290a68e5990"
+
+  url "https://downloadplugins.citrix.com/ReceiverUpdates/Prod/Receiver/Mac/CitrixWorkspaceApp#{arch}#{version}.pkg"
   name "Citrix Workspace"
   desc "Managed desktop virtualization solution"
   homepage "https://www.citrix.com/"
@@ -10,7 +13,7 @@ cask "citrix-workspace" do
   livecheck do
     url "https://downloadplugins.citrix.com/ReceiverUpdates/Prod/catalog_macos2.xml"
     strategy :page_match do |page|
-      match = page.match(%r{<Installer platformArchitecture="Intel">.*?<Version>([\d.]+)</Version>}m)
+      match = page.match(%r{<Installer platformArchitecture="#{arch}">.*?<Version>([\d.]+)</Version>}m)
       next if match.blank?
 
       match[1]
@@ -19,7 +22,7 @@ cask "citrix-workspace" do
 
   depends_on macos: ">= :catalina"
 
-  pkg "Install Citrix Workspace.pkg"
+  pkg "CitrixWorkspaceApp#{arch}#{version}.pkg"
 
   uninstall launchctl: [
               "com.citrix.AuthManager_Mac",
