@@ -22,4 +22,12 @@ cask "code-composer-studio" do
     args:       ["--mode", "unattended"],
     sudo:       true,
   }
+
+  zap trash: [
+    "/Applications/TI",
+    "~/Library/Preferences/org.eclipse.platform.ide.plist",
+    "~/Library/Saved Application State/org.eclipse.platform.ide.savedState",
+    "~/ti",
+    "~/workspace_v#{version.major}",
+  ]
 end
