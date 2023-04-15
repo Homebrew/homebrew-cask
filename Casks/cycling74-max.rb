@@ -21,4 +21,11 @@ cask "cycling74-max" do
   end
 
   app "Max.app"
+
+  zap trash: [
+    "/Users/Shared/Max #{version.major}",
+    "~/Documents/Max #{version.major}",
+    "~/Library/Application Support/Cycling '74",
+    "~/Library/Saved Application State/com.cycling74.Max.savedState",
+  ]
 end
