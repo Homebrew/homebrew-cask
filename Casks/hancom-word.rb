@@ -15,6 +15,15 @@ cask "hancom-word" do
 
   pkg "HwpMac_HancomDocs.pkg"
 
-  uninstall quit:    "com.hancom.office.hwp12.mac.general",
-            pkgutil: "com.hancom.office.hwp12.mac.general"
+  uninstall quit:    "com.hancom.office.hwp#{version.major}.mac.general",
+            pkgutil: "com.hancom.office.hwp#{version.major}.mac.general"
+
+  zap trash: [
+    "~/Library/Caches/com.hancom.office.hwp#{version.major}.mac.general",
+    "~/Library/HTTPStorages/com.hancom.office.hwp#{version.major}.mac.general",
+    "~/Library/HTTPStorages/com.hancom.office.hwp#{version.major}.mac.general.binarycookies",
+    "~/Library/Preferences/com.hancom.office.hwp#{version.major}.mac.general.plist",
+    "~/Library/Saved Application State/com.hancom.office.hwp#{version.major}.mac.general.savedState",
+    "~/Library/WebKit/com.hancom.office.hwp#{version.major}.mac.general",
+  ]
 end
