@@ -16,4 +16,6 @@ cask "openshift-client" do
   end
 
   binary "oc"
+
+  zap trash: "~/.kube/config"
 end
