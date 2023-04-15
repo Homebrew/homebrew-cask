@@ -17,7 +17,11 @@ cask "playdate-simulator" do
 
   pkg "PlaydateSDK.pkg"
 
-  uninstall pkgutil: "date.play.sdk"
+  uninstall pkgutil: "date.play.sdk",
+            trash:   "~/Developer/PlaydateSDK",
+            rmdir:   "~/Developer"
+
+  zap trash: "~/.Playdate"
 
   caveats do
     license "https://play.date/dev/sdk-license"
