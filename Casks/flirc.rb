@@ -13,4 +13,10 @@ cask "flirc" do
   end
 
   app "Flirc.app"
+
+  zap trash: [
+    "~/Library/HTTPStorages/com.flirc.Flirc",
+    "~/Library/HTTPStorages/com.flirc.Flirc.binarycookies",
+    "~/Library/Preferences/com.flirc.Flirc.plist",
+  ]
 end
