@@ -13,4 +13,6 @@ cask "hashbackup" do
   end
 
   binary "hb.r#{version}.Darwin.x86_64", target: "hb"
+
+  zap trash: "~/hashbackup"
 end
