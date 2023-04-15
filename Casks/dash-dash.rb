@@ -18,4 +18,10 @@ cask "dash-dash" do
   preflight do
     set_permissions "#{staged_path}/Dash-Qt.app", "0755"
   end
+
+  zap trash: [
+    "~/Library/Application Support/DashCore",
+    "~/Library/Preferences/org.dash.Dash-Qt.plist",
+    "~/Library/Saved Application State/org.dash.Dash-Qt.savedState",
+  ]
 end
