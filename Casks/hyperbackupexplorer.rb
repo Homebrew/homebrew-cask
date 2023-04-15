@@ -13,4 +13,9 @@ cask "hyperbackupexplorer" do
   end
 
   app "HyperBackupExplorer.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.synology.HyperBackupExplorer.plist",
+    "~/Library/Saved Application State/com.synology.HyperBackupExplorer.savedState",
+  ]
 end
