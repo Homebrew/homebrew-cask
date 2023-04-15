@@ -4,7 +4,7 @@ cask "diskcatalogmaker" do
 
   url "https://download.diskcatalogmaker.com/download/zip/DiskCatalogMaker#{version.no_dots}.zip"
   name "DiskCatalogMaker"
-  desc "Toast-bundled version of DiskCatalogMaker"
+  desc "Disk management tool"
   homepage "https://diskcatalogmaker.com/"
 
   livecheck do
