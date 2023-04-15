@@ -12,12 +12,7 @@ cask "citrix-workspace" do
 
   livecheck do
     url "https://downloadplugins.citrix.com/ReceiverUpdates/Prod/catalog_macos2.xml"
-    strategy :page_match do |page|
-      match = page.match(%r{<Installer platformArchitecture="#{arch}">.*?<Version>([\d.]+)</Version>}m)
-      next if match.blank?
-
-      match[1]
-    end
+    regex(%r{<short\S*?>.*?workspace.*?</short\S*?>.*?<version>v?(\d+(?:\.\d+)+)</version>}i)
   end
 
   depends_on macos: ">= :catalina"
