@@ -16,4 +16,13 @@ cask "nosql-workbench" do
   auto_updates true
 
   app "NoSQL Workbench.app"
+
+  zap trash: [
+    "~/Library/Application Support/Caches/nosql-workbench-updater",
+    "~/Library/Application Support/NoSQL Workbench",
+    "~/Library/Caches/com.dynamodb.workbench",
+    "~/Library/Caches/com.dynamodb.workbench.ShipIt",
+    "~/Library/Preferences/com.dynamodb.workbench.plist",
+    "~/Library/Saved Application State/com.dynamodb.workbench.savedState",
+  ]
 end
