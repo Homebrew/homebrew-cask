@@ -1,5 +1,5 @@
 cask "citrix-workspace" do
-  version "23.04.0.36,2304"
+  version "23.04.0.36"
   sha256 :no_check
 
   url "https://downloadplugins.citrix.com/Mac/CitrixWorkspaceApp.dmg"
@@ -8,12 +8,12 @@ cask "citrix-workspace" do
   homepage "https://www.citrix.com/"
 
   livecheck do
-    url "https://www.citrix.com/downloads/workspace-app/mac/workspace-app-for-mac-latest.html"
+    url "https://downloadplugins.citrix.com/ReceiverUpdates/Prod/catalog_macos2.xml"
     strategy :page_match do |page|
-      match = page.match(/Version:*\s+(\d+(?:\.\d+)+)\s\((\d+(?:\.\d+)*)\)/i)
+      match = page.match(%r{<Installer platformArchitecture="Intel">.*?<Version>([\d.]+)</Version>}m)
       next if match.blank?
 
-      "#{match[1]},#{match[2]}"
+      match[1]
     end
   end
 
