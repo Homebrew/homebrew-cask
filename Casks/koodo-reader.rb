@@ -8,7 +8,7 @@ cask "koodo-reader" do
   url "https://github.com/troyeguo/koodo-reader/releases/download/v#{version}/Koodo-Reader-#{version}#{arch}.dmg",
       verified: "github.com/troyeguo/koodo-reader/"
   name "Koodo Reader"
-  desc "Open-source Epub reader with backup and restore support"
+  desc "Open-source epub reader"
   homepage "https://koodo.960960.xyz/"
 
   app "Koodo Reader.app"
