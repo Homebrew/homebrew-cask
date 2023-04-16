@@ -18,4 +18,11 @@ cask "reminders-menubar" do
       system_command "/usr/bin/open", args: ["-a", application], must_succeed: false
     end
   end
+
+  zap trash: [
+    "~/Library/Application Scripts/br.com.damascenorafael.reminders-menubar",
+    "~/Library/Application Scripts/br.com.damascenorafael.RemindersLauncher",
+    "~/Library/Containers/br.com.damascenorafael.reminders-menubar",
+    "~/Library/Containers/br.com.damascenorafael.RemindersLauncher",
+  ]
 end
