@@ -13,6 +13,12 @@ cask "stretchly" do
 
   app "Stretchly.app"
 
+  zap trash: [
+    "~/Library/Application Support/Stretchly",
+    "~/Library/Logs/Stretchly",
+    "~/Library/Preferences/net.hovancik.stretchly.plist",
+  ]
+
   caveats <<~EOS
     This application is not signed. See https://github.com/hovancik/stretchly#application-signing for details.
   EOS
