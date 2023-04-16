@@ -11,13 +11,7 @@ cask "reminders-menubar" do
 
   app "Reminders MenuBar.app"
 
-  postflight do
-    application = "#{appdir}/Reminders MenuBar.app"
-    if system_command("ps", args: ["x"]).stdout.match?(application)
-      system_command "/usr/bin/pkill", args: ["-f", application], must_succeed: false
-      system_command "/usr/bin/open", args: ["-a", application], must_succeed: false
-    end
-  end
+  uninstall quit: "br.com.damascenorafael.reminders-menubar"
 
   zap trash: [
     "~/Library/Application Scripts/br.com.damascenorafael.reminders-menubar",
