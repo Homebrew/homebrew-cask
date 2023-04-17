@@ -19,7 +19,7 @@ cask "box-drive" do
   conflicts_with cask: "box-sync"
   depends_on macos: ">= :el_capitan"
 
-  pkg "Box.pkg"
+  pkg "BoxDrive.pkg"
 
   uninstall pkgutil:   "com.box.desktop.installer.*",
             launchctl: "com.box.desktop.helper",
