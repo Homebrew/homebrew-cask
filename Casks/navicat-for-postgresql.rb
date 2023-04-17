@@ -14,4 +14,11 @@ cask "navicat-for-postgresql" do
   depends_on macos: ">= :mojave"
 
   app "Navicat for PostgreSQL.app"
+
+  zap trash: [
+    "~/Library/Application Support/PremiumSoft CyberTech/Navicat CC/Navicat for PostgreSQL",
+    "~/Library/Caches/com.apple.helpd/Generated/Navicat Help*#{version}",
+    "~/Library/Preferences/com.navicat.NavicatForPostgreSQL.plist",
+    "~/Library/Saved Application State/com.navicat.NavicatForPostgreSQL.savedState",
+  ]
 end
