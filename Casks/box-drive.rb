@@ -1,9 +1,9 @@
 cask "box-drive" do
-  version "2.30.88"
+  version "2.31.64"
   sha256 :no_check
 
-  url "https://e3.boxcdn.net/box-installers/desktop/releases/mac/Box.pkg",
-      verified: "e3.boxcdn.net/"
+  url "https://e3.boxcdn.net/desktop/releases/mac/BoxDrive.pkg",
+      verified: "e3.boxcdn.net/desktop/releases/mac/"
   name "Box Drive"
   desc "Client for the Box cloud storage service"
   homepage "https://www.box.com/drive"
@@ -17,8 +17,9 @@ cask "box-drive" do
 
   auto_updates true
   conflicts_with cask: "box-sync"
+  depends_on macos: ">= :el_capitan"
 
-  pkg "Box.pkg"
+  pkg "BoxDrive.pkg"
 
   uninstall pkgutil:   "com.box.desktop.installer.*",
             launchctl: "com.box.desktop.helper",
@@ -33,7 +34,7 @@ cask "box-drive" do
 
   zap trash: [
     "~/Library/Application Support/Box/Box",
-    "~/Library/Logs/Box/Box",
     "~/Library/Containers/com.box.desktop.findersyncext",
+    "~/Library/Logs/Box/Box",
   ]
 end
