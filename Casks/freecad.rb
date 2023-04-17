@@ -18,7 +18,6 @@ cask "freecad" do
     end
   end
 
-  conflicts_with cask: "homebrew/cask-versions/freecad-pre"
   depends_on macos: ">= :sierra"
 
   app "FreeCAD.app"
