@@ -1,11 +1,11 @@
 cask "gama" do
-  arch arm: "_M1"
+  arch arm: "Apple_Silicon", intel: "Intel"
 
-  version "1.9.0"
-  sha256 arm:   "1d2e5cded850dbc7f9a72c454e3d6088b50fa48ef546b8b43ffd00645e8462a8",
-         intel: "ac2478c140b428f6daad2a638d6c2a8c853d99fbce85a199b363048df5fdef6d"
+  version "1.9.1"
+  sha256 arm:   "360e06ab4a864897b00e82e0603869ca52e4ee5e713ffddd41713765c3ed3946",
+         intel: "19d967383e0138253e392e005eb6e1eeb248a6783a11aae4ea291cfef405fff5"
 
-  url "https://github.com/gama-platform/gama/releases/download/#{version}/GAMA_#{version}_MacOS#{arch}.dmg",
+  url "https://github.com/gama-platform/gama/releases/download/#{version}/GAMA_#{version}_macOS_#{arch}.dmg",
       verified: "github.com/gama-platform/gama/"
   name "GAMA Platform"
   desc "IDE for building spatially explicit agent-based simulations"
