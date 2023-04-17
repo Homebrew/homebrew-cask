@@ -1,11 +1,11 @@
 cask "gama-jdk" do
-  arch arm: "_M1"
+  arch arm: "Apple_Silicon", intel: "Intel"
 
-  version "1.9.0"
-  sha256 arm:   "18b6d4d639825f7b8d517f7d0f065db875459fa15e641111ca185616e9a1da17",
-         intel: "7e8018f05acda1bee41c9747d58cd3f765645cbc1ea74764abe8a1069eda04a9"
+  version "1.9.1"
+  sha256 arm:   "360e06ab4a864897b00e82e0603869ca52e4ee5e713ffddd41713765c3ed3946",
+         intel: "19d967383e0138253e392e005eb6e1eeb248a6783a11aae4ea291cfef405fff5"
 
-  url "https://github.com/gama-platform/gama/releases/download/#{version}/GAMA_#{version}_MacOS#{arch}_with_JDK.dmg",
+  url "https://github.com/gama-platform/gama/releases/download/#{version}/GAMA_#{version}_macOS_#{arch}.dmg",
       verified: "github.com/gama-platform/gama/"
   name "GAMA Platform with embedded JDK"
   desc "IDE for building spatially explicit agent-based simulations"
