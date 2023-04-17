@@ -15,4 +15,11 @@ cask "cisdem-data-recovery" do
   depends_on macos: ">= :sierra"
 
   app "Cisdem Data Recovery.app"
+
+  zap trash: [
+    "~/Library/Application Support/Cisdem",
+    "~/Library/Application Support/com.easeus.datarecoverywizard",
+    "~/Library/Preferences/com.easeus.datarecoverywizard",
+    "~/Movies/CisdemRepair",
+  ]
 end
