@@ -1,9 +1,10 @@
 cask "deadbolt" do
-  version "0.1.0"
-  sha256 "c302f1c532082b200d844d17cd8feadc61821d97591fb5a0dbb1bb97c3a5981b"
+  version "1.0.0"
+  sha256 "df5b9b0988f168946809f1db17711f589f62bc211a6dad724eac9b0844285370"
 
-  url "https://github.com/alichtman/deadbolt/releases/download/#{version}/Deadbolt-#{version}.dmg"
+  url "https://github.com/alichtman/deadbolt/releases/download/#{version}/Deadbolt-#{version}-mac.zip"
   name "Deadbolt"
+  desc "File encryption tool"
   homepage "https://github.com/alichtman/deadbolt"
 
   livecheck do
