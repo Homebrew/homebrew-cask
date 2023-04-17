@@ -9,4 +9,6 @@ cask "endless-sky" do
   homepage "https://endless-sky.github.io/"
 
   app "Endless Sky.app"
+
+  zap trash: "~/Library/Application Support/endless-sky"
 end
