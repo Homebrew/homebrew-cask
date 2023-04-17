@@ -17,7 +17,7 @@ cask "navicat-data-modeler-essentials" do
 
   zap trash: [
     "~/Library/Caches/com.apple.helpd/Generated/Navicat Data Modeler Help*#{version}",
-    "~/Library/Preferences/com.prect.NavicatDataModelerEssentials3.plist",
-    "~/Library/Saved Application State/com.prect.NavicatDataModelerEssentials3.savedState",
+    "~/Library/Preferences/com.prect.NavicatDataModelerEssentials#{version.major}.plist",
+    "~/Library/Saved Application State/com.prect.NavicatDataModelerEssentials#{version.major}.savedState",
   ]
 end
