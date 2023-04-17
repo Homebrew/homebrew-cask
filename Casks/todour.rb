@@ -13,4 +13,6 @@ cask "todour" do
   end
 
   app "Todour.app"
+
+  zap trash: "~/Library/Preferences/com.nerdur.Todour.plist"
 end
