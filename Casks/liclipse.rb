@@ -18,5 +18,5 @@ cask "liclipse" do
     end
   end
 
-  app "LiClipse.app"
+  app "LiClipse_x86_64/LiClipse.app"
 end
