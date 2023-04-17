@@ -8,5 +8,5 @@ cask "endless-sky" do
   desc "Space exploration, trading, and combat game"
   homepage "https://endless-sky.github.io/"
 
-  app "EndlessSky.app"
+  app "Endless Sky.app"
 end
