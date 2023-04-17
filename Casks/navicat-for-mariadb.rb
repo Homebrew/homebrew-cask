@@ -14,4 +14,11 @@ cask "navicat-for-mariadb" do
   depends_on macos: ">= :mojave"
 
   app "Navicat for MariaDB.app"
+
+  zap trash: [
+    "~/Library/Application Support/PremiumSoft CyberTech/Navicat CC/Navicat for MariaDB",
+    "~/Library/Caches/com.apple.helpd/Generated/Navicat Help*#{version}",
+    "~/Library/Preferences/com.navicat.NavicatForMariaDB.plist",
+    "~/Library/Saved Application State/com.navicat.NavicatForMariaDB.savedState",
+  ]
 end
