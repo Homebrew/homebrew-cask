@@ -14,4 +14,11 @@ cask "navicat-for-sql-server" do
   depends_on macos: ">= :mojave"
 
   app "Navicat For SQL Server.app"
+
+  zap trash: [
+    "~/Library/Application Support/PremiumSoft CyberTech/Navicat CC/Navicat for SQL Server",
+    "~/Library/Caches/com.apple.helpd/Generated/Navicat Help*#{version}",
+    "~/Library/Preferences/com.navicat.NavicatForSQLServer.plist",
+    "~/Library/Saved Application State/com.navicat.NavicatForSQLServer.savedState",
+  ]
 end
