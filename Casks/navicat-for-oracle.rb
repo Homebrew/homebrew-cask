@@ -14,4 +14,11 @@ cask "navicat-for-oracle" do
   depends_on macos: ">= :mojave"
 
   app "Navicat for Oracle.app"
+
+  zap trash: [
+    "~/Library/Application Support/PremiumSoft CyberTech/Navicat CC/Navicat for Oracle",
+    "~/Library/Caches/com.apple.helpd/Generated/Navicat Help*#{version}",
+    "~/Library/Preferences/com.navicat.NavicatForOracle.plist",
+    "~/Library/Saved Application State/com.navicat.NavicatForOracle.savedState",
+  ]
 end
