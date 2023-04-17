@@ -22,4 +22,11 @@ cask "freecad" do
   depends_on macos: ">= :sierra"
 
   app "FreeCAD.app"
+
+  zap trash: [
+    "~/Library/Application Support/FreeCAD",
+    "~/Library/Caches/FreeCAD",
+    "~/Library/Preferences/FreeCAD",
+    "~/Library/Preferences/com.freecad.FreeCAD.plist",
+  ]
 end

@@ -10,4 +10,6 @@ cask "qlimagesize" do
   depends_on macos: ">= :high_sierra"
 
   qlplugin "qlImageSize.qlgenerator"
+
+  # No zap stanza required
 end
