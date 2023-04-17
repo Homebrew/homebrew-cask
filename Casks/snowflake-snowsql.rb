@@ -16,4 +16,6 @@ cask "snowflake-snowsql" do
   pkg "snowsql-#{version}-darwin_x86_64.pkg"
 
   uninstall pkgutil: "net.snowflake.snowsql"
+
+  # No zap stanza required
 end
