@@ -19,4 +19,12 @@ cask "liclipse" do
   end
 
   app "LiClipse_x86_64/LiClipse.app"
+  app "LiClipse_x86_64/LiClipseJre19.app"
+
+  zap trash: [
+    "~/.liclipse",
+    "~/Documents/LiClipse Workspace",
+    "~/Library/Preferences/com.brainwy.liclipse.rcp.product.plist",
+    "~/Library/Saved Application State/com.brainwy.liclipse.rcp.product.savedState",
+  ]
 end
