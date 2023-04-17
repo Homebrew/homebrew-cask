@@ -11,7 +11,7 @@ cask "parsify" do
   desc "Extensible calculator with unit and currency conversions"
   homepage "https://parsify.app/"
 
-  app "Parsify Desktop.app"
+  app "Parsify.app"
 
   zap trash: [
     "~/Library/Application Support/Parsify Desktop",
