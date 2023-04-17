@@ -14,4 +14,10 @@ cask "navicat-for-sqlite" do
   depends_on macos: ">= :mojave"
 
   app "Navicat for SQLite.app"
+
+  zap trash: [
+    "~/Library/Application Support/PremiumSoft CyberTech/Navicat CC/Navicat for SQLite",
+    "~/Library/Preferences/com.navicat.NavicatForSQLite.plist",
+    "~/Library/Saved Application State/com.navicat.NavicatForSQLite.savedState",
+  ]
 end
