@@ -1,6 +1,6 @@
 cask "languagetool" do
-  version "1.2.5"
-  sha256 "413a47824a442e33f1c2db07700a6c93b7d2977b5dd4328a1f0db7c031228005"
+  version "1.3"
+  sha256 "35c222e632cef533e5417d845b976fb2c39b29270e2298bc8ba59161d47cba32"
 
   url "https://languagetool.org/download/mac-app/LanguageToolDesktop-#{version}.dmg"
   name "LanguageTool for Desktop"
