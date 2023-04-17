@@ -14,4 +14,10 @@ cask "navicat-premium-essentials" do
   depends_on macos: ">= :mojave"
 
   app "Navicat Premium Essentials.app"
+
+  zap trash: [
+    "~/Library/Caches/com.apple.helpd/Generated/Navicat Help*#{version}",
+    "~/Library/Preferences/com.navicat.NavicatPremiumEssentials.plist",
+    "~/Library/Saved Application State/com.navicat.NavicatPremiumEssentials.savedState",
+  ]
 end
