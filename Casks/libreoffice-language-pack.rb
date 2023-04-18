@@ -803,10 +803,6 @@ cask "libreoffice-language-pack" do
     cask "libreoffice"
   end
 
-  conflicts_with cask: [
-    "homebrew/cask-versions/libreoffice-still",
-    "homebrew/cask-versions/libreoffice-still-language-pack",
-  ]
   depends_on cask: "libreoffice"
   depends_on macos: ">= :mojave"
 
