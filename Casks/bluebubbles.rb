@@ -5,7 +5,7 @@ cask "bluebubbles" do
   url "https://github.com/BlueBubblesApp/bluebubbles-server/releases/download/v#{version}/BlueBubbles-#{version}.dmg",
       verified: "github.com/BlueBubblesApp/bluebubbles-server/"
   name "BlueBubbles"
-  desc "Server for forwarding iMessages to clients within the BlueBubbles App ecosystem"
+  desc "Server for forwarding iMessages"
   homepage "https://bluebubbles.app/"
 
   app "BlueBubbles.app"
