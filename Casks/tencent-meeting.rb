@@ -10,7 +10,7 @@ cask "tencent-meeting" do
     sha256 "de0b5c435c7aa8c90c909c4e533d55229caca223d359993660c431419f85b11c"
   end
 
-  url "https://updatecdn.meeting.qq.com/cos/#{version.csv.second}/TencentMeeting_0300000000_#{version.csv.first}.publish.#{arch}.dmg",
+  url "https://updatecdn.meeting.qq.com/cos/#{version.csv.second}/TencentMeeting_0300000000_#{version.csv.first}.publish.#{arch}.officialwebsite.dmg",
       verified: "updatecdn.meeting.qq.com/cos/"
   name "Tencent Meeting"
   name "腾讯会议"
