@@ -5,7 +5,7 @@ cask "origami-studio" do
   url "https://facebook.com/designtools/origami/",
       verified: "facebook.com/designtools/origami/"
   name "Origami Studio"
-  desc "Design, animate, and prototype design tool from Facebook"
+  desc "Design tool for interactive interfaces"
   homepage "https://origami.design/"
 
   livecheck do
