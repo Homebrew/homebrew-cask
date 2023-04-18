@@ -5,7 +5,7 @@ cask "understand" do
   url "https://latest.scitools.com/Understand/Understand-#{version}-macOS-Universal.dmg"
   name "SciTools Understand"
   desc "Code visualization and exploration tool"
-  homepage "https://scitools.com/features/"
+  homepage "https://scitools.com/features"
 
   livecheck do
     url "https://licensing.scitools.com/download/thanks/macOS-Universal.dmg"
