@@ -28,6 +28,7 @@ cask "postman" do
     "~/Library/Caches/com.postmanlabs.mac.ShipIt",
     "~/Library/Caches/com.postmanlabs.mac",
     "~/Library/Caches/Postman",
+    "~/Library/HTTPStorages/com.postmanlabs.mac",
     "~/Library/Preferences/ByHost/com.postmanlabs.mac.ShipIt.*.plist",
     "~/Library/Preferences/com.postmanlabs.mac.plist",
     "~/Library/Saved Application State/com.postmanlabs.mac.savedState",
