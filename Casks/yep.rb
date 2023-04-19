@@ -13,4 +13,13 @@ cask "yep" do
   end
 
   app "Yep.app"
+
+  zap trash: [
+    "~/Library/Application Support/Yep",
+    "~/Library/Application Support/com.ironic.yep#{version.major}",
+    "~/Library/Caches/com.ironic.yep#{version.major}",
+    "~/Library/HTTPStorages/com.ironic.yep#{version.major}",
+    "~/Library/Preferences/com.ironic.yep#{version.major}.plist",
+    "~/Library/Saved Application State/com.ironic.yep#{version.major}.savedState",
+  ]
 end
