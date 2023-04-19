@@ -5,8 +5,10 @@ cask "tuist" do
   url "https://github.com/tuist/tuist/releases/download/#{version}/tuist.zip",
       verified: "github.com/tuist/tuist/"
   name "Tuist"
-  desc "Basic fomula that install tuist cli tool"
+  desc "Create, maintain, and interact with Xcode projects at scale"
   homepage "https://tuist.io/"
 
   binary "tuist"
+
+  # No zap stanza required
 end
