@@ -22,7 +22,7 @@ cask "wine-stable" do
       # Collect the release tags on the page
       tags = page.scan(%r{href=["']?[^"' >]*?/releases/tag/([^"' >]*?)["' >]}i)&.flatten&.uniq
 
-      max_reqs = 4
+      max_reqs = 6
       tags.each_with_index do |tag, i|
         break if i >= max_reqs
 
@@ -59,6 +59,21 @@ cask "wine-stable" do
   binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/winemine"
   binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/winepath"
   binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/wineserver"
+
+  zap trash: [
+        "~/.local/share/applications/wine*",
+        "~/.local/share/icons/hicolor/**/application-x-wine*",
+        "~/.local/share/mime/application/x-wine*",
+        "~/.local/share/mime/packages/x-wine*",
+        "~/.wine",
+        "~/.wine32",
+        "~/Library/Saved Application State/org.winehq.wine-stable.wine.savedState",
+      ],
+      rmdir: [
+        "~/.local/share/applications",
+        "~/.local/share/icons",
+        "~/.local/share/mime",
+      ]
 
   caveats <<~EOS
     #{token} supports both 32-bit and 64-bit. It is compatible with an existing
