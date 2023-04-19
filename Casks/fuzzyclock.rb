@@ -4,7 +4,7 @@ cask "fuzzyclock" do
 
   url "https://mschmidt.me/macOS/FuzzyClock.zip"
   name "FuzzyClock"
-  desc "Fuzzy clock in menu bar"
+  desc "Displays the time in your menubar"
   homepage "https://mschmidt.me/macos.html"
 
   livecheck do
