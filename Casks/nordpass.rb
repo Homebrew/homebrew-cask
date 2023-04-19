@@ -5,7 +5,7 @@ cask "nordpass" do
   url "https://downloads.npass.app/mac/NordPass.dmg",
       verified: "downloads.npass.app/mac/"
   name "NordPass"
-  desc "Store credentials in a single place and log in on any device, even when offline"
+  desc "Password manager"
   homepage "https://nordpass.com/"
 
   livecheck do
