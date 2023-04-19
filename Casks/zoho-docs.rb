@@ -14,4 +14,10 @@ cask "zoho-docs" do
   end
 
   app "Zoho Docs.app"
+
+  zap trash: [
+    "~/.zohodocs",
+    "~/Library/Application Scripts/com.zohosync.zohodocs",
+    "~/Library/Containers/com.zohosync.zohodocs",
+  ]
 end
