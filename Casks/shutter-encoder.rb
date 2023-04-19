@@ -17,8 +17,9 @@ cask "shutter-encoder" do
 
   pkg "Shutter Encoder #{version} #{arch}.pkg"
 
-  uninstall pkgutil: "com.paulpacifico.shutterencoder",
-            quit:    "com.paulpacifico.shutterencoder"
+  uninstall launchctl: "application.com.paulpacifico.shutterencoder.*",
+            pkgutil:   "com.paulpacifico.shutterencoder",
+            quit:      "com.paulpacifico.shutterencoder"
 
   zap trash: "~/Documents/Shutter Encoder"
 end
