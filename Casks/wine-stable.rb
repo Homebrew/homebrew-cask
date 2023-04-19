@@ -22,7 +22,7 @@ cask "wine-stable" do
       # Collect the release tags on the page
       tags = page.scan(%r{href=["']?[^"' >]*?/releases/tag/([^"' >]*?)["' >]}i)&.flatten&.uniq
 
-      max_reqs = 4
+      max_reqs = 6
       tags.each_with_index do |tag, i|
         break if i >= max_reqs
 
