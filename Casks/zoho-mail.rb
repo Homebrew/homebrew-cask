@@ -17,11 +17,4 @@ cask "zoho-mail" do
   end
 
   app "Zoho Mail - Desktop.app"
-
-  zap trash: [
-    "~/Library/Application Support/Zoho Mail - Desktop",
-    "~/Library/Logs/Zoho Mail - Desktop",
-    "~/Library/Preferences/com.zoho.mail.desktop.plist",
-    "~/Library/Saved Application State/com.zoho.mail.desktop.savedState",
-  ]
 end
