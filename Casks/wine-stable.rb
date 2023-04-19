@@ -60,6 +60,21 @@ cask "wine-stable" do
   binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/winepath"
   binary "#{appdir}/Wine Stable.app/Contents/Resources/wine/bin/wineserver"
 
+  zap trash: [
+        "~/.local/share/applications/wine*",
+        "~/.local/share/icons/hicolor/**/application-x-wine*",
+        "~/.local/share/mime/application/x-wine*",
+        "~/.local/share/mime/packages/x-wine*",
+        "~/.wine",
+        "~/.wine32",
+        "~/Library/Saved Application State/org.winehq.wine-stable.wine.savedState",
+      ],
+      rmdir: [
+        "~/.local/share/applications",
+        "~/.local/share/icons",
+        "~/.local/share/mime",
+      ]
+
   caveats <<~EOS
     #{token} supports both 32-bit and 64-bit. It is compatible with an existing
     32-bit wine prefix, but it will now default to 64-bit when you create a new
