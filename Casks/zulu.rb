@@ -27,4 +27,6 @@ cask "zulu" do
   pkg "Double-Click to Install Azul Zulu JDK #{version.major}.pkg"
 
   uninstall pkgutil: "com.azulsystems.zulu.#{version.major}"
+
+  # No zap stanza required
 end
