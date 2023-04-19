@@ -4,6 +4,7 @@ cask "fuzzyclock" do
 
   url "https://mschmidt.me/macOS/FuzzyClock.zip"
   name "FuzzyClock"
+  desc "Fuzzy clock in menu bar"
   homepage "https://mschmidt.me/macos.html"
 
   livecheck do
@@ -12,4 +13,9 @@ cask "fuzzyclock" do
   end
 
   app "FuzzyClock.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/me.mschmidt.FuzzyClock",
+    "~/Library/Containers/me.mschmidt.FuzzyClock",
+  ]
 end
