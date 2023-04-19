@@ -21,6 +21,7 @@ cask "rewind" do
     end
   end
 
+  auto_updates true
   depends_on arch:  :arm64,
              macos: ">= :monterey"
 
