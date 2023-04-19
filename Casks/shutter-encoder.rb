@@ -19,4 +19,6 @@ cask "shutter-encoder" do
 
   uninstall pkgutil: "com.paulpacifico.shutterencoder",
             quit:    "com.paulpacifico.shutterencoder"
+
+  zap trash: "~/Documents/Shutter Encoder"
 end
