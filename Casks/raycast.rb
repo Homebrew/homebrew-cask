@@ -2,10 +2,10 @@ cask "raycast" do
   version "1.49.3"
   sha256 :no_check
 
-  url "https://api.raycast.app/v2/download"
+  url "https://releases.raycast.com/releases/#{version}/download?build=universal"
   name "Raycast"
   desc "Control your tools with a few keystrokes"
-  homepage "https://raycast.app/"
+  homepage "https://raycast.com/"
 
   livecheck do
     url :url
