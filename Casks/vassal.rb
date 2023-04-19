@@ -17,4 +17,6 @@ cask "vassal" do
   end
 
   app "VASSAL.app"
+
+  zap trash: "~/Library/Application Support/VASSAL"
 end
