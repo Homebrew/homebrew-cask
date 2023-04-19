@@ -12,5 +12,18 @@ cask "time-out" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on macos: ">= :catalina"
+
   app "Time Out.app"
+
+  uninstall quit: "com.dejal.timeout"
+
+  zap trash: [
+    "~/Library/Application Scripts/*.com.dejal.timeout",
+    "~/Library/Caches/com.dejal.timeout",
+    "~/Library/Group Containers/*.com.dejal.timeout",
+    "~/Library/HTTPStorages/com.dejal.timeout",
+    "~/Library/Preferences/com.dejal.timeout.plist",
+    "~/Library/Saved Application State/com.dejal.timeout.savedState",
+  ]
 end
