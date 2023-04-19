@@ -9,4 +9,9 @@ cask "atlauncher" do
   homepage "https://atlauncher.com/"
 
   app "ATLauncher.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.atlauncher.App.plist",
+    "~/Library/Saved Application State/com.atlauncher.App.savedState",
+  ]
 end
