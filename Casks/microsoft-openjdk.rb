@@ -19,4 +19,9 @@ cask "microsoft-openjdk" do
   pkg "microsoft-jdk-#{version}-macOS-#{arch}.pkg"
 
   uninstall pkgutil: "com.microsoft.#{version.major}.jdk"
+
+  zap trash: [
+    "~/Library/Saved Application State/net.java.openjdk.java.savedState",
+    "~/Library/Preferences/net.java.openjdk.java.plist",
+  ]
 end
