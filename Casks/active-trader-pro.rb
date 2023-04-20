@@ -1,8 +1,8 @@
 cask "active-trader-pro" do
   version "1.0.50"
-  sha256 "8f1266d172afdd9dd90c2ec93ebcf9fa304fdaaabe1f4ca8bbd59bc9ed769b30"
+  sha256 :no_check
 
-  url "https://www.fidelity.com/webcontent/Codeweaver/activetrader-#{version}.zip"
+  url "https://www.fidelity.com/webcontent/CodeweaverInstaller/ActiveTraderPro.pkg"
   name "Active Trader Pro"
   desc "Trading platform"
   homepage "https://www.fidelity.com/trading/advanced-trading-tools/active-trader-pro/overview"
@@ -14,12 +14,21 @@ cask "active-trader-pro" do
 
   depends_on macos: ">= :sierra"
 
-  app "Active Trader Pro.app"
+  pkg "ActiveTraderPro.pkg"
 
   postflight do
-    system_command "CW_INSTALL_DEPS_ONLY=1"
-    system_command "#{appdir}/Active Trader Pro.app/Contents/SharedSupport/activetrader/Active Trader Pro/run_atp"
+    # The postinstall script automatically opens the app by making a call to
+    # `open -b com.fmr.activetrader`. Therefore, we must suppress this behavior
+    # to make the cask installation non-interactive.
+    retries ||= 3
+    ohai "The Active Trader Pro package postinstall script launches the app" unless retries < 3
+    ohai "Attempting to close Active Trader Pro to avoid unwanted user intervention" unless retries < 3
+    return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/Active Trader Pro.app"]
   end
+
+  uninstall quit:    "com.fmr.activetrader",
+            pkgutil: "com.fmr.activetrader",
+            delete:  "/Applications/Active Trader Pro.app"
 
   zap trash: [
     "~/Library/Application Support/Active Trader Pro",
