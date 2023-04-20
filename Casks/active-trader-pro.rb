@@ -4,7 +4,7 @@ cask "active-trader-pro" do
 
   url "https://www.fidelity.com/webcontent/Codeweaver/activetrader-#{version}.zip"
   name "Active Trader Pro"
-  desc "Fidelity's customizable trading platform"
+  desc "Trading platform"
   homepage "https://www.fidelity.com/trading/advanced-trading-tools/active-trader-pro/overview"
 
   livecheck do
@@ -15,6 +15,11 @@ cask "active-trader-pro" do
   depends_on macos: ">= :sierra"
 
   app "Active Trader Pro.app"
+
+  postflight do
+    system_command "CW_INSTALL_DEPS_ONLY=1"
+    system_command "#{appdir}/Active Trader Pro.app/Contents/SharedSupport/activetrader/Active Trader Pro/run_atp"
+  end
 
   zap trash: [
     "~/Library/Application Support/Active Trader Pro",
