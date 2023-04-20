@@ -1,21 +1,24 @@
 cask "jamulus" do
-  version "3.8.2"
+  version "3.9.1"
 
-  if MacOS.version <= :sierra
-    sha256 "e6492ec6355166d88d48be7d7d3a242739c112841c1f826451be7a5adb0cbd00"
-    suffix = "_legacy"
-  else
-    sha256 "d1f85e0ca04a2a648890a84bb3740ec36477f6f28e6cc3a35883aef7e655be50"
-    suffix = ""
+  on_mojave :or_older do
+    sha256 "6c645ba373205f774a09df59565e39808868b7ef3fb296a56f616ef90e74aefe"
+
+    url "https://downloads.sourceforge.net/llcon/jamulus_#{version}_mac_legacy.dmg",
+        verified: "downloads.sourceforge.net/llcon/"
+  end
+  on_catalina :or_newer do
+    sha256 "724f15fd564737fe06c717aa678a8c3817a006f7105bb13b71d5b650ed8c7cc5"
+
+    url "https://downloads.sourceforge.net/llcon/jamulus_#{version}_mac.dmg",
+        verified: "downloads.sourceforge.net/llcon/"
   end
 
-  url "https://downloads.sourceforge.net/llcon/jamulus_#{version}_mac#{suffix}.dmg",
-      verified: "downloads.sourceforge.net/llcon/"
   name "Jamulus"
   desc "Play music online with friends"
   homepage "https://jamulus.io/"
 
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :catalina"
 
   app "Jamulus.app"
   app "JamulusServer.app"

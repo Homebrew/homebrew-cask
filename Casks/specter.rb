@@ -1,6 +1,6 @@
 cask "specter" do
-  version "1.10.4"
-  sha256 "c4726209dd19f9b010844220d5b88ce9aecc9a8862db1b20eb5923f618244a53"
+  version "2.0.1"
+  sha256 "f13ef3e0aecc67441c2d590dec2a9dec2a4d5816ee4ac062bada466dbf6143ac"
 
   url "https://github.com/cryptoadvance/specter-desktop/releases/download/v#{version}/Specter-v#{version}.dmg",
       verified: "github.com/cryptoadvance/specter-desktop/"
@@ -9,8 +9,9 @@ cask "specter" do
   homepage "https://specter.solutions/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://github.com/cryptoadvance/specter-desktop/releases/"
+    regex(%r{v?(\d+(?:\.\d+)+)/Specter.*?\.dmg}i)
+    strategy :page_match
   end
 
   depends_on macos: ">= :catalina"

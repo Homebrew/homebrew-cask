@@ -1,6 +1,6 @@
 cask "tunnelblick" do
-  version "3.8.7a,5770"
-  sha256 "bb5858619a58561d07d23df470b9548b82c1544cea9ffade30c4362dc8f3bd93"
+  version "3.8.8a,5776"
+  sha256 "0b0cda3d16731c9df1457b3845633b442d873d63bc12f69c07ef87dd87d8ae7f"
 
   url "https://github.com/Tunnelblick/Tunnelblick/releases/download/v#{version.csv.first}/Tunnelblick_#{version.csv.first}_build_#{version.csv.second}.dmg",
       verified: "github.com/Tunnelblick/Tunnelblick/"
@@ -8,14 +8,11 @@ cask "tunnelblick" do
   desc "Free and open-source OpenVPN client"
   homepage "https://www.tunnelblick.net/"
 
-  # We need to check all releases since the current latest release is a beta version.
   livecheck do
     url "https://github.com/Tunnelblick/Tunnelblick/releases"
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/Tunnelblick[._-]v?(\d+(?:\.\d+)*[a-z]?)_build_(\d+)\.dmg}i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
+    regex(/Tunnelblick\s+?(\d+(?:\.\d+)*[a-z]?)\s+?\(build\s+?(\d+)/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 

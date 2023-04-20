@@ -1,13 +1,9 @@
 cask "filebot" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
-  version "4.9.6"
-
-  if Hardware::CPU.intel?
-    sha256 "38935215702be042aae44effad9cd5e82139ece8ecdb55ee86515b875064873a"
-  else
-    sha256 "e1804ce4e402dcdda5a8417294d7317217a5eca57569f4fa47f9f701a0a7c61e"
-  end
+  version "5.0.2"
+  sha256 arm:   "4d1be1956f212437fca88452dfb128e49cb8cf22f4bb77b89c4d75fdd9e644c8",
+         intel: "45335cbb88ccaba675ba5666d3011382c9696e34e59b8c5e906265925c80663a"
 
   url "https://get.filebot.net/filebot/FileBot_#{version}/FileBot_#{version}_#{arch}.app.tar.xz"
   name "FileBot"

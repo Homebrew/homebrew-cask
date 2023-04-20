@@ -9,7 +9,7 @@ cask "thonny-xxl" do
   homepage "https://thonny.org/"
 
   livecheck do
-    cask "thonny"
+    skip "No reliable way to get version info"
   end
 
   conflicts_with cask: "thonny"

@@ -1,6 +1,6 @@
 cask "grids" do
-  version "8.1"
-  sha256 "1b536ebb94857ec046ddcb258dd88e64ab348baa0a8c59a89119e18fa7506d11"
+  version "8.5.3"
+  sha256 "bbd9bcfd007ff61b1e86809637316819df8cb08338ff82fbb9b908b365aa5ba3"
 
   url "https://gridsapp.net/bin/Grids_#{version}.zip"
   name "Grids"
@@ -9,8 +9,8 @@ cask "grids" do
 
   livecheck do
     url "https://gridsapp.net/appcast.json"
-    strategy :page_match do |page|
-      JSON.parse(page)["version"]["mac"]
+    strategy :json do |json|
+      json["version"]["mac"]
     end
   end
 

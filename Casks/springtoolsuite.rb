@@ -1,13 +1,9 @@
 cask "springtoolsuite" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
+  arch arm: "aarch64", intel: "x86_64"
 
-  version "4.15.1,4.24.0"
-
-  if Hardware::CPU.intel?
-    sha256 "1a00f9e0373b3b65c4c1ee800566153f93a18043f5cd9f61d040651647aeff82"
-  else
-    sha256 "0774306556b87efed28e69292b1b90714d3a4d28db4a4b28148e336655fbec0f"
-  end
+  version "4.18.0,4.27.0"
+  sha256 arm:   "0fb4b42ff7c7fb041c7c03494b1c73d1e085b9d15bf0cbc12af0476f15b8d94a",
+         intel: "27d77d4495cfad30e559762ef8088a09641704b0b75964f2107096f4046e0e88"
 
   url "https://download.springsource.com/release/STS#{version.major}/#{version.csv.first}.RELEASE/dist/e#{version.csv.second.major_minor}/spring-tool-suite-#{version.major}-#{version.csv.first}.RELEASE-e#{version.csv.second}-macosx.cocoa.#{arch}.dmg",
       verified: "download.springsource.com/release/"
@@ -30,4 +26,9 @@ cask "springtoolsuite" do
   auto_updates true
 
   app "SpringToolSuite#{version.major}.app"
+
+  zap trash: [
+    "~/Library/Preferences/org.springframework.boot.ide.branding.sts#{version.major}.plist",
+    "~/Library/Saved Application State/org.springframework.boot.ide.branding.sts#{version.major}.savedState",
+  ]
 end

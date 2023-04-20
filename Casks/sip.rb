@@ -1,13 +1,28 @@
 cask "sip" do
-  if MacOS.version <= :sierra
+  on_sierra :or_older do
     version "1.2"
     sha256 "eb4507ce67c6d19c4e649d3e033542265be8d2aaccabc7f8ee00080842a886c0"
-  elsif MacOS.version <= :high_sierra
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_high_sierra do
     version "2.4.1"
     sha256 "9e8e69b8874891fab4fcc44edfb9b6ff2e510a1f41c87e9faea6060fc3f33073"
-  else
-    version "2.6"
-    sha256 "1d57b924534f43870f8713bf3cdd24837bcdef9afa9f5af83e8b7e5f82221b6b"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_mojave :or_newer do
+    version "2.7.1"
+    sha256 "074c7a1b5e4ebfabdc43b6583a96da9dfaf02f1a93a468b616dc14833ea1705d"
+
+    livecheck do
+      url "https://sipapp.io/updates/"
+      regex(%r{href=.*?/sip[._-]v?(\d+(?:\.\d+)*)\.dmg}i)
+    end
   end
 
   url "https://sipapp.fra1.digitaloceanspaces.com/updates/v#{version.major}/sip-#{version}.dmg",
@@ -15,11 +30,6 @@ cask "sip" do
   name "Sip"
   desc "Collect, organize & share colors"
   homepage "https://sipapp.io/"
-
-  livecheck do
-    url "https://sipapp.io/updates/"
-    regex(%r{href=.*?/sip-(\d+(?:\.\d+)*)\.dmg}i)
-  end
 
   auto_updates true
   depends_on macos: ">= :sierra"

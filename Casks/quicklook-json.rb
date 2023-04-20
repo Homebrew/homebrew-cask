@@ -4,6 +4,7 @@ cask "quicklook-json" do
 
   url "http://www.sagtau.com/media/QuickLookJSON.qlgenerator.zip"
   name "quick look JSON"
+  desc "QuickLook plugin for JSON files"
   homepage "http://www.sagtau.com/quicklookjson.html"
 
   livecheck do
@@ -12,4 +13,6 @@ cask "quicklook-json" do
   end
 
   qlplugin "QuickLookJSON.qlgenerator"
+
+  # No zap stanza required
 end

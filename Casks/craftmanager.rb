@@ -1,5 +1,5 @@
 cask "craftmanager" do
-  version "1.2.5,431"
+  version "1.7.0"
   sha256 :no_check
 
   url "https://craft-assets.invisionapp.com/CraftManager/production/CraftManager.zip"
@@ -9,11 +9,11 @@ cask "craftmanager" do
 
   livecheck do
     url "https://craft-assets.invisionapp.com/CraftManager/production/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "CraftManager.app"
 

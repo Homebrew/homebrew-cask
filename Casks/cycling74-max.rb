@@ -1,6 +1,6 @@
 cask "cycling74-max" do
-  version "8.3.1_220510"
-  sha256 "cec916bc8a48abf98c2a2a9b4af0509fe2433b9dbabe245c0fc7be69962448fb"
+  version "8.5.4_230413"
+  sha256 "ea99a16847de86340746b7cf51254e40352ced4dd15a3ae9fbbf096d4ecca492"
 
   url "https://akiaj5esl75o5wbdcv2a-maxmspjitter.s3.amazonaws.com/Max#{version.no_dots}.dmg",
       verified: "akiaj5esl75o5wbdcv2a-maxmspjitter.s3.amazonaws.com/"
@@ -21,4 +21,11 @@ cask "cycling74-max" do
   end
 
   app "Max.app"
+
+  zap trash: [
+    "/Users/Shared/Max #{version.major}",
+    "~/Documents/Max #{version.major}",
+    "~/Library/Application Support/Cycling '74",
+    "~/Library/Saved Application State/com.cycling74.Max.savedState",
+  ]
 end

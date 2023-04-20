@@ -1,18 +1,18 @@
 cask "usenapp" do
-  version "1.22,358"
-  sha256 "cb5112ee26aa55394a8e40fa79b459fbef0610dd5a9d58743a4113e0ef012953"
+  version "1.26.6"
+  sha256 "8abababd9c33cc3e0d068f4e89f799024032a72482e9f49b839086167ee639d8"
 
-  url "https://www.usenapp.com/download/Usenapp-#{version.csv.first}.dmg"
+  url "https://www.usenapp.com/download/Usenapp-#{version}.dmg"
   name "Usenapp"
   desc "Newsreader and Usenet client"
   homepage "https://www.usenapp.com/"
 
   livecheck do
     url "https://www.usenapp.com/download/appcast_unp1.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :high_sierra"
 
   app "Usenapp.app"
 

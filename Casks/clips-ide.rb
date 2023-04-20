@@ -6,12 +6,12 @@ cask "clips-ide" do
       verified: "downloads.sourceforge.net/clipsrules/"
   name "CLIPS IDE"
   desc "Tool for building expert systems"
-  homepage "http://www.clipsrules.net/"
+  homepage "https://www.clipsrules.net/"
 
   livecheck do
     url "https://sourceforge.net/projects/clipsrules/files/latest/download"
-    strategy :header_match
     regex(%r{/CLIPS/(\d+(?:\.\d+)+)/}i)
+    strategy :header_match
   end
 
   depends_on macos: ">= :el_capitan"

@@ -1,6 +1,6 @@
 cask "dmidiplayer" do
-  version "1.6.0"
-  sha256 "86c7bb411467a95b502d745b2edb19b486c28de7e0125884caaec7223568c37b"
+  version "1.7.1"
+  sha256 "6876797cce6c3cbfcb6098bce84bb5323fdbea70eacbedf54b81f5f93779ef76"
 
   url "https://downloads.sourceforge.net/dmidiplayer/#{version}/dmidiplayer-#{version}-mac-x64.dmg",
       verified: "downloads.sourceforge.net/dmidiplayer/"

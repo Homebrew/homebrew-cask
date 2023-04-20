@@ -14,4 +14,9 @@ cask "ccmenu" do
   end
 
   app "CCMenu.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/net.sourceforge.cruisecontrol.CCMenu",
+    "~/Library/Containers/net.sourceforge.cruisecontrol.CCMenu",
+  ]
 end

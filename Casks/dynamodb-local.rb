@@ -7,6 +7,10 @@ cask "dynamodb-local" do
   name "Amazon DynamoDB Local"
   homepage "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html"
 
+  livecheck do
+    skip "unversioned command-line application"
+  end
+
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/dynamodb-local.wrapper.sh"
   binary shimscript, target: "dynamodb-local"

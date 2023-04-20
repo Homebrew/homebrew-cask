@@ -1,5 +1,5 @@
 cask "infoflow" do
-  version "2.3.17.7,20220713153053"
+  version "2.3.26.5,20230327191136"
   sha256 :no_check
 
   url "https://hi-static.cdn.bcebos.com/hi-official/infoflow_setup.dmg",
@@ -17,4 +17,12 @@ cask "infoflow" do
   end
 
   app "如流.app"
+
+  zap trash: [
+    "~/Library/Caches/com.baidu.hi.mac",
+    "~/Library/WebKit/com.baidu.hi.mac",
+    "~/Library/HTTPStorages/com.baidu.hi.mac",
+    "~/Library/Preferences/com.baidu.hi.mac.plist",
+    "~/Library/Saved Application State/com.baidu.hi.mac.savedState",
+  ]
 end

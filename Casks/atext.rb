@@ -1,5 +1,5 @@
 cask "atext" do
-  version "2.40.5,122"
+  version "3.11"
   sha256 :no_check
 
   url "https://www.trankynam.com/atext/downloads/aText.dmg"
@@ -8,8 +8,8 @@ cask "atext" do
   homepage "https://www.trankynam.com/atext/"
 
   livecheck do
-    url "https://www.trankynam.com/atext/aText-Appcast.xml"
-    strategy :sparkle
+    url "https://www.trankynam.com/atext/changelog.mac.html"
+    regex(/aText\s*v?(\d+(?:\.\d+)+)["< ]/i)
   end
 
   auto_updates true
@@ -22,7 +22,9 @@ cask "atext" do
     "~/Library/Caches/com.trankynam.aText",
     "~/Library/Containers/com.trankynam.aText",
     "~/Library/Cookies/com.trankynam.aText.binarycookies",
+    "~/Library/HTTPStorages/com.trankynam.aText",
     "~/Library/Preferences/com.trankynam.aText.plist",
     "~/Library/Saved Application State/com.trankynam.aText.savedState",
+    "~/Library/WebKit/com.trankynam.aText",
   ]
 end

@@ -1,13 +1,9 @@
 cask "angry-ip-scanner" do
-  arch = Hardware::CPU.intel? ? "X86" : "Arm64"
+  arch arm: "Arm64", intel: "X86"
 
-  version "3.8.2"
-
-  if Hardware::CPU.intel?
-    sha256 "e37228d7dc5e4766d9070bca5f0d616ae04887d7f6ee7b30cc8ea5a0190c7441"
-  else
-    sha256 "bc811e6d2c2df7fd2826ba0545a5a27f53d6da1420abfb8ff5ff8e0427a9317d"
-  end
+  version "3.9.1"
+  sha256 arm:   "bc75191718b8556c1c8610987285d98f7421044d7be117252d5f35516af3205c",
+         intel: "e1c6aea6094d317f351d9260fd6ea1a148f8a102c919c7067e2d39cd1016a8f7"
 
   url "https://github.com/angryip/ipscan/releases/download/#{version}/ipscan-mac#{arch}-#{version}.zip",
       verified: "github.com/angryip/ipscan/"

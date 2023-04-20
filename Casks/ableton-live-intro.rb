@@ -1,14 +1,8 @@
 cask "ableton-live-intro" do
-  arch = MacOS.version >= :mojave ? "universal" : "intel"
-  version "11.1.6"
+  version "11.2.11"
+  sha256 "70fb6f33c7e03f7c6290c7f5d5a6bee4454df272527c5fdd5dfd045b7d76f1eb"
 
-  if MacOS.version >= :mojave
-    sha256 "ffa68423dcaaa7b1668563655e4c5a85c3cd5adbb9bd58f5c19e7ab7331282bd"
-  else
-    sha256 "68ae4aa7c1a4286f77de340f5e2556442ea17a73976c3f90c9dce1c75dc8234a"
-  end
-
-  url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_intro_#{version}_#{arch}.dmg"
+  url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_intro_#{version}_universal.dmg"
   name "Ableton Live Intro"
   desc "Sound and music editor"
   homepage "https://www.ableton.com/en/live/"

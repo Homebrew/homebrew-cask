@@ -9,4 +9,11 @@ cask "caption" do
   homepage "https://getcaption.co/"
 
   app "Caption.app"
+
+  zap trash: [
+    "~/Library/Application Support/Caption",
+    "~/Library/Preferences/com.electron.caption.helper.plist",
+    "~/Library/Preferences/com.electron.caption.plist",
+    "~/Library/Saved Application State/com.electron.caption.savedState",
+  ]
 end

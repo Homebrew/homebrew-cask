@@ -1,5 +1,5 @@
 cask "pichon" do
-  version "1.0.12,17"
+  version "1.2.3"
   sha256 :no_check
 
   url "https://desktop.icons8.com/updates/pichon/Pichon.dmg"
@@ -9,7 +9,7 @@ cask "pichon" do
 
   livecheck do
     url "https://desktop.icons8.com/updates/pichon/cast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   depends_on macos: ">= :catalina"

@@ -8,6 +8,11 @@ cask "recordit" do
   desc "Screencasting software"
   homepage "https://recordit.co/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "RecordIt.app"
 
   zap trash: [

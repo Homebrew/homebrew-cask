@@ -18,5 +18,6 @@ cask "smcfancontrol" do
     "~/Library/Application Support/smcFanControl",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.eidac.smcfancontrol#{version.major}.sfl*",
     "~/Library/Caches/com.eidac.smcFanControl#{version.major}",
+    "~/Library/Preferences/com.eidac.smcFanControl#{version.major}.plist",
   ]
 end

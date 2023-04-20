@@ -4,9 +4,14 @@ cask "imagemin" do
 
   url "https://github.com/imagemin/imagemin-app/releases/download/#{version}/imagemin-app-v#{version}-darwin.zip"
   name "imagemin"
+  desc "Desktop image minifier"
   homepage "https://github.com/imagemin/imagemin-app"
 
   # Renamed for clarity: app name is inconsistent with its branding.
   # Original discussion: https://github.com/Homebrew/homebrew-cask/pull/4701
   app "imagemin-app-v#{version}-darwin/Atom.app", target: "imagemin.app"
+
+  caveats do
+    discontinued
+  end
 end

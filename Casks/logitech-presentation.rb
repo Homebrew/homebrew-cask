@@ -1,10 +1,11 @@
 cask "logitech-presentation" do
-  version "1.62.2"
-  sha256 "ca08be8c52cd40251c4a39bf2536b962aabb26ba7df26729cfc44c3abcacf9cd"
+  version "2.00.43"
+  sha256 "8562103144e6ca965cdf6b2c9046d40ff8c35a9bf4f769acbe81f07b8732ef64"
 
   url "https://download01.logi.com/web/ftp/pub/techsupport/presentation/LogiPresentation_#{version.major_minor_patch}.dmg",
       verified: "download01.logi.com/web/ftp/pub/techsupport/presentation/"
   name "Logitech Presentation"
+  desc "Presentation software"
   homepage "https://support.logitech.com/en_au/product/spotlight-presentation-remote"
 
   livecheck do
@@ -19,9 +20,7 @@ cask "logitech-presentation" do
 
   uninstall delete:     "/Applications/Logitech Presentation",
             login_item: "LogiPresentation",
-            signal:     [
-              ["KILL", "LogiPresentation"],
-            ]
+            signal:     ["KILL", "LogiPresentation"]
 
   zap trash: "/Library/Application Support/Logitech.localized/Logitech Presentation.localiz"
 end

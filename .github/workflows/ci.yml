@@ -5,6 +5,7 @@ on: pull_request
 env:
   HOMEBREW_DEVELOPER: 1
   HOMEBREW_NO_AUTO_UPDATE: 1
+  HOMEBREW_NO_INSTALL_FROM_API: 1
   HOMEBREW_GITHUB_API_TOKEN: ${{ github.token }}
 
 concurrency:
@@ -18,7 +19,7 @@ jobs:
   generate-matrix:
     outputs:
       matrix: ${{ steps.generate-matrix.outputs.matrix }}
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - name: Set up Homebrew
         id: set-up-homebrew
@@ -43,6 +44,7 @@ jobs:
     needs: generate-matrix
     runs-on: ${{ matrix.runner }}
     strategy:
+      fail-fast: false
       matrix:
         include: ${{ fromJson(needs.generate-matrix.outputs.matrix) }}
     steps:
@@ -51,6 +53,12 @@ jobs:
         uses: Homebrew/actions/setup-homebrew@master
         with:
           test-bot: false
+
+      - name: Enable debug mode
+        run: |
+          echo 'HOMEBREW_DEBUG=1' >> "${GITHUB_ENV}"
+          echo 'HOMEBREW_VERBOSE=1' >> "${GITHUB_ENV}"
+        if: runner.debug
 
       - name: Check out Pull Request
         uses: actions/checkout@v3
@@ -65,14 +73,14 @@ jobs:
               echo '::warning::Removing Visual Studio is no longer necessary.'
             fi
           fi
-          
+
           if ! brew uninstall --cask julia && ! rm -r /Applications/Julia-*.app; then
             echo '::warning::Removing Julia is no longer necessary.'
           fi
 
           if ! rm /usr/local/share/man/man1/al.1 || \
              ! sudo rm /etc/paths.d/mono-commands || \
-             ! sudo rm -r /Library/Frameworks/Mono.framework || \
+             ! sudo rm -r /Library/Frameworks/Mono.framework || \
              ! sudo pkgutil --forget com.xamarin.mono-MDK.pkg; then
             echo '::warning::Uninstalling Mono is no longer necessary.'
           fi
@@ -92,49 +100,52 @@ jobs:
           brew unlink python && brew link --overwrite python
         if: runner.os == 'macOS'
 
-      # Workaround until the `cache` action uses the changes from
-      # https://github.com/actions/toolkit/pull/580.
-      - name: Unlink workspace
-        run: |
-          mv "${GITHUB_WORKSPACE}" "${GITHUB_WORKSPACE}-link"
-          mkdir "${GITHUB_WORKSPACE}"
-
       - name: Cache Homebrew Gems
+        id: cache
         uses: actions/cache@v3
         with:
           path: ${{ steps.set-up-homebrew.outputs.gems-path }}
-          key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
-          restore-keys: ${{ runner.os }}-rubygems-
-
-      # Workaround until the `cache` action uses the changes from
-      # https://github.com/actions/toolkit/pull/580.
-      - name: Re-link workspace
-        run: |
-          rmdir "${GITHUB_WORKSPACE}"
-          mv "${GITHUB_WORKSPACE}-link" "${GITHUB_WORKSPACE}"
+          key: ${{ matrix.runner }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
+          restore-keys: ${{ matrix.runner }}-rubygems-
 
       - name: Install Homebrew Gems
         id: gems
         run: brew install-bundler-gems
+        if: steps.cache.outputs.cache-hit != 'true'
+
+      - name: Run brew readall ${{ matrix.tap }}
+        id: readall
+        run: brew readall '${{ matrix.tap }}'
+        if: >
+          always() &&
+          contains(fromJSON('["success", "skipped"]'), steps.gems.outcome) &&
+          !matrix.skip_readall
 
       - name: Run brew style ${{ matrix.tap }}
         run: brew style '${{ matrix.tap }}'
-        if: always() && steps.gems.outcome == 'success' && !matrix.cask
+        if: >
+          always() &&
+          contains(fromJSON('["success", "skipped"]'), steps.readall.outcome) &&
+          !matrix.cask
 
       - name: Run brew fetch --cask ${{ matrix.cask.token }}
         id: fetch
         run: |
-          brew fetch --cask --retry --force '${{ matrix.cask.path }}'
+          brew fetch --cask --retry --force ${{ join(matrix.fetch_args, ' ') }} '${{ matrix.cask.path }}'
         timeout-minutes: 30
-        if: always() && steps.gems.outcome == 'success' && matrix.cask
+        if: >
+          always() &&
+          contains(fromJSON('["success", "skipped"]'), steps.readall.outcome) &&
+          matrix.cask
 
       - name: Run brew audit --cask${{ (matrix.cask && ' ') || ' --tap ' }}${{ matrix.cask.token || matrix.tap }}
         id: audit
         run: |
-          brew audit --cask ${{ join(matrix.audit_args, ' ') }}${{ (matrix.cask && ' ') || ' --tap ' }}'${{ matrix.cask.path || matrix.tap }}'
+          brew audit --cask ${{ join(matrix.audit_args, ' ') }}${{ (matrix.cask && ' ') || ' --tap ' }}'${{ matrix.cask.token || matrix.tap }}'
         timeout-minutes: 30
         if: >
-          always() && steps.gems.outcome == 'success' &&
+          always() &&
+          contains(fromJSON('["success", "skipped"]'), steps.readall.outcome) &&
           (!matrix.cask || steps.fetch.outcome == 'success') &&
           !matrix.skip_audit
 
@@ -168,13 +179,15 @@ jobs:
             cask_dependencies = cask_and_formula_dependencies.select { |d| d.is_a?(Cask::Cask) }.map(&:full_name)
             formula_dependencies = cask_and_formula_dependencies.select { |d| d.is_a?(Formula) }.map(&:full_name)
 
-            puts "::set-output name=was_installed::#{JSON.generate(was_installed)}"
-            puts "::set-output name=manual_installer::#{JSON.generate(manual_installer)}"
-            puts "::set-output name=macos_requirement_satisfied::#{JSON.generate(macos_requirement_satisfied)}"
-            puts "::set-output name=cask_conflicts::#{JSON.generate(cask_conflicts)}"
-            puts "::set-output name=cask_dependencies::#{JSON.generate(cask_dependencies)}"
-            puts "::set-output name=formula_conflicts::#{JSON.generate(formula_conflicts)}"
-            puts "::set-output name=formula_dependencies::#{JSON.generate(formula_dependencies)}"
+            File.open(ENV.fetch("GITHUB_OUTPUT"), "a") do |f|
+              f.puts "was_installed=#{JSON.generate(was_installed)}"
+              f.puts "manual_installer=#{JSON.generate(manual_installer)}"
+              f.puts "macos_requirement_satisfied=#{JSON.generate(macos_requirement_satisfied)}"
+              f.puts "cask_conflicts=#{JSON.generate(cask_conflicts)}"
+              f.puts "cask_dependencies=#{JSON.generate(cask_dependencies)}"
+              f.puts "formula_conflicts=#{JSON.generate(formula_conflicts)}"
+              f.puts "formula_dependencies=#{JSON.generate(formula_dependencies)}"
+            end
           EOF
         if: always() && steps.fetch.outcome == 'success' && matrix.cask
 
@@ -200,7 +213,9 @@ jobs:
         id: snapshot
         run: |
           brew ruby -r "$(brew --repository homebrew/cask)/cmd/lib/check.rb" <<'EOF'
-            puts "::set-output name=before::#{JSON.generate(Check.all)}"
+            File.open(ENV.fetch("GITHUB_OUTPUT"), "a") do |f|
+              f.puts "before=#{JSON.generate(Check.all)}"
+            end
           EOF
         if: always() && steps.info.outcome == 'success'
 
@@ -212,8 +227,6 @@ jobs:
           fromJSON(steps.info.outputs.macos_requirement_satisfied) &&
           !matrix.skip_install
         timeout-minutes: 30
-        env:
-          HOMEBREW_DEBUG: 1
 
       - name: Run brew uninstall --cask ${{ matrix.cask.token }}
         run: brew uninstall --cask '${{ matrix.cask.path }}'
@@ -255,12 +268,6 @@ jobs:
           EOF
         if: always() && steps.snapshot.outcome == 'success'
 
-      # Workaround until the `cache` action uses the changes from
-      # https://github.com/actions/toolkit/pull/580.
-      - name: Unlink workspace
-        run: |
-          rm "${GITHUB_WORKSPACE}"
-          mkdir "${GITHUB_WORKSPACE}"
   conclusion:
     name: conclusion
     needs: test

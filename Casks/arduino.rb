@@ -7,10 +7,7 @@ cask "arduino" do
   desc "Electronics prototyping platform"
   homepage "https://www.arduino.cc/"
 
-  livecheck do
-    url "https://www.arduino.cc/en/software/"
-    regex(/href=.*?arduino[._-]v?(\d+(?:\.\d+)+)-macosx\.zip/i)
-  end
+  conflicts_with cask: "homebrew/cask-versions/arduino-nightly"
 
   app "Arduino.app"
   binary "#{appdir}/Arduino.app/Contents/Java/arduino-builder"
@@ -20,4 +17,8 @@ cask "arduino" do
     "~/Library/Preferences/cc.arduino.Arduino.plist",
     "~/Library/Saved Application State/cc.arduino.Arduino.savedState",
   ]
+
+  caveats do
+    discontinued
+  end
 end

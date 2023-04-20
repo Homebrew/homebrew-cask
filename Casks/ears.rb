@@ -1,6 +1,6 @@
 cask "ears" do
-  version "1.5,20"
-  sha256 "7c2832c77b55a6df37e802f83721b412a7912e73cc4636d6de3fbc29414cef28"
+  version "1.6,21"
+  sha256 "59fb9296ac7f20d35375db18aa65fbe09e1f593f3279fcac59372d82cf545bc9"
 
   url "https://get.retina.studio/ears/ears_#{version.csv.second}.zip"
   name "Ears"

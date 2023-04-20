@@ -1,8 +1,11 @@
 cask "deepgit" do
-  version "4.2.1"
-  sha256 "f872cef7524216bae6c97aefaf5edc4b3d5b2048f00c370e829222cbfc55ed9f"
+  arch arm: "aarch64", intel: "x86_64"
 
-  url "https://www.syntevo.com/downloads/deepgit/deepgit-macosx-#{version.dots_to_underscores}.dmg"
+  version "4.3.1"
+  sha256 arm:   "44bbdb1269e8667a4ccbf52ec7d80bb491600f2f1d25727b2c97ace6e64ca14c",
+         intel: "a97d912f4e32bf791dbc0e4522d51c6002fbc413f8cedb7ba41cd2dbba27e593"
+
+  url "https://www.syntevo.com/downloads/deepgit/deepgit-#{arch}-#{version.dots_to_underscores}.dmg"
   name "DeepGit"
   desc "Tool to investigate the history of source code"
   homepage "https://www.syntevo.com/deepgit/"
@@ -10,7 +13,7 @@ cask "deepgit" do
   livecheck do
     url "https://syntevo.com/deepgit/download"
     strategy :page_match do |page|
-      v = page[%r{href=.*?/deepgit-macosx-(\d+(?:_\d+)+)\.dmg}i, 1]
+      v = page[%r{href=.*?/deepgit-#{arch}-(\d+(?:_\d+)+)\.dmg}i, 1]
       next if v.blank?
 
       v.tr("_", ".")

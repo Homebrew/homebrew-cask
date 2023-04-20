@@ -1,15 +1,11 @@
 cask "mamp" do
-  arch = Hardware::CPU.intel? ? "Intel-x86" : "M1-arm"
+  arch arm: "M1-arm", intel: "Intel-x86"
 
-  version "6.6"
+  version "6.8"
+  sha256 arm:   "4c010dfbe6bcf1472d1bd2128dac3de69cfebac41960e8dbeb7a7c963a810190",
+         intel: "c1875435e79a0b7b7c7fdc2ec46fb488598424268c08ff7780eceeaf3adb882b"
 
   url "https://downloads.mamp.info/MAMP-PRO/releases/#{version}/MAMP_MAMP_PRO_#{version}-#{arch}.pkg"
-  if Hardware::CPU.intel?
-    sha256 "306b101a84251655b8e1d50ef1c4d59901d300f85d0e03910701d8d418d4a4d4"
-  else
-    sha256 "4eb2a5146c0f0ccacfdaf4ea31e5735317a9e2aab18c0b9b591ab96c17808f1d"
-  end
-
   name "MAMP"
   desc "Web development solution with Apache, Nginx, PHP & MySQL"
   homepage "https://www.mamp.info/"

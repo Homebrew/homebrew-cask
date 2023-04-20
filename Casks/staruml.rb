@@ -1,13 +1,9 @@
 cask "staruml" do
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  arch arm: "-arm64"
 
-  version "5.0.2"
-
-  if Hardware::CPU.intel?
-    sha256 "0df2006e175e8cfccf17bc3ca27d505177fab2cf7dda97b2299f1841b3bd98fe"
-  else
-    sha256 "abf41ab3d32d1b33ba6a3938e21ee8fba73766ceda0ee26a5ccafd3a11984596"
-  end
+  version "5.1.0"
+  sha256 arm:   "9dbdb2a205cdb1a11e296e9aec328f925d002a6037a0fae610fc40c72a36d6ff",
+         intel: "c21ecc5517ea3ab96c8a5a10158f77904f76cff4054349c2dea94e27fb8fe82a"
 
   url "https://staruml.io/download/releases-v#{version.major}/StarUML-#{version}#{arch}.dmg"
   name "StarUML"

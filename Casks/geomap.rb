@@ -1,11 +1,11 @@
 cask "geomap" do
-  version "3.6.14"
+  version "3.6.15"
   sha256 :no_check
 
-  url "http://www.geomapapp.org/MapApp/GeoMapApp.dmg"
+  url "https://www.geomapapp.org/MapApp/GeoMapApp.dmg"
   name "GeoMapApp"
   desc "Browse, visualize and analyze geoscience data sets"
-  homepage "http://www.geomapapp.org/"
+  homepage "https://www.geomapapp.org/"
 
   livecheck do
     url :homepage

@@ -1,8 +1,8 @@
 cask "frhelper" do
-  version "4.2.1,1071"
-  sha256 "c54a3af2a3e234e1fbfc909413849ac26e1392079314509564143273ef970447"
+  version "4.3.3"
+  sha256 :no_check
 
-  url "https://static.frdic.com/pkg/fhmac.dmg?v=#{version.csv.second}",
+  url "https://static.frdic.com/pkg/fhmac.dmg",
       verified:   "static.frdic.com/",
       user_agent: :fake
   name "Frhelper"
@@ -12,8 +12,10 @@ cask "frhelper" do
 
   livecheck do
     url "https://www.eudic.net/update/frhelper_mac.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Frhelper.app"
 

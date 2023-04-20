@@ -1,6 +1,6 @@
 cask "audiorelay" do
-  version "0.25.5"
-  sha256 "c27dae927ee98c99560b477f507ac9ede290781f35f8e5a512dda9c37542a526"
+  version "0.27.5"
+  sha256 "3156111b07a7a6e7562e1ebf9c83ed69205a301501e2a1a37111cb6361737db5"
 
   url "https://dl.audiorelay.net/setups/macos/AudioRelay-#{version}.dmg"
   name "AudioRelay"
@@ -9,8 +9,8 @@ cask "audiorelay" do
 
   livecheck do
     url "https://api.audiorelay.net/Downloads"
-    strategy :page_match do |page|
-      JSON.parse(page)["macOs"]["version"]
+    strategy :json do |json|
+      json["macOs"]["version"]
     end
   end
 

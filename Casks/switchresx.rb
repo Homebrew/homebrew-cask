@@ -1,5 +1,5 @@
 cask "switchresx" do
-  version "4.12"
+  version "4.12.2"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://www.madrau.com/data/switchresx/SwitchResX#{version.major}.zip"
@@ -9,32 +9,33 @@ cask "switchresx" do
 
   livecheck do
     url "https://www.madrau.com/srx_download/srx_download/history.php"
-    regex(/SwitchResX\s*(\d+(?:\.\d+)*)/i)
+    regex(/SwitchResX\s*(\d+(?:\.\d+)+)/i)
   end
 
   prefpane "SwitchResX Installer.app/Contents/Plugins/SwitchResX.prefPane"
 
-  uninstall quit:   [
+  uninstall quit:      [
               "fr.madrau.switchresx.app",
               "fr.madrau.switchresx.daemon", # note, daemon does not :quit cleanly
             ],
-            signal: [
+            signal:    [
               ["INT",  "fr.madrau.switchresx.daemon"],
               ["KILL", "fr.madrau.switchresx.daemon"],
             ],
-            delete: [
+            delete:    [
               "/Library/ScriptingAdditions/SwitchResX Extensions.osax",
               "/Library/ScriptingAdditions/SwitchResX Menu.osax",
-            ]
+            ],
+            launchctl: "fr.madrau.switchresx.helper"
 
   zap trash: [
     "~/Library/Caches/fr.madrau.switchresx.app",
     "~/Library/Caches/fr.madrau.switchresx.daemon",
     "~/Library/Cookies/fr.madrau.switchresx.app.binarycookies",
     "~/Library/Cookies/fr.madrau.switchresx.daemon.binarycookies",
+    "~/Library/Preferences/fr.madrau.switchres.desktop-layout.plist",
     "~/Library/Preferences/fr.madrau.switchresx.app.plist",
     "~/Library/Preferences/fr.madrau.switchresx.daemon.plist",
-    "~/Library/Preferences/fr.madrau.switchres.desktop-layout.plist",
     "~/Library/Saved Application State/fr.madrau.switchresx.app.savedState",
   ]
 end

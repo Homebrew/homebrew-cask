@@ -1,21 +1,35 @@
 cask "obs" do
-  version "27.2.4"
-  sha256 "9aeed92816f23fdb4819eb1b0c989c158aaab246e0bd024933429614b06435f2"
+  arch arm: "arm64", intel: "x86_64"
 
-  url "https://cdn-fastly.obsproject.com/downloads/obs-mac-#{version}.dmg"
+  version "29.0.2"
+  sha256 arm:   "8092dd2945114fc017c12d2670d97e7a518aab42f405fbad26bc2e227c1a156c",
+         intel: "9d49e6bf4eafa7ca885043888b1292dba70a6958240a7fe9fbf144716f77c14e"
+
+  url "https://cdn-fastly.obsproject.com/downloads/obs-studio-#{version}-macos-#{arch}.dmg"
   name "OBS"
   desc "Open-source software for live streaming and screen recording"
   homepage "https://obsproject.com/"
 
   livecheck do
-    url :homepage
-    regex(%r{href=.*?/obs[._-]mac[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    url "https://obsproject.com/osx_update/stable/updates_#{arch}.xml"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  conflicts_with cask: "homebrew/cask-versions/obs-beta"
+  depends_on macos: ">= :catalina"
 
   app "OBS.app"
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/obs.wrapper.sh"
+  binary shimscript, target: "obs"
+
+  preflight do
+    File.write shimscript, <<~EOS
+      #!/bin/bash
+      exec '#{appdir}/OBS.app/Contents/MacOS/OBS' "$@"
+    EOS
+  end
 
   uninstall delete: "/Library/CoreMediaIO/Plug-Ins/DAL/obs-mac-virtualcam.plugin"
 

@@ -1,11 +1,16 @@
 cask "mathtype" do
-  version "7.4.4"
+  version "7.17.1"
   sha256 :no_check
 
   url "https://store.wiris.com/en/products/downloads/mathtype/installer/mac/en"
-  appcast "https://docs.wiris.com/en/mathtype/release_notes/start"
   name "MathType"
-  homepage "http://www.wiris.com/en/mathtype"
+  desc "Write math equations everywhere"
+  homepage "https://www.wiris.com/en/mathtype"
+
+  livecheck do
+    url "https://docs.wiris.com/en/mathtype/release_notes/start"
+    regex(/MathType\s+editor\s+v(\d+(?:\.\d+)+)/i)
+  end
 
   installer manual: "MathType-mac-en.pkg"
 

@@ -1,12 +1,11 @@
 cask "macmediakeyforwarder" do
-  version "3.1"
-  sha256 "176e672e9aa61564f06124eb0b6aedbfb04fae10dd3595479e85fba25c9d724a"
+  version "3.1.1"
+  sha256 "b3a0b5746245a3d3f54fbdaf6ad4990604bec51a83cfcb8a8b445f23c4faccd1"
 
-  url "https://github.com/milgra/macmediakeyforwarder/releases/download/#{version}/MacMediaKeyForwarder#{version}.zip",
-      verified: "github.com/milgra/macmediakeyforwarder/"
+  url "https://github.com/quentinlesceller/macmediakeyforwarder/releases/download/v#{version}/MacMediaKeyForwarder.zip"
   name "Mac Media Key Forwarder"
   desc "Media key forwarder for iTunes and Spotify"
-  homepage "http://milgra.com/"
+  homepage "https://github.com/quentinlesceller/macmediakeyforwarder/"
 
   depends_on macos: ">= :sierra"
 

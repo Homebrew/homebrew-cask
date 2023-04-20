@@ -1,6 +1,6 @@
 cask "letter-opener" do
-  version "14.1.3"
-  sha256 "157530cae59bccbbec536bbc74870519b2edc80f0d9596ce8fb9929372fa13ca"
+  version "15.0.2"
+  sha256 "7f38bb02b8a431d7698a15dfd6e7b48a56f69c22a3d18dd85b625a01b4303375"
 
   url "https://s3.amazonaws.com/LetterOpener/dmg/Letter-Opener-#{version}.zip",
       verified: "s3.amazonaws.com/LetterOpener/dmg/"

@@ -1,6 +1,6 @@
 cask "vallum" do
-  version "4.0.11"
-  sha256 "0aa154d3b5cf6c06454275be5ac1904ccadf139efa8a93b175a4f8f86c2b28d1"
+  version "4.0.13"
+  sha256 "0518a1b24882f47894872e72065283d9f2683ce9b22a888faf75ed52e729e401"
 
   url "https://github.com/TheMurusTeam/Vallum/releases/download/v#{version}/vallum-#{version}.zip",
       verified: "github.com/TheMurusTeam/Vallum/"

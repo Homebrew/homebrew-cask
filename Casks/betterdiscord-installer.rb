@@ -1,6 +1,6 @@
 cask "betterdiscord-installer" do
-  version "1.1.1"
-  sha256 "80810d4570eed463708a75cc88c74880330e22c61e4bd0d4db8c355aade31682"
+  version "1.2.1"
+  sha256 "23b9f276ec5b24a0085bceec313db3bc4bf5741d2c563a580a6dd4c6d2fab866"
 
   url "https://github.com/BetterDiscord/Installer/releases/download/v#{version}/BetterDiscord-Mac.zip",
       verified: "github.com/BetterDiscord/Installer/"

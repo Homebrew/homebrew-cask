@@ -9,7 +9,7 @@ cask "makehuman" do
   homepage "http://www.makehumancommunity.org/"
 
   livecheck do
-    url "http://download.tuxfamily.org/makehuman/releases/"
+    url "https://download.tuxfamily.org/makehuman/releases/"
     regex(/makehuman-community-(\d+(?:\.\d+)*)-macos\.zip/i)
   end
 

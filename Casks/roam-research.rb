@@ -1,16 +1,12 @@
 cask "roam-research" do
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  arch arm: "-arm64"
 
-  version "0.0.15"
-
-  if Hardware::CPU.intel?
-    sha256 "c270b957cb7ba0c9fa7b7ff8ff9a2fbe2ed3c8dba24ee2584dfa487022e1cc51"
-  else
-    sha256 "4407df5ac97d3013dbf113d09da33d01264d94f8f4c30d5546afe237e6af5834"
-  end
+  version "0.0.17"
+  sha256 arm:   "814ebea1e795583319e8c650c9ed04942e528aee04700bc22d2eb88f8961586f",
+         intel: "f04edd739c5f302d86029d9c0d4c54700c34b3ea2ab5878575f24829dcd13fca"
 
   url "https://roam-electron-deploy.s3.us-east-2.amazonaws.com/Roam+Research-#{version}#{arch}.dmg",
-      verified: "roam-electron-deploy.s3.us-east-2.amazonaws.com"
+      verified: "roam-electron-deploy.s3.us-east-2.amazonaws.com/"
   name "Roam Research"
   desc "Note-taking tool for networked thought"
   homepage "https://roamresearch.com/"

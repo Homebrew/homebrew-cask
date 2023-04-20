@@ -1,9 +1,9 @@
 cask "soothe2" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
-  version "1.3.0"
-  sha256 "8cf9e5c0d5ba16594b90edf04c434e21250217bdffb5aaba9cc9565186cb8df2"
+  version "1.3.1"
+  sha256 "cc9bac7e1fd8ea873d8ea31545f423d9e3b0abaab5a37b967e57298e31dd5bc6"
 
-  url "https://oeksound.ams3.cdn.digitaloceanspaces.com/soothe2_v#{version.no_dots}_Mac.dmg",
+  url "https://oeksound.ams3.cdn.digitaloceanspaces.com/soothe2_v#{version.no_dots}_Mac.pkg",
       verified: "oeksound.ams3.cdn.digitaloceanspaces.com/"
   name "Soothe 2"
   desc "Dynamic resonance suppressor"
@@ -16,7 +16,7 @@ cask "soothe2" do
 
   depends_on macos: ">= :high_sierra"
 
-  pkg "soothe2.pkg"
+  pkg "soothe2_v#{version.no_dots}_Mac.pkg"
 
   uninstall pkgutil: [
     "com.oeksound.soothe2.aax",

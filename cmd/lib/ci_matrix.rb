@@ -8,9 +8,8 @@ module CiMatrix
   MAX_JOBS = 256
 
   RUNNERS = {
-    { symbol: :catalina, name: "macos-10.15" } => 0,
-    { symbol: :big_sur,  name: "macos-11" }    => 0.9,
-    { symbol: :monterey, name: "macos-12" }    => 0.1,
+    { symbol: :big_sur,  name: "macos-11", arch: :intel } => 0.0,
+    { symbol: :monterey, name: "macos-12", arch: :intel } => 1.0,
   }.freeze
 
   # This string uses regex syntax and is intended to be interpolated into
@@ -19,36 +18,40 @@ module CiMatrix
 
   def self.filter_runners(cask_content)
     # Retrieve arguments from `depends_on macos:`
-    args = case cask_content
-    when /depends_on macos: \[((?:#{DEPENDS_ON_MACOS_ARRAY_MEMBER})+)\]/o
-      Regexp.last_match(1).scan(/#{DEPENDS_ON_MACOS_ARRAY_MEMBER}/o).flatten.map(&:to_sym)
-    when /depends_on macos: "?:([^\s"]+)"?/
-      [*Regexp.last_match(1).to_sym]
-    when /depends_on macos: "([=<>]=\s:?\S+)"/
-      [*Regexp.last_match(1)]
-    when /depends_on macos:/
+    required_macos = case cask_content
+    when /depends_on\s+macos:\s+\[((?:#{DEPENDS_ON_MACOS_ARRAY_MEMBER})+)\]/o
+      Regexp.last_match(1).scan(/#{DEPENDS_ON_MACOS_ARRAY_MEMBER}/o).flatten.map(&:to_sym).map do |v|
+        {
+          version:    v,
+          comparator: "==",
+        }
+      end
+    when /depends_on\s+macos:\s+"?:([^\s"]+)"?/ # e.g. `depends_on macos: :big_sur`
+      [
+        {
+          version:    Regexp.last_match(1).to_sym,
+          comparator: "==",
+        },
+      ]
+    when /depends_on\s+macos:\s+"([=<>]=)\s+:([^\s"]+)"/ # e.g. `depends_on macos: ">= :monterey"`
+      [
+        {
+          version:    Regexp.last_match(2).to_sym,
+          comparator: Regexp.last_match(1),
+        },
+      ]
+    when /depends_on\s+macos:/
       # In this case, `depends_on macos:` is present but wasn't matched by the
       # previous regexes. We want this to visibly fail so we can address the
       # shortcoming instead of quietly defaulting to `RUNNERS`.
       odie "Unhandled `depends_on macos` argument"
-    end
-    return RUNNERS if args.nil?
-
-    # Preform same checks as `brew install` would
-    required_macos = if args.count > 1
-      { versions: args, comparator: "==" }
-    elsif MacOSVersions::SYMBOLS.key?(args.first)
-      { versions: [args.first], comparator: "==" }
-    elsif /^\s*(?<comparator><|>|[=<>]=)\s*:?(?<version>\S+)\s*$/ =~ args.first
-      { versions: [version.to_sym], comparator: comparator }
-    else # rubocop:disable Lint/DuplicateBranch
-      { versions: [args.first], comparator: "==" }
+    else
+      []
     end
 
-    # Filter
     filtered_runners = RUNNERS.select do |runner, _|
-      required_macos[:versions].any? do |v|
-        MacOS::Version.from_symbol(runner[:symbol]).public_send(required_macos[:comparator], v)
+      required_macos.any? do |r|
+        MacOS::Version.from_symbol(runner.fetch(:symbol)).public_send(r.fetch(:comparator), r.fetch(:version))
       end
     end
     return filtered_runners unless filtered_runners.empty?
@@ -57,22 +60,40 @@ module CiMatrix
   end
 
   def self.random_runner(avalible_runners = RUNNERS)
-    avalible_runners.reject { |_, weight| weight.zero? }
-                    .max_by { |(_, weight)| rand ** (1.0 / weight) }
+    avalible_runners.max_by { |(_, weight)| rand ** (1.0 / weight) }
                     .first
   end
 
-  def self.runners(path)
-    cask_content = path.read
+  def self.runners(cask_content:)
     filtered_runners = filter_runners(cask_content)
 
-    if cask_content.match?(/\bMacOS\s*\.version\b/m) &&
-       filtered_runners.keys.any? { |runner| cask_content.include?(runner[:symbol].inspect) }
-      # If the cask depends on `MacOS.version`, test it on every possible macOS version.
+    macos_version_found = cask_content.match?(/\bMacOS\s*\.version\b/m)
+    filtered_macos_found = filtered_runners.keys.any? do |runner|
+      (
+        macos_version_found &&
+        cask_content.include?(runner[:symbol].inspect)
+      ) || cask_content.include?("on_#{runner[:symbol]}")
+    end
+
+    if filtered_macos_found
+      # If the cask varies on a MacOS version, test it on every possible macOS version.
       filtered_runners.keys
     else
       # Otherwise, select a runner based on weighted random sample.
       [random_runner(filtered_runners)]
+    end
+  end
+
+  def self.architectures(cask_content:)
+    case cask_content
+    when /depends_on\s+arch:\s+:arm64/
+      [:arm]
+    when /depends_on\s+arch:\s+:x86_64/
+      [:intel]
+    when /\barch\b/, /\bon_(arm|intel)\b/
+      [:arm, :intel]
+    else
+      RUNNERS.keys.map { |r| r.fetch(:arch) }.uniq.sort
     end
   end
 
@@ -103,30 +124,46 @@ module CiMatrix
     jobs = modified_cask_files.count
     odie "Maximum job matrix size exceeded: #{jobs}/#{MAX_JOBS}" if jobs > MAX_JOBS
 
-    changed_files[:modified_cask_files].flat_map do |path|
+    modified_cask_files.flat_map do |path|
       cask_token = path.basename(".rb")
 
-      appcast_arg = if labels.include?("ci-skip-appcast")
-        "--no-appcast"
-      else
-        "--appcast"
-      end
-
-      audit_args = [appcast_arg, "--online"]
-
+      audit_args = ["--online"]
       audit_args << "--new-cask" if changed_files[:added_files].include?(path)
 
-      runners(path).map do |runner|
+      audit_args << "--signing"
+
+      audit_exceptions = []
+
+      if labels.include?("ci-skip-livecheck")
+        audit_exceptions << ["hosting_with_livecheck", "livecheck_version", "livecheck_min_os"]
+      end
+
+      audit_exceptions << "livecheck_min_os" if labels.include?("ci-skip-livecheck-min-os")
+
+      if labels.include?("ci-skip-repository")
+        audit_exceptions << ["github_repository", "gitlab_repository",
+                             "bitbucket_repository"]
+      end
+
+      audit_args << "--except" << audit_exceptions.join(",") if audit_exceptions.any?
+
+      cask_content = path.read
+
+      runners(cask_content: cask_content).product(architectures(cask_content: cask_content)).map do |runner, arch|
+        native_runner_arch = arch == runner.fetch(:arch)
+        arch_args = native_runner_arch ? [] : ["--arch=#{arch}"]
         {
-          name:         "test #{cask_token} (#{runner[:name]})",
+          name:         "test #{cask_token} (#{runner.fetch(:name)}, #{arch})",
           tap:          tap.name,
           cask:         {
             token: cask_token,
             path:  "./#{path}",
           },
-          audit_args:   audit_args,
-          skip_install: labels.include?("ci-skip-install"),
-          runner:       runner[:name],
+          audit_args:   audit_args + arch_args,
+          fetch_args:   arch_args,
+          skip_install: labels.include?("ci-skip-install") || !native_runner_arch,
+          skip_readall: !native_runner_arch,
+          runner:       runner.fetch(:name),
         }
       end
     end

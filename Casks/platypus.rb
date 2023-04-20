@@ -1,15 +1,15 @@
 cask "platypus" do
-  version "5.3,1113"
-  sha256 "efc66e943e6327896d0c1b82b0c1798c9ea17cffa03581e4949541c30d9833b0"
+  version "5.4.1"
+  sha256 "7e52b3993e3edd8c2f9d783cec23e9fc9206f8ff62ae42fe1dabff481e3d4dd5"
 
-  url "https://sveinbjorn.org/files/software/platypus/platypus#{version.csv.first}.zip"
+  url "https://sveinbjorn.org/files/software/platypus/platypus#{version}.zip"
   name "Platypus"
   desc "Tool to create native applications from command-line scripts"
   homepage "https://sveinbjorn.org/platypus"
 
   livecheck do
     url "https://sveinbjorn.org/files/appcasts/PlatypusAppcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

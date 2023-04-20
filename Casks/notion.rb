@@ -1,14 +1,10 @@
 cask "notion" do
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
-  livecheck_folder = Hardware::CPU.intel? ? "mac" : "apple-silicon"
+  arch arm: "-arm64"
+  livecheck_folder = on_arch_conditional arm: "arm64", intel: "latest"
 
-  if Hardware::CPU.intel?
-    version "2.0.23"
-    sha256 "8081b230e2e2d7f9a439c17c6a0b9fc281c52cad65358f211149792e9cdd47c1"
-  else
-    version "2.1.0"
-    sha256 "3811d30ee2ca40fe7f88df71e578838ea668d79bf3eb01b453baf3a82a6e333c"
-  end
+  version "2.1.14"
+  sha256 arm:   "82e1748c877933b16e97195e7ee35ad6e02c4f98fbc71dd8776f2a7b27cbd8c9",
+         intel: "dd367895b871ff6e7b382d6a1fa5556617365c026b9872c0812583cb5026f17d"
 
   url "https://desktop-release.notion-static.com/Notion-#{version}#{arch}.dmg",
       verified: "desktop-release.notion-static.com/"
@@ -17,9 +13,8 @@ cask "notion" do
   homepage "https://www.notion.so/"
 
   livecheck do
-    url "https://www.notion.so/desktop/#{livecheck_folder}/download"
-    strategy :header_match
-    regex(/Notion[._-]v?(\d+(?:\.\d+)*?)[^.]*?\.dmg/i)
+    url "https://desktop-release.notion-static.com/#{livecheck_folder}-mac.yml"
+    strategy :electron_builder
   end
 
   auto_updates true
@@ -29,8 +24,9 @@ cask "notion" do
   zap trash: [
     "~/Library/Application Support/Caches/notion-updater",
     "~/Library/Application Support/Notion",
-    "~/Library/Caches/notion.id",
+    "~/Library/Caches/notion.id*",
     "~/Library/Logs/Notion",
+    "~/Library/Preferences/ByHost/notion.id.*.plist",
     "~/Library/Preferences/notion.id.helper.plist",
     "~/Library/Preferences/notion.id.plist",
     "~/Library/Saved Application State/notion.id.savedState",

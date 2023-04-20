@@ -1,8 +1,8 @@
 cask "qingg" do
-  version "2.11,3411"
-  sha256 "e08f5831b27b4ffaef0537c79253904352219064de44566969c5ee417e92c705"
+  version "2.14"
+  sha256 "26680dbc411f15c460866f07b2f4a7849d11f2717983688592d2c406cccc0e31"
 
-  url "https://qingg.im/download/Qingg-#{version.csv.first}.dmg"
+  url "https://qingg.im/download/Qingg-#{version}.dmg"
   name "QinggIM"
   name "清歌输入法"
   desc "Wubi input method"
@@ -10,7 +10,7 @@ cask "qingg" do
 
   livecheck do
     url "https://qingg.im/sparkle/appcast.php"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

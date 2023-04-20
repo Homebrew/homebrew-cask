@@ -1,8 +1,8 @@
 cask "anypointstudio" do
-  version "7.12.1"
-  sha256 "27ca9ada203d4ef101aaad744b69830fafd29c2b85b784e03ed57cd8954ee75f"
+  version "7.14.0"
+  sha256 "a23db6aa8bf1b127241ef637b4547b617d73cd7834cf4058a5202ec578e6653b"
 
-  vsuffix = version.patch == "0" ? "GA" : "U#{version.patch}"
+  vsuffix = (version.patch == "0") ? "GA" : "U#{version.patch}"
 
   url "https://mule-studio.s3.amazonaws.com/#{version}-#{vsuffix}/AnypointStudio-#{version}-macos64.zip",
       verified: "mule-studio.s3.amazonaws.com/"

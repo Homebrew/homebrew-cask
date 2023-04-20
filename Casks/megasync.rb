@@ -1,8 +1,10 @@
 cask "megasync" do
-  version "4.6.8"
+  arch arm: "Arm64"
+
+  version "4.9.1"
   sha256 :no_check
 
-  url "https://mega.nz/MEGAsyncSetup.dmg"
+  url "https://mega.nz/MEGAsyncSetup#{arch}.dmg"
   name "MEGAsync"
   desc "Syncs files between computers and MEGA Cloud drives"
   homepage "https://mega.nz/sync"
@@ -17,7 +19,8 @@ cask "megasync" do
 
   app "MEGAsync.app"
 
-  uninstall launchctl:  "mega.mac.megaupdater",
+  uninstall quit:       "mega.mac",
+            launchctl:  "mega.mac.megaupdater",
             login_item: "MEGAsync"
 
   zap trash: [

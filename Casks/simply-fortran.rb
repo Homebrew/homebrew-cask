@@ -1,29 +1,38 @@
 cask "simply-fortran" do
-  url_string = if MacOS.version <= :big_sur
-    "-x86_64.legacy"
-  else
-    Hardware::CPU.intel? ? "-x86_64" : "-arm64"
-  end
+  arch arm: "-arm64", intel: "-x86_64"
 
-  version "3.25.3757"
-
-  if MacOS.version <= :big_sur
+  on_big_sur :or_older do
+    version "3.25.3757"
     sha256 "0975462a1593bdc976dc87d6a9da88b97d8268a1a97caebeefd359e56ef73195"
-  elsif Hardware::CPU.intel?
-    sha256 "cd177191c7a96d59c0e9c3bb271808a2b471d1001fca17b85cb420aaf55ee05a"
-  else
-    sha256 "de1c523a1c4a2d2be2623eaa89b117ddca4bbd7edacdda6830e930d2463a3208"
+
+    url "https://download.simplyfortran.com/#{version.major_minor}/macos/simplyfortran-#{version}-x86_64.legacy.dmg"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_monterey :or_newer do
+    version "3.29.3908"
+    sha256 arm:   "18d0af63b55332db7e124932b827e0adcee7231e94a7afd35fbba403a4fce66b",
+           intel: "b3d89ab70fa5397c010c96c885cef38ee5e96e3d32cd1e879aa1ddc361574e4f"
+
+    url "https://download.simplyfortran.com/#{version.major_minor}/macos/simplyfortran-#{version}#{arch}.dmg"
+
+    livecheck do
+      url "https://simplyfortran.com/download/?platform=macos"
+      regex(/href=.*?simplyfortran[._-]v?(\d+(?:\.\d+)+)#{arch}\.dmg/i)
+    end
   end
 
-  url "https://download.simplyfortran.com/#{version.major_minor}/macos/simplyfortran-#{version}#{url_string}.dmg"
   name "Simply Fortran"
   desc "Fortran development environment"
   homepage "https://simplyfortran.com/"
 
-  livecheck do
-    url "https://simplyfortran.com/download/?platform=macos"
-    regex(/href=.*?simplyfortran[._-]v?(\d+(?:\.\d+)+)#{url_string}\.dmg/i)
-  end
-
   app "Simply Fortran.app"
+
+  zap trash: [
+    "~/.simplyfortran",
+    "~/Library/Caches/com.apple.helpd/Generated/com.approximatrix.simplyfortran.help*3.29",
+    "~/Library/Saved Application State/com.approximatrix.simplyfortran.savedState",
+  ]
 end

@@ -6,13 +6,26 @@ cask "thinkorswim" do
   name "thinkDesktop"
   homepage "https://mediaserver.thinkorswim.com/installer/install.html#macosx"
 
+  livecheck do
+    skip "unversioned Java application"
+  end
+
+  # Installation options are stored in `.install4j/response.varfile` of the installation directory.
   installer script: {
     executable: "thinkorswim Installer.app/Contents/MacOS/JavaApplicationStub",
-    args:       ["-q"],
+    args:       [
+      "-q",
+      "-Dinstall4j.suppressStdout=true",
+      "-Dinstall4j.debug=false",
+      "-Vcreate_icon$Boolean=false",
+      "-VexecuteLauncherAction$Boolean=false",
+      "-VinstallFor=all",
+      "-Vsys.installationDir=#{appdir}/thinkorswim",
+    ],
   }
 
   uninstall script: {
-    executable: "/Applications/thinkorswim/thinkorswim Uninstaller.app/Contents/MacOS/JavaApplicationStub",
+    executable: "#{appdir}/thinkorswim/thinkorswim Uninstaller.app/Contents/MacOS/JavaApplicationStub",
     args:       ["-q"],
   }
 end

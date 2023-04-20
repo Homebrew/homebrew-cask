@@ -1,9 +1,12 @@
 cask "processing" do
-  version "3.5.4,0270"
-  sha256 "4d64fe42a6c5c0863cc82e93a036e73731999ee9448be45bc322f91b0010bb6b"
+  arch arm: "aarch64", intel: "x64"
 
-  url "https://github.com/processing/processing/releases/download/processing-#{version.csv.second}-#{version.csv.first}/processing-#{version.csv.first}-macosx.zip",
-      verified: "github.com/processing/processing/"
+  version "4.2,1292"
+  sha256 arm:   "25407063a5c121d4435f828592431726ea355cb796cb279f2b5d021920a0943f",
+         intel: "081ac1c019d36fac546374308644d026922fbf59aa0445e29b7c252de90ec982"
+
+  url "https://github.com/processing/processing4/releases/download/processing-#{version.csv.second}-#{version.csv.first}/processing-#{version.csv.first}-macos-#{arch}.zip",
+      verified: "github.com/processing/processing4/"
   name "Processing"
   desc "Flexible software sketchbook and a language for learning how to code"
   homepage "https://processing.org/"
@@ -19,8 +22,9 @@ cask "processing" do
 
   conflicts_with cask: [
     "homebrew/cask-versions/processing2",
-    "homebrew/cask-versions/processing-beta",
+    "homebrew/cask-versions/processing3",
   ]
+  depends_on macos: ">= :catalina"
 
   app "Processing.app"
 
@@ -29,6 +33,7 @@ cask "processing" do
   zap trash: [
     "~/Library/Processing",
     "~/Preferences/org.processing.app.plist",
+    "~/Preferences/org.processing.four.plist",
     "~/Preferences/processing.app.tools.plist",
   ]
 end

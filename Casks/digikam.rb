@@ -1,6 +1,6 @@
 cask "digikam" do
-  version "7.7.0"
-  sha256 "b7f17bb16c80c1616ab9b54b9fa4d18220fac748a74bc47b276260e57ca13877"
+  version "8.0.0"
+  sha256 "b345e7dbbe5b5b4ff1a195056cdd097f4c23c12313403beb188ccd5c68b9e4bb"
 
   url "https://download.kde.org/stable/digikam/#{version}/digiKam-#{version}-MacOS-x86-64.pkg",
       verified: "kde.org/stable/digikam/"

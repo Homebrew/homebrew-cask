@@ -12,8 +12,17 @@ cask "phoenix" do
 
   app "Phoenix.app"
 
+  uninstall login_item: "Phoenix",
+            quit:       [
+              "org.khirviko.Phoenix",
+              "org.khirviko.Phoenix.Launcher",
+            ]
+
   zap trash: [
-    "~/Library/Application Support/Phoenix/storage.json",
-    "~/Library/Preferences/org.khirviko.Phoenix.plist",
+    "~/Library/Application Scripts/org.khirviko.Phoenix.Launcher",
+    "~/Library/Caches/org.khirviko.Phoenix",
+    "~/Library/Containers/org.khirviko.Phoenix.Launcher",
+    "~/Library/HTTPStorages/org.khirviko.Phoenix",
+    "~/Library/WebKit/org.khirviko.Phoenix",
   ]
 end

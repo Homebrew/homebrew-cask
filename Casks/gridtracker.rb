@@ -1,19 +1,15 @@
 cask "gridtracker" do
-  version "1.22.0503,1.21.0503-2"
-  sha256 "298c922675c2067530625c1ffe67a42f64d409fc00a37fc00a1e10b56f774841"
+  version "1.23.0402"
+  sha256 "5f07eb7b11980d52d3d4f739c43762d4e15ac636cdb663dbe35235f682e9f4c4"
 
-  url "https://storage.googleapis.com/gt_download/v#{version.csv.second}/GridTracker-#{version.csv.first}-mac-x64.zip",
-      verified: "storage.googleapis.com/gt_download/"
+  url "https://downloads.gridtracker.org/v#{version}/GridTracker-#{version}-mac-x64.zip"
   name "GridTracker"
   desc "Warehouse of amateur radio information presented in an easy to use interface"
-  homepage "https://gridtracker.org/grid-tracker/"
+  homepage "https://gridtracker.org/"
 
   livecheck do
-    url "https://gridtracker.org/release.html"
-    regex(%r{href=.*/v?(\d+(?:[.-]\d+)+)/GridTracker[._-]v?(\d+(?:\.\d+)+)-mac-x64\.zip}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match.second},#{match.first}" }
-    end
+    url "https://gridtracker.org/index.php/documentation/change-log"
+    regex(/v(\d+(?:\.\d+)+)/i)
   end
 
   depends_on macos: ">= :mojave"

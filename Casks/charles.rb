@@ -1,6 +1,6 @@
 cask "charles" do
-  version "4.6.2"
-  sha256 "8e66c73ebd5d97bbe2b79e27bdfd3f06299edb7f941246ea52cc32883917df12"
+  version "4.6.4"
+  sha256 "ab9c355750c9c3ba23b5f784831d3eb63fc5df71cf937c5175c451dc0b3acfdd"
 
   url "https://www.charlesproxy.com/assets/release/#{version}/charles-proxy-#{version}.dmg"
   name "Charles"

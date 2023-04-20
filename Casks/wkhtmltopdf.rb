@@ -5,27 +5,32 @@ cask "wkhtmltopdf" do
   url "https://github.com/wkhtmltopdf/packaging/releases/download/#{version}/wkhtmltox-#{version}.macos-cocoa.pkg",
       verified: "github.com/wkhtmltopdf/packaging/"
   name "wkhtmltopdf"
+  desc "HTML to PDF renderer"
   homepage "https://wkhtmltopdf.org/"
 
-  # We need to check all releases since not all releases are for macOS.
   livecheck do
-    url "https://github.com/wkhtmltopdf/packaging/releases"
-    strategy :page_match
-    regex(/href=.*?wkhtmltox-(\d+(?:\.\d+)*-\d+)\.macos-cocoa\.pkg/i)
+    url "https://wkhtmltopdf.org/downloads.html"
+    regex(/href=.*?wkhtmltox[._-]v?(\d+(?:\.\d+)*-\d+)[._-]macos[._-]cocoa\.pkg/i)
   end
 
   pkg "wkhtmltox-#{version}.macos-cocoa.pkg"
 
   uninstall pkgutil: "org.wkhtmltopdf.wkhtmltox",
             delete:  [
-              "/usr/local/include/wkhtmltox",
-              "/usr/local/lib/libwkhtmltox.dylib",
-              "/usr/local/lib/libwkhtmltox.#{version.major}.dylib",
-              "/usr/local/lib/libwkhtmltox.#{version.major_minor}.dylib",
-              "/usr/local/lib/libwkhtmltox.#{version.sub(/-.*$/, "")}.dylib",
               "/usr/local/bin/wkhtmltoimage",
               "/usr/local/bin/wkhtmltopdf",
-            ]
+              "/usr/local/include/wkhtmltox",
+              "/usr/local/lib/libwkhtmltox.#{version.major_minor}.dylib",
+              "/usr/local/lib/libwkhtmltox.#{version.major}.dylib",
+              "/usr/local/lib/libwkhtmltox.#{version.sub(/-.*$/, "")}.dylib",
+              "/usr/local/lib/libwkhtmltox.dylib",
+            ],
+            script:  {
+              executable: "/usr/local/bin/uninstall-wkhtmltox",
+              sudo:       true,
+            }
+
+  # No zap stanza required
 
   caveats do
     files_in_usr_local

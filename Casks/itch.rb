@@ -4,13 +4,13 @@ cask "itch" do
 
   url "https://broth.itch.ovh/install-itch/darwin-amd64/LATEST/archive/default",
       verified: "broth.itch.ovh/"
-  name "itch.io"
+  name "itch"
   desc "Game client for itch.io"
   homepage "https://itch.io/app"
 
   livecheck do
-    url "https://github.com/itchio/itch/releases"
-    strategy :github_latest
+    url "https://broth.itch.ovh/itch/darwin-amd64"
+    regex(%r{href=.*?/v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 
   auto_updates true
@@ -28,4 +28,8 @@ cask "itch" do
     "~/Library/Preferences/io.itch.mac.helper.plist",
     "~/Library/Preferences/io.itch.mac.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

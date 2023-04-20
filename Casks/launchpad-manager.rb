@@ -1,11 +1,16 @@
 cask "launchpad-manager" do
-  version "1.0.10"
+  version "1.0.13"
   sha256 :no_check
 
   url "http://launchpadmanager.com/download_yosemite.php/LaunchpadManagerYosemite.dmg"
   name "Launchpad Manager"
   desc "Tool to manage the launchpad"
   homepage "http://launchpadmanager.com/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   app "Launchpad Manager.app"
 

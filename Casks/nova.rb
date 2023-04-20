@@ -1,9 +1,9 @@
 cask "nova" do
-  version "9.4"
-  sha256 "249a3fe550d10598309a922c728e6957a2c32de6337fb57bec1401fde6407640"
+  version "10.6"
+  sha256 "b41e17c7fb7018d41c202c00e0745dcb68c9275d4681888e729a10898f8e428c"
 
-  url "https://download-cdn.panic.com/nova/Nova%20#{version}.zip",
-      verified: "download-cdn.panic.com/nova/"
+  url "https://download-keycdn.panic.com/nova/Nova%20#{version}.zip",
+      verified: "download-keycdn.panic.com/nova/"
   name "Panic Nova"
   desc "Native code editor"
   homepage "https://nova.app/"
@@ -14,17 +14,13 @@ cask "nova" do
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :big_sur"
 
   app "Nova.app"
-  binary "#{appdir}/Nova.app/Contents/SharedSupport/nova"
-  artifact "#{appdir}/Nova.app/Contents/Resources/nova_completions.txt",
-           target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_nova"
 
   uninstall delete: [
     "/Library/LaunchDaemons/com.panic.NovaPrivilegedHelper.plist",
     "/Library/PrivilegedHelperTools/com.panic.NovaPrivilegedHelper",
-    "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_nova",
   ]
 
   zap trash: [

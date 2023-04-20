@@ -1,5 +1,5 @@
 cask "jump-desktop-connect" do
-  version "6.7.69,60769"
+  version "6.9.22,60922"
   sha256 :no_check
 
   url "https://mirror.jumpdesktop.com/downloads/connect/JumpDesktopConnect.dmg"
@@ -14,10 +14,10 @@ cask "jump-desktop-connect" do
 
   pkg ".jdc.sparkle_guided.pkg"
 
-  uninstall quit:      "com.p5sys.jump.connect",
-            signal:    [["QUIT", "com.p5sys.jump.connect"]],
+  uninstall signal:    ["QUIT", "com.p5sys.jump.connect"],
             pkgutil:   "com.p5sys.jump.connect",
             launchctl: [
+              "application.com.p5sys.jump.connect.*",
               "com.p5sys.jump.connect.service",
               "com.p5sys.jump.connect.agent",
             ],

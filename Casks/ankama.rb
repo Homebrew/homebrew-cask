@@ -1,10 +1,10 @@
 cask "ankama" do
-  version "3.6.16"
+  version "3.9.5"
   sha256 :no_check
 
   url "https://launcher.cdn.ankama.com/installers/production/Ankama%20Launcher-Setup.dmg"
   name "Ankama Launcher"
-  desc "Portal to download Ankama's PC games"
+  desc "Video game launcher"
   homepage "https://www.ankama.com/en/launcher"
 
   livecheck do

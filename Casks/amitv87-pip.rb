@@ -1,6 +1,6 @@
 cask "amitv87-pip" do
-  version "2.40"
-  sha256 "57fd87c68e9cd4e0a1a425234abad231ec7c9bdb3e4d7c35a18e5341a4b9b025"
+  version "2.41"
+  sha256 "5d85c8e084980eccfe16a0d7941d4d869003c1e2744f16ba7efab66d9c480356"
 
   url "https://github.com/amitv87/PiP/releases/download/v#{version}/PiP-#{version}.dmg"
   name "PiP"
@@ -10,4 +10,6 @@ cask "amitv87-pip" do
   depends_on macos: ">= :sierra"
 
   app "PiP.app"
+
+  zap trash: "~/Library/Saved Application State/com.boggyb.PiP.savedState"
 end

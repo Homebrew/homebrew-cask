@@ -1,13 +1,10 @@
 cask "openshift-client" do
-  version "4.10.24"
+  arch arm: "-arm64"
 
-  if Hardware::CPU.intel?
-    sha256 "6f4c57b485d9016c5a04abfe67e20a48e565d52f9aa1d56a20c23b2a82fb829d"
-  else
-    sha256 "cb6c0092efca2631f22620ca67b055e2bb8e08cc82701b3e6a7884abb906bfc0"
-  end
+  version "4.12.13"
+  sha256 arm:   "f8f7740b504eeb9fcf792b3787d9faf87757802f10fbefb917a0bdb2d988f786",
+         intel: "0577506c00bbc13aab96f1fd5bcc0a0bc391f88e27b37268f2990294d8f8e4d0"
 
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
   url "https://mirror.openshift.com/pub/openshift-v#{version.major}/clients/ocp/#{version}/openshift-client-mac#{arch}.tar.gz"
   name "Openshift Client"
   desc "Red Hat OpenShift Container Platform command-line client"
@@ -19,4 +16,6 @@ cask "openshift-client" do
   end
 
   binary "oc"
+
+  zap trash: "~/.kube/config"
 end

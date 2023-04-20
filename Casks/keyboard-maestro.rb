@@ -1,6 +1,6 @@
 cask "keyboard-maestro" do
-  version "10.1.1,1011"
-  sha256 "6076df7010c3212f8c55d33023ad7d810dd585435ac11c8c8ceee2fe1fdc6bac"
+  version "10.2,1020"
+  sha256 "3f782b9b241851d025392375187a02342293fe24401823d38e65badd7bbc0d8f"
 
   url "https://files.stairways.com/keyboardmaestro-#{version.csv.second}.zip",
       verified: "stairways.com/"

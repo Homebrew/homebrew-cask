@@ -1,10 +1,11 @@
 cask "pencil" do
-  version "3.1.0"
-  sha256 "5369787a801a470179a86ba60407b33e647f826b1a8b001b62e4f81a6bb0629d"
+  version "3.1.1"
+  sha256 "ea72ea7a528e3bb744a1730b9eed4b24af87e649c7feb5906182ab81ef903af5"
 
-  url "https://pencil.evolus.vn/dl/V#{version}.ga/Pencil-#{version}.ga.dmg"
+  url "https://pencil.evolus.vn/dl/V#{version}.ga/Pencil-#{version}.ga-universal.dmg"
   name "Pencil"
   name "The Pencil Project"
+  desc "GUI prototyping tool"
   homepage "https://pencil.evolus.vn/"
 
   livecheck do

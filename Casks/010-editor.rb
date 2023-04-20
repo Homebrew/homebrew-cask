@@ -1,6 +1,6 @@
 cask "010-editor" do
-  version "12.0.1"
-  sha256 "336cb1b7e055d3638e562e63539e90db4a795f738d67ca377c2e9dfac8670924"
+  version "13.0.1"
+  sha256 "8cf8c6b38a0d08b4308ebdc4cc7fabb4884c41b321a92becc4be0b87e7c3fafe"
 
   url "https://download.sweetscape.com/010EditorMac64Installer#{version}.dmg"
   name "010 Editor"

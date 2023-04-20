@@ -1,7 +1,7 @@
 cask "sonic-robo-blast-2-kart" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
-  version "1.3"
-  sha256 "0c598f0b8182391518d1d5777eb63b86465d7d36d3e3a6ab1db718f6b73c33c6"
+  version "1.6"
+  sha256 "d433b8b8662068b7726f31bfd6b372bd9a991019d7c88be6ffc9db380cf3ba9d"
 
   url "https://github.com/STJr/Kart-Public/releases/download/v#{version}/SRB2Kart-#{version}-macOS.dmg",
       verified: "github.com/STJr/Kart-Public/"

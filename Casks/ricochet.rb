@@ -10,8 +10,8 @@ cask "ricochet" do
 
   livecheck do
     url :url
-    strategy :github_latest
     regex(%r{/ricochet-(\d+(?:\.\d+)*)-macos\.dmg}i)
+    strategy :github_latest
   end
 
   app "Ricochet.app"

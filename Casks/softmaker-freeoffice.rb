@@ -1,5 +1,5 @@
 cask "softmaker-freeoffice" do
-  version "2021,1046"
+  version "2021,1062"
   sha256 :no_check # required as upstream package is updated in place
 
   url "https://www.softmaker.net/down/softmaker-freeoffice-#{version.csv.first}.pkg",
@@ -21,4 +21,8 @@ cask "softmaker-freeoffice" do
   pkg "softmaker-freeoffice-#{version.csv.first}.pkg"
 
   uninstall pkgutil: "com.SoftMaker.FreeOffice#{version.csv.first}"
+
+  zap trash: [
+    "~/Library/Saved Application State/SoftMaker*",
+  ]
 end

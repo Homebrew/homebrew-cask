@@ -6,5 +6,10 @@ cask "runescape" do
   name "RuneScape"
   homepage "https://www.runescape.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "RuneScape.app"
 end

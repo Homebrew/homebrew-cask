@@ -1,6 +1,6 @@
 cask "marathon" do
-  version "20220115"
-  sha256 "e04f7fc9a12c80d254ad45eeec40ddcd2b853b25a8bd0d62ecba2a88c97c4df3"
+  version "20230119"
+  sha256 "0b848b947b4adcac7e43fe1c1957aaecc1042a9ce0653dfe79b144b34819da34"
 
   url "https://github.com/Aleph-One-Marathon/alephone/releases/download/release-#{version}/Marathon-#{version}-Mac.dmg",
       verified: "github.com/Aleph-One-Marathon/alephone/"
@@ -9,9 +9,8 @@ cask "marathon" do
   homepage "https://alephone.lhowon.org/"
 
   livecheck do
-    url :url
-    strategy :github_latest
-    regex(%r{href=.*?/Marathon-(\d+)-Mac\.dmg}i)
+    url :homepage
+    regex(%r{href=.*?/Marathon[._-]v?(\d+(?:\.\d+)*)[._-]Mac\.dmg}i)
   end
 
   app "Marathon.app"

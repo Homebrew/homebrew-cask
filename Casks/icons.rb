@@ -8,4 +8,8 @@ cask "icons" do
   homepage "https://github.com/exherb/icons"
 
   app "Icons.app"
+
+  caveats do
+    discontinued
+  end
 end

@@ -9,8 +9,8 @@ cask "vysor" do
   homepage "https://www.vysor.io/"
 
   livecheck do
-    url "http://vysornuts.clockworkmod.com/download/mac"
-    strategy :header_match
+    url :url
+    strategy :github_latest
   end
 
   app "Vysor.app"
@@ -19,8 +19,8 @@ cask "vysor" do
     "~/Library/Application Support/Vysor",
     "~/Library/Caches/com.electron.vysor",
     "~/Library/Caches/com.electron.vysor.ShipIt",
-    "~/Library/Preferences/com.electron.vysor.plist",
     "~/Library/Preferences/com.electron.vysor.helper.plist",
+    "~/Library/Preferences/com.electron.vysor.plist",
     "~/Library/Saved Application State/com.electron.vysor.savedState",
   ]
 end

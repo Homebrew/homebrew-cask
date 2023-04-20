@@ -1,6 +1,6 @@
 cask "kodelife" do
-  version "1.0.5,161"
-  sha256 "c9d40b74a98efab3201ead703ceb488ddd016a61581a9d04d4c71e2983fd6de9"
+  version "1.0.9,172"
+  sha256 "81f0115f2cd9b7dca95cba8603d7d6926697318be253969e51f9fe13ca386665"
 
   url "https://hexler.net/pub/kodelife/kodelife-#{version.csv.first}.#{version.csv.second}-macos.dmg"
   name "KodeLife"

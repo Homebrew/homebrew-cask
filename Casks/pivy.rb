@@ -1,12 +1,13 @@
 cask "pivy" do
-  version "0.2.1"
-  sha256 "d66ed12c55b166c769623c56383237c15a9d27c2504d6c3045104e59e77f189c"
+  version "0.11.1"
+  sha256 "df5857714b0a5a5710a6a36c7197b3c3c453de846b92a21ba81d569f35670549"
 
-  url "https://github.com/joyent/pivy/releases/download/v#{version}/pivy-#{version}.pkg"
+  url "https://github.com/joyent/pivy/releases/download/v#{version}/pivy-#{version}-macos12.pkg"
   name "pivy"
+  desc "Client for PIV cards"
   homepage "https://github.com/joyent/pivy"
 
-  pkg "pivy-#{version}.pkg"
+  pkg "pivy-#{version}-macos12.pkg"
 
   uninstall pkgutil:   "net.cooperi.pivy",
             launchctl: "net.cooperi.pivy-agent",

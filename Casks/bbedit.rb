@@ -1,17 +1,6 @@
 cask "bbedit" do
-  if MacOS.version <= :el_capitan
-    version "12.1.6"
-    sha256 "23b9fc6ef5c03cbcab041566503c556d5baf56b2ec18f551e6f0e9e6b48dc690"
-  elsif MacOS.version <= :high_sierra
-    version "12.6.7"
-    sha256 "d0647c864268b187343bd95bfcf490d6a2388579b1f8fce64a289c65341b1144"
-  elsif MacOS.version <= :mojave
-    version "14.1.2"
-    sha256 "d9ce7ef5976c0b8a5037599966ea3979695170b44b03987bb046d7f52af253c0"
-  else
-    version "14.5.1"
-    sha256 "92888342ceb8e655f53c902aeae940e15dc76aad51858365fd42123271ba3ead"
-  end
+  version "14.6.5"
+  sha256 "288eb6b0d6f19a0a773104c74da291e75090bac9b0cc3a52ceff6affb2dac822"
 
   url "https://s3.amazonaws.com/BBSW-download/BBEdit_#{version}.dmg",
       verified: "s3.amazonaws.com/BBSW-download/"
@@ -20,12 +9,12 @@ cask "bbedit" do
   homepage "https://www.barebones.com/products/bbedit/"
 
   livecheck do
-    url "http://versioncheck.barebones.com/BBEdit.xml"
+    url "https://versioncheck.barebones.com/BBEdit.xml"
     regex(/BBEdit[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :catalina"
 
   app "BBEdit.app"
   binary "#{appdir}/BBEdit.app/Contents/Helpers/bbedit_tool", target: "bbedit"

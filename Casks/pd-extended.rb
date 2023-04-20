@@ -8,8 +8,8 @@ cask "pd-extended" do
 
   livecheck do
     url "https://sourceforge.net/projects/pure-data/rss?path=/pd-extended"
-    strategy :page_match
     regex(%r{/Pd-(\d+(?:\.\d+)*)-extended-macosx105-i386\.dmg}i)
+    strategy :page_match
   end
 
   app "Pd-extended.app"

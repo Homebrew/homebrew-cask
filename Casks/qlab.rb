@@ -1,15 +1,15 @@
 cask "qlab" do
-  version "4.6.12,4612"
-  sha256 "40b144f38a72ae222d0ecb9f4e32ee0d777727f324d8b6eaeab6110894b9ba38"
+  version "5.1.1"
+  sha256 "b877ba63b033070813915c8575cb93792eac6eb9eb16f2979a684fed5457088b"
 
-  url "https://qlab.app/downloads/archive/QLab-#{version.csv.first}.zip"
+  url "https://qlab.app/downloads/archive/QLab-#{version}.zip"
   name "QLab"
   desc "Sound, video and lighting control"
   homepage "https://qlab.app/"
 
   livecheck do
     url "https://qlab.app/appcast/v#{version.major}/"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

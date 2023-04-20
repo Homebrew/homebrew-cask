@@ -1,6 +1,6 @@
 cask "metaimage" do
-  version "2.0.5,d097661f-3b76-4d6a-82e0-4b8d487a77c8"
-  sha256 "b64ca8c6e9e523a3316fa0de513eae3b3442fbb43d44f538dbd7d1b884345082"
+  version "2.3.1,41ac51da-05fb-498e-9bb6-b6a7828b3474"
+  sha256 "9af2cad270c5bb06267825cd74de6f823999decbd29648f4200da57dc7c44cc2"
 
   url "https://neededapps.nyc3.digitaloceanspaces.com/media/public/#{version.csv.second}.zip",
       verified: "neededapps.nyc3.digitaloceanspaces.com/media/public/"
@@ -19,13 +19,21 @@ cask "metaimage" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :big_sur"
 
   app "MetaImage.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.jeremyvizzini.metaimage-paddle.photosextension",
+    "~/Library/Application Scripts/com.jeremyvizzini.metaimage-paddle.quicklookextension",
+    "~/Library/Application Scripts/JVTX6KC453.group.com.jeremyvizzini.metaimage",
     "~/Library/Application Support/MetaImage",
     "~/Library/Caches/com.jeremyvizzini.metaimage.macos",
+    "~/Library/Containers/com.jeremyvizzini.metaimage-paddle.photosextension",
+    "~/Library/Containers/com.jeremyvizzini.metaimage-paddle.quicklookextension",
+    "~/Library/Group Containers/JVTX6KC453.group.com.jeremyvizzini.metaimage",
+    "~/Library/HTTPStorages/com.jeremyvizzini.metaimage-paddle",
+    "~/Library/HTTPStorages/com.jeremyvizzini.metaimage-paddle.binarycookies",
     "~/Library/Preferences/com.jeremyvizzini.metaimage.macos.plist",
     "~/Library/Saved Application State/com.jeremyvizzini.metaimage.macos.savedState",
   ]

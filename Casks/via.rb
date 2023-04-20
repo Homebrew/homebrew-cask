@@ -1,10 +1,11 @@
 cask "via" do
-  version "1.3.1"
-  sha256 "d7b9f6fd97cc920cebae8b92417c24f5b78856b8f2fc8512093b2fbfc9302e67"
+  version "3.0.0"
+  sha256 "30f9f81154a8ee9c0cf19f4fb1a3d6ca9a448f765122845db1e190b9f583d16b"
 
   url "https://github.com/the-via/releases/releases/download/v#{version}/via-#{version}-mac.dmg",
       verified: "github.com/the-via/releases/"
   name "VIA"
+  desc "Keyboard configurator"
   homepage "https://caniusevia.com/"
 
   app "VIA.app"

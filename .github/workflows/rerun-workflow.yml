@@ -26,16 +26,19 @@ jobs:
         github.event.label.name == 'ci-retry' ||
         github.event.label.name == 'ci-skip-appcast' ||
         github.event.label.name == 'ci-skip-install' ||
+        github.event.label.name == 'ci-skip-livecheck' ||
+        github.event.label.name == 'ci-skip-livecheck-min-os' ||
+        github.event.label.name == 'ci-skip-repository' ||
         github.event.label.name == 'ci-syntax-only' ||
         !github.event.label.name
       )
     runs-on: ubuntu-latest
     steps:
       - name: Re-run CI workflow
-        uses: reitermarkus/rerun-workflow@c8d5bc3526acb50c12004f31c0dcb1598c87e32d
+        uses: reitermarkus/rerun-workflow@7381e98aa2bc4464acef4b60ade8d1d1d90e6e65
         with:
           token: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
           once-label: ci-requeue
           continuous-label: ci-retry
-          trigger-labels: ci-skip-appcast,ci-skip-install,ci-syntax-only
+          trigger-labels: ci-skip-appcast,ci-skip-install,ci-skip-livecheck,ci-syntax-only,ci-skip-repository,ci-skip-livecheck-min-os
           workflow: ci.yml

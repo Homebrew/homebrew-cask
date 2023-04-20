@@ -1,15 +1,18 @@
 cask "azure-data-studio" do
-  version "1.37.0"
-  sha256 "310657581853e5ba4dc828e07b5085108e154337a45219c5456545d27860cb10"
+  arch arm: "darwin-arm64", intel: "darwin"
 
-  url "https://azuredatastudio-update.azurewebsites.net/#{version}/darwin/stable",
+  version "1.43.0"
+  sha256 arm:   "f23d5246068c6af0e00a7979c7aba5a7c07fc81c632b58c37d2615f1ae3b7fe3",
+         intel: "98b97bf52148f79c7f0e6cf4b9f53f1eaecfaf0c149704784e0d3cd0e3408654"
+
+  url "https://azuredatastudio-update.azurewebsites.net/#{version}/#{arch}/stable",
       verified: "azuredatastudio-update.azurewebsites.net/"
   name "Azure Data Studio"
   desc "Data management tool that enables working with SQL Server"
   homepage "https://docs.microsoft.com/en-us/sql/azure-data-studio/"
 
   livecheck do
-    url "https://azuredatastudio-update.azurewebsites.net/api/update/darwin/stable/VERSION"
+    url "https://azuredatastudio-update.azurewebsites.net/api/update/#{arch}/stable/VERSION"
     regex(/"productVersion"\s*:\s*"(\d+(:?\.\d+)+)"/i)
   end
 

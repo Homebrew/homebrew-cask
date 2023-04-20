@@ -1,6 +1,6 @@
 cask "tableau-prep" do
-  version "2022.2.1"
-  sha256 "3412f4914d0ab75985e48754e69e17db72d7f0a5594ba25ee74e29c8463b94e9"
+  version "2023.1.0"
+  sha256 "a8580322734b822e71fed353e9f24005fb79b152ec8d4b1126a9c3b2d7bf95e3"
 
   url "https://downloads.tableau.com/esdalt/tableau_prep/#{version}/TableauPrep-#{version.dots_to_hyphens}.dmg"
   name "Tableau Prep"
@@ -11,7 +11,7 @@ cask "tableau-prep" do
   livecheck do
     url "https://www.tableau.com/downloads/prep/mac"
     strategy :header_match do |headers|
-      headers["location"][/TableauPrep-(\d+(?:-\d+)+)\.dmg/i, 1].tr("-", ".")
+      headers["location"][/TableauPrep[._-]v?(\d+(?:-\d+)+)\.dmg/i, 1].tr("-", ".")
     end
   end
 

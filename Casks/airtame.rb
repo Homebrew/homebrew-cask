@@ -1,6 +1,6 @@
 cask "airtame" do
-  version "4.4.0"
-  sha256 "dadc6558eb7f59e206e0f86558333d980dde5ea3af6c38948fdbf9c3ebcf3c3f"
+  version "4.6.2"
+  sha256 "86ba2b0af7b662d20de6f9cb00bb0478786b898d899673a3d25b960f5018f89c"
 
   url "https://downloads-cdn.airtame.com/app/latest/mac/Airtame-#{version}.dmg"
   name "Airtame"
@@ -15,4 +15,11 @@ cask "airtame" do
   auto_updates true
 
   app "Airtame.app"
+
+  zap trash: [
+    "~/Library/Application Support/airtame-application",
+    "~/Library/Logs/Airtame",
+    "~/Library/Preferences/com.airtame.airtame-application.plist",
+    "~/Library/Saved Application State/com.airtame.airtame-application.savedState",
+  ]
 end

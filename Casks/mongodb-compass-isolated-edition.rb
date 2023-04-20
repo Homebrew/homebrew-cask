@@ -1,10 +1,13 @@
 cask "mongodb-compass-isolated-edition" do
-  version "1.32.4"
-  sha256 "602e1caae954848f43b59589972244be4847083f1ca311173e333fd51a8a90ca"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://downloads.mongodb.com/compass/mongodb-compass-isolated-#{version}-darwin-x64.dmg"
+  version "1.36.3"
+  sha256 arm:   "7295be43fe01b3410b0bee758969e924ba28e57232e4d0dcb5fc9aa0fd1d55b9",
+         intel: "e2ef99247a2b7af4f23b949ec1c86cd8434c017e8c32292e2cdeb828fc1fec8e"
+
+  url "https://downloads.mongodb.com/compass/mongodb-compass-isolated-#{version}-darwin-#{arch}.dmg"
   name "MongoDB Compass Isolated"
-  desc "Explore and manipulate your MongoDB data"
+  desc "Interactive tool for analyzing MongoDB data"
   homepage "https://www.mongodb.com/products/compass"
 
   livecheck do

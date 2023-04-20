@@ -1,6 +1,6 @@
 cask "hashbackup" do
-  version "3032"
-  sha256 "7bba722a17d1502d10a4fd19e506673be29e25066f1b2ede83543cd5748aeada"
+  version "3067"
+  sha256 "b8d4ab6fcdf022262eb755588854b87963fa2ec3a2fb4910172be1be81f873f0"
 
   url "http://upgrade.hashbackup.com/#{version}/hb.r#{version}.Darwin.x86_64.bz2"
   name "HashBackup"
@@ -13,4 +13,6 @@ cask "hashbackup" do
   end
 
   binary "hb.r#{version}.Darwin.x86_64", target: "hb"
+
+  zap trash: "~/hashbackup"
 end

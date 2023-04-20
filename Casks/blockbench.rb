@@ -1,13 +1,9 @@
 cask "blockbench" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
-  version "4.2.5"
-
-  if Hardware::CPU.intel?
-    sha256 "c87ba65698ae40be303d173ac7157517d0992b56618ca68ae29eecc6dbb7b263"
-  else
-    sha256 "a76f30fafcf95bfb58418a575d3817b32db4ab60b51e6e1f19bec7f78d723009"
-  end
+  version "4.7.0"
+  sha256 arm:   "0a86576a2eb23caf4c242b010a8d3fd2fc0497b54e4dd71a33907f692ce7a1b4",
+         intel: "2bce82bda56948c43acb610268f906115ab699acfa6b446fa01ae29655a5e8ef"
 
   url "https://github.com/JannisX11/blockbench/releases/download/v#{version}/Blockbench_#{arch}_#{version}.dmg",
       verified: "github.com/JannisX11/blockbench/"

@@ -1,9 +1,10 @@
 cask "trader-workstation" do
-  version "10.16.1n"
+  arch arm: "arm", intel: "x64"
+  os = on_arch_conditional arm: "macos", intel: "macosx"
+
+  version "10.22.1h"
   sha256 :no_check
 
-  arch = Hardware::CPU.intel? ? "x64" : "arm"
-  os = Hardware::CPU.intel? ? "macosx" : "macos"
   url "https://download2.interactivebrokers.com/installers/tws/latest/tws-latest-#{os}-#{arch}.dmg"
   name "Trader Workstation"
   desc "Trading software"
@@ -20,7 +21,11 @@ cask "trader-workstation" do
   }
 
   uninstall_preflight do
+    ohai "Stopping all running instances of Trader Workstation prior to uninstall"
     system_command "/usr/bin/pkill", args: ["-f", "/Applications/Trader Workstation/Trader Workstation.app"]
+
+  rescue RuntimeError
+    ohai "No running instances of Trader Workstation found"
   end
 
   uninstall quit:   "com.install4j.5889-6375-8446-2021",
@@ -28,4 +33,9 @@ cask "trader-workstation" do
               executable: "/Applications/Trader Workstation/Trader Workstation Uninstaller.app/Contents/MacOS/JavaApplicationStub",
               args:       ["-q"],
             }
+
+  zap trash: [
+    "/Applications/Trader Workstation",
+    "~/Library/Application Support/Trader Workstation",
+  ]
 end

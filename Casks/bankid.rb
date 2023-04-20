@@ -1,6 +1,6 @@
 cask "bankid" do
-  version "7.13.0"
-  sha256 "11027607372cd1d7b663510770970542be722a9409693222feeb67663ce0bf81"
+  version "7.14.0"
+  sha256 "30fc256596af824de7c3ad9acf2e05dd118d9c85064ae54d62aab79b61139ce2"
 
   url "https://cdn.bankid.com/bisp/mac/BankID_installation_#{version.dots_to_underscores}.pkg"
   name "BankID"
@@ -8,7 +8,7 @@ cask "bankid" do
   homepage "https://install.bankid.com/"
 
   livecheck do
-    url "https://install.bankid.com/FileDownloader?fileId=Mac"
+    url "https://install.bankid.com/api/file-download/Mac"
     strategy :header_match
   end
 

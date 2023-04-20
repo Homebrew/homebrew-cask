@@ -9,8 +9,8 @@ cask "dd-utility" do
 
   livecheck do
     url "https://github.com/thefanclub/dd-utility/tree/master/DMG"
-    strategy :page_match
     regex(%r{href=.*?/ddUtility[._-]?v?(\d+(?:\.\d+)+)\.dmg}i)
+    strategy :page_match
   end
 
   app "dd Utility.app"

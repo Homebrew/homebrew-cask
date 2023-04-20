@@ -1,8 +1,8 @@
 cask "timing" do
-  version "2022.4,339"
-  sha256 "d407b3e32be8405b1600c1dd8ebf87f95929edf51a2480a845d5ae9a60f4be3e"
+  version "2023.2.1"
+  sha256 "dbe448c9e95e0d04fcb166733f2f5f8e89754ce56a43fbfbfcfce2dfc04bb36c"
 
-  url "https://updates.timingapp.com/download/Timing-#{version.csv.first}.dmg"
+  url "https://updates.timingapp.com/download/Timing-#{version}.dmg"
   name "Timing"
   name "Timing 2"
   desc "Automatic time and productivity tracking app"
@@ -10,7 +10,7 @@ cask "timing" do
 
   livecheck do
     url "https://updates.timingapp.com/updates/timing2.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
@@ -21,14 +21,14 @@ cask "timing" do
   uninstall login_item: "TimingHelper"
 
   zap trash: [
+    "~/Library/Application Support/info.eurocomp.Timing2",
+    "~/Library/Application Support/info.eurocomp.TimingHelper",
     "~/Library/Application Support/info.eurocomp.TimingHelper.InfoExtractorService",
-    "~/Library/Application Support/info.eurocomp.Timing2/",
-    "~/Library/Application Support/info.eurocomp.TimingHelper/",
+    "~/Library/Caches/info.eurocomp.Timing2",
     "~/Library/Caches/info.eurocomp.TimingHelper.InfoExtractorService",
-    "~/Library/Caches/info.eurocomp.Timing2/",
-    "~/Library/Caches/info.eurocomp.TimingHelper/",
-    "~/Library/Preferences/info.eurocomp.TimingHelper.InfoExtractorService.plist",
+    "~/Library/Caches/info.eurocomp.TimingHelper",
     "~/Library/Preferences/info.eurocomp.Timing2.plist",
+    "~/Library/Preferences/info.eurocomp.TimingHelper.InfoExtractorService.plist",
     "~/Library/Preferences/info.eurocomp.TimingHelper.plist",
   ]
 end

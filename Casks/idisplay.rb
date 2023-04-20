@@ -1,19 +1,23 @@
 cask "idisplay" do
-  version :latest
+  version "3.5.0"
   sha256 :no_check
 
-  url "http://getidisplay.com/downloads/iDisplayMac.dmg"
+  url "https://getidisplay.com/downloads/iDisplayMac.dmg"
   name "iDisplay"
   homepage "http://getidisplay.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   pkg "iDisplay.pkg"
 
-  uninstall launchctl: "ag.shape.MSMToolHelper",
-            pkgutil:   [
-              "ag.shape.iDisplay.pkg",
-              "ag.shape.MSM*.pkg",
-            ],
-            signal:    ["TERM", "com.shapeservices.idisplay-host-full"]
+  uninstall pkgutil: [
+    "com.shapeservices.idisplay-host-full",
+    "com.shapeservices.msm.driver.MSMFramebuffer",
+    "com.shapeservices.msm.driver.MSMVideoDevice",
+  ]
 
   zap trash: "~/Library/Preferences/com.shapeservices.idisplay-host-full.plist"
 

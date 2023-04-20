@@ -1,6 +1,6 @@
 cask "parallels-virtualization-sdk" do
-  version "17.1.4-51567"
-  sha256 "18389f3af7206e8bf6183e030d4f80d2cd2edcda9c3254c20eb3f1b2bfc560e3"
+  version "18.2.0-53488"
+  sha256 "9e98aecbeb2b28e0991233619a045ded8e556e5bdba310fa9d85fc3da1f4256a"
 
   url "https://download.parallels.com/desktop/v#{version.major}/#{version}/ParallelsVirtualizationSDK-#{version}-mac.dmg"
   name "Parallels Virtualization SDK"
@@ -8,9 +8,7 @@ cask "parallels-virtualization-sdk" do
   homepage "https://www.parallels.com/products/desktop/download/"
 
   livecheck do
-    url "https://www.parallels.com/download/pvsdk/"
-    strategy :header_match
-    regex(%r{/parallelsvirtualizationsdk-?(\d+(?:\.\d+)+-\d+)(?:-mac)?\.dmg}i)
+    cask "parallels"
   end
 
   pkg "Parallels Virtualization SDK.pkg"

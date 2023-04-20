@@ -1,14 +1,8 @@
 cask "ableton-live-lite" do
-  arch = MacOS.version >= :mojave ? "universal" : "intel"
-  version "11.1.6"
+  version "11.2.11"
+  sha256 "cc9ae661a0677cb228cfed7eeb685ef1bf74a0b4aacd2c73082cf0756a39e6a3"
 
-  if MacOS.version >= :mojave
-    sha256 "f8dd127f7927151152814c997f05f7d696186e563518eed9f2822faf6c545303"
-  else
-    sha256 "fefadad3f6cd5d727f897000374d16da9f709f56991f6fcc257bb8b14d76a65d"
-  end
-
-  url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_lite_#{version}_#{arch}.dmg"
+  url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_lite_#{version}_universal.dmg"
   name "Ableton Live Lite"
   desc "Sound and music editor"
   homepage "https://www.ableton.com/en/products/live-lite/"

@@ -1,5 +1,5 @@
 cask "minitube" do
-  version "3.9.3,2022.0203.024456"
+  version "3.9.3"
   sha256 :no_check
 
   url "https://flavio.tordini.org/files/minitube/minitube.dmg"
@@ -9,7 +9,7 @@ cask "minitube" do
 
   livecheck do
     url "https://flavio.tordini.org/minitube-ws/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   depends_on macos: ">= :sierra"
@@ -17,6 +17,7 @@ cask "minitube" do
   app "Minitube.app"
 
   zap trash: [
+    "~/Library/HTTPStorages/org.tordini.flavio.minitube",
     "~/Library/Preferences/org.tordini.flavio.minitube.plist",
     "~/Library/Saved Application State/org.tordini.flavio.minitube.savedState",
   ]

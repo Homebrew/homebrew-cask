@@ -1,6 +1,6 @@
 cask "curio" do
-  version "22.1.1,22111"
-  sha256 "d49099665bdd4608fd3569d4b563fb7a2d4768b2f4b204aefded89716a118b2e"
+  version "25.0.1,25101"
+  sha256 "4cbb833fc6ceeb7442fb5b0ca25b2cd8670da9fb0e9bded0c118d0db2117cce7"
 
   url "https://www.zengobi.com/downloads/Curio#{version.csv.second.no_dots}.zip"
   name "Curio"
@@ -12,7 +12,7 @@ cask "curio" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :big_sur"
 
   app "Curio.app"
 end

@@ -9,4 +9,8 @@ cask "spotspot" do
   homepage "https://will-stone.github.io/SpotSpot/"
 
   app "SpotSpot.app"
+
+  caveats do
+    discontinued
+  end
 end

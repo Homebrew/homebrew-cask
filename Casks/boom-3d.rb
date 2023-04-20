@@ -1,9 +1,9 @@
 cask "boom-3d" do
-  version "1.3.17,101.3.17005"
+  version "1.4.4,101.4.4021"
   sha256 :no_check
 
   url "https://dfvk972795zr9.cloudfront.net/Boom3Dmac/webstore/Boom3D.dmg",
-      verified: "https://dfvk972795zr9.cloudfront.net/"
+      verified: "dfvk972795zr9.cloudfront.net/"
   name "Boom 3D"
   desc "Volume booster and equalizer software"
   homepage "https://www.globaldelight.com/boom/"

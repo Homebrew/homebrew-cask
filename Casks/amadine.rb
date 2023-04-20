@@ -1,5 +1,5 @@
 cask "amadine" do
-  version "1.3,179"
+  version "1.4.6"
   sha256 :no_check
 
   url "https://belightsoft.s3.amazonaws.com/Amadine.dmg",
@@ -10,10 +10,10 @@ cask "amadine" do
 
   livecheck do
     url "https://www.belightsoft.com/download/updates/appcast_Amadine.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :el_capitan"
 
   app "Amadine.app"
 

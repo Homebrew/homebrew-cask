@@ -1,18 +1,19 @@
 cask "default-folder-x" do
-  version "5.6.6,5209"
-  sha256 "f04cf73f2b38cc300504f173257a27413cea394b7929c2c5157802e8728fc0a7"
+  version "5.7.6"
+  sha256 "c8276753a1df95759df72fd4cc4c88d4ce2df3b9e151050abf479844069bdc92"
 
-  url "https://www.stclairsoft.com/download/DefaultFolderX-#{version.csv.first}.dmg"
+  url "https://www.stclairsoft.com/download/DefaultFolderX-#{version}.dmg"
   name "Default Folder X"
   desc "Utility to enhance the Open and Save dialogs in applications"
   homepage "https://www.stclairsoft.com/DefaultFolderX/"
 
   livecheck do
     url "https://www.stclairsoft.com/cgi-bin/sparkle.cgi?DX#{version.major}"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Default Folder X.app"
 

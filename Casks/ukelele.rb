@@ -1,15 +1,15 @@
 cask "ukelele" do
-  version "3.5.6,355"
-  sha256 "5cbf69cb40821aede0692eef80425f43991012304113e517fc9220b396085067"
+  version "3.5.7"
+  sha256 "631994a31763c7dc383d429969a7b3d98975ad98dcf30dc51b1421fc93fc05e7"
 
-  url "https://software.sil.org/downloads/r/ukelele/Ukelele_#{version.csv.first}.dmg"
+  url "https://software.sil.org/downloads/r/ukelele/Ukelele_#{version}.dmg"
   name "Ukelele"
   desc "Unicode keyboard layout editor"
   homepage "https://software.sil.org/ukelele/"
 
   livecheck do
     url "https://software.sil.org/downloads/r/ukelele/Ukelele_appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   app "Ukelele.app"

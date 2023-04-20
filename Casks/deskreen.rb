@@ -1,9 +1,9 @@
 cask "deskreen" do
-  version "2.0.3"
-  sha256 "67d55ceb38bf8726ca446003522f544996a0a9740c8dbaef2be29a1fd3c8e04d"
+  version "2.0.4"
+  sha256 "43b9a49d0ff70211a88cfd23bf660dac9f3609063dde3ccf6d07f5307050e443"
 
   url "https://github.com/pavlobu/deskreen/releases/download/v#{version}/Deskreen-#{version}.dmg",
-      verified: "https://github.com/pavlobu/deskreen/"
+      verified: "github.com/pavlobu/deskreen/"
   name "Deskreen"
   desc "Turns any device with a web browser into a secondary screen"
   homepage "https://deskreen.com/"

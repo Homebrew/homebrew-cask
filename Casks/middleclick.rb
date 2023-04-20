@@ -1,11 +1,16 @@
 cask "middleclick" do
-  version "2.5"
-  sha256 "50bb016602e8e792a8a6b53053a4ec4129ca89926a44fc1ac898f3d11102aada"
+  version "2.6.1"
+  sha256 "6f351cbc0fe2bf32526e691dfae50eea71a679a7f52ecd155fd453d8684ab175"
 
   url "https://github.com/artginzburg/MiddleClick-BigSur/releases/download/#{version}/MiddleClick.zip"
   name "MiddleClick"
   desc "Utility to extend trackpad functionality"
   homepage "https://github.com/artginzburg/MiddleClick-BigSur"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "MiddleClick.app"
 

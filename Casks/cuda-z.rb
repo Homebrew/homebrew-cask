@@ -5,7 +5,7 @@ cask "cuda-z" do
   url "https://downloads.sourceforge.net/cuda-z/CUDA-Z-#{version}.dmg"
   name "CUDA-Z"
   desc "Show basic information about CUDA-enabled GPUs and GPGPUs"
-  homepage "http://cuda-z.sourceforge.net/"
+  homepage "https://cuda-z.sourceforge.net/"
 
   livecheck do
     url :homepage

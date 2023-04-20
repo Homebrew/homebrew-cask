@@ -1,9 +1,9 @@
 cask "transmission" do
-  version "3.00"
-  sha256 "f9984b6ba51a02bb8f880c538b28e2c7d6a3b7a22257a166cc3e1d55a133ab34"
+  version "4.0.3"
+  sha256 "01c7806eda63a94116d8f8a6a280d1d284b5a975f12a734f8c126d6fb5671b19"
 
   url "https://github.com/transmission/transmission/releases/download/#{version}/Transmission-#{version}.dmg",
-      verified: "github.com/transmission/transmission/releases/"
+      verified: "github.com/transmission/transmission/"
   name "Transmission"
   desc "Open-source BitTorrent client"
   homepage "https://transmissionbt.com/"

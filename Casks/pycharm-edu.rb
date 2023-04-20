@@ -1,13 +1,9 @@
 cask "pycharm-edu" do
-  arch = Hardware::CPU.intel? ? "" : "-aarch64"
+  arch arm: "-aarch64"
 
-  version "2022.1.2,221.5921.29"
-
-  if Hardware::CPU.intel?
-    sha256 "7193e018efdc6f0acc8fe19bbae3b7cb1cc92185dbd149c06c42222d9569db14"
-  else
-    sha256 "ea39de3fc05c723f6b8aad0cbf5934f087671741a5166a70fdc760ee33e77bfc"
-  end
+  version "2022.2.2,222.4345.35"
+  sha256 arm:   "fc25074308eb574eb4369c3a76c5d2625657ce854d6e1a8036f8ade967d5fd5e",
+         intel: "6902d330174b258cce1353343fd4ba2ccd7b6da1b3736d31a7cc3da6e41a93f4"
 
   url "https://download.jetbrains.com/python/pycharm-edu-#{version.csv.first}#{arch}.dmg"
   name "Jetbrains PyCharm Educational Edition"
@@ -17,8 +13,8 @@ cask "pycharm-edu" do
 
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=PCE&latest=true&type=release"
-    strategy :page_match do |page|
-      JSON.parse(page)["PCE"].map do |release|
+    strategy :json do |json|
+      json["PCE"].map do |release|
         "#{release["version"]},#{release["build"]}"
       end
     end

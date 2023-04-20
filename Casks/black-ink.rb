@@ -1,15 +1,15 @@
 cask "black-ink" do
-  version "2.2.4,3263"
-  sha256 "c2c89a6e1fd598b72c7dbaedb0c18da83c04da632c8bdf8eb8fa9dd254c595b7"
+  version "2.2.6"
+  sha256 "d480dfc0096013396d226edddf7476c640feb9ea58dfa7e5bcd48d802d8dabe4"
 
-  url "https://redsweater.com/blackink/BlackInk#{version.csv.first}.zip"
+  url "https://redsweater.com/blackink/BlackInk#{version}.zip"
   name "Black Ink"
   desc "Download, solve, and print crossword puzzles"
   homepage "https://redsweater.com/blackink/"
 
   livecheck do
     url "https://redsweater.com/blackink/appcast#{version.major}.php"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   depends_on macos: ">= :sierra"
@@ -17,8 +17,8 @@ cask "black-ink" do
   app "Black Ink.app"
 
   zap trash: [
-    "~/Library/Application Scripts/com.red-sweater.blackink#{version.major}",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.red-sweater.blackink#{version.major}.sfl*",
+    "~/Library/Application Scripts/com.red-sweater.blackink#{version.major}",
     "~/Library/Containers/com.red-sweater.blackink#{version.major}",
   ]
 end

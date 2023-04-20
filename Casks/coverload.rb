@@ -14,4 +14,9 @@ cask "coverload" do
   end
 
   app "CoverLoad.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.happeningstudios.coverload",
+    "~/Library/Containers/com.happeningstudios.coverload",
+  ]
 end

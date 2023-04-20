@@ -1,6 +1,6 @@
 cask "presentation" do
-  version "3.1.0"
-  sha256 "581ffde416d8810f49da47c5f6e9f7d37de9955fd9a1e44e823058c077ee54a9"
+  version "3.2.1"
+  sha256 "05ff0391ab64ecd930b969d0b255c2431559d5a51a775a2be03484ddf7d24361"
 
   url "http://iihm.imag.fr/blanch/software/osx-presentation/releases/osx-presentation-#{version}.pkg"
   name "Présentation"

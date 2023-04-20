@@ -1,6 +1,6 @@
 cask "sound-control" do
-  version "2.6.6,5156"
-  sha256 "66900cc692671a51dbb809773d8fdbf56050970e9ef66fc0fc23684d99a31dc2"
+  version "2.7.5,5156"
+  sha256 "bb240f6a2f4887ca7b1693f8d4d43e8b110384eac3514cc815c1ed8958015e58"
 
   url "https://staticz.com/download/#{version.csv.second}/"
   name "Sound Control"
@@ -15,14 +15,14 @@ cask "sound-control" do
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :catalina"
 
   app "Sound Control.app"
 
   uninstall launchctl: [
-              "com.staticz.soundsiphon.bridgedaemon",
-              "com.staticz.audio.soundsiphon.playeragent",
               "com.static.soundsiphon.inputagent",
+              "com.staticz.audio.soundsiphon.playeragent",
+              "com.staticz.soundsiphon.bridgedaemon",
             ],
             quit:      "com.staticz.SoundControl"
 

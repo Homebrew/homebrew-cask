@@ -12,11 +12,10 @@ cask "ilya-birman-typography-layout" do
     regex(%r{href=.*?/ilya[._-]birman[._-]typolayout[._-]v?(\d+(?:\.\d+)+)[._-]mac\.dmg}i)
   end
 
-  artifact \
-    "Install Ilya Birman Typography Layout.app/Contents/Resources/Layout/Ilya Birman Typography Layout.bundle",
-    target: Pathname.new(File.expand_path("~")).join("Library/Keyboard Layouts/Ilya Birman Typography Layout.bundle")
+  keyboard_layout \
+    "Install Ilya Birman Typography Layout.app/Contents/Resources/Layout/Ilya Birman Typography Layout.bundle"
 
-  caveats <<~EOS
-    To enable new keyboard layouts, you must add them manually in System Preferences. More info on #{homepage}.
-  EOS
+  caveats do
+    reboot
+  end
 end

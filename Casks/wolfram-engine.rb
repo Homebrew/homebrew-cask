@@ -1,26 +1,26 @@
 cask "wolfram-engine" do
-  version "13.0.0.0"
-  sha256 "1309122aa25a01f394b552eb9968cfa92ea1f7581c196e9147d093cfca0811f3"
+  version "13.2.0.0"
+  sha256 "90233c70a56a104775666e2559f0126a074a6adf298aec949b316f51cb6372bc"
 
   url "https://files.wolframcdn.com/packages/Homebrew/#{version}/WolframEngine_#{version.major_minor_patch}_MAC.dmg",
-      verified: "files.wolframcdn.com/packages/"
+      verified: "files.wolframcdn.com/packages/Homebrew/"
   name "Wolfram Engine"
   desc "Evaluator for the Wolfram Language"
   homepage "https://www.wolfram.com/engine/"
 
   livecheck do
-    url "https://account.wolfram.com/download/public/wolfram-engine/desktop/MAC"
-    strategy :header_match
-    regex(%r{/v?(\d+(?:\.\d+)+)/WolframEngine[._-]v?\d+(?:\.\d+)+[._-]MAC(?:_EXP)?\.dmg}i)
+    url "https://files.wolframcdn.com/packages/Homebrew/latest.txt"
+    regex(/^(\d+(?:\.\d+)+)$/)
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   app "Wolfram Engine.app"
+  binary "#{appdir}/Wolfram Engine.app/Contents/Resources/Wolfram Player.app/Contents/MacOS/wolframscript"
 
   zap trash: [
-    "~/Library/WolframEngine",
     "~/Library/Caches/Wolfram",
+    "~/Library/WolframEngine",
   ]
 
   caveats do

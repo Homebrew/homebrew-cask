@@ -1,5 +1,5 @@
 cask "youtube-to-mp3" do
-  version "3.9.9.73"
+  version "3.9.9.81"
   sha256 :no_check
 
   url "https://www.mediahuman.net/files/YouTubeToMP3.dmg"
@@ -13,4 +13,12 @@ cask "youtube-to-mp3" do
   end
 
   app "YouTube to MP3.app"
+
+  zap trash: [
+    "~/Library/Application Support/MediaHuman/",
+    "~/Library/Caches/MediaHuman/",
+    "~/Library/Preferences/com.mediahuman.plist",
+    "~/Library/Preferences/com.mediahuman.YouTube to MP3.plist",
+    "~/Library/Saved Application State/com.mediahuman.YouTube to MP3.savedState",
+  ]
 end

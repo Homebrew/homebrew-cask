@@ -1,6 +1,6 @@
 cask "vamiga" do
-  version "2.01"
-  sha256 "7b985aef6622689abf300c5e61fd8d90fff2cad69045074317d24e748d5a5a55"
+  version "2.3"
+  sha256 "1442720026eba7494c5e75ca52c7166463ce417149623bca8ff62cad92df23cb"
 
   url "https://github.com/dirkwhoffmann/vAmiga/releases/download/v#{version}/vAmiga.app.zip",
       verified: "github.com/dirkwhoffmann/vAmiga/"
@@ -10,8 +10,10 @@ cask "vamiga" do
 
   livecheck do
     url :url
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    strategy :github_latest
   end
+
+  depends_on macos: ">= :catalina"
 
   app "vAmiga.app"
 

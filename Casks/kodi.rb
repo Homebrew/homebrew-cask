@@ -1,6 +1,6 @@
 cask "kodi" do
-  version "19.4-Matrix"
-  sha256 "53c45f645141b44c77c052f33381560f360fc1940fc1e8065ee42928707ca707"
+  version "20.1-Nexus"
+  sha256 "4cad07d0e4fb7fb6bf6b6fa6bfa5343e1d4468b2a95a4e53c6ef75b93c12fe52"
 
   url "https://mirrors.kodi.tv/releases/osx/x86_64/kodi-#{version}-x86_64.dmg"
   name "Kodi"

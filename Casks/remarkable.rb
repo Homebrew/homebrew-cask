@@ -1,8 +1,8 @@
 cask "remarkable" do
-  version "2.14.2.612,40108032"
-  sha256 "e70aef4218e4ae27a0df095d32f489aa9d89cc2bb3de1da6ab2989d1bb4c6300"
+  version "3.3.0.732,47972352,Staging_9fb83f4b-c3d3-4d4d-83ca-8970001ea9a3"
+  sha256 "c73c5b6b0d9244b7b069872ef716049d8fa96f70b0a4ea8ecdff6027f9f0b2be"
 
-  url "https://updates-download.cloud.remarkable.engineering/sparkle/reMarkableMacOs/Staging_9fb83f4b-c3d3-4d4d-83ca-8970001ea9a3/#{version.csv.second}/reMarkable-#{version.csv.first}.dmg",
+  url "https://updates-download.cloud.remarkable.engineering/sparkle/reMarkableMacOs/#{version.csv.third}/#{version.csv.second}/reMarkable-#{version.csv.first}.dmg",
       verified: "updates-download.cloud.remarkable.engineering/sparkle/reMarkableMacOs/"
   name "Remarkable"
   desc "View, Screen Share, organize, import, and download files to a reMarkable device"
@@ -10,9 +10,9 @@ cask "remarkable" do
 
   livecheck do
     url "https://get-updates.cloud.remarkable.engineering/sparkle/reMarkableMacOs/Prod/appcast.xml"
-    regex(%r{([^/]+)/reMarkable[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    regex(%r{([^/]+)/([^/]+)/reMarkable[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match.second},#{match.first}" }
+      page.scan(regex).map { |match| "#{match.third},#{match.second},#{match.first}" }
     end
   end
 

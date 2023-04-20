@@ -1,15 +1,15 @@
 cask "devutils" do
-  version "1.15,132"
-  sha256 "364231fe0bc2fff59608c1aeae1cfc952a86890ad3f8c4128ca400b39ed73417"
+  version "1.16.0"
+  sha256 "f92897d414143161d679433bcceb83e0588fd0970342ee9e81e537263515807d"
 
-  url "https://devutils.app/archives/DevUtils-#{version.csv.first}.dmg"
+  url "https://devutils.com/archives/DevUtils-#{version}.dmg"
   name "DevUtils"
-  desc "Offline toolbox for developers"
-  homepage "https://devutils.app/"
+  desc "All-in-one toolbox for developers"
+  homepage "https://devutils.com/"
 
   livecheck do
-    url "https://devutils.app/archives/appcast.xml"
-    strategy :sparkle
+    url "https://devutils.com/archives/appcast.xml"
+    strategy :sparkle, &:short_version
   end
 
   depends_on macos: ">= :high_sierra"

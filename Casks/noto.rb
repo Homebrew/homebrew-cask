@@ -1,15 +1,15 @@
 cask "noto" do
-  version "1.2,828"
+  version "1.2"
   sha256 "b7fc339543e08374b673e84293bf9819271c8bcc66003ca5c0834bca396949f3"
 
-  url "https://www.brunophilipe.com/software/noto/releases/noto-#{version.csv.first}.dmg"
+  url "https://www.brunophilipe.com/software/noto/releases/noto-#{version}.dmg"
   name "Noto"
   desc "Simple plain text editor"
   homepage "https://www.brunophilipe.com/software/noto/"
 
   livecheck do
     url "https://www.brunophilipe.com/software/noto/updates/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   depends_on macos: ">= :sierra"
@@ -17,8 +17,8 @@ cask "noto" do
   app "Noto.app"
 
   zap trash: [
-    "~/Library/Application Support/Noto",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.brunophilipe.noto.sfl2",
+    "~/Library/Application Support/Noto",
     "~/Library/Caches/com.apple.helpd/Generated/com.brunophilipe.Noto.help*",
     "~/Library/Caches/com.brunophilipe.Noto",
     "~/Library/Preferences/com.brunophilipe.Noto.plist",

@@ -1,16 +1,16 @@
 cask "skim" do
-  version "1.6.11,141"
-  sha256 "d06977700a6a6d1a88f500bcd62da7cc3c4833ab96ccfa5189cadca62ed12660"
+  version "1.6.15"
+  sha256 "748eb3a4c4ebf54c43c35706ec8a233e5602e0640c91db743c49d66dc565826a"
 
-  url "https://downloads.sourceforge.net/skim-app/Skim/Skim-#{version.csv.first}/Skim-#{version.csv.first}.dmg",
-      verified: "downloads.sourceforge.net/skim-app/"
+  url "https://downloads.sourceforge.net/skim-app/Skim/Skim-#{version}/Skim-#{version}.dmg",
+      verified: "downloads.sourceforge.net/skim-app/Skim/"
   name "Skim"
   desc "PDF reader and note-taking application"
   homepage "https://skim-app.sourceforge.io/"
 
   livecheck do
     url "https://skim-app.sourceforge.io/skim.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
@@ -21,8 +21,8 @@ cask "skim" do
   binary "#{appdir}/Skim.app/Contents/SharedSupport/skimpdf"
 
   zap trash: [
-    "~/Library/Caches/net.sourceforge.skim-app.skim",
     "~/Library/Caches/com.apple.helpd/Generated/net.sourceforge.skim-app.skim.help*#{version.csv.first}",
+    "~/Library/Caches/net.sourceforge.skim-app.skim",
     "~/Library/Cookies/net.sourceforge.skim-app.skim.binarycookies",
     "~/Library/HTTPStorages/net.sourceforge.skim-app.skim",
     "~/Library/Preferences/net.sourceforge.skim-app.skim.bookmarks.plist",

@@ -1,21 +1,15 @@
 cask "prusaslicer" do
-  version "2.4.2,202204251114"
-  sha256 "a8972cf5d8c9a5626b18fd3ebd2ce190fda032b790bedf7d3702ab39837d3e51"
+  version "2.5.2,202303231232"
+  sha256 "76e780824e5ac5ed16e85bd3cf58ec80a204ec78c3f30dd0bdfc53f8731ce06b"
 
-  url "https://github.com/prusa3d/PrusaSlicer/releases/download/version_#{version.csv.first}/PrusaSlicer-#{version.csv.first}+universal-#{version.csv.second}.dmg",
+  url "https://github.com/prusa3d/PrusaSlicer/releases/download/version_#{version.csv.first}/PrusaSlicer-#{version.csv.first}+MacOS-universal-#{version.csv.second}.dmg",
       verified: "github.com/prusa3d/PrusaSlicer/"
   name "PrusaSlicer"
   desc "G-code generator for 3D printers (RepRap, Makerbot, Ultimaker etc.)"
   homepage "https://www.prusa3d.com/slic3r-prusa-edition/"
 
   livecheck do
-    url "https://github.com/prusa3d/PrusaSlicer/releases/"
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/PrusaSlicer-(\d+(?:\.\d+)*)\+universal-(\d+)\.dmg}i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
-    end
+    skip "No reliable way to get version info"
   end
 
   app "PrusaSlicer.app"

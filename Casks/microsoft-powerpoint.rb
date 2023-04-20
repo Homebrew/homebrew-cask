@@ -1,19 +1,27 @@
 cask "microsoft-powerpoint" do
-  if MacOS.version <= :el_capitan
+  on_el_capitan :or_older do
     version "16.16.20101200"
     sha256 "0c898068408082124f7fe45717e3fb4b4f5647b609b54dc5fa6c90e295f499c3"
-  elsif MacOS.version <= :sierra
+  end
+  on_sierra do
     version "16.30.19101301"
     sha256 "d0b16f96bb390a225c52808952a66f0e02bf3f355234cbe733b250d37bb44c72"
-  elsif MacOS.version <= :high_sierra
+  end
+  on_high_sierra do
     version "16.43.20110804"
     sha256 "a89e0aed18e5b1e56293b1f9eaccc3e3f5089eb37a9eec64bb6f3a3fa90587eb"
-  elsif MacOS.version <= :mojave
+  end
+  on_mojave do
     version "16.54.21101001"
     sha256 "75a57c82b46d0e2558c454f19610576b7a48baf1ccc5cd1fa61b69cca5bf0bd1"
-  else
-    version "16.63.22070801"
-    sha256 "07a9b3fa1f8e11ea0f9fed8e8355fd7ef8eef176171165cd52f1f2bbf3802f99"
+  end
+  on_catalina do
+    version "16.66.22101101"
+    sha256 "bea8c4790445f726debd0f64d24fbdac59e3a9b51e95c092fb31da3913164540"
+  end
+  on_big_sur :or_newer do
+    version "16.72.23040900"
+    sha256 "07c34579d2d53f27af73db7d6d4fb453c8c9dd493fc7c3879846cba9a66e9e43"
   end
 
   url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_PowerPoint_#{version}_Installer.pkg",
@@ -28,7 +36,10 @@ cask "microsoft-powerpoint" do
   end
 
   auto_updates true
-  conflicts_with cask: "microsoft-office"
+  conflicts_with cask: [
+    "microsoft-office",
+    "microsoft-office-businesspro",
+  ]
   depends_on cask: "microsoft-auto-update"
 
   pkg "Microsoft_PowerPoint_#{version}_Installer.pkg",

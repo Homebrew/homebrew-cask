@@ -1,6 +1,6 @@
 cask "gnucash" do
-  version "4.11-1"
-  sha256 "cd51a9c0cf1edb378c6252853969ea4f9ecc95c5d8547fd7f76b322407b0ca72"
+  version "5.0-1"
+  sha256 "c8ea60b2ccbeab5f6997a927939a0fad715fbbe494644e586c6c386bfec6857a"
 
   url "https://github.com/Gnucash/gnucash/releases/download/#{version.hyphens_to_dots.major_minor}/Gnucash-Intel-#{version}.dmg",
       verified: "github.com/Gnucash/gnucash/"
@@ -9,9 +9,21 @@ cask "gnucash" do
   homepage "https://www.gnucash.org/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://github.com/Gnucash/gnucash/releases/latest"
     regex(%r{href=.*/Gnucash-Intel-v?(\d+\.\d+-\d+)\.dmg}i)
+    strategy :header_match do |headers, regex|
+      next if headers["location"].blank?
+
+      # Identify the latest tag from the response's `location` header
+      latest_tag = File.basename(headers["location"])
+      next if latest_tag.blank?
+
+      # Fetch the assets list HTML for the latest tag and match within it
+      assets_page = Homebrew::Livecheck::Strategy.page_content(
+        @url.sub(%r{/releases/?.+}, "/releases/expanded_assets/#{latest_tag}"),
+      )
+      assets_page[:content]&.scan(regex)&.map { |match| match[0] }
+    end
   end
 
   app "Gnucash.app"

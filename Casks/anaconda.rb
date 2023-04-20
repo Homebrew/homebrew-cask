@@ -1,13 +1,9 @@
 cask "anaconda" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
+  arch arm: "arm64", intel: "x86_64"
 
-  version "2022.05"
-
-  if Hardware::CPU.intel?
-    sha256 "1a10c06660ebe1204e538b4e9d810142441af9dfd74b077eee2761ec6e675f39"
-  else
-    sha256 "a12119931945a9a1453993582259cc67318a9a75a15731e5ccc15365e7f88a36"
-  end
+  version "2023.03"
+  sha256 arm:   "d27ee5432438972e90548e3dfa89490c5dc38a723f4dcd53061f0bd9d53b1bd0",
+         intel: "cc37b1eb85bdc2ade3f95201a746cdc63ee4fbfae48ee9d0c7a3cf319562452d"
 
   url "https://repo.anaconda.com/archive/Anaconda3-#{version}-MacOSX-#{arch}.sh"
   name "Continuum Analytics Anaconda"

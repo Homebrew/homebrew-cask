@@ -1,5 +1,5 @@
 cask "memory" do
-  version "2022.05,389"
+  version "2023.04"
   sha256 :no_check
 
   url "https://memorymacapp.s3.amazonaws.com/Memory.zip",
@@ -10,11 +10,11 @@ cask "memory" do
 
   livecheck do
     url "https://memorymacapp.s3-eu-west-1.amazonaws.com/sparkle.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :mojave"
 
   app "Memory.app"
 

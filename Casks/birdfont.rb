@@ -1,5 +1,5 @@
 cask "birdfont" do
-  if MacOS.version <= :mojave
+  on_mojave :or_older do
     version "4.17.0"
     sha256 "74c778e3b7598a66b9ddb11b189ba6a21d68263fb0499a965dcedd0ac987b051"
 
@@ -7,9 +7,10 @@ cask "birdfont" do
       url "https://birdfont.org/purchase.php"
       regex(%r{Mac\s*OS\s*10\.12.*?/birdfont[._-]v?(\d+(?:\.\d+)+)[._-]free\.dmg}i)
     end
-  else
-    version "4.29.13"
-    sha256 "c0dda48115752439f10c01111244aa8816e9dadd35956b1affc0970760e89be4"
+  end
+  on_catalina :or_newer do
+    version "5.0.23"
+    sha256 "9913b21b3c6807e954ac7bccae7f08b3850855a94a0a4d84a6050112c389e882"
 
     livecheck do
       url "https://birdfont.org/purchase.php"
@@ -25,4 +26,9 @@ cask "birdfont" do
   depends_on macos: ">= :sierra"
 
   app "BirdFontNonCommercial.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/org.birdfont.birdfont",
+    "~/Library/Containers/org.birdfont.birdfont",
+  ]
 end

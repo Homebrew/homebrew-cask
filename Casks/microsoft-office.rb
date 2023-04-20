@@ -1,8 +1,8 @@
 cask "microsoft-office" do
-  version "16.63.22070801"
-  sha256 "4c0e722e203fb5752888689cc895cf8d94af6ae759488ff69e7b23bd1d9b1abe"
+  version "16.72.23040900"
+  sha256 "296537863427f4b9a8f8e735c77f27496ec28cdd49d30f038d71b76af4406b1d"
 
-  url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Office_#{version}_Installer.pkg",
+  url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_365_and_Office_#{version}_Installer.pkg",
       verified: "officecdnmac.microsoft.com/"
   name "Microsoft Office"
   desc "Office suite"
@@ -10,12 +10,15 @@ cask "microsoft-office" do
 
   livecheck do
     url "https://go.microsoft.com/fwlink/p/?linkid=525133"
+    regex(/(\d+(?:\.\d+)+)/i)
     strategy :header_match
   end
 
   auto_updates true
   conflicts_with cask: %w[
     microsoft-excel
+    microsoft-office-businesspro
+    microsoft-onenote
     microsoft-outlook
     microsoft-powerpoint
     microsoft-word
@@ -24,7 +27,7 @@ cask "microsoft-office" do
   depends_on cask: "microsoft-auto-update"
   depends_on macos: ">= :catalina"
 
-  pkg "Microsoft_Office_#{version}_Installer.pkg",
+  pkg "Microsoft_365_and_Office_#{version}_Installer.pkg",
       choices: [
         {
           "choiceIdentifier" => "com.microsoft.autoupdate", # Office16_all_autoupdate.pkg
@@ -61,6 +64,7 @@ cask "microsoft-office" do
               "com.microsoft.OneDriveStandaloneUpdater",
               "com.microsoft.OneDriveStandaloneUpdaterDaemon",
               "com.microsoft.OneDriveUpdaterDaemon",
+              "com.microsoft.SyncReporter",
             ],
             quit:      "com.microsoft.autoupdate2"
 

@@ -1,12 +1,13 @@
 cask "virtualhereserver" do
-  version "4.4.1"
+  version "4.5.6"
   sha256 :no_check
 
-  if MacOS.version <= :mojave
+  on_mojave :or_older do
     url "https://www.virtualhere.com/sites/default/files/usbserver/VirtualHereServer.dmg"
 
     app "VirtualHereServer.app"
-  else
+  end
+  on_catalina :or_newer do
     url "https://www.virtualhere.com/sites/default/files/usbserver/VirtualHereServerUniversal.dmg"
 
     app "VirtualHereServerUniversal.app"
@@ -20,4 +21,6 @@ cask "virtualhereserver" do
     url :homepage
     regex(/Version\s*(\d+(?:\.\d*)*)/i)
   end
+
+  zap trash: "~/Library/Preferences/com.virtualhere.vhusbd.plist"
 end

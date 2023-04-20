@@ -14,6 +14,8 @@ cask "faxbot" do
     end
   end
 
+  depends_on macos: ">= :sierra"
+
   app "Faxbot.app"
 
   zap trash: [

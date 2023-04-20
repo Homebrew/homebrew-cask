@@ -1,8 +1,8 @@
 cask "xld" do
-  version "20211018,154.0"
-  sha256 "5234e17218624e6bb341a2bb23c8994310b7d4962d3f878c3ed27b265d2791d6"
+  version "20230416"
+  sha256 "264e34bd90bea1cb5c7fc2756675c9c714d4907c85d959ea219268c0d455589a"
 
-  url "https://downloads.sourceforge.net/xld/xld-#{version.csv.first}.dmg",
+  url "https://downloads.sourceforge.net/xld/xld-#{version}.dmg",
       verified: "sourceforge.net/xld/"
   name "X Lossless Decoder"
   name "XLD"
@@ -11,7 +11,7 @@ cask "xld" do
 
   livecheck do
     url "https://svn.code.sf.net/p/xld/code/appcast/xld-appcast_e.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
@@ -21,8 +21,8 @@ cask "xld" do
 
   zap trash: [
     "~/Library/Application Support/XLD",
-    "~/Library/Preferences/jp.tmkk.XLD.plist",
     "~/Library/Caches/jp.tmkk.XLD",
+    "~/Library/Preferences/jp.tmkk.XLD.plist",
     "~/Library/Saved Application State/jp.tmkk.XLD.savedState",
   ]
 end

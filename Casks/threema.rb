@@ -1,9 +1,9 @@
 cask "threema" do
-  version "1.2.13"
+  version "1.2.29"
   sha256 :no_check
 
   url "https://releases.threema.ch/web-electron/v1/release/Threema-Latest.dmg"
-  name "threema"
+  name "Threema"
   desc "End-to-end encrypted instant messaging application"
   homepage "https://threema.ch/"
 

@@ -1,18 +1,18 @@
 cask "touchswitcher" do
-  version "1.4.3,145"
-  sha256 :no_check
+  version "1.4.5"
+  sha256 "d873af5d57379f0d58b79de13679a8aac01c64423cc90319486b350fa411c931"
 
-  url "https://hazeover.com/touchswitcher/TouchSwitcher.zip"
+  url "https://hazeover.com/touchswitcher/TouchSwitcher-#{version}.txz"
   name "TouchSwitcher"
-  desc "Use Touch Bar to switch apps"
+  desc "Use the Touch Bar to switch apps"
   homepage "https://hazeover.com/touchswitcher.html"
 
   livecheck do
     url "https://hazeover.com/touchswitcher/updates.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :sierra"
 
   app "TouchSwitcher.app"
 

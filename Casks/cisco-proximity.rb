@@ -15,9 +15,7 @@ cask "cisco-proximity" do
   app "Cisco Proximity.app"
 
   uninstall launchctl: "com.cisco.proximity",
-            signal:    [
-              ["TERM", "com.cisco.experimental.Proximity"],
-            ]
+            signal:    ["TERM", "com.cisco.experimental.Proximity"]
 
   zap trash: [
     "~/Library/Preferences/com.cisco.experimental.proximity.plist",

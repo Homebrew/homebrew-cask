@@ -1,22 +1,33 @@
 cask "funter" do
-  if MacOS.version <= :sierra
-    version "4.1b64"
-    sha256 "b059000717f7f8af67ee027d81aea6c2d9f343e0eb72e439a9f286ab265b7b93"
-    url "https://nektony.com/download/funter/funter_10.12.dmg"
-  else
-    version "5.4.3,218"
-    sha256 :no_check
-    url "https://nektony.com/download/funter/Funter.dmg"
-  end
+  version "6.1"
+  sha256 :no_check
 
+  url "https://download.nektony.com/download/funter/Funter.dmg"
   name "Funter"
   desc "Shows hidden files and folders and switches their visibility in Finder"
   homepage "https://nektony.com/products/funter"
 
   livecheck do
-    url "https://nektony.com/pro-support/funter/update/update.xml"
-    strategy :sparkle
+    url "https://download.nektony.com/pro-support/v3/funter/update/update.xml"
+    strategy :sparkle, &:short_version
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Funter #{version.major}.app"
+
+  # MacCleaner files are part of the cask
+  zap trash: [
+    "~/Library/Application Scripts/8DKG4XB37M.group.com.nektony.Funter-SIII",
+    "~/Library/Application Scripts/8DKG4XB37M.group.com.nektony.MacCleaner-PRO-SIII",
+    "~/Library/Application Scripts/com.nektony.Funter-SIII*",
+    "~/Library/Application Support/com.nektony.Funter-SIII",
+    "~/Library/Caches/com.nektony.Funter-SIII",
+    "~/Library/Containers/com.nektony.Funter-SIII.FinderSyncExt*",
+    "~/Library/Group Containers/8DKG4XB37M.group.com.nektony.Funter-SIII",
+    "~/Library/Group Containers/8DKG4XB37M.group.com.nektony.MacCleaner-PRO-SIII",
+    "~/Library/HTTPStorages/com.nektony.Funter-SIII",
+    "~/Library/Preferences/com.nektony.Funter-SIII.plist",
+    "~/Library/Saved Application State/com.nektony.Funter-SIII.savedState",
+  ]
 end

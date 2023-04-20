@@ -1,6 +1,6 @@
 cask "plasticscm-cloud-edition" do
-  version "11.0.16.7195"
-  sha256 "17e967adbcec34dfdd912f374a1a8c1ab2dec6b4b47b64f807ce97bfa04a5370"
+  version "11.0.16.7806"
+  sha256 "05a4e7889a273fa8f93d52ff5155204948b0b92924956510f0a455dde9dad751"
 
   url "https://s3.eu-west-2.amazonaws.com/plastic-releases/releases/#{version}/plasticscm/osx/plasticscm-cloud-#{version}.pkg.zip",
       verified: "s3.eu-west-2.amazonaws.com/plastic-releases/"

@@ -1,5 +1,5 @@
 cask "loading" do
-  version "1.2.6,632"
+  version "1.2.6"
   sha256 :no_check
 
   url "https://bonzaiapps.com/loading/Loading.zip"
@@ -9,7 +9,7 @@ cask "loading" do
 
   livecheck do
     url "https://bonzaiapps.com/loading/update.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   app "Loading.app"

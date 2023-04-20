@@ -1,15 +1,20 @@
 cask "popo" do
-  version "3.52.1"
-  sha256 "45fa238a66cb2a037765e10c9d7b85d070ee2f096367d098f37dd108345207eb"
+  version "3.70.0,1681217875075"
+  sha256 "4251c525ec5e9a2214974965924a40dda4764c601c7069b00c6c81f264768f23"
 
-  url "https://popo.netease.com/file/popomac/POPO-setup_#{version.dots_to_underscores}.dmg"
+  url "https://popo.netease.com/file/popomac/POPO-setup_prod_#{version.csv.second}.dmg"
   name "NetEase POPO"
   desc "Instant messaging platform"
   homepage "https://popo.netease.com/"
 
   livecheck do
     url "https://popo.netease.com/api/open/jsonp/check_version?device=4&callback="
-    regex(/"version"\s*:\s*"(\d+(?:\.\d+)+)"/i)
+    strategy :page_match do |page|
+      match = page.match(/["']version["']\s*:\s*["'](\d+(?:\.\d+)+)["'].*?(\d+)\.dmg/i)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
+    end
   end
 
   app "popo_mac.app"

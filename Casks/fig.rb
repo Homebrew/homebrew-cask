@@ -1,16 +1,17 @@
 cask "fig" do
-  version "1.0.58,472"
-  sha256 "6f80b5ef9cf34dfe508df3a1c81f073e17ac5d27b84322f5e42067396a09e4ec"
+  version "2.15.0"
+  sha256 "d32a5848fb68f93d402f660fa3182f940b2df2719fa3f111a72fcc2fe5874bcc"
 
-  url "https://versions.withfig.com/fig%20#{version.csv.second}.dmg",
-      verified: "versions.withfig.com/"
+  url "https://repo.fig.io/generic/stable/asset/#{version}/universal/fig.dmg"
   name "fig"
   desc "Reimagine your terminal"
   homepage "https://fig.io/"
 
   livecheck do
-    url "https://versions.withfig.com/appcast.xml"
-    strategy :sparkle
+    url "https://repo.fig.io/generic/stable/index.json"
+    strategy :json do |json|
+      json["hints"]["livecheck"]
+    end
   end
 
   auto_updates true
@@ -19,22 +20,19 @@ cask "fig" do
   app "Fig.app"
   binary "#{appdir}/Fig.app/Contents/MacOS/fig-darwin-universal", target: "fig"
 
-  uninstall script:
-                       {
-                         executable: "#{appdir}/Fig.app/Contents/MacOS/fig-darwin-universal",
-                         args:       ["app", "uninstall"],
-                       },
-            launchctl:
-                       [
-                         "io.fig.launcher",
-                         "io.fig.uninstall",
-                         "io.fig.dotfiles-daemon",
-                       ],
-            quit:
-                       [
-                         "com.mschrage.fig",
-                         "io.fig.input-method.cursor",
-                       ]
+  uninstall script:    {
+              executable: "#{appdir}/Fig.app/Contents/MacOS/fig-darwin-universal",
+              args:       ["_", "brew-uninstall"],
+            },
+            launchctl: [
+              "io.fig.launcher",
+              "io.fig.uninstall",
+              "io.fig.dotfiles-daemon",
+            ],
+            quit:      [
+              "com.mschrage.fig",
+              "io.fig.cursor",
+            ]
 
   zap trash: [
     "~/.fig",
@@ -43,6 +41,7 @@ cask "fig" do
     "~/Library/Application Support/fig",
     "~/Library/Caches/com.mschrage.fig",
     "~/Library/Caches/fig",
+    "~/Library/HTTPStorages/com.mschrage.fig",
     "~/Library/Preferences/com.mschrage.fig.*",
     "~/Library/WebKit/com.mschrage.fig",
   ]

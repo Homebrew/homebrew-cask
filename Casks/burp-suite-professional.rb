@@ -1,13 +1,9 @@
 cask "burp-suite-professional" do
-  arch = Hardware::CPU.intel? ? "MacOsx" : "MacOsArm64"
+  arch arm: "MacOsArm64", intel: "MacOsx"
 
-  version "2022.6.1"
-
-  if Hardware::CPU.intel?
-    sha256 "421ec043ce3282ca31d0c269bd1a7c1c0744ff6dcd7f0f8de8973b187cda388d"
-  else
-    sha256 "46bdd1a3c93e0ada83d5cdea2caa4bb15cc58aa05320de681fe3368bf33a3095"
-  end
+  version "2023.3.4"
+  sha256 arm:   "82c4ba423c25fbde57da446bad68e83a1284f08450088d807d92a0874475880d",
+         intel: "14c078aaee0749324be02bfbe04178e9ca25493d89a595fffe16b10da451a00c"
 
   url "https://portswigger.net/burp/releases/download?product=pro&version=#{version}&type=#{arch}"
   name "Burp Suite Professional"
@@ -16,8 +12,8 @@ cask "burp-suite-professional" do
 
   livecheck do
     url "https://portswigger.net/burp/releases/data"
-    strategy :page_match do |page|
-      all_versions = JSON.parse(page)["ResultSet"]["Results"]
+    strategy :json do |json|
+      all_versions = json["ResultSet"]["Results"]
       next if all_versions.blank?
 
       all_versions.map do |item|

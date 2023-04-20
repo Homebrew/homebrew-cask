@@ -1,16 +1,16 @@
 cask "geph" do
-  version "4.4.20"
-  sha256 "f1c86069f41ef4d114e4da13c1c07a852288b38eaeb13b70251e500541782b45"
+  version "4.7.12"
+  sha256 "e0c4a16ee2ed1e72e7bb28dd20553c023cb24e10a62cd8cb063d3a5c71647db6"
 
-  url "https://f001.backblazeb2.com/file/geph4-dl/Geph4Releases/#{version}/geph-macos-#{version}.dmg",
-      verified: "f001.backblazeb2.com/file/geph4-dl/"
+  url "https://sos-ch-dk-2.exo.io/utopia/geph-releases/macos-stable/#{version}/geph-macos.dmg",
+      verified: "sos-ch-dk-2.exo.io/utopia/geph-releases/"
   name "Geph"
   desc "Modular Internet censorship circumvention system"
   homepage "https://geph.io/en/"
 
   livecheck do
     url :homepage
-    regex(/href=.*?geph[._-]macos[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(%r{href=.*?v?(\d+(?:\.\d+)+)/geph[._-]macos\.dmg}i)
   end
 
   app "Geph.app"

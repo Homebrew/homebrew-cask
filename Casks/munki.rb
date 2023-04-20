@@ -1,6 +1,6 @@
 cask "munki" do
-  version "5.7.2.4439"
-  sha256 "515cf72d2ae00249fd1d604ec413832dc55f6b001591453b3ccfc2821ccf2a5b"
+  version "6.2.1.4545"
+  sha256 "75948b67a2a0a451d46844775e6afd5f06a9b507c5418ad1b6233e69bec99a5f"
 
   url "https://github.com/munki/munki/releases/download/v#{version.major_minor_patch}/munkitools-#{version}.pkg",
       verified: "github.com/munki/munki/"
@@ -9,9 +9,21 @@ cask "munki" do
   homepage "https://www.munki.org/munki/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://github.com/munki/munki/releases/latest"
     regex(%r{href=.*?/munkitools[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
+    strategy :header_match do |headers, regex|
+      next if headers["location"].blank?
+
+      # Identify the latest tag from the response's `location` header
+      latest_tag = File.basename(headers["location"])
+      next if latest_tag.blank?
+
+      # Fetch the assets list HTML for the latest tag and match within it
+      assets_page = Homebrew::Livecheck::Strategy.page_content(
+        @url.sub(%r{/releases/?.+}, "/releases/expanded_assets/#{latest_tag}"),
+      )
+      assets_page[:content]&.scan(regex)&.map { |match| match[0] }
+    end
   end
 
   pkg "munkitools-#{version}.pkg"
@@ -27,4 +39,13 @@ cask "munki" do
               "com.googlecode.munki.managedsoftwareupdate-manualcheck",
               "com.googlecode.munki.munki-notifier",
             ]
+
+  zap trash: [
+    "/Library/LaunchDaemons/com.googlecode.munki.appusaged.plist",
+    "/Library/LaunchDaemons/com.googlecode.munki.authrestartd.plist",
+    "/Library/LaunchDaemons/com.googlecode.munki.logouthelper.plist",
+    "/Library/LaunchDaemons/com.googlecode.munki.managedsoftwareupdate-check.plist",
+    "/Library/LaunchDaemons/com.googlecode.munki.managedsoftwareupdate-install.plist",
+    "/Library/LaunchDaemons/com.googlecode.munki.managedsoftwareupdate-manualcheck.plist",
+  ]
 end

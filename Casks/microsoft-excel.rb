@@ -1,19 +1,27 @@
 cask "microsoft-excel" do
-  if MacOS.version <= :el_capitan
+  on_el_capitan :or_older do
     version "16.16.20101200"
     sha256 "bdd23b696d54e5ffeb40f30a9bd7f968d2936380ab78a6eaf29d05f5fc8eb78e"
-  elsif MacOS.version <= :sierra
+  end
+  on_sierra do
     version "16.30.19101301"
     sha256 "9886b661067f4a99de544d140980fb0f8ef2f4871baa519024781fb814a02fe5"
-  elsif MacOS.version <= :high_sierra
+  end
+  on_high_sierra do
     version "16.43.20110804"
     sha256 "2711a1b8864f7474458086b4b0a56673fee0097d2049f276788c50e004c47d72"
-  elsif MacOS.version <= :mojave
+  end
+  on_mojave do
     version "16.54.21101001"
     sha256 "e09fe9f49a36b37af3745673a385be4de9ae8ec774965fd1753f8479a775fc54"
-  else
-    version "16.63.22070801"
-    sha256 "6bc4ca5739c55f1561e7e2111723920af019cfbccc13523b4aaaf74809f27514"
+  end
+  on_catalina do
+    version "16.66.22101101"
+    sha256 "94148628c6f143f07555b3d2a70cea61cef817d963539d281b092834496f8f16"
+  end
+  on_big_sur :or_newer do
+    version "16.72.23040900"
+    sha256 "8eb1752093b6efe45e09b4ba37585c0e7472fc5f5df0ea2732c3c0cc830a69a5"
   end
 
   url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Excel_#{version}_Installer.pkg",
@@ -28,7 +36,10 @@ cask "microsoft-excel" do
   end
 
   auto_updates true
-  conflicts_with cask: "microsoft-office"
+  conflicts_with cask: [
+    "microsoft-office",
+    "microsoft-office-businesspro",
+  ]
   depends_on cask: "microsoft-auto-update"
 
   pkg "Microsoft_Excel_#{version}_Installer.pkg",

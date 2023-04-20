@@ -5,6 +5,7 @@ cask "password-gorilla" do
   url "http://gorilla.dp100.com/downloads/gorilla.mac.#{version}.zip",
       verified: "gorilla.dp100.com/"
   name "Password Gorilla"
+  desc "Password database manager"
   homepage "https://github.com/zdia/gorilla"
 
   livecheck do

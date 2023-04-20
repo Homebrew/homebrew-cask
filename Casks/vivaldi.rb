@@ -1,10 +1,10 @@
 cask "vivaldi" do
-  version "5.3.2679.68"
-  sha256 "45dd9af0b6e5fff5761a1f3cb554a72c048a6559d0eb9da1e42438e718b43756"
+  version "6.0.2979.15"
+  sha256 "da0aac10f69113b0ab4a675c37266efcfbc4020879c74b6726ab619b95258d71"
 
-  url "https://downloads.vivaldi.com/stable/Vivaldi.#{version}.universal.dmg"
+  url "https://downloads.vivaldi.com/stable-auto/Vivaldi.#{version}.universal.tar.xz"
   name "Vivaldi"
-  desc "Web browser focusing on customization and control"
+  desc "Web browser with built-in email client focusing on customization and control"
   homepage "https://vivaldi.com/"
 
   livecheck do
@@ -13,15 +13,19 @@ cask "vivaldi" do
   end
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :high_sierra"
 
   app "Vivaldi.app"
+
+  uninstall quit: "com.vivaldi.Vivaldi"
 
   zap trash: [
     "~/Library/Application Support/Vivaldi",
     "~/Library/Caches/com.vivaldi.Vivaldi",
     "~/Library/Caches/Vivaldi",
+    "~/Library/HTTPStorages/com.vivaldi.Vivaldi",
     "~/Library/Preferences/com.vivaldi.Vivaldi.plist",
     "~/Library/Saved Application State/com.vivaldi.Vivaldi.savedState",
+    "~/Library/WebKit/com.vivaldi.Vivaldi",
   ]
 end

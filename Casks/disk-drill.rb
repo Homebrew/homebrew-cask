@@ -1,5 +1,5 @@
 cask "disk-drill" do
-  version "4.6.380"
+  version "5.1.1114"
   sha256 :no_check
 
   url "https://dl.cleverfiles.com/diskdrill.dmg"
@@ -8,9 +8,12 @@ cask "disk-drill" do
   homepage "https://www.cleverfiles.com/"
 
   livecheck do
-    url "https://www.cleverfiles.com/releases/auto-update/dd2-newestr.xml"
+    url "https://www.cleverfiles.com/releases/auto-update/dd-newestr.xml"
     strategy :sparkle
   end
+
+  auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "Disk Drill.app"
 
@@ -20,9 +23,11 @@ cask "disk-drill" do
   }
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.cleverfiles.diskdrill.sfl2",
     "~/Library/Application Support/DiskDrill",
     "~/Library/Caches/com.cleverfiles.Disk_Drill",
     "~/Library/Containers/com.cleverfiles.DiskDrill.Media/Data/cfbackd.chief",
+    "~/Library/HTTPStorages/com.cleverfiles.DiskDrill.binarycookies",
     "~/Library/Logs/DiskDrill.log",
     "~/Library/Preferences/com.cleverfiles.Disk_Drill.plist",
     "~/Library/Preferences/com.cleverfiles.DiskDrill.plist",

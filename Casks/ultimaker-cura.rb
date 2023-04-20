@@ -1,6 +1,6 @@
 cask "ultimaker-cura" do
-  version "5.1.0"
-  sha256 "589a2a23e356ef0106f8d744b3d6615b45b7b25f6d4f3553f6ac70e9c5c16de2"
+  version "5.3.0"
+  sha256 "fc447d5ff8ed8d1be72611878afa7a151c6cdc5a3f79d7d5503a094d408b1cd5"
 
   url "https://github.com/Ultimaker/Cura/releases/download/#{version}/Ultimaker-Cura-#{version}-mac.dmg",
       verified: "github.com/Ultimaker/Cura/"
@@ -14,14 +14,17 @@ cask "ultimaker-cura" do
     strategy :github_latest
   end
 
-  app "Ultimaker-Cura.app"
+  app "UltiMaker Cura.app"
 
   uninstall quit: "nl.ultimaker.cura.dmg"
 
   zap trash: [
     "~/.cura",
     "~/Library/Application Support/cura",
+    "~/Library/Caches/Ultimaker B.V./Ultimaker-Cura",
+    "~/Library/Logs/cura",
     "~/Library/Preferences/nl.ultimaker.cura.dmg.plist",
+    "~/Library/Preferences/nl.ultimaker.cura.plist",
     "~/Library/Saved Application State/nl.ultimaker.cura.dmg.savedState",
   ]
 end

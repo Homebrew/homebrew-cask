@@ -7,14 +7,11 @@ cask "macdropany" do
   desc "Syncs any local folder with the cloud"
   homepage "https://github.com/sebthedev/MacDropAny"
 
-  # We need to check all releases, sine currently the latest release is a beta version.
-  livecheck do
-    url "https://github.com/sebthedev/MacDropAny/releases"
-    strategy :page_match
-    regex(%r{href=.*?/MacDropAny\.(\d+(?:\.\d+)*)\.zip}i)
-  end
-
   app "MacDropAny.app"
 
   zap trash: "~/Library/Services/Sync via MacDropAny.workflow"
+
+  caveats do
+    discontinued
+  end
 end

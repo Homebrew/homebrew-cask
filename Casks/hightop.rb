@@ -1,15 +1,15 @@
 cask "hightop" do
-  version "1.3.1,36"
-  sha256 "e3dfa37d6a14a4d8d61a0640a2c8d95e393cabca3043eeb6b56a209fba2ed53f"
+  version "1.3.4"
+  sha256 "e0fcac1834a7e744730159ec75e00790046b3815234981b6dfc7cb9659ed63e5"
 
-  url "https://hightop.app/downloads/HighTop#{version.csv.first}.dmg"
+  url "https://hightop.app/downloads/HighTop#{version}.dmg"
   name "HighTop"
   desc "File access via the menu bar"
   homepage "https://hightop.app/"
 
   livecheck do
     url "https://hightop.app/downloads/updates.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

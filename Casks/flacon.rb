@@ -1,12 +1,17 @@
 cask "flacon" do
-  version "9.1.0"
-  sha256 "afadeef00b49f648a43935a084e634746635c83bd508c5773ad059f46daa56f7"
+  version "10.0.0"
+  sha256 "9adc97e6a49b4b0c332cc697be2fe137d628d0ad566d9f7f71544aa5e43ffce8"
 
   url "https://github.com/flacon/flacon/releases/download/v#{version}/Flacon_#{version}.dmg",
       verified: "github.com/flacon/flacon/"
   name "Flacon"
   desc "Open source audio file encoder"
   homepage "https://flacon.github.io/"
+
+  livecheck do
+    url "https://flacon.github.io/download/feed.xml"
+    strategy :sparkle
+  end
 
   auto_updates true
 

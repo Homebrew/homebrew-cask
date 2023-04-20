@@ -6,5 +6,10 @@ cask "macx-dvd-ripper-mac-free-edition" do
   name "MacX DVD Ripper Mac Free Edition"
   homepage "https://www.macxdvd.com/dvd-ripper-mac-free/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "MacX DVD Ripper Mac Free Edition.app"
 end

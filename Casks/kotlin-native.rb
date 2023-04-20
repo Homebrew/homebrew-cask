@@ -1,13 +1,9 @@
 cask "kotlin-native" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
+  arch arm: "aarch64", intel: "x86_64"
 
-  version "1.7.10"
-
-  if Hardware::CPU.intel?
-    sha256 "4e9470c25e0c6b3b79e86a59c7eca4d79c5a28ca515e80db93504535b2332a00"
-  else
-    sha256 "c02be577f541a5c73e1af75534006eea6e09cf67b3a886f323dae6f0406bcb3e"
-  end
+  version "1.8.20"
+  sha256 arm:   "becc0f4367ae8854f33546efff40767cc2cb227da0cd7935a9a6784e9a2736d2",
+         intel: "e39e801eb8ae2e86a8fe0b5ee32535bf176fd284b6f6883a431cafbb27684055"
 
   url "https://github.com/JetBrains/kotlin/releases/download/v#{version}/kotlin-native-macos-#{arch}-#{version}.tar.gz",
       verified: "github.com/JetBrains/kotlin/"
@@ -28,10 +24,10 @@ cask "kotlin-native" do
   binary "kotlin-native-macos-#{arch}-#{version}/bin/klib"
   binary "kotlin-native-macos-#{arch}-#{version}/bin/konan-lldb"
   binary "kotlin-native-macos-#{arch}-#{version}/bin/konanc"
-  binary "kotlin-native-macos-#{arch}-#{version}/bin/kotlinc"
   binary "kotlin-native-macos-#{arch}-#{version}/bin/kotlinc-native"
   binary "kotlin-native-macos-#{arch}-#{version}/bin/run_konan"
 
+  # No zap stanza required
   caveats do
     depends_on_java "6+"
   end

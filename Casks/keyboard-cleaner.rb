@@ -7,5 +7,10 @@ cask "keyboard-cleaner" do
   desc "Desktop shield and keystroke interceptor"
   homepage "https://jan.prima.de/~jan/plok/archives/48-Keyboard-Cleaner.html"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Keyboard Cleaner.app"
 end

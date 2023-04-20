@@ -1,6 +1,6 @@
 cask "geneious-prime" do
-  version "2022.2.1"
-  sha256 "d37a945f8f9bc998b8339207993cabbe3583fdc199ef6f4f5c5a9faf715b0426"
+  version "2023.1.1"
+  sha256 "a2ddcc3d32356370ec0c8f06437ba05ff007ac849503762a28bdb1bbec755028"
 
   url "https://assets.geneious.com/installers/geneious/release/Geneious_Prime_mac64_#{version.dots_to_underscores}_with_jre.dmg"
   name "Geneious Prime"
@@ -8,9 +8,17 @@ cask "geneious-prime" do
   homepage "https://www.geneious.com/"
 
   livecheck do
-    url "https://www.geneious.com/download/"
-    regex(/data-version="Prime\s*(\d+(?:\.\d+)+)/i)
+    url "https://assets.geneious.com/documentation/geneious/release_notes.html"
+    regex(/href="#v?(\d+(?:\.\d+)+)">/i)
   end
 
   app "Geneious Prime.app"
+
+  zap trash: [
+    "~/Geneious #{version.major}.0 Data",
+    "~/Library/Application Support/Geneious",
+    "~/Library/Preferences/com.biomatters.*.plist",
+    "~/Library/Preferences/Geneious.in.use.vmoptions",
+    "~/Library/Saved Application State/com.biomatters.Geneious.savedState",
+  ]
 end

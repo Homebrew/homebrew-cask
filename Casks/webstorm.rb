@@ -1,13 +1,9 @@
 cask "webstorm" do
-  arch = Hardware::CPU.intel? ? "" : "-aarch64"
+  arch arm: "-aarch64"
 
-  version "2022.1.4,221.6008.13"
-
-  if Hardware::CPU.intel?
-    sha256 "f21fd43af4e0810b62000e76afa4258c33ef149ca12bc05ddbdec860e24a5a73"
-  else
-    sha256 "7f26c44939b41b83866891ed6db3e2910bd0a480f60c0c9e9c08e8eb9d27d215"
-  end
+  version "2023.1,231.8109.174"
+  sha256 arm:   "91f4a8f63c36407e9431a97a1ecc33762f67afd488046796cf4cca3a6709518c",
+         intel: "35f110baf5a37232175a367c524a4cb04216bc2c0b0767506449648df6a12032"
 
   url "https://download.jetbrains.com/webstorm/WebStorm-#{version.csv.first}#{arch}.dmg"
   name "WebStorm"
@@ -16,8 +12,8 @@ cask "webstorm" do
 
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=WS&latest=true&type=release"
-    strategy :page_match do |page|
-      JSON.parse(page)["WS"].map do |release|
+    strategy :json do |json|
+      json["WS"].map do |release|
         "#{release["version"]},#{release["build"]}"
       end
     end

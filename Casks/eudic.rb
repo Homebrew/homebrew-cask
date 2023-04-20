@@ -1,5 +1,5 @@
 cask "eudic" do
-  version "4.2.1,1071"
+  version "4.3.3,1090"
   sha256 :no_check
 
   url "https://static.frdic.com/pkg/eudicmac.dmg",
@@ -29,8 +29,11 @@ cask "eudic" do
     "~/Library/Caches/com.eusoft.eudic.LightPeek",
     "~/Library/Containers/com.eusoft.eudic.QuickLook",
     "~/Library/Eudb_en",
+    "~/Library/HTTPStorages/com.eusoft.eudic",
+    "~/Library/HTTPStorages/com.eusoft.eudic.binarycookies",
     "~/Library/Preferences/com.eusoft.eudic.plist",
     "~/Library/Preferences/com.eusoft.eudic.LightPeek.plist",
     "~/Library/Preferences/group.com.eusoft.eudic.plist",
+    "~/Library/WebKit/com.eusoft.eudic",
   ]
 end

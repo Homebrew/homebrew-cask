@@ -1,13 +1,9 @@
 cask "sapmachine-jdk" do
-  arch = Hardware::CPU.intel? ? "x64" : "aarch64"
+  arch arm: "aarch64", intel: "x64"
 
-  version "18.0.2"
-
-  if Hardware::CPU.intel?
-    sha256 "80812da1eb3edf40d59c62366d9f85ab1c4b51dd0e075ca0a25bb7226c17f369"
-  else
-    sha256 "6d298f7983b2494be94e1304830fc6d8f6b47ea8a2b9be384d8072fd9173f1e5"
-  end
+  version "20"
+  sha256 arm:   "86b57d7ad1011e459efe80ad947bcbd59b1580f6d63220e8464426263ac1577c",
+         intel: "cb5a0abefdf02118747c89f6e8a9fc59f37feef361bb68b39be40d368012b80c"
 
   url "https://github.com/SAP/SapMachine/releases/download/sapmachine-#{version}/sapmachine-jdk-#{version}_macos-#{arch}_bin.dmg",
       verified: "github.com/SAP/SapMachine/"

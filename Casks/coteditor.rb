@@ -1,16 +1,52 @@
 cask "coteditor" do
-  if MacOS.version <= :el_capitan
+  on_el_capitan :or_older do
     version "3.5.4"
     sha256 "0b2cbf38cc531268e3691f307445e05ae5da64b48ceaf86c4d16b993c9be3e9f"
-  elsif MacOS.version <= :mojave
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_sierra do
     version "3.9.7"
     sha256 "be34d4f800e73cc8363d8b83e1b257a06176dc85d345d680149b108f51686cf2"
-  elsif MacOS.version <= :catalina
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_high_sierra do
+    version "3.9.7"
+    sha256 "be34d4f800e73cc8363d8b83e1b257a06176dc85d345d680149b108f51686cf2"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_mojave do
+    version "3.9.7"
+    sha256 "be34d4f800e73cc8363d8b83e1b257a06176dc85d345d680149b108f51686cf2"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_catalina do
     version "4.0.9"
     sha256 "969e891f4a36146c317150806fee01559d177f956734595c73537affc8897e79"
-  else
-    version "4.3.1"
-    sha256 "89bb6048e5ea19cdc2c49094e521260a46acfeeffbd4a9ff712f7c27ae775de2"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_big_sur :or_newer do
+    version "4.5.4"
+    sha256 "7b3df17ed7c561e7278aaa822da17bdbb02f5879360f795334aea79f8dfa1fe7"
+
+    livecheck do
+      url :url
+      strategy :github_latest
+    end
   end
 
   url "https://github.com/coteditor/CotEditor/releases/download/#{version}/CotEditor_#{version}.dmg",
@@ -18,16 +54,6 @@ cask "coteditor" do
   name "CotEditor"
   desc "Plain-text editor for web pages, program source codes and more"
   homepage "https://coteditor.com/"
-
-  livecheck do
-    if MacOS.version >= :big_sur
-      url :url
-      regex(%r{href=.*?/tag/v?(\d+(?:[.-]\d+)+)["' >]}i)
-      strategy :github_latest
-    else
-      skip "version is static on older macOS releases"
-    end
-  end
 
   auto_updates true
 

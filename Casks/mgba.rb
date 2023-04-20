@@ -1,8 +1,8 @@
 cask "mgba" do
-  version "0.9.3"
-  sha256 "38d91f4861d9e05a4e26fea0667061399b488e8783c9d60ea35fbf801b1cfde8"
+  version "0.10.1"
+  sha256 "0762ced759bfdb8617adf2585a87323730d14e1df53ed016c28f711c0b6e4e25"
 
-  url "https://github.com/mgba-emu/mgba/releases/download/#{version}/mGBA-#{version}-osx.dmg",
+  url "https://github.com/mgba-emu/mgba/releases/download/#{version}/mGBA-#{version}-macos.dmg",
       verified: "github.com/mgba-emu/mgba/"
   name "mGBA"
   desc "Game Boy Advance emulator"

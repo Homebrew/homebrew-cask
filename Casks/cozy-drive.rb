@@ -1,11 +1,11 @@
 cask "cozy-drive" do
-  version "3.35.0"
-  sha256 "84b2366c637617fbbe03479bbe59104dc3d853508bc578a1d9e5e4e3d1457b70"
+  version "3.37.0"
+  sha256 "f1bbbe72b264e503e624d46ca00ed6fc064541a20c0acae9d084b0bec36cdd54"
 
   url "https://github.com/cozy-labs/cozy-desktop/releases/download/v#{version}/Cozy-Drive-#{version}.dmg",
-      verified: "github.com/cozy-labs/cozy-desktop"
+      verified: "github.com/cozy-labs/cozy-desktop/"
   name "Cozy Drive"
-  desc "File synchronization for Cozy Cloud"
+  desc "File synchronisation for Cozy Cloud"
   homepage "https://cozy.io/"
 
   livecheck do

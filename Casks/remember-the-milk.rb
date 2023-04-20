@@ -1,15 +1,11 @@
 cask "remember-the-milk" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
-  version "1.3.11"
+  version "1.4.2"
+  sha256 arm:   "571865136d7289e8ef6c59eb22a059a1b9caeb424655a07a35709e5900ec6a4f",
+         intel: "311e64ebc79f725e1e20856b2c3c4f09a7de4e6e3b78afc670188e54d69ff929"
 
   url "https://www.rememberthemilk.com/download/mac/RememberTheMilk-#{version}-#{arch}.zip"
-  if Hardware::CPU.intel?
-    sha256 "6bab4f70f87a95764e646788bef3449877a3938768b5a9b92ade946b348c95d2"
-  else
-    sha256 "5585a2ff3d09867c870c8255dc91e3235012f2f0dbeac3e38beeab6f0cee0f2b"
-  end
-
   name "Remember The Milk"
   desc "To-do app"
   homepage "https://www.rememberthemilk.com/"

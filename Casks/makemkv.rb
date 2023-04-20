@@ -1,6 +1,6 @@
 cask "makemkv" do
-  version "1.17.1"
-  sha256 "8bcb532b95192023fb78ec4d4c19deba8e9f525bcce21834e548b4ae3c118eb6"
+  version "1.17.3"
+  sha256 "687bb0b595865260c9deeb146f60d53f38bc142b8beaf805e6a72e24dc171e31"
 
   url "https://www.makemkv.com/download/makemkv_v#{version}_osx.dmg"
   name "MakeMKV"
@@ -14,6 +14,9 @@ cask "makemkv" do
 
   app "MakeMKV.app"
   binary "#{appdir}/MakeMKV.app/Contents/MacOS/makemkvcon"
+  binary "#{appdir}/MakeMKV.app/Contents/MacOS/mmccextr"
+  binary "#{appdir}/MakeMKV.app/Contents/MacOS/mmgplsrv"
+  binary "#{appdir}/MakeMKV.app/Contents/MacOS/sdftool"
 
   zap trash: [
     "~/Library/MakeMKV",

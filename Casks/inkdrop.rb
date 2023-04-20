@@ -1,23 +1,20 @@
 cask "inkdrop" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
-  version "5.5.1"
-
-  if Hardware::CPU.intel?
-    sha256 "c81e7f26d2b3984058309d65aaad2451d710838fd3f9c9ebb50eb465e70b8133"
-  else
-    sha256 "83f386ccc721378ba100435938fc53e8105ba572e1b39e5b9615b532f9ab3bb4"
-  end
+  version "5.5.3"
+  sha256 arm:   "6fef4312c90014aaf29367abe9fa5e679316b25e88218309a3213feee47c8eb7",
+         intel: "8d88dcdd1bc9968b7b48516f711401044a7eebc3a755b500fbef45545eab4327"
 
   url "https://d3ip0rje8grhnl.cloudfront.net/v#{version}/Inkdrop-#{version}-#{arch}-Mac.zip",
       verified: "d3ip0rje8grhnl.cloudfront.net/"
   name "Inkdrop"
+  desc "Markdown editor"
   homepage "https://www.inkdrop.info/"
 
   livecheck do
     url "https://api.inkdrop.app/update/links"
-    strategy :page_match do |page|
-      JSON.parse(page)["version"]
+    strategy :json do |json|
+      json["version"]
     end
   end
 

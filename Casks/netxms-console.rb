@@ -1,8 +1,11 @@
 cask "netxms-console" do
-  version "4.1.404"
-  sha256 "f633d7f322d3fc4da9c5b2a3c8843fa19a2117162ebae5ae08c6e12513da36e0"
+  arch arm: "-aarch64"
 
-  url "https://netxms.org/download/releases/#{version.major_minor}/nxmc-#{version}.dmg"
+  version "4.3.4"
+  sha256 arm:   "746e359d2f1b7372947533603ccb89c4c796e4e355d113942db80b7ab1299837",
+         intel: "77e8e36fb0216e4d80cb5751ade43807ea5dcd20b06795681b65f96a02e0b84b"
+
+  url "https://netxms.org/download/releases/#{version.major_minor}/nxmc-#{version}#{arch}.dmg"
   name "NetXMS Management Console"
   desc "Network and infrastructure monitoring and management system"
   homepage "https://netxms.org/"

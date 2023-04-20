@@ -1,5 +1,5 @@
 cask "sengi" do
-  version "1.1.5"
+  version "1.2.0"
   sha256 "753f92fd621ac142f2608d837598c0187918d66c45176430ed5a95d05acbc3d9"
 
   url "https://github.com/NicolasConstant/sengi/releases/download/#{version}/Sengi-#{version.major_minor_patch}-mac.dmg"

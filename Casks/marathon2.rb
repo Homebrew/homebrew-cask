@@ -1,7 +1,7 @@
 cask "marathon2" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
-  version "20220115"
-  sha256 "0820795d91da7c5e0db93f5b173f5143522bff35ad23523074d488f516b72515"
+  version "20230119"
+  sha256 "2c3fc5dc92b386275d972054e72b8d8ad9db7676d10703d2faa02bede9871ebf"
 
   url "https://github.com/Aleph-One-Marathon/alephone/releases/download/release-#{version}/Marathon2-#{version}-Mac.dmg",
       verified: "github.com/Aleph-One-Marathon/alephone/"
@@ -10,9 +10,8 @@ cask "marathon2" do
   homepage "https://alephone.lhowon.org/"
 
   livecheck do
-    url :url
-    strategy :github_latest
-    regex(%r{href=.*?/Marathon2-(\d+)-Mac\.dmg}i)
+    url :homepage
+    regex(%r{href=.*?/Marathon2[._-]v?(\d+(?:\.\d+)*)[._-]Mac\.dmg}i)
   end
 
   app "Marathon 2.app"

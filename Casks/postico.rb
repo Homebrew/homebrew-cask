@@ -1,22 +1,26 @@
 cask "postico" do
-  version "1.5.21"
-  sha256 "dfb11623e6539c2a5127a0dc7639baf06d62c774b195117a49b3e0eaf6f70ed6"
+  version "2.0.1,9593"
+  sha256 "0a8d012ae67e51001c94c87f98274010524e94771d3a7009fb09eaa4e492e29a"
 
-  url "https://eggerapps-downloads.s3.amazonaws.com/postico-#{version}.zip",
-      verified: "eggerapps-downloads.s3.amazonaws.com/"
+  url "https://downloads.eggerapps.at/postico/postico-#{version.csv.second}.dmg"
   name "Postico"
   desc "GUI client for PostgreSQL databases"
-  homepage "https://eggerapps.at/postico/"
+  homepage "https://eggerapps.at/postico#{version.major}/"
 
   livecheck do
-    url "https://eggerapps.at/postico/download/"
-    strategy :header_match
+    url "https://releases.eggerapps.at/postico2/changelog"
+    strategy :page_match do |page|
+      v = page[/["']>\n*?(\d+(?:\.\d+)+)/i, 1]
+      build = page[/Build\s+(\d+)</, 1]
+      "#{v},#{build}" if v && build
+    end
   end
 
-  app "Postico.app"
+  app "Postico #{version.major}.app"
 
   zap trash: [
     "~/Library/Application Scripts/at.eggerapps.Postico",
+    "~/Library/Caches/at.eggerapps.Postico",
     "~/Library/Containers/at.eggerapps.Postico",
     "~/Library/Preferences/at.eggerapps.Postico.plist",
     "~/Library/Saved Application State/at.eggerapps.Postico.savedState",

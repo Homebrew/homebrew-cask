@@ -1,6 +1,6 @@
 cask "ghidra" do
-  version "10.1.4,20220519"
-  sha256 "91556c77c7b00f376ca101a6026c0d079efbf24a35b09daaf80bda897318c1f1"
+  version "10.2.3,20230208"
+  sha256 "daf4d85ec1a8ca55bf766e97ec43a14b519cbd1060168e4ec45d429d23c31c38"
 
   url "https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_#{version.csv.first}_build/ghidra_#{version.csv.first}_PUBLIC_#{version.csv.second}.zip",
       verified: "github.com/NationalSecurityAgency/ghidra/"
@@ -9,10 +9,20 @@ cask "ghidra" do
   homepage "https://www.ghidra-sre.org/"
 
   livecheck do
-    url "https://github.com/NationalSecurityAgency/ghidra/releases"
-    strategy :page_match do |page|
-      page.scan(/href=.*?ghidra[._-]v?(\d+(?:\.\d+)+)[._-]PUBLIC[._-](\d+)\.zip/i)
-          .map { |matches| "#{matches[0]},#{matches[1]}" }
+    url "https://github.com/NationalSecurityAgency/ghidra/releases/latest"
+    regex(/href=.*?ghidra[._-]v?(\d+(?:\.\d+)+)[._-]PUBLIC[._-](\d+)\.zip/i)
+    strategy :header_match do |headers, regex|
+      next if headers["location"].blank?
+
+      # Identify the latest tag from the response's `location` header
+      latest_tag = File.basename(headers["location"])
+      next if latest_tag.blank?
+
+      # Fetch the assets list HTML for the latest tag and match within it
+      assets_page = Homebrew::Livecheck::Strategy.page_content(
+        @url.sub(%r{/releases/?.+}, "/releases/expanded_assets/#{latest_tag}"),
+      )
+      assets_page[:content]&.scan(regex)&.map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 
@@ -30,6 +40,7 @@ cask "ghidra" do
   zap trash: "~/.ghidra"
 
   caveats do
-    depends_on_java "11+"
+    depends_on_java "17+"
+    requires_rosetta
   end
 end

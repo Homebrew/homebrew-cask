@@ -1,16 +1,12 @@
 cask "lando" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
-  version "3.6.4"
+  version "3.11.0"
+  sha256 arm:   "8709ec42863a16afecbf9afe3103e55176ae3e26b68199ff1096ca72c14b8cb9",
+         intel: "c813fd1d30d901c0ed22c0c2c60a0d3e94670dbc420ae7c7c99eb32be1fe5cb7"
 
   url "https://github.com/lando/lando/releases/download/v#{version}/lando-#{arch}-v#{version}.dmg",
       verified: "github.com/lando/lando/"
-  if Hardware::CPU.intel?
-    sha256 "cc1fd722bd8588837ff9cc51ce809075e08a7c49e6b9f3c328377a8ce04d03ae"
-  else
-    sha256 "1dfc9bf38f562f99227cb9430d1311ea885f278e338318afe10871a38aae5925"
-  end
-
   name "Lando"
   desc "Local development environment and DevOps tool built on Docker"
   homepage "https://lando.dev/"

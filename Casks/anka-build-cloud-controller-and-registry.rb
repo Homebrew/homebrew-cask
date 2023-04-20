@@ -1,6 +1,6 @@
 cask "anka-build-cloud-controller-and-registry" do
-  version "1.25.0-b2a027a4"
-  sha256 "def9cd5ae6e289f6bc03e1c83fae1470e8d111c5e36a558842e47b1d5f7ee6eb"
+  version "1.33.0-5465bb03"
+  sha256 "b41c8f944314eea9b891c928b45c239a234f3844678f67d756ccacabd8069c01"
 
   url "https://downloads.veertu.com/anka/AnkaControllerRegistry-#{version}.pkg"
   name "Anka Build Cloud Controller & Registry"
@@ -9,8 +9,8 @@ cask "anka-build-cloud-controller-and-registry" do
 
   livecheck do
     url "https://veertu.com/downloads/ankacontroller-registry-mac-latest"
-    strategy :header_match
     regex(/AnkaControllerRegistry[._-]?v?(\d+(?:\.\d+)*[._-]\h+)\.pkg/i)
+    strategy :header_match
   end
 
   pkg "AnkaControllerRegistry-#{version}.pkg"

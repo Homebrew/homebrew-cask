@@ -1,5 +1,5 @@
 cask "mate-translate" do
-  version "8.1.3,3040"
+  version "8.1.8"
   sha256 :no_check
 
   url "https://gikken.co/mate/MateTranslate.dmg",
@@ -10,10 +10,10 @@ cask "mate-translate" do
 
   livecheck do
     url "https://gikken.co/mate/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :high_sierra"
 
   app "Mate Translate.app"
 

@@ -8,4 +8,6 @@ cask "brooklyn" do
   homepage "https://github.com/pedrommcarrasco/Brooklyn"
 
   screen_saver "Brooklyn.saver"
+
+  zap trash: "~/Library/Screen Savers/Brooklyn.saver"
 end

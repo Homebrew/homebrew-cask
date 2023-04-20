@@ -1,13 +1,9 @@
 cask "mps" do
-  arch = Hardware::CPU.intel? ? "macos" : "macos-aarch64"
+  arch arm: "macos-aarch64", intel: "macos"
 
-  version "2021.3.1,213.7172.958"
-
-  if Hardware::CPU.intel?
-    sha256 "06f06e121a552a7c4ee89ecbdecb4ac7d1978ae87d6c80d04837a19e92e4f90d"
-  else
-    sha256 "3104eb7b2a363ef9602b86a8fdca02d9b55264127f481f3eabbed65979b34791"
-  end
+  version "2022.2,222.3345.1295"
+  sha256 arm:   "bdc83d9c7a3430cc2b0b0361a9e4eab82e951bfe87f0e4754106d09850947077",
+         intel: "4e36c60d281596c220287ab2191165be37ef01c3c54ab5f5e4e535c8b81bc754"
 
   url "https://download.jetbrains.com/mps/#{version.major_minor}/MPS-#{version.csv.first}-#{arch}.dmg"
   name "JetBrains MPS"
@@ -16,8 +12,8 @@ cask "mps" do
 
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=MPS&latest=true&type=release"
-    strategy :page_match do |page|
-      JSON.parse(page)["MPS"].map do |release|
+    strategy :json do |json|
+      json["MPS"].map do |release|
         "#{release["version"]},#{release["build"]}"
       end
     end

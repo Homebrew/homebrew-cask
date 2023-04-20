@@ -11,12 +11,8 @@ cask "spotmenu" do
 
   app "SpotMenu.app"
 
-  uninstall quit:       [
-              "com.KMikiy.SpotMenu",
-            ],
-            login_item: [
-              "SpotMenu",
-            ]
+  uninstall quit:       "com.KMikiy.SpotMenu",
+            login_item: "SpotMenu"
 
   zap trash: [
     "~/Library/Application Scripts/com.KMikiy.SpotMenu.SpotMenuToday",

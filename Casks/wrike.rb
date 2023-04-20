@@ -1,6 +1,6 @@
 cask "wrike" do
-  version "3.3.15"
-  sha256 "fa5b15bb7fcc28c7ca45eac0660c89852f5b7728ee389660b71972402a2da639"
+  version "4.1.1"
+  sha256 "ee41dff2dcadfb8bc670ee05fa22acef189b7bf38a5dc8abd5e80c3f1b0bd532"
 
   url "https://dl.wrike.com/download/WrikeDesktopApp.v#{version}.dmg"
   name "Wrike"
@@ -13,4 +13,11 @@ cask "wrike" do
   end
 
   app "Wrike for Mac.app"
+
+  zap trash: [
+    "~/Library/Application Support/Wrike",
+    "~/Library/Logs/Wrike",
+    "~/Library/Preferences/com.wrike.Wrike.plist",
+    "~/Library/Saved Application State/com.wrike.Wrike.savedState",
+  ]
 end

@@ -1,6 +1,6 @@
 cask "obsidian" do
-  version "0.15.6"
-  sha256 "81a14d1dbcae8420b280db81413c66268757fb8b9f6eeaa39a9fcd648e6e1f88"
+  version "1.1.16"
+  sha256 "d29f6f607775fa41fed994c9e4e3de20428d3b3506454fccd71966b723cebc9a"
 
   url "https://github.com/obsidianmd/obsidian-releases/releases/download/v#{version}/Obsidian-#{version}-universal.dmg",
       verified: "github.com/obsidianmd/"
@@ -19,6 +19,7 @@ cask "obsidian" do
 
   zap trash: [
     "~/Library/Application Support/obsidian",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/md.obsidian.sfl2",
     "~/Library/Preferences/md.obsidian.plist",
     "~/Library/Saved Application State/md.obsidian.savedState",
   ]

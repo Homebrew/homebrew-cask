@@ -1,6 +1,6 @@
 cask "babeledit" do
-  version "3.0.1"
-  sha256 "f0dfe05bead574b454e483328198e0ce89fea44466e4110e2a385cc092b98d26"
+  version "4.0.3"
+  sha256 "42b270ccaff08784b922e58e94e56e977c59ed0282a28fe9dc48578dab36fdf7"
 
   url "https://www.codeandweb.com/download/babeledit/#{version}/BabelEdit-#{version}.dmg"
   name "BabelEdit"
@@ -11,6 +11,8 @@ cask "babeledit" do
     url "https://www.codeandweb.com/babeledit/download"
     regex(%r{babeledit/download/v?(\d+(?:\.\d+)+)/mac-64}i)
   end
+
+  auto_updates true
 
   app "BabelEdit.app"
 

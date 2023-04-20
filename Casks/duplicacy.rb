@@ -8,6 +8,8 @@ cask "duplicacy" do
   desc "Cloud backup tool"
   homepage "https://duplicacy.com/"
 
+  conflicts_with cask: "duplicacy-cli"
+
   app "Duplicacy.app"
   binary "#{appdir}/Duplicacy.app/Contents/Resources/duplicacy_osx_x64_#{version}", target: "duplicacy"
 

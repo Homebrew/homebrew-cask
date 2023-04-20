@@ -1,15 +1,15 @@
 cask "butler" do
-  version "4.4.5,5123"
+  version "4.4.7"
   sha256 :no_check
 
   url "https://manytricks.com/download/butler"
   name "Butler"
-  desc "Arrange your tasks in a customizable configuration"
+  desc "Arrange your tasks in a customisable configuration"
   homepage "https://manytricks.com/butler/"
 
   livecheck do
     url "https://manytricks.com/butler/appcast/"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

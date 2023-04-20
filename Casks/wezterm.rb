@@ -1,6 +1,6 @@
 cask "wezterm" do
-  version "20220624-141144,bd1b7c5d"
-  sha256 "77c8c24a96fbac08858c0cb73487ba5ac947a32b504b6f8da39d27cce9da0b88"
+  version "20230408-112425,69ae8472"
+  sha256 "74061e67748885735f09dfbf3bc80d450072c10ea4a84a52dca94aff3b717af6"
 
   url "https://github.com/wez/wezterm/releases/download/#{version.csv.first}-#{version.csv.second}/WezTerm-macos-#{version.csv.first}-#{version.csv.second}.zip",
       verified: "github.com/wez/wezterm/"
@@ -10,16 +10,15 @@ cask "wezterm" do
 
   livecheck do
     url :url
-    regex(%r{href=.*?/WezTerm-macos-(\d{8}-\d{6})-([0-9a-f]+)\.zip}i)
+    regex(%r{href=["']?[^"' >]*?/tag/[^"' >]*?(\d+(?:[.-]\d+)+)-(\h+)["' >]}i)
     strategy :github_latest do |page, regex|
-      match = page.match(regex)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 
-  app "WezTerm-macos-#{version.csv.first}-#{version.csv.second}/WezTerm.app"
+  conflicts_with cask: "homebrew/cask-versions/wezterm-nightly"
+
+  app "WezTerm.app"
 
   %w[
     wezterm
@@ -30,9 +29,14 @@ cask "wezterm" do
     binary "#{appdir}/WezTerm.app/Contents/MacOS/#{tool}"
   end
 
-  zap trash: [
-    "~/.config/wezterm/",
-    "~/.wezterm.lua",
-    "~/Library/Saved Application State/com.github.wez.wezterm.savedState",
-  ]
+  preflight do
+    # Move "WezTerm-macos-#{version}/WezTerm.app" out of the subfolder
+    staged_subfolder = staged_path.glob(["WezTerm-*", "wezterm-*"]).first
+    if staged_subfolder
+      FileUtils.mv(staged_subfolder/"WezTerm.app", staged_path)
+      FileUtils.rm_rf(staged_subfolder)
+    end
+  end
+
+  zap trash: "~/Library/Saved Application State/com.github.wez.wezterm.savedState"
 end

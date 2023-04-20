@@ -1,5 +1,5 @@
 cask "witch" do
-  version "4.5.2,3534"
+  version "4.5.3"
   sha256 :no_check
 
   url "https://manytricks.com/download/witch"
@@ -9,7 +9,7 @@ cask "witch" do
 
   livecheck do
     url "https://manytricks.com/witch/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

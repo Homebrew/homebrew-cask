@@ -1,6 +1,6 @@
 cask "packet-peeper" do
-  version "2021-07-18"
-  sha256 "c08d8d53969962fb8530301d81180faf11a5cd679f1b91539f5cbe1674cc39b9"
+  version "2022-08-31"
+  sha256 "d930f595ccd391df292c09ae82e3404bf00ed59d8b8f66b462671ee9e1c7c4a2"
 
   url "https://github.com/choll/packetpeeper/releases/download/#{version}/PacketPeeper_#{version}.dmg",
       verified: "github.com/choll/packetpeeper/"

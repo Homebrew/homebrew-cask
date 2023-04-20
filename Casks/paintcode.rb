@@ -1,8 +1,8 @@
 cask "paintcode" do
-  version "3.5.4,35015"
+  version "3.5.4"
   sha256 "7e8598e9d0f4c8d84207a02a9deecf126c116e0ab158c35a54b9bb1f17da46fc"
 
-  url "https://www.pixelcut.com/paintcode#{version.major}/paintcode_#{version.csv.first}.zip",
+  url "https://www.pixelcut.com/paintcode#{version.major}/paintcode_#{version}.zip",
       verified: "pixelcut.com/"
   name "PaintCode"
   desc "Turn vector drawings into program code"
@@ -10,7 +10,7 @@ cask "paintcode" do
 
   livecheck do
     url "https://www.pixelcut.com/paintcode#{version.major}/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   app "PaintCode.app"

@@ -1,6 +1,6 @@
 cask "parallels" do
-  version "17.1.4-51567"
-  sha256 "8232f140e4c5b95821bf5063fb37db356f7bab520ddabbab4a73d08b5de0cd10"
+  version "18.2.0-53488"
+  sha256 "16901b4106a921c67b1ac1a31f865e27cd4a7be35417b1af815d701032caa145"
 
   url "https://download.parallels.com/desktop/v#{version.major}/#{version}/ParallelsDesktop-#{version}.dmg"
   name "Parallels Desktop"
@@ -8,8 +8,13 @@ cask "parallels" do
   homepage "https://www.parallels.com/products/desktop/"
 
   livecheck do
-    url "https://www.parallels.com/directdownload/pd#{version.major}/image/"
-    strategy :header_match
+    url "https://kb.parallels.com/129060"
+    strategy :page_match do |page|
+      match = page.match(/(\d+(?:\.\d+)+)(?:\s*|&nbsp;)\((\d+)\)/i)
+      next if match.blank?
+
+      "#{match[1]}-#{match[2]}"
+    end
   end
 
   auto_updates true
@@ -19,8 +24,9 @@ cask "parallels" do
     "homebrew/cask-versions/parallels14",
     "homebrew/cask-versions/parallels15",
     "homebrew/cask-versions/parallels16",
+    "homebrew/cask-versions/parallels17",
   ]
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :mojave"
 
   app "Parallels Desktop.app"
 
@@ -54,32 +60,33 @@ cask "parallels" do
             signal: ["TERM", "com.parallels.desktop.console"]
 
   zap trash: [
-    "~/.parallels_settings",
-    "~/Applications (Parallels)",
-    "~/Library/Application Scripts/*.com.parallels.Desktop",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.parallels.desktop.console.sfl*",
-    "~/Library/Application Scripts/com.parallels.desktop*",
-    "~/Library/Caches/com.apple.helpd/Generated/com.parallels.desktop.console.help*",
-    "~/Library/Caches/com.parallels.desktop.console",
-    "~/Library/Caches/Parallels Software/Parallels Desktop",
-    "~/Library/Containers/com.parallels.desktop*",
-    "~/Library/Group Containers/*.com.parallels.Desktop",
-    "~/Library/Logs/parallels.log",
-    "~/Library/Parallels/Applications Menus",
-    "~/Library/Parallels/Parallels Desktop",
-    "~/Library/Preferences/com.parallels.desktop.console.LSSharedFileList.plist",
-    "~/Library/Preferences/com.parallels.desktop.console.plist",
-    "~/Library/Preferences/com.parallels.Parallels Desktop Statistics.plist",
-    "~/Library/Preferences/com.parallels.Parallels Desktop Events.plist",
-    "~/Library/Preferences/com.parallels.Parallels Desktop.plist",
-    "~/Library/Preferences/com.parallels.Parallels.plist",
-    "~/Library/Preferences/com.parallels.PDInfo.plist",
-    "~/Library/Preferences/Parallels",
-    "~/Library/Saved Application State/com.parallels.desktop.console.savedState",
-  ], rmdir: [
-    "/Users/Shared/Parallels",
-    "~/Library/Caches/Parallels Software",
-    "~/Library/Parallels",
-    "~/Parallels",
-  ]
+        "~/.parallels_settings",
+        "~/Applications (Parallels)",
+        "~/Library/Application Scripts/*.com.parallels.Desktop",
+        "~/Library/Application Scripts/com.parallels.desktop*",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.parallels.desktop.console.sfl*",
+        "~/Library/Caches/com.apple.helpd/Generated/com.parallels.desktop.console.help*",
+        "~/Library/Caches/com.parallels.desktop.console",
+        "~/Library/Caches/Parallels Software/Parallels Desktop",
+        "~/Library/Containers/com.parallels.desktop*",
+        "~/Library/Group Containers/*.com.parallels.Desktop",
+        "~/Library/Logs/parallels.log",
+        "~/Library/Parallels/Applications Menus",
+        "~/Library/Parallels/Parallels Desktop",
+        "~/Library/Preferences/com.parallels.desktop.console.LSSharedFileList.plist",
+        "~/Library/Preferences/com.parallels.desktop.console.plist",
+        "~/Library/Preferences/com.parallels.Parallels Desktop Events.plist",
+        "~/Library/Preferences/com.parallels.Parallels Desktop Statistics.plist",
+        "~/Library/Preferences/com.parallels.Parallels Desktop.plist",
+        "~/Library/Preferences/com.parallels.Parallels.plist",
+        "~/Library/Preferences/com.parallels.PDInfo.plist",
+        "~/Library/Preferences/Parallels",
+        "~/Library/Saved Application State/com.parallels.desktop.console.savedState",
+      ],
+      rmdir: [
+        "/Users/Shared/Parallels",
+        "~/Library/Caches/Parallels Software",
+        "~/Library/Parallels",
+        "~/Parallels",
+      ]
 end

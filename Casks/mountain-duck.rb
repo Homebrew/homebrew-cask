@@ -1,6 +1,6 @@
 cask "mountain-duck" do
-  version "4.12.1,19928"
-  sha256 "ebb6fff2a953533325595c02ab98c16aac220080f14552ceacbe200c6671159e"
+  version "4.13.8,21236"
+  sha256 "df73c2f6b0a9b22e6a9855984d51dabcbf207d8a165a6032c697aa3115d3de79"
 
   url "https://dist.mountainduck.io/Mountain%20Duck-#{version.csv.first}.#{version.csv.second}.zip"
   name "Mountain Duck"

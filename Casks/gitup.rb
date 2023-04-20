@@ -1,15 +1,15 @@
 cask "gitup" do
-  version "1.3.2"
-  sha256 :no_check
+  version "1.3.5"
+  sha256 "8cf6c5c24959a33fddf886c29edceb144d5ea68c0cc492a9dc28e737d706b4e4"
 
-  url "https://gitup-builds.s3.amazonaws.com/stable/GitUp.zip",
-      verified: "gitup-builds.s3.amazonaws.com/"
+  url "https://github.com/git-up/GitUp/releases/download/v#{version}/GitUp.zip",
+      verified: "github.com/git-up/GitUp/"
   name "GitUp"
   desc "Git interface focused on visual interaction"
   homepage "https://gitup.co/"
 
   livecheck do
-    url "https://github.com/git-up/GitUp/releases"
+    url :url
     strategy :github_latest
   end
 

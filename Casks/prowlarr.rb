@@ -1,23 +1,24 @@
 cask "prowlarr" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
-  version "0.4.2.1879"
+  version "1.3.2.3006"
+  sha256 arm:   "2a7b184b2e8937d37a5bd8f46b0a50ff72e1e4610ea20d7e7c0e80cb8de2f9a7",
+         intel: "643cadcdedc370f849dcb3750c7dd64ec10eb19f601e841c57b24b16d933d84d"
 
-  if Hardware::CPU.intel?
-    sha256 "cd7a2870c65c1028b1ab3bcb036c654d42d8629d8f13e2ef786c9b93e1d82a15"
-  else
-    sha256 "256279aebd7b293c7f1dbb8335574a7dd518e76da077a0885361b4b8b8bf0d0b"
-  end
-
-  url "https://github.com/Prowlarr/Prowlarr/releases/download/v#{version}/Prowlarr.develop.#{version}.osx-app-core-#{arch}.zip",
+  url "https://github.com/Prowlarr/Prowlarr/releases/download/v#{version}/Prowlarr.master.#{version}.osx-app-core-#{arch}.zip",
       verified: "github.com/Prowlarr/Prowlarr/"
   name "Prowlarr"
   desc "Indexer manager/proxy for various PVR apps"
   homepage "https://prowlarr.com/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :high_sierra"
 
   app "Prowlarr.app"
 
-  # No zap stanza required
+  zap trash: "~/.config/Prowlarr"
 end

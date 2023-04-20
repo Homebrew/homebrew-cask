@@ -1,23 +1,20 @@
 cask "lens" do
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  arch arm: "-arm64"
 
-  version "5.5.4,20220609.2"
+  version "2023.4.141316"
+  sha256 arm:   "08fca18adf8b3b6cfc440e4beb08be237f1eef827ad2d0cb9c48f5d102e1e3e7",
+         intel: "b45fc769c48c9c2bc7cb14e54567ec6ffc72b0f51b5a7286b50297eb4a9a5de9"
 
-  if Hardware::CPU.intel?
-    sha256 "189425e92d213ab84477190c1313e71d97e5bb59e03a1de9571d34a1db678290"
-  else
-    sha256 "7ae6d7833d6aa996e7010e6dd36c0277a6834429969c61eab5e3402a235a5a48"
-  end
-
-  url "https://api.k8slens.dev/binaries/Lens-#{version.csv.first}-latest.#{version.csv.second}#{arch}.dmg"
+  url "https://api.k8slens.dev/binaries/Lens-#{version}-latest#{arch}.dmg"
   name "Lens"
   desc "Kubernetes IDE"
   homepage "https://k8slens.dev/"
 
   livecheck do
-    url "https://lens-binaries.s3.amazonaws.com/ide/latest-mac.yml"
-    strategy :electron_builder do |data|
-      data["version"].sub("-latest.", ",")
+    url "https://api.k8slens.dev/binaries/latest-mac.json/"
+    regex(/(\d+(?:\.\d+)+)/i)
+    strategy :json do |json|
+      json["version"].sub("-latest", "")
     end
   end
 

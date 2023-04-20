@@ -1,6 +1,6 @@
 cask "firefly" do
-  version "1.6.3"
-  sha256 "c51110be4e370195ef5e840e80c0ce6220f5501e9cbd6023f82a66a107fb879e"
+  version "2.1.0"
+  sha256 "73ebfa0a52d803156af492c4ec4c6a87331ff4fa27ea86ceafca13e1359de0b8"
 
   url "https://github.com/iotaledger/firefly/releases/download/desktop-#{version}/firefly-desktop-#{version}.dmg",
       verified: "github.com/iotaledger/firefly/"
@@ -10,13 +10,13 @@ cask "firefly" do
 
   livecheck do
     url :url
-    regex(/href=.*?firefly-desktop[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(%r{href=.*?/tag/desktop[._-]v?(\d+(?:\.\d+)+)["' >]}i)
     strategy :github_latest
   end
 
   auto_updates true
 
-  app "Firefly.app"
+  app "Firefly Shimmer.app"
 
   uninstall quit: "org.iota.firefly"
 

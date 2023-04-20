@@ -1,6 +1,6 @@
 cask "ui" do
-  version "0.52.1,fc1b9e29d90248a4b4ebe7e3b53dec8a,ecae"
-  sha256 "1ddf876c2701669415ab1c634feee336e2825a876a20c5f69835c57d0b09a48b"
+  version "0.61.1,c2b184ec24a944a98828fb031c61aec1,68a4"
+  sha256 "b88c96611ec4cadcb92b50a02bb690ee862544151a481b431244adbf794542c4"
 
   url "https://fw-download.ubnt.com/data/uid-ui-desktop-app/#{version.csv.third}-macOS-#{version.csv.first}-#{version.csv.second}.pkg",
       verified: "fw-download.ubnt.com/data/uid-ui-desktop-app/"
@@ -9,7 +9,14 @@ cask "ui" do
   homepage "https://www.ui.com/uid"
 
   livecheck do
-    skip "No version information available"
+    url "https://api-gw.uid.alpha.ui.com:443/location/api/v1/public/fw/download/latest/?app=UI-DESKTOP-MACOS"
+    regex(/(\w+)[._-]macOS[._-](\d+(?:\.\d+)+)[._-](\w+)/i)
+    strategy :header_match do |headers, regex|
+      match = headers["location"].match(regex)
+      next if match.blank?
+
+      "#{match[2]},#{match[3]},#{match[1]}"
+    end
   end
 
   depends_on macos: ">= :mojave"

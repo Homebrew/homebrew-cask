@@ -9,8 +9,8 @@ cask "infra" do
 
   livecheck do
     url "https://api.infra.app/update/darwin/0.0.1"
-    strategy :page_match do |page|
-      JSON.parse(page)["version"]
+    strategy :json do |json|
+      json["version"]
     end
   end
 

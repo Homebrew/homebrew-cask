@@ -1,14 +1,29 @@
 cask "appgate-sdp-client" do
-  if MacOS.version <= :high_sierra
-    version "5.3.3"
-    sha256 "935c87fcec29c6c7ab28ced0b3da8bb98db7f6b51303c3d651c53b14fc17fcbd"
-  else
-    version "6.0.0"
-    sha256 "29293ac06591f64ef0c43e5b0f329c86f5e162448333caa07884eea5db6fc7b8"
+  on_mojave :or_older do
+    version "5.4.3"
+    sha256 "cb40c9dbfc1c6df1c611d9538ce22447cf234945a15ccf5acc7c09b877bc4137"
+
+    livecheck do
+      url "https://www.appgate.com/support/software-defined-perimeter-support/sdp-v5-4"
+      regex(%r{href=.*?/Appgate[._-]SDP[._-]v?(\d+(?:\.\d+)+)[._-]Installer\.dmg}i)
+    end
+  end
+  on_catalina do
+    version "6.0.3"
+    sha256 "ff8f7f3f2f934d935ec3353ab8ca544e8b0a2ccd3a608bc16fe3f5ed8b935bf9"
+
+    livecheck do
+      url "https://www.appgate.com/support/software-defined-perimeter-support/sdp-v6-0"
+      regex(%r{href=.*?/Appgate[._-]SDP[._-]v?(\d+(?:\.\d+)+)[._-]Installer\.dmg}i)
+    end
+  end
+  on_big_sur :or_newer do
+    version "6.1.3"
+    sha256 "781e32e29130498cc5f374efdceb129d9f394dac47801a3cb723fe40ff8899fe"
 
     livecheck do
       url :homepage
-      regex(%r{href=.*?/Appgate-SDP[._-](\d+(?:\.\d+)+)[._-]Installer\.dmg}i)
+      regex(%r{href=.*?/Appgate[._-]SDP[._-]v?(\d+(?:\.\d+)+)[._-]Installer\.dmg}i)
       strategy :page_match do |page, regex|
         support_versions =
           page.scan(%r{href=["']?([^"' >]*?/software-defined-perimeter-support/sdp[._-]v?(\d+(?:[.-]\d+)+))["' >]}i)
@@ -36,7 +51,7 @@ cask "appgate-sdp-client" do
   desc "Software-defined perimeter for secure network access"
   homepage "https://www.appgate.com/support/software-defined-perimeter-support"
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :mojave"
 
   pkg "AppGate SDP Installer.pkg"
 
@@ -50,9 +65,7 @@ cask "appgate-sdp-client" do
               "com.cyxtera.appgate.helper",
               "com.cyxtera.appgate.sdp",
             ],
-            signal:    [
-              ["QUIT", "com.cyxtera.appgate"],
-            ],
+            signal:    ["QUIT", "com.cyxtera.appgate"],
             pkgutil:   "com.appgate.pkg.appgatetun.component"
 
   zap trash: [

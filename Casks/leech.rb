@@ -1,5 +1,5 @@
 cask "leech" do
-  version "3.1.7,3161"
+  version "3.1.7"
   sha256 :no_check
 
   url "https://manytricks.com/download/leech"
@@ -9,7 +9,7 @@ cask "leech" do
 
   livecheck do
     url "https://manytricks.com/leech/appcast/"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

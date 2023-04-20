@@ -1,12 +1,28 @@
 cask "docker" do
-  arch = Hardware::CPU.intel? ? "amd64" : "arm64"
+  arch arm: "arm64", intel: "amd64"
 
-  version "4.10.1,82475"
+  on_catalina :or_older do
+    version "4.15.0,93002"
+    sha256 arm:   "fc8609d57fb8c8264122f581c0f66497e46e171f8027d85d90213527d6226362",
+           intel: "bee41d646916e579b16b7fae014e2fb5e5e7b5dbaf7c1949821fd311d3ce430b"
 
-  if Hardware::CPU.intel?
-    sha256 "8be8e5245d6a8dbf7b8cb580fb7d99f04cc143c95323695c0d9be4f85dd60b0e"
-  else
-    sha256 "b3d4ef222325bde321045f3b8d946c849cd2812e9ad52a801000a95edb8af57b"
+    depends_on macos: ">= :catalina"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_big_sur :or_newer do
+    version "4.18.0,104112"
+    sha256 arm:   "2ae4b2ec556c107f969e51b72ad1920fefa38dbd0d8e3db64815c26b9f2b126d",
+           intel: "2e099af08e17666228282b970992160fa423ce8f5fa9e36b79495a1960803091"
+
+    depends_on macos: ">= :big_sur"
+
+    livecheck do
+      url "https://desktop.docker.com/mac/main/#{arch}/appcast.xml"
+      strategy :sparkle
+    end
   end
 
   url "https://desktop.docker.com/mac/main/#{arch}/#{version.csv.second}/Docker.dmg"
@@ -15,11 +31,6 @@ cask "docker" do
   name "Docker CE"
   desc "App to build and share containerized applications and microservices"
   homepage "https://www.docker.com/products/docker-desktop"
-
-  livecheck do
-    url "https://desktop.docker.com/mac/main/#{arch}/appcast.xml"
-    strategy :sparkle
-  end
 
   auto_updates true
   conflicts_with formula: %w[
@@ -47,14 +58,15 @@ cask "docker" do
          target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/docker-compose.fish"
 
   uninstall delete:    [
+              "/Library/PrivilegedHelperTools/com.docker.socket",
               "/Library/PrivilegedHelperTools/com.docker.vmnetd",
               "/usr/local/bin/com.docker.cli",
-              "/usr/local/bin/docker-compose-v1",
+              "/usr/local/bin/docker",
               "/usr/local/bin/docker-compose",
+              "/usr/local/bin/docker-compose-v1",
               "/usr/local/bin/docker-credential-desktop",
               "/usr/local/bin/docker-credential-ecr-login",
               "/usr/local/bin/docker-credential-osxkeychain",
-              "/usr/local/bin/docker",
               "/usr/local/bin/hub-tool",
               "/usr/local/bin/hyperkit",
               "/usr/local/bin/kubectl.docker",
@@ -70,6 +82,7 @@ cask "docker" do
             ],
             launchctl: [
               "com.docker.helper",
+              "com.docker.socket",
               "com.docker.vmnetd",
             ],
             quit:      "com.docker.docker"
@@ -79,6 +92,7 @@ cask "docker" do
         "/usr/local/bin/docker.backup",
         "~/.docker",
         "~/Library/Application Scripts/com.docker.helper",
+        "~/Library/Application Scripts/group.com.docker",
         "~/Library/Application Support/com.bugsnag.Bugsnag/com.docker.docker",
         "~/Library/Application Support/Docker Desktop",
         "~/Library/Caches/com.docker.docker",
@@ -87,6 +101,7 @@ cask "docker" do
         "~/Library/Containers/com.docker.docker",
         "~/Library/Containers/com.docker.helper",
         "~/Library/Group Containers/group.com.docker",
+        "~/Library/HTTPStorages/com.docker.docker",
         "~/Library/HTTPStorages/com.docker.docker.binarycookies",
         "~/Library/Logs/Docker Desktop",
         "~/Library/Preferences/com.docker.docker.plist",
@@ -99,4 +114,10 @@ cask "docker" do
         "~/Library/Caches/com.plausiblelabs.crashreporter.data",
         "~/Library/Caches/KSCrashReports",
       ]
+
+  caveats <<~EOS
+    If your CLI tools were symlinked to $HOME/.docker/bin your path should be modified to include:
+
+      $HOME/.docker/bin
+  EOS
 end

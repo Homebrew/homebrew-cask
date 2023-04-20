@@ -1,6 +1,6 @@
 cask "unicodechecker" do
-  version "1.23,796"
-  sha256 "4cfc69e10860ffe5080f42acdbd43bcd8518d94c7e294cf0070521b9d8097cee"
+  version "1.24,835"
+  sha256 "9bfd37706cbcf5c0d579bb4dab904cf9e31d69fa6f1efa7923aa67cf6ebd2ef0"
 
   url "https://earthlingsoft.net/UnicodeChecker/UnicodeChecker%20#{version.csv.first}%20(#{version.csv.second}).zip"
   name "UnicodeChecker"

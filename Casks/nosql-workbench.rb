@@ -1,6 +1,6 @@
 cask "nosql-workbench" do
-  version "3.3.0"
-  sha256 "9febf815d5f80120c2d4a27bd9f78de69e609b405d51eb0d3bff04708c0eadae"
+  version "3.6.0"
+  sha256 "b37980012301dd45441d56f74c64feeed21993572c1843f23800a030102b8d1f"
 
   url "https://s3.amazonaws.com/nosql-workbench/NoSQL%20Workbench-mac-#{version}.dmg",
       verified: "s3.amazonaws.com/nosql-workbench/"
@@ -16,4 +16,13 @@ cask "nosql-workbench" do
   auto_updates true
 
   app "NoSQL Workbench.app"
+
+  zap trash: [
+    "~/Library/Application Support/Caches/nosql-workbench-updater",
+    "~/Library/Application Support/NoSQL Workbench",
+    "~/Library/Caches/com.dynamodb.workbench",
+    "~/Library/Caches/com.dynamodb.workbench.ShipIt",
+    "~/Library/Preferences/com.dynamodb.workbench.plist",
+    "~/Library/Saved Application State/com.dynamodb.workbench.savedState",
+  ]
 end

@@ -1,13 +1,13 @@
 cask "framer" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
-  version "2022.22.1"
+  version "2023.15.1"
   sha256 :no_check
 
   url "https://updates.framer.com/electron/darwin/#{arch}/Framer.zip"
   name "Framer"
   desc "Tool that helps teams design every part of the product experience"
-  homepage "https://www.framer.com/desktop/downloads/"
+  homepage "https://www.framer.com/"
 
   livecheck do
     url :url
@@ -18,4 +18,12 @@ cask "framer" do
   depends_on macos: ">= :mojave"
 
   app "Framer.app"
+
+  zap trash: [
+    "~/Library/Application Support/Framer",
+    "~/Library/Caches/com.framer.electron",
+    "~/Library/Caches/com.framer.electron.ShipIt",
+    "~/Library/Preferences/com.framer.electron.plist",
+    "~/Library/Saved Application State/com.framer.electron.savedState",
+  ]
 end

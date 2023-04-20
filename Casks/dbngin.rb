@@ -1,9 +1,8 @@
 cask "dbngin" do
-  version "5.2,54"
-  sha256 "2f57263c290a552092b99175a58da96f9ffd630aadc5fc9400a4cbecd90b0861"
+  version "6.4,64"
+  sha256 "244018981774e3a026aaacf683aabbf1f5baeae7dd4732901a9793ac813cf2c9"
 
-  url "https://dbngin-osx-builds.s3.amazonaws.com/#{version.csv.second}/DBngin.dmg",
-      verified: "dbngin-osx-builds.s3.amazonaws.com/"
+  url "https://download.dbngin.com/#{version.csv.second}/DBngin.dmg"
   name "DBngin"
   desc "Database version management tool"
   homepage "https://dbngin.com/"
@@ -14,7 +13,7 @@ cask "dbngin" do
   end
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :high_sierra"
 
   app "DBngin.app"
 

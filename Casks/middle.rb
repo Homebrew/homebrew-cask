@@ -1,19 +1,19 @@
 cask "middle" do
-  version "1.7.5,82"
-  sha256 "853e7f1f6ae448bfe5afe54ed044067c13ed2b2e99812d6b9e7f6e1e66c5ada5"
+  version "1.8"
+  sha256 "c5ca5b3045c2ec7f496854ce0b7399a5700e0f6200953dd3d2c8df648718fe41"
 
-  url "https://middleclick.app/downloads/Middle#{version.csv.first}.dmg"
+  url "https://middleclick.app/downloads/Middle#{version}.dmg"
   name "Middle"
   desc "Add middle click for Trackpad and Magic Mouse"
   homepage "https://middleclick.app/"
 
   livecheck do
     url "https://middleclick.app/downloads/updates.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   app "Middle.app"
 

@@ -1,15 +1,15 @@
 cask "scroll" do
-  version "2.4.1,26"
+  version "2.4.1"
   sha256 "abdbcc6d5576cff057622a39b1f2393cbd961698d483dff9c783f829b958e6cf"
 
-  url "https://ryanhanson.dev/scroll/downloads/Scroll#{version.csv.first}.dmg"
+  url "https://ryanhanson.dev/scroll/downloads/Scroll#{version}.dmg"
   name "Scroll"
   desc "Configure scrolling on Trackpad and Magic Mouse"
   homepage "https://ryanhanson.dev/scroll"
 
   livecheck do
     url "https://ryanhanson.dev/scroll/downloads/updates.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

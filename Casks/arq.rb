@@ -1,6 +1,6 @@
 cask "arq" do
-  version "7.19.2"
-  sha256 "27c20974f8ce315f6fa141f6d5f72c03d9fb77171a6d77ee99e90e6430d75592"
+  version "7.19.11"
+  sha256 "4fa1389c9a4aa4d974fa6dec1572aa5567c071925b9599a2b165e541ecf5eb8e"
 
   url "https://www.arqbackup.com/download/arqbackup/Arq#{version}.pkg"
   name "Arq"
@@ -9,7 +9,7 @@ cask "arq" do
 
   livecheck do
     url "https://www.arqbackup.com/download/arqbackup/arq#{version.major}_release_notes.html"
-    regex(/Version\s*(\d+(?:\.\d+)+)/i)
+    regex(/Version\s*v?(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
@@ -18,20 +18,18 @@ cask "arq" do
 
   uninstall pkgutil:   "com.haystacksoftware.Arq",
             quit:      "com.haystacksoftware.Arq",
-            delete:    [
-              "/Applications/Arq.app",
-            ],
+            delete:    "/Applications/Arq.app",
             launchctl: [
-              "com.haystacksoftware.ArqMonitor",
               "com.haystacksoftware.arqagent",
+              "com.haystacksoftware.ArqMonitor",
             ]
 
   zap trash: [
-    "~/Library/Arq *",
-    "~/Library/Application Support/Arq *",
-    "~/Library/Preferences/com.haystacksoftware.Arq.plist",
-    "~/Library/Preferences/com.haystacksoftware.ArqMonitor.plist",
     "/Library/Application Support/ArqAgent",
     "/Library/Application Support/ArqAgentAPFS",
+    "~/Library/Application Support/Arq *",
+    "~/Library/Arq *",
+    "~/Library/Preferences/com.haystacksoftware.Arq.plist",
+    "~/Library/Preferences/com.haystacksoftware.ArqMonitor.plist",
   ]
 end

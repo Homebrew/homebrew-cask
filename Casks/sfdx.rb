@@ -1,5 +1,5 @@
 cask "sfdx" do
-  version "7.159.0"
+  version "7.196.6"
   sha256 :no_check
 
   url "https://developer.salesforce.com/media/salesforce-cli/sfdx/channels/stable/sfdx.pkg"
@@ -9,16 +9,15 @@ cask "sfdx" do
 
   livecheck do
     url "https://github.com/forcedotcom/cli/blob/main/releasenotes/sfdx/README.md"
-    strategy :page_match
     regex(/(\d+(?:\.\d+)+).*?[stable]\]/i)
+    strategy :page_match
   end
 
   pkg "sfdx.pkg"
 
   uninstall pkgutil: [
-
-              "com.salesforce.developer.cli",
               "com.salesforce.cli",
+              "com.salesforce.developer.cli",
             ],
             delete:  "/usr/local/bin/sfdx"
 

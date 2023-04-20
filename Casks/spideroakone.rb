@@ -2,9 +2,10 @@ cask "spideroakone" do
   version "7.5.0"
   sha256 :no_check
 
-  if MacOS.version == :high_sierra
+  on_high_sierra :or_older do
     url "https://spideroak.com/release/spideroak/osx_hs"
-  else
+  end
+  on_mojave :or_newer do
     url "https://spideroak.com/release/spideroak/osx"
   end
 
@@ -17,11 +18,11 @@ cask "spideroakone" do
     strategy :header_match
   end
 
+  depends_on macos: ">= :high_sierra"
+
   pkg "SpiderOakONE.pkg"
 
-  uninstall signal:  [
-              ["TERM", "com.spideroak.orange.client"],
-            ],
+  uninstall signal:  ["TERM", "com.spideroak.orange.client"],
             pkgutil: "org.python.python"
 
   zap trash: "~/Library/Application Support/SpiderOakONE"

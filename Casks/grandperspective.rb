@@ -1,6 +1,6 @@
 cask "grandperspective" do
-  version "3.0.0"
-  sha256 "4317fc2b5257e0f6a7d21a270fc3af143cb4a059e8cd854bdda8802bdf244f9c"
+  version "3.1.1"
+  sha256 "0fcd998e52bdcb91fcb055fbfd88dca45c63963326aa2f6278b4420c6dd8f843"
 
   url "https://downloads.sourceforge.net/grandperspectiv/grandperspective/#{version}/GrandPerspective-#{version.dots_to_underscores}.dmg",
       verified: "downloads.sourceforge.net/grandperspectiv/"

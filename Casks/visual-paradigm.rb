@@ -1,8 +1,11 @@
 cask "visual-paradigm" do
-  version "16.3,20220516"
-  sha256 "a9816320997832bc94770764b629fde829e037bd5c2a15146a52e2746dea9887"
+  arch arm: "AArch64", intel: "WithJRE"
 
-  url "https://www.visual-paradigm.com/downloads/vp#{version.csv.first}/#{version.csv.second}/Visual_Paradigm_#{version.csv.first.dots_to_underscores}_#{version.csv.second}_OSX_WithJRE.dmg"
+  version "17.0,20230401"
+  sha256 arm:   "5213cfaf52fb3cd4bcceccd48c7d7b604282cf94f8e6971970a6f026c664acda",
+         intel: "a6ebfba1b196f24b32e15bf104a0f3788ea3f73910672999b1d102d81b290a49"
+
+  url "https://www.visual-paradigm.com/downloads/vp#{version.csv.first}/#{version.csv.second}/Visual_Paradigm_#{version.csv.first.dots_to_underscores}_#{version.csv.second}_OSX_#{arch}.dmg"
   name "Visual Paradigm"
   desc "UML CASE Tool supporting UML 2, SysML and Business Process Modeling Notation"
   homepage "https://www.visual-paradigm.com/"
@@ -18,4 +21,10 @@ cask "visual-paradigm" do
   end
 
   app "Visual Paradigm.app"
+
+  zap trash: [
+    "~/Library/Application Support/Visual Paradigm",
+    "~/Library/Application Support/VisualParadigm",
+    "~/Library/Saved Application State/com.install4j.1106-5897-7327-6550.5.savedState",
+  ]
 end
