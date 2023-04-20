@@ -7,7 +7,7 @@ cask "kui" do
 
   url "https://github.com/kubernetes-sigs/kui/releases/download/v#{version}/Kui-darwin-#{arch}.tar.bz2"
   name "Kui"
-  desc "Hybrid command-line/UI development experience for cloud-native development"
+  desc "CLI graphics framework"
   homepage "https://github.com/kubernetes-sigs/kui"
 
   livecheck do
