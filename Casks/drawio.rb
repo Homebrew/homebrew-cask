@@ -8,7 +8,7 @@ cask "drawio" do
   url "https://github.com/jgraph/drawio-desktop/releases/download/v#{version}/draw.io-#{arch}-#{version}.dmg",
       verified: "github.com/jgraph/drawio-desktop/"
   name "draw.io Desktop"
-  desc "Draw.io is free online diagram software"
+  desc "Online diagram software"
   homepage "https://www.diagrams.net/"
 
   livecheck do
