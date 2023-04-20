@@ -1,5 +1,5 @@
 cask "ocenaudio" do
-  version "3.11.23"
+  version "3.11.24"
   sha256 :no_check
 
   on_arm do
@@ -32,4 +32,6 @@ cask "ocenaudio" do
   depends_on macos: ">= :sierra"
 
   app "ocenaudio.app"
+
+  zap trash: "~/Library/Application Support/ocenaudio"
 end
