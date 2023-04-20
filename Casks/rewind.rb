@@ -9,15 +9,11 @@ cask "rewind" do
 
   livecheck do
     url "https://updates.rewind.ai/appcasts/main.xml"
-    strategy :xml do |xml|
+    strategy :sparkle do |item|
       # Throttle updates to one every 3 days.
       next version if DateTime.parse(version.csv.second) + 3 > Date.today
 
-      item = xml.get_elements("//item")[0]
-      version = item.elements["sparkle:shortVersionString"].text
-      date = DateTime.parse(item.elements["pubDate"].text).strftime("%Y%m%d")
-
-      "#{version},#{date}"
+      "#{item.short_version},#{item.pub_date.strftime("%Y%m%d")}"
     end
   end
 
