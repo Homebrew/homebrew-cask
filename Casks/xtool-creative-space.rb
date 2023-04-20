@@ -28,4 +28,11 @@ cask "xtool-creative-space" do
   end
 
   app "xTool Creative Space.app"
+  
+  zap trash: [
+    "~/Library/Application Support/xTool Creative Space",
+    "~/Library/Logs/xTool Creative Space",
+    "~/Library/Preferences/com.makeblock.xcs.plist",
+    "~/Library/Saved Application State/com.makeblock.xcs.savedState",
+  ]  
 end
