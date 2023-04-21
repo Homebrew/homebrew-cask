@@ -8,4 +8,6 @@ cask "matterhorn" do
   homepage "https://github.com/matterhorn-chat/matterhorn"
 
   binary "matterhorn-#{version}-Darwin-x86_64/matterhorn"
+
+  # No zap stanza required
 end
