@@ -14,4 +14,6 @@ cask "archy" do
   end
 
   binary "archyBin/archy-macos-#{version}", target: "archy"
+
+  zap trash: "~/.archy_config"
 end
