@@ -14,6 +14,12 @@ cask "igv" do
 
   app "IGV_#{version}.app"
 
+  zap trash: [
+    "~/.igv",
+    "~/Library/Preferences/org.broad.igv.plist",
+    "~/igv",
+  ]
+
   caveats do
     depends_on_java "11+"
   end
