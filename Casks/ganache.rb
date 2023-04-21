@@ -9,4 +9,11 @@ cask "ganache" do
   homepage "https://truffleframework.com/ganache/"
 
   app "Ganache.app"
+
+  zap trash: [
+    "~/Library/Application Support/Ganache",
+    "~/Library/Logs/Ganache",
+    "~/Library/Preferences/org.trufflesuite.ganache.plist",
+    "~/Library/Saved Application State/org.trufflesuite.ganache.savedState",
+  ]
 end
