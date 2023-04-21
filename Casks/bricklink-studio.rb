@@ -15,7 +15,7 @@ cask "bricklink-studio" do
 
   auto_updates true
 
-  pkg "Studio #{version.major}.0.pkg"
+  pkg "Studio+#{version.major}.0.pkg"
 
   uninstall pkgutil: "com.bricklink.pkg.Studio#{version.major}.0"
 
