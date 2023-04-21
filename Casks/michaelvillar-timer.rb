@@ -8,4 +8,11 @@ cask "michaelvillar-timer" do
   homepage "https://github.com/michaelvillar/timer-app"
 
   app "Timer.app"
+
+  uninstall quit: "com.michaelvillar.Timer"
+
+  zap trash: [
+    "~/Library/Preferences/com.michaelvillar.Timer.plist",
+    "~/Library/Saved Application State/com.michaelvillar.Timer.savedState",
+  ]
 end

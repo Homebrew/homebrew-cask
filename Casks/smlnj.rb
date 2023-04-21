@@ -17,6 +17,8 @@ cask "smlnj" do
 
   uninstall pkgutil: "org.smlnj.amd64.pkg"
 
+  zap delete: "/usr/local/smlnj"
+
   caveats do
     path_environment_variable "/usr/local/smlnj/bin"
   end
