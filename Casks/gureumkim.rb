@@ -16,4 +16,6 @@ cask "gureumkim" do
   pkg "Gureum-#{version}.pkg"
 
   uninstall pkgutil: "org.youknowone.inputmethod.Gureum"
+
+  # No zap stanza required
 end
