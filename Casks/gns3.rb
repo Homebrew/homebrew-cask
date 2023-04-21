@@ -15,7 +15,7 @@ cask "gns3" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :mojave"
 
   app "GNS3.app"
 
