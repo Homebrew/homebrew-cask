@@ -5,6 +5,8 @@ require "open3"
 require "optparse"
 require "pathname"
 require "tmpdir"
+require "json"
+require "open-uri"
 
 # Exit cleanup
 TMP_DIR = Pathname.new(Dir.mktmpdir).freeze
@@ -12,7 +14,18 @@ at_exit { TMP_DIR.rmtree }
 
 # Constants
 ONLINE_ISSUE = "https://github.com/Homebrew/homebrew-cask/issues/88469"
-CASK_REPOS = %w[homebrew-cask homebrew-cask-versions homebrew-cask-drivers].freeze
+CASK_REPOS = %w[homebrew-cask homebrew-cask-versions].freeze
+CASK_JSON_URL = "https://formulae.brew.sh/api/analytics/cask-install/365d.json"
+
+# Download the file and save it to the specified directory
+File.open("#{TMP_DIR}/cask.json", "wb") do |output_file|
+  URI.parse(CASK_JSON_URL).open do |input_file|
+    output_file.write(input_file.read)
+  end
+end
+
+CASK_JSON = File.read("#{TMP_DIR}/cask.json").freeze
+CASK_DATA = JSON.parse(CASK_JSON).freeze
 
 # Helpers
 def cask_name(cask_path)
@@ -24,6 +37,10 @@ def cask_url(tap_dir, cask_path)
   cask_base = cask_path.basename.to_path
 
   "https://github.com/Homebrew/#{tap_base}/blob/master/Casks/#{cask_base}"
+end
+
+def find_count(cask_name, data)
+  data["items"].find { |item| item["cask"] == cask_name.to_s }&.dig("count") || "0"
 end
 
 # Options
@@ -64,9 +81,10 @@ end.freeze
 CASKS_NO_ZAP = ALL_CASKS.each_with_object({}) do |(tap_dir, casks), without_zap|
   without_zap[tap_dir] = []
 
-  # Populate hash with casks without a zap
+  # Populate hash with casks without a zap that are not discontinued
   casks
     .reject { |file| file.readlines.any? { _1.start_with?(/\s+(# No )?zap /) } }
+    .reject { |file| file.readlines.any? { _1.start_with?(/\s+discontinued /) } }
     .each { without_zap[tap_dir].push(_1) }
 
   # Reject tap directory if there are no casks without zap
@@ -76,8 +94,16 @@ end.freeze
 CASK_LISTS = CASKS_NO_ZAP.each_with_object([]) do |(tap_dir, casks), message|
   message.push("<details><summary>#{tap_dir.dirname.basename.to_path}</summary>")
   message.push("") # Empty line so the markdown still works inside the HTML
+  message.push("| Cask | Downloads |", "| :--- | ---: |") # Table header
 
-  casks.each { message.push("* [`#{cask_name(_1)}`](#{cask_url(tap_dir, _1)})") }
+  # Sort casks by count
+  sorted_casks = casks.sort_by { |cask_file| -find_count(cask_name(cask_file), CASK_DATA).delete(",").to_i }
+
+  sorted_casks.each do |cask_file|
+    cask_name = cask_name(cask_file)
+    count = find_count(cask_name, CASK_DATA)
+    message.push("| [#{cask_name}](#{cask_url(tap_dir, cask_file)}) | #{count} |")
+  end
 
   message.push("</details>")
 end.freeze

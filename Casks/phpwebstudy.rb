@@ -1,14 +1,14 @@
 cask "phpwebstudy" do
   arch arm: "-arm64"
 
-  version "1.0.40"
-  sha256 arm:   "b27ecf4ad3015cb698d9899dfd976df6d7c4ea67d80c1329c08d4e28e8dc43ef",
-         intel: "50144bbb0302d6423b58b860df804cf83770b122282648c779c24fb6ab609e82"
+  version "1.0.43"
+  sha256 arm:   "5af8bc545c630e0d67a9e029dd9cffeb870bc7251e7f5d7a2f1174655a7382d3",
+         intel: "25e3365e02b41c3c2e870de27f949d5c8ace4cb5c098284f987c77d6303f5f69"
 
   url "https://github.com/xpf0000/PhpWebStudy/releases/download/v#{version}/PhpWebStudy-#{version}#{arch}-mac.zip",
       verified: "github.com/xpf0000/PhpWebStudy/"
   name "PhpWebStudy"
-  desc "PHP and Web develop environment manager"
+  desc "PHP and Web development environment manager"
   homepage "https://www.macphpstudy.com/"
 
   livecheck do

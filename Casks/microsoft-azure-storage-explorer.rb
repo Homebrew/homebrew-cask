@@ -12,4 +12,10 @@ cask "microsoft-azure-storage-explorer" do
   homepage "https://azure.microsoft.com/en-us/features/storage-explorer/"
 
   app "Microsoft Azure Storage Explorer.app"
+
+  zap trash: [
+    "~/Library/Application Support/StorageExplorer",
+    "~/Library/Logs/StorageExplorer",
+    "~/Library/Preferences/com.microsoft.StorageExplorer.plist",
+  ]
 end

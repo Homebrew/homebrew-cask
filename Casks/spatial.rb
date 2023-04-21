@@ -1,18 +1,15 @@
 cask "spatial" do
-  version :latest
+  version "20210118"
   sha256 :no_check
 
-  language "en", default: true do
-    url "https://console.improbable.io/toolbelt/download/latest/mac"
-  end
-  language "zh", "CN" do
-    url "https://console.spatialoschina.com/toolbelt/download/latest/mac",
-        verified: "console.spatialoschina.com/"
-  end
-
+  url "https://console.improbable.io/toolbelt/download/latest/mac"
   name "Spatial"
   desc "Binary for interaction with the Improbable SpatialOS platform"
   homepage "https://documentation.improbable.io/spatialos-overview/docs"
+
+  livecheck do
+    skip "version available by running `spatial version` when installed"
+  end
 
   container type: :naked
 

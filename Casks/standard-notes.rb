@@ -1,9 +1,9 @@
 cask "standard-notes" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.150.33"
-  sha256 arm:   "778045e251fd572ba56a3e9f6a533d2b6a09445f0acc59b0b32bd9f080972207",
-         intel: "c0549a9879be78381663924112684396287cb33459232e8a51055794f489a6f4"
+  version "3.151.5"
+  sha256 arm:   "44f8073a95c0ac5ee0be8e26e02a5f8a9d5f1540301684124eebc866633b5f88",
+         intel: "bcb5ea8df43c1ac113b8b6e922e9226afd8bd788732e25446c80363e48a4d4b6"
 
   url "https://github.com/standardnotes/app/releases/download/%40standardnotes%2Fdesktop%40#{version}/standard-notes-#{version}-mac-#{arch}.zip",
       verified: "github.com/standardnotes/app/"
@@ -12,8 +12,8 @@ cask "standard-notes" do
   homepage "https://standardnotes.org/"
 
   livecheck do
-    url "https://github.com/standardnotes/app/releases/latest"
-    strategy :header_match
+    url "https://standardnotes.com/download"
+    regex(/standard-notes-(\d+(?:\.\d+)+)-mac-#{arch}\.dmg/i)
   end
 
   auto_updates true

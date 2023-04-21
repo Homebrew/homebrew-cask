@@ -1,7 +1,7 @@
 cask "native-access" do
   arch arm: "M1", intel: "Intel"
 
-  version "3.2.2"
+  version "3.3.1"
   sha256 :no_check
 
   url "https://native-instruments.com/fileadmin/downloads/Native-Access_2_Mac_#{arch}.dmg"
@@ -22,29 +22,17 @@ cask "native-access" do
   uninstall quit:      "com.native-instruments.Native Access",
             launchctl: "com.native-instruments.NativeAccess.Helper2",
             delete:    [
-              "/Library/PrivilegedHelperTools/com.native-instruments.NativeAccess.Helper2",
-              "/Library/Application Support/Native Instruments/Helper/NIHelperAuth",
-            ],
-            rmdir:     [
-              "/Library/Application Support/Native Instruments/*",
               "/Library/Application Support/Native Instruments",
+              "/Library/Preferences/com.native-instruments.NTKDaemon.plist",
+              "/Library/PrivilegedHelperTools/com.native-instruments.NativeAccess.Helper2",
             ]
 
   zap trash: [
-        "/Library/Application Support/Native Instruments/Service Center/NativeAccess.xml",
-        "~/Library/Application Support/Native Instruments/Native Access*",
-        "~/Library/Application Support/Native Instruments/Service Center",
-        "~/Library/Application Support/CrashReporter/Native Access_*.plist",
-        "~/Library/Caches/Native Instruments/Native Access*",
-        "~/Library/Preferences/com.native-instruments.Native Access.plist",
-        "~/Library/Preferences/com.native-instruments.Shared.plist",
-        "/private/var/folders/*/*/*/com.native-instruments.Native Access",
-        "/private/var/folders/*/*/*/metalink-*.meta4",
-      ],
-      rmdir: [
-        "/Library/Application Support/Native Instruments/*",
-        "/Library/Application Support/Native Instruments",
-        "~/Library/Application Support/Native Instruments",
-        "/private/var/log/Native Instruments",
-      ]
+    "~/Library/Application Support/CrashReporter/Native Access_*.plist",
+    "~/Library/Application Support/Native Instruments",
+    "~/Library/Application Support/Native Access",
+    "~/Library/Caches/Native Instruments/Native Access*",
+    "~/Library/Preferences/com.native-instruments.*.plist",
+    "~/Library/Saved Application State/com.native-instruments.nativeaccess2.savedState",
+  ]
 end

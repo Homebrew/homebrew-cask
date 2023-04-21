@@ -1,6 +1,6 @@
 cask "spitfire-audio" do
-  version "3.4.4,1671408000"
-  sha256 "9fd4de1f7e1c5bb4873dc1d682b7ece8cd17ec2da0564129be3352f424876fa8"
+  version "3.4.6,1680652800"
+  sha256 "1170ee38c60661e06bb30e719e57e35d8bf1b783333848c3cd0188d5f0f8fe37"
 
   url "https://d1t3zg51rvnesz.cloudfront.net/p/files/lm/#{version.csv.second}/mac/SpitfireAudio-Mac-#{version.csv.first}.dmg",
       verified: "d1t3zg51rvnesz.cloudfront.net/p/files/lm/"

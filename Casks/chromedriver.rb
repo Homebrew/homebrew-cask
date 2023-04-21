@@ -1,9 +1,9 @@
 cask "chromedriver" do
   arch arm: "mac_arm64", intel: "mac64"
 
-  version "111.0.5563.64"
-  sha256 arm:   "ec65b47e99b474a74a9a12a1986c00ba614019523a698012cbdc0cb9e23af67b",
-         intel: "0edd1b537f52ac19c32c0e63a7e6b2c7d3d6de509671f42b2c2d72d2ccb8ed47"
+  version "112.0.5615.49"
+  sha256 arm:   "b287b9869a2702c1ded005470532b8397e38d24d81775462c03c8f5b669a699f",
+         intel: "302dda8a7559ffd96e66a146b732fab61a63d6bfe60abd66e298dae8b02b4090"
 
   url "https://chromedriver.storage.googleapis.com/#{version}/chromedriver_#{arch}.zip",
       verified: "chromedriver.storage.googleapis.com/"
@@ -19,4 +19,6 @@ cask "chromedriver" do
   conflicts_with cask: "homebrew/cask-versions/chromedriver-beta"
 
   binary "chromedriver"
+
+  # No zap stanza required
 end

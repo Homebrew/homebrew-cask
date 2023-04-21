@@ -1,6 +1,6 @@
 cask "gdat" do
-  version "2023r01,1lnA5hFiCV9qzreQE7a5YzdeValaicTHD"
-  sha256 "cda240039696b18972b0fb9d7ebccab107baa41a2a87342515c73a4e29e6d4d7"
+  version "2023r02,1lnA5hFiCV9qzreQE7a5YzdeValaicTHD"
+  sha256 "5079b12f9941de7a9631bba08d9e3470e794553f7d5a044969eafa95febda46c"
 
   url "https://drive.google.com/uc?export=download&id=#{version.csv.second}",
       verified: "drive.google.com/uc?export=download&id=#{version.csv.second}"
@@ -20,4 +20,9 @@ cask "gdat" do
   end
 
   app "OS X 64 bit/Genealogical DNA Analysis Tool.app"
+
+  caveats do
+    requires_rosetta
+    license "https://www.getgdat.com/home/download/terms-of-use"
+  end
 end

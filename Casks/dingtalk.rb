@@ -4,12 +4,12 @@ cask "dingtalk" do
   linkid = on_arch_conditional arm: "qd=2022mac-m1"
 
   on_arm do
-    version "7.0.22.4_29119460"
-    sha256 "e162e2170c7696d160ac56aedd748bb0c1e4a3a63d3ca8a30200abd06e9a3e77"
+    version "7.0.22.6_29200526"
+    sha256 "ef9280d4676e41fbae99ea821ef71a4d76a76a4afdc360b3bd83e0106745c672"
   end
   on_intel do
-    version "7.0.20.10_29119394"
-    sha256 "a07c3067c295e45fbf0204adb46ca447399ca35fc025b109c79023e4bbeba61a"
+    version "7.0.20.13_29200617"
+    sha256 "90c33c4afa88f459fbe9070e5b8b4338a4c07addf65c51b5e63b1498eb89b508"
   end
 
   url "https://dtapp-pub.dingtalk.com/dingtalk-desktop/mac_dmg/Release/#{folder}DingTalk_v#{version}_#{arch}.dmg"

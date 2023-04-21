@@ -13,11 +13,11 @@ cask "docker" do
     end
   end
   on_big_sur :or_newer do
-    version "4.17.0,99724"
-    sha256 arm:   "5e01465d93dfe18d7678a96705e7c26bb654b6766f06373b5cffbf77c641bccc",
-           intel: "eb0531122a62859ce7b029e943fdad365603a916e6c15c107514c1e4a818d7ef"
+    version "4.18.0,104112"
+    sha256 arm:   "2ae4b2ec556c107f969e51b72ad1920fefa38dbd0d8e3db64815c26b9f2b126d",
+           intel: "2e099af08e17666228282b970992160fa423ce8f5fa9e36b79495a1960803091"
 
-    depends_on macos: ">= :catalina"
+    depends_on macos: ">= :big_sur"
 
     livecheck do
       url "https://desktop.docker.com/mac/main/#{arch}/appcast.xml"
@@ -58,14 +58,15 @@ cask "docker" do
          target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/docker-compose.fish"
 
   uninstall delete:    [
+              "/Library/PrivilegedHelperTools/com.docker.socket",
               "/Library/PrivilegedHelperTools/com.docker.vmnetd",
               "/usr/local/bin/com.docker.cli",
-              "/usr/local/bin/docker-compose-v1",
+              "/usr/local/bin/docker",
               "/usr/local/bin/docker-compose",
+              "/usr/local/bin/docker-compose-v1",
               "/usr/local/bin/docker-credential-desktop",
               "/usr/local/bin/docker-credential-ecr-login",
               "/usr/local/bin/docker-credential-osxkeychain",
-              "/usr/local/bin/docker",
               "/usr/local/bin/hub-tool",
               "/usr/local/bin/hyperkit",
               "/usr/local/bin/kubectl.docker",
@@ -91,6 +92,7 @@ cask "docker" do
         "/usr/local/bin/docker.backup",
         "~/.docker",
         "~/Library/Application Scripts/com.docker.helper",
+        "~/Library/Application Scripts/group.com.docker",
         "~/Library/Application Support/com.bugsnag.Bugsnag/com.docker.docker",
         "~/Library/Application Support/Docker Desktop",
         "~/Library/Caches/com.docker.docker",
@@ -99,6 +101,7 @@ cask "docker" do
         "~/Library/Containers/com.docker.docker",
         "~/Library/Containers/com.docker.helper",
         "~/Library/Group Containers/group.com.docker",
+        "~/Library/HTTPStorages/com.docker.docker",
         "~/Library/HTTPStorages/com.docker.docker.binarycookies",
         "~/Library/Logs/Docker Desktop",
         "~/Library/Preferences/com.docker.docker.plist",
@@ -111,4 +114,10 @@ cask "docker" do
         "~/Library/Caches/com.plausiblelabs.crashreporter.data",
         "~/Library/Caches/KSCrashReports",
       ]
+
+  caveats <<~EOS
+    If your CLI tools were symlinked to $HOME/.docker/bin your path should be modified to include:
+
+      $HOME/.docker/bin
+  EOS
 end

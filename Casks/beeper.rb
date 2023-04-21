@@ -1,7 +1,7 @@
 cask "beeper" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.46.19"
+  version "3.51.7"
   sha256 :no_check
 
   url "https://download.beeper.com/mac/dmg/#{arch}"
@@ -11,7 +11,7 @@ cask "beeper" do
 
   livecheck do
     url :url
-    regex(/Beeper(?:%20|[ ._-])?(\d+(?:\.\d+)+)(?: - Build ([\dA-z]+))?(?:[._-]#{arch})?\.dmg/i)
+    regex(/Beeper\D*?(\d+(?:\.\d+)+)/i)
     strategy :header_match
   end
 

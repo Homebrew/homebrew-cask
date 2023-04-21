@@ -1,6 +1,6 @@
 cask "audiorelay" do
-  version "0.27.3"
-  sha256 "042055e4b4885b127885c0efdc7f5bdf3589d5e28bc205b959e9000e4193cc77"
+  version "0.27.5"
+  sha256 "3156111b07a7a6e7562e1ebf9c83ed69205a301501e2a1a37111cb6361737db5"
 
   url "https://dl.audiorelay.net/setups/macos/AudioRelay-#{version}.dmg"
   name "AudioRelay"

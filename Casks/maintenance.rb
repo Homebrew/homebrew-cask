@@ -3,48 +3,56 @@ cask "maintenance" do
 
   on_el_capitan do
     version "2.1.8"
+
     url "https://www.titanium-software.fr/download/1011/Maintenance.dmg"
 
     depends_on macos: :el_capitan
   end
   on_sierra do
     version "2.3.0"
+
     url "https://www.titanium-software.fr/download/1012/Maintenance.dmg"
 
     depends_on macos: :sierra
   end
   on_high_sierra do
     version "2.4.2"
+
     url "https://www.titanium-software.fr/download/1013/Maintenance.dmg"
 
     depends_on macos: :high_sierra
   end
   on_mojave do
     version "2.5.6"
+
     url "https://www.titanium-software.fr/download/1014/Maintenance.dmg"
 
     depends_on macos: :mojave
   end
   on_catalina do
     version "2.7.1"
+
     url "https://www.titanium-software.fr/download/1015/Maintenance.dmg"
 
     depends_on macos: :catalina
   end
   on_big_sur do
     version "2.8.2"
+
     url "https://www.titanium-software.fr/download/11/Maintenance.dmg"
 
     depends_on macos: :big_sur
   end
   on_monterey do
     version "2.9.2"
+
     url "https://www.titanium-software.fr/download/12/Maintenance.dmg"
 
     depends_on macos: :monterey
   end
   on_ventura do
-    version "3.0.0"
+    version "3.0.1"
+
     url "https://www.titanium-software.fr/download/13/Maintenance.dmg"
 
     depends_on macos: :ventura
@@ -60,4 +68,10 @@ cask "maintenance" do
   end
 
   app "Maintenance.app"
+
+  zap trash: [
+    "~/Library/Caches/com.apple.helpd/Generated/com.titanium.Maintenance.help*3.0.1",
+    "~/Library/Preferences/com.titanium.Maintenance.plist",
+    "~/Library/Saved Application State/com.titanium.Maintenance.savedState",
+  ]
 end

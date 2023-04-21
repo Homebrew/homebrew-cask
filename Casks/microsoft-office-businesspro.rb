@@ -1,6 +1,6 @@
 cask "microsoft-office-businesspro" do
-  version "16.71.23031200"
-  sha256 "3bc844e255c6c4fb67825e711afb7db23f1c1361fb7382ac1a8554a0e597b8c8"
+  version "16.72.23040900"
+  sha256 "432a46f9dd6d9de99aa544125d3b6072787ee2c268a8d9d0080e9fb5531949e1"
 
   url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_365_and_Office_#{version}_BusinessPro_Installer.pkg",
       verified: "officecdnmac.microsoft.com/"

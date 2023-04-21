@@ -1,6 +1,6 @@
 cask "my-image-garden" do
-  version "3.6.6,04"
-  sha256 "1b83b4695cd8d84c7807a06a5ba4c7e46cc5cfd73bdaf606a327e7341f573bb2"
+  version "3.6.7,05"
+  sha256 "4165174ad610a8172db60ce15c2bd19ba6f6359792b36ec5aba8b27da25815f3"
 
   url "https://gdlp01.c-wss.com/gds/2/0200006062/#{version.csv.second}/mmig-mac-#{version.csv.first.dots_to_underscores}-ea11.dmg",
       verified: "c-wss.com/"
@@ -9,7 +9,7 @@ cask "my-image-garden" do
   homepage "https://support-asia.canon-asia.com/?personal"
 
   livecheck do
-    url "https://pdisp01.c-wss.com/gdl/WWUFORedirectTarget.do?id=MDIwMDAwNjA2MjA0"
+    url "https://pdisp01.c-wss.com/gdl/WWUFORedirectTarget.do?id=MDIwMDAwNjA2MjA1"
     regex(%r{/([^/]+)/mmig-mac[._-]v?(\d+(?:[._]\d+)+)-ea11\.dmg}i)
     strategy :header_match do |headers, regex|
       match = headers["location"].match(regex)
@@ -23,4 +23,12 @@ cask "my-image-garden" do
 
   uninstall pkgutil: "jp.co.canon.MyImageGarden",
             quit:    "jp.co.canon.MyImageGarden"
+
+  zap trash: [
+    "/Library/Caches/Canon",
+    "~/Library/Application Scripts/jp.co.canon.MyImageGarden",
+    "~/Library/Application Scripts/jp.co.canon.ij.pesp.group",
+    "~/Library/Containers/jp.co.canon.MyImageGarden",
+    "~/Library/Group Containers/jp.co.canon.ij.pesp.group",
+  ]
 end

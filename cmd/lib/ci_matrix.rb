@@ -8,8 +8,8 @@ module CiMatrix
   MAX_JOBS = 256
 
   RUNNERS = {
-    { symbol: :big_sur,  name: "macos-11" } => 0.0,
-    { symbol: :monterey, name: "macos-12" } => 1.0,
+    { symbol: :big_sur,  name: "macos-11", arch: :intel } => 0.0,
+    { symbol: :monterey, name: "macos-12", arch: :intel } => 1.0,
   }.freeze
 
   # This string uses regex syntax and is intended to be interpolated into
@@ -19,28 +19,28 @@ module CiMatrix
   def self.filter_runners(cask_content)
     # Retrieve arguments from `depends_on macos:`
     required_macos = case cask_content
-    when /depends_on macos:\s+\[((?:#{DEPENDS_ON_MACOS_ARRAY_MEMBER})+)\]/o
+    when /depends_on\s+macos:\s+\[((?:#{DEPENDS_ON_MACOS_ARRAY_MEMBER})+)\]/o
       Regexp.last_match(1).scan(/#{DEPENDS_ON_MACOS_ARRAY_MEMBER}/o).flatten.map(&:to_sym).map do |v|
         {
           version:    v,
           comparator: "==",
         }
       end
-    when /depends_on macos:\s+"?:([^\s"]+)"?/ # e.g. `depends_on macos: :big_sur`
+    when /depends_on\s+macos:\s+"?:([^\s"]+)"?/ # e.g. `depends_on macos: :big_sur`
       [
         {
           version:    Regexp.last_match(1).to_sym,
           comparator: "==",
         },
       ]
-    when /depends_on macos:\s+"([=<>]=)\s+:([^\s"]+)"/ # e.g. `depends_on macos: ">= :monterey"`
+    when /depends_on\s+macos:\s+"([=<>]=)\s+:([^\s"]+)"/ # e.g. `depends_on macos: ">= :monterey"`
       [
         {
           version:    Regexp.last_match(2).to_sym,
           comparator: Regexp.last_match(1),
         },
       ]
-    when /depends_on macos:/
+    when /depends_on\s+macos:/
       # In this case, `depends_on macos:` is present but wasn't matched by the
       # previous regexes. We want this to visibly fail so we can address the
       # shortcoming instead of quietly defaulting to `RUNNERS`.
@@ -64,8 +64,7 @@ module CiMatrix
                     .first
   end
 
-  def self.runners(path)
-    cask_content = path.read
+  def self.runners(cask_content:)
     filtered_runners = filter_runners(cask_content)
 
     macos_version_found = cask_content.match?(/\bMacOS\s*\.version\b/m)
@@ -82,6 +81,19 @@ module CiMatrix
     else
       # Otherwise, select a runner based on weighted random sample.
       [random_runner(filtered_runners)]
+    end
+  end
+
+  def self.architectures(cask_content:)
+    case cask_content
+    when /depends_on\s+arch:\s+:arm64/
+      [:arm]
+    when /depends_on\s+arch:\s+:x86_64/
+      [:intel]
+    when /\barch\b/, /\bon_(arm|intel)\b/
+      [:arm, :intel]
+    else
+      RUNNERS.keys.map { |r| r.fetch(:arch) }.uniq.sort
     end
   end
 
@@ -135,18 +147,23 @@ module CiMatrix
 
       audit_args << "--except" << audit_exceptions.join(",") if audit_exceptions.any?
 
-      runners(path).map do |runner|
+      cask_content = path.read
+
+      runners(cask_content: cask_content).product(architectures(cask_content: cask_content)).map do |runner, arch|
+        native_runner_arch = arch == runner.fetch(:arch)
+        arch_args = native_runner_arch ? [] : ["--arch=#{arch}"]
         {
-          name:         "test #{cask_token} (#{runner[:name]})",
+          name:         "test #{cask_token} (#{runner.fetch(:name)}, #{arch})",
           tap:          tap.name,
           cask:         {
             token: cask_token,
             path:  "./#{path}",
           },
-          audit_args:   audit_args,
-          skip_install: labels.include?("ci-skip-install"),
-          skip_readall: false,
-          runner:       runner[:name],
+          audit_args:   audit_args + arch_args,
+          fetch_args:   arch_args,
+          skip_install: labels.include?("ci-skip-install") || !native_runner_arch,
+          skip_readall: !native_runner_arch,
+          runner:       runner.fetch(:name),
         }
       end
     end

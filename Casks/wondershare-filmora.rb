@@ -1,5 +1,5 @@
 cask "wondershare-filmora" do
-  version "12.2.0"
+  version "12.2.5"
   sha256 :no_check
 
   url "https://download.wondershare.com/filmora-mac_full718.dmg"
@@ -9,7 +9,7 @@ cask "wondershare-filmora" do
 
   livecheck do
     url "https://cbs.wondershare.com/go.php?m=upgrade_info&pid=718"
-    regex(/<Version>([^<]*)</)
+    regex(/<version>(\d+(?:\.\d+)+).*?version>/i)
   end
 
   depends_on macos: ">= :sierra"
@@ -17,4 +17,22 @@ cask "wondershare-filmora" do
   installer manual: "Wondershare Filmora Installer.app"
 
   uninstall delete: "/Applications/Wondershare Filmora #{version.major}.app"
+
+  zap trash: [
+    "/Users/Shared/wondershare.plist",
+    "~/Library/Application Support/com.wondershare.Installer",
+    "~/Library/Application Support/Wondershare Filmora 10",
+    "~/Library/Application Support/wondershare",
+    "~/Library/Caches/com.wondershare.filmoramac",
+    "~/Library/Caches/com.wondershare.Installer",
+    "~/Library/HTTPStorages/com.wondershare.filmoramac",
+    "~/Library/HTTPStorages/com.wondershare.filmoramac.binarycookies",
+    "~/Library/HTTPStorages/com.wondershare.Installer",
+    "~/Library/Preferences/com.wondershare.filmoramac.plist",
+    "~/Library/Preferences/com.wondershare.helper_compact.plist",
+    "~/Library/Preferences/com.wondershare.Installer.plist",
+    "~/Library/Saved Application State/com.wondershare.filmoramac.savedState",
+    "~/Library/Saved Application State/com.wondershare.Installer.savedState",
+    "~/Library/WebKit/com.wondershare.Installer",
+  ]
 end

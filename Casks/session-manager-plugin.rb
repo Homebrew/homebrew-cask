@@ -20,4 +20,6 @@ cask "session-manager-plugin" do
   binary "/usr/local/sessionmanagerplugin/bin/session-manager-plugin"
 
   uninstall pkgutil: "session-manager-plugin"
+
+  zap trash: "/Library/LaunchDaemons/SessionManagerPlugin.plist"
 end

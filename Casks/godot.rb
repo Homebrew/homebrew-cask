@@ -1,6 +1,6 @@
 cask "godot" do
-  version "4.0.1"
-  sha256 "7386e9cdcd7d83340ecc424fee774b56cce0a9ba290d308097451ec23bfa685f"
+  version "4.0.2"
+  sha256 "84a22751ed09e723f631c15c9e9490c5b8d86cd5cdd9e362137581b3771d193e"
 
   url "https://downloads.tuxfamily.org/godotengine/#{version}/Godot_v#{version}-stable_macos.universal.zip",
       verified: "downloads.tuxfamily.org/godotengine/"
@@ -12,6 +12,8 @@ cask "godot" do
     url "https://github.com/godotengine/godot"
     regex(/^v?(\d+(?:\.\d+)+)[._-]stable$/i)
   end
+
+  conflicts_with cask: "homebrew/cask-versions/godot3"
 
   app "Godot.app"
   binary "#{appdir}/Godot.app/Contents/MacOS/Godot", target: "godot"

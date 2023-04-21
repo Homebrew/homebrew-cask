@@ -1,5 +1,5 @@
 cask "cisdem-data-recovery" do
-  version "13.9.0"
+  version "13.9.5"
   sha256 :no_check
 
   url "https://download.cisdem.com/cisdem-datarecovery.dmg"
@@ -15,4 +15,11 @@ cask "cisdem-data-recovery" do
   depends_on macos: ">= :sierra"
 
   app "Cisdem Data Recovery.app"
+
+  zap trash: [
+    "~/Library/Application Support/Cisdem",
+    "~/Library/Application Support/com.easeus.datarecoverywizard",
+    "~/Library/Preferences/com.easeus.datarecoverywizard",
+    "~/Movies/CisdemRepair",
+  ]
 end

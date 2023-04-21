@@ -1,6 +1,6 @@
 cask "planet" do
-  version "0.13.0"
-  sha256 "6b44828f43fb6efc6ab2bca7cd08dc901b0b82be7d073e40ee37ca11bbdc557d"
+  version "0.13.2"
+  sha256 "47f539176de2f013a9803ec588e3bf9d4a109876498cb03ac26ec1e0bb508933"
 
   url "https://github.com/Planetable/Planet/releases/download/release-#{version}/Planet.zip",
       verified: "github.com/Planetable/Planet/"

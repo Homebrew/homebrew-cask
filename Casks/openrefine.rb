@@ -1,6 +1,6 @@
 cask "openrefine" do
-  version "3.7.1"
-  sha256 "68046ba4eb7d2de48d2245cf8fd5018cb4fd214348904c88b9b42c5ddeeacc60"
+  version "3.7.2"
+  sha256 "62d0a809ed30a4612e8817a63f15025dda110cec5e0f6b1546343090a0ab57f0"
 
   url "https://github.com/OpenRefine/OpenRefine/releases/download/#{version}/openrefine-mac-#{version}.dmg",
       verified: "github.com/OpenRefine/OpenRefine/"
@@ -14,4 +14,9 @@ cask "openrefine" do
   end
 
   app "OpenRefine.app"
+
+  zap trash: [
+    "~/Library/Application Support/OpenRefine",
+    "~/Library/Saved Application State/com.google.refine.Refine.savedState",
+  ]
 end

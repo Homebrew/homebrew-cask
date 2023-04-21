@@ -111,8 +111,8 @@ cask "karabiner-elements" do
     # The system extension 'org.pqrs.Karabiner-DriverKit-VirtualHIDDevice*' should not be uninstalled by Cask
   end
   on_big_sur :or_newer do
-    version "14.11.0"
-    sha256 "227b927d76da498b2772af2354ed792db4260d382e44794e884fcf8f911f5f97"
+    version "14.12.0"
+    sha256 "df137bb3f274380d6de473f31535e72b3332eb62ed3b637fb7073ffa12eebca3"
 
     url "https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg",
         verified: "github.com/pqrs-org/Karabiner-Elements/"

@@ -1,6 +1,6 @@
 cask "spyder" do
-  version "5.4.2"
-  sha256 "4d5eabd2b385a88d2922e4d61cb10d2847871df11f2aedf274ad8852fdb133f0"
+  version "5.4.3"
+  sha256 "5af617907019aa8a724d3221783ddade772625f9d552ac291c0359e8e19b8d01"
 
   url "https://github.com/spyder-ide/spyder/releases/download/v#{version}/Spyder.dmg",
       verified: "github.com/spyder-ide/spyder/"
@@ -16,4 +16,11 @@ cask "spyder" do
   depends_on macos: ">= :catalina"
 
   app "Spyder.app"
+
+  zap trash: [
+    "~/.spyder-py3",
+    "~/Library/Application Support/Spyder",
+    "~/Library/Caches/Spyder",
+    "~/Library/Saved Application State/org.spyder-ide.Spyder.savedState",
+  ]
 end

@@ -1,11 +1,11 @@
 cask "origami-studio" do
-  version "137.0.0.7.142"
+  version "139.0.0.8.219"
   sha256 :no_check
 
   url "https://facebook.com/designtools/origami/",
       verified: "facebook.com/designtools/origami/"
   name "Origami Studio"
-  desc "Design, animate, and prototype design tool from Facebook"
+  desc "Design tool for interactive interfaces"
   homepage "https://origami.design/"
 
   livecheck do

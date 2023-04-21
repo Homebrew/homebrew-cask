@@ -1,6 +1,6 @@
 cask "bitwig-studio" do
-  version "4.4.8"
-  sha256 "9e344791993f7fd105f470dcc7244b0cfe58153af717459688a63ff8d36bba4f"
+  version "4.4.10"
+  sha256 "c5611eaa67dfdd1d0f82c39e9ff364a7b2ae71e790cc6a010e11cc3ee1dc1d2c"
 
   url "https://downloads.bitwig.com/stable/#{version}/Bitwig%20Studio%20#{version}.dmg"
   name "Bitwig Studio"

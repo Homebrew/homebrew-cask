@@ -1,11 +1,11 @@
 cask "raycast" do
-  version "1.49.1"
-  sha256 :no_check
+  version "1.49.3"
+  sha256 "22b9fdf7fe3d7d1420ef7717f1a299ef60f5a3e9833e0e38435a5700c757adbd"
 
-  url "https://api.raycast.app/v2/download"
+  url "https://releases.raycast.com/releases/#{version}/download?build=universal"
   name "Raycast"
   desc "Control your tools with a few keystrokes"
-  homepage "https://raycast.app/"
+  homepage "https://raycast.com/"
 
   livecheck do
     url :url
@@ -14,7 +14,7 @@ cask "raycast" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Raycast.app"
 

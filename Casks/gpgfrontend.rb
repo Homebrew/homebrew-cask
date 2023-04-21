@@ -3,11 +3,13 @@ cask "gpgfrontend" do
 
   on_big_sur do
     sha256 "3558d8786573b8a01dc784465e6dcddba5f58a8b30ce09280a55bdfc29612e6a"
+
     url "https://github.com/saturneric/GpgFrontend/releases/download/v#{version}/GpgFrontend-#{version}-macos-11-x86_64.dmg",
         verified: "github.com/saturneric/GpgFrontend/"
   end
   on_monterey :or_newer do
     sha256 "cd1823c287cfcf550939908938e87aafe0e481fe38edafd3aa79557085b59350"
+
     url "https://github.com/saturneric/GpgFrontend/releases/download/v#{version}/GpgFrontend-#{version}-macos-12-x86_64.dmg",
         verified: "github.com/saturneric/GpgFrontend/"
   end

@@ -1,5 +1,5 @@
 cask "tunnelbear" do
-  version "5.0.0,8561e3d0b"
+  version "5.0.1,adc345"
   sha256 :no_check
 
   url "https://s3.amazonaws.com/tunnelbear/downloads/mac/TunnelBear.zip",

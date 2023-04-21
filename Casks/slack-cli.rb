@@ -1,6 +1,6 @@
 cask "slack-cli" do
-  version "1.21.0"
-  sha256 "75ba2fab1bd2694337899f6376bf36a49d9613984ddb5c63fa2baa2fe5c45db6"
+  version "2.1.0"
+  sha256 "0edca833818015e9735950aab336c0938d5e56f203da008f6e79eb695451780f"
 
   url "https://downloads.slack-edge.com/slack-cli/slack_cli_#{version}_macOS_64-bit.tar.gz",
       verified: "downloads.slack-edge.com/slack-cli/"
@@ -9,8 +9,8 @@ cask "slack-cli" do
   homepage "https://api.slack.com/future/tools/cli"
 
   livecheck do
-    url "https://api.slack.com/future/tools/cli"
-    regex(/href=.*?slack[._-]cli[._-]v?(\d+(?:\.\d+)+)[._-]macOS[._-]64[._-]bit\.tar\.gz/)
+    url "https://api.slack.com/future/changelog"
+    regex(%r{h2.*?v?(\d+(?:\.\d+)+).*?/h2}i)
   end
 
   depends_on formula: "deno"

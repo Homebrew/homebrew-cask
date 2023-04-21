@@ -1,9 +1,9 @@
 cask "tagspaces" do
   arch arm: "arm64", intel: "x64"
 
-  version "5.2.5"
-  sha256 arm:   "3e1e6f9327f80839dd274665bafbcd60fb5661cc972548673a461e57092a5c9b",
-         intel: "6b5d9fc6f00500b81843f937a8dea2cf75855fe37685ca66854f74cc9d0574b7"
+  version "5.3.3"
+  sha256 arm:   "86976ca6c7f16f547445c0fa3d54e5960a227f0767667e4c3948878010de3f52",
+         intel: "7f26c0ffd66596aef15aab9e3d868f35cf02f5284c5f8563a7a3681a223275d3"
 
   url "https://github.com/tagspaces/tagspaces/releases/download/v#{version}/tagspaces-mac-#{arch}-#{version}.dmg",
       verified: "github.com/tagspaces/tagspaces/"
@@ -17,4 +17,10 @@ cask "tagspaces" do
   end
 
   app "TagSpaces.app"
+
+  zap trash: [
+    "~/Library/Application Support/TagSpaces",
+    "~/Library/Preferences/org.tagspaces.desktopapp.plist",
+    "~/Library/Saved Application State/org.tagspaces.desktopapp.savedState",
+  ]
 end

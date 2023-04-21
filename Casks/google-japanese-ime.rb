@@ -5,6 +5,7 @@ cask "google-japanese-ime" do
   url "https://dl.google.com/japanese-ime/latest/GoogleJapaneseInput.dmg",
       verified: "dl.google.com/japanese-ime/"
   name "Google Japanese Input Method Editor"
+  desc "Japanese input software"
   homepage "https://www.google.co.jp/ime/"
 
   livecheck do
@@ -16,9 +17,21 @@ cask "google-japanese-ime" do
 
   pkg "GoogleJapaneseInput.pkg"
 
-  uninstall pkgutil:   "com.google.pkg.GoogleJapaneseInput",
+  uninstall pkgutil:   [
+              "com.google.pkg.GoogleJapaneseInput",
+              "com.google.pkg.Keystone",
+            ],
             launchctl: [
               "com.google.inputmethod.Japanese.Converter",
               "com.google.inputmethod.Japanese.Renderer",
+              "com.google.keystone.agent",
+              "com.google.keystone.daemon",
+              "com.google.keystone.xpcservice",
             ]
+
+  zap trash: [
+    "~/Library/Application Support/Google/JapaneseInput",
+    "~/Library/Logs/GoogleJapaneseInput",
+    "~/Library/Saved Application State/com.google.inputmethod.Japanese.Tool.ConfigDialog.savedState",
+  ]
 end

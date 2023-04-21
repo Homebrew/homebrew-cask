@@ -57,4 +57,5 @@ cask "gcc-arm-embedded" do
               "/Applications/ArmGNUToolchain/#{version}",
               "/Applications/ArmGNUToolchain",
             ]
+  # No zap stanza required
 end

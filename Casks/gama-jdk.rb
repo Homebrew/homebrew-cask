@@ -1,22 +1,28 @@
 cask "gama-jdk" do
-  arch arm: "_M1"
+  arch arm: "Apple_Silicon", intel: "Intel"
 
-  version "1.8.2-RC2"
-  sha256 arm:   "c903608dd09cf511e721bceaa1f521e772a2ea9801eb135b182aa3b1a3053d88",
-         intel: "0d161a6aa13a3d40f1643d551b594cdd58d6ef3a81e10ea9ff2d9bc1070f21ac"
+  version "1.9.1"
+  sha256 arm:   "bad8a2da2ebe6a0276fef3539416625dce75118cef5ffc5fcd3e84b94d5f6b60",
+         intel: "98ccfa0fd0393cf0e4283ccf6c9ba16d2980464bf40012574882a879f013c358"
 
-  url "https://github.com/gama-platform/gama.resources/releases/download/#{version}/GAMA_#{version}_MacOS#{arch}_with_JDK.dmg",
-      verified: "github.com/gama-platform/gama.resources/"
+  url "https://github.com/gama-platform/gama/releases/download/#{version}/GAMA_#{version}_macOS_#{arch}_with_JDK.dmg",
+      verified: "github.com/gama-platform/gama/"
   name "GAMA Platform with embedded JDK"
   desc "IDE for building spatially explicit agent-based simulations"
   homepage "https://gama-platform.org/"
 
+  # Using :github_latest as repo contains pre-release tags
   livecheck do
-    url "https://gama-platform.org/download"
-    regex(/GAMA[._-]v?(\d+(?:.\d+)*(?:[._-]RC\d+))[._-]MacOS#{arch}[._-]with[._-]JDK\.dmg/i)
+    url :url
+    strategy :github_latest
   end
 
   conflicts_with cask: "gama"
 
   app "Gama.app"
+
+  zap trash: [
+    "~/Gama_Workspace",
+    "~/Library/Preferences/Gama.plist",
+  ]
 end

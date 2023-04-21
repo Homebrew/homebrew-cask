@@ -1,6 +1,6 @@
 cask "santa" do
-  version "2023.2"
-  sha256 "aa8ec240901d612fd48c64e0c111046b83cd1b00c84a4a62ad30e1eef5921c81"
+  version "2023.3"
+  sha256 "c134a0762545ef58b228a9a33bc1006b9863637473cff57f9aa55e281f758f81"
 
   url "https://github.com/google/santa/releases/download/#{version}/santa-#{version}.dmg"
   name "Santa"
@@ -27,6 +27,8 @@ cask "santa" do
               "com.google.santad",
             ],
             pkgutil:   "com.google.santa"
+
+  # No zap stanza required
 
   caveats "For #{token} to use EndpointSecurity, it must be granted Full Disk Access under " \
           "System Preferences → Security & Privacy → Privacy"

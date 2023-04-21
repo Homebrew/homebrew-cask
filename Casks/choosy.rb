@@ -53,14 +53,14 @@ cask "choosy" do
     version "2.3"
     sha256 "b4fd6073b43ba7ce8697c6b3f400f2abec9196e10c6488d52970ed989ddb2a76"
 
-    pkg "Choosy.pkg"
+    depends_on macos: ">= :big_sur"
 
     livecheck do
       url "https://www.choosyosx.com/sparkle/feed"
       strategy :sparkle
     end
 
-    depends_on macos: ">= :big_sur"
+    pkg "Choosy.pkg"
   end
 
   url "https://downloads.choosyosx.com/choosy_#{version}.zip"

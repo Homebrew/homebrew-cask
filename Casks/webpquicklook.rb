@@ -13,4 +13,6 @@ cask "webpquicklook" do
   end
 
   qlplugin "WebpQuickLook.qlgenerator"
+
+  # No zap stanza required
 end
