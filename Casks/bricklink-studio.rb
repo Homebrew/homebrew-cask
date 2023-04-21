@@ -1,6 +1,6 @@
 cask "bricklink-studio" do
-  version "2.23.3_1"
-  sha256 "1bcea6b3aaabb32e780e9decec3b266eda61bb51034a8f2942ea66b1074a5a09"
+  version "2.23.4_1"
+  sha256 "bca36ce9a8cb6a679b121b55f9a3e35b1279133b00aee17d3d02babcce917a32"
 
   url "https://blstudio.s3.amazonaws.com/Studio#{version.major}.0/Archive/#{version}/Studio+#{version.major}.0.pkg",
       verified: "blstudio.s3.amazonaws.com/"
@@ -15,7 +15,7 @@ cask "bricklink-studio" do
 
   auto_updates true
 
-  pkg "Studio #{version.major}.0.pkg"
+  pkg "Studio+#{version.major}.0.pkg"
 
   uninstall pkgutil: "com.bricklink.pkg.Studio#{version.major}.0"
 
