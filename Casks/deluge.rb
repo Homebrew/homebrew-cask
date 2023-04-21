@@ -14,4 +14,10 @@ cask "deluge" do
   end
 
   app "Deluge.app"
+
+  zap trash: [
+    "~/.config/deluge/",
+    "~/Library/Preferences/org.deluge.plist",
+    "~/Library/Saved Application State/org.deluge.savedState",
+  ]
 end
