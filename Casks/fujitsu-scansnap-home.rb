@@ -24,10 +24,30 @@ cask "fujitsu-scansnap-home" do
               "com.fujitsu.pfu.SshRegister",
               "com.fujitsu.pfu.SshResident",
               "com.fujitsu.pfu.SshSCloudWatch",
+              "com.ricoh.pfu.SshAutoLaunch",
             ],
             quit:      [
               "com.fujitsu.pfu.SSMenuBar",
               "com.fujitsu.pfu.Ssh*",
             ],
             pkgutil:   "com.fujitsu.pfu.scansnap.Home.*"
+
+  zap trash:  [
+        "~/Library/Application Support/PFU",
+        "~/Library/Caches/jp.co.pfu.SSHomeWizard",
+        "~/Library/HTTPStorages/jp.co.pfu.SSHomeWizard",
+        "~/Library/Preferences/com.fujitsu.pfu.SSMenuBar.plist",
+        "~/Library/Preferences/com.fujitsu.pfu.ScanSnapCloudMode.plist",
+        "~/Library/Preferences/com.fujitsu.pfu.ScanSnapHome.plist",
+        "~/Library/Preferences/com.fujitsu.pfu.ScanSnapHomeOCRWrapper.plist",
+        "~/Library/Preferences/com.fujitsu.pfu.ScanSnapHomeSCloudInfo.plist",
+        "~/Library/Preferences/com.fujitsu.pfu.ScanSnapHomeSetting.plist",
+        "~/Library/Preferences/com.fujitsu.pfu.ScanSnapTutorial.plist",
+        "~/Library/Preferences/com.fujitsu.pfu.ScanSnapXPCService.plist",
+        "~/Library/Preferences/com.fujitsu.pfu.SshImgMonitor.plist",
+        "~/Library/Preferences/com.fujitsu.pfu.SshResident.plist",
+        "~/Library/Saved Application State/com.fujitsu.pfu.ScanSnapHome.savedState",
+        "~/Library/Saved Application State/jp.co.pfu.SSHomeWizard.savedState",
+      ],
+      delete: "/Library/Application Support/PFU"
 end
