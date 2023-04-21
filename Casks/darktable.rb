@@ -17,4 +17,11 @@ cask "darktable" do
   end
 
   app "darktable.app"
+
+  zap trash: [
+    "~/.cache/darktable",
+    "~/.config/darktable",
+    "~/.local/share/darktable",
+    "~/Library/Saved Application State/org.darktable.savedState",
+  ]
 end

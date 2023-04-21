@@ -21,4 +21,6 @@ cask "opensc" do
               "org.opensc-project.mac.opensc-notify",
               "org.opensc-project.mac.pkcs11-register",
             ]
+
+  zap trash: "~/Library/Saved Application State/org.opensc-project.mac.opensctoken.OpenSCTokenApp.savedState"
 end

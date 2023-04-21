@@ -16,4 +16,6 @@ cask "lidarr" do
   depends_on macos: ">= :high_sierra"
 
   app "Lidarr.app"
+
+  zap trash: "~/.config/Lidarr/"
 end
