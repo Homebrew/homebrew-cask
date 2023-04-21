@@ -4,7 +4,7 @@ cask "chrome-devtools" do
 
   url "https://github.com/auchenberg/chrome-devtools-app/releases/download/v#{version}/chrome-devtools-app_#{version}.dmg"
   name "Chrome DevTools"
-  desc "Standalone Chrome DevTools"
+  desc "Standalone Chrome development tools"
   homepage "https://github.com/auchenberg/chrome-devtools-app"
 
   app "Chrome DevTools App.app"
