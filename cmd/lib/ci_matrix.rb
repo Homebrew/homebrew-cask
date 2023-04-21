@@ -141,8 +141,9 @@ module CiMatrix
       audit_exceptions << "livecheck_min_os" if labels.include?("ci-skip-livecheck-min-os")
 
       if labels.include?("ci-skip-repository")
-        audit_exceptions << ["github_repository", "gitlab_repository",
-                             "bitbucket_repository"]
+        audit_exceptions << %w[github_repository github_prerelease_version
+                               gitlab_repository gitlab_prerelease_version
+                               bitbucket_repository]
       end
 
       audit_args << "--except" << audit_exceptions.join(",") if audit_exceptions.any?
