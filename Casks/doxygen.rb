@@ -13,4 +13,10 @@ cask "doxygen" do
   end
 
   app "Doxygen.app"
+
+  zap trash: [
+    "~/Library/Preferences/org.doxygen.Doxywizard.plist",
+    "~/Library/Preferences/org.doxygen.plist",
+    "~/Library/Saved Application State/org.doxygen.savedState",
+  ]
 end
