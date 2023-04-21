@@ -22,4 +22,6 @@ cask "vallum" do
               "it.murus.afw.core",
               "it.murus.afw.helper",
             ]
+
+  zap trash: "~/Library/Preferences/it.murus.Vallum.plist"
 end
