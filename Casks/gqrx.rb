@@ -21,4 +21,6 @@ cask "gqrx" do
       '#{appdir}/Gqrx.app/Contents/MacOS/gqrx' "$@"
     EOS
   end
+
+  zap trash: "~/.config/gqrx"
 end

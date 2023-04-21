@@ -7,4 +7,6 @@ cask "qlprettypatch" do
   homepage "https://github.com/atnan/QLPrettyPatch"
 
   qlplugin "QLPrettyPatch.qlgenerator"
+
+  # No zap stanza required
 end

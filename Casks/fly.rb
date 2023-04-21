@@ -8,4 +8,6 @@ cask "fly" do
   homepage "https://github.com/concourse/concourse"
 
   binary "fly"
+
+  # No zap stanza required
 end

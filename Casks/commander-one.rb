@@ -16,4 +16,12 @@ cask "commander-one" do
   depends_on macos: ">= :sierra"
 
   app "Commander One.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.eltima.cmd1",
+    "~/Library/Caches/com.eltima.cmd1",
+    "~/Library/HTTPStorages/com.eltima.cmd1",
+    "~/Library/Preferences/com.eltima.cmd1.plist",
+    "~/Library/Saved Application State/com.eltima.cmd1.savedState",
+  ]
 end

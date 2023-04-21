@@ -7,4 +7,6 @@ cask "minishift" do
   homepage "https://github.com/minishift/minishift"
 
   binary "minishift-#{version}-darwin-amd64/minishift"
+
+  zap trash: "~/.minishift"
 end
