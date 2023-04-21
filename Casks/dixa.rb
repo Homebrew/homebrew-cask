@@ -1,6 +1,6 @@
 cask "dixa" do
-  version "4.0.11"
-  sha256 "03ffbb1596a2d4c062107b8f3bfe62778dbb74bcc3985cd37522495cd4c2864d"
+  version "4.0.12"
+  sha256 "a4e1a30d074e724ba24e9e2674a72bc4050f00161fb7dc23295a2c189ecda5bb"
 
   url "https://github.com/dixahq/dixa-desktop-app-release/releases/download/v#{version}/dixa-#{version}.dmg",
       verified: "github.com/dixahq/dixa-desktop-app-release/"
