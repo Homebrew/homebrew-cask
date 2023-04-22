@@ -19,6 +19,7 @@ cask "neteasemusic" do
     strategy :header_match
   end
 
+  auto_updates true
   depends_on macos: ">= :sierra"
 
   app "NeteaseMusic.app"
