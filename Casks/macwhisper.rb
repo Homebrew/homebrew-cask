@@ -4,7 +4,7 @@ cask "macwhisper" do
 
   url "https://macwhisper-site.vercel.app/releases/MacWhisper-#{version.csv.second}.zip",
       verified: "macwhisper-site.vercel.app/"
-  name "macwhisper"
+  name "MacWhisper"
   desc "Speech recognition tool"
   homepage "https://goodsnooze.gumroad.com/l/macwhisper"
 
