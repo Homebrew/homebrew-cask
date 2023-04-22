@@ -1,6 +1,7 @@
 cask "r" do
-  arch arm: "-arm64"
+  arch arm: "arm64", intel: "x86_64"
   folder = on_arch_conditional arm: "big-sur-arm64/base/", intel: "base/"
+  legacy_arch = on_arch_conditional arm: "-arm64"
 
   on_sierra :or_older do
     version "3.6.3.nn"
@@ -8,12 +9,33 @@ cask "r" do
 
     url "https://cloud.r-project.org/bin/macosx/R-#{version}.pkg"
   end
-  on_high_sierra :or_newer do
+  on_high_sierra do
     version "4.2.3"
     sha256 arm:   "e61f25b529940e229b69c19e01428505d7f59cc1e1209ed41dca39452b56fb98",
            intel: "dd96e8dcae20cf3c9cde429dd29f252b87af69028a6a403ec867eb92bb8eb659"
 
-    url "https://cloud.r-project.org/bin/macosx/#{folder}R-#{version}#{arch}.pkg"
+    url "https://cloud.r-project.org/bin/macosx/#{folder}R-#{version}#{legacy_arch}.pkg"
+  end
+  on_mojave do
+    version "4.2.3"
+    sha256 arm:   "e61f25b529940e229b69c19e01428505d7f59cc1e1209ed41dca39452b56fb98",
+           intel: "dd96e8dcae20cf3c9cde429dd29f252b87af69028a6a403ec867eb92bb8eb659"
+
+    url "https://cloud.r-project.org/bin/macosx/#{folder}R-#{version}#{legacy_arch}.pkg"
+  end
+  on_catalina do
+    version "4.2.3"
+    sha256 arm:   "e61f25b529940e229b69c19e01428505d7f59cc1e1209ed41dca39452b56fb98",
+           intel: "dd96e8dcae20cf3c9cde429dd29f252b87af69028a6a403ec867eb92bb8eb659"
+
+    url "https://cloud.r-project.org/bin/macosx/#{folder}R-#{version}#{legacy_arch}.pkg"
+  end
+  on_big_sur :or_newer do
+    version "4.3.0"
+    sha256 arm:   "1bdddb68172d99ad31e85f1e59cdcdf38352f673b8b74a93b32bcc7b7e400050",
+           intel: "91dcf184da1365a386e7595622f86781993aac7013d497f011895f718fcc2852"
+
+    url "https://cloud.r-project.org/bin/macosx/big-sur-#{arch}/base/R-#{version}-#{arch}.pkg"
   end
 
   name "R"
@@ -22,12 +44,12 @@ cask "r" do
 
   livecheck do
     url "https://cloud.r-project.org/bin/macosx"
-    regex(/href=.*?R[._-]v?(\d+(?:\.\d+)*)\.pkg/i)
+    regex(/href=.*?R[._-]v?(\d+(?:\.\d+)*)([._-]#{arch})?\.pkg/i)
   end
 
   depends_on macos: ">= :el_capitan"
 
-  pkg "R-#{version}#{arch}.pkg"
+  pkg "R-#{version}-#{arch}.pkg"
 
   uninstall pkgutil: [
               "org.r-project*",
