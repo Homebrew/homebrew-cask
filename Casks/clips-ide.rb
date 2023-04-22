@@ -1,5 +1,5 @@
 cask "clips-ide" do
-  version "6.41"
+  version "6.4.1"
   sha256 "aa5b0326c378fe4a798eca91005fc221160f9915de1f134f95fc164c5c4ea008"
 
   url "https://downloads.sourceforge.net/clipsrules/clips_macos_executable_#{version.no_dots}.dmg",
