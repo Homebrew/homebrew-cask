@@ -14,4 +14,12 @@ cask "amadeus-pro" do
   end
 
   app "Amadeus Pro.app"
+
+  zap trash: [
+    "~/Library/Application Support/Amadeus Pro",
+    "~/Library/Caches/com.HairerSoft.AmadeusPro",
+    "~/Library/HTTPStorages/com.HairerSoft.AmadeusPro",
+    "~/Library/Preferences/com.HairerSoft.AmadeusPro.plist",
+    "~/Library/Saved Application State/com.HairerSoft.AmadeusPro.savedState",
+  ]
 end
