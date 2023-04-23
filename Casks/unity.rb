@@ -27,4 +27,16 @@ cask "unity" do
   uninstall quit:    "com.unity3d.UnityEditor5.x",
             pkgutil: "com.unity3d.UnityEditor5.x",
             delete:  "/Applications/Unity"
+
+  zap trash:  [
+        "/Library/Application Support/Unity",
+        "~/Library/Application Support/Unity",
+        "~/Library/Application Support/UnityHub",
+        "~/Library/Caches/com.unity3d.UnityEditor",
+        "~/Library/Logs/Unity",
+        "~/Library/Preferences/com.unity3d.unityhub.plist",
+        "~/Library/Saved Application State/com.unity3d.unityhub.savedState",
+        "~/Library/Unity",
+      ],
+      delete: "/Library/Application Support/Unity"
 end

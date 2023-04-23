@@ -68,6 +68,13 @@ cask "displaylink" do
               "/Library/LaunchDaemons/com.displaylink.displaylinkmanager.plist",
             ]
 
+  zap trash: [
+    "~/Library/Application Scripts/73YQY62QM3.com.displaylink.DisplayLinkShared",
+    "~/Library/Application Scripts/com.displaylink.DisplayLinkUserAgent",
+    "~/Library/Containers/com.displaylink.DisplayLinkUserAgent",
+    "~/Library/Group Containers/73YQY62QM3.com.displaylink.DisplayLinkShared",
+  ]
+
   caveats do
     reboot
     license "https://www.synaptics.com/products/displaylink-graphics/downloads/macos-#{version.csv.first}"

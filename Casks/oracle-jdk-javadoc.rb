@@ -22,6 +22,8 @@ cask "oracle-jdk-javadoc" do
 
   uninstall rmdir: "/Library/Java/JavaVirtualMachines/jdk-#{version.csv.first}.jdk"
 
+  # No zap stanza required
+
   caveats do
     license "https://download.oracle.com/otndocs/jcp/java_se-#{version.major}-final-spec/license.html"
   end
