@@ -1,5 +1,5 @@
 cask "amadeus-pro" do
-  version "2.8.9"
+  version "2.8.11"
   sha256 :no_check
 
   url "https://s3.amazonaws.com/AmadeusPro#{version.major}/AmadeusPro.zip",
@@ -14,4 +14,12 @@ cask "amadeus-pro" do
   end
 
   app "Amadeus Pro.app"
+
+  zap trash: [
+    "~/Library/Application Support/Amadeus Pro",
+    "~/Library/Caches/com.HairerSoft.AmadeusPro",
+    "~/Library/HTTPStorages/com.HairerSoft.AmadeusPro",
+    "~/Library/Preferences/com.HairerSoft.AmadeusPro.plist",
+    "~/Library/Saved Application State/com.HairerSoft.AmadeusPro.savedState",
+  ]
 end
