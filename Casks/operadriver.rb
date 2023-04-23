@@ -13,4 +13,6 @@ cask "operadriver" do
   end
 
   binary "operadriver_mac64/operadriver"
+
+  # No zap stanza required
 end
