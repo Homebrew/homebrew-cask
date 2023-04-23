@@ -5,7 +5,7 @@ cask "lofi" do
   url "https://github.com/dvx/lofi/releases/download/v#{version}/lofi-#{version}.dmg",
       verified: "github.com/dvx/lofi/"
   name "Lofi"
-  desc "Mini Spotify player with WebGL visualizations"
+  desc "Spotify player with WebGL visualizations"
   homepage "https://www.lofi.rocks/"
 
   app "Lofi.app"
