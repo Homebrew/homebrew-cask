@@ -19,4 +19,6 @@ cask "sapmachine-jdk" do
   end
 
   artifact "sapmachine-jdk-#{version}.jdk", target: "/Library/Java/JavaVirtualMachines/sapmachine-jdk-#{version}.jdk"
+
+  # No zap stanza required
 end
