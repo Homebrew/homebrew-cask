@@ -14,7 +14,10 @@ cask "ltspice" do
 
   pkg "LTspice.pkg"
 
-  uninstall pkgutil: "com.analog.LTspice.App"
+  uninstall pkgutil: [
+    "com.analog.LTspice",
+    "com.analog.LTspice.App",
+  ]
 
   zap trash: [
         "~/Documents/LTspice/examples",
