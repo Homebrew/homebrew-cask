@@ -18,11 +18,11 @@ cask "affinity-publisher" do
   app "Affinity Publisher #{version.major}.app"
 
   zap trash: [
-    "~/Library/Application Support/Affinity Publisher 2",
-    "~/Library/Caches/com.seriflabs.affinitypublisher2",
-    "~/Library/HTTPStorages/com.seriflabs.affinitypublisher2",
-    "~/Library/Preferences/com.seriflabs.affinitypublisher2.plist",
-    "~/Library/Saved Application State/com.seriflabs.affinitypublisher2.savedState",
-    "~/Library/WebKit/com.seriflabs.affinitypublisher2",
+    "~/Library/Application Support/Affinity Publisher #{version.major}",
+    "~/Library/Caches/com.seriflabs.affinitypublisher#{version.major}",
+    "~/Library/HTTPStorages/com.seriflabs.affinitypublisher#{version.major}",
+    "~/Library/Preferences/com.seriflabs.affinitypublisher#{version.major}.plist",
+    "~/Library/Saved Application State/com.seriflabs.affinitypublisher#{version.major}.savedState",
+    "~/Library/WebKit/com.seriflabs.affinitypublisher#{version.major}",
   ]
 end

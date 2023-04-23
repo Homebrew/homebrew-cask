@@ -19,4 +19,10 @@ cask "dia" do
   depends_on cask: "xquartz"
 
   app "Dia.app"
+
+  # No zap stanza required
+
+  caveats do
+    discontinued
+  end
 end
