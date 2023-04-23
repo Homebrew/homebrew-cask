@@ -13,4 +13,12 @@ cask "jellyfin" do
   end
 
   app "Jellyfin.app"
+
+  zap trash: [
+    "/Library/Logs/DiagnosticReports/jellyfin*.diag",
+    "~/.cache/jellyfin/",
+    "~/.config/jellyfin/",
+    "~/.local/share/jellyfin/",
+    "~/Library/Preferences/Jellyfin.Server.plist",
+  ]
 end
