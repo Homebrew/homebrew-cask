@@ -1,9 +1,9 @@
 cask "electron-fiddle" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.32.2"
-  sha256 arm:   "706d0cb2fdce94c378da2e3ea5aeb0e4114fc2be2d49aa73dd5e682ca9aa1ca7",
-         intel: "48534b6e23ec63a0131370cc3c46104ae2b2da74c993224777146fc440ed97f0"
+  version "0.32.4"
+  sha256 arm:   "3c869356ae4404ca71a5da19340442a7f2e3f6d5324b5fdd285e098cd8b1a187",
+         intel: "4f23be98e97318158af04d1c33da0c39c5a38865a4b9d5cbbdc2cd08cf492848"
 
   url "https://github.com/electron/fiddle/releases/download/v#{version}/Electron.Fiddle-darwin-#{arch}-#{version}.zip",
       verified: "github.com/electron/fiddle/"
