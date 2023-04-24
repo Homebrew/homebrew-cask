@@ -13,4 +13,6 @@ cask "keyboardcleantool" do
   end
 
   app "KeyboardCleanTool.app"
+
+  # No zap stanza required
 end
