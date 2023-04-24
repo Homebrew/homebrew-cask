@@ -4,8 +4,8 @@ cask "start" do
   livecheck_arch = on_arch_conditional arm: "-arm"
 
   on_arm do
-    version "0.301.13115-31"
-    sha256 "a3e317385a4f8e5befe2eb0c6809790f9b2ab83f3afcffb8e425cea799636b52"
+    version "0.301.13230-34"
+    sha256 "02eafc4c2f9d8da5475ea8c3e35b2f5fccc66d7ae0cee56aa2c776eea9369ebc"
   end
   on_intel do
     version "0.301.13074-31"
