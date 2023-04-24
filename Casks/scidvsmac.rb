@@ -13,4 +13,10 @@ cask "scidvsmac" do
   end
 
   app "ScidvsMac.app"
+
+  zap trash: [
+    "~/.scidvspc",
+    "~/Library/Preferences/net.sf.scid.plist",
+    "~/Library/Saved Application State/net.sf.scid.savedState",
+  ]
 end
