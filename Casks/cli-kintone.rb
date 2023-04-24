@@ -13,4 +13,6 @@ cask "cli-kintone" do
   end
 
   binary "#{staged_path}/cli-kintone-macos/cli-kintone"
+
+  # No zap stanza required
 end
