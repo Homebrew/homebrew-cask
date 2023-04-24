@@ -8,11 +8,6 @@ cask "bluewallet" do
   desc "Bitcoin wallet and Lightning wallet"
   homepage "https://bluewallet.io/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: ">= :catalina"
 
   app "BlueWallet.app"
