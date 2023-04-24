@@ -14,6 +14,26 @@ env:
   CASKS: >
     google-chrome
     firefox
+    microsoft-edge
+    tor-browser
+    zoom
+    tsh
+    teleport-connect
+    sol
+    jupyterlab
+    copilot-for-xcode
+    viber
+    r
+    telegram-desktop
+    telegram
+    skype
+    whatsapp
+    burp-suite
+    codeql
+    arc
+    logseq
+    microsoft-openjdk
+    librewolf
 
 permissions:
   contents: read
