@@ -34,6 +34,7 @@ cask "mysqlworkbench" do
     sha256 "746549812eae490c94501de2c4b784c178cd936049e5853bb264fea8b802b081"
 
     url "https://cdn.mysql.com/Downloads/MySQLGUITools/mysql-workbench-community-#{version}-macos-x86_64.dmg"
+
     livecheck do
       skip "newer versions only available for Ventura or higher"
     end
@@ -43,6 +44,7 @@ cask "mysqlworkbench" do
     sha256 "746549812eae490c94501de2c4b784c178cd936049e5853bb264fea8b802b081"
 
     url "https://cdn.mysql.com/Downloads/MySQLGUITools/mysql-workbench-community-#{version}-macos-x86_64.dmg"
+
     livecheck do
       skip "newer versions only available for Ventura or higher"
     end
@@ -53,6 +55,7 @@ cask "mysqlworkbench" do
            intel: "418fdb1d993f25e88a154ba2400d304dbbeec5026dbb8170f70ad05fd1283f49"
 
     url "https://cdn.mysql.com/Downloads/MySQLGUITools/mysql-workbench-community-#{version}-macos-#{arch}.dmg"
+
     livecheck do
       url "https://dev.mysql.com/downloads/workbench/"
       regex(/MySQL\s*Workbench\s*(\d+(?:\.\d+)+)/i)
