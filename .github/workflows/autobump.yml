@@ -24,7 +24,6 @@ env:
     jupyterlab
     copilot-for-xcode
     viber
-    r
     telegram-desktop
     telegram
     skype
@@ -35,6 +34,34 @@ env:
     logseq
     microsoft-openjdk
     librewolf
+    apifox
+    beeper
+    bettertouchtool
+    bike
+    electron
+    eloston-chromium
+    flipper
+    gather
+    glyphs
+    grammarly-desktop
+    grandtotal
+    hepta
+    macupdater
+    metasploit
+    netron
+    openlens
+    opera
+    opera-gx
+    pitch
+    qownnotes
+    setapp
+    sigmaos
+    signal
+    stats
+    vrew
+    vscodium
+    warp
+    webull
 
 permissions:
   contents: read
