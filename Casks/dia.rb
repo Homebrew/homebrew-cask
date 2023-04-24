@@ -8,14 +8,6 @@ cask "dia" do
   desc "Draw structured diagrams"
   homepage "http://dia-installer.de/"
 
-  livecheck do
-    url "http://dia-installer.de/download/macosx.html"
-    strategy :page_match do |page|
-      page.scan(/href=.*?Dia[._-]v?(\d+(?:\.\d+)+)-(\d+)\.dmg/i)
-          .map { |matches| "#{matches[0]},#{matches[1]}" }
-    end
-  end
-
   depends_on cask: "xquartz"
 
   app "Dia.app"
