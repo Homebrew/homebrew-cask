@@ -14,6 +14,54 @@ env:
   CASKS: >
     google-chrome
     firefox
+    microsoft-edge
+    tor-browser
+    zoom
+    zoom-for-it-admins
+    tsh
+    teleport-connect
+    sol
+    jupyterlab
+    copilot-for-xcode
+    viber
+    telegram-desktop
+    telegram
+    skype
+    whatsapp
+    burp-suite
+    codeql
+    arc
+    logseq
+    microsoft-openjdk
+    librewolf
+    apifox
+    beeper
+    bettertouchtool
+    bike
+    electron
+    eloston-chromium
+    flipper
+    gather
+    glyphs
+    grammarly-desktop
+    grandtotal
+    hepta
+    macupdater
+    metasploit
+    netron
+    openlens
+    opera
+    opera-gx
+    pitch
+    qownnotes
+    setapp
+    sigmaos
+    signal
+    stats
+    vrew
+    vscodium
+    warp
+    webull
 
 permissions:
   contents: read
