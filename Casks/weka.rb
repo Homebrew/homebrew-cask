@@ -19,4 +19,13 @@ cask "weka" do
   end
 
   app "weka-#{version}.app"
+
+  zap trash: [
+    "~/Library/Saved Application State/weka.gui.savedState",
+    "~/wekafiles",
+  ]
+
+  caveats do
+    depends_on_java "8+"
+  end
 end
