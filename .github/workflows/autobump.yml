@@ -17,6 +17,7 @@ env:
     microsoft-edge
     tor-browser
     zoom
+    zoom-for-it-admins
     tsh
     teleport-connect
     sol
