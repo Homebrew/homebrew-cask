@@ -12,10 +12,21 @@ cask "whatsize" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   pkg "WhatSize.pkg"
 
   uninstall pkgutil:   "com.id-design.v#{version.major}.whatsize.pkg",
             launchctl: "com.id-design.v#{version.major}.whatsizehelper"
+
+  zap trash: [
+    "/Library/LaunchDaemons/com.id-design.v7.whatsizehelper.plist",
+    "/Library/PrivilegedHelperTools/com.id-design.v7.whatsizehelper",
+    "~/Library/Application Support/WhatSize",
+    "~/Library/Caches/com.id-design.v7.whatsize",
+    "~/Library/HTTPStorages/com.id-design.v7.whatsize",
+    "~/Library/Logs/WhatSize.log",
+    "~/Library/Preferences/com.id-design.v7.whatsize.plist",
+    "~/Library/Saved Application State/com.id-design.v7.whatsize.savedState",
+  ]
 end
