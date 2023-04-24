@@ -9,7 +9,8 @@ module CiMatrix
 
   RUNNERS = {
     { symbol: :big_sur,  name: "macos-11", arch: :intel } => 0.0,
-    { symbol: :monterey, name: "macos-12", arch: :intel } => 1.0,
+    { symbol: :monterey, name: "macos-12", arch: :intel } => 0.0,
+    { symbol: :ventura,  name: "macos-13", arch: :intel } => 1.0,
   }.freeze
 
   # This string uses regex syntax and is intended to be interpolated into
