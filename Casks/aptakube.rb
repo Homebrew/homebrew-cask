@@ -4,7 +4,7 @@ cask "aptakube" do
 
   url "https://releases.aptakube.com/Aptakube_#{version}_universal.dmg"
   name "Aptakube"
-  desc "Modern, lightweight and multi-cluster Kubernetes desktop client"
+  desc "Kubernetes desktop client"
   homepage "https://aptakube.com/"
 
   livecheck do
