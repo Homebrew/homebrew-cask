@@ -20,8 +20,8 @@ cask "gamemaker" do
     # This is because `open "$APP_PATH"&` is called from the postinstall
     # script of the package and we don't want any user intervention there.
     retries ||= 3
-    ohai "The GameMaker package postinstall script launches the GameMaker app" unless retries < 3
-    ohai "Attempting to close com.yoyogames.gms2 to avoid unwanted user intervention" unless retries < 3
+    ohai "The GameMaker package postinstall script launches the GameMaker app" if retries >= 3
+    ohai "Attempting to close com.yoyogames.gms2 to avoid unwanted user intervention" if retries >= 3
     return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/GameMaker.app"]
 
   rescue RuntimeError
