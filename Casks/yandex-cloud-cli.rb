@@ -26,7 +26,7 @@ cask "yandex-cloud-cli" do
 
   uninstall delete: "#{staged_path}/#{token}"
 
-  # No zap stanza required
+  zap trash: "~/.config/yandex-cloud"
 
   caveats <<~EOS
     To install shell completions add this to your profile:
