@@ -17,7 +17,7 @@ cask "hdfview" do
   app "HDFView.app"
 
   zap trash: [
-    "~/.hdfview3.3.0",
+    "~/.hdfview#{version}",
     "~/Library/Preferences/HDFView.hdfgroup.org.plist",
   ]
 end
