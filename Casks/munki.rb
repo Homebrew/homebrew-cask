@@ -1,6 +1,6 @@
 cask "munki" do
-  version "6.2.1.4545"
-  sha256 "75948b67a2a0a451d46844775e6afd5f06a9b507c5418ad1b6233e69bec99a5f"
+  version "6.3.0.4574"
+  sha256 "13282720eda7e355c7f2cefa1805fb8f45bff7bcb2192ad25bc9d1571d3b863e"
 
   url "https://github.com/munki/munki/releases/download/v#{version.major_minor_patch}/munkitools-#{version}.pkg",
       verified: "github.com/munki/munki/"
@@ -38,7 +38,8 @@ cask "munki" do
               "com.googlecode.munki.managedsoftwareupdate-install",
               "com.googlecode.munki.managedsoftwareupdate-manualcheck",
               "com.googlecode.munki.munki-notifier",
-            ]
+            ],
+            delete:    "/usr/local/munki"
 
   zap trash: [
     "/Library/LaunchDaemons/com.googlecode.munki.appusaged.plist",
