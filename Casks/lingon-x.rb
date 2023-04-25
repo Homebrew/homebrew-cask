@@ -16,8 +16,8 @@ cask "lingon-x" do
     sha256 "c1c839e8dc13bd295f2080980c5bea22299c33f3333b7c6981161b46d6f021d8"
   end
   on_monterey :or_newer do
-    version "9.2.1"
-    sha256 "9eef547962f3f2f35004cede130ffe619e11e76fb93c946551738ab0cd5b990e"
+    version "9.2.2"
+    sha256 "00d0aec55483417deb29393393640453f82b262ac6b142737366add8ade6811e"
   end
 
   url "https://www.peterborgapps.com/downloads/LingonX#{version.major}.zip"
