@@ -12,8 +12,9 @@ cask "standard-notes" do
   homepage "https://standardnotes.org/"
 
   livecheck do
-    url "https://standardnotes.com/download"
-    regex(/standard-notes-(\d+(?:\.\d+)+)-mac-#{arch}\.dmg/i)
+    url "https://github.com/standardnotes/app/releases?q=prerelease%3Afalse"
+    regex(%r{href=["'].*?tags/@standardnotes/desktop@(\d+(?:\.\d+)+)}i)
+    strategy :page_match
   end
 
   auto_updates true
