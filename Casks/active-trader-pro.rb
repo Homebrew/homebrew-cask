@@ -21,8 +21,8 @@ cask "active-trader-pro" do
     # `open -b com.fmr.activetrader`. Therefore, we must suppress this behavior
     # to make the cask installation non-interactive.
     retries ||= 3
-    ohai "The Active Trader Pro package postinstall script launches the app" unless retries < 3
-    ohai "Attempting to close Active Trader Pro to avoid unwanted user intervention" unless retries < 3
+    ohai "The Active Trader Pro package postinstall script launches the app" if retries >= 3
+    ohai "Attempting to close Active Trader Pro to avoid unwanted user intervention" if retries >= 3
     return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/Active Trader Pro.app"]
   end
 
