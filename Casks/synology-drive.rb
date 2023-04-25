@@ -29,6 +29,7 @@ cask "synology-drive" do
             launchctl: [
               "com.synology.Synology Cloud Station",
               "application.com.synology.CloudStationUI*",
+              "application.com.synology.CloudStationUI.*",
             ],
             delete:    "/Applications/Synology Drive Client.app"
 
