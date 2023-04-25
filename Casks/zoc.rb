@@ -15,10 +15,10 @@ cask "zoc" do
   app "zoc#{version.major}.app"
 
   zap trash: [
-    "~/Library/Application Support/ZOC8 Files",
+    "~/Library/Application Support/ZOC#{version.major} Files",
     "~/Library/Logs/ZOC",
     "~/Library/Preferences/com.emtec.zoc7.plist",
-    "~/Library/Preferences/com.emtec.zoc8.plist",
-    "~/Library/Saved Application State/com.emtec.zoc8.savedState",
+    "~/Library/Preferences/com.emtec.zoc#{version.major}.plist",
+    "~/Library/Saved Application State/com.emtec.zoc#{version.major}.savedState",
   ]
 end
