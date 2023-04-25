@@ -13,4 +13,6 @@ cask "pktriot" do
   end
 
   binary "pktriot-#{version}/pktriot"
+
+  zap trash: "~/.pktriot"
 end
