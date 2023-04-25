@@ -19,4 +19,6 @@ cask "osquery" do
               "com.facebook.osquery",
               "io.osquery.agent",
             ]
+
+  # No zap stanza required
 end

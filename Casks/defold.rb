@@ -1,6 +1,6 @@
 cask "defold" do
-  version "1.4.4"
-  sha256 "a1f3a84e605d3933878715cc3341431dcab5418fa63eff1fa1011eb8d2701725"
+  version "1.4.5"
+  sha256 "b61a837901874a2d811df72cfdf3ff2d55b9edc8be08927c2fadc478b67f3a34"
 
   url "https://github.com/defold/defold/releases/download/#{version}/Defold-x86_64-macos.dmg",
       verified: "github.com/defold/defold/"
