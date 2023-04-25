@@ -13,10 +13,9 @@ cask "capacities" do
   homepage "https://capacities.io/"
 
   livecheck do
-    skip "No version information available"
+    url "https://capacities-frontend-app.s3.eu-central-1.amazonaws.com/latest-mac.yml"
+    strategy :electron_builder
   end
-
-  auto_updates false
 
   app "Capacities.app"
 
