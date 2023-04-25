@@ -11,6 +11,9 @@ cask "standard-notes" do
   desc "Free, open-source, and completely encrypted notes app"
   homepage "https://standardnotes.org/"
 
+  # Using only desktop releases that are not marked as pre-release to align
+  # with the auto-updater strategy used by the app.
+  # See: https://github.com/Homebrew/homebrew-cask/pull/145753#issuecomment-1521465815
   livecheck do
     url "https://github.com/standardnotes/app/releases?q=prerelease%3Afalse"
     regex(%r{href=["'].*?tags/@standardnotes/desktop@(\d+(?:\.\d+)+).*?["']}i)
