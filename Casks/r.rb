@@ -80,20 +80,20 @@ cask "r" do
               "org.R-project*",
             ],
             delete:  [
-              "/Library/Frameworks/R.Framework",
               "/usr/bin/R",
               "/usr/bin/Rscript",
             ]
 
-  zap trash: [
-    "~/.R",
-    "~/.Rapp.history",
-    "~/.RData",
-    "~/.Rhistory",
-    "~/.Rprofile",
-    "~/Library/R",
-    "~/Library/Caches/org.R-project.R",
-  ]
+  zap trash:  [
+        "~/.R",
+        "~/.Rapp.history",
+        "~/.RData",
+        "~/.Rhistory",
+        "~/.Rprofile",
+        "~/Library/R",
+        "~/Library/Caches/org.R-project.R",
+      ],
+      delete: "/Library/Frameworks/R.Framework"
 
   caveats do
     files_in_usr_local
