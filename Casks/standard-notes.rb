@@ -13,7 +13,7 @@ cask "standard-notes" do
 
   livecheck do
     url "https://github.com/standardnotes/app/releases?q=prerelease%3Afalse"
-    regex(%r{href=["'].*?tags/@standardnotes/desktop@(\d+(?:\.\d+)+)}i)
+    regex(%r{href=["'].*?tags/@standardnotes/desktop@(\d+(?:\.\d+)+).*?["']}i)
     strategy :page_match
   end
 
