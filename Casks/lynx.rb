@@ -21,4 +21,10 @@ cask "lynx" do
     "com.clevertouch.lynx",
     "uk.co.clevertouch.Lynx",
   ]
+  
+  zap trash: [
+  "~/Library/Application Support/lynx",
+  "~/Library/Preferences/com.lynx.4.plist",
+  "~/Library/Saved Application State/uk.co.clevertouch.Lynx.savedState",
+]
 end
