@@ -1,8 +1,8 @@
 cask "hdfview" do
-  version "3.2.0"
-  sha256 "f0802a5226a38d8f99493257365b4c3d3b8d1b3dda180bbe540a43bf3d5e95f3"
+  version "3.3.0"
+  sha256 "be4cfcfa2c4a4be4841b660a6010b55d94430e77469ca5dc5f2d684e4737ed23"
 
-  url "https://support.hdfgroup.org/ftp/HDF5/releases/HDF-JAVA/hdfview-#{version}/bin/HDFView-#{version}-osx1013_64.tar.gz"
+  url "https://support.hdfgroup.org/ftp/HDF5/releases/HDF-JAVA/hdfview-#{version}/bin/HDFView-#{version}-macos11_64.tar.gz"
   name "HDFView"
   desc "Tool for browsing and editing HDF files"
   homepage "https://confluence.hdfgroup.org/display/support"
@@ -16,5 +16,8 @@ cask "hdfview" do
 
   app "HDFView.app"
 
-  zap trash: "~/Library/Preferences/HDFView.hdfgroup.org.plist"
+  zap trash: [
+    "~/.hdfview3.3.0",
+    "~/Library/Preferences/HDFView.hdfgroup.org.plist",
+  ]
 end
