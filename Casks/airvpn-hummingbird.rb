@@ -1,4 +1,4 @@
-cask "hummingbird" do
+cask "airvpn-hummingbird" do
   arch arm: "arm64", intel: "x86_64"
 
   version "1.2.1"
