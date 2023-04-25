@@ -1,6 +1,6 @@
 cask "ytpull" do
   version "1.0.0"
-  sha256 "31f71341507b4ca73dc095108fbb442f92d22209d3542918e66833518a270747"
+  sha256 "7a63a7aa5bb397c7518170694b3e00a23eeeaa572391dd022d321b0736aae592"
 
   url "https://github.com/huynguyen-n/YTPull/releases/download/v#{version}/YTPull.zip"
   name "YTPull"
