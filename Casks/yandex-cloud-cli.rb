@@ -5,6 +5,7 @@ cask "yandex-cloud-cli" do
   url "https://storage.yandexcloud.net/yandexcloud-yc/install.sh",
       verified: "yandexcloud.net/yandexcloud-yc/"
   name "Yandex Cloud CLI"
+  desc "CLI for Yandex Cloud"
   homepage "https://cloud.yandex.com/docs/cli/"
 
   livecheck do
@@ -24,6 +25,8 @@ cask "yandex-cloud-cli" do
   binary "yandex-cloud-cli/bin/yc"
 
   uninstall delete: "#{staged_path}/#{token}"
+
+  # No zap stanza required
 
   caveats <<~EOS
     To install shell completions add this to your profile:
