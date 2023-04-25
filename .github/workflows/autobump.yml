@@ -12,42 +12,30 @@ on:
 
 env:
   CASKS: >
-    google-chrome
-    firefox
-    microsoft-edge
-    tor-browser
-    zoom
-    zoom-for-it-admins
-    tsh
-    teleport-connect
-    sol
-    jupyterlab
-    copilot-for-xcode
-    viber
-    telegram-desktop
-    telegram
-    skype
-    whatsapp
-    burp-suite
-    codeql
-    arc
-    logseq
-    microsoft-openjdk
-    librewolf
     apifox
+    arc
     beeper
     bettertouchtool
     bike
+    burp-suite
+    codeql
+    copilot-for-xcode
     electron
-    eloston-chromium
+    firefox
     flipper
     gather
     glyphs
+    google-chrome
     grammarly-desktop
     grandtotal
     hepta
+    jupyterlab
+    librewolf
+    logseq
     macupdater
     metasploit
+    microsoft-edge
+    microsoft-openjdk
     netron
     openlens
     opera
@@ -57,11 +45,22 @@ env:
     setapp
     sigmaos
     signal
+    skype
+    sol
     stats
+    telegram
+    telegram-desktop
+    teleport-connect
+    tor-browser
+    tsh
+    viber
     vrew
     vscodium
     warp
     webull
+    whatsapp
+    zoom
+    zoom-for-it-admins
 
 permissions:
   contents: read
