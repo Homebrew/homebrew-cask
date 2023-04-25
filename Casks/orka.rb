@@ -16,9 +16,4 @@ cask "orka" do
   pkg "orka.pkg"
 
   uninstall pkgutil: "com.macstadium.orka.pkg"
-
-  zap trash: [
-    "~/Library/Application Scripts/com.apple.AMPArtworkAgent",
-    "~/Library/Containers/com.apple.AMPArtworkAgent",
-  ]
 end
