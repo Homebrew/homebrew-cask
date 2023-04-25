@@ -12,4 +12,11 @@ cask "prowritingaid" do
   end
 
   app "ProWritingAid.app"
+
+  zap trash: [
+    "~/Library/Application Support/ProWritingAid",
+    "~/Library/Application Support/ProWritingAid Desktop",
+    "~/Library/Preferences/com.orpheus.prowritingaid.mac.plist",
+    "~/Library/Saved Application State/com.orpheus.prowritingaid.mac.savedState",
+  ]
 end
