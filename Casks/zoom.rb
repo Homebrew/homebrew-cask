@@ -25,8 +25,8 @@ cask "zoom" do
     # This is because `open "$APP_PATH"&` is called from the postinstall
     # script of the package and we don't want any user intervention there.
     retries ||= 3
-    ohai "The Zoom package postinstall script launches the Zoom app" unless retries < 3
-    ohai "Attempting to close zoom.us.app to avoid unwanted user intervention" unless retries < 3
+    ohai "The Zoom package postinstall script launches the Zoom app" if retries >= 3
+    ohai "Attempting to close zoom.us.app to avoid unwanted user intervention" if retries >= 3
     return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/zoom.us.app"]
 
   rescue RuntimeError
