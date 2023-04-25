@@ -1,6 +1,5 @@
 cask "capacities" do
   arch arm: "-arm64"
-  on_arch_conditional arm: "apple-silicon", intel: "mac"
 
   version "1.21.10"
   sha256 arm:   "8f83514639af65237a095cdeb9f5e9c0d5782aff7c21a4537b05005a4e00d9c2",
