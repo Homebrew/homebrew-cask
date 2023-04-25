@@ -1,5 +1,5 @@
 cask "lynx" do
-  version "7.7.12.0"
+  version "7.7.16.0"
   sha256 :no_check
 
   url "https://downloads.lynxcloud.app/lynx-whiteboard/releases/macx/lynx-whiteboard.pkg"
@@ -20,5 +20,11 @@ cask "lynx" do
   uninstall pkgutil: [
     "com.clevertouch.lynx",
     "uk.co.clevertouch.Lynx",
+  ]
+
+  zap trash: [
+    "~/Library/Application Support/lynx",
+    "~/Library/Preferences/com.lynx.4.plist",
+    "~/Library/Saved Application State/uk.co.clevertouch.Lynx.savedState",
   ]
 end
