@@ -4,7 +4,7 @@ cask "klokki" do
 
   url "https://klokki.com/download/Klokki.dmg"
   name "Klokki"
-  desc "Automatic time-tracking solution or freelancers and makers"
+  desc "Automatic time-tracking solution"
   homepage "https://klokki.com/"
 
   # The dates in the appcast are sometimes out of order (i.e., a newer version
@@ -30,8 +30,8 @@ cask "klokki" do
 
   zap trash: [
     "~/Library/Application Scripts/com.klokki-launcher",
-    "~/Library/Application Support/Klokki",
     "~/Library/Application Support/com.klokki.macos",
+    "~/Library/Application Support/Klokki",
     "~/Library/Caches/com.klokki.macos",
     "~/Library/Containers/com.klokki-launcher",
     "~/Library/HTTPStorages/com.klokki.macos",
