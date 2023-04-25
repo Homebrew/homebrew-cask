@@ -1,10 +1,10 @@
 cask "klokki" do
-  version "1.3.6,85"
+  version "1.3.7,91"
   sha256 :no_check
 
   url "https://klokki.com/download/Klokki.dmg"
   name "Klokki"
-  desc "Automatic time-tracking solution or freelancers and makers"
+  desc "Automatic time-tracking solution"
   homepage "https://klokki.com/"
 
   # The dates in the appcast are sometimes out of order (i.e., a newer version
@@ -24,4 +24,18 @@ cask "klokki" do
   depends_on macos: ">= :high_sierra"
 
   app "Klokki.app"
+
+  uninstall launchctl: "com.klokki-launcher",
+            quit:      "com.klokki-launcher"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.klokki-launcher",
+    "~/Library/Application Support/com.klokki.macos",
+    "~/Library/Application Support/Klokki",
+    "~/Library/Caches/com.klokki.macos",
+    "~/Library/Containers/com.klokki-launcher",
+    "~/Library/HTTPStorages/com.klokki.macos",
+    "~/Library/HTTPStorages/com.klokki.macos.binarycookies",
+    "~/Library/Preferences/com.klokki.macos.plist",
+  ]
 end
