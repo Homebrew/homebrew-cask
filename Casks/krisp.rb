@@ -18,15 +18,25 @@ cask "krisp" do
   auto_updates true
   depends_on macos: ">= :mojave"
 
-  pkg "krisp_#{version}.pkg"
+  pkg "krisp_#{version}_#{arch}.pkg"
 
   uninstall quit:      "ai.krisp.krispMac",
+            script:    {
+              executable: "#{appdir}/Utilities/krisp/Uninstaller.app/Contents/MacOS/Uninstaller",
+              sudo:       true,
+            },
             launchctl: [
               "ai.krisp.krispMac.cameraAssistant",
               "ai.krisp.krispMac.LaunchHelper",
+              "krisp",
             ],
             pkgutil:   [
               "ai.krisp.krispMac",
+              "ai.krisp.krispMac.audioDriver",
+              "ai.krisp.krispMac.audioDriver.sli",
+              "ai.krisp.krispMac.pkg",
+              "ai.krisp.krispMac.prevUninstaller",
+              "ai.krisp.krispMac.uli",
               "ai.krisp.krispMacLaunch",
               "ai.krisp.krispMacVideo",
             ]
