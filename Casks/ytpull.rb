@@ -4,7 +4,7 @@ cask "ytpull" do
 
   url "https://github.com/huynguyen-n/YTPull/releases/download/v#{version}/YTPull.zip"
   name "YTPull"
-  desc "Simple macOS App for downloading YouTube videos and audio"
+  desc "Simple app for downloading YouTube videos and audio"
   homepage "https://github.com/huynguyen-n/YTPull"
 
   app "YTPull.app"
