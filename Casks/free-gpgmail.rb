@@ -45,4 +45,6 @@ cask "free-gpgmail" do
 
   uninstall quit:   "org.gpgtools.gpgmail.upgrader",
             delete: "~/Library/Mail/Bundles/Free-GPGMail_#{version.csv.first.major}.mailbundle"
+
+  # No zap stanza required
 end
