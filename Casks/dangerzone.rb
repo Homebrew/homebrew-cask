@@ -1,8 +1,11 @@
 cask "dangerzone" do
-  version "0.4.0"
-  sha256 "552df48cd9ef54345698499419a35bdd74a7397564e244f1364165c7f9ba4b65"
+  arch arm: "arm64", intel: "i686"
 
-  url "https://github.com/freedomofpress/dangerzone/releases/download/v#{version}/Dangerzone-#{version}.dmg",
+  version "0.4.1"
+  sha256 arm:   "ecaa65f030cdf2ecdd422c134b4c5951249dbd85d8a7bcce33ec45838f7fff49",
+         intel: "7fc652c81efd45318e6b07372c6c075c345a55730e0b8b4b30cd8ace8a5fe0a1"
+
+  url "https://github.com/freedomofpress/dangerzone/releases/download/v#{version}/Dangerzone-#{version}-#{arch}.dmg",
       verified: "github.com/freedomofpress/dangerzone/"
   name "Dangerzone"
   desc "Convert potentially dangerous PDFs or Office documents into safe PDFs"
@@ -14,4 +17,9 @@ cask "dangerzone" do
   end
 
   app "Dangerzone.app"
+
+  zap trash: [
+    "~/Library/Application Support/dangerzone",
+    "~/Library/Saved Application State/press.freedom.dangerzone.savedState",
+  ]
 end
