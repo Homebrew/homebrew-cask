@@ -14,7 +14,10 @@ cask "easydict" do
   zap trash: [
     "~/Library/Application Support/com.izual.Easydict",
     "~/Library/Caches/com.izual.Easydict",
+    "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.izual.Easydict",
     "~/Library/HTTPStorages/com.izual.Easydict",
+    "~/Library/HTTPStorages/com.izual.Easydict.binarycookies",
     "~/Library/Preferences/com.izual.Easydict.plist",
+    "~/Library/WebKit/com.izual.Easydict",
   ]
 end
