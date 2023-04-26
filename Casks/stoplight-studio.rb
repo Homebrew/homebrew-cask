@@ -22,4 +22,11 @@ cask "stoplight-studio" do
   end
 
   app "Stoplight Studio.app"
+
+  zap trash: [
+    "~/Library/Application Support/Stoplight Studio",
+    "~/Library/Logs/Stoplight Studio",
+    "~/Library/Preferences/com.stoplight.studio.plist",
+    "~/Library/Saved Application State/com.stoplight.studio.savedState",
+  ]
 end
