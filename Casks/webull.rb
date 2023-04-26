@@ -6,7 +6,7 @@ cask "webull" do
       verified: "u1sweb.webullfintech.com/us/"
   name "Webull"
   desc "Desktop client for Webull Financial LLC"
-  homepage "https://webull.com/"
+  homepage "https://www.webull.com/"
 
   livecheck do
     url "https://infoapi.webullfintech.com/api/operation/appver/last?platform=qt_mac_global&osv=10.14"
