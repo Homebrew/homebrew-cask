@@ -11,6 +11,11 @@ cask "captain" do
   desc "Manage Docker containers from the menu bar"
   homepage "https://getcaptain.co/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Captain.app"
 
   zap trash: [
