@@ -15,4 +15,13 @@ cask "neo4j" do
   end
 
   app "Neo4j Desktop.app"
+
+  zap trash: [
+    "~/Library/Application Support/Neo4j Desktop",
+    "~/Library/Application Support/com.Neo4j.Relate",
+    "~/Library/Caches/com.Neo4j.Relate",
+    "~/Library/Logs/Neo4j Desktop",
+    "~/Library/Preferences/com.neo4j.neo4j-desktop.plist",
+    "~/Library/Saved Application State/com.neo4j.neo4j-desktop.savedState",
+  ]
 end
