@@ -18,8 +18,9 @@ cask "openbb-terminal" do
 
   depends_on macos: ">= :monterey"
 
-  suite "OpenBB Terminal"
   pkg "#{arch}.MacOS.OpenBB.Terminal.v#{version}.pkg"
+
+  uninstall pkgutil: "OpenBB Terminal"
 
   zap trash: [
     "~/.openbb_terminal",
