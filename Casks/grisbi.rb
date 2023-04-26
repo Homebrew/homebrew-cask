@@ -14,4 +14,10 @@ cask "grisbi" do
   end
 
   app "Grisbi.app"
+
+  zap trash: [
+    "~/Library/Application Support/Grisbi",
+    "~/Library/Preferences/org.grisbi.Grisbi.plist",
+    "~/Library/Saved Application State/org.grisbi.Grisbi.savedState",
+  ]
 end
