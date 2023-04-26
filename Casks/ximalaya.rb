@@ -1,6 +1,6 @@
 cask "ximalaya" do
-  version "3.3.8,GKwRIDoIDV21ACAAAAIOUXT0,3ba1,B7,8D"
-  sha256 "9637d7ecdad7f3425f941e930cf54e6775de15d87f402fa5cd80b2deca96d783"
+  version "4.0.0,GMCoOSMIGmpqACAAAAISmOuF,9198,26,49"
+  sha256 "61e157e303e27f11ccdb328a62e2930540d818c07fb01fdb1dc4b8ca25ccf3fc"
 
   url "https://nativedl.pcdn.xmcdn.com/storages/#{version.csv.third}-audiofreehighqps/#{version.csv.fourth}/#{version.csv.fifth}/#{version.csv.second}.dmg?ct=application/octet-stream&filename=Ximalaya_#{version.csv.first}_x64_c_99",
       verified: "nativedl.pcdn.xmcdn.com/storages/"
