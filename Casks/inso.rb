@@ -15,4 +15,6 @@ cask "inso" do
   conflicts_with cask: "homebrew/cask-versions/inso-beta"
 
   binary "inso"
+
+  # No zap stanza required
 end
