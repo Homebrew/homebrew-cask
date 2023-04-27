@@ -1,4 +1,4 @@
-cask "gk" do
+cask "gitkraken-cli" do
   arch arm: "macOS_arm64", intel: "macOS_x86_64"
 
   version "1.0.3"
@@ -7,14 +7,10 @@ cask "gk" do
 
   url "https://github.com/gitkraken/gk-cli/releases/download/v#{version}/gk_#{version}_#{arch}.zip"
   name "GitKraken CLI"
-  desc "GitKraken on the command-line"
+  desc "CLI for GitKraken"
   homepage "https://github.com/gitkraken/gk-cli"
 
   binary "gk"
 
-  uninstall
-
-  zap trash: [
-    "~/.gitkraken",
-  ]
+  zap trash: "~/.gitkraken"
 end
