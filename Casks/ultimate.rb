@@ -15,4 +15,12 @@ cask "ultimate" do
   pkg "Ultimate.pkg"
 
   uninstall pkgutil: "EpuborStudioUltimate2"
+
+  zap trash: [
+    "~/.Epubor_Keys",
+    "~/.Ultimate",
+    "~/EpuborLog",
+    "~/Library/Preferences/Ultimate.plist",
+    "~/Library/Saved Application State/Ultimate.savedState",
+  ]
 end
