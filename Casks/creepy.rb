@@ -10,6 +10,8 @@ cask "creepy" do
 
   app "cree.py.app"
 
+  zap trash: "~/.creepy"
+
   caveats do
     discontinued
   end
