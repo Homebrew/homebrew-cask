@@ -10,7 +10,7 @@ cask "schildichat" do
 
   livecheck do
     url "https://github.com/SchildiChat/schildichat-desktop/releases/latest"
-    regex(%r{href=["']?[^"' >]*?/tag/v?(\d+(?:\.\d+)+-sc\.?1)["' >]}i)
+    regex(%r{href=["']?[^"' >]*?/tag/v?(\d+(?:\.\d+)+-\w*?\.?\d*?)["' >]}i)
   end
 
   app "SchildiChat.app"
