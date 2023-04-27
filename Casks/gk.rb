@@ -13,4 +13,8 @@ cask "gk" do
   binary "gk"
 
   uninstall
+
+  zap trash: [
+    "~/.gitkraken",
+  ]
 end
