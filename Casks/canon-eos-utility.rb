@@ -33,7 +33,7 @@ cask "canon-eos-utility" do
 
   auto_updates true
 
-  installer manual: "eum#{version.major_minor}-installer.app"
+  installer manual: "eum#{version}-installer.app"
 
   uninstall delete: [
               "/Applications/Canon Utilities/CameraSurveyProgram",
