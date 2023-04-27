@@ -22,6 +22,8 @@ cask "oxygen-xml-editor" do
 
   suite "Oxygen XML Editor"
 
+  zap trash: "~/Library/Preferences/com.oxygenxml"
+
   caveats do
     license "https://www.oxygenxml.com/eula.html"
   end
