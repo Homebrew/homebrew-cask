@@ -1,9 +1,9 @@
 cask "miniconda" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "py310_23.1.0-1"
-  sha256 arm:   "cc5bcf95d5db0f7f454b2d800d52da8b70563f8454d529e7ac2da9725650eb27",
-         intel: "bfb81814e16eb450b1dbde7b4ecb9ebc5186834cb4ede5926c699762ca69953b"
+  version "py310_23.3.1-0"
+  sha256 arm:   "9d1d12573339c49050b0d5a840af0ff6c32d33c3de1b3db478c01878eb003d64",
+         intel: "5abc78b664b7da9d14ade330534cc98283bb838c6b10ad9cfd8b9cc4153f8104"
 
   url "https://repo.anaconda.com/miniconda/Miniconda3-#{version}-MacOSX-#{arch}.sh",
       verified: "repo.anaconda.com/miniconda/"
