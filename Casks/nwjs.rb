@@ -14,4 +14,11 @@ cask "nwjs" do
 
   app "nwjs-sdk-v#{version}-osx-x64/nwjs.app"
   binary "nwjs-sdk-v#{version}-osx-x64/nwjc"
+
+  zap trash: [
+    "~/Library/Application Support/nwjs",
+    "~/Library/Caches/nwjs",
+    "~/Library/Preferences/io.nwjs.nwjs.plist",
+    "~/Library/Saved Application State/io.nwjs.nwjs.savedState",
+  ]
 end
