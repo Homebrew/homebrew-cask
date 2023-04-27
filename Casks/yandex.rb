@@ -23,4 +23,12 @@ cask "yandex" do
   auto_updates true
 
   app "Yandex.app"
+
+  zap trash: [
+    "~/.yandex",
+    "~/Library/Application Support/Yandex",
+    "~/Library/Caches/Yandex",
+    "~/Library/Preferences/ru.yandex.desktop.yandex-browser.plist",
+    "~/Library/Saved Application State/ru.yandex.desktop.yandex-browser.savedState",
+  ]
 end
