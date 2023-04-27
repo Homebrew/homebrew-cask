@@ -16,4 +16,6 @@ cask "nosleep" do
   depends_on macos: ">= :high_sierra"
 
   app "NoSleep.app"
+
+  # No zap stanza required
 end
