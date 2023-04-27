@@ -1,6 +1,6 @@
 cask "appium-inspector" do
-  version "2023.4.2"
-  sha256 "97740ab234c20e45c9e15bbf89d2f9742cb3062fa53b01e20b53d75ec308ea0c"
+  version "2023.4.3"
+  sha256 "343347baf8c0ae1989abac0fe290d2aa4c0aacd9030493c085781cc55aa6dbe4"
 
   url "https://github.com/appium/appium-inspector/releases/download/v#{version}/Appium-Inspector-#{version}-universal-mac.zip"
   name "Appium Inspector GUI"
