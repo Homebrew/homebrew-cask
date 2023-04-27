@@ -1,6 +1,6 @@
 cask "mmhmm-studio" do
-  version "2.4.2,1676520000"
-  sha256 "6fb094e0f5f454d564e79d0abb17317cce264d50cf56346a4772fa1b97a09433"
+  version "2.5.0,1682100000"
+  sha256 "9123c520c7be7fa1cd0ea877a6cb1218c55432b07729e3704153392b74090345"
 
   url "https://updates.mmhmm.app/mac/production/mmhmmStudio_#{version.csv.first}.zip"
   name "mmhmm Studio"
@@ -24,5 +24,11 @@ cask "mmhmm-studio" do
 
   uninstall pkgutil:   "app.mmhmm.app",
             quit:      "app.mmhmm.app",
+            delete:    [
+              "/Library/Audio/Plug-Ins/HAL/mmhmmAudio.driver",
+              "/Library/CoreMediaIO/Plug-Ins/DAL/mmhmmCamera.plugin",
+            ],
             launchctl: "app.mmhmm.Camera.Assistant"
+
+  zap trash: "~/Library/Preferences/app.mmhmm.app.plist"
 end
