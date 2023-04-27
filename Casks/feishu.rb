@@ -6,8 +6,8 @@ cask "feishu" do
     sha256 "86c603c781239a74e7d66195cc6aa7011950acdbdd718258bb51eca96fb01625"
   end
   on_intel do
-    version "6.2.5,a04ad38d"
-    sha256 "8f06b2542921262d9b66ab81582c4afedc2e3c0d6444c3944cca7509b0b4a575"
+    version "6.3.7,802e19b6"
+    sha256 "b19e7832f5c2eda60742d57383c026c260f71d18a530fcbeb18cb874615ae3e8"
   end
 
   url "https://sf3-cn.feishucdn.com/obj/ee-appcenter/#{version.csv.second}/Feishu-darwin_#{arch}-#{version.csv.first}-signed.dmg",
