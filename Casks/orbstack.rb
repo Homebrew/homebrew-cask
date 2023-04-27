@@ -37,7 +37,7 @@ cask "orbstack" do
         "~/.orbstack",
         "~/Library/Caches/dev.kdrag0n.MacVirt",
         "~/Library/HTTPStorages/dev.kdrag0n.MacVirt",
-        "~/Library/Preferences/dev.krag0n.MacVirt.plist",
+        "~/Library/Preferences/dev.kdrag0n.MacVirt.plist",
         "~/Library/WebKit/dev.kdrag0n.MacVirt",
         "~/Library/Saved Application State/dev.kdrag0n.MacVirt.savedState",
       ],
