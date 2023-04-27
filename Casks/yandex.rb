@@ -1,7 +1,7 @@
 cask "yandex" do
   arch arm: "&arch=arm64"
 
-  version "23.3.0"
+  version "23.3.3"
   sha256 :no_check
 
   url "https://browser.yandex.ru/download/?os=mac#{arch}&full=1",
@@ -23,4 +23,12 @@ cask "yandex" do
   auto_updates true
 
   app "Yandex.app"
+
+  zap trash: [
+    "~/.yandex",
+    "~/Library/Application Support/Yandex",
+    "~/Library/Caches/Yandex",
+    "~/Library/Preferences/ru.yandex.desktop.yandex-browser.plist",
+    "~/Library/Saved Application State/ru.yandex.desktop.yandex-browser.savedState",
+  ]
 end
