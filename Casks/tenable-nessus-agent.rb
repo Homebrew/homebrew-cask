@@ -31,6 +31,8 @@ cask "tenable-nessus-agent" do
             ],
             launchctl: "com.tenablesecurity.nessusagent"
 
+  # No zap stanza required
+
   caveats do
     license "https://static.tenable.com/prod_docs/tenable_slas.html"
   end
