@@ -24,5 +24,11 @@ cask "mmhmm-studio" do
 
   uninstall pkgutil:   "app.mmhmm.app",
             quit:      "app.mmhmm.app",
+            delete:    [
+              "/Library/Audio/Plug-Ins/HAL/mmhmmAudio.driver",
+              "/Library/CoreMediaIO/Plug-Ins/DAL/mmhmmCamera.plugin",
+            ],
             launchctl: "app.mmhmm.Camera.Assistant"
+
+  zap trash: "~/Library/Preferences/app.mmhmm.app.plist"
 end
