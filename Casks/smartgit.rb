@@ -30,4 +30,10 @@ cask "smartgit" do
 
   app "SmartGit.app"
   binary "#{appdir}/SmartGit.app/Contents/MacOS/SmartGit"
+
+  zap trash: [
+    "~/Library/Preferences/SmartGit",
+    "~/Library/Preferences/com.syntevo.smartgit.plist",
+    "~/Library/Saved Application State/com.syntevo.smartgit.savedState",
+  ]
 end

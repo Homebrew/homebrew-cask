@@ -1,11 +1,11 @@
 cask "jdk-mission-control" do
   arch arm: "aarch64", intel: "x64"
 
-  version "8.3.0,05"
-  sha256 arm:   "0dbd05efe465c42b6b9ebdb5221c8e4e992ef23650b10a3009b7622167fc2dd7",
-         intel: "aa35042cade725c8f6490f61819c0ee24802a1d47b93a1a18fd34924d2546bb7"
+  version "8.3.1,05"
+  sha256 arm:   "41d5add99b24da77fc580ecf10d28a4843334faf2677af055d0d55cf379b2998",
+         intel: "07fd19be68fe7357c745f0a87ffb860d7ac92ae4e94fce9f79e07ac375fb8576"
 
-  url "https://download.java.net/java/GA/jmc#{version.major}/#{version.csv.second}/binaries/jmc-#{version.csv.first}_osx-#{arch}.tar.gz"
+  url "https://download.java.net/java/GA/jmc#{version.major}/#{version.csv.second}/binaries/jmc-#{version.csv.first}_macos-#{arch}.tar.gz"
   name "JDK Mission Control"
   desc "Tools to manage, monitor, profile and troubleshoot Java applications"
   homepage "https://jdk.java.net/jmc/8"
@@ -13,14 +13,19 @@ cask "jdk-mission-control" do
   livecheck do
     url :homepage
     strategy :page_match do |page|
-      match = page.match(%r{href=.*?/(\d+)/binaries/jmc[._-]v?(\d+(?:\.\d+)*)[._-]osx[._-]#{arch}\.tar\.gz}i)
+      match = page.match(%r{href=.*?/(\d+)/binaries/jmc[._-]v?(\d+(?:\.\d+)*)[._-]macos[._-]#{arch}\.tar\.gz}i)
       next if match.blank?
 
       "#{match[2]},#{match[1]}"
     end
   end
 
-  app "jmc-#{version.csv.first}_osx-#{arch}/JDK Mission Control.app"
+  app "jmc-#{version.csv.first}_macos-#{arch}/JDK Mission Control.app"
+
+  zap trash: [
+    "~/.jmc",
+    "~/Library/Preferences/org.openjdk.jmc.plist",
+  ]
 
   caveats do
     depends_on_java "11"
