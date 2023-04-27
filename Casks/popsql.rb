@@ -13,4 +13,11 @@ cask "popsql" do
   end
 
   app "PopSQL.app"
+
+  zap trash: [
+    "~/.popsql.json",
+    "~/Library/Application Support/PopSQL",
+    "~/Library/Preferences/org.electron.popsql.plist",
+    "~/Library/Saved Application State/org.electron.popsql.savedState",
+  ]
 end
