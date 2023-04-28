@@ -30,5 +30,8 @@ cask "mmhmm-studio" do
             ],
             launchctl: "app.mmhmm.Camera.Assistant"
 
-  zap trash: "~/Library/Preferences/app.mmhmm.app.plist"
+  zap trash: [
+    "~/Library/Preferences/app.mmhmm.app.plist",
+    "~/Library/Saved Application State/app.mmhmm.app.savedState",
+  ]
 end
