@@ -7,16 +7,11 @@ cask "vmware-fusion" do
   desc "Create, manage, and run virtual machines"
   homepage "https://www.vmware.com/products/fusion.html"
 
-  # Here we are parsing the download URL for each version. Since the versions
-  # are not in order, we sort them by the version number, take the largest and
-  # replace '/' with ','
   livecheck do
     url "https://softwareupdate.vmware.com/cds/vmw-desktop/fusion-universal.xml"
     regex(%r{fusion/(\d+(?:\.\d+)+/\d+)}i)
     strategy :page_match do |page, regex|
-      matches = page.scan(regex)
-      latest_version = matches.max_by { |match| match[0].split("/").map(&:to_i) }[0].tr("/", ",")
-      latest_version.to_s
+      page.scan(regex).map { |match| match&.first&.tr("/", ",") }
     end
   end
 
