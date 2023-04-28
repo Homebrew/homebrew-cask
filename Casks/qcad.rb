@@ -25,4 +25,10 @@ cask "qcad" do
   end
 
   app "QCAD.app"
+
+  zap trash: [
+    "~/.config/QCAD",
+    "~/Library/Preferences/org.qcad.plist",
+    "~/Library/Saved Application State/org.qcad.savedState",
+  ]
 end
