@@ -19,5 +19,6 @@ cask "hdfview" do
   zap trash: [
     "~/.hdfview#{version}",
     "~/Library/Preferences/HDFView.hdfgroup.org.plist",
+    "~/Library/Saved Application State/hdf.view.savedState",
   ]
 end
