@@ -15,9 +15,9 @@ cask "010-editor" do
   app "010 Editor.app"
 
   zap trash: [
-    "~/.config/SweetScape",
-    "~/Documents/SweetScape",
-    "~/Library/Application Support/SweetScape",
-    "~/Library/Saved Application State/com.SweetScape.010Editor.savedState",
-  ]
+        "~/.config/SweetScape",
+        "~/Library/Application Support/SweetScape",
+        "~/Library/Saved Application State/com.SweetScape.010Editor.savedState",
+      ],
+      rmdir: "~/Documents/SweetScape"
 end
