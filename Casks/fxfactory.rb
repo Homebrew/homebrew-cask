@@ -22,6 +22,7 @@ cask "fxfactory" do
   pkg "Install FxFactory #{version.csv.first}.pkg"
 
   uninstall pkgutil:   "com.fxfactory.pkg",
+            quit:      "com.fxfactory.Fxfactory",
             launchctl: "com.fxfactory.FxFactory.helper",
             delete:    [
               "/Library/Application Support/FxFactory",
@@ -31,6 +32,7 @@ cask "fxfactory" do
 
   zap trash: [
     "~/Library/Application Scripts/com.fxfactory.FxFactoryService.pluginkit",
+    "~/Library/Preferences/com.fxfactory.FxFactory.plist",
     "~/Movies/Motion Templates.localized",
   ]
 end
