@@ -20,13 +20,13 @@ cask "whatsize" do
             launchctl: "com.id-design.v#{version.major}.whatsizehelper"
 
   zap trash: [
-    "/Library/LaunchDaemons/com.id-design.v7.whatsizehelper.plist",
-    "/Library/PrivilegedHelperTools/com.id-design.v7.whatsizehelper",
+    "/Library/LaunchDaemons/com.id-design.v#{version.major}.whatsizehelper.plist",
+    "/Library/PrivilegedHelperTools/com.id-design.v#{version.major}.whatsizehelper",
     "~/Library/Application Support/WhatSize",
-    "~/Library/Caches/com.id-design.v7.whatsize",
-    "~/Library/HTTPStorages/com.id-design.v7.whatsize",
+    "~/Library/Caches/com.id-design.v#{version.major}.whatsize",
+    "~/Library/HTTPStorages/com.id-design.v#{version.major}.whatsize",
     "~/Library/Logs/WhatSize.log",
-    "~/Library/Preferences/com.id-design.v7.whatsize.plist",
-    "~/Library/Saved Application State/com.id-design.v7.whatsize.savedState",
+    "~/Library/Preferences/com.id-design.v#{version.major}.whatsize.plist",
+    "~/Library/Saved Application State/com.id-design.v#{version.major}.whatsize.savedState",
   ]
 end

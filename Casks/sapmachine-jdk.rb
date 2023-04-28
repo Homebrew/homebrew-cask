@@ -20,5 +20,5 @@ cask "sapmachine-jdk" do
 
   artifact "sapmachine-jdk-#{version}.jdk", target: "/Library/Java/JavaVirtualMachines/sapmachine-jdk-#{version}.jdk"
 
-  # No zap stanza required
+  zap trash: "~/Library/Saved Application State/com.sap.openjdk.jconsole.savedState"
 end

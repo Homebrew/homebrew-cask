@@ -22,5 +22,6 @@ cask "arduino-ide" do
   zap trash: [
     "~/.arduinoIDE",
     "~/Library/Application Support/arduino-ide",
+    "~/Library/Saved Application State/cc.arduino.IDE2.savedState",
   ]
 end
