@@ -14,6 +14,7 @@ cask "intune-company-portal" do
     end
   end
 
+  auto_updates true
   depends_on cask: "microsoft-auto-update"
   depends_on macos: ">= :mojave"
 
