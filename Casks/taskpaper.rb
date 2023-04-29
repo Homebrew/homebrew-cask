@@ -1,6 +1,6 @@
 cask "taskpaper" do
   version "3.9.1"
-  sha256 "3bb4488a36240a4c4979455a8bbb3c821dd8893cb0ebaaab0460dd6dcaae81e4"
+  sha256 "879b791b0e62d5d29bb03b27ac19d8a6a279dbab9a5a154ebc0763bd69e0d89a"
 
   url "https://www.taskpaper.com/assets/app/TaskPaper-#{version}.dmg"
   name "TaskPaper"
