@@ -22,7 +22,7 @@ cask "ddpm" do
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/qisda.autolaunchddpmhelper.sfl2",
-    "~/Libraray/Caches/Qisda.DDPM",
+    "~/Library/Caches/Qisda.DDPM",
     "~/Library/Containers/Qisda.AutoLaunchDDPMHelper",
     "~/Library/HTTPStorages/Qisda.DDPM",
     "~/Library/HTTPStorages/Qisda.DDPM.binarycookies",
