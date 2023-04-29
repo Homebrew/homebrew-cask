@@ -1,9 +1,9 @@
 cask "mysql-connector-python" do
   arch arm: "arm64", intel: "x86-64bit"
 
-  version "8.0.32"
-  sha256 arm:   "a7bfa85d89cf62df8123c200e0390cc0c4927b02a323adb6d0a707e6d4dba23c",
-         intel: "511206c0ef8a4eda208d77839fa418f4ecf89f0da24319fca6baf728e63faf53"
+  version "8.0.33"
+  sha256 arm:   "2f1740c09feae8a2eea023ebeb1b1575dfd5c00e0fe6a537d28aa91e521b6142",
+         intel: "eab771f47c4fc7aa678fe0fed590454365c43850786366a0763a5235fb1054af"
 
   url "https://dev.mysql.com/get/Downloads/Connector-Python/mysql-connector-python-#{version}-macos13-#{arch}.dmg"
   name "MySQL Connector for Python"
@@ -27,4 +27,6 @@ cask "mysql-connector-python" do
     "com.mysql.connector-python-py3.11",
     "com.oracle.mysql.connector.python",
   ]
+
+  # No zap stanza required
 end

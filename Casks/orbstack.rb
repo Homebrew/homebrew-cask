@@ -1,9 +1,9 @@
 cask "orbstack" do
   arch arm: "arm64", intel: "amd64"
 
-  version "0.7.2_1220"
-  sha256 arm:   "2d7b74c1be2a3c9b70e965311a32eb47feca66131dbaea71d7913bcb2619916c",
-         intel: "af4c3ea8534d071a7ce7dd7a21c30e7706dec0885e9d687a28522a13f03eb22c"
+  version "0.8.0_1318"
+  sha256 arm:   "99e23c60c6a9a5e2bd9182c0fd325c77dfbc448a6d491f8236eacd727153c707",
+         intel: "32f4c3c298ca0a0ca91325b1389bcea3914269100f05f451ebe6eb2509c64a6d"
 
   url "https://cdn-updates.orbstack.dev/#{arch}/OrbStack_v#{version}_#{arch}.dmg"
   name "OrbStack"
@@ -37,7 +37,7 @@ cask "orbstack" do
         "~/.orbstack",
         "~/Library/Caches/dev.kdrag0n.MacVirt",
         "~/Library/HTTPStorages/dev.kdrag0n.MacVirt",
-        "~/Library/Preferences/dev.krag0n.MacVirt.plist",
+        "~/Library/Preferences/dev.kdrag0n.MacVirt.plist",
         "~/Library/WebKit/dev.kdrag0n.MacVirt",
         "~/Library/Saved Application State/dev.kdrag0n.MacVirt.savedState",
       ],

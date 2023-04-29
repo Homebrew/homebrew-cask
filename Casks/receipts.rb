@@ -1,6 +1,6 @@
 cask "receipts" do
-  version "1.9.19-594"
-  sha256 "0b6acaf38e455141e482f26ee19e76b0c73570ccd74a5954adada176e46f74f7"
+  version "1.10-624"
+  sha256 "762462b577fc343d15bdeebde2a0bf4959c74e865d74a0338137883b8853307b"
 
   url "https://www.receipts-app.com/update/download/Receipts-#{version}.zip"
   name "Receipts"
@@ -12,7 +12,7 @@ cask "receipts" do
     regex(/href=.*?Receipts[._-]v?(\d+(?:[.-]\d+)+)\.zip/i)
   end
 
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :high_sierra"
 
   app "Receipts.app"
 
@@ -24,6 +24,7 @@ cask "receipts" do
     "~/Library/Containers/com.apperdeck.mac.Receipts.ReceiptsShareExtension",
     "~/Library/HTTPStorages/com.apperdeck.mac.Receipts",
     "~/Library/Logs/Receipts",
+    "~/Library/PDF Services/Save PDF to Receipts",
     "~/Library/Preferences/com.apperdeck.mac.Receipts.plist",
     "~/Library/Saved Application State/com.apperdeck.mac.Receipts.savedState",
     "~/Library/WebKit/com.apperdeck.mac.Receipts",

@@ -8,4 +8,10 @@ cask "openkey" do
   homepage "https://github.com/tuyenvm/OpenKey/"
 
   app "OpenKey.app"
+
+  zap trash: [
+    "~/Library/Caches/com.tuyenmai.openkey",
+    "~/Library/HTTPStorages/com.tuyenmai.openkey",
+    "~/Library/Preferences/com.tuyenmai.openkey.plist",
+  ]
 end

@@ -10,4 +10,6 @@ cask "kubenav" do
 
   app "kubenav.app"
   binary "#{appdir}/kubenav.app/Contents/MacOS/kubenav"
+
+  zap trash: "~/Library/Saved Application State/io.kubenav.kubenav.savedState"
 end

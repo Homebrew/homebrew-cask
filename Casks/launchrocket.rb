@@ -4,9 +4,12 @@ cask "launchrocket" do
 
   url "https://github.com/jimbojsb/launchrocket/releases/download/v#{version}/LaunchRocket.prefPane.zip"
   name "LaunchRocket"
+  desc "Preference pane to manage Homebrew-installed services"
   homepage "https://github.com/jimbojsb/launchrocket"
 
   prefpane "LaunchRocket.prefPane"
+
+  zap trash: "~/Library/Preferences/com.joshbutts.launchrocket.plist"
 
   caveats do
     discontinued

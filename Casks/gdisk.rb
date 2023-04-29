@@ -10,4 +10,6 @@ cask "gdisk" do
   pkg "gdisk-#{version}.pkg"
 
   uninstall pkgutil: "com.rodsbooks.pkg.gdisk"
+
+  # No zap stanza required
 end

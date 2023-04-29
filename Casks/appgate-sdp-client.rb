@@ -36,7 +36,7 @@ cask "appgate-sdp-client" do
         # Check the page for the newest major/minor version, which links to the
         # latest disk image file (containing the full version in the file name)
         version_page = Homebrew::Livecheck::Strategy.page_content(
-          URI.join("https://www.appgate.com/", version_page_path),
+          URI.join("https://www.appgate.com/", version_page_path).to_s,
         )
         next [] if version_page[:content].blank?
 

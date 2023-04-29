@@ -1,5 +1,5 @@
 cask "ultimate" do
-  version "3.0.15.216"
+  version "3.0.15.425"
   sha256 :no_check
 
   url "https://download.epubor.com/epubor_ultimate.zip"
@@ -15,4 +15,12 @@ cask "ultimate" do
   pkg "Ultimate.pkg"
 
   uninstall pkgutil: "EpuborStudioUltimate2"
+
+  zap trash: [
+    "~/.Epubor_Keys",
+    "~/.Ultimate",
+    "~/EpuborLog",
+    "~/Library/Preferences/Ultimate.plist",
+    "~/Library/Saved Application State/Ultimate.savedState",
+  ]
 end

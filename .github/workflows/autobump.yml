@@ -1,0 +1,87 @@
+name: Bump casks on schedule or request
+
+on:
+  workflow_dispatch:
+    inputs:
+      casks:
+        description: Custom list of casks to livecheck and bump if outdated
+        required: false
+  schedule:
+    # Every day at 5am
+    - cron: "0 5 * * *"
+
+env:
+  CASKS: >
+    apifox
+    arc
+    beeper
+    bettertouchtool
+    bike
+    burp-suite
+    codeql
+    copilot-for-xcode
+    electron
+    firefox
+    flipper
+    gather
+    glyphs
+    google-chrome
+    grammarly-desktop
+    grandtotal
+    hepta
+    jupyterlab
+    librewolf
+    logseq
+    macupdater
+    metasploit
+    microsoft-edge
+    microsoft-openjdk
+    netron
+    openlens
+    opera
+    opera-gx
+    pitch
+    qownnotes
+    setapp
+    sigmaos
+    signal
+    skype
+    sol
+    stats
+    telegram
+    telegram-desktop
+    teleport-connect
+    tor-browser
+    tsh
+    viber
+    vrew
+    vscodium
+    warp
+    webull
+    whatsapp
+    zoom
+    zoom-for-it-admins
+
+permissions:
+  contents: read
+
+jobs:
+  autobump:
+    if: github.repository == 'Homebrew/homebrew-cask'
+    runs-on: macos-latest
+    steps:
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+
+      - name: Configure Git user
+        uses: Homebrew/actions/git-user-config@master
+        with:
+          username: ${{ (github.event_name == 'workflow_dispatch' && github.actor) || 'BrewTestBot' }}
+
+      - name: Bump casks
+        uses: Homebrew/actions/bump-packages@master
+        continue-on-error: true
+        with:
+          token: ${{ secrets.HOMEBREW_CASK_REPO_WORKFLOW_TOKEN }}
+          casks: ${{ github.event.inputs.casks || env.CASKS }}

@@ -9,7 +9,8 @@ module CiMatrix
 
   RUNNERS = {
     { symbol: :big_sur,  name: "macos-11", arch: :intel } => 0.0,
-    { symbol: :monterey, name: "macos-12", arch: :intel } => 1.0,
+    { symbol: :monterey, name: "macos-12", arch: :intel } => 0.0,
+    { symbol: :ventura,  name: "macos-13", arch: :intel } => 1.0,
   }.freeze
 
   # This string uses regex syntax and is intended to be interpolated into
@@ -141,8 +142,9 @@ module CiMatrix
       audit_exceptions << "livecheck_min_os" if labels.include?("ci-skip-livecheck-min-os")
 
       if labels.include?("ci-skip-repository")
-        audit_exceptions << ["github_repository", "gitlab_repository",
-                             "bitbucket_repository"]
+        audit_exceptions << %w[github_repository github_prerelease_version
+                               gitlab_repository gitlab_prerelease_version
+                               bitbucket_repository]
       end
 
       audit_args << "--except" << audit_exceptions.join(",") if audit_exceptions.any?

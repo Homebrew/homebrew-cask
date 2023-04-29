@@ -11,6 +11,13 @@ cask "motrix" do
   desc "Open-source download manager"
   homepage "https://motrix.app/"
 
+  # A tag using the stable version format is sometimes marked as "Pre-release"
+  # on the GitHub releases page, so we have to use the `GithubLatest` strategy.
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Motrix.app"
 
   zap trash: [

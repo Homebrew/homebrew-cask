@@ -7,6 +7,8 @@ cask "neovide" do
   desc "Neovim Client"
   homepage "https://github.com/neovide/neovide"
 
+  depends_on formula: "neovim"
+
   app "Neovide.app"
   binary "#{appdir}/Neovide.app/Contents/MacOS/neovide"
 

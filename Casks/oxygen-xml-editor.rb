@@ -1,6 +1,6 @@
 cask "oxygen-xml-editor" do
-  version "25.1,2023031510"
-  sha256 "8ec7b46b4fa754e373b8e2356598e605d1d8a8dee262a7d6c2a66acc3f0ba75a"
+  version "25.1,2023042509"
+  sha256 "32d270c2496463361309ac07544f8e6b7761cca5582467c4983de93456b08707"
 
   url "https://archives.oxygenxml.com/Oxygen/Editor/InstData#{version.csv.first}/MacOSX/VM/oxygen-openjdk.dmg"
   name "oXygen XML Editor"
@@ -21,6 +21,8 @@ cask "oxygen-xml-editor" do
   depends_on macos: ">= :sierra"
 
   suite "Oxygen XML Editor"
+
+  zap trash: "~/Library/Preferences/com.oxygenxml"
 
   caveats do
     license "https://www.oxygenxml.com/eula.html"

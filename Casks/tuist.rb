@@ -10,5 +10,5 @@ cask "tuist" do
 
   binary "tuist"
 
-  # No zap stanza required
+  zap trash: "~/.tuist"
 end

@@ -17,5 +17,5 @@ cask "snowflake-snowsql" do
 
   uninstall pkgutil: "net.snowflake.snowsql"
 
-  # No zap stanza required
+  zap trash: "~/.snowsql"
 end

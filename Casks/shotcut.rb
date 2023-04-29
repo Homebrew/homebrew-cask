@@ -17,4 +17,10 @@ cask "shotcut" do
   end
 
   app "Shotcut.app"
+
+  zap trash: [
+    "~/Library/Application Support/Meltytech",
+    "~/Library/Caches/Meltytech",
+    "~/Library/Preferences/com.meltytech.Shotcut.plist",
+  ]
 end

@@ -13,9 +13,9 @@ cask "docker" do
     end
   end
   on_big_sur :or_newer do
-    version "4.18.0,104112"
-    sha256 arm:   "2ae4b2ec556c107f969e51b72ad1920fefa38dbd0d8e3db64815c26b9f2b126d",
-           intel: "2e099af08e17666228282b970992160fa423ce8f5fa9e36b79495a1960803091"
+    version "4.19.0,106363"
+    sha256 arm:   "4bb0ef4dcceef1cd6e7b1f59bc60e71265952275ce166e749df17ea8a8f492aa",
+           intel: "07b54cc6a2c61f7f37bfa8698449a9db857e4b94133e3614a42a9d8345bc561b"
 
     depends_on macos: ">= :big_sur"
 

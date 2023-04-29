@@ -1,6 +1,6 @@
 cask "replacicon" do
-  version "1.5,23"
-  sha256 "ab2dc6215cd80e557e92a6489d442eafda317ee3e0b087c8dd38c1a5b27e0b0e"
+  version "1.6,24"
+  sha256 "74e8b4d85fc1bdfedc873e2d4e3b28360db6a80551fac5f391af36a83baea312"
 
   url "https://replacicon.app/builds/Replacicon_#{version.csv.second}.zip"
   name "Replacicon"
