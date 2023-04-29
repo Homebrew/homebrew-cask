@@ -20,5 +20,6 @@ cask "warp" do
     "~/Library/Application Support/dev.warp.Warp-Stable",
     "~/Library/Logs/warp.log",
     "~/Library/Preferences/dev.warp.Warp-Stable.plist",
+    "~/Library/Saved Application State/dev.warp.Warp-Stable.savedState",
   ]
 end
