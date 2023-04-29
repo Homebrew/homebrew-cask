@@ -15,4 +15,13 @@ cask "taskpaper" do
   auto_updates true
 
   app "TaskPaper.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.hogbaysoftware.TaskPaper#{version.major}.direct",
+    "~/Library/Application Support/TaskPaper",
+    "~/Library/Caches/com.hogbaysoftware.TaskPaper#{version.major}.direct",
+    "~/Library/HTTPStorages/com.hogbaysoftware.TaskPaper#{version.major}*",
+    "~/Library/Preferences/com.hogbaysoftware.TaskPaper#{version.major}.direct.plist",
+    "~/Library/Saved Application State/com.hogbaysoftware.TaskPaper#{version.major}.direct.savedState",
+  ]
 end
