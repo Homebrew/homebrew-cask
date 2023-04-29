@@ -17,5 +17,10 @@ cask "webull" do
 
   app "Webull Desktop.app"
 
-  zap trash: "~/Library/Application Support/Webull Desktop"
+  zap trash: [
+    "~/.config/Webull Desktop",
+    "~/Library/Application Support/Webull Desktop",
+    "~/Library/Saved Application State/com.webull.desktop.v1.savedState",
+    "~/Library/Preferences/com.webulldesktop.*",
+  ]
 end
