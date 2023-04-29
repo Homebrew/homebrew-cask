@@ -20,7 +20,7 @@ cask "webull" do
   zap trash: [
     "~/.config/Webull Desktop",
     "~/Library/Application Support/Webull Desktop",
-    "~/Library/Saved Application State/com.webull.desktop.v1.savedState",
     "~/Library/Preferences/com.webulldesktop.*",
+    "~/Library/Saved Application State/com.webull.desktop.v1.savedState",
   ]
 end
