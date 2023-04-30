@@ -110,4 +110,17 @@ cask "teamviewer" do
   auto_updates true
   conflicts_with cask: "teamviewer-host"
   depends_on macos: ">= :el_capitan"
+
+  postflight do
+    # postinstall launches the app
+    retries ||= 3
+    ohai "The TeamViewer package postinstall script launches the TeamViewer app" if retries >= 3
+    ohai "Attempting to close the TeamViewer app to avoid unwanted user intervention" if retries >= 3
+    return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/TeamViewer.app"]
+
+  rescue RuntimeError
+    sleep 1
+    retry unless (retries -= 1).zero?
+    opoo "Unable to forcibly close TeamViewer"
+  end
 end
