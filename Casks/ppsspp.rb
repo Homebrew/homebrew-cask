@@ -11,4 +11,6 @@ cask "ppsspp" do
   app "PPSSPPSDL.app"
 
   uninstall quit: "org.ppsspp.ppsspp"
+
+  zap trash: "~/.config/ppsspp"
 end
