@@ -58,9 +58,6 @@ cask "teamviewer" do
     opoo "Unable to forcibly close TeamViewer"
   end
 
-  # NOTE: ~/Library/Preferences/com.teamviewer is removed in uninstall
-  # and not in zap according to the developer's documentation:
-  # https://community.teamviewer.com/English/kb/articles/4165-uninstall-teamviewer-classic-on-macos
   uninstall delete:    [
               "/Applications/TeamViewer.app",
               "/Library/Preferences/com.teamviewer*",
