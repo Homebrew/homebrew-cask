@@ -16,6 +16,7 @@ cask "zoc" do
 
   zap trash: [
     "~/Library/Application Support/ZOC#{version.major} Files",
+    "~/Library/Logs/EmTec_ZOC_Assert.log",
     "~/Library/Logs/ZOC",
     "~/Library/Preferences/com.emtec.zoc7.plist",
     "~/Library/Preferences/com.emtec.zoc#{version.major}.plist",
