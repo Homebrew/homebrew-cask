@@ -12,8 +12,12 @@ cask "zeitgeist" do
 
   app "Zeitgeist.app"
 
+  uninstall quit: "me.daneden.Zeitgeist"
+
   zap trash: [
     "~/Library/Application Scripts/me.daneden.Zeitgeist",
+    "~/Library/Application Scripts/group.me.daneden.Zeitgeist.shared",
     "~/Library/Containers/me.daneden.Zeitgeist",
+    "~/Library/Group Containers/group.me.daneden.Zeitgeist.shared",
   ]
 end
