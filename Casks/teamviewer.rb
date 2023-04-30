@@ -114,8 +114,8 @@ cask "teamviewer" do
   postflight do
     # postinstall launches the app
     retries ||= 3
-    ohai "The TeamViewer package postinstall script launches TeamViewer app" if retries >= 3
-    ohai "Attempting to close TeamViewer app to avoid unwanted user intervention" if retries >= 3
+    ohai "The TeamViewer package postinstall script launches the TeamViewer app" if retries >= 3
+    ohai "Attempting to close the TeamViewer app to avoid unwanted user intervention" if retries >= 3
     return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/TeamViewer.app"]
 
   rescue RuntimeError
