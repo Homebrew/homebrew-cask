@@ -17,6 +17,17 @@ cask "filemaker-pro" do
 
   app "FileMaker Pro.app"
 
+  zap trash: [
+    "/Users/Shared/FileMaker",
+    "~/Library/Application Support/FileMaker",
+    "~/Library/Caches/FileMaker",
+    "~/Library/Caches/com.filemaker.client.pro12",
+    "~/Library/HTTPStorages/com.filemaker.client.pro12",
+    "~/Library/Preferences/com.filemaker.client.pro12.plist",
+    "~/Library/Saved Application State/com.filemaker.client.pro12.savedState",
+    "~/Library/WebKit/com.filemaker.client.pro12",
+  ]
+
   caveats do
     license "https://www.claris.com/company/legal/docs/eula/filemaker-pro/fmp_eula_en.pdf"
   end
