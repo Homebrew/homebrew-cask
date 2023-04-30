@@ -18,6 +18,8 @@ cask "clamxav" do
 
   zap trash: [
     "~/Library/Caches/uk.co.markallan.clamxav",
+    "~/Library/Logs/ClamXAV-Console.log",
+    "~/Library/Logs/ClamXAV-UI-Helper-Console.log",
     "~/Library/Logs/clamXav-scan.*",
   ]
 
