@@ -8,4 +8,10 @@ cask "brewtarget" do
   homepage "https://github.com/Brewtarget/brewtarget/"
 
   app "brewtarget_#{version}.app"
+
+  zap trash: [
+    "~/Library/Preferences/brewtarget",
+    "~/Library/Preferences/com.brewtarget.Brewtarget.plist",
+    "~/Library/Saved Application State/com.brewtarget.Brewtarget.savedState",
+  ]
 end
