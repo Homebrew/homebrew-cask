@@ -13,5 +13,5 @@ cask "inochi-creator" do
     strategy :github_latest
   end
 
-  installer manual: "Install_Inochi_Creator.dmg"
+  app "Inochi Creator.app"
 end
