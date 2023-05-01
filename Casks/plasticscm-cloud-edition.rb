@@ -2,7 +2,8 @@ cask "plasticscm-cloud-edition" do
   version "11.0.16.7957"
   sha256 "efa233822fcfd030fff753555d78249dd94d08f9c1c52a5461031ae69213430f"
 
-  url "https://d26z97tczqnlef.cloudfront.net/releases/#{version}/plasticscm/osx/unity-vcs-#{version}-mac.pkg.zip"
+  url "https://d26z97tczqnlef.cloudfront.net/releases/#{version}/plasticscm/osx/unity-vcs-#{version}-mac.pkg.zip",
+      verified: "d26z97tczqnlef.cloudfront.net/"
   name "PlasicSCM - a Cloud Edition"
   desc "Install PlasticSCM locally and join a Cloud Edition subscription"
   homepage "https://www.plasticscm.com/"
