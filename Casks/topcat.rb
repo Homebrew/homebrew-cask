@@ -15,4 +15,10 @@ cask "topcat" do
   app "TOPCAT.app"
   binary "#{appdir}/TOPCAT.app/Contents/Resources/bin/topcat"
   binary "#{appdir}/TOPCAT.app/Contents/Resources/bin/stilts"
+
+  # No zap stanza required
+
+  caveats do
+    depends_on_java "8+"
+  end
 end
