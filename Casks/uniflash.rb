@@ -32,4 +32,11 @@ cask "uniflash" do
     args:       ["--mode", "unattended"],
     sudo:       true,
   }
+
+  zap trash: [
+        "~/.ti/uniflash",
+        "~/Library/Application Support/Uniflash",
+        "~/Library/Caches/Uniflash",
+      ],
+      rmdir: "~/.ti"
 end
