@@ -3,7 +3,7 @@ cask "bloop" do
 
   version "0.3.4"
   sha256 arm:   "5142386ff9f8b4cda6d826256da6870ac4b0a1fd0402e421520bcf671d8d4578",
-         intel: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+         intel: "600fa0953cd5cd93fe9941771b6df5708ed46fae3a3dac1de6e948697d7089e7"
 
   url "https://github.com/BloopAI/bloop/releases/download/v#{version}/bloop_#{version}_#{arch}.dmg",
       verified: "github.com/BloopAI/bloop/"
