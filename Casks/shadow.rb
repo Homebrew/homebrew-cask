@@ -15,7 +15,7 @@ cask "shadow" do
     strategy :electron_builder
   end
 
-  app "Shadow.app"
+  app "Shadow PC.app"
 
   zap trash: [
     "~/Library/Application Support/Shadow",
