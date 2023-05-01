@@ -3,7 +3,7 @@ cask "mysql-shell" do
 
   version "8.0.33"
   sha256 arm:   "aa2613d86c793769b0e2cb372fb94837b9576e472e4628920c7a6b0076b9ada7",
-         intel: "18a993a7b6351a81f5571a29d0705d518b35e4686c41b9e1c055eff240a86743"
+         intel: "0ea222d0819c94d2a7e20363f6488a7207cda7feba80835b54228850f6d09a29"
 
   url "https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-#{version}-macos13-#{arch}.dmg"
   name "MySQL Shell"
