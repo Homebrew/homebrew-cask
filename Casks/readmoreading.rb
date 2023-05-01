@@ -1,8 +1,8 @@
 cask "readmoreading" do
-  version "0.13.18"
-  sha256 "cc32eee8e40dd9c7444bd3c1f7896dca558b64df50611e37c0c9e08883539500"
+  version "0.13.22"
+  sha256 "9c8ef0194d3702fae1f86af24e91bcc74be4d907f67462f5617d62a872364d16"
 
-  url "https://cdn.readmoo.com/download/apps/desktop/osx64/el/beta/Readmoo_Desktop-#{version}.dmg"
+  url "https://cdn.readmoo.com/download/apps/desktop/osx64/el/Readmoo_Desktop-#{version}.dmg"
   name "Readmo Reading"
   desc "Traditional Chinese eBook service"
   homepage "https://readmoo.com/"
