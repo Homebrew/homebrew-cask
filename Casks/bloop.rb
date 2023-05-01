@@ -8,7 +8,7 @@ cask "bloop" do
   url "https://github.com/BloopAI/bloop/releases/download/v#{version}/bloop_#{version}_#{arch}.dmg",
       verified: "github.com/BloopAI/bloop/"
   name "bloop"
-  desc "Is a code-search engine that uses GPT-4 to answer questions about your code. Search both your local and remote repositories with natural language, regex and filtered queries"
+  desc "bloop is a fast code search engine written in Rust."
   homepage "https://bloop.ai/"
 
   livecheck do
