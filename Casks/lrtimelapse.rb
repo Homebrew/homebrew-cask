@@ -25,6 +25,8 @@ cask "lrtimelapse" do
               "com.lrttimelapse.LRTTools",
             ]
 
+  zap trash: "~/Library/Application Support/LRTimelapse"
+
   caveats do
     files_in_usr_local
   end
