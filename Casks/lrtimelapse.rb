@@ -1,6 +1,6 @@
 cask "lrtimelapse" do
-  version "6.3.0"
-  sha256 "08487fd9d6d583c7a06434d0e3aebcf3f5a4d14c417af89c256fbbcf9e04a2dc"
+  version "6.5.0"
+  sha256 "4036765f9cec53fa06d5ffaf812ca296d6ad5d5591d1b6249ffeef90287079c0"
 
   url "https://lrtimelapse.com/files/lrtimelapse-#{version.major}-mac-universal/?version=#{version}"
   name "LRTimelapse"
