@@ -11,19 +11,14 @@ cask "bloop" do
   desc "Code search engine"
   homepage "https://bloop.ai/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: ">= :big_sur"
 
   app "bloop.app"
 
   zap trash: [
     "~/Library/Caches/ai.bloop.bloop",
-    "~/Library/WebKit/ai.bloop.bloop",
-    "~/Library/Saved Application State/ai.bloop.bloop.savedState",
     "~/Library/Preferences/ai.bloop.bloop.plist",
+    "~/Library/Saved Application State/ai.bloop.bloop.savedState",
+    "~/Library/WebKit/ai.bloop.bloop",
   ]
 end
