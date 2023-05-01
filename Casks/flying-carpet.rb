@@ -12,5 +12,14 @@ cask "flying-carpet" do
     strategy :github_latest
   end
 
-  app "Flying Carpet.app"
+  app "FlyingCarpet.app"
+
+  zap trash: [
+    "~/Library/Caches/dev.spiegl",
+    "~/Library/Preferences/com.yourcompany.flyingcarpet.plist",
+    "~/Library/Preferences/dev.spiegl.plist",
+    "~/Library/Saved Application State/com.yourcompany.flyingcarpet.savedState",
+    "~/Library/Saved Application State/dev.spiegl.savedState",
+    "~/Library/WebKit/dev.spiegl",
+  ]
 end
