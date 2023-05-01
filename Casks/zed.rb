@@ -16,7 +16,7 @@ cask "zed" do
   depends_on macos: ">= :catalina"
 
   app "Zed.app"
-  binary "#{appdir}/Applications/Zed.app/Contents/MacOS/cli", target: "zed"
+  binary "#{appdir}/Zed.app/Contents/MacOS/cli", target: "zed"
 
   zap trash: [
     "~/.config/Zed",
