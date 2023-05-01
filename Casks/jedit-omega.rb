@@ -19,5 +19,17 @@ cask "jedit-omega" do
     regex(/Rev[._-](\d+(?:\.\d+)+)/i)
   end
 
-  app "Jedit Ω.app"
+  pkg "JeditOmega#{version.no_dots}.pkg"
+
+  uninstall pkgutil: "jp.co.artman21.JeditOmega",
+            quit:    "jp.co.artman21.JeditOmega"
+
+  zap trash: [
+    "~/Library/Application Support/JeditOmega",
+    "~/Library/Caches/jp.co.artman21.JeditOmega",
+    "~/Library/HTTPStorages/jp.co.artman21.JeditOmega",
+    "~/Library/JeditOmega",
+    "~/Library/Preferences/jp.co.artman21.JeditOmega.plist",
+    "~/Library/Saved Application State/jp.co.artman21.JeditOmega.savedState",
+  ]
 end
