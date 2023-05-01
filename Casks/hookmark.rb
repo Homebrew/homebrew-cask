@@ -1,8 +1,8 @@
 cask "hookmark" do
-  version "5.0.2,5331,2023.03"
-  sha256 "363a9a3eed1bc0983ce1d74ce43041a4ded0c42a05e0bde84db0e230d9205b66"
+  version "5.1,2023.04"
+  sha256 "54aba205cf27ef46d999719d2e7b17b6196aaeb8fb03bcb130e323dccdb1db88"
 
-  url "https://hookproductivity.com/wp-content/uploads/#{version.csv.third.major}/#{version.csv.third.minor}/Hookmark-app-#{version.csv.first}-b#{version.csv.second}.dmg_.zip",
+  url "https://hookproductivity.com/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/Hookmark-app-#{version.csv.first}.dmg_.zip",
       user_agent: :fake
   name "Hook"
   desc "Link and retrieve key information"
