@@ -17,8 +17,9 @@ cask "red-canary-mac-monitor" do
   # extension. It is expected that the uninstall CI will time out and fail.
   uninstall pkgutil: "com.redcanary.agent",
             script:  {
-              executable: "#{appdir}/Red Canary Mac Monitor.app/Contents/SharedSupport/uninstall.sh",
-              sudo:       false,
+              executable:   "#{appdir}/Red Canary Mac Monitor.app/Contents/SharedSupport/uninstall.sh",
+              must_succeed: false,
+              sudo:         false,
             }
 
   zap trash: [
