@@ -4,12 +4,12 @@ cask "jedit-omega" do
     sha256 "251697fe6b76419b2cef41a89a2cb7d2e3f8caab0bc1ae82aed6c14a366fdad9"
   end
   on_sierra :or_newer do
-    version "3.00"
-    sha256 "8b046114b70ae6a60f910ba3198ce239473620313f893181cce87eb19075ecee"
+    version "3.03"
+    sha256 "b281742c283ec84fe2578a5aaf4215ba263474305f11e6cca41aeb9c4f9910b4"
   end
 
-  url "http://www.artman21.org/download/JeditOmega#{version.no_dots}.dmg",
-      verified: "artman21.org/"
+  url "https://artman21.site/JeditOmega#{version.no_dots}.pkg",
+      verified: "artman21.site/"
   name "Jedit Ω"
   desc "Text editor"
   homepage "https://www.artman21.com/en/sparkle/jeditomega.html"
