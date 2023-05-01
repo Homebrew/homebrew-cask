@@ -9,4 +9,10 @@ cask "weakauras-companion" do
   homepage "https://weakauras.wtf/"
 
   app "WeakAuras Companion.app"
+
+  zap trash: [
+    "~/Library/Application Support/weakauras-companion",
+    "~/Library/Logs/weakauras-companion",
+    "~/Library/Preferences/wtf.weakauras.companion.plist",
+  ]
 end
