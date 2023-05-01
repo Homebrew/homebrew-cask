@@ -4,7 +4,7 @@ cask "bookletcreator" do
 
   url "https://www.bookletcreator.com/files/BookletCreator-#{version}.dmg"
   name "BookletCreator"
-  desc "This is a simple tool that allows you to create a booklet from a PDF document"
+  desc "Booklet to PDF utility"
   homepage "https://www.bookletcreator.com/"
 
   livecheck do
@@ -13,6 +13,12 @@ cask "bookletcreator" do
   end
 
   auto_updates true
+  depends_on macos: ">= :el_capitan"
 
   app "BookletCreator.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.bookletcreator.BookletCreator.plist",
+    "~/Library/Saved Application State/com.bookletcreator.BookletCreator.savedState",
+  ]
 end
