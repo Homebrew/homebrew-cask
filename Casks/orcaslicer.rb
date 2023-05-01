@@ -1,11 +1,11 @@
 cask "orcaslicer" do
   arch arm: "AppleSilicon", intel: "Intel"
 
-  version "1.6.1"
-  sha256 arm:   "50ca8fddfd67dce4da0e79aada27321a35c880a59990a279372cd3e275a7d92b",
-         intel: "7e024f36eb33a1823c58f3603fc8da1bf55f5853176f3c45fa39b5b16373ec50"
+  version "1.6.2"
+  sha256 arm:   "fbb2bba0bb21e6d4ec388625e4143445bb642ef5af5f9a9b851d072367967697",
+         intel: "8e1ae60a9cf1d28e619374f18a1eed5fb8f152415a6af314284fcb4dcebbe3d4"
 
-  url "https://github.com/SoftFever/OrcaSlicer/releases/download/v#{version}/OrcaSlicer_V#{version}_Mac_#{arch}.zip"
+  url "https://github.com/SoftFever/OrcaSlicer/releases/download/v#{version}/OrcaSlicer_V#{version}_Mac_#{arch}_signed.zip"
   name "Orca Slicer"
   desc "G-code generator for 3D printers"
   homepage "https://github.com/SoftFever/OrcaSlicer"
