@@ -8,7 +8,7 @@ cask "bloop" do
   url "https://github.com/BloopAI/bloop/releases/download/v#{version}/bloop_#{version}_#{arch}.dmg",
       verified: "github.com/BloopAI/bloop/"
   name "bloop"
-  desc "Fast code search engine written in Rust"
+  desc "Code search engine"
   homepage "https://bloop.ai/"
 
   livecheck do
