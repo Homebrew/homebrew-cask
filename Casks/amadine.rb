@@ -13,7 +13,7 @@ cask "amadine" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :sierra"
 
   app "Amadine.app"
 
