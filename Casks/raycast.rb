@@ -1,6 +1,6 @@
 cask "raycast" do
-  version "1.50.0"
-  sha256 "f8bbd00d06636e3fe9f154ff69ff57c0a48a90a77ae58cdcc2b285f61a170a88"
+  version "1.50.1"
+  sha256 "d1db9bd47cd9ebc6e2e8b404f1b6e3ad421ee47edda08a8b4eab19f665ab243f"
 
   url "https://releases.raycast.com/releases/#{version}/download?build=universal"
   name "Raycast"
