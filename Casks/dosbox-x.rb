@@ -6,8 +6,8 @@ cask "dosbox-x" do
     sha256 "3af029df45ac45438f557c93fb7ada21b5058f61ea5d31cba90a71603a9b786e"
   end
   on_intel do
-    version "2023.03.31,20230401002212"
-    sha256 "73849ece58a239e7401b843a553cab115c825dd1dcad5c999cb439d5e38b4766"
+    version "2023.05.01,20230501092707"
+    sha256 "472989640b7992c2f4c978db449aa47cd7331e5424585cfaffc522be90fb1d68"
   end
 
   url "https://github.com/joncampbell123/dosbox-x/releases/download/dosbox-x-v#{version.csv.first}/dosbox-x-macosx-#{arch}-#{version.csv.second}.zip",
