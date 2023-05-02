@@ -10,24 +10,25 @@ cask "boinc" do
 
   livecheck do
     url "https://boinc.berkeley.edu/download.php"
-    regex(%r{href=.*?/dl/boinc[._-]v?(\d+(?:\.\d+)+)_macOSX_universal\.zip}i)
+    regex(%r{href=.*?/boinc[._-]v?(\d+(?:\.\d+)+)[._-]macOSX[._-]universal\.zip}i)
   end
 
   pkg "boinc_#{version}_macOSX_universal/BOINC Installer.app/Contents/Resources/BOINC.pkg"
 
   uninstall pkgutil:   "edu.berkeley.boinc",
-            launchctl: "edu.berkeley.boinc-sshelper"
+            launchctl: "edu.berkeley.boinc-sshelper",
+            quit:      "edu.berkeley.boinc.finish-install"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/edu.berkeley.boinc.sfl*",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/edu.berkeley.boinc.*.sfl*",
+    "/Library/Application Support/BOINC Data",
+    "/Library/Screen Savers/BOINCSaver.saver",
     "~/Library/Application Support/BOINC",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/edu.berkeley.boinc.*.sfl*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/edu.berkeley.boinc.sfl*",
     "~/Library/Caches/edu.berkeley.boinc",
     "~/Library/Preferences/BOINC Manager Preferences",
     "~/Library/Preferences/edu.berkeley.boinc.plist",
     "~/Library/Saved Application State/edu.berkeley.boinc.savedState",
     "~/Library/WebKit/edu.berkeley.boinc",
-    "/Library/Application Support/BOINC Data",
-    "/Library/Screen Savers/BOINCSaver.saver",
   ]
 end
