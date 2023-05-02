@@ -3,9 +3,9 @@ cask "dosbox-staging" do
   sha256 "46a256645255e8345981ea357f1416b8ce4bc60a2aba9a86b5122d5075aa7fa"
 
   url "https://github.com/dosbox-staging/dosbox-staging/releases/download/v#{version}/dosbox-staging-macOS-v#{version}.dmg",
-      verified: "github.com/dosbox-staging/dosbox-staging"
+      verified: "github.com/dosbox-staging/dosbox-staging/"
   name "DOSBox Staging"
-  desc "A modern continuation of DOSBox to run DOS games on current operating systems"
+  desc "Modern continuation of DOSBox to run DOS games on current operating systems"
   homepage "https://dosbox-staging.github.io/"
 
   livecheck do
