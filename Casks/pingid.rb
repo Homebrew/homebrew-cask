@@ -1,5 +1,5 @@
 cask "pingid" do
-  version "1.7.3"
+  version "1.7.4"
   sha256 :no_check
 
   url "https://pingone-downloads.s3.amazonaws.com/pingid/mac-client/PingID.pkg",
@@ -9,7 +9,8 @@ cask "pingid" do
   homepage "https://www.pingidentity.com/"
 
   livecheck do
-    skip "No version information available"
+    url :url
+    strategy :extract_plist
   end
 
   pkg "PingID.pkg"
