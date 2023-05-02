@@ -9,8 +9,7 @@ cask "pingid" do
   homepage "https://www.pingidentity.com/"
 
   livecheck do
-    url "https://prod-ping-sfc.zoominsoftware.io/api/bundle/pingid/toc?language=enus"
-    regex(/"title"\s*:\s*"Desktop\s+app\s+v?(\d+(?:\.\d+)+)/i)
+    skip "No version information available"
   end
 
   pkg "PingID.pkg"
