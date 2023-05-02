@@ -16,4 +16,10 @@ cask "pingid" do
   pkg "PingID.pkg"
 
   uninstall pkgutil: "com.pingidentity.pingid.pcclient"
+
+  zap trash: [
+    "~/Library/Logs/PingID",
+    "~/Library/Preferences/com.pingidentity.pingid.plist",
+    "~/Library/Saved Application State/com.pingidentity.pingid.pcclient.savedState",
+  ]
 end
