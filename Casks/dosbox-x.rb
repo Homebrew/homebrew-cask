@@ -2,8 +2,8 @@ cask "dosbox-x" do
   arch arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "2023.03.31,20230331203847"
-    sha256 "9823bc9c07cd4967d8c8960c40924129543c13b63f6220e23509586440fe6590"
+    version "2023.05.01,20230501092707"
+    sha256 "3af029df45ac45438f557c93fb7ada21b5058f61ea5d31cba90a71603a9b786e"
   end
   on_intel do
     version "2023.03.31,20230401002212"
