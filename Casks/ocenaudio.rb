@@ -1,5 +1,5 @@
 cask "ocenaudio" do
-  version "3.11.24"
+  version "3.11.25"
   sha256 :no_check
 
   on_arm do
