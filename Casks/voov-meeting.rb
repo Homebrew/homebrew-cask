@@ -2,24 +2,39 @@ cask "voov-meeting" do
   arch arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "3.7.0.590,747ce62c8d3c838f84873c8570b5e9eb"
-    sha256 "6eb5c1984d991d361ba77d79ce741f1a0151c66d5918e415749cf4a2cb325d86"
+    version "3.13.7.511,68d2bdd5c3803cc46a569707e9b57b1f"
+    sha256 "dbb3838b8169ec0962e3ec56fe01d59d30b179403d0b77e72ed13725334a144c"
+
+    url "https://updatecdn.meeting.qq.com/cos/#{version.csv.second}/VooVMeeting_1410000198_#{version.csv.first}.publish.#{arch}.dmg",
+        verified: "updatecdn.meeting.qq.com/"
   end
   on_intel do
-    version "3.7.0.590,be624b69a9db9410195acc9ec0686885"
-    sha256 "be5016805e02e668111d70ea84109cc5b2388cfd72f5236239ace4e8bc1ab1aa"
+    version "3.13.7.511,6a26914b3c7ed17dcaedcc5f5d7635df"
+    sha256 "b551cfd6414870635222c99fbc1baad618f411b879f209552d51f46c7effe03c"
+
+    url "https://updatecdn.meeting.qq.com/cos/#{version.csv.second}/VooVMeeting_1410000198_#{version.csv.first}.publish.#{arch}%20%281%29.dmg",
+        verified: "updatecdn.meeting.qq.com/"
   end
 
-  url "https://updatecdn.meeting.qq.com/#{version.csv.second}/VooVMeeting_1410000198_#{version.csv.first}.publish.#{arch}.dmg",
-      verified: "updatecdn.meeting.qq.com/"
+  # There is a suffix' (1)' after the download url for intel version, not sure how to handle it.
+  # url "https://updatecdn.meeting.qq.com/cos/#{version.csv.second}/VooVMeeting_1410000198_#{version.csv.first}.publish.#{arch}#{arch_suffix}.dmg",
+  #     verified: "updatecdn.meeting.qq.com/"
   name "VooV Meeting"
   name "Tencent Meeting International Version"
   desc "Cross-border video conferencing software"
   homepage "https://voovmeeting.com/"
 
-  # See https://github.com/Homebrew/homebrew-cask/pull/120458#issuecomment-1068393782
   livecheck do
-    skip "Requires POST request to retrieve version"
+    url %Q(https://voovmeeting.com/web-service/query-download-info?q=[{"package-type":"app","channel":"1410000198","platform":"mac","arch":"#{arch}","decorators":["intl"]}]&nonce=1234567890123456)
+    regex(%r{/cos/(\h+)/VooVMeeting[._-].+?v?(\d+(?:\.\d+)+)})
+    strategy :json do |json, regex|
+      json["info-list"]&.map do |item|
+        match = item["url"]&.match(regex)
+        next if match.blank?
+
+        "#{match[2]},#{match[1]}"
+      end
+    end
   end
 
   app "VooV Meeting.app"
