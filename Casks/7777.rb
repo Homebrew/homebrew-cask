@@ -13,4 +13,6 @@ cask "7777" do
   end
 
   binary "7777"
+
+  # No zap stanza required
 end
