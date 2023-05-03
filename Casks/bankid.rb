@@ -1,6 +1,6 @@
 cask "bankid" do
-  version "7.14.0"
-  sha256 "30fc256596af824de7c3ad9acf2e05dd118d9c85064ae54d62aab79b61139ce2"
+  version "7.14.1"
+  sha256 "98be02f71f182f1cb04417cc8325edc224b36c8455c8928e632e9fcaf5c6a5d9"
 
   url "https://cdn.bankid.com/bisp/mac/BankID_installation_#{version.dots_to_underscores}.pkg"
   name "BankID"
@@ -15,4 +15,6 @@ cask "bankid" do
   pkg "BankID_installation_#{version.dots_to_underscores}.pkg"
 
   uninstall pkgutil: "com.bankid.BankID"
+
+  zap trash: "~/Library/Application Support/BankID"
 end
