@@ -50,8 +50,8 @@ cask "choosy" do
     end
   end
   on_big_sur :or_newer do
-    version "2.3"
-    sha256 "b4fd6073b43ba7ce8697c6b3f400f2abec9196e10c6488d52970ed989ddb2a76"
+    version "2.3.1"
+    sha256 "8d6a44b78ed256d6f502872fd1f62cf1f7fea877906bedddc5bbf26f93b6ea57"
 
     depends_on macos: ">= :big_sur"
 
