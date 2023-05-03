@@ -31,7 +31,7 @@ cask "voov-meeting" do
     end
   end
 
-  app "VooV.app"
+  app "VooV Meeting.app"
 
   zap trash: [
     "~/Library/Application Support/com.tencent.bugly",
