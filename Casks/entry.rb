@@ -4,20 +4,17 @@ cask "entry" do
 
   url "https://playentry.org/uploads/data/installers/Entry-#{version}.pkg"
   name "entry"
-  desc "Creative platform using software and coding"
+  desc "Block-based coding platform"
   homepage "https://playentry.org/"
 
   livecheck do
-    url "https://playentry.org/download/"
-    regex(%r{href=.*?/Entry[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
+    url "https://github.com/entrylabs/entry-offline/"
+    strategy :github_latest
   end
 
   pkg "Entry-#{version}.pkg"
 
-  uninstall pkgutil: [
-    "org.playentry.entry.*",
-    "org.playentry.entry.pkg",
-  ]
+  uninstall pkgutil: "org.playentry.entry"
 
   zap trash: [
     "~/Library/Application Support/Entry",
