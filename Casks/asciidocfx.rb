@@ -1,9 +1,9 @@
 cask "asciidocfx" do
   arch arm: "_M1"
 
-  version "1.8.4"
-  sha256 arm:   "bbe6bb9b06b1750177dc3adc3c3239c4af00adc720da76ab4422c2aeb76d9c08",
-         intel: "0e1d08d79e3b0e69ec33fb544628bc88684fb16d9437aa7694c5d971019a86d5"
+  version "1.8.5"
+  sha256 arm:   "5f7e4213e057728c91d966a476344c6d182322f684305049d68e2e11a34b47aa",
+         intel: "fdca40e3fb8b9c4e6bcfbfad736c210b04d4938341ac51b1d76603e44158a909"
 
   url "https://github.com/asciidocfx/AsciidocFX/releases/download/v#{version}/AsciidocFX_Mac#{arch}.dmg",
       verified: "github.com/asciidocfx/AsciidocFX/"
@@ -22,4 +22,12 @@ cask "asciidocfx" do
     args:       ["-q"],
     sudo:       true,
   }
+
+  zap trash:  [
+        "~/.AsciidocFX-#{version}",
+        "~/Library/Preferences/com.install4j.7853-9376-5862-1224.24.plist",
+        "~/Library/Preferences/com.install4j.installations.plist",
+        "~/Library/Saved Application State/com.install4j.7853-9376-5862-1224.24.savedState",
+      ],
+      delete: "/Library/Preferences/com.install4j.installations.plist"
 end
