@@ -20,4 +20,6 @@ cask "droidcam-obs" do
   uninstall pkgutil: "com.dev47apps.droidcamobs",
             delete:  "/Library/Application Support/obs-studio/plugins/droidcam-obs",
             rmdir:   "/Library/Application Support/obs-studio/plugins"
+
+  # No zap stanza required
 end
