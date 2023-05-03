@@ -14,4 +14,14 @@ cask "workplace-chat" do
   end
 
   app "Workplace Chat.app"
+
+  zap trash: [
+    "~/Library/Application Support/Workplace",
+    "~/Library/Application Support/workplace-desktop",
+    "~/Library/Caches/Workplace",
+    "~/Library/Caches/workplace-desktop",
+    "~/Library/HTTPStorages/workplace-desktop",
+    "~/Library/Preferences/workplace-desktop.plist",
+    "~/Library/Saved Application State/workplace-desktop.savedState",
+  ]
 end
