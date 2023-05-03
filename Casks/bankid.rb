@@ -15,4 +15,6 @@ cask "bankid" do
   pkg "BankID_installation_#{version.dots_to_underscores}.pkg"
 
   uninstall pkgutil: "com.bankid.BankID"
+
+  zap trash: "~/Library/Application Support/BankID"
 end
