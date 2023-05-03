@@ -1,6 +1,6 @@
 cask "steelseries-gg" do
-  version "36.0.0"
-  sha256 "ff25e29ef2feb629b1362c5b477d8d8955c706bbcebf7038d0b741aea595cc54"
+  version "37.0.0"
+  sha256 "7ae41e7613f06298c1454f929020e9dfe8cba1887727da42c0fdf57f60b3f732"
 
   url "https://engine.steelseriescdn.com/SteelSeriesGG#{version}.pkg",
       verified: "engine.steelseriescdn.com/"
