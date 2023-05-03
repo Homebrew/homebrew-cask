@@ -17,7 +17,7 @@ cask "hiarcs-chess-explorer" do
   end
   on_mojave :or_newer do
     version "1.12.2a"
-    sha256 "a77ed22e80ef8b85c65e7f74e72876b12b42525b1ae45bcdce656e3f40b1418f"
+    sha256 "fb4569d32e04e4a0434892ad283ccfe97f00ce0525c2851e403f8a13e3cdaaf3"
 
     livecheck do
       url "https://www.hiarcs.com/mac-chess-explorer-download.htm"
