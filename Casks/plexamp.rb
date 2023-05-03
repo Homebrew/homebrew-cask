@@ -19,4 +19,14 @@ cask "plexamp" do
   auto_updates true
 
   app "Plexamp.app"
+
+  zap trash: [
+    "~/Library/Application Support/Caches/plexamp-updater",
+    "~/Library/Application Support/Plexamp",
+    "~/Library/Caches/Plexamp",
+    "~/Library/Caches/tv.plex.plexamp*",
+    "~/Library/Logs/Plexamp",
+    "~/Library/Preferences/tv.plex.plexamp.plist",
+    "~/Library/Saved Application State/tv.plex.plexamp.savedState",
+  ]
 end
