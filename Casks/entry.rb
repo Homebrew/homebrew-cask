@@ -8,7 +8,8 @@ cask "entry" do
   homepage "https://playentry.org/"
 
   livecheck do
-    strategy :extract_plist
+    url "https://playentry.org/download/"
+    regex(%r{href=.*?/Entry[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
   end
 
   pkg "Entry-#{version}.pkg"
@@ -16,5 +17,13 @@ cask "entry" do
   uninstall pkgutil: [
     "org.playentry.entry.*",
     "org.playentry.entry.pkg",
+  ]
+
+  zap trash: [
+    "~/Library/Application Support/Entry",
+    "~/Library/Application Support/entry-hw",
+    "~/Library/Caches/io.sentry",
+    "~/Library/Preferences/org.playentry.entry.plist",
+    "~/Library/Saved Application State/org.playentry.entry.savedState",
   ]
 end
