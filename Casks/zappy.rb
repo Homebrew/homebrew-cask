@@ -1,6 +1,6 @@
 cask "zappy" do
-  version "3.2.7"
-  sha256 "15a7f9b7b2abbf6185bb0c6091e8a32c07506e50bc2b49c5acb14d4e93afe726"
+  version "3.3.0"
+  sha256 "81d9268658b234b4e103af368448b313e05a6d8354d26a99831df4cb161cafc0"
 
   url "https://zappy.zapier.com/releases/zappy-#{version}.dmg"
   name "Zappy"
@@ -9,7 +9,7 @@ cask "zappy" do
 
   livecheck do
     url "https://zappy.zapier.com/releases/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
