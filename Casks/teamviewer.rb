@@ -1,22 +1,25 @@
+# typed: true
+# frozen_string_literal: true
+
 cask "teamviewer" do
   sha256 :no_check
 
   on_high_sierra :or_older do
     version "15.2.2756"
 
-    pkg "Install TeamViewer.pkg"
+    pkg "TeamViewer.pkg"
   end
   on_mojave do
     version "15.41.9"
 
-    pkg "Install TeamViewer.app/Contents/Resources/Install TeamViewer.pkg"
+    pkg "TeamViewer.pkg"
   end
   on_catalina do
     version "15.41.9"
 
     # This Cask should be installed and uninstalled manually on Catalina.
     # See https://github.com/Homebrew/homebrew-cask/issues/76829
-    installer manual: "Install TeamViewer.app/Contents/Resources/Install TeamViewer.pkg"
+    installer manual: "TeamViewer.pkg"
 
     caveats <<~EOS
       WARNING: #{token} has a bug in Catalina where it doesn't deal well with being uninstalled by other utilities.
@@ -28,10 +31,10 @@ cask "teamviewer" do
   on_big_sur :or_newer do
     version "15.41.9"
 
-    pkg "Install TeamViewer.app/Contents/Resources/Install TeamViewer.pkg"
+    pkg "TeamViewer.pkg"
   end
 
-  url "https://download.teamviewer.com/download/TeamViewer.dmg"
+  url "https://dl.teamviewer.com/download/version_15x/update/#{version}/TeamViewer.pkg"
   name "TeamViewer"
   desc "Remote access and connectivity software focused on security"
   homepage "https://www.teamviewer.com/"
