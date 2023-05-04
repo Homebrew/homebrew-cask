@@ -4,6 +4,7 @@ cask "post-haste" do
 
   url "https://www.digitalrebellion.com/download/posthaste?version=#{version.csv.second}"
   name "Post Haste"
+  desc "Digital media project management tool"
   homepage "https://www.digitalrebellion.com/posthaste/"
 
   livecheck do
