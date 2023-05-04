@@ -36,4 +36,6 @@ cask "llvm-arm-embedded" do
   binary "LLVMEmbeddedToolchainForArm-#{version}-Darwin/bin/llvm-strip", target: "arm-embedded-llvm-strip"
   binary "LLVMEmbeddedToolchainForArm-#{version}-Darwin/bin/llvm-symbolizer", target: "arm-embedded-llvm-symbolizer"
   binary "LLVMEmbeddedToolchainForArm-#{version}-Darwin/bin/wasm-ld", target: "arm-embedded-wasm-ld"
+
+  # No zap stanza required
 end
