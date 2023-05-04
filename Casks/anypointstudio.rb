@@ -15,7 +15,11 @@ cask "anypointstudio" do
     regex(/Anypoint\s+Studio\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :big_sur"
 
   app "AnypointStudio.app"
+
+  uninstall delete: "/Library/Logs/DiagnosticReports/AnypointStudio*.diag"
+
+  # No zap stanza required
 end
