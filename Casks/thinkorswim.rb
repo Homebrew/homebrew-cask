@@ -28,4 +28,6 @@ cask "thinkorswim" do
     executable: "#{appdir}/thinkorswim/thinkorswim Uninstaller.app/Contents/MacOS/JavaApplicationStub",
     args:       ["-q"],
   }
+
+  zap trash: "~/.thinkorswim"
 end
