@@ -4,6 +4,7 @@ cask "thinkorswim" do
 
   url "https://mediaserver.thinkorswim.com/installer/InstFiles/thinkorswim_installer.dmg"
   name "thinkDesktop"
+  desc "Desktop client for TD Ameritrade trading platform"
   homepage "https://mediaserver.thinkorswim.com/installer/install.html#macosx"
 
   livecheck do
