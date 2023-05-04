@@ -1,8 +1,6 @@
-# frozen_string_literal: true
-
 cask "submariner" do
-  version "2.1.1"
-  sha256 "e91b2a97cb968ed15749c1890958db26d45ac0781d756946f88d5ee85f2800df"
+  version "2.2"
+  sha256 "213b23c538f45dda3c6f851b8ccd692fd7ad833eac383ad5ad4ab0ba5dab2367"
 
   url "https://github.com/NattyNarwhal/Submariner/releases/download/v#{version}/Submariner-#{version}.zip",
       verified: "github.com/NattyNarwhal/Submariner/"
@@ -12,5 +10,9 @@ cask "submariner" do
 
   app "Submariner.app"
 
-  zap trash: "~/Music/Submariner"
+  zap trash: [
+    "~/Library/Application Scripts/fr.read-write.Submariner",
+    "~/Library/Containers/fr.read-write.Submariner",
+    "~/Music/Submariner",
+  ]
 end
