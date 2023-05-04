@@ -18,4 +18,13 @@ cask "preference-manager" do
   end
 
   app "Preference Manager.app"
+
+  zap trash: [
+    "~/Library/Caches/com.digitalrebellion.SoftwareUpdate",
+    "~/Library/HTTPStorages/com.digitalrebellion.SoftwareUpdate",
+    "~/Library/LaunchAgents/com.digitalrebellion.PreferenceManagerAutoSave.plist",
+    "~/Library/Logs/Digital Rebellion",
+    "~/Library/Preferences/com.digitalrebellion*",
+    "~/Library/Saved Application State/com.digitalrebellion.PreferenceManager.savedState",
+  ]
 end
