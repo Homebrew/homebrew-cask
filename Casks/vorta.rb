@@ -20,11 +20,13 @@ cask "vorta" do
   zap trash: "~/Library/Application Support/Vorta"
 
   caveats <<~EOS
-    #{token} requires BorgBackup to run. If you do not need mount support, use the official formula:
+    #{token} requires BorgBackup to run. If you do not need mount support, use
+    the official formula:
 
       brew install borgbackup
 
-    If you plan on mounting archives using macFUSE, consider using the Tap maintained by the Borg team:
+    If you plan on mounting archives using macFUSE, consider using the Tap
+    maintained by the Borg team:
 
       brew install --cask macfuse
       brew install borgbackup/tap/borgbackup-fuse

@@ -30,12 +30,17 @@ cask "datadog-agent" do
   ]
 
   caveats <<~EOS
-    You will need to update /opt/datadog-agent/etc/datadog.yaml and replace APIKEY with your api key
+    You will need to update /opt/datadog-agent/etc/datadog.yaml and replace
+    APIKEY with your api key
 
-    If you ever want to start/stop the Agent, please use the Datadog Agent App or datadog-agent command.
-    It will start automatically at login, if you want to enable it at startup, run these commands:
+    If you ever want to start/stop the Agent, please use the Datadog Agent App
+    or datadog-agent command.
+    It will start automatically at login, if you want to enable it at startup,
+    run these commands:
 
-    sudo cp '/opt/datadog-agent/etc/com.datadoghq.agent.plist.example' /Library/LaunchDaemons/com.datadoghq.agent.plist
-    sudo launchctl load -w /Library/LaunchDaemons/com.datadoghq.agent.plist
+      sudo cp '/opt/datadog-agent/etc/com.datadoghq.agent.plist.example' \
+      /Library/LaunchDaemons/com.datadoghq.agent.plist
+
+      sudo launchctl load -w /Library/LaunchDaemons/com.datadoghq.agent.plist
   EOS
 end
