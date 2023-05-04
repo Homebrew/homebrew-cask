@@ -8,9 +8,9 @@ cask "xtorrent" do
   homepage "http://www.xtorrent.com/"
 
   livecheck do
-    url "http://www.xtorrent.com/download.php"
+    url :homepage
     strategy :page_match do |page|
-      match = page.match(/Xtorrent(\d+(?:\.\d+)*)\(v?(\d+(?:\.\d+)*)\)\.dmg/i)
+      match = page.match(/version\s*(\d+(?:\.\d+)*)\s*\(v?(\d+(?:\.\d+)*)\)/i)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
