@@ -124,6 +124,6 @@ cask "docker" do
 
     If your CLI tools were symlinked to $HOME/.docker/bin your path should be modified to include:
 
-          $HOME/.docker/bin
+        $HOME/.docker/bin
   EOS
 end
