@@ -116,13 +116,14 @@ cask "docker" do
       ]
 
   caveats <<~EOS
-    For CLI tools, you might need to open the Docker app for further instructions. You may use one of the following commands:
+    CLI tools are installed after launching Docker. They will be symlinked to one of the following
+    based on your preference:
 
-      open /Applications/Docker.app
-      open -a Docker
+        /usr/local/bin
+        $HOME/.docker/bin
 
     If your CLI tools were symlinked to $HOME/.docker/bin your path should be modified to include:
 
-      $HOME/.docker/bin
+          $HOME/.docker/bin
   EOS
 end
