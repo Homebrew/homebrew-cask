@@ -43,7 +43,11 @@ cask "86box" do
   ]
 
   caveats <<~EOS
-    Requires installing ROM files from https://github.com/86Box/roms/releases/latest into:
+    Requires installing ROM files from:
+
+      https://github.com/86Box/roms/releases/latest
+
+    into:
 
       #{roms_dir}
   EOS

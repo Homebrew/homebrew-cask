@@ -47,6 +47,6 @@ cask "fig" do
   ]
 
   caveats <<~EOS
-    Please launch the Fig application to finish setup...
+    Please launch the Fig application to finish setup.
   EOS
 end

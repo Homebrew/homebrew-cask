@@ -77,7 +77,9 @@ cask "megacmd" do
   zap trash: "~/.megaCmd"
 
   caveats <<~EOS
-    #{token} only works if called from /Applications, so you may need to install it with
+    #{token} only works if called from /Applications, so you may need to install
+    it with:
+
       brew install --cask --appdir=/Applications #{token}
   EOS
 end

@@ -26,6 +26,7 @@ cask "starcraft" do
   ]
 
   caveats <<~EOS
-    If you pick an installation directory other than /Applications when installing this cask, you will need to uninstall it manually
+    If your installation directory is not /Applications, you will need to
+    uninstall this cask manually.
   EOS
 end

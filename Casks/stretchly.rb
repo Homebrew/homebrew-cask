@@ -20,6 +20,8 @@ cask "stretchly" do
   ]
 
   caveats <<~EOS
-    This application is not signed. See https://github.com/hovancik/stretchly#application-signing for details.
+    This application is not signed. For details see:
+
+    https://github.com/hovancik/stretchly#application-signing
   EOS
 end
