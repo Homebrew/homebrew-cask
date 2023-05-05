@@ -40,8 +40,8 @@ cask "coteditor" do
     end
   end
   on_big_sur :or_newer do
-    version "4.5.4"
-    sha256 "7b3df17ed7c561e7278aaa822da17bdbb02f5879360f795334aea79f8dfa1fe7"
+    version "4.5.5"
+    sha256 "9ba6ffece3e0f1ef0d93d58b5fb7f9f582ad1aa1af84afb3184f891680bbec30"
 
     livecheck do
       url :url
