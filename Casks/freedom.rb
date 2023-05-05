@@ -16,4 +16,19 @@ cask "freedom" do
   depends_on macos: ">= :high_sierra"
 
   app "Freedom.app"
+
+  uninstall quit:      "com.80pct.FreedomPlatform",
+            launchctl: "com.80pct.FreedomHelper",
+            delete:    [
+              "/Library/PrivilegedHelperTools/com.80pct.FreedomHelper",
+              "/var/log/FreedomHelper.log",
+            ]
+
+  zap trash: [
+    "~/Library/Application Support/com.80pct.FreedomPlatform",
+    "~/Library/Caches/com.80pct.FreedomPlatform",
+    "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.80pct.FreedomPlatform",
+    "~/Library/HTTPStorages/com.80pct.FreedomPlatform",
+    "~/Library/Preferences/com.80pct.FreedomPlatform.plist",
+  ]
 end
