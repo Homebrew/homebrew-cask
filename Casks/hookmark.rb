@@ -1,6 +1,6 @@
 cask "hookmark" do
-  version "5.1.1,2023.05"
-  sha256 "1db6d085bf0abc4da6a82daba2cc87478f2390fd696000b26fedd427005f0250"
+  version "5.1.2,2023.05"
+  sha256 "a5c392cb55e7ae1a67790498460170a93d9ea0b2bbc42501be58ef0caa782642"
 
   url "https://hookproductivity.com/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/Hookmark-app-#{version.csv.first}.dmg_.zip",
       user_agent: :fake
