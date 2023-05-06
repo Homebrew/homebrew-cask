@@ -23,4 +23,6 @@ cask "osp-tracker" do
     args:       ["--mode", "unattended"],
     sudo:       true,
   }
+
+  zap trash: "~/Library/Saved Application State/org.opensourcephysics.cabrillo.tracker.savedState"
 end
