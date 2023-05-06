@@ -4,6 +4,7 @@ cask "squidman" do
 
   url "https://squidman.net/resources/downloads/SquidMan#{version}.dmg"
   name "SquidMan"
+  desc "Manage and install Squid proxy cache"
   homepage "https://squidman.net/squidman/"
 
   livecheck do
