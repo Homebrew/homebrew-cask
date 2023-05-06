@@ -1,6 +1,6 @@
 cask "xlplayer" do
-  version "3.1.2.65821"
-  sha256 "b1b0187fd8bb2a61e6a822b8cd12b6a3d4018b7a9b0f8bb92a06a04cf1539eaf"
+  version "3.1.3.65885"
+  sha256 "952d9afdc1a27ddd8d4c41af08235573559053d67c13d9119937f088822d7a30"
 
   url "https://down.sandai.net/mac/player_#{version}.dmg",
       verified: "down.sandai.net/"
