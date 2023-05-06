@@ -3,9 +3,9 @@ cask "microsoft-edge" do
                                intel: "C1297A47-86C4-4C1F-97FA-950631F94777"
   linkid = on_arch_conditional arm: "2093504", intel: "2069148"
 
-  version "112.0.1722.68"
-  sha256 arm:   "cbea44e44abd366845c4d7bc506a7e15342238ebdf4d05f7c6a4da85ae56e678",
-         intel: "c08c5465e3025dd6413ec2c6ebe38af238adcf6a018b2ccef607f852d8045402"
+  version "113.0.1774.35"
+  sha256 arm:   "e23b9886171cb6b1e5b717fdd19e92cb692351559d7522c31ebac1f4c4130c77",
+         intel: "298edefef32dd22c9800d5864819f2d208b9bca800e79899ffd6ecd9821b608e"
 
   url "https://officecdn-microsoft-com.akamaized.net/pr/#{folder}/MacAutoupdate/MicrosoftEdge-#{version}.pkg",
       verified: "officecdn-microsoft-com.akamaized.net/"
@@ -29,7 +29,12 @@ cask "microsoft-edge" do
         },
       ]
 
-  uninstall pkgutil: "com.microsoft.edgemac"
+  uninstall pkgutil:   "com.microsoft.edgemac",
+            launchctl: [
+              "com.microsoft.EdgeUpdater.update-internal.109.0.1518.89.system",
+              "com.microsoft.EdgeUpdater.update.system",
+              "com.microsoft.EdgeUpdater.wake.109.0.1518.89.system",
+            ]
 
   zap trash: [
         "~/Library/Application Scripts/com.microsoft.edgemac.wdgExtension",
