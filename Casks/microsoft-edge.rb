@@ -31,9 +31,9 @@ cask "microsoft-edge" do
 
   uninstall pkgutil:   "com.microsoft.edgemac",
             launchctl: [
-              "com.microsoft.EdgeUpdater.update-internal.109.0.1518.89.system",
+              "com.microsoft.EdgeUpdater.update-internal.*.system",
               "com.microsoft.EdgeUpdater.update.system",
-              "com.microsoft.EdgeUpdater.wake.109.0.1518.89.system",
+              "com.microsoft.EdgeUpdater.wake.*.system",
             ]
 
   zap trash: [
@@ -47,9 +47,7 @@ cask "microsoft-edge" do
         "~/Library/HTTPStorages/com.microsoft.edgemac",
         "~/Library/HTTPStorages/com.microsoft.edgemac.binarycookies",
         "~/Library/HTTPStorages/com.microsoft.EdgeUpdater",
-        "~/Library/LaunchAgents/com.microsoft.EdgeUpdater.update.plist",
-        "~/Library/LaunchAgents/com.microsoft.EdgeUpdater.update-internal.*.plist",
-        "~/Library/LaunchAgents/com.microsoft.EdgeUpdater.wake.*.plist",
+        "~/Library/LaunchAgents/com.microsoft.EdgeUpdater.*.plist",
         "~/Library/Microsoft/EdgeUpdater",
         "~/Library/Preferences/com.microsoft.edgemac.plist",
         "~/Library/Saved Application State/com.microsoft.edgemac.app.*.savedState/",
