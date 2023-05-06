@@ -1,9 +1,9 @@
 cask "castr" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.3.0"
-  sha256 arm:   "9ac93c4764c84e740c4abf8d8bcd84636c8194c3c33b6cda7b7955442599b6c2",
-         intel: "4038e8c100d1e2d80714b4f9a9b5c7739aeb61e9e9fd2a0e9be257b2a04b8b70"
+  version "1.5.0"
+  sha256 arm:   "6946f5810bbcfe74be76262df9821636c2832d87c52d124386cf0e13105b020c",
+         intel: "db7eb6ee1faacabc97e625a86377338fb564dd5220a457a27ac8c2f1dfca6c4f"
 
   url "https://download.todesktop.com/210610elr9v3cm6/Castr%20#{version}-#{arch}.dmg",
       verified: "download.todesktop.com/210610elr9v3cm6/"
