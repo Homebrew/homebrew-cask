@@ -31,9 +31,9 @@ cask "microsoft-edge" do
 
   uninstall pkgutil:   "com.microsoft.edgemac",
             launchctl: [
-              "com.microsoft.EdgeUpdater.update-internal.*.system",
+              "com.microsoft.EdgeUpdater.update-internal.109.0.1518.89.system",
               "com.microsoft.EdgeUpdater.update.system",
-              "com.microsoft.EdgeUpdater.wake.*.system",
+              "com.microsoft.EdgeUpdater.wake.109.0.1518.89.system",
             ]
 
   zap trash: [
