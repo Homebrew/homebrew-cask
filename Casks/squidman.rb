@@ -4,11 +4,12 @@ cask "squidman" do
 
   url "https://squidman.net/resources/downloads/SquidMan#{version}.dmg"
   name "SquidMan"
+  desc "Manage and install Squid proxy cache"
   homepage "https://squidman.net/squidman/"
 
   livecheck do
-    url :homepage
-    regex(%r{href=.*?/SquidMan(\d+(?:\.\d+)*)\.dmg}i)
+    url "https://squidman.net/squidman/releasenotes/index.html"
+    regex(/Version\s*?(\d+(?:\.\d+)+).*?released/i)
   end
 
   app "SquidMan.app"
