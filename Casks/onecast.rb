@@ -15,4 +15,11 @@ cask "onecast" do
   auto_updates true
 
   app "OneCast.app"
+
+  zap trash: [
+    "~/Library/Caches/com.onecast.macos",
+    "~/Library/HTTPStorages/com.onecast.macos",
+    "~/Library/Preferences/com.onecast.macos.plist",
+    "~/Library/WebKit/com.onecast.macos",
+  ]
 end

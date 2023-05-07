@@ -13,4 +13,11 @@ cask "massreplaceit" do
   end
 
   app "MassReplaceIt.app"
+
+  zap trash: [
+    "~/Library/Application Support/MassReplaceIt",
+    "~/Library/Caches/com.hexmonkey.massreplaceit",
+    "~/Library/Preferences/com.hexmonkey.massreplaceit.plist",
+    "~/Library/Saved Application State/com.hexmonkey.massreplaceit.savedState",
+  ]
 end

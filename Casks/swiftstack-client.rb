@@ -14,4 +14,14 @@ cask "swiftstack-client" do
   end
 
   app "SwiftStack Client.app"
+
+  zap trash: [
+    "~/.swiftstackclient",
+    "~/Library/Application Support/SwiftStack Client",
+    "~/Library/Logs/SwiftStack Client",
+    "~/Library/Preferences/com.swiftstack.swiftstackclient.helper.plist",
+    "~/Library/Preferences/com.swiftstack.swiftstackclient.plist",
+    "~/Library/Saved Application State/com.swiftstack.swiftstackclient.savedState",
+    "~/swiftstack_client_volumes",
+  ]
 end
