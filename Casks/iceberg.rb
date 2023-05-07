@@ -22,4 +22,6 @@ cask "iceberg" do
               executable: "uninstall.sh",
               sudo:       true,
             }
+
+  zap trash: "/Library/Application Support/Iceberg"
 end

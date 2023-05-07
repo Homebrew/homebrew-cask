@@ -13,4 +13,10 @@ cask "lehreroffice" do
   end
 
   app "LehrerOffice.app"
+
+  zap trash:  [
+        "~/Documents/LehrerOffice",
+        "~/Library/Saved Application State/ch.rothsoft.lehreroffice.desktop.savedState",
+      ],
+      delete: "/Library/Application Support/LehrerOffice"
 end

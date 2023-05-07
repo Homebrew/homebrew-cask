@@ -13,4 +13,6 @@ cask "laconvolver" do
   end
 
   audio_unit_plugin "LAConvolver/LAConvolver.component"
+
+  # No zap stanza required
 end

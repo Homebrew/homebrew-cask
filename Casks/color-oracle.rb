@@ -12,4 +12,8 @@ cask "color-oracle" do
   end
 
   app "Color Oracle.app"
+
+  uninstall login_item: "Color Oracle"
+
+  zap trash: "~/Library/Preferences/ch.ethz.ika.colororacle.plist"
 end

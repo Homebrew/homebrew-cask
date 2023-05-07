@@ -16,6 +16,8 @@ cask "eurkey" do
   keyboard_layout "EurKEY-Mac-master/EurKEY.icns"
   keyboard_layout "EurKEY-Mac-master/EurKEY.keylayout"
 
+  # No zap stanza required
+
   caveats do
     reboot
   end

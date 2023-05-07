@@ -13,4 +13,13 @@ cask "cisdem-document-reader" do
   end
 
   app "Cisdem Document Reader.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.cisdem.documentreader",
+    "~/Library/Caches/com.cisdem.documentreader",
+    "~/Library/HTTPStorages/com.cisdem.documentreader",
+    "~/Library/Preferences/com.cisdem.asgroups.plist",
+    "~/Library/Preferences/com.cisdem.documentreader.plist",
+    "~/Library/Saved Application State/com.cisdem.documentreader.savedState",
+  ]
 end

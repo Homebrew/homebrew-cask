@@ -13,4 +13,11 @@ cask "enzymex" do
   end
 
   app "EnzymeX.app"
+
+  zap trash: [
+    "~/Library/Application Support/EnzymeX",
+    "~/Library/Caches/com.mekentosj.enzymex",
+    "~/Library/Preferences/com.mekentosj.enzymex.plist",
+    "~/Library/Saved Application State/com.mekentosj.enzymex.savedState",
+  ]
 end
