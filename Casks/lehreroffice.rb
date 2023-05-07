@@ -9,8 +9,14 @@ cask "lehreroffice" do
 
   livecheck do
     url "https://www.lehreroffice.ch/services/update/getcurrentversion.php?app=Desktop"
-    regex(/(\d+(?:\.\d+)+)/)
+    regex(/(\d+(?:\.\d+)+)/i)
   end
 
   app "LehrerOffice.app"
+
+  zap trash:  [
+        "~/Documents/LehrerOffice",
+        "~/Library/Saved Application State/ch.rothsoft.lehreroffice.desktop.savedState",
+      ],
+      delete: "/Library/Application Support/LehrerOffice"
 end

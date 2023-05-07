@@ -9,7 +9,7 @@ cask "novabench" do
 
   livecheck do
     url "https://novabench.com/download#personal"
-    regex(/Novabench\s*(?:<!--[^>]*-->)?\s*(\d+(?:\.\d+)*)/)
+    regex(/Novabench\s*(?:<!--[^>]*-->)?\s*(\d+(?:\.\d+)*)/i)
   end
 
   app "Novabench.app"

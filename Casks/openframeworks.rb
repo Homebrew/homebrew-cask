@@ -9,7 +9,7 @@ cask "openframeworks" do
 
   livecheck do
     url "https://github.com/openframeworks/openFrameworks"
-    regex(/v?(\d+(?:\.\d+)+)/)
+    regex(/v?(\d+(?:\.\d+)+)/i)
   end
 
   suite "of_v#{version}_osx_release"
