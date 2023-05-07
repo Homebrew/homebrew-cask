@@ -9,7 +9,7 @@ cask "massreplaceit" do
 
   livecheck do
     url :homepage
-    regex(/MassReplaceIt\s+(\d+(?:\.\d+)+)/)
+    regex(/MassReplaceIt\s+(\d+(?:\.\d+)+)/i)
   end
 
   app "MassReplaceIt.app"

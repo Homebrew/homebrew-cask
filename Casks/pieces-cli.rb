@@ -10,7 +10,7 @@ cask "pieces-cli" do
 
   livecheck do
     url "https://code.pieces.app/cli-version"
-    regex(/pieces[._-]cli[._-]v?(\d+(?:\.\d+)+)/)
+    regex(/pieces[._-]cli[._-]v?(\d+(?:\.\d+)+)/i)
   end
 
   binary "pieces"

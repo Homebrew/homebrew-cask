@@ -9,7 +9,7 @@ cask "laconvolver" do
 
   livecheck do
     url :homepage
-    regex(/href="LAConvolverv?(\d+(?:\.\d+)*)\.zip"/)
+    regex(/href="LAConvolverv?(\d+(?:\.\d+)*)\.zip"/i)
   end
 
   audio_unit_plugin "LAConvolver/LAConvolver.component"

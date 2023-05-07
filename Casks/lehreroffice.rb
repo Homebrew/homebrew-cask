@@ -9,7 +9,7 @@ cask "lehreroffice" do
 
   livecheck do
     url "https://www.lehreroffice.ch/services/update/getcurrentversion.php?app=Desktop"
-    regex(/(\d+(?:\.\d+)+)/)
+    regex(/(\d+(?:\.\d+)+)/i)
   end
 
   app "LehrerOffice.app"

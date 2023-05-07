@@ -9,7 +9,7 @@ cask "trash-it" do
 
   livecheck do
     url "https://nonamescriptware.com/downloads/"
-    regex(/Trash It!\s+(\d+(?:\.\d+)*)/)
+    regex(/Trash It!\s+(\d+(?:\.\d+)*)/i)
   end
 
   app "Trash It! #{version}/Trash It!.app"

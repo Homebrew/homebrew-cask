@@ -10,7 +10,7 @@ cask "steamcmd" do
 
   livecheck do
     url "http://media.steampowered.com/client/steam_cmd_osx"
-    regex(/"version"\s*"([^"]+)"/)
+    regex(/"version"\s*"([^"]+)"/i)
   end
 
   auto_updates true

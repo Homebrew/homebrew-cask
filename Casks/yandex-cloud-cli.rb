@@ -10,7 +10,7 @@ cask "yandex-cloud-cli" do
 
   livecheck do
     url "https://cloud.yandex.com/en/docs/cli/release-notes"
-    regex(/Version\s+(\d+(?:\.\d+)+)\s+\(/)
+    regex(/Version\s+(\d+(?:\.\d+)+)\s+\(/i)
   end
 
   installer script: {

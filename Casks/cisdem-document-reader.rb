@@ -9,7 +9,7 @@ cask "cisdem-document-reader" do
 
   livecheck do
     url "https://www.cisdem.com/js/notes/document-reader-mac.js"
-    regex(/(\d+(?:\.\d+)*)\s+\(\d+(?:-\d+)+\)/)
+    regex(/(\d+(?:\.\d+)*)\s+\(\d+(?:-\d+)+\)/i)
   end
 
   app "Cisdem Document Reader.app"

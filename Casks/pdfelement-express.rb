@@ -9,7 +9,7 @@ cask "pdfelement-express" do
 
   livecheck do
     url "https://cbs.wondershare.com/go.php?m=upgrade_info&pid=4133"
-    regex(/<Version>(\d+(?:\.\d+)+)</)
+    regex(/<Version>(\d+(?:\.\d+)+)</i)
   end
 
   depends_on macos: ">= :sierra"

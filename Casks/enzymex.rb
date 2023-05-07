@@ -9,7 +9,7 @@ cask "enzymex" do
 
   livecheck do
     url "https://nucleobytes.com/versionEnzymeX.txt"
-    regex(/\d+(?:\.\d+)+/)
+    regex(/\d+(?:\.\d+)+/i)
   end
 
   app "EnzymeX.app"

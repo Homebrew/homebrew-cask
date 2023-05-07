@@ -9,7 +9,7 @@ cask "cisdem-pdf-converter-ocr" do
 
   livecheck do
     url "https://www.cisdem.com/js/notes/pdf-converter-ocr-mac.js"
-    regex(/(\d+(?:\.\d+)*)\s+\(\d+(?:-\d+)+\)/)
+    regex(/(\d+(?:\.\d+)*)\s+\(\d+(?:-\d+)+\)/i)
   end
 
   app "Cisdem PDF Converter OCR.app"
