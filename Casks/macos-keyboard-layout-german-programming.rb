@@ -1,10 +1,10 @@
-cask "macos-keyboard-layout-german-programming" do
+cask "keyboard-layout-german-programming" do
   version "1.1"
   sha256 :no_check
 
   url "https://github.com/MickL/macos-keyboard-layout-german-programming/archive/master.zip"
-  name "MacOS keyboard layout programming"
-  desc "Keyboard layout for programming while keeping many habits of german keyboards"
+  name "Keyboard layout german programming"
+  desc "Keyboard layout for german programmers"
   homepage "https://github.com/MickL/macos-keyboard-layout-german-programming"
 
   livecheck do
