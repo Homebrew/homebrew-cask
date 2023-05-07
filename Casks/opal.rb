@@ -10,7 +10,7 @@ cask "opal" do
 
   livecheck do
     url "https://opalcamera.com/download"
-    regex(/Opal\sBuild\s(\d+(?:\.\d+)+)/)
+    regex(/Opal\s+Build\s+(\d+(?:\.\d+)+)/i)
   end
 
   depends_on macos: ">= :monterey"
