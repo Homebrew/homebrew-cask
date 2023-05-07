@@ -4,7 +4,7 @@ cask "macos-keyboard-layout-german-programming" do
 
   url "https://github.com/MickL/macos-keyboard-layout-german-programming/archive/master.zip"
   name "MacOS keyboard layout programming"
-  desc "Keyboard layout for programming while keeping as many habits of german-keyboard-usage as possible"
+  desc "Keyboard layout for programming while keeping many habits of german keyboards"
   homepage "https://github.com/MickL/macos-keyboard-layout-german-programming"
 
   livecheck do
