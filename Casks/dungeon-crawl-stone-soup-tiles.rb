@@ -14,4 +14,9 @@ cask "dungeon-crawl-stone-soup-tiles" do
   end
 
   app "Dungeon Crawl Stone Soup - Tiles.app"
+
+  zap trash: [
+    "~/Library/Application Support/Dungeon Crawl Stone Soup",
+    "~/Library/Saved Application State/net.sourceforge.crawl-ref.savedState",
+  ]
 end
