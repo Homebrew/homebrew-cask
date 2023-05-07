@@ -14,4 +14,6 @@ cask "starsector" do
   end
 
   app "Starsector.app"
+
+  # No zap stanza required
 end
