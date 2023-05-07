@@ -10,7 +10,7 @@ cask "softube-central" do
 
   livecheck do
     url "https://www.softube.com/installers"
-    regex(/Softube%20Central-v?(\d+(?:\.\d+)+)-universal\.pkg/)
+    regex(/Softube%20Central[._-]v?(\d+(?:\.\d+)+)[._-]universal\.pkg/i)
   end
 
   auto_updates true
