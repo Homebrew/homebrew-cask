@@ -1,6 +1,6 @@
 cask "softube-central" do
-  version "1.9.0"
-  sha256 "ae3c05350332c638ae566216624f672ab86ad366e88334cba079890e920d8c3f"
+  version "1.9.7"
+  sha256 "0538f8795d8cde686d7f732ce09fff07328d1d2fd85e2b8516b25f122d0b9ae3"
 
   url "https://softubestorage.b-cdn.net/softubecentral/Softube%20Central-#{version}-universal.pkg",
       verified: "softubestorage.b-cdn.net/"
@@ -9,7 +9,8 @@ cask "softube-central" do
   homepage "https://www.softube.com/softube-central/"
 
   livecheck do
-    skip "No version information available"
+    url "https://www.softube.com/installers"
+    regex(/Softube%20Central-v?(\d+(?:\.\d+)+)-universal\.pkg/)
   end
 
   auto_updates true
