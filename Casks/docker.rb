@@ -6,23 +6,23 @@ cask "docker" do
     sha256 arm:   "fc8609d57fb8c8264122f581c0f66497e46e171f8027d85d90213527d6226362",
            intel: "bee41d646916e579b16b7fae014e2fb5e5e7b5dbaf7c1949821fd311d3ce430b"
 
-    depends_on macos: ">= :catalina"
-
     livecheck do
       skip "Legacy version"
     end
+
+    depends_on macos: ">= :catalina"
   end
   on_big_sur :or_newer do
     version "4.19.0,106363"
     sha256 arm:   "4bb0ef4dcceef1cd6e7b1f59bc60e71265952275ce166e749df17ea8a8f492aa",
            intel: "07b54cc6a2c61f7f37bfa8698449a9db857e4b94133e3614a42a9d8345bc561b"
 
-    depends_on macos: ">= :big_sur"
-
     livecheck do
       url "https://desktop.docker.com/mac/main/#{arch}/appcast.xml"
       strategy :sparkle
     end
+
+    depends_on macos: ">= :big_sur"
   end
 
   url "https://desktop.docker.com/mac/main/#{arch}/#{version.csv.second}/Docker.dmg"

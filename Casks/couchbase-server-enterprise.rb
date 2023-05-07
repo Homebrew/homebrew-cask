@@ -5,11 +5,11 @@ cask "couchbase-server-enterprise" do
 
     url "https://packages.couchbase.com/releases/#{version}/couchbase-server-enterprise_#{version}-macos_x86_64.zip"
 
-    app "couchbase-server-enterprise_#{version}/Couchbase Server.app"
-
     livecheck do
       skip "Legacy version"
     end
+
+    app "couchbase-server-enterprise_#{version}/Couchbase Server.app"
   end
   on_sierra :or_newer do
     version "7.1.4"
@@ -17,12 +17,12 @@ cask "couchbase-server-enterprise" do
 
     url "https://packages.couchbase.com/releases/#{version}/couchbase-server-enterprise_#{version}-macos_x86_64.dmg"
 
-    app "Couchbase Server.app"
-
     livecheck do
       url "https://www.couchbase.com/downloads"
       regex(/couchbase[._-]server[._-]enterprise[._-]v?(\d+(:?\.\d+)+)[._-]macos[._-]x86[._-]64\.dmg/i)
     end
+
+    app "Couchbase Server.app"
   end
 
   name "Couchbase Server"
