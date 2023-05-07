@@ -9,7 +9,7 @@ cask "tuxera-ntfs" do
 
   livecheck do
     url "https://ntfsformac.tuxera.com/support"
-    regex(/Release\s*v?(\d+(?:\.\d+)*)/i)
+    regex(/Release\s*?v?(\d+(?:\.\d+)*)/i)
   end
 
   auto_updates true
@@ -23,14 +23,14 @@ cask "tuxera-ntfs" do
             pkgutil: [
               "com.tuxera.pkg.Tuxera_NTFS",
               "com.tuxera.pkg.Tuxera_NTFS_compat",
-            ],
-            delete:  [
-              "/Library/Application Support/Tuxera NTFS",
-              "/Library/Preferences/com.tuxera.NTFS.plist",
             ]
 
-  zap trash: [
-    "~/Library/Saved Application State/com.tuxera.TuxeraDiskManager.savedState",
-    "~/Library/Caches/com.tuxera.filesystems.ntfs.agent",
-  ]
+  zap trash:  [
+        "~/Library/Saved Application State/com.tuxera.TuxeraDiskManager.savedState",
+        "~/Library/Caches/com.tuxera.filesystems.ntfs.agent",
+      ],
+      delete: [
+        "/Library/Application Support/Tuxera NTFS",
+        "/Library/Preferences/com.tuxera.NTFS.plist",
+      ]
 end
