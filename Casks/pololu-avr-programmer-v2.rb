@@ -23,4 +23,6 @@ cask "pololu-avr-programmer-v2" do
     "com.pololu.pavr2.app",
     "com.pololu.pavr2.path",
   ]
+
+  zap trash: "~/Library/Saved Application State/com.pololu.pavr2.app.savedState"
 end
