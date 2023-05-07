@@ -9,7 +9,7 @@ cask "squidman" do
 
   livecheck do
     url "https://squidman.net/squidman/releasenotes/index.html"
-    regex(/Version\s*(\d+(?:\.\d+)*)\s*-\s*released/i)
+    regex(/Version\s*?(\d+(?:\.\d+)+).*?released/i)
   end
 
   app "SquidMan.app"
