@@ -11,5 +11,9 @@ cask "music-miniplayer" do
 
   app "Music MiniPlayer.app"
 
-  zap trash: ["~/Library/Preferences/com.marioaguzman.Music-MiniPlayer.plist", "~/Library/Saved Application State/com.marioaguzman.Music-MiniPlayer.savedState", "~/Library/Caches/com.marioaguzman.Music-MiniPlayer"]
+  zap trash: [
+    "~/Library/Preferences/com.marioaguzman.Music-MiniPlayer.plist",
+    "~/Library/Saved Application State/com.marioaguzman.Music-MiniPlayer.savedState",
+    "~/Library/Caches/com.marioaguzman.Music-MiniPlayer",
+  ]
 end
