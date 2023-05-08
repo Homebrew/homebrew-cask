@@ -1,5 +1,5 @@
 cask "commander-one" do
-  version "3.5.2,3667"
+  version "3.5.2"
   sha256 :no_check
 
   url "https://cdn.electronic.us/products/commander/mac/download/commander.dmg",
@@ -10,7 +10,9 @@ cask "commander-one" do
 
   livecheck do
     url "https://cdn.electronic.us/products/commander/mac/update/settings.xml"
-    strategy :sparkle
+    strategy :sparkle do |item|
+      item.short_version.sub(/\(.*/, "")
+    end
   end
 
   depends_on macos: ">= :sierra"
