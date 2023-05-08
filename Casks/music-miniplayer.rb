@@ -4,8 +4,10 @@ cask "music-miniplayer" do
 
   url "https://marioaguzman.github.io/musicminiplayer/updater/Music%20MiniPlayer.zip"
   name "Music MiniPlayer for macOS"
-  desc "Replica of the classic iTunes MiniPlayer to control Apple Music on modern macOS"
+  desc "Replica of the classic iTunes MiniPlayer to control Apple Music"
   homepage "https://marioaguzman.github.io/musicminiplayer/"
+
+  auto_updates true
 
   app "Music MiniPlayer.app"
 
