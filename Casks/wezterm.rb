@@ -10,9 +10,9 @@ cask "wezterm" do
 
   livecheck do
     url :url
-    regex(/(\d+(?:[.-]\d+)+)-(\h+)/i)
-    strategy :github_latest do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+    regex(/^(\d+(?:[.-]\d+)+)-(\h+)$/i)
+    strategy :github_latest do |json, regex|
+      json["tag_name"]&.scan(regex)&.map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 
