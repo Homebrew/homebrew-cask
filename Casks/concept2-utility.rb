@@ -27,6 +27,9 @@ cask "concept2-utility" do
   uninstall pkgutil: "com.concept2.pkg.Concept2Utility"
 
   zap trash: [
+    "~/Documents/Concept2",
     "~/Library/Application Support/Concept2",
+    "~/Library/Preferences/com.concept2.Utility.plist",
+    "~/Library/Saved Application State/com.concept2.lcu.savedState",
   ]
 end
