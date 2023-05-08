@@ -8,10 +8,21 @@ cask "ricochet" do
   desc "Anonymous peer-to-peer instant messaging"
   homepage "https://ricochet.im/"
 
+  # Upstream sometimes replaces a release asset and bumps the version, so it
+  # doesn't correspond to the tagged version anymore. For example, they may
+  # publish `ricochet-1.2.3.1-macos.dmg` for a `1.2.3` release, so we have to
+  # check the release assets to guarantee we identify the full version.
   livecheck do
     url :url
-    regex(%r{/ricochet-(\d+(?:\.\d+)*)-macos\.dmg}i)
-    strategy :github_latest
+    regex(/^ricochet[._-]v?(\d+(?:\.\d+)+).*?\.dmg$/i)
+    strategy :github_latest do |json, regex|
+      json["assets"]&.map do |asset|
+        match = asset["name"]&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
+    end
   end
 
   app "Ricochet.app"
