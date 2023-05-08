@@ -10,7 +10,7 @@ cask "josm" do
 
   livecheck do
     url :url
-    regex(%r{href=["']?[^"' >]*?/tree/\D*?(\d+(?:\.\d+)*)[^"' >]*?["' >]}i)
+    regex(/\D*?(\d+(?:\.\d+)*)/i)
     strategy :github_latest
   end
 
