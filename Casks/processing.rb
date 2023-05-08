@@ -13,7 +13,7 @@ cask "processing" do
 
   livecheck do
     url :url
-    regex(%r{href=.*?tree/processing[._-](\d+)[._-]v?(\d+(?:\.\d+)+)}i)
+    regex(/processing[._-](\d+)[._-]v?(\d+(?:\.\d+)+)/i)
     strategy :github_latest do |page|
       page.scan(regex)
           .map { |match| "#{match[1]},#{match[0]}" }
