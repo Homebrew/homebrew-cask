@@ -3,7 +3,7 @@ cask "music-miniplayer" do
   sha256 :no_check
 
   url "https://marioaguzman.github.io/musicminiplayer/updater/Music%20MiniPlayer.zip"
-  name "Music MiniPlayer for macOS"
+  name "Music MiniPlayer"
   desc "Replica of the classic iTunes MiniPlayer to control Apple Music"
   homepage "https://marioaguzman.github.io/musicminiplayer/"
 
