@@ -7,6 +7,11 @@ cask "music-miniplayer" do
   desc "Replica of the iTunes MiniPlayer"
   homepage "https://marioaguzman.github.io/musicminiplayer/"
 
+  livecheck do
+    url "https://marioaguzman.github.io/musicminiplayer/updater/musicminiplayerappcast.xml"
+    strategy :sparkle, &:short_version
+  end
+
   auto_updates true
 
   app "Music MiniPlayer.app"
