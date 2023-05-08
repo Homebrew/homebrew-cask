@@ -10,7 +10,7 @@ cask "hydrus-network" do
 
   livecheck do
     url :url
-    regex(%r{href=["']?[^"' >]*?/tree/v?(\d+(?:\.\d+)*[a-z]?)[^"' >]*?["' >]}i)
+    regex(/v?(\d+(?:\.\d+)*[a-z]?)/i)
     strategy :github_latest
   end
 
