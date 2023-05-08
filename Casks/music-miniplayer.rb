@@ -4,7 +4,7 @@ cask "music-miniplayer" do
 
   url "https://marioaguzman.github.io/musicminiplayer/updater/Music%20MiniPlayer.zip"
   name "Music MiniPlayer"
-  desc "Replica of the classic iTunes MiniPlayer to control Apple Music"
+  desc "Replica of the iTunes MiniPlayer"
   homepage "https://marioaguzman.github.io/musicminiplayer/"
 
   auto_updates true
