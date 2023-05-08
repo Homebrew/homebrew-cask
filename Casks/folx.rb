@@ -10,9 +10,7 @@ cask "folx" do
 
   livecheck do
     url "https://cdn.electronic.us/products/folx/mac/update/settings.xml"
-    strategy :sparkle do |item|
-      item.short_version.sub(/\(.*/, "")
-    end
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

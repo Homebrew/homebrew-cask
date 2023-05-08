@@ -9,9 +9,7 @@ cask "airy" do
 
   livecheck do
     url "https://cdn.airy-youtube-downloader.com/products/airy/mac/update/airy.xml"
-    strategy :sparkle do |item|
-      item.short_version.sub(/\(.*/, "")
-    end
+    strategy :sparkle, &:short_version
   end
 
   app "Airy.app"

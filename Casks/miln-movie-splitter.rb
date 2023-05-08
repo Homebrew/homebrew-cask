@@ -9,9 +9,7 @@ cask "miln-movie-splitter" do
 
   livecheck do
     url "https://miln.eu/moviesplitter/latest.xml"
-    strategy :sparkle do |item|
-      item.short_version.to_s
-    end
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
