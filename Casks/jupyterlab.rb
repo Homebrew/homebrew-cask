@@ -12,7 +12,7 @@ cask "jupyterlab" do
 
   livecheck do
     url :url
-    regex(%r{href=.*?/tag/v?(\d+(?:[.-]\d+)+)["' >]}i)
+    regex(/v?(\d+(?:[.-]\d+)+)/i)
     strategy :github_latest
   end
 
