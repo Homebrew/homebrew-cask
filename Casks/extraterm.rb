@@ -8,9 +8,13 @@ cask "extraterm" do
   desc "Swiss army chainsaw of terminal emulators"
   homepage "https://extraterm.org/"
 
+  # As of writing, upstream marks all releases on GitHub as "pre-release".
+  # This should be updated to use the `GithubLatest` strategy if/when stable
+  # versions become available.
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://github.com/sedwards2009/extraterm/releases"
+    regex(%r{href=["']?[^"' >]*?/tag/v?(\d+(?:\.\d+)+)["' >]}i)
+    strategy :page_match
   end
 
   app "ExtratermQt.app"
