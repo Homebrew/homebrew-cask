@@ -15,6 +15,8 @@ cask "cloudmounter" do
     end
   end
 
+  depends_on macos: ">= :sierra"
+
   app "CloudMounter.app"
 
   zap trash: [
