@@ -11,7 +11,7 @@ cask "flame" do
 
   livecheck do
     url :url
-    regex(%r{href=.*?/tag/v?(\d+(?:\.\d+){1,2})(?:\s*[(._-](\d+)\)?)?["' >]}i)
+    regex(/v?(\d+(?:\.\d+){1,2})(?:\s*[(._-](\d+)\)?)?/i)
     strategy :github_latest do |page, regex|
       page.scan(regex).map do |match|
         match[1].present? ? "#{match[0]},#{match[1]}" : match[0]
