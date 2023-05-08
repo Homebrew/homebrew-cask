@@ -9,7 +9,7 @@ cask "vimediamanager" do
 
   livecheck do
     url :url
-    regex(%r{href=.*?/v?(\d+(?:\.\d+)+[a-z]\d+)["' >]}i)
+    regex(/v?(\d+(?:\.\d+)+[a-z]\d+)/i)
     strategy :github_latest
   end
 

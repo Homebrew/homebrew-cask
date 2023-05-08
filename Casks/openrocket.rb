@@ -13,7 +13,7 @@ cask "openrocket" do
 
   livecheck do
     url :url
-    regex(%r{href=.*?/tag/v?(?:release)?[._-]?(\d+(?:\.\d+)+)["'>]}i)
+    regex(/v?(?:release)?[._-]?(\d+(?:\.\d+)+)/i)
     strategy :github_latest
   end
 

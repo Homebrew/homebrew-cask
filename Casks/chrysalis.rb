@@ -12,7 +12,7 @@ cask "chrysalis" do
   # tag in a different repository, which led to an incorrect version match.
   livecheck do
     url :url
-    regex(%r{href=.*?/Chrysalis/releases/tag/v?(\d+(?:\.\d+)+)["' >]}i)
+    regex(/v?(\d+(?:\.\d+)+)/i)
     strategy :github_latest
   end
 

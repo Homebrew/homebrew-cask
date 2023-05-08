@@ -10,7 +10,7 @@ cask "plover" do
 
   livecheck do
     url :url
-    regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)+[\w.]+)["' >]}i)
+    regex(/v?(\d+(?:\.\d+)+[\w.]+)/i)
     strategy :github_latest
   end
 

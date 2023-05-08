@@ -15,7 +15,7 @@ cask "turtl" do
   # newer version may wrongly appear to be older).
   livecheck do
     url :url
-    regex(%r{href=["']?[^"' >]*?/tag/\D*([^"' >]+?)["' >]}i)
+    regex(/^\D*?(\d+(?:\.\d+)+.*)$/i)
     strategy :github_latest
   end
 

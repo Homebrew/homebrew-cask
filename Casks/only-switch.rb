@@ -9,7 +9,7 @@ cask "only-switch" do
 
   livecheck do
     url :url
-    regex(%r{href=["']?[^"' >]*?/tag/release[._-]v?(\d+(?:\.\d+)+)["' >]}i)
+    regex(/release[._-]v?(\d+(?:\.\d+)+)/i)
     strategy :github_latest
   end
 
