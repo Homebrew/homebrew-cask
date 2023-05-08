@@ -1,5 +1,5 @@
 cask "folx" do
-  version "5.27,13991"
+  version "5.27"
   sha256 :no_check
 
   url "https://cdn.electronic.us/products/folx/mac/download/downloader_mac.dmg",
@@ -10,7 +10,9 @@ cask "folx" do
 
   livecheck do
     url "https://cdn.electronic.us/products/folx/mac/update/settings.xml"
-    strategy :sparkle
+    strategy :sparkle do |item|
+      item.short_version.sub(/\(.*/, "")
+    end
   end
 
   auto_updates true
