@@ -2,8 +2,8 @@ cask "lark" do
   arch arm: "arm64", intel: "x64"
 
   on_arm do
-    version "6.2.8,168efa81"
-    sha256 "61a0f0a0e5bf0f0fa6a79f13e89398f24411bfa677bbe480278f21b861bd5f45"
+    version "6.3.8,24bdb3ae"
+    sha256 "cbc35e8c18b65c340aa0d1c4a62b27d49bce6aea7fe232c0984358f8d8626d4c"
   end
   on_intel do
     version "6.2.8,525ffb40"
