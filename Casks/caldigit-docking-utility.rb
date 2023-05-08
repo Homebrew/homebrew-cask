@@ -15,4 +15,9 @@ cask "caldigit-docking-utility" do
 
   uninstall signal:  ["TERM", "CalDigit.CalDigit-Docking-Station-Utility"],
             pkgutil: "com.CalDigit.CDSU.pkg"
+
+  zap trash: [
+    "~/Library/Preferences/CalDigit.CalDigit-Docking-Station-Utility.plist",
+    "~/Library/Saved Application State/CalDigit.CalDigit-Docking-Station-Utility.savedState",
+  ]
 end
