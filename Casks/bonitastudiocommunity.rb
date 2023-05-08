@@ -10,7 +10,7 @@ cask "bonitastudiocommunity" do
 
   livecheck do
     url :url
-    regex(%r{href=["']?[^"' >]*?/tag/[^"' >]*?(\d+(?:[.-]\d+)+(?:-\w+)?)["' >]}i)
+    regex(/(\d+(?:[.-]\d+)+(?:-\w+)?)/i)
     strategy :github_latest
   end
 
