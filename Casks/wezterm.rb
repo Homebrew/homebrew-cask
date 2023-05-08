@@ -10,7 +10,7 @@ cask "wezterm" do
 
   livecheck do
     url :url
-    regex(%r{href=["']?[^"' >]*?/tag/[^"' >]*?(\d+(?:[.-]\d+)+)-(\h+)["' >]}i)
+    regex(/(\d+(?:[.-]\d+)+)-(\h+)/i)
     strategy :github_latest do |page, regex|
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
