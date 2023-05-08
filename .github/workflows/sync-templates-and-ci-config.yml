@@ -20,7 +20,6 @@ jobs:
     strategy:
       matrix:
         repo:
-          - Homebrew/homebrew-cask-drivers
           - Homebrew/homebrew-cask-fonts
           - Homebrew/homebrew-cask-versions
     steps:
