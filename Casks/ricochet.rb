@@ -25,4 +25,9 @@ cask "ricochet" do
   end
 
   app "Ricochet.app"
+
+  zap trash: [
+    "~/Library/Application Support/Ricochet",
+    "~/Library/Saved Application State/im.ricochet.savedState",
+  ]
 end
