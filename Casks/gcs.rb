@@ -1,9 +1,9 @@
 cask "gcs" do
   arch arm: "apple", intel: "intel"
 
-  version "5.9.0"
-  sha256 arm:   "fb201cf0a5becbff6e8048b956f31cd4566a762779eb1adaa60caf80962f5150",
-         intel: "14d6d43a3050f69ea213b307eaed849748142ca744c73943e3d1c3ce8e313b4a"
+  version "5.10.0"
+  sha256 arm:   "0f64ee267a2b676b8d5ea87bb37b85896000340084e23a980b3a84c256366007",
+         intel: "7eb251c5da0ef36abc58670bba8fd4a29d4da1f048fbbc173c8db16fad5050a2"
 
   url "https://github.com/richardwilkes/gcs/releases/download/v#{version}/gcs-#{version}-macos-#{arch}.dmg",
       verified: "github.com/richardwilkes/gcs/"
