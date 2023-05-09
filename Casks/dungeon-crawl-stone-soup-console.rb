@@ -14,4 +14,6 @@ cask "dungeon-crawl-stone-soup-console" do
   end
 
   app "Dungeon Crawl Stone Soup - Console.app"
+
+  zap trash: "~/Library/Application Support/Dungeon Crawl Stone Soup"
 end
