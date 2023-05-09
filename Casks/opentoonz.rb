@@ -1,6 +1,6 @@
 cask "opentoonz" do
-  version "1.6.0"
-  sha256 "d61624d7f194e533a33e4b336a4183a76d66a2da207972188979b1314725e5e2"
+  version "1.7.0"
+  sha256 "292a1b51964099eb9814d5df03f0386db5e069131215fc4965dc3b3501008829"
 
   url "https://github.com/opentoonz/opentoonz/releases/download/v#{version}/OpenToonz.pkg",
       verified: "github.com/opentoonz/opentoonz/"
