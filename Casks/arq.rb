@@ -1,6 +1,6 @@
 cask "arq" do
-  version "7.21"
-  sha256 "42379ac690d72f390fbcdc448b976479211f7c2581a0dfb099b4312c756b241c"
+  version "7.21.2"
+  sha256 "439fbbfec8a798f4dd2e03e3c0c1b243a80b70d7cb4b6b5756b86ba8948053e2"
 
   url "https://www.arqbackup.com/download/arqbackup/Arq#{version}.pkg"
   name "Arq"
