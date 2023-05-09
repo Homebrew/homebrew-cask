@@ -1,9 +1,9 @@
 cask "dbvisualizer" do
   arch arm: "aarch64", intel: "x64"
 
-  version "23.1"
-  sha256 arm:   "30adc9f4b1a60067ec1ff1d29094195313a9355ca950a13f26c0b65c69b0597b",
-         intel: "4976dc319fb762496e68a4d094a4e5f356c2fcf0b0d046d9e3e9a979948f9532"
+  version "23.2"
+  sha256 arm:   "75c6e43d5743b75fd92cb279332429622db8ae2fac3a47d8d2bc61f5c788d8f8",
+         intel: "4401f9c756c1501909cded0759365f3e6c1bfd16f93a50427be87b9528f4d832"
 
   url "https://www.dbvis.com/product_download/dbvis-#{version}/media/dbvis_macos-#{arch}_#{version.dots_to_underscores}.dmg"
   name "DbVisualizer"
