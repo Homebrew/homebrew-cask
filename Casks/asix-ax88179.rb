@@ -4,10 +4,6 @@ cask "asix-ax88179" do
   on_mojave :or_older do
     version "2.19.0,1242"
 
-    container nested: "AX88179_178A_macOS_10.9_to_10.15_Driver_Installer_v#{version.csv.first}_20220517/AX88179_178A_v#{version.csv.first}.dmg"
-
-    pkg ".AX88179_178A_10.9_10.14.pkg"
-
     livecheck do
       url "https://www.asix.com.tw/en/support/download/step2/11/2/3"
       regex(%r{data-href=.*?/download/file/(\d+).*?macOS\s*10.*?Vision\s*?(?:<br>)?\s*?(\d+(?:\.\d+)+)<}mi)
@@ -17,14 +13,14 @@ cask "asix-ax88179" do
         end.flatten
       end
     end
+
+    container nested: "AX88179_178A_macOS_10.9_to_10.15_Driver_Installer_v#{version.csv.first}_20220517/AX88179_178A_v#{version.csv.first}.dmg"
+
+    pkg ".AX88179_178A_10.9_10.14.pkg"
   end
   on_catalina do
     version "2.19.0,1242"
 
-    container nested: "AX88179_178A_macOS_10.9_to_10.15_Driver_Installer_v#{version.csv.first}_20220517/AX88179_178A_v#{version.csv.first}.dmg"
-
-    pkg ".AX88179_178A_10.15.pkg"
-
     livecheck do
       url "https://www.asix.com.tw/en/support/download/step2/11/2/3"
       regex(%r{data-href=.*?/download/file/(\d+).*?macOS\s*10.*?Vision\s*?(?:<br>)?\s*?(\d+(?:\.\d+)+)<}mi)
@@ -34,6 +30,10 @@ cask "asix-ax88179" do
         end.flatten
       end
     end
+
+    container nested: "AX88179_178A_macOS_10.9_to_10.15_Driver_Installer_v#{version.csv.first}_20220517/AX88179_178A_v#{version.csv.first}.dmg"
+
+    pkg ".AX88179_178A_10.15.pkg"
   end
   on_catalina :or_older do
     uninstall_preflight do
@@ -50,10 +50,6 @@ cask "asix-ax88179" do
   on_big_sur do
     version "1.3.0,1301"
 
-    container nested: "ASIX_USB_Device_Installer_macOS_11.3_to11.6_Driver_v#{version.csv.first}_20220706/ASIX_USB_Device_Installer_v#{version.csv.first}.dmg"
-
-    pkg "ASIX_USB_Device_Installer_v#{version.csv.first}.pkg"
-
     livecheck do
       url "https://www.asix.com.tw/en/support/download/step2/11/2/3"
       regex(%r{data-href=.*?/download/file/(\d+).*?macOS\s*11.*?Vision\s*?(?:<br>)?\s*?(\d+(?:\.\d+)+)<}mi)
@@ -63,6 +59,10 @@ cask "asix-ax88179" do
         end.flatten
       end
     end
+
+    container nested: "ASIX_USB_Device_Installer_macOS_11.3_to11.6_Driver_v#{version.csv.first}_20220706/ASIX_USB_Device_Installer_v#{version.csv.first}.dmg"
+
+    pkg "ASIX_USB_Device_Installer_v#{version.csv.first}.pkg"
   end
   on_big_sur :or_newer do
     uninstall_preflight do
@@ -79,10 +79,6 @@ cask "asix-ax88179" do
   on_monterey :or_newer do
     version "2.3.0,1372"
 
-    container nested: "ASIX_USB_Device_Installer_macOS_12_above_Driver_v#{version.csv.first}/ASIX_USB_Device_Installer_v#{version.csv.first}.dmg"
-
-    pkg "ASIX_USB_Device_Installer_v#{version.csv.first}.pkg"
-
     livecheck do
       url "https://www.asix.com.tw/en/support/download/step2/11/2/3"
       regex(%r{data-href=.*?/download/file/(\d+).*?macOS\s*12.*?Vision\s*?(?:<br>)?\s*?(\d+(?:\.\d+)+)<}mi)
@@ -92,6 +88,10 @@ cask "asix-ax88179" do
         end.flatten
       end
     end
+
+    container nested: "ASIX_USB_Device_Installer_macOS_12_above_Driver_v#{version.csv.first}/ASIX_USB_Device_Installer_v#{version.csv.first}.dmg"
+
+    pkg "ASIX_USB_Device_Installer_v#{version.csv.first}.pkg"
   end
 
   url "https://www.asix.com.tw/en/support/download/file/#{version.csv.second}"
