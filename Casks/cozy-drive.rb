@@ -16,4 +16,11 @@ cask "cozy-drive" do
   depends_on macos: ">= :sierra"
 
   app "Cozy Drive.app"
+
+  zap trash: [
+    "~/.cozy-desktop",
+    "~/Library/Application Support/Cozy Drive",
+    "~/Library/Preferences/io.cozy.desktop.plist",
+    "~/Library/Saved Application State/io.cozy.desktop.savedState",
+  ]
 end
