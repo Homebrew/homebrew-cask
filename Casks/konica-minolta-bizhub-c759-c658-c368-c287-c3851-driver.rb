@@ -39,7 +39,7 @@ cask "konica-minolta-bizhub-c759-c658-c368-c287-c3851-driver" do
 
   depends_on macos: ">= :sierra"
 
-  uninstall_postflight do
+  uninstall_preflight do
     set_ownership [
       "/Library/Printers/KONICAMINOLTA/Preferences",
     ]
