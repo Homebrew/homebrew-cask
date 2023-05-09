@@ -1,8 +1,10 @@
 cask "wondershare-filmora" do
-  version "12.2.8"
+  arch arm: "_arm_"
+
+  version "12.2.11"
   sha256 :no_check
 
-  url "https://download.wondershare.com/filmora-mac_full718.dmg"
+  url "https://download.wondershare.com/cbs_down/filmora-mac#{arch}full718.dmg"
   name "Wondershare Filmora"
   desc "Video editor"
   homepage "https://filmora.wondershare.com/video-editor-mac/"
@@ -12,9 +14,9 @@ cask "wondershare-filmora" do
     regex(/<version>(\d+(?:\.\d+)+).*?version>/i)
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
-  installer manual: "Wondershare Filmora Installer.app"
+  app "Wondershare Filmora #{version.major}.app"
 
   uninstall delete: "/Applications/Wondershare Filmora #{version.major}.app"
 
