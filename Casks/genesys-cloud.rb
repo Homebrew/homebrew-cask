@@ -4,7 +4,7 @@ cask "genesys-cloud" do
 
   url "https://app.mypurecloud.com/directory-mac/build-assets/#{version}/genesys-cloud-mac-#{version[0...-3]}.dmg"
   name "Genesys Cloud for macOS"
-  desc "Run Genesys Cloud as a stand-alone program, and keep it separate from your browser windows and tabs"
+  desc "Run Genesys Cloud as a stand-alone program, keeping it separate from web browser"
   homepage "https://apps.mypurecloud.com/directory-mac/"
 
   livecheck do
