@@ -15,4 +15,13 @@ cask "bbc-iplayer-downloads" do
   depends_on macos: ">= :el_capitan"
 
   app "BBC iPlayer Downloads.app"
+
+  zap trash: [
+        "~/Library/Application Support/BBCiPlayerDownloads",
+        "~/Library/Caches/uk.co.bbc.iplayer.downloads*",
+        "~/Library/HTTPStorages/uk.co.bbc.iplayer.downloads",
+        "~/Library/Preferences/uk.co.bbc.iplayer.downloads.plist",
+        "~/Library/Saved Application State/uk.co.bbc.iplayer.downloads.savedState",
+      ],
+      rmdir: "~/Movies/BBC iPlayer Downloads"
 end
