@@ -4,7 +4,7 @@ cask "music-remote" do
 
   url "https://marioaguzman.github.io/musicremote/updater/Music%20Remote.zip"
   name "Music Remote"
-  desc "Replica of the Mac OS X Public Beta Music Player"
+  desc "Remote application for Music.app"
   homepage "https://marioaguzman.github.io/musicremote/"
 
   livecheck do
