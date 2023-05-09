@@ -15,7 +15,7 @@ cask "genesys-cloud" do
   auto_updates true
 
   app "Genesys Cloud.app"
-  
+
   zap trash: [
     "~/Library/Caches/com.inin.purecloud.directory",
     "~/Library/HTTPStorages/com.inin.purecloud.directory",
