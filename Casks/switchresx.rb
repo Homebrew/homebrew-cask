@@ -12,6 +12,8 @@ cask "switchresx" do
     regex(/SwitchResX\s*(\d+(?:\.\d+)+)/i)
   end
 
+  auto_updates true
+
   prefpane "SwitchResX Installer.app/Contents/Plugins/SwitchResX.prefPane"
 
   uninstall quit:      [
