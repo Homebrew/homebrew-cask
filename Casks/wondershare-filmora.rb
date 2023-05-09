@@ -1,10 +1,10 @@
 cask "wondershare-filmora" do
-  arch arm: "_arm_"
+  arch arm: "arm_"
 
   version "12.2.11"
   sha256 :no_check
 
-  url "https://download.wondershare.com/cbs_down/filmora-mac#{arch}full718.dmg"
+  url "https://download.wondershare.com/cbs_down/filmora-mac_#{arch}full718.dmg"
   name "Wondershare Filmora"
   desc "Video editor"
   homepage "https://filmora.wondershare.com/video-editor-mac/"
