@@ -49,7 +49,5 @@ cask "konica-minolta-bizhub-c750i-driver" do
         "/Library/Printers/KONICAMINOLTA/Preferences/jp.konicaminolta.printers.C750i",
         "/Library/Printers/KONICAMINOLTA/Preferences/jp.konicaminolta.printers.C750i.plist",
       ],
-      rmdir: [
-        "/Library/Printers/KONICAMINOLTA",
-      ]
+      rmdir: "/Library/Printers/KONICAMINOLTA"
 end
