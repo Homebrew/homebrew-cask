@@ -15,4 +15,10 @@ cask "merlin-project" do
   depends_on macos: ">= :sierra"
 
   app "Merlin Project.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/net.projectwizards.merlinproject",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.projectwizards.merlinproject.sfl2",
+    "~/Library/Containers/net.projectwizards.merlinproject",
+  ]
 end
