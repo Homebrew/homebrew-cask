@@ -10,9 +10,7 @@ cask "commander-one" do
 
   livecheck do
     url "https://cdn.electronic.us/products/commander/mac/update/settings.xml"
-    strategy :sparkle do |item|
-      item.short_version.sub(/\(.*/, "")
-    end
+    strategy :sparkle, &:short_version
   end
 
   depends_on macos: ">= :sierra"

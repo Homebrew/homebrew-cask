@@ -9,9 +9,7 @@ cask "merlin-project" do
 
   livecheck do
     url "https://www.projectwizards.net/en/support/release-notes/merlin-project-pwstore/xml"
-    strategy :sparkle do |item|
-      "#{item.short_version.split.first},#{item.version}"
-    end
+    strategy :sparkle
   end
 
   depends_on macos: ">= :sierra"
