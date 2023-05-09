@@ -18,6 +18,7 @@ cask "surge" do
   end
 
   auto_updates true
+  conflicts_with cask: "homebrew/cask-versions/surge4"
   depends_on macos: ">= :high_sierra"
 
   app "Surge.app"
