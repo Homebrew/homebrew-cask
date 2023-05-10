@@ -1,5 +1,5 @@
 cask "element" do
-  version "1.11.31-rc.2"
+  version "1.11.31"
   sha256 :no_check
 
   url "https://packages.element.io/desktop/install/macos/Element.dmg"
@@ -9,6 +9,7 @@ cask "element" do
 
   livecheck do
     url "https://github.com/vector-im/element-desktop"
+    strategy :github_latest
   end
 
   auto_updates true
