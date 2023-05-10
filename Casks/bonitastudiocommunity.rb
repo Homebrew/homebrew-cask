@@ -1,6 +1,6 @@
 cask "bonitastudiocommunity" do
-  version "2022.2-u0"
-  sha256 "f66cad98211118ba795ff5097de90c3c2a88503f5002a3cfc079e734be10b51f"
+  version "2023.1-u0"
+  sha256 "d1d62cca0adef3ce478061e1949983ccaa9ddc1974b869dd6081250e195327a9"
 
   url "https://github.com/bonitasoft/bonita-platform-releases/releases/download/#{version}/BonitaStudioCommunity-#{version}-x86_64.dmg",
       verified: "github.com/bonitasoft/bonita-platform-releases/"
