@@ -39,5 +39,15 @@ cask "konica-minolta-bizhub-c750i-driver" do
 
   depends_on macos: ">= :sierra"
 
+  uninstall_preflight do
+    set_ownership "/Library/Printers/KONICAMINOLTA/Preferences"
+  end
+
   uninstall pkgutil: "jp.konicaminolta.print.package.C750i"
+
+  zap trash: [
+        "/Library/Printers/KONICAMINOLTA/Preferences/jp.konicaminolta.printers.C750i",
+        "/Library/Printers/KONICAMINOLTA/Preferences/jp.konicaminolta.printers.C750i.plist",
+      ],
+      rmdir: "/Library/Printers/KONICAMINOLTA"
 end
