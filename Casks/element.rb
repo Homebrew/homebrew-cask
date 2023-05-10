@@ -9,6 +9,7 @@ cask "element" do
 
   livecheck do
     url "https://github.com/vector-im/element-desktop"
+    strategy :github_latest
   end
 
   auto_updates true
