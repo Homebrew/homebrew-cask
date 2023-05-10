@@ -23,4 +23,18 @@ cask "adobe-connect" do
   installer manual: "AdobeConnectInstaller.app"
 
   uninstall delete: "/Applications/Adobe Connect"
+
+  zap trash: [
+    "~/AdobeConnectAppCache",
+    "~/adobeconnectapp.log",
+    "~/Library/Caches/com.adobe.cefconnect.app",
+    "~/Library/Caches/com.adobe.adobeconnect.app",
+    "~/Library/HTTPStorages/com.adobe.cefconnect.app",
+    "~/Library/HTTPStorages/com.adobe.adobeconnect.app",
+    "~/Library/LaunchAgents/com.adobe.connectDetector.plist",
+    "~/Library/Preferences/com.adobe.cefconnect.helper.renderer.plist",
+    "~/Library/Preferences/com.adobe.adobeconnect.app.plist",
+    "~/Library/Saved Application State/com.adobe.adobeconnect.app.savedState",
+    "~/Library/Saved Application State/com.adobe.cefconnect.app.savedState",
+  ]
 end
