@@ -6,7 +6,7 @@ cask "ngrok" do
     sha256 "f041d791f7292ae900f1589fea623bce2a947c28bdc3c50cf520f47347f82f90"
   end
   on_intel do
-    version "3.3.0,bNyj1mQVY4c,a"
+    version "3.3.0,n8BKDhBpoJP,a"
     sha256 "47fbb6bd6ba66f84669441b014ea69e438838cfdeb1216604faf29caceb94bfb"
   end
 
