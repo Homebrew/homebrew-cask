@@ -26,6 +26,7 @@ cask "miniconda" do
   installer script: {
     executable: "Miniconda3-#{version}-MacOSX-#{arch}.sh",
     args:       ["-b", "-p", "#{caskroom_path}/base"],
+    sudo:       false,
   }
   binary "#{caskroom_path}/base/condabin/conda"
 
