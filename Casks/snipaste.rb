@@ -9,8 +9,9 @@ cask "snipaste" do
   homepage "https://www.snipaste.com/"
 
   livecheck do
-    url "https://www.snipaste.com/all_versions"
-    regex(/"mac_version"\s*:\s*"v?(.*?)"/i)
+    url "https://dl.snipaste.com/mac-beta"
+    regex(/(\d+(?:\.\d+)+[._-]v?.*?)\.dmg/i)
+    strategy :header_match
   end
 
   auto_updates true
