@@ -14,7 +14,7 @@ cask "melodics" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :mojave"
 
   app "Melodics.app"
 
