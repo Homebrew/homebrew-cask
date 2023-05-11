@@ -4,8 +4,8 @@ cask "focusrite-control" do
 
   url "https://fael-downloads-prod.focusrite.com/customer/prod/downloads/Focusrite%20Control%20-%20#{version}.dmg"
   name "Focusrite Control"
-  desc "Control your Focusrite interface"
-  homepage "https://focusrite.com/en/focusrite-control"
+  desc "Focusrite interface controller"
+  homepage "https://focusrite.com/en"
 
   livecheck do
     url "https://downloads.focusrite.com/focusrite/scarlett-3rd-gen/scarlett-solo-3rd-gen"
