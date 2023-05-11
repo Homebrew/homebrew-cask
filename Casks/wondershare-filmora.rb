@@ -16,9 +16,7 @@ cask "wondershare-filmora" do
 
   depends_on macos: ">= :mojave"
 
-  app "Wondershare Filmora #{version.major}.app"
-
-  uninstall delete: "/Applications/Wondershare Filmora #{version.major}.app"
+  app "Wondershare Filmora X.app"
 
   zap trash: [
     "/Users/Shared/wondershare.plist",
