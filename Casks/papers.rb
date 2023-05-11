@@ -11,8 +11,8 @@ cask "papers" do
   homepage "https://www.readcube.com/home"
 
   livecheck do
-    url "https://www.papersapp.com/release-notes/"
-    regex(/version\s*(\d+(?:\.\d+)+)/i)
+    url "https://s3.amazonaws.com/update.readcube.com/desktop/updates/latest-mac.yml"
+    strategy :electron_builder
   end
 
   app "Papers.app"
