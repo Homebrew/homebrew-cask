@@ -28,7 +28,6 @@ cask "eobcanka" do
             ],
             delete:  [
               "/Applications/Identifikace_eOP.app",
-              "/Applications/Identifikace_eOP.app/Contents/MacOS/eObčanka-Identifikace.app",
               "/Applications/eObčanka - Správce karty.app",
             ]
 end
