@@ -13,4 +13,12 @@ cask "macx-dvd-ripper-pro" do
   end
 
   app "MacX DVD Ripper Pro.app"
+
+  zap trash: [
+    "~/Library/Application Support/Digiarty/MacX DVD Ripper Pro",
+    "~/Library/Caches/com.macxdvd.macxvideoconverterpro",
+    "~/Library/HTTPStorages/com.macxdvd.macxvideoconverterpro",
+    "~/Library/Preferences/com.macxdvd.macxvideoconverterpro.plist",
+    "~/Library/Saved Application State/com.macxdvd.macxvideoconverterpro.savedState",
+  ]
 end
