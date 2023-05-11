@@ -24,6 +24,6 @@ cask "focusrite-control" do
     "/Library/Logs/Focusrite Control",
     "~/Library/Logs/Focusrite Control",
     "/Library/Logs/Focusrite Control",
-    "/Library/LaunchDaemons/com.focusrite.ControlServer.plist"
+    "/Library/LaunchDaemons/com.focusrite.ControlServer.plist",
   ]
 end
