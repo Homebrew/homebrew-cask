@@ -25,9 +25,5 @@ cask "eobcanka" do
               "cz.monetplus.eOP.EopCzeTokenApp",
               "com.monetplus.cardmanager",
               "cz.monetplus.eOb--anka-Identifikace",
-            ],
-            delete:  [
-              "/Applications/Identifikace_eOP.app",
-              "/Applications/eObčanka - Správce karty.app",
             ]
 end
