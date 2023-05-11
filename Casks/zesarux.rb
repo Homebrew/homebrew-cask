@@ -14,4 +14,9 @@ cask "zesarux" do
   end
 
   app "ZEsarUX.app"
+
+  zap trash: [
+    "~/.zesaruxrc",
+    "~/Library/Saved Application State/com.cesarhernandez.zesarux.savedState",
+  ]
 end
