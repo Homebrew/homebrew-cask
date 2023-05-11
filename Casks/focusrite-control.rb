@@ -17,13 +17,15 @@ cask "focusrite-control" do
   uninstall pkgutil:   "com.focusrite.FocusriteControl",
             launchctl: "com.focusrite.ControlServer"
 
-  zap trash: [
-    "~/Library/Application Support/Focusrite/Focusrite Control",
-    "/Library/Application Support/Focusrite/Focusrite Control",
-    "~/Library/Logs/Focusrite Control",
-    "/Library/Logs/Focusrite Control",
-    "~/Library/Logs/Focusrite Control",
-    "/Library/Logs/Focusrite Control",
-    "/Library/LaunchDaemons/com.focusrite.ControlServer.plist",
-  ]
+  zap trash:  [
+        "~/Library/Application Support/Focusrite",
+        "~/Library/Caches/com.juce.locks",
+        "~/Library/Logs/Focusrite Control",
+        "~/Library/Saved Application State/com.focusrite.FocusriteControl.savedState",
+      ],
+      delete: [
+        "/Library/Application Support/Focusrite",
+        "/Library/LaunchDaemons/com.focusrite.ControlServer.plist",
+        "/Library/Logs/Focusrite Control",
+      ]
 end
