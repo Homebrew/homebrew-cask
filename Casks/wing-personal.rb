@@ -15,4 +15,12 @@ cask "wing-personal" do
   depends_on macos: ">= :catalina"
 
   app "Wing Personal.app"
+
+  zap trash: [
+    "~/.wingpersonal#{version.major}",
+    "~/Library/Application Support/Wing Personal",
+    "~/Library/Caches/com.apple.python/Applications/Wing Personal.app",
+    "~/Library/Caches/com.wingware.wing-personal",
+    "~/Library/Saved Application State/com.wingware.wing-personal.savedState",
+  ]
 end
