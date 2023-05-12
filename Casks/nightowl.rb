@@ -19,7 +19,7 @@ cask "nightowl" do
 
   uninstall pkgutil:   "com.mygreatcompany.pkg.NightOwl",
             launchctl: [
-              "NightOwlUpdater*",
+              "NightOwlUpdater (org.nightowl.autoupdater.com)",
               "org.nightowl.autoupdater.com",
             ]
 
