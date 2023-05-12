@@ -13,4 +13,8 @@ cask "dadroit-json-viewer" do
   end
 
   app "Dadroit JSON Viewer.app"
+
+  zap trash: [
+    "~/Library/Saved Application State/com.dadroit.Viewer.savedState",
+  ]
 end
