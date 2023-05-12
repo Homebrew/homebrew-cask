@@ -1,4 +1,4 @@
-cask "dbeaverlite" do
+cask "dbeaver-lite" do
   arch arm: "aarch64", intel: "x86_64"
 
   version "23.0.0"

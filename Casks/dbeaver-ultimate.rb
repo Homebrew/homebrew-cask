@@ -1,4 +1,4 @@
-cask "dbeaverultimate" do
+cask "dbeaver-ultimate" do
   arch arm: "aarch64", intel: "x86_64"
 
   version "23.0.0"
