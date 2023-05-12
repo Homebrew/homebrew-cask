@@ -244,6 +244,9 @@ jobs:
           brew uninstall --cask ${{ join(fromJSON(steps.info.outputs.cask_dependencies), ' ') }}
         if: always() && steps.install.outcome == 'success' && join(fromJSON(steps.info.outputs.cask_dependencies)) != ''
         timeout-minutes: 30
+        
+      - run: /bin/launchctl list
+      - run: ls -al /Library/LaunchAgents
 
       - name: Compare installed and running apps and services with snapshot
         run: |
