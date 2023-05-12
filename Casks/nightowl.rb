@@ -17,8 +17,7 @@ cask "nightowl" do
 
   pkg "nightowl-#{version.csv.first}(release).pkg"
 
-  uninstall pkgutil:   "com.mygreatcompany.pkg.NightOwl",
-            launchctl: "NightOwlUpdater"
+  uninstall pkgutil:   "com.mygreatcompany.pkg.NightOwl"
 
   zap trash: [
     "~/Library/Caches/com.fuekiin.NightOwl",
