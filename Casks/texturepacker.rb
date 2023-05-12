@@ -13,4 +13,12 @@ cask "texturepacker" do
   end
 
   app "TexturePacker.app"
+
+  uninstall delete: "/usr/local/bin/TexturePacker"
+
+  zap trash: [
+    "~/Library/Caches/code-and-web.de/TexturePacker",
+    "~/Library/Preferences/de.code-and-web.TexturePacker.plist",
+    "~/Library/Saved Application State/de.code-and-web.TexturePacker.savedState",
+  ]
 end
