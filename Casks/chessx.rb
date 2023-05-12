@@ -1,6 +1,6 @@
 cask "chessx" do
-  version "1.5.8"
-  sha256 "0b8e83f58b51053ea95f5a8c3bc96d3e428403844f1c213469362cd11869fdd9"
+  version "1.6.0"
+  sha256 "40caf7d6fa85f934a539420a6cc5844d0c5bee1667889b8c59a0caeb10002c52"
 
   url "https://downloads.sourceforge.net/chessx/chessx/#{version}/chessx-#{version}.dmg",
       verified: "downloads.sourceforge.net/chessx/"
@@ -16,4 +16,11 @@ cask "chessx" do
   pkg "chessx-installer.mpkg"
 
   uninstall pkgutil: "net.sourceforge.chessx"
+
+  zap trash: [
+    "~/.config/chessx",
+    "~/Library/Application Support/chessx",
+    "~/Library/Preferences/net.sourceforge.chessx.plist",
+    "~/Library/Saved Application State/net.sourceforge.chessx.savedState",
+  ]
 end
