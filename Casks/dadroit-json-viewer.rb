@@ -4,7 +4,7 @@ cask "dadroit-json-viewer" do
 
   url "https://dadroit.com/releases/mac/DadroitJSONViewer.zip"
   name "Dadroit JSON Viewer"
-  desc "Rapid JSON Viewer to open large data files in a blink"
+  desc "JSON Viewer"
   homepage "https://dadroit.com/"
 
   livecheck do
