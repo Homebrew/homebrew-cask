@@ -13,4 +13,11 @@ cask "inav-configurator" do
   end
 
   app "INAV Configurator.app"
+
+  zap trash: [
+    "~/Library/Application Support/inav-configurator",
+    "~/Library/Caches/inav-configurator",
+    "~/Library/Preferences/com.nw-builder.inav-configurator.plist",
+    "~/Library/Saved Application State/com.nw-builder.inav-configurator.savedState",
+  ]
 end
