@@ -21,6 +21,7 @@ cask "nightowl" do
             launchctl: [
               "NightOwlUpdater (org.nightowl.autoupdater.com)",
               "org.nightowl.autoupdater.com",
+              "org.nightowl.autoupdater.com.*",
             ]
 
   zap trash: [
