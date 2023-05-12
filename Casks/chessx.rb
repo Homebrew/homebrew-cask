@@ -14,6 +14,13 @@ cask "chessx" do
   end
 
   pkg "chessx-installer.mpkg"
+  
+  zap trash: [
+    "~/.config/chessx",
+    "~/Library/Preferences/net.sourceforge.chessx.plist",
+    "~/Library/Saved Application State/chessx",
+    "~/Library/Application Support/chessx",
+  ]
 
   uninstall pkgutil: "net.sourceforge.chessx"
 end
