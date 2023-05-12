@@ -9,7 +9,10 @@ cask "dadroit-json-viewer" do
 
   livecheck do
     url "https://dadroit.com/download/"
-    regex(/>Ver.*?(\d+(?:\.\d+)+)/i)
+    regex(/ver.*?(\d+(?:\.\d+)+)\s*?\((\d+)\)/i)
+    strategy :page_match do |page, regex| 
+    	page.scan(regex).map { |match| "#{match[0]},#{match[1]}" } 
+    end
   end
 
   app "Dadroit JSON Viewer.app"
