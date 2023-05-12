@@ -53,5 +53,5 @@ cask "microsoft-edge" do
         "~/Library/Saved Application State/com.microsoft.edgemac.savedState",
         "~/Library/WebKit/com.microsoft.edgemac",
       ],
-      rmdir: "/Library/Application Support/Microsoft"
+      rmdir: "~/Library/Application Support/Microsoft"
 end
