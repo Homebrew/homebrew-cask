@@ -247,6 +247,8 @@ jobs:
         
       - run: /bin/launchctl list
       - run: ls -al /Library/LaunchAgents
+      - run: sudo /bin/launchctl list
+      - run: ls -al ~/Library/LaunchAgents
 
       - name: Compare installed and running apps and services with snapshot
         run: |
