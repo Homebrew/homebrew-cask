@@ -57,22 +57,13 @@ cask "docker" do
   binary "#{appdir}/Docker.app/Contents/Resources/etc/docker-compose.fish-completion",
          target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/docker-compose.fish"
 
-  uninstall delete:    [
+  uninstall script:    {
+              executable: "/Applications/Docker.app/Contents/MacOS/uninstall",
+              sudo:       true,
+            },
+            delete:    [
               "/Library/PrivilegedHelperTools/com.docker.socket",
               "/Library/PrivilegedHelperTools/com.docker.vmnetd",
-              "/usr/local/bin/com.docker.cli",
-              "/usr/local/bin/docker",
-              "/usr/local/bin/docker-compose",
-              "/usr/local/bin/docker-compose-v1",
-              "/usr/local/bin/docker-credential-desktop",
-              "/usr/local/bin/docker-credential-ecr-login",
-              "/usr/local/bin/docker-credential-osxkeychain",
-              "/usr/local/bin/hub-tool",
-              "/usr/local/bin/hyperkit",
-              "/usr/local/bin/kubectl.docker",
-              "/usr/local/bin/kubectl",
-              "/usr/local/bin/notary",
-              "/usr/local/bin/vpnkit",
               "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_docker",
               "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_docker_compose",
               "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/docker.fish",
