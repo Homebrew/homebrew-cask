@@ -10,8 +10,8 @@ cask "dadroit-json-viewer" do
   livecheck do
     url "https://dadroit.com/download/"
     regex(/ver.*?(\d+(?:\.\d+)+)\s*?\((\d+)\)/i)
-    strategy :page_match do |page, regex| 
-    	page.scan(regex).map { |match| "#{match[0]},#{match[1]}" } 
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 
@@ -19,7 +19,7 @@ cask "dadroit-json-viewer" do
 
   zap trash: [
     "~/.cache/DadroitViewer",
-	"~/.config/Dadroit",
-	"~/Library/Saved Application State/com.dadroit.Viewer.savedState",
+    "~/.config/Dadroit",
+    "~/Library/Saved Application State/com.dadroit.Viewer.savedState",
   ]
 end
