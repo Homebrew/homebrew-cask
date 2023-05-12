@@ -15,7 +15,9 @@ cask "nightowl" do
   auto_updates true
   depends_on macos: ">= :mojave"
 
-  app "NightOwl.app"
+  pkg "nightowl-#{version.csv.first}(release).pkg"
+
+  uninstall pkgutil: "com.mygreatcompany.pkg.NightOwl"
 
   zap trash: [
     "~/Library/Caches/com.fuekiin.NightOwl",
