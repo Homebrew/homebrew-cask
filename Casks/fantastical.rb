@@ -24,12 +24,12 @@ cask "fantastical" do
             ]
 
   zap trash: [
+    "~/Library/Application Scripts/*.com.flexibits.fantastical*.mac*",
     "~/Library/Application Scripts/com.flexibits.fantastical*",
-    "~/Library/Application Scripts/85C27NK92C.com.flexibits.fantastical2.mac*",
     "~/Library/Application Scripts/com.flexibits.fbcaldav.*",
     "~/Library/Containers/com.flexibits.fantastical*",
     "~/Library/Containers/com.flexibits.fbcaldav.*",
-    "~/Library/Group Containers/85C27NK92C.com.flexibits.fantastical2.mac",
+    "~/Library/Group Containers/*.com.flexibits.fantastical*.mac",
     "~/Library/Preferences/com.flexibits.fantastical.plist",
   ]
 end
