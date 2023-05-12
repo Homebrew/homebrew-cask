@@ -1,6 +1,6 @@
 cask "clashx" do
-  version "1.97.0"
-  sha256 "885f93cc0fb80bfc7c188795eec133610a4e6caf1ce31f3f76d42ac86c8b3ea4"
+  version "1.115.1"
+  sha256 "ba313548e989bc75b48eddf83ede53179f9ec4f52f3f28dafb047e76abee5763"
 
   url "https://github.com/yichengchen/clashX/releases/download/#{version}/ClashX.dmg"
   name "ClashX"
@@ -9,7 +9,7 @@ cask "clashx" do
 
   livecheck do
     url :url
-    strategy :github_latest
+    regex(/v?(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
