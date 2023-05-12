@@ -19,9 +19,8 @@ cask "chessx" do
 
   zap trash: [
     "~/.config/chessx",
+    "~/Library/Application Support/chessx",
     "~/Library/Preferences/net.sourceforge.chessx.plist",
     "~/Library/Saved Application State/net.sourceforge.chessx.savedState",
-    "~/Library/Application Support/chessx",
   ]
-
 end
