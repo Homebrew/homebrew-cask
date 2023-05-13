@@ -28,6 +28,10 @@ cask "microsoft-edge" do
         },
       ]
 
+  uninstall_preflight do
+    set_ownership "/Library/Application Support/Microsoft"
+  end
+
   uninstall pkgutil:   "com.microsoft.edgemac",
             launchctl: [
               "com.microsoft.EdgeUpdater.update-internal.109.0.1518.89.system",
@@ -43,15 +47,12 @@ cask "microsoft-edge" do
         "~/Library/Caches/com.microsoft.EdgeUpdater",
         "~/Library/Caches/Microsoft Edge",
         "~/Library/Containers/com.microsoft.edgemac.wdgExtension",
-        "~/Library/HTTPStorages/com.microsoft.edgemac",
-        "~/Library/HTTPStorages/com.microsoft.edgemac.binarycookies",
-        "~/Library/HTTPStorages/com.microsoft.EdgeUpdater",
+        "~/Library/HTTPStorages/com.microsoft.edge*",
         "~/Library/LaunchAgents/com.microsoft.EdgeUpdater.*.plist",
         "~/Library/Microsoft/EdgeUpdater",
         "~/Library/Preferences/com.microsoft.edgemac.plist",
-        "~/Library/Saved Application State/com.microsoft.edgemac.app.*.savedState/",
-        "~/Library/Saved Application State/com.microsoft.edgemac.savedState",
+        "~/Library/Saved Application State/com.microsoft.edgemac.*",
         "~/Library/WebKit/com.microsoft.edgemac",
       ],
-      rmdir: "~/Library/Application Support/Microsoft"
+      rmdir: "/Library/Application Support/Microsoft"
 end
