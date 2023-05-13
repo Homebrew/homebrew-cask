@@ -1,6 +1,6 @@
 cask "metaimage" do
-  version "2.5.3,c86e086f-92d5-4bfe-bcab-79cb1be22df4"
-  sha256 "cb6dfad670781bf2e3399811cfa4a142a4956507bb0e51e365b37827cfb2eb59"
+  version "2.5.4,2715eb61-8470-4057-9038-c366bf2b6a95"
+  sha256 "c7754d11c9528935e61aa13fc2baacf9c7cc1101bd9254da79cdb65c70b1888f"
 
   url "https://neededapps.nyc3.digitaloceanspaces.com/media/public/#{version.csv.second}.zip",
       verified: "neededapps.nyc3.digitaloceanspaces.com/media/public/"
