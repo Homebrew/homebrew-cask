@@ -9,8 +9,8 @@ cask "chessx" do
   homepage "https://chessx.sourceforge.io/"
 
   livecheck do
-    url "https://sourceforge.net/projects/chessx/files/latest/download"
-    strategy :header_match
+    url "https://sourceforge.net/projects/chessx/rss?path=/chessx"
+    regex(%r{chessx/(\d+(?:\.\d+)+).*?\.dmg}i)
   end
 
   pkg "chessx-installer.mpkg"
