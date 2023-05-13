@@ -1,9 +1,9 @@
 cask "plexamp" do
   arch arm: "-arm64"
 
-  version "4.6.1"
-  sha256 arm:   "b8e07c6e5ab1f25dedaa6ff8abf2b87735f2338cf6a29eb1def887145e61ab22",
-         intel: "2d2e6bc32f2591f44abc4608a07942d951fec6fa9c415e3375767d9d13e4be25"
+  version "4.7.3"
+  sha256 arm:   "4b0fe7987a06bd9f5568c9376d8cf37fa8d1f13cc365cda2f9cd20b0e076867d",
+         intel: "30a54ef401c3a63543e8e216db44e1e44d8b3d64427fb4ac4923015b670b5fed"
 
   url "https://plexamp.plex.tv/plexamp.plex.tv/desktop/Plexamp-#{version}#{arch}.dmg",
       verified: "plexamp.plex.tv/"
@@ -19,4 +19,14 @@ cask "plexamp" do
   auto_updates true
 
   app "Plexamp.app"
+
+  zap trash: [
+    "~/Library/Application Support/Caches/plexamp-updater",
+    "~/Library/Application Support/Plexamp",
+    "~/Library/Caches/Plexamp",
+    "~/Library/Caches/tv.plex.plexamp*",
+    "~/Library/Logs/Plexamp",
+    "~/Library/Preferences/tv.plex.plexamp.plist",
+    "~/Library/Saved Application State/tv.plex.plexamp.savedState",
+  ]
 end

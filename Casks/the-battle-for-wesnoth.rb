@@ -1,6 +1,6 @@
 cask "the-battle-for-wesnoth" do
-  version "1.16.6"
-  sha256 "93261244ed2d636c3114f3dc29e420382a7bf58a05860af500e41030dc754efc"
+  version "1.16.9"
+  sha256 "d42fafa360206a059b455cac99045782d0f0f69a31ee46279f41f27576792a0a"
 
   url "https://downloads.sourceforge.net/wesnoth/Wesnoth_#{version}.dmg",
       verified: "sourceforge.net/wesnoth/"
@@ -14,4 +14,9 @@ cask "the-battle-for-wesnoth" do
   end
 
   app "The Battle for Wesnoth.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/org.wesnoth.Wesnoth",
+    "~/Library/Containers/org.wesnoth.Wesnoth",
+  ]
 end

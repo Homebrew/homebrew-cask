@@ -4,12 +4,12 @@ cask "jedit-omega" do
     sha256 "251697fe6b76419b2cef41a89a2cb7d2e3f8caab0bc1ae82aed6c14a366fdad9"
   end
   on_sierra :or_newer do
-    version "2.50"
-    sha256 "bcd280e3dfcde5051e414d5cafb97e8f0224ac72d2fdd5bc9c9b51779afb0ad6"
+    version "3.04"
+    sha256 "193daa5482275500d8c60a1dc0b8adba450aaa2890ce768cd17ea045dae808c6"
   end
 
-  url "http://www.artman21.org/download/JeditOmega#{version.no_dots}.dmg",
-      verified: "artman21.org/"
+  url "https://artman21.site/JeditOmega#{version.no_dots}.pkg",
+      verified: "artman21.site/"
   name "Jedit Ω"
   desc "Text editor"
   homepage "https://www.artman21.com/en/sparkle/jeditomega.html"
@@ -19,5 +19,17 @@ cask "jedit-omega" do
     regex(/Rev[._-](\d+(?:\.\d+)+)/i)
   end
 
-  app "Jedit Ω.app"
+  pkg "JeditOmega#{version.no_dots}.pkg"
+
+  uninstall pkgutil: "jp.co.artman21.JeditOmega",
+            quit:    "jp.co.artman21.JeditOmega"
+
+  zap trash: [
+    "~/Library/Application Support/JeditOmega",
+    "~/Library/Caches/jp.co.artman21.JeditOmega",
+    "~/Library/HTTPStorages/jp.co.artman21.JeditOmega",
+    "~/Library/JeditOmega",
+    "~/Library/Preferences/jp.co.artman21.JeditOmega.plist",
+    "~/Library/Saved Application State/jp.co.artman21.JeditOmega.savedState",
+  ]
 end

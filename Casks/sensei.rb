@@ -1,16 +1,16 @@
 cask "sensei" do
-  version "1.5.7,107"
+  version "1.5.7"
   sha256 :no_check
 
   url "https://cindori.s3.amazonaws.com/Sensei.dmg",
       verified: "cindori.s3.amazonaws.com/"
   name "Sensei"
-  desc "Monitors the computer system and optimizes its performance"
+  desc "Monitors the computer system and optimises its performance"
   homepage "https://sensei.app/"
 
   livecheck do
     url "https://api.appcenter.ms/v0.1/public/sparkle/apps/51fc066a-f4b4-49ec-b966-b2f476d2eede"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

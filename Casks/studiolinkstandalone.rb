@@ -20,7 +20,6 @@ cask "studiolinkstandalone" do
 
   livecheck do
     url "https://gitlab.com/studio.link/app.git"
-    strategy :git
     regex(/^v?(\d+(?:\.\d+)*)[._-]stable$/i)
   end
 

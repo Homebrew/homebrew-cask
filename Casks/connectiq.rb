@@ -1,6 +1,6 @@
 cask "connectiq" do
-  version "4.1.7,2022-11-21,562b8a195"
-  sha256 "6175707fda87bcc93eb99d9d931d36d83e158f742bb49c454c5490fd6828679f"
+  version "4.2.4,2023-04-05,5830cc591"
+  sha256 "6547edc68f85bbef8e6308b88d70945c7b629811c22b1b9f00be6158fcee2ae8"
 
   url "https://developer.garmin.com/downloads/connect-iq/sdks/connectiq-sdk-mac-#{version.tr(",", "-")}.dmg"
   name "Garmin Connect IQ SDK"
@@ -22,4 +22,10 @@ cask "connectiq" do
   binary "connectiq-sdk-mac-#{version.tr(",", "-")}/bin/monkeydo"
   binary "connectiq-sdk-mac-#{version.tr(",", "-")}/bin/monkeydoc"
   binary "connectiq-sdk-mac-#{version.tr(",", "-")}/bin/shell"
+
+  zap trash: [
+    "~/Library/Application Support/Garmin",
+    "~/Library/Preferences/com.garmin.connectiq.simulator.plist",
+    "~/Library/Saved Application State/com.garmin.connectiq.simulator.savedState",
+  ]
 end

@@ -8,12 +8,12 @@ cask "free-gpgmail" do
     sha256 "1935b0f65a5351c1c84870f316d0b97331c40ca50c13a912a703a68a08dabc4e"
   end
   on_monterey do
-    version "6,2022.2,"
-    sha256 "605b292cf10fbbb5fbedefbd0e1a889c616d2d057dd862bed51899d217840489"
+    version "6.3,2023.1,"
+    sha256 "bcd304d00c017e4c1aee34f83ae7323a1479d7b09b5f6809e0edbb1921453971"
   end
   on_ventura :or_newer do
-    version "7,2022.2.1,"
-    sha256 "2a99bff4afe5b75ed0e7236abbec06c2eac0ac29b35f0e26672e5151e95ab4c2"
+    version "7.1,2023.1,"
+    sha256 "15257703e963f222c028ac29682b20d9a743f6e005860bdcd288b633984f4338"
   end
 
   url "https://github.com/Free-GPGMail/Free-GPGMail/releases/download/v#{version.csv.second}/Free-GPGMail_#{version.csv.first}-#{version.csv.second}#{version.csv.third}.mailbundle.zip"
@@ -26,11 +26,11 @@ cask "free-gpgmail" do
   # surface a new major version and that will need to be handled manually.
   livecheck do
     url "https://github.com/Free-GPGMail/Free-GPGMail/releases?q=prerelease%3Afalse"
-    regex(/.*?Free-GPGMail[._-]v?(\d+)[_-](\d+(?:\.\d+)+)([_-][^"' >]+?)?[._-]mailbundle\.zip/i)
+    regex(/.*?Free-GPGMail[._-]v?(\d+(?:\.\d+)*)[_-](\d+(?:\.\d+)+)([_-][^"' >]+?)?[._-]mailbundle\.zip/i)
     strategy :page_match do |page, regex|
       version_suffix = version.csv.third&.sub(/^[_-]/, "")
       page.scan(regex).map do |match|
-        next if match[0] != version.csv.first
+        next if match[0].split(".").first != version.csv.first.split(".").first
         next if match[2]&.sub(/^[_-]/, "") != version_suffix
 
         "#{match[0]},#{match[1]},#{match[2]}"
@@ -38,12 +38,13 @@ cask "free-gpgmail" do
     end
   end
 
-  auto_updates false
-  depends_on macos: ">= :mojave"
   depends_on cask: "gpg-suite-no-mail"
+  depends_on macos: ">= :mojave"
 
-  artifact "Free-GPGMail_#{version.csv.first}.mailbundle", target: "#{Dir.home}/Library/Mail/Bundles/Free-GPGMail_#{version.csv.first}.mailbundle"
+  artifact "Free-GPGMail_#{version.csv.first.major}.mailbundle", target: "#{Dir.home}/Library/Mail/Bundles/Free-GPGMail_#{version.csv.first.major}.mailbundle"
 
   uninstall quit:   "org.gpgtools.gpgmail.upgrader",
-            delete: "~/Library/Mail/Bundles/Free-GPGMail_#{version.csv.first}.mailbundle"
+            delete: "~/Library/Mail/Bundles/Free-GPGMail_#{version.csv.first.major}.mailbundle"
+
+  # No zap stanza required
 end

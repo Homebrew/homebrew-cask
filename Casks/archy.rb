@@ -1,6 +1,6 @@
 cask "archy" do
-  version "2.16.0"
-  sha256 "6b614eec3cbcbbbbdff8ba97769eb56d66c1c1f9b3b370de118741f82bf0a6c5"
+  version "2.18.1"
+  sha256 "0f5a112040b06e9b49e8a7f3e4e377a60e19567b605382a54360e37661dffb3d"
 
   url "https://sdk-cdn.mypurecloud.com/archy/#{version}/archy-macos.zip",
       verified: "sdk-cdn.mypurecloud.com/archy/"
@@ -14,4 +14,6 @@ cask "archy" do
   end
 
   binary "archyBin/archy-macos-#{version}", target: "archy"
+
+  zap trash: "~/.archy_config"
 end

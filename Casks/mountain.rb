@@ -1,5 +1,5 @@
 cask "mountain" do
-  version "1.6.6,54"
+  version "1.6.6"
   sha256 :no_check
 
   url "https://appgineers.de/mountain/files/Mountain.zip"
@@ -9,15 +9,15 @@ cask "mountain" do
 
   livecheck do
     url "https://appgineers.de/mountain/files/mountaincast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   app "Mountain.app"
 
   zap trash: [
-    "~/Library/Application Support/Mountain",
-    "~/Library/Preferences/de.appgineers.Mountain.plist",
     "/Library/LaunchDaemons/de.appgineers.Mountain.Helper.plist",
     "/Library/PrivilegedHelperTools/de.appgineers.Mountain.Helper",
+    "~/Library/Application Support/Mountain",
+    "~/Library/Preferences/de.appgineers.Mountain.plist",
   ]
 end

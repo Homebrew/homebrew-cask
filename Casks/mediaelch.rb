@@ -1,8 +1,8 @@
 cask "mediaelch" do
-  version "2.8.18,2022-10-28,146c4b77"
-  sha256 "8ba585145b017bc7ef5708ab3d24e3289af222c160c685a720bc49d415a3735b"
+  version "2.10.0,2023-02-05,960303af"
+  sha256 "fbbbdc21002134b754ddb8af067e64b8519b8e9d6b90feb8567eada037bdf0b5"
 
-  url "https://github.com/Komet/MediaElch/releases/download/v#{version.csv.first}/MediaElch_macOS_#{version.csv.first}_#{version.csv.second}_git-#{version.csv.third}.dmg",
+  url "https://github.com/Komet/MediaElch/releases/download/v#{version.csv.first}/MediaElch_macOS_11_or_later_Qt6_#{version.csv.first}_#{version.csv.second}_git-#{version.csv.third}.dmg",
       verified: "github.com/Komet/MediaElch/"
   name "MediaElch"
   desc "Media Manager for Kodi"
@@ -10,7 +10,7 @@ cask "mediaelch" do
 
   livecheck do
     url "https://github.com/Komet/MediaElch/releases/latest"
-    regex(%r{href=.*?/MediaElch_macOS_(\d+(?:\.\d+)*)_(\d+(?:.\d+)*)_git-([^/]*?)\.dmg}i)
+    regex(%r{href=.*?/MediaElch_macOS_.*?[._-](\d+(?:\.\d+)*)_(\d+(?:.\d+)*)_git-([^/]*?)\.dmg}i)
     strategy :header_match do |headers, regex|
       next if headers["location"].blank?
 
@@ -26,7 +26,7 @@ cask "mediaelch" do
     end
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "MediaElch.app"
 

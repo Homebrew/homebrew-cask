@@ -1,5 +1,5 @@
 cask "pdfelement" do
-  version "9.3.0"
+  version "9.4.9"
   sha256 :no_check
 
   url "https://download.wondershare.com/cbs_down/mac-pdfelement_full5237.dmg"
@@ -12,7 +12,7 @@ cask "pdfelement" do
     regex(%r{<Version>(\d+(?:\.\d+)+)</Version>}i)
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   app "PDFelement.app"
 

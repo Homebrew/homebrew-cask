@@ -1,6 +1,6 @@
 cask "vallum" do
-  version "4.0.12"
-  sha256 "b287c0299f1872986051a6f77fc575b9b6b5fe8a7b74cb3c72ea3c397e4f44ab"
+  version "4.0.14"
+  sha256 "d737bf85cd7cd1c28a0a15110b3695ef1b32f012e691e98636080a966bac8251"
 
   url "https://github.com/TheMurusTeam/Vallum/releases/download/v#{version}/vallum-#{version}.zip",
       verified: "github.com/TheMurusTeam/Vallum/"
@@ -22,4 +22,6 @@ cask "vallum" do
               "it.murus.afw.core",
               "it.murus.afw.helper",
             ]
+
+  zap trash: "~/Library/Preferences/it.murus.Vallum.plist"
 end

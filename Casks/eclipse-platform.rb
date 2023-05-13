@@ -1,9 +1,9 @@
 cask "eclipse-platform" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "4.26,202211231800"
-  sha256 arm:   "079a94821ce30db38f070f96c7997ea5097b40af84f435cc8360a9f661dd6cdf",
-         intel: "fd6d58326119ccae20f6a627f47cdc5f8faee9425562ac2a4c8db559bb8b2a9f"
+  version "4.27,202303020300"
+  sha256 arm:   "22409543fed3086203445aa285f2658639f2b8b715e54cb57d00fc4c618bbff2",
+         intel: "7b7d1315528331141a024737e7af9e2d1b12505be813de14776cce7c88ae8832"
 
   url "https://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops#{version.major}/R-#{version.csv.first}-#{version.csv.second}/eclipse-SDK-#{version.csv.first}-macosx-cocoa-#{arch}.dmg&r=1"
   name "Eclipse SDK"
@@ -20,4 +20,10 @@ cask "eclipse-platform" do
 
   # Renamed to avoid conflict with other Eclipse.
   app "Eclipse.app", target: "Eclipse Platform.app"
+
+  zap trash: [
+    "~/.eclipse",
+    "~/Library/Preferences/org.eclipse.sdk.ide.plist",
+    "~/eclipse-workspace",
+  ]
 end

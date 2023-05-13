@@ -1,6 +1,6 @@
 cask "xamarin-mac" do
-  version "9.0.0.27,c8bc547f-869e-4d64-a271-f8b3a29ee545,4fbfc55453fe36fe5bf4128d6d495911"
-  sha256 "996542292606cadb8b5b47f8fe5f78a31fde4e43184af29133d22cafda93549c"
+  version "9.1.0.5,5f9ea8f6-0afe-46b3-b8e8-5dee4c2dd14c,c5c4f99a992a8cc51b2bad3d31ef6b96"
+  sha256 "50bfdcaab92415c9b08c127006f036e4ed967b0ca4ce6a7869536dd2dd51d2f8"
 
   url "https://download.visualstudio.microsoft.com/download/pr/#{version.csv.second}/#{version.csv.third}/xamarin.mac-#{version.csv.first}.pkg"
   name "Xamarin Mac"

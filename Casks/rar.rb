@@ -1,9 +1,9 @@
 cask "rar" do
   arch arm: "arm", intel: "x64"
 
-  version "6.12"
-  sha256 arm:   "491f345712a02eb26a3b424658c30652e22e2201a0c5c547fb97c25a756a264b",
-         intel: "f607ca12bdc313884c5a6f504fbf662a0511bf39fe04a9b2a694c986cd34bb67"
+  version "6.21"
+  sha256 arm:   "391f4706546d793ceec90d3ab725d34ab153047170999e359147ef81f968813e",
+         intel: "50dde0984b88a425f09b0dff97e29d6ab0182f2d43c46a0f00e0766df25319bc"
 
   url "https://www.rarlab.com/rar/rarmacos-#{arch}-#{version.no_dots}.tar.gz"
   name "RAR Archiver"
@@ -19,4 +19,6 @@ cask "rar" do
   binary "rar/unrar"
   artifact "rar/default.sfx", target: "#{HOMEBREW_PREFIX}/lib/default.sfx"
   artifact "rar/rarfiles.lst", target: "#{HOMEBREW_PREFIX}/etc/rarfiles.lst"
+
+  # No zap stanza required
 end

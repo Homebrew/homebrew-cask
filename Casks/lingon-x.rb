@@ -16,8 +16,8 @@ cask "lingon-x" do
     sha256 "c1c839e8dc13bd295f2080980c5bea22299c33f3333b7c6981161b46d6f021d8"
   end
   on_monterey :or_newer do
-    version "9.1.3"
-    sha256 "d308de5a4753bd9b7a60dfe3a8fd7767b52989b7deb081e12a0833d4d38eb1a4"
+    version "9.2.2"
+    sha256 "00d0aec55483417deb29393393640453f82b262ac6b142737366add8ade6811e"
   end
 
   url "https://www.peterborgapps.com/downloads/LingonX#{version.major}.zip"
@@ -30,6 +30,7 @@ cask "lingon-x" do
     regex(%r{<key>version</key>\s*\n\s*<string>(\d+(?:\.\d+)+)</string>}i)
   end
 
+  auto_updates true
   depends_on macos: ">= :high_sierra"
 
   app "Lingon X.app"

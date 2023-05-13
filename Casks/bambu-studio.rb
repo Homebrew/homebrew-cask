@@ -1,6 +1,6 @@
 cask "bambu-studio" do
-  version "01.04.02.13"
-  sha256 "c5b05e2ad477a30ef3863b046ed817a76c849f4ccc27559a2cc7d0bbc206c19b"
+  version "01.06.02.04"
+  sha256 "20914c40e4f8fbf8cbc1f26bb89611023a9626da63a63600b8ab9fab2afd0aad"
 
   url "https://public-cdn.bambulab.com/upgrade/studio/software/#{version}/Bambu_Studio_mac-v#{version}.dmg"
   name "Bambu Studio"
@@ -11,6 +11,8 @@ cask "bambu-studio" do
     url :homepage
     regex(/href=.*?Bambu[._-]Studio[._-]mac[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
+
+  depends_on macos: ">= :catalina"
 
   app "BambuStudio.app"
 

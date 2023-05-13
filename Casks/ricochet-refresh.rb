@@ -10,8 +10,8 @@ cask "ricochet-refresh" do
 
   livecheck do
     url "https://github.com/blueprint-freespeech/ricochet-refresh/releases"
+    regex(/v?(\d+(?:\.\d+)+)/i)
     strategy :github_latest
-    regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)+)[-"' >]}i)
   end
 
   app "Ricochet Refresh.app"

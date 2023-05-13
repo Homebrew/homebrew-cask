@@ -1,5 +1,5 @@
 cask "quitter" do
-  version "1.0,108"
+  version "1.0"
   sha256 :no_check
 
   url "https://marco.org/appcasts/Quitter.zip"
@@ -9,7 +9,7 @@ cask "quitter" do
 
   livecheck do
     url "https://marco.org/appcasts/quitter.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

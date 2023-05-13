@@ -1,5 +1,5 @@
 cask "pocket-casts" do
-  version "1.5.1,45"
+  version "1.5.2"
   sha256 :no_check
 
   url "https://static.pocketcasts.com/mac/PocketCasts.zip"
@@ -9,7 +9,7 @@ cask "pocket-casts" do
 
   livecheck do
     url "https://static2.pocketcasts.com/mac/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

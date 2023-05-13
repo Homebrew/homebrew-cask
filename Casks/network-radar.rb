@@ -1,5 +1,5 @@
 cask "network-radar" do
-  version "3.0.3,320b"
+  version "3.0.3"
   sha256 :no_check
 
   url "https://witt-software.com/downloads/networkradar/Network%20Radar.dmg"
@@ -9,7 +9,7 @@ cask "network-radar" do
 
   livecheck do
     url "https://www.witt-software.com/downloads/networkradar/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

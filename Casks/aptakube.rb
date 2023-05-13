@@ -1,10 +1,10 @@
 cask "aptakube" do
-  version "1.0.2"
-  sha256 "04d78b0b49068417e325798270a895ab7b54d735fb2d8024bf079c026fe0b08b"
+  version "1.4.4"
+  sha256 "43da4dfc6f4f2f872be86a7749b9832f26f2b700c690328f36f87c5dd52f1df6"
 
   url "https://releases.aptakube.com/Aptakube_#{version}_universal.dmg"
   name "Aptakube"
-  desc "Modern, lightweight and multi-cluster Kubernetes desktop client"
+  desc "Kubernetes desktop client"
   homepage "https://aptakube.com/"
 
   livecheck do

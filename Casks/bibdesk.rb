@@ -1,6 +1,6 @@
 cask "bibdesk" do
-  version "1.8.15,6104"
-  sha256 "02d0c9662060c0d860fba6170431c8fcc58027767df573aac291a1629710a249"
+  version "1.8.16"
+  sha256 "2ecdd5dbce424a3af626b502bd735435cad73a6514426f1a231258b624cd9e8a"
 
   url "https://downloads.sourceforge.net/bibdesk/BibDesk/BibDesk-#{version.csv.first}/BibDesk-#{version.csv.first}.dmg",
       verified: "downloads.sourceforge.net/bibdesk/"
@@ -10,7 +10,7 @@ cask "bibdesk" do
 
   livecheck do
     url "https://bibdesk.sourceforge.io/bibdesk.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

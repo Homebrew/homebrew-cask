@@ -1,9 +1,9 @@
 cask "turbovnc-viewer" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "3.0.2"
-  sha256 arm:   "fbd3acc5a9f586dd372d8ce327340db7628f0f6c1e5358c140b1876b2539a7d8",
-         intel: "1603d7eb714a24269c91aec96b0c351969ebcabb8f397f0ca34b9a9974bf3692"
+  version "3.0.3"
+  sha256 arm:   "9d2dfb1e54db720d12ca82a893d7b383883907bb820db5a4400d7e8eff48c80d",
+         intel: "b796fdb41f4203cdcd85aace5185eebd7dfaf6fabfe9ecec59a08dd2ce3da99a"
 
   url "https://downloads.sourceforge.net/turbovnc/#{version}/TurboVNC-#{version}-#{arch}.dmg",
       verified: "sourceforge.net/turbovnc/"
@@ -18,4 +18,6 @@ cask "turbovnc-viewer" do
               executable: "/opt/TurboVNC/bin/uninstall",
               sudo:       true,
             }
+
+  # No zap stanza required
 end

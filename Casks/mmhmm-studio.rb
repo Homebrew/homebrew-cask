@@ -1,8 +1,8 @@
 cask "mmhmm-studio" do
-  version "2.4.0,1666031000"
-  sha256 "ff09794c189e0f1964c5f3cb49dd44a41f60dc722f1ab2868bf8040fe86028ee"
+  version "2.5.1,1683313000"
+  sha256 "fc547361ec5d0b50b24c00b63019da557823373b63a91f4e72ba31d2ec43629e"
 
-  url "https://updates.mmhmm.app/mac/production/mmhmm_#{version.csv.first}.zip"
+  url "https://updates.mmhmm.app/mac/production/mmhmmStudio_#{version.csv.first}.zip"
   name "mmhmm Studio"
   desc "Virtual video presentation software"
   homepage "https://www.mmhmm.app/product"
@@ -24,5 +24,14 @@ cask "mmhmm-studio" do
 
   uninstall pkgutil:   "app.mmhmm.app",
             quit:      "app.mmhmm.app",
+            delete:    [
+              "/Library/Audio/Plug-Ins/HAL/mmhmmAudio.driver",
+              "/Library/CoreMediaIO/Plug-Ins/DAL/mmhmmCamera.plugin",
+            ],
             launchctl: "app.mmhmm.Camera.Assistant"
+
+  zap trash: [
+    "~/Library/Preferences/app.mmhmm.app.plist",
+    "~/Library/Saved Application State/app.mmhmm.app.savedState",
+  ]
 end

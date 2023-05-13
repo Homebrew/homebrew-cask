@@ -1,12 +1,11 @@
 cask "simple-comic" do
-  version "1.7_252"
-  sha256 "4ddd18a02a79fc8201824e6ab99291c6d4c8680f79f94bc372bf71f0535def35"
+  version "1.9.7"
+  sha256 "77957b74391ca924b2e4631b8407bdf20d44a97401606dee4cba84d0d5552572"
 
-  url "https://github.com/dancingtortoise/Simple-Comic/releases/download/#{version}/SimpleComic_#{version}.zip",
-      verified: "github.com/dancingtortoise/Simple-Comic/"
+  url "https://github.com/MaddTheSane/Simple-Comic/releases/download/App-Store-#{version}/Simple.Comic.zip"
   name "Simple Comic"
   desc "Comic viewer/reader"
-  homepage "https://dancingtortoise.github.io/"
+  homepage "https://github.com/MaddTheSane/Simple-Comic"
 
   app "Simple Comic.app"
 

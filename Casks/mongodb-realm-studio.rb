@@ -1,6 +1,6 @@
 cask "mongodb-realm-studio" do
-  version "13.0.2"
-  sha256 "39f8a9bc620084190e511c86d1f3aafac1abb18234d803b8a6573838a6541b1a"
+  version "14.0.2"
+  sha256 "9569c25355845d7a64839548febf0c452793b9b37c057ed25827509c463dff93"
 
   url "https://github.com/realm/realm-studio/releases/download/v#{version}/Realm.Studio-#{version}.dmg",
       verified: "github.com/realm/realm-studio/"

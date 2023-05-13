@@ -1,6 +1,6 @@
 cask "inso" do
-  version "3.12.0"
-  sha256 "f4835d86ba37011e4c97cbe203cc020a2167d8fa887ad5d5591f33e5aeed3264"
+  version "3.14.0"
+  sha256 "cd2678026c5eca9ccafb11a0a36de6f3896d1587144672345c4b74d99e3e18cd"
 
   url "https://github.com/Kong/insomnia/releases/download/lib%40#{version}/inso-macos-#{version}.zip",
       verified: "github.com/Kong/insomnia/"
@@ -15,4 +15,6 @@ cask "inso" do
   conflicts_with cask: "homebrew/cask-versions/inso-beta"
 
   binary "inso"
+
+  # No zap stanza required
 end

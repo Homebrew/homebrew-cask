@@ -39,6 +39,25 @@ cask "karabiner-elements" do
 
     pkg "Karabiner-Elements.sparkle_guided.pkg"
   end
+  on_mojave :or_older do
+    uninstall signal:    [
+                ["TERM", "org.pqrs.Karabiner-Menu"],
+                ["TERM", "org.pqrs.Karabiner-NotificationWindow"],
+              ],
+              pkgutil:   "org.pqrs.Karabiner-Elements",
+              launchctl: [
+                "org.pqrs.karabiner.agent.karabiner_grabber",
+                "org.pqrs.karabiner.agent.karabiner_observer",
+                "org.pqrs.karabiner.karabiner_console_user_server",
+                "org.pqrs.karabiner.karabiner_kextd",
+                "org.pqrs.karabiner.karabiner_session_monitor",
+              ],
+              script:    {
+                executable: "/Library/Application Support/org.pqrs/Karabiner-Elements/uninstall_core.sh",
+                sudo:       true,
+              },
+              delete:    "/Library/Application Support/org.pqrs/"
+  end
   on_mojave do
     version "12.10.0"
     sha256 "53252f7d07e44f04972afea2a16ac595552c28715aa65ff4a481a1c18c8be2f4"
@@ -64,48 +83,6 @@ cask "karabiner-elements" do
     end
 
     pkg "Karabiner-Elements.pkg"
-  end
-  on_big_sur :or_newer do
-    version "14.11.0"
-    sha256 "227b927d76da498b2772af2354ed792db4260d382e44794e884fcf8f911f5f97"
-
-    url "https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg",
-        verified: "github.com/pqrs-org/Karabiner-Elements/"
-
-    livecheck do
-      url "https://pqrs.org/osx/karabiner/files/karabiner-elements-appcast.xml"
-      strategy :sparkle
-    end
-
-    depends_on macos: ">= :big_sur"
-
-    pkg "Karabiner-Elements.pkg"
-  end
-
-  name "Karabiner Elements"
-  desc "Keyboard customizer"
-  homepage "https://pqrs.org/osx/karabiner/"
-
-  auto_updates true
-
-  on_mojave :or_older do
-    uninstall signal:    [
-                ["TERM", "org.pqrs.Karabiner-Menu"],
-                ["TERM", "org.pqrs.Karabiner-NotificationWindow"],
-              ],
-              pkgutil:   "org.pqrs.Karabiner-Elements",
-              launchctl: [
-                "org.pqrs.karabiner.agent.karabiner_grabber",
-                "org.pqrs.karabiner.agent.karabiner_observer",
-                "org.pqrs.karabiner.karabiner_console_user_server",
-                "org.pqrs.karabiner.karabiner_kextd",
-                "org.pqrs.karabiner.karabiner_session_monitor",
-              ],
-              script:    {
-                executable: "/Library/Application Support/org.pqrs/Karabiner-Elements/uninstall_core.sh",
-                sudo:       true,
-              },
-              delete:    "/Library/Application Support/org.pqrs/"
   end
   on_catalina :or_newer do
     uninstall early_script: {
@@ -133,6 +110,28 @@ cask "karabiner-elements" do
               delete:       "/Library/Application Support/org.pqrs/"
     # The system extension 'org.pqrs.Karabiner-DriverKit-VirtualHIDDevice*' should not be uninstalled by Cask
   end
+  on_big_sur :or_newer do
+    version "14.12.0"
+    sha256 "df137bb3f274380d6de473f31535e72b3332eb62ed3b637fb7073ffa12eebca3"
+
+    url "https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg",
+        verified: "github.com/pqrs-org/Karabiner-Elements/"
+
+    livecheck do
+      url "https://pqrs.org/osx/karabiner/files/karabiner-elements-appcast.xml"
+      strategy :sparkle
+    end
+
+    depends_on macos: ">= :big_sur"
+
+    pkg "Karabiner-Elements.pkg"
+  end
+
+  name "Karabiner Elements"
+  desc "Keyboard customizer"
+  homepage "https://pqrs.org/osx/karabiner/"
+
+  auto_updates true
 
   zap trash: [
     "~/.config/karabiner",

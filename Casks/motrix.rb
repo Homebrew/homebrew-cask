@@ -1,30 +1,30 @@
 cask "motrix" do
-  version "1.6.11"
+  arch arm: "-arm64"
 
-  on_intel do
-    sha256 "70fa245e44b8e0ec62f50ba5731bc0a876535a51dc0ea318010736d2a6be6dd9"
+  version "1.8.19"
+  sha256 arm:   "d73f4d69f3597ad8f98b821aa0fb58ba964bf85061b4a13f00edcb3618001c0e",
+         intel: "b644cc83aa98224147ef2942fd49ecfc8cdcebfce9616550fa35caa6850c4178"
 
-    url "https://github.com/agalwood/Motrix/releases/download/v#{version}/Motrix-#{version}.dmg",
-        verified: "github.com/agalwood/Motrix/"
-  end
-  on_arm do
-    sha256 "1705d6ef4781c17ebf19007dbb2ac52f6227592c783e91ad5b81a1432cf6b668"
-
-    url "https://github.com/agalwood/Motrix/releases/download/v#{version}/Motrix-#{version}-arm64.dmg",
-        verified: "github.com/agalwood/Motrix/"
-  end
-
+  url "https://github.com/agalwood/Motrix/releases/download/v#{version}/Motrix-#{version}#{arch}.dmg",
+      verified: "github.com/agalwood/Motrix/"
   name "Motrix"
   desc "Open-source download manager"
   homepage "https://motrix.app/"
+
+  # A tag using the stable version format is sometimes marked as "Pre-release"
+  # on the GitHub releases page, so we have to use the `GithubLatest` strategy.
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Motrix.app"
 
   zap trash: [
     "~/Library/Application Support/Motrix",
+    "~/Library/Caches/net.agalwood.Motrix",
+    "~/Library/Logs/Motrix",
     "~/Library/Preferences/net.agalwood.Motrix.plist",
     "~/Library/Saved Application State/net.agalwood.Motrix.savedState",
-    "~/Library/Logs/Motrix",
-    "~/Library/Caches/net.agalwood.Motrix",
   ]
 end

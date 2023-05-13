@@ -11,8 +11,8 @@ cask "webots" do
 
   livecheck do
     url :url
+    regex(/([\w._-]+)/i)
     strategy :github_latest
-    regex(%r{href=.*?/tag/([\w._-]+)["' >]}i)
   end
 
   auto_updates true

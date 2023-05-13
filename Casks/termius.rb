@@ -1,10 +1,10 @@
 cask "termius" do
-  arch arm: "mac-arm64", intel: "mac"
+  arch arm: "-arm64"
 
-  version "7.55.2"
+  version "7.59.1"
   sha256 :no_check
 
-  url "https://autoupdate.termius.com/#{arch}/Termius.dmg"
+  url "https://autoupdate.termius.com/mac#{arch}/Termius.dmg"
   name "Termius"
   desc "SSH client"
   homepage "https://www.termius.com/"

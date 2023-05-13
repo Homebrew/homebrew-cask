@@ -1,6 +1,6 @@
 cask "slicer" do
-  version "5.2.1,637f7a7f517443dc5dc73272"
-  sha256 "12899b2af65796878fb0e2a37555da3c76a573b256153ca3b87bf072d4e9ab98"
+  version "5.2.2,63f5ef7e8939577d9867d6a1"
+  sha256 "8261c7bf14e6e77f37573dac88aa838113d7f0bf533a6adeed66750b89c672e4"
 
   url "https://slicer-packages.kitware.com/api/v1/item/#{version.csv.second}/download",
       verified: "slicer-packages.kitware.com/"
@@ -10,9 +10,10 @@ cask "slicer" do
 
   livecheck do
     url "https://download.slicer.org"
-    strategy :page_match do |page|
-      match = page.scan(%r{href=.*?/bitstream/(\d+\w+).*?\n?.*?version\s*(\d+(?:\.\d+)+)}im)
-      next if match.blank?
+    regex(%r{href=.*?/bitstream/(\h+)["' >].+?["']header["'][^>]*?>\s*v?(\d+(?:\.\d+)+)}im)
+    strategy :page_match do |page, regex|
+      match = page.scan(regex)
+      next if match.length < 2
 
       "#{match[1][1]},#{match[1][0]}"
     end

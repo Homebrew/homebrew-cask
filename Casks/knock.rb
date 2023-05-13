@@ -1,5 +1,5 @@
 cask "knock" do
-  version "2.2.1,98"
+  version "2.2.1"
   sha256 :no_check
 
   url "https://knock-updates.s3.amazonaws.com/Knock.zip",
@@ -10,7 +10,7 @@ cask "knock" do
 
   livecheck do
     url "https://knock-updates.s3.amazonaws.com/Knock.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   app "Knock.app"

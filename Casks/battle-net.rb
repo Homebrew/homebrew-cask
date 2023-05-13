@@ -1,5 +1,5 @@
 cask "battle-net" do
-  version :latest
+  version "1.18.5.3106"
   sha256 :no_check
 
   language "en", default: true do
@@ -12,6 +12,11 @@ cask "battle-net" do
   name "Blizzard Battle.net"
   desc "Online gaming platform"
   homepage "https://www.battle.net/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   installer manual: "Battle.net-Setup.app"
 
@@ -37,6 +42,7 @@ cask "battle-net" do
       rmdir: "~/Blizzard"
 
   caveats <<~EOS
-    If you pick an installation directory other than /Applications when installing this cask, you will need to uninstall it manually
+    If your installation directory is not /Applications, you will need to
+    uninstall this cask manually.
   EOS
 end

@@ -1,6 +1,6 @@
 cask "gpg-suite-pinentry" do
-  version "2022.2"
-  sha256 "11e4e0964d788bab4cceda7b6af696bf17a85510338322543867bd1c934cca70"
+  version "2023.2"
+  sha256 "aec0f4a114ea803460f20599aa5437608bc50a869b080a5bcbc185c4d04eda60"
 
   url "https://releases.gpgtools.org/GPG_Suite-#{version}.dmg"
   name "GPG Suite Pinentry"
@@ -14,8 +14,8 @@ cask "gpg-suite-pinentry" do
   auto_updates true
   conflicts_with cask: [
     "gpg-suite",
-    "gpg-suite-nightly",
     "gpg-suite-no-mail",
+    "homebrew/cask-versions/gpg-suite-nightly",
   ], formula: "gpg"
   depends_on macos: ">= :mojave"
 

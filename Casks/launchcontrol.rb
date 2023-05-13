@@ -1,25 +1,25 @@
 cask "launchcontrol" do
   on_catalina :or_older do
-    version "1.52.7,1959"
-    sha256 "16c3d89e41a99cbf43e6996681358e8e7a4bc63fa770b9f8c0bc72c5356a0b8a"
+    version "1.52.7"
+    sha256 "760edc3f3238ecbbc9f0c14b17ced9ac2a46c46a4ed8feec6bfb532fced37b7e"
 
     livecheck do
       skip "Legacy version"
     end
   end
   on_big_sur :or_newer do
-    version "2.0.4,2316"
-    sha256 "11efcf08a067622697ed80a339b21612e228c606f5c5ee9ec5bb04a61d21e880"
+    version "2.3.1"
+    sha256 "0b24aacdf58f4a5a6e2c83399dd7179393f9bcc49a4bcb5a947dff8496afc209"
 
     livecheck do
-      url "https://www.soma-zone.com/LaunchControl/a/appcast-update-2.xml"
-      strategy :sparkle
+      url "https://www.soma-zone.com/LaunchControl/a/appcast-update-#{version.major}.xml"
+      strategy :sparkle, &:short_version
     end
 
     depends_on macos: ">= :big_sur"
   end
 
-  url "https://www.soma-zone.com/download/files/LaunchControl-#{version.csv.first}.tar.xz"
+  url "https://www.soma-zone.com/download/files/LaunchControl-#{version}.tar.xz"
   name "LaunchControl"
   desc "Create, manage and debug system- and user services"
   homepage "https://www.soma-zone.com/LaunchControl/"
@@ -27,6 +27,7 @@ cask "launchcontrol" do
   auto_updates true
 
   app "LaunchControl.app"
+  binary "#{appdir}/LaunchControl.app/Contents/MacOS/fdautil"
 
   uninstall delete:    "/Library/PrivilegedHelperTools/com.soma-zone.LaunchControl.Helper",
             launchctl: "com.soma-zone.LaunchControl.Helper",

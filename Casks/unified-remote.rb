@@ -6,5 +6,10 @@ cask "unified-remote" do
   name "Unified Remote"
   homepage "https://www.unifiedremote.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Unified Remote.app"
 end

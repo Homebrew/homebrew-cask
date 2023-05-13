@@ -1,6 +1,6 @@
 cask "pixelsnap" do
-  version "2.5.3"
-  sha256 "f8cfa8fe61ea4de058d5489138c91f65565a8110c14bbc83970f120feb75b0df"
+  version "2.5.4"
+  sha256 "cc87e808901c88aa8cf7ac4a068655c89c52b4ddbb8c0ea667cbcf0247a6bcbb"
 
   url "https://updates.getpixelsnap.com/v#{version.major}/PixelSnap-#{version.major}-#{version}.dmg"
   name "PixelSnap"
@@ -9,10 +9,17 @@ cask "pixelsnap" do
 
   livecheck do
     url "https://updates.getpixelsnap.com/v#{version.major}/appcast.xml"
-    regex(/sparkle:version="(\d+(?:\.\d+)+)"/i)
+    strategy :sparkle do |items|
+      items.map do |item|
+        next if item.version.blank?
+
+        item.version
+      end
+    end
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "PixelSnap #{version.major}.app"
 

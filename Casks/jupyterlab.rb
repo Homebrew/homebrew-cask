@@ -1,16 +1,19 @@
 cask "jupyterlab" do
-  version "3.5.1-1"
-  sha256 "814948ee9b05a8d17d0e08d7d2faab0a7183a9185d144c7734b4e78c21537afa"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://github.com/jupyterlab/jupyterlab-desktop/releases/download/v#{version}/JupyterLab-Setup-macOS.dmg"
+  version "3.6.3-2"
+  sha256 arm:   "d0acc70e425353064771a8e9c9959fb43029da286a47cc8ac7d1a63c6d980c30",
+         intel: "6c413b365f797e1f50d61c4df77850a5ead069206d1e36c790575cd853beeb0b"
+
+  url "https://github.com/jupyterlab/jupyterlab-desktop/releases/download/v#{version}/JupyterLab-Setup-macOS-#{arch}.dmg"
   name "JupyterLab App"
   desc "Desktop application for JupyterLab"
   homepage "https://github.com/jupyterlab/jupyterlab-desktop"
 
   livecheck do
     url :url
+    regex(/v?(\d+(?:[.-]\d+)+)/i)
     strategy :github_latest
-    regex(%r{href=.*?/tag/v?(\d+(?:[.-]\d+)+)["' >]}i)
   end
 
   app "JupyterLab.app"

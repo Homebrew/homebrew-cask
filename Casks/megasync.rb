@@ -1,7 +1,7 @@
 cask "megasync" do
   arch arm: "Arm64"
 
-  version "4.8.5"
+  version "4.9.3"
   sha256 :no_check
 
   url "https://mega.nz/MEGAsyncSetup#{arch}.dmg"
@@ -19,7 +19,8 @@ cask "megasync" do
 
   app "MEGAsync.app"
 
-  uninstall launchctl:  "mega.mac.megaupdater",
+  uninstall quit:       "mega.mac",
+            launchctl:  "mega.mac.megaupdater",
             login_item: "MEGAsync"
 
   zap trash: [

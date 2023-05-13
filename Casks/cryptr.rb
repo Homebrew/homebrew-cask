@@ -13,4 +13,10 @@ cask "cryptr" do
   end
 
   app "Cryptr.app"
+
+  zap trash: [
+    "~/Library/Application Support/cryptr",
+    "~/Library/Preferences/io.cryptr.plist",
+    "~/Library/Saved Application State/io.cryptr.savedState",
+  ]
 end

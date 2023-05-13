@@ -1,6 +1,6 @@
 cask "datasette" do
-  version "0.2.2"
-  sha256 "4ba52826a6365b157448d206bf11c82fec6462b770b6f9db63bf0f9b6c335495"
+  version "0.2.3"
+  sha256 "a708f435afebf5c95d7ea4026699b6b64db6b7e08f9581dd5a143109a5cb986d"
 
   url "https://github.com/simonw/datasette-app/releases/download/#{version}/Datasette.app.zip",
       verified: "github.com/simonw/datasette-app/"

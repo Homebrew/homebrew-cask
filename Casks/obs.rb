@@ -1,9 +1,9 @@
 cask "obs" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "29.0.0"
-  sha256 arm:   "b06753c7398857afc37a7e398a74e92728dfce3d515964ee21a0a9cc32bcc81b",
-         intel: "6e8eb451d22d66c7e06cdfcd9b95e0ce91f595994f02b6319d876bd3ee583770"
+  version "29.1.1"
+  sha256 arm:   "d10fbd16e35343c363a4efac5c1dea4c54293f19ee4662c5b017ffd11fd7301f",
+         intel: "300d3bb9da40ecd8496d2c971b8c197ea67d582fdfb821267d93332e06e77f64"
 
   url "https://cdn-fastly.obsproject.com/downloads/obs-studio-#{version}-macos-#{arch}.dmg"
   name "OBS"
@@ -17,9 +17,19 @@ cask "obs" do
 
   auto_updates true
   conflicts_with cask: "homebrew/cask-versions/obs-beta"
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "OBS.app"
+  # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
+  shimscript = "#{staged_path}/obs.wrapper.sh"
+  binary shimscript, target: "obs"
+
+  preflight do
+    File.write shimscript, <<~EOS
+      #!/bin/bash
+      exec '#{appdir}/OBS.app/Contents/MacOS/OBS' "$@"
+    EOS
+  end
 
   uninstall delete: "/Library/CoreMediaIO/Plug-Ins/DAL/obs-mac-virtualcam.plugin"
 

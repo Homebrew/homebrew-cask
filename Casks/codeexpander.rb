@@ -1,6 +1,6 @@
 cask "codeexpander" do
-  version "4.2.13"
-  sha256 "d2700dc3ae0dfea4727a8ce289a4238c43b72fdbfb82ec7d0db42c42b137278a"
+  version "4.3.1"
+  sha256 "d2288cf347f7c23f40e6f6ac92c3f077c1700d335c71509b52f935fdc0c0fb45"
 
   url "https://github.com/oncework/codeexpander/releases/download/#{version.major_minor}.x/CodeExpander-#{version}.dmg"
   name "CodeExpander"
@@ -26,4 +26,12 @@ cask "codeexpander" do
   end
 
   app "CodeExpander.app"
+
+  zap trash: [
+    "~/.codeexpander",
+    "~/Documents/codeexpander",
+    "~/Library/Logs/Codeexpander",
+    "~/Library/Preferences/com.codeexpander.plist",
+    "~/Library/Saved Application State/com.codeexpander.savedState",
+  ]
 end

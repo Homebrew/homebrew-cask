@@ -1,9 +1,9 @@
 cask "gimp" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2.10.32-1"
-  sha256 arm:   "4c3ae0ce49920fa3a8dd247888cd90fba8fd4a216f8759e8daa14754d25a5ed7",
-         intel: "5669ca1f0ce63b0b7c2efd1ac1998116e5ea367b376d453f8341a5d28093f87f"
+  version "2.10.34-1"
+  sha256 arm:   "208edf433b4423101f48f701324f981c39fb0dfbcaf645d835aeded6ebeac39d",
+         intel: "a64755af34b1ce95d99de5973018b3c131016a111d0c755ac297054276a85407"
 
   url "https://download.gimp.org/gimp/v#{version.major_minor}/macos/gimp-#{version}-#{arch}.dmg"
   name "GIMP"
@@ -19,10 +19,14 @@ cask "gimp" do
   conflicts_with cask: "homebrew/cask-versions/gimp-dev"
 
   app "GIMP.app"
-  binary "#{appdir}/GIMP.app/Contents/MacOS/gimp"
+  shimscript = "#{staged_path}/gimp.wrapper.sh"
+  binary shimscript, target: "gimp"
 
-  postflight do
-    set_permissions "#{appdir}/GIMP.app/Contents/MacOS/gimp", "a+rx"
+  preflight do
+    File.write shimscript, <<~EOS
+      #!/bin/sh
+      "#{appdir}/GIMP.app/Contents/MacOS/gimp" "$@"
+    EOS
   end
 
   zap trash: [

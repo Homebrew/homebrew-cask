@@ -6,6 +6,11 @@ cask "gameranger" do
   name "GameRanger"
   homepage "https://gameranger.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "GameRanger.app"
 
   zap trash: [

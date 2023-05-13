@@ -1,6 +1,6 @@
 cask "gittyup" do
-  version "1.2.0"
-  sha256 "9e6c25f9d24e642c8f15794745ae4f04cf24cfcaf57c2a7dfed97093e4ccdd1d"
+  version "1.3.0"
+  sha256 "8582bc3e8628523d08515356a7e9655e519e2872dbfdcc6f2925a80188ac5ac6"
 
   url "https://github.com/Murmele/Gittyup/releases/download/gittyup_v#{version}/Gittyup-#{version}.dmg",
       verified: "github.com/Murmele/Gittyup/"
@@ -25,6 +25,8 @@ cask "gittyup" do
       assets_page[:content]&.scan(regex)&.map { |match| match[0] }
     end
   end
+
+  auto_updates true
 
   app "Gittyup.app"
 

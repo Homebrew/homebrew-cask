@@ -1,5 +1,5 @@
 cask "lastpass" do
-  version "4.107.0,1294"
+  version "4.114.0"
   sha256 :no_check
 
   url "https://download.cloud.lastpass.com/mac/LastPass.dmg"
@@ -9,7 +9,7 @@ cask "lastpass" do
 
   livecheck do
     url "https://download.cloud.lastpass.com/mac/AppCast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

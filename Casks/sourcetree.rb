@@ -4,7 +4,7 @@ cask "sourcetree" do
     sha256 "d60614e9ab603e0ed158b6473c36e7944b2908d9943e332c505eba03dc1d829e"
 
     url "https://downloads.atlassian.com/software/sourcetree/Sourcetree_#{version}.zip",
-        verified: "atlassian.com/software/sourcetree/"
+        verified: "downloads.atlassian.com/software/sourcetree/"
 
     livecheck do
       skip "Legacy version"
@@ -15,18 +15,18 @@ cask "sourcetree" do
     sha256 "4bd82affa3402814c3d07ff613fbc8f45da8b0cda294d498ffbb0667bf729c9f"
 
     url "https://product-downloads.atlassian.com/software/sourcetree/ga/Sourcetree_#{version.csv.first}_#{version.csv.second}.zip",
-        verified: "atlassian.com/software/sourcetree/"
+        verified: "product-downloads.atlassian.com/software/sourcetree/ga/"
 
     livecheck do
       skip "Legacy version"
     end
   end
   on_mojave :or_newer do
-    version "4.2.1,248"
-    sha256 "3dac6ab514c7debe960339e2aee99f018342a41baf743dbb59524728b373561f"
+    version "4.2.3,252"
+    sha256 "07ad6667847986f247288f6a3120fc914df9733373d5e0c11df81e77269b111b"
 
     url "https://product-downloads.atlassian.com/software/sourcetree/ga/Sourcetree_#{version.csv.first}_#{version.csv.second}.zip",
-        verified: "atlassian.com/software/sourcetree/"
+        verified: "product-downloads.atlassian.com/software/sourcetree/ga/"
 
     livecheck do
       url "https://product-downloads.atlassian.com/software/sourcetree/Appcast/SparkleAppcast.xml"
@@ -51,6 +51,7 @@ cask "sourcetree" do
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.torusknot.sourcetreenotmas.sfl2",
     "~/Library/Application Support/SourceTree",
     "~/Library/Caches/com.torusknot.SourceTreeNotMAS",
+    "~/Library/Logs/Sourcetree",
     "~/Library/Preferences/com.torusknot.SourceTreeNotMAS.LSSharedFileList.plist",
     "~/Library/Preferences/com.torusknot.SourceTreeNotMAS.plist",
     "~/Library/Saved Application State/com.torusknot.SourceTreeNotMAS.savedState",

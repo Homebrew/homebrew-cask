@@ -10,8 +10,8 @@ cask "thonny" do
 
   livecheck do
     url "https://github.com/thonny/thonny/releases/"
-    strategy :page_match
     regex(/thonny[._-]?(\d+(?:\.\d+)*)\.pkg/i)
+    strategy :page_match
   end
 
   conflicts_with cask: "thonny-xxl"

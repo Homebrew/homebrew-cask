@@ -1,6 +1,6 @@
 cask "nomachine-enterprise-client" do
-  version "8.2.3_12"
-  sha256 "ffce21299f4a833b33d298578a77211cd38d67dde73c76fd73edbba040a10a52"
+  version "8.5.3_2"
+  sha256 "4df30f4ba889a04422ca76539e9a90f272c94478866ccaa133e65b641483dd82"
 
   url "https://download.nomachine.com/download/#{version.major_minor}/MacOSX/nomachine-enterprise-client_#{version}.dmg"
   name "NoMachine Enterprise Client"
@@ -26,4 +26,11 @@ cask "nomachine-enterprise-client" do
               "com.nomachine.uninstall",
               "com.nomachine.launchconf",
             ]
+
+  zap trash: [
+        "/Library/Application Support/NoMachine",
+        "~/.nx",
+        "~/Library/Preferences/com.nomachine.nxdock.plist",
+      ],
+      rmdir: "~/Documents/NoMachine"
 end

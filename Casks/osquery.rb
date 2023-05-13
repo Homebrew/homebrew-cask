@@ -1,6 +1,6 @@
 cask "osquery" do
-  version "5.7.0"
-  sha256 "6147f5632d7ae0bfb5c485f3b2211057179ceed18904b375007f23043408261f"
+  version "5.8.2"
+  sha256 "1fea8ac9b603851d2e76c5fc73138a468a3075a3002c8cb1fd7fff53b889c4dd"
 
   url "https://pkg.osquery.io/darwin/osquery-#{version}.pkg"
   name "osquery"
@@ -19,4 +19,6 @@ cask "osquery" do
               "com.facebook.osquery",
               "io.osquery.agent",
             ]
+
+  # No zap stanza required
 end

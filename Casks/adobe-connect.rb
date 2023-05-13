@@ -1,6 +1,6 @@
 cask "adobe-connect" do
-  version "11,2022.10.42"
-  sha256 "fe4ecaa3823e50a7a4443439982b27737aa636622ff42d7d3e8db645f64a2766"
+  version "11,2023.5.308"
+  sha256 "3e1f92c9dcd6fe83f1e1441ca81ae759e8ead32d8af6607bd843ac045e20b56c"
 
   url "https://download.adobe.com/pub/connect/updaters/meeting/#{version.csv.first.dots_to_underscores}/AdobeConnect_#{version.csv.second.dots_to_underscores}.dmg"
   name "Adobe Connect"
@@ -23,4 +23,18 @@ cask "adobe-connect" do
   installer manual: "AdobeConnectInstaller.app"
 
   uninstall delete: "/Applications/Adobe Connect"
+
+  zap trash: [
+    "~/adobeconnectapp.log",
+    "~/AdobeConnectAppCache",
+    "~/Library/Caches/com.adobe.adobeconnect.app",
+    "~/Library/Caches/com.adobe.cefconnect.app",
+    "~/Library/HTTPStorages/com.adobe.adobeconnect.app",
+    "~/Library/HTTPStorages/com.adobe.cefconnect.app",
+    "~/Library/LaunchAgents/com.adobe.connectDetector.plist",
+    "~/Library/Preferences/com.adobe.adobeconnect.app.plist",
+    "~/Library/Preferences/com.adobe.cefconnect.helper.renderer.plist",
+    "~/Library/Saved Application State/com.adobe.adobeconnect.app.savedState",
+    "~/Library/Saved Application State/com.adobe.cefconnect.app.savedState",
+  ]
 end

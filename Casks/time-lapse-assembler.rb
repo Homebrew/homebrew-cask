@@ -7,5 +7,10 @@ cask "time-lapse-assembler" do
   desc "Tool to create movies from a sequence of images"
   homepage "http://www.dayofthenewdan.com/projects/time-lapse-assembler-1/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Time Lapse Assembler.app"
 end

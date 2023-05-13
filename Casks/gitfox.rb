@@ -1,6 +1,6 @@
 cask "gitfox" do
-  version "3.3.0,7799"
-  sha256 "14665207f8051bcd135444ee4c361a26cbc36245eab14ba643dd56b8aa1492c8"
+  version "3.5.0,8092"
+  sha256 "756af41e4b5f53ee63f5b9f44c52ae7b8b8fc27cd2f52af24e7367257b7bf9a6"
 
   url "https://storage.googleapis.com/gitfox/builds/retail/#{version.csv.second}/Gitfox.#{version.csv.second}.zip",
       verified: "storage.googleapis.com/gitfox/"

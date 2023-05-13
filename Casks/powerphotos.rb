@@ -49,18 +49,28 @@ cask "powerphotos" do
       skip "Legacy version"
     end
   end
-  on_big_sur :or_newer do
-    version "2.1.4,1940"
+  on_big_sur do
+    version "2.1.7"
+    sha256 "cd9d64f081d093a7a8354b4cb04a2bf7c086ef90ce6b834050995d59f8e4b1d6"
+
+    url "https://www.fatcatsoftware.com/powerphotos/PowerPhotos_#{version.no_dots}.zip"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_monterey :or_newer do
+    version "2.3"
     sha256 :no_check
 
     url "https://www.fatcatsoftware.com/powerphotos/PowerPhotos.zip"
 
     livecheck do
       url "https://www.fatcatsoftware.com/powerphotos/downloads/appcast.xml"
-      strategy :sparkle
+      strategy :sparkle, &:short_version
     end
 
-    depends_on macos: ">= :big_sur"
+    depends_on macos: ">= :monterey"
   end
 
   name "PowerPhotos"

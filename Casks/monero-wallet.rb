@@ -1,6 +1,6 @@
 cask "monero-wallet" do
-  version "0.18.1.2"
-  sha256 "0e2e79471ffcc25b939de1937d54610510eaed0cbb19bbdc21a7aa64a2e9ec73"
+  version "0.18.2.2"
+  sha256 "0b676d21b8133830b8446744382ae7c8b51d0e228713184d70100721504bdd4c"
 
   url "https://downloads.getmonero.org/gui/monero-gui-mac-x64-v#{version}.dmg"
   name "Monero Wallet"

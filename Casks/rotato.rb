@@ -1,6 +1,6 @@
 cask "rotato" do
-  version "138.2"
-  sha256 "5d6b024594628cc8d4d09300c4fd9b6b6ec2ee5c6b3fbfb3a396d416cfa8b990"
+  version "140.37"
+  sha256 "39d08cad386e766183dc78a02a47d65b2d618c8b28469972494035fa4ed56b5c"
 
   url "https://rotato.app/api/releases/download/#{version}"
   name "Rotato"
@@ -13,7 +13,7 @@ cask "rotato" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Rotato.app"
 

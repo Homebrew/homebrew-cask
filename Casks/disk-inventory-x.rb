@@ -16,4 +16,6 @@ cask "disk-inventory-x" do
   depends_on macos: ">= :high_sierra"
 
   app "Disk Inventory X.app"
+
+  zap trash: "~/Library/Preferences/com.derlien.DiskInventoryX.plist"
 end

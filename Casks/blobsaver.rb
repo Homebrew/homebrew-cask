@@ -1,9 +1,9 @@
 cask "blobsaver" do
   arch arm: "arm", intel: "intel"
 
-  version "3.4.1"
-  sha256 arm:   "60e7ab55d450eb3d41f29a5156a92af8fb7e5dfbe278da2a623f8bd16b2eb4ea",
-         intel: "4cfb291ec952616c1cb63a4e075a4e4327701ba6028ff3880ce4a5d131296609"
+  version "3.5.0"
+  sha256 arm:   "3eae2b623eb047c499935d7b069b87ebe8ca544334ecb7c7dedfad551a6bf601",
+         intel: "5d48b72d4405ab36c2c6592cae1c5e8e38ae033878b76cddca12a20fff456733"
 
   url "https://github.com/airsquared/blobsaver/releases/download/v#{version}/blobsaver-#{arch}-#{version}.dmg"
   name "blobsaver"
@@ -11,6 +11,7 @@ cask "blobsaver" do
   homepage "https://github.com/airsquared/blobsaver"
 
   app "blobsaver.app"
+  binary "#{appdir}/blobsaver.app/Contents/MacOS/blobsaver"
 
   zap trash: "~/Library/Preferences/airsquared.blobsaver.app.plist"
 end

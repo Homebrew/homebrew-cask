@@ -1,9 +1,9 @@
 cask "arduino-ide" do
-  arch arm: "ARM64", intel: "64bit"
+  arch arm: "arm64", intel: "64bit"
 
-  version "2.0.3"
-  sha256 arm:   "c618a71c5117b8b111238cd975e6e33a44e4d6ea97b09dcebccc99a80463af1f",
-         intel: "145acd62daa15fe1d7548c569bd00cfc193a82f2e7fc6a4bd5e9028c0f8a74f9"
+  version "2.1.0"
+  sha256 arm:   "507a0519591de9664b2b53d8744da424cfbcade5172cdf009d06756bb412fa59",
+         intel: "dc5e9b58421f6244d068ed7b4e85f209d313fa74e5e3080ece2b6e56c6e72cb4"
 
   url "https://downloads.arduino.cc/arduino-ide/arduino-ide_#{version}_macOS_#{arch}.dmg"
   name "Arduino IDE"
@@ -22,5 +22,6 @@ cask "arduino-ide" do
   zap trash: [
     "~/.arduinoIDE",
     "~/Library/Application Support/arduino-ide",
+    "~/Library/Saved Application State/cc.arduino.IDE#{version.major}.savedState",
   ]
 end

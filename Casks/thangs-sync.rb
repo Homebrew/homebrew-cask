@@ -1,5 +1,5 @@
 cask "thangs-sync" do
-  version "1.1.46"
+  version "1.4.1"
   sha256 :no_check
 
   url "https://thangs.com/api/system/sync-client-location?type=mac"
@@ -9,7 +9,7 @@ cask "thangs-sync" do
 
   livecheck do
     url :url
-    regex(/Thangs%20Sync[._-]v?(\d+(?:\.\d+)+)\./)
+    regex(/Thangs%20Sync[._-]v?(\d+(?:\.\d+)+)\./i)
     strategy :header_match
   end
 

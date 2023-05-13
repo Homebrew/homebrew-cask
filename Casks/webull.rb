@@ -1,20 +1,15 @@
 cask "webull" do
-  arch arm: "global_arm64", intel: "global_x64"
-  livecheck_arch = on_arch_conditional arm: "qt_m1_global", intel: "qt_mac_global"
+  version "6.11.5"
+  sha256 "cf65cbf2a31775ee3e956578ffb7bddd4130c7ba5a530289a865567071059a30"
 
-  version "6.7.1"
-  sha256 arm:   "49d4cc07f657bf1f4672624b07900b446815f391f38bf4705f4968b46f2c321f",
-         intel: "ff2024fa995949896ffecf482f397c5091c0f83bcd29457a146c96838136d89f"
-
-  url "https://u1sweb.webullfintech.com/us/Webull%20Desktop_#{version}_#{arch}signed.dmg",
+  url "https://u1sweb.webullfintech.com/us/Webull%20Desktop_#{version}_global_universalsigned.dmg",
       verified: "u1sweb.webullfintech.com/us/"
   name "Webull"
   desc "Desktop client for Webull Financial LLC"
-  homepage "https://webull.com/"
+  homepage "https://www.webull.com/"
 
   livecheck do
-    url "https://infoapi.webullfintech.com/api/operation/appver/last?platform=#{livecheck_arch}&osv=10.15"
-    strategy :page_match
+    url "https://infoapi.webullfintech.com/api/operation/appver/last?platform=qt_mac_global&osv=10.14"
     regex(/Webull%20Desktop[._-](\d+(?:\.\d+)+).*?.dmg/i)
   end
 
@@ -22,5 +17,10 @@ cask "webull" do
 
   app "Webull Desktop.app"
 
-  zap trash: "~/Library/Application Support/Webull Desktop"
+  zap trash: [
+    "~/.config/Webull Desktop",
+    "~/Library/Application Support/Webull Desktop",
+    "~/Library/Preferences/com.webulldesktop.*",
+    "~/Library/Saved Application State/com.webull.desktop.v1.savedState",
+  ]
 end

@@ -1,5 +1,5 @@
 cask "timemachineeditor" do
-  version "5.2.1,218"
+  version "5.2.2,219"
   sha256 :no_check
 
   url "https://tclementdev.com/timemachineeditor/TimeMachineEditor.pkg"
@@ -12,8 +12,19 @@ cask "timemachineeditor" do
     strategy :extract_plist
   end
 
+  auto_updates true
+
   pkg "TimeMachineEditor.pkg"
 
   uninstall launchctl: "com.tclementdev.timemachineeditor.scheduler",
             pkgutil:   "com.tclementdev.pkg.timemachineeditor"
+
+  zap trash:  [
+        "~/Library/Logs/TimeMachineEditor",
+        "~/Library/Preferences/com.tclementdev.timemachineeditor.application.plist",
+      ],
+      delete: [
+        "/Library/Logs/TimeMachineEditor",
+        "/Library/TimeMachineEditor",
+      ]
 end

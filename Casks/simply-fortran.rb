@@ -12,9 +12,9 @@ cask "simply-fortran" do
     end
   end
   on_monterey :or_newer do
-    version "3.27.3841"
-    sha256 arm:   "5a671f7893c814d91a765c64bdebbd07b4cc8060e378f50304d6149a38a1ee8d",
-           intel: "d71200317b0246a2f3052c69f6410cec0a2fe7a24e6e7fd1867e3cb941d6df70"
+    version "3.30.3951"
+    sha256 arm:   "5dd82bee646d58fc6373e5299cb9d0380cbd11a5d89c5c8420e8152472610ab4",
+           intel: "7933e0ce90cd50c0f504804c8b95eb1693ca9be7ff7fe463355660ae8b8475bc"
 
     url "https://download.simplyfortran.com/#{version.major_minor}/macos/simplyfortran-#{version}#{arch}.dmg"
 
@@ -29,4 +29,10 @@ cask "simply-fortran" do
   homepage "https://simplyfortran.com/"
 
   app "Simply Fortran.app"
+
+  zap trash: [
+    "~/.simplyfortran",
+    "~/Library/Caches/com.apple.helpd/Generated/com.approximatrix.simplyfortran.help*3.29",
+    "~/Library/Saved Application State/com.approximatrix.simplyfortran.savedState",
+  ]
 end

@@ -1,5 +1,5 @@
 cask "mmhmm" do
-  version "1.0.3,1668556000"
+  version "1.1.1"
   sha256 :no_check
 
   url "https://updates.mmhmm.app/mac/hybrid/beta/mmhmm.pkg"
@@ -9,7 +9,7 @@ cask "mmhmm" do
 
   livecheck do
     url "https://api.appcenter.ms/v0.1/public/sparkle/apps/265ddc8d-5266-478a-af9f-3798b1aab2ac"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

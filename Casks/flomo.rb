@@ -10,8 +10,8 @@ cask "flomo" do
 
   livecheck do
     url "https://flomoapp.com/api/mac/latest/"
-    strategy :page_match do |page|
-      JSON.parse(page)["version"]
+    strategy :json do |json|
+      json["version"]
     end
   end
 

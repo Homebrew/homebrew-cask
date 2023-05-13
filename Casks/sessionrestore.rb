@@ -1,5 +1,5 @@
 cask "sessionrestore" do
-  version "2.7.23,2.7.3"
+  version "2.7.4"
   sha256 :no_check
 
   url "https://sweetpproductions.com/products/sessionrestore/SessionRestore.dmg"

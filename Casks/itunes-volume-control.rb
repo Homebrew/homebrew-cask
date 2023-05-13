@@ -10,8 +10,8 @@ cask "itunes-volume-control" do
 
   livecheck do
     url "https://github.com/alberti42/Volume-Control#versions"
-    strategy :page_match
     regex(%r{href=.*?/VolumeControl[._-]v?(\d+(?:\.\d+)+)\.zip}i)
+    strategy :page_match
   end
 
   auto_updates true

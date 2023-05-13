@@ -4,8 +4,8 @@ cask "microsoft-auto-update" do
     sha256 "f638f7e0da9ee659c323f2ede0f176804bfe9a615a8f8b6320bd2e69d91ef2b2"
   end
   on_sierra :or_newer do
-    version "4.55.23010700"
-    sha256 "8ff823eef4cacbfa9c46840c9e08f22c708f08d9f603d7afc6de30321c3327da"
+    version "4.58.23040900"
+    sha256 "a3cb0b46dc7ba819f1a0e86dfe8b3faa13aa6b8fca8660090d0ce8d21f333971"
   end
 
   url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_AutoUpdate_#{version}_Updater.pkg"
@@ -15,8 +15,8 @@ cask "microsoft-auto-update" do
 
   livecheck do
     url "https://go.microsoft.com/fwlink/?linkid=830196"
-    strategy :header_match
     regex(/Microsoft[._-]AutoUpdate[._-]v?(\d+(?:\.\d+)+)[._-]Updater\.pkg/i)
+    strategy :header_match
   end
 
   auto_updates true

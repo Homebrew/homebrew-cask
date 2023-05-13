@@ -1,9 +1,9 @@
 cask "anaconda" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2022.10"
-  sha256 arm:   "200700077db8eed762fbc996b830c3f8cc5a2bb7d6b20bb367147eb35f2dcc72",
-         intel: "dfcd1431a8206506799cb142b04d2db3be8a28671e5c3672920c09c71246dde0"
+  version "2023.03-1"
+  sha256 arm:   "85152324c423fedbeed2e7491cb32e597eaeb1b86ae7a61ff7597b401fd053ce",
+         intel: "3593921c8a5516db82f0d7dd1c691f7ee7794236852e7da614e9ad6e93eeb342"
 
   url "https://repo.anaconda.com/archive/Anaconda3-#{version}-MacOSX-#{arch}.sh"
   name "Continuum Analytics Anaconda"
@@ -12,7 +12,7 @@ cask "anaconda" do
 
   livecheck do
     url "https://repo.anaconda.com/archive/"
-    regex(/Anaconda3-(\d+(?:\.\d+)+)-MacOSX-#{arch}\.sh/i)
+    regex(/Anaconda3-(\d+(?:\.\d+)+[._-]*\d+)-MacOSX-#{arch}\.sh/i)
   end
 
   auto_updates true

@@ -18,8 +18,8 @@ cask "calhash" do
     depends_on macos: :monterey
   end
   on_ventura do
-    version "1.2.0"
-    sha256 "b09df7b7c93b0bd0476a0e5c2dd665f94b0eeec5dbfe64b593765a5de002c537"
+    version "1.2.1"
+    sha256 "5372c281ab6edbd10f4a6a237a7e9afb529222b62f39c3b0357d779672cbaa6d"
 
     depends_on macos: :ventura
   end

@@ -1,5 +1,5 @@
 cask "poi" do
-  arch arm: "-arm64", intel: ""
+  arch arm: "-arm64"
 
   version "10.9.2"
   sha256 arm:   "217444a15bcfaae1dc75807fcf139c66d0b6295fa1f461a45f811bae09008a77",

@@ -1,13 +1,13 @@
 cask "kui" do
   arch arm: "arm64", intel: "x64"
 
-  version "13.0.0"
-  sha256 arm:   "d040c8bd3fe1fc2c375eba1243bca43534703cb7c3d9a0c490931a4d8bf66363",
-         intel: "b9317685b509ba229d18c7cf4e5e6006a9688b4c88b28250e8f0c0b8214a72d4"
+  version "13.1.4"
+  sha256 arm:   "ba707efd53ad1ff9f61bf9c28b0bff02684b2d8950790ab2292aeceeab8df389",
+         intel: "2bd61658192a1a513a6a5c2ba0c45df95bafb07790f8d7fce63df8f98eea24c1"
 
   url "https://github.com/kubernetes-sigs/kui/releases/download/v#{version}/Kui-darwin-#{arch}.tar.bz2"
   name "Kui"
-  desc "Hybrid command-line/UI development experience for cloud-native development"
+  desc "CLI graphics framework"
   homepage "https://github.com/kubernetes-sigs/kui"
 
   livecheck do

@@ -1,7 +1,7 @@
 cask "twobird" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.0.51"
+  version "1.0.52"
   sha256 :no_check
 
   url "https://www.twobird.com/download/mac-#{arch}"

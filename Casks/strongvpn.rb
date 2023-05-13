@@ -1,5 +1,5 @@
 cask "strongvpn" do
-  version "2.3.1,84977"
+  version "2.3.1"
   sha256 :no_check
 
   url "https://static.colomovers.com/mac/StrongVPN.dmg",
@@ -10,7 +10,7 @@ cask "strongvpn" do
 
   livecheck do
     url "https://static.colomovers.com/mac/updates.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   app "StrongVPN.app"

@@ -1,9 +1,9 @@
 cask "segger-embedded-studio-for-arm" do
   arch arm: "arm64", intel: "x64"
 
-  version "7.10a"
-  sha256 arm:   "617b5b413be463a857d54fbc9609ee83b99eb77c3fa4ce615124c3e86ca11e55",
-         intel: "96dfc8f291b2a75a85cb1f2cc0d92cf4179d56f9c176083916d7d5f9e53d5c9b"
+  version "7.20"
+  sha256 arm:   "b3bdb9b3616ef2cdda7440da0d2ab25896ff99944959ef7c12bc9f3b802cefbf",
+         intel: "db0d4cf4a9772f1bd1b213ad68e7865c4d134dfdfee06d17aedd575120ab13c6"
 
   url "https://www.segger.com/downloads/embedded-studio/Setup_EmbeddedStudio_ARM_v#{version.no_dots}_macos_#{arch}.dmg"
   name "SEGGER Embedded Studio for ARM"
@@ -22,5 +22,9 @@ cask "segger-embedded-studio-for-arm" do
     "com.segger.studio.arm_segger_studio.#{version}",
     "com.segger.studio.arm_segger_studio.le.#{version}",
     "com.segger.studio.arm_segger_studio.libcxx.#{version}",
+  ]
+
+  zap trash: [
+    "/Applications/SEGGER Embedded Studio for ARM*",
   ]
 end

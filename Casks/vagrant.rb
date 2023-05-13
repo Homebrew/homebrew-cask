@@ -1,6 +1,6 @@
 cask "vagrant" do
   version "2.3.4"
-  sha256 "8fd27ac9b6faa7a42fcf4b74b25150301f957e9251a1f193d1195b31464fe054"
+  sha256 "0015f971c20cce4cd3c97ed758f1e0b528bffe0dc02f0ab55da4b216cb5748b8"
 
   url "https://releases.hashicorp.com/vagrant/#{version}/vagrant_#{version}_darwin_amd64.dmg",
       verified: "hashicorp.com/vagrant/"
@@ -10,7 +10,7 @@ cask "vagrant" do
 
   livecheck do
     url "https://github.com/hashicorp/vagrant"
-    strategy :git
+    strategy :github_latest
   end
 
   pkg "vagrant.pkg"

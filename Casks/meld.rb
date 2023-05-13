@@ -8,15 +8,6 @@ cask "meld" do
   desc "Visual diff and merge tool"
   homepage "https://yousseb.github.io/meld/"
 
-  livecheck do
-    url "https://github.com/yousseb/meld/releases/latest"
-    strategy :page_match do |page|
-      match = page.match(/Release\s+\(?(\d+(?:\.\d+)*)\.osx(\d+)\)?/i)
-      tag = page[%r{href=.*?/osx-(\d+)/meldmerge\.dmg}i, 1]
-      "#{match[1]}-r#{match[2]},#{tag}"
-    end
-  end
-
   depends_on macos: ">= :high_sierra"
 
   app "Meld.app"
@@ -32,8 +23,12 @@ cask "meld" do
   end
 
   zap trash: [
-    "~/Library/Preferences/org.gnome.meld.plist",
     "~/.local/share/meld",
+    "~/Library/Preferences/org.gnome.meld.plist",
     "~/Library/Saved Application State/org.gnome.meld.savedState/",
   ]
+
+  caveats do
+    discontinued
+  end
 end

@@ -1,6 +1,6 @@
 cask "atlauncher" do
-  version "3.4.24.1"
-  sha256 "ae1287b8893d5cf4e32de27aa032a8b3ed2688f0b819719ec81282bb42ec05a6"
+  version "3.4.28.1"
+  sha256 "e99acafa113dc385dd84d400ea4aef7c1cdafa31c17781a931b6a1840702ec27"
 
   url "https://github.com/ATLauncher/ATLauncher/releases/download/v#{version}/ATLauncher-#{version}.zip",
       verified: "github.com/ATLauncher/ATLauncher/"
@@ -9,4 +9,9 @@ cask "atlauncher" do
   homepage "https://atlauncher.com/"
 
   app "ATLauncher.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.atlauncher.App.plist",
+    "~/Library/Saved Application State/com.atlauncher.App.savedState",
+  ]
 end

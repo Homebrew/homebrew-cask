@@ -16,4 +16,10 @@ cask "picgo" do
   end
 
   app "PicGo.app"
+
+  zap trash: [
+    "~/Library/Application Support/picgo",
+    "~/Library/Preferences/com.molunerfinn.picgo.plist",
+    "~/Library/Services/Upload pictures with PicGo.workflow",
+  ]
 end

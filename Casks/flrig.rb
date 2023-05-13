@@ -1,13 +1,15 @@
 cask "flrig" do
-  version "1.4.7"
+  version "1.4.8"
 
-  on_catalina :or_older do
-    sha256 "aacbef604d070d16493f0b22d9a02772314fe25fd8131b19604ae5621a1d9211"
-    url "https://downloads.sourceforge.net/fldigi/fldigi/flrig-#{version}_HS.dmg"
+  on_sierra :or_older do
+    sha256 "03cfdcefe90784f5f6fc643817a22d9590d7508ba03cd5cde0c5168723921f30"
+
+    url "https://downloads.sourceforge.net/fldigi/fldigi/flrig-#{version}_LI.dmg"
   end
-  on_big_sur :or_newer do
-    sha256 "e83e95e004778b66ea9079d608cda009c1996a0ac975a4258fcd68ae0d23479b"
-    url "https://downloads.sourceforge.net/fldigi/fldigi/flrig-#{version}_BS.dmg"
+  on_high_sierra :or_newer do
+    sha256 "6ee34eeb589ac00a82d74ac2146fdfbf2295eb24f0b1c9bff96ed1630e086c73"
+
+    url "https://downloads.sourceforge.net/fldigi/fldigi/flrig-#{version}_U.dmg"
   end
 
   name "flrig"
@@ -16,8 +18,8 @@ cask "flrig" do
 
   livecheck do
     url "https://sourceforge.net/projects/fldigi/rss?path=/flrig"
-    strategy :page_match
     regex(/flrig[._-]v?(\d+(?:\.\d+)+)\w*\.dmg/i)
+    strategy :page_match
   end
 
   app "flrig.app"

@@ -1,9 +1,9 @@
 cask "eclipse-modeling" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "4.26.0,2022-12"
-  sha256 arm:   "44dce5e6a6919cc78fdf279e008bc1a0fa9ba4eecb66751055fe9615e353cd72",
-         intel: "45e707082723e5fccecfc227f2326f0d1207437b35868947cd65988f0c6a61e8"
+  version "4.27.0,2023-03"
+  sha256 arm:   "0d1e9ca35904c792f8693938de4fcda22d6a0b5846cad83c9da4f99d66b712a4",
+         intel: "9cd6112209fadac48467fe55139a84f93982cd4f8fdf468850db4a083528c8ac"
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-modeling-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&r=1"
   name "Eclipse Modeling Tools"
@@ -16,4 +16,10 @@ cask "eclipse-modeling" do
 
   # Renamed to avoid conflict with other Eclipse.
   app "Eclipse.app", target: "Eclipse Modeling.app"
+
+  zap trash: [
+    "~/.eclipse",
+    "~/eclipse-workspace",
+    "~/Library/Preferences/epp.package.modeling.plist",
+  ]
 end

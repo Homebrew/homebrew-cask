@@ -1,6 +1,6 @@
 cask "fxfactory" do
-  version "8.0.4,7291"
-  sha256 "9bb05ad3697234789c84fc295c61503c8ca7045f94a5e65e39aa3aaf22c9d5b7"
+  version "8.0.7,7476"
+  sha256 "ccc7219a3bc7e94d2eb0ec27b629aaa559a7f11db06a462af8f2159aa9f12e23"
 
   url "https://fxfactory.s3.amazonaws.com/noiseindustries/fxfactory/FxFactory-#{version.csv.first}-#{version.csv.second}.zip",
       verified: "fxfactory.s3.amazonaws.com/noiseindustries/"
@@ -22,6 +22,7 @@ cask "fxfactory" do
   pkg "Install FxFactory #{version.csv.first}.pkg"
 
   uninstall pkgutil:   "com.fxfactory.pkg",
+            quit:      "com.fxfactory.Fxfactory",
             launchctl: "com.fxfactory.FxFactory.helper",
             delete:    [
               "/Library/Application Support/FxFactory",
@@ -31,6 +32,7 @@ cask "fxfactory" do
 
   zap trash: [
     "~/Library/Application Scripts/com.fxfactory.FxFactoryService.pluginkit",
+    "~/Library/Preferences/com.fxfactory.FxFactory.plist",
     "~/Movies/Motion Templates.localized",
   ]
 end

@@ -11,4 +11,6 @@ cask "kid3" do
 
   app "kid3.app"
   binary "#{appdir}/kid3.app/Contents/MacOS/kid3-cli"
+
+  zap trash: "~/Library/Preferences/com.kid3.Kid3.plist"
 end

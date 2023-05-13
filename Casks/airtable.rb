@@ -9,8 +9,8 @@ cask "airtable" do
 
   livecheck do
     url "https://airtable.com/desktopAppLatestVersion?version=0.0.0&platform=darwin"
-    strategy :page_match do |page|
-      JSON.parse(page)["version"]
+    strategy :json do |json|
+      json["version"]
     end
   end
 

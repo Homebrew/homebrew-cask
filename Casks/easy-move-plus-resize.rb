@@ -1,6 +1,6 @@
 cask "easy-move-plus-resize" do
-  version "1.5.0"
-  sha256 "94e83f27c3b9c0ffdecc96c7f04d34cc7fb95e4e71c7b5f19c4faae83b2e91eb"
+  version "1.6.0"
+  sha256 "061481506559d7c8aea180767ccd7c11e3bb193feed7ee5a842721f1b265d500"
 
   url "https://github.com/dmarcotte/easy-move-resize/releases/download/#{version}/Easy.Move+Resize.app.zip"
   name "Easy Move+Resize"
@@ -8,4 +8,6 @@ cask "easy-move-plus-resize" do
   homepage "https://github.com/dmarcotte/easy-move-resize"
 
   app "Easy Move+Resize.app"
+
+  zap trash: "~/Library/Preferences/org.dmarcotte.Easy-Move-Resize.plist"
 end

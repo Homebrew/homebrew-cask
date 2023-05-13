@@ -66,8 +66,8 @@ cask "cocktail" do
     end
   end
   on_monterey do
-    version "15.3.9"
-    sha256 "d6a3278369b5deb67b2c667aa861b0c9331241b2ad1c0a3c83e9776642750be6"
+    version "15.4"
+    sha256 "0425a38d56484d04e8c8a12d0be89402656701b78cd1df4bfb396fc1468051c7"
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}ME.dmg"
 
@@ -77,8 +77,8 @@ cask "cocktail" do
     end
   end
   on_ventura :or_newer do
-    version "16.2"
-    sha256 "dbc70c1bfd8871642b2e2137f6dade5e819688ed75868a7ac9b61bb786b95ce6"
+    version "16.3.3"
+    sha256 "053ebb4b9e1d63bbc74eebeafa5a66a6c8c664a306661633cbb0cc8481dbf6e9"
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}VE.dmg"
 
@@ -93,4 +93,9 @@ cask "cocktail" do
   homepage "https://www.maintain.se/cocktail/"
 
   app "Cocktail.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.maintain.cocktail.plist",
+    "~/Library/Preferences/com.maintain.cocktail.ventura#{version.major}.plist",
+  ]
 end

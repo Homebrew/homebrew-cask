@@ -1,12 +1,12 @@
 cask "podman-desktop" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.10.0"
-  sha256 arm:   "a9d839e2876afa5e0bc2fab028920a8c5543d18a8bc37201bc4789b8db32dbf0",
-         intel: "577b7d10e8d112e9e1f41c7f14657af074b03985501e29fdd21d9b189ce22da3"
+  version "0.15.0"
+  sha256 arm:   "c5f06b332c614cd161e7fdcc5331452416db1944441c02756d6259e4d45999dc",
+         intel: "dc7c00c329bd3a24d55b17bdaa7fa96465c4ac28a27dcf0170bd702b62cf2c56"
 
   url "https://github.com/containers/podman-desktop/releases/download/v#{version}/podman-desktop-#{version}-#{arch}.dmg",
-      verified: "https://github.com/containers/podman-desktop"
+      verified: "github.com/containers/podman-desktop/"
   name "Podman Desktop"
   desc "Browse, manage, inspect containers and images"
   homepage "https://podman-desktop.io/"

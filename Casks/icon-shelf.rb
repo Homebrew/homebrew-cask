@@ -1,9 +1,9 @@
 cask "icon-shelf" do
   arch arm: "-arm64"
 
-  version "0.1.17"
-  sha256 arm:   "7a5bc6f4af0658d9ae6a6449946b95aea9a5a19a5fd779973d8c3a6590347147",
-         intel: "a8814b41812300d157306c91fdc84b763d3cb5c18dc86bce934da2952c62f013"
+  version "0.1.18"
+  sha256 arm:   "e7155f9c07e163d07bbde05d6147fa58f9dcd415c05eb0e7253c2e25c42929aa",
+         intel: "a95316ca7866a0d8fdca2c344c94fb153865065804e049f2b10aaa4b09db9774"
 
   url "https://github.com/Icon-Shelf/icon-shelf/releases/download/v#{version}/Icon-Shelf-#{version}#{arch}.dmg",
       verified: "github.com/Icon-Shelf/icon-shelf/"

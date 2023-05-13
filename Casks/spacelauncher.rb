@@ -1,5 +1,5 @@
 cask "spacelauncher" do
-  version "1.6,89"
+  version "2.0.10"
   sha256 :no_check
 
   url "https://spacelauncherapp.com/download/SpaceLauncher.zip"
@@ -9,7 +9,7 @@ cask "spacelauncher" do
 
   livecheck do
     url "https://spacelauncherapp.com/download/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   app "SpaceLauncher.app"

@@ -1,5 +1,5 @@
 cask "popsql" do
-  version "1.0.94"
+  version "1.0.112"
   sha256 :no_check
 
   url "https://get.popsql.com/download/mac"
@@ -13,4 +13,11 @@ cask "popsql" do
   end
 
   app "PopSQL.app"
+
+  zap trash: [
+    "~/.popsql.json",
+    "~/Library/Application Support/PopSQL",
+    "~/Library/Preferences/org.electron.popsql.plist",
+    "~/Library/Saved Application State/org.electron.popsql.savedState",
+  ]
 end

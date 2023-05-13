@@ -1,8 +1,8 @@
 cask "bartender" do
-  version "4.2.21,42021"
+  version "4.2.21"
   sha256 "28be16cbc69d1a2626c5a0e4846263c286d4e6cce95b68fb39b807ca9d360e8c"
 
-  url "https://macbartender.com/B2/updates/#{version.csv.first.major}-#{version.csv.first.minor}-#{version.csv.first.patch.rjust(1, "0")}/Bartender%20#{version.major}.dmg",
+  url "https://macbartender.com/B2/updates/#{version.major}-#{version.minor}-#{version.patch.rjust(1, "0")}/Bartender%20#{version.major}.dmg",
       referer: "https://www.macbartender.com"
   name "Bartender"
   desc "Menu bar icon organizer"
@@ -10,7 +10,7 @@ cask "bartender" do
 
   livecheck do
     url "https://www.macbartender.com/B2/updates/AppcastB#{version.major}.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

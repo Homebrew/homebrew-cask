@@ -1,11 +1,11 @@
 cask "gifox" do
-  version "2.5.0,020500.00"
-  sha256 "ff7bc7539e26a7115111e0c7375b6b072a12bd2e352cd1e7c662d7491ef7996a"
+  version "2.6.1,020601.00"
+  sha256 "9adbcfed147a7fc904e0a7e00556dfdc47f8ed5e808e5403ff068e977a03ab64"
 
   url "https://d1fqctmfkpkkcg.cloudfront.net/gifox/#{version.csv.second}.dmg",
       verified: "d1fqctmfkpkkcg.cloudfront.net/gifox/"
   name "gifox"
-  desc "App to record the screen"
+  desc "GIF recording and sharing"
   homepage "https://gifox.io/"
 
   livecheck do
@@ -17,6 +17,8 @@ cask "gifox" do
       "#{match[2]}.#{match[3]}.#{match[4]},#{match[1]}"
     end
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Gifox.app"
 

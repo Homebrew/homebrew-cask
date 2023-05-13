@@ -1,5 +1,5 @@
 cask "commander-one" do
-  version "3.5.1,3658"
+  version "3.5.2"
   sha256 :no_check
 
   url "https://cdn.electronic.us/products/commander/mac/download/commander.dmg",
@@ -10,10 +10,18 @@ cask "commander-one" do
 
   livecheck do
     url "https://cdn.electronic.us/products/commander/mac/update/settings.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   depends_on macos: ">= :sierra"
 
   app "Commander One.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.eltima.cmd1",
+    "~/Library/Caches/com.eltima.cmd1",
+    "~/Library/HTTPStorages/com.eltima.cmd1",
+    "~/Library/Preferences/com.eltima.cmd1.plist",
+    "~/Library/Saved Application State/com.eltima.cmd1.savedState",
+  ]
 end

@@ -17,4 +17,9 @@ cask "vmpk" do
   depends_on macos: ">= :sierra"
 
   app "vmpk.app"
+
+  zap trash: [
+    "~/Library/Preferences/net.sourceforge.vmpk.VMPK.plist",
+    "~/Library/Saved Application State/net.sourceforge.vmpk.savedState",
+  ]
 end

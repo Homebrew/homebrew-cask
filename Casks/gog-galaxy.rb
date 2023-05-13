@@ -1,6 +1,6 @@
 cask "gog-galaxy" do
-  version "2.0.55.81"
-  sha256 "5afed4ca25ee2cb3d2bd685bb372c77dfdc4435f62478b223ecfe6b2f748671a"
+  version "2.0.62.26"
+  sha256 "25ac56aee04c835c9fd0c17ecedc43680d4eeb0a8d9c0e313c69ad027a322f4d"
 
   url "https://cdn.gog.com/open/galaxy/client/#{version.chomp("a")}/galaxy_client_#{version}.pkg"
   name "GOG Galaxy"

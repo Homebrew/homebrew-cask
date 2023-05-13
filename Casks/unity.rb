@@ -9,7 +9,7 @@ cask "unity" do
       verified: "download.unity3d.com/download_unity/"
   name "Unity Editor"
   desc "Platform for 3D content"
-  homepage "https://unity.com/products"
+  homepage "https://unity.com/"
 
   livecheck do
     url "https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json"
@@ -20,9 +20,23 @@ cask "unity" do
     end
   end
 
+  depends_on cask: "unity-hub"
+
   pkg "Unity-#{version.csv.first}.pkg"
 
   uninstall quit:    "com.unity3d.UnityEditor5.x",
             pkgutil: "com.unity3d.UnityEditor5.x",
             delete:  "/Applications/Unity"
+
+  zap trash:  [
+        "/Library/Application Support/Unity",
+        "~/Library/Application Support/Unity",
+        "~/Library/Application Support/UnityHub",
+        "~/Library/Caches/com.unity3d.UnityEditor",
+        "~/Library/Logs/Unity",
+        "~/Library/Preferences/com.unity3d.unityhub.plist",
+        "~/Library/Saved Application State/com.unity3d.unityhub.savedState",
+        "~/Library/Unity",
+      ],
+      delete: "/Library/Application Support/Unity"
 end

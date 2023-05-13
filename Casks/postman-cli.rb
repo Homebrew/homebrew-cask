@@ -1,9 +1,9 @@
 cask "postman-cli" do
   arch arm: "osx_arm64", intel: "osx64"
 
-  version "1.0.8"
-  sha256 arm:   "0aef2e7946e8c11acc94c827fa47f49bd46fa9ff01031a9918b37299bd7ad781",
-         intel: "8370d447dde319dc56534ad9caa879ffa4f1924ed7fe2d1269e2ff2714ee27a3"
+  version "1.1.2"
+  sha256 arm:   "c132c0af2cdf86f02002b1112cb60e91a1f049cdc15b8a5412f9d41197d3e707",
+         intel: "b19b9598c216fb61b535c6f7a1947778ffe8140dd2d1dfe036e2b69de62dc425"
 
   url "https://dl-cli.pstmn.io/download/version/#{version}/#{arch}",
       verified: "dl-cli.pstmn.io/download/"
@@ -13,8 +13,8 @@ cask "postman-cli" do
 
   livecheck do
     url "https://dl-cli.pstmn.io/api/version/latest"
-    strategy :page_match do |page|
-      JSON.parse(page)["version"]
+    strategy :json do |json|
+      json["version"]
     end
   end
 

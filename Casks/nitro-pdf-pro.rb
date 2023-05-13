@@ -1,6 +1,6 @@
 cask "nitro-pdf-pro" do
-  version "13.3.0"
-  sha256 "c1f12be884e56cc2407faad1c0213a868a5d6a39aff11ac4af09ea1296d6c663"
+  version "13.3.1"
+  sha256 "f8838b72ae3821466d2f5a2cdd27c71305ecb3cf35dcfa13d52f6de954c24e69"
 
   url "https://downloads.gonitro.com/macos/Nitro%20PDF%20Pro%20Retail_#{version}.dmg",
       verified: "downloads.gonitro.com/macos/"
@@ -10,7 +10,7 @@ cask "nitro-pdf-pro" do
 
   livecheck do
     url "https://pdfpen.com/pdfpenpro/download_thanks/"
-    regex(/href=.*?Retail_(\d+(?:\.\d+)*)\.dmg/i)
+    regex(/href=.*?Retail[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   depends_on macos: ">= :sierra"

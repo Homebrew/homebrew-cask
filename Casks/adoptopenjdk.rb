@@ -12,6 +12,12 @@ cask "adoptopenjdk" do
 
   uninstall pkgutil: "net.adoptopenjdk.#{version.major}.jdk"
 
+  zap trash: [
+    "~/Library/Saved Application State/net.java.openjdk.*.java.savedState",
+    "~/Library/Saved Application State/net.java.openjdk.cmd.savedState",
+    "~/Library/Saved Application State/net.java.openjdk.java.savedState",
+  ]
+
   caveats do
     discontinued
 

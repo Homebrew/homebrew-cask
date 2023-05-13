@@ -1,12 +1,21 @@
 cask "cloudcompare" do
-  version :latest
-  sha256 :no_check
+  arch arm: "arm64", intel: "x86_64"
 
-  url "https://asmaloney.com/download/cloudcompare-mac-os-x/",
-      verified: "asmaloney.com/download/cloudcompare-mac-os-x/"
+  version "2.12.3"
+  sha256 arm:   "1a2fd67461844d06b34f7c4670e3be61bc97d6fc94024a169b5886735cca58fd",
+         intel: "e3cabeff81458d6c20b1dcf105656722089424ca24a3604cb6cb522995d01895"
+
+  url "https://www.danielgm.net/cc/release/CloudCompare-#{version}-#{arch}.dmg"
   name "CloudCompare"
   homepage "https://www.danielgm.net/cc/"
 
+  livecheck do
+    url "https://www.danielgm.net/cc/release/index.html"
+    strategy :page_match do |page|
+      page = page.split(/stable\s+release/i, 2).second
+      page[/CloudCompare[._-](\d+(?:\.\d+)+)[._-][^.]+\.dmg/i, 1]
+    end
+  end
+
   app "CloudCompare.app"
-  app "ccViewer.app"
 end

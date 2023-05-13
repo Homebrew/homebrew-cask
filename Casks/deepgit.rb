@@ -1,9 +1,9 @@
 cask "deepgit" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "4.3"
-  sha256 arm:   "ea6730f24502dfb33c69a49d72c222f10854888a83a44aaec56da5afc89b770d",
-         intel: "695c3a76cf28b1d6f3cc46349214e081a7d57166d17d131227541e50c289b4a7"
+  version "4.3.1"
+  sha256 arm:   "44bbdb1269e8667a4ccbf52ec7d80bb491600f2f1d25727b2c97ace6e64ca14c",
+         intel: "a97d912f4e32bf791dbc0e4522d51c6002fbc413f8cedb7ba41cd2dbba27e593"
 
   url "https://www.syntevo.com/downloads/deepgit/deepgit-#{arch}-#{version.dots_to_underscores}.dmg"
   name "DeepGit"

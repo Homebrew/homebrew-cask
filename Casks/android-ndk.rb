@@ -1,6 +1,6 @@
 cask "android-ndk" do
-  version "25b"
-  sha256 "fc41bab49d4c1fe9239bfd06e4eb7cda8348635aaa3568fec942f43a9d5eb04b"
+  version "25c"
+  sha256 "1856108efde22d502399216c65e2a0f7823bdfac1df69fe6a1f3b71ff7be6ced"
 
   url "https://dl.google.com/android/repository/android-ndk-r#{version}-darwin.dmg",
       verified: "dl.google.com/android/repository/"
@@ -37,6 +37,8 @@ cask "android-ndk" do
   uninstall_postflight do
     FileUtils.rm_f("#{HOMEBREW_PREFIX}/share/android-ndk")
   end
+
+  # No zap stanza required
 
   caveats <<~EOS
     You may want to add to your profile:

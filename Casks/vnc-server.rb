@@ -1,18 +1,18 @@
 cask "vnc-server" do
-  version "6.11.0"
-  sha256 "e640cfa4691db78647d906b8aa4c2e9931753d2a437051238f43aa4aa77053a8"
+  version "7.1.0"
+  sha256 "f343d0c120ce51e75b1c83258c561fd714bf58156a56dbfbf90a47f2047e8a13"
 
-  url "https://www.realvnc.com/download/file/vnc.files/VNC-Server-#{version}-MacOSX-x86_64.pkg"
+  url "https://downloads.realvnc.com/download/file/vnc.files/VNC-Server-#{version}-MacOSX-universal.pkg"
   name "Real VNC Server"
   desc "Remote desktop server application"
   homepage "https://www.realvnc.com/"
 
   livecheck do
     url "https://www.realvnc.com/en/connect/download/vnc/macos/"
-    regex(%r{href=.*?/VNC[._-]Server[._-]v?(\d+(?:\.\d+)*)[._-]MacOSX[._-]x86[._-]64\.pkg}i)
+    regex(%r{href=.*?/VNC[._-]Server[._-]v?(\d+(?:\.\d+)*)[._-]MacOSX[._-]universal\.pkg}i)
   end
 
-  pkg "VNC-Server-#{version}-MacOSX-x86_64.pkg"
+  pkg "VNC-Server-#{version}-MacOSX-universal.pkg"
 
   uninstall_preflight do
     system_command "/Applications/RealVNC/Uninstall VNC Server.app/Contents/Resources/uninstaller.sh",

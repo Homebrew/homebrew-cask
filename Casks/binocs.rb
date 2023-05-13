@@ -12,7 +12,7 @@ cask "binocs" do
 
   livecheck do
     url "https://download.binocs.sh/VERSION"
-    regex(/v(\d+(?:\.\d+)+)/)
+    regex(/v(\d+(?:\.\d+)+)/i)
   end
 
   binary "binocs"

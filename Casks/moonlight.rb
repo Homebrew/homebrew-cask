@@ -11,4 +11,10 @@ cask "moonlight" do
   depends_on macos: ">= :mojave"
 
   app "Moonlight.app"
+
+  zap trash: [
+    "~/Library/Caches/Moonlight Game Streaming Project",
+    "~/Library/Preferences/com.moonlight-stream.Moonlight.plist",
+    "~/Library/Saved Application State/com.moonlight-stream.Moonlight.savedState",
+  ]
 end

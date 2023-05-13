@@ -1,5 +1,5 @@
 cask "app-cleaner" do
-  version "8.0.4,1909"
+  version "8.1.3"
   sha256 :no_check
 
   url "https://nektony.com/download/app-cleaner-uninstaller/app-cleaner-uninstaller.dmg"
@@ -9,7 +9,7 @@ cask "app-cleaner" do
 
   livecheck do
     url "https://download.nektony.com/pro-support/v3/app-cleaner/update/update.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   depends_on macos: ">= :high_sierra"

@@ -1,17 +1,12 @@
 cask "snes9x" do
-  version "1.61"
-  sha256 "dc0fce0eb7db92e6d8827309f595a83e7fa77c84a18fe9c4df541d2dedfd7d1b"
+  version "1.62.3"
+  sha256 "d2e71fad2c2ebdcf6b31a91d0a7f60e9df1799a1454a6b29bc2a089b9022cec7"
 
-  url "https://github.com/snes9xgit/snes9x/releases/download/#{version}/snes9x-#{version}-macos.zip",
-      verified: "https://github.com/snes9xgit/snes9x/"
+  url "https://github.com/snes9xgit/snes9x/releases/download/#{version}/snes9x-#{version}-Mac.zip",
+      verified: "github.com/snes9xgit/snes9x/"
   name "Snes9x"
   desc "Video game console emulator"
   homepage "https://www.snes9x.com/"
-
-  livecheck do
-    url :url
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
-  end
 
   app "Snes9x.app"
 

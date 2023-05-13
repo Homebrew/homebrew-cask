@@ -1,6 +1,6 @@
 cask "reverso" do
-  version "2.7.0,377"
-  sha256 "f02c7b08458d515f4cdb8294ad369fdb50ca22f356bf167040709d21b50cedfa"
+  version "2.9.0,453"
+  sha256 "a86d36596a75d5ce6f3c924ab2372d8464d83b5575fc1e3c5b35a8e5d6e81ef2"
 
   url "https://cdn.reverso.net/download/reverso/desktop/macos/distrib/Reverso_#{version.csv.first}.#{version.csv.second}.zip"
   name "Reverso"
@@ -19,14 +19,10 @@ cask "reverso" do
   uninstall quit: "com.softissimo.ReversoContext.macosapp"
 
   zap trash: [
+    "~/Library/Application Scripts/com.softissimo.ReversoContext.*",
     "~/Library/Application Scripts/group.com.softissimo.ReversoExchange",
-    "~/Library/Application Scripts/com.softissimo.ReversoContext.macosapp.Reverso-Translate-in-Context",
-    "~/Library/Application Scripts/com.softissimo.ReversoContext.Auto-Launcher-Reverso",
-    "~/Library/Application Scripts/com.softissimo.ReversoContext.macosapp.helper",
     "~/Library/Caches/com.softissimo.ReversoContext.macosapp",
-    "~/Library/Containers/com.softissimo.ReversoContext.macosapp.Reverso-Translate-in-Context",
-    "~/Library/Containers/com.softissimo.ReversoContext.Auto-Launcher-Reverso",
-    "~/Library/Containers/com.softissimo.ReversoContext.macosapp.helper",
+    "~/Library/Containers/com.softissimo.ReversoContext.*",
     "~/Library/Group Containers/group.com.softissimo.ReversoExchange",
     "~/Library/Preferences/com.softissimo.ReversoContext.macosapp.plist",
   ]

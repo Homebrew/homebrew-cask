@@ -10,8 +10,10 @@ cask "turbo-boost-switcher" do
 
   livecheck do
     url "https://www.rugarciap.com/turbo-boost-switcher-for-os-x-blog/"
-    regex(%r{href=.*?/Turbo_Boost_Switcher_v?(\d+(?:\.\d+)+)\.dmg}i)
+    regex(%r{href=.*?/Turbo[._-]Boost[._-]Switcher[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
+
+  depends_on arch: :x86_64
 
   suite "tbswitcher_resources"
   app "Turbo Boost Switcher.app"

@@ -8,8 +8,8 @@ cask "copyq" do
     end
   end
   on_big_sur :or_newer do
-    version "6.3.2"
-    sha256 "0a2b5a66163675f427194d479088f6a6547c08c15566e3790bc3064348f92230"
+    version "7.0.0"
+    sha256 "4c06394d561286eedd618189dc82d9f14ecfe8c5e34f55e2b297b33cef355e29"
   end
 
   url "https://github.com/hluk/CopyQ/releases/download/v#{version}/CopyQ.dmg.zip",

@@ -1,7 +1,7 @@
 cask "localxpose" do
   arch arm: "arm64", intel: "amd64"
 
-  version "22.10.1"
+  version "23.1.1"
   sha256 :no_check
 
   url "https://api.localxpose.io/api/v2/downloads/loclx-darwin-#{arch}.zip"
@@ -11,8 +11,8 @@ cask "localxpose" do
 
   livecheck do
     url "https://api.localxpose.io/api/v2/downloads/darwin-#{arch}.json"
-    strategy :page_match do |page|
-      JSON.parse(page)["Version"]
+    strategy :json do |json|
+      json["Version"]
     end
   end
 

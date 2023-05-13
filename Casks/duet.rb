@@ -1,7 +1,7 @@
 cask "duet" do
   on_big_sur :or_older do
-    version "2.4.6.1"
-    sha256 "9ae7ce90aae986b45f359a1985fcc7fbb35c4c987728ac908c1f2dca9f543066"
+    version "2.4.7.1"
+    sha256 "3e91729e333ab3e2984bec4c1194e7022d016d91c79cd21509bc00b42b9559bd"
 
     livecheck do
       url "https://updates.duetdisplay.com/latestMac"
@@ -11,8 +11,8 @@ cask "duet" do
     end
   end
   on_monterey :or_newer do
-    version "3.1.1.0"
-    sha256 "1b82ab293ad0acd8655167b4758db1c229b4c9fc7e5e9a252797085fa76f96f0"
+    version "3.6.0.0"
+    sha256 "8234b3e84d6a3186ca33abe373ff52624c7e51980ebdc3500ece2678ddc8435e"
 
     livecheck do
       url "https://updates.duetdisplay.com/AppleSilicon"
@@ -22,8 +22,8 @@ cask "duet" do
     end
   end
 
-  url "https://duet.nyc3.cdn.digitaloceanspaces.com/Mac/#{version.major_minor.dots_to_underscores}/duet-#{version.dots_to_hyphens}.zip",
-      verified: "duet.nyc3.cdn.digitaloceanspaces.com/Mac/"
+  url "https://duetdownload.com/Mac/#{version.major_minor.dots_to_underscores}/duet-#{version.dots_to_hyphens}.zip",
+      verified: "duetdownload.com/Mac/"
   name "Duet"
   desc "Remote desktop and second display tool"
   homepage "https://www.duetdisplay.com/"

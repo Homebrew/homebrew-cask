@@ -9,8 +9,8 @@ cask "n1ghtshade" do
 
   livecheck do
     url :url
+    regex(/v?([\w._-]+)/i)
     strategy :github_latest
-    regex(%r{href=.*?/tag/v?([\w._-]+)["' >]}i)
   end
 
   depends_on formula: %w[

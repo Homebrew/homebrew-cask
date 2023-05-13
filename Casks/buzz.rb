@@ -1,9 +1,9 @@
 cask "buzz" do
-  version "0.7.1"
-  sha256 "f49d067391e38dd30fee63509fd91fc7e38ba018ecb3212bafd374d73e02a6cf"
+  version "0.8.1"
+  sha256 "11f0c65d92860104a4d8f40ace96534e3e750722b0909db33d5317669bdcf4b8"
 
   url "https://github.com/chidiwilliams/buzz/releases/download/v#{version}/Buzz-#{version}-mac.dmg"
-  name "buzz"
+  name "Buzz"
   desc "Transcribes and translates audio"
   homepage "https://github.com/chidiwilliams/buzz"
 
@@ -14,5 +14,10 @@ cask "buzz" do
 
   app "Buzz.app"
 
-  zap trash: "~/Library/Logs/Buzz"
+  zap trash: [
+    "~/Library/Caches/Buzz",
+    "~/Library/Logs/Buzz",
+    "~/Library/Preferences/com.chidiwilliams.buzz.plist",
+    "~/Library/Saved Application State/com.chidiwilliams.buzz.savedState",
+  ]
 end

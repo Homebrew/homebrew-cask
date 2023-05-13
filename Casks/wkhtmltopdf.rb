@@ -10,22 +10,27 @@ cask "wkhtmltopdf" do
 
   livecheck do
     url "https://wkhtmltopdf.org/downloads.html"
-    regex(/href=.*?wkhtmltox-(\d+(?:\.\d+)*-\d+)\.macos-cocoa\.pkg/i)
-    strategy :page_match
+    regex(/href=.*?wkhtmltox[._-]v?(\d+(?:\.\d+)*-\d+)[._-]macos[._-]cocoa\.pkg/i)
   end
 
   pkg "wkhtmltox-#{version}.macos-cocoa.pkg"
 
   uninstall pkgutil: "org.wkhtmltopdf.wkhtmltox",
             delete:  [
-              "/usr/local/include/wkhtmltox",
-              "/usr/local/lib/libwkhtmltox.dylib",
-              "/usr/local/lib/libwkhtmltox.#{version.major}.dylib",
-              "/usr/local/lib/libwkhtmltox.#{version.major_minor}.dylib",
-              "/usr/local/lib/libwkhtmltox.#{version.sub(/-.*$/, "")}.dylib",
               "/usr/local/bin/wkhtmltoimage",
               "/usr/local/bin/wkhtmltopdf",
-            ]
+              "/usr/local/include/wkhtmltox",
+              "/usr/local/lib/libwkhtmltox.#{version.major_minor}.dylib",
+              "/usr/local/lib/libwkhtmltox.#{version.major}.dylib",
+              "/usr/local/lib/libwkhtmltox.#{version.sub(/-.*$/, "")}.dylib",
+              "/usr/local/lib/libwkhtmltox.dylib",
+            ],
+            script:  {
+              executable: "/usr/local/bin/uninstall-wkhtmltox",
+              sudo:       true,
+            }
+
+  # No zap stanza required
 
   caveats do
     files_in_usr_local

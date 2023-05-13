@@ -1,19 +1,19 @@
 cask "datagrip" do
   arch arm: "-aarch64"
 
-  version "2022.3.3,223.8617.3"
-  sha256 arm:   "ef76c7d61c64f7f0f831ef2774bd908e68d651a20648fc4e63618e24a81be6dd",
-         intel: "e9da8036c7d268368b3f82034389481730cb663b809659b1fa1ab91fd9bdc8cd"
+  version "2023.1.1,231.8770.3"
+  sha256 arm:   "215ad7898e9a8ef2cf18ec90d342c995bf94a2fe5781fbce537e7166edf90652",
+         intel: "94b2c070b91a45960d50deee5986d63e894dc2a2b3f371a1bcd650521029b66b"
 
   url "https://download.jetbrains.com/datagrip/datagrip-#{version.csv.first}#{arch}.dmg"
   name "DataGrip"
-  desc "Databases & SQL IDE"
+  desc "Databases and SQL IDE"
   homepage "https://www.jetbrains.com/datagrip/"
 
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=DG&latest=true&type=release"
-    strategy :page_match do |page|
-      JSON.parse(page)["DG"].map do |release|
+    strategy :json do |json|
+      json["DG"].map do |release|
         "#{release["version"]},#{release["build"]}"
       end
     end

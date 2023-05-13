@@ -1,5 +1,5 @@
 cask "wechat" do
-  version "3.6.2.17,24456"
+  version "3.7.1.20"
   sha256 :no_check
 
   url "https://dldir1.qq.com/weixin/mac/WeChatMac.dmg"
@@ -12,7 +12,7 @@ cask "wechat" do
   #   https://github.com/Homebrew/homebrew-cask/pull/90907#issuecomment-710107547
   livecheck do
     url "https://dldir1.qq.com/weixin/mac/mac-release.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
@@ -23,14 +23,14 @@ cask "wechat" do
   uninstall quit: "com.tencent.xinWeChat"
 
   zap trash: [
-    "~/Library/Application Scripts/com.tencent.xinWeChat",
     "~/Library/Application Scripts/$(TeamIdentifierPrefix)com.tencent.xinWeChat",
     "~/Library/Application Scripts/$(TeamIdentifierPrefix)com.tencent.xinWeChat.IPCHelper",
+    "~/Library/Application Scripts/com.tencent.xinWeChat",
     "~/Library/Application Scripts/com.tencent.xinWeChat.MiniProgram",
     "~/Library/Application Scripts/com.tencent.xinWeChat.WeChatMacShare",
     "~/Library/Caches/com.tencent.xinWeChat",
-    "~/Library/Containers/com.tencent.xinWeChat",
     "~/Library/Containers/$(TeamIdentifierPrefix)com.tencent.xinWeChat.IPCHelper",
+    "~/Library/Containers/com.tencent.xinWeChat",
     "~/Library/Containers/com.tencent.xinWeChat.MiniProgram",
     "~/Library/Containers/com.tencent.xinWeChat.WeChatMacShare",
     "~/Library/Cookies/com.tencent.xinWeChat.binarycookies",

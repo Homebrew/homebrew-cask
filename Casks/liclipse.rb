@@ -1,6 +1,6 @@
 cask "liclipse" do
-  version "9.0.1,5ao858sjvo8gibh"
-  sha256 "bbba6f686ecb62a6b32ffd695358d4729a0db81bc5578a7fe5973bebafa1a8df"
+  version "10.0.0,5f5bxrjwhyb1ost"
+  sha256 "4ad9d78d2e11902854e77974c640f878257572777d907b80e52298d90f04799a"
 
   url "https://www.mediafire.com/file/#{version.csv.second}/liclipse_#{version.csv.first}_macosx.cocoa.x86_64.tar.gz",
       verified: "mediafire.com/file/"
@@ -18,5 +18,13 @@ cask "liclipse" do
     end
   end
 
-  app "LiClipse.app"
+  app "LiClipse_x86_64/LiClipse.app"
+  app "LiClipse_x86_64/LiClipseJre19.app"
+
+  zap trash: [
+    "~/.liclipse",
+    "~/Documents/LiClipse Workspace",
+    "~/Library/Preferences/com.brainwy.liclipse.rcp.product.plist",
+    "~/Library/Saved Application State/com.brainwy.liclipse.rcp.product.savedState",
+  ]
 end

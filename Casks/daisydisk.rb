@@ -1,8 +1,8 @@
 cask "daisydisk" do
-  version "4.24"
+  version "4.25"
   sha256 :no_check
 
-  url "https://www.daisydiskapp.com/downloads/DaisyDisk.zip"
+  url "https://daisydiskapp.com/download/DaisyDisk.zip"
   name "DaisyDisk"
   desc "Disk space visualizer"
   homepage "https://daisydiskapp.com/"
@@ -13,6 +13,7 @@ cask "daisydisk" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "DaisyDisk.app"
 

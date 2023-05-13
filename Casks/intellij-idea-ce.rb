@@ -1,9 +1,9 @@
 cask "intellij-idea-ce" do
   arch arm: "-aarch64"
 
-  version "2022.3.1,223.8214.52"
-  sha256 arm:   "394478e3f2a2ea1788a5c2ef9c5a9db72531462b4db921483d24a08f7c260a43",
-         intel: "8ea8b1ceebde397950592708b55f277ca43856b4013f597ccbf385bb75a42c72"
+  version "2023.1.1,231.8770.65"
+  sha256 arm:   "c9ab2053e1ad648466c547c378bd4e8753b4db8908de1caaeca91563ad80f6f9",
+         intel: "ee7769737cb0e22d4c88ea8808d0767b8d88667b6b732748d745a5eb48809c46"
 
   url "https://download.jetbrains.com/idea/ideaIC-#{version.csv.first}#{arch}.dmg"
   name "IntelliJ IDEA Community Edition"
@@ -13,8 +13,8 @@ cask "intellij-idea-ce" do
 
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=IIC&latest=true&type=release"
-    strategy :page_match do |page|
-      JSON.parse(page)["IIC"].map do |release|
+    strategy :json do |json|
+      json["IIC"].map do |release|
         "#{release["version"]},#{release["build"]}"
       end
     end

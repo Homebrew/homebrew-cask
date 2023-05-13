@@ -1,6 +1,6 @@
 cask "authy" do
-  version "2.2.2"
-  sha256 "bf76d0d7b64311f41644bdd5e5d5584eaf8ca11e5962459227beac40c754872e"
+  version "2.3.0"
+  sha256 "5166fd399d3dfe1ff2afcd8652f708518caf2689529d3f43bb41bb692ad4ec81"
 
   url "https://pkg.authy.com/authy/stable/#{version}/darwin/x64/Authy%20Desktop-#{version}.dmg"
   name "Authy Desktop"

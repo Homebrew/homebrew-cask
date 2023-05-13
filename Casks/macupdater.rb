@@ -1,8 +1,21 @@
 cask "macupdater" do
-  version "2.3.1,14204"
-  sha256 :no_check
+  on_monterey :or_older do
+    version "2.3.4,14286"
+    sha256 :no_check
 
-  url "https://www.corecode.io/downloads/macupdater_latest.dmg"
+    url "https://www.corecode.io/downloads/macupdater_#{version.major}_latest.dmg"
+
+    depends_on macos: ">= :mojave"
+  end
+  on_ventura :or_newer do
+    version "3.0.3,15686"
+    sha256 :no_check
+
+    url "https://www.corecode.io/downloads/macupdater_latest.dmg"
+
+    depends_on macos: ">= :ventura"
+  end
+
   name "MacUpdater"
   desc "Track and update to the latest versions of installed software"
   homepage "https://www.corecode.io/macupdater/index.html"

@@ -1,11 +1,16 @@
 cask "bluetility" do
-  version "1.4"
-  sha256 "dff3f75f5eed22699c37ace90bb19a36f5796ddd0b9a7af1fba7ab1e213bcf53"
+  version "1.5"
+  sha256 "49fd4fde3ecfb27e8a21f8e771ff57c62d03ebb9100600f451188462ec84dbd5"
 
   url "https://github.com/jnross/Bluetility/releases/download/#{version}/Bluetility.app.zip"
   name "Bluetility"
   desc "Bluetooth Low Energy browser"
   homepage "https://github.com/jnross/Bluetility"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Bluetility.app"
 

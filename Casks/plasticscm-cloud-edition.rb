@@ -1,9 +1,9 @@
 cask "plasticscm-cloud-edition" do
-  version "11.0.16.7709"
-  sha256 "ca57ee7aa5bd541865e39b431fe256f22d6753202777f3c10195b96f4f00f92d"
+  version "11.0.16.7974"
+  sha256 "b4ffd7707c30c0db9662e731ecd63230a08ec0168e21fbf73a122f6a1a18ea76"
 
-  url "https://s3.eu-west-2.amazonaws.com/plastic-releases/releases/#{version}/plasticscm/osx/plasticscm-cloud-#{version}.pkg.zip",
-      verified: "s3.eu-west-2.amazonaws.com/plastic-releases/"
+  url "https://d26z97tczqnlef.cloudfront.net/releases/#{version}/plasticscm/osx/unity-vcs-#{version}-mac.pkg.zip",
+      verified: "d26z97tczqnlef.cloudfront.net/"
   name "PlasicSCM - a Cloud Edition"
   desc "Install PlasticSCM locally and join a Cloud Edition subscription"
   homepage "https://www.plasticscm.com/"
@@ -13,7 +13,7 @@ cask "plasticscm-cloud-edition" do
     regex(/plastic\sscm\s-\srelease\snotes\s-\s(\d+(?:\.\d+)+)/i)
   end
 
-  pkg "plasticscm-cloud-#{version}.pkg"
+  pkg "unity-vcs-#{version}.pkg"
 
   uninstall launchctl: [
               "com.codicesoftware.plasticscm.macplastic",
@@ -29,4 +29,6 @@ cask "plasticscm-cloud-edition" do
               "/Applications/PlasticSCM.app",
               "/Applications/PlasticSCMServer.app",
             ]
+
+  zap trash: "~/Library/Saved Application State/com.codicesoftware.plasticscm.savedState"
 end

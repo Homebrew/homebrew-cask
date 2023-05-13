@@ -1,11 +1,11 @@
 cask "cozy-drive" do
-  version "3.36.1"
-  sha256 "c59213d465b9a03a1bc66f392343c980703a9dc1c8d945afc582f1b30994e5b8"
+  version "3.38.0"
+  sha256 "68fb944f92a150c68a1b85c4a91ea6e9c0362bad0a59ae2fa140c54632f0deec"
 
   url "https://github.com/cozy-labs/cozy-desktop/releases/download/v#{version}/Cozy-Drive-#{version}.dmg",
-      verified: "github.com/cozy-labs/cozy-desktop"
+      verified: "github.com/cozy-labs/cozy-desktop/"
   name "Cozy Drive"
-  desc "File synchronization for Cozy Cloud"
+  desc "File synchronisation for Cozy Cloud"
   homepage "https://cozy.io/"
 
   livecheck do
@@ -16,4 +16,11 @@ cask "cozy-drive" do
   depends_on macos: ">= :sierra"
 
   app "Cozy Drive.app"
+
+  zap trash: [
+    "~/.cozy-desktop",
+    "~/Library/Application Support/Cozy Drive",
+    "~/Library/Preferences/io.cozy.desktop.plist",
+    "~/Library/Saved Application State/io.cozy.desktop.savedState",
+  ]
 end

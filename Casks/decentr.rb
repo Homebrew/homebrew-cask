@@ -1,11 +1,11 @@
 cask "decentr" do
-  arch arm: "M1", intel: "x64"
+  arch arm: "ARM", intel: "Intel"
 
-  version "1.3.2"
-  sha256 arm:   "a15e91def4242b950b23f46dd2d0a18e2348c5f0c7e030b82e4acdcb301c1511",
-         intel: "9429047b44478fcc6bc48ac5bca73f9064a992e3b07c6ad33a8868f5cfa6d375"
+  version "1.5.0"
+  sha256 arm:   "30b9d863108e929d3d084bcf1c0f812fb4958e4017d1662ffda5dfee5cfec375",
+         intel: "41ca63847072daa383836f567cb24c10c8b53fed87029725e4c9d55c51ba8616"
 
-  url "https://decentr.net/files/MacOS_#{arch}_Decentr_#{version}.zip"
+  url "https://decentr.net/MacOS_#{arch}_Decentr_#{version}.zip"
   name "Decentr"
   desc "Web3 blockchain/metaverse browser"
   homepage "https://decentr.net/"

@@ -1,9 +1,9 @@
 cask "onlyoffice" do
   arch arm: "arm", intel: "x86_64"
 
-  version "7.2.1"
-  sha256 arm:   "9df33392d8dbcb194bfa1530feb3209521b1dd0724ac3bbd70ccb0bd9b28547b",
-         intel: "76cb93699f88aac0c4fe3efc86dd0c779368a90d3dd1c278bb92c296eded4a9d"
+  version "7.3.3"
+  sha256 arm:   "163b2de9622c169a7df36ddc1214db17703b6669e560690498ce3134cc2adade",
+         intel: "5dcbe6c26bcf81f14fb35460433b37eb912db7aa9d1e8fdab5f0aca30e05696c"
 
   url "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v#{version}/ONLYOFFICE-#{arch}.dmg",
       verified: "github.com/ONLYOFFICE/DesktopEditors/"
@@ -13,11 +13,17 @@ cask "onlyoffice" do
 
   livecheck do
     url :url
-    regex(%r{href=["']?[^"' >]*?/tag/[^"' >]*?(\d+(?:\.\d+)+)["' >]}i)
+    regex(/(\d+(?:\.\d+)+)/i)
     strategy :github_latest
   end
 
   auto_updates true
 
   app "ONLYOFFICE.app"
+
+  zap trash: [
+    "~/Library/Application Support/asc.onlyoffice.ONLYOFFICE",
+    "~/Library/Preferences/asc.onlyoffice.ONLYOFFICE.plist",
+    "~/Library/Preferences/asc.onlyoffice.editors-helper-renderer.plist",
+  ]
 end

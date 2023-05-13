@@ -1,18 +1,18 @@
 cask "beeper" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.40.28"
+  version "3.55.5"
   sha256 :no_check
 
   url "https://download.beeper.com/mac/dmg/#{arch}"
   name "Beeper"
-  desc "Universal chat app powered by Matrix, unifying 15 different chat networks"
+  desc "Universal chat app powered by Matrix"
   homepage "https://www.beeper.com/"
 
   livecheck do
     url :url
+    regex(/Beeper\D*?(\d+(?:\.\d+)+)/i)
     strategy :header_match
-    regex(/Beeper(?:%20|[ ._-])?(\d+(?:\.\d+)+)(?: - Build ([\dA-z]+))?(?:[._-]#{arch})?\.dmg/i)
   end
 
   app "Beeper.app"

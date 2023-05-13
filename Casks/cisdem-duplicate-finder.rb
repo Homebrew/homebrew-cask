@@ -8,8 +8,8 @@ cask "cisdem-duplicate-finder" do
   homepage "https://www.cisdem.com/duplicate-finder.html"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://www.cisdem.com/js/notes/duplicate-finder-mac.js"
+    regex(/(\d+(?:\.\d+)*)\s+\(\d+(?:-\d+)+\)/i)
   end
 
   depends_on macos: ">= :el_capitan"

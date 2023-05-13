@@ -1,7 +1,10 @@
 cask "ocenaudio" do
-  version "3.11.22"
+  version "3.11.26"
   sha256 :no_check
 
+  on_arm do
+    url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_bigsur_arm64.dmg"
+  end
   on_intel do
     on_high_sierra :or_older do
       url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_sierra.dmg"
@@ -16,9 +19,6 @@ cask "ocenaudio" do
       url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_bigsur.dmg"
     end
   end
-  on_arm do
-    url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_bigsur_arm64.dmg"
-  end
 
   name "ocenaudio"
   desc "Audio editor"
@@ -32,4 +32,11 @@ cask "ocenaudio" do
   depends_on macos: ">= :sierra"
 
   app "ocenaudio.app"
+
+  zap trash: [
+    "~/Library/Application Support/ocenaudio",
+    "~/Library/Caches/ocenaudio",
+    "~/Library/Preferences/com.ocenaudio.plist",
+    "~/Library/Saved Application State/com.ocenaudio.savedState",
+  ]
 end

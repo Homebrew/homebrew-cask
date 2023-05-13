@@ -6,8 +6,8 @@ cask "captain" do
          intel: "a9a52030eaf01f40e9f0664474e661f10040f5b03e509bfb10aabfae0e620688"
 
   url "https://github.com/RickWong/Captain/releases/download/v#{version}/Captain-#{version}#{arch}.dmg",
-      verified: "github.com/RickWong/Captain"
-  name "captain"
+      verified: "github.com/RickWong/Captain/"
+  name "Captain"
   desc "Manage Docker containers from the menu bar"
   homepage "https://getcaptain.co/"
 

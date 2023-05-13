@@ -1,6 +1,6 @@
 cask "osp-tracker" do
-  version "6.1.1"
-  sha256 "2cc845ee756f4ff5e856a809a9fc42373d5aec0ce0c4fba1abf5d19ef9043ebb"
+  version "6.1.3"
+  sha256 "cb4d0579d7d2dbbd3134fc8052d295d412c60e60cd02823223f099bb00b3509b"
 
   url "https://physlets.org/tracker/installers/download.php?file=Tracker-#{version}-osx-installer.dmg"
   name "Tracker"
@@ -23,4 +23,6 @@ cask "osp-tracker" do
     args:       ["--mode", "unattended"],
     sudo:       true,
   }
+
+  zap trash: "~/Library/Saved Application State/org.opensourcephysics.cabrillo.tracker.savedState"
 end

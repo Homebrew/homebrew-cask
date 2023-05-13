@@ -13,4 +13,10 @@ cask "warsow" do
   end
 
   app "Warsow.app"
+
+  zap trash: [
+    "~/Library/Application Support/Warsow-#{version.major_minor}",
+    "~/Library/Caches/Warsow-#{version.major_minor}",
+    "~/Library/Saved Application State/org.picmip.Warsow.savedState",
+  ]
 end

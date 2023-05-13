@@ -1,18 +1,15 @@
 cask "tageditor" do
-  version "1.0.11,1108"
+  version "1.0.12,1132"
   sha256 :no_check
 
-  url "https://amvidia.com/download-tag-editor-mac.dmg.zip"
+  url "https://amvidia.com/download-tag-editor-mac-native.dmg.zip"
   name "Tag Editor"
   desc "Spreadsheet style tag editor for audio files"
   homepage "https://amvidia.com/tag-editor"
 
   livecheck do
-    url :homepage
-    regex(/Version:.*?">(\d+(?:\.\d+)+)\s\((\d+)\)/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
-    end
+    url :url
+    strategy :extract_plist
   end
 
   app "Tag Editor.app"

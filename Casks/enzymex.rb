@@ -4,14 +4,20 @@ cask "enzymex" do
 
   url "https://downloads.nucleobytes.com/enzymex.dmg"
   name "EnzymeX"
-  desc "Visualize and edit DNA sequence files"
+  desc "Visualise and edit DNA sequence files"
   homepage "https://nucleobytes.com/enzymex/index.html"
 
   livecheck do
     url "https://nucleobytes.com/versionEnzymeX.txt"
-    strategy :page_match
-    regex(/\d+(?:\.\d+)+/)
+    regex(/\d+(?:\.\d+)+/i)
   end
 
   app "EnzymeX.app"
+
+  zap trash: [
+    "~/Library/Application Support/EnzymeX",
+    "~/Library/Caches/com.mekentosj.enzymex",
+    "~/Library/Preferences/com.mekentosj.enzymex.plist",
+    "~/Library/Saved Application State/com.mekentosj.enzymex.savedState",
+  ]
 end

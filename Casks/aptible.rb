@@ -6,7 +6,7 @@ cask "aptible" do
       verified: "omnibus-aptible-toolbelt.s3.amazonaws.com/"
   name "Aptible Toolbelt"
   desc "Command-line tool for Aptible Deploy, an audit-ready App Deployment Platform"
-  homepage "https://www.aptible.com/documentation/deploy/cli.html"
+  homepage "https://www.aptible.com/docs/cli"
 
   livecheck do
     url :homepage
@@ -21,4 +21,6 @@ cask "aptible" do
   pkg "aptible-toolbelt-#{version.csv.first}+#{version.csv.second}-mac-os-x.10.15.7-1.pkg"
 
   uninstall pkgutil: "com.aptible.toolbelt"
+
+  zap trash: "/usr/local/bin/aptible"
 end

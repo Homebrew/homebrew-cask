@@ -1,6 +1,6 @@
 cask "aethersx2" do
-  version "1.4-2918"
-  sha256 "1066b177ca24eb7adad93dc60ec9ea09c85f0e9e4d230d05fb91e434c46a787d"
+  version "1.5-3939"
+  sha256 "55178a1fbdca463750c5b13dbc972de290a7dce0795291d81e9c76594bc08150"
 
   url "https://aethersx2.com/archive/desktop/mac/AetherSX2-v#{version}-mac.zip"
   name "AetherSX2"

@@ -1,6 +1,6 @@
 cask "airflow" do
-  version "3.3.3"
-  sha256 "a942e6ea57f9283d00a25401905314eb57b2bc4c8ea7e28c499ebf3deb1f00f5"
+  version "3.3.5"
+  sha256 "8e180cb4809b250537824514fd376694e281543241856ac3996807d48700275b"
 
   url "https://cdn.downloads.iocave.net/Airflow/Airflow%20#{version}.zip",
       verified: "cdn.downloads.iocave.net/Airflow/"

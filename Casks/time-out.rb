@@ -1,6 +1,6 @@
 cask "time-out" do
-  version "2.9.1"
-  sha256 "fefbde4012e86ac20f1ef9b7e3fd5505a918cf08c5e4c7e79b02bc6f9b0be445"
+  version "2.9.2"
+  sha256 "d5bc165eea4864e3e897b5a254b94b147c1247d74f402ed763401b66d873af0b"
 
   url "https://www.dejal.com/download/timeout-#{version}.zip"
   name "Time Out"
@@ -12,5 +12,18 @@ cask "time-out" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on macos: ">= :catalina"
+
   app "Time Out.app"
+
+  uninstall quit: "com.dejal.timeout"
+
+  zap trash: [
+    "~/Library/Application Scripts/*.com.dejal.timeout",
+    "~/Library/Caches/com.dejal.timeout",
+    "~/Library/Group Containers/*.com.dejal.timeout",
+    "~/Library/HTTPStorages/com.dejal.timeout",
+    "~/Library/Preferences/com.dejal.timeout.plist",
+    "~/Library/Saved Application State/com.dejal.timeout.savedState",
+  ]
 end

@@ -1,9 +1,9 @@
 cask "sapmachine-jdk" do
   arch arm: "aarch64", intel: "x64"
 
-  version "19.0.2"
-  sha256 arm:   "f354ef6ce50590330973c2b2ae53918ba6471bb1c1e89862dea4d18a9c7cfa9e",
-         intel: "916d060f0af16fcffd20b1520028cb9383bdb8c8e231fd0e1f172eaffbae6071"
+  version "20.0.1"
+  sha256 arm:   "75f85bfb4db30e73e7893703c8016c5a087d412cfb656ad5f89652ba432b0f7a",
+         intel: "449efda64407162788eb04734a522d79540510663d3a648dd487519ab281450e"
 
   url "https://github.com/SAP/SapMachine/releases/download/sapmachine-#{version}/sapmachine-jdk-#{version}_macos-#{arch}_bin.dmg",
       verified: "github.com/SAP/SapMachine/"
@@ -19,4 +19,6 @@ cask "sapmachine-jdk" do
   end
 
   artifact "sapmachine-jdk-#{version}.jdk", target: "/Library/Java/JavaVirtualMachines/sapmachine-jdk-#{version}.jdk"
+
+  zap trash: "~/Library/Saved Application State/com.sap.openjdk.jconsole.savedState"
 end

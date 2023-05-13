@@ -9,24 +9,12 @@ cask "qwerty-fr" do
   homepage "https://qwerty-fr.org/"
 
   livecheck do
-    skip "No reliable way to get version info"
+    skip "Latest release only contains a hotfix for the Linux version"
   end
 
   depends_on macos: ">= :sierra"
 
-  artifact "qwerty-fr.bundle", target: "/Library/Keyboard Layouts/qwerty-fr.bundle"
-
-  postflight do
-    # clear the layout cache before new layouts are recognized
-    system_command "/bin/rm",
-                   args: ["-f", "--", "/System/Library/Caches/com.apple.IntlDataCache.le*"],
-                   sudo: true
-  end
-
-  uninstall delete: [
-    "/Library/Keyboard Layouts/qwerty-fr.bundle/",
-    "/System/Library/Caches/com.apple.IntlDataCache.le*",
-  ]
+  keyboard_layout "qwerty-fr.bundle"
 
   caveats do
     reboot

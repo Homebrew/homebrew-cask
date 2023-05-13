@@ -1,15 +1,15 @@
 cask "aircall" do
-  version "2.27.3"
-  sha256 "f8973ea6db0d078d04e55898cf29a588f2ffeb8b842470d8e5eb6b4fe3e853e1"
+  version "2.32.2"
+  sha256 "c80d8ccd55b08f3ec8a85a7651a1ff81e240c756d299caaa2930b2b6b2e63687"
 
-  url "https://download-electron.aircall.io/Aircall-#{version}.zip"
+  url "https://download-electron.aircall.io/Aircall-#{version}.dmg"
   name "Aircall"
   desc "Cloud-based call center and phone system software"
   homepage "https://aircall.io/"
 
   livecheck do
-    url "https://electron.aircall.io/download/osx"
-    strategy :header_match
+    url "https://aircall.io/download/"
+    regex(/Aircall[._-](\d+(?:\.\d+)+)\.(dmg|pkg)/i)
   end
 
   auto_updates true

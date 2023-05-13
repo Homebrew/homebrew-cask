@@ -1,16 +1,16 @@
 cask "accordance" do
-  version "14.0.3"
-  sha256 "97ab4841dfaa8c0dde7f8b24a5988e97e6738cf43cc2df4caae49f5ef779c2a0"
+  version "14.0.5"
+  sha256 "dd83a902f0bdf261124cc7f661ba96fb6b6462774fdec7074cf1a7aff1d0a944"
 
-  url "https://aaeaa95e7a277e07438c-1bc4b418142835c9d827936172799c04.ssl.cf1.rackcdn.com/Acc_#{version}.zip",
-      verified: "aaeaa95e7a277e07438c-1bc4b418142835c9d827936172799c04.ssl.cf1.rackcdn.com/"
+  url "https://d366ra67x2bs56.cloudfront.net/mac/Acc_#{version}.zip",
+      verified: "d366ra67x2bs56.cloudfront.net/"
   name "Accordance Bible Software"
   desc "Bible study software"
   homepage "https://www.accordancebible.com/"
 
   livecheck do
     url "https://accordancefiles1.com/xml/appcast_#{version.major}.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

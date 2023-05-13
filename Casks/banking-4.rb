@@ -1,6 +1,6 @@
 cask "banking-4" do
   # NOTE: "4" is not a version number, but an intrinsic part of the product name
-  version "7.9.9,8413"
+  version "8.0.4,8510"
   sha256 :no_check
 
   url "https://subsembly.com/download/MacBanking4.pkg"
@@ -21,4 +21,9 @@ cask "banking-4" do
   pkg "MacBanking4.pkg"
 
   uninstall pkgutil: "com.subsembly.Banking4"
+
+  zap trash: [
+    "~/Library/Group Containers/*.com.Subsembly.Banking4XData",
+    "~/Library/Preferences/com.subsembly.Banking4.plist",
+  ]
 end

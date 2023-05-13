@@ -1,16 +1,12 @@
 cask "localdev" do
   version "1.3.1"
-  sha256 "946f49215c4559f28ebf8b183698f986c3de0baa8d1e10d2cdd1fbe44fb9d9f2"
+  sha256 "e7c43628b4f82a725fd43047647374e6cd1d0ac3196e67e74705b75561c71e9c"
 
   url "https://pantheon-localdev.s3.amazonaws.com/Localdev-v#{version}.dmg",
       verified: "pantheon-localdev.s3.amazonaws.com/"
   name "Localdev"
+  desc "Development interface for Pantheon"
   homepage "https://pantheon.io/localdev"
-
-  livecheck do
-    url "https://pantheon-localdev.s3.amazonaws.com/latest-mac.yml"
-    strategy :electron_builder
-  end
 
   app "Localdev.app"
 
@@ -24,4 +20,8 @@ cask "localdev" do
     "~/Localdev",
     "~/.pantheonlocaldev",
   ]
+
+  caveats do
+    discontinued
+  end
 end

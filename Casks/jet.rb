@@ -14,4 +14,6 @@ cask "jet" do
   end
 
   binary "jet"
+
+  # No zap stanza required
 end

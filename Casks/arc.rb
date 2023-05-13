@@ -1,6 +1,6 @@
 cask "arc" do
-  version "0.85.0,36742"
-  sha256 "8423ce61a1771dae05f617ec8296a1aed4bb0c309a4ff4bf0d56ab19bd5b90af"
+  version "0.103.0,38794"
+  sha256 "b90c49cad1da54081bd476734032ec098aaf4ad5bbba32d6baafd43bd9dc6747"
 
   url "https://releases.arc.net/release/Arc-#{version.csv.first}-#{version.csv.second}.zip"
   name "Arc"
@@ -9,7 +9,7 @@ cask "arc" do
 
   livecheck do
     url "https://releases.arc.net/updates.xml"
-    regex(%r{/Arc-(\d+(?:\.\d+)+)-(\d+).zip}i)
+    regex(%r{/Arc[._-]v?(\d+(?:\.\d+)+)[._-](\d+).zip}i)
     strategy :sparkle do |item, regex|
       match = item.url.match(regex)
       next if match.blank?
@@ -19,15 +19,15 @@ cask "arc" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Arc.app"
 
   uninstall quit: "company.thebrowser.Browser"
 
   zap trash: [
-    "~/Library/Caches/company.thebrowser.Browser",
     "~/Library/Caches/CloudKit/company.thebrowser.Browser",
+    "~/Library/Caches/company.thebrowser.Browser",
     "~/Library/HTTPStorages/company.thebrowser.Browser",
     "~/Library/HTTPStorages/company.thebrowser.Browser.binarycookies",
     "~/Library/Preferences/company.thebrowser.Browser.plist",

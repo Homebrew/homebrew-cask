@@ -1,6 +1,6 @@
 cask "yacreader" do
-  version "9.11.0.2301073"
-  sha256 "3aea5640cef68e5f7d9b7fa17067b1ecdb4fb473a19d9c3145be563cc3dcbfe2"
+  version "9.12.0.2304234"
+  sha256 "4dd0c431480e090a483573cbd752862e242fc6e780ae395aaa41730d033a8804"
 
   url "https://github.com/YACReader/yacreader/releases/download/#{version.major_minor_patch}/YACReader-#{version}.MacOSX-Intel.Qt6.dmg",
       verified: "github.com/YACReader/yacreader/"
@@ -10,8 +10,7 @@ cask "yacreader" do
 
   livecheck do
     url "https://www.yacreader.com/downloads"
-    strategy :page_match
-    regex(%r{href=.*?/YACReader[._-]v?(\d+(?:\.\d+)+)[._-]MacOSX[._-]Intel\.Qt6\.dmg}i)
+    regex(%r{href=.*?/YACReader[._-]v?(\d+(?:\.\d+)+)[._-]MacOSX[._-]Intel[._-]Qt6\.dmg}i)
   end
 
   app "YACReader.app"

@@ -1,11 +1,18 @@
 cask "paragon-extfs" do
-  version :latest
+  version "11.7.569"
   sha256 :no_check
 
   url "https://dl.paragon-software.com/demo/trial_extfs.dmg"
   name "extFS for Mac by Paragon Software"
   desc "Read/write support for ext2/3/4 formatted volumes"
   homepage "https://www.paragon-software.com/home/extfs-mac/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist do |items|
+      items["com.paragon-software.filesystems.extfs"].short_version
+    end
+  end
 
   depends_on macos: ">= :sierra"
 

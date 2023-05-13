@@ -1,8 +1,8 @@
 cask "lrtimelapse" do
-  version "6.2.1"
-  sha256 "d11813f01e553c952a2454cb314d601dd1a35ea4f90146f2cce7b24b68ef3ef9"
+  version "6.5.0"
+  sha256 "4036765f9cec53fa06d5ffaf812ca296d6ad5d5591d1b6249ffeef90287079c0"
 
-  url "https://lrtimelapse.com/files/lrtimelapse-#{version.major}-mac/?version=#{version.dots_to_hyphens}"
+  url "https://lrtimelapse.com/files/lrtimelapse-#{version.major}-mac-universal/?version=#{version}"
   name "LRTimelapse"
   desc "Time lapse editing, keyframing, grading and rendering"
   homepage "https://lrtimelapse.com/"
@@ -24,6 +24,8 @@ cask "lrtimelapse" do
               "com.lrtimelapse.LRTimelapse#{version.major}",
               "com.lrttimelapse.LRTTools",
             ]
+
+  zap trash: "~/Library/Application Support/LRTimelapse"
 
   caveats do
     files_in_usr_local

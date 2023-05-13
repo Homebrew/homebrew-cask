@@ -1,11 +1,16 @@
 cask "mixin" do
-  version "0.37.13"
-  sha256 "7612bc627fcc67115f3345bd14a63a6504602d38bb1b1d8197a6d5973179dab8"
+  version "0.39.3"
+  sha256 "295fab1f1e410e6513c2a34b9722fb01d9d5e791fe2c399cc348c2618599f14f"
 
   url "https://github.com/MixinNetwork/flutter-app/releases/download/v#{version}/mixin-#{version}.dmg"
   name "Mixin Messenger Desktop"
   desc "Cryptocurrency wallet"
   homepage "https://github.com/MixinNetwork/flutter-app"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
 

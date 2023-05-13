@@ -3,9 +3,9 @@ cask "microsoft-edge" do
                                intel: "C1297A47-86C4-4C1F-97FA-950631F94777"
   linkid = on_arch_conditional arm: "2093504", intel: "2069148"
 
-  version "109.0.1518.61"
-  sha256 arm:   "b73874d8b72fae750625bf67c6bc9e042be7d9114f6d975baffeb5e5adce5c82",
-         intel: "86d654c4789ebda26ca6abcc7e5de20e8bc0b4aabf791ec3e86760cee44ecaea"
+  version "113.0.1774.35"
+  sha256 arm:   "e23b9886171cb6b1e5b717fdd19e92cb692351559d7522c31ebac1f4c4130c77",
+         intel: "298edefef32dd22c9800d5864819f2d208b9bca800e79899ffd6ecd9821b608e"
 
   url "https://officecdn-microsoft-com.akamaized.net/pr/#{folder}/MacAutoupdate/MicrosoftEdge-#{version}.pkg",
       verified: "officecdn-microsoft-com.akamaized.net/"
@@ -29,7 +29,12 @@ cask "microsoft-edge" do
         },
       ]
 
-  uninstall pkgutil: "com.microsoft.edgemac"
+  uninstall pkgutil:   "com.microsoft.edgemac",
+            launchctl: [
+              "com.microsoft.EdgeUpdater.update-internal.109.0.1518.89.system",
+              "com.microsoft.EdgeUpdater.update.system",
+              "com.microsoft.EdgeUpdater.wake.109.0.1518.89.system",
+            ]
 
   zap trash: [
         "~/Library/Application Scripts/com.microsoft.edgemac.wdgExtension",
@@ -42,9 +47,7 @@ cask "microsoft-edge" do
         "~/Library/HTTPStorages/com.microsoft.edgemac",
         "~/Library/HTTPStorages/com.microsoft.edgemac.binarycookies",
         "~/Library/HTTPStorages/com.microsoft.EdgeUpdater",
-        "~/Library/LaunchAgents/com.microsoft.EdgeUpdater.update.plist",
-        "~/Library/LaunchAgents/com.microsoft.EdgeUpdater.update-internal.*.plist",
-        "~/Library/LaunchAgents/com.microsoft.EdgeUpdater.wake.*.plist",
+        "~/Library/LaunchAgents/com.microsoft.EdgeUpdater.*.plist",
         "~/Library/Microsoft/EdgeUpdater",
         "~/Library/Preferences/com.microsoft.edgemac.plist",
         "~/Library/Saved Application State/com.microsoft.edgemac.app.*.savedState/",

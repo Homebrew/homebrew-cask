@@ -1,9 +1,9 @@
 cask "pycharm-ce" do
   arch arm: "-aarch64"
 
-  version "2022.3.1,223.8214.51"
-  sha256 arm:   "6574cfd20a586fcbdfbac2ea0fa903ea078c1702fd9e5145c33c7c8dc4506388",
-         intel: "adfb73d85ffb30c2abf715a6c6a0a2ed64a047a3016021a2cb61838457c66a81"
+  version "2023.1.1,231.8770.66"
+  sha256 arm:   "d3c3e5d4896be54e54c20603e8124220ee32f29f24b5068d1b56d1685c9bc2cd",
+         intel: "45f47c71f1621d054b4ceedb717bbb4c2f8e8ab2d3ef8acb7366088b866a4cf6"
 
   url "https://download.jetbrains.com/python/pycharm-community-#{version.csv.first}#{arch}.dmg"
   name "Jetbrains PyCharm Community Edition"
@@ -13,8 +13,8 @@ cask "pycharm-ce" do
 
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=PCC&latest=true&type=release"
-    strategy :page_match do |page|
-      JSON.parse(page)["PCC"].map do |release|
+    strategy :json do |json|
+      json["PCC"].map do |release|
         "#{release["version"]},#{release["build"]}"
       end
     end
@@ -35,8 +35,8 @@ cask "pycharm-ce" do
   end
 
   zap trash: [
-    "~/Library/Application Support/PyCharm#{version.major_minor}",
     "~/Library/Application Support/JetBrains/PyCharmCE#{version.major_minor}",
+    "~/Library/Application Support/PyCharm#{version.major_minor}",
     "~/Library/Caches/com.apple.python/Applications/PyCharm CE.app",
     "~/Library/Caches/JetBrains/PyCharmCE#{version.major_minor}",
     "~/Library/Caches/PyCharm#{version.major_minor}",

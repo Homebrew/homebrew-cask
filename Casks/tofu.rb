@@ -6,5 +6,10 @@ cask "tofu" do
   name "Tofu"
   homepage "https://amarsagoo.info/tofu/"
 
+  livecheck do
+    url :homepage
+    regex(/Version\s+(\d+(?:\.\d+)+)/i)
+  end
+
   app "Tofu.app"
 end

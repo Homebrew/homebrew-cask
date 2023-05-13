@@ -1,6 +1,6 @@
 cask "duckduckgo" do
-  version "0.31.6"
-  sha256 "82a49b60bd1bc4ea006ff6ec8289293f4e10ed4a30481db83e6b37c7207a006d"
+  version "1.39.0"
+  sha256 "49c6400fab4d621e63bdf6fbcd5c9d9f659bfe68cfc11e8f7a6cabae39c7ca2a"
 
   url "https://staticcdn.duckduckgo.com/macos-desktop-browser/duckduckgo-#{version}.dmg"
   name "DuckDuckGo"
@@ -8,7 +8,7 @@ cask "duckduckgo" do
   homepage "https://duckduckgo.com/"
 
   livecheck do
-    url "https://staticcdn.duckduckgo.com/macos-desktop-browser/appcast.xml"
+    url "https://staticcdn.duckduckgo.com/macos-desktop-browser/appcast2.xml"
     strategy :sparkle
   end
 

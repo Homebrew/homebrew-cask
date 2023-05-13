@@ -1,10 +1,10 @@
 cask "youdaonote" do
-  version "7.2.1"
-  sha256 "ca10a4efa806c3c06d03e0ada76f198447c74ab34d41183a3ce075d16ce0a723"
+  version "7.2.6"
+  sha256 "b10e214a4e4752a364c7ff0b47bb332f2be4af2d2bae9e17fdba1d5ff0af65e2"
 
   url "https://artifact.lx.netease.com/download/ynote-electron/%E6%9C%89%E9%81%93%E4%BA%91%E7%AC%94%E8%AE%B0-#{version}.zip",
       user_agent: :fake,
-      verified:   "https://artifact.lx.netease.com/download/ynote-electron/"
+      verified:   "artifact.lx.netease.com/download/ynote-electron/"
   name "youdaonote"
   name "有道云笔记"
   desc "Multi-platform note application"

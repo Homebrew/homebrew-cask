@@ -1,6 +1,6 @@
 cask "neteasemusic" do
-  version "2.3.12_956"
-  sha256 "11d34c281c38be1a728b5ec562a665d39517b5d4e26ecc51e3e8b34cab7e6f33"
+  version "2.3.14_999"
+  sha256 "ac2824326f89db92c67589a624e6fca481ab7acd04efd00ae706ec20339de80f"
 
   url "https://d1.music.126.net/dmusic/NeteaseMusic_#{version}_web.dmg",
       verified:   "d1.music.126.net/",
@@ -15,10 +15,11 @@ cask "neteasemusic" do
   # from the XML using a regex pattern on the download URLs.
   livecheck do
     url "https://music.163.com/api/osx/download/latest"
-    strategy :header_match
     regex(/NeteaseMusic[._-]v?(\d+(?:[._]\d+)+)_web/i)
+    strategy :header_match
   end
 
+  auto_updates true
   depends_on macos: ">= :sierra"
 
   app "NeteaseMusic.app"

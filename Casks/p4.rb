@@ -1,6 +1,6 @@
 cask "p4" do
-  version "2022.2,2369846"
-  sha256 "920a64afa88e781bc7cc1494ad42a46f136a5e1e6804469c626fb3554faa9829"
+  version "2022.2,2407422"
+  sha256 "8f98a15ae2e3dbacc10e7ae8f8fdb253e3d5d3579c1dac004cf7deecc6d4362a"
 
   url "https://cdist2.perforce.com/perforce/r#{version.major[-2..]}.#{version.minor}/bin.macosx1015x86_64/p4"
   name "Perforce Helix Command-Line Client (P4)"
@@ -21,4 +21,6 @@ cask "p4" do
   container type: :naked
 
   binary "bin.macosx1015x86_64", target: "p4"
+
+  # No zap stanza required
 end

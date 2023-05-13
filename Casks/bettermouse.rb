@@ -1,6 +1,6 @@
 cask "bettermouse" do
-  version "1.4.3030"
-  sha256 "dd18c13fc63fa187ce526e9596cc26c156ad67a7bb5b658c6cc015ef38545d2b"
+  version "1.5.3497"
+  sha256 "9ab8b4e6e6a0fc207be18fc0ca580a857372a2960300311bbaef3782c2557caf"
 
   url "https://better-mouse.com/wp-content/uploads/BetterMouse.#{version}.zip"
   name "BetterMouse"
@@ -11,6 +11,8 @@ cask "bettermouse" do
     url :homepage
     regex(/Version (\d+(?:\.\d+)+)/i)
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "BetterMouse.app"
 

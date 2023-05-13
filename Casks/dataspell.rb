@@ -1,9 +1,9 @@
 cask "dataspell" do
   arch arm: "-aarch64"
 
-  version "2022.3.1,223.8214.61"
-  sha256 arm:   "176bfce793216c1bb6e683b656b58a068e93c6bc6d2f51c0776a151dfa3bec1f",
-         intel: "ec54a766a3fa51df2660e0dccf261ec560a3242eb5eeb9851f45449fe6614fee"
+  version "2023.1.1,231.8770.72"
+  sha256 arm:   "615e917ab01c5d5400f6e39beaf64538eec3d9720e0a195e8a6002a63b3768f2",
+         intel: "40bc78c1eb1d175cf1fde5a78cdd7ba459469bf2f4779e21b4f2c879b6c26ee2"
 
   url "https://download.jetbrains.com/python/dataspell-#{version.csv.first}#{arch}.dmg"
   name "DataSpell"
@@ -12,8 +12,8 @@ cask "dataspell" do
 
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=DS&latest=true&type=release"
-    strategy :page_match do |page|
-      JSON.parse(page)["DS"].map do |release|
+    strategy :json do |json|
+      json["DS"].map do |release|
         "#{release["version"]},#{release["build"]}"
       end
     end

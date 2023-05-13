@@ -1,5 +1,5 @@
 cask "fresh" do
-  version "4.0.4,404.101"
+  version "4.0.7,407.101"
   sha256 :no_check
 
   url "https://ironicsoftware.com/downloads/Fresh.zip"

@@ -1,6 +1,6 @@
 cask "shadowsocksx-ng" do
-  version "1.10.0"
-  sha256 "1443c94dc0f69c97538015a3c180289aa6ef672c61cc3d41e9159dbb3a6737a5"
+  version "1.10.2"
+  sha256 "e4d0388d40c86db70c8bb8c0950207845a4e33217010b811aac1d1562762502e"
 
   url "https://github.com/shadowsocks/ShadowsocksX-NG/releases/download/v#{version}/ShadowsocksX-NG.dmg"
   name "ShadowsocksX-NG"

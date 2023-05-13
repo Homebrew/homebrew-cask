@@ -1,6 +1,6 @@
 cask "drovio" do
-  version "3.3.4"
-  sha256 "1effe3f15d339a9bb97541888539076ee396dcccc57d73757ff814c88b5d0603"
+  version "3.4.1"
+  sha256 "4698cfd0ffccba0a521103548f5fd9d9cf1430cb65e666acb67479bb59dc2cc6"
 
   url "https://repository.drovio.com/stable/drovio/macos_universal/#{version.major}.x/#{version}/drovio.dmg"
   name "Drovio"

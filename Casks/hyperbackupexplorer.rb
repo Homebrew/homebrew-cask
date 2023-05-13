@@ -1,6 +1,6 @@
 cask "hyperbackupexplorer" do
-  version "3.0.0-0149"
-  sha256 "a65568d752fbad15007ea4ca75da8df2fd6e2d574504a9f6e9bb784d45c244ff"
+  version "3.0.1-0156"
+  sha256 "0aa5b7162acf104c7644e1e0355cb2ff309837fb60dff111bbc3c213f985e826"
 
   url "https://global.download.synology.com/download/Utility/HyperBackupExplorer/#{version}/Mac/x86_64/HyperBackupExplorer-#{version}-mac.dmg"
   name "HyperBackupExplorer"
@@ -13,4 +13,9 @@ cask "hyperbackupexplorer" do
   end
 
   app "HyperBackupExplorer.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.synology.HyperBackupExplorer.plist",
+    "~/Library/Saved Application State/com.synology.HyperBackupExplorer.savedState",
+  ]
 end

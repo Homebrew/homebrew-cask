@@ -11,8 +11,8 @@ cask "sizzy" do
 
   livecheck do
     url :url
-    strategy :header_match
     regex(/Sizzy[._-]v?(\d+(?:\.\d+)+)(?:[._-]#{arch})?\.dmg/i)
+    strategy :header_match
   end
 
   auto_updates true

@@ -1,6 +1,6 @@
 cask "parallels" do
-  version "18.1.1-53328"
-  sha256 "570f62ec38a48be84a3837a8b317c26396cbfd439fc20cde082ebe42659f219c"
+  version "18.2.0-53488"
+  sha256 "16901b4106a921c67b1ac1a31f865e27cd4a7be35417b1af815d701032caa145"
 
   url "https://download.parallels.com/desktop/v#{version.major}/#{version}/ParallelsDesktop-#{version}.dmg"
   name "Parallels Desktop"
@@ -8,8 +8,13 @@ cask "parallels" do
   homepage "https://www.parallels.com/products/desktop/"
 
   livecheck do
-    url "https://www.parallels.com/directdownload/pd#{version.major}/image/"
-    strategy :header_match
+    url "https://kb.parallels.com/129060"
+    strategy :page_match do |page|
+      match = page.match(/(\d+(?:\.\d+)+)(?:\s*|&nbsp;)\((\d+)\)/i)
+      next if match.blank?
+
+      "#{match[1]}-#{match[2]}"
+    end
   end
 
   auto_updates true

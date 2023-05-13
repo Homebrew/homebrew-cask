@@ -1,6 +1,6 @@
 cask "sqlpro-studio" do
-  version "2022.77"
-  sha256 "44a945bfc50a89a19160f38c33cb0f50136b330d42a0d71ecd2f4db47d2e4c7a"
+  version "2023.35"
+  sha256 "dde6ba8d24c85e9ba00d6a4547e961bc547ba661f39f24be5356e51371759be4"
 
   url "https://d3fwkemdw8spx3.cloudfront.net/studio/SQLProStudio.#{version}.app.zip",
       verified: "d3fwkemdw8spx3.cloudfront.net/studio/"

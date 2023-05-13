@@ -8,4 +8,10 @@ cask "kubecontext" do
   homepage "https://github.com/turkenh/KubeContext"
 
   app "KubeContext.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.ht.kubecontext",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.ht.kubecontext.sfl2",
+    "~/Library/Containers/com.ht.kubecontext",
+  ]
 end

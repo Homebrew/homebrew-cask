@@ -1,5 +1,5 @@
 cask "adze" do
-  version "1.4.12,7412"
+  version "1.4.12"
   sha256 :no_check
 
   url "https://getadze.com/static/main/releases/Adze.zip"
@@ -9,7 +9,7 @@ cask "adze" do
 
   livecheck do
     url "https://getadze.com/static/main/updates/adze.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   depends_on macos: ">= :sierra"

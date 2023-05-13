@@ -1,9 +1,9 @@
 cask "lando" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.6.4"
-  sha256 arm:   "1dfc9bf38f562f99227cb9430d1311ea885f278e338318afe10871a38aae5925",
-         intel: "cc1fd722bd8588837ff9cc51ce809075e08a7c49e6b9f3c328377a8ce04d03ae"
+  version "3.17.0"
+  sha256 arm:   "12ab2c6df437b7cffdca132bf87f4cab533f55075e2492d29c4b7e7d2a03f762",
+         intel: "fd45f14122f3845c1a1f7728e5a511cb8e5bd6a2448f03258ae393f36116f26e"
 
   url "https://github.com/lando/lando/releases/download/v#{version}/lando-#{arch}-v#{version}.dmg",
       verified: "github.com/lando/lando/"
@@ -34,5 +34,5 @@ cask "lando" do
 
   uninstall pkgutil: "dev.lando.pkg.lando"
 
-  # No zap stanza required
+  zap trash: "~/.lando"
 end

@@ -1,5 +1,5 @@
 cask "yousician" do
-  version "2.10.68.0"
+  version "2.11.43.0"
   sha256 :no_check
 
   url "https://public.yousician.com/Builds/Yousician.dmg"

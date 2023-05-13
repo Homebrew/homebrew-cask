@@ -5,24 +5,24 @@ cask "couchbase-server-enterprise" do
 
     url "https://packages.couchbase.com/releases/#{version}/couchbase-server-enterprise_#{version}-macos_x86_64.zip"
 
-    app "couchbase-server-enterprise_#{version}/Couchbase Server.app"
-
     livecheck do
       skip "Legacy version"
     end
+
+    app "couchbase-server-enterprise_#{version}/Couchbase Server.app"
   end
   on_sierra :or_newer do
-    version "7.1.3"
-    sha256 "2acf5f3d32482b9595686b1d236be1d477dfa6fe06fd8ee81e2f0b77f824c589"
+    version "7.1.4"
+    sha256 "b91c8787cdff6117b97bee9a4ff17c258b1c9aaef3d4113a189fb02ec5d3ae1a"
 
     url "https://packages.couchbase.com/releases/#{version}/couchbase-server-enterprise_#{version}-macos_x86_64.dmg"
-
-    app "Couchbase Server.app"
 
     livecheck do
       url "https://www.couchbase.com/downloads"
       regex(/couchbase[._-]server[._-]enterprise[._-]v?(\d+(:?\.\d+)+)[._-]macos[._-]x86[._-]64\.dmg/i)
     end
+
+    app "Couchbase Server.app"
   end
 
   name "Couchbase Server"
@@ -30,4 +30,13 @@ cask "couchbase-server-enterprise" do
   homepage "https://www.couchbase.com/"
 
   conflicts_with cask: "couchbase-server-community"
+
+  zap trash: [
+    "~/Library/Application Support/Couchbase",
+    "~/Library/Caches/com.couchbase.couchbase-server",
+    "~/Library/Logs/Couchbase.log",
+    "~/Library/Logs/CouchbaseServer.log",
+    "~/Library/Preferences/com.couchbase.couchbase-server.plist",
+    "~/Library/Preferences/couchbase-server.ini",
+  ]
 end

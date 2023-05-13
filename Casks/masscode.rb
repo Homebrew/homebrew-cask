@@ -1,14 +1,14 @@
 cask "masscode" do
   arch arm: "-arm64"
 
-  version "3.5.0"
-  sha256 arm:   "005bf5b9b8ee1921ccf7236c9db67684beed23fb31b41e0d5134921a69d9e08c",
-         intel: "267c8fc05fe069fdaea182df49ac3aded7e7dee1b28a0681f0675a79ed12df93"
+  version "3.6.0"
+  sha256 arm:   "374ce8df6617269813a7cabf44f54045d87159cd869d28b02af68979b41a0879",
+         intel: "0721db8ab72cc2891442719d9c096066f4765482db66faa21f8122b249d942d7"
 
   url "https://github.com/massCodeIO/massCode/releases/download/v#{version}/massCode-#{version}#{arch}.dmg",
-      verified: "https://github.com/massCodeIO/massCode/"
+      verified: "github.com/massCodeIO/massCode/"
   name "massCode"
-  desc "Open-source code snippets manager for developers"
+  desc "Code snippets manager for developers"
   homepage "https://masscode.io/"
 
   livecheck do

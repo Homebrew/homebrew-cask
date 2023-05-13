@@ -1,5 +1,5 @@
 cask "logmein-client" do
-  version "4.1.7818,4.1.0.7818"
+  version "4.1.7853,4.1.0.7853"
   sha256 :no_check
 
   url "https://secure.logmein.com/LogMeInClientMac.dmg"
@@ -13,4 +13,14 @@ cask "logmein-client" do
   end
 
   app "LogMeIn Client.app"
+
+  zap trash: [
+    "~/Library/Application Support/LogMeIn Client",
+    "~/Library/Caches/com.logmein.ignition",
+    "~/Library/HTTPStorages/com.logmein.ignition",
+    "~/Library/HTTPStorages/com.logmein.ignition.binarycookies",
+    "~/Library/Logs/LogMeIn Client",
+    "~/Library/Preferences/com.logmein.ignition.plist",
+    "~/Library/Saved Application State/com.logmein.ignition.savedState",
+  ]
 end

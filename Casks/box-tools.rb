@@ -1,5 +1,5 @@
 cask "box-tools" do
-  version :latest
+  version "4.21.1.989"
   sha256 :no_check
 
   url "https://e3.boxcdn.net/box-installers/boxedit/mac/currentrelease/BoxToolsInstaller.dmg",
@@ -7,6 +7,11 @@ cask "box-tools" do
   name "Box Tools"
   desc "Create and edit any file directly from a web browser"
   homepage "https://www.box.com/resources/downloads"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   apps = [
     "Device Trust",

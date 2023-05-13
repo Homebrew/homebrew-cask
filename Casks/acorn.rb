@@ -1,15 +1,15 @@
 cask "acorn" do
-  version "7.3.1,16186"
-  sha256 "28afce73853d500737d84cfb4689c6130ead29b217ff65535e1d008f29687ee5"
+  version "7.4.2"
+  sha256 "e58c316e98902b7c357caba9001a834b0ff7e6e97a20f71eb911ba28e6ff0cd0"
 
-  url "https://flyingmeat.com/download/Acorn-#{version.csv.first}.zip"
+  url "https://flyingmeat.com/download/Acorn-#{version}.zip"
   name "Acorn"
   desc "Image editor focused on simplicity"
   homepage "https://flyingmeat.com/acorn/"
 
   livecheck do
     url "https://www.flyingmeat.com/download/acorn#{version.major}update.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

@@ -1,6 +1,6 @@
 cask "orka" do
-  version "2.3.0"
-  sha256 "f1c537a6026cd389367af0edc572965dd8920a9b2397ee1664b3905680f6fef5"
+  version "2.4.0"
+  sha256 "c7f6fbd9bfca29353618f22736d1d83234239fa1a00cb4493c62a853ebaa5abb"
 
   url "https://cli-builds-public.s3-eu-west-1.amazonaws.com/official/#{version}/macos/orka.pkg",
       verified: "cli-builds-public.s3-eu-west-1.amazonaws.com/official/"
@@ -16,4 +16,6 @@ cask "orka" do
   pkg "orka.pkg"
 
   uninstall pkgutil: "com.macstadium.orka.pkg"
+
+  # No zap stanza required
 end

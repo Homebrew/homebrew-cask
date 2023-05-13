@@ -10,8 +10,8 @@ cask "sparkleshare" do
 
   livecheck do
     url "https://github.com/hbons/SparkleShare/releases/"
-    strategy :page_match
     regex(/sparkleshare[._-]?mac[._-]?(\d+(?:\.\d+)*)\.zip/i)
+    strategy :page_match
   end
 
   app "SparkleShare.app"

@@ -1,6 +1,6 @@
 cask "xampp" do
-  version "8.2.0-0"
-  sha256 "4702e3d6e9f9920e8f63d7f9e1bffa258405cf7298a766f767d237abd1fa6f23"
+  version "8.2.4-0"
+  sha256 "eb9888f2e3b131ae9a5fbec063a6b642a7285e065a8e5f5e97c699b71e2d7ac5"
 
   url "https://downloads.sourceforge.net/xampp/xampp-osx-#{version}-installer.dmg",
       verified: "downloads.sourceforge.net/xampp/"
@@ -26,4 +26,6 @@ cask "xampp" do
               sudo:       true,
             },
             delete: "/Applications/XAMPP/"
+
+  # No zap stanza required
 end

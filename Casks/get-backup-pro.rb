@@ -1,6 +1,6 @@
 cask "get-backup-pro" do
-  version "3.7,1722"
-  sha256 "adef97f51d24ad5fc2e68fb4841d67bb37dd4d5ceae129995172e049e8af05ef"
+  version "3.7.1"
+  sha256 "53adcbb18f4d7f4fbd06f97f05ce7719a622512a137595c6498bc2fe106ca9a4"
 
   url "https://belightsoft.s3.amazonaws.com/updates/Get+Backup+Pro+#{version.major}.zip",
       verified: "belightsoft.s3.amazonaws.com/updates/"
@@ -10,7 +10,7 @@ cask "get-backup-pro" do
 
   livecheck do
     url "https://www.belightsoft.com/download/updates/appcast_getbackup_pro#{version.major}.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

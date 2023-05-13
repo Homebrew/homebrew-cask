@@ -1,15 +1,15 @@
 cask "latest" do
-  version "0.8.3,820"
-  sha256 "ecd8161f44719285b62e845bc60fbf1cfe93e9a571c8f8745971bfc69fd69551"
+  version "0.9"
+  sha256 "4c8b29bfba9da175de7418fd490222ebdffebd63719123f0e7548ca5cade8f89"
 
-  url "https://max.codes/latest/#{version.csv.first}.zip"
+  url "https://max.codes/latest/#{version}.zip"
   name "Latest"
   desc "Utility that shows the latest app updates"
   homepage "https://max.codes/latest"
 
   livecheck do
     url "https://max.codes/latest/update.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

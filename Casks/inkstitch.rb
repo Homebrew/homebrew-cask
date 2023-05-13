@@ -3,6 +3,7 @@ cask "inkstitch" do
 
   on_high_sierra :or_older do
     sha256 "3d6dfc5539c86840715e8edf03e79dee11fe2a85b91043a81a9c09ea050a75f7"
+
     url "https://github.com/inkstitch/inkstitch/releases/download/v#{version}/inkstitch-v#{version}-sierra-osx.pkg",
         verified: "github.com/inkstitch/inkstitch/"
 
@@ -10,6 +11,7 @@ cask "inkstitch" do
   end
   on_mojave :or_newer do
     sha256 "44706a29277ed14bee11c3bbdae748ac8b97d203b0a1232c278611f918ac1cfb"
+
     url "https://github.com/inkstitch/inkstitch/releases/download/v#{version}/inkstitch-v#{version}-osx.pkg",
         verified: "github.com/inkstitch/inkstitch/"
 

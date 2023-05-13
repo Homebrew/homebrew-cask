@@ -18,8 +18,8 @@ cask "appgate-sdp-client" do
     end
   end
   on_big_sur :or_newer do
-    version "6.1.1"
-    sha256 "e3637fda0b8c7d2429fbdf0af0f8525710c4f6425a138b7591e83d54c069ed8d"
+    version "6.1.3"
+    sha256 "781e32e29130498cc5f374efdceb129d9f394dac47801a3cb723fe40ff8899fe"
 
     livecheck do
       url :homepage
@@ -36,7 +36,7 @@ cask "appgate-sdp-client" do
         # Check the page for the newest major/minor version, which links to the
         # latest disk image file (containing the full version in the file name)
         version_page = Homebrew::Livecheck::Strategy.page_content(
-          URI.join("https://www.appgate.com/", version_page_path),
+          URI.join("https://www.appgate.com/", version_page_path).to_s,
         )
         next [] if version_page[:content].blank?
 

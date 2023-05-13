@@ -1,6 +1,6 @@
 cask "clips-ide" do
-  version "6.40"
-  sha256 "fc76fc5cc97f2d6fc00a72f43983765adb500d8c249cd75b5fdf57f799c3c895"
+  version "6.4.1"
+  sha256 "aa5b0326c378fe4a798eca91005fc221160f9915de1f134f95fc164c5c4ea008"
 
   url "https://downloads.sourceforge.net/clipsrules/clips_macos_executable_#{version.no_dots}.dmg",
       verified: "downloads.sourceforge.net/clipsrules/"
@@ -10,8 +10,8 @@ cask "clips-ide" do
 
   livecheck do
     url "https://sourceforge.net/projects/clipsrules/files/latest/download"
-    strategy :header_match
     regex(%r{/CLIPS/(\d+(?:\.\d+)+)/}i)
+    strategy :header_match
   end
 
   depends_on macos: ">= :el_capitan"
