@@ -11,7 +11,7 @@ cask "time-to-leave" do
   # on the GitHub releases page, so we have to use the `GithubLatest` strategy.
   livecheck do
     url :url
-    regex(%r{href=["']?[^"' >]*?/tag/\D*([^"' >]+?)["' >]}i)
+    regex(/^\D*?(\d+(?:\.\d+)+)$/i)
     strategy :github_latest
   end
 

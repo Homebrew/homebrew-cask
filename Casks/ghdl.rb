@@ -16,4 +16,6 @@ cask "ghdl" do
   end
 
   binary "bin/ghdl"
+
+  # No zap stanza required
 end

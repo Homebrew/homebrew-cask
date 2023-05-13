@@ -13,7 +13,7 @@ cask "onlyoffice" do
 
   livecheck do
     url :url
-    regex(%r{href=["']?[^"' >]*?/tag/[^"' >]*?(\d+(?:\.\d+)+)["' >]}i)
+    regex(/(\d+(?:\.\d+)+)/i)
     strategy :github_latest
   end
 

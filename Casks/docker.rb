@@ -6,23 +6,23 @@ cask "docker" do
     sha256 arm:   "fc8609d57fb8c8264122f581c0f66497e46e171f8027d85d90213527d6226362",
            intel: "bee41d646916e579b16b7fae014e2fb5e5e7b5dbaf7c1949821fd311d3ce430b"
 
-    depends_on macos: ">= :catalina"
-
     livecheck do
       skip "Legacy version"
     end
+
+    depends_on macos: ">= :catalina"
   end
   on_big_sur :or_newer do
-    version "4.18.0,104112"
-    sha256 arm:   "2ae4b2ec556c107f969e51b72ad1920fefa38dbd0d8e3db64815c26b9f2b126d",
-           intel: "2e099af08e17666228282b970992160fa423ce8f5fa9e36b79495a1960803091"
-
-    depends_on macos: ">= :big_sur"
+    version "4.19.0,106363"
+    sha256 arm:   "4bb0ef4dcceef1cd6e7b1f59bc60e71265952275ce166e749df17ea8a8f492aa",
+           intel: "07b54cc6a2c61f7f37bfa8698449a9db857e4b94133e3614a42a9d8345bc561b"
 
     livecheck do
       url "https://desktop.docker.com/mac/main/#{arch}/appcast.xml"
       strategy :sparkle
     end
+
+    depends_on macos: ">= :big_sur"
   end
 
   url "https://desktop.docker.com/mac/main/#{arch}/#{version.csv.second}/Docker.dmg"
@@ -116,8 +116,15 @@ cask "docker" do
       ]
 
   caveats <<~EOS
-    If your CLI tools were symlinked to $HOME/.docker/bin your path should be modified to include:
+    CLI tools are installed after launching Docker. They will be symlinked to
+    one of the following based on your preference:
 
-      $HOME/.docker/bin
+        /usr/local/bin
+        $HOME/.docker/bin
+
+    If your CLI tools were symlinked to $HOME/.docker/bin your path should be
+    modified to include:
+
+        $HOME/.docker/bin
   EOS
 end

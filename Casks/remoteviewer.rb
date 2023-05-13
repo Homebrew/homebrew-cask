@@ -14,4 +14,6 @@ cask "remoteviewer" do
   end
 
   app "RemoteViewer.app"
+
+  # No zap stanza required
 end

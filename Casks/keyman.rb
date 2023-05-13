@@ -27,9 +27,10 @@ cask "keyman" do
 
        Preferences → Keyboard → Input Sources
 
-    Before uninstalling Keyman, it is also suggested to manually remove the input method.
+    Before uninstalling Keyman, it is also suggested to manually remove the
+    input method. For further details, see the following links:
 
-    See https://help.keyman.com/products/mac/current-version/start/install-keyman.
-    and https://help.keyman.com/products/mac/current-version/troubleshooting/uninstall-keyman.
+    https://help.keyman.com/products/mac/current-version/start/install-keyman
+    https://help.keyman.com/products/mac/current-version/troubleshooting/uninstall-keyman
   EOS
 end

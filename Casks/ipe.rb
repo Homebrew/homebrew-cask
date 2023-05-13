@@ -1,6 +1,6 @@
 cask "ipe" do
-  version "7.2.26"
-  sha256 "93b9b39373b7dffa44b17e7f99bb1078d2d5742e50ff2940d8feef9a8b42e0fe"
+  version "7.2.27"
+  sha256 "aff73ce137393886903f27b0c7aec082cfcb7c8b1b107b22e8fe2e761a2b6702"
 
   url "https://github.com/otfried/ipe/releases/download/v#{version}/ipe-#{version}-mac.dmg",
       verified: "github.com/otfried/ipe/"

@@ -1,6 +1,6 @@
 cask "ubports-installer" do
-  version "0.9.7-beta"
-  sha256 "0800c9151d7abbd207404644ae4707f20d9b487586b0184952566cabc01f4dda"
+  version "0.10.0"
+  sha256 "1a9e1bb64c8a714e239a985a521e7ca38b46a77bfc3c80adbf938e3078d51c2f"
 
   url "https://github.com/ubports/ubports-installer/releases/download/#{version}/ubports-installer_#{version}_mac_x64.dmg",
       verified: "github.com/ubports/ubports-installer/"
@@ -10,7 +10,7 @@ cask "ubports-installer" do
 
   livecheck do
     url :url
-    regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)+(?:-beta)?)["' >]}i)
+    regex(/v?(\d+(?:\.\d+)+(?:-beta)?)/i)
     strategy :github_latest
   end
 

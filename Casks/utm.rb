@@ -1,6 +1,6 @@
 cask "utm" do
-  version "4.1.6"
-  sha256 "774c44343f79bbf3c59ca7e880bc0edaf2e0bfeb50b9b31e6bc5d648946e645e"
+  version "4.2.5"
+  sha256 "4f74c0f82c1d74db542fcd3101244249ccc60362cb4f03c4036fa39dcf66ea36"
 
   url "https://github.com/utmapp/UTM/releases/download/v#{version}/UTM.dmg",
       verified: "github.com/utmapp/UTM/"
@@ -10,7 +10,7 @@ cask "utm" do
 
   livecheck do
     url :url
-    regex(%r{href=.*?/tag/v?(\d+(?:[.-]\d+)+)["' >]}i)
+    regex(/v?(\d+(?:[.-]\d+)+)/i)
     strategy :github_latest
   end
 

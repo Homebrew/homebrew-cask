@@ -1,15 +1,18 @@
 cask "mochi" do
-  version "1.15.21"
-  sha256 "d6a5838cd2ff5ff015e89c39be7b92c60e294a0a96ac581ce4a789bbf9f4d476"
+  arch arm: "-arm64"
 
-  url "https://mochi.cards/releases/Mochi-#{version}.dmg"
+  version "1.15.22"
+  sha256 arm:   "795cc071be70e5a0619b2b93941f67ee62c70f605e8738444ba8872ca1131774",
+         intel: "f5103d68993227b61e9f2ca9b4336d0209cca65d77e320ceb3d1ac0fbd813d3e"
+
+  url "https://mochi.cards/releases/Mochi-#{version}#{arch}.dmg"
   name "Mochi"
   desc "Study notes and flashcards using spaced repetition"
   homepage "https://mochi.cards/"
 
   livecheck do
     url :homepage
-    regex(/href=.*?Mochi[._-]?v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/href=.*?Mochi[._-]?v?(\d+(?:\.\d+)+)#{arch}\.dmg/i)
   end
 
   app "Mochi.app"

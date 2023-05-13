@@ -9,8 +9,18 @@ cask "cisdem-pdf-converter-ocr" do
 
   livecheck do
     url "https://www.cisdem.com/js/notes/pdf-converter-ocr-mac.js"
-    regex(/(\d+(?:\.\d+)*)\s+\(\d+(?:-\d+)+\)/)
+    regex(/(\d+(?:\.\d+)*)\s+\(\d+(?:-\d+)+\)/i)
   end
 
   app "Cisdem PDF Converter OCR.app"
+
+  zap trash: [
+    "~/Documents/Cisdem PDF Converter OCR",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.cisdem.pdfconverterocr.sfl2",
+    "~/Library/Application Support/com.cisdem.pdfconverterocr",
+    "~/Library/Caches/com.cisdem.pdfconverterocr",
+    "~/Library/HTTPStorages/com.cisdem.pdfconverterocr",
+    "~/Library/Preferences/com.cisdem.pdfconverterocr.plist",
+    "~/Library/Saved Application State/com.cisdem.pdfconverterocr.savedState",
+  ]
 end

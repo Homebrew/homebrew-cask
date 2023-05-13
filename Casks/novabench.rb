@@ -1,5 +1,5 @@
 cask "novabench" do
-  version "5.1.1"
+  version "5.2.2"
   sha256 :no_check
 
   url "https://novabench.com/files/novabench.dmg"
@@ -9,7 +9,7 @@ cask "novabench" do
 
   livecheck do
     url "https://novabench.com/download#personal"
-    regex(/Novabench\s*(?:<!--[^>]*-->)?\s*(\d+(?:\.\d+)*)/)
+    regex(/Novabench\s*(?:<!--[^>]*-->)?\s*(\d+(?:\.\d+)*)/i)
   end
 
   app "Novabench.app"

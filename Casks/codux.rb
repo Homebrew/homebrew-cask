@@ -1,32 +1,24 @@
 cask "codux" do
   arch arm: "arm64", intel: "x64"
 
-  on_arm do
-    version "15.1.0,e855c7_dfd619ea74f74cb8ac5450619cb58aa9"
-    sha256 "61a2f8e4e50fb7ea974aca0d332911314b47e4a78ed0a722b749f3b00848dedf"
-  end
-  on_intel do
-    version "15.1.0,e855c7_ee2eb78e05b043a8a6fdbeac60a4e1f5"
-    sha256 "5773eabf1ae49cd69753bea820c43d0d0e55c04a436b50a1fd009b3d3de9e5a5"
-  end
+  version "15.2.1"
+  sha256 arm:   "d50a4e9a078e6e2908e9117806c781fce5cdce7d3e650dbf2f87f8d346dd344a",
+         intel: "49cf93f25733cafeb5557547dabf1d69ff10d6c55066a6920e8bdd5430bfe067"
 
-  url "https://95610582-f2db-4cc9-be23-c529650d1ad9.filesusr.com/archives/#{version.csv.second}.zip?dn=Codux-#{version.csv.first}.#{arch}-dmg.zip",
-      verified: "95610582-f2db-4cc9-be23-c529650d1ad9.filesusr.com/archives/"
+  url "https://github.com/wixplosives/codux-versions/releases/download/#{version}/Codux-#{version}.#{arch}.dmg",
+      verified: "github.com/wixplosives/codux-versions/"
   name "Codux"
   desc "React IDE built to visually edit component styling and layouts"
   homepage "https://www.codux.com/"
-
-  livecheck do
-    url "https://www.codux.com/download/"
-    regex(%r{archives/(.+?)\.zip\?dn=Codux[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}[._-]dmg\.zip}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
-    end
-  end
 
   depends_on macos: ">= :catalina"
 
   app "Codux.app"
 
-  zap trash: "~/Library/Application Support/Codux"
+  zap trash:
+             [
+               "~/Library/Application Support/Codux",
+               "~/Library/Preferences/com.wixc3.wcs.plist",
+               "~/Library/Saved Application State/com.wixc3.wcs.savedState",
+             ]
 end

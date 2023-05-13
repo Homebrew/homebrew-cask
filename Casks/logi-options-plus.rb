@@ -1,5 +1,5 @@
 cask "logi-options-plus" do
-  version "1.36"
+  version "1.40.402749"
   sha256 :no_check
 
   url "https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer.zip",
@@ -10,7 +10,6 @@ cask "logi-options-plus" do
 
   livecheck do
     url "https://support.logi.com/hc/en-gb/articles/1500005516462"
-    strategy :page_match
     regex(/version\D*?(\d+(?:\.\d+)+)/i)
   end
 
@@ -24,37 +23,37 @@ cask "logi-options-plus" do
     sudo:       true,
   }
 
-  uninstall script:    [
-              executable: "logioptionsplus_installer.app/Contents/MacOS/logioptionsplus_installer",
-              args:       ["--quiet", "--uninstall"],
-              sudo:       true,
-            ],
-            launchctl: [
-              "com.logi.cp-dev-mgr",
-              "com.logi.optionsplus",
-              "com.logi.optionsplus.agent",
-              "com.logi.optionsplus.updater",
-            ],
-            quit:      [
-              "com.logi.cp-dev-mgr",
-              "com.logi.optionsplus",
-              "com.logi.optionsplus.agent",
-              "com.logi.optionsplus.updater",
-            ],
-            delete:    [
-              "/Applications/logioptionsplus.app",
-              "/Library/LaunchAgents/com.logi.optionsplus.plist",
-              "/Library/LaunchDaemons/com.logi.optionsplus.updater.plist",
-            ]
-
-  zap trash: [
-    "/Users/Shared/LogiOptionsPlus",
-    "~/Library/Application Support/LogiOptionsPlus",
-    "~/Library/Application Support/logioptionsplus",
-    "~/Library/Preferences/com.logi.cp-dev-mgr.plist",
-    "~/Library/Preferences/com.logi.optionsplus.plist",
-    "~/Library/Saved Application State/com.logi.optionsplus.savedState",
+  uninstall script: [
+    executable: "logioptionsplus_installer.app/Contents/MacOS/logioptionsplus_installer",
+    args:       ["--quiet", "--uninstall"],
+    sudo:       true,
   ]
+
+  zap launchctl: [
+        "com.logi.cp-dev-mgr",
+        "com.logi.optionsplus",
+        "com.logi.optionsplus.agent",
+        "com.logi.optionsplus.updater",
+      ],
+      quit:      [
+        "com.logi.cp-dev-mgr",
+        "com.logi.optionsplus",
+        "com.logi.optionsplus.agent",
+        "com.logi.optionsplus.updater",
+      ],
+      delete:    [
+        "/Applications/logioptionsplus.app",
+        "/Library/LaunchAgents/com.logi.optionsplus.plist",
+        "/Library/LaunchDaemons/com.logi.optionsplus.updater.plist",
+      ],
+      trash:     [
+        "/Users/Shared/LogiOptionsPlus",
+        "~/Library/Application Support/LogiOptionsPlus",
+        "~/Library/Application Support/logioptionsplus",
+        "~/Library/Preferences/com.logi.cp-dev-mgr.plist",
+        "~/Library/Preferences/com.logi.optionsplus.plist",
+        "~/Library/Saved Application State/com.logi.optionsplus.savedState",
+      ]
 
   caveats do
     reboot

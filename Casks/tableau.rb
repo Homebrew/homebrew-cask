@@ -30,4 +30,16 @@ cask "tableau" do
     "com.tableausoftware.postgresql",
     "simba.sparkodbc",
   ]
+
+  zap trash:  [
+        "/Library/Preferences/com.tableau.Tableau-#{version.major_minor}.plist",
+        "~/Documents/My Tableau Repository",
+        "~/Library/Caches/com.tableau.caching",
+        "~/Library/Caches/com.tableausoftware.MapTiles",
+        "~/Library/Preferences/com.tableau.Registration.plist",
+        "~/Library/Preferences/com.tableau.Tableau-#{version.major_minor}.plist",
+        "~/Library/Saved Application State/com.tableausoftware.tableaudesktop.savedState",
+        "~/Library/Tableau",
+      ],
+      delete: "/Library/Preferences/com.tableau.Tableau-#{version.major_minor}.plist"
 end

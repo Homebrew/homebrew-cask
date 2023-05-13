@@ -1,6 +1,6 @@
 cask "ueli" do
-  version "8.23.2"
-  sha256 "12f0b87c3f5e45a8bb8de7aae8c1f5d2612a4b7cecd5089c3111baf79a4de3d5"
+  version "8.24.0"
+  sha256 "f7ee0cc53d507486dbbf3d9615095026c72127027577bcfd545d24eb9366025c"
 
   url "https://github.com/oliverschwendener/ueli/releases/download/v#{version}/ueli-#{version}.dmg",
       verified: "github.com/oliverschwendener/ueli/"

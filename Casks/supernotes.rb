@@ -1,6 +1,6 @@
 cask "supernotes" do
-  version "2.3.1"
-  sha256 "767e0a778c0c030dac6783da0481197fca0d595bfd797b4eda01275a7e885c31"
+  version "2.4.1"
+  sha256 "1b671182075881353494233b03719cd37abea502dd1cb68826b2bfccbbb800e7"
 
   url "https://download.supernotes.app/Supernotes-#{version}.dmg"
   name "Supernotes"
@@ -15,12 +15,13 @@ cask "supernotes" do
   end
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :high_sierra"
 
   app "Supernotes.app"
 
   zap trash: [
     "~/Library/Application Support/Supernotes",
+    "~/Library/Logs/Supernotes",
     "~/Library/Preferences/app.supernotes.SupernotesDesktop.plist",
     "~/Library/Saved Application State/app.supernotes.SupernotesDesktop.savedState",
   ]

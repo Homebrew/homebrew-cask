@@ -16,7 +16,8 @@ cask "ioquake3" do
   app "ioquake3.app"
 
   caveats <<~EOS
-    To complete the installation of #{token}, you will have to copy the file 'pak0.pk3' from your Quake 3 Arena installation support directory into
+    To complete the installation of #{token}, you will have to copy the file
+    'pak0.pk3' from your Quake 3 Arena installation support directory into
 
     #{appdir}/ioquake3/baseq3/ or ~/Library/Application Support/Quake3/baseq3/
 

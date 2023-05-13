@@ -1,8 +1,8 @@
 cask "chrysalis" do
-  version "0.12.0"
-  sha256 "d62dec3768e5393f4ac5e496ee265206e1f52620c19c7f0c35f5e11d654be685"
+  version "0.13.2"
+  sha256 "696ebda9d8b70b59073cde6960fbb0b5b704329497e2a1a3022e8a2414f2e498"
 
-  url "https://github.com/keyboardio/Chrysalis/releases/download/v#{version}/Chrysalis-#{version}.dmg"
+  url "https://github.com/keyboardio/Chrysalis/releases/download/v#{version}/Chrysalis-#{version}-universal.dmg"
   name "Chrysalis"
   desc "Graphical configurator for Kaleidoscope-powered keyboards"
   homepage "https://github.com/keyboardio/Chrysalis"
@@ -12,7 +12,7 @@ cask "chrysalis" do
   # tag in a different repository, which led to an incorrect version match.
   livecheck do
     url :url
-    regex(%r{href=.*?/Chrysalis/releases/tag/v?(\d+(?:\.\d+)+)["' >]}i)
+    regex(/v?(\d+(?:\.\d+)+)/i)
     strategy :github_latest
   end
 

@@ -13,7 +13,7 @@ cask "slicer" do
     regex(%r{href=.*?/bitstream/(\h+)["' >].+?["']header["'][^>]*?>\s*v?(\d+(?:\.\d+)+)}im)
     strategy :page_match do |page, regex|
       match = page.scan(regex)
-      next unless match.length >= 2
+      next if match.length < 2
 
       "#{match[1][1]},#{match[1][0]}"
     end

@@ -38,6 +38,8 @@ cask "android-ndk" do
     FileUtils.rm_f("#{HOMEBREW_PREFIX}/share/android-ndk")
   end
 
+  # No zap stanza required
+
   caveats <<~EOS
     You may want to add to your profile:
        'export ANDROID_NDK_HOME="#{HOMEBREW_PREFIX}/share/android-ndk"'

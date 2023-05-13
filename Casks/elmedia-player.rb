@@ -1,5 +1,5 @@
 cask "elmedia-player" do
-  version "8.15,3307"
+  version "8.15"
   sha256 :no_check
 
   url "https://cdn.electronic.us/products/elmedia/mac/download/elmediaplayer.dmg"
@@ -9,7 +9,7 @@ cask "elmedia-player" do
 
   livecheck do
     url "https://cdn.electronic.us/products/elmedia/mac/update/settings.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

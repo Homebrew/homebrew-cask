@@ -21,7 +21,7 @@ jobs:
 
       - name: Add 👍 Reaction
         if: always() && steps.rebase.outputs.rebased-count == 1
-        uses: peter-evans/create-or-update-comment@3383acd359705b10cb1eeef05c0e88c056ea4666
+        uses: peter-evans/create-or-update-comment@ca08ebd5dc95aa0cd97021e9708fcd6b87138c9b
         with:
           token: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
           repository: ${{ github.event.client_payload.github.payload.repository.full_name }}
@@ -30,7 +30,7 @@ jobs:
 
       - name: Add 👎 Reaction
         if: always() && steps.rebase.outputs.rebased-count != 1
-        uses: peter-evans/create-or-update-comment@3383acd359705b10cb1eeef05c0e88c056ea4666
+        uses: peter-evans/create-or-update-comment@ca08ebd5dc95aa0cd97021e9708fcd6b87138c9b
         with:
           token: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
           repository: ${{ github.event.client_payload.github.payload.repository.full_name }}

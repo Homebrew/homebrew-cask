@@ -44,7 +44,9 @@ cask "basictex" do
       ]
 
   caveats <<~EOS
-    You must restart your terminal window for the installation of MacTeX CLI tools to take effect.
+    You must restart your terminal window for the installation of MacTeX CLI
+    tools to take effect.
+
     Alternatively, Bash and Zsh users can run the command:
 
       eval "$(/usr/libexec/path_helper)"

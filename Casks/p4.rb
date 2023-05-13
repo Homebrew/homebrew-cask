@@ -21,4 +21,6 @@ cask "p4" do
   container type: :naked
 
   binary "bin.macosx1015x86_64", target: "p4"
+
+  # No zap stanza required
 end

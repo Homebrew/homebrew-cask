@@ -10,7 +10,7 @@ cask "adguard-vpn" do
   livecheck do
     url "https://static.adguard-vpn.com/mac/adguard-release-appcast.xml"
     strategy :sparkle do |item|
-      item.short_version.sub(/ release.*/, "")
+      item.short_version.delete_suffix(" release")
     end
   end
 

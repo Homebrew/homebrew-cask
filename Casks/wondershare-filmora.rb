@@ -1,22 +1,25 @@
 cask "wondershare-filmora" do
-  version "12.2.5"
-  sha256 :no_check
+  arch arm: "arm_"
 
-  url "https://download.wondershare.com/filmora-mac_full718.dmg"
+  version "12.3.2"
+  sha256 arm:   "d93d535910495653efc177484f7f21dff34d353e46ce5c73fadcb787dd2ccef5",
+         intel: "eaa1f9ba1d53a31d871c6820b1a1632193e290b863e4c89b6fda2a2be8f68192"
+
+  url "https://download.wondershare.com/cbs_down/filmora-mac_#{arch}#{version}_gray_full718.dmg"
   name "Wondershare Filmora"
   desc "Video editor"
   homepage "https://filmora.wondershare.com/video-editor-mac/"
 
   livecheck do
-    url "https://cbs.wondershare.com/go.php?m=upgrade_info&pid=718"
-    regex(/<version>(\d+(?:\.\d+)+).*?version>/i)
+    url "https://crm.wondershare.com/api/v1/support/718/release-versions"
+    strategy :json do |json|
+      json["data"].map { |release| release["version_name"] }
+    end
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
-  installer manual: "Wondershare Filmora Installer.app"
-
-  uninstall delete: "/Applications/Wondershare Filmora #{version.major}.app"
+  app "Wondershare Filmora X.app"
 
   zap trash: [
     "/Users/Shared/wondershare.plist",

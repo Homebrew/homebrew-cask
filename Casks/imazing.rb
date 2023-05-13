@@ -38,6 +38,6 @@ cask "imazing" do
 
   caveats <<~EOS
     Performing a zap on this cask removes files pertaining to both #{token}
-    and imazing-mini, so it should not be done if you only want to uninstall one of them.
+    and imazing-mini. It should be done only if you want to uninstall both.
   EOS
 end

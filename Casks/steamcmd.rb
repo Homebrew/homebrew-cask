@@ -1,5 +1,5 @@
 cask "steamcmd" do
-  version "1679680174"
+  version "1682708339"
   sha256 :no_check
 
   url "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_osx.tar.gz",
@@ -10,7 +10,7 @@ cask "steamcmd" do
 
   livecheck do
     url "http://media.steampowered.com/client/steam_cmd_osx"
-    regex(/"version"\s*"([^"]+)"/)
+    regex(/"version"\s*"([^"]+)"/i)
   end
 
   auto_updates true

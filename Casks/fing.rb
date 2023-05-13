@@ -1,6 +1,6 @@
 cask "fing" do
-  version "3.2.1"
-  sha256 "6ff467c8f169864c307907f20bfa1d0666104a04f1d9b52fc64a3664392f2d1f"
+  version "3.3.0"
+  sha256 "0becb7eb4772f19f9751e8f9577f397205a63cf478c3d47d8c6b449343c35021"
 
   url "https://get.fing.com/fing-desktop-releases/mac/Fing-#{version}.dmg"
   name "Fing Desktop"
@@ -18,6 +18,7 @@ cask "fing" do
 
   zap trash: [
     "~/Library/Application Support/Fing",
+    "~/Library/Logs/Fing",
     "~/Library/Preferences/com.fing.app.plist",
     "~/Library/Saved Application State/com.fing.app.savedState",
   ]

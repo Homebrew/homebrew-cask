@@ -10,7 +10,7 @@ cask "plover" do
 
   livecheck do
     url :url
-    regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)+[\w.]+)["' >]}i)
+    regex(/v?(\d+(?:\.\d+)+[\w.]+)/i)
     strategy :github_latest
   end
 
@@ -19,7 +19,7 @@ cask "plover" do
   zap trash: "~/Library/Application Support/plover/"
 
   caveats <<~EOS
-    Version 4 is a major change and the configuration file it creates is not compatible with
-    Plover 3 or earlier. Please backup your plover.cfg.
+    Version 4 is a major change and the configuration file it creates is not
+    compatible with Plover 3 or earlier. Please backup your plover.cfg.
   EOS
 end

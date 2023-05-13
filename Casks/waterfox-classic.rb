@@ -10,7 +10,7 @@ cask "waterfox-classic" do
 
   livecheck do
     url :url
-    regex(%r{href=["']?[^"' >]*?/tag/v?(\d+(?:\.\d+)+)-classic["' >]}i)
+    regex(/v?(\d+(?:\.\d+)+)-classic/i)
     strategy :github_latest
   end
 

@@ -21,7 +21,8 @@ cask "universal-gcode-platform" do
   ]
 
   caveats <<~EOS
-    According to https://github.com/winder/Universal-G-Code-Sender/issues/1351#issuecomment-579110056
-    the UGS developers do not sign their code and this app might need manual changes.
+    UGS developers do not sign their code and this app may need manual changes.
+    For more information, see:
+      https://github.com/winder/Universal-G-Code-Sender/issues/1351#issuecomment-579110056
   EOS
 end

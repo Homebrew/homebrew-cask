@@ -1,11 +1,8 @@
 cask "shotcut" do
-  arch arm: "macos-ARM64", intel: "macos"
+  version "23.05.07"
+  sha256 "79c966294e854c67a5ec2b08d8c45f460d02c4da7dcc5239b6b9da99f371c276"
 
-  version "22.12.21"
-  sha256 arm:   "b473b7c553179e3a8bf0e2a0a21bc60df918b0f997a793e4c4a7586a6875c6d5",
-         intel: "f13b73d965ca2b8de2e436d9adfbd688fd7e213c356fa5a0c38352979203b890"
-
-  url "https://github.com/mltframework/shotcut/releases/download/v#{version}/shotcut-#{arch}-#{version.no_dots}.dmg",
+  url "https://github.com/mltframework/shotcut/releases/download/v#{version}/shotcut-macos-#{version.no_dots}.dmg",
       verified: "github.com/mltframework/shotcut/"
   name "Shotcut"
   desc "Video editor"
@@ -17,4 +14,10 @@ cask "shotcut" do
   end
 
   app "Shotcut.app"
+
+  zap trash: [
+    "~/Library/Application Support/Meltytech",
+    "~/Library/Caches/Meltytech",
+    "~/Library/Preferences/com.meltytech.Shotcut.plist",
+  ]
 end

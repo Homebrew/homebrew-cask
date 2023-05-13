@@ -12,7 +12,7 @@ cask "mambaforge" do
 
   livecheck do
     url :url
-    regex(%r{href=.*?/tag/v?(\d+(?:[._-]\d+)+)["' >]}i)
+    regex(/v?(\d+(?:[._-]\d+)+)/i)
     strategy :github_latest
   end
 

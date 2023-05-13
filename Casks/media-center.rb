@@ -1,10 +1,10 @@
 cask "media-center" do
-  version "30.00.87"
-  sha256 "21f746d514f725f2237ecd4a4115cb934459cbc01f4279885fe37b00a78ddbac"
+  version "31.00.09"
+  sha256 "f7c4c9be2d62a6bcaf85e9301300c63fe2dded3ff7d21aa09e90d6945da5d7db"
 
   url "https://files.jriver.com/mediacenter/channels/v#{version.major}/stable/MediaCenter#{version.no_dots}-Universal.dmg"
   name "JRiver Media Center"
-  desc "Manage and play your media"
+  desc "Media manager and player"
   homepage "https://www.jriver.com/"
 
   livecheck do

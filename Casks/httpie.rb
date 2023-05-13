@@ -1,9 +1,9 @@
 cask "httpie" do
   arch arm: "-arm64"
 
-  version "2023.1.2"
-  sha256 arm:   "1d9924a0c256fbbccff2e1f1ec0e0b826c4af5acc8184bd2fffb4e05f72a4f40",
-         intel: "23fcc2aff253aaf442b4083992db8be7d818d329be78db5c59fd19b9cf1c70f2"
+  version "2023.2.1"
+  sha256 arm:   "ebb01d1f8a940db8af227a37b5c03b02506ce1d8f140a66399f5128d2117a89c",
+         intel: "dd1cc1fb51bf6b45641c8ce55ae3d6fd03660b726513071dabea82873d810faa"
 
   url "https://github.com/httpie/desktop/releases/download/v#{version}/HTTPie-#{version}#{arch}.dmg",
       verified: "github.com/httpie/desktop/"

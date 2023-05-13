@@ -1,6 +1,6 @@
 cask "surge" do
-  version "5.0.1,2162,22743a4d2f1e0aeb0b872e8f544c2e69"
-  sha256 "c4271645d1b8fdf8e2ae3a66cdbbf18ccc7cc9e1ba81a9bb23216e58973171e4"
+  version "5.0.3,2199,c241935acf37b3ec7f7fa4f5120e8690"
+  sha256 "29290a8b4c7369df9c2f64f9561e14844faf242ef64ba7b70a81ceba898979ed"
 
   url "https://dl.nssurge.com/mac/v#{version.major}/Surge-#{version.tr(",", "-")}.zip"
   name "Surge"
@@ -18,6 +18,7 @@ cask "surge" do
   end
 
   auto_updates true
+  conflicts_with cask: "homebrew/cask-versions/surge4"
   depends_on macos: ">= :high_sierra"
 
   app "Surge.app"

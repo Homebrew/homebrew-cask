@@ -1,6 +1,6 @@
 cask "gamemaker" do
-  version "2023.2.1.75"
-  sha256 "1eb7510c3538b5a49f9a0d3099ccf82d0b254b100e56f0b285fc978f3f96d6d1"
+  version "2023.4.0.84"
+  sha256 "bb5bee2295982dad832cd975b4405aa4cc6f4b4ff9c9d4da4d86b41d739b89f6"
 
   url "https://gms.yoyogames.com/GameMaker-#{version}.pkg",
       verified: "gms.yoyogames.com/"
@@ -20,8 +20,8 @@ cask "gamemaker" do
     # This is because `open "$APP_PATH"&` is called from the postinstall
     # script of the package and we don't want any user intervention there.
     retries ||= 3
-    ohai "The GameMaker package postinstall script launches the GameMaker app" unless retries < 3
-    ohai "Attempting to close com.yoyogames.gms2 to avoid unwanted user intervention" unless retries < 3
+    ohai "The GameMaker package postinstall script launches the GameMaker app" if retries >= 3
+    ohai "Attempting to close com.yoyogames.gms2 to avoid unwanted user intervention" if retries >= 3
     return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/GameMaker.app"]
 
   rescue RuntimeError

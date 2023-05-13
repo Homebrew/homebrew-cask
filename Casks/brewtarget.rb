@@ -1,6 +1,6 @@
 cask "brewtarget" do
-  version "3.0.7"
-  sha256 "dcf2eef2713ec7a7f2017123bb2e506368835561972e851dbfa7cddb313e5dab"
+  version "3.0.8"
+  sha256 "59038b277bf9a94a2d2cc3aa2f112fdc7a851cc17ddecad3ada34f371a1c7178"
 
   url "https://github.com/Brewtarget/brewtarget/releases/download/v#{version}/brewtarget_#{version}.dmg"
   name "brewtarget"
@@ -8,4 +8,10 @@ cask "brewtarget" do
   homepage "https://github.com/Brewtarget/brewtarget/"
 
   app "brewtarget_#{version}.app"
+
+  zap trash: [
+    "~/Library/Preferences/brewtarget",
+    "~/Library/Preferences/com.brewtarget.Brewtarget.plist",
+    "~/Library/Saved Application State/com.brewtarget.Brewtarget.savedState",
+  ]
 end

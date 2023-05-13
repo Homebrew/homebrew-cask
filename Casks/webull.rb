@@ -1,12 +1,12 @@
 cask "webull" do
-  version "6.10.6"
-  sha256 "72dbbdfe81225365762c87f62dcf63ab78664580b82318ca07b5424bcfdf5ce2"
+  version "6.11.5"
+  sha256 "cf65cbf2a31775ee3e956578ffb7bddd4130c7ba5a530289a865567071059a30"
 
   url "https://u1sweb.webullfintech.com/us/Webull%20Desktop_#{version}_global_universalsigned.dmg",
       verified: "u1sweb.webullfintech.com/us/"
   name "Webull"
   desc "Desktop client for Webull Financial LLC"
-  homepage "https://webull.com/"
+  homepage "https://www.webull.com/"
 
   livecheck do
     url "https://infoapi.webullfintech.com/api/operation/appver/last?platform=qt_mac_global&osv=10.14"
@@ -17,5 +17,10 @@ cask "webull" do
 
   app "Webull Desktop.app"
 
-  zap trash: "~/Library/Application Support/Webull Desktop"
+  zap trash: [
+    "~/.config/Webull Desktop",
+    "~/Library/Application Support/Webull Desktop",
+    "~/Library/Preferences/com.webulldesktop.*",
+    "~/Library/Saved Application State/com.webull.desktop.v1.savedState",
+  ]
 end
