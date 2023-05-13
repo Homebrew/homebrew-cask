@@ -32,4 +32,11 @@ cask "ocenaudio" do
   depends_on macos: ">= :sierra"
 
   app "ocenaudio.app"
+
+  zap trash: [
+    "~/Library/Application Support/ocenaudio",
+    "~/Library/Caches/ocenaudio",
+    "~/Library/Preferences/com.ocenaudio.plist",
+    "~/Library/Saved Application State/com.ocenaudio.savedState",
+  ]
 end
