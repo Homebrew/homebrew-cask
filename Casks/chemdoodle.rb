@@ -19,4 +19,6 @@ cask "chemdoodle" do
   depends_on macos: ">= :el_capitan"
 
   suite "ChemDoodle"
+
+  zap trash: "~/Library/Saved Application State/com.iChemLabs.ChemDoodle.savedState"
 end
