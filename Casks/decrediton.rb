@@ -7,7 +7,7 @@ cask "decrediton" do
 
   url "https://github.com/decred/decred-binaries/releases/download/v#{version}/decrediton-#{arch}-v#{version}.dmg"
   name "Decrediton"
-  desc "GUI wallet for Decred supporting staking, privacy, and decentralized exchange"
+  desc "GUI for the Decred wallet"
   homepage "https://github.com/decred/decrediton"
 
   app "decrediton.app"
