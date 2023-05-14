@@ -6,8 +6,8 @@ cask "multiviewer-for-f1" do
     sha256 "e7e175800a53978dc70e8a7a9cd7311a2482f843e125a6b9c9b8ae722be5f994"
   end
   on_intel do
-    version "1.17.1,107099416"
-    sha256 "d546e8f28a36f5ca46a1e4f4d17e2f0e9a14983388fb63facea58b3344eeaccd"
+    version "1.17.4,108020187"
+    sha256 "a66b2934292a21ad3ef19775ad158012248cf77a6f557d006ba356cf95719bbc"
   end
 
   url "https://releases.multiviewer.app/download/#{version.csv.second}/MultiViewer.for.F1-#{version.csv.first}-#{arch}.dmg"
