@@ -1,6 +1,6 @@
 cask "gpxsee" do
-  version "13.1"
-  sha256 "1cc330473ecc04e884e39fc119c7c6078c3443ba188ff2139589b04551e5fd28"
+  version "13.2"
+  sha256 "874a83601337c804104ebf137e05fc62766ddf24e6a525f4f38ee95ab5a90a58"
 
   url "https://downloads.sourceforge.net/gpxsee/Mac%20OS%20X/GPXSee-#{version}.dmg",
       verified: "sourceforge.net/gpxsee/Mac%20OS%20X/"
