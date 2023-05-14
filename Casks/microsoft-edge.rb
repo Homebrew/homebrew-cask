@@ -37,7 +37,7 @@ cask "microsoft-edge" do
 
   zap delete: "/Library/Application Support/Microsoft/EdgeUpdater",
       rmdir:  "/Library/Application Support/Microsoft",
-      trash:   [
+      trash:  [
         "~/Library/Application Scripts/com.microsoft.edgemac.wdgExtension",
         "~/Library/Application Support/Microsoft Edge",
         "~/Library/Application Support/Microsoft/EdgeUpdater",
