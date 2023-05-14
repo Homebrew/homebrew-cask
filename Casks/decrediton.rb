@@ -1,13 +1,13 @@
 cask "decrediton" do
   arch arm: "arm64", intel: "amd64"
 
-  version "1.7.6"
-  sha256 arm:   "eeb40ec114f4e6b72524d565e722095f9ffd2b695a3ee96de84bfa91eeb15de8",
-         intel: "87ae20d41767b15fd40d91e18da0b3e2ecf9391d50d9d751c3e0bce8c87667f0"
+  version "1.7.7"
+  sha256 arm:   "20230c5494dbac62cfb4cab4e3a37b833c368eeb360e7dfd73232a10f1b2e9f3",
+         intel: "ba820a4a5b511ceff5817bc127cd8b624d8ba44bab721a4de436490441149f88"
 
   url "https://github.com/decred/decred-binaries/releases/download/v#{version}/decrediton-#{arch}-v#{version}.dmg"
   name "Decrediton"
-  desc "Wallet GUI for decred autonomous digital currency"
+  desc "GUI for the Decred wallet"
   homepage "https://github.com/decred/decrediton"
 
   app "decrediton.app"
