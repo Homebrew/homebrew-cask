@@ -8,16 +8,18 @@ cask "lo-rain" do
   homepage "https://lo.cafe/lo-rain"
 
   livecheck do
-    url "https://lo.cafe/lo-rain-files/lo-rain%20#{version}.dmg"
-    strategy :header_match
+    url "https://lo.cafe/lo-rain-files/appcast.xml"
+    strategy :sparkle, &:short_version
   end
+
+  depends_on macos: ">= :monterey"
 
   app "lo-rain.app"
 
   zap trash: [
     "~/Library/Caches/lo.cafe.lo-rain",
     "~/Library/HTTPStorages/lo.cafe.lo-rain",
-    "~/Library/Saved Application State/lo.cafe.lo-rain.savedState",
     "~/Library/Preferences/lo.cafe.lo-rain.plist",
+    "~/Library/Saved Application State/lo.cafe.lo-rain.savedState",
   ]
 end
