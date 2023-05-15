@@ -12,10 +12,8 @@ cask "jetbrains-gateway" do
 
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=GW&latest=true&type=release"
-    strategy :page_match do |page|
-      JSON.parse(page)["GW"].map do |release|
-        (release["build"]).to_s
-      end
+    strategy :json do |json|
+      json["GW"].map { |release| release["version"] }
     end
   end
 
