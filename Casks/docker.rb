@@ -39,47 +39,68 @@ cask "docker" do
     docker-compose
     docker-compose-completion
     docker-credential-helper-ecr
-    hyperkit
-    kubernetes-cli
   ]
 
   app "Docker.app"
-  binary "#{appdir}/Docker.app/Contents/Resources/etc/docker.bash-completion",
+  binary "Docker.app/Contents/Resources/bin/com.docker.cli",
+         target: "/usr/local/bin/com.docker.cli"
+  binary "Docker.app/Contents/Resources/bin/docker",
+         target: "/usr/local/bin/docker"
+  binary "Docker.app/Contents/Resources/bin/docker-compose",
+         target: "/usr/local/bin/docker-compose"
+  binary "Docker.app/Contents/Resources/bin/docker-compose-v1/docker-compose",
+         target: "/usr/local/bin/docker-compose-v1"
+  binary "Docker.app/Contents/Resources/bin/docker-credential-desktop",
+         target: "/usr/local/bin/docker-credential-desktop"
+  binary "Docker.app/Contents/Resources/bin/docker-credential-ecr-login",
+         target: "/usr/local/bin/docker-credential-ecr-login"
+  binary "Docker.app/Contents/Resources/bin/docker-credential-osxkeychain",
+         target: "/usr/local/bin/docker-credential-osxkeychain"
+  binary "Docker.app/Contents/Resources/bin/docker-index",
+         target: "/usr/local/bin/docker-index"
+  binary "Docker.app/Contents/Resources/bin/hub-tool",
+         target: "/usr/local/bin/hub-tool"
+  binary "Docker.app/Contents/Resources/bin/kubectl",
+         target: "/usr/local/bin/kubectl.docker"
+  binary "Docker.app/Contents/Resources/bin/com.docker.vpnkit",
+         target: "/usr/local/bin/vpnkit"
+  binary "Docker.app/Contents/Resources/etc/docker.bash-completion",
          target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/docker"
-  binary "#{appdir}/Docker.app/Contents/Resources/etc/docker-compose.bash-completion",
+  binary "Docker.app/Contents/Resources/etc/docker-compose.bash-completion",
          target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/docker-compose"
-  binary "#{appdir}/Docker.app/Contents/Resources/etc/docker.zsh-completion",
+  binary "Docker.app/Contents/Resources/etc/docker.zsh-completion",
          target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_docker"
-  binary "#{appdir}/Docker.app/Contents/Resources/etc/docker-compose.zsh-completion",
+  binary "Docker.app/Contents/Resources/etc/docker-compose.zsh-completion",
          target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_docker_compose"
-  binary "#{appdir}/Docker.app/Contents/Resources/etc/docker.fish-completion",
+  binary "Docker.app/Contents/Resources/etc/docker.fish-completion",
          target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/docker.fish"
-  binary "#{appdir}/Docker.app/Contents/Resources/etc/docker-compose.fish-completion",
+  binary "Docker.app/Contents/Resources/etc/docker-compose.fish-completion",
          target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/docker-compose.fish"
+
+  postflight do
+    kubectl_target = Pathname("/usr/local/bin/kubectl")
+
+    # Only link if `kubernetes-cli` is not installed.
+    next if kubectl_target.exist?
+
+    system_command "/bin/ln", args: ["-sfn", kubectl_target, staged_path/"Docker.app/Contents/Resources/bin/kubectl"],
+                              sudo: !kubectl_target.dirname.writable?
+  end
+
+  uninstall_postflight do
+    kubectl_target = Pathname("/usr/local/bin/kubectl")
+
+    if kubectl_target.symlink? && kubectl_target.readlink == staged_path/"Docker.app/Contents/Resources/bin/kubectl"
+      system_command "/bin/rm", args: [kubectl_target],
+                                sudo: !kubectl_target.dirname.writable?
+    end
+  end
 
   uninstall delete:    [
               "/Library/PrivilegedHelperTools/com.docker.socket",
               "/Library/PrivilegedHelperTools/com.docker.vmnetd",
-              "/usr/local/bin/com.docker.cli",
-              "/usr/local/bin/docker",
-              "/usr/local/bin/docker-compose",
-              "/usr/local/bin/docker-compose-v1",
-              "/usr/local/bin/docker-credential-desktop",
-              "/usr/local/bin/docker-credential-ecr-login",
-              "/usr/local/bin/docker-credential-osxkeychain",
-              "/usr/local/bin/hub-tool",
-              "/usr/local/bin/hyperkit",
-              "/usr/local/bin/kubectl.docker",
-              "/usr/local/bin/kubectl",
-              "/usr/local/bin/notary",
-              "/usr/local/bin/vpnkit",
-              "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_docker",
-              "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_docker_compose",
-              "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/docker.fish",
-              "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/docker-compose.fish",
-              "#{HOMEBREW_PREFIX}/etc/bash_completion.d/docker",
-              "#{HOMEBREW_PREFIX}/etc/bash_completion.d/docker-compose",
             ],
+            rmdir:     "~/.docker/bin",
             launchctl: [
               "com.docker.helper",
               "com.docker.socket",
@@ -114,17 +135,4 @@ cask "docker" do
         "~/Library/Caches/com.plausiblelabs.crashreporter.data",
         "~/Library/Caches/KSCrashReports",
       ]
-
-  caveats <<~EOS
-    CLI tools are installed after launching Docker. They will be symlinked to
-    one of the following based on your preference:
-
-        /usr/local/bin
-        $HOME/.docker/bin
-
-    If your CLI tools were symlinked to $HOME/.docker/bin your path should be
-    modified to include:
-
-        $HOME/.docker/bin
-  EOS
 end
