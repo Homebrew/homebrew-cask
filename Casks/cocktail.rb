@@ -83,8 +83,8 @@ cask "cocktail" do
     url "https://www.maintain.se/downloads/Cocktail#{version.major}VE.dmg"
 
     livecheck do
-      url :homepage
-      regex(/macOS\s*13(?:\.\d+)*.*?(\d+(?:\.\d+)+)/i)
+      url :url
+      strategy :extract_plist
     end
   end
 
