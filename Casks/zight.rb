@@ -1,24 +1,35 @@
 cask "zight" do
-  version "6.6.14,2412"
-  sha256 "49642e145af85b530d488ae7861b7de22a7e53930ec4736e9617113b632caa78"
+  version "6.7,2457"
+  sha256 "187f5ef38c7981034c4f9c2751672f821994d38768f196e1d2860cce6dda5962"
 
-  url "https://downloads.getcloudapp.com/mac/CloudApp-#{version.csv.first}.#{version.csv.last}.zip"
-  name "CloudApp"
+  url "https://downloads.getcloudapp.com/mac/Zight-#{version.csv.first}.#{version.csv.last}.zip",
+      verified: "downloads.getcloudapp.com"
+  name "Zight"
   desc "Visual communication platform"
-  homepage "https://www.getcloudapp.com/"
+  homepage "https://zight.com/"
 
   livecheck do
-    url "https://d2plwz9jdz9z5d.cloudfront.net/mac/latest/appcast.xml"
-    regex(%r{/CloudApp[._-](\d+(?:\.\d+)+)\.(\d+)\.zip}i)
-    strategy :sparkle do |item, regex|
-      item.url.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+    url "https://share.getcloudapp.com/api/v4/clients/mac/current-version"
+    strategy :sparkle do |item|
+      match = item.url.match(%r{/Zight[._-](\d+(?:\.\d+)+)\.(\d+)\.zip}i)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
     end
   end
 
   auto_updates true
   depends_on macos: ">= :mojave"
 
-  app "CloudApp.app"
+  app "Zight.app"
 
-  zap trash: "~/Library/Preferences/com.linebreak.CloudAppMacOSX.plist"
+  zap trash: [
+    "~/Library/Application Scripts/com.linebreak.CloudAppMacOSX.Share",
+    "~/Library/Application Support/com.linebreak.CloudAppMacOSX",
+    "~/Library/Caches/com.linebreak.CloudAppMacOSX",
+    "~/Library/Containers/com.linebreak.CloudAppMacOSX-LaunchAtLoginHelper",
+    "~/Library/Containers/com.linebreak.CloudAppMacOSX.Share",
+    "~/Library/Logs/Zight",
+    "~/Library/Preferences/com.linebreak.CloudAppMacOSX.plist",
+  ]
 end
