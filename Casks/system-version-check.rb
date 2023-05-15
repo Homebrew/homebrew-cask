@@ -8,7 +8,7 @@ cask "system-version-check" do
   homepage "https://github.com/leejongyoung"
 
   livecheck do
-    url "https://github.com/leejongyoung/System-Version-Checker/releases.atom"
+    url :stable
     strategy :github_latest
   end
 
