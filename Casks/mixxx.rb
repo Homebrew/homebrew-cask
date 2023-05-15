@@ -8,7 +8,7 @@ cask "mixxx" do
   homepage "https://www.mixxx.org/"
 
   livecheck do
-    url "https://www.mixxx.org/download/"
+    url "https://mixxx.org/download/"
     regex(%r{href=["']?https://downloads\.mixxx\.org/releases/.*/mixxx[-_.]v?(\d+(?:\.\d+)+)[-_.]macos(?:intel|arm)\.dmg}i)
   end
 
