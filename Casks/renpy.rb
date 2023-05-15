@@ -13,4 +13,9 @@ cask "renpy" do
   end
 
   suite "renpy-#{version}-sdk"
+
+  zap trash: [
+    "~/Library/RenPy",
+    "~/Library/Saved Application State/org.renpy.sdk.savedState",
+  ]
 end
