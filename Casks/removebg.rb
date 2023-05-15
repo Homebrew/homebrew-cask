@@ -13,4 +13,11 @@ cask "removebg" do
   end
 
   app "remove.bg.app"
+
+  zap trash: [
+    "~/Library/Application Support/remove.bg-desktop",
+    "~/Library/Logs/remove.bg",
+    "~/Library/Preferences/bg.remove.mac.new.plist",
+    "~/Library/Saved Application State/bg.remove.mac.new.savedState",
+  ]
 end
