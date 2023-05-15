@@ -8,6 +8,8 @@ cask "llamachat" do
   desc "Client for LLaMA models"
   homepage "https://llamachat.app/"
 
+  auto_updates true
+
   app "LlamaChat.app"
 
   zap trash: [
