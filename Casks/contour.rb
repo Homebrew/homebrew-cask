@@ -8,13 +8,13 @@ cask "contour" do
   homepage "https://github.com/contour-terminal/contour/"
 
   app "Contour.app"
-  binary "#{appdir}/Contour.app/Contents/MacOS/contour"
-  binary "#{appdir}/Contour.app/Contents/Resources/shell-integration/shell-integration.zsh",
+  binary "Contour.app/Contents/MacOS/contour"
+  binary "Contour.app/Contents/Resources/shell-integration/shell-integration.zsh",
          target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_contour"
-  binary "#{appdir}/Contour.app/Contents/Resources/terminfo/63/contour",
-         target: "#{ENV.fetch("TERMINFO", "#{Dir.home}/.terminfo")}/63/contour"
-  binary "#{appdir}/Contour.app/Contents/Resources/terminfo/63/contour-latest",
-         target: "#{ENV.fetch("TERMINFO", "#{Dir.home}/.terminfo")}/63/contour-latest"
+  binary "Contour.app/Contents/Resources/terminfo/63/contour",
+         target: "#{ENV.fetch("TERMINFO", "~/.terminfo")}/63/contour"
+  binary "Contour.app/Contents/Resources/terminfo/63/contour-latest",
+         target: "#{ENV.fetch("TERMINFO", "~/.terminfo")}/63/contour-latest"
 
   zap trash: "~/.config/contour"
 end

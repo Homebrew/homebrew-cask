@@ -9,7 +9,7 @@ cask "nanosaur" do
   homepage "https://jorio.itch.io/nanosaur"
 
   app "Nanosaur.app"
-  artifact "Documentation", target: "#{Dir.home}/Library/Application Support/Nanosaur"
+  artifact "Documentation", target: "~/Library/Application Support/Nanosaur"
 
   zap trash: [
     "~/Library/Preferences/Nanosaur",

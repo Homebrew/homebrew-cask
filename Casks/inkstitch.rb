@@ -31,14 +31,14 @@ cask "inkstitch" do
   depends_on macos: ">= :el_capitan"
 
   preflight do
-    system_command "/bin/mkdir",
-                   args: ["-p", "#{Dir.home}/Library/Application Support" \
-                                "/org.inkscape.Inkscape/config/inkscape/extensions"]
+    # This needs to exist, otherwise the installer gets stuck at a prompt asking the user to run Inkscape first.
+    inkscape_extensions = Pathname("~/Library/Application Support/org.inkscape.Inkscape/config/inkscape").expand_path
+    inkscape_extensions.mkpath
   end
 
   uninstall pkgutil: "org.inkstitch.installer",
             delete:  "~/Library/Application Support/org.inkscape.Inkscape/config/inkscape/extensions/inkstitch"
 
   zap trash: "~/Library/Application Support/inkstitch",
-      rmdir: "~/Library/Application Support/org.inkscape.Inkscape/config/inkscape/extensions/"
+      rmdir: "~/Library/Application Support/org.inkscape.Inkscape/config/inkscape/extensions"
 end
