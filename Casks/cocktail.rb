@@ -67,7 +67,7 @@ cask "cocktail" do
   end
   on_monterey do
     version "15.4"
-    sha256 "0425a38d56484d04e8c8a12d0be89402656701b78cd1df4bfb396fc1468051c7"
+    sha256 "fc27a3bacb1fbf3bff2e2978870ad1819952746508df3ed6ab3fb24b844ed214"
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}ME.dmg"
 
