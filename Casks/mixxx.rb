@@ -9,7 +9,7 @@ cask "mixxx" do
 
   livecheck do
     url "https://mixxx.org/download/"
-    regex(%r{href=["']?https://downloads\.mixxx\.org/releases/.*/mixxx[-_.]v?(\d+(?:\.\d+)+)[-_.]macos(?:intel|arm)\.dmg}i)
+    regex(%r{href=.*?/mixxx[._-]v?(\d+(?:\.\d+)+)[._-]macos(?:intel|arm)\.dmg}i)
   end
 
   app "Mixxx.app"
