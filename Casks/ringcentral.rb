@@ -1,7 +1,7 @@
 cask "ringcentral" do
   arch arm: "-arm"
 
-  version "23.1.22"
+  version "23.1.31"
   sha256 :no_check
 
   url "https://app.ringcentral.com/download/RingCentral#{arch}.pkg"
