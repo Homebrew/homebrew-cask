@@ -1,6 +1,6 @@
 cask "starsector" do
-  version "0.96a-RC8"
-  sha256 "b13b6742de7ef424a232a1360a35d35be08504ac2945fcd85dc8f7762ad9a3dd"
+  version "0.96a-RC9"
+  sha256 "3eb0645f3b78a4042907d41b87df1f729765e9b7baa91cb12507b27a3a88b70c"
 
   url "https://s3.amazonaws.com/fractalsoftworks/starsector/starsector_mac-#{version}.zip",
       verified: "s3.amazonaws.com/fractalsoftworks/"
