@@ -5,10 +5,14 @@ cask "llamachat" do
   url "https://github.com/alexrozanski/LlamaChat/releases/download/#{version}/LlamaChat.dmg",
       verified: "github.com/alexrozanski/LlamaChat/"
   name "LlamaChat"
-  desc "Chat with your favourite LLaMA models"
+  desc "Client for LLaMA models"
   homepage "https://llamachat.app/"
 
   app "LlamaChat.app"
 
-  zap trash: "~/Library/Application Support/com.alexrozanski.LlamaChat"
+  zap trash: [
+    "~/Library/Application Support/com.alexrozanski.LlamaChat",
+    "~/Library/HTTPStorages/com.alexrozanski.LlamaChat",
+    "~/Library/Preferences/com.alexrozanski.LlamaChat.plist",
+  ]
 end
