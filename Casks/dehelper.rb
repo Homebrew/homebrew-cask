@@ -1,5 +1,5 @@
 cask "dehelper" do
-  version "4.3.4"
+  version "4.3.7"
   sha256 :no_check
 
   url "https://static.frdic.com/pkg/dhmac.dmg",
