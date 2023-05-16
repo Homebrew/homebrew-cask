@@ -13,4 +13,10 @@ cask "aladin" do
   end
 
   app "Aladin.app"
+
+  zap trash: "~/.aladin"
+
+  caveats do
+    depends_on_java
+  end
 end
