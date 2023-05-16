@@ -12,6 +12,7 @@ cask "nightowl" do
     strategy :extract_plist
   end
 
+  auto_updates true
   depends_on macos: ">= :mojave"
 
   pkg "nightowl-#{version.csv.first}(release).pkg"
