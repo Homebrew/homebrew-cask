@@ -1,6 +1,5 @@
 cask "easyeda-pro" do
   arch arm: "arm64", intel: "x64"
-  
   version "1.9.30"
   sha256 arm:   "18e8fd382b3d0611ba198a41321637b11c9c4ccd69ec817cb7115504ce0d31bd",
          intel: "7621d4d0013d307951ad297d73ec4179bc27a58560a1056a5b645c2acbac0c36"
@@ -12,7 +11,7 @@ cask "easyeda-pro" do
 
   livecheck do
     url "https://easyeda.com/page/download"
-    regex(%r{href=.*?/easyeda[._-]pro[._-]mac[._-](arm64|x64)[._-]?(\d+(?:\.\d+)+)\.zip}i)
+    regex(%r{href=.*?/easyeda[._-]pro[._-]mac[._-](?:arm64|x64)[._-]?(\d+(?:\.\d+)+)\.zip}i)
   end
 
   app "EasyEDA Pro.app"
