@@ -10,12 +10,12 @@ cask "teamviewer" do
     pkg "TeamViewer.pkg"
   end
   on_mojave do
-    version "15.41.9"
+    version "15.41.10"
 
     pkg "TeamViewer.pkg"
   end
   on_catalina do
-    version "15.41.9"
+    version "15.41.10"
 
     # This Cask should be installed and uninstalled manually on Catalina.
     # See https://github.com/Homebrew/homebrew-cask/issues/76829
@@ -29,7 +29,7 @@ cask "teamviewer" do
     EOS
   end
   on_big_sur :or_newer do
-    version "15.41.9"
+    version "15.41.10"
 
     pkg "TeamViewer.pkg"
   end
