@@ -1,18 +1,18 @@
 cask "smooze" do
-  version "2.0.0"
+  version "1.9.26"
   sha256 :no_check
 
   url "https://smooze.co/updates/Smooze.dmg"
   name "Smooze"
-  desc "Rediscover your scroll wheel mouse"
+  desc "Animates scrolling and adds functionality to scroll-wheel mice"
   homepage "https://smooze.co/"
 
   livecheck do
-    url "https://smooze.co/updates/update.xml"
-    strategy :sparkle, &:short_version
+    skip "Legacy version"
   end
 
   auto_updates true
+  conflicts_with cask: "smooze-pro"
   depends_on macos: ">= :sierra"
 
   app "Smooze.app"
@@ -20,10 +20,17 @@ cask "smooze" do
   uninstall quit: "co.smooze.macos"
 
   zap trash: [
-    "~/Library/Application Support/co.smooze.macos",
     "~/Library/Application Support/Smooze",
+    "~/Library/Application Support/co.smooze.macos",
     "~/Library/Caches/co.smooze.macos",
     "~/Library/Caches/io.fabric.sdk.mac.data/co.smooze.macos",
+    "~/Library/HTTPStorages/co.smooze.macos",
+    "~/Library/HTTPStorages/co.smooze.macos.binarycookies",
     "~/Library/Preferences/co.smooze.macos.plist",
   ]
+
+  caveats <<~EOS
+    #{token} is the legacy version of Smooze and is not receiving
+    feature updates. For the latest version, use the "smooze-pro" cask.
+  EOS
 end
