@@ -1,6 +1,6 @@
 cask "xattred" do
-  version "1.3,2020.08"
-  sha256 "606823107254a9a66af2c67d0e6aa25ae820d8dfba2be5427325d05c4a5482a7"
+  version "1.4,2023.05"
+  sha256 "6a957313265fe34d4103902e896bfa0b97e52e3a5bffe6284d1d0efc4b7ef4d1"
 
   url "https://eclecticlightdotcom.files.wordpress.com/#{version.csv.second.major}/#{version.csv.second.minor}/xattred#{version.csv.first.no_dots}.zip",
       verified: "eclecticlightdotcom.files.wordpress.com/"
