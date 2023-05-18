@@ -9,9 +9,11 @@ cask "firefly" do
   homepage "https://firefly.iota.org/"
 
   livecheck do
-    url :url
-    regex(/desktop[._-]v?(1(?:\.\d+)+)/i)
-    strategy :github_latest
+    url "https://dl.firefly.iota.org/latest-mac.yml"
+    regex(/desktop[._-]v?(\d+(?:\.\d+)+)/i)
+    strategy :yaml do |yaml|
+      yaml["version"]
+    end
   end
 
   auto_updates true
