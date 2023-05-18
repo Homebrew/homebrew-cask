@@ -4,7 +4,7 @@ cask "smooze-pro" do
 
   url "https://smooze.co/pro/updates/SmoozePro.dmg"
   name "Smooze Pro"
-  desc "Rediscover your scroll wheel mouse"
+  desc "Animates scrolling and adds functionality to scroll-wheel mice"
   homepage "https://smooze.co/"
 
   livecheck do
