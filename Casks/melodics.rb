@@ -1,5 +1,5 @@
 cask "melodics" do
-  version "3.1.5,C5571292-F611-4892-94FF-495C02745035"
+  version "3.1.5,2EDC270D-7203-487D-BA44-26AE98AE1DA2"
   sha256 "6221a310fead39c52ddd7e22e870f000f8aea24a884dd0d1e152e260e502362f"
 
   url "https://web-cdn.melodics.com/download/#{version.csv.second}.zip"
