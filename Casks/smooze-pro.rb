@@ -13,6 +13,7 @@ cask "smooze-pro" do
   end
 
   auto_updates true
+  conflicts_with cask: "smooze"
   depends_on macos: ">= :catalina"
 
   app "Smooze Pro.app"
