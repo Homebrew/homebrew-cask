@@ -22,4 +22,6 @@ cask "xamarin-mac" do
   pkg "xamarin.mac-#{version.csv.first}.pkg"
 
   uninstall pkgutil: "com.xamarin.mac-.*"
+
+  zap trash: "~/Library/Caches/com.xamarin.fontconfig"
 end
