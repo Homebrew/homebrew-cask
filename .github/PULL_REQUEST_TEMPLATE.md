@@ -16,3 +16,4 @@ Additionally, **if adding a new cask**:
 - [ ] `brew audit --new-cask <cask>` worked successfully.
 - [ ] `brew install --cask <cask>` worked successfully.
 - [ ] `brew uninstall --cask <cask>` worked successfully.
+- [ ]  I double-checked that the application passes the signature verification check in `brew audit --new-cask <cask>`. This is a requirement for all new submissions.
