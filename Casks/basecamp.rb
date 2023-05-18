@@ -13,9 +13,10 @@ cask "basecamp" do
 
   livecheck do
     url "https://bc#{version.major}-desktop.s3.amazonaws.com/mac#{arch}/updates.json"
+    regex(/basecamp(\d)/i)
     strategy :page_match do |page|
       minor_version = JSON.parse(page)["version"]
-      major_version = page.match(/basecamp(\d)/i)
+      major_version = page.match(regex)
       next if major_version.blank? || minor_version.blank?
 
       "#{major_version[1]},#{minor_version}"
