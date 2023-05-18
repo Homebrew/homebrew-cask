@@ -1,6 +1,6 @@
 cask "firefly" do
-  version "2.1.0"
-  sha256 "73ebfa0a52d803156af492c4ec4c6a87331ff4fa27ea86ceafca13e1359de0b8"
+  version "1.7.2"
+  sha256 "c62de21639fb0081150fd97bc2ca511197646a3826baef66b37a2be28a976424"
 
   url "https://github.com/iotaledger/firefly/releases/download/desktop-#{version}/firefly-desktop-#{version}.dmg",
       verified: "github.com/iotaledger/firefly/"
@@ -16,7 +16,7 @@ cask "firefly" do
 
   auto_updates true
 
-  app "Firefly Shimmer.app"
+  app "Firefly.app"
 
   uninstall quit: "org.iota.firefly"
 
