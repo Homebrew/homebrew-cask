@@ -15,7 +15,7 @@ cask "dashdrop" do
     strategy :sparkle
   end
 
-  app "Dashdrop/dashdrop.app"
+  app "dashdrop.app"
 
   zap trash: [
     "~/Library/Application Support/Dashdrop",
