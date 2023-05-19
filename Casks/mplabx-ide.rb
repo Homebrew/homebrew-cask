@@ -41,7 +41,7 @@ cask "mplabx-ide" do
               input:      ["y", 3],
               sudo:       true,
             },
-            delete: [            
+            delete: [
               "/Applications/microchip/mplabcomm",
               "/Applications/microchip/mplabx",
             ]
