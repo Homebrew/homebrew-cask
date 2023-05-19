@@ -6,7 +6,7 @@ cask "multiviewer-for-f1" do
     sha256 "1c2655940c28483031fb9c74cc63626cc3a3219a2688ae9d9d37fb20cce9d7ea"
   end
   on_intel do
-    version "1.17.4,108020187"
+    version "1.18.0,108753817"
     sha256 "a66b2934292a21ad3ef19775ad158012248cf77a6f557d006ba356cf95719bbc"
   end
 
