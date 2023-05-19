@@ -1,5 +1,5 @@
 cask "nightowl" do
-  version "0.4.4.5,36"
+  version "0.4.4.6,37"
   sha256 :no_check
 
   url "https://nightowlapp.co/files"
