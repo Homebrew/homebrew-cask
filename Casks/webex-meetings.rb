@@ -1,12 +1,12 @@
 cask "webex-meetings" do
   on_arm do
-    version "2304.2305.4304.5"
+    version "2305.0904.4305.3"
     sha256 :no_check
 
     url "https://akamaicdn.webex.com/client/Cisco_Webex_Meetings.pkg"
   end
   on_intel do
-    version "2304.2305.4304.5"
+    version "2305.0904.4305.3"
     sha256 :no_check
 
     url "https://akamaicdn.webex.com/client/webexapp.dmg"
