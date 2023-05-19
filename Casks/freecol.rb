@@ -9,4 +9,9 @@ cask "freecol" do
   homepage "https://www.freecol.org/"
 
   app "FreeCol.app"
+
+  zap trash: [
+    "~/Library/Application Support/freecol",
+    "~/Library/Preferences/freecol",
+  ]
 end
