@@ -41,15 +41,9 @@ cask "mplabx-ide" do
               input:      ["y", 3],
               sudo:       true,
             },
-            delete: [
-              "/Applications/microchip/mplabx/#{version}",
-              # The below version number needs to be updated
-              # manually each time this Cask is updated
-              "/Applications/microchip/mplabcomm/3.52.01",
-            ],
-            rmdir:  [
-              "/Applications/microchip/mplabx",
+            delete: [            
               "/Applications/microchip/mplabcomm",
+              "/Applications/microchip/mplabx",
             ]
 
   zap trash: "/Applications/microchip"
