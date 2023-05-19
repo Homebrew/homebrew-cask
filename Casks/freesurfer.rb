@@ -14,6 +14,8 @@ cask "freesurfer" do
 
   suite "freesurfer"
 
+  zap trash: "~/Library/Preferences/edu.harvard.mgh.nmr.FreeView.plist"
+
   caveats do
     free_license "https://surfer.nmr.mgh.harvard.edu/registration.html"
   end
