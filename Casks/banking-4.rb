@@ -10,8 +10,9 @@ cask "banking-4" do
 
   livecheck do
     url "https://subsembly.com/banking4-macos-updates.php"
+    regex(/<h\d[^>]*>\s*(\d+(?:\.\d+)+)\.(\d{3,})/i)
     strategy :page_match do |page|
-      page.scan(/<h\d[^>]*>\s*(\d+(?:\.\d+)+)\.(\d{3,})/i)
+      page.scan(regex)
           .map { |match| "#{match[0]},#{match[1]}" }
     end
   end
