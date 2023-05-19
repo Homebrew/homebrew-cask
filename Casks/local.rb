@@ -11,7 +11,7 @@ cask "local" do
   homepage "https://localwp.com/"
 
   livecheck do
-    url "https://cdn.localwp.com/stable/latest/mac"
+    url "https://cdn.localwp.com/stable/latest/#{arch}"
     strategy :header_match do |headers|
       match = headers["location"].match(%r{/(\d+(?:\.\d+)+)\+(\d+)/})
       next if match.blank?
