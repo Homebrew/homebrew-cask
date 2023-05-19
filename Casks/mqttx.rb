@@ -1,9 +1,9 @@
 cask "mqttx" do
   arch arm: "arm64-"
 
-  version "1.9.2"
-  sha256 arm:   "46cc7522a4fba6f2019b024a923823b98f12155340e545de446a12c6f81f8959",
-         intel: "c601b094dc644b0368a04cafe5da01945128d8decfc9a19e9eaae0fe1e18ab39"
+  version "1.9.3"
+  sha256 arm:   "a999fcb67a17b51b4e8559395a2cf9161197303577b80ca6b07d499009e63953",
+         intel: "65a22c9162ab27f2c097e3efacca8b5236212c2c6e33c3973c757deedeecc8b7"
 
   url "https://github.com/emqx/MQTTX/releases/download/v#{version}/MQTTX-#{version}-#{arch}mac.zip",
       verified: "github.com/emqx/MQTTX/"
