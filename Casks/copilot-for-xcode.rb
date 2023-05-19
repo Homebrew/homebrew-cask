@@ -7,6 +7,7 @@ cask "copilot-for-xcode" do
   desc "Xcode extension for Github Copilot"
   homepage "https://github.com/intitni/CopilotForXcode"
 
+  auto_updates true
   depends_on macos: ">= :monterey"
 
   app "Copilot for Xcode.app"
