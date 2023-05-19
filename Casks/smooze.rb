@@ -7,10 +7,6 @@ cask "smooze" do
   desc "Animates scrolling and adds functionality to scroll-wheel mice"
   homepage "https://smooze.co/"
 
-  livecheck do
-    skip "Legacy version"
-  end
-
   auto_updates true
   depends_on macos: ">= :sierra"
 
