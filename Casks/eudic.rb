@@ -1,5 +1,5 @@
 cask "eudic" do
-  version "4.3.5,1092"
+  version "4.3.7,1094"
   sha256 :no_check
 
   url "https://static.frdic.com/pkg/eudicmac.dmg",
