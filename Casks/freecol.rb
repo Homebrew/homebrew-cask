@@ -1,6 +1,6 @@
 cask "freecol" do
-  version "1.0.0"
-  sha256 "0daf064d8d807b7ee2b3fa4492060085745eb835b821d763b761c26e2f7c3df2"
+  version "1.1.0"
+  sha256 "8cf26aa6c051835d1b0f7c35ce29bb2875d26096afaf9cd46ea00961b18c85e1"
 
   url "https://downloads.sourceforge.net/freecol/freecol-#{version}.dmg",
       verified: "sourceforge.net/freecol/"
