@@ -10,12 +10,9 @@ cask "daedalus-testnet" do
 
   livecheck do
     url "https://updates-cardano-testnet.s3.amazonaws.com/daedalus-latest-version.json"
-    strategy :page_match do |page|
-      version = page.match(/"version":"(\d+(?:\.\d+)+)"/)[1]
-      build = page.match(/testnet-(\d+(?:\.\d+)*).*?\.pkg/)[1]
-      next if version.blank? || build.blank?
-
-      "#{version},#{build}"
+    regex(%r{/daedalus[._-](\d+(?:\.\d+)+)[._-]testnet[._-](\d+)[._-]x86_64[._-]darwin\.pkg}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 

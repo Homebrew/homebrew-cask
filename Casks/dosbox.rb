@@ -10,8 +10,9 @@ cask "dosbox" do
 
   livecheck do
     url "https://sourceforge.net/projects/dosbox/rss?path=/dosbox"
-    strategy :page_match do |page|
-      page.scan(%r{<link>.*/DOSBox-(\d+(?:[.-]\d+)*).dmg}i).map do |matches|
+    regex(%r{<link>.*/DOSBox-(\d+(?:[.-]\d+)*).dmg}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map do |matches|
         versions = matches[0].split("-")
         version = "#{versions[0]}-#{versions[1]},#{versions[2]}" if versions.length == 3
         version = "#{versions[0]}-#{versions[1]}" if versions.length == 2
