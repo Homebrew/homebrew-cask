@@ -9,11 +9,9 @@ cask "sdm" do
 
   livecheck do
     url "https://app.strongdm.com/releases/client/darwin/0.0.0"
-    strategy :page_match do |page|
-      match = page.match(%r{https:.*?/(\h+)/SDM[._-]v?(\d+(?:\.\d+)+)\.universal\.zip}i)
-      next if match.blank?
-
-      "#{match[2]},#{match[1]}"
+    regex(%r{https:.*?/(\h+)/SDM[._-]v?(\d+(?:\.\d+)+)\.universal\.zip}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
 

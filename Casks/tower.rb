@@ -9,11 +9,9 @@ cask "tower" do
 
   livecheck do
     url "https://www.git-tower.com/updates/tower3-mac/stable/releases/latest/download"
-    strategy :header_match do |headers|
-      match = headers["location"].match(%r{(\d+(?:\.\d+)*)-([a-z0-9]+)/Tower-(\d+(?:\.\d+)+)-(\d+(?:\.\d+)*)\.zip}i)
-      next if match.blank?
-
-      "#{match[3]},#{match[1]},#{match[2]}"
+    regex(%r{(\d+(?:\.\d+)*)-([a-z0-9]+)/Tower-(\d+(?:\.\d+)+)-(\d+(?:\.\d+)*)\.zip}i)
+    strategy :header_match do |headers, regex|
+      headers["location"].scan(regex).map { |match| "#{match[2]},#{match[0]},#{match[1]}" }
     end
   end
 

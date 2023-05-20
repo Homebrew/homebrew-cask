@@ -9,11 +9,9 @@ cask "preference-manager" do
 
   livecheck do
     url "https://www.digitalrebellion.com/prefman/download"
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/prefman\?version=(\d+(?:\.\d+)*)"}i)
-      next if match.blank?
-
-      match[1].gsub(/./, '\0.').chop.to_s
+    regex(%r{href=.*?/prefman\?version=(\d+(?:\.\d+)*)"}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| match[0].gsub(/./, '\0.').chop.to_s }
     end
   end
 

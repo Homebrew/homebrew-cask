@@ -11,14 +11,15 @@ cask "qt-creator" do
   # (fetching an additional page) to obtain the full version.
   livecheck do
     url "https://download.qt.io/official_releases/qtcreator/?C=M;O=D"
-    strategy :page_match do |page|
+    regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
+    strategy :page_match do |page, regex|
       # These version directories can sometimes be empty, so this will check
       # directory pages until it finds versions
-      page.scan(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i).lazy.map do |match|
+      page.scan(regex).lazy.map do |match|
         version_page = Homebrew::Livecheck::Strategy.page_content(url.sub("/?", "/#{match[0]}/?"))
         next if version_page[:content].blank?
 
-        versions = version_page[:content].scan(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i).map(&:first)
+        versions = version_page[:content].scan(regex).map(&:first)
         next if versions.blank?
 
         versions

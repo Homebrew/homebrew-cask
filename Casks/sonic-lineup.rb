@@ -10,11 +10,9 @@ cask "sonic-lineup" do
 
   livecheck do
     url "https://code.soundsoftware.ac.uk/projects/sonic-lineup/files"
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/(\d+)/Sonic%20Lineup[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
-      next if match.blank?
-
-      "#{match[2]},#{match[1]}"
+    regex(%r{href=.*?/(\d+)/Sonic%20Lineup[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
 

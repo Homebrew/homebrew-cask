@@ -8,11 +8,11 @@ cask "shupapan" do
 
   livecheck do
     url "http://sunsky3s.s41.xrea.com/shupapan/download/index.html"
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/Shupapan_v(\d+)(\d+)(\d+)(\d+)\.zip}i)
-      next if match.blank?
-
-      "#{match[1]}.#{match[2]}.#{match[3]}.#{match[4]}"
+    regex(%r{href=.*?/Shupapan_v(\d+)(\d+)(\d+)(\d+)\.zip}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map do |match|
+        "#{match[0]}.#{match[1]}.#{match[2]}.#{match[3]}"
+      end
     end
   end
 
