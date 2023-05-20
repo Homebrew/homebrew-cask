@@ -13,4 +13,13 @@ cask "vuescan" do
   end
 
   app "VueScan.app"
+
+  zap trash: [
+        "~/.vuescanrc",
+        "~/Library/Preferences/com.hamrick.vuescan.plist",
+        "~/Library/Saved Application State/com.hamrick.vuescan.savedState",
+        "~/Pictures/VueScan/vuescan.ini",
+        "~/Pictures/VueScan/vuescan.log",
+      ],
+      rmdir: "~/Pictures/VueScan"
 end
