@@ -66,6 +66,7 @@ cask "appgate-sdp-client" do
               "com.cyxtera.appgate.sdp.updater",
             ],
             quit:      [
+              "com.appgate.sdp",
               "com.cyxtera.appgate.helper",
               "com.cyxtera.appgate.sdp",
             ],
