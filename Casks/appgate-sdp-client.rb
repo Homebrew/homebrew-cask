@@ -55,7 +55,11 @@ cask "appgate-sdp-client" do
 
   pkg "AppGate SDP Installer.pkg"
 
-  uninstall launchctl: [
+  uninstall pkgutil:   "com.appgate.pkg.appgatetun.component",
+            launchctl: [
+              "com.appgate.sdp.client.agent",
+              "com.appgate.sdp.tun",
+              "com.appgate.sdp.updater",
               "com.cyxtera.appgate.sdp.client.agent",
               "com.cyxtera.appgate.sdp.helper",
               "com.cyxtera.appgate.sdp.tun",
@@ -65,8 +69,7 @@ cask "appgate-sdp-client" do
               "com.cyxtera.appgate.helper",
               "com.cyxtera.appgate.sdp",
             ],
-            signal:    ["QUIT", "com.cyxtera.appgate"],
-            pkgutil:   "com.appgate.pkg.appgatetun.component"
+            signal:    ["QUIT", "com.cyxtera.appgate"]
 
   zap trash: [
     "~/Library/Application Support/appgate-ui",
