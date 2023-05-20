@@ -18,7 +18,7 @@ cask "multiviewer-for-f1" do
   livecheck do
     url "https://api.multiviewer.dev/api/v1/releases/latest"
     regex(%r{/([^/]+?)/MultiViewer[._-]for[._-]F1[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg}i)
-    strategy :json do |json, regex|
+    strategy :json do |json|
       json["downloads"].map do |item|
         match = item["url"]&.match(regex)
         next if match.blank?
