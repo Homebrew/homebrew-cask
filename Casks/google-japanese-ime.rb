@@ -1,5 +1,5 @@
 cask "google-japanese-ime" do
-  version "2.25.4030"
+  version "2.28.5050"
   sha256 :no_check
 
   url "https://dl.google.com/japanese-ime/latest/GoogleJapaneseInput.dmg",
