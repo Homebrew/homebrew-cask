@@ -9,11 +9,9 @@ cask "mumu" do
 
   livecheck do
     url "https://vendors.paddle.com/download/product/597910"
-    strategy :header_match do |headers|
-      match = headers["location"].match(%r{/([^/]+)_Mumu%20(\d+(?:\.\d+)*)\.dmg}i)
-      next if match.blank?
-
-      "#{match[2]},#{match[1]}"
+    regex(%r{/([^/]+)_Mumu%20(\d+(?:\.\d+)*)\.dmg}i)
+    strategy :header_match do |headers, regex|
+      headers["location"].scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
 
