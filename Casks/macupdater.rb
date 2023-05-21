@@ -1,6 +1,6 @@
 cask "macupdater" do
   on_monterey :or_older do
-    version "2.3.4,14286"
+    version "2.3.5,14289"
     sha256 :no_check
 
     url "https://www.corecode.io/downloads/macupdater_#{version.major}_latest.dmg"
