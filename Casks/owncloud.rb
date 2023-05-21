@@ -18,7 +18,7 @@ cask "owncloud" do
   auto_updates true
   depends_on macos: ">= :sierra"
 
-  pkg "ownCloud-#{version}-x86_64.pkg"
+  pkg "ownCloud-#{version}-#{arch}.pkg"
 
   uninstall pkgutil: [
     "com.ownCloud.client",
