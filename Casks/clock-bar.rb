@@ -9,8 +9,9 @@ cask "clock-bar" do
 
   livecheck do
     url "https://github.com/nihalsharma/Clock-Bar/releases/latest"
-    strategy :page_match do |page|
-      v = page[%r{href=.*?/tag/(\d+(?:\.\d+)+)}i, 1]
+    regex(%r{href=.*?/tag/(\d+(?:\.\d+)+)}i)
+    strategy :page_match do |page, regex|
+      v = page[regex, 1]
       id = page[%r{href=.*?/(\d+)/Clock\.Bar\.app\.zip}i, 1]
       "#{v},#{id}"
     end

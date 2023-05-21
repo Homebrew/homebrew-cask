@@ -9,11 +9,9 @@ cask "beatunes" do
 
   livecheck do
     url "https://www.beatunes.com/en/beatunes-download.html"
-    strategy :page_match do |page|
-      match = page[/href=.*?beaTunes[._-]?v?(\d+(?:-\d+)+)\.dmg/i, 1]
-      next if match.blank?
-
-      match.tr("-", ".")
+    regex(/href=.*?beaTunes[._-]?v?(\d+(?:-\d+)+)\.dmg/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex)&.map { |match| match[0].tr("-", ".") }
     end
   end
 

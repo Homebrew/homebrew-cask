@@ -9,9 +9,9 @@ cask "algodoo" do
 
   livecheck do
     url "http://www.algodoo.com/download/"
-    strategy :page_match do |page|
-      v = page[%r{href=.*?/Algodoo_(\d+(?:_\d+)*)-MacOS\.dmg}i, 1]
-      v.tr("_", ".")
+    regex(%r{href=.*?/Algodoo_(\d+(?:_\d+)*)-MacOS\.dmg}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex)&.map { |match| match[0].tr("_", ".") }
     end
   end
 
