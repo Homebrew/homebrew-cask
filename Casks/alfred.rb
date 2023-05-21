@@ -9,11 +9,9 @@ cask "alfred" do
 
   livecheck do
     url "https://www.alfredapp.com/app/update#{version.major}/general.xml"
-    strategy :page_match do |page|
-      match = page.match(/Alfred[._-]v?(\d(?:\.\d+)+)[._-](\d+)\.tar\.gz/i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
+    regex(/Alfred[._-]v?(\d(?:\.\d+)+)[._-](\d+)\.tar\.gz/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 

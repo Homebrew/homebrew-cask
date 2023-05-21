@@ -11,9 +11,10 @@ cask "cycling74-max" do
 
   livecheck do
     url "https://auth.cycling74.com/maxversion"
-    strategy :page_match do |page|
+    regex(/^\d{2}(\d{2})[._-](\d{2})[._-](\d{2})/i)
+    strategy :page_match do |page, regex|
       json = JSON.parse(page)
-      match = json["release_date"].match(/^\d{2}(\d{2})[._-](\d{2})[._-](\d{2})/)
+      match = json["release_date"].match(regex)
       next if match.blank?
 
       "#{json["_id"]}_#{match[1]}#{match[2]}#{match[3]}"
