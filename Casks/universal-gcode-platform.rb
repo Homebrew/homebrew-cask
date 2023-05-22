@@ -1,6 +1,6 @@
 cask "universal-gcode-platform" do
-  version "2.0.15"
-  sha256 "8120458b2688b1c7637af8275eb2952661e896d037730ebc3f3f3e93bb421420"
+  version "2.0.17"
+  sha256 "7f7e422e9bb28ac972334b6d9bf82e66125f9902bece86e32ddf7274125aca58"
 
   url "https://github.com/winder/Universal-G-Code-Sender/releases/download/v#{version}/ios-ugs-platform-app-#{version}.dmg",
       verified: "github.com/winder/Universal-G-Code-Sender/"
