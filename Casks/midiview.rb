@@ -1,5 +1,5 @@
 cask "midiview" do
-  version "1.2.0"
+  version "1.2.2"
   sha256 :no_check
 
   url "https://hautetechnique.com/apps/backend/v1/apps/midiview/latest/macOS"
