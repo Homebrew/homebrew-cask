@@ -25,10 +25,7 @@ cask "podman-desktop" do
             trash: "~/Library/LaunchAgents/io.podman_desktop.PodmanDesktop.plist"
 
   zap trash: [
-    "~/.config/containers/podman",
-    "~/.local/share/containers/podman",
     "~/.local/share/containers/podman-desktop",
-    "~/.ssh/podman-machine-default*",
     "~/Library/Application Support/Podman Desktop",
     "~/Library/Preferences/io.podmandesktop.PodmanDesktop.plist",
     "~/Library/Saved Application State/io.podmandesktop.PodmanDesktop.savedState",
