@@ -1,6 +1,6 @@
 cask "gluemotion" do
-  version "2.0.10,1f444ed0-1488-467c-8e50-70ad8443c50f"
-  sha256 "0ec7fd451f49de42653f67539f658078732e47ad1e0fc68f35c3972ac8b1447e"
+  version "2.1.0,9bbb1e47-ccda-4b0c-8943-537ab085aeb0"
+  sha256 "4178cc33679cfb0672e7795843d876786060146bd80f06b619069275cc75801e"
 
   url "https://neededapps.nyc3.digitaloceanspaces.com/media/public/#{version.csv.second}.zip",
       verified: "neededapps.nyc3.digitaloceanspaces.com/media/public/"
