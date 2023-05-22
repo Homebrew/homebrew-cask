@@ -21,8 +21,16 @@ cask "podman-desktop" do
 
   app "Podman Desktop.app"
 
-  uninstall delete: "~/Library/LaunchAgents/io.podman_desktop.PodmanDesktop.plist",
-            quit:   "io.podmandesktop.PodmanDesktop"
+  uninstall quit:  "io.podmandesktop.PodmanDesktop",
+            trash: "~/Library/LaunchAgents/io.podman_desktop.PodmanDesktop.plist"
 
-  zap trash: "~/.local/share/containers/podman-desktop"
+  zap trash: [
+    "~/.config/containers/podman",
+    "~/.local/share/containers/podman",
+    "~/.local/share/containers/podman-desktop",
+    "~/.ssh/podman-machine-default*",
+    "~/Library/Application Support/Podman Desktop",
+    "~/Library/Preferences/io.podmandesktop.PodmanDesktop.plist",
+    "~/Library/Saved Application State/io.podmandesktop.PodmanDesktop.savedState",
+  ]
 end
