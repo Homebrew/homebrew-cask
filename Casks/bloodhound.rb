@@ -1,9 +1,9 @@
 cask "bloodhound" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.3.0"
-  sha256 arm:   "1d86c9e3eb7fe0980381f071b0416ba1f53f665c18b418b66c0ce2344d98a135",
-         intel: "ebd36ece57ad0fefe730705480742620c4d189aa6a3d3a00d46504d1bd9741c9"
+  version "4.3.1"
+  sha256 arm:   "48803fdefd4d4db8cf6d7e41004ddf2827022a8f848c3ce631ef06a4620c58da",
+         intel: "c32aa388a7b0474dda483cc9b236cdfb5dd462d3d719b78e2985d7fa411f1a57"
 
   url "https://github.com/BloodHoundAD/BloodHound/releases/download/v#{version}/BloodHound-darwin-#{arch}.zip"
   name "bloodhound"
