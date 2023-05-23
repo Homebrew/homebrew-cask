@@ -80,4 +80,16 @@ cask "powerphotos" do
   auto_updates true
 
   app "PowerPhotos.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/8NQ43ND65V.com.fatcatsoftware.PowerPhotosLibraryList",
+    "~/Library/Application Support/com.fatcatsoftware.PowerPhotos",
+    "~/Library/Caches/com.fatcatsoftware.PowerPhotos",
+    "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.fatcatsoftware.PowerPhotos",
+    "~/Library/Group Containers/8NQ43ND65V.com.fatcatsoftware.PowerPhotosLibraryList",
+    "~/Library/HTTPStorages/com.fatcatsoftware.PowerPhotos",
+    "~/Library/Logs/PowerPhotos",
+    "~/Library/Preferences/com.fatcatsoftware.PowerPhotos.plist",
+    "~/Library/Saved Application State/com.fatcatsoftware.PowerPhotos.savedState",
+  ]
 end
