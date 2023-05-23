@@ -15,14 +15,13 @@ cask "soundtoys" do
     end
   end
 
+  depends_on macos: ">= :sierra"
+
   pkg "Install Soundtoys #{version.major_minor} Bundle.pkg"
 
   uninstall pkgutil:   [
-              "com.soundtoys.*",
               "com.paceap.pkg.eden.*",
+              "com.soundtoys.*",
             ],
-            launchctl: [
-              "com.paceap.eden.licensed",
-              "com.paceap.eden.licensed.agent",
-            ]
+            launchctl: "com.paceap.eden.licensed*"
 end
