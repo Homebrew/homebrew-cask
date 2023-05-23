@@ -15,4 +15,13 @@ cask "kodelife" do
   auto_updates true
 
   app "KodeLife.app"
+
+  zap trash: [
+    "~/Library/Application Support/net.hexler.KodeLife",
+    "~/Library/Caches/net.hexler.KodeLife",
+    "~/Library/HTTPStorages/net.hexler.KodeLife*",
+    "~/Library/Logs/net.hexler.KodeLife",
+    "~/Library/Preferences/net.hexler.KodeLife.plist",
+    "~/Library/Saved Application State/net.hexler.KodeLife.savedState",
+  ], rmdir: "~/Documents/KodeLife"
 end
