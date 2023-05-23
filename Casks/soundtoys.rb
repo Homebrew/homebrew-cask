@@ -11,7 +11,11 @@ cask "soundtoys" do
   livecheck do
     url "https://storage.googleapis.com/soundtoys-download/download.json"
     strategy :json do |json|
-      json["SoundtoysV#{version.major_minor.no_dots}Bundle_Mac"]["fullversion"]
+      json.map do |key, item|
+        next unless key.match?(/Soundtoys.*?[._-]Mac/i)
+
+        item["fullversion"]
+      end
     end
   end
 
