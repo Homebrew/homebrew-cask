@@ -23,5 +23,8 @@ cask "soundtoys" do
               "com.paceap.pkg.eden.*",
               "com.soundtoys.*",
             ],
-            launchctl: "com.paceap.eden.licensed*"
+            launchctl: [
+              "com.paceap.eden.licensed",
+              "com.paceap.eden.licensed.agent",
+            ]
 end
