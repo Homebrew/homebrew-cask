@@ -13,4 +13,6 @@ cask "sauce-connect" do
   end
 
   binary "sc-#{version}-osx/bin/sc"
+
+  # No zap stanza required
 end
