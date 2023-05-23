@@ -1,6 +1,6 @@
 cask "dbngin" do
-  version "6.4,64"
-  sha256 "244018981774e3a026aaacf683aabbf1f5baeae7dd4732901a9793ac813cf2c9"
+  version "6.6,66"
+  sha256 "fafcf586a0725cb53bbadc3dd4adadf36c864a75ef2e8b5cc0b8a151e89c4bd2"
 
   url "https://download.dbngin.com/#{version.csv.second}/DBngin.dmg"
   name "DBngin"
