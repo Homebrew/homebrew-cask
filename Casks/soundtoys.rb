@@ -1,9 +1,9 @@
 cask "soundtoys" do
-  version "5.3.9.16828"
-  sha256 "8c9d6243f1511952c79769030383b06afeb36ad688d303366e10b1c4eea450e5"
+  version "5.4.0.17121"
+  sha256 "95dc6e925e16672f6d5bdae9e55b34d1da6edbc8bf88283b0bbe99f422b14cb8"
 
-  url "https://storage.googleapis.com/soundtoys-download/versions/version_#{version.dots_to_underscores}/Soundtoys#{version.major}_#{version}.dmg",
-      verified: "storage.googleapis.com/soundtoys-download/"
+  url "https://storage.googleapis.com/soundtoys-download/versions/version_#{version.dots_to_underscores}/SoundtoysV#{version.major_minor.no_dots}Bundle_#{version}.dmg",
+      verified: "storage.googleapis.com/soundtoys-download/versions/"
   name "Soundtoys"
   desc "Audio Effects Plugins"
   homepage "https://www.soundtoys.com/product/soundtoys/"
@@ -11,12 +11,24 @@ cask "soundtoys" do
   livecheck do
     url "https://storage.googleapis.com/soundtoys-download/download.json"
     strategy :json do |json|
-      json["Soundtoys5_Mac"]["fullversion"]
+      json.map do |key, item|
+        next unless key.match?(/Soundtoys.*?[._-]Mac/i)
+
+        item["fullversion"]
+      end
     end
   end
 
-  pkg "Install Soundtoys #{version.major}.pkg"
+  depends_on macos: ">= :sierra"
 
-  uninstall pkgutil:   ["com.soundtoys.*", "com.paceap.pkg.eden.*"],
-            launchctl: ["com.paceap.eden.licensed", "com.paceap.eden.licensed.agent"]
+  pkg "Install Soundtoys #{version.major_minor} Bundle.pkg"
+
+  uninstall pkgutil:   [
+              "com.paceap.pkg.eden.*",
+              "com.soundtoys.*",
+            ],
+            launchctl: [
+              "com.paceap.eden.licensed",
+              "com.paceap.eden.licensed.agent",
+            ]
 end
