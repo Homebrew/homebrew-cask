@@ -15,9 +15,10 @@ cask "sync" do
   app "Sync.app"
 
   zap trash: [
-    "~/Library/Application Scripts/com.sync.desktop",
-    "~/Library/Application Scripts/com.sync.desktop.findersync",
-    "~/Library/Group Containers/com.sync.desktop",
-    "~/Library/Preferences/com.sync.desktop.plist",
-  ], rmdir: "~/Sync"
+        "~/Library/Application Scripts/com.sync.desktop",
+        "~/Library/Application Scripts/com.sync.desktop.findersync",
+        "~/Library/Group Containers/com.sync.desktop",
+        "~/Library/Preferences/com.sync.desktop.plist",
+      ],
+      rmdir: "~/Sync"
 end
