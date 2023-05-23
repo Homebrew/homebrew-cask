@@ -1,6 +1,6 @@
 cask "midiview" do
-  version "1.2.0,Ke6OYmrQ"
-  sha256 "25ea4e903c7eba3c3768c7de5d2dea16aeccf43812ce1e596d4959de4cdf769f"
+  version "1.2.3,vD6vXdrn"
+  sha256 "b19a694f3ee6fc839760b7293df47eed87657bb463cafed6313971cd758d64a6"
 
   url "https://hautetechnique.com/apps/backend/v1/installers/#{version.csv.second}"
   name "Midi View"
