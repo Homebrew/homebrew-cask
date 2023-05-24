@@ -9,9 +9,8 @@ cask "skiff" do
   homepage "https://skiff.com/"
 
   livecheck do
-    url "https://api.github.com/repos/skiff-org/skiff-org.github.io/contents/macos"
-    regex(/skiff\s?desktop\s?v?(\d+(?:\.\d+)+)\.dmg/i)
-    strategy :page_match
+    url "https://skiff.com/download"
+    regex(%r{/Skiff(?:%20|[._-])Desktop(?:%20|[._-])v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   auto_updates true
