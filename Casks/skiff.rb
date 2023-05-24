@@ -5,7 +5,7 @@ cask "skiff" do
   url "https://raw.githubusercontent.com/skiff-org/skiff-org.github.io/main/macos/Skiff%20Desktop%20#{version}.dmg"
   name "Skiff"
   desc "End-to-end encrypted email, calendar, documents, and files that give you the power to communicate freely."
-  homepage "https://skiff.com"
+  homepage "https://skiff.com/"
 
   livecheck do
     url :url
