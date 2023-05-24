@@ -8,4 +8,9 @@ cask "packetproxy" do
   homepage "https://github.com/DeNA/PacketProxy"
 
   app "PacketProxy.app"
+
+  zap trash: [
+    "~/.packetproxy",
+    "~/Library/Saved Application State/packetproxy",
+  ]
 end
