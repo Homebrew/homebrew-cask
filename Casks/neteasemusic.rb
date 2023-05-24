@@ -1,6 +1,6 @@
 cask "neteasemusic" do
-  version "2.3.14_999"
-  sha256 "ac2824326f89db92c67589a624e6fca481ab7acd04efd00ae706ec20339de80f"
+  version "2.3.15_1006"
+  sha256 "18624c25d3b9b8c23b381542b7274d48ca0aaa501ccfe4fade947de095aff058"
 
   url "https://d1.music.126.net/dmusic/NeteaseMusic_#{version}_web.dmg",
       verified:   "d1.music.126.net/",
