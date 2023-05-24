@@ -1,19 +1,17 @@
-# typed: true
-# frozen_string_literal: true
-
-cask "skiff-desktop" do
+cask "skiff" do
   version "0.3.0"
   sha256 "fce28da19b2f0f0cd84b2ba232fe8f80c83bd76005c4dae77c68ebe29e04b345"
 
-  url "https://raw.githubusercontent.com/skiff-org/skiff-org.github.io/main/macos/Skiff%20Desktop%20#{version}.dmg", 
+  url "https://raw.githubusercontent.com/skiff-org/skiff-org.github.io/main/macos/Skiff%20Desktop%20#{version}.dmg",
       verified: "raw.githubusercontent.com/skiff-org/skiff-org.github.io/main/macos/"
-  name "Skiff Desktop"
+  name "Skiff"
   desc "End-to-end encrypted email, calendar, documents, and files support"
   homepage "https://skiff.com/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://api.github.com/repos/skiff-org/skiff-org.github.io/contents/macos"
+    regex(/skiff\s?desktop\s?v?(\d+(?:\.\d+)+)\.dmg/i)
+    strategy :page_match
   end
 
   auto_updates true
