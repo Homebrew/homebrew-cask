@@ -11,7 +11,7 @@ cask "processmonitor" do
   depends_on macos: ">= :catalina"
 
   app "ProcessMonitor.app"
-  binary "#{appdir}/ProcessMonitor.app/Contents/MacOS/ProcessMonitor"
+  binary "#{appdir}/ProcessMonitor.app/Contents/MacOS/ProcessMonitor", target: "processmonitor"
 
   zap trash: "~/Library/Caches/com.objective-see.ProcessMonitor"
 end
