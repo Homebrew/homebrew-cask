@@ -3,29 +3,15 @@ cask "processmonitor" do
   sha256 "6c5721def426de77bff61d672d076314d89fb6bad28969f3b15b9f8c87cbd591"
 
   url "https://bitbucket.org/objective-see/deploy/downloads/ProcessMonitor_#{version}.zip",
-      verified: "bitbucket.org/objective-see/"
-  name "processmonitor"
+      verified: "bitbucket.org/objective-see/deploy/downloads/"
+  name "ProcessMonitor"
   desc "Monitor process activity"
   homepage "https://objective-see.org/products/utilities.html"
 
   depends_on macos: ">= :catalina"
 
   app "ProcessMonitor.app"
+  binary "#{appdir}/ProcessMonitor.app/Contents/MacOS/ProcessMonitor"
 
-  postflight do
-    system_command "/bin/ln",
-                   args: ["-sf",
-                          "#{staged_path}/ProcessMonitor.app/Contents/MacOS/ProcessMonitor",
-                          "/usr/local/bin/processmonitor"],
-                   sudo: true
-  end
-
-  uninstall_postflight do
-    system_command "/bin/rm", args: ["/usr/local/bin/processmonitor"],
-                              sudo: true
-  end
-
-  zap trash: [
-    "~/Library/Caches/com.objective-see.ProcessMonitor",
-  ]
+  zap trash: "~/Library/Caches/com.objective-see.ProcessMonitor"
 end
