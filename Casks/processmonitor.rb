@@ -23,4 +23,9 @@ cask "processmonitor" do
   uninstall delete: [
     "/usr/local/bin/processmonitor",
   ]
+
+  zap trash: [
+    "~/Library/Caches/com.objective-see.ProcessMonitor"
+  ]
+
 end
