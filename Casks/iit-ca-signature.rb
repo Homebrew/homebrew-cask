@@ -4,7 +4,7 @@ cask "iit-ca-signature" do
 
   url "https://iit.com.ua/download/productfiles/EUSignWebInstall.pkg"
   name "IIT Certification Signature"
-  desc "The program is designed to be used by users of the Qualified EDI Provider of the State Tax Service of Ukraine to work in web browsers."
+  desc "Program of the EDI Provider of the State Tax Service of Ukraine for web browsers"
   homepage "https://iit.com.ua/"
 
   pkg "EUSignWebInstall.pkg"
