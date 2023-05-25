@@ -1,6 +1,6 @@
 cask "iit-ca" do
   version "1.3"
-  sha256 "23432dbe548cfe24be100cfd93ad9903d570300f8945545d4f7c05059d2d9e73"
+  sha256 :no_check
 
   url "https://iit.com.ua/download/productfiles/EUInstall.pkg"
   name "IIT Certification"
