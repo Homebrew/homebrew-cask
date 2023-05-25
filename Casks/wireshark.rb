@@ -19,7 +19,7 @@ cask "wireshark" do
   auto_updates true
   conflicts_with cask:    "wireshark-chmodbpf",
                  formula: "wireshark"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :sierra"
 
   app "Wireshark.app"
   pkg "Add Wireshark to the system path.pkg"
