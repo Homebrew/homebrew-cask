@@ -13,4 +13,9 @@ cask "open-supaplex" do
   end
 
   app "OpenSupaplex.app"
+
+  zap trash: [
+    "~/Library/Application Support/OpenSupaplex"
+    "~/Library/Saved Application State/com.OpenSupaplex.savedState"    
+  ]
 end
