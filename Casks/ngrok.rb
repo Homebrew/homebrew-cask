@@ -34,4 +34,11 @@ cask "ngrok" do
     "~/.ngrok#{version.major}",
     "~/Library/Application Support/ngrok",
   ]
+
+  caveats <<~EOS
+    To install shell completions, add this to your profile:
+      if command -v ngrok &>/dev/null; then
+        eval "$(ngrok completion)"
+      fi
+  EOS
 end
