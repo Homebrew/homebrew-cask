@@ -12,8 +12,6 @@ cask "open-supaplex" do
     strategy :github_releases
   end
 
-  depends_on arch: :intel
-
   app "OpenSupaplex.app"
 
   zap trash: [
