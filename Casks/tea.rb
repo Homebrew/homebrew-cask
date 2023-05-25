@@ -7,7 +7,7 @@ cask "tea" do
 
   url "https://gui.tea.xyz/release/tea-#{version}#{arch}-mac.zip"
   name "tea"
-  desc ""
+  desc "Unified package manager"
   homepage "https://tea.xyz/gui/"
 
   livecheck do
