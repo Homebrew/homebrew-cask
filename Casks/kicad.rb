@@ -9,7 +9,7 @@ cask "kicad" do
   homepage "https://kicad.org/"
 
   livecheck do
-    url "https://kicad-downloads.s3.cern.ch/?delimiter=/&prefix=osx/stable/"
+    url "https://downloads.kicad.org/kicad/macos/explore/stable"
     regex(/kicad[._-]unified[._-]universal[._-]v?(\d+(?:.\d+)+)\.dmg/i)
   end
 
