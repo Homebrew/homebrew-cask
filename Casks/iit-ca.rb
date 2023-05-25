@@ -4,7 +4,7 @@ cask "iit-ca" do
 
   url "https://iit.com.ua/download/productfiles/EUInstall.pkg"
   name "IIT Certification"
-  desc "The program is designed to be used on the computer equipment of the clients of the Qualified EDS Provider of the State Tax Service of Ukraine."
+  desc "Program of the EDI Provider of the State Tax Service of Ukraine"
   homepage "https://iit.com.ua/"
 
   pkg "EUInstall.pkg"
