@@ -14,6 +14,10 @@ cask "iit-ca-signature" do
     "ua.com.iit.euscpnmh_osplm",
     "ua.com.iit.EUSAManager",
     "ua.com.iit.euscpnmh",
+  ],
+            delete:  [
+    "/Applications/euscpnmh.app",
+    "/Applications/EUSAManager.app",
   ]
 
   zap trash: [
