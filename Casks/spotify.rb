@@ -4,7 +4,7 @@ cask "spotify" do
   sha256 :no_check
 
   on_arm do
-    version "1.2.11.916,eb595a67,2521"
+    version "1.2.12.902,1924b088,216"
   end
   on_intel do
     version "1.2.11.916,eb595a67,2517"
