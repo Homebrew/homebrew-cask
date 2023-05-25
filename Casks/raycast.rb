@@ -10,10 +10,9 @@ cask "raycast" do
     version "1.52.1"
     sha256 "05a659c736da0c9ac2fe1ac12106f3ff0ea4671067e6115ded48448e89662a03"
     livecheck do
-      url "https://releases.raycast.com/releases"
-      strategy :json do |json|
-        json.map { |release| release["version"] }
-      end
+      url :url
+      regex(/Raycast[._-]v?(\d+(?:\.\d+)+)(?:[._-](\h+))[._-]universal\.dmg/i)
+      strategy :header_match
     end
   end
 
