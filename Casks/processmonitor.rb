@@ -12,20 +12,7 @@ cask "processmonitor" do
 
   app "ProcessMonitor.app"
 
-  postflight do
-    system_command "ln",
-                   args: ["-sf",
-                          "#{staged_path}/ProcessMonitor.app/Contents/MacOS/ProcessMonitor",
-                          "/usr/local/bin/processmonitor"],
-                   sudo: true
-  end
-
-  uninstall delete: [
-    "/usr/local/bin/processmonitor",
-  ]
-
   zap trash: [
-    "~/Library/Caches/com.objective-see.ProcessMonitor"
+    "~/Library/Caches/com.objective-see.ProcessMonitor",
   ]
-
 end
