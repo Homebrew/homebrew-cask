@@ -10,9 +10,10 @@ cask "iit-ca" do
   pkg "EUInstall.pkg"
 
   uninstall pkgutil: [
-    "ua.com.iit.eu",
-    "ua.com.iit.osplm",
-  ]
+              "ua.com.iit.eu",
+              "ua.com.iit.osplm",
+            ],
+            delete:  "/Applications/EU.app"
 
   zap trash: [
     "/Library/Application Support/EU",
