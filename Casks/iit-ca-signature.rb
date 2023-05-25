@@ -15,7 +15,7 @@ cask "iit-ca-signature" do
               "ua.com.iit.EUSAManager",
               "ua.com.iit.euscpnmh",
             ],
-            delete: [
+            delete:  [
               "/Applications/euscpnmh.app",
               "/Applications/EUSAManager.app",
             ]
