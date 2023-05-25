@@ -8,4 +8,12 @@ cask "scihubeva" do
   homepage "https://github.com/leovan/SciHubEVA"
 
   app "SciHubEVA.app"
+
+  zap trash: [
+    "~/Library/Caches/LeoVan",
+    "~/Library/Logs/LeoVan",
+    "~/Library/Preferences/me.leovan.SciHubEVA.plist",
+    "~/Library/Preferences/SciHubEVA.plist",
+    "~/Library/Saved Application State/SciHubEVA.savedState",
+  ]
 end
