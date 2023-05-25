@@ -1,6 +1,14 @@
 cask "raycast" do
-  version "1.51.3"
-  sha256 "26f8c54d8b6fbfd793fbe70bfb2906a2bb34c3a3e7b91339d022f76334545bce"
+  
+  if MacOS.version <= :big_sur
+    version "1.50.0"
+    sha256 "F8BBD00D06636E3FE9F154FF69FF57C0A48A90A77AE58CDCC2B285F61A170A88"
+    depends_on macos: ">= :big_sur"
+  else
+    version "1.52.0"
+    sha256 "5E0DE474E0C1CB43D2677DC2FD87BD4AB6E7BAAE875496D216075DBA70100F52"
+    depends_on macos: ">= :monterey"
+  end
 
   url "https://releases.raycast.com/releases/#{version}/download?build=universal"
   name "Raycast"
@@ -14,7 +22,6 @@ cask "raycast" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
 
   app "Raycast.app"
 
