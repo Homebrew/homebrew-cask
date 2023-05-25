@@ -8,7 +8,7 @@ cask "dingtalk" do
     sha256 "889a84fa093b06f6437e95a66cb08ca55235eafd0fc46091f0640f12aec9d028"
   end
   on_intel do
-    version "7.0.30.13_29984878"
+    version "7.0.30.14_30013449"
     sha256 "18a506aa2ddb25fcf240f02adc305330ac71e0995d3819c114e3013530073bcb"
   end
 
