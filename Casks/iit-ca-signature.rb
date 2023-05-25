@@ -1,10 +1,10 @@
 cask "iit-ca-signature" do
   version "1.3"
-  sha256 "de1a741c173e9c9de6e1355556ab158090d3f18a1bd4e783863856e37cc58ece"
+  sha256 :no_check
 
   url "https://iit.com.ua/download/productfiles/EUSignWebInstall.pkg"
   name "IIT Certification Signature"
-  desc "Користувач центру сертифікації ключів. Web-бібліотеки підпису "
+  desc "Користувач центру сертифікації ключів. Web-бібліотеки підпису"
   homepage "https://iit.com.ua/"
 
   pkg "EUSignWebInstall.pkg"
