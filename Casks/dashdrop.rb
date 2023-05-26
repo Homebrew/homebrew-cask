@@ -1,19 +1,22 @@
-# typed: true
-# frozen_string_literal: true
-
 cask "dashdrop" do
+  arch arm: "arm64", intel: "x64"
   version "0.0.1"
-  sha256 "287913a26dccf7656b6e07ebf4373ac2adb4b0a4bd45eaa60e8fa357e4089455"
+  sha256 arm: "ab2227614614f8f5efcd22c513ba411d66cd015ba66326b1e7dd7588f3edabec",
+         intel: "ab2227614614f8f5efcd22c513ba411d66cd015ba66326b1e7dd7588f3edabec"
 
-  url "https://dashdrop.s3.ap-south-1.amazonaws.com/dashdrop-#{version}.dmg"
+  url "https://dashdrop.s3.ap-south-1.amazonaws.com/dashdrop-#{version}.dmg",
+  verified: "dashdrop.s3.ap-south-1.amazonaws.com"
   name "Dashdrop"
   desc "File transsfer app"
   homepage "https://dashdrop.s3.ap-south-1.amazonaws.com/index.html"
 
   livecheck do
     url "https://dashdrop.s3.ap-south-1.amazonaws.com/updates.xml"
-    strategy :sparkle
+    strategy :electron_builder
   end
+
+  auto_updates true
+  depends_on macos: ">= :mojave"
 
   app "dashdrop.app"
 
