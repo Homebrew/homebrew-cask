@@ -1,11 +1,16 @@
-cask "iit-ca-signature" do
-  version "1.3.1"
+cask "eusamanager" do
+  version "1.3.1,16"
   sha256 :no_check
 
   url "https://iit.com.ua/download/productfiles/EUSignWebInstall.pkg"
   name "IIT Certification Signature"
   desc "Program of the EDI Provider of the State Tax Service of Ukraine for web browsers"
   homepage "https://iit.com.ua/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   pkg "EUSignWebInstall.pkg"
 
@@ -23,13 +28,5 @@ cask "iit-ca-signature" do
   zap trash: [
     "/Library/Application Support/EUSAManager",
     "/Library/Application Support/euscpnmh",
-    "/private/var/db/receipts/ua.com.iit.euscpnmh.plist",
-    "/private/var/db/receipts/ua.com.iit.eusamanager_osplm.bom",
-    "/private/var/db/receipts/ua.com.iit.eusamanager_osplm.plist",
-    "/private/var/db/receipts/ua.com.iit.EUSAManager.bom",
-    "/private/var/db/receipts/ua.com.iit.EUSAManager.plist",
-    "/private/var/db/receipts/ua.com.iit.euscpnmh_osplm.bom",
-    "/private/var/db/receipts/ua.com.iit.euscpnmh_osplm.plist",
-    "/private/var/db/receipts/ua.com.iit.euscpnmh.bom",
   ]
 end
