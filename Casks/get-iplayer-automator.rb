@@ -26,4 +26,14 @@ cask "get-iplayer-automator" do
   end
 
   app "Get iPlayer Automator.app"
+
+  zap trash: [
+    "~/Library/Application Support/Get iPlayer Automator",
+    "~/Library/Caches/com.ascoware.getiPlayerAutomator",
+    "~/Library/HTTPStorages/com.ascoware.getiPlayerAutomator",
+    "~/Library/Logs/Get iPlayer Automator",
+    "~/Library/Preferences/com.ascoware.getiPlayerAutomator.plist",
+    "~/Library/Saved Application State/com.ascoware.getiPlayerAutomator.savedState",
+    "~/Library/WebKit/com.ascoware.getiPlayerAutomator",
+  ]
 end
