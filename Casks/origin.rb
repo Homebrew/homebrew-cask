@@ -1,5 +1,5 @@
 cask "origin" do
-  version "10.5.117.52593"
+  version "10.5.123.0000"
   sha256 :no_check
 
   url "https://origin-a.akamaihd.net/Origin-Client-Download/origin/mac/live/Origin.dmg",
