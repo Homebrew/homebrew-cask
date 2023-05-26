@@ -11,19 +11,14 @@ cask "chatbox" do
   desc "Desktop app for GPT-4 / GPT-3.5 (OpenAI API)"
   homepage "https://chatboxapp.xyz/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   app "chatbox.app"
 
   uninstall quit: "xyz.chatboxapp.app"
 
   zap trash: [
-    "~/Library/Preferences/xyz.chatboxapp.app.plist",
     "~/Library/Application Support/xyz.chatboxapp.app",
-    "~/Library/Saved Application State/xyz.chatboxapp.app.savedState",
     "~/Library/Caches/xyz.chatboxapp.app",
+    "~/Library/Preferences/xyz.chatboxapp.app.plist",
+    "~/Library/Saved Application State/xyz.chatboxapp.app.savedState",
   ]
 end
