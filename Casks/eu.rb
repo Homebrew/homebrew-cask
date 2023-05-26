@@ -1,11 +1,16 @@
-cask "iit-ca" do
-  version "1.3.1"
+cask "eu" do
+  version "1.3.1,13"
   sha256 :no_check
 
   url "https://iit.com.ua/download/productfiles/EUInstall.pkg"
   name "IIT Certification"
   desc "Program of the EDI Provider of the State Tax Service of Ukraine"
   homepage "https://iit.com.ua/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   pkg "EUInstall.pkg"
 
@@ -15,11 +20,5 @@ cask "iit-ca" do
             ],
             delete:  "/Applications/EU.app"
 
-  zap trash: [
-    "/Library/Application Support/EU",
-    "/private/var/db/receipts/ua.com.iit.osplm.plist",
-    "/private/var/db/receipts/ua.com.iit.eu.bom",
-    "/private/var/db/receipts/ua.com.iit.eu.plist",
-    "/private/var/db/receipts/ua.com.iit.osplm.bom",
-  ]
+  zap trash: "/Library/Application Support/EU"
 end
