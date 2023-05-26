@@ -1,15 +1,15 @@
 cask "inkstitch" do
   version "3.0.0"
 
-  on_high_sierra :or_older do
-    sha256 "3d6dfc5539c86840715e8edf03e79dee11fe2a85b91043a81a9c09ea050a75f7"
+  on_sierra :or_older do
+    sha256 "7a52e13a01dc74fd3267aa0efb1b0718c2463d88fbcca4c06822ab8065f936d1"
 
-    url "https://github.com/inkstitch/inkstitch/releases/download/v#{version}/inkstitch-v#{version}-sierra-osx.pkg",
+    url "https://github.com/inkstitch/inkstitch/releases/download/v#{version}/inkstitch-v#{version}-capitan-catalina-osx.pkg",
         verified: "github.com/inkstitch/inkstitch/"
 
     pkg "inkstitch-v#{version}-sierra-osx.pkg"
   end
-  on_mojave :or_newer do
+  on_high_sierra :or_newer do
     sha256 "ff4b1edddd8ca20816f9d80bfed7293e6ab05b2e6bb0ed7370ab638be6960c04"
 
     url "https://github.com/inkstitch/inkstitch/releases/download/v#{version}/inkstitch-v#{version}-osx.pkg",
