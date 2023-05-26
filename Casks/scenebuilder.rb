@@ -18,4 +18,10 @@ cask "scenebuilder" do
   depends_on macos: ">= :high_sierra"
 
   app "SceneBuilder.app"
+
+  zap trash: [
+    "~/.scenebuilder",
+    "~/Library/Application Support/Scene Builder",
+    "~/Library/Saved Application State/com.gluonhq.scenebuilder.savedState",
+  ]
 end
