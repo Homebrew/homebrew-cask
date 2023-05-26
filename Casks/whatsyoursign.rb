@@ -23,4 +23,6 @@ cask "whatsyoursign" do
               ],
               must_succeed: false,
             }
+
+  zap trash: "~/Library/Saved Application State/com.objective-see.WhatsYourSign.savedState"
 end
