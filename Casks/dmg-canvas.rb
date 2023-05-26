@@ -14,4 +14,11 @@ cask "dmg-canvas" do
   end
 
   app "DMG Canvas.app"
+
+  zap trash: [
+    "~/Library/Application Support/DMG Canvas",
+    "~/Library/Caches/com.araelium.dmgcanvas",
+    "~/Library/HTTPStorages/com.araelium.dmgcanvas",
+    "~/Library/Preferences/com.araelium.dmgcanvas.plist",
+  ]
 end
