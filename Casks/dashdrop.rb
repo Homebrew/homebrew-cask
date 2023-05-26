@@ -1,10 +1,10 @@
 cask "dashdrop" do
   arch arm: "arm64", intel: "x64"
   version "0.0.1"
-  sha256 arm: "ab2227614614f8f5efcd22c513ba411d66cd015ba66326b1e7dd7588f3edabec",
+  sha256 arm: "1eaea0c12fa3ac306d58eb0aa55754ce9eaf522f52e5b8c9971b03b52e7bcd4e",
          intel: "ab2227614614f8f5efcd22c513ba411d66cd015ba66326b1e7dd7588f3edabec"
 
-  url "https://dashdrop.s3.ap-south-1.amazonaws.com/dashdrop-#{version}.dmg",
+  url "https://dashdrop.s3.ap-south-1.amazonaws.com/dashdrop-#{version}-#{arch}.dmg",
   verified: "dashdrop.s3.ap-south-1.amazonaws.com"
   name "Dashdrop"
   desc "File transsfer app"
