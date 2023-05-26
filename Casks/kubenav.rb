@@ -1,6 +1,6 @@
 cask "kubenav" do
-  version "4.2.0"
-  sha256 "48663c083142d93b91462975ef15a0a696ea1e9becf1e28610522411c36ba6fe"
+  version "4.2.1"
+  sha256 "0fb493218a3c001e218c088e476d9f2946c38e6049181296d3211a7f186d4aae"
 
   url "https://github.com/kubenav/kubenav/releases/download/v#{version}/kubenav-macos-universal.zip",
       verified: "github.com/kubenav/kubenav/"
