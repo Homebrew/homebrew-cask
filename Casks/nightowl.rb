@@ -1,5 +1,5 @@
 cask "nightowl" do
-  version "0.4.4.6,37"
+  version "0.4.5,38"
   sha256 :no_check
 
   url "https://nightowlapp.co/files"
@@ -15,7 +15,7 @@ cask "nightowl" do
   auto_updates true
   depends_on macos: ">= :mojave"
 
-  pkg "nightowl-#{version.csv.first}(release).pkg"
+  pkg "nightowl-#{version.csv.first}.pkg"
 
   uninstall pkgutil:   "com.mygreatcompany.pkg.NightOwl",
             launchctl: [
