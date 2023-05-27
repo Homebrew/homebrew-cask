@@ -24,8 +24,8 @@ cask "dintch" do
 
   zap trash: [
     "~/Library/Caches/co.eclecticlight.Dintch",
+    "~/Library/HTTPStorages/co.eclecticlight.Dintch",
     "~/Library/Preferences/co.eclecticlight.Dintch.plist",
     "~/Library/Saved Application State/co.eclecticlight.Dintch.savedState",
-    "~/Library/HTTPStorages/co.eclecticlight.Dintch",
   ]
 end
