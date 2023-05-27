@@ -13,4 +13,6 @@ cask "jaikoz" do
   end
 
   app "Jaikoz.app"
+
+  zap trash: "~/Library/Saved Application State/com.jthink.jaikoz.savedState"
 end
