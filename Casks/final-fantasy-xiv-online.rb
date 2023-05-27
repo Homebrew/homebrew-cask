@@ -1,6 +1,6 @@
 cask "final-fantasy-xiv-online" do
   version "pnvdkzgk77dj10"
-  sha256 "a187414e0a0a101b995f08706d1bd341992258e72d535409f1136daaed413f17"
+  sha256 "bbf756f78e9606779972d3c8d0864d665eecfcda4dfbe6260ae0a6b63f84cb65"
 
   url "https://gdl.square-enix.com/ffxiv/inst/#{version}/FINAL_FANTASY_XIV_ONLINE_x64.dmg",
       verified: "square-enix.com/ffxiv/inst/"
@@ -19,4 +19,10 @@ cask "final-fantasy-xiv-online" do
   app "FINAL FANTASY XIV ONLINE.app"
 
   uninstall trash: "~/Documents/My Games/FINAL FANTASY XIV - A Realm Reborn"
+
+  zap trash: [
+    "~/Library/Application Support/FINAL FANTASY XIV ONLINE",
+    "~/Library/HTTPStorages/com.square-enix.finalfantasyxiv",
+    "~/Library/Preferences/com.square-enix.finalfantasyxiv.plist",
+  ]
 end
