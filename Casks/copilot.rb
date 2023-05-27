@@ -10,7 +10,7 @@ cask "copilot" do
 
   livecheck do
     url "https://releases.copilot.money/latest"
-    regex(/copilot[._-](\d+(?:\.\d+)+)[._-](\d+)[._-](\w+)/i)
+    regex(/copilot[._-](\d+(?:\.\d+)+)-(\d+)-(\w+)/i)
     strategy :header_match do |headers, regex|
       headers["location"].scan(regex).map { |match| "#{match[0]},#{match[1]}-#{match[2]}" }
     end
