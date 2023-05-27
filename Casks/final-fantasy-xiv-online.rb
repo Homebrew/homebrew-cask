@@ -19,4 +19,10 @@ cask "final-fantasy-xiv-online" do
   app "FINAL FANTASY XIV ONLINE.app"
 
   uninstall trash: "~/Documents/My Games/FINAL FANTASY XIV - A Realm Reborn"
+
+  zap trash: [
+    "~/Library/Application Support/FINAL FANTASY XIV ONLINE",
+    "~/Library/HTTPStorages/com.square-enix.finalfantasyxiv",
+    "~/Library/Preferences/com.square-enix.finalfantasyxiv.plist",
+  ]
 end
