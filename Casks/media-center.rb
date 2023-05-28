@@ -1,19 +1,18 @@
 cask "media-center" do
-  version "31.00.09"
-  sha256 "f7c4c9be2d62a6bcaf85e9301300c63fe2dded3ff7d21aa09e90d6945da5d7db"
+  version "31.00.12"
+  sha256 "5885b9002e29fa438a2f35971e3ad4166b5393ef746c9c80082308dec6ffc9d2"
 
-  url "https://files.jriver.com/mediacenter/channels/v#{version.major}/stable/MediaCenter#{version.no_dots}-Universal.dmg"
+  url "https://files.jriver-cdn.com/mediacenter/channels/v#{version.major}/stable/MediaCenter#{version.no_dots}-Universal.dmg",
+      verified: "files.jriver-cdn.com/mediacenter/"
   name "JRiver Media Center"
   desc "Media manager and player"
-  homepage "https://www.jriver.com/"
+  homepage "https://www.jriver.com/index.html"
 
   livecheck do
     url "https://www.jriver.com/download.html"
-    strategy :page_match do |page|
-      match = page.match(/MediaCenter(\d\d+)(\d\d+)(\d\d+)-Universal\.dmg/i)
-      next if match.blank?
-
-      "#{match[1]}.#{match[2]}.#{match[3]}"
+    regex(/MediaCenter(\d\d)(\d\d)0(\d\d+)-Universal\.dmg/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]}.#{match[1]}.#{match[2]}" }
     end
   end
 
