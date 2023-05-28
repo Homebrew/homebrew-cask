@@ -8,8 +8,8 @@ cask "launchcontrol" do
     end
   end
   on_big_sur :or_newer do
-    version "2.3.1"
-    sha256 "0b24aacdf58f4a5a6e2c83399dd7179393f9bcc49a4bcb5a947dff8496afc209"
+    version "2.4"
+    sha256 "873671be15a65a82bc1582410143661769d3a2cad2304d56594162859b0b8e34"
 
     livecheck do
       url "https://www.soma-zone.com/LaunchControl/a/appcast-update-#{version.major}.xml"
