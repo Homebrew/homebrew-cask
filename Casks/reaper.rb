@@ -2,7 +2,7 @@ cask "reaper" do
   version "6.80"
 
   on_mojave :or_older do
-    sha256 "4de48030225f6c95e2a3cdecc53bfaca136dd701e5d59cdf0993473b7e13a8cb"
+    sha256 "3416de4979819ef83433b504ab1a7edfc52509cfceba1e68699e2ed52afcda56"
 
     url "https://dlcf.reaper.fm/#{version.major}.x/reaper#{version.major_minor.no_dots}_x86_64.dmg"
   end
