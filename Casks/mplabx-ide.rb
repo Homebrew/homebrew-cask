@@ -12,8 +12,6 @@ cask "mplabx-ide" do
     regex(/href=.*?MPLABX[._-]v?(\d+(?:\.\d+)+)-osx-installer\.dmg/i)
   end
 
-  app "MPLAB IPE v#{version}.app", target: "microchip/mplabx/#{version}/MPLAB IPE v#{version}.app"
-  app "MPLAB X IDE v#{version}.app", target: "microchip/mplabx/#{version}/MPLAB X IDE v#{version}.app"
   installer script: {
     executable: "MPLABX-v#{version}-osx-installer.app/Contents/MacOS/installbuilder.sh",
     args:       [
@@ -24,14 +22,31 @@ cask "mplabx-ide" do
       "--othermcu", "0",
       "--exepermission", "no",
       "--collectInfo", "0",
+      "--collectMyMicrochipInfo", "0",
       "--installdir", staged_path.to_s
     ],
     input:      ["y"],
     sudo:       true,
   }
 
+  # staged_path files are owned by root which prevents binaries from being moved
+  # to appdir, as cp does not use sudo. This copies the binaries after the owner
+  # is changed.
   postflight do
     set_ownership staged_path.to_s
+    system_command "mkdir",
+                   args: ["-p", "#{appdir}/microchip/mplabx/#{version}"],
+                   sudo: true
+
+    system_command "cp",
+                   args: [
+                     "-pR",
+                     "#{staged_path}/MPLAB IPE v#{version}.app",
+                     "#{staged_path}/MPLAB X IDE v#{version}.app",
+                     "#{appdir}/microchip/mplabx/#{version}/",
+                   ],
+                   sudo: true
+
     set_ownership "/Applications/microchip/mplabx/#{version}"
   end
 
