@@ -8,4 +8,6 @@ cask "zprint" do
   homepage "https://github.com/kkinnear/zprint"
 
   binary "zprintm-#{version}", target: "zprint"
+
+  # No zap stanza required
 end
