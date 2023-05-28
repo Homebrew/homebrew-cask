@@ -31,4 +31,10 @@ cask "ptpwebcam" do
               "/Library/CoreMediaIO/Plug-ins/DAL/PTPWebcamDALPlugin.plugin",
               "/Library/LaunchDaemons/org.ptpwebcam.PtpWebcamAssistant.plist",
             ]
+
+  zap trash: [
+    "~/Library/Caches/org.ptpwebcam.PtpWebcamAgent",
+    "~/Library/HTTPStorages/org.ptpwebcam.PtpWebcamAgent",
+    "~/Library/Preferences/org.ptpwebcam.PtpWebcamAgent.plist",
+  ]
 end
