@@ -1,5 +1,5 @@
 cask "klayout" do
-  version "0.28.7"
+  version "0.28.8"
 
   on_catalina :or_older do
     sha256 "bf84df179018a065cd0c28bac5f363daa14dc606818d9fdb66ac4d6772d99922"
@@ -35,7 +35,7 @@ cask "klayout" do
     end
   end
   on_ventura :or_newer do
-    sha256 "77b2df36ad2445bdb9c42c941d6bcc37ff8c1ad974a7958f49fbfbe1f6c9e35c"
+    sha256 "b4597e9094e45d545523cabfed5e9b9b493b005ada821a94ef569af537bcf9ad"
 
     url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Ventura-1-qt5Brew-RsysPhb39.dmg",
         verified: "klayout.org/downloads/MacOS/"
