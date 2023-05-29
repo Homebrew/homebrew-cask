@@ -12,11 +12,9 @@ cask "visual-paradigm" do
 
   livecheck do
     url "https://www.visual-paradigm.com/downloads/vp/checksum.html"
-    strategy :header_match do |headers|
-      match = headers["location"].match(%r{/vp(\d+(?:\.\d+)+)/(\d+)/checksum\.html}i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
+    regex(%r{/vp(\d+(?:\.\d+)+)/(\d+)/checksum\.html}i)
+    strategy :header_match do |headers, regex|
+      headers["location"].scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 
