@@ -1,9 +1,9 @@
 cask "adobe-creative-cloud" do
   arch arm: "macarm64", intel: "osx10"
 
-  version "5.9.0.373"
-  sha256 arm:   "637575b6e660051711b915594af65c408fa3c9b1e613070505f1bc1df66f426d",
-         intel: "6295ba59fa9b6f993fdfde942c76d6cce893dcd4b49864f56c4f69bcaecd805d"
+  version "5.10.0.573"
+  sha256 arm:   "5edc0320a10dfca0c122105fa2461adafe9c2be68d91c4006ae4868b8d81d75f",
+         intel: "aeb39b1fddd42f1c05688ff0fa66dd511382c2efb0c698cff2ed61c92fdaa303"
 
   url "https://ccmdl.adobe.com/AdobeProducts/KCCC/CCD/#{version.major_minor_patch.dots_to_underscores}/#{arch}/ACCCx#{version.dots_to_underscores}.dmg"
   name "Adobe Creative Cloud"
@@ -12,7 +12,7 @@ cask "adobe-creative-cloud" do
 
   livecheck do
     url "https://helpx.adobe.com/creative-cloud/release-note/cc-release-notes.html"
-    regex(/Version.(\d+(?:\.\d+)+)\s\(macOS\)/i)
+    regex(/Version.\s*v?(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
