@@ -9,11 +9,9 @@ cask "cloudapp" do
 
   livecheck do
     url "https://d2plwz9jdz9z5d.cloudfront.net/mac/latest/appcast.xml"
-    strategy :sparkle do |item|
-      match = item.url.match(%r{/CloudApp[._-](\d+(?:\.\d+)+)\.(\d+)\.zip}i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
+    regex(%r{/CloudApp[._-](\d+(?:\.\d+)+)\.(\d+)\.zip}i)
+    strategy :sparkle do |item, regex|
+      item.url.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 

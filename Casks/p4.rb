@@ -9,10 +9,9 @@ cask "p4" do
 
   livecheck do
     url "https://www.perforce.com/perforce/doc.current/user/relnotes.txt"
-    strategy :page_match do |page|
-      page.scan(%r{\((\d+(?:\.\d+)+)/(\d+)\)}i).map do |match|
-        "#{match[0]},#{match[1]}"
-      end
+    regex(%r{\((\d+(?:\.\d+)+)/(\d+)\)}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 

@@ -10,11 +10,11 @@ cask "lockrattler" do
 
   livecheck do
     url "https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
-    strategy :page_match do |page|
-      match = page.match(%r{/(\d+)/(\d+)/lockrattler(\d+)\.zip}i)
-      next if match.blank?
-
-      "#{match[3].split("", 2).join(".")},#{match[1]}.#{match[2]}"
+    regex(%r{/(\d+)/(\d+)/lockrattler(\d+)\.zip}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map do |match|
+        "#{match[2].split("", 2).join(".")},#{match[0]}.#{match[1]}"
+      end
     end
   end
 
