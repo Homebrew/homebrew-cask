@@ -8,4 +8,12 @@ cask "bdash" do
   homepage "https://github.com/bdash-app/bdash"
 
   app "Bdash.app"
+
+  zap trash: [
+    "~/.bdash",
+    "~/Library/Application Support/Bdash",
+    "~/Library/Logs/Bdash",
+    "~/Library/Preferences/io.bdash.plist",
+    "~/Library/Saved Application State/io.bdash.savedState",
+  ]
 end
