@@ -1,16 +1,16 @@
 cask "motu-m-series" do
   version "92737"
-  sha256 :no_check
+  sha256 "5469d64fb416aefce5afd0e95bc972273a7b4b39ad778adcb4e721397158d4e2"
 
-  url "https://motu.com/en-us/download-center/download/600"
+  url "https://cdn-data.motu.com/downloads/audio/mseries/driver/RC/MOTU%20MSeries%20Installer%20(#{version}).pkg"
   name "Motu M-Series"
   desc "Audio interface driver for Motu M-Series (M2, M4, M6) audio interfaces"
   homepage "https://motu.com/en-us/download/product/408/"
 
   livecheck do
     url :homepage
+    regex(/<h2[^>]*?>.*?motu\s?m-series\s?installer.*?\s*?<p[^>]*?>.*?version.*?(\d+(?:\.\d+)*).*?</i)
     strategy :page_match
-    regex(%r{vnum nobreak">Mac v(\d+)</span>})
   end
 
   pkg "MOTU MSeries Installer (#{version}).pkg"
@@ -22,13 +22,6 @@ cask "motu-m-series" do
             ]
 
   zap trash: [
-    "/Applications/MOTU M Series System Extension.app",
-    "/Library/Application Scripts/com.motu.coreuac.dextmgr",
-    "/Library/Application Support/MOTU/MSeries/com.motu.coreuac.reenumerator.xpc",
-    "/Library/Audio/Plug-Ins/HAL/MOTUCoreUACAudioServerPlugin.driver",
-    "/Library/LaunchDaemons/com.motu.coreuac.reenumerator.launchd.plist",
-    "/Library/MOTU/MSeries/com.motu.coreuac.reenumerator.xpc",
-    "/Library/SystemExtensions/7D77E1D5-85FB-46B2-926C-78B740F06217/com.motu.driver.coreuac.dext.dext",
     "~/Library/Application Scripts/com.motu.coreuac.dextmgr",
     "~/Library/Containers/com.motu.coreuac.dextmgr",
   ]
