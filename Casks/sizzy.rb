@@ -18,4 +18,11 @@ cask "sizzy" do
   auto_updates true
 
   app "Sizzy.app"
+
+  zap trash: [
+    "~/Library/Application Support/Sizzy",
+    "~/Library/Logs/Sizzy",
+    "~/Library/Preferences/com.kitze.sizzy.plist",
+    "~/Library/Saved Application State/com.kitze.sizzy.savedState",
+  ]
 end
