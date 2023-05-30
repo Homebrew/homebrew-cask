@@ -24,10 +24,14 @@ cask "engine-dj" do
   ]
 
   zap trash: [
-    "~/Library/Application Support/AIR Music Technology",
-    "~/Library/Caches/AIR Music Technology",
-    "~/Library/Preferences/com.air-music-technology.EnginePrime.plist",
-    "~/Library/Saved Application State/com.air-music-technology.EnginePrime.savedState",
-    "~/Music/Engine Library",
-  ]
+        "~/Library/Application Support/AIR Music Technology/EnginePrime",
+        "~/Library/Caches/AIR Music Technology/EnginePrime",
+        "~/Library/Preferences/com.air-music-technology.EnginePrime.plist",
+        "~/Library/Saved Application State/com.air-music-technology.EnginePrime.savedState",
+        "~/Music/Engine Library",
+      ],
+      rmdir: [
+        "~/Library/Application Support/AIR Music Technology",
+        "~/Library/Caches/AIR Music Technology",
+      ]
 end
