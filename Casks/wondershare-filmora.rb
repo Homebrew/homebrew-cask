@@ -17,9 +17,9 @@ cask "wondershare-filmora" do
     end
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :catalina"
 
-  app "Wondershare Filmora X.app"
+  app "Wondershare Filmora Mac.app"
 
   zap trash: [
     "/Users/Shared/wondershare.plist",
