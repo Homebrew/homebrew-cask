@@ -2,20 +2,20 @@ cask "anka-virtualization" do
   version "3.3.0.164"
   sha256 "d34a4da84db35dc4cabd70aac2fff2c8a811310b7f5cf1c4d4b0d79ea0a738d1"
 
-  url "https://downloads.veertu.com/anka/Anka-#{version}#{arch}.pkg"
+  url "https://downloads.veertu.com/anka/Anka-#{version}.pkg"
   name "Anka Virtualization"
   desc "CLI tool for managing and creating virtual machines"
   homepage "https://veertu.com/"
 
   livecheck do
-    url "https://veertu.com/downloads/anka-virtualization-#{livecheck_folder}"
-    regex(/Anka[._-]?v?(\d+(?:\.\d+)+)#{arch}\.pkg/i)
+    url "https://veertu.com/downloads/anka-virtualization-latest"
+    regex(/Anka[._-]?v?(\d+(?:\.\d+)+)\.pkg/i)
     strategy :header_match
   end
 
   depends_on macos: ">= :monterey"
 
-  pkg "Anka-#{version}#{arch}.pkg"
+  pkg "Anka-#{version}.pkg"
 
   uninstall launchctl: [
               "com.veertu.anka.ankakbd",
