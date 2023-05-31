@@ -3,8 +3,8 @@ cask "voov-meeting" do
   arch_suffix = on_arch_conditional intel: "%20%281%29"
 
   on_arm do
-    version "3.13.7.511,68d2bdd5c3803cc46a569707e9b57b1f"
-    sha256 "dbb3838b8169ec0962e3ec56fe01d59d30b179403d0b77e72ed13725334a144c"
+    version "3.16.2.510,c21bb873a96e32725fa8231a2375bb0b"
+    sha256 "fc3268b0c33fd5facc9321c259e41c0fff83f14cb1df005005ed481135738efc"
   end
   on_intel do
     version "3.13.7.511,6a26914b3c7ed17dcaedcc5f5d7635df"
