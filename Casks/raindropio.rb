@@ -1,9 +1,9 @@
 cask "raindropio" do
   arch arm: "arm64", intel: "x64"
 
-  version "5.6.2"
-  sha256 arm:   "ebec58c78382ffc8f2e8a186e8d39cf695583c5a3837f9088dc5b3170596759f",
-         intel: "d11f206455238c349a28a38a89e64b666e7fba9ba6a9dfe794b43219f55a7a8d"
+  version "5.6.4"
+  sha256 arm:   "fe9184efb874c4946eb0b3a7f35f2c208a8a43e6dc04d0ddafd1de605e145fac",
+         intel: "4e834ac7ee421ee439dcab810e245874f36c9dd14dd6e0edaf55c92fb57912f3"
 
   url "https://github.com/raindropio/desktop/releases/download/v#{version}/Raindrop-#{arch}.dmg",
       verified: "github.com/raindropio/desktop/"
