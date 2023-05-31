@@ -1,7 +1,8 @@
 cask "dashdrop" do
   arch arm: "arm64", intel: "x64"
+
   version "0.0.1"
-  sha256 arm: "8af6239981607e20217a2ea6a3c43682d4266227fc40feacc99d8bd609591db1",
+  sha256 arm:   "8af6239981607e20217a2ea6a3c43682d4266227fc40feacc99d8bd609591db1",
          intel: "066cee6977067ee30706549fe8f08576574606a599f018c8ec9a542990467598"
 
   url "https://dashdrop.s3.ap-south-1.amazonaws.com/dashdrop-#{version}-mac-#{arch}.dmg"
@@ -14,7 +15,7 @@ cask "dashdrop" do
     strategy :sparkle
   end
 
-  auto_updates trues
+  auto_updates true
   depends_on macos: ">= :mojave"
 
   app "dashdrop.app"
