@@ -14,7 +14,6 @@ cask "anka-virtualization" do
   end
 
   depends_on macos: ">= :monterey"
-  depends_on macos: ">= :monterey"
 
   pkg "Anka-#{version}#{arch}.pkg"
 
