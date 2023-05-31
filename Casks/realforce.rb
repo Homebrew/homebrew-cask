@@ -9,9 +9,9 @@ cask "realforce" do
 
   livecheck do
     url "https://www.realforce.co.jp/support/download/software"
-    strategy :page_match do |page|
-      v = page[%r{href=.*?/REALFORCE\s*CONNECT\s*Software_(\d+(?:-\d+)+)\.pkg}i, 1]
-      v.tr("-", ".")
+    regex(%r{href=.*?/REALFORCE\s*?CONNECT\s*?Software[._-](\d+(?:-\d+)+)\.pkg})
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| match[0].tr("-", ".").to_s }
     end
   end
 
