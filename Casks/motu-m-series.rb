@@ -10,8 +10,9 @@ cask "motu-m-series" do
   livecheck do
     url :homepage
     regex(/<h2[^>]*?>.*?motu\s?m-series\s?installer.*?\s*?<p[^>]*?>.*?version.*?(\d+(?:\.\d+)*).*?</i)
-    strategy :page_match
   end
+
+  depends_on macos: ">= :mojave"
 
   pkg "MOTU MSeries Installer (#{version}).pkg"
 
