@@ -8,7 +8,6 @@ cask "red-canary-mac-monitor" do
   desc "Analysis tool for security research and malware triage"
   homepage "https://redcanary.com/mac-threat-analysis-tool/"
 
-  auto_updates true
   depends_on macos: ">= :ventura"
 
   pkg "Red-Canary-Mac-Monitor-GoldCardinal-#{version.tr(".", "-")}.pkg"
