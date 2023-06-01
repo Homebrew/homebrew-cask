@@ -13,8 +13,6 @@ cask "ubiquiti-unifi-controller" do
     regex(/"version"\s*:\s*"v?(\d+(?:\.\d+)+)/i)
   end
 
-  conflicts_with cask: "homebrew/cask-drivers/ubiquiti-unifi-controller-lts"
-
   pkg "UniFi.pkg"
 
   postflight do
