@@ -11,6 +11,8 @@ cask "chatbox" do
   desc "Desktop app for GPT-4 / GPT-3.5 (OpenAI API)"
   homepage "https://chatboxapp.xyz/"
 
+  auto_updates true
+
   app "chatbox.app"
 
   uninstall quit: "xyz.chatboxapp.app"
