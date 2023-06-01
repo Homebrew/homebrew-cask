@@ -8,7 +8,7 @@ cask "electrum" do
   homepage "https://electrum.org/"
 
   livecheck do
-    url "https://electrum.org/panel-download.html"
+    url "https://electrum.org/#download"
     regex(/href=.*?electrum[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
