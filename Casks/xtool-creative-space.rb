@@ -2,8 +2,8 @@ cask "xtool-creative-space" do
   arch arm: "arm64", intel: "x64"
 
   on_arm do
-    version "28.235.1678160204427,1.2.14-2023-03-06-13-34-59"
-    sha256  "a99e6d8b30d7a17560a7ea2af1d28f5fa8fe382420186d6eba37f1d5a177e3bf"
+    version "28.265.1685528104377,1.3.21-2023-05-30-15-17-20"
+    sha256  "cf0da60fee213cc0ad8854ab1996389a49fce3864b1ad654025b2eb976abc5f2"
   end
   on_intel do
     version "16.234.1678158837754,1.2.14-2023-03-06-13-36-37"
