@@ -1,6 +1,6 @@
 cask "red-canary-mac-monitor" do
-  version "1.0.3"
-  sha256 "41a0265630b63d66af65b59f11c8ff11daffd002849e068bcf25b83223a1ef29"
+  version "1.0.4"
+  sha256 "5c368ddd2f09e2e1ec5052d4ef8a2c2f53894c566a1581c9a8723faf4233ba75"
 
   url "https://github.com/redcanaryco/mac-monitor/releases/download/v#{version}/Red-Canary-Mac-Monitor-GoldCardinal-#{version.tr(".", "-")}.pkg",
       verified: "github.com/redcanaryco/mac-monitor/"
@@ -19,7 +19,7 @@ cask "red-canary-mac-monitor" do
             script:  {
               executable:   "#{appdir}/Red Canary Mac Monitor.app/Contents/SharedSupport/uninstall.sh",
               must_succeed: false,
-              sudo:         false,
+              sudo:         true,
             }
 
   zap trash: [
