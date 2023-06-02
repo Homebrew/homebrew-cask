@@ -4,6 +4,7 @@ cask "license-control-center" do
 
   url "https://download.steinberg.net/downloads/eLicenserControl.dmg"
   name "eLicenser Control Center"
+  desc "Music software license manager"
   homepage "https://www.steinberg.net/en/company/technologies/elicenser.html"
 
   livecheck do
