@@ -9,11 +9,9 @@ cask "simplemind" do
 
   livecheck do
     url "https://simpleapps.eu/download/full-edition/simplemind-pro-mac/"
-    strategy :page_match do |page|
-      match = page.match(%r{<b>Version: ([\d.]+) ([a-zA-Z0-9]+)</b>}i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
+    regex(%r{<b>Version: ([\d.]+) ([a-zA-Z0-9]+)</b>}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 

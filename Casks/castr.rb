@@ -1,11 +1,11 @@
 cask "castr" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.5.0"
-  sha256 arm:   "6946f5810bbcfe74be76262df9821636c2832d87c52d124386cf0e13105b020c",
-         intel: "db7eb6ee1faacabc97e625a86377338fb564dd5220a457a27ac8c2f1dfca6c4f"
+  version "2.7.0"
+  sha256 arm:   "814c5c080818554b23400e85f53258a52c102b16def62ed72b87d332cc009107",
+         intel: "3eb46e778d9cf476ac0cc61dbb37c45f9b50125ac0f21f13fb05415e9f5078d1"
 
-  url "https://download.todesktop.com/210610elr9v3cm6/Castr%20#{version}-#{arch}.dmg",
+  url "https://download.todesktop.com/210610elr9v3cm6/Castr%20#{version}-#{arch}-mac.zip",
       verified: "download.todesktop.com/210610elr9v3cm6/"
   name "castr"
   desc "Desktop application for controlling Castr streaming platform"

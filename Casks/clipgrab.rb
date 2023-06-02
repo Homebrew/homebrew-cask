@@ -11,10 +11,7 @@ cask "clipgrab" do
     url "https://clipgrab.org/"
     regex(%r{href=.*?/ClipGrab[._-]v?(\d+(?:\.\d+)+)-cpython-(\d+)\.dmg}i)
     strategy :page_match do |page, regex|
-      match = page.match(regex)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 

@@ -9,11 +9,9 @@ cask "preform" do
 
   livecheck do
     url "https://formlabs.com/download-preform-mac/"
-    strategy :page_match do |page|
-      match = page.match(%r{/PreForm_mac_(\d+(?:\.\d+)+)_release_releaser_(\d+(?:[._-]\d+)+)\.dmg}i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
+    regex(%r{/PreForm_mac_(\d+(?:\.\d+)+)_release_releaser_(\d+(?:[._-]\d+)+)\.dmg}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 

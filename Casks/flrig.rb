@@ -1,5 +1,5 @@
 cask "flrig" do
-  version "2.0.0"
+  version "2.0.01"
 
   on_sierra :or_older do
     sha256 "5c8bcb3c3d0c33183fad9a86a894f66a226e8614659b020f49b4b28f34551a5f"
@@ -7,7 +7,7 @@ cask "flrig" do
     url "https://downloads.sourceforge.net/fldigi/fldigi/flrig-#{version}_LI.dmg"
   end
   on_high_sierra :or_newer do
-    sha256 "591f3bb04ec45b2e9771a16e86ded8d76f643f6a7af0284f131776c9412d3cdd"
+    sha256 "54ee0bc2486e75589a8a20b5f8018ee8b35297eed7f43d6ff366e45580cb4a0e"
 
     url "https://downloads.sourceforge.net/fldigi/fldigi/flrig-#{version}_VN.dmg"
   end

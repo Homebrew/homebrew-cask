@@ -1,9 +1,9 @@
 cask "wondershare-filmora" do
   arch arm: "arm_"
 
-  version "12.3.3"
-  sha256 arm:   "bf894c82e58a3abb7f2ee7cf3d79367b404684c7a1db22dceabf4170c462fbe1",
-         intel: "db88df34062ccbb688b031b12da244fc05f5869709438a7bc53afe6d99df3012"
+  version "12.9.0"
+  sha256 arm:   "82505f157b6e2ff81e74a6ba86553467adf8ba29db0a6a86af5ae30c7037e4d9",
+         intel: "a180ef0adff67f2629cdc22a7770902ea97470b47b9efc61e057069273e74216"
 
   url "https://download.wondershare.com/cbs_down/filmora-mac_#{arch}#{version}_gray_full718.dmg"
   name "Wondershare Filmora"
@@ -17,9 +17,9 @@ cask "wondershare-filmora" do
     end
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :catalina"
 
-  app "Wondershare Filmora X.app"
+  app "Wondershare Filmora Mac.app"
 
   zap trash: [
     "/Users/Shared/wondershare.plist",

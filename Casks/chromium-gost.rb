@@ -1,8 +1,11 @@
 cask "chromium-gost" do
-  version "113.0.5672.92"
-  sha256 "f8fc71d14af5ca0cd4701ce29ef587db9db103e36505b0dabed0c38173606be2"
+  arch arm: "arm64", intel: "amd64"
 
-  url "https://github.com/deemru/Chromium-Gost/releases/download/#{version}/chromium-gost-#{version}-macos-amd64.tar.bz2"
+  version "114.0.5735.90"
+  sha256 arm:   "bfb5afdae3a75f42c27c2ec183cbb4a055f8d0f67a38dd6de2b946e8a2339671",
+         intel: "05391f2af7db3110ef0e2c64d3d0774b6c80ae6dc1fcdf6c55f2fdc5e94c1206"
+
+  url "https://github.com/deemru/Chromium-Gost/releases/download/#{version}/chromium-gost-#{version}-macos-#{arch}.tar.bz2"
   name "Chromium-Gost"
   desc "Browser based on Chromium with support for GOST cryptographic algorithms"
   homepage "https://github.com/deemru/Chromium-Gost"

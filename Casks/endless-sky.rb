@@ -8,6 +8,11 @@ cask "endless-sky" do
   desc "Space exploration, trading, and combat game"
   homepage "https://endless-sky.github.io/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Endless Sky.app"
 
   zap trash: "~/Library/Application Support/endless-sky"

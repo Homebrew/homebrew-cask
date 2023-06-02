@@ -9,9 +9,9 @@ cask "abbyy-finereader-pdf" do
 
   livecheck do
     url "https://www.abbyy.com/finereader-pdf-mac-downloads/"
-    strategy :page_match do |page|
-      page.scan(%r{(?:Part #:.*?\n<td>)(\d+(?:[./]\d+)+)}i)
-          .map { |match| match[0].tr("/", ".") }
+    regex(%r{(?:Part #:.*?\n<td>)(\d+(?:[./]\d+)+)}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| match[0].tr("/", ".") }
     end
   end
 

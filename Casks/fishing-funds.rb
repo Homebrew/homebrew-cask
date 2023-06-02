@@ -1,9 +1,9 @@
 cask "fishing-funds" do
   arch arm: "-arm64"
 
-  version "7.2.0"
-  sha256 arm:   "e314bf73f965d9aeedb83ba0961432f733a863e436fc9dc3ec3ed1082dc30e22",
-         intel: "47b2a4adc8dba9875b93558f051348492272098775b92a39704f6ace14d20788"
+  version "7.3.0"
+  sha256 arm:   "91772a2719cde29cdb76837497f3589bb3f3f022a600000d5d7fbcd79f92e962",
+         intel: "98f736bf1e4552fd0a075116fe6f9664cdfbdd2bfc8fd34e0a464754b909a5e4"
 
   url "https://github.com/1zilc/fishing-funds/releases/download/v#{version}/Fishing-Funds-#{version}#{arch}.dmg",
       verified: "github.com/1zilc/fishing-funds/"

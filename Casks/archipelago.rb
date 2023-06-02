@@ -1,11 +1,11 @@
 cask "archipelago" do
   arch arm: "-arm64"
 
-  version "4.3.0"
-  sha256 arm:   "92ce07cd5984f63966a66219a3cdea3df88ea84c53c750928f1077daf839b43c",
-         intel: "2ad8d09afc04aec3d6f9011cd029eb6958c058b598085619ec5c2ce8b6db88ab"
+  version "5.0.2"
+  sha256 arm:   "c88c245966506f85b3381b522c8462659a8898610f167309b59d492c3afeda36",
+         intel: "9f9691829010bdaa314472d8dccb07a0a2bdb7245a96e723b4fd75c8cd758a19"
 
-  url "https://github.com/npezza93/archipelago/releases/download/v#{version}/Archipelago-#{version}#{arch}.dmg"
+  url "https://github.com/npezza93/archipelago/releases/download/v#{version}/Archipelago-#{version}#{arch}-mac.zip"
   name "Archipelago"
   desc "Terminal emulator built on web technology"
   homepage "https://github.com/npezza93/archipelago"

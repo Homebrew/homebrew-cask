@@ -1,6 +1,6 @@
 cask "get-iplayer-automator" do
-  version "1.25.1,20230118001"
-  sha256 "951dffaab21dd7afb9d0a5650971dfdb72b53fecb74bf7035bd5dda4fd33e35c"
+  version "1.25.3,20230524001"
+  sha256 "39b1996a3c340d9055e9b0850db9c90f0be96b1f31867de8b7a45b23a9c786a8"
 
   url "https://github.com/Ascoware/get-iplayer-automator/releases/download/v#{version.csv.first}/Get.iPlayer.Automator.v#{version.csv.first}.b#{version.csv.second}.zip"
   name "Get iPlayer Automator"
@@ -26,4 +26,14 @@ cask "get-iplayer-automator" do
   end
 
   app "Get iPlayer Automator.app"
+
+  zap trash: [
+    "~/Library/Application Support/Get iPlayer Automator",
+    "~/Library/Caches/com.ascoware.getiPlayerAutomator",
+    "~/Library/HTTPStorages/com.ascoware.getiPlayerAutomator",
+    "~/Library/Logs/Get iPlayer Automator",
+    "~/Library/Preferences/com.ascoware.getiPlayerAutomator.plist",
+    "~/Library/Saved Application State/com.ascoware.getiPlayerAutomator.savedState",
+    "~/Library/WebKit/com.ascoware.getiPlayerAutomator",
+  ]
 end

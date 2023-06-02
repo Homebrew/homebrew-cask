@@ -1,6 +1,6 @@
 cask "moneymanager" do
-  version "1.7.0"
-  sha256 "7633276fb9478b21ec19b0de8efae3ad5b4a11c4c79a3ccc9d3de35da1abc1c5"
+  version "1.7.3"
+  sha256 "8b0370c3979863585447ab1cc08182b0fe926c83ca929512c210d55ad7928f38"
 
   url "https://download.realbyteapps.com/MoneyManager-#{version}.dmg"
   name "MoneyManager"

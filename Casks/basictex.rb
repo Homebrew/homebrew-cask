@@ -10,11 +10,9 @@ cask "basictex" do
 
   livecheck do
     url "https://ctan.org/texarchive/systems/mac/mactex/"
-    strategy :page_match do |page|
-      match = page.match(/href=.*?mactex-basictex-(\d{4})(\d{2})(\d{2})\.pkg/)
-      next if match.blank?
-
-      "#{match[1]}.#{match[2]}#{match[3]}"
+    regex(/href=.*?mactex-basictex-(\d{4})(\d{2})(\d{2})\.pkg/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]}.#{match[1]}#{match[2]}" }
     end
   end
 

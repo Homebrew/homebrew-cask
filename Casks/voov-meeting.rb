@@ -3,12 +3,12 @@ cask "voov-meeting" do
   arch_suffix = on_arch_conditional intel: "%20%281%29"
 
   on_arm do
-    version "3.13.7.511,68d2bdd5c3803cc46a569707e9b57b1f"
-    sha256 "dbb3838b8169ec0962e3ec56fe01d59d30b179403d0b77e72ed13725334a144c"
+    version "3.16.2.510,c21bb873a96e32725fa8231a2375bb0b"
+    sha256 "fc3268b0c33fd5facc9321c259e41c0fff83f14cb1df005005ed481135738efc"
   end
   on_intel do
-    version "3.13.7.511,6a26914b3c7ed17dcaedcc5f5d7635df"
-    sha256 "b551cfd6414870635222c99fbc1baad618f411b879f209552d51f46c7effe03c"
+    version "3.16.2.510,11d9b52dbae65c0fdb27d0abed56acf6"
+    sha256 "2f00b5edf2914306489fc96b6397d21a9658e3d1a4fcb019b8bdccb75000778c"
   end
 
   url "https://updatecdn.meeting.qq.com/cos/#{version.csv.second}/VooVMeeting_1410000198_#{version.csv.first}.publish.#{arch}#{arch_suffix}.dmg",
