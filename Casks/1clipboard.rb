@@ -8,7 +8,7 @@ cask "1clipboard" do
   homepage "https://1clipboard.io/"
 
   livecheck do
-    url "https://1clipboard.io/download/darwin/1Clipboard.dmg"
+    url :url
     strategy :extract_plist
   end
 
