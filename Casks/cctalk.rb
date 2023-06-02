@@ -16,4 +16,12 @@ cask "cctalk" do
   depends_on macos: ">= :el_capitan"
 
   app "CCtalk.app"
+
+  zap trash: [
+    "~/Library/Application Support/CCtalk",
+    "~/Library/Application Support/com.hujiang.mac.cctalk",
+    "~/Library/Caches/com.crashlytics.data/com.hujiang.mac.cctalk",
+    "~/Library/HTTPStorages/com.hujiang.mac.cctalk",
+    "~/Library/Preferences/com.hujiang.mac.cctalk.plist",
+  ]
 end
