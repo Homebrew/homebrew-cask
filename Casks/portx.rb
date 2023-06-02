@@ -1,5 +1,5 @@
 cask "portx" do
-  arch arm: "arm64", intel: "x64"
+  arch arm: "arm64", intel: "x64" 
 
   version "2.1.14,10.46"
   sha256 arm:   "07E602C343C4FB5984E4748BFA9D6B30EB7A40B7C1F4684382BF4A16EF41D87A",
