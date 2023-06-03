@@ -1,5 +1,5 @@
 cask "orion" do
-  version "0.99,124.2"
+  version "0.99,124.3"
 
   on_mojave :or_older do
     sha256 "87b76bbc883a33cab5d602791df274606e43ae5b3a9da92b8bb2e06a0befa602"
@@ -50,7 +50,7 @@ cask "orion" do
     depends_on macos: :monterey
   end
   on_ventura do
-    sha256 "68d71b5c89a8276df3b951804aa5b6a42b43b909c00823f047991cef3b8fa778"
+    sha256 "2db71b134a209c06c44dd4dc357e609f7fcf03a9408b53bb41864716b9e273de"
 
     url "https://browser.kagi.com/updates/13_0/#{version.csv.second}.zip"
 
