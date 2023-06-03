@@ -1,4 +1,5 @@
 cask "input-source-pro" do
+  # NOTE: Beta is the only stable version available for this application.
   version "2.3.0-beta"
   sha256 "611b579f20676248b3af5dba36ebee3417cc6209fb50e022a6754ade3e3f50e1"
 
