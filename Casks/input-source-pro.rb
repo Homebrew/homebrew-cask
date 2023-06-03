@@ -1,6 +1,6 @@
 cask "input-source-pro" do
-  version "2.2.3-beta"
-  sha256 "f69e2ce512aa0c8a8fb68d2ddbe6ef1ebd7c0381b3abff63f534916659947751"
+  version "2.3.0-beta"
+  sha256 "611b579f20676248b3af5dba36ebee3417cc6209fb50e022a6754ade3e3f50e1"
 
   url "https://inputsource.pro/beta/Input%20Source%20Pro%20#{version}.dmg"
   name "Input Source Pro"
