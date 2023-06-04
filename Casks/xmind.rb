@@ -21,4 +21,10 @@ cask "xmind" do
     "~/Library/Saved Application State/org.xmind.cathy.application.savedState",
     "~/Library/XMind",
   ]
+
+  caveats <<~EOS
+    Xmind 23 is now moved to the beta brench.
+    If you have installed xmind 23 before and want to keep using xmind 23, please use:
+    brew install --cask xmind23
+  EOS
 end
