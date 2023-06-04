@@ -24,8 +24,6 @@ cask "visual-studio" do
 
   app "Visual Studio.app"
 
-  uninstall delete: "/Applications/Visual Studio.app"
-
   zap trash: [
     "/Applications/Xamarin Profiler.app",
     "/Applications/Xamarin Workbooks.app",
