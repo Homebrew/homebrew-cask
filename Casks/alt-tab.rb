@@ -1,6 +1,6 @@
 cask "alt-tab" do
-  version "6.58.0"
-  sha256 "1d9d02a54ec2186605a1068ad8aa30de63d5facaeb515cf12b532e32970b8974"
+  version "6.59.0"
+  sha256 "3488f77c04795c3b96f606a6873ca40c9ce55dea20d716d40a21080e1d98762a"
 
   url "https://github.com/lwouis/alt-tab-macos/releases/download/v#{version}/AltTab-#{version}.zip",
       verified: "github.com/lwouis/alt-tab-macos/"
