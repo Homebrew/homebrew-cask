@@ -10,7 +10,7 @@ cask "phantomjs" do
 
   livecheck do
     url "https://phantomjs.org/download.html"
-    regex(%r{href=.*?/phantomjs[._-](\d+(?:\.\d+)+)[._-]macosx\.zip}i)
+    regex(/href=.*?phantomjs[._-](\d+(?:\.\d+)+)[._-]macosx\.zip/i)
   end
 
   binary "phantomjs-#{version}-macosx/bin/phantomjs"
