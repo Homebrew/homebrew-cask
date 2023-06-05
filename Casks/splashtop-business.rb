@@ -20,4 +20,11 @@ cask "splashtop-business" do
               "com.splashtop.stb.*",
               "com.splashtop.splashtopBusiness.*",
             ]
+
+  zap trash: [
+    "~/Library/Application Support/Splashtop Business",
+    "~/Library/Caches/com.splashtop.stb.macosx",
+    "~/Library/HTTPStorages/com.splashtop.stb.macosx",
+    "~/Library/Preferences/com.splashtop.stb.macosx.plist",
+  ]
 end
