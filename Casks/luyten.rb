@@ -8,11 +8,9 @@ cask "luyten" do
   desc "Open-source Java decompiler GUI for Procyon"
   homepage "https://deathmarine.github.io/Luyten/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-    regex(%r{href=.*?/luyten-OSX-(\d+(?:\.\d+)*)\.zip}i)
-  end
-
   app "Luyten.app"
+
+  caveats do
+    discontinued
+  end
 end

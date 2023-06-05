@@ -1,30 +1,28 @@
 cask "eloston-chromium" do
-  arch = Hardware::CPU.intel? ? "x86-64" : "arm64"
+  arch arm: "arm64", intel: "x86-64"
 
-  if Hardware::CPU.intel?
-    version "103.0.5060.114-1.1,1657506963"
-    sha256 "f61ab5efc8bfba684eb27d4f26f69c344c2aa808ccfd9bd26f9b55684cda70a4"
-  else
-    version "103.0.5060.114-1.1,1657720010"
-    sha256 "4e9c62358e5d223a42a426073b68a5629da0219a3cb607bb049b97b8cb0470dc"
+  on_arm do
+    version "113.0.5672.126-1.1,1684679238"
+    sha256 "2704a72742619140e9ac28ca2e02176beb8f44393074eb6d47454148d0fd9d8f"
+  end
+  on_intel do
+    version "113.0.5672.126-1.1,1684616469"
+    sha256 "2ae6bfd813ed95e059d76a3616c7f58b08bf77e33f9a87e3d07baaab28ddd67e"
   end
 
-  url "https://github.com/kramred/ungoogled-chromium-macos/releases/download/#{version.csv.first}_#{arch}__#{version.csv.second}/ungoogled-chromium_#{version.csv.first}_#{arch}-macos.dmg",
-      verified: "github.com/kramred/ungoogled-chromium-macos/"
+  url "https://github.com/ungoogled-software/ungoogled-chromium-macos/releases/download/#{version.csv.first}_#{arch}__#{version.csv.second}/ungoogled-chromium_#{version.csv.first}_#{arch}-macos.dmg",
+      verified: "github.com/ungoogled-software/ungoogled-chromium-macos/"
   name "Ungoogled Chromium"
   desc "Google Chromium, sans integration with Google"
   homepage "https://ungoogled-software.github.io/ungoogled-chromium-binaries/"
 
   livecheck do
-    url "https://github.com/kramred/ungoogled-chromium-macos/releases/"
-    strategy :page_match do |page|
-      match = page.match(%r{
-        releases/download/(\d+(?:[.-]\d+)+)[._-]#{arch}[._-]{2}(\d+)/
-        ungoogled[._-]chromium[._-](\d+(?:[.-]\d+)+)[._-]#{arch}[._-]macos\.dmg
-      }xi)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
+    url "https://github.com/ungoogled-software/ungoogled-chromium-macos/releases?q=prerelease%3Afalse"
+    regex(%r{href=["']?[^"' >]*?/tree/v?(\d+(?:[.-]\d+)+)(?:[._-]#{arch})?(?:[._-]+?(\d+(?:\.\d+)*))?["' >]}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map do |match|
+        (match.length > 1) ? "#{match[0]},#{match[1]}" : match[0]
+      end
     end
   end
 

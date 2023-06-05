@@ -38,7 +38,7 @@ def process_args
     puts usage
     exit 0
   elsif ARGV.length == 1
-    $app_path = ARGV.first
+    $app_path = ARGV.first # rubocop:disable Style/GlobalVars
   else
     puts usage
     exit 1
@@ -63,4 +63,4 @@ end
 ###
 
 process_args
-list_login_items_for_app $app_path
+list_login_items_for_app $app_path # rubocop:disable Style/GlobalVars

@@ -8,4 +8,10 @@ cask "swimat" do
   homepage "https://github.com/Jintin/Swimat"
 
   app "Swimat.app"
+
+  zap trash: [
+    "/usr/local/bin/swimat",
+    "~/Library/Containers/com.jintin.Swimat.Extension",
+    "~/Library/Group Containers/com.jintin.swimat.configuration",
+  ]
 end

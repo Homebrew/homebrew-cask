@@ -1,8 +1,11 @@
 cask "turbovnc-viewer" do
-  version "3.0"
-  sha256 "7e4436dbac6daf00e2828ed1ddbe297de6dd07c4e0200b08b550d1fb138748b6"
+  arch arm: "arm64", intel: "x86_64"
 
-  url "https://downloads.sourceforge.net/turbovnc/#{version}/TurboVNC-#{version}.dmg",
+  version "3.0.3"
+  sha256 arm:   "9d2dfb1e54db720d12ca82a893d7b383883907bb820db5a4400d7e8eff48c80d",
+         intel: "b796fdb41f4203cdcd85aace5185eebd7dfaf6fabfe9ecec59a08dd2ce3da99a"
+
+  url "https://downloads.sourceforge.net/turbovnc/#{version}/TurboVNC-#{version}-#{arch}.dmg",
       verified: "sourceforge.net/turbovnc/"
   name "TurboVNC"
   desc "Remote display system"
@@ -16,7 +19,5 @@ cask "turbovnc-viewer" do
               sudo:       true,
             }
 
-  caveats do
-    depends_on_java "8"
-  end
+  # No zap stanza required
 end

@@ -8,4 +8,8 @@ cask "spotifree" do
   homepage "https://github.com/ArtemGordinsky/Spotifree/"
 
   app "Spotifree.app"
+
+  caveats do
+    discontinued
+  end
 end

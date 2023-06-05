@@ -1,6 +1,6 @@
 cask "010-editor" do
-  version "12.0.1"
-  sha256 "336cb1b7e055d3638e562e63539e90db4a795f738d67ca377c2e9dfac8670924"
+  version "13.0.2"
+  sha256 "8ad3e6ecbab3815ffcf914ac38ea207cfc0b81b76e4bbf04b075ccceb5433d65"
 
   url "https://download.sweetscape.com/010EditorMac64Installer#{version}.dmg"
   name "010 Editor"
@@ -13,4 +13,11 @@ cask "010-editor" do
   end
 
   app "010 Editor.app"
+
+  zap trash: [
+        "~/.config/SweetScape",
+        "~/Library/Application Support/SweetScape",
+        "~/Library/Saved Application State/com.SweetScape.010Editor.savedState",
+      ],
+      rmdir: "~/Documents/SweetScape"
 end

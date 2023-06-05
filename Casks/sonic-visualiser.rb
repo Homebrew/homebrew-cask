@@ -1,6 +1,6 @@
 cask "sonic-visualiser" do
-  version "4.5,2824"
-  sha256 "8d52092334a0a01c1c8f13f70bcf2b4d85f107b52a216149622cdef66d39f977"
+  version "4.5.2,2851"
+  sha256 "d91ce0890fe9fc099fd7dfe4ed725d535f9a5a7da7bacd56130803736597ac6b"
 
   url "https://github.com/sonic-visualiser/sonic-visualiser/releases/download/sv_v#{version.csv.first}/Sonic.Visualiser-#{version.csv.first}.dmg",
       verified: "github.com/sonic-visualiser/sonic-visualiser/"
@@ -10,11 +10,9 @@ cask "sonic-visualiser" do
 
   livecheck do
     url "https://www.sonicvisualiser.org/download.html"
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/(\d+)/Sonic%20Visualiser-(\d+(?:\.\d+)*)\.dmg}i)
-      next if match.blank?
-
-      "#{match[2]},#{match[1]}"
+    regex(%r{href=.*?/(\d+)/Sonic%20Visualiser-(\d+(?:\.\d+)*)\.dmg}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
 

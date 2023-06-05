@@ -1,6 +1,6 @@
 cask "pluginval" do
-  version "0.3.0"
-  sha256 "1678f91c1afed6857a7a7c05bb13fc2b5586a7a29b02381751aa622c0386429c"
+  version "1.0.3"
+  sha256 "6bb4d0acc964e775af155ec984c1566dc989dad2a708f64c773706d7baec43af"
 
   url "https://github.com/Tracktion/pluginval/releases/download/v#{version}/pluginval_macOS.zip",
       verified: "github.com/Tracktion/pluginval/"

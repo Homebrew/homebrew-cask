@@ -1,6 +1,6 @@
 cask "tiles" do
-  version "1.3.0,6c7491b2"
-  sha256 "c88ec00075f9c0504f793ec354be9752c700717deefe2164a67d6daeb90ff48d"
+  version "1.3.2,03b500a8"
+  sha256 "b051ea7e5048bac0f7a72b6dd893bb1a02cf47ecde6def9f103d2be8e122f01e"
 
   url "https://updates.sempliva.com/tiles/Tiles-#{version.csv.second}.dmg"
   name "Sempliva Tiles"
@@ -16,7 +16,7 @@ cask "tiles" do
   end
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :mojave"
 
   app "Tiles.app"
 

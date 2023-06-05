@@ -1,6 +1,6 @@
 cask "raspberry-pi-imager" do
-  version "1.7.2"
-  sha256 "d78a8b188856f9bbf2958f4217a5d2a823f9c822aaba308a930f255bbf596f21"
+  version "1.7.5"
+  sha256 "bd690d70253db356965e065a6098170874dfc48f864b0c157c6dda28ac2479f7"
 
   url "https://downloads.raspberrypi.org/imager/imager_#{version}.dmg"
   name "Raspberry Pi Imager"
@@ -14,5 +14,9 @@ cask "raspberry-pi-imager" do
 
   app "Raspberry Pi Imager.app"
 
-  zap trash: "~/Library/Saved Application State/org.raspberrypi.imagingutility.savedState"
+  zap trash: [
+    "~/Library/Caches/Raspberry Pi",
+    "~/Library/Preferences/org.raspberrypi.Imager.plist",
+    "~/Library/Saved Application State/org.raspberrypi.imagingutility.savedState",
+  ]
 end

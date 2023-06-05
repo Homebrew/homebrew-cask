@@ -1,6 +1,6 @@
 cask "burn" do
-  version "3.1.6"
-  sha256 "a943a9a66a664375cf92cfe4f04e23d1203b5e88013a06eff8adc858ab2e4fee"
+  version "3.1.7"
+  sha256 "e4b7f02a57664c87757966f17ecf9c62b2a12f6090da6a2cc8eca0db02d428a9"
 
   url "https://downloads.sourceforge.net/burn-osx/Burn/#{version}/burn-#{version}.zip",
       verified: "downloads.sourceforge.net/burn-osx/"

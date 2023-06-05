@@ -3,7 +3,7 @@ cask "slic3r" do
   sha256 "a50dbe78c4648dfcd0ffec46335554c9fa3348dd494a1f6c2b60406aea57b5cb"
 
   url "https://github.com/slic3r/Slic3r/releases/download/#{version}/slic3r-#{version}.dmg",
-      verified: "github.com/slic3r/Slic3r"
+      verified: "github.com/slic3r/Slic3r/"
   name "Slic3r"
   desc "3D printing toolbox"
   homepage "https://slic3r.org/"

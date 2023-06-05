@@ -1,18 +1,15 @@
 cask "ogdesign-eagle" do
-  arch = Hardware::CPU.intel? ? "" : "M1-"
+  arch arm: "M1-"
 
-  version "3.0,7"
+  version "3.0,44"
+  sha256 arm:   "0388a36a422b3793771cac024824af97fb4af5f646ba2f2c269a04006cc5ddb7",
+         intel: "a990231ebf1554d9029531a91868ec6f361c4fd917d30479e0e9ffd17062db5b"
 
-  if Hardware::CPU.intel?
-    sha256 "9b35d210f1a75efd313053272cb38f19650fdf4c51f940c690407fbc36ddb3ca"
-  else
-    sha256 "a6e94273cfe3a05b4e559a60a021306d6720c288920014e18d7f75f6daebb351"
-  end
-
-  url "https://r2-app.eagle.cool/releases/Eagle-#{version.csv.first}-#{arch}build#{version.csv.second}.dmg"
+  url "https://eaglefile.oss-cn-shenzhen.aliyuncs.com/releases/Eagle-#{version.csv.first}-#{arch}build#{version.csv.second}.dmg",
+      verified: "eaglefile.oss-cn-shenzhen.aliyuncs.com/releases/"
   name "Eagle"
   desc "Organize all your reference images in one place"
-  homepage "https://eagle.cool/macOS"
+  homepage "https://eagle.cool/"
 
   livecheck do
     url "https://eagle.cool/check-for-update"
@@ -25,6 +22,7 @@ cask "ogdesign-eagle" do
     end
   end
 
+  auto_updates true
   depends_on macos: ">= :high_sierra"
 
   app "Eagle.app"

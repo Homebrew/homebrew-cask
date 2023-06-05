@@ -1,6 +1,6 @@
 cask "zenmap" do
-  version "7.92"
-  sha256 "c561fb11d9c84922d9ebcf095f31ee2e314f3e6800ad66c93381ada43b6ca30c"
+  version "7.94"
+  sha256 "6f84fe22af583c4ff7822e23a5bf8da7cbdfb3fc529867db671aefc44dd23114"
 
   url "https://nmap.org/dist/nmap-#{version}.dmg"
   name "Zenmap"
@@ -48,7 +48,8 @@ cask "zenmap" do
         },
       ]
 
-  uninstall pkgutil: "org.insecure.nmap.zenmap"
+  uninstall pkgutil: "org.insecure.nmap.zenmap",
+            delete:  "/Applications/Zenmap.app"
 
   zap trash: [
     "~/Library/Saved Application State/org.insecure.Zenmap.savedState",

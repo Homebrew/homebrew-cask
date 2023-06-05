@@ -9,11 +9,12 @@ cask "mailmate" do
   homepage "https://freron.com/"
 
   livecheck do
-    url "https://updates.mailmate-app.com/10.14/release"
-    regex(/url.+MailMate[._-]r?(\d+)\.t/i)
+    url "https://updates.mailmate-app.com/release_notes"
+    regex(/Revision\s(\d+)/i)
   end
 
   auto_updates true
+  conflicts_with cask: "homebrew/cask-versions/mailmate-beta"
 
   app "MailMate.app"
   binary "#{appdir}/MailMate.app/Contents/Resources/emate"

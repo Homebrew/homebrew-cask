@@ -9,8 +9,10 @@ cask "vine-server" do
 
   livecheck do
     url :url
-    strategy :github_latest
-    regex(%r{href=.*?/VineServer[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    regex(/^v?(\d+(?:[._]\d+)+)$/i)
+    strategy :github_latest do |json, regex|
+      json["tag_name"]&.scan(regex)&.map { |match| match[0].tr("_", ".") }
+    end
   end
 
   depends_on macos: ">= :sierra"

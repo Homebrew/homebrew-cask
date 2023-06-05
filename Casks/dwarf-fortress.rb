@@ -9,7 +9,12 @@ cask "dwarf-fortress" do
 
   livecheck do
     url "https://www.bay12games.com/dwarves/older_versions.html"
-    regex(/DF\s*(\d+(?:\.\d+)+)/i)
+    strategy :page_match do |page|
+      match = page.match(/href="df[._-]v?(\d+(?:_\d+)+)[._-]osx\.t/i)
+      next if match.blank?
+
+      "0.#{match[1].tr("_", ".")}"
+    end
   end
 
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)

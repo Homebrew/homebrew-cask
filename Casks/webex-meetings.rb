@@ -1,24 +1,19 @@
 cask "webex-meetings" do
-  version "42.7.0.22904"
+  version :latest
   sha256 :no_check
 
-  if Hardware::CPU.intel?
-    url "https://binaries.webex.com/WebexTeamsDesktop-MACOS-Gold/Webex.dmg"
-  else
-    url "https://binaries.webex.com/WebexDesktop-MACOS-Apple-Silicon-Gold/Webex.dmg"
+  on_arm do
+    url "https://akamaicdn.webex.com/client/Cisco_Webex_Meetings.pkg"
+  end
+  on_intel do
+    url "https://akamaicdn.webex.com/client/webexapp.dmg"
   end
 
   name "Webex Meetings"
   desc "Video communication and virtual meeting platform"
   homepage "https://www.webex.com/"
 
-  livecheck do
-    url "https://help.webex.com/en-us/article/mqkve8/Webex-App-|-Release-notes"
-    regex(/Mac[._-—](\d+(?:\.\d+)+)/i)
-  end
-
-  auto_updates true
-  depends_on macos: ">= :high_sierra"
+  pkg "Cisco_Webex_Meetings.pkg"
 
   uninstall quit:      [
               "com.cisco.webex.webexmta",

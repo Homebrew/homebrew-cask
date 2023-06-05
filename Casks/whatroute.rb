@@ -1,18 +1,18 @@
 cask "whatroute" do
-  version "2.5.4,11805"
-  sha256 "44529f990df882a8cca7bbc83e2bf866ae770940863bcd830e0fdfac2bf17635"
+  version "2.6.3"
+  sha256 "66f24e1ef56bdeb874e04dfd854155f03ce77705fedd939fb7992027cee2c5a1"
 
-  url "https://downloads.whatroute.net/software/whatroute-#{version.csv.first}.zip"
+  url "https://downloads.whatroute.net/software/whatroute-#{version}.zip"
   name "WhatRoute"
   desc "Network diagnostic utility"
   homepage "https://www.whatroute.net/"
 
   livecheck do
     url "https://www.whatroute.net/whatroute#{version.major}appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :high_sierra"
 
   app "WhatRoute.app"
 

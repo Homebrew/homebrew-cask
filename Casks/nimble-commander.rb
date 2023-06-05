@@ -1,6 +1,6 @@
 cask "nimble-commander" do
-  version "1.3.0,3711"
-  sha256 "440367eb055532f3aaeffdc322d4b5663e835994536f868a5f7bcfd8758faefb"
+  version "1.4.0,3883"
+  sha256 "775e9bc8f0869da22bdcf546a743a2349b25c7439244a9e782c4b757025e64f0"
 
   url "https://magnumbytes.com/downloads/releases/nimble-commander-#{version.csv.first}(#{version.csv.second}).dmg"
   name "Nimble Commander"

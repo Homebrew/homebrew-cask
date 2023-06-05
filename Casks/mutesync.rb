@@ -1,9 +1,12 @@
 cask "mutesync" do
-  version "5.4.1"
-  sha256 "d9f4e90b9a9de3f779f1a3fbffc6d62b3c63e1d69f1be8a232cba19a5fffd633"
+  arch arm: "-arm64"
 
-  url "https://mutesync.s3-us-west-2.amazonaws.com/mutesync-#{version}.dmg",
-      verified: "mutesync.s3-us-west-2.amazonaws.com/"
+  version "5.5.0"
+  sha256 arm:   "5cf35844ad24334917db3b684f7c0dce6342981a5efc68d5531eb185dcaae6db",
+         intel: "bc273b836c0ee5cc92f1a6d9e61f979e64f29697528e8596149f01081e4a5590"
+
+  url "https://mutesync.s3.us-west-2.amazonaws.com/mutesync-#{version}#{arch}.dmg",
+      verified: "mutesync.s3.us-west-2.amazonaws.com/"
   name "mütesync"
   desc "Companion app to the mütesync physical button"
   homepage "https://mutesync.com/"

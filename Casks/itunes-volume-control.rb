@@ -1,6 +1,6 @@
 cask "itunes-volume-control" do
-  version "1.7.3"
-  sha256 "5f979ae3c069de67dd084b81ae194a6cf38a12f543aa100ef03019634768e7d9"
+  version "1.7.5"
+  sha256 "606b6341d14a0c5833dba70d25e2afe5709e4d860bb4b3c1f23d0fdded1b7ee2"
 
   url "https://raw.githubusercontent.com/alberti42/Volume-Control/main/Releases/VolumeControl-v#{version}.zip",
       verified: "raw.githubusercontent.com/alberti42/Volume-Control/main/Releases/"
@@ -10,8 +10,8 @@ cask "itunes-volume-control" do
 
   livecheck do
     url "https://github.com/alberti42/Volume-Control#versions"
-    strategy :page_match
     regex(%r{href=.*?/VolumeControl[._-]v?(\d+(?:\.\d+)+)\.zip}i)
+    strategy :page_match
   end
 
   auto_updates true

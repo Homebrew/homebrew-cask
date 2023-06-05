@@ -1,5 +1,5 @@
 cask "zoho-workdrive" do
-  version "2.6.47"
+  version "2.7.15"
   sha256 :no_check
 
   url "https://files-accl.zohopublic.com/public/wdbin/download/46f971e4fc4a32b68ad5d7dade38a7d2",
@@ -14,4 +14,12 @@ cask "zoho-workdrive" do
   end
 
   app "Zoho WorkDrive.app"
+
+  zap trash: [
+    "~/.zohoworkdrive",
+    "~/Library/Application Scripts/com.zohosync.workdrive",
+    "~/Library/Application Support/Zoho WorkDrive",
+    "~/Library/Containers/com.zohosync.workdrive",
+    "~/Library/Preferences/org.zoho.ZohoWorkDrive.plist",
+  ]
 end

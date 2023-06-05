@@ -1,8 +1,8 @@
 cask "videofusion" do
-  version "3.2.0.7442.0"
-  sha256 "d16287b1a05f1e51f3da296dd20ac516f860a8a25ab405016ca6d9fddfe931ff"
+  version "4.1.0.8669"
+  sha256 "4afe1889bfa1073f13151eb768e35e313190c091af3863f37efc5fabd1d05a97"
 
-  url "https://lf3-package.vlabstatic.com/obj/faceu-packages/Jianying_#{version.dots_to_underscores}.dmg",
+  url "https://lf3-package.vlabstatic.com/obj/faceu-packages/Jianying_#{version.dots_to_underscores}_jianyingpro_0_creatortool.dmg",
       verified: "lf3-package.vlabstatic.com/obj/faceu-packages/"
   name "VideoFusion"
   name "剪映专业版"
@@ -11,12 +11,14 @@ cask "videofusion" do
 
   livecheck do
     url "https://lf3-beecdn.bytetos.com/obj/ies-fe-bee/bee_prod/biz_80/bee_prod_80_bee_publish_3563.json"
+    regex(/(\d+(?:_\d+)+).*\.dmg/i)
     strategy :page_match do |page|
-      JSON.parse(page)["mac_download_pkg"]["channel_default"][/(\d+(?:_\d+)+)\.dmg/i, 1].tr("_", ".")
+      JSON.parse(page)["mac_download_pkg"]["channel_default"][/(\d+(?:_\d+)+).*\.dmg/i, 1].tr("_", ".")
     end
   end
 
-  depends_on macos: ">= :mojave"
+  auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "VideoFusion-macOS.app"
 

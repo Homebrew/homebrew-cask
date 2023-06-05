@@ -1,13 +1,9 @@
 cask "electron" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
-  version "19.0.8"
-
-  if Hardware::CPU.intel?
-    sha256 "fdf8a41460bb702a05db49786f6a332f5f3f846076b07c989a7662ec3d383015"
-  else
-    sha256 "b3936b74f35109255bc8f13d3ce036f3e288d70d20d4047e57b4e5d8a53cfed2"
-  end
+  version "25.0.1"
+  sha256 arm:   "6a26d58eb5b37ce9852668e59330ca54bf6226e8bb1172e179bb9ddb592e4b8c",
+         intel: "f4a51adf95b37bfe39320ab7f8025b148a6b6b7140bd96101788a62b77c13d8c"
 
   url "https://github.com/electron/electron/releases/download/v#{version}/electron-v#{version}-darwin-#{arch}.zip",
       verified: "github.com/electron/electron/"
@@ -21,6 +17,7 @@ cask "electron" do
   end
 
   app "Electron.app"
+  binary "#{appdir}/Electron.app/Contents/MacOS/Electron", target: "electron"
 
   zap trash: [
     "~/Library/Application Support/Electron",

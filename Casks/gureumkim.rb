@@ -1,6 +1,6 @@
 cask "gureumkim" do
-  version "1.13.0"
-  sha256 "c94d68fa9b9a5c523443775e004b4d93c926d0e7f4a1364bd15d60ee34131bef"
+  version "1.13.2"
+  sha256 "eadbc2904e54885eea08f7c410e2adeec4caf8463c1321706cb3d1a3e42612d1"
 
   url "https://github.com/gureum/gureum/releases/download/#{version}/Gureum-#{version}.pkg",
       verified: "github.com/gureum/gureum/"
@@ -16,4 +16,6 @@ cask "gureumkim" do
   pkg "Gureum-#{version}.pkg"
 
   uninstall pkgutil: "org.youknowone.inputmethod.Gureum"
+
+  # No zap stanza required
 end

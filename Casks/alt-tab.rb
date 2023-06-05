@@ -1,11 +1,12 @@
 cask "alt-tab" do
-  version "6.46.1"
-  sha256 "536e2a4beb637e4cb97a9f258a709e1c63f497a9f4a70ea206f1ef5fc7bb373e"
+  version "6.59.0"
+  sha256 "3488f77c04795c3b96f606a6873ca40c9ce55dea20d716d40a21080e1d98762a"
 
-  url "https://github.com/lwouis/alt-tab-macos/releases/download/v#{version}/AltTab-#{version}.zip"
+  url "https://github.com/lwouis/alt-tab-macos/releases/download/v#{version}/AltTab-#{version}.zip",
+      verified: "github.com/lwouis/alt-tab-macos/"
   name "AltTab"
   desc "Enable Windows-like alt-tab"
-  homepage "https://github.com/lwouis/alt-tab-macos"
+  homepage "https://alt-tab-macos.netlify.app/"
 
   livecheck do
     url :url

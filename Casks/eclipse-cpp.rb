@@ -1,13 +1,9 @@
 cask "eclipse-cpp" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "aarch64"
+  arch arm: "aarch64", intel: "x86_64"
 
-  version "4.24.0,2022-06"
-
-  if Hardware::CPU.intel?
-    sha256 "5e90b3bb9da55e77d0d5c3f87c28535250a67d9e9707c3fce9dd1186bffb6a8d"
-  else
-    sha256 "b68caf64918b286858294c88802a0d333515245bf8f45c0fa0cb4297fc771332"
-  end
+  version "4.27.0,2023-03"
+  sha256 arm:   "fbf88b9b83fa49d4f5407f5e22d8dca9bd3896ff3c064a2372bfed23a3e7598a",
+         intel: "4b240f8d461a56354d2c27c2edaf1a221e4136732a9433efdd61525f99f138eb"
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-cpp-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&r=1"
   name "Eclipse IDE for C/C++ Developers"
@@ -20,4 +16,11 @@ cask "eclipse-cpp" do
 
   # Renamed to avoid conflict with other Eclipse.
   app "Eclipse.app", target: "Eclipse CPP.app"
+
+  zap trash: [
+    "~/.eclipse",
+    "~/eclipse-workspace",
+    "~/Library/Preferences/epp.package.cpp.plist",
+    "~/Library/Saved Application State/epp.package.cpp.savedState",
+  ]
 end

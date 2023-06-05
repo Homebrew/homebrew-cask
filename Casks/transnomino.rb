@@ -1,11 +1,11 @@
 cask "transnomino" do
-  version "6.3"
-  sha256 "aaabb389d98f96f86f76ffa3ae31de2884ce78f0b8cceec5bdf933b908392441"
+  version "7.3"
+  sha256 "39f5a45c27bce1d8dd4463c68d074be5caab4b58b29ac0aecfb3ad19c5502b21"
 
-  url "https://transnomino.bastiaanverreijt.com/download/Transnomino-#{version}.dmg"
+  url "https://www.transnomino.com/download/Transnomino-#{version}.dmg"
   name "Transnomino"
   desc "Batch rename utility"
-  homepage "https://transnomino.bastiaanverreijt.com/"
+  homepage "https://www.transnomino.com/"
 
   livecheck do
     url :homepage

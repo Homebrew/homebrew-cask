@@ -18,4 +18,9 @@ cask "geany" do
   end
 
   app "Geany.app"
+
+  zap trash: [
+    "~/.cache/geany",
+    "~/.config/geany",
+  ]
 end

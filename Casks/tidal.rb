@@ -1,22 +1,20 @@
 cask "tidal" do
-  arch = Hardware::CPU.intel? ? "" : ".arm64"
+  arch arm: "arm64", intel: "x64"
 
-  if Hardware::CPU.intel?
-    version "2.30.0"
-  else
-    version "2.32.0"
-  end
+  version "2.34.2"
+  sha256 arm:   "ba0ef379601811638378a0b012b010a175247cb5f0834eda012e19301f0d5627",
+         intel: "0cc14a71dd6cd2593ce93c566cf755ac9ce5535aea8e43f65836ced7c159bb98"
 
-  sha256 :no_check
-
-  url "https://download.tidal.com/desktop/TIDAL#{arch}.dmg"
+  url "https://download.tidal.com/desktop/mac/TIDAL.#{arch}.#{version}.zip"
   name "TIDAL"
   desc "Music streaming service with high fidelity sound and hi-def video quality"
   homepage "https://tidal.com/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://download.tidal.com/desktop/mac/update-#{arch}.json"
+    strategy :json do |json|
+      json["currentRelease"]
+    end
   end
 
   auto_updates true

@@ -1,5 +1,5 @@
 cask "vsd-viewer" do
-  version "6.15.1,556"
+  version "6.16.1"
   sha256 :no_check
 
   url "https://nektony.com/download/vsdviewer.dmg"
@@ -9,10 +9,10 @@ cask "vsd-viewer" do
 
   livecheck do
     url "https://nektony.com/promo/vsd-viewer/update/update.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "VSD Viewer.app"
 

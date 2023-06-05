@@ -1,6 +1,6 @@
 cask "ipepresenter" do
-  version "7.2.26"
-  sha256 "9e1cc01fdb4702da674a4cc4bed06529168f0723ec2cef7770beacfb7d64b146"
+  version "7.2.27"
+  sha256 "b9e55003f49889a1adad5f92fb8d0dff057d73884dea887af17956eeb521a07c"
 
   url "https://github.com/otfried/ipe/releases/download/v#{version}/ipepresenter-#{version}-mac.dmg",
       verified: "github.com/otfried/ipe/"
@@ -14,4 +14,8 @@ cask "ipepresenter" do
   end
 
   app "IpePresenter.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

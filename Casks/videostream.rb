@@ -3,7 +3,6 @@ cask "videostream" do
   sha256 :no_check
 
   url "https://cdn.getvideostream.com/videostream-native-updates/macOS/Videostream.pkg"
-  appcast "https://videostream-cdn.s3.amazonaws.com/videostream-native-updates/macOS/manifest.json"
   name "Videostream"
   desc "Stream media from your computer to Chromecast"
   homepage "https://getvideostream.com/"
@@ -16,4 +15,8 @@ cask "videostream" do
             ],
             pkgutil:   "com.videostream",
             signal:    ["TERM", "com.videostream"]
+
+  caveats do
+    discontinued
+  end
 end

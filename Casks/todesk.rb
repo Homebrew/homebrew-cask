@@ -1,6 +1,6 @@
 cask "todesk" do
-  version "4.2.2"
-  sha256 "e6ce86082b96cd8abd0a66e2720d296c8f2087f99e8830212e61725d79c4d0b6"
+  version "4.6.0.0"
+  sha256 "d9ebc74a32961b566b96bc36f0b563b2bd3b87e812a8a991a42a3bf023cc2142"
 
   url "https://dl.todesk.com/macos/ToDesk_#{version}.pkg"
   name "ToDesk"
@@ -8,8 +8,8 @@ cask "todesk" do
   homepage "https://www.todesk.com/"
 
   livecheck do
-    url "https://www.todesk.com/download"
-    regex(/href=.*?ToDesk[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
+    url "https://dl.todesk.com/macos/uplog.html"
+    regex(%r{<div\sclass="text">(\d+(?:\.\d+)+)</div>}i)
   end
 
   auto_updates true

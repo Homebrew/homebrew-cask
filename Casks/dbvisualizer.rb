@@ -1,24 +1,27 @@
 cask "dbvisualizer" do
-  version "13.0.4"
-  sha256 "498f24d5add6fec44197461c66ec16ccabeb9da40a931dd2426533a30c1a418e"
+  arch arm: "aarch64", intel: "x64"
 
-  url "https://www.dbvis.com/product_download/dbvis-#{version}/media/dbvis_macos_#{version.dots_to_underscores}_jre.dmg"
+  version "23.2.2"
+  sha256 arm:   "f9872b711f72477e3e8985decd5033be5fa18a80bc28e2ba782eb8cdd5735654",
+         intel: "d2e384b12abc7571c749f1ab3c54930071065dd26af496543195792047deddd7"
+
+  url "https://www.dbvis.com/product_download/dbvis-#{version}/media/dbvis_macos-#{arch}_#{version.dots_to_underscores}.dmg"
   name "DbVisualizer"
   desc "Database management and analysis tool"
   homepage "https://www.dbvis.com/"
 
   livecheck do
     url "https://www.dbvis.com/download"
-    regex(/Latest\s*Version:\s*(\d+(?:\.\d+)+)/i)
+    regex(/href=.*?dbvis[._-](\d+(?:\.\d+)+)/i)
   end
 
+  depends_on macos: ">= :el_capitan"
+
   app "DbVisualizer.app"
-  installer script: {
-    executable: "DbVisualizer Installer.app/Contents/MacOS/JavaApplicationStub",
-    args:       ["-q", "-dir", staged_path.to_s],
-  }
 
-  uninstall signal: [["TERM", "com.dbvis.DbVisualizer"]]
-
-  zap trash: "~/.dbvis"
+  zap trash: [
+    "~/.dbvis",
+    "~/Library/Preferences/com.dbvis.DbVisualizer.plist",
+    "~/Library/Saved Application State/com.dbvis.DbVisualizer.savedState",
+  ]
 end

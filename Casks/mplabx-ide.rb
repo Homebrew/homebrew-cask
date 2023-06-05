@@ -1,6 +1,6 @@
 cask "mplabx-ide" do
-  version "6.00"
-  sha256 "aaebb401dbd9d9e2fd576cc88807f6dee6702b4d2fe0812a0a486e84e49bedd3"
+  version "6.10"
+  sha256 "47aaf96a936fb354f7e3d2f7b515862c4baf02d07429c6c5d28d60ef868d37ec"
 
   url "https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/SoftwareTools/MPLABX-v#{version}-osx-installer.dmg"
   name "MPLab X IDE"
@@ -12,8 +12,6 @@ cask "mplabx-ide" do
     regex(/href=.*?MPLABX[._-]v?(\d+(?:\.\d+)+)-osx-installer\.dmg/i)
   end
 
-  app "mplab_ide.app", target: "microchip/mplab_ide.app"
-  app "mplab_ipe.app", target: "microchip/mplab_ipe.app"
   installer script: {
     executable: "MPLABX-v#{version}-osx-installer.app/Contents/MacOS/installbuilder.sh",
     args:       [
@@ -24,15 +22,32 @@ cask "mplabx-ide" do
       "--othermcu", "0",
       "--exepermission", "no",
       "--collectInfo", "0",
+      "--collectMyMicrochipInfo", "0",
       "--installdir", staged_path.to_s
     ],
     input:      ["y"],
     sudo:       true,
   }
 
+  # staged_path files are owned by root which prevents binaries from being moved
+  # to appdir, as cp does not use sudo. This copies the binaries after the owner
+  # is changed.
   postflight do
     set_ownership staged_path.to_s
-    set_ownership "/Applications/microchip"
+    system_command "mkdir",
+                   args: ["-p", "#{appdir}/microchip/mplabx/#{version}"],
+                   sudo: true
+
+    system_command "cp",
+                   args: [
+                     "-pR",
+                     "#{staged_path}/MPLAB IPE v#{version}.app",
+                     "#{staged_path}/MPLAB X IDE v#{version}.app",
+                     "#{appdir}/microchip/mplabx/#{version}/",
+                   ],
+                   sudo: true
+
+    set_ownership "/Applications/microchip/mplabx/#{version}"
   end
 
   uninstall script: {
@@ -41,5 +56,16 @@ cask "mplabx-ide" do
               input:      ["y", 3],
               sudo:       true,
             },
-            delete: "/Applications/microchip"
+            delete: [
+              "/Applications/microchip/mplabx/#{version}",
+              # The below version number needs to be updated
+              # manually each time this Cask is updated
+              "/Applications/microchip/mplabcomm/3.52.01",
+            ],
+            rmdir:  [
+              "/Applications/microchip/mplabx",
+              "/Applications/microchip/mplabcomm",
+            ]
+
+  zap trash: "/Applications/microchip"
 end

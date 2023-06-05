@@ -1,8 +1,11 @@
 cask "siyuan" do
-  version "2.1.0"
-  sha256 "ce7958d5c632030af684f49497b34ede6e0c7167d450a915eafb682f1faf4c98"
+  arch arm: "-arm64"
 
-  url "https://github.com/siyuan-note/siyuan/releases/download/v#{version}/siyuan-#{version}-mac.dmg"
+  version "2.8.10"
+  sha256 arm:   "5bb000564a1c5f7c920ca64222fc1d0d168dfd4553d4e227e645fac55c63156d",
+         intel: "0f63821f2455929dd7a5c93936c31fce42154751db769445f6f731cbbf8b3091"
+
+  url "https://github.com/siyuan-note/siyuan/releases/download/v#{version}/siyuan-#{version}-mac#{arch}.dmg"
   name "SiYuan"
   desc "Local-first personal knowledge management system"
   homepage "https://github.com/siyuan-note/siyuan"

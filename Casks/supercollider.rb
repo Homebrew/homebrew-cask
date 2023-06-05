@@ -1,8 +1,8 @@
 cask "supercollider" do
-  version "3.12.2"
-  sha256 "57728f2e2a86ccd64ab1c0688f75c41797adf892db1d63f9f29d753f78378448"
+  version "3.13.0"
+  sha256 "fae71509475d66d47bb7b8d204a57a0d6cd4bcb3d9e77c5f2670b916b7160868"
 
-  url "https://github.com/supercollider/supercollider/releases/download/Version-#{version}/SuperCollider-#{version}-macOS.dmg",
+  url "https://github.com/supercollider/supercollider/releases/download/Version-#{version}/SuperCollider-#{version}-macOS-universal.dmg",
       verified: "github.com/supercollider/supercollider/"
   name "SuperCollider"
   desc "Server, language, and IDE for sound synthesis and algorithmic composition"

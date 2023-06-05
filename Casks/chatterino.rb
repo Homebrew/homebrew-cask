@@ -1,6 +1,6 @@
 cask "chatterino" do
-  version "2.3.5"
-  sha256 "b461450052972da32973b71cd1213460aabc79ffda5dc2ad894fc3f0d26dddb7"
+  version "2.4.4"
+  sha256 "ba1460c90e94379ba22c765d4b380929a22e75fb5e548b95a6e3d6891c65a475"
 
   url "https://chatterino.fra1.digitaloceanspaces.com/bin/#{version}/Chatterino.dmg",
       verified: "chatterino.fra1.digitaloceanspaces.com/"

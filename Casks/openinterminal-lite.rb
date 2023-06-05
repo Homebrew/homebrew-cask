@@ -8,9 +8,7 @@ cask "openinterminal-lite" do
   homepage "https://github.com/Ji4n1ng/OpenInTerminal"
 
   livecheck do
-    url "https://github.com/Ji4n1ng/OpenInTerminal/releases"
-    strategy :page_match
-    regex(%r{v?(\d+(?:\.\d+)+)/OpenInTerminal[._-]Lite\.app\.zip}i)
+    skip "No reliable way to get version info"
   end
 
   app "OpenInTerminal-Lite.app"

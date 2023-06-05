@@ -1,21 +1,28 @@
 cask "visual-paradigm" do
-  version "16.3,20220516"
-  sha256 "a9816320997832bc94770764b629fde829e037bd5c2a15146a52e2746dea9887"
+  arch arm: "AArch64", intel: "WithJRE"
 
-  url "https://www.visual-paradigm.com/downloads/vp#{version.csv.first}/#{version.csv.second}/Visual_Paradigm_#{version.csv.first.dots_to_underscores}_#{version.csv.second}_OSX_WithJRE.dmg"
+  version "17.1,20230524"
+  sha256 arm:   "45eed8ecc072bce976475aab0edfa80c067d57abd5e75f50ceded39a550fee27",
+         intel: "02192fa9931038a3c52a4ee5d055649f6bb70c601d80d6cd73baf50130ba3077"
+
+  url "https://www.visual-paradigm.com/downloads/vp#{version.csv.first}/#{version.csv.second}/Visual_Paradigm_#{version.csv.first.dots_to_underscores}_#{version.csv.second}_OSX_#{arch}.dmg"
   name "Visual Paradigm"
   desc "UML CASE Tool supporting UML 2, SysML and Business Process Modeling Notation"
   homepage "https://www.visual-paradigm.com/"
 
   livecheck do
     url "https://www.visual-paradigm.com/downloads/vp/checksum.html"
-    strategy :header_match do |headers|
-      match = headers["location"].match(%r{/vp(\d+(?:\.\d+)+)/(\d+)/checksum\.html}i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
+    regex(%r{/vp(\d+(?:\.\d+)+)/(\d+)/checksum\.html}i)
+    strategy :header_match do |headers, regex|
+      headers["location"].scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 
   app "Visual Paradigm.app"
+
+  zap trash: [
+    "~/Library/Application Support/Visual Paradigm",
+    "~/Library/Application Support/VisualParadigm",
+    "~/Library/Saved Application State/com.install4j.1106-5897-7327-6550.5.savedState",
+  ]
 end

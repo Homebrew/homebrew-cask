@@ -9,4 +9,6 @@ cask "projectlibre" do
   homepage "https://www.projectlibre.com/"
 
   app "ProjectLibre.app"
+
+  zap trash: "~/Library/Preferences/com.projectlibre#{version.major}.*"
 end

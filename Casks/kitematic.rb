@@ -19,4 +19,8 @@ cask "kitematic" do
     "~/Library/Preferences/com.electron.kitematic.helper.plist",
     "~/Library/Saved Application State/com.electron.kitematic.savedState",
   ]
+
+  caveats do
+    discontinued
+  end
 end

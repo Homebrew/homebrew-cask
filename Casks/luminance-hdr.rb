@@ -9,9 +9,9 @@ cask "luminance-hdr" do
   homepage "https://qtpfsgui.sourceforge.io/"
 
   livecheck do
-    url "http://qtpfsgui.sourceforge.net/?page_id=10"
-    strategy :page_match
+    url "https://qtpfsgui.sourceforge.net/?page_id=10"
     regex(/LuminanceHDR[._-]?(\d+(?:\.\d+)*)[._-]?-Qt5\.13\.dmg/i)
+    strategy :page_match
   end
 
   depends_on macos: ">= :sierra"

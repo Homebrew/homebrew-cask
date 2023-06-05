@@ -1,6 +1,6 @@
 cask "cleanmymac-zh" do
-  version "4.11.1,41101.0.2207121840"
-  sha256 "4d0f4a1469d3d1c85ecebac839e10adf57439384f674091c2f03988bb403f9c8"
+  version "4.13.6"
+  sha256 "c4431cf2816e6cdd61513890e44a22b2ec300c0d979b7effbc1f951f4012c25e"
 
   url "https://dl.devmate.com/com.macpaw.zh.CleanMyMac#{version.major}/CleanMyMacXChinese.dmg",
       verified: "dl.devmate.com/"
@@ -10,13 +10,14 @@ cask "cleanmymac-zh" do
 
   livecheck do
     url "https://updates.devmate.com/com.macpaw.zh.CleanMyMac#{version.major}.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
   conflicts_with cask: "cleanmymac"
+  depends_on macos: ">= :high_sierra"
 
-  app "CleanMyMac X.app"
+  app "CleanMyMac-X.app"
 
   uninstall delete:     [
               "/Library/LaunchDaemons/com.macpaw.zh.CleanMyMac#{version.major}.Agent.plist",

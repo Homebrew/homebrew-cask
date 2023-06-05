@@ -18,6 +18,7 @@ cask "spaceman" do
     "~/Library/Application Scripts/dev.jaysce.Spaceman-LaunchAtLoginHelper",
     "~/Library/Caches/dev.jaysce.Spaceman",
     "~/Library/Containers/dev.jaysce.Spaceman-LaunchAtLoginHelper",
+    "~/Library/HTTPStorages/dev.jaysce.Spaceman",
     "~/Library/Preferences/dev.jaysce.Spaceman.plist",
   ]
 end

@@ -10,8 +10,8 @@ cask "feem" do
 
   livecheck do
     url "https://feem.link/feem-for-mac"
-    strategy :header_match
     regex(/Feem[._-]Mac[._-]v?(\d+(?:\.\d+)+).*?\.pkg/i)
+    strategy :header_match
   end
 
   pkg "Feem_Mac_#{version}_beta_Installer.pkg"

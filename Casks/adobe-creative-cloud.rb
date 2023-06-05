@@ -1,13 +1,9 @@
 cask "adobe-creative-cloud" do
-  arch = Hardware::CPU.intel? ? "osx10" : "macarm64"
+  arch arm: "macarm64", intel: "osx10"
 
-  version "5.7.0.1307"
-
-  if Hardware::CPU.intel?
-    sha256 "f39b1f6d639437ed326d6fc233332b53e5bd18b75ed2659cbf7228520fa21d45"
-  else
-    sha256 "d0555814838ded447232c0196654b12497ad7d3ae80b17d7f042a8fd5a75a9a0"
-  end
+  version "5.10.0.573"
+  sha256 arm:   "5edc0320a10dfca0c122105fa2461adafe9c2be68d91c4006ae4868b8d81d75f",
+         intel: "aeb39b1fddd42f1c05688ff0fa66dd511382c2efb0c698cff2ed61c92fdaa303"
 
   url "https://ccmdl.adobe.com/AdobeProducts/KCCC/CCD/#{version.major_minor_patch.dots_to_underscores}/#{arch}/ACCCx#{version.dots_to_underscores}.dmg"
   name "Adobe Creative Cloud"
@@ -16,7 +12,7 @@ cask "adobe-creative-cloud" do
 
   livecheck do
     url "https://helpx.adobe.com/creative-cloud/release-note/cc-release-notes.html"
-    regex(/Version\s*(\d+(?:\.\d+)+),?\s+(?:(?:was\s+)?released|for\s+macOS)/i)
+    regex(/Version.\s*v?(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
@@ -54,7 +50,7 @@ cask "adobe-creative-cloud" do
               "com.adobe.ccxprocess",
             ],
             quit:         "com.adobe.acc.AdobeCreativeCloud",
-            signal:       [["QUIT", "com.adobe.accmac"]],
+            signal:       ["QUIT", "com.adobe.accmac"],
             script:       {
               executable:   "/usr/bin/pkill",
               args:         ["Adobe Desktop Service", "AdobeIPCBroker", "AdobeCRDaemon"],

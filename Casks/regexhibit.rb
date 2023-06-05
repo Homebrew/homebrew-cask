@@ -7,6 +7,11 @@ cask "regexhibit" do
   desc "Perl regex assistant"
   homepage "https://roger-jolly.nl/software/#regexhibit"
 
+  livecheck do
+    url :homepage
+    regex(/RegExhibit\s+(\d+(?:\.\d+)+)/i)
+  end
+
   app "RegExhibit.app"
 
   zap trash: [

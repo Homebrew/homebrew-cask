@@ -1,6 +1,6 @@
 cask "kodelife" do
-  version "1.0.5,161"
-  sha256 "c9d40b74a98efab3201ead703ceb488ddd016a61581a9d04d4c71e2983fd6de9"
+  version "1.1.0,173"
+  sha256 "480168e1fac44d63c1dd5c727cbce8bc0931182b55bef45c799aa582eac31449"
 
   url "https://hexler.net/pub/kodelife/kodelife-#{version.csv.first}.#{version.csv.second}-macos.dmg"
   name "KodeLife"
@@ -15,4 +15,13 @@ cask "kodelife" do
   auto_updates true
 
   app "KodeLife.app"
+
+  zap trash: [
+    "~/Library/Application Support/net.hexler.KodeLife",
+    "~/Library/Caches/net.hexler.KodeLife",
+    "~/Library/HTTPStorages/net.hexler.KodeLife*",
+    "~/Library/Logs/net.hexler.KodeLife",
+    "~/Library/Preferences/net.hexler.KodeLife.plist",
+    "~/Library/Saved Application State/net.hexler.KodeLife.savedState",
+  ], rmdir: "~/Documents/KodeLife"
 end

@@ -1,20 +1,22 @@
 cask "bloodhound" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
-  version "4.1.1"
+  version "4.3.1"
+  sha256 arm:   "48803fdefd4d4db8cf6d7e41004ddf2827022a8f848c3ce631ef06a4620c58da",
+         intel: "c32aa388a7b0474dda483cc9b236cdfb5dd462d3d719b78e2985d7fa411f1a57"
 
-  if Hardware::CPU.intel?
-    sha256 "2c45a08d77284fedd8074a5664e7c2424a94c6d131540010da2e73d8f520ebe7"
-  else
-    sha256 "45d8e1aafeb7361581def6751c201b11cd2a9761f1c19d17925f72fda78328bc"
-  end
-
-  url "https://github.com/BloodHoundAD/BloodHound/releases/download/#{version}/BloodHound-darwin-#{arch}.zip"
+  url "https://github.com/BloodHoundAD/BloodHound/releases/download/v#{version}/BloodHound-darwin-#{arch}.zip"
   name "bloodhound"
   desc "Six Degrees of Domain Admin"
   homepage "https://github.com/BloodHoundAD/BloodHound"
 
   app "BloodHound-darwin-#{arch}/BloodHound.app"
+
+  zap trash: [
+    "~/Library/Application Support/bloodhound",
+    "~/Library/Preferences/com.electron.bloodhound.plist",
+    "~/Library/Saved Application State/com.electron.bloodhound.savedState",
+  ]
 
   caveats <<~EOS
     According to https://github.com/BloodHoundAD/BloodHound/issues/504

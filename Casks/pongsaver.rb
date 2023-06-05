@@ -1,10 +1,16 @@
 cask "pongsaver" do
-  version :latest
+  version "2.1.1"
   sha256 :no_check
 
-  url "https://rogueamoeba.com/freebies/download/PongSaver.zip"
+  url "https://mikeash.com/software/pongsaver/PongSaver.saver.zip"
   name "PongSaver"
-  homepage "https://rogueamoeba.com/freebies/"
+  desc "Screensaver which plays a game of Pong against itself"
+  homepage "https://mikeash.com/software/pongsaver"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   screen_saver "PongSaver.saver"
 end

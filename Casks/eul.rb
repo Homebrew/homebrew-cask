@@ -11,5 +11,19 @@ cask "eul" do
 
   app "eul.app"
 
-  zap trash: "~/Library/Preferences/com.gaosun.eul.plist"
+  zap trash: [
+    "~/Library/Application Scripts/com.gaosun.eul.BatteryWidget",
+    "~/Library/Application Scripts/com.gaosun.eul.CpuWidget",
+    "~/Library/Application Scripts/com.gaosun.eul.MemoryWidget",
+    "~/Library/Application Scripts/com.gaosun.eul.NetworkWidget",
+    "~/Library/Application Scripts/com.gaosun.eul.shared",
+    "~/Library/Caches/com.gaosun.eul",
+    "~/Library/Containers/com.gaosun.eul.BatteryWidget",
+    "~/Library/Containers/com.gaosun.eul.CpuWidget",
+    "~/Library/Containers/com.gaosun.eul.MemoryWidget",
+    "~/Library/Containers/com.gaosun.eul.NetworkWidget",
+    "~/Library/Group Containers/com.gaosun.eul.shared",
+    "~/Library/HTTPStorages/com.gaosun.eul",
+    "~/Library/Preferences/com.gaosun.eul.plist",
+  ]
 end

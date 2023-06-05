@@ -1,5 +1,5 @@
 cask "menuwhere" do
-  version "2.2.1,31"
+  version "2.2.1"
   sha256 :no_check
 
   url "https://manytricks.com/download/menuwhere"
@@ -9,7 +9,7 @@ cask "menuwhere" do
 
   livecheck do
     url "https://manytricks.com/menuwhere/appcast/"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   app "Menuwhere.app"

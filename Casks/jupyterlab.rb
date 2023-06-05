@@ -1,23 +1,36 @@
 cask "jupyterlab" do
-  version "3.3.4-2"
-  sha256 "d4247a21886e898fe52de4c79d448ec0250db06ede7b1afdbd2fed3efa20d901"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://github.com/jupyterlab/jupyterlab-desktop/releases/download/v#{version}/JupyterLab-Setup-macOS.dmg"
+  version "4.0.1-1"
+  sha256 arm:   "0e06417652e454d858c56bbf70dbb1a947992b8bfbe02b7e12cb12eecfd93273",
+         intel: "598c4062552b805e9f4f96b10cb326288d43692a3275a0f34406472a8010134e"
+
+  url "https://github.com/jupyterlab/jupyterlab-desktop/releases/download/v#{version}/JupyterLab-Setup-macOS-#{arch}.dmg"
   name "JupyterLab App"
   desc "Desktop application for JupyterLab"
   homepage "https://github.com/jupyterlab/jupyterlab-desktop"
 
+  livecheck do
+    url :url
+    regex(/v?(\d+(?:[.-]\d+)+)/i)
+    strategy :github_latest
+  end
+
   app "JupyterLab.app"
 
   uninstall pkgutil: "com.electron.jupyterlab-desktop",
+            # See https://github.com/jupyterlab/jupyterlab-desktop/blob/master/user-guide.md#uninstalling-jupyterlab-desktop
             delete:  [
-              "/Applications/JupyterLab.app",
               "/usr/local/bin/jlab",
+              "~/Library/jupyterlab-desktop",
             ]
 
   zap trash: [
     "~/.jupyter",
     "~/Library/Application Support/jupyterlab-desktop",
+    "~/Library/Caches/org.jupyter.jupyterlab-desktop",
+    "~/Library/Caches/org.jupyter.jupyterlab-desktop.ShipIt",
+    "~/Library/HTTPStorages/org.jupyter.jupyterlab-desktop",
     "~/Library/Jupyter",
     "~/Library/Logs/jupyterlab-desktop",
     "~/Library/Logs/JupyterLab",

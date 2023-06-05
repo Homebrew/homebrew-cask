@@ -1,6 +1,6 @@
 cask "replacicon" do
-  version "1.3,20"
-  sha256 "8db03ca6375f0fe1e67fa8415ac8028199cb75011d5a03f7d064e271ee3b929d"
+  version "1.6.1,25"
+  sha256 "1a522b3b5fb093179433ef8bdcf45854ae989bf24a7c99d0441eb1be5d45d7e6"
 
   url "https://replacicon.app/builds/Replacicon_#{version.csv.second}.zip"
   name "Replacicon"
@@ -11,6 +11,8 @@ cask "replacicon" do
     url "https://replacicon.app/updates.xml"
     strategy :sparkle
   end
+
+  auto_updates true
 
   app "Replacicon.app"
 

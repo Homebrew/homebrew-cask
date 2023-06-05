@@ -1,25 +1,24 @@
 cask "simplemind" do
-  version "1.31.0,b2363"
-  sha256 "caa5cf937137abd060fad08323e9ec753af4a4dcd05b5526e4f918d19be34677"
+  version "2.1.1,b2823"
+  sha256 "d0f7f670f6ce58fb5328c8be1a44080608c5e48fedff578dc0ffcd86dd6544ee"
 
-  url "https://simpleapps.eu/simplemind/SMPOSX1_yQj3MSn64GXSTF36Rtj/SimpleMindMacOS#{version.csv.first.no_dots}#{version.csv.second}.dmg"
+  url "https://simpleapps.eu/simplemind/SM2Mac_G7Ynr4BfJYzhbHtCCTr/SimpleMindMacOS#{version.csv.first.no_dots}#{version.csv.second}.dmg"
   name "SimpleMind"
-  desc "Cross-platform Mind Mapping tool"
+  desc "Cross-platform mind mapping tool"
   homepage "https://simpleapps.eu/"
 
   livecheck do
     url "https://simpleapps.eu/download/full-edition/simplemind-pro-mac/"
-    strategy :page_match do |page|
-      match = page.match(%r{<b>Version: ([\d.]+) ([a-zA-Z0-9]+)</b>}i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
+    regex(%r{<b>Version: ([\d.]+) ([a-zA-Z0-9]+)</b>}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
-  app "SimpleMind.app"
+  app "SimpleMind Pro.app"
 
   zap trash: [
     "~/Library/Caches/com.modelmakertools.simplemindosx",

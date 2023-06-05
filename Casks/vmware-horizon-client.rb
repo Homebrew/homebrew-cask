@@ -1,6 +1,6 @@
 cask "vmware-horizon-client" do
-  version "2206-8.6.0-20094589,CART23FQ2_MAC_2206"
-  sha256 "363d74ab316a8ecb7207a69e7e742623c5c94c234369434be2776f7c7f7d9e86"
+  version "2303-8.9.0-21435414,CART24FQ1_MAC_2303"
+  sha256 "95da8eaf8d446187008696c9fab985fa356634b75c60fc6d5ccf3bc09018f540"
 
   url "https://download3.vmware.com/software/#{version.csv.second}/VMware-Horizon-Client-#{version.csv.first}.dmg"
   name "VMware Horizon Client"
@@ -34,4 +34,16 @@ cask "vmware-horizon-client" do
   depends_on macos: ">= :sierra"
 
   app "VMware Horizon Client.app"
+
+  zap trash: [
+    "/Library/Preferences/com.vmware.horizon.plist",
+    "~/Library/Application Support/VMware Horizon View Client",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vmware.horizon.sfl2",
+    "~/Library/Caches/com.vmware.horizon",
+    "~/Library/Logs/VMware Horizon Client",
+    "~/Library/Preferences/com.vmware.horizon.keyboard.plist",
+    "~/Library/Preferences/com.vmware.horizon.plist",
+    "~/Library/Saved Application State/com.vmware.horizon.savedState",
+    "~/Library/WebKit/com.vmware.horizon",
+  ]
 end

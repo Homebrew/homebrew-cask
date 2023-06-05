@@ -1,8 +1,8 @@
 cask "blueharvest" do
-  version "8.0.12"
-  sha256 "68ef0bdc01414d549ed9fc439f0910465694f8d63b630e90657460417aaed03c"
+  version "8.2"
+  sha256 "4be867ff643518784cf29e89c0715a2f36d1d84a7a4f55201042afe0fb027514"
 
-  url "https://zeroonetwenty.com/blueharvest/downloads/BlueHarvest#{version.no_dots}.dmg"
+  url "https://zeroonetwenty.com/blueharvest/downloads/BlueHarvest#{version.no_dots}0.dmg"
   name "BlueHarvest"
   desc "Remove metadata files from external drives"
   homepage "https://zeroonetwenty.com/blueharvest/"

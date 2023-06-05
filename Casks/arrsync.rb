@@ -5,7 +5,7 @@ cask "arrsync" do
   url "https://downloads.sourceforge.net/arrsync/arrsync-#{version}.dmg"
   name "arRsync"
   desc "Graphical front end for the utility rsync"
-  homepage "http://arrsync.sourceforge.net/"
+  homepage "https://arrsync.sourceforge.net/"
 
   livecheck do
     url :homepage

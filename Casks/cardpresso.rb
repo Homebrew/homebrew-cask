@@ -1,6 +1,6 @@
 cask "cardpresso" do
-  version "1.7.15"
-  sha256 "81af149a979c794fb580023ad6fe3a689f7ea89af6c4d841912af2c118fe4aee"
+  version "1.7.50"
+  sha256 "c4944229259f5a3402e7f78a6f9018977ed409cb50bf094c5cc9a2856a17b55d"
 
   url "https://www.cardpresso.com/downloads/cardpresso_releases/for_mac_osx/cardPresso#{version}.dmg"
   name "cardpresso"
@@ -10,6 +10,8 @@ cask "cardpresso" do
   livecheck do
     skip "No version information available"
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "cardPresso.app"
 

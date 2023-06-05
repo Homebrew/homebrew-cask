@@ -1,13 +1,9 @@
 cask "stoplight-studio" do
-  arch = Hardware::CPU.intel? ? "mac" : "mac-arm64"
+  arch arm: "mac-arm64", intel: "mac"
 
-  version "2.8.1,7959.git-777e356"
-
-  if Hardware::CPU.intel?
-    sha256 "8a933c3b633e12da3b8a85e43b004223a3c00ee348a0817d0348ecaf5a586c54"
-  else
-    sha256 "d0b50a7da3798b7b797dcb46a1bf2cddcee06269f6ab363724e64bdd3ddf82a0"
-  end
+  version "2.10.0,8870.git-32fa2af"
+  sha256 arm:   "b2759c56a14c82da2f4624f323208e6689cb511153eb4e1be5cc3e6ad7d60566",
+         intel: "a89a3b8c76571c19314198ede0616657d71b75db09aa690f1374bb0050273f6a"
 
   url "https://github.com/stoplightio/studio/releases/download/v#{version.csv.first}-stable.#{version.csv.second}/stoplight-studio-#{arch}.dmg",
       verified: "github.com/stoplightio/studio/"
@@ -17,13 +13,18 @@ cask "stoplight-studio" do
 
   livecheck do
     url "https://github.com/stoplightio/studio/releases/latest"
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/v?(\d+(?:\.\d+)+)[._-]stable[._-]([^/]+)/stoplight[._-]studio[._-]#{arch}\.dmg}i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
+    regex(%r{href=.*?/v?(\d+(?:\.\d+)+)[._-]stable[._-]([^/]+)/stoplight[._-]studio[._-]#{arch}\.dmg}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 
   app "Stoplight Studio.app"
+
+  zap trash: [
+    "~/Library/Application Support/Stoplight Studio",
+    "~/Library/Logs/Stoplight Studio",
+    "~/Library/Preferences/com.stoplight.studio.plist",
+    "~/Library/Saved Application State/com.stoplight.studio.savedState",
+  ]
 end

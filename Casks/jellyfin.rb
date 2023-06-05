@@ -1,6 +1,6 @@
 cask "jellyfin" do
-  version "10.8.1"
-  sha256 "2925a45f529f6646b4d09b50bfccb30816cc60f74d5919a19d4f8dd655219158"
+  version "10.8.10"
+  sha256 "c237fdd7e410695991f712a049f8699871467133787973b5a9deb71142b207f2"
 
   url "https://repo.jellyfin.org/releases/server/macos/stable/installer/jellyfin_#{version}.dmg"
   name "Jellyfin"
@@ -13,4 +13,12 @@ cask "jellyfin" do
   end
 
   app "Jellyfin.app"
+
+  zap trash: [
+    "/Library/Logs/DiagnosticReports/jellyfin*.diag",
+    "~/.cache/jellyfin/",
+    "~/.config/jellyfin/",
+    "~/.local/share/jellyfin/",
+    "~/Library/Preferences/Jellyfin.Server.plist",
+  ]
 end

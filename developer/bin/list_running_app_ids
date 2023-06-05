@@ -17,6 +17,7 @@ require "io/console"
 ### globals
 ###
 
+# rubocop:disable Style/GlobalVars
 $opt_test = nil
 $COLUMNS = IO.console.winsize.last
 
@@ -120,3 +121,4 @@ if $opt_test
 else
   report_apps
 end
+# rubocop:enable Style/GlobalVars

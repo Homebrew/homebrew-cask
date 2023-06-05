@@ -1,17 +1,18 @@
 cask "feishu" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
-  if Hardware::CPU.intel?
-    version "5.16.5,511dd9"
-    sha256 "445c829ebf35d47cd3f093603a5cef82278604efa149a957a39813a739746ac4"
-  else
-    version "5.16.5,0ecde1"
-    sha256 "fd287ceed1bba09e08a6b732127279ab2d0aa150c54270e5d1d74654cd4b9ac3"
+  on_arm do
+    version "6.5.8,b2f05ddc"
+    sha256 "814d95c00eae23f8e4c951b079fb42bb644169df9a2a3aa2fc7cd1e8c899bc09"
+  end
+  on_intel do
+    version "6.5.8,391d8dd5"
+    sha256 "e995c7392aa7586a2d7d85d8e981bf7034bf87ab34f4f3f03b154d6ac3f19196"
   end
 
   url "https://sf3-cn.feishucdn.com/obj/ee-appcenter/#{version.csv.second}/Feishu-darwin_#{arch}-#{version.csv.first}-signed.dmg",
-      verified: "sf3-cn.feishucdn.com/"
-  name "feishu"
+      verified: "sf3-cn.feishucdn.com/obj/ee-appcenter/"
+  name "Feishu"
   desc "Project management software"
   homepage "https://www.feishu.cn/"
 

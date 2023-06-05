@@ -1,6 +1,6 @@
 cask "pinta" do
-  version "2.0.2"
-  sha256 "2b0a2bf6e0f517c93958b0f80fdbbccd7329e5685b897bc63ba87c9c0dc553b1"
+  version "2.1.1"
+  sha256 "e93a867b48738ba5c4108b009213c1941c7dab3116695819bdd7e8774203db1a"
 
   url "https://github.com/PintaProject/Pinta/releases/download/#{version}/Pinta.dmg",
       verified: "github.com/PintaProject/Pinta/"

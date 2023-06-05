@@ -1,13 +1,9 @@
 cask "cron" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
-  version "1.109.0"
-
-  if Hardware::CPU.intel?
-    sha256 "24ec3d5a709313979ab8cd658e03cfee4ce4dec6201943c2fd8d467376328c43"
-  else
-    sha256 "d01ada02ea7232147ca2f053a7e000bf00e3bd4ab91800e3e58f438460b7180b"
-  end
+  version "1.113.0"
+  sha256 arm:   "fceb1825d5bc0a734b6f46371ed730050241bac0050f36d5fb7092b5093a8775",
+         intel: "46a93ec8c570a360ef379ead2ac1b7c212577c2e104d48ddfd8c425438c3a751"
 
   url "https://download.todesktop.com/210303leazlircz/Cron%20#{version}-#{arch}-mac.zip",
       verified: "download.todesktop.com/210303leazlircz/"

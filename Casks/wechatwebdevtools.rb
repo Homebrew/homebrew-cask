@@ -1,13 +1,9 @@
 cask "wechatwebdevtools" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
-  version "1.06.2206090"
-
-  if Hardware::CPU.intel?
-    sha256 "4e1fa9eb409e401271093faabe49f430ec9cefeb1746ba1254d633fc50440832"
-  else
-    sha256 "449b3e58408ef36f986a27a51261a98aaf65dffc952da71ccb11eb2612f3506d"
-  end
+  version "1.06.2306020"
+  sha256 arm:   "ba4566ce56a304e5b574cae39bc638471b127abf9c376170c71edf66f3615a34",
+         intel: "14f98985e04b7547182deb5b6efb8cba7fa317223e3daefa2f3899eaf5a48bb6"
 
   url "https://dldir1.qq.com/WechatWebDev/release/be1ec64cf6184b0fa64091919793f068/wechat_devtools_#{version}_darwin_#{arch}.dmg"
   name "Wechat DevTools"
@@ -16,8 +12,8 @@ cask "wechatwebdevtools" do
   homepage "https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html"
 
   livecheck do
-    url "https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html"
-    regex(%r{Stable\s+Build</a>\s*\((\d+(?:\.\d+)+)}i)
+    url "https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html"
+    regex(/a>\s(\d(?:\.\d+)+)\s</i)
   end
 
   auto_updates true

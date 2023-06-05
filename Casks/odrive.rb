@@ -1,6 +1,6 @@
 cask "odrive" do
-  version "7284"
-  sha256 "535d423a3c760512c82d1c121f4bbc3e3ff7edf568370a90a3daf120d762c559"
+  version "7343"
+  sha256 "56912676ca565fb8f518541c2eadbb796bc74e7fa34dca64c2573d26ddc6b83d"
 
   url "https://d3huse1s6vwzq6.cloudfront.net/odrivesync.#{version}.pkg",
       verified: "d3huse1s6vwzq6.cloudfront.net/"
@@ -9,13 +9,16 @@ cask "odrive" do
   homepage "https://www.odrive.com/"
 
   livecheck do
-    # https://docs.odrive.com/docs/odrive-usage-guide#install-desktop-sync
     url "https://www.odrive.com/downloaddesktop?platform=mac"
     strategy :header_match
   end
 
   pkg "odrivesync.#{version}.pkg"
 
-  uninstall quit:    "com.oxygencloud.odrive",
+  # Should also remove ~/.odrive/bin/ on uninstall, but causes
+  # faulty reinstall unless ~/.odrive is removed entirely.
+  uninstall quit:    "com.oxygen.odriveapp",
             pkgutil: "com.oxygen.odrive.*"
+
+  zap trash: "~/.odrive"
 end

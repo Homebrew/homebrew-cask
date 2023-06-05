@@ -1,6 +1,6 @@
 cask "uniflash" do
-  version "7.2.0.3893"
-  sha256 "2111480fc45c370cde430eee9a23b8a033883cdcaf3ab5e7d1927f023cafafd3"
+  version "8.3.0.4307"
+  sha256 "b93dc02fae18448f0221c0945195ed0d4af96f426df943f901725bce147c58e7"
 
   url "https://dr-download.ti.com/software-development/software-programming-tool/MD-QeJBJLj8gq/#{version.major_minor_patch}/uniflash_sl.#{version}.dmg"
   name "TI UniFlash"
@@ -32,4 +32,11 @@ cask "uniflash" do
     args:       ["--mode", "unattended"],
     sudo:       true,
   }
+
+  zap trash: [
+        "~/.ti/uniflash",
+        "~/Library/Application Support/Uniflash",
+        "~/Library/Caches/Uniflash",
+      ],
+      rmdir: "~/.ti"
 end

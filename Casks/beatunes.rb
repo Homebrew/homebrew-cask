@@ -1,6 +1,6 @@
 cask "beatunes" do
-  version "5.2.28"
-  sha256 "10be5e73c886b45eda6b9cf95ee618be2ce9bbc5907c43c3d0002a7dc538d95c"
+  version "5.2.31"
+  sha256 "6523b2788b79ecd5cdb684d8b3c8bea575863a0591e71d736f6bad37c8623559"
 
   url "https://coxy.beatunes.com/download/beaTunes-#{version.dots_to_hyphens}.dmg"
   name "beaTunes"
@@ -9,11 +9,9 @@ cask "beatunes" do
 
   livecheck do
     url "https://www.beatunes.com/en/beatunes-download.html"
-    strategy :page_match do |page|
-      match = page[/href=.*?beaTunes[._-]?v?(\d+(?:-\d+)+)\.dmg/i, 1]
-      next if match.blank?
-
-      match.tr("-", ".")
+    regex(/href=.*?beaTunes[._-]?v?(\d+(?:-\d+)+)\.dmg/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex)&.map { |match| match[0].tr("-", ".") }
     end
   end
 

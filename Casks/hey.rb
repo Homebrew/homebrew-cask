@@ -1,15 +1,11 @@
 cask "hey" do
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  arch arm: "-arm64"
 
-  version "1.2.5"
+  version "1.2.11"
+  sha256 arm:   "c924c307042328c59692214b3b3c321cff5c0c4f462225d1c83459098a268ddd",
+         intel: "0cbf19dc198948168af49909a2fd5cb9d6c81110b9107121efa6ffb80828ecf6"
 
-  if Hardware::CPU.intel?
-    sha256 "a13b0fca4db8c054d37414c32887b07ddc4870c525cc60ac38d29f0ffc1c4cb1"
-  else
-    sha256 "e52204ea81ed2ad30bdd0fac3e38f243f1e26c3e74a1911b9f7e602f7c78701a"
-  end
-
-  url "https://hey-desktop.s3.amazonaws.com/HEY-#{version}#{arch}.dmg",
+  url "https://hey-desktop.s3.amazonaws.com/HEY-#{version}#{arch}-mac.zip",
       verified: "hey-desktop.s3.amazonaws.com/"
   name "HEY"
   desc "Access the HEY email service"

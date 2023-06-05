@@ -8,4 +8,11 @@ cask "brisk" do
   homepage "https://github.com/br1sk/brisk"
 
   app "Brisk.app"
+
+  zap trash: [
+    "~/Library/Application Support/Blisk",
+    "~/Library/Caches/Blisk",
+    "~/Library/Preferences/org.blisk.Blisk.plist",
+    "~/Library/Saved Application State/org.blisk.Blisk.savedState",
+  ]
 end

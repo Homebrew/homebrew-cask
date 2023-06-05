@@ -1,10 +1,8 @@
 cask "oxygen-xml-editor" do
-  arch = Hardware::CPU.intel? ? "" : "-aarch64"
+  version "25.1,2023042509"
+  sha256 "32d270c2496463361309ac07544f8e6b7761cca5582467c4983de93456b08707"
 
-  version "24.1,2022062007"
-  sha256 :no_check
-
-  url "https://www.oxygenxml.com/InstData/Editor/MacOSX/VM/oxygen-openjdk#{arch}.dmg"
+  url "https://archives.oxygenxml.com/Oxygen/Editor/InstData#{version.csv.first}/MacOSX/VM/oxygen-openjdk.dmg"
   name "oXygen XML Editor"
   desc "Tools for XML editing, including Oxygen XML Developer and Author"
   homepage "https://www.oxygenxml.com/xml_editor.html"
@@ -20,5 +18,13 @@ cask "oxygen-xml-editor" do
     end
   end
 
+  depends_on macos: ">= :sierra"
+
   suite "Oxygen XML Editor"
+
+  zap trash: "~/Library/Preferences/com.oxygenxml"
+
+  caveats do
+    license "https://www.oxygenxml.com/eula.html"
+  end
 end

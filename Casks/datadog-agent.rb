@@ -1,6 +1,6 @@
 cask "datadog-agent" do
-  version "7.37.1-1"
-  sha256 "29c521ade50c0ebce15317088ff5b9e5d2d511ac919201062bd7700408f3c798"
+  version "7.44.1-1"
+  sha256 "ff73da718b5eaced62e9041dcd720de38af5100e6e00786c3d831c089796b3fe"
 
   url "https://s3.amazonaws.com/dd-agent/datadog-agent-#{version}.dmg",
       verified: "s3.amazonaws.com/dd-agent/"
@@ -30,12 +30,17 @@ cask "datadog-agent" do
   ]
 
   caveats <<~EOS
-    You will need to update /opt/datadog-agent/etc/datadog.yaml and replace APIKEY with your api key
+    You will need to update /opt/datadog-agent/etc/datadog.yaml and replace
+    APIKEY with your api key
 
-    If you ever want to start/stop the Agent, please use the Datadog Agent App or datadog-agent command.
-    It will start automatically at login, if you want to enable it at startup, run these commands:
+    If you ever want to start/stop the Agent, please use the Datadog Agent App
+    or datadog-agent command.
+    It will start automatically at login, if you want to enable it at startup,
+    run these commands:
 
-    sudo cp '/opt/datadog-agent/etc/com.datadoghq.agent.plist.example' /Library/LaunchDaemons/com.datadoghq.agent.plist
-    sudo launchctl load -w /Library/LaunchDaemons/com.datadoghq.agent.plist
+      sudo cp '/opt/datadog-agent/etc/com.datadoghq.agent.plist.example' \
+      /Library/LaunchDaemons/com.datadoghq.agent.plist
+
+      sudo launchctl load -w /Library/LaunchDaemons/com.datadoghq.agent.plist
   EOS
 end

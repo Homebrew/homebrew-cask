@@ -1,5 +1,5 @@
 cask "box-tools" do
-  version :latest
+  version "4.22.0.999"
   sha256 :no_check
 
   url "https://e3.boxcdn.net/box-installers/boxedit/mac/currentrelease/BoxToolsInstaller.dmg",
@@ -7,6 +7,11 @@ cask "box-tools" do
   name "Box Tools"
   desc "Create and edit any file directly from a web browser"
   homepage "https://www.box.com/resources/downloads"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   apps = [
     "Device Trust",
@@ -16,7 +21,7 @@ cask "box-tools" do
   ]
   apps.each do |a|
     app "Install Box Tools.app/Contents/Resources/Box #{a}.app",
-        target: "#{Dir.home}/Library/Application Support/Box/Box Edit/Box #{a}.app"
+        target: "~/Library/Application Support/Box/Box Edit/Box #{a}.app"
   end
 
   uninstall quit: [

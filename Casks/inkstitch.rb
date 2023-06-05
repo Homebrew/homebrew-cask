@@ -1,14 +1,21 @@
 cask "inkstitch" do
-  version "2.2.0"
+  version "3.0.0"
 
-  if MacOS.version <= :high_sierra
-    sha256 "3d6dfc5539c86840715e8edf03e79dee11fe2a85b91043a81a9c09ea050a75f7"
-    url "https://github.com/inkstitch/inkstitch/releases/download/v#{version}/inkstitch-v#{version}-sierra-osx.pkg",
+  on_sierra :or_older do
+    sha256 "7a52e13a01dc74fd3267aa0efb1b0718c2463d88fbcca4c06822ab8065f936d1"
+
+    url "https://github.com/inkstitch/inkstitch/releases/download/v#{version}/inkstitch-v#{version}-capitan-catalina-osx.pkg",
         verified: "github.com/inkstitch/inkstitch/"
-  else
-    sha256 "44706a29277ed14bee11c3bbdae748ac8b97d203b0a1232c278611f918ac1cfb"
+
+    pkg "inkstitch-v#{version}-sierra-osx.pkg"
+  end
+  on_high_sierra :or_newer do
+    sha256 "ff4b1edddd8ca20816f9d80bfed7293e6ab05b2e6bb0ed7370ab638be6960c04"
+
     url "https://github.com/inkstitch/inkstitch/releases/download/v#{version}/inkstitch-v#{version}-osx.pkg",
         verified: "github.com/inkstitch/inkstitch/"
+
+    pkg "inkstitch-v#{version}-osx.pkg"
   end
 
   name "Inkstitch"
@@ -23,21 +30,15 @@ cask "inkstitch" do
   depends_on cask: "inkscape"
   depends_on macos: ">= :el_capitan"
 
-  if MacOS.version <= :high_sierra
-    pkg "inkstitch-v#{version}-sierra-osx.pkg"
-  else
-    pkg "inkstitch-v#{version}-osx.pkg"
-  end
-
   preflight do
-    system_command "/bin/mkdir",
-                   args: ["-p", "#{Dir.home}/Library/Application Support" \
-                                "/org.inkscape.Inkscape/config/inkscape/extensions"]
+    # This needs to exist, otherwise the installer gets stuck at a prompt asking the user to run Inkscape first.
+    inkscape_extensions = Pathname("~/Library/Application Support/org.inkscape.Inkscape/config/inkscape").expand_path
+    inkscape_extensions.mkpath
   end
 
   uninstall pkgutil: "org.inkstitch.installer",
             delete:  "~/Library/Application Support/org.inkscape.Inkscape/config/inkscape/extensions/inkstitch"
 
   zap trash: "~/Library/Application Support/inkstitch",
-      rmdir: "~/Library/Application Support/org.inkscape.Inkscape/config/inkscape/extensions/"
+      rmdir: "~/Library/Application Support/org.inkscape.Inkscape/config/inkscape/extensions"
 end

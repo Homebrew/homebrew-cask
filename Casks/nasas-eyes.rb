@@ -7,5 +7,10 @@ cask "nasas-eyes" do
   desc "Learn about the earth, solar system, universe and the spacecraft exploring them"
   homepage "https://eyes.jpl.nasa.gov/eyes-on-exoplanets.html"
 
+  livecheck do
+    url :url
+    skip "unversioned application"
+  end
+
   app "NASA's Eyes.app"
 end

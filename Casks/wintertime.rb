@@ -8,4 +8,11 @@ cask "wintertime" do
   homepage "https://github.com/actuallymentor/wintertime-mac-background-freezer"
 
   app "Wintertime.app"
+
+  zap trash: [
+    "~/Library/Application Support/Wintertime",
+    "~/Library/Logs/Wintertime",
+    "~/Library/Preferences/com.electron.wintertime.plist",
+    "~/Library/Saved Application State/com.electron.wintertime.savedState",
+  ]
 end

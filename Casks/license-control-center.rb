@@ -1,10 +1,17 @@
 cask "license-control-center" do
-  version :latest
+  version "6.12.8.4318"
   sha256 :no_check
 
-  url "https://download.steinberg.net/downloads/eLicenserControl.dmg"
+  url "https://download.steinberg.net/downloads/eLicenserControl.dmg",
+      verified: "download.steinberg.net/downloads/"
   name "eLicenser Control Center"
-  homepage "https://www.steinberg.net/en/company/technologies/elicenser.html"
+  desc "Music software license manager"
+  homepage "https://helpcenter.steinberg.de/hc/en-us/articles/360008841379"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   installer manual: "eLicenserControlSetup.app"
 

@@ -1,8 +1,8 @@
 cask "vertcoin-core" do
-  version "0.18.0"
-  sha256 "2c040ca687297ec8124251833e7c2a5a9d3831b1eaacab681cc8772b353e6702"
+  version "22.1"
+  sha256 "50b485cf60d4f778bf4dedda1189cb83988fd814af93da8734568f79784e542c"
 
-  url "https://github.com/vertcoin-project/vertcoin-core/releases/download/#{version}/vertcoin-#{version}-osx.dmg",
+  url "https://github.com/vertcoin-project/vertcoin-core/releases/download/v#{version}/vertcoin-#{version}-osx-signed.dmg",
       verified: "github.com/vertcoin-project/vertcoin-core/"
   name "Vertcoin Core"
   desc "Vertcoin client and wallet"

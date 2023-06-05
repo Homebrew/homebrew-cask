@@ -9,8 +9,8 @@ cask "vimediamanager" do
 
   livecheck do
     url :url
+    regex(/v?(\d+(?:\.\d+)+[a-z]\d+)/i)
     strategy :github_latest
-    regex(%r{href=.*?/v?(\d+(?:\.\d+)+[a-z]\d+)["' >]}i)
   end
 
   app "ViMediaManager.app"

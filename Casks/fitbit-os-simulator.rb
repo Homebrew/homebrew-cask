@@ -1,14 +1,14 @@
 cask "fitbit-os-simulator" do
-  version "0.9.2"
-  sha256 "966ba0934d8b2ac237251dea0e19472b2bb4b654b4f3fcb0091b7a150b92c3af"
+  version "0.9.4"
+  sha256 "b948c2b0e44d69b257215233e8b7018fdaa42d8e65ede2145f2d58145fbe86f3"
 
-  url "https://simulator-updates.fitbit.com/Fitbit%20OS%20Simulator-latest-#{version}.dmg"
+  url "https://simulator-updates.fitbit.com/Fitbit%20OS%20Simulator-stable-#{version}.dmg"
   name "Fitbit OS Simulator"
   desc "Build apps and clock faces for Fitbit"
   homepage "https://dev.fitbit.com/"
 
   livecheck do
-    url "https://simulator-updates.fitbit.com/latest-mac.yml"
+    url "https://simulator-updates.fitbit.com/stable-mac.yml"
     strategy :electron_builder
   end
 

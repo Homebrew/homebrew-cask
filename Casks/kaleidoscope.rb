@@ -1,11 +1,11 @@
 cask "kaleidoscope" do
-  version "3.5.1,2075"
-  sha256 "8b3d2e210369bb46b8c0205661bd46e737200b6db748df2e9e15e6f3ed50fb44"
+  version "4.0.3,3824"
+  sha256 "38dda0e1b49315256c45472ee9dd11f12b73d26f8745ee5237c651783a09acb7"
 
   url "https://updates.kaleidoscope.app/v#{version.major}/prod/Kaleidoscope-#{version.csv.first}-#{version.csv.second}.app.zip"
   name "Kaleidoscope"
   desc "Spot and merge differences in text and image files or folders"
-  homepage "https://www.kaleidoscope.app/"
+  homepage "https://kaleidoscope.app/"
 
   livecheck do
     url "https://updates.kaleidoscope.app/v#{version.major}/prod/appcast"
@@ -16,11 +16,23 @@ cask "kaleidoscope" do
   end
 
   auto_updates true
-  conflicts_with cask: "homebrew/cask-versions/kaleidoscope2"
+  conflicts_with cask: [
+    "ksdiff",
+    "homebrew/cask-versions/kaleidoscope2",
+    "homebrew/cask-versions/ksdiff2",
+  ]
   depends_on macos: ">= :big_sur"
 
   app "Kaleidoscope.app"
-  binary "#{appdir}/Kaleidoscope.app/Contents/Resources/bin/ksdiff"
+
+  postflight do
+    contents = "#{appdir}/Kaleidoscope.app/Contents"
+    system_command "#{contents}/Resources/Integration/scripts/install_ksdiff",
+                   args: ["#{contents}/MacOS", "#{HOMEBREW_PREFIX}/bin"]
+  end
+
+  uninstall quit:    "app.kaleidoscope.v#{version.major}",
+            pkgutil: "app.kaleidoscope.uninstall_ksdiff"
 
   zap trash: [
     "~/Library/Application Support/app.kaleidoscope.v*",

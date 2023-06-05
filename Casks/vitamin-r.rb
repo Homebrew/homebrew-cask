@@ -1,10 +1,15 @@
 cask "vitamin-r" do
-  if MacOS.version <= :el_capitan
-    version "2.58"
-    sha256 "c6c631430b44359aa022d9ca5ca6e98dbdf7258f2ceae0353f344a035682661e"
-  else
-    version "4.12"
-    sha256 "0e4e753e2e17e5343096c3ea09e943797b88dfc11debff42dec5993928af89cc"
+  on_high_sierra :or_older do
+    version "3.31"
+    sha256 "6c5ce3926060b7e3616527fc3c1f0d2a5cd8a0be4d9f5496c099a33be993312b"
+
+    depends_on macos: ">= :el_capitan"
+  end
+  on_mojave :or_newer do
+    version "4.16"
+    sha256 "59f9a979fc822307e515b7af582fe5417273ff86f04552498263c5967a3c196b"
+
+    depends_on macos: ">= :mojave"
   end
 
   url "https://www.publicspace.net/download/signedVitamin#{version.major}.zip"

@@ -1,6 +1,6 @@
 cask "sysex-librarian" do
-  version "1.5"
-  sha256 "e69186748389f830d107b430c9a55e385590a1463664c25e8a83fbd036e733d7"
+  version "1.5.1"
+  sha256 "19d6905404ec1b16815d0ed2fc12aa93a84e6f66fedf3213f23d55f2960d88b0"
 
   url "https://www.snoize.com/SysExLibrarian/SysExLibrarian_#{version.dots_to_underscores}.dmg"
   name "SysEx Librarian"
@@ -12,7 +12,7 @@ cask "sysex-librarian" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :high_sierra"
 
   app "SysEx Librarian.app"
 

@@ -1,15 +1,15 @@
 cask "trivial" do
-  version "1.0.7,01000.77.50"
-  sha256 "a0a3d0a59ccf23368011acca93c76ef6d7d76539391824bc3c72c2425047716b"
+  version "1.0.9"
+  sha256 "1c788ba859f51ba06493239e0835750759613cd8e066249e57a9eeef301ac508"
 
-  url "https://download.decisivetactics.com/downloads/trivial/Trivial_#{version.csv.first}.zip"
+  url "https://download.decisivetactics.com/downloads/trivial/Trivial_#{version}.zip"
   name "Trivial"
   desc "Simple file transfer server supporting many protocols"
   homepage "https://www.decisivetactics.com/products/trivial/"
 
   livecheck do
     url "https://api.decisivetactics.com/api/v1/public/appcast?app=trivial&v=1"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   app "Trivial.app"

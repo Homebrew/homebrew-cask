@@ -1,6 +1,6 @@
 cask "retroarch-metal" do
-  version "1.10.3"
-  sha256 "921eef01a5485dad8ebe98742e60b6cc56a137f0fba478f3c5f132a6c7e4cd67"
+  version "1.15.0"
+  sha256 :no_check # required as upstream package is often updated in place
 
   url "https://buildbot.libretro.com/stable/#{version}/apple/osx/universal/RetroArch_Metal.dmg"
   name "RetroArch"
@@ -15,5 +15,9 @@ cask "retroarch-metal" do
 
   app "RetroArch.app"
 
-  zap trash: "~/Library/Application Support/RetroArch"
+  zap trash: [
+    "~/Documents/RetroArch/",
+    "~/Library/Application Support/RetroArch",
+    "~/Library/Saved Application State/com.libretro.RetroArch.savedState",
+  ]
 end

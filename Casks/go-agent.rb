@@ -1,9 +1,11 @@
 cask "go-agent" do
-  version "22.1.0,13913"
-  sha256 "1a0df6da1b71e36ac17b546a98fc9d8eeddc9ac19962dd9138fb5260b1b3185e"
+  arch arm: "-aarch64"
 
-  url "https://download.gocd.io/binaries/#{version.csv.first}-#{version.csv.second}/osx/go-agent-#{version.csv.first}-#{version.csv.second}-osx.zip",
-      verified: "download.gocd.io/binaries/"
+  version "23.1.0,16079"
+  sha256 arm:   "5e35587c2fc89135f40a5f919ee1c273e88c7be48c55735abaead34a98d7d157",
+         intel: "d88760a0f1e8aa3e95c68a89ea96bdc4222029c4e3c0c7b0599d3fd262b7d682"
+
+  url "https://download.gocd.org/binaries/#{version.csv.first}-#{version.csv.second}/osx/go-agent-#{version.csv.first}-#{version.csv.second}-osx#{arch}.zip"
   name "Go Agent"
   name "GoCD Agent"
   desc "Agent for the Go Continuous Delivery platform"
@@ -18,4 +20,6 @@ cask "go-agent" do
   end
 
   binary "go-agent-#{version.csv.first}/bin/go-agent"
+
+  # No zap stanza required
 end

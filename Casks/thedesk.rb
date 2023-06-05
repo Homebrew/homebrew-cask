@@ -1,8 +1,8 @@
 cask "thedesk" do
-  version "22.3.1"
-  sha256 "8271e41b214d1c4f20393a2e47d9653d2fe18896de31f383375431a914885f5b"
+  version "24.1.2"
+  sha256 "ed3c7c305a793f24fc96ad283b06421ca6ef89e3b24f8897e478f812a075923a"
 
-  url "https://github.com/cutls/TheDesk/releases/download/v#{version}/TheDesk-#{version}.dmg",
+  url "https://github.com/cutls/TheDesk/releases/download/v#{version}/TheDesk-#{version}-universal.dmg",
       verified: "github.com/cutls/TheDesk/"
   name "TheDesk"
   desc "Mastodon/Misskey Client for PC"

@@ -10,4 +10,14 @@ cask "ha-menu" do
   depends_on macos: ">= :high_sierra"
 
   app "HA Menu.app"
+
+  uninstall launchctl: "org.codechimp.HA-Menu",
+            quit:      "org.codechimp.HA-Menu"
+
+  zap trash: [
+    "~/Library/Application Scripts/org.codechimp.HA-Menu",
+    "~/Library/Application Scripts/org.codechimp.HA-Menu-Launcher",
+    "~/Library/Containers/org.codechimp.HA-Menu",
+    "~/Library/Containers/org.codechimp.HA-Menu-Launcher",
+  ]
 end

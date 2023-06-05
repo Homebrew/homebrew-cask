@@ -1,6 +1,6 @@
 cask "fabfilter-pro-l" do
-  version "2.11"
-  sha256 "a235f6997adfcb7c682355712dda684ad559101c2bee50b0cc2a3d392540c737"
+  version "2.20"
+  sha256 "7ee1bcda38dedc78371dfe44250a9b5cb48e1aba0ea7eaaa3ff85a22b14695bc"
 
   url "https://download.fabfilter.com/ffprol#{version.no_dots}.dmg"
   name "FabFilter Pro-L"

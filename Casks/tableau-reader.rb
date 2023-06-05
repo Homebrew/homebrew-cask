@@ -1,6 +1,6 @@
 cask "tableau-reader" do
-  version "2022.2.0"
-  sha256 "fe09d1964fe4ac5dca05089873abbcc05bb1ef059e0e2fd3bd5d4bf34a12c712"
+  version "2023.1.2"
+  sha256 "31bc86d9d5fbd0c335003dc2a4bfbd051652400a595c03ece95230a354ea3d96"
 
   url "https://downloads.tableau.com/tssoftware/TableauReader-#{version.dots_to_hyphens}.dmg"
   name "Tableau Reader"
@@ -19,5 +19,11 @@ cask "tableau-reader" do
   uninstall pkgutil: [
     "com.tableausoftware.FLEXNet.*",
     "com.tableausoftware.Reader.app",
+  ]
+
+  zap trash: [
+    "/Library/Preferences/com.tableau.Tableau-Reader-*.plist",
+    "~/Library/Preferences/com.tableau.Tableau-Reader-*.plist",
+    "~/Library/Saved Application State/com.tableausoftware.tableaureader.savedState",
   ]
 end

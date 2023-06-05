@@ -5,9 +5,12 @@ cask "phantomjs" do
   url "https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-#{version}-macosx.zip",
       verified: "bitbucket.org/ariya/phantomjs/"
   name "PhantomJS"
+  desc "Headless web browser"
   homepage "https://phantomjs.org/"
 
   binary "phantomjs-#{version}-macosx/bin/phantomjs"
+
+  zap trash: "~/Library/Application Support/Ofi Labs/PhantomJS/"
 
   caveats do
     discontinued

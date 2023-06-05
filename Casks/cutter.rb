@@ -1,13 +1,9 @@
 cask "cutter" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
+  arch arm: "arm64", intel: "x86_64"
 
-  version "2.1.0"
-
-  if Hardware::CPU.intel?
-    sha256 "d17451bc7904d010546b73c755a3dc0bc9e9116421448a033720b0a1018392f2"
-  else
-    sha256 "720d132cde1df3f23c9a11a447e253657587b95a1d8554859cbcd96baa3fcc13"
-  end
+  version "2.2.1"
+  sha256 arm:   "32be383baa18b6a9dbcff50e9b9ecd6682657a4a55dd3cb888f53a3308eb02e7",
+         intel: "67dcbd2bb48c2bfc0d90552e9eb72c635a9c47e96fe684037265d0c1f2399f77"
 
   url "https://github.com/rizinorg/cutter/releases/download/v#{version}/Cutter-v#{version}-macOS-#{arch}.dmg",
       verified: "github.com/rizinorg/cutter/"

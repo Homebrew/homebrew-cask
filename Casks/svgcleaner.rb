@@ -16,4 +16,8 @@ cask "svgcleaner" do
     "~/Library/Preferences/com.svgcleaner.svgcleaner.plist",
     "~/Library/Saved Application State/com.yourcompany.SVGCleaner.savedState",
   ]
+
+  caveats do
+    discontinued
+  end
 end

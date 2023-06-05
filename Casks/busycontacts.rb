@@ -1,6 +1,6 @@
 cask "busycontacts" do
-  version "1.6.7,2022-06-21-00-37"
-  sha256 "315e24659f187bc98b3758d217f745fecc7a93411200a99e388b99515f6ebf42"
+  version "2023.2.1,2023-05-29-14-52"
+  sha256 "5322fa9f45a4ccecfc8449ea27b913861c3562811deaa623e87ee097e1376b08"
 
   url "https://7e968b6ce8a839f034d9-23cfb9eddcb7b94cb43ba95f95a76900.ssl.cf1.rackcdn.com/bct-#{version.csv.first}-#{version.csv.second}.zip",
       verified: "7e968b6ce8a839f034d9-23cfb9eddcb7b94cb43ba95f95a76900.ssl.cf1.rackcdn.com/"
@@ -25,4 +25,14 @@ cask "busycontacts" do
   uninstall pkgutil: "com.busymac.busycontacts.pkg",
             quit:    "com.busymac.busycontacts",
             signal:  ["KILL", "com.busymac.busycontacts"]
+
+  zap trash: [
+    "~/Library/Application Scripts/com.busymac.busycontacts",
+    "~/Library/Application Scripts/N4RA379GBW.com.busymac.busycontacts",
+    "~/Library/Application Scripts/N4RA379GBW.com.busymac.contacts/",
+    "~/Library/Application Support/Mail/BusyContacts/",
+    "~/Library/Containers/com.busymac.busycontacts",
+    "~/Library/Group Containers/N4RA379GBW.com.busymac.busycontacts",
+    "~/Library/Group Containers/N4RA379GBW.com.busymac.contacts",
+  ]
 end

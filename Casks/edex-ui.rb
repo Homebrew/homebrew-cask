@@ -14,4 +14,8 @@ cask "edex-ui" do
     "~/Library/Saved Application State/com.edex.ui.savedState",
     "~/Library/Preferences/com.edex.ui.plist",
   ]
+
+  caveats do
+    discontinued
+  end
 end

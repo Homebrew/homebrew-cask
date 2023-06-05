@@ -1,5 +1,5 @@
 cask "qgroundcontrol" do
-  version "4.2.3"
+  version "4.2.6"
   sha256 :no_check
 
   url "https://d176tv9ibo4jno.cloudfront.net/latest/QGroundControl.dmg",
@@ -14,4 +14,10 @@ cask "qgroundcontrol" do
   end
 
   app "qgroundcontrol.app"
+
+  zap trash: [
+    "~/Documents/QGroundControl",
+    "~/Library/Caches/QGroundControl.org",
+    "~/Library/Saved Application State/org.qgroundcontrol.QGroundControl.savedState",
+  ]
 end

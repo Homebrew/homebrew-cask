@@ -1,6 +1,6 @@
 cask "gzdoom" do
-  version "4.8.2"
-  sha256 "0583a2e5b1636a631060a8ef0ae9acb51e0b145e34193d9e2fcdf0d833c4b908"
+  version "4.10.0"
+  sha256 "12eca4a3582eb9400b5a738e22fa80aa32a2bf50fb85dc28d41371a53b3df103"
 
   url "https://github.com/coelckers/gzdoom/releases/download/g#{version}/gzdoom-#{version.dots_to_hyphens}-macOS.zip",
       verified: "github.com/coelckers/gzdoom/"

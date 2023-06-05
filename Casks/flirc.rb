@@ -1,6 +1,6 @@
 cask "flirc" do
-  version "3.26.3"
-  sha256 "fb733eb216e7b7ed1369d4261222b8bb2110b5e4e38d984c9e7a368c2ced3096"
+  version "3.26.9"
+  sha256 "d3508617a58b436a8c391ed44c7734044dae96be56230ca98218d12bd6913a32"
 
   url "https://flirc.com/software/flirc-usb/GUI/release/mac/Flirc-#{version}.dmg"
   name "Flirc"
@@ -13,4 +13,10 @@ cask "flirc" do
   end
 
   app "Flirc.app"
+
+  zap trash: [
+    "~/Library/HTTPStorages/com.flirc.Flirc",
+    "~/Library/HTTPStorages/com.flirc.Flirc.binarycookies",
+    "~/Library/Preferences/com.flirc.Flirc.plist",
+  ]
 end

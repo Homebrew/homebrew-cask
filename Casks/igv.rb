@@ -1,6 +1,6 @@
 cask "igv" do
-  version "2.13.2"
-  sha256 "53f3e991e690c881153b5102ce630e114dd137fc2f738259c057f24fad73e9f2"
+  version "2.16.1"
+  sha256 "c9545160f735a2461f6dfbb5c34e3994984013ca1a011a21488d7b06b8b47fae"
 
   url "https://data.broadinstitute.org/igv/projects/downloads/#{version.major_minor}/IGV_MacApp_#{version}.zip"
   name "Integrative Genomics Viewer (IGV)"
@@ -13,6 +13,12 @@ cask "igv" do
   end
 
   app "IGV_#{version}.app"
+
+  zap trash: [
+    "~/.igv",
+    "~/Library/Preferences/org.broad.igv.plist",
+    "~/igv",
+  ]
 
   caveats do
     depends_on_java "11+"

@@ -1,15 +1,15 @@
 cask "subethaedit" do
-  version "5.2.4,9813"
+  version "5.2.4"
   sha256 "11f9cce3e33988a912f9c1df085ebd0d58b65fc856dc7806041b70bcd30c5043"
 
-  url "https://subethaedit.net/Releases/SubEthaEdit-#{version.csv.first}.zip"
+  url "https://subethaedit.net/Releases/SubEthaEdit-#{version}.zip"
   name "SubEthaEdit"
   desc "Plain text and source editor"
   homepage "https://subethaedit.net/"
 
   livecheck do
     url "https://subethaedit.net/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

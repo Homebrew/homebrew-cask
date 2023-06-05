@@ -1,13 +1,9 @@
 cask "jetbrains-toolbox" do
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  arch arm: "-arm64"
 
-  version "1.25,1.25.12569"
-
-  if Hardware::CPU.intel?
-    sha256 "43fdbf8dd65b62e5ebd5f1be52e840389784035aa7b94e3c50a1977c960abf7e"
-  else
-    sha256 "13a336229057a966a9cdcfaf0699d8eea59b972364f48bb7150e6204f4e8d2ce"
-  end
+  version "1.28.1,1.28.1.15219"
+  sha256 arm:   "40fd904302da7a29fdd4396f4ca2747a1bad1bc353bf0bebf19e5fb9c400f0b2",
+         intel: "e38e41c98509bcfde62764945eedd4f9cef0a2d7dd5695a61801e6e529307526"
 
   url "https://download.jetbrains.com/toolbox/jetbrains-toolbox-#{version.csv.second}#{arch}.dmg"
   name "JetBrains Toolbox"
@@ -16,8 +12,8 @@ cask "jetbrains-toolbox" do
 
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=TBA&latest=true&type=release"
-    strategy :page_match do |page|
-      JSON.parse(page)["TBA"].map do |release|
+    strategy :json do |json|
+      json["TBA"].map do |release|
         "#{release["version"]},#{release["build"]}"
       end
     end

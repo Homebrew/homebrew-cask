@@ -1,8 +1,8 @@
 cask "coolterm" do
-  version "1.9.1.3.0.964"
+  version "2.0.1.3.4.1150"
   sha256 :no_check
 
-  url "https://freeware.the-meiers.org/CoolTermMac.zip"
+  url "https://freeware.the-meiers.org/CoolTermMac.dmg"
   name "CoolTerm"
   desc "Serial port terminal"
   homepage "https://freeware.the-meiers.org/"
@@ -11,8 +11,6 @@ cask "coolterm" do
     url "https://freeware.the-meiers.org/version/CoolTerm.ver"
     regex(/^\s*v?(\d+(?:\.\d+)+)\s*$/i)
   end
-
-  container nested: "CoolTermMac.dmg"
 
   app "CoolTerm.app"
 

@@ -1,5 +1,5 @@
 cask "moneymoney" do
-  version "2.4.14,408"
+  version "2.4.27"
   sha256 :no_check
 
   url "https://service.moneymoney-app.com/1/MoneyMoney.zip"
@@ -9,7 +9,7 @@ cask "moneymoney" do
 
   livecheck do
     url "https://service.moneymoney-app.com/1/Appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

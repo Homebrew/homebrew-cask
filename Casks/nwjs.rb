@@ -1,6 +1,6 @@
 cask "nwjs" do
-  version "0.66.1"
-  sha256 "b0503960572fb2aece81c6487c55fa89759f8fcaa1c5fefaa00eb41a8a1d4c4c"
+  version "0.76.1"
+  sha256 "c3c35473a4314c3b5410e2326231a184ebc0365e0487effcb040065abfd6fc04"
 
   url "https://dl.nwjs.io/v#{version}/nwjs-sdk-v#{version}-osx-x64.zip"
   name "NW.js"
@@ -14,4 +14,11 @@ cask "nwjs" do
 
   app "nwjs-sdk-v#{version}-osx-x64/nwjs.app"
   binary "nwjs-sdk-v#{version}-osx-x64/nwjc"
+
+  zap trash: [
+    "~/Library/Application Support/nwjs",
+    "~/Library/Caches/nwjs",
+    "~/Library/Preferences/io.nwjs.nwjs.plist",
+    "~/Library/Saved Application State/io.nwjs.nwjs.savedState",
+  ]
 end

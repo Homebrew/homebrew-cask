@@ -1,6 +1,6 @@
 cask "thonny" do
-  version "3.3.13"
-  sha256 "e734766222e986a2cefc4a80b24fea132ac74fec6887dc55abc047dcc8a874c4"
+  version "4.1.0"
+  sha256 "f6988e7060c25289f9fbc5b8c0eaf8be77124f7bf1c6f9587bc4cdb006c8578e"
 
   url "https://github.com/thonny/thonny/releases/download/v#{version}/thonny-#{version}.pkg",
       verified: "github.com/thonny/thonny/"
@@ -10,8 +10,8 @@ cask "thonny" do
 
   livecheck do
     url "https://github.com/thonny/thonny/releases/"
-    strategy :page_match
     regex(/thonny[._-]?(\d+(?:\.\d+)*)\.pkg/i)
+    strategy :page_match
   end
 
   conflicts_with cask: "thonny-xxl"

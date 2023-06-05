@@ -1,15 +1,15 @@
 cask "invisor-lite" do
-  version "3.17,989.211020"
+  version "3.17"
   sha256 "acdbf1f7b09fff9a450feb99f1a9686b698f82c71303fe6297f0485829fca09f"
 
-  url "https://www.invisorapp.com/download/InvisorLite-#{version.csv.first}.dmg"
+  url "https://www.invisorapp.com/download/InvisorLite-#{version}.dmg"
   name "Invisor Lite"
   desc "Media file inspector"
   homepage "https://www.invisorapp.com/"
 
   livecheck do
     url "https://www.invisorapp.com/appcast_lite.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   app "Invisor Lite.app"

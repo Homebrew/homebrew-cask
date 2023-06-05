@@ -1,6 +1,6 @@
 cask "bdash" do
-  version "1.15.0"
-  sha256 "15e065947bced7e0524d803cbdfe5d1b7b20bb42256865104e97d547f28ff91f"
+  version "1.16.1"
+  sha256 "4f9a3bea32d17dc6e6add93a6dbb4b7ff012659258dbd185da35c34d11c87e17"
 
   url "https://github.com/bdash-app/bdash/releases/download/v#{version}/Bdash-#{version}-mac.zip"
   name "Bdash"
@@ -8,4 +8,12 @@ cask "bdash" do
   homepage "https://github.com/bdash-app/bdash"
 
   app "Bdash.app"
+
+  zap trash: [
+    "~/.bdash",
+    "~/Library/Application Support/Bdash",
+    "~/Library/Logs/Bdash",
+    "~/Library/Preferences/io.bdash.plist",
+    "~/Library/Saved Application State/io.bdash.savedState",
+  ]
 end

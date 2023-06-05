@@ -1,15 +1,11 @@
 cask "pycharm" do
-  arch = Hardware::CPU.intel? ? "" : "-aarch64"
+  arch arm: "-aarch64"
 
-  version "2022.1.3,221.5921.27"
+  version "2023.1.2,231.9011.38"
+  sha256 arm:   "9387e383f9d70d1b5e4e8e4b64061678c94a8329cafc9df5d342ac0f346a31fe",
+         intel: "46d8c03dd18de5a87837f3a437ae05ad7ad1ba3d61d742cef5124a30f5aa1109"
 
   url "https://download.jetbrains.com/python/pycharm-professional-#{version.csv.first}#{arch}.dmg"
-  if Hardware::CPU.intel?
-    sha256 "af7594948effdbe5c9a704185d8abd65a23aab5098059f3fbfef4f29c777fd98"
-  else
-    sha256 "88bcc8acc6bb7bc189466da427cc049df62062e8590108f17b080208a8008a07"
-  end
-
   name "PyCharm"
   name "PyCharm Professional"
   desc "IDE for professional Python development"
@@ -17,8 +13,8 @@ cask "pycharm" do
 
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=PCP&latest=true&type=release"
-    strategy :page_match do |page|
-      JSON.parse(page)["PCP"].map do |release|
+    strategy :json do |json|
+      json["PCP"].map do |release|
         "#{release["version"]},#{release["build"]}"
       end
     end

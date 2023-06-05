@@ -1,6 +1,6 @@
 cask "microsoft-remote-desktop" do
-  version "10.7.7"
-  sha256 "f109329c038819c4bd75d667572154435aa96ce73e047e8a1bff0c9bc05f6973"
+  version "10.8.3"
+  sha256 "d23c39e08a65a7a8e90e490e00ddd5658357b95d79638737eb47cc1d4eed3263"
 
   url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Remote_Desktop_#{version}_installer.pkg",
       verified: "officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/"
@@ -29,6 +29,7 @@ cask "microsoft-remote-desktop" do
             quit:      [
               "com.microsoft.autoupdate2",
               "com.microsoft.autoupdate.fba",
+              "com.microsoft.errorreporting",
             ]
 
   zap trash: [

@@ -1,27 +1,22 @@
 cask "retro-virtual-machine" do
-  version "2.0,1.r7"
-  sha256 "75e94f2df589ead3fb1eab529713312a17dc16e6b2ba547594cd9d5975def566"
+  version "2.1.6"
+  sha256 "cde283987001b00170e4b2238bda0ef961adc66578c14c7fc210cba6a74440c2"
 
-  url "https://static.retrovm.org/release/beta#{version.csv.second.major}/macos/RetroVirtualMachine.#{version.csv.first}.beta-#{version.csv.second}.macos.dmg",
+  url "https://static.retrovm.org/release/#{version}/RetroVirtualMachine.#{version}.dmg",
       verified: "static.retrovm.org/release/"
   name "Retro Virtual Machine"
   desc "ZX Spectrum and Amstrad CPC emulator"
   homepage "https://www.retrovirtualmachine.org/en/"
 
   livecheck do
-    url "https://www.retrovirtualmachine.org/en/downloads"
-    strategy :page_match do |page|
-      match = page.match(/RetroVirtualMachine\.(\d+(?:\.\d+)*)\.beta-(\d+(?:\..\d+)*)\.macos\.dmg/i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
-    end
+    url "https://www.retrovirtualmachine.org/download"
+    regex(/RetroVirtualMachine[._-](\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  app "Retro Virtual Machine #{version.major}.app"
+  app "Retro Virtual Machine #{version.major_minor}.app"
 
   zap trash: [
-    "~/Library/Application Support/Retro Virtual Machine v#{version.major}.x",
-    "~/Library/Preferences/com.madeinalacant.RetroVirtualMachine#{version.major}.plist",
+    "~/Library/Application Support/Retro Virtual Machine v#{version.major_minor}.x",
+    "~/Library/Preferences/com.madeinalacant.RetroVirtualMachine#{version.major_minor}.plist",
   ]
 end

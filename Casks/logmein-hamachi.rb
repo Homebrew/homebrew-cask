@@ -1,11 +1,18 @@
 cask "logmein-hamachi" do
-  version :latest
+  version "2.1.827"
   sha256 :no_check
 
   url "https://secure.logmein.com/LogMeInHamachi.zip",
       verified: "logmein.com/"
   name "LogMeIn Hamachi"
   homepage "https://vpn.net/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist do |items|
+      items["com.logmein.hamachiinstaller"].short_version
+    end
+  end
 
   installer manual: "LogMeInHamachiInstaller.app"
 

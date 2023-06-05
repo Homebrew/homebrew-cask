@@ -1,13 +1,9 @@
 cask "stretchly" do
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  arch arm: "-arm64"
 
-  version "1.10.0"
-
-  if Hardware::CPU.intel?
-    sha256 "d5bff265d0d3142af98629b648ec4d39d4058aaad4d55a8f4780f1682ce1a471"
-  else
-    sha256 "b27a6a4d20c3da67c7868088d7e464414eca5f7a010806c708716ec2f0e6deba"
-  end
+  version "1.14.1"
+  sha256 arm:   "512a92316439b4dabbb12e05618d19a6323088ed9f325db2c41a1e3faa391136",
+         intel: "092bb8c315cb8cba4c04b7867c94d826d789fe400143c616cfec1d1a19031f12"
 
   url "https://github.com/hovancik/stretchly/releases/download/v#{version}/stretchly-#{version}#{arch}.dmg",
       verified: "github.com/hovancik/stretchly/"
@@ -17,7 +13,15 @@ cask "stretchly" do
 
   app "Stretchly.app"
 
+  zap trash: [
+    "~/Library/Application Support/Stretchly",
+    "~/Library/Logs/Stretchly",
+    "~/Library/Preferences/net.hovancik.stretchly.plist",
+  ]
+
   caveats <<~EOS
-    This application is not signed. See https://github.com/hovancik/stretchly#application-signing for details.
+    This application is not signed. For details see:
+
+    https://github.com/hovancik/stretchly#application-signing
   EOS
 end

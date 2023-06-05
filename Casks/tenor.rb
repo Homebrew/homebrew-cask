@@ -1,5 +1,5 @@
 cask "tenor" do
-  version "2.0.5,21"
+  version "2.0.5"
   sha256 :no_check
 
   url "https://media.tenor.com/mac/bin/GIFforMac.dmg"
@@ -9,7 +9,7 @@ cask "tenor" do
 
   livecheck do
     url "https://media.tenor.com/mac/gif_for_mac_appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   depends_on macos: ">= :el_capitan"
@@ -17,4 +17,12 @@ cask "tenor" do
   app "Tenor.app"
 
   uninstall quit: "com.riffsy.GIF-for-Mac"
+
+  zap trash: [
+    "~/Library/Application Support/com.riffsy.GIF-for-Mac",
+    "~/Library/Caches/com.crashlytics.data/com.riffsy.GIF-for-Mac",
+    "~/Library/Caches/tenor-*",
+    "~/Library/HTTPStorages/com.tenorshare.ReiBoot*",
+    "~/Library/Preferences/com.riffsy.GIF-for-Mac.plist",
+  ]
 end

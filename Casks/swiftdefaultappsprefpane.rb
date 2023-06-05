@@ -9,4 +9,6 @@ cask "swiftdefaultappsprefpane" do
 
   binary "swda"
   prefpane "SwiftDefaultApps.prefpane"
+
+  # No zap stanza required
 end

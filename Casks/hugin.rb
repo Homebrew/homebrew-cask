@@ -5,12 +5,12 @@ cask "hugin" do
   url "https://downloads.sourceforge.net/hugin/Hugin-#{version}.dmg"
   name "Hugin"
   desc "Panorama photo stitcher"
-  homepage "http://hugin.sourceforge.net/"
+  homepage "https://hugin.sourceforge.net/"
 
   livecheck do
-    url "http://hugin.sourceforge.net/download/"
-    strategy :page_match
+    url "https://hugin.sourceforge.net/download/"
     regex(/Hugin-(\d+(?:\.\d+)*)\.dmg/i)
+    strategy :page_match
   end
 
   suite "Hugin"

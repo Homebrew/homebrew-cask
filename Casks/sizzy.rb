@@ -1,7 +1,7 @@
 cask "sizzy" do
-  arch = Hardware::CPU.intel? ? "intel" : "arm64"
+  arch arm: "arm64", intel: "intel"
 
-  version "66.0.0"
+  version "71.3.0"
   sha256 :no_check
 
   url "https://proxy.sizzy.co/updates/download/mac?arch=#{arch}"
@@ -11,11 +11,18 @@ cask "sizzy" do
 
   livecheck do
     url :url
-    strategy :header_match
     regex(/Sizzy[._-]v?(\d+(?:\.\d+)+)(?:[._-]#{arch})?\.dmg/i)
+    strategy :header_match
   end
 
   auto_updates true
 
   app "Sizzy.app"
+
+  zap trash: [
+    "~/Library/Application Support/Sizzy",
+    "~/Library/Logs/Sizzy",
+    "~/Library/Preferences/com.kitze.sizzy.plist",
+    "~/Library/Saved Application State/com.kitze.sizzy.savedState",
+  ]
 end

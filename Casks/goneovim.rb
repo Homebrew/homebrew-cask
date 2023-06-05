@@ -1,6 +1,6 @@
 cask "goneovim" do
-  version "0.6.2"
-  sha256 "a43b3a83d9f67c62b8fe0d74164ad6424ce417a5a813862273c121102631ba0d"
+  version "0.6.5"
+  sha256 "4d72c44f4bcf36fbddda3ea81fda43f1542193f483a7e5f378528b6a7b8811fb"
 
   url "https://github.com/akiyosi/goneovim/releases/download/v#{version}/Goneovim-v#{version}-macos.tar.bz2"
   name "Goneovim"
@@ -14,7 +14,7 @@ cask "goneovim" do
 
   depends_on formula: "neovim"
 
-  app "Goneovim-v#{version}-macos/goneovim.app"
+  app "goneovim-v#{version}-macos/goneovim.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/goneovim.wrapper.sh"
   binary shimscript, target: "goneovim"

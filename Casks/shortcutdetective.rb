@@ -7,6 +7,11 @@ cask "shortcutdetective" do
   desc "Detects which app receives a keyboard shortcut (hotkey)"
   homepage "https://www.irradiatedsoftware.com/labs/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "ShortcutDetective.app"
 
   zap trash: "~/Library/Preferences/com.irradiatedsoftware.ShortcutDetective.plist"

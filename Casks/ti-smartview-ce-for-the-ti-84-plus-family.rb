@@ -9,10 +9,9 @@ cask "ti-smartview-ce-for-the-ti-84-plus-family" do
 
   livecheck do
     url "https://education.ti.com/en/software/details/en/BE8220257AA241148986628D6EE332E5/ti-smartview-ce-for-ti-84-plus-family"
-    strategy :page_match do |page|
-      page.scan(%r{href=.*?/(\h+)/TI-SmartView-CE-84[._-]v?(\d+(?:\.\d+)+)\.dmg}i).map do |match|
-        "#{match[1]},#{match[0]}"
-      end
+    regex(%r{href=.*?/(\h+)/TI-SmartView-CE-84[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
 

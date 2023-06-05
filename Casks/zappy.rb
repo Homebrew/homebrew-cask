@@ -1,6 +1,6 @@
 cask "zappy" do
-  version "3.1.2"
-  sha256 "660289eb18a579e861b04cb1983640e0d02ee69a2d31abb6c1c5cfcf677a371f"
+  version "3.3.1"
+  sha256 "bbf1e22c53525336fa5589240ec0745e71736a421d6753ea5023c5af1b9bda90"
 
   url "https://zappy.zapier.com/releases/zappy-#{version}.dmg"
   name "Zappy"
@@ -9,11 +9,11 @@ cask "zappy" do
 
   livecheck do
     url "https://zappy.zapier.com/releases/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :high_sierra"
 
   app "Zappy.app"
 

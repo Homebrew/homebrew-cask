@@ -21,4 +21,9 @@ cask "devolo-cockpit" do
     executable: "/Applications/devolo/devolo Cockpit uninstall.app/Contents/MacOS/uninstall",
     sudo:       true,
   }
+
+  zap trash: [
+    "~/Library/Caches/de.devolo.dLAN.Cockpit",
+    "~/Library/Preferences/de.devolo.dLAN.Cockpit",
+  ]
 end

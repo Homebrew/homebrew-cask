@@ -1,19 +1,20 @@
 cask "openwebstart" do
-  arch = Hardware::CPU.intel? ? "x64" : "aarch64"
+  arch arm: "aarch64", intel: "x64"
 
-  version "1.6.0"
-
-  if Hardware::CPU.intel?
-    sha256 "c2a71ce2e22adbf96aab869f0c96b2d26f839eace0d6692bf861070334fb2898"
-  else
-    sha256 "c4b738e7a0ddc76d6a40a913bede9f205d421b7b596b329ecb96438a7d048b72"
-  end
+  version "1.8.0"
+  sha256 arm:   "104f2d83365074d05dd3788d80dc642e55fb568cb0b2ed3db78efa59a1016bd7",
+         intel: "eecff527c1eced6b6cc0c9a79d1336c4b912c1653602a4de244bbda72e03913f"
 
   url "https://github.com/karakun/OpenWebStart/releases/download/v#{version}/OpenWebStart_macos-#{arch}_#{version.dots_to_underscores}.dmg",
       verified: "github.com/karakun/OpenWebStart/"
   name "OpenWebStart"
   desc "Tool to run Java Web Start-based applications after the release of Java 11"
   homepage "https://openwebstart.com/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   installer script: {
     executable:   "#{staged_path}/OpenWebStart Installer.app/Contents/MacOS/JavaApplicationStub",

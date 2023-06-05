@@ -1,6 +1,6 @@
 cask "fabfilter-simplon" do
-  version "1.34"
-  sha256 "74d5beabbad61e05228c5f3682b3e7c966bccba1a2a4d2dc63ccbbbe9075e222"
+  version "1.35"
+  sha256 "0bf0ad7eb023a5068f6efd51110a49c1cc90daaffe92bbebaa7caf8508d969df"
 
   url "https://download.fabfilter.com/ffsimplon#{version.no_dots}.dmg"
   name "FabFilter Simplon"

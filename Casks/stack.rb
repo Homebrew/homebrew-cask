@@ -1,16 +1,15 @@
 cask "stack" do
-  version "2.10.1-20220504"
-  sha256 "da2c1db8f6f73b7635f78df26d5f4d150a710d18ad803ed1644f563c944009f4"
+  version "2.11.1-20220906"
+  sha256 "d5b92e5f0070fbd1f92c36be58e0c979efcceb79b685dd7e665ebf165d70a82c"
 
-  url "https://mirror.transip.net/stack/software/osx/stack-#{version}.dmg",
-      verified: "transip.net/stack/"
+  url "https://filehosting-client.transip.nl/packages/stack/v#{version}/macos/stack-v#{version}.dmg"
   name "STACK"
   desc "Personal online hard drive to store, view and share files"
-  homepage "https://www.transip.nl/stack"
+  homepage "https://www.transip.nl/stack/"
 
   livecheck do
-    url "https://mirror.transip.net/stack/software/osx/"
-    regex(/href=.*?stack[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
+    url "https://filehosting-client.transip.nl/packages/stack/"
+    regex(%r{href=["'](?:.*?/)?v?(2(?:[.-]\d+)+)["' >]}i)
   end
 
   app "stack.app"

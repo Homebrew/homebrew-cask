@@ -1,37 +1,34 @@
 cask "qcad" do
-  version "3.27.6"
+  arch arm: "11-13-arm64", intel: "10.14-13"
 
-  if Hardware::CPU.intel?
-    if MacOS.version <= :high_sierra
-      sha256 "589a84168c38bf57435441511b19fa081b622e009719c4be7cc1385b7dc55eeb"
-      url "https://www.qcad.org/archives/qcad/qcad-#{version}-trial-macos-10.10-10.13.dmg"
+  version "3.28.1"
 
-      livecheck do
-        url "https://www.qcad.org/en/download"
-        regex(/qcad[._-]v?(\d+(?:\.\d+)+)[._-]trial[._-]macos[._-]10\.10[._-]10\.13\.dmg/i)
-      end
-    else
-      sha256 "b3861329672b1a44d72de8fe02cc696a955dad6cd7c1cd18da9e064b7ef0f816"
-      url "https://www.qcad.org/archives/qcad/qcad-#{version}-trial-macos-10.14-12.dmg"
+  on_high_sierra :or_older do
+    sha256 "e7b9ca380f0477c0252875eeacacf526806f4e303ea02cf6b200ece9e33512dc"
 
-      livecheck do
-        url "https://www.qcad.org/en/download"
-        regex(/qcad[._-]v?(\d+(?:\.\d+)+)[._-]trial[._-]macos[._-]10\.14[._-]12\.dmg/i)
-      end
-    end
-  else
-    sha256 "a49ffa3adf3087ad9ac59de7fc54c7ea5ef131d6ca2950265916bacc86d3c405"
-    url "https://www.qcad.org/archives/qcad/qcad-#{version}-trial-macos-11-12-arm64.dmg"
+    url "https://www.qcad.org/archives/qcad/qcad-#{version}-trial-macos-10.10-10.13.dmg"
+  end
+  on_mojave :or_newer do
+    sha256 arm:   "9e5fc21bd450c5d2daeed4328d2cf5fed25f0be815a2d573e464f9650de7b160",
+           intel: "ce599a730aa157dcde6c41971e400f446cf9687278d7a6dfb7786874f2e8eeef"
 
-    livecheck do
-      url "https://www.qcad.org/en/download"
-      regex(/qcad[._-]v?(\d+(?:\.\d+)+)[._-]trial[._-]macos[._-]11[._-]12[._-]arm64\.dmg/i)
-    end
+    url "https://www.qcad.org/archives/qcad/qcad-#{version}-trial-macos-#{arch}.dmg"
   end
 
   name "QCAD"
   desc "Free, open source application for computer aided drafting in 2D"
   homepage "https://www.qcad.org/"
 
+  livecheck do
+    url "https://www.qcad.org/en/download"
+    regex(/qcad[._-]v?(\d+(?:\.\d+)+)[._-]trial[._-]macos[._-]#{arch}\.dmg/i)
+  end
+
   app "QCAD.app"
+
+  zap trash: [
+    "~/.config/QCAD",
+    "~/Library/Preferences/org.qcad.plist",
+    "~/Library/Saved Application State/org.qcad.savedState",
+  ]
 end

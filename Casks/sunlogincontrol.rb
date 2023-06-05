@@ -1,6 +1,6 @@
 cask "sunlogincontrol" do
-  version "5.3.1.40594"
-  sha256 "27d8e5a6fbda5340f3a0d5fc913f08bea17a50ddd3f3b57c3e66d13e6ba7b735"
+  version "5.6.0.51662"
+  sha256 "d06accaa1dc86bc2157764e723d39b2f582735e04d725f659e8a9be8117a7d9f"
 
   url "https://down.oray.com/sunlogin/mac/SunloginRemote_#{version}.dmg"
   name "SunloginControl"
@@ -10,8 +10,8 @@ cask "sunlogincontrol" do
 
   livecheck do
     url "https://sunlogin.oray.com/zh_CN/download/download?id=17"
-    strategy :header_match
     regex(/SunloginRemote[._-](\d+(?:\.\d+)+)\.dmg/i)
+    strategy :header_match
   end
 
   pkg "SunloginRemote.pkg"

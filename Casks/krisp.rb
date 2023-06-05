@@ -1,10 +1,13 @@
 cask "krisp" do
-  version "1.39.6"
-  sha256 "305383bd442a06d814ca1d7f6fb2aebc368be9163232a36beae4b144656f83ac"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://cdn.krisp.ai/mac/release/v#{version.major}.#{version.minor}/krisp_#{version}.pkg"
+  version "2.19.6"
+  sha256 arm:   "49c72399bd7d9b443763a2b88bd6cc9ac0d686598bee250e9d8f842ecbc2081c",
+         intel: "02db49c28e041f24342a8ead7d9a0f8b2e18f62e34ddaea3843bba8ebceb1784"
+
+  url "https://cdn.krisp.ai/mp/#{version}/mac/#{arch}/krisp_#{version}_#{arch}.pkg"
   name "Krisp"
-  desc "Sound clear in online meetings"
+  desc "Noise cancelling application"
   homepage "https://krisp.ai/"
 
   livecheck do
@@ -15,16 +18,23 @@ cask "krisp" do
   auto_updates true
   depends_on macos: ">= :mojave"
 
-  pkg "krisp_#{version}.pkg"
+  pkg "krisp_#{version}_#{arch}.pkg"
 
   uninstall quit:      "ai.krisp.krispMac",
             launchctl: [
-              "ai.krisp.krispMac.cameraAssistant",
-              "ai.krisp.krispMac.LaunchHelper",
+              "ai.krisp.krispMac*",
+              "krisp",
             ],
-            pkgutil:   [
-              "ai.krisp.krispMac",
-              "ai.krisp.krispMacLaunch",
-              "ai.krisp.krispMacVideo",
-            ]
+            pkgutil:   "ai.krisp.krispMac*",
+            delete:    "/Applications/krisp.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/ai.krisp.krispMac.LaunchHelper",
+    "~/Library/Application Support/ai.krisp.krispMac",
+    "~/Library/Caches/ai.krisp.krispMac",
+    "~/Library/Containers/ai.krisp.krispMac.LaunchHelper",
+    "~/Library/HTTPStorages/ai.krisp.krispMac.*",
+    "~/Library/LaunchAgents/ai.krisp.krispMac.cameraAssistant.plist",
+    "~/Library/Preferences/ai.krisp.krispMac.plist",
+  ]
 end

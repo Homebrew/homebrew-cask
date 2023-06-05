@@ -1,13 +1,9 @@
 cask "browserosaurus" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
-  version "18.5.0"
-
-  if Hardware::CPU.intel?
-    sha256 "9c5681976175a8c350254c2f0e787c0073b6059539b9c0e5656052808e04693c"
-  else
-    sha256 "769291187b35c0702e27f3204aaebf78e70c3f26d539e36fc570f24d4997c564"
-  end
+  version "20.3.1"
+  sha256 arm:   "0fe0743d9565ff4ad2340babad98b68a352f2b3d199e4a4492ba8849abe8840b",
+         intel: "aa73e378916634b0ab463046e7b85204fd135de607a8dbc1ebcbfe7bc85aa41e"
 
   url "https://github.com/will-stone/browserosaurus/releases/download/v#{version}/Browserosaurus-darwin-#{arch}-#{version}.zip"
   name "Browserosaurus"
@@ -17,6 +13,8 @@ cask "browserosaurus" do
   auto_updates true
 
   app "Browserosaurus.app"
+
+  uninstall quit: "com.browserosaurus"
 
   zap trash: [
     "~/Library/Application Support/Browserosaurus",

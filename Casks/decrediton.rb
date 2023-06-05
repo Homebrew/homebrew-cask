@@ -1,17 +1,13 @@
 cask "decrediton" do
-  arch = Hardware::CPU.intel? ? "amd64" : "arm64"
+  arch arm: "arm64", intel: "amd64"
 
-  version "1.7.3"
-
-  if Hardware::CPU.intel?
-    sha256 "106a0d417163c9c247b5a658e7dda691290af8b9651dcecb99f83cfcda5683a8"
-  else
-    sha256 "b29286210fe17fe159b5ccb24f0be572da9235acc6b9093356091d52a218848d"
-  end
+  version "1.7.7"
+  sha256 arm:   "20230c5494dbac62cfb4cab4e3a37b833c368eeb360e7dfd73232a10f1b2e9f3",
+         intel: "ba820a4a5b511ceff5817bc127cd8b624d8ba44bab721a4de436490441149f88"
 
   url "https://github.com/decred/decred-binaries/releases/download/v#{version}/decrediton-#{arch}-v#{version}.dmg"
   name "Decrediton"
-  desc "Wallet GUI for decred autonomous digital currency"
+  desc "GUI for the Decred wallet"
   homepage "https://github.com/decred/decrediton"
 
   app "decrediton.app"

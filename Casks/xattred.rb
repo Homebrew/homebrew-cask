@@ -1,6 +1,6 @@
 cask "xattred" do
-  version "1.3,2020.08"
-  sha256 "606823107254a9a66af2c67d0e6aa25ae820d8dfba2be5427325d05c4a5482a7"
+  version "1.5,2023.05"
+  sha256 "044fdd02921e867a4dd78b3979c55d8efacbd526ea4fcc5bc560523d58bc66b6"
 
   url "https://eclecticlightdotcom.files.wordpress.com/#{version.csv.second.major}/#{version.csv.second.minor}/xattred#{version.csv.first.no_dots}.zip",
       verified: "eclecticlightdotcom.files.wordpress.com/"
@@ -10,11 +10,11 @@ cask "xattred" do
 
   livecheck do
     url "https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
-    strategy :page_match do |page|
-      match = page.match(%r{/(\d+)/(\d+)/xattred(\d+)\.zip}i)
-      next if match.blank?
-
-      "#{match[3].split("", 2).join(".")},#{match[1]}.#{match[2]}"
+    regex(%r{/(\d+)/(\d+)/xattred(\d+)\.zip}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map do |match|
+        "#{match[2].split("", 2).join(".")},#{match[0]}.#{match[1]}"
+      end
     end
   end
 

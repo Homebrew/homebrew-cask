@@ -1,40 +1,47 @@
 cask "voov-meeting" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
-  postarch = Hardware::CPU.intel? ? "mac" : "mac_arm64"
+  arch arm: "arm64", intel: "x86_64"
+  arch_suffix = on_arch_conditional intel: "%20%281%29"
 
-  if Hardware::CPU.intel?
-    version "3.7.0.590,be624b69a9db9410195acc9ec0686885"
-    sha256 "be5016805e02e668111d70ea84109cc5b2388cfd72f5236239ace4e8bc1ab1aa"
-  else
-    version "3.7.0.590,747ce62c8d3c838f84873c8570b5e9eb"
-    sha256 "6eb5c1984d991d361ba77d79ce741f1a0151c66d5918e415749cf4a2cb325d86"
+  on_arm do
+    version "3.16.2.510,c21bb873a96e32725fa8231a2375bb0b"
+    sha256 "fc3268b0c33fd5facc9321c259e41c0fff83f14cb1df005005ed481135738efc"
+  end
+  on_intel do
+    version "3.16.2.510,11d9b52dbae65c0fdb27d0abed56acf6"
+    sha256 "2f00b5edf2914306489fc96b6397d21a9658e3d1a4fcb019b8bdccb75000778c"
   end
 
-  url "https://updatecdn.meeting.qq.com/#{version.csv.second}/VooVMeeting_1410000198_#{version.csv.first}.publish.#{arch}.dmg",
-      verified: "updatecdn.meeting.qq.com"
+  url "https://updatecdn.meeting.qq.com/cos/#{version.csv.second}/VooVMeeting_1410000198_#{version.csv.first}.publish.#{arch}#{arch_suffix}.dmg",
+      verified: "updatecdn.meeting.qq.com/"
   name "VooV Meeting"
   name "Tencent Meeting International Version"
-  desc "Cross-border video conferencing software"
+  desc "Video conferencing software"
   homepage "https://voovmeeting.com/"
 
-  # See https://github.com/Homebrew/homebrew-cask/pull/120458#issuecomment-1068393782
   livecheck do
-    url "https://bonjour.swoosh.run/post/https:voovmeeting.com/wemeet-webapi/v2/config/query-download-info?[{\"instance\":\"#{postarch}\",\"type\":\"1410000198\"}]"
-    strategy :page_match do |page|
-      match = page.match(/.*md5":"(.*?)".*version":"(.*?)"/i)
-      next if match.blank?
+    url %Q(https://voovmeeting.com/web-service/query-download-info?q=[{"package-type":"app","channel":"1410000198","platform":"mac","arch":"#{arch}","decorators":["intl"]}]&nonce=1234567890123456)
+    regex(%r{/cos/(\h+)/VooVMeeting[._-].+?v?(\d+(?:\.\d+)+)})
+    strategy :json do |json, regex|
+      json["info-list"]&.map do |item|
+        match = item["url"]&.match(regex)
+        next if match.blank?
 
-      "#{match[2]},#{match[1]}"
+        "#{match[2]},#{match[1]}"
+      end
     end
   end
 
   app "VooV Meeting.app"
 
   zap trash: [
+    "~/Library/Application Support/com.tencent.bugly",
+    "~/Library/Application Support/com.tencent.rqd/com.tencent.tencentmeeting",
+    "~/Library/Caches/com.tencent.tencentmeeting",
     "~/Library/Containers/com.tencent.tencentmeeting",
+    "~/Library/HTTPStorages/com.tencent.tencentmeeting",
+    "~/Library/HTTPStorages/com.tencent.tencentmeeting.binarycookies",
     "~/Library/Preferences/com.tencent.tencentmeeting.plist",
     "~/Library/Saved Application State/com.tencent.tencentmeeting.savedState",
     "~/Library/WebKit/com.tencent.tencentmeeting",
-    "~/Library/Application Support/com.tencent.rqd/com.tencent.tencentmeeting",
   ]
 end

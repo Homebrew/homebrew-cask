@@ -1,8 +1,11 @@
 cask "openmtp" do
-  version "3.1.15"
-  sha256 "9e1002759ab0b8b0c82799c6eae951e53a0dcb5410c0276226fff7cd35d58ef7"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://github.com/ganeshrvel/openmtp/releases/download/v#{version}/OpenMTP-#{version}-mac.zip",
+  version "3.2.10"
+  sha256 arm:   "8440e9c956342b876722bbb5c0ea3fcdbbbbbb78edda7d788c579319aceacb76",
+         intel: "5c0f3f687f392c1329a63c868c01f6e526a72dcecf59bf8d07b70a426c3929f5"
+
+  url "https://github.com/ganeshrvel/openmtp/releases/download/v#{version}/openmtp-#{version}-mac-#{arch}.zip",
       verified: "github.com/ganeshrvel/openmtp/"
   name "OpenMTP"
   desc "Android file transfer"

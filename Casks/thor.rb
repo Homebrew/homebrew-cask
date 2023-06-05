@@ -1,11 +1,16 @@
 cask "thor" do
-  version "1.5.10"
-  sha256 "47f4ba1a9ba84853e599ddbba2da17f64c01f311e0196f7adf746f0b93d565c6"
+  version "1.5.11"
+  sha256 "951903493d87a78b5b70446e19ac91d4b59d0f74a66474183d7fd87082bcdb88"
 
   url "https://github.com/gbammc/Thor/releases/download/#{version}/Thor_#{version}.zip"
   name "Thor"
   desc "Utility to switch between applications"
   homepage "https://github.com/gbammc/Thor/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   auto_updates true
 

@@ -1,5 +1,5 @@
 cask "hammerspoon" do
-  if MacOS.version <= :mojave
+  on_mojave :or_older do
     version "0.9.93"
     sha256 "eb4eb4b014d51b32ac15f87050eb11bcc2e77bcdbfbf5ab60a95ecc50e55d2a3"
 
@@ -10,9 +10,10 @@ cask "hammerspoon" do
     livecheck do
       skip "Specific build for Mojave and earlier"
     end
-  else
-    version "0.9.97"
-    sha256 "ef2ed8658981f8a3157476572dd89ce496a75d097abed6939aa9af9056bc5133"
+  end
+  on_catalina :or_newer do
+    version "0.9.100"
+    sha256 "6dcfc807c7cec692caf3b18c36cc1ea3af6b9f42699b4df277734408e4e07399"
 
     url "https://github.com/Hammerspoon/hammerspoon/releases/download/#{version}/Hammerspoon-#{version}.zip",
         verified: "github.com/Hammerspoon/hammerspoon/"

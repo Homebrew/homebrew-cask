@@ -7,4 +7,8 @@ cask "joker" do
   homepage "http://newosxbook.com/tools/joker.html"
 
   binary "joker.universal", target: "joker"
+
+  caveats do
+    discontinued
+  end
 end

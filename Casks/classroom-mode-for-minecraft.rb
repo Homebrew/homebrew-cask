@@ -1,6 +1,6 @@
 cask "classroom-mode-for-minecraft" do
-  version "1.81.v2"
-  sha256 "68bf1c2e3156ce4849c644bc47f9bcb1f817ca0e35a45ddc3f90fb6b49bb2e10"
+  version "1.83"
+  sha256 "5eaf55eb603229f003c02a4addde4e50eb5665d8c02de098d4586bf5f04e4ef0"
 
   url "https://meedownloads.blob.core.windows.net/retailbuilds/ClassroomMode/mac/Classroom_Mode_#{version.dots_to_underscores}.dmg",
       verified: "meedownloads.blob.core.windows.net/"

@@ -1,6 +1,6 @@
 cask "p4" do
-  version "2022.1,2305383"
-  sha256 "58454f04a735cfa7ea477d4154e69be7f9909dccd242f374fe77a77e99b10c00"
+  version "2023.1,2442900"
+  sha256 "34d31f351badc9d6cfe1a2da894289d04f7e9f6cf9f2075d88619146ebcb38ab"
 
   url "https://cdist2.perforce.com/perforce/r#{version.major[-2..]}.#{version.minor}/bin.macosx1015x86_64/p4"
   name "Perforce Helix Command-Line Client (P4)"
@@ -9,10 +9,9 @@ cask "p4" do
 
   livecheck do
     url "https://www.perforce.com/perforce/doc.current/user/relnotes.txt"
-    strategy :page_match do |page|
-      page.scan(%r{\((\d+(?:\.\d+)+)/(\d+)\)}i).map do |match|
-        "#{match[0]},#{match[1]}"
-      end
+    regex(%r{\((\d+(?:\.\d+)+)/(\d+)\)}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 
@@ -21,4 +20,6 @@ cask "p4" do
   container type: :naked
 
   binary "bin.macosx1015x86_64", target: "p4"
+
+  # No zap stanza required
 end

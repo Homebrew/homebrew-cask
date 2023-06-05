@@ -1,6 +1,6 @@
 cask "retroactive" do
-  version "1.9"
-  sha256 "46e880443af16d19bd4650d41e1dbc9acd384a44bb2251a72c94a7aeaab9d08f"
+  version "2.0"
+  sha256 "31053b84e596cf925ca1a3ed8ae18fe54badc40030b54ecc90c0beaf93868376"
 
   url "https://github.com/cormiertyshawn895/Retroactive/releases/download/#{version}/Retroactive.#{version}.zip"
   name "Retroactive"

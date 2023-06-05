@@ -1,13 +1,9 @@
 cask "android-studio" do
-  arch = Hardware::CPU.intel? ? "mac" : "mac_arm"
+  arch arm: "mac_arm", intel: "mac"
 
-  version "2021.2.1.15"
-
-  if Hardware::CPU.intel?
-    sha256 "fcaf413951119324ab22a0a4f2634bade90692991e9381cbf4a274e3cd60243a"
-  else
-    sha256 "ce1fb8ba48c93e65fca450667786b4b98aa000ff274ca890e3de36efdabcc22b"
-  end
+  version "2022.2.1.20"
+  sha256 arm:   "cf121ab0caa4acaa162cd107989a00be983bfc5f092f48a0f55b107695d23c79",
+         intel: "eff730036d61deac9dafd956750f213692baf343c493a907791dfc7fdb894a2b"
 
   url "https://redirector.gvt1.com/edgedl/android/studio/install/#{version}/android-studio-#{version}-#{arch}.dmg",
       verified: "redirector.gvt1.com/edgedl/android/studio/"

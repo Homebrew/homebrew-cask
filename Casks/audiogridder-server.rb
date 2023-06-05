@@ -1,33 +1,38 @@
 cask "audiogridder-server" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
+  version "1.2.0_1"
+  sha256 "ba69f70ee4fd7eb2e962cc203310f1a38f26f0f8432dc232f78af1734c0e699a"
 
-  version "1.1.1"
-
-  if Hardware::CPU.intel?
-    sha256 "072e52bd56fedb1c481961beacca99096e3a65ba36339bdd78155fd1f1d133ea"
-  else
-    sha256 "26be020b2ba57d7a0102a152099fcc5e993ce4bbcb23f47d80d5d9f24421658b"
-  end
-
-  url "https://audiogridder.com/releases/AudioGridderServer_#{version}_macOS-#{arch}.pkg"
+  url "https://audiogridder.com/releases/AudioGridderServer_#{version}_macOS-universal.pkg"
   name "AudioGridder Server"
   desc "VST2/VST3/AU DSP Server"
   homepage "https://audiogridder.com/"
 
   livecheck do
-    url "https://audiogridder.com/releases/latest.txt"
-    regex(/(\d+(?:\.\d+)+)/i)
+    cask "audiogridder-plugin"
   end
 
-  pkg "AudioGridderServer_#{version}_macOS-#{arch}.pkg"
+  pkg "AudioGridderServer_#{version}_macOS-universal.pkg"
 
-  uninstall pkgutil: "com.e47.pkg.server"
+  uninstall pkgutil: [
+    "com.e47.audiogridder.server",
+    "com.e47.pkg.server",
+  ]
 
   zap trash: [
         "~/.audiogridder/audiogridder.winpos",
+        "~/.audiogridder/audiogridderserver*.cache",
+        "~/.audiogridder/audiogridderserver*.cfg",
+        "~/.audiogridder/audiogridderserver*.crash",
+        "~/.audiogridder/audiogridderserver*.layouts",
+        "~/.audiogridder/audiogridderserver*.winpos",
         "~/.audiogridder/audiogridderserver.cache",
         "~/.audiogridder/audiogridderserver.cfg",
+        "~/.audiogridder/audiogridderserver.crash",
+        "~/.audiogridder/audiogridderserver.layouts",
+        "~/.audiogridder/audiogridderserver.winpos",
         "~/Library/Logs/AudioGridder/Master",
+        "~/Library/Logs/AudioGridder/Sandbox-Chain",
+        "~/Library/Logs/AudioGridder/Sandbox-Plugin",
         "~/Library/Logs/AudioGridder/Scan",
         "~/Library/Logs/AudioGridder/Server",
       ],

@@ -1,14 +1,10 @@
 cask "brave-browser" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
-  folder = Hardware::CPU.intel? ? "stable" : "stable-arm64"
+  arch arm: "arm64", intel: "x64"
+  folder = on_arch_conditional arm: "stable-arm64", intel: "stable"
 
-  version "1.41.99.0,141.99"
-
-  if Hardware::CPU.intel?
-    sha256 "a758668680235fc06a3477ec0c9df4f4474d8b7464ac48d6ca07d8ec52b8b92b"
-  else
-    sha256 "ce7ac2924107d5ba9805328f48414b061b300e10b2b9b9acaa9192f0dd3fd96e"
-  end
+  version "1.52.117.0,152.117"
+  sha256 arm:   "43dfcd6a4869a510a792b6f6cdfbb94b0c9d30b735bf0f53bb31e6f82590d78e",
+         intel: "16e73562d7db40a6a8a8c0e1c83683213ac9e2932a03ef39ecbdab801b57f4ed"
 
   url "https://updates-cdn.bravesoftware.com/sparkle/Brave-Browser/#{folder}/#{version.csv.second}/Brave-Browser-#{arch}.dmg",
       verified: "updates-cdn.bravesoftware.com/sparkle/Brave-Browser/"
@@ -22,11 +18,15 @@ cask "brave-browser" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Brave Browser.app"
 
   zap trash: [
     "~/Library/Application Support/BraveSoftware/Brave-Browser",
+    "~/Library/Caches/BraveSoftware",
+    "~/Library/Caches/com.brave.Browser",
+    "~/Library/HTTPStorages/com.brave.Browser",
     "~/Library/Preferences/com.brave.Browser.plist",
     "~/Library/Saved Application State/com.brave.Browser.savedState",
   ]

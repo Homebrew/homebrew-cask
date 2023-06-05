@@ -1,5 +1,5 @@
 cask "rightfont" do
-  version "6.0.6,3088"
+  version "7.0"
   sha256 :no_check
 
   url "https://rightfontapp.com/update/rightfont.zip"
@@ -8,8 +8,8 @@ cask "rightfont" do
   homepage "https://rightfontapp.com/"
 
   livecheck do
-    url "https://rightfontapp.com/update/appcast#{version.major}.xml"
-    strategy :sparkle
+    url "https://rightfontapp.com/update/appcast.xml"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
@@ -18,9 +18,9 @@ cask "rightfont" do
   app "RightFont.app"
 
   zap trash: [
-        "~/Library/Application Support/RightFont",
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.rightfontapp.rightfont*.sfl2",
         "~/Library/Application Support/com.rightfontapp.RightFont*",
+        "~/Library/Application Support/RightFont",
         "~/Library/Caches/com.rightfontapp.RightFont*",
         "~/Library/Logs/RightFont*",
         "~/Library/Preferences/com.rightfontapp.RightFont*.plist",

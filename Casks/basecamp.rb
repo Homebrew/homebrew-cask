@@ -1,15 +1,18 @@
 cask "basecamp" do
-  version "3,2.3.5"
-  sha256 "7553020b9406cc59fa0d76b009a1721983e4c0c305f402c0b865d19a772d87b8"
+  arch arm: "_arm64"
 
-  url "https://bc#{version.major}-desktop.s3.amazonaws.com/mac/basecamp#{version.major}-#{version.csv.second}.zip",
+  version "3,2.3.10"
+  sha256 arm:   "104cdef376416c48ea26c5d60ce9bca9f821555751c73afa9ed7012509c752c2",
+         intel: "907f477fb9e6f00b6e2e29d0d63797b2d6180e3bfdc6f5c106aca2cc789d6f6f"
+
+  url "https://bc#{version.major}-desktop.s3.amazonaws.com/mac#{arch}/basecamp#{version.major}-#{version.csv.second}.zip",
       verified: "bc3-desktop.s3.amazonaws.com/"
   name "Basecamp"
   desc "All-In-One Toolkit for Working Remotely"
   homepage "https://basecamp.com/help/#{version}/guides/apps/mac"
 
   livecheck do
-    url "https://bc#{version.major}-desktop.s3.amazonaws.com/mac/updates.json"
+    url "https://bc#{version.major}-desktop.s3.amazonaws.com/mac#{arch}/updates.json"
     strategy :page_match do |page|
       minor_version = JSON.parse(page)["version"]
       major_version = page.match(/basecamp(\d)/i)

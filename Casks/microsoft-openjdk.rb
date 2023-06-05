@@ -1,13 +1,9 @@
 cask "microsoft-openjdk" do
-  arch = Hardware::CPU.intel? ? "x64" : "aarch64"
+  arch arm: "aarch64", intel: "x64"
 
-  version "17.0.3"
-
-  if Hardware::CPU.intel?
-    sha256 "c88f2a01e88901538991c4198dbe4661a63e278e2a2a0df180e70737b2d14c60"
-  else
-    sha256 "b202672c16acbcd1063aadee86f7316f7880f84e9625ad16d4594908ce59fa39"
-  end
+  version "17.0.7"
+  sha256 arm:   "13dff99a835edd054d5bfc5b37214c30e54f0700726e1041eca3ec615f8578dc",
+         intel: "84a535e8a447736936d1aa1e118543fdbe03037b69682f7857d0ff7c621cba9c"
 
   url "https://aka.ms/download-jdk/microsoft-jdk-#{version}-macos-#{arch}.pkg",
       verified: "aka.ms/download-jdk/"
@@ -23,4 +19,9 @@ cask "microsoft-openjdk" do
   pkg "microsoft-jdk-#{version}-macOS-#{arch}.pkg"
 
   uninstall pkgutil: "com.microsoft.#{version.major}.jdk"
+
+  zap trash: [
+    "~/Library/Saved Application State/net.java.openjdk.java.savedState",
+    "~/Library/Preferences/net.java.openjdk.java.plist",
+  ]
 end

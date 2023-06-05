@@ -15,4 +15,6 @@ cask "finicky" do
   depends_on macos: ">= :sierra"
 
   app "Finicky.app"
+
+  zap trash: "~/Library/Preferences/net.kassett.finicky.plist"
 end

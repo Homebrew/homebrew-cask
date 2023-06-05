@@ -1,13 +1,9 @@
 cask "iconset" do
-  arch = Hardware::CPU.intel? ? "" : "arm64-"
+  arch arm: "arm64-"
 
-  version "2.2.0"
-
-  if Hardware::CPU.intel?
-    sha256 "c2c83113711b81625d0ccce9697c2bcc104f447f15fd21491238f8337b89c3a1"
-  else
-    sha256 "b82622a113c2fbdcc7df009b8d24e22f3e5f654054aa959b46c4c2df882f8147"
-  end
+  version "2.5.0"
+  sha256 arm:   "ed567c877bb0b7ba6889edc857f7cc83deb1f4e8c6bfc692ae7eb97e9ef9452c",
+         intel: "20ec982a39fc513ade4526a1f87f30067931b70072b6cc2395cf5c17d4a28809"
 
   url "https://github.com/IconsetApp/iconset/releases/download/v#{version}/Iconset-#{version}-#{arch}mac.zip",
       verified: "github.com/IconsetApp/iconset/"

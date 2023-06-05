@@ -1,6 +1,6 @@
 cask "clock-signal" do
-  version "2022-07-08"
-  sha256 "c4dedee6c111ad29d142c7f4f39e742a9220ce9d632a03e4956a9a433d26bdf4"
+  version "2023-05-15"
+  sha256 "c23e10e0861c8530294b9a36970659db994a983eb760c87400719e83b31583b0"
 
   url "https://github.com/TomHarte/CLK/releases/download/#{version}/Clock.Signal.macOS.#{version}.zip"
   name "Clock Signal"

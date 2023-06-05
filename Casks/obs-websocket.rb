@@ -1,15 +1,19 @@
 cask "obs-websocket" do
-  version "5.0.0"
-  sha256 "f7cb0dfc2a9cfa2cdd9793ec28ee9fdab79d6a4fe339a95a2a602133bc5cd6ad"
+  version "5.0.1"
+  sha256 "baf54b5dad9bc355c3af960ce94ddf8e88ed86c7d23d86e41baa8377cb1d4d06"
 
   url "https://github.com/obsproject/obs-websocket/releases/download/#{version}/obs-websocket-#{version}-macOS.pkg"
   name "obs-websocket"
   desc "Remote-control OBS Studio through WebSockets"
   homepage "https://github.com/obsproject/obs-websocket"
 
+  # Upstream has published releases for two different major versions, so the
+  # "latest" release may be for an older major version. Unless/until this is
+  # resolved, we have to check more than just the "latest" release.
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://github.com/obsproject/obs-websocket/releases?q=prerelease%3Afalse"
+    regex(%r{href=["']?[^"' >]*?/tag/v?(\d+(?:\.\d+)+)[^"' >]*?["' >]}i)
+    strategy :page_match
   end
 
   pkg "obs-websocket-#{version}-macOS.pkg"

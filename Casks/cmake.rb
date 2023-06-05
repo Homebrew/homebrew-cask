@@ -1,6 +1,6 @@
 cask "cmake" do
-  version "3.23.2"
-  sha256 "a333062264e659c6540a365d36438a7f113ea89b1a4cb52d31681a0ac56a5e82"
+  version "3.26.4"
+  sha256 "83900cead2a78debab31ab3a5b665003e5e52cc687df8c9c4a96b5f7e1eb64b8"
 
   url "https://cmake.org/files/LatestRelease/cmake-#{version}-macos-universal.dmg"
   name "CMake"
@@ -9,15 +9,15 @@ cask "cmake" do
 
   livecheck do
     url "https://cmake.org/files/LatestRelease/"
-    regex(/href=.*?cmake[._-]v?(\d+(?:\.\d+)+)-macos-universal\.dmg/i)
+    regex(/href=.*?cmake[._-]v?(\d+(?:\.\d+)+)[._-]macos[._-]universal\.dmg/i)
   end
 
   conflicts_with formula: "cmake"
 
   app "CMake.app"
   binary "#{appdir}/CMake.app/Contents/bin/ccmake"
-  binary "#{appdir}/CMake.app/Contents/bin/cmake-gui"
   binary "#{appdir}/CMake.app/Contents/bin/cmake"
+  binary "#{appdir}/CMake.app/Contents/bin/cmake-gui"
   binary "#{appdir}/CMake.app/Contents/bin/cpack"
   binary "#{appdir}/CMake.app/Contents/bin/ctest"
   manpage "#{appdir}/CMake.app/Contents/man/man1/ccmake.1"

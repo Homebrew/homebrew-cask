@@ -1,22 +1,22 @@
 cask "anki" do
-  arch = Hardware::CPU.intel? ? "intel" : "apple"
-  version "2.1.54"
+  arch arm: "apple", intel: "intel"
 
-  if Hardware::CPU.intel?
-    if MacOS.version >= :mojave
-      sha256 "92eb39f59f4e7b8b1b025178b337a0ef9d619521144748a32b3e2b8df1c45a00"
-      qtversion = 6
-    else
-      sha256 "edc44e5862384bb1c419033267c78167809253090c0302f07114c00c223db07a"
-      qtversion = 5
-    end
-  else
-    sha256 "44e229181dd6db5b6d5a3f9c4647f4ae92c5acee0b47af99c8646c6a5cf927e1"
-    qtversion = 6
+  version "2.1.64"
+
+  on_catalina :or_older do
+    sha256 "d39cb359228ed4e0166f26b64656003aa6c41bc86f009d2e6ea49bab13e1cdee"
+
+    url "https://github.com/ankitects/anki/releases/download/#{version}/anki-#{version}-mac-#{arch}-qt5.dmg",
+        verified: "github.com/ankitects/anki/"
+  end
+  on_big_sur :or_newer do
+    sha256 arm:   "489591008d578bdda921c394696f1ce2c2c00094d45ad78be28a979bae8e5afb",
+           intel: "e6fbdee9e887fce942a9ad8720d41fbb09860e98dcd6e8a254949cea2179ae5a"
+
+    url "https://github.com/ankitects/anki/releases/download/#{version}/anki-#{version}-mac-#{arch}-qt6.dmg",
+        verified: "github.com/ankitects/anki/"
   end
 
-  url "https://github.com/ankitects/anki/releases/download/#{version}/anki-#{version}-mac-#{arch}-qt#{qtversion}.dmg",
-      verified: "github.com/ankitects/anki/"
   name "Anki"
   desc "Memory training application"
   homepage "https://apps.ankiweb.net/"

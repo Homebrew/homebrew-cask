@@ -1,5 +1,5 @@
 cask "displaperture" do
-  version "2.2,1055"
+  version "2.2"
   sha256 :no_check
 
   url "https://manytricks.com/download/displaperture"
@@ -9,7 +9,7 @@ cask "displaperture" do
 
   livecheck do
     url "https://manytricks.com/displaperture/appcast/"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   app "Displaperture.app"

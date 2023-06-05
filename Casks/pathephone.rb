@@ -8,11 +8,6 @@ cask "pathephone" do
   desc "Distributed audio player"
   homepage "https://pathephone.github.io/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
 
   app "Pathephone.app"
@@ -24,4 +19,8 @@ cask "pathephone" do
     "~/Library/Preferences/space.metabin.pathephone.plist",
     "~/Library/Saved Application State/space.metabin.pathephone.savedState",
   ]
+
+  caveats do
+    discontinued
+  end
 end

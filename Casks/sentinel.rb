@@ -1,13 +1,9 @@
 cask "sentinel" do
-  arch = Hardware::CPU.intel? ? "amd64" : "arm64"
+  arch arm: "arm64", intel: "amd64"
 
-  version "0.18.11"
-
-  if Hardware::CPU.intel?
-    sha256 "267f2d2d2bf62476c6b40f112b7c222966da4ee27098cadb99e4446b48e9b68a"
-  else
-    sha256 "c6c638426c8ef50b5b8500e082a0e8b116f7311f2ee24d24336f22d64b23c5a0"
-  end
+  version "0.22.0"
+  sha256 arm:   "8b7ced20df3437e8115aea5cf960ed8e61484d79927310d11277091d5db48155",
+         intel: "223d338b156ee794d50071690643ac79b7950578d3a70544d02ae0d312109ce2"
 
   url "https://releases.hashicorp.com/sentinel/#{version}/sentinel_#{version}_darwin_#{arch}.zip"
   name "Sentinel"
@@ -20,4 +16,6 @@ cask "sentinel" do
   end
 
   binary "sentinel"
+
+  # No zap stanza required
 end

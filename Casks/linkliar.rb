@@ -1,8 +1,9 @@
 cask "linkliar" do
-  if MacOS.version <= :el_capitan
+  on_el_capitan :or_older do
     version "1.1.3"
     sha256 "34c9baeaf1d6732c8ce9add689b281f9b71fddadd8f56cca614cba4f8c167962"
-  else
+  end
+  on_sierra :or_newer do
     version "3.0.3"
     sha256 "36e62eab4ef8d2b004c6886182fc49830afdf56f4f14f9be07adfe552d7140d2"
   end

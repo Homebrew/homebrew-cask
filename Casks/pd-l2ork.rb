@@ -1,8 +1,8 @@
 cask "pd-l2ork" do
-  version "2.17.0,20210417,ca592f6f"
-  sha256 "c890f169663d9cdf947baaa2ce9cf0d48fcd07cb71368b7eab29547b237dab39"
+  version "2.19.2"
+  sha256 "ae9f214464901272ec0fe47af34bf3cad7d4de3b600f61da97bb52dd810430f5"
 
-  url "https://github.com/agraef/purr-data/releases/download/#{version.csv.first}/Pd-l2ork-OSX10.11-#{version.csv.first}-#{version.csv.second}-rev.#{version.csv.third}-x86_64.dmg",
+  url "https://github.com/agraef/purr-data/releases/download/#{version.csv.first}/purr-data-#{version.csv.first}-macos-x86_64.zip",
       verified: "github.com/agraef/purr-data/"
   name "Pd-l2ork"
   name "Purr Data"
@@ -11,18 +11,19 @@ cask "pd-l2ork" do
 
   livecheck do
     url :url
-    strategy :github_latest do |page|
-      match = page.match(%r{href=.*?/v?(\d+(?:\.\d+)+)/Pd-l2ork-OSX10\.11-\1-(\d+)-rev\.(\h+)-x86_64\.dmg}i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]},#{match[3]}"
-    end
+    strategy :github_latest
   end
 
-  app "Pd-l2ork.app"
-  binary "#{appdir}/Pd-l2ork.app/Contents/Resources/app.nw/pd-l2ork"
+  app "Purr-Data.app"
+  binary "#{appdir}/Purr-Data.app/Contents/Resources/app.nw/bin/pd-l2ork"
 
   uninstall_preflight do
-    set_permissions "#{appdir}/Pd-l2ork.app", "0777"
+    set_permissions "#{appdir}/Purr-Data.app", "0777"
   end
+
+  zap trash: [
+    "~/Library/Application Support/Purr-Data",
+    "~/Library/Logs/Purr-Data",
+    "~/Library/Purr-Data",
+  ]
 end

@@ -14,10 +14,7 @@ cask "emmetapp" do
   end
 
   auto_updates true
-  depends_on macos: [
-    :catalina,
-    :big_sur,
-  ]
+  depends_on macos: ">= :catalina"
 
   app "emmetapp.app"
 

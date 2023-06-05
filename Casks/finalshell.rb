@@ -1,5 +1,5 @@
 cask "finalshell" do
-  version "3.9.5"
+  version "3.9.8"
   sha256 :no_check
 
   url "https://www.hostbuf.com/downloads/finalshell_install.pkg"
@@ -8,7 +8,7 @@ cask "finalshell" do
   homepage "https://www.hostbuf.com/"
 
   livecheck do
-    url "http://www.hostbuf.com/t/989.html"
+    url "https://www.hostbuf.com/t/989.html"
     regex(/版本号(\d+(?:\.\d+)+)/i)
   end
 

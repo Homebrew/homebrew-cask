@@ -6,6 +6,11 @@ cask "bwana" do
   name "Bwana"
   homepage "https://www.bruji.com/bwana/"
 
+  livecheck do
+    url :homepage
+    regex(/Version\s+(\d+(?:\.\d+)+)/i)
+  end
+
   app "Bwana.app"
 
   zap trash: [

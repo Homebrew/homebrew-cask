@@ -10,4 +10,8 @@ cask "noisy" do
   app "Noisy.app"
 
   zap trash: "~/Library/Preferences/com.rathertremendous.noisy.plist"
+
+  caveats do
+    discontinued
+  end
 end

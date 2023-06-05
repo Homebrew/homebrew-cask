@@ -1,13 +1,9 @@
 cask "jquake" do
-  arch = Hardware::CPU.intel? ? "intel" : "arm64"
+  arch arm: "arm64", intel: "intel"
 
-  version "1.6.2"
-
-  if Hardware::CPU.intel?
-    sha256 "1a2ce77c84d730457b9e1309e4edc64ecd0c6021f3cfeb7ae124ab7a76eb2688"
-  else
-    sha256 "c02f0e078bebdce582ee9c04d7facf530c072c682a0f85240393f93cc80b4d92"
-  end
+  version "1.8.4"
+  sha256 arm:   "38b108312abdb7bda6afcfdfcc2fee554d892cc753f53321fd6a3feafd80bd9a",
+         intel: "6e357ba4ce46e35e628118fbaa530d26e1bb8a8a0f1a19aa160a788facaeeed4"
 
   url "https://fleneindre.github.io/downloads/JQuake_#{version}_mac_#{arch}.dmg",
       verified: "fleneindre.github.io/downloads/"
@@ -17,8 +13,8 @@ cask "jquake" do
 
   livecheck do
     url "https://fleneindre.github.io/version.json"
-    strategy :page_match do |page|
-      JSON.parse(page)["version"]
+    strategy :json do |json|
+      json["version"]
     end
   end
 

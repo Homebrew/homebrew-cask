@@ -8,14 +8,6 @@ cask "code42-crashplan" do
   desc "Endpoint backup and recovery"
   homepage "https://www.crashplan.com/"
 
-  livecheck do
-    url "https://support.code42.com/Administrator/6/Planning_and_installing/Code42_server_and_app_downloads"
-    regex(%r{href=.*?/(\d+(?:\.\d+)+)/(\d+)/install/Code42[._-]\1[._-](\d+)[._-]\2[._-]Mac\.dmg}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[2]},#{match[1]}" }
-    end
-  end
-
   auto_updates true
 
   pkg "Install Code42.pkg"
@@ -26,4 +18,8 @@ cask "code42-crashplan" do
               executable: "Uninstall.app/Contents/Resources/uninstall.sh",
               sudo:       true,
             }
+
+  caveats do
+    discontinued
+  end
 end

@@ -1,15 +1,18 @@
 cask "julia" do
-  version "1.7.3"
-  sha256 "67799ec06cf57bca80a8a1c6e5a170485d3bfc0461b217699b0730da37d0656f"
+  arch arm: "aarch64", intel: "x64"
 
-  url "https://julialang-s3.julialang.org/bin/mac/x64/#{version.major_minor}/julia-#{version}-mac64.dmg"
+  version "1.9.0"
+  sha256 arm:   "bddc1ab553550563ea949f671874b4898b60c0d21e823ce08f2cf5cd7210a8e2",
+         intel: "25041ddeb8d37521af36f455c9cf225b7fae785ef7877ee81bea158dcaab87ea"
+
+  url "https://julialang-s3.julialang.org/bin/mac/#{arch}/#{version.major_minor}/julia-#{version}-mac#{arch.delete_prefix("x")}.dmg"
   name "Julia"
   desc "Programming language for technical computing"
   homepage "https://julialang.org/"
 
   livecheck do
     url "https://julialang.org/downloads/"
-    regex(/href=.*?julia[._-]v?(\d+(?:\.\d+)+)[._-]mac64\.dmg/i)
+    regex(/href=.*?julia[._-]v?(\d+(?:\.\d+)+)[._-]mac#{arch.delete_prefix("x")}\.dmg/i)
   end
 
   app "Julia-#{version.major_minor}.app"
@@ -17,6 +20,9 @@ cask "julia" do
 
   zap trash: [
     "~/.julia",
+    "~/Library/Logs/Julia",
+    "~/Library/Preferences/com.github.Julia.plist",
     "~/Library/Preferences/julia.plist",
+    "~/Library/Saved Application State/com.github.Julia.savedState",
   ]
 end

@@ -1,5 +1,5 @@
 cask "amazon-photos" do
-  version :latest
+  version "1.9,302"
   sha256 :no_check
 
   url "https://d29x207vrinatv.cloudfront.net/mac/AmazonPhotosInstaller.dmg",
@@ -8,6 +8,11 @@ cask "amazon-photos" do
   name "Amazon Photos"
   desc "Photo storage and sharing service"
   homepage "https://www.amazon.com/Amazon-Photos/b?node=13234696011"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   installer script: {
     executable: "Amazon Photos Installer.app/Contents/MacOS/Amazon Photos Installer",

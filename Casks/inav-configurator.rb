@@ -1,6 +1,6 @@
 cask "inav-configurator" do
-  version "5.0.0"
-  sha256 "f510bae6c7f5f7eded718b651b8d2a808fb0d068333a587e969e445cf1952b5d"
+  version "6.1.0"
+  sha256 "d123c4fb04713867c09f9a9b8e40368a529aea3e426d50c991085c6ed10fb157"
 
   url "https://github.com/iNavFlight/inav-configurator/releases/download/#{version}/INAV-Configurator_macOS_#{version}.zip"
   name "INAV Configurator"
@@ -13,4 +13,11 @@ cask "inav-configurator" do
   end
 
   app "INAV Configurator.app"
+
+  zap trash: [
+    "~/Library/Application Support/inav-configurator",
+    "~/Library/Caches/inav-configurator",
+    "~/Library/Preferences/com.nw-builder.inav-configurator.plist",
+    "~/Library/Saved Application State/com.nw-builder.inav-configurator.savedState",
+  ]
 end

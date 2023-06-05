@@ -1,15 +1,15 @@
 cask "nordlayer" do
-  version "2.3.1,1901"
-  sha256 "dde0f147c50949c6146c4545b02ce3760cc60c2e6f3d7a82b6ad17b870f360c6"
+  version "2.8.1"
+  sha256 "08dc42a092455334e085721d7230d432cc9edd23f79d9ff6856c58a28daf195e"
 
-  url "https://downloads.nordlayer.com/mac/latest/NordLayer_v#{version.csv.first}.zip"
+  url "https://downloads.nordlayer.com/mac/latest/NordLayer_v#{version}.zip"
   name "NordLayer"
   desc "Security software for business"
   homepage "https://nordlayer.com/"
 
   livecheck do
     url "https://downloads.nordlayer.com/mac/update.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

@@ -9,7 +9,7 @@ cask "wordservice" do
 
   livecheck do
     url "https://www.devontechnologies.com/support/download"
-    regex(%r{<td>WordService</td><td>(\d+(?:\.\d+)+)</td>}i)
+    regex(%r{<td>WordService</td><td>(\d+(?:\.\d+)+)<td>}i)
   end
 
   app "WordService.app"

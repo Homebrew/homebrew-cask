@@ -1,13 +1,9 @@
 cask "oracle-jdk" do
-  arch = Hardware::CPU.intel? ? "x64" : "aarch64"
+  arch arm: "aarch64", intel: "x64"
 
-  version "18.0.2"
-
-  if Hardware::CPU.intel?
-    sha256 "3f95ffebee60c76c4603624da0f36510c3ebd46b1dfadb7ca342821c40e89845"
-  else
-    sha256 "00605dd95e5c6ead01a884a4a70fc544847c78ad67136cdc6850b92978d3510e"
-  end
+  version "20.0.1"
+  sha256 arm:   "5f2c18a69198b31de9144e329d79671b1eb7de57cdb294b78d9c311c2e017ea7",
+         intel: "73ea365de8579c3d144d270726ceba0dcc3d4e210775a2db495519f7c8e08aa1"
 
   url "https://download.oracle.com/java/#{version.major}/archive/jdk-#{version}_macos-#{arch}_bin.dmg"
   name "Oracle Java Standard Edition Development Kit"
@@ -24,6 +20,8 @@ cask "oracle-jdk" do
   pkg "JDK #{version}.pkg"
 
   uninstall pkgutil: "com.oracle.jdk-#{version}"
+
+  # No zap stanza required
 
   caveats do
     license "https://www.oracle.com/downloads/licenses/no-fee-license.html"

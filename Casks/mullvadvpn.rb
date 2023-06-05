@@ -1,6 +1,6 @@
 cask "mullvadvpn" do
-  version "2022.2"
-  sha256 "b6fb26dee08dbb8d9c4036c58e8f6bc45533ee6d996911d0c61b37e01dad6b1e"
+  version "2023.3"
+  sha256 "d1d23ea8212c796fdfcd2170e81e995eabf5a3178a018c8cbdf5a091659cef1a"
 
   url "https://github.com/mullvad/mullvadvpn-app/releases/download/#{version}/MullvadVPN-#{version}.pkg",
       verified: "github.com/mullvad/mullvadvpn-app/"
@@ -14,7 +14,7 @@ cask "mullvadvpn" do
   end
 
   conflicts_with cask: "homebrew/cask-versions/mullvadvpn-beta"
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :big_sur"
 
   pkg "MullvadVPN-#{version}.pkg"
 

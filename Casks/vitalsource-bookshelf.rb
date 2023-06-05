@@ -1,19 +1,18 @@
 cask "vitalsource-bookshelf" do
-  version "10.1.0.1405"
-  sha256 "8d887ac7eb5092292938d79c703256e6ae47f8044441d8fc09a54e12825627ca"
+  version "10.3.2.2230"
+  sha256 "0e9c4dfdba71a56c8f737e64c74c90e7ff23a8346d70121f03c24dbd011423a7"
 
-  url "https://downloads.vitalbook.com/vsti/bookshelf/#{version.major_minor}/mac/bookshelf/VitalSource-Bookshelf_#{version}.dmg",
-      verified: "downloads.vitalbook.com/vsti/bookshelf"
+  url "https://downloads.vitalbook.com/vsti/bookshelf/#{version.major_minor_patch}/mac/bookshelf/VitalSource-Bookshelf_#{version}.dmg",
+      verified: "downloads.vitalbook.com/vsti/bookshelf/"
   name "VitalSource Bookshelf"
-  desc "Access eTextbooks"
+  desc "Access etextbooks"
   homepage "https://www.vitalsource.com/bookshelf-features"
 
   livecheck do
-    url "https://support.vitalsource.com/api/v2/help_center/en-us/articles/360014107913"
-    regex(/href=.*?VitalSource-Bookshelf[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    skip "No version information available"
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :mojave"
 
   app "VitalSource Bookshelf.app"
 

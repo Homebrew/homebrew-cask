@@ -10,8 +10,8 @@ cask "ampps" do
 
   livecheck do
     url "https://api.ampps.com/download.php?arch=mac64"
-    strategy :header_match
     regex(/AMPPS[._-]v?(\d+(?:\.\d+)+)-x86_64\.dmg/i)
+    strategy :header_match
   end
 
   suite "AMPPS"

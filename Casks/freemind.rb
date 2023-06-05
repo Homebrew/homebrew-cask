@@ -4,10 +4,13 @@ cask "freemind" do
 
   url "https://downloads.sourceforge.net/freemind/freemind/#{version}/FreeMind_#{version}.dmg",
       verified: "downloads.sourceforge.net/freemind/"
-  appcast "https://sourceforge.net/projects/freemind/rss?path=/freemind"
   name "FreeMind"
   desc "Mind-mapping software written in Java"
   homepage "https://freemind.sourceforge.io/wiki/index.php/Main_Page"
+
+  livecheck do
+    url "https://sourceforge.net/projects/freemind/rss?path=/freemind"
+  end
 
   app "FreeMind.app"
 end

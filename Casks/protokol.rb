@@ -1,6 +1,6 @@
 cask "protokol" do
-  version "0.4.5,89"
-  sha256 "c6fd2847945d76f3756110e90e555f330b5dbf281fb7da1f4df8a7290dc70773"
+  version "0.5.1,101"
+  sha256 "897b92a8187d7300dfb7071632957c541ec53bd2651146ecd4c73b737f28095c"
 
   url "https://hexler.net/pub/protokol/protokol-#{version.csv.first}.#{version.csv.second}-macos.dmg"
   name "protokol"
@@ -16,13 +16,13 @@ cask "protokol" do
 
   app "Protokol.app"
 
-  zap rmdir: "~/Documents/Protokol",
-      trash: [
+  zap trash: [
         "~/Library/Application Support/net.hexler.Protokol",
         "~/Library/Caches/net.hexler.Protokol",
         "~/Library/HTTPStorages/net.hexler.Protokol",
         "~/Library/HTTPStorages/net.hexler.Protokol.binarycookies",
         "~/Library/Logs/net.hexler.Protokol",
         "~/Library/Preferences/net.hexler.Protokol.plist",
-      ]
+      ],
+      rmdir: "~/Documents/Protokol"
 end

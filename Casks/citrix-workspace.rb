@@ -1,25 +1,22 @@
 cask "citrix-workspace" do
-  version "22.06.1.51,2206.1"
-  sha256 :no_check
+  version "23.05.0.36"
+  sha256 "782a9ae8bf011c9878451c0d629d6719c56dc3a82e013b75de077b46cccd8bbd"
 
-  url "https://downloadplugins.citrix.com/Mac/CitrixWorkspaceApp.dmg"
+  url "https://downloadplugins.citrix.com/ReceiverUpdates/Prod/Receiver/Mac/CitrixWorkspaceAppUniversal#{version}.pkg"
   name "Citrix Workspace"
   desc "Managed desktop virtualization solution"
   homepage "https://www.citrix.com/"
 
   livecheck do
-    url "https://www.citrix.com/downloads/workspace-app/mac/workspace-app-for-mac-latest.html"
-    strategy :page_match do |page|
-      match = page.match(/Version:*\s(\d+(?:\.\d+)+)\s\((\d+(?:\.\d+)*)\)/i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
+    url "https://downloadplugins.citrix.com/ReceiverUpdates/Prod/catalog_macos2.xml"
+    strategy :xml do |xml|
+      xml.get_elements("//Installers[@name='WorkspaceApp']/Installer/Version").map(&:text)
     end
   end
 
   depends_on macos: ">= :catalina"
 
-  pkg "Install Citrix Workspace.pkg"
+  pkg "CitrixWorkspaceAppUniversal#{version}.pkg"
 
   uninstall launchctl: [
               "com.citrix.AuthManager_Mac",

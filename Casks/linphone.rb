@@ -1,6 +1,6 @@
 cask "linphone" do
-  version "4.4.8"
-  sha256 "6d1beb3b43c541fad7c46bff58c9e06c4bc873cb68ca3c698609382b0d6a3bbb"
+  version "5.0.17"
+  sha256 "e9df0ab30235b6e5dedbe2a1ef3cf5a142f200a24e66785e5494ac9dc0f39449"
 
   url "https://download.linphone.org/releases/macosx/app/Linphone-#{version}-mac.dmg"
   name "Linphone"
@@ -8,9 +8,18 @@ cask "linphone" do
   homepage "https://www.linphone.org/"
 
   livecheck do
-    url "https://www.linphone.org/releases/macosx/RELEASE"
-    regex(%r{/Linphone-(\d+(?:\.\d+)+)-mac\.dmg}i)
+    url "https://download.linphone.org/releases/macosx/app/"
+    regex(/Linphone[._-]v?(\d+(?:\.\d+)+)[._-]mac\.dmg/i)
   end
 
   app "Linphone.app"
+
+  zap trash: [
+    "~/Documents/linphone",
+    "~/Library/Application Support/linphone",
+    "~/Library/Preferences/com.belledonnecommunications.linphone.plist",
+    "~/Library/Preferences/com.linphone.linphone.plist",
+    "~/Library/Preferences/linphone",
+    "~/Library/Saved Application State/com.belledonnecommunications.linphone.savedState",
+  ]
 end

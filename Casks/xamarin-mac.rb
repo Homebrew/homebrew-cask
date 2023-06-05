@@ -1,20 +1,27 @@
 cask "xamarin-mac" do
-  version "8.10.0.5"
-  sha256 "b01e18187dec5cb14d589f45cd1da504ad8180292ca8ddb3e0b099d10a0e7364"
+  version "9.3.0.6,b4928191-de3d-42cb-a24f-709e5d71626c,586143733de41c62d8b6179d7eeaf3e5"
+  sha256 "2fb94ef86efff8f4a523db652eeaca9cc46dcabd5e426889c094907185045a80"
 
-  url "https://dl.xamarin.com/XamarinforMac/Mac/xamarin.mac-#{version}.pkg"
+  url "https://download.visualstudio.microsoft.com/download/pr/#{version.csv.second}/#{version.csv.third}/xamarin.mac-#{version.csv.first}.pkg"
   name "Xamarin Mac"
   desc "Gives C# and .NET developers access to Objective-C and Swift API's"
-  homepage "https://www.xamarin.com/platform"
+  homepage "https://dotnet.microsoft.com/en-us/apps/xamarin"
 
   livecheck do
     url "https://software.xamarin.com/Service/Updates?v=2&pv0ab364ff-c0e9-43a8-8747-3afb02dc7731=0"
-    regex(%r{/xamarin\.mac[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
+    regex(%r{/download/pr/([^/]+)/([^/]+)/xamarin[._-]mac[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map do |match|
+        "#{match[2]},#{match[0]},#{match[1]}"
+      end
+    end
   end
 
   depends_on cask: "homebrew/cask-versions/mono-mdk-for-visual-studio"
 
-  pkg "xamarin.mac-#{version}.pkg"
+  pkg "xamarin.mac-#{version.csv.first}.pkg"
 
   uninstall pkgutil: "com.xamarin.mac-.*"
+
+  zap trash: "~/Library/Caches/com.xamarin.fontconfig"
 end

@@ -1,0 +1,35 @@
+name: Enable auto-merge
+
+on:
+  schedule:
+    - cron: 0 * * * *
+  pull_request_target:
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - edited
+      - labeled
+      - unlabeled
+      - ready_for_review
+
+permissions: {}
+
+jobs:
+  automerge:
+    if: startsWith(github.repository, 'Homebrew/')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enable auto-merge
+        uses: reitermarkus/automerge@e0cf02bcf5cbb9f9e9b359cc0ad3d9319bd5f427
+        with:
+          token: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
+          merge-method: merge
+          squash-commit-title: ${pull_request.title} (#${pull_request.number})
+          squash-commit-message: '\n'
+          do-not-merge-labels: automerge-skip,do not merge
+          required-labels: bump-cask-pr
+          pull-request: ${{ github.event.inputs.pull-request }}
+          pull-request-author-associations: MEMBER,OWNER
+          review: ${{ github.event.inputs.review }}
+          review-author-associations: MEMBER,OWNER

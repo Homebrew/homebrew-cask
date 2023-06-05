@@ -1,6 +1,6 @@
 cask "schildichat" do
-  version "1.10.12-sc.1"
-  sha256 "eea7951407df84c4cea924f1315d48a971f89194334f9698db89e83c571e4cb9"
+  version "1.11.30-sc.2"
+  sha256 "0eb09b23fc9c9f49cb72243149a097291cf01a7f344ed830ab0ce2ccedcc0681"
 
   url "https://github.com/SchildiChat/schildichat-desktop/releases/download/v#{version}/SchildiChat-#{version}-universal_by_nyantec.dmg",
       verified: "github.com/SchildiChat/schildichat-desktop/"
@@ -9,9 +9,8 @@ cask "schildichat" do
   homepage "https://schildi.chat/desktop/"
 
   livecheck do
-    url "https://github.com/SchildiChat/schildichat-desktop/releases"
-    strategy :page_match
-    regex(/href=.*?SchildiChat-(\d+(?:\.\d+).+)-universal.*?\.dmg/i)
+    url "https://github.com/SchildiChat/schildichat-desktop/releases/latest"
+    regex(%r{href=["']?[^"' >]*?/tag/v?(\d+(?:\.\d+)+-\w*?\.?\d*?)["' >]}i)
   end
 
   app "SchildiChat.app"

@@ -1,6 +1,6 @@
 cask "swiftbar" do
-  version "1.4.3"
-  sha256 "20ffe559a85bd28b86f75d97bda591de70cbd53dc7ac167613ca69fd66c71a04"
+  version "1.4.4"
+  sha256 "04f465abaabf7a06f8e75458824a551f5a2e85d60bdf73f95539825fee59d856"
 
   url "https://github.com/swiftbar/SwiftBar/releases/download/v#{version}/SwiftBar.zip",
       verified: "github.com/swiftbar/SwiftBar/"

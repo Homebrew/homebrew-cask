@@ -1,6 +1,6 @@
 cask "macdive" do
-  version "2.16.1"
-  sha256 "870c51cb1fb526a9c6ef208782269a27a9eba30365538162ecf82925659e9de0"
+  version "2.16.2"
+  sha256 "ea18062585b1bed799d27ee68cfa8cce27ca5b005eaf255118cb153e3a44f82e"
 
   url "https://www.mac-dive.com/downloads/MacDive_#{version}.dmg"
   name "MacDive"

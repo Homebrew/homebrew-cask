@@ -4,10 +4,17 @@ cask "nodeclipse" do
 
   url "https://downloads.sourceforge.net/nodeclipse/Enide-#{version.major}/#{version.minor}/Enide-#{version.major}-#{version.minor}-macosx-x64-#{version.csv.second}.zip",
       verified: "sourceforge.net/nodeclipse/"
-  appcast "https://nodeclipse.github.io/updates/",
-          must_contain: "#{version.major}-#{version.minor}"
   name "Nodeclipse"
+  desc "Node.js tooling with Eclipse"
   homepage "https://nodeclipse.github.io/"
+
+  livecheck do
+    url "https://nodeclipse.github.io/updates/"
+    regex(%r{/Enide-(\d+)-(\d+)-macosx-x64-(\d+)\.zip})
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]}.#{match[1]},#{match[2]}" }
+    end
+  end
 
   # Renamed for clarity: app name is inconsistent with its branding.
   # Also renamed to avoid conflict with other eclipse Casks.

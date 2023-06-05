@@ -8,16 +8,14 @@ cask "pulse" do
   desc "Logger and network inspector"
   homepage "https://kean.blog/pulse/home"
 
-  livecheck do
-    url "https://github.com/kean/Pulse/releases/"
-    strategy :page_match
-    regex(%r{v?(\d+(?:\.\d+)+)/Pulse[._-]macos\.zip}i)
-  end
-
   app "Pulse.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.github.kean.pulse",
     "~/Library/Containers/com.github.kean.pulse",
   ]
+
+  caveats do
+    discontinued
+  end
 end

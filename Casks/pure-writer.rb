@@ -1,22 +1,32 @@
 cask "pure-writer" do
-  version "1.5.3,1.5.2"
-  sha256 "1924099569ce3049a22d23cb889a11276de1d175cb6ef301a64d9fc34448ce60"
+  version "1.8.0,1.8.3"
+  sha256 "e5863a7c4e735befb08c82331260b6dcac63398248cc1bd12ee7ae3a26742aec"
 
-  url "https://github.com/PureWriter/desktop/releases/download/#{version.csv.second}/PureWriter-#{version.csv.first}-macOS.dmg",
+  url "https://github.com/PureWriter/desktop/releases/download/#{version.csv.first}/PureWriter-#{version.csv.second}-macOS.dmg",
       verified: "github.com/PureWriter/desktop/"
   name "Pure Writer Desktop"
   desc "Desktop version of the Android app"
   homepage "https://writer.drakeet.com/desktop"
 
   livecheck do
-    url "https://github.com/PureWriter/desktop/releases"
+    url "https://github.com/PureWriter/desktop/releases/latest"
     regex(%r{href=.*?([^/]+)/PureWriter[._-]v?(\d+(?:\.\d+)+)-macOS\.dmg}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match.second},#{match.first}" }
+    strategy :header_match do |headers, regex|
+      next if headers["location"].blank?
+
+      # Identify the latest tag from the response's `location` header
+      latest_tag = File.basename(headers["location"])
+      next if latest_tag.blank?
+
+      # Fetch the assets list HTML for the latest tag and match within it
+      assets_page = Homebrew::Livecheck::Strategy.page_content(
+        @url.sub(%r{/releases/?.+}, "/releases/expanded_assets/#{latest_tag}"),
+      )
+      assets_page[:content]&.scan(regex)&.map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 
-  pkg "Pure Writer-#{version}.pkg"
+  pkg "Pure Writer-#{version.csv.second}.pkg"
 
   uninstall pkgutil: "com.drakeet.purewriter"
 

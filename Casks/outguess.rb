@@ -7,6 +7,11 @@ cask "outguess" do
   name "Outguess"
   homepage "https://www.rbcafe.com/software/outguess/"
 
+  livecheck do
+    url :homepage
+    regex(/Version\s+(\d+(?:\.\d+)+)/i)
+  end
+
   depends_on macos: ">= :el_capitan"
 
   app "Outguess.app"

@@ -7,5 +7,9 @@ cask "simplistic" do
   name "jlutil"
   homepage "http://newosxbook.com/tools/simplistic.html"
 
+  livecheck do
+    skip "unversioned command-line application"
+  end
+
   binary "jlutil.universal", target: "jlutil"
 end

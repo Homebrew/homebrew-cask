@@ -1,6 +1,6 @@
 cask "abscissa" do
-  version "4.1.0"
-  sha256 "fbfbabf2d1d4f7248eff39dd04be4e1a74d2e698b6c4155467cfe33075aa529a"
+  version "4.1.1"
+  sha256 "2a43ba146b1c2e6ffec3e056d3a850296b42c0f309c22b33c2bef3e4678b4288"
 
   url "http://rbruehl.macbay.de/Abscissa/Downloads/Abscissa-#{version}.zip"
   name "Abscissa"

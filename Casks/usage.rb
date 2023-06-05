@@ -1,8 +1,8 @@
 cask "usage" do
-  version "1.4.5.1"
-  sha256 "7ac63ed6601298e9b6739cde87e18bea9a6a41d2718979cbfb9cccb3d578f502"
+  version "1.4.6"
+  sha256 "1a782b03b08b544eb1277c18576ce14e9388510f53f6e3bda4a6793bd2780c66"
 
-  url "https://mediaatelier.com/Usage/Usage_#{version}.zip"
+  url "https://mediaatelier.com/Usage/Usage_#{version}.dmg"
   name "Usage"
   desc "Tracks application usage"
   homepage "https://www.mediaatelier.com/Usage/"
@@ -10,7 +10,7 @@ cask "usage" do
   livecheck do
     url "https://www.mediaatelier.com/Usage/feed.php"
     strategy :sparkle do |item|
-      item.url[/Usage[._-]?(\d+(?:\.\d+)*)\.zip/i, 1]
+      item.url[/Usage[._-]?(\d+(?:\.\d+)*)\.dmg/i, 1]
     end
   end
 

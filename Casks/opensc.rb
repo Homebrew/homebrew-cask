@@ -1,6 +1,6 @@
 cask "opensc" do
-  version "0.22.0"
-  sha256 "defee8f8fb5a5de3a0d456768abe58427bf3ec11b09e196c1de9f8601dfd5cd8"
+  version "0.23.0"
+  sha256 "9e81cf6dd93fa209c27b61714e9dfc7e63f6d79abf656a586e542ed01e0c3f07"
 
   url "https://github.com/OpenSC/OpenSC/releases/download/#{version}/OpenSC-#{version}.dmg"
   name "OpenSC"
@@ -21,4 +21,6 @@ cask "opensc" do
               "org.opensc-project.mac.opensc-notify",
               "org.opensc-project.mac.pkcs11-register",
             ]
+
+  zap trash: "~/Library/Saved Application State/org.opensc-project.mac.opensctoken.OpenSCTokenApp.savedState"
 end

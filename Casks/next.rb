@@ -1,5 +1,5 @@
 cask "next" do
-  version "1.2.0"
+  version "2.052"
   sha256 :no_check
 
   url "https://next.atlas.engineer/static/release/next-macos-webkit.dmg"

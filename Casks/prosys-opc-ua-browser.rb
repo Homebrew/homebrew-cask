@@ -1,13 +1,9 @@
 cask "prosys-opc-ua-browser" do
-  arch = Hardware::CPU.intel? ? "x64" : "aarch64"
+  arch arm: "aarch64", intel: "x64"
 
-  version "4.2.0,33"
-
-  if Hardware::CPU.intel?
-    sha256 "fa4ce0dd4ed9222a9e2a24ec68934969b4f6a8bc852ef165dcd50ceb2cccc2c4"
-  else
-    sha256 "92972a00ba8eb2738322947d26a4f2a1f5e4e6db3ab0f46bfdcf8fedb4ae22a9"
-  end
+  version "4.4.0,126"
+  sha256 arm:   "d358c32b87d9576492fd4112a967db96921da6a5d84321b0110082d2d1e1c579",
+         intel: "af512e83f87abe221a51ebdbb1835c2d1798585b1d6a2d4a133e4d1b635b608b"
 
   url "https://www.prosysopc.com/opcua/apps/UaBrowser/dist/#{version.csv.first}-#{version.csv.second}/prosys-opc-ua-browser-mac-#{arch}-#{version.csv.first}-#{version.csv.second}.dmg"
   name "Prosys OPC UA Browser"

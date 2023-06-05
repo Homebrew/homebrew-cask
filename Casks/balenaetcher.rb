@@ -1,6 +1,6 @@
 cask "balenaetcher" do
-  version "1.7.9"
-  sha256 "4651afc3f51763df3cc496a00c26f29dba6d4ce4989151d3bc820c8e181d6c23"
+  version "1.18.4"
+  sha256 "1992c7bef9b9540071b76794828fc541798bdf83cd81a5c4d42eb60704ed1917"
 
   url "https://github.com/balena-io/etcher/releases/download/v#{version}/balenaEtcher-#{version}.dmg",
       verified: "github.com/balena-io/etcher/"
@@ -13,17 +13,9 @@ cask "balenaetcher" do
     strategy :github_latest
   end
 
-  auto_updates true
-
   app "balenaEtcher.app"
 
-  uninstall quit: [
-    "com.github.Squirrel",
-    "com.github.electron.framework",
-    "io.balena.etcher.*",
-    "org.mantle.Mantle",
-    "org.reactivecocoa.ReactiveCocoa",
-  ]
+  uninstall quit: "io.balena.etcher.*"
 
   zap trash: [
     "~/Library/Application Support/balena-etcher",

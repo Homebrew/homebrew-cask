@@ -1,13 +1,9 @@
 cask "wolai" do
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  arch arm: "-arm64"
 
-  version "1.2.3"
-
-  if Hardware::CPU.intel?
-    sha256 "e33b49fb41a264006d3e59b3ffad431f6aa1e70be24d0a2d07b9c128bf17f5b9"
-  else
-    sha256 "7df19bc987f827855524c2250fe81ca478aa05239c448060104c57a4cb30d277"
-  end
+  version "1.2.7"
+  sha256 arm:   "bc69155ba94eb9e4b746cb8afd0876983b77dd8c7126691a0d7039376e215a9a",
+         intel: "47081227adf4cb066e39b18b8a013a38a636261bf8d7ade72e4d329c99c872f6"
 
   url "https://cdn.wostatic.cn/dist/installers/wolai-#{version}#{arch}.dmg",
       verified: "cdn.wostatic.cn/dist/installers/"

@@ -1,6 +1,6 @@
 cask "gpg-suite-no-mail" do
-  version "2022.1"
-  sha256 "d1a17bb4c8c62960d7ae7ff352a3647bc3109b8989dae4ed7b51cf8a71048768"
+  version "2023.2"
+  sha256 "aec0f4a114ea803460f20599aa5437608bc50a869b080a5bcbc185c4d04eda60"
 
   url "https://releases.gpgtools.org/GPG_Suite-#{version}.dmg"
   name "GPG Suite (without GPG Mail)"
@@ -14,8 +14,8 @@ cask "gpg-suite-no-mail" do
   auto_updates true
   conflicts_with cask: [
     "gpg-suite",
-    "gpg-suite-nightly",
     "gpg-suite-pinentry",
+    "homebrew/cask-versions/gpg-suite-nightly",
   ], formula: "gpg"
   depends_on macos: ">= :mojave"
 

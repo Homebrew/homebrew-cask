@@ -1,6 +1,6 @@
 cask "fabfilter-pro-mb" do
-  version "1.26"
-  sha256 "7d3bcf946b0977ee2d6822955910d66f5e64e46afa2d53971c8eb37bc167b49f"
+  version "1.27"
+  sha256 "51a07397244cf741e7045bdd8d3a70297127fdbbc629fb9cdf60942ca54cbfe5"
 
   url "https://download.fabfilter.com/ffpromb#{version.no_dots}.dmg"
   name "FabFilter Pro-MB"

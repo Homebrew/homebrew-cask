@@ -5,7 +5,13 @@ cask "bdinfo" do
   url "https://www.videohelp.com/download/BDInfo%20OSX.dmg",
       referer: "https://www.videohelp.com/software/BDInfo"
   name "BDInfo"
+  desc "Collect video and audio technical specifications from Blu-ray discs"
   homepage "https://www.videohelp.com/software/BDInfo"
+
+  livecheck do
+    url :homepage
+    regex(/BDInfo\s+(\d+(?:\.\d+)+)\s+Mac/i)
+  end
 
   app "BDInfo OSX.app"
 

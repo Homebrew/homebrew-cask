@@ -3,9 +3,14 @@ cask "iceberg" do
   sha256 :no_check
 
   url "http://s.sudre.free.fr/Software/files/Iceberg.dmg"
-  appcast "http://s.sudre.free.fr/Software/documentation/Iceberg/English.lproj/documentation/Release%20Notes.html"
   name "Iceberg"
+  desc "Integrated packaging environment"
   homepage "http://s.sudre.free.fr/Software/Iceberg.html"
+
+  livecheck do
+    url "http://s.sudre.free.fr/Software/documentation/Iceberg/English.lproj/documentation/Release%20Notes.html"
+    regex(/Version\s+(\d+(?:\.\d+)+)/i)
+  end
 
   pkg "Iceberg.mpkg"
 
@@ -17,4 +22,6 @@ cask "iceberg" do
               executable: "uninstall.sh",
               sudo:       true,
             }
+
+  zap trash: "/Library/Application Support/Iceberg"
 end

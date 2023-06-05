@@ -6,7 +6,7 @@ cask "bluefish" do
       verified: "bennewitz.com/"
   name "Bluefish"
   desc "Open source code editor"
-  homepage "http://bluefish.openoffice.nl/index.html"
+  homepage "https://bluefish.openoffice.nl/index.html"
 
   livecheck do
     url "https://www.bennewitz.com/bluefish/stable/binaries/macosx/"

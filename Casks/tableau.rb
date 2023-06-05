@@ -1,6 +1,6 @@
 cask "tableau" do
-  version "2022.2.0"
-  sha256 "32f26f0eec23457de07ad9020a4e1aec7a4bf433cf07540376054a4e27fea97d"
+  version "2023.1.2"
+  sha256 "09ec45865829aebcaacf8c1e7f982fa6d3dd4ecb2d962dbab2305ea5df3bce07"
 
   url "https://downloads.tableau.com/tssoftware/TableauDesktop-#{version.dots_to_hyphens}.dmg"
   name "Tableau Desktop"
@@ -14,7 +14,7 @@ cask "tableau" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :mojave"
 
   pkg "Tableau Desktop.pkg"
 
@@ -30,4 +30,16 @@ cask "tableau" do
     "com.tableausoftware.postgresql",
     "simba.sparkodbc",
   ]
+
+  zap trash:  [
+        "/Library/Preferences/com.tableau.Tableau-#{version.major_minor}.plist",
+        "~/Documents/My Tableau Repository",
+        "~/Library/Caches/com.tableau.caching",
+        "~/Library/Caches/com.tableausoftware.MapTiles",
+        "~/Library/Preferences/com.tableau.Registration.plist",
+        "~/Library/Preferences/com.tableau.Tableau-#{version.major_minor}.plist",
+        "~/Library/Saved Application State/com.tableausoftware.tableaudesktop.savedState",
+        "~/Library/Tableau",
+      ],
+      delete: "/Library/Preferences/com.tableau.Tableau-#{version.major_minor}.plist"
 end

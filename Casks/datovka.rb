@@ -1,6 +1,6 @@
 cask "datovka" do
-  version "4.20.0"
-  sha256 "66c69cbc9a42c2a3ee61fb1c6cb4d667d288b0dba5039635ccb7f8ba6a27b26c"
+  version "4.22.1"
+  sha256 "ee7e05eab2eb2d5b9afa04f56fc83a5dfd070fb1560d39f90d1a599eecdf7975"
 
   url "https://secure.nic.cz/files/datove_schranky/#{version}/datovka-#{version}-64bit-macos10.12.dmg",
       verified: "secure.nic.cz/files/datove_schranky/"
@@ -14,4 +14,6 @@ cask "datovka" do
   end
 
   app "datovka.app"
+
+  zap trash: "~/Library/Saved Application State/cz.nic.datovka.savedState"
 end

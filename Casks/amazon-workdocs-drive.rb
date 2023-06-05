@@ -1,5 +1,5 @@
 cask "amazon-workdocs-drive" do
-  version :latest
+  version "1.0.8757.0"
   sha256 :no_check
 
   url "https://d3f2hupz96ggz3.cloudfront.net/mac/AmazonWorkDocsDrive.pkg",
@@ -8,6 +8,13 @@ cask "amazon-workdocs-drive" do
   desc "Fully managed, secure enterprise storage and sharing service"
   homepage "https://aws.amazon.com/workdocs/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist do |items|
+      items["com.Amazon.WorkDocs.Drive"].short_version
+    end
+  end
+
   depends_on macos: ">= :el_capitan"
 
   pkg "AmazonWorkDocsDrive.pkg"
@@ -15,7 +22,7 @@ cask "amazon-workdocs-drive" do
   uninstall signal:    ["TERM", "com.Amazon.WorkDocs.Drive"],
             pkgutil:   [
               "com.Amazon.WorkDocs.Drive",
-              "com.Amazon.WorkDocs.Drive.pkg.Core",
+              "com.Amazon.WorkDocs.Drive.pkg.core",
             ],
             launchctl: "com.Amazon.WorkDocs.DriveUpdater"
 

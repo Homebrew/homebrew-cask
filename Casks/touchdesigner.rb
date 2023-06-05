@@ -1,13 +1,9 @@
 cask "touchdesigner" do
-  arch = Hardware::CPU.intel? ? "intel" : "arm64"
+  arch arm: "arm64", intel: "intel"
 
-  version "2022.26590"
-
-  if Hardware::CPU.intel?
-    sha256 "922586506adb9567704cee1da7993525d29ebe6258f72557f5c3185234cbb2ff"
-  else
-    sha256 "c2e10ec9a0b3da37302f1fcd154ba6e95fa81a4ff2bd1b0dc68d0e7698573a5e"
-  end
+  version "2022.32660"
+  sha256 arm:   "4e8de832c79938d9b44266edb546044a7162416afd0a78fc83b59936f80a18f3",
+         intel: "cfaecf4debf93142d29639c3debd9bf5581743d7fa4eba195bdfefd63ba2bbae"
 
   url "https://download.derivative.ca/TouchDesigner.#{version}.#{arch}.dmg"
   name "Derivative TouchDesigner"
@@ -22,4 +18,9 @@ cask "touchdesigner" do
   depends_on macos: ">= :mojave"
 
   app "TouchDesigner.app"
+
+  zap trash: [
+    "~/Library/Application Support/Derivative/TouchDesigner099/",
+    "~/Library/Saved Application State/ca.derivative.TouchDesigner.savedState/",
+  ]
 end

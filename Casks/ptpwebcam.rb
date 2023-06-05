@@ -1,10 +1,10 @@
 cask "ptpwebcam" do
-  version "1.3.0"
-  sha256 "3645fcfc2f8a6adc510c13399b44bac2d9e20dc9a2b50de6b4c441d9a769ec61"
+  version "1.3.2"
+  sha256 "3945f3fdda5b438584b769ee5d2e99a4d7cf7869db348c24ee387f033c8f02cc"
 
   url "https://github.com/dognotdog/ptpwebcam/releases/download/v#{version}/PTP_Webcam-v#{version}.pkg",
-      verified: "https://github.com/dognotdog/ptpwebcam"
-  name "ptpwebcam"
+      verified: "github.com/dognotdog/ptpwebcam/"
+  name "PTP Webcam"
   desc "DSLR live view video plugin"
   homepage "https://ptpwebcam.org/"
 
@@ -31,4 +31,10 @@ cask "ptpwebcam" do
               "/Library/CoreMediaIO/Plug-ins/DAL/PTPWebcamDALPlugin.plugin",
               "/Library/LaunchDaemons/org.ptpwebcam.PtpWebcamAssistant.plist",
             ]
+
+  zap trash: [
+    "~/Library/Caches/org.ptpwebcam.PtpWebcamAgent",
+    "~/Library/HTTPStorages/org.ptpwebcam.PtpWebcamAgent",
+    "~/Library/Preferences/org.ptpwebcam.PtpWebcamAgent.plist",
+  ]
 end

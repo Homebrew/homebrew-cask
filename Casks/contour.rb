@@ -1,6 +1,6 @@
 cask "contour" do
-  version "0.3.2.202"
-  sha256 "6f84d2c091fe4bbad567048a484039ae70671fd2d8db76bab0fc99d1f8121c6b"
+  version "0.3.12.262"
+  sha256 "45487d423767a20c2d55a712392cebea6b3d2d259c68fbce8f11c6f7e155cc76"
 
   url "https://github.com/contour-terminal/contour/releases/download/v#{version}/contour-#{version}-osx.dmg"
   name "Contour"
@@ -8,13 +8,13 @@ cask "contour" do
   homepage "https://github.com/contour-terminal/contour/"
 
   app "Contour.app"
-  binary "#{appdir}/Contour.app/Contents/MacOS/contour"
-  binary "#{appdir}/Contour.app/Contents/Resources/shell-integration.zsh",
+  binary "Contour.app/Contents/MacOS/contour"
+  binary "Contour.app/Contents/Resources/shell-integration/shell-integration.zsh",
          target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_contour"
-  binary "#{appdir}/Contour.app/Contents/Resources/terminfo/63/contour",
-         target: "#{ENV.fetch("TERMINFO", "#{Dir.home}/.terminfo")}/63/contour"
-  binary "#{appdir}/Contour.app/Contents/Resources/terminfo/63/contour-latest",
-         target: "#{ENV.fetch("TERMINFO", "#{Dir.home}/.terminfo")}/63/contour-latest"
+  binary "Contour.app/Contents/Resources/terminfo/63/contour",
+         target: "#{ENV.fetch("TERMINFO", "~/.terminfo")}/63/contour"
+  binary "Contour.app/Contents/Resources/terminfo/63/contour-latest",
+         target: "#{ENV.fetch("TERMINFO", "~/.terminfo")}/63/contour-latest"
 
   zap trash: "~/.config/contour"
 end

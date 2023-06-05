@@ -14,7 +14,5 @@ cask "thinlinc-client" do
 
   app "ThinLinc Client.app"
 
-  zap trash: [
-    "~/.thinlinc",
-  ]
+  zap trash: "~/.thinlinc"
 end

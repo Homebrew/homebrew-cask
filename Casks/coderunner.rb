@@ -1,15 +1,15 @@
 cask "coderunner" do
-  version "4.1.1,63000"
-  sha256 "069dd43834d9236e984fed7d61886741642849f1e55b74b384a5baeedfdc0724"
+  version "4.2.2"
+  sha256 "45897c0896f213ed5e5a309977cdd112a18731179eef64a27c8aa78351e7c41d"
 
-  url "https://coderunnerapp.com/download/update/CodeRunner-#{version.csv.first}.zip"
+  url "https://coderunnerapp.com/download/update/CodeRunner-#{version}.zip"
   name "CodeRunner"
   desc "Multi-language programming editor"
   homepage "https://coderunnerapp.com/"
 
   livecheck do
     url "https://coderunnerapp.com/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

@@ -1,6 +1,6 @@
 cask "yesplaymusic" do
-  version "0.4.5"
-  sha256 "46a19c67d2c36df2141dcf3bfd5d567add9f9118606f70098920fa4deb065dba"
+  version "0.4.7"
+  sha256 "d41dee5dd151673b62115dd391e89d50567072f044b3a7bfc07bd584d835263a"
 
   url "https://github.com/qier222/YesPlayMusic/releases/download/v#{version}/YesPlayMusic-mac-#{version}-universal.dmg"
   name "YesPlayMusic"

@@ -1,20 +1,21 @@
 cask "shadow" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
-  version "5.0.1138.9087"
-  sha256 :no_check
+  version "8.0.10101"
+  sha256 arm:   "61ddc477c2f2adcaf8bec0c38dd9adc29e4aefdf96f6d0fb1a8b12a7420b9810",
+         intel: "580cff329c9288a2bdb10944e67d68f2c0f7852b52d4707b00569476867cec32"
 
-  url "https://update.shadow.tech/launcher/prod/mac/#{arch}/Shadow.dmg"
+  url "https://update.shadow.tech/launcher/prod/mac/#{arch}/ShadowPC-#{version}.dmg"
   name "Shadow"
-  desc "Your gaming PC powered by Cloud technology"
+  desc "Online virtualized computer"
   homepage "https://shadow.tech/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://update.shadow.tech/launcher/prod/mac/#{arch}/latest-mac.yml"
+    strategy :electron_builder
   end
 
-  app "Shadow.app"
+  app "Shadow PC.app"
 
   zap trash: [
     "~/Library/Application Support/Shadow",

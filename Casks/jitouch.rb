@@ -1,20 +1,25 @@
 cask "jitouch" do
-  version :latest
-  sha256 :no_check
+  version "2.82.1"
+  sha256 "3f5194a4da6fe19d17c843fa8a876131f7878905dcbb2e1d740d34d286d740c4"
 
-  if MacOS.version <= :el_capitan
-    url "https://www.jitouch.com/jitouch_el_capitan.zip"
-  elsif MacOS.version <= :sierra
-    url "https://www.jitouch.com/jitouch_sierra.zip"
-  else
-    url "https://www.jitouch.com/jitouch_mojave.zip"
-  end
-
-  name "jitouch"
+  url "https://github.com/JitouchApp/Jitouch/releases/download/v#{version}/Install-Jitouch.pkg",
+      verified: "github.com/JitouchApp/Jitouch/"
+  name "Jitouch"
   desc "Multi-touch gestures editor"
   homepage "https://www.jitouch.com/"
 
-  prefpane "jitouch/Jitouch.prefPane"
+  depends_on macos: ">= :high_sierra"
 
-  zap trash: "~/Library/Preferences/com.jitouch.Jitouch.plist"
+  pkg "Install-Jitouch.pkg"
+
+  uninstall quit:      "com.jitouch.Jitouch",
+            pkgutil:   "com.jitouch.Jitouch",
+            launchctl: "com.jitouch.Jitouch.agent"
+
+  zap trash: [
+    "~/Library/LaunchAgents/com.jitouch.Jitouch.plist",
+    "~/Library/Logs/com.jitouch.Jitouch.log",
+    "~/Library/Logs/com.jitouch.Jitouch.prefpane.log",
+    "~/Library/Preferences/com.jitouch.Jitouch.plist",
+  ]
 end

@@ -1,6 +1,6 @@
 cask "macgesture" do
-  version "3.1.0"
-  sha256 "9be2282365015bac05c5017f6c93225c9c451cef51bd1864d73b9970d559ad48"
+  version "3.2.0"
+  sha256 "dd1dafaa4958524f5cf7e3ba35d3235c11f4348d429be63df03a0f6cf8aa0000"
 
   url "https://github.com/MacGesture/MacGesture/releases/download/#{version}/MacGesture-#{version}.zip"
   name "MacGesture"

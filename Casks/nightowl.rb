@@ -1,20 +1,27 @@
 cask "nightowl" do
-  version "0.3.0"
+  version "0.4.5,38"
   sha256 :no_check
 
-  url "https://nightowl.kramser.xyz/files/NightOwl.dmg"
+  url "https://nightowlapp.co/files"
   name "NightOwl"
   desc "Utility to toggle dark mode"
-  homepage "https://nightowl.kramser.xyz/"
+  homepage "https://nightowlapp.co/"
 
   livecheck do
-    url "https://nightowl.kramser.xyz/api/public_update"
-    regex(/"version":\s*"(\d+(?:\.\d+)*)/i)
+    url :url
+    strategy :extract_plist
   end
 
+  auto_updates true
   depends_on macos: ">= :mojave"
 
-  app "NightOwl.app"
+  pkg "nightowl-#{version.csv.first}.pkg"
+
+  uninstall pkgutil:   "com.mygreatcompany.pkg.NightOwl",
+            launchctl: [
+              "org.nightowl.autoupdater.com",
+              "NightOwlUpdater",
+            ]
 
   zap trash: [
     "~/Library/Caches/com.fuekiin.NightOwl",

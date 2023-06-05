@@ -6,6 +6,11 @@ cask "colortester" do
   name "ColorTester"
   homepage "https://alfasado.net/apps/colortester.html"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "ColorTester/ColorTester.app"
 
   zap trash: [

@@ -1,9 +1,10 @@
 cask "paletro" do
-  version "1.6.5"
-  sha256 "e7193eeed162c504184af4e425860c2612d2fb0fdc5939aca826f024a6473541"
+  version "1.8.0"
+  sha256 "58feb6dcb7a87d2fa0a4f0db71b2f3aed3659d32a493e45fe332b79d3c54d74a"
 
   url "https://appmakes.io/paletro/download/Paletro-#{version}.dmg"
   name "Paletro"
+  desc "Command palette in any application"
   homepage "https://appmakes.io/paletro"
 
   livecheck do

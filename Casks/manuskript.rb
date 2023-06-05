@@ -10,8 +10,8 @@ cask "manuskript" do
 
   livecheck do
     url "https://github.com/olivierkes/manuskript/releases/"
-    strategy :page_match
     regex(/manuskript[._-]?(\d+(?:\.\d+)+)[._-]?osx\.zip/i)
+    strategy :page_match
   end
 
   binary "manuskript/manuskript"

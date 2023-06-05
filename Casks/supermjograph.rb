@@ -10,8 +10,8 @@ cask "supermjograph" do
 
   livecheck do
     url "https://sourceforge.net/projects/mjograph/rss"
+    regex(/SuperMjograph[._-]v?(\d+(?:\.\d+)+)\.zip/i)
     strategy :page_match
-    regex(/SuperMjograph[._-](\d+(?:\.\d+)+)\.zip/i)
   end
 
   app "SuperMjograph.app"

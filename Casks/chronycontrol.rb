@@ -1,29 +1,34 @@
 cask "chronycontrol" do
-  version "1.4.5,278"
-  sha256 "c100561a76336eef7607310b15b75ac377796be3175c2e4ddf1d66289212ac9b"
+  version "1.4.10"
+  sha256 "93c15c026683dabc9318d0ecb17594731543aa6c10059a275fee641ebdd10bdf"
 
-  url "https://www.whatroute.net/software/chronycontrol-#{version.csv.first}.zip"
+  url "https://www.whatroute.net/software/chronycontrol-#{version}.zip"
   name "ChronyControl"
   desc "Install and configure chronyd"
   homepage "https://whatroute.net/chronycontrol.html"
 
   livecheck do
     url "https://www.whatroute.net/chronycontrolappcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
+
+  auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "ChronyControl.app"
 
   uninstall launchctl: [
-              "org.tuxfamily.chronyd",
               "org.tuxfamily.chronyc",
+              "org.tuxfamily.chronyd",
             ],
             delete:    [
-              "/etc/chrony.d",
-              "/var/db/chrony",
-              "/Library/LaunchDaemons/org.tuxfamily.chronyd",
               "/Library/LaunchDaemons/org.tuxfamily.chronyc",
+              "/Library/LaunchDaemons/org.tuxfamily.chronyd",
+              "/var/db/chrony",
             ]
 
-  zap trash: "/var/log/chrony"
+  zap trash: [
+    "/etc/chrony.d",
+    "/var/log/chrony",
+  ]
 end

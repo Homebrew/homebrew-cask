@@ -1,32 +1,32 @@
 cask "mysql-connector-python" do
-  arch = Hardware::CPU.intel? ? "x86-64bit" : "arm64"
+  arch arm: "arm64", intel: "x86-64bit"
 
-  version "8.0.29"
+  version "8.0.33"
+  sha256 arm:   "2f1740c09feae8a2eea023ebeb1b1575dfd5c00e0fe6a537d28aa91e521b6142",
+         intel: "eab771f47c4fc7aa678fe0fed590454365c43850786366a0763a5235fb1054af"
 
-  if Hardware::CPU.intel?
-    sha256 "028437530f54db39d91d3830e8966af5ab9d1540867e1ee14bd428ed7fc21b54"
-  else
-    sha256 "59c5e0a509cefa7ed8daa4aee228de8d38898d0a68a7469898e8aa1a2a425053"
-  end
-
-  url "https://dev.mysql.com/get/Downloads/Connector-Python/mysql-connector-python-#{version}-macos12-#{arch}.dmg"
+  url "https://dev.mysql.com/get/Downloads/Connector-Python/mysql-connector-python-#{version}-macos13-#{arch}.dmg"
   name "MySQL Connector for Python"
   desc "Self-contained Python driver for communicating with MySQL servers"
   homepage "https://dev.mysql.com/downloads/connector/python/"
 
   livecheck do
     url "https://dev.mysql.com/downloads/connector/python/?tpl=files&os=33"
-    regex(/href=.*?mysql[._-]connector[._-]python[._-]v?(\d+(?:\.\d+)+)[._-]macos12[._-]#{arch}\.dmg/i)
+    regex(/href=.*?mysql[._-]connector[._-]python[._-]v?(\d+(?:\.\d+)+)[._-]macos13[._-]#{arch}\.dmg/i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
-  pkg "mysql-connector-python-#{version}-macos12-#{arch}.pkg"
+  pkg "mysql-connector-python-#{version}-macos13-#{arch}.pkg"
 
   uninstall pkgutil: [
     "com.mysql.connector-python",
     "com.mysql.connector-python-py3.8",
     "com.mysql.connector-python-py3.9",
+    "com.mysql.connector-python-py3.10",
+    "com.mysql.connector-python-py3.11",
     "com.oracle.mysql.connector.python",
   ]
+
+  # No zap stanza required
 end

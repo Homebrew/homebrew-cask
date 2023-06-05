@@ -10,11 +10,9 @@ cask "pomotodo" do
 
   livecheck do
     url "https://air.pomotodo.com/v1/p/com.pomotodo.PomotodoMac#{version.major}/latest.xml"
-    strategy :sparkle do |item|
-      match = item.url.match(%r{/(\d+)/Pomotodo\.(\d+(?:\.\d+)*)\.dmg}i)
-      next if match.blank?
-
-      "#{match[2]},#{match[1]}"
+    regex(%r{/(\d+)/Pomotodo\.(\d+(?:\.\d+)*)\.dmg}i)
+    strategy :sparkle do |item, regex|
+      item.url.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
 

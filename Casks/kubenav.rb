@@ -1,15 +1,8 @@
 cask "kubenav" do
-  arch = Hardware::CPU.intel? ? "amd64" : "arm64"
+  version "4.2.1"
+  sha256 "0fb493218a3c001e218c088e476d9f2946c38e6049181296d3211a7f186d4aae"
 
-  version "3.9.0"
-
-  if Hardware::CPU.intel?
-    sha256 "81dfd86497a1a5081cec1c4a544eb7959218db0107ddc3758b0b3e5367db950f"
-  else
-    sha256 "ad3d0778d85cad9271ba5942f9bc6de0130edcb28d1ecc9cfdb0ee3e4c040222"
-  end
-
-  url "https://github.com/kubenav/kubenav/releases/download/#{version}/kubenav-darwin-#{arch}.zip",
+  url "https://github.com/kubenav/kubenav/releases/download/v#{version}/kubenav-macos-universal.zip",
       verified: "github.com/kubenav/kubenav/"
   name "kubenav"
   desc "Navigator for your Kubernetes clusters right in your pocket"
@@ -17,4 +10,6 @@ cask "kubenav" do
 
   app "kubenav.app"
   binary "#{appdir}/kubenav.app/Contents/MacOS/kubenav"
+
+  zap trash: "~/Library/Saved Application State/io.kubenav.kubenav.savedState"
 end

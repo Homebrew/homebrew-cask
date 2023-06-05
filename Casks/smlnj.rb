@@ -1,6 +1,6 @@
 cask "smlnj" do
-  version "110.99.2"
-  sha256 "cc6135cc38cff836de8ffdb3161af5089087c7b113262830bac4cc15178b927a"
+  version "110.99.3"
+  sha256 "f874cff64458dc4009c836719dfe270906884c2106d486a0a56efeeff3966e46"
 
   url "http://smlnj.cs.uchicago.edu/dist/working/#{version}/smlnj-amd64-#{version}.pkg",
       verified: "smlnj.cs.uchicago.edu/"
@@ -16,6 +16,8 @@ cask "smlnj" do
   pkg "smlnj-amd64-#{version}.pkg"
 
   uninstall pkgutil: "org.smlnj.amd64.pkg"
+
+  zap delete: "/usr/local/smlnj"
 
   caveats do
     path_environment_variable "/usr/local/smlnj/bin"

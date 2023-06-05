@@ -9,9 +9,7 @@ cask "xdm" do
   homepage "https://xtremedownloadmanager.com/"
 
   livecheck do
-    url "https://github.com/subhra74/xdm/releases/"
-    strategy :page_match
-    regex(%r{(\d+(?:\.\d+)*)/XDMSetup\.dmg}i)
+    skip "No reliable way to get version info"
   end
 
   installer script: {

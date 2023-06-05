@@ -5,7 +5,8 @@ cask "iconizer" do
   url "https://github.com/raphaelhanneken/iconizer/releases/download/#{version}/Iconizer.dmg",
       verified: "github.com/raphaelhanneken/iconizer/"
   name "Iconizer"
-  homepage "https://raphaelhanneken.github.io/iconizer/"
+  desc "Xcode asset catalog creator"
+  homepage "https://raphaelhanneken.com/iconizer/"
 
   auto_updates true
 

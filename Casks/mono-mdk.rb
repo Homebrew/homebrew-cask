@@ -27,6 +27,11 @@ cask "mono-mdk" do
               "/Library/Frameworks/Mono.framework",
             ]
 
+  zap trash: [
+    "~/.mono",
+    "~/Library/Preferences/mono-sgen64.plist",
+  ]
+
   caveats <<~EOS
     Installing #{token} removes mono and mono dependant formula binaries in
     /usr/local/bin and adds #{token} to /private/etc/paths.d/

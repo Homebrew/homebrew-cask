@@ -2,7 +2,7 @@
 
 _“To install, drag this icon…” no more!_
 
-Homebrew Cask extends [Homebrew](https://brew.sh) and brings its elegance, simplicity, and speed to the installation and management of GUI macOS applications such as Atom and Google Chrome.
+Homebrew Cask extends [Homebrew](https://brew.sh) and brings its elegance, simplicity, and speed to the installation and management of GUI macOS applications such as Visual Studio Code and Google Chrome.
 
 We do this by providing a friendly CLI workflow for the administration of macOS applications distributed as binaries.
 
@@ -12,7 +12,7 @@ We do this by providing a friendly CLI workflow for the administration of macOS 
 
 To start using Homebrew Cask, you just need [Homebrew](https://brew.sh/) installed.
 
-<img src="https://i.imgur.com/FNNM6WL.gif" width="547" alt="Installing and uninstalling Atom (animated gif)">
+<img src="https://i.imgur.com/FNNM6WL.gif" width="547" alt="Installing and uninstalling Alfred (animated gif)">
 
 Slower, now:
 

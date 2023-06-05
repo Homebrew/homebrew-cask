@@ -1,12 +1,13 @@
 cask "ngrok" do
-  arch = Hardware::CPU.intel? ? "amd64" : "arm64"
+  arch arm: "arm64", intel: "amd64"
 
-  if Hardware::CPU.intel?
-    version "3.0.6,mStkVrofaG9,a"
-    sha256 "26695c41b93e6437b797fcc0f6e78242ec8c665e8e57f436aa6305b9237e3ac1"
-  else
-    version "3.0.6,91H3cQoKGUw,a"
-    sha256 "f17dd2755abc3db298bfac5279c0d633d08fc96e69708a332d9c65b57328a9f6"
+  on_arm do
+    version "3.3.0,d3cF1MADy4n,a"
+    sha256 "f041d791f7292ae900f1589fea623bce2a947c28bdc3c50cf520f47347f82f90"
+  end
+  on_intel do
+    version "3.3.0,n8BKDhBpoJP,a"
+    sha256 "47fbb6bd6ba66f84669441b014ea69e438838cfdeb1216604faf29caceb94bfb"
   end
 
   url "https://bin.equinox.io/#{version.csv.third}/#{version.csv.second}/ngrok-v#{version.major}-#{version.csv.first}-stable-darwin-#{arch}.zip",
@@ -29,5 +30,15 @@ cask "ngrok" do
     set_permissions "#{staged_path}/ngrok", "0755"
   end
 
-  zap trash: "~/.ngrok#{version.major}"
+  zap trash: [
+    "~/.ngrok#{version.major}",
+    "~/Library/Application Support/ngrok",
+  ]
+
+  caveats <<~EOS
+    To install shell completions, add this to your profile:
+      if command -v ngrok &>/dev/null; then
+        eval "$(ngrok completion)"
+      fi
+  EOS
 end

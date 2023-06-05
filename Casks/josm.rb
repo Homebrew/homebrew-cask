@@ -1,6 +1,6 @@
 cask "josm" do
-  version "18513"
-  sha256 "33c655dc55d9247a9a7a03ca4278d090c60c5add815222b333c4e2b7836ab54e"
+  version "18721"
+  sha256 "b9a8f7d8fba9c404b93daeeeb3db0879e7a9189e812258e6e357baa2707bcf14"
 
   url "https://github.com/JOSM/josm/releases/download/#{version}-tested/JOSM-macOS-java17-#{version}.zip",
       verified: "github.com/JOSM/josm/"
@@ -10,15 +10,16 @@ cask "josm" do
 
   livecheck do
     url :url
+    regex(/\D*?(\d+(?:\.\d+)*)/i)
     strategy :github_latest
-    regex(%r{href=.*?/(\d+(?:\.\d+)*)(?:[._-]tested)?/JOSM-macOS-java\d+-\d+\.zip}i)
   end
 
   app "JOSM.app"
 
   zap trash: [
-    "~/Library/JOSM",
     "~/Library/Caches/JOSM",
+    "~/Library/JOSM",
     "~/Library/Preferences/JOSM",
+    "~/Library/Saved Application State/de.openstreetmap.josm.savedState",
   ]
 end

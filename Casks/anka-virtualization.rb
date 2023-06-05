@@ -1,15 +1,6 @@
 cask "anka-virtualization" do
-  arch = Hardware::CPU.intel? ? "intel" : "arm"
-
-  if Hardware::CPU.intel?
-    version "2.5.6.147"
-    sha256 "a2723999d02b4fc3d41aab7e9276463f1ccd95a1823068917264cced8d842bdb"
-    depends_on macos: ">= :big_sur"
-  else
-    version "3.0.1.144"
-    sha256 "04c39bdc570c95a3a0ab54d8335263d9ee53680d1c7b5952bd15e1dd1c87b681"
-    depends_on macos: ">= :monterey"
-  end
+  version "3.3.0.164"
+  sha256 "d34a4da84db35dc4cabd70aac2fff2c8a811310b7f5cf1c4d4b0d79ea0a738d1"
 
   url "https://downloads.veertu.com/anka/Anka-#{version}.pkg"
   name "Anka Virtualization"
@@ -17,10 +8,12 @@ cask "anka-virtualization" do
   homepage "https://veertu.com/"
 
   livecheck do
-    url "https://veertu.com/downloads/anka-virtualization-#{arch}"
-    strategy :header_match
+    url "https://veertu.com/downloads/anka-virtualization-latest"
     regex(/Anka[._-]?v?(\d+(?:\.\d+)+)\.pkg/i)
+    strategy :header_match
   end
+
+  depends_on macos: ">= :monterey"
 
   pkg "Anka-#{version}.pkg"
 

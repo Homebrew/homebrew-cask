@@ -8,4 +8,16 @@ cask "wey" do
   homepage "https://github.com/yue/wey"
 
   app "Wey.app"
+
+  zap trash: [
+    "~/Library/Application Support/Wey",
+    "~/Library/Caches/org.yue.wey",
+    "~/Library/Preferences/org.yue.wey.plist",
+    "~/Library/Saved Application State/org.yue.wey.savedState",
+    "~/Library/WebKit/org.yue.wey",
+  ]
+
+  caveats do
+    discontinued
+  end
 end

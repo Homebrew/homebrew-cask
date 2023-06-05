@@ -1,10 +1,11 @@
 cask "dash" do
-  if MacOS.version <= :high_sierra
+  on_high_sierra :or_older do
     version "4.6.7"
     sha256 "e2b5eb996645b25f12ccae15e24b1b0d8007bc5fed925e14ce7be45a2b693fb6"
-  else
-    version "6.2.4,996"
-    sha256 "336ac944cf473a9832b703d8eaa3df8016831ce6c15e0062338d1d23c6dc0e40"
+  end
+  on_mojave :or_newer do
+    version "6.4.0"
+    sha256 "165b17939f1501bfe6fe6e363a7246fbc276b51d1769f80e41828551d1cbd8ed"
   end
 
   url "https://kapeli.com/downloads/v#{version.major}/Dash.zip"
@@ -14,7 +15,7 @@ cask "dash" do
 
   livecheck do
     url "https://kapeli.com/Dash#{version.major}.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
@@ -22,8 +23,8 @@ cask "dash" do
   app "Dash.app"
 
   zap trash: [
-    "~/Library/Application Support/Dash",
     "~/Library/Application Support/com.kapeli.dashdoc",
+    "~/Library/Application Support/Dash",
     "~/Library/Caches/com.kapeli.dashdoc",
     "~/Library/Cookies/com.kapeli.dashdoc.binarycookies",
     "~/Library/HTTPStorages/com.kapeli.dashdoc.binarycookies",

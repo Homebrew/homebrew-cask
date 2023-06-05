@@ -7,6 +7,11 @@ cask "criptext" do
   desc "Email service that's built around privacy"
   homepage "https://criptext.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Criptext.app"
 
   zap trash: [

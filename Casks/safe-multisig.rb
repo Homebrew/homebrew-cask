@@ -1,8 +1,8 @@
 cask "safe-multisig" do
-  version "3.22.1"
-  sha256 "21f8df298f1cfd179f88855297f259b433d624aa29427458746484ce10c80048"
+  version "3.33.2"
+  sha256 "175e2f390b6e4afee9f3b83b5c60838bd1d809e51fbe35d3123cc9269a755562"
 
-  url "https://github.com/gnosis/safe-react/releases/download/v#{version}-desktop/Safe-#{version}.dmg",
+  url "https://github.com/gnosis/safe-react/releases/download/v#{version}+desktop/Safe-#{version}.dmg",
       verified: "github.com/gnosis/safe-react/"
   name "Gnosis Safe Multisig"
   desc "Ethereum multisig wallet"

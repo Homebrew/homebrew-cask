@@ -1,15 +1,11 @@
 cask "eclipse-installer" do
-  arch = Hardware::CPU.intel? ? "mac64" : "aarch64"
+  arch arm: "mac-aarch64", intel: "mac64"
 
-  version "4.24.0,2022-06"
+  version "4.27.0,2023-03"
+  sha256 arm:   "72b0518d0a3c4fb8b758b7c68c3ab71e80138bf5e585ca5864c1cdc60f0361d3",
+         intel: "a5e9bd0a477b458a93f14d26506f95c05fcd3489cf26f1c620b9f604a5230a90"
 
-  if Hardware::CPU.intel?
-    sha256 "125e008c6da26301c12c9c6ddaa309090333e9371b152deea507c0cefeeb035e"
-  else
-    sha256 "b093b562ba17398075f5cdcca617494436a19819d0d3c4c445adc0890c2ca3e6"
-  end
-
-  url "https://eclipse.org/downloads/download.php?file=/oomph/epp/#{version.csv.second}/R/eclipse-inst-#{arch}.tar.gz&r=1"
+  url "https://www.eclipse.org/downloads/download.php?file=/oomph/epp/#{version.csv.second}/R/eclipse-inst-jre-#{arch}.dmg&r=1"
   name "Eclipse Installer"
   name "Eclipse IDE installer"
   desc "Install and update your Eclipse Development Environment"
@@ -20,6 +16,11 @@ cask "eclipse-installer" do
   end
 
   app "Eclipse Installer.app"
+
+  zap trash: [
+    "~/Library/Preferences/org.eclipse.oomph.setup.installer.product.with-jre.restricted.plist",
+    "~/Library/Saved Application State/org.eclipse.oomph.setup.installer.product.with-jre.restricted.savedState",
+  ]
 
   caveats do
     depends_on_java

@@ -1,5 +1,5 @@
 cask "kext-updater" do
-  version "4.0.4,404"
+  version "4.0.7"
   sha256 :no_check
 
   url "https://update.kextupdater.de/kextupdater/kextupdaterng.zip"
@@ -9,7 +9,7 @@ cask "kext-updater" do
 
   livecheck do
     url "https://update.kextupdater.de/kextupdater/appcastng.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   app "Kext Updater.app"

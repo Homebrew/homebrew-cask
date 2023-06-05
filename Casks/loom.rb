@@ -1,21 +1,17 @@
 cask "loom" do
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  arch arm: "-arm64"
 
-  version "0.137.1"
+  version "0.163.0"
+  sha256 arm:   "eadf721ed35d1a5bed9335100872b4ac740a7f54ec4ea1405237ccda67764c31",
+         intel: "97a7480f69a9662881f80e48366a74eaeb7e018eaac85749f4ae7df37c8a85d9"
 
-  if Hardware::CPU.intel?
-    sha256 "f50a75d1f6fd9aba35f03a8f2187589bfe40deb738ba8ef1d676bdb22f31b790"
-  else
-    sha256 "81d2da7e164eb971c3c7487eb4d6d717d46582c3947e5eda94aa07bd8271046c"
-  end
-
-  url "https://cdn.loom.com/desktop-packages/Loom-#{version}#{arch}.dmg"
+  url "https://packages.loom.com/desktop-packages/Loom-#{version}#{arch}.dmg"
   name "Loom"
   desc "Screen and video recording software"
   homepage "https://www.loom.com/"
 
   livecheck do
-    url "https://s3-us-west-2.amazonaws.com/loom.desktop.packages/loom-inc-production/desktop-packages/latest-mac.yml"
+    url "https://packages.loom.com/desktop-packages/latest-mac.yml"
     strategy :electron_builder
   end
 

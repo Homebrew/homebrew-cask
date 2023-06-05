@@ -1,15 +1,11 @@
 cask "macintoshjs" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
-  version "1.1.0"
+  version "1.2.0"
+  sha256 arm:   "0df67f2a3c8398f31840c54fad030b2ff9400fb1311774771ada3d8d9990443f",
+         intel: "1da79360d3c86665657692c4476343ad07b7cf3a9b2588f70833cf0f7caa4a82"
 
   url "https://github.com/felixrieseberg/macintosh.js/releases/download/v#{version}/macintosh.js-darwin-#{arch}-#{version}.zip"
-  if Hardware::CPU.intel?
-    sha256 "4ca41517f15c594e718da622074a2160754cb8f1293cb1fad908f6d0ae585384"
-  else
-    sha256 "0af95bbcc075f939d6c3e1fdcdab0d8da2760e5546aecfbc82767e326640740c"
-  end
-
   name "macintosh.js"
   desc "Virtual Apple Macintosh with System 8, running in Electron"
   homepage "https://github.com/felixrieseberg/macintosh.js"

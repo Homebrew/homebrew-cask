@@ -1,6 +1,6 @@
 cask "fabfilter-twin" do
-  version "2.34"
-  sha256 "5f30c1a6a3e16aed28b6783cabd987e6472def74a3c1ff5b52cd4d4fa61a40a2"
+  version "3.01"
+  sha256 "01a1f09125fe0c02064e6ed6abe1dbb5f4d6a0adf38f711d223e399975b74832"
 
   url "https://download.fabfilter.com/fftwin#{version.no_dots}.dmg"
   name "FabFilter Twin"

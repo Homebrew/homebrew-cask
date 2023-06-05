@@ -1,13 +1,9 @@
 cask "blobsaver" do
-  arch = Hardware::CPU.intel? ? "intel" : "arm"
+  arch arm: "arm", intel: "intel"
 
-  version "3.2.1"
-
-  if Hardware::CPU.intel?
-    sha256 "341dad87e5a36f7f6c1f14050a4f44128afa2da5651abea761af59054d5029c8"
-  else
-    sha256 "0e510dd7315af465a9f1f333e7f303e16871fa9964ae9c1632145d38b6e32e04"
-  end
+  version "3.5.0"
+  sha256 arm:   "3eae2b623eb047c499935d7b069b87ebe8ca544334ecb7c7dedfad551a6bf601",
+         intel: "5d48b72d4405ab36c2c6592cae1c5e8e38ae033878b76cddca12a20fff456733"
 
   url "https://github.com/airsquared/blobsaver/releases/download/v#{version}/blobsaver-#{arch}-#{version}.dmg"
   name "blobsaver"
@@ -15,6 +11,7 @@ cask "blobsaver" do
   homepage "https://github.com/airsquared/blobsaver"
 
   app "blobsaver.app"
+  binary "#{appdir}/blobsaver.app/Contents/MacOS/blobsaver"
 
   zap trash: "~/Library/Preferences/airsquared.blobsaver.app.plist"
 end

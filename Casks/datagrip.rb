@@ -1,23 +1,19 @@
 cask "datagrip" do
-  arch = Hardware::CPU.intel? ? "" : "-aarch64"
+  arch arm: "-aarch64"
 
-  version "2022.1.5,221.5787.39"
-
-  if Hardware::CPU.intel?
-    sha256 "ac96ab12d7b4593df21cd466b3cea26bcce0db2c2eb92b5d31456887f500032b"
-  else
-    sha256 "31df43a4f1adab562730adade212916091fc7f7090121001840c1453d2037694"
-  end
+  version "2023.1.2,231.9011.35"
+  sha256 arm:   "3af05578dd8c3b01a5b75e34b0944bccd307ce698e80fe238044762785920c90",
+         intel: "13302c2cda09fdf08025430cfb195d7cbf34ad0f66968091e5227a8ff71a7f79"
 
   url "https://download.jetbrains.com/datagrip/datagrip-#{version.csv.first}#{arch}.dmg"
   name "DataGrip"
-  desc "Databases & SQL IDE"
+  desc "Databases and SQL IDE"
   homepage "https://www.jetbrains.com/datagrip/"
 
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=DG&latest=true&type=release"
-    strategy :page_match do |page|
-      JSON.parse(page)["DG"].map do |release|
+    strategy :json do |json|
+      json["DG"].map do |release|
         "#{release["version"]},#{release["build"]}"
       end
     end

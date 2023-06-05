@@ -1,16 +1,17 @@
 cask "mini-program-studio" do
-  arch = Hardware::CPU.intel? ? "-x64" : "-arm64"
+  arch arm: "-arm64", intel: "-x64"
 
-  if Hardware::CPU.intel?
-    version "3.0.2,5b62b07a-3d4e-4127-95d4-d3420bb869c1"
-    sha256 "23eb62f4cee0769b516caff79c77da15039a2d0fac4102d17f76d18b1cfcd909"
-  else
-    version "3.0.2,146f340b-cb3d-4b1e-9f1f-9d2f1bf9d16e"
-    sha256 "04f38d83c059a3abe8b22e7c55775e30a28101b393174213499b9b3ef7606afe"
+  on_arm do
+    version "3.3.3,473624af-67c4-4f44-938a-b84217d1db3b"
+    sha256 "9e73204f12cba2657551363669b08194f0060cfeaa456ab987540d1aa3cba790"
+  end
+  on_intel do
+    version "3.3.3,4ddf7f5b-73cd-42dd-806f-5fd90a8327b8"
+    sha256 "539f1f259a1095e1d1639f27db6e7ef218e89a956d1aa394d8c143804b82f965"
   end
 
   url "https://gw.alipayobjects.com/os/volans-demo/#{version.csv.second}/MiniProgramStudio-#{version.csv.first}#{arch}.dmg",
-      verified: "gw.alipayobjects.com/"
+      verified: "gw.alipayobjects.com/os/volans-demo/"
   name "Mini Program Studio"
   name "小程序开发者工具"
   desc "IDE for the development of Alipay applets"

@@ -1,8 +1,14 @@
 cask "spotify" do
-  arch = Hardware::CPU.intel? ? "" : "ARM64"
+  arch arm: "ARM64"
 
-  version "1.1.89.862,94554d24,16"
   sha256 :no_check
+
+  on_arm do
+    version "1.2.12.902,1924b088,216"
+  end
+  on_intel do
+    version "1.2.12.902,1924b088,215"
+  end
 
   url "https://download.scdn.co/Spotify#{arch}.dmg",
       verified: "download.scdn.co/"

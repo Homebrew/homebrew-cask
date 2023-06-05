@@ -1,15 +1,15 @@
 cask "decloner" do
-  version "1.6.3,23"
+  version "1.6.3"
   sha256 "72123bcbbe734da007fea5becbb06236876cd1cf40ae4d6c8ea43f890c8eef8d"
 
-  url "https://www.pixelespressoapps.com/decloner/Decloner_#{version.csv.first}.zip"
+  url "https://www.pixelespressoapps.com/decloner/Decloner_#{version}.zip"
   name "Decloner"
-  desc "Fast and reliable duplicate files finder"
+  desc "Duplicate files finder"
   homepage "https://www.pixelespressoapps.com/decloner/"
 
   livecheck do
     url "https://www.pixelespressoapps.com/decloner/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   app "Decloner.app"

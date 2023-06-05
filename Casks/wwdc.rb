@@ -1,20 +1,28 @@
 cask "wwdc" do
-  version "7.3.3,1024"
-  sha256 "b1dde361e43c58f30d40e1fefab38699322e95a98b3eb4325177e4a7abea1ea4"
+  version "7.4-release,7.4,1036"
+  sha256 "f3d7726a211060b2771f246e3ee6cc8e5768a9512d26acb33b864f3ac1ee3aa7"
 
-  url "https://github.com/insidegui/WWDC/releases/download/#{version.csv.first}/WWDC_v#{version.csv.first}-#{version.csv.second}.dmg",
+  url "https://github.com/insidegui/WWDC/releases/download/#{version.csv.first}/WWDC_v#{version.csv.second}-#{version.csv.third}.dmg",
       verified: "github.com/insidegui/WWDC/"
   name "WWDC"
   desc "Allows access to WWDC livestreams, videos and sessions"
   homepage "https://wwdc.io/"
 
   livecheck do
-    url :url
-    strategy :github_latest do |page|
-      match = page.match(/WWDC_v?(\d+(?:\.\d+)*)-(\d+(?:\.\d+)*)\.dmg/i)
-      next if match.blank?
+    url "https://github.com/insidegui/WWDC/releases/latest"
+    regex(%r{href=.*?/download/([^/]*)/WWDC[._-]v?(\d+(?:[.-]\d+)+)\.dmg}i)
+    strategy :header_match do |headers, regex|
+      next if headers["location"].blank?
 
-      "#{match[1]},#{match[2]}"
+      # Identify the latest tag from the response's `location` header
+      latest_tag = File.basename(headers["location"])
+      next if latest_tag.blank?
+
+      # Fetch the assets list HTML for the latest tag and match within it
+      assets_page = Homebrew::Livecheck::Strategy.page_content(
+        @url.sub(%r{/releases/?.+}, "/releases/expanded_assets/#{latest_tag}"),
+      )
+      assets_page[:content]&.scan(regex)&.map { |match| "#{match[0]},#{match[1].tr("-", ",")}" }
     end
   end
 

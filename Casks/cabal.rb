@@ -9,4 +9,11 @@ cask "cabal" do
   homepage "https://cabal.chat/"
 
   app "Cabal.app"
+
+  zap trash: [
+    "~/.cabal-desktop",
+    "~/Library/Application Support/Cabal",
+    "~/Library/Preferences/club.cabal.desktop.plist",
+    "~/Library/Saved Application State/club.cabal.desktop.savedState",
+  ]
 end

@@ -10,7 +10,6 @@ cask "vidcutter" do
   livecheck do
     url :url
     strategy :github_latest
-    regex(%r{href=.*?/VidCutter[._-]v?(\d+(?:\.\d+)+)[._-]macOS\.dmg}i)
   end
 
   app "VidCutter.app"

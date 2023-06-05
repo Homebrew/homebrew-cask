@@ -4,12 +4,13 @@ cask "qldds" do
 
   url "https://github.com/Marginal/QLdds/releases/download/rel-#{version.no_dots}/QLdds_#{version.no_dots}.pkg"
   name "QuickLook DDS"
+  desc "QuickLook plugin for DirectDraw Surface (DDS) texture files"
   homepage "https://github.com/Marginal/QLdds"
 
   livecheck do
     url :url
-    strategy :github_latest
     regex(/Release\s+(\d+(?:\.\d+)*)/i)
+    strategy :github_latest
   end
 
   pkg "QLdds_#{version.no_dots}.pkg"

@@ -1,5 +1,5 @@
 cask "teamspeak-client" do
-  if MacOS.version <= :catalina
+  on_catalina :or_older do
     version "3.5.6"
     sha256 "03c8e44256f2028917866924e496d4704de9e3298252f433fc53cfa37282770e"
 
@@ -10,7 +10,8 @@ cask "teamspeak-client" do
       url "https://versions.teamspeak.com/ts#{version.major}-client-2"
       regex(/stable.*?v?(\d+(?:\.\d+)+)/i)
     end
-  else
+  end
+  on_big_sur :or_newer do
     version "3.5.7-beta.1"
     sha256 "993965f8c2a5f579de4ae17f6a6ac713557f7517d3ba5a9eb423cf95a33fbb90"
 

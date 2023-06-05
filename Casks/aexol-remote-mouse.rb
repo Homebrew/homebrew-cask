@@ -6,5 +6,10 @@ cask "aexol-remote-mouse" do
   name "Aexol Remote Mouse"
   homepage "https://remotemouse.aexol.com/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   app "Remote Mouse for Mac.app"
 end

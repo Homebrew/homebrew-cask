@@ -10,8 +10,8 @@ cask "teamviewer-quicksupport" do
 
   livecheck do
     url "https://dl.teamviewer.com/download/TeamViewerQS.dmg"
-    strategy :header_match
     regex(%r{/version[._-]v?(\d+)x/TeamViewerQS\.dmg}i)
+    strategy :header_match
   end
 
   # Renamed for consistency: app name is different in the Finder and in a shell.

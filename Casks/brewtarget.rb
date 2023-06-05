@@ -1,18 +1,17 @@
 cask "brewtarget" do
-  version "2.3.0"
-  sha256 "f1b3b33029f7d7cd873a1cdbf0741da22085f53dcefa2943dcfa8d35eda89fdd"
+  version "3.0.9"
+  sha256 "691016d1c132e931635102095cda7fd1c4510af2b364c6ec0ff8b226aafcb234"
 
-  url "https://launchpad.net/brewtarget/trunk/#{version}/+download/Brewtarget-#{version}.dmg",
-      verified: "launchpad.net/brewtarget/"
+  url "https://github.com/Brewtarget/brewtarget/releases/download/v#{version}/brewtarget_#{version}.dmg"
   name "brewtarget"
-  homepage "http://www.brewtarget.org/"
+  desc "Beer recipe creation tool"
+  homepage "https://github.com/Brewtarget/brewtarget/"
 
-  # We need to check all releases since not all releases are for macOS.
-  livecheck do
-    url "https://github.com/Brewtarget/brewtarget/releases"
-    strategy :page_match
-    regex(%r{href=.*?/Brewtarget[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
-  end
+  app "brewtarget_#{version}.app"
 
-  app "brewtarget.app"
+  zap trash: [
+    "~/Library/Preferences/brewtarget",
+    "~/Library/Preferences/com.brewtarget.Brewtarget.plist",
+    "~/Library/Saved Application State/com.brewtarget.Brewtarget.savedState",
+  ]
 end

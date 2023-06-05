@@ -1,6 +1,6 @@
 cask "lightkey" do
-  version "4.0.1,7a5b4d8687-1657887879"
-  sha256 "bf9a2b5bb034dccf658f04bfad11d7437d4aa8196cd73d3ccd4a8c3ebe088fa6"
+  version "4.3,0a4ea07e73-1683700497"
+  sha256 "07b0227a0273d15d6d37f090a18f222a2ac3a780c95dcbec4f3925a4b520b06a"
 
   url "https://lightkeyapp.com/media/pages/download/Lightkey-#{version.csv.first.dots_to_hyphens}/#{version.csv.second}/LightkeyInstaller.zip"
   name "Lightkey"
@@ -9,11 +9,11 @@ cask "lightkey" do
 
   livecheck do
     url "https://lightkeyapp.com/en/download"
-    strategy :header_match do |headers|
-      match = headers["location"].match(%r{/Lightkey[._-]v?(\d+(?:-\d+)+)/([^/]+)/LightkeyInstaller\.zip}i)
-      next if match.blank?
-
-      "#{match[1].tr("-", ".")},#{match[2]}"
+    regex(%r{/Lightkey[._-]v?(\d+(?:-\d+)+)/([^/]+)/LightkeyInstaller\.zip}i)
+    strategy :header_match do |headers, regex|
+      headers["location"].scan(regex).map do |match|
+        "#{match[0].tr("-", ".")},#{match[1]}"
+      end
     end
   end
 

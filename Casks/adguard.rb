@@ -1,6 +1,6 @@
 cask "adguard" do
-  version "2.8.1.1140"
-  sha256 "d6b2132d4188c5cea0d2acca615ac5f847df5addd65682d2843c035d0a91e1f6"
+  version "2.10.1.1277"
+  sha256 "0e60e644dccc9c02bb61685ce3522db49ab3ca8ecb40b9a0d722fac81c256797"
 
   url "https://static.adguard.com/mac/release/AdGuard-#{version}.dmg"
   name "AdGuard"
@@ -10,13 +10,13 @@ cask "adguard" do
   livecheck do
     url "https://static.adguard.com/mac/adguard-release-appcast.xml"
     strategy :sparkle do |item|
-      item.short_version.sub(/ release.*/, "")
+      item.short_version.delete_suffix(" release")
     end
   end
 
   auto_updates true
   conflicts_with cask: "homebrew/cask-versions/adguard-nightly"
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   pkg "AdGuard.pkg"
 

@@ -1,5 +1,5 @@
 cask "freedome" do
-  version "2.53.324.0"
+  version "2.64.767.0"
   sha256 :no_check
 
   url "https://download.sp.f-secure.com/freedome/installer/2/Freedome.pkg"
@@ -25,4 +25,11 @@ cask "freedome" do
               "com.f-secure.fsvpn-upstream.production",
               "fsvpn-ike-agent.production.macos",
             ]
+
+  zap trash: [
+    "/Library/LaunchDaemons/com.f-secure.freedome.uninstall.plist",
+    "/Library/Preferences/com.f-secure.freedome.plist",
+    "~/Library/Preferences/com.fsecure.freedome.osx.plist",
+    "~/Library/Saved Application State/com.fsecure.freedome.osx.savedState",
+  ]
 end

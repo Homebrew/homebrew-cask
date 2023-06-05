@@ -1,5 +1,5 @@
 cask "scapple" do
-  version "1.4.1,8168"
+  version "1.4.2"
   sha256 :no_check
 
   url "https://scrivener.s3.amazonaws.com/Scapple.dmg",
@@ -10,7 +10,7 @@ cask "scapple" do
 
   livecheck do
     url "https://www.literatureandlatte.com/downloads/scapple/scapple.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   depends_on macos: ">= :catalina"
@@ -24,8 +24,8 @@ cask "scapple" do
     "~/Library/Application Support/Scapple",
     "~/Library/Autosave Information/com.literatureandlatte.scapple.plist",
     "~/Library/Caches/com.literatureandlatte.scapple",
-    "~/Library/HTTPStorages/com.literatureandlatte.scapple.binarycookies",
     "~/Library/HTTPStorages/com.literatureandlatte.scapple",
+    "~/Library/HTTPStorages/com.literatureandlatte.scapple.binarycookies",
     "~/Library/Preferences/com.literatureandlatte.scapple.plist",
   ]
 end

@@ -1,6 +1,6 @@
 cask "latexit" do
-  version "2.16.4"
-  sha256 "cb0083f27a50e95e9d8075015261a4f332cd25cbf9f5a445b45080f6291f2acd"
+  version "2.16.5"
+  sha256 "62fb58e2f7e712ed481549dc198e3ad3ee9714f8221f5ebb777ae2ced56dd5aa"
 
   url "https://pierre.chachatelier.fr/latexit/downloads/LaTeXiT-#{version.dots_to_underscores}.dmg",
       user_agent: :fake
@@ -25,5 +25,6 @@ cask "latexit" do
     "~/Library/Cookies/fr.chachatelier.pierre.LaTeXiT.binarycookies",
     "~/Library/Group Containers/7SFX84GNR7.fr.chachatelier.pierre.LaTeXiT",
     "~/Library/Preferences/fr.chachatelier.pierre.LaTeXiT.plist",
+    "~/Library/Saved Application State/fr.chachatelier.pierre.LaTeXiT.savedState",
   ]
 end

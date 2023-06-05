@@ -8,12 +8,11 @@ cask "couchpotato" do
   desc "Automatic Movie Downloading via NZBs & Torrents"
   homepage "https://couchpota.to/"
 
-  livecheck do
-    url :url
-    regex(%r{^build/v?(\d+(?:\.\d+)+)$}i)
-  end
-
   app "CouchPotato.app"
 
   zap trash: "~/Library/Application Support/CouchPotato"
+
+  caveats do
+    discontinued
+  end
 end

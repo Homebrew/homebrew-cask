@@ -15,7 +15,5 @@ cask "vox-preferences-pane" do
 
   prefpane "Vox Preferences.prefPane"
 
-  zap trash: [
-    "~/Library/Preferences/com.coppertino.VoxPrefs.plist",
-  ]
+  zap trash: "~/Library/Preferences/com.coppertino.VoxPrefs.plist"
 end

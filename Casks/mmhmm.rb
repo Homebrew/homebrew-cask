@@ -1,23 +1,30 @@
 cask "mmhmm" do
-  version "2.3.2,1657772000"
-  sha256 "6406870a1cc08046c0e69220b37f390f535c32b7041d3544ac37a6127a5fd734"
+  version "1.1.1"
+  sha256 :no_check
 
-  url "https://updates.mmhmm.app/mac/production/mmhmm_#{version.csv.first}.zip"
-  name "mmhmm"
+  url "https://updates.mmhmm.app/mac/hybrid/beta/mmhmm.pkg"
+  name "mmhmm Desktop"
   desc "Virtual video presentation software"
-  homepage "https://www.mmhmm.app/"
+  homepage "https://www.mmhmm.app/product"
 
   livecheck do
-    url "https://updates.mmhmm.app/mac/production/sparkle.xml"
-    strategy :sparkle
+    url "https://api.appcenter.ms/v0.1/public/sparkle/apps/265ddc8d-5266-478a-af9f-3798b1aab2ac"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :monterey"
 
-  app "mmhmm.app"
+  pkg "mmhmm.pkg"
 
-  uninstall pkgutil:   "app.mmhmm.app",
-            quit:      "app.mmhmm.app",
-            launchctl: "app.mmhmm.Camera.Assistant"
+  uninstall pkgutil: "app.mmhmm.hybrid",
+            quit:    "app.mmhmm.hybrid"
+
+  zap trash: [
+    "~/Library/Application Support/mmhmm",
+    "~/Library/Caches/app.mmhmm.hybrid",
+    "~/Library/Caches/mmhmm",
+    "~/Library/Preferences/app.mmhmm.hybrid.plist",
+    "~/Library/Saved Application State/app.mmhmm.hybrid.savedState",
+  ]
 end

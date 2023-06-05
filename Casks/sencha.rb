@@ -1,8 +1,8 @@
 cask "sencha" do
-  version "7.5.1.20"
-  sha256 "7bd9c132386e0f13a1fa95de37944fca3a13648ef24df70f1a17a962521fe53c"
+  version "7.6.0.87"
+  sha256 "66a22a3fc9855a0a270640eb4b113a3826ec0f77f34b87732d4b8376a536addf"
 
-  url "https://trials.sencha.com/cmd/#{version.major_minor_patch}/jre/SenchaCmd-#{version}-osx.app.zip"
+  url "https://trials.sencha.com/cmd/#{version.major_minor_patch}/SenchaCmd-#{version}-osx.app.zip"
   name "Sencha Cmd"
   desc "Productivity and performance optimization tool for Sencha Ext JS"
   homepage "https://www.sencha.com/products/sencha-cmd/"

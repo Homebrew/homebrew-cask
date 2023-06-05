@@ -1,13 +1,9 @@
 cask "anaconda" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
+  arch arm: "arm64", intel: "x86_64"
 
-  version "2022.05"
-
-  if Hardware::CPU.intel?
-    sha256 "1a10c06660ebe1204e538b4e9d810142441af9dfd74b077eee2761ec6e675f39"
-  else
-    sha256 "a12119931945a9a1453993582259cc67318a9a75a15731e5ccc15365e7f88a36"
-  end
+  version "2023.03-1"
+  sha256 arm:   "85152324c423fedbeed2e7491cb32e597eaeb1b86ae7a61ff7597b401fd053ce",
+         intel: "3593921c8a5516db82f0d7dd1c691f7ee7794236852e7da614e9ad6e93eeb342"
 
   url "https://repo.anaconda.com/archive/Anaconda3-#{version}-MacOSX-#{arch}.sh"
   name "Continuum Analytics Anaconda"
@@ -16,7 +12,7 @@ cask "anaconda" do
 
   livecheck do
     url "https://repo.anaconda.com/archive/"
-    regex(/Anaconda3-(\d+(?:\.\d+)+)-MacOSX-#{arch}\.sh/i)
+    regex(/Anaconda3-(\d+(?:\.\d+)+[._-]*\d+)-MacOSX-#{arch}\.sh/i)
   end
 
   auto_updates true

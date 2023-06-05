@@ -19,4 +19,8 @@ cask "radiant-player" do
     "~/Library/Preferences/com.sajidanwar.Radiant-Player.plist",
     "~/Library/Saved Application State/com.sajidanwar.Radiant-Player.savedState",
   ]
+
+  caveats do
+    discontinued
+  end
 end

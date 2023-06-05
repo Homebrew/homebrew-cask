@@ -1,8 +1,8 @@
 cask "redcine-x-pro" do
-  version "55.1,52132"
-  sha256 "3269dce653f65821d66c2ccf0a5cd0eff2d85972373dbc1464b0d295b79f251a"
+  version "60.3.11"
+  sha256 "9112ac715a1490a03fd250eb59cc87b33659cb25e71c985a143a2917a08d4002"
 
-  url "https://downloads.red.com/software/rcx/mac/release/#{version.major}.#{version.csv.second}/REDCINE-X_PRO_Build_#{version.csv.first}.pkg"
+  url "https://downloads.red.com/software/rcx/mac/release/#{version}/REDCINE-X_PRO_Build_#{version}.pkg"
   name "REDCINE-X PRO"
   desc "Transcode and manipulate REDCODE RAW footage"
   homepage "https://www.red.com/"
@@ -12,14 +12,14 @@ cask "redcine-x-pro" do
     strategy :page_match do |page|
       json = JSON.parse(page)
       latest = json["data"][0]
-      "#{latest["versionMajor"]}.#{latest["versionMinor"]},#{latest["versionRevision"]}"
+      "#{latest["versionMajor"]}.#{latest["versionMinor"]}.#{latest["versionRevision"]}"
     end
   end
 
-  pkg "REDCINE-X_PRO_Build_#{version.major_minor}.pkg"
+  pkg "REDCINE-X_PRO_Build_#{version}.pkg"
 
   uninstall pkgutil: [
-              "com.red.pkg.REDCINE-X PRO",
+              "com.red.pkg.REDCINE-XPRO",
               "com.red.pkg.SupportLibs",
             ],
             delete:  "/Applications/REDCINE-X Professional"

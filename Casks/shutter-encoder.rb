@@ -1,13 +1,9 @@
 cask "shutter-encoder" do
-  arch = Hardware::CPU.intel? ? "Mac 64bits" : "Apple Silicon"
+  arch arm: "Apple Silicon", intel: "Mac 64bits"
 
-  version "16.1"
-
-  if Hardware::CPU.intel?
-    sha256 "1d473adcde011313701f8290c7ace197331132e3a80763a2da1d2e1c42b7ec23"
-  else
-    sha256 "9abaa8e23e454f56b0c7be3337721a4ecd6308bc116fef10c72738e0a5123bcf"
-  end
+  version "17.1"
+  sha256 arm:   "6a3c3a096bd43080dd85f97f3f8cfdb49f5454f326b8a04db016e6cb8d124a4c",
+         intel: "4a00f722050bd96ca2dfb20acbdffd2dca6c455427860aeacb400848372f2467"
 
   url "https://www.shutterencoder.com/Shutter%20Encoder%20#{version}%20#{arch.gsub(" ", "%20")}.pkg"
   name "Shutter Encoder"
@@ -21,6 +17,9 @@ cask "shutter-encoder" do
 
   pkg "Shutter Encoder #{version} #{arch}.pkg"
 
-  uninstall pkgutil: "com.paulpacifico.shutterencoder",
-            quit:    "com.paulpacifico.shutterencoder"
+  uninstall launchctl: "application.com.paulpacifico.shutterencoder.*",
+            pkgutil:   "com.paulpacifico.shutterencoder",
+            quit:      "com.paulpacifico.shutterencoder"
+
+  zap trash: "~/Documents/Shutter Encoder"
 end

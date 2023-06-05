@@ -1,13 +1,9 @@
 cask "lx-music" do
-  arch = Hardware::CPU.intel? ? "" : "-arm64"
+  arch arm: "-arm64"
 
-  version "1.22.1"
-
-  if Hardware::CPU.intel?
-    sha256 "e74158b77f2da4a9b6e0530f7fa7a9f34c66b479922d8708eb06fb475dd3a218"
-  else
-    sha256 "462ffb39ae422debc1d23b70f0ea123dc995627d4a3a7b526d0e0d07511ea3fd"
-  end
+  version "2.2.2"
+  sha256 arm:   "d77f717d09c2b3c7db73c2078cef9a8f195eb4a15a04c3e862b505e71f00dde4",
+         intel: "7d8bbb8477e071eb359b1577a569b7cc1044cdfa8b12eb2349b74cec97413610"
 
   url "https://github.com/lyswhut/lx-music-desktop/releases/download/v#{version}/lx-music-desktop-#{version}#{arch}.dmg"
   name "LX Music Assistant Desktop Edition"

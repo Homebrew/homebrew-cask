@@ -1,6 +1,6 @@
 cask "sauce-connect" do
-  version "4.8.0"
-  sha256 "8591295a1f7deb4f0309d7c93eae2eea86fde41e908a160fea077ab764564f9f"
+  version "4.9.0"
+  sha256 "a0493a933b0a23421fdacc641b6cf94302f1755333969c179dc1dedd26a5e69d"
 
   url "https://saucelabs.com/downloads/sc-#{version}-osx.zip"
   name "Sauce Connect"
@@ -13,4 +13,6 @@ cask "sauce-connect" do
   end
 
   binary "sc-#{version}-osx/bin/sc"
+
+  # No zap stanza required
 end

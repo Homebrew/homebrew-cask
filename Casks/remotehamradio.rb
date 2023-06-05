@@ -9,7 +9,7 @@ cask "remotehamradio" do
   homepage "https://www.remotehamradio.com/"
 
   livecheck do
-    url "http://update.remotehamradio.com/desktop/download?platform=Macintosh"
+    url "https://update.remotehamradio.com/desktop/download?platform=Macintosh"
     regex(/href=.*?RemoteHamRadio[._-]v?(\d+(?:\.\d+)+)-mac\.zip/i)
   end
 

@@ -1,11 +1,11 @@
 cask "colour-contrast-analyser" do
-  version "3.2.0"
-  sha256 "2afd22cc174957561d6271810455a7394a9f6ed418c22914ca750ec66849840f"
+  version "3.3.0"
+  sha256 "219b897fbbd642e2e35c604c78056243b1f5ae2cab78b87126ec5b986ff536b7"
 
   url "https://github.com/ThePacielloGroup/CCAe/releases/download/v#{version}/CCA-#{version}.dmg",
       verified: "github.com/ThePacielloGroup/CCAe/"
   name "Colour Contrast Analyser"
-  desc "Color contrast checker"
+  desc "Colour contrast checker"
   homepage "https://www.tpgi.com/color-contrast-checker/"
 
   livecheck do
@@ -14,4 +14,9 @@ cask "colour-contrast-analyser" do
   end
 
   app "Colour Contrast Analyser.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.electron.cca.plist",
+    "~/Library/Saved Application State/com.electron.cca.savedState",
+  ]
 end

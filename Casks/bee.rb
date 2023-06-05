@@ -5,12 +5,8 @@ cask "bee" do
   url "https://bee-app.s3.amazonaws.com/public/Bee-#{version.csv.second}-#{version.csv.first}.zip",
       verified: "bee-app.s3.amazonaws.com/"
   name "Bee"
+  desc "Issue tracker frontend"
   homepage "https://www.neat.io/bee/"
-
-  livecheck do
-    url "https://s3.amazonaws.com/www.neat.io/bee/appcast.xml"
-    strategy :sparkle
-  end
 
   app "Bee.app"
 
@@ -23,4 +19,8 @@ cask "bee" do
     "~/Library/Containers/io.neat.Bee-Mutator",
     "~/Library/Containers/io.neat.Bee-Updater",
   ]
+
+  caveats do
+    discontinued
+  end
 end

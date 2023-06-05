@@ -2,9 +2,10 @@ cask "bonjour-browser" do
   version "1.5.6"
   sha256 :no_check
 
-  url "http://www.tildesoft.com/files/BonjourBrowser.dmg"
+  url "https://www.tildesoft.com/files/BonjourBrowser.dmg"
   name "Bonjour Browser"
-  homepage "http://www.tildesoft.com/"
+  desc "Display all the bonjour services on your local network"
+  homepage "https://www.tildesoft.com/"
 
   depends_on macos: "<= :mojave"
 

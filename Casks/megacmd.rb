@@ -1,10 +1,16 @@
 cask "megacmd" do
-  version :latest
+  version "1.6.3"
   sha256 :no_check
 
   url "https://mega.nz/MEGAcmdSetup.dmg"
   name "MEGAcmd"
+  desc "Command-line access to MEGA services"
   homepage "https://mega.nz/cmd"
+
+  livecheck do
+    url "https://github.com/meganz/MEGAcmd"
+    regex(/(\d+(?:\.\d+)+)[._-]macOS/i)
+  end
 
   app "MEGAcmd.app"
   binary "#{appdir}/MEGAcmd.app/Contents/MacOS/MEGAcmdShell", target: "megacmd"
@@ -71,7 +77,9 @@ cask "megacmd" do
   zap trash: "~/.megaCmd"
 
   caveats <<~EOS
-    #{token} only works if called from /Applications, so you may need to install it with
+    #{token} only works if called from /Applications, so you may need to install
+    it with:
+
       brew install --cask --appdir=/Applications #{token}
   EOS
 end

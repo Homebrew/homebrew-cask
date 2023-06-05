@@ -1,5 +1,5 @@
 cask "remote-wake-up" do
-  version "1.4.1,34b"
+  version "1.4.1"
   sha256 :no_check
 
   url "https://witt-software.com/downloads/remotewakeup/Remote%20Wake%20Up.dmg"
@@ -9,7 +9,7 @@ cask "remote-wake-up" do
 
   livecheck do
     url "https://www.witt-software.com/downloads/remotewakeup/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   app "Remote Wake Up.app"
@@ -17,7 +17,6 @@ cask "remote-wake-up" do
   zap trash: [
     "~/Library/Containers/com.mac-attender.Remote-Wake-Up/Data/" \
     "Library/Preferences/com.mac-attender.Remote-Wake-Up.plist",
-    "~/Library/Preferences/com.mac-attender.Remote-Wake-Up.plist",
     "~/Library/Containers/com.mac-attender.Remote-Wake-Up/Data/Library/Application Support/Remote Wake Up",
     "~/Library/Containers/com.mac-attender.Remote-Wake-Up/Data/Library/Cookies/Cookies.binarycookies",
     "~/Library/Containers/com.mac-attender.Remote-Wake-Up/Data/Library/Caches/com.plausiblelabs.crashreporter.data",
@@ -32,5 +31,6 @@ cask "remote-wake-up" do
     "~/Library/Containers/com.mac-attender.Remote-Wake-Up/Data/SystemData",
     "~/Library/Containers/com.mac-attender.Remote-Wake-Up/Data/default.profraw",
     "~/Library/Containers/com.mac-attender.Remote-Wake-Up",
+    "~/Library/Preferences/com.mac-attender.Remote-Wake-Up.plist",
   ]
 end

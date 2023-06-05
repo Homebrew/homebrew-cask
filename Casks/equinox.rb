@@ -1,9 +1,9 @@
 cask "equinox" do
-  version "1.0.1"
-  sha256 "9d7d6a8d2faba8b25a7610e86fc320f7ba568b84058df16319ad16e79ee2fbc6"
+  version "2.0"
+  sha256 "6f10fecbc09619a80b78980cef476d78e55c7ef02cac07e75816a7c7be8113b1"
 
   url "https://github.com/rlxone/Equinox/releases/download/v#{version}/Equinox.dmg",
-      verified: "https://github.com/rlxone/Equinox/"
+      verified: "github.com/rlxone/Equinox/"
   name "equinox"
   desc "Create dynamic wallpapers"
   homepage "https://equinoxmac.com/"

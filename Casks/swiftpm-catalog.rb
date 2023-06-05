@@ -1,6 +1,6 @@
 cask "swiftpm-catalog" do
-  version "1.1.10,30"
-  sha256 "584a4d4ad2b3d8945c527606dedd15376690975adb243b89fa3cc1bacfe81848"
+  version "1.1.14,34"
+  sha256 "2b4d97d9a796c242c8cfd34d0790f40cd52989d875f78b739d486150d60b53cc"
 
   url "https://zeezide.com/en/products/swiftpmcatalog/archives/SwiftPM%20Catalog.app-#{version.csv.first}-v#{version.csv.second}.zip"
   name "SwiftPM Catalog"
@@ -9,10 +9,9 @@ cask "swiftpm-catalog" do
 
   livecheck do
     url :homepage
-    strategy :page_match do |page|
-      page.scan(%r{href=.*?/SwiftPM\s*Catalog\.app[._-](\d+(?:\.\d+)+)[_-]v?(\d+)\.zip}i).map do |match|
-        "#{match[0]},#{match[1]}"
-      end
+    regex(%r{href=.*?/SwiftPM\s*Catalog\.app[._-](\d+(?:\.\d+)+)[_-]v?(\d+)\.zip}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 

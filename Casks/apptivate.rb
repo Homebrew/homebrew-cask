@@ -4,7 +4,13 @@ cask "apptivate" do
 
   url "http://www.apptivateapp.com/resources/Apptivate.app.zip"
   name "Apptivate"
+  desc "Create global hotkeys for your files and applications"
   homepage "http://www.apptivateapp.com/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   app "Apptivate.app"
 

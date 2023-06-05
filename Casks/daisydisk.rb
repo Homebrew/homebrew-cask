@@ -1,18 +1,19 @@
 cask "daisydisk" do
-  version "4.23.1"
+  version "4.25"
   sha256 :no_check
 
-  url "https://www.daisydiskapp.com/downloads/DaisyDisk.zip"
+  url "https://daisydiskapp.com/download/DaisyDisk.zip"
   name "DaisyDisk"
   desc "Disk space visualizer"
   homepage "https://daisydiskapp.com/"
 
   livecheck do
-    url "https://daisydiskapp.com/downloads/appcastReleaseNotes.php?appEdition=Standard&osVersion=10.15"
-    regex(/>\s*?Version\s+?v?(\d+(?:\.\d+)+)\s*?</i)
+    url "https://daisydiskapp.com/downloads/appcastFeed.php"
+    strategy :sparkle
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "DaisyDisk.app"
 

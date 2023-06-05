@@ -1,9 +1,9 @@
 cask "betterdisplay" do
-  version "1.2.7"
-  sha256 "3c472a048418de592df14371a6d4e24c591bdc14f748640c0103513c3fba7e95"
+  version "1.4.13"
+  sha256 "1bb67e03e0fedc42c161ca813c5dd91e6894633c2b4d2cea95ac6f8c5b558182"
 
   url "https://github.com/waydabber/BetterDisplay/releases/download/v#{version}/BetterDisplay-v#{version}.dmg",
-      verified: "github.com/waydabber/BetterDisplay"
+      verified: "github.com/waydabber/BetterDisplay/"
   name "BetterDisplay"
   desc "Display management tool"
   homepage "https://betterdisplay.pro/"

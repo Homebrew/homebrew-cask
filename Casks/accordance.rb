@@ -1,19 +1,20 @@
 cask "accordance" do
-  version "13.3.2"
-  sha256 "d425e73ab3d15aee0e57f4226e08d3d884f2dfd33956e5e612e3b3b03da07790"
+  version "14.0.5"
+  sha256 "dd83a902f0bdf261124cc7f661ba96fb6b6462774fdec7074cf1a7aff1d0a944"
 
-  url "https://accordancefiles1.com/products/Accordance_#{version}.dmg",
-      verified: "accordancefiles1.com/"
+  url "https://d366ra67x2bs56.cloudfront.net/mac/Acc_#{version}.zip",
+      verified: "d366ra67x2bs56.cloudfront.net/"
   name "Accordance Bible Software"
   desc "Bible study software"
   homepage "https://www.accordancebible.com/"
 
   livecheck do
-    url "https://accordancebible.com/accordance-installers/"
-    regex(/href=.*?Accordance[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    url "https://accordancefiles1.com/xml/appcast_#{version.major}.xml"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
+  depends_on macos: ">= :mojave"
 
   app "Accordance.app"
 

@@ -1,6 +1,6 @@
 cask "niftyman" do
-  version "1.1.2"
-  sha256 "b9fe90eff7427331360e0c2b603b443a383b3bbe936de5625644e70541bb6f1b"
+  version "2.0.0"
+  sha256 "9ffdfc517fe48f521793a03fcda3912becb004b7652821452f25a3be173f6f55"
 
   url "https://notion-menubar-updates.s3-us-west-2.amazonaws.com/Niftyman-#{version}.dmg",
       verified: "notion-menubar-updates.s3-us-west-2.amazonaws.com/"
@@ -14,4 +14,9 @@ cask "niftyman" do
   end
 
   app "Niftyman.app"
+
+  zap trash: [
+    "~/Library/Application Support/Niftyman",
+    "~/Library/Preferences/com.shadowfax.niftyman.plist",
+  ]
 end

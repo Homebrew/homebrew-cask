@@ -1,6 +1,6 @@
 cask "shottr" do
-  version "1.5.4"
-  sha256 "9bc125e41c1ff9571fab6c6299265bc356572c4762ec730eb45875d1c955855f"
+  version "1.7.0"
+  sha256 "af1765767563d23fdb975a7b17f87d44a0c26fa82a66afce2de420cb04adc05b"
 
   url "https://shottr.cc/dl/Shottr-#{version}.dmg"
   name "Shottr"
@@ -8,10 +8,11 @@ cask "shottr" do
   homepage "https://shottr.cc/"
 
   livecheck do
-    url :homepage
-    regex(/Shottr-(\d+(?:\.\d+)+)\.dmg/i)
+    url "https://shottr.cc/newversion.html"
+    regex(/href=.*?Shottr[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  auto_updates true
   depends_on macos: ">= :catalina"
 
   app "Shottr.app"

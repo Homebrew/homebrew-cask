@@ -1,12 +1,12 @@
 cask "pomatez" do
-  version "1.1.0"
-  sha256 "64b5e09d9ee44328e89cc0f75675380210b202dc92ecf2b618e7a8f5d58a7bda"
+  version "1.2.3"
+  sha256 "695e837bc756987c60bd07616ca0537463c209fcea48f46140ef473a26eb2a1f"
 
-  url "https://github.com/roldanjr/pomatez/releases/download/v#{version}/Pomatez-v#{version}-mac.dmg",
-      verified: "github.com/roldanjr/pomatez/"
+  url "https://github.com/zidoro/pomatez/releases/download/v#{version}/Pomatez-v#{version}-mac.dmg",
+      verified: "github.com/zidoro/pomatez/"
   name "Pomatez"
   desc "Pomodoro timer"
-  homepage "https://roldanjr.github.io/pomatez"
+  homepage "https://zidoro.github.io/pomatez"
 
   livecheck do
     url :url
@@ -15,5 +15,13 @@ cask "pomatez" do
 
   app "Pomatez.app"
 
-  zap trash: "~/Library/Application Support/pomatez"
+  uninstall signal: ["KILL", "application.com.roldanjr.pomatez"]
+
+  zap trash: [
+    "~/Library/Application Support/pomatez",
+    "~/Library/Application Support/CrashReporter/Pomatez_*.plist",
+    "~/Library/Logs/pomatez",
+    "~/Library/Preferences/com.roldanjr.pomatez.plist",
+    "~/Library/Saved Application State/com.roldanjr.pomatez.savedState",
+  ]
 end

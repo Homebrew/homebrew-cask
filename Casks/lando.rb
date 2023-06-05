@@ -1,16 +1,12 @@
 cask "lando" do
-  arch = Hardware::CPU.intel? ? "x64" : "arm64"
+  arch arm: "arm64", intel: "x64"
 
-  version "3.6.4"
+  version "3.18.0"
+  sha256 arm:   "76de528179af59bfd45bffb88f11b3a085509f55f37e9683896155e8ddd6a985",
+         intel: "0aa885d15037b31f5e5948543cc47495810ff86724cdc77e39ca6ea041c1ba77"
 
   url "https://github.com/lando/lando/releases/download/v#{version}/lando-#{arch}-v#{version}.dmg",
       verified: "github.com/lando/lando/"
-  if Hardware::CPU.intel?
-    sha256 "cc1fd722bd8588837ff9cc51ce809075e08a7c49e6b9f3c328377a8ce04d03ae"
-  else
-    sha256 "1dfc9bf38f562f99227cb9430d1311ea885f278e338318afe10871a38aae5925"
-  end
-
   name "Lando"
   desc "Local development environment and DevOps tool built on Docker"
   homepage "https://lando.dev/"
@@ -38,5 +34,5 @@ cask "lando" do
 
   uninstall pkgutil: "dev.lando.pkg.lando"
 
-  # No zap stanza required
+  zap trash: "~/.lando"
 end

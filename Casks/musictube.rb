@@ -1,5 +1,5 @@
 cask "musictube" do
-  version "1.16,2021.1112.104018"
+  version "1.16"
   sha256 :no_check
 
   url "https://flavio.tordini.org/files/musictube/musictube.dmg"
@@ -9,8 +9,10 @@ cask "musictube" do
 
   livecheck do
     url "https://flavio.tordini.org/musictube-ws/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Musictube.app"
 

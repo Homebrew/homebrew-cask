@@ -1,12 +1,13 @@
 cask "dosbox-x" do
-  arch = Hardware::CPU.intel? ? "x86_64" : "arm64"
+  arch arm: "arm64", intel: "x86_64"
 
-  if Hardware::CPU.intel?
-    version "0.84.1,20220701063003"
-    sha256 "f5a094f291b81563c31ce0a6f3b789d7a51f0503d348bdf71e13897c94484c03"
-  else
-    version "0.84.1,20220701062948"
-    sha256 "190c35e42f98bda1ea880e2fd9f1d1a04b07ec50b365f220ec22df520f1cce9d"
+  on_arm do
+    version "2023.05.01,20230501092707"
+    sha256 "3af029df45ac45438f557c93fb7ada21b5058f61ea5d31cba90a71603a9b786e"
+  end
+  on_intel do
+    version "2023.05.01,20230501092707"
+    sha256 "472989640b7992c2f4c978db449aa47cd7331e5424585cfaffc522be90fb1d68"
   end
 
   url "https://github.com/joncampbell123/dosbox-x/releases/download/dosbox-x-v#{version.csv.first}/dosbox-x-macosx-#{arch}-#{version.csv.second}.zip",
@@ -17,11 +18,19 @@ cask "dosbox-x" do
 
   livecheck do
     url "https://github.com/joncampbell123/dosbox-x/releases/latest"
-    strategy :page_match do |page|
-      match = page.match(%r{href=".*?/dosbox-x-v?(\d+(?:\.\d+)+)/dosbox-x-macosx-#{arch}-([^/]+)\.zip"}i)
-      next if match.blank?
+    regex(%r{href=".*?/dosbox-x-v?(\d+(?:\.\d+)+)/dosbox-x-macosx-#{arch}-([^/]+)\.zip"}i)
+    strategy :header_match do |headers, regex|
+      next if headers["location"].blank?
 
-      "#{match[1]},#{match[2]}"
+      # Identify the latest tag from the response's `location` header
+      latest_tag = File.basename(headers["location"])
+      next if latest_tag.blank?
+
+      # Fetch the assets list HTML for the latest tag and match within it
+      assets_page = Homebrew::Livecheck::Strategy.page_content(
+        @url.sub(%r{/releases/?.+}, "/releases/expanded_assets/#{latest_tag}"),
+      )
+      assets_page[:content]&.scan(regex)&.map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 

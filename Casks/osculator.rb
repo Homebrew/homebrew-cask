@@ -3,7 +3,7 @@ cask "osculator" do
   sha256 "29e226f1a9d6cdfa8bf94f56ae91cd58399674a9463f8fb1bbcd8c875244378b"
 
   url "https://distribution.wildora.net/products/osculator-v#{version.major}/revisions/#{version.csv.second}/osculator-#{version.csv.first}.dmg",
-      verified: "https://distribution.wildora.net/products/"
+      verified: "distribution.wildora.net/products/"
   name "Osculator"
   desc "Connect MIDI and OSC Controllers"
   homepage "https://osculator.net/"

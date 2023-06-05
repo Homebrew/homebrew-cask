@@ -1,10 +1,10 @@
 cask "diskcatalogmaker" do
-  version "8.4.9"
-  sha256 "83438445497856e6b6c231d75e6a62429547d24e135474b60a81a533103a7ea9"
+  version "8.6.5"
+  sha256 "0b928f3803acca029b060c590fbb3931f91ca80b1fb6c4184fc5317d0cd24f3c"
 
   url "https://download.diskcatalogmaker.com/download/zip/DiskCatalogMaker#{version.no_dots}.zip"
   name "DiskCatalogMaker"
-  desc "Toast-bundled version of DiskCatalogMaker"
+  desc "Disk management tool"
   homepage "https://diskcatalogmaker.com/"
 
   livecheck do

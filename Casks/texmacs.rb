@@ -1,13 +1,9 @@
 cask "texmacs" do
-  arch = Hardware::CPU.intel? ? "" : "-arm"
+  arch arm: "-arm"
 
   version "2.1.2"
-
-  if Hardware::CPU.intel?
-    sha256 "db1f9a525554d76794e0339cc19fb4d45eee79bce5f7a176c8dc8b8667181b08"
-  else
-    sha256 "d0a5abf3dafba31073ffc3bbfbeff5300453954a54495affee8a16a2f9196587"
-  end
+  sha256 arm:   "d0a5abf3dafba31073ffc3bbfbeff5300453954a54495affee8a16a2f9196587",
+         intel: "db1f9a525554d76794e0339cc19fb4d45eee79bce5f7a176c8dc8b8667181b08"
 
   url "https://ftp.texmacs.org/TeXmacs/tmftp/macos/TeXmacs-#{version}#{arch}.dmg"
   name "GNU TeXmacs"
@@ -15,7 +11,7 @@ cask "texmacs" do
   homepage "https://www.texmacs.org/"
 
   livecheck do
-    url "http://ftp.texmacs.org/TeXmacs/appcast/macos.xml"
+    url "https://ftp.texmacs.org/TeXmacs/appcast/macos.xml"
     strategy :sparkle
   end
 
