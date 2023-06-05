@@ -12,7 +12,7 @@ cask "virtualhere" do
     regex(/Version\s*(\d+(?:\.\d+)+)/i)
   end
 
-  app "VirtualHere.app"
+  app "VirtualHereUniversal.app"
 
   zap trash: "~/Library/Preferences/com.virtualhere.vhui.plist"
 end
