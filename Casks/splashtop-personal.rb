@@ -17,4 +17,11 @@ cask "splashtop-personal" do
 
   uninstall quit:    "com.splashtop.stp.macosx",
             pkgutil: "com.splashtop.stp.*"
+
+  zap trash: [
+    "~/Library/Application Support/Splashtop Personal",
+    "~/Library/Caches/com.splashtop.stp.macosx",
+    "~/Library/HTTPStorages/com.splashtop.stp.macosx",
+    "~/Library/Preferences/com.splashtop.stp.macosx.plist",
+  ]
 end
