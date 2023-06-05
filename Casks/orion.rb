@@ -49,7 +49,7 @@ cask "orion" do
 
     depends_on macos: :monterey
   end
-  on_ventura do
+  on_ventura :or_newer do
     sha256 "2db71b134a209c06c44dd4dc357e609f7fcf03a9408b53bb41864716b9e273de"
 
     url "https://browser.kagi.com/updates/13_0/#{version.csv.second}.zip"
@@ -59,7 +59,7 @@ cask "orion" do
       strategy :sparkle
     end
 
-    depends_on macos: :ventura
+    depends_on macos: "<= :ventura"
   end
 
   name "Orion Browser"
