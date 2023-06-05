@@ -9,7 +9,7 @@ cask "visual-studio" do
 
   livecheck do
     url "https://aka.ms/vs/mac/download"
-    regex(%r{/download/pr/([^/]+)/([^/]+)/visualstudioformac-(\d+(?:\.\d+)+)-x64.dmg}i)
+    regex(%r{/download/pr/([^/]+)/([^/]+)/visualstudioformacinstaller[._-]v?(\d+(?:\.\d+)+).dmg}i)
     strategy :header_match do |headers, regex|
       match = headers["location"].match(regex)
       next if match.blank?
