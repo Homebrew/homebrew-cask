@@ -1,7 +1,7 @@
 cask "anki" do
   arch arm: "apple", intel: "intel"
 
-  version "2.1.64"
+  version "2.1.65"
 
   on_catalina :or_older do
     sha256 "d39cb359228ed4e0166f26b64656003aa6c41bc86f009d2e6ea49bab13e1cdee"
@@ -10,8 +10,8 @@ cask "anki" do
         verified: "github.com/ankitects/anki/"
   end
   on_big_sur :or_newer do
-    sha256 arm:   "489591008d578bdda921c394696f1ce2c2c00094d45ad78be28a979bae8e5afb",
-           intel: "e6fbdee9e887fce942a9ad8720d41fbb09860e98dcd6e8a254949cea2179ae5a"
+    sha256 arm:   "d68c1b78bdbc7673980fb9d1f6e66df441ef14aef91851917ba4bda15f39128a",
+           intel: "ce6088efbc8b768266ff39d4832fb167c25defb17708f973ab771e0737240385"
 
     url "https://github.com/ankitects/anki/releases/download/#{version}/anki-#{version}-mac-#{arch}-qt6.dmg",
         verified: "github.com/ankitects/anki/"
