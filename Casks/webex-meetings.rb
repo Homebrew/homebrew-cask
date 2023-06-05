@@ -2,7 +2,13 @@ cask "webex-meetings" do
   version :latest
   sha256 :no_check
 
-  url "https://akamaicdn.webex.com/client/Cisco_Webex_Meetings.pkg"
+  on_arm do
+    url "https://akamaicdn.webex.com/client/Cisco_Webex_Meetings.pkg"
+  end
+  on_intel do
+    url "https://akamaicdn.webex.com/client/webexapp.dmg"
+  end
+
   name "Webex Meetings"
   desc "Video communication and virtual meeting platform"
   homepage "https://www.webex.com/"
