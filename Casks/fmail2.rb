@@ -1,7 +1,7 @@
 cask "fmail2" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
-  version "2.1.1"
-  sha256 "6456229ec541c7f21d2f8bc16ac671d93d8748d66753f3ea881f2a39fbd148eb"
+  version "2.1.2"
+  sha256 "31f391b656cbccfce71eee5cca6a492d0c38153abda03f0ee5a9612db97cebda"
 
   url "https://arievanboxel.fr/fmail2/sparkle/FMail2_#{version.no_dots}.zip",
       verified: "arievanboxel.fr/fmail2/sparkle/"
