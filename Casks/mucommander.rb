@@ -10,7 +10,5 @@ cask "mucommander" do
 
   app "muCommander.app"
 
-  zap trash: [
-    "~/Library/Preferences/muCommander",
-  ]
+  zap trash: "~/Library/Preferences/muCommander"
 end
