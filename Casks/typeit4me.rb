@@ -1,6 +1,6 @@
 cask "typeit4me" do
-  version "6.3.8,256"
-  sha256 "f1010b68dabd05cd1df5566fa1bb4381f897eef09f273912ae0b6913ff9e62b5"
+  version "6.3.9,258"
+  sha256 "7205f7e0ea0290b5d18d914abffc8efd994b9e74ffe8792c71a1907c09f86352"
 
   url "https://ettoresoftware.store/download/TypeIt4Me#{version.csv.first}b#{version.csv.second}.zip"
   name "TypeIt4Me"
