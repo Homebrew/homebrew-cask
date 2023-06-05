@@ -25,4 +25,9 @@ cask "splashtop-streamer" do
               "com.splashtop.streamer-srioframebuffer",
             ],
             pkgutil:   "com.splashtop.Splashtop-Streamer"
+
+  zap trash: [
+    "Library/Application Support/Splashtop Streamer",
+    "Library/Preferences/com.splashtop.Splashtop-Streamer.plist",
+  ]
 end
