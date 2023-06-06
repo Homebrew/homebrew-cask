@@ -9,7 +9,7 @@ cask "sketch" do
       skip "Legacy version"
     end
 
-    depends_on macos ">= :big_sur"
+    depends_on macos: ">= :big_sur"
   end
   on_monterey :or_newer do
     version "97,173164"
