@@ -4,7 +4,7 @@ cask "anki" do
   version "2.1.65"
 
   on_catalina :or_older do
-    sha256 "d39cb359228ed4e0166f26b64656003aa6c41bc86f009d2e6ea49bab13e1cdee"
+    sha256 "dc69a97b4acacc9890c727695cc466a85dc3d6df7479ebb8e4aa1d99718e4954"
 
     url "https://github.com/ankitects/anki/releases/download/#{version}/anki-#{version}-mac-#{arch}-qt5.dmg",
         verified: "github.com/ankitects/anki/"
