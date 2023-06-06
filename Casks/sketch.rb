@@ -1,5 +1,5 @@
 cask "sketch" do
-  on_big_sur do
+  on_big_sur :or_older do
     version "96.3,167315"
     sha256 "3ba2c147aab6b2fcb4b5cc3e3ee7fce3f63551e6ef743a7afe459bd0a87bb4a6"
 
@@ -8,6 +8,8 @@ cask "sketch" do
     livecheck do
       skip "Legacy version"
     end
+
+    depends_on macos ">= :big_sur"
   end
   on_monterey :or_newer do
     version "97,173164"
