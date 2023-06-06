@@ -2,7 +2,7 @@ cask "youdaodict" do
   version "9.3.0,934"
   sha256 :no_check
 
-  url "https://codown.youdao.com/cidian/download/MacDict.dmg"
+  url "https://codown.youdao.com/cidian/download/9.3.0/MacDict.dmg"
   name "YoudaoDict"
   name "网易有道词典"
   desc "Youdao Dictionary"
