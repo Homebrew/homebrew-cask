@@ -50,8 +50,8 @@ cask "powerphotos" do
     end
   end
   on_big_sur do
-    version "2.1.7"
-    sha256 "cd9d64f081d093a7a8354b4cb04a2bf7c086ef90ce6b834050995d59f8e4b1d6"
+    version "2.1.8"
+    sha256 "b9fbf7b188e157b20b779611d5fd4f922574d8818517f4341a538c06bbfcd88d"
 
     url "https://www.fatcatsoftware.com/powerphotos/PowerPhotos_#{version.no_dots}.zip"
 
