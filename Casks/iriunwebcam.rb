@@ -13,6 +13,8 @@ cask "iriunwebcam" do
     regex(%r{href=.*?/IriunWebcam[._-]?v?(\d+(?:\.\d+)+)\.pkg}i)
   end
 
+  depends_on macos: ">= :monterey"
+
   pkg "IriunWebcam-#{version}.pkg"
 
   uninstall quit:      [
@@ -26,4 +28,6 @@ cask "iriunwebcam" do
               "com.iriun.cmio.DPA.camerc",
               "com.iriun.cmio.DPA.camerd",
             ]
+
+  zap trash: "~/Library/Saved Application State/com.iriun.macwebcam.savedState"
 end
