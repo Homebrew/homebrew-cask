@@ -53,7 +53,7 @@ cask "powerphotos" do
     version "2.1.8"
     sha256 "b9fbf7b188e157b20b779611d5fd4f922574d8818517f4341a538c06bbfcd88d"
 
-    url "https://www.fatcatsoftware.com/powerphotos/PowerPhotos_#{version.no_dots}.zip"
+    url "https://www.fatcatsoftware.com/powerphotos/downloads/PowerPhotos_#{version.no_dots}.zip"
 
     livecheck do
       skip "Legacy version"
