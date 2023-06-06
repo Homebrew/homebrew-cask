@@ -7,9 +7,9 @@ cask "miniconda" do
 
   url "https://repo.anaconda.com/miniconda/Miniconda3-#{version}-MacOSX-#{arch}.sh",
       verified: "repo.anaconda.com/miniconda/"
-  name "Continuum Analytics Miniconda"
+  name "Miniconda"
   desc "Minimal installer for conda"
-  homepage "https://conda.io/miniconda.html"
+  homepage "https://docs.conda.io/en/latest/miniconda.html"
 
   livecheck do
     url "https://repo.anaconda.com/miniconda/"
