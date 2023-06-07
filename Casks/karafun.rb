@@ -1,16 +1,23 @@
 cask "karafun" do
-  version "2.2.0,86"
-  sha256 "ca26e741588827b17b8ae4d72d3f713ba8aa029cbddea08eb8403a9bc8151b42"
+  version "2.3.0,91,8b1dd03e90009107ae99a212322cc03b,e8179eab96"
+  sha256 "9342909a313edb999a16885963538314f477438bcfb1fb7fd79c36c6b1cbc126"
 
-  url "https://c20.recis.io/sl/75651288c7/63683b44547cfdbafd795b67c7101da5/KaraFun_#{version.csv.first}.#{version.csv.second}.dmg",
-      verified: "c20.recis.io/sl/75651288c7/63683b44547cfdbafd795b67c7101da5/"
+  url "https://c17.recis.io/sl/#{version.csv.fourth}/#{version.csv.third}/KaraFun_#{version.csv.first}.#{version.csv.second}.dmg",
+      verified: "c17.recis.io/sl/"
   name "KaraFun"
   desc "Karaoke player software"
   homepage "https://www.karafun.com/"
 
   livecheck do
-    url "https://www.karafun.fr/osx/appcast.xml"
-    strategy :sparkle
+    url "https://www.karafun.com/osx/appcast.xml"
+    regex(%r{sl/([^/]+)/([^/]+)/v?KaraFun[._-]v?(\d+(?:\.\d+)+)})
+    strategy :sparkle do |item|
+      puts item.url
+      match = item.url.match(regex)
+      next if match.blank?
+
+      "#{item.short_version},#{item.version},#{match[2]},#{match[1]}"
+    end
   end
 
   auto_updates true
