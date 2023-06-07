@@ -1,11 +1,11 @@
 cask "openlens" do
-  arch arm: "arm64", intel: "x64"
+  arch arm: "-arm64"
 
-  version "6.5.2.286"
-  sha256 arm:   "470668badba23334be2f41297f95f2bab4ecc2457354f4e6a89fd02da0714923",
-         intel: "998df487b059fb2930a53de94a3e170e5e031cf3fb1185adfa67b9f989783265"
+  version "6.5.2-309"
+  sha256 arm:   "e4def8aaae0036cef24647bcda4d62546114ee6b7ce23b5900f174b8ec422602",
+         intel: "e5344ed6f97559df402d25af2417e39d6479a44187393c321f801b4bd47b7ef0"
 
-  url "https://github.com/MuhammedKalkan/OpenLens/releases/download/v#{version}/OpenLens-#{version}-#{arch}-mac.dmg"
+  url "https://github.com/MuhammedKalkan/OpenLens/releases/download/v#{version}/OpenLens-#{version}#{arch}.dmg"
   name "OpenLens"
   desc "Open source build of Lens Kubernetes IDE"
   homepage "https://github.com/MuhammedKalkan/OpenLens/"
