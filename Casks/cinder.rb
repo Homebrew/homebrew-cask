@@ -7,8 +7,8 @@ cask "cinder" do
   homepage "https://libcinder.org/"
 
   livecheck do
-    url "https://github.com/cinder/cinder"
-    strategy :git
+    url "https://libcinder.org/download"
+    regex(/href=.*?cinder[._-]v?(\d+(?:\.\d+)+)[._-]mac\.zip/i)
   end
 
   suite "cinder_#{version}_mac"
