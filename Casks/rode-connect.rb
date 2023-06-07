@@ -4,8 +4,15 @@ cask "rode-connect" do
 
   url "https://update.rode.com/connect/RODE_Connect_MACOS.zip"
   name "Rode Connect"
-  desc "RØDE Connect is a simple and powerful software solution for podcasting"
+  desc "Podcasting software"
   homepage "https://rode.com/en-us/software/rodeconnect"
+
+  livecheck do
+    url "https://update.rode.com/rode-devices-manifest.json"
+    strategy :json do |json|
+      json["rode-connect-manifest"]["macos"]["main-version"]["update-version"]
+    end
+  end
 
   pkg "RØDE Connect.pkg"
 
