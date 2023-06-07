@@ -17,9 +17,9 @@ cask "celestialteapot-runway" do
   app "Runway.app"
 
   zap trash: [
-    "~/Library/Preferences/com.celestialteapot.Runway2.plist",
-    "~/Library/HTTPStorages/com.celestialteapot.Runway2",
     "~/Library/Application Support/com.celestialteapot.Runway2",
+    "~/Library/HTTPStorages/com.celestialteapot.Runway2",
+    "~/Library/Preferences/com.celestialteapot.Runway2.plist",
     "~/Library/Saved Application State/com.celestialteapot.Runway2.savedState",
   ]
 end
