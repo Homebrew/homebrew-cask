@@ -13,4 +13,6 @@ cask "cinder" do
   end
 
   suite "cinder_#{version}_mac"
+
+  zap trash: "~/Library/Preferences/org.libcinder.TinderBox.plist"
 end
