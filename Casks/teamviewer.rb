@@ -29,7 +29,7 @@ cask "teamviewer" do
     EOS
   end
   on_big_sur :or_newer do
-    version "15.42.4"
+    version "15.42.7"
 
     pkg "TeamViewer.pkg"
   end
@@ -40,7 +40,7 @@ cask "teamviewer" do
   homepage "https://www.teamviewer.com/"
 
   livecheck do
-    url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=10.15.1&type=1&channel=1"
+    url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=11.7&type=1&channel=1"
     strategy :sparkle
   end
 
