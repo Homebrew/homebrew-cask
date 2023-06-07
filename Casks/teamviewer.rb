@@ -1,21 +1,34 @@
-# typed: true
-# frozen_string_literal: true
-
 cask "teamviewer" do
-  sha256 :no_check
-
   on_high_sierra :or_older do
     version "15.2.2756"
+    sha256 "fe7daf80f9aee056f97d11183941470fa1c5823101a0951990340b6264a2651a"
+
+    livecheck do
+      url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=10.12.1&type=1&channel=1"
+      strategy :sparkle
+    end
 
     pkg "TeamViewer.pkg"
   end
   on_mojave do
     version "15.42.4"
+    sha256 "3357bc366cd0295dd100b790d6af6216d349d34451ea18ba08692a51eadd6cf7"
+
+    livecheck do
+      url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=10.14.1&type=1&channel=1"
+      strategy :sparkle
+    end
 
     pkg "TeamViewer.pkg"
   end
   on_catalina do
     version "15.42.4"
+    sha256 "3357bc366cd0295dd100b790d6af6216d349d34451ea18ba08692a51eadd6cf7"
+
+    livecheck do
+      url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=10.15.1&type=1&channel=1"
+      strategy :sparkle
+    end
 
     # This Cask should be installed and uninstalled manually on Catalina.
     # See https://github.com/Homebrew/homebrew-cask/issues/76829
@@ -29,7 +42,13 @@ cask "teamviewer" do
     EOS
   end
   on_big_sur :or_newer do
-    version "15.42.4"
+    version "15.42.7"
+    sha256 "cd7e1d5c0de6ce6821d17923816317d6e88612802ebd2743afac6f39e5aa42cf"
+
+    livecheck do
+      url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=11.7&type=1&channel=1"
+      strategy :sparkle
+    end
 
     pkg "TeamViewer.pkg"
   end
@@ -38,11 +57,6 @@ cask "teamviewer" do
   name "TeamViewer"
   desc "Remote access and connectivity software focused on security"
   homepage "https://www.teamviewer.com/"
-
-  livecheck do
-    url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=10.15.1&type=1&channel=1"
-    strategy :sparkle
-  end
 
   auto_updates true
   conflicts_with cask: "teamviewer-host"
