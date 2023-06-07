@@ -4,8 +4,9 @@ cask "teamviewer" do
     sha256 "fe7daf80f9aee056f97d11183941470fa1c5823101a0951990340b6264a2651a"
 
     livecheck do
-      url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=10.12.1&type=1&channel=1"
-      strategy :sparkle
+      url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=10.11.1&type=1&channel=1"
+      regex(%r{url=.*update/v?(\d+(?:\.\d+)+)/Teamviewer\.pkg}i)
+      strategy :page_match
     end
 
     pkg "TeamViewer.pkg"
