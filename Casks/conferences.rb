@@ -17,4 +17,13 @@ cask "conferences" do
   depends_on macos: ">= :mojave"
 
   app "Conferences.app"
+
+  zap trash: [
+    "~/Library/Application Support/digital.conferences.macos",
+    "~/Library/Caches/digital.conferences.macos",
+    "~/Library/HTTPStorages/digital.conferences.macos",
+    "~/Library/Preferences/digital.conferences.macos.plist",
+    "~/Library/Saved Application State/digital.conferences.macos.savedState",
+    "~/Library/WebKit/digital.conferences.macos",
+  ]
 end
