@@ -1,8 +1,8 @@
 cask "karafun" do
-  version "2.3.0.91,8b1dd03e90009107ae99a212322cc03b,fcfd34139c"
+  version "2.3.0,91,8b1dd03e90009107ae99a212322cc03b,fcfd34139c"
   sha256 "9342909a313edb999a16885963538314f477438bcfb1fb7fd79c36c6b1cbc126"
 
-  url "https://c20.recis.io/sl/#{version.csv.third}/#{version.csv.second}/KaraFun_#{version.csv.first}.dmg",
+  url "https://c20.recis.io/sl/#{version.csv.fourth}/#{version.csv.third}/KaraFun_#{version.csv.first}.#{version.csv.second}.dmg",
       verified: "c20.recis.io/sl/"
   name "KaraFun"
   desc "Karaoke player software"
@@ -16,7 +16,7 @@ cask "karafun" do
       match = item.url.match(regex)
       next if match.blank?
 
-      "#{match[3]},#{match[2]},#{match[1]}"
+      "#{item.short_version},#{item.version},#{match[2]},#{match[1]}"
     end
   end
 
