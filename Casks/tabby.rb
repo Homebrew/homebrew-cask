@@ -26,5 +26,7 @@ cask "tabby" do
     "~/Library/Preferences/org.tabby.helper.plist",
     "~/Library/Preferences/org.tabby.plist",
     "~/Library/Saved Application State/org.tabby.savedState",
+    "~/Library/Services/Open Tabby here.workflow",
+    "~/Library/Services/Paste path into Tabby.workflow",
   ]
 end
