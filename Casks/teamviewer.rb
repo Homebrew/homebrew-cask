@@ -4,7 +4,8 @@ cask "teamviewer" do
     sha256 "fe7daf80f9aee056f97d11183941470fa1c5823101a0951990340b6264a2651a"
 
     livecheck do
-      skip "Legacy version"
+      url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=10.12.1&type=1&channel=1"
+      strategy :sparkle
     end
 
     pkg "TeamViewer.pkg"
@@ -14,7 +15,7 @@ cask "teamviewer" do
     sha256 "3357bc366cd0295dd100b790d6af6216d349d34451ea18ba08692a51eadd6cf7"
 
     livecheck do
-      url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=10.14&type=1&channel=1"
+      url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=10.14.1&type=1&channel=1"
       strategy :sparkle
     end
 
