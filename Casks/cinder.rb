@@ -4,6 +4,7 @@ cask "cinder" do
 
   url "https://libcinder.org/static/releases/cinder_#{version}_mac.zip"
   name "Cinder"
+  desc "C++ library for creative coding"
   homepage "https://libcinder.org/"
 
   livecheck do
