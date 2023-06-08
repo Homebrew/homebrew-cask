@@ -16,7 +16,7 @@ cask "visual-studio" do
   homepage "https://visualstudio.microsoft.com/vs/mac/"
 
   livecheck do
-    url "https://aka.ms/vsmac/manifest/17-stable"
+    url "https://aka.ms/vsmac/manifest/#{version.major}-stable"
     regex(%r{/download/pr/([^/]+)/([^/]+)/visualstudioformac[._-]v?(\d+(?:\.\d+)+)-#{arch}.dmg}i)
     strategy :json do |json|
       json["items"].flat_map do |item|
