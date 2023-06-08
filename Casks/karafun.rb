@@ -12,11 +12,14 @@ cask "karafun" do
     url "https://www.karafun.com/osx/appcast.xml"
     regex(%r{sl/([^/]+)/([^/]+)/v?KaraFun[._-]v?(\d+(?:\.\d+)+)})
     strategy :sparkle do |item|
-      puts item.url
       match = item.url.match(regex)
       next if match.blank?
 
-      "#{item.short_version},#{item.version},#{match[2]},#{match[1]}"
+      if "#{item.short_version},#{item.version}" == "#{version.csv.first},#{version.csv.second}"
+        version.to_s
+      else
+        "#{item.short_version},#{item.version},#{match[2]},#{match[1]}"
+      end
     end
   end
 
