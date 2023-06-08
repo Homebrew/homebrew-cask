@@ -1,5 +1,5 @@
 cask "karafun" do
-  version "2.3.0,91,8b1dd03e90009107ae99a212322cc03b,e8179eab96"
+  version "2.3.0,91,8b1dd03e90009107ae99a212322cc03b,1466486e9d"
   sha256 "9342909a313edb999a16885963538314f477438bcfb1fb7fd79c36c6b1cbc126"
 
   url "https://c17.recis.io/sl/#{version.csv.fourth}/#{version.csv.third}/KaraFun_#{version.csv.first}.#{version.csv.second}.dmg",
