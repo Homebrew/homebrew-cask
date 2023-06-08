@@ -4,7 +4,7 @@ cask "createuserpkg" do
 
   url "https://magervalp.github.io/CreateUserPkg/Distributions/CreateUserPkg-#{version}.dmg"
   name "CreateUserPkg"
-  desc "Create packages to deploy Mac OS X user accounts"
+  desc "Create packages to deploy user accounts"
   homepage "https://magervalp.github.io/CreateUserPkg/"
 
   app "CreateUserPkg.app"
