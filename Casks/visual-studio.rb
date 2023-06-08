@@ -1,20 +1,27 @@
 cask "visual-studio" do
-  version "17.5.0.124,d49c0df0-3dac-41e3-836c-44efacfc364d,4f78329566e146c4a91ad5dd4ac680b9"
-  sha256 "ef25bef027ee1ee579cce624a1c11c7594c997532a859e7ca643801682374228"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://download.visualstudio.microsoft.com/download/pr/#{version.csv.second}/#{version.csv.third}/visualstudioformacinstaller-#{version.csv.first}.dmg"
+  on_arm do
+    version "17.5.6.3,91b81b8c-74ac-4710-a93f-49bf4553845e,ed3a76bd92fcbfe800b830b2739774e0"
+    sha256 "cf336af2f0b93d4934ababf2d684b61da16bd8fa9a16b675291872ef26b03d7d"
+  end
+  on_intel do
+    version "17.5.6.3,91b81b8c-74ac-4710-a93f-49bf4553845e,e5a8ce0b143da17fa397b257562e6033"
+    sha256 "296df672054773fbee2784e88b461464966bd80b3aedc84c0f5c8e77ddb2213c"
+  end
+
+  url "https://download.visualstudio.microsoft.com/download/pr/#{version.csv.second}/#{version.csv.third}/visualstudioformac-#{version.csv.first}-#{arch}.dmg"
   name "Microsoft Visual Studio"
   desc "Integrated development environment"
   homepage "https://visualstudio.microsoft.com/vs/mac/"
 
   livecheck do
-    url "https://aka.ms/vs/mac/download"
-    regex(%r{/download/pr/([^/]+)/([^/]+)/visualstudioformacinstaller-(\d+(?:\.\d+)+).dmg}i)
-    strategy :header_match do |headers, regex|
-      match = headers["location"].match(regex)
-      next if match.blank?
-
-      "#{match[3]},#{match[1]},#{match[2]}"
+    url "https://aka.ms/vsmac/manifest/#{version.major}-stable"
+    regex(%r{/download/pr/([^/]+)/([^/]+)/visualstudioformac[._-]v?(\d+(?:\.\d+)+)-#{arch}.dmg}i)
+    strategy :json do |json|
+      json["items"].flat_map do |item|
+        item["url"]&.scan(regex)&.map { |match| "#{match[2]},#{match[0]},#{match[1]}" }
+      end
     end
   end
 
@@ -22,9 +29,7 @@ cask "visual-studio" do
   depends_on macos: ">= :catalina"
   depends_on cask: "homebrew/cask-versions/mono-mdk-for-visual-studio"
 
-  installer manual: "Install Visual Studio for Mac.app"
-
-  uninstall delete: "/Applications/Visual Studio.app"
+  app "Visual Studio.app"
 
   zap trash: [
     "/Applications/Xamarin Profiler.app",
