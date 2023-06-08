@@ -8,4 +8,6 @@ cask "clocksaver" do
   homepage "https://github.com/soffes/Clock.saver"
 
   screen_saver "Clock.saver"
+
+  # No zap stanza required
 end
