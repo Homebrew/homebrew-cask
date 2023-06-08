@@ -14,7 +14,7 @@ cask "loginputmac" do
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :high_sierra"
 
   pkg "落格输入法 macOS #{version.major}.pkg"
 
