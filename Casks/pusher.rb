@@ -7,4 +7,9 @@ cask "pusher" do
   homepage "https://github.com/noodlewerk/NWPusher"
 
   app "Pusher.app"
+
+  zap trash: [
+    "~/Library/Pusher",
+    "~/Library/Saved Application State/com.noodlewerk.Pusher.savedState",
+  ]
 end
