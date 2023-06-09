@@ -1,11 +1,11 @@
 cask "microsoft-edge" do
-  folder = on_arch_conditional arm:   "5b86819a-e1ec-45bb-8269-dc568265aa6a",
-                               intel: "739bdf6d-2c11-468d-92be-7964fc6788d8"
+  folder = on_arch_conditional arm:   "dcaed03b-bd41-40c0-bd42-9c4ab774c5f9",
+                               intel: "99b54385-40f7-4275-8c97-386da51bf238"
   linkid = on_arch_conditional arm: "2093504", intel: "2069148"
 
-  version "114.0.1823.41"
-  sha256 arm:   "0be5a9215360ca7a5b2220d7b5301abea9e7f8bdbf4d6bde9d1f40b5703fd702",
-         intel: "dedb27a16284b00d4d2ed93973df95ae26b6c8914151048ca11da1b60336510a"
+  version "114.0.1823.43"
+  sha256 arm:   "c4d0db7bd50971c6dea451823d19b7c6bc04e1f62fa357464871ad2032656283",
+         intel: "e43aa0cf804a796078cc379dac0f22fcacfa569e6fca279522455a2bd50d7908"
 
   url "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/#{folder}/MicrosoftEdge-#{version}.pkg"
   name "Microsoft Edge"
