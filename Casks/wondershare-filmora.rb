@@ -1,9 +1,9 @@
 cask "wondershare-filmora" do
   arch arm: "arm_"
 
-  version "12.9.0"
-  sha256 arm:   "82505f157b6e2ff81e74a6ba86553467adf8ba29db0a6a86af5ae30c7037e4d9",
-         intel: "a180ef0adff67f2629cdc22a7770902ea97470b47b9efc61e057069273e74216"
+  version "12.9.1"
+  sha256 arm:   "58790f341dbc8a7d5d8340a3bf9fd2c4998d3d2792c462ebbe1f1e051ba8bbbd",
+         intel: "d5d689932d2924dd27e78ef3ffcd7fe477152ff736d8f73a5a6800be26a6f6a9"
 
   url "https://download.wondershare.com/cbs_down/filmora-mac_#{arch}#{version}_gray_full718.dmg"
   name "Wondershare Filmora"
