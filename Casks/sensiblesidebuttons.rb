@@ -8,4 +8,6 @@ cask "sensiblesidebuttons" do
   homepage "https://sensible-side-buttons.archagon.net/"
 
   app "SensibleSideButtons.app"
+
+  zap trash: "~/Library/Preferences/net.archagon.sensible-side-buttons.plist"
 end
