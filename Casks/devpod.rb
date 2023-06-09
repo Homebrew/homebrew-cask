@@ -16,6 +16,8 @@ cask "devpod" do
     strategy :github_latest
   end
 
+  auto_updates true
+
   app "DevPod.app"
 
   zap trash: "~/.devpod"
