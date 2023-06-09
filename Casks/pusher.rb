@@ -4,6 +4,7 @@ cask "pusher" do
 
   url "https://github.com/noodlewerk/NWPusher/releases/download/#{version}/pusher.app.zip"
   name "NWPusher"
+  desc "Send push notifications through Apple Push Notification Service"
   homepage "https://github.com/noodlewerk/NWPusher"
 
   app "Pusher.app"
