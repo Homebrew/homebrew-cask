@@ -17,4 +17,6 @@ cask "devpod" do
   end
 
   app "DevPod.app"
+
+  zap trash: "~/.devpod"
 end
