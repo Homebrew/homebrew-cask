@@ -17,4 +17,11 @@ cask "masscode" do
   end
 
   app "massCode.app"
+
+  zap trash: [
+        "~/Library/Application Support/massCode",
+        "~/Library/Preferences/io.masscode.app.plist",
+        "~/Library/Saved Application State/io.masscode.app.savedState",
+      ],
+      rmdir: "~/massCode"
 end
