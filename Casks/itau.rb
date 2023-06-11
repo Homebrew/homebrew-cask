@@ -1,8 +1,14 @@
 cask "itau" do
   arch arm: "_m1"
 
-  version "2.3.2.13"
   sha256 :no_check
+
+  on_arm do
+    version "2.3.2.13"
+  end
+  on_intel do
+    version "2.2.2.13"
+  end
 
   url "https://guardiao.itau.com.br/UpdateServer/aplicativoitau#{arch}.dmg"
   name "Itau"
