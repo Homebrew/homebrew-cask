@@ -10,13 +10,16 @@ cask "mumu-x" do
 
   livecheck do
     url "https://vendors.paddle.com/download/product/c589bd0d-8615-45e5-9edd-986cce462fe5"
-    regex(%r{/([^/]+)_Mumu%20X%20(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{/([^/]+)_Mumu%20X%20(\d+(?:\.\d+)+)\.dmg}i)
     strategy :header_match do |headers, regex|
-      headers["location"].scan(regex).map { |match| "#{match[1]},#{match[0]}" }
+      match = headers["location"]&.match(regex)
+      next if match.blank?
+
+      "#{match[2]},#{match[1]}"
     end
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :catalina"
 
   app "Mumu X.app"
 
