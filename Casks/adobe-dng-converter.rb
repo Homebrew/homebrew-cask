@@ -21,4 +21,10 @@ cask "adobe-dng-converter" do
               "com.adobe.CameraRawProfiles",
               "com.adobe.DNGConverter",
             ]
+
+  zap trash: [
+    "~/Library/Application Support/Adobe/CameraRaw/GPU/Adobe DNG Converter",
+    "~/Library/Application Support/Adobe/CameraRaw/Logs/DNG Converter Log*",
+    "~/Library/Saved Application State/com.adobe.DNGConverter.savedState",
+  ]
 end
