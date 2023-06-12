@@ -34,7 +34,7 @@ cask "araxis-merge" do
   binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxissvnmerge"
   binary "#{appdir}/Araxis Merge.app/Contents/Utilities/compare", target: "araxiscompare"
   binary "#{appdir}/Araxis Merge.app/Contents/Utilities/compare2", target: "araxiscompare2"
-  
+
   zap trash: [
     "~/Library/Preferences/com.araxis.merge.LSSharedFileList.plist",
     "~/Library/Preferences/com.araxis.merge.plist",
