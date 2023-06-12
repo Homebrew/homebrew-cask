@@ -8,8 +8,8 @@ cask "openttd" do
     end
   end
   on_mojave :or_newer do
-    version "13.2"
-    sha256 "e98dc6b08890f92a84b2e70f6a1d72e75bbf4ca46401c571b7c7072bba207478"
+    version "13.3"
+    sha256 "8e61fbcbd8b6ca8fc5a2840c5683ff0ee7d75949a8d6df7596cd5f6578d5635a"
 
     livecheck do
       url "https://www.openttd.org/downloads/openttd-releases/latest.html"
