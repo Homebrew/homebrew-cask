@@ -8,8 +8,8 @@ cask "araxis-merge" do
     end
   end
   on_catalina :or_newer do
-    version "2023.5849"
-    sha256 "e229aef3c0f3ca65466cac1b14401bbb73c653178320b4cb1e7bdfb3381d703f"
+    version "2023.5915"
+    sha256 "8e9372f56a3597bdea49caadab1f11e998d8686c5e2d19472ec9470db643032e"
 
     livecheck do
       url "https://www.araxis.com/merge/download.en"
