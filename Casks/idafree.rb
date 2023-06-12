@@ -27,4 +27,6 @@ cask "idafree" do
     args:       ["--mode", "unattended"],
     sudo:       true,
   }
+
+  zap trash: "~/Library/Saved Application State/com.hexrays.ida64.savedState"
 end
