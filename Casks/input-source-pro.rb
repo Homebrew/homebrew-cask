@@ -1,7 +1,7 @@
 cask "input-source-pro" do
   # NOTE: Beta is the only stable version available for this application.
-  version "2.4.0-beta"
-  sha256 "bea281f9d53e7460f960ae2458353ed8c18982ff51fe898e57d7ba19c0eec720"
+  version "2.4.1-beta"
+  sha256 "2c32da29731297ed622e45bfca1d4d35ce335c6e13149916b0622ab96e28e0e5"
 
   url "https://inputsource.pro/beta/Input%20Source%20Pro%20#{version}.dmg"
   name "Input Source Pro"
