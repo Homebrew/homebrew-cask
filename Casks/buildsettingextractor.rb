@@ -10,4 +10,9 @@ cask "buildsettingextractor" do
   depends_on macos: ">= :mojave"
 
   app "BuildSettingExtractor.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/net.tapas-software.BuildSettingExtractor",
+    "~/Library/Containers/net.tapas-software.BuildSettingExtractor",
+  ]
 end
