@@ -25,16 +25,16 @@ cask "araxis-merge" do
   depends_on macos: ">= :mojave"
 
   app "Araxis Merge.app"
-  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxisopendiff"
-  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxissvndiff"
-  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/compare", target: "araxiscompare"
-  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxisp4diff"
-  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxissvndiff3"
-  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/compare2", target: "araxiscompare2"
   binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxishgmerge"
+  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxisopendiff"
+  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxisp4diff"
   binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxisp4winmrg"
+  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxissvndiff"
+  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxissvndiff3"
   binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxissvnmerge"
-
+  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/compare", target: "araxiscompare"
+  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/compare2", target: "araxiscompare2"
+  
   zap trash: [
     "~/Library/Preferences/com.araxis.merge.LSSharedFileList.plist",
     "~/Library/Preferences/com.araxis.merge.plist",
