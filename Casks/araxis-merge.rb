@@ -25,11 +25,9 @@ cask "araxis-merge" do
   depends_on macos: ">= :mojave"
 
   app "Araxis Merge.app"
-  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxisgitdiff"
   binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxisopendiff"
   binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxissvndiff"
   binary "#{appdir}/Araxis Merge.app/Contents/Utilities/compare", target: "araxiscompare"
-  binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxisgitmerge"
   binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxisp4diff"
   binary "#{appdir}/Araxis Merge.app/Contents/Utilities/araxissvndiff3"
   binary "#{appdir}/Araxis Merge.app/Contents/Utilities/compare2", target: "araxiscompare2"
