@@ -13,4 +13,10 @@ cask "nifty" do
   end
 
   app "Nifty.app"
+
+  zap trash: [
+    "~/Library/Application Support/Nifty",
+    "~/Library/Logs/Nifty",
+    "~/Library/Preferences/com.creative360.niftypm.plist",
+  ]
 end
