@@ -8,7 +8,7 @@ cask "bluewallet" do
   desc "Bitcoin wallet and Lightning wallet"
   homepage "https://bluewallet.io/"
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "BlueWallet.app"
 
