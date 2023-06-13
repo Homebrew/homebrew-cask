@@ -20,10 +20,10 @@ cask "eddie" do
   name "Air VPN"
   name "Eddie"
   desc "OpenVPN UI"
-  homepage "https://airvpn.org/macos/"
+  homepage "https://eddie.website/"
 
   livecheck do
-    url "https://eddie.website"
+    url :url
     regex(/data-version=["']?(\d+(?:\.\d+)+)["' >]/i)
   end
 
