@@ -22,5 +22,6 @@ cask "chatbox" do
     "~/Library/Caches/xyz.chatboxapp.app",
     "~/Library/Preferences/xyz.chatboxapp.app.plist",
     "~/Library/Saved Application State/xyz.chatboxapp.app.savedState",
+    "~/Library/WebKit/xyz.chatboxapp.app",
   ]
 end
