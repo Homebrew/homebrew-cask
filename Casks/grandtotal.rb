@@ -1,6 +1,6 @@
 cask "grandtotal" do
-  version "8.1.1.8"
-  sha256 "bf30354083156a3c3b9410db3f5ec595a5ad96b2fc31f02331423858ed2794eb"
+  version "8.1.1.9"
+  sha256 "0fc4da4c3f0e03ead2ef32069c7715d382cabef54a17111902083f78c3140b75"
 
   url "https://www.mediaatelier.com/GrandTotal#{version.major}/GrandTotal_#{version}.dmg"
   name "GrandTotal"
