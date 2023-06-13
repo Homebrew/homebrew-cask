@@ -13,7 +13,7 @@ cask "vsee" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "VSee.app"
 
