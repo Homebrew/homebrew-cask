@@ -9,8 +9,9 @@ cask "kdrive" do
 
   livecheck do
     url "https://www.infomaniak.com/drive/latest"
-    strategy :page_match do |page|
-      JSON.parse(page)["macos"]["downloadurl"][/kDrive[._-](\d+(?:\.\d+)+)\.pkg/i, 1]
+    regex(/kDrive[._-](\d+(?:\.\d+)+)\.pkg/i)
+    strategy :json do |json|
+      json["macos"]["downloadurl"]&.scan(regex)&.map { |match| (match[0]).to_s }
     end
   end
 
@@ -26,6 +27,7 @@ cask "kdrive" do
             ],
             pkgutil:   [
               "com.infomaniak.drive.desktopclient",
+              "com.infomaniak.drive.desktopclient.Extension",
               "com.infomaniak.drive.uninstaller",
             ],
             launchctl: "864VDCS2QY.com.infomaniak.drive.desktopclient.LoginItemAgent"
