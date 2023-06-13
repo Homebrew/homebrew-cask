@@ -2,7 +2,8 @@ cask "unite-phone" do
   version "2023.6.1"
   sha256 "30ce762e61ad83022c51cf6caf1abb624e7a069b6a1dc9bbfd866ad3bf804193"
 
-  url "https://update.unitephone.nl/download/unite_phone-#{version}-universal.dmg"
+  url "https://update.unitephone.nl/download/unite_phone-#{version}-universal.dmg",
+      user_agent: :fake
   name "Unite Phone"
   desc "Video and voice calling application"
   homepage "https://unitephone.nl/"
