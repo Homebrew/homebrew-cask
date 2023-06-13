@@ -24,7 +24,10 @@ cask "kdrive" do
               "com.infomaniak.drive.desktopclient",
               "com.infomaniak.drive.desktopclient.Extension",
             ],
-            pkgutil:   "com.infomaniak.drive.desktopclient",
+            pkgutil:   [
+              "com.infomaniak.drive.desktopclient",
+              "com.infomaniak.drive.uninstaller",
+            ],
             launchctl: "864VDCS2QY.com.infomaniak.drive.desktopclient.LoginItemAgent"
 
   zap trash: [
