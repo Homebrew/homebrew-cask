@@ -21,6 +21,12 @@ cask "gdat" do
 
   app "OS X 64 bit/Genealogical DNA Analysis Tool.app"
 
+  zap trash: [
+    "/Library/Logs/DiagnosticReports/Genealogical DNA Analysis Tool*.diag",
+    "~/Library/Preferences/BeckinsLLC.GMP64.plist",
+    "~/Library/Saved Application State/BeckinsLLC.GMP64.savedState",
+  ]
+
   caveats do
     requires_rosetta
     license "https://www.getgdat.com/home/download/terms-of-use"
