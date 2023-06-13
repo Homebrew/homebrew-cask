@@ -23,8 +23,8 @@ cask "eddie" do
   homepage "https://airvpn.org/macos/"
 
   livecheck do
-    url "https://github.com/AirVPN/Eddie"
-    strategy :git
+    url "https://eddie.website"
+    regex(/data-version=["']?(\d+(?:\.\d+)+)["' >]/i)
   end
 
   app "Eddie.app"
