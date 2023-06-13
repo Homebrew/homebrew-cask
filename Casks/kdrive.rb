@@ -17,7 +17,7 @@ cask "kdrive" do
   pkg "kDrive-#{version}.pkg"
 
   uninstall_preflight do
-    system_command "/usr/bin/pkill", args: ["-f", "/Applications/kDrive.app"]
+    system_command "/usr/bin/pkill", args: ["-f", "/Applications/kDrive/kDrive.app"]
   end
 
   uninstall quit:      [
