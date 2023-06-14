@@ -1,6 +1,6 @@
 cask "grammarly-desktop" do
-  version "1.28.0.1"
-  sha256 "99124681238668cc8e60895f57520b6b9312c1b648388ccb0b071df4f7ca80b1"
+  version "1.28.3.0"
+  sha256 "d69ce76d0f8c71dd00af0dd08786229f3cbda1e6aead3dec41b3e6d6863073c4"
 
   url "https://download-mac.grammarly.com/versions/#{version}/Grammarly.dmg"
   name "Grammarly Desktop"
@@ -8,11 +8,12 @@ cask "grammarly-desktop" do
   homepage "https://www.grammarly.com/desktop"
 
   livecheck do
-    url "https://download-mac.grammarly.com/Grammarly.dmg"
-    strategy :extract_plist
+    url "https://download-mac.grammarly.com/appcast.xml"
+    strategy :sparkle
   end
 
   auto_updates true
+  depends_on macos: ">= :sierra"
 
   app "Grammarly Installer.app", target: "Grammarly Desktop.app"
 
