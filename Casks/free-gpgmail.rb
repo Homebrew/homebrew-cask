@@ -8,8 +8,8 @@ cask "free-gpgmail" do
     sha256 "1935b0f65a5351c1c84870f316d0b97331c40ca50c13a912a703a68a08dabc4e"
   end
   on_monterey do
-    version "6.3,2023.1,"
-    sha256 "bcd304d00c017e4c1aee34f83ae7323a1479d7b09b5f6809e0edbb1921453971"
+    version "6.3,2023.2,"
+    sha256 "9630a8896e7e9c4691bda4b4cb529b28f0781aa71ad188d326a7587083b23c1a"
   end
   on_ventura :or_newer do
     version "7.1,2023.2,"
