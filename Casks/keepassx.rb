@@ -8,8 +8,8 @@ cask "keepassx" do
   homepage "https://www.keepassx.org/"
 
   livecheck do
-    url "https://github.com/keepassx/keepassx"
-    strategy :git
+    url "https://www.keepassx.org/downloads/"
+    regex(/href=.*?KeePassX[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "KeePassX.app"
