@@ -1,5 +1,5 @@
 cask "gdat" do
-  version "2023r03"
+  version "2023r03,1lnA5hFiCV9qzreQE7a5YzdeValaicTHD"
   sha256 "5079b12f9941de7a9631bba08d9e3470e794553f7d5a044969eafa95febda46c"
 
   url "https://drive.google.com/uc?export=download&id=#{version.csv.second}",
