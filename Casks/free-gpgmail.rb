@@ -12,8 +12,8 @@ cask "free-gpgmail" do
     sha256 "bcd304d00c017e4c1aee34f83ae7323a1479d7b09b5f6809e0edbb1921453971"
   end
   on_ventura :or_newer do
-    version "7.1,2023.1,"
-    sha256 "15257703e963f222c028ac29682b20d9a743f6e005860bdcd288b633984f4338"
+    version "7.1,2023.2,"
+    sha256 "87b78cf5e539b501fd6b0cb054b27a218a5fa29f6a58a68a9cadccc2a478036a"
   end
 
   url "https://github.com/Free-GPGMail/Free-GPGMail/releases/download/v#{version.csv.second}/Free-GPGMail_#{version.csv.first}-#{version.csv.second}#{version.csv.third}.mailbundle.zip"
