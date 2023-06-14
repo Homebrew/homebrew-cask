@@ -2,12 +2,12 @@ cask "visual-studio" do
   arch arm: "arm64", intel: "x64"
 
   on_arm do
-    version "17.5.6.3,91b81b8c-74ac-4710-a93f-49bf4553845e,ed3a76bd92fcbfe800b830b2739774e0"
-    sha256 "cf336af2f0b93d4934ababf2d684b61da16bd8fa9a16b675291872ef26b03d7d"
+    version "17.5.7.6,9d0f62f4-40f4-4eea-82ba-b74a5585a09c,8e9f85bec58d0fc1814c69ef55f42a33"
+    sha256 "726534b703d2889ecd4edcf7359db982b81e5ef1f245b1920102bc76c9f28eff"
   end
   on_intel do
-    version "17.5.6.3,91b81b8c-74ac-4710-a93f-49bf4553845e,e5a8ce0b143da17fa397b257562e6033"
-    sha256 "296df672054773fbee2784e88b461464966bd80b3aedc84c0f5c8e77ddb2213c"
+    version "17.5.7.6,9d0f62f4-40f4-4eea-82ba-b74a5585a09c,3edb39f0d876b0d0a8d1cbf655da57c1"
+    sha256 "203a8b29d8617cb491653d75a715982f79cc149d736e899fd328cab6d61c05ed"
   end
 
   url "https://download.visualstudio.microsoft.com/download/pr/#{version.csv.second}/#{version.csv.third}/visualstudioformac-#{version.csv.first}-#{arch}.dmg"
