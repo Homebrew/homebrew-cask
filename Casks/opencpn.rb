@@ -32,4 +32,11 @@ cask "opencpn" do
     "org.opencpn.pkg.OpenCPN",
     "org.opencpn",
   ]
+
+  zap trash: [
+    "~/Library/Logs/opencpn.log",
+    "~/Library/Preferences/opencpn",
+    "~/Library/Preferences/org.opencpn.plist",
+    "~/Library/Saved Application State/org.opencpn.savedState",
+  ]
 end
