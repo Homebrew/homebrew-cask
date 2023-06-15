@@ -1,6 +1,6 @@
 cask "segger-jlink" do
-  version "7.88f"
-  sha256 "6c9583ace5c2443fd54e31b42f9eede1e059213160c591900c15bf7f533834de"
+  version "7.88g"
+  sha256 "08efcdb0c3ccbbdbbc6365760e29b1d05c24e9624f726fb986c5a9f399b5715d"
 
   url "https://www.segger.com/downloads/jlink/JLink_MacOSX_V#{version.no_dots}_universal.pkg",
       using: :post,
@@ -13,9 +13,13 @@ cask "segger-jlink" do
   desc "Software and Documentation pack for Segger J-Link debug probes"
   homepage "https://www.segger.com/downloads/jlink"
 
+  # The livecheck should be reverted to the following once the release notes
+  # are updated appropriately.
+  # url "https://www.segger.com/downloads/jlink/ReleaseNotes_JLink.html"
+  # regex(/Version\s*V(\d+(?:\.\d+[a-z]?)*)/i)
   livecheck do
-    url "https://www.segger.com/downloads/jlink/ReleaseNotes_JLink.html"
-    regex(/Version\s*V(\d+(?:\.\d+[a-z]?)*)/i)
+    url "https://www.segger.com/downloads/jlink/"
+    regex(/J-LinkSoftwareAndDocumentationPack\s[\s\S]*?option\svalue="0">V(\d+(?:\.\d+[a-z]?)*)/i)
   end
 
   pkg "JLink_MacOSX_V#{version.no_dots}_universal.pkg"
