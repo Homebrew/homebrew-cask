@@ -10,7 +10,7 @@ cask "bricklink-partdesigner" do
 
   livecheck do
     url "https://bricklink.com/v3/studio/partdesigner.page"
-    regex(/"strVersion"\s*:\s*"([^"]+)"/)
+    regex(/"strVersion"\s*:\s*"([^"]+)"/i)
   end
 
   auto_updates true

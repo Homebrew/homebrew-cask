@@ -1,12 +1,13 @@
 cask "copilot-for-xcode" do
-  version "0.13.4"
-  sha256 "1d4d552db5b65c4f3b60fc85ec7f3e58765f07c44b9fd33189ef83134bcbcf82"
+  version "0.18.2"
+  sha256 "79d07eba28033a2e92f1d7d91782bb59d6f26ffb97eeb6e147b56d397a934da1"
 
   url "https://github.com/intitni/CopilotForXcode/releases/download/#{version}/Copilot.for.Xcode.app.zip"
   name "Copilot for Xcode"
   desc "Xcode extension for Github Copilot"
   homepage "https://github.com/intitni/CopilotForXcode"
 
+  auto_updates true
   depends_on macos: ">= :monterey"
 
   app "Copilot for Xcode.app"

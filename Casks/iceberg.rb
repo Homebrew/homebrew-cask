@@ -9,7 +9,7 @@ cask "iceberg" do
 
   livecheck do
     url "http://s.sudre.free.fr/Software/documentation/Iceberg/English.lproj/documentation/Release%20Notes.html"
-    regex(/Version\s+(\d+(?:\.\d+)+)/)
+    regex(/Version\s+(\d+(?:\.\d+)+)/i)
   end
 
   pkg "Iceberg.mpkg"
@@ -22,4 +22,6 @@ cask "iceberg" do
               executable: "uninstall.sh",
               sudo:       true,
             }
+
+  zap trash: "/Library/Application Support/Iceberg"
 end

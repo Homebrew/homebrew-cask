@@ -9,7 +9,7 @@ cask "cisdem-data-recovery" do
 
   livecheck do
     url "https://www.cisdem.com/js/notes/data-recovery-mac.js"
-    regex(/(\d+(?:\.\d+)+)\s+\(\d+(?:-\d+)+\)/)
+    regex(/(\d+(?:\.\d+)+)\s+\(\d+(?:-\d+)+\)/i)
   end
 
   depends_on macos: ">= :sierra"

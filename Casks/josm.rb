@@ -1,6 +1,6 @@
 cask "josm" do
-  version "18700"
-  sha256 "45345ed86673e41f50118174e0f88ab4a2645aed049b9581a8ae1d5505472b48"
+  version "18746"
+  sha256 "e1943be4a8900e69acc121e49674b5c97e6c43f302858a14fff8b7ed55e1f19a"
 
   url "https://github.com/JOSM/josm/releases/download/#{version}-tested/JOSM-macOS-java17-#{version}.zip",
       verified: "github.com/JOSM/josm/"
@@ -10,7 +10,7 @@ cask "josm" do
 
   livecheck do
     url :url
-    regex(%r{href=["']?[^"' >]*?/tree/\D*?(\d+(?:\.\d+)*)[^"' >]*?["' >]}i)
+    regex(/\D*?(\d+(?:\.\d+)*)/i)
     strategy :github_latest
   end
 

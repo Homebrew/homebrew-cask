@@ -9,8 +9,15 @@ cask "massreplaceit" do
 
   livecheck do
     url :homepage
-    regex(/MassReplaceIt\s+(\d+(?:\.\d+)+)/)
+    regex(/MassReplaceIt\s+(\d+(?:\.\d+)+)/i)
   end
 
   app "MassReplaceIt.app"
+
+  zap trash: [
+    "~/Library/Application Support/MassReplaceIt",
+    "~/Library/Caches/com.hexmonkey.massreplaceit",
+    "~/Library/Preferences/com.hexmonkey.massreplaceit.plist",
+    "~/Library/Saved Application State/com.hexmonkey.massreplaceit.savedState",
+  ]
 end

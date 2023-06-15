@@ -8,7 +8,7 @@ cask "macterm" do
 
   livecheck do
     url "https://www.macterm.net/updates/daily.html"
-    regex(/macterm[-_.](\d+(?:\.\d+)+)\.dmg/)
+    regex(/macterm[._-](\d+(?:\.\d+)+)\.dmg/i)
   end
 
   depends_on macos: "<= :mojave"

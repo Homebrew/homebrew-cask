@@ -1,8 +1,8 @@
 cask "flying-carpet" do
-  version "6.0"
-  sha256 "34effd0ab3b9c784bb05f1b7fd464a2141be4e1d1020ba894d54d16ac1c22ef6"
+  version "7.1"
+  sha256 "f9c3a2ee3328ef92688c51f84e5f6b2495fd8497626ade634b2359becc467bf0"
 
-  url "https://github.com/spieglt/FlyingCarpet/releases/download/v#{version}/FlyingCarpetMac.zip"
+  url "https://github.com/spieglt/FlyingCarpet/releases/download/v#{version}/macOS_FlyingCarpet_#{version}.0_universal.dmg"
   name "Flying Carpet"
   desc "File transfer over ad-hoc wifi"
   homepage "https://github.com/spieglt/flyingcarpet"
@@ -12,5 +12,14 @@ cask "flying-carpet" do
     strategy :github_latest
   end
 
-  app "Flying Carpet.app"
+  app "FlyingCarpet.app"
+
+  zap trash: [
+    "~/Library/Caches/dev.spiegl",
+    "~/Library/Preferences/com.yourcompany.flyingcarpet.plist",
+    "~/Library/Preferences/dev.spiegl.plist",
+    "~/Library/Saved Application State/com.yourcompany.flyingcarpet.savedState",
+    "~/Library/Saved Application State/dev.spiegl.savedState",
+    "~/Library/WebKit/dev.spiegl",
+  ]
 end

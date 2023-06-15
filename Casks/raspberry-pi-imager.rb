@@ -1,6 +1,6 @@
 cask "raspberry-pi-imager" do
-  version "1.7.4"
-  sha256 "008f1280005f2a620aa43b764cb9fd2a417e3d4fdd6ac2c01bc5ee6a8af02390"
+  version "1.7.5"
+  sha256 "bd690d70253db356965e065a6098170874dfc48f864b0c157c6dda28ac2479f7"
 
   url "https://downloads.raspberrypi.org/imager/imager_#{version}.dmg"
   name "Raspberry Pi Imager"

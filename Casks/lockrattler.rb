@@ -1,6 +1,6 @@
 cask "lockrattler" do
-  version "4.36,2022.11"
-  sha256 "acc7c61542a2709491361b86456bd0e1f2aacfa8a14bc6fb50ad944a2fc37361"
+  version "4.37,2023.05"
+  sha256 "e0313e7116136d98201c01b09eefe3a221889579debe68457e88488bfa60b78e"
 
   url "https://eclecticlightdotcom.files.wordpress.com/#{version.csv.second.major}/#{version.csv.second.minor}/lockrattler#{version.csv.first.no_dots}.zip",
       verified: "eclecticlightdotcom.files.wordpress.com/"
@@ -10,11 +10,11 @@ cask "lockrattler" do
 
   livecheck do
     url "https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
-    strategy :page_match do |page|
-      match = page.match(%r{/(\d+)/(\d+)/lockrattler(\d+)\.zip}i)
-      next if match.blank?
-
-      "#{match[3].split("", 2).join(".")},#{match[1]}.#{match[2]}"
+    regex(%r{/(\d+)/(\d+)/lockrattler(\d+)\.zip}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map do |match|
+        "#{match[2].split("", 2).join(".")},#{match[0]}.#{match[1]}"
+      end
     end
   end
 

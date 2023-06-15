@@ -1,19 +1,20 @@
 cask "icq" do
-  version "3.0.32393"
-  sha256 "3d645a9badd7524f3f9a23187a40079098427907d75f2c1ecaa676ff5369d2ec"
+  version "23.2.0,37179"
+  sha256 :no_check
 
-  url "https://icq-www.hb.bizmrg.com/mac/x64/#{version}/icq.dmg",
-      verified: "icq-www.hb.bizmrg.com/"
+  url "https://hb.bizmrg.com/icq-www/mac/x64/icq.dmg",
+      verified: "hb.bizmrg.com/icq-www/mac/x64/"
   name "ICQ"
   desc "Messenger application"
   homepage "https://icq.com/desktop"
 
   livecheck do
-    url "https://icq-www.hb.bizmrg.com/mac/x64/#{version}/version.xml"
-    strategy :sparkle
+    url :url
+    strategy :extract_plist
   end
 
   auto_updates true
+  depends_on macos: ">= :mojave"
 
   app "ICQ.app"
 

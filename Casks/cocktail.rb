@@ -66,8 +66,8 @@ cask "cocktail" do
     end
   end
   on_monterey do
-    version "15.4"
-    sha256 "0425a38d56484d04e8c8a12d0be89402656701b78cd1df4bfb396fc1468051c7"
+    version "15.5"
+    sha256 "fc27a3bacb1fbf3bff2e2978870ad1819952746508df3ed6ab3fb24b844ed214"
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}ME.dmg"
 
@@ -77,14 +77,14 @@ cask "cocktail" do
     end
   end
   on_ventura :or_newer do
-    version "16.3.3"
-    sha256 "053ebb4b9e1d63bbc74eebeafa5a66a6c8c664a306661633cbb0cc8481dbf6e9"
+    version "16.3.4"
+    sha256 "3b316c39cebe7aa43f70d9f8662dfa7a88f5badd6c38c2203b63e45747a5fc10"
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}VE.dmg"
 
     livecheck do
-      url :homepage
-      regex(/macOS\s*13(?:\.\d+)*.*?(\d+(?:\.\d+)+)/i)
+      url :url
+      strategy :extract_plist
     end
   end
 

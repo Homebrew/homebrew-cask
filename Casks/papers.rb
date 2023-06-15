@@ -1,9 +1,9 @@
 cask "papers" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.35.2224"
-  sha256 arm:   "b446dbdca3c2d6eedd9d54524453ced77da5bc4c8632c7c831b62e0df8f3551c",
-         intel: "af575370f6920349a0c1305cc6ca4a20a013b38d51d7b722beb53c2b78f49ee3"
+  version "4.36.2283"
+  sha256 arm:   "77a11c3d45aa97c39592667b3d90e596147f01feaa2087de05eaf22ec33a6410",
+         intel: "044b127273844945d5e2f1b3cdc0de391a339049c092bf20e88c5b6aaf12a4f7"
 
   url "https://update.readcube.com/desktop/updates/Papers_Setup_#{version}-#{arch}.zip"
   name "ReadCube Papers"
@@ -11,8 +11,8 @@ cask "papers" do
   homepage "https://www.readcube.com/home"
 
   livecheck do
-    url "https://www.papersapp.com/release-notes/"
-    regex(/version\s*(\d+(?:\.\d+)+)/i)
+    url "https://s3.amazonaws.com/update.readcube.com/desktop/updates/latest-mac.yml"
+    strategy :electron_builder
   end
 
   app "Papers.app"

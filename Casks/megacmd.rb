@@ -1,5 +1,5 @@
 cask "megacmd" do
-  version "1.6.2"
+  version "1.6.3"
   sha256 :no_check
 
   url "https://mega.nz/MEGAcmdSetup.dmg"
@@ -77,7 +77,9 @@ cask "megacmd" do
   zap trash: "~/.megaCmd"
 
   caveats <<~EOS
-    #{token} only works if called from /Applications, so you may need to install it with
+    #{token} only works if called from /Applications, so you may need to install
+    it with:
+
       brew install --cask --appdir=/Applications #{token}
   EOS
 end

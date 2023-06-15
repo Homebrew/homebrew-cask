@@ -9,7 +9,7 @@ cask "thangs-sync" do
 
   livecheck do
     url :url
-    regex(/Thangs%20Sync[._-]v?(\d+(?:\.\d+)+)\./)
+    regex(/Thangs%20Sync[._-]v?(\d+(?:\.\d+)+)\./i)
     strategy :header_match
   end
 

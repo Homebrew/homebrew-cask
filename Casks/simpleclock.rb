@@ -8,4 +8,6 @@ cask "simpleclock" do
   homepage "https://github.com/Wandmalfarbe/Simple-Clock-Screensaver"
 
   screen_saver "SimpleClock.saver"
+
+  # No zap stanza required
 end

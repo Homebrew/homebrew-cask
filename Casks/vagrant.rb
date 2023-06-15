@@ -1,8 +1,11 @@
 cask "vagrant" do
-  version "2.3.4"
-  sha256 "0015f971c20cce4cd3c97ed758f1e0b528bffe0dc02f0ab55da4b216cb5748b8"
+  arch arm: "arm64", intel: "amd64"
 
-  url "https://releases.hashicorp.com/vagrant/#{version}/vagrant_#{version}_darwin_amd64.dmg",
+  version "2.3.6"
+  sha256 arm:   "4daf4d4c323cce7bf98065ecf5338e9800038a522cd81356c77555d9cd2f0db9",
+         intel: "4daf4d4c323cce7bf98065ecf5338e9800038a522cd81356c77555d9cd2f0db9"
+
+  url "https://releases.hashicorp.com/vagrant/#{version}/vagrant_#{version}_darwin_#{arch}.dmg",
       verified: "hashicorp.com/vagrant/"
   name "Vagrant"
   desc "Development environment"
@@ -10,7 +13,7 @@ cask "vagrant" do
 
   livecheck do
     url "https://github.com/hashicorp/vagrant"
-    strategy :git
+    strategy :github_latest
   end
 
   pkg "vagrant.pkg"

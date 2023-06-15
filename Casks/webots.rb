@@ -11,7 +11,7 @@ cask "webots" do
 
   livecheck do
     url :url
-    regex(%r{href=.*?/tag/([\w._-]+)["' >]}i)
+    regex(/([\w._-]+)/i)
     strategy :github_latest
   end
 

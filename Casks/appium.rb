@@ -8,12 +8,6 @@ cask "appium" do
   desc "Graphical frontend to Appium automation server"
   homepage "https://appium.io/"
 
-  livecheck do
-    url :url
-    regex(%r{href=.*?/tag/v?(\d+(?:[.-]\d+)+)["' >]}i)
-    strategy :github_latest
-  end
-
   app "Appium Server GUI.app"
 
   zap trash: [
@@ -22,4 +16,8 @@ cask "appium" do
     "~/Library/Preferences/io.appium.desktop.plist",
     "~/Library/Saved Application State/io.appium.desktop.savedState",
   ]
+
+  caveats do
+    discontinued
+  end
 end

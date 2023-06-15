@@ -1,6 +1,6 @@
 cask "electrum" do
-  version "4.4.1"
-  sha256 "83a5b097032e97abf5505c24db75d3116e971e41562b8964708f09bafbff62d9"
+  version "4.4.4"
+  sha256 "915f5756369a65e40c3ae8148ec5875821bdcde3354f3a876a6ebf6e9fafcaa8"
 
   url "https://download.electrum.org/#{version}/electrum-#{version}.dmg"
   name "Electrum"
@@ -8,7 +8,7 @@ cask "electrum" do
   homepage "https://electrum.org/"
 
   livecheck do
-    url "https://electrum.org/panel-download.html"
+    url "https://electrum.org/#download"
     regex(/href=.*?electrum[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 

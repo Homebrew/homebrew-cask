@@ -12,6 +12,8 @@ cask "ukelele" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
+
   app "Ukelele.app"
 
   zap trash: [

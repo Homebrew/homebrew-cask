@@ -9,8 +9,15 @@ cask "enzymex" do
 
   livecheck do
     url "https://nucleobytes.com/versionEnzymeX.txt"
-    regex(/\d+(?:\.\d+)+/)
+    regex(/\d+(?:\.\d+)+/i)
   end
 
   app "EnzymeX.app"
+
+  zap trash: [
+    "~/Library/Application Support/EnzymeX",
+    "~/Library/Caches/com.mekentosj.enzymex",
+    "~/Library/Preferences/com.mekentosj.enzymex.plist",
+    "~/Library/Saved Application State/com.mekentosj.enzymex.savedState",
+  ]
 end

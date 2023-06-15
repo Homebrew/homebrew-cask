@@ -20,7 +20,7 @@ cask "mark-text" do
   ]
 
   caveats <<~EOS
-    The apple silicon (arm) version of #{token} is not signed, and
+    The Apple Silicon (arm) version of #{token} is not signed, and
     will display an error stating it is damaged and can't be opened.
   EOS
 end

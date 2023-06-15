@@ -1,6 +1,6 @@
 cask "scenica-player" do
-  version "1.4.3"
-  sha256 "39d06a309188968878d2475193584fc22023a641692c802bfaef15fe574c8ebf"
+  version "1.4.4"
+  sha256 "16cde0707f6f792b34a7357f2efae3244812c632a060042128803e9d7202c497"
 
   url "https://sceni.ca/download/scenica-player/scenica-player-#{version}.zip"
   name "Scenica Player"

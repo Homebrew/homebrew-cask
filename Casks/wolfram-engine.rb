@@ -10,7 +10,7 @@ cask "wolfram-engine" do
 
   livecheck do
     url "https://files.wolframcdn.com/packages/Homebrew/latest.txt"
-    regex(/^(\d+(?:\.\d+)+)$/)
+    regex(/^(\d+(?:\.\d+)+)$/i)
   end
 
   depends_on macos: ">= :mojave"

@@ -9,7 +9,7 @@ cask "mighty-mike" do
   homepage "https://jorio.itch.io/mightymike"
 
   app "Mighty Mike.app"
-  artifact "Documentation", target: "#{Dir.home}/Library/Application Support/MightyMike"
+  artifact "Documentation", target: "~/Library/Application Support/MightyMike"
 
   zap trash: [
     "~/Library/Preferences/MightyMike",

@@ -10,8 +10,18 @@ cask "swiftstack-client" do
 
   livecheck do
     url "https://storage.googleapis.com/swiftstack/swiftstackclient_macosx-x86_64_latest.html"
-    regex(/URL=.*?swiftstackclient[-._]v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/URL=.*?swiftstackclient[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "SwiftStack Client.app"
+
+  zap trash: [
+    "~/.swiftstackclient",
+    "~/Library/Application Support/SwiftStack Client",
+    "~/Library/Logs/SwiftStack Client",
+    "~/Library/Preferences/com.swiftstack.swiftstackclient.helper.plist",
+    "~/Library/Preferences/com.swiftstack.swiftstackclient.plist",
+    "~/Library/Saved Application State/com.swiftstack.swiftstackclient.savedState",
+    "~/swiftstack_client_volumes",
+  ]
 end

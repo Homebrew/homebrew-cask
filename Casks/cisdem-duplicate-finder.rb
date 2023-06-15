@@ -9,7 +9,7 @@ cask "cisdem-duplicate-finder" do
 
   livecheck do
     url "https://www.cisdem.com/js/notes/duplicate-finder-mac.js"
-    regex(/(\d+(?:\.\d+)*)\s+\(\d+(?:-\d+)+\)/)
+    regex(/(\d+(?:\.\d+)*)\s+\(\d+(?:-\d+)+\)/i)
   end
 
   depends_on macos: ">= :el_capitan"

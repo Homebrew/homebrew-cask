@@ -2,12 +2,12 @@ cask "lark" do
   arch arm: "arm64", intel: "x64"
 
   on_arm do
-    version "6.2.8,168efa81"
-    sha256 "61a0f0a0e5bf0f0fa6a79f13e89398f24411bfa677bbe480278f21b861bd5f45"
+    version "6.6.9,78249b16"
+    sha256 "02fda4f26a8223c3ec68c828e4873e3ce959ff6fd210dcdc9bd62298b4f2149d"
   end
   on_intel do
-    version "6.2.8,525ffb40"
-    sha256 "3b297eeced291ed53f993f35e7f066d95be5c2aa0b771f5be5bc1e9f3993e18a"
+    version "6.6.9,4d1b0a6e"
+    sha256 "a2539d7c8adac81f11a527856a7d2d43c1e85d4a169b83b2c1347f45f7ed4507"
   end
 
   url "https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/#{version.csv.second}/Lark-darwin_#{arch}-#{version.csv.first}-signed.dmg",
@@ -18,11 +18,9 @@ cask "lark" do
 
   livecheck do
     url "https://www.larksuite.com/api/downloads"
-    strategy :page_match do |page|
-      match = page.match(%r{/lark-artifact-storage/(\h+)/Lark-darwin_#{arch}[._-]v?(\d+(?:\.\d+)+)-signed\.dmg}i)
-      next if match.blank?
-
-      "#{match[2]},#{match[1]}"
+    regex(%r{/lark-artifact-storage/(\h+)/Lark-darwin_#{arch}[._-]v?(\d+(?:\.\d+)+)-signed\.dmg}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
 

@@ -1,5 +1,5 @@
 cask "winx-hd-video-converter" do
-  version "6.7.3,20230428"
+  version "6.8.0,20230511"
   sha256 :no_check
 
   url "https://www.winxdvd.com/download/winx-hd-video-converter-for-mac.dmg"

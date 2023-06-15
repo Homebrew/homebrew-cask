@@ -5,13 +5,13 @@ cask "xit" do
 
     url "https://github.com/Uncommon/Xit/releases/download/#{version}/Xit.zip"
 
-    depends_on macos: ">= :mojave"
-
-    app "Xit.app"
-
     livecheck do
       skip "Legacy version"
     end
+
+    depends_on macos: ">= :mojave"
+
+    app "Xit.app"
   end
   on_monterey :or_newer do
     arch arm: "-arm"
@@ -22,14 +22,14 @@ cask "xit" do
 
     url "https://github.com/Uncommon/Xit/releases/download/#{version}/Xit#{arch}.#{version}.zip"
 
-    depends_on macos: ">= :monterey"
-
-    app "Xit#{arch} #{version}/Xit.app"
-
     livecheck do
       url :url
       regex(/^v?(\d+(?:\.\d+)+(?:b\d+)?)$/i)
     end
+
+    depends_on macos: ">= :monterey"
+
+    app "Xit#{arch} #{version}/Xit.app"
   end
 
   name "Xit"

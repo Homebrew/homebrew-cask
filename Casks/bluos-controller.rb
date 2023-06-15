@@ -10,11 +10,9 @@ cask "bluos-controller" do
 
   livecheck do
     url "https://www.bluesound.com/downloads"
-    strategy :page_match do |page|
-      match = page.match(%r{uploads/(\d+)/(\d+)/BluOS[._-]Controller[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
-      next if match.blank?
-
-      "#{match[3]},#{match[1]},#{match[2]}"
+    regex(%r{uploads/(\d+)/(\d+)/BluOS[._-]Controller[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[2]},#{match[0]},#{match[1]}" }
     end
   end
 

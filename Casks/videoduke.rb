@@ -1,15 +1,15 @@
 cask "videoduke" do
-  version "2.12,746"
+  version "2.12"
   sha256 :no_check
 
-  url "https://cdn.eltima.com/download/videoduke.dmg"
+  url "https://cdn.video-downloader-mac.com/download/videoduke.dmg"
   name "VideoDuke"
   desc "Video downloader"
-  homepage "https://mac.eltima.com/video-downloader.html"
+  homepage "https://www.video-downloader-mac.com/"
 
   livecheck do
-    url "https://cdn.eltima.com/download/videoduke-update/videoduke.xml"
-    strategy :sparkle
+    url "https://cdn.video-downloader-mac.com/download/videoduke-update/videoduke.xml"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

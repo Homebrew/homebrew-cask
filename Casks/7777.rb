@@ -1,6 +1,6 @@
 cask "7777" do
-  version "1.1.4"
-  sha256 "e4e2a518e35aadb65e0e0b14eb2f343d1a56e63c7307bfe57b7956e453a5bfbc"
+  version "1.1.12"
+  sha256 "b3ed3344bf203285651ec4b019ab8d314a729a0d4bb85cd3494fda5b7e8827b0"
 
   url "https://releases.port7777.com/#{version}/macos/7777"
   name "7777"
@@ -13,4 +13,6 @@ cask "7777" do
   end
 
   binary "7777"
+
+  # No zap stanza required
 end

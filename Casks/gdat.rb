@@ -1,6 +1,6 @@
 cask "gdat" do
-  version "2023r02,1lnA5hFiCV9qzreQE7a5YzdeValaicTHD"
-  sha256 "5079b12f9941de7a9631bba08d9e3470e794553f7d5a044969eafa95febda46c"
+  version "2023r03,1lnA5hFiCV9qzreQE7a5YzdeValaicTHD"
+  sha256 "c1996e1e5915cc53bc687bb459813a80e2db2891a4fc02dd6b9121d7cb745fad"
 
   url "https://drive.google.com/uc?export=download&id=#{version.csv.second}",
       verified: "drive.google.com/uc?export=download&id=#{version.csv.second}"
@@ -20,6 +20,12 @@ cask "gdat" do
   end
 
   app "OS X 64 bit/Genealogical DNA Analysis Tool.app"
+
+  zap trash: [
+    "/Library/Logs/DiagnosticReports/Genealogical DNA Analysis Tool*.diag",
+    "~/Library/Preferences/BeckinsLLC.GMP64.plist",
+    "~/Library/Saved Application State/BeckinsLLC.GMP64.savedState",
+  ]
 
   caveats do
     requires_rosetta

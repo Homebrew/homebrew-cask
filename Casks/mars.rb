@@ -9,11 +9,9 @@ cask "mars" do
 
   livecheck do
     url "https://courses.missouristate.edu/KenVollmar/mars/download.htm"
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?MARS_(\d+(?:_\d+)*)_(\w+\d+)/Mars(?:\d+(?:_\d+)*)\.jar}i)
-      next if match.blank?
-
-      "#{match[1].tr("_", ".")},#{match[2]}"
+    regex(%r{href=.*?MARS_(\d+(?:_\d+)*)_(\w+\d+)/Mars(?:\d+(?:_\d+)*)\.jar}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0].tr("_", ".")},#{match[1]}" }
     end
   end
 

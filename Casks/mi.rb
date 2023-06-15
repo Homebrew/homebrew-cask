@@ -9,14 +9,7 @@ cask "mi" do
 
   livecheck do
     url "https://www.mimikaki.net/download/appcast.xml"
-    strategy :sparkle
-    regex(/(\d+(?:\.\d+)*)/i)
-    strategy :sparkle do |item, regex|
-      match = item.short_version.match(regex)
-      next if match.blank?
-
-      match.to_s
-    end
+    strategy :sparkle, &:short_version
   end
 
   conflicts_with cask: "homebrew/cask-versions/mi-beta"

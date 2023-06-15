@@ -1,6 +1,6 @@
 cask "freesurfer" do
-  version "7.3.2"
-  sha256 "1c3ca7f53777ae024864cbd4ccb3b7d514e5e5bf84c4ad407521caedc822056e"
+  version "7.4.0"
+  sha256 "b62602302ca595c9a5e48e4567084dd25ab138f4e27574802178c87ac431915f"
 
   url "https://surfer.nmr.mgh.harvard.edu/pub/dist/freesurfer/#{version}/freesurfer-darwin-macOS-#{version}.tar.gz"
   name "FreeSurfer"
@@ -13,6 +13,8 @@ cask "freesurfer" do
   end
 
   suite "freesurfer"
+
+  zap trash: "~/Library/Preferences/edu.harvard.mgh.nmr.FreeView.plist"
 
   caveats do
     free_license "https://surfer.nmr.mgh.harvard.edu/registration.html"

@@ -8,16 +8,11 @@ cask "home-assistant" do
   desc "Companion app for Home Assistant home automation software"
   homepage "https://companion.home-assistant.io/"
 
-  # We use the GitHubLatest strategy as Home Assistant also tags pre-releases, and
-  # we also specify a regex since tags are unconventional, e.g. `2021.2.2/2021.55`,
-  # and use a custom block to replace the slash with a comma in the resulting version
   livecheck do
     url :url
-    strategy :github_latest do |page|
-      version = page.match(%r{href=".+/tree/(?:mac|release)/([\d.]+)/([\d.]+)"}i)
-      next if version.blank?
-
-      "#{version[1]},#{version[2]}"
+    regex(%r{^(?:mac|release)/(\d+(?:\.\d+)+)/(\d+(?:\.\d+)*)}i)
+    strategy :github_latest do |json, regex|
+      json["tag_name"]&.scan(regex)&.map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 

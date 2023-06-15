@@ -1,6 +1,6 @@
 cask "texifier" do
-  version "1.9.20,754,7250fc1"
-  sha256 "18f4bfca5cfc2dc3a30e62a450929bdfad0c7e74995f40e81760e13d60614edd"
+  version "1.9.20,760,b4f205f"
+  sha256 "e43237b1ab7d7c2c8d16ba978623a9d62c620c2c8e14383b04b542b0878384bf"
 
   url "https://download.texifier.com/apps/osx/updates/Texifier_#{version.csv.first.dots_to_underscores}__#{version.csv.second}__#{version.csv.third}.dmg"
   name "Texifier"
@@ -8,9 +8,10 @@ cask "texifier" do
   homepage "https://www.texifier.com/mac"
 
   livecheck do
-    url "https://www.texifier.com/apps/updates/texifier/appcast-stable.xml"
-    strategy :sparkle do |item|
-      "#{item.short_version},#{item.version},#{item.url[/_([^_]+)\.dmg/i, 1]}"
+    url "https://www.texifier.com/mac"
+    regex(/href=["'].*?download\.texifier\.com.*?osx.*?Texifier_(\d+(?:_\d+)+)__(\d+)__([^_]+)\.dmg/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0].tr("_", ".")},#{match[1]},#{match[2]}" }
     end
   end
 

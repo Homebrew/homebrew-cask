@@ -1,6 +1,6 @@
 cask "loginputmac" do
-  version "3.2.7"
-  sha256 "8f69e78b70e4cfeb36be8b6c90e054048bad9abe969231d3b9b9f1e0d2607173"
+  version "3.2.8"
+  sha256 "23dd3f062e554b3121996abc748e7907febefa4ee8f022a2771d7aa4a3f890a9"
 
   url "https://loginput-mac2.totest.top/loginputmac#{version.major}_latest.dmg",
       verified: "loginput-mac2.totest.top/"
@@ -14,7 +14,7 @@ cask "loginputmac" do
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :high_sierra"
 
   pkg "落格输入法 macOS #{version.major}.pkg"
 

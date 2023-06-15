@@ -12,11 +12,9 @@ cask "jdk-mission-control" do
 
   livecheck do
     url :homepage
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/(\d+)/binaries/jmc[._-]v?(\d+(?:\.\d+)*)[._-]macos[._-]#{arch}\.tar\.gz}i)
-      next if match.blank?
-
-      "#{match[2]},#{match[1]}"
+    regex(%r{href=.*?/(\d+)/binaries/jmc[._-]v?(\d+(?:\.\d+)*)[._-]macos[._-]#{arch}\.tar\.gz}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
 

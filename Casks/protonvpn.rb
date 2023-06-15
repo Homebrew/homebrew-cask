@@ -1,6 +1,6 @@
 cask "protonvpn" do
-  version "3.0.15"
-  sha256 "f237a2cdf1f2bcac65e5810ede3fcb28e84ccd1dc69e3704ab9441054beb8911"
+  version "3.1.4"
+  sha256 "0d74fde6d1d6b2dacccb437c26f87dfe5a8bf0703ce46c848ee03eb99485b8dc"
 
   url "https://protonvpn.com/download/ProtonVPN_mac_v#{version}.dmg"
   name "ProtonVPN"

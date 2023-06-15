@@ -52,7 +52,7 @@ module CiMatrix
 
     filtered_runners = RUNNERS.select do |runner, _|
       required_macos.any? do |r|
-        MacOS::Version.from_symbol(runner.fetch(:symbol)).public_send(r.fetch(:comparator), r.fetch(:version))
+        MacOSVersion.from_symbol(runner.fetch(:symbol)).compare(r.fetch(:comparator), r.fetch(:version))
       end
     end
     return filtered_runners unless filtered_runners.empty?
@@ -136,7 +136,8 @@ module CiMatrix
       audit_exceptions = []
 
       if labels.include?("ci-skip-livecheck")
-        audit_exceptions << ["hosting_with_livecheck", "livecheck_version", "livecheck_min_os"]
+        audit_exceptions << %w[hosting_with_livecheck https_availability
+                               livecheck_min_os livecheck_version]
       end
 
       audit_exceptions << "livecheck_min_os" if labels.include?("ci-skip-livecheck-min-os")

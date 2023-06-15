@@ -18,9 +18,12 @@ cask "firestorm" do
   app "Firestorm-Releasex64.app"
 
   caveats <<~EOS
-    This version does not contain Havok engine (does not matter if you're not a content creator).
-    Most problems that crop up during updates can be resolved or fixed by performing a clean install:
+    This version does not contain the Havok engine (does not matter if
+    you are not a content creator).
 
-      https://wiki.phoenixviewer.com/doku.php?id=fs_clean_reinstall for instructions.
+    Most problems that crop up during updates can be resolved or fixed by
+    performing a clean install. For instructions, see:
+
+      https://wiki.phoenixviewer.com/doku.php?id=fs_clean_reinstall
   EOS
 end

@@ -1,6 +1,6 @@
 cask "zprint" do
-  version "1.2.5"
-  sha256 "c780a55a3ed68882762c3c8c60ef5871495af4cb882492b2c89c8c1f459ccd51"
+  version "1.2.7"
+  sha256 "6b2e937119cc222ac4b349346c138ddc3642e1577ac34fd515d0c92ea0c5472d"
 
   url "https://github.com/kkinnear/zprint/releases/download/#{version}/zprintm-#{version}"
   name "zprint"
@@ -8,4 +8,6 @@ cask "zprint" do
   homepage "https://github.com/kkinnear/zprint"
 
   binary "zprintm-#{version}", target: "zprint"
+
+  # No zap stanza required
 end

@@ -1,6 +1,6 @@
 cask "filemaker-pro" do
-  version "19.6.3.302"
-  sha256 "0e3a812f9b01c688e6b60a9e9eef2f57299163fa07599663347cd1e662c95e93"
+  version "20.1.2.204"
+  sha256 "a4728adb13c9898fbee3818fa7f538c6ea21d24322c0bff576414ede86392d28"
 
   url "https://downloads.claris.com/esd/fmp_#{version}.dmg"
   name "FileMaker Pro"
@@ -16,6 +16,17 @@ cask "filemaker-pro" do
   depends_on macos: ">= :mojave"
 
   app "FileMaker Pro.app"
+
+  zap trash: [
+    "/Users/Shared/FileMaker",
+    "~/Library/Application Support/FileMaker",
+    "~/Library/Caches/FileMaker",
+    "~/Library/Caches/com.filemaker.client.pro12",
+    "~/Library/HTTPStorages/com.filemaker.client.pro12",
+    "~/Library/Preferences/com.filemaker.client.pro12.plist",
+    "~/Library/Saved Application State/com.filemaker.client.pro12.savedState",
+    "~/Library/WebKit/com.filemaker.client.pro12",
+  ]
 
   caveats do
     license "https://www.claris.com/company/legal/docs/eula/filemaker-pro/fmp_eula_en.pdf"

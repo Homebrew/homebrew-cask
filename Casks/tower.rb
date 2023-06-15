@@ -1,6 +1,6 @@
 cask "tower" do
-  version "9.2,351,cf3fcb8e"
-  sha256 "c741de80c450912154bdcc1cf4385881b871153b2ec336d9117aa3dd4048d638"
+  version "9.4,356,9e6cb891"
+  sha256 "c0b696390b9806ac25e92f3d8d357ecf97b0b09101cfbc1cee98122975e6bb6c"
 
   url "https://www.git-tower.com/apps/tower3-mac/#{version.csv.second}-#{version.csv.third}/Tower-#{version.csv.first}-#{version.csv.second}.zip"
   name "Tower"
@@ -9,11 +9,9 @@ cask "tower" do
 
   livecheck do
     url "https://www.git-tower.com/updates/tower3-mac/stable/releases/latest/download"
-    strategy :header_match do |headers|
-      match = headers["location"].match(%r{(\d+(?:\.\d+)*)-([a-z0-9]+)/Tower-(\d+(?:\.\d+)+)-(\d+(?:\.\d+)*)\.zip}i)
-      next if match.blank?
-
-      "#{match[3]},#{match[1]},#{match[2]}"
+    regex(%r{(\d+(?:\.\d+)*)-([a-z0-9]+)/Tower-(\d+(?:\.\d+)+)-(\d+(?:\.\d+)*)\.zip}i)
+    strategy :header_match do |headers, regex|
+      headers["location"].scan(regex).map { |match| "#{match[2]},#{match[0]},#{match[1]}" }
     end
   end
 

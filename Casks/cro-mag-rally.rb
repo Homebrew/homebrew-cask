@@ -9,7 +9,7 @@ cask "cro-mag-rally" do
   homepage "https://jorio.itch.io/cromagrally"
 
   app "Cro-Mag Rally.app"
-  artifact "Documentation", target: "#{Dir.home}/Library/Application Support/CroMagRally"
+  artifact "Documentation", target: "~/Library/Application Support/CroMagRally"
 
   zap trash: [
     "~/Library/Preferences/CroMagRally",

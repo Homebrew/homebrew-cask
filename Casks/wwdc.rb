@@ -1,6 +1,6 @@
 cask "wwdc" do
-  version "7.3.3,1024"
-  sha256 "b1dde361e43c58f30d40e1fefab38699322e95a98b3eb4325177e4a7abea1ea4"
+  version "7.4.2,1040"
+  sha256 "023abb817eb971eb514c27c53a0e1fb55913e680e7293742201ed0a69df6faa5"
 
   url "https://github.com/insidegui/WWDC/releases/download/#{version.csv.first}/WWDC_v#{version.csv.first}-#{version.csv.second}.dmg",
       verified: "github.com/insidegui/WWDC/"
@@ -10,7 +10,7 @@ cask "wwdc" do
 
   livecheck do
     url "https://github.com/insidegui/WWDC/releases/latest"
-    regex(/href=.*?WWDC[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
+    regex(%r{href=.*?/WWDC[._-]v?(\d+(?:[.-]\d+)+)\.dmg}i)
     strategy :header_match do |headers, regex|
       next if headers["location"].blank?
 
@@ -22,7 +22,7 @@ cask "wwdc" do
       assets_page = Homebrew::Livecheck::Strategy.page_content(
         @url.sub(%r{/releases/?.+}, "/releases/expanded_assets/#{latest_tag}"),
       )
-      assets_page[:content]&.scan(regex)&.map { |match| match[0].tr("-", ",") }
+      assets_page[:content]&.scan(regex)&.map { |match| match[0].tr("-", ",").to_s }
     end
   end
 

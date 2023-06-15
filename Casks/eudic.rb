@@ -1,5 +1,5 @@
 cask "eudic" do
-  version "4.3.3,1090"
+  version "4.3.9,1096"
   sha256 :no_check
 
   url "https://static.frdic.com/pkg/eudicmac.dmg",
@@ -14,6 +14,8 @@ cask "eudic" do
     url :url
     strategy :extract_plist
   end
+
+  auto_updates true
 
   app "Eudic.app"
 

@@ -1,15 +1,17 @@
 cask "mathpix-snipping-tool" do
-  version "3.4.2,342.4"
-  sha256 "dfbd8aef66c5eb9e06f7f6cb6935d90a907d00876e98cd39d9e344e03a0f5879"
+  version "3.4.5.2"
+  sha256 "23a3554b79c6a6fdf41ae8ad17fd83c5f84359b5d1bf76faf7cb8f417a838b0c"
 
-  url "https://mathpix.com/dmg/SnippingTool-v#{version.csv.first}.#{version.csv.second}.dmg"
+  url "https://mathpix.com/dmg/SnippingTool-v#{version}.dmg"
   name "Mathpix Snipping Tool"
   desc "Scanner app for math and science"
   homepage "https://mathpix.com/"
 
   livecheck do
     url "https://mathpix.com/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle do |item|
+      item.url[/SnippingTool[._-]v?(\d+(?:\.\d+)+)\.dmg/i, 1]
+    end
   end
 
   auto_updates true

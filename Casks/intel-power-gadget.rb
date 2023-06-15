@@ -9,7 +9,7 @@ cask "intel-power-gadget" do
 
   livecheck do
     url :homepage
-    regex(/Intel[._-]Power[._-]Gadget[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
+    regex(/href=.*?v?(\d(?:\.\d+)+).*MacOS/i)
   end
 
   auto_updates true

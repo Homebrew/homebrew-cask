@@ -12,8 +12,9 @@ cask "codelite" do
 
   livecheck do
     url "https://downloads.codelite.org/"
-    strategy :page_match do |page|
-      match = page.match(/CodeLite\s*(\d+\.\d+)((?:\.\d+)*)\s*-\s*Stable/i)
+    regex(/CodeLite\s*(\d+\.\d+)((?:\.\d+)*)\s*-\s*Stable/i)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
       next if match.blank?
 
       "#{match[1]}#{match[2].presence || ".0"}"

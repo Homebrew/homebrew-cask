@@ -9,8 +9,9 @@ cask "bluej" do
 
   livecheck do
     url "https://www.bluej.org"
+    regex(%r{href=.*?/BlueJ-mac-(\d+)(\d+)(\d+)(a)?\.zip}i)
     strategy :page_match do |page|
-      match = page.match(%r{href=.*?/BlueJ-mac-(\d+)(\d+)(\d+)(a)?\.zip}i)
+      match = page.match(regex)
       next if match.blank?
 
       "#{match[1]}.#{match[2]}.#{match[3]}" unless match[4]

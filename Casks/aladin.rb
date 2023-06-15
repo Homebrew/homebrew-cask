@@ -1,5 +1,5 @@
 cask "aladin" do
-  version "12.001"
+  version "12.060"
   sha256 :no_check
 
   url "https://aladin.u-strasbg.fr/java/download/Aladin.dmg"
@@ -13,4 +13,10 @@ cask "aladin" do
   end
 
   app "Aladin.app"
+
+  zap trash: "~/.aladin"
+
+  caveats do
+    depends_on_java
+  end
 end
