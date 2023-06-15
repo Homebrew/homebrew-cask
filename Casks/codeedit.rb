@@ -31,13 +31,13 @@ cask "codeedit" do
   app "CodeEdit.app"
 
   zap trash: [
-    "~/Library/Application Scripts/app.codeedit.CodeEdit.OpenWithCodeEdit",
+    "~/Library/Application Scripts/*.CodeEdit.OpenWithCodeEdit",
     "~/Library/Application Support/CodeEdit",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/app.codeedit.codeedit.sfl2",
-    "~/Library/Caches/app.codeedit.CodeEdit",
-    "~/Library/Containers/app.codeedit.CodeEdit.OpenWithCodeEdit",
-    "~/Library/HTTPStorages/app.codeedit.CodeEdit",
-    "~/Library/Preferences/app.codeedit.CodeEdit.plist",
-    "~/Library/Saved Application State/app.codeedit.CodeEdit.savedState",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/*.codeedit.sfl2",
+    "~/Library/Caches/*.CodeEdit",
+    "~/Library/Containers/*.CodeEdit.OpenWithCodeEdit",
+    "~/Library/HTTPStorages/*.CodeEdit",
+    "~/Library/Preferences/*.CodeEdit.plist",
+    "~/Library/Saved Application State/*.CodeEdit.savedState",
   ]
 end
