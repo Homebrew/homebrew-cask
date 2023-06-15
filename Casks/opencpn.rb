@@ -1,8 +1,8 @@
 cask "opencpn" do
-  version "5.6.2"
-  sha256 "dd093babd8b565cced08c0fd6467c70e6af4da707caf5ddc47e64b601944467a"
+  version "5.8.4,-0+637.1637c28"
+  sha256 "2c3dc08908c002dcfe61a67b8e594a14d4de7ec486f6e44fc4ddc18219b65b44"
 
-  url "https://github.com/OpenCPN/OpenCPN/releases/download/Release_#{version}/OpenCPN_#{version}.pkg",
+  url "https://github.com/OpenCPN/OpenCPN/releases/download/Release_#{version.csv.first}/OpenCPN_#{version.csv.first}#{version.csv.second}.pkg",
       verified: "github.com/OpenCPN/OpenCPN/"
   name "OpenCPN"
   desc "Full-featured and concise ChartPlotter/Navigator"
@@ -10,13 +10,28 @@ cask "opencpn" do
 
   livecheck do
     url :url
-    regex(/v?(\d+(?:\.\d+)+)$/i)
+    regex(/^OpenCPN[._-]?v?(\d+(?:\.+\d+)+)((?:-\d+)?\+\d+\.\h+)?\.(?:dmg|pkg)$/i)
+    strategy :github_latest do |json, regex|
+      json["assets"]&.map do |asset|
+        match = asset["name"]&.match(regex)
+        next if match.blank?
+
+        match[2].present? ? "#{match[1]},#{match[2]}" : match[1]
+      end
+    end
   end
 
-  pkg "OpenCPN_#{version}.pkg"
+  pkg "OpenCPN_#{version.csv.first}#{version.csv.second}.pkg"
 
   uninstall pkgutil: [
-    "org.opencpn.pkg.OpenCPN",
     "org.opencpn",
+    "org.opencpn.pkg.OpenCPN",
+  ]
+
+  zap trash: [
+    "~/Library/Logs/opencpn.log",
+    "~/Library/Preferences/opencpn",
+    "~/Library/Preferences/org.opencpn.plist",
+    "~/Library/Saved Application State/org.opencpn.savedState",
   ]
 end
