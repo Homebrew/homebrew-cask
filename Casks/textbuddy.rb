@@ -1,6 +1,6 @@
 cask "textbuddy" do
-  version "1.4.1,26"
-  sha256 "117d7e4bac43ff681d44b1ea11e56a4a9ce3ae68c2668641f900ccd977413e9b"
+  version "1.4.3,28"
+  sha256 "d86d9102d1c2b815ef4f5d762886ef45f68026cec7960f94202b866d5ffdbd2a"
 
   url "https://get.retina.studio/textbuddy/textbuddy_#{version.csv.second}.zip"
   name "TextBuddy"
