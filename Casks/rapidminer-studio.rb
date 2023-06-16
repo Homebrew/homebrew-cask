@@ -13,4 +13,7 @@ cask "rapidminer-studio" do
   end
 
   app "RapidMiner Studio.app"
+
+  zap trash: "~/.RapidMiner",
+      rmdir: "~/Documents/RapidMiner"
 end
