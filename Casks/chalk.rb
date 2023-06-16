@@ -1,6 +1,6 @@
 cask "chalk" do
-  version "1.7.1"
-  sha256 "a4234b040c99c101090f0ae8f72b7fc6ff7be643772d4d57380858154c869ee3"
+  version "1.7.2"
+  sha256 "0a948294340c8d242976d3a2b2b7466174184e31016a3c62d074ac0fe6fd817c"
 
   url "https://pierre.chachatelier.fr/chalk/downloads/Chalk-#{version.dots_to_underscores}.dmg",
       user_agent: :fake
@@ -10,7 +10,7 @@ cask "chalk" do
 
   livecheck do
     url "https://pierre.chachatelier.fr/chalk/downloads/chalk-sparkle-en.rss"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

@@ -11,9 +11,10 @@ cask "cloudcompare" do
 
   livecheck do
     url "https://www.danielgm.net/cc/release/index.html"
-    strategy :page_match do |page|
+    regex(/CloudCompare[._-](\d+(?:\.\d+)+)[._-][^.]+\.dmg/i)
+    strategy :page_match do |page, regex|
       page = page.split(/stable\s+release/i, 2).second
-      page[/CloudCompare[._-](\d+(?:\.\d+)+)[._-][^.]+\.dmg/i, 1]
+      page[regex, 1]
     end
   end
 

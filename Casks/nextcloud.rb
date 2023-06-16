@@ -7,11 +7,11 @@ cask "nextcloud" do
         verified: "github.com/nextcloud/desktop/"
   end
   on_sierra :or_newer do
-    version "3.8.1"
-    sha256 "448647db0068ff9a2b669ff2f9d715a36b4e5e1af82e9849e57d9f7078d1bd2e"
+    version "3.9.0"
+    sha256 "2e1f8386462f296061f44ff8f1e705a39789661c3f73aa6093e110ebdff53354"
 
-    url "https://github.com/nextcloud/desktop/releases/download/v#{version}/Nextcloud-#{version}.pkg",
-        verified: "github.com/nextcloud/desktop/"
+    url "https://github.com/nextcloud-releases/desktop/releases/download/v#{version}/Nextcloud-#{version}.pkg",
+        verified: "github.com/nextcloud-releases/desktop/"
   end
 
   name "Nextcloud"
@@ -19,7 +19,7 @@ cask "nextcloud" do
   homepage "https://nextcloud.com/"
 
   livecheck do
-    url "https://github.com/nextcloud/desktop/releases/latest"
+    url "https://github.com/nextcloud-releases/desktop/releases/latest"
     regex(/Nextcloud[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
     strategy :header_match do |headers, regex|
       next if headers["location"].blank?

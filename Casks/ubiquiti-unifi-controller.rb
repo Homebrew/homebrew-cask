@@ -1,6 +1,6 @@
 cask "ubiquiti-unifi-controller" do
-  version "7.3.83"
-  sha256 "5c5014971b99bc0285ec9a4ef645d40d16f67de294fd6ea200c5f6483631db8f"
+  version "7.4.156"
+  sha256 "2b1f40c66b45f76f63dc78e884fe73451bdbb639be115d3f02cc725af60f1a33"
 
   url "https://dl.ubnt.com/unifi/#{version}/UniFi.pkg",
       verified: "dl.ubnt.com/"
@@ -12,8 +12,6 @@ cask "ubiquiti-unifi-controller" do
     url "https://fw-update.ubnt.com/api/firmware-latest?filter=eq~~product~~unifi-controller&filter=eq~~channel~~release&filter=eq~~platform~~macos"
     regex(/"version"\s*:\s*"v?(\d+(?:\.\d+)+)/i)
   end
-
-  conflicts_with cask: "homebrew/cask-drivers/ubiquiti-unifi-controller-lts"
 
   pkg "UniFi.pkg"
 

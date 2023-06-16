@@ -1,6 +1,6 @@
 cask "qt-creator" do
-  version "10.0.1"
-  sha256 "2e4c206024c03e0e79e663be1c476c497c9461331027fdd2e662c1dcee762bef"
+  version "10.0.2"
+  sha256 "54ce54f8b52f862354a46c99b0287aef682c0020719748b6a5267c99c02bca56"
 
   url "https://download.qt.io/official_releases/qtcreator/#{version.major_minor}/#{version}/qt-creator-opensource-mac-x86_64-#{version}.dmg"
   name "Qt Creator"
@@ -11,14 +11,15 @@ cask "qt-creator" do
   # (fetching an additional page) to obtain the full version.
   livecheck do
     url "https://download.qt.io/official_releases/qtcreator/?C=M;O=D"
-    strategy :page_match do |page|
+    regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
+    strategy :page_match do |page, regex|
       # These version directories can sometimes be empty, so this will check
       # directory pages until it finds versions
-      page.scan(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i).lazy.map do |match|
+      page.scan(regex).lazy.map do |match|
         version_page = Homebrew::Livecheck::Strategy.page_content(url.sub("/?", "/#{match[0]}/?"))
         next if version_page[:content].blank?
 
-        versions = version_page[:content].scan(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i).map(&:first)
+        versions = version_page[:content].scan(regex).map(&:first)
         next if versions.blank?
 
         versions

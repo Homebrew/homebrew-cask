@@ -1,6 +1,6 @@
 cask "obsbot-webcam" do
-  version "2.0.3.8"
-  sha256 "c9fb09550ad2af78eab5b6a73359fa69da5a747565aef54587e944b676813458"
+  version "2.0.4.28"
+  sha256 "78eb59967f7dc6797771cbb6401691e2bcb1e798ca9b284dc36a170c0154b818"
 
   url "https://obsbot-static-resource.oss-accelerate.aliyuncs.com/download/obsbot-webcam/Obsbot_WebCam_OA_E_MacOS_#{version}_release.dmg",
       verified: "obsbot-static-resource.oss-accelerate.aliyuncs.com/download/obsbot-webcam/"

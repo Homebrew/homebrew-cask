@@ -8,9 +8,11 @@ cask "mixxx" do
   homepage "https://www.mixxx.org/"
 
   livecheck do
-    url "https://www.mixxx.org/download/"
-    regex(%r{href=.*?/mixxx[._-]v?(\d+(?:\.\d+)+)[._-]macosintel\.dmg}i)
+    url "https://mixxx.org/download/"
+    regex(%r{href=.*?/mixxx[._-]v?(\d+(?:\.\d+)+)[._-]macos(?:intel|arm)\.dmg}i)
   end
+
+  conflicts_with cask: "homebrew/cask-versions/mixxx-snapshot"
 
   app "Mixxx.app"
 

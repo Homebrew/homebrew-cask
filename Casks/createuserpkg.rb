@@ -4,12 +4,12 @@ cask "createuserpkg" do
 
   url "https://magervalp.github.io/CreateUserPkg/Distributions/CreateUserPkg-#{version}.dmg"
   name "CreateUserPkg"
+  desc "Create packages to deploy user accounts"
   homepage "https://magervalp.github.io/CreateUserPkg/"
 
-  livecheck do
-    url "https://github.com/MagerValp/CreateUserPkg"
-    strategy :git
-  end
-
   app "CreateUserPkg.app"
+
+  caveats do
+    discontinued
+  end
 end

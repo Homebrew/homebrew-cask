@@ -9,7 +9,7 @@ cask "beyond-compare" do
 
   livecheck do
     url "https://www.scootersoftware.com/download.php?zz=v4changelog"
-    regex(/<h2[^>]*>(\d+(?:\.\d+)+)/i)
+    regex(/BCompareOSX[_.-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
   auto_updates true

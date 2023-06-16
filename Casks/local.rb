@@ -1,19 +1,20 @@
 cask "local" do
-  arch arm: "mac-arm64", intel: "mac"
+  arch arm: "-arm64"
 
-  version "6.7.1,6369"
-  sha256  arm:   "0cb331e420351bd5789681ee0cdd05c9438578108b6b95e4e055ea7487461b82",
-          intel: "56f0c7ca3c6ccef87c09802b18af03feefdbe57dba32e80db745f00c082b6315"
+  version "7.0.1,6387"
+  sha256  arm:   "d1cf3f68d85c25289586ce2861475c264dfb0350007ed7f329a84656ed993335",
+          intel: "0901ccaee4114ad9795be2d757f01224f1f70446e59ba91bfbe60ae0c23a908b"
 
-  url "https://cdn.localwp.com/releases-stable/#{version.csv.first}+#{version.csv.second}/local-#{version.csv.first}-#{arch}.dmg"
+  url "https://cdn.localwp.com/releases-stable/#{version.csv.first}+#{version.csv.second}/local-#{version.csv.first}-mac#{arch}.dmg"
   name "Local"
   desc "WordPress local development tool by Flywheel"
   homepage "https://localwp.com/"
 
   livecheck do
-    url "https://cdn.localwp.com/stable/latest/mac"
+    url "https://cdn.localwp.com/stable/latest/mac#{arch}"
+    regex(%r{/(\d+(?:\.\d+)+)\+(\d+)/})
     strategy :header_match do |headers|
-      match = headers["location"].match(%r{/(\d+(?:\.\d+)+)\+(\d+)/})
+      match = headers["location"].match(regex)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"

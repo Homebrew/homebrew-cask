@@ -1,6 +1,6 @@
 cask "warp" do
-  version "0.2023.05.09.08.03.stable_01"
-  sha256 "a7cede806ab35a734d1cf7c27b246d8b8357a75b870e41f5b4f056ab5a9bf27b"
+  version "0.2023.06.06.08.02.stable_00"
+  sha256 "402530c929905cd8e134d18d3fec4166c7279ae1b6e2e3947456c5569f684a18"
 
   url "https://app.warp.dev/download/brew?version=v#{version}"
   name "Warp"

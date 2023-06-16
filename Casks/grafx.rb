@@ -9,11 +9,9 @@ cask "grafx" do
 
   livecheck do
     url "https://pulkomandy.tk/projects/GrafX2/downloads"
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/downloads/(\d+)[\s'">]+Grafx2\.app-x86_64-sdl2-v?(\d+(?:\.\d+)+)\.zip}im)
-      next if match.blank?
-
-      "#{match[2]},#{match[1]}"
+    regex(%r{href=.*?/downloads/(\d+)[\s'">]+Grafx2\.app-x86_64-sdl2-v?(\d+(?:\.\d+)+)\.zip}im)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
 

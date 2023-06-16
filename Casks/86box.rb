@@ -30,10 +30,10 @@ cask "86box" do
 
   app "86Box.app", target: "86Box/86Box.app"
 
-  roms_dir = "#{Dir.home}/Library/Application Support/net.86box.86Box/roms"
+  roms_dir = Pathname("~/Library/Application Support/net.86box.86Box/roms")
 
   preflight do
-    FileUtils.mkdir_p roms_dir
+    roms_dir.expand_path.mkpath
   end
 
   zap trash: [
@@ -42,13 +42,10 @@ cask "86box" do
     "~/Library/Saved Application State/net.86Box.86Box.savedState",
   ]
 
-  caveats <<~EOS
-    Requires installing ROM files from:
-
-      https://github.com/86Box/roms/releases/latest
-
-    into:
-
-      #{roms_dir}
-  EOS
+  caveats do
+    <<~EOS
+      ROM files from https://github.com/86Box/roms need to be installed into
+        #{roms_dir}
+    EOS
+  end
 end

@@ -9,7 +9,7 @@ cask "chessx" do
   homepage "https://chessx.sourceforge.io/"
 
   livecheck do
-    url "https://sourceforge.net/projects/chessx/rss"
+    url "https://sourceforge.net/projects/chessx/rss?path=/chessx"
     regex(%r{url=.*?/chessx[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 

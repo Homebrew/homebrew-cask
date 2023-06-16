@@ -1,6 +1,6 @@
 cask "tachidesk-sorayomi" do
-  version "0.5.5"
-  sha256 "533fe4ff9a15ffd2ab838824d3b606e1396d5660afaf84adbe20ab5a1d2c1ede"
+  version "0.5.7"
+  sha256 "dfbc901b2a00de1840d7740a0be1074a5eaa76d48b0c88c1eea1059aa45627dd"
 
   url "https://github.com/Suwayomi/Tachidesk-Sorayomi/releases/download/#{version}/tachidesk-sorayomi-#{version}-macos-x64.zip"
   name "Tachidesk Sorayomi"

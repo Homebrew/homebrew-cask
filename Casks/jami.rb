@@ -1,6 +1,6 @@
 cask "jami" do
-  version "2023041413"
-  sha256 "c523a30480b1d8515dafa11f797cdd86c067bc2f059ee3037ffe6fa88a5e715b"
+  version "2023061120"
+  sha256 "72a7ef4c6759d721616a2d979d1e5d61f0578a567952e38cb8660165ad11cd06"
 
   url "https://dl.jami.net/mac_osx/jami#{version}.dmg"
   name "Jami"

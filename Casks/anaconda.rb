@@ -6,7 +6,7 @@ cask "anaconda" do
          intel: "3593921c8a5516db82f0d7dd1c691f7ee7794236852e7da614e9ad6e93eeb342"
 
   url "https://repo.anaconda.com/archive/Anaconda3-#{version}-MacOSX-#{arch}.sh"
-  name "Continuum Analytics Anaconda"
+  name "Anaconda Distribution"
   desc "Distribution of the Python and R programming languages for scientific computing"
   homepage "https://www.anaconda.com/"
 

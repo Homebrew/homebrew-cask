@@ -1,6 +1,6 @@
 cask "elan" do
-  version "6.4"
-  sha256 "1bbcb6de6c6c763da8266ee411cec865efbbf2026c55492937fd80aa4abc78c7"
+  version "6.5"
+  sha256 "df05ca15b92b949160f728230a732b4d20cc9d0659abdf5de6a0639e4460e255"
 
   url "https://www.mpi.nl/tools/elan/ELAN_#{version.dots_to_hyphens}_mac.zip"
   name "ELAN"

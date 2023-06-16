@@ -10,11 +10,9 @@ cask "amazon-workdocs" do
 
   livecheck do
     url "https://d28gdqadgmua23.cloudfront.net/mac/appcast/appcast-workdocs-prod.xml"
-    strategy :sparkle do |item|
-      match = item.url.match(%r{/(\d+(?:\.\d+)+)/(\d+)/Amazon WorkDocs\.app\.zip}i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
+    regex(%r{/(\d+(?:\.\d+)+)/(\d+)/Amazon WorkDocs\.app\.zip}i)
+    strategy :sparkle do |item, regex|
+      item.url.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 

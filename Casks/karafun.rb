@@ -1,16 +1,15 @@
 cask "karafun" do
-  version "2.2.0,86"
-  sha256 "ca26e741588827b17b8ae4d72d3f713ba8aa029cbddea08eb8403a9bc8151b42"
+  version "2.3.0.91"
+  sha256 :no_check
 
-  url "https://c20.recis.io/sl/75651288c7/63683b44547cfdbafd795b67c7101da5/KaraFun_#{version.csv.first}.#{version.csv.second}.dmg",
-      verified: "c20.recis.io/sl/75651288c7/63683b44547cfdbafd795b67c7101da5/"
+  url "https://www.karafun.com/download/mac.html"
   name "KaraFun"
   desc "Karaoke player software"
   homepage "https://www.karafun.com/"
 
   livecheck do
-    url "https://www.karafun.fr/osx/appcast.xml"
-    strategy :sparkle
+    url :url
+    strategy :header_match
   end
 
   auto_updates true

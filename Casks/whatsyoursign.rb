@@ -1,6 +1,6 @@
 cask "whatsyoursign" do
-  version "2.0.1"
-  sha256 "6e40562a2034b109bfc15fcb7b107d132396f420fe39abed49cc32338489ec29"
+  version "2.2.0"
+  sha256 "4d14b1fd1ec2741b2ee91102350a5c92185dd89211da192009f5043b2a1cf220"
 
   url "https://github.com/objective-see/WhatsYourSign/releases/download/v#{version}/WhatsYourSign_#{version}.zip",
       verified: "github.com/objective-see/"
@@ -23,4 +23,6 @@ cask "whatsyoursign" do
               ],
               must_succeed: false,
             }
+
+  zap trash: "~/Library/Saved Application State/com.objective-see.WhatsYourSign.savedState"
 end
