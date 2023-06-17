@@ -18,4 +18,8 @@ cask "eset-cyber-security" do
     executable: "/Applications/ESET Cyber Security.app/Contents/Helpers/Uninstaller.app/Contents/Scripts/uninstall.sh",
     sudo:       true,
   }
+
+  zap trash: [
+    "~/Library/Preferences/com.eset.ecsp.*.plist",
+  ]
 end
