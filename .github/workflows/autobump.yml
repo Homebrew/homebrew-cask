@@ -45,6 +45,7 @@ env:
     logseq
     macupdater
     metasploit
+    microsoft-edge
     microsoft-openjdk
     netron
     openlens
