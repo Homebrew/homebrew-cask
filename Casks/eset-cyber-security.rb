@@ -20,6 +20,6 @@ cask "eset-cyber-security" do
   }
 
   zap trash: [
-    "~/Library/Preferences/com.eset.ecsp.*.plist",
+    "~/Library/Preferences/com.eset.ecs.*.plist",
   ]
 end
