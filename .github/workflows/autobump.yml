@@ -17,18 +17,29 @@ env:
     beeper
     bettertouchtool
     bike
+    brave-browser
     burp-suite
+    busycal
+    chirp
     codeql
+    cog
+    confluent-cli
     copilot-for-xcode
+    descript
     electron
+    eloston-chromium
     firefox
     flipper
+    fmail2
+    foxglove-studio
     gather
     glyphs
     google-chrome
     grammarly-desktop
     grandtotal
+    hackolade
     hepta
+    jdownloader
     jupyterlab
     librewolf
     logseq
@@ -38,27 +49,40 @@ env:
     microsoft-openjdk
     netron
     openlens
+    openshift-client
     opera
     opera-gx
+    osu
     pitch
+    purei-play
+    puzzles
     qownnotes
+    quarto
     setapp
+    sfdx
+    shapr3d
     sigmaos
     signal
+    siyuan
     skype
     sol
+    standard-notes
     stats
     telegram
     telegram-desktop
     teleport-connect
     tor-browser
+    trader-workstation
+    trainerroad
     tsh
+    uvtools
     viber
     vrew
     vscodium
     warp
     webull
     whatsapp
+    workflowy
     zoom
     zoom-for-it-admins
 
