@@ -12,6 +12,8 @@ cask "eset-cyber-security" do
     regex(%r{ESET\sCyber\sSecurity</p>\n.*/span>\sv?(\d+(?:\.\d+)+)}i)
   end
 
+  depends_on macos: ">= :catalina"
+
   pkg "Resources/Installer.pkg"
 
   uninstall script: {
@@ -19,7 +21,5 @@ cask "eset-cyber-security" do
     sudo:       true,
   }
 
-  zap trash: [
-    "~/Library/Preferences/com.eset.ecs.*.plist",
-  ]
+  zap trash: "~/Library/Preferences/com.eset.ecs.*.plist"
 end
