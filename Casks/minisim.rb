@@ -1,6 +1,6 @@
 cask "minisim" do
-  version "0.6.0"
-  sha256 "6d3491d0094e464db49c6a27e8e541eea6097466319d8f21669c6ec7bbc8ba7b"
+  version "0.6.1"
+  sha256 "370edd51af50e55edc11e3a7449030329f5580d3109adcd427eb035801d12eb6"
 
   url "https://github.com/okwasniewski/MiniSim/releases/download/v#{version}/MiniSim.app.zip",
       verified: "github.com/okwasniewski/MiniSim/"
