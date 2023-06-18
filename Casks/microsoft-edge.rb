@@ -2,13 +2,13 @@ cask "microsoft-edge" do
   linkid = on_arch_conditional arm: "2093504", intel: "2069148"
 
   sha256 arm:   "79da7a86a8e18b2eb62a703ef4fc43533abdc0c71afc39b93ccbe88bbc1affc2",
-         intel: "e43aa0cf804a796078cc379dac0f22fcacfa569e6fca279522455a2bd50d7908"
+         intel: "bc4448f6a13224d6077afa0be5bc660b8730ce1ae3354912abb2d36bcc8e9d19"
 
   on_arm do
     version "114.0.1823.51,b8d28ebc-1118-427d-85b4-3c77f9fb5acb"
   end
   on_intel do
-    version "114.0.1823.43,99b54385-40f7-4275-8c97-386da51bf238"
+    version "114.0.1823.51,07a4c0d4-006a-4276-9a1c-df0e9b6b3ac0"
   end
 
   url "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/#{version.csv.second}/MicrosoftEdge-#{version.csv.first}.pkg"
@@ -29,7 +29,7 @@ cask "microsoft-edge" do
 
   auto_updates true
 
-  pkg "MicrosoftEdge-#{version}.pkg",
+  pkg "MicrosoftEdge-#{version.csv.first}.pkg",
       choices: [
         {
           "choiceIdentifier" => "com.microsoft.package.Microsoft_AutoUpdate.app", # Office16_all_autoupdate.pkg
