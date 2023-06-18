@@ -9,7 +9,7 @@ cask "pingplotter" do
 
   livecheck do
     url "https://www.pingplotter.com/download/release-notes"
-    regex(/h3.*?(\d+(?:\.\d+)+).*?h/i)
+    regex(/(\d+(?:\.\d+)+).*?h2/i)
   end
 
   app "PingPlotter.app"
