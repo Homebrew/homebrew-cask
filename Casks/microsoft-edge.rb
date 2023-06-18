@@ -1,20 +1,30 @@
 cask "microsoft-edge" do
-  folder = on_arch_conditional arm:   "dcaed03b-bd41-40c0-bd42-9c4ab774c5f9",
-                               intel: "99b54385-40f7-4275-8c97-386da51bf238"
   linkid = on_arch_conditional arm: "2093504", intel: "2069148"
 
-  version "114.0.1823.43"
-  sha256 arm:   "c4d0db7bd50971c6dea451823d19b7c6bc04e1f62fa357464871ad2032656283",
+  sha256 arm:   "79da7a86a8e18b2eb62a703ef4fc43533abdc0c71afc39b93ccbe88bbc1affc2",
          intel: "e43aa0cf804a796078cc379dac0f22fcacfa569e6fca279522455a2bd50d7908"
 
-  url "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/#{folder}/MicrosoftEdge-#{version}.pkg"
+  on_arm do
+    version "114.0.1823.51,b8d28ebc-1118-427d-85b4-3c77f9fb5acb"
+  end
+  on_intel do
+    version "114.0.1823.43,99b54385-40f7-4275-8c97-386da51bf238"
+  end
+
+  url "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/#{version.csv.second}/MicrosoftEdge-#{version.csv.first}.pkg"
   name "Microsoft Edge"
   desc "Web browser"
   homepage "https://www.microsoft.com/edge"
 
   livecheck do
     url "https://go.microsoft.com/fwlink/?linkid=#{linkid}"
-    strategy :header_match
+    regex(%r{/([^/]+)/MicrosoftEdge[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
+    strategy :header_match do |headers, regex|
+      match = headers["location"]&.match(regex)
+      next if match.blank?
+
+      "#{match[2]},#{match[1]}"
+    end
   end
 
   auto_updates true
