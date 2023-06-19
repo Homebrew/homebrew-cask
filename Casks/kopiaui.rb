@@ -11,6 +11,7 @@ cask "kopiaui" do
   desc "Backup/restore tool"
   homepage "https://kopia.io/"
 
+  auto_updates true
   app "KopiaUI.app"
 
   zap trash: [
