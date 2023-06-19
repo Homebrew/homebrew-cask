@@ -1,5 +1,5 @@
 cask "whisky" do
-  # Pre-release is currently the only release avaliable
+  # Pre-release is currently the only release available
   version "pre-0.3.1"
   sha256 "323d1693752f96eaa971c6df2ca1f04ae456c361f4192ee332683066eac1097d"
 
