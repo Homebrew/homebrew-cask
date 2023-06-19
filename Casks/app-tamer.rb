@@ -12,6 +12,8 @@ cask "app-tamer" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "App Tamer.app"
 
   uninstall delete: [
