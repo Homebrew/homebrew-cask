@@ -19,6 +19,7 @@ cask "sitala" do
     "de.decomposer.Sitala.aax",
     "de.decomposer.Sitala.au",
     "de.decomposer.Sitala.vst",
+    "de.decomposer.Sitala.vst3",
   ]
 
   zap trash: [
