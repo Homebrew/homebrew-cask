@@ -11,7 +11,13 @@ cask "kopiaui" do
   desc "Backup/restore tool"
   homepage "https://kopia.io/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
+
   app "KopiaUI.app"
 
   zap trash: [
