@@ -10,9 +10,9 @@ cask "command-x" do
 
   livecheck do
     url :homepage
-
-    strategy :page_match do |page, _regex|
-      page.match(%r{ href="https://[^"]+?/Command-X-([\d.]+)-([^"]+)\.zip"})&.captures&.join(",")
+    regex(/href.*?Command[._-]X[._-](\d+(?:\.\d+)+)-(\w+)\.zip"/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 
