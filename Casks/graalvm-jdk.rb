@@ -13,7 +13,7 @@ cask "graalvm-jdk" do
 
   livecheck do
     url "https://github.com/oracle/graal.git"
-    regex(/jdk-(\d+(?:\.\d+)+)/)
+    regex(/jdk[._-]v?(\d+(?:\.\d+)+)/)
   end
 
   artifact "graalvm-jdk-#{version}+9.1", target: "/Library/Java/JavaVirtualMachines/graalvm-#{version.major}.jdk"
