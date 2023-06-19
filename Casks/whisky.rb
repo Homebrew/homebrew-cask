@@ -21,6 +21,7 @@ cask "whisky" do
   zap trash: [
     "~/Library/Application Support/Whisky",
     "~/Library/Containers/com.isaacmarovitz.Whisky",
+    "~/Library/HTTPStorages/com.isaacmarovitz.Whisky",
     "~/Library/Logs/Whisky",
     "~/Library/Preferences/com.isaacmarovitz.Whisky.plist",
     "~/Library/Saved Application State/com.isaacmarovitz.Whisky.savedState",
