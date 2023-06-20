@@ -18,4 +18,13 @@ cask "polymail" do
   auto_updates true
 
   app "Polymail.app"
+
+  zap trash: [
+    "~/Library/Application Support/Polymail",
+    "~/Library/Caches/io.polymail.osx*",
+    "~/Library/HTTPStorages/io.polymail.osx",
+    "~/Library/Logs/Polymail",
+    "~/Library/Preferences/io.polymail.osx.plist",
+    "~/Library/Saved Application State/io.polymail.osx.savedState",
+  ]
 end
