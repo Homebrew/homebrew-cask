@@ -19,7 +19,12 @@ cask "xpra" do
 
   pkg "Xpra-Python3-x86_64-#{version.csv.first}-r#{version.csv.second}.pkg"
 
-  uninstall pkgutil: "org.xpra.pkg"
+  uninstall pkgutil: "org.xpra.pkg",
+            delete:  "/Applications/Xpra"
 
-  zap trash: "/Library/Application Support/Xpra"
+  zap trash: [
+    "/Library/Application Support/Xpra",
+    "~/Library/Application Support/Xpra",
+    "~/Library/Saved Application State/org.xpra.xpra.savedState",
+  ]
 end
