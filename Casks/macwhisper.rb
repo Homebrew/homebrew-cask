@@ -1,9 +1,9 @@
 cask "macwhisper" do
-  version "2.20,121"
-  sha256 "c63bd2564801d6dea71277dfd1a6c487ceb77f2b3b25dae3c782192962758493"
+  version "3.0,150"
+  sha256 "54be55eee6f221aa13dd2a2683f2ed159df3989b04068236075bcf17f63d8d14"
 
   url "https://macwhisper-site.vercel.app/releases/MacWhisper-#{version.csv.second}.zip",
-      verified: "macwhisper-site.vercel.app/"
+      verified: "macwhisper-site.vercel.app/releases/"
   name "MacWhisper"
   desc "Speech recognition tool"
   homepage "https://goodsnooze.gumroad.com/l/macwhisper"
@@ -12,6 +12,8 @@ cask "macwhisper" do
     url "https://macwhisper-site.vercel.app/appcast.xml"
     strategy :sparkle
   end
+
+  depends_on macos: ">= :ventura"
 
   app "MacWhisper.app"
 

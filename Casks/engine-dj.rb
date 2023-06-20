@@ -1,6 +1,6 @@
 cask "engine-dj" do
-  version "3.0.1,6c40df4446,5e1011cdeb"
-  sha256 "f4f7e212d2b3bf47087ef2caa9ee710559584ccdca680dd860ed387a3aea6a31"
+  version "3.1.0,ff36bc1e3b,ae48c5bc6a"
+  sha256 "6451abc67bf1e750bc4e289f530d45bdaf6eea2e2d5aea4da458ca85f6ff20c4"
 
   url "https://imb-cicd-public.s3.amazonaws.com/Engine/#{version.csv.first}/Release/EDJ/mac/#{version.csv.third}/Engine_DJ_Release_#{version.csv.first}_#{version.csv.second}.dmg",
       verified: "imb-cicd-public.s3.amazonaws.com/Engine/"

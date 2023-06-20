@@ -1,6 +1,6 @@
 cask "snowflake-snowsql" do
-  version "1.2.26"
-  sha256 "51d9db56ec898754dee114db4b8d9f03283c82a0d09f54be5851b63a8ff93a3f"
+  version "1.2.27"
+  sha256 "ab78917f16654766621148cbac8faf4891b70420eefa1acb4234f77a72244000"
 
   url "https://sfc-repo.snowflakecomputing.com/snowsql/bootstrap/#{version.major_minor}/darwin_x86_64/snowsql-#{version}-darwin_x86_64.pkg",
       verified: "sfc-repo.snowflakecomputing.com/"
