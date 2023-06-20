@@ -37,77 +37,82 @@ cask "gpg-suite-no-mail" do
           "attributeSetting" => 1,
         },
         {
-          "choiceIdentifier" => "installer_choice_4", # GPGMail_6_Core.pkg
+          "choiceIdentifier" => "installer_choice_4", # GPGMail_7_Core.pkg
           "choiceAttribute"  => "selected",
           "attributeSetting" => 0,
         },
         {
-          "choiceIdentifier" => "installer_choice_5", # GPGMail_5_Core.pkg
+          "choiceIdentifier" => "installer_choice_5", # GPGMail_6_Core.pkg
           "choiceAttribute"  => "selected",
           "attributeSetting" => 0,
         },
         {
-          "choiceIdentifier" => "installer_choice_6", # GPGMail_4_Core.pkg
+          "choiceIdentifier" => "installer_choice_6", # GPGMail_5_Core.pkg
           "choiceAttribute"  => "selected",
           "attributeSetting" => 0,
         },
         {
-          "choiceIdentifier" => "installer_choice_7", # GGPGMail_3_Core.pkg
+          "choiceIdentifier" => "installer_choice_7", # GGPGMail_4_Core.pkg
           "choiceAttribute"  => "selected",
           "attributeSetting" => 0,
         },
         {
-          "choiceIdentifier" => "installer_choice_8", # GPGMail_12_Core.pkg
+          "choiceIdentifier" => "installer_choice_8", # GPGMail_3_Core.pkg
           "choiceAttribute"  => "selected",
           "attributeSetting" => 0,
         },
         {
-          "choiceIdentifier" => "installer_choice_9", # GPGMailLoader_Core.pkg
+          "choiceIdentifier" => "installer_choice_9", # GPGMail_12_Core.pkg
           "choiceAttribute"  => "selected",
           "attributeSetting" => 0,
         },
         {
-          "choiceIdentifier" => "installer_choice_10", # GPGServices_Core.pkg
+          "choiceIdentifier" => "installer_choice_10", # GPGMailLoader_Core.pkg
+          "choiceAttribute"  => "selected",
+          "attributeSetting" => 0,
+        },
+        {
+          "choiceIdentifier" => "installer_choice_11", # GPGServices_Core.pkg
           "choiceAttribute"  => "selected",
           "attributeSetting" => 1,
         },
         {
-          "choiceIdentifier" => "installer_choice_11", # GPGKeychain_Core.pkg
+          "choiceIdentifier" => "installer_choice_12", # GPGKeychain_Core.pkg
           "choiceAttribute"  => "selected",
           "attributeSetting" => 1,
         },
         {
-          "choiceIdentifier" => "installer_choice_12", # GPGPreferences_Core.pkg
+          "choiceIdentifier" => "installer_choice_13", # GPGPreferences_Core.pkg
           "choiceAttribute"  => "selected",
           "attributeSetting" => 1,
         },
         {
-          "choiceIdentifier" => "installer_choice_13", # MacGPG2.1_Core.pkg
+          "choiceIdentifier" => "installer_choice_14", # MacGPG2.1_Core.pkg
           "choiceAttribute"  => "selected",
           "attributeSetting" => 1,
         },
         {
-          "choiceIdentifier" => "installer_choice_14", # Updater_Core.pkg
+          "choiceIdentifier" => "installer_choice_15", # Updater_Core.pkg
           "choiceAttribute"  => "selected",
           "attributeSetting" => 1,
         },
         {
-          "choiceIdentifier" => "installer_choice_15", # pinentry_Core.pkg
+          "choiceIdentifier" => "installer_choice_16", # pinentry_Core.pkg
           "choiceAttribute"  => "selected",
           "attributeSetting" => 1,
         },
         {
-          "choiceIdentifier" => "installer_choice_16", # version.pkg
+          "choiceIdentifier" => "installer_choice_17", # version.pkg
           "choiceAttribute"  => "selected",
           "attributeSetting" => 1,
         },
         {
-          "choiceIdentifier" => "installer_choice_17", # key.pkg
+          "choiceIdentifier" => "installer_choice_18", # key.pkg
           "choiceAttribute"  => "selected",
           "attributeSetting" => 1,
         },
         {
-          "choiceIdentifier" => "installer_choice_18", # CheckPrivateKey.pkg
+          "choiceIdentifier" => "installer_choice_19", # CheckPrivateKey.pkg
           "choiceAttribute"  => "selected",
           "attributeSetting" => 1,
         },
