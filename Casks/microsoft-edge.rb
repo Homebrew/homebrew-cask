@@ -8,7 +8,7 @@ cask "microsoft-edge" do
     version "114.0.1823.55,6b7f76a0-e184-445c-821d-aa2dc25ef6b3"
   end
   on_intel do
-    version "114.0.1823.51,07a4c0d4-006a-4276-9a1c-df0e9b6b3ac0"
+    version "114.0.1823.55,3145aaa9-a8d9-4da4-9d35-91031a096ea5"
   end
 
   url "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/#{version.csv.second}/MicrosoftEdge-#{version.csv.first}.pkg"
