@@ -1,9 +1,9 @@
 cask "shutter-encoder" do
   arch arm: "Apple Silicon", intel: "Mac 64bits"
 
-  version "17.1"
-  sha256 arm:   "6a3c3a096bd43080dd85f97f3f8cfdb49f5454f326b8a04db016e6cb8d124a4c",
-         intel: "4a00f722050bd96ca2dfb20acbdffd2dca6c455427860aeacb400848372f2467"
+  version "17.2"
+  sha256 arm:   "206ed65de0c9b1c2d9155a823f101016af3e9d0034a15cf3702d0f6bd9a7d58b",
+         intel: "6dddf9728d5fabdc296d3b2516dc35f3a8bcbd29b28754f4cbcf6de0a54553ab"
 
   url "https://www.shutterencoder.com/Shutter%20Encoder%20#{version}%20#{arch.gsub(" ", "%20")}.pkg"
   name "Shutter Encoder"

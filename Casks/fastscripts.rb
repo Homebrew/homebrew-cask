@@ -1,6 +1,6 @@
 cask "fastscripts" do
-  version "3.2.5"
-  sha256 "562e28d7e8dacf09d7086d16a05441c2118af157ec98f31773bcf161672b895c"
+  version "3.2.7"
+  sha256 "bd88ca14b468ef59b327ce8e5ed7ed6e33e841314419d9298a2b46ca6c75c098"
 
   url "https://redsweater.com/fastscripts/FastScripts#{version}.zip"
   name "FastScripts"
@@ -13,7 +13,7 @@ cask "fastscripts" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   app "FastScripts.app"
 

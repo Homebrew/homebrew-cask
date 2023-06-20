@@ -2,12 +2,12 @@ cask "multiviewer-for-f1" do
   arch arm: "arm64", intel: "x64"
 
   on_arm do
-    version "1.19.2,109045469"
-    sha256 "bd47e1edfa6a7c1a1fc6196ea2c3785c59dd107fe054c4b9278276a90a3d335a"
+    version "1.22.2,113292277"
+    sha256 "d827d9a344eefbe2e2a342da2e87013b59ae209b5df204201136210103ec744a"
   end
   on_intel do
-    version "1.19.2,109045766"
-    sha256 "19b18e17378f22cb938cce89107616ada8e666a4ab907f31fb4d81132deca12b"
+    version "1.22.2,113292512"
+    sha256 "1d7084aecd42e710233c51fc1879e805b2bb7ae80c0f934d7dbc646d06986222"
   end
 
   url "https://releases.multiviewer.app/download/#{version.csv.second}/MultiViewer.for.F1-#{version.csv.first}-#{arch}.dmg"
@@ -19,11 +19,8 @@ cask "multiviewer-for-f1" do
     url "https://api.multiviewer.dev/api/v1/releases/latest"
     regex(%r{/([^/]+?)/MultiViewer[._-]for[._-]F1[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg}i)
     strategy :json do |json|
-      json["downloads"].map do |item|
-        match = item["url"]&.match(regex)
-        next if match.blank?
-
-        "#{match[2]},#{match[1]}"
+      json["downloads"].flat_map do |item|
+        item["url"].scan(regex).map { |match| "#{match[1]},#{match[0]}" }
       end
     end
   end

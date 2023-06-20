@@ -12,8 +12,8 @@ cask "couchbase-server-enterprise" do
     app "couchbase-server-enterprise_#{version}/Couchbase Server.app"
   end
   on_sierra :or_newer do
-    version "7.1.4"
-    sha256 "b91c8787cdff6117b97bee9a4ff17c258b1c9aaef3d4113a189fb02ec5d3ae1a"
+    version "7.2.0"
+    sha256 "036fb6bb0a2d84cb0dd822dfab83246702c3e33bf2db4483bbcc6355c52ca299"
 
     url "https://packages.couchbase.com/releases/#{version}/couchbase-server-enterprise_#{version}-macos_x86_64.dmg"
 

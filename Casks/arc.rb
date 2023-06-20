@@ -1,6 +1,6 @@
 cask "arc" do
-  version "0.104.0,38955"
-  sha256 "3399c5371e47c07f3d193ac993a5ca72fb15dc1990ed8f6567e066d4bf4c51aa"
+  version "0.108.1,39609"
+  sha256 "d9a2624285383499cf1e10b15c3414295fc59baa64ffdbfb4d8fd7514da2fb29"
 
   url "https://releases.arc.net/release/Arc-#{version.csv.first}-#{version.csv.second}.zip"
   name "Arc"

@@ -1,9 +1,9 @@
 cask "eclipse-dsl" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "4.27.0,2023-03"
-  sha256 arm:   "079151873c80dd441b472eab3908b51b58f4b12dc2ed7acc45cadface8d6ba7f",
-         intel: "6e53dff53785cb4b13de574be62b2eb085b652b0f5a4fbb0c511f07c3c22e7ee"
+  version "4.28.0,2023-06"
+  sha256 arm:   "3ce2d6ebd383c06b90c2bfd0c6f5aa1598f20f5d455576d29d470990e3c7de61",
+         intel: "bcb27d84be22cd0355598463accf5845957aa8f59906d8f85db01f064711ec0b"
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-dsl-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&r=1"
   name "Eclipse IDE for Java and DSL Developers"

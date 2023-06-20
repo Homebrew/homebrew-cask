@@ -1,11 +1,8 @@
 cask "canva" do
-  arch arm: "arm64", intel: "x64"
+  version "1.68.0"
+  sha256 "e58fa443bd032b171a68d274d4a24a5430c99757c0504eac6bc9c2e709b704ee"
 
-  version "1.66.0"
-  sha256 arm:   "4fa2701c7a6a85c465945aeedecb72c38256d1de8a01e26fbcc2ee9ed0920362",
-         intel: "3e919992015e40e4199eed9da1f443f0e9d7f4e2f11f6165cdbf7d88a655a4aa"
-
-  url "https://desktop-release.canva-deploy.com/Canva-#{version}-#{arch}.dmg",
+  url "https://desktop-release.canva-deploy.com/Canva-#{version}-universal.dmg",
       verified: "desktop-release.canva-deploy.com/"
   name "Canva"
   desc "Design tool"

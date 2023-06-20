@@ -10,9 +10,9 @@ cask "miditrail" do
 
   livecheck do
     url "https://ja.osdn.net/projects/miditrail/releases/rss"
-    strategy :page_match do |page|
-      page.scan(%r{url=.+downloads/(\d+)/MIDITrail[._-]Ver[._-](\d+(?:\.\d+)+)[._-]macOS\.zip}i)
-          .map { |matches| "#{matches[1]},#{matches[0]}" }
+    regex(%r{url=.+downloads/(\d+)/MIDITrail[._-]Ver[._-](\d+(?:\.\d+)+)[._-]macOS\.zip}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
 

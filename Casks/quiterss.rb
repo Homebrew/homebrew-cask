@@ -8,8 +8,8 @@ cask "quiterss" do
   homepage "https://quiterss.org/"
 
   livecheck do
-    url "https://github.com/QuiteRSS/quiterss"
-    strategy :git
+    url "https://quiterss.org/download"
+    regex(/href=.*?QuiteRSS[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "quiterss.app"

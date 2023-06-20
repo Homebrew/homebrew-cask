@@ -1,6 +1,6 @@
 cask "adobe-dng-converter" do
-  version "15.3.1"
-  sha256 "dd1a1f996c2dbc3ec6c62622fcb4305acf17aeed027312795a16e084f95b314c"
+  version "15.4"
+  sha256 "e35f39f7fcf79570be834bb8d3b3a0e26e62b6a3e78b2518e1f9bb07ae76799d"
 
   url "https://download.adobe.com/pub/adobe/dng/mac/DNGConverter_#{version.dots_to_underscores}.dmg"
   name "Adobe DNG Converter"
@@ -21,4 +21,10 @@ cask "adobe-dng-converter" do
               "com.adobe.CameraRawProfiles",
               "com.adobe.DNGConverter",
             ]
+
+  zap trash: [
+    "~/Library/Application Support/Adobe/CameraRaw/GPU/Adobe DNG Converter",
+    "~/Library/Application Support/Adobe/CameraRaw/Logs/DNG Converter Log*",
+    "~/Library/Saved Application State/com.adobe.DNGConverter.savedState",
+  ]
 end

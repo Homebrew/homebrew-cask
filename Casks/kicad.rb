@@ -1,6 +1,6 @@
 cask "kicad" do
-  version "7.0.4-0"
-  sha256 "874a395b53f37f83b768bec27c28499818938f5af0773a4ffba7293ba3f1bd2a"
+  version "7.0.5-0"
+  sha256 "11e5fe1975575a31a521881a1152e437fb083266f028281bd32fdff6be79ca3a"
 
   url "https://kicad-downloads.s3.cern.ch/osx/stable/kicad-unified-universal-#{version}.dmg",
       verified: "kicad-downloads.s3.cern.ch/osx/stable/"
@@ -9,7 +9,7 @@ cask "kicad" do
   homepage "https://kicad.org/"
 
   livecheck do
-    url "https://kicad-downloads.s3.cern.ch/?delimiter=/&prefix=osx/stable/"
+    url "https://downloads.kicad.org/kicad/macos/explore/stable"
     regex(/kicad[._-]unified[._-]universal[._-]v?(\d+(?:.\d+)+)\.dmg/i)
   end
 

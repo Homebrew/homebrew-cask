@@ -1,9 +1,9 @@
 cask "basecamp" do
   arch arm: "_arm64"
 
-  version "3,2.3.8"
-  sha256 arm:   "c15bf207ee8cf4525631cad322700df02690ef8a95cf64c242674afe72608fdb",
-         intel: "3b7bdb06c7ec63da72fafe20bef0acd10c8e71f548e356a6a3537dbaba524088"
+  version "3,2.3.12"
+  sha256 arm:   "f8f8aedf9e0fb02ed2eb7ad7f880f804e9a946869d02d8172969a98ae9f8fc3e",
+         intel: "f3052b9fc2c856ebb506231c1c0e975f8aa82033418991202b5535b68d436488"
 
   url "https://bc#{version.major}-desktop.s3.amazonaws.com/mac#{arch}/basecamp#{version.major}-#{version.csv.second}.zip",
       verified: "bc3-desktop.s3.amazonaws.com/"

@@ -14,4 +14,9 @@ cask "zsa-wally" do
   end
 
   app "Wally.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.zsa.wally.plist",
+    "~/Library/Saved Application State/com.zsa.wally.savedState",
+  ]
 end

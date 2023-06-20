@@ -9,11 +9,9 @@ cask "dupscanub" do
 
   livecheck do
     url :homepage
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/DupScanUB_(\d+)(\d+)(\d+).dmg\.zip}i)
-      next if match.blank?
-
-      "#{match[1]}.#{match[2]}.#{match[3]}"
+    regex(%r{href=.*?/DupScanUB_(\d+)(\d+)(\d+).dmg\.zip}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]}.#{match[1]}.#{match[2]}" }
     end
   end
 

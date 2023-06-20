@@ -1,9 +1,9 @@
 cask "volta" do
   arch arm: "-arm64"
 
-  version "1.16.1"
-  sha256 arm:   "3b8ed62c6c7dd0ae775c3b1f7ea4f85fb15d9285a12c3d3ec0ca9d679ac228ed",
-         intel: "21601cc6fedf84edb017a9301e6e67e0eb3961e31a3651685da65b0b1d3bc1aa"
+  version "1.17.6"
+  sha256 arm:   "8833acd2d98603a349ae8e66309f0758557dc5d3dcc52b4ab47d2f4d0f3e9bd3",
+         intel: "72b8f50ad84764303410eb4306f62d79060068c8f2c18f3befb7627346cc3b0f"
 
   url "https://volta-build.s3.fr-par.scw.cloud/Volta-#{version}#{arch}.dmg",
       verified: "volta-build.s3.fr-par.scw.cloud/"

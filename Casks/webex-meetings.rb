@@ -1,27 +1,17 @@
 cask "webex-meetings" do
-  on_arm do
-    version "2305.0904.4305.3"
-    sha256 :no_check
+  version :latest
+  sha256 :no_check
 
+  on_arm do
     url "https://akamaicdn.webex.com/client/Cisco_Webex_Meetings.pkg"
   end
   on_intel do
-    version "2305.0904.4305.3"
-    sha256 :no_check
-
     url "https://akamaicdn.webex.com/client/webexapp.dmg"
   end
 
   name "Webex Meetings"
   desc "Video communication and virtual meeting platform"
   homepage "https://www.webex.com/"
-
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
-
-  auto_updates true
 
   pkg "Cisco_Webex_Meetings.pkg"
 

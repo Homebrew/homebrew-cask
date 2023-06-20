@@ -2,8 +2,8 @@ cask "tabby" do
   arch arm: "arm64", intel: "x86_64"
 
   version "1.0.197"
-  sha256 arm:   "5796089d87c59f99cac06f547603a7b3bfccfcfebcc1a10e8e55c6152c1d9ba4",
-         intel: "e4ff7f0d3404119c1e729cc65dc336bdb9d102cac74cc3e887c6230ef1f61e05"
+  sha256 arm:   "eb24189e037d1436ab1947b1e8edf10d7af791f43cfda5983b3994ff76b2f373",
+         intel: "6e472a0e4788d4c79b95ae57d30d1afd4f72a6dab9e15bf3fd9d4399507e626c"
 
   url "https://github.com/Eugeny/tabby/releases/download/v#{version}/tabby-#{version}-macos-#{arch}.zip",
       verified: "github.com/Eugeny/tabby/"
@@ -26,5 +26,7 @@ cask "tabby" do
     "~/Library/Preferences/org.tabby.helper.plist",
     "~/Library/Preferences/org.tabby.plist",
     "~/Library/Saved Application State/org.tabby.savedState",
+    "~/Library/Services/Open Tabby here.workflow",
+    "~/Library/Services/Paste path into Tabby.workflow",
   ]
 end

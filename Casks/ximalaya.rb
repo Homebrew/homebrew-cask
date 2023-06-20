@@ -11,11 +11,11 @@ cask "ximalaya" do
 
   livecheck do
     url "https://www.ximalaya.com/down/lite/v2?client=mac&channelId=99"
-    strategy :header_match do |headers|
-      match = headers["location"].match(%r{storages/(.+)-aud.*?/(.+)/(.+)/(.+)\.dmg.*?Ximalaya[._-](\d+(?:\.\d+)+)}i)
-      next if match.blank?
-
-      "#{match[5]},#{match[4]},#{match[1]},#{match[2]},#{match[3]}"
+    regex(%r{storages/(.+)-aud.*?/(.+)/(.+)/(.+)\.dmg.*?Ximalaya[._-](\d+(?:\.\d+)+)}i)
+    strategy :header_match do |headers, regex|
+      headers["location"].scan(regex).map do |match|
+        "#{match[4]},#{match[3]},#{match[0]},#{match[1]},#{match[2]}"
+      end
     end
   end
 
