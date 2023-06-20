@@ -1,6 +1,6 @@
 cask "skiff" do
-  version "0.3.0"
-  sha256 "fce28da19b2f0f0cd84b2ba232fe8f80c83bd76005c4dae77c68ebe29e04b345"
+  version "0.4.0"
+  sha256 "52e795a10a5097a2a7ecee7452cd06fc53203471180b0f4c8e624ed6776da11c"
 
   url "https://raw.githubusercontent.com/skiff-org/skiff-org.github.io/main/macos/Skiff%20Desktop%20#{version}.dmg",
       verified: "raw.githubusercontent.com/skiff-org/skiff-org.github.io/main/macos/"
