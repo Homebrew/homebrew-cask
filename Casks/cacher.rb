@@ -14,4 +14,11 @@ cask "cacher" do
   end
 
   app "Cacher.app"
+
+  zap trash: [
+    "~/.cacher",
+    "~/Library/Application Support/Cacher",
+    "~/Library/Preferences/net.PenguinLabs.Cacher.plist",
+    "~/Library/Saved Application State/net.PenguinLabs.Cacher.savedState",
+  ]
 end
