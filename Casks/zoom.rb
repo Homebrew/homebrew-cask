@@ -1,9 +1,9 @@
 cask "zoom" do
   arch arm: "arm64/"
 
-  version "5.14.10.19202"
-  sha256 arm:   "c5e344ee6010215967042a428ece58b44a720f0aa32d307ea52ede6c3d7c61d4",
-         intel: "598dc99817cd78100b254efd2b132a5280a39aef4c350f3cc5b0bfd007db7c84"
+  version "5.15.0.19644"
+  sha256 arm:   "2dd1effc93d6bfef946d9807af6ba5c9e624e4ba83b8c1754c22b79a9b2a8a3c",
+         intel: "47c983a1adba68a52a0f36a00fa3d61707d04fa4214451cb2d8a4eabd010f11c"
 
   url "https://cdn.zoom.us/prod/#{version}/#{arch}Zoom.pkg"
   name "Zoom.us"
