@@ -13,4 +13,11 @@ cask "prepros" do
   end
 
   app "Prepros.app"
+
+  zap trash: [
+    "~/Library/Application Support/Prepros",
+    "~/Library/Application Support/Prepros-#{version.major}",
+    "~/Library/Preferences/io.prepros.prepros.plist",
+    "~/Library/Saved Application State/io.prepros.prepros.savedState",
+  ]
 end
