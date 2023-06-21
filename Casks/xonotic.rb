@@ -13,4 +13,6 @@ cask "xonotic" do
   end
 
   suite "Xonotic"
+
+  zap trash: "~/Library/Application Support/xonotic"
 end
