@@ -11,4 +11,10 @@ cask "artisan" do
   depends_on macos: ">= :catalina"
 
   app "Artisan.app"
+
+  zap trash: [
+    "~/Library/Application Support/artisan-scope",
+    "~/Library/Preferences/org.artisan-scope.Artisan.plist",
+    "~/Library/Saved Application State/org.artisan-scope.artisan.savedState",
+  ]
 end
