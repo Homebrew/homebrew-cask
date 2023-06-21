@@ -9,11 +9,9 @@ cask "xpra" do
 
   livecheck do
     url "https://www.xpra.org/dists/osx/x86_64/Xpra-x86_64.pkg.sha1"
-    strategy :page_match do |page|
-      match = page.match(/x86_64[._-]v?(\d+(?:\.\d+)+)[._-]r(\d+)\.pkg/i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
+    regex(/x86_64[._-]v?(\d+(?:\.\d+)+)[._-]r(\d+)\.pkg/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 
@@ -22,11 +20,14 @@ cask "xpra" do
   pkg "Xpra-Python3-x86_64-#{version.csv.first}-r#{version.csv.second}.pkg"
 
   uninstall pkgutil: "org.xpra.pkg",
-            delete:  "/Applications/Xpra.app"
+            delete:  [
+              "/Applications/Xpra.app",
+              "/usr/local/bin/Xpra*",
+            ]
 
-  zap trash: [
-    "/Library/Application Support/Xpra",
-    "~/Library/Application Support/Xpra",
-    "~/Library/Saved Application State/org.xpra.xpra.savedState",
-  ]
+  zap delete: "/Library/Application Support/Xpra",
+      trash:  [
+        "~/Library/Application Support/Xpra",
+        "~/Library/Saved Application State/org.xpra.xpra.savedState",
+      ]
 end
