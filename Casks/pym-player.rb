@@ -18,4 +18,13 @@ cask "pym-player" do
   depends_on macos: ">= :big_sur"
 
   app "PYM Player.app"
+
+  zap trash: [
+    "~/Library/Application Support/pl.uce.pym.pymplayer#{version.major}",
+    "~/Library/Caches/pl.uce.pym.pymplayer#{version.major}",
+    "~/Library/HTTPStorages/pl.uce.pym.pymplayer#{version.major}",
+    "~/Library/Preferences/pl.uce.pym.pymplayer#{version.major}.plist",
+    "~/Library/Saved Application State/pl.uce.pym.pymplayer#{version.major}.savedState",
+    "~/Library/WebKit/pl.uce.pym.pymplayer#{version.major}",
+  ]
 end
