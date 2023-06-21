@@ -13,4 +13,13 @@ cask "audiocupcake" do
   end
 
   app "AudioCupcake.app"
+
+  zap trash: [
+    "~/Library/Application Support/AudioCupcake",
+    "~/Library/Caches/com.sottovoce.AudioCupcake",
+    "~/Library/HTTPStorages/com.sottovoce.AudioCupcake",
+    "~/Library/HTTPStorages/com.sottovoce.AudioCupcake.binarycookies",
+    "~/Library/Preferences/com.sottovoce.AudioCupcake.plist",
+    "~/Library/Saved Application State/com.sottovoce.AudioCupcake.savedState",
+  ]
 end
