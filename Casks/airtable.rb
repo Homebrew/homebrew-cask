@@ -1,6 +1,6 @@
 cask "airtable" do
-  version "1.6.1"
-  sha256 "1f3f2242e8e13f886343331c7e3c4a2aa3593a00cc5fc9a9db9c1e738f392794"
+  version "1.6.2"
+  sha256 "2b02ca99360640b643f2eeb3a12cf55828bf52e22c173cdd48666f53345506e2"
 
   url "https://static.airtable.com/download/macos/Airtable-#{version}.dmg"
   name "Airtable"
