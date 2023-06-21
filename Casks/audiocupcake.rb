@@ -1,4 +1,4 @@
-cask "rectangle" do
+cask "audiocupcake" do
   version "1.0.18"
   sha256 "904bd9876dbb6bbd272b9bd250057b2421495fa21a88e3cda4392297cadd6fc9"
 
