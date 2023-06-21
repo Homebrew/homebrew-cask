@@ -4,7 +4,7 @@ cask "crosspack-avr" do
 
   url "https://www.obdev.at/downloads/crosspack/CrossPack-AVR-#{version.no_hyphens}.dmg"
   name "CrossPack"
-  desc "Development environment for Atmel’s AVR® microcontrollers"
+  desc "Development environment for Atmel’s AVR microcontrollers"
   homepage "https://www.obdev.at/products/crosspack/index.html"
 
   livecheck do
