@@ -12,6 +12,8 @@ cask "bluejeans" do
     strategy :sparkle
   end
 
+  depends_on macos: ">= :catalina"
+
   pkg "BlueJeansInstaller.pkg"
 
   uninstall pkgutil: [
