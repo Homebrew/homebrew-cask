@@ -8,8 +8,11 @@ cask "sonic-pi" do
   homepage "https://sonic-pi.net/"
 
   livecheck do
-    url "https://github.com/samaaron/sonic-pi"
-    strategy :git
+    url :homepage
+    regex(/href=.*?Sonic-Pi[^"' >]*?[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| match[0].tr("-", ".") }
+    end
   end
 
   app "Sonic Pi.app"
