@@ -14,4 +14,13 @@ cask "capto" do
   end
 
   app "Capto.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/U4MRT5KL8R.com.globaldelight.Capto.Web",
+    "~/Library/Caches/com.globaldelight.*",
+    "~/Library/Group Containers/U4MRT5KL8R.com.globaldelight.Capto.Web",
+    "~/Library/HTTPStorages/com.globaldelight.*",
+    "~/Library/Preferences/com.globaldelight.*.plist",
+    "~/Pictures/Capto",
+  ]
 end
