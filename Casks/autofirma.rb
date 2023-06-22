@@ -2,9 +2,9 @@ cask "autofirma" do
   arch arm: "M1", intel: "x64"
   pkg_arch = on_arch_conditional arm: "aarch64", intel: "x64"
 
-  version "1.8.0"
-  sha256 arm:   "810533e5c95bc41dff6cd674d09170054bf202c4305d40b62559d0e8bf442321",
-         intel: "6e25a93e57b8d00f453822dfed2e6f110a47a18d6e2583fc050c7caae11088f4"
+  version "1.8.2"
+  sha256 arm:   "8b202ccd48a513fe14dae6be2a21fbe42a65f90a7865ef22e8516df6425efe71",
+         intel: "62f1cc2f4c9528b690b2e736eeb5b74296cd6d4f5919f1262c69e1e811542d5b"
 
   url "https://estaticos.redsara.es/comunes/autofirma/#{version.major}/#{version.minor}/#{version.patch}/AutoFirma_Mac_#{arch}.zip",
       verified: "estaticos.redsara.es/comunes/autofirma/"
