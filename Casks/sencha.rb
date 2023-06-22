@@ -28,6 +28,8 @@ cask "sencha" do
     sudo:       true,
   }
 
+  # No zap stanza required
+
   caveats do
     license "https://www.sencha.com/legal/sencha-tools-software-license-agreement/"
     <<~EOS
