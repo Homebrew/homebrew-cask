@@ -17,7 +17,7 @@ cask "autofirma" do
     strategy :extract_plist
   end
 
-  pkg "AutoFirma_#{version.dots_to_underscores}_#{pkg_arch}_signed.pkg"
+  pkg "AutoFirma_#{version.dots_to_underscores}_#{pkg_arch}.pkg"
 
   # remove 'Autofirma ROOT' and '127.0.0.1' certificates from keychain (these were installed by pkg)
   uninstall_postflight do
