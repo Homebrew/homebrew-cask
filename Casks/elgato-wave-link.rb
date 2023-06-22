@@ -1,6 +1,6 @@
 cask "elgato-wave-link" do
-  version "1.7.1.3162"
-  sha256 "96d3b0656933ff93fc0303e262a304d36163cf6714f232702ecd3e3ddae49300"
+  version "1.8.0.448"
+  sha256 "842f239bdc7c7fe3c7f8d44ab2815b6b92419262434c715b7d2c54f8074b25a7"
 
   url "https://edge.elgato.com/egc/macos/wavelink/#{version.major_minor_patch}/WaveLink_#{version}.pkg",
       user_agent: :fake
