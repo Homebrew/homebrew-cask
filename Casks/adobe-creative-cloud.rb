@@ -11,8 +11,8 @@ cask "adobe-creative-cloud" do
   homepage "https://www.adobe.com/creativecloud.html"
 
   livecheck do
-    url "https://helpx.adobe.com/creative-cloud/release-note/cc-release-notes.html"
-    regex(/Version.\s*v?(\d+(?:\.\d+)+)/i)
+    url "https://ffc-static-cdn.oobesaas.adobe.com/features/v3/#{arch}/ccdConfig.xml"
+    regex(/ccd\.fw\.update\.greenline\.latest.*?"version".*?"(\d+(?:\.\d+)+)"/i)
   end
 
   auto_updates true
