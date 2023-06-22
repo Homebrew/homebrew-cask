@@ -1,6 +1,6 @@
 cask "nordlayer" do
-  version "2.8.2"
-  sha256 "1b490101f96d6c6fcb036230e1a3c2051e5520899524601b8333e2ad03ce2753"
+  version "2.8.3"
+  sha256 "e3a4a835e6f9ec14c7a14096bce896ce88d0ee3b0bcd7ed688b04a0af0aadb4a"
 
   url "https://downloads.nordlayer.com/mac/latest/NordLayer_v#{version}.zip"
   name "NordLayer"
