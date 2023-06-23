@@ -14,4 +14,11 @@ cask "ricoh-theta" do
   end
 
   app "RICOH THETA.app"
+
+  zap trash: [
+    "~/Library/Application Support/RicohTheta",
+    "~/Library/Logs/RicohTheta",
+    "~/Library/Preferences/com.ricoh.thetasphericalviewer.plist",
+    "~/Library/Saved Application State/com.ricoh.thetasphericalviewer.savedState",
+  ]
 end
