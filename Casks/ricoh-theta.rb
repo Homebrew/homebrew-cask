@@ -1,5 +1,5 @@
 cask "ricoh-theta" do
-  version "3.19.2,4"
+  version "3.19.3,4"
   sha256 :no_check
 
   url "https://theta360-statics.s3.amazonaws.com/app/viewer/RICOH%20THETA.dmg",
