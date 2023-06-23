@@ -13,4 +13,10 @@ cask "wireframe-sketcher" do
   end
 
   app "WireframeSketcher.app"
+
+  zap trash: [
+    "~/Documents/WireframeSketcher",
+    "~/Library/Preferences/com.wireframesketcher.studio.plist",
+    "~/Library/Saved Application State/com.wireframesketcher.studio.savedState",
+  ]
 end
