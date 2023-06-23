@@ -9,9 +9,8 @@ cask "sqlexplorer" do
   homepage "https://eclipsesql.sourceforge.io/"
 
   livecheck do
-    url "https://sourceforge.net/projects/eclipsesql/rss"
-    regex(/.*?rcp[._-]v?(\d+(?:\.\d+)+)[._-]macosx.*?\.tgz/i)
-    strategy :page_match
+    url "https://sourceforge.net/projects/eclipsesql/rss?path=/SQL%20Explorer%20RCP%20%28exc%20JRE%29"
+    regex(%r{url=.*?/sqlexplorer[._-]rcp[._-]v?(\d+(?:\.\d+)+)[._-]macosx?[^"' ]*?\.(?:t|zip)}i)
   end
 
   app "SQLExplorer/sqlexplorer.app"
