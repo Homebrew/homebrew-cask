@@ -1,11 +1,11 @@
 cask "darktable" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "4.2.1"
-  sha256 arm:   "d037a23e8b37f6971a1f2b7c4cf3e03647b168ad2fb43080761d7a307b43048d",
-         intel: "993a29685397c6e1a429d84be578da9271eefc06d2c75c10818ffc00b7d04a00"
+  version "4.4.0"
+  sha256 arm:   "40e41dcf508398fc67b2bce3441ac80b5dc5886e86cad15cf214530f42bf730d",
+         intel: "64af00c1ae160a6e95c459260c7789a431bb050f23afc62f87d6f23f3f06ced1"
 
-  url "https://github.com/darktable-org/darktable/releases/download/release-#{version.major_minor_patch}/darktable-#{version}_#{arch}.dmg",
+  url "https://github.com/darktable-org/darktable/releases/download/release-#{version.major_minor_patch}/darktable-#{version}-#{arch}.dmg",
       verified: "github.com/darktable-org/darktable/"
   name "darktable"
   desc "Photography workflow application and raw developer"
