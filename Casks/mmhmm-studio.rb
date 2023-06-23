@@ -1,6 +1,6 @@
 cask "mmhmm-studio" do
-  version "2.5.1,1683313000"
-  sha256 "fc547361ec5d0b50b24c00b63019da557823373b63a91f4e72ba31d2ec43629e"
+  version "2.5.2,1687464000"
+  sha256 "49ddb6c2b02050386f7786a619a5d2e87eea130f5b68fcd03ebb2ac4dfb8986f"
 
   url "https://updates.mmhmm.app/mac/production/mmhmmStudio_#{version.csv.first}.zip"
   name "mmhmm Studio"
