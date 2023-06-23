@@ -19,7 +19,7 @@ cask "bluej" do
     end
   end
 
-  app "BlueJ #{version}/BlueJ.app"
+  app "BlueJ.app"
 
   zap trash: "~/Library/Preferences/org.bluej"
 end
