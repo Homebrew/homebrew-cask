@@ -1,5 +1,5 @@
 cask "wireframe-sketcher" do
-  version "6.6.1"
+  version "6.6.2"
   sha256 :no_check
 
   url "https://wireframesketcher.com/downloads/WireframeSketcher-latest-macosx.zip"
@@ -13,4 +13,10 @@ cask "wireframe-sketcher" do
   end
 
   app "WireframeSketcher.app"
+
+  zap trash: [
+    "~/Documents/WireframeSketcher",
+    "~/Library/Preferences/com.wireframesketcher.studio.plist",
+    "~/Library/Saved Application State/com.wireframesketcher.studio.savedState",
+  ]
 end
