@@ -1,15 +1,15 @@
 cask "bluej" do
-  version "5.1.0a"
-  sha256 "2bbb4b687d91b04ee748602245c5f8cba93c0f1d1189ec6474e51d511d74b012"
+  version "5.2.0"
+  sha256 "60de856c511fe659f41132a4926414263b931666eb615310bced4d22e9581bbf"
 
-  url "https://www.bluej.org/download/files/BlueJ-mac-#{version.no_dots}.zip"
+  url "https://www.bluej.org/download/files/BlueJ-mac-#{version.no_dots}.dmg"
   name "BlueJ"
-  desc "Java Development Environment designed for begginers"
+  desc "Java Development Environment designed for beginners"
   homepage "https://www.bluej.org/"
 
   livecheck do
     url "https://www.bluej.org"
-    regex(%r{href=.*?/BlueJ-mac-(\d+)(\d+)(\d+)(a)?\.zip}i)
+    regex(%r{href=.*?/BlueJ-mac-(\d+)(\d+)(\d+)(a)?\.dmg}i)
     strategy :page_match do |page|
       match = page.match(regex)
       next if match.blank?
