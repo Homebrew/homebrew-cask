@@ -13,4 +13,9 @@ cask "gotiengviet" do
   end
 
   app "GoTiengViet.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.trankynam.GoTiengViet",
+    "~/Library/Containers/com.trankynam.GoTiengViet",
+  ]
 end
