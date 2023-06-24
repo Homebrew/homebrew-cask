@@ -9,6 +9,11 @@ cask "hue-topia" do
 
   app "Hue-topia.app"
 
+  zap trash: [
+    "~/Library/Application Scripts/com.peacockmedia.Hue-topia",
+    "~/Library/Containers/com.peacockmedia.Hue-topia",
+  ]
+
   caveats do
     discontinued
   end
