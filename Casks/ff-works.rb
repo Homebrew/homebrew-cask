@@ -1,5 +1,5 @@
 cask "ff-works" do
-  version "3.4.5"
+  version "3.5"
   sha256 :no_check
 
   url "https://www.ffworks.net/ffWorks.dmg"
