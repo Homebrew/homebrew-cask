@@ -1,6 +1,6 @@
 cask "gotiengviet" do
-  version "2.4"
-  sha256 "c3be5eb6ad582674489fee63b45bfd97b34bd5501f4c766616a818a002138c18"
+  version "2.4,32"
+  sha256 :no_check
 
   url "https://www.trankynam.com/gotv/downloads/GoTiengViet.dmg"
   name "GoTiengViet"
@@ -8,8 +8,8 @@ cask "gotiengviet" do
   homepage "https://www.trankynam.com/gotv/"
 
   livecheck do
-    url "https://www.trankynam.com/gotv/macos/GoTiengVietMacOSX-Appcast.xml"
-    strategy :sparkle, &:short_version
+    url :url
+    strategy :extract_plist
   end
 
   app "GoTiengViet.app"
