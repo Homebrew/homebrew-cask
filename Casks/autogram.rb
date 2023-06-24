@@ -23,4 +23,8 @@ cask "autogram" do
     "~/Library/Saved Application State/digital.slovensko.autogram.savedState",
     "~/Library/Application Support/Autogram",
   ]
+
+  caveats do
+    license "https://github.com/slovensko-digital/autogram/blob/main/LICENSE"
+  end
 end
