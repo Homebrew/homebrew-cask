@@ -14,5 +14,13 @@ cask "autogram" do
 
   pkg "Autogram-#{version}.pkg"
 
-  uninstall pkgutil: "digital.slovensko.autogram"
+  uninstall pkgutil: "digital.slovensko.autogram",
+            quit:    "digital.slovensko.autogram"
+
+  zap trash: [
+    "~/Library/Preferences/digital.slovensko.autogram.plist",
+    "~/Library/Saved Application State/digital.slovensko.autogram.savedState",
+    "~/Library/Saved Application State/digital.slovensko.autogram.savedState",
+    "~/Library/Application Support/Autogram",
+  ]
 end
