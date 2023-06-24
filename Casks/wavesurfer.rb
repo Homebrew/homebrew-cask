@@ -8,8 +8,8 @@ cask "wavesurfer" do
   homepage "https://sourceforge.net/projects/wavesurfer/"
 
   livecheck do
-    url "https://sourceforge.net/projects/wavesurfer/rss"
-    regex(%r{/wavesurfer-(\d+(?:\.\d+)*(?:p\d+(?:\.\d+)*)?)-macos\.dmg}i)
+    url "https://sourceforge.net/projects/wavesurfer/rss?path=/wavesurfer"
+    regex(%r{url=.*?/wavesurfer[._-]v?(\d+(?:\.\d+)+(?:p\d+(?:\.\d+)*)?)[^"' ]*?\.dmg}i)
   end
 
   app "WaveSurfer.app"
