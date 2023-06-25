@@ -4,7 +4,7 @@ cask "enpass" do
 
   url "https://dl.enpass.io/stable/mac/package/#{version}/Enpass.pkg"
   name "Enpass"
-  desc "Password and credentials mananger"
+  desc "Password and credentials manager"
   homepage "https://www.enpass.io/"
 
   livecheck do

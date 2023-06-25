@@ -5,7 +5,7 @@ cask "mplayer-osx-extended" do
   url "https://github.com/sttz/MPlayer-OSX-Extended/releases/download/rev#{version}/MPlayer-OSX-Extended_rev#{version}.zip",
       verified: "github.com/sttz/MPlayer-OSX-Extended/"
   name "MPlayer OSX Extended"
-  desc "Video player thats uses MPlayer as backend"
+  desc "Video player that uses MPlayer as backend"
   homepage "https://mplayerosx.ch/"
 
   app "MPlayer OSX Extended.app"
