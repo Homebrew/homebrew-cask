@@ -7,15 +7,8 @@ cask "rio" do
   desc "Hardware-accelerated GPU terminal emulator"
   homepage "https://github.com/raphamorim/rio/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   app "Rio.app"
   binary "Rio.app/Contents/MacOS/rio"
 
-  zap trash: [
-    "~/Library/Saved Application State/com.raphaelamorim.rio.savedState",
-  ]
+  zap trash: "~/Library/Saved Application State/com.raphaelamorim.rio.savedState"
 end
