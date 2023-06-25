@@ -14,4 +14,8 @@ cask "rio" do
 
   app "Rio.app"
   binary "Rio.app/Contents/MacOS/rio"
+
+  zap trash: [
+    "~/Library/Saved Application State/com.raphaelamorim.rio.savedState",
+  ]
 end
