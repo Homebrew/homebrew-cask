@@ -4,11 +4,11 @@ cask "drata-agent" do
 
   url "https://cdn.drata.com/agent/dist/mac/drata-agent-#{version}.dmg"
   name "Drata Agent"
-  desc "Trust, Automated"
+  desc "Security audit software"
   homepage "https://drata.com/"
 
   livecheck do
-    skip "No version check available"
+    url "https://github.com/drata/drata-agent"
   end
 
   app "Drata Agent.app"
