@@ -30,9 +30,12 @@ cask "raycast" do
   uninstall quit: "com.raycast.macos"
 
   zap trash: [
+    "~/.config/raycast",
     "~/Library/Application Support/com.raycast.macos",
     "~/Library/Caches/com.raycast.macos",
+    "~/Library/Caches/SentryCrash/Raycast",
     "~/Library/Cookies/com.raycast.macos.binarycookies",
+    "~/Library/HTTPStorages/com.raycast.macos",
     "~/Library/Preferences/com.raycast.macos.plist",
   ]
 end
