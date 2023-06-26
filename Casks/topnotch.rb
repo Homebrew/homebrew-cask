@@ -11,7 +11,7 @@ cask "topnotch" do
     url "https://updates.topnotch.app/appcast.xml"
     strategy :sparkle
   end
-  
+
   depends_on macos: ">= :big_sur"
 
   app "TopNotch.app"
