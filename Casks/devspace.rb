@@ -12,13 +12,11 @@ cask "devspace" do
   homepage "https://devspace.sh/"
 
   livecheck do
-    url :stable
+    url :url
     strategy :github_latest
   end
 
-  auto_updates true
   depends_on formula: "kubernetes-cli"
-  container type: :naked
 
   binary "devspace-darwin-#{arch}", target: "devspace"
 
