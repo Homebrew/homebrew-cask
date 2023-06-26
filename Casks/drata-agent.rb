@@ -14,6 +14,8 @@ cask "drata-agent" do
   app "Drata Agent.app"
 
   zap trash: [
-    "~/Application Support/drata-agent",
+    "~/Library/Application Support/drata-agent",
+    "~/Library/Logs/drata-agent",
+    "~/Library/Preferences/com.drata.agent.plist",
   ]
 end
