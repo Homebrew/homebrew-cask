@@ -11,6 +11,8 @@ cask "drata-agent" do
     url "https://github.com/drata/drata-agent"
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Drata Agent.app"
 
   zap trash: [
