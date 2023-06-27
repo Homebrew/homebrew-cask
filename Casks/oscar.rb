@@ -9,8 +9,8 @@ cask "oscar" do
   homepage "https://www.sleepfiles.com/OSCAR/"
 
   livecheck do
-    url "https://www.sleepfiles.com/OSCAR/"
-    regex(%r{href=.*?/OSCAR-(\d+(?:\.\d+)*)\.dmg}i)
+    url :homepage
+    regex(%r{href=.*?/OSCAR[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   depends_on macos: ">= :sierra"
