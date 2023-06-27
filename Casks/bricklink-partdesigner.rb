@@ -9,7 +9,7 @@ cask "bricklink-partdesigner" do
   homepage "https://bricklink.com/v3/studio/partdesigner.page"
 
   livecheck do
-    url "https://bricklink.com/v3/studio/partdesigner.page"
+    url :homepage
     regex(/"strVersion"\s*:\s*"([^"]+)"/i)
   end
 
