@@ -8,8 +8,8 @@ cask "pololu-avr-programmer-v2" do
   homepage "https://www.pololu.com/docs/0J67/4.3"
 
   livecheck do
-    url "https://www.pololu.com/docs/0J67/4.3"
-    regex(%r{href=.*?/([a-zA-Z0-9]+)/pololu-usb-avr-programmer-v2-(\d+(\.\d+)*[a-z]?)-macos\.pkg}i)
+    url :homepage
+    regex(%r{href=.*?/([a-zA-Z0-9]+)/pololu[._-]usb[._-]avr[._-]programmer[._-]v2[._-]v?(\d+(\.\d+)*[a-z]?)[._-]macos\.pkg}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
