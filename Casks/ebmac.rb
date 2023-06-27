@@ -8,7 +8,7 @@ cask "ebmac" do
   homepage "http://ebstudio.info/manual/EBMac/"
 
   livecheck do
-    url "http://ebstudio.info/manual/EBMac/"
+    url :homepage
     regex(%r{href=.*?/EBMacv?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
