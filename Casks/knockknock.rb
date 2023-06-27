@@ -1,6 +1,6 @@
 cask "knockknock" do
-  version "2.3.0"
-  sha256 "140f5f3c6d02541bed685810cb4c6916231fe2385ad749dd4856e7c9f2dcd05c"
+  version "2.4.0"
+  sha256 "071953f07bcb6285779fce2ffaf49e38d97cb62f2061ed360285dd548740698a"
 
   url "https://github.com/objective-see/KnockKnock/releases/download/v#{version}/KnockKnock_#{version}.zip",
       verified: "github.com/objective-see/KnockKnock/"
