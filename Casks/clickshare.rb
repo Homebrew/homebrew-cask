@@ -2,7 +2,7 @@ cask "clickshare" do
   version "4.30.2.2,48"
   sha256 "fd2bb5768586bfb291d430f61cd1649e7cbc66e6553247b0a832c2274d1680db"
 
-  url "https://barcoprdwebsitefs.azureedge.net/barcoprdfs/Data/secure/downloads/tde/Active/SoftwareFiles/ApplicationSoftware/R3306192_48_ApplicationSw.zip?RqTQjbyLZ2NdN1y5MIV_nkPq56tj6uuZRpf-OKUXfEY5kzEUOHHXgi2J7-a0dDmamh7XDrQHl-ZgBFhdIev1J-_5K2Ns",
+  url "https://barcoprdwebsitefs.azureedge.net/barcoprdfs/Data/secure/downloads/tde/Active/SoftwareFiles/ApplicationSoftware/R3306192_48_ApplicationSw.zip?8w8nxzTmccHn9SKQbzf9SK7WhUGrK1A9E3Jt7T2ubIR2_DSur3_ftp4A--RjRorNohOX7YWfLhKRdMHGh5WYdn68BXVI",
       verified: "barcoprdwebsitefs.azureedge.net/"
   name "ClickShare"
   desc "Wireless teleconferencing client"
