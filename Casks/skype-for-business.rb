@@ -30,7 +30,8 @@ cask "skype-for-business" do
               "com.microsoft.SkypeForBusiness",
               "com.microsoft.SkypeForBusiness.MeetingJoinPlugin",
             ],
-            login_item: "Skype for Business"
+            login_item: "Skype for Business",
+            quit:       "com.microsoft.autoupdate2"
 
   zap trash: [
         "/Library/Internet Plug-Ins/MeetingJoinPlugin.plugin",
