@@ -8,7 +8,7 @@ cask "skype-for-business" do
   homepage "https://www.microsoft.com/download/details.aspx?id=54108"
 
   livecheck do
-    url "https://www.microsoft.com/download/details.aspx?id=54108"
+    url :homepage
     regex(/SkypeForBusinessInstaller[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
@@ -36,8 +36,8 @@ cask "skype-for-business" do
         "/Library/Internet Plug-Ins/MeetingJoinPlugin.plugin",
         "~/Library/Application Support/com.microsoft.SkypeForBusinessTAP",
         "~/Library/Application Support/Skype for Business",
-        "~/Library/Preferences/com.microsoft.SkypeForBusinessTAP.plist",
         "~/Library/Preferences/com.microsoft.SkypeForBusinessTAP.debuglogging.plist",
+        "~/Library/Preferences/com.microsoft.SkypeForBusinessTAP.plist",
       ],
       rmdir: "/Library/Application Support/Microsoft"
 end
