@@ -9,7 +9,7 @@ cask "pixel-check" do
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?/PXC(\d+(?:\.\d+)*)\.zip}i)
+    regex(%r{href=.*?/PXC(\d+(?:\.\d+)+)\.zip}i)
   end
 
   app "PiXel Check #{version}/PiXel Check.app"
