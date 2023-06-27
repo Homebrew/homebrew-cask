@@ -1,19 +1,15 @@
 cask "clickshare" do
-  version "4.28.0.11,45"
-  sha256 "9b14dddad05c87a85c7d5fa9f004dc029fcec49abd14f8b8196d675f7ebf2f9e"
+  version "4.30.2.2,48"
+  sha256 "fd2bb5768586bfb291d430f61cd1649e7cbc66e6553247b0a832c2274d1680db"
 
-  url "https://www.barco.com/services/website/en/TdeFiles/Download?FileNumber=R3306192&TdeType=3&MajorVersion=#{format("%02d", version.csv.first.major)}&MinorVersion=#{format("%02d", version.csv.first.minor)}&PatchVersion=#{format("%02d", version.csv.first.patch)}&BuildVersion=#{format("%03d", version.csv.first.split(".").last)}"
+  url "https://barcoprdwebsitefs.azureedge.net/barcoprdfs/Data/secure/downloads/tde/Active/SoftwareFiles/ApplicationSoftware/R3306192_48_ApplicationSw.zip?RqTQjbyLZ2NdN1y5MIV_nkPq56tj6uuZRpf-OKUXfEY5kzEUOHHXgi2J7-a0dDmamh7XDrQHl-ZgBFhdIev1J-_5K2Ns",
+      verified: "barcoprdwebsitefs.azureedge.net/"
   name "ClickShare"
   desc "Wireless teleconferencing client"
   homepage "https://www.barco.com/en/clickshare/app"
 
   livecheck do
-    url "https://www.barco.com/en/support/software/R3306192"
-    regex(/<div[^>]*>\s*v?(\d+(?:\.\d+)+)/i)
-    strategy :page_match do |page, regex|
-      versions = page.scan(regex).flatten.uniq
-      "#{versions.first},#{versions.count + 4}"
-    end
+    skip "dunno?"
   end
 
   container nested:	"R3306192_#{version.csv.second}_ApplicationSw/ClickShare_Setup.dmg"
