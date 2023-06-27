@@ -9,7 +9,7 @@ cask "clipgrab" do
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?/ClipGrab[._-]v?(\d+(?:\.\d+)+)-cpython-(\d+)\.dmg}i)
+    regex(%r{href=.*?/ClipGrab[._-]v?(\d+(?:\.\d+)+)[._-]cpython[._-](\d+)\.dmg}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
