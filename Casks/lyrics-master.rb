@@ -10,7 +10,7 @@ cask "lyrics-master" do
   livecheck do
     url :homepage
     strategy :page_match do |page|
-      v = page[%r{href=.*?/LyricsMaster(\d+(?:\.\d+)*)\.dmg}i, 1]
+      v = page[%r{href=.*?/LyricsMaster(\d+(?:\.\d+)+)\.dmg}i, 1]
       v.chars.join(".")
     end
   end
