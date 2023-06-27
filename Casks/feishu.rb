@@ -6,7 +6,7 @@ cask "feishu" do
     sha256 "78eb5ff277a034f3813a231dd0c35720c412c419284706b009456e4d2a3ff405"
   end
   on_intel do
-    version "6.6.6,b289897a"
+    version "6.7.5,035c8203"
     sha256 "2cd7b654316185beb3458efa2f1475c199446600ff357d577b02e60218db9b93"
   end
 
