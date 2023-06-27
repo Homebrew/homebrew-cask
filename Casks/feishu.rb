@@ -7,7 +7,7 @@ cask "feishu" do
   end
   on_intel do
     version "6.7.5,035c8203"
-    sha256 "2cd7b654316185beb3458efa2f1475c199446600ff357d577b02e60218db9b93"
+    sha256 "da4c4da96d89c513c889ad6b63195c48e03c43f1079574114302a09aafd43dd5"
   end
 
   url "https://sf3-cn.feishucdn.com/obj/ee-appcenter/#{version.csv.second}/Feishu-darwin_#{arch}-#{version.csv.first}-signed.dmg",
