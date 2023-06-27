@@ -8,8 +8,8 @@ cask "playonmac" do
     end
   end
   on_catalina :or_newer do
-    version "4.4.3"
-    sha256 "b907e50d9457e90722d557dc009d8cc1c5be8e45dc13b6246fa6551acea393b6"
+    version "4.4.4"
+    sha256 "a162e17fd8a38fd9f5f681a3d25c3c23baeaa6ec22a1656bbf1b4df6b37b99bd"
 
     livecheck do
       url "https://www.playonmac.com/en/download.html"
