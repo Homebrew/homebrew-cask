@@ -8,6 +8,11 @@ cask "score" do
   desc "Interactive sequencer for intermedia art"
   homepage "https://ossia.io/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :catalina"
 
   app "score.app"
