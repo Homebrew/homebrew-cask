@@ -1,5 +1,5 @@
 cask "rode-connect" do
-  version "1.3.24"
+  version "1.3.30"
   sha256 :no_check
 
   url "https://update.rode.com/connect/RODE_Connect_MACOS.zip"
@@ -14,7 +14,7 @@ cask "rode-connect" do
     end
   end
 
-  pkg "RØDE Connect.pkg"
+  pkg "RØDE Connect (#{version}).pkg"
 
   uninstall pkgutil: "com.rodeconnect.installer"
 
