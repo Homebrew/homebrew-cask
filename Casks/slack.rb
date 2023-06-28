@@ -11,9 +11,9 @@ cask "slack" do
     end
   end
   on_catalina :or_newer do
-    version "4.32.127"
-    sha256 arm:   "513b258579c5b578c4a9410343bfdb6b364c3350a2293abd6fa7a11f085ca11b",
-           intel: "5aae1b6c814d23c5d0b878194179866440fb22091341dc76f8ceaec3de37aa4c"
+    version "4.33.73"
+    sha256 arm:   "970c2afd38bd75c09590faa911c5d3e0e81766ed02d9ef1b018b2b5f82d64397",
+           intel: "6a86d0694903119b4e1cede375326feca555ec0c896d753b2802d53be8a41779"
 
     livecheck do
       url "https://slack.com/ssb/download-osx"
