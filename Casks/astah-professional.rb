@@ -24,4 +24,10 @@ cask "astah-professional" do
   pkg "astah professional ver #{version.csv.first.dots_to_underscores}.pkg"
 
   uninstall pkgutil: "com.change-vision.astah.professional"
+
+  zap trash: [
+        "~/.astah/professional",
+        "~/Library/Saved Application State/com.change-vision.astah.professional.savedState",
+      ],
+      rmdir: "~/.astah"
 end
