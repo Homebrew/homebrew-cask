@@ -1,4 +1,4 @@
-cask "ossia-score" do
+cask "score" do
   version "3.1.11"
   sha256 "76ef7a1e5e74532499a0d6817ca195183ab4fb3ccfcd0dd5635207c44bae07d9"
 
@@ -12,6 +12,8 @@ cask "ossia-score" do
     url :url
     strategy :github_latest
   end
+
+  depends_on macos: ">= :catalina"
 
   app "score.app"
 
