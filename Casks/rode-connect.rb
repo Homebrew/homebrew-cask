@@ -14,7 +14,7 @@ cask "rode-connect" do
     end
   end
 
-  pkg "RØDE Connect.pkg"
+  pkg "RØDE Connect (#{version}).pkg"
 
   uninstall pkgutil: "com.rodeconnect.installer"
 
