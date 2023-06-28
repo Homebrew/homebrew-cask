@@ -22,8 +22,8 @@ cask "sourcetree" do
     end
   end
   on_mojave :or_newer do
-    version "4.2.3,252"
-    sha256 "07ad6667847986f247288f6a3120fc914df9733373d5e0c11df81e77269b111b"
+    version "4.2.4,254"
+    sha256 "62dfaeedd63ac491ba3e49a5129d338c60886cb935e3654622147369023daf77"
 
     url "https://product-downloads.atlassian.com/software/sourcetree/ga/Sourcetree_#{version.csv.first}_#{version.csv.second}.zip",
         verified: "product-downloads.atlassian.com/software/sourcetree/ga/"
