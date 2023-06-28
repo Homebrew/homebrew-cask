@@ -30,5 +30,6 @@ cask "multipass" do
     "~/Library/Application Support/multipass",
     "~/Library/Application Support/multipass-gui",
     "~/Library/Preferences/multipass",
+    "~/Library/LaunchAgents/com.canonical.multipass.gui.autostart.plist",
   ]
 end
