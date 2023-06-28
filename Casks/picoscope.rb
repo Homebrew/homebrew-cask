@@ -4,16 +4,16 @@ cask "picoscope" do
 
   url "https://www.picotech.com/download/software/sr/PicoScope_#{version}_TnM_Stable.pkg"
   name "PicoScope"
-  desc "Test & Measurement Software for Picotech Oscilloscopes"
+  desc "Test and measurement oscilloscope software for PicoScope oscilloscops"
   homepage "https://www.picotech.com/"
 
   livecheck do
-    url "https://www.picotech.com/downloads/_lightbox/picoscope-7-stable-for-macos"
-    regex(%r{href=.*?/PicoScope_(\d+(?:.\d+)*).*\.pkg}i)
+    url "https://www.picotech.com/downloads/_lightbox/picoscope-#{version.major}-stable-for-macos"
+    regex(%r{href=.*?/PicoScope[._-]v?(\d+(?:.\d+)+)[._-]TnM[._-]Stable\.pkg}i)
   end
 
-  #  app "PicoScope 7 T&M.app" -> "Error: It seems your app is not found in
-  #  /opt/homebrew/Casksroom/..."
+  conflicts_with cask: "homebrew/cask-versions/picoscope-beta"
+
   pkg "PicoScope_#{version}_TnM_Stable.pkg"
 
   uninstall pkgutil: "com.picotech.picoscope#{version.major}tnm"
