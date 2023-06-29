@@ -21,11 +21,14 @@ env:
     burp-suite
     busycal
     chirp
+    clickup
     codeql
     cog
     confluent-cli
     copilot-for-xcode
     descript
+    dropbox
+    duckduckgo
     electron
     eloston-chromium
     firefox
@@ -56,6 +59,7 @@ env:
     pitch
     purei-play
     puzzles
+    readdle-spark
     qownnotes
     quarto
     setapp
@@ -66,11 +70,13 @@ env:
     siyuan
     skype
     sol
+    spotify
     standard-notes
     stats
     telegram
     telegram-desktop
     teleport-connect
+    todoist
     tor-browser
     trader-workstation
     trainerroad
@@ -80,6 +86,7 @@ env:
     vrew
     vscodium
     warp
+    webcatalog
     webull
     whatsapp
     workflowy
