@@ -1,6 +1,3 @@
-# typed: true
-# frozen_string_literal: true
-
 cask "start" do
   arch arm: "arm", intel: "x86"
   folder_arch = on_arch_conditional arm: "m1/"
