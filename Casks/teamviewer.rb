@@ -84,6 +84,7 @@ cask "teamviewer" do
               "com.teamviewer.AuthorizationPlugin",
               "com.teamviewer.remoteaudiodriver",
               "com.teamviewer.teamviewer.*",
+              "TeamViewerUninstaller",
             ],
             launchctl: [
               "com.teamviewer.desktop",
@@ -92,8 +93,12 @@ cask "teamviewer" do
               "com.teamviewer.teamviewer",
               "com.teamviewer.teamviewer_desktop",
               "com.teamviewer.teamviewer_service",
+              "com.teamviewer.Uninstaller*",
             ],
-            quit:      "com.teamviewer.TeamViewer"
+            quit:      [
+              "com.teamviewer.TeamViewer",
+              "com.teamviewer.TeamViewerUninstaller",
+            ]
 
   zap trash: [
     "~/Library/Application Support/TeamViewer",
