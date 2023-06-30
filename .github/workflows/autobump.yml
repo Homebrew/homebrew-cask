@@ -19,6 +19,7 @@ env:
     bike
     brave-browser
     burp-suite
+    burp-suite-professional
     busycal
     chirp
     clickup
@@ -60,6 +61,9 @@ env:
     purei-play
     puzzles
     readdle-spark
+    rewind
+    remotion
+    rive
     qownnotes
     quarto
     setapp
@@ -90,6 +94,7 @@ env:
     webull
     whatsapp
     workflowy
+    zed
     zoom
     zoom-for-it-admins
 
