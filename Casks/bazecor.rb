@@ -1,6 +1,6 @@
 cask "bazecor" do
-  version "1.1.2"
-  sha256 "a53beb55616d2e00cc9223f79986e0daa9e854650d813599dca2996b7fb2bf95"
+  version "1.2.0"
+  sha256 "20e8c7f69f991c035e4180da8267622f091cc26f3e6b70977a87e1b0f5ebc301"
 
   url "https://github.com/Dygmalab/Bazecor/releases/download/bazecor-#{version}/Bazecor-#{version}.dmg",
       verified: "github.com/Dygmalab/Bazecor/"
