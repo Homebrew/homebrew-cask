@@ -6,7 +6,6 @@ cask "teamviewer" do
     livecheck do
       url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=10.11.1&type=1&channel=1"
       regex(%r{url=.*update/v?(\d+(?:\.\d+)+)/Teamviewer\.pkg}i)
-      strategy :page_match
     end
 
     pkg "TeamViewer.pkg"
@@ -43,8 +42,8 @@ cask "teamviewer" do
     EOS
   end
   on_big_sur :or_newer do
-    version "15.42.9"
-    sha256 "2996b68c0caf1daf7792d160e5ad90881a2d35f11d164de7d901ac986ccc38dc"
+    version "15.43.6"
+    sha256 "c552b1ad3a32a9b0ffedf56669039ad654f43379281f64d18ecf6239ae52c7b0"
 
     livecheck do
       url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=11.7&type=1&channel=1"
@@ -84,6 +83,7 @@ cask "teamviewer" do
               "com.teamviewer.AuthorizationPlugin",
               "com.teamviewer.remoteaudiodriver",
               "com.teamviewer.teamviewer.*",
+              "TeamViewerUninstaller",
             ],
             launchctl: [
               "com.teamviewer.desktop",
@@ -92,8 +92,13 @@ cask "teamviewer" do
               "com.teamviewer.teamviewer",
               "com.teamviewer.teamviewer_desktop",
               "com.teamviewer.teamviewer_service",
+              "com.teamviewer.UninstallerHelper",
+              "com.teamviewer.UninstallerWatcher",
             ],
-            quit:      "com.teamviewer.TeamViewer"
+            quit:      [
+              "com.teamviewer.TeamViewer",
+              "com.teamviewer.TeamViewerUninstaller",
+            ]
 
   zap trash: [
     "~/Library/Application Support/TeamViewer",
