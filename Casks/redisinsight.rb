@@ -1,7 +1,7 @@
 cask "redisinsight" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.26.0"
+  version "2.28.0"
   sha256 :no_check
 
   url "https://download.redisinsight.redis.com/latest/RedisInsight-v#{version.major}-mac-#{arch}.dmg"
