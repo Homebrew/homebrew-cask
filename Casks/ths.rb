@@ -4,8 +4,8 @@ cask "ths" do
 
   url "https://resource.thsi.cn/soft/ThsMac#{version}.dmg",
       verified: "resource.thsi.cn/soft/"
-  name "同花顺"
   name "Straight Flush"
+  name "同花顺"
   desc "Stock trading software"
   homepage "https://download.10jqka.com.cn/free/mac"
 
