@@ -1,5 +1,5 @@
 cask "inkstitch" do
-  version "3.0.0"
+  version "3.0.1"
 
   on_sierra :or_older do
     sha256 "7a52e13a01dc74fd3267aa0efb1b0718c2463d88fbcca4c06822ab8065f936d1"
@@ -10,7 +10,7 @@ cask "inkstitch" do
     pkg "inkstitch-v#{version}-sierra-osx.pkg"
   end
   on_high_sierra :or_newer do
-    sha256 "ff4b1edddd8ca20816f9d80bfed7293e6ab05b2e6bb0ed7370ab638be6960c04"
+    sha256 "64831c7567d84b140058b2b42706c55dea0bee1c0528d01e98656496b93edf03"
 
     url "https://github.com/inkstitch/inkstitch/releases/download/v#{version}/inkstitch-v#{version}-osx.pkg",
         verified: "github.com/inkstitch/inkstitch/"
