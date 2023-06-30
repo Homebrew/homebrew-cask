@@ -6,7 +6,6 @@ cask "teamviewer" do
     livecheck do
       url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=10.11.1&type=1&channel=1"
       regex(%r{url=.*update/v?(\d+(?:\.\d+)+)/Teamviewer\.pkg}i)
-      strategy :page_match
     end
 
     pkg "TeamViewer.pkg"
@@ -93,7 +92,8 @@ cask "teamviewer" do
               "com.teamviewer.teamviewer",
               "com.teamviewer.teamviewer_desktop",
               "com.teamviewer.teamviewer_service",
-              "com.teamviewer.Uninstaller*",
+              "com.teamviewer.UninstallerHelper",
+              "com.teamviewer.UninstallerWatcher",
             ],
             quit:      [
               "com.teamviewer.TeamViewer",
