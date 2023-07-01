@@ -12,7 +12,5 @@ cask "explorer" do
   zap trash: [
     "~/Library/Application Support/Explorer",
     "~/Library/Caches/Explorer",
-    "~/Library/Preferences/com.github.electron.plist",
-    "~/Library/Saved Application State/com.github.electron.savedState",
   ]
 end
