@@ -8,4 +8,11 @@ cask "explorer" do
   homepage "https://github.com/jfbouzereau/explorer"
 
   app "Explorer-darwin-x64.app"
+
+  zap trash: [
+    "~/Library/Application Support/Explorer",
+    "~/Library/Caches/Explorer",
+    "~/Library/Preferences/com.github.electron.plist",
+    "~/Library/Saved Application State/com.github.electron.savedState",
+  ]
 end
