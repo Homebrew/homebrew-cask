@@ -1,6 +1,6 @@
 cask "threads" do
-  version "2.2.6"
-  sha256 "9cfb8319c203f494f7381aeb2927fd673c64dd321b28e2721875bbe100e80cd6"
+  version "2.2.7"
+  sha256 "1608918f028433e5d547d3b629996655841086dcfd42e338026c18f97eff8eb1"
 
   url "https://starupdate.threads.com/download/version/#{version}/Threads-darwin-#{version}.zip"
   name "Threads"
