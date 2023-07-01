@@ -1,7 +1,7 @@
 cask "macupdater" do
   on_monterey :or_older do
-    version "2.3.5"
-    sha256 "3270e99cf4bfa95edc674da548a39727976e41882f21ca000f44a78833a84be5"
+    version "2.3.6"
+    sha256 "01f5130f046756567486a3245c1590f2062e7638291fdb4def913aa7df513492"
 
     depends_on macos: ">= :mojave"
   end
