@@ -39,6 +39,7 @@ cask "lg-onscreen-control" do
               "com.OSCApp.pkg",
               "com.OSCMultiMonitor.pkg",
               "com.uninstall.pkg",
+              "com.uninstallOSC.pkg",
             ]
 
   zap trash: [
