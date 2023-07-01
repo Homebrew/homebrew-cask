@@ -1,9 +1,9 @@
 cask "adobe-creative-cloud" do
   arch arm: "macarm64", intel: "osx10"
 
-  version "5.10.0.573"
-  sha256 arm:   "5edc0320a10dfca0c122105fa2461adafe9c2be68d91c4006ae4868b8d81d75f",
-         intel: "aeb39b1fddd42f1c05688ff0fa66dd511382c2efb0c698cff2ed61c92fdaa303"
+  version "5.11.0.522.1"
+  sha256 arm:   "f9a469afff80b9f829606d3cdadcc6b08fe02d03f369f27e400652a426c9b6f8",
+         intel: "9817e24fd36805a3ed52616c8853304c3c9962ef7c57cf3a05ac53d8a3c3c223"
 
   url "https://ccmdl.adobe.com/AdobeProducts/KCCC/CCD/#{version.major_minor_patch.dots_to_underscores}/#{arch}/ACCCx#{version.dots_to_underscores}.dmg"
   name "Adobe Creative Cloud"
