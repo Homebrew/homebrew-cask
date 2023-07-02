@@ -14,4 +14,9 @@ cask "bisq" do
   end
 
   app "Bisq.app"
+
+  zap trash: [
+    "~/Library/Application Support/Bisq",
+    "~/Library/Saved Application State/io.bisq.CAT.savedState",
+  ]
 end

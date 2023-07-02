@@ -14,6 +14,8 @@ cask "sqlcl" do
 
   stage_only true
 
+  zap trash: "~/.sqlcl"
+
   caveats do
     depends_on_java "11+"
     path_environment_variable "#{staged_path}/sqlcl/bin"
