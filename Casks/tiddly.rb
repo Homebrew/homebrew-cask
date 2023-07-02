@@ -1,6 +1,6 @@
 cask "tiddly" do
-  version "0.0.17"
-  sha256 "991899b0a7fa6ebc8a971aea952e29ac49f3df48e88d3a5c0a9f6781f0d6e688"
+  version "0.0.18"
+  sha256 "7747ad4bbc2ff5f0cd0094a5ac4564879f97c24acb0e486b3c4d618bb7538da2"
 
   url "https://github.com/Jermolene/TiddlyDesktop/releases/download/v#{version}/tiddlydesktop-mac64-v#{version}.zip"
   name "TiddlyWiki"
@@ -8,4 +8,11 @@ cask "tiddly" do
   homepage "https://github.com/Jermolene/TiddlyDesktop"
 
   app "TiddlyDesktop-mac64-v#{version}/TiddlyDesktop.app"
+
+  zap trash: [
+    "~/Library/Application Support/TiddlyDesktop",
+    "~/Library/Caches/TiddlyDesktop",
+    "~/Library/Preferences/com.tiddlywiki.plist",
+    "~/Library/Saved Application State/com.tiddlywiki.savedState",
+  ]
 end
