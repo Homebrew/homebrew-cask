@@ -14,4 +14,9 @@ cask "tales-of-majeyal" do
 
   # Renamed for clarity: app name is inconsistent with its branding.
   app "T-Engine.app", target: "Tales-of-Maj'Eyal.app"
+
+  zap trash: [
+    "~/Library/Application Support/T-Engine",
+    "~/Library/Saved Application State/org.te4.T-Engine.savedState",
+  ]
 end
