@@ -8,4 +8,11 @@ cask "tiddly" do
   homepage "https://github.com/Jermolene/TiddlyDesktop"
 
   app "TiddlyDesktop-mac64-v#{version}/TiddlyDesktop.app"
+
+  zap trash: [
+    "~/Library/Application Support/TiddlyDesktop",
+    "~/Library/Caches/TiddlyDesktop",
+    "~/Library/Preferences/com.tiddlywiki.plist",
+    "~/Library/Saved Application State/com.tiddlywiki.savedState",
+  ]
 end
