@@ -1,25 +1,20 @@
 cask "zight" do
-  version "6.7,2457"
-  sha256 "187f5ef38c7981034c4f9c2751672f821994d38768f196e1d2860cce6dda5962"
+  version "6.7.1,2511"
+  sha256 :no_check
 
-  url "https://downloads.getcloudapp.com/mac/Zight-#{version.csv.first}.#{version.csv.last}.zip",
-      verified: "downloads.getcloudapp.com"
+  url "https://d2plwz9jdz9z5d.cloudfront.net/mac/latest/Zight.zip",
+      verified: "d2plwz9jdz9z5d.cloudfront.net/mac/latest/"
   name "Zight"
   desc "Visual communication platform"
   homepage "https://zight.com/"
 
   livecheck do
-    url "https://share.getcloudapp.com/api/v4/clients/mac/current-version"
-    strategy :sparkle do |item|
-      match = item.url.match(%r{/Zight[._-](\d+(?:\.\d+)+)\.(\d+)\.zip}i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
-    end
+    url :url
+    strategy :extract_plist
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :catalina"
 
   app "Zight.app"
 
