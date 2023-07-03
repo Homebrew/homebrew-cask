@@ -12,7 +12,11 @@ on:
 
 env:
   CASKS: >
+    1password
+    1password-cli
+    alfred
     apifox
+    appcleaner
     arc
     beeper
     bettertouchtool
@@ -21,6 +25,8 @@ env:
     burp-suite
     burp-suite-professional
     busycal
+    canva
+    carbon-copy-cloner
     chirp
     clickup
     codeql
@@ -32,6 +38,7 @@ env:
     duckduckgo
     electron
     eloston-chromium
+    figma
     firefox
     flipper
     fmail2
@@ -58,6 +65,9 @@ env:
     opera-gx
     osu
     pitch
+    plex
+    plex-htpc
+    plex-media-server
     purei-play
     puzzles
     readdle-spark
@@ -87,6 +97,7 @@ env:
     tsh
     uvtools
     viber
+    visual-studio-code
     vrew
     vscodium
     warp
