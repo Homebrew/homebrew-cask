@@ -1,7 +1,7 @@
 cask "gitkraken" do
   arch arm: "darwin-arm64", intel: "darwin"
 
-  version "9.1.0"
+  version "9.5.1"
   sha256 arm:   "b881d0fae37a3b6f1a8bf1d2d6e7d914cbf20c2a8692c50d495142a2bd25997c",
          intel: "1c55e9deb4834994bb1020e70d57ceb2010f600672415758533757bb5561b7ee"
 
