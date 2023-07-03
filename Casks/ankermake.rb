@@ -17,6 +17,7 @@ cask "ankermake" do
       "#{match[2]},#{match[1]}"
     end
   end
+
   depends_on macos: ">= :big_sur"
 
   app "AnkerMake.app"
