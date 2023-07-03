@@ -9,7 +9,7 @@ cask "ankermake" do
   homepage "https://www.ankermake.com/software"
 
   livecheck do
-    url :url
+    url :homepage
     strategy :page_match do |page|
       match = page.match(%r{security/(.+)\.AnkerMake[._-]v?(\d+(?:.\d+)+)\.dmg}i)
       next if match.blank?
