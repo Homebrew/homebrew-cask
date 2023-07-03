@@ -1,6 +1,6 @@
 cask "readmoreading" do
-  version "0.13.54"
-  sha256 "5876cadcd024af2613096fe69f8ee6570b35d9550eab014c0ef63979fa68341e"
+  version "0.13.56"
+  sha256 "55b983cb233688e619551870675282aa83b7ae5d1be615338de649655c1afca4"
 
   url "https://cdn.readmoo.com/download/apps/desktop/osx64/el/Readmoo_Desktop-#{version}.dmg"
   name "Readmo Reading"
