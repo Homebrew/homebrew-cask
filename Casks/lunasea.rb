@@ -8,8 +8,8 @@ cask "lunasea" do
     end
   end
   on_catalina :or_newer do
-    version "10.2.3"
-    sha256 "bac9d7ae61eeabdab5c824210957c73d90f773caf817ed3c682b1976a9cfb1a5"
+    version "10.2.5"
+    sha256 "e6ff2ad3e847f338c2ed30bc020b72888d03e86b11cff835ba3e6c123e190fde"
   end
 
   url "https://github.com/JagandeepBrar/LunaSea/releases/download/v#{version}/lunasea-macos-amd64.zip",
