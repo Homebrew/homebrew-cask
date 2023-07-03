@@ -1,6 +1,6 @@
 cask "qlab" do
-  version "5.1.1"
-  sha256 "b877ba63b033070813915c8575cb93792eac6eb9eb16f2979a684fed5457088b"
+  version "5.2"
+  sha256 "3b1c13376d4642aeaf14f9f048d7e82b40abd727e45ac7789b010c7d1944003a"
 
   url "https://qlab.app/downloads/archive/QLab-#{version}.zip"
   name "QLab"
@@ -13,6 +13,7 @@ cask "qlab" do
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "QLab.app"
 

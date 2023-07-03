@@ -1,6 +1,6 @@
 cask "extraterm" do
-  version "0.71.0"
-  sha256 "a9cb39667c89bf758bf36955c58fa8a52b14aac7b17564a9d86952f25fa79229"
+  version "0.72.0"
+  sha256 "78b2e11363f82416c19da30d39e36a6cefb1db37fbf93e29f96492fc61da7300"
 
   url "https://github.com/sedwards2009/extraterm/releases/download/v#{version}/ExtratermQt_#{version}.dmg",
       verified: "github.com/sedwards2009/extraterm/"
@@ -8,9 +8,13 @@ cask "extraterm" do
   desc "Swiss army chainsaw of terminal emulators"
   homepage "https://extraterm.org/"
 
+  # As of writing, upstream marks all releases on GitHub as "pre-release".
+  # This should be updated to use the `GithubLatest` strategy if/when stable
+  # versions become available.
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://github.com/sedwards2009/extraterm/releases"
+    regex(%r{href=["']?[^"' >]*?/tag/v?(\d+(?:\.\d+)+)["' >]}i)
+    strategy :page_match
   end
 
   app "ExtratermQt.app"

@@ -5,7 +5,14 @@ cask "creepy" do
   url "https://github.com/jkakavas/creepy/releases/download/v#{version}/cree.py_#{version}.dmg.zip",
       verified: "github.com/jkakavas/creepy/"
   name "Creepy"
+  desc "Geolocation OSINT tool"
   homepage "https://www.geocreepy.com/"
 
   app "cree.py.app"
+
+  zap trash: "~/.creepy"
+
+  caveats do
+    discontinued
+  end
 end

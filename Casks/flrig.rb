@@ -1,13 +1,15 @@
 cask "flrig" do
-  version "1.4.8"
+  version "2.0.01"
 
   on_sierra :or_older do
-    sha256 "03cfdcefe90784f5f6fc643817a22d9590d7508ba03cd5cde0c5168723921f30"
+    sha256 "5c8bcb3c3d0c33183fad9a86a894f66a226e8614659b020f49b4b28f34551a5f"
+
     url "https://downloads.sourceforge.net/fldigi/fldigi/flrig-#{version}_LI.dmg"
   end
   on_high_sierra :or_newer do
-    sha256 "6ee34eeb589ac00a82d74ac2146fdfbf2295eb24f0b1c9bff96ed1630e086c73"
-    url "https://downloads.sourceforge.net/fldigi/fldigi/flrig-#{version}_U.dmg"
+    sha256 "54ee0bc2486e75589a8a20b5f8018ee8b35297eed7f43d6ff366e45580cb4a0e"
+
+    url "https://downloads.sourceforge.net/fldigi/fldigi/flrig-#{version}_VN.dmg"
   end
 
   name "flrig"

@@ -1,6 +1,6 @@
 cask "sencha" do
-  version "7.6.0.87"
-  sha256 "66a22a3fc9855a0a270640eb4b113a3826ec0f77f34b87732d4b8376a536addf"
+  version "7.7.0.36"
+  sha256 "ce90a05124d257c543d74dfd890c58704d34cb6ff15453252cbb9ecf0dd61b81"
 
   url "https://trials.sencha.com/cmd/#{version.major_minor_patch}/SenchaCmd-#{version}-osx.app.zip"
   name "Sencha Cmd"
@@ -27,6 +27,8 @@ cask "sencha" do
     args:       ["-Djava.awt.headless=true", "-q"],
     sudo:       true,
   }
+
+  # No zap stanza required
 
   caveats do
     license "https://www.sencha.com/legal/sencha-tools-software-license-agreement/"

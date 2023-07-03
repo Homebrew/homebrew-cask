@@ -1,6 +1,6 @@
 cask "irpf2023" do
-  version "1.1"
-  sha256 "8bd5d27c32e3967059d35d0b73f55dc4ba8903e01faeb6c974ab06ae51f2564f"
+  version "1.4"
+  sha256 "af558df2247bcb9c6ae9cbb5bbdfafbe644426804db224547e762744e49037c3"
 
   url "https://downloadirpf.receita.fazenda.gov.br/irpf/2023/irpf/arquivos/IRPF2023-v#{version}.dmg"
   name "IRPF 2023"
@@ -21,7 +21,7 @@ cask "irpf2023" do
   # No zap stanza required
 
   caveats <<~EOS
-    IRPF2023 will store data in #{Dir.home}/Documents/ProgramasRFB/IRPF2023.
+    IRPF2023 will store data in ~/Documents/ProgramasRFB/IRPF2023.
     You might want to delete this directory after you finish your tax report.
   EOS
 end

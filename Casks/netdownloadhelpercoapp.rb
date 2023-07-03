@@ -11,4 +11,6 @@ cask "netdownloadhelpercoapp" do
   pkg "net.downloadhelper.coapp-#{version}.pkg"
 
   uninstall pkgutil: "net.downloadhelper.coapp"
+
+  zap rmdir: "~/dwhelper"
 end

@@ -4,7 +4,7 @@ cask "backblaze-downloader" do
 
   url "https://secure.backblaze.com/mac_restore_downloader"
   name "Backblaze Downloader"
-  desc "Download Backblaze restored files more reliabily"
+  desc "Download Backblaze restored files more reliably"
   homepage "https://www.backblaze.com/"
 
   livecheck do

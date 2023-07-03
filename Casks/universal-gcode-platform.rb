@@ -1,6 +1,6 @@
 cask "universal-gcode-platform" do
-  version "2.0.15"
-  sha256 "8120458b2688b1c7637af8275eb2952661e896d037730ebc3f3f3e93bb421420"
+  version "2.0.18"
+  sha256 "bf05d610cb3f19cc000c3be587787f39b408cc4ffa0722887c43b604a8c5b285"
 
   url "https://github.com/winder/Universal-G-Code-Sender/releases/download/v#{version}/ios-ugs-platform-app-#{version}.dmg",
       verified: "github.com/winder/Universal-G-Code-Sender/"
@@ -21,7 +21,8 @@ cask "universal-gcode-platform" do
   ]
 
   caveats <<~EOS
-    According to https://github.com/winder/Universal-G-Code-Sender/issues/1351#issuecomment-579110056
-    the UGS developers do not sign their code and this app might need manual changes.
+    UGS developers do not sign their code and this app may need manual changes.
+    For more information, see:
+      https://github.com/winder/Universal-G-Code-Sender/issues/1351#issuecomment-579110056
   EOS
 end

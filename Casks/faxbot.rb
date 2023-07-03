@@ -1,5 +1,5 @@
 cask "faxbot" do
-  version "2.6.2,210621.1"
+  version "2.6.2"
   sha256 :no_check
 
   url "https://www.hosy.de/faxer/Faxer.zip"
@@ -10,7 +10,7 @@ cask "faxbot" do
   livecheck do
     url "https://www.hosy.de/faxer/version.xml"
     strategy :sparkle do |item|
-      "#{item.title[/Version (\d+(?:\.\d+)*)/i, 1]},#{item.version}"
+      item.title[/Version (\d+(?:\.\d+)*)/i, 1].to_s
     end
   end
 

@@ -14,6 +14,8 @@ cask "sqlworkbenchj" do
 
   app "SQLWorkbenchJ.app"
 
+  # No zap stanza required
+
   caveats do
     depends_on_java "11+"
   end

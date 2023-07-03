@@ -10,10 +10,9 @@ cask "edfbrowser" do
 
   livecheck do
     url "https://gitlab.com/whitone/EDFbrowser/-/releases.json"
-    strategy :page_match do |page|
-      page.scan(%r{/uploads/(\h+)/EDFbrowser[._-]v?(\d+(?:\.\d+)+)\.dmg}i).map do |match|
-        "#{match[1]},#{match[0]}"
-      end
+    regex(%r{/uploads/(\h+)/EDFbrowser[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
 

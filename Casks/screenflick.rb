@@ -1,6 +1,6 @@
 cask "screenflick" do
-  version "3.1.7"
-  sha256 "6d2ed20357a7a92be1ecb2a00a962f147b6fddb4a684644b47aa8abcb4a3f747"
+  version "3.1.9"
+  sha256 "a3254cc088f176820e9524e7165468a26e72e1ba266f1a873aa0da8d9192be11"
 
   url "https://store.araelium.com/screenflick/downloads/versions/Screenflick#{version}.zip"
   name "Screenflick"

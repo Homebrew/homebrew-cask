@@ -10,7 +10,7 @@ cask "manyverse" do
 
   livecheck do
     url :url
-    regex(%r{href=["']?[^"' >]*?/tag/v?(\d+(?:\.\d+)+-beta)["' >]}i)
+    regex(/v?(\d+(?:\.\d+)+-beta)/i)
     strategy :github_latest
   end
 

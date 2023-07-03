@@ -4,12 +4,15 @@ cask "cinder" do
 
   url "https://libcinder.org/static/releases/cinder_#{version}_mac.zip"
   name "Cinder"
+  desc "C++ library for creative coding"
   homepage "https://libcinder.org/"
 
   livecheck do
-    url "https://github.com/cinder/cinder"
-    strategy :git
+    url "https://libcinder.org/download"
+    regex(/href=.*?cinder[._-]v?(\d+(?:\.\d+)+)[._-]mac\.zip/i)
   end
 
   suite "cinder_#{version}_mac"
+
+  zap trash: "~/Library/Preferences/org.libcinder.TinderBox.plist"
 end

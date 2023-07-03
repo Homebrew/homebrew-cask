@@ -1,14 +1,14 @@
 cask "1clipboard" do
   version "0.1.8"
-  sha256 "d1dee1594fa8b16a54bbcaf2d88b07e3bade0bb809416e535621ddb63b9e2b3d"
+  sha256 :no_check
 
-  url "http://1clipboard.io/download/darwin/#{version}/1Clipboard.zip"
+  url "https://1clipboard.io/download/darwin/1Clipboard.dmg"
   name "1Clipboard"
   desc "Clipboard managing app"
-  homepage "http://1clipboard.io/"
+  homepage "https://1clipboard.io/"
 
   livecheck do
-    url "https://1clipboard.io/download/darwin/1Clipboard.dmg"
+    url :url
     strategy :extract_plist
   end
 

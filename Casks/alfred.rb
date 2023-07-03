@@ -1,6 +1,6 @@
 cask "alfred" do
-  version "5.0.6,2110"
-  sha256 "ce2638d6bf2f169e89f5515d51c92cdd2db8a9fd687462de41fc0b113bf34b9a"
+  version "5.1.1,2138"
+  sha256 "8378a6c0cf93318033a5798ecdb31c95a22b5ac4cc1a195c99dc348df79a206b"
 
   url "https://cachefly.alfredapp.com/Alfred_#{version.csv.first}_#{version.csv.second}.dmg"
   name "Alfred"
@@ -9,11 +9,9 @@ cask "alfred" do
 
   livecheck do
     url "https://www.alfredapp.com/app/update#{version.major}/general.xml"
-    strategy :page_match do |page|
-      match = page.match(/Alfred[._-]v?(\d(?:\.\d+)+)[._-](\d+)\.tar\.gz/i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
+    regex(/Alfred[._-]v?(\d(?:\.\d+)+)[._-](\d+)\.tar\.gz/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 

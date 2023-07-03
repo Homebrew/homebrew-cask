@@ -1,6 +1,6 @@
 cask "clocksaver" do
-  version "0.7.2"
-  sha256 "584c60b829be6c0a1fc8218c2f056278df836f3450afc61382f05e6507968446"
+  version "0.7.3"
+  sha256 "c213adf875aa661699c747cc5ed56609ae48d72ab1526cba791f99b44dce62d4"
 
   url "https://github.com/soffes/Clock.saver/releases/download/v#{version}/Clock.saver.zip"
   name "Clock.saver screensaver"
@@ -8,4 +8,6 @@ cask "clocksaver" do
   homepage "https://github.com/soffes/Clock.saver"
 
   screen_saver "Clock.saver"
+
+  # No zap stanza required
 end

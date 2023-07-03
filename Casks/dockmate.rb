@@ -13,6 +13,7 @@ cask "dockmate" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: ">= :mojave"
 
   app "DockMate.app"
@@ -21,6 +22,9 @@ cask "dockmate" do
     "~/Library/Application Support/com.macenhance.dockmate",
     "~/Library/Application Support/DockMate",
     "~/Library/Caches/com.macenhance.dockmate",
+    "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.macenhance.dockmate",
+    "~/Library/HTTPStorages/com.macenhance.dockmate",
+    "~/Library/HTTPStorages/com.macenhance.dockmate.binarycookies",
     "~/Library/Preferences/com.macenhance.dockmate.plist",
   ]
 end

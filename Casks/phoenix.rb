@@ -1,6 +1,6 @@
 cask "phoenix" do
-  version "3.0.0"
-  sha256 "9fbe966e2f82f8702a431a183fb2a8bc5866233433fb34bc7570df39bf069049"
+  version "4.0.0"
+  sha256 "174ebec4c7860d014d02441867721a14342521c0a9482a0fa8605f644b3a40b2"
 
   url "https://github.com/kasper/phoenix/releases/download/#{version}/phoenix-#{version}.tar.gz"
   name "Phoenix"
@@ -8,7 +8,7 @@ cask "phoenix" do
   homepage "https://github.com/kasper/phoenix/"
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :mojave"
 
   app "Phoenix.app"
 

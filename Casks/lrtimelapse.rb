@@ -1,6 +1,6 @@
 cask "lrtimelapse" do
-  version "6.3.0"
-  sha256 "08487fd9d6d583c7a06434d0e3aebcf3f5a4d14c417af89c256fbbcf9e04a2dc"
+  version "6.5.1"
+  sha256 "59922aecb27b5f292247fb63e204293f0171e539e8d9bb574e9aafb63ddc5120"
 
   url "https://lrtimelapse.com/files/lrtimelapse-#{version.major}-mac-universal/?version=#{version}"
   name "LRTimelapse"
@@ -24,6 +24,8 @@ cask "lrtimelapse" do
               "com.lrtimelapse.LRTimelapse#{version.major}",
               "com.lrttimelapse.LRTTools",
             ]
+
+  zap trash: "~/Library/Application Support/LRTimelapse"
 
   caveats do
     files_in_usr_local

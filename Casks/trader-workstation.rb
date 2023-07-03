@@ -2,7 +2,7 @@ cask "trader-workstation" do
   arch arm: "arm", intel: "x64"
   os = on_arch_conditional arm: "macos", intel: "macosx"
 
-  version "10.22.1h"
+  version "10.23.2a"
   sha256 :no_check
 
   url "https://download2.interactivebrokers.com/installers/tws/latest/tws-latest-#{os}-#{arch}.dmg"
@@ -34,5 +34,9 @@ cask "trader-workstation" do
               args:       ["-q"],
             }
 
-  zap trash: "/Applications/Trader Workstation"
+  zap trash: [
+    "/Applications/Trader Workstation",
+    "~/Jts",
+    "~/Library/Application Support/Trader Workstation",
+  ]
 end

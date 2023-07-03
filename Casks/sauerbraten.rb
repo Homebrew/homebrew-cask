@@ -10,11 +10,9 @@ cask "sauerbraten" do
 
   livecheck do
     url :homepage
-    strategy :page_match do |page|
-      match = page.match(%r{(\d+(?:_\d+)*)/sauerbraten[._-]?(\d+(?:_\d+)*)[._-]?macos.dmg}i)
-      next if match.blank?
-
-      "#{match[1].tr("_", ".")},#{match[2].tr("_", ".")}"
+    regex(%r{(\d+(?:_\d+)*)/sauerbraten[._-]?(\d+(?:_\d+)*)[._-]?macos.dmg}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0].tr("_", ".")},#{match[1].tr("_", ".")}" }
     end
   end
 

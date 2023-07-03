@@ -1,10 +1,10 @@
 cask "folder-colorizer" do
-  version "4.4.4"
-  sha256 "d734acb9757f17ac96d6faa4ddb63d4a89c4c09724487da3e6e3f788cce1f890"
+  version "4.7.2"
+  sha256 "bfabfad8ca6cb1f55789896f0338763df04e118c0a233f3d11a181aa794390c0"
 
   url "https://ushining.softorino.com/shine_uploads/foldercolorizermac_#{version}.dmg"
   name "Folder Colorizer"
-  desc "Folder icon editor & manager"
+  desc "Folder icon editor and manager"
   homepage "https://softorino.com/folder-colorizer-mac/"
 
   livecheck do

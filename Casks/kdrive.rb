@@ -1,6 +1,6 @@
 cask "kdrive" do
-  version "3.3.7.20221110"
-  sha256 "0abd708fce895f998df07e581b279cb67b7d640605cac52252df2254a26a4df1"
+  version "3.4.3.20230613"
+  sha256 "251a6e60db2b41edccc6b62d29b87d516f9caa3d0612eb9d8afe01c65f692c23"
 
   url "https://download.storage.infomaniak.com/drive/desktopclient/kDrive-#{version}.pkg"
   name "kDrive"
@@ -9,22 +9,27 @@ cask "kdrive" do
 
   livecheck do
     url "https://www.infomaniak.com/drive/latest"
-    strategy :page_match do |page|
-      JSON.parse(page)["macos"]["downloadurl"][/kDrive[._-](\d+(?:\.\d+)+)\.pkg/i, 1]
+    regex(/kDrive[._-](\d+(?:\.\d+)+)\.pkg/i)
+    strategy :json do |json|
+      json["macos"]["downloadurl"]&.scan(regex)&.map { |match| (match[0]).to_s }
     end
   end
 
   pkg "kDrive-#{version}.pkg"
 
   uninstall_preflight do
-    system_command "/usr/bin/pkill", args: ["-f", "/Applications/kDrive.app"]
+    system_command "/usr/bin/pkill", args: ["-f", "/Applications/kDrive/kDrive.app"]
   end
 
   uninstall quit:      [
               "com.infomaniak.drive.desktopclient",
               "com.infomaniak.drive.desktopclient.Extension",
             ],
-            pkgutil:   "com.infomaniak.drive.desktopclient",
+            pkgutil:   [
+              "com.infomaniak.drive.desktopclient",
+              "com.infomaniak.drive.desktopclient.Extension",
+              "com.infomaniak.drive.uninstaller",
+            ],
             launchctl: "864VDCS2QY.com.infomaniak.drive.desktopclient.LoginItemAgent"
 
   zap trash: [

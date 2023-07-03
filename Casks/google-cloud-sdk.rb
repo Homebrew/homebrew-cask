@@ -1,9 +1,9 @@
 cask "google-cloud-sdk" do
   arch arm: "arm", intel: "x86_64"
 
-  version "425.0.0"
-  sha256 arm:   "0871269d6f7314b2c8f32afcddcc1054d62a108cb89c80a0cdee9f4542d0cece",
-         intel: "b1f0731482243a08ffc2c362092871ab0fa2bd0db1bc68f12ae0c6bf284a0b1c"
+  version "437.0.1"
+  sha256 arm:   "691c50afb579fb014b0d3233adea123ac6193ca55ade941eeadecd24b1b4627f",
+         intel: "e0ef49eb6b8f32e5ebd601b34f14b6e45c2d23097cad25e9f6720ec8bcf4d6e5"
 
   url "https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-#{version}-darwin-#{arch}.tar.gz"
   name "Google Cloud SDK"
@@ -69,8 +69,10 @@ cask "google-cloud-sdk" do
 
       for zsh users
         source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+        source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 
       for fish users
         source "$(brew --prefix)/share/google-cloud-sdk/path.fish.inc"
+
   EOS
 end

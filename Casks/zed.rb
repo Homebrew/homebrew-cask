@@ -1,6 +1,6 @@
 cask "zed" do
-  version "0.80.5"
-  sha256 "424dd3993e406bb075a5c16538c2ebc30ed3e96d9f2300635f881af0e314116f"
+  version "0.92.4"
+  sha256 "d188b52c96f25729edc6b90903b52cce4a3525be373dae56e239c41656378153"
 
   url "https://zed.dev/api/releases/stable/#{version}/Zed.dmg"
   name "Zed"
@@ -16,6 +16,7 @@ cask "zed" do
   depends_on macos: ">= :catalina"
 
   app "Zed.app"
+  binary "#{appdir}/Zed.app/Contents/MacOS/cli", target: "zed"
 
   zap trash: [
     "~/.config/Zed",

@@ -12,8 +12,8 @@ cask "double-commander" do
   homepage "https://doublecmd.sourceforge.io/"
 
   livecheck do
-    url "https://sourceforge.net/projects/doublecmd/rss"
-    regex(/doublecmd[._-](\d+(?:\.\d+)+)[._-](\d+)\.cocoa/i)
+    url "https://sourceforge.net/projects/doublecmd/rss?path=/macOS"
+    regex(%r{url=.*?/doublecmd[._-](\d+(?:\.\d+)+)[._-](\d+)[^"' ]*?\.dmg}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end

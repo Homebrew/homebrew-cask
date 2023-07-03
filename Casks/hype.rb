@@ -1,6 +1,6 @@
 cask "hype" do
-  version "4.1.12,748"
-  sha256 "876cec568e57a8f543383d8c06f06168957eb16759ff2888bd13259b18a86c1e"
+  version "4.1.13,752"
+  sha256 "fd6375b0889a247e91e559ae56ac92eac133ef2e4afa6f0d2ada987178e6ff8a"
 
   url "https://tumult.com/hype/download/Hype-#{version.csv.second}.dmg"
   name "Tumult Hype"

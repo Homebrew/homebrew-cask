@@ -1,6 +1,6 @@
 cask "mailmaster" do
-  version "4.17.14.1322"
-  sha256 "da7287567ffd2bb412bb00385e3d9f2273da2d2404278dd539fb7db65d5d2bfb"
+  version "4.17.15.1326"
+  sha256 "6efd9f68706628dc749b5c1d347e2a7e3d5433fb4fd3653b3aaad439569300a2"
 
   url "http://fm.dl.126.net/mailmaster/updatemac/mailmaster-#{version}.dmg",
       verified: "fm.dl.126.net/mailmaster/"

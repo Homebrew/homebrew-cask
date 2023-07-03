@@ -14,4 +14,12 @@ cask "zoho-workdrive" do
   end
 
   app "Zoho WorkDrive.app"
+
+  zap trash: [
+    "~/.zohoworkdrive",
+    "~/Library/Application Scripts/com.zohosync.workdrive",
+    "~/Library/Application Support/Zoho WorkDrive",
+    "~/Library/Containers/com.zohosync.workdrive",
+    "~/Library/Preferences/org.zoho.ZohoWorkDrive.plist",
+  ]
 end

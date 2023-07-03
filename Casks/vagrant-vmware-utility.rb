@@ -19,5 +19,8 @@ cask "vagrant-vmware-utility" do
               input:      ["Yes"],
               sudo:       true,
             },
-            pkgutil: "com.vagrant.vagrant-vmware-utility"
+            pkgutil: "com.vagrant.vagrant-vmware-utility",
+            delete:  "/Library/Application Support/vagrant-vmware-utility"
+
+  # No zap stanza required
 end

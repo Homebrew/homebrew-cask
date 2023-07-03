@@ -7,5 +7,9 @@ cask "kobo" do
   name "Kobo"
   homepage "https://www.kobo.com/desktop"
 
+  livecheck do
+    skip "unversioned QT application"
+  end
+
   app "Kobo.app"
 end

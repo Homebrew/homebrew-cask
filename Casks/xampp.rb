@@ -26,4 +26,6 @@ cask "xampp" do
               sudo:       true,
             },
             delete: "/Applications/XAMPP/"
+
+  # No zap stanza required
 end

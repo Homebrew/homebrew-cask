@@ -1,6 +1,6 @@
 cask "mixin" do
-  version "0.39.3"
-  sha256 "295fab1f1e410e6513c2a34b9722fb01d9d5e791fe2c399cc348c2618599f14f"
+  version "0.40.1"
+  sha256 "fb98c251f8d57ecad51952f67db4abb1e47738aa7df9902803e402c86e4343e8"
 
   url "https://github.com/MixinNetwork/flutter-app/releases/download/v#{version}/mixin-#{version}.dmg"
   name "Mixin Messenger Desktop"

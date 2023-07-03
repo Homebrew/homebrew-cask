@@ -1,11 +1,11 @@
 cask "bluebubbles" do
-  version "1.7.0"
-  sha256 "af0e3147de9ca8a41da95b98e0cda48a3830a8f84f98ce3313bb2a929a329e69"
+  version "1.7.3"
+  sha256 "82e9fbb7a108960867ab0457059c95b5c9c44a526dddc5f1961afefe17800d75"
 
   url "https://github.com/BlueBubblesApp/bluebubbles-server/releases/download/v#{version}/BlueBubbles-#{version}.dmg",
       verified: "github.com/BlueBubblesApp/bluebubbles-server/"
   name "BlueBubbles"
-  desc "Server for forwarding iMessages to clients within the BlueBubbles App ecosystem"
+  desc "Server for forwarding iMessages"
   homepage "https://bluebubbles.app/"
 
   app "BlueBubbles.app"

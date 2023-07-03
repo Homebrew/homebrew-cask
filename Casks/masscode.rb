@@ -1,9 +1,9 @@
 cask "masscode" do
   arch arm: "-arm64"
 
-  version "3.6.0"
-  sha256 arm:   "374ce8df6617269813a7cabf44f54045d87159cd869d28b02af68979b41a0879",
-         intel: "0721db8ab72cc2891442719d9c096066f4765482db66faa21f8122b249d942d7"
+  version "3.7.0"
+  sha256 arm:   "99e1bb681af61b190db98012eaa179d441c5eeeb28c3a7811cd2fb1be69f897c",
+         intel: "9cb708bddb096c7b16eff76574ae0cf23bc41e02fbf5c3667fd18a94ad655123"
 
   url "https://github.com/massCodeIO/massCode/releases/download/v#{version}/massCode-#{version}#{arch}.dmg",
       verified: "github.com/massCodeIO/massCode/"
@@ -17,4 +17,11 @@ cask "masscode" do
   end
 
   app "massCode.app"
+
+  zap trash: [
+        "~/Library/Application Support/massCode",
+        "~/Library/Preferences/io.masscode.app.plist",
+        "~/Library/Saved Application State/io.masscode.app.savedState",
+      ],
+      rmdir: "~/massCode"
 end

@@ -1,6 +1,6 @@
 cask "bbc-iplayer-downloads" do
-  version "2.13.11"
-  sha256 "7aea37f97d5b477e1c649881d5abcb28fe7ae640e61d0e3c5e0145e67464b8cd"
+  version "2.13.13"
+  sha256 "195c20760e0e1c2b7218b298324cf3042dfe56b1791d14ab8c2797ae2370b1f6"
 
   url "https://static.files.bbci.co.uk/iplayer-pc-download-app/releases/darwin-x64/BBCiPlayerDownloads-#{version}.dmg"
   name "BBC iPlayer Downloads"
@@ -15,4 +15,13 @@ cask "bbc-iplayer-downloads" do
   depends_on macos: ">= :el_capitan"
 
   app "BBC iPlayer Downloads.app"
+
+  zap trash: [
+        "~/Library/Application Support/BBCiPlayerDownloads",
+        "~/Library/Caches/uk.co.bbc.iplayer.downloads*",
+        "~/Library/HTTPStorages/uk.co.bbc.iplayer.downloads",
+        "~/Library/Preferences/uk.co.bbc.iplayer.downloads.plist",
+        "~/Library/Saved Application State/uk.co.bbc.iplayer.downloads.savedState",
+      ],
+      rmdir: "~/Movies/BBC iPlayer Downloads"
 end

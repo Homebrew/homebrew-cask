@@ -10,4 +10,6 @@ cask "brewservicesmenubar" do
   app "BrewServicesMenubar.app"
 
   uninstall quit: "andrewnicolaou.BrewServicesMenubar"
+
+  zap trash: "~/Library/Preferences/andrewnicolaou.BrewServicesMenubar.plist"
 end

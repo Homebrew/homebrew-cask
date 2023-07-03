@@ -8,8 +8,12 @@ cask "color-oracle" do
 
   livecheck do
     url :homepage
-    regex(/Version\s+(\d+(?:\.\d+)+)/)
+    regex(/Version\s+(\d+(?:\.\d+)+)/i)
   end
 
   app "Color Oracle.app"
+
+  uninstall login_item: "Color Oracle"
+
+  zap trash: "~/Library/Preferences/ch.ethz.ika.colororacle.plist"
 end

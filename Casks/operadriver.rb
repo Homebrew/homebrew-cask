@@ -1,6 +1,6 @@
 cask "operadriver" do
-  version "111.0.5563.65"
-  sha256 "62646df2b57586a44edc66295fe1603392ef8774030bf4b8b1dbd3512635b7bf"
+  version "114.0.5735.110"
+  sha256 "99bf7924fa2ec4541e849d092fa2d209354c8326304d9940355a085fef0dcc95"
 
   url "https://github.com/operasoftware/operachromiumdriver/releases/download/v.#{version}/operadriver_mac64.zip"
   name "OperaChromiumDriver"
@@ -13,4 +13,6 @@ cask "operadriver" do
   end
 
   binary "operadriver_mac64/operadriver"
+
+  # No zap stanza required
 end

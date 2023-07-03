@@ -1,6 +1,6 @@
 cask "vmware-fusion" do
-  version "13.0.1,21139760"
-  sha256 "e92ebc38fd5b1a693168f837a31932558a641c84fb57ad72f55e47c8ac4332df"
+  version "13.0.2,21581413"
+  sha256 "c86b40823b97334f20b4e6b475b488ec23faf06c986e291965b9e56f7b44c042"
 
   url "https://download3.vmware.com/software/FUS-#{version.csv.first.no_dots}/VMware-Fusion-#{version.csv.first}-#{version.csv.second}_universal.dmg"
   name "VMware Fusion"
@@ -8,13 +8,10 @@ cask "vmware-fusion" do
   homepage "https://www.vmware.com/products/fusion.html"
 
   livecheck do
-    url "https://www.vmware.com/go/getfusion"
-    regex(/VMWare[-_.]Fusion[-_.](\d+(?:\.\d+)+)[-_.](\d+)/i)
-    strategy :header_match do |headers, regex|
-      next if headers["location"].blank?
-
-      match = headers["location"].match(regex)
-      "#{match[1]},#{match[2]}" if match
+    url "https://softwareupdate.vmware.com/cds/vmw-desktop/fusion-universal.xml"
+    regex(%r{fusion/(\d+(?:\.\d+)+/\d+)}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| match&.first&.tr("/", ",") }
     end
   end
 

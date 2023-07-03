@@ -15,4 +15,11 @@ cask "celestialteapot-runway" do
   depends_on macos: ">= :high_sierra"
 
   app "Runway.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.celestialteapot.Runway2",
+    "~/Library/HTTPStorages/com.celestialteapot.Runway2",
+    "~/Library/Preferences/com.celestialteapot.Runway2.plist",
+    "~/Library/Saved Application State/com.celestialteapot.Runway2.savedState",
+  ]
 end

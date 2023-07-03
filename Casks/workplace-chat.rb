@@ -1,5 +1,5 @@
 cask "workplace-chat" do
-  version "171.0.0.35.105"
+  version "185.0.0.8.228"
   sha256 :no_check
 
   url "https://www.facebook.com/work/chat/download/mac",
@@ -14,4 +14,14 @@ cask "workplace-chat" do
   end
 
   app "Workplace Chat.app"
+
+  zap trash: [
+    "~/Library/Application Support/Workplace",
+    "~/Library/Application Support/workplace-desktop",
+    "~/Library/Caches/Workplace",
+    "~/Library/Caches/workplace-desktop",
+    "~/Library/HTTPStorages/workplace-desktop",
+    "~/Library/Preferences/workplace-desktop.plist",
+    "~/Library/Saved Application State/workplace-desktop.savedState",
+  ]
 end

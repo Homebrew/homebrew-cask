@@ -1,9 +1,9 @@
 cask "openshift-client" do
   arch arm: "-arm64"
 
-  version "4.12.11"
-  sha256 arm:   "bfcd4f8b0aaef082fb5244dd19676bd2d4429820d26f970f9ef55356871d2017",
-         intel: "184837080d46a72f03c09d6e6015bc3a7d1eadfad7518b03814ed4df21f3c5e4"
+  version "4.13.4"
+  sha256 arm:   "e01c274ebb258a7bbaa7727f834eda5dfe4c14a03d5b89312f4a41d1847fc69f",
+         intel: "a9f5b2be8f33e716fefa62d7da05f8c8a545aa49033c212287840150ff00fe01"
 
   url "https://mirror.openshift.com/pub/openshift-v#{version.major}/clients/ocp/#{version}/openshift-client-mac#{arch}.tar.gz"
   name "Openshift Client"
@@ -16,4 +16,6 @@ cask "openshift-client" do
   end
 
   binary "oc"
+
+  zap trash: "~/.kube/config"
 end

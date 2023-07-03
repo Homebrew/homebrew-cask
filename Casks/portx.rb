@@ -1,9 +1,9 @@
 cask "portx" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.1.10,10.38"
-  sha256 arm:   "FD1D67F779F192C3AF8D1465DE238345AEF0C047CA74D26DD07A1C6918CA2929",
-         intel: "8F852DAAFEC315A0F95CD5E20E23633F40FE70E0810264C53FC634B776FC3D80"
+  version "2.1.14,10.46"
+  sha256 arm:   "07E602C343C4FB5984E4748BFA9D6B30EB7A40B7C1F4684382BF4A16EF41D87A",
+         intel: "3D36B21451C337850237B692BCAFD67F8174750F5B0EA4F888A0694215E5E4D2"
 
   url "https://cdn.netsarang.net/0ac7ea20/PortX-#{version.csv.first}-#{arch}.dmg",
       verified: "cdn.netsarang.net/"
@@ -12,7 +12,7 @@ cask "portx" do
   homepage "https://portx.online/"
 
   livecheck do
-    url "https://cdn.netsarang.net/0ac7ea20/PortX-latest-#{arch}.dmg"
+    url "https://cdn.netsarang.net/0ac7ea20/PortX-#{version.csv.first}-#{arch}.dmg"
     strategy :extract_plist
   end
 

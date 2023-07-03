@@ -1,6 +1,6 @@
 cask "texifier" do
-  version "1.9.20,754,7250fc1"
-  sha256 "18f4bfca5cfc2dc3a30e62a450929bdfad0c7e74995f40e81760e13d60614edd"
+  version "1.9.21,776,8504a08"
+  sha256 "c7d34a43a13466b421506b048469ca3d6f1d26392320cdf9b1abee619b8b6bab"
 
   url "https://download.texifier.com/apps/osx/updates/Texifier_#{version.csv.first.dots_to_underscores}__#{version.csv.second}__#{version.csv.third}.dmg"
   name "Texifier"
@@ -8,9 +8,10 @@ cask "texifier" do
   homepage "https://www.texifier.com/mac"
 
   livecheck do
-    url "https://www.texifier.com/apps/updates/texifier/appcast-stable.xml"
-    strategy :sparkle do |item|
-      "#{item.short_version},#{item.version},#{item.url[/_([^_]+)\.dmg/i, 1]}"
+    url :homepage
+    regex(/href=["'].*?download\.texifier\.com.*?osx.*?Texifier_(\d+(?:_\d+)+)__(\d+)__([^_]+)\.dmg/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0].tr("_", ".")},#{match[1]},#{match[2]}" }
     end
   end
 
@@ -20,9 +21,9 @@ cask "texifier" do
   app "Texifier.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vallettaventures.texpad.sfl2",
     "~/Library/Application Support/CloudDocs/session/containers/iCloud.com.vallettaventures.texpadm",
     "~/Library/Application Support/CloudDocs/session/containers/iCloud.com.vallettaventures.texpadm.plist",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vallettaventures.texpad.sfl2",
     "~/Library/Application Support/Texpad",
     "~/Library/Caches/com.vallettaventures.Texpad",
     "~/Library/Cookies/com.vallettaventures.Texpad.binarycookies",

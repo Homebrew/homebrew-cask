@@ -1,5 +1,5 @@
 cask "gotiengviet" do
-  version "2.3"
+  version "2.4,32"
   sha256 :no_check
 
   url "https://www.trankynam.com/gotv/downloads/GoTiengViet.dmg"
@@ -8,9 +8,14 @@ cask "gotiengviet" do
   homepage "https://www.trankynam.com/gotv/"
 
   livecheck do
-    url "https://www.trankynam.com/gotv/macos/GoTiengVietMacOSX-Appcast.xml"
-    strategy :sparkle, &:short_version
+    url :url
+    strategy :extract_plist
   end
 
   app "GoTiengViet.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.trankynam.GoTiengViet",
+    "~/Library/Containers/com.trankynam.GoTiengViet",
+  ]
 end

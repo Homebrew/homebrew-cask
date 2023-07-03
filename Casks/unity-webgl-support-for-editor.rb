@@ -10,13 +10,12 @@ cask "unity-webgl-support-for-editor" do
 
   livecheck do
     url "https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json"
-    strategy :page_match do |page|
-      page.scan(%r{
+    regex(%r{
         /download_unity/(\h+)/MacEditorTargetInstaller
         /UnitySetup-WebGL-Support-for-Editor-(\d+(?:\.\d+)+[a-z]*\d*)\.pkg
-      }ix).map do |match|
-        "#{match[1]},#{match[0]}"
-      end
+      }ix)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
 

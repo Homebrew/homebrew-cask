@@ -1,5 +1,5 @@
 cask "sync" do
-  version "2.1.4"
+  version "2.2.6"
   sha256 :no_check
 
   url "https://www.sync.com/download/apple/Sync.dmg"
@@ -13,4 +13,12 @@ cask "sync" do
   end
 
   app "Sync.app"
+
+  zap trash: [
+        "~/Library/Application Scripts/com.sync.desktop",
+        "~/Library/Application Scripts/com.sync.desktop.findersync",
+        "~/Library/Group Containers/com.sync.desktop",
+        "~/Library/Preferences/com.sync.desktop.plist",
+      ],
+      rmdir: "~/Sync"
 end

@@ -1,6 +1,6 @@
 cask "anypointstudio" do
-  version "7.14.0"
-  sha256 "a23db6aa8bf1b127241ef637b4547b617d73cd7834cf4058a5202ec578e6653b"
+  version "7.15.0"
+  sha256 "37f5bca8a63c38061ebc46a539540287ef7186223b05ef93aa8a4eee5c25d3b8"
 
   vsuffix = (version.patch == "0") ? "GA" : "U#{version.patch}"
 
@@ -15,7 +15,11 @@ cask "anypointstudio" do
     regex(/Anypoint\s+Studio\s+v?(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :big_sur"
 
   app "AnypointStudio.app"
+
+  uninstall delete: "/Library/Logs/DiagnosticReports/AnypointStudio*.diag"
+
+  # No zap stanza required
 end

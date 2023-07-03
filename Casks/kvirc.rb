@@ -8,8 +8,8 @@ cask "kvirc" do
   homepage "http://kvirc.net/"
 
   livecheck do
-    url "https://github.com/kvirc/KVIrc"
-    strategy :git
+    url "http://kvirc.net/?id=releases&platform=macosx"
+    regex(/href=.*?version=(\d+(?:\.\d+)+)/i)
   end
 
   depends_on macos: ">= :high_sierra"

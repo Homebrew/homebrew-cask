@@ -1,6 +1,6 @@
 cask "prowritingaid" do
-  version "2.0.56"
-  sha256 "c455e6bf606bffd63fd18eb6c8d5abce3648773f1cf0256b1ed7ec3c8c65980e"
+  version "2.0.60"
+  sha256 "d0798bc1c64f6db62642040b2d448e1c685258120228e9002c64497499d445c0"
 
   url "https://cdn.prowritingaid.com/prowritingaid-desktop/desktop_#{version.dots_to_underscores}/ProWritingAid.dmg"
   name "ProWritingAid"
@@ -12,4 +12,11 @@ cask "prowritingaid" do
   end
 
   app "ProWritingAid.app"
+
+  zap trash: [
+    "~/Library/Application Support/ProWritingAid",
+    "~/Library/Application Support/ProWritingAid Desktop",
+    "~/Library/Preferences/com.orpheus.prowritingaid.mac.plist",
+    "~/Library/Saved Application State/com.orpheus.prowritingaid.mac.savedState",
+  ]
 end

@@ -10,11 +10,13 @@ cask "eurkey" do
 
   livecheck do
     url "https://raw.githubusercontent.com/jonasdiemer/EurKEY-Mac/master/EurKEY.keylayout"
-    regex(/EurKEY\s+v?(\d+(?:\.\d+)+)/)
+    regex(/EurKEY\s+v?(\d+(?:\.\d+)+)/i)
   end
 
   keyboard_layout "EurKEY-Mac-master/EurKEY.icns"
   keyboard_layout "EurKEY-Mac-master/EurKEY.keylayout"
+
+  # No zap stanza required
 
   caveats do
     reboot

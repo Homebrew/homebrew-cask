@@ -1,6 +1,6 @@
 cask "xld" do
-  version "20220917"
-  sha256 "2c5aff1e6f9bdcc210a3aa238f595b90f7e6dcdb4d2be7f5c337ff3bebfdb71e"
+  version "20230627"
+  sha256 "ad9d3d6bbc491a368f9ef843cd2d2e59e87db193354b4b4e5cfec0120a903cc4"
 
   url "https://downloads.sourceforge.net/xld/xld-#{version}.dmg",
       verified: "sourceforge.net/xld/"

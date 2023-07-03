@@ -1,9 +1,9 @@
 cask "chemdoodle" do
   arch arm: "aarch64", intel: "x64"
 
-  version "11.13.0"
-  sha256 arm:   "0ca984a31ae01e520a9b50d194537f533caa081acec616b12a6631e153573141",
-         intel: "de82266213c6732eb9d3422595e0cf8224521b441dadd900179766100a40f01e"
+  version "12.1.0"
+  sha256 arm:   "d0563d53138543974eb76d2487067a35759b2f8056fea35e13b65a333fb5eda5",
+         intel: "dc1125e29807725c2d2aae51e7dcdbdc9b393a9a0a5c5ed054f995ad63ef8c80"
 
   url "https://www.ichemlabs.com/downloads/ChemDoodle-macos-#{arch}-#{version}.dmg"
   name "ChemDoodle"
@@ -19,4 +19,6 @@ cask "chemdoodle" do
   depends_on macos: ">= :el_capitan"
 
   suite "ChemDoodle"
+
+  zap trash: "~/Library/Saved Application State/com.iChemLabs.ChemDoodle.savedState"
 end

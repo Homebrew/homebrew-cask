@@ -8,4 +8,6 @@ cask "quicklook-csv" do
   homepage "https://github.com/p2/quicklook-csv"
 
   qlplugin "QuickLookCSV.qlgenerator"
+
+  # No zap stanza required
 end

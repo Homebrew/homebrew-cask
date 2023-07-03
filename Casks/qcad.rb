@@ -1,16 +1,16 @@
 cask "qcad" do
-  arch arm: "11-12-arm64", intel: "10.14-12"
+  arch arm: "11-13-arm64", intel: "10.14-13"
 
-  version "3.27.9"
+  version "3.28.1"
 
   on_high_sierra :or_older do
-    sha256 "589a84168c38bf57435441511b19fa081b622e009719c4be7cc1385b7dc55eeb"
+    sha256 "e7b9ca380f0477c0252875eeacacf526806f4e303ea02cf6b200ece9e33512dc"
 
     url "https://www.qcad.org/archives/qcad/qcad-#{version}-trial-macos-10.10-10.13.dmg"
   end
   on_mojave :or_newer do
-    sha256 arm:   "5f4340e2feb72699b87dbaf8cd8708f54a0cb44874516fdcf21b36fc5a1fb269",
-           intel: "cf8578789a17b7f4a550646063e6a12634440b20172f1e21b9cd260b176a4e92"
+    sha256 arm:   "9e5fc21bd450c5d2daeed4328d2cf5fed25f0be815a2d573e464f9650de7b160",
+           intel: "ce599a730aa157dcde6c41971e400f446cf9687278d7a6dfb7786874f2e8eeef"
 
     url "https://www.qcad.org/archives/qcad/qcad-#{version}-trial-macos-#{arch}.dmg"
   end
@@ -25,4 +25,10 @@ cask "qcad" do
   end
 
   app "QCAD.app"
+
+  zap trash: [
+    "~/.config/QCAD",
+    "~/Library/Preferences/org.qcad.plist",
+    "~/Library/Saved Application State/org.qcad.savedState",
+  ]
 end

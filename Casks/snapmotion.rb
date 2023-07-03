@@ -1,6 +1,6 @@
 cask "snapmotion" do
-  version "5.0.9,05208b67-1438-4340-8775-ab62a2b81155"
-  sha256 "0d07a88313c9e568da84667c4048e2d7869736e037c6f01832c02f492f22cf58"
+  version "5.1.1,1ccbe43f-d2b3-433d-bada-78f0155ac73b"
+  sha256 "734d604b6ce948dc50f024a09ed7b8922e911194d6c69902c94690bcaf464531"
 
   url "https://neededapps.nyc3.digitaloceanspaces.com/media/public/#{version.csv.second}.zip",
       verified: "neededapps.nyc3.digitaloceanspaces.com/media/public/"

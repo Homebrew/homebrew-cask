@@ -9,9 +9,9 @@ cask "vine-server" do
 
   livecheck do
     url :url
-    regex(%r{href=["']?[^"' >]*?/tag/[^"' >]*?(\d+(?:[._-]\d+)+[a-z]?)["' >]}i)
-    strategy :github_latest do |page, regex|
-      page.scan(regex).map { |match| match[0].tr("_", ".") }
+    regex(/^v?(\d+(?:[._]\d+)+)$/i)
+    strategy :github_latest do |json, regex|
+      json["tag_name"]&.scan(regex)&.map { |match| match[0].tr("_", ".") }
     end
   end
 

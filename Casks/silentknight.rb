@@ -8,16 +8,16 @@ cask "silentknight" do
     end
   end
   on_catalina :or_newer do
-    version "2.04,2023.03"
-    sha256 "0179a825c52872f33f1909bb0817c2976ff0eb3ee02a6d36e732b24f9e8ec892"
+    version "2.06,2023.06"
+    sha256 "fc095e03f05dd4218caac12f343532f41dbe9bfead3c1338ea0e585da1e51863"
 
     livecheck do
       url "https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
-      strategy :page_match do |page|
-        match = page.match(%r{(\d+)/(\d+)/silentknight([^1]\d+)\.zip}i)
-        next if match.blank?
-
-        "#{match[3].split("", 2).join(".")},#{match[1]}.#{match[2]}"
+      regex(%r{(\d+)/(\d+)/silentknight([^1]\d+)\.zip}i)
+      strategy :page_match do |page, regex|
+        page.scan(regex).map do |match|
+          "#{match[2].split("", 2).join(".")},#{match[0]}.#{match[1]}"
+        end
       end
     end
   end

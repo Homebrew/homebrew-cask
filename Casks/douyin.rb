@@ -1,6 +1,6 @@
 cask "douyin" do
-  version "2.1.1,7044145585217083655,10198810"
-  sha256 "1df65335c3fbd267f603738ae1ad2212b614582a005cbb8be5fe9ba972cb2eeb"
+  version "2.5.0,7044145585217083655,10640789"
+  sha256 "cb6406ade0c9956995a7c0fde372039408f96819d2365cb595a6d4bfa8616d80"
 
   url "https://www.douyin.com/download/pc/obj/douyin-pc-client/#{version.csv.second}/releases/#{version.csv.third}/#{version.csv.first}/darwin-universal/douyin-v#{version.csv.first}-darwin-universal.dmg"
   name "Douyin"
@@ -10,11 +10,9 @@ cask "douyin" do
 
   livecheck do
     url "https://www.douyin.com/downloadpage"
-    strategy :page_match do |page|
-      match = page.match(%r{douyin[._-]pc[._-]client/(\d+)/releases/(\d+)/(\d+(?:\.\d+)+)/darwin[._-]universal}i)
-      next if match.blank?
-
-      "#{match[3]},#{match[1]},#{match[2]}"
+    regex(%r{douyin[._-]pc[._-]client/(\d+)/releases/(\d+)/(\d+(?:\.\d+)+)/darwin[._-]universal}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[2]},#{match[0]},#{match[1]}" }
     end
   end
 

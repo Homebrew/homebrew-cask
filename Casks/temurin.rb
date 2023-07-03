@@ -1,9 +1,9 @@
 cask "temurin" do
   arch arm: "aarch64", intel: "x64"
 
-  version "20,36"
-  sha256 arm:   "e974b3ad91385795d2d1f55c2286365758de49fc825f6c5bf9a46b66a1e68c27",
-         intel: "7781230e8777879ec1c6cd07e73ffe838dbf0fff79c79f46fe10fccd4c95d3af"
+  version "20.0.1,9"
+  sha256 arm:   "afd1d24b269ee1fe65a3ed75920273b046ae1942d39948c7c11fdf8c40693c75",
+         intel: "a52d9e90feed8af2794d15f7c60c2855b63a0f41f18ce4fbd0bc5e0ae88b1c24"
 
   url "https://github.com/adoptium/temurin#{version.major}-binaries/releases/download/jdk-#{version.csv.first}%2B#{version.csv.second}/OpenJDK#{version.major}U-jdk_#{arch}_mac_hotspot_#{version.csv.first}_#{version.csv.second.major}.pkg",
       verified: "github.com/adoptium/"
@@ -26,4 +26,6 @@ cask "temurin" do
   pkg "OpenJDK#{version.major}U-jdk_#{arch}_mac_hotspot_#{version.csv.first}_#{version.csv.second.major}.pkg"
 
   uninstall pkgutil: "net.temurin.#{version.major}.jdk"
+
+  # No zap stanza required
 end

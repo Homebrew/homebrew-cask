@@ -1,5 +1,5 @@
 cask "box-tools" do
-  version "4.21.1.989"
+  version "4.22.0.999"
   sha256 :no_check
 
   url "https://e3.boxcdn.net/box-installers/boxedit/mac/currentrelease/BoxToolsInstaller.dmg",
@@ -21,7 +21,7 @@ cask "box-tools" do
   ]
   apps.each do |a|
     app "Install Box Tools.app/Contents/Resources/Box #{a}.app",
-        target: "#{Dir.home}/Library/Application Support/Box/Box Edit/Box #{a}.app"
+        target: "~/Library/Application Support/Box/Box Edit/Box #{a}.app"
   end
 
   uninstall quit: [

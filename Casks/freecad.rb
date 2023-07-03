@@ -18,8 +18,14 @@ cask "freecad" do
     end
   end
 
-  conflicts_with cask: "homebrew/cask-versions/freecad-pre"
   depends_on macos: ">= :sierra"
 
   app "FreeCAD.app"
+
+  zap trash: [
+    "~/Library/Application Support/FreeCAD",
+    "~/Library/Caches/FreeCAD",
+    "~/Library/Preferences/FreeCAD",
+    "~/Library/Preferences/com.freecad.FreeCAD.plist",
+  ]
 end

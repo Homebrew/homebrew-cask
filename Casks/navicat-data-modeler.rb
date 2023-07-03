@@ -13,4 +13,11 @@ cask "navicat-data-modeler" do
   end
 
   app "Navicat Data Modeler.app"
+
+  zap trash: [
+    "~/Library/Application Support/PremiumSoft CyberTech/Navicat CC/Navicat Data Modeler",
+    "~/Library/Caches/com.apple.helpd/Generated/Navicat Data Modeler Help*#{version}",
+    "~/Library/Preferences/com.prect.NavicatDataModeler#{version.major}.plist",
+    "~/Library/Saved Application State/com.prect.NavicatDataModeler#{version.major}.savedState",
+  ]
 end

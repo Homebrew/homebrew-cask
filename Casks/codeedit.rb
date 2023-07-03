@@ -1,6 +1,6 @@
 cask "codeedit" do
-  version "0.0.3-alpha.32,8b75b20"
-  sha256 "56ef6b7c0eca50e528629a716e5367dc72902ede875d6f9d3780e93245e884c6"
+  version "0.0.3-alpha.35,8ab7742"
+  sha256 "1bfd1d37f19534ffda08f2dbd7ce5843ebf9a724c6cf0d4903ecf91950f99afe"
 
   url "https://github.com/CodeEditApp/CodeEdit/releases/download/#{version.csv.first}/CodeEdit-#{version.csv.second}.dmg",
       verified: "github.com/CodeEditApp/CodeEdit/"
@@ -26,18 +26,18 @@ cask "codeedit" do
     end
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :ventura"
 
   app "CodeEdit.app"
 
   zap trash: [
-    "~/Library/Application Scripts/austincondiff.CodeEdit.OpenWithCodeEdit",
+    "~/Library/Application Scripts/*.CodeEdit.OpenWithCodeEdit",
     "~/Library/Application Support/CodeEdit",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/austincondiff.codeedit.sfl2",
-    "~/Library/Caches/austincondiff.CodeEdit",
-    "~/Library/Containers/austincondiff.CodeEdit.OpenWithCodeEdit",
-    "~/Library/HTTPStorages/austincondiff.CodeEdit",
-    "~/Library/Preferences/austincondiff.CodeEdit.plist",
-    "~/Library/Saved Application State/austincondiff.CodeEdit.savedState",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/*.codeedit.sfl2",
+    "~/Library/Caches/*.CodeEdit",
+    "~/Library/Containers/*.CodeEdit.OpenWithCodeEdit",
+    "~/Library/HTTPStorages/*.CodeEdit",
+    "~/Library/Preferences/*.CodeEdit.plist",
+    "~/Library/Saved Application State/*.CodeEdit.savedState",
   ]
 end

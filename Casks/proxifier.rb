@@ -11,8 +11,8 @@ cask "proxifier" do
     end
   end
   on_big_sur :or_newer do
-    version "3.7"
-    sha256 "ed96cb643aa52292410109850997165d4c80f2782d596e018f53b33e45415ed3"
+    version "3.8"
+    sha256 "1f8bbad340500ad49c541570ba3233a88e60fd4e02030f596e7d32f93d244020"
 
     url "https://www.proxifier.com/download/ProxifierMac#{version.major}.dmg"
 

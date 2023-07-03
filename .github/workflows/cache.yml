@@ -22,6 +22,7 @@ jobs:
         runner:
           - macos-11
           - macos-12
+          - macos-13
           - ubuntu-latest
     runs-on: ${{ matrix.runner }}
     steps:

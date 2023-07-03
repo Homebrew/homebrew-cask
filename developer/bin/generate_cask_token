@@ -406,7 +406,7 @@ if /^-+debug?$/i.match?(ARGV.first)
   ARGV.shift
 end
 
-unless ARGV.length == 1
+if ARGV.length != 1
   puts usage
   exit 1
 end

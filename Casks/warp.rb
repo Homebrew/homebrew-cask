@@ -1,6 +1,6 @@
 cask "warp" do
-  version "0.2023.04.04.08.03.stable_01"
-  sha256 "65fd058815f8585184d953e29f08638e7b9a3dd037063246d6614549a8462999"
+  version "0.2023.06.27.19.34.stable_01"
+  sha256 "b30d9fd9cc5bba04f43c10e6c4b5e63eb0770efb5306142a3d83dd14e701d5fd"
 
   url "https://app.warp.dev/download/brew?version=v#{version}"
   name "Warp"
@@ -20,5 +20,6 @@ cask "warp" do
     "~/Library/Application Support/dev.warp.Warp-Stable",
     "~/Library/Logs/warp.log",
     "~/Library/Preferences/dev.warp.Warp-Stable.plist",
+    "~/Library/Saved Application State/dev.warp.Warp-Stable.savedState",
   ]
 end

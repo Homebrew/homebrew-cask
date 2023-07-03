@@ -10,11 +10,9 @@ cask "basictex" do
 
   livecheck do
     url "https://ctan.org/texarchive/systems/mac/mactex/"
-    strategy :page_match do |page|
-      match = page.match(/href=.*?mactex-basictex-(\d{4})(\d{2})(\d{2})\.pkg/)
-      next if match.blank?
-
-      "#{match[1]}.#{match[2]}#{match[3]}"
+    regex(/href=.*?mactex-basictex-(\d{4})(\d{2})(\d{2})\.pkg/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]}.#{match[1]}#{match[2]}" }
     end
   end
 
@@ -44,7 +42,9 @@ cask "basictex" do
       ]
 
   caveats <<~EOS
-    You must restart your terminal window for the installation of MacTeX CLI tools to take effect.
+    You must restart your terminal window for the installation of MacTeX CLI
+    tools to take effect.
+
     Alternatively, Bash and Zsh users can run the command:
 
       eval "$(/usr/libexec/path_helper)"

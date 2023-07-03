@@ -10,11 +10,11 @@ cask "foxit-pdf-editor" do
 
   livecheck do
     url "https://www.foxit.com/downloads/latest.html?product=Foxit-PDF-Editor-Mac&platform=Mac-OS-X"
-    strategy :header_match do |headers|
-      match = headers["location"].match(%r{/(\d+(?:\.\d+)*)/ML/FoxitPDFEditor(\d+)\.L10N\.Setup\.pkg}i)
-      next if match.blank?
-
-      "#{match[1]}.#{match[2].delete_prefix(match[1].delete("."))}"
+    regex(%r{/(\d+(?:\.\d+)*)/ML/FoxitPDFEditor(\d+)\.L10N\.Setup\.pkg}i)
+    strategy :header_match do |headers, regex|
+      headers["location"].scan(regex).map do |match|
+        "#{match[0]}.#{match[1].delete_prefix(match[0].delete("."))}"
+      end
     end
   end
 

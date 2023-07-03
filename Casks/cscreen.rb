@@ -16,4 +16,6 @@ cask "cscreen" do
   end
 
   binary "cscreen"
+
+  # No zap stanza required
 end

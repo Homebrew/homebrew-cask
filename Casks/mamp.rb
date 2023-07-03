@@ -24,5 +24,25 @@ cask "mamp" do
     set_ownership ["/Applications/MAMP", "/Applications/MAMP PRO"]
   end
 
-  uninstall pkgutil: "de.appsolute.installer.(mamp|mampacticon|mampendinstall|mamppro).pkg"
+  uninstall pkgutil: "de.appsolute.installer.(mamp|mampacticon|mampendinstall|mamppro).pkg",
+            delete:  "/Applications/MAMP"
+
+  zap trash:  [
+        "~/Library/Application Support/appsolute",
+        "~/Library/Application Support/de.appsolute.MAMP",
+        "~/Library/Application Support/de.appsolute.mamppro",
+        "~/Library/Caches/de.appsolute.MAMP",
+        "~/Library/Caches/de.appsolute.mamppro",
+        "~/Library/HTTPStorages/de.appsolute.MAMP",
+        "~/Library/HTTPStorages/de.appsolute.mamppro",
+        "~/Library/Preferences/de.appsolute.MAMP.plist",
+        "~/Library/Preferences/de.appsolute.mamppro.plist",
+        "~/Library/Saved Application State/de.appsolute.MAMP.savedState",
+        "~/Library/Saved Application State/de.appsolute.mamppro.savedState",
+      ],
+      delete: [
+        "/Library/LaunchDaemons/de.appsolute.mampprohelper.plist",
+        "/Library/PrivilegedHelperTools/de.appsolute.mampprohelper",
+        "/Library/Application Support/appsolute",
+      ]
 end

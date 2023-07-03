@@ -13,4 +13,14 @@ cask "beamer" do
   end
 
   app "Beamer.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.tupil.beamer",
+    "~/Library/Caches/com.tupil.beamer",
+    "~/Library/HTTPStorages/com.tupil.beamer",
+    "~/Library/HTTPStorages/com.tupil.beamer.binarycookies",
+    "~/Library/Logs/Beamer",
+    "~/Library/Preferences/com.tupil.beamer.plist",
+    "~/Library/Saved Application State/com.tupil.beamer.savedState",
+  ]
 end

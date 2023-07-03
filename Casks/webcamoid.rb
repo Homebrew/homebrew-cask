@@ -5,6 +5,7 @@ cask "webcamoid" do
   url "https://github.com/webcamoid/webcamoid/releases/download/#{version}/webcamoid-portable-mac-#{version}-x86_64.dmg",
       verified: "github.com/webcamoid/webcamoid/"
   name "Webcamoid"
+  desc "Webcam suite"
   homepage "https://webcamoid.github.io/"
 
   app "Webcamoid.app"
@@ -24,4 +25,8 @@ cask "webcamoid" do
     "~/Library/Preferences/org.webcamoid.cmio.AkVCam.Assistant.plist",
     "~/Library/Saved Application State/com.webcamoidprj.webcamoid.savedState",
   ]
+
+  caveats do
+    discontinued
+  end
 end

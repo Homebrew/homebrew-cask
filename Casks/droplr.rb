@@ -9,11 +9,11 @@ cask "droplr" do
 
   livecheck do
     url "https://files.droplr.com/apps/mac-current"
-    strategy :header_match do |headers|
-      match = headers["location"].match(%r{/Droplr(\d)(\d)(\d+)-(\d+)\.zip}i)
-      next if match.blank?
-
-      "#{match[1]}.#{match[2]}.#{match[3]},#{match[4]}"
+    regex(%r{/Droplr(\d)(\d)(\d+)-(\d+)\.zip}i)
+    strategy :header_match do |headers, regex|
+      headers["location"].scan(regex).map do |match|
+        "#{match[0]}.#{match[1]}.#{match[2]},#{match[3]}"
+      end
     end
   end
 

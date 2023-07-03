@@ -1,6 +1,6 @@
 cask "playdate-simulator" do
-  version "1.13.3"
-  sha256 "3d358c8c5d4a45ac6aafbffbda4d98e44e64e8c00506a9764793169a2afa1541"
+  version "2.0.0"
+  sha256 "b51997c7910a6896e79f387f88e42ce9d9234d01911f1170bf2a8b13be89c66a"
 
   url "https://download-keycdn.panic.com/playdate_sdk/PlaydateSDK-#{version}.zip",
       verified: "download-keycdn.panic.com/playdate_sdk/"
@@ -17,7 +17,11 @@ cask "playdate-simulator" do
 
   pkg "PlaydateSDK.pkg"
 
-  uninstall pkgutil: "date.play.sdk"
+  uninstall pkgutil: "date.play.sdk",
+            trash:   "~/Developer/PlaydateSDK",
+            rmdir:   "~/Developer"
+
+  zap trash: "~/.Playdate"
 
   caveats do
     license "https://play.date/dev/sdk-license"

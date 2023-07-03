@@ -9,11 +9,9 @@ cask "cr" do
 
   livecheck do
     url "https://sourceforge.net/projects/crengine/rss?path=/CoolReader#{version.major}/cr#{version.major}-#{version.csv.first}"
-    strategy :page_match do |page|
-      match = page.match(%r{url=.*?/cr(\d+(?:\.\d+)+)-(\d+)\.dmg}i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
+    regex(%r{url=.*?/cr(\d+(?:\.\d+)+)-(\d+)\.dmg}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 

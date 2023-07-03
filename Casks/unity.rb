@@ -9,14 +9,13 @@ cask "unity" do
       verified: "download.unity3d.com/download_unity/"
   name "Unity Editor"
   desc "Platform for 3D content"
-  homepage "https://unity.com/products"
+  homepage "https://unity.com/"
 
   livecheck do
     url "https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json"
-    strategy :page_match do |page|
-      page.scan(%r{/download_unity/(\h+)/MacEditorInstaller/Unity-(\d+(?:\.\d+)+[a-z]*\d*)\.pkg}i).map do |match|
-        "#{match[1]},#{match[0]}"
-      end
+    regex(%r{/download_unity/(\h+)/MacEditorInstaller/Unity-(\d+(?:\.\d+)+[a-z]*\d*)\.pkg}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
 
@@ -27,4 +26,16 @@ cask "unity" do
   uninstall quit:    "com.unity3d.UnityEditor5.x",
             pkgutil: "com.unity3d.UnityEditor5.x",
             delete:  "/Applications/Unity"
+
+  zap trash:  [
+        "/Library/Application Support/Unity",
+        "~/Library/Application Support/Unity",
+        "~/Library/Application Support/UnityHub",
+        "~/Library/Caches/com.unity3d.UnityEditor",
+        "~/Library/Logs/Unity",
+        "~/Library/Preferences/com.unity3d.unityhub.plist",
+        "~/Library/Saved Application State/com.unity3d.unityhub.savedState",
+        "~/Library/Unity",
+      ],
+      delete: "/Library/Application Support/Unity"
 end

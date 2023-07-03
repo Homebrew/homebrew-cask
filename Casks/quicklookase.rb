@@ -8,4 +8,6 @@ cask "quicklookase" do
   homepage "https://github.com/rsodre/QuickLookASE"
 
   qlplugin "QuickLookASE.qlgenerator"
+
+  # No zap stanza required
 end

@@ -9,8 +9,9 @@ cask "freac" do
 
     livecheck do
       url "https://www.freac.org/downloads-mainmenu-33"
-      strategy :page_match do |page|
-        page.scan(%r{href=.*?/freac[._-](\d+(?:\.\d+)+)[._-]macos10\.dmg}i).map do |match|
+      regex(%r{href=.*?/freac[._-](\d+(?:\.\d+)+)[._-]macos10\.dmg}i)
+      strategy :page_match do |page, regex|
+        page.scan(regex).map do |match|
           match[1].blank? ? match[0] : "#{match[0]},#{match[1]}"
         end
       end
@@ -24,8 +25,9 @@ cask "freac" do
 
     livecheck do
       url "https://www.freac.org/downloads-mainmenu-33"
-      strategy :page_match do |page|
-        page.scan(%r{href=.*?/freac[._-](\d+(?:\.\d+)+)[._-]macos11\.dmg}i).map do |match|
+      regex(%r{href=.*?/freac[._-](\d+(?:\.\d+)+)[._-]macos11\.dmg}i)
+      strategy :page_match do |page, regex|
+        page.scan(regex).map do |match|
           match[1].blank? ? match[0] : "#{match[0]},#{match[1]}"
         end
       end

@@ -9,10 +9,9 @@ cask "swiftpm-catalog" do
 
   livecheck do
     url :homepage
-    strategy :page_match do |page|
-      page.scan(%r{href=.*?/SwiftPM\s*Catalog\.app[._-](\d+(?:\.\d+)+)[_-]v?(\d+)\.zip}i).map do |match|
-        "#{match[0]},#{match[1]}"
-      end
+    regex(%r{href=.*?/SwiftPM\s*Catalog\.app[._-](\d+(?:\.\d+)+)[_-]v?(\d+)\.zip}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 

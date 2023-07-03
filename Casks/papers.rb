@@ -1,23 +1,25 @@
 cask "papers" do
-  version "1.1,107"
-  sha256 :no_check
+  arch arm: "arm64", intel: "x64"
 
-  url "https://download.readcube.com/app/Install%20Papers.zip"
+  version "4.36.2283"
+  sha256 arm:   "77a11c3d45aa97c39592667b3d90e596147f01feaa2087de05eaf22ec33a6410",
+         intel: "044b127273844945d5e2f1b3cdc0de391a339049c092bf20e88c5b6aaf12a4f7"
+
+  url "https://update.readcube.com/desktop/updates/Papers_Setup_#{version}-#{arch}.zip"
   name "ReadCube Papers"
   desc "Reference management software for researchers"
   homepage "https://www.readcube.com/home"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://s3.amazonaws.com/update.readcube.com/desktop/updates/latest-mac.yml"
+    strategy :electron_builder
   end
 
-  installer manual: "Papers Installer.app"
-
-  uninstall quit:   "com.ReadCube.Papers",
-            delete: "/Applications/Papers.app"
+  app "Papers.app"
 
   zap trash: [
+    "~/Documents/Papers Library",
+    "~/Documents/Papers Styles",
     "~/Library/Application Support/Papers",
     "~/Library/Application Support/ReadCube Shared",
     "~/Library/Caches/com.ReadCube.Papers",
@@ -26,6 +28,7 @@ cask "papers" do
     "~/Library/HTTPStorages/com.ReadCube.Papers-Installer",
     "~/Library/Logs/Papers",
     "~/Library/Preferences/com.ReadCube.Papers.plist",
+    "~/Library/Saved Application State/com.ReadCube.Papers-Installer.savedState",
     "~/Library/Saved Application State/com.ReadCube.Papers.savedState",
   ]
 end

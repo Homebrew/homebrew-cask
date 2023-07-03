@@ -9,11 +9,11 @@ cask "reunion" do
 
   livecheck do
     url "https://store.leisterpro.com/updates/reunion#{version.major}/appcast.xml"
-    strategy :sparkle do |item|
-      match = item.url.match(%r{/Reunion-(\d+(?:-\d+)*)-(\d+.*?)\.zip}i)
-      next if match.blank?
-
-      "#{match[1].tr("-", ".")},#{match[2]}"
+    regex(%r{/Reunion-(\d+(?:-\d+)*)-(\d+.*?)\.zip}i)
+    strategy :sparkle do |item, regex|
+      item.url.scan(regex).map do |match|
+        "#{match[0].tr("-", ".")},#{match[1]}"
+      end
     end
   end
 

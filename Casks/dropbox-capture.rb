@@ -1,9 +1,9 @@
 cask "dropbox-capture" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "97.6.0"
-  sha256 arm:   "af1b5ecb556dafe70b6e42f6ab7ad23e87b12d00031d744d98281bf5515bab50",
-         intel: "03aecc52bae25f31c2a2711864d16f3fa5c2efc027d661d202d38aaa80a33888"
+  version "103.3.0"
+  sha256 arm:   "863d681851c3648d100859f465890b4d386c7c56a11512964ac89e4cdc1a5eb0",
+         intel: "be66d514c828b689777c17325d09ed9cd614315abde57c0a596730d437501842"
 
   url "https://edge.dropboxstatic.com/dbx-releng/products/dropbox-capture/#{version}/mac.#{arch}/Dropbox_Capture.dmg",
       verified: "edge.dropboxstatic.com/dbx-releng/products/dropbox-capture/"

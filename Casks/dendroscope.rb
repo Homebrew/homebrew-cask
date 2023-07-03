@@ -9,9 +9,9 @@ cask "dendroscope" do
 
   livecheck do
     url "https://software-ab.cs.uni-tuebingen.de/download/dendroscope3/welcome.html"
-    strategy :page_match do |page|
-      v = page[/href=.*?Dendroscope_macos_(\d+(?:_\d+)*)\.dmg/i, 1]
-      v.tr("_", ".")
+    regex(/href=.*?Dendroscope_macos_(\d+(?:_\d+)*)\.dmg/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex)&.map { |match| match[0].tr("_", ".") }
     end
   end
 

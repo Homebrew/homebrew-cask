@@ -1,13 +1,13 @@
 cask "apifox" do
   arch arm: "-macOS-arm64"
 
-  version "2.2.30"
-  sha256 arm:   "52adc8ffac30cdb39e0d103176534ace1fac3ea9054fffb951ffbc8ff3bfacf9",
-         intel: "50624a8c208ab8cff8f1a5b9af19f7c22b998c5b88b62d1f93e66d86e1e4e7e6"
+  version "2.3.2"
+  sha256 arm:   "d976a645b3469fb2a509ae6ef4242fad06d24ea9aff67a31ea34291e03c8344a",
+         intel: "76b6b26795eaf5b21b24cfa6b7487c48e147153a885d527e826571ea33cdbd4c"
 
   url "https://cdn.apifox.cn/download/#{version}/Apifox#{arch}-#{version}.dmg"
   name "Apifox"
-  desc "Platform for API documentation, debugging, Mock and testing"
+  desc "Platform for API documentation, debugging, and testing"
   homepage "https://www.apifox.cn/"
 
   livecheck do

@@ -8,7 +8,7 @@ cask "reflex" do
   homepage "https://stuntsoftware.com/reflex/"
 
   livecheck do
-    url "https://stuntsoftware.com/reflex/"
+    url :homepage
     regex(/href=.*?reflex[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 

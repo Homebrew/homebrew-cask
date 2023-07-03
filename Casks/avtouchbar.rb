@@ -9,11 +9,9 @@ cask "avtouchbar" do
 
   livecheck do
     url "https://www.avtouchbar.com/downloads/"
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/uploads/(\d+)/(\d+)/AVTouchBar[._-]?(\d+(?:\.\d+)+)\.zip}i)
-      next if match.blank?
-
-      "#{match[3]},#{match[1]}.#{match[2]}"
+    regex(%r{href=.*?/uploads/(\d+)/(\d+)/AVTouchBar[._-]?(\d+(?:\.\d+)+)\.zip}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[2]},#{match[0]}.#{match[1]}" }
     end
   end
 

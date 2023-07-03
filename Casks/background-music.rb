@@ -34,5 +34,8 @@ cask "background-music" do
             quit:      "com.bearisdriving.BGM.App",
             launchctl: "com.bearisdriving.BGM.XPCHelper"
 
-  zap trash: "~/Library/Preferences/com.bearisdriving.BGM.App.plist"
+  zap trash: [
+    "/Library/LaunchDaemons/com.bearisdriving.BGM.XPCHelper.plist",
+    "~/Library/Preferences/com.bearisdriving.BGM.App.plist",
+  ]
 end

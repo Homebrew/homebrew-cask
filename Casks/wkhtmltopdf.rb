@@ -24,7 +24,13 @@ cask "wkhtmltopdf" do
               "/usr/local/lib/libwkhtmltox.#{version.major}.dylib",
               "/usr/local/lib/libwkhtmltox.#{version.sub(/-.*$/, "")}.dylib",
               "/usr/local/lib/libwkhtmltox.dylib",
-            ]
+            ],
+            script:  {
+              executable: "/usr/local/bin/uninstall-wkhtmltox",
+              sudo:       true,
+            }
+
+  # No zap stanza required
 
   caveats do
     files_in_usr_local

@@ -18,4 +18,9 @@ cask "kekaexternalhelper" do
   end
 
   app "KekaExternalHelper.app"
+
+  zap trash: [
+    "~/Library/Containers/com.aone.keka",
+    "~/Library/Saved Application State/com.aone.KekaExternalHelper.savedState",
+  ]
 end

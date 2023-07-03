@@ -4,12 +4,12 @@ cask "adapter" do
 
   url "https://assets.macroplant.com/download/4/Adapter-#{version}.dmg"
   name "Adapter"
-  desc "Converts Video, Audio and Images"
+  desc "Converts video, audio and images"
   homepage "https://macroplant.com/adapter"
 
   livecheck do
-    url "https://macroplant.com/adapter"
-    regex(%r{href=.*?/Adapter-(\d+(?:\.\d+)+)\.dmg}i)
+    url :homepage
+    regex(%r{href=.*?/Adapter[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "Adapter.app"

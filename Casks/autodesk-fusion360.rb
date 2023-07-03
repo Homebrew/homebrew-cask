@@ -29,4 +29,19 @@ cask "autodesk-fusion360" do
               "~/Applications/Autodesk Fusion 360.app",
               "~/Applications/Remove Autodesk Fusion 360.app",
             ]
+
+  zap trash: [
+    "/Users/Shared/Autodesk",
+    "~/.config/Autodesk",
+    "~/Library/Application Support/Autodesk",
+    "~/Library/Caches/com.autodesk.AdskIdentityManager",
+    "~/Library/Caches/com.Autodesk.streamer",
+    "~/Library/HTTPStorages/com.Autodesk.streamer",
+    "~/Library/Logs/autodesk.webdeploy.streamer.log",
+    "~/Library/Preferences/com.autodesk.adskidentitymanager.Autodesk Identity Manager.plist",
+    "~/Library/Preferences/com.autodesk.EAGLE 9.7.0.plist",
+    "~/Library/Saved Application State/com.autodesk.fusion360.savedState",
+    "~/Library/Saved Application State/com.Autodesk.streamer.savedState",
+    "~/Library/WebKit/com.autodesk.AdskIdentityManager",
+  ]
 end

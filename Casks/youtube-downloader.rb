@@ -8,4 +8,6 @@ cask "youtube-downloader" do
   homepage "https://github.com/DenBeke/YouTube-Downloader-for-macOS"
 
   app "Youtube Downloader.app"
+
+  zap trash: "~/Library/Preferences/denbeke.Youtube-Downloader.plist"
 end

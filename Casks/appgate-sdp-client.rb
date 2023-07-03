@@ -18,8 +18,8 @@ cask "appgate-sdp-client" do
     end
   end
   on_big_sur :or_newer do
-    version "6.1.2"
-    sha256 "18a886de5470729f329f232f2155a05a887befa02b0524f9e31887817cbfd72b"
+    version "6.2.0"
+    sha256 "5d6c8ff02e167b439f276303a8a2251c79fe1adaf40c88eb7d9e2b0682326cdd"
 
     livecheck do
       url :homepage
@@ -36,7 +36,7 @@ cask "appgate-sdp-client" do
         # Check the page for the newest major/minor version, which links to the
         # latest disk image file (containing the full version in the file name)
         version_page = Homebrew::Livecheck::Strategy.page_content(
-          URI.join("https://www.appgate.com/", version_page_path),
+          URI.join("https://www.appgate.com/", version_page_path).to_s,
         )
         next [] if version_page[:content].blank?
 
@@ -55,18 +55,22 @@ cask "appgate-sdp-client" do
 
   pkg "AppGate SDP Installer.pkg"
 
-  uninstall launchctl: [
+  uninstall pkgutil:   "com.appgate.pkg.appgatetun.component",
+            launchctl: [
+              "com.appgate.sdp.client.agent",
+              "com.appgate.sdp.tun",
+              "com.appgate.sdp.updater",
               "com.cyxtera.appgate.sdp.client.agent",
               "com.cyxtera.appgate.sdp.helper",
               "com.cyxtera.appgate.sdp.tun",
               "com.cyxtera.appgate.sdp.updater",
             ],
             quit:      [
+              "com.appgate.sdp",
               "com.cyxtera.appgate.helper",
               "com.cyxtera.appgate.sdp",
             ],
-            signal:    ["QUIT", "com.cyxtera.appgate"],
-            pkgutil:   "com.appgate.pkg.appgatetun.component"
+            signal:    ["QUIT", "com.cyxtera.appgate"]
 
   zap trash: [
     "~/Library/Application Support/appgate-ui",

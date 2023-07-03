@@ -1,6 +1,6 @@
 cask "plex-media-server" do
-  version "1.31.3.6868,28fc46b27"
-  sha256 "04da728c6c173e97c76a676e173dd2c9f62b686ed9263a13b24770c3c6c0294e"
+  version "1.32.4.7195,7c8f9d3b6"
+  sha256 "9de147de5b627e22e5d07eddf7ec591992f976097fe6514eef200ec42960b537"
 
   url "https://downloads.plex.tv/plex-media-server-new/#{version.csv.first}-#{version.csv.second}/macos/PlexMediaServer-#{version.csv.first}-#{version.csv.second}-universal.zip"
   name "Plex Media Server"
@@ -16,6 +16,7 @@ cask "plex-media-server" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Plex Media Server.app"
   binary "#{appdir}/Plex Media Server.app/Contents/MacOS/Plex Media Scanner", target: "plexms"

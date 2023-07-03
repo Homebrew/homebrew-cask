@@ -9,11 +9,9 @@ cask "quickhash" do
 
   livecheck do
     url "https://www.quickhash-gui.org/downloads/"
-    strategy :page_match do |page|
-      match = page.match(%r{/quickhash[._-](?:gui[._-])?v?(\d+(?:-\d+)+)[._-]apple[._-]osx/\?wpdmdl=(\d+)}i)
-      next if match.blank?
-
-      "#{match[1].tr("-", ".")},#{match[2]}"
+    regex(%r{/quickhash[._-](?:gui[._-])?v?(\d+(?:-\d+)+)[._-]apple[._-]osx/\?wpdmdl=(\d+)}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0].tr("-", ".")},#{match[1]}" }
     end
   end
 

@@ -1,5 +1,5 @@
 cask "switchresx" do
-  version "4.12.2"
+  version "4.13.1"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://www.madrau.com/data/switchresx/SwitchResX#{version.major}.zip"
@@ -11,6 +11,8 @@ cask "switchresx" do
     url "https://www.madrau.com/srx_download/srx_download/history.php"
     regex(/SwitchResX\s*(\d+(?:\.\d+)+)/i)
   end
+
+  auto_updates true
 
   prefpane "SwitchResX Installer.app/Contents/Plugins/SwitchResX.prefPane"
 

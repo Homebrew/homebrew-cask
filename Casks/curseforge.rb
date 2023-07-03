@@ -1,8 +1,8 @@
 cask "curseforge" do
-  version "0.222.2-1"
-  sha256 "c55be3471ea94d1601aacfa8666f2129999b55c69df016a1fc7cb52d6b729816"
+  version "0.227.1-3"
+  sha256 "77cb1f171e1e5bc4bdf58a581c43156b337ee806d8102946d7c87358a456f0a2"
 
-  url "https://curseforge.overwolf.com/electron/mac/CurseForge-#{version}.dmg"
+  url "https://curseforge.overwolf.com/electron/mac/CurseForge-#{version}-universal-mac.zip"
   name "CurseForge"
   desc "Download and manage your addons and mods"
   homepage "https://curseforge.overwolf.com/"

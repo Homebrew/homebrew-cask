@@ -1,5 +1,5 @@
 cask "dmg-canvas" do
-  version "4.0.3,400018"
+  version "4.0.5,400020"
   sha256 :no_check
 
   url "https://arweb-assets.s3.amazonaws.com/downloads/dmgcanvas/DMGCanvas.dmg",
@@ -14,4 +14,11 @@ cask "dmg-canvas" do
   end
 
   app "DMG Canvas.app"
+
+  zap trash: [
+    "~/Library/Application Support/DMG Canvas",
+    "~/Library/Caches/com.araelium.dmgcanvas",
+    "~/Library/HTTPStorages/com.araelium.dmgcanvas",
+    "~/Library/Preferences/com.araelium.dmgcanvas.plist",
+  ]
 end

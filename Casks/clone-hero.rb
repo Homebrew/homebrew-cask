@@ -16,6 +16,8 @@ cask "clone-hero" do
 
   zap trash: [
     "~/Library/Application Support/com.srylain.CloneHero",
+    "~/Library/Logs/srylain Inc_",
     "~/Library/Preferences/com.srylain.CloneHero.plist",
+    "~/Library/Saved Application State/com.srylain.CloneHero.savedState",
   ]
 end

@@ -4,11 +4,12 @@ cask "nanostudio" do
 
   url "https://www.blipinteractive.co.uk/downloads/NanoStudio-#{version}.dmg.zip"
   name "NanoStudio"
+  desc "Music production for 32 bit iOS devices"
   homepage "https://www.blipinteractive.co.uk/nanostudio1/"
 
   livecheck do
-    url "https://www.blipinteractive.co.uk/nanostudio1/"
-    regex(%r{href=.*?/NanoStudio-(\d+(?:\.\d+)*)\.dmg\.zip}i)
+    url :homepage
+    regex(%r{href=.*?/NanoStudio[._-]v?(\d+(?:\.\d+)+)\.dmg\.zip}i)
   end
 
   app "NanoStudio.app"

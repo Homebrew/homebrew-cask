@@ -13,6 +13,8 @@ cask "angry-ip-scanner" do
 
   app "Angry IP Scanner.app"
 
+  # No zap stanza required
+
   caveats do
     depends_on_java "11"
   end

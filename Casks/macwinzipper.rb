@@ -8,8 +8,8 @@ cask "macwinzipper" do
   homepage "https://tida.co.jp/macwinzipper"
 
   livecheck do
-    url "https://tida.co.jp/macwinzipper"
-    regex(%r{href=.*?/MacWinZipper-(\d+(?:\.\d+)*)\.dmg}i)
+    url :homepage
+    regex(%r{href=.*?/MacWinZipper[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "MacWinZipper.app"

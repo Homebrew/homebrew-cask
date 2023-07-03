@@ -1,6 +1,6 @@
 cask "mints" do
-  version "1.11,2023.03"
-  sha256 "8135649e0eff2cf09c333a778a68dc10358f4621ab45dc30b3f5e8dea129debd"
+  version "1.14,2023.05"
+  sha256 "8984d2d7bcf000ca599c7fd621967d20a65fc09881ba9ae83ec8e7458242f780"
 
   url "https://eclecticlightdotcom.files.wordpress.com/#{version.csv.second.major}/#{version.csv.second.minor}/mints#{version.csv.first.no_dots}.zip",
       verified: "eclecticlightdotcom.files.wordpress.com/"
@@ -10,11 +10,11 @@ cask "mints" do
 
   livecheck do
     url "https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
-    strategy :page_match do |page|
-      match = page.match(%r{/(\d+)/(\d+)/mints(\d+)\.zip}i)
-      next if match.blank?
-
-      "#{match[3].split("", 2).join(".")},#{match[1]}.#{match[2]}"
+    regex(%r{/(\d+)/(\d+)/mints(\d+)\.zip}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map do |match|
+        "#{match[2].split("", 2).join(".")},#{match[0]}.#{match[1]}"
+      end
     end
   end
 

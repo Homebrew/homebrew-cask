@@ -1,6 +1,6 @@
 cask "neteasemusic" do
-  version "2.3.13_980"
-  sha256 "532c92193876e0505b824b941dc173fd5482d64004908b6174bc18f4a923e74f"
+  version "2.3.16_1020"
+  sha256 "475bfde7cae544dae3ac0160ea824d2af361abca26968327c4f064a545f6419b"
 
   url "https://d1.music.126.net/dmusic/NeteaseMusic_#{version}_web.dmg",
       verified:   "d1.music.126.net/",
@@ -19,6 +19,7 @@ cask "neteasemusic" do
     strategy :header_match
   end
 
+  auto_updates true
   depends_on macos: ">= :sierra"
 
   app "NeteaseMusic.app"

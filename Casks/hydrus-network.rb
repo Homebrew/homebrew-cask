@@ -1,16 +1,16 @@
 cask "hydrus-network" do
-  version "522"
-  sha256 "ef29a16fb7655d0b0f6ea4abbc38e10cef3fc153fe326274c186467d31c29ea9"
+  version "533"
+  sha256 "c938b09c9ae839ed623655a758927b7fd239da5ce2825c3789bb26f51a9065a0"
 
   url "https://github.com/hydrusnetwork/hydrus/releases/download/v#{version}/Hydrus.Network.#{version}.-.macOS.-.App.dmg",
       verified: "github.com/hydrusnetwork/hydrus/"
   name "hydrus-network"
-  desc "Personal booru-style media tagger to organize your media"
+  desc "Booru-style media tagger"
   homepage "https://hydrusnetwork.github.io/hydrus/"
 
   livecheck do
     url :url
-    regex(%r{href=["']?[^"' >]*?/tree/v?(\d+(?:\.\d+)*[a-z]?)[^"' >]*?["' >]}i)
+    regex(/v?(\d+(?:\.\d+)*[a-z]?)/i)
     strategy :github_latest
   end
 

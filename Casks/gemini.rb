@@ -19,6 +19,8 @@ cask "gemini" do
     end
   end
 
+  auto_updates true
+
   app "Gemini #{version.major}.app"
 
   zap trash: [

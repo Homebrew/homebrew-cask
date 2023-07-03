@@ -13,4 +13,9 @@ cask "yed" do
   end
 
   app "yEd.app"
+
+  zap trash: [
+    "~/Library/Saved Application State/com.yworks.yEd.savedState",
+    "~/Library/yWorks/yEd",
+  ]
 end

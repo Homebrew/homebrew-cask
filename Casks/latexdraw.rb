@@ -9,8 +9,8 @@ cask "latexdraw" do
   homepage "https://latexdraw.sourceforge.io/"
 
   livecheck do
-    url "https://github.com/latexdraw/latexdraw"
-    strategy :git
+    url "https://sourceforge.net/projects/latexdraw/rss?path=/latexdraw"
+    regex(%r{url=.*?/LaTeXDraw[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "LaTeXDraw.app"

@@ -1,8 +1,8 @@
 cask "plex-htpc" do
-  version "1.37.2.3674,ef9fa6e4"
-  sha256 "843eb06aeff3a85c6bd81d7e845c1de7af884091d77e36642f8da3f1b929115d"
+  version "1.42.0.3898,1b05145e"
+  sha256 "dca5b2681e4b1e458c8c36e62c027b7f3b710fa25726a902c88bcfeda2ec54ac"
 
-  url "https://downloads.plex.tv/htpc/#{version.csv.first}-#{version.csv.second}/macos/PlexHTPC-#{version.csv.first}-#{version.csv.second}-x86_64.zip"
+  url "https://downloads.plex.tv/htpc/#{version.csv.first}-#{version.csv.second}/macos/PlexHTPC-#{version.csv.first}-#{version.csv.second}-universal.zip"
   name "Plex HTPC"
   desc "Home Theater PC media player"
   homepage "https://www.plex.tv/"

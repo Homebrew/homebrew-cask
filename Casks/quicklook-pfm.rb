@@ -13,4 +13,6 @@ cask "quicklook-pfm" do
   end
 
   qlplugin "Quicklook-PFM.qlgenerator"
+
+  # No zap stanza required
 end

@@ -22,7 +22,6 @@ jobs:
         run: |
           gem install --user-install octokit
           ./.github/actions/sync/labels.rb '${{ github.repository }}' \
-            Homebrew/homebrew-cask-drivers \
             Homebrew/homebrew-cask-fonts \
             Homebrew/homebrew-cask-versions
         env:

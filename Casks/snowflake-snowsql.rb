@@ -1,6 +1,6 @@
 cask "snowflake-snowsql" do
-  version "1.2.24"
-  sha256 "28bd238991e00bf476d3fdb28c1e7d97bd6f0e315fa4c1f9dc78fad4f0e3b89c"
+  version "1.2.27"
+  sha256 "ab78917f16654766621148cbac8faf4891b70420eefa1acb4234f77a72244000"
 
   url "https://sfc-repo.snowflakecomputing.com/snowsql/bootstrap/#{version.major_minor}/darwin_x86_64/snowsql-#{version}-darwin_x86_64.pkg",
       verified: "sfc-repo.snowflakecomputing.com/"
@@ -16,4 +16,6 @@ cask "snowflake-snowsql" do
   pkg "snowsql-#{version}-darwin_x86_64.pkg"
 
   uninstall pkgutil: "net.snowflake.snowsql"
+
+  zap trash: "~/.snowsql"
 end

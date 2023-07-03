@@ -4,7 +4,7 @@ cask "aquaterm" do
 
   url "https://downloads.sourceforge.net/aquaterm/AquaTerm/v#{version}/AquaTerm-#{version}.dmg"
   name "AquaTerm"
-  desc "Grahics renderer"
+  desc "Graphics renderer"
   homepage "https://sourceforge.net/projects/aquaterm/"
 
   depends_on macos: ">= :high_sierra"

@@ -17,6 +17,8 @@ cask "clean-me" do
 
   app "Clean Me.app"
 
+  # No zap stanza required
+
   caveats do
     discontinued
   end

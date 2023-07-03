@@ -1,14 +1,14 @@
 cask "koodo-reader" do
   arch arm: "-arm64", intel: "-x64"
 
-  version "1.5.3"
-  sha256 arm:   "8f85f14aaad305d4bd506c23e1664c4e1bd66fdb9144935945244d86ff1eaa49",
-         intel: "c0e944d2ec3bdad5d90b5f88218b48f536cd1ae791e2395c29a781d7335b3130"
+  version "1.5.6"
+  sha256 arm:   "53000472714b3bf85bc7699f098b73eaf601e9c18d71b87957427cd3e8c7d715",
+         intel: "c90489f0c8e43dc4e07b4324e6020f309e0af043f3ae7a26b4c74f10026fd1b8"
 
   url "https://github.com/troyeguo/koodo-reader/releases/download/v#{version}/Koodo-Reader-#{version}#{arch}.dmg",
       verified: "github.com/troyeguo/koodo-reader/"
   name "Koodo Reader"
-  desc "Open-source Epub reader with backup and restore support"
+  desc "Open-source epub reader"
   homepage "https://koodo.960960.xyz/"
 
   app "Koodo Reader.app"

@@ -1,5 +1,5 @@
 cask "cisdem-duplicate-finder" do
-  version "6.3.0"
+  version "6.4.0"
   sha256 :no_check
 
   url "https://download.cisdem.com/cisdem-duplicatefinder.dmg"
@@ -9,7 +9,7 @@ cask "cisdem-duplicate-finder" do
 
   livecheck do
     url "https://www.cisdem.com/js/notes/duplicate-finder-mac.js"
-    regex(/(\d+(?:\.\d+)*)\s+\(\d+(?:-\d+)+\)/)
+    regex(/(\d+(?:\.\d+)*)\s+\(\d+(?:-\d+)+\)/i)
   end
 
   depends_on macos: ">= :el_capitan"

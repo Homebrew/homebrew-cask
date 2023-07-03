@@ -1,5 +1,5 @@
 cask "youdaodict" do
-  version "9.3.0,934"
+  version "10.0.5,946"
   sha256 :no_check
 
   url "https://codown.youdao.com/cidian/download/MacDict.dmg"
@@ -15,7 +15,7 @@ cask "youdaodict" do
 
   depends_on macos: ">= :mojave"
 
-  app "网易有道词典.app"
+  app "网易有道翻译.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.youdao.YoudaoDict",

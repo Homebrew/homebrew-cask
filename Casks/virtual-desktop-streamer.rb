@@ -1,23 +1,20 @@
 cask "virtual-desktop-streamer" do
-  version "1.26.4"
-  sha256 :no_check
+  version "1.27.4"
+  sha256 "bba8a8d82fa6d1f48c6477755a37ae4556b5bf81192c7651eb2a6984630229a8"
 
-  url "https://download.vrdesktop.net/files/VirtualDesktop.Streamer.Setup.dmg"
+  url "https://github.com/guygodin/VirtualDesktop/releases/download/v#{version}/VirtualDesktop.Streamer.Setup.dmg",
+      verified: "github.com/guygodin/VirtualDesktop/"
   name "Virtual Desktop Streamer"
   desc "VR Virtual Desktop Streamer"
   homepage "https://www.vrdesktop.net/"
-
-  livecheck do
-    skip "No version information available"
-  end
 
   pkg "Virtual Desktop.pkg"
 
   postflight do
     # postinstall launches the app
     retries ||= 3
-    ohai "The Virtual Desktop package postinstall script launches the Streamer app" unless retries < 3
-    ohai "Attempting to close the Streamer app to avoid unwanted user intervention" unless retries < 3
+    ohai "The Virtual Desktop package postinstall script launches the Streamer app" if retries >= 3
+    ohai "Attempting to close the Streamer app to avoid unwanted user intervention" if retries >= 3
     return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/Virtual Desktop Streamer.app"]
 
   rescue RuntimeError

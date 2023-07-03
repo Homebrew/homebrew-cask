@@ -9,7 +9,7 @@ cask "bugdom" do
   homepage "https://jorio.itch.io/bugdom"
 
   app "Bugdom.app"
-  artifact "Documentation", target: "#{Dir.home}/Library/Application Support/Bugdom"
+  artifact "Documentation", target: "~/Library/Application Support/Bugdom"
 
   zap trash: [
     "~/Library/Preferences/Bugdom",

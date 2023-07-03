@@ -1,13 +1,13 @@
 cask "datagrip" do
   arch arm: "-aarch64"
 
-  version "2023.1,231.8109.163"
-  sha256 arm:   "17a74498378758bd2963e775dea7b77744a7072778a07a5685375b07acbd537b",
-         intel: "5de7f381f20c52bd0c96977f9d000033f0decd3912eaf0776eff540ec06c0881"
+  version "2023.1.2,231.9011.35"
+  sha256 arm:   "3af05578dd8c3b01a5b75e34b0944bccd307ce698e80fe238044762785920c90",
+         intel: "13302c2cda09fdf08025430cfb195d7cbf34ad0f66968091e5227a8ff71a7f79"
 
   url "https://download.jetbrains.com/datagrip/datagrip-#{version.csv.first}#{arch}.dmg"
   name "DataGrip"
-  desc "Databases & SQL IDE"
+  desc "Databases and SQL IDE"
   homepage "https://www.jetbrains.com/datagrip/"
 
   livecheck do

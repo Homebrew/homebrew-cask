@@ -1,9 +1,9 @@
 cask "jetbrains-gateway" do
   arch arm: "-aarch64"
 
-  version "223.8617.56"
-  sha256 arm:   "776ff0a5f0293cd4b4c29380199757b359e6e195a57b69d2cef73f9cc44ee456",
-         intel: "26ff68ea27952c1adc651ad5f2fae7ad4ca7b744f70f582bdf1bd4c1d17132f4"
+  version "2023.1.3"
+  sha256 arm:   "3564f680ff11ac66722e970491d37d3f1faeb09354095f2086bf0bf4a0897e5b",
+         intel: "18d9bcce099d9f78ff4990f93c9ffc6819d7e789f4372659a3ea3bf0f1a2f85a"
 
   url "https://download.jetbrains.com/idea/gateway/JetBrainsGateway-#{version}#{arch}.dmg"
   name "jetbrains-gateway"
@@ -12,10 +12,8 @@ cask "jetbrains-gateway" do
 
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=GW&latest=true&type=release"
-    strategy :page_match do |page|
-      JSON.parse(page)["GW"].map do |release|
-        (release["build"]).to_s
-      end
+    strategy :json do |json|
+      json["GW"].map { |release| release["version"] }
     end
   end
 

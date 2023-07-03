@@ -1,6 +1,6 @@
 cask "couchbase-server-community" do
-  version "7.1.1"
-  sha256 "bd402c1b2a69b0a3f3c695a3cd0074d73fdf0d851ceee11c6b5e3efa23e7d37a"
+  version "7.2.0"
+  sha256 "423da593e4dcce2210dcf26719367359936b57ea8a80b295a17e6e800c85d6e9"
 
   url "https://packages.couchbase.com/releases/#{version}/couchbase-server-community_#{version}-macos_x86_64.dmg"
   name "Couchbase Server"
@@ -15,4 +15,13 @@ cask "couchbase-server-community" do
   conflicts_with cask: "couchbase-server-enterprise"
 
   app "Couchbase Server.app"
+
+  zap trash: [
+    "~/Library/Application Support/Couchbase",
+    "~/Library/Caches/com.couchbase.couchbase-server",
+    "~/Library/Logs/Couchbase.log",
+    "~/Library/Logs/CouchbaseServer.log",
+    "~/Library/Preferences/com.couchbase.couchbase-server.plist",
+    "~/Library/Preferences/couchbase-server.ini",
+  ]
 end

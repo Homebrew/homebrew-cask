@@ -1,9 +1,9 @@
 cask "lens" do
   arch arm: "-arm64"
 
-  version "2023.4.60821"
-  sha256 arm:   "56a739caec0d58b8f5bf4c4ce62d8d4ad5352269cc59284251788d3d1b19377b",
-         intel: "381b43454da6bea3dc768ebf0ccbe40362bcd7dfc6cd981f553846d22b5d7356"
+  version "2023.5.310801"
+  sha256 arm:   "5f1fba18f01f8e2a13aea7c54bb70587a75eada47e4eda8b9702db550c5f37c8",
+         intel: "00653590e404601006a966b17eda9235574f11b94f0ee8ca4818cc79a54dc7a3"
 
   url "https://api.k8slens.dev/binaries/Lens-#{version}-latest#{arch}.dmg"
   name "Lens"

@@ -1,6 +1,6 @@
 cask "textexpander" do
-  version "7.4.1,741.2"
-  sha256 "ad16c8ba5bde8fef6c4d8d9fdf816ef127364ec2a3858c662d45a53ecf2450ef"
+  version "7.5.2,752.3"
+  sha256 "a782c90bf14516c0a785a5fa6be4f755f0e077a8d8594bfc859d01351ae3543e"
 
   url "https://cdn.textexpander.com/mac/#{version.csv.second}/TextExpander_#{version.csv.first}.dmg",
       verified: "cdn.textexpander.com/mac/"

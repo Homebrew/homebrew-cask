@@ -10,11 +10,11 @@ cask "engine-prime" do
 
   livecheck do
     url "https://www.denondj.com/downloads"
-    strategy :page_match do |page|
-      match = page.match(%r{href=.*?/Engine[._-]?Prime[._-]?v?(\d+(?:\.\d+)*)(?:[._-]([0-9a-z]+))?[._-]Setup\.dmg}i)
-      next if match.blank?
-
-      "#{match[1]}#{"," + match[2] if match[2]}"
+    regex(%r{href=.*?/Engine[._-]?Prime[._-]?v?(\d+(?:\.\d+)*)(?:[._-]([0-9a-z]+))?[._-]Setup\.dmg}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map do |match|
+        "#{match[0]}#{"," + match[1] if match[1]}"
+      end
     end
   end
 

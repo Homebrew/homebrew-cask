@@ -9,6 +9,8 @@ cask "quicklookapk" do
 
   qlplugin "QuickLookAPK.qlgenerator"
 
+  # No zap stanza required
+
   caveats do
     discontinued
   end

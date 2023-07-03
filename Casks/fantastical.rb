@@ -1,6 +1,6 @@
 cask "fantastical" do
-  version "3.7.11"
-  sha256 "0ddd6d4906b2c3b803f1db485e80e421d27436c55b19b15cb7999001551a41b8"
+  version "3.7.15"
+  sha256 "546c08988ef2b628baf9e62ceb31308e3626cdd0fdfbf54d0542cc76e460e418"
 
   url "https://cdn.flexibits.com/Fantastical_#{version}.zip"
   name "Fantastical"
@@ -24,10 +24,12 @@ cask "fantastical" do
             ]
 
   zap trash: [
+    "~/Library/Application Scripts/*.com.flexibits.fantastical*",
     "~/Library/Application Scripts/com.flexibits.fantastical*",
     "~/Library/Application Scripts/com.flexibits.fbcaldav.*",
     "~/Library/Containers/com.flexibits.fantastical*",
     "~/Library/Containers/com.flexibits.fbcaldav.*",
+    "~/Library/Group Containers/*.com.flexibits.fantastical*.mac",
     "~/Library/Preferences/com.flexibits.fantastical.plist",
   ]
 end

@@ -9,11 +9,9 @@ cask "starnet-plus-plus" do
 
   livecheck do
     url "https://www.starnetastro.com/download/"
-    strategy :page_match do |page|
-      match = page.match(%r{uploads/(\d+)/(\d+)/StarNetv?(\d+(?:\.\d+)*)CLI[._-]MacOS.zip}i)
-      next if match.blank?
-
-      "#{match[3]},#{match[2]},#{match[1]}"
+    regex(%r{uploads/(\d+)/(\d+)/StarNetv?(\d+(?:\.\d+)*)CLI[._-]MacOS.zip}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[2]},#{match[1]},#{match[0]}" }
     end
   end
 

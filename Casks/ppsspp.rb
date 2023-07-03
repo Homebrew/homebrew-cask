@@ -1,6 +1,6 @@
 cask "ppsspp" do
-  version "1.14.4"
-  sha256 "104a1d02e71ed6e2c5893514a7b576ec41e40035cc6ee123d9f225de518f9e76"
+  version "1.15.4"
+  sha256 "19e1ba73a0d9c4769bb05f279eb21114c17a0170c60b09aa51cae8c1072d337c"
 
   url "https://github.com/hrydgard/ppsspp/releases/download/v#{version}/PPSSPPSDL-macOS-v#{version}.zip",
       verified: "github.com/hrydgard/ppsspp/"
@@ -11,4 +11,6 @@ cask "ppsspp" do
   app "PPSSPPSDL.app"
 
   uninstall quit: "org.ppsspp.ppsspp"
+
+  zap trash: "~/.config/ppsspp"
 end

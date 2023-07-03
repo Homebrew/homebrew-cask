@@ -9,11 +9,9 @@ cask "noxappplayer" do
 
   livecheck do
     url "https://www.bignox.com/en/download/fullPackage/mac_fullzip"
-    strategy :header_match do |headers|
-      match = headers["location"].match(%r{/(\d+)/([^/]+)\.dmg\?filename=NoxInstaller_(\d+(?:\.\d+)*)_en\.dmg}i)
-      next if match.blank?
-
-      "#{match[3]},#{match[1]},#{match[2]}"
+    regex(%r{/(\d+)/([^/]+)\.dmg\?filename=NoxInstaller_(\d+(?:\.\d+)*)_en\.dmg}i)
+    strategy :header_match do |headers, regex|
+      headers["location"].scan(regex).map { |match| "#{match[2]},#{match[0]},#{match[1]}" }
     end
   end
 

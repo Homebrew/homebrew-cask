@@ -1,9 +1,9 @@
 cask "goland" do
   arch arm: "-aarch64"
 
-  version "2023.1,231.8109.199"
-  sha256 arm:   "1774ededcf8dbea93bcd35142bffef5d0fe121b5fb5d2f146ef4b98352375862",
-         intel: "b1afadacb4c8d77fb8811abbfb5c4c447ec81ec27af2efef233c9f1164cab9c8"
+  version "2023.1.3,231.9161.41"
+  sha256 arm:   "d0b923a44305ef3ce113cabd2a19e1f2bfd0adec0cdc0571765851206aad5160",
+         intel: "6f7173843e157f24001b837f4d50827bf55b629df4d82f9b95c08ec29dc2ff3b"
 
   url "https://download.jetbrains.com/go/goland-#{version.csv.first}#{arch}.dmg"
   name "Goland"

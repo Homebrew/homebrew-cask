@@ -1,9 +1,9 @@
 cask "apache-couchdb" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "3.3.1"
-  sha256 arm:   "7be33eefd613e899e89abcdf9576c49e33e5a80564458a4b36aa3839d98f7b62",
-         intel: "a8cfe964058855df0c78365991202f67f40d171b0fca9ed5c89b261758d986d6"
+  version "3.3.2"
+  sha256 arm:   "ec795b9ff30f2a8e2bd1b189b13f185ba1deb10d5624ad874c88c1823d7797c8",
+         intel: "d41d11af6cbdf4160522f25021dbc46162a85312825c3e69a08f0c533d2335e4"
 
   url "https://couchdbneighbourhoodie.fra1.digitaloceanspaces.com/downloads/#{version}/mac/#{arch}/Apache-CouchDB.zip",
       verified: "couchdbneighbourhoodie.fra1.digitaloceanspaces.com/"

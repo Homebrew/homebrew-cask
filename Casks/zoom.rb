@@ -1,9 +1,9 @@
 cask "zoom" do
   arch arm: "arm64/"
 
-  version "5.14.2.17213"
-  sha256 arm:   "4c5dee63d14bbeed4eef8556b2b3d3d62ed09dcd3b3f21fe53e09464c2934e38",
-         intel: "7371f77d493e072888cae8fc5ff80e33a0c57c4589c42e4280ccf158afc2053c"
+  version "5.15.2.19786"
+  sha256 arm:   "1deb76df3136918bb2982dde8b142bc310cc4141f02494e121420b0b09f2629d",
+         intel: "2ebe08f968e35c3ac8ebcda646ce9816a5319d0b6d4f76d4a7479b0c0575362d"
 
   url "https://cdn.zoom.us/prod/#{version}/#{arch}Zoom.pkg"
   name "Zoom.us"
@@ -25,8 +25,8 @@ cask "zoom" do
     # This is because `open "$APP_PATH"&` is called from the postinstall
     # script of the package and we don't want any user intervention there.
     retries ||= 3
-    ohai "The Zoom package postinstall script launches the Zoom app" unless retries < 3
-    ohai "Attempting to close zoom.us.app to avoid unwanted user intervention" unless retries < 3
+    ohai "The Zoom package postinstall script launches the Zoom app" if retries >= 3
+    ohai "Attempting to close zoom.us.app to avoid unwanted user intervention" if retries >= 3
     return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/zoom.us.app"]
 
   rescue RuntimeError

@@ -1,8 +1,8 @@
 cask "colour-contrast-analyser" do
-  version "3.2.1"
-  sha256 "bc2c4be0c43ad8f41494c4b5ba6621e0e711f7ed0fa40f37844369424e812bc0"
+  version "3.3.0"
+  sha256 "219b897fbbd642e2e35c604c78056243b1f5ae2cab78b87126ec5b986ff536b7"
 
-  url "https://github.com/ThePacielloGroup/CCAe/releases/download/v#{version}/CCA-x64-#{version}.dmg",
+  url "https://github.com/ThePacielloGroup/CCAe/releases/download/v#{version}/CCA-#{version}.dmg",
       verified: "github.com/ThePacielloGroup/CCAe/"
   name "Colour Contrast Analyser"
   desc "Colour contrast checker"

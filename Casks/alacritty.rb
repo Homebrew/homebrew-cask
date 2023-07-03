@@ -1,6 +1,6 @@
 cask "alacritty" do
-  version "0.12.0"
-  sha256 "33c9e94c7ffc8d248f10a046b7883c3c5bffae80da8492bfa9fea78e3b58fc43"
+  version "0.12.2"
+  sha256 "73241d47fe9eeef34f9a0aa08aba27b7b9a474042d912eef532fddd4acc0122c"
 
   url "https://github.com/alacritty/alacritty/releases/download/v#{version}/Alacritty-v#{version}.dmg"
   name "Alacritty"
@@ -13,19 +13,19 @@ cask "alacritty" do
   end
 
   app "Alacritty.app"
-  binary "#{appdir}/Alacritty.app/Contents/MacOS/alacritty"
-  binary "#{appdir}/Alacritty.app/Contents/Resources/completions/_alacritty",
+  binary "Alacritty.app/Contents/MacOS/alacritty"
+  binary "Alacritty.app/Contents/Resources/completions/_alacritty",
          target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_alacritty"
-  binary "#{appdir}/Alacritty.app/Contents/Resources/completions/alacritty.bash",
+  binary "Alacritty.app/Contents/Resources/completions/alacritty.bash",
          target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/alacritty"
-  binary "#{appdir}/Alacritty.app/Contents/Resources/completions/alacritty.fish",
+  binary "Alacritty.app/Contents/Resources/completions/alacritty.fish",
          target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/alacritty.fish"
-  binary "#{appdir}/Alacritty.app/Contents/Resources/61/alacritty",
-         target: "#{ENV.fetch("TERMINFO", "#{Dir.home}/.terminfo")}/61/alacritty"
-  binary "#{appdir}/Alacritty.app/Contents/Resources/61/alacritty-direct",
-         target: "#{ENV.fetch("TERMINFO", "#{Dir.home}/.terminfo")}/61/alacritty-direct"
-  manpage "#{appdir}/Alacritty.app/Contents/Resources/alacritty.1.gz"
-  manpage "#{appdir}/Alacritty.app/Contents/Resources/alacritty-msg.1.gz"
+  binary "Alacritty.app/Contents/Resources/61/alacritty",
+         target: "#{ENV.fetch("TERMINFO", "~/.terminfo")}/61/alacritty"
+  binary "Alacritty.app/Contents/Resources/61/alacritty-direct",
+         target: "#{ENV.fetch("TERMINFO", "~/.terminfo")}/61/alacritty-direct"
+  manpage "Alacritty.app/Contents/Resources/alacritty.1.gz"
+  manpage "Alacritty.app/Contents/Resources/alacritty-msg.1.gz"
 
   zap trash: [
     "~/Library/Preferences/io.alacritty.plist",

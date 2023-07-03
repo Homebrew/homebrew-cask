@@ -1,9 +1,9 @@
 cask "scenebuilder" do
   arch arm: "aarch64", intel: "amd64"
 
-  version "19.0.0"
-  sha256 arm:   "1a87e932bd93811968225653f69a7c89ee11efef02c3e3a45dfc819c99b44b37",
-         intel: "6f2c9af8ae2473632ffeeaca576e1bf75ccfd8ab725ab2c905399d25f898aac7"
+  version "20.0.0"
+  sha256 arm:   "e7916542052acb1b0b4e861e1eb4fec041e439d88cd850c2865fd0a4ce5e8821",
+         intel: "9c0c306127aa171b57686a47e2ce5a20d10b4f787970827c75ee9137ba4e1450"
 
   url "https://download2.gluonhq.com/scenebuilder/#{version}/install/mac/SceneBuilder-#{version}-#{arch}.dmg"
   name "Scene Builder"
@@ -18,4 +18,10 @@ cask "scenebuilder" do
   depends_on macos: ">= :high_sierra"
 
   app "SceneBuilder.app"
+
+  zap trash: [
+    "~/.scenebuilder",
+    "~/Library/Application Support/Scene Builder",
+    "~/Library/Saved Application State/com.gluonhq.scenebuilder.savedState",
+  ]
 end

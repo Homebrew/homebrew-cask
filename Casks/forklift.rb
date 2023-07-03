@@ -31,6 +31,7 @@ cask "forklift" do
     "~/Library/Application Support/ForkLift",
     "~/Library/Caches/com.binarynights.ForkLift-#{version.major}",
     "~/Library/Cookies/com.binarynights.ForkLift-#{version.major}.binarycookies",
+    "~/Library/HTTPStorages/com.binarynights.ForkLift-#{version.major}",
     "~/Library/Logs/ForkLift",
     "~/Library/Logs/ForkLiftMini",
     "~/Library/Preferences/com.binarynights.ForkLift-#{version.major}.plist",

@@ -9,4 +9,6 @@ cask "qlstephen" do
   homepage "https://whomwah.github.io/qlstephen/"
 
   qlplugin "QLStephen.qlgenerator"
+
+  # No zap stanza required
 end

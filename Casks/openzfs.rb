@@ -61,7 +61,7 @@ cask "openzfs" do
 
   livecheck do
     url "https://openzfsonosx.org/forum/viewforum.php?f=20"
-    regex(/viewtopic.*t=(\d+).*zfs-macOS[._-]v?(\d+(?:(?:\.)\d+)+)/i)
+    regex(/viewtopic.*t=(\d+).*zfs[._-]macOS[._-]v?(\d+(?:(?:\.)\d+)+)/i)
     strategy :page_match do |page|
       match = page.scan(regex)
       next if match.blank?
@@ -69,7 +69,7 @@ cask "openzfs" do
       post_id, version = match.first
 
       post_url = "https://openzfsonosx.org/forum/viewtopic.php?f=20&t=#{post_id}"
-      download_id_regex = /href=.*file.php\?id=(\d+).+OpenZFSonOsX[._-]v?#{version}-#{arch}\.pkg/i
+      download_id_regex = /href=.*file.php\?id=(\d+).+OpenZFSonOsX[._-]v?#{version}[._-]#{arch}\.pkg/i
 
       download_id = Homebrew::Livecheck::Strategy::PageMatch
                     .find_versions(url: post_url, regex: download_id_regex)[:matches].values.first
@@ -78,8 +78,6 @@ cask "openzfs" do
       "#{version},#{download_id}"
     end
   end
-
-  conflicts_with cask: "openzfs-dev"
 
   pkg "OpenZFSonOsX-#{version.csv.first}-#{arch}.pkg"
 

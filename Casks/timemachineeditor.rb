@@ -12,8 +12,19 @@ cask "timemachineeditor" do
     strategy :extract_plist
   end
 
+  auto_updates true
+
   pkg "TimeMachineEditor.pkg"
 
   uninstall launchctl: "com.tclementdev.timemachineeditor.scheduler",
             pkgutil:   "com.tclementdev.pkg.timemachineeditor"
+
+  zap trash:  [
+        "~/Library/Logs/TimeMachineEditor",
+        "~/Library/Preferences/com.tclementdev.timemachineeditor.application.plist",
+      ],
+      delete: [
+        "/Library/Logs/TimeMachineEditor",
+        "/Library/TimeMachineEditor",
+      ]
 end

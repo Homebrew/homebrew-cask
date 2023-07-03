@@ -1,9 +1,9 @@
 cask "cider" do
-  version "1.6.0"
-  sha256 "eb133236dccbf521fbb31371050d11e9ec7ce30ac15f7d9a0581d5a521d0e7ba"
+  version "1.6.1"
+  sha256 "16d84f5b5a649dfe4c442fca9f8eaa126cfcc665ceab4509ef82f33e3c202365"
 
-  url "https://github.com/ciderapp/cider-releases/releases/download/v#{version}/Cider-#{version}-universal.dmg",
-      verified: "github.com/ciderapp/cider-releases/"
+  url "https://github.com/ciderapp/Cider/releases/download/v#{version}/Cider-#{version}.dmg",
+      verified: "github.com/ciderapp/Cider/"
   name "Cider"
   desc "Open source and community oriented Apple Music client"
   homepage "https://cider.sh/"
@@ -11,7 +11,7 @@ cask "cider" do
   # Only some beta releases are labeled as "pre-release", so we
   # can't use the `GithubLatest` strategy here.
   livecheck do
-    url "https://github.com/ciderapp/cider-releases/releases?q=prerelease%3Afalse"
+    url "https://github.com/ciderapp/Cider/releases?q=prerelease%3Afalse"
     regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)+)["' >]}i)
     strategy :page_match
   end

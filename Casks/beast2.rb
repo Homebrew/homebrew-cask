@@ -1,7 +1,7 @@
 cask "beast2" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
-  version "2.7.4"
-  sha256 "fad1d238c5b14ed755d1475025d313c34e4f8842e79934003b9016db67cc838f"
+  version "2.7.5"
+  sha256 "9b40268b958c2172ab402d8408a066f632dab2bef110578518a5ee33260a22a4"
 
   url "https://github.com/CompEvol/beast2/releases/download/v#{version}/BEAST.v#{version}.Mac.dmg",
       verified: "github.com/CompEvol/beast2/"

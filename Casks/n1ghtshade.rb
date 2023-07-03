@@ -9,7 +9,7 @@ cask "n1ghtshade" do
 
   livecheck do
     url :url
-    regex(%r{href=.*?/tag/v?([\w._-]+)["' >]}i)
+    regex(/v?([\w._-]+)/i)
     strategy :github_latest
   end
 

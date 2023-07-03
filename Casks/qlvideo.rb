@@ -18,4 +18,12 @@ cask "qlvideo" do
   end
 
   app "QuickLook Video.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/*.qlvideo",
+    "~/Library/Application Scripts/com.apple.uk.org.marginal.qlvideo.thumbnailer",
+    "~/Library/Containers/com.apple.uk.org.marginal.qlvideo.thumbnailer",
+    "~/Library/Group Containers/*.qlvideo",
+    "~/Library/Saved Application State/com.apple.uk.org.marginal.qlvideo.savedState",
+  ]
 end

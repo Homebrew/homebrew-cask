@@ -21,4 +21,6 @@ cask "aptible" do
   pkg "aptible-toolbelt-#{version.csv.first}+#{version.csv.second}-mac-os-x.10.15.7-1.pkg"
 
   uninstall pkgutil: "com.aptible.toolbelt"
+
+  zap trash: "/usr/local/bin/aptible"
 end

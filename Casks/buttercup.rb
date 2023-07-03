@@ -1,6 +1,6 @@
 cask "buttercup" do
-  version "2.18.2"
-  sha256 "ae5c87e7d64938845a2e42306498c4d256bcefccf810d021fec1c6bc76e05b53"
+  version "2.20.3"
+  sha256 "281becfa2405b0c533c364b0572f497a95d0986fd3a3e18f778ea1e8c5a6d24d"
 
   url "https://github.com/buttercup/buttercup-desktop/releases/download/v#{version}/Buttercup-mac-x64-#{version}.dmg",
       verified: "github.com/buttercup/buttercup-desktop/"

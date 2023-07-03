@@ -8,6 +8,8 @@ cask "gulp" do
 
   app "gulp.app"
 
+  # No zap stanza required
+
   caveats do
     discontinued
   end

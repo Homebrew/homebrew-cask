@@ -4,12 +4,8 @@ cask "wonderfultools-screensaver" do
 
   url "https://github.com/aidev1065/Wonderful-Tools-Screensaver/raw/master/WonderfulTools.saver.zip"
   name "Wonderful Tools Screensaver"
+  desc "Screensaver based on opening video from Apple's September 2019 event"
   homepage "https://github.com/aidev1065/Wonderful-Tools-Screensaver/"
-
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
 
   screen_saver "WonderfulTools.saver"
 

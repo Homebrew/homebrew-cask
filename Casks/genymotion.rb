@@ -1,6 +1,6 @@
 cask "genymotion" do
-  version "3.3.3"
-  sha256 "74b9d5cd5113a362a87a563e5101e975818d5010bdf6733bbb67c58e10927b67"
+  version "3.4.0"
+  sha256 "362013934b2ede115953310cc4d9aba848e8a313b88483c6ab80b6e16991dd98"
 
   url "https://dl.genymotion.com/releases/genymotion-#{version}/genymotion-#{version}.dmg"
   name "Genymotion"
@@ -11,8 +11,6 @@ cask "genymotion" do
     url "https://www.genymotion.com/download/"
     regex(/Genymotion\s*Desktop\s*(\d+(?:\.\d+)+)/i)
   end
-
-  depends_on cask: "virtualbox"
 
   app "Genymotion.app"
   app "Genymotion Shell.app"
@@ -26,4 +24,8 @@ cask "genymotion" do
     "~/Library/Saved Application State/com.genymobile.genymotion.savedState",
     "~/Library/Saved Application State/com.genymobile.player.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -12,7 +12,7 @@ cask "elk" do
 
   livecheck do
     url :url
-    regex(%r{href=.*?/tag/elk[._-]native[._-]v?(\d+(?:\.\d+)+)["' >]}i)
+    regex(/elk[._-]native[._-]v?(\d+(?:\.\d+)+)/i)
     strategy :github_latest
   end
 

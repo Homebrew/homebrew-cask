@@ -10,6 +10,11 @@ cask "transcribe" do
     livecheck do
       skip "Legacy version"
     end
+
+    zap trash: [
+      "~/Library/Preferences/com.seventhstring.transcribe.plist",
+      "~/Library/Preferences/Transcribe!#{version.major} Preferences",
+    ]
   end
   on_big_sur do
     version "9.21"
@@ -25,6 +30,11 @@ cask "transcribe" do
     livecheck do
       skip "Legacy version"
     end
+
+    zap trash: [
+      "~/Library/Preferences/com.seventhstring.transcribe.plist",
+      "~/Library/Preferences/Transcribe!#{version.major} Preferences",
+    ]
   end
   on_monterey do
     version "9.21"
@@ -40,8 +50,13 @@ cask "transcribe" do
     livecheck do
       skip "Legacy version"
     end
+
+    zap trash: [
+      "~/Library/Preferences/com.seventhstring.transcribe.plist",
+      "~/Library/Preferences/Transcribe!#{version.major} Preferences",
+    ]
   end
-  on_ventura do
+  on_ventura :or_newer do
     version "9.25.0"
     sha256 arm:   "9452c3fd911bd1c1e81f45228233adbd370d4b6cc9d2fb5f3e03c06ce6b392a5",
            intel: "a01f360c9daeecd8369b89600e4d49175e1961bab50afd79faba32f4ac821af8"
@@ -52,6 +67,11 @@ cask "transcribe" do
       url "https://www.seventhstring.com/xscribe/download_mac.html"
       regex(/transcribe[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
     end
+
+    zap trash: [
+      "~/Library/Preferences/com.seventhstring.transcribe.plist",
+      "~/Library/Preferences/Transcribe!#{version.major} Preferences",
+    ]
   end
 
   name "Transcribe!"
@@ -61,9 +81,4 @@ cask "transcribe" do
   app "Transcribe!.app"
 
   uninstall quit: "com.seventhstring.transcribe"
-
-  zap trash: [
-    "~/Library/Preferences/com.seventhstring.transcribe.plist",
-    "~/Library/Preferences/Transcribe!#{version.major} Preferences",
-  ]
 end

@@ -1,6 +1,6 @@
 cask "cycling74-max" do
-  version "8.5.3_230214"
-  sha256 "3ffa1d7e3e48a4654ff4f1a126d073fd8ab372ca531983ee65a61bfc88fcc7d8"
+  version "8.5.5_230613"
+  sha256 "b84cc043ebfccd23f782cd621517ee42ae289d54a782455fc46edb6ef23fcf9d"
 
   url "https://akiaj5esl75o5wbdcv2a-maxmspjitter.s3.amazonaws.com/Max#{version.no_dots}.dmg",
       verified: "akiaj5esl75o5wbdcv2a-maxmspjitter.s3.amazonaws.com/"
@@ -11,9 +11,10 @@ cask "cycling74-max" do
 
   livecheck do
     url "https://auth.cycling74.com/maxversion"
-    strategy :page_match do |page|
+    regex(/^\d{2}(\d{2})[._-](\d{2})[._-](\d{2})/i)
+    strategy :page_match do |page, regex|
       json = JSON.parse(page)
-      match = json["release_date"].match(/^\d{2}(\d{2})[._-](\d{2})[._-](\d{2})/)
+      match = json["release_date"].match(regex)
       next if match.blank?
 
       "#{json["_id"]}_#{match[1]}#{match[2]}#{match[3]}"
@@ -21,4 +22,11 @@ cask "cycling74-max" do
   end
 
   app "Max.app"
+
+  zap trash: [
+    "/Users/Shared/Max #{version.major}",
+    "~/Documents/Max #{version.major}",
+    "~/Library/Application Support/Cycling '74",
+    "~/Library/Saved Application State/com.cycling74.Max.savedState",
+  ]
 end

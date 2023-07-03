@@ -9,7 +9,7 @@ cask "camera-live" do
 
   livecheck do
     url :url
-    regex(%r{href=["']?[^"' >]*?/tag/v?(\d+)["' >]}i)
+    regex(/v?(\d+)/i)
     strategy :github_latest
   end
 

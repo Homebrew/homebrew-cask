@@ -1,11 +1,11 @@
 cask "lagrange" do
-  arch arm: "macos11.0-arm64", intel: "macos10.13-x86_64"
+  arch arm: "11.0-arm64", intel: "10.13-x86_64"
 
-  version "1.15.8"
-  sha256 arm:   "b746d61780336963c794dab94f8aff49b3504f894e1fc72283e7940d52d73a3e",
-         intel: "eac8cd58c9fbf8c7e8b54defa981aac3de0f502d2135185cf7e7d461c571603e"
+  version "1.16.5"
+  sha256 arm:   "dd5513404b6e92c9aafe45252a39a0f1e3343f38c8f081480e80019451ef508a",
+         intel: "feb5eaffc6a3d90b52499c2e0e6e18fd704da39006265f965de09a344b7fad75"
 
-  url "https://github.com/skyjake/lagrange/releases/download/v#{version}/lagrange_v#{version}_#{arch}.tbz",
+  url "https://github.com/skyjake/lagrange/releases/download/v#{version}/lagrange_v#{version}_macos#{arch}.tbz",
       verified: "github.com/skyjake/lagrange/"
   name "Lagrange"
   desc "Desktop GUI client for browsing Geminispace"

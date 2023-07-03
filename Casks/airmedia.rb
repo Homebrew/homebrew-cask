@@ -9,9 +9,9 @@ cask "airmedia" do
 
   livecheck do
     url "https://www.crestron.com/Products/Featured-Solutions/AirMedia/Airmedia-Apps"
-    strategy :page_match do |page|
-      v = page[%r{AirMedia[._-]OSx[._-]Guest[._-]Application/v?(\d+(?:-\d+)+)}i, 1]
-      v&.tr("-", ".")
+    regex(%r{AirMedia[._-]OSx[._-]Guest[._-]Application/v?(\d+(?:-\d+)+)}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex)&.map { |match| match[0].tr("-", ".") }
     end
   end
 

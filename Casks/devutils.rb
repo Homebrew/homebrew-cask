@@ -1,6 +1,6 @@
 cask "devutils" do
-  version "1.16.0"
-  sha256 "f92897d414143161d679433bcceb83e0588fd0970342ee9e81e537263515807d"
+  version "1.17.0"
+  sha256 "2e14de0f2b5f6c3a4611b808d05a3ae1408d3c1c0caa9b1dd7d887c9f33d717e"
 
   url "https://devutils.com/archives/DevUtils-#{version}.dmg"
   name "DevUtils"

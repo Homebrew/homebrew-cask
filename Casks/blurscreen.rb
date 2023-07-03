@@ -22,8 +22,8 @@ cask "blurscreen" do
     # This is because `open "$APP_PATH"&` is called from the postinstall
     # script of the package and we don't want any user intervention there.
     retries ||= 3
-    ohai "The BlurScreen package postinstall script launches the BlurScreen app" unless retries < 3
-    ohai "Attempting to close BlurScreen.app to avoid unwanted user intervention" unless retries < 3
+    ohai "The BlurScreen package postinstall script launches the BlurScreen app" if retries >= 3
+    ohai "Attempting to close BlurScreen.app to avoid unwanted user intervention" if retries >= 3
     return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/BlurScreen.app"]
 
   rescue RuntimeError

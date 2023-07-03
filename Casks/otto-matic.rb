@@ -9,7 +9,7 @@ cask "otto-matic" do
   homepage "https://jorio.itch.io/ottomatic"
 
   app "Otto Matic.app"
-  artifact "Documentation", target: "#{Dir.home}/Library/Application Support/OttoMatic"
+  artifact "Documentation", target: "~/Library/Application Support/OttoMatic"
 
   zap trash: [
     "~/Library/Preferences/OttoMatic",

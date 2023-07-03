@@ -20,4 +20,9 @@ cask "kindle-comic-creator" do
               "com.amazon.kc2.KindlePreviewer.pkg",
             ],
             launchctl: "com.amazon.KindlePreviewerUpdater"
+
+  zap trash: [
+    "~/.kindle",
+    "~/Library/Saved Application State/com.amazon.KC2.savedState",
+  ]
 end

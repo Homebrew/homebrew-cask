@@ -10,9 +10,9 @@ cask "nodeclipse" do
 
   livecheck do
     url "https://nodeclipse.github.io/updates/"
-    strategy :page_match do |page|
-      match = page.match(%r{/Enide-(\d+)-(\d+)-macosx-x64-(\d+)\.zip})
-      "#{match[1]}.#{match[2]},#{match[3]}"
+    regex(%r{/Enide-(\d+)-(\d+)-macosx-x64-(\d+)\.zip})
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]}.#{match[1]},#{match[2]}" }
     end
   end
 

@@ -9,4 +9,6 @@ cask "keystore-explorer" do
   homepage "https://keystore-explorer.org/"
 
   app "KeyStore Explorer.app"
+
+  zap trash: "~/Library/Saved Application State/org.kse.keystore-explorer.savedState"
 end

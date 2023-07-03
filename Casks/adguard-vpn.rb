@@ -1,6 +1,6 @@
 cask "adguard-vpn" do
-  version "2.0.4.332"
-  sha256 "056f34f4f1619fc839b5a35eb40f94a3a451e28375a54b5e473f0faa0efa4d3d"
+  version "2.1.0.407"
+  sha256 "fbc0c763e191dcdcdef3691dd6637add345d36d9adb1530718ca5f5f32aa182c"
 
   url "https://static.adguard-vpn.com/mac/release/AdGuardVPN-#{version}.dmg"
   name "AdGuard VPN"
@@ -10,7 +10,7 @@ cask "adguard-vpn" do
   livecheck do
     url "https://static.adguard-vpn.com/mac/adguard-release-appcast.xml"
     strategy :sparkle do |item|
-      item.short_version.sub(/ release.*/, "")
+      item.short_version.delete_suffix(" release")
     end
   end
 

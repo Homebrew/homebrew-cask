@@ -10,8 +10,9 @@ cask "cirrus" do
 
   livecheck do
     url "https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
-    strategy :page_match do |page|
-      match = page.match(%r{/(\d+)/(\d+)/cirrus(\d+)\.zip}i)
+    regex(%r{/(\d+)/(\d+)/cirrus(\d+)\.zip}i)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
       next if match.blank?
 
       "#{match[3].split("", 2).join(".")},#{match[1]}.#{match[2]}"

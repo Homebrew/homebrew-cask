@@ -1,7 +1,7 @@
 cask "framer" do
   arch arm: "arm64", intel: "x64"
 
-  version "2023.13.1"
+  version "2023.15.1"
   sha256 :no_check
 
   url "https://updates.framer.com/electron/darwin/#{arch}/Framer.zip"

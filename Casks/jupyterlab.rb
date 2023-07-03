@@ -1,9 +1,9 @@
 cask "jupyterlab" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.6.2-1"
-  sha256 arm:   "d3b1e4546780d0d89df4b9fb2cb16f6be05a1b90b8afd333c8269b9e8f9b8273",
-         intel: "80f7e6aceae4e0bc7230f08f4f072778ee0e671d8bb3e7bb8a14a7ca9a65110d"
+  version "4.0.1-1"
+  sha256 arm:   "0e06417652e454d858c56bbf70dbb1a947992b8bfbe02b7e12cb12eecfd93273",
+         intel: "598c4062552b805e9f4f96b10cb326288d43692a3275a0f34406472a8010134e"
 
   url "https://github.com/jupyterlab/jupyterlab-desktop/releases/download/v#{version}/JupyterLab-Setup-macOS-#{arch}.dmg"
   name "JupyterLab App"
@@ -12,7 +12,7 @@ cask "jupyterlab" do
 
   livecheck do
     url :url
-    regex(%r{href=.*?/tag/v?(\d+(?:[.-]\d+)+)["' >]}i)
+    regex(/v?(\d+(?:[.-]\d+)+)/i)
     strategy :github_latest
   end
 

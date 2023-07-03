@@ -9,7 +9,7 @@ cask "teambition" do
 
   livecheck do
     url "https://www.teambition.com/site/client-config"
-    regex(/Teambition[-_.](\d+(?:\.\d+)+)[-_.]mac\.dmg/i)
+    regex(/Teambition[._-](\d+(?:\.\d+)+)[._-]mac\.dmg/i)
   end
 
   app "Teambition.app"

@@ -9,9 +9,9 @@ cask "bean" do
 
   livecheck do
     url :homepage
-    strategy :page_match do |page|
-      v = page[%r{href=.*?/Bean[._-]Install[._-]v?(\d+(?:-\d+)+)\.zip}i, 1]
-      v.tr("-", ".")
+    regex(%r{href=.*?/Bean[._-]Install[._-]v?(\d+(?:-\d+)+)\.zip}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex)&.map { |match| match[0].tr("-", ".") }
     end
   end
 
