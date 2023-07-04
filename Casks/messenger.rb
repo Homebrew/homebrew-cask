@@ -1,5 +1,5 @@
 cask "messenger" do
-  version "189.0.0.24.146"
+  version "190.0.0.9.106"
   sha256 :no_check
 
   url "https://www.messenger.com/messenger/desktop/downloadV2/?platform=mac"
