@@ -7,11 +7,6 @@ cask "buzz" do
   desc "Transcribes and translates audio"
   homepage "https://github.com/chidiwilliams/buzz"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   app "Buzz.app"
 
   zap trash: [
