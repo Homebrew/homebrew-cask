@@ -13,7 +13,7 @@ cask "mpc" do
     regex(/href=.*?Install[._-]MPC[._-]v?[\d.]+[_-](\d+(?:\.\d+)+)[_-]release[_-]Mac\.zip"/i)
   end
 
-  depends_on macos: ">= : catalina"
+  depends_on macos: ">= :catalina"
 
   pkg "MPC-Installer-#{version}/Install MPC #{version}.app/Contents/Resources/InstallApp.pkg"
 
