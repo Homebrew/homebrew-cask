@@ -16,19 +16,16 @@ cask "elgato-game-capture-hd" do
     url "https://edge.elgato.com/egc/macos/egcm/#{version}/final/Game_Capture_HD_#{version}.zip"
 
     livecheck do
-      url "https://gc-updates.elgato.com/mac/egcm-update2-rss/?lang=English"
-      regex(/[_-]v?(\d+(?:\.\d+)+)\D+?$/i)
-      strategy :sparkle do |item, regex|
-        item.url[regex, 1]
-      end
+      url "https://www.elgato.com/graphql?query=query%20contentJson(%24identifier%3A%5BString%5D%24contentType%3AString%24options%3AContentJsonOptionsInput)%7BcontentJson(identifiers%3A%24identifier%20contentType%3A%24contentType%20options%3A%24options)%7Bidentifier%20entries%7D%7D&operationName=contentJson&variables=%7B%22contentType%22%3A%22downloads%22%2C%22identifier%22%3A%5B%22downloads%22%5D%2C%22options%22%3A%7B%22level%22%3A1%7D%7D&locale=en-US"
+      regex(/Game[._-]Capture[._-]HD[._-]v?(\d+(?:\.\d+)+)\.zip/i)
     end
 
     depends_on macos: ">= :sierra"
   end
 
-  name "Game Capture HD"
-  desc "Elgato video capture/streaming app"
-  homepage "https://www.elgato.com/en/gaming/downloads/"
+  name "Elgato Game Capture HD"
+  desc "Elgato video capture and streaming app"
+  homepage "https://www.elgato.com/ww/en/s/downloads"
 
   app "Game Capture HD.app"
 end

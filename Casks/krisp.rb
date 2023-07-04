@@ -1,11 +1,11 @@
 cask "krisp" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.20.3"
-  sha256 arm:   "de4bbd9ab901aa9ab4889fd26cfb3e52ca3b912a3b1297ca393a7764578c367e",
-         intel: "5fb310cf9260ca675886d3caa10089806ab2ded4e10bff8cd489c1253b9c4b8b"
+  version "2.21.8"
+  sha256 arm:   "330e431e7e169d48442e444a9a8562474cabc0bfb414124b3acc72165cf43983",
+         intel: "98548ae948bdfbaf7de04e799a4aa9d2a720c650e15348852de59534f68f729c"
 
-  url "https://cdn.krisp.ai/mp/#{version}/mac/#{arch}/krisp_#{version}_#{arch}.pkg"
+  url "https://cdn.krisp.ai/mp/#{version}/mac/krisp_#{version}_#{arch}.pkg"
   name "Krisp"
   desc "Noise cancelling application"
   homepage "https://krisp.ai/"

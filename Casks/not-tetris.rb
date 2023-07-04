@@ -4,11 +4,12 @@ cask "not-tetris" do
 
   url "https://stabyourself.net/dl.php?file=nottetris#{version}/nottetris#{version}-osx.zip"
   name "Not Tetris"
+  desc "Successor of the classic Tetris mixed with physics"
   homepage "https://stabyourself.net/nottetris2/"
 
   livecheck do
-    url "https://stabyourself.net/nottetris2/"
-    regex(%r{href=.*?/nottetris(\d+)-osx\.zip}i)
+    url :homepage
+    regex(%r{href=.*?/nottetrisv?(\d+)[._-]osx\.zip}i)
   end
 
   app "Not Tetris #{version}.app"

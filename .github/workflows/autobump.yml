@@ -12,22 +12,33 @@ on:
 
 env:
   CASKS: >
+    1password
+    1password-cli
+    alfred
     apifox
+    appcleaner
     arc
     beeper
     bettertouchtool
     bike
     brave-browser
     burp-suite
+    burp-suite-professional
     busycal
+    canva
+    carbon-copy-cloner
     chirp
+    clickup
     codeql
     cog
     confluent-cli
     copilot-for-xcode
     descript
+    dropbox
+    duckduckgo
     electron
     eloston-chromium
+    figma
     firefox
     flipper
     fmail2
@@ -54,8 +65,15 @@ env:
     opera-gx
     osu
     pitch
+    plex
+    plex-htpc
+    plex-media-server
     purei-play
     puzzles
+    readdle-spark
+    rewind
+    remotion
+    rive
     qownnotes
     quarto
     setapp
@@ -66,23 +84,28 @@ env:
     siyuan
     skype
     sol
+    spotify
     standard-notes
     stats
     telegram
     telegram-desktop
     teleport-connect
+    todoist
     tor-browser
     trader-workstation
     trainerroad
     tsh
     uvtools
     viber
+    visual-studio-code
     vrew
     vscodium
     warp
+    webcatalog
     webull
     whatsapp
     workflowy
+    zed
     zoom
     zoom-for-it-admins
 

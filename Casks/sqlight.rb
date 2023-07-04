@@ -12,8 +12,8 @@ cask "sqlight" do
   # Since the <hash> is not fixed in the filename, the current JavaScript file
   # needs to be extracted from the download page.
   livecheck do
-    url "https://www.aurvan.com/sqlight/"
-    regex(/sqlight[._-]v?(\d+(?:[._]\d+)+)-app\.dmg/i)
+    url :homepage
+    regex(/sqlight[._-]v?(\d+(?:[._]\d+)+)[._-]app\.dmg/i)
     strategy :page_match do |page, regex|
       js_file = page[%r{src=["']?(/com-aurvan-satva-ui-reactjs-release/static/js/main\.\w+\.chunk\.js)["' >]}i, 1]
       next [] if js_file.blank?

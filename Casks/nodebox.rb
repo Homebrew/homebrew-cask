@@ -16,4 +16,9 @@ cask "nodebox" do
   depends_on macos: ">= :catalina"
 
   app "NodeBox.app"
+
+  zap trash: [
+    "~/Library/Logs/NodeBox",
+    "~/Library/NodeBox",
+  ]
 end

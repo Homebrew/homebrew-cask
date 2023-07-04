@@ -8,11 +8,12 @@ cask "fujitsu-scansnap-home" do
   desc "Fujitsu ScanSnap Scanner software"
   homepage "https://www.fujitsu.com/global/products/computing/peripheral/scanners/soho/sshome/"
 
-  # Some of the release titles contain a typo where a space is omitted, so this
-  # regex is a bit extreme about whitespace to ensure we match all the versions.
   livecheck do
-    url "https://www.pfu.fujitsu.com/imaging/ss_hist/en/mac/index.html"
-    regex(/ScanSnap\s*Home\s*for\s*Mac\s*v?(\d+(?:\.\d+)+)\s*Released/i)
+    url "https://www.pfu.ricoh.com/global/scanners/scansnap/dl/mac-sshoffline.html"
+    regex(/m-sshoffline[._-]v?(\d+(?:[._]\d+)+)\.html/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| match[0].tr("_", ".") }
+    end
   end
 
   depends_on macos: ">= :sierra"

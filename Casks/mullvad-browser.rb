@@ -1,6 +1,6 @@
 cask "mullvad-browser" do
-  version "12.0.7"
-  sha256 "11f1124c8696bf0dd29bcb409c70babe33acef34a2f092b391bf0a4b9b680082"
+  version "12.5"
+  sha256 "a1275bd0230109434f31bae821dbaa831cc149019d6b0d8d47f49b6ec3a7546c"
 
   url "https://cdn.mullvad.net/browser/#{version}/MullvadBrowser-#{version}-macos_ALL.dmg"
   name "Mullvad Browser"
@@ -8,10 +8,8 @@ cask "mullvad-browser" do
   homepage "https://mullvad.net/en/browser"
 
   livecheck do
-    url "https://cdn.mullvad.net/browser/update_responses/update_1/release/downloads.json"
-    strategy :json do |json|
-      json["version"]
-    end
+    url "https://mullvad.net/en/download/browser/macos/latest"
+    strategy :header_match
   end
 
   auto_updates true

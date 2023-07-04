@@ -1,6 +1,6 @@
 cask "canon-eos-utility" do
-  version "3.17.1.3,0200006906,6"
-  sha256 "e4d9baf7d59300040b08ee4c30b9c45f22d646e9c08aedc79bb1bcccbcd91d83"
+  version "3.17.2.1,0200006949,9"
+  sha256 "aa14d8d2681b6473fffcdde3a15944ddfb6bb5463af157c442816bef48027205"
 
   url "https://gdlp01.c-wss.com/gds/#{version.csv.third}/#{version.csv.second}/01/EU-Installset-M#{version.csv.first}.dmg.zip",
       verified: "gdlp01.c-wss.com/"
