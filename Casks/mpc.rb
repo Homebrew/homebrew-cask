@@ -17,6 +17,24 @@ cask "mpc" do
 
   pkg "MPC-Installer-#{version}/Install MPC #{version}.app/Contents/Resources/InstallApp.pkg"
 
+  uninstall_postflight do
+    oh1 "Caveats"
+    print <<~EOS
+      #{token} installs ilok-license-manager for license management.
+      Please note that other casks may depend on it and it will not be
+      removed automatically.
+      To fully remove all files, run:
+
+        brew uninstall --cask ilok-license-manager --zap --force
+
+    EOS
+  end
+
+  # Some launchctl and pkgutil items are installed by ilok-license-manager.
+  # They should only be removed with ilok-license-manager.
+  # launchctl:  com.paceap.eden.licensed com.paceap.eden.licensed.agent
+  # pkgutil:    com.paceap.pkg.eden.activationexperience com.paceap.pkg.eden.iLokLicenseManager
+  #             com.paceap.pkg.eden.licensed
   uninstall pkgutil: [
     "com.airmusictechnology.hybrid.content",
     "com.akaipro.mpc.aax.pkg",
@@ -26,25 +44,5 @@ cask "mpc" do
     "com.akaipro.mpc.vst.pkg",
   ]
 
-  zap delete:    [
-        "/Library/Preferences/com.paceap.eden.clientdb.*.sdb",
-        "/Library/Preferences/com.paceap.eden.floating.*.prefs",
-        "/usr/local/bin/iloktool",
-      ],
-      launchctl: [
-        "com.paceap.eden.licensed",
-        "com.paceap.eden.licensed.agent",
-      ],
-      pkgutil:   [
-        "com.paceap.pkg.eden.activationexperience",
-        "com.paceap.pkg.eden.iLokLicenseManager",
-        "com.paceap.pkg.eden.licensed",
-      ],
-      trash:     [
-        "~/Library/Caches/com.paceap.iLokLicenseManager",
-        "~/Library/HTTPStorages/com.paceap.eden.iLokLicenseManager",
-        "~/Library/Logs/Eden",
-        "~/Library/Preferences/com.paceap.iLokLicenseManager.plist",
-        "~/Library/Saved Application State/com.paceap.eden.iLokLicenseManager.savedState",
-      ]
+  # No zap stanza required
 end
