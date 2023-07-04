@@ -8,8 +8,8 @@ cask "dolphin" do
   homepage "https://dolphin-emu.org/"
 
   livecheck do
-    url "https://github.com/dolphin-emu/dolphin"
-    strategy :git
+    url "https://dolphin-emu.org/download/"
+    regex(/href=.*?dolphin[._-]v?(\d+(?:\.\d+)+)(?:[._-]universal)?\.dmg/i)
   end
 
   conflicts_with cask: [

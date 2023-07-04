@@ -5,17 +5,15 @@ cask "epoccam" do
   url "https://edge.elgato.com/egc/macos/epoccam/EpocCam_Installer_#{version.dots_to_underscores}.pkg"
   name "EpocCam"
   desc "Turn your phone into a webcam"
-  homepage "https://www.elgato.com/epoccam"
+  homepage "https://www.elgato.com/ww/en/s/downloads"
 
   livecheck do
-    url "https://www.elgato.com/sites/default/files/downloads.json"
-    regex(/EpocCam[._-]Installer[._-]v?(\d+(?:[._]\d+)+)\.pkg/i)
-    strategy :page_match do |page, regex|
-      url = JSON.parse(page)["epoccam-mac"]["downloadURL"]
-      match = url.match(regex)
-      next if url.blank? || match.blank?
+    url "https://www.elgato.com/graphql?query=query%20contentJson(%24identifier%3A%5BString%5D%24contentType%3AString%24options%3AContentJsonOptionsInput)%7BcontentJson(identifiers%3A%24identifier%20contentType%3A%24contentType%20options%3A%24options)%7Bidentifier%20entries%7D%7D&operationName=contentJson&variables=%7B%22contentType%22%3A%22downloads%22%2C%22identifier%22%3A%5B%22downloads%22%5D%2C%22options%22%3A%7B%22level%22%3A1%7D%7D&locale=en-US"
+    strategy :page_match do |page|
+      match = page[/EpocCam[._-]Installer[._-]v?(\d+(?:[._]\d+)+)\.pkg/i, 1]
+      next if match.blank?
 
-      match[1].tr("_", ".")
+      match.tr("_", ".")
     end
   end
 
@@ -29,8 +27,8 @@ cask "epoccam" do
   uninstall launchctl: "com.kinoni.epoccam.daemon",
             pkgutil:   "com.kinoni.pkg.epoccam-installer",
             trash:     [
-              "/Library/LaunchAgents/com.kinoni.epoccam.daemon.plist",
               "/Library/Audio/Plug-Ins/HAL/VirtualMic.driver",
               "/Library/CoreMediaIO/Plug-Ins/DAL/EpocCamPlugin.plugin",
+              "/Library/LaunchAgents/com.kinoni.epoccam.daemon.plist",
             ]
 end

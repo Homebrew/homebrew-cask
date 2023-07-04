@@ -1,9 +1,9 @@
 cask "diffusionbee" do
   arch arm: "arm64", intel: "intel"
 
-  version "1.7.4"
-  sha256 arm:   "80b26b75f0cb426dad8fc6608eee358c9a5b89945e39b1eb2d423573a5f0defc",
-         intel: "7696f034349693224772905d53215f813e411990284df96a2d0afbd072a0b45d"
+  version "2.2.1"
+  sha256 arm:   "a5fdc6dc1c61de09d61e3156bc6f511e876050f34fa3a180d3ec08bce6b64454",
+         intel: "ee005b4e4c3e6368444321fcb3f98873c830518cf0e21ae3afa4103503b99a0f"
 
   url "https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/releases/download/#{version}/DiffusionBee_MPS_#{arch}-#{version}.dmg",
       verified: "github.com/divamgupta/diffusionbee-stable-diffusion-ui/"

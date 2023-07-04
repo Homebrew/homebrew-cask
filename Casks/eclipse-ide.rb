@@ -1,9 +1,9 @@
 cask "eclipse-ide" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "4.27.0,2023-03"
-  sha256 arm:   "fd2148e52394a2c23484a136ee751077e29b484c19d54bc3b841c57886f45075",
-         intel: "fed839a1ab71eae066b0123ce1b5557c661cefecb0b84b5b25b7057b35503ff1"
+  version "4.28.0,2023-06"
+  sha256 arm:   "1b5ddbafc1bfb1dda7af6cbf62a8c5305b26feba4ae1c2543cb3275af5484f1f",
+         intel: "a1d5b32052ffd115c94280dc360295b19b4cbb0466cf72c1b5d7214a111080a4"
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-committers-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&r=1"
   name "Eclipse IDE for Eclipse Committers"

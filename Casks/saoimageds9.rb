@@ -60,4 +60,10 @@ cask "saoimageds9" do
   end
 
   app "SAOImageDS9.app"
+
+  zap trash: [
+    "~/.ds9",
+    "~/Library/Preferences/com.sao.SAOImageDS9.plist",
+    "~/Library/Saved Application State/com.sao.SAOImageDS9.savedState",
+  ]
 end

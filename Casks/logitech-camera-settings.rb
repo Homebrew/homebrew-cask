@@ -23,4 +23,10 @@ cask "logitech-camera-settings" do
               "com.logitech.vc.CameraSettings.pkg",
             ],
             login_item: "Background Replace"
+
+  zap trash: [
+    "~/Library/Application Support/Logitech/com.logitech.vc.camerasettings",
+    "~/Library/Logs/LogiCameraSettings",
+    "~/Library/Preferences/com.logitech.CameraSettingsApp2.0.plist",
+  ]
 end

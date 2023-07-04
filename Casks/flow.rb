@@ -13,4 +13,12 @@ cask "flow" do
   end
 
   app "Flow.app"
+
+  zap trash: [
+    "~/.config/configstore/flow-desktop.json",
+    "~/Library/Application Support/Flow",
+    "~/Library/Caches/com.metalab.flow-mac",
+    "~/Library/HTTPStorages/com.metalab.flow-mac",
+    "~/Library/Preferences/com.metalab.flow-mac.plist",
+  ]
 end

@@ -8,8 +8,8 @@ cask "raycast" do
     end
   end
   on_monterey :or_newer do
-    version "1.53.1"
-    sha256 "15be42b46c24c2cbe685c410997187e6a5ce1b8c5eb0e05ac44cb7b5a414749a"
+    version "1.54.1"
+    sha256 "9673f4c124c2ee80a38b6e114a4d5f63e412c28622a0c3edbce6f8132d4ccd56"
 
     livecheck do
       url :url
@@ -30,9 +30,12 @@ cask "raycast" do
   uninstall quit: "com.raycast.macos"
 
   zap trash: [
+    "~/.config/raycast",
     "~/Library/Application Support/com.raycast.macos",
     "~/Library/Caches/com.raycast.macos",
+    "~/Library/Caches/SentryCrash/Raycast",
     "~/Library/Cookies/com.raycast.macos.binarycookies",
+    "~/Library/HTTPStorages/com.raycast.macos",
     "~/Library/Preferences/com.raycast.macos.plist",
   ]
 end

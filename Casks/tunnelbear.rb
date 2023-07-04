@@ -1,16 +1,22 @@
 cask "tunnelbear" do
-  version "5.0.1,adc345"
-  sha256 :no_check
+  on_catalina :or_older do
+    version "4.1.8"
+    sha256 "60c332511b91b794405249132ceb0c88e999b070c087b5f70f1cf09a84e5e5e9"
+  end
+  on_big_sur :or_newer do
+    version "5.0.2"
+    sha256 "ed324352fdfdb8c3f94d58a48d3f1283b9a3592359ea3decfd674d2e3e6adaf0"
+  end
 
-  url "https://s3.amazonaws.com/tunnelbear/downloads/mac/TunnelBear.zip",
-      verified: "s3.amazonaws.com/tunnelbear/"
+  url "https://s3.amazonaws.com/tunnelbear/downloads/mac/TunnelBear-#{version}.zip",
+      verified: "s3.amazonaws.com/tunnelbear/downloads/mac/"
   name "TunnelBear"
   desc "VPN client for secure internet access and private browsing"
   homepage "https://www.tunnelbear.com/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://tunnelbear.s3.amazonaws.com/downloads/mac/appcast.xml"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

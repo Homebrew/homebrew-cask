@@ -1,6 +1,6 @@
 cask "orka-vm-tools" do
-  version "2.4.1"
-  sha256 "98f9f611aa99016b17dc4ea3000b0622bad70f557779a59f4197f179aa298acb"
+  version "2.4.2"
+  sha256 "88f7a070f88fd83e0a752650ae301784c94efed2e91176e7c0841324d6ba13f5"
 
   url "https://orka-tools.s3.amazonaws.com/orka-vm-tools/official/#{version}/orka-vm-tools.pkg",
       verified: "orka-tools.s3.amazonaws.com/orka-vm-tools/official/"

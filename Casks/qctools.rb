@@ -8,8 +8,8 @@ cask "qctools" do
   homepage "https://mediaarea.net/QCTools"
 
   livecheck do
-    url "https://github.com/bavc/qctools"
-    strategy :git
+    url "https://mediaarea.net/QCTools/Download/Mac_OS"
+    regex(/href=.*?QCTools[._-]v?(\d+(?:\.\d+)+)[^"' >]*?\.dmg/i)
   end
 
   app "QCTools.app"

@@ -1,6 +1,6 @@
 cask "bbc-iplayer-downloads" do
-  version "2.13.12"
-  sha256 "a53593061be9b5ee32ecfda313251dd7f3ca81b0de8839ccf0e1a0d91fc3062b"
+  version "2.13.13"
+  sha256 "195c20760e0e1c2b7218b298324cf3042dfe56b1791d14ab8c2797ae2370b1f6"
 
   url "https://static.files.bbci.co.uk/iplayer-pc-download-app/releases/darwin-x64/BBCiPlayerDownloads-#{version}.dmg"
   name "BBC iPlayer Downloads"

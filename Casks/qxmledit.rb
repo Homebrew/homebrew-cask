@@ -9,8 +9,8 @@ cask "qxmledit" do
   homepage "https://qxmledit.org/"
 
   livecheck do
-    url "https://sourceforge.net/projects/qxmledit/rss"
-    regex(/url=.*?QXmlEdit[._-]?v?(\d+(?:\.\d+)+)\.dmg/i)
+    url :url
+    regex(%r{url=.*?/QXmlEdit[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "QXmlEdit.app"

@@ -5,7 +5,7 @@ cask "makehuman" do
   url "https://download.tuxfamily.org/makehuman/releases/makehuman-community-#{version}-macos.zip",
       verified: "tuxfamily.org/makehuman/"
   name "MakeHuman"
-  desc "Open Souce tool for making 3D characters"
+  desc "Open Source tool for making 3D characters"
   homepage "http://www.makehumancommunity.org/"
 
   livecheck do

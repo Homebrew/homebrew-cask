@@ -1,5 +1,5 @@
 cask "nifty" do
-  version "3.72.16"
+  version "3.75.4"
   sha256 :no_check
 
   url "https://niftypm.com/apps/Nifty.dmg"
@@ -13,4 +13,10 @@ cask "nifty" do
   end
 
   app "Nifty.app"
+
+  zap trash: [
+    "~/Library/Application Support/Nifty",
+    "~/Library/Logs/Nifty",
+    "~/Library/Preferences/com.creative360.niftypm.plist",
+  ]
 end

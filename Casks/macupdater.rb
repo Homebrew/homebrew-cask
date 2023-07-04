@@ -1,28 +1,25 @@
 cask "macupdater" do
   on_monterey :or_older do
-    version "2.3.5,14289"
-    sha256 :no_check
-
-    url "https://www.corecode.io/downloads/macupdater_#{version.major}_latest.dmg"
+    version "2.3.6"
+    sha256 "01f5130f046756567486a3245c1590f2062e7638291fdb4def913aa7df513492"
 
     depends_on macos: ">= :mojave"
   end
   on_ventura :or_newer do
-    version "3.0.4,15817"
-    sha256 :no_check
-
-    url "https://www.corecode.io/downloads/macupdater_latest.dmg"
+    version "3.1.0"
+    sha256 "f1800d59250d66ef1920fdf26560d2c17ad59f9b0aab51ec9a513baf189eb578"
 
     depends_on macos: ">= :ventura"
   end
 
+  url "https://www.corecode.io/downloads/macupdater_#{version}.dmg"
   name "MacUpdater"
   desc "Track and update to the latest versions of installed software"
   homepage "https://www.corecode.io/macupdater/index.html"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://www.corecode.io/macupdater/macupdater#{version.major}.xml"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true

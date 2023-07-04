@@ -8,7 +8,7 @@ cask "fing-cli" do
   homepage "https://www.fing.com/products/development-toolkit/"
 
   livecheck do
-    url "https://www.fing.com/products/development-toolkit/"
+    url :homepage
     regex(%r{href=.*?/CLI[._-]macOSX[._-]v?(\d+(?:\.\d+)+)\.zip}i)
   end
 

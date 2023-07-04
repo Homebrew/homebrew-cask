@@ -1,9 +1,9 @@
 cask "chatbox" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.4.5"
-  sha256 arm:   "56a06949bca5d4b9a7953a7861dc86d22f7c46825d5bebf661aea9cbdb66b2ec",
-         intel: "660b8c16170618bafb04ca7c8001a3bc1c205082dfac32c15e74d695b49560a4"
+  version "0.5.6"
+  sha256 arm:   "e54b26bea6739e2b395016c1ef212e75b1d0a792a08a4cef4122268812a467e1",
+         intel: "7403cb9fb9484012d94e5c258fafa5d118a0d381edc0ad41c1e08ed9bd2f5ff3"
 
   url "https://github.com/Bin-Huang/chatbox/releases/download/v#{version}/chatbox_#{version}_#{arch}.dmg",
       verified: "github.com/Bin-Huang/chatbox/"
@@ -22,5 +22,6 @@ cask "chatbox" do
     "~/Library/Caches/xyz.chatboxapp.app",
     "~/Library/Preferences/xyz.chatboxapp.app.plist",
     "~/Library/Saved Application State/xyz.chatboxapp.app.savedState",
+    "~/Library/WebKit/xyz.chatboxapp.app",
   ]
 end

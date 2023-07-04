@@ -1,5 +1,5 @@
 cask "istat-menus" do
-  version "6.70"
+  version "6.71"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://cdn.bjango.com/files/istatmenus#{version.major}/istatmenus#{version}.zip"

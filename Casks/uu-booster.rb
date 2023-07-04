@@ -1,6 +1,6 @@
 cask "uu-booster" do
-  version "2.7.1,238"
-  sha256 "6c5a0a068eab27a2979b4a1a077910cd137a482e23bfba69a94a48031e1dcb6b"
+  version "2.7.2,239"
+  sha256 "0ef231537c950f8e3b2e2f16967057b77ca58d9b8006b1d1fbddb2fdf0642220"
 
   url "https://uu.gdl.netease.com/UU-macOS-#{version.csv.first}(#{version.csv.second}).dmg",
       verified: "uu.gdl.netease.com/"
@@ -19,4 +19,11 @@ cask "uu-booster" do
   depends_on macos: ">= :sierra"
 
   app "UUBooster.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.netease.uumac",
+    "~/Library/Caches/com.netease.uumac",
+    "~/Library/HTTPStorages/com.netease.uumac",
+    "~/Library/WebKit/com.netease.uumac",
+  ]
 end

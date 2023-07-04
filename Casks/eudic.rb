@@ -37,5 +37,6 @@ cask "eudic" do
     "~/Library/Preferences/com.eusoft.eudic.LightPeek.plist",
     "~/Library/Preferences/group.com.eusoft.eudic.plist",
     "~/Library/WebKit/com.eusoft.eudic",
+    "~/Library/WebKit/com.eusoft.eudic.LightPeek",
   ]
 end

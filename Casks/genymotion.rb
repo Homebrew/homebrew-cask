@@ -12,8 +12,6 @@ cask "genymotion" do
     regex(/Genymotion\s*Desktop\s*(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on cask: "virtualbox"
-
   app "Genymotion.app"
   app "Genymotion Shell.app"
   binary "#{appdir}/Genymotion Shell.app/Contents/MacOS/genyshell"
@@ -26,4 +24,8 @@ cask "genymotion" do
     "~/Library/Saved Application State/com.genymobile.genymotion.savedState",
     "~/Library/Saved Application State/com.genymobile.player.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

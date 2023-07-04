@@ -1,5 +1,5 @@
 cask "farrago" do
-  version "2.0.3"
+  version "2.0.4"
   sha256 :no_check
 
   url "https://rogueamoeba.com/farrago/download/Farrago.zip"
