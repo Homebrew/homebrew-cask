@@ -11,6 +11,11 @@ cask "arduino-ide" do
   desc "Electronics prototyping platform"
   homepage "https://www.arduino.cc/en/software"
 
+  livecheck do
+    url :url
+    livecheck :github_latest
+  end
+
   conflicts_with cask: "arduino-ide-nightly"
 
   app "Arduino IDE.app"
