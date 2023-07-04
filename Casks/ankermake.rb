@@ -8,14 +8,10 @@ cask "ankermake" do
   desc "Slicer for AnkerMake 3D printers"
   homepage "https://www.ankermake.com/software"
 
+  # The homepage lists the current version and the
+  # url, but uses JavaScript in an encrypted fashion.
   livecheck do
-    url :homepage
-    strategy :page_match do |page|
-      match = page.match(%r{security/(.+)\.AnkerMake[._-]v?(\d+(?:.\d+)+)\.dmg}i)
-      next if match.blank?
-
-      "#{match[2]},#{match[1]}"
-    end
+    skip "No version information available"
   end
 
   depends_on macos: ">= :big_sur"
