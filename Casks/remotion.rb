@@ -1,6 +1,6 @@
 cask "remotion" do
-  version "3.178.2"
-  sha256 "da19431921fa6a566e2b49ae68944ec2dab53b5d30e243deda8565d791a08880"
+  version "3.184.1"
+  sha256 "64f6f4a967c567aa5baea585c9130ebc10c950b1d7d4e00638a06e5c456f4179"
 
   url "https://updates.remotion.com/installers/Remotion%20#{version}.dmg"
   name "remotion"
