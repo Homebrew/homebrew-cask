@@ -1,6 +1,6 @@
 cask "submariner" do
-  version "2.3"
-  sha256 "223fd73d7827017b8f28a8c97e569bd3a9cff7864bd66132818eda4917a7f700"
+  version "2.3.1"
+  sha256 "29889fcc4657df2e09b943b1d7dc788773b26231efedd4bb1f0b01b5d5391e67"
 
   url "https://github.com/NattyNarwhal/Submariner/releases/download/v#{version}/Submariner-#{version}.zip",
       verified: "github.com/NattyNarwhal/Submariner/"
