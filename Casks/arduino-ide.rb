@@ -13,7 +13,7 @@ cask "arduino-ide" do
 
   livecheck do
     url :url
-    livecheck :github_latest
+    strategy :github_latest
   end
 
   conflicts_with cask: "arduino-ide-nightly"
