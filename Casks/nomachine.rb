@@ -12,6 +12,8 @@ cask "nomachine" do
     regex(/nomachine[._-]v?(\d+(?:\.\d+)+_\d+)\.dmg/i)
   end
 
+  auto_updates true
+
   pkg "NoMachine.pkg"
 
   # A launchctl job ordinarily manages uninstall once the app bundle is removed
