@@ -8,7 +8,7 @@ cask "toshiba-color-mfp" do
   homepage "https://business.toshiba.com/support"
 
   livecheck do
-    url "http://business.toshiba.com/support/downloads/GetDownloads.jsp?model=5015"
+    url "http://business.toshiba.com/support/downloads/GetDownloads.jsp?model=e-STUDIO3515AC"
     strategy :page_match do |page|
       match = page.match(/"MacDC",.*?"id":"(\d+)",.*?"versionName":"(\d+(?:\.\d+)+)",/)
       next if match.blank?
