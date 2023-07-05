@@ -1,6 +1,6 @@
 cask "bibdesk" do
-  version "1.8.18"
-  sha256 "38102b0fc37ec66f648da3168d1115b1e22baef1e117054b5c3d76150d6fd6dd"
+  version "1.8.19"
+  sha256 "f9cecc8014a0cdc9dd3ac88f36575788f9d4addc7867a751a936c605a283ba53"
 
   url "https://downloads.sourceforge.net/bibdesk/BibDesk/BibDesk-#{version.csv.first}/BibDesk-#{version.csv.first}.dmg",
       verified: "downloads.sourceforge.net/bibdesk/"
