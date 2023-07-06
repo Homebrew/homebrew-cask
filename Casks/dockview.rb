@@ -1,5 +1,5 @@
 cask "dockview" do
-  version "1.3.8"
+  version "1.4"
   sha256 :no_check
 
   url "https://macplus-software.com/downloads/DockViewStandard.zip",
@@ -14,7 +14,7 @@ cask "dockview" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "DockView.app"
 
