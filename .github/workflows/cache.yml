@@ -30,6 +30,8 @@ jobs:
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
         with:
+          core: false
+          cask: false
           test-bot: false
 
       - name: Cache Homebrew Gems
