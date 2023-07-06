@@ -1,9 +1,9 @@
 cask "pritunl" do
   arch arm: ".arm64"
 
-  version "1.3.3484.2"
-  sha256 arm:   "0299f5782ba0a8d2fa63ab7cabe3df85d779f2ff096887064bdb74de152395ff",
-         intel: "43402fe587c8e5047ded59d5706f8a1e67b17dabfd2566fa7d17c5e723ed17bd"
+  version "1.3.3584.5"
+  sha256 arm:   "165fd015b8409d77e0842eb6ac6fb0a0c22f80651e2bce730c6d00751dcb75eb",
+         intel: "ec9b02538df425903c4eff89aefe1bb6c3d64018245668b9b62887c2e5e3bc1e"
 
   url "https://github.com/pritunl/pritunl-client-electron/releases/download/#{version}/Pritunl#{arch}.pkg.zip",
       verified: "github.com/pritunl/pritunl-client-electron/"
