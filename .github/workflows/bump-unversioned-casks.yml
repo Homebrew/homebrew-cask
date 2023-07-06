@@ -33,6 +33,8 @@ jobs:
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
         with:
+          core: false
+          cask: true
           test-bot: false
 
       - name: Configure Git user
