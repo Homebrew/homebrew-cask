@@ -21,8 +21,8 @@ cask "mpc" do
     oh1 "Caveats"
     print <<~EOS
       #{token} installs ilok-license-manager for license management.
-      Please note that other casks may depend on it and it will not be
-      removed automatically.
+      Please note that other applications may depend on it and it will
+      not be removed automatically.
       To fully remove all files, run:
 
         brew uninstall --cask ilok-license-manager --zap --force
