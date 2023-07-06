@@ -3,8 +3,8 @@ cask "pushplaylabs-sidekick" do
   livecheck_folder = on_arch_conditional arm: "macm1", intel: "mac"
 
   on_arm do
-    version "112.47.1.33931,201753f"
-    sha256 "b00df291247433fe19ac37c3cd78d4af97ada0d5972b6825cdcbf8944c5f8b64"
+    version "114.48.1.34403,05bdccc"
+    sha256 "19c861563ace0b3ed88edd65c33bb36dd044e140d27cb92518edb49c4f91bb7d"
   end
   on_intel do
     version "114.48.1.34404,cd096ae"
@@ -23,6 +23,8 @@ cask "pushplaylabs-sidekick" do
       headers["location"].scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Sidekick.app"
 
