@@ -16,8 +16,8 @@ cask "appcleaner" do
     end
   end
   on_mojave :or_newer do
-    version "3.6.7"
-    sha256 "24c5c2e38b2cfd29573824e81af968b510d116f8e229ff333501937fec6c8470"
+    version "3.6.8"
+    sha256 "e012f729442473c20e7cce334b00182521e4b6672ea681b34931b180feb3d6be"
 
     livecheck do
       url "https://freemacsoft.net/appcleaner/Updates.xml"
