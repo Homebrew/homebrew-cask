@@ -22,4 +22,6 @@ cask "fabfilter-micro" do
   pkg "FabFilter Micro #{version} Installer.pkg"
 
   uninstall pkgutil: "com.fabfilter.Micro.#{version.major}"
+
+  # No zap stanza required
 end
