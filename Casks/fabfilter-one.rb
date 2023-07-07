@@ -1,6 +1,6 @@
 cask "fabfilter-one" do
-  version "3.36"
-  sha256 "4740f7447d1056422cfc5b1c1cc0e7ae4e5585185ee21100ee6cb52a32eaab57"
+  version "3.37"
+  sha256 "4059594580e365237ded16a213d8d549cbb01c4b8bad80895c61f44bcff7eb68"
 
   url "https://download.fabfilter.com/ffone#{version.no_dots}.dmg"
   name "FabFilter One"
