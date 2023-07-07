@@ -22,4 +22,6 @@ cask "fabfilter-pro-c" do
   pkg "FabFilter Pro-C #{version} Installer.pkg"
 
   uninstall pkgutil: "com.fabfilter.Pro-C.#{version.major}"
+
+  # No zap stanza required
 end
