@@ -22,4 +22,6 @@ cask "fabfilter-one" do
   pkg "FabFilter One #{version} Installer.pkg"
 
   uninstall pkgutil: "com.fabfilter.One.#{version.major}"
+
+  # No zap stanza required
 end
