@@ -22,4 +22,6 @@ cask "fabfilter-saturn" do
   pkg "FabFilter Saturn #{version} Installer.pkg"
 
   uninstall pkgutil: "com.fabfilter.Saturn.#{version.major}"
+
+  # No zap stanza required
 end
