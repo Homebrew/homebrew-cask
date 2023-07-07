@@ -7,8 +7,8 @@ cask "voov-meeting" do
     sha256 "2bc75e79d30bbba88f6cd6c3acf3030a08f11f1be849692a8eebd72f759f2f8c"
   end
   on_intel do
-    version "3.16.2.510,11d9b52dbae65c0fdb27d0abed56acf6"
-    sha256 "2f00b5edf2914306489fc96b6397d21a9658e3d1a4fcb019b8bdccb75000778c"
+    version "3.16.3.510,f41ced72d1e96aacb24b5f402bbcb2e6"
+    sha256 "17b04b851a1203bb4ad812747f71c4eb04566c0fbac75a2b485293c173c80e26"
   end
 
   url "https://updatecdn.meeting.qq.com/cos/#{version.csv.second}/VooVMeeting_1410000198_#{version.csv.first}.publish.#{arch}#{arch_suffix}.dmg",
