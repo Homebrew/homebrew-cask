@@ -22,4 +22,6 @@ cask "fabfilter-volcano" do
   pkg "FabFilter Volcano #{version} Installer.pkg"
 
   uninstall pkgutil: "com.fabfilter.Volcano.#{version.major}"
+
+  # No zap stanza required
 end
