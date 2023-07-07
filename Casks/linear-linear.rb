@@ -1,7 +1,7 @@
 cask "linear-linear" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.18.3,230531mml1c0i91"
+  version "1.19.0,230705v7xyalrvz"
   sha256 :no_check
 
   url "https://desktop.linear.app/mac/dmg/#{arch}"
