@@ -35,15 +35,12 @@ cask "vmware-horizon-client" do
 
   pkg "VMware Horizon Client.pkg"
 
-  uninstall delete:    [
-              "/Applications/VMware Horizon Client.app",
-              "/Library/Preferences/com.vmware.horizon.plist",
-            ],
+  uninstall delete:    "/Applications/VMware Horizon Client.app",
             pkgutil:   [
-              "com.vmware.VMware.EndpointTelemetryService",
+              "com.vmware.horizon",
               "com.vmware.VMware.Deem",
               "com.vmware.VMware.Deem.InstallerHelper",
-              "com.vmware.horizon",
+              "com.vmware.VMware.EndpointTelemetryService",
             ],
             launchctl: [
               "com.vmware.deem.MacUIEvents",
@@ -51,14 +48,12 @@ cask "vmware-horizon-client" do
               "com.vmware.horizon.CDSHelper",
               "com.vmware.vmwetlm",
             ],
-            quit:      [
-              "com.vmware.horizon",
-            ]
+            quit:      "com.vmware.horizon"
 
   zap trash: [
     "/Library/Preferences/com.vmware.horizon.plist",
-    "~/Library/Application Support/VMware Horizon View Client",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vmware.horizon.sfl2",
+    "~/Library/Application Support/VMware Horizon View Client",
     "~/Library/Caches/com.vmware.horizon",
     "~/Library/Logs/VMware Horizon Client",
     "~/Library/Preferences/com.vmware.horizon.keyboard.plist",
