@@ -1,6 +1,6 @@
 cask "godot" do
-  version "4.0.3"
-  sha256 "b8a0271b16399845bd18705d52ef39237d6cbb81c13aac2c5ab2707e217629ac"
+  version "4.1"
+  sha256 "79b18a1a6ce5d56da75040abd88c2976ec93726372063e2cb82240604aa327e8"
 
   url "https://downloads.tuxfamily.org/godotengine/#{version}/Godot_v#{version}-stable_macos.universal.zip",
       verified: "downloads.tuxfamily.org/godotengine/"
