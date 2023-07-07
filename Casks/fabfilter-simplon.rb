@@ -22,4 +22,6 @@ cask "fabfilter-simplon" do
   pkg "FabFilter Simplon #{version} Installer.pkg"
 
   uninstall pkgutil: "com.fabfilter.Simplon.#{version.major}"
+
+  # No zap stanza required
 end
