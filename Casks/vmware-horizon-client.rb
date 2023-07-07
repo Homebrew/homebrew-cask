@@ -1,6 +1,6 @@
 cask "vmware-horizon-client" do
-  version "2303-8.9.0-21435414,CART24FQ1_MAC_2303"
-  sha256 "95da8eaf8d446187008696c9fab985fa356634b75c60fc6d5ccf3bc09018f540"
+  version "2306-8.10.0-21964677,CART24FQ2_MAC_2306"
+  sha256 "0f3589c56fc74f709c6ccb7ddaad64918cd3ca37ebbcac4c699d93fa99705b7b"
 
   url "https://download3.vmware.com/software/#{version.csv.second}/VMware-Horizon-Client-#{version.csv.first}.dmg"
   name "VMware Horizon Client"
@@ -31,9 +31,29 @@ cask "vmware-horizon-client" do
     end
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :big_sur"
 
-  app "VMware Horizon Client.app"
+  pkg "VMware Horizon Client.pkg"
+
+  uninstall delete:    [
+              "/Applications/VMware Horizon Client.app",
+              "/Library/Preferences/com.vmware.horizon.plist",
+            ],
+            pkgutil:   [
+              "com.vmware.VMware.EndpointTelemetryService",
+              "com.vmware.VMware.Deem",
+              "com.vmware.VMware.Deem.InstallerHelper",
+              "com.vmware.horizon",
+            ],
+            launchctl: [
+              "com.vmware.deem.MacUIEvents",
+              "com.vmware.deemd",
+              "com.vmware.horizon.CDSHelper",
+              "com.vmware.vmwetlm",
+            ],
+            quit:      [
+              "com.vmware.horizon",
+            ]
 
   zap trash: [
     "/Library/Preferences/com.vmware.horizon.plist",
