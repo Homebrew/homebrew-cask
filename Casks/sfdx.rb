@@ -1,7 +1,7 @@
 cask "sfdx" do
   arch arm: "arm64", intel: "x64"
 
-  version "7.207.4"
+  version "58.0"
   sha256 :no_check
 
   url "https://developer.salesforce.com/media/salesforce-cli/sfdx/channels/stable/sfdx-#{arch}.pkg"
