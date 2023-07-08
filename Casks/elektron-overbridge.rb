@@ -22,6 +22,9 @@ cask "elektron-overbridge" do
 
   uninstall quit:      "se.elektron.OverbridgeEngine",
             pkgutil:   "se.elektron.overbridge.*",
-            launchctl: "se.elektron.overbridge.engine",
+            launchctl: [
+              "se.elektron.overbridge.engine",
+              "asp.se.elektron.overbridge.coreaudio2",
+            ],
             delete:    "/Applications/Elektron"
 end
