@@ -1,6 +1,6 @@
 cask "shapr3d" do
-  version "5.410.0.5390"
-  sha256 "b8e78b246814364e310a33750877092bea934476b64caee6f72ce18d96027ad2"
+  version "5.411.0.5417"
+  sha256 "56173a9d79d03f0671bfdc2423181c5f69587fb7eb3a3e4611d811d378a45afa"
 
   url "https://download.shapr3d.com/mac/Shapr3D-#{version}.dmg"
   name "Shapr3D"
