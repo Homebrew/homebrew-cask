@@ -17,7 +17,7 @@ cask "elektron-overbridge" do
       }ix,
     )
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[5]}" }
+      page.scan(regex).map { |match| match[5].to_s }
     end
   end
 
