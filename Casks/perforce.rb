@@ -12,7 +12,7 @@ cask "perforce" do
   homepage "https://www.perforce.com/"
 
   livecheck do
-    url "https://cdist2.perforce.com/perforce/r#{version.major[-2..]}.#{version.minor}/doc/user/relnotes.txt"
+    url "https://www.perforce.com/perforce/doc.current/user/relnotes.txt"
     regex(%r{\((\d+(?:\.\d+)+)/(\d+)\)}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
