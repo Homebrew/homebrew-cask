@@ -8,7 +8,11 @@ cask "parallels-virtualization-sdk" do
   homepage "https://www.parallels.com/products/desktop/download/"
 
   livecheck do
-    cask "parallels"
+    url "https://kb.parallels.com/129060"
+    regex(/<h2[^>]*?>[^<]*?(\d+(?:\.\d+)+)(?:\s*|&nbsp;)\((\d+)\)/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]}-#{match[1]}" }
+    end
   end
 
   pkg "Parallels Virtualization SDK.pkg"
