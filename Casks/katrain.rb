@@ -1,6 +1,6 @@
 cask "katrain" do
-  version "1.13.0"
-  sha256 "35db2a4da2c22a431ef27cfe3d3271a9a231695af7fb2ccbfcb9d5c301bb3d86"
+  version "1.14.0"
+  sha256 "38cfe45fd4440983d3cbf4ca1305fa977c8479a16f6696bd22742ad451fa4cd7"
 
   on_arm do
     depends_on formula: "katago"
