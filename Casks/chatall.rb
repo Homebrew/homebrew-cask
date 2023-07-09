@@ -3,7 +3,7 @@ cask "chatall" do
 
   version "1.31.47"
   sha256 arm:   "a3989ef35f20c139cb384c188a94ef54e48a54fda7858368c8819805d915aecd",
-         intel: "59ec4df6dba39ac029516c3544f2748bd3a5e5fe02b380a34e58d318a1631c62"
+         intel: "0ba5f87d0ab0c0fce31c60170e9725ae4faa6e85caefbcfc5bd54440b5af7e5c"
 
   url "https://github.com/sunner/ChatALL/releases/download/v#{version}/ChatALL-#{version}-mac-#{arch}.dmg"
   name "ChatALL"
