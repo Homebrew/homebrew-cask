@@ -9,8 +9,7 @@ cask "iina" do
 
   livecheck do
     url "https://www.iina.io/appcast.xml"
-    # Don't use short version because iina sometimes bumps version code only.
-    strategy :sparkle
+    strategy :sparkle # IINA sometimes rebuilds with the same short version.
   end
 
   auto_updates true
