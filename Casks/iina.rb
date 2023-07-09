@@ -1,16 +1,16 @@
 cask "iina" do
-  version "1.3.2"
+  version "1.3.2,135"
   sha256 "ac5e72bf6407595514b327ffbbbf235919f80badbd18126007f8bc62768a1c19"
 
-  url "https://github.com/iina/iina/releases/download/v#{version}/IINA.v#{version}.dmg",
-      verified: "github.com/iina/iina/"
+  url "https://dl.iina.io/IINA.v#{version.csv.first}.dmg"
   name "IINA"
   desc "Free and open-source media player"
   homepage "https://iina.io/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://www.iina.io/appcast.xml"
+    # Don't use short version because iina sometimes bumps version code only.
+    strategy :sparkle
   end
 
   auto_updates true
@@ -18,6 +18,8 @@ cask "iina" do
 
   app "IINA.app"
   binary "#{appdir}/IINA.app/Contents/MacOS/iina-cli", target: "iina"
+
+  uninstall quit: "com.colliderli.iina"
 
   zap trash: [
     "~/Library/Application Scripts/com.colliderli.iina.OpenInIINA",
