@@ -1,5 +1,5 @@
 cask "librewolf" do
-  arch arm: "aarch64", intel: "x86_64"
+  arch arm: "arm64", intel: "x86_64"
 
   on_arm do
     version "115.0,1,2671c203a1a40733d238fda0729c9d3e"
@@ -9,7 +9,7 @@ cask "librewolf" do
     version "115.0,1,ace88d64985c40cd759fd48cf5d76332"
     sha256 "4628e48c028ac49206f46e178b24b8546476eeb3f54df1d7a7699ee3dffadcd9"
   end
-
+  
   url "https://gitlab.com/librewolf-community/browser/macos/uploads/#{version.csv.third}/librewolf-#{version.csv.first}-#{version.csv.second}-macos-#{arch}-package.dmg",
       verified: "gitlab.com/librewolf-community/browser/macos/uploads/"
   name "LibreWolf"
