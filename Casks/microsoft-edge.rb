@@ -1,11 +1,11 @@
 cask "microsoft-edge" do
   linkid = on_arch_conditional arm: "2093504", intel: "2069148"
 
-  sha256 arm:   "e5685d1fd130fa4bd40a0e419b41c5890d4e0a224abae9f91b908ec69fdcef8f",
+  sha256 arm:   "1472ca632742839236c232e2687f9e3fd43d5f2765b7f759489f46b94ed5f0c9",
          intel: "b085e93aed413290f84f5d40b8911060430fdb1f5e984b7de07cbd386ecf3087"
 
   on_arm do
-    version "114.0.1823.67,47028e91-44c4-44ac-90dd-859b9bc2e475"
+    version "114.0.1823.79,007545a6-2bf6-4c7c-8dfb-2c916e48a66d"
   end
   on_intel do
     version "114.0.1823.67,63a4e96e-df62-4905-a167-d3e7409a6b74"
