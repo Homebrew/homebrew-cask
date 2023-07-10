@@ -5,7 +5,7 @@ cask "mycard" do
   url "https://cdn02.moecube.com:444/downloads/MyCard-#{version}.dmg",
       verified: "cdn02.moecube.com:444/downloads/"
   name "MyCard"
-  desc "Yu-Gi-Oh! Complete Card Simulator YGOpro · Touhou Project"
+  desc "Yu-Gi-Oh! Complete Card Simulator"
   homepage "https://mycard.moe/"
 
   livecheck do
