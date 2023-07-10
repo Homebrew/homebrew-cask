@@ -132,7 +132,7 @@ jobs:
 
       - name: Run brew livecheck
         id: livecheck
-        run: /
+        run: |
           brew livecheck --cask ${{ matrix.cask.token }} --debug
         timeout-minutes: 30
         if: always() && steps.fetch.outcome == 'success' && matrix.cask
