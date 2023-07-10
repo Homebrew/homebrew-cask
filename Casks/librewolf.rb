@@ -2,11 +2,11 @@ cask "librewolf" do
   arch arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "115.0,1,2671c203a1a40733d238fda0729c9d3e"
+    version "115.0.1,1,2671c203a1a40733d238fda0729c9d3e"
     sha256 "eab53e8bc411698e4a39185b9990aee141695aac974913407ff1616d52f87d0e"
   end
   on_intel do
-    version "115.0,1,ace88d64985c40cd759fd48cf5d76332"
+    version "115.0.1,1,ace88d64985c40cd759fd48cf5d76332"
     sha256 "4628e48c028ac49206f46e178b24b8546476eeb3f54df1d7a7699ee3dffadcd9"
   end
 
@@ -18,7 +18,7 @@ cask "librewolf" do
 
   livecheck do
     url "https://gitlab.com/api/v4/projects/13853965/releases"
-    regex(%r{/(\w+)/librewolf[._-](\d+(?:\.\d+)+)-(\d+)\.en-US\.mac\.#{arch}\.dmg[\s"]}i)
+    regex(%r{/(\w+)/librewolf[._-](\d+(?:\.\d+)+)-(\d+)-macos-#{arch}-package\.dmg["']}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|
         "#{match[1]},#{match[2]},#{match[0]}"
