@@ -8,7 +8,7 @@ cask "dcp-o-matic-player" do
   homepage "https://dcpomatic.com/"
 
   livecheck do
-    cask "dcp-o-matic"
+    cask "dcp-o-matic" # testing CI
   end
 
   app "DCP-o-matic #{version.major} Player.app"
