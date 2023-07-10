@@ -16,6 +16,8 @@ cask "postico" do
     end
   end
 
+  auto_updates true
+
   app "Postico #{version.major}.app"
 
   zap trash: [
