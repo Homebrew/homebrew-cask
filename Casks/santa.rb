@@ -1,6 +1,6 @@
 cask "santa" do
-  version "2023.5"
-  sha256 "19a48c24875a0c7dccb25c21c712d3cde3cde888d8d53e573d813352ec8538f8"
+  version "2023.6"
+  sha256 "32af54d5313d69c04f96f03b0992d097b178a863007097f51ac719c3371fb997"
 
   url "https://github.com/google/santa/releases/download/#{version}/santa-#{version}.dmg"
   name "Santa"
