@@ -51,7 +51,7 @@ cask "onyx" do
     depends_on macos: :monterey
   end
   on_ventura :or_newer do
-    version "4.4.0"
+    version "4.4.1"
 
     url "https://www.titanium-software.fr/download/13/OnyX.dmg"
 
