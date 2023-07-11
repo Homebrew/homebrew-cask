@@ -4,6 +4,7 @@ cask "duplicate-annihilator-for-photos" do
 
   url "https://brattoo.com/propaganda/downloadDap.php"
   name "Duplicate Annihilator for Photos"
+  desc "Photo duplicate detector"
   homepage "https://brattoo.com/propaganda/"
 
   livecheck do
@@ -12,4 +13,15 @@ cask "duplicate-annihilator-for-photos" do
   end
 
   app "Duplicate Annihilator for Photos.app"
+
+  uninstall pkgutil: "com.brattoo.pkg.brattoosystemfiles"
+
+  zap trash: [
+    "~/Library/Application Support/Duplicate Annihilator Photos",
+    "~/Library/Caches/com.brattoo.Duplicate-Annihilator-for-Photos",
+    "~/Library/HTTPStorages/com.brattoo.Duplicate-Annihilator-for-Photos",
+    "~/Library/Logs/com.brattoo.duplicate-annihilator-photos",
+    "~/Library/Preferences/com.brattoo.annihilator-photos.plist",
+    "~/Library/Saved Application State/com.brattoo.Duplicate-Annihilator-for-Photos.savedState",
+  ]
 end
