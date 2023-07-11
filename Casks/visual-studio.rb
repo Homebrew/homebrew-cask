@@ -6,8 +6,8 @@ cask "visual-studio" do
     sha256 "c2bcd13d2b67d288b9169678fc55cfa5eb4fd522aba143d38c32a4eefe1abd60"
   end
   on_intel do
-    version "17.6.0.1575,8540849d-b449-4c8d-b87e-c52b34bbc741,a3d05b974b3ee26ed450572a3ce0bc11"
-    sha256 "7ef394ab3c1838216b1d14c4db9ee09cf66ecb5daa4fa281e6a6d38af0a7c773"
+    version "17.6.1.452,ce9dd70a-23d3-484b-8114-733489e61567,5dc4b2727f3fdd77cc999045c8ba8467"
+    sha256 "4757c0df17ad9698352cb8f4e2757a6cb48a5b12bc1889404bdfabe47a0e97e3"
   end
 
   url "https://download.visualstudio.microsoft.com/download/pr/#{version.csv.second}/#{version.csv.third}/visualstudioformac-#{version.csv.first}-#{arch}.dmg"
