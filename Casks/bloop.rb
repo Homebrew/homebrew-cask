@@ -1,15 +1,20 @@
 cask "bloop" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.4.8"
-  sha256 arm:   "aa818fd493b6521339e079208ce54c31371b98bf2d88f1232a4de35e8301565c",
-         intel: "040d2cc0d2363282c9440bf6a15923fcfff0de47f900c229a86216e5b9ac12cd"
+  version "0.4.7"
+  sha256 arm:   "8c725486016e5a08ddad2f6ff4b8d0f5be2fb6466179f312226d89db853aeb42",
+         intel: "db2b194899fe20f8fbfb39816f50639da33103efab7a33cc44e37acd17f43dc3"
 
   url "https://github.com/BloopAI/bloop/releases/download/v#{version}/bloop_#{version}_#{arch}.dmg",
       verified: "github.com/BloopAI/bloop/"
   name "bloop"
   desc "Code search engine"
   homepage "https://bloop.ai/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   depends_on macos: ">= :big_sur"
 
