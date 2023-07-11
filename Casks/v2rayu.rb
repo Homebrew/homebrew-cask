@@ -1,11 +1,11 @@
 cask "v2rayu" do
   arch arm: "arm64", intel: "64"
 
-  version "3.3.0"
-  sha256 arm:   "9fb1aa5a2e8d5dc0243c6f5c6b99ee5ac44cf233d0a0280badc5a9709a22421c",
-         intel: "f20de5fae2308ac4c528d1e6ce9fd1aa071cfc05245d19924408640b2bbfd62b"
+  version "3.5.0"
+  sha256 arm:   "484c36335939a1bcc7715f6a5b7409a3391865245f2263452dadd1157bbefa5a",
+         intel: "2e96b031a6b1f71449838762e820d844b1f6272fac2522107bf8c48e573d6a78"
 
-  url "https://github.com/yanue/V2rayU/releases/download/#{version}/V2rayU-#{arch}.dmg"
+  url "https://github.com/yanue/V2rayU/releases/download/v#{version}/V2rayU-#{arch}.dmg"
   name "V2rayU"
   desc "Collection of tools to build a dedicated basic communication network"
   homepage "https://github.com/yanue/V2rayU"
