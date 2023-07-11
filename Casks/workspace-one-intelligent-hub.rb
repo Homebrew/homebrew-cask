@@ -28,6 +28,7 @@ cask "workspace-one-intelligent-hub" do
               "com.airwatch.awcmd",
               "com.airwatch.mac.agent",
               "com.vmware.hub.flagd",
+              "com.vmware.hub.healthd",
               "com.vmware.hub.hubupdatedaemon",
               "com.vmware.hubupdateagent",
               "com.vmware.uem.hubd",
