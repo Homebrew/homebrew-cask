@@ -1,6 +1,6 @@
 cask "wordpresscom" do
-  version "7.2.0"
-  sha256 "b2d92350ba0ed6898b3e95eb4a70f1d625038f2a3905743676613164f37b7bf5"
+  version "8.0.0"
+  sha256 "eb77ae4584e5ed0baf744016fec2af8da975f976b4ac9f97fade740f3409d94f"
 
   url "https://public-api.wordpress.com/rest/v1.1/desktop/osx/download?type=app&ref=update&version=#{version}"
   name "WordPress.com"
