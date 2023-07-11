@@ -11,6 +11,11 @@ cask "bloop" do
   desc "Code search engine"
   homepage "https://bloop.ai/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :big_sur"
 
   app "bloop.app"
