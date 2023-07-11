@@ -14,7 +14,8 @@ cask "qfinder-pro" do
 
   pkg "Qfinder Pro.pkg"
 
-  uninstall pkgutil: "qnap.com.Qfinder"
+  uninstall launchctl: "com.qnap.qsoftwareupdater",
+            pkgutil:   "qnap.com.Qfinder"
 
   zap trash: [
         "~/Library/Application Support/QNAP/QfinderPro",
