@@ -2,8 +2,8 @@ cask "visual-studio" do
   arch arm: "arm64", intel: "x64"
 
   on_arm do
-    version "17.6.0.1575,8540849d-b449-4c8d-b87e-c52b34bbc741,d92d20499d8ce2aec37fac30ad20fb8f"
-    sha256 "b8e914607fb9171c3c72b53bd20b692796bc1e9223ad40036fac7d10bf8c0552"
+    version "17.6.1.452,ce9dd70a-23d3-484b-8114-733489e61567,1fe62af8b933217c486c6aadfcb8eb4f"
+    sha256 "c2bcd13d2b67d288b9169678fc55cfa5eb4fd522aba143d38c32a4eefe1abd60"
   end
   on_intel do
     version "17.6.0.1575,8540849d-b449-4c8d-b87e-c52b34bbc741,a3d05b974b3ee26ed450572a3ce0bc11"
