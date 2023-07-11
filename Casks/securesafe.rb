@@ -20,4 +20,10 @@ cask "securesafe" do
     "com.dswiss.securesafe.pkg.sync",
     "io.macfuse.installer.components.core",
   ]
+
+  zap trash: [
+    "~/Library/Caches/DSwiss/securesafe",
+    "~/Library/Preferences/com.dswiss.securesafe.*",
+    "~/Library/Saved Application State/com.dswiss.securesafe.sync.savedState",
+  ]
 end
