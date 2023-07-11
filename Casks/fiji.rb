@@ -16,4 +16,9 @@ cask "fiji" do
   auto_updates true
 
   app "Fiji.app"
+
+  zap trash: [
+    "~/Library/Preferences/sc.fiji.cellcounter.plist",
+    "~/Library/Saved Application State/org.fiji.savedState",
+  ]
 end
