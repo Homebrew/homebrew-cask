@@ -4,8 +4,8 @@ cask "tunnelbear" do
     sha256 "60c332511b91b794405249132ceb0c88e999b070c087b5f70f1cf09a84e5e5e9"
   end
   on_big_sur :or_newer do
-    version "5.0.2"
-    sha256 "ed324352fdfdb8c3f94d58a48d3f1283b9a3592359ea3decfd674d2e3e6adaf0"
+    version "5.1.0"
+    sha256 "818456b86fb0aaf9a1a0855990a2b5575a5f70ecb1ec344062c5ba423003f31f"
   end
 
   url "https://s3.amazonaws.com/tunnelbear/downloads/mac/TunnelBear-#{version}.zip",
