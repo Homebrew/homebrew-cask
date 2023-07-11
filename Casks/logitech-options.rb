@@ -42,7 +42,7 @@ cask "logitech-options" do
     pkg "LogiMgr Installer #{version}.app/Contents/Resources/LogiMgr.pkg"
   end
   on_catalina :or_newer do
-    version "10.00.75"
+    version "10.10.88"
     sha256 :no_check
 
     url "https://download01.logi.com/web/ftp/pub/techsupport/options/options_installer.zip",
