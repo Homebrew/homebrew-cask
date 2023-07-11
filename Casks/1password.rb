@@ -27,6 +27,7 @@ cask "1password" do
   zap trash: [
     "~/Library/Application Scripts/2BUA8C4S2C.com.1password*",
     "~/Library/Application Scripts/com.1password.1password-launcher",
+    "~/Library/Application Scripts/com.1password.browser-support",
     "~/Library/Application Support/1Password",
     "~/Library/Application Support/Arc/User Data/NativeMessagingHosts/com.1password.1password.json",
     "~/Library/Application Support/CrashReporter/1Password*",
@@ -45,6 +46,9 @@ cask "1password" do
     "~/Library/Containers/com.1password.1password*",
     "~/Library/Group Containers/2BUA8C4S2C.com.1password",
     "~/Library/Preferences/com.1password.1password.plist",
+    "~/Library/Preferences/group.com.1password.plist",
     "~/Library/Saved Application State/com.1password.1password.savedState",
+    "~/Library/Application Scripts/2BUA8C4S2C.com.1password",
+    "~/Library/Application Scripts/2BUA8C4S2C.com.1password.browser-helper",
   ]
 end
