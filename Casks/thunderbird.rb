@@ -73,8 +73,8 @@ cask "thunderbird" do
   homepage "https://www.thunderbird.net/"
 
   livecheck do
-    url "https://download.mozilla.org/?product=thunderbird-latest-ssl&os=osx"
-    strategy :header_match
+    url :homepage
+    regex(/href=.*?thunderbird[._-]v?(\d+(?:\.\d+)+)[._-]SSL/i)
   end
 
   auto_updates true
