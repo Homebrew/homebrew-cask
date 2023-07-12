@@ -9,11 +9,11 @@ cask "maa" do
 
   livecheck do
     url :url
-    regex(/v?(\d+(?:\.\d+)+[\w.]+)/i)
     strategy :github_latest
   end
 
   auto_updates true
+  depends_on macos: ">= :monterey"
 
   app "MAA.app"
 
