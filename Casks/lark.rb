@@ -7,7 +7,7 @@ cask "lark" do
   end
   on_intel do
     version "6.8.9,6f897197"
-    sha256 "696aaf1a888a4eb6be97feddf2b72f172799408762598854fe505d428a02cbc9"
+    sha256 "2e29abe568ec9d9c23a2eaf0d7eebb70f8f63602deab1a3430947a2c22d9248a"
   end
 
   url "https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/#{version.csv.second}/Lark-darwin_#{arch}-#{version.csv.first}-signed.dmg",
