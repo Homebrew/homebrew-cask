@@ -6,7 +6,7 @@ cask "lark" do
     sha256 "d739411699fec6d38e60e8345d97faffc128d3c259f665cac4113d938ce97f96"
   end
   on_intel do
-    version "6.7.6,424592d2"
+    version "6.8.9,6f897197"
     sha256 "696aaf1a888a4eb6be97feddf2b72f172799408762598854fe505d428a02cbc9"
   end
 
