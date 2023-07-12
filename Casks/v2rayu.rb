@@ -1,9 +1,9 @@
 cask "v2rayu" do
   arch arm: "arm64", intel: "64"
 
-  version "3.5.0"
-  sha256 arm:   "484c36335939a1bcc7715f6a5b7409a3391865245f2263452dadd1157bbefa5a",
-         intel: "2e96b031a6b1f71449838762e820d844b1f6272fac2522107bf8c48e573d6a78"
+  version "3.6.0"
+  sha256 arm:   "aca0aaf6885a82de886d2b541360393283b8c9c5c55f9a2735e0e2f19fa69b16",
+         intel: "fc6c815a8995c6eb5d578d413a81e7184ca9f869114c92a39352f15246e57f36"
 
   url "https://github.com/yanue/V2rayU/releases/download/v#{version}/V2rayU-#{arch}.dmg"
   name "V2rayU"
