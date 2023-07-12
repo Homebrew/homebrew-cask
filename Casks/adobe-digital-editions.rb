@@ -1,6 +1,6 @@
 cask "adobe-digital-editions" do
-  version "4.5.11"
-  sha256 "9a797ad403180d94f180d2c265885cc6b506ec054cd8489578b431319466abe4"
+  version "4.5.12"
+  sha256 "6d4f365dd04cf76c7303ac5682f99b37fe5962a1f327789fb2a77f019ff978e2"
 
   url "https://adedownload.adobe.com/pub/adobe/digitaleditions/ADE_#{version.major_minor}_Installer.dmg"
   name "Adobe Digital Editions"
