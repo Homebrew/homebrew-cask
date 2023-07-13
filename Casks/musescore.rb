@@ -1,8 +1,8 @@
 cask "musescore" do
-  version "4.0.2.230651546"
-  sha256 "1450b76ac12480fd2521058092ca16b925c475c86b8bffc65e92d52b73121689"
+  version "4.1.0.231921401"
+  sha256 "bb284659c29210bcfb5a25b164fa0427e2f956f9c7645694e9a42dc219a68479"
 
-  url "https://github.com/musescore/MuseScore/releases/download/v#{version.major_minor_patch.chomp(".0")}/MuseScore-#{version}.dmg",
+  url "https://github.com/musescore/MuseScore/releases/download/v#{version.major_minor_patch}/MuseScore-#{version}.dmg",
       verified: "github.com/musescore/MuseScore/"
   name "MuseScore"
   desc "Open-source music notation software"
