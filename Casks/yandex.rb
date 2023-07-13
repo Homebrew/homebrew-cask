@@ -1,7 +1,7 @@
 cask "yandex" do
   arch arm: "&arch=arm64"
 
-  version "23.5.1"
+  version "23.5.4"
   sha256 :no_check
 
   url "https://browser.yandex.ru/download/?os=mac#{arch}&full=1",
@@ -12,11 +12,11 @@ cask "yandex" do
 
   livecheck do
     url :url
-    strategy :header_match do |headers|
-      match = headers["location"].match(/(\d+)_(\d+)_(\d+)/i)
-      next if match.blank?
-
-      "#{match[1]}.#{match[2]}.#{match[3]}"
+    regex(/(\d+)_(\d+)_(\d+)/i)
+    strategy :header_match do |headers, regex|
+      headers["location"].scan(regex).map do |match|
+        "#{match[0]}.#{match[1]}.#{match[2]}"
+      end
     end
   end
 
