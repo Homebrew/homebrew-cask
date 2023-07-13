@@ -2,7 +2,8 @@ cask "go2shell" do
   version "2.5"
   sha256 :no_check
 
-  url "https://zipzapmac.com/download/Go2Shell"
+  url "https://zipzapmac.com/download/Go2Shell",
+      using: :homebrew_curl
   name "Go2Shell"
   desc "Opens a terminal window to the current directory in Finder"
   homepage "https://zipzapmac.com/go2shell"
