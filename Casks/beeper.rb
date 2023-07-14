@@ -1,7 +1,7 @@
 cask "beeper" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.63.16"
+  version "3.64.5"
   sha256 :no_check
 
   url "https://download.beeper.com/mac/dmg/#{arch}"
