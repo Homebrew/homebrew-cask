@@ -42,6 +42,11 @@ cask "google-cloud-sdk" do
          target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_google_cloud_sdk"
 
   preflight do
+    config_path = staged_path/"google-cloud-sdk/lib/googlecloudsdk/core/config.json"
+    config = File.read(config_path).tap do |contents|
+      contents.gsub!("\"disable_updater\": false", "\"disable_updater\": true")
+    end
+    File.write(config_path, config)
     FileUtils.cp_r staged_path/"google-cloud-sdk/.", google_cloud_sdk_root, remove_destination: true
     (staged_path/"google-cloud-sdk").rmtree
     FileUtils.ln_s google_cloud_sdk_root, (staged_path/"google-cloud-sdk")
