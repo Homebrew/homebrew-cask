@@ -11,7 +11,7 @@ cask "sf-symbols" do
   end
   on_catalina :or_newer do
     version "5"
-    sha256 "4e0ba15b0bf24e40f5e3a06c2a87a3bab42b723863366c46077b95e36cc094af"
+    sha256 "5979e68066a8227d08152c38e7bc2f2ed00a2e74c19792ff46ae733023e28e75"
 
     url "https://devimages-cdn.apple.com/design/resources/download/SF-Symbols-#{version}.dmg"
 
