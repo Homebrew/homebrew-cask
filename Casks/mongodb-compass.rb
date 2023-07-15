@@ -1,9 +1,9 @@
 cask "mongodb-compass" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.38.2"
-  sha256 arm:   "ae12c8bc727a2db5463f472493a20e2a6b8ae02c9da945701040ec5bbf9d6afe",
-         intel: "3ac839a5876d804bc30d962f670b5868e0bf703ecc33994c055966b953961781"
+  version "1.39.0"
+  sha256 arm:   "cda46fade0eecc3450848bb49e623b6cc8e37240b8abb1a28334c823cf798ab6",
+         intel: "acb24db7f31d00a2acd81185361bb6ebf8f676978f60d31d2b6a4ffa9d8e8412"
 
   url "https://downloads.mongodb.com/compass/mongodb-compass-#{version}-darwin-#{arch}.dmg"
   name "MongoDB Compass"
