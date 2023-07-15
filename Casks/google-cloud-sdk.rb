@@ -15,6 +15,7 @@ cask "google-cloud-sdk" do
     regex(/google-cloud-cli-(\d+(?:\.\d+)+)/i)
   end
 
+  auto_updates true
   depends_on formula: "python"
 
   google_cloud_sdk_root = "#{HOMEBREW_PREFIX}/share/google-cloud-sdk"
