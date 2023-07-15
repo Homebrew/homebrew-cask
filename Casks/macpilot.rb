@@ -16,7 +16,7 @@ cask "macpilot" do
     end
   end
   on_big_sur :or_newer do
-    version "14.0"
+    version "15.0"
     sha256 :no_check
 
     url "https://www.koingosw.com/products/macpilot/download/macpilot.dmg"
@@ -31,7 +31,7 @@ cask "macpilot" do
   desc "Graphical user interface for the command terminal"
   homepage "https://www.koingosw.com/products/macpilot/"
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :catalina"
 
   app "MacPilot.app"
 
