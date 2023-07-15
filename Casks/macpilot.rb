@@ -31,7 +31,7 @@ cask "macpilot" do
   desc "Graphical user interface for the command terminal"
   homepage "https://www.koingosw.com/products/macpilot/"
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :catalina"
 
   app "MacPilot.app"
 
