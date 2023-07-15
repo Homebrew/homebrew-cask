@@ -6,10 +6,10 @@ cask "singularity" do
       verified: "bitbucket.org/router_gray/singularityviewer/"
   name "Singularity Viewer"
   desc "Client for Second Life and OpenSim"
-  homepage "http://www.singularityviewer.org/"
+  homepage "https://www.singularityviewer.org/"
 
   livecheck do
-    url "http://www.singularityviewer.org/downloads"
+    url "https://www.singularityviewer.org/downloads"
     strategy :page_match do |page|
       v = page[/Singularity[._-]?Alpha[._-]?(\d+(?:_\d+)*)[._-]?x86_64\.dmg/i, 1]
       v.tr("_", ".")
