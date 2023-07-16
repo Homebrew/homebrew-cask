@@ -18,10 +18,10 @@ cask "librewolf" do
 
   livecheck do
     url "https://gitlab.com/api/v4/projects/44042130/releases"
-    regex(%r{/(\w+)/librewolf[._-](\d+(?:\.\d+)+)-(\d+)-macos-#{arch}-package\.dmg["']}i)
+    regex(/librewolf[._-]v?(\d+(?:\.\d+)+)[._-](\d+)[._-]macos[._-]#{arch}[._-]package\.dmg/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|
-        "#{match[1]},#{match[2]},#{match[0]}"
+        "#{match[0]},#{match[1]}"
       end
     end
   end
