@@ -5,7 +5,7 @@ cask "exactscan" do
   url "https://dl.exactcode.com/exactscan/ExactScan-#{version}.dmg",
       verified: "dl.exactcode.com/"
   name "ExactScan"
-  desc "Doceument scanner"
+  desc "Document scanner"
   homepage "https://exactscan.com/index.html"
 
   livecheck do
@@ -14,4 +14,10 @@ cask "exactscan" do
   end
 
   app "ExactScan.app"
+
+  zap trash: [
+    "~/Library/Caches/de.exactcode.ExactScan",
+    "~/Library/HTTPStorages/de.exactcode.ExactScan",
+    "~/Library/Preferences/de.exactcode.ExactScan.plist",
+  ]
 end
