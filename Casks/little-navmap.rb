@@ -1,6 +1,6 @@
 cask "little-navmap" do
-  version "2.8.11"
-  sha256 "659cd69588ffe57af0a075970301558e4470fc7995bb33c359d440478504a7af"
+  version "2.8.12"
+  sha256 "9bba91375d205326ca3cd06814d68958683adde24087b7afb4476bb811db4d66"
 
   url "https://github.com/albar965/littlenavmap/releases/download/v#{version}/LittleNavmap-macOS-#{version}.zip",
       verified: "github.com/albar965/littlenavmap/"
