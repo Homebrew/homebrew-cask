@@ -1,6 +1,6 @@
 cask "pym-player" do
-  version "8.1.0,8B95"
-  sha256 "48a4c341c7fb0db279161618f857da61afd23a1a83fec4c9690b74dace209e92"
+  version "8.1.1,8B124"
+  sha256 "ec77bd9323b426c089dbbf99221a2ec13403b3fc7c586013f4c6aa93ac65a8db"
 
   url "https://pym.uce.pl/download/pliki/PYMPlayer#{version.csv.second}.dmg"
   name "PYM Player"
