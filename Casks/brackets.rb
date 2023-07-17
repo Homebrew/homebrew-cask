@@ -5,7 +5,7 @@ cask "brackets" do
   url "https://github.com/brackets-cont/brackets/releases/download/v#{version}/brackets.#{version}.dmg",
       verified: "github.com/brackets-cont/brackets/"
   name "Brackets"
-  desc "Open-source code editor for web-developement"
+  desc "Open-source code editor for web-development"
   homepage "https://brackets.io/"
 
   livecheck do
