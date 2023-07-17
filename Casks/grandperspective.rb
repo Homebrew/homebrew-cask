@@ -8,8 +8,8 @@ cask "grandperspective" do
     end
   end
   on_mojave :or_newer do
-    version "3.4"
-    sha256 "34fe3a0b0411bc7147b2ab8e9390f0fc56ee717cfb075f6c8145aa93d012cbd9"
+    version "3.4.1"
+    sha256 "893b6f3fa88e35c7c3589dea321f9350930dfb7b29c0243fe52f80df4ec12423"
   end
 
   url "https://downloads.sourceforge.net/grandperspectiv/grandperspective/#{version}/GrandPerspective-#{version.dots_to_underscores}.dmg",
