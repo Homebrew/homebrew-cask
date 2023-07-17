@@ -1,6 +1,5 @@
 cask "glaze" do
-  arch arm:   "m1",
-       intel: "Intel"
+  arch arm: "m1", intel: "Intel"
 
   version "1.0.1"
   sha256 arm:   "1d1bf28c09e3674c3682a9bbe0c4de639469afcf41ce29420424e7b8809ec95f",
@@ -17,8 +16,7 @@ cask "glaze" do
 
   livecheck do
     url "https://glaze.cs.uchicago.edu/downloads.html"
-    strategy :page_match
-    regex(/Glaze\s+(\d+(?:\.\d+)*),\s+MacOS/i)
+    regex(/Glaze[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
   app "Glaze.app"
