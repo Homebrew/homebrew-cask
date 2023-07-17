@@ -16,4 +16,11 @@ cask "ghost-browser" do
   end
 
   app "Ghost Browser.app"
+
+  zap trash: [
+    "~/Library/Application Support/GhostBrowser",
+    "~/Library/Caches/GhostBrowser",
+    "~/Library/Preferences/com.ghostbrowser.gb1.plist",
+    "~/Library/Saved Application State/com.ghostbrowser.gb1.savedState",
+  ]
 end
