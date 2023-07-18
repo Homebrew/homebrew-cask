@@ -1,6 +1,6 @@
 cask "rustdesk" do
-  version "1.2.0"
-  sha256 "6a7b7e54bde69dc8bf40b928edb47bebceded8ba04f4a77f9ea49dd45389fcba"
+  version "1.2.1"
+  sha256 "e61daa5ff0ca4b28ced6a931c57190447b4206723e65398d387cdbae6ec0e934"
 
   url "https://github.com/rustdesk/rustdesk/releases/download/#{version}/rustdesk-#{version}-x86_64.dmg",
       verified: "github.com/rustdesk/rustdesk/"
