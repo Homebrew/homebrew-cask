@@ -13,11 +13,14 @@ cask "fedistar" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :ventura"
+
   app "fedistar.app"
 
   zap trash: [
-    "~/Library/Application Scripts/HB4N6B2YVM.net.fedistar",
+    "~/Library/Application Scripts/*.net.fedistar",
     "~/Library/Application Scripts/net.fedistar",
     "~/Library/Containers/net.fedistar",
+    "~/Library/Group Containers/*.net.fedistar",
   ]
 end
