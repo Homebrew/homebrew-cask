@@ -16,4 +16,6 @@ cask "dust3d" do
   end
 
   app "dust3d-#{version}.app"
+
+  zap trash: "~/Library/Saved Application State/com.yourcompany.dust3d.savedState"
 end
