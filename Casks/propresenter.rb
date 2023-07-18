@@ -18,6 +18,7 @@ cask "propresenter" do
     end
   end
 
+  auto_updates true
   conflicts_with cask: "homebrew/cask-versions/propresenter-beta"
   depends_on macos: ">= :mojave"
 
