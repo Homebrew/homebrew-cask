@@ -15,4 +15,6 @@ cask "cursorsense" do
   depends_on macos: ">= :sierra"
 
   prefpane "CursorSense.prefPane"
+
+  # No zap stanza required
 end
