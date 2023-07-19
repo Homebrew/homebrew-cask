@@ -13,4 +13,11 @@ cask "data-science-studio" do
   end
 
   app "DataScienceStudio.app"
+
+  zap trash: [
+    "~/Library/Application Support/DataikuLauncher",
+    "~/Library/DataScienceStudio",
+    "~/Library/Preferences/com.dataiku.datasciencestudio.plist",
+    "~/Library/Saved Application State/com.dataiku.datasciencestudio.savedState",
+  ]
 end
