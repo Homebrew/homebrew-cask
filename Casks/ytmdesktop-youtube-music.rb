@@ -8,6 +8,8 @@ cask "ytmdesktop-youtube-music" do
   desc "YouTube music client"
   homepage "https://ytmdesktop.app/"
 
+  container nested: "YouTube Music Desktop App-#{version}.dmg"
+
   app "YouTube Music Desktop App.app"
 
   zap trash: [
