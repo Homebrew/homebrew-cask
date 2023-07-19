@@ -8,11 +8,6 @@ cask "ytmdesktop-youtube-music" do
   desc "YouTube music client"
   homepage "https://ytmdesktop.app/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   container nested: "YouTube Music Desktop App-#{version}.dmg"
 
   app "YouTube Music Desktop App.app"
