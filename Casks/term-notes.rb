@@ -11,20 +11,13 @@ cask "term-notes" do
   depends_on formula: "vim"
   depends_on formula: "nano"
 
-  def install
-    bin.install "term_notes"
-  end
+  binary "TermNotes-#{version}/term_notes", target: "term-notes"
 
   caveats <<~EOS
     'Term Notes' has been installed!
 
-    To run the program, use the command:
-      term-notes
+    You can run the program using 'term-notes'.
 
     Enjoy taking notes with 'Term Notes'!
   EOS
-
-  test do
-    # Add your test logic here
-  end
 end
