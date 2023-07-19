@@ -36,12 +36,16 @@ cask "proxyman" do
     "~/.proxyman*",
     "~/Library/Application Support/com.proxyman",
     "~/Library/Application Support/com.proxyman.NSProxy",
+    "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.proxyman.NSProxy",
     "~/Library/Caches/com.proxyman.NSProxy",
     "~/Library/Caches/Proxyman",
     "~/Library/Cookies/com.proxyman.binarycookies",
     "~/Library/Cookies/com.proxyman.NSProxy.binarycookies",
+    "~/Library/HTTPStorages/com.proxyman.NSProxy",
     "~/Library/Preferences/com.proxyman.NSProxy.plist",
+    "~/Library/Preferences/com.proxyman.iconappmanager.userdefaults.plist",
     "~/Library/Preferences/com.proxyman.plist",
     "~/Library/Saved Application State/com.proxyman.NSProxy.savedState",
+    "~/Library/WebKit/com.proxyman.NSProxy",
   ]
 end
