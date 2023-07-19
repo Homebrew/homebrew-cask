@@ -12,8 +12,8 @@ cask "graalvm-jdk" do
   homepage "https://www.graalvm.org/"
 
   livecheck do
-    url "https://docs.oracle.com/en/graalvm/jdk/20/docs/release-notes/"
-    regex(/Oracle GraalVM for JDK\s+(\d+(?:\.\d+)+)/)
+    url "https://www.oracle.com/java/technologies/downloads/"
+    regex(/GraalVM for JDK\s+(\d+(?:\.\d+)+)/)
   end
 
   artifact "graalvm-jdk-#{version}+9.1", target: "/Library/Java/JavaVirtualMachines/graalvm-#{version.major}.jdk"
