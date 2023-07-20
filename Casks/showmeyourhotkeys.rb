@@ -15,4 +15,10 @@ cask "showmeyourhotkeys" do
   depends_on macos: ">= :big_sur"
 
   app "ShowMeYourHotKeys.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.moxadventu.ShowMeYourHotKeys",
+    "~/Library/Caches/com.moxadventu.ShowMeYourHotKeys",
+    "~/Library/Preferences/com.moxadventu.ShowMeYourHotKeys.plist",
+  ]
 end
