@@ -9,7 +9,7 @@ cask "pulseview" do
 
   livecheck do
     url "https://sigrok.org/download/binary/pulseview/"
-    regex(%r{href=.*PulseView-(\d+(?:\.\d+)+)\.dmg}i)
+    regex(/href=.*PulseView-(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "PulseView.app"
