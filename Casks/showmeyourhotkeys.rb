@@ -1,6 +1,6 @@
 cask "showmeyourhotkeys" do
   version "1.7,20"
-  sha256 :no_check
+  sha256 "4cca26821cd0d715f1b90ea34e886b2814361b932ac23a502b31e418a6d55c4e"
 
   url "https://showmeyourhotkeys.moxadventu.com/app/ShowMeYourHotKeys.zip"
   name "showmeyourhotkeys"
