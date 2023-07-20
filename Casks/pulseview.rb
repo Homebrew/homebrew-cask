@@ -7,5 +7,10 @@ cask "pulseview" do
   desc "Qt based logic analyzer, oscilloscope and MSO GUI for sigrok"
   homepage "https://sigrok.org/wiki/PulseView"
 
+  livecheck do
+    url "https://sigrok.org/download/binary/pulseview/"
+    regex(%r{href=.*PulseView-(\d+(?:\.\d+)+)\.dmg}i)
+  end
+
   app "PulseView.app"
 end
