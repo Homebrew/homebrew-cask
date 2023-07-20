@@ -13,10 +13,12 @@ cask "graalvm-jdk" do
 
   livecheck do
     url "https://www.oracle.com/java/technologies/downloads/"
-    regex(/GraalVM for JDK\s+(\d+(?:\.\d+)+)/)
+    regex(/graalvm\s+for\s+jdk\s+(\d+(?:\.\d+)+)/i)
   end
 
   artifact "graalvm-jdk-#{version}+9.1", target: "/Library/Java/JavaVirtualMachines/graalvm-#{version.major}.jdk"
+
+  # No zap stanza required
 
   caveats do
     license "https://www.oracle.com/downloads/licenses/graal-free-license.html"
