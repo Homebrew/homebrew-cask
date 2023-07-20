@@ -9,7 +9,7 @@ cask "showmeyourhotkeys" do
 
   livecheck do
     url "https://showmeyourhotkeys.moxadventu.com/update/appcast.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle
   end
 
   depends_on macos: ">= :big_sur"
