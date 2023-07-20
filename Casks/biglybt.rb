@@ -24,7 +24,8 @@ cask "biglybt" do
                      "-VcreateDesktopLinkAction$Boolean=false",
                      "-VaddToDockAction$Boolean=false"
                    ],
-                   print_stderr: false
+                   print_stderr: false,
+                   sudo:         true
   end
 
   uninstall delete: "#{appdir}/BiglyBT"
