@@ -12,6 +12,8 @@ cask "midi-monitor" do
     strategy :sparkle
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "MIDI Monitor.app"
 
   uninstall quit: [
