@@ -2,15 +2,15 @@ cask "tencent-meeting" do
   arch arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "3.18.3.435,b267ef4f7f16a42888816148d9d066af"
-    sha256 "036ebe0bcbb9b2acd45a8c8417a954fe75a945313dc95c80370d97da78496565"
+    version "3.18.5.455,5998fff518fdeff44fc7b8f1936e9582"
+    sha256 "fc2ededbfd1addd4e3c1aa64a440b30b8a036f33cf5bf6083fbe64c53c316ad7"
   end
   on_intel do
-    version "3.18.3.435,41a1a1d5148be5f084a55b856417a84e"
-    sha256 "04f35a7e6976b39150f6e8f8abb91abcdcef0ca5f4eb15ab7d398209dbf7fd19"
+    version "3.18.5.455,928a3af13bb2497bfa63bfc129835eda"
+    sha256 "2647c3eee7799e2d310fcca62a4b8f86e846c110d4aac8a84f79e9b73a1731c1"
   end
 
-  url "https://updatecdn.meeting.qq.com/cos/#{version.csv.second}/TencentMeeting_0300000000_#{version.csv.first}.publish.#{arch}.officialwebsite.dmg",
+  url "https://updatecdn.meeting.qq.com/cos/#{version.csv.second}/TencentMeeting_0300000000_#{version.csv.first}.publish.#{arch}.dmg",
       verified: "updatecdn.meeting.qq.com/cos/"
   name "Tencent Meeting"
   name "腾讯会议"
@@ -18,10 +18,13 @@ cask "tencent-meeting" do
   homepage "https://meeting.tencent.com/"
 
   livecheck do
-    url %Q(https://meeting.tencent.com/web-service/query-download-info?q=[{"package-type":"app","channel":"0300000000","platform":"mac","arch":"#{arch}"}]&nonce=0000000000000000)
+    url "https://meeting.tencent.com/web-service/query-app-update-info/?from=2&app_publish_channel=TencentInside&sdk_id=0300000000&os=mac&arch=#{arch}&appver=#{version.csv.first}"
     regex(%r{/cos/(\h+)/TencentMeeting[._-].+?v?(\d+(?:\.\d+)+)})
     strategy :json do |json, regex|
-      json["info-list"]&.map do |item|
+      item = json["target"]
+      if item.nil?
+        version
+      else
         match = item["url"]&.match(regex)
         next if match.blank?
 
@@ -40,13 +43,12 @@ cask "tencent-meeting" do
   zap trash: [
     "~/Library/Application Scripts/FN2V63AD2J.com.tencent.meeting",
     "~/Library/Application Scripts/com.tencent.meeting",
-    "~/Library/Caches/com.tencent.meeting",
-    "~/Library/Containers/com.tencent.meeting",
+    "~/Library/Caches/com.tencent.meeting*",
+    "~/Library/Containers/com.tencent.meeting*",
     "~/Library/Containers/com.tencent.wemeet.FileDelta",
     "~/Library/Group Containers/FN2V63AD2J.com.tencent.meeting",
-    "~/Library/HTTPStorages/com.tencent.meeting",
-    "~/Library/HTTPStorages/com.tencent.meeting.binarycookies",
-    "~/Library/Preferences/com.tencent.meeting.plist",
+    "~/Library/HTTPStorages/com.tencent.meeting*",
+    "~/Library/Preferences/com.tencent.meeting*.plist",
     "~/Library/Saved Application State/com.tencent.meeting.savedState",
     "~/Library/WebKit/com.tencent.meeting",
   ]
