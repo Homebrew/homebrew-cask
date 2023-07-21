@@ -17,9 +17,7 @@ cask "herd" do
 
   app "Herd.app"
 
-  uninstall delete: [
-              "/etc/sudoers.d/herd",
-            ],
+  uninstall delete: "/etc/sudoers.d/herd",
             quit:   "Herd.app"
 
   zap trash: [
