@@ -1,6 +1,6 @@
 cask "prezi-video" do
-  version "2.19.0"
-  sha256 "b3c80544e2946328beb0bf9235e92d6ce104de9576bd9b4eb7c575d93d274a78"
+  version "2.20.0"
+  sha256 "3d0bdb738c40c456b4ba64c4d158923ba9f568924625f62730b5b568b8404a14"
 
   url "https://desktopassets.prezi.com/mac/prezi-video/releases/Prezi_Video_#{version}.zip"
   name "Prezi Video"
