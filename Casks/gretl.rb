@@ -17,4 +17,10 @@ cask "gretl" do
   pkg "gretl-#{version}-macos-intel.pkg"
 
   uninstall pkgutil: "net.sourceforge.gretl.base.pkg"
+
+  zap trash: [
+        "~/.gretl",
+        "~/Library/Application Support/gretl",
+      ],
+      rmdir: "~/gretl"
 end
