@@ -21,15 +21,10 @@ cask "tencent-meeting" do
     url "https://meeting.tencent.com/web-service/query-app-update-info/?from=2&app_publish_channel=TencentInside&sdk_id=0300000000&os=mac&arch=#{arch}&appver=#{version.csv.first}"
     regex(%r{/cos/(\h+)/TencentMeeting[._-].+?v?(\d+(?:\.\d+)+)})
     strategy :json do |json, regex|
-      item = json["target"]
-      if item.nil?
-        version
-      else
-        match = item["url"]&.match(regex)
-        next if match.blank?
+      match = json.dig("target", "url")&.match(regex)
+      next version if match.blank?
 
-        "#{match[2]},#{match[1]}"
-      end
+      "#{match[2]},#{match[1]}"
     end
   end
 
