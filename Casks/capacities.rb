@@ -1,9 +1,9 @@
 cask "capacities" do
   arch arm: "-arm64"
 
-  version "1.25.40"
-  sha256 arm:   "5c7ba615d90baa7811374250f7ef870c095666c9a0f2fa0ae65c6721e340672d",
-         intel: "e421201e7443d13402ec094c7ace57fc18f347cf8d88df9f1f95d97733bacc73"
+  version "1.26.1"
+  sha256 arm:   "4d848e4151cd93df7df46da4e940f504af5361674133e3942fb36781ce3d3b5a",
+         intel: "b67a0b973e3e74d173b07aad3d08f979379053c2f716827348416fe082c6bb8d"
 
   url "https://capacities-frontend-app.s3.eu-central-1.amazonaws.com/Capacities-#{version}#{arch}.dmg",
       verified: "capacities-frontend-app.s3.eu-central-1.amazonaws.com/"
