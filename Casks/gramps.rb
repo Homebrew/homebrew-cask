@@ -30,4 +30,10 @@ cask "gramps" do
   end
 
   app "Gramps.app"
+
+  zap trash: [
+    "~/Library/Application Support/gramps",
+    "~/Library/Preferences/org.gramps-project.gramps.plist",
+    "~/Library/Saved Application State/org.gramps-project.gramps.savedState",
+  ]
 end
