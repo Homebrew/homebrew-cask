@@ -5,14 +5,12 @@ cask "keyclu" do
   url "https://github.com/Anze/KeyCluCask/releases/download/v#{version}/KeyClu.zip",
       verified: "github.com/Anze/KeyCluCask/"
   name "KeyClu"
-  desc "Simple and handy overview of all shortcuts for any application you have"
+  desc "Find shortcuts for any installed application"
   homepage "https://sergii.tatarenkov.name/keyclu/support/"
 
   depends_on macos: ">= :big_sur"
 
   app "KeyClu.app"
 
-  zap trash: [
-    "~/Library/Containers/com.0804Team.KeyClu",
-  ]
+  zap trash: "~/Library/Containers/com.0804Team.KeyClu"
 end
