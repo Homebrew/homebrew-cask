@@ -12,7 +12,7 @@ cask "visual-studio-code" do
   homepage "https://code.visualstudio.com/"
 
   livecheck do
-    url "https://update.code.visualstudio.com/api/update/#{arch}/stable/VERSION"
+    url "https://update.code.visualstudio.com/api/update/#{arch}/stable/latest"
     regex(/"productVersion"\s*:\s*"(\d+(:?\.\d+)+)"/i)
   end
 
