@@ -1,9 +1,9 @@
 cask "plexamp" do
   arch arm: "-arm64"
 
-  version "4.8.0"
-  sha256 arm:   "898e335e27870fc724c88d0db131d561d6441a420625ecc6f8ac117a65e2bcd9",
-         intel: "ccd9ca9941de9f89d6252a4e85f9d9a251dd313ecadf02e5d33d641b3ade076f"
+  version "4.8.1"
+  sha256 arm:   "edbd87836d4dbed4969406296177d246563ec0b083b0de3bb045a3934a03aba7",
+         intel: "6c049d23a4b5d58b3e55018b8b498ed1754826ee00bf99ddc0bc0ba8eef4173e"
 
   url "https://plexamp.plex.tv/plexamp.plex.tv/desktop/Plexamp-#{version}#{arch}.dmg",
       verified: "plexamp.plex.tv/"
