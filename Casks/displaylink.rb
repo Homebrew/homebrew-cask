@@ -77,6 +77,6 @@ cask "displaylink" do
 
   caveats do
     reboot
-    license "https://www.synaptics.com/products/displaylink-graphics/downloads/macos-#{version.csv.first}"
+    license "https://www.synaptics.com/products/displaylink-graphics/downloads/macos-connectivity-#{version.csv.first}"
   end
 end
