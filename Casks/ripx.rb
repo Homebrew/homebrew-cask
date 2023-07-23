@@ -22,4 +22,6 @@ cask "ripx" do
               "com.hitnmix.infinity.linkara.pkg",
             ],
             delete:  "/Applications/RipX.app"
+
+  zap trash: "~/Library/Preferences/com.hitnmix.HitnMix.plist"
 end
