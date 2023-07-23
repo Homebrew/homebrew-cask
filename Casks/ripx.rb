@@ -13,15 +13,20 @@ cask "ripx" do
     regex(/v?(\d+(?:\.\d+)+)\s*changes/i)
   end
 
+  depends_on macos: ">= :sierra"
+
   pkg "RipX.pkg"
 
   uninstall pkgutil: [
-              "com.hitnmix.HitnMix",
               "com.hitnmix.HitnMix.pkg",
               "com.hitnmix.infinity.link.pkg",
               "com.hitnmix.infinity.linkara.pkg",
             ],
-            delete:  "/Applications/RipX.app"
+            delete:  [
+              "/Applications/RipX.app",
+              "/Library/Application Support/Avis/Audio/Plugins/RipLink.aaxplugin",
+              "/Library/Audio/Plug-Ins/VST3/RipLink.vst3",
+            ]
 
   zap trash: "~/Library/Preferences/com.hitnmix.HitnMix.plist"
 end
