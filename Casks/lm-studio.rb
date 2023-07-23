@@ -24,6 +24,9 @@ cask "lm-studio" do
 
   zap trash: [
     "~/Library/Application Support/LM Studio",
+    "~/Library/Caches/ai.elementlabs.lmstudio",
+    "~/Library/Caches/ai.elementlabs.lmstudio.ShipIt",
+    "~/Library/HTTPStorages/ai.elementlabs.lmstudio",
     "~/Library/Logs/LM Studio",
     "~/Library/Preferences/ai.elementlabs.lmstudio.plist",
     "~/Library/Saved Application State/ai.elementlabs.lmstudio.savedState",
