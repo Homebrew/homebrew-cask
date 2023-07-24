@@ -1,5 +1,5 @@
 cask "mpv" do
-  on_big_sur :or_older do
+  on_mojave :or_older do
     version "0.35.0"
     sha256 "376415c787aef391a3927cdecd5bb0dac9f21ef9d7742516b8cd8d8ce502e7b6"
 
@@ -7,7 +7,7 @@ cask "mpv" do
       skip "Legacy version"
     end
   end
-  on_monterey :or_newer do
+  on_big_sur :or_newer do
     version "0.36.0"
     sha256 "cf0511aa6a26d51ac581535e69b96327850b9aca2750a55097cbe09eca2afb0e"
 
