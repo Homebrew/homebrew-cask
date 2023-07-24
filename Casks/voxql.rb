@@ -7,4 +7,6 @@ cask "voxql" do
   homepage "https://github.com/heptal/VoxQL"
 
   qlplugin "VoxQL.qlgenerator"
+
+  # No zap stanza required
 end
