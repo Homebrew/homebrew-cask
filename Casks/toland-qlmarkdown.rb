@@ -9,6 +9,8 @@ cask "toland-qlmarkdown" do
 
   qlplugin "QLMarkdown.qlgenerator"
 
+  # No zap stanza required
+
   caveats do
     discontinued
   end
