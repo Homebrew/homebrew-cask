@@ -8,8 +8,8 @@ cask "secretive" do
     end
   end
   on_big_sur :or_newer do
-    version "2.3.0"
-    sha256 "5fcfb9e22ae05fa61971b7c57089f70d36d1673e00dd395e3e859e58521282a6"
+    version "2.3.1"
+    sha256 "493a72362898b4480baa70f115d9515b41b2af4a503caf00277e2bc3824b0bbd"
 
     livecheck do
       url :url
