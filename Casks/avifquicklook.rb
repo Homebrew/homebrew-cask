@@ -8,4 +8,6 @@ cask "avifquicklook" do
   homepage "https://github.com/dreampiggy/AVIFQuickLook"
 
   qlplugin "AVIFQuickLook.qlgenerator"
+
+  # No zap stanza required
 end
