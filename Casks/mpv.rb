@@ -8,8 +8,8 @@ cask "mpv" do
     end
   end
   on_monterey :or_newer do
-    version "0.35.1"
-    sha256 "efec391acfb4445f89ab2af2c02199d883d47e7f85013217be158f6b07bbc12c"
+    version "0.36.0"
+    sha256 "cf0511aa6a26d51ac581535e69b96327850b9aca2750a55097cbe09eca2afb0e"
 
     livecheck do
       url "https://laboratory.stolendata.net/~djinn/mpv_osx/"
