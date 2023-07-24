@@ -9,7 +9,7 @@ cask "mactracker" do
 
   livecheck do
     url "https://update.mactracker.ca/appcast-b.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle, &:version
   end
 
   auto_updates true
