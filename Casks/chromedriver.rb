@@ -21,7 +21,7 @@ cask "chromedriver" do
 
   conflicts_with cask: "homebrew/cask-versions/chromedriver-beta"
 
-  binary "chromedriver"
+  binary "chromedriver-mac-#{arch}/chromedriver"
 
   # No zap stanza required
 end
