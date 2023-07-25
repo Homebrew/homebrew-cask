@@ -1,6 +1,6 @@
 cask "keyclu" do
-  version "0.7"
-  sha256 "e7c935ffc69076f00daae2c3f8b77688aa3b84950e23d2fee0a441247c9995d9"
+  version "0.8"
+  sha256 "d3ddf7c68099d64f07ddd0360f14fd844eb4aac8c957b6e3112553195f4f28c3"
 
   url "https://github.com/Anze/KeyCluCask/releases/download/v#{version}/KeyClu.zip",
       verified: "github.com/Anze/KeyCluCask/"
