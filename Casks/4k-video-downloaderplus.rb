@@ -20,5 +20,7 @@ cask "4k-video-downloaderplus" do
     "~/Library/Application Support/4kdownload.com/4K Video Downloader+",
     "~/Library/Preferences/com.4kdownload.4K Video Downloader+.plist",
     "~/Library/Preferences/com.4kdownload.ApplicationDirectories.plist",
+    "~/Library/Preferences/com.openmedia.4kvideodownloaderplus.plist",
+    "~/Library/Saved Application State/com.openmedia.4kvideodownloaderplus.savedState",
   ]
 end
