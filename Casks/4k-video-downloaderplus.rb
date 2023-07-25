@@ -5,10 +5,10 @@ cask "4k-video-downloaderplus" do
   url "https://dl.4kdownload.com/app/4kvideodownloaderplus_#{version}.dmg"
   name "4K Video Downloader Plus"
   desc "Free video downloader"
-  homepage "https://www.4kdownload.com/products/product-videodownloader"
+  homepage "https://www.4kdownload.com/products/videodownloader"
 
   livecheck do
-    url "https://www.4kdownload.com/download"
+    url "https://www.4kdownload.com/downloads"
     regex(%r{href=.*?/4kvideodownloaderplus[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
