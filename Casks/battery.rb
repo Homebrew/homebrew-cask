@@ -9,7 +9,7 @@ cask "battery" do
 
   depends_on arch: :arm64
 
-  app "Battery.app"
+  app "battery.app"
 
   uninstall delete: "/usr/local/bin/smc"
 
