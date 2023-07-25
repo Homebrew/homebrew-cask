@@ -17,8 +17,8 @@ cask "4k-video-downloaderplus" do
   app "4K Video Downloader+.app"
 
   zap trash: [
-    "~/Library/Application Support/4kdownload.com/4K Video Downloader",
-    "~/Library/Preferences/com.4kdownload.4K Video Downloader.plist",
+    "~/Library/Application Support/4kdownload.com/4K Video Downloader+",
+    "~/Library/Preferences/com.4kdownload.4K Video Downloader+.plist",
     "~/Library/Preferences/com.4kdownload.ApplicationDirectories.plist",
   ]
 end
