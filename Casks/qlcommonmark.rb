@@ -4,7 +4,10 @@ cask "qlcommonmark" do
 
   url "https://github.com/digitalmoksha/QLCommonMark/releases/download/v#{version}/QLCommonMark.qlgenerator.zip"
   name "QLCommonMark"
+  desc "QuickLook plugin for CommonMark and Markdown"
   homepage "https://github.com/digitalmoksha/QLCommonMark/"
 
   qlplugin "QLCommonMark.qlgenerator"
+
+  # No zap stanza required
 end

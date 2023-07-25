@@ -4,9 +4,12 @@ cask "jupyter-notebook-ql" do
 
   url "https://github.com/jendas1/jupyter-notebook-quick-look/releases/download/v#{version}/jupyter-notebook-quick-look.qlgenerator.zip"
   name "Jupyter Notebook Quick Look"
+  desc "QuickLook plugin for Jupyter notebooks"
   homepage "https://github.com/jendas1/jupyter-notebook-quick-look"
 
   qlplugin "jupyter-notebook-quick-look.qlgenerator"
+
+  # No zap stanza required
 
   caveats <<~EOS
     You need python 3 and the nbconvert module to use this plugin.
