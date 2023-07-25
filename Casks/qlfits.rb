@@ -4,6 +4,7 @@ cask "qlfits" do
 
   url "https://github.com/onekiloparsec/QLFits/releases/download/#{version}/QLFits#{version.major}.qlgenerator.zip"
   name "QLFits"
+  desc "QuickLook plugin to view FITS files"
   homepage "https://github.com/onekiloparsec/QLFits"
 
   qlplugin "QLFits#{version.major}.qlgenerator"
