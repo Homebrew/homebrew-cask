@@ -4,6 +4,7 @@ cask "idisplay" do
 
   url "https://getidisplay.com/downloads/iDisplayMac.dmg"
   name "iDisplay"
+  desc "Use a tablet as an extra screen"
   homepage "https://getidisplay.com/"
 
   livecheck do
