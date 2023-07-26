@@ -4,7 +4,7 @@ cask "idisplay" do
 
   url "https://getidisplay.com/downloads/iDisplayMac.dmg"
   name "iDisplay"
-  homepage "http://getidisplay.com/"
+  homepage "https://getidisplay.com/"
 
   livecheck do
     url :url
