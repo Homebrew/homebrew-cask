@@ -22,4 +22,5 @@ cask "google-chrome-for-testing" do
   depends_on macos: ">= :high_sierra"
 
   app "chrome-mac-#{arch}/Google Chrome for Testing.app"
+  binary "#{appdir}/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing"
 end
