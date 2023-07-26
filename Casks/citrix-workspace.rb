@@ -1,6 +1,6 @@
 cask "citrix-workspace" do
-  version "23.06.0.3"
-  sha256 "fc3b6860b7b9597f1b6afd69b1ffd8236422fa2c8b52e3b8f0ae53782b84d478"
+  version "23.07.0.64"
+  sha256 "1246ab915ab42ca6bf5387c69700366bdb75eaf96eeb81e8b27705836169c850"
 
   url "https://downloadplugins.citrix.com/ReceiverUpdates/Prod/Receiver/Mac/CitrixWorkspaceAppUniversal#{version}.pkg"
   name "Citrix Workspace"
@@ -28,26 +28,30 @@ cask "citrix-workspace" do
             ],
             quit:      [
               "Citrix.ServiceRecords",
+              "com.citrix.CitrixReceiverLauncher",
               "com.citrix.receiver.nomas",
               "com.citrix.ReceiverHelper",
             ],
             pkgutil:   "com.citrix.ICAClient"
 
   zap trash: [
+    "~/Library/Application Support/Citrix Receiver",
+    "~/Library/Application Support/Citrix Workspace",
+    "~/Library/Application Support/Citrix",
     "~/Library/Application Support/com.citrix.CitrixReceiverLauncher",
     "~/Library/Application Support/com.citrix.HdxRtcEngine",
-    "~/Library/Application Support/com.citrix.receiver.helper",
-    "~/Library/Application Support/com.citrix.receiver.icaviewer.mac",
-    "~/Library/Application Support/com.citrix.receiver.nomas",
+    "~/Library/Application Support/com.citrix.receiver*",
     "~/Library/Application Support/com.citrix.ReceiverUpdater",
+    "~/Library/Caches/com.citrix.receiver*",
+    "~/Library/HTTPStorages/com.citrix.CitrixReceiverLauncher",
+    "~/Library/HTTPStorages/com.citrix.receiver*",
     "~/Library/Logs/Citrix Workspace",
     "~/Library/Preferences/com.citrix.AuthManager.plist",
     "~/Library/Preferences/com.citrix.CitrixReceiverLauncher.plist",
     "~/Library/Preferences/com.citrix.HdxRtcEngine.plist",
-    "~/Library/Preferences/com.citrix.receiver.helper.plist",
-    "~/Library/Preferences/com.citrix.receiver.icaviewer.mac.plist",
-    "~/Library/Preferences/com.citrix.receiver.nomas.plist",
-    "~/Library/Preferences/com.citrix.ReceiverFTU.AccountRecords.plist",
-    "~/Library/Preferences/com.citrix.ReceiverUpdater.plist",
+    "~/Library/Preferences/com.citrix.receiver*.plist",
+    "~/Library/Preferences/com.citrix.Receiver*.plist",
+    "~/Library/Saved Application State/com.citrix.receiver.nomas.savedState",
+    "~/Library/WebKit/com.citrix.receiver.nomas",
   ]
 end
