@@ -1,4 +1,4 @@
-cask "sing-box" do
+cask "sfm" do
   version "1.3.4"
   sha256 "751456e146155f959568403ffd186524e6770e5e19f0780fc97ed664bcfc7122"
 
