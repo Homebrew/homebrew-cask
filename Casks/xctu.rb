@@ -1,6 +1,6 @@
 cask "xctu" do
-  version "6.5.12,658"
-  sha256 "8cb7e522a6f9e0724774bcea1480c00d1ea94df80afccdb18ff054e88d4c073a"
+  version "6.5.13,658"
+  sha256 "d6822decbf57b688ac423e87e2c1a10872a40978ff60812dba44d6bc10729ec3"
 
   url "https://hub.digi.com/dp/path=/support/asset/xctu-v-#{version.csv.second}-macos-x/"
   name "XCTU"
