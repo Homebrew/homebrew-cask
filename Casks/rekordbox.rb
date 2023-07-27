@@ -1,3 +1,6 @@
+# typed: true
+# frozen_string_literal: true
+
 cask "rekordbox" do
   version "6.7.4,20230726131759"
   sha256 "bec2a3dc1af56ae6d997ea1219188c385db82ab2f6bd7fa534e75e1d9564714f"
