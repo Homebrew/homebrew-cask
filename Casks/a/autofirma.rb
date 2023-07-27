@@ -10,7 +10,7 @@ cask "autofirma" do
       verified: "estaticos.redsara.es/comunes/autofirma/"
   name "AutoFirma"
   desc "Digital signature editor and validator"
-  homepage "https://firmaelectronica.gob.es/Home/Descargas.htm"
+  homepage "https://firmaelectronica.gob.es/Home/Descargas.html"
 
   livecheck do
     url :url
@@ -19,21 +19,17 @@ cask "autofirma" do
 
   pkg "AutoFirma_#{version.dots_to_underscores}_#{pkg_arch}.pkg"
 
-  # remove 'Autofirma ROOT' and '127.0.0.1' certificates from keychain (these were installed by pkg)
+  # remove 'Autofirma ROOT' certificates from keychain
   uninstall_postflight do
-    system_command "/usr/bin/security",
-                   args: [
-                     "delete-certificate",
-                     "-c", "AutoFirma ROOT"
-                   ],
-                   sudo: true
-
-    system_command "/usr/bin/security",
-                   args: [
-                     "delete-certificate",
-                     "-c", "127.0.0.1"
-                   ],
-                   sudo: true
+    stdout, * = system_command "/usr/bin/security",
+                               args: ["find-certificate", "-a", "-c", "AutoFirma ROOT", "-Z"],
+                               sudo: true
+    hashes = stdout.lines.grep(/^SHA-256 hash:/) { |l| l.split(":").second.strip }
+    hashes.each do |h|
+      system_command "/usr/bin/security",
+                     args: ["delete-certificate", "-Z", h],
+                     sudo: true
+    end
   end
 
   uninstall pkgutil: "es.gob.afirma",
