@@ -1,5 +1,5 @@
 cask "macdroid" do
-  version "1.6.1"
+  version "1.7"
   sha256 :no_check
 
   url "https://cdn.electronic.us/products/macdroid/mac/download/macdroid.dmg",
@@ -14,7 +14,7 @@ cask "macdroid" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "MacDroid.app"
 
