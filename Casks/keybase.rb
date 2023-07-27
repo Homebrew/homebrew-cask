@@ -2,7 +2,7 @@ cask "keybase" do
   arch arm: "arm64-"
 
   on_arm do
-    version "6.2.1,20230724161055,e6160f1b9e"
+    version "6.2.1,20230724165206,e6160f1b9e"
     sha256 "374f9d3bd83ad1d937986d2eb003fcb779f4060b8752c4329f58bc0a292cc180"
   end
   on_intel do
