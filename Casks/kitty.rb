@@ -1,6 +1,6 @@
 cask "kitty" do
-  version "0.29.1"
-  sha256 "d35cf7787302932470595b81dc92331e18a030bde91cb78d1c6fb71fb99b1a40"
+  version "0.29.2"
+  sha256 "4ad8559658d4293ea8660646e388bc896d039b0dcf478eed8fe56b95dd9f78b8"
 
   url "https://github.com/kovidgoyal/kitty/releases/download/v#{version}/kitty-#{version}.dmg"
   name "kitty"
