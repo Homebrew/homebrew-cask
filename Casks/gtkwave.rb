@@ -24,7 +24,7 @@ cask "gtkwave" do
 
   caveats <<~EOS
     You may need to install Perl’s Switch module to run #{token}’s command line
-    tool.
+    tool, e.g. using `cpan install Switch`
 
       https://ughe.github.io/2018/11/06/gtkwave-osx
   EOS
