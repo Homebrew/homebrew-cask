@@ -1,9 +1,9 @@
 cask "lookingglassbridge" do
   arch arm: "m1", intel: "x64"
 
-  version "2.1.0"
-  sha256 arm:   "25944dc0cd53be496145bd6e07b4dbeef6ba4c89e26942609c7d2ddc5e4e4105",
-         intel: "42965a66eae964f325d3bc6b12af93db5ec3ad62d9807fec0f56f1a66606ee90"
+  version "2.2.0"
+  sha256 arm:   "f054187922a251ecb536c49e1cc63ebb4517f96417a6e931a0019b96422c8c64",
+         intel: "a330372b0b2edc3d58cc6180f7e8fd6514e33c51d352f4107aa160b3ed006570"
 
   url "https://dhtk4bwj5r21z.cloudfront.net/HoloPlayService/PublicLinks/#{version}/LookingGlassBridge-#{version}_#{arch}.pkg",
       verified: "dhtk4bwj5r21z.cloudfront.net/HoloPlayService/PublicLinks/"
