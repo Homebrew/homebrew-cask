@@ -1,6 +1,6 @@
 cask "iina" do
-  version "1.3.2,135"
-  sha256 "ac5e72bf6407595514b327ffbbbf235919f80badbd18126007f8bc62768a1c19"
+  version "1.3.3,138"
+  sha256 "4b3f6c4bed3bb77dbe29c12bf6d5d0959284afb01c7b59a35fd71a3a27088991"
 
   url "https://dl-portal.iina.io/IINA.v#{version.csv.first}.dmg"
   name "IINA"
