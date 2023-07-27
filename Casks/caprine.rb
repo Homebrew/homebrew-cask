@@ -1,6 +1,6 @@
 cask "caprine" do
-  version "2.57.4"
-  sha256 "9a7f80442bf3c07cd2fb702f91473918c9abb2e4c3b5c909b278d5bf3b4f8cfc"
+  version "2.58.0"
+  sha256 "46a2be7c9240b7d5be9bbce0e99608e8f10039add5d54c6ca6d1291b5aa389b8"
 
   url "https://github.com/sindresorhus/caprine/releases/download/v#{version}/Caprine-#{version}.dmg"
   name "Caprine"
