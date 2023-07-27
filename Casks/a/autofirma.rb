@@ -34,4 +34,6 @@ cask "autofirma" do
 
   uninstall pkgutil: "es.gob.afirma",
             delete:  "/Applications/AutoFirma.app"
+
+  zap trash: "~/Library/Application Support/AutoFirma"
 end
