@@ -24,7 +24,6 @@ cask "openmw" do
     "~/Library/Application Support/openmw",
     "~/Library/Preferences/openmw",
     "~/Library/Preferences/org.openmw.openmw.plist",
-    "~/Library/Saved Application State/org.openmw.opencs.savedState",
-    "~/Library/Saved Application State/org.openmw.openmw.savedState",
+    "~/Library/Saved Application State/org.openmw.*.savedState",
   ]
 end
