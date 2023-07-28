@@ -21,7 +21,18 @@ cask "sourcetree" do
       skip "Legacy version"
     end
   end
-  on_mojave :or_newer do
+  on_mojave do
+    version "4.2.1,248"
+    sha256 "3dac6ab514c7debe960339e2aee99f018342a41baf743dbb59524728b373561f"
+
+    url "https://product-downloads.atlassian.com/software/sourcetree/ga/Sourcetree_#{version.csv.first}_#{version.csv.second}.zip",
+        verified: "product-downloads.atlassian.com/software/sourcetree/ga/"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_catalina :or_newer do
     version "4.2.4,254"
     sha256 "62dfaeedd63ac491ba3e49a5129d338c60886cb935e3654622147369023daf77"
 
