@@ -7,12 +7,7 @@ cask "cilicon" do
   desc "Self-Hosted ephemeral CI on Apple Silicon"
   homepage "https://github.com/traderepublic/Cilicon"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
-  depends_on macos: :ventura
+  depends_on macos: ">= :ventura"
   depends_on arch: :arm64
 
   app "Cilicon.app"
