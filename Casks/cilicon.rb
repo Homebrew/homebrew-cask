@@ -3,7 +3,7 @@ cask "cilicon" do
   sha256 "af39cff356afb5c22f006349a72f0bf1db02ad55bb2401eeb6bd360308fd9c01"
 
   url "https://github.com/traderepublic/Cilicon/releases/download/v#{version}/Cilicon.zip"
-  name "cilicon"
+  name "Cilicon"
   desc "Self-Hosted ephemeral CI on Apple Silicon"
   homepage "https://github.com/traderepublic/Cilicon"
 
