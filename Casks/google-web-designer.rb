@@ -18,8 +18,8 @@ cask "google-web-designer" do
       trash: [
         "~/Documents/Google Web Designer",
         "~/Library/Application Support/Google/Web Designer",
+        "~/Library/Google/GoogleSoftwareUpdate/Actives/com.google.WebDesigner",
         "~/Library/Preferences/com.google.WebDesigner.plist",
         "~/Library/Saved Application State/com.google.WebDesigner.savedState",
-        "~/Library/Google/GoogleSoftwareUpdate/Actives/com.google.WebDesigner",
       ]
 end
