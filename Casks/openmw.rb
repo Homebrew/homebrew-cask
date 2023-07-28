@@ -1,8 +1,11 @@
 cask "openmw" do
-  version "0.47.0"
-  sha256 "71ca39df05ade384d982bbe66475b29cccd2ccee1e2d2a878e1b4d3cb9d811c4"
+  arch arm: "arm64", intel: "amd64"
 
-  url "https://github.com/OpenMW/openmw/releases/download/openmw-#{version}/OpenMW-#{version}.dmg",
+  version "0.48.0"
+  sha256 arm:   "72fdb7bc24d55685dfcd2973555e7a41bf7b7aabba0515c02904a48f48be6b05",
+         intel: "b3fa91fe8055690cc0b3b5518e6cbbdd31825b5b3c937a748843c95400336ccf"
+
+  url "https://github.com/OpenMW/openmw/releases/download/openmw-#{version}/OpenMW-#{version}-macos-#{arch}.dmg",
       verified: "github.com/OpenMW/openmw/"
   name "OpenMW"
   desc "Open-source open-world RPG game engine that supports playing Morrowind"
@@ -16,4 +19,11 @@ cask "openmw" do
 
   app "OpenMW.app"
   app "OpenMW-CS.app"
+
+  zap trash: [
+    "~/Library/Application Support/openmw",
+    "~/Library/Preferences/openmw",
+    "~/Library/Preferences/org.openmw.openmw.plist",
+    "~/Library/Saved Application State/org.openmw.*.savedState",
+  ]
 end
