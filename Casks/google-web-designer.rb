@@ -13,4 +13,13 @@ cask "google-web-designer" do
   end
 
   app "Google Web Designer.app"
+
+  zap rmdir: "~/Library/Google",
+      trash: [
+        "~/Documents/Google Web Designer",
+        "~/Library/Application Support/Google/Web Designer",
+        "~/Library/Preferences/com.google.WebDesigner.plist",
+        "~/Library/Saved Application State/com.google.WebDesigner.savedState",
+        "~/Library/Google/GoogleSoftwareUpdate/Actives/com.google.WebDesigner",
+      ]
 end
