@@ -19,4 +19,12 @@ cask "openmw" do
 
   app "OpenMW.app"
   app "OpenMW-CS.app"
+
+  zap trash: [
+    "~/Library/Application Support/openmw",
+    "~/Library/Preferences/openmw",
+    "~/Library/Preferences/org.openmw.openmw.plist",
+    "~/Library/Saved Application State/org.openmw.opencs.savedState",
+    "~/Library/Saved Application State/org.openmw.openmw.savedState",
+  ]
 end
