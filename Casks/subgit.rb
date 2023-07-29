@@ -14,6 +14,8 @@ cask "subgit" do
 
   binary "subgit-#{version}/bin/subgit"
 
+  zap trash: "~/.subgit"
+
   caveats do
     depends_on_java "7+"
   end
