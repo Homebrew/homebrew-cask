@@ -21,8 +21,8 @@ cask "fme" do
     url "https://engage.safe.com/api/downloads/"
     regex(/fme-form-(\d+(?:\.\d+)+)-b(\d+)-macosx-#{arch}\.pkg/i)
     strategy :json do |json, regex|
-      json["official"]["desktop"]["mac"].select { | item| item["url"]&.match?(regex) }
-                                        .map { |item| item["url"][regex, 1]+","+item["url"][regex, 2]}
+      json["official"]["desktop"]["mac"].select { |item| item["url"]&.match?(regex) }
+                                        .map { |item| item["url"][regex, 1]+","+item["url"][regex, 2] }
     end
   end
 
