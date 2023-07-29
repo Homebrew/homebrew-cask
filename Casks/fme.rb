@@ -18,12 +18,11 @@ cask "fme" do
   homepage "https://www.safe.com/"
 
   livecheck do
-    url "https://engage.safe.com/support/downloads/"
-    strategy :page_match do |page|
-      match = page.match(/fme-form-(\d+(?:\.\d+)+)-b(\d+)-macosx-#{arch}\.pkg/i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
+    url "https://engage.safe.com/api/downloads/"
+    regex(/fme-form-(\d+(?:\.\d+)+)-b(\d+)-macosx-#{arch}\.pkg/i)
+    strategy :json do |json, regex|
+      json["official"]["desktop"]["mac"].select { | item| item["url"]&.match?(regex) }
+                                        .map { |item| item["url"][regex, 1]+","+item["url"][regex, 2]}
     end
   end
 
