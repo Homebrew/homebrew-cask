@@ -1,5 +1,5 @@
 cask "google-web-designer" do
-  version "12.0.2.0"
+  version "12.2.0.0"
   sha256 :no_check
 
   url "https://dl.google.com/webdesigner/mac/shell/googlewebdesigner_mac.dmg"
@@ -13,4 +13,13 @@ cask "google-web-designer" do
   end
 
   app "Google Web Designer.app"
+
+  zap rmdir: "~/Library/Google",
+      trash: [
+        "~/Documents/Google Web Designer",
+        "~/Library/Application Support/Google/Web Designer",
+        "~/Library/Google/GoogleSoftwareUpdate/Actives/com.google.WebDesigner",
+        "~/Library/Preferences/com.google.WebDesigner.plist",
+        "~/Library/Saved Application State/com.google.WebDesigner.savedState",
+      ]
 end
