@@ -21,4 +21,15 @@ cask "winzip" do
   end
 
   app "WinZip.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.winzip.winzip-mac.sfl*",
+    "~/Library/Caches/com.apple.helpd/Generated/WinZip Help*",
+    "~/Library/Caches/com.winzip.WinZip-Mac",
+    "~/Library/Logs/WinZip-Mac.log",
+    "~/Library/Preferences/com.winzip.WinZip-Mac.plist",
+    "~/Library/Saved Application State/com.winzip.WinZip-Mac.savedState",
+    "~/Library/Services/Winzip*.workflow",
+    "~/Library/WebKit/com.winzip.WinZip-Mac",
+  ]
 end
