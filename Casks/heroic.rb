@@ -10,6 +10,8 @@ cask "heroic" do
   desc "Game launcher"
   homepage "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/"
 
+  auto_updates true
+
   app "Heroic.app"
 
   zap trash: [
