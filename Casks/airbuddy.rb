@@ -27,5 +27,6 @@ cask "airbuddy" do
     "~/Library/LaunchAgents/codes.rambo.AirBuddyHelper.plist",
     "~/Library/Preferences/codes.rambo.AirBuddy.plist",
     "~/Library/SyncedPreferences/codes.rambo.AirBuddy.plist",
+    "~/Library/SyncedPreferences/com.apple.kvs/ChangeTokens/NoEncryption/AirBuddy",
   ]
 end
