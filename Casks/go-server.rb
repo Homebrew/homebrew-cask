@@ -1,9 +1,9 @@
 cask "go-server" do
   arch arm: "-aarch64"
 
-  version "23.2.0,16938"
-  sha256 arm:   "6aac3acee37d2371235aa92a0a6c1381d6e7664a5b2a315598e47249ec81aafe",
-         intel: "dfec4d6a3df36de23488384675194ba3c589a09937057a423788ab0a8ee495a9"
+  version "23.3.0,16991"
+  sha256 arm:   "129b1e0f6347344d71929d2583e95a1b93b6cc59fea8a40e489effb61ef9ced7",
+         intel: "38c458c2738ae4ee807253ca8ffca5e5de5b6c9e3d00087de85b7cca149fbbae"
 
   url "https://download.gocd.org/binaries/#{version.csv.first}-#{version.csv.second}/osx/go-server-#{version.csv.first}-#{version.csv.second}-osx#{arch}.zip"
   name "Go Server"
