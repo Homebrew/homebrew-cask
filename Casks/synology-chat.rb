@@ -13,4 +13,6 @@ cask "synology-chat" do
   end
 
   app "Synology Chat.app"
+
+  zap trash: "~/Library/Application Support/Synology Chat"
 end
