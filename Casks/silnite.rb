@@ -1,6 +1,6 @@
 cask "silnite" do
-  version "9,2022.10"
-  sha256 "2622c7f4b382bf830f8dc884d4cb2a6cb676212b9b212c6c0dd87324e753f7c0"
+  version "10,2023.07"
+  sha256 "2cf56007a9e0f4d420cc137afeb6811ded0918d74d49552e684218b7127cc976"
 
   url "https://eclecticlightdotcom.files.wordpress.com/#{version.csv.second.major}/#{version.csv.second.minor}/silnite#{version.csv.first}.zip",
       verified: "eclecticlightdotcom.files.wordpress.com/"
