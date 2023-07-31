@@ -1,6 +1,6 @@
 cask "nuclear" do
-  version "0.6.27"
-  sha256 "1c8fb7f444b85d5ab153c0ac303558e94478e688a503440b67ad303036007124"
+  version "0.6.28"
+  sha256 "fa19c72414025d1b535d447c50d31d40149b9140e68973d1f4865712704e6ee6"
 
   url "https://github.com/nukeop/nuclear/releases/download/v#{version}/nuclear-v#{version}.dmg",
       verified: "github.com/nukeop/nuclear/"
