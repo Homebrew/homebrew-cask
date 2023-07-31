@@ -6,7 +6,7 @@ cask "jukebox" do
       verified: "github.com/Jaysce/Jukebox/"
   name "Jukebox"
   desc "Menu bar song viewer"
-  homepage "www.jaysce.dev/projects/jukebox"
+  homepage "https://www.jaysce.dev/projects/jukebox"
 
   livecheck do
     url :url
