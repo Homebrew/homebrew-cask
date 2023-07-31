@@ -15,6 +15,8 @@ cask "bepo" do
 
   keyboard_layout "bepo #{version.gsub(/rc\d+/i, "")}.bundle"
 
+  # No zap stanza required
+
   caveats do
     reboot
   end
