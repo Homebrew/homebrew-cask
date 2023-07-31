@@ -1,5 +1,5 @@
 cask "browser-deputy" do
-  version "1.4,62"
+  version "1.4"
   sha256 :no_check
 
   url "https://anybox.ltd/browser-deputy/download/browserdeputy-latest.zip"
@@ -9,7 +9,7 @@ cask "browser-deputy" do
 
   livecheck do
     url "https://anybox.ltd/browser-deputy/download/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
