@@ -1,5 +1,5 @@
 cask "browser-deputy" do
-  version "1.4"
+  version "1.5"
   sha256 :no_check
 
   url "https://anybox.ltd/browser-deputy/download/browserdeputy-latest.zip"
