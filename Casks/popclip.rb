@@ -21,5 +21,6 @@ cask "popclip" do
     "~/Library/Application Support/PopClip",
     "~/Library/Caches/com.pilotmoon.popclip",
     "~/Library/Preferences/com.pilotmoon.popclip.plist",
+    "~/Library/SyncedPreferences/com.apple.kvs/ChangeTokens/NoEncryption/PopClip",
   ]
 end
