@@ -5,7 +5,7 @@ cask "jukebox" do
   url "https://github.com/Jaysce/Jukebox/releases/download/v#{version}/Jukebox.#{version}.dmg",
       verified: "github.com/Jaysce/Jukebox/"
   name "Jukebox"
-  desc "View the currently playing song in the menu bar"
+  desc "Menu bar song viewer"
   homepage "www.jaysce.dev/projects/jukebox"
 
   livecheck do
@@ -20,6 +20,7 @@ cask "jukebox" do
   uninstall quit: "dev.jaysce.Jukebox"
 
   zap trash: [
+    "~/Library/Caches/dev.jaysce.Jukebox",
     "~/Library/HTTPStorages/dev.jaysce.Jukebox",
     "~/Library/Preferences/dev.jaysce.Jukebox.plist",
   ]
