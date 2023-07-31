@@ -3,10 +3,10 @@ cask "gcc-aarch64-embedded" do
   # https://github.com/Homebrew/homebrew-core/pull/45780#issuecomment-569246452
   arch arm: "arm64", intel: "x86_64"
 
-  version "12.2.rel1"
-  gcc_version = "12.2.1"
-  sha256 arm:   "3f93aa0d5367add0e1a6c49a2fa561eeb7bf771b1b7c075123e39e08091cfc85",
-         intel: "1f0c842ddb0278bfdcca4993268d98bb5befabc706c6fcb0e7e3b29cbeb30279"
+  version "12.3.rel1"
+  gcc_version = "12.3.1"
+  sha256 arm:   "f4ae16d6a96293fa7893c1f7bc3afd9834a543c917174eb9189d88c474659832",
+         intel: "03865476266682d949e169241610f91bfa0c2e5569d60ddbd872879d4ee48fd6"
 
   url "https://developer.arm.com/-/media/Files/downloads/gnu/#{version}/binrel/arm-gnu-toolchain-#{version}-darwin-#{arch}-aarch64-none-elf.pkg"
   name "GCC ARM Embedded"
