@@ -29,5 +29,6 @@ cask "pdf-expert" do
     "~/Library/HTTPStorages/com.readdle.PDFExpert-Mac.binarycookies",
     "~/Library/PDF Expert",
     "~/Library/Preferences/com.readdle.PDFExpert-Mac.plist",
+    "~/Library/SyncedPreferences/com.apple.kvs/ChangeTokens/NoEncryption/PDF Expert",
   ]
 end
