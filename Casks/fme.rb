@@ -1,28 +1,22 @@
 cask "fme" do
-  arch arm:   "aarch64",
-       intel: "x64"
+  arch arm: "aarch64", intel: "x64"
+  folder = on_arch_conditional arm: "-aarch64"
 
   version "2023.0.1,23332"
   sha256 arm:   "6bcb39d4287f751984ede9845dad3c33f3a5c7c8161e966b16ae8eea3a7da0f8",
          intel: "f9bac5931173696d27a65db3e311ecf362444089b198f313fa4536771615c7ee"
 
-  on_arm do
-    url "https://downloads.safe.com/fme/#{version.major}/macos-#{arch}/fme-form-#{version.csv.first}-b#{version.csv.second}-macosx-#{arch}.pkg"
-  end
-  on_intel do
-    url "https://downloads.safe.com/fme/#{version.major}/macos/fme-form-#{version.csv.first}-b#{version.csv.second}-macosx-#{arch}.pkg"
-  end
-
+  url "https://downloads.safe.com/fme/#{version.major}/macos#{folder}/fme-form-#{version.csv.first}-b#{version.csv.second}-macosx-#{arch}.pkg"
   name "FME Form"
   desc "Platform for integrating spatial data"
   homepage "https://www.safe.com/"
 
   livecheck do
     url "https://engage.safe.com/api/downloads/"
-    regex(/fme-form-(\d+(?:\.\d+)+)-b(\d+)-macosx-#{arch}\.pkg/i)
+    regex(/fme[._-]form[._-]v?(\d+(?:\.\d+)+)[._-]b(\d+)[._-]macosx[._-]#{arch}\.pkg/i)
     strategy :json do |json, regex|
       json["official"]["desktop"]["mac"].select { |item| item["url"]&.match?(regex) }
-                                        .map { |item| item["url"][regex, 1]+","+item["url"][regex, 2] }
+                                        .map { |item| "#{item["url"][regex, 1]},#{item["url"][regex, 2]}" }
     end
   end
 
