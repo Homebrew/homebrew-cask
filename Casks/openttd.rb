@@ -8,8 +8,8 @@ cask "openttd" do
     end
   end
   on_mojave :or_newer do
-    version "13.3"
-    sha256 "8e61fbcbd8b6ca8fc5a2840c5683ff0ee7d75949a8d6df7596cd5f6578d5635a"
+    version "13.4"
+    sha256 "085cdb35867dca1dcfb8a1748417e7ba6431551ebc33df290a4e48b244d8d376"
 
     livecheck do
       url "https://www.openttd.org/downloads/openttd-releases/latest.html"
@@ -17,7 +17,7 @@ cask "openttd" do
     end
   end
 
-  url "https://proxy.binaries.openttd.org/openttd-releases/#{version}/openttd-#{version}-macos-universal.zip"
+  url "https://cdn.openttd.org/openttd-releases/#{version}/openttd-#{version}-macos-universal.zip"
   name "OpenTTD"
   desc "Open-source transport simulation game"
   homepage "https://www.openttd.org/"
