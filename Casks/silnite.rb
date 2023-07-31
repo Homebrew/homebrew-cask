@@ -23,4 +23,6 @@ cask "silnite" do
   pkg "silnite#{version.csv.first}/silniteInstaller.pkg"
 
   uninstall pkgutil: "co.eclecticlight.pkg.silniteInstaller"
+
+  # No zap stanza required
 end
