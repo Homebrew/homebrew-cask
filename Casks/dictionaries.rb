@@ -12,6 +12,8 @@ cask "dictionaries" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on macos: ">= :mojave"
+
   app "Dictionaries.app"
 
   zap trash: [
