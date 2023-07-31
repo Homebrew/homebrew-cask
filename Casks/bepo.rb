@@ -10,10 +10,10 @@ cask "bepo" do
 
   livecheck do
     url "https://download.tuxfamily.org/dvorak/macosx/"
-    regex(/href="fr-dvorak-bepo-macosx-((?:[\d.]|rc)*)\.(?:dmg|\t|tar.bz2)"/i)
+    regex(/href=.*?fr[._-]dvorak[._-]bepo[._-]macosx[._-]v?(\d+(?:\.\d+)+(?:rc\d+)?)\.dmg/i)
   end
 
-  keyboard_layout "bepo #{version[/^\d+\.\d+/]}.bundle"
+  keyboard_layout "bepo #{version.gsub(/rc\d+/i, "")}.bundle"
 
   caveats do
     reboot
