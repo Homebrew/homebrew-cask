@@ -13,4 +13,12 @@ cask "airdroid" do
   end
 
   app "AirDroid.app"
+
+  zap trash: [
+    "~/Library/Application Support/AirDroid",
+    "~/Library/Caches/com.sandstudio.airdroid",
+    "~/Library/HTTPStorages/com.sandstudio.airdroid",
+    "~/Library/Saved Application State/com.sandstudio.airdroid.savedState",
+    "~/Library/WebKit/Databases/___IndexedDB/com.sandstudio.airdroid",
+  ]
 end
