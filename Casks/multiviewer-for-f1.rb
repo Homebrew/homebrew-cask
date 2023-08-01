@@ -2,12 +2,12 @@ cask "multiviewer-for-f1" do
   arch arm: "arm64", intel: "x64"
 
   on_arm do
-    version "1.24.2,118975392"
-    sha256 "055c96442325b80482836f2ba73f4c71b82cfa8a48539d8d44fbe4188cbd7857"
+    version "1.25.0,119282873"
+    sha256 "7628b5498838a3d0229c9863743a10b599703749d38e0688db3e0104f70dcf9f"
   end
   on_intel do
-    version "1.24.2,118976279"
-    sha256 "80c3a1d4fc33698c609aaec1d483d200968bfa9e2c9361b8383ebfce4630a10a"
+    version "1.25.0,119283223"
+    sha256 "400629116efa06e638e4bd3d06e6c359c84237a6dfc44ecbd00fb0f0ca54c6c0"
   end
 
   url "https://releases.multiviewer.app/download/#{version.csv.second}/MultiViewer.for.F1-#{version.csv.first}-#{arch}.dmg"
