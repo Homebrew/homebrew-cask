@@ -18,7 +18,6 @@ cask "stats" do
   homepage "https://github.com/exelban/stats"
 
   auto_updates true
-
   depends_on macos: ">= :mojave"
 
   app "Stats.app"
