@@ -22,6 +22,6 @@ cask "keyclu" do
 
   zap trash: [
     "~/Library/Containers/com.0804Team.KeyClu",
-    "~/Library/Group Containers/group.com.0804Team.KeyClu"
+    "~/Library/Group Containers/group.com.0804Team.KeyClu",
   ]
 end
