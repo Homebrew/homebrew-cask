@@ -13,6 +13,6 @@ cask "textadept" do
     regex(/^textadept[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
-  app "textadept_#{version}.macOS/Textadept.app"
-  binary "textadept_#{version}.macOS/ta"
+  app "Textadept.app"
+  binary "ta"
 end
