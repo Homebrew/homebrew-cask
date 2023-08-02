@@ -1,6 +1,6 @@
 cask "textadept" do
-  version "11.4"
-  sha256 "b92daef1e4eb6223941a12594364a774d2627f96b7ce8ae319c43760e2c53643"
+  version "12.0"
+  sha256 "9ec91a4c52ae89e6266fae98127886e0861ff0c03e2c26145f783dee5777238c"
 
   url "https://github.com/orbitalquark/textadept/releases/download/textadept_#{version}/textadept_#{version}.macOS.zip",
       verified: "github.com/orbitalquark/textadept/"
@@ -13,6 +13,11 @@ cask "textadept" do
     regex(/^textadept[._-]v?(\d+(?:\.\d+)+)$/i)
   end
 
-  app "textadept_#{version}.macOS/Textadept.app"
-  binary "textadept_#{version}.macOS/ta"
+  app "Textadept.app"
+  binary "ta"
+
+  zap trash: [
+    "~/.textadept",
+    "~/Library/Saved Application State/com.textadept.savedState",
+  ]
 end
