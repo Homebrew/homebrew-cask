@@ -42,8 +42,8 @@ cask "teamviewer" do
     EOS
   end
   on_big_sur :or_newer do
-    version "15.44.4"
-    sha256 "b3f4b12c1f3ef5b981b4c1b985f9a9f1b2fa60f64f21e1a0d6ad824a011e69ff"
+    version "15.44.5"
+    sha256 "db781eeb6979bfcc9e3823295f5cbcc682e8a60cb87665646a9acf3a84b0d2b5"
 
     livecheck do
       url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=11.7&type=1&channel=1"
