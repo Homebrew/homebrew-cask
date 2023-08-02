@@ -2,7 +2,7 @@ cask "keyclu" do
   version "0.9,7052"
   sha256 "e4d0b872a3c88c258d23ccc2fc6d25987d43d76b2d0556ae2c57e93fa5101167"
 
-  url "https://github.com/Anze/KeyCluCask/releases/download/v#{version}/KeyClu.zip",
+  url "https://github.com/Anze/KeyCluCask/releases/download/v#{version.csv.first}/KeyClu.zip",
       verified: "github.com/Anze/KeyCluCask/"
   name "KeyClu"
   desc "Find shortcuts for any installed application"
