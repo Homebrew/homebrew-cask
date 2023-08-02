@@ -15,4 +15,9 @@ cask "textadept" do
 
   app "Textadept.app"
   binary "ta"
+
+  zap trash: [
+    "~/.textadept",
+    "~/Library/Saved Application State/com.textadept.savedState",
+  ]
 end
