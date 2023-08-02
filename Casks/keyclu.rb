@@ -8,12 +8,12 @@ cask "keyclu" do
   desc "Find shortcuts for any installed application"
   homepage "https://sergii.tatarenkov.name/keyclu/support/"
 
-  app "KeyClu.app"
-
   livecheck do
     url "https://sergii.tatarenkov.name/keyclu/appcast.xml"
     strategy :sparkle
   end
+
+  app "KeyClu.app"
 
   auto_updates true
   depends_on macos: ">= :big_sur"
