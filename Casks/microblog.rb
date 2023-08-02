@@ -1,6 +1,6 @@
 cask "microblog" do
-  version "3.0.1"
-  sha256 "f3bd2de3f7504e224744f17a9614083260e80f7cd836e50259d49342cbe6614d"
+  version "3.0.2"
+  sha256 "287bda0b18131ee02cf39a4b53e8979c700cf4cbe41529e946ea67b2f6ce5e0b"
 
   url "https://s3.amazonaws.com/micro.blog/mac/Micro.blog_#{version}.zip",
       verified: "s3.amazonaws.com/micro.blog/mac/"
