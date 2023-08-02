@@ -8,8 +8,6 @@ cask "keyclu" do
   desc "Find shortcuts for any installed application"
   homepage "https://sergii.tatarenkov.name/keyclu/support/"
 
-  depends_on macos: ">= :big_sur"
-
   app "KeyClu.app"
 
   livecheck do
@@ -18,6 +16,7 @@ cask "keyclu" do
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   uninstall quit: "com.0804Team.KeyClu"
 
