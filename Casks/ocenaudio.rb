@@ -3,7 +3,7 @@ cask "ocenaudio" do
   sha256 :no_check
 
   on_arm do
-    url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_bigsur_arm64.dmg"
+    url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_universal.dmg"
   end
   on_intel do
     on_high_sierra :or_older do
@@ -12,11 +12,8 @@ cask "ocenaudio" do
     on_mojave do
       url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_mojave.dmg"
     end
-    on_catalina do
-      url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_mojave.dmg"
-    end
-    on_big_sur :or_newer do
-      url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_bigsur.dmg"
+    on_catalina :or_newer do
+      url "https://www.ocenaudio.com/downloads/index.php/ocenaudio_universal.dmg"
     end
   end
 
