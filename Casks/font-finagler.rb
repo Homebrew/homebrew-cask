@@ -7,6 +7,11 @@ cask "font-finagler" do
   desc "Help troubleshoot misbehaving fonts"
   homepage "https://markdouma.com/fontfinagler/"
 
+  livecheck do
+    url "https://markdouma.com/fontfinagler/version.php"
+    strategy :sparkle, &:short_version
+  end
+
   auto_updates true
 
   app "Font Finagler.app"
