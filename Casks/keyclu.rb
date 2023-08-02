@@ -13,10 +13,10 @@ cask "keyclu" do
     strategy :sparkle
   end
 
-  app "KeyClu.app"
-
   auto_updates true
   depends_on macos: ">= :big_sur"
+
+  app "KeyClu.app"
 
   uninstall quit: "com.0804Team.KeyClu"
 
