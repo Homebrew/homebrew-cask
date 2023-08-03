@@ -3,7 +3,7 @@ cask "xiaomi-cloud" do
   sha256 "1ab13ae04a3e2190842a0498c7df1e6b97b0e3b969c1d937c920dda7d4a963bc"
 
   url "https://cdn.cnbj1.fds.api.mi-img.com/archive/update-server/public/darwin/x64/XiaomiCloud-#{version}.dmg",
-       verified: "cdn.cnbj1.fds.api.mi-img.com/archive/update-server/public/darwin/x64/"
+      verified: "cdn.cnbj1.fds.api.mi-img.com/archive/update-server/public/darwin/x64/"
   name "Xiaomi Cloud"
   name "小米云服务"
   desc "Sync photos, contacts, messages and devices"
@@ -11,9 +11,8 @@ cask "xiaomi-cloud" do
 
   livecheck do
     url "https://update-server.micloud.xiaomi.net/api/v1/releases"
-    regex(/^-?(\d+(?:\.\d+)+)$/i)
-    strategy :json do |json, regex|
-      match = json["data"]["version"]&.match(regex)
+    strategy :json do |json|
+      json["data"]["version"]
     end
   end
 
