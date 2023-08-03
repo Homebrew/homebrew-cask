@@ -12,8 +12,8 @@ cask "httpie" do
   homepage "https://httpie.io/product"
 
   livecheck do
-    url "https://httpie.io/download"
-    regex(/href=.*?HTTPie[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    url :url
+    strategy :github_latest
   end
 
   app "HTTPie.app"
