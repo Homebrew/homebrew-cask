@@ -1,9 +1,9 @@
 cask "chatbox" do
   arch arm: "-arm64"
 
-  version "0.6.5"
-  sha256 arm:   "cbe7c91f171336e0ee51dc75a2cded32b37b2577313ba316643f9d735c96684e",
-         intel: "e47b423ecdb255b4ef5cd09efb00b24792841abf96752f276f24caa3d54112da"
+  version "0.6.6"
+  sha256 arm:   "ea9f9203c4b4010e9323392d8641a8e0d8b4c1b51d3eeb9ad6334e370e357b3d",
+         intel: "8b9abd7c0b4ff34b3262c40b6a22ffcdde9ca14a6bd6229c321f8acacb99dd00"
 
   url "https://github.com/Bin-Huang/chatbox/releases/download/v#{version}/Chatbox-#{version}#{arch}.dmg",
       verified: "github.com/Bin-Huang/chatbox/"
