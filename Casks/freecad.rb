@@ -1,21 +1,19 @@
 cask "freecad" do
-  version "0.20.2,2022-12-27"
-  sha256 "3808bdf0751a70770b1d561269d9d014f9c486eb49bc4e187d106d3d2664d347"
+  arch arm: "arm64", intel: "intel_x86"
 
-  url "https://github.com/FreeCAD/FreeCAD/releases/download/#{version.csv.first.hyphens_to_dots}/FreeCAD_#{version.csv.first}-#{version.csv.second}-conda-macOS-x86_64-py310.dmg",
+  version "0.21.0"
+  sha256 arm:   "e12232d2f3411966f25837a4d5f2c14b72ea700b2a4dbb0a7b88f6b1da3044fb",
+         intel: "271a3785a0ca68fab94ef6a7397ca9ed39cafbdce5bea19755b835462d8bceb0"
+
+  url "https://github.com/FreeCAD/FreeCAD/releases/download/#{version}/FreeCAD-#{version}-mac-#{arch}.dmg",
       verified: "github.com/FreeCAD/FreeCAD/"
   name "FreeCAD"
   desc "3D parametric modeler"
-  homepage "https://www.freecadweb.org/"
+  homepage "https://www.freecad.org//"
 
   livecheck do
-    url "https://www.freecadweb.org/downloads.php"
-    strategy :page_match do |page|
-      match = page.match(/href=.*?FreeCAD[._-]v?(\d+(?:\.\d+)+)[._-](\d+(?:-\d+)+).*?\.dmg/i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
-    end
+    url "https://www.freecad.org/downloads.php"
+    regex(/FreeCAD[._-]v?(\d+(?:\.\d+)+)[._-]mac[._-]#{arch}\.dmg/i)
   end
 
   depends_on macos: ">= :sierra"
