@@ -1,8 +1,8 @@
 cask "youku" do
-  version "1.9.9.09197"
-  sha256 "bc52022828df3a818be10d3750e9ba424b01c87484574286b7f386ad027cb734"
+  version "9.2.25.1001"
+  sha256 "29de87da032b6661842aece29a97a9cffb777189cafd651e3790d64300f52cfc"
 
-  url "https://pcclient.download.youku.com/ikumac/youkumac_#{version}.dmg"
+  url "https://pcclient.download.youku.com/iku_electron_client/youkuclient_setup_#{version}.dmg"
   name "Youku"
   name "优酷"
   desc "Chinese video streaming and sharing platform"
@@ -10,13 +10,17 @@ cask "youku" do
 
   livecheck do
     url :homepage
-    regex(/ikumac.*?youkumac[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/iku_electron_client.*?youkuclient_setup[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "优酷.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.youku.mac",
+    "~/Library/Application Support/youku-app/",
     "~/Library/Containers/com.youku.mac",
+    "~/Library/Containers/优酷",
+    "~/Library/Preferences/com.youku.mac.plist",
+    "~/Library/Saved Application State/com.youku.mac.savedState/",
   ]
 end
