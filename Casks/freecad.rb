@@ -9,7 +9,7 @@ cask "freecad" do
       verified: "github.com/FreeCAD/FreeCAD/"
   name "FreeCAD"
   desc "3D parametric modeler"
-  homepage "https://www.freecad.org//"
+  homepage "https://www.freecad.org/"
 
   livecheck do
     url "https://www.freecad.org/downloads.php"
