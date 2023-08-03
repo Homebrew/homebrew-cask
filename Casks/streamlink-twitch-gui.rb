@@ -12,8 +12,8 @@ cask "streamlink-twitch-gui" do
   app "Streamlink Twitch GUI.app"
 
   zap trash: [
-    "~/Library/Caches/streamlink-twitch-gui/",
-    "~/Library/Application Support/streamlink-twitch-gui/",
-    "~/Library/Logs/streamlink-twitch-gui/",
+    "~/Library/Application Support/streamlink-twitch-gui",
+    "~/Library/Caches/streamlink-twitch-gui",
+    "~/Library/Logs/streamlink-twitch-gui",
   ]
 end
