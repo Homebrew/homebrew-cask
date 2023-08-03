@@ -3,7 +3,7 @@ cask "freecad" do
 
   version "0.21.0"
   sha256 arm:   "e12232d2f3411966f25837a4d5f2c14b72ea700b2a4dbb0a7b88f6b1da3044fb",
-         intel: "271a3785a0ca68fab94ef6a7397ca9ed39cafbdce5bea19755b835462d8bceb0"
+         intel: "b5c938fe1f3356a7571de6289c804316701459a224c498e7ad09589db31ee7ba"
 
   url "https://github.com/FreeCAD/FreeCAD/releases/download/#{version}/FreeCAD-#{version}-mac-#{arch}.dmg",
       verified: "github.com/FreeCAD/FreeCAD/"
