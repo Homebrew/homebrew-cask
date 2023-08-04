@@ -10,4 +10,10 @@ cask "jamf-migrator" do
   depends_on macos: ">= :high_sierra"
 
   app "jamf-migrator.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.jamf.jamf-migrator",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.jamf.jamf-migrator.sfl*",
+    "~/Library/Containers/com.jamf.jamf-migrator",
+  ]
 end
