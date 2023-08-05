@@ -4,6 +4,7 @@ cask "soundflower" do
 
   url "https://github.com/mattingalls/Soundflower/releases/download/#{version}/Soundflower-#{version}.dmg"
   name "Soundflower"
+  desc "Allow applications to pass audio to other applications"
   homepage "https://github.com/mattingalls/Soundflower"
 
   pkg "Soundflower.pkg"
