@@ -21,4 +21,6 @@ cask "objectivesharpie" do
   pkg "objectivesharpie-#{version.csv.first}.pkg"
 
   uninstall pkgutil: "com.xamarin.ObjectiveSharpie"
+
+  # No zap stanza required
 end
