@@ -5,7 +5,7 @@ cask "hovrly" do
   url "https://github.com/tarutin/hovrly/releases/download/v#{version}/Hovrly-#{version}-universal.dmg",
     verified: "github.com/tarutin/hovrly/"
   name "Hovrly"
-  desc "Hovrly is the best partner for distributed work teams, display and convert timezones time in different cities"
+  desc "Display and convert timezones time in different cities"
   homepage "https://hovrly.com/"
 
   app "Hovrly.app"
