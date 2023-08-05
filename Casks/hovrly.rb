@@ -13,6 +13,6 @@ cask "hovrly" do
   zap trash: [
     "~/Library/Application Support/Hovrly",
     "~/Library/Preferences/com.treasy.hovrly.plist",
-    "~/Library/Saved Application State/com.treasy.hovrly.savedState"
+    "~/Library/Saved Application State/com.treasy.hovrly.savedState",
   ]
 end
