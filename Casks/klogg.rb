@@ -36,4 +36,11 @@ cask "klogg" do
       exec '#{appdir}/klogg.app/Contents/MacOS/klogg' "$@"
     EOS
   end
+
+  zap trash: [
+    "~/Library/Application Support/klogg",
+    "~/Library/Preferences/com.klogg.klogg.plist",
+    "~/Library/Preferences/com.klogg.klogg_session.plist",
+    "~/Library/Saved Application State/com.github.variar.klogg.savedState",
+  ]
 end
