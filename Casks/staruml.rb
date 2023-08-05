@@ -16,4 +16,10 @@ cask "staruml" do
   end
 
   app "StarUML.app"
+
+  zap trash: [
+    "~/Library/Application Support/StarUML",
+    "~/Library/Preferences/io.staruml.staruml.plist",
+    "~/Library/Saved Application State/io.staruml.staruml.savedState",
+  ]
 end
