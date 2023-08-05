@@ -1,9 +1,9 @@
 cask "soapui" do
-  version "5.7.0"
-  sha256 "3f4d6690d56c6030e15b1e26c92af1baae1c6aa82947408ce3d8929cd5d41103"
+  version "5.7.1"
+  sha256 "419c4c63b64335d3e43587902a8eb77e743be9ff4732a8448b090c1ae80f4abe"
 
-  url "https://s3.amazonaws.com/downloads.eviware/soapuios/#{version}/SoapUI-#{version}.dmg",
-      verified: "s3.amazonaws.com/downloads.eviware/soapuios/"
+  url "https://dl.eviware.com/soapuios/#{version}/SoapUI-#{version}.dmg",
+      verified: "dl.eviware.com/soapuios/"
   name "SmartBear SoapUI"
   desc "API testing tool"
   homepage "https://www.soapui.org/"
