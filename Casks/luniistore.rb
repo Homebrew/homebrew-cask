@@ -6,9 +6,9 @@ cask "luniistore" do
          intel: "f235a1bac95b76488fcb6582ca86208a796e4467c69e9224ef0db6aefbb2714f"
 
   url "https://storage.googleapis.com/storage.lunii.fr/public/deploy/installers/macos/#{arch}/Luniistore-#{version}-#{arch}.pkg",
-      verified: "storage.googleapis.com/storage.lunii.fr/public/deploy/installers/macos/"
+      verified: "storage.googleapis.com/storage.lunii.fr/"
   name "Luniistore"
-  desc "Access more albums and transfer them to My Fabulous Storyteller"
+  desc "Utility for My Fabulous Storyteller"
   homepage "https://lunii.com/"
 
   livecheck do
@@ -20,12 +20,22 @@ cask "luniistore" do
 
   pkg "Luniistore-#{version}-#{arch}.pkg"
 
+  postflight do
+    # The postinstall script automatically opens the app. Therefore, we must
+    # suppress this behavior to make the cask installation non-interactive.
+    retries ||= 3
+    ohai "The Luniistore package postinstall script launches the app" if retries >= 3
+    ohai "Attempting to close Luniistore to avoid unwanted user intervention" if retries >= 3
+    return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/Luniistore.app"]
+  end
+
   uninstall pkgutil: "com.lunii.luniistore",
-            quit:    "com.lunii.luniistore",
-            delete:  "/Applications/Luniistore.app"
+            quit:    "com.lunii.luniistore"
 
   zap trash: [
+    "~/Desktop/Luniistore",
     "~/Library/Application Support/Luniitheque",
+    "~/Library/Saved Application State/com.lunii.luniistore.savedState",
     "~/Luniistore",
   ]
 end
