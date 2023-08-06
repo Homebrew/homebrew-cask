@@ -1,9 +1,9 @@
 cask "obs-advanced-scene-switcher" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.22.1"
-  sha256 arm:   "a94c037078434a99285b4816381179191ef89fdab55b50ccdbc9af59070f95f9",
-         intel: "42c556d267e8a9d1531e088f598d12ed1abc6f2be3c13ffb05c4cb8e7ac8ce53"
+  version "1.23.0"
+  sha256 arm:   "d49332d7d42be79dfb4c75f54be2bd31831e868d725ab4c476bba684e300edd0",
+         intel: "cec6b48a1b895e15e87a8d2f00cc86f52590eddd4a20e2e99691ceedf3a9f328"
 
   url "https://github.com/WarmUpTill/SceneSwitcher/releases/download/#{version}/advanced-scene-switcher-macos-#{arch}.pkg",
       verified: "github.com/WarmUpTill/SceneSwitcher/"
