@@ -3,17 +3,16 @@ cask "elektron-transfer" do
   sha256 "fe933767e5717e78c99888431867e7c164d72a1ffc6e80f9d7fdd1d8691fc7b7"
 
   url "https://cdn.www.elektron.se/media/downloads/transfer/Elektron_Transfer_#{version}.dmg"
-  name "elektron-transfer"
-  desc "Elektron Transfer tool for transferring samples, presets, sounds, projects and firmware updates to " \
-       "Analog Rytm MKI/MKII, Analog Four MKI/MKII, Analog Heat MKI/MKII, Analog Keys, Digitakt, Digitone, " \
-       "Digitone Keys, Model:Samples, Model:Cycles, Syntakt, and Analog Heat +FX"
-  homepage "https://www.elektron.se/cz/download-support-transfer"
+  name "Elektron Transfer"
+  desc "Transfer samples, presets, sounds, projects and firmware updates to Elektron devices"
+  homepage "https://www.elektron.se/en/download-support-transfer"
 
   livecheck do
-    url "https://www.elektron.se/cz/download-support-transfer"
-    strategy :page_match
-    regex(%r{https://cdn.www.elektron.se/media/downloads/transfer/Elektron_Transfer_([\d.]+).dmg}i)
+    url :homepage
+    regex(/Elektron[._-]Transfer[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Transfer.app"
 end
