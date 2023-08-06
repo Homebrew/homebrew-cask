@@ -4,7 +4,7 @@ cask "elektron-transfer" do
 
   url "https://cdn.www.elektron.se/media/downloads/transfer/Elektron_Transfer_#{version}.dmg"
   name "Elektron Transfer"
-  desc "Transfer samples, presets, sounds, projects and firmware updates to Elektron devices"
+  desc "Transfer samples, presets, sounds, projects and firmware to Elektron devices"
   homepage "https://www.elektron.se/en/download-support-transfer"
 
   livecheck do
