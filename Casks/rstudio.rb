@@ -18,6 +18,7 @@ cask "rstudio" do
     end
   end
 
+  conflicts_with cask: "homebrew/cask-versions/rstudio-daily"
   depends_on macos: ">= :high_sierra"
 
   app "RStudio.app"
