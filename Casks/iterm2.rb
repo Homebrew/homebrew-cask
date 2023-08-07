@@ -8,7 +8,15 @@ cask "iterm2" do
       skip "Legacy version"
     end
   end
-  on_mojave :or_newer do
+  on_mojave do
+    version "3.4.16"
+    sha256 "b0941a008ead9f680e9f4937698b9b849acbb4e30ed1f3f100e3616cd6d49c0b"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_catalina :or_newer do
     version "3.4.19"
     sha256 "e06563714ea0582f8a69653ef5024957483c174d7387b0e8d70369db98406832"
 
