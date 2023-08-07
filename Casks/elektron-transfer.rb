@@ -15,4 +15,11 @@ cask "elektron-transfer" do
   depends_on macos: ">= :high_sierra"
 
   app "Transfer.app"
+
+  zap trash: [
+    "~/Library/Caches/se.elektron.OverbridgeTransfer",
+    "~/Library/HTTPStorages/se.elektron.OverbridgeTransfer",
+    "~/Library/Logs/Elektron Overbridge/Transfer.log",
+    "~/Library/Saved Application State/se.elektron.OverbridgeTransfer.savedState",
+  ]
 end
