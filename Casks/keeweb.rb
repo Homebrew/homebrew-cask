@@ -23,4 +23,10 @@ cask "keeweb" do
   uninstall_preflight do
     set_ownership "#{appdir}/KeeWeb.app"
   end
+
+  zap trash: [
+    "~/Library/Application Support/KeeWeb",
+    "~/Library/Preferences/net.antelle.keeweb.plist",
+    "~/Library/Saved Application State/net.antelle.keeweb.savedState",
+  ]
 end
