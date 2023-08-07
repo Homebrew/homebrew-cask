@@ -1,9 +1,9 @@
 cask "tea" do
   arch arm: "-arm64"
 
-  version "0.2.34"
-  sha256 arm:   "c87fc2554db633eef5c33e9ac682ee31b52d22585d6c7840f6bd52d4a41b2363",
-         intel: "f53c0988969ae95b422e8801409f437636df149a0e1bbe1586e74e9ed540bb15"
+  version "0.2.48"
+  sha256 arm:   "74453fd84eacf13244539d816853254b0a0ab471dda5f69ea40da229c9b84b9a",
+         intel: "7a3571bb55a63c49acffc29934eac5b35e4e4948a27cb9606891ab3d46a49ae5"
 
   url "https://gui.tea.xyz/release/tea-#{version}#{arch}-mac.zip"
   name "tea"
