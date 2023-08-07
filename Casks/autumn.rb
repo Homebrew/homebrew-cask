@@ -6,6 +6,7 @@ cask "autumn" do
       verified: "github.com/apandhi/Autumn/"
   name "Autumn"
   homepage "https://apandhi.github.io/Autumn/"
+  desc "macOS window manager for JavaScript hackers"
 
   depends_on macos: ">= :high_sierra"
 
