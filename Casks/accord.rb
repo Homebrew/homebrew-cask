@@ -1,7 +1,7 @@
 cask "accord" do
   version "1.7.1"
   sha256 "6dacc0767a03265ea6e9103d40eab4f9c51c8ad7ab6c3b86f9f3d992c630ce80"
-  
+
   url "https://github.com/evelyneee/accord/releases/download/v.#{version}/Accord.zip"
   name "accord"
   desc "Discord client written in Swift for modern Macs"
