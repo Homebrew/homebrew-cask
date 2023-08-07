@@ -2,9 +2,9 @@ cask "zulufx" do
   arch arm: "aarch64", intel: "x64"
   choice = on_arch_conditional arm: "arm", intel: "x86"
 
-  version "20.0.2,20.32.11-ca"
-  sha256 arm:   "ad937ba8cc7ad4b311b2510ed8c436b532a9da047cf540c39c2855fa8aa82f5b",
-         intel: "faa99f7b2c9b067f7c3a812ce4c21757b0645e090d78472323a73df9c35694d2"
+  version "20.0.2,20.32.11_1-ca"
+  sha256 arm:   "0b5322a9ff3bbf19d7d6acc204202df5a9594678c746fb859cfae0c5e4eda91e",
+         intel: "d8326f2fe57a95f6eef3488e04f8f6a471f4ef4a3b97675339231fe19f19b328"
 
   url "https://cdn.azul.com/zulu/bin/zulu#{version.csv.second}-fx-jdk#{version.csv.first}-macosx_#{arch}.dmg",
       referer: "https://www.azul.com/downloads/"
@@ -15,7 +15,7 @@ cask "zulufx" do
   livecheck do
     url "https://api.azul.com/zulu/download/community/v1.0/bundles/latest/?jdk_version=#{version.major}&bundle_type=jdk&javafx=true&ext=dmg&os=macos&arch=#{choice}"
     strategy :page_match do |page|
-      match = page.match(/zulu(\d+(?:\.\d+)*-.*?)-fx-jdk(\d+(?:\.\d+)*)-macosx_#{arch}\.dmg/i)
+      match = page.match(/zulu(\d+(?:[._]\d+)*-.*?)-fx-jdk(\d+(?:\.\d+)*)-macosx_#{arch}\.dmg/i)
       next if match.blank?
 
       "#{match[2]},#{match[1]}"
