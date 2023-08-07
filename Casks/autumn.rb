@@ -5,8 +5,8 @@ cask "autumn" do
   url "https://github.com/apandhi/Autumn/releases/download/#{version}/Build.zip",
       verified: "github.com/apandhi/Autumn/"
   name "Autumn"
+  desc "Window manager for JavaScript development"
   homepage "https://apandhi.github.io/Autumn/"
-  desc "macOS window manager for JavaScript hackers"
 
   depends_on macos: ">= :high_sierra"
 
