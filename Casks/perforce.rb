@@ -2,7 +2,7 @@ cask "perforce" do
   version "2023.1,2468153"
   sha256 "c1532eb1b210776dcfeb8b10724f1d24cb9e8582334c1240d185d9792fe0b6b8"
 
-  url "https://cdist2.perforce.com/perforce/r#{version.major[-2..]}.#{version.minor}/bin.macosx1015x86_64/helix-core-server.tgz"
+  url "https://filehost.perforce.com/perforce/r#{version.major[-2..]}.#{version.minor}/bin.macosx1015x86_64/helix-core-server.tgz"
   name "Perforce Helix Core Server"
   name "Perforce Helix Command-Line Client (P4)"
   name "Perforce Helix Broker (P4Broker)"
