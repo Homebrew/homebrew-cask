@@ -13,12 +13,7 @@ cask "saleae-logic" do
   livecheck do
     url "https://logic#{version.major}api.saleae.com/download?os=osx&arch=#{arch}"
     regex(/Logic[._-]?(\d+(?:\.\d+)+)[._-]?macos[._-]?#{arch}\.zip/i)
-    strategy :header_match do |headers, regex|
-      match = headers["location"].match(regex)
-      next if match.blank?
-
-      (match[1]).to_s
-    end
+    strategy :header_match
   end
 
   depends_on macos: ">= :mojave"
