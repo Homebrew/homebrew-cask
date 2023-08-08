@@ -14,10 +14,12 @@ cask "fl-studio" do
 
   pkg "Install FL Studio.pkg"
 
-  uninstall pkgutil: "com.Image-Line.pkg.FLStudio21"
+  uninstall pkgutil: "com.Image-Line.pkg.FL21ONLINE"
 
   zap trash: [
     "~/Library/Caches/com.image-line.flstudio",
+    "~/Library/HTTPStorages/com.image-line.flstudio",
     "~/Library/Preferences/com.image-line.flstudio.plist",
+    "~/Library/Saved Application State/com.image-line.flstudio.savedState",
   ]
 end
