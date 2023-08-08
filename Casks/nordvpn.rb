@@ -1,6 +1,6 @@
 cask "nordvpn" do
-  version "8.5.0"
-  sha256 "0965ea46bc3211f897d747bb1c33056879f311d11107dc17003a878bf24258ef"
+  version "8.7.1"
+  sha256 "e78ea6fe146bd390fc5c41cdaa3c1f6e2a2e08cb1fc8aa2f9367237a5e925249"
 
   url "https://downloads.nordcdn.com/apps/macos/generic/NordVPN-OpenVPN/#{version}/NordVPN.pkg",
       verified: "downloads.nordcdn.com/apps/macos/generic/"

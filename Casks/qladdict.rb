@@ -4,7 +4,10 @@ cask "qladdict" do
 
   url "https://github.com/tattali/QLAddict/releases/download/#{version}/QLAddict.qlgenerator.#{version}.zip"
   name "QLAddict"
+  desc "QuickLook plugin for subtitle (.srt) files"
   homepage "https://github.com/tattali/QLAddict/"
 
   qlplugin "QLAddict.qlgenerator"
+
+  # No zap stanza required
 end

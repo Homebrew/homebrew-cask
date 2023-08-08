@@ -8,7 +8,7 @@ cask "easyfind" do
   homepage "https://www.devontechnologies.com/apps/freeware"
 
   livecheck do
-    url "https://www.devontechnologies.com/apps/freeware"
+    url :homepage
     regex(%r{href=.*?/(\d+(?:\.\d+)+)/EasyFind\.app\.zip}i)
   end
 

@@ -1,6 +1,6 @@
 cask "cacher" do
-  version "2.46.0"
-  sha256 "97e482b223134316aa39facf7fac4db97e89f464d8852744917dc19de6cc9490"
+  version "2.47.1"
+  sha256 "75725d3ee7f5e432c553ef7b4e69f11c272deeeb62824e166ada775e6b4bd784"
 
   url "https://cacher-download.nyc3.digitaloceanspaces.com/Cacher-#{version}-universal-mac.zip",
       verified: "cacher-download.nyc3.digitaloceanspaces.com/"
@@ -14,4 +14,11 @@ cask "cacher" do
   end
 
   app "Cacher.app"
+
+  zap trash: [
+    "~/.cacher",
+    "~/Library/Application Support/Cacher",
+    "~/Library/Preferences/net.PenguinLabs.Cacher.plist",
+    "~/Library/Saved Application State/net.PenguinLabs.Cacher.savedState",
+  ]
 end

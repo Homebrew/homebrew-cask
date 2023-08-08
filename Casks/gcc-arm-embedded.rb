@@ -3,10 +3,10 @@ cask "gcc-arm-embedded" do
   # https://github.com/Homebrew/homebrew-core/pull/45780#issuecomment-569246452
   arch arm: "arm64", intel: "x86_64"
 
-  version "12.2.mpacbti-rel1"
-  gcc_version = "12.2.1"
-  sha256 arm:   "414d41b9f3c22860263cae6d667c680a2c68b83a78519fe4a428e407017587f0",
-         intel: "bb1f144e5a82e7374eff262892bfe111138901d7cdb03f4b941f70ea2b1f72c8"
+  version "12.3.rel1"
+  gcc_version = "12.3.1"
+  sha256 arm:   "91b46a984743ac2323376dd0273ad587d56c74253315ede6fcc1cc8056b2aa85",
+         intel: "a475c9cf491d4ffc2ebf04be3e9dc557729ad011bc1837dfaa1ba55b867272fa"
 
   url "https://developer.arm.com/-/media/Files/downloads/gnu/#{version}/binrel/arm-gnu-toolchain-#{version}-darwin-#{arch}-arm-none-eabi.pkg"
   name "GCC ARM Embedded"
@@ -15,7 +15,7 @@ cask "gcc-arm-embedded" do
 
   livecheck do
     url "https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/downloads"
-    regex(/href=.*?arm-gnu-toolchain-(\d+\.\d+\.\w+(?:-\w+))-darwin-(?:\w+)-arm-none-eabi.pkg/i)
+    regex(/href=.*?arm-gnu-toolchain-(\d+\.\d+\.\w+)-darwin-(?:\w+)-arm-none-eabi.pkg/i)
   end
 
   pkg "arm-gnu-toolchain-#{version}-darwin-#{arch}-arm-none-eabi.pkg"

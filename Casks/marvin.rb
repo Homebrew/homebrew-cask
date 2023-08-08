@@ -1,6 +1,6 @@
 cask "marvin" do
   version "1.63.0"
-  sha256 "6fa673b815e3844844fc8ea5e4844997b7e96e54ffb3da0ebc16ad2bf20c2d24"
+  sha256 "8f6c4ca13956c41731086e2112fe79418e00248544e61d713b3ea9ff8d89c77a"
 
   url "https://amazingmarvin.s3.amazonaws.com/Marvin-#{version}.dmg",
       verified: "amazingmarvin.s3.amazonaws.com/"

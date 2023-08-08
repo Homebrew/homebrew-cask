@@ -8,7 +8,7 @@ cask "composercat" do
   homepage "https://getcomposercat.com/"
 
   livecheck do
-    url "https://getcomposercat.com/"
+    url :homepage
     regex(%r{href=.*?/Composercat[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 

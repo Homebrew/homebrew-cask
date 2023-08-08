@@ -11,7 +11,7 @@ cask "idafree" do
   homepage "https://hex-rays.com/ida-free/"
 
   livecheck do
-    url "https://hex-rays.com/ida-free/"
+    url :homepage
     regex(/>.*?IDA\s*v?(\d+(?:\.\d+)+).*?</i)
   end
 

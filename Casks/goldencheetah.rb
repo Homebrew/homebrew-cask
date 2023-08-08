@@ -1,8 +1,8 @@
 cask "goldencheetah" do
-  version "3.5"
-  sha256 "02518bee5427ec126aa2fdb3d3c6d236c03dd25a78623c36e8f3d27080028f2a"
+  version "3.6"
+  sha256 "7d3d8f5682f664b030af61b6988b94a333526dbc686cc7d1f94b6f37889cdb50"
 
-  url "https://github.com/GoldenCheetah/GoldenCheetah/releases/download/V#{version}/GoldenCheetah_v#{version}_64bit_MacOS.dmg",
+  url "https://github.com/GoldenCheetah/GoldenCheetah/releases/download/v#{version}/GoldenCheetah_v#{version}_x64.dmg",
       verified: "github.com/GoldenCheetah/GoldenCheetah/"
   name "GoldenCheetah"
   desc "Performance software for cyclists, runners and triathletes"

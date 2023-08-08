@@ -5,10 +5,11 @@ cask "sysdig-inspect" do
   url "https://download.sysdig.com/stable/sysdig-inspect/sysdig-inspect-#{version}-mac.dmg",
       verified: "download.sysdig.com/stable/sysdig-inspect/"
   name "Sysdig Inspect"
+  desc "Interface for container troubleshooting and security investigation"
   homepage "https://github.com/draios/sysdig-inspect"
 
   livecheck do
-    url "https://github.com/draios/sysdig-inspect"
+    url :homepage
     strategy :github_latest
   end
 

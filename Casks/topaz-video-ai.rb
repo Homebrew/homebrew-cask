@@ -1,6 +1,6 @@
 cask "topaz-video-ai" do
-  version "3.1.5"
-  sha256 "aa70b1cc890528463e993bcc3fefdc6a0b611bc732b0e8c3893c0929b3e832a2"
+  version "3.3.9"
+  sha256 "378cfb554f8b9dda0ebc3dc44e976d81727256c336f619a3bd51e4278ca9508a"
 
   url "https://downloads.topazlabs.com/deploy/TopazVideoAI/#{version}/TopazVideoAI-#{version}.dmg"
   name "Topaz Video AI"
@@ -8,7 +8,7 @@ cask "topaz-video-ai" do
   homepage "https://www.topazlabs.com/topaz-video-ai"
 
   livecheck do
-    url "https://topazlabs.com/d/veai/latest/mac/full"
+    url "https://topazlabs.com/d/tvai/latest/mac/full"
     strategy :header_match
   end
 

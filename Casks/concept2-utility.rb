@@ -8,8 +8,8 @@ cask "concept2-utility" do
     end
   end
   on_high_sierra :or_newer do
-    version "7.12.00"
-    sha256 "4d0c242ed5bbdd776f8da1a4f3de771f5c35748bf248a113ff6f83ab61a3f54b"
+    version "7.13.00"
+    sha256 "eb3ee0636ac95408192d7be24a92f529cb9fdd6c1b42997bef32296504e0a7ee"
 
     livecheck do
       url :homepage

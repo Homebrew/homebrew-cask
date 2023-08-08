@@ -1,6 +1,6 @@
 cask "qtspim" do
-  version "9.1.23"
-  sha256 "3e5bc9ec15169483cbb51eb4de7687bbad025cabfcab65883f5c6ed7434ecb61"
+  version "9.1.24"
+  sha256 "3842fa065851d4493e139dae500f37dd5dd33f267c69115ec75e68411985ace1"
 
   url "https://downloads.sourceforge.net/spimsimulator/QtSpim_#{version}_mac.mpkg.zip",
       verified: "downloads.sourceforge.net/spimsimulator/"

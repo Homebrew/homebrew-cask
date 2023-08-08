@@ -13,4 +13,9 @@ cask "sim-daltonism" do
   end
 
   app "Sim Daltonism.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.michelf.sim-daltonism",
+    "~/Library/Containers/com.michelf.sim-daltonism",
+  ]
 end

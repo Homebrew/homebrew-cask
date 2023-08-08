@@ -1,6 +1,6 @@
 cask "netnewswire" do
-  version "6.1.2"
-  sha256 "c2914fd5405f0cd3c0f34d7523c52d9ca56d2e3836bcdeba8ee75d51737c6b2f"
+  version "6.1.4"
+  sha256 "74d75b9e25c6adef06dbf01cd060771872769357448879809535f77493840bbb"
 
   url "https://github.com/Ranchero-Software/NetNewsWire/releases/download/mac-#{version}/NetNewsWire#{version}.zip",
       verified: "github.com/Ranchero-Software/NetNewsWire/"

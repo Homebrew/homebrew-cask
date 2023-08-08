@@ -1,6 +1,6 @@
 cask "circuitjs1" do
   # NOTE: "1" is not a version number, but an intrinsic part of the product name
-  version "2.7.6js"
+  version "2.8.1js"
   sha256 :no_check
 
   url "https://www.falstad.com/circuit/offline/CircuitJS1-mac.dmg"

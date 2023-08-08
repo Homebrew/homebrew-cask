@@ -1,9 +1,9 @@
 cask "httpie" do
   arch arm: "-arm64"
 
-  version "2023.3.0"
-  sha256 arm:   "8f0629968a8668e757a555b0e24b7f6ceb62ac7d9bf5f5133773a800bac772b2",
-         intel: "1f2f83467323937a4cded22b6c6f2806f811a95e6be5ff814fdbcecdad882083"
+  version "2023.3.3"
+  sha256 arm:   "1406051846b12010041c4ce3c892ed6cd9eeea724a118e3a44ebfee231f97c85",
+         intel: "64f219784f7ddd76748b6c9533c2046b7a51be8c3d2e7f05dc60fd7a978b2503"
 
   url "https://github.com/httpie/desktop/releases/download/v#{version}/HTTPie-#{version}#{arch}.dmg",
       verified: "github.com/httpie/desktop/"
@@ -12,8 +12,8 @@ cask "httpie" do
   homepage "https://httpie.io/product"
 
   livecheck do
-    url "https://httpie.io/download"
-    regex(/href=.*?HTTPie[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    url :url
+    strategy :github_latest
   end
 
   app "HTTPie.app"

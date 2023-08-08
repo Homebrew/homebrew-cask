@@ -1,9 +1,9 @@
 cask "anaconda" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2023.03-1"
-  sha256 arm:   "85152324c423fedbeed2e7491cb32e597eaeb1b86ae7a61ff7597b401fd053ce",
-         intel: "3593921c8a5516db82f0d7dd1c691f7ee7794236852e7da614e9ad6e93eeb342"
+  version "2023.07-2"
+  sha256 arm:   "8b08ca8a94dd5fda20d134fea13fa6c55c70d20d4b5a7a1c80d311aeb0cd7a88",
+         intel: "a2f7d0c19f60d00742154db21bfb3976d82215ff58396353f4dc729828bd2f49"
 
   url "https://repo.anaconda.com/archive/Anaconda3-#{version}-MacOSX-#{arch}.sh"
   name "Anaconda Distribution"

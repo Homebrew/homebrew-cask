@@ -8,4 +8,10 @@ cask "pomotroid" do
   homepage "https://github.com/Splode/pomotroid"
 
   app "Pomotroid.app"
+
+  zap trash: [
+    "~/Library/Application Support/pomotroid",
+    "~/Library/Preferences/com.splode.pomotroid.plist",
+    "~/Library/Saved Application State/com.splode.pomotroid.savedState",
+  ]
 end

@@ -4,10 +4,11 @@ cask "githubpulse" do
 
   url "https://github.com/tadeuzagallo/GithubPulse/raw/master/dist/GithubPulse.zip"
   name "GithubPulse"
+  desc "Statusbar app to help you remember to contribute every day on Github"
   homepage "https://github.com/tadeuzagallo/GithubPulse"
 
   livecheck do
-    url "https://github.com/tadeuzagallo/GithubPulse"
+    url :homepage
     strategy :github
   end
 

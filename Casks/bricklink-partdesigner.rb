@@ -3,13 +3,13 @@ cask "bricklink-partdesigner" do
   sha256 :no_check
 
   url "https://dzncyaxjqx7p3.cloudfront.net/PartDesigner/PartDesigner.pkg",
-      verified: "dzncyaxjqx7p3.cloudfront.net/"
+      verified: "dzncyaxjqx7p3.cloudfront.net/PartDesigner/"
   name "PartDesigner"
   desc "Design your own LEGO parts"
   homepage "https://bricklink.com/v3/studio/partdesigner.page"
 
   livecheck do
-    url "https://bricklink.com/v3/studio/partdesigner.page"
+    url :homepage
     regex(/"strVersion"\s*:\s*"([^"]+)"/i)
   end
 

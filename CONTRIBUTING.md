@@ -11,10 +11,10 @@
 
 ## Updating a Cask
 
-Notice an application that's out-of-date in Homebrew Cask? In most cases, it's very simple to update it. We have a command that will accept a new version number and take care of updating the Cask file and submitting a pull request to us:
+Notice an application that's out-of-date in Homebrew Cask? In most cases, it's very simple to update it. We have a command that will take care of updating the Cask file and submitting a pull request to us:
 
 ```bash
-brew bump-cask-pr --version <new_version> <outdated_cask>
+brew bump --open-pr <outdated_cask>
 ```
 
 You can also follow the steps in [Adding a Cask](https://docs.brew.sh/Adding-Software-to-Homebrew) for more complicated changes.
@@ -22,21 +22,7 @@ You can also follow the steps in [Adding a Cask](https://docs.brew.sh/Adding-Sof
 
 ## Getting Set Up To Contribute
 
-For manual updates, you'll need to fork the repository and add your copy as a remote (can also be done with `hub fork`).
-
-1: Fork the repository in GitHub with the `Fork` button.
-
-2: If you have not already done so, add your GitHub fork as a remote for your homebrew-cask Tap:
-
-```bash
-$ github_user='<my-github-username>'
-$ cd "$(brew --repository)"/Library/Taps/homebrew/homebrew-cask
-$ git remote add "${github_user}" "https://github.com/${github_user}/homebrew-cask"
-```
-
-3: If you have already added your GitHub fork as a remote for your homebrew-cask Tap, ensure your fork is [up-to-date](https://help.github.com/articles/merging-an-upstream-repository-into-your-fork/).
-
-4: Switch to a new branch (ie. `new-feature`), and work from there: `git checkout -b new-feature`.
+Follow the guide in [How to open a Homebrew pull request](https://docs.brew.sh/How-To-Open-a-Homebrew-Pull-Request#cask-related-pull-request).
 
 
 ## Adding a Cask
@@ -57,4 +43,4 @@ Some style guidelines:
 * Test your cask using `brew audit/style` (See [testing](https://docs.brew.sh/Adding-Software-to-Homebrew#testing-your-new-cask)).
 * Make one Pull Request per Cask change.
 * Do not squash commits after updating a Pull Request.
-* Use descriptive commit messages - mention app name and version (ie. `Upgrade Transmission.app to v2.82`).
+* Use descriptive commit messages - mention cask name and version/change (ie. `transmission 2.82`, `google-chrome: update zap`).

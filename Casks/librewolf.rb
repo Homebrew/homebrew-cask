@@ -1,27 +1,27 @@
 cask "librewolf" do
-  arch arm: "aarch64", intel: "x86_64"
+  arch arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "114.0.1,2,975ae3e965a93a782b22c60ef4b82bba"
-    sha256 "c31247c622df56960197c634d5df4334ad06d489bbcfd3914903fd86b03b60f8"
+    version "116.0,1"
+    sha256 "0f2c39f7171e2a0d8e2c1d6d622cc65d93066c53877465eeccebed05534387de"
   end
   on_intel do
-    version "114.0.1,2,918eec6aa9be985419c79ba9c3d9b069"
-    sha256 "8d66fbffd2677b471cc694224b7b54fcb950ea82a68179f733f1543d02555354"
+    version "116.0,1"
+    sha256 "7bb3c7dd8c87b3eaef2208fb92f32facb81ac048178c4f23a3165d2a165b8e50"
   end
 
-  url "https://gitlab.com/librewolf-community/browser/macos/uploads/#{version.csv.third}/librewolf-#{version.csv.first}-#{version.csv.second}.en-US.mac.#{arch}.dmg",
-      verified: "gitlab.com/librewolf-community/browser/macos/uploads/"
+  url "https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/#{version.csv.first}-#{version.csv.second}/librewolf-#{version.csv.first}-#{version.csv.second}-macos-#{arch}-package.dmg",
+      verified: "gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/"
   name "LibreWolf"
   desc "Web browser"
   homepage "https://librewolf.net/"
 
   livecheck do
-    url "https://gitlab.com/api/v4/projects/13853965/releases"
-    regex(%r{/(\w+)/librewolf[._-](\d+(?:\.\d+)+)-(\d+)\.en-US\.mac\.#{arch}\.dmg[\s"]}i)
+    url "https://gitlab.com/api/v4/projects/44042130/releases"
+    regex(/librewolf[._-]v?(\d+(?:\.\d+)+)[._-](\d+)[._-]macos[._-]#{arch}[._-]package\.dmg/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|
-        "#{match[1]},#{match[2]},#{match[0]}"
+        "#{match[0]},#{match[1]}"
       end
     end
   end

@@ -1,6 +1,6 @@
 cask "pdfsam-basic" do
-  version "5.1.2"
-  sha256 "5c2ac8633f7f52b4d7e79c4035d69a8234395dcee054e3a5b7a21f5774b91bc8"
+  version "5.1.3"
+  sha256 "9a52fa0b0b1f03cd9f7457eb7638f753fc9b1d71469c829fb9b7e67be3294dd6"
 
   url "https://github.com/torakiki/pdfsam/releases/download/v#{version}/PDFsam-#{version}.dmg",
       verified: "github.com/torakiki/pdfsam/"

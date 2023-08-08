@@ -5,11 +5,11 @@ cask "elgato-video-capture" do
   url "https://edge.elgato.com/video-capture/macos/#{version.major_minor_patch}/Video_Capture_#{version}.zip"
   name "Elgato Video Capture"
   desc "Capture video from analog sources"
-  homepage "https://www.elgato.com/en/video-capture/"
+  homepage "https://www.elgato.com/ww/en/s/downloads"
 
   livecheck do
-    url "https://www.elgato.com/sites/default/files/downloads.json"
-    regex(%r{"downloadURL"\s*:\s*"[^"]*?/Video[._-]Capture[._-]v?(\d+(?:[._]\d+)+)\.zip"}i)
+    url "https://www.elgato.com/graphql?query=query%20contentJson(%24identifier%3A%5BString%5D%24contentType%3AString%24options%3AContentJsonOptionsInput)%7BcontentJson(identifiers%3A%24identifier%20contentType%3A%24contentType%20options%3A%24options)%7Bidentifier%20entries%7D%7D&operationName=contentJson&variables=%7B%22contentType%22%3A%22downloads%22%2C%22identifier%22%3A%5B%22downloads%22%5D%2C%22options%22%3A%7B%22level%22%3A1%7D%7D&locale=en-US"
+    regex(/Video[._-]Capture[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
   depends_on macos: ">= :el_capitan"
@@ -17,8 +17,8 @@ cask "elgato-video-capture" do
   app "Elgato Video Capture.app"
 
   zap trash: [
-    "~/Library/Application Support/Elgato Video Capture",
     "~/Library/Application Support/com.elgato.VideoCapture",
+    "~/Library/Application Support/Elgato Video Capture",
     "~/Library/Caches/com.elgato.VideoCapture",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.elgato.VideoCapture",
     "~/Library/Logs/elgato.log",

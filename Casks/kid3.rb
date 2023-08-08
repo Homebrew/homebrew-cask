@@ -1,10 +1,24 @@
 cask "kid3" do
   # NOTE: "3" is not a version number, but an intrinsic part of the product name (ID3 tags)
-  version "3.9.3"
-  sha256 "3b7e6c59c87a633c60e36371307eb2341fd1d396ab8f3b19e0b55902ec9da216"
+  version "3.9.4"
 
-  url "https://downloads.sourceforge.net/kid3/kid3-#{version}-Darwin.dmg",
-      verified: "downloads.sourceforge.net/kid3/"
+  on_high_sierra :or_older do
+    sha256 "b8668c493982bcbeade9b17244d440158b24f17149ac7f5988e086f65063207d"
+
+    url "https://downloads.sourceforge.net/kid3/kid3-#{version}-Darwin-Qt5.dmg",
+        verified: "downloads.sourceforge.net/kid3/"
+
+    depends_on macos: "<= :high_sierra"
+  end
+  on_mojave :or_newer do
+    sha256 "b8668c493982bcbeade9b17244d440158b24f17149ac7f5988e086f65063207d"
+
+    url "https://downloads.sourceforge.net/kid3/kid3-#{version}-Darwin-amd64.dmg",
+        verified: "downloads.sourceforge.net/kid3/"
+
+    depends_on macos: ">= :mojave"
+  end
+
   name "Kid3"
   desc "Audio tagger focusing on efficiency"
   homepage "https://kid3.sourceforge.io/"

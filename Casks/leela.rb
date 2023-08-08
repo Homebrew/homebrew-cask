@@ -8,8 +8,8 @@ cask "leela" do
   homepage "https://sjeng.org/leela.html"
 
   livecheck do
-    url "https://sjeng.org/leela.html"
-    regex(%r{href=.*?/Leela_(\d+(?:\.\d+)*)\.dmg}i)
+    url :homepage
+    regex(%r{href=.*?/Leela[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   depends_on macos: ">= :sierra"

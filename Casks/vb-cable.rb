@@ -19,4 +19,6 @@ cask "vb-cable" do
   uninstall launchctl: "com.vbaudio.vbcableagent",
             pkgutil:   "com.vbaudio.vbcable",
             delete:    "/Library/Preferences/com.vbaudio.vbcable.plist"
+
+  zap trash: "~/Library/Saved Application State/com.vbaudio.vbcablecontrolpanel.savedState"
 end

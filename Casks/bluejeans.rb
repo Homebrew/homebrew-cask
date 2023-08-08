@@ -1,6 +1,6 @@
 cask "bluejeans" do
-  version "2.43.0.258"
-  sha256 "6b6ee9ecc26bab1a54607e8139ac82c9e23acc3fb004aa1a547c2b029c53695e"
+  version "2.45.0.208"
+  sha256 "ab7eea7844e95219a6f564d8e3a60e21a6c740002d22bbf30a2ea1851f7a2444"
 
   url "https://swdl.bluejeans.com/desktop-app/mac/#{version.major_minor_patch}/#{version}/BlueJeansInstaller.pkg"
   name "BlueJeans"
@@ -11,6 +11,8 @@ cask "bluejeans" do
     url "https://swdl.bluejeans.com/desktop-app/mac/ga.appcast.xml"
     strategy :sparkle
   end
+
+  depends_on macos: ">= :catalina"
 
   pkg "BlueJeansInstaller.pkg"
 

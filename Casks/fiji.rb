@@ -1,6 +1,6 @@
 cask "fiji" do
-  version "20221201-1017"
-  sha256 "e6de1fd26c63a79f019cd859d575173774153cdbd6df59464e47a3e5650ac813"
+  version "20230801-1717"
+  sha256 "3f94a27a46152012017bad9367aa15721254075f135e0753d41c927159594a13"
 
   url "https://downloads.imagej.net/fiji/archive/#{version}/fiji-macosx.zip",
       verified: "downloads.imagej.net/fiji/archive/"
@@ -16,4 +16,9 @@ cask "fiji" do
   auto_updates true
 
   app "Fiji.app"
+
+  zap trash: [
+    "~/Library/Preferences/sc.fiji.cellcounter.plist",
+    "~/Library/Saved Application State/org.fiji.savedState",
+  ]
 end

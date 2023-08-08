@@ -1,11 +1,11 @@
 cask "exactscan" do
-  version "22.1"
-  sha256 "8c3f90461039db6f8dce5b2b80ed3b03ac0a3db57e0c495daa362351e9885ce7"
+  version "23.2"
+  sha256 "81998738431d680d022c2fd03ce2cefd81bc630de3a0bcadba24ddddc9c67da7"
 
   url "https://dl.exactcode.com/exactscan/ExactScan-#{version}.dmg",
       verified: "dl.exactcode.com/"
   name "ExactScan"
-  desc "Doceument scanner"
+  desc "Document scanner"
   homepage "https://exactscan.com/index.html"
 
   livecheck do
@@ -14,4 +14,10 @@ cask "exactscan" do
   end
 
   app "ExactScan.app"
+
+  zap trash: [
+    "~/Library/Caches/de.exactcode.ExactScan",
+    "~/Library/HTTPStorages/de.exactcode.ExactScan",
+    "~/Library/Preferences/de.exactcode.ExactScan.plist",
+  ]
 end

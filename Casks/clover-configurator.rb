@@ -1,5 +1,5 @@
 cask "clover-configurator" do
-  version "5.24.0.1"
+  version "5.25.0.0"
   sha256 :no_check
 
   url "https://mackie100projects.altervista.org/apps/cloverconf/download-new-build.php?version=global",

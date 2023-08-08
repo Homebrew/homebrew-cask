@@ -1,6 +1,6 @@
 cask "workspaces" do
-  version "2.1.2"
-  sha256 "92102cddbcebb3c7c5799c5f723bcf6cd442eefed4f4e642dd9db3ff17636571"
+  version "2.1.3"
+  sha256 "57ebc096622efeaa2ed459ffe8599f460b00262c0d4ebe7ea7f30464fdf46565"
 
   url "https://www.apptorium.com/public/products/workspaces/releases/Workspaces-#{version}.zip"
   name "Workspaces"

@@ -1,11 +1,11 @@
 cask "chatbox" do
-  arch arm: "aarch64", intel: "x64"
+  arch arm: "-arm64"
 
-  version "0.5.2"
-  sha256 arm:   "c446873acf7eb73c387bb255deb7ad63fb23d3d6ba5215bda562cbb609fcc1e7",
-         intel: "0bc04cc0f7e4c8ffa3b182e3879b1577d74b2972991cc3d31952309b0630672e"
+  version "0.6.6"
+  sha256 arm:   "ea9f9203c4b4010e9323392d8641a8e0d8b4c1b51d3eeb9ad6334e370e357b3d",
+         intel: "8b9abd7c0b4ff34b3262c40b6a22ffcdde9ca14a6bd6229c321f8acacb99dd00"
 
-  url "https://github.com/Bin-Huang/chatbox/releases/download/v#{version}/chatbox_#{version}_#{arch}.dmg",
+  url "https://github.com/Bin-Huang/chatbox/releases/download/v#{version}/Chatbox-#{version}#{arch}.dmg",
       verified: "github.com/Bin-Huang/chatbox/"
   name "chatbox"
   desc "Desktop app for GPT-4 / GPT-3.5 (OpenAI API)"

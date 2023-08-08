@@ -1,7 +1,7 @@
 cask "virtualc64" do
   # NOTE: "64" is not a version number, but an intrinsic part of the product name
-  version "4.5.1"
-  sha256 "9b31e4b6c24c6f9602ce10f327b6324ef4c42e75be343763fae0fa40483cdc9c"
+  version "4.6"
+  sha256 "16076b0c0abf732d40e8cbb0ccac9f3830778271502733ee4928caf7c5cb3f2b"
 
   url "https://github.com/dirkwhoffmann/virtualc64/releases/download/v#{version}/VirtualC64.app.zip",
       verified: "github.com/dirkwhoffmann/virtualc64/"

@@ -1,6 +1,6 @@
 cask "fabfilter-pro-mb" do
-  version "1.27"
-  sha256 "51a07397244cf741e7045bdd8d3a70297127fdbbc629fb9cdf60942ca54cbfe5"
+  version "1.28"
+  sha256 "06cb8be048d0eb4f9aea322e8fee5849757d39426954555f2df928d8f46f59bb"
 
   url "https://download.fabfilter.com/ffpromb#{version.no_dots}.dmg"
   name "FabFilter Pro-MB"
@@ -22,4 +22,6 @@ cask "fabfilter-pro-mb" do
   pkg "FabFilter Pro-MB #{version} Installer.pkg"
 
   uninstall pkgutil: "com.fabfilter.Pro-MB.#{version.major}"
+
+  # No zap stanza required
 end

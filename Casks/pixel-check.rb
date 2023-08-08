@@ -4,11 +4,12 @@ cask "pixel-check" do
 
   url "http://macguitar.me/apps/pixelcheck/PXC#{version}.zip"
   name "PiXel Check"
+  desc "Check your monitor for dead pixels"
   homepage "http://macguitar.me/apps/pixelcheck/"
 
   livecheck do
-    url "http://macguitar.me/apps/pixelcheck/"
-    regex(%r{href=.*?/PXC(\d+(?:\.\d+)*)\.zip}i)
+    url :homepage
+    regex(%r{href=.*?/PXC(\d+(?:\.\d+)+)\.zip}i)
   end
 
   app "PiXel Check #{version}/PiXel Check.app"

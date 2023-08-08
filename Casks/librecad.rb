@@ -1,6 +1,6 @@
 cask "librecad" do
-  version "2.2.0"
-  sha256 "e17d81be0d943f99613d4c12e9a552e3257a41229a99933b7189ea3e896f5011"
+  version "2.2.0.2"
+  sha256 "552e2ac63fca297c617511c3983be7477bc050e8f774841abb7db5ce81ce935b"
 
   url "https://github.com/LibreCAD/LibreCAD/releases/download/#{version}/LibreCAD-#{version}.dmg",
       verified: "github.com/LibreCAD/LibreCAD/"

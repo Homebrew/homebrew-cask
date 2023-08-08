@@ -1,27 +1,30 @@
 cask "fme" do
-  version "2022.2.6,22800"
-  sha256 "f28c0235423afa9d19c308c8d35cc0908e0ebf7579c3e566f0b2ac245df33310"
+  arch arm: "aarch64", intel: "x64"
+  folder = on_arch_conditional arm: "-aarch64"
 
-  url "https://downloads.safe.com/fme/#{version.major}/fme-desktop-#{version.csv.first}-b#{version.csv.second}-macosx-x64.pkg"
-  name "FME Desktop"
+  version "2023.0.2,23338"
+  sha256 arm:   "c55f4b1c6970bfd69e3e00f32f9d515938080094b423414e14ece5fa976e820f",
+         intel: "96f3c056a042f47ef1c12c593f012d69d4a1fbdede4419fd082e9400723f9203"
+
+  url "https://downloads.safe.com/fme/#{version.major}/macos#{folder}/fme-form-#{version.csv.first}-b#{version.csv.second}-macosx-#{arch}.pkg"
+  name "FME Form"
   desc "Platform for integrating spatial data"
   homepage "https://www.safe.com/"
 
   livecheck do
-    url "https://engage.safe.com/support/downloads/"
-    strategy :page_match do |page|
-      match = page.match(/fme-desktop-(\d+(?:\.\d+)+)-b(\d+)-macosx-x64\.pkg/i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
+    url "https://engage.safe.com/api/downloads/"
+    regex(/fme[._-]form[._-]v?(\d+(?:\.\d+)+)[._-]b(\d+)[._-]macosx[._-]#{arch}\.pkg/i)
+    strategy :json do |json, regex|
+      json["official"]["desktop"]["mac"].select { |item| item["url"]&.match?(regex) }
+                                        .map { |item| "#{item["url"][regex, 1]},#{item["url"][regex, 2]}" }
     end
   end
 
-  pkg "fme-desktop-#{version.csv.first}-b#{version.csv.second}-macosx-x64.pkg"
+  pkg "fme-form-#{version.csv.first}-b#{version.csv.second}-macosx-#{arch}.pkg"
 
   uninstall pkgutil: [
-              "com.safesoftware.pkg.engine.fme-desktop-#{version.major_minor}-b#{version.csv.second}-macosx-x64",
-              "com.safesoftware.pkg.apps.fme-desktop-#{version.major_minor}-b#{version.csv.second}-macosx-x64",
+              "com.safesoftware.pkg.engine.fme-form-#{version.major_minor}-b#{version.csv.second}-macosx-#{arch}",
+              "com.safesoftware.pkg.apps.fme-form-#{version.major_minor}-b#{version.csv.second}-macosx-#{arch}",
             ],
             delete:  [
               "/Applications/FME #{version.major_minor}",

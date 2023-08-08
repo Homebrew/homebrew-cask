@@ -1,6 +1,6 @@
 cask "proxyman" do
-  version "4.8.0,48000"
-  sha256 "1d1325eba69ad884841f9251e9273500d0ec406f8ee2c2559d8ddc0dfa6d42df"
+  version "4.9.0,49000"
+  sha256 "a70a64cbb5501a99238f199896505d7d73473f95fdcea710e863693ed1d9b258"
 
   url "https://download.proxyman.io/#{version.csv.second}/Proxyman_#{version.csv.first}.dmg"
   name "Proxyman"
@@ -36,12 +36,16 @@ cask "proxyman" do
     "~/.proxyman*",
     "~/Library/Application Support/com.proxyman",
     "~/Library/Application Support/com.proxyman.NSProxy",
+    "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.proxyman.NSProxy",
     "~/Library/Caches/com.proxyman.NSProxy",
     "~/Library/Caches/Proxyman",
     "~/Library/Cookies/com.proxyman.binarycookies",
     "~/Library/Cookies/com.proxyman.NSProxy.binarycookies",
+    "~/Library/HTTPStorages/com.proxyman.NSProxy",
     "~/Library/Preferences/com.proxyman.NSProxy.plist",
+    "~/Library/Preferences/com.proxyman.iconappmanager.userdefaults.plist",
     "~/Library/Preferences/com.proxyman.plist",
     "~/Library/Saved Application State/com.proxyman.NSProxy.savedState",
+    "~/Library/WebKit/com.proxyman.NSProxy",
   ]
 end

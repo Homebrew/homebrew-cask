@@ -1,6 +1,16 @@
 cask "stats" do
-  version "2.8.26"
-  sha256 "1a4b44ba02520683b0a6c192388f593c36dde4d15c784a22dccf0caefe81e8b7"
+  on_mojave :or_older do
+    version "2.8.26"
+    sha256 "1a4b44ba02520683b0a6c192388f593c36dde4d15c784a22dccf0caefe81e8b7"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_catalina :or_newer do
+    version "2.9.4"
+    sha256 "4df566eb959ad1f359a353f0776d74bc7238b7fc727c1763d7f2d7ab1b714606"
+  end
 
   url "https://github.com/exelban/stats/releases/download/v#{version}/Stats.dmg"
   name "Stats"
@@ -19,6 +29,7 @@ cask "stats" do
         "~/Library/Caches/eu.exelban.Stats",
         "~/Library/Containers/eu.exelban.Stats.LaunchAtLogin",
         "~/Library/Cookies/eu.exelban.Stats.binarycookies",
+        "~/Library/HTTPStorages/eu.exelban.Stats",
         "~/Library/Preferences/eu.exelban.Stats.plist",
       ],
       delete: "/Library/LaunchDaemons/eu.exelban.Stats.SMC.Helper.plist"

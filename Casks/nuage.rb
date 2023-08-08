@@ -1,6 +1,6 @@
 cask "nuage" do
-  version "0.0.2"
-  sha256 "c44758127154e86181aa832fbdccf1d6526ce74a8223e3009b7b10d1981a003b"
+  version "0.0.6"
+  sha256 "21c3607ee6e04ca4b17892a02f07c5d8a15278db4851bf8a138d5abe92b43511"
 
   url "https://github.com/lbrndnr/nuage-macos/releases/download/v#{version}/Nuage.app.zip"
   name "Nuage"

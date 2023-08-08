@@ -1,6 +1,6 @@
 cask "dust3d" do
-  version "1.0.0-rc.7"
-  sha256 "18245da976677629331bbdf47efe6b56dd95c9cb789c3f70c1c657156d5db982"
+  version "1.0.0-rc.9"
+  sha256 "9d2a251f26bcdcbe671677d48743f0c617be63c78f5c9291bd5b45e0dbb49a7f"
 
   url "https://github.com/huxingyi/dust3d/releases/download/#{version}/dust3d-#{version}.dmg",
       verified: "github.com/huxingyi/dust3d/"
@@ -16,4 +16,6 @@ cask "dust3d" do
   end
 
   app "dust3d-#{version}.app"
+
+  zap trash: "~/Library/Saved Application State/com.yourcompany.dust3d.savedState"
 end

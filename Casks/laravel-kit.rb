@@ -12,4 +12,10 @@ cask "laravel-kit" do
   homepage "https://tmdh.github.io/laravel-kit"
 
   app "Laravel Kit.app"
+
+  zap trash: [
+    "~/Library/Application Support/laravel-kit",
+    "~/Library/Preferences/com.tmdh.laravel-kit.plist",
+    "~/Library/Saved Application State/com.tmdh.laravel-kit.savedState",
+  ]
 end

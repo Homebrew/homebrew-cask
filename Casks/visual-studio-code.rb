@@ -1,9 +1,9 @@
 cask "visual-studio-code" do
   arch arm: "darwin-arm64", intel: "darwin"
 
-  version "1.79.2"
-  sha256 arm:   "466f055fd717203501ef9d5afef357f26aa1677520bb364d937a03b928743252",
-         intel: "adb455c699d82bc08b0c696dd8e1c794252d5c58a1f486865872ba4fbe615efd"
+  version "1.81.0"
+  sha256 arm:   "7e1522d35142190f98b906c83dd3be9388570c63e510e2d73e1d09b1df86052f",
+         intel: "93fb2c0f6c45d6fde17c0cd2a54a832b40747bf5a8738068bb0d17a529c9d9ea"
 
   url "https://update.code.visualstudio.com/#{version}/#{arch}/stable"
   name "Microsoft Visual Studio Code"
@@ -12,7 +12,7 @@ cask "visual-studio-code" do
   homepage "https://code.visualstudio.com/"
 
   livecheck do
-    url "https://update.code.visualstudio.com/api/update/#{arch}/stable/VERSION"
+    url "https://update.code.visualstudio.com/api/update/#{arch}/stable/latest"
     regex(/"productVersion"\s*:\s*"(\d+(:?\.\d+)+)"/i)
   end
 

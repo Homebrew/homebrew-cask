@@ -8,4 +8,6 @@ cask "gltfquicklook" do
   homepage "https://github.com/magicien/GLTFQuickLook"
 
   qlplugin "GLTFQuickLook.qlgenerator"
+
+  # No zap stanza required
 end

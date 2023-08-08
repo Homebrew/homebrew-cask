@@ -16,7 +16,7 @@ cask "duckietv" do
 
   uninstall pkgutil: "tv.duckie.base.pkg",
             delete:  [
-              "/Applicatons/duckieTV.app",
+              "/Applications/duckieTV.app",
               "~/Library/Application Support/DuckieTV-Standalone",
             ]
 end

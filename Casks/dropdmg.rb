@@ -8,7 +8,7 @@ cask "dropdmg" do
   homepage "https://c-command.com/dropdmg/"
 
   livecheck do
-    url "https://c-command.com/dropdmg/"
+    url :homepage
     regex(%r{href=.*?/DropDMG[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 

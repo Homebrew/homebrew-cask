@@ -5,7 +5,7 @@ cask "cakebrewjs" do
   url "https://downloads.sourceforge.net/cakebrewjs/v#{version}/cakebrewjs-#{version}-mac.zip"
   name "cakebrewjs"
   desc "Homebrew GUI app written in electron"
-  homepage "https://sourceforge.net/projects/cakebrewjs"
+  homepage "https://sourceforge.net/projects/cakebrewjs/"
 
   livecheck do
     url "https://sourceforge.net/projects/cakebrewjs/rss?"

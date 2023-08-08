@@ -17,7 +17,7 @@ cask "xtool-creative-space" do
   homepage "https://www.xtool.com/pages/software"
 
   livecheck do
-    url "https://www.xtool.com/pages/software"
+    url :homepage
     regex(%r{href=.*?packages/(.*)/xTool\s?Creative\s?Space[._-](\d+(?:\.\d+)+)-(\d+(?:-\d+)+)-#{arch}\.dmg}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|

@@ -1,6 +1,6 @@
 cask "texifier" do
-  version "1.9.20,760,b4f205f"
-  sha256 "e43237b1ab7d7c2c8d16ba978623a9d62c620c2c8e14383b04b542b0878384bf"
+  version "1.9.21,776,8504a08"
+  sha256 "c7d34a43a13466b421506b048469ca3d6f1d26392320cdf9b1abee619b8b6bab"
 
   url "https://download.texifier.com/apps/osx/updates/Texifier_#{version.csv.first.dots_to_underscores}__#{version.csv.second}__#{version.csv.third}.dmg"
   name "Texifier"
@@ -8,7 +8,7 @@ cask "texifier" do
   homepage "https://www.texifier.com/mac"
 
   livecheck do
-    url "https://www.texifier.com/mac"
+    url :homepage
     regex(/href=["'].*?download\.texifier\.com.*?osx.*?Texifier_(\d+(?:_\d+)+)__(\d+)__([^_]+)\.dmg/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[0].tr("_", ".")},#{match[1]},#{match[2]}" }
@@ -21,9 +21,9 @@ cask "texifier" do
   app "Texifier.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vallettaventures.texpad.sfl2",
     "~/Library/Application Support/CloudDocs/session/containers/iCloud.com.vallettaventures.texpadm",
     "~/Library/Application Support/CloudDocs/session/containers/iCloud.com.vallettaventures.texpadm.plist",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vallettaventures.texpad.sfl2",
     "~/Library/Application Support/Texpad",
     "~/Library/Caches/com.vallettaventures.Texpad",
     "~/Library/Cookies/com.vallettaventures.Texpad.binarycookies",

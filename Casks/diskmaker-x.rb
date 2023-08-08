@@ -14,7 +14,7 @@ cask "diskmaker-x" do
     sha256 "96845cd375543401b822fb4e17d2ecc300fcb621f56afcdad613ae11c9afddce"
 
     livecheck do
-      url "https://diskmakerx.com/"
+      url :homepage
       regex(/DiskMaker\s*X\s*(\d+(?:\.\d+)+)/i)
     end
 

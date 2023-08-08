@@ -1,5 +1,5 @@
 cask "cookie" do
-  version "6.9.1"
+  version "6.9.2"
   sha256 :no_check
 
   url "https://sweetpproductions.com/products/cookieapp/Cookie.dmg"
@@ -12,6 +12,7 @@ cask "cookie" do
     strategy :sparkle
   end
 
+  auto_updates true
   depends_on macos: ">= :mojave"
 
   app "Cookie.app"

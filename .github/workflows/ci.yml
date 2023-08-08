@@ -25,6 +25,8 @@ jobs:
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
         with:
+          core: false
+          cask: true
           test-bot: false
 
       - name: Check out Pull Request
@@ -36,7 +38,6 @@ jobs:
       - name: Generate CI matrix
         id: generate-matrix
         run: |
-          brew tap homebrew/cask
           brew ruby -- "$(brew --repository homebrew/cask)/cmd/lib/generate-matrix.rb" "${{ github.event.pull_request.url }}"
 
   test:
@@ -52,6 +53,8 @@ jobs:
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
         with:
+          core: false
+          cask: true
           test-bot: false
 
       - name: Enable debug mode

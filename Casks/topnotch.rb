@@ -1,6 +1,6 @@
 cask "topnotch" do
-  version "1.3.1"
-  sha256 "c8f5b516ba11590b269852f074a070ac6fb87662345fe390f4a66dd1a6e4faf2"
+  version "1.3.2"
+  sha256 "bedf07c46884e7c6bf43482fd48061beaf2f032a1e8bb23b422d55b85963e3d7"
 
   url "https://updates.topnotch.app/TopNotch-#{version}.dmg"
   name "topnotch"
@@ -11,6 +11,8 @@ cask "topnotch" do
     url "https://updates.topnotch.app/appcast.xml"
     strategy :sparkle
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "TopNotch.app"
 

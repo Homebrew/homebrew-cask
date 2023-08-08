@@ -1,6 +1,6 @@
 cask "popclip" do
-  version "2022.12"
-  sha256 "91264a56675fb41ba13e07bd5cb6cab01ac64cdc551a19582914dbe3aa2bf63a"
+  version "2023.7"
+  sha256 "be7953591ae1c5aa36204d95d26c651830e495fd7f1e191058735f2340ee01ca"
 
   url "https://pilotmoon.com/downloads/PopClip-#{version}.zip"
   name "PopClip"
@@ -21,5 +21,6 @@ cask "popclip" do
     "~/Library/Application Support/PopClip",
     "~/Library/Caches/com.pilotmoon.popclip",
     "~/Library/Preferences/com.pilotmoon.popclip.plist",
+    "~/Library/SyncedPreferences/com.apple.kvs/ChangeTokens/NoEncryption/PopClip",
   ]
 end

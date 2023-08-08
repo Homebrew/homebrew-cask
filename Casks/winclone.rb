@@ -9,7 +9,7 @@ cask "winclone" do
   homepage "https://twocanoes.com/products/mac/winclone"
 
   livecheck do
-    url "https://twocanoes.com/winclone/updates/winclone#{version.major}-software-updates.xml"
+    url "https://twocanoes-software-updates.s3.amazonaws.com/winclone#{version.major}-software-updates.xml"
     strategy :sparkle, &:short_version
   end
 

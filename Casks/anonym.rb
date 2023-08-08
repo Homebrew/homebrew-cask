@@ -8,8 +8,8 @@ cask "anonym" do
   homepage "https://www.hanynet.com/anonym/"
 
   livecheck do
-    url "https://www.hanynet.com/anonym/"
-    regex(%r{href=.*?/anonym-(\d+(?:\.\d+)+)\.zip}i)
+    url :homepage
+    regex(%r{href=.*?/anonym[._-]v?(\d+(?:\.\d+)+)\.zip}i)
   end
 
   app "Anonym.app"

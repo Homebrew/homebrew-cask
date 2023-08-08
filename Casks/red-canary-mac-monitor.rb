@@ -1,6 +1,6 @@
 cask "red-canary-mac-monitor" do
-  version "1.0.4"
-  sha256 "5c368ddd2f09e2e1ec5052d4ef8a2c2f53894c566a1581c9a8723faf4233ba75"
+  version "1.0.5"
+  sha256 "254dc88b26d0b26e2dde2e2936927ca6f21a816616148b79719c9d3e6023d9ac"
 
   url "https://github.com/redcanaryco/mac-monitor/releases/download/v#{version}/Red-Canary-Mac-Monitor-GoldCardinal-#{version.tr(".", "-")}.pkg",
       verified: "github.com/redcanaryco/mac-monitor/"

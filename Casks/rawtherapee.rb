@@ -4,7 +4,7 @@ cask "rawtherapee" do
 
   url "https://www.rawtherapee.com/shared/builds/mac/RawTherapee_macOS_11.7_Universal_#{version}.zip"
   name "RawTherapee"
-  desc "RAW photo processer"
+  desc "RAW photo processor"
   homepage "https://rawtherapee.com/"
 
   livecheck do

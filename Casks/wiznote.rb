@@ -1,9 +1,9 @@
 cask "wiznote" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.1.101"
-  sha256 arm:   "3e7f293f48f494ed313c42dbdf1a374859d122eab935b76e106198c6ea652ee5",
-         intel: "78ab4a2cd2ecaec167e01dbfd9124c3c30d42675b53657dc3e92e90d049a5299"
+  version "0.1.102"
+  sha256 arm:   "156554da4c0b295e428935a2c659d61a9b2a6fedb448a5f8c863f1bb46a87508",
+         intel: "c32b0a2996d93bbaad319623255281166c10a263087ecaafd297ddc4519bc0d5"
 
   url "https://get.wiz.cn/x/wiznote-desktop-#{version}-mac-#{arch}.dmg"
   name "WizNote"

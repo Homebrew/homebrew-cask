@@ -1,6 +1,6 @@
 cask "fujitsu-scansnap-home" do
-  version "2.10.0"
-  sha256 "c7c58464fc9d9997acd347966dbb3f8d225857a93ca7c523c6d170cc8d240f07"
+  version "2.12.0"
+  sha256 "5bf195c65855593f412652ec44d43457dc576fa1b1545818b289f8a026dfa74e"
 
   url "https://origin.pfultd.com/downloads/ss/sshinst/m-#{version.no_dots}/MacSSHOfflineInstaller_#{version.dots_to_underscores}.dmg",
       verified: "origin.pfultd.com/"
@@ -8,11 +8,12 @@ cask "fujitsu-scansnap-home" do
   desc "Fujitsu ScanSnap Scanner software"
   homepage "https://www.fujitsu.com/global/products/computing/peripheral/scanners/soho/sshome/"
 
-  # Some of the release titles contain a typo where a space is omitted, so this
-  # regex is a bit extreme about whitespace to ensure we match all the versions.
   livecheck do
-    url "https://www.pfu.fujitsu.com/imaging/ss_hist/en/mac/index.html"
-    regex(/ScanSnap\s*Home\s*for\s*Mac\s*v?(\d+(?:\.\d+)+)\s*Released/i)
+    url "https://www.pfu.ricoh.com/global/scanners/scansnap/dl/mac-sshoffline.html"
+    regex(/m-sshoffline[._-]v?(\d+(?:[._]\d+)+)\.html/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| match[0].tr("_", ".") }
+    end
   end
 
   depends_on macos: ">= :sierra"

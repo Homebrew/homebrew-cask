@@ -1,6 +1,6 @@
 cask "macwhisper" do
-  version "3.0,150"
-  sha256 "54be55eee6f221aa13dd2a2683f2ed159df3989b04068236075bcf17f63d8d14"
+  version "3.5.1,224"
+  sha256 "3ae3223e35a75f2cd57082cd35feac96d742cc606adf3c3e8f16ee648a352fd3"
 
   url "https://macwhisper-site.vercel.app/releases/MacWhisper-#{version.csv.second}.zip",
       verified: "macwhisper-site.vercel.app/releases/"
@@ -13,6 +13,7 @@ cask "macwhisper" do
     strategy :sparkle
   end
 
+  auto_updates true
   depends_on macos: ">= :ventura"
 
   app "MacWhisper.app"

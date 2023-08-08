@@ -1,9 +1,9 @@
 cask "ghost-browser" do
   arch arm: "_arm64"
 
-  version "2.1.4.5"
-  sha256 arm:   "aac49c17eb278e3cc214da58636bc5b66c62fb5b79de962cf32356fbd7024e9d",
-         intel: "e7efc9ddf557b301687bca83d94714dce6b2817a99f07db8d7452e290bb38954"
+  version "2.1.5.1"
+  sha256 arm:   "8e52acb5f51a3bb047198100703fff09f78299fdc302076c836493029420e5a2",
+         intel: "6b7facebe7c00c33a651c1a1288b8049608f38d617f33f96d1902a726b24e341"
 
   url "https://downloads.ghostbrowser.com/GhostBrowser-#{version}#{arch}.dmg"
   name "Ghost Browser"
@@ -16,4 +16,11 @@ cask "ghost-browser" do
   end
 
   app "Ghost Browser.app"
+
+  zap trash: [
+    "~/Library/Application Support/GhostBrowser",
+    "~/Library/Caches/GhostBrowser",
+    "~/Library/Preferences/com.ghostbrowser.gb1.plist",
+    "~/Library/Saved Application State/com.ghostbrowser.gb1.savedState",
+  ]
 end

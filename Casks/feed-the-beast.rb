@@ -1,16 +1,16 @@
 cask "feed-the-beast" do
-  version "202302201814,1c8edb0091"
-  sha256 "92664c2145e1104f4a1cfa71c46a079ef0d969715159d90abdbee731a39d7aa8"
+  version "202307221435,df4347b682"
+  sha256 "f1552d68f0a3dc57efdd2b7f6e371fd730fbb724a0d7782dd234031ba1a64a15"
 
-  url "https://apps.modpacks.ch/FTBApp/release/#{version.csv.first}-#{version.csv.second}-release/FTBA_macos_#{version.csv.first}-#{version.csv.second}-release.dmg",
+  url "https://apps.modpacks.ch/FTBApp/release/#{version.csv.first}-#{version.csv.second}/FTBA_macos_#{version.csv.first}-#{version.csv.second}.dmg",
       verified: "apps.modpacks.ch/FTBApp/"
   name "Feed the Beast"
   desc "Minecraft mod downloader and manager"
   homepage "https://www.feed-the-beast.com/"
 
   livecheck do
-    url "https://www.feed-the-beast.com/app_release.xml"
-    regex(/FTBA[._-]macos[._-](\d+)[._-](\h+)[._-]release\.dmg/i)
+    url "https://meta.feed-the-beast.com/v1/app/versions"
+    regex(/FTBA[._-]macos[._-](\d+)[._-](\h+)\.dmg/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end

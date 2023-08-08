@@ -1,9 +1,9 @@
 cask "minecraftpe" do
-  version "1.19.52.0"
-  sha256 "e1c024bb089ec1d9715135313c91eecb9caefc8257b8ef6b65adef0d901ebdbc"
+  version "1.19.53.0"
+  sha256 "9a3dce5175d8a09f35677ac08399291ce759a4ba43493769223faca3703da9f0"
 
-  url "https://meedownloads.azureedge.net/retailbuilds/MacOS/Minecraft_Education_#{version}.dmg",
-      verified: "meedownloads.azureedge.net/"
+  url "https://downloads.minecrafteduservices.com/retailbuilds/MacOS/Minecraft_Education_#{version}.dmg",
+      verified: "downloads.minecrafteduservices.com/"
   name "Minecraft Education Edition"
   desc "Educational version of Minecraft"
   homepage "https://education.minecraft.net/"

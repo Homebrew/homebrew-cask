@@ -1,6 +1,6 @@
 cask "sunlogincontrol" do
-  version "5.6.0.51662"
-  sha256 "d06accaa1dc86bc2157764e723d39b2f582735e04d725f659e8a9be8117a7d9f"
+  version "5.6.0.56304"
+  sha256 "c791df84595ba3d7907651b4106c334fcd88a688d1e7674ff19dc129a37f4882"
 
   url "https://down.oray.com/sunlogin/mac/SunloginRemote_#{version}.dmg"
   name "SunloginControl"

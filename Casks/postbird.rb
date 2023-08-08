@@ -8,4 +8,10 @@ cask "postbird" do
   homepage "https://github.com/Paxa/postbird"
 
   app "Postbird.app"
+
+  zap trash: [
+    "~/Library/Application Support/Postbird",
+    "~/Library/Preferences/com.electron.postbird.plist",
+    "~/Library/Saved Application State/com.electron.postbird.savedState",
+  ]
 end

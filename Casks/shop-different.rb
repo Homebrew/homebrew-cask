@@ -8,7 +8,7 @@ cask "shop-different" do
   homepage "https://departmentmap.store/timemachine/"
 
   livecheck do
-    url "https://departmentmap.store/timemachine/"
+    url :homepage
     regex(%r{href=.*?/Shop\+Different\+(\d+(?:\.\d+)+)\.dmg}i)
   end
 

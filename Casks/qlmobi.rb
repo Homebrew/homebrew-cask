@@ -8,4 +8,6 @@ cask "qlmobi" do
   homepage "https://github.com/bfabiszewski/QLMobi"
 
   qlplugin "QLMobi.qlgenerator"
+
+  # No zap stanza required
 end

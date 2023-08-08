@@ -1,6 +1,6 @@
 cask "photosrevive" do
-  version "2.1.0,aa3d20be-fb7a-4714-ad4c-0a447838e067"
-  sha256 "1ca8f66e25702dbf5fd4fbe75b9d8964cd77705d3a57d01d193051139caae02d"
+  version "2.1.1,7161d778-0a4b-4b1e-8289-67d1a8d7f23d"
+  sha256 "58aa951624b5d83f6c1cfd46df439c69f187a9401399df288b97ef39d550b253"
 
   url "https://neededapps.nyc3.digitaloceanspaces.com/media/public/#{version.csv.second}.zip",
       verified: "neededapps.nyc3.digitaloceanspaces.com/media/public/"

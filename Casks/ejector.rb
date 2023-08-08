@@ -8,7 +8,7 @@ cask "ejector" do
   homepage "https://www.jeb.com.fr/en/ejector.shtml"
 
   livecheck do
-    url "https://www.jeb.com.fr/en/ejector.shtml"
+    url :homepage
     regex(%r{href=.*?/Ejector[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 

@@ -1,6 +1,6 @@
 cask "bluetility" do
-  version "1.5"
-  sha256 "49fd4fde3ecfb27e8a21f8e771ff57c62d03ebb9100600f451188462ec84dbd5"
+  version "1.5.1"
+  sha256 "05ab67bf4ea75d7c6f533f8396b1f532978be1fe643523c31fa22a77f52215bc"
 
   url "https://github.com/jnross/Bluetility/releases/download/#{version}/Bluetility.app.zip"
   name "Bluetility"

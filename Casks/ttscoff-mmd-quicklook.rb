@@ -4,7 +4,10 @@ cask "ttscoff-mmd-quicklook" do
 
   url "https://github.com/ttscoff/MMD-QuickLook/releases/download/#{version}/MMD-QuickLook#{version}.zip"
   name "MMD-QuickLook"
+  desc "QuickLook plugin for viewing MultiMarkdown"
   homepage "https://github.com/ttscoff/mmd-quicklook"
 
   qlplugin "MultiMarkdown QuickLook.qlgenerator"
+
+  # No zap stanza required
 end

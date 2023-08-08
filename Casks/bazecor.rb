@@ -1,12 +1,17 @@
 cask "bazecor" do
-  version "1.1.2"
-  sha256 "a53beb55616d2e00cc9223f79986e0daa9e854650d813599dca2996b7fb2bf95"
+  version "1.3.2"
+  sha256 "c462bfb1c637d79940108ccababe3499d3114ca566e32802133419a50176e0b0"
 
-  url "https://github.com/Dygmalab/Bazecor/releases/download/bazecor-#{version}/Bazecor-#{version}.dmg",
+  url "https://github.com/Dygmalab/Bazecor/releases/download/bazecor-#{version}/Bazecor-#{version}-x64.dmg",
       verified: "github.com/Dygmalab/Bazecor/"
   name "Bazecor"
   desc "Graphical configurator for Dygma Raise keyboards"
   homepage "https://dygma.com/pages/programmable-split-keyboard"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Bazecor.app"
 

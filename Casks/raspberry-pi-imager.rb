@@ -1,15 +1,16 @@
 cask "raspberry-pi-imager" do
   version "1.7.5"
-  sha256 "bd690d70253db356965e065a6098170874dfc48f864b0c157c6dda28ac2479f7"
+  sha256 "03f73b1402acd52718e27496e8c2a3778f5fc1d6845cd19b04318ffde24d6c4b"
 
-  url "https://downloads.raspberrypi.org/imager/imager_#{version}.dmg"
+  url "https://github.com/raspberrypi/rpi-imager/releases/download/v#{version}/Raspberry.Pi.Imager.#{version}.UNIVERSAL.BUILD.dmg",
+      verified: "github.com/raspberrypi/rpi-imager/"
   name "Raspberry Pi Imager"
   desc "Imaging utility to install operating systems to a microSD card"
   homepage "https://www.raspberrypi.org/downloads/"
 
   livecheck do
-    url "https://downloads.raspberrypi.org/imager/imager_latest.dmg"
-    strategy :header_match
+    url :url
+    strategy :github_latest
   end
 
   app "Raspberry Pi Imager.app"

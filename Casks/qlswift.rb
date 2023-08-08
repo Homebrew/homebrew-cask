@@ -4,7 +4,10 @@ cask "qlswift" do
 
   url "https://github.com/lexrus/QLSwift/releases/download/#{version}/QLSwift.qlgenerator.zip"
   name "QLSwift"
+  desc "QuickLook plugin for Swift files"
   homepage "https://github.com/lexrus/QLSwift"
 
   qlplugin "QLSwift.qlgenerator"
+
+  # No zap stanza required
 end

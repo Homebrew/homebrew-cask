@@ -1,6 +1,6 @@
 cask "multipass" do
-  version "1.12.0"
-  sha256 "6695c81ac1ad003af01b1b8a25bf61917a1be12a6786c48df17ce2c416dcf6c1"
+  version "1.12.2"
+  sha256 "c2994476746369935ff54258a2c764cb6e344f77f64cf09688d55a86245bcbf4"
 
   url "https://github.com/canonical/multipass/releases/download/v#{version}/multipass-#{version}+mac-Darwin.pkg"
   name "Multipass"
@@ -29,6 +29,7 @@ cask "multipass" do
   zap trash: [
     "~/Library/Application Support/multipass",
     "~/Library/Application Support/multipass-gui",
+    "~/Library/LaunchAgents/com.canonical.multipass.gui.autostart.plist",
     "~/Library/Preferences/multipass",
   ]
 end

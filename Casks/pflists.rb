@@ -4,11 +4,12 @@ cask "pflists" do
 
   url "https://www.hanynet.com/pflists-#{version}.zip"
   name "PFLists"
+  desc "Basic PF firewall frontend"
   homepage "https://www.hanynet.com/pflists/"
 
   livecheck do
-    url "https://www.hanynet.com/pflists/"
-    regex(%r{href=.*?/pflists-(\d+(?:\.\d+)*)\.zip}i)
+    url :homepage
+    regex(%r{href=.*?/pflists[._-]v?(\d+(?:\.\d+)+)\.zip}i)
   end
 
   app "PFLists.app"
