@@ -1,6 +1,6 @@
 cask "fl-studio" do
-  version "21.0.3.3036"
-  sha256 "d25f2d20c629448f86c2c1aa5b9d21d54c947e343d5ad4b5293d0339e40203c5"
+  version "21.1.0.3267"
+  sha256 "c1bf3c47266deb91fc40c2a3fd6ace0113d48395e2171781fd414a073190cdfe"
 
   url "https://demodownload.image-line.com/flstudio/flstudio_mac_#{version}.dmg"
   name "FL Studio"
