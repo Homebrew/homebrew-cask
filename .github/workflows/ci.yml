@@ -89,6 +89,10 @@ jobs:
             echo '::warning::Removing `cocoapods` symlink is no longer necessary.'
           fi
 
+          if ! rm /usr/local/bin/chromedriver; then
+            echo '::warning::Removing `chromedriver` symlink is no longer necessary.'
+          fi
+
           brew unlink python && brew link --overwrite python
         if: runner.os == 'macOS'
 
