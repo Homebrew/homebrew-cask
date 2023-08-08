@@ -1,6 +1,6 @@
 cask "rewind" do
-  version "12899.1,8e50223,20230804"
-  sha256  "8178ab5e6f80b4f3d674680898535dffbda75cfe9e2046478cd87961d621c68e"
+  version "12926.1,c6b0cd9,20230807"
+  sha256  "843b51f5c0b767262ed73ba7efc4eeadf827ca887edf7726b5f3d0783a6e0f32"
 
   url "https://updates.rewind.ai/builds/main/b#{version.csv.first}-main-#{version.csv.second}.zip"
   name "Rewind"
