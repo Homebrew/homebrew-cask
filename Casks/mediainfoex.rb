@@ -1,6 +1,6 @@
 cask "mediainfoex" do
-  version "1.7.1"
-  sha256 "a58f0b450598b8aa3921c861c7b42eb37aa4d7137fd00e28029a81bcd843ae22"
+  version "1.7.2"
+  sha256 "50d15c662c9c2ab630bde927d956b026182a42b0ca51a080d3eca10006705f86"
 
   url "https://github.com/sbarex/MediaInfo/releases/download/#{version}/MediaInfo.zip"
   name "MediaInfo"
