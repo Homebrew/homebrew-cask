@@ -6,7 +6,7 @@ cask "asix-ax88179" do
 
     livecheck do
       url "https://www.asix.com.tw/en/support/download/step2/11/2/3"
-      regex(%r{data-href=.*?/download/file/(\d+).*?macOS\s*10.*?Vision\s*?(?:<br>)?\s*?(\d+(?:\.\d+)+)<}mi)
+      regex(%r{data-href=.*?/download/file/(\d+).*?macOS\s*10.*?(?:<br>)?\s*?(\d+(?:\.\d+)+)<}mi)
       strategy :page_match do |page, regex|
         page.split(/class=['"]?list__item['"]?/).map do |list_item|
           list_item.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
@@ -23,7 +23,7 @@ cask "asix-ax88179" do
 
     livecheck do
       url "https://www.asix.com.tw/en/support/download/step2/11/2/3"
-      regex(%r{data-href=.*?/download/file/(\d+).*?macOS\s*10.*?Vision\s*?(?:<br>)?\s*?(\d+(?:\.\d+)+)<}mi)
+      regex(%r{data-href=.*?/download/file/(\d+).*?macOS\s*10.*?(?:<br>)?\s*?(\d+(?:\.\d+)+)<}mi)
       strategy :page_match do |page, regex|
         page.split(/class=['"]?list__item['"]?/).map do |list_item|
           list_item.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
@@ -52,7 +52,7 @@ cask "asix-ax88179" do
 
     livecheck do
       url "https://www.asix.com.tw/en/support/download/step2/11/2/3"
-      regex(%r{data-href=.*?/download/file/(\d+).*?macOS\s*11.*?Vision\s*?(?:<br>)?\s*?(\d+(?:\.\d+)+)<}mi)
+      regex(%r{data-href=.*?/download/file/(\d+).*?macOS\s*11.*?(?:<br>)?\s*?(\d+(?:\.\d+)+)<}mi)
       strategy :page_match do |page, regex|
         page.split(/class=['"]?list__item['"]?/).map do |list_item|
           list_item.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
@@ -81,7 +81,7 @@ cask "asix-ax88179" do
 
     livecheck do
       url "https://www.asix.com.tw/en/support/download/step2/11/2/3"
-      regex(%r{data-href=.*?/download/file/(\d+).*?macOS\s*12.*?Vision\s*?(?:<br>)?\s*?(\d+(?:\.\d+)+)<}mi)
+      regex(%r{data-href=.*?/download/file/(\d+).*?macOS\s*12.*?(?:<br>)?\s*?(\d+(?:\.\d+)+)<}mi)
       strategy :page_match do |page, regex|
         page.split(/class=['"]?list__item['"]?/).map do |list_item|
           list_item.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
