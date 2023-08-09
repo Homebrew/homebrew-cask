@@ -23,5 +23,9 @@ cask "keyclu" do
   zap trash: [
     "~/Library/Containers/com.0804Team.KeyClu",
     "~/Library/Group Containers/group.com.0804Team.KeyClu",
+    "~/Library/Caches/com.0804Team.KeyClu",
+    "~/Library/HTTPStorages/com.0804Team.KeyClu",
+    "~/Library/Preferences/com.0804Team.KeyClu.plist",
+    "~/Library/Saved Application State/com.0804Team.KeyClu.savedState",
   ]
 end
