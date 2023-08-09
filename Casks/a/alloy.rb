@@ -8,5 +8,10 @@ cask "alloy" do
   desc "Programming language for software modelling"
   homepage "https://alloytools.org/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Alloy.app"
 end
