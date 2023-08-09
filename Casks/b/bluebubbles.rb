@@ -8,6 +8,11 @@ cask "bluebubbles" do
   desc "Server for forwarding iMessages"
   homepage "https://bluebubbles.app/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "BlueBubbles.app"
 
   uninstall launchctl:  "com.BlueBubbles.BlueBubbles-Server.ShipIt",
