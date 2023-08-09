@@ -25,11 +25,11 @@ jobs:
           def: |
             - label: new cask
               status: added
-              path: Casks/.+
+              path: Casks/*/.+
 
             - label: marked for removal/rejection
               status: removed
-              path: Casks/.+
+              path: Casks/*/.+
 
             - label: documentation
               path: (.*\.md|\.github/ISSUE_TEMPLATE/.*\.yml)
@@ -38,13 +38,13 @@ jobs:
               pr_body_content: Created with `brew bump-cask-pr`
 
             - label: missing description
-              path: Casks/.+
+              path: Casks/*/.+
               missing_content: \n  desc .+\n
 
             - label: appcast migration needed
-              path: Casks/.+
+              path: Casks/*/.+
               content: \n  appcast .+\n
 
             - label: missing zap
-              path: Casks/.+
+              path: Casks/*/.+
               missing_content: zap .+\n
