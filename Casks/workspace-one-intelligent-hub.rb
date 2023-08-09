@@ -1,5 +1,5 @@
 cask "workspace-one-intelligent-hub" do
-  version "23.06.0.13"
+  version "23.07.0.9"
   sha256 :no_check
 
   url "https://packages.vmware.com/wsone/VMwareWorkspaceONEIntelligentHub.pkg",
