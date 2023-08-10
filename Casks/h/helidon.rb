@@ -16,6 +16,6 @@ cask "helidon" do
   binary "helidon-#{version}/bin/helidon"
 
   zap trash: [
-      "~/.helidon",
-    ]
+    "~/.helidon",
+  ]
 end
