@@ -3,10 +3,12 @@ cask "voicepeak" do
   sha256 :no_check
 
   url "https://download.dreamtonics.com/voicepeak-jashinchan-trial/voicepeak_jashinchan_freetrial.zip",
-      verified: "download.dreamtonics.com/"
+      verified: "download.dreamtonics.com/voicepeak-jashinchan-trial/"
   name "VOICEPEAK"
   desc "High quality text-to-speech software with emotional expression"
   homepage "https://www.ah-soft.com/voice/"
+
+  depends_on macos: ">= :high_sierra"
 
   pkg "VOICEPEAK 邪神ちゃん 無料お試し版/Mac/Voicepeak.pkg"
 
