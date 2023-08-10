@@ -8,4 +8,8 @@ cask "sysdig-inspect" do
   homepage "https://github.com/draios/sysdig-inspect"
 
   app "Sysdig Inspect-darwin-x64/Sysdig Inspect.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
