@@ -1,17 +1,15 @@
 cask "sysdig-inspect" do
-  version "0.5.0"
-  sha256 "15cd21f309258f5017129e0983e475423d95eb54cbe6e4e25b2e509282122a8e"
+  version "0.8.0"
+  sha256 "4142059bf0a1ccc7935a798b31457b23d594e1c60ba7f36ce97a3a3b020609d1"
 
-  url "https://download.sysdig.com/stable/sysdig-inspect/sysdig-inspect-#{version}-mac.dmg",
-      verified: "download.sysdig.com/stable/sysdig-inspect/"
+  url "https://github.com/draios/sysdig-inspect/releases/download/#{version}/sysdig-inspect-mac-x86_64.zip"
   name "Sysdig Inspect"
   desc "Interface for container troubleshooting and security investigation"
   homepage "https://github.com/draios/sysdig-inspect"
 
-  livecheck do
-    url :homepage
-    strategy :github_latest
-  end
+  app "Sysdig Inspect-darwin-x64/Sysdig Inspect.app"
 
-  app "Sysdig Inspect.app"
+  caveats do
+    requires_rosetta
+  end
 end
