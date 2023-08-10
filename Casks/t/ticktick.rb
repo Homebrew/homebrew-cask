@@ -1,17 +1,21 @@
 cask "ticktick" do
-  version "4.5.60,260"
-  sha256 "78b3d04c6150837463029039404ad122a1a57b6980edb6710780d016150429fd"
+  version "4.5.61, 270"
+  sha256 "c40fde50e2e489ba696eee04b1c611df3f4a20f838084adebee63cf4c01ab8ed"
 
-  url "https://appest-public.s3.amazonaws.com/download/mac/TickTick_#{version.csv.first}_#{version.csv.second}.dmg",
-      verified: "appest-public.s3.amazonaws.com/"
+  url "https://ticktick-download-mac.s3.amazonaws.com/download/mac/TickTick_#{version.csv.first}_#{version.csv.second.gsub!(" ", "%20")}.dmg",
+      verified: "ticktick-download-mac.s3.amazonaws.com/"
   name "TickTick"
   desc "To-do & task list manager"
   homepage "https://www.ticktick.com/home"
 
+  # The livecheck block retrieves a version that optionally includes a space character.
+  # This is done intentionally as the url can contain the charcther. Once this is
+  # resolved upstream, edit the livecheck block and remove gsub from the url.
+  # See: https://github.com/Homebrew/homebrew-cask/pull/152705
   livecheck do
     url "https://www.ticktick.com/static/getApp/download?type=mac"
     strategy :header_match do |headers|
-      match = headers["location"].match(/TickTick[._-]v?(\d+(?:\.\d+)+)[_-](\d+)\.dmg/i)
+      match = headers["location"].match(/TickTick[._-]v?(\d+(?:\.\d+)+)[_-](\s?\d+)\.dmg/i)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
