@@ -1,8 +1,8 @@
 cask "gluemotion" do
-  version "2.1.3,ce9761bb-80d7-4b04-a4d4-78a7b9b0eea2"
-  sha256 "a9030faae46db077e28984012adb2773ff58401b21e849de1053b9444f1a0240"
+  version "2.1.4,72ba9f4c-292f-4778-b270-5b71bfa27e9d"
+  sha256 "1e3f0f6d8acbb03bf4b5c3d0391363aca21dc71ae44c238c87b50bdc0644f6fb"
 
-  url "https://neededapps.nyc3.digitaloceanspaces.com/media/public/#{version.csv.second}.zip",
+  url "https://neededapps.nyc3.digitaloceanspaces.com/media/public/#{version.csv.second}.dmg",
       verified: "neededapps.nyc3.digitaloceanspaces.com/media/public/"
   name "GlueMotion"
   desc "Create and correct time lapse movies"
