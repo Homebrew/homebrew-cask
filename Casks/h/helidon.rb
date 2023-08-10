@@ -14,4 +14,8 @@ cask "helidon" do
   end
 
   binary "helidon-#{version}/bin/helidon"
+
+  zap trash: [
+      "~/.helidon",
+    ]
 end
