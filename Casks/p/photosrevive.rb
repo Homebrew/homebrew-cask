@@ -1,8 +1,8 @@
 cask "photosrevive" do
-  version "2.1.1,7161d778-0a4b-4b1e-8289-67d1a8d7f23d"
-  sha256 "58aa951624b5d83f6c1cfd46df439c69f187a9401399df288b97ef39d550b253"
+  version "2.1.2,d25c13f0-ae5a-4a37-9668-42622147f176"
+  sha256 "b392343c63f5e399743145c9d6550c2fd5c18a5c792003bb0beb2e99d8284cac"
 
-  url "https://neededapps.nyc3.digitaloceanspaces.com/media/public/#{version.csv.second}.zip",
+  url "https://neededapps.nyc3.digitaloceanspaces.com/media/public/#{version.csv.second}.dmg",
       verified: "neededapps.nyc3.digitaloceanspaces.com/media/public/"
   name "PhotosRevive"
   desc "Colorise old black and white photos automatically"
@@ -11,7 +11,7 @@ cask "photosrevive" do
   livecheck do
     url "https://neededapps.com/appcasts/photosrevive/changelog.xml"
     strategy :sparkle do |item|
-      hex = item.url[%r{/([\h-]+)\.zip}i, 1]
+      hex = item.url[%r{/([\h-]+)\.dmg}i, 1]
       next if hex.blank?
 
       "#{item.short_version},#{hex}"
