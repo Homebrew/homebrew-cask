@@ -11,7 +11,7 @@ cask "gluemotion" do
   livecheck do
     url "https://neededapps.com/appcasts/gluemotion/changelog.xml"
     strategy :sparkle do |item|
-      hex = item.url[%r{/([\h-]+)\.zip}i, 1]
+      hex = item.url[%r{/([\h-]+)\.dmg}i, 1]
       next if hex.blank?
 
       "#{item.short_version},#{hex}"
