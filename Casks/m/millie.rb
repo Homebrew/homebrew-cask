@@ -1,6 +1,6 @@
 cask "millie" do
-  version "5.12.1"
-  sha256 "93de27c626e0e0fb1415d0a5114831353abc06538f432091546a7145ad225e21"
+  version "5.13.2"
+  sha256 "ea005edac77a6f7c65260890e0aac92e162c3115d7ea737933063caa88ae18e8"
 
   url "https://apis.millie.co.kr/v1/download/installer/mac/Millie-#{version}.dmg"
   name "millie"
