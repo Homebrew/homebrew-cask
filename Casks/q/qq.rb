@@ -1,6 +1,6 @@
 cask "qq" do
-  version "6.9.18-15489,de1cad36"
-  sha256 "507fc386058b60ddf157cb820613c09942c4c6dba20d35c61965f2574c5bdc7c"
+  version "6.9.18.15820,0c23bedd"
+  sha256 "6976f5a3907db2f8ded23360adf2eb027ac658b1fc961760a64cc917c33fd018"
 
   url "https://dldir1.qq.com/qqfile/qq/QQNT/#{version.csv.second}/QQ_v#{version.csv.first}.dmg"
   name "QQ"
@@ -9,7 +9,7 @@ cask "qq" do
 
   livecheck do
     url "https://im.qq.com/rainbow/ntQQDownload/"
-    regex(%r{QQNT/([a-z0-9]+)/QQ[._-]v?(\d+(?:\.\d+)+-\d+)\.dmg}i)
+    regex(%r{QQNT/([a-z0-9]+)/QQ[._-]v?(\d+(?:\.\d+)+\d+)\.dmg}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|
         "#{match[1]},#{match[0]}"
