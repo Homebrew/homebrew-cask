@@ -19,4 +19,10 @@ cask "apidog" do
   auto_updates true
 
   app "Apidog.app"
+
+  zap trash: [
+    "~/Library/Application Support/apidog",
+    "~/Library/Preferences/com.apidog.app.plist",
+    "~/Library/Saved Application State/com.apidog.app.savedState",
+  ]
 end
