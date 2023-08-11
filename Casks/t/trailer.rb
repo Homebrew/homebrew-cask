@@ -1,6 +1,6 @@
 cask "trailer" do
-  version "1.8.6"
-  sha256 "5e602f5942bda4273d3b34f6970d86e98c958678813e835d3461249db2bab108"
+  version "1.8.7"
+  sha256 "296c41410f6197a2587cc05dda004eac6f0f9746c264e745398fe75cc4ca973e"
 
   url "https://github.com/ptsochantaris/trailer/releases/download/#{version}/Trailer-#{version.no_dots}.zip",
       verified: "github.com/ptsochantaris/trailer/"
