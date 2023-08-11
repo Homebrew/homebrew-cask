@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 cask "shattered-pixel-dungeon" do
   version "2.1.4"
   sha256 "1c4611f2804eefe80e9f8a6a69ea03b67e462a848c3504146379c313b3635b4d"
@@ -11,7 +9,8 @@ cask "shattered-pixel-dungeon" do
   homepage "https://shatteredpixel.com/shatteredpd"
 
   livecheck do
-    url :stable
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true
