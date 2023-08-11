@@ -8,4 +8,8 @@ cask "furnace" do
   homepage "https://github.com/tildearrow/furnace"
 
   app "Furnace.app"
+  zap trash: [
+  "~/Library/Application Support/Furnace",
+  "~/Library/Saved Application State/org.tildearrow.furnace.savedState",
+  ]
 end
