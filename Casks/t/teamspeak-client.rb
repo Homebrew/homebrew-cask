@@ -15,7 +15,7 @@ cask "teamspeak-client" do
     version "3.6.1"
     sha256 "2312e39ea680da1c728d4589f51fbe80c52e3a33b8b3f9ad485ccd29179cfdf9"
 
-    url "https://files.teamspeak-services.com/releases/client/#{version}/TeamSpeak#{version.major}-Client-macosx-#{version.split("-").first}.dmg",
+    url "https://files.teamspeak-services.com/releases/client/#{version}/TeamSpeak#{version.major}-Client-macosx-#{version}.dmg",
         verified: "files.teamspeak-services.com/"
 
     livecheck do
