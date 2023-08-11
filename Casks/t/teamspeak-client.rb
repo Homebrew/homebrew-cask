@@ -12,10 +12,10 @@ cask "teamspeak-client" do
     end
   end
   on_big_sur :or_newer do
-    version "3.5.7-beta.1"
-    sha256 "993965f8c2a5f579de4ae17f6a6ac713557f7517d3ba5a9eb423cf95a33fbb90"
+    version "3.6.1"
+    sha256 "2312e39ea680da1c728d4589f51fbe80c52e3a33b8b3f9ad485ccd29179cfdf9"
 
-    url "https://files.teamspeak-services.com/pre_releases/client/#{version}/TeamSpeak#{version.major}-Client-macosx-#{version.split("-").first}.dmg",
+    url "https://files.teamspeak-services.com/releases/client/#{version}/TeamSpeak#{version.major}-Client-macosx-#{version}.dmg",
         verified: "files.teamspeak-services.com/"
 
     livecheck do
