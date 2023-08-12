@@ -1,6 +1,6 @@
 cask "texstudio" do
   version "4.6.3"
-  sha256 "5fa74510d0d73bce8a248414ce6da1f74564ba534acf898cb6dc8b63a288d0ec"
+  sha256 "f05d7d752dea12d26703863ae1ab1a71deed1999a233cf749e37ac0578dcfeb7"
 
   url "https://github.com/texstudio-org/texstudio/releases/download/#{version}/texstudio-#{version}-osx.dmg",
       verified: "github.com/texstudio-org/texstudio/"
