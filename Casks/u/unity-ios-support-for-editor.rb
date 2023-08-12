@@ -1,6 +1,6 @@
 cask "unity-ios-support-for-editor" do
-  version "2023.1.7f1,4f4e359ec3fc"
-  sha256 "0e9f1a6fc479e8faae9a00ff30a37be3f4e9279830460bd687cbac2b13649868"
+  version "2023.1.8f1,ab88ac34d80c"
+  sha256 "d94f16402a09756214308cd499323378ebead46a3d6abc11897fa9d82a0b5cbf"
 
   url "https://download.unity3d.com/download_unity/#{version.csv.second}/MacEditorTargetInstaller/UnitySetup-iOS-Support-for-Editor-#{version.csv.first}.pkg",
       verified: "download.unity3d.com/download_unity/"
