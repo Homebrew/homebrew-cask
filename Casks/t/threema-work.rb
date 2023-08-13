@@ -1,5 +1,5 @@
 cask "threema-work" do
-  version "1.2.25"
+  version "2.0"
   sha256 :no_check
 
   url "https://releases.threema.ch/web-electron/v1/release/Threema-Work-Latest.dmg"
