@@ -1,16 +1,21 @@
 cask "far2l" do
   # NOTE: "2" is not a version number, but an intrinsic part of the product name
-  version "2.5.0"
+  version "2.5.1"
 
   on_mojave :or_older do
-    sha256 "475f1823652c6e59ff5fe4af448c27b6f88a8f38ac0f358a6620d8aaf5f43c99"
+    sha256 "5f35782c0ca09f2408e8c9764d1d2825b0b11fe13785c3bab45752399320d0e8"
 
-    url "https://github.com/elfmz/far2l/releases/download/v_#{version}/far2l-#{version}-beta-MacOS-10.11.dmg"
+    url "https://github.com/elfmz/far2l/releases/download/v_#{version}/far2l-#{version}-beta-MacOS-10.11-x64.dmg"
   end
-  on_catalina :or_newer do
-    sha256 "9cdde68842f5bfd8e0eda9fdab6507e47eeda2b7a8a6941a8a5966fe89a97435"
+  on_catalina do
+    sha256 "14cca152c80eed3a7161796268a0780bd794532a51a37d8e35d075b59787a336"
 
-    url "https://github.com/elfmz/far2l/releases/download/v_#{version}/far2l-#{version}-beta-MacOS-10.15.dmg"
+    url "https://github.com/elfmz/far2l/releases/download/v_#{version}/far2l-#{version}-beta-MacOS-10.15-x64.dmg"
+  end
+  on_big_sur :or_newer do
+    sha256 "2fdc9d2516c2349484f52532296197f8781d2f4bd7ea4c7937799529e26857b9"
+
+    url "https://github.com/elfmz/far2l/releases/download/v_#{version}/far2l-#{version}-beta-MacOS-11.2-universal.dmg"
   end
 
   name "far2l"
