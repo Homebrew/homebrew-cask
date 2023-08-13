@@ -1,6 +1,6 @@
 cask "ipepresenter" do
-  version "7.2.27"
-  sha256 "b9e55003f49889a1adad5f92fb8d0dff057d73884dea887af17956eeb521a07c"
+  version "7.2.28"
+  sha256 "08068414c6455e85a85b9467c7773849a4987761cfab7dd0594b7183992348e8"
 
   url "https://github.com/otfried/ipe/releases/download/v#{version}/ipepresenter-#{version}-mac.dmg",
       verified: "github.com/otfried/ipe/"
