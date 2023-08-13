@@ -1,8 +1,8 @@
 cask "idagio" do
-  version "1.9.4"
-  sha256 "2f761032fe501f2c1abed04397dc81fc903ce617e8fd8bf523cdde0da49e0305"
+  version "1.9.6"
+  sha256 "5750bb8c3d68832ae973fc7cf11ea3d914ca919c6fc5f36248b07f0d4f1ed512"
 
-  url "https://dl.idagio.com/IDAGIO-#{version}-universal.dmg"
+  url "https://dl.idagio.com/IDAGIO-#{version}.dmg"
   name "IDAGIO"
   desc "Classical music streaming app"
   homepage "https://www.idagio.com/"
