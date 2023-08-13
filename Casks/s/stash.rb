@@ -17,7 +17,7 @@ cask "stash" do
 
   app "Stash.app"
 
-  uninstall quit: "ws.stash.app.mac",
+  uninstall quit:   "ws.stash.app.mac",
             delete: [
               "/Library/LaunchDaemons/ws.stash.app.mac.daemon.helper.plist",
               "/Library/PrivilegedHelperTools/ws.stash.app.mac.daemon.helper",
