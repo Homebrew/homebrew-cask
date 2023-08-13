@@ -26,7 +26,7 @@ cask "lark" do
 
   auto_updates true
 
-  app "Lark.app"
+  app "LarkSuite.app"
 
   zap trash: [
     # feishu
