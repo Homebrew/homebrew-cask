@@ -2,12 +2,12 @@ cask "wechatwork" do
   arch arm: "_arm64"
 
   on_arm do
-    version "4.1.8.99275"
-    sha256 "ca7ae4909c9763b6082a681dc0966b3d1f73a94a0d1492837dda4cee9f53576a"
+    version "4.1.8.99282"
+    sha256 "538ca724defc7e60f79a883551b0bc93832bb39d13dee7407aa61ed1818fa03e"
   end
   on_intel do
-    version "4.1.8.90726"
-    sha256 "1d7982ec2c4d5a48b0709c5dd92186d6522b6469b6b839df5b66d89622b7be8d"
+    version "4.1.8.90737"
+    sha256 "80a48275bb0a399d08bac85a9633d00a81c808a72a23a2f685c810567d8951d4"
   end
 
   url "https://dldir1.qq.com/foxmail/wecom-mac/update/WeCom_#{version}.dmg"
