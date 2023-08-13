@@ -1,15 +1,16 @@
 cask "vyprvpn" do
-  version "4.5.0.9409"
-  sha256 "979da3243bee5ca1b932a76eab955a31e278d72e167f0c99219b3e7821b228d3"
+  version "5.0.1"
+  sha256 "038d62ffab8c1ad4925c87876154fd896a71aa14ced233d3442d8af9e450c06b"
 
-  url "https://www.goldenfrog.com/downloads/vyprvpn/desktop/mac/production/#{version}/VyprVPN_v#{version}.dmg"
+  url "https://www.goldenfrog.com/downloads/vyprvpn/desktop/mac/production/#{version}/VyprVPN_v#{version}.dmg",
+      verified: "goldenfrog.com/downloads/vyprvpn/"
   name "VyprVPN"
   desc "VPN client"
-  homepage "https://www.goldenfrog.com/vyprvpn"
+  homepage "https://www.vyprvpn.com/"
 
   livecheck do
     url "https://www.goldenfrog.com/downloads/vyprvpn/desktop/mac-feed.xml"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
