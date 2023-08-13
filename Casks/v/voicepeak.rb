@@ -8,6 +8,11 @@ cask "voicepeak" do
   desc "High quality text-to-speech software with emotional expression"
   homepage "https://www.ah-soft.com/voice/"
 
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
+
   depends_on macos: ">= :high_sierra"
 
   pkg "VOICEPEAK 邪神ちゃん 無料お試し版/Mac/Voicepeak.pkg"
