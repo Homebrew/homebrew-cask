@@ -2,8 +2,8 @@ cask "ultimate-vocal-remover" do
   arch arm: "arm64", intel: "x86_64"
 
   version "5.5.0"
-  sha256 arm:   "51f7927c04dea12e9e8acee9326eb195c5532c5142437633b0fbcaa92c5f4613",
-         intel: "375c79e58cb1f7d8def6749b8f7a0ec3648e15c8743f0456a4523ed92f202682"
+  sha256 arm:   "fecc265d04f885f7aaf572a88003311155a0bd9c4c811e17e9ec78aa99b0da67",
+         intel: "2804769a3a5976bdf1e9d3c32e8c9c056e17f83f17623275f4996f20623e9cb4"
 
   url "https://github.com/Anjok07/ultimatevocalremovergui/releases/download/v#{version}/Ultimate_Vocal_Remover_v#{version.major_minor.dots_to_underscores}_MacOS_#{arch}.dmg"
   name "Ultimate Vocal Remover"
