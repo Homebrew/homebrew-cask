@@ -18,4 +18,6 @@ cask "yubihsm2-sdk" do
   pkg "yubihsm2-sdk-#{version}-darwin-#{arch}.pkg"
 
   uninstall pkgutil: "com.yubico.yubihsm2-sdk"
+
+  # No zap stanza required
 end
