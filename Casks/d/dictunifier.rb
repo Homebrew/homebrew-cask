@@ -8,4 +8,6 @@ cask "dictunifier" do
   homepage "https://github.com/jjgod/mac-dictionary-kit/"
 
   app "DictUnifier.app"
+
+  zap trash: "~/Library/Saved Application State/org.jjgod.DictUnifier.savedState"
 end
