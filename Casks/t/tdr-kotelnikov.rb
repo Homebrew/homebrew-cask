@@ -20,4 +20,8 @@ cask "tdr-kotelnikov" do
     "com.TokyoDawnLabs.TDRKotelnikov.AU",
     "com.TokyoDawnLabs.TDRKotelnikov.AAX",
   ]
+
+  zap trash: [
+    "~/Library/Tokyo Dawn Labs/TDR Kotelnikov.conf",
+  ]
 end
