@@ -15,4 +15,10 @@ cask "pdfpen" do
   depends_on macos: ">= :sierra"
 
   app "PDFpen.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.smileonmymac.PDFpen",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.smileonmymac.pdfpen.sfl*",
+    "~/Library/Containers/com.smileonmymac.PDFpen",
+  ]
 end
