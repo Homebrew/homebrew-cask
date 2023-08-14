@@ -20,4 +20,8 @@ cask "tdr-nova" do
     "com.TokyoDawnLabs.TDRNova.AU",
     "com.TokyoDawnLabs.TDRNova.VST3",
   ]
+
+  zap trash: [
+    "~/Library/Tokyo Dawn Labs/TDR Nova.conf",
+  ]
 end
