@@ -1,9 +1,9 @@
 cask "yubihsm2-sdk" do
   arch arm: "arm64", intel: "amd64"
 
-  version "2023-01"
-  sha256 arm:   "6d2ba229e18999cf0f4cca032a0e98e40fdd886031d4ca9e2a9869fb5e9eaef2",
-         intel: "a33fb8dd768d37e80753ebc2a7e8b526766fc10bb9afdc0108273ca16306bb45"
+  version "2023-08"
+  sha256 arm:   "13667895f6e83b7c98279a1422ca8af23da60fb4250ce576ee7144da7e25ccd2",
+         intel: "6f755b2d19b55e69191bfc8799afced986d223e300e3d5f317aed1fe3a4ea39b"
 
   url "https://developers.yubico.com/YubiHSM2/Releases/yubihsm2-sdk-#{version}-darwin-#{arch}.pkg"
   name "YubiHSM 2 SDK"
@@ -18,4 +18,6 @@ cask "yubihsm2-sdk" do
   pkg "yubihsm2-sdk-#{version}-darwin-#{arch}.pkg"
 
   uninstall pkgutil: "com.yubico.yubihsm2-sdk"
+
+  # No zap stanza required
 end
