@@ -20,4 +20,8 @@ cask "tdr-vos-slickeq" do
     "com.TokyoDawnLabs.TDRVOSSlickEQ.AAX",
     "com.TokyoDawnLabs.TDRVOSSlickEQ.AU",
   ]
+
+  zap trash: [
+    "~/Library/Tokyo Dawn Labs/TDR VOS SlickEQ.conf",
+  ]
 end
