@@ -4,8 +4,15 @@ cask "energiza" do
 
   url "https://appgineers.de/energiza/files/Energiza.zip"
   name "Energiza Pro"
-  desc "Nifty charging manager for your MacBooks"
+  desc "Charging manager for your MacBooks"
   homepage "https://appgineers.de/energiza/"
+
+  livecheck do
+    url "https://appgineers.de/energiza/files/appcast.xml"
+    strategy :sparkle, &:short_version
+  end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Energiza.app"
 end
