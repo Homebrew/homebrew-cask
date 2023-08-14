@@ -4,20 +4,22 @@ cask "tdr-vos-slickeq" do
 
   url "https://www.tokyodawn.net/labs/SlickEQ/#{version}/TDR%20VOS%20SlickEQ.zip?x24775"
   name "tdr-vos-slickeq"
-  desc "Mixing equalizer designed for musical flexibility and impeccable sound"
+  desc "Mixing equalizer"
   homepage "https://www.tokyodawn.net/tdr-vos-slickeq/"
 
   livecheck do
     url :homepage
-    regex(%r{Latest\sversion:\s<strong>(\d+(?:\.\d+)+)</strong>}i)
+    regex(%r{latest\sversion:\s<strong>(\d+(?:\.\d+)+)</strong>}i)
   end
 
   pkg "TDR VOS SlickEQ.pkg"
 
   uninstall pkgutil: [
-    "com.TokyoDawnLabs.TDRVOSSlickEQ.VST3",
-    "com.TokyoDawnLabs.TDRVOSSlickEQ.VST",
     "com.TokyoDawnLabs.TDRVOSSlickEQ.AAX",
     "com.TokyoDawnLabs.TDRVOSSlickEQ.AU",
+    "com.TokyoDawnLabs.TDRVOSSlickEQ.VST",
+    "com.TokyoDawnLabs.TDRVOSSlickEQ.VST3",
   ]
+
+  zap trash: "~/Library/Tokyo Dawn Labs/TDR VOS SlickEQ.conf"
 end
