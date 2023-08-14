@@ -9,19 +9,17 @@ cask "tdr-nova" do
 
   livecheck do
     url :homepage
-    regex(%r{Latest\sversion:\s<strong>(\d+(?:\.\d+)+)</strong>}i)
+    regex(%r{latest\sversion:\s<strong>(\d+(?:\.\d+)+)</strong>}i)
   end
 
   pkg "TDR Nova.pkg"
 
   uninstall pkgutil: [
-    "com.TokyoDawnLabs.TDRNova.VST",
     "com.TokyoDawnLabs.TDRNova.AAX",
     "com.TokyoDawnLabs.TDRNova.AU",
+    "com.TokyoDawnLabs.TDRNova.VST",
     "com.TokyoDawnLabs.TDRNova.VST3",
   ]
 
-  zap trash: [
-    "~/Library/Tokyo Dawn Labs/TDR Nova.conf",
-  ]
+  zap trash: "~/Library/Tokyo Dawn Labs/TDR Nova.conf"
 end
