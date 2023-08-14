@@ -9,19 +9,17 @@ cask "tdr-vos-slickeq" do
 
   livecheck do
     url :homepage
-    regex(%r{Latest\sversion:\s<strong>(\d+(?:\.\d+)+)</strong>}i)
+    regex(%r{latest\sversion:\s<strong>(\d+(?:\.\d+)+)</strong>}i)
   end
 
   pkg "TDR VOS SlickEQ.pkg"
 
   uninstall pkgutil: [
-    "com.TokyoDawnLabs.TDRVOSSlickEQ.VST3",
-    "com.TokyoDawnLabs.TDRVOSSlickEQ.VST",
     "com.TokyoDawnLabs.TDRVOSSlickEQ.AAX",
     "com.TokyoDawnLabs.TDRVOSSlickEQ.AU",
+    "com.TokyoDawnLabs.TDRVOSSlickEQ.VST",
+    "com.TokyoDawnLabs.TDRVOSSlickEQ.VST3",s
   ]
 
-  zap trash: [
-    "~/Library/Tokyo Dawn Labs/TDR VOS SlickEQ.conf",
-  ]
+  zap trash: "~/Library/Tokyo Dawn Labs/TDR VOS SlickEQ.conf"
 end
