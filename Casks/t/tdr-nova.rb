@@ -5,7 +5,7 @@ cask "tdr-nova" do
   url "https://www.tokyodawn.net/labs/Nova/#{version}/TDR%20Nova.zip?x24775"
   name "TDR Nova"
   desc "Parallel dynamic equalizer"
-  homepage "https://www.tokyodawn.net/tdr-nova/5/"
+  homepage "https://www.tokyodawn.net/tdr-nova/"
 
   livecheck do
     url :homepage
