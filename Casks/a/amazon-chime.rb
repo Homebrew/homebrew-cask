@@ -7,6 +7,12 @@ cask "amazon-chime" do
   desc "Communications service"
   homepage "https://chime.aws/"
 
+  livecheck do
+    url "https://clients.chime.aws/mac/latest"
+    regex(/AmazonChime[._-]?v?(\d+(:?\.\d+)+)\.dmg/i)
+    strategy :header_match
+  end
+
   auto_updates true
   depends_on macos: ">= :el_capitan"
 
