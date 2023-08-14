@@ -18,7 +18,7 @@ cask "tdr-vos-slickeq" do
     "com.TokyoDawnLabs.TDRVOSSlickEQ.AAX",
     "com.TokyoDawnLabs.TDRVOSSlickEQ.AU",
     "com.TokyoDawnLabs.TDRVOSSlickEQ.VST",
-    "com.TokyoDawnLabs.TDRVOSSlickEQ.VST3",s
+    "com.TokyoDawnLabs.TDRVOSSlickEQ.VST3",
   ]
 
   zap trash: "~/Library/Tokyo Dawn Labs/TDR VOS SlickEQ.conf"
