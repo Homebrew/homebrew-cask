@@ -1,6 +1,6 @@
 cask "liteide" do
-  version "38.2"
-  sha256 "90efd35b72cd5b51663e40c2abb51758427892a602a575ae9ed16e4e369295b6"
+  version "38.3"
+  sha256 "eee15c537100c48e2d28a35a8df047e3d4d7e8551a0e57d81af834cfea2a8e45"
 
   url "https://github.com/visualfc/liteide/releases/download/x#{version}/liteidex#{version}.macos-qt5.15.2.zip"
   name "LiteIDE"
