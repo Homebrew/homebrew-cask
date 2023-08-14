@@ -4,20 +4,22 @@ cask "tdr-kotelnikov" do
 
   url "https://www.tokyodawn.net/labs/Kotelnikov/#{version}/TDR%20Kotelnikov.zip?x24775"
   name "tdr-kotelnikov"
-  desc "Wideband dynamics processor combining range control with flexibility"
+  desc "Wideband dynamics processor"
   homepage "https://www.tokyodawn.net/tdr-kotelnikov/"
 
   livecheck do
     url :homepage
-    regex(%r{Latest\sversion:\s<strong>(\d+(?:\.\d+)+)</strong>}i)
+    regex(%r{latest\sversion:\s<strong>(\d+(?:\.\d+)+)</strong>}i)
   end
 
   pkg "TDR Kotelnikov.pkg"
 
   uninstall pkgutil: [
+    "com.TokyoDawnLabs.TDRKotelnikov.AAX",
+    "com.TokyoDawnLabs.TDRKotelnikov.AU",
     "com.TokyoDawnLabs.TDRKotelnikov.VST",
     "com.TokyoDawnLabs.TDRKotelnikov.VST3",
-    "com.TokyoDawnLabs.TDRKotelnikov.AU",
-    "com.TokyoDawnLabs.TDRKotelnikov.AAX",
   ]
+
+  zap trash: "~/Library/Tokyo Dawn Labs/TDR Kotelnikov.conf"
 end
