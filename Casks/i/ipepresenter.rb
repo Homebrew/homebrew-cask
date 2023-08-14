@@ -17,6 +17,4 @@ cask "ipepresenter" do
   end
 
   app "IpePresenter.app"
-
-  zap trash: "~/Library/Caches/com.apple.python/Applications/Présentation.app"
 end
