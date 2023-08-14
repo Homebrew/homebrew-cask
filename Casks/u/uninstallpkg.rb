@@ -1,6 +1,6 @@
 cask "uninstallpkg" do
-  version "1.2.0"
-  sha256 "35441d5520cdf0ac35e20c76704a65c97183d3729c49d1012c16a55a7056f70d"
+  version "1.2.1"
+  sha256 "4b66f6a0638a5619308a84ff5d8b4405cdf60287d9c923ae7eda0b456a9f461c"
 
   url "https://www.corecode.io/downloads/uninstallpkg_#{version}.zip"
   name "UninstallPKG"
