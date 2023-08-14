@@ -15,4 +15,6 @@ cask "presentation" do
   pkg "osx-presentation-#{version}.pkg"
 
   uninstall pkgutil: "fr.imag.iihm.blanch.osx-presentation"
+
+  zap trash: "~/Library/Caches/com.apple.python/Applications/Présentation.app"
 end
