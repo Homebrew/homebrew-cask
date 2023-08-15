@@ -11,6 +11,11 @@ cask "git-credential-manager" do
   desc "Cross-platform Git credential storage for multiple hosting providers"
   homepage "https://aka.ms/gcm"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   pkg "gcm-osx-#{arch}-#{version}.pkg"
 
   uninstall script:  {
