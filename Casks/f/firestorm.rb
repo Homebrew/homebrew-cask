@@ -1,6 +1,6 @@
 cask "firestorm" do
-  version "6.6.8.68380"
-  sha256 "d6baf8ca0759e01feb6ce57f1f237d05c26e5ec6f289da598aced2f8d10cc432"
+  version "6.6.14.69596"
+  sha256 "b514a953364651c3aa9162d9c51127a64bfc163bde6d88b9f1dbd7f17132d1fe"
 
   url "https://downloads.firestormviewer.org/mac/Phoenix-Firestorm-Releasex64-#{version.dots_to_hyphens}.dmg"
   name "Phoenix Firestorm viewer for Second Life"
@@ -16,6 +16,13 @@ cask "firestorm" do
   end
 
   app "Firestorm-Releasex64.app"
+
+  zap trash: [
+    "~/Library/Application Support/Firestorm",
+    "~/Library/Caches/Firestorm_x64",
+    "~/Library/Logs/DiagnosticReports/Firestorm*",
+    "~/Library/Preferences/Firestorm.plist",
+  ]
 
   caveats <<~EOS
     This version does not contain the Havok engine (does not matter if
