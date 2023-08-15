@@ -4,8 +4,8 @@ cask "microsoft-auto-update" do
     sha256 "f638f7e0da9ee659c323f2ede0f176804bfe9a615a8f8b6320bd2e69d91ef2b2"
   end
   on_sierra :or_newer do
-    version "4.61.23070901"
-    sha256 "f7a9f225d56845c914d93d5d477a5e54a5e1f24925efca05474d6f6437f1eead"
+    version "4.62.23081101"
+    sha256 "2968f6fd086104248c32d19273c4544d155cf5ca0cd1230c2ff85426b53a6aea"
   end
 
   url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_AutoUpdate_#{version}_Updater.pkg"
