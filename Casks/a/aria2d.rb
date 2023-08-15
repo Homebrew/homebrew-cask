@@ -8,9 +8,13 @@ cask "aria2d" do
   desc "Aria2 GUI"
   homepage "https://github.com/xjbeta/Aria2D"
 
+  # Older items in the Sparkle feed may have a newer pubDate, so it's necessary
+  # to work with all of the items in the feed (not just the newest one).
   livecheck do
     url "https://raw.githubusercontent.com/xjbeta/AppUpdaterAppcasts/master/Aria2D/Appcast.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle do |items|
+      items.map(&:short_version)
+    end
   end
 
   depends_on macos: ">= :high_sierra"
