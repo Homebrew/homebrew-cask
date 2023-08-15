@@ -17,6 +17,13 @@ cask "firestorm" do
 
   app "Firestorm-Releasex64.app"
 
+  zap trash: [
+    "~/Library/Application Support/Firestorm",
+    "~/Library/Caches/Firestorm_x64",
+    "~/Library/Logs/DiagnosticReports/Firestorm*",
+    "~/Library/Preferences/Firestorm.plist",
+  ]
+
   caveats <<~EOS
     This version does not contain the Havok engine (does not matter if
     you are not a content creator).
