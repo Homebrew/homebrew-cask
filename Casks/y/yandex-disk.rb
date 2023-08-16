@@ -1,5 +1,5 @@
 cask "yandex-disk" do
-  version "3.2.31,3083"
+  version "3.2.32,3089"
   sha256 :no_check
 
   url "https://disk.yandex.ru/download/Yandex.Disk.dmg/?instant=1"
