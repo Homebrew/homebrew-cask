@@ -1,9 +1,9 @@
 cask "git-credential-manager" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.3.0"
-  sha256 arm:   "8acfa913307140c06ec9b2692f9abfef32ecde4c83634d728597a94d34e0e773",
-         intel: "2c835e24eb5223ef190c528f12a7d7054b8ca143f7399ab23f61c68c0b8e029b"
+  version "2.3.1"
+  sha256 arm:   "8b7be6ae4a3819bc4a5493346a8d5a04a9a7ec0c8b0f97b1f4eab48fe52d73d6",
+         intel: "54fcb18da0dada0d3cd41c25796716b496a2931ac0ae2be3515d6fb5fbbce8de"
 
   url "https://github.com/git-ecosystem/git-credential-manager/releases/download/v#{version.major_minor_patch}/gcm-osx-#{arch}-#{version.major_minor_patch}.pkg",
       verified: "github.com/git-ecosystem/git-credential-manager/"
