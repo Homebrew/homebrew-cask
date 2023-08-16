@@ -1,5 +1,5 @@
 cask "pdfelement" do
-  version "9.5.8"
+  version "10.0.0"
   sha256 :no_check
 
   url "https://download.wondershare.com/cbs_down/mac-pdfelement_full5237.dmg"
