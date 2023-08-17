@@ -25,8 +25,20 @@ cask "i1profiler" do
               "com.aladdin.aksusbd",
               "com.aladdin.hasplmd",
             ],
-            delete:    "/Applications/i1Profiler/i1Profiler.app",
+            delete:    [
+              "/Applications/i1Profiler/i1Profiler.app",
+              "/Library/Application Support/X-Rite",
+            ],
             rmdir:     "/Applications/i1Profiler"
+
+  zap trash: [
+    "~/Library/Caches/com.x-rite.i1Profiler",
+    "~/Library/HTTPStorages/com.x-rite.i1Profiler",
+    "~/Library/HTTPStorages/com.x-rite.i1Profiler.binarycookies",
+    "~/Library/Preferences/com.x-rite.i1Profiler.plist",
+    "~/Library/Saved Application State/com.x-rite.i1Profiler.savedState",
+    "~/Library/WebKit/com.x-rite.i1Profiler",
+  ]
 
   caveats do
     reboot
