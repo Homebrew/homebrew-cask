@@ -24,9 +24,11 @@ cask "pieces" do
   uninstall quit: "com.pieces.x"
 
   zap trash: [
-    "~/Library/com.pieces.pfd",
-    "~/Library/Preferences/com.pieces.x.plist",
     "~/Library/Application Support/com.pieces.x",
+    "~/Library/com.pieces.pfd",
+    "~/Library/HTTPStorages/com.pieces.x",
+    "~/Library/Preferences/com.pieces.x.plist",
+    "~/Library/Saved Application State/com.pieces.x.savedState",
   ]
 
   caveats <<~EOS
