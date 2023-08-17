@@ -1,5 +1,5 @@
 cask "starcraft" do
-  version "1.18.5.3106"
+  version "1.18.10.3141"
   sha256 :no_check
 
   url "https://www.battle.net/download/getInstallerForGame?os=MAC&version=LIVE&gameProgram=STARCRAFT",
