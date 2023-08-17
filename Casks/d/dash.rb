@@ -19,6 +19,7 @@ cask "dash" do
   end
 
   auto_updates true
+  conflicts_with cask: "homebrew/cask-versions/dash6"
 
   app "Dash.app"
 
