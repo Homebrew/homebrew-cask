@@ -1,9 +1,9 @@
 cask "openbb-terminal" do
   arch arm: "ARM64", intel: "x86.64"
 
-  version "3.2.0"
-  sha256 arm:   "c6c18c33bab44dc68f5130e20d7b36570637783fcdb31643b4e314ad1e37c538",
-         intel: "ab49e5a02fd4ed23bc759724df5ac5a2a0610450576b3489c09614b0c0d4ff4e"
+  version "3.2.1"
+  sha256 arm:   "5299fcc49fde86e581baceeb008499257fdadf84274c7502ac0e7ddb9063b8fc",
+         intel: "8ff7fa349dd87db6cdcc9d012a959d84aa16e9049dbdca83555d3ad044351055"
 
   url "https://github.com/OpenBB-finance/OpenBBTerminal/releases/download/v#{version}/#{arch}.MacOS.OpenBB.Terminal.v#{version}.pkg",
       verified: "github.com/OpenBB-finance/OpenBBTerminal/"
