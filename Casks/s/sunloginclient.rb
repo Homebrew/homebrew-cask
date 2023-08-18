@@ -20,14 +20,32 @@ cask "sunloginclient" do
 
   pkg "SunloginClient.pkg"
 
-  uninstall quit:      "com.oray.sunlogin.macclient",
-            pkgutil:   "com.oray.sunlogin.macclient",
-            launchctl: [
+  postflight do
+    # The postinstall script automatically opens the app. Therefore, we must
+    # suppress this behavior to make the cask installation non-interactive.
+    retries ||= 3
+    ohai "The SunloginClient package postinstall script launches the app" if retries >= 3
+    ohai "Attempting to close SunloginClient to avoid unwanted user intervention" if retries >= 3
+    return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/SunloginClient.app"]
+  end
+
+  uninstall launchctl: [
               "com.oray.sunlogin ()",
               "com.oray.sunlogin.agent",
               "com.oray.sunlogin.desktopagent",
               "com.oray.sunlogin.helper",
               "com.oray.sunlogin.service",
               "com.oray.sunlogin.startup",
-            ]
+            ],
+            pkgutil:   "com.oray.sunlogin.macclient",
+            quit:      "com.oray.sunlogin.macclient"
+
+  zap delete: "/private/var/log/sunlogin/",
+      trash:  [
+        "~/Library/Caches/com.oray.sunlogin.macclient",
+        "~/Library/Preferences/com.oray.sunlogin.macclient.plist",
+        "~/Library/Saved Application State/com.oray.sunlogin.macclient.savedState",
+        "~/Library/WebKit/com.oray.sunlogin.macclient",
+        "~/Sunlogin Files",
+      ]
 end
