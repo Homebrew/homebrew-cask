@@ -8,6 +8,11 @@ cask "rustdesk" do
   desc "Open source virtual/remote desktop application"
   homepage "https://rustdesk.com/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :mojave"
 
   app "RustDesk.app"
