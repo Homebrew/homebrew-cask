@@ -1,6 +1,6 @@
 cask "redcine-x-pro" do
-  version "60.3.11"
-  sha256 "9112ac715a1490a03fd250eb59cc87b33659cb25e71c985a143a2917a08d4002"
+  version "61.1.2"
+  sha256 "dafc8e78e00f3fa75a93c7bb896cdc1acaa2ce8b2a1678159cbbb355c089ba1b"
 
   url "https://downloads.red.com/software/rcx/mac/release/#{version}/REDCINE-X_PRO_Build_#{version}.pkg"
   name "REDCINE-X PRO"
@@ -23,4 +23,10 @@ cask "redcine-x-pro" do
               "com.red.pkg.SupportLibs",
             ],
             delete:  "/Applications/REDCINE-X Professional"
+
+  zap trash: [
+    "~/Library/Application Support/red",
+    "~/Library/Logs/DiagnosticReports/RED PLAYER*",
+    "~/Library/Saved Application State/com.red.RED-Tether.savedState",
+  ]
 end
