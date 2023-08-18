@@ -1,6 +1,6 @@
 cask "miniwol" do
-  version "2.1.3"
-  sha256 "3a42570e704616620a74969ce180151553751bbcd33e34cd02194ac4edf50b3a"
+  version "2.1.4"
+  sha256 "ab9cf31a15339fa548edf35754edaa4f1d5b824fdd92d56a1dead20c0087b8aa"
 
   url "https://www.tweaking4all.com/downloads/network/miniWOL-v#{version}-64bit.dmg"
   name "miniWOL"
