@@ -1,6 +1,6 @@
 cask "bettermouse" do
-  version "1.5.3792"
-  sha256 "236469d660f359d521ef80784b9f852945febc25504ed813f9d82ed7a61a23e8"
+  version "1.5.3963"
+  sha256 "07325a72b4ef9dfcb6eda8659015d17ac7758cb6a10e8158ed42204ca5aee558"
 
   url "https://better-mouse.com/wp-content/uploads/BetterMouse.#{version}.zip"
   name "BetterMouse"
