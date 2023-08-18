@@ -23,4 +23,10 @@ cask "redcine-x-pro" do
               "com.red.pkg.SupportLibs",
             ],
             delete:  "/Applications/REDCINE-X Professional"
+
+  zap trash: [
+    "~/Library/Application Support/red",
+    "~/Library/Logs/DiagnosticReports/RED PLAYER*",
+    "~/Library/Saved Application State/com.red.RED-Tether.savedState",
+  ]
 end
