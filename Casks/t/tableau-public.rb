@@ -1,6 +1,6 @@
 cask "tableau-public" do
-  version "2023.2.0"
-  sha256 "f1908d99bbb57851c5d3baa7c820eeffe13a309d2fc2410203e68796534433b4"
+  version "2023.2.1"
+  sha256 "ada4bb997f02b42f4dc90fd257dfa2d8d88aa414e4b021fc9326d4c6cbffadfc"
 
   url "https://downloads.tableau.com/public/TableauPublic-#{version.dots_to_hyphens}.dmg"
   name "Tableau Public"
