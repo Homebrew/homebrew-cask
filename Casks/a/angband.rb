@@ -1,6 +1,6 @@
 cask "angband" do
-  version "4.2.4"
-  sha256 "a0260cbd00807f0d495a3743dca9cc94938978cd90bd6872394ac4bb11cce880"
+  version "4.2.5"
+  sha256 "ea04557f8ad46d7e446fd4e76324774743bb6b073f6fe9b803256776707bbc66"
 
   url "https://github.com/angband/angband/releases/download/#{version}/Angband-#{version}-osx.dmg",
       verified: "github.com/angband/angband/"
@@ -16,4 +16,10 @@ cask "angband" do
   depends_on macos: ">= :sierra"
 
   app "Angband.app"
+
+  zap trash: [
+    "~/Documents/Angband",
+    "~/Library/Preferences/org.rephial.angband.plist",
+    "~/Library/Saved Application State/org.rephial.angband.savedState",
+  ]
 end
