@@ -8,8 +8,8 @@ cask "iem-plugin-suite" do
   homepage "https://plugins.iem.at/"
 
   livecheck do
-    url "https://git.iem.at/audioplugins/IEMPluginSuite.git"
-    strategy :git
+    url "https://plugins.iem.at/download/"
+    regex(/href=.*?IEMPluginSuite[._-]v?(\d+(?:\.\d+)+)\.(?:dmg|pkg)/i)
   end
 
   auto_updates true
