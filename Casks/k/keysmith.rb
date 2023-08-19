@@ -17,8 +17,12 @@ cask "keysmith" do
   app "Keysmith.app"
 
   zap trash: [
+    "~/Library/Application Support/Google/Chrome/NativeMessagingHosts/app.keysmith.keysmith_native_messaging_host.json",
+    "~/Library/Application Support/Mozilla/NativeMessagingHosts/app.keysmith.keysmith_native_messaging_host.json",
     "~/Library/Caches/app.keysmith.Keysmith",
     "~/Library/Keysmith",
+    "~/Library/HTTPStorages/app.keysmith.Keysmith",
     "~/Library/Preferences/app.keysmith.Keysmith.plist",
+    "~/Library/WebKit/app.keysmith.Keysmith",
   ]
 end
