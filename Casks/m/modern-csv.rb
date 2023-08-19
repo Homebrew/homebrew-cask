@@ -2,8 +2,7 @@ cask "modern-csv" do
   version "2.0.2"
   sha256 "7a87b7902d2bbd9f7ba1e9d0ddf7ad171070cd79cc20a45604d65aef05de7908"
 
-  url "https://t6a3m9g6.rocketcdn.me/release/ModernCSV-Mac-v#{version}.dmg",
-      verified: "t6a3m9g6.rocketcdn.me/"
+  url "https://www.moderncsv.com/release/ModernCSV-Mac-v#{version}.dmg"
   name "Modern CSV"
   desc "CSV editor"
   homepage "https://www.moderncsv.com/"
