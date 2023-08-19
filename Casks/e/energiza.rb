@@ -15,4 +15,12 @@ cask "energiza" do
   depends_on macos: ">= :high_sierra"
 
   app "Energiza.app"
+
+  zap trash: [
+    "~/Library/Application Support/Energiza",
+    "~/Library/Caches/de.appgineers.energiza",
+    "~/Library/HTTPStorages/de.appgineers.energiza",
+    "~/Library/HTTPStorages/de.appgineers.energiza.binarycookies",
+    "~/Library/Preferences/de.appgineers.energiza.plist",
+  ]
 end
