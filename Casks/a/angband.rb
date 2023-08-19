@@ -16,4 +16,10 @@ cask "angband" do
   depends_on macos: ">= :sierra"
 
   app "Angband.app"
+
+  zap trash: [
+    "~/Documents/Angband",
+    "~/Library/Preferences/org.rephial.angband.plist",
+    "~/Library/Saved Application State/org.rephial.angband.savedState",
+  ]
 end
