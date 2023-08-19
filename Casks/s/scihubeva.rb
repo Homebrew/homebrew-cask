@@ -7,7 +7,7 @@ cask "scihubeva" do
 
   url "https://github.com/leovan/SciHubEVA/releases/download/v#{version}/SciHubEVA-#{arch}-v#{version}.dmg"
   name "Sci-Hub EVA"
-  desc "A cross-platform Sci-Hub GUI application powered by Python and Qt."
+  desc "Cross-platform Sci-Hub GUI application powered by Python and Qt"
   homepage "https://github.com/leovan/SciHubEVA"
 
   app "Sci-Hub EVA.app"
