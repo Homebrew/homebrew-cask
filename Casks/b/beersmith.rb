@@ -1,6 +1,6 @@
 cask "beersmith" do
-  version "3.2.7"
-  sha256 "8df3be5c77d57938936e81803dcdbd76e30d71c8b2c90f0da79cbf3d90254946"
+  version "3.2.8"
+  sha256 "47538ccdeb793a0164c41741b596f9c178fd2b9046a5b42c507e272a5e8c3cd1"
 
   url "https://beersmith3-2.s3.amazonaws.com/BeerSmith#{version.dots_to_underscores}.dmg",
       verified: "beersmith3-2.s3.amazonaws.com/"
