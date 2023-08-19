@@ -15,6 +15,8 @@ cask "beeper" do
     strategy :header_match
   end
 
+  auto_updates true
+
   app "Beeper.app"
 
   zap trash: [
