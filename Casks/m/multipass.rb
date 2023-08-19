@@ -15,6 +15,8 @@ cask "multipass" do
   depends_on macos: ">= :mojave"
 
   pkg "multipass-#{version}+mac-Darwin.pkg"
+  binary "/Library/Application Support/com.canonical.multipass/Resources/completions/bash/multipass",
+         target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/multipass"
 
   uninstall launchctl: "com.canonical.multipassd",
             pkgutil:   "com.canonical.multipass.*",
@@ -23,7 +25,7 @@ cask "multipass" do
               "/Library/Application Support/com.canonical.multipass",
               "/Library/Logs/Multipass",
               "/usr/local/bin/multipass",
-              "/usr/local/etc/bash_completion.d/multipass",
+              "#{HOMEBREW_PREFIX}/etc/bash_completion.d/multipass",
             ]
 
   zap trash: [
