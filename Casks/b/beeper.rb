@@ -16,7 +16,7 @@ cask "beeper" do
   end
 
   auto_updates true
-  
+
   app "Beeper.app"
 
   zap trash: [
