@@ -21,11 +21,12 @@ cask "multipass" do
   uninstall launchctl: "com.canonical.multipassd",
             pkgutil:   "com.canonical.multipass.*",
             delete:    [
+              "#{HOMEBREW_PREFIX}/etc/bash_completion.d/multipass",
               "/Applications/Multipass.app",
               "/Library/Application Support/com.canonical.multipass",
               "/Library/Logs/Multipass",
               "/usr/local/bin/multipass",
-              "#{HOMEBREW_PREFIX}/etc/bash_completion.d/multipass",
+              "/usr/local/etc/bash_completion.d/multipass",
             ]
 
   zap trash: [
