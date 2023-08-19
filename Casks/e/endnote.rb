@@ -7,12 +7,10 @@ cask "endnote" do
   desc "Reference manager"
   homepage "https://endnote.com/"
 
-  # The livecheck url should be updated once version 21 begins receiving
-  # updates. See: https://github.com/Homebrew/homebrew-cask/pull/147759#issuecomment-1560267775
   livecheck do
-    url "https://download.endnote.com/updates/20.0/EN20MacUpdates.xml"
+    url "https://download.endnote.com/updates/21.0/EN21MacUpdates.xml"
     strategy :xml do |xml|
-      xml.get_elements("//build[@version='*']/updateTo").map(&:text)
+      xml.get_elements("//updateTo").map(&:text)
     end
   end
 
