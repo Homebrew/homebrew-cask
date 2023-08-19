@@ -16,11 +16,13 @@ cask "peazip" do
   end
 
   auto_updates true
+
   app "PeaZip.app"
 
   postflight do
     system_command "/usr/bin/open", args: ["#{staged_path}/macOS service menus/PeaZip, add to archive.workflow"]
-    system_command "/usr/bin/open", args: ["#{staged_path}/macOS service menus/PeaZip, extract here (smart new folder).workflow"]
+    system_command "/usr/bin/open",
+                   args: ["#{staged_path}/macOS service menus/PeaZip, extract here (smart new folder).workflow"]
     system_command "/usr/bin/open", args: ["#{staged_path}/macOS service menus/PeaZip, extract....workflow"]
     system_command "/usr/bin/open", args: ["#{staged_path}/macOS service menus/PeaZip, open file or folder.workflow"]
   end
