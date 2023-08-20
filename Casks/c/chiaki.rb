@@ -1,6 +1,6 @@
 cask "chiaki" do
-  version "2.1.1"
-  sha256 "d90aa5c7b0d5602165be845fa648474f084968109554d644544b64cd1399c6af"
+  version "2.2.0"
+  sha256 "bf0315f26f196ece67181f7f88adc28c7eb17c0fdda10315d7b7b3606ba370a7"
 
   url "https://git.sr.ht/~thestr4ng3r/chiaki/refs/download/v#{version}/Chiaki-v#{version}-macOS-x86_64.dmg"
   name "Chiaki"
