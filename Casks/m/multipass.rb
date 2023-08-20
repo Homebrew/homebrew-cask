@@ -15,8 +15,13 @@ cask "multipass" do
   depends_on macos: ">= :mojave"
 
   pkg "multipass-#{version}+mac-Darwin.pkg"
-  binary "/Library/Application Support/com.canonical.multipass/Resources/completions/bash/multipass",
-         target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/multipass"
+
+  postflight do
+    if Hardware::CPU.arm?
+      File.symlink("/Library/Application Support/com.canonical.multipass/Resources/completions/bash/multipass",
+                   "#{HOMEBREW_PREFIX}/etc/bash_completion.d/multipass")
+    end
+  end
 
   uninstall launchctl: "com.canonical.multipassd",
             pkgutil:   "com.canonical.multipass.*",
