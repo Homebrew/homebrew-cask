@@ -16,8 +16,8 @@ cask "multipass" do
 
   pkg "multipass-#{version}+mac-Darwin.pkg"
 
-  postflight do
-    if Hardware::CPU.arm?
+  on_arm do
+    postflight do
       File.symlink("/Library/Application Support/com.canonical.multipass/Resources/completions/bash/multipass",
                    "#{HOMEBREW_PREFIX}/etc/bash_completion.d/multipass")
     end
