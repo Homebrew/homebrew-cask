@@ -28,6 +28,8 @@ cask "dash" do
     "~/Library/Application Support/Dash",
     "~/Library/Caches/com.kapeli.dashdoc",
     "~/Library/Cookies/com.kapeli.dashdoc.binarycookies",
+    "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.kapeli.dashdoc",
+    "~/Library/HTTPStorages/com.kapeli.dashdoc",
     "~/Library/HTTPStorages/com.kapeli.dashdoc.binarycookies",
     "~/Library/Logs/Dash",
     "~/Library/Preferences/com.kapeli.dashdoc.plist",
