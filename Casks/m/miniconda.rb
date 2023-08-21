@@ -40,5 +40,8 @@ cask "miniconda" do
   caveats <<~EOS
     Please run the following to setup your shell:
       conda init "$(basename "${SHELL}")"
+
+    Alternatively, manually add the following to your shell init:
+      eval "$(conda "shell.$(basename "${SHELL}")" hook)"
   EOS
 end
