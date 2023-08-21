@@ -2,10 +2,10 @@ cask "dockx" do
   version "1.0.0,11"
   sha256 "ae3054aac17398ae54763d844513bed1e384f9573e418e7895cd0a0e2c4affe8"
 
-  url "https://d-1251679148.file.myqcloud.com/download/DockX-#{version.before_comma}-#{version.after_comma}.dmg",
-      verified: "d-1251679148.file.myqcloud.com/"
+  url "https://d-1251679148.file.myqcloud.com/download/DockX-#{version.csv.first}-#{version.csv.second}.dmg",
+      verified: "d-1251679148.file.myqcloud.com/download/"
   name "DockX"
-  desc "Display any content in the Dock and menu bar"
+  desc "Display content in the Dock and menu bar"
   homepage "https://dockx.app/"
 
   livecheck do
