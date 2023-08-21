@@ -6,8 +6,8 @@ cask "pieces" do
   sha256 :no_check
 
   url "https://builds.pieces.app/stages/production/pieces_for_x/macos#{arch}/download"
-  name "pieces"
-  desc "Code Snippets, Screenshots, Workflow Context. A powerful Copilot for Developers"
+  name "Pieces"
+  desc "Code snippets, screenshots and workflow context"
   homepage "https://pieces.app/"
 
   livecheck do
@@ -30,11 +30,4 @@ cask "pieces" do
     "~/Library/Preferences/com.pieces.x.plist",
     "~/Library/Saved Application State/com.pieces.x.savedState",
   ]
-
-  caveats <<~EOS
-    To Get Started With Pieces, First Launch Pieces OS:
-      open -a "Pieces OS.app"
-    Then Launch Pieces.app:
-      open -a "Pieces.app"
-  EOS
 end
