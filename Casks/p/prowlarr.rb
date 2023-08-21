@@ -16,6 +16,7 @@ cask "prowlarr" do
     strategy :github_latest
   end
 
+  conflicts_with cask: "prowlarr-beta"
   depends_on macos: ">= :high_sierra"
 
   app "Prowlarr.app"
