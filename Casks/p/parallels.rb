@@ -24,7 +24,7 @@ cask "parallels" do
     "homebrew/cask-versions/parallels16",
     "homebrew/cask-versions/parallels17",
   ]
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :monterey"
 
   app "Parallels Desktop.app"
 
