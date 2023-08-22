@@ -9,7 +9,7 @@ cask "focusrite-control" do
 
   livecheck do
     url "https://downloads.focusrite.com/focusrite/scarlett-3rd-gen/scarlett-solo-3rd-gen"
-    regex(%r{href=.*?/focusrite_control_(\d+(?:\.\d+)+)\.dmg}i)
+    regex(%r{href=.*?/focusrite[._-]control[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   pkg "Focusrite Control.pkg"
