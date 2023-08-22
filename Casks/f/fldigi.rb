@@ -18,7 +18,7 @@ cask "fldigi" do
 
   livecheck do
     url "https://sourceforge.net/projects/fldigi/rss?path=/fldigi"
-    regex(/fldigi[._-]v?(\d+(?:\.\d+)+)[._-]vn\.dmg/i)
+    regex(/fldigi[._-]v?(\d+(?:\.\d+)+)[._-].+\.dmg/i)
     strategy :page_match
   end
 
