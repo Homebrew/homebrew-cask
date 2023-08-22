@@ -3,12 +3,12 @@ cask "xtool-creative-space" do
   livecheck_arch = on_arch_conditional arm: "apple", intel: "intel"
 
   on_arm do
-    version "1.4.13,28,ca6e5be6-e891-425b-91f9-76905be4c2c6,2023-08-01-20-46-35"
-    sha256  "a9fcc73f25c65221d82c3c623c44058844574963152b678817f1ae52e2f311c4"
+    version "1.5.10,28,348405d7-d525-4ebf-9b65-eafbcd52f5d6,2023-08-18-12-09-34"
+    sha256  "f6e6a757776de1227e7678a207b12dde24ff969e85a009a646dc88b6010cb99e"
   end
   on_intel do
-    version "1.4.13,16,006c4bfc-da2b-4f3b-9bc0-a8b9f9facfe2,2023-08-01-20-47-35"
-    sha256 "267eed57a83300c78116560733ad1d3c9b3af62ed242740801735fb26bd49558"
+    version "1.5.10,16,2de5ac50-7bff-4af0-a3a9-3dc3fca88bb5,2023-08-18-12-09-42"
+    sha256 "d3a9eb20263e15bec70dcfa108084f2912c30f014b937e9f1d2e9811b4aa0e0c"
   end
 
   url "https://res-us.makeblock.com/efficacy/xcs/production/packages/#{version.csv.second}/#{version.csv.third}/xTool%20Creative%20Space-#{version.csv.first}-#{version.csv.fourth}-#{arch}.dmg",
