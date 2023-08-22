@@ -1,15 +1,24 @@
 cask "fldigi" do
-  version "4.1.26"
-  sha256 "d36b6086b6b3e95d0350f94604505101df01bfd9ea260fa2c78ad659bd287049"
+  version "4.1.27"
 
-  url "https://downloads.sourceforge.net/fldigi/fldigi/fldigi-#{version}_U.dmg"
+  on_sierra :or_older do
+    sha256 "1d81c16cee9527d1dcec4084f6cfc8371e44c7e127c96b562f9944ba619770ed"
+
+    url "https://downloads.sourceforge.net/fldigi/fldigi/fldigi-#{version}_LI.dmg"
+  end
+  on_high_sierra :or_newer do
+    sha256 "3f28609899c085d182d121441ffa450d7ed95aac10bb6faeb12d90f20a3f9a7a"
+
+    url "https://downloads.sourceforge.net/fldigi/fldigi/fldigi-#{version}_VN.dmg"
+  end
+
   name "fldigi"
   desc "Ham radio digital modem application"
   homepage "https://sourceforge.net/projects/fldigi/files/fldigi/"
 
   livecheck do
     url "https://sourceforge.net/projects/fldigi/rss?path=/fldigi"
-    regex(/fldigi[._-]v?(\d+(?:\.\d+)+)[._-]u\.dmg/i)
+    regex(/fldigi[._-]v?(\d+(?:\.\d+)+)[._-].+\.dmg/i)
     strategy :page_match
   end
 
