@@ -8,6 +8,11 @@ cask "virtual-desktop-streamer" do
   desc "VR Virtual Desktop Streamer"
   homepage "https://www.vrdesktop.net/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   pkg "Virtual Desktop.pkg"
 
   postflight do
