@@ -5,7 +5,7 @@ cask "dockx" do
   url "https://d-1251679148.file.myqcloud.com/download/DockX-#{version.csv.first}-#{version.csv.second}.dmg",
       verified: "d-1251679148.file.myqcloud.com/download/"
   name "DockX"
-  desc "Display content in the Dock and menu bar"
+  desc "Display content in the dock and menu bar"
   homepage "https://dockx.app/"
 
   livecheck do
@@ -13,9 +13,8 @@ cask "dockx" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :catalina"
-
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "DockX.app"
 
