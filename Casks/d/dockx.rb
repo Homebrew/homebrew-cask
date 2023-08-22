@@ -15,6 +15,8 @@ cask "dockx" do
 
   depends_on macos: ">= :catalina"
 
+  auto_updates true
+
   app "DockX.app"
 
   zap trash: [
