@@ -8,7 +8,7 @@ cask "parallels" do
   homepage "https://www.parallels.com/products/desktop/"
 
   livecheck do
-    url "https://kb.parallels.com/129060"
+    url "https://kb.parallels.com/129860"
     regex(/<h2[^>]*?>[^<]*?(\d+(?:\.\d+)+)(?:\s*|&nbsp;)\((\d+)\)/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[0]}-#{match[1]}" }
