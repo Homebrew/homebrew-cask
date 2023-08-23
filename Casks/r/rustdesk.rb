@@ -1,8 +1,11 @@
 cask "rustdesk" do
-  version "1.2.2"
-  sha256 "7a04038d3b3838304f322ebeaa32fa3645bf72f1c81257a3b701f2e56bdd1345"
+  arch arm: "aarch64", intel: "x86_64"
 
-  url "https://github.com/rustdesk/rustdesk/releases/download/#{version}/rustdesk-#{version}-x86_64.dmg",
+  version "1.2.2"
+  sha256 arm:   "d7571da858647f34ec3c8d6fa04b099b7de67eb5402b4b5e5cb21e8261a3316a",
+         intel: "7a04038d3b3838304f322ebeaa32fa3645bf72f1c81257a3b701f2e56bdd1345"
+
+  url "https://github.com/rustdesk/rustdesk/releases/download/#{version}/rustdesk-#{version}-#{arch}.dmg",
       verified: "github.com/rustdesk/rustdesk/"
   name "RustDesk"
   desc "Open source virtual/remote desktop application"
