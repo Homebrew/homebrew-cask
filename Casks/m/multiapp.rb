@@ -4,7 +4,7 @@ cask "multiapp" do
 
   url "https://updates.multi.app/installers/Multi%20#{version}.dmg"
   name "Multi"
-  desc "Multiplayer Collaboration for macOS"
+  desc "Multiplayer Collaboration"
   homepage "https://www.multi.app/"
 
   app "Multi.app"
