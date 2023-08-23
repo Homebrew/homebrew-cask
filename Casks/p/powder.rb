@@ -13,4 +13,9 @@ cask "powder" do
   end
 
   app "The Powder Toy.app"
+
+  zap trash: [
+    "~/Library/Application Support/The Powder Toy",
+    "~/Library/Saved Application State/uk.co.powdertoy.tpt.savedState",
+  ]
 end
