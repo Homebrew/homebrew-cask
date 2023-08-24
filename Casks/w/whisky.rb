@@ -1,6 +1,6 @@
 cask "whisky" do
-  version "1.1.0"
-  sha256 "cf21aac89782f65353ea571df629ff9ab3ac2171af3e4aed1442aa3a193d0be2"
+  version "1.1.1"
+  sha256 "700bbad1246c87c63bb4e5b400f0e8cbf103aca152f23d017098f990ab09f25e"
 
   url "https://github.com/IsaacMarovitz/Whisky/releases/download/v#{version}/Whisky.zip"
   name "Whisky"
