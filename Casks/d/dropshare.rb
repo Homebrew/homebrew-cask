@@ -15,6 +15,8 @@ cask "dropshare" do
     end
   end
 
+  depends_on macos: ">= :monterey"
+
   app "Dropshare #{version.major}.app"
   binary "#{appdir}/Dropshare #{version.major}.app/Contents/Resources/ds.sh", target: "ds"
 
