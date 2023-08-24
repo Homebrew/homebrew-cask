@@ -3,19 +3,16 @@ cask "json-viewer" do
   sha256 "eeb39692b214f3604e7fc344ec7b822c7934897050cc7bbd1bedb7287c259670"
 
   url "https://jsonviewer.app/JSON-Viewer-#{version}.dmg"
-  name "json-viewer"
+  name "JSON Viewer"
   desc "App to visualize, validate and format JSON datasets"
   homepage "https://jsonviewer.app/"
 
   livecheck do
     url :homepage
-    strategy :page_match do |page|
-      match = page.match(/JSON-Viewer-(\d+(\.\d+)+)\.dmg/i)
-      next if match.blank?
-
-      (match[1]).to_s
-    end
+    regex(/JSON[._-]Viewer[._-]v?(\d+(\.\d+)+)\.dmg/i)
   end
+
+  depends_on macos: ">= :mojave"
 
   app "JSON Viewer.app"
 
