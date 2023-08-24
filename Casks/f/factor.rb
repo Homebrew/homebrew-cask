@@ -1,6 +1,6 @@
 cask "factor" do
-  version "0.98"
-  sha256 "045847b1cf01e1dda270b834c34effd796ce52da40ada8e2fe52b55e3358db17"
+  version "0.99"
+  sha256 "8a7968b873b5e87c83b5d0f5ddb4d3d76a2460f5e5c14edac6b18fe5957bd7d6"
 
   url "https://downloads.factorcode.org/releases/#{version}/factor-macosx-x86-64-#{version}.dmg"
   name "Factor"
