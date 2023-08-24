@@ -1,6 +1,6 @@
 cask "dropshare" do
-  version "5.35,5464"
-  sha256 "0c7ac10a5e41c9f23a22faf42244f7784eab1b62ed2fe886db742b44ba93b782"
+  version "5.35.1,5469"
+  sha256 "7168457a9ce5b9acff62bbf1f807b0e5b39721090eb0cbc0c20100b395a32498"
 
   url "https://d2wvuuix8c9e48.cloudfront.net/Dropshare#{version.major}-#{version.csv.second}.app.zip",
       verified: "d2wvuuix8c9e48.cloudfront.net/"
@@ -14,6 +14,8 @@ cask "dropshare" do
       "#{item.title[/(\d+(?:\.\d+)+)/i, 1]},#{item.version}"
     end
   end
+
+  depends_on macos: ">= :monterey"
 
   app "Dropshare #{version.major}.app"
   binary "#{appdir}/Dropshare #{version.major}.app/Contents/Resources/ds.sh", target: "ds"
