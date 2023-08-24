@@ -9,7 +9,7 @@ cask "vmware-horizon-client" do
 
   livecheck do
     url "https://customerconnect.vmware.com/channel/public/api/v1.0/products/getRelatedDLGList?locale=en_US&category=desktop_end_user_computing&product=vmware_horizon_clients&version=horizon_8&dlgType=PRODUCT_BINARY"
-    regex(%r{/([^/]+)/VMware-Horizon-Client-v?(\d+(?:[.-]\d+)+)\.dmg}i)
+    regex(%r{/([^/]+)/VMware[._-]Horizon[._-]Client[._-]v?(\d+(?:[.-]\d+)+)\.dmg}i)
     strategy :page_match do |page|
       mac_json_info = JSON.parse(page)["dlgEditionsLists"].select { |item| item["name"].match(/mac/i) }&.first
       api_item = mac_json_info["dlgList"]&.first
@@ -51,11 +51,15 @@ cask "vmware-horizon-client" do
             quit:      "com.vmware.horizon"
 
   zap trash: [
+    "/Library/Application Support/VMware",
+    "/Library/Logs/VMware View Client Services.log",
+    "/Library/Logs/VMware",
     "/Library/Preferences/com.vmware.horizon.plist",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vmware.horizon.sfl2",
     "~/Library/Application Support/VMware Horizon View Client",
     "~/Library/Caches/com.vmware.horizon",
     "~/Library/Logs/VMware Horizon Client",
+    "~/Library/Logs/VMware",
     "~/Library/Preferences/com.vmware.horizon.keyboard.plist",
     "~/Library/Preferences/com.vmware.horizon.plist",
     "~/Library/Saved Application State/com.vmware.horizon.savedState",
