@@ -7,6 +7,11 @@ cask "whisky" do
   desc "Wine wrapper built with SwiftUI"
   homepage "https://github.com/IsaacMarovitz/Whisky"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
   depends_on macos: ">= :ventura"
 
