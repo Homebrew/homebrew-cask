@@ -1,16 +1,16 @@
 cask "tiled" do
   version "1.10.2"
 
-  on_high_sierra :or_older do
+  on_catalina :or_older do
     sha256 "9cd3dae263fd142c72ede7d6b78190860e25580f7ae645145daa39d918aa1ce5"
 
-    url "https://github.com/mapeditor/tiled/releases/download/v#{version}/Tiled-#{version}_macOS-10.12-10.13.zip",
+    url "https://github.com/mapeditor/tiled/releases/download/v#{version}/Tiled-#{version}_macOS-10.12-10.15.zip",
         verified: "github.com/mapeditor/tiled/"
   end
-  on_mojave :or_newer do
+  on_big_sur :or_newer do
     sha256 "0e82e42daa384644a8a795730efcad600cc35ca631693328a6ce65830dc8afa0"
 
-    url "https://github.com/mapeditor/tiled/releases/download/v#{version}/Tiled-#{version}_macOS-10.14+.zip",
+    url "https://github.com/mapeditor/tiled/releases/download/v#{version}/Tiled-#{version}_macOS-11+.zip",
         verified: "github.com/mapeditor/tiled/"
   end
 
