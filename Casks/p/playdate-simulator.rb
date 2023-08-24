@@ -22,12 +22,10 @@ cask "playdate-simulator" do
       exec.unlink if exec.exist? && exec.readlink.to_s.include?("playdate")
     end
   end
-  
+
   uninstall pkgutil: "date.play.sdk",
-            trash:   [
-              "~/Developer/PlaydateSDK",
-              "/usr/local/playdate"
-            ],
+            trash:   "~/Developer/PlaydateSDK",
+            delete:  "/usr/local/playdate",
             rmdir:   "~/Developer"
 
   zap trash: "~/.Playdate"
