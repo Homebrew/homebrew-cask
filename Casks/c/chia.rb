@@ -1,9 +1,9 @@
 cask "chia" do
   arch arm: "-arm64"
 
-  version "1.8.2"
-  sha256 arm:   "95766d0c2c54982b80a21d1ef6d2dfef70edf7c0dff2dabdc5d9791d199932f1",
-         intel: "a5e09160c8a81a5b088c5f84f274da50c9b38d74bb23690dd9be1cbdcc1b7890"
+  version "2.0.0"
+  sha256 arm:   "c9a17fcb333d771099e2155fb3a953efade04360ee1dccad24ec309a6cd4c779",
+         intel: "369b52bdc3386e1d320cfdb3ac631c320c933ea8bcf56dce0320e5ac130d0b0f"
 
   url "https://github.com/Chia-Network/chia-blockchain/releases/download/#{version}/Chia-#{version}#{arch}.dmg",
       verified: "github.com/Chia-Network/chia-blockchain/"
