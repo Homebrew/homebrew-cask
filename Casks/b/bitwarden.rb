@@ -1,6 +1,6 @@
 cask "bitwarden" do
-  version "2023.7.1"
-  sha256 "dc994336533c632f18a39ce7b36993caba7ff54841420689212edaffa5f81a77"
+  version "2023.8.2"
+  sha256 "347475a557c89775829a9dd2b13807c0e02d4b6523246c9f2adc5a082f4211ce"
 
   url "https://github.com/bitwarden/clients/releases/download/desktop-v#{version}/Bitwarden-#{version}-universal.dmg",
       verified: "github.com/bitwarden/clients/"
