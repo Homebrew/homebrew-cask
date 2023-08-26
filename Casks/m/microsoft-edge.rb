@@ -6,8 +6,8 @@ cask "microsoft-edge" do
     sha256 "ccebf1fddb0cb92f222037c855ff76563be2a25321ab66b006d1f15959f61ad9"
   end
   on_intel do
-    version "116.0.1938.62,3c9943fe-1b05-47df-99a4-84ae28baf7d4"
-    sha256 "ccebf1fddb0cb92f222037c855ff76563be2a25321ab66b006d1f15959f61ad9"
+    version "116.0.1938.62,f4124110-8cd1-4a05-841e-b66d050a4087"
+    sha256 "b1f86d2b77d3a8fc61bc439324a47319bdb6216b3ef890db39074d2b6549f2ab"
   end
 
   url "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/#{version.csv.second}/MicrosoftEdge-#{version.csv.first}.pkg"
