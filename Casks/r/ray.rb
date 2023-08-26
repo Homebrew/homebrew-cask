@@ -2,9 +2,9 @@ cask "ray" do
   arch arm: "-arm64"
   folder = on_arch_conditional arm: "arm64/"
 
-  version "2.6.4"
-  sha256 arm:   "63fd8548273c94f3235cbcb4aa86ed9bc22d98c388b7866c1cd4babd78140669",
-         intel: "8917ec540694ee08252c5b86d37c9fc4d3991211b7b33b5de011e0282eb5aa60"
+  version "2.6.5"
+  sha256 arm:   "2a5e8fe42a445ba4e971c28f657756fea871d1edbdd266793caa5c25601f5e5a",
+         intel: "40d82edfccfa0e75430007873e07f708158cb5a614e6ea0b893b4c675f1ccc1d"
 
   url "https://ray-app.s3.eu-west-1.amazonaws.com/#{folder}Ray-#{version}#{arch}.dmg",
       verified: "ray-app.s3.eu-west-1.amazonaws.com/"
