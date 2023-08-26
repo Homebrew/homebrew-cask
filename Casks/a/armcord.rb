@@ -8,11 +8,12 @@ cask "armcord" do
   desc "Custom lightweight Discord client designed to enhance your experience"
   homepage "https://armcord.app/"
 
+  app "armcord.app"
+
   zap trash: [
   "~/Library/Application Support/ArmCord",
   "~/Library/Preferences/com.smartfridge.armcord.plist",
   "~/Library/Saved Application State/com.smartfridge.armcord.savedState",
 ]
 
-  app "armcord.app"
 end
