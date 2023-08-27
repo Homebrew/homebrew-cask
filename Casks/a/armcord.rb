@@ -4,16 +4,21 @@ cask "armcord" do
 
   url "https://github.com/ArmCord/ArmCord/releases/download/v#{version}/ArmCord-#{version}.dmg",
       verified: "github.com/ArmCord/ArmCord/"
-  name "armcord"
-  desc "Custom lightweight Discord client designed to enhance your experience"
+  name "ArmCord"
+  desc "Discord client"
   homepage "https://armcord.app/"
 
-  app "armcord.app"
+  depends_on macos: ">= :high_sierra"
+
+  app "ArmCord.app"
 
   zap trash: [
-  "~/Library/Application Support/ArmCord",
-  "~/Library/Preferences/com.smartfridge.armcord.plist",
-  "~/Library/Saved Application State/com.smartfridge.armcord.savedState",
-]
+    "~/Library/Application Support/ArmCord",
+    "~/Library/Preferences/com.smartfridge.armcord.plist",
+    "~/Library/Saved Application State/com.smartfridge.armcord.savedState",
+  ]
 
+  caveats do
+    requires_rosetta
+  end
 end
