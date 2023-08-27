@@ -1,6 +1,6 @@
 cask "86box" do
-  version "3.11,4311"
-  sha256 "8e9d434c0fb460a2e6ca0b40bdbbfc5191d8827764757d19bf6a1560a58cdad7"
+  version "4.0,5000"
+  sha256 "9c345cea6e6fde62c969270c201bbf341e7b7fd3bb64b8ed5791a02dc31aabc6"
 
   url "https://github.com/86Box/86Box/releases/download/v#{version.csv.first}/86Box-macOS-x86_64+arm64-b#{version.csv.second}.zip",
       verified: "github.com/86Box/86Box/"
@@ -26,7 +26,7 @@ cask "86box" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :mojave"
 
   app "86Box.app", target: "86Box/86Box.app"
 
@@ -44,7 +44,8 @@ cask "86box" do
 
   caveats do
     <<~EOS
-      ROM files from https://github.com/86Box/roms need to be installed into
+      ROM files from https://github.com/86Box/roms need to be installed into:
+
         #{roms_dir}
     EOS
   end
