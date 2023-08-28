@@ -1,5 +1,5 @@
 cask "toontown-rewritten" do
-  version "1.2.5"
+  version "1.5.0"
   sha256 :no_check
 
   url "https://cdn.toontownrewritten.com/launcher/mac/Toontown%20Rewritten.dmg"
