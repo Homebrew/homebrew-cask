@@ -2,14 +2,14 @@ cask "ddpm" do
   version "1.1.1.0017"
   sha256 "5e135f24041fe2be875bf50cd2983c02be29cf4bca697d24a052a28d129c4e0c"
 
-  url "https://dl.dell.com/FOLDER09830957M/1/DDPMv#{version}.zip"
+  url "https://dl.dell.com/FOLDER10485258M/1/DDPMv#{version}.zip"
   name "DDPM"
   name "Dell Display and Peripheral Manager"
   desc "Monitors and peripherals manager"
   homepage "https://dell.com/"
 
   livecheck do
-    url "https://www.dell.com/support/home/en-id/drivers/driversdetails?driverid=k7kj9"
+    url "https://www.dell.com/support/home/en-us/drivers/driversdetails?driverid=63t8x"
     regex(/ddpmv(\d+(?:\.\d+)+)\.zip/i)
   end
 
