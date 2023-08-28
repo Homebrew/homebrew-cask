@@ -1,6 +1,6 @@
 cask "hubstaff" do
-  version "1.6.15,5919"
-  sha256 "5825a49397263eab16bafe9143e35b0a25532c3f3688e8331778516b12de4336"
+  version "1.6.16,6283"
+  sha256 "bd975d9fdc86923990868cb1e5a23cf34e691f56e91410fd2b2339b2e88366f4"
 
   url "https://app.hubstaff.com/download/#{version.csv.second}-standard-mac-os-x-#{version.csv.first.dots_to_hyphens}-release"
   name "Hubstaff"
