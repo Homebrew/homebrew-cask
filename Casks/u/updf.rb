@@ -4,7 +4,7 @@ cask "updf" do
 
   url "https://download.updf.com/updf/basic/mac/apple/updf-mac-full.dmg"
   name "UPDF"
-  desc "All-in-one PDF editor"
+  desc "PDF editor"
   homepage "https://updf.com/"
 
   livecheck do
