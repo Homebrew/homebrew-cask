@@ -4,7 +4,7 @@ cask "viso" do
 
   url "https://getviso.app/files/Viso.dmg"
   name "Viso"
-  desc "Beautiful minimal image viewer"
+  desc "Image viewer"
   homepage "https://getviso.app/"
 
   livecheck do
