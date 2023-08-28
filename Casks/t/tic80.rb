@@ -1,7 +1,7 @@
 cask "tic80" do
   # NOTE: "80" is not a version number, but an intrinsic part of the product name
-  version "1.1.2729"
-  sha256 "f53c64ab31cc0de21d944c2fee46bec35db37637113cd9ecc214379a74d79ef5"
+  version "1.1.2736"
+  sha256 "747a819bd7fddbbac7f3a03e579be5d4ee7af6c4d1b9e34601738cb3eda04043"
 
   url "https://github.com/nesbox/TIC-80/releases/download/v#{version}/tic80-v#{version.major_minor}-mac.dmg",
       verified: "github.com/nesbox/TIC-80/"
