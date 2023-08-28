@@ -1,6 +1,6 @@
 cask "iina-plus" do
-  version "0.7.7"
-  sha256 "0ead3017fa93132820dcb440dab6a734cbf5d574a4f545bcdcea8bf695111c02"
+  version "0.7.8"
+  sha256 "e3223a0356fc923826884a8e63189fe850fc617df311f5fec1ea3591fb98ebc0"
 
   url "https://github.com/xjbeta/iina-plus/releases/download/#{version}/IINA+.#{version}.dmg"
   name "IINA+"
