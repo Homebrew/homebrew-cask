@@ -1,14 +1,14 @@
 cask "lofi" do
-  version "2.0.0"
-  sha256 "1100407ba583c3c307843aede615844791f5584dafe4b7f202ce9c067fed3a87"
+  version "2.0.1"
+  sha256 "bbda90e7b588b7dfaaceb30751819cbc8982faa618ae0dcd0e7f8b228a2fa068"
 
-  url "https://github.com/dvx/lofi/releases/download/v#{version}/lofi-#{version}.dmg",
+  url "https://github.com/dvx/lofi/releases/download/v#{version}/lofi.dmg",
       verified: "github.com/dvx/lofi/"
   name "Lofi"
   desc "Spotify player with WebGL visualizations"
   homepage "https://www.lofi.rocks/"
 
-  app "Lofi.app"
+  app "lofi.app"
 
   zap trash: [
     "~/Library/Application Support/lofi",
