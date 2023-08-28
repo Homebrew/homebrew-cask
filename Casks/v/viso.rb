@@ -17,8 +17,6 @@ cask "viso" do
   app "Viso.app"
 
   zap trash: [
-    "/Library/Preferences/com.apple.P2PSupervisor.plist",
-    "~/Desktop/viso_appcast.xml",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.ephod.viso.sfl2",
     "~/Library/Caches/com.ephod.Viso",
     "~/Library/HTTPStorages/com.ephod.Viso",
