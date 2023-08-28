@@ -1,5 +1,5 @@
 cask "spacelauncher" do
-  version "2.0.11"
+  version "2.0.12"
   sha256 :no_check
 
   url "https://spacelauncherapp.com/download/SpaceLauncher.zip"
