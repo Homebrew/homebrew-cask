@@ -1,5 +1,5 @@
 cask "viso" do
-  version "6,8.9.1"
+  version "8.9.1"
   sha256 :no_check
 
   url "https://getviso.app/files/Viso.dmg"
@@ -9,7 +9,7 @@ cask "viso" do
 
   livecheck do
     url "https://getviso.app/files/visoappcast.xml"
-    strategy :sparkle
+    strategy :sparkle, &:version
   end
 
   auto_updates true
