@@ -13,7 +13,7 @@ cask "ddpm" do
     regex(/ddpmv(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  pkg "DDPM_Installer.pkg"
+  pkg "DDPMv#{version}/DDPM_Installer.pkg"
   binary "#{appdir}/DDPM/DDPM.app/Contents/MacOS/DDPM"
 
   uninstall pkgutil: "Qisda.pkg.DDPM",
