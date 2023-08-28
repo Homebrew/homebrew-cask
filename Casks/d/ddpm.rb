@@ -1,6 +1,6 @@
 cask "ddpm" do
-  version "1.1.1.0017"
-  sha256 "5e135f24041fe2be875bf50cd2983c02be29cf4bca697d24a052a28d129c4e0c"
+  version "1.1.1.0038"
+  sha256 "922371db71c878c1568ed92a6edeb100cc25efd37ebb5e046d8d9ed8bfdb3ed4"
 
   url "https://dl.dell.com/FOLDER10485258M/1/DDPMv#{version}.zip"
   name "DDPM"
