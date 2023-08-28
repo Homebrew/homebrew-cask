@@ -7,6 +7,7 @@ cask "battery" do
   desc "CLI for managing the battery charging status"
   homepage "https://github.com/actuallymentor/battery/"
 
+  auto_updates true
   depends_on arch: :arm64
 
   app "battery.app"
