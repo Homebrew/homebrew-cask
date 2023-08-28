@@ -13,7 +13,7 @@ cask "alex313031-thorium" do
 
   livecheck do
     strategy :git
-    regex(/^(M\d+(?:\.\d+)*)/i)
+    regex(/^(M\d+(?:\.\d+)+)/i)
   end
 
   conflicts_with cask: "thorium"
