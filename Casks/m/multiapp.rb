@@ -7,6 +7,11 @@ cask "multiapp" do
   desc "Multiplayer Collaboration"
   homepage "https://www.multi.app/"
 
+  livecheck do
+    url "https://updates.multi.app/latest"
+    strategy :header_match
+  end
+
   app "Multi.app"
 
   zap trash: [
