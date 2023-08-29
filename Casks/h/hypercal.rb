@@ -14,4 +14,15 @@ cask "hypercal" do
   end
 
   app "Hypercal.app"
+
+  zap trash: [
+    "~/Library/Application Support/hypercal",
+    "~/Library/Caches/app.hypercal.com",
+    "~/Library/Caches/app.hypercal.com.ShipIt",
+    "~/Library/HTTPStorages/app.hypercal.com",
+    "~/Library/Logs/hypercal",
+    "~/Library/Preferences/app.hypercal.com.plist",
+    "~/Library/Saved Application State/app.hypercal.com.savedState",
+    "/tmp/hypercal",
+  ]
 end
