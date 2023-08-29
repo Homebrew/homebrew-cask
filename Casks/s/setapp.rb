@@ -1,6 +1,6 @@
 cask "setapp" do
-  version "3.31.0,57,1692611868"
-  sha256 "16431aaaa1feb9c4f7f6d1c53f116f30a2b65d16790732835379ac315c6e7272"
+  version "3.31.1,58,1692991537"
+  sha256 "f76cd7e7800df54efd07a2a84752f730914a9c9a9b5ce40713cc43b236afbeeb"
 
   url "https://dl.devmate.com/com.setapp.DesktopClient/#{version.csv.second}/#{version.csv.third}/Setapp-#{version.csv.second}.zip",
       verified: "devmate.com/com.setapp.DesktopClient/"
