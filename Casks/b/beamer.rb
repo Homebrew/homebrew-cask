@@ -15,12 +15,12 @@ cask "beamer" do
   app "Beamer.app"
 
   zap trash: [
-    "~/Library/Application Support/com.tupil.beamer",
-    "~/Library/Caches/com.tupil.beamer",
-    "~/Library/HTTPStorages/com.tupil.beamer",
-    "~/Library/HTTPStorages/com.tupil.beamer.binarycookies",
+    "~/Library/Application Support/Beamer",
+    "~/Library/Caches/com.softorino.beamer",
+    "~/Library/HTTPStorages/com.softorino.beamer",
     "~/Library/Logs/Beamer",
-    "~/Library/Preferences/com.tupil.beamer.plist",
-    "~/Library/Saved Application State/com.tupil.beamer.savedState",
+    "~/Library/Preferences/com.softorino.beamer.plist",
+    "~/Library/Saved Application State/com.softorino.beamer.savedState",
+    "/Users/Shared/Beamer"
   ]
 end
