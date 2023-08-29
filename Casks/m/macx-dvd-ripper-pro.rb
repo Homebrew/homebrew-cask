@@ -1,5 +1,5 @@
 cask "macx-dvd-ripper-pro" do
-  version "6.8.0"
+  version "6.8.1"
   sha256 :no_check
 
   url "https://www.macxdvd.com/download/macx-dvd-ripper-pro.dmg"
