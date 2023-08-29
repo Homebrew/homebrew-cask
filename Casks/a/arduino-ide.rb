@@ -1,9 +1,9 @@
 cask "arduino-ide" do
   arch arm: "ARM64", intel: "64bit"
 
-  version "2.1.1"
-  sha256 arm:   "786d18416e80105c42105a1c2126c1a985d4ed6d3b34965fa85396f8466764c4",
-         intel: "8b50e791ea6b6b9dca2501d6fbcb98d0e30ace934c8b278cfca53b43f90f1bcc"
+  version "2.2.0"
+  sha256 arm:   "c5b556d94630c65d68ce6c7f6bc9d51a6ae9cb338b93360ce8aed9a58dec7b84",
+         intel: "1b37489ac9408006a7617b49906a4ad0ee4a19ce8770bb72312ff1b148a6f2f5"
 
   url "https://github.com/arduino/arduino-ide/releases/download/#{version}/arduino-ide_#{version}_macOS_#{arch}.dmg",
       verified: "github.com/arduino/arduino-ide/"
