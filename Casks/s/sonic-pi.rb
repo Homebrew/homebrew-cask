@@ -1,6 +1,6 @@
 cask "sonic-pi" do
   arch arm: "arm64", intel: "x64"
-  
+
   on_mojave :or_older do
     version "3.3.1"
     sha256 "0bfd12f930311e8ef1c7306dc9c012cfcc1f8e50710fd26a8c18ba003573a506"
