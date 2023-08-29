@@ -8,8 +8,8 @@ cask "qbittorrent" do
     end
   end
   on_mojave :or_newer do
-    version "4.5.4"
-    sha256 "86f6b73da30ab14e7f7e7ac829b1bbf67469340ecd099a527a3661b8e5da82b0"
+    version "4.5.5"
+    sha256 "1a08d2ce293c85de2db937115ca949c576cc28bbbb1781ef2c624a1bf2c2fc79"
 
     livecheck do
       url "https://sourceforge.net/projects/qbittorrent/rss?path=/qbittorrent-mac"
