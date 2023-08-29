@@ -11,8 +11,8 @@ cask "anka-build-cloud-controller-and-registry" do
   homepage "https://veertu.com/"
 
   livecheck do
-    url "https://veertu.com/downloads/anka-build-cloud-controller-registry-darwin-amd64-latest"
-    regex(/AnkaControllerRegistryAmd64[._-]?v?(\d+(?:\.\d+)*[._-]\h+)\.pkg/i)
+    url "https://veertu.com/downloads/anka-build-cloud-controller-registry-darwin-#{arch.downcase}-latest"
+    regex(/AnkaControllerRegistry#{arch}[._-]?v?(\d+(?:\.\d+)*[._-]\h+)\.pkg/i)
     strategy :header_match
   end
 
