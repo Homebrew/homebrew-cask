@@ -8,7 +8,7 @@ cask "simple-web-server" do
   url "https://github.com/terreng/simple-web-server/releases/download/v#{version}/Simple-Web-Server-#{version}#{arch}.dmg",
       verified: "github.com/terreng/simple-web-server/"
   name "Simple Web Server"
-  desc "Simple web servers with an easy to use interface"
+  desc "Create local web servers"
   homepage "https://simplewebserver.org/"
 
   app "Simple Web Server.app"
