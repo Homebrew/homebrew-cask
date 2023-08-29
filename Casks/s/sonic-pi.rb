@@ -25,7 +25,7 @@ cask "sonic-pi" do
     version "4.4.0"
     sha256 "7ed0e94cf92fdf2e8d51ee42c5f7c3478fbcef9630eb12dccf203f5e72bb517f"
 
-    url "https://sonic-pi.net/files/releases/v#{version}/Sonic-Pi-for-Mac-x64-v#{version.dots_to_hyphens}.dmg"
+    url "https://sonic-pi.net/files/releases/v#{version}/Sonic-Pi-for-Intel-Mac-x64-v#{version.dots_to_hyphens}.dmg"
 
     livecheck do
       skip "Legacy version"
@@ -35,7 +35,7 @@ cask "sonic-pi" do
     version "4.4.0"
     sha256 "7ed0e94cf92fdf2e8d51ee42c5f7c3478fbcef9630eb12dccf203f5e72bb517f"
 
-    url "https://sonic-pi.net/files/releases/v#{version}/Sonic-Pi-for-Mac-x64-v#{version.dots_to_hyphens}.dmg"
+    url "https://sonic-pi.net/files/releases/v#{version}/Sonic-Pi-for-Intel-Mac-x64-v#{version.dots_to_hyphens}.dmg"
 
     livecheck do
       skip "Legacy version"
