@@ -1,6 +1,6 @@
 cask "hdfview" do
-  version "3.3.0"
-  sha256 "be4cfcfa2c4a4be4841b660a6010b55d94430e77469ca5dc5f2d684e4737ed23"
+  version "3.3.1"
+  sha256 "91ee9832cd8a82e6d127faf5dc1b156523ecf995a552e08a07ebe37c45bf17da"
 
   url "https://support.hdfgroup.org/ftp/HDF5/releases/HDF-JAVA/hdfview-#{version}/bin/HDFView-#{version}-macos11_64.tar.gz"
   name "HDFView"
