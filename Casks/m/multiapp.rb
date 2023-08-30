@@ -8,8 +8,8 @@ cask "multiapp" do
   homepage "https://www.multi.app/"
 
   livecheck do
-    url "https://updates.multi.app/latest"
-    strategy :header_match
+    url "https://updates.multi.app/installers/appcast.xml"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates
