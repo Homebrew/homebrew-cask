@@ -14,12 +14,13 @@ cask "beamer" do
 
   app "Beamer.app"
 
-  zap trash: [
-    "~/Library/Application Support/Beamer",
-    "~/Library/Caches/com.softorino.beamer",
-    "~/Library/HTTPStorages/com.softorino.beamer",
-    "~/Library/Logs/Beamer",
-    "~/Library/Preferences/com.softorino.beamer.plist",
-    "~/Library/Saved Application State/com.softorino.beamer.savedState",
-  ]
+  zap rmdir: "/Users/Shared/Beamer",
+      trash: [
+        "~/Library/Application Support/Beamer",
+        "~/Library/Caches/com.softorino.beamer",
+        "~/Library/HTTPStorages/com.softorino.beamer",
+        "~/Library/Logs/Beamer",
+        "~/Library/Preferences/com.softorino.beamer.plist",
+        "~/Library/Saved Application State/com.softorino.beamer.savedState",
+      ]
 end
