@@ -1,9 +1,9 @@
 cask "unity" do
   arch arm: "Arm64"
 
-  version "2023.1.10f1,661833f8c66c"
-  sha256 arm:   "63e3819180ceced1290f4e4a4b5b2db4ae7fdcf6b30b70a60db3422627843fdd",
-         intel: "ec654ae3b8658414afec18e1ea81523c7a598b0ade459f6d58c7aff335897b45"
+  version "2023.1.11f1,fbf46ad88f3d"
+  sha256 arm:   "d4b27b4153bf199d39be242512c235ac10357340fb289a8fa4026d86f8f631e9",
+         intel: "46d550be1be79cd4bb01284a1949f2d8fcc12c751c31d0ef8b988971d84107b8"
 
   url "https://download.unity3d.com/download_unity/#{version.csv.second}/MacEditorInstaller#{arch}/Unity-#{version.csv.first}.pkg",
       verified: "download.unity3d.com/download_unity/"
