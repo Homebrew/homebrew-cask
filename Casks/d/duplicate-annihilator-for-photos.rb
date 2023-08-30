@@ -1,5 +1,5 @@
 cask "duplicate-annihilator-for-photos" do
-  version "9.0.1"
+  version "9.1.0,1"
   sha256 :no_check
 
   url "https://brattoo.com/propaganda/downloadDap.php"
