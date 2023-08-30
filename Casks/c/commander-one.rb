@@ -1,5 +1,5 @@
 cask "commander-one" do
-  version "3.5.2"
+  version "3.6"
   sha256 :no_check
 
   url "https://cdn.electronic.us/products/commander/mac/download/commander.dmg",
@@ -13,7 +13,7 @@ cask "commander-one" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "Commander One.app"
 
