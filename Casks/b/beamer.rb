@@ -21,6 +21,5 @@ cask "beamer" do
     "~/Library/Logs/Beamer",
     "~/Library/Preferences/com.softorino.beamer.plist",
     "~/Library/Saved Application State/com.softorino.beamer.savedState",
-    "/Users/Shared/Beamer"
   ]
 end
