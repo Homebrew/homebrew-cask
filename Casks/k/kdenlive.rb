@@ -1,6 +1,6 @@
 cask "kdenlive" do
-  version "23.04.3"
-  sha256 "aa9947dd41529c4e541e5ed429adca5dfff45d9fa359a5418d44db0a8a92510d"
+  version "23.08.0"
+  sha256 "0439dc21c8e26e35c1af8f4744234bca60d38e709de251f84a46ca2e78a2a0d1"
 
   url "https://cdn.download.kde.org/stable/kdenlive/#{version.major_minor}/macOS/kdenlive-#{version}.dmg",
       verified: "cdn.download.kde.org/stable/kdenlive/"
