@@ -13,6 +13,7 @@ cask "multiapp" do
   end
 
   auto_updates
+  depends_on macos: ">= :big_sur"
 
   app "Multi.app"
 
