@@ -12,6 +12,8 @@ cask "multiapp" do
     strategy :header_match
   end
 
+  auto_updates
+
   app "Multi.app"
 
   zap trash: [
