@@ -2,15 +2,13 @@ cask "clone-hero" do
   version "1.0.0.4080"
   sha256 "7b7d170b344773ce8355a0c3274e4adc1715e7cd978e210d3c701af22df00d5c"
 
-  url "https://pubdl.clonehero.net/clonehero-v#{version}-final/clonehero-mac-universal.dmg"
+  url "https://github.com/clonehero-game/releases/releases/download/V#{version}/CloneHero-mac.dmg",
+      verified: "github.com/clonehero-game/"
   name "Clone Hero"
   desc "Guitar Hero clone"
   homepage "https://clonehero.net/"
 
-  livecheck do
-    url :homepage
-    regex(%r{href=["']?/releases/v?(\d+(?:\.\d+)+)["' >]}i)
-  end
+  depends_on macos: ">= :high_sierra"
 
   app "Clone Hero.app"
 
