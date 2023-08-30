@@ -1,6 +1,6 @@
 cask "whatsapp" do
-  version "2.23.17.79"
-  sha256 "9f19eba79472e0ec43b5c60a624ed0e54860ab94e9becfc87956d06d57807df7"
+  version "2.23.17.80"
+  sha256 "addb2226292a89acd18d22c84ad97fa8a351d27383a41b485a3b935ad4834d79"
 
   url "https://web.whatsapp.com/desktop/mac_native/release/?version=#{version}&extension=zip&configuration=Release&branch=relbranch"
   name "WhatsApp"
@@ -8,7 +8,7 @@ cask "whatsapp" do
   homepage "https://www.whatsapp.com/"
 
   livecheck do
-    url "https://web.whatsapp.com/desktop/mac_native/updates/?configuration=Release&branch=relbranch"
+    url "https://web.whatsapp.com/desktop/mac_native/updates/?branch=relbranch&configuration=Release"
     regex(/version=v?(\d+(?:\.\d+)+)/i)
     strategy :sparkle do |item, regex|
       item.url.scan(regex).map(&:first)
@@ -16,10 +16,7 @@ cask "whatsapp" do
   end
 
   auto_updates true
-  conflicts_with cask: [
-    "homebrew/cask-versions/whatsapp-alpha",
-    "homebrew/cask-versions/whatsapp-beta",
-  ]
+  conflicts_with cask: "homebrew/cask-versions/whatsapp-beta"
   depends_on macos: ">= :big_sur"
 
   app "WhatsApp.app"
