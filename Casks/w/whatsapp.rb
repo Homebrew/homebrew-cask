@@ -8,7 +8,7 @@ cask "whatsapp" do
   homepage "https://www.whatsapp.com/"
 
   livecheck do
-    url "https://web.whatsapp.com/desktop/mac_native/updates/?configuration=Release&branch=relbranch"
+    url "https://web.whatsapp.com/desktop/mac_native/updates/?branch=relbranch&configuration=Release"
     regex(/version=v?(\d+(?:\.\d+)+)/i)
     strategy :sparkle do |item, regex|
       item.url.scan(regex).map(&:first)
@@ -16,10 +16,7 @@ cask "whatsapp" do
   end
 
   auto_updates true
-  conflicts_with cask: [
-    "homebrew/cask-versions/whatsapp-alpha",
-    "homebrew/cask-versions/whatsapp-beta",
-  ]
+  conflicts_with cask: "homebrew/cask-versions/whatsapp-beta"
   depends_on macos: ">= :big_sur"
 
   app "WhatsApp.app"
