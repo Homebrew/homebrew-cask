@@ -35,7 +35,7 @@ cask "podolski" do
     "~/Library/Application Support/u-he/com.u-he.Podolski.midiassign.txt",
     "~/Library/Application Support/u-he/com.u-he.Podolski.Preferences.txt",
   ]
-  
+
   caveats do
     reboot
   end
