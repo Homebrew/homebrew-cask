@@ -10,8 +10,6 @@ cask "saoimageds9" do
     url "https://ds9.si.edu/download/macosbigsurx86/SAOImageDS9%20#{version}.dmg",
         verified: "ds9.si.edu/download/",
         using:    :homebrew_curl
-
-    depends_on macos: :big_sur
   end
   on_monterey do
     sha256 arm:   "309367b8cfc45eeb481e1cddbb03c3bb615d17eca83fb6c215755bef1e2a9205",
@@ -19,8 +17,6 @@ cask "saoimageds9" do
 
     url "https://ds9.si.edu/download/macosmonterey#{arch}/SAOImageDS9%20#{version}.dmg",
         verified: "ds9.si.edu/download/"
-
-    depends_on macos: :monterey
   end
   on_ventura :or_newer do
     sha256 arm:   "a9c21eb7d05840723849b6a95cc3195cc16b2f43209f037ccc2ca598bee52a05",
@@ -28,8 +24,6 @@ cask "saoimageds9" do
 
     url "https://ds9.si.edu/download/macosventura#{arch}/SAOImageDS9%20#{version}.dmg",
         verified: "ds9.si.edu/download/"
-
-    depends_on macos: "<= :ventura"
   end
 
   name "SAOImage DS9"
