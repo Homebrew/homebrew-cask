@@ -1,17 +1,23 @@
 cask "accurics" do
-  version "1.0.48"
-  sha256 "42faba775fa215ce0a55a297f08cd36d8a051e81484bed5e2d8c1e20ea36c195"
+  arch arm: "arm64", intel: "x86_64"
 
-  url "https://downloads.accurics.com/cli/#{version}/accurics-cli.dmg",
-      user_agent: :fake,
-      verified:   "downloads.accurics.com/"
+  version "1.0.49"
+  sha256 arm:   "e1a02fa396c3381d1f4b5fddb3201d33665d92105761efb5e8a32a375ee1a4f6",
+         intel: "4cfe4ca227a766e038c2e37f28edf778f419826846e823e9e703723a6a8cec74"
+
+  url "https://www.tenable.com/downloads/api/v2/pages/cloud-security/files/accurics-cli_#{version}_macos_#{arch}.dmg"
   name "Accurics CLI"
   desc "Security and compliance for Infrastructure as Code"
-  homepage "https://www.tenable.com/accurics"
+  homepage "https://www.tenable.com/products/tenable-cs"
 
   livecheck do
-    url "https://downloads.accurics.com/cli/latest/accurics-cli.yml"
-    strategy :electron_builder
+    url "https://www.tenable.com/downloads/api/v2/pages/cloud-security"
+    regex(/Accurics v(\d+(?:\.\d+)+)/i)
+    strategy :json do |json|
+      json["releases"]["latest"].keys.map do |item|
+        item.match(regex) { |match| match[1] }
+      end
+    end
   end
 
   binary "accurics"
