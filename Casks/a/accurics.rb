@@ -12,7 +12,7 @@ cask "accurics" do
 
   livecheck do
     url "https://www.tenable.com/downloads/api/v2/pages/cloud-security"
-    regex(/accurics[._-]cli[._-]v?(\d+(?:\.\d+)+)[._-]macos[._-]#{arch}.dmg/i)
+    regex(/Accurics\sv?(\d+(?:\.\d+)+)/i)
     strategy :json do |json|
       json["releases"]["latest"].keys.map do |item|
         item.match(regex) { |match| match[1] }
