@@ -12,7 +12,7 @@ cask "multiapp" do
     strategy :sparkle, &:short_version
   end
 
-  auto_updates
+  auto_updates true
   depends_on macos: ">= :big_sur"
 
   app "Multi.app"
