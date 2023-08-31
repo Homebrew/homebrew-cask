@@ -2,8 +2,8 @@ cask "podolski" do
   version "1.2.3,12092"
   sha256 "79bb539a83fd7b98d5955f7b960799d8ec3106b62812037189df8bf4093eb228"
 
-  url "https://uhedownloads-heckmannaudiogmb.netdna-ssl.com/releases/Podolski_#{version.csv.first.no_dots}_#{version.csv.second}_Mac.zip",
-      verified: "uhedownloads-heckmannaudiogmb.netdna-ssl.com/"
+  url "https://dl.u-he.com/releases/Podolski_#{version.csv.first.no_dots}_#{version.csv.second}_Mac.zip",
+      verified: "u-he.com/"
   name "Podolski"
   desc "Virtual analogue synthesizer"
   homepage "https://u-he.com/products/podolski/"
