@@ -16,7 +16,10 @@ cask "whatsapp" do
   end
 
   auto_updates true
-  conflicts_with cask: "homebrew/cask-versions/whatsapp-beta"
+  conflicts_with cask: [
+    "homebrew/cask-versions/whatsapp-beta",
+    "homebrew/cask-versions/whatsapp-legacy",
+  ]
   depends_on macos: ">= :big_sur"
 
   app "WhatsApp.app"
