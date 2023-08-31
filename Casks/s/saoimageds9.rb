@@ -2,52 +2,28 @@ cask "saoimageds9" do
   arch arm: "arm64", intel: "x86"
 
   # NOTE: "9" is not a version number, but an intrinsic part of the product name
-  version "8.4.1"
+  version "8.5"
 
-  on_mojave :or_older do
-    sha256 "bfe57aa62f1c36ec6ba00e6423bf84b2ce1b34d1af60dffc3adc141caa67d878"
-
-    url "https://ds9.si.edu/download/macosmojave/SAOImageDS9%20#{version}.dmg",
-        verified: "ds9.si.edu/download/",
-        using:    :homebrew_curl
-
-    depends_on macos: :mojave
-  end
-  on_catalina do
-    sha256 "a076aa60f206297ea8f926ba7b267b368ff9e1f0b50f1c7543aa021fc9bfad17"
-
-    url "https://ds9.si.edu/download/macoscatalina/SAOImageDS9%20#{version}.dmg",
-        verified: "ds9.si.edu/download/",
-        using:    :homebrew_curl
-
-    depends_on macos: :catalina
-  end
   on_big_sur do
-    sha256 "b48565cdaadca1c1363173fac685cd75a68351c914792b2f43c6cb66b3316eed"
+    sha256 "46917bdab7fd22cb4cfd85145e9813c59e03dc1468f961172ad5ca396616fbb4"
 
     url "https://ds9.si.edu/download/macosbigsurx86/SAOImageDS9%20#{version}.dmg",
         verified: "ds9.si.edu/download/",
         using:    :homebrew_curl
-
-    depends_on macos: :big_sur
   end
   on_monterey do
-    sha256 arm:   "bbee664d4b4c3abab017c7971b92c13071161aa30fff95d2dfa9b1c1f4691a67",
-           intel: "32ad574b38e589417cfec7ca34aba52a126d71efd512bcb5145c268aaaa2e4b6"
+    sha256 arm:   "309367b8cfc45eeb481e1cddbb03c3bb615d17eca83fb6c215755bef1e2a9205",
+           intel: "473bf1c8421f1120bfa39543a469b91f95ae7509807f911ee44f5e69868424ec"
 
     url "https://ds9.si.edu/download/macosmonterey#{arch}/SAOImageDS9%20#{version}.dmg",
         verified: "ds9.si.edu/download/"
-
-    depends_on macos: :monterey
   end
   on_ventura :or_newer do
-    sha256 arm:   "ce0a3d3215f21f6203637bf903aac992f44aadd53891e2d067ea102f5b26e5d5",
-           intel: "c340891711358110368cb369468c39de925f5e827309786220d84b0ca4595650"
+    sha256 arm:   "a9c21eb7d05840723849b6a95cc3195cc16b2f43209f037ccc2ca598bee52a05",
+           intel: "750810c657fcd8e6ef917b189415a940c6ef8d4c46aafe460f48f3ba3f691389"
 
     url "https://ds9.si.edu/download/macosventura#{arch}/SAOImageDS9%20#{version}.dmg",
         verified: "ds9.si.edu/download/"
-
-    depends_on macos: "<= :ventura"
   end
 
   name "SAOImage DS9"
@@ -58,6 +34,8 @@ cask "saoimageds9" do
     url "https://sites.google.com/cfa.harvard.edu/saoimageds9/download"
     regex(/href=.*?SAOImageDS9%20v?(\d+(?:\.\d+)+)\.dmg/i)
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "SAOImageDS9.app"
 
