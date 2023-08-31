@@ -2,7 +2,7 @@ cask "saoimageds9" do
   arch arm: "arm64", intel: "x86"
 
   # NOTE: "9" is not a version number, but an intrinsic part of the product name
-  version "8.4.1"
+  version "8.5"
 
   on_mojave :or_older do
     sha256 "bfe57aa62f1c36ec6ba00e6423bf84b2ce1b34d1af60dffc3adc141caa67d878"
@@ -41,8 +41,8 @@ cask "saoimageds9" do
     depends_on macos: :monterey
   end
   on_ventura :or_newer do
-    sha256 arm:   "ce0a3d3215f21f6203637bf903aac992f44aadd53891e2d067ea102f5b26e5d5",
-           intel: "c340891711358110368cb369468c39de925f5e827309786220d84b0ca4595650"
+    sha256 arm:   "a9c21eb7d05840723849b6a95cc3195cc16b2f43209f037ccc2ca598bee52a05",
+           intel: "750810c657fcd8e6ef917b189415a940c6ef8d4c46aafe460f48f3ba3f691389"
 
     url "https://ds9.si.edu/download/macosventura#{arch}/SAOImageDS9%20#{version}.dmg",
         verified: "ds9.si.edu/download/"
