@@ -1,6 +1,6 @@
 cask "podolski" do
   version "1.2.3,12092"
-  sha256 "79bb539a83fd7b98d5955f7b960799d8ec3106b62812037189df8bf4093eb228"
+  sha256 "1051d7d3af520ff8131ceae85f39ae61f90a187b9dafe7afe8d2cf28cdec868a"
 
   url "https://dl.u-he.com/releases/Podolski_#{version.csv.first.no_dots}_#{version.csv.second}_Mac.zip",
       verified: "u-he.com/"
