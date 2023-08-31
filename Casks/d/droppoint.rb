@@ -23,6 +23,6 @@ cask "droppoint" do
   zap trash: [
     "~A/Library/Application Support/DropPoint",
     "~/Library/Saved Application State/com.gamegods3.droppoint.savedState",
-    "~/Library/Preferences/com.gamegods3.droppoint.plist"
+    "~/Library/Preferences/com.gamegods3.droppoint.plist",
   ]
 end
