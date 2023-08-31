@@ -1,15 +1,16 @@
 cask "openframeworks" do
-  version "0.11.2"
-  sha256 "cd618d058c1fe4ef90bfd42fe1149e1ecfd0504881c031e46e8e1298be96f6d7"
+  version "0.12.0"
+  sha256 "c676540bb6051c4f15cd2a32d0b770ff274873df93e00fe7d40c10f218077a4a"
 
-  url "https://openframeworks.cc/versions/v#{version}/of_v#{version}_osx_release.zip"
+  url "https://github.com/openframeworks/openFrameworks/releases/download/#{version}/of_v#{version}_osx_release.zip",
+      verified: "github.com/openframeworks/openFrameworks/"
   name "Openframeworks"
   desc "C++ toolkit for creative coding"
   homepage "https://openframeworks.cc/"
 
   livecheck do
-    url "https://github.com/openframeworks/openFrameworks"
-    regex(/v?(\d+(?:\.\d+)+)/i)
+    url :url
+    strategy :github_latest
   end
 
   suite "of_v#{version}_osx_release"
