@@ -11,8 +11,8 @@ cask "duet" do
     end
   end
   on_monterey :or_newer do
-    version "3.8.0.0"
-    sha256 "8b07ebfffd44059365a02b70ea835bb6bc1c84847b1d749c41bdf3c45e6039db"
+    version "3.9.0.0"
+    sha256 "ae20345e3b14786c10b84cce0b3b9d41043e4606fd24e9836338fb432b942f91"
 
     livecheck do
       url "https://updates.duetdisplay.com/AppleSilicon"
