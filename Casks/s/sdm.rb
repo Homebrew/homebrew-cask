@@ -1,14 +1,14 @@
 cask "sdm" do
-  version "15.58.0,9CEBD65A85DBAD91F1D6296C4122894DC7A91E0D"
-  sha256 "27767acb103a90170d8c0b0102f6936e82dde5ba83835ad3b9037ce888b4c937"
+  version "20.67.0,25CD2145AECBEAD9F2A128819B43CD1D1585AC87"
+  sha256 "66805f4163ee014dd981503cc166d571aaf34d5422d01dde129f532665fe1420"
 
-  url "https://downloads.strongdm.com/builds/sdm-gui/#{version.csv.first}/darwin/universal/#{version.csv.second}/SDM-#{version.csv.first}.universal.zip"
+  url "https://downloads.strongdm.com/builds/desktop/#{version.csv.first}/darwin/universal/#{version.csv.second}/SDM-#{version.csv.first}.universal.zip"
   name "sdm"
-  desc "Strongdm client"
+  desc "StrongDM client"
   homepage "https://www.strongdm.com/"
 
   livecheck do
-    url "https://app.strongdm.com/releases/client/darwin/0.0.0"
+    url "https://app.strongdm.com/releases/desktop/darwin/0.0.0"
     regex(%r{https:.*?/(\h+)/SDM[._-]v?(\d+(?:\.\d+)+)\.universal\.zip}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
