@@ -1,6 +1,6 @@
 cask "qfinder-pro" do
-  version "7.9.0.0627"
-  sha256 "f797cf19e0c273c6ec009ec72b12fe3f1aea44f3675f4d2608a4ef9f09194045"
+  version "7.9.1.0817"
+  sha256 "8745c9c13879e2be0a18f38b734d81b64d82fac6323644d7fa40c2a3c82c62bb"
 
   url "https://download.qnap.com/Storage/Utility/QNAPQfinderProMac-#{version}.dmg"
   name "Qnap Qfinder Pro"
