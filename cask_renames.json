@@ -1,7 +1,7 @@
 {
   "ankerslicer": "ankermake",
   "cloudapp": "zight",
+  "mouse-fix": "mac-mouse-fix",
   "remotion": "multiapp",
-  "sublime-text3": "sublime-text",
-  "mouse-fix": "mac-mouse-fix"
+  "sublime-text3": "sublime-text"
 }
