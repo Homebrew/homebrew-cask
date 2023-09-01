@@ -1,5 +1,5 @@
 cask "zight" do
-  version "6.7.1,2511"
+  version "6.7.2,2560"
   sha256 :no_check
 
   url "https://d2plwz9jdz9z5d.cloudfront.net/mac/latest/Zight.zip",
