@@ -13,4 +13,10 @@ cask "rippling" do
   end
 
   app "Rippling.app"
+
+  zap trash: [
+    "~/Library/Application Support/Rippling",
+    "~/Library/Preferences/com.rippling.client.plist",
+    "~/Library/Saved Application State/com.rippling.client.savedState",
+  ]
 end
