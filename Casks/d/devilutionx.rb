@@ -1,6 +1,6 @@
 cask "devilutionx" do
-  version "1.5.0"
-  sha256 "f01395922450a6af4ae257bb61a1f0b0e72a34267b07a42143d2c348484c10d8"
+  version "1.5.1"
+  sha256 "dbff0787da57ed05da4830ad26f2a09aaf88b99c349003abd72a43fb8b7dd552"
 
   url "https://github.com/diasurgical/devilutionX/releases/download/#{version}/devilutionx-macos-x86_64.dmg"
   name "DevilutionX"
