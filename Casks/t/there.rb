@@ -8,6 +8,11 @@ cask "there" do
   desc "Tool to display the local times of people in a team"
   homepage "https://there.pm/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "There.app"
 
   uninstall signal: ["TERM", "pm.there.desktop"]
