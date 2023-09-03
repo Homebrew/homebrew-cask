@@ -18,7 +18,7 @@ cask "elektron-overbridge" do
 
   depends_on macos: ">= :sierra"
 
-  pkg "Elektron Overbridge Installer #{version}.pkg"
+  pkg "Elektron Overbridge Installer #{version.csv.first}.pkg"
 
   uninstall quit:      "se.elektron.OverbridgeEngine",
             pkgutil:   "se.elektron.overbridge.*",
@@ -27,4 +27,10 @@ cask "elektron-overbridge" do
               "asp.se.elektron.overbridge.coreaudio2",
             ],
             delete:    "/Applications/Elektron"
+
+  zap trash: [
+    "~/Library/Application Support/Elektron Overbridge",
+    "~/Library/Logs/Elektron Overbridge",
+    "~/Library/Preferences/se.elektron.OverbridgeEngine.plist",
+  ]
 end
