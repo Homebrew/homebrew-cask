@@ -11,6 +11,11 @@ cask "superproductivity" do
   desc "To-do list and time tracker"
   homepage "https://super-productivity.com/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "superProductivity.app"
 
   zap trash: [
