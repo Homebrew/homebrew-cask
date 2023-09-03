@@ -1,8 +1,8 @@
 cask "omegat" do
-  version "4.3.3"
-  sha256 "7ed557bcd88972be1761bcd96b6f575b54f1eafd93b25b1440a5b3eda845fad8"
+  version "6.0.0"
+  sha256 "97bfd2b57bfd953d74bae303f9a13b015873d6c40d1131320de9cd6f3a1b9d8a"
 
-  url "https://downloads.sourceforge.net/omegat/OmegaT%20-%20Standard/OmegaT%20#{version.major_minor_patch}/OmegaT_#{version}_Mac_Notarized.zip",
+  url "https://downloads.sourceforge.net/omegat/OmegaT%20-%20Standard/OmegaT%20#{version.major_minor_patch}/OmegaT_#{version}_Mac.zip",
       verified: "downloads.sourceforge.net/omegat/"
   name "OmegaT"
   desc "Translation memory tool"
