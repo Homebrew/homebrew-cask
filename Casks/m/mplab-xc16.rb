@@ -1,6 +1,6 @@
 cask "mplab-xc16" do
-  version "2.09"
-  sha256 "508a659eae771f59082167f1661c173d3db2cbfab371a2883f21b671f8801872"
+  version "2.10"
+  sha256 "db0ac553fbe9a6e903113cafff1f343a692728aa839c28a7bff36a9b6a12de55"
 
   url "https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/SoftwareTools/xc16-v#{version}-full-install-osx64-installer.dmg"
   name "MPLab XC16 Compiler"
