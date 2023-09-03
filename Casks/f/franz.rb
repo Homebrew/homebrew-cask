@@ -1,9 +1,9 @@
 cask "franz" do
   arch arm: "-arm64"
 
-  version "5.9.2"
-  sha256 arm:   "700342d6d3a6b532e5e7a3767c8b97d9bcfc9eb0959098f02d3b13462fdcfb7d",
-         intel: "9b6907c132624c645e9d39bc9822a239b0e3a7507d40bcc97bf2be6ca3fc171f"
+  version "5.10.0"
+  sha256 arm:   "97fac95cdc2c4080c6f9a0659befae61e63c6f2332aa8aa2b75dcc07d4d00a82",
+         intel: "dc7bef96dabd0b86199430cd7699b17dae6cbc6eae5f6962b14d93381d0df853"
 
   url "https://github.com/meetfranz/franz/releases/download/v#{version}/franz-#{version}#{arch}.dmg",
       verified: "github.com/meetfranz/franz/"
