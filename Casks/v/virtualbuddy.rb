@@ -11,6 +11,7 @@ cask "virtualbuddy" do
     skip "No reliable way to get version info"
   end
 
+  conflicts_with cask: "homebrew/cask-versions/virtualbuddy-beta"
   depends_on arch: :arm64
   depends_on macos: ">= :monterey"
 
