@@ -12,7 +12,7 @@ cask "electrocrud" do
     strategy :github_latest
   end
 
-  app "Electro CRUD.app"
+  app "electrocrud.app"
 
   zap trash: [
     "~/Library/Application Support/ElectroCRUD",
