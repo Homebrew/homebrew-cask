@@ -1,6 +1,6 @@
 cask "citra" do
-  version "1.0"
-  sha256 "0eb056c9eff5cfcfa883b2bb72bedec819772b4cdbbd00ffa804fd40e9444021"
+  version "2.0"
+  sha256 "ecfdcfb89b8c961fe1b68313121d2af37370b43af38e9bcd16cccc162ab121ec"
 
   url "https://github.com/citra-emu/citra-web/releases/download/#{version}/citra-setup-mac.dmg",
       verified: "github.com/citra-emu/citra-web/"
