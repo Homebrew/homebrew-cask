@@ -1,8 +1,8 @@
 cask "nordlocker" do
-  version "4.8.0"
-  sha256 "e30fcad2712abafc3eb8a8b607d638cc4a0b755b8702fe53b42d3582611a1bf2"
+  version "4.10.0"
+  sha256 :no_check
 
-  url "https://downloads.nordcdn.com/apps/macos/generic/NordLocker/#{version}/NordLocker.pkg",
+  url "https://downloads.nordcdn.com/apps/macos/generic/NordLocker/latest11plus/latest/NordLocker.pkg",
       verified: "downloads.nordcdn.com/apps/macos/generic/NordLocker/"
   name "NordLocker"
   desc "Store and sync files securely"
@@ -14,7 +14,7 @@ cask "nordlocker" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :big_sur"
 
   pkg "NordLocker.pkg"
 
