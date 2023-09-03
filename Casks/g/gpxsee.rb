@@ -8,6 +8,11 @@ cask "gpxsee" do
   desc "GPS log file viewer and analyzer"
   homepage "https://www.gpxsee.org/"
 
+  livecheck do
+    url "https://sourceforge.net/projects/gpxsee/rss?path=/Mac%20OS%20X"
+    regex(%r{url=.*?/GPXSee[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+  end
+
   app "GPXSee.app"
 
   zap trash: [
