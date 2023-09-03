@@ -1,8 +1,8 @@
 cask "freesurfer" do
-  version "7.4.0"
-  sha256 "b62602302ca595c9a5e48e4567084dd25ab138f4e27574802178c87ac431915f"
+  version "7.4.1"
+  sha256 "9089c369a16556f9edf2cb6f7cddd4cb1e4ce7fadea12c919727aa34347c4032"
 
-  url "https://surfer.nmr.mgh.harvard.edu/pub/dist/freesurfer/#{version}/freesurfer-darwin-macOS-#{version}.tar.gz"
+  url "https://surfer.nmr.mgh.harvard.edu/pub/dist/freesurfer/#{version}/freesurfer-macOS-darwin_x86_64-#{version}.tar.gz"
   name "FreeSurfer"
   desc "Software suite for processing and analyzing brain MRI images"
   homepage "https://surfer.nmr.mgh.harvard.edu/"
