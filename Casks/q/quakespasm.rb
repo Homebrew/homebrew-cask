@@ -6,7 +6,7 @@ cask "quakespasm" do
       verified: "downloads.sourceforge.net/quakespasm/"
   name "QuakeSpasm"
   desc "Engine for iD software's Quake"
-  homepage "https://quakespasm.sourceforge.io/"
+  homepage "https://quakespasm.sourceforge.net//"
 
   suite "QuakeSpasm"
 
