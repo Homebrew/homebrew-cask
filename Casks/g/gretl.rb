@@ -6,7 +6,7 @@ cask "gretl" do
       verified: "downloads.sourceforge.net/gretl/"
   name "gretl"
   desc "Software package for econometric analysis"
-  homepage "https://gretl.sourceforge.io/"
+  homepage "https://gretl.sourceforge.net//"
 
   livecheck do
     url "https://gretl.sourceforge.net/osx.html"
