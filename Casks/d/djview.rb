@@ -6,7 +6,7 @@ cask "djview" do
       verified: "downloads.sourceforge.net/djvu/"
   name "DjView"
   desc "DjVu viewer and browser plugin"
-  homepage "https://djvu.sourceforge.io/"
+  homepage "https://djvu.sourceforge.net//"
 
   livecheck do
     url "https://sourceforge.net/projects/djvu/rss?path=/DjVuLibre_MacOS"
