@@ -12,6 +12,11 @@ cask "pulsar" do
   desc "Text editor"
   homepage "https://pulsar-edit.dev/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Pulsar.app"
   binary "#{appdir}/Pulsar.app/Contents/Resources/app/ppm/bin/apm", target: "ppm"
   binary "#{appdir}/Pulsar.app/Contents/Resources/pulsar.sh", target: "pulsar"
