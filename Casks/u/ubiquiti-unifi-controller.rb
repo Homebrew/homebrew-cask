@@ -3,7 +3,7 @@ cask "ubiquiti-unifi-controller" do
   sha256 "c086c23f3da18d286d859ca202d705a51733c625bdbaae301a53aecfe4a71103"
 
   url "https://fw-download.ubnt.com/data/unifi-controller/5c14-macos-#{version}-05bb1ef6-1356-4888-af43-620e8c19643a.dmg",
-      verified: "dl.ubnt.com/"
+      verified: "fw-download.ubnt.com/"
   name "Ubiquiti UniFi Network Controller"
   desc "Set up, configure, manage and analyze your UniFi network"
   homepage "https://ui.com/consoles"
