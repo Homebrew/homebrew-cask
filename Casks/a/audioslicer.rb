@@ -6,7 +6,7 @@ cask "audioslicer" do
       verified: "downloads.sourceforge.net/audioslicer/"
   name "AudioSlicer"
   desc "Finds all silences in an audio file"
-  homepage "https://audioslicer.sourceforge.io/"
+  homepage "https://audioslicer.sourceforge.net/"
 
   app "AudioSlicer.app"
 end
