@@ -6,10 +6,10 @@ cask "cord" do
       verified: "downloads.sourceforge.net/cord/"
   name "CoRD"
   desc "Remote desktop client"
-  homepage "https://cord.sourceforge.io/"
+  homepage "https://cord.sourceforge.net/"
 
   livecheck do
-    url "https://cord.sourceforge.io/sparkle.xml"
+    url "https://cord.sourceforge.net/sparkle.xml"
     strategy :sparkle, &:short_version
   end
 
