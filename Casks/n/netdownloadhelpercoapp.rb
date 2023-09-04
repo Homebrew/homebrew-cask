@@ -8,6 +8,11 @@ cask "netdownloadhelpercoapp" do
   desc "Allows video downloads from the Web"
   homepage "https://www.downloadhelper.net/install-coapp"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   pkg "net.downloadhelper.coapp-#{version}.pkg"
 
   uninstall pkgutil: "net.downloadhelper.coapp"
