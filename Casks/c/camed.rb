@@ -6,7 +6,7 @@ cask "camed" do
       verified: "downloads.sourceforge.net/camprocessor/"
   name "CAM Editor"
   desc "XML editor"
-  homepage "https://camprocessor.sourceforge.io/"
+  homepage "https://sourceforge.net/projects/camprocessor//"
 
   app "CAMEd-#{version}/CAMed.app"
 end
