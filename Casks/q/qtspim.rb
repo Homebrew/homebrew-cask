@@ -6,7 +6,7 @@ cask "qtspim" do
       verified: "downloads.sourceforge.net/spimsimulator/"
   name "QtSpim"
   desc "Simulator that runs MIPS32 assembly language programs"
-  homepage "https://spimsimulator.sourceforge.io/"
+  homepage "https://spimsimulator.sourceforge.net//"
 
   livecheck do
     url "https://sourceforge.net/projects/spimsimulator/files/"
