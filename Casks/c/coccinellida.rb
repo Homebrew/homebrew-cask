@@ -6,7 +6,7 @@ cask "coccinellida" do
       verified: "downloads.sourceforge.net/coccinellida/"
   name "Coccinellida"
   desc "Simple SSH tunnel manager"
-  homepage "https://coccinellida.sourceforge.io/"
+  homepage "https://coccinellida.sourceforge.net//"
 
   livecheck do
     url "https://raw.githubusercontent.com/troydm/coccinellida/master/sparkle.xml"
