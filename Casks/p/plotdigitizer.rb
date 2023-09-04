@@ -6,7 +6,7 @@ cask "plotdigitizer" do
       verified: "downloads.sourceforge.net/plotdigitizer/"
   name "Plot Digitizer"
   desc "Digitize scanned plots of functional data"
-  homepage "https://plotdigitizer.sourceforge.io/"
+  homepage "https://plotdigitizer.sourceforge.net//"
 
   app "PlotDigitizer.app"
 end
