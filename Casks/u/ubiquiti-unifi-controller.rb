@@ -13,22 +13,7 @@ cask "ubiquiti-unifi-controller" do
     regex(/"version"\s*:\s*"v?(\d+(?:\.\d+)+)/i)
   end
 
-  pkg "UniFi.pkg"
-
-  postflight do
-    set_ownership "~/Library/Application Support/UniFi"
-  end
-
-  uninstall quit:    [
-              "com.oracle.java.*.jre",
-              "com.ubnt.UniFi-Discover",
-            ],
-            signal:  ["TERM", "com.ubnt.UniFi"],
-            pkgutil: "com.ubnt.UniFi",
-            delete:  [
-              "/Applications/UniFi-Discover.app",
-              "/Applications/UniFi.app",
-            ]
+  app "UniFi.app"
 
   zap trash: [
     "~/Library/Application Support/UniFi",
@@ -39,5 +24,6 @@ cask "ubiquiti-unifi-controller" do
   caveats do
     depends_on_java "8"
     license "https://www.ui.com/eula/"
+    requires_rosetta
   end
 end
