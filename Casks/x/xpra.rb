@@ -17,7 +17,7 @@ cask "xpra" do
 
   depends_on macos: ">= :sierra"
 
-  pkg "Xpra-Python3-x86_64-#{version.csv.first}-r#{version.csv.second}.pkg"
+  pkg "Xpra-x86_64-#{version.csv.first}-r#{version.csv.second}.pkg"
 
   uninstall pkgutil: "org.xpra.pkg",
             delete:  [
