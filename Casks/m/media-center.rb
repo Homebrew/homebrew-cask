@@ -1,6 +1,6 @@
 cask "media-center" do
-  version "31.00.12"
-  sha256 "5885b9002e29fa438a2f35971e3ad4166b5393ef746c9c80082308dec6ffc9d2"
+  version "31.00.43"
+  sha256 "e37869e18e395c2b50c25769cd95352cadb80038e0ac3ad68af763f9601ad491"
 
   url "https://files.jriver-cdn.com/mediacenter/channels/v#{version.major}/stable/MediaCenter#{version.no_dots}-Universal.dmg",
       verified: "files.jriver-cdn.com/mediacenter/"
@@ -10,7 +10,7 @@ cask "media-center" do
 
   livecheck do
     url "https://www.jriver.com/download.html"
-    regex(/MediaCenter(\d\d)(\d\d)0(\d\d+)-Universal\.dmg/i)
+    regex(/MediaCenter(\d\d)(\d\d)(\d\d+)-Universal\.dmg/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[0]}.#{match[1]}.#{match[2]}" }
     end
