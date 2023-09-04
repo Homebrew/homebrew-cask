@@ -1,6 +1,6 @@
 cask "kdrive" do
-  version "3.4.3.20230613"
-  sha256 "251a6e60db2b41edccc6b62d29b87d516f9caa3d0612eb9d8afe01c65f692c23"
+  version "3.5.0.20230904"
+  sha256 "3d773cccab4492ee083641d47f94889d88d70ba28cf1f59addcdfdabcaa37d8a"
 
   url "https://download.storage.infomaniak.com/drive/desktopclient/kDrive-#{version}.pkg"
   name "kDrive"
