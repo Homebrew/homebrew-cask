@@ -1,4 +1,4 @@
-cask "hepta" do
+cask "heptabase" do
   arch arm: "-arm64"
 
   version "1.0.0"
@@ -16,7 +16,7 @@ cask "hepta" do
     strategy :github_latest
   end
 
-  app "Hepta.app"
+  app "Heptabase.app"
 
   zap trash: [
     "~/Library/Preferences/app.projectmeta.projectmeta.plist",
