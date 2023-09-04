@@ -12,9 +12,8 @@ cask "clickhouse" do
   homepage "https://clickhouse.com/"
 
   livecheck do
-    url :stable
+    url :url
     regex(/^v?(\d+(?:\.\d+)+[._-](lts|stable))$/i)
-    strategy :github_releases
   end
 
   binary "clickhouse-macos#{arch}", target: "clickhouse"
