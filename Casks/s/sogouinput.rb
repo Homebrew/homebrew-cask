@@ -1,8 +1,9 @@
 cask "sogouinput" do
-  version "614b,1678359792"
-  sha256 "4450919b0a73891b2b77a78d04a8d1c801eb24970a84e59b7139fdd283f344b6"
+  version "614d,1688992049"
+  sha256 "9eb308751095b2870790253a454e0689ba63b782a1cd6b5ebe1607af1ab9c9c9"
 
-  url "http://cdn2.ime.sogou.com/dl/gzindex/#{version.csv.second}/sogou_mac_#{version.csv.first}.zip"
+  url "http://ime-sec.gtimg.com/#{version.csv.fourth}/#{version.csv.third}/pc/dl/gzindex/#{version.csv.second}/sogou_mac_#{version.csv.first}.zip",
+      verified: "ime-sec.gtimg.com/"
   name "Sogou Input Method"
   name "搜狗输入法"
   desc "Input method supporting full and double spelling"
@@ -11,10 +12,10 @@ cask "sogouinput" do
   livecheck do
     url :homepage
     strategy :page_match do |page|
-      match = page.match(%r{/(\d+(?:\.\d+)*)/sogou_mac_(\d+(?:\.\d+)*[a-z]*)\.zip}i)
+      match = page.match(%r{/(\d+)/(.+)/pc/dl/gzindex/(\d+(?:\.\d+)*)/sogou_mac_(\d+(?:\.\d+)*[a-z]*)\.zip}i)
       next if match.blank?
 
-      "#{match[2]},#{match[1]}"
+      "#{match[4]},#{match[3]}"
     end
   end
 
