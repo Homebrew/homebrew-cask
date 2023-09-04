@@ -6,7 +6,7 @@ cask "mame" do
       verified: "downloads.sourceforge.net/mameosx/"
   name "MAME"
   desc "Port of the multi-purpose emulation framework"
-  homepage "https://mameosx.sourceforge.io/"
+  homepage "https://mameosx.sourceforge.net//"
 
   app "MAME OS X.app"
 end
