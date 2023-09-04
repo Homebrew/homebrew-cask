@@ -6,7 +6,7 @@ cask "gtkwave" do
       verified: "downloads.sourceforge.net/gtkwave/"
   name "GTKWave"
   desc "GTK+ based wave viewer"
-  homepage "https://gtkwave.sourceforge.io/"
+  homepage "https://gtkwave.sourceforge.net//"
 
   livecheck do
     url :url
