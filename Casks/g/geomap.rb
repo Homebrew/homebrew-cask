@@ -12,7 +12,7 @@ cask "geomap" do
 
   livecheck do
     url :homepage
-    regex(/GeoMapApp\s*is.*?(\d+(?:\.\d+)+)\s*</i)
+    regex(/(\d+(?:\.\d+)+)/i)
   end
 
   app "GeoMapApp.app"
