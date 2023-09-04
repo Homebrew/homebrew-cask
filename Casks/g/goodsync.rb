@@ -1,15 +1,15 @@
 cask "goodsync" do
-  version "12.2.8"
+  version "12.3.5"
   sha256 :no_check # required as upstream package is updated in-place
 
-  url "https://www.goodsync.com/download/goodsync-v11-mac.dmg"
+  url "https://www.goodsync.com/download/goodsync-vsub-mac.dmg"
   name "GoodSync"
   desc "File synchronization and backup software"
   homepage "https://www.goodsync.com/"
 
   livecheck do
-    url "https://www.goodsync.com/download?os=macos"
-    regex(/GoodSync\s+for\s+Mac\s+v?\s*(\d+(?:\.\d+)+)/i)
+    url "https://www.goodsync.com/news-mac"
+    regex(/Version\sv?\s*(\d+(?:\.\d+)+)/i)
   end
 
   app "GoodSync.app"
