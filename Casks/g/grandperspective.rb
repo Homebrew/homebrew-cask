@@ -16,7 +16,7 @@ cask "grandperspective" do
       verified: "downloads.sourceforge.net/grandperspectiv/"
   name "GrandPerspective"
   desc "Graphically shows disk usage within a file system"
-  homepage "https://grandperspectiv.sourceforge.io/"
+  homepage "https://grandperspectiv.sourceforge.net//"
 
   app "GrandPerspective.app"
 
