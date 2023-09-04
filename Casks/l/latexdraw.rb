@@ -6,7 +6,7 @@ cask "latexdraw" do
       verified: "downloads.sourceforge.net/latexdraw/"
   name "LaTexDraw"
   desc "Drawing editor for creating LaTeX PSTricks code"
-  homepage "https://latexdraw.sourceforge.io/"
+  homepage "https://latexdraw.sourceforge.net//"
 
   livecheck do
     url "https://sourceforge.net/projects/latexdraw/rss?path=/latexdraw"
