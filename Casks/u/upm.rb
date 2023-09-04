@@ -6,7 +6,7 @@ cask "upm" do
       verified: "downloads.sourceforge.net/upm/"
   name "Universal Password Manager"
   desc "Password manager"
-  homepage "https://upm.sourceforge.io/"
+  homepage "https://upm.sourceforge.net//"
 
   app "upm-mac-#{version}/UPM.app"
 
