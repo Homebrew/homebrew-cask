@@ -6,7 +6,7 @@ cask "davmail" do
       verified: "downloads.sourceforge.net/davmail/"
   name "DavMail"
   desc "Use any mail/calendar client with an Exchange server"
-  homepage "https://davmail.sourceforge.io/"
+  homepage "https://davmail.sourceforge.net//"
 
   livecheck do
     url "https://sourceforge.net/projects/davmail/rss?path=/davmail"
