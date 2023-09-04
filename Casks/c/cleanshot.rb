@@ -9,7 +9,7 @@ cask "cleanshot" do
 
   livecheck do
     url "https://cleanshot.com/changelog"
-    regex(/class="number">(\d+(?:\.\d+)+)/i)
+    regex(/class="number"[^>]*?>(\d+(?:\.\d+)+)</i)
   end
 
   auto_updates true
