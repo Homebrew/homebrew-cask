@@ -1,11 +1,11 @@
-cask "hepta" do
-  arch arm: "arm64-mac", intel: "mac"
+cask "heptabase" do
+  arch arm: "-arm64"
 
-  version "0.371.0"
-  sha256 arm:   "c12e4c68c8f0a60b14eac0cbe482965058f45890efdd2fb05380f88f3aba0566",
-         intel: "dca2310654419d021320d0575f99ff79c3a2986059c0d2da5b5e6066d7ce668b"
+  version "1.0.0"
+  sha256 arm:   "d5a5b0892742a48cc7be38e91a8ad6aa1253019c3e95353147b88cb322042876",
+         intel: "34217932ee91fb4db89d8ed7e0db50376bf70e8f75f1cdfc7b7ce07abfa9de37"
 
-  url "https://github.com/heptameta/project-meta/releases/download/v#{version}/Hepta-#{version}-#{arch}.zip",
+  url "https://github.com/heptameta/project-meta/releases/download/v#{version}/Heptabase-#{version}#{arch}-mac.zip",
       verified: "github.com/heptameta/project-meta/"
   name "Hepta"
   desc "Note-taking tool for visual learning"
@@ -16,7 +16,7 @@ cask "hepta" do
     strategy :github_latest
   end
 
-  app "Hepta.app"
+  app "Heptabase.app"
 
   zap trash: [
     "~/Library/Preferences/app.projectmeta.projectmeta.plist",
