@@ -6,7 +6,7 @@ cask "scidavis" do
       verified: "downloads.sourceforge.net/scidavis/"
   name "SciDAVis"
   desc "Application for scientific data analysis and visualization"
-  homepage "https://scidavis.sourceforge.io/"
+  homepage "https://scidavis.sourceforge.net//"
 
   livecheck do
     url "https://sourceforge.net/projects/scidavis/rss.xml"
