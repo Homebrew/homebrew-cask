@@ -7,7 +7,7 @@ cask "blobby-volley2" do
       verified: "downloads.sourceforge.net/blobby/"
   name "Blobby Volley 2"
   desc "Head-to-head multiplayer ball game"
-  homepage "https://blobby.sourceforge.io/"
+  homepage "https://blobbyvolley.de/"
 
   app "blobby.app"
 end
