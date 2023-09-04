@@ -1,8 +1,8 @@
 cask "xpra" do
-  version "4.4.6,29"
-  sha256 "f3084269a629a81af0d904c74762eb8f44ecab796968da532a8cf2821408f341"
+  version "5.0.1,0"
+  sha256 "9f2477e48a78875b2262e30b9e23cd1ce63d5ed10be19750b9021cf61ac8cff1"
 
-  url "https://www.xpra.org/dists/osx/x86_64/Xpra-Python3-x86_64-#{version.csv.first}-r#{version.csv.second}.pkg"
+  url "https://www.xpra.org/dists/osx/x86_64/Xpra-x86_64-#{version.csv.first}-r#{version.csv.second}.pkg"
   name "Xpra"
   desc "Screen and application forwarding system"
   homepage "https://www.xpra.org/"
