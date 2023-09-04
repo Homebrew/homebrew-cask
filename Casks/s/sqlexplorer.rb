@@ -6,7 +6,7 @@ cask "sqlexplorer" do
       verified: "downloads.sourceforge.net/eclipsesql/"
   name "Eclipse SQL Explorer"
   desc "SQL Client for JDBC compliant databases"
-  homepage "https://eclipsesql.sourceforge.io/"
+  homepage "https://eclipsesql.sourceforge.net//"
 
   livecheck do
     url "https://sourceforge.net/projects/eclipsesql/rss?path=/SQL%20Explorer%20RCP%20%28exc%20JRE%29"
