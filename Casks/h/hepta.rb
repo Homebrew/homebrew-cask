@@ -2,10 +2,10 @@ cask "hepta" do
   arch arm: "-arm64"
 
   version "1.0.0"
-  sha256 arm:   "a46d04472dc6084ba2fb337960bdcd877d0a0902ca34a793c3204463d472a5f1",
-         intel: "323e6b6516723e9046267c247fc6c33f8beb0233bc2c58e355ecd03f03b7a2f7"
+  sha256 arm:   "d5a5b0892742a48cc7be38e91a8ad6aa1253019c3e95353147b88cb322042876",
+         intel: "34217932ee91fb4db89d8ed7e0db50376bf70e8f75f1cdfc7b7ce07abfa9de37"
 
-  url "https://github.com/heptameta/project-meta/releases/download/v#{version}/Hepta-#{version}#{arch}.zip",
+  url "https://github.com/heptameta/project-meta/releases/download/v#{version}/Heptabase-#{version}#{arch}-mac.zip",
       verified: "github.com/heptameta/project-meta/"
   name "Hepta"
   desc "Note-taking tool for visual learning"
