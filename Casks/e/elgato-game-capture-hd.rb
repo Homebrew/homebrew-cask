@@ -17,7 +17,7 @@ cask "elgato-game-capture-hd" do
 
     livecheck do
       url "https://www.elgato.com/graphql?query=query%20contentJson(%24identifier%3A%5BString%5D%24contentType%3AString%24options%3AContentJsonOptionsInput)%7BcontentJson(identifiers%3A%24identifier%20contentType%3A%24contentType%20options%3A%24options)%7Bidentifier%20entries%7D%7D&operationName=contentJson&variables=%7B%22contentType%22%3A%22downloads%22%2C%22identifier%22%3A%5B%22downloads%22%5D%2C%22options%22%3A%7B%22level%22%3A1%7D%7D&locale=en-US"
-      regex(/Game[._-]Capture[._-]HD[._-]v?(\d+(?:\.\d+)+)\.zip/i)
+      regex(%r{Game[._-]Capture[._-]HD[._-]v?(\d+(?:\.\d+)+)\.zip}i)
     end
 
     depends_on macos: ">= :sierra"
