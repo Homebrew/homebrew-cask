@@ -1,6 +1,18 @@
 cask "betterdisplay" do
-  version "2.0.9"
-  sha256 "e12d9b43585388f7c7bef3e30c0fc93c9361e6cf3b404c3ac0c1b7ebd3c7c978"
+  on_big_sur :or_older do
+    version "1.4.1"
+    sha256 "26a75c3a4e95b076dcb7468e6ce9f9493675e4a9676fd267e5b32459db900077"
+
+    livecheck do
+      skip "Legacy version"
+    end
+
+    depends_on macos: ">= :mojave"
+  end
+  on_monterey :or_newer do
+    version "2.0.9"
+    sha256 "e12d9b43585388f7c7bef3e30c0fc93c9361e6cf3b404c3ac0c1b7ebd3c7c978"
+  end
 
   url "https://github.com/waydabber/BetterDisplay/releases/download/v#{version}/BetterDisplay-v#{version}.dmg",
       verified: "github.com/waydabber/BetterDisplay/"
@@ -14,7 +26,6 @@ cask "betterdisplay" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
 
   app "BetterDisplay.app"
 
