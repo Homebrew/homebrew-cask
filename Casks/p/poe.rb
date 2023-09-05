@@ -12,8 +12,7 @@ cask "poe" do
   homepage "https://poe.com/"
 
   livecheck do
-    url "https://updater.poe.com/darwin_#{arch}/0.0"
-    regex(/updates.*?(\d+(?:\.+\d+)+)\.zip/i)
+    skip "No version information available"
   end
 
   depends_on macos: ">= :high_sierra"
