@@ -1,5 +1,5 @@
 cask "sogouinput" do
-  version "614d,1688992049"
+  version "614d,1688992049,dd8795957da3b02680e1bb73d9c62635,202309051047"
   sha256 "9eb308751095b2870790253a454e0689ba63b782a1cd6b5ebe1607af1ab9c9c9"
 
   url "http://ime-sec.gtimg.com/#{version.csv.fourth}/#{version.csv.third}/pc/dl/gzindex/#{version.csv.second}/sogou_mac_#{version.csv.first}.zip",
@@ -15,7 +15,7 @@ cask "sogouinput" do
       match = page.match(%r{/(\d+)/(.+)/pc/dl/gzindex/(\d+(?:\.\d+)*)/sogou_mac_(\d+(?:\.\d+)*[a-z]*)\.zip}i)
       next if match.blank?
 
-      "#{match[4]},#{match[3]}"
+      "#{match[4]},#{match[3]},#{match[2]},#{match[1]}"
     end
   end
 
