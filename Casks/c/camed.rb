@@ -9,7 +9,7 @@ cask "camed" do
 
   livecheck do
     url "https://sourceforge.net/projects/camprocessor/files/CAM%20Editor/Releases/"
-    regex(%r{CAM\%20Editor/Releases/(\d+(?:\.\d+)+)}i)
+    regex(%r{CAM%20Editor/Releases/(\d+(?:\.\d+)+)}i)
   end
 
   app "CAMEd-#{version}/CAMed.app"
