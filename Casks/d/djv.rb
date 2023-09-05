@@ -6,7 +6,7 @@ cask "djv" do
       verified: "downloads.sourceforge.net/djv/"
   name "DJV Imaging"
   desc "Review software for VFX, animation, and film production"
-  homepage "https://djv.sourceforge.io/"
+  homepage "https://darbyjohnston.github.io/DJV/"
 
   livecheck do
     url "https://sourceforge.net/projects/djv/rss?path=/djv-stable"

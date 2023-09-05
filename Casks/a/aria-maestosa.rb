@@ -6,7 +6,7 @@ cask "aria-maestosa" do
       verified: "downloads.sourceforge.net/ariamaestosa/"
   name "Aria Maestosa"
   desc "Midi sequencer and editor"
-  homepage "https://ariamaestosa.sourceforge.io/"
+  homepage "https://ariamaestosa.github.io/ariamaestosa/docs/index.html"
 
   app "Aria Maestosa.app"
 
