@@ -1,6 +1,6 @@
 cask "whisky" do
-  version "1.2.0"
-  sha256 "9d53c40feca538d0a03554ada508ddbf85cc9fbdc832d5d55a8985be083fb701"
+  version "1.2.1"
+  sha256 "be2f55437325b3e379be399265bc9e9969258b3efe09afb08c03bc8473ad4156"
 
   url "https://github.com/IsaacMarovitz/Whisky/releases/download/v#{version}/Whisky.zip"
   name "Whisky"
@@ -14,6 +14,7 @@ cask "whisky" do
 
   auto_updates true
   depends_on macos: ">= :ventura"
+  depends_on arch: :arm64
 
   app "Whisky.app"
 
