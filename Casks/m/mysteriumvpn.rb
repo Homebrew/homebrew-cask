@@ -13,7 +13,7 @@ cask "mysteriumvpn" do
     strategy :github_latest
   end
 
-  app "MysteriumVPN.app"
+  app "MysteriumDark.app"
 
   zap trash: [
     "~/.mysterium",
