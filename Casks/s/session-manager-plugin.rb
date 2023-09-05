@@ -1,9 +1,9 @@
 cask "session-manager-plugin" do
   arch arm: "_arm64"
 
-  version "1.2.463.0"
-  sha256 arm:   "9cb4f1050e19983768b73977a8568bf548f2f747dab8fc5682e5c5873f8a8f7f",
-         intel: "bd490117147b2478791e7039e0aa7fe65a2368153375e62e23c43955162522a5"
+  version "1.2.497.0"
+  sha256 arm:   "fbb417fecae01d743512124ada5889976fe35bd60018e8f80ff6270fd87fd3b8",
+         intel: "1a50331e0befa175d8e1f96ff5558c49a755a1384537722657c60b0efa56b1b4"
 
   url "https://s3.amazonaws.com/session-manager-downloads/plugin/#{version}/mac#{arch}/session-manager-plugin.pkg",
       verified: "s3.amazonaws.com/session-manager-downloads/plugin/"
@@ -12,8 +12,8 @@ cask "session-manager-plugin" do
   homepage "https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-working-with-install-plugin.html"
 
   livecheck do
-    url :homepage
-    regex(%r{<td>\s*v?(\d+(?:\.\d+)+)\s*</td>}i)
+    url "https://docs.aws.amazon.com/systems-manager/latest/userguide/plugin-version-history.html"
+    regex(%r{<td tabindex="-1">(\d+(?:\.\d+)+)</td>}i)
   end
 
   pkg "session-manager-plugin.pkg"
