@@ -2,11 +2,10 @@ cask "davmail" do
   version "6.1.0,3423"
   sha256 "08c3024b9f32741d0268d2335a57337fda67d14ce47b8a4dee02bb8cbe210c64"
 
-  url "https://downloads.sourceforge.net/davmail/DavMail-MacOSX-#{version.csv.first}-#{version.csv.second}.app.zip",
-      verified: "downloads.sourceforge.net/davmail/"
+  url "https://downloads.sourceforge.net/davmail/DavMail-MacOSX-#{version.csv.first}-#{version.csv.second}.app.zip"
   name "DavMail"
   desc "Use any mail/calendar client with an Exchange server"
-  homepage "https://davmail.sourceforge.net//"
+  homepage "https://davmail.sourceforge.net/"
 
   livecheck do
     url "https://sourceforge.net/projects/davmail/rss?path=/davmail"
