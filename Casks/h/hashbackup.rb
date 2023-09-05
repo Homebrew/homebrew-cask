@@ -12,7 +12,7 @@ cask "hashbackup" do
     regex(/>\s*#(\d+)\s+[a-z]+\s*\d{1,2},\s*\d{4}\s*</i)
   end
 
-  binary "hb.r#{version}.Darwin.x86_64", target: "hb"
+  binary "hb"
 
   zap trash: "~/hashbackup"
 end
