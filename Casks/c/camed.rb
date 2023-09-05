@@ -7,5 +7,10 @@ cask "camed" do
   desc "XML editor"
   homepage "https://sourceforge.net/projects/camprocessor/"
 
+  livecheck do
+    url "https://sourceforge.net/projects/camprocessor/files/CAM%20Editor/Releases/"
+    regex(%r{CAM\%20Editor/Releases/(\d+(?:\.\d+)+)}i)
+  end
+
   app "CAMEd-#{version}/CAMed.app"
 end
