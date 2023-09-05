@@ -4,7 +4,7 @@ cask "brain-workshop" do
 
   url "https://downloads.sourceforge.net/brainworkshop/brainworkshop/Brain%20Workshop%20#{version.major_minor}/brainworkshop-#{version}-MacOSX.zip"
   name "Brain Workshop"
-  homepage "https://brainworkshop.sourceforge.net//"
+  homepage "https://brainworkshop.sourceforge.net/"
 
   livecheck do
     url :url
