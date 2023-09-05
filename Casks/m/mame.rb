@@ -5,7 +5,7 @@ cask "mame" do
   url "https://downloads.sourceforge.net/mameosx/MAMEOSX-#{version}.dmg"
   name "MAME"
   desc "Port of the multi-purpose emulation framework"
-  homepage "https://mameosx.sourceforge.net/"
+  homepage "https://sourceforge.net/projects/mameosx/"
 
   app "MAME OS X.app"
 end
