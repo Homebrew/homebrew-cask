@@ -1,14 +1,14 @@
 cask "jamulus" do
-  version "3.9.1"
+  version "3.10.0"
 
   on_mojave :or_older do
-    sha256 "6c645ba373205f774a09df59565e39808868b7ef3fb296a56f616ef90e74aefe"
+    sha256 "1407619a136e5d2094cdad1e65cf51e9029a36232db4e83b6e48c6b987374a56"
 
     url "https://downloads.sourceforge.net/llcon/jamulus_#{version}_mac_legacy.dmg",
         verified: "downloads.sourceforge.net/llcon/"
   end
   on_catalina :or_newer do
-    sha256 "724f15fd564737fe06c717aa678a8c3817a006f7105bb13b71d5b650ed8c7cc5"
+    sha256 "c4f15729706e7ba6a93b1226c33cbeb4dc95d8aee64c9fbdc4443c9d8687b9b6"
 
     url "https://downloads.sourceforge.net/llcon/jamulus_#{version}_mac.dmg",
         verified: "downloads.sourceforge.net/llcon/"
