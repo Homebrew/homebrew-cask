@@ -4,7 +4,7 @@ cask "syncroom" do
 
   url "https://syncroom.yamaha.com/play/dl/app/SYNCROOM-MULTI-mac-#{version}.zip"
   name "SYNCROOM"
-  desc "Online remote concert service: enjoy playing even if far away from each other"
+  desc "Online remote concert service"
   homepage "https://syncroom.yamaha.com/"
 
   livecheck do
