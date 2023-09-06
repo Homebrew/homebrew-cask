@@ -1,15 +1,15 @@
 cask "sf-symbols" do
-  on_mojave :or_older do
-    version "1.1"
-    sha256 "eddca84dde246f358429e47a8a7906b026d892dba97e556b555b27e7070de04e"
+  on_big_sur do
+    version "4"
+    sha256 "479b66ce7eb308ca0eff826675325e11e7932fcca407d065261822be5c2ec8cb"
 
-    url "https://devimages-cdn.apple.com/design/resources/download/SF-Symbols.dmg"
+    url "https://devimages-cdn.apple.com/design/resources/download/SF-Symbols-#{version}.dmg"
 
     livecheck do
       skip "Legacy version"
     end
   end
-  on_catalina :or_newer do
+  on_monterey :or_newer do
     version "5"
     sha256 "5979e68066a8227d08152c38e7bc2f2ed00a2e74c19792ff46ae733023e28e75"
 
@@ -26,7 +26,7 @@ cask "sf-symbols" do
   homepage "https://developer.apple.com/design/human-interface-guidelines/sf-symbols/overview/"
 
   auto_updates true
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :big_sur"
 
   pkg "SF Symbols.pkg"
 
