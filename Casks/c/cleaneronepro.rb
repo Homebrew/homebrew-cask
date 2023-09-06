@@ -1,15 +1,15 @@
 cask "cleaneronepro" do
-  version "6.7.0"
+  version "6.7.0,5191"
   sha256 "f162c03c91da23058c7fff63896ca107ff7d35c07c4849e2c81ea5cf5943536a"
 
-  url "https://files.trendmicro.com/products/CleanerOnePro/COPG0001/5191/CleanerOnePro_#{version.dots_to_underscores}.zip"
+  url "https://files.trendmicro.com/products/CleanerOnePro/COPG0001/#{version.csv.second}/CleanerOnePro_#{version.csv.first.dots_to_underscores}.zip"
   name "CleanerOnePro"
   desc "All-in-one Cleaner App"
   homepage "https://cleanerone.trendmicro.com/"
 
   livecheck do
     url "https://res.ta.trendmicro.com/TrendCleanerPro/Sparkle.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle
   end
 
   auto_updates true
