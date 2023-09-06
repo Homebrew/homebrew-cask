@@ -1,5 +1,5 @@
 cask "gama" do
-  arch arm: "Apple_Silicon", intel: "Intel"
+  arch arm: "_M1"
 
   version "1.9.2"
   sha256 arm:   "dfc74a0004a32302f0eee9303b5c45f83a9e66307e3d4fe30999de1eeb1a00e6",
