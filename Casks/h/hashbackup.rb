@@ -1,5 +1,5 @@
 cask "hashbackup" do
-  version "3075"
+  version "3068"
   sha256 :no_check
 
   url "https://www.hashbackup.com/download/hb-mac-64bit.tar.gz"
@@ -8,8 +8,8 @@ cask "hashbackup" do
   homepage "https://www.hashbackup.com/hashbackup/index.html"
 
   livecheck do
-    url "https://www.hashbackup.com/hashbackup/releases.html"
-    regex(/>\s*#(\d+)\s+[a-z]+\s*\d{1,2},\s*\d{4}\s*</i)
+    url "http://upgrade.hashbackup.com/release/latest.txt"
+    regex(/^(\d+)$/i)
   end
 
   binary "hb"
