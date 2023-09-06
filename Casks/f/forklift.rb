@@ -1,15 +1,15 @@
 cask "forklift" do
-  version "3.5.8"
-  sha256 "0d7c4a2b8045eb6e700001cef73a1c80058c7829a8bd8eada45efa4d35cc5207"
+  version "4"
+  sha256 "aa8ca4de7d695459326a239b4f89aa1c8508645ad4cf7cb3a15040a164758d9e"
 
-  url "https://download.binarynights.com/ForkLift#{version}.zip"
+  url "https://download.binarynights.com/ForkLift/ForkLift#{version}.zip"
   name "ForkLift"
   desc "Finder replacement and FTP, SFTP, WebDAV and Amazon s3 client"
   homepage "https://binarynights.com/"
 
   livecheck do
-    url "https://updates.binarynights.com/ForkLift#{version.major}/update.xml"
-    strategy :sparkle, &:short_version
+    url "https://updates.binarynights.com/ForkLift/update.xml"
+    regex(/ForkLift\s*v?(\d+(?:\.\d+)*)/i)
   end
 
   auto_updates true
