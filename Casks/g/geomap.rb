@@ -11,8 +11,8 @@ cask "geomap" do
   homepage "https://www.geomapapp.org/"
 
   livecheck do
-    url :homepage
-    regex(/(\d+(?:\.\d+)+)/i)
+    url "https://www.geomapapp.org/MacInstall.html"
+    regex(/href=.*?GeoMapApp[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
   app "GeoMapApp.app"
