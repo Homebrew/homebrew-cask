@@ -1,4 +1,4 @@
-cask "mysteriumvpn" do
+cask "mysteriumdark" do
   version "10.16.0"
   sha256 "f82135d0d86ac8f567783063a42fb87c1c98bfb76bb38e92d0929cd65b4fe4eb"
 
