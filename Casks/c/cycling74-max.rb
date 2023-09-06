@@ -1,9 +1,8 @@
 cask "cycling74-max" do
-  version "8.5.5_230613"
-  sha256 "b84cc043ebfccd23f782cd621517ee42ae289d54a782455fc46edb6ef23fcf9d"
+  version "8.5.6_230906"
+  sha256 "237415490ed33ba30febac6d99aca0c0528beca56909a4e5825735a4c933d66f"
 
-  url "https://akiaj5esl75o5wbdcv2a-maxmspjitter.s3.amazonaws.com/Max#{version.no_dots}.dmg",
-      verified: "akiaj5esl75o5wbdcv2a-maxmspjitter.s3.amazonaws.com/"
+  url "https://downloads.cdn.cycling74.com/max8/Max#{version.no_dots}.dmg"
   name "Cycling ‘74 Max"
   name "Ableton Max for Live"
   desc "Flexible space to create your own interactive software"
