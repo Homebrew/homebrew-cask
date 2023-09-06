@@ -9,7 +9,7 @@ cask "forklift" do
 
   livecheck do
     url "https://updates.binarynights.com/ForkLift/update.xml"
-    regex(/ForkLift\s*v?(\d+(?:\.\d+)*)/i)
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
