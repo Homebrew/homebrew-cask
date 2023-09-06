@@ -24,8 +24,8 @@ cask "omniplan" do
     url "https://downloads.omnigroup.com/software/MacOSX/10.14/OmniPlan-#{version}.dmg"
   end
   on_catalina :or_newer do
-    version "4.5.4"
-    sha256 "c9ec36b0586248bbdadf061242cb479765abcac9a8313e1feb948a731ed4a053"
+    version "4.5.5"
+    sha256 "71b74ef0523fbea7147806e4b6bbcfbc17c9f01bff0a32b8b809f6473052739e"
 
     url "https://downloads.omnigroup.com/software/macOS/11/OmniPlan-#{version}.dmg"
   end
