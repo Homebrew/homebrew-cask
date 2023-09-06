@@ -1,9 +1,9 @@
 cask "gitkraken" do
   arch arm: "darwin-arm64", intel: "darwin"
 
-  version "9.8.0"
-  sha256 arm:   "a8e81992e41df7a3e47c017aa4ff9f59d569ac1a8b0142d5a07914910b9bcf68",
-         intel: "ad0b3e7887812403f7e718e588d878beee34deb5714b03e70c416ea1ce1a8f18"
+  version "9.8.1"
+  sha256 arm:   "4239642f338ec3bc6ea8d10e06728404533fe8f7138fc03a7d225692e1de5d95",
+         intel: "d7c1e7d031c681066c308e2e64f5836026916471b741f266b5b96969eb7635c9"
 
   url "https://release.axocdn.com/#{arch}/GitKraken-v#{version}.zip",
       verified: "release.axocdn.com/"
