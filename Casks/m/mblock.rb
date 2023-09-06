@@ -9,8 +9,8 @@ cask "mblock" do
   homepage "https://www.mblock.cc/"
 
   livecheck do
-    url "https://mblock.makeblock.com/en-us/download/"
-    regex(/href=.*?V?(\d+(?:\.\d+)+)\.pkg/i)
+    url "https://s.mblock.cc/download/pc-mac"
+    strategy :header_match
   end
 
   depends_on macos: ">= :sierra"
