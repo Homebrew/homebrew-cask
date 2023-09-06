@@ -1,6 +1,6 @@
 cask "hookmark" do
-  version "5.1.2,2023.05"
-  sha256 "a5c392cb55e7ae1a67790498460170a93d9ea0b2bbc42501be58ef0caa782642"
+  version "5.1.3,2023.05"
+  sha256 "a4f258f9434e0542f2473a41d1667da6d24b0eba4d0c5a546cc5cf9c9f7e382a"
 
   url "https://hookproductivity.com/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/Hookmark-app-#{version.csv.first}.dmg_.zip",
       user_agent: :fake
@@ -10,16 +10,9 @@ cask "hookmark" do
 
   livecheck do
     url "https://hookproductivity.com/download"
-    regex(%r{href=.*?/(\d+)/(\d+)/Hookmark[._-]app[._-](\d+(?:\.\d+)*)(?:[._-]b(\d+(?:\.\d+)*))?\.dmg}i)
+    regex(%r{uploads/(\d+)/(\d+)/Hookmark[._-]app[._-](\d+(?:\.\d+)*)\.dmg}i)
     strategy :page_match do |page, regex|
-      match = page.match(regex)
-      next if match.blank?
-
-      if match[4].present?
-        "#{match[3]},#{match[4]},#{match[1]}.#{match[2]}"
-      else
-        "#{match[3]},#{match[1]}.#{match[2]}"
-      end
+      page.scan(regex).map { |match| "#{match[2]},#{match[0]},#{match[1]}" }
     end
   end
 
