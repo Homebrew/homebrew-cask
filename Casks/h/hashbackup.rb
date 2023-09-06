@@ -1,18 +1,18 @@
 cask "hashbackup" do
   version "3068"
-  sha256 "c7eb5b117b7083d7c0e4b74c4aeae1922963d5243748d08883b54139ef5dd2e5"
+  sha256 :no_check
 
-  url "http://upgrade.hashbackup.com/#{version}/hb.r#{version}.Darwin.x86_64.bz2"
+  url "https://www.hashbackup.com/download/hb-mac-64bit.tar.gz"
   name "HashBackup"
   desc "Command-line backup program"
   homepage "https://www.hashbackup.com/hashbackup/index.html"
 
   livecheck do
-    url "https://www.hashbackup.com/hashbackup/releases.html"
-    regex(/>\s*#(\d+)\s+[a-z]+\s*\d{1,2},\s*\d{4}\s*</i)
+    url "http://upgrade.hashbackup.com/release/latest.txt"
+    regex(/^(\d+)$/i)
   end
 
-  binary "hb.r#{version}.Darwin.x86_64", target: "hb"
+  binary "hb"
 
   zap trash: "~/hashbackup"
 end
