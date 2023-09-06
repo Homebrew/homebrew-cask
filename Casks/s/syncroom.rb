@@ -1,15 +1,15 @@
 cask "syncroom" do
-  version "1.5.3"
-  sha256 "3fd96720f4060eb5675fdac7f8b72e101fed7f166be9245cba09e8388f6dafaa"
+  version "1.6.3"
+  sha256 "fa2569caa2ae68de7239481d939ade95de8b7e4a4fb3876a102019ba1fe301d7"
 
-  url "https://syncroom.yamaha.com/play/dl/app/SYNCROOM-JP-mac-#{version}.zip"
+  url "https://syncroom.yamaha.com/play/dl/app/SYNCROOM-MULTI-mac-#{version}.zip"
   name "SYNCROOM"
   desc "Online remote concert service: enjoy playing even if far away from each other"
   homepage "https://syncroom.yamaha.com/"
 
   livecheck do
     url "https://syncroom.yamaha.com/play/dl/"
-    regex(%r{href=.*?/SYNCROOM-JP-mac-(\d+(?:\.\d+)*)\.zip}i)
+    regex(%r{href=.*?/SYNCROOM-MULTI-mac-(\d+(?:\.\d+)+)\.zip}i)
   end
 
   depends_on macos: ">= :mojave"
