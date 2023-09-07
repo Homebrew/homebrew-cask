@@ -1,5 +1,5 @@
 cask "qqmusic" do
-  version "8.8.0,73226"
+  version "8.8.1,73227"
   sha256 :no_check
 
   url "https://dldir1.qq.com/music/clntupate/mac/QQMusicMac_Mgr.dmg"
