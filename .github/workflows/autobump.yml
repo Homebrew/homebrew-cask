@@ -15,6 +15,7 @@ env:
     1password
     1password-cli
     alfred
+    alt-tab
     apifox
     appcleaner
     arc
@@ -25,6 +26,7 @@ env:
     burp-suite
     burp-suite-professional
     busycal
+    calibre
     canva
     carbon-copy-cloner
     chirp
@@ -33,7 +35,9 @@ env:
     cog
     confluent-cli
     copilot-for-xcode
+    dbeaver-community
     descript
+    downie
     dropbox
     duckduckgo
     electron
@@ -49,15 +53,17 @@ env:
     grammarly-desktop
     grandtotal
     hackolade
-    hepta
+    heptabase
     jdownloader
     jupyterlab
+    libreoffice
     librewolf
     logseq
     macupdater
     metasploit
     microsoft-edge
     microsoft-openjdk
+    multiapp
     netron
     openlens
     openshift-client
@@ -68,14 +74,15 @@ env:
     plex
     plex-htpc
     plex-media-server
+    postman
     purei-play
     puzzles
-    readdle-spark
-    rewind
-    remotion
-    rive
     qownnotes
     quarto
+    readdle-spark
+    reaper
+    rewind
+    rive
     setapp
     sfdx
     shapr3d
@@ -90,16 +97,20 @@ env:
     telegram
     telegram-desktop
     teleport-connect
+    thunderbird
     todoist
     tor-browser
     trader-workstation
     trainerroad
     tsh
+    unity
     uvtools
     viber
     visual-studio-code
+    vivaldi
     vrew
     vscodium
+    vuescan
     warp
     webcatalog
     webull
