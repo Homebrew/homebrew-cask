@@ -223,7 +223,7 @@ cask "firefox" do
     "homebrew/cask-versions/firefox-cn",
     "homebrew/cask-versions/firefox-esr",
   ]
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :catalina"
 
   app "Firefox.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
