@@ -8,7 +8,7 @@ cask "1password-cli" do
   url "https://cache.agilebits.com/dist/1P/op2/pkg/v#{version}/op_darwin_#{arch}_v#{version}.zip"
       verified: "cache.agilebits.com/dist/1P/op2/pkg/"
   name "1Password CLI"
-  desc "Command-line helper for the 1Password password manager"
+  desc "Command-line interface for 1Password"
   homepage "https://developer.1password.com/docs/cli"
 
   livecheck do
