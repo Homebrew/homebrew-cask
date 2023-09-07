@@ -5,12 +5,14 @@ cask "aifun" do
   url "https://static.aifun.kapokcloud.com/v#{version}/AiFun_#{version}_macos.dmg",
       verified: "static.aifun.kapokcloud.com"
   name "AiFun"
-  desc "Ai chat and ai painting"
+  desc "AI chat and painting app"
   homepage "https://getaifun.com/"
 
   livecheck do
     url "https://static.aifun.kapokcloud.com/updater/updater.json"
-    regex(/AiFun_(\d+(?:\.\d+)+)_macos\.app\.tar\.gz/i)
+    strategy :json do |json|
+      json["version"].sub("v", "")
+    end
   end
 
   auto_updates true
