@@ -1,5 +1,5 @@
 cask "sogouinput" do
-  version "614d,1688992049,de39e96ed28553d6d3aed29807053e71,202309070549"
+  version "614d,1688992049,f2c4ee058a0e7b689640d43c8ceb585c,202309072045"
   sha256 "9eb308751095b2870790253a454e0689ba63b782a1cd6b5ebe1607af1ab9c9c9"
 
   url "http://ime-sec.gtimg.com/#{version.csv.fourth}/#{version.csv.third}/pc/dl/gzindex/#{version.csv.second}/sogou_mac_#{version.csv.first}.zip",
