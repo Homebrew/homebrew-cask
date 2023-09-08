@@ -1,11 +1,19 @@
 cask "vapor" do
-  version "3.8.1"
-  sha256 "02156e9ec5aea50167f9ad5f42b63080e3ec2619619a037ee52d4991f85099c7"
+  arch arm: "ARM64", intel: "X86"
 
-  url "https://github.com/NCAR/VAPOR/releases/download/#{version}/VAPOR#{version.major}-#{version}-Darwin.dmg"
+  version "3.9.0"
+  sha256 arm:   "24fc0f831696fe2276a878f8eb4144b5f78c65d13d0a4542f537c900e863d08f",
+         intel: "b3562847d4c3effd19d65713220e4fb6fab703d732db67ab990aaff9fdfb1988"
+
+  url "https://github.com/NCAR/VAPOR/releases/download/v#{version}/VAPOR#{version.major}-#{version}-Darwin#{arch}.dmg"
   name "VAPOR"
   desc "Visualization and analysis platform"
   homepage "https://github.com/NCAR/VAPOR"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "vapor.app"
 
