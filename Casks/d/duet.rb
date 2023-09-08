@@ -1,5 +1,5 @@
 cask "duet" do
-  on_big_sur :or_older do
+  on_catalina :or_older do
     version "2.4.7.1"
     sha256 "3e91729e333ab3e2984bec4c1194e7022d016d91c79cd21509bc00b42b9559bd"
 
@@ -10,7 +10,7 @@ cask "duet" do
       end
     end
   end
-  on_monterey :or_newer do
+  on_big_sur :or_newer do
     version "3.10.0.0"
     sha256 "2ed19139c5b031571e50531e17a41d2c4d09c621c90a91c95c2b05f2014cb331"
 
