@@ -15,4 +15,12 @@ cask "fission" do
   depends_on macos: ">= :big_sur"
 
   app "Fission.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.rogueamoeba.fission.sfl2",
+    "~/Library/Caches/com.rogueamoeba.Fission",
+    "~/Library/HTTPStorages/com.rogueamoeba.Fission",
+    "~/Library/Preferences/com.rogueamoeba.Fission.plist",
+    "~/Library/WebKit/com.rogueamoeba.Fission",
+  ]
 end
