@@ -1,9 +1,9 @@
 cask "cursor" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.9.3"
-  sha256 arm:   "f183a77152f6bb08c72534bf380bc20b0de8a1c6a462ff70affe2a259ecabe38",
-         intel: "275c20763470197b92e0bd0d6c925422c0c3ae68d858703e0c8234fd4487c1cf"
+  version "0.9.5"
+  sha256 arm:   "cb3c5ef5898df38fb26047b0837ce93011cf5f5e7b51b5bd7703378815a41cc3",
+         intel: "ca5edb2dd5239172a86946fdffb634908e597dcfacbee1be6196c2b5ebf9db3c"
 
   url "https://download.todesktop.com/230313mzl4w4u92/Cursor%20#{version}-#{arch}-mac.zip",
       verified: "download.todesktop.com/230313mzl4w4u92"
