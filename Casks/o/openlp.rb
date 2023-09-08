@@ -9,7 +9,7 @@ cask "openlp" do
 
   livecheck do
     url "https://get.openlp.org"
-    regex(/href=['"]?(\d+(?:\.\d+)+)['"]?/i)
+    regex(%r{href=['"]?(\d+(?:\.\d+)+)(?!rc\d+)/['"]?}i)
   end
 
   app "OpenLP.app"
