@@ -8,11 +8,17 @@ cask "zui" do
   desc "Graphical user interface for exploring data in Zed lakes"
   homepage "https://zui.brimdata.io/docs"
 
+  depends_on macos: ">= :high_sierra"
+
   app "Zui.app"
 
   zap trash: [
     "~/Library/Application Support/Zui",
     "~/Library/Preferences/io.brimdata.zui.plist",
-    "~/Library/Saved Application State/io.brimdata.zui.savedState"
+    "~/Library/Saved Application State/io.brimdata.zui.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
