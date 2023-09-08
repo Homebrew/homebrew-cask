@@ -8,7 +8,7 @@ cask "recipeui" do
   url "https://github.com/RecipeUI/RecipeUI/releases/download/app-v#{version}/RecipeUI_#{arch}.app.tar.gz",
       verified: "github.com/RecipeUI/RecipeUI/"
   name "RecipeUI"
-  desc "Discover, test, and share APIs in seconds"
+  desc "API discovery, testing and sharing tool"
   homepage "https://recipeui.com/"
 
   livecheck do
@@ -20,7 +20,5 @@ cask "recipeui" do
 
   app "RecipeUI.app"
 
-  zap trash: [
-    "~/Library/Cache/com.recipeui",
-  ]
+  zap trash: "~/Library/Cache/com.recipeui"
 end
