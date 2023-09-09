@@ -11,8 +11,9 @@ cask "hhkb" do
   livecheck do
     url "https://happyhackingkb.com/download/"
     regex(/macOS\s+:\s+Version\s+(\d+(?:\.\d+)+)/i)
-    strategy :page_match
   end
+
+  depends_on macos: ">= :mojave"
 
   pkg "HHKBkeymapTool_#{version.no_dots}ma.pkg"
 
@@ -23,18 +24,13 @@ cask "hhkb" do
               "#{appdir}/HHKB/EULA_*.rtf",
               "#{appdir}/HHKB/OSS_License.txt",
             ],
-            rmdir:   [
-              "#{appdir}/HHKB",
-            ]
+            rmdir:   "#{appdir}/HHKB"
 
   zap trash: [
         "~/Library/Application Support/hhkb-keymap-tool/*.log",
-        "/private/var/db/receipts/jp.co.pfu.hhkb-keymap-tool.pkg.V#{version}.bom",
-        "/private/var/db/receipts/jp.co.pfu.hhkb-keymap-tool.pkg.V#{version}.plist",
+        "~/Library/Preferences/jp.co.pfu.hhkb-keymap-tool.plist",
       ],
-      rmdir: [
-        "~/Library/Application Support/hhkb-keymap-tool",
-      ]
+      rmdir: "~/Library/Application Support/hhkb-keymap-tool"
 
   caveats do
     requires_rosetta
