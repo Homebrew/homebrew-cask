@@ -16,8 +16,8 @@ cask "monitorcontrol" do
     end
   end
   on_catalina :or_newer do
-    version "4.1.0"
-    sha256 "89ac4cf63efc4aad441f94c2636e3437e0f96c6eaaba4d9d663f13ee7b7d013a"
+    version "4.2.0"
+    sha256 "43deae2bac157b50f6b8bbd62fea4547a2dc9ab53b7209abd98e6d3efbd30e02"
   end
 
   url "https://github.com/MonitorControl/MonitorControl/releases/download/v#{version}/MonitorControl.#{version}.dmg"
