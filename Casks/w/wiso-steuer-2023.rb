@@ -8,4 +8,13 @@ cask "wiso-steuer-2023" do
   homepage "https://www.buhl.de/download/wiso-steuer-2023/"
 
   app "SteuerMac 2023.app"
+
+  zap trash: [
+    "~/Library/Application Support/BuhlData.com/WISOsteuerMac2023",
+    "~/Library/Caches/com.BuhlData.WISOsteuerMac2023",
+    "~/Library/HTTPStorages/com.BuhlData.WISOsteuerMac2023",
+    "~/Library/Preferences/com.buhldata.WISOsteuerMac2023.plist",
+    "~/Library/Saved Application State/com.BuhlData.WISOsteuerMac2023.savedState",
+    "~/Library/WebKit/com.BuhlData.WISOsteuerMac2023",
+  ]
 end
