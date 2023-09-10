@@ -15,6 +15,6 @@ cask "pot" do
 
   zap trash: [
     "~/Library/Application Support/com.pot-app.desktop",
-    "~/Library/Caches/com.pot-app.desktop"
+    "~/Library/Caches/com.pot-app.desktop",
   ]
 end
