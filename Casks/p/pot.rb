@@ -10,14 +10,6 @@ cask "pot" do
   desc "Cross-platform software for text translation and recognize"
   homepage "https://github.com/pot-app/pot-desktop"
 
-  livecheck do
-    url "https://github.com/pot-app/pot-desktop/releases/latest"
-    strategy :page_match
-    regex(/pot_(\d+(?:\.\d+)*_(aarch64|x64)).dmg/i)
-  end
-
-  auto_updates true
-
   app "pot.app"
   binary "#{appdir}/pot.app/Contents/MacOS/pot"
 
