@@ -8,7 +8,7 @@ cask "draw-things" do
   homepage "https://drawthings.ai/"
 
   livecheck do
-    url "https://drawthings.ai"
+    url :homepage
     regex(/href=.*?DrawThings[._-]v?(\d+(?:\.\d+)+(?:-[\da-f]*)?)\.zip/i)
   end
 
