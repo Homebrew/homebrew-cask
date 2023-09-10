@@ -5,6 +5,7 @@ cask "strawberry-wallpaper" do
   url "https://github.com/aitexiaoy/Strawberry-Wallpaper/releases/download/#{version}/Strawberry.Wallpaper-mac.dmg",
       verified: "github.com/aitexiaoy/Strawberry-Wallpaper/"
   name "Strawberry Wallpaper"
+  desc "Automatically update wallpapers of major galleries"
   homepage "https://aitexiaoy.github.io/Strawberry-Wallpaper/"
 
   livecheck do
