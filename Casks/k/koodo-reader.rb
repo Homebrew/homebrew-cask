@@ -11,6 +11,11 @@ cask "koodo-reader" do
   desc "Open-source epub reader"
   homepage "https://koodo.960960.xyz/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Koodo Reader.app"
 
   zap trash: [
