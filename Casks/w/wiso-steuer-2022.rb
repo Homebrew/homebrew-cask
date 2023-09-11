@@ -13,4 +13,13 @@ cask "wiso-steuer-2022" do
   end
 
   app "SteuerMac 2022.app"
+
+  zap trash: [
+    "~/Library/Application Support/BuhlData.com/WISOsteuerMac2022",
+    "~/Library/Caches/com.BuhlData.WISOsteuerMac2022",
+    "~/Library/HTTPStorages/com.BuhlData.WISOsteuerMac2022",
+    "~/Library/Preferences/com.buhldata.WISOsteuerMac2022.plist",
+    "~/Library/Saved Application State/com.BuhlData.WISOsteuerMac2022.savedState",
+    "~/Library/WebKit/com.BuhlData.WISOsteuerMac2022",
+  ]
 end
