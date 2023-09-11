@@ -17,20 +17,17 @@ Notice an application that's out-of-date in Homebrew Cask? In most cases, it's v
 brew bump --open-pr <outdated_cask>
 ```
 
-You can also follow the steps in [Adding a Cask](https://docs.brew.sh/Adding-Software-to-Homebrew) for more complicated changes.
-
+You can also follow the steps in the documentation on [adding a cask](https://docs.brew.sh/Adding-Software-to-Homebrew#casks) for more complicated changes.
 
 ## Getting Set Up To Contribute
 
-Follow the guide in [How to open a Homebrew pull request](https://docs.brew.sh/How-To-Open-a-Homebrew-Pull-Request#cask-related-pull-request).
-
+Follow the guide in [How to Open a Homebrew Pull Request](https://docs.brew.sh/How-To-Open-a-Homebrew-Pull-Request#cask-related-pull-request).
 
 ## Adding a Cask
 
-Notice an application that's not in Homebrew Cask yet? Make sure it's not yet in [Homebrew/cask-versions](https://github.com/Homebrew/homebrew-cask-versions) or [Homebrew/core](https://github.com/Homebrew/homebrew-core) (can be searched with `brew search`). Mac App Store apps can't be installed via Homebrew Cask, but check out [mas](https://github.com/mas-cli/mas) for an alternative.
+Notice an application that's not in Homebrew Cask yet? Make sure it's not yet in [homebrew/cask-versions](https://github.com/Homebrew/homebrew-cask-versions) or [homebrew/core](https://github.com/Homebrew/homebrew-core) (can be searched with `brew search`). Mac App Store apps can't be installed via Homebrew Cask, but check out [mas](https://github.com/mas-cli/mas) for an alternative.
 
-With a bit of work, you can create a Cask for it. The document [Adding A Cask](https://docs.brew.sh/Adding-Software-to-Homebrew) will help you create, test, and submit a new Cask to us.
-
+With a bit of work, you can create a cask for it. The documentation on [adding a cask](https://docs.brew.sh/Adding-Software-to-Homebrew#casks) will help you create, test, and submit a new cask to us.
 
 ## Style guide
 

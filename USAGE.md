@@ -2,7 +2,7 @@
 
 ## Frequently Used Commands
 
-Homebrew Cask is implemented as part of Homebrew. All Homebrew Cask commands begin with `brew`, which works for both Casks and Formulae. The most frequently-used commands are:
+Homebrew Cask is implemented as part of [Homebrew](https://brew.sh). All Homebrew Cask commands begin with `brew`, which works for both casks and formulae. The most frequently-used commands are:
 
 * `install` — installs the given Cask.
 * `uninstall` — uninstalls the given Cask.

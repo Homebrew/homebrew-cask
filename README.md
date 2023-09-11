@@ -6,11 +6,11 @@ Homebrew Cask extends [Homebrew](https://brew.sh) and brings its elegance, simpl
 
 We do this by providing a friendly CLI workflow for the administration of macOS applications distributed as binaries.
 
-[![Join us on GitHub discussions](https://img.shields.io/badge/github-discussions-informational)](https://github.com/Homebrew/discussions)
+[![Join us on GitHub discussions](https://img.shields.io/badge/github-discussions-informational)](https://github.com/orgs/Homebrew/discussions/categories/casks)
 
 ## Let’s try it!
 
-To start using Homebrew Cask, you just need [Homebrew](https://brew.sh/) installed.
+To start using Homebrew Cask, you just need [Homebrew](https://brew.sh) installed.
 
 <img src="https://i.imgur.com/FNNM6WL.gif" width="547" alt="Installing and uninstalling Alfred (animated gif)">
 
@@ -31,8 +31,8 @@ And there we have it. An application installed with one quick command: no clicki
 ## Learn More
 
 * Find basic documentation on using Homebrew Cask in [USAGE.md](USAGE.md).
-* Want to contribute a Cask? Awesome! See [CONTRIBUTING.md](CONTRIBUTING.md).
-* More project-related details and discussion are available in the [documentation](doc).
+* Want to contribute a cask? Awesome! See [CONTRIBUTING.md](CONTRIBUTING.md).
+* More project-related details and discussion are available in the [documentation](https://docs.brew.sh/Adding-Software-to-Homebrew#casks).
 
 ## Reporting bugs
 
@@ -57,14 +57,14 @@ If the issue is still not solved, see the guides for common problems:
 ## Requests
 
 * Issues requesting new casks will be closed. If you want a cask added to the main repositories, [submit a pull request](https://github.com/Homebrew/homebrew-cask/blob/HEAD/CONTRIBUTING.md#adding-a-cask).
-* For a feature request, [use this template](https://github.com/Homebrew/homebrew-cask/issues/new?assignees=&labels=&template=02_feature_request.yml).
+* For a feature request, [use this template](https://github.com/Homebrew/brew/issues/new?assignees=&labels=features&projects=&template=feature.yml).
 
 ## Questions? Wanna chat?
 
 We’re really rather friendly! Here are the best places to talk about the project:
 
 * [Open an issue](https://github.com/Homebrew/homebrew-cask/issues/new/choose).
-* Join us on [GitHub discussions (forum)](https://github.com/Homebrew/discussions).
+* Join us on [GitHub discussions (forum)](https://github.com/orgs/Homebrew/discussions/categories/casks).
 
 ## License
 Code is under the [BSD 2 Clause (NetBSD) license](LICENSE).
