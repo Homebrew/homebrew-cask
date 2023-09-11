@@ -9,7 +9,7 @@ cask "iridium" do
 
   livecheck do
     url "https://iridiumbrowser.de/downloads/macos"
-    regex(/iridium-browser[._-]?v?(\d+(?:\.\d+)+)[._-]?macos\.dmg/i)
+    regex(/iridium-browser[._-]?v?(\d+(?:\.\d+)+)[._-]?macos_universal\.dmg/i)
   end
 
   app "Iridium.app"
