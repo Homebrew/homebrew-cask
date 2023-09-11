@@ -1,6 +1,6 @@
 cask "openbci" do
-  version "5.2.1,2023-07-11_17-27-07"
-  sha256 "f08df7575135e928e31dde3679c9847e1f61bd66a584bd14b2f5854daabfbd6b"
+  version "5.2.2,2023-08-25_23-54-44"
+  sha256 "6fb21f9d76464bbfe0af55ee014be4775e4e640f111a07b9e71c1518c01f35fa"
 
   url "https://github.com/OpenBCI/OpenBCI_GUI/releases/download/v#{version.csv.first}/openbcigui_v#{version.csv.first}_#{version.csv.second}_macosx.dmg",
       verified: "github.com/OpenBCI/OpenBCI_GUI/"
