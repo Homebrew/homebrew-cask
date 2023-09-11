@@ -13,9 +13,9 @@ cask "docker" do
     depends_on macos: ">= :catalina"
   end
   on_big_sur :or_newer do
-    version "4.22.1,118664"
-    sha256 arm:   "a452433af26047c933e75d9e647d33af41bec14cba7b7eb4fc7a43cf8f0efa4a",
-           intel: "dcc1babfa607be9eeb6ef221635352c7d9393c77b3837c206c76aa004d96ba9d"
+    version "4.23.0,120376"
+    sha256 arm:   "88813e65928d86d2ad301e51619109aeb3f46f6e135b355000c8854ac4737cca",
+           intel: "30bf23633840a5d129c7e125f940f41336176ea0235c7592ab9b5b3f775d5b3e"
 
     livecheck do
       url "https://desktop.docker.com/mac/main/#{arch}/appcast.xml"
@@ -48,8 +48,6 @@ cask "docker" do
          target: "/usr/local/bin/docker"
   binary "Docker.app/Contents/Resources/bin/docker-compose",
          target: "/usr/local/bin/docker-compose"
-  binary "Docker.app/Contents/Resources/bin/docker-compose-v1/docker-compose",
-         target: "/usr/local/bin/docker-compose-v1"
   binary "Docker.app/Contents/Resources/bin/docker-credential-desktop",
          target: "/usr/local/bin/docker-credential-desktop"
   binary "Docker.app/Contents/Resources/bin/docker-credential-ecr-login",
@@ -66,16 +64,10 @@ cask "docker" do
          target: "/usr/local/bin/vpnkit"
   binary "Docker.app/Contents/Resources/etc/docker.bash-completion",
          target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/docker"
-  binary "Docker.app/Contents/Resources/etc/docker-compose.bash-completion",
-         target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/docker-compose"
   binary "Docker.app/Contents/Resources/etc/docker.zsh-completion",
          target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_docker"
-  binary "Docker.app/Contents/Resources/etc/docker-compose.zsh-completion",
-         target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_docker_compose"
   binary "Docker.app/Contents/Resources/etc/docker.fish-completion",
          target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/docker.fish"
-  binary "Docker.app/Contents/Resources/etc/docker-compose.fish-completion",
-         target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/docker-compose.fish"
 
   postflight do
     kubectl_target = Pathname("/usr/local/bin/kubectl")
