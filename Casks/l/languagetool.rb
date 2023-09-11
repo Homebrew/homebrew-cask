@@ -7,9 +7,13 @@ cask "languagetool" do
   desc "Grammar, spelling and style suggestions in all the writing apps"
   homepage "https://languagetool.org/"
 
+  # Older items in the Sparkle feed may have a newer pubDate, so it's necessary
+  # to work with all of the items in the feed (not just the newest one).
   livecheck do
     url "https://languagetool.org/download/mac-app/appcast.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle do |items|
+      items.map(&:short_version)
+    end
   end
 
   depends_on macos: ">= :big_sur"
