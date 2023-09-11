@@ -16,7 +16,7 @@ To start using Homebrew Cask, you just need [Homebrew](https://brew.sh) installe
 
 Slower, now:
 
-```
+```console
 $ brew install alfred
 ==> Downloading https://cachefly.alfredapp.com/Alfred_4.2.1_1187.dmg
 ######################################################################## 100.0%
