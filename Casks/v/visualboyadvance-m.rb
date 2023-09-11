@@ -1,6 +1,6 @@
 cask "visualboyadvance-m" do
-  version "2.1.6"
-  sha256 "d9d13debc6f19eeba7cb729de75389e4e2f45bdf56bd68035c05fe3eb75abf2e"
+  version "2.1.7"
+  sha256 "21b785be4b15e5891fdb2b9cd0834e25e854720b296e2c4505b45f0412e2183c"
 
   url "https://github.com/visualboyadvance-m/visualboyadvance-m/releases/download/v#{version}/visualboyadvance-m-Mac-x86_64.zip",
       verified: "github.com/visualboyadvance-m/visualboyadvance-m/"
