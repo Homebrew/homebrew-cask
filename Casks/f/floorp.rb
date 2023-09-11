@@ -5,19 +5,19 @@ cask "floorp" do
   url "https://github.com/Floorp-Projects/Floorp/releases/download/v#{version}/floorp-macOS-universal.dmg",
       verified: "github.com/Floorp-Projects/"
   name "Floorp browser"
-  desc "Firefox based browser with excellent privacy"
+  desc "Privacy-focused Firefox-based browser"
   homepage "https://floorp.app/"
 
   auto_updates true
 
   app "Floorp.app"
 
-  zap trash: [
-    "~/Library/Application Support/Floorp",
-    "~/Library/Caches/Floorp",
-    "~/Library/Preferences/one.ablaze.floorp.plist",
-    "~/Library/Preferences/org.mozilla.floorp.plist",
-    "~/Library/Saved Application State/one.ablaze.floorp.savedState",
-    "~/Library/Saved Application State/org.mozilla.floorp.savedState",
-  ]
+  zap rmdir: "~/Library/Caches/Mozilla",
+      trash: [
+        "~/Library/Application Support/Floorp",
+        "~/Library/Caches/Floorp",
+        "~/Library/Caches/Mozilla/updates/Applications/Floorp",
+        "~/Library/Preferences/*.floorp.plist",
+        "~/Library/Saved Application State/*.floorp.savedState",
+      ]
 end
