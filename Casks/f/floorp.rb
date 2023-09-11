@@ -13,9 +13,11 @@ cask "floorp" do
   app "Floorp.app"
 
   zap trash: [
-    # "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.floorp.sfl*",
     "~/Library/Application Support/Floorp",
     "~/Library/Caches/Floorp",
     "~/Library/Preferences/one.ablaze.floorp.plist",
+    "~/Library/Preferences/org.mozilla.floorp.plist",
+    "~/Library/Saved Application State/one.ablaze.floorp.savedState",
+    "~/Library/Saved Application State/org.mozilla.floorp.savedState",
   ]
 end
