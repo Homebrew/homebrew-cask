@@ -34,7 +34,7 @@ And there we have it. An application installed with one quick command: no clicki
 * Want to contribute a cask? Awesome! See [CONTRIBUTING.md](CONTRIBUTING.md).
 * More project-related details and discussion are available in the [documentation](https://docs.brew.sh/Adding-Software-to-Homebrew#casks).
 
-## Reporting bugs
+## Reporting Bugs
 
 [**If you ignore this guide, your issue may be closed without review**](doc/faq/closing_issues_without_review.md)
 
@@ -45,11 +45,11 @@ If your issue persists, [search for it](https://github.com/Homebrew/homebrew-cas
 If the issue is still not solved, see the guides for common problems:
 
 * [Examples of common errors and their solutions](doc/reporting_bugs/error_examples.md)
-* [`curl` error](doc/reporting_bugs/error_examples.md#curl-error)
-* [`Permission denied` error](doc/reporting_bugs/error_examples.md#permission-denied-error)
-* [`Checksum does not match` error](doc/reporting_bugs/error_examples.md#checksum-does-not-match-error)
-* [`source is not there` error](doc/reporting_bugs/error_examples.md#source-is-not-there-error)
-* [`wrong number of arguments` error](doc/reporting_bugs/error_examples.md#wrong-number-of-arguments-error)
+  * [`curl` error](doc/reporting_bugs/error_examples.md#curl-error)
+  * [`Permission denied` error](doc/reporting_bugs/error_examples.md#permission-denied-error)
+  * [`Checksum does not match` error](doc/reporting_bugs/error_examples.md#checksum-does-not-match-error)
+  * [`source is not there` error](doc/reporting_bugs/error_examples.md#source-is-not-there-error)
+  * [`wrong number of arguments` error](doc/reporting_bugs/error_examples.md#wrong-number-of-arguments-error)
 * [App isn’t included in `upgrade`](https://docs.brew.sh/FAQ#why-arent-some-apps-included-during-brew-upgrade)
 * [The app can’t be opened because it is from an unidentified developer](https://docs.brew.sh/FAQ#why-cant-i-open-a-mac-app-from-an-unidentified-developer)
 * [My problem isn’t listed](https://github.com/Homebrew/homebrew-cask/issues/new?template=01_bug_report.yml)
@@ -67,4 +67,5 @@ We’re really rather friendly! Here are the best places to talk about the proje
 * Join us on [GitHub discussions (forum)](https://github.com/orgs/Homebrew/discussions/categories/casks).
 
 ## License
+
 Code is under the [BSD 2 Clause (NetBSD) license](LICENSE).

@@ -11,7 +11,7 @@ Homebrew Cask is implemented as part of [Homebrew](https://brew.sh). All Homebre
 
 ## Searching for Casks
 
-To search for Casks, use `brew search`. Let’s see if there’s a Cask for Google Chrome:
+To search for casks, use `brew search`. Let’s see if there’s a cask for Google Chrome:
 
 ```console
 $ brew search --cask google-chrome
@@ -41,7 +41,7 @@ Easy peasy:
 $ brew uninstall --cask google-chrome
 ```
 
-This will both uninstall the Cask and remove applications which were moved to `/Applications`.
+This will both uninstall the cask and remove the applications that were moved to `/Applications`.
 
 ## Other Commands
 
@@ -114,7 +114,7 @@ KeepingYouAwake.app (App)
 
 ## Updating/Upgrading Casks
 
-Since the Homebrew Cask repository is a Homebrew Tap, you’ll pull down the latest Casks every time you issue the regular Homebrew command `brew update`. You can check for outdated Casks with `brew outdated` and install the outdated Casks with `brew upgrade`. Many applications update themselves, so their Casks are ignored by `brew outdated` and `brew upgrade`. This behaviour can be overridden by adding `--greedy` to the command.
+Since the Homebrew Cask repository is a Homebrew tap, you’ll pull down the latest casks every time you issue the regular Homebrew command `brew update`. You can check for outdated casks with `brew outdated` and install the outdated casks with `brew upgrade`. Many applications update themselves, so their casks are ignored by `brew outdated` and `brew upgrade`. This behaviour can be overridden by adding `--greedy` to either command.
 
 ## Updating/Upgrading the Homebrew Cask Tool
 
@@ -122,22 +122,22 @@ Homebrew [automatically taps and keeps Homebrew Cask updated](https://github.com
 
 ## Additional Taps (optional)
 
-The primary Homebrew Cask Tap includes most of the Casks that a typical user will be interested in. There are a few additional Taps where we store different kinds of Casks.
+The primary Homebrew Cask tap includes most of the casks that a typical user will be interested in. There are a few additional taps where we store different kinds of casks.
 
-| Tap name | description |
+| tap name | description |
 | -------- | ----------- |
-| [Homebrew/cask-versions](https://github.com/Homebrew/homebrew-cask-versions) | contains alternate versions of Casks (_e.g._ betas, nightly releases, old versions)
-| [Homebrew/cask-fonts](https://github.com/Homebrew/homebrew-cask-fonts)       | contains Casks that install fonts
+| [homebrew/cask-versions](https://github.com/Homebrew/homebrew-cask-versions) | contains alternate versions of casks (_e.g._ betas, nightly releases, old versions)
+| [homebrew/cask-fonts](https://github.com/Homebrew/homebrew-cask-fonts)       | contains casks that install fonts
 
-You can tap any of the above with a `brew tap` command:
+You can tap any of the above with the `brew tap` command:
 
 ```bash
 brew tap <tap_name>
 ```
 
-after which, Casks from the new Tap will be available to `search` or `install` just like Casks from the main Tap. `brew update` will automatically keep your new Tap up to date.
+after which casks from the new tap will be available to `search` or `install` just like casks from the main tap. `brew update` will automatically keep your new tap up to date.
 
-You may also specify a fully-qualified Cask token (which includes the Tap) for any `brew` command. This will implicitly add the Tap if you have not previously added it with `brew tap`:
+You may also specify a fully-qualified cask token (which includes the tap) for any `brew` command. This will implicitly add the tap if you have not previously added it with `brew tap`:
 
 ```bash
 brew install homebrew/cask-fonts/font-symbola
@@ -150,14 +150,14 @@ brew install homebrew/cask-fonts/font-symbola
 * `--version`: print version and exit.
 * `--debug`: output debug information.
 * `--no-binaries`: skip symlinking executable binaries into `/usr/local/bin`.
-* `--require-sha`: abort installation of Cask if no checksum is defined.
+* `--require-sha`: abort installation of cask if no checksum is defined.
 * `--no-quarantine`: [disable Apple’s quarantining](https://docs.brew.sh/FAQ#why-cant-i-open-a-mac-app-from-an-unidentified-developer) for the specific app.
-* `--language=<iso-language>[,<iso-language> ... ]`: changes the language of the Cask to be installed. The first matching language is used, otherwise it uses the default language of the Cask.
+* `--language=<iso-language>[,<iso-language> ... ]`: changes the language of the cask to be installed. The first matching language is used, otherwise it uses the default language of the cask.
 
 You can also modify the default installation locations used when issuing `brew install`:
 
 * `--appdir=/my/path` changes the path where the applications will be moved. Default is `/Applications`.
-* `--fontdir=/my/path` changes the path for Fonts. Default is `~/Library/Fonts`.
+* `--fontdir=/my/path` changes the path for fonts. Default is `~/Library/Fonts`.
 
 See `man brew` for the other default installation locations and the flags to change them.
 
@@ -178,19 +178,19 @@ brew install --appdir="/Applications" google-chrome
 
 ## Other Ways to Specify a Cask
 
-Most `brew` commands can accept a Cask token as an argument. As described above, the token on the command line can take the form of:
+Most `brew` commands can accept a cask token as an argument. As described above, the token on the command line can take the form of:
 
 * A simple token, _e.g._: `google-chrome`.
-* A fully-qualified token which includes the Tap, _e.g._: `homebrew/cask/google-chrome`.
+* A fully-qualified token which includes the tap, _e.g._: `homebrew/cask/google-chrome`.
 
 `brew` also accepts three other forms as arguments:
 
-* A path to a Cask file, _e.g._: `/usr/local/Library/Taps/homebrew/homebrew-cask/Casks/google-chrome.rb`.
-* A `curl`-retrievable URI to a Cask file, _e.g._: `https://raw.githubusercontent.com/Homebrew/homebrew-cask/f25b6babcd398abf48e33af3d887b2d00de1d661/Casks/google-chrome.rb`.
-* A file in the current working directory, _e.g._: `my-modified-google-chrome.rb`. Note that matching Tapped Cask tokens will be preferred over this form when there is a conflict. To force the use of a Cask file in the current directory, specify a pathname with slashes, _e.g._: `./google-chrome.rb`.
+* A path to a cask file, _e.g._: `/usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask/Casks/g/google-chrome.rb`.
+* A `curl`-retrievable URI to a cask file, _e.g._: `https://raw.githubusercontent.com/Homebrew/homebrew-cask/HEAD/Casks/g/google-chrome.rb`.
+* A file in the current working directory, _e.g._: `my-modified-google-chrome.rb`. Note that matching tapped cask tokens will be preferred over this form when there is a conflict. To force the use of a cask file in the current directory, specify a pathname with slashes, _e.g._: `./google-chrome.rb`.
 
-The last three forms are intended for users who wish to maintain private Casks.
+The last three forms are intended for users who wish to maintain private casks.
 
 ## Taps
 
-You can add Casks to your existing (or new) Taps: just create a directory named `Casks` inside your Tap, put your Cask files there, and everything will just work.
+You can add casks to your existing (or new) taps: just create a directory named `Casks` inside your tap, put your cask files there, and everything will just work.
