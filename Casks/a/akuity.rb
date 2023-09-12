@@ -7,7 +7,7 @@ cask "akuity" do
 
   url "https://dl.akuity.io/akuity-cli/v#{version}/darwin/#{arch}/akuity"
   name "Akuity"
-  desc "Management tool for Akuity Platform"
+  desc "Management tool for the Akuity Platform"
   homepage "https://akuity.io/"
 
   livecheck do
