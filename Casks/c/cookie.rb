@@ -2,7 +2,7 @@ cask "cookie" do
   version "7.0.1"
   sha256 :no_check
 
-  url "https://sweetpproductions.com/products/cookieapp/Cookie.dmg"
+  url "https://sweetpproductions.com/products/cookie7/Cookie.dmg"
   name "Cookie"
   desc "Protection from tracking and online profiling"
   homepage "https://sweetpproductions.com/"
@@ -13,7 +13,7 @@ cask "cookie" do
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :monterey"
 
   app "Cookie.app"
 
