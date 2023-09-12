@@ -1,9 +1,9 @@
 cask "dbeaverlite" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "23.1.0"
-  sha256 arm:   "7239e1974e67f767a46ceb914f26b8c9b731cff7891c49edf3b36c17d8c7d7fa",
-         intel: "1b77bf5d5b45a800e6c83166973f27c2a2acc1048c3ad8648407bd79ae600bf1"
+  version "23.2.0"
+  sha256 arm:   "e174eb443fa22342be7f574bbe0197059594ed8cd2d81794091f26f6d00566b2",
+         intel: "20116aed5920e9f3ddaaa01f56bae1ab3429ae3a13d5d2d4da405859f80c8413"
 
   url "https://dbeaver.com/downloads-lite/#{version}/dbeaver-le-#{version}-macos-#{arch}.dmg"
   name "DBeaver Lite Edition"
