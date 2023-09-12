@@ -1,9 +1,9 @@
 cask "papers" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.37.2357"
-  sha256 arm:   "af01138252b775d5e16c5d941db800e57a718b3a3f88623e1287298764da62f2",
-         intel: "52a55efed963c53ba989e0b8fa362842a71f191fa0e6d77a85498855a2ae94b2"
+  version "4.37.2366"
+  sha256 arm:   "1eabfd6fc021923866e4515e76b5cdc52795c9433736776ddc5d5c41afd0b0fd",
+         intel: "4f8307f3ce447e6f4fc890b8bfe4dc1fd5372502adfed0c8e29a782132905e95"
 
   url "https://update.readcube.com/desktop/updates/Papers_Setup_#{version}-#{arch}.zip"
   name "ReadCube Papers"
