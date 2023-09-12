@@ -13,7 +13,7 @@ cask "electron" do
 
   livecheck do
     url :url
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    strategy :github_latest
   end
 
   app "Electron.app"
