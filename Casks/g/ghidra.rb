@@ -33,6 +33,15 @@ cask "ghidra" do
     FileUtils.mv(staged_path, "#{caskroom_path}/#{version.csv.first}-#{version.csv.second}")
   end
 
+  on_arm do
+    depends_on formula: "gradle"
+    postflight do
+      ENV["PATH"] = "#{HOMEBREW_PREFIX}/bin:" + ENV.fetch("PATH", nil)
+      puts "Compiling Ghidra native decompiler"
+      system_command "#{caskroom_path}/#{version.csv.first}-#{version.csv.second}/ghidra_#{version.csv.first}_PUBLIC/support/buildNatives"
+    end
+  end
+
   uninstall_preflight do
     FileUtils.mv("#{caskroom_path}/#{version.csv.first}-#{version.csv.second}", staged_path)
   end
