@@ -1,6 +1,6 @@
 cask "xpra" do
-  version "5.0.1,0"
-  sha256 "9f2477e48a78875b2262e30b9e23cd1ce63d5ed10be19750b9021cf61ac8cff1"
+  version "5.0.2,0"
+  sha256 "69754b7fc6affe1651cbcf2f16e08d67ed2d67aec5612ba0ff57d70445598eee"
 
   url "https://www.xpra.org/dists/osx/x86_64/Xpra-x86_64-#{version.csv.first}-r#{version.csv.second}.pkg"
   name "Xpra"
