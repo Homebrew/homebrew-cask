@@ -14,4 +14,6 @@ cask "isabelle" do
 
   app "Isabelle#{version}.app"
   binary "#{appdir}/Isabelle#{version}.app/bin/isabelle"
+
+  # No zap stanza required
 end
