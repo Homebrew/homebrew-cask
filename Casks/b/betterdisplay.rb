@@ -31,10 +31,5 @@ cask "betterdisplay" do
 
   uninstall quit: "me.waydabber.BetterDummy"
 
-  zap trash: [
-    "~/Library/Application Support/BetterDummy",
-    "~/Library/Caches/me.waydabber.BetterDummy",
-    "~/Library/HTTPStorages/me.waydabber.BetterDummy",
-    "~/Library/Preferences/me.waydabber.BetterDummy.plist",
-  ]
+  # No zap stanza required
 end
