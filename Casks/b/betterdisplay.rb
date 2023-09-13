@@ -19,15 +19,4 @@ cask "betterdisplay" do
     "~/Library/Containers/me.waydabber.BetterDisplay",
     "~/Library/Preferences/me.waydabber.BetterDisplay.plist",
   ]
-
-  caveats do
-    discontinued
-
-    <<~EOS
-      #{token} has been renamed 'betterdisplay',
-      install betterdisplay to continue receiving updates;
-
-        brew install --cask betterdisplay
-    EOS
-  end
 end
