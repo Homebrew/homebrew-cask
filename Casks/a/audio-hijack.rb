@@ -1,5 +1,5 @@
 cask "audio-hijack" do
-  version "4.2.2"
+  version "4.2.3"
   sha256 :no_check
 
   url "https://rogueamoeba.com/audiohijack/download/AudioHijack.zip"
@@ -13,7 +13,7 @@ cask "audio-hijack" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Audio Hijack.app"
 
