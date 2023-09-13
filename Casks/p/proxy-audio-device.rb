@@ -4,7 +4,7 @@ cask "proxy-audio-device" do
 
   url "https://github.com/briankendall/proxy-audio-device/releases/download/v#{version}/ProxyAudioDevice_v#{version}.zip"
   name "Proxy Audio Device"
-  desc "Virtual audio driver to sends all audio to another output"
+  desc "Sound and audio controller"
   homepage "https://github.com/briankendall/proxy-audio-device"
 
   app "Proxy Audio Device Settings.app"
