@@ -17,7 +17,5 @@ cask "akuity" do
 
   binary "akuity"
 
-  zap trash: [
-    "~/.config/akuity",
-  ]
+  zap trash: "~/.config/akuity"
 end
