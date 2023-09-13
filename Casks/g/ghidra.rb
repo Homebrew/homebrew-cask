@@ -2,6 +2,15 @@ cask "ghidra" do
   version "10.3.3,20230829"
   sha256 "63833361bea8ef5ada1bc28cd2aa2ae4ab43204d2672b595500372582152eebe"
 
+  on_arm do
+    depends_on formula: "gradle"
+    postflight do
+      ENV["PATH"] = "#{HOMEBREW_PREFIX}/bin:" + ENV.fetch("PATH", nil)
+      puts "Compiling Ghidra native decompiler"
+      system_command "#{caskroom_path}/#{version.csv.first}-#{version.csv.second}/ghidra_#{version.csv.first}_PUBLIC/support/buildNatives"
+    end
+  end
+
   url "https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_#{version.csv.first}_build/ghidra_#{version.csv.first}_PUBLIC_#{version.csv.second}.zip",
       verified: "github.com/NationalSecurityAgency/ghidra/"
   name "Ghidra"
@@ -31,15 +40,6 @@ cask "ghidra" do
   preflight do
     # Log4j misinterprets comma in staged_path as alternative delimiter
     FileUtils.mv(staged_path, "#{caskroom_path}/#{version.csv.first}-#{version.csv.second}")
-  end
-
-  on_arm do
-    depends_on formula: "gradle"
-    postflight do
-      ENV["PATH"] = "#{HOMEBREW_PREFIX}/bin:" + ENV.fetch("PATH", nil)
-      puts "Compiling Ghidra native decompiler"
-      system_command "#{caskroom_path}/#{version.csv.first}-#{version.csv.second}/ghidra_#{version.csv.first}_PUBLIC/support/buildNatives"
-    end
   end
 
   uninstall_preflight do
