@@ -16,4 +16,8 @@ cask "akuity" do
   end
 
   binary "akuity"
+
+  zap trash: [
+    "~/.config/akuity",
+  ]
 end
