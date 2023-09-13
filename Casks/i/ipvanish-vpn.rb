@@ -1,5 +1,5 @@
 cask "ipvanish-vpn" do
-  version "3.3.0,67479"
+  version "4.0.5,95100"
   sha256 :no_check
 
   url "https://s3.amazonaws.com/ipvanish-apps/software/osx/IPVanish.dmg",
