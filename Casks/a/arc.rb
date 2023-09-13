@@ -26,6 +26,8 @@ cask "arc" do
   uninstall quit: "company.thebrowser.Browser"
 
   zap trash: [
+    "~/Library/Application Support/Arc",
+    "~/Library/Caches/Arc",
     "~/Library/Caches/CloudKit/company.thebrowser.Browser",
     "~/Library/Caches/company.thebrowser.Browser",
     "~/Library/HTTPStorages/company.thebrowser.Browser",
