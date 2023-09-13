@@ -8,4 +8,6 @@ cask "proxy-audio-device" do
   homepage "https://github.com/briankendall/proxy-audio-device"
 
   app "Proxy Audio Device Settings.app"
+
+  # No zap stanza required
 end
