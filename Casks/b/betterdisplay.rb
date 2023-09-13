@@ -29,12 +29,14 @@ cask "betterdisplay" do
 
   app "BetterDisplay.app"
 
-  uninstall quit: "me.waydabber.BetterDummy"
+  uninstall quit: "pro.betterdisplay.BetterDisplay"
 
   zap trash: [
+    "~/Library/Application Support/BetterDisplay",
     "~/Library/Application Support/BetterDummy",
-    "~/Library/Caches/me.waydabber.BetterDummy",
-    "~/Library/HTTPStorages/me.waydabber.BetterDummy",
-    "~/Library/Preferences/me.waydabber.BetterDummy.plist",
+    "~/Library/Caches/pro.betterdisplay.BetterDisplay",
+    "~/Library/HTTPStorages/pro.betterdisplay.BetterDisplay",
+    "~/Library/HTTPStorages/pro.betterdisplay.BetterDisplay.binarycookies",
+    "~/Library/Preferences/pro.betterdisplay.BetterDisplay.plist",
   ]
 end
