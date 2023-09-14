@@ -1,7 +1,7 @@
 cask "eclipse-java" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "4.28.0,2023-09"
+  version "4.29.0,2023-09"
   sha256 arm:   "4462ede59651f0af4111c4e61f0d83b4b0c9e50a31baf9108525db92fe0a8c8b",
          intel: "cbcea2a755e12ab80a58cd71b4418e53a5765022423a6730ad3b31541ddee4be"
 

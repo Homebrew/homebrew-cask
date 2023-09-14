@@ -1,7 +1,7 @@
 cask "eclipse-dsl" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "4.28.0,2023-09"
+  version "4.29.0,2023-09"
   sha256 arm:   "7e036cd496966d8b5176272df95a835e7b228fe5e9796df0ce4f33c5144daa69",
          intel: "1d6b5f8bc7682ce66624d15d53008731fdc8b58651294b57379b61cb3b05b14f"
 
