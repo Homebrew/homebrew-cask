@@ -11,8 +11,7 @@ cask "touchdesigner" do
   homepage "https://derivative.ca/"
 
   livecheck do
-    url "https://derivative.ca/download/archive"
-    regex(%r{<span class="field-content">(\d+(?:\.\d+)+)[\s<]}i)
+    skip "No reliable way to get version info"
   end
 
   depends_on macos: ">= :mojave"
