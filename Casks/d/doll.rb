@@ -1,6 +1,6 @@
 cask "doll" do
-  version "0.0.9"
-  sha256 "297d65ad6f33445b56afc50d963fe734bc854b7d1a8f0edef1a2e7866026b686"
+  version "0.0.9.1"
+  sha256 "b4de2bef0438a7e9cf76af8beaa797012bbef5cf0d51a44c7c3c8227c2ee63a3"
 
   url "https://github.com/xiaogdgenuine/Doll/releases/download/v#{version}/Doll.#{version}.dmg"
   name "Doll"
