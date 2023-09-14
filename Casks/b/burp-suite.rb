@@ -1,9 +1,9 @@
 cask "burp-suite" do
   arch arm: "MacOsArm64", intel: "MacOsx"
 
-  version "2023.9.4"
-  sha256 arm:   "c65f3ca41d58f2b44c17a4ff8e6b9ea7fc084adb5efe22cb593741557929e9ff",
-         intel: "f4b888358c8de861a66d7f2fab11c9a19902758c1c497ec6a07fc0f0ac54e62e"
+  version "2023.10.1.1"
+  sha256 arm:   "1ab25ca05a868f5cabd5113b1514bebe1b557296d004da4d6da3875b7594e2fc",
+         intel: "3d92b614301ac5818b157fca98309941f4e2a821eb64968c99f3d74fa6c10246"
 
   url "https://portswigger.net/burp/releases/download?product=community&version=#{version}&type=#{arch}"
   name "Burp Suite Community Edition"
