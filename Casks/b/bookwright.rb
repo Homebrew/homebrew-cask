@@ -2,17 +2,15 @@ cask "bookwright" do
   version "3.0.0"
   sha256 "a056c56053655d5e86cca301bfeb8ba1f5bd8d4b70959912466d26ddd4fedcb7"
 
-  url "https://software.blurb.com/bookwright_v#{version.major}/#{version}/BookWright.dmg"
+  url "https://software.blurb.com/bookwright_v2/#{version}/BookWright.dmg"
   name "bookwright"
   desc "Make a book with this tool and the Blurb printing service"
   homepage "https://www.blurb.com/bookwright"
 
-  # If this URL only provides information for a specific major version, this
-  # check will be unable to detect new major versions and these will need to
-  # be identified manually outside of livecheck. In that scenario, the check
-  # should theoretically work as expected again after updating the cask version.
+  # The major version has not yet been updated in
+  # either the download url or the livecheck url.
   livecheck do
-    url "https://www.blurb.com/bookwright_v#{version.major}/versions.json"
+    url "https://www.blurb.com/bookwright_v2/versions.json"
     regex(/["']version["']:\s*?["']v?(\d+(?:\.\d+)+)["']/i)
   end
 
