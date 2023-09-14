@@ -7,6 +7,12 @@ cask "wetype" do
   desc "Input method by Weixin"
   homepage "https://z.weixin.qq.com/"
 
+  livecheck do
+    skip "No reliable way to get version info"
+  end
+
+  depends_on macos: ">= :catalina"
+
   installer manual: "WeTypeInstaller_#{version.csv.first}_#{version.csv.second}.app"
 
   uninstall delete: "/Library/Input Methods/WeType.app"
