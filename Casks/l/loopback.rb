@@ -8,8 +8,8 @@ cask "loopback" do
   homepage "https://rogueamoeba.com/loopback/"
 
   livecheck do
-    url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&bundleid=com.rogueamoeba.loopback&system=12321&platform=osx&version=#{version.no_dots}000"
-    strategy :sparkle
+    url :url
+    strategy :extract_plist
   end
 
   auto_updates true
