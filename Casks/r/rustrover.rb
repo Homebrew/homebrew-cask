@@ -7,7 +7,6 @@ cask "rustrover" do
 
   url "https://download.jetbrains.com/rustrover/RustRover-#{version.csv.second}#{arch}.dmg"
   name "RustRover"
-  name "RustRover EAP"
   desc "Rust IDE"
   homepage "https://www.jetbrains.com/rust/"
 
@@ -23,7 +22,16 @@ cask "rustrover" do
   auto_updates true
   depends_on macos: ">= :catalina"
 
-  app "RustRover #{version.before_comma} EAP.app"
+  app "RustRover #{version.before_comma} EAP.app", target: "RustRover.app"
+
+  uninstall_postflight do
+    ENV["PATH"].split(File::PATH_SEPARATOR).map { |path| File.join(path, "rover") }.each do |path|
+      if File.readable?(path) &&
+         File.readlines(path).grep(/# see com.intellij.idea.SocketLock for the server side of this interface/).any?
+        File.delete(path)
+      end
+    end
+  end
 
   zap trash: [
     "~/Library/Application Support/JetBrains/RustRover#{version.major_minor}",
