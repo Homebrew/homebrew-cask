@@ -13,6 +13,7 @@ cask "bookmacster" do
     url "https://sheepsystems.com/bookmacster/appcast.xml"
     strategy :sparkle do |items|
       items.map(&:short_version)
+    end
   end
 
   auto_updates true
