@@ -1,9 +1,9 @@
 cask "eclipse-cpp" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "4.28.0,2023-06"
-  sha256 arm:   "ae7933d155042386658eb25a685716a52bb3f2a584b6038ce3fe86baca93cbb2",
-         intel: "53eaf5cb6bc9ef66bdd69c8b6460e3b0fb3aaddf4138581cc72e08f7cae2d8d9"
+  version "4.28.0,2023-09"
+  sha256 arm:   "f98a6c822aa6025be9e993500a3264e9e93e65938f52e3a3f5414295ba635fc2",
+         intel: "66a3578689e5d0252935294cd40255a06cb8cc4e95c82ea849d5bea46b734e24"
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-cpp-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&r=1"
   name "Eclipse IDE for C/C++ Developers"
