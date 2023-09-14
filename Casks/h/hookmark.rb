@@ -9,11 +9,7 @@ cask "hookmark" do
   homepage "https://hookproductivity.com/"
 
   livecheck do
-    url "https://hookproductivity.com/download"
-    regex(%r{uploads/(\d+)/(\d+)/Hookmark[._-]app[._-](\d+(?:\.\d+)*)\.dmg}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[2]},#{match[0]},#{match[1]}" }
-    end
+    skip "No reliable way to get version info"
   end
 
   auto_updates true
