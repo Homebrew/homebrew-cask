@@ -3,10 +3,15 @@ cask "meld-studio" do
   sha256 :no_check
 
   url "https://packages.streamwithmeld.com/MeldStudioInstaller.dmg",
-      verified: "streamwithmeld.com/"
+      verified: "packages.streamwithmeld.com/"
   name "Meld Studio"
   desc "Live streaming and recording software"
   homepage "https://www.meldstudio.co/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   auto_updates true
   depends_on macos: ">= :big_sur"
@@ -16,9 +21,9 @@ cask "meld-studio" do
   zap trash: [
     "~/Library/Application Support/MeldStudio",
     "~/Library/HTTPStorages/co.meldstudio.MeldStudioUpdater",
-    "~/Library/LaunchAgents/co.meldstudio.MeldStudioUpdater.wake.plist",
     "~/Library/LaunchAgents/co.meldstudio.keystone.agent.plist",
     "~/Library/LaunchAgents/co.meldstudio.keystone.xpcservice.plist",
+    "~/Library/LaunchAgents/co.meldstudio.MeldStudioUpdater.wake.plist",
     "~/Library/MeldStudio",
   ]
 end
