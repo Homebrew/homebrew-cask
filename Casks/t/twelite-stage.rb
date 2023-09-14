@@ -9,19 +9,15 @@ cask "twelite-stage" do
 
   livecheck do
     url "https://mono-wireless.com/jp/products/stage/Readme-j.html"
-    regex(/MWSTAGE(20\d{2}_(?:0[1-9]|1[0-2])_(?:0[1-9]|[12][0-9]|3[01]))/i)
-    strategy :page_match
+    regex(/MWSTAGEv?(\d+(?:[._]\d+)+)/i)
   end
 
   depends_on macos: ">= :mojave"
 
-  # It is an SDK with a shell-based application that includes source code and other user resources.
+  # It is an SDK with a shell-based application that
+  # includes source code and other user resources.
   # It is neither an "app" nor a "suite".
-  artifact "MWSTAGE",
-           target: "~/MWSTAGE"
+  artifact "MWSTAGE", target: "~/MWSTAGE"
 
-  # Contains user resources such as source code
-  uninstall trash: "~/MWSTAGE"
-
-  # No zap stanza required, all resources are in ~/MWSTAGE
+  zap trash: "~/MWSTAGE"
 end
