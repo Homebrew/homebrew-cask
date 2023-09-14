@@ -7,20 +7,14 @@ cask "wetype" do
   desc "Input method by Weixin"
   homepage "https://z.weixin.qq.com/"
 
-  livecheck do
-    strategy :sparkle
-  end
-
   installer manual: "WeTypeInstaller_#{version.csv.first}_#{version.csv.second}.app"
 
-  uninstall delete: [
-    "/Library/Input Methods/WeType.app",
-  ]
+  uninstall delete: "/Library/Input Methods/WeType.app"
 
   zap trash: [
     "~/Library/Application Support/WeType",
-    "~/Library/Caches/WeType",
     "~/Library/Caches/com.tencent.inputmethod.wetype",
+    "~/Library/Caches/WeType",
     "~/Library/HTTPStorages/com.tencent.inputmethod.wetype",
     "~/Library/Preferences/com.tencent.inputmethod.wetype.plist",
   ]
