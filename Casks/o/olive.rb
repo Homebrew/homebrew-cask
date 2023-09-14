@@ -1,15 +1,15 @@
 cask "olive" do
-  version "1687a721"
-  sha256 "183f6eeeb922738ce5db76a19c689cc7dcf2b081b3825a5e601f0b63e4a8c685"
+  version "1e3cf53"
+  sha256 "9ab6afc7ee9d7fb5083d1a49adea7dc5934bdbf6d635454cae4f8667fbd7c368"
 
   url "https://olivevideoeditor.org/dl/Olive-#{version}-macOS-x86_64.zip"
   name "Olive"
   desc "Non-linear video editor"
-  homepage "https://olivevideoeditor.org/"
+  homepage "https://www.olivevideoeditor.org/"
 
   livecheck do
-    url "https://olivevideoeditor.org/download"
-    regex(%r{<b>Version:</b>\s*(.+)\s*\(}i)
+    url "https://www.olivevideoeditor.org/download"
+    regex(/golegacy?hash=(.*)&type=/i)
   end
 
   app "Olive.app"
