@@ -9,7 +9,7 @@ cask "olive" do
 
   livecheck do
     url "https://www.olivevideoeditor.org/download"
-    regex(/golegacy?hash=(.*)&type=/i)
+    regex(/golegacy\?hash=(.*)&type=/i)
   end
 
   app "Olive.app"
