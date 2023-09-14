@@ -65,4 +65,11 @@ cask "sonic-pi" do
   depends_on macos: ">= :high_sierra"
 
   app "Sonic Pi.app"
+
+  zap trash: [
+    "~/.config/sonic-pi.net",
+    "~/.sonic-pi",
+    "~/Library/Preferences/net.sonic-pi.app.plist",
+    "~/Library/Saved Application State/net.sonic-pi.app.savedState",
+  ]
 end
