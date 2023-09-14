@@ -21,6 +21,7 @@ cask "citrix-workspace" do
   uninstall launchctl: [
               "com.citrix.AuthManager_Mac",
               "com.citrix.ctxusbd",
+              "com.citrix.CtxWorkspaceHelperDaemon",
               "com.citrix.ctxworkspaceupdater",
               "com.citrix.ReceiverHelper",
               "com.citrix.safariadapter",
