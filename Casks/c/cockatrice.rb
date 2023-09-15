@@ -8,15 +8,17 @@ cask "cockatrice" do
         verified: "github.com/Cockatrice/Cockatrice/"
   end
   on_catalina do
-    sha256 "b4953e77a01c639563d6e05acb40c9ca266616e15d941dea592d10904082470f"
+    version "2.9.0,2023-09-14,Rings.of.the.Wild"
+    sha256 "ca4bed42a54a90b1c15387134e29660a52507af7a691c6c136a4f64c57b0f1ed"
 
     url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.csv.second}-Release-#{version.csv.first}/Cockatrice-#{version.csv.third}-#{version.csv.first}-macOS-10.15_Catalina.dmg",
         verified: "github.com/Cockatrice/Cockatrice/"
   end
   on_big_sur :or_newer do
-    sha256 "a200400b24d24c8e3e32f849e23d6714548a203d68a4456cee219901507bcd49"
+    version "2.9.0,2023-09-14,Rings.of.the.Wild"
+    sha256 "4524c5b95928e88073d1f8be46d881288d6d0bf07d8e65185fbebc0491f29e08"
 
-    url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.csv.second}-Release-#{version.csv.first}/Cockatrice-#{version.csv.third}-#{version.csv.first}-macOS-11.0_Big_Sur.dmg",
+    url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.csv.second}-Release-#{version.csv.first}/Cockatrice-#{version.csv.third}-#{version.csv.first}-macOS-11_Big_Sur.dmg",
         verified: "github.com/Cockatrice/Cockatrice/"
   end
 
