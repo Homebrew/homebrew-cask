@@ -1,7 +1,6 @@
 cask "cockatrice" do
-  version "2.8.0,2021-01-26,Prismatic.Bridge"
-
   on_mojave :or_older do
+    version "2.8.0,2021-01-26,Prismatic.Bridge"
     sha256 "53a4db3e3b97196b42c20959da701de5713f0811907d07ba187192f53fccef1d"
 
     url "https://github.com/Cockatrice/Cockatrice/releases/download/#{version.csv.second}-Release-#{version.csv.first}/Cockatrice-#{version.csv.third}-#{version.csv.first}-macOS-10.14_Mojave.dmg",
