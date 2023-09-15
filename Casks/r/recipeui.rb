@@ -1,9 +1,9 @@
 cask "recipeui" do
   arch arm: "aarch64", intel: "universal"
 
-  version "0.8.0"
-  sha256 arm:   "f961d802c5b83bd47baee5f0da7bd9607885a428eec18db7ea96163266b86df0",
-         intel: "6299d0ef268e7c68a22f1ec12872d41f62ae052620d3cd707e4702c371ca7f86"
+  version "0.8.1"
+  sha256 arm:   "73ca70020a2df7f0457cd1d4029f7caf6caebc66adab6d37289b4e2d7c67ba89",
+         intel: "eb2af2d62f672d2417eb663906d9135328305c80d2078c24555b7084d0f3d64c"
 
   url "https://github.com/RecipeUI/RecipeUI/releases/download/app-v#{version}/RecipeUI_#{arch}.app.tar.gz",
       verified: "github.com/RecipeUI/RecipeUI/"
