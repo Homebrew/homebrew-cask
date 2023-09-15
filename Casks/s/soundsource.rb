@@ -1,5 +1,5 @@
 cask "soundsource" do
-  version "5.6.0"
+  version "5.6.1"
   sha256 :no_check
 
   url "https://rogueamoeba.com/soundsource/download/SoundSource.zip"
@@ -13,7 +13,7 @@ cask "soundsource" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "SoundSource.app"
 
