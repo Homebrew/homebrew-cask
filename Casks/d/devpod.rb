@@ -15,6 +15,15 @@ cask "devpod" do
   depends_on macos: ">= :high_sierra"
 
   app "DevPod.app"
+  binary "#{appdir}/DevPod.app/Contents/MacOS/devpod-cli", target: "devpod"
 
-  zap trash: "~/.devpod"
+  zap trash: [
+    "~/.devpod",
+    "~/Library/Application Support/sh.loft.devpod",
+    "~/Library/Caches/sh.loft.devpod",
+    "~/Library/Logs/sh.loft.devpod",
+    "~/Library/Preferences/sh.loft.devpod.plist",
+    "~/Library/Saved Application State/sh.loft.devpod.savedState",
+    "~/Library/WebKit/sh.loft.devpod",
+  ]
 end
