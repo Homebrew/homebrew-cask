@@ -1,7 +1,7 @@
 cask "eclipse-modeling" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "4.28.0,2023-09"
+  version "4.29.0,2023-09"
   sha256 arm:   "5ad2dd4243a05facd56bee42aeac7332c184ecf306c33e72b83d57776b5b1d06",
          intel: "4897c5c1f971341165e001016dbb96733899ed2f23a086cdb2a08115939b4fa8"
 
