@@ -1,9 +1,9 @@
 cask "clash-for-windows" do
   arch arm: "-arm64"
 
-  version "0.20.34"
-  sha256 arm:   "11ad90ef4077f7223cf34585926c4c6a2960f4155d0626de9d8a46e0877bc9c9",
-         intel: "12891283b563b3d50b87244627fa247f23415545fac5bd2441232d623c84516c"
+  version "0.20.35"
+  sha256 arm:   "fe737950e96c9b6fc61e169a2a9d4099013144846c129c1ddd105870112a7c6d",
+         intel: "2f65bdead085b6e1b0607ba3c924ef484848ff4ecf4ad97017acef8fa9d30af8"
 
   url "https://github.com/Fndroid/clash_for_windows_pkg/releases/download/#{version}/Clash.for.Windows-#{version}#{arch}.dmg"
   name "Clash for Windows"
