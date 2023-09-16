@@ -1,5 +1,5 @@
 cask "binary-ninja" do
-  version "3.4.4271"
+  version "3.5.4526"
   sha256 :no_check
 
   url "https://cdn.binary.ninja/installers/BinaryNinja-demo.dmg"
