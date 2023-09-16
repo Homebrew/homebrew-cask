@@ -15,6 +15,7 @@ cask "applite" do
 
   auto_updates true
   depends_on macos: ">= :ventura"
+  depends_on formula: "pinentry-mac"
 
   app "Applite.app"
 
