@@ -24,15 +24,11 @@ cask "airfoil" do
   ]
 
   zap trash: [
-    "~/Library/Application Support/Airfoil",
-    "~/Library/Application Support/Airfoil Satellite",
-    "~/Library/Caches/com.rogueamoeba.Airfoil",
-    "~/Library/Caches/com.rogueamoeba.AirfoilSpeakers",
-    "~/Library/HTTPStorages/com.rogueamoeba.Airfoil/",
-    "~/Library/HTTPStorages/com.rogueamoeba.AirfoilSpeakers/",
-    "~/Library/Preferences/com.rogueamoeba.Airfoil.plist",
-    "~/Library/Preferences/com.rogueamoeba.AirfoilSpeakers.plist",
-    "~/Library/WebKit/com.rogueamoeba.Airfoil/",
-    "~/Library/WebKit/com.rogueamoeba.AirfoilSpeakers/",
+    "~/Library/Application Support/Airfoil*",
+    "~/Library/Caches/com.rogueamoeba.Airfoil*",
+    "~/Library/HTTPStorages/com.rogueamoeba.Airfoil*",
+    "~/Library/Preferences/com.rogueamoeba.Airfoil*.plist",
+    "~/Library/Saved Application State/com.rogueamoeba.Airfoil*",
+    "~/Library/WebKit/com.rogueamoeba.Airfoil*",
   ]
 end
