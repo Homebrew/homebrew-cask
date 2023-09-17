@@ -111,7 +111,7 @@ jobs:
 
       - name: Run brew readall ${{ matrix.tap }}
         id: readall
-        run: brew readall '${{ matrix.tap }}'
+        run: brew readall --os=all --arch=all '${{ matrix.tap }}'
         if: >
           always() &&
           contains(fromJSON('["success", "skipped"]'), steps.gems.outcome) &&
