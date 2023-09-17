@@ -17,21 +17,17 @@ cask "loopback" do
 
   app "Loopback.app"
 
-  uninstall delete: [
-    "~/Library/LaunchAgents/com.rogueamoeba.loopbackd.plist",
-  ], quit: [
-    "com.rogueamoeba.Loopback",
-    "com.rogueamoeba.loopbackd",
-  ]
+  uninstall delete: "~/Library/LaunchAgents/com.rogueamoeba.loopbackd.plist",
+            quit:   [
+              "com.rogueamoeba.Loopback",
+              "com.rogueamoeba.loopbackd",
+            ]
 
   zap trash: [
     "~/Library/Application Support/Loopback",
-    "~/Library/Caches/com.rogueamoeba.Loopback",
-    "~/Library/Caches/com.rogueamoeba.loopbackd",
-    "~/Library/HTTPStorages/com.rogueamoeba.Loopback/",
-    "~/Library/HTTPStorages/com.rogueamoeba.loopbackd/",
-    "~/Library/Preferences/com.rogueamoeba.Loopback.plist",
-    "~/Library/Preferences/com.rogueamoeba.loopbackd.plist",
+    "~/Library/Caches/com.rogueamoeba.loop*",
+    "~/Library/HTTPStorages/com.rogueamoeba.loop*",
+    "~/Library/Preferences/com.rogueamoeba.loop*.plist",
     "~/Library/WebKit/com.rogueamoeba.Loopback",
   ]
 end
