@@ -1,9 +1,8 @@
 cask "cloudnet" do
-  version "1.36.2.0"
-  sha256 :no_check
+  version "1.36.2.1"
+  sha256 "53489f77226b4fa55fcefeed68dfeb66e289e3307cfaaa298a4895488dfac6ac"
 
-  url "https://pkgs.cloudnet.world/stable/macos/CloudNet.dmg",
-      verified: "pkgs.cloudnet.world/stable/macos/"
+  url "https://pkgs.cloudnet.world/stable/macos/CloudNet_v#{version}.dmg"
   name "CloudNet for Mac client"
   desc "Professional and easy-to-use enterprise-level meshVPN product"
   homepage "https://cloudnet.world/"
@@ -16,25 +15,24 @@ cask "cloudnet" do
   end
 
   auto_updates true
+  conflicts_with formula: "dayunet2009/tap/cloudnet"
   depends_on macos: ">= :catalina"
 
   app "CloudNet.app"
-
   installer script: {
-    executable: "/Applications/CloudNet.app/Contents/Resources/cloudnetd.sh",
+    executable: "CloudNet.app/Contents/Resources/cnet",
     args:       ["install"],
     sudo:       true,
   }
 
-  # osascript -e 'id of app "CloudNet"'
-  uninstall quit: "world.cloudnet.client",
+  uninstall quit:      "world.cloudnet.client",
             launchctl: "world.cloudnet.client.cloudnetd",
             script:    {
-              executable: "/Applications/CloudNet.app/Contents/Resources/cloudnetd.sh",
-              args:       ["remove"],
-              input:      ["Y\n"],
+              executable: "CloudNet.app/Contents/Resources/cnet",
+              args:       ["uninstall"],
               sudo:       true,
-            }
+            },
+            delete:    "/Applications/CloudNet.app"
 
   zap trash: [
     "/Library/LaunchDaemons/world.cloudnet.client.cloudnetd.plist",
