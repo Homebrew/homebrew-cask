@@ -5,7 +5,7 @@ cask "audio-hijack" do
   url "https://rogueamoeba.com/audiohijack/download/AudioHijack.zip"
   name "Audio Hijack"
   desc "Records audio from any application"
-  homepage "https://www.rogueamoeba.com/audiohijack/"
+  homepage "https://rogueamoeba.com/audiohijack/"
 
   livecheck do
     url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=1231&bundleid=com.rogueamoeba.audiohijack&platform=osx&version=#{version.no_dots}8000"
@@ -17,9 +17,13 @@ cask "audio-hijack" do
 
   app "Audio Hijack.app"
 
+  uninstall quit: "com.rogueamoeba.audiohijack"
+
   zap trash: [
-    "~/Library/Application Support/Audio Hijack",
-    "~/Library/Preferences/com.rogueamoeba.audiohijack#{version.major}.plist",
-    "~/Music/Audio Hijack",
+    "~/Library/Application Support/Audio Hijack #{version.major}",
+    "~/Library/Caches/com.rogueamoeba.audiohijack/",
+    "~/Library/HTTPStorages/com.rogueamoeba.audiohijack/",
+    "~/Library/Preferences/com.rogueamoeba.audiohijack.plist",
+    "~/Library/WebKit/com.rogueamoeba.audiohijack/",
   ]
 end
