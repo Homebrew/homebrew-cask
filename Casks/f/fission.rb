@@ -12,12 +12,16 @@ cask "fission" do
     strategy :sparkle
   end
 
+  auto_updates true
   depends_on macos: ">= :big_sur"
 
   app "Fission.app"
 
+  uninstall quit: "com.rogueamoeba.Fission"
+
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.rogueamoeba.fission.sfl2",
+    "~/Library/Application Support/Fission/",
     "~/Library/Caches/com.rogueamoeba.Fission",
     "~/Library/HTTPStorages/com.rogueamoeba.Fission",
     "~/Library/Preferences/com.rogueamoeba.Fission.plist",
