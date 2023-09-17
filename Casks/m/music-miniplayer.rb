@@ -13,7 +13,7 @@ cask "music-miniplayer" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Music MiniPlayer.app"
 
