@@ -24,6 +24,7 @@ cask "farrago" do
     "~/Library/Caches/com.rogueamoeba.farrago",
     "~/Library/HTTPStorages/com.rogueamoeba.farrago",
     "~/Library/Preferences/com.rogueamoeba.farrago.plist",
+    "~/Library/Saved Application State/com.rogueamoeba.farrago.savedState",
     "~/Library/WebKit/com.rogueamoeba.farrago",
   ]
 end
