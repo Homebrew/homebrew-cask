@@ -5,24 +5,30 @@ cask "duet" do
 
     livecheck do
       url "https://updates.duetdisplay.com/latestMac"
+      regex(/duet[._-]v?(\d+(?:-\d+)+)\.zip/i)
       strategy :header_match do |headers|
-        headers["location"][/duet[._-]v?(\d+(?:-\d+)+)\.zip/i, 1].tr("-", ".")
+        headers["location"].scan(regex).map do |match|
+          match[0].tr("-", ".").to_s
+        end
       end
     end
   end
   on_big_sur :or_newer do
-    version "3.10.0.0"
-    sha256 "2ed19139c5b031571e50531e17a41d2c4d09c621c90a91c95c2b05f2014cb331"
+    version "3.11.0.0"
+    sha256 "98c78849b77df18a29b33a6da755a0039aef8aa884d8737d5cafce2a4507bd6d"
 
     livecheck do
       url "https://updates.duetdisplay.com/AppleSilicon"
-      strategy :header_match do |headers|
-        headers["location"][/duet[._-]v?(\d+(?:-\d+)+)\.zip/i, 1].tr("-", ".")
+      regex(/duet[._-]v?(\d+(?:-\d+)+)\.zip/i)
+      strategy :header_match do |headers, regex|
+        headers["location"].scan(regex).map do |match|
+          match[0].tr("-", ".").to_s
+        end
       end
     end
   end
 
-  url "https://duetdownload.com/Mac/#{version.major_minor.dots_to_underscores}/duet-#{version.dots_to_hyphens}.zip",
+  url "https://duetdownload.com/Mac/#{version.major}_x/duet-#{version.dots_to_hyphens}.zip",
       verified: "duetdownload.com/Mac/"
   name "Duet"
   desc "Remote desktop and second display tool"
