@@ -17,12 +17,13 @@ cask "farrago" do
 
   app "Farrago.app"
 
+  uninstall quit: "com.rogueamoeba.farrago"
+
   zap trash: [
     "~/Library/Application Support/Farrago #{version.major}",
     "~/Library/Caches/com.rogueamoeba.farrago",
     "~/Library/HTTPStorages/com.rogueamoeba.farrago",
     "~/Library/Preferences/com.rogueamoeba.farrago.plist",
-    "~/Library/Saved Application State/com.rogueamoeba.farrago.savedState",
     "~/Library/WebKit/com.rogueamoeba.farrago",
   ]
 end
