@@ -17,6 +17,8 @@ cask "farrago" do
 
   app "Farrago.app"
 
+  uninstall quit: "com.rogueamoeba.farrago"
+
   zap trash: [
     "~/Library/Application Support/Farrago #{version.major}",
     "~/Library/Caches/com.rogueamoeba.farrago",
