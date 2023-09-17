@@ -17,9 +17,12 @@ cask "soundsource" do
 
   app "SoundSource.app"
 
+  uninstall quit: "com.rogueamoeba.soundsource"
+
   zap trash: [
     "~/Library/Application Support/SoundSource",
     "~/Library/Caches/com.rogueamoeba.soundsource",
+    "~/Library/HTTPStorages/com.rogueamoeba.soundsource",
     "~/Library/Preferences/com.rogueamoeba.soundsource.plist",
     "~/Library/WebKit/com.rogueamoeba.soundsource",
   ]
