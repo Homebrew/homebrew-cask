@@ -1,16 +1,12 @@
 cask "soduto" do
-  version "1.0.1"
-  sha256 "ccd412fce497bb9b7822fc702c65792b5354711b6dfc1e028fb12cd7f202931f"
+  version "2.0.3-nightly"
+  sha256 "d0e7350b14e87253f93be36b6a04ee80831d8636b60a74fbf1d6ac0e455a6392"
 
-  url "https://soduto.com/downloads/Soduto_v#{version}.dmg"
+  url "https://github.com/sannidhyaroy/Soduto/releases/download/v#{version}/Soduto.Nightly.dmg",
+      verified: "github.com/sannidhyaroy/Soduto/"
   name "Soduto"
   desc "Communicate and share information between devices"
-  homepage "https://soduto.com/"
-
-  livecheck do
-    url "https://soduto.com/downloads/"
-    regex(%r{href=.*?/Soduto_v?(\d+(?:\.\d+)*)\.dmg}i)
-  end
+  homepage "https://soduto.thenoton.com/"
 
   depends_on macos: ">= :sierra"
 
