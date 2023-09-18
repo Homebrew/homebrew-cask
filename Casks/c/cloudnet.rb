@@ -15,7 +15,6 @@ cask "cloudnet" do
   end
 
   auto_updates true
-  conflicts_with formula: "dayunet2009/tap/cloudnet"
   depends_on macos: ">= :catalina"
 
   app "CloudNet.app"
