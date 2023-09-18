@@ -1,7 +1,7 @@
 cask "reqable" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.4.1"
+  version "1.4.1,43"
   sha256 arm:   "fbbb5ae8bb1cbb5a07cc961c56d74025f007f1f25d08e5eea1b66d5df8e1f831",
          intel: "dfcfb2bd5b353c7f72ec3747cdfcebdad7de1c9e077d90365df4157abbbc93f7"
 
