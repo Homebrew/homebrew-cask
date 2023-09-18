@@ -12,7 +12,7 @@ cask "reqable" do
 
   livecheck do
     url "https://api.reqable.com/version/appcast?platform=macos&arch=#{arch}&locale=en-US"
-    strategy :sparkle, &:short_version
+    strategy :sparkle
   end
 
   auto_updates true
