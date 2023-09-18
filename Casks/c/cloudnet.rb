@@ -4,14 +4,12 @@ cask "cloudnet" do
 
   url "https://pkgs.cloudnet.world/stable/macos/CloudNet_v#{version}.dmg"
   name "CloudNet for Mac client"
-  desc "Professional and easy-to-use enterprise-level meshVPN product"
+  desc "Enterprise-level meshVPN cloud service"
   homepage "https://cloudnet.world/"
 
-  # This appcast is slower to update than the submissions we get. See:
-  #   https://github.com/Homebrew/homebrew-cask/pull/90907#issuecomment-710107547
   livecheck do
     url "https://pkgs.cloudnet.world/stable/appcast.xml"
-    strategy :sparkle, &:version
+    strategy :sparkle
   end
 
   auto_updates true
@@ -31,12 +29,14 @@ cask "cloudnet" do
               args:       ["uninstall"],
               sudo:       true,
             },
-            delete:    "/Applications/CloudNet.app"
+            delete:    [
+              "/Applications/CloudNet.app",
+              "/Library/LaunchDaemons/world.cloudnet.client.cloudnetd.plist",
+            ]
 
   zap trash: [
-    "/Library/LaunchDaemons/world.cloudnet.client.cloudnetd.plist",
-    "~/Library/Preferences/world.cloudnet.client.cloudnetd.plist",
     "~/Library/Containers/world.cloudnet.client",
     "~/Library/Group Containers/$(TeamIdentifierPrefix)world.cloudnet.client",
+    "~/Library/Preferences/world.cloudnet.client.cloudnetd.plist",
   ]
 end
