@@ -18,7 +18,7 @@ cask "zoom" do
   auto_updates true
   conflicts_with cask: "zoom-for-it-admins"
 
-  pkg "Zoom.pkg"
+  pkg "zoomusInstallerFull.pkg"
 
   postflight do
     # Description: Ensure console variant of postinstall is non-interactive.
