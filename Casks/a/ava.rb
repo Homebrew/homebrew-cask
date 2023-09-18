@@ -4,13 +4,13 @@ cask "ava" do
 
   url "https://s3.amazonaws.com/www.avapls.com/Ava_#{version}.dmg",
       verified: "s3.amazonaws.com/www.avapls.com/"
-  name "ava"
-  desc "Desktop application for running language models locally on your computer"
+  name "Ava"
+  desc "Run language models locally on your computer"
   homepage "https://www.avapls.com/"
 
   livecheck do
     url :homepage
-    regex(/href=.*?Ava[._-]v?(\d+(?:-\d+)+)\.dmg/i)
+    regex(/href=.*?Ava[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
   end
 
   app "Ava.app"
