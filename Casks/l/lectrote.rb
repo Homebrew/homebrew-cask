@@ -1,6 +1,6 @@
 cask "lectrote" do
-  version "1.4.4"
-  sha256 "e26021a39463dd7d06b94f3c97eb8b97e1a9ab79aeb4edfef39857ff073dd668"
+  version "1.4.5"
+  sha256 "e0aca6c4348e9e96a45a81c4f38a937686f59f492d391d626fcb9f8791a63b4f"
 
   url "https://github.com/erkyrath/lectrote/releases/download/lectrote-#{version}/Lectrote-#{version}-macos-universal.dmg"
   name "lectrote"
