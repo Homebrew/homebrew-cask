@@ -24,6 +24,7 @@ cask "transmit" do
     "~/Library/Caches/com.panic.Transmit",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.panic.Transmit",
     "~/Library/Caches/Transmit",
+    "~/Library/HTTPStorages/com.panic.Transmit",
     "~/Library/Preferences/com.panic.Transmit.plist",
     "~/Library/Saved Application State/com.panic.Transmit.savedState",
     "~/Library/WebKit/com.panic.Transmit",
