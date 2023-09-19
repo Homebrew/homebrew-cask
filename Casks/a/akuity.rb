@@ -19,3 +19,4 @@ cask "akuity" do
 
   zap trash: "~/.config/akuity"
 end
+test
