@@ -1,9 +1,9 @@
 cask "graalvm-jdk" do
   arch arm: "aarch64", intel: "x64"
 
-  version "20.0.2"
-  sha256 arm:   "f1b1068672feef3dc66cba8ccccc14d623b26e284870a156bb10ea3ea51af706",
-         intel: "72c74c3702437824cba3db3435897cce3643e9443acac59f6cfd43f9444b1004"
+  version "21"
+  sha256 arm:   "c2ca434adef1e497c8a4d942ae1dbf6bbd1c8174a6fcdafc65cde0e853285300",
+         intel: "0744ab104998f8f45d9ae582134963f5d273286dff9aff586aed24f5f8434660"
 
   url "https://download.oracle.com/graalvm/#{version.major}/archive/graalvm-jdk-#{version}_macos-#{arch}_bin.tar.gz",
       verified: "download.oracle.com/"
@@ -13,10 +13,10 @@ cask "graalvm-jdk" do
 
   livecheck do
     url "https://www.oracle.com/java/technologies/downloads/"
-    regex(/graalvm\s+for\s+jdk\s+(\d+(?:\.\d+)+)/i)
+    regex(/graalvm\s+for\s+jdk\s+(\d+(?:\.\d+)?)/i)
   end
 
-  artifact "graalvm-jdk-#{version}+9.1", target: "/Library/Java/JavaVirtualMachines/graalvm-#{version.major}.jdk"
+  artifact "graalvm-jdk-#{version}+35.1", target: "/Library/Java/JavaVirtualMachines/graalvm-#{version.major}.jdk"
 
   # No zap stanza required
 
