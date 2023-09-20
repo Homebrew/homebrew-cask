@@ -1,5 +1,5 @@
 cask "replay" do
-  version "91.13.1,9123.6.9"
+  version "91.13.1,9123.9.19"
   sha256 :no_check
 
   url "https://static.replay.io/downloads/replay.dmg"
