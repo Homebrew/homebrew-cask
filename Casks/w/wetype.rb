@@ -1,6 +1,6 @@
 cask "wetype" do
-  version "0.9.8,198"
-  sha256 "d27c39beeb2b4d1ce8da2af48417465539d321f25f4249ad4034d62f48bb6836"
+  version "0.9.8,201"
+  sha256 "694b027f6ce4246c15ddc418cdfd758c3f0a87af7ca61db098936a5b3ab8db45"
 
   url "https://wetype.wxqcloud.qq.com/app/mac/#{version.csv.first}/WeTypeInstaller_#{version.csv.first}_#{version.csv.second}.zip"
   name "WeType"
@@ -11,6 +11,7 @@ cask "wetype" do
     skip "No reliable way to get version info"
   end
 
+  auto_updates true
   depends_on macos: ">= :catalina"
 
   installer manual: "WeTypeInstaller_#{version.csv.first}_#{version.csv.second}.app"
