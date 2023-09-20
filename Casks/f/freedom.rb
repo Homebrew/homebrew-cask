@@ -1,6 +1,6 @@
 cask "freedom" do
-  version "2.19.1"
-  sha256 "7bb2d386c6a8de10f7db01f66703994bbb6c769854f93076319a8957baf23bfa"
+  version "2.19.2"
+  sha256 "b7d01dc06aff99ada9fa0ab5f1e94035e42f47ee04e97cb09b41e8c584f3b91e"
 
   url "https://cdn.freedom.to/installers/updates/mac/#{version}/Freedom.zip"
   name "Freedom"
@@ -13,7 +13,7 @@ cask "freedom" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Freedom.app"
 
