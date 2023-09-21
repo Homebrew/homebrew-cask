@@ -1,11 +1,16 @@
 cask "clinq" do
-  version :latest
+  version "1.6.13"
   sha256 :no_check
 
   url "https://desktop.download.clinq.com/clinq-desktop.dmg"
-  name "Clinq"
-  desc "Softphone"
-  homepage "https://clinq.com/"
+  name "CLINQ"
+  desc "softphone for making telephone calls over the internet"
+  homepage "https://clinq.com/download/"
+
+  livecheck do
+    url :url
+    strategy :extract_plist
+  end
 
   depends_on macos: ">= :high_sierra"
 
