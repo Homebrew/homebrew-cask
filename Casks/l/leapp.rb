@@ -1,9 +1,9 @@
 cask "leapp" do
   arch arm: "-arm64"
 
-  version "0.20.0"
-  sha256 arm:   "30681e29c1599a2729edcc26c0c86d8d07c045fbbef029cd1238c7d6df3235d7",
-         intel: "84ff31469ae0b2eae8abc9daa27ec1514c8a5179a7ac1b5f3b1caececf3d6fef"
+  version "0.20.1"
+  sha256 arm:   "64ac26a3154707d46fd4f968030383deb894aa3feb5c33a2ee1b9ae1e90b080f",
+         intel: "8c074c0aef32b722b30aac25678b5a788e07266665eae31096aea25588073321"
 
   url "https://asset.noovolari.com/#{version}/Leapp-#{version}#{arch}.dmg",
       verified: "asset.noovolari.com/"
