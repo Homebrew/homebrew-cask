@@ -4,7 +4,7 @@ cask "clinq" do
 
   url "https://desktop.download.clinq.com/clinq-desktop.dmg"
   name "CLINQ"
-  desc "softphone for making telephone calls over the internet"
+  desc "Softphone for making telephone calls over the internet"
   homepage "https://clinq.com/download/"
 
   livecheck do
