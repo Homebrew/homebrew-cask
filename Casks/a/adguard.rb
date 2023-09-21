@@ -1,6 +1,6 @@
 cask "adguard" do
-  version "2.11.0.1292"
-  sha256 "7d1ae76e25a950a40901a69e8a07856050e74c5f38755269a0518d0eead1e454"
+  version "2.12.0.1385"
+  sha256 "48e41d4049dc84f48ccaab2e458b718f389b0d2ebb5fc8834816369d890bc1c1"
 
   url "https://static.adguard.com/mac/release/AdGuard-#{version}.dmg"
   name "AdGuard"
@@ -16,7 +16,7 @@ cask "adguard" do
 
   auto_updates true
   conflicts_with cask: "homebrew/cask-versions/adguard-nightly"
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   pkg "AdGuard.pkg"
 
@@ -25,6 +25,7 @@ cask "adguard" do
             launchctl: [
               "com.adguard.mac.adguard.pac",
               "com.adguard.mac.adguard.tun-helper",
+              "com.adguard.mac.adguard.xpcgate2",
             ],
             delete:    [
               "/Library/com.adguard.mac.adguard.pac",
