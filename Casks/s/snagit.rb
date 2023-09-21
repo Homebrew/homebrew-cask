@@ -1,6 +1,6 @@
 cask "snagit" do
-  version "2023.2.2"
-  sha256 "7b939f1a6d0ff73a58848f3ef66a7406abcca93491a8f8ba134efb254dfb122e"
+  version "2023.2.3"
+  sha256 "587a2b84b1da1170e9da78a40d1c49a5b07e21527f5085b83fab67f2b7f51194"
 
   url "https://download.techsmith.com/snagitmac/releases/#{version.major[-2..]}#{version.minor_patch.no_dots}/snagit.dmg"
   name "Snagit"
