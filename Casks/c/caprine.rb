@@ -1,8 +1,11 @@
 cask "caprine" do
-  version "2.58.1"
-  sha256 "6afa13a8333673b52870a9a9a58a8c5e6788873f232b770b5630c86340604bb6"
+  arch arm: "-arm64", intel: ""
 
-  url "https://github.com/sindresorhus/caprine/releases/download/v#{version}/Caprine-#{version}.dmg"
+  version "2.58.1"
+  sha256 arm:   "945a69300fb6c3fd09474fe38c80a427ea6a7d96bb590a37cf3791bbd8232550",
+         intel: "6afa13a8333673b52870a9a9a58a8c5e6788873f232b770b5630c86340604bb6"
+
+  url "https://github.com/sindresorhus/caprine/releases/download/v#{version}/Caprine-#{version}#{arch}.dmg"
   name "Caprine"
   desc "Elegant Facebook Messenger desktop app"
   homepage "https://github.com/sindresorhus/caprine"
