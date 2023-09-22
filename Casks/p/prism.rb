@@ -8,8 +8,8 @@ cask "prism" do
   homepage "https://graphpad.com/"
 
   livecheck do
-    url "https://licenses.graphpad.com/updates?&version=#{version}&configuration=full&platform=Mac&osVersion=13"
-    strategy :sparkle, &:short_version
+    url "https://www.graphpad.com/updates"
+    regex(/"version":"(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
@@ -18,7 +18,7 @@ cask "prism" do
   app "Prism #{version.major}.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.graphpad.prism.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.graphpad.prism.sfl*",
     "~/Library/Application Support/GraphPad",
     "~/Library/Caches/com.GraphPad.Prism",
     "~/Library/HTTPStorages/com.GraphPad.Prism",
