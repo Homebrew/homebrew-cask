@@ -9,8 +9,8 @@ cask "boxcryptor" do
     end
   end
   on_big_sur :or_newer do
-    version "3.12.379"
-    sha256 "23ebb0b1123ca16eeac5500a34708d110d9255ce068bee681b76dab4a1385855"
+    version "3.13.680"
+    sha256 "b2f4ba62013636bd2db3685eb7c3d9dae3a919eee25b09945ccdc95a9146b05d"
 
     livecheck do
       url "https://www.boxcryptor.com/l/download-macosx"
