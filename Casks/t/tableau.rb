@@ -24,10 +24,13 @@ cask "tableau" do
     "com.simba.sqlserverodbc",
     "com.tableausoftware.Desktop.app",
     "com.tableausoftware.DesktopShortcut",
-    "com.tableausoftware.FLEXNet.11.*",
+    "com.tableausoftware.extensions",
+    "com.tableausoftware.FLEXNet.*",
     "com.tableausoftware.mysql",
+    "com.tableausoftware.networkExtensions",
     "com.tableausoftware.oracle",
     "com.tableausoftware.postgresql",
+    "com.tableausoftware.telemetry",
     "simba.sparkodbc",
   ]
 
