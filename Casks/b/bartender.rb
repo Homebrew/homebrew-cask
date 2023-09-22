@@ -1,6 +1,6 @@
 cask "bartender" do
-  version "4.2.21"
-  sha256 "28be16cbc69d1a2626c5a0e4846263c286d4e6cce95b68fb39b807ca9d360e8c"
+  version "4.2.25"
+  sha256 "7e594d4955808df139bc3aa4a408a8bacbfdb64e18970e843d381eadce487299"
 
   url "https://macbartender.com/B2/updates/#{version.major}-#{version.minor}-#{version.patch.rjust(1, "0")}/Bartender%20#{version.major}.dmg",
       referer: "https://www.macbartender.com"
