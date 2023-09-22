@@ -18,7 +18,7 @@ cask "batteryboi" do
   app "BatteryBoi.app"
 
   zap trash: [
-    "~/Application Support/BatteryBoi",
+    "~/Library/Application Support/BatteryBoi",
     "~/Library/Caches/com.ovatar.batteryapp",
     "~/Library/HTTPStorages/com.ovatar.batteryapp",
     "~/Library/Preferences/com.ovatar.batteryapp.plist",
