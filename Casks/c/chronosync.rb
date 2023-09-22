@@ -8,8 +8,8 @@ cask "chronosync" do
   homepage "https://www.econtechnologies.com/"
 
   livecheck do
-    url "https://www.econtechnologies.com/UC/updatecheck.php?prod=ChronoSync&lang=en&plat=mac&os=10.14.1&hw=i64&req=1&vers=#{version}"
-    regex(/VERSION=(\d+(?:\.\d+)+)/i)
+    url "https://www.econtechnologies.com/chronosync/whats-new.html"
+    regex(/ChronoSync\s(\d+(?:\.\d+)+)/i)
   end
 
   depends_on macos: ">= :sierra"
@@ -17,15 +17,15 @@ cask "chronosync" do
   pkg "Install.pkg"
 
   uninstall quit:    [
-              "com.econtechnologies.chronosync",
               "com.econtechnologies.backgrounder.chronosync",
+              "com.econtechnologies.chronosync",
             ],
             pkgutil: "com.econtechnologies.pkg.ChronoSyncApplication"
 
   zap trash: [
-    "~/Library/Saved Application State/com.econtechnologies.chronosync.savedState",
+    "~/Library/Logs/ChronoSync",
     "~/Library/Preferences/com.econtechnologies.backgrounder.chronosync.plist",
     "~/Library/Preferences/com.econtechnologies.chronosync.plist",
-    "~/Library/Logs/ChronoSync",
+    "~/Library/Saved Application State/com.econtechnologies.chronosync.savedState",
   ]
 end
