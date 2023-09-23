@@ -18,6 +18,8 @@ cask "day-o" do
     skip "Version information not available"
   end
 
+  depends_on macos: ">= :catalina"
+
   app "Day-#{version.major_minor}/Day-O.app"
 
   zap trash: "~/Library/Preferences/com.shauninman.Day-O.plist"
