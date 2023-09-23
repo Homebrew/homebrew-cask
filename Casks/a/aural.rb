@@ -7,6 +7,8 @@ cask "aural" do
   desc "Audio player inspired by Winamp"
   homepage "https://github.com/maculateConception/aural-player"
 
+  depends_on macos: ">= :high_sierra"
+
   app "Aural.app"
 
   zap trash: "~/Library/Preferences/anon.Aural.plist"

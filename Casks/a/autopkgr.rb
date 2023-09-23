@@ -8,5 +8,7 @@ cask "autopkgr" do
   desc "Install and configure AutoPkg"
   homepage "https://www.lindegroup.com/autopkgr"
 
+  depends_on macos: ">= :high_sierra"
+
   app "AutoPkgr.app"
 end
