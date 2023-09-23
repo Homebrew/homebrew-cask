@@ -11,6 +11,8 @@ cask "bruno" do
   desc "Opensource IDE for exploring and testing api's"
   homepage "https://www.usebruno.com/"
 
+  depends_on macos: ">= :high_sierra"
+
   app "Bruno.app"
 
   zap trash: [
