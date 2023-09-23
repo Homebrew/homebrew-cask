@@ -10,6 +10,8 @@ cask "archipelago" do
   desc "Terminal emulator built on web technology"
   homepage "https://github.com/npezza93/archipelago"
 
+  depends_on macos: ">= :high_sierra"
+
   app "Archipelago.app"
 
   zap trash: [

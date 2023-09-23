@@ -7,6 +7,8 @@ cask "ariang" do
   desc "Better aria2 desktop frontend than AriaNg"
   homepage "https://github.com/mayswind/AriaNg-Native"
 
+  depends_on macos: ">= :high_sierra"
+
   app "AriaNg Native.app"
 
   zap trash: [

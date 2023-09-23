@@ -12,6 +12,8 @@ cask "asset-catalog-tinkerer" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :mojave"
+
   app "Asset Catalog Tinkerer.app"
 
   zap trash: [
