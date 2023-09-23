@@ -30,6 +30,7 @@ cask "couchbase-server-enterprise" do
   homepage "https://www.couchbase.com/"
 
   conflicts_with cask: "couchbase-server-community"
+  depends_on macos: ">= :catalina"
 
   zap trash: [
     "~/Library/Application Support/Couchbase",
