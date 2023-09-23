@@ -11,6 +11,8 @@ cask "akiflow" do
     skip "Constantly changes between download page and direct download"
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Akiflow.app"
 
   zap trash: [

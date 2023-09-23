@@ -15,5 +15,7 @@ cask "airmedia" do
     end
   end
 
+  depends_on macos: ">= :sierra"
+
   app "Crestron AirMedia.app"
 end
