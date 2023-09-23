@@ -1,6 +1,6 @@
 cask "hackintool" do
-  version "3.9.8"
-  sha256 "48de98a80408ca4d98b98d29847efde391bc9f620bcaa3d28d6d946a2fd60647"
+  version "4.0.2"
+  sha256 "b92d00ba8e89d5fc6f5321e7cb33153567a010204629d10068a412af718cacfc"
 
   url "https://github.com/headkaze/Hackintool/releases/download/#{version}/Hackintool.zip"
   name "Hackintool"
