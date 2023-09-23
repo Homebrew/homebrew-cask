@@ -13,6 +13,8 @@ cask "ankerwork" do
     strategy :extract_plist
   end
 
+  depends_on macos: ">= :mojave"
+
   app "AnkerWork.app"
 
   zap trash: "~/Library/Application Support/AnkerWork"
