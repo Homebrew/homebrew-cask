@@ -12,6 +12,8 @@ cask "betaflight-configurator" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Betaflight Configurator.app"
 
   zap trash: [
