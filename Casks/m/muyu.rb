@@ -20,13 +20,13 @@ cask "muyu" do
   uninstall quit: "fun.thriller.BreakIt"
 
   zap trash: [
+    "~/Library/Application Scripts/fun.thriller.BreakIt",
+    "~/Library/Application Scripts/fun.thriller.BreakItLoginItem",
+    "~/Library/Caches/fun.thriller.BreakIt",
     "~/Library/Containers/fun.thriller.BreakIt",
     "~/Library/Containers/fun.thriller.BreakItLoginItem",
     "~/Library/Containers/org.sparkle-project.Downloader/Data/Library/Caches/fun.thriller.BreakIt",
     "~/Library/Containers/fun.thriller.BreakIt/Data/Library/Saved Application State/fun.thriller.BreakIt.savedState",
     "~/Library/Preferences/fun.thriller.BreakIt.plist",
-    "~/Library/Application Scripts/fun.thriller.BreakIt",
-    "~/Library/Application Scripts/fun.thriller.BreakItLoginItem",
-    "~/Library/Caches/fun.thriller.BreakIt",
   ]
 end
