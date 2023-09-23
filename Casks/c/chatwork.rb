@@ -12,6 +12,8 @@ cask "chatwork" do
     strategy :extract_plist
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "ChatWork.app"
 
   zap trash: [

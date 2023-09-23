@@ -12,6 +12,7 @@ cask "chatbox" do
   homepage "https://chatboxapp.xyz/"
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "chatbox.app"
 
