@@ -56,6 +56,7 @@ cask "coteditor" do
   homepage "https://coteditor.com/"
 
   auto_updates true
+  depends_on macos: ">= :monterey"
 
   app "CotEditor.app"
   binary "#{appdir}/CotEditor.app/Contents/SharedSupport/bin/cot"
