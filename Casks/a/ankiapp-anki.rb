@@ -12,6 +12,8 @@ cask "ankiapp-anki" do
     strategy :extract_plist
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "AnkiApp.app"
 
   zap trash: [

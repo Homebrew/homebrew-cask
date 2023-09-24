@@ -17,6 +17,7 @@ cask "alex313031-thorium" do
   end
 
   conflicts_with cask: "thorium"
+  depends_on macos: ">= :high_sierra"
 
   app "Thorium.app"
 

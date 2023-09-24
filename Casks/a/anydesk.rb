@@ -12,6 +12,8 @@ cask "anydesk" do
     regex(/>v(\d+(?:\.\d+)+)[\s<]/i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "AnyDesk.app"
 
   uninstall quit:   [

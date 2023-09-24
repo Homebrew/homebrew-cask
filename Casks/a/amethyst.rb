@@ -27,6 +27,7 @@ cask "amethyst" do
   homepage "https://ianyh.com/amethyst/"
 
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "Amethyst.app"
 
