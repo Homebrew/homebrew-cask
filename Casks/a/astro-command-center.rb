@@ -11,6 +11,8 @@ cask "astro-command-center" do
     skip "unversioned QT application"
   end
 
+  depends_on macos: ">= :mojave"
+
   app "ASTRO Command Center.app"
 
   zap trash: [

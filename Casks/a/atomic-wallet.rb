@@ -12,6 +12,8 @@ cask "atomic-wallet" do
     regex(/href=.*?atomicwallet[._-](\d+(?:\.\d+)+[._-]\d+)\.dmg/i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Atomic Wallet.app"
 
   zap trash: "~/Library/Application Support/atomic"
