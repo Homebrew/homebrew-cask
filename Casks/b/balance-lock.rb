@@ -12,6 +12,8 @@ cask "balance-lock" do
     strategy :sparkle, &:short_version
   end
 
+  depends_on macos: ">= :sierra"
+
   app "Balance Lock.app"
 
   zap trash: [

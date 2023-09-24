@@ -12,6 +12,8 @@ cask "balsamiq-wireframes" do
     regex(/"version"\s*:\s*"(\d+(?:\.\d+)+)"/i)
   end
 
+  depends_on macos: ">= :catalina"
+
   app "Balsamiq Wireframes.app"
 
   zap trash: [
