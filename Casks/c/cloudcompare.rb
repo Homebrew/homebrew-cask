@@ -18,5 +18,7 @@ cask "cloudcompare" do
     end
   end
 
+  depends_on macos: ">= :sierra"
+
   app "CloudCompare.app"
 end

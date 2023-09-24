@@ -17,5 +17,7 @@ cask "clock-bar" do
     end
   end
 
+  depends_on macos: ">= :sierra"
+
   app "Clock Bar.app"
 end
