@@ -16,6 +16,8 @@ cask "blisk" do
     regex(/href=.*?BliskInstaller[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Blisk.app"
 
   zap trash: [
