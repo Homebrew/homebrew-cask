@@ -1,8 +1,8 @@
 cask "pdf-reader-pro" do
-  version "2.9.7.0"
+  version "2.9.7"
   sha256 :no_check
 
-  url "https://www.pdfreaderpro.com/downloads/PDFReaderPro.dmg"
+  url "https://www.pdfreaderpro.com/downloads/PDFReaderPro_v#{version}.dmg"
   name "PDF Reader Pro"
   desc "Read, annotate, edit, convert, create, OCR, fill forms and sign PDFs"
   homepage "https://www.pdfreaderpro.com/"
