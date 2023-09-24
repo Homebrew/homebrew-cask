@@ -19,6 +19,8 @@ cask "bluej" do
     end
   end
 
+  depends_on macos: ">= :sierra"
+
   app "BlueJ.app"
 
   zap trash: "~/Library/Preferences/org.bluej"

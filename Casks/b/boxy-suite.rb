@@ -13,6 +13,8 @@ cask "boxy-suite" do
     regex(/Version\s+(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Boxy for Gmail.app"
   app "Boxy for Calendar.app"
   app "Boxy for Keep.app"
