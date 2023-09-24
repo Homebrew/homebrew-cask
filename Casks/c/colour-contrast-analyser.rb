@@ -13,6 +13,8 @@ cask "colour-contrast-analyser" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Colour Contrast Analyser.app"
 
   zap trash: [

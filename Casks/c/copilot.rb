@@ -16,6 +16,8 @@ cask "copilot" do
     end
   end
 
+  depends_on macos: ">= :monterey"
+
   app "Copilot.app"
 
   zap trash: [
