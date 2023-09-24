@@ -26,6 +26,8 @@ cask "egovframe" do
     strategy :page_match
   end
 
+  app app_name
+
   postflight do
     set_ownership "/Applications/#{app_name}"
     system_command "/usr/bin/xattr",
