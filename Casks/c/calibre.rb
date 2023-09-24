@@ -39,6 +39,7 @@ cask "calibre" do
   homepage "https://calibre-ebook.com/"
 
   conflicts_with cask: "homebrew/cask-versions/calibre4"
+  depends_on macos: ">= :catalina"
 
   app "calibre.app"
   binary "#{appdir}/calibre.app/Contents/MacOS/calibre"

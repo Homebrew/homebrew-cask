@@ -12,6 +12,8 @@ cask "camunda-modeler" do
     regex(%r{href=.*?/camunda[._-]?modeler[._-]?v?(\d+(?:\.\d+)+)[._-]?mac\.zip}i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Camunda Modeler.app"
 
   zap trash: [
