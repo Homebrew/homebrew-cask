@@ -20,6 +20,7 @@ cask "dash" do
 
   auto_updates true
   conflicts_with cask: "homebrew/cask-versions/dash6"
+  depends_on macos: ">= :high_sierra"
 
   app "Dash.app"
 
