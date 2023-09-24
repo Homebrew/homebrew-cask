@@ -9,17 +9,16 @@ cask "dropshelf" do
 
   livecheck do
     url :homepage
-    regex(/href=.*?Dropshelf-build-(\d+)\.zip/i)
+    regex(/href=.*?dropshelf[._-]build[._-](\d+)\.zip/i)
   end
+
+  depends_on macos: ">= :catalina"
 
   app "Dropshelf.app"
 
   zap trash: [
-    "~/Library/Application Scripts/6W6K75YWQ9.com.pilotmoon.Dropshelf.group",
-    "~/Library/Application Scripts/com.pilotmoon.Dropshelf",
-    "~/Library/Application Scripts/com.pilotmoon.Dropshelf.launcher",
-    "~/Library/Containers/com.pilotmoon.Dropshelf",
-    "~/Library/Containers/com.pilotmoon.Dropshelf.launcher",
-    "~/Library/Group Containers/6W6K75YWQ9.com.pilotmoon.Dropshelf.group",
+    "~/Library/Application Scripts/*.pilotmoon.Dropshelf*",
+    "~/Library/Containers/com.pilotmoon.Dropshelf*",
+    "~/Library/Group Containers/*.com.pilotmoon.Dropshelf*",
   ]
 end
