@@ -13,4 +13,13 @@ cask "dropshelf" do
   end
 
   app "Dropshelf.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/6W6K75YWQ9.com.pilotmoon.Dropshelf.group",
+    "~/Library/Application Scripts/com.pilotmoon.Dropshelf",
+    "~/Library/Application Scripts/com.pilotmoon.Dropshelf.launcher",
+    "~/Library/Containers/com.pilotmoon.Dropshelf",
+    "~/Library/Containers/com.pilotmoon.Dropshelf.launcher",
+    "~/Library/Group Containers/6W6K75YWQ9.com.pilotmoon.Dropshelf.group",
+  ]
 end
