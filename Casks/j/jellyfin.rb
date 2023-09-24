@@ -1,6 +1,6 @@
 cask "jellyfin" do
-  version "10.8.10"
-  sha256 "c237fdd7e410695991f712a049f8699871467133787973b5a9deb71142b207f2"
+  version "10.8.11"
+  sha256 "8a293c7e7a3719b6fcadfd78b25f7a1e84d653231ab39ba80d5d04b17a5ddfda"
 
   url "https://repo.jellyfin.org/releases/server/macos/stable/installer/jellyfin_#{version}.dmg"
   name "Jellyfin"
