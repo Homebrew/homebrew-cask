@@ -1,6 +1,6 @@
 cask "renamer" do
-  version "6.1.2"
-  sha256 "7718935725aaac3c86c03efe4290f9959811a2ac387a900ed69b3a8163766ac6"
+  version "6.2.0"
+  sha256 "0a3098b7555d0f3f96e2ac16fccabfe2811c722045e6b403f056700314314af6"
 
   url "https://storage.googleapis.com/incrediblebee/apps/Renamer-#{version.major}/Renamer-#{version}.zip",
       verified: "storage.googleapis.com/incrediblebee/"

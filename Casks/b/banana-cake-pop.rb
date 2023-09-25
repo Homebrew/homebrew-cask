@@ -16,6 +16,7 @@ cask "banana-cake-pop" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Banana Cake Pop.app"
 

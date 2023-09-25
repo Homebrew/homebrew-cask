@@ -7,5 +7,7 @@ cask "cemu" do
   name "CEmu"
   homepage "https://ce-programming.github.io/CEmu/"
 
+  depends_on macos: ">= :sierra"
+
   app "CEmu.app"
 end

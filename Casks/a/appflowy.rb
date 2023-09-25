@@ -13,6 +13,8 @@ cask "appflowy" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :mojave"
+
   app "AppFlowy.app"
 
   zap trash: [

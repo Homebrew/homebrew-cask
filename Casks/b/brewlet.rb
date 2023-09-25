@@ -12,6 +12,8 @@ cask "brewlet" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :mojave"
+
   app "Brewlet.app"
 
   zap trash: "~/Library/Preferences/zzada.Brewlet.plist"

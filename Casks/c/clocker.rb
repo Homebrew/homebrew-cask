@@ -8,6 +8,8 @@ cask "clocker" do
   desc "Menu bar timezone tracker and compact calendar"
   homepage "https://abhishekbanthia.com/clocker"
 
+  depends_on macos: ">= :high_sierra"
+
   app "Clocker.app"
 
   uninstall launchctl: "com.abhishek.ClockerHelper",

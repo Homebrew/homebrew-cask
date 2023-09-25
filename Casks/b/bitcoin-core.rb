@@ -15,6 +15,8 @@ cask "bitcoin-core" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :catalina"
+
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "Bitcoin-Qt.app", target: "Bitcoin Core.app"
 

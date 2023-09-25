@@ -22,6 +22,8 @@ cask "datweatherdoe" do
   desc "Menu bar weather app"
   homepage "https://github.com/inderdhir/DatWeatherDoe"
 
+  depends_on macos: ">= :big_sur"
+
   app "DatWeatherDoe.app"
 
   zap trash: "~/Library/Preferences/com.inderdhir.DatWeatherDoe.plist"

@@ -7,5 +7,7 @@ cask "amd-power-gadget" do
   desc "Power management, monitoring and VirtualSMC plugin for AMD processors"
   homepage "https://github.com/trulyspinach/SMCAMDProcessor"
 
+  depends_on macos: ">= :high_sierra"
+
   app "AMD Power Gadget.app"
 end

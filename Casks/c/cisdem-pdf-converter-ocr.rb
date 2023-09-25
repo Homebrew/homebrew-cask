@@ -12,6 +12,8 @@ cask "cisdem-pdf-converter-ocr" do
     regex(/(\d+(?:\.\d+)*)\s+\(\d+(?:-\d+)+\)/i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Cisdem PDF Converter OCR.app"
 
   zap trash: [

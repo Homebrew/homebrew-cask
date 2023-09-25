@@ -14,6 +14,8 @@ cask "bookwright" do
     regex(/["']version["']:\s*?["']v?(\d+(?:\.\d+)+)["']/i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "BookWright.app"
 
   zap trash: [

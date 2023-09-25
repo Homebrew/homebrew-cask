@@ -8,6 +8,8 @@ cask "cerebro" do
   desc "Open-source launcher"
   homepage "https://cerebroapp.vercel.app/"
 
+  depends_on macos: ">= :high_sierra"
+
   app "Cerebro.app"
 
   uninstall quit: "cerebro"

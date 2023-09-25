@@ -20,7 +20,7 @@ cask "apparency" do
     end
   end
   on_big_sur :or_newer do
-    version "1.5.1,285"
+    version "1.6,294"
     sha256 :no_check
 
     url "https://mothersruin.com/software/downloads/Apparency.dmg"

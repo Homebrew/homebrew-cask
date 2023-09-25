@@ -13,6 +13,8 @@ cask "dash-dash" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :catalina"
+
   app "Dash-Qt.app"
 
   preflight do

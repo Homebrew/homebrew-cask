@@ -12,6 +12,7 @@ cask "aethersx2" do
     regex(/AetherSX2[._-]v?(\d+(?:\.\d+)[._-]\d+)[._-]mac\.zip/i)
   end
 
+  depends_on macos: ">= :big_sur"
   depends_on arch: :arm64
 
   app "AetherSX2.app"

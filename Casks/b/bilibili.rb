@@ -15,6 +15,7 @@ cask "bilibili" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "哔哩哔哩.app"
 

@@ -16,6 +16,7 @@ cask "clash-for-windows" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Clash for Windows.app"
 

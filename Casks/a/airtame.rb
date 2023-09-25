@@ -13,6 +13,7 @@ cask "airtame" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Airtame.app"
 
