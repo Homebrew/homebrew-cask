@@ -1,9 +1,9 @@
 cask "antconc" do
   arch arm: "silicon", intel: "intel"
 
-  version "4.2.3"
-  sha256 arm:   "9de860192c1f31ba500574f07ac5af73f2e0bc3c4ffc2c2c7a7d0b1e7f86e73c",
-         intel: "e974003aedc51253fdbb1edaf6cf74f851d41b8d4b35fe21fc9d80ff158342c0"
+  version "4.2.4"
+  sha256 arm:   "e4c5af39f158c084d5aacba3a28cd0509dd23b4e1ac1600cb2992c5fea27a368",
+         intel: "3408f1024fae9c0c4fe41d5d1a3cf53ef9b26ec676c1828a91d9784ae0994417"
 
   url "https://www.laurenceanthony.net/software/antconc/releases/AntConc#{version.no_dots}/apple-#{arch}/AntConc.dmg"
   name "AntConc"
