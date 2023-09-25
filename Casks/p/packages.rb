@@ -14,7 +14,7 @@ cask "packages" do
 
   auto_updates true
 
-  pkg "packages/Packages.pkg"
+  pkg "packages/Install Packages.pkg"
 
   uninstall script: { executable: "Extras/uninstall.sh", sudo: true }
 end
