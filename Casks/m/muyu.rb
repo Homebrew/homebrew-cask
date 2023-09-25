@@ -1,15 +1,15 @@
 cask "muyu" do
-  version "1.4.2"
-  sha256 :no_check
+  version "1.4.2,29"
+  sha256 "a066d707ffdff384a687268607967b3eba9f4ae4806d280a8bf9b15673e65b92"
 
-  url "https://breakit.thriller.fun/packages/Muyu.v#{version}_29.zip"
+  url "https://breakit.thriller.fun/packages/Muyu.v#{version.csv.first}_#{version.csv.second}.zip"
   name "Muyu"
-  desc "木鱼：集成番茄工作法与喝水提示功能"
+  desc "Combination of work efficiency and health"
   homepage "https://breakit.thriller.fun/"
 
   livecheck do
-    url "https://breakit.thriller.fun/packages/appcast/v#{version}_29_appcast.xml"
-    strategy :sparkle, &:short_version
+    url "https://breakit.thriller.fun/packages/appcast/appcast.xml"
+    strategy :sparkle
   end
 
   auto_updates true
@@ -24,9 +24,9 @@ cask "muyu" do
     "~/Library/Application Scripts/fun.thriller.BreakItLoginItem",
     "~/Library/Caches/fun.thriller.BreakIt",
     "~/Library/Containers/fun.thriller.BreakIt",
+    "~/Library/Containers/fun.thriller.BreakIt/Data/Library/Saved Application State/fun.thriller.BreakIt.savedState",
     "~/Library/Containers/fun.thriller.BreakItLoginItem",
     "~/Library/Containers/org.sparkle-project.Downloader/Data/Library/Caches/fun.thriller.BreakIt",
-    "~/Library/Containers/fun.thriller.BreakIt/Data/Library/Saved Application State/fun.thriller.BreakIt.savedState",
     "~/Library/Preferences/fun.thriller.BreakIt.plist",
   ]
 end
