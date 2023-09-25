@@ -14,7 +14,13 @@ cask "packages" do
 
   auto_updates true
 
-  pkg "packages/Packages.pkg"
+  pkg "Install Packages.pkg"
 
   uninstall script: { executable: "Extras/uninstall.sh", sudo: true }
+
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/fr.whitebox.packages.sfl*",
+    "~/Library/Caches/fr.whitebox.Packages",
+    "~/Library/Preferences/fr.whitebox.Packages.plist",
+  ]
 end
