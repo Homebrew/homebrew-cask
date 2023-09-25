@@ -1,6 +1,6 @@
 cask "fliqlo" do
-  version "1.8.5"
-  sha256 "77ee36b9d123e33d04234c27d507db6a688dcad557954db5b6f26eb3c6e7d3b3"
+  version "1.8.6"
+  sha256 "68a427ee46943627f4186597838a76a8f4a7d594e1e0c1ef12036ca6823d5fa0"
 
   url "https://fliqlo.com/download/Fliqlo%20#{version}.dmg",
       referer: "https://fliqlo.com/#about"
