@@ -1,6 +1,6 @@
 cask "gemini" do
-  version "2.9.8,396,1679478999"
-  sha256 "3d1e3d0b944be17c17fede158699c85d9804db86f0bb0acb531fc6d771b282e0"
+  version "2.9.10,398,1695371750"
+  sha256 "bd2048361927c6fceecfbccefc7c95f7707c99aa0e2b155ab309f81e877e2a0d"
 
   url "https://dl.devmate.com/com.macpaw.site.Gemini#{version.major}/#{version.csv.second}/#{version.csv.third}/Gemini#{version.major}-#{version.csv.second}.zip",
       verified: "dl.devmate.com/"
@@ -20,6 +20,7 @@ cask "gemini" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Gemini #{version.major}.app"
 
