@@ -29,5 +29,4 @@ cask "muyu" do
     "~/Library/Containers/fun.thriller.BreakIt/Data/Library/Saved Application State/fun.thriller.BreakIt.savedState",
     "~/Library/Preferences/fun.thriller.BreakIt.plist",
   ]
-
 end
