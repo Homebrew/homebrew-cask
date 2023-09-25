@@ -1,5 +1,5 @@
 cask "caprine" do
-  arch arm: "-arm64", intel: ""
+  arch arm: "-arm64"
 
   version "2.58.2"
   sha256 arm:   "1b8f5d19ed75cff49fdb4ba87bba4eebf2d50f9876ee9445f03a7095156791e5",
