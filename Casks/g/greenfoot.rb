@@ -12,5 +12,11 @@ cask "greenfoot" do
     regex(/Version:\s*(\d+(?:\.\d+)+)/i)
   end
 
-  app "Greenfoot #{version}/Greenfoot.app"
+  app "Greenfoot.app"
+
+  zap trash: [
+    "~/Library/Preferences/org.greenfoot",
+    "~/Library/Preferences/org.greenfoot.plist",
+    "~/Library/Saved Application State/org.greenfoot.Greenfoot.savedState",
+  ]
 end
