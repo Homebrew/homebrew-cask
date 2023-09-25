@@ -9,14 +9,17 @@ cask "packages" do
 
   livecheck do
     url "http://s.sudre.free.fr/Software/Packages/release_notes.html"
-    regex(/Release_notes_Version[^>]*>\s*(\d+(?:\.\d+)+)/i)
+    regex(/Release[._-]notes[._-]Version[^>]*>\s*(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
 
   pkg "Install Packages.pkg"
 
-  uninstall script: { executable: "Extras/uninstall.sh", sudo: true }
+  uninstall script: {
+    executable: "Extras/uninstall.sh",
+    sudo:       true,
+  }
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/fr.whitebox.packages.sfl*",
