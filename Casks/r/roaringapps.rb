@@ -1,10 +1,10 @@
 cask "roaringapps" do
-  version "1.5.0"
-  sha256 "bf9190c0674ac3a4e5cd35520988e485d96da4c3cfc5e248cd129cb765000a45"
+  version "1.6.1"
+  sha256 "5f6a21526f67ecd46f7f94fb51b0ba5a26eabb61e3feb3c57eca25a64cc45fb2"
 
-  url "https://s3.amazonaws.com/s3.roaringapps.com/downloads/RoaringApps-#{version}.zip",
-      verified: "s3.amazonaws.com/s3.roaringapps.com/"
+  url "https://roaringapps.com/downloads/RoaringApps-#{version}.zip"
   name "RoaringApps"
+  desc "Show installed app compatibility information"
   homepage "https://roaringapps.com/mac-app"
 
   livecheck do
