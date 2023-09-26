@@ -1,5 +1,5 @@
 cask "chrome-remote-desktop-host" do
-  version "116.0.5845.4"
+  version "118.0.5993.9"
   sha256 :no_check
 
   url "https://dl.google.com/chrome-remote-desktop/chromeremotedesktop.dmg"
