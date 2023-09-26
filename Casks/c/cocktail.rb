@@ -76,11 +76,22 @@ cask "cocktail" do
       regex(/macOS\s*12(?:\.\d+)*.*?(\d+(?:\.\d+)+)/i)
     end
   end
-  on_ventura :or_newer do
+  on_ventura do
     version "16.4.2"
     sha256 "87ea88496439ba610a4da46e7ad0d2b7158ddd96ad254f51ba5f15b84616dd59"
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}VE.dmg"
+
+    livecheck do
+      url :url
+      strategy :extract_plist
+    end
+  end
+  on_sonoma :or_newer do
+    version "17.0"
+    sha256 "aabd09f9569469a8bb47ca7dedd67a901d37b062e9bec61e3fb998e72a7f644e"
+
+    url "https://www.maintain.se/downloads/Cocktail#{version.major}SE.dmg"
 
     livecheck do
       url :url
