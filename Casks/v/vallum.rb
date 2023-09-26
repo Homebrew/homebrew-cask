@@ -1,8 +1,8 @@
 cask "vallum" do
-  version "4.1"
-  sha256 "6ae54ce248aeb06c2efd44bdd57433d771a693395904afdec577d0741fc3fd9d"
+  version "4.1.1"
+  sha256 "8658ad50b41a5a2824ddc2e81320e7c8e0f5f1db9c6ad1a043ee3cbd3014ee7d"
 
-  url "https://github.com/TheMurusTeam/Vallum/releases/download/v#{version}/vallum.#{version}.zip",
+  url "https://github.com/TheMurusTeam/Vallum/releases/download/v#{version}/vallum-#{version}.zip",
       verified: "github.com/TheMurusTeam/Vallum/"
   name "Vallum"
   desc "Application firewall"
