@@ -3,7 +3,7 @@ cask "aifun" do
   sha256 "1e32143fec96ad1cefdfd3f10674be32211deb33e4965b62d46a2d90389215ce"
 
   url "https://static.aifun.kapokcloud.com/v#{version}/AiFun_#{version}_macos.dmg",
-      verified: "static.aifun.kapokcloud.com"
+      verified: "static.aifun.kapokcloud.com/"
   name "AiFun"
   desc "AI chat and painting app"
   homepage "https://getaifun.com/"
