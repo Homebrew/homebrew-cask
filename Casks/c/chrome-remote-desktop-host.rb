@@ -19,11 +19,17 @@ cask "chrome-remote-desktop-host" do
               args:       ["--no-ui"],
               sudo:       true,
             },
-            launchctl: "org.chromium.chromoting",
+            launchctl: [
+              "com.google.keystone.agent",
+              "com.google.keystone.daemon",
+              "com.google.keystone.xpcservice",
+              "org.chromium.chromoting",
+            ],
             pkgutil:   [
               "com.google.pkg.ChromeRemoteDesktopHost",
               "com.google.pkg.ChromeRemoteDesktopHostService",
               "com.google.pkg.ChromeRemoteDesktopHostUninstaller",
+              "com.google.pkg.Keystone",
             ]
 
   zap trash: "~/Library/Saved Application State/com.google.chromeremotedesktop.me2me-host-uninstaller.savedState/"
