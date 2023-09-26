@@ -16,4 +16,9 @@ cask "time-to-leave" do
   end
 
   app "Time To Leave.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.electron.time-to-leave.plist",
+    "~/Library/Saved Application State/com.electron.time-to-leave.savedState",
+  ]
 end
