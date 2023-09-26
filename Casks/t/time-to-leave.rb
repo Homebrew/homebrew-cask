@@ -1,8 +1,8 @@
 cask "time-to-leave" do
-  version "2.0.1"
-  sha256 "645026480b04cec15dce96b0dbd361565f6647fcb9ab79df457ea5f1fa75f02f"
+  version "3.0.0"
+  sha256 "25fef73ac373e37ba8c0363e25e7e0996afb048466698777e9f0a0e5bb8876a0"
 
-  url "https://github.com/thamara/time-to-leave/releases/download/v#{version}/time-to-leave.dmg"
+  url "https://github.com/thamara/time-to-leave/releases/download/#{version}/time-to-leave-#{version}.dmg"
   name "Time To Leave"
   desc "Log work hours and get notified when it's time to leave the office"
   homepage "https://github.com/thamara/time-to-leave"
