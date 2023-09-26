@@ -14,7 +14,7 @@ cask "fl-studio" do
 
   pkg "Install FL Studio.pkg"
 
-  uninstall pkgutil: "com.Image-Line.pkg.FL21ONLINE"
+  uninstall pkgutil: "com.Image-Line.pkg.FL21.1ONLINE"
 
   zap trash: [
     "~/Library/Caches/com.image-line.flstudio",
