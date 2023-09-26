@@ -6,7 +6,7 @@ cask "cursor" do
          intel: "9ae8f9423dfee793dd001468adfc5ef906d9b208cad70d1d645481ab266948ec"
 
   url "https://download.todesktop.com/230313mzl4w4u92/Cursor%20#{version}-#{arch}-mac.zip",
-      verified: "download.todesktop.com/230313mzl4w4u92"
+      verified: "download.todesktop.com/230313mzl4w4u92/"
   name "Cursor"
   desc "Write, edit, and chat about your code with AI"
   homepage "https://www.cursor.so/"
