@@ -1,6 +1,6 @@
 cask "fl-studio" do
-  version "21.1.1.3318"
-  sha256 "b8119f8345796db4d1bc498bdbc9db3a12f4af14929036ef8928f9c9af4d11e4"
+  version "21.1.1.3352"
+  sha256 "91ef1d4644caf5b44cc25a432941b6bac8adb6174721730cc734bc033d8d2726"
 
   url "https://demodownload.image-line.com/flstudio/flstudio_mac_#{version}.dmg"
   name "FL Studio"
@@ -14,7 +14,7 @@ cask "fl-studio" do
 
   pkg "Install FL Studio.pkg"
 
-  uninstall pkgutil: "com.Image-Line.pkg.FL21ONLINE"
+  uninstall pkgutil: "com.Image-Line.pkg.FL21.1ONLINE"
 
   zap trash: [
     "~/Library/Caches/com.image-line.flstudio",
