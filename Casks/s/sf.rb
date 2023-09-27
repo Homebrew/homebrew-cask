@@ -11,7 +11,7 @@ cask "sf" do
 
   livecheck do
     url "https://raw.githubusercontent.com/forcedotcom/cli/main/releasenotes/README.md"
-    regex(/(\d+(?:\.\d+)+)\s+\(.*?\)\s+(?:\[stable\])/i)
+    regex(/(\d+(?:\.\d+)+)\s+\(.*?\)\s+\[stable\]/i)
   end
 
   pkg "sf-#{arch}.pkg"
