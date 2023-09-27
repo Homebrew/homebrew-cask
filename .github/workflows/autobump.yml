@@ -84,7 +84,7 @@ env:
     rewind
     rive
     setapp
-    sfdx
+    sf
     shapr3d
     sigmaos
     signal
