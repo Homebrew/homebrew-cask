@@ -55,7 +55,7 @@ cask "cocktail" do
     end
   end
   on_big_sur do
-    version "14.5"
+    version "14.5.0"
     sha256 "13833eefd4913eccbc319e57d7bac93c50f5a0a667d6dde877f5aa8a047be068"
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}BSE.dmg"
