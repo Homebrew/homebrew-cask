@@ -1,6 +1,6 @@
 cask "wifispoof" do
-  version "3.9.1"
-  sha256 "c4da58e3ae91c61943476fbada55cae99f79fe4e2fdd58bcebff69681955edee"
+  version "3.9.2"
+  sha256 "a29ec5485bd424ce34d14571947ae5314a59da47aee00656ea4e1aa0ce781b43"
 
   url "https://sweetpproductions.com/products/wifispoof#{version.major}/WiFiSpoof#{version.major}.dmg",
       verified: "sweetpproductions.com/products/"
@@ -17,4 +17,14 @@ cask "wifispoof" do
   depends_on macos: ">= :el_capitan"
 
   app "WiFiSpoof.app"
+
+  uninstall delete: [
+    "/Library/LaunchDaemons/com.sweetpproductions.WiFiSpoofHelperTool.plist",
+    "/Library/PrivilegedHelperTools/com.sweetpproductions.WiFiSpoofHelperTool",
+  ]
+
+  zap trash: [
+    "~/Library/Application Scripts/com.sweetpproductions.WiFiSpoofApp",
+    "~/Library/Containers/com.sweetpproductions.WiFiSpoofApp",
+  ]
 end
