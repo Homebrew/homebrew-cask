@@ -12,8 +12,8 @@ cask "sketch" do
     depends_on macos: ">= :big_sur"
   end
   on_monterey :or_newer do
-    version "98.2,176424"
-    sha256 "cfd605859fcf2b4b17b0e9c97a083d4b7a263cbef997cee50e5e522126d744a2"
+    version "98.3,176563"
+    sha256 "673cdaff22d0ed033d4f4c3a80f1de152bfd30cb67c54cd85a641cd38bc25921"
 
     url "https://download.sketch.com/sketch-#{version.csv.first}-#{version.csv.second}.zip"
 
