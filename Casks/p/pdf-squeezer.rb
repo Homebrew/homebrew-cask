@@ -1,5 +1,5 @@
 cask "pdf-squeezer" do
-  version "4.3.7"
+  version "4.3.8"
   sha256 :no_check
 
   url "https://www.witt-software.com/downloads/pdfsqueezer/PDF%20Squeezer.dmg"
@@ -12,7 +12,7 @@ cask "pdf-squeezer" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "PDF Squeezer.app"
 
