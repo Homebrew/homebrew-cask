@@ -1,4 +1,4 @@
-ask "toaudioconverter" do
+cask "toaudioconverter" do
   version "1.0.18,1173"
   sha256 :no_check
 
