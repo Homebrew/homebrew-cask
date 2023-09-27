@@ -36,10 +36,15 @@ cask "onyx" do
 
     url "https://www.titanium-software.fr/download/12/OnyX.dmg"
   end
-  on_ventura :or_newer do
+  on_ventura do
     version "4.4.4"
 
     url "https://www.titanium-software.fr/download/13/OnyX.dmg"
+  end
+  on_sonoma :or_newer do
+    version "4.5.0"
+
+    url "https://www.titanium-software.fr/download/14/OnyX.dmg"
   end
 
   name "OnyX"
@@ -60,6 +65,7 @@ cask "onyx" do
     :big_sur,
     :monterey,
     :ventura,
+    :sonoma,
   ]
 
   app "OnyX.app"
