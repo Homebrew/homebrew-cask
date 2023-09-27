@@ -1,5 +1,5 @@
 cask "paragon-camptune" do
-  version "10.18.424"
+  version "10.19.501"
   sha256 :no_check
 
   url "https://dl.paragon-software.com/demo/camptune_demo_u.dmg"
