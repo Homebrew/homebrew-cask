@@ -17,4 +17,14 @@ cask "wifispoof" do
   depends_on macos: ">= :el_capitan"
 
   app "WiFiSpoof.app"
+
+  uninstall delete: [
+    "/Library/LaunchDaemons/com.sweetpproductions.WiFiSpoofHelperTool.plist",
+    "/Library/PrivilegedHelperTools/com.sweetpproductions.WiFiSpoofHelperTool",
+  ]
+
+  zap trash: [
+    "~/Library/Application Scripts/com.sweetpproductions.WiFiSpoofApp",
+    "~/Library/Containers/com.sweetpproductions.WiFiSpoofApp",
+  ]
 end
