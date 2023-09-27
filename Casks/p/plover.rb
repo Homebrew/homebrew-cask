@@ -1,6 +1,6 @@
 cask "plover" do
-  version "4.0.0.dev12"
-  sha256 "215660dbbbab801191841e6eb8385d033d94bf20ec0aa518959a750fab8da9f5"
+  version "4.0.0rc1"
+  sha256 "6cf1e0dc9cd43b96fa8114974a41e2a61a32ac2c992b91fb731dcd7d4968edb5"
 
   url "https://github.com/openstenoproject/plover/releases/download/v#{version}/plover-#{version}-macosx_10_13_x86_64.dmg",
       verified: "github.com/openstenoproject/plover/"
