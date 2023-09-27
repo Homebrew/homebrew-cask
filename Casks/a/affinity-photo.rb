@@ -8,8 +8,8 @@ cask "affinity-photo" do
   homepage "https://affinity.serif.com/en-us/photo/"
 
   livecheck do
-    url "https://forum.affinity.serif.com/index.php?/topic/170203-latest-affinity-v2-releases-on-each-platform-by-store/"
-    regex(/Affinity\s*Photo\s*\d+\s*\|\s*Affinity\s*Store\s*\|\s*macOS[^|]*\|\s*(\d+(?:\.\d+)+)/i)
+    url :url
+    strategy :header_match
   end
 
   auto_updates true
