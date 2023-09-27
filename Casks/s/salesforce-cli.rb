@@ -1,7 +1,7 @@
 cask "salesforce-cli" do
   arch arm: "arm64", intel: "x64"
 
-  version "5.134736"
+  version "5.553919"
   sha256 :no_check
 
   url "https://developer.salesforce.com/media/salesforce-cli/sf/channels/stable/sf-#{arch}.pkg"
