@@ -1,6 +1,6 @@
 cask "vanilla" do
-  version "2.1,58"
-  sha256 "0d75b380f717d69619467fc5be928e2997649f882a95b0cbb864c4c459074d27"
+  version "2.1.1,59"
+  sha256 "ed10c5a379e09f4e5b13d978e9ed583dd8b07783745022af458b5abde11fe749"
 
   url "https://macrelease.matthewpalmer.net/distribution/appcasts/Vanilla-#{version.csv.second}.dmg"
   name "Vanilla"
