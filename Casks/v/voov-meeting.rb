@@ -1,18 +1,17 @@
 cask "voov-meeting" do
   arch arm: "arm64", intel: "x86_64"
-  arch_suffix = on_arch_conditional intel: "%20%281%29"
 
   on_arm do
-    version "3.16.3.510,20f9cf0140fac6fdf13694472f4b30e5"
-    sha256 "2bc75e79d30bbba88f6cd6c3acf3030a08f11f1be849692a8eebd72f759f2f8c"
+    version "3.16.4.513,fb2dd60acb011c96104a5205a5e37187"
+    sha256 "8fbe6c9653e4218ef10e43d26705bd5c292e4b91c2905e2a0c3d4753d026872f"
   end
   on_intel do
-    version "3.16.3.510,f41ced72d1e96aacb24b5f402bbcb2e6"
-    sha256 "17b04b851a1203bb4ad812747f71c4eb04566c0fbac75a2b485293c173c80e26"
+    version "3.16.4.513,a26ccbf81acefeb96ec2d657739932a9"
+    sha256 "690ae54739b18a17104d9660fe41cdcc18147b7ee1d62ad1504d0b7f763fa1e7"
   end
 
-  url "https://updatecdn.meeting.qq.com/cos/#{version.csv.second}/VooVMeeting_1410000198_#{version.csv.first}.publish.#{arch}#{arch_suffix}.dmg",
-      verified: "updatecdn.meeting.qq.com/"
+  url "https://updatecdn.meeting.qq.com/cos/#{version.csv.second}/VooVMeeting_1410000198_#{version.csv.first}.publish.#{arch}.dmg",
+      verified: "updatecdn.meeting.qq.com/cos/"
   name "VooV Meeting"
   name "Tencent Meeting International Version"
   desc "Video conferencing software"
@@ -30,6 +29,8 @@ cask "voov-meeting" do
       end
     end
   end
+
+  depends_on macos: ">= :el_capitan"
 
   app "VooV Meeting.app"
 
