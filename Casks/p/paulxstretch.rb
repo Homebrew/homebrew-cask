@@ -5,7 +5,7 @@ cask "paulxstretch" do
   url "https://sonosaurus.com/paulxstretch/releases/paulxstretch-#{version}-mac.dmg"
   name "paulxstretch"
   desc "Extreme time stretching plugin for audio files"
-  homepage "https://sonosaurus.com/paulxstretch/"
+  homepage "https://github.com/essej/paulxstretch"
 
   pkg "PaulXStretch Installer.pkg"
   uninstall pkgutil: "com.sonosaurus.paulxstretch.pkg.app"
