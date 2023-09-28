@@ -1,6 +1,10 @@
 cask "docker" do
   arch arm: "arm64", intel: "amd64"
 
+  on_intel do
+    binary "Docker.app/Contents/Resources/bin/com.docker.hyperkit",
+           target: "/usr/local/bin/hyperkit"
+  end
   on_catalina :or_older do
     version "4.15.0,93002"
     sha256 arm:   "fc8609d57fb8c8264122f581c0f66497e46e171f8027d85d90213527d6226362",
@@ -60,8 +64,6 @@ cask "docker" do
          target: "/usr/local/bin/hub-tool"
   binary "Docker.app/Contents/Resources/bin/kubectl",
          target: "/usr/local/bin/kubectl.docker"
-  binary "Docker.app/Contents/Resources/bin/com.docker.vpnkit",
-         target: "/usr/local/bin/vpnkit"
   binary "Docker.app/Contents/Resources/etc/docker.bash-completion",
          target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/docker"
   binary "Docker.app/Contents/Resources/etc/docker.zsh-completion",
