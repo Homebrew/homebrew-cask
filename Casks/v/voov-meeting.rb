@@ -32,7 +32,7 @@ cask "voov-meeting" do
 
   depends_on macos: ">= :el_capitan"
 
-  app "VooV Meeting.app"
+  app "VooV.app"
 
   zap trash: [
     "~/Library/Application Support/com.tencent.bugly",
