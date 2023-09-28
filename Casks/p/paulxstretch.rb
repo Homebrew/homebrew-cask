@@ -13,5 +13,5 @@ cask "paulxstretch" do
 
   pkg "PaulXStretch Installer.pkg"
 
-  uninstall pkgutil: "com.sonosaurus.paulxstretch.pkg.app"
+  uninstall pkgutil: "com.sonosaurus.paulxstretch.pkg.*"
 end
