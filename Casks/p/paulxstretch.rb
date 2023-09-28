@@ -14,4 +14,10 @@ cask "paulxstretch" do
   pkg "PaulXStretch Installer.pkg"
 
   uninstall pkgutil: "com.sonosaurus.paulxstretch.pkg.*"
+  
+  zap trash: [
+  "~/Library/Application Support/PaulXStretch",
+  "~/Library/Application Support/PaulXStretch3",
+  "~/Library/Preferences/com.sonosaurus.paulxstretch.plist",
+  ]
 end
