@@ -4,7 +4,7 @@ cask "toaudioconverter" do
 
   url "https://amvidia.com/download-to-audio-converter-mac.dmg.zip"
   name "To Audio Converter"
-  desc "Convert over 200 audio formats with a simplified interface"
+  desc "Audio converter"
   homepage "https://amvidia.com/to-audio-converter"
 
   livecheck do
