@@ -1,7 +1,7 @@
 cask "neo4j" do
   # NOTE: "4" is not a version number, but an intrinsic part of the product name
-  version "1.5.8"
-  sha256 "7a5f0d19dfff8e32ad14030350ace0f877eb27700b096fdf09aa3c235605914f"
+  version "1.5.9"
+  sha256 "d72d80255bedf4546a8c09b4db42d616c2586a394dd90cfa06b195b1f26d3840"
 
   url "https://dist.neo4j.org/neo4j-desktop/mac/Neo4j%20Desktop-#{version}.dmg",
       verified: "dist.neo4j.org/neo4j-desktop/mac/"
