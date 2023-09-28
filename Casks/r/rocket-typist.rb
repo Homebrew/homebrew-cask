@@ -14,6 +14,8 @@ cask "rocket-typist" do
 
   depends_on macos: ">= :ventura"
 
+  auto_updates true
+  
   app "Rocket Typist.app"
 
   zap trash: [
