@@ -12,10 +12,9 @@ cask "rocket-typist" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: ">= :ventura"
 
-  auto_updates true
-  
   app "Rocket Typist.app"
 
   zap trash: [
