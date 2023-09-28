@@ -1,5 +1,5 @@
 cask "netspot" do
-  version "2.16.1071"
+  version "3.0.3168"
   sha256 :no_check
 
   url "https://cdn.netspotapp.com/download/NetSpot.dmg"
@@ -13,6 +13,7 @@ cask "netspot" do
   end
 
   auto_updates true
+  depends_on macos: ">= :sierra"
 
   app "NetSpot.app"
 
