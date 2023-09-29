@@ -11,7 +11,6 @@ cask "telegram-a" do
   desc "Web client for Telegram messenger"
   homepage "https://web.telegram.org/a/get"
 
-  auto_updates false
   depends_on macos: ">= :sierra"
 
   app "Telegram A.app"
