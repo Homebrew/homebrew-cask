@@ -6,8 +6,8 @@ cask "wechatwork" do
     sha256 "f2eefb54efaab702fa312cf63c637546626df6c51a5781f07efc2331ac8af88c"
   end
   on_intel do
-    version "4.1.10.99308"
-    sha256 "f2eefb54efaab702fa312cf63c637546626df6c51a5781f07efc2331ac8af88c"
+    version "4.1.10.90765"
+    sha256 "62e5820c28b447d707442466acee24cc406399cc7b1547ff4287bbbddf4e931e"
   end
 
   url "https://dldir1.qq.com/foxmail/wecom-mac/update/WeCom_#{version}.dmg"
