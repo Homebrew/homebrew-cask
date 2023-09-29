@@ -1,5 +1,5 @@
 cask "insomnia" do
-  version "8.1.0"
+  version "2023.5.8"
   sha256 "40c640dcb17bc9d3a66e2afc82c28fac4c78f92aaccf72c4aea14fdfd984847f"
 
   url "https://github.com/Kong/insomnia/releases/download/core%40#{version}/Insomnia.Core-#{version}.dmg",
