@@ -11,11 +11,6 @@ cask "telegram-a" do
   desc "Web client for Telegram messenger"
   homepage "https://web.telegram.org/a/get"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates false
   depends_on macos: ">= :sierra"
 
@@ -24,6 +19,6 @@ cask "telegram-a" do
   zap trash: [
     "~/Library/Application Support/Telegram A",
     "~/Library/Preferences/org.telegram.TelegramA.plist",
-    "~/Library//Saved Application State/org.telegram.TelegramA.savedState",
+    "~/Library/Saved Application State/org.telegram.TelegramA.savedState",
   ]
 end
