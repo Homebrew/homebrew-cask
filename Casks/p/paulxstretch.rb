@@ -7,6 +7,11 @@ cask "paulxstretch" do
   desc "Extreme time stretching plugin for audio files"
   homepage "https://github.com/essej/paulxstretch"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   pkg "PaulXStretch Installer.pkg"
 
   uninstall pkgutil: "com.sonosaurus.paulxstretch.pkg.*"
