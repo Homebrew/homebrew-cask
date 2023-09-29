@@ -13,7 +13,7 @@ cask "deepl" do
     end
   end
   on_big_sur :or_newer do
-    version "23.9.1591123,1591123"
+    version "23.9.1591123"
     sha256 :no_check
 
     url "https://appdownload.deepl.com/macos/bigsur/DeepL.dmg"
