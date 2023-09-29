@@ -1,9 +1,9 @@
 cask "archipelago" do
   arch arm: "-arm64"
 
-  version "5.0.2"
-  sha256 arm:   "c88c245966506f85b3381b522c8462659a8898610f167309b59d492c3afeda36",
-         intel: "9f9691829010bdaa314472d8dccb07a0a2bdb7245a96e723b4fd75c8cd758a19"
+  version "5.1.0"
+  sha256 arm:   "05cc3c36708d7f1094ec1688f3546a9603da9f1509db7fc3e8b5f36283a1c49b",
+         intel: "57f24ee903337773ee96725ebb9709c3015d60fcc878b0ac871a8551a3fbe471"
 
   url "https://github.com/npezza93/archipelago/releases/download/v#{version}/Archipelago-#{version}#{arch}-mac.zip"
   name "Archipelago"
