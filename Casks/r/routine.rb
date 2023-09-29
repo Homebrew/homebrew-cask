@@ -7,7 +7,7 @@ cask "routine" do
 
   url "https://releases.routine.co/routine/osx#{arch}/Routine-#{version}.zip"
   name "Routine"
-  desc ""
+  desc "Calendar for productive people"
   homepage "https://www.routine.co/"
 
   livecheck do
@@ -18,6 +18,7 @@ cask "routine" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Routine.app"
 
