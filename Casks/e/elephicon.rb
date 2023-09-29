@@ -1,9 +1,9 @@
 cask "elephicon" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.6.4"
-  sha256 arm:   "897dcd85b184333c5527eb25f153bdbb6586b61b0e83099d85faf023e9bf034f",
-         intel: "0edeeb5facc635b6b0165875bb5536a0d61d34765d2d45a871a173355f3c2a8b"
+  version "2.6.5"
+  sha256 arm:   "56e55f2a4a35b7cd7495d3c323f9817a0c92581a0edee550d0a3549c2f4f5f33",
+         intel: "5d20cf2371d6faaae3d787b65a538f2804376ea1ebfd6037274058c6948a70be"
 
   url "https://github.com/sprout2000/elephicon/releases/download/v#{version}/Elephicon-#{version}-darwin-#{arch}.dmg"
   name "Elephicon"
