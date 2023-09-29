@@ -2,7 +2,7 @@ cask "toaudioconverter" do
   version "1.0.18,1183"
   sha256 :no_check
 
-  url "https://amvidia.com/download-to-audio-converter-mac.dmg.zip"
+  url "https://amvidia.com/downloads/to-audio-converter-mac.dmg"
   name "To Audio Converter"
   desc "Audio converter"
   homepage "https://amvidia.com/to-audio-converter"
