@@ -1,8 +1,9 @@
 cask "finbar" do
   version "1.11.1"
-  sha256 :no_check
+  sha256 "afc985f1f968650548c5704bb5e12139f6a4add6165bbd94947ff5e9d0cd0367"
 
-  url "https://www.roeybiran.com/apps/finbar/download"
+  url "https://f002.backblazeb2.com/file/roeybiran/finbar/Finbar%20#{version}.dmg",
+      verified: "f002.backblazeb2.com/file/roeybiran/finbar/"
   name "Finbar"
   desc "Menu bar searching utility"
   homepage "https://www.roeybiran.com/apps/finbar"
