@@ -1,6 +1,6 @@
 cask "notunes" do
-  version "3.3"
-  sha256 "2e7aa2362927ea845d1531dfc935a4626fb6b9fb1873c90bbc397f6171757f20"
+  version "3.4"
+  sha256 "aecff4a11ba94c166978a9e59741bdcf25912ed232cb740efabbc4a097712028"
 
   url "https://github.com/tombonez/noTunes/releases/download/v#{version}/noTunes-#{version}.zip"
   name "noTunes"
