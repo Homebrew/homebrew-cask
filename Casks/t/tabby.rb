@@ -13,8 +13,8 @@ cask "tabby" do
   homepage "https://eugeny.github.io/tabby/"
 
   livecheck do
-    url "https://github.com/Eugeny/tabby/releases/latest"
-    strategy :header_match
+    url :url
+    strategy :github_latest
   end
 
   auto_updates true
