@@ -9,8 +9,8 @@ cask "uhk-agent" do
   homepage "https://github.com/UltimateHackingKeyboard/agent"
 
   livecheck do
-    url "https://github.com/UltimateHackingKeyboard/agent/releases/latest"
-    strategy :header_match
+    url :url
+    strategy :github_latest
   end
 
   app "UHK Agent.app"
