@@ -9,8 +9,9 @@ cask "schildichat" do
   homepage "https://schildi.chat/desktop/"
 
   livecheck do
-    url "https://github.com/SchildiChat/schildichat-desktop/releases/latest"
-    regex(%r{href=["']?[^"' >]*?/tag/v?(\d+(?:\.\d+)+-\w*?\.?\d*?)["' >]}i)
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+(?:-sc\.?\d+)?)$/i)
+    strategy :github_latest
   end
 
   app "SchildiChat.app"
