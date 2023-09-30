@@ -9,20 +9,15 @@ cask "wwdc" do
   homepage "https://wwdc.io/"
 
   livecheck do
-    url "https://github.com/insidegui/WWDC/releases/latest"
-    regex(%r{href=.*?/WWDC[._-]v?(\d+(?:[.-]\d+)+)\.dmg}i)
-    strategy :header_match do |headers, regex|
-      next if headers["location"].blank?
+    url :url
+    regex(/^WWDC[._-]v?(\d+(?:[.-]\d+)+)\.dmg$/i)
+    strategy :github_latest do |json, regex|
+      json["assets"]&.map do |asset|
+        match = asset["name"]&.match(regex)
+        next if match.blank?
 
-      # Identify the latest tag from the response's `location` header
-      latest_tag = File.basename(headers["location"])
-      next if latest_tag.blank?
-
-      # Fetch the assets list HTML for the latest tag and match within it
-      assets_page = Homebrew::Livecheck::Strategy.page_content(
-        @url.sub(%r{/releases/?.+}, "/releases/expanded_assets/#{latest_tag}"),
-      )
-      assets_page[:content]&.scan(regex)&.map { |match| match[0].tr("-", ",").to_s }
+        match[1].tr("-", ",")
+      end
     end
   end
 

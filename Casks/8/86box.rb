@@ -9,20 +9,15 @@ cask "86box" do
   homepage "https://86box.net/"
 
   livecheck do
-    url "https://github.com/86Box/86Box/releases/latest"
-    regex(%r{href=.*?/download/v?(\d+(?:\.\d+)*)/86Box[._-]macOS.*?[._-]b(\d+).zip}i)
-    strategy :header_match do |headers, regex|
-      next if headers["location"].blank?
+    url :url
+    regex(%r{/v?(\d+(?:\.\d+)*)/86Box[._-]macOS.*?[._-]b(\d+)\.zip$}i)
+    strategy :github_latest do |json, regex|
+      json["assets"]&.map do |asset|
+        match = asset["browser_download_url"]&.match(regex)
+        next if match.blank?
 
-      # Identify the latest tag from the response's `location` header
-      latest_tag = File.basename(headers["location"])
-      next if latest_tag.blank?
-
-      # Fetch the assets list HTML for the latest tag and match within it
-      assets_page = Homebrew::Livecheck::Strategy.page_content(
-        @url.sub(%r{/releases/?.+}, "/releases/expanded_assets/#{latest_tag}"),
-      )
-      assets_page[:content]&.scan(regex)&.map { |match| "#{match[0]},#{match[1]}" }
+        "#{match[1]},#{match[2]}"
+      end
     end
   end
 
