@@ -9,7 +9,7 @@ cask "mpv" do
   end
   on_big_sur :or_newer do
     version "0.36.0"
-    sha256 "cf0511aa6a26d51ac581535e69b96327850b9aca2750a55097cbe09eca2afb0e"
+    sha256 "3355de90753efa3f1e4e8f4cbe16066e4753eaebf1903dfa47961a37eb4dea75"
 
     livecheck do
       url "https://laboratory.stolendata.net/~djinn/mpv_osx/"
