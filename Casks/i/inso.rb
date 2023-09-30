@@ -8,8 +8,12 @@ cask "inso" do
   desc "CLI HTTP and GraphQL Client"
   homepage "https://insomnia.rest/products/inso"
 
+  # Upstream previously used a date-based version scheme (e.g., `2023.5.8`)
+  # before switching to a typical `8.1.0` format. The date-based versions are
+  # numerically higher, so we have to avoid matching them.
   livecheck do
-    regex(/lib@v?(\d{1,3}(?:\.\d+)+)(?!.)/i)
+    url :url
+    regex(/^lib@v?(\d{1,3}(?:\.\d+)+)$/i)
   end
 
   conflicts_with cask: "homebrew/cask-versions/inso-beta"
