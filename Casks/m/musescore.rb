@@ -21,6 +21,7 @@ cask "musescore" do
     end
   end
 
+  auto_updates true
   depends_on macos: ">= :mojave"
 
   app "MuseScore #{version.major}.app"
