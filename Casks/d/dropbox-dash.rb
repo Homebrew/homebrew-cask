@@ -9,8 +9,9 @@ cask "dropbox-dash" do
   homepage "https://www.dropbox.com/dash"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://dash-releases.s3.amazonaws.com/latest-mac.yml"
+    regex(/version.*?(\d+(?:\.\d+)*)/i)
+    strategy :page_match
   end
 
   depends_on macos: ">= :catalina"
@@ -20,7 +21,8 @@ cask "dropbox-dash" do
   uninstall quit: "io.hypertools.Dropbox-Dash"
 
   zap trash: [
-    "~/Library/Preferences/io.hypertools.Dropbox-Dash.plist",
     "~/Library/Application Support/Dropbox Dash",
+    "~/Library/Group Containers/com.dash",
+    "~/Library/Preferences/io.hypertools.Dropbox-Dash.plist",
   ]
 end
