@@ -8,11 +8,13 @@ cask "clock-bar" do
   homepage "https://github.com/nihalsharma/Clock-Bar/"
 
   livecheck do
-    url "https://github.com/nihalsharma/Clock-Bar/releases/latest"
-    regex(%r{href=.*?/tag/(\d+(?:\.\d+)+)}i)
-    strategy :page_match do |page, regex|
-      v = page[regex, 1]
-      id = page[%r{href=.*?/(\d+)/Clock\.Bar\.app\.zip}i, 1]
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    strategy :github_latest do |json, regex|
+      v = json["tag_name"][regex, 1]
+      id = json["body"][%r{/(\d+)/Clock\.Bar\.app\.zip}i, 1]
+      next if v.blank? || id.blank?
+
       "#{v},#{id}"
     end
   end
