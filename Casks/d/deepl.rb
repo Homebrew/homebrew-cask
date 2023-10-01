@@ -3,8 +3,6 @@ cask "deepl" do
     version "3.7.292629"
     sha256 "efcac4988a606d9793a3bdb8e7e73dce8e3d06ed2249a4434eb54c1624b40b87"
 
-    url "https://appdownload.deepl.com/macos/#{version}/DeepL_#{version}.zip"
-
     livecheck do
       url "https://appdownload.deepl.com/macos/update.json"
       strategy :json do |json|
@@ -13,17 +11,18 @@ cask "deepl" do
     end
   end
   on_big_sur :or_newer do
-    version "23.9.1591123"
-    sha256 :no_check
-
-    url "https://appdownload.deepl.com/macos/bigsur/DeepL.dmg"
+    version "4.6.565727"
+    sha256 "148224d1a5359f2322c6d9cda5a4f4270d964b9201467eba33fb4af98a889e6b"
 
     livecheck do
-      url :url
-      strategy :extract_plist
+      url "https://appdownload.deepl.com/macos/bigsur/update.json"
+      strategy :json do |json|
+        json["currentRelease"]
+      end
     end
   end
 
+  url "https://www.deepl.com/macos/download/#{version}/DeepL_#{version}.zip"
   name "DeepL"
   desc "Trains AIs to understand and translate texts"
   homepage "https://www.deepl.com/"
@@ -39,8 +38,7 @@ cask "deepl" do
   ]
 
   zap trash: [
-    "~/Library/Caches/com.linguee.DeepLCopyTranslator",
-    "~/Library/Caches/com.linguee.DeepLCopyTranslator.ShipIt",
+    "~/Library/Caches/com.linguee.DeepLCopyTranslator*",
     "~/Library/Group Containers/*.com.linguee.DeepL",
     "~/Library/Preferences/com.linguee.DeepLCopyTranslator.plist",
   ]
