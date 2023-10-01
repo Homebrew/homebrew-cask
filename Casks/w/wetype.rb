@@ -1,14 +1,15 @@
 cask "wetype" do
-  version "0.9.8,201"
+  version "0.9.9,214"
   sha256 "694b027f6ce4246c15ddc418cdfd758c3f0a87af7ca61db098936a5b3ab8db45"
 
   url "https://wetype.wxqcloud.qq.com/app/mac/#{version.csv.first}/WeTypeInstaller_#{version.csv.first}_#{version.csv.second}.zip"
   name "WeType"
-  desc "Input method by Weixin"
+  desc "Input method by Wexin, Tencent"
   homepage "https://z.weixin.qq.com/"
 
   livecheck do
-    skip "No reliable way to get version info"
+    strategy :sparkle
+    url "https://download.weread.qq.com/app/wxkb/mac/updates.xml"
   end
 
   auto_updates true
