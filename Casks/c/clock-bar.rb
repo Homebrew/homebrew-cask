@@ -22,4 +22,9 @@ cask "clock-bar" do
   depends_on macos: ">= :sierra"
 
   app "Clock Bar.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/nihalsharma.clock-bar",
+    "~/Library/Containers/nihalsharma.clock-bar",
+  ]
 end
