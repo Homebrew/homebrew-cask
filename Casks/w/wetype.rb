@@ -4,7 +4,7 @@ cask "wetype" do
 
   url "https://wetype.wxqcloud.qq.com/app/mac/#{version.csv.first}/WeTypeInstaller_#{version.csv.first}_#{version.csv.second}.zip"
   name "WeType"
-  desc "Input method by Wexin, Tencent"
+  desc "Text input app"
   homepage "https://z.weixin.qq.com/"
 
   livecheck do
