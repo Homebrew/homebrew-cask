@@ -1,6 +1,6 @@
 cask "skype" do
-  version "8.105.0.208"
-  sha256 "65ff248ca6c797e989c3dfb47b43a0d91ada2a631048be48c95a545b12cad57f"
+  version "8.105.0.211"
+  sha256 "fbcfb7e72b7ae1493ace340a8c52780215c725958ea7a15007e781a6abcdab5e"
 
   url "https://endpoint920510.azureedge.net/s4l/s4l/download/mac/Skype-#{version}.dmg",
       verified: "endpoint920510.azureedge.net/s4l/s4l/download/mac/"
