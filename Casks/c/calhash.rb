@@ -17,7 +17,7 @@ cask "calhash" do
     url "https://www.titanium-software.fr/download/12/CalHash.dmg"
   end
   on_ventura :or_newer do
-    version "1.2.1"
+    version "1.3.0"
 
     url "https://www.titanium-software.fr/download/13/CalHash.dmg"
   end
