@@ -1,6 +1,6 @@
 cask "virtualbuddy" do
-  version "1.3.1,105"
-  sha256 "60cf0c049f9a95c80d391d8489a3ea96a1957c0bd4ccd3685da28d107e012e60"
+  version "1.3.2,107"
+  sha256 "793da34d91819bdbaded61f3b832d468b8cca91714132a9e89eb262e2d008412"
 
   url "https://github.com/insidegui/VirtualBuddy/releases/download/#{version.csv.first}/VirtualBuddy_v#{version.csv.first}-#{version.csv.second}.dmg"
   name "VirtualBuddy"
