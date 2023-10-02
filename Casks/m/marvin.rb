@@ -1,16 +1,20 @@
 cask "marvin" do
-  version "1.63.0"
-  sha256 "8f6c4ca13956c41731086e2112fe79418e00248544e61d713b3ea9ff8d89c77a"
+  arch arm: "-arm64"
+  hostname_arch = on_arch_conditional arm: "amarm", intel: "amazingmarvin"
 
-  url "https://amazingmarvin.s3.amazonaws.com/Marvin-#{version}.dmg",
-      verified: "amazingmarvin.s3.amazonaws.com/"
+  version "1.63.0"
+  sha256 arm:   "46bd20dbef2ca137e9452fec120ac454b4eeca038954ea2af054eb4d830785d6",
+         intel: "3a3c44968e66274785c928545db34833d3c9369dd2fee17288de7054ce78ae66"
+
+  url "https://#{hostname_arch}.s3.amazonaws.com/Marvin-#{version}#{arch}-mac.zip",
+      verified: "#{hostname_arch}.s3.amazonaws.com/"
   name "Amazing Marvin"
   desc "Personal productivity app"
   homepage "https://www.amazingmarvin.com/"
 
   livecheck do
-    url "http://amazingmarvin.s3-website-us-east-1.amazonaws.com/Marvin.dmg"
-    strategy :header_match
+    url "https://#{hostname_arch}.s3.amazonaws.com/latest-mac.yml"
+    strategy :electron_builder
   end
 
   app "Marvin.app"
