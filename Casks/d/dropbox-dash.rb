@@ -5,13 +5,12 @@ cask "dropbox-dash" do
   url "https://dash-releases.s3.amazonaws.com/Dropbox%20Dash-#{version}.dmg",
       verified: "dash-releases.s3.amazonaws.com/"
   name "Dropbox Dash"
-  desc "Search all your apps. All your tabs. All in one place"
+  desc "Universal search tool"
   homepage "https://www.dropbox.com/dash"
 
   livecheck do
     url "https://dash-releases.s3.amazonaws.com/latest-mac.yml"
-    regex(/version.*?(\d+(?:\.\d+)*)/i)
-    strategy :page_match
+    strategy :electron_builder
   end
 
   depends_on macos: ">= :catalina"
