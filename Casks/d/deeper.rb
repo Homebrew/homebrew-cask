@@ -37,7 +37,7 @@ cask "deeper" do
     url "https://www.titanium-software.fr/download/12/Deeper.dmg"
   end
   on_ventura :or_newer do
-    version "2.9.1"
+    version "3.0.0"
 
     url "https://www.titanium-software.fr/download/13/Deeper.dmg"
   end
