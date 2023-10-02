@@ -1,6 +1,6 @@
 cask "ubar" do
-  version "4.2.1,421"
-  sha256 "a9c64011f86de3975f3a5c9f616ea93ca84adae836b61ff4cdbb7f86546ed4c5"
+  version "4.2.2,422"
+  sha256 "5c7e30c33761430b034f56d91f1d1e280ad0672cff9601917a214a5702b09319"
 
   url "https://www.brawersoftware.com/downloads/ubar/ubar#{version.csv.second}.zip"
   name "uBar"
@@ -11,6 +11,8 @@ cask "ubar" do
     url "https://brawersoftware.com/appcasts/feeds/ubar/ubar#{version.major}.xml"
     strategy :sparkle
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "uBar.app"
 
