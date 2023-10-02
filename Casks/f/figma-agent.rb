@@ -4,7 +4,7 @@ cask "figma-agent" do
 
   url "https://desktop.figma.com/agent/mac/InstallFigmaAgent.dmg"
   name "Figma Agent"
-  name "Font installers for Figma.app"
+  desc "Font installers for Figma.app"
   homepage "https://www.figma.com/"
 
   livecheck do
