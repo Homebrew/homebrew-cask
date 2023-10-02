@@ -1,6 +1,10 @@
 cask "docker" do
   arch arm: "arm64", intel: "amd64"
 
+  on_intel do
+    binary "Docker.app/Contents/Resources/bin/com.docker.hyperkit",
+           target: "/usr/local/bin/hyperkit"
+  end
   on_catalina :or_older do
     version "4.15.0,93002"
     sha256 arm:   "fc8609d57fb8c8264122f581c0f66497e46e171f8027d85d90213527d6226362",
@@ -13,9 +17,9 @@ cask "docker" do
     depends_on macos: ">= :catalina"
   end
   on_big_sur :or_newer do
-    version "4.22.1,118664"
-    sha256 arm:   "a452433af26047c933e75d9e647d33af41bec14cba7b7eb4fc7a43cf8f0efa4a",
-           intel: "dcc1babfa607be9eeb6ef221635352c7d9393c77b3837c206c76aa004d96ba9d"
+    version "4.24.0,122432"
+    sha256 arm:   "048e28f9834179008d4728ad59171584b793a76f5d2d52c13b577d1bbb2f699b",
+           intel: "67ba11934540270ad37ede8c4d6b3b73ef393690ee2aebca04b6591d22ffe4c5"
 
     livecheck do
       url "https://desktop.docker.com/mac/main/#{arch}/appcast.xml"
@@ -48,8 +52,6 @@ cask "docker" do
          target: "/usr/local/bin/docker"
   binary "Docker.app/Contents/Resources/bin/docker-compose",
          target: "/usr/local/bin/docker-compose"
-  binary "Docker.app/Contents/Resources/bin/docker-compose-v1/docker-compose",
-         target: "/usr/local/bin/docker-compose-v1"
   binary "Docker.app/Contents/Resources/bin/docker-credential-desktop",
          target: "/usr/local/bin/docker-credential-desktop"
   binary "Docker.app/Contents/Resources/bin/docker-credential-ecr-login",
@@ -62,20 +64,12 @@ cask "docker" do
          target: "/usr/local/bin/hub-tool"
   binary "Docker.app/Contents/Resources/bin/kubectl",
          target: "/usr/local/bin/kubectl.docker"
-  binary "Docker.app/Contents/Resources/bin/com.docker.vpnkit",
-         target: "/usr/local/bin/vpnkit"
   binary "Docker.app/Contents/Resources/etc/docker.bash-completion",
          target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/docker"
-  binary "Docker.app/Contents/Resources/etc/docker-compose.bash-completion",
-         target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/docker-compose"
   binary "Docker.app/Contents/Resources/etc/docker.zsh-completion",
          target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_docker"
-  binary "Docker.app/Contents/Resources/etc/docker-compose.zsh-completion",
-         target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_docker_compose"
   binary "Docker.app/Contents/Resources/etc/docker.fish-completion",
          target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/docker.fish"
-  binary "Docker.app/Contents/Resources/etc/docker-compose.fish-completion",
-         target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/docker-compose.fish"
 
   postflight do
     kubectl_target = Pathname("/usr/local/bin/kubectl")

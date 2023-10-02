@@ -1,6 +1,6 @@
 cask "transmit" do
-  version "5.9.2"
-  sha256 "fd921350bd64e63f91301e37dda4881a9b092581682f832c450404166c50a29d"
+  version "5.10.2"
+  sha256 "f29bd5206d5b6e8bbd24b288ade3d8d0f329ebbf542aac5c13980eade415be89"
 
   url "https://www.panic.com/transmit/d/Transmit%20#{version}.zip"
   name "Transmit"
@@ -24,6 +24,7 @@ cask "transmit" do
     "~/Library/Caches/com.panic.Transmit",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.panic.Transmit",
     "~/Library/Caches/Transmit",
+    "~/Library/HTTPStorages/com.panic.Transmit",
     "~/Library/Preferences/com.panic.Transmit.plist",
     "~/Library/Saved Application State/com.panic.Transmit.savedState",
     "~/Library/WebKit/com.panic.Transmit",

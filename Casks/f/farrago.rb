@@ -1,5 +1,5 @@
 cask "farrago" do
-  version "2.0.4"
+  version "2.0.5"
   sha256 :no_check
 
   url "https://rogueamoeba.com/farrago/download/Farrago.zip"
@@ -13,9 +13,11 @@ cask "farrago" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Farrago.app"
+
+  uninstall quit: "com.rogueamoeba.farrago"
 
   zap trash: [
     "~/Library/Application Support/Farrago #{version.major}",

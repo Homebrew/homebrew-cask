@@ -13,6 +13,8 @@ cask "bluebubbles" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "BlueBubbles.app"
 
   uninstall launchctl:  "com.BlueBubbles.BlueBubbles-Server.ShipIt",

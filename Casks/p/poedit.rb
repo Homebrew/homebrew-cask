@@ -1,6 +1,6 @@
 cask "poedit" do
-  version "3.3.2"
-  sha256 "0677603c254dd9871b11da84ca0efe03cfd3f244c48a2645a9d89fc333581b43"
+  version "3.4"
+  sha256 "ec29df26ad362e7c9279ebb1513f6059b3ae51f0c54e565ea7368425d1fe8cf1"
 
   url "https://download.poedit.net/Poedit-#{version}.zip"
   name "Poedit"
@@ -13,7 +13,7 @@ cask "poedit" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :mojave"
 
   app "Poedit.app"
 

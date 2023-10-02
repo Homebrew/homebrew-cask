@@ -1,9 +1,9 @@
 cask "electron" do
   arch arm: "arm64", intel: "x64"
 
-  version "26.1.0"
-  sha256 arm:   "f39aafcf480ef581161d3dc0b89a91c556dcaed45927ee0b612368016afe7b89",
-         intel: "39a336baca218058011f39c4fa9a4275348ec7f411789262799d23c9669060d9"
+  version "26.2.4"
+  sha256 arm:   "dda224e19ff2d2c99624e1da7d20fa24b92a34b49fac8dcef15542e183bc89c6",
+         intel: "a1e33c66a13913306e80812a9051ce7e5632d7cc13ff76910cc8daa791580589"
 
   url "https://github.com/electron/electron/releases/download/v#{version}/electron-v#{version}-darwin-#{arch}.zip",
       verified: "github.com/electron/electron/"
@@ -13,7 +13,7 @@ cask "electron" do
 
   livecheck do
     url :url
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    strategy :github_latest
   end
 
   app "Electron.app"

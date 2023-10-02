@@ -17,10 +17,15 @@ cask "pronterface" do
   homepage "https://github.com/kliment/Printrun"
 
   livecheck do
-    url "https://api.github.com/repos/kliment/Printrun/releases/latest"
-    regex(/printrun[._-]v?(\d+(?:\.\d+)+)[._-]macos(?:.+)[._-]py(\d+(?:\.\d+)+)\.zip/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+    url :url
+    regex(/^printrun[._-]v?(\d+(?:\.\d+)+)[._-]macos(?:.+)[._-]py(\d+(?:\.\d+)+)\.zip$/i)
+    strategy :github_latest do |json, regex|
+      json["assets"]&.map do |asset|
+        match = asset["name"]&.match(regex)
+        next if match.blank?
+
+        "#{match[1]},#{match[2]}"
+      end
     end
   end
 

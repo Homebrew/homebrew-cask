@@ -1,5 +1,5 @@
 cask "anydesk" do
-  version "7.2.1"
+  version "7.2.2"
   sha256 :no_check
 
   url "https://download.anydesk.com/anydesk.dmg"
@@ -11,6 +11,8 @@ cask "anydesk" do
     url "https://anydesk.com/en/downloads/mac-os"
     regex(/>v(\d+(?:\.\d+)+)[\s<]/i)
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "AnyDesk.app"
 

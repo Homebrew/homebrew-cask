@@ -1,6 +1,6 @@
 cask "trivial" do
-  version "1.0.9"
-  sha256 "1c788ba859f51ba06493239e0835750759613cd8e066249e57a9eeef301ac508"
+  version "1.0.10"
+  sha256 "21f9b6a83f2eaa7c6f36c717b09723d4f66ae4d359b06a9fbf2c75fc244e1c84"
 
   url "https://download.decisivetactics.com/downloads/trivial/Trivial_#{version}.zip"
   name "Trivial"

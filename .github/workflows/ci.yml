@@ -30,7 +30,7 @@ jobs:
           test-bot: false
 
       - name: Check out Pull Request
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
           persist-credentials: false
@@ -64,7 +64,7 @@ jobs:
         if: runner.debug
 
       - name: Check out Pull Request
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
           persist-credentials: false
@@ -111,7 +111,7 @@ jobs:
 
       - name: Run brew readall ${{ matrix.tap }}
         id: readall
-        run: brew readall '${{ matrix.tap }}'
+        run: brew readall --os=all --arch=all '${{ matrix.tap }}'
         if: >
           always() &&
           contains(fromJSON('["success", "skipped"]'), steps.gems.outcome) &&

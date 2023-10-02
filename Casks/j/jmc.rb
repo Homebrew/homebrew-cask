@@ -7,9 +7,13 @@ cask "jmc" do
   desc "Media organizer"
   homepage "https://github.com/jcm93/jmc"
 
+  # This regex should be removed or tightened (/^v?(\d+(?:\.\d+)+)$/i) when
+  # upstream starts publishing stable versions. Until then, it has to be loose
+  # enough to match unstable versions like `0.2-beta.6`, etc.).
   livecheck do
-    url "https://github.com/jcm93/jmc/releases/latest"
-    regex(%r{releases/tag/v?(\d+(?:\.\d+)*((?:-beta)?)*(\d+)?)}i)
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+.+)$/i)
+    strategy :github_latest
   end
 
   app "jmc.app"

@@ -1,24 +1,24 @@
 cask "zoom" do
   arch arm: "arm64/"
 
-  version "5.15.12.22445"
-  sha256 arm:   "5132516b7a109f05e522a929405db2c7adb69de53788a8ba05b5a4801ee4ddb2",
-         intel: "63e7dbc8f450e24623f950a47be28b206213d29189e43bfd64476b825d6ffe02"
+  version "5.16.2.23409"
+  sha256 arm:   "314931123e06e8c0825dcab216ab82ac7867bbeb15c391f81d293eb0fe47fa06",
+         intel: "9e247f59b32aed3d4f04224c2b50dd85b15ce1e24382e6fc2c8bf75f88bc4b97"
 
-  url "https://cdn.zoom.us/prod/#{version}/#{arch}Zoom.pkg"
-  name "Zoom.us"
+  url "https://cdn.zoom.us/prod/#{version}/#{arch}zoomusInstallerFull.pkg"
+  name "Zoom"
   desc "Video communication and virtual meeting platform"
   homepage "https://www.zoom.us/"
 
   livecheck do
-    url "https://zoom.us/client/latest/Zoom.pkg"
+    url "https://www.zoom.us/client/latest/zoomusInstallerFull.pkg"
     strategy :header_match
   end
 
   auto_updates true
   conflicts_with cask: "zoom-for-it-admins"
 
-  pkg "Zoom.pkg"
+  pkg "zoomusInstallerFull.pkg"
 
   postflight do
     # Description: Ensure console variant of postinstall is non-interactive.

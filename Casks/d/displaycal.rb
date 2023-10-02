@@ -21,8 +21,11 @@ cask "displaycal" do
 
   zap trash: [
     "~/Library/Application Support/dispcalGUI",
+    "~/Library/Application Support/DisplayCAL",
     "~/Library/Logs/dispcalGUI",
+    "~/Library/Logs/DisplayCAL",
     "~/Library/Preferences/dispcalGUI",
+    "~/Library/Preferences/DisplayCAL",
   ]
 
   caveats do

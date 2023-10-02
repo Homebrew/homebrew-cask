@@ -1,6 +1,5 @@
 cask "miniwol" do
-  arch arm: "arm"
-  arch_suffix = on_arch_conditional intel: "bit"
+  arch arm: "arm64", intel: "64bit"
 
   on_arm do
     version "2.1.4"
@@ -11,15 +10,17 @@ cask "miniwol" do
     sha256 "3a42570e704616620a74969ce180151553751bbcd33e34cd02194ac4edf50b3a"
   end
 
-  url "https://www.tweaking4all.com/downloads/network/miniWOL-v#{version}-#{arch}64#{arch_suffix}.dmg"
+  url "https://www.tweaking4all.com/downloads/network/miniWOL-v#{version}-#{arch}.dmg"
   name "miniWOL"
   desc "Small menu bar tool for sending Wake on LAN (WOL) network packets"
   homepage "https://www.tweaking4all.com/network-internet/miniwol2/"
 
   livecheck do
     url "https://www.tweaking4all.com/downloads/"
-    regex(/href=.*?miniWOL[._-]v?(\d+(?:\.\d+)+)-#{arch}64#{arch_suffix}\.dmg/i)
+    regex(/href=.*?miniWOL[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "miniWOL.app"
 

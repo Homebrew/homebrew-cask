@@ -9,9 +9,10 @@ cask "vimr" do
   homepage "http://vimr.org/"
 
   livecheck do
-    url "https://github.com/qvacua/vimr/releases/latest"
-    strategy :page_match do |page|
-      match = page.match(/v?(\d+(?:\.\d+)+)[._-](\d+(?:\.\d+)+)/i)
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+)[._-](\d+(?:\.\d+)+)$/i)
+    strategy :github_latest do |json, regex|
+      match = json["tag_name"]&.match(regex)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"

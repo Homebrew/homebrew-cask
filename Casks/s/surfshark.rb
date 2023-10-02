@@ -1,5 +1,5 @@
 cask "surfshark" do
-  version "4.11.1,1943"
+  version "4.11.2,1955"
   sha256 :no_check
 
   url "https://downloads.surfshark.com/macOS/latest/Surfshark.dmg"

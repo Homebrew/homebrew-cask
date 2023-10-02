@@ -7,11 +7,11 @@ cask "betterdisplay" do
       skip "Legacy version"
     end
 
-    depends_on macos: ">= :mojave"
+    depends_on macos: ">= :monterey"
   end
   on_monterey :or_newer do
-    version "2.0.9"
-    sha256 "e12d9b43585388f7c7bef3e30c0fc93c9361e6cf3b404c3ac0c1b7ebd3c7c978"
+    version "2.0.11"
+    sha256 "295078b08598dbf68b6306c30a87548f53be1209a5e6c29b8a21e65d7cf71e83"
 
     livecheck do
       url :url
@@ -29,12 +29,14 @@ cask "betterdisplay" do
 
   app "BetterDisplay.app"
 
-  uninstall quit: "me.waydabber.BetterDummy"
+  uninstall quit: "pro.betterdisplay.BetterDisplay"
 
   zap trash: [
+    "~/Library/Application Support/BetterDisplay",
     "~/Library/Application Support/BetterDummy",
-    "~/Library/Caches/me.waydabber.BetterDummy",
-    "~/Library/HTTPStorages/me.waydabber.BetterDummy",
-    "~/Library/Preferences/me.waydabber.BetterDummy.plist",
+    "~/Library/Caches/pro.betterdisplay.BetterDisplay",
+    "~/Library/HTTPStorages/pro.betterdisplay.BetterDisplay",
+    "~/Library/HTTPStorages/pro.betterdisplay.BetterDisplay.binarycookies",
+    "~/Library/Preferences/pro.betterdisplay.BetterDisplay.plist",
   ]
 end

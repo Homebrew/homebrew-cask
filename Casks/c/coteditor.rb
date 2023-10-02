@@ -40,8 +40,8 @@ cask "coteditor" do
     end
   end
   on_big_sur :or_newer do
-    version "4.5.8"
-    sha256 "5b3a33ca674b00d9257a298e0c2794a2ac21efc79c41deb0250eb5dab6d4eb23"
+    version "4.6.1"
+    sha256 "6710c3a488d61990260245f165563c24fc5e10f2c57fb9115bbab199c5ea79ff"
 
     livecheck do
       url :url
@@ -56,6 +56,7 @@ cask "coteditor" do
   homepage "https://coteditor.com/"
 
   auto_updates true
+  depends_on macos: ">= :monterey"
 
   app "CotEditor.app"
   binary "#{appdir}/CotEditor.app/Contents/SharedSupport/bin/cot"

@@ -12,6 +12,8 @@ cask "crystalfetch" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :monterey"
+
   app "CrystalFetch.app"
 
   zap trash: [

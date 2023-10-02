@@ -1,6 +1,6 @@
 cask "8x8-work" do
-  version "8.5.4-2"
-  sha256 "cb5c82ae677c672e38419cc6ed0c7193d84a937e18b799b11e427c84aeb326e8"
+  version "8.6.3-1"
+  sha256 "78c677ea9968432671456ab6871474775e63f0a4cfc83214b8f1572209871885"
 
   url "https://vod-updates.8x8.com/ga/work-dmg-v#{version}.dmg"
   name "8x8_work"
@@ -11,6 +11,8 @@ cask "8x8-work" do
     url "https://support.8x8.com/cloud-phone-service/voice/work-desktop/download-8x8-work-for-desktop#Download_for_Mac"
     regex(/work[._-]dmg[._-]v(\d+(?:.\d+)*)\.dmg/i)
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "8x8 Work.app"
 

@@ -1,9 +1,9 @@
 cask "chatbox" do
   arch arm: "-arm64"
 
-  version "0.6.8"
-  sha256 arm:   "13dfba6137a67fc871b2d008d54e8b3b675dc347ac0c1b1239228f5b3a622e7b",
-         intel: "648040029a90c785ff40a188bc7a088477d14acb04ab57131368805ef22fb343"
+  version "1.0.3"
+  sha256 arm:   "cabec649ea5ddcb99e3c0c700ccb80851694a052481c8a60ca4d08c62360dd4f",
+         intel: "790931750a9da30ec01a46970027c6a5d7f09f70516f1f73e21e4c8ebc3b5f73"
 
   url "https://github.com/Bin-Huang/chatbox/releases/download/v#{version}/Chatbox-#{version}#{arch}.dmg",
       verified: "github.com/Bin-Huang/chatbox/"
@@ -12,6 +12,7 @@ cask "chatbox" do
   homepage "https://chatboxapp.xyz/"
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "chatbox.app"
 

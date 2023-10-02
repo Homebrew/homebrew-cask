@@ -1,11 +1,11 @@
 cask "staruml" do
   arch arm: "-arm64"
 
-  version "5.1.0"
-  sha256 arm:   "9dbdb2a205cdb1a11e296e9aec328f925d002a6037a0fae610fc40c72a36d6ff",
-         intel: "c21ecc5517ea3ab96c8a5a10158f77904f76cff4054349c2dea94e27fb8fe82a"
+  version "6.0.1"
+  sha256 arm:   "c897479c91dfeddc3efbf8b67a68e93cdcd4881d54c27b21def5768e8279446e",
+         intel: "43095e53aff0b327a3710b872aa20413196bca6a5e473ccc1ff3bbbf7559670b"
 
-  url "https://staruml.io/download/releases-v#{version.major}/StarUML-#{version}#{arch}.dmg"
+  url "https://files.staruml.io/releases-v#{version.major}/StarUML-#{version}#{arch}.dmg"
   name "StarUML"
   desc "Software modeler"
   homepage "https://staruml.io/"

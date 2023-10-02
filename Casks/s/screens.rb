@@ -1,6 +1,6 @@
 cask "screens" do
-  version "4.12.11,1690321183"
-  sha256 "fecb062a257a3dda8efeadfd45a1929d919ee92d4ab27cc4844fd9711fded86b"
+  version "4.12.14,1695305390"
+  sha256 "efff958a87ec9fae1de3e70eb6e0dc9ed54f196f278ad43d7d11e904ec8caf05"
 
   url "https://updates.edovia.com/com.edovia.screens#{version.major}.mac/Screens_#{version.csv.first}b#{version.csv.second}.zip"
   name "Screens"
@@ -13,7 +13,7 @@ cask "screens" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :monterey"
 
   app "Screens #{version.major}.app"
 

@@ -1,17 +1,15 @@
 cask "oss-browser" do
-  version "1.16.0"
-  sha256 "db165811bb5b862c1e6037a8b477157171b6e684fd0b2c1a7c1652d4614604d2"
+  version "1.17.0"
+  sha256 "457743b705524bfbdf9e60d345dfac2533d4eae93b47e3abbebe5d156a3f89a9"
 
-  url "https://oss-attachment.cn-hangzhou.oss.aliyun-inc.com/oss-browser/#{version}/oss-browser-darwin-x64.zip",
-      verified: "oss-attachment.cn-hangzhou.oss.aliyun-inc.com/oss-browser/"
+  url "https://github.com/aliyun/oss-browser/releases/download/v#{version}/oss-browser-darwin-x64.zip"
   name "oss-browser"
   desc "Graphical management tool for OSS (Object Storage Service)"
   homepage "https://github.com/aliyun/oss-browser/"
 
   livecheck do
-    url :homepage
-    regex(%r{href=.*?/(\d+(?:\.\d+)+)/oss-browser-darwin-x64\.zip}i)
-    strategy :page_match
+    url :url
+    strategy :github_latest
   end
 
   app "oss-browser-darwin-x64/oss-browser.app"

@@ -1,6 +1,6 @@
 cask "odrive" do
-  version "7353"
-  sha256 "eb02c5003da798eaee4ded15ee9c76b366a1b8267bda957e1c5a1a886bd8a30d"
+  version "7363"
+  sha256 "08e787f5fc7bb34d3a0abd098a737a6eeae0cac2f3244e458fb40874578496e6"
 
   url "https://d3huse1s6vwzq6.cloudfront.net/odrivesync.#{version}.pkg",
       verified: "d3huse1s6vwzq6.cloudfront.net/"

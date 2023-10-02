@@ -24,8 +24,8 @@ cask "omnioutliner" do
     url "https://downloads.omnigroup.com/software/MacOSX/10.14/OmniOutliner-#{version}.dmg"
   end
   on_catalina :or_newer do
-    version "5.11.1"
-    sha256 "0117a74bdbca04094931e2c482c80ba3b939f0107d5d2039c6c5ab25ec1e8d9d"
+    version "5.12"
+    sha256 "1f417470258c3505cc2226689a814f5a4b1fde78f268ba4a151aae923cbe694c"
 
     url "https://downloads.omnigroup.com/software/macOS/11/OmniOutliner-#{version}.dmg"
   end

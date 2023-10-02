@@ -1,9 +1,9 @@
 cask "krisp" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.24.5"
-  sha256 arm:   "a5a346d842f1caf35f3265651d7c55c166c7a6826f9ab7901db571a2f7e727a7",
-         intel: "5ea275c1861b2893737d25a41626ce2569d372e7faedac363ea76a779f55ee48"
+  version "2.25.3"
+  sha256 arm:   "f58ddd141da893676533e5fc029066a4a6dc5456effd224d7521eedb3eff0d61",
+         intel: "7b564f8824a8c91bceec9d2819dbbcbcadb6becfafd38540676b0f63e461a0df"
 
   url "https://cdn.krisp.ai/mp/#{version}/mac/krisp_#{version}_#{arch}.pkg"
   name "Krisp"

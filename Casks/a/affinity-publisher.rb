@@ -1,5 +1,5 @@
 cask "affinity-publisher" do
-  version "2.1.1"
+  version "2.2.0"
   sha256 :no_check
 
   url "https://store.serif.com/download/668dfb/"
@@ -8,8 +8,8 @@ cask "affinity-publisher" do
   homepage "https://affinity.serif.com/en-us/publisher/"
 
   livecheck do
-    url "https://forum.affinity.serif.com/index.php?/topic/170203-latest-affinity-v2-releases-on-each-platform-by-store/"
-    regex(/Affinity\s*Publisher\s*\d+\s*\|\s*Affinity\s*Store\s*\|\s*macOS[^|]*\|\s*(\d+(?:\.\d+)+)/i)
+    url :url
+    strategy :header_match
   end
 
   auto_updates true

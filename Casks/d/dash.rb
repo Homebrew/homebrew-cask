@@ -4,8 +4,8 @@ cask "dash" do
     sha256 "e2b5eb996645b25f12ccae15e24b1b0d8007bc5fed925e14ce7be45a2b693fb6"
   end
   on_mojave :or_newer do
-    version "7.0.1"
-    sha256 "df867edbf5aa7bf1452d389b8b6438c878c774dc38f2d93d153056d19dbd7b03"
+    version "7.1.2"
+    sha256 "24fd0c3e75ca4834e87cd6b92a9f076406e4d21f2a0af23612ed697292a5179c"
   end
 
   url "https://kapeli.com/downloads/v#{version.major}/Dash.zip"
@@ -20,6 +20,7 @@ cask "dash" do
 
   auto_updates true
   conflicts_with cask: "homebrew/cask-versions/dash6"
+  depends_on macos: ">= :high_sierra"
 
   app "Dash.app"
 

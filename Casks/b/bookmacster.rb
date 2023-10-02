@@ -1,15 +1,19 @@
 cask "bookmacster" do
-  version "3.0.8"
-  sha256 "b743b550c4fa3d7667823bfad5052dc636ec0e3cf2ac49f334d8ce26c0bb0cb6"
+  version "3.0.12"
+  sha256 "0b79ed601d82648ce212166e7cda278d54a1914058ed81ad465bd47a8d47f485"
 
   url "https://sheepsystems.com/bookmacster/BookMacster_#{version}.zip"
   name "BookMacster"
   desc "Bookmarks manager"
   homepage "https://sheepsystems.com/products/bookmacster.html"
 
+  # Older items in the Sparkle feed may have a newer pubDate, so it's necessary
+  # to work with all of the items in the feed (not just the newest one).
   livecheck do
     url "https://sheepsystems.com/bookmacster/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle do |items|
+      items.map(&:short_version)
+    end
   end
 
   auto_updates true

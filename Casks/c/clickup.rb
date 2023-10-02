@@ -1,9 +1,9 @@
 cask "clickup" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.3.22"
-  sha256 arm:   "09abd48d41138cf0a3912c89a5b5951338ebc1140a0e42ac924bcaf6ebe18b06",
-         intel: "249fad75d7d72c2dc8a24c3dbccc2f5b1780ddc29f96806e4aeb9f4b0d658fcd"
+  version "3.3.57"
+  sha256 arm:   "b24b87c66d0e2bd60412c9cf4728ab7daf68c5b058576600cecdadf774d25935",
+         intel: "3dcbea893e1fb51b624c012a67271444a58d28822c136c6377feae0a66e16033"
 
   url "https://download.todesktop.com/210531zdwwjv8ke/ClickUp%20#{version}-#{arch}.dmg",
       verified: "download.todesktop.com/210531zdwwjv8ke/"
@@ -15,6 +15,8 @@ cask "clickup" do
     url "https://download.todesktop.com/210531zdwwjv8ke/latest-mac.yml"
     strategy :electron_builder
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "ClickUp.app"
 

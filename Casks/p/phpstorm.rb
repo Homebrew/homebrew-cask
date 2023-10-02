@@ -1,9 +1,9 @@
 cask "phpstorm" do
   arch arm: "-aarch64"
 
-  version "2023.2.1,232.9559.64"
-  sha256 arm:   "886e79089e5e783739e71f57f8f20b9ecbc2e9e7cc9b941bb99d1444181939df",
-         intel: "5d238f0d3ddd59762256dc406ae2430e5abf79f9a04488722a87e54b70db68ef"
+  version "2023.2.2,232.9921.55"
+  sha256 arm:   "a31daeddae532324436b2d11acbd5fb657721883f17c7ef4457ac76a51bd4189",
+         intel: "99a9bb313a5c141ecd1810306deaca3cf52d338edf206362b3f9d9337a27890e"
 
   url "https://download.jetbrains.com/webide/PhpStorm-#{version.csv.first}#{arch}.dmg"
   name "JetBrains PhpStorm"

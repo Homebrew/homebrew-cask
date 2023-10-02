@@ -1,6 +1,6 @@
 cask "virtualbuddy" do
-  version "1.2.2,10"
-  sha256 "953428b48ac48652edf8935a0d7f0042aaaa2f8ca7303f86add3ceaedfb9c1cf"
+  version "1.3.1,105"
+  sha256 "60cf0c049f9a95c80d391d8489a3ea96a1957c0bd4ccd3685da28d107e012e60"
 
   url "https://github.com/insidegui/VirtualBuddy/releases/download/#{version.csv.first}/VirtualBuddy_v#{version.csv.first}-#{version.csv.second}.dmg"
   name "VirtualBuddy"
@@ -8,7 +8,16 @@ cask "virtualbuddy" do
   homepage "https://github.com/insidegui/VirtualBuddy"
 
   livecheck do
-    skip "No reliable way to get version info"
+    url :url
+    regex(/^VirtualBuddy[._-]v?(\d+(?:[.-]\d+)+)\.dmg$/i)
+    strategy :github_latest do |json, regex|
+      json["assets"]&.map do |asset|
+        match = asset["name"]&.match(regex)
+        next if match.blank?
+
+        match[1].tr("-", ",")
+      end
+    end
   end
 
   conflicts_with cask: "homebrew/cask-versions/virtualbuddy-beta"

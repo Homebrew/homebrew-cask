@@ -5,11 +5,11 @@ cask "olive" do
   url "https://olivevideoeditor.org/dl/Olive-#{version}-macOS-x86_64.zip"
   name "Olive"
   desc "Non-linear video editor"
-  homepage "https://olivevideoeditor.org/"
+  homepage "https://www.olivevideoeditor.org/"
 
   livecheck do
-    url "https://olivevideoeditor.org/download.php"
-    regex(/golegacy\.php\?hash=(.*)&type=/i)
+    url "https://www.olivevideoeditor.org/download"
+    regex(/golegacy\?hash=(.*)&type=/i)
   end
 
   app "Olive.app"

@@ -1,8 +1,11 @@
 cask "pomatez" do
-  version "1.2.3"
-  sha256 "695e837bc756987c60bd07616ca0537463c209fcea48f46140ef473a26eb2a1f"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://github.com/zidoro/pomatez/releases/download/v#{version}/Pomatez-v#{version}-mac.dmg",
+  version "1.3.0"
+  sha256 arm:   "ef9ba130f8c098930bd8451a673049a39782ef3db78036e59e170cd81fe97cc5",
+         intel: "f79dd27ba6131bc77c8a7c5dc9787a97e24cb5fe9bf9cba7541f58035494fa7f"
+
+  url "https://github.com/zidoro/pomatez/releases/download/v#{version}/Pomatez-v#{version}-mac-#{arch}.dmg",
       verified: "github.com/zidoro/pomatez/"
   name "Pomatez"
   desc "Pomodoro timer"

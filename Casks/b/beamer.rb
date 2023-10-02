@@ -12,6 +12,8 @@ cask "beamer" do
     strategy :sparkle
   end
 
+  depends_on macos: ">= :catalina"
+
   app "Beamer.app"
 
   zap rmdir: "/Users/Shared/Beamer",

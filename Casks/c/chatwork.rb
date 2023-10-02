@@ -1,5 +1,5 @@
 cask "chatwork" do
-  version "2.6.48.6532"
+  version "2.6.51.6743"
   sha256 :no_check
 
   url "https://desktop-app.chatwork.com/installer/ChatWork.dmg"
@@ -11,6 +11,8 @@ cask "chatwork" do
     url :url
     strategy :extract_plist
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "ChatWork.app"
 

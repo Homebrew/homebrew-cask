@@ -1,8 +1,8 @@
 cask "noun-project" do
-  version "2.2.5"
-  sha256 "3d852802f7fc86f35755985a93c82a14d5ac897da9065e1a05ad449fb64bc746"
+  version "2.3"
+  sha256 :no_check
 
-  url "https://nounproject.s3.amazonaws.com/mac/Noun-Project-#{version}.dmg",
+  url "https://nounproject.s3.amazonaws.com/mac/NounProject.dmg",
       verified: "nounproject.s3.amazonaws.com/"
   name "Noun Project"
   desc "Icon manager"
@@ -12,6 +12,8 @@ cask "noun-project" do
     url "https://thenounproject.com/for-mac/feed/"
     strategy :sparkle, &:short_version
   end
+
+  depends_on macos: ">= :mojave"
 
   app "Noun Project.app"
 end

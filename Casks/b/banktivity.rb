@@ -1,16 +1,16 @@
 cask "banktivity" do
-  version "9.0.3-244"
-  sha256 "9f4f3eb196ef0cd613f51eb3992808c52362746f62930b7663aaf41fa1b6e591"
+  version "9.1.3,250"
+  sha256 "0672375ad9cc47343f1feb3cdd66a30c4fcf1214708ddd170ce4001454e94a19"
 
-  url "https://www.iggsoft.com/banktivity/Banktivity#{version}.dmg",
+  url "https://www.iggsoft.com/banktivity/Banktivity#{version.csv.first}-#{version.csv.second}.dmg",
       verified: "iggsoft.com/banktivity/"
   name "Banktivity"
   desc "App to manage bank accounts in one place"
   homepage "https://www.iggsoftware.com/banktivity/"
 
   livecheck do
-    url "https://www.iggsoft.com/banktivity/banktivity-versions-feed.json"
-    regex(/Banktivityv?(\d+(?:[._-]\d+)+)\.dmg/i)
+    url "https://www.banktivity.com/download.php"
+    strategy :extract_plist
   end
 
   depends_on macos: ">= :catalina"

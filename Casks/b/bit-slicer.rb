@@ -7,5 +7,7 @@ cask "bit-slicer" do
   desc "Universal game trainer"
   homepage "https://github.com/zorgiepoo/bit-slicer/"
 
+  depends_on macos: ">= :high_sierra"
+
   app "Bit Slicer.app"
 end

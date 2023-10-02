@@ -1,6 +1,6 @@
 cask "camunda-modeler" do
-  version "5.14.0"
-  sha256 "bba4454a4230dc89ea05a26c138d30673d70920f557ea43a168627290900a26b"
+  version "5.15.1"
+  sha256 "93afdb1be8a0a445f5037f4e2ba4f5447495eb19fbb6aa9ee0614ae6da2ab942"
 
   url "https://camunda.org/release/camunda-modeler/#{version}/camunda-modeler-#{version}-mac.zip"
   name "Camunda Modeler"
@@ -11,6 +11,8 @@ cask "camunda-modeler" do
     url "https://camunda.com/download/modeler/"
     regex(%r{href=.*?/camunda[._-]?modeler[._-]?v?(\d+(?:\.\d+)+)[._-]?mac\.zip}i)
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Camunda Modeler.app"
 

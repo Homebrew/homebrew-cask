@@ -11,6 +11,8 @@ cask "bandage" do
   desc "Bioinformatics app for navigating de novo assembly graphs"
   homepage "https://rrwick.github.io/Bandage/"
 
+  depends_on macos: ">= :big_sur"
+
   app "Bandage.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
   shimscript = "#{staged_path}/bandage.wrapper.sh"

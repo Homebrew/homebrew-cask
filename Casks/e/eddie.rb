@@ -21,8 +21,8 @@ cask "eddie" do
   homepage "https://eddie.website/"
 
   livecheck do
-    url :url
-    regex(/data-version=["']?(\d+(?:\.\d+)+)["' >]/i)
+    url "https://github.com/AirVPN/Eddie"
+    strategy :github_latest
   end
 
   app "Eddie.app"

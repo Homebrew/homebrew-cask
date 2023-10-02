@@ -1,5 +1,5 @@
 cask "music-miniplayer" do
-  version "1.8"
+  version "1.9"
   sha256 :no_check
 
   url "https://marioaguzman.github.io/musicminiplayer/updater/Music%20MiniPlayer.zip"
@@ -13,7 +13,7 @@ cask "music-miniplayer" do
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Music MiniPlayer.app"
 

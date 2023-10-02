@@ -1,6 +1,6 @@
 cask "receipts" do
-  version "1.12-643"
-  sha256 "e14dba38c17773e36724959a70272b40a98ec4a9b17a98468cbdc7181cba896a"
+  version "1.14-682"
+  sha256 "85c4f5c53bc10cd4689bd6468a570bdc3d0045c3f2520bc229507b5b0defe2af"
 
   url "https://www.receipts-app.com/update/download/Receipts-#{version}.zip"
   name "Receipts"

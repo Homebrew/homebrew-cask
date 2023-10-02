@@ -12,8 +12,8 @@ cask "couchbase-server-enterprise" do
     app "couchbase-server-enterprise_#{version}/Couchbase Server.app"
   end
   on_sierra :or_newer do
-    version "7.2.0"
-    sha256 "036fb6bb0a2d84cb0dd822dfab83246702c3e33bf2db4483bbcc6355c52ca299"
+    version "7.2.2"
+    sha256 "3f20a13df25074080c44517b28938eb755035376c24226d08109b45684f182b0"
 
     url "https://packages.couchbase.com/releases/#{version}/couchbase-server-enterprise_#{version}-macos_x86_64.dmg"
 
@@ -30,6 +30,7 @@ cask "couchbase-server-enterprise" do
   homepage "https://www.couchbase.com/"
 
   conflicts_with cask: "couchbase-server-community"
+  depends_on macos: ">= :catalina"
 
   zap trash: [
     "~/Library/Application Support/Couchbase",

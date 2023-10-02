@@ -13,5 +13,7 @@ cask "btcpayserver-vault" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "BTCPayServer Vault.app"
 end

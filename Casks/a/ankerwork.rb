@@ -1,5 +1,5 @@
 cask "ankerwork" do
-  version "2.5.1"
+  version "2.5.2"
   sha256 :no_check
 
   url "https://ankerwork.s3.us-west-2.amazonaws.com/prod/AnkerWork_Official.dmg",
@@ -12,6 +12,8 @@ cask "ankerwork" do
     url :url
     strategy :extract_plist
   end
+
+  depends_on macos: ">= :mojave"
 
   app "AnkerWork.app"
 

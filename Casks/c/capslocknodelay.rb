@@ -7,6 +7,8 @@ cask "capslocknodelay" do
   desc "Removes delay when pressing the caps lock"
   homepage "https://github.com/gkpln3/CapsLockNoDelay"
 
+  depends_on macos: ">= :catalina"
+
   app "CapsLockNoDelay.app"
 
   uninstall quit: "gkpln3.CapsLockNoDelay"

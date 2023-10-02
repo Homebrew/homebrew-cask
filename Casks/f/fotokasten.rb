@@ -1,15 +1,16 @@
 cask "fotokasten" do
-  version "4.0.3"
-  sha256 "c70b33135848be6b52f550522e3b6fc7e020b584d168c6852a6d223c74943d4d"
+  version "4.13.0,230824.1252"
+  sha256 "ba49a1cd489c136a84bdeaee808b367e4f52dc9dd26393fc7ca7c9ebf6b817d1"
 
-  url "https://cdn.fotokasten.de/installer/ftk_de/de/mac/fotokasten.de_#{version}.dmg"
+  url "https://downloads.poi.de/fotokasten/pgx-mac/de_DE/fotokasten_22153088_de_DE_#{version.csv.first}-#{version.csv.second}.dmg",
+      verified: "downloads.poi.de/fotokasten/"
   name "Fotokasten"
   desc "Create and buy photo products"
   homepage "https://www.fotokasten.de/"
 
   livecheck do
     url "https://downloads.poi.de/fotokasten/pgx-mac/de_DE/appcast.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle
   end
 
   app "Fotokasten.app"

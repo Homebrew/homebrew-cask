@@ -24,8 +24,8 @@ cask "calibre" do
     end
   end
   on_big_sur :or_newer do
-    version "6.25.0"
-    sha256 "a7ed19ae0526630ccb138b9afee6dc5169904180b02f7a3089e78d3e0022753b"
+    version "6.27.0"
+    sha256 "459f1b395cfa3cf640dc6b3f407b9aefe295ab984ec3278842c4fc9daf9d1709"
 
     livecheck do
       url "https://github.com/kovidgoyal/calibre"
@@ -39,6 +39,7 @@ cask "calibre" do
   homepage "https://calibre-ebook.com/"
 
   conflicts_with cask: "homebrew/cask-versions/calibre4"
+  depends_on macos: ">= :catalina"
 
   app "calibre.app"
   binary "#{appdir}/calibre.app/Contents/MacOS/calibre"

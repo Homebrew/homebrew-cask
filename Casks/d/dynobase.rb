@@ -12,20 +12,15 @@ cask "dynobase" do
   homepage "https://dynobase.dev/"
 
   livecheck do
-    url "https://github.com/Dynobase/dynobase/releases/latest"
-    regex(%r{(\d+(?:\.\d+)+)/Dynobase[._-](\d+(?:\.\d+)+)[._-]+Build[._-](\S+)[._-]#{arch}\.dmg}i)
-    strategy :header_match do |headers, regex|
-      next if headers["location"].blank?
+    url :url
+    regex(%r{/v?(\d+(?:\.\d+)+)/Dynobase[._-](\d+(?:\.\d+)+)[._-]+Build[._-](\S+)[._-]#{arch}\.dmg$}i)
+    strategy :github_latest do |json, regex|
+      json["assets"]&.map do |asset|
+        match = asset["browser_download_url"]&.match(regex)
+        next if match.blank?
 
-      # Identify the latest tag from the response's `location` header
-      latest_tag = File.basename(headers["location"])
-      next if latest_tag.blank?
-
-      # Fetch the assets list HTML for the latest tag and match within it
-      assets_page = Homebrew::Livecheck::Strategy.page_content(
-        @url.sub(%r{/releases/?.+}, "/releases/expanded_assets/#{latest_tag}"),
-      )
-      assets_page[:content]&.scan(regex)&.map { |match| "#{match[1]},#{match[2]},#{match[0]}" }
+        "#{match[2]},#{match[3]},#{match[1]}"
+      end
     end
   end
 

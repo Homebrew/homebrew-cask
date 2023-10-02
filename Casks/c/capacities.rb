@@ -16,6 +16,8 @@ cask "capacities" do
     strategy :electron_builder
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Capacities.app"
 
   zap trash: [

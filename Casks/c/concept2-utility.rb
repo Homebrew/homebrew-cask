@@ -8,8 +8,8 @@ cask "concept2-utility" do
     end
   end
   on_high_sierra :or_newer do
-    version "7.13.00"
-    sha256 "eb3ee0636ac95408192d7be24a92f529cb9fdd6c1b42997bef32296504e0a7ee"
+    version "7.14.00"
+    sha256 "389c5f77f290e2d60bb5dc8ddeae108e14df8b444265865ffb8f9ee75985aecd"
 
     livecheck do
       url :homepage
@@ -17,7 +17,7 @@ cask "concept2-utility" do
     end
   end
 
-  url "https://software.concept2.com/utility/Concept2Utility#{version.no_dots}.dmg"
+  url "https://software.concept2.com/utility/Concept2Utility0#{version.no_dots}.dmg"
   name "Concept2 Utility"
   desc "Utilities for the Concept2 Performance Monitor"
   homepage "https://www.concept2.com/service/software/concept2-utility"

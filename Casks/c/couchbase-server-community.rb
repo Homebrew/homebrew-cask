@@ -1,6 +1,6 @@
 cask "couchbase-server-community" do
-  version "7.2.0"
-  sha256 "423da593e4dcce2210dcf26719367359936b57ea8a80b295a17e6e800c85d6e9"
+  version "7.2.2"
+  sha256 "1129a710cd453deacb64479129217dffe5b1a778d5e934c602b8628ad796a55a"
 
   url "https://packages.couchbase.com/releases/#{version}/couchbase-server-community_#{version}-macos_x86_64.dmg"
   name "Couchbase Server"
@@ -13,6 +13,7 @@ cask "couchbase-server-community" do
   end
 
   conflicts_with cask: "couchbase-server-enterprise"
+  depends_on macos: ">= :catalina"
 
   app "Couchbase Server.app"
 

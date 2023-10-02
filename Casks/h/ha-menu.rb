@@ -1,6 +1,6 @@
 cask "ha-menu" do
-  version "2.7.0"
-  sha256 "eeca3cfea1545f1ff53281ccf801ace17d70773d37d6ea6e97fe0d0c0a8e584f"
+  version "2.7.1"
+  sha256 "762d0f68ca71aff675df74f3aa6ffb03580dadc6e37ee880ba8c9284a8d1b9b2"
 
   url "https://github.com/codechimp-org/ha-menu/releases/download/#{version}/HA.Menu.zip"
   name "HA Menu"

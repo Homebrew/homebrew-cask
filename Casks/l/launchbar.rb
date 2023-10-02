@@ -1,6 +1,6 @@
 cask "launchbar" do
-  version "6.18.1"
-  sha256 "af0d464ae321e9c6046b035fa9ddbde8ec4b642748c934a45ed5b7c86519a9d9"
+  version "6.18.2"
+  sha256 "6ff5542b480c0d6fc65927ac3edc1a7a986218fb1fde7185caf4b0169eaf9d72"
 
   url "https://www.obdev.at/downloads/launchbar/LaunchBar-#{version}.dmg"
   name "LaunchBar"

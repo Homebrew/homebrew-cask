@@ -33,8 +33,8 @@ cask "itsycal" do
     end
   end
   on_mojave :or_newer do
-    version "0.13.4"
-    sha256 "35509500d22571a4b5e6b48d9de5740a1bcf7d74808d1218d31daf77ddd04a66"
+    version "0.14.0"
+    sha256 "72e98b005006acc15b264bf66c3c5b2cc5c8ac88eb479c7b00c1535a7a31c199"
 
     url "https://itsycal.s3.amazonaws.com/Itsycal-#{version}.zip",
         verified: "itsycal.s3.amazonaws.com/"

@@ -1,6 +1,6 @@
 cask "arc" do
-  version "1.6.0,41215"
-  sha256 "0c2c282dd0d349f6763f1fcb4f9cede4cc1f2a4d757808656e81ed0238d6c470"
+  version "1.10.1,42026"
+  sha256 "7041cc5b6a4179864d59a85ba17293c9e05c809aaf09c647eaea352e0cc871bc"
 
   url "https://releases.arc.net/release/Arc-#{version.csv.first}-#{version.csv.second}.zip"
   name "Arc"
@@ -26,6 +26,8 @@ cask "arc" do
   uninstall quit: "company.thebrowser.Browser"
 
   zap trash: [
+    "~/Library/Application Support/Arc",
+    "~/Library/Caches/Arc",
     "~/Library/Caches/CloudKit/company.thebrowser.Browser",
     "~/Library/Caches/company.thebrowser.Browser",
     "~/Library/HTTPStorages/company.thebrowser.Browser",

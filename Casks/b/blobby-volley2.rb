@@ -9,5 +9,7 @@ cask "blobby-volley2" do
   desc "Head-to-head multiplayer ball game"
   homepage "https://blobbyvolley.de/"
 
+  depends_on macos: ">= :ventura"
+
   app "blobby.app"
 end

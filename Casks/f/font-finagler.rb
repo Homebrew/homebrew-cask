@@ -1,6 +1,6 @@
 cask "font-finagler" do
-  version "2.0.1"
-  sha256 "2aeede539ec31b6f68b8332f2ca017ebe11d9f0f3eb3b21c546d17b575c07b23"
+  version "2.0.3"
+  sha256 "40898491baaafcfc06df8a132ba3d161675d2df492c8a133bc807008469c106a"
 
   url "https://markdouma.com/fontfinagler/FontFinagler#{version}.dmg"
   name "Font Finagler"

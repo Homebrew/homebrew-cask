@@ -1,8 +1,8 @@
 cask "shureplus-motiv" do
-  version "1.3.1"
-  sha256 "6ddd8c8fe08ce8136d2c6f3565f6991f34c7b68fe34823db8db7a84907f88d99"
+  version "1.5.1"
+  sha256 "eff79791d7d58d2cfb3df86c1f99dd5a1da5a4aba90bffbe6c5c9beb74ad3f4f"
 
-  url "https://content-files.shure.com/Software/shure_plus_motiv_desktop/#{version.dots_to_hyphens}/motiv-mac-#{version}.dmg"
+  url "https://content-files.shure.com/Software/shure_plus_motiv_desktop/#{version.dots_to_hyphens}/MOTIV-Desktop-mac-#{version}.dmg"
   name "ShurePlus MOTIV"
   desc "Additional features and controls for Shure MV7 and MV88+ microphones"
   homepage "https://www.shure.com/en-US/products/software/shure_plus_motiv_desktop"

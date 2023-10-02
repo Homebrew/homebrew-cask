@@ -1,6 +1,6 @@
 cask "micro-snitch" do
-  version "1.6"
-  sha256 "1db8247eb47a717b86c8ea5623403781e062747bb831ad907741eb747d0c5a45"
+  version "1.6.1"
+  sha256 "700a265156ae7c8138d7764a0ce87feba098bcaf77deed9b8d9aaa0b3c4fa197"
 
   url "https://www.obdev.at/downloads/MicroSnitch/MicroSnitch-#{version}.dmg"
   name "Micro Snitch"

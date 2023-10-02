@@ -1,5 +1,5 @@
 cask "adrive" do
-  version "4.9.6"
+  version "4.9.11"
   sha256 :no_check
 
   url "https://cdn.aliyundrive.net/downloads/apps/desktop/aDrive.dmg",
@@ -15,6 +15,7 @@ cask "adrive" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "aDrive.app"
 

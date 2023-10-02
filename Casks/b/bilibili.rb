@@ -1,5 +1,5 @@
 cask "bilibili" do
-  version "1.11.4.2708"
+  version "1.12.1.2863"
   sha256 :no_check
 
   url "https://dl.hdslb.com/mobile/fixed/pc_electron_mac/bili_mac.dmg",
@@ -15,6 +15,7 @@ cask "bilibili" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "哔哩哔哩.app"
 
