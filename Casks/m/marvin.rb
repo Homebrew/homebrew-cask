@@ -13,8 +13,8 @@ cask "marvin" do
   homepage "https://www.amazingmarvin.com/"
 
   livecheck do
-    url "http://amazingmarvin.s3-website-us-east-1.amazonaws.com/Marvin.dmg"
-    strategy :header_match
+    url "https://#{hostname_arch}.s3.amazonaws.com/latest-mac.yml"
+    strategy :electron_builder
   end
 
   app "Marvin.app"
