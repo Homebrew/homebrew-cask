@@ -22,7 +22,7 @@ cask "deepl" do
     end
   end
 
-  url "https://appdownload.deepl.com/macos/#{version}/DeepL_#{version}.zip"
+  url "https://www.deepl.com/macos/download/#{version}/DeepL_#{version}.zip"
   name "DeepL"
   desc "Trains AIs to understand and translate texts"
   homepage "https://www.deepl.com/"
@@ -38,8 +38,7 @@ cask "deepl" do
   ]
 
   zap trash: [
-    "~/Library/Caches/com.linguee.DeepLCopyTranslator",
-    "~/Library/Caches/com.linguee.DeepLCopyTranslator.ShipIt",
+    "~/Library/Caches/com.linguee.DeepLCopyTranslator*",
     "~/Library/Group Containers/*.com.linguee.DeepL",
     "~/Library/Preferences/com.linguee.DeepLCopyTranslator.plist",
   ]
