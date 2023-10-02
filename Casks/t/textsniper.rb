@@ -4,7 +4,7 @@ cask "textsniper" do
 
   url "https://s3.amazonaws.com/textsniper.app/TextSniper#{version}.dmg",
       verified: "s3.amazonaws.com/textsniper.app/"
-  name "textsniper"
+  name "TextSniper"
   desc "Extract text from images and other digital documents in seconds"
   homepage "https://textsniper.app/"
 
