@@ -2,8 +2,8 @@ cask "zprint" do
   arch arm: "a"
 
   version "1.2.8"
-  sha256 intel: "03c146a2d411325114f38d211c3d4a9f2ab837b9287c46a7387114319253b2bd",
-         arm:   "11246e16db97cb03649bf67938455c7cb25a3326a7e99e45d019b0ae405d8c3d"
+  sha256 arm:   "11246e16db97cb03649bf67938455c7cb25a3326a7e99e45d019b0ae405d8c3d",
+         intel: "03c146a2d411325114f38d211c3d4a9f2ab837b9287c46a7387114319253b2bd"
 
   url "https://github.com/kkinnear/zprint/releases/download/#{version}/zprintm#{arch}-#{version}"
   name "zprint"
