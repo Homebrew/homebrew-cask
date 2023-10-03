@@ -16,4 +16,10 @@ cask "ipremoteutility" do
   container nested: "IPRemoteUtility-#{version}-macOSX/IPRemoteUtility-#{version}.dmg"
 
   app "IPRemoteUtility.app"
+
+  zap trash: [
+    "~/Library/Application Support/FlandersScientific/IPRemoteUtility",
+    "~/Library/Caches/FlandersScientific/IPRemoteUtility",
+    "~/Library/Preferences/com.flandersscientific.IPRemoteUtility.plist",
+  ]
 end
