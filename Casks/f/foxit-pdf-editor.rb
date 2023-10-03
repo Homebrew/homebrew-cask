@@ -9,7 +9,7 @@ cask "foxit-pdf-editor" do
   homepage "https://www.foxit.com/pdf-editor/"
 
   livecheck do
-    url "https://www.foxit.com/downloads/latest.html?product=Foxit-Reader&platform=Mac-OS-X&language=English"
+    url "https://www.foxit.com/downloads/latest.html?product=Foxit-PDF-Editor-Mac&platform=Mac-OS-X&language=English"
     regex(/FoxitPDFEditor(\d{2})(\d)(\d)\.L10N\.Setup\.pkg/i)
     strategy :header_match do |headers, regex|
       headers["location"].scan(regex).map do |match|
