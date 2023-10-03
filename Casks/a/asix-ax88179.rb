@@ -77,7 +77,7 @@ cask "asix-ax88179" do
     end
   end
   on_monterey :or_newer do
-    version "2.3.0,1372"
+    version "2.4.0,1472"
 
     livecheck do
       url "https://www.asix.com.tw/en/support/download/step2/11/2/3"
