@@ -1,6 +1,6 @@
 cask "cardpresso" do
-  version "1.7.50"
-  sha256 "c4944229259f5a3402e7f78a6f9018977ed409cb50bf094c5cc9a2856a17b55d"
+  version "1.7.65"
+  sha256 "606fa4a9025185a054e10e75f38d40f7d330f92d30f98ebad36701d730362fd8"
 
   url "https://www.cardpresso.com/downloads/cardpresso_releases/for_mac_osx/cardPresso#{version}.dmg"
   name "cardpresso"
