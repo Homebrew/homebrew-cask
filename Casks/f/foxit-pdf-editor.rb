@@ -13,7 +13,7 @@ cask "foxit-pdf-editor" do
     regex(/FoxitPDFEditor(\d{2})(\d)(\d)\.L10N\.Setup\.pkg/i)
     strategy :header_match do |headers, regex|
       headers["location"].scan(regex).map do |match|
-        "#{match[0]},#{match[1]},#{match[2]}"
+        "#{match[0]}.#{match[1]}.#{match[2]}"
       end
     end
   end
