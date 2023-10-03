@@ -13,7 +13,6 @@ cask "ipremoteutility" do
   end
 
   depends_on macos: ">= :high_sierra"
-
   container nested: "IPRemoteUtility-#{version}-macOSX/IPRemoteUtility-#{version}.dmg"
 
   app "IPRemoteUtility.app"
