@@ -10,4 +10,6 @@ cask "love" do
 
   app "love.app"
   binary "#{appdir}/love.app/Contents/MacOS/love"
+
+  zap trash: "~/Library/Saved Application State/org.love2d.love.savedState"
 end
