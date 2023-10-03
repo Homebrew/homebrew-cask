@@ -9,9 +9,10 @@ cask "ipremoteutility" do
 
   livecheck do
     url :homepage
-    regex(/href=.*?IPRemoteUtility[._-]v?(\d+(?:\.\d+)+)-macOSX\.zip/i)
+    regex(/href=.*?IPRemoteUtility[._-]v?(\d+(?:\.\d+)+)[._-]macOSX\.zip/i)
   end
 
+  depends_on macos: ">= :high_sierra"
   container nested: "IPRemoteUtility-#{version}-macOSX/IPRemoteUtility-#{version}.dmg"
 
   app "IPRemoteUtility.app"
