@@ -21,4 +21,9 @@ cask "meshlab" do
       File.symlink("meshlab", "MeshLab") unless File.exist? "MeshLab"
     end
   end
+
+  zap trash: [
+    "~/Library/Preferences/com.vcg.MeshLab_64bit_fp.plist",
+    "~/Library/Saved Application State/com.vcg.meshlab.savedState",
+  ]
 end
