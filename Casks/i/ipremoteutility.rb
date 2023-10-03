@@ -1,6 +1,6 @@
 cask "ipremoteutility" do
-  version "1.9.2"
-  sha256 "9b0e58745d80587ed89a9ac3da2c03adee0d7404bad26f526a444f1dc74725e9"
+  version "1.9.3"
+  sha256 "3523153ffbe2c4d5bb47e703c70db6880f8da2f2740d4521e5407d9d4decf380"
 
   url "https://www.flandersscientific.com/ip-remote/release/IPRemoteUtility-#{version}-macOSX.zip"
   name "Flanders IP Remote Utility"
@@ -11,6 +11,8 @@ cask "ipremoteutility" do
     url :homepage
     regex(/href=.*?IPRemoteUtility[._-]v?(\d+(?:\.\d+)+)-macOSX\.zip/i)
   end
+
+  container nested: "IPRemoteUtility-#{version}-macOSX/IPRemoteUtility-#{version}.dmg"
 
   app "IPRemoteUtility.app"
 end
