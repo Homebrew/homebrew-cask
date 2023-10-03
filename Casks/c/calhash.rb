@@ -16,10 +16,15 @@ cask "calhash" do
 
     url "https://www.titanium-software.fr/download/12/CalHash.dmg"
   end
-  on_ventura :or_newer do
+  on_ventura do
     version "1.2.1"
 
     url "https://www.titanium-software.fr/download/13/CalHash.dmg"
+  end
+  on_sonoma :or_newer do
+    version "1.3.0"
+
+    url "https://www.titanium-software.fr/download/14/CalHash.dmg"
   end
 
   name "CalHash"
@@ -36,6 +41,7 @@ cask "calhash" do
     :big_sur,
     :monterey,
     :ventura,
+    :sonoma,
   ]
 
   app "CalHash.app"
