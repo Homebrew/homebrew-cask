@@ -23,6 +23,7 @@ cask "meshlab" do
   end
 
   zap trash: [
+    "~/Library/Application Support/VCG/MeshLab_64bit_fp",
     "~/Library/Preferences/com.vcg.MeshLab_64bit_fp.plist",
     "~/Library/Saved Application State/com.vcg.meshlab.savedState",
   ]
