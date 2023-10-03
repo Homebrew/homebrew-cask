@@ -1,9 +1,9 @@
 cask "whalebird" do
   arch arm: "arm64", intel: "x64"
 
-  version "5.0.7"
-  sha256 arm:   "667a67f6134975e56b791a0b9c37650385fb665bc16dc77956541ac8e979c759",
-         intel: "cdd1832332c0ab9ce3175df71cb8327c6f07c69408eeeea644258567bd424090"
+  version "5.1.0"
+  sha256 arm:   "17135f331d5a453778c0451dbe03cc86b7e8215190d1348bf8d8b8abec669990",
+         intel: "8a3870540eb525d0d8d8bd93ef216c405b3230bb7067838daf3c528f03d40b13"
 
   url "https://github.com/h3poteto/whalebird-desktop/releases/download/v#{version}/Whalebird-#{version}-mac-#{arch}.dmg",
       verified: "github.com/h3poteto/whalebird-desktop/"
