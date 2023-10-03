@@ -31,6 +31,7 @@ env:
     carbon-copy-cloner
     chirp
     clickup
+    cloudnet
     codeql
     cog
     confluent-cli
