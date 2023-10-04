@@ -24,7 +24,5 @@ cask "segger-embedded-studio-for-arm" do
     "com.segger.studio.arm_segger_studio.libcxx.#{version}",
   ]
 
-  zap trash: [
-    "/Applications/SEGGER Embedded Studio for ARM*",
-  ]
+  zap trash: "/Applications/SEGGER Embedded Studio for ARM*"
 end
