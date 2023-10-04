@@ -1,6 +1,6 @@
 cask "supernotes" do
-  version "3.0.2"
-  sha256 "83d083dbfa64c030d62baf0cd60766aadc00937b6af1f98f4c53db186131c473"
+  version "3.0.3"
+  sha256 "a8548b55cb676f9b7a20a63954ebc0598e99a11a54590be14d91ef8f83c2f39a"
 
   url "https://download.supernotes.app/Supernotes-#{version}.dmg"
   name "Supernotes"
