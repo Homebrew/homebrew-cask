@@ -2,17 +2,17 @@ cask "wireshark" do
   arch arm: "Arm", intel: "Intel"
   livecheck_arch = on_arch_conditional arm: "arm", intel: "x86-"
 
-  version "4.0.8"
+  version "4.0.9"
 
   on_arm do
-    sha256 "cbf50f162411b4870b07f1460ada76d357dafbd20e5243a97b055ddb39d9fcac"
+    sha256 "43e40b35d64dbe4209dace980746354e0a3e7044f78e287e32f070b09788d309"
 
     depends_on macos: ">= :big_sur"
   end
   on_intel do
-    sha256 "a751eb215c0337982675b889bf48e742a57859eaaf3a0f7d64ddc27e6a459595"
+    sha256 "2b936e6e595b99eee22bb61891c243a1fcde14eaf3404e2e6bb18af2d7a6ddf7"
 
-    depends_on macos: ">= :sierra"
+    depends_on macos: ">= :high_sierra"
   end
 
   url "https://2.na.dl.wireshark.org/osx/Wireshark%20#{version}%20#{arch}%2064.dmg"
