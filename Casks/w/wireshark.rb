@@ -12,7 +12,7 @@ cask "wireshark" do
   on_intel do
     sha256 "2b936e6e595b99eee22bb61891c243a1fcde14eaf3404e2e6bb18af2d7a6ddf7"
 
-    depends_on macos: ">= :sierra"
+    depends_on macos: ">= :high_sierra"
   end
 
   url "https://2.na.dl.wireshark.org/osx/Wireshark%20#{version}%20#{arch}%2064.dmg"
