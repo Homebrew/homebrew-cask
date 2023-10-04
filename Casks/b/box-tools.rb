@@ -1,5 +1,5 @@
 cask "box-tools" do
-  version "4.23.1.1021"
+  version "4.24.0.1029"
   sha256 :no_check
 
   url "https://e3.boxcdn.net/box-installers/boxedit/mac/currentrelease/BoxToolsInstaller.dmg",
