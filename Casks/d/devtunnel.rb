@@ -7,9 +7,11 @@ cask "devtunnel" do
 
   url "https://tunnelsassetsprod.blob.core.windows.net/cli/#{version}/osx-#{arch}-devtunnel-zip",
       verified: "tunnelsassetsprod.blob.core.windows.net/cli/"
-  name "Microsoft devtunnel"
-  desc "Provides developers to secure tunnels"
+  name "Microsoft Dev Tunnels"
+  desc "Provides developers secure tunnels to share local services"
   homepage "https://aka.ms/devtunnels/docs"
 
   binary "devtunnel"
+
+  # No zap stanza required
 end
