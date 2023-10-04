@@ -12,11 +12,11 @@ cask "bibletime" do
     strategy :github_latest
   end
 
+  app "BibleTime.app"
+
   zap trash: [
     "~/Library/Application Support/BibleTime",
     "~/Library/Caches/bibletime",
     "~/Library/Saved Application State/info.bibletime.BibleTim.savedSetate",
   ]
-
-  app "BibleTime.app"
 end
