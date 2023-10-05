@@ -16,4 +16,14 @@ cask "swift-publisher" do
   depends_on macos: ">= :sierra"
 
   app "Swift Publisher #{version.major}.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/7TJZ7EZWM6.com.belightsoft.PrintProducts",
+    "~/Library/Caches/com.belightsoft.SwiftPublisher5",
+    "~/Library/Group Containers/7TJZ7EZWM6.com.belightsoft.PrintProducts",
+    "~/Library/HTTPStorages/com.belightsoft.SwiftPublisher5",
+    "~/Library/Preferences/com.belightsoft.SwiftPublisher5.plist",
+    "~/Library/Saved Application State/com.belightsoft.SwiftPublisher5.savedState",
+    "~/Library/WebKit/Databases/___IndexedDB/com.belightsoft.SwiftPublisher5",
+  ]
 end
