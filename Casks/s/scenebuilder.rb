@@ -1,9 +1,9 @@
 cask "scenebuilder" do
   arch arm: "aarch64", intel: "amd64"
 
-  version "20.0.0"
-  sha256 arm:   "e7916542052acb1b0b4e861e1eb4fec041e439d88cd850c2865fd0a4ce5e8821",
-         intel: "9c0c306127aa171b57686a47e2ce5a20d10b4f787970827c75ee9137ba4e1450"
+  version "21.0.0"
+  sha256 arm:   "61d9507f164dbcdcf6feefaf0f2f656d397eac446223319a870f8b003b2ab7da",
+         intel: "970910e61278207e697810e5ef50de812e24390a6ba661b85ef5d92968181753"
 
   url "https://download2.gluonhq.com/scenebuilder/#{version}/install/mac/SceneBuilder-#{version}-#{arch}.dmg"
   name "Scene Builder"
