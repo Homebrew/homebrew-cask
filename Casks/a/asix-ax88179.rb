@@ -89,7 +89,7 @@ cask "asix-ax88179" do
       end
     end
 
-    container nested: "ASIX_USB_Device_Installer_macOS_12_above_Driver_v#{version.csv.first}/ASIX_USB_Device_Installer_v#{version.csv.first}.dmg"
+    container nested: "ASIX_USB_Device_Installer_v#{version.csv.first}.dmg"
 
     pkg "ASIX_USB_Device_Installer_v#{version.csv.first}.pkg"
   end
