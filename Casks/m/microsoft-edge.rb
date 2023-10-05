@@ -7,7 +7,7 @@ cask "microsoft-edge" do
   end
   on_intel do
     version "117.0.2045.55,c110cf67-0627-4d1c-8156-7b11d94ab69a"
-    sha256 "1333a20f3300c75bdcaa7c44ead1217a02fbea69c19af0705efd1ff713b95d87"
+    sha256 "7acfdc67617520159400905c72bba3b110aba4b5704daa5b42f161c2babf7986"
   end
 
   url "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/#{version.csv.second}/MicrosoftEdge-#{version.csv.first}.pkg"
