@@ -1,10 +1,10 @@
 cask "openbb-terminal" do
   # raised an issue about the x86.64 typo, https://github.com/OpenBB-finance/OpenBBTerminal/issues/5405
-  arch arm: "ARM64", intel: "x86.84"
+  arch arm: "ARM64", intel: "x86.64"
 
-  version "3.2.2"
-  sha256 arm:   "63706c56c1d264dd8b98957cf62d3d1689a8edb684d26c4f7a0bf1b1eb1335fc",
-         intel: "6fe94ec142155f6abf8dfcb77dda834454720594d85a3292b0772b8b27472247"
+  version "3.2.3"
+  sha256 arm:   "7c4496baa7064ada15fe6c120a0a584cc0320bf08a224c467ffb047ee7ca529e",
+         intel: "a39edbc27f00cda860970090acddc4b4d46c1634581793b40e9620e41a216b0e"
 
   url "https://github.com/OpenBB-finance/OpenBBTerminal/releases/download/v#{version}/#{arch}.MacOS.OpenBB.Terminal.v#{version}.pkg",
       verified: "github.com/OpenBB-finance/OpenBBTerminal/"
