@@ -13,6 +13,8 @@ cask "languagetool" do
     url "https://languagetool.org/download/mac-app/appcast.xml"
     regex(/LanguageToolDesktop[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
     strategy :sparkle do |items, regex|
+      # The Sparkle versioning scheme is inconsistent with the url version
+      # so we need to check the url with a regex instead.
       items.map { |item| item.url[regex, 1] }
     end
   end
