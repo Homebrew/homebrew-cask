@@ -6,7 +6,7 @@ cask "microsoft-edge" do
     sha256 "1333a20f3300c75bdcaa7c44ead1217a02fbea69c19af0705efd1ff713b95d87"
   end
   on_intel do
-    version "117.0.2045.55,6293106b-13bc-4423-b6d9-cc405dd5f5f9"
+    version "117.0.2045.55,c110cf67-0627-4d1c-8156-7b11d94ab69a"
     sha256 "1333a20f3300c75bdcaa7c44ead1217a02fbea69c19af0705efd1ff713b95d87"
   end
 
