@@ -11,8 +11,8 @@ cask "deepl" do
     end
   end
   on_big_sur :or_newer do
-    version "4.6.565727"
-    sha256 "148224d1a5359f2322c6d9cda5a4f4270d964b9201467eba33fb4af98a889e6b"
+    version "23.9.1591123"
+    sha256 "da0597fdfaa5883b8ff354d01a576a9dca3cfa340b9de70fc3eba4ca71765ae6"
 
     livecheck do
       url "https://appdownload.deepl.com/macos/bigsur/update.json"
