@@ -3,7 +3,7 @@ cask "sonos" do
   sha256 "c9056c4c4bf2078f12d48e49e9169b9c1280d6aaa6f2061088f60afbaa8f63e1"
 
   url "https://update-software.sonos.com/software/fnwewsgg/Sonos_#{version.csv.second.sub(/(\d+)\.(\d+)\.(\d+)/, '\1.\2-\3')}.dmg"
-  name "Sonos"
+  name "Sonos S2"
   desc "Control your Sonos system"
   homepage "https://www.sonos.com/"
 
