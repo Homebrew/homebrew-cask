@@ -17,6 +17,7 @@ cask "whisky" do
   depends_on arch: :arm64
 
   app "Whisky.app"
+  binary "#{appdir}/Whisky.app/Contents/Resources/WhiskyCmd", target: "whisky"
 
   zap trash: [
     "~/Library/Application Support/com.isaacmarovitz.Whisky",
