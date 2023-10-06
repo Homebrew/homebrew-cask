@@ -12,43 +12,9 @@ cask "zenmap" do
     regex(/href=.*?nmap[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  depends_on formula: "nmap"
+  pkg "nmap-#{version}.mpkg"
 
-  pkg "nmap-#{version}.mpkg",
-      choices: [
-        {
-          "choiceIdentifier" => "org.insecure.nmap",
-          "choiceAttribute"  => "selected",
-          "attributeSetting" => 0,
-        },
-        {
-          "choiceIdentifier" => "org.insecure.nmap.ncat",
-          "choiceAttribute"  => "selected",
-          "attributeSetting" => 0,
-        },
-        {
-          "choiceIdentifier" => "org.insecure.nmap.ndiff",
-          "choiceAttribute"  => "selected",
-          "attributeSetting" => 0,
-        },
-        {
-          "choiceIdentifier" => "org.insecure.nmap.nping",
-          "choiceAttribute"  => "selected",
-          "attributeSetting" => 0,
-        },
-        {
-          "choiceIdentifier" => "org.insecure.nmap.nmap-update",
-          "choiceAttribute"  => "selected",
-          "attributeSetting" => 0,
-        },
-        {
-          "choiceIdentifier" => "org.insecure.nmap.zenmap",
-          "choiceAttribute"  => "selected",
-          "attributeSetting" => 1,
-        },
-      ]
-
-  uninstall pkgutil: "org.insecure.nmap.zenmap",
+  uninstall pkgutil: "org.insecure.nmap*",
             delete:  "/Applications/Zenmap.app"
 
   zap trash: [
