@@ -1,16 +1,19 @@
 cask "dropbox" do
-  arch arm: "&arch=arm64"
+  arch arm: ".arm64"
+  livecheck_query = on_arch_conditional arm: "&arch=arm64"
 
-  version "183.4.7058"
-  sha256 :no_check
+  version "184.4.6543"
+  sha256 arm:   "fc2b2ac6c479899ee7d8306cce5cdbad7b2d32ba4ad7c8aea8a1526175b32fa6",
+         intel: "0e10195e76178332d2d845055eea68d9782874e42c3d37eafe33be522367c427"
 
-  url "https://www.dropbox.com/download?plat=mac&full=1#{arch}"
+  url "https://edge.dropboxstatic.com/dbx-releng/client/Dropbox%20#{version}#{arch}.dmg",
+      verified: "dropboxstatic.com/dbx-releng/client/"
   name "Dropbox"
   desc "Client for the Dropbox cloud storage service"
   homepage "https://www.dropbox.com/"
 
   livecheck do
-    url :url
+    url "https://www.dropbox.com/download?plat=mac&full=1#{livecheck_query}"
     regex(%r{/Dropbox(?:%20|[._-])v?(\d+(?:\.\d+)+)}i)
     strategy :header_match
   end
