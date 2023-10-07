@@ -12,7 +12,9 @@ cask "nvs" do
     args:       ["#{caskroom_path}/latest"],
   }
 
-  zap trash: "~/.nvs"
+  uninstall trash: "~/.nvs"
+
+  # No zap stanza required
 
   caveats <<~EOS
     NVS installs all Node.js versions to ~/.nvs by default.
