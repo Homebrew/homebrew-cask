@@ -8,11 +8,6 @@ cask "wkhtmltopdf" do
   desc "HTML to PDF renderer"
   homepage "https://wkhtmltopdf.org/"
 
-  livecheck do
-    url "https://wkhtmltopdf.org/downloads.html"
-    regex(/href=.*?wkhtmltox[._-]v?(\d+(?:\.\d+)*-\d+)[._-]macos[._-]cocoa\.pkg/i)
-  end
-
   pkg "wkhtmltox-#{version}.macos-cocoa.pkg"
 
   uninstall pkgutil: "org.wkhtmltopdf.wkhtmltox",
@@ -33,6 +28,7 @@ cask "wkhtmltopdf" do
   # No zap stanza required
 
   caveats do
+    discontinued
     files_in_usr_local
   end
 end
