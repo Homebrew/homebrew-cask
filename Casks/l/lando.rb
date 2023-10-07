@@ -1,9 +1,9 @@
 cask "lando" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.20.2"
-  sha256 arm:   "8798cd56e0c5191cd6b1bedd1b1b046439ea880e34bd24d6028edaf61d5f51cf",
-         intel: "17ac5dd4d41d59a436067c8b173d2708c00e00187e8c9bf23e9cc9c53f9aaeca"
+  version "3.20.4"
+  sha256 arm:   "9fea1ad2797a42e6c51022c2b0860b047f2976e739ab73c61e74e6103fbd6da1",
+         intel: "d15a8535be3b979992647f0645d466534abed4a440430fd5ff89d4021dc88810"
 
   url "https://github.com/lando/lando/releases/download/v#{version}/lando-#{arch}-v#{version}.dmg",
       verified: "github.com/lando/lando/"
