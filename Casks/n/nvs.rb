@@ -7,23 +7,17 @@ cask "nvs" do
   desc "Cross-platform tool for switching between versions and forks of Node.js"
   homepage "https://github.com/jasongin/nvs"
 
-  livecheck do
-    url "https://github.com/jasongin/nvs/releases/latest"
-    strategy :page_match
-    regex(%r{/nvs/releases/tag/v(\d+(?:\.\d+)+)}i)
-  end
-
   installer script: {
     executable: "nvs-#{version}/homebrew/install.sh",
     args:       ["#{caskroom_path}/latest"],
   }
 
-  uninstall trash: "~/.nvs"
+  zap trash: "~/.nvs"
 
   caveats <<~EOS
     NVS installs all Node.js versions to ~/.nvs by default.
-    To change this behavior, please remove ~/.nvs and make the following
-    modification to your shell profile
+    To change this behavior, remove ~/.nvs and make the
+    following modification to your shell profile:
       export $NVS_HOME=/your/preferred/location
   EOS
 end
