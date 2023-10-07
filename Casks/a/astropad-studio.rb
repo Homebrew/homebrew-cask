@@ -1,15 +1,15 @@
 cask "astropad-studio" do
-  version "5.3.3.4771"
+  version "5.3.3,4771"
   sha256 "a8796135f96b022acf45dee6cd8ba70a8c1550fbe21d367ae608a5182add78fc"
 
-  url "https://downloads.astropad.com/studio/mac/AstropadStudio-#{version}.dmg"
+  url "https://downloads.astropad.com/studio/mac/AstropadStudio-#{version.csv.first}.#{version.csv.second}.dmg"
   name "Astropad Studio"
   desc "Turn your iPad into a professional drawing tablet"
   homepage "https://astropad.com/"
 
   livecheck do
-    url "https://downloads.astropad.com/studio/latest"
-    strategy :header_match
+    url "https://downloads.astropad.com/studio/mac/sparkle.xml"
+    strategy :sparkle
   end
 
   app "Astropad Studio.app"
