@@ -1,5 +1,5 @@
 cask "crushftp" do
-  version "10"
+  version "11"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://www.crushftp.com/early#{version}/CrushFTP#{version}.zip",
