@@ -1,8 +1,8 @@
 cask "scrivener" do
-  version "3.3.1,15588"
-  sha256 "ac1665c7b72a2b88eb6678dd21c17b8ebb20e10cbde420ba5b24be38ad8492c8"
+  version "3.3.3,15931,1013"
+  sha256 "c01fbfd30dc99717af75dfac36b21cb397c7bcc034b12368187054b82ec89081"
 
-  url "https://scrivener.s3.amazonaws.com/mac_updates/Scrivener_1012_#{version.csv.second}.zip",
+  url "https://scrivener.s3.amazonaws.com/mac_updates/Scrivener_#{version.csv.third}_#{version.csv.second}.zip",
       verified: "scrivener.s3.amazonaws.com/"
   name "Scrivener"
   desc "Word processing software with a typewriter style"
@@ -10,7 +10,10 @@ cask "scrivener" do
 
   livecheck do
     url "https://www.literatureandlatte.com/downloads/scrivener-#{version.major}.xml"
-    strategy :sparkle
+    regex(/scrivener[._-](\d+(?:\.\d+)?+)[._-]/i)
+    strategy :sparkle do |item, regex|
+      "#{item.short_version},#{item.version},#{item.url[regex, 1]}"
+    end
   end
 
   auto_updates true
@@ -20,7 +23,7 @@ cask "scrivener" do
 
   zap trash: [
     "~/Library/Application Support/Scrivener",
-    "~/Library/Caches/com.literatureandlatte.scrivener#{version.major}",
-    "~/Library/Preferences/com.literatureandlatte.scrivener#{version.major}.plist",
+    "~/Library/Caches/com.literatureandlatte.scrivener*",
+    "~/Library/Preferences/com.literatureandlatte.scrivener*.plist",
   ]
 end
