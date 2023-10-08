@@ -1,8 +1,8 @@
 cask "scrivener" do
-  version "3.3.1,15588"
-  sha256 "ac1665c7b72a2b88eb6678dd21c17b8ebb20e10cbde420ba5b24be38ad8492c8"
+  version "3.3.3,15931"
+  sha256 :no_check
 
-  url "https://scrivener.s3.amazonaws.com/mac_updates/Scrivener_1012_#{version.csv.second}.zip",
+  url "https://scrivener.s3.amazonaws.com/Scrivener.dmg",
       verified: "scrivener.s3.amazonaws.com/"
   name "Scrivener"
   desc "Word processing software with a typewriter style"
