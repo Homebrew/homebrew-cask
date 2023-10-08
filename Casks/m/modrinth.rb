@@ -9,7 +9,7 @@ cask "modrinth" do
 
   livecheck do
     url "https://modrinth.com/app"
-    regex(/Modrinth%20App[._-](\d+(?:\.\d+)*)[._-]universal\.dmg/i)
+    regex(/Modrinth%20App[._-]v?(\d+(?:\.\d+)+)[._-]universal\.dmg/i)
   end
 
   app "Modrinth App.app"
