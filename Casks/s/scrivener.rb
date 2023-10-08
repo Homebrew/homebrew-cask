@@ -23,7 +23,7 @@ cask "scrivener" do
 
   zap trash: [
     "~/Library/Application Support/Scrivener",
-    "~/Library/Caches/com.literatureandlatte.scrivener#{version.major}",
-    "~/Library/Preferences/com.literatureandlatte.scrivener#{version.major}.plist",
+    "~/Library/Caches/com.literatureandlatte.scrivener*",
+    "~/Library/Preferences/com.literatureandlatte.scrivener*.plist",
   ]
 end
