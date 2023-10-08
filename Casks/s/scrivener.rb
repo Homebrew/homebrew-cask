@@ -10,7 +10,7 @@ cask "scrivener" do
 
   livecheck do
     url "https://www.literatureandlatte.com/downloads/scrivener-#{version.major}.xml"
-    regex(/scrivener[._-](\d*?)[._-].*\.zip/i)
+    regex(/scrivener[._-](\d+(?:\.\d+)?+)[._-]/i)
     strategy :sparkle do |item, regex|
       "#{item.short_version},#{item.version},#{item.url[regex, 1]}"
     end
