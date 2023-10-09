@@ -14,7 +14,7 @@ cask "sound-control" do
   end
 
   auto_updates true
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :monterey"
 
   app "Sound Control.app"
 
