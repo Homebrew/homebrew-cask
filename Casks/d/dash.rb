@@ -4,8 +4,8 @@ cask "dash" do
     sha256 "e2b5eb996645b25f12ccae15e24b1b0d8007bc5fed925e14ce7be45a2b693fb6"
   end
   on_mojave :or_newer do
-    version "7.1.2"
-    sha256 "24fd0c3e75ca4834e87cd6b92a9f076406e4d21f2a0af23612ed697292a5179c"
+    version "7.1.3"
+    sha256 "3c1d396a89abc154ac29bb25809e93542fb1410db1fb21f18e155b557a94e5e3"
   end
 
   url "https://kapeli.com/downloads/v#{version.major}/Dash.zip"
