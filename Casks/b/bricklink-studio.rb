@@ -9,8 +9,8 @@ cask "bricklink-studio" do
   homepage "https://www.bricklink.com/v3/studio/download.page"
 
   livecheck do
-    url "https://www.bricklink.com/v3/studio/download.page"
-    regex(/"strVersion"\s*:\s*"(\d+(?:[._-]\d+)*)"/i)
+    url "https://store.bricklink.com/v2/studio/download.page"
+    regex(/"version"\s*:\s*"(\d+(?:[._-]\d+)*)"/i)
   end
 
   auto_updates true
