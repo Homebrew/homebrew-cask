@@ -1,18 +1,18 @@
 cask "decentr" do
-  arch arm: "Arm64", intel: "Intel"
+  arch arm: "arm", intel: "x86"
 
-  version "1.5.1"
-  sha256 arm:   "f075bbd50c38390e028e8ae83300ead2e8867f6c75ef9061a55fa6fd3b827852",
-         intel: "39c3e8432c2795a5e0c5bd99a3459c516b9b574cf8f9a7697bc3385552ef480d"
+  version "1.5.4"
+  sha256 arm:   "30a7fbf1f8579bc52dc21aa3babb24a70ffa51faedfee87f8936da7762295a96",
+         intel: "8a9698bb5d554b597a286befa357bdcf24d2f4bf4667304f90a5860e367db281"
 
-  url "https://decentr.net/MacOS_#{arch}_Decentr_#{version}.zip"
+  url "https://decentr.net/MacOS_#{arch}_Decentr_#{version}.dmg"
   name "Decentr"
   desc "Web3 blockchain/metaverse browser"
   homepage "https://decentr.net/"
 
   livecheck do
     url :homepage
-    regex(/href=.*?MacOS[._-]#{arch}[._-]Decentr[._-]v?(\d+(?:\.\d+)+)\.zip/i)
+    regex(/href=.*?MacOS[._-]#{arch}[._-]Decentr[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "Decentr.app"
