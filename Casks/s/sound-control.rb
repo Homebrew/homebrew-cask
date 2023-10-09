@@ -8,9 +8,14 @@ cask "sound-control" do
   homepage "https://staticz.com/soundcontrol/"
 
   livecheck do
-    url "http://staticz.net/updates/soundcontrol.rss"
-    strategy :sparkle do |item|
-      "#{item.version},#{item.url[%r{/download/(\d+)/}i, 1]}"
+    url :homepage
+    regex(%r{/download/(\d+)}i)
+    strategy :page_match do |page, regex|
+      build = page[regex, 1]
+      version = page[/Sound Control v?(\d+(?:\.\d+)+) Release Notes/i, 1]
+      next if version.blank? || build.blank?
+      
+      "#{version},#{build}"
     end
   end
 
