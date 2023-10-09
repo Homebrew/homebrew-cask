@@ -11,9 +11,7 @@ cask "low-profile" do
 
   pkg "Low.Profile.#{version}.pkg"
 
-  uninstall quit:    [
-              "com.ninxsoft.lowprofile",
-            ],
+  uninstall quit:    "com.ninxsoft.lowprofile",
             pkgutil: "com.ninxsoft.pkg.lowprofile"
 
   zap trash: [
