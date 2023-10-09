@@ -14,7 +14,7 @@ cask "sound-control" do
       build = page[regex, 1]
       version = page[/Sound Control v?(\d+(?:\.\d+)+) Release Notes/i, 1]
       next if version.blank? || build.blank?
-      
+
       "#{version},#{build}"
     end
   end
