@@ -1,6 +1,6 @@
 cask "valentina-studio" do
-  version "13.3.3"
-  sha256 "70e3b52caec41564f72c56231e466fb5e68753fb70e286fbb6eb9ed452687dc5"
+  version "13.5"
+  sha256 "2612b574618cd57acf7018ff490f9ea887c1a0e36f46561f63eb660b21fcc035"
 
   url "https://valentina-db.com/download/prev_releases/#{version}/mac_64/vstudio_x64_#{version.major}_mac.dmg"
   name "Valentina Studio"
