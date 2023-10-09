@@ -2,8 +2,8 @@ cask "defold" do
   arch arm: "arm64", intel: "x86_64"
 
   version "1.6.0"
-  sha256 arm:   "b2a8793c365eca55cbcfa0809c21aff414c2d35597a6706b7d67881c5c293468",
-         intel: "0310ecf9c2168263e63e037a33a6d6d39d5f12199026a75b6867d53d54ebd9f2"
+  sha256 arm:   "0314a6deb42d1a332f95a5f15876283cceea3b6fd8badd76b9537aa349c23f50",
+         intel: "91ab893541ded87c612c141cd39bad62f527b1dc4f863ed0be35745d7acb5394"
 
   url "https://github.com/defold/defold/releases/download/#{version}/Defold-#{arch}-macos.dmg",
       verified: "github.com/defold/defold/"
