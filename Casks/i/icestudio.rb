@@ -1,6 +1,6 @@
 cask "icestudio" do
-  version "0.10"
-  sha256 "c39d746bb177e1b433244117edfadc82a5ccfcc9ce5720e9c37c863e8d29f38e"
+  version "0.11"
+  sha256 "959f55093888b91fa8b6715ecc9d6a4d2494dc814ee2ab717ee825284ba13889"
 
   url "https://github.com/FPGAwars/icestudio/releases/download/v#{version}/icestudio-#{version}-osx64.dmg",
       verified: "github.com/FPGAwars/icestudio/"
