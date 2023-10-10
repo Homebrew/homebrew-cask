@@ -19,7 +19,11 @@ cask "microsoft-powerpoint" do
     version "16.66.22101101"
     sha256 "bea8c4790445f726debd0f64d24fbdac59e3a9b51e95c092fb31da3913164540"
   end
-  on_big_sur :or_newer do
+  on_big_sur do
+    version "16.77.23091703"
+    sha256 "9ece350fa314584aafacfcdf559bb67b8707bc2c2e7a961f7881d1ea280aac4d"
+  end
+  on_monterey :or_newer do
     version "16.78.23100802"
     sha256 "e980f4d90fe29df26646bff88ba179b1ea1e6fddb5ee93a07bf35abb5226aef2"
   end
