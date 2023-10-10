@@ -1,6 +1,6 @@
 cask "synfigstudio" do
-  version "1.5.1,2021.10.21,2cb6c"
-  sha256 "546405de0a23bbc1c537098617af6873950da1645f1e2e9c8ca8356628b785d1"
+  version "1.4.4,2022.12.25,b8d62"
+  sha256 "1e9a274e606a6f6805509df0e42cc37ddc4d3d85b0bde22d67fd1f3e967415e1"
 
   url "https://github.com/synfig/synfig/releases/download/v#{version.csv.first}/SynfigStudio-#{version.csv.first}-#{version.csv.second}-osx-#{version.csv.third}.dmg",
       verified: "github.com/synfig/synfig/"
@@ -8,21 +8,25 @@ cask "synfigstudio" do
   desc "2D animation software"
   homepage "https://synfig.org/"
 
+  # Upstream creates GitHub releases for both stable and development versions
+  # and the "latest" release isn't guaranteed to be a stable version, so it's
+  # necessary to check recent releases and match stable versions. Upstream
+  # appears to use an "even-numbered minor is stable" version scheme (see the
+  # Release Notes page: https://synfig.readthedocs.io/en/latest/releases.html).
   livecheck do
-    url "https://github.com/synfig/synfig/releases/latest"
-    regex(%r{href=.*?/SynfigStudio-(\d+(?:\.\d+)*)-(\d+(?:\.\d+)*)-osx-([a-z\d]+)\.dmg}i)
-    strategy :header_match do |headers, regex|
-      next if headers["location"].blank?
+    url :url
+    regex(/^SynfigStudio[._-](\d+\.[02468](?:\.\d+)*)(?:-(\d+(?:\.\d+)*))?(?:-osx-([a-z\d]+))?\.dmg$/i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
 
-      # Identify the latest tag from the response's `location` header
-      latest_tag = File.basename(headers["location"])
-      next if latest_tag.blank?
+        release["assets"]&.map do |asset|
+          match = asset["name"]&.match(regex)
+          next if match.blank?
 
-      # Fetch the assets list HTML for the latest tag and match within it
-      assets_page = Homebrew::Livecheck::Strategy.page_content(
-        @url.sub(%r{/releases/?.+}, "/releases/expanded_assets/#{latest_tag}"),
-      )
-      assets_page[:content]&.scan(regex)&.map { |match| "#{match[0]},#{match[1]},#{match[2]}" }
+          match.to_a.compact.drop(1).join(",")
+        end
+      end.flatten
     end
   end
 
