@@ -71,12 +71,6 @@ jobs:
 
       - name: Clean up CI machine
         run: |
-          if ! brew list --cask visual-studio &>/dev/null; then
-            if ! rm -r '/Applications/Visual Studio.app'; then
-              echo '::warning::Removing Visual Studio is no longer necessary.'
-            fi
-          fi
-
           if ! brew uninstall --cask julia && ! rm -r /Applications/Julia-*.app; then
             echo '::warning::Removing Julia is no longer necessary.'
           fi
