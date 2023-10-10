@@ -19,7 +19,11 @@ cask "microsoft-outlook" do
     version "16.66.22102801"
     sha256 "bddede85956713be21fdb5ab72be07ecefd05552752e8e60c649e6a15fd0a2c2"
   end
-  on_big_sur :or_newer do
+  on_big_sur do
+    version "16.77.23091703"
+    sha256 "becfe797d1c799a4366385f449e42f7377bd3d6de5d4db20e37bd36ba2f24ef5"
+  end
+  on_monterey :or_newer do
     version "16.78.23100802"
     sha256 "d1c37b7b6ae0e995f5ef17f83d5ae44c4a9e351a082bae0488228cf16d4d8c0e"
   end
