@@ -1,5 +1,5 @@
 cask "genesys-cloud" do
-  version "2.27.569,70"
+  version "2.27.569,78"
   sha256 "00d2d5306f7be9190ed0177599cca8268900e1effc28c2575d882fea384a3cc8"
 
   url "https://app.mypurecloud.com/directory-mac/build-assets/#{version.csv.first}-#{version.csv.second}/genesys-cloud-mac-#{version.csv.first}.dmg"
