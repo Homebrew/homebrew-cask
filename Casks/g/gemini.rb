@@ -1,6 +1,6 @@
 cask "gemini" do
-  version "2.9.10,398,1695371750"
-  sha256 "bd2048361927c6fceecfbccefc7c95f7707c99aa0e2b155ab309f81e877e2a0d"
+  version "2.9.11,399,1696867671"
+  sha256 "a94aa56531b855b48542c78053d3414106824ead57f95c5327d2f14b06488ee5"
 
   url "https://dl.devmate.com/com.macpaw.site.Gemini#{version.major}/#{version.csv.second}/#{version.csv.third}/Gemini#{version.major}-#{version.csv.second}.zip",
       verified: "dl.devmate.com/"
