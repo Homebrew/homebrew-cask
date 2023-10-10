@@ -2,7 +2,7 @@ cask "music-miniplayer" do
   version "1.9"
   sha256 :no_check
 
-  url "https://marioaguzman.github.io/musicminiplayer/updater/Music%20MiniPlayer.zip"
+  url "https://marioaguzman.github.io/musicminiplayer/updater/Music%20MiniPlayer.dmg"
   name "Music MiniPlayer"
   desc "Replica of the iTunes MiniPlayer"
   homepage "https://marioaguzman.github.io/musicminiplayer/"
