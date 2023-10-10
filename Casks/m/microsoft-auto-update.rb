@@ -20,6 +20,7 @@ cask "microsoft-auto-update" do
   end
 
   auto_updates true
+  depends_on macos: ">= :mojave"
 
   pkg "Microsoft_AutoUpdate_#{version}_Updater.pkg"
 
