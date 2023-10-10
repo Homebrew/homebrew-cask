@@ -15,8 +15,6 @@ cask "eudic" do
     strategy :extract_plist
   end
 
-  auto_updates true
-
   app "Eudic.app"
 
   uninstall quit: [
