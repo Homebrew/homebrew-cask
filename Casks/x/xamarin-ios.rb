@@ -1,6 +1,6 @@
 cask "xamarin-ios" do
-  version "16.4.0.6,b4928191-de3d-42cb-a24f-709e5d71626c,ac849f1f644aee58ed4e7a79cb35a14e"
-  sha256 "1266b991cb5bf2f9ebcca7c79d5d1d9d702cd76ca2b135a43949d6235f8d1a46"
+  version "16.4.0.18,8cbf56b1-ef0d-466f-8cfe-fae4ba8c5080,1174a6a7f61a32d94e267e3bc8c1942f"
+  sha256 "fa86ac3f06fc64552c30772355c077f3e21d6a4fd7aa5f96d25c4bb6205a7930"
 
   url "https://download.visualstudio.microsoft.com/download/pr/#{version.csv.second}/#{version.csv.third}/xamarin.ios-#{version.csv.first}.pkg"
   name "Xamarin.iOS"
