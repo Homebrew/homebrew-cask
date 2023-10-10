@@ -29,7 +29,7 @@ cask "dosbox-x" do
     end
   end
 
-  app "dosbox-x/dosbox-x.app"
+  app "dosbox-x-sdl2/dosbox-x.app"
 
   zap trash: [
     "~/Library/Preferences/com.dosbox-x.plist",
