@@ -1,5 +1,5 @@
 cask "active-trader-pro" do
-  version "1.0.50"
+  version "1.0.51"
   sha256 :no_check
 
   url "https://www.fidelity.com/webcontent/CodeweaverInstaller/ActiveTraderPro.pkg"
