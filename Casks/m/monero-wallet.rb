@@ -1,14 +1,17 @@
 cask "monero-wallet" do
+  arch arm: "armv8",
+       intel: "x64"
   version "0.18.3.1"
-  sha256 "8ae53f0908f9bc03452f23d5092bf1eb1d2ad9f1224580486b486cf0a2020401"
+  sha256 arm:   "b0c8d07f8d8ade49d08419b196ddb9f691717ef05cae066e220db707e4dfedc4",
+         intel: "8ae53f0908f9bc03452f23d5092bf1eb1d2ad9f1224580486b486cf0a2020401"
 
-  url "https://downloads.getmonero.org/gui/monero-gui-mac-x64-v#{version}.dmg"
+  url "https://downloads.getmonero.org/gui/monero-gui-mac-#{arch}-v#{version}.dmg"
   name "Monero Wallet"
   desc "Untraceable cryptocurrency wallet"
   homepage "https://getmonero.org/"
 
   livecheck do
-    url "https://downloads.getmonero.org/gui/mac64"
+    url "https://downloads.getmonero.org/gui/mac#{arch}"
     strategy :header_match
   end
 
