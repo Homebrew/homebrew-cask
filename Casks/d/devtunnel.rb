@@ -19,5 +19,6 @@ cask "devtunnel" do
   end
 
   binary "devtunnel"
+
   # No zap stanza required
 end
