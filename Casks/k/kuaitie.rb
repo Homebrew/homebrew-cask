@@ -9,10 +9,10 @@ cask "kuaitie" do
 
   livecheck do
     url "https://clipber.com/getmac"
-    regex(/copies[._-]v?(\d+(?:-\d+)+)\.dmg/i)
+    regex(/copies[._-]v?(\d+(?:_\d+)+)\.dmg/i)
     strategy :header_match do |headers, regex|
       headers["location"].scan(regex).map do |match|
-        match[0].tr("-", ".").to_s
+        match[0].tr("_", ".").to_s
       end
     end
   end
