@@ -1,6 +1,6 @@
 cask "xscreensaver" do
-  version "6.07"
-  sha256 "3036ba42106ae7c312a5927a33762fd7d894a243ecfc11ad25010a945490c6e6"
+  version "6.08"
+  sha256 "f8085ad9c2ab8ae75fef6b2d04e9e0bd2182cfa511afa2c429a37eb3a241cc27"
 
   url "https://www.jwz.org/xscreensaver/xscreensaver-#{version}.dmg"
   name "XScreenSaver"
