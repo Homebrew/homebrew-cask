@@ -1,7 +1,7 @@
 cask "songkong" do
   arch arm: "-m1"
 
-  version "9.6"
+  version "9.6,1.0"
   sha256 :no_check
 
   url "https://www.jthink.net/songkong/downloads/current/songkong-osx#{arch}.dmg"
@@ -10,11 +10,8 @@ cask "songkong" do
   homepage "https://www.jthink.net/songkong/"
 
   livecheck do
-    url "https://community.jthink.net/c/songkong/songkong-announcements"
-    regex(/href.*?songkong[._-](\d+(?:-\d+)*)[._-]\w*?/i)
-    strategy :page_match do |page|
-      page.scan(regex).map { |match| (match[0]).tr("-", ".") }
-    end
+    url :url
+    strategy :extract_plist
   end
 
   depends_on macos: ">= :sierra"
