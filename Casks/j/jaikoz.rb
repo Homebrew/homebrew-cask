@@ -16,5 +16,10 @@ cask "jaikoz" do
 
   app "Jaikoz.app"
 
-  zap trash: "~/Library/Saved Application State/com.jthink.jaikoz.savedState"
+  zap trash: [
+    "~/Library/Logs/Jaikoz",
+    "~/Library/Preferences/Jaikoz",
+    "~/Library/Reports/Jaikoz",
+    "~/Library/Saved Application State/com.jthink.jaikoz.savedState",
+  ]
 end
