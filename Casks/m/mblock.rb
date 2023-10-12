@@ -15,5 +15,12 @@ cask "mblock" do
 
   depends_on macos: ">= :sierra"
 
-  app "mBlock"
+  app "mBlock.app"
+
+  zap trash: [
+    "~/Library/Application Support/mblock",
+    "~/Library/Preferences/cc.mblock.plist",
+    "~/Library/Saved Application State/cc.mblock.savedState",
+    "~/mblock",
+  ]
 end
