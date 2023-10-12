@@ -1,6 +1,6 @@
 cask "xemu" do
-  version "0.7.111"
-  sha256 "dc71a38843bdbdc880d3187a76ae7c94e66dcbf2f97ebb01317ff0e90715978a"
+  version "0.7.112"
+  sha256 "4283a996221aca84470e366177946051222f5abfdfdba633c6266458cd154848"
 
   url "https://github.com/xemu-project/xemu/releases/download/v#{version}/xemu-macos-universal-release.zip",
       verified: "github.com/xemu-project/xemu/"
