@@ -16,7 +16,7 @@ cask "active-trader-pro" do
 
   app "Active Trader Pro.app"
 
-  uninstall quit: "com.fmr.activetrader",
+  uninstall quit: "com.fmr.activetrader"
 
   zap trash: [
     "~/Library/Application Support/Active Trader Pro",
