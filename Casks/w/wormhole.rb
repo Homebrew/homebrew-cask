@@ -1,5 +1,5 @@
 cask "wormhole" do
-  version "1.6.4"
+  version "1.6.6"
   sha256 :no_check
 
   url "https://static.er.run/os/WormholeInstaller.dmg"
