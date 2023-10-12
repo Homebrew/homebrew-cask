@@ -20,6 +20,7 @@ cask "spacedrive" do
   zap trash: [
     "~/Library/Application Support/spacedrive",
     "~/Library/Caches/com.spacedrive.desktop",
+    "~/Library/Preferences/com.spacedrive.desktop.plist",
     "~/Library/Saved Application State/com.spacedrive.desktop.savedState",
     "~/Library/WebKit/com.spacedrive.desktop",
   ]
