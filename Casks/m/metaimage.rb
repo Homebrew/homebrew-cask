@@ -2,7 +2,7 @@ cask "metaimage" do
   version "2.6.1"
   sha256 "23678176c30274dd73165881c6981eeec7cc8e59d9bdf63c1c35d531844ef1e7"
 
-  url "https://neededapps.com/appcasts/metaimage/versions/#{version.csv.first}"
+  url "https://neededapps.com/appcasts/metaimage/versions/#{version}"
   name "MetaImage"
   desc "Editor to read, write and edit images metadata"
   homepage "https://neededapps.com/metaimage/"
