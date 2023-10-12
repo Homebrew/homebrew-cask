@@ -17,5 +17,10 @@ cask "spacedrive" do
 
   app "Spacedrive.app"
 
-  # No zap stanza required
+  zap trash: [
+    "~/Library/Application Support/spacedrive",
+    "~/Library/Caches/com.spacedrive.desktop",
+    "~/Library/Saved Application State/com.spacedrive.desktop.savedState",
+    "~/Library/WebKit/com.spacedrive.desktop",
+  ]
 end
