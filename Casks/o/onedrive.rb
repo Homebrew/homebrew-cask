@@ -6,7 +6,7 @@ cask "onedrive" do
       verified: "oneclient.sfx.ms/Mac/Installers/"
   name "OneDrive"
   desc "Cloud storage client"
-  homepage "https://onedrive.live.com/"
+  homepage "https://www.microsoft.com/en-us/microsoft-365/onedrive/online-cloud-storage"
 
   livecheck do
     url "https://go.microsoft.com/fwlink/?linkid=823060"
