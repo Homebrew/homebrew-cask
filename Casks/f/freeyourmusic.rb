@@ -1,6 +1,6 @@
 cask "freeyourmusic" do
-  version "8.0.2"
-  sha256 "dbf2b265f78d0996c83712719f84a9abc3c5ea78b67681e768e402b623dceb2c"
+  version "8.0.3"
+  sha256 "4ef11439ae5dee141c33191f248e8d7b5f1b1bc2bb1a9609ce3b637f0ea4a5f1"
 
   url "https://fym-app-production.s3.nl-ams.scw.cloud/FreeYourMusic-#{version}.dmg",
       verified: "fym-app-production.s3.nl-ams.scw.cloud/"
