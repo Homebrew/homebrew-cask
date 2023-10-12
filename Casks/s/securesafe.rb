@@ -1,8 +1,8 @@
 cask "securesafe" do
-  version "2.19.1"
-  sha256 "d856f5a707a53d39deacddf2122ac6a55eb16a41439b6a9b32a3717efbfb8f51"
+  version "2.20.0"
+  sha256 "7e1a65383111a50c598e040cbae2df148cba3fae82eb07b5bc74e98e7998a19a"
 
-  url "https://www.securesafe.com/userdata/downloads/securesafe-#{version}.pkg"
+  url "https://app.securesafe.com/app/download/securesafe-#{version}.pkg"
   name "SecureSafe"
   desc "Highly secure online storage with password manager"
   homepage "https://www.securesafe.com/"
