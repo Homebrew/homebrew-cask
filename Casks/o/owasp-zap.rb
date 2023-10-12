@@ -1,9 +1,9 @@
 cask "owasp-zap" do
   arch arm: "_aarch64"
 
-  version "2.13.0"
-  sha256 arm:   "699b0244d730e9814e11e0252b02d05b6c12fbb2c38c5b3c0cfce4a028357436",
-         intel: "914ca4a6ce2ba6e44f9ad0a9720f5a1879a16e56a56ac63fd0a5d67d54df0148"
+  version "2.14.0"
+  sha256 arm:   "fb3369338252e22470bb38d120233bd9857119806f9f8be681f985e6a5174847",
+         intel: "3b9862a647b1c5c26d6917f2316113dfaceac06bdb79ad3f2c96e0cbd73861f7"
 
   url "https://github.com/zaproxy/zaproxy/releases/download/v#{version}/ZAP_#{version}#{arch}.dmg",
       verified: "github.com/zaproxy/zaproxy/"
@@ -17,7 +17,7 @@ cask "owasp-zap" do
     strategy :github_latest
   end
 
-  app "OWASP ZAP.app"
+  app "ZAP.app"
 
   zap trash: [
     "~/Library/Application Support/ZAP",
