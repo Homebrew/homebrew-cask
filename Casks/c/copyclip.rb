@@ -1,5 +1,5 @@
 cask "copyclip" do
-  version "2.9.98.9"
+  version "2.9.99.1"
   sha256 :no_check
 
   url "https://fiplab.com/app-download/CopyClip_#{version.major}.zip"
