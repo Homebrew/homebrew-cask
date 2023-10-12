@@ -1,15 +1,19 @@
 cask "jasp" do
-  version "0.17.3"
-  sha256 "1833823096540360e323b4976e641faddb0c2f748a43da4d6f7b66d7aa57c412"
+  arch arm: "arm64", intel: "x86_64"
+  arch_suffix = on_arch_conditional intel: "_new"
 
-  url "https://static.jasp-stats.org/JASP-#{version}.0-macOS-x86_64.dmg"
+  version "0.18.1.0"
+  sha256 arm:   "4985018f2e31a496599a2b6374558e30f019012972457098930b50202fd8fa1b",
+         intel: "51544c6127892bcd079d2128641700312daae63db02c540a346dacf03163a7d6"
+
+  url "https://static.jasp-stats.org/JASP-#{version}-macOS-#{arch}#{arch_suffix}.dmg"
   name "JASP"
   desc "Statistical analysis application"
   homepage "https://jasp-stats.org/"
 
   livecheck do
     url "https://jasp-stats.org/thank-you-for-downloading-jasp-macos/"
-    regex(/href=.*?JASP[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/href=.*?JASP[._-]v?(\d+(?:\.\d+)+).+\.dmg/i)
   end
 
   depends_on macos: ">= :high_sierra"
