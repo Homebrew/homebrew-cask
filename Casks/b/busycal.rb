@@ -1,6 +1,6 @@
 cask "busycal" do
-  version "2023.4.3,2023-10-11-23-42"
-  sha256 "1a3e6c321fc7e19298504ba9a0e6fa2c19529d46b863208f20cb4f8c81ca8c39"
+  version "2023.4.3,2023-10-12-22-01"
+  sha256 "7fe364b7c25377cdbb591f66530567deb0a7cfc088b9ba93f1ffac2cd8b67111"
 
   url "https://7e968b6ce8a839f034d9-23cfb9eddcb7b94cb43ba95f95a76900.ssl.cf1.rackcdn.com/bcl-#{version.csv.first}-#{version.csv.second}.zip",
       verified: "7e968b6ce8a839f034d9-23cfb9eddcb7b94cb43ba95f95a76900.ssl.cf1.rackcdn.com/"
