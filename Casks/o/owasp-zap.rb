@@ -17,7 +17,7 @@ cask "owasp-zap" do
     strategy :github_latest
   end
 
-  app "OWASP ZAP.app"
+  app "ZAP.app"
 
   zap trash: [
     "~/Library/Application Support/ZAP",
