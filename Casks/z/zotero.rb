@@ -13,6 +13,7 @@ cask "zotero" do
   end
 
   auto_updates true
+  conflicts_with cask: "homebrew/cask-versions/zotero-beta"
 
   app "Zotero.app"
 
