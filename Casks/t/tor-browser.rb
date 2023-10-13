@@ -1,19 +1,20 @@
 cask "tor-browser" do
-  version "12.5.6"
-  sha256 "8ba5b760e9ad959b74a056d614a9f618e3c783af30a6587b5a8194ec0baa4cea"
+  version "13.0"
+  sha256 "fff8c29768a40b9c911f717274900746f9887e4506d642a4a3a12633d57da0dd"
 
-  url "https://dist.torproject.org/torbrowser/#{version}/TorBrowser-#{version}-macos_ALL.dmg"
+  url "https://dist.torproject.org/torbrowser/#{version}/tor-browser-macos-#{version}.dmg"
   name "Tor Browser"
   desc "Web browser focusing on security"
   homepage "https://www.torproject.org/"
 
   livecheck do
     url "https://www.torproject.org/download/"
-    regex(%r{href=.*?/TorBrowser[._-]v?(\d+(?:\.\d+)+)[._-]macos[._-].*\.dmg}i)
+    regex(%r{href=.*?/tor[._-]browser[._-]macos[._-]v?(\d+(?:.\d+)*)\.dmg}i)
   end
 
   auto_updates true
   conflicts_with cask: "homebrew/cask-versions/tor-browser-alpha"
+  depends_on macos: ">= :sierra"
 
   app "Tor Browser.app"
 
