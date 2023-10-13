@@ -1,5 +1,5 @@
 cask "clinq" do
-  version "1.8.6"
+  version "1.8.9"
   sha256 :no_check
 
   url "https://desktop.download.clinq.com/clinq-desktop.dmg"
