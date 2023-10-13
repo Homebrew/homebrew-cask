@@ -1,9 +1,9 @@
 cask "portx" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.1.14,10.46"
-  sha256 arm:   "07E602C343C4FB5984E4748BFA9D6B30EB7A40B7C1F4684382BF4A16EF41D87A",
-         intel: "3D36B21451C337850237B692BCAFD67F8174750F5B0EA4F888A0694215E5E4D2"
+  version "2.2.0,10.47"
+  sha256 arm:   "9B4EE2B0728699243A57D5FD4D7ADDAA6520745F4FBAAD81775F72D00DB40270",
+         intel: "31BFA7935877ECE5F4410DFE446C27AFF62034A0DA28825CE3455931DFAAC511"
 
   url "https://cdn.netsarang.net/0ac7ea20/PortX-#{version.csv.first}-#{arch}.dmg",
       verified: "cdn.netsarang.net/"
