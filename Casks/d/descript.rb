@@ -1,9 +1,9 @@
 cask "descript" do
   arch arm: "-arm64"
 
-  version "74.1.0-release.20230929.26156"
-  sha256 arm:   "2216dab84f9fb0eb6e9394b4b639c568bb3cb7f12bc0e6eb5d467f0b27ded84c",
-         intel: "aa9130403e7b463fb309547e77f38e6662029807020a364c54381165b7cf46cb"
+  version "74.1.3-release.20231012.27005"
+  sha256 arm:   "2acaa9da5960530603dc8538d7bd72b989ca916ffdb32d3c3281a0a290e3b550",
+         intel: "f9d57832b6e7ca1f41b44cccebe38e883476d4fa245276ef513429d28c663f9e"
 
   url "https://electron.descript.com/Descript-#{version}#{arch}.dmg"
   name "Descript"
