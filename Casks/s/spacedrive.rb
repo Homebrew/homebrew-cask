@@ -1,9 +1,9 @@
 cask "spacedrive" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.1.0"
-  sha256 arm:   "8363ceb903cc8d2698b9a896adaa9c2cce3089d4d69488fb26550b579f9815d4",
-         intel: "7b3ccff6b0ed58e576443af7e88dd0f7eedb22a69cc1202ef4dc1b28d3b6592a"
+  version "0.1.1"
+  sha256 arm:   "b7ca37ac64cefa401fd228e6c946e5103131b80052b6ad563efdf4a6c2769ec4",
+         intel: "3e575d185527783d48ce4bd350541628dd4c3ca7575c5c2f6de0f0438a643006"
 
   url "https://github.com/spacedriveapp/spacedrive/releases/download/#{version}/Spacedrive-darwin-#{arch}.dmg"
   name "Spacedrive"
