@@ -1,4 +1,4 @@
-cask "owasp-zap" do
+cask "zap" do
   arch arm: "_aarch64"
 
   version "2.14.0"
@@ -7,7 +7,7 @@ cask "owasp-zap" do
 
   url "https://github.com/zaproxy/zaproxy/releases/download/v#{version}/ZAP_#{version}#{arch}.dmg",
       verified: "github.com/zaproxy/zaproxy/"
-  name "OWASP Zed Attack Proxy"
+  name "Zed Attack Proxy"
   name "ZAP"
   desc "Free and open source web app scanner"
   homepage "https://www.zaproxy.org/"
