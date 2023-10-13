@@ -1,6 +1,6 @@
 cask "gdat" do
-  version "2023r05,1lnA5hFiCV9qzreQE7a5YzdeValaicTHD"
-  sha256 "ad3bb73238266eb96b4180b19f38526f9dba2e158d8d20f1d2c95f4b9836c80a"
+  version "2023r06,1lnA5hFiCV9qzreQE7a5YzdeValaicTHD"
+  sha256 "800068a1d55426ff0ef418d369d0dc2e375516f225ed91de2914a18034b2bc37"
 
   url "https://drive.google.com/uc?export=download&id=#{version.csv.second}",
       verified: "drive.google.com/uc?export=download&id=#{version.csv.second}"
