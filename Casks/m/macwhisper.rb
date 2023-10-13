@@ -1,6 +1,6 @@
 cask "macwhisper" do
-  version "5.2,420"
-  sha256 "2e9622e1d1c9101bb142561232fa7e3342ebf4b6d90610d5decb5d867528c51a"
+  version "5.3,435"
+  sha256 "9785806feb3956beba37eece44fe7cb70a84383f49ab4b31258d3de13b973c3e"
 
   url "https://macwhisper-site.vercel.app/releases/MacWhisper-#{version.csv.second}.zip",
       verified: "macwhisper-site.vercel.app/releases/"
