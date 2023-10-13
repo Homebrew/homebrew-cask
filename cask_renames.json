@@ -7,6 +7,7 @@
   "mouse-fix": "mac-mouse-fix",
   "mysteriumvpn": "mysteriumdark",
   "opal": "opal-composer",
+  "owasp-zap": "zap",
   "remotion": "multiapp",
   "streamlabs-obs": "streamlabs",
   "sublime-text3": "sublime-text"
