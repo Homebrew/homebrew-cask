@@ -1,6 +1,6 @@
 cask "tentacle-sync-studio" do
-  version "1.33"
-  sha256 "386ae0dc2c63e8cf8bb140400656da64aceb87e99ec05146b468e6c69f1f5ec4"
+  version "1.34"
+  sha256 "e2ec89770d20a892575e870c35d5bf5bdd5e4cdce5a82c4549159554ce6fad3d"
 
   url "https://tentaclesync.com/files/downloads/ttsyncstudio-v#{version.dots_to_underscores}.dmg"
   name "Tentacle Sync Studio"
