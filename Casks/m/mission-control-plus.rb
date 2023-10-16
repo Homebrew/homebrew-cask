@@ -11,4 +11,6 @@ cask "mission-control-plus" do
   depends_on macos: ">= :high_sierra"
 
   app "Mission Control Plus.app"
+
+  # No zap stanza required
 end
