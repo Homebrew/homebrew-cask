@@ -1,9 +1,8 @@
 cask "nosqlbooster-for-mongodb" do
-  version "8.1.0"
-  sha256 "6ef82bb8bfae82824029c71b627f87ce103a81e8dba7fab8d7aa6fc29f23303e"
+  version "8.1.1"
+  sha256 "4f421950f3335a8b8f7e9791797da040f7fec347dbd39858acae1fcd081de017"
 
-  url "https://s3.mongobooster.com/download/releasesv#{version.major}/nosqlbooster4mongo-#{version}.dmg",
-      verified: "mongobooster.com/"
+  url "https://s3.nosqlbooster.com/download/releasesv#{version.major}/nosqlbooster4mongo-#{version}.dmg"
   name "NoSQLBooster for MongoDB"
   desc "GUI tool and IDE for MongoDB"
   homepage "https://nosqlbooster.com/"
