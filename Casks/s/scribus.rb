@@ -8,9 +8,12 @@ cask "scribus" do
   desc "Free and open-source page layout program"
   homepage "https://www.scribus.net/"
 
+  # The stable branch is outdated and supported on deprecated versions of MacOS.
+  # Use the devel branch until the stable branch is updated
+  # https://github.com/Homebrew/homebrew-cask/pull/120289
   livecheck do
-    url "https://www.scribus.net/downloads/unstable-branch/"
-    regex(/Current\s*development\s*candidate:\s*Scribus\s*(\d+(?:\.\d+)+)/i)
+    url "https://www.scribus.net/downloads/"
+    regex(%r{href=.*?scribus[._-]devel/v?(\d+(?:\.\d+)+)}i)
   end
 
   app "Scribus.app"
