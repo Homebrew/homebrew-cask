@@ -15,24 +15,9 @@ cask "bluestacks" do
     end
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
-  installer manual: "BlueStacks Installer.app"
-
-  uninstall_preflight do
-    set_ownership "/Applications/BlueStacks.app"
-  end
-
-  uninstall launchctl: [
-              "com.BlueStacks.AppPlayer.bstservice_helper",
-              "com.BlueStacks.AppPlayer.Service",
-              "com.BlueStacks.AppPlayer.UninstallWatcher",
-              "com.BlueStacks.AppPlayer.Updater",
-            ],
-            delete:    [
-              "/Applications/BlueStacks.app",
-              "/Library/PrivilegedHelperTools/com.BlueStacks.AppPlayer.bstservice_helper",
-            ]
+  app "BlueStacks X.app"
 
   zap trash: [
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bluestacks.bluestacks.sfl*",
