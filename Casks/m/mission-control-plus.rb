@@ -1,6 +1,6 @@
 cask "mission-control-plus" do
   version "1.23"
-  sha256 "6f91e918d6a6b1456c03de0e6d946b8f313e7a239c7dc4254dffc68a694961b3"
+  sha256 "58ffd154bad723dbd413bb793b389c81e60f5a57611dae32e87c2fea65f2597b"
 
   url "https://github.com/ronyfadel/MissionControlPlusReleases/releases/download/v#{version}/Mission.Control.Plus.tgz",
       verified: "github.com/ronyfadel/MissionControlPlusReleases/"
