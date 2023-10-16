@@ -22,7 +22,6 @@ cask "reaper" do
   end
 
   app "REAPER.app"
-  app "ReaMote.app"
 
   zap trash: [
     "~/Library/Application Support/REAPER",
