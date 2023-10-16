@@ -1,6 +1,6 @@
 cask "zui" do
-  version "1.3.0"
-  sha256 "b7deb2c50d833c7a6499baf05f09c87f5e1beddc5bf70c220d1d1b625cfb9723"
+  version "1.3.1"
+  sha256 "cf3e536476e3f13f8a210499d6544c371f7bdd8a3e87fd6dc022c6b9084c1932"
 
   url "https://github.com/brimdata/zui/releases/download/v#{version}/Zui-#{version}.dmg",
       verified: "github.com/brimdata/zui/"
