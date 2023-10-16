@@ -1,11 +1,17 @@
 cask "scilab" do
-  arch arm: "accelerate-arm64", intel: "x86_64" # there is also an "openblas-" version
+  arch arm: "arm64", intel: "x86_64"
+  branch = on_arch_conditional arm: "branch-"
 
-  version "6.1.1"
-  sha256 arm:   "2f87710fc47c6d8e6777ee280ece589342e536c17290b9c033ea0dfcef3b4912",
-         intel: "b417aace594cba882b19c2711aa125d8374d5da8b0a24df2873592765598e457"
+  on_arm do
+    version "2024.0"
+    sha256 "1673e3b6bce5ce571d72921689f1e530f37b584ff027b007b112e9eed200cc27"
+  end
+  on_intel do
+    version "2023.1.0"
+    sha256 "cc6a81be2b18c67819b317ba2daf7aa56a65d6ada34aa4bb0f9e63348b0f6822"
+  end
 
-  url "https://www.utc.fr/~mottelet/scilab/download/#{version}/scilab-#{version}-#{arch}.dmg",
+  url "https://www.utc.fr/~mottelet/scilab/download/#{branch}#{version}/scilab-#{branch}#{version}-#{arch}.dmg",
       verified: "utc.fr/~mottelet/scilab/"
   name "Scilab"
   desc "Software for numerical computation"
@@ -13,7 +19,7 @@ cask "scilab" do
 
   livecheck do
     url "https://www.utc.fr/~mottelet/scilab_for_macOS.html"
-    regex(/href=.*?scilab[._-]v?(\d+(?:\.\d+)+)-#{arch}\.dmg/i)
+    regex(/href=.*?scilab[._-]#{branch}v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
   depends_on macos: ">= :high_sierra"
