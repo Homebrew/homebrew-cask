@@ -8,7 +8,7 @@ cask "scilab" do
   end
   on_intel do
     version "2023.1.0"
-    sha256 "1673e3b6bce5ce571d72921689f1e530f37b584ff027b007b112e9eed200cc27"
+    sha256 "cc6a81be2b18c67819b317ba2daf7aa56a65d6ada34aa4bb0f9e63348b0f6822"
   end
 
   url "https://www.utc.fr/~mottelet/scilab/download/#{branch}#{version}/scilab-#{branch}#{version}-#{arch}.dmg",
