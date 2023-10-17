@@ -1,13 +1,13 @@
 cask "free-podcast-transcription" do
   arch arm: "aarch64", intel: "x86_64"
 
+  sha256 :no_check
+
   on_arm do
     version "0.0.4,20230417.152948"
-    sha256 "bd9177f88e23a179776d416e2d5912f9c5dc9b3979f796ed708522944ce2f81d"
   end
   on_intel do
     version "0.0.4,20230417.153610"
-    sha256 "e2605d7110c0a1951664a1e3fd0624d843b89869673a5eecae2a47e8c0ca9391"
   end
 
   url "https://freepodcasttranscription.com/desktop-builds/darwin/#{arch}/Free%20Podcast%20Transcription.dmg"
@@ -19,6 +19,8 @@ cask "free-podcast-transcription" do
     url :url
     strategy :extract_plist
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Free Podcast Transcription.app"
 
