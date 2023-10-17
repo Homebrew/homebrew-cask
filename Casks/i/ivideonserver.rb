@@ -1,6 +1,6 @@
 cask "ivideonserver" do
-  version "3.12.1"
-  sha256 "5cfab1ee55cd3b0259d9c328523028d11e51d49f3d7dbd95a140c8b56ac5cc85"
+  version "3.13.0"
+  sha256 "ae33bcb0c9064f5d018bb3671710ecd0065aca9b5c0f95b2f9a696330afba287"
 
   url "https://updates.iv-cdn.com/bundles/ivideon_server/#{version}/IvideonServer_#{version}_macosx-x86-64.dmg",
       verified: "updates.iv-cdn.com/"
