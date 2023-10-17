@@ -1,6 +1,6 @@
 cask "elgato-camera-hub" do
-  version "1.7.0.1124"
-  sha256 "fd5a00c0744b272ac0edfa36b4b71095c0b896f7415aa240c4f2816bb0a1fd8c"
+  version "1.8.0.852"
+  sha256 "d886d5d22d177c7e5b7dd9c7f47920366711e4a8ffc3bc2491bc8a8bf2186e08"
 
   url "https://edge.elgato.com/egc/macos/echm/#{version.major_minor}/Camera_Hub_#{version}.pkg"
   name "Elgato Camera Hub"
@@ -18,7 +18,11 @@ cask "elgato-camera-hub" do
 
   uninstall signal:    ["TERM", "com.elgato.CameraHub"],
             launchctl: "com.elgato.CameraHub",
-            pkgutil:   "com.elgato.CameraHub.Installer",
+            quit:      "com.displaylink.DisplayLinkUserAgent",
+            pkgutil:   [
+              "com.displaylink.displaylinkmanagerapp",
+              "com.elgato.CameraHub.Installer",
+            ],
             delete:    "/Applications/Elgato Camera Hub.app"
 
   zap trash: [
