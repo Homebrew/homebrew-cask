@@ -18,7 +18,11 @@ cask "elgato-camera-hub" do
 
   uninstall signal:    ["TERM", "com.elgato.CameraHub"],
             launchctl: "com.elgato.CameraHub",
-            pkgutil:   "com.elgato.CameraHub.Installer",
+            quit:      "com.displaylink.DisplayLinkUserAgent",
+            pkgutil:   [
+              "com.displaylink.displaylinkmanagerapp",
+              "com.elgato.CameraHub.Installer",
+            ],
             delete:    "/Applications/Elgato Camera Hub.app"
 
   zap trash: [
