@@ -1,9 +1,9 @@
 cask "runelite" do
   arch arm: "aarch64", intel: "x64"
 
-  version "2.6.8"
-  sha256 arm:   "dc433c69f419f4835ecb3ef1962dda0f525d2297143b3401b4c51218f76b9fe8",
-         intel: "5f1dcc901c5f918f6fea02bf310e0e095231cc58c9cd956dc8e31f520c19f167"
+  version "2.6.9"
+  sha256 arm:   "f6aea14a6e7f55ccfc2f48788d9c20e00a4579796000b00c289ffc6e6db4b409",
+         intel: "7b9c20b8e731d667995f9e6d1370e84c304bf29f4b5e7bfba1b0d340e8e7551f"
 
   url "https://github.com/runelite/launcher/releases/download/#{version}/RuneLite-#{arch}.dmg",
       verified: "github.com/runelite/launcher/"
