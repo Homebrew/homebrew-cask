@@ -24,9 +24,9 @@ cask "scilab" do
 
   depends_on macos: ">= :high_sierra"
 
-  app "scilab-#{version}.app"
-  binary "#{appdir}/scilab-#{version}.app/Contents/bin/scilab"
-  binary "#{appdir}/scilab-#{version}.app/Contents/bin/scilab-cli"
+  app "scilab-#{branch}#{version}.app"
+  binary "#{appdir}/scilab-#{branch}#{version}.app/Contents/bin/scilab"
+  binary "#{appdir}/scilab-#{branch}#{version}.app/Contents/bin/scilab-cli"
 
   caveats do
     depends_on_java "8"
