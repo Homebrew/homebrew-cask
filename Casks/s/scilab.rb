@@ -28,6 +28,8 @@ cask "scilab" do
   binary "#{appdir}/scilab-#{branch}#{version}.app/Contents/bin/scilab"
   binary "#{appdir}/scilab-#{branch}#{version}.app/Contents/bin/scilab-cli"
 
+  zap trash: "~/.Scilab"
+
   caveats do
     depends_on_java "8"
   end
