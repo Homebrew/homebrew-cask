@@ -1,19 +1,18 @@
 cask "obs-ndi" do
-  version "4.9.0"
-  sha256 "b70b379fb34321188d5eca3bd36784aed4659eacad839af56cf0fe30acf88976"
+  version "4.11.1"
+  sha256 "e2008e9ce970fdb5edeb6f24c50526eef1e383776ffcc52f7bb6ee8ea1116ea2"
 
-  url "https://github.com/Palakis/obs-ndi/releases/download/#{version}/obs-ndi-#{version}-macOS.pkg"
+  url "https://github.com/obs-ndi/obs-ndi/releases/download/#{version}/obs-ndi-#{version}-macos-universal.pkg"
   name "obs-ndi"
   desc "NewTek NDI integration for OBS Studio"
-  homepage "https://github.com/Palakis/obs-ndi"
+  homepage "https://github.com/obs-ndi/obs-ndi"
 
   livecheck do
-    url "https://github.com/Palakis/obs-ndi/releases/"
-    regex(/obs[._-]?ndi[._-]?(\d+(?:\.\d+)*)[._-]?macOS\.pkg/i)
-    strategy :page_match
+    url :url
+    strategy :github_latest
   end
 
-  pkg "obs-ndi-#{version}-macOS.pkg"
+  pkg "obs-ndi-#{version}-macOS-universal.pkg"
 
   uninstall pkgutil: [
     "com.newtek.ndi.runtime",
