@@ -1,6 +1,6 @@
 cask "86box" do
-  version "4.0,5000"
-  sha256 "9c345cea6e6fde62c969270c201bbf341e7b7fd3bb64b8ed5791a02dc31aabc6"
+  version "4.0.1,5111"
+  sha256 "fb1ff82fbcad81c8b8d4893d0d4900944f006d1da3a98e21b50189c680e24e16"
 
   url "https://github.com/86Box/86Box/releases/download/v#{version.csv.first}/86Box-macOS-x86_64+arm64-b#{version.csv.second}.zip",
       verified: "github.com/86Box/86Box/"
@@ -39,7 +39,7 @@ cask "86box" do
 
   caveats do
     <<~EOS
-      ROM files from https://github.com/86Box/roms need to be installed into:
+      The latest ROM files from https://github.com/86Box/roms need to be installed into:
 
         #{roms_dir}
     EOS
