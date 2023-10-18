@@ -2,7 +2,8 @@ cask "cinebench" do
   version "2024"
   sha256 "dcc840852c85c2f9ea39f55e78b23efbb59a27960555c0fb319d5bce7f51fdb6"
 
-  url "https://mx-app-blob-prod.maxon.net/mx-package-production/website/macos/maxon/cinebench/Cinebench#{version}_macOS.dmg"
+  url "https://mx-app-blob-prod.maxon.net/mx-package-production/website/macos/maxon/cinebench/Cinebench#{version}_macOS.dmg",
+      referer: "https://www.maxon.net/en/downloads/cinebench-#{version}-downloads"
   name "Cinebench"
   desc "Hardware benchmarking utility"
   homepage "https://www.maxon.net/products/cinebench/"
