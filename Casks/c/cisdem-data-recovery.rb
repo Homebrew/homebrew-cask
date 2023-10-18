@@ -1,5 +1,5 @@
 cask "cisdem-data-recovery" do
-  version "14.0.0"
+  version "14.0.1"
   sha256 :no_check
 
   url "https://download.cisdem.com/cisdem-datarecovery.dmg"
