@@ -1,6 +1,6 @@
 cask "monotype" do
-  version "6.4.1"
-  sha256 "515435a0fafc91db85430f6a6612acbdedf92815be3ac122011bf91695ec9d8e"
+  version "6.4.2"
+  sha256 "4adf5984a66a444a106ee6466062a5f1e8f45bc50702c0c92b5aa7a1a75a1a42"
 
   url "https://monotypeapp.monotype.com/release/#{version.no_dots}/mac/system/DTAppInstaller.tar.tgz"
   name "Monotype Desktop App"
