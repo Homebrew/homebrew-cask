@@ -11,6 +11,12 @@ cask "codux" do
   desc "React IDE built to visually edit component styling and layouts"
   homepage "https://www.codux.com/"
 
+  livecheck do
+    url "https://www.codux.com/download"
+    regex(/href=.*?Codux[._-]v?(\d+(?:\.\d+)+)[._-](?:x64|arm64).dmg/i)
+    strategy :page_match
+  end
+
   depends_on macos: ">= :catalina"
 
   app "Codux.app"
