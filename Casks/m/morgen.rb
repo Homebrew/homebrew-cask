@@ -1,11 +1,11 @@
 cask "morgen" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.0.1"
-  sha256 arm:   "d5e4e69327b7e34573499c52e79b9a134fbfc1153f14dde965a9b337696ee862",
-         intel: "2aa440e591504bdd6ee92f62b15e0f5677075f95ba26232a7d6ca6ba5fb56dc1"
+  version "3.1.1,231018jm278ilql"
+  sha256 arm:   "fc01f83e87d0c388945e5ec8f81a736d069d965032385a263d36017401cfd299",
+         intel: "7bf778e7625e79a42700e633acbccb14542798e0841929c2038fb41703bd02af"
 
-  url "https://download.todesktop.com/210203cqcj00tw1/Morgen%20#{version}-#{arch}.dmg",
+  url "https://download.todesktop.com/210203cqcj00tw1/Morgen%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}.dmg",
       verified: "download.todesktop.com/210203cqcj00tw1/"
   name "Morgen"
   desc "All-in-one calendars, tasks and scheduler"
@@ -13,7 +13,10 @@ cask "morgen" do
 
   livecheck do
     url "https://download.todesktop.com/210203cqcj00tw1/latest-mac.yml"
-    strategy :electron_builder
+    regex(/Morgen\sv?(\d+(?:\.\d+)+).*?(?:Build\s)([a-z0-9]+)[._-]#{arch}\.dmg/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+    end
   end
 
   depends_on macos: ">= :high_sierra"
