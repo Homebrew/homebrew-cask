@@ -1,6 +1,6 @@
 cask "mountain-duck" do
-  version "4.14.4,21440"
-  sha256 "6503e56475a191a2212be84be14cb7901c28fcee3461a49de47a3c3a07eb7096"
+  version "4.15.0,21616"
+  sha256 "d7d0f5ba96b3bb530c6a96c4d81150ceaafec59a088fde478ff39c318bf727bf"
 
   url "https://dist.mountainduck.io/Mountain%20Duck-#{version.csv.first}.#{version.csv.second}.zip"
   name "Mountain Duck"
@@ -13,7 +13,7 @@ cask "mountain-duck" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "Mountain Duck.app"
 
