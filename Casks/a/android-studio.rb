@@ -17,6 +17,10 @@ cask "android-studio" do
   end
 
   auto_updates true
+  conflicts_with cask: [
+    "homebrew/cask-versions/android-studio-preview-beta",
+    "homebrew/cask-versions/android-studio-preview-canary",
+  ]
 
   app "Android Studio.app"
 
