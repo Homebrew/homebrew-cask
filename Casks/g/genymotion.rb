@@ -9,7 +9,7 @@ cask "genymotion" do
 
   livecheck do
     url "https://www.genymotion.com/download/"
-    regex(/genymotion-(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/href=.*?Genymotion[._-]v?(\d+(?:\.\d+)+)\.(?:dmg|pkg)/i)
   end
 
   depends_on macos: ">= :ventura"
