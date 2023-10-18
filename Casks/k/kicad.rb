@@ -8,6 +8,11 @@ cask "kicad" do
   desc "Electronics design automation suite"
   homepage "https://kicad.org/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :big_sur"
 
   suite "KiCad"
