@@ -1,6 +1,6 @@
 cask "flexoptix" do
-  version "5.17.0-latest"
-  sha256 "b024bea646e216bbb65c9f41ff007ba62a8923f45d462a15855d927fe4eacfbd"
+  version "5.18.0-latest"
+  sha256 "f665abd9801fc52cda4e19151f7691e3a6c92b918f0486412f6e8d2fe72379a4"
 
   url "https://flexbox.reconfigure.me/download/electron/mac/x64/FLEXOPTIX%20App-#{version}.dmg",
       verified: "flexbox.reconfigure.me/download/electron/mac/x64/"
