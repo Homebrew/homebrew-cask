@@ -12,6 +12,8 @@ cask "genymotion" do
     regex(/genymotion-(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  depends_on macos: ">= :ventura"
+
   app "Genymotion.app"
   app "Genymotion Shell.app"
   binary "#{appdir}/Genymotion Shell.app/Contents/MacOS/genyshell"
