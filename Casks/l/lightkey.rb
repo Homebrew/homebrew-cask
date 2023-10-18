@@ -1,7 +1,7 @@
 cask "lightkey" do
   on_monterey :or_older do
-    version "4.4.4"
-    sha256 "d560c897b76f4b3aba1ec41fc3ccd21c3e4f9739fde7140f3fa01a6b621a1eff"
+    version "4.4.5"
+    sha256 "457df4bb2d2f21a52eec9b9b05830eb082014ce66fd79f91544a0838d54a3241"
 
     livecheck do
       skip "Legacy version"
@@ -13,9 +13,13 @@ cask "lightkey" do
     version "4.5.1"
     sha256 "40dd3cff27680c5f0202d81c0b61d49ef24c5033e96618c7f29008d6937bd365"
 
+    # Updates for legacy versions are included so sorting by release date
+    # return false positives, pass all version numbers to livecheck instead
     livecheck do
       url "https://lightkeyapp.com/en/update"
-      strategy :sparkle
+      strategy :sparkle do |items|
+        items.map(&:version)
+      end
     end
 
     depends_on macos: ">= :ventura"
