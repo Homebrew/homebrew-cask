@@ -13,7 +13,7 @@ cask "codux" do
 
   livecheck do
     url "https://www.codux.com/download"
-    regex(/href=.*?Codux[._-]v?(\d+(?:\.\d+)+)[._-](?:x64|arm64).dmg/i)
+    regex(/href=.*?Codux[._-]v?(\d+(?:\.\d+)+)[._-](?:x64|arm64)\.dmg/i)
     strategy :page_match
   end
 
