@@ -1,6 +1,6 @@
 cask "vnc-server" do
-  version "7.6.1"
-  sha256 "ac3c50a162414bb5fbb67670bbecfdcdad7c3fc912eb60a6e6c40e7f003db8c8"
+  version "7.7.0"
+  sha256 "02de83498d1cb6362aa69945963ef50afe7c77704a6e7116887ce5ab58ddb9bc"
 
   url "https://downloads.realvnc.com/download/file/vnc.files/VNC-Server-#{version}-MacOSX-universal.pkg"
   name "Real VNC Server"
