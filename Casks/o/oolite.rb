@@ -7,5 +7,10 @@ cask "oolite" do
   name "oolite"
   homepage "http://www.oolite.org/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Oolite.app"
 end
