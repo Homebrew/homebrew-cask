@@ -8,6 +8,11 @@ cask "meteorologist" do
   desc "Adjustable weather viewing application"
   homepage "https://heat-meteo.sourceforge.io/"
 
+  livecheck do
+    url "https://sourceforge.net/projects/heat-meteo/rss"
+    regex(/Meteorologist[._-](\d+(?:\.\d+)+)(?![._-]b\d)\.dmg/i)
+  end
+
   app "Meteorologist.app"
 
   zap trash: [
