@@ -1,6 +1,6 @@
 cask "flirc" do
-  version "3.27.6"
-  sha256 "037e35ec7f5f718ce5087d10a67c55973b0bbbf525889901b5300100f410f54f"
+  version "3.27.7"
+  sha256 "6572ea78e16af124125a14d0d68399049262cd35b1d90897b7c981e1090c3fe4"
 
   url "https://flirc.com/software/flirc-usb/GUI/release/mac/Flirc-#{version}.dmg"
   name "Flirc"
