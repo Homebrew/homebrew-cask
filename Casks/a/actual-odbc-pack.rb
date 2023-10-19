@@ -26,5 +26,6 @@ cask "actual-odbc-pack" do
     "~/Library/Application Support/Actual ODBC",
     "~/Library/Logs/Actual_iODBC_Installer.log",
     "~/Library/Saved Application State/com.actualtechnologies.odbcmanager.savedState",
-  ], rmdir: "~/Documents/ODBC Documents"
+  ],
+      rmdir: "~/Documents/ODBC Documents"
 end
