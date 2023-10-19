@@ -1,5 +1,5 @@
 cask "smultron" do
-  version "13.4,13400"
+  version "13.4.1,13410"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://www.peterborgapps.com/downloads/Smultron#{version.major}.zip"
