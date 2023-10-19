@@ -13,7 +13,7 @@ cask "codux" do
 
   livecheck do
     url "https://www.codux.com/download"
-    regex(/href=.*?Codux[._-]v?(\d+(?:\.\d+)+)[._-](?:x64|arm64)\.dmg/i)
+    regex(/href=.*?Codux[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
     strategy :page_match
   end
 
@@ -21,10 +21,9 @@ cask "codux" do
 
   app "Codux.app"
 
-  zap trash:
-             [
-               "~/Library/Application Support/Codux",
-               "~/Library/Preferences/com.wixc3.wcs.plist",
-               "~/Library/Saved Application State/com.wixc3.wcs.savedState",
-             ]
+  zap trash: [
+    "~/Library/Application Support/Codux",
+    "~/Library/Preferences/com.wixc3.wcs.plist",
+    "~/Library/Saved Application State/com.wixc3.wcs.savedState",
+  ]
 end
