@@ -1,8 +1,12 @@
 cask "blink1control" do
   version "2.2.9"
-  sha256 "fa4a8457f905b6e7ef288c621fed646305ac31408932a9cfa7181fde41499ec2"
-
-  url "https://github.com/todbot/Blink1Control2/releases/download/v#{version}/Blink1Control#{version.major}-#{version}-mac-x64.dmg",
+  arch arm: "arm64"
+  arch intel: "x64"
+  sha512
+   sha512 arm:   "FJsSMLEhw15CauZ1gM/ALsJDqDMQxZZCeOjSIuhuiswR+pi63+NrVlsp2C5MBESEEFnr0vD4rek8k7Ufd9SW0Q=="
+   sha512 intel: "MxBa22/EdYaptnj/0pRc+x6gMdRtE7MApvU+zOK7AAIHy0TpLBnnDpCHzkuZpTWoInzojSuaD+2/XxCLiy72eg=="
+         
+  url "https://github.com/todbot/Blink1Control2/releases/download/v#{version}/Blink1Control#{version.major}-#{version}-mac-#{arch}.dmg",
       verified: "github.com/todbot/Blink1Control2/"
   name "Blink1Control"
   desc "Utility to control blink(1) USB RGB LED devices"
