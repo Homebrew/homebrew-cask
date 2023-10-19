@@ -21,4 +21,11 @@ cask "actual-odbc-pack" do
     "com.actualtechnologies.odbcdriver.*",
     "com.actualtechnologies.odbcmanager.pkg",
   ]
+
+  zap trash: [
+        "~/Library/Application Support/Actual ODBC",
+        "~/Library/Logs/Actual_iODBC_Installer.log",
+        "~/Library/Saved Application State/com.actualtechnologies.odbcmanager.savedState",
+      ],
+      rmdir: "~/Documents/ODBC Documents"
 end
