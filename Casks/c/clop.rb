@@ -1,6 +1,6 @@
 cask "clop" do
-  version "2.2.5"
-  sha256 "75eda29b0c1ab38f48e851e9c777ab7e68fced23b7ccb9f3c253c78bab83560d"
+  version "2.2.6"
+  sha256 "fe3fd13def4509f0568c1220e91228a2bc55708169039e01b3e6508ff2f14743"
 
   url "https://files.lowtechguys.com/releases/Clop-#{version}.dmg"
   name "Clop"
