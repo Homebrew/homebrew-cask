@@ -1,6 +1,6 @@
 cask "assinador-serpro" do
-  version "4.1.0"
-  sha256 "592265abb1494f2b8f0f0c68e697a347157762ed6c1e986e896334ae85b26a12"
+  version "4.2.0"
+  sha256 "b7cada9314d6224793010599ae859d7ea26c6ea64aa100b0db848f0a7397e2ab"
 
   url "https://www.serpro.gov.br/links-fixos-superiores/assinador-digital/assinador-serpro/arquivos/assinadorserpro-#{version.dots_to_hyphens}-mpkg.zip"
   name "Assinador Serpro"
@@ -14,7 +14,7 @@ cask "assinador-serpro" do
 
   depends_on macos: ">= :sierra"
 
-  pkg "AssinadorSerpro-#{version}.mpkg"
+  pkg "AssinadorSerpro-#{version}.mpkg/Contents/Packages/AssinadorSerpro.pkg"
 
   uninstall pkgutil: "br.gov.serpro.desktop.assinador"
 
