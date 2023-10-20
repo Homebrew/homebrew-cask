@@ -21,6 +21,8 @@ cask "simplex" do
     end
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "SimpleX.app"
 
   zap trash: "~/Library/Saved Application State/chat.simplex.app.savedState"
