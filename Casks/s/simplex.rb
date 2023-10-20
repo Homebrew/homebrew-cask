@@ -12,13 +12,8 @@ cask "simplex" do
   homepage "https://simplex.chat/"
 
   livecheck do
-    # To not grab f-droid and pre-releases
-    strategy :github_latest do |json, regex|
-      match = json["tag_name"]&.match(regex)
-      next if match.blank?
-
-      match[1]
-    end
+    url :url
+    strategy :github_latest
   end
 
   depends_on macos: ">= :high_sierra"
