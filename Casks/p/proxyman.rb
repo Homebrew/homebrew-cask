@@ -15,6 +15,7 @@ cask "proxyman" do
   auto_updates true
 
   app "Proxyman.app"
+  binary "#{appdir}/Proxyman.app/Contents/MacOS/proxyman-cli"
 
   uninstall_postflight do
     stdout, * = system_command "/usr/bin/security",
