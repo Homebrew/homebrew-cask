@@ -18,9 +18,9 @@ cask "oracle-jdk-javadoc" do
     end
   end
 
-  artifact "docs", target: "/Library/Java/JavaVirtualMachines/jdk-#{version.csv.first}.jdk/Contents/Home/docs"
+  artifact "docs", target: "/Library/Java/JavaVirtualMachines/jdk-#{version.major}.jdk/Contents/Home/docs"
 
-  uninstall rmdir: "/Library/Java/JavaVirtualMachines/jdk-#{version.csv.first}.jdk"
+  uninstall rmdir: "/Library/Java/JavaVirtualMachines/jdk-#{version.major}.jdk"
 
   # No zap stanza required
 
