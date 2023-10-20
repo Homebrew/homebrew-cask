@@ -7,9 +7,13 @@ cask "altserver" do
   desc "iOS App Store alternative"
   homepage "https://altstore.io/"
 
+  # Older items in the Sparkle feed may have a newer pubDate, so it's necessary
+  # to work with all of the items in the feed (not just the newest one).
   livecheck do
     url "https://altstore.io/altserver/sparkle-macos.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle do |items|
+      items.map(&:short_version)
+    end
   end
 
   auto_updates true
