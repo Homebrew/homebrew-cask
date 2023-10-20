@@ -2,12 +2,12 @@ cask "keybase" do
   arch arm: "arm64-"
 
   on_arm do
-    version "6.2.3,20230928152642,eba57c1814"
-    sha256 "7da56a72c82c35d0358404e578153533343157572410754eb7a1ec9b6741684b"
+    version "6.2.4,20231019211625,5cfcf6b41e"
+    sha256 "92bf1eea0aa4f66c48abbb6fc508738619ac9af56a0be434ae474f8ba475a5b3"
   end
   on_intel do
-    version "6.2.3,20230928143931,eba57c1814"
-    sha256 "eee303d78dafb53f0ccba6323053f53ed3092abaac7548aa87fd2d437ea3a628"
+    version "6.2.4,20231019203304,5cfcf6b41e"
+    sha256 "a871a9721f775a872565e0887187f40c2a4dc7850e421f4ac4593879deee93bf"
   end
 
   url "https://prerelease.keybase.io/darwin-#{arch}updates/Keybase-#{version.csv.first}-#{version.csv.second}%2B#{version.csv.third}.zip"
