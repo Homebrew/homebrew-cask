@@ -26,4 +26,8 @@ cask "qutebrowser" do
         "~/Library/Caches/qutebrowser",
         "~/Library/Preferences/qutebrowser",
       ]
+
+  caveats do
+    requires_rosetta
+  end
 end
