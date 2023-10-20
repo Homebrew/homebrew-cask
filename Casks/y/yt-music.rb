@@ -11,7 +11,10 @@ cask "yt-music" do
 
   zap trash: [
     "~/Library/Caches/uk.co.wearecocoon.YT-Music",
+    "~/Library/HTTPStorages/uk.co.wearecocoon.YT-Music",
+    "~/Library/HTTPStorages/uk.co.wearecocoon.YT-Music.binarycookies",
     "~/Library/Preferences/uk.co.wearecocoon.YT-Music.plist",
+    "~/Library/Saved Application State/uk.co.wearecocoon.YT-Music.savedState",
     "~/Library/WebKit/uk.co.wearecocoon.YT-Music",
   ]
 end
