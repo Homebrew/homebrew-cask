@@ -7,22 +7,22 @@ cask "intel-power-gadget" do
   desc "Power usage monitoring tool enabled for Intel Core processors"
   homepage "https://www.intel.com/content/www/us/en/developer/articles/tool/power-gadget.html"
 
-  livecheck do
-    url :homepage
-    regex(/href=.*?v?(\d(?:\.\d+)+).*MacOS/i)
-  end
-
   auto_updates true
   depends_on arch: :x86_64
   depends_on macos: ">= :el_capitan"
 
   pkg "Install Intel Power Gadget.pkg"
 
-  uninstall pkgutil: "com.intel.pkg.PowerGadget.*",
-            kext:    "com.intel.driver.EnergyDriver"
+  uninstall pkgutil:   "com.intel.pkg.PowerGadget.*",
+            kext:      "com.intel.driver.EnergyDriver",
+            launchctl: "com.microsoft.EdgeUpdater.wake.system"
 
   zap trash: [
     "~/Library/Caches/com.intel.PowerGadget",
     "~/Library/Preferences/com.intel.PowerGadget.plist",
   ]
+
+  caveats do
+    discontinued
+  end
 end
