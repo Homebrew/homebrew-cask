@@ -1,7 +1,7 @@
 cask "usbimager" do
-  version "1.0.10"
   arch arm: "arm", intel: "intel"
-
+  
+  version "1.0.10"
   on_arm do
     sha256 "54fb7b909009acca97f8ae42939d53e5a70c1030c001a024a0531173001e908d"
   end
