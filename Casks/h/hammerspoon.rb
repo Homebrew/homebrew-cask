@@ -32,6 +32,7 @@ cask "hammerspoon" do
   depends_on macos: ">= :mojave"
 
   app "Hammerspoon.app"
+  binary "#{appdir}/Hammerspoon.app/Contents/Frameworks/hs/hs"
 
   uninstall quit: "org.hammerspoon.Hammerspoon"
 
