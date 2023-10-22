@@ -19,7 +19,7 @@ cask "usbimager" do
   app "USBImager.app"
 
   postflight do
-    system_command "xattr", args: ["-crv", "#{appdir}/#{app}"]
+    system_command "xattr", args: ["-crv", "#{appdir}/USBImager.app"]
   end
 
   zap trash: "~/Library/Preferences/usbimager.plist"
