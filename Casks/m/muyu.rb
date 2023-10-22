@@ -1,6 +1,6 @@
 cask "muyu" do
-  version "1.5.0,35"
-  sha256 "3662ea47e50ca6f968bc88b4a55c3b45a4d626b4255633f5b4331d1c47a43e34"
+  version "1.5.0,36"
+  sha256 "653682940a750ce078724ae41f3b253d4ca7b3c48721d5190623b23856920cb6"
 
   url "https://breakit.thriller.fun/packages/Muyu.v#{version.csv.first}_#{version.csv.second}.zip"
   name "Muyu"
@@ -13,7 +13,7 @@ cask "muyu" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :ventura"
 
   app "Muyu.app"
 
