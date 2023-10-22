@@ -14,8 +14,7 @@ cask "intel-power-gadget" do
   pkg "Install Intel Power Gadget.pkg"
 
   uninstall pkgutil:   "com.intel.pkg.PowerGadget.*",
-            kext:      "com.intel.driver.EnergyDriver",
-            launchctl: "com.microsoft.EdgeUpdater.wake.system"
+            kext:      "com.intel.driver.EnergyDriver"
 
   zap trash: [
     "~/Library/Caches/com.intel.PowerGadget",
