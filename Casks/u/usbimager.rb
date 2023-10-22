@@ -19,4 +19,9 @@ cask "usbimager" do
   app "USBImager.app"
 
   zap trash: "~/Library/Preferences/usbimager.plist"
+
+  caveats <<~EOS
+    If you get an error about the app being damaged, 
+    see https://gitlab.com/bztsrc/usbimager#usage"
+  EOS
 end
