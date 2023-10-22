@@ -19,4 +19,8 @@ cask "usbimager" do
   app "USBImager.app"
 
   zap trash: "~/Library/Preferences/usbimager.plist"
+
+  postflight do
+    system_command "xattr", args: ["-crv", "#{appdir}/#{app}"]
+  end
 end
