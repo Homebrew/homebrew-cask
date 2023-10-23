@@ -30,9 +30,12 @@ cask "xsplit-vcam" do
   pkg "XSplit_VCam_#{version}_#{arch}.pkg"
 
   uninstall quit:      "com.xsplit.vcam",
-            delete:    "/Library/CoreMediaIO/Plug-Ins/DAL/XSplit VCam.plugin",
+            delete:    [
+              "/Library/CoreMediaIO/Plug-Ins/DAL/XSplit VCam.plugin",
+              "/Applications/XSplit VCam",
+            ],
             launchctl: "com.xsplit.vcam.assistant",
-            pkgutil:   "com.xsplit.vcam.installer"
+            pkgutil:   "com.xsplit.vcam.installer.pkg"
 
   zap trash: [
     "/Library/Application Support/com.xsplit.vcam.dal",
