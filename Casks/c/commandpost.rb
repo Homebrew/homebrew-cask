@@ -23,7 +23,7 @@ cask "commandpost" do
   url "https://github.com/CommandPost/CommandPost/releases/download/#{version}/CommandPost_#{version}.dmg",
       verified: "github.com/CommandPost/CommandPost/"
   name "CommandPost"
-  desc "Workflow Enhancements for Creatives"
+  desc "Workflow enhancements for Final Cut Pro"
   homepage "https://commandpost.io/"
 
   auto_updates true
