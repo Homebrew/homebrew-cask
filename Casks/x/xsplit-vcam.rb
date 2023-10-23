@@ -3,8 +3,17 @@ cask "xsplit-vcam" do
   livecheck_arch = on_arch_conditional arm: "arm64", intel: "x86_64"
 
   version "4.0.2206.0801"
-  sha256 arm:   "164002714041f5e94427c227bc1eb21b11a95490cce65e613746128d02fc055e",
-         intel: "5c4f9b77e47c1938140deccf21f56dc7643eb7f622c99ac52aa4501bbf073591"
+
+  on_arm do
+    sha256 "164002714041f5e94427c227bc1eb21b11a95490cce65e613746128d02fc055e"
+
+    depends_on macos: ">= :big_sur"
+  end
+  on_intel do
+    sha256 "5c4f9b77e47c1938140deccf21f56dc7643eb7f622c99ac52aa4501bbf073591"
+
+    depends_on macos: ">= :mojave"
+  end
 
   url "https://cdn2.xsplit.com/download/vc/macos/builds/#{version}/XSplit_VCam_#{version}_#{arch}.pkg"
   name "XSplit VCam"
@@ -17,7 +26,6 @@ cask "xsplit-vcam" do
   end
 
   auto_updates true
-  depends_on macos: (on_arch_conditional arm: ">= :big_sur", intel: ">= :mojave")
 
   pkg "XSplit_VCam_#{version}_#{arch}.pkg"
 
