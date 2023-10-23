@@ -18,4 +18,12 @@ cask "guitar-pro" do
     "com.arobas-music.guitarpro*",
     "com.arobas-music.soundbank.standard",
   ]
+
+  zap trash: [
+    "/Library/Application Support/Arobas Music",
+    "~/Library/Application Support/Arobas Music",
+    "~/Library/HTTPStorages/com.arobas-music.guitarpro8",
+    "~/Library/Preferences/com.arobas-music.guitarpro8.plist",
+    "~/Library/Saved Application State/com.arobas-music.guitarpro8.savedState",
+  ]
 end
