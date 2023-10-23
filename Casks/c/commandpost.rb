@@ -3,8 +3,6 @@ cask "commandpost" do
     version "1.2.16"
     sha256 "a874240a9c37a77da47c7e3c33342f3cc4d415d3bb146bee4b49b0776e8e08a8"
 
-    url "https://github.com/CommandPost/CommandPost/releases/download/#{version}/CommandPost_#{version}.dmg",
-        verified: "github.com/CommandPost/CommandPost/"
     livecheck do
       skip "Legacy version"
     end
@@ -13,8 +11,6 @@ cask "commandpost" do
     version "1.4.13"
     sha256 "dd0ddbf94722174760c82870f537b299ce0b1b6265875aa558d515df4338a816"
 
-    url "https://github.com/CommandPost/CommandPost/releases/download/#{version}/CommandPost_#{version}.dmg",
-        verified: "github.com/CommandPost/CommandPost/"
     livecheck do
       skip "Legacy version"
     end
@@ -22,17 +18,12 @@ cask "commandpost" do
   on_big_sur :or_newer do
     version "1.4.22"
     sha256 "9115107751cda2cf605a513da378fb0dcc40d57fe7dfbd76f664420946f9f773"
-
-    url "https://github.com/CommandPost/CommandPost/releases/download/#{version}/CommandPost_#{version}.dmg",
-        verified: "github.com/CommandPost/CommandPost/"
-    livecheck do
-      url :url
-      strategy :github_latest
-    end
   end
 
+  url "https://github.com/CommandPost/CommandPost/releases/download/#{version}/CommandPost_#{version}.dmg",
+      verified: "github.com/CommandPost/CommandPost/"
   name "CommandPost"
-  desc "Hammerspoon Fork for Creative Workflow Enhancements"
+  desc "Workflow Enhancements for Creatives"
   homepage "https://commandpost.io/"
 
   auto_updates true
