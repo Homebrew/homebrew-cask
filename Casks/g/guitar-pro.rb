@@ -8,8 +8,8 @@ cask "guitar-pro" do
   homepage "https://www.guitar-pro.com/"
 
   livecheck do
-    url :homepage
-    regex(/Guitar\s*Pro\s*(\d+(?:\.\d+)*)/i)
+    url "https://www.guitar-pro.com/blog/c/2163-guitar-pro-news-tips"
+    regex(/Guitar\s+Pro\s+v?(\d+(?:\.\d+)*)/i)
   end
 
   pkg "guitar-pro-#{version.major}-setup.pkg"
