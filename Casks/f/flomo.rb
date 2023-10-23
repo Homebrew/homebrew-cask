@@ -8,13 +8,6 @@ cask "flomo" do
   desc "Memo note taking and management app"
   homepage "https://flomoapp.com/"
 
-  livecheck do
-    url "https://flomoapp.com/api/mac/latest/"
-    strategy :json do |json|
-      json["version"]
-    end
-  end
-
   depends_on macos: ">= :catalina"
 
   app "flomo.app"
@@ -23,4 +16,17 @@ cask "flomo" do
     "~/Library/Application Scripts/com.flomoapp.mac",
     "~/Library/Containers/com.flomoapp.mac",
   ]
+
+  caveats do
+    discontinued
+
+    <<~EOS
+      Flomo versions prior to 2.0 are no longer supported and newer versions
+      are hosted on third-party file uploading sites that we can't use in the
+      cask or check for new versions.
+
+      See the homepage for alternative installation methods (Mac App Store,
+      etc.).
+    EOS
+  end
 end
