@@ -30,8 +30,8 @@ cask "evernote" do
     end
   end
   on_mojave :or_newer do
-    version "10.64.3,20231016152524,a3022232078b217e119d024768c2396287db456c"
-    sha256 "289e294adf99e5509c44b4f08e3c72b3f3bc7002bb61050153e65ac487385687"
+    version "10.64.4,20231024105232,c3d2aae3f25298b412bbe37f45b546c6d0f1131d"
+    sha256 "0bd34cabab0c470a986cee80106155f67491283ce20547e909fc23648043b692"
 
     url "https://cdn1.evernote.com/boron/mac/builds/Evernote-#{version.csv.first}-mac-ddl-stage-#{version.csv.second}-#{version.csv.third}.dmg"
 
