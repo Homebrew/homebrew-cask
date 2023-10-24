@@ -9,6 +9,13 @@ cask "sysdig-inspect" do
 
   app "Sysdig Inspect-darwin-x64/Sysdig Inspect.app"
 
+  zap trash: [
+    "~/Library/Application Support/sysdig-inspect",
+    "~/Library/Logs/Sysdig Inspect",
+    "~/Library/Preferences/com.electron.sysdig-inspect.plist",
+    "~/Library/Saved Application State/com.electron.sysdig-inspect.savedState",
+  ]
+
   caveats do
     requires_rosetta
   end
