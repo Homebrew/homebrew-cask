@@ -1,6 +1,6 @@
 cask "zettelkasten" do
-  version "3.2022.8"
-  sha256 "62917c18dfd2dd2d8acd7d2ce4db6a4b036fc92a03877da108e85f8c5efcaeea"
+  version "3.2023.10"
+  sha256 "3c9bf950bc6eda0e335b463be6625e3ca668c8339dde0f600707afdb87e3c924"
 
   url "https://github.com/Zettelkasten-Team/Zettelkasten/releases/download/v#{version}/Package.dmg.zip",
       verified: "github.com/Zettelkasten-Team/Zettelkasten/"
