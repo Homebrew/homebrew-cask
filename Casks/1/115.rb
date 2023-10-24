@@ -1,6 +1,6 @@
 cask "115" do
-  version "2.0.5.5"
-  sha256 "083ec6ab9db521505e260a6777dfd175e0493378f625e0c1310fc2b6c478eb2d"
+  version "2.0.6.6"
+  sha256 "a720caa14db8f5e0c0c4feb9fd339e5920ce2142f6867f218abdb53049e734e3"
 
   url "https://down.115.com/client/115pc/mac/115pc_#{version}.dmg"
   name "115"
