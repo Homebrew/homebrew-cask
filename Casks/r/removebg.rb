@@ -1,6 +1,6 @@
 cask "removebg" do
-  version "1.4.7"
-  sha256 "8b1994f3c9f91a867157de8ddc1bba5211672eb3f510090f4c256c4391af7b8e"
+  version "2.0.0"
+  sha256 "d0e2a01883384c716e7de333eee55cea337f168fd274f871431d19c7699d7ea2"
 
   url "https://static.remove.bg/download/removebg-for-mac-#{version}.dmg"
   name "remove.bg"
