@@ -16,4 +16,10 @@ cask "proclaim" do
   depends_on macos: ">= :mojave"
 
   app "Proclaim.app"
+
+  zap trash: [
+    "~/Library/Application Support/Proclaim",
+    "~/Library/Preferences/com.logos.Proclaim.plist",
+    "~/Library/Saved Application State/com.logos.Proclaim.savedState",
+  ]
 end

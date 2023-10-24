@@ -1,6 +1,6 @@
 cask "genymotion" do
-  version "3.5.0"
-  sha256 "c4be3f53a85908027340b7529dcdc79e7a6b19572056b354fc94d9688c0c10f7"
+  version "3.5.1"
+  sha256 "cc4bc949b8e5744272dbb77c798035ff009740d0eb8bd251b2b5d82daa2113fb"
 
   url "https://dl.genymotion.com/releases/genymotion-#{version}/genymotion-#{version}.dmg"
   name "Genymotion"
@@ -9,8 +9,10 @@ cask "genymotion" do
 
   livecheck do
     url "https://www.genymotion.com/download/"
-    regex(/Genymotion\s*Desktop\s*(\d+(?:\.\d+)+)/i)
+    regex(/href=.*?Genymotion[._-]v?(\d+(?:\.\d+)+)\.(?:dmg|pkg)/i)
   end
+
+  depends_on macos: ">= :ventura"
 
   app "Genymotion.app"
   app "Genymotion Shell.app"

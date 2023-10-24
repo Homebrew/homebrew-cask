@@ -11,9 +11,23 @@ cask "electron-fiddle" do
   desc "Create and play with small Electron experiments"
   homepage "https://www.electronjs.org/fiddle"
 
+  # Not every GitHub release provides a file for macOS, so we check multiple
+  # recent releases instead of only the "latest" release.
   livecheck do
     url :url
-    strategy :github_latest
+    regex(/^Electron[._-]Fiddle[._-]darwin[._-](?:x64|arm64)[._-]v?(\d+(?:\.\d+)+)\.(?:dmg|pkg|zip)$/i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
+
+        release["assets"]&.map do |asset|
+          match = asset["name"]&.match(regex)
+          next if match.blank?
+
+          match[1]
+        end
+      end.flatten
+    end
   end
 
   app "Electron Fiddle.app"

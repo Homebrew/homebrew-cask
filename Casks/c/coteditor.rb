@@ -39,9 +39,25 @@ cask "coteditor" do
       skip "Legacy version"
     end
   end
-  on_big_sur :or_newer do
-    version "4.6.2"
-    sha256 "cd9befbd4d8ad5606e28673b5bae3ef614d8af48530acefb4f968e1701945ccf"
+  on_big_sur do
+    version "4.3.6"
+    sha256 "8c1ecf6fd66a9885d428a6303d9d1c5ecb811c1c35c97bdbccdad72359d96ad9"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_monterey do
+    version "4.5.9"
+    sha256 "fa3e4a1fdf7edfc109c5588292906d864d430d2e8bd3d84161b1f0a7892163f6"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_ventura :or_newer do
+    version "4.6.3"
+    sha256 "23cf393ed6ab96b0a05c0f22ac4b0814d3a0a8302940f6374cac5aae525b17f2"
 
     livecheck do
       url :url

@@ -8,8 +8,8 @@ cask "guitar-pro" do
   homepage "https://www.guitar-pro.com/"
 
   livecheck do
-    url :homepage
-    regex(/Guitar\s*Pro\s*(\d+(?:\.\d+)*)/i)
+    url "https://www.guitar-pro.com/blog/c/2163-guitar-pro-news-tips"
+    regex(/Guitar\s+Pro\s+v?(\d+(?:\.\d+)*)/i)
   end
 
   pkg "guitar-pro-#{version.major}-setup.pkg"
@@ -17,5 +17,13 @@ cask "guitar-pro" do
   uninstall pkgutil: [
     "com.arobas-music.guitarpro*",
     "com.arobas-music.soundbank.standard",
+  ]
+
+  zap trash: [
+    "/Library/Application Support/Arobas Music",
+    "~/Library/Application Support/Arobas Music",
+    "~/Library/HTTPStorages/com.arobas-music.guitarpro8",
+    "~/Library/Preferences/com.arobas-music.guitarpro8.plist",
+    "~/Library/Saved Application State/com.arobas-music.guitarpro8.savedState",
   ]
 end

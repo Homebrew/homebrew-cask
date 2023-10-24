@@ -2,11 +2,16 @@ cask "molotov" do
   arch arm: "-arm64"
   arch_folder = on_arch_conditional arm: "m1/"
 
-  version "4.6.0"
-  sha256 arm:   "fe1a2804c50341d9463ef6291756ffbcdb280530e85282e6df5a6368cafb4e58",
-         intel: "c8cd1f85ee87eb168e127dc37c4cdae5a111045e621063c3b1724b516eea3c29"
+  on_arm do
+    version "4.7.2"
+    sha256 "b8991865f95576008d8aad24282ffa46158f98cd4e3c4c57032336472cc23462"
+  end
+  on_intel do
+    version "4.7.1"
+    sha256 "f57e894e6de697190d8ec0c1238fd52289809f5166a11e8a41794a8caa304319"
+  end
 
-  url "https://desktop-auto-upgrade.molotov.tv/mac/#{arch_folder}Molotov-#{version}#{arch}-mac.zip"
+  url "https://desktop-auto-upgrade.molotov.tv/mac/#{arch_folder}Molotov-#{version}-mac.zip"
   name "Molotov"
   desc "French TV streaming service"
   homepage "https://www.molotov.tv/"

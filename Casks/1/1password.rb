@@ -1,9 +1,9 @@
 cask "1password" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "8.10.16"
-  sha256 arm:   "d0b280898f9e2d87961bfeba77b9fdd9aa88da71d93228d2d1833f77d4ea605a",
-         intel: "6b653a8e61cc658e0f82280b0b34c038eb6de7139257ab2a272ed3af6cb656f4"
+  version "8.10.18"
+  sha256 arm:   "bf515922cbc5c88c7cd41391803b5904ff634d163aff4a79dfbb6b3867fc99c3",
+         intel: "c28cf29b640e2cb51fe05f8cc1d2197f037e54790d7b007e6496449153676ff7"
 
   url "https://downloads.1password.com/mac/1Password-#{version}-#{arch}.zip"
   name "1Password"
@@ -26,6 +26,7 @@ cask "1password" do
 
   zap trash: [
     "~/Library/Application Scripts/2BUA8C4S2C.com.1password*",
+    "~/Library/Application Scripts/2BUA8C4S2C.com.agilebits",
     "~/Library/Application Scripts/com.1password.1password-launcher",
     "~/Library/Application Scripts/com.1password.browser-support",
     "~/Library/Application Support/1Password",
@@ -44,11 +45,12 @@ cask "1password" do
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.1password.1password.sfl2",
     "~/Library/Containers/2BUA8C4S2C.com.1password.browser-helper",
     "~/Library/Containers/com.1password.1password*",
+    "~/Library/Containers/com.1password.browser-support",
     "~/Library/Group Containers/2BUA8C4S2C.com.1password",
+    "~/Library/Group Containers/2BUA8C4S2C.com.agilebits",
+    "~/Library/Logs/1Password",
     "~/Library/Preferences/com.1password.1password.plist",
     "~/Library/Preferences/group.com.1password.plist",
     "~/Library/Saved Application State/com.1password.1password.savedState",
-    "~/Library/Application Scripts/2BUA8C4S2C.com.1password",
-    "~/Library/Application Scripts/2BUA8C4S2C.com.1password.browser-helper",
   ]
 end

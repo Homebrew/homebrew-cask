@@ -1,8 +1,8 @@
 cask "mblock" do
-  version "5.4.0"
-  sha256 "cdaae703059821efb8806ce3e6fc9b44d74c5975d67fefb0d2e626565f8d6452"
+  version "5.4.2"
+  sha256 "689d7d8210051277f4d4f4466d756f7bff98973e294efd552c14b973cafa17be"
 
-  url "https://dl.makeblock.com/mblock#{version.major}/darwin/V#{version}.pkg",
+  url "https://dl.makeblock.com/mblock#{version.major}/darwin/V#{version}.dmg",
       verified: "dl.makeblock.com/"
   name "mBlock"
   desc "Coding tool designed for teaching STEAM"
@@ -15,10 +15,12 @@ cask "mblock" do
 
   depends_on macos: ">= :sierra"
 
-  pkg "V#{version}.pkg"
+  app "mBlock.app"
 
-  uninstall pkgutil: [
-    "cc.mblock",
-    "com.makeblock.pkg.mblock",
+  zap trash: [
+    "~/Library/Application Support/mblock",
+    "~/Library/Preferences/cc.mblock.plist",
+    "~/Library/Saved Application State/cc.mblock.savedState",
+    "~/mblock",
   ]
 end

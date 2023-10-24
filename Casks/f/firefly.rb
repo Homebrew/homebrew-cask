@@ -1,8 +1,8 @@
 cask "firefly" do
-  version "1.7.5"
-  sha256 "f9bbdb19ce8dbf364b70cdd2b0e0f4674e45b4ce42df9162373f32b33cc3be24"
+  version "2.0.3"
+  sha256 "b9a1132dc1f7c207da5d3981d7f083eea1123798f05212dd68b88d42cb09dffb"
 
-  url "https://dl.firefly.iota.org/firefly-desktop-#{version}.dmg"
+  url "https://dl.firefly.iota.org/firefly-iota-desktop-#{version}.dmg"
   name "Firefly"
   desc "Official wallet for IOTA"
   homepage "https://firefly.iota.org/"

@@ -1,6 +1,6 @@
 cask "geany" do
-  version "1.38,4"
-  sha256 "f9882c1ea469c57d8c6d00012d0dc59735efeb48b0c504cccd13f03bb5184bed"
+  version "2.0"
+  sha256 "c42991517d1a94920c8f39f159d6707ee093347321e5acb8ef6a11fd094adf4e"
 
   url "https://download.geany.org/geany-#{version.csv.first}_osx#{version.csv.second&.prepend("-")}.dmg"
   name "Geany"

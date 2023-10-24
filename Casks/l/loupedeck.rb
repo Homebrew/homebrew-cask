@@ -1,8 +1,8 @@
 cask "loupedeck" do
-  version "5.7.1.17118"
-  sha256 "00ff6847f45df3a9eef777336fd0acdd493647563f94833a3b9324af95f8b507"
+  version "5.8.0.17787"
+  sha256 "c37d7fc73224a0d3cd2df5b8692e78cfcbb5e94bd56227d72143e982b06b0ca0"
 
-  url "https://support.loupedeck.com/hubfs/Knowledge%20Base/LD%20Software%20Downloads/#{version.major_minor_patch}%20hotfix%20for%20macOS/Loupedeck%20#{version}.dmg"
+  url "https://support.loupedeck.com/hubfs/Knowledge%20Base/LD%20Software%20Downloads/#{version.major_minor}/Loupedeck_#{version}.dmg"
   name "Loupdeck"
   desc "Software for Loupedeck consoles"
   homepage "https://loupedeck.com/"

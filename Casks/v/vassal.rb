@@ -1,11 +1,8 @@
 cask "vassal" do
-  arch arm: "aarch64", intel: "x86_64"
+  version "3.7.4"
+  sha256 "2432826251fac85fdc555d5fe2e450743ebd2e70805db7903bc3755d72639f62"
 
-  version "3.7.1"
-  sha256 arm:   "d02cfd0b2b77b50aee851ee18e60af63ef63d0a2ef3fde6cd186f02b478f6128",
-         intel: "b2328641728af6fc751aaeedf0c9686baff62d2408e03cfcac5e01482621d4fb"
-
-  url "https://github.com/vassalengine/vassal/releases/download/#{version}/VASSAL-#{version}-macos-#{arch}.dmg",
+  url "https://github.com/vassalengine/vassal/releases/download/#{version}/VASSAL-#{version}-macos-universal.dmg",
       verified: "github.com/vassalengine/vassal/"
   name "VASSAL"
   desc "Board game engine"

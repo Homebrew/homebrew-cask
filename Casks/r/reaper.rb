@@ -1,13 +1,13 @@
 cask "reaper" do
-  version "6.82"
+  version "7.01"
 
   on_mojave :or_older do
-    sha256 "27a9aa0cfde094156bd048d0573331491957cf2e5032e1011cdfb69a76102a55"
+    sha256 "64e635b8f5573b4e4ec3673d914cc30a272d916ad0a83f5b5917633e126482bb"
 
     url "https://dlcf.reaper.fm/#{version.major}.x/reaper#{version.major_minor.no_dots}_x86_64.dmg"
   end
   on_catalina :or_newer do
-    sha256 "470a114e780590ae8503e470d226556231c9c7ea18a85c660e5d24e829891ed6"
+    sha256 "ce08b74f9b0b3e6664d49fa07d8bb67fb1fd325903ab52cc8321db0f787d47b0"
 
     url "https://dlcf.reaper.fm/#{version.major}.x/reaper#{version.major_minor.no_dots}_universal.dmg"
   end
@@ -22,7 +22,6 @@ cask "reaper" do
   end
 
   app "REAPER.app"
-  app "ReaMote.app"
 
   zap trash: [
     "~/Library/Application Support/REAPER",

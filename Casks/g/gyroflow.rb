@@ -1,6 +1,6 @@
 cask "gyroflow" do
-  version "1.5.2"
-  sha256 "b79641d011bf5d23bccd627b0791ee2bfd90592651726421ef325616d616659f"
+  version "1.5.3"
+  sha256 "43df09536fbe3d744887d20ff02181a52c91482a424a9ae12110569a715a09f4"
 
   url "https://github.com/gyroflow/gyroflow/releases/download/v#{version}/Gyroflow-mac-universal.dmg",
       verified: "github.com/gyroflow/gyroflow/"

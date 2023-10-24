@@ -7,9 +7,15 @@ cask "reactotron" do
   desc "Desktop app for inspecting React JS and React Native projects"
   homepage "https://github.com/infinitered/reactotron"
 
+  # Upstream publishes multiple packages in the same repository, so we can't
+  # rely on the "latest" release being for the application and we can't even
+  # guarantee that the most recent releases will contain a release of the app
+  # (as of writing, the `GithubReleases` strategy doesn't work for this reason).
+  # For the time being, we check the "Quick Installation Guide" file that's
+  # linked in the README.
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://raw.githubusercontent.com/infinitered/reactotron/master/docs/installing.md"
+    regex(%r{releases/tag/v?(\d+(?:\.\d+)+)\)}i)
   end
 
   auto_updates true
@@ -18,6 +24,7 @@ cask "reactotron" do
 
   zap trash: [
     "~/Library/Application Support/Reactotron",
+    "~/Library/Logs/Reactotron",
     "~/Library/Preferences/com.reactotron.app.helper.plist",
     "~/Library/Preferences/com.reactotron.app.plist",
     "~/Library/Saved Application State/com.reactotron.app.savedState",

@@ -1,8 +1,11 @@
 cask "usbimager" do
-  version "1.0.10"
-  sha256 "08c49d21c624d1ac75c12af3fea2d804d14bc57052b196e96adcf0eb2e4824f8"
+  arch arm: "arm", intel: "intel"
 
-  url "https://gitlab.com/bztsrc/usbimager/raw/binaries/usbimager_#{version}-intel-macosx-cocoa.zip",
+  version "1.0.10"
+  sha256 arm:   "54fb7b909009acca97f8ae42939d53e5a70c1030c001a024a0531173001e908d",
+         intel: "85081cde8626b3714b77244de85d38830e89f0d1af7341514ad93077c7ba826a"
+
+  url "https://gitlab.com/bztsrc/usbimager/raw/binaries/usbimager_#{version}-#{arch}-macosx-cocoa.zip",
       verified: "gitlab.com/bztsrc/usbimager/"
   name "USBImager"
   desc "Very minimal GUI app that can write/read to disk images and USB drives"

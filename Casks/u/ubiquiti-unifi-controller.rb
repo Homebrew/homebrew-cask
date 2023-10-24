@@ -1,8 +1,8 @@
 cask "ubiquiti-unifi-controller" do
-  version "7.4.162"
-  sha256 "444409c1c8fb162a1f32e5c31ec86951737318a8aad5378705f69d616005b0eb"
+  version "7.5.187"
+  sha256 "00cd52fa514bd11522cedb7c394d535bb889423d849ceab3ecd7ae4d2153aea3"
 
-  url "https://dl.ubnt.com/unifi/#{version}/UniFi.pkg",
+  url "https://dl.ubnt.com/unifi/#{version}/UniFi-Network-Server.dmg",
       verified: "dl.ubnt.com/"
   name "Ubiquiti UniFi Network Controller"
   desc "Set up, configure, manage and analyze your UniFi network"
@@ -13,22 +13,9 @@ cask "ubiquiti-unifi-controller" do
     regex(/"version"\s*:\s*"v?(\d+(?:\.\d+)+)/i)
   end
 
-  pkg "UniFi.pkg"
+  app "UniFi.app"
 
-  postflight do
-    set_ownership "~/Library/Application Support/UniFi"
-  end
-
-  uninstall quit:    [
-              "com.oracle.java.*.jre",
-              "com.ubnt.UniFi-Discover",
-            ],
-            signal:  ["TERM", "com.ubnt.UniFi"],
-            pkgutil: "com.ubnt.UniFi",
-            delete:  [
-              "/Applications/UniFi-Discover.app",
-              "/Applications/UniFi.app",
-            ]
+  uninstall signal: ["TERM", "com.ubnt.UniFi"]
 
   zap trash: [
     "~/Library/Application Support/UniFi",
@@ -37,7 +24,6 @@ cask "ubiquiti-unifi-controller" do
   ]
 
   caveats do
-    depends_on_java "8"
     license "https://www.ui.com/eula/"
   end
 end

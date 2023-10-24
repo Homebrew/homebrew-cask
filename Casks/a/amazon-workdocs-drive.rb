@@ -1,5 +1,5 @@
 cask "amazon-workdocs-drive" do
-  version "1.0.10003.0"
+  version "1.0.10653.0"
   sha256 :no_check
 
   url "https://d3f2hupz96ggz3.cloudfront.net/mac/AmazonWorkDocsDrive.pkg",

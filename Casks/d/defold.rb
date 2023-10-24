@@ -1,7 +1,7 @@
 cask "defold" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.6.0"
+  version "1.6.1"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://github.com/defold/defold/releases/download/#{version}/Defold-#{arch}-macos.dmg",
@@ -10,12 +10,13 @@ cask "defold" do
   desc "Game engine for development of desktop, mobile and web games"
   homepage "https://defold.com/"
 
-  # Alpha releases are labeled as "pre-release" but beta releases aren't, so we
-  # can't use the `GithubLatest` strategy here.
+  # Upstream only marks alpha releases as "pre-release", so the "latest" GitHub
+  # release is sometimes a beta version. As such, it's necessary to check
+  # multiple recent releases to identify the latest stable version.
   livecheck do
-    url "https://github.com/defold/defold/releases?q=prerelease%3Afalse"
-    regex(%r{href=.*?/tag/v?(\d+(?:\.\d+)+)["' >]}i)
-    strategy :page_match
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    strategy :github_releases
   end
 
   auto_updates true

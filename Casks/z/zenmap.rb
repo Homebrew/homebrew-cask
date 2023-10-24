@@ -12,44 +12,18 @@ cask "zenmap" do
     regex(/href=.*?nmap[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  depends_on formula: "nmap"
+  conflicts_with formula: "nmap"
 
-  pkg "nmap-#{version}.mpkg",
-      choices: [
-        {
-          "choiceIdentifier" => "org.insecure.nmap",
-          "choiceAttribute"  => "selected",
-          "attributeSetting" => 0,
-        },
-        {
-          "choiceIdentifier" => "org.insecure.nmap.ncat",
-          "choiceAttribute"  => "selected",
-          "attributeSetting" => 0,
-        },
-        {
-          "choiceIdentifier" => "org.insecure.nmap.ndiff",
-          "choiceAttribute"  => "selected",
-          "attributeSetting" => 0,
-        },
-        {
-          "choiceIdentifier" => "org.insecure.nmap.nping",
-          "choiceAttribute"  => "selected",
-          "attributeSetting" => 0,
-        },
-        {
-          "choiceIdentifier" => "org.insecure.nmap.nmap-update",
-          "choiceAttribute"  => "selected",
-          "attributeSetting" => 0,
-        },
-        {
-          "choiceIdentifier" => "org.insecure.nmap.zenmap",
-          "choiceAttribute"  => "selected",
-          "attributeSetting" => 1,
-        },
-      ]
+  pkg "nmap-#{version}.mpkg"
 
-  uninstall pkgutil: "org.insecure.nmap.zenmap",
-            delete:  "/Applications/Zenmap.app"
+  uninstall delete:  "/Applications/Zenmap.app",
+            pkgutil: [
+              "org.insecure.nmap",
+              "org.insecure.nmap.ncat",
+              "org.insecure.nmap.ndiff",
+              "org.insecure.nmap.nping",
+              "org.insecure.nmap.zenmap",
+            ]
 
   zap trash: [
     "~/Library/Saved Application State/org.insecure.Zenmap.savedState",

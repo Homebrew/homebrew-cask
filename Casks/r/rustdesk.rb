@@ -3,7 +3,7 @@ cask "rustdesk" do
 
   version "1.2.3"
   sha256 arm:   "647bc014238086d7a73a3d8f1543a1a559b5240f1796e1311a2142be0b57152e",
-         intel: "9e97af8fc12c90a062ab2f9346068b8ed19a37e1dd14a7ad54a97d6beb67d080"
+         intel: "63f1f5bbe2a308495be039604886adc83937bc36e97b09d4fd9b675ee108ee09"
 
   url "https://github.com/rustdesk/rustdesk/releases/download/#{version}/rustdesk-#{version}-#{arch}.dmg",
       verified: "github.com/rustdesk/rustdesk/"

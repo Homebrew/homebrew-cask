@@ -1,6 +1,6 @@
 cask "wirecast" do
-  version "15.2.1"
-  sha256 "b8d3f05dfb929f8a4f29f64082326c7548f1ee7accbe1181cba20cf28db2f19e"
+  version "16.0.1"
+  sha256 "66c9c942bf2617d10ef79aecee582d85d678445df5099899b929639f02e62d7e"
 
   url "https://www.telestream.net/download-files/wirecast/#{version.major_minor.dots_to_hyphens}/Wirecast-#{version}.dmg"
   name "Wirecast"
@@ -8,7 +8,7 @@ cask "wirecast" do
   homepage "https://www.telestream.net/wirecast/"
 
   livecheck do
-    url "https://www.telestream.net/wirecast/versions.htm"
+    url "https://www.telestream.net/telestream-support/wire-cast/versions.htm"
     regex(/href=.*Wirecast[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 

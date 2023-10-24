@@ -1,6 +1,6 @@
 cask "zesarux" do
-  version "10.3"
-  sha256 "a0ef122b3c1fa3b0ce4337fa34a15e4b278aaf5f191491da6563907b217158cb"
+  version "X"
+  sha256 "b1a4c58fd21b926bd7edb1232596ceeff91c774454e1207d9a0f7ce1e56ef558"
 
   url "https://github.com/chernandezba/zesarux/releases/download/ZEsarUX-#{version}/ZEsarUX_macos-#{version}.dmg"
   name "ZEsarUX"
@@ -9,7 +9,7 @@ cask "zesarux" do
 
   livecheck do
     url :url
-    regex(/ZEsarUX-(\d+(?:\.\d+)+)/i)
+    regex(/ZEsarUX[._-]v?([\dX]+(?:\.\d+)*)/i)
     strategy :github_latest
   end
 

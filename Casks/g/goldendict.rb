@@ -8,10 +8,6 @@ cask "goldendict" do
   desc "Feature-rich dictionary lookup program"
   homepage "http://goldendict.org/"
 
-  livecheck do
-    url "https://github.com/goldendict/goldendict"
-  end
-
   depends_on macos: ">= :sierra"
 
   app "GoldenDict.app"
@@ -22,4 +18,8 @@ cask "goldendict" do
     "~/Library/Saved Application State/org.goldendict.savedState",
     "~/.goldendict",
   ]
+
+  caveats do
+    discontinued
+  end
 end

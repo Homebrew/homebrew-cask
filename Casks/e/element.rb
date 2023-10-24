@@ -1,5 +1,5 @@
 cask "element" do
-  version "1.11.46"
+  version "1.11.47"
   sha256 :no_check
 
   url "https://packages.element.io/desktop/install/macos/Element.dmg"

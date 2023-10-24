@@ -1,38 +1,23 @@
 cask "bluestacks" do
-  version "4.270.1.2803,c610c2d26a70cad789a74e586a08e51f"
-  sha256 "a2e76c99a78d9c2559c2f0d2d1ab069f8f721468ec887939746820ef02927dc3"
+  version "10.4.0.6907,f1d20c10cba982dc3ee4b6d975380943"
+  sha256 "b3c5220119bbd29bfcd9f7f3eea4b1054e9cbb7ca8be134b3647aebf64210c00"
 
-  url "https://cdn3.bluestacks.com/downloads/mac/bgp64_mac/#{version.csv.first}/#{version.csv.second}/x64/BlueStacksInstaller_#{version.csv.first}.dmg"
+  url "https://mac-cdn.bluestacks.com/public/app-player/mac/nxt_mac/#{version.csv.first}/#{version.csv.second}/md5/x64/BlueStacks_X_#{version.csv.first}.dmg"
   name "BlueStacks"
   desc "Mobile gaming platform"
   homepage "https://www.bluestacks.com/"
 
   livecheck do
     url "https://cloud.bluestacks.com/api/getdownloadnow?platform=mac&mac_version=#{MacOS.full_version}"
-    regex(%r{/(\d(?:\.\d+)*)/([^/]+)/})
+    regex(%r{/(\d+(?:\.\d+)*)/([^/]+)/})
     strategy :header_match do |headers, regex|
       headers["location"].scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
-  installer manual: "BlueStacks Installer.app"
-
-  uninstall_preflight do
-    set_ownership "/Applications/BlueStacks.app"
-  end
-
-  uninstall launchctl: [
-              "com.BlueStacks.AppPlayer.bstservice_helper",
-              "com.BlueStacks.AppPlayer.Service",
-              "com.BlueStacks.AppPlayer.UninstallWatcher",
-              "com.BlueStacks.AppPlayer.Updater",
-            ],
-            delete:    [
-              "/Applications/BlueStacks.app",
-              "/Library/PrivilegedHelperTools/com.BlueStacks.AppPlayer.bstservice_helper",
-            ]
+  app "BlueStacks X.app"
 
   zap trash: [
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bluestacks.bluestacks.sfl*",
