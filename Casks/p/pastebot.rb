@@ -1,6 +1,6 @@
 cask "pastebot" do
-  version "2.4.4"
-  sha256 "1199b722eb2bd88b7d53a5b1305abcdeeede93d5f2ef3c99c68df00bede47c6d"
+  version "2.4.5"
+  sha256 "6a206e1c43bb9594f3b23084633e00a3c671afb8b0addfe46eeb04f1cffc1f89"
 
   url "https://tapbots.net/pastebot#{version.major}/Pastebot.dmg",
       verified: "tapbots.net/"
