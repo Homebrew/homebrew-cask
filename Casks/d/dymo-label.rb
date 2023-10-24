@@ -1,9 +1,8 @@
 cask "dymo-label" do
-  version "1.4.3.103"
-  sha256 "b490b687ed24af5a198ce215d68e041b6efc5d5e2f83ced6f5e5b788b52142f1"
+  version "1.4.4.18"
+  sha256 "5bba1476e5d0a2301a2d1a13822dada6c31f2f624c5cb5484e19bb1b95719720"
 
-  url "https://s3.amazonaws.com/download.dymo.com/dymo/Software/Mac/DCDMac#{version}.pkg",
-      verified: "s3.amazonaws.com/download.dymo.com/dymo/Software/Mac/"
+  url "https://download.dymo.com/dymo/Software/Mac/DCDMac#{version}.pkg"
   name "Dymo Label"
   desc "Software for DYMO LabelWriters"
   homepage "https://www.dymo.com/support?cfid=online-support"
