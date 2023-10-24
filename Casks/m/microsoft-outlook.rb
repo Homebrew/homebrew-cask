@@ -48,8 +48,8 @@ cask "microsoft-outlook" do
     end
   end
   on_monterey :or_newer do
-    version "16.78.23101305"
-    sha256 "a48d492264e5efe6b5d7e5f65190f1c1ea3e0154c0a0d49fe039f7566a1b6ffc"
+    version "16.78.23102103"
+    sha256 "489c300366bb1e847b83f6cb41152384c9bfaa1ee6d2384047bc7858891c778e"
 
     livecheck do
       url "https://go.microsoft.com/fwlink/p/?linkid=525137"
