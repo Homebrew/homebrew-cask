@@ -1,13 +1,13 @@
 cask "reaper" do
-  version "7.01"
+  version "7.02"
 
   on_mojave :or_older do
-    sha256 "64e635b8f5573b4e4ec3673d914cc30a272d916ad0a83f5b5917633e126482bb"
+    sha256 "48840f0653df14e606bbec469a84a110a9410c1fda831388523669a7a7b46591"
 
     url "https://dlcf.reaper.fm/#{version.major}.x/reaper#{version.major_minor.no_dots}_x86_64.dmg"
   end
   on_catalina :or_newer do
-    sha256 "ce08b74f9b0b3e6664d49fa07d8bb67fb1fd325903ab52cc8321db0f787d47b0"
+    sha256 "7e119238290cb04e5320dc4492195fa1a7b5d3d0b16c62afc7145d3b022fa097"
 
     url "https://dlcf.reaper.fm/#{version.major}.x/reaper#{version.major_minor.no_dots}_universal.dmg"
   end
