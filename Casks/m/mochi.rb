@@ -1,9 +1,9 @@
 cask "mochi" do
   arch arm: "-arm64"
 
-  version "1.15.28"
-  sha256 arm:   "d55a3f6cfe26211ea4f42923bd71d9b2c6ec3a18ce4e5f75180c522ea20b989c",
-         intel: "f2205e6f2394bcef20ed6b1ccbae8b50d39fef5a8b9d11e237bc7c8b2f8f88c2"
+  version "1.16.0"
+  sha256 arm:   "9eaab9e6755b74433bc5c7b3b35d7a66061726665eeb6c964a288c3e069e200a",
+         intel: "3543e435ed17ceed2a9061614f1319f94602c15284f0e1d2d4a661aee946ed27"
 
   url "https://mochi.cards/releases/Mochi-#{version}#{arch}.dmg"
   name "Mochi"
