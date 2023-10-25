@@ -1,9 +1,9 @@
 cask "cursr" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.6.0"
-  sha256 arm:   "d397bea7b36b68086ad062e226604c6936e42df267ba5279be07f0ad64a93546",
-         intel: "166027534486bc1a3c81a7b1aedcdedd9d9693c779c83ed828cfca99e5cbcceb"
+  version "1.6.1"
+  sha256 arm:   "36c0d7f84b09c6f1ba6072049b9a2d82ca8278b12b6612b77cfd1180d6a32a65",
+         intel: "3e488732198e4053557240813b8debf56bd6f5f2c326a88fea928872eb565e16"
 
   url "https://github.com/bitgapp/Cursr/releases/download/v#{version}/Cursr-mac-#{arch}.dmg",
       verified: "github.com/bitgapp/Cursr/"
