@@ -11,7 +11,8 @@ cask "fossa" do
   binary "fossa"
 
   caveats do
-    # fossa-cli requires Rosetta 2 for it to run on Apple Silicon.
     requires_rosetta
   end
+
+  # No zap stanza required
 end
