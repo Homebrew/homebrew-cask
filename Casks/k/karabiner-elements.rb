@@ -3,7 +3,8 @@ cask "karabiner-elements" do
     version "11.6.0"
     sha256 "c1b06252ecc42cdd8051eb3d606050ee47b04532629293245ffdfa01bbc2430d"
 
-    url "https://pqrs.org/osx/karabiner/files/Karabiner-Elements-#{version}.dmg"
+    url "https://github.com/pqrs-org/Karabiner-Elements/releases/download/v#{version}/Karabiner-Elements-#{version}.dmg",
+        verified: "github.com/pqrs-org/Karabiner-Elements/"
 
     livecheck do
       skip "Legacy version"
@@ -118,7 +119,7 @@ cask "karabiner-elements" do
         verified: "github.com/pqrs-org/Karabiner-Elements/"
 
     livecheck do
-      url "https://pqrs.org/osx/karabiner/files/karabiner-elements-appcast.xml"
+      url "https://appcast.pqrs.org/karabiner-elements-appcast.xml"
       strategy :sparkle
     end
 
@@ -129,7 +130,7 @@ cask "karabiner-elements" do
 
   name "Karabiner Elements"
   desc "Keyboard customizer"
-  homepage "https://pqrs.org/osx/karabiner/"
+  homepage "https://karabiner-elements.pqrs.org/"
 
   auto_updates true
 
