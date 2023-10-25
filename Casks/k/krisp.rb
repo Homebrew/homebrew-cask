@@ -1,9 +1,9 @@
 cask "krisp" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.25.3"
-  sha256 arm:   "f58ddd141da893676533e5fc029066a4a6dc5456effd224d7521eedb3eff0d61",
-         intel: "7b564f8824a8c91bceec9d2819dbbcbcadb6becfafd38540676b0f63e461a0df"
+  version "2.27.2"
+  sha256 arm:   "c1b930151f538f5acaa8d34cc533af5286798160ded958106dcc4db6f0b511e5",
+         intel: "2048fd800ca42f4d5f3f47422b761cbf4457ddf6e3425c7c0865797cf53623fe"
 
   url "https://cdn.krisp.ai/mp/#{version}/mac/krisp_#{version}_#{arch}.pkg"
   name "Krisp"
@@ -11,8 +11,8 @@ cask "krisp" do
   homepage "https://krisp.ai/"
 
   livecheck do
-    url "https://api.krisp.ai/v2/download/mac"
-    strategy :header_match
+    url "https://whatsnew.krisp.ai"
+    regex(/krisp\sv?(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
