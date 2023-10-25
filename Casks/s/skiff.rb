@@ -8,12 +8,6 @@ cask "skiff" do
   desc "End-to-end encrypted email, calendar, documents, and files support"
   homepage "https://skiff.com/"
 
-  livecheck do
-    url "https://github.com/skiff-org/skiff-org.github.io/tree/main/macos"
-    regex(/Skiff[\s._-]Desktop[\s._-]v?(\d+(?:\.\d+)+)\.dmg/i)
-    strategy :page_match
-  end
-
   auto_updates true
   depends_on macos: ">= :catalina"
 
@@ -23,4 +17,11 @@ cask "skiff" do
     "~/Library/Application Scripts/org.reactjs.native.Skiff-Desktop",
     "~/Library/Containers/org.reactjs.native.Skiff-Desktop",
   ]
+
+  caveats do
+    discontinued
+    <<~EOS
+      Newer version is only available in Mac App Store.
+    EOS
+  end
 end
