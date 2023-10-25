@@ -1,6 +1,6 @@
 cask "easydict" do
-  version "1.3.4"
-  sha256 "559bec79ab75b7e367b4b218803aae0e7c923660d4cc27c171cf9d2c79b63ca3"
+  version "2.0.1"
+  sha256 "0c08ccb6a683d2fc6d9a612d4845d2b60cf0bee2163a41f7ff141976820ddf3b"
 
   url "https://github.com/tisfeng/Easydict/releases/download/#{version}/Easydict.dmg"
   name "Easydict"
