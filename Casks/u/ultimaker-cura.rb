@@ -1,8 +1,16 @@
 cask "ultimaker-cura" do
-  version "5.4.0"
-  sha256 "d5883826fda5b8125d60b1434161e8c7ba8805fa116b8c14c27bbbc14717bfe1"
+  arch arm: "ARM64", intel: "X64"
 
-  url "https://github.com/Ultimaker/Cura/releases/download/#{version}/Ultimaker-Cura-#{version}-mac.dmg",
+  on_arm do
+    version "5.5.0"
+    sha256 "ab7f0c87312b59b79cece2894ce84f81c8f874581ad3de7648a0bb08cd832724"
+  end
+  on_intel do
+    version "5.5.0"
+    sha256 "a7702ef83ff11a1f625d6e0cf45f8140f1d539628a78a0720a9524976c628871"
+  end
+
+  url "https://github.com/Ultimaker/Cura/releases/download/#{version}/Ultimaker-Cura-#{version}-macos-#{arch}.dmg",
       verified: "github.com/Ultimaker/Cura/"
   name "Ultimaker Cura"
   name "Cura"
