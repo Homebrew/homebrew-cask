@@ -17,10 +17,10 @@ cask "batchoutput-pdf" do
   app "BatchOutput PDF.app"
 
   zap trash: [
-    "~/Library/Caches/com.zevrix.BatchOutputPDF3",
-    "~/Library/HTTPStorages/com.zevrix.BatchOutputPDF3",
-    "~/Library/Preferences/com.zevrix.BatchOutputPDF3.plist",
-    "~/Library/Saved Application State/com.zevrix.BatchOutputPDF3.savedState",
-    "~/Library/WebKit/com.zevrix.BatchOutputPDF3",
+    "~/Library/Caches/com.zevrix.BatchOutputPDF*",
+    "~/Library/HTTPStorages/com.zevrix.BatchOutputPDF*",
+    "~/Library/Preferences/com.zevrix.BatchOutputPDF*.plist",
+    "~/Library/Saved Application State/com.zevrix.BatchOutputPDF*.savedState",
+    "~/Library/WebKit/com.zevrix.BatchOutputPDF*",
   ]
 end
