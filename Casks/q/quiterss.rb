@@ -8,7 +8,7 @@ cask "quiterss" do
   homepage "https://quiterss.org/"
 
   livecheck do
-    url "https://quiterss.org/download"
+    url "https://quiterss.org/en/download"
     regex(/href=.*?QuiteRSS[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
