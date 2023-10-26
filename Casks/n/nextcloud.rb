@@ -7,8 +7,8 @@ cask "nextcloud" do
         verified: "github.com/nextcloud/desktop/"
   end
   on_sierra :or_newer do
-    version "3.10.0"
-    sha256 "7504f1274ce62d98cff7e47c709105b1238fd62965ddae369c55f35deb5606db"
+    version "3.10.1"
+    sha256 "3d67640b8769e771e5f4f6f922cb40346545088eba3684e12a5eac3d42d16925"
 
     url "https://github.com/nextcloud-releases/desktop/releases/download/v#{version}/Nextcloud-#{version}.pkg",
         verified: "github.com/nextcloud-releases/desktop/"
@@ -36,7 +36,8 @@ cask "nextcloud" do
   pkg "Nextcloud-#{version}.pkg"
   binary "/Applications/Nextcloud.app/Contents/MacOS/nextcloudcmd"
 
-  uninstall pkgutil: "com.nextcloud.desktopclient",
+  uninstall quit:    "com.nextcloud.desktopclient",
+            pkgutil: "com.nextcloud.desktopclient",
             delete:  "/Applications/Nextcloud.app"
 
   zap trash: [
