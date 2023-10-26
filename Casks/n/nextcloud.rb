@@ -36,7 +36,8 @@ cask "nextcloud" do
   pkg "Nextcloud-#{version}.pkg"
   binary "/Applications/Nextcloud.app/Contents/MacOS/nextcloudcmd"
 
-  uninstall pkgutil: "com.nextcloud.desktopclient",
+  uninstall quit:    "com.nextcloud.desktopclient",
+            pkgutil: "com.nextcloud.desktopclient",
             delete:  "/Applications/Nextcloud.app"
 
   zap trash: [
