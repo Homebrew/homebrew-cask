@@ -1,8 +1,11 @@
 cask "avogadro" do
-  version "1.97.0"
-  sha256 "feb33b01de7f83e74ccae47f251803baeef6de727b3a19622921bfa7d289f631"
+  arch arm: "-arm64"
 
-  url "https://github.com/OpenChemistry/avogadrolibs/releases/download/#{version}/Avogadro2-#{version}-Darwin.dmg",
+  version "1.98.0"
+  sha256 arm:   "ae0911223b408b22652b81a99a71b7f08b0eb7a0026bfdd3e2d7765f2408f5e7",
+         intel: "424766cf79b79b12f588a90feca3b16a59943af8d63272eacbf27c0ae6293a50"
+
+  url "https://github.com/OpenChemistry/avogadrolibs/releases/download/#{version}/Avogadro2-#{version}-Darwin#{arch}.dmg",
       verified: "github.com/OpenChemistry/avogadrolibs/"
   name "Avogadro"
   desc "Molecule editor and visualizer"
