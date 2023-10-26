@@ -1,5 +1,5 @@
 cask "avogadro" do
-  arch arm: "-arm64", intel: ""
+  arch arm: "-arm64"
 
   version "1.98.0"
   sha256 arm:   "ae0911223b408b22652b81a99a71b7f08b0eb7a0026bfdd3e2d7765f2408f5e7",
