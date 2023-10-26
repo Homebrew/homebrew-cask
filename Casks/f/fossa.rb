@@ -14,5 +14,5 @@ cask "fossa" do
 
   caveats do
     requires_rosetta
-  end  
+  end
 end
