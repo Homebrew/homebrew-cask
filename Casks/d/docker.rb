@@ -41,7 +41,6 @@ cask "docker" do
     docker
     docker-completion
     docker-compose
-    docker-compose-completion
     docker-credential-helper-ecr
   ]
 
