@@ -8,9 +8,18 @@ cask "qingg" do
   desc "Wubi input method"
   homepage "https://qingg.im/mac/"
 
+  # The `shortVersionString` value may contain additional text besides the
+  # numeric version (e.g., `2.15 十周年纪念版`), so we match the version from
+  # the URL in this instance.
   livecheck do
     url "https://qingg.im/sparkle/appcast.php"
-    strategy :sparkle, &:short_version
+    regex(/Qingg[._-]v?(\d+(?:\.\d+)+)\.(?:dmg|pkg|zip)/i)
+    strategy :sparkle do |item|
+      match = item&.url&.match(regex)
+      next if match.blank?
+
+      match[1]
+    end
   end
 
   auto_updates true
