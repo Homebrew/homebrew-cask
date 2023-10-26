@@ -10,9 +10,9 @@ cask "fossa" do
 
   binary "fossa"
 
+  # No zap stanza required
+
   caveats do
     requires_rosetta
-  end
-
-  # No zap stanza required
+  end  
 end
