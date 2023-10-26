@@ -1,6 +1,6 @@
 cask "avogadro" do
-  version "1.97.0"
-  sha256 "feb33b01de7f83e74ccae47f251803baeef6de727b3a19622921bfa7d289f631"
+  version "1.98.0"
+  sha256 "424766cf79b79b12f588a90feca3b16a59943af8d63272eacbf27c0ae6293a50"
 
   url "https://github.com/OpenChemistry/avogadrolibs/releases/download/#{version}/Avogadro2-#{version}-Darwin.dmg",
       verified: "github.com/OpenChemistry/avogadrolibs/"
