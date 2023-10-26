@@ -10,7 +10,16 @@ cask "slack" do
       skip "Legacy version"
     end
   end
-  on_catalina :or_newer do
+  on_catalina do
+    version "4.33.90"
+    sha256 arm:   "8c060d33c7c451b58abaed380da4e6781089530d3b9c12da70e738e27c4eb47c",
+           intel: "7e0ba8a18a9cf95090ad80f58437d647eee5d1842ac4f15ea053c16c1629edde"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_big_sur :or_newer do
     version "4.35.121"
     sha256 arm:   "05c835c1dd54ef6ac03b61f2a453b2bb689c00364b93a257f077219396ddc212",
            intel: "10a869252613f014b1ebfb6b2a4594cfa276154d468591d06af271da13e1d4a2"
