@@ -4,7 +4,7 @@ cask "zenbreak" do
 
   url "https://github.com/Giuliopime/ZenBreak/releases/download/#{version}/ZenBreak.zip"
   name "ZenBreak"
-  desc "A menu bar app that reminds you to take breaks"
+  desc "Menu bar app that reminds you to take breaks"
   homepage "https://github.com/Giuliopime/ZenBreak"
 
   app "ZenBreak.app"
