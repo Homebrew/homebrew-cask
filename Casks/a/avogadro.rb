@@ -14,8 +14,8 @@ cask "avogadro" do
   app "Avogadro2.app"
 
   zap trash: [
+    "~/Library/Application Support/OpenChemistry/Avogadro",
     "~/Library/Preferences/org.openchemistry.Avogadro.plist",
     "~/Library/Saved Application State/cc.avogadro.savedState",
-    "~/Library/Application Support/OpenChemistry/Avogadro",
   ]
 end
