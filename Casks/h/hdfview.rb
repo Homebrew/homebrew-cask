@@ -12,8 +12,9 @@ cask "hdfview" do
     regex(/HDFView\+(\d+(?:\.\d+)+)/i)
   end
 
-  container nested: "HDFView-#{version}.dmg"
   depends_on macos: ">= :el_capitan"
+
+  container nested: "HDFView-#{version}.dmg"
 
   app "HDFView.app"
 
