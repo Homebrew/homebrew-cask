@@ -47,6 +47,7 @@ env:
     firefox
     flipper
     fmail2
+    fossa
     foxglove-studio
     gather
     glyphs
