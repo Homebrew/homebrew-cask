@@ -13,7 +13,6 @@ cask "hdfview" do
   end
 
   depends_on macos: ">= :el_capitan"
-
   container nested: "HDFView-#{version}.dmg"
 
   app "HDFView.app"
