@@ -26,7 +26,7 @@ cask "qingg" do
 
   pkg "安装包.pkg"
 
-  uninstall pkgutil: "com.aodaren.*"
+  uninstall pkgutil: "com.aodaren.Qingg.pkg"
 
   zap trash: [
     "~/Library/Application Support/com.aodaren.inputmethod.Qingg",
