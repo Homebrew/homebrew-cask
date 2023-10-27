@@ -13,6 +13,7 @@ cask "hdfview" do
   end
 
   container nested: "HDFView-#{version}.dmg"
+  depends_on macos: ">= :el_capitan"
 
   app "HDFView.app"
 
@@ -21,4 +22,8 @@ cask "hdfview" do
     "~/Library/Preferences/HDFView.hdfgroup.org.plist",
     "~/Library/Saved Application State/hdf.view.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
