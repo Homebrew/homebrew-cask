@@ -8,6 +8,11 @@ cask "clone-hero" do
   desc "Guitar Hero clone"
   homepage "https://clonehero.net/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :high_sierra"
 
   app "Clone Hero.app"
