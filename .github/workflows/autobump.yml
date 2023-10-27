@@ -47,6 +47,7 @@ env:
     firefox
     flipper
     fmail2
+    fossa
     foxglove-studio
     gather
     glyphs
@@ -120,7 +121,6 @@ env:
     zed
     zoom
     zoom-for-it-admins
-    fossa
 
 permissions:
   contents: read
