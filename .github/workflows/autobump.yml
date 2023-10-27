@@ -120,6 +120,7 @@ env:
     zed
     zoom
     zoom-for-it-admins
+    fossa
 
 permissions:
   contents: read
