@@ -4,7 +4,7 @@ cask "opentabletdriver" do
 
   url "https://github.com/OpenTabletDriver/OpenTabletDriver/releases/download/v#{version}/OpenTabletDriver.osx-x64.tar.gz"
   name "OpenTabletDriver"
-  desc "Open source, cross platform, user mode tablet driver."
+  desc "Open source, cross platform, user mode tablet driver"
   homepage "https://github.com/OpenTabletDriver/OpenTabletDriver"
 
   app "OpenTabletDriver.app"
