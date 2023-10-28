@@ -1,15 +1,16 @@
 cask "data-integration" do
-  version "9.3.0.0-428"
-  sha256 "5c7a453ec448d4b8a568e445b119bcf4f0f41517b42e3626bc437f882c9f46c1"
+  version "9.4.0.0-343"
+  sha256 "e6804fae1a9aa66b92e781e9b2e835d72d56a6adc53dc03e429a847991a334e8"
 
-  url "https://downloads.sourceforge.net/pentaho/pdi-ce-#{version}.zip"
+  url "https://privatefilesbucket-community-edition.s3.us-west-2.amazonaws.com/#{version}/ce/client-tools/pdi-ce-#{version}.zip",
+      verified: "privatefilesbucket-community-edition.s3.us-west-2.amazonaws.com/"
   name "Pentaho Data Integration"
   desc "End to end data integration and analytics platform"
-  homepage "https://sourceforge.net/projects/pentaho/"
+  homepage "https://www.hitachivantara.com/en-us/products/pentaho-platform/data-integration-analytics/pentaho-community-edition.html"
 
   livecheck do
-    url :url
-    regex(%r{url=.*?/pdi-ce[._-]v?(\d+(?:[.-]\d+)+)\.zip}i)
+    url :homepage
+    regex(/href=.*?pdi-ce[._-]v?(\d+(?:[.-]\d+)+)\.zip/i)
   end
 
   app "data-integration/Data Integration.app"
