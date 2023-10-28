@@ -20,4 +20,6 @@ cask "crunchy-cli" do
   postflight do
     set_permissions "#{staged_path}/crunchy-cli", "0755"
   end
+
+  # No zap stanza required
 end
