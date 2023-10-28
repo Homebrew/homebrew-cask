@@ -8,4 +8,9 @@ cask "opentabletdriver" do
   homepage "https://github.com/OpenTabletDriver/OpenTabletDriver"
 
   app "OpenTabletDriver.app"
+
+  zap trash: [
+    "~/Library/Application Support/OpenTabletDriver",
+    "~/Library/Saved Application State/net.opentabletdriver.savedState",
+  ]
 end
