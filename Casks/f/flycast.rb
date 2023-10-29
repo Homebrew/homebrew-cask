@@ -1,8 +1,8 @@
 cask "flycast" do
-  version "2.1"
-  sha256 "e7462614af75d9fa36c254ffd73dc66dab2ea09b34193b6066e92579d16da8c3"
+  version "2.2"
+  sha256 "436702143ae8d8bbdd165784245e50249b9e27e56baaaa26823dfcecda56e2c2"
 
-  url "https://github.com/flyinghead/flycast/releases/download/V#{version}/flycast-macOS-#{version}.zip"
+  url "https://github.com/flyinghead/flycast/releases/download/v#{version}/flycast-macOS-#{version}.zip"
   name "Flycast"
   desc "Dreamcast, Naomi and Atomiswave emulator"
   homepage "https://github.com/flyinghead/flycast"
