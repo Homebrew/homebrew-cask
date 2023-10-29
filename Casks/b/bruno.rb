@@ -11,6 +11,11 @@ cask "bruno" do
   desc "Opensource IDE for exploring and testing api's"
   homepage "https://www.usebruno.com/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :high_sierra"
 
   app "Bruno.app"
