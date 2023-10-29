@@ -9,5 +9,8 @@ cask "schism-tracker" do
 
   app "Schism Tracker.app"
 
-  zap trash: "~/Library/Application Support/Schism Tracker"
+  zap trash: [
+    "~/Library/Application Support/Schism Tracker",
+    "~/Library/Saved Application State/org.schismtracker.SchismTracker.savedState",
+  ]
 end
