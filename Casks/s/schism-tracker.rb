@@ -8,4 +8,9 @@ cask "schism-tracker" do
   homepage "https://github.com/schismtracker/schismtracker"
 
   app "Schism Tracker.app"
+
+  zap trash: [
+    "~/Library/Application Support/Schism Tracker",
+    "~/Library/Saved Application State/org.schismtracker.SchismTracker.savedState",
+  ]
 end
