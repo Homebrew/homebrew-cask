@@ -38,7 +38,7 @@ cask "orion" do
     depends_on macos: :big_sur
   end
   on_monterey do
-    sha256 "c7b8b0af49d3959bc7f5a94ff179e4cf05d2a5613b192e80bb5d541953171c8a"
+    sha256 "89b65a7a489cbab8c0f376891c919362cf8c4a8d1d7ab194d8bf006af1c854a5"
 
     url "https://browser.kagi.com/updates/12_0/#{version.csv.second}.zip"
 
