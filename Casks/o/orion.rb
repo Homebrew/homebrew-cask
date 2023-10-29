@@ -1,8 +1,8 @@
 cask "orion" do
-  version "0.99,125"
+  version "0.99,126"
 
   on_mojave :or_older do
-    sha256 "5f571af42620cae01dc26b312f17cc876be36b47ee22e8fb0dc1113ffe952429"
+    sha256 "6915c7783edbc9eccb2a2e7c6a83da7a338f28d74a28d86ab186968b3ab63b06"
 
     url "https://browser.kagi.com/updates/10_14/#{version.csv.second}.zip"
 
@@ -14,7 +14,7 @@ cask "orion" do
     depends_on macos: ">= :mojave"
   end
   on_catalina do
-    sha256 "020c26599d8d00b347270e5e504ee113e28983e7a4c65531fee679d443d20904"
+    sha256 "55a78c00c9bdfa889bddf33c1ca354f16d4f21253ec130bb5537be288b04224d"
 
     url "https://browser.kagi.com/updates/10_15/#{version.csv.second}.zip"
 
@@ -26,7 +26,7 @@ cask "orion" do
     depends_on macos: :catalina
   end
   on_big_sur do
-    sha256 "0bd8c74c8cacfd9d8387ec3a9543a3d39b411a4a3d1ecd5ff75f9055a36e8acf"
+    sha256 "a969c36e023e426aede04a131fd3c8d207caa5f34ac168f70d5f1a8f652a01fa"
 
     url "https://browser.kagi.com/updates/11_0/#{version.csv.second}.zip"
 
@@ -38,7 +38,7 @@ cask "orion" do
     depends_on macos: :big_sur
   end
   on_monterey do
-    sha256 "c7b8b0af49d3959bc7f5a94ff179e4cf05d2a5613b192e80bb5d541953171c8a"
+    sha256 "89b65a7a489cbab8c0f376891c919362cf8c4a8d1d7ab194d8bf006af1c854a5"
 
     url "https://browser.kagi.com/updates/12_0/#{version.csv.second}.zip"
 
@@ -50,7 +50,7 @@ cask "orion" do
     depends_on macos: :monterey
   end
   on_ventura do
-    sha256 "905787264208ec31ce912a1630e8051606fb8aaceb52b93b1a9a83d3bd134705"
+    sha256 "28d04ba2775c1a6623b3aa5e67d02dabff4b8fc63e8583443fc42a5e5fc8c867"
 
     url "https://browser.kagi.com/updates/13_0/#{version.csv.second}.zip"
 
@@ -62,7 +62,7 @@ cask "orion" do
     depends_on macos: :ventura
   end
   on_sonoma :or_newer do
-    sha256 "20c78c54fb661f2d1509d53bdf71cf9a2142f15a19193f4cface48d971e1d59f"
+    sha256 "21a1b6a43a318b3b351e87b47ee794af9b3f6803016b0a3f3e8ce619975d520c"
 
     url "https://browser.kagi.com/updates/14_0/#{version.csv.second}.zip"
 
@@ -71,7 +71,7 @@ cask "orion" do
       strategy :sparkle
     end
 
-    depends_on macos: ">= :sonoma"
+    depends_on macos: ">= :ventura"
   end
 
   name "Orion Browser"
