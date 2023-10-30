@@ -2,9 +2,9 @@ cask "ibabel" do
   version "5.0.3,2023,02"
   sha256 "25e8c5a311e0a45b5e5cb519fe00ab8b6b9084f5045ee18639649295f39cbc19"
 
-  url "https://macinchem.co.uk/wp-content/uploads/#{version.csv.second}/#{version.csv.third}/iBabel.zip",
-      verified: "macinchem.co.uk/wp-content/uploads/"
+  url "https://macinchem.org/wp-content/uploads/#{version.csv.second}/#{version.csv.third}/iBabel.zip"
   name "iBabel"
+  desc "GUI for the cheminformatics toolkit OpenBabel"
   homepage "https://www.macinchem.org/ibabel/"
 
   livecheck do
