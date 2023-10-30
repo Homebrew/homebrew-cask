@@ -3,10 +3,10 @@ cask "gcc-aarch64-embedded" do
   # https://github.com/Homebrew/homebrew-core/pull/45780#issuecomment-569246452
   arch arm: "arm64", intel: "x86_64"
 
-  version "12.3.rel1"
-  gcc_version = "12.3.1"
-  sha256 arm:   "f4ae16d6a96293fa7893c1f7bc3afd9834a543c917174eb9189d88c474659832",
-         intel: "03865476266682d949e169241610f91bfa0c2e5569d60ddbd872879d4ee48fd6"
+  version "13.2.rel1"
+  gcc_version = "13.2.1"
+  sha256 arm:   "88e51daf993dfc93d7ced3908b81f077ea18a89784ce5f398cdcd2ac6197435b",
+         intel: "bbf320eb0a9115ba0f6a7de936805dfc6e19f767ed290032014a67443af87c20"
 
   url "https://developer.arm.com/-/media/Files/downloads/gnu/#{version}/binrel/arm-gnu-toolchain-#{version}-darwin-#{arch}-aarch64-none-elf.pkg"
   name "GCC ARM Embedded"
@@ -51,10 +51,11 @@ cask "gcc-aarch64-embedded" do
   binary "#{appdir}/ArmGNUToolchain/#{version}/aarch64-none-elf/bin/aarch64-none-elf-strings"
   binary "#{appdir}/ArmGNUToolchain/#{version}/aarch64-none-elf/bin/aarch64-none-elf-strip"
 
-  uninstall pkgutil: "arm-gnu-toolchain-#{version}-darwin-#{arch}-aarch64-none-elf",
+  uninstall pkgutil: "arm-gnu-toolchain-#{version.major_minor}*-darwin-#{arch}-aarch64-none-elf",
             delete:  "/Applications/ArmGNUToolchain/#{version}/aarch64-none-elf",
             rmdir:   [
               "/Applications/ArmGNUToolchain/#{version}",
               "/Applications/ArmGNUToolchain",
             ]
+  # No zap stanza required
 end
