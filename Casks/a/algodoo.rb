@@ -16,4 +16,10 @@ cask "algodoo" do
   end
 
   app "Algodoo.app"
+
+  zap trash: [
+    "~/Library/Application Support/Algodoo",
+    "~/Library/Preferences/se.algoryx.Algodoo.plist",
+    "~/Library/Saved Application State/se.algoryx.algodoo-regular.savedState",
+  ]
 end
