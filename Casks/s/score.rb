@@ -1,6 +1,6 @@
 cask "score" do
-  version "3.1.11"
-  sha256 "76ef7a1e5e74532499a0d6817ca195183ab4fb3ccfcd0dd5635207c44bae07d9"
+  version "3.1.12"
+  sha256 "4033767b7b90aee5e973acbfaf5f1a21f17f98361661bb7a2867836591237bcf"
 
   url "https://github.com/ossia/score/releases/download/v#{version}/ossia.score-#{version}-macOS.dmg",
       verified: "github.com/ossia/score/"
@@ -15,7 +15,7 @@ cask "score" do
 
   depends_on macos: ">= :catalina"
 
-  app "score.app"
+  app "ossia score.app"
 
   zap trash: [
     "~/Library/Preferences/io.ossia.score.plist",
