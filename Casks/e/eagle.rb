@@ -14,4 +14,11 @@ cask "eagle" do
   pkg "Autodesk_EAGLE_#{version}_English_Mac_64bit.pkg"
 
   uninstall pkgutil: "com.Autodesk.eagle"
+
+  zap trash: [
+    "~/Library/Application Support/Eagle",
+    "~/Library/Preferences/com.Autodesk.eagle.plist",
+    "~/Library/Preferences/com.autodesk.EAGLE #{version}.plist",
+    "~/Library/Saved Application State/com.Autodesk.eagle.savedState",
+  ]
 end
