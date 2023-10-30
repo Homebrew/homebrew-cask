@@ -1,5 +1,5 @@
 cask "bilibili" do
-  version "1.12.1.2863"
+  version "1.12.2.3039"
   sha256 :no_check
 
   url "https://dl.hdslb.com/mobile/fixed/pc_electron_mac/bili_mac.dmg",
