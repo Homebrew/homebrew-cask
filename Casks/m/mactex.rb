@@ -67,13 +67,16 @@ cask "mactex" do
 
   zap trash: [
         "/usr/local/texlive/texmf-local",
+        "~/Library/texlive",
         # TexShop:
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/texshop.sfl*",
         "~/Library/Application Support/TeXShop",
         "~/Library/Caches/com.apple.helpd/Generated/TeXShop Help*",
         "~/Library/Caches/TeXShop",
+        "~/Library/HTTPStorages/TeXShop",
         "~/Library/Preferences/TeXShop.plist",
         "~/Library/TeXShop",
+        "~/Library/WebKit/TeXShop",
         # BibDesk:
         "~/Library/Application Support/BibDesk",
         "~/Library/Caches/com.apple.helpd/Generated/edu.ucsd.cs.mmccrack.bibdesk.help*",
@@ -81,9 +84,17 @@ cask "mactex" do
         "~/Library/Cookies/edu.ucsd.cs.mmccrack.bibdesk.binarycookies",
         "~/Library/Preferences/edu.ucsd.cs.mmccrack.bibdesk.plist",
         # LaTeXiT:
+        "~/Library/Application Scripts/7SFX84GNR7.fr.chachatelier.pierre.LaTeXiT",
+        "~/Library/Application Scripts/fr.chachatelier.pierre.LaTeXiT.appex",
+        "~/Library/Application Support/LaTeXiT",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/fr.chachatelier.pierre.latexit.sfl2",
         "~/Library/Caches/fr.chachatelier.pierre.LaTeXiT",
+        "~/Library/Containers/fr.chachatelier.pierre.LaTeXiT.appex",
         "~/Library/Cookies/fr.chachatelier.pierre.LaTeXiT.binarycookies",
+        "~/Library/Group Containers/7SFX84GNR7.fr.chachatelier.pierre.LaTeXiT",
+        "~/Library/HTTPStorages/fr.chachatelier.pierre.LaTeXiT",
         "~/Library/Preferences/fr.chachatelier.pierre.LaTeXiT.plist",
+        "~/Library/WebKit/fr.chachatelier.pierre.LaTeXiT",
         # TeX Live Utility:
         "~/Library/Application Support/TeX Live Utility",
         "~/Library/Caches/com.apple.helpd/Generated/TeX Live Utility Help*",
