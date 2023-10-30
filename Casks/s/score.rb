@@ -15,7 +15,7 @@ cask "score" do
 
   depends_on macos: ">= :catalina"
 
-  app "score.app"
+  app "ossia score.app"
 
   zap trash: [
     "~/Library/Preferences/io.ossia.score.plist",
