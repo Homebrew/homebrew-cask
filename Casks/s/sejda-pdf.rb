@@ -6,7 +6,7 @@ cask "sejda-pdf" do
       verified: "sejda-cdn.com/"
   name "Sejda PDF Desktop"
   desc "PDF editor"
-  homepage "https://www.sejda.com/desktop"
+  homepage "https://www.sejda.com/en/desktop"
 
   livecheck do
     url :homepage
@@ -16,4 +16,12 @@ cask "sejda-pdf" do
   depends_on macos: ">= :high_sierra"
 
   app "Sejda PDF Desktop.app"
+
+  zap trash: [
+    "~/.sejda",
+    "~/.sejda-desktop",
+    "~/Library/Application Support/Sejda PDF Desktop",
+    "~/Library/Preferences/com.sejda.sejda-desktop.plist",
+    "~/Library/Saved Application State/com.sejda.sejda-desktop.savedState",
+  ]
 end
