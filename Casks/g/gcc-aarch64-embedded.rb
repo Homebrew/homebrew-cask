@@ -51,7 +51,7 @@ cask "gcc-aarch64-embedded" do
   binary "#{appdir}/ArmGNUToolchain/#{version}/aarch64-none-elf/bin/aarch64-none-elf-strings"
   binary "#{appdir}/ArmGNUToolchain/#{version}/aarch64-none-elf/bin/aarch64-none-elf-strip"
 
-  uninstall pkgutil: "arm-gnu-toolchain-#{version}-darwin-#{arch}-aarch64-none-elf",
+  uninstall pkgutil: "arm-gnu-toolchain-#{version.major_minor}*-darwin-#{arch}-aarch64-none-elf",
             delete:  "/Applications/ArmGNUToolchain/#{version}/aarch64-none-elf",
             rmdir:   [
               "/Applications/ArmGNUToolchain/#{version}",
