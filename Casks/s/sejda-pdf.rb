@@ -6,7 +6,7 @@ cask "sejda-pdf" do
       verified: "sejda-cdn.com/"
   name "Sejda PDF Desktop"
   desc "PDF editor"
-  homepage "https://www.sejda.com/desktop"
+  homepage "https://www.sejda.com/en/desktop"
 
   livecheck do
     url :homepage
