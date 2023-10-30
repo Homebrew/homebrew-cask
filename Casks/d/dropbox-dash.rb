@@ -1,6 +1,6 @@
 cask "dropbox-dash" do
-  version "2.92.0"
-  sha256 "05c61e41239a02ea00761be9e0d716e65f98d171e116ecd0ec934bef7d571763"
+  version "2.97.0"
+  sha256 "ebcac5200a8167b4884dd870576dfc8d7feeadb8059505f89246970d85d13a71"
 
   url "https://dash-releases.s3.amazonaws.com/Dropbox%20Dash-#{version}.dmg",
       verified: "dash-releases.s3.amazonaws.com/"
