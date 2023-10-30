@@ -1,15 +1,23 @@
 cask "olive" do
-  version "1e3cf53"
-  sha256 "9ab6afc7ee9d7fb5083d1a49adea7dc5934bdbf6d635454cae4f8667fbd7c368"
+  arch arm: "arm64", intel: "x86_64"
 
-  url "https://olivevideoeditor.org/dl/Olive-#{version}-macOS-x86_64.zip"
+  on_arm do
+    version "942672912"
+    sha256 "f2a125f563d195ab510bffe53b8a4c564c3c0ab92ae434cc1f440e8c9b8ece84"
+  end
+  on_intel do
+    version "942672913"
+    sha256 "f2a125f563d195ab510bffe53b8a4c564c3c0ab92ae434cc1f440e8c9b8ece84"
+  end
+
+  url "https://olivevideoeditor.org/go?id=#{version}"
   name "Olive"
   desc "Non-linear video editor"
   homepage "https://www.olivevideoeditor.org/"
 
   livecheck do
-    url "https://www.olivevideoeditor.org/download"
-    regex(/golegacy\?hash=(.*)&type=/i)
+    url "https://www.olivevideoeditor.org/golatest/?platform=macOS&arch=#{arch}&ext="
+    strategy :header_match
   end
 
   app "Olive.app"
