@@ -18,7 +18,7 @@ cask "lulu" do
   app "LuLu.app"
 
   uninstall script: {
-    executable: "#{appdir}/LuLu.app/Contents/Resources/LuLu Uninstaller.app/Contents/MacOS/LuLu Uninstaller",
+    executable: "#{staged_path}/LuLu.app/Contents/Resources/LuLu Uninstaller.app/Contents/MacOS/LuLu Uninstaller",
     args:       ["-uninstall"],
     sudo:       true,
   }
@@ -26,7 +26,7 @@ cask "lulu" do
   zap trash: [
     "~/Library/Caches/com.objective-see.lulu",
     "~/Library/Caches/com.objective-see.lulu.helper",
-    "~/Library/Preferences/com.objective-see.lulu.plist",
     "~/Library/Preferences/com.objective-see.lulu.helper.plist",
+    "~/Library/Preferences/com.objective-see.lulu.plist",
   ]
 end
