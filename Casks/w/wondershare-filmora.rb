@@ -1,11 +1,11 @@
 cask "wondershare-filmora" do
   arch arm: "arm_"
 
-  version "12.9.1"
-  sha256 arm:   "58790f341dbc8a7d5d8340a3bf9fd2c4998d3d2792c462ebbe1f1e051ba8bbbd",
-         intel: "d5d689932d2924dd27e78ef3ffcd7fe477152ff736d8f73a5a6800be26a6f6a9"
+  version "13.0.25"
+  sha256 arm:   "c7bd2b1519fed1062cf9a20a4979d9a0a0321fd172be4f3e372108b2eeadcdb9",
+         intel: "b88d2e74a2e17f963a0fbbbe4ac183a1350e4e3f0c4353e4c58d533651f0f6d7"
 
-  url "https://download.wondershare.com/cbs_down/filmora-mac_#{arch}#{version}_gray_full718.dmg"
+  url "https://download.wondershare.com/cbs_down/filmora-mac_#{arch}#{version}_full718.dmg"
   name "Wondershare Filmora"
   desc "Video editor"
   homepage "https://filmora.wondershare.com/video-editor-mac/"
