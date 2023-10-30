@@ -4,7 +4,7 @@ cask "gcc-aarch64-embedded" do
   arch arm: "arm64", intel: "x86_64"
 
   version "13.2.rel1"
-  gcc_version = "12.3.1"
+  gcc_version = "13.2.1"
   sha256 arm:   "88e51daf993dfc93d7ced3908b81f077ea18a89784ce5f398cdcd2ac6197435b",
          intel: "bbf320eb0a9115ba0f6a7de936805dfc6e19f767ed290032014a67443af87c20"
 
