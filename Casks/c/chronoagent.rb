@@ -17,4 +17,10 @@ cask "chronoagent" do
   uninstall pkgutil:   "com.econtechnologies.pkg.ChronoAgent",
             launchctl: "com.econtechnologies.ChronoAgentRemote",
             quit:      "com.econtechnologies.backgrounder.CAMonitorBackgrounder"
+
+  zap trash: [
+    "~/Library/Caches/com.apple.helpd/Generated/ChronoAgent Help Center*2.2.3/",
+    "~/Library/Containers/com.apple.helpviewer/Data/com.econtechnologies.preference.chronoagent.*",
+    "~/Library/Preferences/com.econtechnologies.chronoagent.prefPane.plis",
+  ]
 end
