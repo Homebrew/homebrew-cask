@@ -14,7 +14,7 @@ cask "ibabel" do
       match = page.match(regex)
 
       cask = CaskLoader.load("ibabel")
-      download_url = "https://macinchem.co.uk/wp-content/uploads/#{match[1]}/#{match[2]}/iBabel.zip"
+      download_url = "https://macinchem.org/wp-content/uploads/#{match[1]}/#{match[2]}/iBabel.zip"
       app_version = Homebrew::Livecheck::Strategy::ExtractPlist.find_versions(cask: cask,
                                                                               url:  download_url)[:matches].values.max
       next if app_version.blank?
