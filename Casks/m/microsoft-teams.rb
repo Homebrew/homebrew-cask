@@ -56,6 +56,8 @@ cask "microsoft-teams" do
         "~/Library/Application Support/Teams",
         "~/Library/Caches/com.microsoft.teams",
         "~/Library/Cookies/com.microsoft.teams.binarycookies",
+        "~/Library/HTTPStorages/com.microsoft.teams",
+        "~/Library/HTTPStorages/com.microsoft.teams.binarycookies",
         "~/Library/Logs/Microsoft Teams",
         "~/Library/Preferences/com.microsoft.teams.plist",
         "~/Library/Saved Application State/com.microsoft.teams.savedState",
