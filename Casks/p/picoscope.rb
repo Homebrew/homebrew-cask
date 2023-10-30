@@ -14,7 +14,7 @@ cask "picoscope" do
 
   conflicts_with cask: "homebrew/cask-versions/picoscope-beta"
 
-  pkg "PicoScope_#{version}_TnM_Stable.pkg"
+  pkg "PicoScope_#{version}_TandM_Stable.pkg"
 
   uninstall pkgutil: "com.picotech.picoscope#{version.major}tnm"
 
