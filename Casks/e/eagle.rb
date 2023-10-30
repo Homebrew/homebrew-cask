@@ -4,6 +4,7 @@ cask "eagle" do
 
   url "https://trial2.autodesk.com/NET17SWDLD/2017/EGLPRM/ESD/Autodesk_EAGLE_#{version}_English_Mac_64bit.pkg"
   name "Autodesk EAGLE"
+  desc "Electronic design automation software"
   homepage "https://www.autodesk.com/products/eagle/overview"
 
   livecheck do
@@ -14,4 +15,11 @@ cask "eagle" do
   pkg "Autodesk_EAGLE_#{version}_English_Mac_64bit.pkg"
 
   uninstall pkgutil: "com.Autodesk.eagle"
+
+  zap trash: [
+    "~/Library/Application Support/Eagle",
+    "~/Library/Preferences/com.autodesk.EAGLE #{version}.plist",
+    "~/Library/Preferences/com.autodesk.eagle.plist",
+    "~/Library/Saved Application State/com.Autodesk.eagle.savedState",
+  ]
 end
