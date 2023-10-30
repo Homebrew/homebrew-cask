@@ -1,5 +1,6 @@
 cask "zoom" do
   arch arm: "arm64/"
+  livecheck_folder = on_arch_conditional arm: "?archType=arm64"
 
   version "5.16.6.24664"
   sha256 arm:   "e7171c6188ac551670eed27abab8b9d81b9a79445a75a1f2a6c7b8be3c0f4086",
@@ -11,7 +12,7 @@ cask "zoom" do
   homepage "https://www.zoom.us/"
 
   livecheck do
-    url "https://www.zoom.us/client/latest/zoomusInstallerFull.pkg"
+    url "https://www.zoom.us/client/latest/zoomusInstallerFull.pkg#{livecheck_folder}"
     strategy :header_match
   end
 
