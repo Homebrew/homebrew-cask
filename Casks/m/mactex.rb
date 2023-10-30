@@ -58,11 +58,11 @@ cask "mactex" do
               "org.tug.mactex.texlive#{version.major}",
             ],
             delete:  [
-              "/usr/local/texlive/#{version.major}",
               "/Applications/TeX",
-              "/Library/TeX",
-              "/etc/paths.d/TeX",
               "/etc/manpaths.d/TeX",
+              "/etc/paths.d/TeX",
+              "/Library/TeX",
+              "/usr/local/texlive/#{version.major}",
             ]
 
   zap trash: [
@@ -84,14 +84,14 @@ cask "mactex" do
         "~/Library/Cookies/edu.ucsd.cs.mmccrack.bibdesk.binarycookies",
         "~/Library/Preferences/edu.ucsd.cs.mmccrack.bibdesk.plist",
         # LaTeXiT:
-        "~/Library/Application Scripts/7SFX84GNR7.fr.chachatelier.pierre.LaTeXiT",
+        "~/Library/Application Scripts/*.fr.chachatelier.pierre.LaTeXiT",
         "~/Library/Application Scripts/fr.chachatelier.pierre.LaTeXiT.appex",
+        "~/Library/Application Support/com.apple.sharedfilelist/*/fr.chachatelier.pierre.latexit.sfl2",
         "~/Library/Application Support/LaTeXiT",
-        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/fr.chachatelier.pierre.latexit.sfl2",
         "~/Library/Caches/fr.chachatelier.pierre.LaTeXiT",
         "~/Library/Containers/fr.chachatelier.pierre.LaTeXiT.appex",
         "~/Library/Cookies/fr.chachatelier.pierre.LaTeXiT.binarycookies",
-        "~/Library/Group Containers/7SFX84GNR7.fr.chachatelier.pierre.LaTeXiT",
+        "~/Library/Group Containers/*.fr.chachatelier.pierre.LaTeXiT",
         "~/Library/HTTPStorages/fr.chachatelier.pierre.LaTeXiT",
         "~/Library/Preferences/fr.chachatelier.pierre.LaTeXiT.plist",
         "~/Library/WebKit/fr.chachatelier.pierre.LaTeXiT",
