@@ -23,4 +23,8 @@ cask "spyder" do
     "~/Library/Caches/Spyder",
     "~/Library/Saved Application State/org.spyder-ide.Spyder.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
