@@ -16,7 +16,18 @@ cask "docker" do
 
     depends_on macos: ">= :catalina"
   end
-  on_big_sur :or_newer do
+  on_big_sur do
+    version "4.24.2,124339"
+    sha256 arm:   "fec5b7f8f38b7cbec3a654b01fcc1828b4dbaa3875033adab20a88fa9ad4c7c4",
+           intel: "0bedaa13c4e8870b55250162def44cafba65d857c265f1f7488d8326ec386f71"
+
+    livecheck do
+      skip "Legacy version"
+    end
+
+    depends_on macos: :big_sur
+  end
+  on_monterey :or_newer do
     version "4.25.0,126437"
     sha256 arm:   "7ff7c3a5a1a4e582f610cd713aa3ee69fae669bbb8345601e892f05a33fb87b3",
            intel: "1786b2f47127dd30674aaf8dfa491d9c614cbf260ae03c8f699abe36578713dd"
@@ -26,7 +37,7 @@ cask "docker" do
       strategy :sparkle
     end
 
-    depends_on macos: ">= :big_sur"
+    depends_on macos: ">= :monterey"
   end
 
   url "https://desktop.docker.com/mac/main/#{arch}/#{version.csv.second}/Docker.dmg"
