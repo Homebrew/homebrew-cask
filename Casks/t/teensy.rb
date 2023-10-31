@@ -13,4 +13,6 @@ cask "teensy" do
   end
 
   app "teensy.app"
+
+  zap trash: "Library/Saved Application State/com.pjrc.teensy.savedState"
 end
