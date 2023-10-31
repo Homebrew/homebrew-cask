@@ -1,6 +1,6 @@
 cask "kdrive" do
-  version "3.4.3.20230613"
-  sha256 "251a6e60db2b41edccc6b62d29b87d516f9caa3d0612eb9d8afe01c65f692c23"
+  version "3.5.3.20231023"
+  sha256 "126f2c8825fcb3474c90ecc12ffcb9a103b2ea3027bc897cfe5762f3ae24f369"
 
   url "https://download.storage.infomaniak.com/drive/desktopclient/kDrive-#{version}.pkg"
   name "kDrive"
@@ -14,6 +14,8 @@ cask "kdrive" do
       json["macos"]["downloadurl"]&.scan(regex)&.map { |match| (match[0]).to_s }
     end
   end
+
+  depends_on macos: ">= :catalina"
 
   pkg "kDrive-#{version}.pkg"
 
@@ -30,7 +32,9 @@ cask "kdrive" do
               "com.infomaniak.drive.desktopclient.Extension",
               "com.infomaniak.drive.uninstaller",
             ],
-            launchctl: "864VDCS2QY.com.infomaniak.drive.desktopclient.LoginItemAgent"
+            launchctl: "864VDCS2QY.com.infomaniak.drive.desktopclient.LoginItemAgent",
+            delete:    "/Applications/kDrive/kDrive Uninstaller.app",
+            rmdir:     "/Applications/kDrive"
 
   zap trash: [
     "~/Library/Application Scripts/864VDCS2QY.com.infomaniak.drive.desktopclient.LoginItemAgent",
