@@ -15,7 +15,7 @@ cask "datweatherdoe" do
       skip "Legacy version for Big Sur"
     end
   end
-  on_ventura do
+  on_monterey do
     version "3.3.0"
     sha256 "8f122fb410019c4065229b01bb3af9630eceef192f3bcb605ea679c7c9143f4a"
 
