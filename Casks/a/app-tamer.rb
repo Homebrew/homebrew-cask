@@ -1,6 +1,6 @@
 cask "app-tamer" do
   version "2.8.2"
-  sha256 "92dfaf11623e3b1b86c132752e2932ccc940cc87e38d92434f7d04344413e01e"
+  sha256 "f289ddc261a7b29c9d3c3116dd459b94d44fa10501f5bac02d2fb503976ee995"
 
   url "https://www.stclairsoft.com/download/AppTamer-#{version}.dmg"
   name "AppTamer"
