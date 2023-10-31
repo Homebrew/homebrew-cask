@@ -11,7 +11,7 @@ cask "orion" do
       strategy :sparkle
     end
 
-    depends_on macos: ">= :mojave"
+    depends_on macos: :mojave
   end
   on_catalina do
     sha256 "a7ee6832f3c703936b211f39c1348b3f49a09f8be1b46918f457ec9e96e00d47"
@@ -62,7 +62,7 @@ cask "orion" do
     depends_on macos: :ventura
   end
   on_sonoma :or_newer do
-    sha256 "21a1b6a43a318b3b351e87b47ee794af9b3f6803016b0a3f3e8ce619975d520c"
+    sha256 "042cc5432ad4a134da669183830059d7d7ce2f286739e4b18f7a725fb58146eb"
 
     url "https://browser.kagi.com/updates/14_0/#{version.csv.second}.zip"
 
@@ -71,7 +71,7 @@ cask "orion" do
       strategy :sparkle
     end
 
-    depends_on macos: ">= :ventura"
+    depends_on macos: :sonoma
   end
 
   name "Orion Browser"
