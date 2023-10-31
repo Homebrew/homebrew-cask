@@ -19,43 +19,44 @@ cask "gcc-arm-embedded" do
   end
 
   pkg "arm-gnu-toolchain-#{version}-darwin-#{arch}-arm-none-eabi.pkg"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/arm-none-eabi/bin/arm-none-eabi-addr2line"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/arm-none-eabi/bin/arm-none-eabi-ar"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/arm-none-eabi/bin/arm-none-eabi-as"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/arm-none-eabi/bin/arm-none-eabi-c++"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/arm-none-eabi/bin/arm-none-eabi-c++filt"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/arm-none-eabi/bin/arm-none-eabi-cpp"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/arm-none-eabi/bin/arm-none-eabi-elfedit"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/arm-none-eabi/bin/arm-none-eabi-g++"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/arm-none-eabi/bin/arm-none-eabi-gcc"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/arm-none-eabi/bin/arm-none-eabi-gcc-#{gcc_version}"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/arm-none-eabi/bin/arm-none-eabi-gcc-ar"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/arm-none-eabi/bin/arm-none-eabi-gcc-nm"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/arm-none-eabi/bin/arm-none-eabi-gcc-ranlib"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/arm-none-eabi/bin/arm-none-eabi-gcov"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/arm-none-eabi/bin/arm-none-eabi-gcov-dump"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/arm-none-eabi/bin/arm-none-eabi-gcov-tool"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/arm-none-eabi/bin/arm-none-eabi-gdb"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/arm-none-eabi/bin/arm-none-eabi-gdb-add-index"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/arm-none-eabi/bin/arm-none-eabi-gfortran"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/arm-none-eabi/bin/arm-none-eabi-gprof"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/arm-none-eabi/bin/arm-none-eabi-ld"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/arm-none-eabi/bin/arm-none-eabi-ld.bfd"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/arm-none-eabi/bin/arm-none-eabi-lto-dump"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/arm-none-eabi/bin/arm-none-eabi-nm"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/arm-none-eabi/bin/arm-none-eabi-objcopy"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/arm-none-eabi/bin/arm-none-eabi-objdump"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/arm-none-eabi/bin/arm-none-eabi-ranlib"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/arm-none-eabi/bin/arm-none-eabi-readelf"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/arm-none-eabi/bin/arm-none-eabi-size"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/arm-none-eabi/bin/arm-none-eabi-strings"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/arm-none-eabi/bin/arm-none-eabi-strip"
+  binary "#{appdir}/ArmGNUToolchain/#{version.major_minor}*/arm-none-eabi/bin/arm-none-eabi-addr2line"
+  binary "#{appdir}/ArmGNUToolchain/#{version.major_minor}*/arm-none-eabi/bin/arm-none-eabi-ar"
+  binary "#{appdir}/ArmGNUToolchain/#{version.major_minor}*/arm-none-eabi/bin/arm-none-eabi-as"
+  binary "#{appdir}/ArmGNUToolchain/#{version.major_minor}*/arm-none-eabi/bin/arm-none-eabi-c++"
+  binary "#{appdir}/ArmGNUToolchain/#{version.major_minor}*/arm-none-eabi/bin/arm-none-eabi-c++filt"
+  binary "#{appdir}/ArmGNUToolchain/#{version.major_minor}*/arm-none-eabi/bin/arm-none-eabi-cpp"
+  binary "#{appdir}/ArmGNUToolchain/#{version.major_minor}*/arm-none-eabi/bin/arm-none-eabi-elfedit"
+  binary "#{appdir}/ArmGNUToolchain/#{version.major_minor}*/arm-none-eabi/bin/arm-none-eabi-g++"
+  binary "#{appdir}/ArmGNUToolchain/#{version.major_minor}*/arm-none-eabi/bin/arm-none-eabi-gcc"
+  binary "#{appdir}/ArmGNUToolchain/#{version.major_minor}*/arm-none-eabi/bin/arm-none-eabi-gcc-#{gcc_version}"
+  binary "#{appdir}/ArmGNUToolchain/#{version.major_minor}*/arm-none-eabi/bin/arm-none-eabi-gcc-ar"
+  binary "#{appdir}/ArmGNUToolchain/#{version.major_minor}*/arm-none-eabi/bin/arm-none-eabi-gcc-nm"
+  binary "#{appdir}/ArmGNUToolchain/#{version.major_minor}*/arm-none-eabi/bin/arm-none-eabi-gcc-ranlib"
+  binary "#{appdir}/ArmGNUToolchain/#{version.major_minor}*/arm-none-eabi/bin/arm-none-eabi-gcov"
+  binary "#{appdir}/ArmGNUToolchain/#{version.major_minor}*/arm-none-eabi/bin/arm-none-eabi-gcov-dump"
+  binary "#{appdir}/ArmGNUToolchain/#{version.major_minor}*/arm-none-eabi/bin/arm-none-eabi-gcov-tool"
+  binary "#{appdir}/ArmGNUToolchain/#{version.major_minor}*/arm-none-eabi/bin/arm-none-eabi-gdb"
+  binary "#{appdir}/ArmGNUToolchain/#{version.major_minor}*/arm-none-eabi/bin/arm-none-eabi-gdb-add-index"
+  binary "#{appdir}/ArmGNUToolchain/#{version.major_minor}*/arm-none-eabi/bin/arm-none-eabi-gfortran"
+  binary "#{appdir}/ArmGNUToolchain/#{version.major_minor}*/arm-none-eabi/bin/arm-none-eabi-gprof"
+  binary "#{appdir}/ArmGNUToolchain/#{version.major_minor}*/arm-none-eabi/bin/arm-none-eabi-ld"
+  binary "#{appdir}/ArmGNUToolchain/#{version.major_minor}*/arm-none-eabi/bin/arm-none-eabi-ld.bfd"
+  binary "#{appdir}/ArmGNUToolchain/#{version.major_minor}*/arm-none-eabi/bin/arm-none-eabi-lto-dump"
+  binary "#{appdir}/ArmGNUToolchain/#{version.major_minor}*/arm-none-eabi/bin/arm-none-eabi-nm"
+  binary "#{appdir}/ArmGNUToolchain/#{version.major_minor}*/arm-none-eabi/bin/arm-none-eabi-objcopy"
+  binary "#{appdir}/ArmGNUToolchain/#{version.major_minor}*/arm-none-eabi/bin/arm-none-eabi-objdump"
+  binary "#{appdir}/ArmGNUToolchain/#{version.major_minor}*/arm-none-eabi/bin/arm-none-eabi-ranlib"
+  binary "#{appdir}/ArmGNUToolchain/#{version.major_minor}*/arm-none-eabi/bin/arm-none-eabi-readelf"
+  binary "#{appdir}/ArmGNUToolchain/#{version.major_minor}*/arm-none-eabi/bin/arm-none-eabi-size"
+  binary "#{appdir}/ArmGNUToolchain/#{version.major_minor}*/arm-none-eabi/bin/arm-none-eabi-strings"
+  binary "#{appdir}/ArmGNUToolchain/#{version.major_minor}*/arm-none-eabi/bin/arm-none-eabi-strip"
 
   uninstall pkgutil: "arm-gnu-toolchain-#{version.major_minor}*-darwin-#{arch}-arm-none-eabi",
-            delete:  "/Applications/ArmGNUToolchain/#{version}/arm-none-eabi",
+            delete:  "/Applications/ArmGNUToolchain/#{version.major_minor}*/arm-none-eabi",
             rmdir:   [
-              "/Applications/ArmGNUToolchain/#{version}",
+              "/Applications/ArmGNUToolchain/#{version.major_minor}*",
               "/Applications/ArmGNUToolchain",
             ]
+
   # No zap stanza required
 end
