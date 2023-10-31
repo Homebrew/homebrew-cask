@@ -1,6 +1,6 @@
 cask "lm-studio" do
-  version "0.2.7"
-  sha256 "ec69f07e86b9a35f98c6bcca3ba302673f15b153de2ab16db647044efa52cd12"
+  version "0.2.8"
+  sha256 "bd081626c458a490a1412f6e14a8a606d9bf07f640f5a35320ae618f946793b6"
 
   url "https://s3.amazonaws.com/releases.lmstudio.ai/#{version}/LM+Studio-darwin-arm64-#{version}.zip",
       verified: "s3.amazonaws.com/releases.lmstudio.ai/"
