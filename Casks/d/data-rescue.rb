@@ -1,15 +1,15 @@
 cask "data-rescue" do
-  version "6.0.7"
-  sha256 "45ba579f20251bbe4c7d8cd52a31da210abbb15428c4d42d6c617ac40ce3fd69"
+  version "6.0.8"
+  sha256 "74526630976a9973905936766e6aff8d90f7ed9910014ba154849da7da6b3ad2"
 
   url "https://downloads.prosofteng.com/dr/Data_Rescue_#{version}.dmg"
   name "Data Rescue #{version.major}"
   desc "Data recovery software"
-  homepage "https://www.prosofteng.com/data-rescue-recovery-software/"
+  homepage "https://www.prosofteng.com/mac-data-recovery"
 
   livecheck do
-    url "https://www.prosofteng.com/resources/dr#{version.major}/dr#{version.major}_updates_mac.xml"
-    strategy :sparkle, &:short_version
+    url "https://www.prosofteng.com/downloads"
+    regex(/>\s*Data\s+Rescue(?:\s+\d+)?\s+\(Mac\)\s*<.+?v?(\d+(?:\.\d+)+)/im)
   end
 
   depends_on macos: ">= :sierra"
