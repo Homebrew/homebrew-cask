@@ -1,6 +1,6 @@
 cask "iptvnator" do
-  version "0.14.0"
-  sha256 "84e73739c815f1082b1a0a338b91a80f678defe996e1df8fafe8aa27e00ace18"
+  version "0.15.0"
+  sha256 "b08c25e7755b00cf2c7d840992bf7e94e39200eb7950641b6714a6976e02a2af"
 
   url "https://github.com/4gray/iptvnator/releases/download/v#{version}/IPTVnator-#{version}-universal.dmg"
   name "IPTVnator"
