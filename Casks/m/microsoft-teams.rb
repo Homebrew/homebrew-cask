@@ -46,21 +46,31 @@ cask "microsoft-teams" do
             quit:      "com.microsoft.autoupdate2",
             delete:    [
               "/Applications/Microsoft Teams (work or school).app",
+              "/Library/Application Support/Microsoft/TeamsUpdaterDaemon",
               "/Library/Logs/Microsoft/Teams",
+              "/Library/Logs/Microsoft/MSTeams",
               "/Library/Preferences/com.microsoft.teams.plist",
             ]
 
   zap trash: [
+        "~/Library/Application Scripts/com.microsoft.teams2",
+        "~/Library/Application Scripts/com.microsoft.teams2.launcher",
+        "~/Library/Application Scripts/com.microsoft.teams2.notificationcenter",
         "~/Library/Application Support/com.microsoft.teams",
         "~/Library/Application Support/Microsoft/Teams",
         "~/Library/Application Support/Teams",
         "~/Library/Caches/com.microsoft.teams",
+        "~/Library/Containers/com.microsoft.teams2",
+        "~/Library/Containers/com.microsoft.teams2.launcher",
+        "~/Library/Containers/com.microsoft.teams2.notificationcenter",
         "~/Library/Cookies/com.microsoft.teams.binarycookies",
         "~/Library/HTTPStorages/com.microsoft.teams",
         "~/Library/HTTPStorages/com.microsoft.teams.binarycookies",
         "~/Library/Logs/Microsoft Teams",
+        "~/Library/Logs/Microsoft Teams Helper (Renderer)",
         "~/Library/Preferences/com.microsoft.teams.plist",
         "~/Library/Saved Application State/com.microsoft.teams.savedState",
+        "~/Library/Saved Application State/com.microsoft.teams2.savedState",
         "~/Library/WebKit/com.microsoft.teams",
       ],
       rmdir: "~/Library/Application Support/Microsoft"
