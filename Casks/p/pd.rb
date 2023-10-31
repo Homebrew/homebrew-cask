@@ -1,6 +1,6 @@
 cask "pd" do
-  version "0.54-0"
-  sha256 "0c1d2bc12756df253f8152163f1493deb7ce48382d4f7357ecbe0c260be4db04"
+  version "0.54-1"
+  sha256 "61252a8f1442c1285e9b2a4d98bbc11e908df97604baad1094b10f9a5fe50563"
 
   url "http://msp.ucsd.edu/Software/pd-#{version}.macos.zip"
   name "Pd"
