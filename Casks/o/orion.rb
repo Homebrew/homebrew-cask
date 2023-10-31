@@ -11,7 +11,7 @@ cask "orion" do
       strategy :sparkle
     end
 
-    depends_on macos: ">= :mojave"
+    depends_on macos: :mojave
   end
   on_catalina do
     sha256 "a7ee6832f3c703936b211f39c1348b3f49a09f8be1b46918f457ec9e96e00d47"
@@ -71,7 +71,7 @@ cask "orion" do
       strategy :sparkle
     end
 
-    depends_on macos: ">= :ventura"
+    depends_on macos: :sonoma
   end
 
   name "Orion Browser"
