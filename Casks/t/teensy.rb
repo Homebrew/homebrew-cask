@@ -1,5 +1,5 @@
 cask "teensy" do
-  version "1.56"
+  version "1.59-beta3"
   sha256 :no_check
 
   url "https://www.pjrc.com/teensy/teensy.dmg"
@@ -13,4 +13,6 @@ cask "teensy" do
   end
 
   app "teensy.app"
+
+  zap trash: "Library/Saved Application State/com.pjrc.teensy.savedState"
 end
