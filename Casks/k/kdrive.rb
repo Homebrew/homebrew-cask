@@ -15,6 +15,8 @@ cask "kdrive" do
     end
   end
 
+  depends_on macos: ">= :catalina"
+
   pkg "kDrive-#{version}.pkg"
 
   uninstall_preflight do
@@ -30,7 +32,9 @@ cask "kdrive" do
               "com.infomaniak.drive.desktopclient.Extension",
               "com.infomaniak.drive.uninstaller",
             ],
-            launchctl: "864VDCS2QY.com.infomaniak.drive.desktopclient.LoginItemAgent"
+            launchctl: "864VDCS2QY.com.infomaniak.drive.desktopclient.LoginItemAgent",
+            delete:    "/Applications/kDrive/kDrive Uninstaller.app",
+            rmdir:     "/Applications/kDrive"
 
   zap trash: [
     "~/Library/Application Scripts/864VDCS2QY.com.infomaniak.drive.desktopclient.LoginItemAgent",
