@@ -4,6 +4,7 @@ cask "gcc-aarch64-embedded" do
   arch arm: "arm64", intel: "x86_64"
 
   version "13.2.rel1"
+  pkg_version = "13.2.Rel1"
   gcc_version = "13.2.1"
   sha256 arm:   "88e51daf993dfc93d7ced3908b81f077ea18a89784ce5f398cdcd2ac6197435b",
          intel: "bbf320eb0a9115ba0f6a7de936805dfc6e19f767ed290032014a67443af87c20"
@@ -19,43 +20,44 @@ cask "gcc-aarch64-embedded" do
   end
 
   pkg "arm-gnu-toolchain-#{version}-darwin-#{arch}-aarch64-none-elf.pkg"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/aarch64-none-elf/bin/aarch64-none-elf-addr2line"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/aarch64-none-elf/bin/aarch64-none-elf-ar"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/aarch64-none-elf/bin/aarch64-none-elf-as"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/aarch64-none-elf/bin/aarch64-none-elf-c++"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/aarch64-none-elf/bin/aarch64-none-elf-c++filt"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/aarch64-none-elf/bin/aarch64-none-elf-cpp"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/aarch64-none-elf/bin/aarch64-none-elf-elfedit"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/aarch64-none-elf/bin/aarch64-none-elf-g++"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/aarch64-none-elf/bin/aarch64-none-elf-gcc"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/aarch64-none-elf/bin/aarch64-none-elf-gcc-#{gcc_version}"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/aarch64-none-elf/bin/aarch64-none-elf-gcc-ar"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/aarch64-none-elf/bin/aarch64-none-elf-gcc-nm"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/aarch64-none-elf/bin/aarch64-none-elf-gcc-ranlib"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/aarch64-none-elf/bin/aarch64-none-elf-gcov"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/aarch64-none-elf/bin/aarch64-none-elf-gcov-dump"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/aarch64-none-elf/bin/aarch64-none-elf-gcov-tool"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/aarch64-none-elf/bin/aarch64-none-elf-gdb"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/aarch64-none-elf/bin/aarch64-none-elf-gdb-add-index"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/aarch64-none-elf/bin/aarch64-none-elf-gfortran"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/aarch64-none-elf/bin/aarch64-none-elf-gprof"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/aarch64-none-elf/bin/aarch64-none-elf-ld"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/aarch64-none-elf/bin/aarch64-none-elf-ld.bfd"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/aarch64-none-elf/bin/aarch64-none-elf-lto-dump"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/aarch64-none-elf/bin/aarch64-none-elf-nm"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/aarch64-none-elf/bin/aarch64-none-elf-objcopy"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/aarch64-none-elf/bin/aarch64-none-elf-objdump"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/aarch64-none-elf/bin/aarch64-none-elf-ranlib"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/aarch64-none-elf/bin/aarch64-none-elf-readelf"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/aarch64-none-elf/bin/aarch64-none-elf-size"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/aarch64-none-elf/bin/aarch64-none-elf-strings"
-  binary "#{appdir}/ArmGNUToolchain/#{version}/aarch64-none-elf/bin/aarch64-none-elf-strip"
+  binary "#{appdir}/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-addr2line"
+  binary "#{appdir}/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-ar"
+  binary "#{appdir}/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-as"
+  binary "#{appdir}/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-c++"
+  binary "#{appdir}/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-c++filt"
+  binary "#{appdir}/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-cpp"
+  binary "#{appdir}/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-elfedit"
+  binary "#{appdir}/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-g++"
+  binary "#{appdir}/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-gcc"
+  binary "#{appdir}/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-gcc-#{gcc_version}"
+  binary "#{appdir}/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-gcc-ar"
+  binary "#{appdir}/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-gcc-nm"
+  binary "#{appdir}/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-gcc-ranlib"
+  binary "#{appdir}/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-gcov"
+  binary "#{appdir}/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-gcov-dump"
+  binary "#{appdir}/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-gcov-tool"
+  binary "#{appdir}/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-gdb"
+  binary "#{appdir}/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-gdb-add-index"
+  binary "#{appdir}/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-gfortran"
+  binary "#{appdir}/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-gprof"
+  binary "#{appdir}/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-ld"
+  binary "#{appdir}/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-ld.bfd"
+  binary "#{appdir}/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-lto-dump"
+  binary "#{appdir}/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-nm"
+  binary "#{appdir}/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-objcopy"
+  binary "#{appdir}/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-objdump"
+  binary "#{appdir}/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-ranlib"
+  binary "#{appdir}/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-readelf"
+  binary "#{appdir}/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-size"
+  binary "#{appdir}/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-strings"
+  binary "#{appdir}/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-strip"
 
-  uninstall pkgutil: "arm-gnu-toolchain-#{version.major_minor}*-darwin-#{arch}-aarch64-none-elf",
-            delete:  "/Applications/ArmGNUToolchain/#{version}/aarch64-none-elf",
+  uninstall pkgutil: "arm-gnu-toolchain-#{pkg_version}-darwin-#{arch}-aarch64-none-elf",
+            delete:  "/Applications/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf",
             rmdir:   [
-              "/Applications/ArmGNUToolchain/#{version}",
+              "/Applications/ArmGNUToolchain/#{pkg_version}",
               "/Applications/ArmGNUToolchain",
             ]
+
   # No zap stanza required
 end
