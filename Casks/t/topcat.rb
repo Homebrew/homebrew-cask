@@ -1,5 +1,5 @@
 cask "topcat" do
-  version "4.8-8"
+  version "4.9"
   sha256 :no_check
 
   url "http://www.starlink.ac.uk/topcat/topcat-full.dmg"
