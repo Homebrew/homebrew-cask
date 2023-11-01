@@ -1,9 +1,9 @@
 cask "sf" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.14.6,1f2724e"
-  sha256 arm:   "af37773f773cb2badb4b316459b2900f6d14960065863a80dfc0a0437858cd2d",
-         intel: "04c8d3d1c2203abed3de7250993fcffc51da9b58327e25709ceecae788522f57"
+  version "2.15.9,ffa76de"
+  sha256 arm:   "545c0bc6b5e23d4f8500ec24c495603e7f539917eec3c284dad8893bf33b300f",
+         intel: "e18d99a1f98b95a419e3ff2c4ac835683c7f8a045a04adfa3b1fe700dfa9c960"
 
   url "https://developer.salesforce.com/media/salesforce-cli/sf/versions/#{version.csv.first}/#{version.csv.second}/sf-v#{version.csv.first}-#{version.csv.second}-#{arch}.pkg"
   name "Salesforce CLI"
