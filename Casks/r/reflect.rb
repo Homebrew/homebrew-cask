@@ -11,6 +11,8 @@ cask "reflect" do
   desc "Note taking app for meetings, ideas, journalling, and research"
   homepage "https://reflect.app/"
 
+  auto_updates true
+
   app "Reflect.app"
 
   zap trash: [
