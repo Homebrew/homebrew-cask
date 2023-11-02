@@ -32,7 +32,7 @@ cask "tailscale" do
             quit:       "io.tailscale.ipn.macsys"
 
   zap trash: [
-    "Library/Tailscale",
+    "~/Library/Tailscale",
     "~/Library/Application Scripts/*.io.tailscale.ipn.macsys",
     "~/Library/Application Scripts/io.tailscale.ipn.macsys.share-extension",
     "~/Library/Application Scripts/io.tailscale.ipn.macsys",

@@ -27,7 +27,7 @@ cask "splashtop-streamer" do
             pkgutil:   "com.splashtop.Splashtop-Streamer"
 
   zap trash: [
-    "Library/Application Support/Splashtop Streamer",
-    "Library/Preferences/com.splashtop.Splashtop-Streamer.plist",
+    "~/Library/Application Support/Splashtop Streamer",
+    "~/Library/Preferences/com.splashtop.Splashtop-Streamer.plist",
   ]
 end
