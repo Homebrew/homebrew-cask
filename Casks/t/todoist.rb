@@ -1,6 +1,6 @@
 cask "todoist" do
-  version "8.9.3"
-  sha256 "d985b1b4e07626755b5b9f074da388c00bdc824527f48f2f85204b4c0158f8c1"
+  version "8.9.4"
+  sha256 "69382a278cb7633d24555121ff7ec9a585dfcf48954254d189973084fdb7a5fa"
 
   url "https://electron-dl.todoist.com/mac/Todoist-darwin-universal-#{version}.dmg"
   name "Todoist"
