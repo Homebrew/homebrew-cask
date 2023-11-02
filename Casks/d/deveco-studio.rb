@@ -27,7 +27,6 @@ cask "deveco-studio" do
   end
 
   depends_on macos: ">= :catalina"
-
   container nested: "devecostudio-mac#{arch}-#{version}/deveco-studio-#{version}#{arch_suffix}.dmg"
 
   app "DevEco-Studio.app"
