@@ -1,5 +1,5 @@
 cask "chronoagent" do
-  version "10.3.4"
+  version "11.0.0"
   sha256 :no_check
 
   url "https://downloads.econtechnologies.com/CA_Mac_Download.dmg"
