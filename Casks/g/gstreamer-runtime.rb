@@ -39,7 +39,7 @@ cask "gstreamer-runtime" do
     "org.freedesktop.gstreamer.universal.gstreamer-1.0-visualizers",
   ]
 
-  zap trash "/Library/Frameworks/GStreamer.framework"
+  zap trash: "/Library/Frameworks/GStreamer.framework"
 
   caveats <<~EOS
     This cask installs the GStreamer.framework runtime tools into /Library/Frameworks/
