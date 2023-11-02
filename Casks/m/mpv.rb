@@ -1,5 +1,5 @@
 cask "mpv" do
-  on_mojave :or_older do
+  on_catalina :or_older do
     version "0.35.0"
     sha256 "376415c787aef391a3927cdecd5bb0dac9f21ef9d7742516b8cd8d8ce502e7b6"
 
@@ -13,7 +13,7 @@ cask "mpv" do
 
     livecheck do
       url "https://laboratory.stolendata.net/~djinn/mpv_osx/"
-      regex(/mpv-(\d+(?:\.\d+)+)\.t/i)
+      regex(/mpv[._-]v?(\d+(?:\.\d+)+)\.t/i)
     end
   end
 
@@ -24,7 +24,13 @@ cask "mpv" do
   homepage "https://mpv.io/"
 
   conflicts_with formula: "mpv"
-  depends_on macos: ">= :mojave"
+  depends_on macos: [
+    :mojave,
+    :catalina,
+    :big_sur,
+    :monterey,
+    :ventura,
+  ]
 
   app "mpv.app"
   binary "#{appdir}/mpv.app/Contents/MacOS/mpv"
