@@ -9,9 +9,13 @@ cask "quickhash" do
 
   livecheck do
     url "https://www.quickhash-gui.org/downloads/?tax%5Bwpdmcategory%5D=osx/"
-    regex(%r{/quickhash[._-](?:gui[._-])?v?(\d+(?:-\d+)+)[._-]apple[._-]osx/\?wpdmdl=(\d+).*?dt_update_date.+>(\d+(?:/\d+)+)</span}im)
+    regex(%r{
+      dt_update_date[^>]*>\s*(\d+[-/]\d+[-/]\d+)\s*<.+?
+      /quickhash(?:-gui)?[._-]v?(\d+(?:[.-]\d+)+)-apple-osx
+      /\?(?:[^"' >]+?&)?wpdmdl=([^&"' >]+)
+    }imx)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0].tr("-", ".")},#{match[1]},#{match[2].tr("/", ",")}" }
+      page.scan(regex).map { |match| "#{match[1].tr("-", ".")},#{match[2]},#{match[0].tr("-/", ",")}" }
     end
   end
 
