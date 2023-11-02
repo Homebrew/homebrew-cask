@@ -7,11 +7,6 @@ cask "agenda" do
   desc "Note taking application focusing on dates"
   homepage "https://agenda.com/"
 
-  livecheck do
-    url "https://agenda.community/t/release-notes/34763/61"
-    regex(/version\s+(\d+(?:\.\d+)+)/i)
-  end
-
   depends_on macos: ">= :mojave"
 
   app "Agenda.app"
