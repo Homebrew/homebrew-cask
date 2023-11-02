@@ -12,8 +12,6 @@ cask "gstreamer-runtime" do
     regex(/gstreamer[._-]1\.0[._-]v?(\d+(?:\.\d+)+)[._-]universal\.pkg/i)
   end
 
-  conflicts_with formula: "gstreamer"
-
   pkg "gstreamer-1.0-#{version}-universal.pkg"
 
   uninstall pkgutil: [
