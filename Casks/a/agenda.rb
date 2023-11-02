@@ -26,4 +26,11 @@ cask "agenda" do
     "~/Library/Group Containers/WRBK2Z2EG7.group.com.momenta.agenda.macos",
     "~/Library/Preferences/com.momenta.agenda.macos.plist",
   ]
+
+  caveats do
+    discontinued
+    <<~EOS
+      Newer versions are only available in Mac App Store.
+    EOS
+  end
 end
