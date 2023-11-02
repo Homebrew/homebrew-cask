@@ -12,7 +12,7 @@ cask "gstreamer-development" do
     regex(/gstreamer[._-]1\.0[._-]devel[._-]v?(\d+(?:\.\d+)+)[._-]universal\.pkg/i)
   end
 
-  conflicts_with formula: "gstreamer"
+  depends_on cask: "gstreamer-runtime"
 
   pkg "gstreamer-1.0-devel-#{version}-universal.pkg"
 
@@ -37,11 +37,4 @@ cask "gstreamer-development" do
   ]
 
   zap trash: "/Library/Frameworks/GStreamer.framework"
-
-  caveats <<~EOS
-    This cask installs the GStreamer.framework development tools into /Library/Frameworks/
-
-    To install the GStreamer.framework runtime tools also, run:
-      brew install --cask gstreamer-runtime
-  EOS
 end
