@@ -7,11 +7,6 @@ cask "agenda" do
   desc "Note taking application focusing on dates"
   homepage "https://agenda.com/"
 
-  livecheck do
-    url "https://agenda.community/t/release-notes/34763/61"
-    regex(/version\s+(\d+(?:\.\d+)+)/i)
-  end
-
   depends_on macos: ">= :mojave"
 
   app "Agenda.app"
@@ -26,4 +21,11 @@ cask "agenda" do
     "~/Library/Group Containers/WRBK2Z2EG7.group.com.momenta.agenda.macos",
     "~/Library/Preferences/com.momenta.agenda.macos.plist",
   ]
+
+  caveats do
+    discontinued
+    <<~EOS
+      Newer versions are only available in Mac App Store.
+    EOS
+  end
 end
