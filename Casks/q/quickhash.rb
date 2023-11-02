@@ -8,12 +8,14 @@ cask "quickhash" do
   homepage "https://www.quickhash-gui.org/"
 
   livecheck do
-    url "https://www.quickhash-gui.org/downloads/"
-    regex(%r{/quickhash[._-](?:gui[._-])?v?(\d+(?:-\d+)+)[._-]apple[._-]osx/\?wpdmdl=(\d+)}i)
+    url "https://www.quickhash-gui.org/downloads/?tax%5Bwpdmcategory%5D=osx/"
+    regex(%r{/quickhash[._-](?:gui[._-])?v?(\d+(?:-\d+)+)[._-]apple[._-]osx/\?wpdmdl=(\d+).*?dt_update_date.+>(\d+(?:/\d+)+)</span}im)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0].tr("-", ".")},#{match[1]}" }
+      page.scan(regex).map { |match| "#{match[0].tr("-", ".")},#{match[1]},#{match[2].tr("/", ",")}" }
     end
   end
+
+  container nested: "Quickhash-GUI_#{version.csv.third}#{version.csv.fourth}#{version.csv.fifth}.dmg"
 
   app "Quickhash-GUI.app"
 end
