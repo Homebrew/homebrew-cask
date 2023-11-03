@@ -30,6 +30,7 @@ cask "autodesk-fusion360" do
             },
             delete: [
               "~/Applications/Autodesk Fusion 360.app",
+              "~/Applications/Autodesk Fusion 360 Service Utility.app",
               "~/Applications/Remove Autodesk Fusion 360.app",
             ]
 
