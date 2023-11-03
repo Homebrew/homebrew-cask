@@ -22,7 +22,9 @@ cask "autodesk-fusion360" do
                 "--process", "uninstall",
                 "--appid", "73e72ada57b7480280f7a6f4a289729f",
                 "--stream", "production",
-                "--quiet"
+                "--quiet",
+                "--silent",
+                "--purge-incomplete"
               ],
             },
             delete: [
