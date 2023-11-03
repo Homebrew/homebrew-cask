@@ -12,11 +12,11 @@ cask "autodesk-fusion360" do
     executable: "#{staged_path}/Install Autodesk Fusion 360.app/Contents/MacOS/Fusion 360 Client Downloader",
   }
 
-  uninstall quit:      [
+  uninstall quit:   [
               "com.autodesk.fusion360",
               "com.autodesk.dls.streamer.scriptapp.Autodesk-Fusion-360",
             ],
-            script:    {
+            script: {
               executable: "#{staged_path}/Install Autodesk Fusion 360.app/Contents/MacOS/streamer",
               args:       [
                 "--process", "uninstall",
@@ -25,8 +25,7 @@ cask "autodesk-fusion360" do
                 "--quiet"
               ],
             },
-            launchctl: "application.com.autodesk.ads.ADPClientService.*",
-            delete:    [
+            delete: [
               "~/Applications/Autodesk Fusion 360.app",
               "~/Applications/Remove Autodesk Fusion 360.app",
             ]
