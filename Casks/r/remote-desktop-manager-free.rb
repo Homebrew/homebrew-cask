@@ -1,16 +1,16 @@
 cask "remote-desktop-manager-free" do
-  version "2022.2.16.0"
-  sha256 "26545b52627f780fc3618f62649ff58589adfd1409d72f5b84f50be11b218879"
-
-  url "https://cdn.devolutions.net/download/Mac/Devolutions.RemoteDesktopManager.Free.Mac.#{version}.dmg",
+  version "2023.3.6.3"
+  sha256 "e16436e8c061f691ce7752d487bca7702ca85cc67d5b4399c580e7153721d59f"
+ 
+  url "https://cdn.devolutions.net/download/Mac/Devolutions.RemoteDesktopManager.Mac.#{version}.dmg",
       verified: "devolutions.net/"
   name "Remote Desktop Manager Free"
   desc "Centralizes all remote connections on a single platform"
   homepage "https://mac.remotedesktopmanager.com/"
 
   livecheck do
-    url "https://cdn.devolutions.net/download/Mac/RemoteDesktopManagerFree.xml"
-    strategy :sparkle
+    url "https://devolutions.net/products.htm"
+    regex(/RDMMacFreeWeb\.Version=(\d+(?:\.\d+)+)/i)
   end
 
   depends_on macos: ">= :sierra"
