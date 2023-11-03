@@ -3,7 +3,7 @@ cask "inkdrop" do
 
   version "5.6.0"
   sha256 arm:   "bbc789ed4c2effa425d8feeef04f3016d47ac505df35f54815c76b91b40a9f09",
-         intel: "9611778fa7318efbfe3528eb8f060b4beced89039e6096ef67e6bf0f2a296a5c"
+         intel: "5f48c4e2ba7e38d0e0efb6b5f8e4bbb133ce0bab488faee47d71b4bef153ea7a"
 
   url "https://d3ip0rje8grhnl.cloudfront.net/v#{version}/Inkdrop-#{version}-#{arch}-Mac.zip",
       verified: "d3ip0rje8grhnl.cloudfront.net/"
