@@ -1,5 +1,5 @@
 cask "cold-turkey-blocker" do
-  version "4.3"
+  version "4.4,1"
   sha256 :no_check
 
   url "https://getcoldturkey.com/files/Cold_Turkey_Mac_Installer.pkg"
@@ -8,8 +8,7 @@ cask "cold-turkey-blocker" do
   homepage "https://getcoldturkey.com/"
 
   livecheck do
-    url "https://getcoldturkey.com/download/mac/"
-    regex(/Cold[._-]Turkey[._-]Mac[._-]Installer\.pkg\?v=(\d+(?:\.\d+)+)/i)
+    strategy :extract_plist
   end
 
   pkg "Cold_Turkey_Mac_Installer.pkg"
