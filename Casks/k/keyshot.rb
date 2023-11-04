@@ -8,7 +8,7 @@ cask "keyshot" do
   homepage "https://www.keyshot.com/"
 
   livecheck do
-    url "https://www.keyshot.com/dd/"
+    url "https://www.keyshot.com/direct-downloads/"
     regex(/href=.*?keyshot[._-]mac64[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
