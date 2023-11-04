@@ -5,10 +5,10 @@ cask "onecast" do
   url "https://onecast.me/downloads/OneCast.dmg"
   name "OneCast"
   desc "Xbox remote play"
-  homepage "https://onecast.me/"
+  homepage "https://www.onecast.me/"
 
   livecheck do
-    url "https://onecast.me/download/"
+    url "https://www.onecast.me/download/"
     regex(/>v(\d+(?:\.\d+)+)</i)
   end
 
