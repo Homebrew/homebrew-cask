@@ -2,9 +2,10 @@ cask "cursorcerer" do
   version "3.5"
   sha256 :no_check
 
-  url "http://www.doomlaser.com/downloads/Cursorcerer.zip"
+  url "https://www.doomlaser.com/downloads/Cursorcerer.zip"
   name "Cursorcerer"
-  homepage "http://doomlaser.com/cursorcerer-hide-your-cursor-at-will/"
+  desc "Preference Pane for controlling cursor hiding"
+  homepage "https://doomlaser.com/cursorcerer-hide-your-cursor-at-will/"
 
   livecheck do
     url :homepage

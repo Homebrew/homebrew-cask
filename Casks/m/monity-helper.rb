@@ -2,13 +2,14 @@ cask "monity-helper" do
   version "1.2.5"
   sha256 :no_check
 
-  url "https://www.monityapp.com/download/MonityHelper.pkg"
+  url "https://monityapp.com/download/MonityHelper.pkg"
   name "Monity Helper"
-  homepage "https://www.monityapp.com/"
+  desc "Helper app for Monity to provide system stats"
+  homepage "https://monityapp.com/helper/"
 
   livecheck do
     url :homepage
-    regex(/Version:\s+(\d+(?:\.\d+)+)/i)
+    regex(/MonityHelper\.pkg.+?Version:\s+(\d+(?:\.\d+)+)/im)
   end
 
   pkg "MonityHelper.pkg"

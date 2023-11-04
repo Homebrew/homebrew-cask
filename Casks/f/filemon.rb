@@ -2,9 +2,10 @@ cask "filemon" do
   version "2.0"
   sha256 :no_check
 
-  url "http://newosxbook.com/tools/filemon.tgz"
+  url "https://newosxbook.com/tools/filemon.tgz"
   name "File Monitor"
-  homepage "http://NewOSXBook.com/tools/filemon.html"
+  desc "FSEvents client"
+  homepage "https://newosxbook.com/tools/filemon.html"
 
   livecheck do
     url :homepage
