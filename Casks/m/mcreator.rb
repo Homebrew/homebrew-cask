@@ -9,7 +9,7 @@ cask "mcreator" do
   homepage "https://mcreator.net/"
 
   livecheck do
-    url "https://mcreator.net/changelog/"
+    url "https://mcreator.net/changelog"
     regex(/>v?(\d+(?:\.\d+)+)</i)
   end
 
