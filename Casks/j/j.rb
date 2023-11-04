@@ -1,6 +1,6 @@
 cask "j" do
-  version "903"
-  sha256 "39c31038387eaff772e3d120a01b3d6901be8f7c70a23b580d91db3d15ed710d"
+  version "9.4"
+  sha256 "0653e6eef7d5ee295b1c8d06118b62ddbcbfe753263f172fb7a608832b3eda87"
 
   url "https://www.jsoftware.com/download/j#{version}/install/j#{version}_mac64.zip"
   name "J"
@@ -14,7 +14,7 @@ cask "j" do
 
   livecheck do
     url "https://code.jsoftware.com/wiki/System/Installation"
-    regex(%r{href=.*?/ReleaseNotes/J(\d+(?:\.\d+)*)/?["' >]}i)
+    regex(%r{most users should install .*?href=.*?/Installation/J(\d+(?:\.\d+)*)/?["' >]}i)
   end
 
   installer script: "j#{version}/macos-fix.command"
