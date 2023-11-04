@@ -6,7 +6,7 @@ cask "geph" do
       verified: "sos-ch-dk-2.exo.io/utopia/geph-releases/"
   name "Geph"
   desc "Modular Internet censorship circumvention system"
-  homepage "https://geph.io/en/"
+  homepage "https://geph.io/en"
 
   livecheck do
     url :homepage
