@@ -8,7 +8,7 @@ cask "houdahspot" do
   homepage "https://www.houdah.com/houdahSpot/"
 
   livecheck do
-    url "https://www.houdah.com/houdahSpot/updates/cast#{version.major}.xml"
+    url "https://www.houdah.com/houdahSpot/updates/cast#{version.major}.php"
     strategy :sparkle, &:short_version
   end
 
