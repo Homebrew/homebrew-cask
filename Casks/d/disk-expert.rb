@@ -8,7 +8,7 @@ cask "disk-expert" do
   homepage "https://nektony.com/disk-expert"
 
   livecheck do
-    url "https://nektony.com/pro-support/disk-expert/update/update.xml"
+    url "https://download.nektony.com/pro-support/disk-expert/update/update.xml"
     strategy :sparkle
   end
 
