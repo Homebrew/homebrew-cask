@@ -2,10 +2,10 @@ cask "topcat" do
   version "4.9"
   sha256 :no_check
 
-  url "http://www.starlink.ac.uk/topcat/topcat-full.dmg"
+  url "https://www.star.bristol.ac.uk/mbt/topcat/topcat-full.dmg"
   name "TOPCAT"
   desc "Interactive graphical viewer and editor for tabular data"
-  homepage "http://www.starlink.ac.uk/topcat/"
+  homepage "https://www.star.bristol.ac.uk/mbt/topcat/"
 
   livecheck do
     url :homepage
