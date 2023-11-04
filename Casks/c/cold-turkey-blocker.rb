@@ -8,6 +8,7 @@ cask "cold-turkey-blocker" do
   homepage "https://getcoldturkey.com/"
 
   livecheck do
+    url :url
     strategy :extract_plist
   end
 
@@ -23,4 +24,13 @@ cask "cold-turkey-blocker" do
               "com.getcoldturkey.blocker-edge-ext",
               "com.getcoldturkey.blocker-firefox-ext",
             ]
+
+  zap trash: [
+    "~/Library/Application Scripts/com.getcoldturkey.blocker-shared-data",
+    "~/Library/Caches/com.getcoldturkey.blocker",
+    "~/Library/Group Containers/com.getcoldturkey.blocker-shared-data",
+    "~/Library/HTTPStorages/com.getcoldturkey.blocker",
+    "~/Library/Preferences/com.getcoldturkey.blocker.plist",
+    "~/Library/WebKit/com.getcoldturkey.blocker",
+  ]
 end
