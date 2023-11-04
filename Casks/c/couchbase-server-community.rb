@@ -8,7 +8,7 @@ cask "couchbase-server-community" do
   homepage "https://www.couchbase.com/"
 
   livecheck do
-    url "https://www.couchbase.com/downloads"
+    url "https://www.couchbase.com/downloads/"
     regex(/couchbase[._-]server[._-]community[._-]v?(\d+(:?\.\d+)+)[._-]macos[._-]x86[._-]64\.dmg/i)
   end
 
