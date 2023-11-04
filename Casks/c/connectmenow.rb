@@ -8,7 +8,7 @@ cask "connectmenow" do
   homepage "https://www.tweaking4all.com/os-tips-and-tricks/macosx-tips-and-tricks/connectmenow-v#{version.major}/"
 
   livecheck do
-    url "https://www.tweaking4all.com/os-tips-and-tricks/macosx-tips-and-tricks/connectmenow-v#{version.major}"
+    url "https://www.tweaking4all.com/os-tips-and-tricks/macosx-tips-and-tricks/connectmenow-v#{version.major}/"
     regex(%r{href=.*?/ConnectMeNow[._-]v?(\d+(?:\.\d+)+)[._-]macOS[._-]64bit\.dmg}i)
   end
 
