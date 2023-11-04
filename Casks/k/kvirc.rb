@@ -5,10 +5,10 @@ cask "kvirc" do
   url "ftp://ftp.kvirc.net/pub/kvirc/#{version}/binary/macosx/KVIrc-#{version}.dmg"
   name "KVIrc"
   desc "IRC Client"
-  homepage "http://kvirc.net/"
+  homepage "https://www.kvirc.net/"
 
   livecheck do
-    url "http://kvirc.net/?id=releases&platform=macosx"
+    url "https://www.kvirc.net/?id=releases&platform=macosx"
     regex(/href=.*?version=(\d+(?:\.\d+)+)/i)
   end
 
