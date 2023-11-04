@@ -6,7 +6,7 @@ cask "xamarin-profiler" do
       verified: "dl.xamarin.com/profiler/"
   name "Xamarin Profiler"
   desc "Mono log profiler graphical interface"
-  homepage "https://docs.microsoft.com/en-us/xamarin/tools/profiler/?tabs=macos"
+  homepage "https://learn.microsoft.com/en-us/xamarin/tools/profiler/?tabs=macos"
 
   livecheck do
     url :homepage
