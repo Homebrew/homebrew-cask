@@ -8,7 +8,7 @@ cask "jump" do
   homepage "https://jumpdesktop.com/#jdmac"
 
   livecheck do
-    url "https://jumpdesktop.com/downloads/viewer/jdmac-web-appcast.xml"
+    url "https://mirror.jumpdesktop.com/downloads/viewer/jdmac-web-appcast.xml"
     strategy :sparkle, &:short_version
   end
 
