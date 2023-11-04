@@ -2,13 +2,13 @@ cask "vsd-viewer" do
   version "6.16.1"
   sha256 :no_check
 
-  url "https://nektony.com/download/vsdviewer.dmg"
+  url "https://download.nektony.com/download/vsdviewer.dmg"
   name "Nektony VSD Viewer"
   desc "Preview .VSD, .VDX, .VSDX file formats of Visio drawings"
   homepage "https://nektony.com/free-visio-viewer-mac"
 
   livecheck do
-    url "https://nektony.com/promo/vsd-viewer/update/update.xml"
+    url "https://download.nektony.com/promo/vsd-viewer/update/update.xml"
     strategy :sparkle, &:short_version
   end
 
