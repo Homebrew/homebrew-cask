@@ -8,7 +8,7 @@ cask "zed" do
   homepage "https://zed.dev/"
 
   livecheck do
-    url "https://zed.dev/releases"
+    url "https://zed.dev/releases/stable"
     regex(%r{href=.*?/stable/(\d+(?:\.\d+)+)/Zed.dmg}i)
   end
 
