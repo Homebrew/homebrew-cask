@@ -7,7 +7,7 @@ cask "j" do
   desc "Programming language for mathematical, statistical and logical analysis of data"
   homepage "https://www.jsoftware.com/"
 
-  apps = %w[jbrk jcon jhs jqt]
+  apps = %w[jbrk jcon jqt]
   apps.each do |a|
     app "j#{version}/#{a}.app"
   end
