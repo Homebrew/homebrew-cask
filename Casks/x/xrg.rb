@@ -2,10 +2,11 @@ cask "xrg" do
   version "3.2.1"
   sha256 "26892490b0b67c2baf6286e6360a7a88236fe16e4d94708ba8722037431a1de4"
 
-  url "https://download.gauchosoft.com/xrg/XRG-release-#{version}.zip"
+  url "https://download.gauchosoft.com/xrg/XRG-release-#{version}.zip",
+      verified: "download.gauchosoft.com/xrg/"
   name "XRG"
   desc "System monitor"
-  homepage "https://gauchosoft.com/Products/XRG/"
+  homepage "https://gaucho.software/Products/XRG/"
 
   livecheck do
     url :homepage
