@@ -12,7 +12,7 @@ cask "openttd" do
     sha256 "085cdb35867dca1dcfb8a1748417e7ba6431551ebc33df290a4e48b244d8d376"
 
     livecheck do
-      url "https://www.openttd.org/downloads/openttd-releases/latest.html"
+      url "https://www.openttd.org/downloads/openttd-releases/latest"
       regex(%r{href=.*?/openttd-(\d+(?:\.\d+)*)-macos-universal\.zip}i)
     end
   end
