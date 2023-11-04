@@ -4,7 +4,7 @@ cask "tunnelbear" do
     sha256 "60c332511b91b794405249132ceb0c88e999b070c087b5f70f1cf09a84e5e5e9"
   end
   on_big_sur :or_newer do
-    version "5.1.0"
+    version "5.1.1"
     sha256 "80b7ddebacb08de0c29e4beffae70ba1c536056f6ec6d668e7845ddd8b3105e2"
   end
 
@@ -14,9 +14,13 @@ cask "tunnelbear" do
   desc "VPN client for secure internet access and private browsing"
   homepage "https://www.tunnelbear.com/"
 
+  # Older versions may have a more recent `pubDate` than newer versions, so we
+  # have to check all the items in the appcast.
   livecheck do
     url "https://tunnelbear.s3.amazonaws.com/downloads/mac/appcast.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle do |items|
+      items.map(&:short_version)
+    end
   end
 
   auto_updates true
