@@ -8,7 +8,7 @@ cask "jdk-mission-control" do
   url "https://download.java.net/java/GA/jmc#{version.major}/#{version.csv.second}/binaries/jmc-#{version.csv.first}_macos-#{arch}.tar.gz"
   name "JDK Mission Control"
   desc "Tools to manage, monitor, profile and troubleshoot Java applications"
-  homepage "https://jdk.java.net/jmc/8"
+  homepage "https://jdk.java.net/jmc/#{version.major}/"
 
   livecheck do
     url :homepage
