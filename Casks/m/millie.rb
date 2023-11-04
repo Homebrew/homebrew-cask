@@ -8,7 +8,7 @@ cask "millie" do
   homepage "https://www.millie.co.kr/"
 
   livecheck do
-    url "https://apis.millie.co.kr/v1/download/installer/mac/latest-mac.yml"
+    url "https://install.millie.co.kr/mac/latest-mac.yml"
     strategy :electron_builder
   end
 
