@@ -62,7 +62,7 @@ cask "r" do
     url "https://cloud.r-project.org/bin/macosx/big-sur-#{arch}/base/R-#{version}-#{arch}.pkg"
 
     livecheck do
-      url "https://cloud.r-project.org/bin/macosx"
+      url "https://cloud.r-project.org/bin/macosx/"
       regex(/href=.*?R[._-]v?(\d+(?:\.\d+)*)([._-]#{arch})?\.pkg/i)
     end
 
