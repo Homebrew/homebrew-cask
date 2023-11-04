@@ -6,10 +6,10 @@ cask "retro-virtual-machine" do
       verified: "static.retrovm.org/release/"
   name "Retro Virtual Machine"
   desc "ZX Spectrum and Amstrad CPC emulator"
-  homepage "https://www.retrovirtualmachine.org/en/"
+  homepage "https://www.retrovirtualmachine.org/"
 
   livecheck do
-    url "https://www.retrovirtualmachine.org/download"
+    url "https://www.retrovirtualmachine.org/download/"
     regex(/RetroVirtualMachine[._-](\d+(?:\.\d+)+)\.dmg/i)
   end
 
