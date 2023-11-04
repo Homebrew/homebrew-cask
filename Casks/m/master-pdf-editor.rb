@@ -8,7 +8,7 @@ cask "master-pdf-editor" do
   homepage "https://code-industry.net/masterpdfeditor/"
 
   livecheck do
-    url "https://code-industry.net/get-masterpdfeditor"
+    url "https://code-industry.net/get-masterpdfeditor/"
     regex(%r{>Version\s(\d+(?:\.\d+)+).*?macOS.*?</h}i)
   end
 
