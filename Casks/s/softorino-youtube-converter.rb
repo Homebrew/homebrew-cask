@@ -8,7 +8,7 @@ cask "softorino-youtube-converter" do
   homepage "https://softorino.com/youtube-converter/"
 
   livecheck do
-    url "https://api.softorino.com/live/app-manager/v3/syc2/mac/updates"
+    url "https://ushining.softorino.com/appcast.php?abbr=syc2m"
     strategy :sparkle
   end
 
