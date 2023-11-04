@@ -54,7 +54,7 @@ cask "choosy" do
     sha256 "8d6a44b78ed256d6f502872fd1f62cf1f7fea877906bedddc5bbf26f93b6ea57"
 
     livecheck do
-      url "https://www.choosyosx.com/sparkle/feed"
+      url "https://choosy.app/sparkle/feed"
       strategy :sparkle
     end
 
@@ -63,10 +63,10 @@ cask "choosy" do
     pkg "Choosy.pkg"
   end
 
-  url "https://downloads.choosyosx.com/choosy_#{version}.zip"
+  url "https://downloads.choosy.app/choosy_#{version}.zip"
   name "Choosy"
   desc "Open links in any browser"
-  homepage "https://www.choosyosx.com/"
+  homepage "https://choosy.app/"
 
   uninstall pkgutil: "com.choosyosx.Choosy",
             quit:    "com.choosyosx.Choosy"
