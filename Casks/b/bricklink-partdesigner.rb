@@ -6,7 +6,7 @@ cask "bricklink-partdesigner" do
       verified: "dzncyaxjqx7p3.cloudfront.net/PartDesigner/"
   name "PartDesigner"
   desc "Design your own LEGO parts"
-  homepage "https://bricklink.com/v3/studio/partdesigner.page"
+  homepage "https://www.bricklink.com/v3/studio/partdesigner.page"
 
   livecheck do
     url :homepage
