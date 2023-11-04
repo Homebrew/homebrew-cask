@@ -9,7 +9,7 @@ cask "minecraft-server" do
   homepage "https://www.minecraft.net/en-us/"
 
   livecheck do
-    url "https://www.minecraft.net/en-us/download/server/"
+    url "https://www.minecraft.net/en-us/download/server"
     strategy :page_match do |page|
       page.scan(%r{href=.*?/objects/(\h+)/server\.jar[^>]*>minecraft[_-]server[._-]v?(\d+(?:\.\d+)*)\.jar}i)
           .map { |match| "#{match[1]},#{match[0]}" }
