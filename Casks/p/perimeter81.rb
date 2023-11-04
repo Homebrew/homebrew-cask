@@ -9,7 +9,7 @@ cask "perimeter81" do
   homepage "https://perimeter81.com/"
 
   livecheck do
-    url "https://support.perimeter81.com/v1/docs/en/downloading-the-agent/"
+    url "https://support.perimeter81.com/v1/docs/en/downloading-the-agent"
     regex(/href=.*?Perimeter81[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
