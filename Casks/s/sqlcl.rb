@@ -8,7 +8,7 @@ cask "sqlcl" do
   homepage "https://www.oracle.com/sqlcl"
 
   livecheck do
-    url "https://www.oracle.com/tools/downloads/sqlcl-downloads.html"
+    url "https://www.oracle.com/database/sqldeveloper/technologies/sqlcl/download/"
     regex(/p>Version.*?(\d+(?:\.\d+)+)/i)
   end
 
