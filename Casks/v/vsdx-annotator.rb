@@ -8,7 +8,7 @@ cask "vsdx-annotator" do
   homepage "https://nektony.com/products/vsdx-annotator-mac"
 
   livecheck do
-    url "https://nektony.com/promo/vsdx-annotator/update/update.xml"
+    url "https://download.nektony.com/promo/vsdx-annotator/update/update.xml"
     strategy :sparkle, &:short_version
   end
 
