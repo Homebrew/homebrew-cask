@@ -8,7 +8,7 @@ cask "supernotes" do
   homepage "https://supernotes.app/"
 
   livecheck do
-    url "https://api.supernotes.app/v1/"
+    url "https://api.supernotes.app/v1"
     strategy :json do |json|
       json["version"]
     end
