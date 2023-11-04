@@ -10,6 +10,7 @@ cask "autodesk-fusion360" do
 
   installer script: {
     executable: "#{staged_path}/Install Autodesk Fusion 360.app/Contents/MacOS/Fusion 360 Client Downloader",
+    args:       ["--quiet"],
   }
 
   uninstall quit:   [
@@ -20,13 +21,14 @@ cask "autodesk-fusion360" do
               executable: "#{staged_path}/Install Autodesk Fusion 360.app/Contents/MacOS/streamer",
               args:       [
                 "--process", "uninstall",
-                "--appid", "73e72ada57b7480280f7a6f4a289729f",
-                "--stream", "production",
-                "--quiet"
+                "--quiet",
+                "--silent",
+                "--purge-incomplete"
               ],
             },
             delete: [
               "~/Applications/Autodesk Fusion 360.app",
+              "~/Applications/Autodesk Fusion 360 Service Utility.app",
               "~/Applications/Remove Autodesk Fusion 360.app",
             ]
 
