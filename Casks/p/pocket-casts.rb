@@ -8,7 +8,7 @@ cask "pocket-casts" do
   homepage "https://play.pocketcasts.com/"
 
   livecheck do
-    url "https://static2.pocketcasts.com/mac/appcast.xml"
+    url "https://static.pocketcasts.com/mac/appcast.xml"
     strategy :sparkle, &:short_version
   end
 
