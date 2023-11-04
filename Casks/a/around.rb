@@ -1,7 +1,7 @@
 cask "around" do
   arch arm: "-arm64"
 
-  version "1.0.3"
+  version "1.0.5"
   sha256 :no_check
 
   url "https://downloads.around.co/Around#{arch}.dmg"
