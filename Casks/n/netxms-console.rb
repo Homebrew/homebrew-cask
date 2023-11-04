@@ -11,7 +11,7 @@ cask "netxms-console" do
   homepage "https://netxms.org/"
 
   livecheck do
-    url "https://netxms.org/download"
+    url "https://netxms.com/downloads/"
     regex(/href=.*?nxmc[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
