@@ -4,10 +4,11 @@ cask "sourcenote" do
 
   url "https://www.sourcenoteapp.com/releases/SourceNote_#{version}.dmg"
   name "SourceNote"
+  desc "Text snippet app"
   homepage "https://www.sourcenoteapp.com/"
 
   livecheck do
-    url "https://sourcenoteapp.com/releases/appcast.xml"
+    url "https://www.sourcenoteapp.com/releases/appcast.xml"
     strategy :sparkle
   end
 
