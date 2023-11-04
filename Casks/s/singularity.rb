@@ -9,7 +9,7 @@ cask "singularity" do
   homepage "https://www.singularityviewer.org/"
 
   livecheck do
-    url "https://www.singularityviewer.org/downloads"
+    url "https://www.singularityviewer.org/downloads/"
     strategy :page_match do |page|
       v = page[/Singularity[._-]?Alpha[._-]?(\d+(?:_\d+)*)[._-]?x86_64\.dmg/i, 1]
       v.tr("_", ".")
