@@ -8,7 +8,7 @@ cask "pingplotter" do
   homepage "https://www.pingplotter.com/"
 
   livecheck do
-    url "https://www.pingplotter.com/download/release-notes"
+    url "https://www.pingplotter.com/download/release-notes/"
     regex(/(\d+(?:\.\d+)+).*?h2/i)
   end
 
