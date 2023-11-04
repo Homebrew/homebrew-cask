@@ -6,10 +6,10 @@ cask "mds" do
       verified: "twocanoes-software-updates.s3.amazonaws.com/"
   name "MDS"
   desc "Deploy Intel and Apple Silicon Macs in Seconds"
-  homepage "https://twocanoes.com/products/mac/mac-deploy-stick/"
+  homepage "https://twocanoes.com/products/mac/mds/"
 
   livecheck do
-    url "https://twocanoes.com/products/mac/mac-deploy-stick/history/"
+    url "https://twocanoes.com/products/mac/mds/history/"
     regex(%r{/MDS_Build-(\d+)_Version-(\d+(?:[._-]\d+)*)\.dmg}i)
     strategy :page_match do |page, regex|
       match = page.match(regex)

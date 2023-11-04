@@ -8,7 +8,7 @@ cask "youtype" do
   homepage "https://github.com/freefelt/YouType"
 
   livecheck do
-    url "https://github.com/freefelt/YouType/raw/main/appcast.xml"
+    url "https://raw.githubusercontent.com/freefelt/YouType/main/appcast.xml"
     strategy :sparkle
   end
 

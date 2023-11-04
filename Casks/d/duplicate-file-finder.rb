@@ -8,7 +8,7 @@ cask "duplicate-file-finder" do
   homepage "https://nektony.com/duplicate-finder-free"
 
   livecheck do
-    url "https://nektony.com/pro-support/duplicates-finder-site/update/update.xml"
+    url "https://download.nektony.com/pro-support/duplicates-finder-site/update/update.xml"
     strategy :sparkle
   end
 

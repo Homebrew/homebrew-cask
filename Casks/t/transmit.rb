@@ -8,7 +8,7 @@ cask "transmit" do
   homepage "https://panic.com/transmit/"
 
   livecheck do
-    url "https://library.panic.com/transmit/transmit5/release-integrity/"
+    url "https://help.panic.com/transmit/transmit#{version.major}/release-integrity/"
     regex(/href=.*?Transmit[\s._-]?v?(\d+(?:\.\d+)+)\.zip/i)
   end
 

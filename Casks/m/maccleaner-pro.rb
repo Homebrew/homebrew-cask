@@ -8,7 +8,7 @@ cask "maccleaner-pro" do
   homepage "https://nektony.com/mac-cleaner-pro"
 
   livecheck do
-    url "https://nektony.com/pro-support/mac-cleaner-pro/update/update.xml"
+    url "https://download.nektony.com/pro-support/mac-cleaner-pro/update/update.xml"
     strategy :sparkle, &:short_version
   end
 

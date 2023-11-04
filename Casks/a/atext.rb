@@ -8,7 +8,7 @@ cask "atext" do
   homepage "https://www.trankynam.com/atext/"
 
   livecheck do
-    url "https://www.trankynam.com/atext/changelog.mac.html"
+    url "https://www.trankynam.com/atext/changelog.mac"
     regex(/aText\s*v?(\d+(?:\.\d+)+)["< ]/i)
   end
 

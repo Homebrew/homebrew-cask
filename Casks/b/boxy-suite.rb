@@ -9,7 +9,7 @@ cask "boxy-suite" do
   homepage "https://www.boxysuite.com/"
 
   livecheck do
-    url "https://www.boxysuite.com/updates"
+    url "https://www.boxysuite.com/updates/"
     regex(/Version\s+(\d+(?:\.\d+)+)/i)
   end
 

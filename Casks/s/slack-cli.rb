@@ -9,7 +9,7 @@ cask "slack-cli" do
   homepage "https://api.slack.com/future/tools/cli"
 
   livecheck do
-    url "https://api.slack.com/future/changelog"
+    url "https://api.slack.com/automation/changelog"
     regex(%r{h2.*?v?(\d+(?:\.\d+)+).*?/h2}i)
   end
 

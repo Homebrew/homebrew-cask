@@ -18,7 +18,7 @@ cask "couchbase-server-enterprise" do
     url "https://packages.couchbase.com/releases/#{version}/couchbase-server-enterprise_#{version}-macos_x86_64.dmg"
 
     livecheck do
-      url "https://www.couchbase.com/downloads"
+      url "https://www.couchbase.com/downloads/"
       regex(/couchbase[._-]server[._-]enterprise[._-]v?(\d+(:?\.\d+)+)[._-]macos[._-]x86[._-]64\.dmg/i)
     end
 

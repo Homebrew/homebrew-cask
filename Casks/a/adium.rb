@@ -9,7 +9,7 @@ cask "adium" do
   homepage "https://www.adium.im/"
 
   livecheck do
-    url "https://www.adium.im/sparkle/appcast-release.xml"
+    url "https://sparkle.adium.im/appcast-release.xml"
     strategy :sparkle
   end
 

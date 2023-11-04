@@ -8,7 +8,7 @@ cask "tuxera-ntfs" do
   homepage "https://ntfsformac.tuxera.com/"
 
   livecheck do
-    url "https://ntfsformac.tuxera.com/support"
+    url "https://ntfsformac.tuxera.com/support/"
     regex(/Release\s*?v?(\d+(?:\.\d+)*)/i)
   end
 

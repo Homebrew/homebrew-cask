@@ -9,7 +9,7 @@ cask "keka" do
   homepage "https://www.keka.io/"
 
   livecheck do
-    url "https://u.keka.io"
+    url "https://u.keka.io/keka.xml"
     strategy :sparkle, &:short_version
   end
 

@@ -11,7 +11,7 @@ cask "deepgit" do
   homepage "https://www.syntevo.com/deepgit/"
 
   livecheck do
-    url "https://syntevo.com/deepgit/download"
+    url "https://www.syntevo.com/deepgit/download/"
     regex(%r{href=.*?/deepgit-#{arch}-(\d+(?:_\d+)+)\.dmg}i)
     strategy :page_match do |page, regex|
       page.scan(regex)&.map { |match| match[0].tr("_", ".") }

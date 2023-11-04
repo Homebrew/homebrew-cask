@@ -9,7 +9,7 @@ cask "nodebox" do
   homepage "https://www.nodebox.net/node/"
 
   livecheck do
-    url "https://www.nodebox.net/download"
+    url "https://www.nodebox.net/download/"
     regex(/href=.*?NodeBox[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 

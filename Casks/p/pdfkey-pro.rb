@@ -4,7 +4,8 @@ cask "pdfkey-pro" do
 
   url "https://pdfkey.com/PDFKeyPro.dmg"
   name "PDFKey Pro"
-  homepage "https://pdfkey.com/"
+  desc "Utility to unlock password-protected PDFs"
+  homepage "https://pdfkey.com/en/"
 
   livecheck do
     url :homepage

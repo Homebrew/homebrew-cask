@@ -8,7 +8,7 @@ cask "waltr" do
   homepage "https://softorino.com/w#{version.major}/"
 
   livecheck do
-    url "https://api.softorino.com/v1/app-manager/waltr#{version.major}/mac/updates"
+    url "https://shining.softorino.com/appcast.php?abbr=w#{version.major}m"
     strategy :sparkle
   end
 

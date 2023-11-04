@@ -8,7 +8,7 @@ cask "iconscout" do
   homepage "https://iconscout.com/"
 
   livecheck do
-    url "https://iconscout.com/download"
+    url "https://iconscout.com/desktop-app/for-mac"
     regex(/Iconscout[._-]v?(\d+(?:\.\d+)+)/i)
   end
 

@@ -15,7 +15,7 @@ cask "gcc-arm-embedded" do
   homepage "https://developer.arm.com/Tools%20and%20Software/GNU%20Toolchain"
 
   livecheck do
-    url "https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/downloads"
+    url "https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads"
     regex(/href=.*?arm-gnu-toolchain-(\d+\.\d+\.\w+)-darwin-(?:\w+)-arm-none-eabi.pkg/i)
   end
 

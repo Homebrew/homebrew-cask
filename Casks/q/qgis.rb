@@ -8,7 +8,7 @@ cask "qgis" do
   homepage "https://www.qgis.org/"
 
   livecheck do
-    url "https://qgis.org/downloads/macos/qgis-macos-pr.sha256sum"
+    url "https://download.qgis.org/downloads/macos/qgis-macos-pr.sha256sum"
     strategy :page_match do |page|
       match = page.match(/qgis_pr_final[._-]v?(\d+(?:_\d+)+)[._-](\d+_\d+)\.dmg/i)
       next if match.blank?

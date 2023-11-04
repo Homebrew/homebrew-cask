@@ -5,7 +5,7 @@ cask "samsung-portable-ssd-t7" do
   url "https://semiconductor.samsung.com/resources/software-resources/SamsungPortableSSD_Setup_Mac_#{version.csv.second}.zip"
   name "Samsung Portable SSD Software for T7"
   desc "Software for Samsung external storage drives (T7 series)"
-  homepage "https://www.samsung.com/semiconductor/minisite/ssd/download/portable/"
+  homepage "https://semiconductor.samsung.com/consumer-storage/support/tools/"
 
   livecheck do
     url :homepage

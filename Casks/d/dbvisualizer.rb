@@ -11,7 +11,7 @@ cask "dbvisualizer" do
   homepage "https://www.dbvis.com/"
 
   livecheck do
-    url "https://www.dbvis.com/download"
+    url "https://www.dbvis.com/download/"
     regex(/href=.*?dbvis[._-](\d+(?:\.\d+)+)/i)
   end
 

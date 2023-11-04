@@ -8,7 +8,7 @@ cask "keyman" do
   homepage "https://keyman.com/"
 
   livecheck do
-    url "https://downloads.keyman.com/mac/stable"
+    url "https://downloads.keyman.com/mac/stable/"
     regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
   end
 

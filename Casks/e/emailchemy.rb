@@ -9,7 +9,7 @@ cask "emailchemy" do
   homepage "https://weirdkid.com/emailchemy/"
 
   livecheck do
-    url "https://weirdkid.com/emailchemyversionhistory"
+    url "https://weirdkid.com/emailchemyversionhistory/"
     regex(/version\s*(\d+(?:\.\d+)+)/i)
   end
 

@@ -6,7 +6,7 @@ cask "elasticwolf" do
       verified: "s3-us-gov-west-1.amazonaws.com/elasticwolf/"
   name "AWS ElasticWolf Client Console"
   desc "Manage Amazon Web Services (AWS) cloud resources"
-  homepage "https://aws.amazon.com/tools/aws-elasticwolf-client-console/"
+  homepage "https://aws.amazon.com/developer/tools/AWS-ElasticWolf-Client-Console/"
 
   livecheck do
     url :homepage

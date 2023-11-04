@@ -6,10 +6,10 @@ cask "rstudio" do
       verified: "download1.rstudio.org/electron/macos/"
   name "RStudio"
   desc "Data science software focusing on R and Python"
-  homepage "https://www.rstudio.com/"
+  homepage "https://posit.co/products/open-source/rstudio/"
 
   livecheck do
-    url "https://www.rstudio.com/products/rstudio/download/"
+    url "https://posit.co/download/rstudio-desktop/"
     strategy :page_match do |page|
       match = page.match(/RStudio-(\d+(?:\.\d+)+)-(\d+)\.dmg/i)
       next if match.blank?

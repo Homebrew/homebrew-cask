@@ -8,7 +8,7 @@ cask "mp4tools" do
   homepage "https://www.emmgunn.com/mp4tools-home/"
 
   livecheck do
-    url "https://www.emmgunn.com/mp4tools-home/mp4tools-downloads/"
+    url "https://emmgunn.com/mp4tools-home/mp4tools-downloads/"
     regex(%r{href=.*?/mp4tools(\d+(?:\.\d+)*)\.zip}i)
   end
 

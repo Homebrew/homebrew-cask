@@ -9,7 +9,7 @@ cask "bluos-controller" do
   homepage "https://www.bluesound.com/"
 
   livecheck do
-    url "https://www.bluesound.com/downloads"
+    url "https://www.bluesound.com/downloads/"
     regex(%r{uploads/(\d+)/(\d+)/BluOS[._-]Controller[._-]v?(\d+(?:\.\d+)+)[._-]MacOS\.zip}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[2]},#{match[0]},#{match[1]}" }

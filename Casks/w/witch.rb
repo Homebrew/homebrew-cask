@@ -8,7 +8,7 @@ cask "witch" do
   homepage "https://manytricks.com/witch/"
 
   livecheck do
-    url "https://manytricks.com/witch/appcast.xml"
+    url "https://manytricks.com/witch/appcast/"
     strategy :sparkle, &:short_version
   end
 

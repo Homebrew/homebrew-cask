@@ -10,7 +10,7 @@ cask "neo4j" do
   homepage "https://neo4j.com/download/"
 
   livecheck do
-    url "https://neo4j.com/download-center/#desktop"
+    url "https://neo4j.com/deployment-center/"
     regex(%r{href=.*?/neo4j-desktop/.*?flavour=osx.*?release=(\d+(?:\.\d+)+)}i)
   end
 

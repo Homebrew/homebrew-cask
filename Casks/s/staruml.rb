@@ -11,7 +11,7 @@ cask "staruml" do
   homepage "https://staruml.io/"
 
   livecheck do
-    url "https://staruml.io/download"
+    url "https://staruml.io/download/"
     regex(%r{href=.*?/StarUML[._-]v?(\d+(?:\.\d+)*)#{arch}\.dmg}i)
   end
 
