@@ -9,7 +9,7 @@ cask "springtoolsuite" do
       verified: "download.springsource.com/release/"
   name "Spring Tool Suite"
   desc "Next generation tooling for Spring Boot"
-  homepage "https://spring.io/tools"
+  homepage "https://spring.io/tools/"
 
   livecheck do
     url :homepage
