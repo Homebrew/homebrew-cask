@@ -6,7 +6,7 @@ cask "the-battle-for-wesnoth" do
       verified: "sourceforge.net/wesnoth/"
   name "The Battle for Wesnoth"
   desc "Fantasy-themed turn-based strategy game"
-  homepage "https://wesnoth.org/"
+  homepage "https://www.wesnoth.org/"
 
   livecheck do
     url :homepage
