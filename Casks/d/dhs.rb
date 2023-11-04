@@ -1,12 +1,17 @@
 cask "dhs" do
-  version "1.4.1"
-  sha256 "6d0ce00e0e111059e157bae26d4a913d7cb7c42cee6493b638c2c5019fe987fc"
+  version "1.5.1"
+  sha256 "2740a45344a5e61024abd08a37ea08bc79c349c013b651214f202ad401926f69"
 
-  url "https://bitbucket.org/objective-see/deploy/downloads/DHS_#{version}.zip",
-      verified: "bitbucket.org/objective-see/"
+  url "https://github.com/objective-see/DylibHijackScanner/releases/download/v1.5.1/DHS_#{version.dots_to_underscores}.zip",
+      verified: "github.com/objective-see/"
   name "Dylib Hijack Scanner"
   desc "Scans for dylib hijacking"
   homepage "https://objective-see.com/products/dhs.html"
+
+  livecheck do
+    url "https://github.com/objective-see/DylibHijackScanner"
+    strategy :github_latest
+  end
 
   app "DHS.app"
 
