@@ -10,9 +10,7 @@ cask "autodesk-fusion360" do
 
   installer script: {
     executable: "#{staged_path}/Install Autodesk Fusion 360.app/Contents/MacOS/Fusion 360 Client Downloader",
-    args:       [
-      "--quiet",
-    ],
+    args:       ["--quiet"],
   }
 
   uninstall quit:   [
