@@ -8,7 +8,7 @@ cask "cheatsheet" do
   homepage "https://www.mediaatelier.com/CheatSheet/"
 
   livecheck do
-    url "https://mediaatelier.com/CheatSheet/feed.php"
+    url "https://www.mediaatelier.com/CheatSheet/feed.php"
     strategy :sparkle
   end
 
