@@ -2,13 +2,14 @@ cask "gutenprint" do
   version "5.3.3"
   sha256 "6dd810482845604a1e17fc3aef48a03d178798c14fe6f106a443f5af14022519"
 
-  url "https://downloads.sourceforge.net/gimp-print/gutenprint-#{version.major_minor}/#{version}/gutenprint-#{version}.dmg"
+  url "https://downloads.sourceforge.net/gimp-print/gutenprint-#{version.major_minor}/#{version}/gutenprint-#{version}.dmg",
+      verified: "downloads.sourceforge.net/gimp-print/"
   name "Gutenprint"
   desc "Drivers for various printers for use with CUPS and GIMP"
-  homepage "https://gimp-print.sourceforge.net/"
+  homepage "https://gimp-print.sourceforge.io/"
 
   livecheck do
-    url "https://gimp-print.sourceforge.net/MacOSX.php"
+    url "https://gimp-print.sourceforge.io/MacOSX.php"
     regex(/gutenprint[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
     strategy :page_match
   end
