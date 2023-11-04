@@ -8,7 +8,7 @@ cask "lunacy" do
   homepage "https://icons8.com/lunacy"
 
   livecheck do
-    url "https://docs.icons8.com/release-notes/"
+    url "https://lunacy.docs.icons8.com/release-notes/"
     regex(/Lunacy[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
