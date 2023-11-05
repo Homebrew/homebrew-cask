@@ -8,8 +8,7 @@ cask "skitch" do
   homepage "https://evernote.com/products/skitch"
 
   livecheck do
-    url "https://evernote.s3.amazonaws.com/skitch/mac/release/skitch-appcast.xml"
-    strategy :sparkle, &:short_version
+    skip "No version information available"
   end
 
   auto_updates true
