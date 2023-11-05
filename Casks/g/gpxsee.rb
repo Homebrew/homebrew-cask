@@ -13,10 +13,16 @@ cask "gpxsee" do
     regex(%r{url=.*?/GPXSee[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "GPXSee.app"
 
   zap trash: [
     "~/Library/Caches/GPXSee",
     "~/Library/Preferences/com.gpxsee.GPXSee.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
