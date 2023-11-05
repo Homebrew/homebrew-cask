@@ -26,7 +26,8 @@ cask "j" do
   ["jcon", "jconsole"].each do |b|
     binary "j#{version}/bin/jconsole", target: b
   end
-  ["jbrk", "jhs", "jqt"].each do |b|
+  commands = ["jbrk", "jhs", "jqt"]
+  commands.each do |b|
     binary "j#{version}/bin/#{b}.command", target: b
   end
 
