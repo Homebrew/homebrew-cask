@@ -5,6 +5,8 @@ cask "tunnelbear" do
 
     url "https://s3.amazonaws.com/tunnelbear/downloads/mac/TunnelBear-#{version}.zip",
         verified: "s3.amazonaws.com/tunnelbear/downloads/mac/"
+
+    depends_on macos: ">= :sierra"
   end
   on_big_sur :or_newer do
     version "5.1.1"
@@ -12,6 +14,8 @@ cask "tunnelbear" do
 
     url "https://s3.amazonaws.com/tunnelbear/downloads/mac/TunnelBear.zip",
         verified: "s3.amazonaws.com/tunnelbear/downloads/mac/"
+
+    depends_on macos: ">= :big_sur"
   end
 
   name "TunnelBear"
@@ -28,7 +32,6 @@ cask "tunnelbear" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
 
   app "TunnelBear.app"
 
