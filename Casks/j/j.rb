@@ -23,12 +23,10 @@ cask "j" do
     args:       ["-js", "load 'pacman'", "'install' jpkg '*'", "exit 0"],
   }
 
-  # target names according to readme.txt
   ["jcon", "jconsole"].each do |b|
     binary "j#{version}/bin/jconsole", target: b
   end
-  commands = ["jbrk", "jhs", "jqt"]
-  commands.each do |b|
+  ["jbrk", "jhs", "jqt"].each do |b|
     binary "j#{version}/bin/#{b}.command", target: b
   end
 
