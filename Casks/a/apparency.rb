@@ -19,7 +19,17 @@ cask "apparency" do
       skip "Legacy version"
     end
   end
-  on_big_sur :or_newer do
+  on_big_sur do
+    version "1.6.1"
+    sha256 "cadd8894ec15b664fd60a141f82136cbe139af0b13000851497d880235abe8b2"
+
+    url "https://www.mothersruin.com/software/downloads/Apparency-#{version}.dmg"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_monterey :or_newer do
     version "1.7,316"
     sha256 :no_check
 
