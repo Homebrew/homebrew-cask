@@ -14,7 +14,7 @@ cask "eudic" do
     url "https://www.eudic.net/update/eudic_mac.xml"
     strategy :sparkle
   end
-  
+
   depends_on macos: ">= :high_sierra"
 
   app "Eudic.app"
