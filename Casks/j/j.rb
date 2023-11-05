@@ -14,7 +14,7 @@ cask "j" do
 
   livecheck do
     url "https://code.jsoftware.com/wiki/System/Installation"
-    regex(%r{most users should install .*?href=.*?/Installation/J(\d+(?:\.\d+)*)/?["' >]}i)
+    regex(/Jv?(\d+(?:\.\d+)+)\srelease/i)
   end
 
   installer script: "j#{version}/macos-fix.command"
