@@ -12,8 +12,9 @@ cask "alex313031-thorium" do
   homepage "https://thorium.rocks/"
 
   livecheck do
-    strategy :git
-    regex(/^(M\d+(?:\.\d+)+)/i)
+    url :url
+    regex(/^(M?\d+(?:\.\d+)+)$/i)
+    strategy :github_latest
   end
 
   conflicts_with cask: "thorium"
