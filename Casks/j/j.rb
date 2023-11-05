@@ -1,20 +1,20 @@
 cask "j" do
-  version "903"
-  sha256 "39c31038387eaff772e3d120a01b3d6901be8f7c70a23b580d91db3d15ed710d"
+  version "9.4"
+  sha256 "0653e6eef7d5ee295b1c8d06118b62ddbcbfe753263f172fb7a608832b3eda87"
 
   url "https://www.jsoftware.com/download/j#{version}/install/j#{version}_mac64.zip"
   name "J"
   desc "Programming language for mathematical, statistical and logical analysis of data"
   homepage "https://www.jsoftware.com/"
 
-  apps = %w[jbrk jcon jhs jqt]
+  apps = %w[jbrk jcon jqt]
   apps.each do |a|
     app "j#{version}/#{a}.app"
   end
 
   livecheck do
     url "https://code.jsoftware.com/wiki/System/Installation"
-    regex(%r{href=.*?/ReleaseNotes/J(\d+(?:\.\d+)*)/?["' >]}i)
+    regex(/Jv?(\d+(?:\.\d+)+)\srelease/i)
   end
 
   installer script: "j#{version}/macos-fix.command"
@@ -23,7 +23,6 @@ cask "j" do
     args:       ["-js", "load 'pacman'", "'install' jpkg '*'", "exit 0"],
   }
 
-  # target names according to readme.txt
   ["jcon", "jconsole"].each do |b|
     binary "j#{version}/bin/jconsole", target: b
   end
