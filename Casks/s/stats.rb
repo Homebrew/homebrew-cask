@@ -8,8 +8,8 @@ cask "stats" do
     end
   end
   on_catalina :or_newer do
-    version "2.9.10"
-    sha256 "ce1f7b2f20fd9e9ac007031ee0af4d1842e9caf3e68ce7f988f2ef93668f51fc"
+    version "2.9.11"
+    sha256 "2fb1379da55e158c5e4bc3801245c4818ed807ee84fb2ac67c8014af9d845af0"
   end
 
   url "https://github.com/exelban/stats/releases/download/v#{version}/Stats.dmg"
