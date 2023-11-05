@@ -1,6 +1,6 @@
 cask "showmeyourhotkeys" do
-  version "1.8,21"
-  sha256 "a977927258322e59e9682635faeec6ed86f20ed5f92506abc7387575309a84ed"
+  version "1.9,22"
+  sha256 "a046039265122a043938a90bfe26c46792f2db95bd3a2e53d9213d367fe5d7d9"
 
   url "https://showmeyourhotkeys.moxadventu.com/update/ShowMeYourHotKeys-prod-stable-#{version.csv.first}-(#{version.csv.second}).zip"
   name "ShowMeYourHotKeys"
