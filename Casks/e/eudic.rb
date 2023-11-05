@@ -1,8 +1,8 @@
 cask "eudic" do
   version "4.5.3,1117"
-  sha256 :no_check
+  sha256 "9d50c6df0e1c98de06f8579aba6fefcaa037b51cf1f9fe0b66d2398970a7ca6b"
 
-  url "https://static.frdic.com/pkg/eudicmac.dmg",
+  url "https://static.frdic.com/pkg/eudicmac.dmg?v=#{version.csv.second}",
       verified:   "static.frdic.com/",
       user_agent: :fake
   name "Eudic"
@@ -11,9 +11,11 @@ cask "eudic" do
   homepage "https://www.eudic.net/v4/en/app/eudic"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://www.eudic.net/update/eudic_mac.xml"
+    strategy :sparkle
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Eudic.app"
 
