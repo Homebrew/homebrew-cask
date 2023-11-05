@@ -17,6 +17,11 @@ cask "davmail" do
 
   app "DavMail.app"
 
+  zap trash: [
+    "~/.davmail.properties",
+    "~/Library/Logs/DavMail",
+  ]
+
   caveats do
     depends_on_java
   end
