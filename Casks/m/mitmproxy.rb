@@ -7,10 +7,15 @@ cask "mitmproxy" do
   desc "Intercept, modify, replay, save HTTP/S traffic"
   homepage "https://mitmproxy.org/"
 
+  # The downloads page (https://mitmproxy.org/downloads/) uses an XML file to
+  # dynamically generate the list of version directories on load.
   livecheck do
-    url "https://github.com/mitmproxy/mitmproxy"
-    strategy :git
-    regex(/^(\d+(?:\.\d+)+)$/i)
+    url "https://downloads.mitmproxy.org/list"
+    strategy :xml do |xml|
+      xml.get_elements("//ListBucketResult//CommonPrefixes//Prefix").map do |item|
+        item.text&.strip&.delete_suffix("/")
+      end
+    end
   end
 
   binary "mitmproxy.app/Contents/MacOS/mitmproxy"
