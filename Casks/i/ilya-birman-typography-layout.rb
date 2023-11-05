@@ -15,6 +15,8 @@ cask "ilya-birman-typography-layout" do
   keyboard_layout \
     "Install Ilya Birman Typography Layout.app/Contents/Resources/Layout/Ilya Birman Typography Layout.bundle"
 
+  # No zap stanza required
+
   caveats do
     reboot
   end
