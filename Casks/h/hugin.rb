@@ -11,7 +11,6 @@ cask "hugin" do
   livecheck do
     url "https://hugin.sourceforge.io/download/"
     regex(/Hugin-(\d+(?:\.\d+)*)\.dmg/i)
-    strategy :page_match
   end
 
   suite "Hugin"
