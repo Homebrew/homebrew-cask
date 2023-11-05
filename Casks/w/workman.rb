@@ -15,6 +15,8 @@ cask "workman" do
 
   keyboard_layout "Workman-master/mac/Workman.bundle"
 
+  # No zap stanza required
+
   caveats do
     reboot
   end

@@ -16,6 +16,8 @@ cask "qwerty-fr" do
 
   keyboard_layout "qwerty-fr.bundle"
 
+  # No zap stanza required
+
   caveats do
     reboot
   end
