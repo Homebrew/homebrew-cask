@@ -13,4 +13,9 @@ cask "kiwix" do
   end
 
   app "Kiwix.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/Kiwix",
+    "~/Library/Containers/self.kiwix",
+  ]
 end
