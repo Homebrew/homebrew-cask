@@ -1,6 +1,6 @@
 cask "nomachine" do
-  version "8.9.1_1"
-  sha256 "0e73cef028bb8b33aad135172f490adf931e5d5ac05a3212211100bd9dbe2876"
+  version "8.10.1_1"
+  sha256 "2a5c394e98f1e801fde029f87cff3b8094bcfaec4130a1b37da8623bb490c6fd"
 
   url "https://download.nomachine.com/download/#{version.major_minor}/MacOSX/nomachine_#{version}.dmg"
   name "NoMachine"
@@ -28,14 +28,15 @@ cask "nomachine" do
             ],
 
             launchctl: [
+              "com.nomachine.localnxserver",
+              "com.nomachine.nxlaunchconf",
               "com.nomachine.nxnode",
               "com.nomachine.nxplayer",
               "com.nomachine.nxrunner",
               "com.nomachine.nxserver",
-              "com.nomachine.localnxserver",
               "com.nomachine.uninstall",
+              "com.nomachine.uninstallAgent",
               "com.nomachine.server",
-              "com.nomachine.nxlaunchconf",
             ]
 
   zap trash: [
