@@ -64,6 +64,7 @@ cask "microsoft-teams" do
         "~/Library/Containers/com.microsoft.teams2.launcher",
         "~/Library/Containers/com.microsoft.teams2.notificationcenter",
         "~/Library/Cookies/com.microsoft.teams.binarycookies",
+        "~/Library/Group Containers/*.com.microsoft.teams",
         "~/Library/HTTPStorages/com.microsoft.teams",
         "~/Library/HTTPStorages/com.microsoft.teams.binarycookies",
         "~/Library/Logs/Microsoft Teams",
