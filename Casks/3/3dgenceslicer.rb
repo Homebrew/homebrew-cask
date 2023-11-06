@@ -20,4 +20,11 @@ cask "3dgenceslicer" do
   end
 
   app "3DGence Slicer #{version.csv.second}.app"
+
+  zap trash: [
+        "~/Library/Caches/3DGence Slicer",
+        "~/Library/Preferences/com.3dgence.slicer.3DGence Slicer.plist",
+        "~/Library/Saved Application State/com.3dgence.slicer.savedState",
+      ],
+      rmdir: "~/Documents/3DGence Slicer"
 end
