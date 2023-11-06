@@ -23,8 +23,9 @@ cask "nomachine-enterprise-client" do
             ],
 
             launchctl: [
-              "com.nomachine.uninstall",
               "com.nomachine.launchconf",
+              "com.nomachine.uninstall",
+              "com.nomachine.uninstallAgent",
             ]
 
   zap trash: [
