@@ -9,7 +9,7 @@ cask "hdfview" do
 
   livecheck do
     url :homepage
-    regex(/href=.*?HDFView[._-]v?(\d+(?:\.\d+)+)[._-]macos11_64\.(?:t|zip)/i)
+    regex(/href=.*?HDFView[._-]v?(\d+(?:\.\d+)+)[._-]macos[^"' >]*?\.(?:t|zip)/i)
   end
 
   depends_on macos: ">= :el_capitan"
