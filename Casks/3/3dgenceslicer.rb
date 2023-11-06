@@ -9,9 +9,8 @@ cask "3dgenceslicer" do
 
   livecheck do
     url "https://support.3dgence.com/software.html"
-    regex(
-      %r{href=.*?/3DGence(?:[._-]|%20)?Slicer(?:[._-]|%20)(\d+(?:\.\d+)+)(?:[._-]|%20)\(v?\.?(\d+(?:\.\d+)+)\)\.dmg}i,
-    )
+    regex(/3DGence(?:[._-]|\s)?Slicer(?:[._-]|\s)?(\d+(?:\.\d+)+)(?:[._-]|\s)?
+          \((?:version|v)?(?:[._-]|\s)?(\d+(?:\.\d+)+)\)(?:[._-]|\s+)*system(?:[._-]|\s)MacOS/ix)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|
         "#{match[1]},#{match[0]}"
