@@ -1,8 +1,9 @@
 cask "nifty" do
-  version "3.76.3"
+  version "3.79.8"
   sha256 :no_check
 
-  url "https://niftypm.com/apps/Nifty.dmg"
+  url "https://nifty-apps.s3.amazonaws.com/Nifty.dmg",
+      verified: "nifty-apps.s3.amazonaws.com/"
   name "Nifty"
   desc "Client for the Nifty project management platform"
   homepage "https://niftypm.com/"
