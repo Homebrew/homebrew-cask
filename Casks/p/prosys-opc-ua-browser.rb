@@ -26,4 +26,9 @@ cask "prosys-opc-ua-browser" do
   }
 
   uninstall delete: "/Applications/Prosys OPC UA Browser.app"
+
+  zap trash: [
+    "~/.prosysopc",
+    "~/Desktop/Prosys OPC UA Browser",
+  ]
 end
