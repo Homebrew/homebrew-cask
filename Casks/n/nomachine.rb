@@ -28,14 +28,15 @@ cask "nomachine" do
             ],
 
             launchctl: [
+              "com.nomachine.localnxserver",
+              "com.nomachine.nxlaunchconf",
               "com.nomachine.nxnode",
               "com.nomachine.nxplayer",
               "com.nomachine.nxrunner",
               "com.nomachine.nxserver",
-              "com.nomachine.localnxserver",
               "com.nomachine.uninstall",
+              "com.nomachine.uninstallAgent",
               "com.nomachine.server",
-              "com.nomachine.nxlaunchconf",
             ]
 
   zap trash: [
