@@ -6,8 +6,8 @@ cask "macupdater" do
     depends_on macos: ">= :mojave"
   end
   on_ventura :or_newer do
-    version "3.2.2"
-    sha256 "a028a675aa5d23880b0b834e63f2650192187bdeb1b0122ff75143f46a4d4d4c"
+    version "3.2.3"
+    sha256 "1b14dd1965e2bb3cfa3986ad30ebfe5085b86bd0afe9a2862687f197c5784907"
 
     depends_on macos: ">= :ventura"
   end
