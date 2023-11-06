@@ -7,9 +7,23 @@ cask "celestia" do
   desc "Space simulation for exploring the universe in three dimensions"
   homepage "https://github.com/CelestiaProject/Celestia/"
 
+  # Not every GitHub release provides a file for macOS, so we check multiple
+  # recent releases instead of only the "latest" release.
   livecheck do
     url :url
-    strategy :github_latest
+    regex(/^celestia[._-]v?(\d+(?:\.\d+)+)[._-]?(macOS)?\.(?:dmg|pkg|zip)$/i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
+
+        release["assets"]&.map do |asset|
+          match = asset["name"]&.match(regex)
+          next if match.blank?
+
+          match[1]
+        end
+      end.flatten
+    end
   end
 
   app "Celestia.app"
