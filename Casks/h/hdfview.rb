@@ -5,11 +5,11 @@ cask "hdfview" do
   url "https://support.hdfgroup.org/ftp/HDF5/releases/HDF-JAVA/hdfview-#{version}/bin/HDFView-#{version}-macos11_64.tar.gz"
   name "HDFView"
   desc "Tool for browsing and editing HDF files"
-  homepage "https://confluence.hdfgroup.org/display/support"
+  homepage "https://www.hdfgroup.org/downloads/hdfview/"
 
   livecheck do
-    url "https://confluence.hdfgroup.org/display/support/Download+HDFView"
-    regex(/HDFView\+(\d+(?:\.\d+)+)/i)
+    url :homepage
+    regex(/href=.*?HDFView[._-]v?(\d+(?:\.\d+)+)[._-]macos[^"' >]*?\.(?:t|zip)/i)
   end
 
   depends_on macos: ">= :el_capitan"
@@ -18,7 +18,7 @@ cask "hdfview" do
   app "HDFView.app"
 
   zap trash: [
-    "~/.hdfview#{version}",
+    "~/.hdfview*",
     "~/Library/Preferences/HDFView.hdfgroup.org.plist",
     "~/Library/Saved Application State/hdf.view.savedState",
   ]
