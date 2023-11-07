@@ -12,9 +12,11 @@ cask "tutanota" do
     strategy :electron_builder
   end
 
+  depends_on macos: ">= :high_sierra"
+
   auto_updates true
 
-  app "Tutanota Desktop.app"
+  app "Tuta Mail Desktop.app"
 
   zap trash: [
     "~/Library/Application Support/tutanota-desktop",
