@@ -1,5 +1,5 @@
 cask "tutanota" do
-  version "3.118.22"
+  version "3.118.25"
   sha256 :no_check
 
   url "https://mail.tutanota.com/desktop/tutanota-desktop-mac.dmg"
@@ -13,8 +13,9 @@ cask "tutanota" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
-  app "Tutanota Desktop.app"
+  app "Tuta Mail Desktop.app"
 
   zap trash: [
     "~/Library/Application Support/tutanota-desktop",
