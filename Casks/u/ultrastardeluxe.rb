@@ -1,6 +1,6 @@
 cask "ultrastardeluxe" do
-  version "2023.9.0"
-  sha256 "3f990349a3eca5a5e038031b35d3fb69a3149383f71474cb3735114edff11411"
+  version "2023.11.0"
+  sha256 "1d41c4d1454f53a706771c5c2cc4722a9196fd1723c3c206dbfc894e42b3dddf"
 
   url "https://github.com/UltraStar-Deluxe/USDX/releases/download/v#{version}/UltraStarDeluxe-v#{version}.dmg",
       verified: "github.com/UltraStar-Deluxe/USDX/"
