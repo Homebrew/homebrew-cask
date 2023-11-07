@@ -14,7 +14,7 @@ cask "clibor" do
   homepage "https://chigusa-web.com/clibor-for-mac-en/"
 
   livecheck do
-    url :homepage
+    url "https://chigusa-web.com/clibor-for-mac-en/download/"
     regex(/Clibor\.dmg\s–\sv?(\d+(?:\.\d+)+)/i)
   end
 
