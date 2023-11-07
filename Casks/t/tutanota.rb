@@ -12,9 +12,8 @@ cask "tutanota" do
     strategy :electron_builder
   end
 
-  depends_on macos: ">= :high_sierra"
-
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Tuta Mail Desktop.app"
 
