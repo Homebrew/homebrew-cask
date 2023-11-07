@@ -1,6 +1,6 @@
 cask "cloudash" do
-  version "1.21.0"
-  sha256 "b18a9ca643030586ece2ae12d485de3c8e43c6d1f572ce6b977a9b1b6aec7f86"
+  version "1.22.0"
+  sha256 "f9956be889126f8ea8143f241b1c0b4beb119404fda59b61cb3b59f56fc88470"
 
   url "https://github.com/cloudashdev/cloudash/releases/download/#{version}/Cloudash-#{version}.dmg",
       verified: "github.com/cloudashdev/cloudash/"
