@@ -1,6 +1,6 @@
 cask "bluebubbles" do
-  version "1.8.0"
-  sha256 "c5b6f482d8e7836d2239d6e8188d57da53869b115e843b344b2adac2a30f2340"
+  version "1.9.0"
+  sha256 "43172341da1afe8aa9c6048ff00980423347f186cb44ecb8cfe1d6c7b46f9897"
 
   url "https://github.com/BlueBubblesApp/bluebubbles-server/releases/download/v#{version}/BlueBubbles-#{version}.dmg",
       verified: "github.com/BlueBubblesApp/bluebubbles-server/"
