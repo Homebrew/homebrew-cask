@@ -1,9 +1,9 @@
 cask "bloop" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.5.7"
-  sha256 arm:   "77f91b7a95b542bdc905435bdd9568fc37241057f8e935792cc8fa30eccbec83",
-         intel: "c34a9973180bd9e4d4543128112cbfda713cbd28c76767f0531b5bd8619205a8"
+  version "0.5.8"
+  sha256 arm:   "c2c00ce9f93e9bb1f5fad55a4477cdb0182479a8838a5d82572b4d495cc2febd",
+         intel: "2b729aa4fb436849e0fab64547cf0d3299498587a77d17433289683b8c9b3fc3"
 
   url "https://github.com/BloopAI/bloop/releases/download/v#{version}/bloop_#{version}_#{arch}.dmg",
       verified: "github.com/BloopAI/bloop/"
