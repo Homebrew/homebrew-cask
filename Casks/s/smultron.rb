@@ -14,7 +14,7 @@ cask "smultron" do
       major_version = page[regex, 1]
       next if major_version.blank?
 
-      cask = CaskLoader.load("smultron")
+      cask = CaskLoader.load(__FILE__)
       download_url = "https://www.peterborgapps.com/downloads/Smultron#{major_version}.zip"
       Homebrew::Livecheck::Strategy::ExtractPlist.find_versions(cask: cask, url: download_url)[:matches].values
     end

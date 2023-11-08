@@ -15,7 +15,7 @@ cask "redquits" do
       major_version = page[regex, 1]
       next if major_version.blank?
 
-      cask = CaskLoader.load("redquits")
+      cask = CaskLoader.load(__FILE__)
       download_url = "http://redquits.s3.amazonaws.com/RedQuits_v#{major_version}.pkg"
       Homebrew::Livecheck::Strategy::ExtractPlist.find_versions(cask: cask, url: download_url)[:matches].values
     end
