@@ -8,15 +8,20 @@ cask "zsa-wally" do
   desc "Flash tool for ZSA keyboards"
   homepage "https://ergodox-ez.com/pages/wally"
 
-  livecheck do
-    url "https://configure.ergodox-ez.com/wally/osx"
-    strategy :header_match
-  end
-
   app "Wally.app"
 
   zap trash: [
     "~/Library/Preferences/com.zsa.wally.plist",
     "~/Library/Saved Application State/com.zsa.wally.savedState",
   ]
+
+  caveats do
+    discontinued
+
+    <<~EOS
+      Keymapp is the official successor to this software:
+
+        brew install --cask keymapp
+    EOS
+  end
 end
