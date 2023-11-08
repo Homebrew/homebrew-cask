@@ -1,5 +1,5 @@
 cask "keymapp" do
-  version "0.0.6"
+  version "1.0.4"
   sha256 :no_check
 
   url "https://oryx.nyc3.cdn.digitaloceanspaces.com/keymapp/keymapp-latest.dmg",
@@ -9,9 +9,9 @@ cask "keymapp" do
   homepage "https://www.zsa.io/flash"
 
   livecheck do
-    url :url
-    strategy :extract_plist do |items|
-      items["com.zsa.io.Keymapp"].short_version
+    url "https://oryx.nyc3.cdn.digitaloceanspaces.com/keymapp/keymapp-macos.json
+    strategy :json do |json|
+      json["version"]
     end
   end
 
