@@ -14,7 +14,7 @@ cask "winzip" do
       major_version = page[regex, 1]
       next if major_version.blank?
 
-      cask = CaskLoader::FromTapLoader.new("homebrew/homebrew-cask/winzip").load(config: nil)
+      cask = CaskLoader.load(__FILE__)
       download_url = "https://download.winzip.com/winzipmacedition#{major_version}.dmg"
       Homebrew::Livecheck::Strategy::ExtractPlist.find_versions(cask: cask, url: download_url)[:matches].values
     end
