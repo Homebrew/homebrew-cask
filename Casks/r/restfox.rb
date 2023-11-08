@@ -1,6 +1,6 @@
 cask "restfox" do
-  version "0.2.0"
-  sha256 "53aea1e745274e98fcd8537ebebe3e4d9eb520bd33d72d214305caa04fa4c0cd"
+  version "0.2.1"
+  sha256 "83d1b2b7ac7eec09b1bb05ceca7d7ab5d056ea83b8dfe90f9218199e09c5ca5c"
 
   url "https://github.com/flawiddsouza/Restfox/releases/download/v#{version}/Restfox-darwin-x64-#{version}.zip",
       verified: "github.com/flawiddsouza/Restfox/releases/download/"
