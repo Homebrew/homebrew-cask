@@ -9,7 +9,7 @@ cask "keymapp" do
   homepage "https://www.zsa.io/flash"
 
   livecheck do
-    url "https://oryx.nyc3.cdn.digitaloceanspaces.com/keymapp/keymapp-macos.json
+    url "https://oryx.nyc3.cdn.digitaloceanspaces.com/keymapp/keymapp-macos.json"
     strategy :json do |json|
       json["version"]
     end
