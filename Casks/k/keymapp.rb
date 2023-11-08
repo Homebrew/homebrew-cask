@@ -15,6 +15,7 @@ cask "keymapp" do
     end
   end
 
+  auto_updates true
   depends_on macos: ">= :monterey"
 
   app "Keymapp.app"
