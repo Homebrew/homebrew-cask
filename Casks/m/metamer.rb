@@ -1,6 +1,6 @@
 cask "metamer" do
-  version "1.4,2023.11"
-  sha256 "094961f9c2c2059f15a47f5f516cc0c06ebb94a066da91b2c925fd91338a44b9"
+  version "1.5,2023.11"
+  sha256 "bd158fd3afe0837a5a312858be50ec285f417945c04131d8570fe55cf22112f6"
 
   url "https://eclecticlightdotcom.files.wordpress.com/#{version.csv.second.major}/#{version.csv.second.minor}/metamer#{version.csv.first.no_dots}.zip",
       verified: "eclecticlightdotcom.files.wordpress.com/"
