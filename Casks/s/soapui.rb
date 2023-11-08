@@ -1,6 +1,6 @@
 cask "soapui" do
-  version "5.7.1"
-  sha256 "419c4c63b64335d3e43587902a8eb77e743be9ff4732a8448b090c1ae80f4abe"
+  version "5.7.2"
+  sha256 "25cf37f861c2bc95fea272d8ccbaff04fdcb8e14dfa1cc1b1d649918ef51a4d4"
 
   url "https://dl.eviware.com/soapuios/#{version}/SoapUI-#{version}.dmg",
       verified: "dl.eviware.com/soapuios/"
