@@ -23,6 +23,7 @@ env:
     bettertouchtool
     bike
     brave-browser
+    bruno
     burp-suite
     burp-suite-professional
     busycal
@@ -61,6 +62,7 @@ env:
     libreoffice
     librewolf
     logseq
+    loom
     macupdater
     metasploit
     microsoft-edge
