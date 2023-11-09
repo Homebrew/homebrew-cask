@@ -17,4 +17,10 @@ cask "tableflip" do
   depends_on macos: ">= :high_sierra"
 
   app "TableFlip.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/de.christiantietze.TableFlip",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/de.christiantietze.tableflip.*",
+    "~/Library/Containers/de.christiantietze.TableFlip",
+  ]
 end
