@@ -1,9 +1,9 @@
 cask "imagej" do
   arch arm: "arm-java13", intel: "java8"
 
-  version "1.53"
-  sha256 arm:   "e464760174af0bcff7849db6e12090a4cbb1b0a1897a71dc1a999855d6e22e98",
-         intel: "5d405f30e779e4dac5e8a669d0cf8a5c1f0afa5f17b4908885e561817705e422"
+  version "1.54"
+  sha256 arm:   "8366d8c2d56602855fd375d7fb06a4d5b755258cb96ecd83e1310709d3959d90",
+         intel: "2349e9c32378dbfc2f1b3be58475161eb9d076c16938502fa2000afe116ea933"
 
   url "https://wsr.imagej.net/distros/osx/ij#{version.no_dots}-osx-#{arch}.zip"
   name "ImageJ"
