@@ -10,15 +10,17 @@ cask "btp" do
         "eula_3_1_agreed" => "tools.hana.ondemand.com/developer-license-3_1.txt",
       }
   name "SAP Business Technology Platform Command Line Interface"
-  desc "Account administration CLI for SAP Business Technology Platform"
+  desc "CLI for the SAP Business Technology Platform"
   homepage "https://tools.hana.ondemand.com/#cloud-cpcli"
 
   livecheck do
-    url "https://tools.hana.ondemand.com/#cloud-cpcli"
-    regex(%r{href="additional/btp-cli-darwin-#{arch}-?(\d+(?:\.\d+)+)\.t}i)
+    url :homepage
+    regex(/btp[._-]cli[._-]darwin[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
   binary "darwin-#{arch}/btp", target: "btp"
+
+  # No zap stanza required
 
   caveats do
     license "https://tools.hana.ondemand.com/developer-license-3_1.txt"
