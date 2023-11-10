@@ -36,7 +36,7 @@ cask "onedrive" do
             ],
             delete:    [
               "/Applications/OneDrive.app",
-              "/Library/Logs/Microsoft/OneDrive"
+              "/Library/Logs/Microsoft/OneDrive",
               "/Library/LaunchAgents/com.microsoft.OneDriveStandaloneUpdater.plist",
               "/Library/LaunchDaemons/com.microsoft.OneDriveStandaloneUpdaterDaemon.plist",
               "/Library/LaunchDaemons/com.microsoft.OneDriveUpdaterDaemon.plist",
