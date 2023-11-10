@@ -22,20 +22,20 @@ cask "onedrive" do
 
   pkg "OneDrive.pkg"
 
-  uninstall delete:    "/Applications/OneDrive.app",
+  uninstall pkgutil:   "com.microsoft.OneDrive",    
             launchctl: [
               "com.microsoft.OneDriveStandaloneUpdater",
               "com.microsoft.OneDriveStandaloneUpdaterDaemon",
               "com.microsoft.OneDriveUpdaterDaemon",
               "com.microsoft.SyncReporter",
             ],
-            pkgutil:   "com.microsoft.OneDrive",
             quit:      [
               "com.microsoft.OneDrive",
               "com.microsoft.OneDrive.FinderSync",
               "com.microsoft.OneDriveUpdater",
             ],
             delete:    [
+              "/Applications/OneDrive.app",
               "~/Library/Application Scripts/com.microsoft.OneDrive-mac",
               "~/Library/Application Scripts/com.microsoft.OneDrive.FinderSync",
               "~/Library/Application Scripts/com.microsoft.OneDriveLauncher",
