@@ -1,0 +1,25 @@
+cask "rode-central" do
+  version "2.0.39"
+  sha256 :no_check
+
+  url "https://update.rode.com/central/RODE_Central_MACOS.zip"
+  name "rode-central"
+  desc "RØDE Companion App"
+  homepage "https://rode.com/en/apps/rode-central"
+
+  livecheck do
+    url "https://update.rode.com/rode-devices-manifest.json"
+    strategy :json do |json|
+      json["rode-central-manifest"]["macos"]["main-version"]["update-version"]
+    end
+  end
+
+  pkg "RØDE Central Installer (#{version}).pkg"
+
+  uninstall pkgutil: "com.rodecentral.installer"
+
+  zap trash: [
+    "~/Library/Caches/com.rode.rodecentral",
+    "~/Library/HTTPStorages/com.rode.rodecentral",
+  ]
+end
