@@ -22,7 +22,7 @@ cask "onedrive" do
 
   pkg "OneDrive.pkg"
 
-  uninstall pkgutil:   "com.microsoft.OneDrive",    
+  uninstall pkgutil:   "com.microsoft.OneDrive",
             launchctl: [
               "com.microsoft.OneDriveStandaloneUpdater",
               "com.microsoft.OneDriveStandaloneUpdaterDaemon",
