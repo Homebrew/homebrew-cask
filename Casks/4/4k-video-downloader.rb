@@ -1,6 +1,6 @@
 cask "4k-video-downloader" do
-  version "4.27.1"
-  sha256 "ccacf1df4f92cf0e23e336e62df88ab04851c47183c7b1102b18b81c8211485b"
+  version "4.28.0"
+  sha256 "6462419b62342e251db8c3f24872e61ead09a257c962717fbd7016b3c465e319"
 
   url "https://dl.4kdownload.com/app/4kvideodownloader_#{version.major_minor_patch}.dmg"
   name "4K Video Downloader"
