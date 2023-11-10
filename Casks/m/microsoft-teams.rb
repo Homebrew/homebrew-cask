@@ -6,7 +6,7 @@ cask "microsoft-teams" do
       verified: "statics.teams.cdn.office.net/production-osx/"
   name "Microsoft Teams"
   desc "Meet, chat, call, and collaborate in just one place"
-  homepage "https://www.microsoft.com/en-us/microsoft-teams/group-chat-software"
+  homepage "https://www.microsoft.com/microsoft-teams/group-chat-software/"
 
   # Microsoft releases multiple versions and builds of Teams, as listed here:
   #   https://raw.githubusercontent.com/ItzLevvie/MicrosoftTeams-msinternal/master/defconfig
@@ -19,8 +19,10 @@ cask "microsoft-teams" do
   # Any pull request that updates this Cask to a version that
   # differs from the `livecheck` version will be closed.
   livecheck do
-    url "https://statics.teams.cdn.office.net/production-osx/enterprise/webview2/lkg/MicrosoftTeams.pkg"
-    strategy :extract_plist
+    url "https://config.teams.microsoft.com/config/v1/MicrosoftTeams/#{version}?environment=prod&audienceGroup=general&teamsRing=general&agent=TeamsBuilds"
+    strategy :json do |json|
+      json.dig("BuildSettings", "WebView2", "macOS", "latestVersion")
+    end
   end
 
   auto_updates true
@@ -64,6 +66,7 @@ cask "microsoft-teams" do
         "~/Library/Containers/com.microsoft.teams2.launcher",
         "~/Library/Containers/com.microsoft.teams2.notificationcenter",
         "~/Library/Cookies/com.microsoft.teams.binarycookies",
+        "~/Library/Group Containers/*.com.microsoft.teams",
         "~/Library/HTTPStorages/com.microsoft.teams",
         "~/Library/HTTPStorages/com.microsoft.teams.binarycookies",
         "~/Library/Logs/Microsoft Teams",
