@@ -3,8 +3,8 @@ cask "rode-central" do
   sha256 :no_check
 
   url "https://update.rode.com/central/RODE_Central_MACOS.zip"
-  name "rode-central"
-  desc "RØDE Companion App"
+  name "Rode Central"
+  desc "RØDE companion app"
   homepage "https://rode.com/en/apps/rode-central"
 
   livecheck do
@@ -13,6 +13,8 @@ cask "rode-central" do
       json["rode-central-manifest"]["macos"]["main-version"]["update-version"]
     end
   end
+
+  depends_on macos: ">= :catalina"
 
   pkg "RØDE Central Installer (#{version}).pkg"
 
