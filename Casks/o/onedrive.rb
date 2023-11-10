@@ -43,12 +43,12 @@ cask "onedrive" do
             ]
 
   zap trash: [
+    "~/Library/Application Scripts/*.OfficeOneDriveSyncIntegration",
+    "~/Library/Application Scripts/*.OneDriveStandaloneSuite",
     "~/Library/Application Scripts/com.microsoft.OneDrive-mac",
     "~/Library/Application Scripts/com.microsoft.OneDrive.FileProvider",
     "~/Library/Application Scripts/com.microsoft.OneDrive.FinderSync",
     "~/Library/Application Scripts/com.microsoft.OneDriveLauncher",
-    "~/Library/Application Scripts/*.OfficeOneDriveSyncIntegration",
-    "~/Library/Application Scripts/*.OneDriveStandaloneSuite",
     "~/Library/Application Support/com.microsoft.OneDrive",
     "~/Library/Application Support/com.microsoft.OneDriveUpdater",
     "~/Library/Application Support/FileProvider/com.microsoft.OneDrive.FileProvider",
@@ -68,8 +68,6 @@ cask "onedrive" do
     "~/Library/Group Containers/*.OfficeOneDriveSyncIntegration",
     "~/Library/Group Containers/*.OneDriveStandaloneSuite",
     "~/Library/Group Containers/*.OneDriveSyncClientSuite",
-    "~/Library/Group Containers/*.OfficeOneDriveSyncIntegration",
-    "~/Library/Group Containers/*.OneDriveStandaloneSuite",
     "~/Library/HTTPStorages/com.microsoft.OneDrive",
     "~/Library/HTTPStorages/com.microsoft.OneDrive.binarycookies",
     "~/Library/HTTPStorages/com.microsoft.OneDriveStandaloneUpdater",
