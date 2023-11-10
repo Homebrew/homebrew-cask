@@ -6,7 +6,7 @@ cask "microsoft-teams" do
       verified: "statics.teams.cdn.office.net/production-osx/"
   name "Microsoft Teams"
   desc "Meet, chat, call, and collaborate in just one place"
-  homepage "https://www.microsoft.com/microsoft-teams/group-chat-software/"
+  homepage "https://www.microsoft.com/en/microsoft-teams/group-chat-software/"
 
   # Microsoft releases multiple versions and builds of Teams, as listed here:
   #   https://raw.githubusercontent.com/ItzLevvie/MicrosoftTeams-msinternal/master/defconfig
