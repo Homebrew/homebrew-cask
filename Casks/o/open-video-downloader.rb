@@ -1,11 +1,11 @@
 cask "open-video-downloader" do
-  version "2.4.0"
-  sha256 "02032bce606998f86dc0375a0c597d0320e689bddaf6528528e310446c432707"
+  version "2.5.4"
+  sha256 "a1c10401771c2526b47777d075fecf0401068ed40f3d3a524d52ec7e2405e769"
 
-  url "https://github.com/jely2002/youtube-dl-gui/releases/download/v#{version}/Open-Video-Downloader-#{version}.dmg"
+  url "https://github.com/StefanLobbenmeier/youtube-dl-gui/releases/download/v#{version}/Open-Video-Downloader-#{version}-universal.dmg
   name "Open Video Downloader"
   desc "Cross-platform GUI for youtube-dl made in Electron and node.js"
-  homepage "https://github.com/jely2002/youtube-dl-gui"
+  homepage "https://github.com/StefanLobbenmeier/youtube-dl-gui"
 
   app "Open Video Downloader.app"
 
