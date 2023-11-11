@@ -9,9 +9,11 @@ cask "meteorologist" do
   homepage "https://heat-meteo.sourceforge.io/"
 
   livecheck do
-    url "https://sourceforge.net/projects/heat-meteo/rss"
-    regex(/Meteorologist[._-](\d+(?:\.\d+)+)(?![._-]b\d)\.dmg/i)
+    url "https://sourceforge.net/projects/heat-meteo/rss?path=/Meteo"
+    regex(%r{url=.*?/Meteorologist[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
+
+  depends_on macos: ">= :ventura"
 
   app "Meteorologist.app"
 
