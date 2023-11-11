@@ -22,7 +22,7 @@ cask "douyin" do
   app "抖音.app"
 
   zap trash: [
-        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bytedance.douyin.desktop.sfl3",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bytedance.douyin.desktop.*",
         "~/Library/Caches/com.bytedance.douyin.desktop",
         "~/Library/HTTPStorages/com.bytedance.douyin.desktop",
         "~/Library/Logs/douyin",
