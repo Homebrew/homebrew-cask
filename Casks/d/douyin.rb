@@ -17,9 +17,17 @@ cask "douyin" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "抖音.app"
 
-  zap trash: "~/Library/Preferences/com.bytedance.douyin.desktop.plist",
+  zap trash: [
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bytedance.douyin.desktop.sfl3",
+        "~/Library/Caches/com.bytedance.douyin.desktop",
+        "~/Library/HTTPStorages/com.bytedance.douyin.desktop",
+        "~/Library/Logs/douyin",
+        "~/Library/Preferences/com.bytedance.douyin.desktop.plist",
+        "~/Library/Saved Application State/com.bytedance.douyin.desktop.savedState",
+      ],
       rmdir: "~/Library/Application Support/抖音"
 end
