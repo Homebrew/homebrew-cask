@@ -14,7 +14,6 @@ cask "codux" do
   livecheck do
     url "https://www.codux.com/download"
     regex(/href=.*?Codux[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
-    strategy :page_match
   end
 
   depends_on macos: ">= :catalina"
