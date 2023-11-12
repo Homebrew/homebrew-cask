@@ -9,7 +9,7 @@ cask "obs" do
   url "https://cdn-fastly.obsproject.com/downloads/obs-studio-#{version}-macos-#{arch}.dmg"
   name "OBS"
   desc "Open-source software for live streaming and screen recording"
-  homepage "https://obsproject.com/forum/list/test-builds.20/"
+  homepage "https://obsproject.com/"
 
   livecheck do
     url "https://obsproject.com/osx_update/updates_#{livecheck_folder}_v2.xml"
