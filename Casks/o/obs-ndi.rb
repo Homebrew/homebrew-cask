@@ -4,7 +4,7 @@ cask "obs-ndi" do
 
   url "https://github.com/obs-ndi/obs-ndi/releases/download/#{version}/obs-ndi-#{version}-macos-universal.pkg"
   name "obs-ndi"
-  desc "NewTek NDI integration for OBS Studio"
+  desc "NDI integration for OBS Studio"
   homepage "https://github.com/obs-ndi/obs-ndi"
 
   livecheck do
