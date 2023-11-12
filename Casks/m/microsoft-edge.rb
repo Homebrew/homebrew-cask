@@ -2,18 +2,18 @@ cask "microsoft-edge" do
   linkid = on_arch_conditional arm: "2093504", intel: "2069148"
 
   on_arm do
-    version "119.0.2151.46,fba50137-9cc2-40da-9b02-dbb606193c1a"
-    sha256 "3cbd9e4e2360664409454615855968a2465e5f1d13480263824ea79da8ac421a"
+    version "119.0.2151.58,4b84e4f2-c59c-4144-a1e3-30f8d9f3a49c"
+    sha256 "ca73757402365a5c007384088e29443a0fe772ffb032f4c2f744a3c766f9324f"
   end
   on_intel do
-    version "119.0.2151.46,957791c5-bbb1-4576-9e63-55f743787120"
-    sha256 "17963e35c0248c1bdf0fcffa2fbb70768f656d2ca35abdc1fb45144b1936fd36"
+    version "119.0.2151.58,77445666-8c50-41d0-9c2e-9fd9055d7e3c"
+    sha256 "143c9cde6c99556ea7aed0c7337204c2698c9c9399665bfeeb48450b0f7cbb11"
   end
 
   url "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/#{version.csv.second}/MicrosoftEdge-#{version.csv.first}.pkg"
   name "Microsoft Edge"
   desc "Web browser"
-  homepage "https://www.microsoft.com/edge"
+  homepage "https://www.microsoft.com/en-us/edge?form="
 
   livecheck do
     url "https://go.microsoft.com/fwlink/?linkid=#{linkid}"
