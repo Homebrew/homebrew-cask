@@ -16,4 +16,14 @@ cask "serial" do
   depends_on macos: ">= :el_capitan"
 
   app "Serial.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.decisivetactics.serial*",
+    "~/Library/Caches/com.apple.helpd/Generated/com.decisivetactics.serial*",
+    "~/Library/Caches/com.decisivetactics.serial*",
+    "~/Library/Containers/com.decisivetactics.serial*",
+    "~/Library/HTTPStorages/com.decisivetactics.serial*",
+    "~/Library/Preferences/com.decisivetactics.serial.direct.plist",
+    "~/Library/Saved Application State/com.decisivetactics.serial*",
+  ]
 end
