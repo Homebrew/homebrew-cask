@@ -11,4 +11,6 @@ cask "libndi" do
   pkg "libNDI_for_Mac.pkg"
 
   uninstall pkgutil: "com.newtek.libndi"
+
+  # No zap stanza required
 end
