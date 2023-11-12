@@ -13,7 +13,7 @@ cask "obs" do
 
   livecheck do
     url "https://obsproject.com/osx_update/updates_#{livecheck_folder}_v2.xml"
-    regex(/obs[._-]studio[._-](\d+(?:[.-]\d+)+(?:(?:-beta)|(?:-rc))\d+)[._-]macos/i)
+    regex(/obs[._-]studio[._-]v?(\d+(?:\.\d+)+)[._-]macos[._-]#{arch}\.dmg/i)
     strategy :sparkle do |items, regex|
       items.find { |item| item.channel == "stable" }&.url&.scan(regex)&.flatten
     end
