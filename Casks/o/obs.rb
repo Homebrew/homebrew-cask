@@ -1,19 +1,22 @@
 cask "obs" do
-  arch arm: "Apple", intel: "Intel"
-  arch_2 = on_arch_conditional arm: "arm64", intel: "x86_64"
+  arch arm: "apple", intel: "intel"
+  livecheck_folder = on_arch_conditional arm: "arm64", intel: "x86_64"
 
   version "30.0.0"
   sha256 arm:   "a4bd98bc5bf224ef545f264188969a3d39a3e5e275686b8447e8ad7cc704aafc",
          intel: "367b12299a7c226b8017108bd251093af50dfe2d86a6b0aaa54180a1da63f657"
 
-  url "https://cdn-fastly.obsproject.com/downloads/OBS-Studio-#{version}-macOS-#{arch}.dmg"
+  url "https://cdn-fastly.obsproject.com/downloads/obs-studio-#{version}-macos-#{arch}.dmg"
   name "OBS"
   desc "Open-source software for live streaming and screen recording"
-  homepage "https://obsproject.com/"
+  homepage "https://obsproject.com/forum/list/test-builds.20/"
 
   livecheck do
-    url "https://obsproject.com/osx_update/stable/updates_#{arch_2}.xml"
-    strategy :sparkle, &:short_version
+    url "https://obsproject.com/osx_update/updates_#{livecheck_folder}_v2.xml"
+    regex(/obs[._-]studio[._-](\d+(?:[.-]\d+)+(?:(?:-beta)|(?:-rc))\d+)[._-]macos/i)
+    strategy :sparkle do |items, regex|
+      items.find { |item| item.channel == "stable" }&.url&.scan(regex)&.flatten
+    end
   end
 
   auto_updates true
