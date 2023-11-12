@@ -1,4 +1,5 @@
 cask "jazz2-resurrection" do
+  # NOTE: "2" is not a version number, but an intrinsic part of the product name
   arch arm: "ARM64", intel: "x64"
 
   version "2.2.2"
