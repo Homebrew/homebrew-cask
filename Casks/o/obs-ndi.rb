@@ -16,6 +16,7 @@ cask "obs-ndi" do
 
   uninstall pkgutil: [
     "com.newtek.ndi.runtime",
-    "*fr.palakis.obs-ndi*",
+    "fr.palakis.obs-ndi",
+    "'fr.palakis.obs-ndi'",
   ]
 end
