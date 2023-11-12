@@ -15,4 +15,8 @@ cask "jazz2-resurrection" do
   app "Jazz² Resurrection.app"
 
   zap trash: "~/Library/Application Support/Jazz² Resurrection"
+
+  caveats <<~EOS
+    Game data should be installed to ~/Library/Application Support/Jazz² Resurrection/Source/
+  EOS
 end
