@@ -1,8 +1,8 @@
 cask "firefly-shimmer" do
-  version "2.1.8"
-  sha256 "ab9c68a1ac3bfad8bb58469dc4bd76ff26ac6033523aff571cf4fbec1be1df09"
+  version "2.1.9"
+  sha256 "d283c16aba1dea49e07049873359264a54db4fa19416a1f1b07f937740777789"
 
-  url "https://github.com/iotaledger/firefly/releases/download/desktop-#{version}/firefly-desktop-#{version}.dmg",
+  url "https://github.com/iotaledger/firefly/releases/download/desktop-shimmer-#{version}/firefly-shimmer-desktop-#{version}.dmg",
       verified: "github.com/iotaledger/firefly/"
   name "Firefly Shimmer"
   desc "Official wallet for IOTA"
