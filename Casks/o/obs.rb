@@ -1,17 +1,18 @@
 cask "obs" do
-  arch arm: "arm64", intel: "x86_64"
+  arch arm: "Apple", intel: "Intel"
+  arch_2 = on_arch_conditional arm: "arm64", intel: "x86_64"
 
-  version "29.1.3"
-  sha256 arm:   "ad8586d6af8dd4a0039e6074cf92213340f3d2408cf87e3593fa0822cbc8a73a",
-         intel: "0e87051cd5ee50f9efb9c9052d79a3d598761b154308213c40accacc3c9d0895"
+  version "30.0.0"
+  sha256 arm:   "a4bd98bc5bf224ef545f264188969a3d39a3e5e275686b8447e8ad7cc704aafc",
+         intel: "367b12299a7c226b8017108bd251093af50dfe2d86a6b0aaa54180a1da63f657"
 
-  url "https://cdn-fastly.obsproject.com/downloads/obs-studio-#{version}-macos-#{arch}.dmg"
+  url "https://cdn-fastly.obsproject.com/downloads/OBSs-Studio-#{version}-macos-#{arch}.dmg"
   name "OBS"
   desc "Open-source software for live streaming and screen recording"
   homepage "https://obsproject.com/"
 
   livecheck do
-    url "https://obsproject.com/osx_update/stable/updates_#{arch}.xml"
+    url "https://obsproject.com/osx_update/stable/updates_#{arch_2}.xml"
     strategy :sparkle, &:short_version
   end
 
