@@ -13,7 +13,7 @@ cask "microsoft-edge" do
   url "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/#{version.csv.second}/MicrosoftEdge-#{version.csv.first}.pkg"
   name "Microsoft Edge"
   desc "Web browser"
-  homepage "https://www.microsoft.com/edge"
+  homepage "https://www.microsoft.com/en-us/edge?form="
 
   livecheck do
     url "https://go.microsoft.com/fwlink/?linkid=#{linkid}"
