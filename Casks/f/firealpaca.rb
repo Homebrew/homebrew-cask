@@ -10,7 +10,7 @@ cask "firealpaca" do
 
   livecheck do
     url :homepage
-    regex(/Version\s*:\s*<[^>]+>\s*(\d+(?:\.\d+)+)/i)
+    regex(/Version\s*:\s*(\d+(?:\.\d+)+)/i)
   end
 
   app "FireAlpaca.app"
