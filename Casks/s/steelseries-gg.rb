@@ -1,6 +1,6 @@
 cask "steelseries-gg" do
-  version "50.1.0"
-  sha256 "52faa9e3056bd3a39139ba8f4fadad515e218c9c5964d933ad587e2c6265247e"
+  version "50.0.0"
+  sha256 "95d005a943223261ac4c093bdd9f787b4ca5a06bbc2d839236f946fb4a72189c"
 
   url "https://engine.steelseriescdn.com/SteelSeriesGG#{version}.pkg",
       verified: "engine.steelseriescdn.com/"
@@ -9,8 +9,8 @@ cask "steelseries-gg" do
   homepage "https://steelseries.com/gg"
 
   livecheck do
-    url "https://techblog.steelseries.com"
-    regex(/GG[._-]notes[._-]v?(\d+(?:\.\d+)+)\.html/i)
+    url "https://steelseries.com/gg/downloads/gg/latest/darwin"
+    strategy :header_match
   end
 
   auto_updates true
