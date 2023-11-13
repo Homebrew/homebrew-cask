@@ -15,7 +15,7 @@ cask "ripx" do
 
   depends_on macos: ">= :sierra"
 
-  pkg "RipX.pkg"
+  pkg "RipX DAW.pkg"
 
   uninstall pkgutil: [
               "com.hitnmix.HitnMix.pkg",
