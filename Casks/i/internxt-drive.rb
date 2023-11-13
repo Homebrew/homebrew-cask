@@ -8,9 +8,23 @@ cask "internxt-drive" do
   desc "Client for Internxt file storage service"
   homepage "https://internxt.com/drive"
 
+  # Not every GitHub release provides a file for macOS, so we check multiple
+  # recent releases instead of only the "latest" release.
   livecheck do
     url :url
-    strategy :github_latest
+    regex(/^Internxt-Drive[._-]v?(\d+(?:\.\d+)+)\.(?:dmg)$/i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
+
+        release["assets"]&.map do |asset|
+          match = asset["name"]&.match(regex)
+          next if match.blank?
+
+          match[1]
+        end
+      end.flatten
+    end
   end
 
   auto_updates true
