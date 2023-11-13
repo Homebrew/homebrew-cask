@@ -12,6 +12,8 @@ cask "obs-ndi" do
     strategy :github_latest
   end
 
+  depends_on cask: "libndi"
+
   pkg "obs-ndi-#{version}-macOS-universal.pkg"
 
   uninstall pkgutil: [
