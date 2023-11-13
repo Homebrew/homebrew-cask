@@ -29,6 +29,7 @@ cask "disk-drill" do
     "~/Library/Containers/com.cleverfiles.DiskDrill.Media/Data/cfbackd.chief",
     "~/Library/HTTPStorages/com.cleverfiles.DiskDrill.binarycookies",
     "~/Library/Logs/DiskDrill.log",
+    "~/Library/Preferences/com.cleverfiles.activator.xml",
     "~/Library/Preferences/com.cleverfiles.Disk_Drill.plist",
     "~/Library/Preferences/com.cleverfiles.DiskDrill.plist",
     "~/Library/Preferences/com.cleverfiles.DiskDrill-setapp.plist",
