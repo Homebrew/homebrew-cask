@@ -10,8 +10,8 @@ cask "lightkey" do
     depends_on macos: ">= :big_sur"
   end
   on_ventura :or_newer do
-    version "4.5.1"
-    sha256 "40dd3cff27680c5f0202d81c0b61d49ef24c5033e96618c7f29008d6937bd365"
+    version "4.6"
+    sha256 "fccd39bd1cde1ff01a04194643bd8d17fc593e4c6b82a058e22e41471fed41a9"
 
     # Updates for legacy versions are included so sorting by release date
     # return false positives, pass all version numbers to livecheck instead
