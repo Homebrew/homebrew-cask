@@ -1,8 +1,8 @@
 cask "ripx" do
-  version "6.4.1"
-  sha256 "95a670b4066d9341362dad18ad009b8c7361f921406e28084006a1230b5e1516"
+  version "7.0.0"
+  sha256 "2835adbb7b6c99b2a118c356a6885ac043649bbb4976caf5a94eced728e8afa8"
 
-  url "https://s3.us-east-2.amazonaws.com/downloads.hitnmix.com/RipX_#{version.no_dots}.dmg",
+  url "https://s3.us-east-2.amazonaws.com/downloads.hitnmix.com/RipXDAW_#{version.no_dots}.dmg",
       verified: "s3.us-east-2.amazonaws.com/downloads.hitnmix.com/"
   name "RipX"
   desc "Music stem separation and repair utility"
