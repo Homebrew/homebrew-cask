@@ -7,6 +7,8 @@ cask "raze" do
   desc "Build engine port backed by GZDoom tech"
   homepage "https://github.com/coelckers/Raze"
 
+  # Not every GitHub release provides a file for macOS, so we check multiple
+  # recent releases instead of only the "latest" release.
   livecheck do
     url :url
     regex(/^raze[._-]macos[._-]v?(\d+(?:\.\d+)+)\.zip$/i)
