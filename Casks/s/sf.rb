@@ -2,7 +2,7 @@ cask "sf" do
   arch arm: "arm64", intel: "x64"
 
   version "2.16.10,38f3e4f"
-  sha256 arm:   "68fa823b7bbd834da3556bf658d0ffd6f37af700faccbf1b005eadf2337d5775",
+  sha256 arm:   "f6845bb2d329bdae9ed835f53390b8ad60e335f0cc15cd368cef63803e09b93a",
          intel: "2fa5fc2af2cd2b525fb0822fbf870b2f8e038717d0d4bae54486a947d27524f8"
 
   url "https://developer.salesforce.com/media/salesforce-cli/sf/versions/#{version.csv.first}/#{version.csv.second}/sf-v#{version.csv.first}-#{version.csv.second}-#{arch}.pkg"
