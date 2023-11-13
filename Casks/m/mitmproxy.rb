@@ -1,6 +1,6 @@
 cask "mitmproxy" do
-  version "10.1.3"
-  sha256 "072766f57eed32be6cb6d24ca4a0509179d06d521ccceb71d47dc58d5de4f74a"
+  version "10.1.4"
+  sha256 "0d4c1caa2f6476b96c438533dcd3392a8636d4aa148c17985562ed3b320b1150"
 
   url "https://downloads.mitmproxy.org/#{version}/mitmproxy-#{version}-macos-x86_64.tar.gz"
   name "mitmproxy"
