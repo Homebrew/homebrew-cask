@@ -21,4 +21,6 @@ cask "obs-ndi" do
     "fr.palakis.obs-ndi",
     "'fr.palakis.obs-ndi'",
   ]
+
+  # No zap stanza required
 end
