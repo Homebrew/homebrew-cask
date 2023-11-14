@@ -16,7 +16,7 @@ cask "universal-gcode-platform" do
     strategy :github_latest
   end
 
-  app "Universal Gcode Platform.app"
+  app "Universal Gcode Sender.app"
 
   zap trash: [
     "~/Library/Application Support/ugsplatform",
