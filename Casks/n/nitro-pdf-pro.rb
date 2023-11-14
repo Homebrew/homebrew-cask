@@ -12,13 +12,13 @@ cask "nitro-pdf-pro" do
     regex(/href=.*?Retail[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   app "Nitro PDF Pro.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.gonitro.NitroPDFPro.retail",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.gonitro.nitropdfpro.retail.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.gonitro.nitropdfpro.retail.sfl*",
     "~/Library/Containers/com.gonitro.NitroPDFPro.retail",
   ]
 end
