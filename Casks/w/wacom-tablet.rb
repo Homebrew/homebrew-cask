@@ -1,6 +1,6 @@
 cask "wacom-tablet" do
-  version "6.4.4-2"
-  sha256 "8d7f113afeea35267fca0093e77f9978e92380ea267c47111027f74ec79c151d"
+  version "6.4.4-5"
+  sha256 "5520dcfccdb32e562e59d96f0ace5e16a76758de19bdf89689e5114f547bdba2"
 
   url "https://cdn.wacom.com/u/productsupport/drivers/mac/professional/WacomTablet_#{version}.dmg"
   name "Wacom Tablet"
@@ -17,7 +17,10 @@ cask "wacom-tablet" do
   pkg "Install Wacom Tablet.pkg"
 
   uninstall pkgutil:   "com.wacom.TabletInstaller",
-            quit:      "com.wacom.WacomTouchDriver",
+            quit:      [
+              "com.wacom.wacomtablet",
+              "com.wacom.WacomTouchDriver",
+            ],
             launchctl: [
               "com.wacom.DataStoreMgr",
               "com.wacom.IOManager",
@@ -32,7 +35,7 @@ cask "wacom-tablet" do
   zap trash: [
     "~/Library/Application Scripts/*.com.wacom.WacomTabletDriver",
     "~/Library/Application Scripts/com.wacom.*",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.wacom.wacomexperienceprogram.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.wacom.wacomexperienceprogram.sfl*",
     "~/Library/Containers/com.wacom.*",
     "~/Library/Group Containers/*.com.wacom.WacomTabletDriver",
     "~/Library/Group Containers/com.wacom.TabletDriver",
