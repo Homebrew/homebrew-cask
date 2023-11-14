@@ -19,7 +19,7 @@ cask "icab" do
 
   zap trash: [
     "~/Library/Application Support/iCab",
-    "~/Library/Caches/com.apple.helpd/Generated/iCab.help*#{version}",
+    "~/Library/Caches/com.apple.helpd/Generated/iCab.help*",
     "~/Library/Caches/de.icab.iCab",
     "~/Library/Preferences/de.icab.iCab.plist",
     "~/Library/Preferences/iCab",
