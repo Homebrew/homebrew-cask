@@ -2,11 +2,10 @@ cask "microsoft-office" do
   version "16.79.23111019"
   sha256 "be0bbc26b654c93457bc2c359d0738e913bab8d51f2cf97562c41007fceabb99"
 
-  url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_365_and_Office_#{version}_Installer.pkg",
-      verified: "officecdnmac.microsoft.com/"
+  url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_365_and_Office_#{version}_Installer.pkg"
   name "Microsoft Office"
   desc "Office suite"
-  homepage "https://products.office.com/mac/microsoft-office-for-mac/"
+  homepage "https://www.microsoft.com/en-us/microsoft-365/mac/microsoft-365-for-mac/"
 
   livecheck do
     url "https://go.microsoft.com/fwlink/p/?linkid=525133"
