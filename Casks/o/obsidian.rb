@@ -14,12 +14,13 @@ cask "obsidian" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Obsidian.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/md.obsidian.sfl*",
     "~/Library/Application Support/obsidian",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/md.obsidian.sfl2",
     "~/Library/Preferences/md.obsidian.plist",
     "~/Library/Saved Application State/md.obsidian.savedState",
   ]
