@@ -61,7 +61,7 @@ cask "microsoft-excel" do
       verified: "officecdnmac.microsoft.com/"
   name "Microsoft Excel"
   desc "Spreadsheet software"
-  homepage "https://products.office.com/en-US/excel"
+  homepage "https://www.microsoft.com/en-US/microsoft-365/excel"
 
   auto_updates true
   conflicts_with cask: [
