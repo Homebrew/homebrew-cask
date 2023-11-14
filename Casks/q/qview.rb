@@ -7,10 +7,12 @@ cask "qview" do
   desc "Image viewer"
   homepage "https://github.com/jurplel/qView/"
 
+  depends_on macos: ">= :mojave"
+
   app "qView.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.interversehq.qview.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.interversehq.qview.sfl*",
     "~/Library/Preferences/com.interversehq.qView.plist",
     "~/Library/Preferences/com.qview.qView.plist",
     "~/Library/Saved Application State/com.interversehq.qView.savedState",
