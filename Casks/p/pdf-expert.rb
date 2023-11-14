@@ -14,12 +14,12 @@ cask "pdf-expert" do
 
   auto_updates true
   conflicts_with cask: "homebrew/cask-versions/pdf-expert-beta"
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :monterey"
 
   app "PDF Expert.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.readdle.pdfexpert-mac.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.readdle.pdfexpert-mac.sfl*",
     "~/Library/Application Support/com.readdle.PDFExpert-Mac",
     "~/Library/Application Support/PDF Expert",
     "~/Library/Caches/com.readdle.PDFExpert-Installer",
