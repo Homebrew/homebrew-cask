@@ -24,13 +24,7 @@ cask "mpv" do
   homepage "https://mpv.io/"
 
   conflicts_with formula: "mpv"
-  depends_on macos: [
-    :mojave,
-    :catalina,
-    :big_sur,
-    :monterey,
-    :ventura,
-  ]
+  depends_on macos: ">= :mojave"
 
   app "mpv.app"
   binary "#{appdir}/mpv.app/Contents/MacOS/mpv"
