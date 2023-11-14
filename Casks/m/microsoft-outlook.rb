@@ -48,8 +48,8 @@ cask "microsoft-outlook" do
     end
   end
   on_monterey :or_newer do
-    version "16.78.23102801"
-    sha256 "7215fa571b3648916e2652b41047d5907ae0ce310c083b8653b339b2d148d73f"
+    version "16.79.23111019"
+    sha256 "8f3bdb13ddf9b3a83117018830e54a7981aad1a9e24c130294ac8dfba6844fc1"
 
     livecheck do
       url "https://go.microsoft.com/fwlink/p/?linkid=525137"
@@ -57,11 +57,10 @@ cask "microsoft-outlook" do
     end
   end
 
-  url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Outlook_#{version}_Installer.pkg",
-      verified: "officecdnmac.microsoft.com/"
+  url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Outlook_#{version}_Installer.pkg"
   name "Microsoft Outlook"
   desc "Email client"
-  homepage "https://products.office.com/en-us/outlook/email-and-calendar-software-microsoft-outlook"
+  homepage "https://www.microsoft.com/en-us/microsoft-365/outlook/outlook-for-business"
 
   auto_updates true
   conflicts_with cask: [
