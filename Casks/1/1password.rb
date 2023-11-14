@@ -20,7 +20,7 @@ cask "1password" do
     "homebrew/cask-versions/1password-beta",
     "homebrew/cask-versions/1password-nightly",
   ]
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "1Password.app"
 
@@ -31,6 +31,7 @@ cask "1password" do
     "~/Library/Application Scripts/com.1password.browser-support",
     "~/Library/Application Support/1Password",
     "~/Library/Application Support/Arc/User Data/NativeMessagingHosts/com.1password.1password.json",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.1password.1password.sfl*",
     "~/Library/Application Support/CrashReporter/1Password*",
     "~/Library/Application Support/Google/Chrome Beta/NativeMessagingHosts/com.1password.1password.json",
     "~/Library/Application Support/Google/Chrome Canary/NativeMessagingHosts/com.1password.1password.json",
@@ -42,7 +43,6 @@ cask "1password" do
     "~/Library/Application Support/Microsoft Edge/NativeMessagingHosts/com.1password.1password.json",
     "~/Library/Application Support/Mozilla/NativeMessagingHosts/com.1password.1password.json",
     "~/Library/Application Support/Vivaldi/NativeMessagingHosts/com.1password.1password.json",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.1password.1password.sfl2",
     "~/Library/Containers/2BUA8C4S2C.com.1password.browser-helper",
     "~/Library/Containers/com.1password.1password*",
     "~/Library/Containers/com.1password.browser-support",
