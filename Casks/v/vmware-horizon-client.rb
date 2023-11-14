@@ -35,7 +35,7 @@ cask "vmware-horizon-client" do
 
   pkg "VMware Horizon Client.pkg"
 
-  uninstall delete:    "/Applications/VMware Horizon Client.app",
+  uninstall quit:      "com.vmware.horizon",
             pkgutil:   [
               "com.vmware.horizon",
               "com.vmware.VMware.Deem",
@@ -48,14 +48,23 @@ cask "vmware-horizon-client" do
               "com.vmware.horizon.CDSHelper",
               "com.vmware.vmwetlm",
             ],
-            quit:      "com.vmware.horizon"
+            delete:    [
+              "/Applications/VMware Horizon Client.app",
+              "/Library/Application Support/VMware",
+              "/Library/LaunchAgents/com.vmware.deem.MacUIEvents.plist",
+              "/Library/LaunchDaemons/com.vmware.deemd.plist",
+              "/Library/LaunchDaemons/com.vmware.horizon.CDSHelper.plist",
+              "/Library/LaunchDaemons/com.vmware.vmwetlm.plist",
+              "/Library/Logs/VMware View Client Services.log",
+              "/Library/Logs/VMware",
+              "/Library/Preferences/com.vmware.horizon.plist",
+              "/Library/PrivilegedHelperTools/com.vmware.horizon.CDSHelper",
+            ]
 
   zap trash: [
-    "/Library/Application Support/VMware",
-    "/Library/Logs/VMware View Client Services.log",
-    "/Library/Logs/VMware",
-    "/Library/Preferences/com.vmware.horizon.plist",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vmware.horizon.sfl2",
+    "/usr/share/file/magic/vmware",
+    "~/.vmware",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vmware.horizon.sfl*",
     "~/Library/Application Support/VMware Horizon View Client",
     "~/Library/Caches/com.vmware.horizon",
     "~/Library/Logs/VMware Horizon Client",
