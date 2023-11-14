@@ -14,7 +14,7 @@ cask "forklift" do
 
   auto_updates true
   conflicts_with cask: "homebrew/cask-versions/forklift3"
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :monterey"
 
   app "ForkLift.app"
 
