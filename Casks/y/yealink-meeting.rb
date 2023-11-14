@@ -1,6 +1,6 @@
 cask "yealink-meeting" do
-  version "4.5.17,665cf6adfb297cff1c5c15182db43f07"
-  sha256 "c78856a66fa042979035cc679c680aab86a7c491c3157f9de5776789f8e9a50c"
+  version "4.5.18,34c31fa5e2985182aaef5331da7c60ca"
+  sha256 "3170ef52a77ba5a648ffe212bee2839982d076730a9185ee73fa9083f0b3ae28"
 
   url "https://download.ylyun.com/yealink-meeting/macos/latest/Yealink-Meeting.dmg?v=#{version.csv.second}"
   name "Yealink Meeting"
