@@ -61,7 +61,7 @@ cask "microsoft-outlook" do
       verified: "officecdnmac.microsoft.com/"
   name "Microsoft Outlook"
   desc "Email client"
-  homepage "https://products.office.com/en-us/outlook/email-and-calendar-software-microsoft-outlook"
+  homepage "https://www.microsoft.com/en-us/microsoft-365/outlook/outlook-for-business"
 
   auto_updates true
   conflicts_with cask: [
