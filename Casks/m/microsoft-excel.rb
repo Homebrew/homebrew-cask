@@ -48,8 +48,8 @@ cask "microsoft-excel" do
     end
   end
   on_monterey :or_newer do
-    version "16.78.23102801"
-    sha256 "e3781103edeb13b4d9f7e84fcde5bcee7953060b724d31ac0fd81ec6812d0b90"
+    version "16.79.23111019"
+    sha256 "4cdc94d47053742bd2c6932cde7b929cea111a67ac84e5263427b9cf6d48c2ef"
 
     livecheck do
       url "https://go.microsoft.com/fwlink/p/?linkid=525135"
@@ -57,11 +57,10 @@ cask "microsoft-excel" do
     end
   end
 
-  url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Excel_#{version}_Installer.pkg",
-      verified: "officecdnmac.microsoft.com/"
+  url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Excel_#{version}_Installer.pkg"
   name "Microsoft Excel"
   desc "Spreadsheet software"
-  homepage "https://products.office.com/en-US/excel"
+  homepage "https://www.microsoft.com/en-US/microsoft-365/excel"
 
   auto_updates true
   conflicts_with cask: [
