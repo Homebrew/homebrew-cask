@@ -20,6 +20,6 @@ cask "camtasia" do
   zap trash: [
     "/Users/Shared/TechSmith/Camtasia",
     "~/Library/Application Support/TechSmith/Camtasia#{version.major}",
-    "~/Library/Preferences/com.techsmith.camtasia2021.plist",
+    "~/Library/Preferences/com.techsmith.camtasia#{version.major}.plist",
   ]
 end
