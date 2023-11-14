@@ -13,13 +13,13 @@ cask "devonthink" do
   end
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :mojave"
 
   app "DEVONthink #{version.major}.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.devon-technologies.*",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.devon-technologies.think*.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.devon-technologies.think*.sfl*",
     "~/Library/Application Support/DEVONthink*",
     "~/Library/Caches/com.apple.helpd/Generated/com.devontechnologies.devonthink.help*",
     "~/Library/Caches/com.devon-technologies.think*",
