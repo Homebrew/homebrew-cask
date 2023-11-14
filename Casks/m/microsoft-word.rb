@@ -61,7 +61,7 @@ cask "microsoft-word" do
       verified: "officecdnmac.microsoft.com/"
   name "Microsoft Word"
   desc "Word processor"
-  homepage "https://products.office.com/en-US/word"
+  homepage "https://www.microsoft.com/en-US/microsoft-365/word"
 
   auto_updates true
   conflicts_with cask: [
