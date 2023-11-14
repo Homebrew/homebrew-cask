@@ -9,6 +9,8 @@ cask "sourcetree" do
     livecheck do
       skip "Legacy version"
     end
+
+    depends_on macos: ">= :el_capitan"
   end
   on_high_sierra do
     version "3.2.1,225"
@@ -43,6 +45,8 @@ cask "sourcetree" do
       url "https://product-downloads.atlassian.com/software/sourcetree/Appcast/SparkleAppcast.xml"
       strategy :sparkle
     end
+
+    depends_on macos: ">= :catalina"
   end
 
   name "Atlassian SourceTree"
@@ -50,7 +54,6 @@ cask "sourcetree" do
   homepage "https://www.sourcetreeapp.com/"
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
 
   app "Sourcetree.app"
   binary "#{appdir}/Sourcetree.app/Contents/Resources/stree"
@@ -59,7 +62,7 @@ cask "sourcetree" do
             quit:      "com.torusknot.SourceTreeNotMAS"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.torusknot.sourcetreenotmas.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.torusknot.sourcetreenotmas.sfl*",
     "~/Library/Application Support/SourceTree",
     "~/Library/Caches/com.torusknot.SourceTreeNotMAS",
     "~/Library/Logs/Sourcetree",
