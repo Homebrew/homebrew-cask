@@ -59,6 +59,8 @@ cask "omnigraffle" do
       url "https://www.omnigroup.com/download/latest/omnigraffle/"
       strategy :header_match
     end
+
+    depends_on macos: ">= :big_sur"
   end
 
   name "OmniGraffle"
@@ -73,7 +75,7 @@ cask "omnigraffle" do
     "~/Library/Application Scripts/com.omnigroup.OmniGraffle#{version.major}",
     "~/Library/Application Support/CloudDocs/session/containers/iCloud.com.omnigroup.OmniGraffle.plist",
     "~/Library/Application Support/CloudDocs/session/containers/iCloud.com.omnigroup.OmniGraffle/",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.omnigroup.omnigraffle#{version.major}.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.omnigroup.omnigraffle#{version.major}.sfl*",
     "~/Library/Containers/com.omnigroup.OmniGraffle#{version.major}",
     "~/Library/Mobile Documents/iCloud~com~omnigroup~OmniGraffle",
   ]
