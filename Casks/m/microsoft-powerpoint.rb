@@ -61,7 +61,7 @@ cask "microsoft-powerpoint" do
       verified: "officecdnmac.microsoft.com/"
   name "Microsoft PowerPoint"
   desc "Presentation software"
-  homepage "https://products.office.com/en-US/powerpoint"
+  homepage "https://www.microsoft.com/en-US/microsoft-365/powerpoint"
 
   auto_updates true
   conflicts_with cask: [
