@@ -12,7 +12,7 @@ cask "pdfelement" do
     regex(%r{<Version>(\d+(?:\.\d+)+)</Version>}i)
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :catalina"
 
   app "PDFelement.app"
 
@@ -22,7 +22,7 @@ cask "pdfelement" do
   ]
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.wondershare.pdfelement.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.wondershare.pdfelement.sfl*",
     "~/Library/Application Support/com.wondershare.PDFelement",
     "~/Library/Caches/com.wondershare.PDFelement",
     "~/Library/Caches/PDFelement",
