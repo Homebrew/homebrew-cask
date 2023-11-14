@@ -7,11 +7,13 @@ cask "kubecontext" do
   desc "Menu bar app for managing Kubernetes contexts"
   homepage "https://github.com/turkenh/KubeContext"
 
+  depends_on macos: ">= :big_sur"
+
   app "KubeContext.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.ht.kubecontext",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.ht.kubecontext.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.ht.kubecontext.sfl*",
     "~/Library/Containers/com.ht.kubecontext",
   ]
 end
