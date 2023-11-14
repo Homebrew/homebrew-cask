@@ -12,13 +12,13 @@ cask "crystalmaker" do
     regex(/<version[^>]+?number=["']?v?(\d+(?:\.\d+)+)["']?[^>]*?>/i)
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   app "CrystalMaker.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.crystalmaker.crystalmaker.v#{version.major}",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.crystalmaker.crystalmaker.v#{version.major}.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.crystalmaker.crystalmaker.v#{version.major}.sfl*",
     "~/Library/Containers/com.crystalmaker.crystalmaker.v#{version.major}",
   ]
 end
