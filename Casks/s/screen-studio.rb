@@ -19,12 +19,12 @@ cask "screen-studio" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :high_sierra"
 
   app "Screen Studio.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.timpler.screenstudio.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.timpler.screenstudio.sfl*",
     "~/Library/Application Support/Screen Studio",
     "~/Library/Caches/com.timpler.screenstudio",
     "~/Library/Caches/com.timpler.screenstudio.ShipIt",
