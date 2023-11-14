@@ -16,12 +16,13 @@ cask "tower" do
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "Tower.app"
   binary "#{appdir}/Tower.app/Contents/MacOS/gittower"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.fournova.tower*.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.fournova.tower*.sfl*",
     "~/Library/Application Support/com.fournova.Tower*",
     "~/Library/Caches/com.fournova.Tower*",
     "~/Library/Preferences/com.fournova.Tower*.plist",
