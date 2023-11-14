@@ -32,7 +32,7 @@ cask "wacom-tablet" do
   zap trash: [
     "~/Library/Application Scripts/*.com.wacom.WacomTabletDriver",
     "~/Library/Application Scripts/com.wacom.*",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.wacom.wacomexperienceprogram.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.wacom.wacomexperienceprogram.sfl*",
     "~/Library/Containers/com.wacom.*",
     "~/Library/Group Containers/*.com.wacom.WacomTabletDriver",
     "~/Library/Group Containers/com.wacom.TabletDriver",
