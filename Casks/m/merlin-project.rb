@@ -12,13 +12,13 @@ cask "merlin-project" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :mojave"
 
   app "Merlin Project.app"
 
   zap trash: [
     "~/Library/Application Scripts/net.projectwizards.merlinproject",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.projectwizards.merlinproject.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.projectwizards.merlinproject.sfl*",
     "~/Library/Containers/net.projectwizards.merlinproject",
   ]
 end
