@@ -14,12 +14,12 @@ cask "icollections" do
     end
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "iCollections.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.naarak.collections.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.naarak.collections.sfl*",
     "~/Library/Application Support/com.naarak.Collections",
     "~/Library/Preferences/com.naarak.Collections.plist",
   ]
