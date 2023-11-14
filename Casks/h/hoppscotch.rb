@@ -16,8 +16,8 @@ cask "hoppscotch" do
 
   zap trash: [
     "~/Library/Application Support/io.hoppscotch.desktop",
+    "~/Library/Caches/io.hoppscotch.desktop",
     "~/Library/Saved Application State/io.hoppscotch.desktop.savedState",
     "~/Library/WebKit/io.hoppscotch.desktop",
-    "~/Library/Caches/io.hoppscotch.desktop",
   ]
 end
