@@ -17,11 +17,13 @@ cask "grandperspective" do
   desc "Graphically shows disk usage within a file system"
   homepage "https://grandperspectiv.sourceforge.net/"
 
+  depends_on macos: ">= :big_sur"
+
   app "GrandPerspective.app"
 
   zap trash: [
     "~/Library/Application Scripts/net.courceforge.grandperspectiv",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.sourceforge.grandperspectiv.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.sourceforge.grandperspectiv.sfl*",
     "~/Library/Containers/net.sourceforge.grandperspectiv",
     "~/Library/Preferences/net.sourceforge.grandperspectiv.plist",
   ]
