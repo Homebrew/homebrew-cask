@@ -48,8 +48,8 @@ cask "microsoft-word" do
     end
   end
   on_monterey :or_newer do
-    version "16.78.23102801"
-    sha256 "5d9bbc4bdb252d0a337d8c22f48a06d7e3d1e3ffe1d19976546925afb33704b4"
+    version "16.79.23111019"
+    sha256 "ef49b0052157a1f0e22cb4a3a1060d6366d5256b928184dff9187fcabc56d8dd"
 
     livecheck do
       url "https://go.microsoft.com/fwlink/p/?linkid=525134"
@@ -57,11 +57,10 @@ cask "microsoft-word" do
     end
   end
 
-  url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Word_#{version}_Installer.pkg",
-      verified: "officecdnmac.microsoft.com/"
+  url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Word_#{version}_Installer.pkg"
   name "Microsoft Word"
   desc "Word processor"
-  homepage "https://products.office.com/en-US/word"
+  homepage "https://www.microsoft.com/en-US/microsoft-365/word"
 
   auto_updates true
   conflicts_with cask: [
