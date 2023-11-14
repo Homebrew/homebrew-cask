@@ -60,14 +60,16 @@ cask "powerphotos" do
     end
   end
   on_monterey :or_newer do
-    version "2.5.5b1"
+    version "2.5.3"
     sha256 :no_check
 
     url "https://www.fatcatsoftware.com/powerphotos/PowerPhotos.zip"
 
     livecheck do
       url "https://www.fatcatsoftware.com/powerphotos/downloads/appcast.xml"
-      strategy :sparkle, &:short_version
+      strategy :sparkle do |items|
+        items.find { |item| item.channel.nil? }&.short_version
+      end
     end
 
     depends_on macos: ">= :monterey"
