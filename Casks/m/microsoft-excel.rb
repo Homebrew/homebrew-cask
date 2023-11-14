@@ -57,8 +57,7 @@ cask "microsoft-excel" do
     end
   end
 
-  url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Excel_#{version}_Installer.pkg",
-      verified: "officecdnmac.microsoft.com/"
+  url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Excel_#{version}_Installer.pkg"
   name "Microsoft Excel"
   desc "Spreadsheet software"
   homepage "https://www.microsoft.com/en-US/microsoft-365/excel"
