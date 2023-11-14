@@ -48,8 +48,8 @@ cask "microsoft-powerpoint" do
     end
   end
   on_monterey :or_newer do
-    version "16.78.23102801"
-    sha256 "dbc2f6ea8b1397c15a1a3e28aa5b994059bf6e686adf100d2a1758e721e4e186"
+    version "16.79.23111019"
+    sha256 "0429488f4e90243e032489d769ac7bc098bb1d8e92455f2606e0934cdd9a1406"
 
     livecheck do
       url "https://go.microsoft.com/fwlink/p/?linkid=525136"
@@ -61,7 +61,7 @@ cask "microsoft-powerpoint" do
       verified: "officecdnmac.microsoft.com/"
   name "Microsoft PowerPoint"
   desc "Presentation software"
-  homepage "https://products.office.com/en-US/powerpoint"
+  homepage "https://www.microsoft.com/en-US/microsoft-365/powerpoint"
 
   auto_updates true
   conflicts_with cask: [
