@@ -1,5 +1,5 @@
 cask "waves-central" do
-  version "14.4.2"
+  version "14.4.3"
   sha256 :no_check
 
   url "https://cf-installers.waves.com/WavesCentral/Install_Waves_Central.dmg"
