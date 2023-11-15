@@ -35,7 +35,10 @@ cask "steelseries-gg" do
               sudo:       true,
             },
             pkgutil:   "com.steelseries.*",
-            delete:    "/Library/Application Support/SteelSeries GG"
+            delete:    [
+              "/Applications/SteelSeries GG/SteelSeries GG.app",
+              "/Library/Application Support/SteelSeries GG",
+            ]
 
   zap trash: [
     "~/Library/Application Support/steelseries-gg-client",
