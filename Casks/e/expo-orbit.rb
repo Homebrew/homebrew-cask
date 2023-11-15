@@ -1,6 +1,6 @@
 cask "expo-orbit" do
-  version "0.1.3"
-  sha256 "c49a59a3a9651ea65b929b72f3b69b86f31950b79aa8dd70c3d8a7df343230fb"
+  version "1.0.0"
+  sha256 "69adbe14590ee8114e192a6745cf1af4869dc8464af0d190d3b74df82c1497af"
 
   url "https://github.com/expo/orbit/releases/download/expo-orbit-v#{version}/expo-orbit.v#{version}.zip"
   name "Expo Orbit"
