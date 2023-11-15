@@ -1,6 +1,6 @@
 cask "raze" do
-  version "1.7.1"
-  sha256 "b2b262b029fff58575cd5f5a9a2df65bf8fe3770d68a27ef45d5ecabee467be8"
+  version "1.8.1"
+  sha256 "32ca4c208bae098e5045acc5fc6caa91336b2713d96a0dc95ce6b7f682804b86"
 
   url "https://github.com/coelckers/Raze/releases/download/#{version}/raze-macos-#{version}.zip"
   name "Raze"
