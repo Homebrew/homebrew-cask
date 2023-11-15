@@ -1,6 +1,6 @@
 cask "kaleidoscope" do
-  version "4.2.2,4863"
-  sha256 "6c74ad782bf5e0d0fb3c053c5bc12b16ce73f06d29cb4476d76de726664e691b"
+  version "4.3,5020"
+  sha256 "3245428d5cba433726267122b065792cd3eb09146f69727889e18a048d6168ab"
 
   url "https://updates.kaleidoscope.app/v#{version.major}/prod/Kaleidoscope-#{version.csv.first}-#{version.csv.second}.app.zip"
   name "Kaleidoscope"
