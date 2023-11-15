@@ -1,6 +1,6 @@
 cask "steelseries-gg" do
-  version "50.0.0"
-  sha256 "95d005a943223261ac4c093bdd9f787b4ca5a06bbc2d839236f946fb4a72189c"
+  version "51.0.0"
+  sha256 "b9b2399a61470af1ee3af6382030a9655c3700ef508fac96ee49b3a3e93fdb01"
 
   url "https://engine.steelseriescdn.com/SteelSeriesGG#{version}.pkg",
       verified: "engine.steelseriescdn.com/"
@@ -35,7 +35,10 @@ cask "steelseries-gg" do
               sudo:       true,
             },
             pkgutil:   "com.steelseries.*",
-            delete:    "/Library/Application Support/SteelSeries GG"
+            delete:    [
+              "/Applications/SteelSeries GG/SteelSeries GG.app",
+              "/Library/Application Support/SteelSeries GG",
+            ]
 
   zap trash: [
     "~/Library/Application Support/steelseries-gg-client",
