@@ -1,5 +1,5 @@
 cask "logi-options-plus" do
-  version "1.56.474970"
+  version "1.58.484418"
   sha256 :no_check
 
   url "https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer.zip",
