@@ -12,5 +12,7 @@ cask "gifrocket" do
     regex(/href=.*?Gifrocket.v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
+  depends_on arch: :x86_64
+
   app "Gifrocket.app"
 end
