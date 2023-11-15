@@ -2,15 +2,15 @@ cask "wireshark" do
   arch arm: "Arm", intel: "Intel"
   livecheck_arch = on_arch_conditional arm: "arm", intel: "x86-"
 
-  version "4.0.10"
+  version "4.2.0"
 
   on_arm do
-    sha256 "178201c6b010e8ee7058a640b2592a8759a8ffa323f5a04434273a3501530a94"
+    sha256 "d2fba92c2f88271fad6929e8d8d06d50992fd82e00230c9f503c57a4bfe4f54f"
 
     depends_on macos: ">= :big_sur"
   end
   on_intel do
-    sha256 "f0ae6cfc2ecf1e7f5b1475c91bb2c5f7ac63174405a667056bb29b8c17f1180b"
+    sha256 "9e10e57a24ea5c8f66fa6dab8d9b21751e8b370d9ef2a5f4be8b6c29dc4437b6"
 
     depends_on macos: ">= :high_sierra"
   end
@@ -55,7 +55,6 @@ cask "wireshark" do
   manpage "#{appdir}/Wireshark.app/Contents/Resources/share/man/man1/capinfos.1"
   manpage "#{appdir}/Wireshark.app/Contents/Resources/share/man/man1/captype.1"
   manpage "#{appdir}/Wireshark.app/Contents/Resources/share/man/man1/ciscodump.1"
-  manpage "#{appdir}/Wireshark.app/Contents/Resources/share/man/man1/dftest.1"
   manpage "#{appdir}/Wireshark.app/Contents/Resources/share/man/man1/dumpcap.1"
   manpage "#{appdir}/Wireshark.app/Contents/Resources/share/man/man1/editcap.1"
   manpage "#{appdir}/Wireshark.app/Contents/Resources/share/man/man1/etwdump.1"
