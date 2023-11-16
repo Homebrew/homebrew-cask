@@ -1,6 +1,6 @@
 cask "tinypng4mac" do
-  version "1.0.6"
-  sha256 "971c2492fb0d3d400b0d4e147083a8ec9655747f966c553aefb7d0cd40b11ff7"
+  version "1.0.7"
+  sha256 "4298642b0df6a310ce5131e4534deb826e4eef98fa8d2baf516624f3a15f4c23"
 
   url "https://github.com/kyleduo/TinyPNG4Mac/releases/download/v#{version}/TinyPNG4Mac_#{version.dots_to_underscores}.zip"
   name "TinyPNG4Mac"
