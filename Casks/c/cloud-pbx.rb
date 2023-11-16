@@ -1,6 +1,6 @@
 cask "cloud-pbx" do
-  version "22.9.40.135"
-  sha256 "848401618c535a6eaedb1da765c1b6c25212a4bb915c4a7a3174f9167fb8636c"
+  version "22.9.43.12"
+  sha256 "ce01e374cd476233b0078243961eaf85a4d8db62dfa5369197a02f8a461c3961"
 
   url "https://cpbx-hilfe.deutschland-lan.de/downloads/desktop-clients/cloud-pbx.osx-#{version}",
       verified: "cpbx-hilfe.deutschland-lan.de/downloads/desktop-clients/"
