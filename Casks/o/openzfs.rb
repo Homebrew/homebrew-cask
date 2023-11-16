@@ -7,8 +7,8 @@ cask "openzfs" do
     end
     on_ventura :or_newer do
       arch arm: "Ventura-13-arm64"
-      version "2.1.6,434"
-      sha256 "3f9fa7a9d2b101a714f77d9c00f32b9e03f0cbfed9f2301f6eb6efb7fe13fe1e"
+      version "2.2.0,494"
+      sha256 "0bd8871abf1658d18b0b5a38349f34f8ace4698676028ca3957c515836b1e9a5"
     end
   end
   on_intel do
@@ -49,8 +49,8 @@ cask "openzfs" do
     end
     on_ventura :or_newer do
       arch intel: "Ventura-13"
-      version "2.1.6,437"
-      sha256 "2343660854284fae1163b9a822981805d1b9b254dee79a18f7be9413cfb27415"
+      version "2.2.0,494"
+      sha256 "0bd8871abf1658d18b0b5a38349f34f8ace4698676028ca3957c515836b1e9a5"
     end
   end
 
