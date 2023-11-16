@@ -9,6 +9,5 @@
   "opal": "opal-composer",
   "owasp-zap": "zap",
   "remotion": "multiapp",
-  "streamlabs-obs": "streamlabs",
-  "sublime-text3": "sublime-text"
+  "streamlabs-obs": "streamlabs"
 }
