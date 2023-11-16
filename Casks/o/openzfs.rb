@@ -2,8 +2,8 @@ cask "openzfs" do
   on_arm do
     on_monterey :or_older do
       arch arm: "Monterey-12-arm64"
-      version "2.1.6,433"
-      sha256 "abb2f09081f9175190471dad5414b2a45c5d12f7e78ec55aa55ffb1e4822e3f8"
+      version "2.2.0,496"
+      sha256 "2fb66a62d21319a6d818035e0c744e5991e485792ed5f2b9b32f11fb1d846f2a"
     end
     on_ventura :or_newer do
       arch arm: "Ventura-13-arm64"
@@ -39,18 +39,18 @@ cask "openzfs" do
     end
     on_big_sur do
       arch intel: "Big.Sur-11"
-      version "2.1.6,431"
-      sha256 "982172f0974fca4714c718fdf2669b0727865d75f0cdc07838c417ea75201a6a"
+      version "2.2.0,491"
+      sha256 "9e0a5616c9876b3df1cad6492e3522992db9af18a894a3ff1c3c1aae4bd11c42"
     end
     on_monterey do
       arch intel: "Monterey-12"
-      version "2.1.6,432"
-      sha256 "c458240c5b5433f6330401b6570438ed486b3324ee32f81951dc24b86df425f3"
+      version "2.2.0,493"
+      sha256 "3549fcd07820ec75c6f21674988c7ad41dfd834976d9d8ca54e353ee46af3eaf"
     end
     on_ventura :or_newer do
       arch intel: "Ventura-13"
-      version "2.2.0,494"
-      sha256 "0bd8871abf1658d18b0b5a38349f34f8ace4698676028ca3957c515836b1e9a5"
+      version "2.2.0,495"
+      sha256 "8818bb186c610e9d51b8e48ff4ad545794c835b0df246ff22b3e0dce37d74aba"
     end
   end
 
