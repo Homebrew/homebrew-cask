@@ -7,17 +7,11 @@ cask "pass-simple" do
   desc "GUI for pass cli util"
   homepage "https://sourceforge.net/projects/pass-simple/"
 
-  livecheck do
-    url "https://sourceforge.net/projects/pass-simple/rss?"
-    regex(/pass-simple-macos-(\d+(?:\.\d+)+)-Darwin\.dmg/i)
-    strategy :page_match
-  end
-
-  app "pass-simple.app"
-
   depends_on macos: ">= :big_sur"
   depends_on formula: "pass"
   depends_on formula: "pinentry-mac"
+
+  app "pass-simple.app"
 
   zap trash: [
     "~/Library/Caches/Pass simple",
