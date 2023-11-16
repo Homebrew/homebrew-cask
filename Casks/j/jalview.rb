@@ -1,5 +1,5 @@
 cask "jalview" do
-  arch  arm: "aarch64", intel: "x64"
+  arch arm: "aarch64", intel: "x64"
 
   version "2.11.3.0"
   sha256 arm:   "c67afbdc207db642f96454449e8594bb80aef4e0996faa2e7ddacd891638955c",
