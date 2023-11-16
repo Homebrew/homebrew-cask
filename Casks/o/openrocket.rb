@@ -1,9 +1,9 @@
 cask "openrocket" do
   arch arm: "AppleSilicon", intel: "Intel"
 
-  version "22.02"
-  sha256 arm:   "bd1ba7780ffbb03413b5dda37dae1304d202c38b1b0336b93133037410cf66e6",
-         intel: "54828d7cadde3ef97d7899b03befca2fe56fcad9b4868d28ece9afecff7d38e4"
+  version "23.09"
+  sha256 arm:   "4eca72cf41e46e75414ef7eb8c5ca697a6b39a6907df7b149610458e8bf936e9",
+         intel: "bb2ca248b34e847fe0b45135edb93362b25fc4cce457828b8f9245384864d397"
 
   url "https://github.com/openrocket/openrocket/releases/download/release-#{version}/OpenRocket-#{version}-macOS-#{arch}.dmg",
       verified: "github.com/openrocket/openrocket/"
