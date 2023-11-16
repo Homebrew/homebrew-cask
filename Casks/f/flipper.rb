@@ -1,6 +1,6 @@
 cask "flipper" do
-  version "0.238.0"
-  sha256 "45d1419e76e0b757e42503c5447604f03aee4b80bc6f628b345c0cd7fe37e067"
+  version "0.239.0"
+  sha256 "192dc10ae4017c223074b89c5581326c26dde215f29e53bb6547a44c9898464c"
 
   url "https://github.com/facebook/flipper/releases/download/v#{version}/Flipper-mac.dmg",
       verified: "github.com/facebook/flipper/"
