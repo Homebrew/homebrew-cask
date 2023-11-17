@@ -1,9 +1,9 @@
 cask "responsively" do
   arch arm: "-arm64"
 
-  version "1.9.0"
-  sha256 arm:   "beb69910f12ad194d797016f6011d34fb875bc9a389ecbbfd3960753ae5beb57",
-         intel: "cb63fa5d0da37ca2142c0bc7b1c6174805e6e599cf6ec7243cdda7be7675e8de"
+  version "1.10.0"
+  sha256 arm:   "4a5956190e9602c9484dc6f958e2187a5213746cb33362900503442aadf6ed93",
+         intel: "9c4a3b8127210e0b969eead4920787a4d9044eb49773d3c888aac627d6dcf49c"
 
   url "https://github.com/responsively-org/responsively-app-releases/releases/download/v#{version}/ResponsivelyApp-#{version}#{arch}.dmg",
       verified: "github.com/responsively-org/responsively-app-releases/"
