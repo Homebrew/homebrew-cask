@@ -1,9 +1,9 @@
 cask "binance" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.48.4"
-  sha256  arm:   "9ea1c3ec2f29e5ad6b79b86dd3a15f80290e97e9240066c338eb16b529cda604",
-          intel: "0072c279122e2e7282b7d306b858b71b55677b4ffa24be21e85a74a5c3ba4d03"
+  version "1.48.5"
+  sha256  arm:   "59836573c0697be9ded05080754d9c7b3ed517c0204a24af9e5e6ebd64935eab",
+          intel: "da45a1ddf4e5347c892088d21d0d0398e3562ba81c64cce25534770580b5952b"
 
   url "https://ftp.binance.com/electron-desktop/mac/production/binance-#{version}-#{arch}.dmg"
   name "Binance"
