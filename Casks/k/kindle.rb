@@ -8,12 +8,8 @@ cask "kindle" do
   desc "Interface for reading and syncing eBooks"
   homepage "https://www.amazon.com/gp/digital/fiona/kcp-landing-page"
 
-  livecheck do
-    url "https://www.amazon.com/kindlemacdownload/ref=klp_hz_mac"
-    strategy :header_match
-  end
-
   auto_updates true
+  depends_on macos: ">= :mojave"
 
   app "Kindle.app"
 
@@ -27,4 +23,12 @@ cask "kindle" do
     "~/Library/Preferences/com.amazon.Kindle.plist",
     "~/Library/Saved Application State/com.amazon.Kindle.savedState",
   ]
+
+  caveats do
+    discontinued
+    requires_rosetta
+    <<~EOS
+      Please see https://www.amazon.com/kindle-dbs/arp/B0C9PRPV28 for information regarding application end of life.
+    EOS
+  end
 end
