@@ -1,8 +1,8 @@
 cask "glaze" do
   arch arm: "m1", intel: "Intel"
 
-  version "1.0.1"
-  sha256 arm:   "1d1bf28c09e3674c3682a9bbe0c4de639469afcf41ce29420424e7b8809ec95f",
+  version "1.1"
+  sha256 arm:   "633eff6264fd39f6f8ea3b16b1a4aaf2f8fe4830126c055bdedf20ed275a8a2c",
          intel: "a33c52f059a5364d68c036da80fe4afeabc5d1a4355f51fa0b29cf6333785669"
 
   on_intel do
