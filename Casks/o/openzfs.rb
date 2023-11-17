@@ -54,7 +54,7 @@ cask "openzfs" do
     end
     on_ventura do
       arch intel: "Ventura-13"
-      version "2.2.0,494"
+      version "2.2.0,495"
       sha256 "0bd8871abf1658d18b0b5a38349f34f8ace4698676028ca3957c515836b1e9a5"
     end
     on_sonoma :or_newer do
