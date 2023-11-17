@@ -28,7 +28,7 @@ cask "kindle" do
     discontinued
     requires_rosetta
     <<~EOS
-      Please see https://www.amazon.com/kindle-dbs/arp/B0C9PRPV28 for regarding application end of life.
+      Please see https://www.amazon.com/kindle-dbs/arp/B0C9PRPV28 for information regarding application end of life.
     EOS
   end
 end
