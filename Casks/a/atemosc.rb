@@ -1,19 +1,28 @@
 cask "atemosc" do
-  version "4.2.0"
-  sha256 "febccd6f839b80716c3d2fef23fa441a2a5e69865b1a42a841ccdc17d97a93a7"
+  arch arm: "-arm64"
 
-  url "https://github.com/SteffeyDev/atemOSC/releases/download/v#{version}/atemOSC_#{version}.dmg",
-      verified: "github.com/SteffeyDev/atemOSC/"
+  version "5.0.0"
+  sha256 "a7a2b7f39c8a19e66739fd51427ff4b8c90c7f9357a9c7a7c47da71c99f90c4d"
+
+  url "https://atemosc.com/download/atemOSC-#{version}#{arch}.dmg"
   name "atemOSC"
   desc "Control BMD ATEM video switchers with OSC"
   homepage "https://www.atemosc.com/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://www.atemosc.com/download/latest-mac.yml"
+    strategy :electron_builder
   end
+
+  auto_updates true # Requires a license key to enable
+  depends_on macos: ">= :high_sierra"
 
   app "atemOSC.app"
 
-  zap trash: "~/Library/Caches/cc.buechele.atemOSC"
+  zap trash: [
+    "~/Library/Application Support/atemOSC",
+    "~/Library/Logs/atemOSC",
+    "~/Library/Preferences/dev.steffey.atemOSC.plist",
+    "~/Library/Saved Application State/dev.steffey.atemOSC.savedState",
+  ]
 end
