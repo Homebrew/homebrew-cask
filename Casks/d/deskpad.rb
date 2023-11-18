@@ -1,6 +1,6 @@
 cask "deskpad" do
-  version "1.2"
-  sha256 "7ec3dee848da291c9f33b1f471dbc7f1fd77c72d34edee9d3496b9b7177d82c6"
+  version "1.3.1"
+  sha256 "5b78207c71a2bd4f1bb21e42175e09b9acf25631c23689c7609eb3767e3f0a25"
 
   url "https://github.com/Stengo/DeskPad/releases/download/v#{version}/DeskPad.app.zip"
   name "DeskPad"
