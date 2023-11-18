@@ -17,11 +17,7 @@ cask "lulu" do
 
   app "LuLu.app"
 
-  uninstall script: {
-    executable: "#{staged_path}/LuLu.app/Contents/Resources/LuLu Uninstaller.app/Contents/MacOS/LuLu Uninstaller",
-    args:       ["-uninstall"],
-    sudo:       true,
-  }
+  # Lulu's uninstaller removes all preference files breaking brew upgrade
 
   zap trash: [
     "~/Library/Caches/com.objective-see.lulu",
