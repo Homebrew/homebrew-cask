@@ -12,14 +12,18 @@ cask "epilogue-playback" do
   homepage "https://www.epilogue.co/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://www.epilogue.co/v2/api/update"
+    strategy :json do |json|
+      v = json["operator-app"]["osx"]["version"]
+      "#{v["major"]}.#{v["minor"]}.#{v["patch"]}"
+    end
   end
 
   app "Playback.app"
 
   zap trash: [
     "~/Library/Application Support/Epilogue/Playback",
+    "~/Library/Preferences/co.epilogue.Playback.plist",
     "~/Library/Saved Application State/com.epilogue.operator.savedState",
   ]
 end
