@@ -12,7 +12,7 @@ cask "ovito" do
 
   livecheck do
     url "https://www.ovito.org/os-downloads/"
-    regex(/Version (\d+(?:\.\d+)*)/i)
+    regex(/version\s(\d+(?:\.\d+)*)/i)
     strategy :page_match
   end
 
