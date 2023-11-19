@@ -11,16 +11,21 @@ cask "standard-notes" do
   desc "Free, open-source, and completely encrypted notes app"
   homepage "https://standardnotes.org/"
 
-  # Using only desktop releases that are not marked as pre-release to align
-  # with the auto-updater strategy used by the app.
+  # The app's auto-updater avoids versions marked as "pre-release" on GitHub,
+  # so we do the same thing in this check.
   # See: https://github.com/Homebrew/homebrew-cask/pull/145753#issuecomment-1521465815
+  # We specifically check the GitHub releases page with the `prerelease:false`
+  # query (instead of using the `GithubReleases` strategy) because upstream
+  # publishes a lot of pre-release versions and they may push the most recent
+  # stable desktop release out of the most recent info from the GitHub API.
   livecheck do
     url "https://github.com/standardnotes/app/releases?q=prerelease%3Afalse"
-    regex(%r{href=["'].*?tags/@standardnotes/desktop@(\d+(?:\.\d+)+).*?["']}i)
+    regex(%r{href=["']?[^"' >]*?/tag/%40standardnotes%2Fdesktop%40(\d+(?:\.\d+)+)["' >]}i)
     strategy :page_match
   end
 
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "Standard Notes.app"
 
