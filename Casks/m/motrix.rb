@@ -5,18 +5,18 @@ cask "motrix" do
   sha256 arm:   "d73f4d69f3597ad8f98b821aa0fb58ba964bf85061b4a13f00edcb3618001c0e",
          intel: "b644cc83aa98224147ef2942fd49ecfc8cdcebfce9616550fa35caa6850c4178"
 
-  url "https://dl.moapp.me/https://github.com/agalwood/Motrix/releases/download/v#{version}/Motrix-#{version}#{arch}.dmg",
-      verified: "dl.moapp.me/"
+  url "https://github.com/agalwood/Motrix/releases/download/v#{version}/Motrix-#{version}#{arch}.dmg",
+      verified: "github.com/agalwood/Motrix/"
   name "Motrix"
   desc "Open-source download manager"
   homepage "https://motrix.app/"
 
-  # A tag using the stable version format is sometimes marked as "Pre-release"
-  # on the GitHub releases page, so we have to use the `GithubLatest` strategy.
   livecheck do
-    url "https://github.com/agalwood/Motrix/releases"
+    url :url
     strategy :github_latest
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Motrix.app"
 
