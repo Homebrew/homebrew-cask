@@ -6,7 +6,7 @@ cask "epilogue-playback" do
          intel: "22deefc22a3215e4c32d1e573e0c96515922c282f16d77cb3ca2914c7a824d1c"
 
   url "https://epilogue.nyc3.digitaloceanspaces.com/releases/software/Playback/version/#{version}/release/mac/Playback.#{arch}.dmg",
-      verified: "epilogue.nyc3.digitaloceanspaces.com/releases/software/Playback/"
+      verified: "epilogue.nyc3.digitaloceanspaces.com/releases/software/Playback/version/"
   name "Epilogue Playback"
   desc "Play and manage Game Boy cartridges on your computer"
   homepage "https://www.epilogue.co/"
@@ -18,6 +18,8 @@ cask "epilogue-playback" do
       "#{v["major"]}.#{v["minor"]}.#{v["patch"]}"
     end
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "Playback.app"
 
