@@ -16,12 +16,19 @@ cask "eloston-chromium" do
   desc "Google Chromium, sans integration with Google"
   homepage "https://ungoogled-software.github.io/ungoogled-chromium-binaries/"
 
+  # Releases are separated by architecture, so we have to check multiple recent
+  # releases instead of only the "latest" release.
   livecheck do
-    url "https://github.com/ungoogled-software/ungoogled-chromium-macos/releases?q=prerelease%3Afalse"
-    regex(%r{href=["']?[^"' >]*?/tree/v?(\d+(?:[.-]\d+)+)(?:[._-]#{arch})?(?:[._-]+?(\d+(?:\.\d+)*))?["' >]}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map do |match|
-        (match.length > 1) ? "#{match[0]},#{match[1]}" : match[0]
+    url :url
+    regex(/^v?(\d+(?:[.-]\d+)+)(?:[._-]#{arch})?(?:[._-]+?(\d+(?:\.\d+)*))?$/i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
+
+        match = release["tag_name"]&.match(regex)
+        next if match.blank?
+
+        (match.length >= 2) ? "#{match[1]},#{match[2]}" : match[1]
       end
     end
   end
