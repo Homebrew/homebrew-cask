@@ -22,9 +22,8 @@ cask "mark-text" do
   ]
 
   caveats <<~EOS
-    The Apple Silicon (ARM) version of #{token} is not signed. It will display an error stating it is damaged and can't be opened.
-  
-    Please see https://github.com/marktext/marktext/issues/2983 for details and workarounds.
+    The Apple Silicon (ARM) version of #{token} is not signed. It will display an error stating it is damaged and can't
+    be opened. Please see https://github.com/marktext/marktext/issues/2983 for details and workarounds.
 
     This is something only the package maintainer, not Homebrew, can fix.
   EOS
