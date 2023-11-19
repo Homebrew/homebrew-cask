@@ -14,4 +14,10 @@ cask "pencil" do
   end
 
   app "Pencil.app"
+
+  zap trash: [
+    "~/.pencil",
+    "~/Library/Application Support/Pencil",
+    "~/Library/Preferences/vn.evolus.pencil.plist",
+  ]
 end
