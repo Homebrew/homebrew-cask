@@ -18,8 +18,8 @@ cask "cookie" do
   app "Cookie.app"
 
   zap trash: [
-    "~/Library/Application Scripts/com.sweetpproductions.cookie.app.LoginHelper",
-    "~/Library/Containers/com.sweetpproductions.cookie.app",
-    "~/Library/Containers/com.sweetpproductions.cookie.app.LoginHelper",
+    "~/Library/Application Scripts/*com.sweetpproductions.cookie.app*",
+    "~/Library/Containers/com.sweetpproductions.cookie.app*",
+    "~/Library/Group Containers/*.com.sweetpproductions.cookie.app",
   ]
 end
