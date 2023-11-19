@@ -1,5 +1,5 @@
 cask "cookie" do
-  version "7.0.1"
+  version "7.1.6"
   sha256 :no_check
 
   url "https://sweetpproductions.com/products/cookie7/Cookie.dmg"
@@ -8,7 +8,7 @@ cask "cookie" do
   homepage "https://sweetpproductions.com/"
 
   livecheck do
-    url "https://sweetpproductions.com/products/cookieapp/appcast.xml"
+    url "https://sweetpproductions.com/products/cookie#{version.major}/appcast.xml"
     strategy :sparkle
   end
 
@@ -18,11 +18,8 @@ cask "cookie" do
   app "Cookie.app"
 
   zap trash: [
-    "~/Library/Application Scripts/com.sweetpproductions.Cookie5",
-    "~/Library/Application Scripts/com.sweetpproductions.CookieApp",
-    "~/Library/Containers/com.sweetpproductions.Cookie5",
-    "~/Library/Containers/com.sweetpproductions.CookieApp",
-    "~/Library/Preferences/com.sweetpproductions.Cookie5.plist",
-    "~/Library/Preferences/com.sweetpproductions.CookieApp.plist",
+    "~/Library/Containers/com.sweetpproductions.cookie.app",
+    "~/Library/Containers/com.sweetpproductions.cookie.app.LoginHelper",
+    "~/Library/Application Scripts/com.sweetpproductions.cookie.app.LoginHelper",
   ]
 end
