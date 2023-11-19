@@ -25,9 +25,9 @@ cask "far2l" do
   # This check should be updated to avoid unstable versions if/when stable
   # versions become available in the future.
   livecheck do
-    url "https://github.com/elfmz/far2l/releases"
-    regex(%r{href=["']?[^"' >]*?/tree/[^"' >]*?(\d+(?:\.\d+)+)(?:[._-]?(?:alpha|beta))?["' >]}i)
-    strategy :page_match
+    url :url
+    regex(/^\D*?(\d+(?:\.\d+)+)$/i)
+    strategy :github_latest
   end
 
   depends_on macos: ">= :el_capitan"

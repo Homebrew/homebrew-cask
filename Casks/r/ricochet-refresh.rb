@@ -12,8 +12,8 @@ cask "ricochet-refresh" do
   homepage "https://www.ricochetrefresh.net/"
 
   livecheck do
-    url "https://github.com/blueprint-freespeech/ricochet-refresh/releases"
-    regex(/v?(\d+(?:\.\d+)+)/i)
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+[a-z]?)(?:[._-]release)?$/i)
     strategy :github_latest
   end
 
