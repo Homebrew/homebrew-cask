@@ -2,7 +2,7 @@ cask "cookie" do
   version "7.1.6"
   sha256 :no_check
 
-  url "https://sweetpproductions.com/products/cookie7/Cookie.dmg"
+  url "https://sweetpproductions.com/products/cookie#{version.major}/Cookie.dmg"
   name "Cookie"
   desc "Protection from tracking and online profiling"
   homepage "https://sweetpproductions.com/"
@@ -18,8 +18,8 @@ cask "cookie" do
   app "Cookie.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.sweetpproductions.cookie.app.LoginHelper",
     "~/Library/Containers/com.sweetpproductions.cookie.app",
     "~/Library/Containers/com.sweetpproductions.cookie.app.LoginHelper",
-    "~/Library/Application Scripts/com.sweetpproductions.cookie.app.LoginHelper",
   ]
 end
