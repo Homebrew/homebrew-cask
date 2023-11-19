@@ -8,7 +8,7 @@ cask "cookie" do
   homepage "https://sweetpproductions.com/"
 
   livecheck do
-    url "https://sweetpproductions.com/products/cookie7/appcast.xml"
+    url "https://sweetpproductions.com/products/cookie#{version.major}/appcast.xml"
     strategy :sparkle
   end
 
