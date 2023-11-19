@@ -12,9 +12,20 @@ cask "extraterm" do
   # This should be updated to use the `GithubLatest` strategy if/when stable
   # versions become available.
   livecheck do
-    url "https://github.com/sedwards2009/extraterm/releases"
-    regex(%r{href=["']?[^"' >]*?/tag/v?(\d+(?:\.\d+)+)["' >]}i)
-    strategy :page_match
+    url :url
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        # This omits the usual `release["prerelease"]` early return condition,
+        # as we need to work with pre-release versions for now.
+        next if release["draft"]
+
+        match = release["tag_name"]&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
+    end
   end
 
   app "ExtratermQt.app"
