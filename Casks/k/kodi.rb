@@ -7,9 +7,11 @@ cask "kodi" do
   desc "Free and open-source media player"
   homepage "https://kodi.tv/"
 
+  # The regex below assumes that the release name will always be one word
+  # (e.g., Leia, Matrix, Nexus, etc.).
   livecheck do
-    url "https://github.com/xbmc/xbmc/releases"
-    regex(/^(\d+(?:\.\d+)*-[a-z]+)$/i)
+    url "https://kodi.tv/download/macos/"
+    regex(/href=.*?kodi[._-]v?(\d+(?:\.\d+)+[._-][^-]+?)[._-][^-]+?\.dmg/i)
   end
 
   depends_on macos: ">= :high_sierra"
