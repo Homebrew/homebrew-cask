@@ -9,9 +9,15 @@ cask "pencil" do
   homepage "https://pencil.evolus.vn/"
 
   livecheck do
-    url "https://github.com/evolus/pencil/releases"
-    strategy :github_latest
+    url "https://pencil.evolus.vn/Downloads.html"
+    regex(/href=.*?Pencil[._-]v?(\d+(?:\.\d+)+)[^"' >]*?\.dmg/i)
   end
 
   app "Pencil.app"
+
+  zap trash: [
+    "~/.pencil",
+    "~/Library/Application Support/Pencil",
+    "~/Library/Preferences/vn.evolus.pencil.plist",
+  ]
 end
