@@ -1,27 +1,21 @@
 cask "inkscape" do
   arch arm: "arm64", intel: "x86_64"
 
-  on_arm do
-    version "1.3.1,44477"
-    sha256 "6e6649573a6041ff8e3e363fc69f4f7687b4a2f12c7d1fd4e3c4abfef20fadef"
-  end
-  on_intel do
-    version "1.3.1,44477"
-    sha256 "438df517944ffb5bad3453b253a02a137df6240acfd0e3a7618b66124e6fcddd"
-  end
+  version "1.3.1"
+  sha256 arm:   "6e6649573a6041ff8e3e363fc69f4f7687b4a2f12c7d1fd4e3c4abfef20fadef",
+         intel: "e1ff7996e81550ca346d6178a148c7523cf04947fb710d2be2df8ed0ed2da285"
 
-  url "https://inkscape.org/gallery/item/#{version.csv.second}/Inkscape-#{version.csv.first}_#{arch}.dmg"
+  url "https://media.inkscape.org/dl/resources/file/Inkscape-#{version}_#{arch}.dmg"
   name "Inkscape"
   desc "Vector graphics editor"
   homepage "https://inkscape.org/"
 
   livecheck do
     url "https://inkscape.org/release/all/mac-os-x/"
-    regex(%r{href=.*?item/(\d+)/Inkscape[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
-    end
+    regex(/Inkscape[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Inkscape.app"
   # shim script (https://github.com/Homebrew/homebrew-cask/issues/18809)
