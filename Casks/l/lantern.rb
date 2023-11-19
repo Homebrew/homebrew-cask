@@ -8,9 +8,14 @@ cask "lantern" do
   desc "Open Internet For All"
   homepage "https://lantern.io/"
 
+  # The first-party download page (https://lantern.io/download?os=mac) only
+  # links to an unversioned file, with no version information on the page. We
+  # check GitHub releases as a best guess of when a new version is released.
+  # Upstream has not marked recent releases as "latest", so we have to check
+  # multiple releases until upstream reliably marks releases as "latest" again.
   livecheck do
-    url "https://github.com/getlantern/lantern/releases"
-    strategy :github_latest
+    url "https://github.com/getlantern/lantern"
+    strategy :github_releases
   end
 
   app "Lantern.app"
