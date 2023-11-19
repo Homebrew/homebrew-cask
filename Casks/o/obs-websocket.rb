@@ -11,9 +11,8 @@ cask "obs-websocket" do
   # "latest" release may be for an older major version. Unless/until this is
   # resolved, we have to check more than just the "latest" release.
   livecheck do
-    url "https://github.com/obsproject/obs-websocket/releases?q=prerelease%3Afalse"
-    regex(%r{href=["']?[^"' >]*?/tag/v?(\d+(?:\.\d+)+)[^"' >]*?["' >]}i)
-    strategy :page_match
+    url :url
+    strategy :github_releases
   end
 
   pkg "obs-websocket-#{version}-macOS.pkg"

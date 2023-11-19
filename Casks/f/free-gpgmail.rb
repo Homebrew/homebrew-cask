@@ -25,16 +25,23 @@ cask "free-gpgmail" do
   # cask `version` (based on the execution environment). As such, this won't
   # surface a new major version and that will need to be handled manually.
   livecheck do
-    url "https://github.com/Free-GPGMail/Free-GPGMail/releases?q=prerelease%3Afalse"
-    regex(/.*?Free-GPGMail[._-]v?(\d+(?:\.\d+)*)[_-](\d+(?:\.\d+)+)([_-][^"' >]+?)?[._-]mailbundle\.zip/i)
-    strategy :page_match do |page, regex|
+    url :url
+    regex(/^Free-GPGMail[._-]v?(\d+(?:\.\d+)*)[_-](\d+(?:\.\d+)+)([_-].+?)?[._-]mailbundle\.zip$/i)
+    strategy :github_releases do |json, regex|
       version_suffix = version.csv.third&.sub(/^[_-]/, "")
-      page.scan(regex).map do |match|
-        next if match[0].split(".").first != version.csv.first.split(".").first
-        next if match[2]&.sub(/^[_-]/, "") != version_suffix
 
-        "#{match[0]},#{match[1]},#{match[2]}"
-      end
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
+
+        release["assets"]&.map do |asset|
+          match = asset["name"]&.match(regex)
+          next if match.blank?
+          next if match[1].split(".").first != version.csv.first.split(".").first
+          next if match[3]&.sub(/^[_-]/, "") != version_suffix
+
+          "#{match[1]},#{match[2]},#{match[3]}"
+        end
+      end.flatten
     end
   end
 

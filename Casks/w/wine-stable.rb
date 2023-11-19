@@ -11,28 +11,22 @@ cask "wine-stable" do
   desc "Compatibility layer to run Windows applications"
   homepage "https://wiki.winehq.org/MacOS"
 
-  # NOTE: This approach involves multiple requests and should be avoided
-  # whenever possible. If upstream starts reliably providing `wine-stable` zip
-  # files in every release, we should switch to `url :url` with
-  # `strategy :github_latest`.
+  # Not every GitHub release provides a `wine-stable` file, so we check multiple
+  # recent releases instead of only the "latest" release.
   livecheck do
-    url "https://github.com/Gcenx/macOS_Wine_builds/releases?q=prerelease%3Afalse"
-    regex(%r{/v?(\d+(?:\.\d+)+)/wine-stable[._-][^"' >]*?\.t}i)
-    strategy :page_match do |page, regex|
-      # Collect the release tags on the page
-      tags = page.scan(%r{href=["']?[^"' >]*?/releases/tag/([^"' >]*?)["' >]}i)&.flatten&.uniq
+    url :url
+    regex(/^v?(\d+(?:[.-]\d+)+)$/i)
+    strategy :github_releases do |json, regex|
+      file_regex = /^wine-stable[._-].*?$/i
 
-      max_reqs = 6
-      tags.each_with_index do |tag, i|
-        break if i >= max_reqs
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
+        next unless release["assets"]&.any? { |asset| asset["name"]&.match?(file_regex) }
 
-        # Fetch the assets list HTML for the tag and match within it
-        assets_page = Homebrew::Livecheck::Strategy.page_content(
-          @url.sub(%r{/releases/?.+}, "/releases/expanded_assets/#{tag}"),
-        )
-        matches = assets_page[:content]&.scan(regex)&.map { |match| match[0] }
+        match = release["tag_name"].match(regex)
+        next if match.blank?
 
-        break matches if matches.present?
+        match[1]
       end
     end
   end
