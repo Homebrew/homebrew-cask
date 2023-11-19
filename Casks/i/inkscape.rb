@@ -2,12 +2,12 @@ cask "inkscape" do
   arch arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "1.3.0,42339"
-    sha256 "e37b5f8b8995a0ecc41ca7fcae90d79bcd652b7a25d2f6e52c4e2e79aef7fec1"
+    version "1.3.1,44477"
+    sha256 "6e6649573a6041ff8e3e363fc69f4f7687b4a2f12c7d1fd4e3c4abfef20fadef"
   end
   on_intel do
-    version "1.3.0,42338"
-    sha256 "e97de6804d8811dd2f1bc45d709d87fb6fe45963aae710c24a4ed655ecd8eb8a"
+    version "1.3.1,44477"
+    sha256 "438df517944ffb5bad3453b253a02a137df6240acfd0e3a7618b66124e6fcddd"
   end
 
   url "https://inkscape.org/gallery/item/#{version.csv.second}/Inkscape-#{version.csv.first}_#{arch}.dmg"
