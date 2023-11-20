@@ -8,8 +8,8 @@ cask "litecoin" do
   homepage "https://litecoin.org/"
 
   livecheck do
-    url "https://github.com/litecoin-project/litecoin"
-    strategy :github_latest
+    url :homepage
+    regex(/href=.*?litecoin[._-]v?(\d+(?:\.\d+)+)[^"' >]*?\.dmg/i)
   end
 
   app "Litecoin-Qt.app"
