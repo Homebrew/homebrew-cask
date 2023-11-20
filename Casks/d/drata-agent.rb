@@ -7,8 +7,11 @@ cask "drata-agent" do
   desc "Security audit software"
   homepage "https://drata.com/"
 
+  # Upstream doesn't appear to publish any public version information. We check
+  # GitHub releases as a best guess of when a new version is released.
   livecheck do
     url "https://github.com/drata/drata-agent"
+    strategy :github_latest
   end
 
   depends_on macos: ">= :high_sierra"
