@@ -9,8 +9,8 @@ cask "tigervnc-viewer" do
   homepage "https://tigervnc.org/"
 
   livecheck do
-    url "https://github.com/TigerVNC/tigervnc"
-    strategy :github_latest
+    url "https://sourceforge.net/projects/tigervnc/rss?path=/stable"
+    regex(%r{url=.*?/TigerVNC[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   app "TigerVNC Viewer #{version}.app"
