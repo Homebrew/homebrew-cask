@@ -1,8 +1,8 @@
 cask "mfiles" do
-  version "2.4.1,20221127"
-  sha256 "41db127cfba3278215e6f22380d0f8dccb593f98c613c527d433a39721e9a336"
+  version "2.5.0,20231115"
+  sha256 "9fb837c0fe952c35f2bcfe843c3bf6054c807a22604a8222fdd48017745e4dba"
 
-  url "https://mfiles.maokebing.com/mfiles-helper-#{version.csv.first}-macos-#{version.csv.second}.dmg"
+  url "https://mfiles.maokebing.com/package/mfiles-helper-#{version.csv.first}-macos-#{version.csv.second}.dmg"
   name "MFiles"
   name "iTrunSo"
   name "爱传送"
