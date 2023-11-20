@@ -44,8 +44,8 @@ cask "calibre" do
     sha256 "884061bce0df80085b4a9ce60da1f63530040f615804eb8cf499718a2e314a8e"
 
     livecheck do
-      url "https://github.com/kovidgoyal/calibre"
-      strategy :github_latest
+      url "https://calibre-ebook.com/dist/osx"
+      strategy :header_match
     end
   end
 
