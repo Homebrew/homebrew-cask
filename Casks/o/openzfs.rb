@@ -58,9 +58,9 @@ cask "openzfs" do
       sha256 "8818bb186c610e9d51b8e48ff4ad545794c835b0df246ff22b3e0dce37d74aba"
     end
     on_sonoma :or_newer do
-      arch intel: "Sonoma-14"
-      version "2.2.0,497"
-      sha256 "c030556ac295c787a95c78cbd76b4a83db69bc119bec7fc2feb018938921c395"
+      arch intel: "Sonoma-14.REPACK"
+      version "2.2.0,499"
+      sha256 "1223d8694b3ff585608655ed98cd6f479c645f6945fc8129aeb4ca3e7a52a7f2"
     end
   end
 
