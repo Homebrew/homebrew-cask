@@ -7,9 +7,12 @@ cask "megacmd" do
   desc "Command-line access to MEGA services"
   homepage "https://mega.nz/cmd"
 
+  # The upstream website doesn't appear to provide version information. We check
+  # GitHub tags as a best guess of when a new version is released (upstream
+  # doesn't use GitHub releases).
   livecheck do
     url "https://github.com/meganz/MEGAcmd"
-    regex(/(\d+(?:\.\d+)+)[._-]macOS/i)
+    regex(/^v?(\d+(?:\.\d+)+)[._-]macOS$/i)
   end
 
   app "MEGAcmd.app"
