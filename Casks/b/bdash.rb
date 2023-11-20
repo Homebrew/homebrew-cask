@@ -7,6 +7,11 @@ cask "bdash" do
   desc "Simple SQL Client for lightweight data analysis"
   homepage "https://github.com/bdash-app/bdash"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Bdash.app"
 
   zap trash: [
