@@ -17,4 +17,8 @@ cask "sonarr" do
   app "Sonarr.app"
 
   zap trash: "~/.config/Sonarr"
+
+  caveats do
+    requires_rosetta
+  end
 end

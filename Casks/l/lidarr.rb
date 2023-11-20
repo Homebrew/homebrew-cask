@@ -18,4 +18,13 @@ cask "lidarr" do
   app "Lidarr.app"
 
   zap trash: "~/.config/Lidarr/"
+
+  caveats do
+    requires_rosetta
+    <<~EOS
+      The Apple Silicon build for this cask is not functional so the Intel build is
+      required instead.
+        https://github.com/orgs/Homebrew/discussions/3088#discussioncomment-7623916
+    EOS
+  end
 end
