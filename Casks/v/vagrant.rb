@@ -12,8 +12,8 @@ cask "vagrant" do
   homepage "https://www.vagrantup.com/"
 
   livecheck do
-    url "https://github.com/hashicorp/vagrant"
-    strategy :github_latest
+    url "https://developer.hashicorp.com/vagrant/install"
+    regex(/href=[^ >]*?vagrant[._-]v?(\d+(?:\.\d+)+)(?:[._-]darwin)?(?:[._-]#{arch})?\.dmg/i)
   end
 
   pkg "vagrant.pkg"
