@@ -8,7 +8,8 @@ cask "mudlet" do
   homepage "https://www.mudlet.org/"
 
   livecheck do
-    url "https://github.com/Mudlet/Mudlet"
+    url "https://www.mudlet.org/download/"
+    regex(/href=.*?Mudlet[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   depends_on macos: ">= :high_sierra"

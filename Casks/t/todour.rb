@@ -8,8 +8,8 @@ cask "todour" do
   homepage "https://nerdur.com/todour-pl/"
 
   livecheck do
-    url "https://github.com/SverrirValgeirsson/Todour"
-    strategy :github_latest
+    url :homepage
+    regex(/href=.*?Todour[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "Todour.app"

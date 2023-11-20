@@ -8,8 +8,8 @@ cask "qlc-plus" do
   homepage "https://qlcplus.org/"
 
   livecheck do
-    url "https://github.com/mcallegari/qlcplus"
-    regex(/^QLC\+[._-]v?(\d+(?:\.\d+)+)$/i)
+    url "https://qlcplus.org/download"
+    regex(/href=.*?QLC\+[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "QLC+.app"
