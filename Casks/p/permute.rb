@@ -1,6 +1,6 @@
 cask "permute" do
-  version "3.11.1,2719"
-  sha256 "dbc21a62a6919d837423f685b508ad1a398b2a08ed482f3fe31e1ada736dc891"
+  version "3.11.2,2723"
+  sha256 "f004c43ed64c42e3b485d56a71043b15c10b1d54cd9f2dab4c1960800a313d2c"
 
   url "https://software.charliemonroe.net/trial/permute/v#{version.major}/Permute_#{version.major}_#{version.csv.second}.dmg"
   name "Permute"
