@@ -8,10 +8,12 @@ cask "mtgaprotracker" do
   desc "Advanced Magic: The Gathering Arena tracking tool"
   homepage "https://mtgarena.pro/mtga-pro-tracker/"
 
+  # GitHub releases don't regularly provide a file for macOS. We check the link
+  # to the latest Mac version from the README, as it's unlikely for there to be
+  # a release with a macOS file in the recent releases.
   livecheck do
-    url "https://github.com/Razviar/mtgap/"
-    regex(/Mac\sversion.*?(\d+(?:\.\d+)+)/i)
-    strategy :page_match
+    url "https://raw.githubusercontent.com/Razviar/mtgap/master/README.md"
+    regex(/Mac(?:OS)?\s+version.*?v?(\d+(?:\.\d+)+)/i)
   end
 
   app "mtgaprotracker.app"
