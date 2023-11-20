@@ -2,8 +2,8 @@ cask "foxitreader" do
   version "2023.2"
   sha256 "62adc1436d16fb6263375cee6b43e6936d11c98fd97c7bab1ca842873e3022f0"
 
-  url "https://cdn78.foxitsoftware.com/pub/foxit/phantomPDF/desktop/mac/#{version}/FoxitPDFReader#{version.no_dots}.L10N.Setup.pkg",
-      verified: "cdn78.foxitsoftware.com/pub/foxit/phantomPDF/desktop/mac/"
+  url "https://cdn01.foxitsoftware.com/pub/foxit/phantomPDF/desktop/mac/#{version}/FoxitPDFReader#{version.no_dots}.L10N.Setup.pkg",
+      verified: "cdn01.foxitsoftware.com/pub/foxit/phantomPDF/desktop/mac/"
   name "Foxit Reader"
   desc "PDF reader"
   homepage "https://www.foxit.com/pdf-reader/"
