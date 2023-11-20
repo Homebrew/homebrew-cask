@@ -10,8 +10,9 @@ cask "mattermost" do
   desc "Open-source, self-hosted Slack-alternative"
   homepage "https://mattermost.com/"
 
+  # Upstream publishes file links in the description of GitHub releases.
   livecheck do
-    url "https://github.com/mattermost/desktop/"
+    url "https://github.com/mattermost/desktop"
     strategy :github_latest
   end
 

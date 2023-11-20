@@ -7,6 +7,8 @@ cask "element" do
   desc "Matrix collaboration client"
   homepage "https://element.io/get-started"
 
+  # The upstream website doesn't appear to provide version information. We check
+  # GitHub releases as a best guess of when a new version is released.
   livecheck do
     url "https://github.com/vector-im/element-desktop"
     strategy :github_latest
