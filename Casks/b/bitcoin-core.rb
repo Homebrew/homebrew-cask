@@ -11,8 +11,8 @@ cask "bitcoin-core" do
   homepage "https://bitcoincore.org/"
 
   livecheck do
-    url "https://github.com/bitcoin/bitcoin"
-    strategy :github_latest
+    url "https://bitcoincore.org/en/download/"
+    regex(/href=.*?bitcoin[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}[^"' >]*?\.dmg/i)
   end
 
   depends_on macos: ">= :catalina"
