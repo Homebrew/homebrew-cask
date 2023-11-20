@@ -16,4 +16,6 @@ cask "quassel-client" do
   depends_on macos: ">= :high_sierra"
 
   app "Quassel Client.app"
+
+  zap trash: "~/Library/Preferences/org.quassel-irc.client.plist"
 end
