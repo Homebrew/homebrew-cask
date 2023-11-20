@@ -9,7 +9,7 @@ cask "dhs" do
   homepage "https://objective-see.com/products/dhs.html"
 
   livecheck do
-    url "https://github.com/objective-see/DylibHijackScanner"
+    url :url
     strategy :github_latest
   end
 
