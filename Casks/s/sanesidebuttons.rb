@@ -7,6 +7,11 @@ cask "sanesidebuttons" do
   desc "Menu bar app that enables system-wide navigation using side mouse buttons"
   homepage "https://github.com/thealpa/SaneSideButtons"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :ventura"
 
   app "SaneSideButtons.app"
