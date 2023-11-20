@@ -2,13 +2,14 @@ cask "osquery" do
   version "5.10.2"
   sha256 "a01d1f7da016f1e6bed54955e97982d491b7e55311433ff0fc985269160633af"
 
-  url "https://pkg.osquery.io/darwin/osquery-#{version}.pkg"
+  url "https://github.com/osquery/osquery/releases/download/#{version}/osquery-#{version}.pkg",
+      verified: "github.com/osquery/osquery/"
   name "osquery"
   desc "SQL powered operating system instrumentation and analytics"
   homepage "https://osquery.io/"
 
   livecheck do
-    url "https://github.com/osquery/osquery"
+    url :url
     strategy :github_latest
   end
 
