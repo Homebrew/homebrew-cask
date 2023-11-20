@@ -10,9 +10,17 @@ cask "nwjs" do
   desc "Call all Node.js modules directly from the DOM and Web Workers"
   homepage "https://nwjs.io/"
 
+  # The upstream download page appends a UNIX epoch timestamp (in milliseconds)
+  # to the JSON URL, so we do the same (in case it affects the returned data).
   livecheck do
-    url "https://github.com/nwjs/nw.js"
-    regex(/^nw[._-]v?(\d+(?:\.\d+)+)$/i)
+    url "https://nwjs.io/versions.json?#{DateTime.now.strftime("%Q")}"
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    strategy :json do |json, regex|
+      match = json["stable"]&.match(regex)
+      next if match.blank?
+
+      match[1]
+    end
   end
 
   app "nwjs-sdk-v#{version}-osx-#{arch}/nwjs.app"
