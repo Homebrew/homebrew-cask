@@ -11,8 +11,10 @@ cask "dbeaver-community" do
   homepage "https://dbeaver.io/"
 
   livecheck do
-    url "https://github.com/dbeaver/dbeaver"
-    strategy :github_latest
+    url "https://dbeaver.io/product/dbeaver-ce-version.xml"
+    strategy :xml do |xml|
+      xml.get_elements("version/number").first&.text&.strip
+    end
   end
 
   auto_updates true

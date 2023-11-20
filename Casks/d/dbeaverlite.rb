@@ -12,7 +12,9 @@ cask "dbeaverlite" do
 
   livecheck do
     url "https://dbeaver.com/product/dbeaver-le-version.xml"
-    regex(%r{<number[^>]*?>v?(\d+(?:\.\d+)+)</number>}i)
+    strategy :xml do |xml|
+      xml.get_elements("version/number").first&.text&.strip
+    end
   end
 
   app "DBeaverLite.app"

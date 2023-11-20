@@ -11,8 +11,10 @@ cask "dbeaver-enterprise" do
   homepage "https://dbeaver.com/"
 
   livecheck do
-    url "https://dbeaver.com/product/version.xml"
-    regex(%r{<number[^>]*?>v?(\d+(?:\.\d+)+)</number>}i)
+    url "https://dbeaver.com/product/dbeaver-ee-version.xml"
+    strategy :xml do |xml|
+      xml.get_elements("version/number").first&.text&.strip
+    end
   end
 
   app "DBeaverEE.app"
