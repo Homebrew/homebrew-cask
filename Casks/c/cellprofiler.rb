@@ -9,7 +9,7 @@ cask "cellprofiler" do
   homepage "https://cellprofiler.org/"
 
   livecheck do
-    url "https://github.com/CellProfiler/CellProfiler"
+    url :url
     strategy :github_latest
   end
 

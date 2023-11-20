@@ -12,7 +12,7 @@ cask "universal-gcode-platform" do
   homepage "https://winder.github.io/ugs_website/"
 
   livecheck do
-    url "https://github.com/winder/Universal-G-Code-Sender"
+    url :url
     strategy :github_latest
   end
 

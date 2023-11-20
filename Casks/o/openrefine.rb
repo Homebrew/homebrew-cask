@@ -9,7 +9,7 @@ cask "openrefine" do
   homepage "https://openrefine.org/"
 
   livecheck do
-    url "https://github.com/OpenRefine/OpenRefine"
+    url :url
     strategy :github_latest
   end
 
