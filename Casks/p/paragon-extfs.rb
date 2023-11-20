@@ -16,7 +16,7 @@ cask "paragon-extfs" do
 
   depends_on macos: ">= :sierra"
 
-  installer manual: "Install extFS for Mac.app"
+  installer manual: "FSInstaller.app"
 
   uninstall kext:      "com.paragon-software.filesystems.extfs",
             launchctl: "com.paragon-software.extfs*",
