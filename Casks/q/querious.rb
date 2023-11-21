@@ -19,7 +19,7 @@ cask "querious" do
 
   zap trash: [
     "~/Library/Application Support/Querious",
-    "~/Library/Caches/com.apple.helpd/Generated/com.araeliumgroup.querious.help*#{version}",
+    "~/Library/Caches/com.apple.helpd/Generated/com.araeliumgroup.querious.help*",
     "~/Library/Caches/com.araeliumgroup.querious",
     "~/Library/HTTPStorages/com.araeliumgroup.querious",
     "~/Library/Logs/Querious.log",
