@@ -1,6 +1,6 @@
 cask "notebooks" do
-  version "3.3.1"
-  sha256 "9aa786c80326747336540f0f450c83408b250208bc6a26138c324084ba878883"
+  version "3.3.2"
+  sha256 "ba4cac1faddedbfc3f385bc64f885a931d842e78e4e025acf7904730a24775be"
 
   url "https://www.notebooksapp.com/Download/macOS/v#{version.major}/Notebooks.dmg"
   name "Notebooks"
