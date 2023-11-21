@@ -1,6 +1,6 @@
 cask "querious" do
-  version "4.0.9"
-  sha256 "58515933b63ea3aae6146cb28af81f6b2161eeb4b24a975880bf1412dbd72652"
+  version "4.0.10"
+  sha256 "395eda8a9f867ec3c72dcd0c7142c93b29d17d8f08076d1c4fcecea89bc9c5ce"
 
   url "https://www.araelium.com/querious/downloads/versions/Querious#{version}.zip"
   name "Querious #{version.major}"
@@ -19,7 +19,7 @@ cask "querious" do
 
   zap trash: [
     "~/Library/Application Support/Querious",
-    "~/Library/Caches/com.apple.helpd/Generated/com.araeliumgroup.querious.help*#{version}",
+    "~/Library/Caches/com.apple.helpd/Generated/com.araeliumgroup.querious.help*",
     "~/Library/Caches/com.araeliumgroup.querious",
     "~/Library/HTTPStorages/com.araeliumgroup.querious",
     "~/Library/Logs/Querious.log",
