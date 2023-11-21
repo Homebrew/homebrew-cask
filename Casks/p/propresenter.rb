@@ -1,6 +1,6 @@
 cask "propresenter" do
   on_big_sur :or_older do
-    version "7.15,118423570"
+    version "7.14.1,118358275"
     sha256 "266bfffd2753f460f9a22e834aed502c73bed2bf51747238fe4831c9048993db"
 
     livecheck do
