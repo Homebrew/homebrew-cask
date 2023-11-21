@@ -12,7 +12,7 @@ cask "a-better-finder-attributes" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "A Better Finder Attributes #{version.major}.app"
 
