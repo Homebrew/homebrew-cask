@@ -15,6 +15,8 @@ cask "abbyy-finereader-pdf" do
     end
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "ABBYY FineReader PDF.app"
 
   zap trash: [
