@@ -71,18 +71,21 @@ cask "openzfs" do
 
   livecheck do
     url "https://openzfsonosx.org/forum/viewforum.php?f=20"
-    regex(/viewtopic.*t=(\d+).*zfs[._-]macOS[._-]v?(\d+(?:(?:\.)\d+)+)/i)
-    strategy :page_match do |page|
-      match = page.scan(regex)
-      next if match.blank?
+    regex(/viewtopic[^"' >]*t=(\d+).*zfs[._-]macOS[._-]v?(\d+(?:(?:\.)\d+)+)/i)
+    strategy :page_match do |page, regex|
+      # Find the first [stable] release topic on the News forum
+      post_id, version = page.scan(regex).first
+      next if post_id.blank? || version.blank?
 
-      post_id, version = match.first
+      # Fetch the release topic page
+      release_page = Homebrew::Livecheck::Strategy.page_content(
+        "https://openzfsonosx.org/forum/viewtopic.php?f=20&t=#{post_id}",
+      )
+      next if release_page[:content].blank?
 
-      post_url = "https://openzfsonosx.org/forum/viewtopic.php?f=20&t=#{post_id}"
+      # Find the `id` of the file for the current `arch`
       download_id_regex = /href=.*file.php\?id=(\d+).+OpenZFSonOsX[._-]v?#{version}[._-]#{arch}\.pkg/i
-
-      download_id = Homebrew::Livecheck::Strategy::PageMatch
-                    .find_versions(url: post_url, regex: download_id_regex)[:matches].values.first
+      download_id = release_page[:content][download_id_regex, 1]
       next if download_id.blank?
 
       "#{version},#{download_id}"
