@@ -14,4 +14,8 @@ cask "abricotine" do
     "~/Library/Application Support/Abricotine",
     "~/Library/Preferences/com.electron.abricotine.plist",
   ]
+
+  caveats do
+    discontinued
+  end
 end
