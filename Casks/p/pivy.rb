@@ -13,5 +13,7 @@ cask "pivy" do
             launchctl: "net.cooperi.pivy-agent",
             quit:      "net.cooperi.pivy-agent"
 
+  # No zap stanza required
+
   caveats "The installer will prompt you to insert a YubiKey or other PIV token via a dialog box."
 end
