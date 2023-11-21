@@ -5,7 +5,7 @@ cask "propresenter" do
 
     livecheck do
       url "https://api.renewedvision.com/v1/pro/upgrade?platform=macos&osVersion=11.0&appVersion=0&buildNumber=0&includeNotes=0"
-      regex(%r{/ProPresenter_(\d+(?:\.\d+)+)_(\d+)\.zip}i)
+      regex(%r{/ProPresenter[._-]v?(\d+(?:\.\d+)+)_(\d+)\.zip}i)
       strategy :page_match do |page, regex|
         match = page.match(regex)
         next if match.blank?
@@ -20,7 +20,7 @@ cask "propresenter" do
 
     livecheck do
       url "https://api.renewedvision.com/v1/pro/upgrade?platform=macos&osVersion=#{MacOS.full_version}&appVersion=0&buildNumber=0&includeNotes=0"
-      regex(%r{/ProPresenter_(\d+(?:\.\d+)+)_(\d+)\.zip}i)
+      regex(%r{/ProPresenter[._-]v?(\d+(?:\.\d+)+)_(\d+)\.zip}i)
       strategy :page_match do |page, regex|
         match = page.match(regex)
         next if match.blank?
