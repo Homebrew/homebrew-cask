@@ -1,9 +1,9 @@
 cask "mysql-shell" do
   arch arm: "arm64", intel: "x86-64bit"
 
-  version "8.2.0"
-  sha256 arm:   "f86d00c319a2fe19d4b1a2f37c7eb76bd5b2b0ff9307805efaa681c2585988ac",
-         intel: "fa40d850e32093abf764c9619118e329b97e76628d406959523af7d65adb48e2"
+  version "8.2.1"
+  sha256 arm:   "099bb8194994f775190f9ef30a9c41192205c2ca04ea3566bb01e130edd96565",
+         intel: "117fcb004136227e2d6f74acc4a6bd42e1128fed6f8f4cc4180c278819435f4a"
 
   url "https://dev.mysql.com/get/Downloads/MySQL-Shell/mysql-shell-#{version}-macos13-#{arch}.dmg"
   name "MySQL Shell"
