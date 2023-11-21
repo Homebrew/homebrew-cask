@@ -71,8 +71,6 @@ cask "zoom" do
     "~/Library/Preferences/us.zoom.xos.plist",
     "~/Library/Preferences/us.zoom.ZoomAutoUpdater.plist",
     "~/Library/Preferences/ZoomChat.plist",
-    "~/Library/Safari/PerSiteZoomPreferences.plist",
-    "~/Library/SafariTechnologyPreview/PerSiteZoomPreferences.plist",
     "~/Library/Saved Application State/us.zoom.xos.savedState",
     "~/Library/WebKit/us.zoom.xos",
   ]
