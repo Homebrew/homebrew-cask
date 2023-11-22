@@ -1,6 +1,6 @@
 cask "middleclick" do
-  version "2.6.1"
-  sha256 "6f351cbc0fe2bf32526e691dfae50eea71a679a7f52ecd155fd453d8684ab175"
+  version "2.7"
+  sha256 "c5a98a652d880878452d8827630cf7a7266ce588edb5cf7b1cda5686f5ae71f3"
 
   url "https://github.com/artginzburg/MiddleClick-Sonoma/releases/download/#{version}/MiddleClick.zip"
   name "MiddleClick"
