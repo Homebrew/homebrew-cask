@@ -1,9 +1,9 @@
 cask "epilogue-playback" do
   arch arm: "arm64", intel: "amd64"
 
-  version "1.0.2"
-  sha256 arm:   "7f9aab22558fb7fbe4987ce509931bdf00a6e81a1b7d1c6873870257d4273a83",
-         intel: "22deefc22a3215e4c32d1e573e0c96515922c282f16d77cb3ca2914c7a824d1c"
+  version "1.0.3"
+  sha256 arm:   "75697c8c3ea9719c41101f62f5787bfb1465fad7e407835dc191280fecae8556",
+         intel: "d1f76509bfdccdf8a68fd8ef71eab20000c7bb5a8c3299ec71f9fba6df562a5b"
 
   url "https://epilogue.nyc3.digitaloceanspaces.com/releases/software/Playback/version/#{version}/release/mac/Playback.#{arch}.dmg",
       verified: "epilogue.nyc3.digitaloceanspaces.com/releases/software/Playback/version/"
