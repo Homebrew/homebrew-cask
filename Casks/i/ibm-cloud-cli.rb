@@ -22,7 +22,7 @@ cask "ibm-cloud-cli" do
     end
   end
 
-  pkg "IBM_Cloud_CLI_#{version}.pkg"
+  pkg "IBM_Cloud_CLI_#{version}#{arch}.pkg"
 
   uninstall pkgutil: "com.ibm.cloud.cli",
             delete:  [
