@@ -1,5 +1,5 @@
 cask "sherlock" do
-  version "2.8.0"
+  version "2.9.0"
   sha256 :no_check
 
   url "https://dl.devmate.com/io.inspiredcode.Sherlock/Sherlock.dmg",
