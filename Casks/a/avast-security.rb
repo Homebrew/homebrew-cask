@@ -1,5 +1,5 @@
 cask "avast-security" do
-  version "15.7.4"
+  version "15.7.5"
   sha256 :no_check
 
   url "https://bits.avcdn.net/productfamily_ANTIVIRUS/insttype_FREE/platform_MAC/installertype_ONLINE/build_RELEASE/",
