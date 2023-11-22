@@ -8,9 +8,13 @@ cask "macwhisper" do
   desc "Speech recognition tool"
   homepage "https://goodsnooze.gumroad.com/l/macwhisper"
 
+  # Older items in the Sparkle feed may have a newer pubDate, so it's necessary
+  # to work with all of the items in the feed (not just the newest one).
   livecheck do
     url "https://macwhisper-site.vercel.app/appcast.xml"
-    strategy :sparkle
+    strategy :sparkle do |items|
+      items.map { |item| "#{item.short_version},#{item.version}" }
+    end
   end
 
   auto_updates true
