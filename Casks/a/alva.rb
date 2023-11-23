@@ -9,4 +9,8 @@ cask "alva" do
   homepage "https://meetalva.io/"
 
   app "Alva.app"
+
+  caveats do
+    discontinued
+  end
 end
