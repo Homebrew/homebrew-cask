@@ -1,6 +1,6 @@
 cask "multiapp" do
-  version "0.325.0"
-  sha256 "ade71658667b670df2c254e37d818ac6baca134a6f52f986303935092de5d2fc"
+  version "0.327.0"
+  sha256 "eb0dbf45fbe2011f51b24e193b4df17a873c432328e67455c1ce5bcc33b3eb77"
 
   url "https://updates.multi.app/installers/Multi%20#{version}.dmg"
   name "Multi"
