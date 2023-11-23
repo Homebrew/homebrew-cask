@@ -20,4 +20,8 @@ cask "actual" do
     "~/Library/Preferences/com.shiftreset.actual.plist",
     "~/Library/Saved Application State/com.shiftreset.actual.savedState",
   ]
+
+  caveats do
+    discontinued
+  end
 end
