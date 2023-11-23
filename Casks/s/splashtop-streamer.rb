@@ -19,6 +19,7 @@ cask "splashtop-streamer" do
 
   uninstall quit:      "com.splashtop.Splashtop-Streamer",
             launchctl: [
+              "com.splashtop.streamer",
               "com.splashtop.streamer-daemon",
               "com.splashtop.streamer-for-root",
               "com.splashtop.streamer-for-user",
