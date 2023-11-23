@@ -12,13 +12,18 @@ cask "eclipse-ide" do
 
   livecheck do
     url "https://www.eclipse.org/downloads/packages/"
-    regex(/Eclipse IDE (\d+-\d+) R Packages/i)
+    regex(/href=.*?eclipse-committers-(\d+-\d+)-R-mac/i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map do |release|
-        version_page = Homebrew::Livecheck::Strategy.page_content("https://projects.eclipse.org/releases/#{release[0]}")[:content]
-        version = version_page.scan(%r{href="/projects/technology\.packaging/releases/(\d+(?:\.\d+)*)"}i)
-        "#{version[0][0]},#{release[0]}"
-      end
+      date = page[regex, 1]
+      next if date.blank?
+
+      version_page = Homebrew::Livecheck::Strategy.page_content("https://projects.eclipse.org/releases/#{date}")[:content]
+      next if version_page.blank?
+
+      version = version_page[%r{href=["']?/projects/technology\.packaging/releases/v?(\d+(?:\.\d+)+)/?["']?}i, 1]
+      next if version.blank?
+
+      "#{version},#{date}"
     end
   end
 
