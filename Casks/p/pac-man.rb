@@ -19,4 +19,4 @@ end
       verified: "http://www2.getpacman.gq"
 =end
 
-git add Casks/p/pac-man.rb
+:git checkout -b my-new-cask-branch
