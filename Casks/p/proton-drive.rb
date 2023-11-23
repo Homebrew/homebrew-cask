@@ -4,12 +4,12 @@ cask "proton-drive" do
 
   url "https://proton.me/download/drive/macos/ProtonDrive-#{version}.dmg"
   name "Proton Drive"
-  desc "Securely backup files and photos to the Proton Drive encrypted cloud"
+  desc "Client for Proton Drive"
   homepage "https://proton.me/drive"
 
   livecheck do
-    url "https://proton.me/drive/download"
-    regex(%r{href=.*?macos/protondrive[._-]v?(.*?)\.dmg}i)
+    url "https://proton.me/download/drive/macos/appcast.xml"
+    strategy :sparkle, &:short_version
   end
 
   depends_on macos: ">= :ventura"
@@ -17,12 +17,8 @@ cask "proton-drive" do
   app "Proton Drive.app"
 
   zap trash: [
-    "~/Library/Application Scripts/ch.protonmail.drive",
-    "~/Library/Application Scripts/ch.protonmail.drive.fileprovider",
-    "~/Library/Application Scripts/ch.protonmail.drive.launcher.ProtonDriveMacLauncher",
-    "~/Library/Containers/ch.protonmail.drive",
-    "~/Library/Containers/ch.protonmail.drive.fileprovider",
-    "~/Library/Containers/ch.protonmail.drive.launcher.ProtonDriveMacLauncher",
+    "~/Library/Application Scripts/ch.protonmail.drive*",
+    "~/Library/Containers/ch.protonmail.drive*",
     "~/Library/Group Containers/group.ch.protonmail.protondrive",
   ]
 end
