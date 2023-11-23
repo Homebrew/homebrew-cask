@@ -7,10 +7,9 @@ cask "classroom-assistant" do
   desc "Tool to clone student repositories in bulk"
   homepage "https://classroom.github.com/assistant"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   app "Classroom Assistant.app"
+
+  caveats do
+    discontinued
+  end
 end
