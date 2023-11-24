@@ -12,6 +12,7 @@ cask "mindmac" do
     url "https://github.com/MindMacApp/MindMac"
     strategy :github_latest
   end
+depends_on macos: ">= :ventura"
 
   app "MindMac.app"
 
