@@ -1,12 +1,13 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+require "find"
+require "json"
+require "open-uri"
 require "open3"
 require "optparse"
 require "pathname"
 require "tmpdir"
-require "json"
-require "open-uri"
 
 # Exit cleanup
 TMP_DIR = Pathname.new(Dir.mktmpdir).freeze
@@ -34,7 +35,7 @@ end
 
 def cask_url(tap_dir, cask_path)
   tap_base = tap_dir.dirname.basename.to_path
-  cask_base = cask_path.basename.to_path
+  cask_base = cask_path.relative_path_from(tap_dir).to_path
 
   "https://github.com/Homebrew/#{tap_base}/blob/master/Casks/#{cask_base}"
 end
@@ -66,28 +67,30 @@ CASK_DIRS = CASK_REPOS.each_with_object([]) do |repo, tap_dirs|
   system("git", "clone", "--depth", "1", "https://github.com/Homebrew/#{repo}.git", clone_dir.to_path)
 end.freeze
 
+# Collect all casks from each tap directory into a hash
 ALL_CASKS = CASK_DIRS.each_with_object({}) do |tap_dir, casks|
   casks[tap_dir] = []
 
-  # Populate hash with tap directory paths as keys
-  # and cask file paths as values in array
-  tap_dir
-    .children
-    .shuffle
-    .select { _1.extname == ".rb" }
-    .each { casks[tap_dir].push(_1) }
+  # Recursively find all Ruby files in the tap directory
+  Find.find(tap_dir) do |path|
+    # Skip if not a file or not a Ruby file
+    next unless File.file?(path)
+    next if File.extname(path) != ".rb"
+
+    # Add the path to the casks array for the current tap
+    casks[tap_dir].push(Pathname.new(path))
+  end
 end.freeze
 
+# Filter casks that are missing a 'zap' stanza and are not discontinued
 CASKS_NO_ZAP = ALL_CASKS.each_with_object({}) do |(tap_dir, casks), without_zap|
-  without_zap[tap_dir] = []
+  without_zap[tap_dir] = casks.reject do |file|
+    # Read file content and check if it contains 'zap' or 'discontinued'
+    file_content = file.read
+    file_content.match?(/\s+(# No )?zap /) || file_content.match?(/\s+discontinued /)
+  end
 
-  # Populate hash with casks without a zap that are not discontinued
-  casks
-    .reject { |file| file.readlines.any? { _1.start_with?(/\s+(# No )?zap /) } }
-    .reject { |file| file.readlines.any? { _1.start_with?(/\s+discontinued /) } }
-    .each { without_zap[tap_dir].push(_1) }
-
-  # Reject tap directory if there are no casks without zap
+  # Remove the tap directory from the result if it has no casks missing 'zap'
   without_zap.delete(tap_dir) if without_zap[tap_dir].empty?
 end.freeze
 
