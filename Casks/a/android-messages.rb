@@ -10,4 +10,16 @@ cask "android-messages" do
   app "Android Messages.app"
 
   zap trash: "~/Library/Application Support/Android Messages"
+
+  caveats do
+    discontinued
+
+    <<~EOS
+      This software is outdated and not fully working. It has been deprecated in favor of OrangeDrangon version.
+
+        brew install --cask orangedrangon-android-messages
+
+        https://github.com/OrangeDrangon/android-messages-desktop
+    EOS
+  end
 end
