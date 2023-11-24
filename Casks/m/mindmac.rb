@@ -6,13 +6,9 @@ cask "mindmac" do
       verified: "github.com/MindMacApp/MindMac/"
   name "MindMac"
   desc "ChatGPT client"
-  homepage "https://mindmac.app"
+  homepage "https://mindmac.app/"
 
-  livecheck do
-    url "https://github.com/MindMacApp/MindMac"
-    strategy :github_latest
-  end
-depends_on macos: ">= :ventura"
+  depends_on macos: ">= :ventura"
 
   app "MindMac.app"
 
