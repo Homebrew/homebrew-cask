@@ -21,4 +21,8 @@ cask "beaker-browser" do
     "~/Library/Preferences/com.pfrazee.beaker-browser.plist",
     "~/Library/Saved Application State/com.pfrazee.beaker-browser.savedState",
   ]
+
+  caveats do
+    discontinued
+  end
 end

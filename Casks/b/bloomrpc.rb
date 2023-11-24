@@ -10,4 +10,8 @@ cask "bloomrpc" do
   app "BloomRPC.app"
 
   zap trash: "~/Library/Preferences/io.github.utilitywarehouse.BloomRPC.plist"
+
+  caveats do
+    discontinued
+  end
 end

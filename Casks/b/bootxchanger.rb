@@ -9,4 +9,8 @@ cask "bootxchanger" do
   homepage "https://namedfork.net/bootxchanger/"
 
   app "BootXChanger.app"
+
+  caveats do
+    discontinued
+  end
 end
