@@ -6,7 +6,7 @@ cask "mindmac" do
       verified: "github.com/MindMacApp/MindMac/"
   name "MindMac"
   desc "ChatGPT client"
-  homepage "https://mindmac.app/index.html"
+  homepage "https://mindmac.app"
 
   livecheck do
     url "https://github.com/MindMacApp/MindMac"
