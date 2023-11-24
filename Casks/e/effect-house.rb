@@ -11,7 +11,7 @@ cask "effect-house" do
   end
 
   url "https://sf16-va.tiktokcdn.com/obj/eden-va2/olaa_ajlmml_zlp/ljhwZthlaukjlkulzlp/#{version.csv.first.no_dots}_ExternalRelease_#{version.csv.third}/Effect_House_v#{version.csv.first}.#{version.csv.second}#{arch}.dmg",
-      verified: "sf16-va.tiktokcdn.com/"
+      verified: "sf16-va.tiktokcdn.com/obj/eden-va2/olaa_ajlmml_zlp/ljhwZthlaukjlkulzlp/"
   name "TikTok Effect House"
   desc "Create vibrant AR effects for TikTok"
   homepage "https://effecthouse.tiktok.com/"
@@ -24,5 +24,9 @@ cask "effect-house" do
 
   app "Effect House.app"
 
-  zap trash: "~/Library/Application Support/EffectHouse"
+  zap trash: [
+    "~/Library/Application Support/EffectHouse",
+    "~/Library/HTTPStorages/com.ies.orion",
+    "~/Library/Saved Application State/com.ies.orion.savedState",
+  ]
 end
