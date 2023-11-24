@@ -2,12 +2,8 @@ cask "macgpt" do
   version "3.17,132"
   sha256 "e21e89c132c721c1d2dc24c5070ae01da0b2dbaa5d370385fd2a66bb55338eff"
 
-  # NOTE: The download URL in https://www.macgpt.com/sparkle/appcast.xml seems to change between
-  #    the following depending on the release, but the *.r2.dev seemed to work for versions I tried regardless:
-  #     "https://pub-d87f3f7fc7ee4955b8c3afaad2b5d4ea.r2.dev/releases/MacGPT-#{version.csv.second}.zip"
-  #     "https://macwhisper-site.vercel.app/releases/macgpt/MacGPT-#{version.csv.second}.zip"
   url "https://pub-d87f3f7fc7ee4955b8c3afaad2b5d4ea.r2.dev/releases/MacGPT-#{version.csv.second}.zip",
-      verified: "pub-d87f3f7fc7ee4955b8c3afaad2b5d4ea.r2.dev/"
+      verified: "pub-d87f3f7fc7ee4955b8c3afaad2b5d4ea.r2.dev/releases/"
   name "MacGPT"
   desc "Menubar app for easy ChatGPT access with conversation and inline modes"
   homepage "https://www.macgpt.com/"
