@@ -4,7 +4,7 @@ cask "tunetag" do
 
   url "https://sweetpproductions.com/products/tunetag/TuneTag.dmg"
   name "TuneTag"
-  desc "Is a lightning fast ID3 and meta data editor for mp3 and m4a audio files"
+  desc "ID3 and metadata editor for audio files"
   homepage "https://tunetag.sweetpproductions.com/"
 
   livecheck do
