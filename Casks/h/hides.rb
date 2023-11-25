@@ -20,5 +20,5 @@ cask "hides" do
   zap trash: [
     "~/Library/Containers/com.sweetpproductions.Hides",
     "~/Library/Group Containers/*.com.sweetpproductions.Hides",
-
+  ]
 end
