@@ -19,6 +19,6 @@ cask "tunetag" do
 
   zap trash: [
     "~/Library/Containers/com.sweetpproductions.TuneTag",
-    "~/Library/Group Containers/U928YCMMNK.com.sweetpproductions.TuneTag",
+    "~/Library/Group Containers/*.com.sweetpproductions.TuneTag",
   ]
 end
