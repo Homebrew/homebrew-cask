@@ -1,11 +1,11 @@
 cask "bazecor" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.3.6"
-  sha256 arm:   "be172afb426247c982c818223351515b55937e3730b8ac94f6811ed5404796a9",
-         intel: "1f0e35e9739fc9f6dd4b5282834077dbafd6ff2581445c2e70247c30a6961b3e"
+  version "1.3.8"
+  sha256 arm:   "4c155b472723b33746d9284a6183aad111e24ba42815f7c2a298b22303adc187",
+         intel: "cbd044ce836eb5916d04e79e4ed579c60358c3c167e9d8566fba7f15baf2a568"
 
-  url "https://github.com/Dygmalab/Bazecor/releases/download/v.#{version}/Bazecor-#{version}-#{arch}.dmg",
+  url "https://github.com/Dygmalab/Bazecor/releases/download/v#{version}/Bazecor-#{version}-#{arch}.dmg",
       verified: "github.com/Dygmalab/Bazecor/"
   name "Bazecor"
   desc "Graphical configurator for Dygma Raise keyboards"
