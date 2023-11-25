@@ -1,15 +1,15 @@
 cask "insta360-studio" do
-  version "4.9.0,2e87eae88ad76b61090530ab19a3be63,2023_20231119_171714"
-  sha256 "a69a4c1b35a4473e2f9568e07db793c5a5bda60895234d0de1bb8bfa5aabf402"
+  version "4.9.1,2023,068d309c5f7268f99dce70a523b264cb,20231123_173818_1700732479763"
+  sha256 "e24350316374ee69e3ba7572d3c41e0cb0adde6001ce603810bab4e139c0f40b"
 
-  url "https://file.insta360.com/static/#{version.csv.second}/Insta360%20Studio%20#{version.csv.third}_signed.pkg"
+  url "https://file.insta360.com/static/#{version.csv.third}/Insta360Studio#{version.csv.second}_#{version.csv.first}_#{version.csv.fourth}.pkg"
   name "Insta360 Studio"
   desc "Video and photo editor"
   homepage "https://www.insta360.com/"
 
   livecheck do
     url "https://openapi.insta360.com/app/appDownload/getGroupApp?group=insta360-go2&X-Language=en-us"
-    regex(%r{/([[:xdigit:]]+)/Insta360(?:[._-]|%20)Studio(?:[._-]|%20)(\d+(?:[._-]\d+)*)[._-]signed\.pkg}i)
+    regex(%r{/([[:xdigit:]]+)/Insta360Studio(\d+)(?:[._-]|%20)(?:\d+(?:\.\d+)+)[._-](\d+(?:[._-]\d+)*)\.pkg}i)
     strategy :page_match do |page, regex|
       newest_release = JSON.parse(page)["data"]["apps"]
                            .find { |app| app["id"] == 38 }["items"]
@@ -21,7 +21,7 @@ cask "insta360-studio" do
       match = newest_release["channels"][0]["download_url"].match(regex)
       next if version.blank? || match.blank?
 
-      "#{version},#{match[1]},#{match[2]}"
+      "#{version},#{match[2]},#{match[1]},#{match[3]}"
     end
   end
 
