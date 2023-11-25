@@ -4,7 +4,7 @@ cask "hides" do
 
   url "https://sweetpproductions.com/products/hides/Hides.dmg"
   name "Hides"
-  desc "App to quickly hide all open apps except the current one."
+  desc "App to quickly hide all open apps except the current one"
   homepage "https://hides.sweetpproductions.com/"
 
   livecheck do
