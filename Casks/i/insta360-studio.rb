@@ -25,7 +25,7 @@ cask "insta360-studio" do
     end
   end
 
-  pkg "Insta360 Studio #{version.csv.third}_signed.pkg"
+  pkg "Insta360Studio#{version.csv.second}_#{version.csv.first}_#{version.csv.fourth}.pkg"
 
   uninstall quit:    "com.insta360.studio",
             delete:  "#{appdir}/Insta360 Studio #{version.csv.third.split("_")[0]}.app",
