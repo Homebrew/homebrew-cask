@@ -1,5 +1,5 @@
 cask "rode-connect" do
-  version "1.3.31"
+  version "1.3.33"
   sha256 :no_check
 
   url "https://update.rode.com/connect/RODE_Connect_MACOS.zip"
