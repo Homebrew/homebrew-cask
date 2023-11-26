@@ -13,4 +13,14 @@ cask "sourcenote" do
   end
 
   app "SourceNote.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/*.SourceNote",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.devinabbott.sourcenote*",
+    "~/Library/Application Support/SourceNote",
+    "~/Library/Caches/com.devinabbott.SourceNote",
+    "~/Library/Group Containers/*.SourceNote",
+    "~/Library/HTTPStorages/com.devinabbott.SourceNote*",
+    "~/Library/Preferences/com.devinabbott.SourceNote.plist",
+  ]
 end
