@@ -15,4 +15,11 @@ cask "marathon2" do
   end
 
   app "Marathon 2.app"
+
+  zap trash: [
+    "~/Library/Application Support/Marathon 2",
+    "~/Library/Logs/Marathon 2 Log.txt",
+    "~/Library/Preferences/Marathon 2",
+    "~/Library/Saved Application State/org.bungie.source.Marathon2.savedState",
+  ]
 end
