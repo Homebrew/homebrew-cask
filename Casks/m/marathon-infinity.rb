@@ -14,4 +14,11 @@ cask "marathon-infinity" do
   end
 
   app "Marathon Infinity.app"
+
+  zap trash: [
+    "~/Library/Application Support/Marathon Infinity",
+    "~/Library/Logs/Marathon Infinity Log.txt",
+    "~/Library/Preferences/Marathon Infinity",
+    "~/Library/Saved Application State/org.bungie.source.MarathonInfinity.savedState",
+  ]
 end
