@@ -14,7 +14,7 @@ cask "obs-ndi" do
 
   depends_on cask: "libndi"
 
-  pkg "obs-ndi-#{version}-macOS-universal.pkg"
+  pkg "obs-ndi-#{version}-macos-universal.pkg"
 
   uninstall pkgutil: [
     "com.newtek.ndi.runtime",
