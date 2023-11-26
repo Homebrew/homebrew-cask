@@ -17,4 +17,8 @@ cask "electron-api-demos" do
     "~/Library/Preferences/com.electron.electron-api-demos.plist",
     "~/Library/Saved Application State/com.electron.electron-api-demos.savedState",
   ]
+
+  caveats do
+    discontinued
+  end
 end
