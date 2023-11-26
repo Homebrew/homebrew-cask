@@ -21,7 +21,7 @@ cask "superkey" do
 
   zap trash: [
     "~/Library/Application Scripts/com.knollsoft.SuperkeyLauncher",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.knollsoft.superkeylauncher.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.knollsoft.superkeylauncher.sfl*",
     "~/Library/Application Support/Superkey",
     "~/Library/Caches/com.knollsoft.Superkey",
     "~/Library/Containers/com.knollsoft.SuperkeyLauncher",
