@@ -1,8 +1,8 @@
 cask "adrive" do
-  version "4.9.12"
-  sha256 :no_check
+  version "4.9.15"
+  sha256 "404e1ca75200730bc8b7f0724baa404ee39c0b9b3db2e9665a87b585845d12eb"
 
-  url "https://cdn.aliyundrive.net/downloads/apps/desktop/aDrive.dmg",
+  url "https://cdn.aliyundrive.net/downloads/apps/desktop/aDrive-#{version}.dmg",
       verified: "cdn.aliyundrive.net/"
   name "Aliyundrive"
   name "阿里云盘"
