@@ -1,16 +1,18 @@
 cask "bezel" do
-  version "1.3.3-beta1"
-  sha256 "c7fd771bb941df0f5de2ec10daec65fdcc1bd8a0433284f651a16d5d6e937ef5"
+  version "1.3.2"
+  sha256 "544d804d0d33a223673000684771529b05fe69ef1ff966958d6aecb5b12ec8f2"
 
   url "https://download.nonstrict.eu/bezel/Bezel-#{version}.zip",
-      verified: "download.nonstrict.eu"
+      verified: "download.nonstrict.eu/bezel/"
   name "Bezel"
-  desc "Mirror, present, and record iOS screen output"
+  desc "iOS screen output recorder"
   homepage "https://getbezel.app/"
 
   livecheck do
     url "https://download.nonstrict.eu/bezel/appcast.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle do |items|
+      items.find { |item| item.channel.nil? }&.short_version
+    end
   end
 
   auto_updates true
