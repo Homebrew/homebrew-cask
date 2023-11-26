@@ -16,4 +16,10 @@ cask "aleph-one" do
   depends_on macos: ">= :high_sierra"
 
   app "Aleph One.app"
+
+  zap trash: [
+    "~/Library/Logs/Aleph One Log.txt",
+    "~/Library/Preferences/org.bungie.source.AlephOne*",
+    "~/Library/Saved Application State/org.bungie.source.AlephOne.savedState",
+  ]
 end
