@@ -15,11 +15,8 @@ cask "android-messages" do
     discontinued
 
     <<~EOS
-      This software is outdated and not fully working. It has been deprecated in favor of OrangeDrangon version.
-
+      #{token} has been deprecated in favor of OrangeDrangon Android Messages.
         brew install --cask orangedrangon-android-messages
-
-        https://github.com/OrangeDrangon/android-messages-desktop
     EOS
   end
 end
