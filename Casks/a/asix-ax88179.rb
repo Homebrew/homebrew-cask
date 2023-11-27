@@ -44,7 +44,8 @@ cask "asix-ax88179" do
                        "-pkg", staged_path/"AX88179_178A_Uninstall.pkg",
                        "-target", "/"
                      ],
-                     sudo: true
+                     sudo: true,
+                     sudo_as_root: true
     end
   end
   on_big_sur do
@@ -73,7 +74,8 @@ cask "asix-ax88179" do
                        "-pkg", staged_path/"AX88179_178A_Uninstall.pkg",
                        "-target", "/"
                      ],
-                     sudo: true
+                     sudo: true,
+                     sudo_as_root: true
     end
   end
   on_monterey :or_newer do

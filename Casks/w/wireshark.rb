@@ -78,13 +78,15 @@ cask "wireshark" do
                      "-pkg", "#{staged_path}/Uninstall ChmodBPF.pkg",
                      "-target", "/"
                    ],
-                   sudo: true
+                   sudo: true,
+                   sudo_as_root: true
     system_command "/usr/sbin/installer",
                    args: [
                      "-pkg", "#{staged_path}/Remove Wireshark from the system path.pkg",
                      "-target", "/"
                    ],
-                   sudo: true
+                   sudo: true,
+                   sudo_as_root: true
   end
 
   uninstall pkgutil: "org.wireshark.*"

@@ -23,7 +23,8 @@ cask "winclone" do
                      "-pkg", "#{staged_path}/Uninstaller/Uninstall Winclone.pkg",
                      "-target", "/"
                    ],
-                   sudo: true
+                   sudo: true,
+                   sudo_as_root: true
   end
 
   uninstall signal:  ["TERM", "com.twocanoes.Winclone#{version.major}"],
