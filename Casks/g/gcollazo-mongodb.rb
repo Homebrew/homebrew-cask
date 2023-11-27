@@ -6,7 +6,7 @@ cask "gcollazo-mongodb" do
       verified: "github.com/gcollazo/mongodbapp/"
   name "MongoDB"
   desc "App wrapper for MongoDB"
-  homepage "https://elweb.co/mongodb-app/"
+  homepage "https://gcollazo.com/mongodb-app/"
 
   livecheck do
     url :url
