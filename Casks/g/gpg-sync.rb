@@ -10,4 +10,8 @@ cask "gpg-sync" do
 
   uninstall pkgutil:   "org.firstlook.gpgsync",
             launchctl: "org.firstlook.gpgsync"
+
+  caveats do
+    discontinued
+  end
 end
