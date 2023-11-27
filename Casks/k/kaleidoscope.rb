@@ -10,18 +10,22 @@ cask "kaleidoscope" do
   livecheck do
     url "https://updates.kaleidoscope.app/v#{version.major}/prod/appcast"
     regex(/Kaleidoscope[._-]v?(\d+(?:\.\d+)+)[._-](\d+)\.app\.zip/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+    strategy :sparkle do |item, regex|
+      match = item.url.match(regex)
+      next if match.blank?
+
+      "#{match[1]},#{match[2]}"
     end
   end
 
   auto_updates true
   conflicts_with cask: [
     "ksdiff",
+    "homebrew/cask-versions/kaleidoscope3",
     "homebrew/cask-versions/kaleidoscope2",
     "homebrew/cask-versions/ksdiff2",
   ]
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :ventura"
 
   app "Kaleidoscope.app"
 
