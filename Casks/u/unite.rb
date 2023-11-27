@@ -1,6 +1,6 @@
 cask "unite" do
-  version "5.1"
-  sha256 "aea3c0da5dcaf7b63868100d1787dded8fcc356a06b79c3799d922693f0dc536"
+  version "5.1.1"
+  sha256 "c08e5a40b61766fa93bf218d549d4110f638c8ae9e790c7fc7378bd1c4993610"
 
   url "https://bzgdownloads.s3.amazonaws.com/Unite/Unite+#{version}.zip",
       verified: "bzgdownloads.s3.amazonaws.com/Unite/"
