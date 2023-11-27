@@ -18,5 +18,3 @@ end
 ,
       verified: "http://www2.getpacman.gq"
 =end
-
-:git checkout -b my-new-cask-branch
