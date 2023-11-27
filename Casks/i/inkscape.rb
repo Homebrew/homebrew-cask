@@ -1,9 +1,9 @@
 cask "inkscape" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.3.1"
-  sha256 arm:   "6e6649573a6041ff8e3e363fc69f4f7687b4a2f12c7d1fd4e3c4abfef20fadef",
-         intel: "e1ff7996e81550ca346d6178a148c7523cf04947fb710d2be2df8ed0ed2da285"
+  version "1.3.2"
+  sha256 arm:   "d3b182d1f6804f01eb13195325c5376ee7147561f2cfd59c3920c34f0e0858d8",
+         intel: "7c3347c274a5f8c9fb8c076b3d745e509b400e21127067edfa77adf4ca40834e"
 
   url "https://media.inkscape.org/dl/resources/file/Inkscape-#{version}_#{arch}.dmg"
   name "Inkscape"
