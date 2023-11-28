@@ -25,7 +25,7 @@ cask "wireshark-chmodbpf" do
                      "-pkg", "#{staged_path}/Uninstall ChmodBPF.pkg",
                      "-target", "/"
                    ],
-                   sudo: true,
+                   sudo:         true,
                    sudo_as_root: true
   end
 
