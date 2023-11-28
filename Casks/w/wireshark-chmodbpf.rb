@@ -21,10 +21,7 @@ cask "wireshark-chmodbpf" do
 
   uninstall_preflight do
     system_command "/usr/sbin/installer",
-                   args: [
-                     "-pkg", "#{staged_path}/Uninstall ChmodBPF.pkg",
-                     "-target", "/"
-                   ],
+                   args:         ["-pkg", "#{staged_path}/Uninstall ChmodBPF.pkg", "-target", "/"],
                    sudo:         true,
                    sudo_as_root: true
   end

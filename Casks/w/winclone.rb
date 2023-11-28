@@ -19,10 +19,7 @@ cask "winclone" do
 
   uninstall_preflight do
     system_command "/usr/sbin/installer",
-                   args: [
-                     "-pkg", "#{staged_path}/Uninstaller/Uninstall Winclone.pkg",
-                     "-target", "/"
-                   ],
+                   args:         ["-pkg", "#{staged_path}/Uninstaller/Uninstall Winclone.pkg", "-target", "/"],
                    sudo:         true,
                    sudo_as_root: true
   end
