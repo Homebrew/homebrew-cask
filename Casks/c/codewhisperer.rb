@@ -6,7 +6,7 @@ cask "codewhisperer" do
       verified: "desktop-release.codewhisperer.us-east-1.amazonaws.com/"
   name "CodeWhisperer for Command Line"
   desc "IDE-style autocomplete for 500+ CLIs. Translate natural language-to-bash"
-  homepage "https://docs.aws.amazon.com/codewhisperer/latest/userguide/command-line-getting-started-installing.html"
+  homepage "https://aws.amazon.com/codewhisperer/"
 
   livecheck do
     url "https://desktop-release.codewhisperer.us-east-1.amazonaws.com/index.json"
