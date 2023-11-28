@@ -4,7 +4,7 @@ cask "greenery" do
 
   url "https://github.com/GreenfireInc/Releases.Greenery/releases/download/v#{version}/Greenery.#{version}.zip",
       verified: "github.com/GreenfireInc/Releases.Greenery/"
-  name "greenery"
+  name "Greenery"
   desc "Cryptocurrency bookkeeping and accounting wallet"
   homepage "https://www.greenery.finance/"
 
