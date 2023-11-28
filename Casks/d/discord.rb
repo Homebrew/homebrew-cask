@@ -1,6 +1,6 @@
 cask "discord" do
-  version "0.0.284"
-  sha256 "4d3ce173a3f48451bd04532f88dc7c08283571510a0e207782d6fca11fec94d0"
+  version "0.0.285"
+  sha256 "f478117363c54fab8c82b17c02c4283ec631efaf144454bb2ea3a393805698e9"
 
   url "https://dl.discordapp.net/apps/osx/#{version}/Discord.dmg",
       verified: "dl.discordapp.net/"
