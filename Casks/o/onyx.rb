@@ -42,7 +42,7 @@ cask "onyx" do
     url "https://www.titanium-software.fr/download/13/OnyX.dmg"
   end
   on_sonoma :or_newer do
-    version "4.5.2"
+    version "4.5.3"
 
     url "https://www.titanium-software.fr/download/14/OnyX.dmg"
   end
