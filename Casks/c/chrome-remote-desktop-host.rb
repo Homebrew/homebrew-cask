@@ -19,7 +19,10 @@ cask "chrome-remote-desktop-host" do
               args:       ["--no-ui"],
               sudo:       true,
             },
-            launchctl: "org.chromium.chromoting",
+            launchctl: [
+              "com.google.GoogleUpdater.wake.system",
+              "org.chromium.chromoting",
+            ],
             pkgutil:   [
               "com.google.pkg.ChromeRemoteDesktopHost",
               "com.google.pkg.ChromeRemoteDesktopHostService",
