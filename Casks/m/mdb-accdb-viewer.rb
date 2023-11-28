@@ -1,4 +1,4 @@
-cask "mdb-viewer" do
+cask "mdb-accdb-viewer" do
   version "2.3.1"
   sha256 "8f6ee157d169182c26f2f3b8cffe1387010203a33a9d3bddaf71706e40783493"
 
