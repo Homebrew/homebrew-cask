@@ -14,12 +14,13 @@ cask "hex-fiend" do
   end
 
   auto_updates true
+  depends_on macos: ">= :mojave"
 
   app "Hex Fiend.app"
   binary "#{appdir}/Hex Fiend.app/Contents/Resources/hexf"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.ridiculousfish.hexfiend.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.ridiculousfish.hexfiend.sfl*",
     "~/Library/Application Support/com.ridiculousfish.HexFiend",
     "~/Library/Caches/com.ridiculousfish.HexFiend",
     "~/Library/Cookies/com.ridiculousfish.HexFiend.binarycookies",
