@@ -5,7 +5,7 @@ cask "mediamate" do
   url "https://github.com/Wouter01/MediaMate-Releases/releases/download/v#{version.csv.first}_#{version.csv.second}/MediaMate_v#{version.csv.first}-#{version.csv.second}.zip",
       verified: "github.com/Wouter01/MediaMate-Releases/"
   name "MediaMate"
-  desc "Control volume, brightness, and now playing with a new look"
+  desc "UI replacement for volume, brightness and now playing control"
   homepage "https://wouter01.github.io/MediaMate/"
 
   livecheck do
