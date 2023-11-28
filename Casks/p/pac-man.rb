@@ -1,5 +1,4 @@
 cask "pac-man" do
-  
   version "10.31"
   sha256 :no_check
 
