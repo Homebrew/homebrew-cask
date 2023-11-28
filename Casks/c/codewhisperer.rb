@@ -5,7 +5,7 @@ cask "codewhisperer" do
   url "https://desktop-release.codewhisperer.us-east-1.amazonaws.com/#{version}/CodeWhisperer.dmg",
       verified: "desktop-release.codewhisperer.us-east-1.amazonaws.com/"
   name "CodeWhisperer for Command Line"
-  desc "AI-powered productivity tool for the command line"
+  desc "AI-powered productivity tool for the command-line"
   homepage "https://aws.amazon.com/codewhisperer/"
 
   livecheck do
