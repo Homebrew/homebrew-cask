@@ -1,5 +1,5 @@
 cask "pac-man" do
-  version "10.31"
+  version "10.32"
   sha256 :no_check
 
   url "http://www2.getpacman.gq/files/Pac-Man.zip"
