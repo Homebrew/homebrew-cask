@@ -1,6 +1,6 @@
 cask "ente" do
-  version "1.6.53"
-  sha256 "acd9b870e7579f454c3514638eed665acafda195ea2ab5ab878aa9496230c915"
+  version "1.6.54"
+  sha256 "59e1c81e0336e981744345b199c73696f04fae6ce01a0b5783750de51838337d"
 
   url "https://github.com/ente-io/photos-desktop/releases/download/v#{version}/ente-#{version}.dmg",
       verified: "github.com/ente-io/photos-desktop/"
