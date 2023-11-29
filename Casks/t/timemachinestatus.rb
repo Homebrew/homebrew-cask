@@ -1,6 +1,6 @@
 cask "timemachinestatus" do
-  version "0.0.8"
-  sha256 "dc5e9734bfc452c307c6464ff2953786de6ad1578845aaa593d26ad053e681c3"
+  version "0.0.9"
+  sha256 "9ca887c39e6c85d315eee203b04b48cf548072ef7180d7f73bd114ea002fb8c4"
 
   url "https://github.com/lukepistrol/TimeMachineStatus/releases/download/#{version}/TimeMachineStatus.dmg"
   name "TimeMachineStatus"
