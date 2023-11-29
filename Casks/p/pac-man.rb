@@ -8,4 +8,6 @@ cask "pac-man" do
   homepage "https://www.getpacman.gq/"
 
   app "Pac-Man.app"
+  
+  zap trash: "~/highscore.txt"
 end
