@@ -9,13 +9,16 @@ cask "snagit" do
 
   livecheck do
     url "https://www.techsmith.com/api/v/1/products/getallversions/100"
-    strategy :page_match do |page|
-      v = JSON.parse(page).first
-      "20#{v["Major"]}.#{v["Minor"]}.#{v["Maintenance"]}"
+    strategy :json do |json|
+      json.map do |item|
+        next if item["Major"].blank? || item["Minor"].blank? || item["Maintenance"].blank?
+
+        "20#{item["Major"]}.#{item["Minor"]}.#{item["Maintenance"]}"
+      end
     end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "Snagit #{version.major}.app"
 
