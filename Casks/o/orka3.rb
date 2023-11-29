@@ -13,8 +13,8 @@ cask "orka3" do
 
   livecheck do
     url "https://cli-builds-public.s3.eu-west-1.amazonaws.com/official/latest.json"
-    strategy :page_match do |page|
-      JSON.parse(page)["version"]
+    strategy :json do |json|
+      json["version"]
     end
   end
 

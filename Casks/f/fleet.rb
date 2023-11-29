@@ -13,10 +13,8 @@ cask "fleet" do
 
   livecheck do
     url "https://data.services.jetbrains.com/products/releases?code=FL&latest=true&type=preview"
-    strategy :page_match do |page|
-      JSON.parse(page)["FL"].map do |release|
-        (release["version"]).to_s
-      end
+    strategy :json do |json|
+      json["FL"]&.map { |release| release["version"] }
     end
   end
 

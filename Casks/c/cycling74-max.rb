@@ -6,17 +6,17 @@ cask "cycling74-max" do
   name "Cycling ‘74 Max"
   name "Ableton Max for Live"
   desc "Flexible space to create your own interactive software"
-  homepage "https://cycling74.com/"
+  homepage "https://cycling74.com/products/max"
 
   livecheck do
     url "https://auth.cycling74.com/maxversion"
-    regex(/^\d{2}(\d{2})[._-](\d{2})[._-](\d{2})/i)
-    strategy :page_match do |page, regex|
-      json = JSON.parse(page)
-      match = json["release_date"].match(regex)
-      next if match.blank?
+    regex(/^\d{2}(\d{2})-(\d{2})-(\d{2})/i)
+    strategy :json do |json, regex|
+      id = json["_id"]
+      match = json["release_date"]&.match(regex)
+      next if id.blank? || match.blank?
 
-      "#{json["_id"]}_#{match[1]}#{match[2]}#{match[3]}"
+      "#{id}_#{match[1]}#{match[2]}#{match[3]}"
     end
   end
 
