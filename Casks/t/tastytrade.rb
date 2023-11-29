@@ -1,3 +1,6 @@
+# typed: true
+# frozen_string_literal: true
+
 cask "tastytrade" do
   arch arm: "-aarch64"
 
