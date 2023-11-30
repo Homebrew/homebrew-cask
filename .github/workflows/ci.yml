@@ -7,12 +7,12 @@ on:
       casks:
         description: List of casks to audit (comma-separated)
         required: true
-      skip-install:
+      skip_install:
         description: Skip installation of casks
         required: false
         default: true
         type: boolean
-      new-cask:
+      new_cask:
         description: Apply new cask audit
         required: false
         default: false
@@ -54,7 +54,7 @@ jobs:
       - name: Generate CI matrix
         id: generate-matrix
         run: |
-          if [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" ]]
+          if [[ "${github.event_name}" == "workflow_dispatch" ]]
           then
             brew ruby -- "$(brew --repository homebrew/cask)/cmd/lib/generate-matrix.rb" ${{ github.event.inputs.skip_install  && '--skip-install' }} ${{ github.event.inputs.new_cask  && '--new-cask' }} --casks=${{ github.event.inputs.casks }}
           else
