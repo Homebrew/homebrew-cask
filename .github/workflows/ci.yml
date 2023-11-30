@@ -54,7 +54,7 @@ jobs:
       - name: Generate CI matrix
         id: generate-matrix
         run: |
-          if [[ "${github.event_name}" == "workflow_dispatch" ]]
+          if [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" ]]
           then
             brew ruby -- "$(brew --repository homebrew/cask)/cmd/lib/generate-matrix.rb" ${{ github.event.inputs.skip_install  && '--skip-install' }} ${{ github.event.inputs.new_cask  && '--new-cask' }} --casks=${{ github.event.inputs.casks }}
           else
