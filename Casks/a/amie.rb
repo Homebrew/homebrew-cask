@@ -12,7 +12,7 @@ cask "amie" do
   homepage "https://amie.so/"
 
   livecheck do
-    url "https://github.com/amieso/electron-releases"
+    url :url
     strategy :github_releases
   end
 
