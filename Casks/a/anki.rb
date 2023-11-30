@@ -26,7 +26,6 @@ cask "anki" do
     strategy :github_latest
   end
 
-  conflicts_with cask: "anki-beta"
   depends_on macos: ">= :high_sierra"
 
   app "Anki.app"
