@@ -11,11 +11,6 @@ cask "amie" do
   desc "Calendar and task manager"
   homepage "https://amie.so/"
 
-  livecheck do
-    url :url
-    strategy :github_releases
-  end
-
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
