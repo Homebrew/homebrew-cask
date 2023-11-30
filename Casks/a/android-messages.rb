@@ -1,22 +1,13 @@
 cask "android-messages" do
-  version "3.1.0"
-  sha256 "4f1158c390e98c98516d6b34a98b6037dee55d4484f5aca5df75050ca91ece7f"
+  version "5.4.2"
+  sha256 "33b9d3f7b34a81496f71f5d02d1d173e2a424173ba7706913f7617946c604ff0"
 
-  url "https://github.com/chrisknepper/android-messages-desktop/releases/download/v#{version}/Android-Messages-#{version}.dmg"
+  url "https://github.com/OrangeDrangon/android-messages-desktop/releases/download/v#{version}/Android-Messages-v#{version}-mac-universal.zip"
   name "Android Messages Desktop"
   desc "Desktop client for Android Messages"
-  homepage "https://github.com/chrisknepper/android-messages-desktop"
+  homepage "https://github.com/OrangeDrangon/android-messages-desktop"
 
   app "Android Messages.app"
 
-  zap trash: "~/Library/Application Support/Android Messages"
-
-  caveats do
-    discontinued
-
-    <<~EOS
-      #{token} has been deprecated in favor of OrangeDrangon Android Messages.
-        brew install --cask orangedrangon-android-messages
-    EOS
-  end
+  zap trash: "~/Library/Application Support/android-messages-desktop"
 end
