@@ -7,6 +7,8 @@ cask "orangedrangon-android-messages" do
   desc "Desktop client for Android Messages"
   homepage "https://github.com/OrangeDrangon/android-messages-desktop"
 
+  depends_on macos: ">= :high_sierra"
+
   conflicts_with cask: "android-messages"
 
   app "Android Messages.app"
