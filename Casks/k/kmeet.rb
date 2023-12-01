@@ -1,5 +1,5 @@
 cask "kmeet" do
-  version "2.0.0"
+  version "2.0.1"
   sha256 :no_check
 
   url "https://download.storage.infomaniak.com/meet/kMeet.dmg"
