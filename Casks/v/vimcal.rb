@@ -14,7 +14,8 @@ cask "vimcal" do
   homepage "https://vimcal.com/"
 
   livecheck do
-    skip "No version information available"
+    url "https://vimcal-#{host_suffix}.s3.amazonaws.com/latest-mac.yml"
+    strategy :electron_builder
   end
 
   depends_on macos: ">= :catalina"
