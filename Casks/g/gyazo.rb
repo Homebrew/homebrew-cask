@@ -1,8 +1,8 @@
 cask "gyazo" do
-  version "3.11.0"
-  sha256 "441b8ed089be967c4136557c63e7742ddc930d7cbd44c4efab48143fb6598c10"
+  version "5.2.0"
+  sha256 "b011b5ebd53e2ae544457ac538ce15606d955b3eaacea876670307550564d80a"
 
-  url "https://files.gyazo.com/setup/Gyazo-#{version}.dmg"
+  url "https://files.gyazo.com/setup/Gyazo-#{version}.pkg"
   name "Nota Gyazo GIF"
   desc "Screenshot and screen recording tool"
   homepage "https://gyazo.com/"
@@ -12,8 +12,11 @@ cask "gyazo" do
     strategy :sparkle
   end
 
-  app "Gyazo.app"
-  app "Gyazo GIF.app"
+  pkg "Gyazo-#{version}.pkg"
+
+  uninstall launchctl: "com.gyazo.menu.helper",
+            pkgutil:   "com.gyazo.pkg",
+            quit:      "com.gyazo.menu"
 
   zap trash: [
     "~/Library/Caches/com.gyazo.gif",
