@@ -1,8 +1,8 @@
 cask "vine-server" do
-  version "5.3.1"
-  sha256 "f3e22c807332df25ce2e37d06ff9552c973d69ee54d2ba9a376358d9d9337af2"
+  version "5.3.2"
+  sha256 "9cbea2f972b235029c9d68b15004e3d401668c3a24e86d60719eed26f2cc5a71"
 
-  url "https://github.com/stweil/OSXvnc/releases/download/V#{version.dots_to_underscores}/VineServer-#{version}.dmg"
+  url "https://github.com/stweil/OSXvnc/releases/download/V#{version}/VineServer-#{version}.dmg"
   name "Vine Server"
   desc "VNC server"
   homepage "https://github.com/stweil/OSXvnc/"
