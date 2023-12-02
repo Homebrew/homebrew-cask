@@ -1,6 +1,6 @@
 cask "swiftpm-catalog" do
-  version "1.1.14,34"
-  sha256 "2b4d97d9a796c242c8cfd34d0790f40cd52989d875f78b739d486150d60b53cc"
+  version "1.2.2,1238"
+  sha256 "f006f055b6eb620b0d9b5c882f9930450990fb43677f6915487818ec8bc6ee4f"
 
   url "https://zeezide.com/en/products/swiftpmcatalog/archives/SwiftPM%20Catalog.app-#{version.csv.first}-v#{version.csv.second}.zip"
   name "SwiftPM Catalog"
@@ -18,4 +18,12 @@ cask "swiftpm-catalog" do
   depends_on macos: ">= :mojave"
 
   app "SwiftPM Catalog.app"
+
+  zap trash: [
+    "~/Library/Caches/SwiftPM Catalog",
+    "~/Library/HTTPStorages/de.zeezide.swift.SwiftPMCatalog",
+    "~/Library/org.swift.swiftpm",
+    "~/Library/Preferences/de.zeezide.swift.SwiftPMCatalog.plist",
+    "~/Library/Saved Application State/de.zeezide.swift.SwiftPMCatalog.savedState",
+  ]
 end
