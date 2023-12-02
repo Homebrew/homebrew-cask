@@ -3,7 +3,7 @@ cask "navigraph-simlink" do
   sha256 :no_check
 
   url "https://download.navigraph.com/software/simlink/osx/Navigraph+Simlink.dmg"
-  name "navigraph-simlink"
+  name "Navigraph Simlink"
   desc "Magenta aircraft icon helps you find your way in the air and on the ground"
   homepage "https://navigraph.com/"
 
