@@ -16,4 +16,12 @@ cask "retrobatch" do
   depends_on macos: ">= :sierra"
 
   app "Retrobatch.app"
+
+  zap trash: [
+    "Library/Application Support/Retrobatch",
+    "Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.flyingmeat.retrobatch.sfl*",
+    "Library/HTTPStorages/com.flyingmeat.Retrobatch",
+    "Library/Saved Application State/com.flyingmeat.Retrobatch.savedState",
+    "Library/Preferences/com.flyingmeat.Retrobatch.plist",
+  ]
 end
