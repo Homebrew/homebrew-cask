@@ -1,6 +1,6 @@
 cask "duckduckgo" do
-  version "1.66.1"
-  sha256 "99c6a1360f83f30a537ab24088a679648f040387e293e9807d61547711486214"
+  version "1.65.2"
+  sha256 "5295dc5820db6600e237527becfc8dad22079f069b596b18805c159b1149dbd0"
 
   url "https://staticcdn.duckduckgo.com/macos-desktop-browser/duckduckgo-#{version}.dmg"
   name "DuckDuckGo"
@@ -9,7 +9,9 @@ cask "duckduckgo" do
 
   livecheck do
     url "https://staticcdn.duckduckgo.com/macos-desktop-browser/appcast2.xml"
-    strategy :sparkle
+    strategy :sparkle do |items|
+      items.find { |item| item.channel.nil? }&.short_version
+    end
   end
 
   auto_updates true
