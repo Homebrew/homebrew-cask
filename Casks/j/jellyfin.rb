@@ -9,7 +9,7 @@ cask "jellyfin" do
 
   livecheck do
     url "https://repo.jellyfin.org/releases/server/macos/stable/"
-    regex(%r{href=.*?/jellyfin_(\d+(?:\.\d+)*(?:-\d)*)\.dmg}i)
+    regex(/href=.*?jellyfin[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
   end
 
   app "Jellyfin.app"
