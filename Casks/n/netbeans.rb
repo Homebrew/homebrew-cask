@@ -1,6 +1,6 @@
 cask "netbeans" do
-  version "19"
-  sha256 "366168ad60c7ec22357ac78405e761b2bae7e777b33a1f0d9ea9a0302cd6bacb"
+  version "20"
+  sha256 "60b980ad5ca8129caa99e039d610bd70fb95ae65732054af55f828b64e87213c"
 
   url "https://dlcdn.apache.org/netbeans/netbeans-installers/#{version}/Apache-NetBeans-#{version}.pkg"
   name "NetBeans IDE"
