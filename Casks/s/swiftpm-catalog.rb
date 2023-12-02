@@ -18,4 +18,12 @@ cask "swiftpm-catalog" do
   depends_on macos: ">= :mojave"
 
   app "SwiftPM Catalog.app"
+
+  zap trash: [
+    "~/Library/Caches/SwiftPM Catalog",
+    "~/Library/HTTPStorages/de.zeezide.swift.SwiftPMCatalog",
+    "~/Library/org.swift.swiftpm",
+    "~/Library/Preferences/de.zeezide.swift.SwiftPMCatalog.plist",
+    "~/Library/Saved Application State/de.zeezide.swift.SwiftPMCatalog.savedState",
+  ]
 end
