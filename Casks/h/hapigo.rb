@@ -1,5 +1,5 @@
 cask "hapigo" do
-  version "2.11.1,230"
+  version "2.11.1"
   sha256 :no_check
 
   url "https://dl.hapigo.com/HapiGo.dmg"
@@ -8,8 +8,8 @@ cask "hapigo" do
   homepage "https://www.hapigo.com/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://hapigo.com/update/cast.plist"
+    regex(%r{<key>version</key>\s*\n\s*<string>(\d+(?:\.\d+)+)</string>}i)
   end
 
   auto_updates true
