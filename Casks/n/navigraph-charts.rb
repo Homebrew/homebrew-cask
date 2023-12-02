@@ -3,15 +3,13 @@ cask "navigraph-charts" do
   sha256 "4d093338db87818dee8a4995dae8b72e76982878e313ab4d281336b2d6759afe"
 
   url "https://download.navigraph.com/software/charts/mac/Navigraph%20Charts%20#{version}.dmg"
-  name "navigraph-charts"
+  name "Navigraph Charts"
   desc "Access professional and updated Jeppesen charts for flight simulation"
   homepage "https://navigraph.com/"
 
   livecheck do
     url "https://download.navigraph.com/software/charts/mac/latest-mac.yml"
-    strategy :yaml do |yaml|
-      yaml["version"]
-    end
+    strategy :electron_builder
   end
 
   auto_updates true
