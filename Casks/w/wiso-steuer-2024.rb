@@ -15,7 +15,8 @@ cask "wiso-steuer-2024" do
   auto_updates true
   depends_on macos: ">= :catalina"
 
-  app "WISO Steuer 2024.app"
+  # Renamed for consistency: app name differs in Finder to shell
+  app "SteuerMac 2024.app", target: "WISO Steuer 2024.app"
 
   zap trash: [
     "~/Library/Application Support/BuhlData.com/WISOsteuerMac2024",
