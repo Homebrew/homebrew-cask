@@ -13,7 +13,7 @@ cask "brightintosh" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :monterey"
   depends_on arch: :arm64
 
   app "BrightIntosh.app"
