@@ -1,6 +1,6 @@
 cask "senabluetoothdevicemanager" do
-  version "4.4.4"
-  sha256 "00ece30492bbe9683c637995ca900d3c32c9ace1b4c3c3dc5ebc147d21326031"
+  version "4.4.6"
+  sha256 "66bdd1bbde69aa132291ddc4113e058c9300853bd17041644ff00d0010140cd6"
 
   url "https://firmware.sena.com/senabluetoothmanager/SENABluetoothDeviceManagerForMAC-v#{version}.pkg"
   name "Sena Bluetooth Device Manager"
@@ -8,8 +8,8 @@ cask "senabluetoothdevicemanager" do
   homepage "https://www.sena.com/us-en/support/software"
 
   livecheck do
-    url :homepage
-    regex(/href=.*?senabluetoothdevicemanager.*?[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
+    url "https://firmware.sena.com/senabluetoothmanager/Software"
+    regex(/SENABluetoothDeviceManagerForMAC[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
   depends_on macos: ">= :catalina"
