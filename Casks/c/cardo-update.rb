@@ -3,7 +3,7 @@ cask "cardo-update" do
   sha256 :no_check
 
   url "https://update.cardosystems.com/cardo-app/cardo_updater_macOS_latest.pkg"
-  name "Firmware update tool for PACKTALK and FREECOM unit lines"
+  name "Cardo Update"
   desc "Update Packtalk and Freecom motorcycle intercoms"
   homepage "https://www.cardosystems.com/download-cardo-updater/"
 
