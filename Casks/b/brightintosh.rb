@@ -13,7 +13,17 @@ cask "brightintosh" do
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: "> :monterey"
+  depends_on macos: ">= :ventura"
+  depends_on arch: :arm64
 
   app "BrightIntosh.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/de.brightintosh.app",
+    "~/Library/Application Scripts/de.brightintosh.launcher",
+    "~/Library/Caches/de.brightintosh.app",
+    "~/Library/Containers/de.brightintosh.app",
+    "~/Library/Containers/de.brightintosh.launcher",
+    "~/Library/HTTPStorages/de.brightintosh.app",
+  ]
 end
