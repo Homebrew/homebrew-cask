@@ -1,5 +1,5 @@
 cask "cardo-update" do
-  version "4.2.0.30204"
+  version "4.2.0"
   sha256 :no_check
 
   url "https://update.cardosystems.com/cardo-app/cardo_updater_macOS_latest.pkg"
@@ -8,8 +8,8 @@ cask "cardo-update" do
   homepage "https://www.cardosystems.com/download-cardo-updater/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://update.cardosystems.com/cardo-app/latest-mac.yml"
+    strategy :electron_builder
   end
 
   pkg "cardo_updater_macOS_latest.pkg"
