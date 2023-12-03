@@ -1,6 +1,6 @@
 cask "mediaelch" do
-  version "2.10.4,2023-07-30,0722e4ee"
-  sha256 "ef02d3a8a272ebb0569bc5d20e2632d2a8c14365d4cd80da1752cdbb2b1d1175"
+  version "2.10.6,2023-12-03,6121419e"
+  sha256 "facdfd42fbb0daeea0206c5506c0b51dde56d6c43b9ee31aff963c02185de6b2"
 
   url "https://github.com/Komet/MediaElch/releases/download/v#{version.csv.first}/MediaElch_macOS_11_or_later_Qt6_#{version.csv.first}_#{version.csv.second}_git-#{version.csv.third}.dmg",
       verified: "github.com/Komet/MediaElch/"
