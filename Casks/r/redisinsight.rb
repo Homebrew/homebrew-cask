@@ -17,6 +17,8 @@ cask "redisinsight" do
     strategy :github_latest
   end
 
+  app "RedisInsight.app"
+
   zap trash: [
     "~/Library/Preferences/org.RedisLabs.RedisInsight-V#{version.major}.plist",
     "~/Library/Saved Application State/org.RedisLabs.RedisInsight-V#{version.major}.savedState",
