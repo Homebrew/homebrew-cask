@@ -12,7 +12,6 @@ cask "xtool-creative-space" do
   end
 
   url "https://storage-us.xtool.com/resource/efficacy/xcs/production/packages/#{version.csv.second}/#{version.csv.third}/xTool%20Creative%20Space-#{version.csv.first}-#{version.csv.fourth}-#{arch}.dmg",
-      verified: "storage-us.xtool.com/resource/efficacy/xcs/production/packages/"
   name "xTool Creative Space"
   desc "Design and control software for xTool laser machines"
   homepage "https://www.xtool.com/pages/software"
