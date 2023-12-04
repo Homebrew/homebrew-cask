@@ -4,7 +4,7 @@ cask "navigraph-simlink" do
 
   url "https://download.navigraph.com/software/simlink/osx/Navigraph+Simlink.dmg"
   name "Navigraph Simlink"
-  desc "Link you Navigraph account with Flight Simulators"
+  desc "Link your Navigraph account with Flight Simulators"
   homepage "https://navigraph.com/"
 
   livecheck do
