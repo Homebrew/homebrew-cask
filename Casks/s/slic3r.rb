@@ -9,6 +9,7 @@ cask "slic3r" do
   homepage "https://slic3r.org/"
 
   app "Slic3r.app"
+  binary "#{appdir}/Slic3r.app/Contents/MacOS/Slic3r", target: "slic3r"
 
   zap trash: [
     "~/Library/Application Support/Slic3r",
