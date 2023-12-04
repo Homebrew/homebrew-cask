@@ -2,7 +2,7 @@ cask "ddpm" do
   version "1.2.0.0052"
   sha256 "53faf376738a35a8f1af6f4ba48ea18986d885f032ca89911172f6e6e1b4c58b"
 
-  url "https://dl.dell.com/FOLDER10485258M/1/DDPMv#{version}.zip"
+  url "https://dl.dell.com/FOLDER10656664M/1/DDPMv#{version}.zip"
   name "DDPM"
   name "Dell Display and Peripheral Manager"
   desc "Monitors and peripherals manager"
@@ -14,11 +14,11 @@ cask "ddpm" do
   end
 
   pkg "DDPMv#{version}/DDPM_Installer.pkg"
-  binary "#{appdir}/DDPM/DDPM.app/Contents/MacOS/DDPM"
+  binary "/Applications/DDPM/DDPM.app/Contents/MacOS/DDPM"
 
   uninstall pkgutil: "Qisda.pkg.DDPM",
-            delete:  "#{appdir}/DDPM/SW_VER.json",
-            rmdir:   "#{appdir}/DDPM"
+            delete:  "/Applications/DDPM/SW_VER.json",
+            rmdir:   "/Applications/DDPM"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/qisda.autolaunchddpmhelper.sfl2",
