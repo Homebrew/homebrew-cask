@@ -1,6 +1,6 @@
 cask "ddpm" do
-  version "1.1.1.0038"
-  sha256 "922371db71c878c1568ed92a6edeb100cc25efd37ebb5e046d8d9ed8bfdb3ed4"
+  version "1.2.0.0052"
+  sha256 "53faf376738a35a8f1af6f4ba48ea18986d885f032ca89911172f6e6e1b4c58b"
 
   url "https://dl.dell.com/FOLDER10485258M/1/DDPMv#{version}.zip"
   name "DDPM"
@@ -9,7 +9,7 @@ cask "ddpm" do
   homepage "https://dell.com/"
 
   livecheck do
-    url "https://www.dell.com/support/home/en-us/drivers/driversdetails?driverid=63t8x"
+    url "https://www.dell.com/support/home/en-us/drivers/driversdetails?driverid=3v8tw"
     regex(/ddpmv(\d+(?:\.\d+)+)\.zip/i)
   end
 
