@@ -17,6 +17,7 @@ cask "vimcal" do
     strategy :electron_builder
   end
 
+  auto_updates true
   depends_on macos: ">= :catalina"
 
   app "Vimcal.app"
@@ -24,7 +25,7 @@ cask "vimcal" do
   zap trash: [
     "Library/Application Support/Vimcal",
     "Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/" \
-    "com.vimcal.app.sfl3",
+    "com.vimcal.app.sfl*",
     "Library/Preferences/com.vimcal.app.plist",
     "Library/Saved Application State/com.vimcal.app.savedState",
   ]
