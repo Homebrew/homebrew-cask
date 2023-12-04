@@ -13,6 +13,7 @@ cask "focusrite-control-2" do
     strategy :sparkle, &:version
   end
 
+  auto_updates true
   depends_on macos: ">= :mojave"
 
   app "Focusrite Control 2.app"
