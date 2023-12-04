@@ -20,7 +20,5 @@ cask "october" do
 
   app "October.app"
 
-  zap trash: [
-    "~/Library/Application Support/october",
-  ]
+  zap trash: "~/Library/Application Support/october"
 end
