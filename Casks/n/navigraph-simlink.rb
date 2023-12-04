@@ -8,7 +8,7 @@ cask "navigraph-simlink" do
   homepage "https://navigraph.com/"
 
   livecheck do
-    url "https://charts.api.navigraph.com/1/versions/latest?operating_system=mac&software=%7Be5431a0d-8735-4e89-9e41-d820334b2909%7D"
+    url "https://charts.api.navigraph.com/1/versions/latest?operating_system=mac&software={e5431a0d-8735-4e89-9e41-d820334b2909}"
     strategy :json do |json|
       json["version"]
     end
