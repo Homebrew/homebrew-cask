@@ -5,7 +5,7 @@ cask "nx-studio" do
   url "https://download.nikonimglib.com/archive6/sRoLC00mMTZQ06g0yqe26VXd2O80/S-NXSTDO-0#{version.major}0#{version.minor}0#{version.patch}MF-ALLIN-ALL___.dmg",
       verified: "download.nikonimglib.com/"
   name "NX Studio"
-  desc "Single software comprehensively covers image processing for Nikon"
+  desc "Nikon suite for viewing, processing, and editing photos and videos"
   homepage "https://imaging.nikon.com/imaging/lineup/software/nx_studio/"
 
   livecheck do
