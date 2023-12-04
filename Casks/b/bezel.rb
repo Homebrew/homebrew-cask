@@ -1,6 +1,6 @@
 cask "bezel" do
-  version "1.3.2"
-  sha256 "544d804d0d33a223673000684771529b05fe69ef1ff966958d6aecb5b12ec8f2"
+  version "1.3.3"
+  sha256 "331c3f763a827f69f1a066e03e2edd177ef061f37b73db1d83d57f5f8adac8e0"
 
   url "https://download.nonstrict.eu/bezel/Bezel-#{version}.zip",
       verified: "download.nonstrict.eu/bezel/"
