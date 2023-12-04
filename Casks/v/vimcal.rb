@@ -23,9 +23,9 @@ cask "vimcal" do
   app "Vimcal.app"
 
   zap trash: [
-    "~/Library/Application Support/Vimcal",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/" \
     "com.vimcal.app.sfl*",
+    "~/Library/Application Support/Vimcal",
     "~/Library/Preferences/com.vimcal.app.plist",
     "~/Library/Saved Application State/com.vimcal.app.savedState",
   ]
