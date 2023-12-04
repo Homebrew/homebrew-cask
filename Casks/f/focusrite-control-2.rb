@@ -1,11 +1,16 @@
 cask "focusrite-control-2" do
-  version :latest
-  sha256 :no_check
+  version "1.111.0.15742"
+  sha256 "1234"
 
-  url "https://releases.focusrite.com/com.focusrite.focusrite-control/latest/Focusrite-Control-2.dmg"
+  url "https://releases.focusrite.com/com.focusrite.focusrite-control/release/Focusrite-Control-2-#{version}.dmg"
   name "Focusrite Control 2"
   desc "Focusrite interface controller for devices of the 4th generation and newer"
   homepage "https://focusrite.com/en"
+
+  livecheck do
+    url "https://releases.focusrite.com/com.focusrite.focusrite-control/release/focusrite-control.release.mac.xml"
+    strategy :sparkle, &:version
+  end
 
   depends_on macos: ">= :mojave"
 
