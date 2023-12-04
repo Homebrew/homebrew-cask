@@ -1,6 +1,6 @@
 cask "focusrite-control-2" do
   version "1.111.0.15742"
-  sha256 "1234"
+  sha256 "0b9ffb23ac6c437ab61c5f6bc4b2f2d7061eb8004d6c2113709a5eb9532d4f41"
 
   url "https://releases.focusrite.com/com.focusrite.focusrite-control/release/Focusrite-Control-2-#{version}.dmg"
   name "Focusrite Control 2"
@@ -17,11 +17,7 @@ cask "focusrite-control-2" do
   app "Focusrite Control 2.app"
 
   uninstall quit:      "com.focusrite.control",
-            launchctl: "com.focusrite.ControlServer",
-            delete:    [
-              "~/Applications/Focusrite Control 2.app",
-              "/Library/LaunchDaemons/com.focusrite.ControlServer.plist",
-            ]
+            launchctl: "com.focusrite.ControlServer"
 
   zap trash: [
     "~/Library/Application Support/Focusrite",
