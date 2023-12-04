@@ -33,16 +33,13 @@ module Homebrew
     skip_install = args.skip_install?
     new_cask = args.new_cask?
     casks = args.casks if args.casks&.any?
+    pr_url = args.url
 
-    if args.url.present?
-      pr_url = args.url
-
-      labels = if pr_url
-        pr = GitHub::API.open_rest(pr_url)
-        pr.fetch("labels").map { |l| l.fetch("name") }
-      else
-        []
-      end
+    labels = if pr_url
+      pr = GitHub::API.open_rest(pr_url)
+      pr.fetch("labels").map { |l| l.fetch("name") }
+    else
+      []
     end
 
     tap = Tap.fetch(ENV.fetch("GITHUB_REPOSITORY"))
