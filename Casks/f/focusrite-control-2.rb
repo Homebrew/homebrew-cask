@@ -10,7 +10,7 @@ cask "focusrite-control-2" do
 
   livecheck do
     url "https://releases.focusrite.com/com.focusrite.focusrite-control/release/focusrite-control.release.mac.xml"
-    strategy :sparkle, &:version
+    strategy :sparkle
   end
 
   auto_updates true
@@ -24,9 +24,9 @@ cask "focusrite-control-2" do
   zap trash: [
     "~/Library/Application Support/Focusrite",
     "~/Library/Caches/com.juce.locks",
-    "~/Library/Logs/Focusrite Control 2",
-    "~/Library/Saved Application State/com.focusrite.control.savedState",
     "~/Library/HTTPStorages/com.focusrite.control",
+    "~/Library/Logs/Focusrite Control 2",
     "~/Library/Preferences/com.focusrite.control.plist",
+    "~/Library/Saved Application State/com.focusrite.control.savedState",
   ]
 end
