@@ -2,7 +2,7 @@ cask "nx-studio" do
   version "1.5.0"
   sha256 "803e231464f589dcdcd958a57dd288f8824a06735e45b7e1abc18945d2e56890"
 
-  url "https://download.nikonimglib.com/archive6/sRoLC00mMTZQ06g0yqe26VXd2O80/S-NXSTDO-0#{version.major}0#{version.minor}0#{version.patch}MF-ALLIN-ALL___.dmg",
+  url "https://download.nikonimglib.com/archive6/sRoLC00mMTZQ06g0yqe26VXd2O80/S-NXSTDO-#{version.split(".").map { |n| n.rjust(2, "0") }.join}MF-ALLIN-ALL___.dmg",
       verified: "download.nikonimglib.com/"
   name "NX Studio"
   desc "Nikon suite for viewing, processing, and editing photos and videos"
