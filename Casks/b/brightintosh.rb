@@ -2,10 +2,9 @@ cask "brightintosh" do
   version "1.4.2"
   sha256 "9f3a18c3ef27078f69d094d89b815d2f0a039f5901db3fa98108c0720d67c813"
 
-  url "https://github.com/niklasr22/BrightIntosh/releases/download/v#{version}/BrightIntosh_v#{version}.dmg",
-      verified: "github.com/niklasr22/BrightIntosh/"
+  url "https://c.brightintosh.de/updates/BrightIntosh_v#{version}.dmg"
   name "BrightIntosh"
-  desc "This tool enables the full brightness of your MacBook Pro M1 or newer"
+  desc "Utility that allows increased screen brightness"
   homepage "https://www.brightintosh.de/"
 
   livecheck do
