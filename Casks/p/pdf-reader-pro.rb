@@ -17,7 +17,7 @@ cask "pdf-reader-pro" do
   app "PDF Reader Pro.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.brother.pdfreaderprofree.mac.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.brother.pdfreaderprofree.mac.sfl*",
     "~/Library/Application Support/com.brother.pdfreaderprofree.mac",
     "~/Library/Caches/com.brother.pdfreaderprofree.mac",
     "~/Library/Preferences/com.brother.pdfreaderprofree.mac.bookmarks.plist",
