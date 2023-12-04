@@ -4,7 +4,7 @@ cask "navigraph-simlink" do
 
   url "https://download.navigraph.com/software/simlink/osx/Navigraph+Simlink.dmg"
   name "Navigraph Simlink"
-  desc "Magenta aircraft icon helps you find your way in the air and on the ground"
+  desc "Link you Navigraph account with Flight Simulators"
   homepage "https://navigraph.com/"
 
   livecheck do
