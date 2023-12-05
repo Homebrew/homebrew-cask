@@ -1,5 +1,5 @@
 cask "photozoom-pro" do
-  version "8.1.0"
+  version "8.2.0"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://www.benvista.com/photozoompro#{version.major}/download/mac",
