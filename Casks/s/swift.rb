@@ -9,7 +9,7 @@ cask "swift" do
 
   livecheck do
     url "https://swift.im/downloads/swift-stable-appcast-mac.xml"
-    strategy :sparkle
+    strategy :sparkle, &:version
   end
 
   app "Swift.app"
