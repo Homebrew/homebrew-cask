@@ -10,11 +10,11 @@ cask "rhino" do
 
   livecheck do
     url "https://files.mcneel.com/rhino/#{version.major}/mac/updates/commercialUpdates.xml"
-    strategy :sparkle, &:version
+    strategy :sparkle
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :monterey"
 
   app "Rhino #{version.major}.app"
 
