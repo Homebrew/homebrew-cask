@@ -1,9 +1,9 @@
 cask "telegram-a" do
   arch arm: "arm64", intel: "x64"
 
-  version "10.0.22"
-  sha256 arm:   "9937c5e3bbc90c7037a816a9286ee8c477eced8b26f8c00fa3b1f07da6409d39",
-         intel: "2f55cff7933e422dc4090f4a480ede6cad164cac12e45b60646f88e0368f7e0b"
+  version "10.0.24"
+  sha256 arm:   "a6c84b82054fda438e7b12b505223a00ee087599d451e9980259d3be2787f690",
+         intel: "389bd05c474a1eea7b5a83fd0147fc32e2354b91f7e7420240a5a27bf3c5a87f"
 
   url "https://github.com/Ajaxy/telegram-tt/releases/download/v#{version}/Telegram-A-#{arch}.dmg",
       verified: "github.com/Ajaxy/telegram-tt/"
