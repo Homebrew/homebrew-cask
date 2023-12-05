@@ -21,6 +21,5 @@ cask "notes-better" do
     "~/Library/Saved Application State/io.github.nuttyartist.notes.savedState",
     "~/Library/Preferences/io.github.nuttyartist.notes.plist",
     "~/Library/Caches/Notes",
-    "~/.config/Awesomeness",
   ]
 end
