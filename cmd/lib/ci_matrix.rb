@@ -138,7 +138,7 @@ module CiMatrix
       cask_token = path.basename(".rb")
 
       audit_args = ["--online"]
-      audit_args << "--new-cask" if changed_files[:added_files].include?(path) || new_cask
+      audit_args << "--new" if changed_files[:added_files].include?(path) || new_cask
 
       audit_args << "--signing"
 
