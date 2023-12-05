@@ -1,6 +1,6 @@
 cask "coherence-x" do
-  version "4.5.2"
-  sha256 "755388e48b4541325efe43e0de13ddf43b27d4bdb8cce14aaa77e76d6ae50790"
+  version "4.5.3"
+  sha256 "cc7fc7b68e6c0a41a1b7a26fdca7d8d3303e7910bec3f251c104055214ab41cf"
 
   url "https://bzgdownloads.s3.amazonaws.com/Coherence/Coherence+X+#{version}.zip",
       verified: "bzgdownloads.s3.amazonaws.com/Coherence/"
