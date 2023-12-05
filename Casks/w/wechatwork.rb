@@ -1,23 +1,24 @@
 cask "wechatwork" do
-  arch arm: "_arm64"
+  arch arm: "Apple", intel: "Intel"
+  livecheck_folder = on_arch_conditional arm: "_arm64"
 
   on_arm do
-    version "4.1.12.99346"
-    sha256 "df6e555759860768afc0aaea72ce4e7f9910e8898fb5d81b3bdb4c313f8c4e92"
+    version "4.1.13.99357"
+    sha256 "2910c7f3900a780c30d1af8ab47c461a23546793cfd916933f0f5f28fc141c26"
   end
   on_intel do
-    version "4.1.12.90801"
-    sha256 "cad14e903c28c5b6c1a516fcc2c5b2506c216f0bdc9b63ea5d59f28539596b04"
+    version "4.1.13.90811"
+    sha256 "66eb7ceda127b18529e6581f44a8cb9038291e743e0d3bee4934918f391b2022"
   end
 
-  url "https://dldir1.qq.com/foxmail/wecom-mac/updatebzl/WeCom_#{version}_bzl.dmg"
+  url "https://dldir1.qq.com/foxmail/wecom-mac/updatebzl/WeCom_#{version}_#{arch}.dmg"
   name "WeChat Work"
   name "企业微信"
   desc "Messaging and calling application"
   homepage "https://work.weixin.qq.com/"
 
   livecheck do
-    url "https://work.weixin.qq.com/wework_admin/commdownload?platform=mac#{arch}"
+    url "https://work.weixin.qq.com/wework_admin/commdownload?platform=mac#{livecheck_folder}"
     strategy :header_match
   end
 
