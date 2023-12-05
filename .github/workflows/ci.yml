@@ -56,7 +56,7 @@ jobs:
         run: |
           if [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" ]]
           then
-            brew ruby -- "$(brew --repository homebrew/cask)/cmd/lib/generate-matrix.rb" ${{ github.event.inputs.skip_install  && '--skip-install' }} ${{ github.event.inputs.new_cask  && '--new-cask' }} --casks=${{ github.event.inputs.casks }}
+            brew ruby -- "$(brew --repository homebrew/cask)/cmd/lib/generate-matrix.rb" ${{ github.event.inputs.skip_install  && '--skip-install' }} ${{ github.event.inputs.new_cask  && '--new' }} --casks=${{ github.event.inputs.casks }}
           else
             brew ruby -- "$(brew --repository homebrew/cask)/cmd/lib/generate-matrix.rb" --url="${{ github.event.pull_request.url }}"
           fi

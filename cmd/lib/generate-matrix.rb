@@ -20,7 +20,7 @@ module Homebrew
                   description: "Comma-separated list of casks to test."
       switch "--skip-install",
              description: "Skip installing casks"
-      switch "--new-cask",
+      switch "--new",
              description: "Run new cask checks"
 
       conflicts "--url", "--casks"
@@ -31,7 +31,7 @@ module Homebrew
     args = generate_matrix_args.parse
 
     skip_install = args.skip_install?
-    new_cask = args.new_cask?
+    new_cask = args.new?
     casks = args.casks if args.casks&.any?
     pr_url = args.url
 
