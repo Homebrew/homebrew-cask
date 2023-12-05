@@ -8,18 +8,13 @@ cask "notes-better" do
   desc "Simple note-taking app for markdown and kanban"
   homepage "https://get-notes.com/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: ">= :catalina"
 
   app "Notes Better.app"
 
   zap trash: [
-    "~/Library/Saved Application State/io.github.nuttyartist.notes.savedState",
-    "~/Library/Preferences/io.github.nuttyartist.notes.plist",
     "~/Library/Caches/Notes",
+    "~/Library/Preferences/io.github.nuttyartist.notes.plist",
+    "~/Library/Saved Application State/io.github.nuttyartist.notes.savedState",
   ]
 end
