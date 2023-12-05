@@ -3,7 +3,7 @@ cask "rhino" do
   sha256 "d5270ec13bd2b025c3dddd027d039ad59037c0fbd219e5315133596d58b3b981"
 
   url "https://files.mcneel.com/rhino/#{version.major}/mac/releases/rhino_#{version}.dmg",
-      verified: "mcneel.com/"
+      verified: "mcneel.com/rhino/"
   name "Rhinoceros"
   desc "3D model creator"
   homepage "https://www.rhino3d.com/"
