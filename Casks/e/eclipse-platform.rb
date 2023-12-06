@@ -1,9 +1,9 @@
 cask "eclipse-platform" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "4.29,202309031000"
-  sha256 arm:   "558a73cf699408d1c81810543929878766c9ac722b11036d7ca99f693a838df9",
-         intel: "8d78e825332bd99a1a5ff88c2f595949d0a62e33f7e6485c0e475ab07121d611"
+  version "4.30,202312010110"
+  sha256 arm:   "b205f4200eda0c962e03cf62c81454294bcd8069a5a95d5f6946f99616027666",
+         intel: "f7aecb68a7fd516e89f840877a4e722c8c992674153cf8e1877cdf78ba3c3734"
 
   url "https://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops#{version.major}/R-#{version.csv.first}-#{version.csv.second}/eclipse-SDK-#{version.csv.first}-macosx-cocoa-#{arch}.dmg&r=1"
   name "Eclipse SDK"
