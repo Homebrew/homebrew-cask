@@ -1,4 +1,4 @@
-cask "waveterm" do
+cask "wave" do
   version "0.5.1"
   sha256 "fe965fe581a66bbd7c394dbfd7ebb1635cd0bf46329042ef86db123fbd7d5751"
 
