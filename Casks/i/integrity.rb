@@ -12,6 +12,8 @@ cask "integrity" do
     regex(/<h3>v?(\d+(?:\.\d+)+)\s(?!.*beta)/i)
   end
 
+  depends_on macos: ">= :mojave"
+
   app "Integrity.app"
 
   zap trash: [
