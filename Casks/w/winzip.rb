@@ -20,6 +20,8 @@ cask "winzip" do
     end
   end
 
+  depends_on macos: ">= :sierra"
+
   app "WinZip.app"
 
   zap trash: [
