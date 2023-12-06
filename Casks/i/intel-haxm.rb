@@ -24,6 +24,7 @@ cask "intel-haxm" do
             }
 
   caveats do
+    discontinued
     kext
   end
 end
