@@ -5,17 +5,15 @@ cask "waveterm" do
   url "https://dl.waveterm.dev/builds/waveterm-macos-universal-v#{version}.dmg"
   name "Wave Terminal"
   name "WaveTerm"
-  desc "Modern Terminal for Seamless Workflows"
+  desc "Terminal emulator"
   homepage "https://www.waveterm.dev/"
 
   livecheck do
-    url "https://github.com/wavetermdev/waveterm"
-    strategy :github_releases
+    url "https://www.waveterm.dev/download"
+    regex(/href=.*?dl\.waveterm\.dev.+-v(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  auto_updates false
   depends_on macos: ">= :catalina"
-  depends_on arch: [:intel, :arm64]
 
   app "Wave.app"
 
