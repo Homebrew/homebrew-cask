@@ -1,6 +1,6 @@
 cask "fxfactory" do
-  version "8.0.11,7685"
-  sha256 "a7d8528ac0fa49f71f223bf400f574853be83e2eba913d3253517aacfa45f738"
+  version "8.0.11,7690"
+  sha256 "df2dac2d8676e8af60570b7920b66aebd57f0273e6ea51de4275db8a9aa8751d"
 
   url "https://fxfactory.s3.amazonaws.com/noiseindustries/fxfactory/FxFactory-#{version.csv.first}-#{version.csv.second}.zip",
       verified: "fxfactory.s3.amazonaws.com/noiseindustries/"
