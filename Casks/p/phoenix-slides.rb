@@ -8,6 +8,8 @@ cask "phoenix-slides" do
   desc "Full-screen slideshow program"
   homepage "https://blyt.net/phxslides/"
 
+  depends_on macos: ">= :high_sierra"
+
   app "Phoenix Slides.app"
 
   zap trash: [
