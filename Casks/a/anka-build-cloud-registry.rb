@@ -25,7 +25,7 @@ cask "anka-build-cloud-registry" do
   }
 
   zap trash: "/Library/Logs/Veertu/AnkaRegistry",
-      rmdir: "/Library/Application\ Support/Veertu/Anka/anka-registry"
+      rmdir: "/Library/Application Support/Veertu/Anka/anka-registry"
 
   caveats do
     license "https://veertu.com/terms-and-conditions/"

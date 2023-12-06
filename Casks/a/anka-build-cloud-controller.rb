@@ -7,7 +7,7 @@ cask "anka-build-cloud-controller" do
 
   url "https://downloads.veertu.com/anka/anka-controller-#{arch}-#{version}.pkg"
   name "Anka Build Cloud Controller"
-  desc "Virtual macOS machine orchestration GUI & API"
+  desc "Anka virtual machine orchestrator GUI & API"
   homepage "https://veertu.com/"
 
   livecheck do
@@ -25,7 +25,7 @@ cask "anka-build-cloud-controller" do
   }
 
   zap trash: "/Library/Logs/Veertu/AnkaController",
-      rmdir: "/Library/Application\ Support/Veertu/Anka/anka-controller"
+      rmdir: "/Library/Application Support/Veertu/Anka/anka-controller"
 
   caveats do
     license "https://veertu.com/terms-and-conditions/"
