@@ -16,6 +16,8 @@ cask "zoho-mail" do
     regex(/zoho[._-]mail[._-]desktop[._-]lite[._-]installer[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Zoho Mail - Desktop.app"
 
   zap trash: [
