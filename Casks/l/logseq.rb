@@ -1,9 +1,9 @@
 cask "logseq" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.10.0"
-  sha256 arm:   "75454a6f00ce6f3a4f476e0ee38b2584d89a3da56e171a34e3a4a90b270c9bcd",
-         intel: "e73ea476c1ae0f94d3bca53d3255d4d0263c0cc6c0e1cead6a6a14acd87dd8cd"
+  version "0.10.1"
+  sha256 arm:   "5fd0b9b59cabd93e06734cf9ce2bc428a210d25f7ebb052073eb3903e2cb6acf",
+         intel: "8fd42af8a9b1a1527958abf9375298d375e5e6504d7514104e1da9cfdd014e95"
 
   url "https://github.com/logseq/logseq/releases/download/#{version}/logseq-darwin-#{arch}-#{version}.dmg"
   name "Logseq"
