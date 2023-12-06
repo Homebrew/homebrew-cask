@@ -8,6 +8,7 @@ cask "iina-plus" do
   homepage "https://github.com/xjbeta/iina-plus"
 
   auto_updates true
+  depends_on macos: ">= :mojave"
 
   app "iina+.app"
 
