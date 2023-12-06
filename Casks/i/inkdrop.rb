@@ -18,6 +18,8 @@ cask "inkdrop" do
     end
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Inkdrop.app"
 
   zap trash: [
