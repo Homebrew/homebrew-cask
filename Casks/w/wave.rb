@@ -10,14 +10,12 @@ cask "wave" do
 
   livecheck do
     url "https://www.waveterm.dev/download"
-    regex(/href=.*?dl\.waveterm\.dev.+-v(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/href=.*?waveterm.+?[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   depends_on macos: ">= :catalina"
 
   app "Wave.app"
 
-  zap trash: [
-    "~/.waveterm",
-  ]
+  zap trash: "~/.waveterm"
 end
