@@ -7,8 +7,8 @@ cask "openzfs" do
     end
     on_ventura do
       arch arm: "Ventura-13-arm64"
-      version "2.2.0,494"
-      sha256 "0bd8871abf1658d18b0b5a38349f34f8ace4698676028ca3957c515836b1e9a5"
+      version "2.2.2,506"
+      sha256 "182d78548d051adf22d880f192330f560421be32ae6314cc0ccc462cbf373c27"
     end
     on_sonoma :or_newer do
       arch arm: "Sonoma-14-arm64"
@@ -54,8 +54,8 @@ cask "openzfs" do
     end
     on_ventura do
       arch intel: "Ventura-13"
-      version "2.2.0,495"
-      sha256 "8818bb186c610e9d51b8e48ff4ad545794c835b0df246ff22b3e0dce37d74aba"
+      version "2.2.2,508"
+      sha256 "d19fc25aee8b5f5300770fe56ba2928ecb7e196f79c7081386dca3f5f11fdbce"
     end
     on_sonoma :or_newer do
       arch intel: "Sonoma-14.REPACK"
