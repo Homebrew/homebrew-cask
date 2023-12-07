@@ -24,9 +24,10 @@ cask "dwarf-fortress" do
     end
   end
 
-  caveats <<~EOS
+  caveats
     discontinued
 
+  <<~EOS
     During uninstall, your save data will be copied to /tmp/dwarf-fortress-save
   EOS
 end
