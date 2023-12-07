@@ -9,7 +9,7 @@ cask "sigmaos" do
 
   livecheck do
     url "https://releases.sigmaos.com/appcast.xml"
-    strategy :sparkle, &:version
+    strategy :sparkle
   end
 
   auto_updates true
