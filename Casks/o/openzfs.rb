@@ -50,7 +50,7 @@ cask "openzfs" do
     on_monterey do
       arch intel: "Monterey-12"
       version "2.2.2,505"
-      sha256 "3549fcd07820ec75c6f21674988c7ad41dfd834976d9d8ca54e353ee46af3eaf"
+      sha256 "cd335755ea327a11d642af3bfa355aeaebc5d4b2b991f40486bb08ed27af2521"
     end
     on_ventura do
       arch intel: "Ventura-13"
