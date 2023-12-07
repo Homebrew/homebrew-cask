@@ -19,10 +19,12 @@ cask "fxfactory" do
     end
   end
 
+  depends_on macos: ">= :monterey"
+
   pkg "Install FxFactory #{version.csv.first}.pkg"
 
   uninstall pkgutil:   "com.fxfactory.pkg",
-            quit:      "com.fxfactory.Fxfactory",
+            quit:      "com.fxfactory.FxFactory",
             launchctl: "com.fxfactory.FxFactory.helper",
             delete:    [
               "/Library/Application Support/FxFactory",
