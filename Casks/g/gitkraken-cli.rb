@@ -11,6 +11,4 @@ cask "gitkraken-cli" do
   homepage "https://github.com/gitkraken/gk-cli"
 
   binary "gk"
-
-  zap trash: "~/.gitkraken"
 end
