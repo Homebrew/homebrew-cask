@@ -10,8 +10,8 @@ cask "classroom-assistant" do
   app "Classroom Assistant.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.classroom-assistant.sfl3",
     "~/Library/Application Support/Classroom Assistant",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.classroom-assistant.sfl*",
     "~/Library/Caches/com.electron.classroom-assistant",
     "~/Library/Caches/com.electron.classroom-assistant.ShipIt",
     "~/Library/HTTPStorages/com.electron.classroom-assistant",
