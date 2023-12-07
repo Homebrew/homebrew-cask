@@ -17,12 +17,12 @@ cask "egnyte" do
   app "Egnyte.app"
 
   zap trash: [
-    "~/Library/Application Scripts/FELUD555VC.group.com.egnyte.DesktopApp/",
-    "~/Library/Application Scripts/com.egnyte.DesktopApp/",
     "~/Library/Application Scripts/com.egnyte.DesktopApp.FileProvider/",
     "~/Library/Application Scripts/com.egnyte.DesktopApp.FinderHelper",
     "~/Library/Application Scripts/com.egnyte.DesktopApp.FinderHelper.FinderSync",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.egnyte.desktopapp.sfl2",
+    "~/Library/Application Scripts/com.egnyte.DesktopApp/",
+    "~/Library/Application Scripts/FELUD555VC.group.com.egnyte.DesktopApp/",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.egnyte.desktopapp.sfl*",
     "~/Library/Application Support/FileProvider/com.egnyte.DesktopApp.FileProvider/",
     "~/Library/Caches/SentryCrash/EgnyteLaunchHelper/",
     "~/Library/Caches/SentryCrash/EgnyteUpgradeChecker/",
