@@ -28,8 +28,9 @@ cask "anka-build-cloud-controller-and-registry" do
       rmdir: "/Library/Application Support/Veertu/Anka/registry"
 
   caveats do
+    discontinued
     license "https://veertu.com/terms-and-conditions/",
-            discontinued
+
     <<~EOS
       This package has been replaced with two separate packages and will eventually be removed. For more information, please see
 
