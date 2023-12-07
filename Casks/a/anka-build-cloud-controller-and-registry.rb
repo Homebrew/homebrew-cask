@@ -31,7 +31,7 @@ cask "anka-build-cloud-controller-and-registry" do
     license "https://veertu.com/terms-and-conditions/",
             discontinued
     <<~EOS
-      This package has been replaced with two separate packages and will eventually be removed. For more information, please separate
+      This package has been replaced with two separate packages and will eventually be removed. For more information, please see
 
       https://docs.veertu.com/anka/anka-build-cloud/release-notes/#1400-1400-95a63938---december-6th-2023
     EOS
