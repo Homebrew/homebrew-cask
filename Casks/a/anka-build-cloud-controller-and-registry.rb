@@ -29,7 +29,7 @@ cask "anka-build-cloud-controller-and-registry" do
 
   caveats do
     discontinued
-    license "https://veertu.com/terms-and-conditions/",
+    license "https://veertu.com/terms-and-conditions/"
 
     <<~EOS
       This package has been replaced with two separate packages and will eventually be removed. For more information, please see
