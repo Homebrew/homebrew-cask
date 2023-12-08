@@ -1,6 +1,6 @@
 cask "manuskript" do
-  version "0.15.0"
-  sha256 "59cd751d2010e661e4b3fc38bbbf49801dcf9b9317d7a62aff0826f8bcbac085"
+  version "0.16.0"
+  sha256 "793b57ca15ddca71163c92f385aeda72bbb1403a7a496515e686bb8ca7bf88cd"
 
   url "https://github.com/olivierkes/manuskript/releases/download/#{version.major_minor_patch}/manuskript-#{version}-osx.dmg",
       verified: "github.com/olivierkes/manuskript/"
