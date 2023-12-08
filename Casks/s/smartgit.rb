@@ -8,9 +8,9 @@ cask "smartgit" do
     url "https://www.syntevo.com/downloads/smartgit/smartgit-macosx-#{version.dots_to_underscores}.dmg"
   end
   on_high_sierra :or_newer do
-    version "23.1.0"
-    sha256 arm:   "29bff333c3fc13d292c65b364306f22c76cb2b78a789e40a41997c4b75aa3fec",
-           intel: "13f215cee00a3d6d42e0a52719345426afa24ab68c0c127ba12e5bdf24fecfeb"
+    version "23.1.1"
+    sha256 arm:   "78880ac6111d81a1873bd64b77c78d97be612d4fae236514327075b4423cbae1",
+           intel: "939d32ccf3b679161e799c5c67a857a12921e722dfabb7a1edcff5ddff0a51a9"
 
     url "https://www.syntevo.com/downloads/smartgit/smartgit-#{arch}-#{version.dots_to_underscores}.dmg"
   end
