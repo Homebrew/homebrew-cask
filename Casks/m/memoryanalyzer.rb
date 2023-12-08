@@ -1,4 +1,4 @@
-cask "mat" do
+cask "memoryanalyzer" do
   arch arm: "aarch64", intel: "x86_64"
 
   version "1.15.0.20231206"
