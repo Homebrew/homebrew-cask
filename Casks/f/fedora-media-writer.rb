@@ -13,7 +13,7 @@ cask "fedora-media-writer" do
 
   depends_on macos: ">= :mojave"
 
-  app "Fedora Media Writer.app"
+  app "FedoraMediaWriter.app"
 
   zap trash: "~/Library/Saved Application State/org.fedoraproject.MediaWriter.savedState"
 end
