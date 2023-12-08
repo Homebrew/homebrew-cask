@@ -2,7 +2,8 @@ cask "truhu" do
   version "289"
   sha256 "a5c1de3ddbf3d001fa88ac745e075b894964898388db1da7bb854c922cec792f"
 
-  url "https://truhu-mobile-builds.s3.us-west-2.amazonaws.com/TruHu+Desktop+#{version}.dmg"
+  url "https://truhu-mobile-builds.s3.us-west-2.amazonaws.com/TruHu+Desktop+#{version}.dmg",
+      verified: "truhu-mobile-builds.s3.us-west-2.amazonaws.com/"
   name "TruHu"
   desc "Display calibration utility"
   homepage "https://truhu.app/"
@@ -20,6 +21,8 @@ cask "truhu" do
   end
 
   app "TruHu Mac Desktop.app"
+
+  depends_on macos: ">= :catalina"
 
   zap trash: [
     "~/Library/Application Support/TruHuDesktop",
