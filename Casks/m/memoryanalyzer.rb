@@ -1,9 +1,9 @@
-cask "mat" do
+cask "memoryanalyzer" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "1.14.0.20230315"
-  sha256 arm:   "4fff45cd2518348eaed38522d5a58ad6e4cc4515c08cd89144944c83db52a7f6",
-         intel: "236175bc2f306ec963b708b3b765c1684a018d30da4d38c52c9774b80133ddfb"
+  version "1.15.0.20231206"
+  sha256 arm:   "e9feff5992a930a7ca8259cd36ef068df29a24ebb3d021f39bc5166620b9a26f",
+         intel: "07333cbe1449b93adce5a8398342aec819972d42d967f24d31be260f8ea0c7fc"
 
   url "https://download.eclipse.org/mat/#{version.major_minor_patch}/rcp/MemoryAnalyzer-#{version}-macosx.cocoa.#{arch}.dmg",
       verified: "download.eclipse.org/mat/"
@@ -16,7 +16,7 @@ cask "mat" do
     regex(/href=.*?MemoryAnalyzer-(\d+(?:\.\d+)*).*?\.dmg/i)
   end
 
-  app "mat.app"
+  app "MemoryAnalyzer.app"
 
   zap trash: "~/Library/Preferences/org.eclipse.mat.ui.rcp.MemoryAnalyzer.plist"
 end
