@@ -1,21 +1,21 @@
 cask "bitcoin-core" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "25.1"
-  sha256 arm:   "eb0a41f7f5be97cc9f82959125eadc874c42dbc9665223aa3e1d61b0d7299b96",
-         intel: "056b65dff9e09fdc4cf293c9022b2956ea43b8c4213fec62e9e63fd3b4d91d00"
+  version "26.0"
+  sha256 arm:   "06932a519f4d3cc3ce5df98b966b8f4c5e1c5d8c391bc5ab95c1828ce36e47db",
+         intel: "97449ecc2149ae59c6d6538ddf05645e127ccc28888d69e36daca8bcb6339b97"
 
-  url "https://bitcoincore.org/bin/bitcoin-core-#{version}/bitcoin-#{version}-#{arch}-apple-darwin.dmg"
+  url "https://bitcoincore.org/bin/bitcoin-core-#{version}/bitcoin-#{version}-#{arch}-apple-darwin.zip"
   name "Bitcoin Core"
   desc "Bitcoin client and wallet"
   homepage "https://bitcoincore.org/"
 
   livecheck do
     url "https://bitcoincore.org/en/download/"
-    regex(/href=.*?bitcoin[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}[^"' >]*?\.dmg/i)
+    regex(/href=.*?bitcoin[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}[^"' >]*?\.zip/i)
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   # Renamed for consistency: app name is different in the Finder and in a shell.
   app "Bitcoin-Qt.app", target: "Bitcoin Core.app"
