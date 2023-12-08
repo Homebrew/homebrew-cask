@@ -1,6 +1,6 @@
 cask "unite-phone" do
-  version "2023.12.1"
-  sha256 "9610665438b788ba5b366bd6ae464120baa88107383793dbc8b22c08972395c9"
+  version "2023.12.2"
+  sha256 "4bef779614990f470deb981418bd6305a5540dd15efd1799f9ef820943e37d82"
 
   url "https://update.unitephone.nl/download/unite_phone-#{version}-universal.dmg",
       user_agent: :fake
