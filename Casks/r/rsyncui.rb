@@ -1,6 +1,6 @@
 cask "rsyncui" do
   version "1.7.9"
-  sha256 "49ef640c14c504030c4552a0551b37be35b7c1c9d4be9650b47b4b0cfec1148a"
+  sha256 "f84c2cac8a2eb47ac75712c36adee047e66dd18a515aa58a34213840ccdee8fc"
 
   url "https://github.com/rsyncOSX/RsyncUI/releases/download/v#{version}/RsyncUI.#{version}.dmg"
   name "RsyncUI"
@@ -12,7 +12,7 @@ cask "rsyncui" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :sonoma"
 
   app "RsyncUI.app"
 
