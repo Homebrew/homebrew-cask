@@ -24,7 +24,7 @@ cask "truhu" do
 
   depends_on macos: ">= :catalina"
 
-  app "TruHu Mac Desktop.app", target: "TruHu.app"
+  app "TruHu Mac Desktop.app"
 
   zap trash: [
     "~/Library/Application Support/TruHuDesktop",
