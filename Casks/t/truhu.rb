@@ -9,14 +9,16 @@ cask "truhu" do
   homepage "https://truhu.app/"
 
   livecheck do
-    url :url
-    regex(/\{no:(\d+)\s*,date/i)
+    url :homepage
+    regex(/[{,]\s*no:\s*(\d+)\s*[},]/im)
     strategy :page_match do |page, regex|
-      js_file = page[%r{src=["']?/(static/js/main\.[a-f0-9]+\.js)}, 1]
+      js_file = page[%r{src=["']?/(static/js/main[._-]\h+\.js)}, 1]
       next if js_file.blank?
 
       version_page = Homebrew::Livecheck::Strategy.page_content("https://truhu.app/#{js_file}")
-      version_page[:content].scan(regex).flatten
+      next if version_page[:content].blank?
+
+      version_page[:content].scan(regex).map { |match| match[0] }
     end
   end
 
