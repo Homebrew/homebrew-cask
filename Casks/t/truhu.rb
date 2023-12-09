@@ -9,7 +9,7 @@ cask "truhu" do
   homepage "https://truhu.app/"
 
   livecheck do
-    url "https://truhu.app/downloads/index.html"
+    url "https://truhu.app/"
     regex(/\{no:(\d+)\s*,date/i)
     strategy :page_match do |page, regex|
       js_file = page[%r{src=["']?/(static/js/main\.[a-f0-9]+\.js)}, 1]
