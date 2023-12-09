@@ -6,7 +6,7 @@ cask "truhu" do
       verified: "truhu-mobile-builds.s3.us-west-2.amazonaws.com/"
   name "TruHu"
   desc "Display calibration utility"
-  homepage "https://truhu.app"
+  homepage "https://truhu.app/"
 
   livecheck do
     url :homepage
