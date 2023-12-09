@@ -41,8 +41,6 @@ cask "nordvpn" do
     "~/Library/Logs/NordVPN/",
     "~/Library/Preferences/com.nordvpn.macos.plist",
     "~/Library/Saved Application State/com.nordvpn.macos.savedState",
-    "~/Library/Containers/com.nordvpn.NordVPN.NetworkTunnelExtension",
-    "~/Library/Containers/com.nordvpn.NordVPN.NordLynx",
-    "~/Library/Containers/com.nordvpn.NordVPN.NordVPNLauncher",
+    "~/Library/Containers/com.nordvpn.NordVPN.*",
   ]
 end
