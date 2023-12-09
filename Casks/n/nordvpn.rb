@@ -37,6 +37,7 @@ cask "nordvpn" do
   zap trash: [
     "~/Library/Application Support/com.nordvpn.macos",
     "~/Library/Caches/com.nordvpn.macos",
+    "~/Library/Containers/com.nordvpn.NordVPN.*",
     "~/Library/Cookies/com.nordvpn.macos.binarycookies",
     "~/Library/Logs/NordVPN/",
     "~/Library/Preferences/com.nordvpn.macos.plist",
