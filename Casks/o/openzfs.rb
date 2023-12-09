@@ -19,33 +19,33 @@ cask "openzfs" do
   on_intel do
     on_el_capitan :or_older do
       arch intel: "EL.CAPITAN-10.11"
-      version "2.2.0,487"
-      sha256 "e8f2785128f3659a3bffc0f619926621f4451a2e0b5ee7be2d3be6072b0321bb"
+      version "2.2.2,514"
+      sha256 "c85016155bf58da40ca87c3a7e7ac64f08d8a7446f2a06dd643a9c548c5bed56"
     end
     on_sierra do
       arch intel: "Sierra-10.12"
-      version "2.2.0,486"
-      sha256 "7957a22e6db39351a2f84b06212cc807c673261e49988be14964c78efc97edff"
+      version "2.2.2,515"
+      sha256 "651ea2ba99f59cc38bde6139d50daa89a98ea5f797785926ea20ecb409246434"
     end
     on_high_sierra do
       arch intel: "High.Sierra-10.13"
-      version "2.2.0,488"
-      sha256 "318e9866c87d7baa7b5262bd609c51f192cbcc2f05c0e8614f30d7bdaaa3ad73"
+      version "2.2.2,516"
+      sha256 "020a1b0a1e2a8707ffca9a8671bb835ee1ecb9f03432dd8b67884250892d6dc0"
     end
     on_mojave do
       arch intel: "Mojave-10.14"
-      version "2.2.0,489"
-      sha256 "92d7a06e2ae5afc2de4d217775ca3d44a1684024e74588ebe28d82bae48b3679"
+      version "2.2.2,518"
+      sha256 "51f6276a37e00a5db0f81ad11e17d31115861ce088b576ad1f095762263c6573"
     end
     on_catalina do
       arch intel: "Catalina-10.15"
-      version "2.2.0,490"
-      sha256 "f877469bad532ef1178d9b927eeaefc5d894fec4ca210c148af10a2521735ccc"
+      version "2.2.2,511"
+      sha256 "4f7bfb1f8dcc0c63386007fa3473642a561e1257a8e92e3c4c09232f87cbc15f"
     end
     on_big_sur do
       arch intel: "Big.Sur-11"
-      version "2.2.0,491"
-      sha256 "9e0a5616c9876b3df1cad6492e3522992db9af18a894a3ff1c3c1aae4bd11c42"
+      version "2.2.2,517"
+      sha256 "2cbe932cea62249ebeecf5c810984c3017a5fc0eb65d1ea734595d27355e21af"
     end
     on_monterey do
       arch intel: "Monterey-12"
