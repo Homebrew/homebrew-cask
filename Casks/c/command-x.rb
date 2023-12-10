@@ -26,10 +26,7 @@ cask "command-x" do
   ]
 
   caveats <<~EOS
-    This package is the non-App Store Version and claimed to be updated only once a year.
-
-    Use the App Store version whenever possible:
-
-      https://apps.apple.com/app/id6448461551
+    This variant of #{token} is only updated annually or when security vulnerabilities are discovered.
+    For a more frequently updated versio, install via the Mac App Store.
   EOS
 end
