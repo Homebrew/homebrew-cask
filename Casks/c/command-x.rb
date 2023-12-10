@@ -24,4 +24,12 @@ cask "command-x" do
     "~/Library/Application Scripts/com.sindresorhus.Command-X",
     "~/Library/Containers/com.sindresorhus.Command-X",
   ]
+
+  caveats <<~EOS
+    This package is the non-App Store Version and claimed to be updated only once a year.
+
+    Use the App Store version whenever possible:
+
+      https://apps.apple.com/app/id6448461551
+  EOS
 end
