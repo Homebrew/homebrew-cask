@@ -1,6 +1,6 @@
 cask "utm" do
-  version "4.4.4"
-  sha256 "4b2aea90d59150a412dc3d7b5d8b02fdd7022a53cb18d36c1b9a1b1221c4d4b9"
+  version "4.4.5"
+  sha256 "3a9b5e3b2ec3016d691c8fbefcbf825fbc114a8b88079770c6c480bd243a8fe7"
 
   url "https://github.com/utmapp/UTM/releases/download/v#{version}/UTM.dmg",
       verified: "github.com/utmapp/UTM/"
