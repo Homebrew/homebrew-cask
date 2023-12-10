@@ -1,5 +1,5 @@
 cask "ankiapp-anki" do
-  version "8.0.1"
+  version "8.0.2"
   sha256 :no_check
 
   url "https://www.ankiapp.com/static/AnkiApp-MacOS.zip"
