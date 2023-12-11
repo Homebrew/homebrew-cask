@@ -18,7 +18,7 @@ cask "senabluetoothdevicemanager" do
 
   uninstall quit:    "com.sena.SenaBluetoothDeviceManager",
             pkgutil: "com.sena.SenaBluetoothDeviceManager",
-            delete:  "#{appdir}/SenaBluetoothDeviceManager.app"
+            delete:  "/Applications/SenaBluetoothDeviceManager.app"
 
   zap trash: [
     "~/Library/Caches/com.sena.SenaBluetoothDeviceManager",
