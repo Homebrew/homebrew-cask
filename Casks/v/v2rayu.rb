@@ -22,6 +22,7 @@ cask "v2rayu" do
 
   zap trash: [
     "~/.V2rayU/",
+    "~/Library/Containers/net.yanue.V2rayU.Launcher",
     "~/Library/LaunchAgents/yanue.v2rayu.v2ray-core.plist",
     "~/Library/Logs/V2rayU.log",
     "~/Library/Preferences/net.yanue.V2rayU.plist",
