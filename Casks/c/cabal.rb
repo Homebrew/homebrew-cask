@@ -1,6 +1,6 @@
 cask "cabal" do
-  version "7.0.0"
-  sha256 "8ff53b89cc99e443616ab5b68f1b588ae4f64a4bd1cc6783239aace0cb8a5ac3"
+  version "8.0.0"
+  sha256 "bb62f21d9dc51b31c9fcc4d5a7bc48898270cfd62059efb4265f413093d5050d"
 
   url "https://github.com/cabal-club/cabal-desktop/releases/download/v#{version}/cabal-desktop-#{version}-mac.dmg",
       verified: "github.com/cabal-club/cabal-desktop/"
