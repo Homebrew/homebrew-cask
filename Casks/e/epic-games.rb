@@ -19,9 +19,11 @@ cask "epic-games" do
   app "Epic Games Launcher.app"
 
   zap trash: [
-    "~/Library/Caches/com.epicgames.EpicGamesLauncher",
     "~/Library/Application Support/Epic",
+    "~/Library/Caches/com.epicgames.EpicGamesLauncher",
     "~/Library/Cookies/com.epicgames.EpicGamesLauncher.binarycookies",
+    "~/Library/HTTPStorages/com.epicgames.EpicGamesLauncher",
+    "~/Library/HTTPStorages/com.epicgames.CrashReportClient",
     "~/Library/Logs/Unreal Engine/EpicGamesLauncher",
     "~/Library/Preferences/Unreal Engine/EpicGamesLauncher",
   ]
