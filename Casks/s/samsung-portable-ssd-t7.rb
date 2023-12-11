@@ -1,15 +1,15 @@
 cask "samsung-portable-ssd-t7" do
   version "1.7.5,1.0"
-  sha256 "43d45b6a8cf04eb1d7c13a951023581a3654f7fca0952aedf82aced896977672"
+  sha256 "e1ad2cbc94904f589a85110269b162c5f268296a83c647465290336c9bfee345"
 
-  url "https://semiconductor.samsung.com/resources/software-resources/SamsungPortableSSD_Setup_Mac_#{version.csv.second}.zip"
+  url "https://download.semiconductor.samsung.com/resources/software-resources/SamsungPortableSSD_Setup_Mac_#{version.csv.second}_#{version.csv.first}.zip"
   name "Samsung Portable SSD Software for T7"
   desc "Software for Samsung external storage drives (T7 series)"
   homepage "https://semiconductor.samsung.com/consumer-storage/support/tools/"
 
   livecheck do
     url :homepage
-    regex(/SamsungPortableSSD[._-]Setup[._-]Mac[._-]v?(\d+(?:\.\d+)+)\.zip.*\n*\s*.*Version\sv?(\d+(?:\.\d+)+)/i)
+    regex(/SamsungPortableSSD[._-]Setup[._-]Mac[._-]v?(\d+(?:\.\d+)+)[._-](\d+(?:\.\d+)+)\.zip/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
