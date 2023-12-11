@@ -34,17 +34,6 @@ cask "klayout" do
       regex(/href=.*?HW[._-]klayout[._-](\d+(?:\.\d+)+)[._-]macOS[._-]Monterey.*?\.dmg/i)
     end
   end
-  on_monterey do
-    sha256 "2dd03a4ab5e1a5f0c9f1f33e69be690a6e923e6d25c6c7083f808f53a46c3d7a"
-
-    url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Ventura-1-qt5Brew-RsysPhb311.dmg",
-        verified: "klayout.org/downloads/MacOS/"
-
-    livecheck do
-      url "https://www.klayout.de/build.html"
-      regex(/href=.*?HW[._-]klayout[._-](\d+(?:\.\d+)+)[._-]macOS[._-]Monterey.*?\.dmg/i)
-    end
-  end
   on_ventura do
     sha256 "2dd03a4ab5e1a5f0c9f1f33e69be690a6e923e6d25c6c7083f808f53a46c3d7a"
 
