@@ -22,6 +22,7 @@ cask "mattermost" do
 
   zap trash: [
     "~/Library/Application Support/Mattermost",
+    "~/Library/Containers/Mattermost.Desktop",
     "~/Library/Logs/Mattermost",
     "~/Library/Preferences/Mattermost.Desktop.plist",
     "~/Library/Saved Application State/Mattermost.Desktop.savedState",
