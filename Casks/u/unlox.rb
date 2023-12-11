@@ -9,7 +9,7 @@ cask "unlox" do
 
   livecheck do
     url "https://unlox.it/download/update.php"
-    strategy :sparkle, &:version
+    strategy :sparkle
   end
 
   depends_on macos: ">= :high_sierra"
