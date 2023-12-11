@@ -8,8 +8,8 @@ cask "threema" do
   homepage "https://threema.ch/"
 
   livecheck do
-    url "https://threema.ch/en/whats-new"
-    regex(/Threema\s*for\s*Desktop\s*(\d+(?:\.\d+)+)/i)
+    url "https://threema.ch/en/whats-new/desktop"
+    regex(/Threema\s*(\d+(?:\.\d+)+)\s*for\s*Desktop/i)
   end
 
   app "Threema.app"
