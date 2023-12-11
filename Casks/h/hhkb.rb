@@ -20,11 +20,11 @@ cask "hhkb" do
   uninstall pkgutil: "jp.co.pfu.hhkb-keymap-tool.pkg.V#{version}",
             quit:    "jp.co.pfu.hhkb-keymap-tool",
             delete:  [
-              "#{appdir}/hhkb-keymap-tool*",
-              "#{appdir}/HHKB/EULA_*.rtf",
-              "#{appdir}/HHKB/OSS_License.txt",
+              "/Applications/hhkb-keymap-tool*",
+              "/Applications/HHKB/EULA_*.rtf",
+              "/Applications/HHKB/OSS_License.txt",
             ],
-            rmdir:   "#{appdir}/HHKB"
+            rmdir:   "/Applications/HHKB"
 
   zap trash: [
         "~/Library/Application Support/hhkb-keymap-tool/*.log",
