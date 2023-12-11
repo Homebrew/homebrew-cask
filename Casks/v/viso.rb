@@ -9,7 +9,7 @@ cask "viso" do
 
   livecheck do
     url "https://getviso.app/files/visoappcast.xml"
-    strategy :sparkle, &:version
+    strategy :sparkle
   end
 
   auto_updates true
