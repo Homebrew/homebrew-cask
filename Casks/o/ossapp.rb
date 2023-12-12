@@ -7,7 +7,7 @@ cask "ossapp" do
 
   url "https://gui.pkgx.dev/release/ossapp-#{version}#{arch}-mac.zip",
       verified: "gui.pkgx.dev/release"
-  name "pkgx"
+  name "ossapp"
   desc "Unified package manager"
   homepage "https://pkgx.app/"
 
