@@ -4,7 +4,7 @@ cask "razer-unofficial" do
 
   url "https://github.com/1kc/razer-macos/releases/download/v#{version}/Razer.macOS-#{version}-universal.dmg"
   name "Razer macOS"
-  desc "Open source colour effects manager for Razer devices"
+  desc "Colour effects manager for Razer devices"
   homepage "https://github.com/1kc/razer-macos/"
 
   depends_on macos: ">= :high_sierra"
