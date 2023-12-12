@@ -1,4 +1,4 @@
-cask "razer" do
+cask "razer-unofficial" do
   version "0.4.10"
   sha256 "9f57f928adb31ca843dbf2047a7d6ea308eceaccb50620792535d1fcd7ec73ca"
 
