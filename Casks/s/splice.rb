@@ -1,5 +1,5 @@
 cask "splice" do
-  version "5.0.4"
+  version "5.0.5"
   sha256 :no_check
 
   url "https://splicedesktop.s3.amazonaws.com/darwin/stable/Splice.app.zip",
