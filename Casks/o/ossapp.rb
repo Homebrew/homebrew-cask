@@ -6,7 +6,7 @@ cask "ossapp" do
          intel: "5a20d73f29d8b05c12c90cc7689efe771059d8129c9dbbcd58b8ba45523c2d1c"
 
   url "https://gui.pkgx.dev/release/ossapp-#{version}#{arch}-mac.zip",
-      verified: "gui.pkgx.dev/release"
+      verified: "gui.pkgx.dev/release/"
   name "ossapp"
   desc "Unified package manager"
   homepage "https://pkgx.app/"
@@ -24,6 +24,7 @@ cask "ossapp" do
   zap trash: [
     "~/.pkgx", # Also used by CLI
     "~/.tea", # Also used by CLI
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/xyz.tea.gui.sfl*",
     "~/Library/Application Support/ossapp",
     "~/Library/Application Support/pkgx",
     "~/Library/Application Support/tea",
