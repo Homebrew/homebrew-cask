@@ -19,12 +19,10 @@ cask "wooshy" do
   app "Wooshy.app"
 
   zap trash: [
-    "~/Library/Application Scripts/mo.com.sleeplessmind.Wooshy",
-    "~/Library/Application Scripts/mo.com.sleeplessmind.Wooshy-LaunchAtLoginHelper",
+    "~/Library/Application Scripts/mo.com.sleeplessmind.Wooshy*",
     "~/Library/Application Support/Wooshy",
     "~/Library/Caches/mo.com.sleeplessmind.Wooshy",
-    "~/Library/Containers/mo.com.sleeplessmind.Wooshy",
-    "~/Library/Containers/mo.com.sleeplessmind.Wooshy-LaunchAtLoginHelper",
+    "~/Library/Containers/mo.com.sleeplessmind.Wooshy*",
     "~/Library/Preferences/mo.com.sleeplessmind.Wooshy.plist",
     "~/Library/Saved Application State/mo.com.sleeplessmind.Wooshy.savedState",
   ]
