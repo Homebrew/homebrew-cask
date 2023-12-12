@@ -11,5 +11,6 @@
   "opal": "opal-composer",
   "owasp-zap": "zap",
   "remotion": "multiapp",
-  "streamlabs-obs": "streamlabs"
+  "streamlabs-obs": "streamlabs",
+  "tea": "ossapp"
 }
