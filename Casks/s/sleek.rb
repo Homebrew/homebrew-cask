@@ -16,7 +16,7 @@ cask "sleek" do
 
   zap trash: [
     "~/Library/Application Support/sleek",
-    "~/Library/Preferences/RobinAhle.sleektodomanager.plist",
-    "~/Library/Saved Application State/RobinAhle.sleektodomanager.savedState",
+    "~/Library/Preferences/com.todotxt.sleek.plist",
+    "~/Library/Saved Application State/com.todotxt.sleek.savedState",
   ]
 end
