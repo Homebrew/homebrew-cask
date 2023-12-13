@@ -6,8 +6,6 @@ After making any changes to a cask, existing or new, verify:
 
 - [ ] The submission is for [a stable version](https://docs.brew.sh/Acceptable-Casks#stable-versions) or [documented exception](https://docs.brew.sh/Acceptable-Casks#but-there-is-no-stable-version).
 - [ ] `brew style --fix <cask>` reports no offenses.
-- [ ] `brew install --cask <cask>` worked successfully.
-- [ ] `brew uninstall --cask <cask>` worked successfully.
 
 **If updating an existing cask**:
 
@@ -19,3 +17,5 @@ After making any changes to a cask, existing or new, verify:
 - [ ] Checked the cask was not [already refused](https://github.com/Homebrew/homebrew-cask/search?q=is%3Aclosed&type=Issues).
 - [ ] Checked the cask is submitted to [the correct repo](https://docs.brew.sh/Acceptable-Casks#finding-a-home-for-your-cask).
 - [ ] `brew audit --cask --new <cask>` worked successfully.
+- [ ] `brew install --cask <cask>` worked successfully.
+- [ ] `brew uninstall --cask <cask>` worked successfully.
