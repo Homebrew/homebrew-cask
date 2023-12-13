@@ -9,7 +9,9 @@ cask "readwise-reader" do
 
   livecheck do
     url "https://reader-desktop-releases.readwise.io/update-manifest.json"
-    regex(/"version":\s*"([^"]+)"/i)
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
   depends_on macos: ">= :high_sierra"
