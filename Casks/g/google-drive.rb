@@ -1,8 +1,10 @@
 cask "google-drive" do
-  version "84.0.13"
+  version "85.0.22"
   sha256 :no_check
 
-  url "https://dl.google.com/drive-file-stream/GoogleDrive.dmg"
+  # "5-percent" is included in the url to ensure that `brew upgrade` does not update to an older version as the
+  # in-app updater can upgrade to a new version than https://dl.google.com/drive-file-stream/GoogleDrive.dmg provides
+  url "https://dl.google.com/drive-file-stream/5-percent/GoogleDrive.dmg"
   name "Google Drive"
   desc "Client for the Google Drive storage service"
   homepage "https://www.google.com/drive/"
