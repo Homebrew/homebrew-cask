@@ -9,7 +9,7 @@ After making any changes to a cask, existing or new, verify:
 
 **If updating an existing cask**:
 
-- [ ] `brew audit --cask --strict --online <cask>` is error-free.
+- [ ] `brew audit --cask --online <cask>` is error-free.
 
 **If adding a new cask**:
 
