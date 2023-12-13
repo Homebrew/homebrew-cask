@@ -1,14 +1,16 @@
 cask "readwise-reader" do
-  version :latest
-  sha256 :no_check
+  version "0.1.1"
+  sha256 "f8328a701bdefbd839c484c57827bd05b56be4216722dfe72c4348b823f9048d"
 
-  # version "0.1.1"
-  # sha256 "a39d51e7b210b2d59fb6a0e1dd689002a9e642e8e9cecba80c9fd5d9fd057f42"
-
-  url "https://reader-desktop-releases.readwise.io/Reader.dmg"
+  url "https://reader-desktop-releases.readwise.io/versions/#{version}/macos/Reader.app.tar.gz"
   name "Readwise Reader"
   desc "Save articles to read, highlight key content, and organize notes for review"
   homepage "https://readwise.io/read/"
+
+  livecheck do
+    url "https://reader-desktop-releases.readwise.io/update-manifest.json"
+    regex(/"version":\s*"([^"]+)"/i)
+  end
 
   depends_on macos: ">= :high_sierra"
 
