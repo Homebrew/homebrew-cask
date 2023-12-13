@@ -1,6 +1,6 @@
 cask "gitahead" do
-  version "2.6.3"
-  sha256 "ea017f49698ec7442d0e322e2640fba9b087694f5efc15d0b8c730b6343c378b"
+  version "2.7.0"
+  sha256 "53bfa4c78b01f2a0843468ac9791f50c60833126d828993245ccae9ff00ef8f6"
 
   url "https://github.com/gitahead/gitahead/releases/download/v#{version}/GitAhead-#{version}.dmg"
   name "GitAhead"
