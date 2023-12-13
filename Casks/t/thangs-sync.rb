@@ -1,5 +1,5 @@
 cask "thangs-sync" do
-  version "1.7.5"
+  version "1.7.8"
   sha256 :no_check
 
   url "https://thangs.com/api/system/sync-client-location?type=mac"
