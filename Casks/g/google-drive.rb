@@ -24,7 +24,10 @@ cask "google-drive" do
   # launchctl: com.google.keystone.daemon, com.google.keystone.system.agent, com.google.keystone.system.xpcservice
   # pkgutil: com.google.pkg.Keystone
   uninstall login_item: "Google Drive",
-            quit:       "com.google.drivefs",
+            quit:       [
+              "com.google.drivefs",
+              "com.google.drivefs.finderhelper.findersync",
+            ],
             pkgutil:    [
               "com.google.drivefs.arm64",
               "com.google.drivefs.filesystems.dfsfuse.arm64",
