@@ -1,4 +1,5 @@
 cask "samsung-portable-ssd-t7" do
+  # Check on next version bump if the `container` stanza can be removed
   version "1.7.5,1.0"
   sha256 "e1ad2cbc94904f589a85110269b162c5f268296a83c647465290336c9bfee345"
 
@@ -16,6 +17,7 @@ cask "samsung-portable-ssd-t7" do
   end
 
   auto_updates true
+  container type: :generic_unar
 
   pkg "SamsungPortableSSD_Setup_Mac_#{version.csv.second}.pkg"
 
