@@ -1,4 +1,4 @@
-cask "readwise-reader" do
+cask "reader" do
   version "0.1.1"
   sha256 "f8328a701bdefbd839c484c57827bd05b56be4216722dfe72c4348b823f9048d"
 
