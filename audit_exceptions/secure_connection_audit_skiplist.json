@@ -1,5 +1,10 @@
 {
+    "microsoft-excel": "https://www.microsoft.com/en-US/microsoft-365/excel",
+    "microsoft-office": "https://www.microsoft.com/en-us/microsoft-365/mac/microsoft-365-for-mac/",
     "microsoft-office-businesspro": "https://www.microsoft.com/en-us/microsoft-365/mac/microsoft-365-for-mac/",
+    "microsoft-onenote": "https://www.microsoft.com/en-us/microsoft-365/onenote/digital-note-taking-app",
+    "microsoft-powerpoint": "https://www.microsoft.com/en-US/microsoft-365/powerpoint",
     "microsoft-teams": "https://www.microsoft.com/en/microsoft-teams/group-chat-software/",
+    "microsoft-word": "https://www.microsoft.com/en-US/microsoft-365/word",
     "onedrive": "https://www.microsoft.com/en-us/microsoft-365/onedrive/online-cloud-storage"
 }
