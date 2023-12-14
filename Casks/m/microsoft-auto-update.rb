@@ -4,8 +4,8 @@ cask "microsoft-auto-update" do
     sha256 "f638f7e0da9ee659c323f2ede0f176804bfe9a615a8f8b6320bd2e69d91ef2b2"
   end
   on_sierra :or_newer do
-    version "4.65.23112617"
-    sha256 "627a672ffc610b33733c8c8399944eaa06a08944ed4159a46f6b1d71f9322263"
+    version "4.66.23121017"
+    sha256 "e1d0fb04740282af67235329cd3d51229168bdde69d57b38ecfeaf66969170fd"
   end
 
   url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_AutoUpdate_#{version}_Updater.pkg"
@@ -25,18 +25,18 @@ cask "microsoft-auto-update" do
   pkg "Microsoft_AutoUpdate_#{version}_Updater.pkg"
 
   uninstall quit:      [
-              "com.microsoft.autoupdate2",
               "com.microsoft.autoupdate.fba",
+              "com.microsoft.autoupdate2",
               "com.microsoft.errorreporting",
             ],
             launchctl: [
-              "com.microsoft.autoupdate.helpertool",
               "com.microsoft.autoupdate.helper",
+              "com.microsoft.autoupdate.helpertool",
               "com.microsoft.update.agent",
             ],
             pkgutil:   [
-              "com.microsoft.package.Microsoft_AutoUpdate.app",
               "com.microsoft.package.Microsoft_AU_Bootstrapper.app",
+              "com.microsoft.package.Microsoft_AutoUpdate.app",
             ],
             delete:    [
               "/Library/Caches/com.microsoft.autoupdate.fba",
@@ -48,10 +48,10 @@ cask "microsoft-auto-update" do
 
   zap trash: [
         "~/Library/Application Support/Microsoft AutoUpdate",
-        "~/Library/Caches/Microsoft/uls/com.microsoft.autoupdate.fba",
-        "~/Library/Caches/Microsoft/uls/com.microsoft.autoupdate2",
         "~/Library/Caches/com.microsoft.autoupdate.fba",
         "~/Library/Caches/com.microsoft.autoupdate2",
+        "~/Library/Caches/Microsoft/uls/com.microsoft.autoupdate.fba",
+        "~/Library/Caches/Microsoft/uls/com.microsoft.autoupdate2",
         "~/Library/Cookies/com.microsoft.autoupdate.fba.binarycookies",
         "~/Library/Cookies/com.microsoft.autoupdate2.binarycookies",
         "~/Library/HTTPStorages/com.microsoft.autoupdate.fba",
