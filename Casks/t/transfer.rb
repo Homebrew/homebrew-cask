@@ -1,6 +1,6 @@
 cask "transfer" do
-  version "2.1.1"
-  sha256 "9d2ba21fb45707309c4fc26bc8394bc20e7022f2b69625b3195d2aa65df818f1"
+  version "2.2"
+  sha256 "6472142b2536a7f7804df43d443f9f3cc64e602560f0f09be8e3b1b3b4e5b709"
 
   url "https://www.intuitibits.com/downloads/Transfer_#{version}.dmg"
   name "transfer"
