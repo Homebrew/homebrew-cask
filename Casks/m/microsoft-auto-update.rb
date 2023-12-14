@@ -25,18 +25,18 @@ cask "microsoft-auto-update" do
   pkg "Microsoft_AutoUpdate_#{version}_Updater.pkg"
 
   uninstall quit:      [
-              "com.microsoft.autoupdate2",
               "com.microsoft.autoupdate.fba",
+              "com.microsoft.autoupdate2",
               "com.microsoft.errorreporting",
             ],
             launchctl: [
-              "com.microsoft.autoupdate.helpertool",
               "com.microsoft.autoupdate.helper",
+              "com.microsoft.autoupdate.helpertool",
               "com.microsoft.update.agent",
             ],
             pkgutil:   [
-              "com.microsoft.package.Microsoft_AutoUpdate.app",
               "com.microsoft.package.Microsoft_AU_Bootstrapper.app",
+              "com.microsoft.package.Microsoft_AutoUpdate.app",
             ],
             delete:    [
               "/Library/Caches/com.microsoft.autoupdate.fba",
@@ -48,10 +48,10 @@ cask "microsoft-auto-update" do
 
   zap trash: [
         "~/Library/Application Support/Microsoft AutoUpdate",
-        "~/Library/Caches/Microsoft/uls/com.microsoft.autoupdate.fba",
-        "~/Library/Caches/Microsoft/uls/com.microsoft.autoupdate2",
         "~/Library/Caches/com.microsoft.autoupdate.fba",
         "~/Library/Caches/com.microsoft.autoupdate2",
+        "~/Library/Caches/Microsoft/uls/com.microsoft.autoupdate.fba",
+        "~/Library/Caches/Microsoft/uls/com.microsoft.autoupdate2",
         "~/Library/Cookies/com.microsoft.autoupdate.fba.binarycookies",
         "~/Library/Cookies/com.microsoft.autoupdate2.binarycookies",
         "~/Library/HTTPStorages/com.microsoft.autoupdate.fba",
@@ -61,7 +61,7 @@ cask "microsoft-auto-update" do
         "~/Library/Saved Application State/com.microsoft.autoupdate2.savedState",
       ],
       rmdir: [
-        "~/Library/Caches/Microsoft/uls",
         "~/Library/Caches/Microsoft",
+        "~/Library/Caches/Microsoft/uls",
       ]
 end
