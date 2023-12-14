@@ -62,7 +62,7 @@ cask "orion" do
     depends_on macos: :ventura
   end
   on_sonoma :or_newer do
-    sha256 "6eca1ba722ce9cb7362da6e35ca159e50a97607cb4b0bc0b22d2309972475f0f"
+    sha256 "9dbe71da2f6364277ab264aa4819dbd165593ac3b390e6c1e2845a5096aea000"
 
     url "https://browser.kagi.com/updates/14_0/#{version.csv.second}.zip"
 
