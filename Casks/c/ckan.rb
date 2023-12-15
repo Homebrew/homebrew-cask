@@ -1,6 +1,6 @@
 cask "ckan" do
-  version "1.34.0"
-  sha256 "90e8811352885f80671076243cbd0fb5cc1e7bf1caafd3af620fcc41b9f7cc49"
+  version "1.34.2"
+  sha256 "91c9bf6c8e11b74bd846ce2c5a9442c4b6bcba6b7479000782751679f8a6fbb2"
 
   url "https://github.com/KSP-CKAN/CKAN/releases/download/v#{version}/CKAN.dmg"
   name "Comprehensive Kerbal Archive Network"
