@@ -21,7 +21,6 @@ cask "virtual-desktop-streamer" do
     ohai "The Virtual Desktop package postinstall script launches the Streamer app" if retries >= 3
     ohai "Attempting to close the Streamer app to avoid unwanted user intervention" if retries >= 3
     return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/Virtual Desktop Streamer.app"]
-
   rescue RuntimeError
     sleep 1
     retry unless (retries -= 1).zero?
