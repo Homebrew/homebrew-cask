@@ -68,7 +68,6 @@ cask "teamviewer" do
     ohai "The TeamViewer package postinstall script launches the TeamViewer app" if retries >= 3
     ohai "Attempting to close the TeamViewer app to avoid unwanted user intervention" if retries >= 3
     return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/TeamViewer.app"]
-
   rescue RuntimeError
     sleep 1
     retry unless (retries -= 1).zero?

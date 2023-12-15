@@ -29,7 +29,6 @@ cask "zoom" do
     ohai "The Zoom package postinstall script launches the Zoom app" if retries >= 3
     ohai "Attempting to close zoom.us.app to avoid unwanted user intervention" if retries >= 3
     return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/zoom.us.app"]
-
   rescue RuntimeError
     sleep 1
     retry unless (retries -= 1).zero?
