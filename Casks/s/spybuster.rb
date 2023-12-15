@@ -1,5 +1,5 @@
 cask "spybuster" do
-  version "2.9.7"
+  version "2.9.8"
   sha256 :no_check
 
   url "https://dl.devmate.com/com.macpaw-labs.snitch/SpyBuster.zip",
