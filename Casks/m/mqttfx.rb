@@ -1,6 +1,6 @@
 cask "mqttfx" do
-  version "5.3.0"
-  sha256 "6d602d05a452578725e059f30c43b3142377c54180ac6b91e2cce7522bf171e4"
+  version "5.5.0"
+  sha256 "441723f1decb92db246c3df5afeae5d43564a99ca149f7a1588b0efde7e26c0a"
 
   url "https://download.softblade.de/mqttfx-#{version}-macos.dmg"
   name "MQTT.fx"
