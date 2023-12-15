@@ -47,11 +47,47 @@ cask "omnifocus" do
 
     uninstall quit: "com.omnigroup.OmniFocus#{version.major}"
   end
-  on_catalina :or_newer do
+  on_catalina do
     version "3.15.4"
     sha256 "1f682c3f0c60bd8bda0cdcc89ae51f6b83e1207a8fd54aff7fb3fcdd738573ef"
 
     url "https://downloads.omnigroup.com/software/macOS/11/OmniFocus-#{version}.dmg"
+
+    livecheck do
+      skip "Legacy version"
+    end
+
+    uninstall quit: "com.omnigroup.OmniFocus#{version.major}"
+  end
+  on_big_sur do
+    version "3.15.4"
+    sha256 "1f682c3f0c60bd8bda0cdcc89ae51f6b83e1207a8fd54aff7fb3fcdd738573ef"
+
+    url "https://downloads.omnigroup.com/software/macOS/11/OmniFocus-#{version}.dmg"
+
+    livecheck do
+      skip "Legacy version"
+    end
+
+    uninstall quit: "com.omnigroup.OmniFocus#{version.major}"
+  end
+  on_monterey do
+    version "3.15.4"
+    sha256 "1f682c3f0c60bd8bda0cdcc89ae51f6b83e1207a8fd54aff7fb3fcdd738573ef"
+
+    url "https://downloads.omnigroup.com/software/macOS/11/OmniFocus-#{version}.dmg"
+
+    livecheck do
+      skip "Legacy version"
+    end
+
+    uninstall quit: "com.omnigroup.OmniFocus#{version.major}"
+  end
+  on_ventura :or_newer do
+    version "4.0.1"
+    sha256 "d46f007b3baa0924e4a36e100a4e5851667987b9e84668e354c9b45b564a7a6d"
+
+    url "https://downloads.omnigroup.com/software/macOS/13/OmniFocus-#{version}.dmg"
 
     livecheck do
       url "https://www.omnigroup.com/download/latest/omnifocus/"
