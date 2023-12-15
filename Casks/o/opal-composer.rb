@@ -1,6 +1,6 @@
 cask "opal-composer" do
-  version "1.2.1,7"
-  sha256 "6024497c407807cac3a1b849df9ad3d69b8dc7d6cad7518eeb1aa43985ae39df"
+  version "1.2.2,10"
+  sha256 "72e81cdadd6d7e671c9175087d4280f08acd4a8b4f145eff52d4d303bd8c33cf"
 
   url "https://updates.opal.camera/release/Opal_Composer_#{version.csv.first}_#{version.csv.second}.dmg",
       verified: "updates.opal.camera/release/"
