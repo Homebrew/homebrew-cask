@@ -22,4 +22,10 @@ cask "aliworkbench" do
   end
 
   app "AliWorkBench.app"
+
+  zap trash: [
+    "~/Library/Caches/com.taobao.Aliworkbench",
+    "~/Library/Containers/com.taobao.Aliworkbench",
+    "~/Library/Preferences/com.taobao.Aliworkbench.plist",
+  ]
 end
