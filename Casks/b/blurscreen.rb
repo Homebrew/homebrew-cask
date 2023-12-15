@@ -25,7 +25,6 @@ cask "blurscreen" do
     ohai "The BlurScreen package postinstall script launches the BlurScreen app" if retries >= 3
     ohai "Attempting to close BlurScreen.app to avoid unwanted user intervention" if retries >= 3
     return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/BlurScreen.app"]
-
   rescue RuntimeError
     sleep 1
     retry unless (retries -= 1).zero?
