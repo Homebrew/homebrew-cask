@@ -1,6 +1,6 @@
 cask "command-x" do
-  version "1.0.6-1684086547-1701611235,yubkc4dmr2xy89ja4r4hr,xa0zqmllf0uwrm55latddna99"
-  sha256 "48601491924bf431c6cf9a9bb5e619e5e60b6212521b9385e55fdb1db729217c"
+  version "1.3.0-1702592806,p419o2i43z0hvk9z2clv3,r6pqrd8fystytsebx060rdy5y"
+  sha256 "02d8c6190a17e8ccebc94eb2d59a471d484ecda3875729e1a556633b4ea43cf5"
 
   url "https://www.dropbox.com/scl/fi/#{version.csv.second}/Command-X-#{version.major_minor_patch}.zip?rlkey=#{version.csv.third}&raw=1",
       verified: "dropbox.com/scl/fi/"
