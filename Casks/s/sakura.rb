@@ -1,4 +1,4 @@
-cask "sakuralauncher" do
+cask "sakura" do
   arch arm: "arm64", intel: "x86_64"
 
   version "3.0.7"
