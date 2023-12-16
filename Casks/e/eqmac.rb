@@ -14,8 +14,11 @@ cask "eqmac" do
   end
 
   auto_updates true
+  depends_on macos: ">= :sierra"
 
   app "eqMac.app"
+
+  uninstall delete: "/Library/Audio/Plug-Ins/HAL/eqMac.driver/"
 
   zap trash: [
     "~/Library/Caches/com.bitgapp.eqmac",
