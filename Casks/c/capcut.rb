@@ -7,11 +7,16 @@ cask "capcut" do
   desc "Creative platform powered by AI that enables video editing and image design"
   homepage "https://www.capcut.com/"
 
+  livecheck do
+    url :homepage
+    regex(/capcut[._-]capcutpc[._-]v?(\d+(?:.\d+)+)[._-]installer.dmg/i)
+  end
+
   installer script: {
     executable: "#{staged_path}/CapCut-Downloader.app/Contents/MacOS/CapCut-Downloader",
   }
 
-  app "CapCut.app"
+  uninstall delete: "/Applications/CapCut.app"
 
   zap trash: [
     "/Library/Logs/DiagnosticReport/CapCut-Downloader_*.diag",
