@@ -1,6 +1,6 @@
 cask "jupyter-notebook-viewer" do
-  version "0.1.5"
-  sha256 "4bf3ff38a9539d7d0f16122522599f44fde5833d1a16c704e49beb754d60a062"
+  version "0.1.6"
+  sha256 "af77fa5f0d80e99c2efd977b0dba9b11fb16d33ee10f53f9e34989fb16f12514"
 
   url "https://github.com/tuxu/nbviewer-app/releases/download/#{version}/nbviewer-app.zip"
   name "Jupyter Notebook Viewer"
