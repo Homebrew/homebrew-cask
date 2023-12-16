@@ -1,4 +1,4 @@
-cask "sakurafrp" do
+cask "sakuralauncher" do
   arch arm: "arm64", intel: "x86_64"
 
   version "3.0.7"
@@ -22,7 +22,7 @@ cask "sakurafrp" do
   app "SakuraLauncher.app"
 
   zap trash: [
-    "~/Library/Containers/com.natfrp.launcher.ui",
     "~/Library/Application Scripts/com.natfrp.launcher.ui",
+    "~/Library/Containers/com.natfrp.launcher.ui",
   ]
 end
