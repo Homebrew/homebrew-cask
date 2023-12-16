@@ -13,6 +13,8 @@ cask "capcut" do
     regex(/capcut[._-]capcutpc[._-]v?(\d+(?:.\d+)+)[._-]installer\.dmg/i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   installer script: {
     executable: "#{staged_path}/CapCut-Downloader.app/Contents/MacOS/CapCut-Downloader",
   }
