@@ -2,9 +2,9 @@ cask "pulsar" do
   arch arm: "Silicon", intel: "Intel"
   arch_suffix = on_arch_conditional arm: "-arm64"
 
-  version "1.111.0"
-  sha256 arm:   "202173afd563fdfe4a922c425be56c480b8bacfc4003411aca615dacc801d0a8",
-         intel: "92f37baa37fadd808a0e3c98a8274b83ffcebf395bc4f977f141d06f4545dbb5"
+  version "1.112.0"
+  sha256 arm:   "fbe39402a23997b85993cb11e2342d655ba58df24211e497c879b4537402fc11",
+         intel: "94d5a4653fc70300633326f85e20e29efb4b92ddac8259fea7f3bf8db6fb2e04"
 
   url "https://github.com/pulsar-edit/pulsar/releases/download/v#{version}/#{arch}.Mac.Pulsar-#{version}#{arch_suffix}-mac.zip",
       verified: "github.com/pulsar-edit/pulsar/"
