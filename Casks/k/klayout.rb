@@ -25,7 +25,7 @@ cask "klayout" do
   end
   on_monterey do
     version "0.28.14"
-    sha256 "d3f7b0d3bb8e40caa56696676f1101a54c23f969a41f3a613f14efc16a7dadbb"
+    sha256 "c889d029caa5b48fd08649f50f6b70f9ada86e3e79422d6006a777052484897d"
 
     url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Monterey-1-qt5Brew-RsysPhb311.dmg",
         verified: "klayout.org/downloads/MacOS/"
