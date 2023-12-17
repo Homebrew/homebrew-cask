@@ -7,6 +7,8 @@ cask "intel-haxm" do
   desc "Hardware-assisted virtualization engine (hypervisor)"
   homepage "https://github.com/intel/haxm"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   depends_on macos: ">= :sierra"
   depends_on arch: :x86_64
 
@@ -24,7 +26,6 @@ cask "intel-haxm" do
             }
 
   caveats do
-    discontinued
     kext
   end
 end
