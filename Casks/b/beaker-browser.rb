@@ -9,6 +9,8 @@ cask "beaker-browser" do
   desc "Experimental peer-to-peer web browser"
   homepage "https://beakerbrowser.com/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   auto_updates true
 
   app "Beaker Browser.app"
@@ -21,8 +23,4 @@ cask "beaker-browser" do
     "~/Library/Preferences/com.pfrazee.beaker-browser.plist",
     "~/Library/Saved Application State/com.pfrazee.beaker-browser.savedState",
   ]
-
-  caveats do
-    discontinued
-  end
 end
