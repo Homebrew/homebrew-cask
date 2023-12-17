@@ -8,6 +8,8 @@ cask "remote-desktop-manager-free" do
   desc "Centralizes all remote connections on a single platform"
   homepage "https://mac.remotedesktopmanager.com/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   depends_on macos: ">= :sierra"
 
   app "Remote Desktop Manager Free.app"
@@ -18,7 +20,6 @@ cask "remote-desktop-manager-free" do
   ]
 
   caveats do
-    discontinued
     <<~EOS
       TO install the free version run:
 
