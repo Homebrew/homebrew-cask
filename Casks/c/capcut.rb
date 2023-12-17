@@ -10,7 +10,7 @@ cask "capcut" do
 
   livecheck do
     url :homepage
-    regex(/capcut[._-]capcutpc[._-]v?(\d+(?:.\d+)+)[._-]installer\.dmg/i)
+    regex(/capcut[._-]capcutpc[._-]v?(\d+(?:[._]\d+)+)[._-]installer\.dmg/i)
   end
 
   depends_on macos: ">= :high_sierra"
