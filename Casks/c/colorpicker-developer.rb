@@ -6,9 +6,7 @@ cask "colorpicker-developer" do
   name "Developer Color Picker"
   homepage "https://download.panic.com/picker/index.html"
 
-  colorpicker "Developer Color Picker/DeveloperColorPicker.colorPicker"
+  deprecate! date: "2023-12-17", because: :discontinued
 
-  caveats do
-    discontinued
-  end
+  colorpicker "Developer Color Picker/DeveloperColorPicker.colorPicker"
 end
