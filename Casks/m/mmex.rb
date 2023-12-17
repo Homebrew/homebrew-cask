@@ -3,10 +3,10 @@ cask "mmex" do
   sha256 "51991878cd5bf2741743d499f15ed8fc1201d23f9dbe4a98e704ff66a710cf1f"
 
   url "https://github.com/moneymanagerex/moneymanagerex/releases/download/v#{version}/mmex-#{version}-Darwin.dmg",
-    verified: "github.com/moneymanagerex/moneymanagerex"
+      verified: "github.com/moneymanagerex/moneymanagerex/"
   name "Money Manager Ex"
   desc "Easy to use, money management application built with wxWidgets"
-  homepage "https://moneymanagerex.org"
+  homepage "https://moneymanagerex.org/"
 
   livecheck do
     url :url
