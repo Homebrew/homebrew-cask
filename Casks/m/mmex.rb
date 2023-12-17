@@ -6,13 +6,15 @@ cask "mmex" do
       verified: "github.com/moneymanagerex/moneymanagerex/"
   name "Money Manager Ex"
   desc "Money management application"
-  homepage "https://www.moneymanagerex.org/"
+  homepage "https://moneymanagerex.org/"
 
   app "MMEX.app"
 
   zap trash: [
     "~/Library/Application Support/MoneyManagerEx",
-    "~/Library/Caches/com.yourcompany.MMEX",
-    "~/Library/Preferences/com.yourcompany.MMEX.plist",
+    "~/Library/Caches/org.moneymanagerex.mmex",
+    "~/Library/Preferences/org.moneymanagerex.mmex.plist",
+    "~/Library/Saved Application State/org.moneymanagerex.mmex.savedState",
+    "~/Library/WebKit/org.moneymanagerex.mmex",
   ]
 end
