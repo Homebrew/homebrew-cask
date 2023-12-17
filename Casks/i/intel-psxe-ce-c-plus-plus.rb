@@ -7,6 +7,8 @@ cask "intel-psxe-ce-c-plus-plus" do
   desc "Software development tools"
   homepage "https://software.intel.com/en-us/parallel-studio-xe"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   installer manual: "m_ccompxe_#{version.csv.first}.app"
 
   uninstall script: {
@@ -16,7 +18,6 @@ cask "intel-psxe-ce-c-plus-plus" do
   }
 
   caveats do
-    discontinued
     license "https://software.intel.com/en-us/articles/end-user-license-agreement"
     free_license "https://software.intel.com/en-us/articles/qualify-for-free-software"
   end
