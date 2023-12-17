@@ -7,9 +7,7 @@ cask "panic-unison" do
   desc "App to access Usenet Newsgroups"
   homepage "https://panic.com/blog/the-future-of-unison/"
 
-  app "Unison.app"
+  deprecate! date: "2023-12-17", because: :discontinued
 
-  caveats do
-    discontinued
-  end
+  app "Unison.app"
 end
