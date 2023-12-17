@@ -7,6 +7,8 @@ cask "arduino" do
   desc "Electronics prototyping platform"
   homepage "https://www.arduino.cc/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   conflicts_with cask: "homebrew/cask-versions/arduino-nightly"
 
   app "Arduino.app"
@@ -17,8 +19,4 @@ cask "arduino" do
     "~/Library/Preferences/cc.arduino.Arduino.plist",
     "~/Library/Saved Application State/cc.arduino.Arduino.savedState",
   ]
-
-  caveats do
-    discontinued
-  end
 end
