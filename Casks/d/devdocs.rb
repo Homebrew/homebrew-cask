@@ -7,6 +7,8 @@ cask "devdocs" do
   desc "Full-featured desktop app for DevDocs.io"
   homepage "https://github.com/egoist/devdocs-desktop/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   app "DevDocs.app"
 
   zap trash: [
@@ -16,8 +18,4 @@ cask "devdocs" do
     "~/Library/Preferences/sh.egoist.devdocs.plist",
     "~/Library/Saved Application State/sh.egoist.devdocs.savedState",
   ]
-
-  caveats do
-    discontinued
-  end
 end
