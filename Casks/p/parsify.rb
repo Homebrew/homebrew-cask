@@ -1,9 +1,9 @@
 cask "parsify" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.0.0"
-  sha256 arm:   "d36a2929fb117e00765ca30bd1c7e55b1d01b72902ffc04969b69b28df1bd2b0",
-         intel: "b6de9b267b9cb77c4839feb7f09419bf6cb609ab28a8eafbea5b2b6da340266f"
+  version "2.0.1"
+  sha256 arm:   "d4f9027b297089ec755880e95b0d0f4998c4f6988b3f0a845720cbc514b36c38",
+         intel: "a2d44bd3c947d73562e73162be276ec62fe6f8f55d1410f211ec487f5f3fb6f0"
 
   url "https://github.com/parsify-dev/desktop/releases/download/v#{version}/Parsify-#{version}-mac-#{arch}.zip",
       verified: "github.com/parsify-dev/desktop/"
