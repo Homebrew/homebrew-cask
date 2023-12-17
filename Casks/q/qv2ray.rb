@@ -8,6 +8,8 @@ cask "qv2ray" do
   desc "V2Ray GUI client with extensive protocol support"
   homepage "https://qv2ray.net/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   depends_on formula: "v2ray"
   depends_on macos: ">= :mojave"
 
@@ -18,8 +20,4 @@ cask "qv2ray" do
     "~/Library/Preferences/qv2ray",
     "~/Library/Saved Application State/com.github.qv2ray.savedState",
   ]
-
-  caveats do
-    discontinued
-  end
 end
