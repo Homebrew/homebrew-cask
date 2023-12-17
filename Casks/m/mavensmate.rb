@@ -7,9 +7,7 @@ cask "mavensmate" do
   desc "Packaged desktop app for MavensMate server"
   homepage "https://github.com/joeferraro/MavensMate-Desktop"
 
-  app "MavensMate.app"
+  deprecate! date: "2023-12-17", because: :discontinued
 
-  caveats do
-    discontinued
-  end
+  app "MavensMate.app"
 end
