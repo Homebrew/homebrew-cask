@@ -12,6 +12,8 @@ cask "linn-konfig" do
     strategy :extract_plist
   end
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   pkg "konfig_latest_osx.pkg"
 
   uninstall pkgutil: "uk.co.linn.Konfig"
@@ -21,8 +23,4 @@ cask "linn-konfig" do
     "~/Library/Caches/uk.co.linn.Konfig",
     "~/Library/HTTPStorages/uk.co.linn.Konfig",
   ]
-
-  caveats do
-    discontinued
-  end
 end
