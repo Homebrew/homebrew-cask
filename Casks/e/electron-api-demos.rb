@@ -7,6 +7,8 @@ cask "electron-api-demos" do
   desc "Explore the Electron APIs"
   homepage "https://github.com/electron/electron-api-demos"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   app "Electron API Demos.app"
 
   zap trash: [
@@ -17,8 +19,4 @@ cask "electron-api-demos" do
     "~/Library/Preferences/com.electron.electron-api-demos.plist",
     "~/Library/Saved Application State/com.electron.electron-api-demos.savedState",
   ]
-
-  caveats do
-    discontinued
-  end
 end
