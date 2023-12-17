@@ -8,6 +8,8 @@ cask "android-sdk" do
   desc "Tools for the Android SDK"
   homepage "https://developer.android.com/studio/releases/sdk-tools"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   binary "#{staged_path}/tools/android"
   binary "#{staged_path}/tools/emulator"
   binary "#{staged_path}/tools/emulator-check"
@@ -35,6 +37,5 @@ cask "android-sdk" do
 
   caveats do
     depends_on_java "8"
-    discontinued
   end
 end
