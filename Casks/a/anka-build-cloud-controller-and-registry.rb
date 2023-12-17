@@ -16,6 +16,8 @@ cask "anka-build-cloud-controller-and-registry" do
     strategy :header_match
   end
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   pkg "AnkaControllerRegistry#{arch}-#{version}.pkg"
 
   uninstall script: {
@@ -28,7 +30,6 @@ cask "anka-build-cloud-controller-and-registry" do
       rmdir: "/Library/Application Support/Veertu/Anka/registry"
 
   caveats do
-    discontinued
     license "https://veertu.com/terms-and-conditions/"
 
     <<~EOS
