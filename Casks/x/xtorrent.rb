@@ -7,11 +7,9 @@ cask "xtorrent" do
   desc "Torrent client"
   homepage "http://www.xtorrent.com/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   depends_on macos: "<= :catalina"
 
   app "Xtorrent.app"
-
-  caveats do
-    discontinued
-  end
 end
