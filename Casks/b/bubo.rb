@@ -9,11 +9,9 @@ cask "bubo" do
   desc "Fixes broken bluetooth headset control"
   homepage "https://github.com/jguice/mac-bt-headset-fix"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   depends_on macos: ">= :sierra"
 
   app "bubo.app"
-
-  caveats do
-    discontinued
-  end
 end
