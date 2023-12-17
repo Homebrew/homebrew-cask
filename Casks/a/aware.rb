@@ -8,9 +8,7 @@ cask "aware" do
   desc "Menubar app to track active computer use"
   homepage "https://awaremac.com/"
 
-  app "Aware.app"
+  deprecate! date: "2023-12-17", because: :discontinued
 
-  caveats do
-    discontinued
-  end
+  app "Aware.app"
 end
