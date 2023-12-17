@@ -8,6 +8,8 @@ cask "cocoapods" do
   desc "Dependency manager for Cocoa projects"
   homepage "https://cocoapods.org/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   conflicts_with formula: "cocoapods"
 
   app "CocoaPods.app"
@@ -21,8 +23,4 @@ cask "cocoapods" do
   end
 
   zap trash: "~/Library/Preferences/org.cocoapods.CocoaPods.plist"
-
-  caveats do
-    discontinued
-  end
 end
