@@ -7,6 +7,8 @@ cask "docker-toolbox" do
   name "Docker Toolbox"
   homepage "https://www.docker.com/products/docker-toolbox"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   depends_on cask: "virtualbox"
 
   pkg "DockerToolbox-#{version}.pkg",
@@ -52,8 +54,4 @@ cask "docker-toolbox" do
   ]
 
   zap trash: "~/.docker"
-
-  caveats do
-    discontinued
-  end
 end
