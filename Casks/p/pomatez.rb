@@ -1,9 +1,9 @@
 cask "pomatez" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.6.2"
-  sha256 arm:   "fa864bb8c32f8140a0adedc4a6de6152a970e0053c2fc995931f1db7b5c17ae5",
-         intel: "98f74d3ee5b83c5490eb859aa14f1b5089568a821a2b26d09d8d520c1601917a"
+  version "1.6.4"
+  sha256 arm:   "3a32cc7db91a4b6a6e7790f77526df3410a7ab5dcdc26b0c54a1891d012c502a",
+         intel: "4d7f0d96fb7b29b43332781481969aeb1f26cb33445316795eca4384f5bfe052"
 
   url "https://github.com/zidoro/pomatez/releases/download/v#{version}/Pomatez-v#{version}-mac-#{arch}.dmg",
       verified: "github.com/zidoro/pomatez/"
