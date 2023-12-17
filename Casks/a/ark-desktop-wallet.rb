@@ -8,9 +8,7 @@ cask "ark-desktop-wallet" do
   desc "Multi Platform ARK Desktop Wallet"
   homepage "https://ark.io/"
 
-  app "Ark Desktop Wallet.app"
+  deprecate! date: "2023-12-17", because: :discontinued
 
-  caveats do
-    discontinued
-  end
+  app "Ark Desktop Wallet.app"
 end
