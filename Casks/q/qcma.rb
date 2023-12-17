@@ -7,9 +7,7 @@ cask "qcma" do
   name "Qcma"
   homepage "https://codestation.github.io/qcma/"
 
-  app "Qcma.app"
+  deprecate! date: "2023-12-17", because: :discontinued
 
-  caveats do
-    discontinued
-  end
+  app "Qcma.app"
 end
