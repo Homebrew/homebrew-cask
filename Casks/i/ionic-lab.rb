@@ -7,9 +7,7 @@ cask "ionic-lab" do
   name "IonicLab"
   homepage "https://lab.ionic.io/"
 
-  app "Ionic Lab.app"
+  deprecate! date: "2023-12-17", because: :discontinued
 
-  caveats do
-    discontinued
-  end
+  app "Ionic Lab.app"
 end
