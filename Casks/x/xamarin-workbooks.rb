@@ -8,13 +8,11 @@ cask "xamarin-workbooks" do
   desc "C# documentation and coding materials"
   homepage "https://docs.microsoft.com/en-us/xamarin/tools/workbooks/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   depends_on macos: ">= :el_capitan"
 
   pkg "XamarinInteractive-#{version}.pkg"
 
   uninstall pkgutil: "com.xamarin.Inspector"
-
-  caveats do
-    discontinued
-  end
 end
