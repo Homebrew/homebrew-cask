@@ -7,9 +7,7 @@ cask "komodo-edit" do
   desc "Text editor"
   homepage "https://www.activestate.com/komodo-edit/"
 
-  app "Komodo Edit #{version.major}.app"
+  deprecate! date: "2023-12-17", because: :discontinued
 
-  caveats do
-    discontinued
-  end
+  app "Komodo Edit #{version.major}.app"
 end
