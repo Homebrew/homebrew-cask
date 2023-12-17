@@ -7,6 +7,8 @@ cask "ksdiff" do
   desc "Command-line tool for the App Store version of Kaleidoscope"
   homepage "https://kaleidoscope.app/ksdiff#{version.major}"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   conflicts_with cask: [
     "kaleidoscope",
     "homebrew/cask-versions/kaleidoscope2",
@@ -16,8 +18,4 @@ cask "ksdiff" do
   pkg "ksdiff-#{version.csv.first}/Install ksdiff.pkg"
 
   uninstall pkgutil: "app.kaleidoscope.v#{version.major}.ksdiff.installer.pkg"
-
-  caveats do
-    discontinued
-  end
 end
