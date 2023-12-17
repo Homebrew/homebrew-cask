@@ -7,9 +7,7 @@ cask "createuserpkg" do
   desc "Create packages to deploy user accounts"
   homepage "https://magervalp.github.io/CreateUserPkg/"
 
-  app "CreateUserPkg.app"
+  deprecate! date: "2023-12-17", because: :discontinued
 
-  caveats do
-    discontinued
-  end
+  app "CreateUserPkg.app"
 end
