@@ -8,14 +8,12 @@ cask "freesmug-chromium" do
   desc "Google Chromium built to solve Chrome incompatibility issue"
   homepage "http://www.freesmug.org/chromium"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   conflicts_with cask: [
     "chromium",
     "eloston-chromium",
   ]
 
   app "Chromium.app"
-
-  caveats do
-    discontinued
-  end
 end
