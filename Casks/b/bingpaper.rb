@@ -7,6 +7,8 @@ cask "bingpaper" do
   desc "Use the Bing daily photo as your wallpaper"
   homepage "https://github.com/pengsrc/BingPaper"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   depends_on macos: ">= :catalina"
 
   app "BingPaper.app"
@@ -21,8 +23,4 @@ cask "bingpaper" do
         "~/Library/Containers/io.pjw.mac.BingPaper",
         "~/Library/Containers/io.pjw.mac.BingPaperLoginItem",
       ]
-
-  caveats do
-    discontinued
-  end
 end
