@@ -7,6 +7,8 @@ cask "hookshot" do
   desc "Window snapping tool"
   homepage "https://hookshot.app/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   auto_updates true
   depends_on macos: ">= :sierra"
 
@@ -22,8 +24,4 @@ cask "hookshot" do
     "~/Library/HTTPStorages/com.knollsoft.Hookshot.binarycookies",
     "~/Library/Preferences/com.knollsoft.Hookshot.plist",
   ]
-
-  caveats do
-    discontinued
-  end
 end
