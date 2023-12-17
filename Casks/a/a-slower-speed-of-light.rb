@@ -7,9 +7,7 @@ cask "a-slower-speed-of-light" do
   desc "First-person game"
   homepage "https://gamelab.mit.edu/games/a-slower-speed-of-light/"
 
-  app "A Slower Speed of Light.app"
+  deprecate! date: "2023-12-17", because: :discontinued
 
-  caveats do
-    discontinued
-  end
+  app "A Slower Speed of Light.app"
 end
