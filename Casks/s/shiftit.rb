@@ -7,6 +7,8 @@ cask "shiftit" do
   desc "Tool to manage the size and position of windows"
   homepage "https://github.com/fikovnik/ShiftIt/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   auto_updates true
 
   app "ShiftIt.app"
@@ -16,8 +18,4 @@ cask "shiftit" do
     "~/Library/Caches/org.shiftitapp.ShiftIt",
     "~/Library/Preferences/org.shiftitapp.ShiftIt.plist",
   ]
-
-  caveats do
-    discontinued
-  end
 end
