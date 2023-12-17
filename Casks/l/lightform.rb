@@ -8,6 +8,8 @@ cask "lightform" do
   desc "AR projection and audio reactivity software for Lightform devices"
   homepage "https://lightform.com/creator"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   depends_on macos: ">= :mojave"
 
   app "Lightform.app"
@@ -18,8 +20,4 @@ cask "lightform" do
     "~/Library/Preferences/com.lightform.desktop.plist",
     "~/Library/Saved Application State/com.lightform.desktop.savedState",
   ]
-
-  caveats do
-    discontinued
-  end
 end
