@@ -7,9 +7,7 @@ cask "expo-xde" do
   name "Expo Development Environment (XDE)"
   homepage "https://expo.io/"
 
-  app "Expo XDE.app"
+  deprecate! date: "2023-12-17", because: :discontinued
 
-  caveats do
-    discontinued
-  end
+  app "Expo XDE.app"
 end
