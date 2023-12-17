@@ -7,10 +7,8 @@ cask "eclipse-javascript" do
   desc "Eclipse IDE for JavaScript and web developers"
   homepage "https://eclipse.org/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   # Renamed to avoid conflict with other Eclipse.
   app "Eclipse.app", target: "Eclipse JavaScript.app"
-
-  caveats do
-    discontinued
-  end
 end
