@@ -7,11 +7,9 @@ cask "chatology" do
   desc "Chat manager and message search software"
   homepage "https://flexibits.com/chatology"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   depends_on macos: ">= :el_capitan"
 
   app "Chatology.app"
-
-  caveats do
-    discontinued
-  end
 end
