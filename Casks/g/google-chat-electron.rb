@@ -10,6 +10,8 @@ cask "google-chat-electron" do
   desc "Standalone app for Google Chat"
   homepage "https://github.com/ankurk91/google-chat-electron"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   depends_on macos: ">= :catalina"
 
   app "google-chat-electron.app"
@@ -21,8 +23,4 @@ cask "google-chat-electron" do
     "~/Library/Preferences/com.electron.google-chat-electron.plist",
     "~/Library/Saved Application State/com.electron.google-chat-electron.savedState",
   ]
-
-  caveats do
-    discontinued
-  end
 end
