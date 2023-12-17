@@ -8,6 +8,8 @@ cask "ethereum-wallet" do
   desc "Browser for Ðapps on the Ethereum network"
   homepage "https://github.com/ethereum/mist"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   app "Ethereum Wallet.app"
 
   zap trash: [
@@ -15,8 +17,4 @@ cask "ethereum-wallet" do
     "~/Library/Preferences/com.ethereum.wallet.plist",
     "~/Library/Preferences/com.ethereum.wallet.helper.plist",
   ]
-
-  caveats do
-    discontinued
-  end
 end
