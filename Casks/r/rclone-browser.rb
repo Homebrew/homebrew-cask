@@ -7,6 +7,8 @@ cask "rclone-browser" do
   name "Rclone Browser"
   homepage "https://mmozeiko.github.io/RcloneBrowser/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   depends_on formula: "rclone"
 
   app "rclone-browser-#{version.csv.first}-#{version.csv.second}-macOS/Rclone Browser.app"
@@ -15,8 +17,4 @@ cask "rclone-browser" do
     "~/Library/Preferences/Rclone Browser.plist",
     "~/Library/Preferences/com.rclone-browser.rclone-browser.plist",
   ]
-
-  caveats do
-    discontinued
-  end
 end
