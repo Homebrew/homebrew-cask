@@ -8,6 +8,8 @@ cask "ui-browser" do
   desc "Assistant for Apple's Accessibility and AppleScript GUI scripting"
   homepage "https://latenightsw.com/freeware/ui-browser/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   depends_on macos: ">= :sierra"
 
   app "UI Browser.app"
@@ -16,8 +18,4 @@ cask "ui-browser" do
     "~/Library/Caches/com.apple.helpd/Generated/com.pfiddlesoft.uibrowser.help*",
     "~/Library/Preferences/com.pfiddlesoft.uibrowser.plist",
   ]
-
-  caveats do
-    discontinued
-  end
 end
