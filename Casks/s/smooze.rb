@@ -7,6 +7,8 @@ cask "smooze" do
   desc "Animates scrolling and adds functionality to scroll-wheel mice"
   homepage "https://smooze.co/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   auto_updates true
   depends_on macos: ">= :sierra"
 
@@ -23,8 +25,4 @@ cask "smooze" do
     "~/Library/HTTPStorages/co.smooze.macos.binarycookies",
     "~/Library/Preferences/co.smooze.macos.plist",
   ]
-
-  caveats do
-    discontinued
-  end
 end
