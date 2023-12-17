@@ -8,6 +8,8 @@ cask "flomo" do
   desc "Memo note taking and management app"
   homepage "https://flomoapp.com/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   depends_on macos: ">= :catalina"
 
   app "flomo.app"
@@ -18,8 +20,6 @@ cask "flomo" do
   ]
 
   caveats do
-    discontinued
-
     <<~EOS
       Flomo versions prior to 2.0 are no longer supported and newer versions
       are hosted on third-party file uploading sites that we can't use in the
