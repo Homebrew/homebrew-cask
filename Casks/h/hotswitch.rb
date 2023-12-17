@@ -7,11 +7,9 @@ cask "hotswitch" do
   desc "Fast window switcher using a 2-stroke hotkey"
   homepage "https://oniatsu.github.io/HotSwitch/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   app "HotSwitch.app"
 
   zap trash: "~/Library/Preferences/com.oniatsu.HotSwitch.plist"
-
-  caveats do
-    discontinued
-  end
 end
