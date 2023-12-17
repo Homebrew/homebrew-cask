@@ -8,6 +8,8 @@ cask "ndm" do
   desc "Desktop manager for the Node.js Package Manager (NPM)"
   homepage "https://720kb.github.io/ndm/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   app "ndm.app"
 
   zap trash: [
@@ -16,8 +18,4 @@ cask "ndm" do
     "~/Library/Preferences/net.720kb.ndm.plist",
     "~/Library/Saved Application State/net.720kb.ndm.savedState",
   ]
-
-  caveats do
-    discontinued
-  end
 end
