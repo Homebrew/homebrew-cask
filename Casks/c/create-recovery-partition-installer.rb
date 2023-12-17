@@ -6,9 +6,7 @@ cask "create-recovery-partition-installer" do
   name "Create Recovery Partition Installer"
   homepage "https://github.com/MagerValp/Create-Recovery-Partition-Installer/"
 
-  app "Create Recovery Partition Installer.app"
+  deprecate! date: "2023-12-17", because: :discontinued
 
-  caveats do
-    discontinued
-  end
+  app "Create Recovery Partition Installer.app"
 end
