@@ -8,11 +8,6 @@ cask "mmex" do
   desc "Easy to use, money management application built with wxWidgets"
   homepage "https://moneymanagerex.org/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   app "MMEX.app"
 
   zap trash: [
