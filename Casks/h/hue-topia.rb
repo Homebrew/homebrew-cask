@@ -7,14 +7,12 @@ cask "hue-topia" do
   desc "Manual control over Philips Hue bulbs"
   homepage "https://peacockmedia.software/mac/huetopia/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   app "Hue-topia.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.peacockmedia.Hue-topia",
     "~/Library/Containers/com.peacockmedia.Hue-topia",
   ]
-
-  caveats do
-    discontinued
-  end
 end
