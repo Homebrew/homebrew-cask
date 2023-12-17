@@ -7,11 +7,9 @@ cask "quicklookapk" do
   desc "Quick Look plugin for Android packages"
   homepage "https://github.com/hezi/QuickLookAPK"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   qlplugin "QuickLookAPK.qlgenerator"
 
   # No zap stanza required
-
-  caveats do
-    discontinued
-  end
 end
