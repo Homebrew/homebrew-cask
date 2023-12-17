@@ -7,14 +7,12 @@ cask "sonarr-menu" do
   desc "Utility that adds a menu to the Status Bar for managing Sonarr"
   homepage "https://github.com/jefbarn/Sonarr-Menu/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   depends_on cask: "sonarr"
 
   app "Sonarr-Menu.app"
 
   uninstall quit:      "tv.sonarr.Sonarr-Menu",
             launchctl: "tv.sonarr.Sonarr-Menu"
-
-  caveats do
-    discontinued
-  end
 end
