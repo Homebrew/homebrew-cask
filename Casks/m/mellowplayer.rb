@@ -8,6 +8,8 @@ cask "mellowplayer" do
   desc "Moved to gitlab"
   homepage "https://colinduquesnoy.github.io/MellowPlayer/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   app "MellowPlayer.app"
 
   zap trash: [
@@ -16,8 +18,4 @@ cask "mellowplayer" do
     "~/Library/Preferences/com.mellowplayer.3.plist",
     "~/Library/Preferences/com.mellowplayer.mellowplayer.MellowPlayer.plist",
   ]
-
-  caveats do
-    discontinued
-  end
 end
