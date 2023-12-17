@@ -5,7 +5,7 @@ cask "mmex" do
   url "https://github.com/moneymanagerex/moneymanagerex/releases/download/v#{version}/mmex-#{version}-Darwin.dmg",
       verified: "github.com/moneymanagerex/moneymanagerex/"
   name "Money Manager Ex"
-  desc "Easy to use, money management application built with wxWidgets"
+  desc "Money management application"
   homepage "https://moneymanagerex.org/"
 
   app "MMEX.app"
