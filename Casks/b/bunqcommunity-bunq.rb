@@ -8,9 +8,7 @@ cask "bunqcommunity-bunq" do
   desc "Unofficial desktop application for the bunq API"
   homepage "https://bunqdesk.top/"
 
-  app "bunqDesktop.app"
+  deprecate! date: "2023-12-17", because: :discontinued
 
-  caveats do
-    discontinued
-  end
+  app "bunqDesktop.app"
 end
