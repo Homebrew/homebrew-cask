@@ -8,6 +8,8 @@ cask "code42-crashplan" do
   desc "Endpoint backup and recovery"
   homepage "https://www.crashplan.com/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   auto_updates true
 
   pkg "Install Code42.pkg"
@@ -18,8 +20,4 @@ cask "code42-crashplan" do
               executable: "Uninstall.app/Contents/Resources/uninstall.sh",
               sudo:       true,
             }
-
-  caveats do
-    discontinued
-  end
 end
