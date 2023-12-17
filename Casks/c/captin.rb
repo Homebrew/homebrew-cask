@@ -1,22 +1,16 @@
 cask "captin" do
-  version "1.1.3,143,1619187317"
-  sha256 "15854fad5bd0c0303649c1c53561a0ba9c02e6e2ffcfbd492df4b522c800d543"
+  version "1.3.1"
+  sha256 "edeedeb73ee0ecdbd017a53f72919e41c5231108a3bab329d6fa4035d0c65fc3"
 
-  url "https://dl.devmate.com/com.100hps.captin/#{version.csv.second}/#{version.csv.third}/Captin-#{version.csv.second}.dmg",
-      verified: "dl.devmate.com/com.100hps.captin/"
+  url "https://raw.githubusercontent.com/cool8jay/public/master/captin/Captin.zip",
+      verified: "raw.githubusercontent.com/cool8jay/public/master/captin/"
   name "Captin"
   desc "Tool to show caps lock status"
-  homepage "https://captin.strikingly.com/"
+  homepage "https://captin.mystrikingly.com/"
 
   livecheck do
-    url "https://updates.devmate.com/com.100hps.captin.xml"
-    regex(%r{/(\d+)/Captin\d*?[_-]v?(\d+(?:\.\d+)*)\.(?:dmg|zip)}i)
-    strategy :sparkle do |item, regex|
-      match = item.url.match(regex)
-      next if match.blank?
-
-      "#{item.short_version},#{match[2]},#{match[1]}"
-    end
+    url "https://raw.githubusercontent.com/cool8jay/public/master/captin/appcast.xml"
+    strategy :sparkle, &:short_version
   end
 
   app "Captin.app"
