@@ -8,9 +8,7 @@ cask "namebench" do
   desc "DNS server finder"
   homepage "https://code.google.com/archive/p/namebench/"
 
-  app "namebench.app"
+  deprecate! date: "2023-12-17", because: :discontinued
 
-  caveats do
-    discontinued
-  end
+  app "namebench.app"
 end
