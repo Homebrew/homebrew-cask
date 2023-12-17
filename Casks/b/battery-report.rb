@@ -7,9 +7,7 @@ cask "battery-report" do
   desc "Creates technical summaries of power supplies"
   homepage "https://www.dssw.co.uk/batteryreport/"
 
-  app "Battery Report.app"
+  deprecate! date: "2023-12-17", because: :discontinued
 
-  caveats do
-    discontinued
-  end
+  app "Battery Report.app"
 end
