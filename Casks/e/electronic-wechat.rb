@@ -6,6 +6,8 @@ cask "electronic-wechat" do
   name "Electronic WeChat"
   homepage "https://github.com/geeeeeeeeek/electronic-wechat"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   app "Electronic WeChat-darwin-x64/Electronic WeChat.app"
 
   zap trash: [
@@ -16,8 +18,4 @@ cask "electronic-wechat" do
     "~/Library/Preferences/com.electron.electronic-wechat.plist",
     "~/Library/Preferences/com.electron.electronic-wechat.helper.plist",
   ]
-
-  caveats do
-    discontinued
-  end
 end
