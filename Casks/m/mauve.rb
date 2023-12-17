@@ -7,9 +7,7 @@ cask "mauve" do
   desc "System for constructing multiple genome alignments"
   homepage "https://darlinglab.org/mauve/mauve.html"
 
-  app "Mauve.app"
+  deprecate! date: "2023-12-17", because: :discontinued
 
-  caveats do
-    discontinued
-  end
+  app "Mauve.app"
 end
