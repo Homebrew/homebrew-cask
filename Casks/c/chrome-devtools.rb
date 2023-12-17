@@ -7,6 +7,8 @@ cask "chrome-devtools" do
   desc "Standalone Chrome development tools"
   homepage "https://github.com/auchenberg/chrome-devtools-app"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   app "Chrome DevTools App.app"
 
   zap trash: [
@@ -15,8 +17,4 @@ cask "chrome-devtools" do
     "~/Library/Preferences/com.auchenberg.chrome-devtools-app.plist",
     "~/Library/Saved Application State/com.auchenberg.chrome-devtools-app.savedState",
   ]
-
-  caveats do
-    discontinued
-  end
 end
