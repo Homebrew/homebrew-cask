@@ -6,6 +6,8 @@ cask "webrecorder-player" do
   name "Webrecorder Player"
   homepage "https://github.com/webrecorder/webrecorder-player/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   app "Webrecorder Player.app"
 
   zap trash: [
@@ -14,8 +16,4 @@ cask "webrecorder-player" do
     "~/Library/Preferences/org.webrecorder.webrecorderplayer.plist",
     "~/Library/Saved Application State/org.webrecorder.webrecorderplayer.savedState",
   ]
-
-  caveats do
-    discontinued
-  end
 end
