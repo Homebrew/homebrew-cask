@@ -8,11 +8,9 @@ cask "creepy" do
   desc "Geolocation OSINT tool"
   homepage "https://www.geocreepy.com/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   app "cree.py.app"
 
   zap trash: "~/.creepy"
-
-  caveats do
-    discontinued
-  end
 end
