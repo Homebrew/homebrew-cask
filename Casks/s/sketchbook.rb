@@ -8,6 +8,8 @@ cask "sketchbook" do
   desc "Draw, paint, & sketch application"
   homepage "https://www.sketchbook.com/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   pkg "SketchBook_v#{version.csv.first}_mac.pkg"
 
   uninstall quit:    "com.autodesk.SketchBook",
@@ -20,8 +22,6 @@ cask "sketchbook" do
   ]
 
   caveats do
-    discontinued
-
     <<~EOS
       Sketchbook is now handled by Sketchbook, Inc. and Autodesk no longer provides downloads. The app appears to only be available through app stores at this point (see https://www.sketchbook.com/apps).
     EOS
