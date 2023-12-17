@@ -7,9 +7,7 @@ cask "mongodbpreferencepane" do
   desc "Preference pane to control MongoDB Server"
   homepage "https://github.com/remysaissy/mongodb-macosx-prefspane"
 
-  prefpane "MongoDB.prefPane"
+  deprecate! date: "2023-12-17", because: :discontinued
 
-  caveats do
-    discontinued
-  end
+  prefpane "MongoDB.prefPane"
 end
