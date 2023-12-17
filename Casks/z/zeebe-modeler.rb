@@ -8,9 +8,7 @@ cask "zeebe-modeler" do
   desc "Desktop Application for modeling Zeebe Workflows with BPMN"
   homepage "https://zeebe.io/"
 
-  app "Zeebe Modeler.app"
+  deprecate! date: "2023-12-17", because: :discontinued
 
-  caveats do
-    discontinued
-  end
+  app "Zeebe Modeler.app"
 end
