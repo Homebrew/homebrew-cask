@@ -10,6 +10,8 @@ cask "mysql-connector-python" do
   desc "Self-contained Python driver for communicating with MySQL servers"
   homepage "https://dev.mysql.com/downloads/connector/python/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   depends_on macos: ">= :monterey"
 
   pkg "mysql-connector-python-#{version}-macos13-#{arch}.pkg"
@@ -24,8 +26,4 @@ cask "mysql-connector-python" do
   ]
 
   # No zap stanza required
-
-  caveats do
-    discontinued
-  end
 end
