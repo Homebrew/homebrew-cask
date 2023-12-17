@@ -8,6 +8,8 @@ cask "radiant-player" do
   desc "App wrapper for Google Play Music"
   homepage "https://radiant-player.github.io/radiant-player-mac/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   app "Radiant Player.app"
 
   uninstall quit: "com.sajidanwar.Radiant-Player"
@@ -19,8 +21,4 @@ cask "radiant-player" do
     "~/Library/Preferences/com.sajidanwar.Radiant-Player.plist",
     "~/Library/Saved Application State/com.sajidanwar.Radiant-Player.savedState",
   ]
-
-  caveats do
-    discontinued
-  end
 end
