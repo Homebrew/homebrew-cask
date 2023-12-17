@@ -8,6 +8,8 @@ cask "steelseries-engine" do
   desc "Settings for SteelSeries peripherals and accessories"
   homepage "https://steelseries.com/engine"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   auto_updates true
   conflicts_with cask: "steelseries-gg"
   depends_on macos: ">= :sierra"
@@ -37,8 +39,4 @@ cask "steelseries-engine" do
     "~/Library/Preferences/com.steelseries.ssenext.client.plist",
     "~/Library/Saved Application State/com.steelseries.ssenext.client.savedState",
   ]
-
-  caveats do
-    discontinued
-  end
 end
