@@ -7,6 +7,8 @@ cask "edex-ui" do
   desc "Sci-fi themed terminal emulator and system monitor"
   homepage "https://github.com/GitSquared/edex-ui"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   app "eDEX-UI.app"
 
   zap trash: [
@@ -14,8 +16,4 @@ cask "edex-ui" do
     "~/Library/Saved Application State/com.edex.ui.savedState",
     "~/Library/Preferences/com.edex.ui.plist",
   ]
-
-  caveats do
-    discontinued
-  end
 end
