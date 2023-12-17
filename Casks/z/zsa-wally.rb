@@ -8,6 +8,8 @@ cask "zsa-wally" do
   desc "Flash tool for ZSA keyboards"
   homepage "https://ergodox-ez.com/pages/wally"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   app "Wally.app"
 
   zap trash: [
@@ -16,8 +18,6 @@ cask "zsa-wally" do
   ]
 
   caveats do
-    discontinued
-
     <<~EOS
       Keymapp is the official successor to this software:
 
