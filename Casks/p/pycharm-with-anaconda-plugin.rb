@@ -7,6 +7,8 @@ cask "pycharm-with-anaconda-plugin" do
   desc "PyCharm IDE with Anaconda plugin"
   homepage "https://www.jetbrains.com/pycharm/promo/anaconda"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   auto_updates true
 
   app "PyCharm with Anaconda plugin .app"
@@ -24,8 +26,4 @@ cask "pycharm-with-anaconda-plugin" do
     "~/Library/Application Support/JetBrains/PyCharm*",
     "~/Library/Saved Application State/com.jetbrains.pycharm.savedState",
   ]
-
-  caveats do
-    discontinued
-  end
 end
