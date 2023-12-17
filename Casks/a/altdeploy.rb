@@ -6,11 +6,9 @@ cask "altdeploy" do
   name "AltDeploy"
   homepage "https://github.com/pixelomer/AltDeploy"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   depends_on macos: ">= :high_sierra"
 
   app "AltDeploy.app"
-
-  caveats do
-    discontinued
-  end
 end
