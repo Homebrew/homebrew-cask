@@ -8,9 +8,7 @@ cask "alva" do
   desc "Create living prototypes with code components"
   homepage "https://meetalva.io/"
 
-  app "Alva.app"
+  deprecate! date: "2023-12-17", because: :discontinued
 
-  caveats do
-    discontinued
-  end
+  app "Alva.app"
 end
