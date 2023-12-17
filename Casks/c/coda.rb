@@ -7,6 +7,8 @@ cask "coda" do
   desc "Text editor"
   homepage "https://panic.com/coda/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
@@ -20,8 +22,4 @@ cask "coda" do
     "~/Library/Preferences/com.panic.Coda#{version.major}.plist",
     "~/Library/Saved Application State/com.panic.Coda#{version.major}.savedState",
   ]
-
-  caveats do
-    discontinued
-  end
 end
