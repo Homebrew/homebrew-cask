@@ -7,6 +7,8 @@ cask "glance" do
   desc "Utility to provide quick look previews for files that aren't natively supported"
   homepage "https://github.com/samuelmeuli/glance"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   depends_on macos: ">= :catalina"
 
   app "Glance.app"
@@ -20,7 +22,6 @@ cask "glance" do
   ]
 
   caveats do
-    discontinued
     <<~EOS
       You must start #{appdir}/Glance.app once manually to setup the QuickLook plugin.
     EOS
