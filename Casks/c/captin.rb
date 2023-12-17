@@ -1,6 +1,6 @@
 cask "captin" do
   version "1.3.1"
-  sha256 "edeedeb73ee0ecdbd017a53f72919e41c5231108a3bab329d6fa4035d0c65fc3"
+  sha256 :no_check
 
   url "https://raw.githubusercontent.com/cool8jay/public/master/captin/Captin.zip",
       verified: "raw.githubusercontent.com/cool8jay/public/master/captin/"
