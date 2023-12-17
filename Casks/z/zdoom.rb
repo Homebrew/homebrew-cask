@@ -7,9 +7,7 @@ cask "zdoom" do
   desc "Source port of Doom"
   homepage "https://zdoom.org/index"
 
-  app "ZDoom.app"
+  deprecate! date: "2023-12-17", because: :discontinued
 
-  caveats do
-    discontinued
-  end
+  app "ZDoom.app"
 end
