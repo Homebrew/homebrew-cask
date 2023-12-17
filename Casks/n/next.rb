@@ -7,11 +7,9 @@ cask "next" do
   desc "Web browser"
   homepage "https://next.atlas.engineer/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   app "Next.app"
 
   zap trash: "~/Library/Caches/next.browser"
-
-  caveats do
-    discontinued
-  end
 end
