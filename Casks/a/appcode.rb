@@ -10,6 +10,8 @@ cask "appcode" do
   desc "IDE for Swift, Objective-C, C, and C++ development"
   homepage "https://www.jetbrains.com/objc/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
@@ -30,8 +32,4 @@ cask "appcode" do
     "~/Library/Logs/AppCode#{version.major_minor}",
     "~/Library/Preferences/AppCode#{version.major_minor}",
   ]
-
-  caveats do
-    discontinued
-  end
 end
