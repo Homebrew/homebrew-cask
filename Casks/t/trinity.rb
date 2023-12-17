@@ -8,6 +8,8 @@ cask "trinity" do
   desc "Cryptocurrency wallet"
   homepage "https://trinity.iota.org/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   app "Trinity.app"
 
   uninstall quit: "org.iota.trinity"
@@ -19,8 +21,4 @@ cask "trinity" do
     "~/Library/Preferences/org.iota.trinity.plist",
     "~/Library/Saved Application State/org.iota.trinity.savedState",
   ]
-
-  caveats do
-    discontinued
-  end
 end
