@@ -10,7 +10,7 @@ cask "valkyrie" do
 
   livecheck do
     url :url
-    regex(%r{/(\d+(?:\.\d+)+)$}i)
+    regex(%r{/v?(\d+(?:\.\d+)+)$}i)
   end
 
   app "Valkyrie.app"
