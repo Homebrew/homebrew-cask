@@ -6,8 +6,7 @@ cask "postman-agent" do
          intel: "a0aabdd3115ac695400be9861d0bc537b477905f19655b6d7b4acc0afe10a2ad"
 
   url "https://dl-agent.pstmn.io/download/version/#{version}/#{arch}",
-      verified:   "dl-agent.pstmn.io/download/version/",
-      user_agent: :fake
+      verified:   "dl-agent.pstmn.io/download/version/"
   name "Postman Agent"
   desc "Desktop agent for Postman on the Web"
   homepage "https://www.postman.com/downloads/postman-agent/"
