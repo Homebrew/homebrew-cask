@@ -1,8 +1,8 @@
 cask "tunein" do
-  version "1.26.0"
-  sha256 "fa37d08fd33b3beb301aa578df6a923e9cda089895aea48d35dc16d68846fd17"
+  version "1.27.0"
+  sha256 "cb85ddaf78688ccb7a83bcae54bb13c9147dcce93917b4bb656e6cce37491000"
 
-  url "https://cdn-desktop.tunein.com/release/TuneIn-#{version}.dmg"
+  url "https://cdn-desktop.tunein.com/release/TuneIn-#{version}-universal.dmg"
   name "TuneIn"
   desc "Free Internet Radio"
   homepage "https://tunein.com/"
