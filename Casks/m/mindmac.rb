@@ -1,6 +1,6 @@
 cask "mindmac" do
-  version "1.8.6"
-  sha256 "8ff63d298b2c6501050860b579c04dc7adcacea042476c682db06461547be3e9"
+  version "1.8.7"
+  sha256 "696cf465fe3c36b78f5d9f9805f579e9951d401b780f50f1a678516df22654f1"
 
   url "https://github.com/MindMacApp/MindMac/releases/download/#{version}/MindMac_#{version}.dmg",
       verified: "github.com/MindMacApp/MindMac/"
