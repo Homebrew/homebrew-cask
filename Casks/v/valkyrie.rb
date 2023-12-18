@@ -1,8 +1,8 @@
 cask "valkyrie" do
-  version "2.5.7"
-  sha256 "e667934e6ee3f27d3f81591b830d2be4513c8997f54f5312be56917c0697ce75"
+  version "2.6.0"
+  sha256 "0aaa7435012fdae6f39b88f7cbbc9a179c992acd068d4ae6539fd973e0aa17a6"
 
-  url "https://github.com/NPBruce/valkyrie/releases/download/release/#{version.major_minor}/v#{version}/valkyrie-macos-#{version}.tar.gz",
+  url "https://github.com/NPBruce/valkyrie/releases/download/release/#{version.major_minor}/#{version}/valkyrie-macos-#{version}.tar.gz",
       verified: "github.com/NPBruce/valkyrie/"
   name "Valkyrie"
   desc "Game Master for Fantasy Flight board games"
@@ -10,7 +10,7 @@ cask "valkyrie" do
 
   livecheck do
     url :url
-    regex(%r{/v(\d+(?:\.\d+)+)$}i)
+    regex(%r{/(\d+(?:\.\d+)+)$}i)
   end
 
   app "Valkyrie.app"
