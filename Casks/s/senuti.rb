@@ -7,9 +7,7 @@ cask "senuti" do
   desc "Transfers songs, playlists, or videos from an iPod to a computer"
   homepage "https://fadingred.com/"
 
-  app "Senuti.app"
+  deprecate! date: "2023-12-17", because: :discontinued
 
-  caveats do
-    discontinued
-  end
+  app "Senuti.app"
 end

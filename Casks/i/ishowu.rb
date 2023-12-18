@@ -7,9 +7,7 @@ cask "ishowu" do
   desc "Screen recorder"
   homepage "https://www.shinywhitebox.com/ishowu"
 
-  app "iShowU.app"
+  deprecate! date: "2023-12-17", because: :discontinued
 
-  caveats do
-    discontinued
-  end
+  app "iShowU.app"
 end

@@ -8,14 +8,12 @@ cask "zecwallet-lite" do
   desc "Zcash Light Wallet"
   homepage "https://www.zecwallet.co/#download"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   app "Zecwallet Lite.app"
 
   zap trash: [
     "~/Library/Application Support/Zecwallet Lite",
     "~/Library/Application Support/Zcash/zecwallet-light-wallet.debug.log",
   ]
-
-  caveats do
-    discontinued
-  end
 end

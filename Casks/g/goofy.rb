@@ -8,6 +8,8 @@ cask "goofy" do
   desc "Desktop client for Facebook Messenger"
   homepage "https://www.goofyapp.com/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   app "Goofy.app"
 
   zap trash: [
@@ -18,8 +20,4 @@ cask "goofy" do
     "~/Library/Preferences/cc.buechele.Goofy.plist",
     "~/Library/Saved Application State/cc.buechele.Goofy.savedState",
   ]
-
-  caveats do
-    discontinued
-  end
 end

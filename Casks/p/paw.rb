@@ -7,6 +7,8 @@ cask "paw" do
   desc "HTTP client that helps testing and describing APIs"
   homepage "https://paw.cloud/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   auto_updates true
   depends_on macos: ">= :sierra"
 
@@ -21,8 +23,6 @@ cask "paw" do
   ]
 
   caveats do
-    discontinued
-
     <<~EOS
       #{token} has been renamed 'rapidapi',
       install rapidapi to continue receiving updates;

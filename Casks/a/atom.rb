@@ -8,6 +8,8 @@ cask "atom" do
   desc "Text editor"
   homepage "https://atom.io/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   auto_updates true
 
   app "Atom.app"
@@ -30,8 +32,4 @@ cask "atom" do
     "~/Library/Saved Application State/com.github.atom.savedState",
     "~/Library/WebKit/com.github.atom",
   ]
-
-  caveats do
-    discontinued
-  end
 end

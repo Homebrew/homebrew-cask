@@ -7,9 +7,7 @@ cask "lab" do
   desc "React UI component design tool"
   homepage "https://github.com/c8r/lab/"
 
-  app "Lab.app"
+  deprecate! date: "2023-12-17", because: :discontinued
 
-  caveats do
-    discontinued
-  end
+  app "Lab.app"
 end

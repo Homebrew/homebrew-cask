@@ -9,6 +9,8 @@ cask "sfdx" do
   desc "SalesForce CLI tools"
   homepage "https://developer.salesforce.com/tools/sfdxcli"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   pkg "sfdx-#{arch}.pkg"
 
   uninstall pkgutil: [
@@ -24,8 +26,6 @@ cask "sfdx" do
   ]
 
   caveats do
-    discontinued
-
     <<~EOS
       `sf` is the official successor to this software
 

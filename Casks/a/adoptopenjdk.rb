@@ -8,6 +8,8 @@ cask "adoptopenjdk" do
   desc "JDK from the Java User Group (JUG)"
   homepage "https://adoptopenjdk.net/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   pkg "OpenJDK#{version.major}U-jdk_x64_mac_hotspot_#{version.csv.first}_#{version.csv.second.major}.pkg"
 
   uninstall pkgutil: "net.adoptopenjdk.#{version.major}.jdk"
@@ -19,8 +21,6 @@ cask "adoptopenjdk" do
   ]
 
   caveats do
-    discontinued
-
     <<~EOS
       Temurin is the official successor to this software:
 

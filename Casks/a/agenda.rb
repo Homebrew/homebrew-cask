@@ -7,6 +7,8 @@ cask "agenda" do
   desc "Note taking application focusing on dates"
   homepage "https://agenda.com/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   depends_on macos: ">= :mojave"
 
   app "Agenda.app"
@@ -23,7 +25,6 @@ cask "agenda" do
   ]
 
   caveats do
-    discontinued
     <<~EOS
       Newer versions are only available in Mac App Store.
     EOS

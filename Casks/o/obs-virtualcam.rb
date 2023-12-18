@@ -6,13 +6,11 @@ cask "obs-virtualcam" do
   name "OBS Virtual Camera"
   homepage "https://github.com/johnboiles/obs-mac-virtualcam"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   depends_on macos: ">= :high_sierra"
 
   pkg "obs-mac-virtualcam-#{version.csv.second}-v#{version.csv.first}.pkg"
 
   uninstall pkgutil: "com.johnboiles.obs-mac-virtualcam"
-
-  caveats do
-    discontinued
-  end
 end

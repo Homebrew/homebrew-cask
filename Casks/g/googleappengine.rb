@@ -8,6 +8,8 @@ cask "googleappengine" do
   desc "Cloud computing platform"
   homepage "https://cloud.google.com/appengine/docs/standard/python/download#appengine_sdk/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   app "GoogleAppEngineLauncher.app"
 
   zap trash: [
@@ -15,8 +17,4 @@ cask "googleappengine" do
     "~/Library/Preferences/com.google.GoogleAppEngineLauncher.plist",
     "~/Library/Saved Application State/com.google.GoogleAppEngineLauncher.savedState",
   ]
-
-  caveats do
-    discontinued
-  end
 end

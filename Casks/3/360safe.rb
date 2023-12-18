@@ -7,9 +7,7 @@ cask "360safe" do
   desc "Protection and antivirus security"
   homepage "https://www.360totalsecurity.com/features/360-total-security-mac/"
 
-  app "360Safe.app"
+  deprecate! date: "2023-12-17", because: :discontinued
 
-  caveats do
-    discontinued
-  end
+  app "360Safe.app"
 end

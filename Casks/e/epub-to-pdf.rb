@@ -7,9 +7,7 @@ cask "epub-to-pdf" do
   name "epub-2-pdf"
   homepage "https://code.google.com/archive/p/epub-2-pdf"
 
-  app "epub-to-pdf.app"
+  deprecate! date: "2023-12-17", because: :discontinued
 
-  caveats do
-    discontinued
-  end
+  app "epub-to-pdf.app"
 end

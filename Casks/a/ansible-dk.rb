@@ -8,11 +8,9 @@ cask "ansible-dk" do
   desc "Omnibus-based toolkit for working on Ansible-based infrastructure code"
   homepage "https://github.com/omniti-labs/ansible-dk"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   pkg "ansible-dk-#{version.major_minor_patch}-1.pkg"
 
   uninstall pkgutil: "com.omniti.labs.ansible-dk"
-
-  caveats do
-    discontinued
-  end
 end

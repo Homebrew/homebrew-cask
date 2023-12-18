@@ -7,6 +7,8 @@ cask "classroom-assistant" do
   desc "Tool to clone student repositories in bulk"
   homepage "https://classroom.github.com/assistant"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   app "Classroom Assistant.app"
 
   zap trash: [
@@ -19,8 +21,4 @@ cask "classroom-assistant" do
     "~/Library/Preferences/com.electron.classroom-assistant.plist",
     "~/Library/Saved Application State/com.electron.classroom-assistant.savedState",
   ]
-
-  caveats do
-    discontinued
-  end
 end

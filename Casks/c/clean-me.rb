@@ -13,13 +13,11 @@ cask "clean-me" do
   desc "System cleaner for logs, caches and more"
   homepage "https://github.com/Kevin-De-Koninck/Clean-Me"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   depends_on macos: ">= :sierra"
 
   app "Clean Me.app"
 
   # No zap stanza required
-
-  caveats do
-    discontinued
-  end
 end

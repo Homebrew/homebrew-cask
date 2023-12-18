@@ -7,6 +7,8 @@ cask "avocode" do
   desc "Collaborate on design files"
   homepage "https://avocode.com/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   auto_updates true
   depends_on macos: ">= :el_capitan"
 
@@ -21,8 +23,4 @@ cask "avocode" do
     "~/Library/Preferences/com.madebysource.avocode.plist",
     "~/Library/Saved Application State/com.madebysource.avocode.savedState",
   ]
-
-  caveats do
-    discontinued
-  end
 end

@@ -7,9 +7,7 @@ cask "cronnix" do
   name "CronniX"
   homepage "https://code.google.com/archive/p/cronnix/"
 
-  app "CronniX.app"
+  deprecate! date: "2023-12-17", because: :discontinued
 
-  caveats do
-    discontinued
-  end
+  app "CronniX.app"
 end

@@ -8,6 +8,8 @@ cask "ganache" do
   desc "Personal blockchain for Ethereum development"
   homepage "https://trufflesuite.com/ganache/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   app "Ganache.app"
 
   zap trash: [
@@ -18,7 +20,6 @@ cask "ganache" do
   ]
 
   caveats do
-    discontinued
     <<~EOS
       See https://consensys.io/blog/consensys-announces-the-sunset-of-truffle-and-ganache-and-new-hardhat for information
     EOS

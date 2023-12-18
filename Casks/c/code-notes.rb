@@ -8,9 +8,7 @@ cask "code-notes" do
   desc "Code snippet manager"
   homepage "https://lauthieb.github.io/code-notes/"
 
-  app "Code Notes.app"
+  deprecate! date: "2023-12-17", because: :discontinued
 
-  caveats do
-    discontinued
-  end
+  app "Code Notes.app"
 end

@@ -22,12 +22,13 @@ cask "vpn-enabler" do
   desc "VPN settings utility"
   homepage "https://cutedgesystems.com/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   depends_on macos: ">= :el_capitan"
 
   app "VPN Enabler.app"
 
   caveats do
-    discontinued
     <<~EOS
       Download for newer version is walled.
     EOS

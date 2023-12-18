@@ -6,12 +6,10 @@ cask "gpg-sync" do
   name "GPG Sync"
   homepage "https://github.com/firstlookmedia/gpgsync/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   pkg "GPGSync-#{version}.pkg"
 
   uninstall pkgutil:   "org.firstlook.gpgsync",
             launchctl: "org.firstlook.gpgsync"
-
-  caveats do
-    discontinued
-  end
 end

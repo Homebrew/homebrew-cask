@@ -8,6 +8,8 @@ cask "dat" do
   desc "Peer to peer data sharing app built for humans"
   homepage "https://dat-ecosystem.org/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   app "Dat Desktop.app"
 
   zap trash: [
@@ -20,8 +22,4 @@ cask "dat" do
     "~/.dat",
     "~/.dat-desktop",
   ]
-
-  caveats do
-    discontinued
-  end
 end

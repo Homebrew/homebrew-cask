@@ -8,14 +8,12 @@ cask "encryptr" do
   desc "Zero-knowledge cloud-based password manager"
   homepage "https://spideroak.support/hc/en-us/categories/115000424503-Encryptr-Password-Manager"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   app "Encryptr.app"
 
   zap trash: [
     "~/Library/Preferences/org.devgeeks.encryptr.plist",
     "~/Library/Saved Application State/org.devgeeks.encryptr.savedState",
   ]
-
-  caveats do
-    discontinued
-  end
 end

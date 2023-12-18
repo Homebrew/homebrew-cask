@@ -8,14 +8,12 @@ cask "particle-dev" do
   desc "IDE for programming Particle devices"
   homepage "https://www.particle.io/products/development-tools/particle-desktop-ide"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   app "Particle Dev.app"
 
   zap trash: [
     "~/.particle",
     "~/.particledev",
   ]
-
-  caveats do
-    discontinued
-  end
 end

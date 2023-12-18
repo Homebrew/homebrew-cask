@@ -8,6 +8,8 @@ cask "kindle" do
   desc "Interface for reading and syncing eBooks"
   homepage "https://www.amazon.com/gp/digital/fiona/kcp-landing-page"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   auto_updates true
   depends_on macos: ">= :mojave"
 
@@ -25,7 +27,6 @@ cask "kindle" do
   ]
 
   caveats do
-    discontinued
     requires_rosetta
     <<~EOS
       Please see https://www.amazon.com/kindle-dbs/arp/B0C9PRPV28 for information regarding application end of life.

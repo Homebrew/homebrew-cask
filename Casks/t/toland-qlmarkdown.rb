@@ -7,11 +7,9 @@ cask "toland-qlmarkdown" do
   desc "QuickLook generator for Markdown files"
   homepage "https://github.com/toland/qlmarkdown"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   qlplugin "QLMarkdown.qlgenerator"
 
   # No zap stanza required
-
-  caveats do
-    discontinued
-  end
 end

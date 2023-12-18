@@ -8,6 +8,8 @@ cask "wkhtmltopdf" do
   desc "HTML to PDF renderer"
   homepage "https://wkhtmltopdf.org/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   pkg "wkhtmltox-#{version}.macos-cocoa.pkg"
 
   uninstall pkgutil: "org.wkhtmltopdf.wkhtmltox",
@@ -28,7 +30,6 @@ cask "wkhtmltopdf" do
   # No zap stanza required
 
   caveats do
-    discontinued
     files_in_usr_local
   end
 end

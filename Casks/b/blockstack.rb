@@ -8,11 +8,9 @@ cask "blockstack" do
   desc "Explore the Blockstack internet"
   homepage "https://blockstack.org/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   depends_on macos: ">= :sierra"
 
   app "Blockstack.app"
-
-  caveats do
-    discontinued
-  end
 end

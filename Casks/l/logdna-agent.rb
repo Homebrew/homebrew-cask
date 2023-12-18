@@ -8,14 +8,14 @@ cask "logdna-agent" do
   desc "Agent streams from log files to your LogDNA account"
   homepage "https://logdna.com/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   pkg "logdna-agent-#{version}.pkg"
 
   uninstall pkgutil:   "com.logdna.logdna-agent",
             launchctl: "com.logdna.logdna-agentd"
 
   caveats do
-    discontinued
-
     <<~EOS
       When you first start logdna-agent, you must set your LogDNA Ingestion Key with the command:
         sudo logdna-agent -k <ingestion-key>

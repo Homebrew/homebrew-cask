@@ -7,11 +7,9 @@ cask "iswiff" do
   desc "Full screen Flash outside the browser"
   homepage "https://echoone.com/iswiff/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   depends_on macos: "<= :big_sur"
 
   app "iSwiff.app"
-
-  caveats do
-    discontinued
-  end
 end

@@ -7,10 +7,8 @@ cask "jtool" do
   desc "Tool to help out reverse engineering, security researchers, and tweak developers"
   homepage "http://newosxbook.com/tools/jtool.html"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   binary "jtool"
   manpage "jtool.1"
-
-  caveats do
-    discontinued
-  end
 end

@@ -7,6 +7,8 @@ cask "wey" do
   desc "Open-source Slack desktop app"
   homepage "https://github.com/yue/wey"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   app "Wey.app"
 
   zap trash: [
@@ -16,8 +18,4 @@ cask "wey" do
     "~/Library/Saved Application State/org.yue.wey.savedState",
     "~/Library/WebKit/org.yue.wey",
   ]
-
-  caveats do
-    discontinued
-  end
 end

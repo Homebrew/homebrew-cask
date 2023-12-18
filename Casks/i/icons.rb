@@ -7,9 +7,7 @@ cask "icons" do
   desc "Tool to generate icons for apps"
   homepage "https://github.com/exherb/icons"
 
-  app "Icons.app"
+  deprecate! date: "2023-12-17", because: :discontinued
 
-  caveats do
-    discontinued
-  end
+  app "Icons.app"
 end

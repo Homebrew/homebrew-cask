@@ -7,9 +7,7 @@ cask "wjoy" do
   desc "Nintendo wiimote driver"
   homepage "https://github.com/alxn1/wjoy"
 
-  app "Wjoy.app"
+  deprecate! date: "2023-12-17", because: :discontinued
 
-  caveats do
-    discontinued
-  end
+  app "Wjoy.app"
 end

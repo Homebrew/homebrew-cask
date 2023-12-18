@@ -7,6 +7,8 @@ cask "plex-media-player" do
   desc "Home media player"
   homepage "https://www.plex.tv/"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   auto_updates true
 
   app "Plex Media Player.app"
@@ -20,8 +22,6 @@ cask "plex-media-player" do
   ]
 
   caveats do
-    discontinued
-
     <<~EOS
       #{token} has been deprecated in favor of Plex for Desktop and Plex HTPC.
 

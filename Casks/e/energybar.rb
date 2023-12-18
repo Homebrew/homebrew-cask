@@ -7,11 +7,9 @@ cask "energybar" do
   desc "Touch Bar widget application"
   homepage "https://github.com/billziss-gh/EnergyBar"
 
+  deprecate! date: "2023-12-17", because: :discontinued
+
   depends_on macos: ">= :high_sierra"
 
   app "EnergyBar.app"
-
-  caveats do
-    discontinued
-  end
 end
