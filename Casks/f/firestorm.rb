@@ -11,6 +11,8 @@ cask "firestorm" do
     url "https://www.firestormviewer.org/mac/"
     strategy :page_match do |page|
       v = page[%r{href=.*?/Phoenix-Firestorm-Releasex64-(\d+(?:-\d+)*)\.dmg}i, 1]
+      next if v.blank?
+
       v.tr("-", ".")
     end
   end
