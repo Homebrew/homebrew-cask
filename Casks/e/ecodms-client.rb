@@ -14,7 +14,7 @@ cask "ecodms-client" do
 
   depends_on macos: ">= :ventura"
 
-  pkg "ecoDMS Clients_#{version}.pkg"
+  pkg "ecoDMS-Clients_#{version}.pkg"
 
   uninstall pkgutil: "de.applord.pkg.ecodms",
             quit:    [
