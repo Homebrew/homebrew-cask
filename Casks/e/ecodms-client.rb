@@ -1,5 +1,5 @@
 cask "ecodms-client" do
-  version "23.01"
+  version "23.02"
   sha256 :no_check
 
   url "https://www.ecodms.de/index.php/de/component/jdownloads/?task=download.send&id=413&catid=162&m=0&Itemid=661"
@@ -14,7 +14,7 @@ cask "ecodms-client" do
 
   depends_on macos: ">= :ventura"
 
-  pkg "ecoDMS Clients_#{version}.pkg"
+  pkg "ecoDMS-Clients_#{version}.pkg"
 
   uninstall pkgutil: "de.applord.pkg.ecodms",
             quit:    [
