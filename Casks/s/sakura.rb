@@ -8,7 +8,7 @@ cask "sakura" do
   url "https://nya.globalslb.net/natfrp/client/launcher-macos/#{version}/SakuraLauncher_macOS_#{arch}.dmg",
       verified: "nya.globalslb.net/natfrp/client/launcher-macos/"
   name "SakuraLauncher"
-  desc "Lanucher of SakuraFrp"
+  desc "Launcher of SakuraFrp"
   homepage "https://www.natfrp.com/tunnel/download"
 
   livecheck do
