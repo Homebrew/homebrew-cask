@@ -1,9 +1,9 @@
 cask "macgpt" do
-  version "3.17,132"
-  sha256 "e21e89c132c721c1d2dc24c5070ae01da0b2dbaa5d370385fd2a66bb55338eff"
+  version "3.19,140"
+  sha256 "a7d7b10b12b51653734f589f3109ae06ab01d62bc0646420a264596629a3658d"
 
-  url "https://pub-d87f3f7fc7ee4955b8c3afaad2b5d4ea.r2.dev/releases/MacGPT-#{version.csv.second}.zip",
-      verified: "pub-d87f3f7fc7ee4955b8c3afaad2b5d4ea.r2.dev/releases/"
+  url "https://macwhisper-site.vercel.app/releases/macgpt/MacGPT-#{version.csv.second}.zip",
+      verified: "macwhisper-site.vercel.app/releases/macgpt/"
   name "MacGPT"
   desc "Menubar app for easy ChatGPT access with conversation and inline modes"
   homepage "https://www.macgpt.com/"
