@@ -1,11 +1,11 @@
 cask "epic" do
   arch arm: "arm", intel: "intel"
 
-  version "117.0.5938.92"
-  sha256 arm:   "bac7bdf1da335ff1acb0f5136e9e9e871944acfd6a49f4d4e520abb7e5ee08d5",
-         intel: "996a1a80c86183c97af33f1ea19ee594dda7586a4db3b94a08e066776863f663"
+  version "120.0.6099.71"
+  sha256 arm:   "f4c018f7c7bed4400eaa23ca14128c51d6a477250d5b453b8a00d01af83fe473",
+         intel: "0be47399f764d59ed14614b689bee5f8b8c31e2a425cd0baf02e322656698702"
 
-  url "https://cdn.epicbrowser.com/mac#{version.major}#{arch}/epic_#{version}.dmg"
+  url "https://cdn.epicbrowser.com/v#{version.major}#{arch}/epic_#{version}.dmg"
   name "Epic Privacy Browser"
   desc "Private, secure web browser"
   homepage "https://epicbrowser.com/"
