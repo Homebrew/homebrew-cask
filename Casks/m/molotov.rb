@@ -3,12 +3,12 @@ cask "molotov" do
   arch_folder = on_arch_conditional arm: "m1/"
 
   on_arm do
-    version "4.7.2"
-    sha256 "b8991865f95576008d8aad24282ffa46158f98cd4e3c4c57032336472cc23462"
+    version "5.0.1"
+    sha256 "208069a13a02a78e07ba52c15d1c5d7cb7e07fece825cc373fb93c46fad91ec4"
   end
   on_intel do
-    version "4.7.1"
-    sha256 "f57e894e6de697190d8ec0c1238fd52289809f5166a11e8a41794a8caa304319"
+    version "5.0.0"
+    sha256 "adace86201c436439af0c489a648b73c69762b2f53fe6e8232adc7cbda756e8d"
   end
 
   url "https://desktop-auto-upgrade.molotov.tv/mac/#{arch_folder}Molotov-#{version}-mac.zip"

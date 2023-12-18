@@ -9,10 +9,16 @@ cask "redcine-x-pro" do
 
   livecheck do
     url "https://www.red.com/RedSuiteCentric/SCA-Kilimanjaro/services/Download.Service.ss?downloadIdentifier=redcine-x-pro-mac"
-    strategy :page_match do |page|
-      json = JSON.parse(page)
-      latest = json["data"][0]
-      "#{latest["versionMajor"]}.#{latest["versionMinor"]}.#{latest["versionRevision"]}"
+    regex(/Build[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
+    strategy :json do |json, regex|
+      json["data"]&.map do |item|
+        next if item["versionIsBeta"] == "T"
+
+        match = item["versionUrl"]&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
     end
   end
 

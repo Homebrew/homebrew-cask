@@ -12,5 +12,15 @@ cask "id3-editor" do
     regex(/Version\s*v?(\d+(?:\.\d+)+)/i)
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "ID3 Editor.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.pas.id3editor.sfl*",
+    "~/Library/Caches/com.apple.helpd/Generated/ID3 Editor Help*",
+    "~/Library/Logs/id3ed.log",
+    "~/Library/Preferences/com.pas.id3editor.plist",
+    "~/Library/Saved Application State/com.pas.id3editor.savedState",
+  ]
 end

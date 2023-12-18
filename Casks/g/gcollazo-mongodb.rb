@@ -1,12 +1,12 @@
 cask "gcollazo-mongodb" do
-  version "6.0.0-build.1"
-  sha256 "1853dff4712987a22ef586caa425702b51892fe2128e9d35fc14e9edf2d34eb3"
+  version "7.0.3-build.2"
+  sha256 "8e89523f92fa2e1bca4cfa405096f4346da15c767456303f3fb53d1edf43f26b"
 
   url "https://github.com/gcollazo/mongodbapp/releases/download/#{version}/MongoDB.zip",
       verified: "github.com/gcollazo/mongodbapp/"
   name "MongoDB"
   desc "App wrapper for MongoDB"
-  homepage "https://elweb.co/mongodb-app/"
+  homepage "https://gcollazo.com/mongodb-app/"
 
   livecheck do
     url :url

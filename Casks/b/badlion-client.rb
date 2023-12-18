@@ -1,6 +1,6 @@
 cask "badlion-client" do
-  version "3.18.2"
-  sha256 "c4b0238f2dcbceeac85630c9aa51fff33244d27bf575615387d2f6e7a5c514ac"
+  version "4.0.0"
+  sha256 "0d9bee2d1b7d458bf902209a5d157eb48b4e3a1c087af56a7a4956aadce52ab4"
 
   url "https://client-updates.badlion.net/Badlion%20Client-#{version}.dmg"
   name "Badlion Client"

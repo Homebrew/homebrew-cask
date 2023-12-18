@@ -1,6 +1,6 @@
 cask "marathon-infinity" do
-  version "20230529"
-  sha256 "7809e4edff84caac830f43ebf83e6260d0f1b7512e0ce8c27e977097ba49e4b2"
+  version "20231125"
+  sha256 "19efb62b3759b6f572ad83b1d041e6044dfbdbdfd25a2e5dcc6e2cdc48e35038"
 
   url "https://github.com/Aleph-One-Marathon/alephone/releases/download/release-#{version}/MarathonInfinity-#{version}-Mac.dmg",
       verified: "github.com/Aleph-One-Marathon/alephone/"
@@ -14,4 +14,11 @@ cask "marathon-infinity" do
   end
 
   app "Marathon Infinity.app"
+
+  zap trash: [
+    "~/Library/Application Support/Marathon Infinity",
+    "~/Library/Logs/Marathon Infinity Log.txt",
+    "~/Library/Preferences/Marathon Infinity",
+    "~/Library/Saved Application State/org.bungie.source.MarathonInfinity.savedState",
+  ]
 end

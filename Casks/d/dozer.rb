@@ -7,11 +7,6 @@ cask "dozer" do
   desc "Tool to hide status bar icons"
   homepage "https://github.com/Mortennn/Dozer"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
@@ -21,4 +16,9 @@ cask "dozer" do
     "~/Library/Application Support/com.mortennn.Dozer",
     "~/Library/Preferences/com.mortennn.Dozer.plist",
   ]
+
+  # upstream discussion, https://github.com/Mortennn/Dozer/issues/178
+  caveats do
+    discontinued
+  end
 end

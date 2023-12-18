@@ -25,7 +25,7 @@ cask "calmly-writer" do
     end
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "Calmly Writer.app"
 

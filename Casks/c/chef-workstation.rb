@@ -1,10 +1,11 @@
 cask "chef-workstation" do
   arch arm: "arm64", intel: "x86_64"
-  macos_version = on_arch_conditional arm: "11", intel: "10.15"
 
-  version "23.7.1042"
-  sha256 arm:   "267fced9714b8342895ce003bbec0122e158cb91d62a5910fc33fdc02d4e651a",
-         intel: "ab27e3aebc8e56fb16919e294628993769d0203b07964cc2c0c99724575260ee"
+  macos_version = "11"
+
+  version "23.12.1055"
+  sha256 arm:   "9f785db7db24a115e8c0e6fa0dc847438aa60ee794565823099bd0c130bbddf0",
+         intel: "cc09b1b1f7fbc25b28176e19839191ed031d23466c9c5155c96de9d5d9ed003c"
 
   url "https://packages.chef.io/files/stable/chef-workstation/#{version}/mac_os_x/#{macos_version}/chef-workstation-#{version}-1.#{arch}.dmg"
   name "Chef Workstation"
@@ -16,7 +17,7 @@ cask "chef-workstation" do
     regex(/version\s*(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   pkg "chef-workstation-#{version}-1.#{arch}.pkg"
 

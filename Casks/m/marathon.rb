@@ -1,6 +1,6 @@
 cask "marathon" do
-  version "20230529"
-  sha256 "d736253525003864212f1809c9814c4a6d5324b0ea524860dde1305e0cce4125"
+  version "20231125"
+  sha256 "5d4bc15823dd917010c116d9ff2d029ffbab77dc891fecf27943a003a3c6a0d5"
 
   url "https://github.com/Aleph-One-Marathon/alephone/releases/download/release-#{version}/Marathon-#{version}-Mac.dmg",
       verified: "github.com/Aleph-One-Marathon/alephone/"
@@ -14,4 +14,11 @@ cask "marathon" do
   end
 
   app "Marathon.app"
+
+  zap trash: [
+    "~/Library/Application Support/Marathon",
+    "~/Library/Logs/Marathon Log.txt",
+    "~/Library/Preferences/Marathon",
+    "~/Library/Saved Application State/org.bungie.source.Marathon.savedState",
+  ]
 end

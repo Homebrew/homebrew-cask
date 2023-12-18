@@ -13,4 +13,8 @@ cask "dynamic-dark-mode" do
   app "Dynamic Dark Mode.app"
 
   zap trash: "~/Library/Application Scripts/io.github.apollozhu.Dynamic.Launcher"
+
+  caveats do
+    discontinued
+  end
 end

@@ -1,6 +1,6 @@
 cask "aleph-one" do
-  version "20230529"
-  sha256 "7b1b68fde5d8e426b7d6ed1ab70c048983d626c388b80d2ed0254a17288390db"
+  version "20231125"
+  sha256 "0b6095f0335350a9b30dfcd42008b8b2bf211e0107070d905c1d70d8c81369ec"
 
   url "https://github.com/Aleph-One-Marathon/alephone/releases/download/release-#{version}/AlephOne-#{version}-Mac.dmg",
       verified: "github.com/Aleph-One-Marathon/alephone/"
@@ -16,4 +16,10 @@ cask "aleph-one" do
   depends_on macos: ">= :high_sierra"
 
   app "Aleph One.app"
+
+  zap trash: [
+    "~/Library/Logs/Aleph One Log.txt",
+    "~/Library/Preferences/org.bungie.source.AlephOne*",
+    "~/Library/Saved Application State/org.bungie.source.AlephOne.savedState",
+  ]
 end

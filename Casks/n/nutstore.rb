@@ -1,5 +1,5 @@
 cask "nutstore" do
-  version "6.2.6"
+  version "6.2.8"
   sha256 :no_check
 
   url "https://www.jianguoyun.com/static/exe/installer/NutstoreOSXInstaller.dmg"

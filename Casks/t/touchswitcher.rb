@@ -1,6 +1,6 @@
 cask "touchswitcher" do
-  version "1.4.5"
-  sha256 "d873af5d57379f0d58b79de13679a8aac01c64423cc90319486b350fa411c931"
+  version "1.4.6"
+  sha256 "a3c22a09507dd668cd664be4dff2ef334907b3688eae7c02801405b890baf9dd"
 
   url "https://hazeover.com/touchswitcher/TouchSwitcher-#{version}.txz"
   name "TouchSwitcher"

@@ -1,6 +1,6 @@
 cask "love" do
-  version "11.4"
-  sha256 "04896021cbe5f1f8548f26d2ab9251128699510d2676a6ef3d544a3d99d6f7c0"
+  version "11.5"
+  sha256 "c8ff4b57274b87772a91af4efa532721848b935eef1e0b72ac0464fb177631a5"
 
   url "https://github.com/love2d/love/releases/download/#{version}/love-#{version}-macos.zip",
       verified: "github.com/love2d/love/"

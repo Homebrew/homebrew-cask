@@ -1,6 +1,6 @@
 cask "mechvibes" do
-  version "2.3.0"
-  sha256 "83c70ac29de277024567f94f1e0a2aa2679e20ce7cdc027b02f06577442dfcf8"
+  version "2.3.4"
+  sha256 "ba1d345a8c1eb7ff9445e0621b2a9bd2e051a2e92541323dde5d4051f78acef0"
 
   url "https://github.com/hainguyents13/mechvibes/releases/download/v#{version}/Mechvibes-#{version}.dmg",
       verified: "github.com/hainguyents13/mechvibes/"

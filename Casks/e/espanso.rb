@@ -1,9 +1,9 @@
 cask "espanso" do
   arch arm: "M1", intel: "Intel"
 
-  version "2.1.8"
-  sha256 arm:   "e84b5a96def1d793997fc8ee4e380f11b1d0515cf120402cd7aec6e07bafb74e",
-         intel: "a17c03ff341beaf5a286aaab033dc443d703ed41f9dbfae653289dab00120bec"
+  version "2.2.1"
+  sha256 arm:   "419687d4d954630c8690e315eb7830b28f03b95521d720fc2bd960e084d49993",
+         intel: "369ad7eb9a30015a3836012970acd15b3b06c6f67349a89ced6bb3ae9c3f2d20"
 
   url "https://github.com/espanso/espanso/releases/download/v#{version}/Espanso-Mac-#{arch}.zip",
       verified: "github.com/espanso/espanso/"

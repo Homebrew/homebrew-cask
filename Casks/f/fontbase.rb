@@ -1,6 +1,6 @@
 cask "fontbase" do
-  version "2.19.4"
-  sha256 "ba462f7bb6e1a14e3c72bb7a0d27ca226ffcdd5aa720b0d98b4ddc04977a7adf"
+  version "2.20.7"
+  sha256 "19c79d751c502fc4c4c7d235dec1efecd60ea80da2a491549e71c9e16aadc4bb"
 
   url "https://releases.fontba.se/mac/FontBase-#{version}.dmg"
   name "FontBase"

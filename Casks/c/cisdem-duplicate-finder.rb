@@ -1,5 +1,5 @@
 cask "cisdem-duplicate-finder" do
-  version "6.4.0"
+  version "6.5.0"
   sha256 :no_check
 
   url "https://download.cisdem.com/cisdem-duplicatefinder.dmg"

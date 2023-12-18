@@ -1,6 +1,6 @@
 cask "superkey" do
-  version "1.25"
-  sha256 "938ab73081eb62e7f177b922b91d55aa73f3a8852ad556b087792b10140a67cc"
+  version "1.26"
+  sha256 "2fa2fcf57ef105c3851473f29dabfc3f42b123c75d799dee498fb945be066301"
 
   url "https://superkey.app/downloads/Superkey#{version}.dmg"
   name "Superkey"
@@ -21,7 +21,7 @@ cask "superkey" do
 
   zap trash: [
     "~/Library/Application Scripts/com.knollsoft.SuperkeyLauncher",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.knollsoft.superkeylauncher.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.knollsoft.superkeylauncher.sfl*",
     "~/Library/Application Support/Superkey",
     "~/Library/Caches/com.knollsoft.Superkey",
     "~/Library/Containers/com.knollsoft.SuperkeyLauncher",

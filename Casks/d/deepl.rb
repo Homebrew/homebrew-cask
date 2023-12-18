@@ -3,6 +3,8 @@ cask "deepl" do
     version "3.7.292629"
     sha256 "efcac4988a606d9793a3bdb8e7e73dce8e3d06ed2249a4434eb54c1624b40b87"
 
+    url "https://www.deepl.com/macos/download/#{version}/DeepL_#{version}.zip"
+
     livecheck do
       url "https://appdownload.deepl.com/macos/update.json"
       strategy :json do |json|
@@ -11,8 +13,10 @@ cask "deepl" do
     end
   end
   on_big_sur :or_newer do
-    version "23.10.1631621"
-    sha256 "4623436344b52dbe382bae055398e86a5cb42a32cf8bbe333f5fda41d6a5edfc"
+    version "23.12.1682884"
+    sha256 "42df88de5786764c6d45958ec1458d54ca15b8cc289170ff179042dab7c9ef0b"
+
+    url "https://www.deepl.com/macos/download/#{version}/DeepL_#{version}.tar.gz"
 
     livecheck do
       url "https://appdownload.deepl.com/macos/bigsur/update.json"
@@ -22,7 +26,6 @@ cask "deepl" do
     end
   end
 
-  url "https://www.deepl.com/macos/download/#{version}/DeepL_#{version}.zip"
   name "DeepL"
   desc "Trains AIs to understand and translate texts"
   homepage "https://www.deepl.com/"

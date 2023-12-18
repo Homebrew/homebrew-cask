@@ -1,6 +1,6 @@
 cask "fxfactory" do
-  version "8.0.10,7604"
-  sha256 "a258b07033f55c27199a675f01c4bae38d77b2a6d1cf0a3d90aeba28ffe08c0e"
+  version "8.0.11,7696"
+  sha256 "faba8a879bbffad9f755f84a78dc1b01d2d9de2360773bc193c617efedb04776"
 
   url "https://fxfactory.s3.amazonaws.com/noiseindustries/fxfactory/FxFactory-#{version.csv.first}-#{version.csv.second}.zip",
       verified: "fxfactory.s3.amazonaws.com/noiseindustries/"
@@ -19,10 +19,12 @@ cask "fxfactory" do
     end
   end
 
+  depends_on macos: ">= :monterey"
+
   pkg "Install FxFactory #{version.csv.first}.pkg"
 
   uninstall pkgutil:   "com.fxfactory.pkg",
-            quit:      "com.fxfactory.Fxfactory",
+            quit:      "com.fxfactory.FxFactory",
             launchctl: "com.fxfactory.FxFactory.helper",
             delete:    [
               "/Library/Application Support/FxFactory",

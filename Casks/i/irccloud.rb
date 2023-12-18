@@ -17,4 +17,8 @@ cask "irccloud" do
     "~/Library/Preferences/com.irccloud.desktop.plist",
     "~/Library/Saved Application State/com.irccloud.desktop.savedState",
   ]
+
+  caveats do
+    discontinued
+  end
 end

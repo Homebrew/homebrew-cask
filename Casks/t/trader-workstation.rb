@@ -2,7 +2,7 @@ cask "trader-workstation" do
   arch arm: "arm", intel: "x64"
   os = on_arch_conditional arm: "macos", intel: "macosx"
 
-  version "10.26.1g"
+  version "10.26.1i"
   sha256 :no_check
 
   url "https://download2.interactivebrokers.com/installers/tws/latest/tws-latest-#{os}-#{arch}.dmg"
@@ -23,7 +23,6 @@ cask "trader-workstation" do
   uninstall_preflight do
     ohai "Stopping all running instances of Trader Workstation prior to uninstall"
     system_command "/usr/bin/pkill", args: ["-f", "/Applications/Trader Workstation/Trader Workstation.app"]
-
   rescue RuntimeError
     ohai "No running instances of Trader Workstation found"
   end

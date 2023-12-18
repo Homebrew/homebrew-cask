@@ -23,8 +23,8 @@ cask "lightkey" do
     depends_on macos: ">= :big_sur"
   end
   on_ventura :or_newer do
-    version "4.6"
-    sha256 "fccd39bd1cde1ff01a04194643bd8d17fc593e4c6b82a058e22e41471fed41a9"
+    version "4.6.2"
+    sha256 "7f1fdc3e5905a4dc21b870d68ddf33bfbb0dce98bb865554195d37f09345ab72"
 
     # Upstream also publishes legacy versions (with a lower minor version) in
     # the appcast, so the first `item` after sorting by `pubDate`/`version` may

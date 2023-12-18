@@ -1,9 +1,9 @@
 cask "fs-uae-launcher" do
   arch arm: "ARM64", intel: "x86-64"
 
-  version "3.1.66"
-  sha256 arm:   "03c720ee5f3293c6e4002dd593af9518b05873f869da73bfb8480128a8b586d2",
-         intel: "89dc35917fceeebee62d7bfaa80c3384b6daf0600908d46ba3508855195effb2"
+  version "3.1.68"
+  sha256 arm:   "d53e40a26c22b86e3e495751144eb5c895da91953a0b84347fc98b31f2f597eb",
+         intel: "8aee4b56adb3faf669ffd59384f06bae2628667f51aed51e839f90189c874a54"
 
   url "https://fs-uae.net/files/FS-UAE-Launcher/Stable/#{version}/FS-UAE-Launcher_#{version}_macOS_#{arch}.tar.xz"
   name "FS-UAE Launcher"
@@ -11,7 +11,8 @@ cask "fs-uae-launcher" do
   homepage "https://fs-uae.net/"
 
   livecheck do
-    cask "fs-uae"
+    url "https://fs-uae.net/builds/stable"
+    regex(/href=.*?FS[._-]UAE[._-]Launcher[._-](\d+(?:\.\d+)+)[._-]macOS[._-]/i)
   end
 
   app "FS-UAE-Launcher/macOS/#{arch}/FS-UAE Launcher.app"

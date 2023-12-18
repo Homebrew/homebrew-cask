@@ -1,5 +1,5 @@
 cask "lantern" do
-  version "7.6.15"
+  version "7.7.0"
   sha256 :no_check
 
   url "https://s3.amazonaws.com/lantern/lantern-installer.dmg",

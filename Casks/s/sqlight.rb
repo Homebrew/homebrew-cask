@@ -21,7 +21,7 @@ cask "sqlight" do
       js_file_data = Homebrew::Livecheck::Strategy.page_content("https://www.aurvan.com/#{js_file}")
       next [] if js_file_data[:content].blank?
 
-      js_file_data[:content].scan(regex).map { |match| match&.first&.gsub("_", ".") }
+      js_file_data[:content].scan(regex).map { |match| match&.first&.tr("_", ".") }
     end
   end
 

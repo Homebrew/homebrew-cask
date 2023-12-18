@@ -1,24 +1,26 @@
 cask "zulufx" do
   arch arm: "aarch64", intel: "x64"
-  choice = on_arch_conditional arm: "arm", intel: "x86"
 
-  version "20.0.2,20.32.11_1-ca"
-  sha256 arm:   "0b5322a9ff3bbf19d7d6acc204202df5a9594678c746fb859cfae0c5e4eda91e",
-         intel: "d8326f2fe57a95f6eef3488e04f8f6a471f4ef4a3b97675339231fe19f19b328"
+  version "21.0.1,21.30.15"
+  sha256 arm:   "18855c07b2d2c175c8ab6f9d159be58c67cbfb2820f3825e055227c534720120",
+         intel: "827f515e0eff523a8cf18e40723e215524f4041aa621201c40b0e05f552ac8d1"
 
-  url "https://cdn.azul.com/zulu/bin/zulu#{version.csv.second}-fx-jdk#{version.csv.first}-macosx_#{arch}.dmg",
+  url "https://cdn.azul.com/zulu/bin/zulu#{version.csv.second}-ca-fx-jdk#{version.csv.first}-macosx_#{arch}.dmg",
       referer: "https://www.azul.com/downloads/"
   name "ZuluFX"
   desc "Azul ZuluFX Java Standard Edition Development Kit"
   homepage "https://www.azul.com/downloads/"
 
   livecheck do
-    url "https://api.azul.com/zulu/download/community/v1.0/bundles/latest/?jdk_version=#{version.major}&bundle_type=jdk&javafx=true&ext=dmg&os=macos&arch=#{choice}"
-    strategy :page_match do |page|
-      match = page.match(/zulu(\d+(?:[._]\d+)*-.*?)-fx-jdk(\d+(?:\.\d+)*)-macosx_#{arch}\.dmg/i)
-      next if match.blank?
+    url "https://api.azul.com/metadata/v1/zulu/packages?os=macos&arch=#{arch}&archive_type=dmg&java_package_type=jdk&javafx_bundled=true&latest=true&release_status=ga&availability_types=ca"
+    regex(/zulu(\d+(?:[._]\d+)*)-ca-fx-jdk(\d+(?:\.\d+)*)-macosx_#{arch}\.dmg/i)
+    strategy :json do |json, regex|
+      json.map do |item|
+        match = item["download_url"]&.match(regex)
+        next if match.blank?
 
-      "#{match[2]},#{match[1]}"
+        "#{match[2]},#{match[1]}"
+      end
     end
   end
 

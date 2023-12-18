@@ -1,6 +1,6 @@
 cask "syncplay" do
-  version "1.7.0"
-  sha256 "7b5955ed604966cc67e44e5f91b27b9d07cf3c373a459844bfd9a289f805eb65"
+  version "1.7.1"
+  sha256 "28a3b505cd611bf655fe0bc99df436bd692af1ed18c081fb6a01a1bf01eb6e25"
 
   url "https://github.com/Syncplay/syncplay/releases/download/v#{version}/Syncplay_#{version}.dmg",
       verified: "github.com/Syncplay/syncplay/"

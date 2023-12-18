@@ -17,7 +17,7 @@ cask "heimdall-suite" do
 
   uninstall pkgutil: "au.com.glassechidna.HeimdallSuite",
             kext:    "au.com.glassechidna.heimdall_usb_shield",
-            delete:  "#{appdir}/heimdall-frontend.app"
+            delete:  "/Applications/heimdall-frontend.app"
 
   zap trash: [
     "~/Library/Preferences/com.yourcompany.heimdall-frontend.plist",

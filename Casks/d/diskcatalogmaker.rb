@@ -1,6 +1,6 @@
 cask "diskcatalogmaker" do
-  version "9.0.2"
-  sha256 "0e12da4b0935178f1fd21d53829417e03d798146ddb9201fc47b37de364c34ff"
+  version "9.0.4"
+  sha256 "9a8056d4f5529a8e8c898afb4dd198ad147f03d5765a262f9ad99e13999cff23"
 
   url "https://download.diskcatalogmaker.com/download/zip/DiskCatalogMaker#{version.no_dots}.zip"
   name "DiskCatalogMaker"

@@ -1,11 +1,16 @@
 cask "gitify" do
-  version "4.4.0"
-  sha256 "5829ff0fc45aaf48468c7713650f3d178924edf6f736e304ba2acf97693c78c7"
+  version "4.5.1"
+  sha256 "a5272194e4d32894867783d53e9954be7c1fc177dbe31d140add0ffb427a6b6a"
 
   url "https://github.com/gitify-app/gitify/releases/download/v#{version}/Gitify-#{version}-universal-mac.zip"
   name "Gitify"
   desc "App that shows GitHub notifications on the desktop"
   homepage "https://github.com/gitify-app/gitify"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "Gitify.app"
 

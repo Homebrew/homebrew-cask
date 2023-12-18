@@ -8,6 +8,7 @@ cask "hackintool" do
   homepage "https://github.com/headkaze/Hackintool"
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Hackintool.app"
 

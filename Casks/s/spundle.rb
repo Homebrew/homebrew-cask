@@ -1,6 +1,6 @@
 cask "spundle" do
-  version "1.7,2023.06"
-  sha256 "24f3de2caf58eba467a0c5617e47869ef5f7b6617c55366b35aea7d5f1532960"
+  version "1.8,2023.12"
+  sha256 "4c6692bc9cf1f6bdd006ee64a539bf5c2f0ebaddfd7bf27548d912bef120d513"
 
   url "https://eclecticlightdotcom.files.wordpress.com/#{version.csv.second.major}/#{version.csv.second.minor}/spundle#{version.csv.first.no_dots}.zip",
       verified: "eclecticlightdotcom.files.wordpress.com/"

@@ -1,6 +1,6 @@
 cask "ved" do
-  version "1.10.3"
-  sha256 "ee32555098b6ca7dcc7e7a1db4553135fabe837a084ecb27517613d2834da94b"
+  version "1.11.0"
+  sha256 "6bf619e53c738a28149ff01ceb34bebcff6bf139a79256ead05b45c4929fad98"
 
   url "https://tolp.nl/ved/files/download/mac/ved_#{version}_mac.dmg"
   name "ved"

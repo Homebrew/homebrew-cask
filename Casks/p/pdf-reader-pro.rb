@@ -1,6 +1,6 @@
 cask "pdf-reader-pro" do
-  version "3.0.1.0"
-  sha256 "490b65d86836b085ac7fa63ac3f7ebd932a552a35a591d6a1fe129089712c38d"
+  version "3.2.0.0"
+  sha256 "d992bf59d936aa87628cb45be0007f29f18ffb80b7cb950d945b06dd580936dc"
 
   url "https://www.pdfreaderpro.com/downloads/PDFReaderPro_v#{version.major_minor_patch}.dmg"
   name "PDF Reader Pro"
@@ -17,7 +17,7 @@ cask "pdf-reader-pro" do
   app "PDF Reader Pro.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.brother.pdfreaderprofree.mac.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.brother.pdfreaderprofree.mac.sfl*",
     "~/Library/Application Support/com.brother.pdfreaderprofree.mac",
     "~/Library/Caches/com.brother.pdfreaderprofree.mac",
     "~/Library/Preferences/com.brother.pdfreaderprofree.mac.bookmarks.plist",

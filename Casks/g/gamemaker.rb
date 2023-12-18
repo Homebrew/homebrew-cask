@@ -1,6 +1,6 @@
 cask "gamemaker" do
-  version "2023.8.2.108"
-  sha256 "84d61b0ad2c11189d1b9a7579045efa781b0a58c269379aa9748091721357544"
+  version "2023.11.1.129"
+  sha256 "c5c95a8613826f3b333a46247ae2d33ca7b9b194b09826beb43b82e39fca155d"
 
   url "https://gms.yoyogames.com/GameMaker-#{version}.pkg",
       verified: "gms.yoyogames.com/"
@@ -23,7 +23,6 @@ cask "gamemaker" do
     ohai "The GameMaker package postinstall script launches the GameMaker app" if retries >= 3
     ohai "Attempting to close com.yoyogames.gms2 to avoid unwanted user intervention" if retries >= 3
     return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/GameMaker.app"]
-
   rescue RuntimeError
     sleep 1
     retry unless (retries -= 1).zero?

@@ -1,6 +1,6 @@
 cask "folder-colorizer" do
-  version "4.7.2"
-  sha256 "bfabfad8ca6cb1f55789896f0338763df04e118c0a233f3d11a181aa794390c0"
+  version "4.11.7"
+  sha256 "808adcafef59c3f1b7d4358e4eb07798983c45f4ad29079c40f4eb204688f19c"
 
   url "https://ushining.softorino.com/shine_uploads/foldercolorizermac_#{version}.dmg"
   name "Folder Colorizer"

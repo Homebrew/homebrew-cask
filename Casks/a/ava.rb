@@ -1,6 +1,6 @@
 cask "ava" do
-  version "2023-10-26"
-  sha256 "19e1b6eefc0aa76f9c4c9638a023b99e518c4ad81f4f01f29f64c540a2f09919"
+  version "2023-12-05"
+  sha256 "3ebe48fd38a09b8de8a85839e588317bfd902f19bd6b4c16a7eba8bdf9baba11"
 
   url "https://s3.amazonaws.com/www.avapls.com/Ava_#{version}.dmg",
       verified: "s3.amazonaws.com/www.avapls.com/"

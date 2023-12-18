@@ -43,5 +43,5 @@ file_name = File.basename(file_raw_url)
 local_file = File.join(Dir.mktmpdir, file_name)
 
 File.write(local_file, URI(file_raw_url).read)
-abort "Audit failed" unless system("brew", "audit", "--new-cask", local_file)
+abort "Audit failed" unless system("brew", "audit", "--new", local_file)
 abort "Style check failed" unless system("brew", "style", local_file)

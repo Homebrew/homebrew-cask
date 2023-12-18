@@ -1,6 +1,6 @@
 cask "tidelift" do
-  version "1.13.15"
-  sha256 "59eccaf2f8913bddccd22392f4cff01f614734cfa01e865e8e5af20c3cfeb190"
+  version "1.13.18"
+  sha256 "91bde62175da41e06a1deec10f5747489f48d55ed08f46216ba2d4a47a5b5dd3"
 
   url "https://download.tidelift.com/cli/#{version}/darwin_homebrew/tidelift"
   name "Tidelift CLI"

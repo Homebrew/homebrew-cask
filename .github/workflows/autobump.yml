@@ -16,6 +16,7 @@ env:
     1password-cli
     alfred
     alt-tab
+    altair-graphql-client
     apifox
     appcleaner
     arc
@@ -30,18 +31,22 @@ env:
     calibre
     canva
     carbon-copy-cloner
+    chatall
     chirp
     clickup
     cloudnet
     codeql
     cog
     confluent-cli
+    copilot
     copilot-for-xcode
+    cursor
     dbeaver-community
     descript
     downie
     dropbox
     duckduckgo
+    electerm
     electron
     eloston-chromium
     figma
@@ -64,9 +69,11 @@ env:
     logseq
     loom
     macupdater
+    melodics
     metasploit
     microsoft-edge
     microsoft-openjdk
+    milanote
     multiapp
     netron
     openlens
@@ -87,8 +94,10 @@ env:
     reaper
     rewind
     rive
+    segger-jlink
     setapp
     sf
+    sfm
     shapr3d
     sigmaos
     signal
@@ -107,6 +116,7 @@ env:
     trader-workstation
     trainerroad
     tsh
+    tuist
     unity
     uvtools
     viber
@@ -119,6 +129,7 @@ env:
     webcatalog
     webull
     whatsapp
+    whisky
     workflowy
     zed
     zoom

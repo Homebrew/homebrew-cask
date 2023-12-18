@@ -1,5 +1,5 @@
 cask "lasso" do
-  version "1.6.0"
+  version "1.6.3"
   sha256 :no_check
 
   url "https://f003.backblazeb2.com/file/lasso-app/Lasso.dmg",

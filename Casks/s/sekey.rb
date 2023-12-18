@@ -4,10 +4,11 @@ cask "sekey" do
 
   url "https://github.com/sekey/sekey/releases/download/#{version}/SeKey-#{version}.pkg"
   name "SeKey"
+  desc "Use Touch ID or Secure Enclave for SSH authentication"
   homepage "https://github.com/sekey/sekey/"
 
   pkg "SeKey-#{version}.pkg"
-  binary "#{appdir}/SeKey.app/Contents/MacOS/sekey"
+  binary "/Applications/SeKey.app/Contents/MacOS/sekey"
 
   uninstall launchctl: "com.ntrippar.sekey",
             pkgutil:   "com.ntrippar.sekey"

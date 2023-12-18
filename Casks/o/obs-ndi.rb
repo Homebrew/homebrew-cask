@@ -14,7 +14,27 @@ cask "obs-ndi" do
 
   depends_on cask: "libndi"
 
-  pkg "obs-ndi-#{version}-macOS-universal.pkg"
+  pkg "obs-ndi-#{version}-macos-universal.pkg"
+
+  # The pkg installs the plugin files to /Library/Application Support/obs-studio/plugins
+  # however OBS Studio expects them to be in ~/Library/Application Support/obs-studio/plugins
+  # so we create symlinks to correctly link the plugin files for OBS Studio.
+  postflight do
+    puts "Creating #{token} symlinks in ~/Library/Application Support/obs-studio/plugins"
+    target = Pathname.new("~/Library/Application Support/obs-studio/plugins").expand_path
+    source = "/Library/Application Support/obs-studio/plugins"
+
+    FileUtils.mkdir_p target
+    File.symlink("#{source}/obs-ndi.plugin", "#{target}/obs-ndi.plugin")
+    File.symlink("#{source}/obs-ndi.plugin.dSYM", "#{target}/obs-ndi.plugin.dSYM")
+  end
+
+  uninstall_preflight do
+    puts "Removing #{token} symlinks from in ~/Library/Application Support/obs-studio/plugins"
+    target = Pathname.new("~/Library/Application Support/obs-studio/plugins").expand_path
+
+    File.unlink("#{target}/obs-ndi.plugin", "#{target}/obs-ndi.plugin.dSYM")
+  end
 
   uninstall pkgutil: [
     "com.newtek.ndi.runtime",

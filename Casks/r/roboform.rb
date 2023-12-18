@@ -1,6 +1,6 @@
 cask "roboform" do
-  version "9.5.4"
-  sha256 "754afa99ddcb4881758a0dc41daca164c06c5bb93a5ce892c88f90c378b9ff2d"
+  version "9.5.5"
+  sha256 "401ac8f2e06a39fc644c2cf86fb70aeed53f1dd5a46fca89235491b97c875de0"
 
   url "https://www.roboform.com/dist/roboform-mac-v#{version.major}.dmg"
   name "RoboForm"

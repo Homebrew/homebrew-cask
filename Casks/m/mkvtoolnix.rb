@@ -16,8 +16,8 @@ cask "mkvtoolnix" do
     sha256 "bb6d0ba4e0052b2831de0ae29ef3d0d4c7b4d0933b258455c248c1a1c5f913a0"
   end
   on_catalina :or_newer do
-    version "80.0"
-    sha256 "97ca4612fd587bc33766d99132290a975c628ab8b83deb364f37c029cbabcf2d"
+    version "81.0"
+    sha256 "ac80111db885d10258f4e4cd7382033f9f54db3f578b808cc66298bff201a951"
   end
 
   url "https://mkvtoolnix.download/macos/MKVToolNix-#{version}.dmg"

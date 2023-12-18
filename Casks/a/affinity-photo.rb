@@ -1,5 +1,5 @@
 cask "affinity-photo" do
-  version "2.2.1"
+  version "2.3.0"
   sha256 :no_check
 
   url "https://store.serif.com/download/89007d/"

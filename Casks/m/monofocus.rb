@@ -1,5 +1,5 @@
 cask "monofocus" do
-  version "1.0.beta35"
+  version "1.0.beta36"
   sha256 :no_check
 
   url "https://updates.monofocus.app/MonoFocus.latest.dmg"

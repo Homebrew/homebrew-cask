@@ -1,15 +1,17 @@
 cask "duckduckgo" do
-  version "1.65.1"
-  sha256 "810f994d13ab53caf59fd401e811e34c0b38f5eca2337e0764ada5ce8dd40ee2"
+  version "1.68.0,93"
+  sha256 "d4c7202e43d2fe29381af4ed2a87ba83f7a837713180e9c0c02833e91238e149"
 
-  url "https://staticcdn.duckduckgo.com/macos-desktop-browser/duckduckgo-#{version}.dmg"
+  url "https://staticcdn.duckduckgo.com/macos-desktop-browser/duckduckgo-#{version.csv.first}.#{version.csv.second}.dmg"
   name "DuckDuckGo"
   desc "Web browser focusing on privacy"
   homepage "https://duckduckgo.com/"
 
   livecheck do
     url "https://staticcdn.duckduckgo.com/macos-desktop-browser/appcast2.xml"
-    strategy :sparkle
+    strategy :sparkle do |items|
+      items.find { |item| item.channel.nil? }&.nice_version
+    end
   end
 
   auto_updates true

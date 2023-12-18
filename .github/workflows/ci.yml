@@ -1,6 +1,22 @@
 name: CI
 
-on: pull_request
+on:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      casks:
+        description: List of casks to audit (comma-separated)
+        required: true
+      skip_install:
+        description: Skip installation of casks
+        required: false
+        default: true
+        type: boolean
+      new_cask:
+        description: Apply new cask audit
+        required: false
+        default: false
+        type: boolean
 
 env:
   HOMEBREW_DEVELOPER: 1
@@ -38,7 +54,12 @@ jobs:
       - name: Generate CI matrix
         id: generate-matrix
         run: |
-          brew ruby -- "$(brew --repository homebrew/cask)/cmd/lib/generate-matrix.rb" "${{ github.event.pull_request.url }}"
+          if [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" ]]
+          then
+            brew ruby -- "$(brew --repository homebrew/cask)/cmd/lib/generate-matrix.rb" ${{ github.event.inputs.skip_install  && '--skip-install' }} ${{ github.event.inputs.new_cask  && '--new' }} --casks=${{ github.event.inputs.casks }}
+          else
+            brew ruby -- "$(brew --repository homebrew/cask)/cmd/lib/generate-matrix.rb" --url="${{ github.event.pull_request.url }}"
+          fi
 
   test:
     name: ${{ matrix.name }}

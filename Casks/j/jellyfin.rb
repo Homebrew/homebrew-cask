@@ -1,6 +1,6 @@
 cask "jellyfin" do
-  version "10.8.12"
-  sha256 "ee583c2c841e7de4210a3bf76066d97567a94bfe559d9865b8304ad5d06af8ac"
+  version "10.8.13-1"
+  sha256 "db714f227ccc11fe16cfb4b4fa98ba410c44ae2d6c47894a2860fa5bffd508e5"
 
   url "https://repo.jellyfin.org/releases/server/macos/stable/installer/jellyfin_#{version}.dmg"
   name "Jellyfin"
@@ -9,7 +9,7 @@ cask "jellyfin" do
 
   livecheck do
     url "https://repo.jellyfin.org/releases/server/macos/stable/"
-    regex(%r{href=.*?/Jellyfin_(\d+(?:\.\d+)*)\.dmg}i)
+    regex(/href=.*?jellyfin[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
   end
 
   app "Jellyfin.app"

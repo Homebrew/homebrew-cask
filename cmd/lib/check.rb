@@ -29,9 +29,10 @@ module Check
       format_launchjob = lambda { |file|
         name = file.basename(".plist").to_s
 
-        xml, = system_command! "plutil", args: ["-convert", "xml1", "-o", "-", "--", file], sudo: true
+        result = system_command "plutil", args: ["-convert", "xml1", "-o", "-", "--", file], sudo: true
+        return name unless result.success?
 
-        label = Plist.parse_xml(xml)["Label"]
+        label = result.plist["Label"]
         (name == label) ? name : "#{name} (#{label})"
       }
 

@@ -1,12 +1,14 @@
 cask "phoenix-slides" do
-  version "1.4.7"
-  sha256 "4c0627cca00bd5d8d4f290603b50c0b47c8ff5417ffbfe9809b9411b0d402217"
+  version "1.5.1"
+  sha256 "2231c172a75c67da0087388b47d8603735890fcfd46f1ac7c6748041464c8519"
 
   url "https://github.com/gobbledegook/creevey/releases/download/v#{version}/phoenix-slides-#{version.no_dots}.dmg",
       verified: "github.com/gobbledegook/creevey/"
   name "Phoenix Slides"
   desc "Full-screen slideshow program"
   homepage "https://blyt.net/phxslides/"
+
+  depends_on macos: ">= :high_sierra"
 
   app "Phoenix Slides.app"
 
