@@ -1,6 +1,6 @@
 cask "codewhisperer" do
-  version "0.12.0"
-  sha256 "705ecf656209689184c4d66072cc147b965838bb3f57c3b10c8b5c442b1421b3"
+  version "0.13.0"
+  sha256 "0a66aa277fdd14082c08745613eead722101cd71ba76276f28ee8b11227c440a"
 
   url "https://desktop-release.codewhisperer.us-east-1.amazonaws.com/#{version}/CodeWhisperer.dmg",
       verified: "desktop-release.codewhisperer.us-east-1.amazonaws.com/"
