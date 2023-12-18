@@ -7,5 +7,10 @@ cask "cljstyle" do
   desc "Tool for formatting Clojure code"
   homepage "https://github.com/greglook/cljstyle"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   binary "cljstyle"
 end
