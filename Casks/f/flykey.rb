@@ -12,11 +12,13 @@ cask "flykey" do
     strategy :sparkle
   end
 
+  depends_on macos: ">= :catalina"
+
   app "FlyKey.app"
 
   zap trash: [
-  "~/Library/HTTPStorages/cn.better365.FlyKey",
-  "~/Library/HTTPStorages/cn.better365.FlyKey.binarycookies",
-  "~/Library/Preferences/cn.better365.FlyKey.plist",
-]
+    "~/Library/HTTPStorages/cn.better365.FlyKey",
+    "~/Library/HTTPStorages/cn.better365.FlyKey.binarycookies",
+    "~/Library/Preferences/cn.better365.FlyKey.plist",
+  ]
 end
