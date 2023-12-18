@@ -5,13 +5,8 @@ cask "blockstream-green" do
   url "https://github.com/Blockstream/green_qt/releases/download/release_#{version}/BlockstreamGreen_MacOS_x86_64.zip",
       verified: "github.com/Blockstream/green_qt/"
   name "Blockstream Green"
-  desc "Multi-platform, feature-rich Bitcoin and Liquid wallet"
+  desc "Multi-platform Bitcoin and Liquid wallet"
   homepage "https://blockstream.com/green/"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 
   app "Blockstream Green.app"
 
