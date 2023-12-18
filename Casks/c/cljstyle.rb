@@ -13,4 +13,6 @@ cask "cljstyle" do
   end
 
   binary "cljstyle"
+
+  # No zap stanza required
 end
