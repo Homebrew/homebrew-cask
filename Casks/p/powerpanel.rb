@@ -25,7 +25,8 @@ cask "powerpanel" do
               "com.cpsww.ppupsd",
               "com.cyberpower.powerpanel-personal.client",
               "com.cyberpower.powerpanel-personal.daemon",
-            ]
+            ],
+            delete:    "/Applications/PowerPanel Personal.app"
 
   zap trash:  [
         "~/Library/Preferences/PowerPanel Personal.plist",
