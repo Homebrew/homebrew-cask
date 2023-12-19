@@ -1,5 +1,5 @@
 cask "adobe-air" do
-  version "50.2.4.1"
+  version "50.2.4.2"
   sha256 :no_check
 
   url "https://airsdk.harman.com/assets/downloads/AdobeAIR.dmg"
