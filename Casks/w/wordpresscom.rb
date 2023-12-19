@@ -1,6 +1,5 @@
 cask "wordpresscom" do
-  arch arm:   "arm64",
-       intel: "x64"
+  arch arm: "arm64", intel: "x64"
 
   version "8.0.3"
   sha256 arm:   "fa918e3df870deafe299b11a16b3753f6fb8a1af36b0c616620c1c1b98e20ec8",
