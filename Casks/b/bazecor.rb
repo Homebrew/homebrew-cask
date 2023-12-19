@@ -1,9 +1,9 @@
 cask "bazecor" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.3.8"
-  sha256 arm:   "4c155b472723b33746d9284a6183aad111e24ba42815f7c2a298b22303adc187",
-         intel: "cbd044ce836eb5916d04e79e4ed579c60358c3c167e9d8566fba7f15baf2a568"
+  version "1.3.9"
+  sha256 arm:   "c9e6097377d09471102fe200b072b9812874daa120848dc3e815ef4efa7b1a13",
+         intel: "bb3120274474cebd434630fe686bb79b8c5205d5dc62359e865f27ff0996bb14"
 
   url "https://github.com/Dygmalab/Bazecor/releases/download/v#{version}/Bazecor-#{version}-#{arch}.dmg",
       verified: "github.com/Dygmalab/Bazecor/"
