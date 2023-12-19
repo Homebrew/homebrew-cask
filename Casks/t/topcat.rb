@@ -13,8 +13,8 @@ cask "topcat" do
   end
 
   app "TOPCAT.app"
-  binary "#{appdir}/TOPCAT.app/Contents/Resources/bin/topcat"
-  binary "#{appdir}/TOPCAT.app/Contents/Resources/bin/stilts"
+  binary "#{appdir}/TOPCAT.app/Contents/Resources/app/topcat"
+  binary "#{appdir}/TOPCAT.app/Contents/Resources/app/stilts"
 
   # No zap stanza required
 
