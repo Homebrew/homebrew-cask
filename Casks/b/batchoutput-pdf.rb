@@ -1,5 +1,5 @@
 cask "batchoutput-pdf" do
-  version "3.1.1"
+  version "3.1.2"
   sha256 :no_check
 
   url "https://zevrix.com/downloads/BatchOutputPDF.dmg"
