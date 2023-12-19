@@ -11,7 +11,7 @@ cask "orbstack" do
   homepage "https://orbstack.dev/"
 
   livecheck do
-    url "https://cdn-updates.orbstack.dev/#{arch}/appcast.new.xml"
+    url "https://api-updates.orbstack.dev/#{arch}/appcast.xml"
     strategy :sparkle
   end
 
