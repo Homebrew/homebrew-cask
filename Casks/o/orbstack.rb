@@ -11,7 +11,7 @@ cask "orbstack" do
   homepage "https://orbstack.dev/"
 
   livecheck do
-    url "https://orbstack.dev/download/beta/latest/#{arch}"
+    url "https://orbstack.dev/download/stable/latest/#{arch}"
     regex(/OrbStack[._-]v?(\d+(?:[._-]\d+)+)[._-]#{arch}\.dmg/i)
     strategy :header_match
   end
