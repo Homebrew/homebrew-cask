@@ -2,7 +2,7 @@ cask "topcat" do
   version "4.9"
   sha256 :no_check
 
-  url "https://www.star.bristol.ac.uk/mbt/topcat/topcat-full.dmg"
+  url "https://www.star.bristol.ac.uk/mbt/topcat/topcat-all.dmg"
   name "TOPCAT"
   desc "Interactive graphical viewer and editor for tabular data"
   homepage "https://www.star.bristol.ac.uk/mbt/topcat/"
