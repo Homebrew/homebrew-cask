@@ -7,6 +7,11 @@ cask "plugdata" do
   desc "Plugin wrapper for PureData"
   homepage "https://github.com/timothyschoen/PlugData"
 
+  livecheck do
+    url :stable
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
+  end
+
   auto_updates true
 
   pkg "plugdata-macOS-Universal.pkg"
