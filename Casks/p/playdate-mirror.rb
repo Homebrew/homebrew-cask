@@ -1,6 +1,6 @@
 cask "playdate-mirror" do
-  version "1.0.0"
-  sha256 "690137066bd7059b55b7e5717994569e64814dbd5b06e7f19a181f59e0268a0b"
+  version "1.1.0"
+  sha256 "0536af36fa47727f8b7c08062c0ade8ff1c4fd84111577aedd4448a6dbf52b05"
 
   url "https://download-keycdn.panic.com/mirror/Mirror-#{version}.zip",
       verified: "download-keycdn.panic.com/mirror/"
