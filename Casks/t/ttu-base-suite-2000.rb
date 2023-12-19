@@ -4,7 +4,7 @@ cask "ttu-base-suite-2000" do
   
   url "https://downloads.teradata.com/sites/default/files/2023-12/TeradataToolsAndUtilities-macosx-brew-#{version}.tar"
   name "TTU BASE Suite #{version}"
-  desc "Teradata Tools and Utilities BASE Suite #{version}"
+  desc "Teradata Tools and Utilities BASE Suite 20.00.04.00"
   homepage "https://downloads.teradata.com/"
 
   depends_on macos: ">= :catalina"
