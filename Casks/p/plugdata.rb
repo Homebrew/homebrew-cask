@@ -8,7 +8,7 @@ cask "plugdata" do
   homepage "https://github.com/timothyschoen/PlugData"
 
   livecheck do
-    url :stable
+    url :url
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
