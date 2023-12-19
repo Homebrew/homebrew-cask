@@ -1,23 +1,34 @@
 cask "wordpresscom" do
-  version "8.0.3"
-  sha256 "cc5f9daccc774eb9a3fbd3533e26357ff3dd226aa95355028fdfb1d745b6619e"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://public-api.wordpress.com/rest/v1.1/desktop/osx/download?type=app&ref=update&version=#{version}"
+  version "8.0.3"
+  sha256 arm:   "fa918e3df870deafe299b11a16b3753f6fb8a1af36b0c616620c1c1b98e20ec8",
+         intel: "98f54a7559b57146dc3689c83609d82f0c57fa0f2576d5a84b38b18ea1e2bec7"
+
+  url "https://github.com/Automattic/wp-desktop/releases/download/v#{version}/wordpress.com-macOS-dmg-#{version}-#{arch}.dmg",
+      verified: "github.com/Automattic/wp-desktop/"
   name "WordPress.com"
   desc "WordPress client"
   homepage "https://apps.wordpress.com/desktop/"
 
   livecheck do
-    url "https://public-api.wordpress.com/rest/v1.1/desktop/osx/download?type=dmg"
-    strategy :header_match
+    url :url
+    strategy :github_latest
   end
+
+  auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "WordPress.com.app"
 
   zap trash: [
     "~/Library/Application Support/Wordpress.com",
-    "~/Library/Preferences/com.automattic.wordpress.helper.plist",
-    "~/Library/Preferences/com.automattic.wordpress.plist",
+    "~/Library/Application Support/Caches/wordpressdesktop-updater",
+    "~/Library/Caches/com.automattic.wordpress",
+    "~/Library/Caches/com.automattic.wordpress.ShipIt",
+    "~/Library/Preferences/ByHost/com.automattic.wordpress.ShipIt.*.plist",
+    "~/Library/Preferences/com.automattic.wordpress*.plist",
+    "~/Library/HTTPStorages/com.automattic.wordpress",
     "~/Library/Saved Application State/com.automattic.wordpress.savedState",
   ]
 end
