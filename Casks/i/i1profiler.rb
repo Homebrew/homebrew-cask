@@ -1,6 +1,6 @@
 cask "i1profiler" do
-  version "3.7.1.17587"
-  sha256 "e10a99e5ee864eb5dc7ebf992905c187c5ac79724ba06b81f21def27108521e5"
+  version "3.8.0.17775"
+  sha256 "6f12cb5f7ca618ab95106ef7b76d56cd7a3fc1a176bd47ba39e859228eb6e5dd"
 
   url "https://downloads.xrite.com/downloads/software/i1Profiler/#{version.major_minor_patch}/Mac/i1Profiler.zip"
   name "i1Profiler"
