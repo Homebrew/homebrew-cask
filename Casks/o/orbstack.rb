@@ -1,9 +1,9 @@
 cask "orbstack" do
   arch arm: "arm64", intel: "amd64"
 
-  version "1.1.0_16370"
-  sha256 arm:   "f6619eb2d2135e02f64310191462ae69f12b6da70cc2d6d4e656ca621749ba61",
-         intel: "bd6c5b10d01dfbc18afc997ed1dd3fe8c89e3bb75674094a55ed8f996ad771de"
+  version "1.2.0_16496"
+  sha256 arm:   "99a78587de144d8274d2d7999fe44e27fc1863ecf4818a924683c52f640a522e",
+         intel: "81659f501ea55bedd867b41564f612d6038e266812ac10565f621cec01cbb282"
 
   url "https://cdn-updates.orbstack.dev/#{arch}/OrbStack_v#{version}_#{arch}.dmg"
   name "OrbStack"
@@ -39,12 +39,10 @@ cask "orbstack" do
         "~/Library/HTTPStorages/dev.kdrag0n.MacVirt",
         "~/Library/HTTPStorages/dev.kdrag0n.MacVirt.binarycookies",
         "~/Library/Preferences/dev.kdrag0n.MacVirt.plist",
-        "~/Library/WebKit/dev.kdrag0n.MacVirt",
         "~/Library/Saved Application State/dev.kdrag0n.MacVirt.savedState",
+        "~/Library/WebKit/dev.kdrag0n.MacVirt",
       ],
-      rmdir: [
-        "~/OrbStack",
-      ]
+      rmdir: "~/OrbStack"
 
   caveats <<~EOS
     Open the OrbStack app to finish setup.
