@@ -1,6 +1,6 @@
 cask "flykey" do
-  version "1.6.3,2023121601"
-  sha256 "806cc526c293ed42124a4b13d8dd06f2c06137a2e933507ecd9b9ba157c605cf"
+  version "1.6.4,2023121902"
+  sha256 "1348e13fdbd52e5db3fe9f3d3cbb55321d39bdfc52e653c390e9a19d73f813f7"
 
   url "https://cdn.better365.cn/FlyKey/FlyKey#{version.csv.second}.zip"
   name "FlyKey"
