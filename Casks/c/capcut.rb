@@ -22,7 +22,7 @@ cask "capcut" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :mojave"
 
   app "CapCut.app"
 
