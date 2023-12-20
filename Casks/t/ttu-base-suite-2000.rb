@@ -14,17 +14,17 @@ cask "ttu-base-suite-2000" do
   depends_on macos: ">= :catalina"
 
   installer script: {
-    executable: "silent-install.sh",
-    args:       ["ttu-base-suite-2000"],
-    sudo:       true,
-  }
+              executable: "silent-install.sh",
+              args:       ["ttu-base-suite-2000"],
+              sudo:       true,
+            }
 
   uninstall script: {
-    executable: "silent-uninstall.sh",
-    args:       ["BASE"],
-    sudo:       true,
-  },
-  pkgutil:  "com.Teradata.*2000.pkg.ttuuninstaller"
+              executable: "silent-uninstall.sh",
+              args:       ["BASE"],
+              sudo:       true,
+            },
+            pkgutil: "com.Teradata.*2000.pkg.ttuuninstaller"
 
   # No zap stanza required
 end
