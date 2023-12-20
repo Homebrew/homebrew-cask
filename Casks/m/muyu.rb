@@ -1,6 +1,6 @@
 cask "muyu" do
-  version "1.5.0,39"
-  sha256 "9f0a72609dde0f4e88377dae5f2134fd649846882a561b2e1aecb96c1233d1dc"
+  version "1.5.0,40"
+  sha256 "852bc53282e4abbc5e9c5fbcd16cb3fa1592eb067c822de9e4cec88e2cb78b34"
 
   url "https://breakit.thriller.fun/packages/Muyu.v#{version.csv.first}_#{version.csv.second}.zip"
   name "Muyu"
