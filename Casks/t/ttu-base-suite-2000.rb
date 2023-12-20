@@ -15,16 +15,16 @@ cask "ttu-base-suite-2000" do
 
   installer script: {
     executable: "silent-install.sh",
-    args:  ["ttu-base-suite-2000"],
-    sudo:  true,
+    args:       ["ttu-base-suite-2000"],
+    sudo:       true,
   }
 
   uninstall script: {
     executable: "silent-uninstall.sh",
-    args:  ["BASE"],
-    sudo:  true,
+    args:       ["BASE"],
+    sudo:       true,
   },
-  pkgutil: "com.Teradata.*2000.pkg.ttuuninstaller"
+  pkgutil:  "com.Teradata.*2000.pkg.ttuuninstaller"
 
   # No zap stanza required
 end
