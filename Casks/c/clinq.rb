@@ -1,6 +1,6 @@
 cask "clinq" do
-  version "1.10.10"
-  sha256 "cb8370479779df88b24245625718b2adb648166e5c119486c0fd920737f43949"
+  version "1.11.1"
+  sha256 "76ba427472ed7d5d846bcf1785991c06a24d0e49c0566605b9467517df4285b7"
 
   url "https://s3-eu-central-1.amazonaws.com/desktop.download.clinq.com/CLINQ-#{version}.zip",
       verified: "s3-eu-central-1.amazonaws.com/desktop.download.clinq.com/"
