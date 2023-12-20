@@ -1,29 +1,30 @@
 cask "capcut" do
-  version "0_1.2.4"
-  sha256 "f42ec732aa94552def1452cbc2099dba46139a052fa97313bcba4475cac492f0"
+  version "3.0.0.1015"
+  sha256 "5a2858073fc5585d47c7ddf7483832dcdbfdd44c7acfbcc050078f4ea1535a7e"
 
-  url "https://lf16-capcut.faceulv.com/obj/capcutpc-packages-us/installer/capcut_capcutpc_#{version}_installer.dmg",
-      verified: "lf16-capcut.faceulv.com/obj/capcutpc-packages-us/installer/"
+  url "https://lf16-capcut.faceulv.com/obj/capcutpc-packages-us/packages/CapCut_#{version.dots_to_underscores}_capcutpc_0_creatortool.dmg",
+      verified: "lf16-capcut.faceulv.com/obj/capcutpc-packages-us/packages/"
   name "CapCut"
   desc "Creative platform powered by AI that enables video editing and image design"
   homepage "https://www.capcut.com/"
 
   livecheck do
-    url :homepage
-    regex(/capcut[._-]capcutpc[._-]v?(\d+(?:[._]\d+)+)[._-]installer\.dmg/i)
+    url "https://editor-api-sg.capcut.com/service/settings/v3/?app=1&arch_info=arm64&device_id=2398670469&aid=359289&from_aid=359289&device_platform=mac&from_channel=capcutpc_0"
+    regex(/CapCut[._-]v?(\d+(?:[._]\d+)+).+?\.dmg/i)
+    strategy :json do |json, regex|
+      url = json.dig("data", "settings", "installer_downloader_config", "url")
+      next if url.blank?
+
+      match = url.match(regex)
+      next if match.blank?
+
+      match[1].tr("_", ".")
+    end
   end
 
   depends_on macos: ">= :high_sierra"
 
-  installer script: {
-    executable: "#{staged_path}/CapCut-Downloader.app/Contents/MacOS/CapCut-Downloader",
-  }
-
-  uninstall quit:   "com.lemon.lvoverseas",
-            delete: [
-              "/Applications/CapCut.app",
-              "/Library/Logs/DiagnosticReport/CapCut-Downloader_*.diag",
-            ]
+  app "CapCut.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.lemon.lvoverseas",
