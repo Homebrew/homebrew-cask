@@ -14,12 +14,12 @@ cask "ttu-base-suite-2000" do
   depends_on macos: ">= :catalina"
 
   installer script: {
-              executable: "silent-install.sh",
-              args:       ["ttu-base-suite-2000"],
-              sudo:       true,
-            }
+    executable: "silent-install.sh",
+    args:       ["ttu-base-suite-2000"],
+    sudo:       true,
+  }
 
-  uninstall script: {
+  uninstall script:  {
               executable: "silent-uninstall.sh",
               args:       ["BASE"],
               sudo:       true,
