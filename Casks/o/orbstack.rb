@@ -39,12 +39,10 @@ cask "orbstack" do
         "~/Library/HTTPStorages/dev.kdrag0n.MacVirt",
         "~/Library/HTTPStorages/dev.kdrag0n.MacVirt.binarycookies",
         "~/Library/Preferences/dev.kdrag0n.MacVirt.plist",
-        "~/Library/WebKit/dev.kdrag0n.MacVirt",
         "~/Library/Saved Application State/dev.kdrag0n.MacVirt.savedState",
+        "~/Library/WebKit/dev.kdrag0n.MacVirt",
       ],
-      rmdir: [
-        "~/OrbStack",
-      ]
+      rmdir: "~/OrbStack"
 
   caveats <<~EOS
     Open the OrbStack app to finish setup.
