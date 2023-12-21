@@ -1,4 +1,4 @@
-cask "egovframe-ide" do
+cask "egovframedev" do
   arch arm: "AArch64", intel: "x86_64"
 
   version "4.1.0"
@@ -6,15 +6,16 @@ cask "egovframe-ide" do
          intel: "b3c652165914f7ccc05eae9e4730954a0a2cf0d361331a14f2c291fa51510652"
 
   url "https://maven.egovframe.go.kr/publist/HDD1/public/eGovFrameDev-#{version}-Mac-#{arch}.dmg"
-  name "egovframe"
+  name "eGovFrameDev"
   desc "Open-source framework by South Korea for web-based public service development"
   homepage "https://www.egovframe.go.kr/"
 
   livecheck do
     url "https://www.egovframe.go.kr/home/sub.do?menuNo=39"
-    regex(/개발환경 (\d+\.\d+\.\d+) 플러그인/i)
-    strategy :page_match
+    regex(/개발환경\sv?(\d+(?:\.\d+)+)\s플러그인/i)
   end
+
+  depends_on macos: ">= :big_sur"
 
   app "eGovFrameDev-#{version}-Mac-#{arch}.app"
 
