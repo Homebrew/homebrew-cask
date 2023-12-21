@@ -18,10 +18,6 @@ cask "egovframe-ide" do
 
   app "eGovFrameDev-#{version}-Mac-#{arch}.app"
 
-  postflight do
-    set_ownership "/Applications/eGovFrameDev-#{version}-Mac-#{arch}.app"
-  end
-
   zap trash: [
     "~/Library/Preferences/org.eclipse.platform.ide.plist",
     "~/Library/Saved Application State/org.eclipse.platform.ide.savedState",
