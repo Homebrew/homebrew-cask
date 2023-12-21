@@ -1,6 +1,5 @@
 cask "xact" do
   arch arm: "arm64", intel: "x64"
-  depends_on macos: ">= :high_sierra"
 
   version "2.54"
   sha256 "8e7f3af32202148139beefda41c4a75c59955df967d8545f2da62e41f32dc9f5"
@@ -15,6 +14,7 @@ cask "xact" do
     regex(/href=.*?xACTv?(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  app "xACT#{version}/xACT.app"
+  depends_on macos: ">= :high_sierra"
 
+  app "xACT#{version}/xACT.app"
 end
