@@ -18,7 +18,5 @@ cask "xact" do
 
   app "xACT#{version}/xACT.app"
 
-  zap trash: [
-    "~/Library/Preferences/org.scottcbrown.xact.plist",
-  ]
+  zap trash: "~/Library/Preferences/org.scottcbrown.xact.plist"
 end
