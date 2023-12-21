@@ -10,8 +10,8 @@ cask "mmhmm-studio" do
     depends_on macos: ">= :big_sur"
   end
   on_ventura :or_newer do
-    version "2.6.2,1701716000"
-    sha256 "04de056a9ab2e7266110136f31c59514339b377850ea4914f3dbdc7aae896b1e"
+    version "2.6.3,1703105000"
+    sha256 "b009b9ca5a936500e0d0c6954e8d59d8929ee1c3d0522c044a8bb9b830e517f5"
 
     # This appcast sometimes uses a newer pubDate for an older version, so we
     # have to ignore the default `Sparkle` strategy sorting (which involves the
