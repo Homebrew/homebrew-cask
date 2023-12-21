@@ -17,7 +17,7 @@ cask "imazing-profile-editor" do
 
   app "iMazing Profile Editor.app"
 
-  uninstall quit: ["com.DigiDNA.iMazingProfileEditorMac"]
+  uninstall quit: "com.DigiDNA.iMazingProfileEditorMac"
 
   zap trash: [
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.DigiDNA.iMazingProfileEditorMac.Mini",
