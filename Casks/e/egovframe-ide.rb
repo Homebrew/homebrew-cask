@@ -1,21 +1,11 @@
 cask "egovframe-ide" do
+  arch arm: "AArch64", intel: "x86_64"
+
   version "4.1.0"
+  sha256 arm:   "7e7ece1b05a6e4ccfca522a44f4a4e0230a164f8542df0e78c0181efc039590e",
+         intel: "b3c652165914f7ccc05eae9e4730954a0a2cf0d361331a14f2c291fa51510652"
 
-  app_name = ""
-
-  on_arm do
-    sha256 "7e7ece1b05a6e4ccfca522a44f4a4e0230a164f8542df0e78c0181efc039590e"
-
-    url "https://maven.egovframe.go.kr/publist/HDD1/public/eGovFrameDev-#{version}-Mac-AArch64.dmg"
-    app_name = "eGovFrameDev-#{version}-Mac-AArch64.app"
-  end
-  on_intel do
-    sha256 "b3c652165914f7ccc05eae9e4730954a0a2cf0d361331a14f2c291fa51510652"
-
-    url "https://maven.egovframe.go.kr/publist/HDD1/public/eGovFrameDev-#{version}-Mac-x86_64.dmg"
-    app_name = "eGovFrameDev-#{version}-Mac-x86_64.app"
-  end
-
+  url "https://maven.egovframe.go.kr/publist/HDD1/public/eGovFrameDev-#{version}-Mac-#{arch}.dmg"
   name "egovframe"
   desc "Open-source framework by South Korea for web-based public service development"
   homepage "https://www.egovframe.go.kr/"
@@ -26,10 +16,10 @@ cask "egovframe-ide" do
     strategy :page_match
   end
 
-  app app_name
+  app "eGovFrameDev-#{version}-Mac-#{arch}.app"
 
   postflight do
-    set_ownership "/Applications/#{app_name}"
+    set_ownership "/Applications/eGovFrameDev-#{version}-Mac-#{arch}.app"
   end
 
   zap trash: [
