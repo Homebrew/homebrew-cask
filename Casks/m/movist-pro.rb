@@ -20,7 +20,7 @@ cask "movist-pro" do
 
   zap trash: [
     "~/Library/Application Scripts/com.movist.MovistPro.MovistSafariExtension",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.movist.movistpro.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.movist.movistpro.sfl*",
     "~/Library/Application Support/Movist Pro",
     "~/Library/Caches/com.movist.MovistPro",
     "~/Library/Containers/com.movist.MovistPro.MovistSafariExtension",
