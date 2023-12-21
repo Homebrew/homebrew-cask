@@ -7,11 +7,11 @@ cask "ftdi-vcp-driver" do
 
     pkg "FTDIUSBSerial.pkg"
 
-    uninstall pkgutil: [
+    uninstall kext:    "com.FTDI.driver.FTDIUSBSerialDriver",
+              pkgutil: [
                 "com.FTDI.ftdiusbserialdriverinstaller.*",
                 "com.FTDI.driver.FTDIUSBSerialDriver",
               ],
-              kext:    "com.FTDI.driver.FTDIUSBSerialDriver",
               delete:  "/Library/Extensions/FTDIUSBSerialDriver.kext"
 
     caveats do

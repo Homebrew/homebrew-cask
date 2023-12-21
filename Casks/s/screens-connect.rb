@@ -19,11 +19,11 @@ cask "screens-connect" do
 
   # Uninstall script can fail when trying to remove legacy PKGIDS
   # Original discussion: https://github.com/Homebrew/homebrew-cask/pull/8833
-  uninstall quit:      "com.edovia.Screens-Connect",
-            launchctl: [
+  uninstall launchctl: [
               "com.edovia.Screens-Connect.launcher",
               "com.edovia.screens.connect",
             ],
+            quit:      "com.edovia.Screens-Connect",
             script:    {
               executable:   "#{appdir}/Screens Connect.app/Contents/Resources/sc-uninstaller.tool",
               must_succeed: false,

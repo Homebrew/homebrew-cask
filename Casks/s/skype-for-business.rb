@@ -25,13 +25,13 @@ cask "skype-for-business" do
         },
       ]
 
-  uninstall delete:     "/Applications/Skype for Business.app",
+  uninstall quit:       "com.microsoft.autoupdate2",
+            login_item: "Skype for Business",
             pkgutil:    [
               "com.microsoft.SkypeForBusiness",
               "com.microsoft.SkypeForBusiness.MeetingJoinPlugin",
             ],
-            login_item: "Skype for Business",
-            quit:       "com.microsoft.autoupdate2"
+            delete:     "/Applications/Skype for Business.app"
 
   zap trash: [
         "/Library/Internet Plug-Ins/MeetingJoinPlugin.plugin",

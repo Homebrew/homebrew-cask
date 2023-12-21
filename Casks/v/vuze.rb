@@ -17,11 +17,11 @@ cask "vuze" do
     sudo:       true,
   }
 
-  uninstall delete: [
+  uninstall quit:   "com.azureus.vuze",
+            delete: [
               "/Applications/Vuze.app",
               "/Applications/Uninstaller for Vuze.app",
-            ],
-            quit:   "com.azureus.vuze"
+            ]
 
   zap trash: "~/Library/Application Support/Vuze"
 end

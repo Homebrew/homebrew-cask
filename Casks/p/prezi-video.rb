@@ -17,8 +17,8 @@ cask "prezi-video" do
 
   pkg "Prezi_Video.pkg"
 
-  uninstall quit:      "com.prezi.PreziCast",
-            launchctl: "com.prezi.prezivideo.vcam.assistant",
+  uninstall launchctl: "com.prezi.prezivideo.vcam.assistant",
+            quit:      "com.prezi.PreziCast",
             pkgutil:   [
               "com.prezi.PreziCast",
               "com.prezi.prezivideo.vcam.plugin",

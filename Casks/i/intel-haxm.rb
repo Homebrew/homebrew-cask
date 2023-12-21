@@ -17,13 +17,13 @@ cask "intel-haxm" do
     sudo:       true,
   }
 
-  uninstall pkgutil: "com.intel.kext.haxm.*",
-            script:  {
+  uninstall script:  {
               sudo:         true,
               must_succeed: true,
               executable:   "silent_install.sh",
               args:         ["-u"],
-            }
+            },
+            pkgutil: "com.intel.kext.haxm.*"
 
   caveats do
     kext

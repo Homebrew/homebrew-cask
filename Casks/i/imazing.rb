@@ -16,11 +16,11 @@ cask "imazing" do
 
   app "iMazing.app"
 
-  uninstall login_item: "iMazing Mini",
-            quit:       [
+  uninstall quit:       [
               "com.DigiDNA.iMazing#{version.csv.first}.#{version.csv.second}Mac",
               "com.DigiDNA.iMazing#{version.csv.first}.#{version.csv.second}Mac.Mini",
-            ]
+            ],
+            login_item: "iMazing Mini"
 
   zap trash: [
     "~/Library/Application Support/iMazing",

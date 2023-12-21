@@ -24,13 +24,13 @@ cask "stats" do
 
   uninstall quit: "eu.exelban.Stats"
 
-  zap trash:  [
+  zap delete: "/Library/LaunchDaemons/eu.exelban.Stats.SMC.Helper.plist",
+      trash:  [
         "~/Library/Application Scripts/eu.exelban.Stats.LaunchAtLogin",
         "~/Library/Caches/eu.exelban.Stats",
         "~/Library/Containers/eu.exelban.Stats.LaunchAtLogin",
         "~/Library/Cookies/eu.exelban.Stats.binarycookies",
         "~/Library/HTTPStorages/eu.exelban.Stats",
         "~/Library/Preferences/eu.exelban.Stats.plist",
-      ],
-      delete: "/Library/LaunchDaemons/eu.exelban.Stats.SMC.Helper.plist"
+      ]
 end

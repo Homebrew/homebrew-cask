@@ -18,8 +18,8 @@ cask "parsec" do
     set_ownership "~/.parsec"
   end
 
-  uninstall pkgutil: "tv.parsec.www",
-            quit:    "tv.parsec.www"
+  uninstall quit:    "tv.parsec.www",
+            pkgutil: "tv.parsec.www"
 
   zap trash: "~/.parsec"
 end

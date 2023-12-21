@@ -17,11 +17,11 @@ cask "vallum" do
 
   app "Vallum.app"
 
-  uninstall pkgutil:   "it.murus.afw.Vallum",
-            launchctl: [
+  uninstall launchctl: [
               "it.murus.afw.core",
               "it.murus.afw.helper",
-            ]
+            ],
+            pkgutil:   "it.murus.afw.Vallum"
 
   zap trash: "~/Library/Preferences/it.murus.Vallum.plist"
 end

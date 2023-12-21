@@ -100,17 +100,17 @@ cask "docker" do
     end
   end
 
-  uninstall delete:    [
-              "/Library/PrivilegedHelperTools/com.docker.socket",
-              "/Library/PrivilegedHelperTools/com.docker.vmnetd",
-            ],
-            rmdir:     "~/.docker/bin",
-            launchctl: [
+  uninstall launchctl: [
               "com.docker.helper",
               "com.docker.socket",
               "com.docker.vmnetd",
             ],
-            quit:      "com.docker.docker"
+            quit:      "com.docker.docker",
+            delete:    [
+              "/Library/PrivilegedHelperTools/com.docker.socket",
+              "/Library/PrivilegedHelperTools/com.docker.vmnetd",
+            ],
+            rmdir:     "~/.docker/bin"
 
   zap trash: [
         "/usr/local/bin/docker-compose.backup",

@@ -21,8 +21,8 @@ cask "plex-media-server" do
   app "Plex Media Server.app"
   binary "#{appdir}/Plex Media Server.app/Contents/MacOS/Plex Media Scanner", target: "plexms"
 
-  uninstall quit:      "com.plexapp.plexmediaserver",
-            launchctl: "com.plexapp.mediaserver"
+  uninstall launchctl: "com.plexapp.mediaserver",
+            quit:      "com.plexapp.plexmediaserver"
 
   zap trash: [
     "~/Library/Application Support/Plex Media Server/",

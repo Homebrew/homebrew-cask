@@ -26,13 +26,13 @@ cask "controllermate" do
               "com.orderedbytes.ControllerMateHelper",
               "com.orderedbytes.ControllerMate.KextHelper",
             ],
-            kext:      [
-              "com.orderedbytes.driver.CMUSBDevices",
-              "com.orderedbytes.driver.ControllerMateFamily",
-            ],
             signal:    [
               ["TERM", "com.orderedbytes.ControllerMate#{version.major}"],
               ["TERM", "com.orderedbytes.ControllerMateHelper"],
+            ],
+            kext:      [
+              "com.orderedbytes.driver.CMUSBDevices",
+              "com.orderedbytes.driver.ControllerMateFamily",
             ],
             delete:    [
               "/Library/Extensions/ControllerMate.kext,/Library/Application Support/ControllerMate/",

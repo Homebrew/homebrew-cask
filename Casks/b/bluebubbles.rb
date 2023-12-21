@@ -18,7 +18,6 @@ cask "bluebubbles" do
   app "BlueBubbles.app"
 
   uninstall launchctl:  "com.BlueBubbles.BlueBubbles-Server.ShipIt",
-            login_item: "BlueBubbles",
             quit:       [
               "com.BlueBubbles.BlueBubbles-Server",
               "com.BlueBubbles.BlueBubbles-Server.helper",
@@ -26,7 +25,8 @@ cask "bluebubbles" do
               "com.BlueBubbles.BlueBubbles-Server.helper.Plugin",
               "com.BlueBubbles.BlueBubbles-Server.helper.Renderer",
               "com.bluebubbles.messaging",
-            ]
+            ],
+            login_item: "BlueBubbles"
 
   zap trash: [
     "~/Library/Application Support/@bluebubbles",

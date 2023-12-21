@@ -29,8 +29,8 @@ cask "luniistore" do
     return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/Luniistore.app"]
   end
 
-  uninstall pkgutil: "com.lunii.luniistore",
-            quit:    "com.lunii.luniistore"
+  uninstall quit:    "com.lunii.luniistore",
+            pkgutil: "com.lunii.luniistore"
 
   zap trash: [
     "~/Desktop/Luniistore",

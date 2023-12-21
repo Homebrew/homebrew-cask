@@ -15,11 +15,11 @@ cask "kindle-comic-creator" do
 
   pkg "Kindle Comic Creator.pkg"
 
-  uninstall pkgutil:   [
+  uninstall launchctl: "com.amazon.KindlePreviewerUpdater",
+            pkgutil:   [
               "com.amazon.kc2.kindleComicCreator*",
               "com.amazon.kc2.KindlePreviewer.pkg",
-            ],
-            launchctl: "com.amazon.KindlePreviewerUpdater"
+            ]
 
   zap trash: [
     "~/.kindle",

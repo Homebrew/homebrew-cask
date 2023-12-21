@@ -17,8 +17,8 @@ cask "freedom" do
 
   app "Freedom.app"
 
-  uninstall quit:      "com.80pct.FreedomPlatform",
-            launchctl: "com.80pct.FreedomHelper",
+  uninstall launchctl: "com.80pct.FreedomHelper",
+            quit:      "com.80pct.FreedomPlatform",
             delete:    [
               "/Library/PrivilegedHelperTools/com.80pct.FreedomHelper",
               "/var/log/FreedomHelper.log",

@@ -16,11 +16,11 @@ cask "ecodms-client" do
 
   pkg "ecoDMS-Clients_#{version}.pkg"
 
-  uninstall pkgutil: "de.applord.pkg.ecodms",
-            quit:    [
+  uninstall quit:    [
               "de.applord.ecoDMS-Client",
               "de.applord.ecoDMS-Connection-Manager",
-            ]
+            ],
+            pkgutil: "de.applord.pkg.ecodms"
 
   zap trash: [
     "~/Library/Preferences/com.applord-gmbh.ecoDMS - Profilemanager.plist",

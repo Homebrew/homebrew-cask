@@ -34,15 +34,14 @@ cask "microsoft-edge" do
         },
       ]
 
-  uninstall pkgutil:   "com.microsoft.edgemac",
-            launchctl: [
+  uninstall launchctl: [
               "com.microsoft.EdgeUpdater.update-internal.109.0.1518.89.system",
               "com.microsoft.EdgeUpdater.update.system",
               "com.microsoft.EdgeUpdater.wake.109.0.1518.89.system",
-            ]
+            ],
+            pkgutil:   "com.microsoft.edgemac"
 
   zap delete: "/Library/Application Support/Microsoft/EdgeUpdater",
-      rmdir:  "/Library/Application Support/Microsoft",
       trash:  [
         "~/Library/Application Scripts/com.microsoft.edgemac.wdgExtension",
         "~/Library/Application Support/Microsoft Edge",
@@ -57,5 +56,6 @@ cask "microsoft-edge" do
         "~/Library/Preferences/com.microsoft.edgemac.plist",
         "~/Library/Saved Application State/com.microsoft.edgemac.*",
         "~/Library/WebKit/com.microsoft.edgemac",
-      ]
+      ],
+      rmdir:  "/Library/Application Support/Microsoft"
 end

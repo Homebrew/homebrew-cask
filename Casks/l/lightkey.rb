@@ -49,12 +49,12 @@ cask "lightkey" do
 
   pkg "LightkeyInstaller.pkg"
 
-  uninstall delete:  "/Applications/Lightkey.app",
-            pkgutil: [
+  uninstall pkgutil: [
               "de.monospc.lightkey.pkg.App",
               "de.monospc.lightkey.pkg.documentation",
               "de.monospc.lightkey.pkg.OLA",
-            ]
+            ],
+            delete:  "/Applications/Lightkey.app"
 
   zap trash: [
     "~/Library/Application Support/Lightkey",

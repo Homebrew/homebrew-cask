@@ -24,9 +24,9 @@ cask "busycal" do
   pkg "BusyCal Installer.pkg"
 
   uninstall launchctl: "N4RA379GBW.com.busymac.busycal3.alarm",
-            pkgutil:   "com.busymac.busycal3.pkg",
             quit:      "N4RA379GBW.com.busymac.busycal3.alarm",
             signal:    ["TERM", "com.busymac.busycal3"],
+            pkgutil:   "com.busymac.busycal3.pkg",
             delete:    "/Applications/BusyCal.app"
 
   zap trash: [

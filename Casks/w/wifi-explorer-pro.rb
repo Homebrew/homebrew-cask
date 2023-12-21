@@ -16,11 +16,11 @@ cask "wifi-explorer-pro" do
 
   pkg "WiFiExplorerPro_#{version}.pkg"
 
-  uninstall pkgutil:   [
+  uninstall launchctl: "com.intuitibits.wifiexplorerpro#{version.major}.wifiexplorerpro-bpf",
+            pkgutil:   [
               "com.intuitibits.wifiexplorerpro#{version.major}.pkg",
               "com.intuitibits.wifiexplorerpro-helper.pkg",
-            ],
-            launchctl: "com.intuitibits.wifiexplorerpro#{version.major}.wifiexplorerpro-bpf"
+            ]
 
   zap trash: [
     "~/Library/Application Support/WiFi Explorer Pro #{version.major}",

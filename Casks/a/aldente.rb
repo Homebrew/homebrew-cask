@@ -17,8 +17,8 @@ cask "aldente" do
 
   app "AlDente.app"
 
-  uninstall quit:       "com.apphousekitchen.aldente-pro",
-            launchctl:  "com.apphousekitchen.aldente-pro.helper",
+  uninstall launchctl:  "com.apphousekitchen.aldente-pro.helper",
+            quit:       "com.apphousekitchen.aldente-pro",
             login_item: "AlDente",
             delete:     "/Library/PrivilegedHelperTools/com.apphousekitchen.aldente-pro.helper"
 

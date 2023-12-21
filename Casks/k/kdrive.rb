@@ -23,7 +23,8 @@ cask "kdrive" do
     system_command "/usr/bin/pkill", args: ["-f", "/Applications/kDrive/kDrive.app"]
   end
 
-  uninstall quit:      [
+  uninstall launchctl: "864VDCS2QY.com.infomaniak.drive.desktopclient.LoginItemAgent",
+            quit:      [
               "com.infomaniak.drive.desktopclient",
               "com.infomaniak.drive.desktopclient.Extension",
             ],
@@ -32,7 +33,6 @@ cask "kdrive" do
               "com.infomaniak.drive.desktopclient.Extension",
               "com.infomaniak.drive.uninstaller",
             ],
-            launchctl: "864VDCS2QY.com.infomaniak.drive.desktopclient.LoginItemAgent",
             delete:    "/Applications/kDrive/kDrive Uninstaller.app",
             rmdir:     "/Applications/kDrive"
 

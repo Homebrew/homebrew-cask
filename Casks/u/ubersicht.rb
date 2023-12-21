@@ -17,8 +17,8 @@ cask "ubersicht" do
 
   app "Übersicht.app"
 
-  uninstall login_item: "Übersicht",
-            quit:       "tracesOf.Uebersicht"
+  uninstall quit:       "tracesOf.Uebersicht",
+            login_item: "Übersicht"
 
   zap trash: [
     "~/Library/Application Support/Übersicht",

@@ -13,8 +13,8 @@ cask "breaktimer" do
   app "BreakTimer.app"
   binary "#{appdir}/BreakTimer.app/Contents/MacOS/BreakTimer", target: "breaktimer"
 
-  uninstall quit:      "com.tomjwatson.breaktimer",
-            launchctl: "com.tomjwatson.breaktimer.ShipIt"
+  uninstall launchctl: "com.tomjwatson.breaktimer.ShipIt",
+            quit:      "com.tomjwatson.breaktimer"
 
   zap trash: [
     "~/Library/Application Support/BreakTimer",

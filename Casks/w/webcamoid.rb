@@ -12,8 +12,8 @@ cask "webcamoid" do
 
   app "Webcamoid.app"
 
-  uninstall quit:      "com.webcamoidprj.webcamoid",
-            launchctl: "org.webcamoid.cmio.AkVCam.Assistant",
+  uninstall launchctl: "org.webcamoid.cmio.AkVCam.Assistant",
+            quit:      "com.webcamoidprj.webcamoid",
             delete:    "/Library/CoreMediaIO/Plug-Ins/DAL/AkVirtualCamera.plugin"
 
   zap trash: [

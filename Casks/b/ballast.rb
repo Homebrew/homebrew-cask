@@ -12,8 +12,8 @@ cask "ballast" do
 
   app "ballast.app"
 
-  uninstall quit:      "nz.jamsinclair.ballast",
-            launchctl: "nz.jamsinclair.ballast-LaunchAtLoginHelper"
+  uninstall launchctl: "nz.jamsinclair.ballast-LaunchAtLoginHelper",
+            quit:      "nz.jamsinclair.ballast"
 
   zap trash: [
     "~/Library/Preferences/nz.jamsinclair.ballast.plist",

@@ -19,12 +19,12 @@ cask "timemachineeditor" do
   uninstall launchctl: "com.tclementdev.timemachineeditor.scheduler",
             pkgutil:   "com.tclementdev.pkg.timemachineeditor"
 
-  zap trash:  [
-        "~/Library/Logs/TimeMachineEditor",
-        "~/Library/Preferences/com.tclementdev.timemachineeditor.application.plist",
-      ],
-      delete: [
+  zap delete: [
         "/Library/Logs/TimeMachineEditor",
         "/Library/TimeMachineEditor",
+      ],
+      trash:  [
+        "~/Library/Logs/TimeMachineEditor",
+        "~/Library/Preferences/com.tclementdev.timemachineeditor.application.plist",
       ]
 end

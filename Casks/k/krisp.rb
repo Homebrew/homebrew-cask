@@ -20,11 +20,11 @@ cask "krisp" do
 
   pkg "krisp_#{version}_#{arch}.pkg"
 
-  uninstall quit:      "ai.krisp.krispMac",
-            launchctl: [
+  uninstall launchctl: [
               "ai.krisp.krispMac*",
               "krisp",
             ],
+            quit:      "ai.krisp.krispMac",
             pkgutil:   "ai.krisp.krispMac*",
             delete:    "/Applications/krisp.app"
 

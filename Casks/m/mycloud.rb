@@ -16,10 +16,10 @@ cask "mycloud" do
   # pkg cannot be installed automatically
   installer manual: "myCloud Desktop installer.pkg"
 
-  uninstall pkgutil:    "com.github.tornaia.desktop-client",
+  uninstall quit:       "ch.swisscom.mycloud.desktop.finder",
+            signal:     ["TERM", "ch.swisscom.mycloud.desktop"],
             login_item: "myCloudDesktop",
-            quit:       "ch.swisscom.mycloud.desktop.finder",
-            signal:     ["TERM", "ch.swisscom.mycloud.desktop"]
+            pkgutil:    "com.github.tornaia.desktop-client"
 
   zap trash: [
     "~/Library/Application Support/myCloudDesktop",

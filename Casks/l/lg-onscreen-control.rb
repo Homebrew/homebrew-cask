@@ -22,13 +22,13 @@ cask "lg-onscreen-control" do
                    sudo: true
   end
 
-  uninstall login_item: [
-              "OnScreen Control",
-              "OSCMultiMonitor",
-            ],
-            quit:       [
+  uninstall quit:       [
               "com.LGSI.OnScreen-Control",
               "com.LGSI.OSCMultiMonitor",
+            ],
+            login_item: [
+              "OnScreen Control",
+              "OSCMultiMonitor",
             ],
             pkgutil:    [
               "com.lge.onscreenControl.*",

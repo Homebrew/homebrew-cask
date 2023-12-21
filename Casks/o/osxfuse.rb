@@ -19,12 +19,12 @@ cask "osxfuse" do
     set_ownership ["/usr/local/include", "/usr/local/lib"]
   end
 
-  uninstall pkgutil: [
+  uninstall kext:    "com.github.osxfuse.filesystems.osxfuse",
+            pkgutil: [
               "com.github.osxfuse.pkg.Core",
               "com.github.osxfuse.pkg.MacFUSE",
               "com.github.osxfuse.pkg.PrefPane",
-            ],
-            kext:    "com.github.osxfuse.filesystems.osxfuse"
+            ]
 
   zap trash: "~/Library/Caches/com.github.osxfuse.OSXFUSEPrefPane"
 

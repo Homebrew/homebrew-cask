@@ -20,11 +20,11 @@ cask "playmemories-home" do
 
   pkg "PMH_INST.pkg"
 
-  uninstall pkgutil:   "com.sony.pkg.PMHInstaller",
-            launchctl: [
+  uninstall launchctl: [
               "com.sony.SonyAutoLauncher.agent",
               "com.sony.WirelessAutoImportLauncher.agent",
-            ]
+            ],
+            pkgutil:   "com.sony.pkg.PMHInstaller"
 
   zap trash: [
     "/Applications/PMHMac.app",

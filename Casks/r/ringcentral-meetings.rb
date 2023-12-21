@@ -14,10 +14,10 @@ cask "ringcentral-meetings" do
 
   pkg "RCMeetingsClientSetup.pkg"
 
-  uninstall delete:  "/Applications/RingCentral Meetings.app",
+  uninstall quit:    "us.zoom.RingCentralOpener",
+            signal:  ["KILL", "us.zoom.ringcentral"],
             pkgutil: "us.zoom.pkg.ringcentral",
-            quit:    "us.zoom.RingCentralOpener",
-            signal:  ["KILL", "us.zoom.ringcentral"]
+            delete:  "/Applications/RingCentral Meetings.app"
 
   zap trash: [
     "~/Desktop/RingCentral Meetings",

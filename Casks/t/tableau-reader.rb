@@ -25,12 +25,12 @@ cask "tableau-reader" do
     "com.tableausoftware.ReaderShortcuttab",
   ]
 
-  zap delete:  "/Library/Preferences/com.tableau.Tableau-Reader-*.plist",
-      pkgutil: [
+  zap pkgutil: [
         "com.tableausoftware.extensions",
         "com.tableausoftware.networkExtensions",
         "com.tableausoftware.telemetry",
       ],
+      delete:  "/Library/Preferences/com.tableau.Tableau-Reader-*.plist",
       trash:   [
         "~/Library/Caches/com.tableau.caching",
         "~/Library/Caches/com.tableausoftware.MapTiles",

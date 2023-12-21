@@ -18,13 +18,7 @@ cask "workspace-one-intelligent-hub" do
 
   pkg "VMwareWorkspaceONEIntelligentHub.pkg"
 
-  uninstall pkgutil:   [
-              "com.air-watch.pkg.OSXAgent",
-              "com.airwatch.munki.admin",
-              "com.airwatch.munki.core",
-              "com.airwatch.munki.python",
-            ],
-            launchctl: [
+  uninstall launchctl: [
               "com.airwatch.awcmd",
               "com.airwatch.mac.agent",
               "com.vmware.hub.flagd",
@@ -33,6 +27,12 @@ cask "workspace-one-intelligent-hub" do
               "com.vmware.hubupdateagent",
               "com.vmware.uem.hubd",
               "com.vmware.uem.hublogd",
+            ],
+            pkgutil:   [
+              "com.air-watch.pkg.OSXAgent",
+              "com.airwatch.munki.admin",
+              "com.airwatch.munki.core",
+              "com.airwatch.munki.python",
             ]
 
   zap trash: [

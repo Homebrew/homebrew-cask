@@ -68,8 +68,8 @@ cask "choosy" do
   desc "Open links in any browser"
   homepage "https://choosy.app/"
 
-  uninstall pkgutil: "com.choosyosx.Choosy",
-            quit:    "com.choosyosx.Choosy"
+  uninstall quit:    "com.choosyosx.Choosy",
+            pkgutil: "com.choosyosx.Choosy"
 
   zap trash: [
     "~/Library/Application Support/Choosy",

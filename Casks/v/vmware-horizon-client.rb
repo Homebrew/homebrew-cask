@@ -35,18 +35,18 @@ cask "vmware-horizon-client" do
 
   pkg "VMware Horizon Client.pkg"
 
-  uninstall quit:      "com.vmware.horizon",
+  uninstall launchctl: [
+              "com.vmware.deem.MacUIEvents",
+              "com.vmware.deemd",
+              "com.vmware.horizon.CDSHelper",
+              "com.vmware.vmwetlm",
+            ],
+            quit:      "com.vmware.horizon",
             pkgutil:   [
               "com.vmware.horizon",
               "com.vmware.VMware.Deem",
               "com.vmware.VMware.Deem.InstallerHelper",
               "com.vmware.VMware.EndpointTelemetryService",
-            ],
-            launchctl: [
-              "com.vmware.deem.MacUIEvents",
-              "com.vmware.deemd",
-              "com.vmware.horizon.CDSHelper",
-              "com.vmware.vmwetlm",
             ],
             delete:    [
               "/Applications/VMware Horizon Client.app",

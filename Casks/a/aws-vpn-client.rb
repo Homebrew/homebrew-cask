@@ -17,9 +17,9 @@ cask "aws-vpn-client" do
 
   pkg "AWS_VPN_Client.pkg"
 
-  uninstall pkgutil:   "com.amazon.awsvpnclient",
+  uninstall launchctl: "com.amazonaws.acvc.helper",
             quit:      "com.amazonaws.acvc.osx",
-            launchctl: "com.amazonaws.acvc.helper",
+            pkgutil:   "com.amazon.awsvpnclient",
             delete:    [
               "/Library/Application Support/AWSVPNClient",
               "/Library/LaunchDaemons/com.amazonaws.acvc.helper.plist",

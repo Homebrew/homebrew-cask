@@ -17,17 +17,17 @@ cask "iriunwebcam" do
 
   pkg "IriunWebcam-#{version}.pkg"
 
-  uninstall quit:      [
-              "com.iriun.macwebcam",
-              "com.iriun.webcam",
-            ],
-            pkgutil:   "com.iriun.*",
-            launchctl: [
+  uninstall launchctl: [
               "com.iriun.cmio.DPA.camera",
               "com.iriun.cmio.DPA.camerb",
               "com.iriun.cmio.DPA.camerc",
               "com.iriun.cmio.DPA.camerd",
-            ]
+            ],
+            quit:      [
+              "com.iriun.macwebcam",
+              "com.iriun.webcam",
+            ],
+            pkgutil:   "com.iriun.*"
 
   zap trash: "~/Library/Saved Application State/com.iriun.macwebcam.savedState"
 end

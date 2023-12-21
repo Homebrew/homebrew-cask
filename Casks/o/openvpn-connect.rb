@@ -19,11 +19,12 @@ cask "openvpn-connect" do
 
   pkg "OpenVPN_Connect_#{version.csv.first.dots_to_underscores}(#{version.csv.second})_#{arch}_Installer_signed.pkg"
 
-  uninstall quit:       "org.openvpn.client.app",
-            launchctl:  [
+  uninstall launchctl:  [
               "org.openvpn.client",
               "org.openvpn.helper",
             ],
+            quit:       "org.openvpn.client.app",
+            login_item: "OpenVPN Connect",
             pkgutil:    [
               "org.openvpn.client.pkg",
               "org.openvpn.client_framework.pkg",
@@ -35,18 +36,17 @@ cask "openvpn-connect" do
             delete:     [
               "/Applications/OpenVPN Connect",
               "/Applications/OpenVPN Connect.app",
-            ],
-            login_item: "OpenVPN Connect"
+            ]
 
-  zap trash:  [
+  zap script: {
+        executable: "security",
+        args:       ["delete-keychain", "openvpn.keychain-db"],
+      },
+      trash:  [
         "~/Library/Application Support/OpenVPN Connect",
         "~/Library/Logs/OpenVPN Connect",
         "~/Library/Preferences/org.openvpn.client.app.helper.plist",
         "~/Library/Preferences/org.openvpn.client.app.plist",
         "~/Library/Saved Application State/org.openvpn.client.app.savedState",
-      ],
-      script: {
-        executable: "security",
-        args:       ["delete-keychain", "openvpn.keychain-db"],
-      }
+      ]
 end

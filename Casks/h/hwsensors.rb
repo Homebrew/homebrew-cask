@@ -11,9 +11,9 @@ cask "hwsensors" do
 
   pkg "HWSensors.#{version}.pkg"
 
-  uninstall login_item: "HWMonitor",
-            pkgutil:    "org.hwsensors.HWMonitor",
-            quit:       "org.hwsensors.HWMonitor"
+  uninstall quit:       "org.hwsensors.HWMonitor",
+            login_item: "HWMonitor",
+            pkgutil:    "org.hwsensors.HWMonitor"
 
   zap trash: [
     "~/Library/Application Support/HWMonitor",

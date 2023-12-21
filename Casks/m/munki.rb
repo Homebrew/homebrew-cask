@@ -23,8 +23,7 @@ cask "munki" do
 
   pkg "munkitools-#{version}.pkg"
 
-  uninstall pkgutil:   "com.googlecode.munki.*",
-            launchctl: [
+  uninstall launchctl: [
               "com.googlecode.munki.app_usage_monitor",
               "com.googlecode.munki.appusaged",
               "com.googlecode.munki.logouthelper",
@@ -34,6 +33,7 @@ cask "munki" do
               "com.googlecode.munki.managedsoftwareupdate-manualcheck",
               "com.googlecode.munki.munki-notifier",
             ],
+            pkgutil:   "com.googlecode.munki.*",
             delete:    "/usr/local/munki"
 
   zap trash: [

@@ -19,8 +19,8 @@ cask "megasync" do
 
   app "MEGAsync.app"
 
-  uninstall quit:       "mega.mac",
-            launchctl:  "mega.mac.megaupdater",
+  uninstall launchctl:  "mega.mac.megaupdater",
+            quit:       "mega.mac",
             login_item: "MEGAsync"
 
   zap trash: [

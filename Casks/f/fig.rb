@@ -20,11 +20,7 @@ cask "fig" do
   app "Fig.app"
   binary "#{appdir}/Fig.app/Contents/MacOS/fig-darwin-universal", target: "fig"
 
-  uninstall script:    {
-              executable: "#{appdir}/Fig.app/Contents/MacOS/fig-darwin-universal",
-              args:       ["_", "brew-uninstall"],
-            },
-            launchctl: [
+  uninstall launchctl: [
               "io.fig.launcher",
               "io.fig.uninstall",
               "io.fig.dotfiles-daemon",
@@ -32,7 +28,11 @@ cask "fig" do
             quit:      [
               "com.mschrage.fig",
               "io.fig.cursor",
-            ]
+            ],
+            script:    {
+              executable: "#{appdir}/Fig.app/Contents/MacOS/fig-darwin-universal",
+              args:       ["_", "brew-uninstall"],
+            }
 
   zap trash: [
     "~/.fig",

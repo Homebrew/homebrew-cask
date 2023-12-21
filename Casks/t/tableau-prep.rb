@@ -32,7 +32,11 @@ cask "tableau-prep" do
     "simba.sparkodbc",
   ]
 
-  zap trash:  [
+  zap delete: [
+        "/Library/Application Support/Tableau Prep Builder",
+        "/Library/Preferences/FLEXnet Publisher",
+      ],
+      trash:  [
         "~/Documents/My Tableau Prep Repository",
         "~/Library/Application Support/Tableau Prep Builder #{version}",
         "~/Library/Caches/com.tableau.caching",
@@ -41,9 +45,5 @@ cask "tableau-prep" do
         "~/Library/Preferences/com.tableausoftware.tabminerva.plist",
         "~/Library/Saved Application State/com.tableausoftware.tableauprep.savedState",
         "~/Library/Tableau",
-      ],
-      delete: [
-        "/Library/Application Support/Tableau Prep Builder",
-        "/Library/Preferences/FLEXnet Publisher",
       ]
 end

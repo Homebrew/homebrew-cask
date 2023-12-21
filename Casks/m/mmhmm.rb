@@ -17,8 +17,8 @@ cask "mmhmm" do
 
   pkg "mmhmm.pkg"
 
-  uninstall pkgutil: "app.mmhmm.hybrid",
-            quit:    "app.mmhmm.hybrid"
+  uninstall quit:    "app.mmhmm.hybrid",
+            pkgutil: "app.mmhmm.hybrid"
 
   zap trash: [
     "~/Library/Application Support/mmhmm",

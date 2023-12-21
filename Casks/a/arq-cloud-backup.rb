@@ -14,7 +14,7 @@ cask "arq-cloud-backup" do
 
   pkg "Install Arq Cloud Backup.pkg"
 
-  uninstall pkgutil:   "com.haystacksoftware.ArqCloudBackup",
+  uninstall launchctl: "com.haystacksoftware.arqcloudagent",
             quit:      "com.haystacksoftware.ArqCloudBackup",
-            launchctl: "com.haystacksoftware.arqcloudagent"
+            pkgutil:   "com.haystacksoftware.ArqCloudBackup"
 end

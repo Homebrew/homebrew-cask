@@ -17,15 +17,7 @@ cask "atok" do
 
   pkg "ATOK インストーラ.pkg"
 
-  uninstall pkgutil:   [
-              "com.justsystems.atok#{version.major}.doc.pkg",
-              "com.justsystems.atok#{version.major}.pkg",
-              "com.justsystems.atok#{version.major}.quicklook.pkg",
-              "com.justsystems.atok#{version.major}.sync.pkg",
-              "com.justsystems.JustOnlineUpdate.pkg",
-              "com.justsystems.pkg.lma",
-            ],
-            launchctl: [
+  uninstall launchctl: [
               "com.justsystems.atok#{version.major}.enabler",
               "com.justsystems.inputmethod.atok#{version.major}",
               "com.justsystems.launchd.Atok#{version.major}.AlBg",
@@ -34,5 +26,13 @@ cask "atok" do
               "com.justsystems.launchd.UpdateChecker",
               "com.justsystems.OnlineUpdate",
             ],
-            quit:      "com.justsystems.UpdateChecker"
+            quit:      "com.justsystems.UpdateChecker",
+            pkgutil:   [
+              "com.justsystems.atok#{version.major}.doc.pkg",
+              "com.justsystems.atok#{version.major}.pkg",
+              "com.justsystems.atok#{version.major}.quicklook.pkg",
+              "com.justsystems.atok#{version.major}.sync.pkg",
+              "com.justsystems.JustOnlineUpdate.pkg",
+              "com.justsystems.pkg.lma",
+            ]
 end

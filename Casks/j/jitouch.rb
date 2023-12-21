@@ -12,9 +12,9 @@ cask "jitouch" do
 
   pkg "Install-Jitouch.pkg"
 
-  uninstall quit:      "com.jitouch.Jitouch",
-            pkgutil:   "com.jitouch.Jitouch",
-            launchctl: "com.jitouch.Jitouch.agent"
+  uninstall launchctl: "com.jitouch.Jitouch.agent",
+            quit:      "com.jitouch.Jitouch",
+            pkgutil:   "com.jitouch.Jitouch"
 
   zap trash: [
     "~/Library/LaunchAgents/com.jitouch.Jitouch.plist",

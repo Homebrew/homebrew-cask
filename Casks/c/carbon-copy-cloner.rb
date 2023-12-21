@@ -18,11 +18,11 @@ cask "carbon-copy-cloner" do
 
   app "Carbon Copy Cloner.app"
 
-  uninstall login_item: "CCC User Agent",
-            quit:       [
+  uninstall quit:       [
               "com.bombich.ccc",
               "com.bombich.cccuseragent",
-            ]
+            ],
+            login_item: "CCC User Agent"
 
   zap trash: [
     "~/Library/Application Support/com.bombich.ccc",

@@ -17,14 +17,14 @@ cask "splashtop-streamer" do
 
   pkg "Splashtop Streamer.pkg"
 
-  uninstall quit:      "com.splashtop.Splashtop-Streamer",
-            launchctl: [
+  uninstall launchctl: [
               "com.splashtop.streamer",
               "com.splashtop.streamer-daemon",
               "com.splashtop.streamer-for-root",
               "com.splashtop.streamer-for-user",
               "com.splashtop.streamer-srioframebuffer",
             ],
+            quit:      "com.splashtop.Splashtop-Streamer",
             pkgutil:   "com.splashtop.Splashtop-Streamer"
 
   zap trash: [

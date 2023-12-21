@@ -16,9 +16,9 @@ cask "chronoagent" do
 
   pkg "Install.pkg"
 
-  uninstall pkgutil:   "com.econtechnologies.pkg.ChronoAgent",
-            launchctl: "com.econtechnologies.ChronoAgentRemote",
-            quit:      "com.econtechnologies.backgrounder.CAMonitorBackgrounder"
+  uninstall launchctl: "com.econtechnologies.ChronoAgentRemote",
+            quit:      "com.econtechnologies.backgrounder.CAMonitorBackgrounder",
+            pkgutil:   "com.econtechnologies.pkg.ChronoAgent"
 
   zap trash: [
     "~/Library/Caches/com.apple.helpd/Generated/ChronoAgent Help Center*",

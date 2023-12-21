@@ -17,8 +17,8 @@ cask "daisydisk" do
 
   app "DaisyDisk.app"
 
-  uninstall delete:    "/Library/PrivilegedHelperTools/com.daisydiskapp.DaisyDiskAdminHelper",
-            launchctl: "com.daisydiskapp.DaisyDiskAdminHelper"
+  uninstall launchctl: "com.daisydiskapp.DaisyDiskAdminHelper",
+            delete:    "/Library/PrivilegedHelperTools/com.daisydiskapp.DaisyDiskAdminHelper"
 
   zap trash: [
     "~/Library/Application Support/DaisyDisk",

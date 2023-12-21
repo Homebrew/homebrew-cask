@@ -16,8 +16,7 @@ cask "shadowsocksx-ng-r" do
     system_command "#{appdir}/ShadowsocksX-NG-R8.app/Contents/Resources/install_helper.sh"
   end
 
-  uninstall delete:    "/Library/Application Support/ShadowsocksX-NG",
-            launchctl: [
+  uninstall launchctl: [
               "com.qiuyuzhou.shadowsocksX-NG.http",
               "com.qiuyuzhou.shadowsocksX-NG.kcptun",
               "com.qiuyuzhou.shadowsocksX-NG.local",
@@ -27,7 +26,8 @@ cask "shadowsocksx-ng-r" do
             script:    {
               executable: "/Library/Application Support/ShadowsocksX-NG/proxy_conf_helper",
               args:       ["--mode", "off"],
-            }
+            },
+            delete:    "/Library/Application Support/ShadowsocksX-NG"
 
   zap trash: [
     "~/.ShadowsocksX-NG",

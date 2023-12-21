@@ -13,11 +13,11 @@ cask "turbovnc-viewer" do
 
   pkg "TurboVNC.pkg"
 
-  uninstall pkgutil: "com.virtualgl.turbovnc",
-            script:  {
+  uninstall script:  {
               executable: "/opt/TurboVNC/bin/uninstall",
               sudo:       true,
-            }
+            },
+            pkgutil: "com.virtualgl.turbovnc"
 
   # No zap stanza required
 end

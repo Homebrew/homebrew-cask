@@ -17,8 +17,8 @@ cask "nordlayer" do
 
   app "NordLayer.app"
 
-  uninstall quit:      "com.nordvpn.macos.teams",
-            launchctl: "com.nordvpn.macos.teams"
+  uninstall launchctl: "com.nordvpn.macos.teams",
+            quit:      "com.nordvpn.macos.teams"
 
   zap trash: [
     "~/Library/Application Support/com.nordvpn.macos.teams",

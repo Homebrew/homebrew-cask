@@ -22,14 +22,14 @@ cask "tenable-nessus-agent" do
 
   pkg "Install Nessus Agent.pkg"
 
-  uninstall pkgutil:   "com.tenablesecurity.NessusAgent.Preferences",
+  uninstall launchctl: "com.tenablesecurity.nessusagent",
+            pkgutil:   "com.tenablesecurity.NessusAgent.Preferences",
             delete:    [
               "/Library/NessusAgent",
               "/Library/LaunchDaemons/com.tenablesecurity.nessusagent.plist",
               "/Library/PreferencePanes/Nessus Agent Preferences.prefPane",
               "/private/etc/tenable_tag",
-            ],
-            launchctl: "com.tenablesecurity.nessusagent"
+            ]
 
   # No zap stanza required
 

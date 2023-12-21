@@ -37,7 +37,17 @@ cask "microsoft-office-businesspro" do
         },
       ]
 
-  uninstall pkgutil:   [
+  uninstall launchctl: [
+              "com.microsoft.office.licensing.helper",
+              "com.microsoft.office.licensingV2.helper",
+              "com.microsoft.OneDriveStandaloneUpdater",
+              "com.microsoft.OneDriveStandaloneUpdaterDaemon",
+              "com.microsoft.OneDriveUpdaterDaemon",
+              "com.microsoft.SyncReporter",
+              "com.microsoft.teams.TeamsUpdaterDaemon",
+            ],
+            quit:      "com.microsoft.autoupdate2",
+            pkgutil:   [
               "com.microsoft.MSTeamsAudioDevice",
               "com.microsoft.OneDrive",
               "com.microsoft.package.DFonts",
@@ -53,7 +63,6 @@ cask "microsoft-office-businesspro" do
               "com.microsoft.teams",
               "com.microsoft.wdav",
             ],
-            # Frameworks, DFonts and ProofingTools remain in each application after pkg uninstall, delete them
             delete:    [
               "/Applications/Microsoft Defender.app",
               "/Applications/Microsoft Excel.app",
@@ -63,17 +72,7 @@ cask "microsoft-office-businesspro" do
               "/Applications/Microsoft Teams.app",
               "/Applications/Microsoft Word.app",
               "/Applications/OneDrive.app",
-            ],
-            launchctl: [
-              "com.microsoft.office.licensing.helper",
-              "com.microsoft.office.licensingV2.helper",
-              "com.microsoft.OneDriveStandaloneUpdater",
-              "com.microsoft.OneDriveStandaloneUpdaterDaemon",
-              "com.microsoft.OneDriveUpdaterDaemon",
-              "com.microsoft.SyncReporter",
-              "com.microsoft.teams.TeamsUpdaterDaemon",
-            ],
-            quit:      "com.microsoft.autoupdate2"
+            ]
 
   zap trash: [
     "~/Library/Application Scripts/com.microsoft.errorreporting",

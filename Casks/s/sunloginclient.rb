@@ -37,8 +37,8 @@ cask "sunloginclient" do
               "com.oray.sunlogin.service",
               "com.oray.sunlogin.startup",
             ],
-            pkgutil:   "com.oray.sunlogin.macclient",
-            quit:      "com.oray.sunlogin.macclient"
+            quit:      "com.oray.sunlogin.macclient",
+            pkgutil:   "com.oray.sunlogin.macclient"
 
   zap delete: "/private/var/log/sunlogin/",
       trash:  [

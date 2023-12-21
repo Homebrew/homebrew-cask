@@ -17,11 +17,11 @@ cask "itch" do
 
   installer script: "Install itch.app/Contents/MacOS/itch-setup"
 
-  uninstall delete: [
+  uninstall quit:   "io.itch.mac",
+            delete: [
               "~/Applications/itch.app",
               "~/Library/Application Support/itch-setup/",
-            ],
-            quit:   "io.itch.mac"
+            ]
 
   zap trash: [
     "~/Library/Application Support/itch/",

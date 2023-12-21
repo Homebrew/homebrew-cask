@@ -29,8 +29,8 @@ cask "gamemaker" do
     opoo "Unable to forcibly close GameMaker.app"
   end
 
-  uninstall delete:  "/Applications/GameMaker.app",
-            pkgutil: "com.yoyogames.gms2"
+  uninstall pkgutil: "com.yoyogames.gms2",
+            delete:  "/Applications/GameMaker.app"
 
   zap trash: "/Users/Shared/GameMakerStudio2"
 end

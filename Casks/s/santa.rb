@@ -14,19 +14,19 @@ cask "santa" do
 
   pkg "santa-#{version}.pkg"
 
-  uninstall delete:    [
-              "/Applications/Santa.app",
-              "/usr/local/bin/santactl",
-            ],
-            kext:      "com.google.santa-driver",
-            launchctl: [
+  uninstall launchctl: [
               "com.google.santa",
               "com.google.santa.bundleservice",
               "com.google.santa.metricservice",
               "com.google.santa.syncservice",
               "com.google.santad",
             ],
-            pkgutil:   "com.google.santa"
+            kext:      "com.google.santa-driver",
+            pkgutil:   "com.google.santa",
+            delete:    [
+              "/Applications/Santa.app",
+              "/usr/local/bin/santactl",
+            ]
 
   # No zap stanza required
 

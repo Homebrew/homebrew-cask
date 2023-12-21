@@ -22,8 +22,7 @@ cask "onedrive" do
 
   pkg "OneDrive.pkg"
 
-  uninstall pkgutil:   "com.microsoft.OneDrive",
-            launchctl: [
+  uninstall launchctl: [
               "com.microsoft.OneDriveStandaloneUpdater",
               "com.microsoft.OneDriveStandaloneUpdaterDaemon",
               "com.microsoft.OneDriveUpdaterDaemon",
@@ -34,6 +33,7 @@ cask "onedrive" do
               "com.microsoft.OneDrive.FinderSync",
               "com.microsoft.OneDriveUpdater",
             ],
+            pkgutil:   "com.microsoft.OneDrive",
             delete:    [
               "/Applications/OneDrive.app",
               "/Library/Logs/Microsoft/OneDrive",

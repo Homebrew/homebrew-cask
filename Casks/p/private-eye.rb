@@ -20,8 +20,8 @@ cask "private-eye" do
               args:         ["-b", "com.radiosilenceapp.nke.PrivateEye"],
               must_succeed: false,
             },
+            launchctl:    "com.radiosilenceapp.nke.PrivateEye",
             quit:         "com.radiosilenceapp.PrivateEye",
             kext:         "com.radiosilenceapp.nke.PrivateEye",
-            pkgutil:      "com.radiosilenceapp.privateEye.*",
-            launchctl:    "com.radiosilenceapp.nke.PrivateEye"
+            pkgutil:      "com.radiosilenceapp.privateEye.*"
 end

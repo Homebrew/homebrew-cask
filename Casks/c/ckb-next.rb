@@ -13,9 +13,9 @@ cask "ckb-next" do
 
   pkg "ckb-next.mpkg"
 
-  uninstall pkgutil:   [
+  uninstall launchctl: "org.ckb-next.daemon",
+            pkgutil:   [
               "org.ckb-next.ckb",
               "org.ckb-next.daemon",
-            ],
-            launchctl: "org.ckb-next.daemon"
+            ]
 end

@@ -39,13 +39,13 @@ cask "microsoft-teams" do
         },
       ]
 
-  uninstall pkgutil:   [
+  uninstall launchctl: "com.microsoft.teams.TeamsUpdaterDaemon",
+            quit:      "com.microsoft.autoupdate2",
+            pkgutil:   [
               "com.microsoft.MSTeamsAudioDevice",
               "com.microsoft.package.Microsoft_AutoUpdate.app",
               "com.microsoft.teams2",
             ],
-            launchctl: "com.microsoft.teams.TeamsUpdaterDaemon",
-            quit:      "com.microsoft.autoupdate2",
             delete:    [
               "/Applications/Microsoft Teams (work or school).app",
               "/Library/Application Support/Microsoft/TeamsUpdaterDaemon",

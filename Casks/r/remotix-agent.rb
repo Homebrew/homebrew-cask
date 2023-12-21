@@ -22,22 +22,22 @@ cask "remotix-agent" do
 
   pkg "RemotixAgent-#{version.csv.first}-#{version.csv.second}.pkg"
 
-  uninstall pkgutil:    [
-              "com.nulana.rxagentmac.daemon",
-              "com.nulana.rxagentmac",
-            ],
-            signal:     [
-              ["KILL", "com.nulana.rxagentmac.user"],
-              ["KILL", "com.nulana.rxagentmac"],
-            ],
-            launchctl:  [
+  uninstall launchctl:  [
               "com.nulana.rxagentmac.daemon",
               "com.nulana.rxagentmac.gui",
               "com.nulana.rxagentmac.rc",
               "com.nulana.rxagentmac.user",
             ],
-            login_item: "Remotix Agent",
             quit:       "com.nulana.rxagentmac",
+            signal:     [
+              ["KILL", "com.nulana.rxagentmac.user"],
+              ["KILL", "com.nulana.rxagentmac"],
+            ],
+            login_item: "Remotix Agent",
+            pkgutil:    [
+              "com.nulana.rxagentmac.daemon",
+              "com.nulana.rxagentmac",
+            ],
             delete:     [
               "/Library/LaunchAgents/com.nulana.rxagentmac.user.plist",
               "/Library/LaunchDaemons/com.nulana.rxagentmac.daemon.plist",

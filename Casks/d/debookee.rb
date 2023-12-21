@@ -18,8 +18,8 @@ cask "debookee" do
 
   app "Debookee.app"
 
-  uninstall delete:    "/Library/PrivilegedHelperTools/com.iwaxx.Debookee.PacketTool",
-            launchctl: "com.iwaxx.Debookee.PacketTool"
+  uninstall launchctl: "com.iwaxx.Debookee.PacketTool",
+            delete:    "/Library/PrivilegedHelperTools/com.iwaxx.Debookee.PacketTool"
 
   zap trash: [
     "~/.debookee",

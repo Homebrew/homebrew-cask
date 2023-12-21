@@ -20,15 +20,15 @@ cask "amazon-music" do
     executable: "Amazon Music Installer.app/Contents/MacOS/installbuilder.sh",
   }
 
-  uninstall quit:      [
+  uninstall launchctl: [
+              "com.amazon.music",
+              "com.amazon.music.startup",
+            ],
+            quit:      [
               "com.amazon.music",
               "com.amazon.music-renderer",
             ],
-            delete:    "/Applications/Amazon Music.app",
-            launchctl: [
-              "com.amazon.music",
-              "com.amazon.music.startup",
-            ]
+            delete:    "/Applications/Amazon Music.app"
 
   zap trash: [
     "~/Library/Application Support/Amazon Music",

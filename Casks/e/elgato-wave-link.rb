@@ -17,10 +17,10 @@ cask "elgato-wave-link" do
 
   pkg "WaveLink_#{version}.pkg"
 
-  uninstall delete:    "/Applications/Elgato Wave Link.app",
-            launchctl: "com.elgato.WaveLink",
+  uninstall launchctl: "com.elgato.WaveLink",
             quit:      "com.elgato.WaveLink",
-            pkgutil:   "com.elgato.pkg.WaveLink"
+            pkgutil:   "com.elgato.pkg.WaveLink",
+            delete:    "/Applications/Elgato Wave Link.app"
 
   zap trash: [
     "~/Library/Logs/WaveLink",

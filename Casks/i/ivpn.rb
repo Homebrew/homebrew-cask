@@ -24,12 +24,12 @@ cask "ivpn" do
     set_ownership "#{appdir}/IVPN.app"
   end
 
-  uninstall delete:    [
+  uninstall launchctl: "net.ivpn.client.Helper",
+            quit:      "net.ivpn.client.IVPN",
+            delete:    [
               "/Library/Application Support/IVPN",
               "/Library/PrivilegedHelperTools/net.ivpn.client.Helper",
-            ],
-            launchctl: "net.ivpn.client.Helper",
-            quit:      "net.ivpn.client.IVPN"
+            ]
 
   zap trash: "~/Library/Preferences/net.ivpn.client.IVPN.plist"
 end

@@ -16,12 +16,12 @@ cask "folding-at-home" do
 
   pkg "fah-installer_#{version}_x86_64-b.pkg"
 
-  uninstall pkgutil:   "org.foldingathome.*",
-            launchctl: "org.foldingathome.fahclient",
+  uninstall launchctl: "org.foldingathome.fahclient",
             quit:      [
               "org.foldingathome.fahcontrol",
               "org.foldingathome.fahviewer",
-            ]
+            ],
+            pkgutil:   "org.foldingathome.*"
 
   zap trash: "/Library/Application Support/FAHClient"
 end

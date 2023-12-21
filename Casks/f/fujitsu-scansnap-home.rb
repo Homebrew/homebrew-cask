@@ -33,13 +33,13 @@ cask "fujitsu-scansnap-home" do
             ],
             pkgutil:   "com.fujitsu.pfu.scansnap.Home.*"
 
-  zap trash:  [
+  zap delete: "/Library/Application Support/PFU",
+      trash:  [
         "~/Library/Application Support/PFU",
         "~/Library/Caches/jp.co.pfu.SSHomeWizard",
         "~/Library/HTTPStorages/jp.co.pfu.SSHomeWizard",
         "~/Library/Preferences/com.fujitsu.pfu.*",
         "~/Library/Saved Application State/com.fujitsu.pfu.ScanSnapHome.savedState",
         "~/Library/Saved Application State/jp.co.pfu.SSHomeWizard.savedState",
-      ],
-      delete: "/Library/Application Support/PFU"
+      ]
 end

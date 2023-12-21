@@ -15,9 +15,9 @@ cask "boom" do
 
   app "Boom 2.app"
 
-  uninstall kext:      "com.globaldelight.driver.Boom2Device",
-            launchctl: "com.globaldelight.Boom2Daemon",
-            signal:    ["TERM", "com.globaldelight.Boom2"]
+  uninstall launchctl: "com.globaldelight.Boom2Daemon",
+            signal:    ["TERM", "com.globaldelight.Boom2"],
+            kext:      "com.globaldelight.driver.Boom2Device"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.globaldelight.boom2.sfl*",

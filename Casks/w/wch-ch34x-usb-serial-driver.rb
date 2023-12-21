@@ -15,11 +15,11 @@ cask "wch-ch34x-usb-serial-driver" do
   pkg "CH341SER_MAC/CH34xVCPDriver.pkg"
 
   uninstall quit:    "cn.wch.CH34xVCPDriver",
-            pkgutil: "cn.wch.pkg.CH34xVCPDriver",
             kext:    [
               "cn.wch.CH34xVCPDriver",
               "cn.wch.CH34xVCPControlDriver",
-            ]
+            ],
+            pkgutil: "cn.wch.pkg.CH34xVCPDriver"
 
   caveats do
     reboot

@@ -29,14 +29,14 @@ cask "launchcontrol" do
   app "LaunchControl.app"
   binary "#{appdir}/LaunchControl.app/Contents/MacOS/fdautil"
 
-  uninstall delete:    "/Library/PrivilegedHelperTools/com.soma-zone.LaunchControl.Helper",
-            launchctl: "com.soma-zone.LaunchControl.Helper",
+  uninstall launchctl: "com.soma-zone.LaunchControl.Helper",
             quit:      [
               "com.soma-zone.JobWatch",
               "com.soma-zone.LaunchControl",
               "com.soma-zone.LicenseWindow",
               "com.soma-zone.QuickLaunch",
-            ]
+            ],
+            delete:    "/Library/PrivilegedHelperTools/com.soma-zone.LaunchControl.Helper"
 
   zap trash: [
     "~/Library/Application Support/LaunchControl",

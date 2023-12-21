@@ -15,17 +15,17 @@ cask "ptpwebcam" do
 
   pkg "PTP_Webcam-v#{version}.pkg"
 
-  uninstall pkgutil:   [
+  uninstall launchctl: [
+              "org.ptpwebcam.PtpWebcamAgent",
+              "org.ptpwebcam.PtpWebcamAssistant",
+            ],
+            pkgutil:   [
               "org.ptpwebcam.pkg.EnableChrome",
               "org.ptpwebcam.pkg.EnableSkype",
               "org.ptpwebcam.pkg.EnableTeams",
               "org.ptpwebcam.pkg.EnableZoom",
               "org.ptpwebcam.pkg.PTPWebcam",
               "org.ptpwebcam.pkg.RemoveEOSWebcam",
-            ],
-            launchctl: [
-              "org.ptpwebcam.PtpWebcamAgent",
-              "org.ptpwebcam.PtpWebcamAssistant",
             ],
             delete:    [
               "/Library/CoreMediaIO/Plug-ins/DAL/PTPWebcamDALPlugin.plugin",

@@ -23,11 +23,11 @@ cask "asciidocfx" do
     sudo:       true,
   }
 
-  zap trash:  [
+  zap delete: "/Library/Preferences/com.install4j.installations.plist",
+      trash:  [
         "~/.AsciidocFX-#{version}",
         "~/Library/Preferences/com.install4j.7853-9376-5862-1224.24.plist",
         "~/Library/Preferences/com.install4j.installations.plist",
         "~/Library/Saved Application State/com.install4j.7853-9376-5862-1224.24.savedState",
-      ],
-      delete: "/Library/Preferences/com.install4j.installations.plist"
+      ]
 end

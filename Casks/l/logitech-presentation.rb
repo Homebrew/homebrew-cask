@@ -18,9 +18,9 @@ cask "logitech-presentation" do
 
   installer manual: "LogiPresentation Installer.app"
 
-  uninstall delete:     "/Applications/Logitech Presentation",
+  uninstall signal:     ["KILL", "LogiPresentation"],
             login_item: "LogiPresentation",
-            signal:     ["KILL", "LogiPresentation"]
+            delete:     "/Applications/Logitech Presentation"
 
   zap trash: "/Library/Application Support/Logitech.localized/Logitech Presentation.localiz"
 end

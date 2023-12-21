@@ -17,8 +17,8 @@ cask "sol" do
 
   app "Sol.app"
 
-  uninstall quit:      "com.ospfranco.sol",
-            launchctl: "com.ospfranco.sol-LaunchAtLoginHelper"
+  uninstall launchctl: "com.ospfranco.sol-LaunchAtLoginHelper",
+            quit:      "com.ospfranco.sol"
 
   zap trash: [
     "~/Library/Application Scripts/com.ospfranco.sol-LaunchAtLoginHelper",

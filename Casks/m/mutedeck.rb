@@ -18,8 +18,8 @@ cask "mutedeck" do
 
   installer manual: "MuteDeck-#{version}-Installer"
 
-  uninstall quit:      "com.mutedeck.mac",
-            launchctl: "application.com.mutedeck.mac",
+  uninstall launchctl: "application.com.mutedeck.mac",
+            quit:      "com.mutedeck.mac",
             delete:    "/Applications/MuteDeck"
 
   zap trash: "~/Library/Application Support/mutedeck"

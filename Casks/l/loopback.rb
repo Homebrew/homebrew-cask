@@ -17,11 +17,11 @@ cask "loopback" do
 
   app "Loopback.app"
 
-  uninstall delete: "~/Library/LaunchAgents/com.rogueamoeba.loopbackd.plist",
-            quit:   [
+  uninstall quit:   [
               "com.rogueamoeba.Loopback",
               "com.rogueamoeba.loopbackd",
-            ]
+            ],
+            delete: "~/Library/LaunchAgents/com.rogueamoeba.loopbackd.plist"
 
   zap trash: [
     "~/Library/Application Support/Loopback",

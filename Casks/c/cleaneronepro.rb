@@ -17,12 +17,12 @@ cask "cleaneronepro" do
 
   app "CleanerOnePro.app"
 
-  uninstall delete:    [
+  uninstall launchctl: "com.trendmicro.TrendCleanerPro.HelperTool",
+            quit:      "com.trendmicro.TrendCleanerPro",
+            delete:    [
               "/Library/LaunchDaemons/com.trendmicro.TrendCleanerPro.HelperTool.plist",
               "/Library/PrivilegedHelperTools/com.trendmicro.TrendCleanerPro.HelperTool",
-            ],
-            launchctl: "com.trendmicro.TrendCleanerPro.HelperTool",
-            quit:      "com.trendmicro.TrendCleanerPro"
+            ]
 
   zap trash: [
     "~/Library/Application Support/com.trendmicro.TrendCleanerPro",

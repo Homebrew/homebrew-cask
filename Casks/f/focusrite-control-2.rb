@@ -18,8 +18,8 @@ cask "focusrite-control-2" do
 
   app "Focusrite Control 2.app"
 
-  uninstall quit:      "com.focusrite.control",
-            launchctl: "com.focusrite.ControlServer"
+  uninstall launchctl: "com.focusrite.ControlServer",
+            quit:      "com.focusrite.control"
 
   zap trash: [
     "~/Library/Application Support/Focusrite",

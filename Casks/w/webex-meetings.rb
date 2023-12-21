@@ -15,10 +15,12 @@ cask "webex-meetings" do
 
   pkg "Cisco_Webex_Meetings.pkg"
 
-  uninstall quit:      [
+  uninstall launchctl: "com.webex.pluginagent",
+            quit:      [
               "com.cisco.webex.webexmta",
               "com.cisco.webexmeetingsapp",
             ],
+            pkgutil:   "mc.mac.webex.com",
             delete:    [
               "/Applications/Cisco Webex Meetings.app",
               "/Applications/Webex", # App seems to get installed here on macOS < 10.15
@@ -28,8 +30,6 @@ cask "webex-meetings" do
               "~/Library/Application Support/WebEx Folder/T33_64UMC*/WebexAppLauncher.app",
               "~/Library/Internet Plug-Ins/WebEx64.plugin",
             ],
-            launchctl: "com.webex.pluginagent",
-            pkgutil:   "mc.mac.webex.com",
             rmdir:     "~/Library/Application Support/WebEx Folder/T33_64UMC*"
 
   zap trash: [

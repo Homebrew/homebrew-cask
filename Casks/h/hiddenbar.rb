@@ -16,8 +16,8 @@ cask "hiddenbar" do
 
   app "Hidden Bar.app"
 
-  uninstall quit:      "com.dwarvesv.minimalbar",
-            launchctl: "com.dwarvesv.LauncherApplication"
+  uninstall launchctl: "com.dwarvesv.LauncherApplication",
+            quit:      "com.dwarvesv.minimalbar"
 
   zap trash: [
     "~/Library/Application Scripts/com.dwarvesv.LauncherApplication",

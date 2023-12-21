@@ -17,8 +17,8 @@ cask "parallels-toolbox" do
 
   installer manual: "Install Parallels Toolbox.app"
 
-  uninstall delete: "/Applications/Parallels Toolbox.app",
-            signal: ["TERM", "com.parallels.toolbox"]
+  uninstall signal: ["TERM", "com.parallels.toolbox"],
+            delete: "/Applications/Parallels Toolbox.app"
 
   zap trash: [
     "~/Library/Application Scripts/*.com.parallels.toolbox",

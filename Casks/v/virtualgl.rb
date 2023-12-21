@@ -10,9 +10,9 @@ cask "virtualgl" do
 
   pkg "VirtualGL.pkg"
 
-  uninstall pkgutil: "com.virtualgl.vglclient",
-            script:  {
+  uninstall script:  {
               executable: "/opt/VirtualGL/bin/uninstall",
               sudo:       true,
-            }
+            },
+            pkgutil: "com.virtualgl.vglclient"
 end

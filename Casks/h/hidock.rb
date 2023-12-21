@@ -17,11 +17,11 @@ cask "hidock" do
 
   app "HiDock.app"
 
-  uninstall login_item: "HiDock",
-            quit:       [
+  uninstall quit:       [
               "design.rafa.HiDock",
               "design.rafa.HiDock-LaunchAtLoginHelper",
-            ]
+            ],
+            login_item: "HiDock"
 
   zap trash: [
     "~/Library/HTTPStorages/design.rafa.HiDock",

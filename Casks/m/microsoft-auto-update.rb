@@ -24,15 +24,15 @@ cask "microsoft-auto-update" do
 
   pkg "Microsoft_AutoUpdate_#{version}_Updater.pkg"
 
-  uninstall quit:      [
-              "com.microsoft.autoupdate.fba",
-              "com.microsoft.autoupdate2",
-              "com.microsoft.errorreporting",
-            ],
-            launchctl: [
+  uninstall launchctl: [
               "com.microsoft.autoupdate.helper",
               "com.microsoft.autoupdate.helpertool",
               "com.microsoft.update.agent",
+            ],
+            quit:      [
+              "com.microsoft.autoupdate.fba",
+              "com.microsoft.autoupdate2",
+              "com.microsoft.errorreporting",
             ],
             pkgutil:   [
               "com.microsoft.package.Microsoft_AU_Bootstrapper.app",

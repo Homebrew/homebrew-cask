@@ -28,20 +28,7 @@ cask "gpg-suite" do
     end
   end
 
-  uninstall script:    {
-              executable: "#{staged_path}/Uninstall.app/Contents/Resources/GPG Suite Uninstaller.app/Contents/Resources/uninstall.sh",
-              sudo:       true,
-            },
-            pkgutil:   "org.gpgtools.*",
-            quit:      [
-              "com.apple.mail",
-              "org.gpgtools.gpgkeychain",
-              "org.gpgtools.gpgkeychainaccess",
-              "org.gpgtools.gpgmail.upgrader",
-              "org.gpgtools.gpgservices",
-              # TODO: add "killall -kill gpg-agent"
-            ],
-            launchctl: [
+  uninstall launchctl: [
               "org.gpgtools.gpgmail.enable-bundles",
               "org.gpgtools.gpgmail.patch-uuid-user",
               "org.gpgtools.gpgmail.user-uuid-patcher",
@@ -53,6 +40,19 @@ cask "gpg-suite" do
               "org.gpgtools.macgpg2.updater",
               "org.gpgtools.updater",
             ],
+            quit:      [
+              "com.apple.mail",
+              "org.gpgtools.gpgkeychain",
+              "org.gpgtools.gpgkeychainaccess",
+              "org.gpgtools.gpgmail.upgrader",
+              "org.gpgtools.gpgservices",
+              # TODO: add "killall -kill gpg-agent"
+            ],
+            script:    {
+              executable: "#{staged_path}/Uninstall.app/Contents/Resources/GPG Suite Uninstaller.app/Contents/Resources/uninstall.sh",
+              sudo:       true,
+            },
+            pkgutil:   "org.gpgtools.*",
             delete:    [
               "/Library/Application Support/GPGTools",
               "/Library/Frameworks/Libmacgpg.framework",

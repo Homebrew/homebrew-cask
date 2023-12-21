@@ -17,9 +17,9 @@ cask "blueharvest" do
 
   app "BlueHarvest.app"
 
-  uninstall delete:    "/Library/PrivilegedHelperTools/com.zeroonetwenty.BlueHarvestHelper#{version.major}",
-            launchctl: "com.zeroonetwenty.BlueHarvestHelper#{version.major}",
-            quit:      "com.zeroonetwenty.BlueHarvest5"
+  uninstall launchctl: "com.zeroonetwenty.BlueHarvestHelper#{version.major}",
+            quit:      "com.zeroonetwenty.BlueHarvest5",
+            delete:    "/Library/PrivilegedHelperTools/com.zeroonetwenty.BlueHarvestHelper#{version.major}"
 
   zap trash: [
     "~/Library/Caches/com.zeroonetwenty.BlueHarvest5",

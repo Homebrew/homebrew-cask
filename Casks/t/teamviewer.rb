@@ -74,17 +74,7 @@ cask "teamviewer" do
     opoo "Unable to forcibly close TeamViewer"
   end
 
-  uninstall delete:    [
-              "/Applications/TeamViewer.app",
-              "/Library/Preferences/com.teamviewer*",
-            ],
-            pkgutil:   [
-              "com.teamviewer.AuthorizationPlugin",
-              "com.teamviewer.remoteaudiodriver",
-              "com.teamviewer.teamviewer.*",
-              "TeamViewerUninstaller",
-            ],
-            launchctl: [
+  uninstall launchctl: [
               "com.teamviewer.desktop",
               "com.teamviewer.Helper",
               "com.teamviewer.service",
@@ -97,6 +87,16 @@ cask "teamviewer" do
             quit:      [
               "com.teamviewer.TeamViewer",
               "com.teamviewer.TeamViewerUninstaller",
+            ],
+            pkgutil:   [
+              "com.teamviewer.AuthorizationPlugin",
+              "com.teamviewer.remoteaudiodriver",
+              "com.teamviewer.teamviewer.*",
+              "TeamViewerUninstaller",
+            ],
+            delete:    [
+              "/Applications/TeamViewer.app",
+              "/Library/Preferences/com.teamviewer*",
             ]
 
   zap trash: [

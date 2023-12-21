@@ -24,8 +24,8 @@ cask "playdate-simulator" do
   end
 
   uninstall pkgutil: "date.play.sdk",
-            trash:   "~/Developer/PlaydateSDK",
             delete:  "/usr/local/playdate",
+            trash:   "~/Developer/PlaydateSDK",
             rmdir:   "~/Developer"
 
   zap trash: "~/.Playdate"
