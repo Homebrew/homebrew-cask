@@ -8,7 +8,7 @@ cask "xact" do
   homepage "http://xact.scottcbrown.org/"
 
   livecheck do
-    url :url
+    url :homepage
     regex(/href=.*?xACTv?(\d+(?:\.\d+)+)\.zip/i)
   end
 
