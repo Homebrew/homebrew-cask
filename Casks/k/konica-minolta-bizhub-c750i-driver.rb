@@ -29,7 +29,7 @@ cask "konica-minolta-bizhub-c750i-driver" do
       end
     end
 
-    pkg "C750i_C650i_C360i_C287i_C286i_C4050i_C4000i_C3320i_11.pkg"
+    pkg "C750i_C287i_C4050i_C4051i_11.pkg"
   end
 
   url "https://dl.konicaminolta.eu/en?tx_kmdownloadcentersite_downloadproxy[fileId]=#{version.csv.second}&tx_kmdownloadcentersite_downloadproxy[documentId]=#{version.csv.third}&tx_kmdownloadcentersite_downloadproxy[system]=KonicaMinolta&tx_kmdownloadcentersite_downloadproxy[language]=EN&type=1558521685"
