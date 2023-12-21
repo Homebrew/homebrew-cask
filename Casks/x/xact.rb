@@ -17,4 +17,8 @@ cask "xact" do
   depends_on macos: ">= :high_sierra"
 
   app "xACT#{version}/xACT.app"
+
+  zap trash: [
+    "~/Library/Preferences/org.scottcbrown.xact.plist",
+  ]
 end
