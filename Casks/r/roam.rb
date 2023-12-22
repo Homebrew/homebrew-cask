@@ -27,4 +27,4 @@ cask "roam" do
       "~/Library/Preferences/inc.wonder.roam.plist",
       "~/Library/Saved Application State/inc.wonder.roam.savedState",
     ]
-  end
+end
