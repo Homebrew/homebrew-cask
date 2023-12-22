@@ -24,13 +24,14 @@ cask "adguard" do
             pkgutil:   "com.adguard.mac.adguard-pkg",
             launchctl: [
               "com.adguard.mac.adguard.pac",
+              "com.adguard.mac.adguard.helper",
               "com.adguard.mac.adguard.tun-helper",
               "com.adguard.mac.adguard.xpcgate2",
             ],
             delete:    [
-              "/Library/com.adguard.mac.adguard.pac",
               "/Library/Application Support/AdGuard Software/com.adguard.mac.adguard",
               "/Library/Application Support/com.adguard.Adguard",
+              "/Library/com.adguard.mac.adguard.pac",
             ],
             rmdir:     "/Library/Application Support/AdGuard Software"
 
