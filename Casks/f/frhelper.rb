@@ -17,6 +17,7 @@ cask "frhelper" do
 
   depends_on macos: ">= :high_sierra"
 
+  auto_updates true
   app "Frhelper.app"
 
   uninstall quit: [
