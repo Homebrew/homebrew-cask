@@ -1,36 +1,36 @@
 cask "openoffice" do
-  version "4.1.14"
+  version "4.1.15"
 
   language "en", default: true do
-    sha256 "68f6cbdca5e6551983742115458de0f0edbd55f2b6fe962bbea677c9dfb90a21"
+    sha256 "888a1d043b3c81f701bacd63b7fe3921505623bca28a529f3210f2ea61cfeb7b"
     "en-US"
   end
   language "de" do
-    sha256 "75de7259ed8dc584aac4ce88862e7b1512f130e9cbd574a8ddf6369933b197af"
+    sha256 "11f294fb5538544d53bfa96c621b95676ebaca79714dd5478b18b33137ef6d63"
     "de"
   end
   language "fr" do
-    sha256 "52f5b7ad5967aa52404181abfffd58f4354b82bdcd3897d4b69854bf2357b491"
+    sha256 "eff089fc26053e4d8060e1a5763f68f38672304017494110c95448f9ed548ba9"
     "fr"
   end
   language "gl" do
-    sha256 "4bec76e4885d3bc88954a2ddd289ae62f389d16b712deca3c43b25effd3ca098"
+    sha256 "dad0191236c0d238bf1579b57a4f77c2899467c833b08c505684f4f1a3b9ea1a"
     "gl"
   end
   language "ko" do
-    sha256 "ffac4ffa746e0ae677f8fa34e5f4bc70964c7160e280af6a89490a224e3e926e"
+    sha256 "f09926f878b24757e2521fc39bcada468576e1494492c4e8b9e51498649358f4"
     "ko"
   end
   language "pt-BR" do
-    sha256 "43badf2fb6fe2e975b99ff27f7e296843d3284e28c0f8278aba9bf7afb6d1200"
+    sha256 "cc60a0e17fec6c7f263edfd129494c6078e08218d423ffe63f3397c7ecd07261"
     "pt-BR"
   end
   language "pt" do
-    sha256 "61ca8ef40acc72a118ed3ee30fc0a4179f3c464f1c961ab8af77cf8743b285f9"
+    sha256 "837baaced1f34a40001b66ac64f86868087fcff313b0fb53cc8a762ec07f63a1"
     "pt"
   end
   language "ru" do
-    sha256 "fb7e2fcb6552ec6f3a0fa865c4ad768d278071284c512f3943766a0a905ddefd"
+    sha256 "bbf4a4457392f22daaabab4555d54cb9822ebe4ad2b27cdbad986bf2a0b949c2"
     "ru"
   end
 
