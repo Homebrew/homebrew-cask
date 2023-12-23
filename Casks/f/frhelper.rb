@@ -15,9 +15,9 @@ cask "frhelper" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: ">= :high_sierra"
 
-  auto_updates true
   app "Frhelper.app"
 
   uninstall quit: [
