@@ -7,11 +7,6 @@ cask "keyboard-cowboy" do
   desc "Keyboard shortcut utility"
   homepage "https://github.com/zenangst/KeyboardCowboy"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on macos: ">= :ventura"
 
