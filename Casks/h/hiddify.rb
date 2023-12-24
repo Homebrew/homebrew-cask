@@ -1,4 +1,4 @@
-cask "hiddify-next" do
+cask "hiddify" do
   version "0.12.2"
   sha256 "a58a7ddd0be1b27195786e508290ea0e77fef3714b53a274931ba48f37be8f9d"
 
