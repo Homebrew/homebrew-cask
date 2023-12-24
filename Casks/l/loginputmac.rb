@@ -18,8 +18,8 @@ cask "loginputmac" do
 
   pkg "落格输入法 macOS #{version.major}.pkg"
 
-  uninstall pkgutil: "com.logcg.pkg.LoginputMac#{version.major}",
-            quit:    "com.logcg.inputmethod.LogInputMac#{version.major}"
+  uninstall quit:    "com.logcg.inputmethod.LogInputMac#{version.major}",
+            pkgutil: "com.logcg.pkg.LoginputMac#{version.major}"
 
   zap trash: [
     "~/Documents/落格输入法",

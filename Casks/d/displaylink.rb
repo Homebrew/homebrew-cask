@@ -56,19 +56,14 @@ cask "displaylink" do
     skip "No version information available"
   end
 
-  uninstall pkgutil:   "com.displaylink.*",
-            # 'kextunload -b com.displaylink.driver.DisplayLinkDriver' causes kernel panic
-            # kext:      [
-            #              'com.displaylink.dlusbncm'
-            #              'com.displaylink.driver.DisplayLinkDriver',
-            #            ],
-            launchctl: [
+  uninstall launchctl: [
               "73YQY62QM3.com.displaylink.DisplayLinkAPServer",
               "com.displaylink.displaylinkmanager",
               "com.displaylink.useragent-prelogin",
               "com.displaylink.useragent",
             ],
             quit:      "DisplayLinkUserAgent",
+            pkgutil:   "com.displaylink.*",
             delete:    [
               "/Applications/DisplayLink",
               "/Library/LaunchAgents/com.displaylink.useragent-prelogin.plist",

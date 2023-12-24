@@ -22,14 +22,14 @@ cask "radio-silence" do
               args:         ["-b", "com.radiosilenceapp.nke.filter"],
               must_succeed: false,
             },
-            quit:         "com.radiosilenceapp.client",
-            kext:         "com.radiosilenceapp.nke.filter",
-            pkgutil:      "com.radiosilenceapp.*",
             launchctl:    [
               "com.radiosilenceapp.trial",
               "com.radiosilenceapp.agent",
               "com.radiosilenceapp.nke",
-            ]
+            ],
+            quit:         "com.radiosilenceapp.client",
+            kext:         "com.radiosilenceapp.nke.filter",
+            pkgutil:      "com.radiosilenceapp.*"
 
   zap trash: "~/Library/Application Support/Radio Silence"
 end

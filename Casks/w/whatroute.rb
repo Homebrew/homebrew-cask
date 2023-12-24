@@ -16,12 +16,12 @@ cask "whatroute" do
 
   app "WhatRoute.app"
 
-  uninstall delete:    "/Library/PrivilegedHelperTools/net.whatroute.whatroute#{version.major}helper",
-            launchctl: [
+  uninstall launchctl: [
               "net.whatroute.LaunchHelper",
               "net.whatroute.whatroute#{version.major}helper",
             ],
-            quit:      "net.whatroute.whatroute#{version.major}"
+            quit:      "net.whatroute.whatroute#{version.major}",
+            delete:    "/Library/PrivilegedHelperTools/net.whatroute.whatroute#{version.major}helper"
 
   zap trash: [
     "~/Library/Caches/net.whatroute.whatroute#{version.major}",

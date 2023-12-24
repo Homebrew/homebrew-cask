@@ -17,14 +17,14 @@ cask "salt" do
 
   pkg "salt-#{version}-py3-#{arch}.pkg"
 
-  uninstall pkgutil:   [
-              "com.saltstack.salt",
-            ],
-            launchctl: [
+  uninstall launchctl: [
               "com.saltstack.salt.api",
               "com.saltstack.salt.master",
               "com.saltstack.salt.minion",
               "com.saltstack.salt.syndic",
+            ],
+            pkgutil:   [
+              "com.saltstack.salt",
             ]
 
   zap trash: "/etc/salt"

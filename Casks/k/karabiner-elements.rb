@@ -41,22 +41,22 @@ cask "karabiner-elements" do
     pkg "Karabiner-Elements.sparkle_guided.pkg"
   end
   on_mojave :or_older do
-    uninstall signal:    [
-                ["TERM", "org.pqrs.Karabiner-Menu"],
-                ["TERM", "org.pqrs.Karabiner-NotificationWindow"],
-              ],
-              pkgutil:   "org.pqrs.Karabiner-Elements",
-              launchctl: [
+    uninstall launchctl: [
                 "org.pqrs.karabiner.agent.karabiner_grabber",
                 "org.pqrs.karabiner.agent.karabiner_observer",
                 "org.pqrs.karabiner.karabiner_console_user_server",
                 "org.pqrs.karabiner.karabiner_kextd",
                 "org.pqrs.karabiner.karabiner_session_monitor",
               ],
+              signal:    [
+                ["TERM", "org.pqrs.Karabiner-Menu"],
+                ["TERM", "org.pqrs.Karabiner-NotificationWindow"],
+              ],
               script:    {
                 executable: "/Library/Application Support/org.pqrs/Karabiner-Elements/uninstall_core.sh",
                 sudo:       true,
               },
+              pkgutil:   "org.pqrs.Karabiner-Elements",
               delete:    "/Library/Application Support/org.pqrs/"
   end
   on_mojave do
@@ -90,24 +90,24 @@ cask "karabiner-elements" do
                 executable: "/Library/Application Support/org.pqrs/Karabiner-DriverKit-VirtualHIDDevice/scripts/uninstall/remove_files.sh",
                 sudo:       true,
               },
-              signal:       [
-                ["TERM", "org.pqrs.Karabiner-Menu"],
-                ["TERM", "org.pqrs.Karabiner-NotificationWindow"],
-              ],
-              pkgutil:      [
-                "org.pqrs.Karabiner-DriverKit-VirtualHIDDevice",
-                "org.pqrs.Karabiner-Elements",
-              ],
               launchctl:    [
                 "org.pqrs.karabiner.agent.karabiner_grabber",
                 "org.pqrs.karabiner.agent.karabiner_observer",
                 "org.pqrs.karabiner.karabiner_console_user_server",
                 "org.pqrs.karabiner.karabiner_session_monitor",
               ],
+              signal:       [
+                ["TERM", "org.pqrs.Karabiner-Menu"],
+                ["TERM", "org.pqrs.Karabiner-NotificationWindow"],
+              ],
               script:       {
                 executable: "/Library/Application Support/org.pqrs/Karabiner-Elements/uninstall_core.sh",
                 sudo:       true,
               },
+              pkgutil:      [
+                "org.pqrs.Karabiner-DriverKit-VirtualHIDDevice",
+                "org.pqrs.Karabiner-Elements",
+              ],
               delete:       "/Library/Application Support/org.pqrs/"
     # The system extension 'org.pqrs.Karabiner-DriverKit-VirtualHIDDevice*' should not be uninstalled by Cask
   end

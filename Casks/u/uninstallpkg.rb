@@ -16,8 +16,8 @@ cask "uninstallpkg" do
 
   app "UninstallPKG.app"
 
-  uninstall delete:    "/Library/PrivilegedHelperTools/com.corecode.UninstallPKGDeleteHelper",
-            launchctl: "com.corecode.UninstallPKGDeleteHelper"
+  uninstall launchctl: "com.corecode.UninstallPKGDeleteHelper",
+            delete:    "/Library/PrivilegedHelperTools/com.corecode.UninstallPKGDeleteHelper"
 
   zap trash: [
     "~/Library/Application Support/UninstallPKG",

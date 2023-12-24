@@ -17,14 +17,14 @@ cask "berrycast" do
 
   app "Berrycast.app"
 
-  uninstall login_item: "Berrycast",
-            quit:       [
+  uninstall quit:       [
               "com.openmindt.berrycast",
               "com.openmindt.berrycast.helper",
               "com.openmindt.berrycast.helper.GPU",
               "com.openmindt.berrycast.helper.Plugin",
               "com.openmindt.berrycast.helper.Renderer",
-            ]
+            ],
+            login_item: "Berrycast"
 
   zap trash: [
     "~/Library/Application Support/berrycast-desktop",

@@ -23,8 +23,8 @@ cask "tuple" do
 
   app "Tuple.app"
 
-  uninstall quit:      "app.tuple.app",
-            launchctl: "app.tuple.app-LaunchAtLoginHelper"
+  uninstall launchctl: "app.tuple.app-LaunchAtLoginHelper",
+            quit:      "app.tuple.app"
 
   zap trash: [
     "~/Library/Application Scripts/app.tuple.app-LaunchAtLoginHelper",

@@ -33,11 +33,11 @@ cask "tripmode" do
 
   app "TripMode.app"
 
-  uninstall signal:    ["TERM", "ch.tripmode.TripMode"],
-            launchctl: [
+  uninstall launchctl: [
               "ch.tripmode.nke.TripMode",
               "ch.tripmode.TripMode.HelperTool",
             ],
+            signal:    ["TERM", "ch.tripmode.TripMode"],
             delete:    "/Library/PrivilegedHelperTools/ch.tripmode.TripMode.HelperTool"
 
   zap trash: [

@@ -18,13 +18,13 @@ cask "sensei" do
 
   app "Sensei.app"
 
-  uninstall delete:    [
+  uninstall launchctl: "org.cindori.SenseiTool",
+            delete:    [
               "/Library/LaunchAgents/org.cindori.SenseiMonitor.plist",
               "/Library/LaunchDaemons/org.cindori.SenseiDaemon.plist",
               "/Library/LaunchDaemons/org.cindori.SenseiHelper.plist",
               "/Library/PrivilegedHelperTools/org.cindori.SenseiTool",
-            ],
-            launchctl: "org.cindori.SenseiTool"
+            ]
 
   zap trash: [
     "~/Library/Application Support/org.cindori.Sensei",

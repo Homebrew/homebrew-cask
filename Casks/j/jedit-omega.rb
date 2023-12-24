@@ -21,8 +21,8 @@ cask "jedit-omega" do
 
   pkg "JeditOmega#{version.no_dots}.pkg"
 
-  uninstall pkgutil: "jp.co.artman21.JeditOmega",
-            quit:    "jp.co.artman21.JeditOmega"
+  uninstall quit:    "jp.co.artman21.JeditOmega",
+            pkgutil: "jp.co.artman21.JeditOmega"
 
   zap trash: [
     "~/Library/Application Support/JeditOmega",

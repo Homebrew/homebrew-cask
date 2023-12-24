@@ -12,11 +12,11 @@ cask "mist" do
 
   pkg "Mist.#{version}.pkg"
 
-  uninstall quit:      [
+  uninstall launchctl: "com.ninxsoft.mist.helper",
+            quit:      [
               "com.ninxsoft.mist.helper",
               "com.ninxsoft.mist",
             ],
-            launchctl: "com.ninxsoft.mist.helper",
             pkgutil:   "com.ninxsoft.pkg.mist",
             delete:    [
               "/Library/LaunchDaemons/com.ninxsoft.mist.helper.plist",

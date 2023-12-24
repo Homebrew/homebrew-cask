@@ -14,9 +14,7 @@ cask "freedome" do
 
   pkg "Freedome.pkg"
 
-  uninstall quit:      "com.fsecure.freedome.osx",
-            pkgutil:   "com.f-secure.freedome*",
-            launchctl: [
+  uninstall launchctl: [
               "com.f-secure.freedome.gui",
               "com.f-secure.freedome.uninstall",
               "com.f-secure.fsvpn-ike-agent.production.macos",
@@ -24,7 +22,9 @@ cask "freedome" do
               "com.f-secure.fsvpn-service.production",
               "com.f-secure.fsvpn-upstream.production",
               "fsvpn-ike-agent.production.macos",
-            ]
+            ],
+            quit:      "com.fsecure.freedome.osx",
+            pkgutil:   "com.f-secure.freedome*"
 
   zap trash: [
     "/Library/LaunchDaemons/com.f-secure.freedome.uninstall.plist",

@@ -21,8 +21,8 @@ cask "trim-enabler" do
 
   app "Trim Enabler.app"
 
-  uninstall delete:    "/Library/PrivilegedHelperTools/org.cindori.TEHelper",
-            launchctl: "org.cindori.TEHelper"
+  uninstall launchctl: "org.cindori.TEHelper",
+            delete:    "/Library/PrivilegedHelperTools/org.cindori.TEHelper"
 
   zap trash: [
     "~/Library/Application Support/CrashReporter/Trim Enabler_#{version.major}.plist",

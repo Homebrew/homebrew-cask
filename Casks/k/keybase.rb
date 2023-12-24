@@ -34,11 +34,7 @@ cask "keybase" do
                    args: ["install-auto"]
   end
 
-  uninstall delete:    [
-              "/Library/Logs/keybase*",
-              "/Library/PrivilegedHelperTools/keybase.Helper",
-            ],
-            launchctl: "keybase.Helper",
+  uninstall launchctl: "keybase.Helper",
             signal:    [
               ["TERM", "keybase.Electron"],
               ["TERM", "keybase.ElectronHelper"],
@@ -48,7 +44,11 @@ cask "keybase" do
             script:    {
               executable: "#{appdir}/Keybase.app/Contents/SharedSupport/bin/keybase",
               args:       ["uninstall"],
-            }
+            },
+            delete:    [
+              "/Library/Logs/keybase*",
+              "/Library/PrivilegedHelperTools/keybase.Helper",
+            ]
 
   zap trash: [
         "~/Library/Application Support/Keybase",

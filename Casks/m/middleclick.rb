@@ -14,8 +14,8 @@ cask "middleclick" do
 
   app "MiddleClick.app"
 
-  uninstall login_item: "MiddleClick",
-            quit:       "com.rouge41.middleClick"
+  uninstall quit:       "com.rouge41.middleClick",
+            login_item: "MiddleClick"
 
   zap trash: "~/Library/Preferences/com.rouge41.middleClick.plist"
 end

@@ -21,16 +21,16 @@ cask "chef-workstation" do
 
   pkg "chef-workstation-#{version}-1.#{arch}.pkg"
 
-  uninstall quit:      "sh.chef.chef-workstation",
-            pkgutil:   "com.getchef.pkg.chef-workstation",
-            launchctl: [
+  uninstall launchctl: [
               "io.chef.chef-workstation",
               "io.chef.chef-workstation.app",
             ],
+            quit:      "sh.chef.chef-workstation",
             script:    {
               executable: "/opt/chef-workstation/bin/uninstall_chef_workstation",
               sudo:       true,
-            }
+            },
+            pkgutil:   "com.getchef.pkg.chef-workstation"
 
   zap trash: "~/.chef-workstation/"
 end

@@ -26,8 +26,8 @@ cask "charles" do
     end
   end
 
-  uninstall quit:      "com.xk72.Charles",
-            launchctl: "com.xk72.Charles.ProxyHelper",
+  uninstall launchctl: "com.xk72.Charles.ProxyHelper",
+            quit:      "com.xk72.Charles",
             delete:    "/Library/PrivilegedHelperTools/com.xk72.Charles.ProxyHelper"
 
   zap trash: [

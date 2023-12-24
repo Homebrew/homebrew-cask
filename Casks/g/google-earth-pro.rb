@@ -20,19 +20,19 @@ cask "google-earth-pro" do
   # pkgutil: com.google.pkg.Keystone
   uninstall pkgutil:  "com.Google.GoogleEarthPro"
 
-  zap trash:     [
-        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.google.googleearthpro.sfl*",
-        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.google.googleearthupdatehelper.sfl*",
-        "~/Library/Application Support/Google Earth",
-        "~/Library/Caches/Google Earth",
-        "~/Library/Caches/com.Google.GoogleEarthPro",
-      ],
-      launchctl: [
+  zap launchctl: [
         "com.google.keystone.agent",
         "com.google.keystone.system.agent",
         "com.google.keystone.daemon",
         "com.google.keystone.xpcservice",
         "com.google.keystone.system.xpcservice",
       ],
-      pkgutil:   "com.google.pkg.Keystone"
+      pkgutil:   "com.google.pkg.Keystone",
+      trash:     [
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.google.googleearthpro.sfl*",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.google.googleearthupdatehelper.sfl*",
+        "~/Library/Application Support/Google Earth",
+        "~/Library/Caches/Google Earth",
+        "~/Library/Caches/com.Google.GoogleEarthPro",
+      ]
 end

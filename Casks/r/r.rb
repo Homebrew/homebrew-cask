@@ -84,7 +84,8 @@ cask "r" do
               "/usr/bin/Rscript",
             ]
 
-  zap trash:  [
+  zap delete: "/Library/Frameworks/R.Framework",
+      trash:  [
         "~/.R",
         "~/.Rapp.history",
         "~/.RData",
@@ -92,8 +93,7 @@ cask "r" do
         "~/.Rprofile",
         "~/Library/R",
         "~/Library/Caches/org.R-project.R",
-      ],
-      delete: "/Library/Frameworks/R.Framework"
+      ]
 
   caveats do
     files_in_usr_local

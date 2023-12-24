@@ -18,21 +18,21 @@ cask "nordvpn" do
 
   pkg "NordVPN.pkg"
 
-  uninstall quit:       [
-              "com.nordvpn.macos",
-              "com.nordvpn.macos.NordVPNLauncher",
-            ],
-            launchctl:  [
+  uninstall launchctl:  [
               "com.nordvpn.macos.helper",
               "com.nordvpn.NordVPN.Helper",
             ],
+            quit:       [
+              "com.nordvpn.macos",
+              "com.nordvpn.macos.NordVPNLauncher",
+            ],
+            login_item: "NordVPN",
+            pkgutil:    "com.nordvpn.macos",
             delete:     [
               "/Library/PrivilegedHelperTools/com.nordvpn.macos.helper",
               "/Library/PrivilegedHelperTools/com.nordvpn.macos.ovpnDnsManager",
               "/Library/PrivilegedHelperTools/ovpn",
-            ],
-            login_item: "NordVPN",
-            pkgutil:    "com.nordvpn.macos"
+            ]
 
   zap trash: [
     "~/Library/Application Support/com.nordvpn.macos",

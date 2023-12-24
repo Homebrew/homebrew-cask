@@ -35,7 +35,16 @@ cask "microsoft-office" do
         },
       ]
 
-  uninstall pkgutil:   [
+  uninstall launchctl: [
+              "com.microsoft.office.licensing.helper",
+              "com.microsoft.office.licensingV2.helper",
+              "com.microsoft.OneDriveStandaloneUpdater",
+              "com.microsoft.OneDriveStandaloneUpdaterDaemon",
+              "com.microsoft.OneDriveUpdaterDaemon",
+              "com.microsoft.SyncReporter",
+            ],
+            quit:      "com.microsoft.autoupdate2",
+            pkgutil:   [
               "com.microsoft.OneDrive",
               "com.microsoft.package.DFonts",
               "com.microsoft.package.Frameworks",
@@ -48,7 +57,6 @@ cask "microsoft-office" do
               "com.microsoft.package.Proofing_Tools",
               "com.microsoft.pkg.licensing",
             ],
-            # Frameworks, DFonts and ProofingTools remain in each application after pkg uninstall, delete them
             delete:    [
               "/Applications/Microsoft Excel.app",
               "/Applications/Microsoft OneNote.app",
@@ -56,16 +64,7 @@ cask "microsoft-office" do
               "/Applications/Microsoft PowerPoint.app",
               "/Applications/Microsoft Word.app",
               "/Applications/OneDrive.app",
-            ],
-            launchctl: [
-              "com.microsoft.office.licensing.helper",
-              "com.microsoft.office.licensingV2.helper",
-              "com.microsoft.OneDriveStandaloneUpdater",
-              "com.microsoft.OneDriveStandaloneUpdaterDaemon",
-              "com.microsoft.OneDriveUpdaterDaemon",
-              "com.microsoft.SyncReporter",
-            ],
-            quit:      "com.microsoft.autoupdate2"
+            ]
 
   zap trash: [
     "~/Library/Application Scripts/com.microsoft.errorreporting",

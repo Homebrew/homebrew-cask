@@ -14,6 +14,6 @@ cask "endurance" do
 
   app "Endurance.app"
 
-  uninstall delete:    "/Library/PrivilegedHelperTools/com.MagnetismStudios.endurance.helper",
-            launchctl: "com.MagnetismStudios.endurance.helper"
+  uninstall launchctl: "com.MagnetismStudios.endurance.helper",
+            delete:    "/Library/PrivilegedHelperTools/com.MagnetismStudios.endurance.helper"
 end

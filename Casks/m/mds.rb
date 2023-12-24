@@ -21,8 +21,8 @@ cask "mds" do
 
   pkg "MDS.pkg"
 
-  uninstall pkgutil:   "com.twocanoes.pkg.MDS",
-            launchctl: "com.mds-micromdm"
+  uninstall launchctl: "com.mds-micromdm",
+            pkgutil:   "com.twocanoes.pkg.MDS"
 
   zap trash: [
     "/usr/local/mds-micromdm",

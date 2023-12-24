@@ -23,9 +23,9 @@ cask "fxfactory" do
 
   pkg "Install FxFactory #{version.csv.first}.pkg"
 
-  uninstall pkgutil:   "com.fxfactory.pkg",
+  uninstall launchctl: "com.fxfactory.FxFactory.helper",
             quit:      "com.fxfactory.FxFactory",
-            launchctl: "com.fxfactory.FxFactory.helper",
+            pkgutil:   "com.fxfactory.pkg",
             delete:    [
               "/Library/Application Support/FxFactory",
               "/Library/LaunchDaemons/com.fxfactory.FxFactory.helper.plist",

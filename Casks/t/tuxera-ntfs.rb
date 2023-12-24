@@ -25,12 +25,12 @@ cask "tuxera-ntfs" do
               "com.tuxera.pkg.Tuxera_NTFS_compat",
             ]
 
-  zap trash:  [
-        "~/Library/Saved Application State/com.tuxera.TuxeraDiskManager.savedState",
-        "~/Library/Caches/com.tuxera.filesystems.ntfs.agent",
-      ],
-      delete: [
+  zap delete: [
         "/Library/Application Support/Tuxera NTFS",
         "/Library/Preferences/com.tuxera.NTFS.plist",
+      ],
+      trash:  [
+        "~/Library/Saved Application State/com.tuxera.TuxeraDiskManager.savedState",
+        "~/Library/Caches/com.tuxera.filesystems.ntfs.agent",
       ]
 end

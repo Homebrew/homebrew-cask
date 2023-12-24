@@ -20,8 +20,8 @@ cask "soundflower" do
               args:         ["-b", "com.Cycling74.driver.Soundflower"],
               must_succeed: false,
             },
-            pkgutil:      "com.cycling74.soundflower.*",
-            kext:         "com.Cycling74.driver.Soundflower"
+            kext:         "com.Cycling74.driver.Soundflower",
+            pkgutil:      "com.cycling74.soundflower.*"
 
   caveats do
     kext

@@ -17,12 +17,12 @@ cask "logitech-camera-settings" do
   pkg "LogiCameraSettings_#{version}.pkg"
 
   uninstall signal:     ["TERM", "com.logitech.vc.LogiVCCoreService"],
+            login_item: "Background Replace",
             pkgutil:    [
               "com.logitech.vc.LogiVCCoreService.launchd.pkg",
               "com.logitech.vc.LogiVCCoreService.app.pkg",
               "com.logitech.vc.CameraSettings.pkg",
-            ],
-            login_item: "Background Replace"
+            ]
 
   zap trash: [
     "~/Library/Application Support/Logitech/com.logitech.vc.camerasettings",

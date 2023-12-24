@@ -18,7 +18,9 @@ cask "resolume-arena" do
 
   pkg "Resolume Arena Installer.pkg"
 
-  uninstall pkgutil:   [
+  uninstall launchctl: "com.resolume.arena",
+            signal:    ["TERM", "com.resolume.arena"],
+            pkgutil:   [
               "com.resolume.pkg.ResolumeArena.*",
               "com.resolume.pkg.ResolumeDXV",
               "com.resolume.pkg.ResolumeQuickLook",
@@ -27,9 +29,7 @@ cask "resolume-arena" do
               "com.resolume.pkg.ResolumeCommon",
               "com.resolume.pkg.ResolumeWire",
             ],
-            delete:    "/Applications/Resolume Arena #{version.major}",
-            signal:    ["TERM", "com.resolume.arena"],
-            launchctl: "com.resolume.arena"
+            delete:    "/Applications/Resolume Arena #{version.major}"
 
   zap pkgutil: [
     "com.resolume.pkg.ResolumeDXV",

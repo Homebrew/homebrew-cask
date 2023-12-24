@@ -13,6 +13,6 @@ cask "sonarr-menu" do
 
   app "Sonarr-Menu.app"
 
-  uninstall quit:      "tv.sonarr.Sonarr-Menu",
-            launchctl: "tv.sonarr.Sonarr-Menu"
+  uninstall launchctl: "tv.sonarr.Sonarr-Menu",
+            quit:      "tv.sonarr.Sonarr-Menu"
 end

@@ -16,9 +16,9 @@ cask "ringcentral" do
 
   pkg "RingCentral#{arch}.pkg"
 
-  uninstall delete:  "/Applications/RingCentral.app",
-            quit:    "RingCentral",
-            pkgutil: "com.ringcentral.glip"
+  uninstall quit:    "RingCentral",
+            pkgutil: "com.ringcentral.glip",
+            delete:  "/Applications/RingCentral.app"
 
   zap trash: [
     "~/Library/Application Support/RingCentral",

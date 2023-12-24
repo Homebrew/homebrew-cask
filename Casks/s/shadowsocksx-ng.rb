@@ -12,8 +12,7 @@ cask "shadowsocksx-ng" do
 
   app "ShadowsocksX-NG.app"
 
-  uninstall delete:    "/Library/Application Support/ShadowsocksX-NG",
-            launchctl: [
+  uninstall launchctl: [
               "com.qiuyuzhou.shadowsocksX-NG.http",
               "com.qiuyuzhou.shadowsocksX-NG.kcptun",
               "com.qiuyuzhou.shadowsocksX-NG.local",
@@ -24,7 +23,8 @@ cask "shadowsocksx-ng" do
               executable: "#{appdir}/ShadowsocksX-NG.app/Contents/Resources/proxy_conf_helper",
               args:       ["--mode", "off"],
               sudo:       true,
-            }
+            },
+            delete:    "/Library/Application Support/ShadowsocksX-NG"
 
   zap trash: [
     "~/.ShadowsocksX-NG",

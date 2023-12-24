@@ -22,13 +22,13 @@ cask "foxit-pdf-editor" do
 
   pkg "FoxitPDFEditor#{version.no_dots}.L10N.Setup.pkg"
 
-  uninstall pkgutil:   "com.foxit.pkg.pdfeditor",
+  uninstall launchctl: "com.foxit.PDFEditorUpdateService",
+            pkgutil:   "com.foxit.pkg.pdfeditor",
             delete:    [
               "/Applications/Foxit PDF Editor.app",
               "/Library/Application Support/Foxit Software/FoxitService/FoxitPDFEditorUpdateService.app",
               "/Library/LaunchDaemons/com.foxit.PDFEditorUpdateService.plist",
-            ],
-            launchctl: "com.foxit.PDFEditorUpdateService"
+            ]
 
   zap trash: [
     "~/Library/Application Support/Foxit Software/Foxit PDF Editor",

@@ -28,6 +28,6 @@ cask "isyncr" do
 
   pkg "iSyncr Desktop #{version}.pkg"
 
-  uninstall pkgutil: "com.jrtstudio.iSyncrDesktop",
-            quit:    "com.JRTStudio.iSyncrWiFi"
+  uninstall quit:    "com.JRTStudio.iSyncrWiFi",
+            pkgutil: "com.jrtstudio.iSyncrDesktop"
 end

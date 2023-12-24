@@ -17,8 +17,8 @@ cask "iconchamp" do
 
   app "IconChamp.app"
 
-  uninstall quit:      "com.macenhance.IconChamp",
-            launchctl: "com.macenhance.ICHelper",
+  uninstall launchctl: "com.macenhance.ICHelper",
+            quit:      "com.macenhance.IconChamp",
             delete:    [
               "/Library/LaunchDaemons/com.macenhance.ICHelper.plist",
               "/Library/PrivilegedHelperTools/com.macenhance.ICHelper",

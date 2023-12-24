@@ -18,8 +18,8 @@ cask "emclient" do
 
   pkg "setup.pkg"
 
-  uninstall delete:  "/Applications/eM Client.app",
-            pkgutil: "com.emclient.mail.client.pkg"
+  uninstall pkgutil: "com.emclient.mail.client.pkg",
+            delete:  "/Applications/eM Client.app"
 
   zap trash: [
     "~/Library/Caches/com.emclient.mail.client",

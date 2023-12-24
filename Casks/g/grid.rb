@@ -14,11 +14,11 @@ cask "grid" do
 
   app "Grid.app"
 
-  uninstall quit:      [
+  uninstall launchctl: "app.macgrid.GridLaunchAtLogin",
+            quit:      [
               "app.macgrid.Grid",
               "app.macgrid.GridLaunchAtLogin",
-            ],
-            launchctl: "app.macgrid.GridLaunchAtLogin"
+            ]
 
   zap trash: [
     "~/Library/Application Support/Grid",

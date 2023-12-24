@@ -16,13 +16,13 @@ cask "bing-wallpaper" do
 
   pkg "Bing Wallpaper.pkg"
 
-  uninstall pkgutil:   "com.microsoft.msbwpackage",
+  uninstall launchctl: [
+              "com.microsoft.msbwapp",
+              "com.microsoft.msbwupdater",
+            ],
             quit:      [
               "com.microsoft.autoupdate2",
               "com.microsoft.msbwdefaults",
             ],
-            launchctl: [
-              "com.microsoft.msbwapp",
-              "com.microsoft.msbwupdater",
-            ]
+            pkgutil:   "com.microsoft.msbwpackage"
 end

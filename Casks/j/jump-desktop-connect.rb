@@ -14,13 +14,13 @@ cask "jump-desktop-connect" do
 
   pkg ".jdc.sparkle_guided.pkg"
 
-  uninstall signal:    ["QUIT", "com.p5sys.jump.connect"],
-            pkgutil:   "com.p5sys.jump.connect",
-            launchctl: [
+  uninstall launchctl: [
               "application.com.p5sys.jump.connect.*",
               "com.p5sys.jump.connect.service",
               "com.p5sys.jump.connect.agent",
             ],
+            signal:    ["QUIT", "com.p5sys.jump.connect"],
+            pkgutil:   "com.p5sys.jump.connect",
             delete:    "/Library/Application Support/Jump Desktop/Connect/sharedconfig.plist",
             rmdir:     [
               "/Library/Application Support/Jump Desktop/Connect/",

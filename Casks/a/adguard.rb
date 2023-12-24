@@ -20,14 +20,14 @@ cask "adguard" do
 
   pkg "AdGuard.pkg"
 
-  uninstall quit:      "com.adguard.mac.adguard",
-            pkgutil:   "com.adguard.mac.adguard-pkg",
-            launchctl: [
+  uninstall launchctl: [
               "com.adguard.mac.adguard.pac",
               "com.adguard.mac.adguard.helper",
               "com.adguard.mac.adguard.tun-helper",
               "com.adguard.mac.adguard.xpcgate2",
             ],
+            quit:      "com.adguard.mac.adguard",
+            pkgutil:   "com.adguard.mac.adguard-pkg",
             delete:    [
               "/Library/Application Support/AdGuard Software/com.adguard.mac.adguard",
               "/Library/Application Support/com.adguard.Adguard",
@@ -35,7 +35,8 @@ cask "adguard" do
             ],
             rmdir:     "/Library/Application Support/AdGuard Software"
 
-  zap trash:  [
+  zap delete: "/Library/Logs/com.adguard.mac.adguard",
+      trash:  [
         "~/Library/Application Scripts/*.com.adguard.mac*",
         "~/Library/Application Support/Adguard",
         "~/Library/Application Support/com.adguard.*",
@@ -48,6 +49,5 @@ cask "adguard" do
         "~/Library/Logs/Adguard",
         "~/Library/Preferences/com.adguard.*.plist",
         "~/Library/Saved Application State/com.adguard.mac.adguard.savedState",
-      ],
-      delete: "/Library/Logs/com.adguard.mac.adguard"
+      ]
 end

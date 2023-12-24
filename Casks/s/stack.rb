@@ -14,8 +14,8 @@ cask "stack" do
 
   app "stack.app"
 
-  uninstall login_item: "stack",
-            signal:     ["TERM", "nl.transip.stack"],
+  uninstall signal:     ["TERM", "nl.transip.stack"],
+            login_item: "stack",
             pkgutil:    "nl.transip.stack"
 
   zap trash: [

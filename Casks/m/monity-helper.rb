@@ -14,8 +14,8 @@ cask "monity-helper" do
 
   pkg "MonityHelper.pkg"
 
-  uninstall quit:      "com.Monity.Helper",
-            launchctl: "com.Monity.Helper",
+  uninstall launchctl: "com.Monity.Helper",
+            quit:      "com.Monity.Helper",
             pkgutil:   [
               "com.Monity.Helper.monityHelper.com.Monity.Helper.pkg",
               "com.Monity.Helper.monityHelper.MonityHelper.pkg",

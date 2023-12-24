@@ -19,22 +19,22 @@ cask "cleanmymac" do
 
   app "CleanMyMac X.app"
 
-  uninstall delete:     [
-              "/Library/LaunchDaemons/com.macpaw.CleanMyMac#{version.major}.Agent.plist",
-              "/Library/PrivilegedHelperTools/com.macpaw.CleanMyMac#{version.major}.Agent",
-            ],
-            launchctl:  [
+  uninstall launchctl:  [
               "com.macpaw.CleanMyMac#{version.major}.Agent",
               "com.macpaw.CleanMyMac#{version.major}.HealthMonitor",
               "com.macpaw.CleanMyMac#{version.major}.Menu",
               "com.macpaw.CleanMyMac#{version.major}.Scheduler",
               "com.macpaw.CleanMyMac#{version.major}.Updater",
             ],
-            login_item: "CleanMyMac #{version.major} Menu",
             quit:       [
               "com.macpaw.CleanMyMac#{version.major}",
               "com.macpaw.CleanMyMac#{version.major}.HealthMonitor",
               "com.macpaw.CleanMyMac#{version.major}.Menu",
+            ],
+            login_item: "CleanMyMac #{version.major} Menu",
+            delete:     [
+              "/Library/LaunchDaemons/com.macpaw.CleanMyMac#{version.major}.Agent.plist",
+              "/Library/PrivilegedHelperTools/com.macpaw.CleanMyMac#{version.major}.Agent",
             ]
 
   zap trash: [

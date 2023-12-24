@@ -25,13 +25,13 @@ cask "jabra-direct" do
               "com.jabra.softphoneService",
               "nl.superalloy.oss.terminal-notifier",
             ],
-            delete:     "/Applications/Jabra Direct.app",
             login_item: "Jabra Direct",
             pkgutil:    [
               "com.jabra.directonline",
               "com.jabra.JabraFirmwareUpdate",
               "com.jabra.kext",
-            ]
+            ],
+            delete:     "/Applications/Jabra Direct.app"
 
   zap trash: [
     "~/Library/Application Support/Jabra",

@@ -10,6 +10,6 @@ cask "gpg-sync" do
 
   pkg "GPGSync-#{version}.pkg"
 
-  uninstall pkgutil:   "org.firstlook.gpgsync",
-            launchctl: "org.firstlook.gpgsync"
+  uninstall launchctl: "org.firstlook.gpgsync",
+            pkgutil:   "org.firstlook.gpgsync"
 end

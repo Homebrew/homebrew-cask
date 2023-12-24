@@ -28,8 +28,8 @@ cask "tailscale" do
     EOS
   end
 
-  uninstall login_item: "Tailscale",
-            quit:       "io.tailscale.ipn.macsys"
+  uninstall quit:       "io.tailscale.ipn.macsys",
+            login_item: "Tailscale"
 
   zap trash: [
     "~/Library/Tailscale",

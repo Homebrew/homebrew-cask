@@ -11,8 +11,8 @@ cask "blurred" do
 
   app "Blurred.app"
 
-  uninstall quit:      "foundation.dwarves.blurred",
-            launchctl: "foundation.dwarves.blurredlaunche"
+  uninstall launchctl: "foundation.dwarves.blurredlaunche",
+            quit:      "foundation.dwarves.blurred"
 
   zap trash: [
     "~/Library/Application Scripts/foundation.dwarves.blurred",

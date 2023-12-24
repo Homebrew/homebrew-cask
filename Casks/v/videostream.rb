@@ -15,6 +15,6 @@ cask "videostream" do
               "com.videostream.launcher",
               "com.videostream.updater.#{version}",
             ],
-            pkgutil:   "com.videostream",
-            signal:    ["TERM", "com.videostream"]
+            signal:    ["TERM", "com.videostream"],
+            pkgutil:   "com.videostream"
 end

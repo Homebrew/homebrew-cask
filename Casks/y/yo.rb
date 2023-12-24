@@ -11,10 +11,10 @@ cask "yo" do
 
   pkg "yo-#{version}.pkg"
 
-  uninstall delete:    "/usr/local/bin/yo_scheduler",
-            launchctl: [
+  uninstall launchctl: [
               "com.sheagcraig.yo.login_once",
               "com.sheagcraig.yo.on_demand",
             ],
-            pkgutil:   "com.sheagcraig.yo"
+            pkgutil:   "com.sheagcraig.yo",
+            delete:    "/usr/local/bin/yo_scheduler"
 end

@@ -15,8 +15,8 @@ cask "datadog-agent" do
 
   installer manual: "datadog-agent-#{version}.pkg"
 
-  uninstall quit:      "com.datadoghq.agent",
-            launchctl: "com.datadoghq.agent",
+  uninstall launchctl: "com.datadoghq.agent",
+            quit:      "com.datadoghq.agent",
             pkgutil:   "com.datadoghq.agent",
             delete:    [
               "/Applications/Datadog Agent.app",

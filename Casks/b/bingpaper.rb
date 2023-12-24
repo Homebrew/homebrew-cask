@@ -16,11 +16,11 @@ cask "bingpaper" do
   uninstall launchctl: "io.pjw.mac.BingPaperLoginItem",
             quit:      "io.pjw.mac.BingPaper"
 
-  zap rmdir: "~/Pictures/BingPaper",
-      trash: [
+  zap trash: [
         "~/Library/Application Scripts/io.pjw.mac.BingPaper",
         "~/Library/Application Scripts/io.pjw.mac.BingPaperLoginItem",
         "~/Library/Containers/io.pjw.mac.BingPaper",
         "~/Library/Containers/io.pjw.mac.BingPaperLoginItem",
-      ]
+      ],
+      rmdir: "~/Pictures/BingPaper"
 end

@@ -73,8 +73,8 @@ cask "klayout" do
     FileUtils.mv(staged_path.children, staged_path.join("KLayout").tap(&:mkpath))
   end
 
-  uninstall pkgutil: "klayout.de",
-            quit:    "klayout.de"
+  uninstall quit:    "klayout.de",
+            pkgutil: "klayout.de"
 
   zap trash: "~/.klayout"
 end

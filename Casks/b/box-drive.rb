@@ -21,16 +21,16 @@ cask "box-drive" do
 
   pkg "BoxDrive.pkg"
 
-  uninstall pkgutil:   "com.box.desktop.installer.*",
-            launchctl: "com.box.desktop.helper",
-            script:    "/Library/Application Support/Box/uninstall_box_drive",
+  uninstall launchctl: "com.box.desktop.helper",
             quit:      [
               "com.box.Box-Local-Com-Server",
               "com.box.desktop",
               "com.box.desktop.findersyncext",
               "com.box.desktop.helper",
               "com.box.desktop.ui",
-            ]
+            ],
+            script:    "/Library/Application Support/Box/uninstall_box_drive",
+            pkgutil:   "com.box.desktop.installer.*"
 
   zap trash: [
     "~/Library/Application Support/Box/Box",

@@ -15,11 +15,11 @@ cask "wire" do
 
   pkg "Wire.pkg"
 
-  uninstall pkgutil: "com.wearezeta.zclient.mac",
-            signal:  [
+  uninstall signal:  [
               ["TERM", "com.wearezeta.zclient.mac.helper"],
               ["TERM", "com.wearezeta.zclient.mac"],
-            ]
+            ],
+            pkgutil: "com.wearezeta.zclient.mac"
 
   zap trash: "~/Library/Containers/com.wearezeta.zclient.mac"
 end

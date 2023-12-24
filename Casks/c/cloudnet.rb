@@ -22,8 +22,8 @@ cask "cloudnet" do
     sudo:       true,
   }
 
-  uninstall quit:      "world.cloudnet.client",
-            launchctl: "world.cloudnet.client.cloudnetd",
+  uninstall launchctl: "world.cloudnet.client.cloudnetd",
+            quit:      "world.cloudnet.client",
             script:    {
               executable: "CloudNet.app/Contents/Resources/cnet",
               args:       ["uninstall"],

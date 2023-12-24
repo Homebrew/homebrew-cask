@@ -15,15 +15,15 @@ cask "perimeter81" do
 
   pkg "Perimeter81_#{version}.pkg"
 
-  uninstall pkgutil:   "com.safervpn.osx.smb",
-            signal:    ["TERM", "com.safervpn.osx.smb"],
-            launchctl: [
+  uninstall launchctl: [
               "com.perimeter81.osx.HelperTool",
               "com.perimeter81.Perimeter81",
               "com.perimeter81d",
               "com.perimeter81d.app",
               "system/com.perimeter81d",
             ],
+            signal:    ["TERM", "com.safervpn.osx.smb"],
+            pkgutil:   "com.safervpn.osx.smb",
             delete:    [
               "/Library/PrivilegedHelperTools/com.perimeter81.osx.HelperTool",
               "/Library/PrivilegedHelperTools/com.perimeter81d.app/Contents/MacOS/com.perimeter81d",

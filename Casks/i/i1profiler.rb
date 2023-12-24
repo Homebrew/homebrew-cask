@@ -16,14 +16,14 @@ cask "i1profiler" do
 
   pkg "i1Profiler.pkg"
 
-  uninstall pkgutil:   [
+  uninstall launchctl: [
+              "com.aladdin.aksusbd",
+              "com.aladdin.hasplmd",
+            ],
+            pkgutil:   [
               "com.xrite.hasp.installer.*",
               "com.xrite.i1profiler.*",
               "com.xrite.xritedeviceservices.*",
-            ],
-            launchctl: [
-              "com.aladdin.aksusbd",
-              "com.aladdin.hasplmd",
             ],
             delete:    [
               "/Applications/i1Profiler/i1Profiler.app",

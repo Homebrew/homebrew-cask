@@ -13,12 +13,12 @@ cask "pritunl" do
 
   pkg "Pritunl#{arch}.pkg"
 
-  uninstall pkgutil:   "com.pritunl.pkg.Pritunl",
-            launchctl: [
+  uninstall launchctl: [
               "com.pritunl.client",
               "com.pritunl.service",
             ],
             signal:    ["TERM", "com.electron.pritunl"],
+            pkgutil:   "com.pritunl.pkg.Pritunl",
             delete:    "/Applications/Pritunl.app"
 
   zap trash: [

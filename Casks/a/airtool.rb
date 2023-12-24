@@ -21,12 +21,12 @@ cask "airtool" do
     set_ownership "/Library/Application Support/Airtool #{version.major}"
   end
 
-  uninstall pkgutil:    [
+  uninstall launchctl:  "com.intuitibits.airtool#{version.major}.airtool-bpf",
+            login_item: "Airtool",
+            pkgutil:    [
               "com.intuitibits.airtool-helper.pkg",
               "com.intuitibits.airtool#{version.major}.pkg",
             ],
-            launchctl:  "com.intuitibits.airtool#{version.major}.airtool-bpf",
-            login_item: "Airtool",
             delete:     "/Library/Application Support/Airtool #{version.major}"
 
   zap trash: [

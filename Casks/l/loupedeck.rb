@@ -17,14 +17,14 @@ cask "loupedeck" do
 
   pkg "LoupedeckInstaller.pkg"
 
-  uninstall signal:    [
+  uninstall launchctl: "com.loupedeck.loupedeck2.launch",
+            signal:    [
               ["TERM", "com.loupedeck.Loupedeck2"],
               ["QUIT", "com.loupedeck.Loupedeck2"],
               ["INT", "com.loupedeck.Loupedeck2"],
               ["HUP", "com.loupedeck.Loupedeck2"],
               ["KILL", "com.loupedeck.Loupedeck2"],
             ],
-            launchctl: "com.loupedeck.loupedeck2.launch",
             pkgutil:   [
               "com.loupedeck.ImageLibraryInstaller",
               "com.loupedeck.LibraryInstaller",

@@ -15,7 +15,7 @@ cask "aviatrix-vpn-client" do
 
   pkg "AVPNC_mac.pkg"
 
-  uninstall pkgutil:   "com.Aviatrix.VPNClient",
-            delete:    "/Applications/Aviatrix VPN Client.app",
-            launchctl: "aviatrix.vpn.client.rp.plist"
+  uninstall launchctl: "aviatrix.vpn.client.rp.plist",
+            pkgutil:   "com.Aviatrix.VPNClient",
+            delete:    "/Applications/Aviatrix VPN Client.app"
 end

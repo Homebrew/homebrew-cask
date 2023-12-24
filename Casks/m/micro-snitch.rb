@@ -17,8 +17,8 @@ cask "micro-snitch" do
 
   app "Micro Snitch.app"
 
-  uninstall quit:      "at.obdev.MicroSnitch",
-            launchctl: "at.obdev.MicroSnitchOpenAtLoginHelper"
+  uninstall launchctl: "at.obdev.MicroSnitchOpenAtLoginHelper",
+            quit:      "at.obdev.MicroSnitch"
 
   zap trash: [
     "~/Library/Application Support/at.obdev.MicroSnitchOpenAtLoginHelper",

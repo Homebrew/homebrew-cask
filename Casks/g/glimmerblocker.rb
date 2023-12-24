@@ -11,12 +11,12 @@ cask "glimmerblocker" do
 
   pkg "GlimmerBlocker.pkg"
 
-  uninstall pkgutil:   "org.glimmerblocker.pkg",
-            launchctl: [
+  uninstall launchctl: [
               "org.glimmerblocker.installer",
               "org.glimmerblocker.proxy",
               "org.glimmerblocker.updater",
             ],
+            pkgutil:   "org.glimmerblocker.pkg",
             delete:    "/Library/PreferencePanes/GlimmerBlocker.prefPane"
 
   zap trash: [

@@ -16,13 +16,13 @@ cask "arq" do
 
   pkg "Arq#{version}.pkg"
 
-  uninstall pkgutil:   "com.haystacksoftware.Arq",
-            quit:      "com.haystacksoftware.Arq",
-            delete:    "/Applications/Arq.app",
-            launchctl: [
+  uninstall launchctl: [
               "com.haystacksoftware.arqagent",
               "com.haystacksoftware.ArqMonitor",
-            ]
+            ],
+            quit:      "com.haystacksoftware.Arq",
+            pkgutil:   "com.haystacksoftware.Arq",
+            delete:    "/Applications/Arq.app"
 
   zap trash: [
     "/Library/Application Support/ArqAgent",

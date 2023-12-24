@@ -20,8 +20,8 @@ cask "lantern" do
 
   app "Lantern.app"
 
-  uninstall quit:      "com.getlantern.lantern",
-            launchctl: "org.getlantern"
+  uninstall launchctl: "org.getlantern",
+            quit:      "com.getlantern.lantern"
 
   zap trash: [
     "~/Library/Application Support/Lantern",

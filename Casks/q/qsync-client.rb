@@ -14,11 +14,11 @@ cask "qsync-client" do
 
   installer manual: "Qsync Client.pkg"
 
-  uninstall pkgutil: "com.qnap.qsync",
-            quit:    [
+  uninstall quit:    [
               "com.qnap.qsync",
               "com.qnap.qsync.findersync",
-            ]
+            ],
+            pkgutil: "com.qnap.qsync"
 
   zap trash: [
     "~/Library/Application Scripts/com.qnap.qsync",

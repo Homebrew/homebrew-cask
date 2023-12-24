@@ -16,8 +16,8 @@ cask "fsmonitor" do
 
   app "FSMonitor.app"
 
-  uninstall delete:    "/Library/PrivilegedHelperTools/com.tristan.fseventstool",
-            launchctl: "com.tristan.fseventstool"
+  uninstall launchctl: "com.tristan.fseventstool",
+            delete:    "/Library/PrivilegedHelperTools/com.tristan.fseventstool"
 
   zap trash: [
     "/Users/Shared/FSMonitor",

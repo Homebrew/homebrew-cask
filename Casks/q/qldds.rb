@@ -15,6 +15,6 @@ cask "qldds" do
 
   pkg "QLdds_#{version.no_dots}.pkg"
 
-  uninstall pkgutil:   "uk.org.marginal.qldds",
-            launchctl: "uk.org.marginal.qldds.mdimporter"
+  uninstall launchctl: "uk.org.marginal.qldds.mdimporter",
+            pkgutil:   "uk.org.marginal.qldds"
 end

@@ -15,12 +15,12 @@ cask "boinc" do
 
   pkg "boinc_#{version}_macOSX_universal/BOINC Installer.app/Contents/Resources/BOINC.pkg"
 
-  uninstall pkgutil:   "edu.berkeley.boinc",
-            launchctl: [
+  uninstall launchctl: [
               "edu.berkeley.boinc-sshelper",
               "edu.berkeley.launchBOINCManager",
             ],
-            quit:      "edu.berkeley.boinc.finish-install"
+            quit:      "edu.berkeley.boinc.finish-install",
+            pkgutil:   "edu.berkeley.boinc"
 
   zap trash: [
     "/Library/Application Support/BOINC Data",

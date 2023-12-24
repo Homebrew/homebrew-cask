@@ -19,8 +19,8 @@ cask "native-access" do
 
   app "Native Access.app"
 
-  uninstall quit:      "com.native-instruments.Native Access",
-            launchctl: "com.native-instruments.NativeAccess.Helper2",
+  uninstall launchctl: "com.native-instruments.NativeAccess.Helper2",
+            quit:      "com.native-instruments.Native Access",
             delete:    [
               "/Library/Application Support/Native Instruments",
               "/Library/Preferences/com.native-instruments.NTKDaemon.plist",

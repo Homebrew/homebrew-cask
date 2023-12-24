@@ -17,23 +17,23 @@ cask "powerpanel" do
 
   pkg "PPP_Mac_v#{version}.pkg"
 
-  uninstall pkgutil:   [
-              "com.cpsww.ppupsd",
-              "com.cyberpower.powerpanelpersonal.ppp",
-            ],
-            launchctl: [
+  uninstall launchctl: [
               "com.cpsww.ppupsd",
               "com.cyberpower.powerpanel-personal.client",
               "com.cyberpower.powerpanel-personal.daemon",
             ],
+            pkgutil:   [
+              "com.cpsww.ppupsd",
+              "com.cyberpower.powerpanelpersonal.ppp",
+            ],
             delete:    "/Applications/PowerPanel Personal.app"
 
-  zap trash:  [
-        "~/Library/Preferences/PowerPanel Personal.plist",
-        "~/Library/Saved Application State/PowerPanel Personal.savedState",
-      ],
-      delete: [
+  zap delete: [
         "/Library/LaunchAgents/com.cyberpower.powerpanel-personal.client.plist",
         "/Library/LaunchDaemons/com.cyberpower.powerpanel-personal.daemon.plist",
+      ],
+      trash:  [
+        "~/Library/Preferences/PowerPanel Personal.plist",
+        "~/Library/Saved Application State/PowerPanel Personal.savedState",
       ]
 end

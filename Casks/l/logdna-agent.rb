@@ -12,8 +12,8 @@ cask "logdna-agent" do
 
   pkg "logdna-agent-#{version}.pkg"
 
-  uninstall pkgutil:   "com.logdna.logdna-agent",
-            launchctl: "com.logdna.logdna-agentd"
+  uninstall launchctl: "com.logdna.logdna-agentd",
+            pkgutil:   "com.logdna.logdna-agent"
 
   caveats do
     <<~EOS

@@ -9,9 +9,9 @@ cask "pivy" do
 
   pkg "pivy-#{version}-macos12.pkg"
 
-  uninstall pkgutil:   "net.cooperi.pivy",
-            launchctl: "net.cooperi.pivy-agent",
-            quit:      "net.cooperi.pivy-agent"
+  uninstall launchctl: "net.cooperi.pivy-agent",
+            quit:      "net.cooperi.pivy-agent",
+            pkgutil:   "net.cooperi.pivy"
 
   # No zap stanza required
 

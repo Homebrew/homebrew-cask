@@ -18,13 +18,7 @@ cask "adobe-acrobat-pro" do
 
   pkg "Acrobat/Acrobat DC Installer.pkg"
 
-  uninstall pkgutil:   [
-              "com.adobe.acrobat.DC.*",
-              "com.adobe.AcroServicesUpdater",
-              "com.adobe.armdc.app.pkg",
-              "com.adobe.PDApp.AdobeApplicationManager.installer.pkg",
-            ],
-            launchctl: [
+  uninstall launchctl: [
               "Adobe_Genuine_Software_Integrity_Service",
               "com.adobe.AAM.Startup-1.0",
               "com.adobe.AAM.Updater-1.0",
@@ -32,6 +26,12 @@ cask "adobe-acrobat-pro" do
               "com.adobe.ARMDC.Communicator",
               "com.adobe.ARMDC.SMJobBlessHelper",
               "com.adobe.ARMDCHelper.cc24aef4a1b90ed56a725c38014c95072f92651fb65e1bf9c8e43c37a23d420d",
+            ],
+            pkgutil:   [
+              "com.adobe.acrobat.DC.*",
+              "com.adobe.AcroServicesUpdater",
+              "com.adobe.armdc.app.pkg",
+              "com.adobe.PDApp.AdobeApplicationManager.installer.pkg",
             ],
             delete:    "/Applications/Adobe Acrobat DC/"
 

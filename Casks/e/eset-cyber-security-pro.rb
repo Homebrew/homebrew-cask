@@ -14,7 +14,11 @@ cask "eset-cyber-security-pro" do
 
   pkg "Resources/Installer.pkg"
 
-  uninstall script:    {
+  uninstall launchctl: [
+              "com.eset.esets_daemon",
+              "com.eset.esets_pidmapper",
+            ],
+            script:    {
               executable: "/Applications/ESET Cyber Security Pro.app/Contents/Helpers/Uninstaller.app/Contents/Scripts/uninstall.sh",
               sudo:       true,
             },
@@ -25,10 +29,6 @@ cask "eset-cyber-security-pro" do
               "com.eset.esetCyberSecurityPro.ESETCyberSecurityPro.pkg",
               "com.eset.esetCyberSecurityPro.GUI_startup.pkg",
               "com.eset.esetCyberSecurityPro.pkgid2.pkg",
-            ],
-            launchctl: [
-              "com.eset.esets_daemon",
-              "com.eset.esets_pidmapper",
             ],
             delete:    [
               "/Applications/ESET Cyber Security Pro.app",

@@ -22,9 +22,9 @@ cask "busycontacts" do
 
   pkg "BusyContacts Installer.pkg"
 
-  uninstall pkgutil: "com.busymac.busycontacts.pkg",
-            quit:    "com.busymac.busycontacts",
-            signal:  ["KILL", "com.busymac.busycontacts"]
+  uninstall quit:    "com.busymac.busycontacts",
+            signal:  ["KILL", "com.busymac.busycontacts"],
+            pkgutil: "com.busymac.busycontacts.pkg"
 
   zap trash: [
     "~/Library/Application Scripts/com.busymac.busycontacts",

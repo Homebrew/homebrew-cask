@@ -14,14 +14,14 @@ cask "iceberg" do
 
   pkg "Iceberg.mpkg"
 
-  uninstall pkgutil: [
-              "fr.white.iceberg.pkg.*",
-              "fr.whitebox.pkg.*",
-            ],
-            script:  {
+  uninstall script:  {
               executable: "uninstall.sh",
               sudo:       true,
-            }
+            },
+            pkgutil: [
+              "fr.white.iceberg.pkg.*",
+              "fr.whitebox.pkg.*",
+            ]
 
   zap trash: "/Library/Application Support/Iceberg"
 end

@@ -13,9 +13,9 @@ cask "utterly" do
 
   pkg "Utterly.pkg"
 
-  uninstall quit:      "app.utterly.Utterly.App",
+  uninstall launchctl: "app.utterly.Utterly.XPCHelper",
+            quit:      "app.utterly.Utterly.App",
             pkgutil:   "app.utterly.Utterly",
-            launchctl: "app.utterly.Utterly.XPCHelper",
             delete:    [
               "/Applications/Utterly.app",
               "/Library/Application Support/Utterly/UtterlyXPCHelper.xpc",

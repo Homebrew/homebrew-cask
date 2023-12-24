@@ -14,12 +14,12 @@ cask "betterandbetter" do
 
   pkg "BetterAndBetter#{version}Beta.pkg"
 
-  uninstall pkgutil:   [
+  uninstall launchctl: "cn.better365.BetterAndBetterHelper",
+            quit:      "cn.better365.BetterAndBetter",
+            pkgutil:   [
               "cn.better365.BetterAndBetter",
               "cn.better365.BetterAndBetterHelper",
-            ],
-            launchctl: "cn.better365.BetterAndBetterHelper",
-            quit:      "cn.better365.BetterAndBetter"
+            ]
 
   zap trash: [
     "~/Library/Application Support/BetterAndBetter",

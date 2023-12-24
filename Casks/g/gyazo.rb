@@ -15,8 +15,8 @@ cask "gyazo" do
   pkg "Gyazo-#{version}.pkg"
 
   uninstall launchctl: "com.gyazo.menu.helper",
-            pkgutil:   "com.gyazo.pkg",
-            quit:      "com.gyazo.menu"
+            quit:      "com.gyazo.menu",
+            pkgutil:   "com.gyazo.pkg"
 
   zap trash: [
     "~/Library/Caches/com.gyazo.gif",

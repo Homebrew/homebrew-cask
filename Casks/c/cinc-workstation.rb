@@ -19,12 +19,12 @@ cask "cinc-workstation" do
 
   pkg "cinc-workstation-#{version}-1.#{arch}.pkg"
 
-  uninstall pkgutil:   "com.cinc-project.pkg.cinc-workstation",
-            launchctl: "io.chef.chef-workstation.app",
+  uninstall launchctl: "io.chef.chef-workstation.app",
             script:    {
               executable: "/opt/cinc-workstation/bin/uninstall_chef_workstation",
               sudo:       true,
-            }
+            },
+            pkgutil:   "com.cinc-project.pkg.cinc-workstation"
 
   zap trash: "~/.cinc-workstation/"
 end

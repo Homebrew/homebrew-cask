@@ -14,14 +14,14 @@ cask "v2rayx" do
     set_ownership "/Library/Application Support/V2RayX"
   end
 
-  uninstall delete:    "/Library/Application Support/V2RayX",
-            launchctl: "v2rayproject.v2rayx.v2ray-core",
+  uninstall launchctl: "v2rayproject.v2rayx.v2ray-core",
+            signal:    ["TERM", "cenmrev.V2RayX"],
             script:    {
               executable: "#{appdir}/V2RayX.app/Contents/Resources/v2rayx_sysconf",
               args:       ["off"],
               sudo:       true,
             },
-            signal:    ["TERM", "cenmrev.V2RayX"]
+            delete:    "/Library/Application Support/V2RayX"
 
   zap trash: [
     "~/Library/Application Support/V2RayX",

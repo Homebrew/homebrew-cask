@@ -18,14 +18,14 @@ cask "paragon-extfs" do
 
   installer manual: "FSInstaller.app"
 
-  uninstall kext:      "com.paragon-software.filesystems.extfs",
-            launchctl: "com.paragon-software.extfs*",
-            pkgutil:   "com.paragon-software.pkg.extfs",
+  uninstall launchctl: "com.paragon-software.extfs*",
             quit:      "com.paragon-software.extfs*",
             signal:    [
               ["KILL", "com.paragon-software.extfs.FSMenuApp"],
               ["KILL", "com.paragon-software.extfs.notification-agent"],
-            ]
+            ],
+            kext:      "com.paragon-software.filesystems.extfs",
+            pkgutil:   "com.paragon-software.pkg.extfs"
 
   zap trash: [
     "~/Library/Application Support/com.paragon-software.extfs.*",

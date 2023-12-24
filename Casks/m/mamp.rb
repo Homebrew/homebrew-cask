@@ -27,7 +27,12 @@ cask "mamp" do
   uninstall pkgutil: "de.appsolute.installer.(mamp|mampacticon|mampendinstall|mamppro).pkg",
             delete:  "/Applications/MAMP"
 
-  zap trash:  [
+  zap delete: [
+        "/Library/LaunchDaemons/de.appsolute.mampprohelper.plist",
+        "/Library/PrivilegedHelperTools/de.appsolute.mampprohelper",
+        "/Library/Application Support/appsolute",
+      ],
+      trash:  [
         "~/Library/Application Support/appsolute",
         "~/Library/Application Support/de.appsolute.MAMP",
         "~/Library/Application Support/de.appsolute.mamppro",
@@ -39,10 +44,5 @@ cask "mamp" do
         "~/Library/Preferences/de.appsolute.mamppro.plist",
         "~/Library/Saved Application State/de.appsolute.MAMP.savedState",
         "~/Library/Saved Application State/de.appsolute.mamppro.savedState",
-      ],
-      delete: [
-        "/Library/LaunchDaemons/de.appsolute.mampprohelper.plist",
-        "/Library/PrivilegedHelperTools/de.appsolute.mampprohelper",
-        "/Library/Application Support/appsolute",
       ]
 end

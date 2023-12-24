@@ -78,13 +78,13 @@ cask "microsoft-powerpoint" do
         },
       ]
 
-  uninstall pkgutil:   [
+  uninstall launchctl: "com.microsoft.office.licensingV2.helper",
+            quit:      "com.microsoft.autoupdate2",
+            pkgutil:   [
               "com.microsoft.package.Microsoft_PowerPoint.app",
               "com.microsoft.pkg.licensing",
             ],
-            delete:    "/Applications/Microsoft PowerPoint.app",
-            launchctl: "com.microsoft.office.licensingV2.helper",
-            quit:      "com.microsoft.autoupdate2"
+            delete:    "/Applications/Microsoft PowerPoint.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.microsoft.Powerpoint",

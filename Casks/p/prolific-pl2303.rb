@@ -14,13 +14,13 @@ cask "prolific-pl2303" do
 
   pkg "PL2303HXD&G_Mac Driver_v#{version}.pkg"
 
-  uninstall kext:    "com.prolific.driver.PL2303",
+  uninstall quit:    "com.prolific.PLVCDriver",
+            kext:    "com.prolific.driver.PL2303",
             pkgutil: [
               "com.Susteen.driver.PL2303",
               "com.prolific.driver.PL2303",
               "com.prolific.pkg.PLVCDriver",
             ],
-            quit:    "com.prolific.PLVCDriver",
             delete:  [
               "/Library/Extensions/ProlificUsbSerial.kext",
               "/var/db/receipts/*PL2303*.*",

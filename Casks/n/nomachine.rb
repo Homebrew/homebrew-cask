@@ -18,16 +18,7 @@ cask "nomachine" do
 
   # A launchctl job ordinarily manages uninstall once the app bundle is removed
   # To ensure it ran, verify if /Library/Application Support/NoMachine/nxuninstall.sh no longer exists
-  uninstall delete:    "/Applications/NoMachine.app",
-            pkgutil:   [
-              "com.nomachine.nomachine.NoMachine-*.pkg",
-              "com.nomachine.nxnode",
-              "com.nomachine.nxplayer",
-              "com.nomachine.nxrunner",
-              "com.nomachine.nxserver",
-            ],
-
-            launchctl: [
+  uninstall launchctl: [
               "com.nomachine.localnxserver",
               "com.nomachine.nxlaunchconf",
               "com.nomachine.nxnode",
@@ -37,7 +28,15 @@ cask "nomachine" do
               "com.nomachine.uninstall",
               "com.nomachine.uninstallAgent",
               "com.nomachine.server",
-            ]
+            ],
+            pkgutil:   [
+              "com.nomachine.nomachine.NoMachine-*.pkg",
+              "com.nomachine.nxnode",
+              "com.nomachine.nxplayer",
+              "com.nomachine.nxrunner",
+              "com.nomachine.nxserver",
+            ],
+            delete:    "/Applications/NoMachine.app"
 
   zap trash: [
     "/Library/Application Support/NoMachine",
