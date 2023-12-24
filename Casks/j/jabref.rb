@@ -1,9 +1,9 @@
 cask "jabref" do
   arch arm: "-arm64"
 
-  version "5.11"
-  sha256 arm:   "d53875651ef86c617b0728b20513552c9ce6065b09fefb5e6daa448eaf20976e",
-         intel: "71becc574eaf8cfe741a033fd1458d612d18a6f9c5463c837b83b8c0594738c2"
+  version "5.12"
+  sha256 arm:   "fa4123285e421181c8614ec56d465594774e66ced10b7e77f0a1f147cb7e1885",
+         intel: "3081a37479d2b3bec8823e7bd349fe542e5ffb4723f04a967b2597a0decbe898"
 
   url "https://github.com/JabRef/jabref/releases/download/v#{version}/JabRef-#{version}#{arch}.dmg",
       verified: "github.com/JabRef/jabref/"
