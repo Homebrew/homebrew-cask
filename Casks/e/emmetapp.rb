@@ -1,5 +1,5 @@
 cask "emmetapp" do
-  version "1.5.0"
+  version "1.5.1"
   sha256 :no_check
 
   url "https://s3.amazonaws.com/emmet.app/emmetapp.dmg",
