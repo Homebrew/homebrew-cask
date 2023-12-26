@@ -1,4 +1,4 @@
-cask "PolyMC" do
+cask "polymc" do
   version "6.0"
 
   on_mojave :or_older do
