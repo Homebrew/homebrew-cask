@@ -1,5 +1,5 @@
 cask "one-switch" do
-  version "1.33,406"
+  version "1.33.1,406"
   sha256 "94c4d7e54d6c7b378dbca8d5d31501d508cba1f3cfbf4387d1fe5bc514afb495"
 
   url "https://fireball.studio/media/uploads/files/OneSwitchOfficial-#{version.csv.second}.dmg"
@@ -8,8 +8,8 @@ cask "one-switch" do
   homepage "https://fireball.studio/oneswitch"
 
   livecheck do
-    url "https://fireball.studio/api/release_manager/studio.fireball.OneSwitch.xml"
-    strategy :sparkle
+    url "https://fireball.studio/api/release_manager/downloads/studio.fireball.OneSwitchOfficial.dmg"
+    strategy :extract_plist
   end
 
   depends_on macos: ">= :catalina"
