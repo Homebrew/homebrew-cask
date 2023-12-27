@@ -8,19 +8,8 @@ cask "igv" do
   homepage "https://software.broadinstitute.org/software/igv/"
 
   livecheck do
-    url "https://data.broadinstitute.org/igv/projects/downloads/"
+    url "https://igv.org/doc/desktop/DownloadPage/"
     regex(/href=.*?IGV[._-]MacApp[._-]v?(\d+(?:\.\d+)+)\.zip/i)
-    strategy :page_match do |page, regex|
-      major_minor = page.scan(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i).max_by do |match|
-        Version.new(match.first)
-      end.first
-      next if major_minor.blank?
-
-      version_page = Homebrew::Livecheck::Strategy.page_content(url.sub(%r{/$}, "") + "/#{major_minor}/")
-      next if version_page[:content].blank?
-
-      version_page[:content].scan(regex).map(&:first)
-    end
   end
 
   app "IGV_#{version}.app"
