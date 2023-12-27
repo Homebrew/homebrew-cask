@@ -5,6 +5,7 @@ cask "dbkoda" do
   url "https://s3-us-west-1.amazonaws.com/uswest-nc.release.dbkoda/dbkoda-latest.dmg",
       verified: "s3-us-west-1.amazonaws.com/uswest-nc.release.dbkoda/"
   name "dbKoda"
+  desc "Open-source, next generation IDE for MongoDB"
   homepage "https://www.dbkoda.com/"
 
   livecheck do
