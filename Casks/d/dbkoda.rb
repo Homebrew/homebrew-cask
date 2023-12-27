@@ -16,11 +16,11 @@ cask "dbkoda" do
   app "dbKoda.app"
 
   zap trash: [
+    "~/.dbKoda",
     "~/Library/Application Support/dbKoda",
     "~/Library/Logs/dbKoda",
     "~/Library/Preferences/com.southbanksoftware.dbkoda.helper.plist",
     "~/Library/Preferences/com.southbanksoftware.dbkoda.plist",
     "~/Library/Saved Application State/com.southbanksoftware.dbkoda.savedState",
-    "~/.dbKoda",
   ]
 end
