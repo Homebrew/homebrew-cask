@@ -1,8 +1,8 @@
 cask "openineditor-lite" do
-  version "1.2.5"
-  sha256 "745f81ba178795d44e97c8c60b8b28022f7258f70f673555da0da3a34637519d"
+  version "1.2.6"
+  sha256 "ce163393705469495e9506449c109bea1925eb5e0cefed28e8bc133662f51138"
 
-  url "https://github.com/Ji4n1ng/OpenInTerminal/releases/download/v#{version}/OpenInEditor-Lite.app.zip"
+  url "https://github.com/Ji4n1ng/OpenInTerminal/releases/download/v#{version}/OpenInEditor-Lite.zip"
   name "OpenInEditor-Lite"
   desc "Finder Toolbar app to open the current directory in Editor"
   homepage "https://github.com/Ji4n1ng/OpenInTerminal"
