@@ -7,10 +7,7 @@ cask "mcgimp" do
   desc "Recompiled GIMP installation"
   homepage "https://www.partha.com/"
 
-  livecheck do
-    url :homepage
-    regex(%r{href=.*?/McGimp-(\d+(?:\.\d+)*)\.app\.zip}i)
-  end
+  disable! date: "2023-12-24", because: :discontinued
 
   depends_on macos: ">= :sierra"
 
