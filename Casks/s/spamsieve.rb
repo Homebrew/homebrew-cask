@@ -13,4 +13,15 @@ cask "spamsieve" do
   end
 
   app "SpamSieve.app"
+
+  zap trash: [
+    "~/Library/Application Support/SpamSieve",
+    "~/Library/Caches/com.apple.helpd/Generated/SpamSieve Help*",
+    "~/Library/Caches/com.c-command.SpamSieve",
+    "~/Library/HTTPStorages/com.c-command.SpamSieve",
+    "~/Library/LaunchAgents/com.c-command.SpamSieve.LaunchAgent.plist",
+    "~/Library/Logs/SpamSieve",
+    "~/Library/Preferences/com.c-command.SpamSieve.plist",
+    "~/Library/Saved Application State/com.c-command.SpamSieve.savedState",
+  ]
 end
