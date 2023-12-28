@@ -21,7 +21,7 @@ cask "godot-mono" do
   binary "#{appdir}/Godot_mono.app/Contents/MacOS/Godot", target: "godot-mono"
 
   uninstall quit: "org.godotengine.godot"
-  
+
   zap trash: [
     "~/Library/Application Support/Godot",
     "~/Library/Caches/Godot",
