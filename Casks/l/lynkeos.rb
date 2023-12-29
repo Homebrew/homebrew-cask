@@ -14,4 +14,9 @@ cask "lynkeos" do
   end
 
   app "Lynkeos-App-#{version.dots_to_hyphens}/Lynkeos.app"
+
+  zap trash: [
+    "~/Library/Preferences/net.sourceforge.lynkeos.plist",
+    "~/Library/Saved Application State/net.sourceforge.lynkeos.savedState",
+  ]
 end
