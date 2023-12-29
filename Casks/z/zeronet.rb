@@ -5,6 +5,7 @@ cask "zeronet" do
   url "https://github.com/HelloZeroNet/ZeroNet-dist/archive/mac/ZeroNet-dist-mac.zip",
       verified: "github.com/HelloZeroNet/ZeroNet-dist/"
   name "ZeroNet"
+  desc "Decentralized websites using Bitcoin crypto and BitTorrent network"
   homepage "https://zeronet.io/"
 
   livecheck do
