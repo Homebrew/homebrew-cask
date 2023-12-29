@@ -1,7 +1,7 @@
 cask "naver-whale" do
   arch arm: "ARM64"
 
-  version "3.24.223.12"
+  version "3.24.223.18"
   sha256 :no_check
 
   url "http://update.whale.naver.net/downloads/installers/NaverWhale#{arch}.dmg",
