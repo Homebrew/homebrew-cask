@@ -5,6 +5,7 @@ cask "doteditor" do
   url "https://github.com/vincenthEE/DotEditor/releases/download/v#{version}/DotEditor.#{version}.dmg",
       verified: "github.com/vincenthEE/DotEditor/"
   name "DotEditor"
+  desc "GUI editor for dot language used in graphviz"
   homepage "https://vincenthee.github.io/DotEditor/"
 
   depends_on formula: "graphviz"
