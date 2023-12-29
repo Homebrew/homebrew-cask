@@ -41,12 +41,23 @@ cask "teamviewer" do
          Preferences → Advanced
     EOS
   end
-  on_big_sur :or_newer do
-    version "15.48.4"
-    sha256 "646131a58f09218182fa0b71dba7c46d2a3d8506a40983f29b17244e02940fd6"
+  on_big_sur do
+    version "15.47.3"
+    sha256 "f73f4c636adfb67c02f7df7f31a1ab40f8d7141d82afec3b0862e5ea7ceb186d"
 
     livecheck do
       url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=11.7&type=1&channel=1"
+      strategy :sparkle
+    end
+
+    pkg "TeamViewer.pkg"
+  end
+  on_monterey :or_newer do
+    version "15.49.2"
+    sha256 "7fe39fbfa1b28abad59150970cb0af4a6f8e7b0190ab460af62eb7b67f16ea6d"
+
+    livecheck do
+      url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=12.7&type=1&channel=1"
       strategy :sparkle
     end
 
