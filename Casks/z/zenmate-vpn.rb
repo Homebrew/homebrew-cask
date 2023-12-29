@@ -4,6 +4,7 @@ cask "zenmate-vpn" do
 
   url "https://download.zenmate.com/mac/#{version.major}/zm_#{version}.dmg"
   name "ZenMate VPN"
+  desc "VPN client"
   homepage "https://zenmate.com/products/vpn-for-osx/"
 
   livecheck do
