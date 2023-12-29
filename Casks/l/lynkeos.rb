@@ -13,5 +13,14 @@ cask "lynkeos" do
     regex(%r{url=.*?/v?(\d+(?:\.\d+)+)/Lynkeos[._-]App[\d._-]*\.zip}i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Lynkeos-App-#{version.dots_to_hyphens}/Lynkeos.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.sourceforge.lynkeos.sfl*",
+    "~/Library/Caches/com.apple.helpd/Generated/Lynkeos help*",
+    "~/Library/Preferences/net.sourceforge.lynkeos.plist",
+    "~/Library/Saved Application State/net.sourceforge.lynkeos.savedState",
+  ]
 end
