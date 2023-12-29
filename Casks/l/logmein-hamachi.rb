@@ -5,6 +5,7 @@ cask "logmein-hamachi" do
   url "https://secure.logmein.com/LogMeInHamachi.zip",
       verified: "logmein.com/"
   name "LogMeIn Hamachi"
+  desc "Hosted VPN service that lets you securely extend LAN-like networks"
   homepage "https://vpn.net/"
 
   livecheck do
