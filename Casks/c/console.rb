@@ -4,6 +4,7 @@ cask "console" do
 
   url "https://github.com/macmade/Console/releases/download/#{version}/Console.app.zip"
   name "Console"
+  desc "Replacement for console application"
   homepage "https://github.com/macmade/Console"
 
   depends_on macos: ">= :el_capitan"
