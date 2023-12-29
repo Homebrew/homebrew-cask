@@ -6,6 +6,7 @@ cask "lego-mindstorms-ev3" do
   url "https://le-www-live-s.legocdn.com/downloads/LMS-EV3/LMS-EV3_Full-setup_#{version}_en-us_osx.dmg",
       verified: "le-www-live-s.legocdn.com/downloads/LMS-EV3/"
   name "Lego Mindstorms EV3 Home Edition"
+  desc "Programmable robotics construction set"
   homepage "https://www.lego.com/en-us/mindstorms"
 
   livecheck do

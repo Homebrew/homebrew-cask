@@ -4,6 +4,7 @@ cask "dockey" do
 
   url "https://dockey.publicspace.co/download/Dockey-latest.zip"
   name "dockey"
+  desc "Advanced Dock preferences"
   homepage "https://dockey.publicspace.co/"
 
   livecheck do

@@ -5,6 +5,7 @@ cask "qcma" do
   url "https://github.com/codestation/qcma/releases/download/v#{version.csv.first}/Qcma_#{version.csv.first}-#{version.csv.second}.dmg",
       verified: "github.com/codestation/"
   name "Qcma"
+  desc "Cross-platform content manager assistant for the PS Vita"
   homepage "https://codestation.github.io/qcma/"
 
   deprecate! date: "2023-12-17", because: :discontinued
