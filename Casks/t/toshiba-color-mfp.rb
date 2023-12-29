@@ -24,4 +24,6 @@ cask "toshiba-color-mfp" do
               "/Library/Printers/PPDs/Contents/Resources/TOSHIBA_ColorMFP*.gz",
               "/Library/Printers/toshiba",
             ]
+
+  # No zap stanza required
 end
