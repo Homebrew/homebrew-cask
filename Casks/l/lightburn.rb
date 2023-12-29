@@ -5,18 +5,18 @@ cask "lightburn" do
   url "https://github.com/LightBurnSoftware/deployment/releases/download/#{version}/LightBurn.V#{version}.dmg",
       verified: "github.com/LightBurnSoftware/deployment/"
   name "LightBurn"
-  desc "Better software for laser cutters"
+  desc "Layout, editing, and control software for laser cutters"
   homepage "https://lightburnsoftware.com/"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 
   app "LightBurn.app"
 
   zap trash: [
+    "~/Library/Preferences/com.LightBurnSoftware.LightBurn.plist",
     "~/Library/Preferences/LightBurn",
     "~/Library/Saved Application State/com.LightBurnSoftware.LightBurn.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
