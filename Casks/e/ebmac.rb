@@ -13,4 +13,10 @@ cask "ebmac" do
   end
 
   app "EBMac.app"
+
+  zap trash: [
+    "~/Library/Application Support/EBMac",
+    "~/Library/Preferences/info.ebstudio.EBMac.plist",
+    "~/Library/Saved Application State/info.ebstudio.EBMac.savedState",
+  ]
 end
