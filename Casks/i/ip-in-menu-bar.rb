@@ -1,5 +1,5 @@
 cask "ip-in-menu-bar" do
-  version "4.7"
+  version "4.7.1"
   sha256 :no_check
 
   url "https://www.monkeybreadsoftware.de/Software/IPinmenubar.dmg"
