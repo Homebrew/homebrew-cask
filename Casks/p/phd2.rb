@@ -27,4 +27,10 @@ cask "phd2" do
   homepage "https://openphdguiding.org/"
 
   app "PHD2.app"
+
+  zap trash: [
+    "~/Documents/PHD2",
+    "~/Library/Preferences/org.openphdguiding.phd2.plist",
+    "~/Library/Saved Application State/org.openphdguiding.phd2.savedState",
+  ]
 end
