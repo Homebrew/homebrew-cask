@@ -1,6 +1,6 @@
 cask "vmpk" do
-  version "0.8.10"
-  sha256 "ad7e62f6e05f0d873488dbc7c4c60f3489592ea5dd6bdf809373c6ee164e90fb"
+  version "0.9.0"
+  sha256 "b2ce743f8f986575865dcc994cab89f43bff8da6d4e43d1380f846b2807b1bd6"
 
   url "https://downloads.sourceforge.net/vmpk/#{version.major_minor_patch}/vmpk-#{version}-mac-x64.dmg",
       verified: "downloads.sourceforge.net/vmpk/"
