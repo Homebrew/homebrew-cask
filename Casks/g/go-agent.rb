@@ -1,9 +1,9 @@
 cask "go-agent" do
   arch arm: "-aarch64"
 
-  version "23.4.0,17731"
-  sha256 arm:   "25ff5342a9788bb722e8f03d741f6da5cdd262690d3df6f064e51cfbdacc31e2",
-         intel: "b815663c7d59eefe9494b2bd6da7709318957c77c66f82f594329822cfc909f3"
+  version "23.5.0,18179"
+  sha256 arm:   "ec9c6f9edc016c3a763ae4ce007a4dea1db4207fb8a0f4510bccce9797a5045b",
+         intel: "757c6a5c73c32bc6ad4549078ea8332e9170c50b9fc0267436f11ac64d6a4f3c"
 
   url "https://download.gocd.org/binaries/#{version.csv.first}-#{version.csv.second}/osx/go-agent-#{version.csv.first}-#{version.csv.second}-osx#{arch}.zip"
   name "Go Agent"
