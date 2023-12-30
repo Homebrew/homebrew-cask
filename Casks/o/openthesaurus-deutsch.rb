@@ -5,7 +5,7 @@ cask "openthesaurus-deutsch" do
   url "https://github.com/Tekl/openthesaurus-deutsch/releases/download/v#{version}/OpenThesaurus_Deutsch_dictionaryfile.zip",
       verified: "github.com/Tekl/openthesaurus-deutsch/"
   name "OpenThesaurus Deutsch Dictionary plugin"
-  desc "Extends Apples Dictionary App with a German thesaurus"
+  desc "German thesaurus for Apple Dictionary"
   homepage "https://tekl.de/lexikon-plug-ins/openthesaurus-deutsch-lexikon-plugin"
 
   livecheck do
