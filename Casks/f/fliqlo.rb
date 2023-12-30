@@ -6,8 +6,6 @@ cask "fliqlo" do
     livecheck do
       skip "Legacy version"
     end
-
-    depends_on macos: "<= :ventura"
   end
   on_sonoma :or_newer do
     version "1.9.1"
@@ -15,10 +13,8 @@ cask "fliqlo" do
 
     livecheck do
       url :homepage
-      regex(%r{href=.*?/Fliqlo%20v?(\d+(?:\.\d+)+)\.dmg}i)
+      regex(/href=.*?Fliqlo%20v?(\d+(?:\.\d+)+)\.dmg/i)
     end
-
-    depends_on macos: ">= :sonoma"
   end
 
   url "https://fliqlo.com/download/Fliqlo%20#{version}.dmg",
