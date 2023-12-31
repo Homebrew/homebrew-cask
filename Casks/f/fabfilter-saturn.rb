@@ -2,7 +2,7 @@ cask "fabfilter-saturn" do
   version "2.08"
   sha256 "128b99fb561c04689c69de14c17eb2261684faa222d8cf15fff15a765b76277b"
 
-  url "https://download.fabfilter.com/ffsaturn#{version.no_dots}.dmg"
+  url "https://www.fabfilter.com/downloads/ffsaturn#{version.no_dots}.dmg"
   name "FabFilter Saturn"
   desc "Multiband distorsion/saturation plug-in"
   homepage "https://www.fabfilter.com/products/saturn-2-multiband-distortion-saturation-plug-in"
