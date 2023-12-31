@@ -2,7 +2,7 @@ cask "fabfilter-volcano" do
   version "3.04"
   sha256 "60ab4565fbff992fb7ef5f9fb5fba799ca2d7efa99591848777278bd90e45cbc"
 
-  url "https://download.fabfilter.com/ffvolcano#{version.no_dots}.dmg"
+  url "https://www.fabfilter.com/downloads/ffvolcano#{version.no_dots}.dmg"
   name "FabFilter Volcano"
   desc "Filter plug-in"
   homepage "https://www.fabfilter.com/products/volcano-2-powerful-filter-plug-in"
