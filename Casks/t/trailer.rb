@@ -8,6 +8,8 @@ cask "trailer" do
   desc "Managing Pull Requests and Issues For GitHub & GitHub Enterprise"
   homepage "https://ptsochantaris.github.io/trailer/"
 
+  depends_on macos: ">= :big_sur"
+
   app "Trailer.app"
 
   uninstall quit: "com.housetrip.Trailer"
