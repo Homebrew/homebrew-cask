@@ -16,6 +16,7 @@ cask "prowlarr" do
     strategy :github_latest
   end
 
+  auto_updates true
   depends_on macos: ">= :high_sierra"
 
   app "Prowlarr.app"
