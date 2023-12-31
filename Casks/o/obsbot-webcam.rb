@@ -13,7 +13,7 @@ cask "obsbot-webcam" do
     regex(/Obsbot[._-]WebCam[._-]OA[._-]E[._-]MacOS[._-](\d+(?:\.\d+)+)[._-]release\.dmg/i)
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :big_sur"
 
   app "OBSBOT_WebCam.app"
 
