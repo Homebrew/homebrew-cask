@@ -13,6 +13,8 @@ cask "popchar" do
     regex(/<Program_Version>(\d+(?:\.\d+)+)</i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "PopChar.app"
 
   zap trash: [
