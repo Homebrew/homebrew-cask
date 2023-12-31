@@ -2,7 +2,7 @@ cask "fabfilter-pro-g" do
   version "1.31"
   sha256 "2d6cb8d6a6b6a7bd96e2091b3bb15b5c1ed8638e67a52a3970bae0a4d56e06cb"
 
-  url "https://download.fabfilter.com/ffprog#{version.no_dots}.dmg"
+  url "https://www.fabfilter.com/downloads/ffprog#{version.no_dots}.dmg"
   name "FabFilter Pro-G"
   desc "Gate/expander plug-in"
   homepage "https://www.fabfilter.com/products/pro-g-gate-expander-plug-in"
