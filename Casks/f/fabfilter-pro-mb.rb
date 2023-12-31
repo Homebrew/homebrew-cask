@@ -2,7 +2,7 @@ cask "fabfilter-pro-mb" do
   version "1.28"
   sha256 "06cb8be048d0eb4f9aea322e8fee5849757d39426954555f2df928d8f46f59bb"
 
-  url "https://download.fabfilter.com/ffpromb#{version.no_dots}.dmg"
+  url "https://www.fabfilter.com/downloads/ffpromb#{version.no_dots}.dmg"
   name "FabFilter Pro-MB"
   desc "Multiband compressor plug-in"
   homepage "https://www.fabfilter.com/products/pro-mb-multiband-compressor-plug-in"
