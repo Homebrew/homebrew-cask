@@ -8,6 +8,8 @@ cask "gaphor" do
   desc "UML/SysML modeling tool"
   homepage "https://gaphor.org/"
 
+  depends_on macos: ">= :high_sierra"
+
   app "Gaphor.app"
 
   uninstall quit: "Gaphor-#{version}"
