@@ -15,6 +15,8 @@ cask "sdm" do
     end
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "SDM.app"
 
   uninstall delete: "#{appdir}/SDM.app/Contents/Resources/sdm-socket"
