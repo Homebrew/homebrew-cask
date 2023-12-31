@@ -8,6 +8,7 @@ cask "easydict" do
   homepage "https://github.com/tisfeng/Easydict/"
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "Easydict.app"
 
