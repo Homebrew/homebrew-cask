@@ -13,6 +13,8 @@ cask "sonic3air" do
     regex(/v(\d+(?:\.\d+)*)/i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Sonic 3 AIR.app"
   artifact "Manual.pdf", target: "~/Library/Application Support/sonic3air/Manual.pdf"
   artifact "doc", target: "~/Library/Application Support/sonic3air/doc"
