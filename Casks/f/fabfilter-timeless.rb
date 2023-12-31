@@ -1,8 +1,8 @@
 cask "fabfilter-timeless" do
-  version "3.05"
-  sha256 "06aba106babc767c4d7073128b3f0e6f68ec8e1017555c0afa786417a8dc5f4f"
+  version "3.06"
+  sha256 "68400d82f7d6fefa351385ad93121ee4d5dcece1bfcaa6871960ee9ae6ca2943"
 
-  url "https://download.fabfilter.com/fftimeless#{version.no_dots}.dmg"
+  url "https://www.fabfilter.com/downloads/fftimeless#{version.no_dots}.dmg"
   name "FabFilter Timeless"
   desc "Tape delay plug-in"
   homepage "https://www.fabfilter.com/products/timeless-2-stereo-tape-delay-plug-in"
