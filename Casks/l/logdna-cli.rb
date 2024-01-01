@@ -5,9 +5,12 @@ cask "logdna-cli" do
   url "https://github.com/logdna/logdna-cli/releases/download/#{version}/logdna-cli.pkg",
       verified: "github.com/logdna/logdna-cli/"
   name "LogDNA CLI"
+  desc "Command-line interface for LogDNA"
   homepage "https://www.mezmo.com/"
 
   pkg "logdna-cli.pkg"
 
   uninstall pkgutil: "com.logdna.logdna-cli"
+
+  # No zap stanza required
 end
