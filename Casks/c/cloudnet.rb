@@ -1,6 +1,6 @@
 cask "cloudnet" do
-  version "1.36.2.16"
-  sha256 "71c13d89781945306a985267dcefea179f85552e0f1e8d3c54f0f171eb543ec1"
+  version "1.36.2.17"
+  sha256 "d492767b6c188de251c3d4abcb3a0758eb81116fbaa39fb214d1eeb582dac304"
 
   url "https://pkgs.cloudnet.world/stable/macos/CloudNet_v#{version}.dmg"
   name "CloudNet for Mac client"
@@ -22,8 +22,8 @@ cask "cloudnet" do
     sudo:       true,
   }
 
-  uninstall launchctl: "world.cloudnet.client.cloudnetd",
-            quit:      "world.cloudnet.client",
+  uninstall quit:      "world.cloudnet.client",
+            launchctl: "world.cloudnet.client.cloudnetd",
             script:    {
               executable: "CloudNet.app/Contents/Resources/cnet",
               args:       ["uninstall"],
