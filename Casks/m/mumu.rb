@@ -5,6 +5,7 @@ cask "mumu" do
   url "https://paddle.s3.amazonaws.com/fulfillment_downloads/116824/597910/#{version.csv.second}_Mumu%20#{version.csv.first}.dmg",
       verified: "paddle.s3.amazonaws.com/fulfillment_downloads/116824/597910/"
   name "Mumu"
+  desc "Emoji picker"
   homepage "https://getmumu.com/"
 
   livecheck do

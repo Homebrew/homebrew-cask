@@ -4,6 +4,7 @@ cask "hfsleuth" do
 
   url "http://newosxbook.com/files/hfsleuth.tar"
   name "HFSleuth"
+  desc "HFS+/HFSX file system inspection tool"
   homepage "http://newosxbook.com/tools/hfsleuth.html"
 
   livecheck do
