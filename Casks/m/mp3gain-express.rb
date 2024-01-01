@@ -4,6 +4,7 @@ cask "mp3gain-express" do
 
   url "https://projects.sappharad.com/mp3gain/mp3gain_mac#{version.chomp(".0").no_dots}.zip"
   name "MP3Gain Express"
+  desc "Port of MP3Gain and AACGain"
   homepage "https://projects.sappharad.com/mp3gain/"
 
   livecheck do
