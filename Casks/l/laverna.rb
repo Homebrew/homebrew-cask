@@ -7,5 +7,8 @@ cask "laverna" do
   name "Laverna"
   homepage "https://laverna.cc/"
 
+  # laverna is unmaintained, see https://github.com/Laverna/laverna/issues/998
+  deprecate! date: "2024-01-01", because: :unmaintained
+
   app "laverna.app"
 end
