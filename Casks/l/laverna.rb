@@ -5,6 +5,7 @@ cask "laverna" do
   url "https://github.com/Laverna/laverna/releases/download/#{version}/laverna-#{version}-darwin-x64.zip",
       verified: "github.com/Laverna/laverna/"
   name "Laverna"
+  desc "Encryption-focused open source note taking application"
   homepage "https://laverna.cc/"
 
   # laverna is unmaintained, see https://github.com/Laverna/laverna/issues/998
