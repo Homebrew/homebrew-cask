@@ -16,4 +16,11 @@ cask "jitsi" do
   end
 
   app "Jitsi.app"
+
+  zap trash: [
+    "~/Library/Application Support/Jitsi",
+    "~/Library/Caches/Jitsi",
+    "~/Library/Logs/Jitsi",
+    "~/Library/Preferences/org.jitsi.jitsi.plist",
+  ]
 end
