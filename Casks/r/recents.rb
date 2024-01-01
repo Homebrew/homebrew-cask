@@ -1,8 +1,8 @@
 cask "recents" do
-  version "2.2.1,6244"
+  version "2.3.2,6577"
   sha256 :no_check
 
-  url "https://recentsapp.com/releases/Recents_latest.zip"
+  url "https://recentsapp.com/releases/Recents_latest.dmg"
   name "Recents"
   desc "File launcher"
   homepage "https://recentsapp.com/"
