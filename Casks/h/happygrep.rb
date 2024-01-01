@@ -8,7 +8,7 @@ cask "happygrep" do
   homepage "https://github.com/happypeter/happygrep"
 
   # no releases in the past 10 years, it also reference libncursesw.5
-  disable! date: "2024-01-01", because: unmaintained
+  disable! date: "2024-01-01", because: :unmaintained
 
   binary "happygrep"
 
