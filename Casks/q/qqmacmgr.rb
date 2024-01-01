@@ -7,10 +7,16 @@ cask "qqmacmgr" do
   name "腾讯电脑管家"
   homepage "https://lemon.qq.com/index_o.html"
 
-  livecheck do
-    url :homepage
-    regex(%r{href=.*?/QQMacMgr_(\d+(?:\.\d+)*)\.dmg}i)
-  end
+  # `tencent-lemon` is the maintained cask
+  disable! date: "2024-01-01", because: :discontinued
 
   app "QQMacMgr.app"
+
+  caveats do
+    <<~EOS
+      tencent-lemon is the successor to this software:
+
+        brew install --cask tencent-lemon
+    EOS
+  end
 end
