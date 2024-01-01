@@ -4,7 +4,7 @@ cask "colortester" do
 
   url "https://alfasado.net/download/ColorTester_Mac.zip"
   name "ColorTester"
-  desc "Color tester"
+  desc "Colour accessibility and contrast tester"
   homepage "https://alfasado.net/apps/colortester.html"
 
   livecheck do
