@@ -23,6 +23,14 @@ jobs:
         with:
           token: ${{secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN}}
           def: |
+            - label: cask deprecated
+              path: Cask/.+
+              content: \n  deprecate!.*\n
+
+            - label: cask disabled
+              path: Cask/.+
+              content: \n  disable!.*\n
+
             - label: new cask
               status: added
               path: Casks/.+
