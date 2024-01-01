@@ -8,4 +8,6 @@ cask "keypad-layout" do
   homepage "https://github.com/janten/keypad-layout"
 
   app "Keypad Layout.app"
+
+  zap trash: "~/Library/Preferences/com.jan-gerd.keypad-layout.plist"
 end
