@@ -7,5 +7,10 @@ cask "qnapi" do
   name "QNapi"
   homepage "https://qnapi.github.io/"
 
+  # it has been almost seven years since the last release,
+  # and users have reported it stopped working in 2020
+  # https://github.com/QNapi/qnapi/issues/173
+  disable! date: "2024-01-01", because: :unmaintained
+
   app "QNapi.app"
 end
