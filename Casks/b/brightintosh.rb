@@ -1,6 +1,6 @@
 cask "brightintosh" do
-  version "1.4.2"
-  sha256 "9f3a18c3ef27078f69d094d89b815d2f0a039f5901db3fa98108c0720d67c813"
+  version "1.5.0"
+  sha256 "8867c10aba75b47cf69a654a8bf9cf4599f1fc1a212f8f4757949c487e8d3c7b"
 
   url "https://c.brightintosh.de/updates/BrightIntosh_v#{version}.dmg"
   name "BrightIntosh"
