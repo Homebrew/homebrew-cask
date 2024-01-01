@@ -11,5 +11,7 @@ cask "google-trends" do
     strategy :extract_plist
   end
 
+  depends_on macos: ">= :marvericks"
+
   screen_saver "Google Trends.saver"
 end
