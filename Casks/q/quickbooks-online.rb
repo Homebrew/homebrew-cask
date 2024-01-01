@@ -4,6 +4,7 @@ cask "quickbooks-online" do
 
   url "https://http-download.intuit.com/http.intuit/CMO/qbo_client_web/static/release/mac/QuickBooks-#{version}-mac.zip"
   name "QuickBooks"
+  desc "Accounting software"
   homepage "https://qbo.intuit.com/"
 
   livecheck do
