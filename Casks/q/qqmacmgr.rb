@@ -8,7 +8,15 @@ cask "qqmacmgr" do
   homepage "https://lemon.qq.com/index_o.html"
 
   # `tencent-lemon` is the maintained cask
-  deprecate! date: "2024-01-01", because: "Use tencent-lemon cask instead"
+  disable! date: "2024-01-01", because: :discontinued
 
   app "QQMacMgr.app"
+
+  caveats do
+    <<~EOS
+      tencent-lemon is the successor to this software:
+
+        brew install --cask tencent-lemon
+    EOS
+  end
 end
