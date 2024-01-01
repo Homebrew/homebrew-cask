@@ -13,8 +13,6 @@ cask "contour" do
          target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_contour"
   binary "contour.app/Contents/Resources/terminfo/63/contour",
          target: "#{ENV.fetch("TERMINFO", "~/.terminfo")}/63/contour"
-  binary "contour.app/Contents/Resources/terminfo/63/contour-latest",
-         target: "#{ENV.fetch("TERMINFO", "~/.terminfo")}/63/contour-latest"
 
   zap trash: "~/.config/contour"
 end
