@@ -4,7 +4,7 @@ cask "predator-screensaver" do
 
   url "https://github.com/vpeschenkov/Predator/releases/download/#{version}/Predator.saver.zip"
   name "predator-screensaver"
-  desc "A predator-inspired clock screensaver."
+  desc "Predator-inspired clock screensaver"
   homepage "https://github.com/vpeschenkov/Predator"
 
   livecheck do
