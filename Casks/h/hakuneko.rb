@@ -4,6 +4,7 @@ cask "hakuneko" do
 
   url "https://github.com/manga-download/hakuneko/releases/download/v#{version}/hakuneko-desktop_#{version}_macos_amd64.dmg"
   name "HakuNeko"
+  desc "Manga and anime downloader and reader"
   homepage "https://hakuneko.download/"
 
   livecheck do
