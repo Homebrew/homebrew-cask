@@ -18,7 +18,7 @@ cask "pacifist" do
   app "Pacifist.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.charlessoft.pacifist.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.charlessoft.pacifist.sfl*",
     "~/Library/Preferences/com.charlessoft.pacifist.plist",
     "~/Library/Saved Application State/com.charlessoft.pacifist.savedState",
   ]
