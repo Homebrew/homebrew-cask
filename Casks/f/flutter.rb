@@ -21,5 +21,13 @@ cask "flutter" do
   binary "flutter/bin/dart"
   binary "flutter/bin/flutter"
 
+  postflight do
+    # Allow existing shell profiles to work by linking the current version to the `latest` directory.
+    unless (latest_path = staged_path.dirname/"current").directory?
+      FileUtils.ln_s staged_path, latest_path, force: true
+    end
+  end
+
   zap trash: "~/.flutter"
+
 end
