@@ -30,5 +30,4 @@ cask "flutter" do
   end
 
   zap trash: "~/.flutter"
-
 end
