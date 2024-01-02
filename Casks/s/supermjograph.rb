@@ -1,6 +1,6 @@
 cask "supermjograph" do
-  version "0.17.1"
-  sha256 "d8044df2da0114af8dddecafac015a1489a244499541c0a69be1b23c7cd65da5"
+  version "0.17.2"
+  sha256 "1440fb7554cbd93ce55f219187be40bcc5e014b347378e6b7dd507c7e2a8d606"
 
   url "https://downloads.sourceforge.net/mjograph/SuperMjograph/SuperMjograph-#{version}.zip",
       verified: "downloads.sourceforge.net/mjograph/SuperMjograph/"
