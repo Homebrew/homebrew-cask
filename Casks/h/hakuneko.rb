@@ -16,8 +16,8 @@ cask "hakuneko" do
   app "HakuNeko Desktop.app"
 
   zap trash: [
-    "~/Library/Preferences/https:/git.io/hakuneko.plist",
     "~/Library/Application Support/hakuneko-desktop",
+    "~/Library/Preferences/https:/git.io/hakuneko.plist",
   ]
 
   caveats do
