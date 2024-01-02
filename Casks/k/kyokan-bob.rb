@@ -16,6 +16,8 @@ cask "kyokan-bob" do
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Bob.app"
 
   zap trash: [
