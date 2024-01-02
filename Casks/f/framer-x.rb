@@ -7,7 +7,7 @@ cask "framer-x" do
   desc "Tool that helps teams design every part of the product experience"
   homepage "https://framer.com/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-01-01", because: "download artifact not available"
 
   auto_updates true
   depends_on macos: ">= :high_sierra"
