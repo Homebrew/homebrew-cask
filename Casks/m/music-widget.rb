@@ -2,7 +2,7 @@ cask "music-widget" do
   version "1.25"
   sha256 :no_check
 
-  url "https://marioaguzman.github.io/musicwidget/updater/Music%20Widget.zip"
+  url "https://marioaguzman.github.io/musicwidget/updater/Music%20Widget.dmg"
   name "Music Widget"
   desc "Replica of the iTunes widget for Dashboard"
   homepage "https://marioaguzman.github.io/musicwidget/"
