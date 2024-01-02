@@ -22,10 +22,11 @@ cask "flutter" do
   binary "flutter/bin/flutter"
 
   postflight do
-    # Allow existing shell profiles to work by linking the current version to the `latest` directory.
-    unless (latest_path = staged_path.dirname/"current").directory?
-      FileUtils.ln_s staged_path, latest_path, force: true
-    end
+    FileUtils.ln_sf("#{staged_path.to_s}/flutter", "#{HOMEBREW_PREFIX}/share/flutter")
+  end
+
+  uninstall_postflight do
+    FileUtils.rm_f("#{HOMEBREW_PREFIX}/share/flutter")
   end
 
   zap trash: "~/.flutter"
