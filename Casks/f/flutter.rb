@@ -22,7 +22,7 @@ cask "flutter" do
   binary "flutter/bin/flutter"
 
   postflight do
-    FileUtils.ln_sf("#{staged_path.to_s}/flutter", "#{HOMEBREW_PREFIX}/share/flutter")
+    FileUtils.ln_sf("#{staged_path}/flutter", "#{HOMEBREW_PREFIX}/share/flutter")
   end
 
   uninstall_postflight do
