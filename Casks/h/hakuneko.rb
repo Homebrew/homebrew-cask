@@ -15,5 +15,12 @@ cask "hakuneko" do
 
   app "HakuNeko Desktop.app"
 
-  # No zap stanza required
+  zap trash: [
+    "~/Library/Preferences/https:/git.io/hakuneko.plist",
+    "~/Library/Application Support/hakuneko-desktop",
+  ]
+
+  caveats do
+    requires_rosetta
+  end
 end
