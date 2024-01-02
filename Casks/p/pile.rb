@@ -8,7 +8,7 @@ cask "pile" do
   url "https://github.com/UdaraJay/Pile/releases/download/v#{version}/Pile-#{version}#{arch}.dmg",
       verified: "github.com/UdaraJay/Pile/"
   name "Pile"
-  desc "Desktop app for digital journaling"
+  desc "Digital journaling app"
   homepage "https://udara.io/pile/"
 
   # auto-updates are coming with 1.0.0
