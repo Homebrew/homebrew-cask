@@ -1,8 +1,8 @@
 cask "hapigo" do
   version "2.12.0"
-  sha256 :no_check
+  sha256 "e80bf8ab2b5c05194278b54488232ef830d18cfe15921e921dc91955753051a8"
 
-  url "https://dl.hapigo.com/HapiGo.dmg"
+  url "https://dl.hapigo.com/HapiGo_#{version}.dmg"
   name "HapiGo"
   desc "Application launcher and productivity software"
   homepage "https://www.hapigo.com/"
