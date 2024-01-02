@@ -1,6 +1,6 @@
 cask "enpass" do
-  version "6.9.2.1565"
-  sha256 "788237c82fe5f6a6c51cb6cee049ce6bdd3505b95b535829bc7d7e97ca592d7d"
+  version "6.9.3.1595"
+  sha256 "07561c00a0649d01c7a38eae7475fb4ac508a53249880dae945fceaf9cae3167"
 
   url "https://dl.enpass.io/stable/mac/package/#{version}/Enpass.pkg"
   name "Enpass"
