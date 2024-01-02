@@ -4,7 +4,7 @@ cask "hakuneko" do
 
   url "https://github.com/manga-download/hakuneko/releases/download/v#{version}/hakuneko-desktop_#{version}_macos_amd64.dmg"
   name "HakuNeko"
-  homepage "https://github.com/manga-download/hakuneko"
+  homepage "https://hakuneko.download/"
 
   livecheck do
     url :url
