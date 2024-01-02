@@ -9,7 +9,9 @@ cask "aria2d" do
 
   livecheck do
     url "https://raw.githubusercontent.com/xjbeta/AppUpdaterAppcasts/master/Aria2D/Appcast.xml"
-    strategy :sparkle
+    strategy :sparkle do |items|
+      items.map(&:nice_version)
+    end
   end
 
   depends_on macos: ">= :high_sierra"
