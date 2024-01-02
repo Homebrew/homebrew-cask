@@ -12,4 +12,6 @@ cask "hakuneko" do
   end
 
   app "HakuNeko Desktop.app"
+
+  # No zap stanza required
 end
