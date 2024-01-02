@@ -11,7 +11,7 @@ cask "hancock" do
   # https://github.com/JeremyAgost/Hancock/issues/8
   # https://github.com/JeremyAgost/Hancock/issues/7
   # https://github.com/JeremyAgost/Hancock/issues/6
-  disable! date: "2024-08-01", because: :unmaintained
+  disable! date: "2024-01-01", because: :unmaintained
 
   app "Hancock.app"
 end
