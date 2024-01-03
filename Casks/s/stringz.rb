@@ -7,6 +7,8 @@ cask "stringz" do
   desc "Editor for localizable files"
   homepage "https://github.com/mohakapt/Stringz"
 
+  depends_on macos: ">= :catalina"
+
   app "Stringz.app"
 
   zap trash: [
