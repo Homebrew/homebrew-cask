@@ -13,6 +13,8 @@ cask "foxglove-studio" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :catalina"
+
   app "Foxglove Studio.app"
 
   zap trash: [
