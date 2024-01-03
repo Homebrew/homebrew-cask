@@ -14,6 +14,7 @@ cask "textsniper-paddle" do
   end
 
   auto_updates true
+  conflicts_with cask: "textsniper-gumroad"
   depends_on macos: ">= :catalina"
 
   app "TextSniper.app"
