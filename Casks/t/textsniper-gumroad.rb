@@ -25,6 +25,7 @@ cask "textsniper-gumroad" do
   zap trash: [
     "~/Library/Application Scripts/com.valerijs.boguckis.gumroad.TextSniper-LaunchAtLoginHelper",
     "~/Library/Application Support/com.valerijs.boguckis.gumroad.TextSniper",
+    "~/Library/Application Support/TextSniper",
     "~/Library/Caches/com.valerijs.boguckis.gumroad.TextSniper",
     "~/Library/Containers/com.valerijs.boguckis.gumroad.TextSniper-LaunchAtLoginHelper",
     "~/Library/Preferences/com.valerijs.boguckis.gumroad.TextSniper.plist",

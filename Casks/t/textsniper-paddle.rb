@@ -25,6 +25,7 @@ cask "textsniper-paddle" do
   zap trash: [
     "~/Library/Application Scripts/com.valerijs.boguckis.TextSniper-LaunchAtLoginHelper",
     "~/Library/Application Support/com.valerijs.boguckis.TextSniper",
+    "~/Library/Application Support/TextSniper",
     "~/Library/Caches/com.valerijs.boguckis.TextSniper",
     "~/Library/Containers/com.valerijs.boguckis.TextSniper-LaunchAtLoginHelper",
     "~/Library/Preferences/com.valerijs.boguckis.TextSniper.plist",
