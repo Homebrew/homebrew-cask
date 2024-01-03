@@ -8,7 +8,7 @@ cask "mudlet" do
   homepage "https://www.mudlet.org/"
 
   livecheck do
-    url "https://www.mudlet.org/download/"
+    url "https://www.mudlet.org/wp-content/files/"
     regex(/href=.*?Mudlet[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
