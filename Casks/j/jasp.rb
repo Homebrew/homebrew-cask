@@ -3,9 +3,9 @@ cask "jasp" do
   arch_suffix = on_arch_conditional intel: "_new2"
   livecheck_folder = on_arch_conditional arm: "-apple-silicon"
 
-  version "0.18.1.0"
-  sha256 arm:   "4985018f2e31a496599a2b6374558e30f019012972457098930b50202fd8fa1b",
-         intel: "5805457002b7c566d4e0974041c5cc54d8ed72603b8260ac073b7b347a1d943d"
+  version "0.18.2.0"
+  sha256 arm:   "1632cba4de6008966fe0bc00726fd29f296834ca97cfcbd6bd569b35b098d01e",
+         intel: "75883975b6752020296034eb03a93dc199ccd599acd382708ec1b7f87093351b"
 
   url "https://static.jasp-stats.org/JASP-#{version}-macOS-#{arch}#{arch_suffix}.dmg"
   name "JASP"
