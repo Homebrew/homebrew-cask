@@ -1,8 +1,8 @@
 cask "lazarus" do
-  version "2.2.6"
-  sha256 "4b20da8d1771749ae7059f1e1e369baaae7d69134184a5deb23a6263c7984355"
+  version "3.0"
+  sha256 "71d77f4c6491265181078adf0e410dcb6176e8237e958c3aea9217bb5499f661"
 
-  url "https://downloads.sourceforge.net/lazarus/Lazarus%20macOS%20x86-64/Lazarus%20#{version}/Lazarus-#{version}-0-x86_64-macosx.pkg",
+  url "https://downloads.sourceforge.net/lazarus/Lazarus%20macOS%20x86-64/Lazarus%20#{version}/Lazarus-#{version}-macosx-x86_64.pkg",
       verified: "sourceforge.net/lazarus/"
   name "Lazarus"
   desc "IDE for rapid application development"
@@ -16,7 +16,7 @@ cask "lazarus" do
   depends_on cask: "fpc-laz"
   depends_on cask: "fpc-src-laz"
 
-  pkg "Lazarus-#{version}-0-x86_64-macosx.pkg"
+  pkg "Lazarus-#{version}-macosx-x86_64.pkg"
 
   uninstall pkgutil: [
               "org.freepascal.pkg.fpcsrc-320-laz",
