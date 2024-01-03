@@ -1,6 +1,6 @@
 cask "sabnzbd" do
-  version "4.1.0"
-  sha256 "8148d22f657efeff7522f97fe695cf507cc051164cb089d0465ceb44564f7b7a"
+  version "4.2.0"
+  sha256 "84bdcfb46131cda11077e5674c5185f2811825e4028f642b6bed210953798346"
 
   url "https://github.com/sabnzbd/sabnzbd/releases/download/#{version}/SABnzbd-#{version}-osx.dmg",
       verified: "github.com/sabnzbd/sabnzbd/"
