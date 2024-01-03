@@ -2,13 +2,13 @@ cask "aladin" do
   version "12.060"
   sha256 :no_check
 
-  url "https://aladin.u-strasbg.fr/java/download/Aladin.dmg"
+  url "https://aladin.cds.unistra.fr/java/download/Aladin.dmg"
   name "Aladin Desktop"
   desc "Interactive sky atlas"
-  homepage "https://aladin.u-strasbg.fr/AladinDesktop/"
+  homepage "https://aladin.cds.unistra.fr/AladinDesktop/"
 
   livecheck do
-    url "https://aladin.u-strasbg.fr/java/nph-aladin.pl?frame=downloading#Official"
+    url "https://aladin.cds.unistra.fr/java/nph-aladin.pl?frame=downloading#Official"
     regex(%r{<h1>\s*Official\s+version\s*(?:<[^/>]*>\s*)?v?(\d+(?:\.\d+)+)}i)
   end
 
