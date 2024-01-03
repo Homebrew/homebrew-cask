@@ -1,4 +1,4 @@
-cask "textsniper" do
+cask "textsniper-paddle" do
   version "1.10.1"
   sha256 "a553dd9fdf54b8a12950db71519cf3aee6aa7b18d590d32813b71c2e1bc6a010"
 
