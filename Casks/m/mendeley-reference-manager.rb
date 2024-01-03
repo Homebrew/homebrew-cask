@@ -12,6 +12,8 @@ cask "mendeley-reference-manager" do
     strategy :electron_builder
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Mendeley Reference Manager.app"
 
   zap trash: [
@@ -20,4 +22,8 @@ cask "mendeley-reference-manager" do
     "~/Library/Preferences/com.elsevier.mendeley.plist",
     "~/Library/Saved Application State/com.elsevier.mendeley.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
