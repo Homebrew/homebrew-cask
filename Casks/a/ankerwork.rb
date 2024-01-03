@@ -1,5 +1,5 @@
 cask "ankerwork" do
-  version "2.5.7"
+  version "2.5.8"
   sha256 :no_check
 
   url "https://ankerwork.s3.us-west-2.amazonaws.com/prod/AnkerWork_Official.dmg",
