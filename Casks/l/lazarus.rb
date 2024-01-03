@@ -16,7 +16,7 @@ cask "lazarus" do
   depends_on cask: "fpc-laz"
   depends_on cask: "fpc-src-laz"
 
-  pkg "Lazarus-#{version}-macosx-x86_64.pkg
+  pkg "Lazarus-#{version}-macosx-x86_64.pkg"
 
   uninstall pkgutil: [
               "org.freepascal.pkg.fpcsrc-320-laz",
