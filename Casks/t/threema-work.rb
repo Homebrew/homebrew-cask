@@ -12,7 +12,7 @@ cask "threema-work" do
     regex(/Threema\s*Work\s*(\d+(?:\.\d+)+)\s*for\s*Desktop/i)
   end
 
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :catalina"
 
   app "Threema Work.app"
 
