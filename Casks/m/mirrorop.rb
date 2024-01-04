@@ -7,10 +7,7 @@ cask "mirrorop" do
   desc "Mirroring software application for wePresent systems"
   homepage "https://www.barco.com/en/product/mirrorop"
 
-  livecheck do
-    url "https://www.barco.com/en/support/software/R33050100"
-    regex(/MirrorOp\s*Mac\s*Sender\s*v?(\d+(?:\.\d+)+)/i)
-  end
+  disable! date: "2024-01-04", because: "download artifact behind signed url"
 
   app "MirrorOp.app"
 end
