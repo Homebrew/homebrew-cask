@@ -20,7 +20,9 @@ env:
     apifox
     appcleaner
     arc
+    banking-4
     beeper
+    bettermouse
     bettertouchtool
     bike
     brave-browser
@@ -30,9 +32,11 @@ env:
     busycal
     calibre
     canva
+    capacities
     carbon-copy-cloner
     chatall
     chirp
+    chromium-gost
     clickup
     cloudnet
     codeql
@@ -48,20 +52,26 @@ env:
     duckduckgo
     electerm
     electron
+    elephas
     eloston-chromium
     figma
     firefox
     flipper
+    flutter
     fmail2
     fossa
     foxglove-studio
     gather
     glyphs
     google-chrome
+    google-cloud-sdk
+    google-drive
     grammarly-desktop
     grandtotal
     hackolade
     heptabase
+    hstracker
+    hydrus-network
     jdownloader
     jupyterlab
     libreoffice
@@ -80,6 +90,7 @@ env:
     openshift-client
     opera
     opera-gx
+    orbstack
     osu
     pitch
     plex
@@ -89,6 +100,7 @@ env:
     purei-play
     puzzles
     qownnotes
+    qqlive
     quarto
     readdle-spark
     reaper
@@ -111,6 +123,7 @@ env:
     telegram
     telegram-desktop
     teleport-connect
+    termius
     thunderbird
     todoist
     tor-browser
