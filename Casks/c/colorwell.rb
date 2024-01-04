@@ -1,5 +1,5 @@
 cask "colorwell" do
-  version "7.4"
+  version "7.4.1"
   sha256 :no_check
 
   url "https://sweetpproductions.com/products/colorwell/ColorWell.dmg"
