@@ -28,7 +28,7 @@ cask "eobcanka" do
             ]
 
   zap trash: [
-              "~/.config/eObcanka/",
-              "~/.eObcanka_logs/",
-            ]
+    "~/.config/eObcanka/",
+    "~/.eObcanka_logs/",
+  ]
 end
