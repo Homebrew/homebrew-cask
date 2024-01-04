@@ -26,4 +26,9 @@ cask "eobcanka" do
               "com.Monet.pkg.CryptoPlusEOPCTK",
               "com.Monet.pkg.CryptoPlusEOP",
             ]
+
+  zap trash: [
+              "~/.config/eObcanka/",
+              "~/.eObcanka_logs/",
+            ]
 end
