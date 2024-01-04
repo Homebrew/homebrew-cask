@@ -7,10 +7,7 @@ cask "mana-security" do
   desc "Vulnerability Management for individuals"
   homepage "https://www.manasecurity.com/"
 
-  livecheck do
-    url :url
-    strategy :header_match
-  end
+  disable! date: "2024-01-04", because: "download artifact not available"
 
   depends_on macos: ">= :big_sur"
 
