@@ -1,9 +1,9 @@
 cask "wireshark-chmodbpf" do
   arch arm: "Arm", intel: "Intel"
 
-  version "4.2.0"
-  sha256 arm:   "d2fba92c2f88271fad6929e8d8d06d50992fd82e00230c9f503c57a4bfe4f54f",
-         intel: "9e10e57a24ea5c8f66fa6dab8d9b21751e8b370d9ef2a5f4be8b6c29dc4437b6"
+  version "4.2.1"
+  sha256 arm:   "9ca7fcdb382c0665c77d580dd6b6db8a5d2e50758fc9f34bffbba267cfb49b37",
+         intel: "35080517e048a7ca7a3fe80b88c9f4457e8b6f9948b3cbeb22c920fbacd7e234"
 
   url "https://www.wireshark.org/download/osx/Wireshark%20#{version}%20#{arch}%2064.dmg"
   name "Wireshark-ChmodBPF"
