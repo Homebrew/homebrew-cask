@@ -31,10 +31,8 @@ cask "textsniper" do
     "~/Library/Preferences/com.valerijs.boguckis.gumroad.TextSniper.plist",
   ]
 
-  caveats do
-    <<~EOS
-      Older licence keys (those issued through Paddle) won't work with this version
-      of #{token}. Download #{token} from #{homepage}/download instead.
-    EOS
-  end
+  caveats <<~EOS
+    Older licence keys (those issued through Paddle) won't work with this version
+    of #{token}. Download #{token} from #{homepage}/download instead.
+  EOS
 end
