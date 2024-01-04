@@ -1,6 +1,6 @@
 cask "cryptr" do
-  version "0.5.0"
-  sha256 "eb2164ef6fca0df2dc7c61611393e1233d15dce946aa6a09042ff03a8abdf087"
+  version "0.6.0"
+  sha256 "22f526a8f804c203148034eba3704f0478f58b1bf2ee3999e1a199b3b52eefd5"
 
   url "https://github.com/adobe/cryptr/releases/download/v#{version}/Cryptr-#{version}.dmg"
   name "Cryptr"
