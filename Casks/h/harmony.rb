@@ -8,6 +8,8 @@ cask "harmony" do
   desc "Music player"
   homepage "https://getharmony.xyz/"
 
+  deprecate! date: "2024-01-03", because: :discontinued
+
   app "Harmony.app"
 
   uninstall signal: [
