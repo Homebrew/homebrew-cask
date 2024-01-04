@@ -1,6 +1,6 @@
 cask "bugdom" do
-  version "1.3.3"
-  sha256 "a0b1098dd322c8d672a8bcf85204a6d6c284db149e85b37e4ff8cb03923c6b8c"
+  version "1.3.4"
+  sha256 "9797091290e29336e74f8d3692589acd5accc53bccf085e6aeb8636552349644"
 
   url "https://github.com/jorio/Bugdom/releases/download/#{version}/Bugdom-#{version}-mac.dmg",
       verified: "github.com/jorio/Bugdom/"
