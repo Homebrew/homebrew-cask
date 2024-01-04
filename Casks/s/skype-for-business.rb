@@ -5,7 +5,7 @@ cask "skype-for-business" do
   url "https://download.microsoft.com/download/D/0/5/D055DA17-C7B8-4257-89A1-78E7BBE3833F/SkypeForBusinessInstaller-#{version}.pkg"
   name "Skype for Business"
   desc "Microsofts instant messaging enterprise software"
-  homepage "https://www.microsoft.com/download/details.aspx?id=54108"
+  homepage "https://www.microsoft.com/en-us/download/details.aspx?id=54108"
 
   livecheck do
     url :homepage
