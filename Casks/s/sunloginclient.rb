@@ -4,7 +4,7 @@ cask "sunloginclient" do
 
   version "15.0.0.56590"
   sha256 arm:   "2735a153b7a41b7c17b2cc341fe6dabcde4ce665091d18992f8f17d36ca2709b",
-         intel: "8045d092c28d858ac6d97d93d306594572ed08394874fa421272a0d814a19d5c"
+         intel: "7708bc4180306a581d47fc25f7d2ba5efdc53c6265c7a86b6b4d74857f72170a"
 
   url "https://down.oray.com/sunlogin/mac/SunloginClient_#{version}_#{arch}.dmg"
   name "Sunlogin Client"
