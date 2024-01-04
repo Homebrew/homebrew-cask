@@ -1,6 +1,6 @@
 cask "thetimemachinemechanic" do
-  version "2.00,2024.01"
-  sha256 "b2237496f9ec5d703a7f7abb469d1ed486f151d46792bdaad7c4d9d970b1556f"
+  version "2.01,2024.01"
+  sha256 "378938ac9d0be3e30227fbae8f2465178ae944423cda78d611ee6cfa9b5fe588"
 
   url "https://eclecticlightdotcom.files.wordpress.com/#{version.csv.second.major}/#{version.csv.second.minor}/t2m2#{version.csv.first.no_dots}.zip",
       verified: "eclecticlightdotcom.files.wordpress.com/"
