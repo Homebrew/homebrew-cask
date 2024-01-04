@@ -1,6 +1,6 @@
 cask "the-battle-for-wesnoth" do
-  version "1.16.10"
-  sha256 "fef55e731b0672c63ce9010263c7408ef1db600005df7245de99885d1856def3"
+  version "1.16.11"
+  sha256 "8cd4af79e180ae90fbdbf740d63f26b0ac05826230eddd96b88c895f59a6525f"
 
   url "https://downloads.sourceforge.net/wesnoth/Wesnoth_#{version}.dmg",
       verified: "sourceforge.net/wesnoth/"
