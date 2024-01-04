@@ -13,4 +13,13 @@ cask "eiskaltdcpp" do
   end
 
   app "EiskaltDC++.app"
+
+  zap trash: [
+    "~/.config/eiskaltdc++",
+    "~/.local/share/eiskaltdc++",
+  ]
+
+  caveats do
+    requires_rosetta
+  end
 end
