@@ -3,9 +3,9 @@ cask "textsniper" do
   sha256 "3542eedfa1a1d15b8d5351d7fee0ae28451d0b3d01d474995f214bf675eb76d2"
 
   url "https://s3.amazonaws.com/textsniper.app/Gumroad/TextSniper#{version}.dmg",
-      verified: "s3.amazonaws.com/textsniper.app/"
+      verified: "s3.amazonaws.com/textsniper.app/Gumroad/"
   name "TextSniper"
-  desc "Extract text from images and other digital documents in seconds"
+  desc "Extract text from images and other digital documents"
   homepage "https://textsniper.app/"
 
   livecheck do
@@ -31,5 +31,10 @@ cask "textsniper" do
     "~/Library/Preferences/com.valerijs.boguckis.gumroad.TextSniper.plist",
   ]
 
-  caveats "Older licence keys (those issued through Paddle) won't work with this version of #{token}. Download #{token} from #{homepage}/download instead."
+  caveats do
+    <<~EOS
+      Older licence keys (those issued through Paddle) won't work with this version
+      of #{token}. Download #{token} from #{homepage}/download instead.
+    EOS
+  end
 end
