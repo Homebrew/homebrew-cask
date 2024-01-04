@@ -1,5 +1,5 @@
 cask "tigerjython" do
-  version "2.38"
+  version "2.39"
   sha256 :no_check
 
   url "https://www.tjgroup.ch/download/TigerJython.dmg"
