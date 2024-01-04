@@ -8,10 +8,7 @@ cask "volley" do
   desc "Asynchronous video messaging app"
   homepage "https://www.volleyapp.com/"
 
-  livecheck do
-    url "https://s3.amazonaws.com/pieces.volley.app/downloads/latest-mac.yml"
-    strategy :electron_builder
-  end
+  disable! date: "2024-01-04", because: "download artifact not available"
 
   app "Volley.app"
 
