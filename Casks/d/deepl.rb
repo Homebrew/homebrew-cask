@@ -13,8 +13,8 @@ cask "deepl" do
     end
   end
   on_big_sur :or_newer do
-    version "23.12.1682884"
-    sha256 "42df88de5786764c6d45958ec1458d54ca15b8cc289170ff179042dab7c9ef0b"
+    version "23.12.1701342"
+    sha256 "1781ef461e24e325831c456f434f8345379c2f0630ad92c6fe6e887d22fe8bba"
 
     url "https://www.deepl.com/macos/download/#{version}/DeepL_#{version}.tar.gz"
 
