@@ -8,11 +8,6 @@ cask "wakatime" do
   desc "System tray app for automatic time tracking"
   homepage "https://wakatime.com/mac"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: ">= :catalina"
 
   app "WakaTime.app"
