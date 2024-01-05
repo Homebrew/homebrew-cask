@@ -17,6 +17,4 @@ cask "kiota" do
   end
 
   binary "kiota", target: "#{HOMEBREW_PREFIX}/bin/kiota"
-
-  # zap trash: "kiota"
 end
