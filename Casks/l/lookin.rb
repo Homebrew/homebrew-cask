@@ -13,7 +13,7 @@ cask "lookin" do
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :big_sur"
 
   app "Lookin.app"
 end
