@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Enable auto-merge
-        uses: reitermarkus/automerge@e0cf02bcf5cbb9f9e9b359cc0ad3d9319bd5f427
+        uses: reitermarkus/automerge@42e67be9e28a0d0b50407cc3a1c07076e3aa6834
         with:
           token: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
           merge-method: merge
