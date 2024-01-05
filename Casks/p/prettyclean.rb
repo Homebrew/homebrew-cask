@@ -18,7 +18,7 @@ cask "prettyclean" do
     end
   end
 
-  depends_on macos: ">=:high_sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "PrettyClean.app"
 
