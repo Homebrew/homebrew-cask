@@ -1,8 +1,11 @@
 cask "imhex" do
-  version "1.32.1"
-  sha256 "80b1c9b178f3fe44593fc63026d02d85ad282b2aa1ea51fb6e25073edbbfae36"
+  arch arm: "arm64", intel: "x86_64"
 
-  url "https://github.com/WerWolv/ImHex/releases/download/v#{version}/imhex-#{version}-macOS-x86_64.dmg",
+  version "1.32.2"
+  sha256 arm:   "f49acd76bd683b1f6c2f3df6b6a272ad5f003275db768643d716505a900e83a0",
+         intel: "8b9df7832c4cd6c329a19dfad0d89d6db0f0bcb562d8a1ec45241289f093942c"
+
+  url "https://github.com/WerWolv/ImHex/releases/download/v#{version}/imhex-#{version}-macOS-#{arch}.dmg",
       verified: "github.com/WerWolv/ImHex/"
   name "ImHex"
   desc "Hex editor for reverse engineers"
