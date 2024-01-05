@@ -8,13 +8,7 @@ cask "pomotodo" do
   desc "Time management app for creators"
   homepage "https://pomotodo.com/"
 
-  livecheck do
-    url "https://air.pomotodo.com/v1/p/com.pomotodo.PomotodoMac#{version.major}/latest.xml"
-    regex(%r{/(\d+)/Pomotodo\.(\d+(?:\.\d+)*)\.dmg}i)
-    strategy :sparkle do |item, regex|
-      item.url.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
-    end
-  end
+  disable! date: "2024-01-05", because: "download artifact not available"
 
   app "Pomotodo.app"
 
