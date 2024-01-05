@@ -17,4 +17,6 @@ cask "kiota" do
   end
 
   binary "kiota", target: "#{HOMEBREW_PREFIX}/bin/kiota"
+
+  # No zap stanza required
 end
