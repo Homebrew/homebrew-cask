@@ -8,10 +8,7 @@ cask "knotes" do
   desc "Reading notes management tool"
   homepage "https://knotesapp.com/"
 
-  livecheck do
-    url :homepage
-    regex(%r{href=.*?/Knotes[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
-  end
+  deprecate! date: "2024-01-05", because: :unmaintained
 
   app "Knotes.app"
 
