@@ -29,6 +29,6 @@ cask "dynamodb-local" do
   # No zap stanza required
 
   caveats do
-    depends_on_java "6+"
+    depends_on_java "11+"
   end
 end
