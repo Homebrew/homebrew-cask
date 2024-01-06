@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 cask "dynamodb-local" do
   version :latest
   sha256 :no_check
