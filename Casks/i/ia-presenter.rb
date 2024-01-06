@@ -15,6 +15,7 @@ cask "ia-presenter" do
   end
 
   depends_on macos: ">= :monterey"
+
   app "iA Presenter.app"
 
   zap trash: [
