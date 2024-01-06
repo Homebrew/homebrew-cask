@@ -14,7 +14,7 @@ cask "ia-presenter" do
     end
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :big_sur"
 
   app "iA Presenter.app"
 
