@@ -25,7 +25,7 @@ cask "pulsar" do
     "~/.pulsar",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dev.pulsar-edit.pulsar.sfl*",
     "~/Library/Application Support/Pulsar",
-    "~/Library/Preferences/div.pulsar-edit.pulsar.plist",
+    "~/Library/Preferences/dev.pulsar-edit.pulsar.plist",
     "~/Library/Saved Application State/dev.pulsar-edit.pulsar.savedState",
   ]
 end
