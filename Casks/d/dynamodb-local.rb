@@ -2,8 +2,8 @@ cask "dynamodb-local" do
   version :latest
   sha256 :no_check
 
-  url "https://dynamodb-local.s3.amazonaws.com/dynamodb_local_latest.tar.gz",
-      verified: "dynamodb-local.s3.amazonaws.com/"
+  url "https://d1ni2b6xgvw0s0.cloudfront.net/v2.x/dynamodb_local_latest.tar.gz",
+      verified: "d1ni2b6xgvw0s0.cloudfront.net/"
   name "Amazon DynamoDB Local"
   desc "Development tool for DynamoDB"
   homepage "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html"
@@ -27,6 +27,6 @@ cask "dynamodb-local" do
   # No zap stanza required
 
   caveats do
-    depends_on_java "6+"
+    depends_on_java "11+"
   end
 end
