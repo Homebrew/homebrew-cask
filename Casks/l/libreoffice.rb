@@ -9,7 +9,7 @@ cask "libreoffice" do
   url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/#{folder}/LibreOffice_#{version}_MacOS_#{arch}.dmg",
       verified: "download.documentfoundation.org/libreoffice/stable/"
   name "LibreOffice"
-  desc "Free cross-platform office suite, fresh version"
+  desc "Successor of OpenOffice, LibreOffice is a free and open-source office productivity software suite, latest version"
   homepage "https://www.libreoffice.org/"
 
   livecheck do
