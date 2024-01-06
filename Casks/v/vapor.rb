@@ -1,9 +1,9 @@
 cask "vapor" do
-  arch arm: "ARM64", intel: "X86"
+  arch arm: "M1", intel: "x86"
 
-  version "3.9.0"
-  sha256 arm:   "24fc0f831696fe2276a878f8eb4144b5f78c65d13d0a4542f537c900e863d08f",
-         intel: "b3562847d4c3effd19d65713220e4fb6fab703d732db67ab990aaff9fdfb1988"
+  version "3.9.1"
+  sha256 arm:   "dbb552c55cbe1dcbef4736ef3c4dbcabc2d7d1572406ee5d9f5b64fc480c1fa8",
+         intel: "601ae6e9bd8b8bc82f2e6900b6522e1383e77e22f329267eb78f2059a7c1ee2d"
 
   url "https://github.com/NCAR/VAPOR/releases/download/v#{version}/VAPOR#{version.major}-#{version}-Darwin#{arch}.dmg"
   name "VAPOR"
@@ -15,7 +15,12 @@ cask "vapor" do
     strategy :github_latest
   end
 
+  auto_updates true
+
   app "vapor.app"
 
-  # No zap stanza required
+  zap trash: [
+    "~/.vapor3_settings",
+    "~/Library/Saved Application State/Vapor3.savedState",
+  ]
 end
