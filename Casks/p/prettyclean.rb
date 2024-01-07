@@ -7,7 +7,7 @@ cask "prettyclean" do
 
   url "https://downloads.jmotor.org/prettyclean/v#{version}/darwin-#{arch}/PrettyClean_#{version}_#{arch.gsub("86_", "")}.dmg",
       verified: "downloads.jmotor.org/"
-  name "prettyclean"
+  name "PrettyClean"
   desc "Easy to use Disk Cleanup Tools"
   homepage "https://www.prettyclean.cc/"
 
