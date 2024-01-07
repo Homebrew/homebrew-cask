@@ -8,7 +8,7 @@ cask "onlyoffice" do
   url "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v#{version}/ONLYOFFICE-#{arch}.dmg",
       verified: "github.com/ONLYOFFICE/DesktopEditors/"
   name "ONLYOFFICE"
-  desc "Free open source office suite with business productivity tools"
+  desc "Free open-source office suite with business productivity tools"
   homepage "https://www.onlyoffice.com/"
 
   livecheck do
