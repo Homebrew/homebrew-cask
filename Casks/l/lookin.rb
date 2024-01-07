@@ -7,13 +7,17 @@ cask "lookin" do
   desc "App for iOS view debugging"
   homepage "https://lookin.work/"
 
+  # The pubDate for some items includes non-english characters (breaking the date parsing)
+  # so it's necessary to map all of the items in the feed.
   livecheck do
     url "https://lookin.work/release/appcast.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle do |items|
+      items.map(&:short_version)
+    end
   end
 
   auto_updates true
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :big_sur"
 
   app "Lookin.app"
 end
