@@ -26,6 +26,7 @@ jobs:
         github.event.label.name == 'ci-retry' ||
         github.event.label.name == 'ci-skip-appcast' ||
         github.event.label.name == 'ci-skip-install' ||
+        github.event.label.name == 'ci-skip-homepage' ||
         github.event.label.name == 'ci-skip-livecheck' ||
         github.event.label.name == 'ci-skip-livecheck-min-os' ||
         github.event.label.name == 'ci-skip-repository' ||
@@ -40,5 +41,5 @@ jobs:
           token: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
           once-label: ci-requeue
           continuous-label: ci-retry
-          trigger-labels: ci-skip-appcast,ci-skip-install,ci-skip-livecheck,ci-syntax-only,ci-skip-repository,ci-skip-livecheck-min-os
+          trigger-labels: ci-skip-appcast,ci-skip-install,ci-skip-homepage,ci-skip-livecheck,ci-syntax-only,ci-skip-repository,ci-skip-livecheck-min-os
           workflow: ci.yml
