@@ -37,7 +37,7 @@ cask "openoffice" do
   url "https://downloads.sourceforge.net/openofficeorg.mirror/Apache_OpenOffice_#{version}_MacOS_x86-64_install_#{language}.dmg",
       verified: "sourceforge.net/openofficeorg.mirror/"
   name "Apache OpenOffice"
-  desc "Free and open-source productivity suite"
+  desc "Legacy open-source office suite, see LibreOffice for active development"
   homepage "https://www.openoffice.org/"
 
   app "OpenOffice.app"
