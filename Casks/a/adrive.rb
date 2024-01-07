@@ -11,7 +11,7 @@ cask "adrive" do
 
   livecheck do
     url "https://www.aliyundrive.com/download"
-    regex(/aDrive-(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/aDrive[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   auto_updates true
