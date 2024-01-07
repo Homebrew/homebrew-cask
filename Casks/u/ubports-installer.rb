@@ -4,7 +4,7 @@ cask "ubports-installer" do
 
   url "https://github.com/ubports/ubports-installer/releases/download/#{version}/ubports-installer_#{version}_mac_x64.dmg",
       verified: "github.com/ubports/ubports-installer/"
-  name "ubports-installer"
+  name "ubports installer"
   desc "Application to install ubports on mobile devices"
   homepage "https://ubports.com/"
 

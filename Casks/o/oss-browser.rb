@@ -3,7 +3,7 @@ cask "oss-browser" do
   sha256 "046e7aa50a76318b8ec8f5171ddb0cfcb8d80b6ad8134762331b874f80d685fb"
 
   url "https://github.com/aliyun/oss-browser/releases/download/v#{version}/oss-browser-darwin-x64.zip"
-  name "oss-browser"
+  name "OSS Browser"
   desc "Graphical management tool for OSS (Object Storage Service)"
   homepage "https://github.com/aliyun/oss-browser/"
 

@@ -3,7 +3,7 @@ cask "inloop-qlplayground" do
   sha256 "44c25a7da0dc3748b01deb0c01634044ccbc625b4266b4fea0630cbedb773929"
 
   url "https://github.com/inloop/qlplayground/releases/download/v#{version}/inloop-qlplayground.v#{version}.zip"
-  name "inloop-qlplayground"
+  name "INLOOPX QLPlayground"
   desc "QuickLook generator for Xcode Playgrounds"
   homepage "https://github.com/inloop/qlplayground"
 

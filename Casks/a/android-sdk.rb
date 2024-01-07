@@ -4,7 +4,7 @@ cask "android-sdk" do
 
   url "https://dl.google.com/android/repository/sdk-tools-darwin-#{version}.zip",
       verified: "dl.google.com/android/repository/"
-  name "android-sdk"
+  name "Android SDK"
   desc "Tools for the Android SDK"
   homepage "https://developer.android.com/studio/releases/sdk-tools"
 

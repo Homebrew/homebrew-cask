@@ -6,7 +6,7 @@ cask "aws-vault" do
          intel: "c0642de33329eb6eade70532f0c9eb769d2a1b52dfa56b63196ef51c7dea6445"
 
   url "https://github.com/99designs/aws-vault/releases/download/v#{version}/aws-vault-darwin-#{arch}.dmg"
-  name "aws-vault"
+  name "AWS Vault"
   desc "Securely stores and accesses AWS credentials in a development environment"
   homepage "https://github.com/99designs/aws-vault"
 
