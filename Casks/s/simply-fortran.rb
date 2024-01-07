@@ -14,7 +14,7 @@ cask "simply-fortran" do
   on_monterey :or_newer do
     on_arm do
       version "3.32.4016"
-      sha256 "5d29936eeb008893d2c27eea98431454954365e9071d57207572674f315f1121"
+      sha256 "11d513fc26c367869e678e3a46f5ec80bae8e55747c1331c46c022deb388937e"
     end
     on_intel do
       version "3.33.4066"
