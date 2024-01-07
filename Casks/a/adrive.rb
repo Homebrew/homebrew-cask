@@ -1,6 +1,6 @@
 cask "adrive" do
-  version "4.9.15"
-  sha256 "404e1ca75200730bc8b7f0724baa404ee39c0b9b3db2e9665a87b585845d12eb"
+  version "4.11.0"
+  sha256 "8ed69cc6855d65cdd437c023c931fd30175fbdbb76fb0c1f6a548c34e9281f09"
 
   url "https://cdn.aliyundrive.net/downloads/apps/desktop/aDrive-#{version}.dmg",
       verified: "cdn.aliyundrive.net/"
@@ -10,8 +10,8 @@ cask "adrive" do
   homepage "https://www.aliyundrive.com/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://www.aliyundrive.com/download"
+    regex(/aDrive[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   auto_updates true
