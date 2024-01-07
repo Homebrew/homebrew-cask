@@ -144,8 +144,10 @@ module CiMatrix
 
       audit_exceptions = []
 
+      audit_exceptions << %w[homepage_https_availability] if labels.include?("ci-skip-homepage")
+
       if labels.include?("ci-skip-livecheck")
-        audit_exceptions << %w[hosting_with_livecheck https_availability
+        audit_exceptions << %w[hosting_with_livecheck livecheck_https_availability
                                livecheck_min_os livecheck_version]
       end
 
