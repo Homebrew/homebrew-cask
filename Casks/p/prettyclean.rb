@@ -12,10 +12,8 @@ cask "prettyclean" do
   homepage "https://www.prettyclean.cc/"
 
   livecheck do
-    url :url
-    strategy :extract_plist do |items|
-      items["cc.prettyclean.PrettyClean"].short_version
-    end
+    url "https://www.prettyclean.cc/en/download"
+    regex(/href=.*?PrettyClean[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
   depends_on macos: ">= :high_sierra"
