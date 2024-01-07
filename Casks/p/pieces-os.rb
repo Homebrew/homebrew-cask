@@ -6,7 +6,7 @@ cask "pieces-os" do
   sha256 :no_check
 
   url "https://builds.pieces.app/stages/production/os_server/macos#{arch}/download"
-  name "pieces-os"
+  name "Pieces OS"
   desc "Local datastore, server, and ML engine powering the Pieces for Developers Suite"
   homepage "https://pieces.app/"
 

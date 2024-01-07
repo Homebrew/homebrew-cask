@@ -4,7 +4,7 @@ cask "hydrus-network" do
 
   url "https://github.com/hydrusnetwork/hydrus/releases/download/v#{version}/Hydrus.Network.#{version}.-.macOS.-.App.dmg",
       verified: "github.com/hydrusnetwork/hydrus/"
-  name "hydrus-network"
+  name "hydrus network"
   desc "Booru-style media tagger"
   homepage "https://hydrusnetwork.github.io/hydrus/"
 

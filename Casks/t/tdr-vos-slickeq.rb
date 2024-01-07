@@ -3,7 +3,7 @@ cask "tdr-vos-slickeq" do
   sha256 "532221d58352ff9cf926f184079587b76b42ef623477280bf001955eca21b385"
 
   url "https://www.tokyodawn.net/labs/SlickEQ/#{version}/TDR%20VOS%20SlickEQ.zip?x24775"
-  name "tdr-vos-slickeq"
+  name "TDR VOS SlickEQ"
   desc "Mixing equalizer"
   homepage "https://www.tokyodawn.net/tdr-vos-slickeq/"
 

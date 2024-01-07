@@ -3,7 +3,7 @@ cask "qlmarkdown" do
   sha256 "9f6265557db18fed69fd63a956557ccf0f4d980e323caa4a3957e247bb7a3926"
 
   url "https://github.com/sbarex/QLMarkdown/releases/download/#{version}/QLMarkdown.zip"
-  name "sbarex-qlmarkdown"
+  name "sbarex QLMarkdown"
   desc "QuickLook generator for Markdown files"
   homepage "https://github.com/sbarex/QLMarkdown"
 
