@@ -7,13 +7,7 @@ cask "dendroscope" do
   desc "Interactive viewer for rooted phylogenetic trees and networks"
   homepage "https://www.wsi.uni-tuebingen.de/lehrstuehle/algorithms-in-bioinformatics/software/dendroscope/"
 
-  livecheck do
-    url "https://software-ab.cs.uni-tuebingen.de/download/dendroscope3/welcome.html"
-    regex(/href=.*?Dendroscope_macos_(\d+(?:_\d+)*)\.dmg/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex)&.map { |match| match[0].tr("_", ".") }
-    end
-  end
+  disable! date: "2024-01-04", because: "download artifact not available"
 
   installer script: {
     executable: "Dendroscope Installer.app/Contents/MacOS/JavaApplicationStub",
