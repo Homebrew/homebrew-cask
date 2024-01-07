@@ -77,9 +77,7 @@ cask "coteditor" do
   app "CotEditor.app"
   binary "#{appdir}/CotEditor.app/Contents/SharedSupport/bin/cot"
 
-  uninstall quit: [
-    "com.coteditor.CotEditor",
-  ]
+  uninstall quit: "com.coteditor.CotEditor"
 
   zap trash: [
     "~/Library/Application Scripts/com.coteditor.CotEditor",
