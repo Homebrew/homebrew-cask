@@ -1,15 +1,16 @@
 cask "ludwig" do
-  version "2.1.13"
-  sha256 "158004f8d373924e432f651a2d81aac11cfec26cb897d0c22d1bc1313a0197c3"
+  version "3.1.8"
+  sha256 :no_check
 
-  url "https://desktop.ludwig.guru/download/#{version}/osx_64"
+  url "https://desktop.ludwig.guru/download/latest",
+      user_agent: :fake
   name "ludwig"
   desc "Sentence search engine app that helps you write better English"
   homepage "https://ludwig.guru/"
 
   livecheck do
-    url "https://desktop.ludwig.guru/download/latest/osx_64"
-    strategy :header_match
+    url :url
+    strategy :extract_plist
   end
 
   app "Ludwig.app"
