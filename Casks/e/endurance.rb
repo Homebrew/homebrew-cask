@@ -7,10 +7,7 @@ cask "endurance" do
   desc "Battery monitoring and management"
   homepage "https://enduranceapp.com/"
 
-  livecheck do
-    url "https://enduranceapp.com/appcast"
-    strategy :sparkle, &:short_version
-  end
+  disable! date: "2024-01-07", because: "download artifact not available"
 
   app "Endurance.app"
 
