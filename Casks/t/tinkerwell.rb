@@ -3,7 +3,7 @@ cask "tinkerwell" do
 
   version "4.5.0"
   sha256 arm:   "d03bf542066bbe274b9dbaf844996782b1a50e6853c216eecbb11f35afdf2ba8",
-         intel: "7e1d8c5348f50fe5abf47db67c738ae4e7e910e65bdddb38149c275153b23aab"
+         intel: "158d12e6ec3e259a1389d6455532ba58f5846390b01717dda0796f50293254cf"
 
   url "https://download.tinkerwell.app/tinkerwell/Tinkerwell-#{version}#{arch}.dmg"
   name "Tinkerwell"
