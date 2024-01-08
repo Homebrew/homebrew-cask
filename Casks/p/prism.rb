@@ -7,6 +7,9 @@ cask "prism" do
   desc "Statistical analysis and graphing software"
   homepage "https://graphpad.com/"
 
+  # The `osVersion` parameter is required but doesn't seem to have an effect on
+  # the version in the appcast. However, we may want to monitor this over time
+  # (e.g. when the newest macOS release is higher than the hardcoded version).
   livecheck do
     url "https://licenses.graphpad.com/updates?version=#{version}&configuration=full&platform=Mac&osVersion=14"
     strategy :sparkle, &:short_version
