@@ -13,7 +13,7 @@ cask "scribus" do
 
   livecheck do
     url "https://sourceforge.net/projects/scribus/rss?path=/scribus"
-    strategy :sourceforge
+    regex(%r{url=.*?/scribus[._-]v?(\d+(?:\.\d+)+)(?:#{arch})?\.(?:dmg|pkg)}i)
   end
 
   app "Scribus.app"
