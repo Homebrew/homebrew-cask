@@ -7,5 +7,7 @@ cask "plotdigitizer" do
   desc "Digitize scanned plots of functional data"
   homepage "https://plotdigitizer.sourceforge.net/"
 
-  app "PlotDigitizer.app"
+  app "Plot Digitizer.app"
+
+  # No zap stanza required
 end
