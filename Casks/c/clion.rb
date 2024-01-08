@@ -23,15 +23,7 @@ cask "clion" do
   depends_on macos: ">= :high_sierra"
 
   app "CLion.app"
-
-  uninstall_postflight do
-    ENV["PATH"].split(File::PATH_SEPARATOR).map { |path| File.join(path, "clion") }.each do |path|
-      if File.readable?(path) &&
-         File.readlines(path).grep(/# see com.intellij.idea.SocketLock for the server side of this interface/).any?
-        File.delete(path)
-      end
-    end
-  end
+  binary "#{appdir}/CLion.app/Contents/MacOS/clion"
 
   zap trash: [
     "~/Library/Application Support/JetBrains/CLion#{version.major_minor}",
