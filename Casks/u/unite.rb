@@ -22,6 +22,12 @@ cask "unite" do
         "~/Library/Application Support/Unite",
         "~/Library/Application Support/com.BZG.unite.*",
         "~/Library/Preferences/com.BZG.unite.*",
+        "~/Library/Application Scripts/group.BZG.unite.sharedData",
+        "~/Library/Caches/com.BZG.unite",
+        "~/Library/Cookies/com.BZG.unite.3.binarycookies",
+        "~/Library/Group Containers/group.BZG.unite.sharedData",
+        "~/Library/HTTPStorages/com.BZG.unite*",
+        "~/Library/Saved Application State/com.BZG.unite*.savedState",
       ],
       rmdir: "/Users/Shared/Unite"
 end
