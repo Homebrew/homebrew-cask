@@ -8,8 +8,8 @@ cask "prism" do
   homepage "https://graphpad.com/"
 
   livecheck do
-    url "https://www.graphpad.com/updates"
-    regex(/"version":"(\d+(?:\.\d+)+)/i)
+    url "https://licenses.graphpad.com/updates?version=#{version}&configuration=full&platform=Mac&osVersion=14"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
@@ -17,14 +17,19 @@ cask "prism" do
 
   app "Prism #{version.major}.app"
 
-  zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.graphpad.prism.sfl*",
-    "~/Library/Application Support/GraphPad",
-    "~/Library/Caches/com.GraphPad.Prism",
-    "~/Library/HTTPStorages/com.GraphPad.Prism",
-    "~/Library/Preferences/com.GraphPad.Prism.autocomplete.plist",
-    "~/Library/Preferences/com.GraphPad.Prism.plist",
-    "~/Library/Saved Application State/com.GraphPad.Prism.savedState",
-    "~/Library/WebKit/com.GraphPad.Prism",
-  ]
+  zap delete: [
+        "/Library/Application Support/GraphPad",
+        "/Library/GraphPad",
+      ],
+      trash:  [
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.graphpad.prism.sfl*",
+        "~/Library/Application Support/GraphPad",
+        "~/Library/Caches/com.GraphPad.Prism",
+        "~/Library/HTTPStorages/com.GraphPad.Prism",
+        "~/Library/Logs/GraphPad",
+        "~/Library/Preferences/com.GraphPad.Prism.autocomplete.plist",
+        "~/Library/Preferences/com.GraphPad.Prism.plist",
+        "~/Library/Saved Application State/com.GraphPad.Prism.savedState",
+        "~/Library/WebKit/com.GraphPad.Prism",
+      ]
 end
