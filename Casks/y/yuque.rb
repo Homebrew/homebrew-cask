@@ -1,6 +1,6 @@
 cask "yuque" do
-  version "3.2.3.1111,BJb5bf4507bf4f47c8b99646f224713568"
-  sha256 "096ba87a12e9f130da46f4b63554bc5b6696d3896b84168bcc09eb58220e3ce9"
+  version "3.3.1.1115,BJcccbb9dd184c428dbebef33bb782f5d5"
+  sha256 "a02a4b75fd90905e5eaa141d87b63d39456c499a7614512b74f4a81ff11c04a1"
 
   url "https://app.nlark.com/yuque-desktop/#{version.csv.first}/#{version.csv.second}/Yuque-#{version.csv.first}.dmg",
       verified: "app.nlark.com/yuque-desktop/"
