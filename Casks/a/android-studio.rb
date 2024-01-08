@@ -19,6 +19,7 @@ cask "android-studio" do
   auto_updates true
 
   app "Android Studio.app"
+  binary "#{appdir}/Android Studio.app/Contents/MacOS/studio"
 
   zap trash: [
         "~/.android",
