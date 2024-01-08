@@ -23,15 +23,7 @@ cask "webstorm" do
   depends_on macos: ">= :high_sierra"
 
   app "WebStorm.app"
-
-  uninstall_postflight do
-    ENV["PATH"].split(File::PATH_SEPARATOR).map { |path| File.join(path, "wstorm") }.each do |path|
-      if File.readable?(path) &&
-         File.readlines(path).grep(/# see com.intellij.idea.SocketLock for the server side of this interface/).any?
-        File.delete(path)
-      end
-    end
-  end
+  binary "#{appdir}/WebStorm.app/Contents/MacOS/webstorm"
 
   zap trash: [
     "~/Library/Application Support/JetBrains/WebStorm#{version.major_minor}",
