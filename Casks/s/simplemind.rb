@@ -1,6 +1,6 @@
 cask "simplemind" do
-  version "2.2.1,b2897"
-  sha256 "759b5c820723b9409b813b23d946fdda78559572705dedff51eb0630555ed91c"
+  version "2.3.0,b2950"
+  sha256 "a4a9312bc9f0abdaad77992a701001512470ce81071a292891ba7339c82d32c7"
 
   url "https://simpleapps.eu/simplemind/SM2Mac_G7Ynr4BfJYzhbHtCCTr/SimpleMindMacOS#{version.csv.first.no_dots}#{version.csv.second}.dmg"
   name "SimpleMind"
