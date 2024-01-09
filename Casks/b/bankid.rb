@@ -3,8 +3,8 @@ cask "bankid" do
   sha256 "98be02f71f182f1cb04417cc8325edc224b36c8455c8928e632e9fcaf5c6a5d9"
 
   url "https://cdn.bankid.com/bisp/mac/BankID_installation_#{version.dots_to_underscores}.pkg"
-  name "BankID"
-  desc "Electronic personal identification system"
+  name "BankID Security Application (Sweden)"
+  desc "Swedish BankID is a personal electronic identification (eID) system"
   homepage "https://install.bankid.com/"
 
   livecheck do
