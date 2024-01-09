@@ -15,4 +15,10 @@ cask "thebrain" do
   depends_on macos: ">= :mojave"
 
   app "TheBrain #{version.major}.app"
+
+  zap trash: [
+    "~/Library/Caches/com.thebrain.TheBrain",
+    "~/Library/HTTPStorages/com.thebrain.TheBrain",
+    "~/Library/Preferences/com.thebrain.TheBrain.plist",
+  ]
 end
