@@ -4,7 +4,7 @@ cask "bankid" do
 
   url "https://cdn.bankid.com/bisp/mac/BankID_installation_#{version.dots_to_underscores}.pkg"
   name "BankID Security Application (Sweden)"
-  desc "Swedish BankID is a personal electronic identification (eID) system"
+  desc "Swedish personal electronic identification (eID) system"
   homepage "https://install.bankid.com/"
 
   livecheck do
