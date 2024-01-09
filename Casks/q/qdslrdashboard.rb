@@ -18,4 +18,9 @@ cask "qdslrdashboard" do
   depends_on macos: ">= :mojave"
 
   app "qDslrDashboard.app"
+
+  zap trash: [
+    "~/Library/Application Support/DslrDashboard/qDslrDashboard",
+    "~/Library/Saved Application State/info.dslrdashboard.qDslrDashboard.savedState",
+  ]
 end
