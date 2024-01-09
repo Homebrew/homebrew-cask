@@ -11,7 +11,7 @@ cask "imhex" do
   desc "Hex editor for reverse engineers"
   homepage "https://imhex.werwolv.net/"
 
-  app "imhex.app"
+  app "ImHex.app"
 
   zap trash: [
     "~/Library/Application Support/imhex",
