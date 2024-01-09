@@ -125,7 +125,7 @@ module CiMatrix
 
     cask_files_to_check = if cask_names.any?
       cask_names.map do |cask_name|
-        Cask::CaskLoader.load(cask_name).sourcefile_path
+        Cask::CaskLoader.load(cask_name).sourcefile_path.relative_path_from(tap.path)
       end
     else
       changed_files[:modified_cask_files]
