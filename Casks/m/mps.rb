@@ -22,16 +22,8 @@ cask "mps" do
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
-  app "MPS #{version.major_minor}.app"
-
-  uninstall_postflight do
-    ENV["PATH"].split(File::PATH_SEPARATOR).map { |path| File.join(path, "mps") }.each do |path|
-      if File.readable?(path) &&
-         File.readlines(path).grep(/# see com.intellij.idea.SocketLock for the server side of this interface/).any?
-        File.delete(path)
-      end
-    end
-  end
+  app "MPS #{version.major_minor}.app", target: "MPS.app"
+  binary "#{appdir}/MPS.app/Contents/MacOS/mps"
 
   zap trash: [
     "~/Library/Application Support/MPS#{version.csv.first.major_minor}",
