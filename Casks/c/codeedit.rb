@@ -28,7 +28,7 @@ cask "codeedit" do
   zap trash: [
     "~/Library/Application Scripts/*.CodeEdit.OpenWithCodeEdit",
     "~/Library/Application Support/CodeEdit",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/*.codeedit.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/*.codeedit.sfl*",
     "~/Library/Caches/*.CodeEdit",
     "~/Library/Containers/*.CodeEdit.OpenWithCodeEdit",
     "~/Library/HTTPStorages/*.CodeEdit",
