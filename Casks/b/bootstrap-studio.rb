@@ -1,9 +1,9 @@
 cask "bootstrap-studio" do
   arch arm: "arm64", intel: "x64"
 
-  version "6.6.0"
-  sha256 arm:   "f0fb3bd6db024688afea8918e64f81d2757a8ca7dcbd5b90342d3c916a9d5012",
-         intel: "dfbb77d4712865d3d5c83cd2bb69c565707797f236996bda9d2071ca92fec2ec"
+  version "6.6.1"
+  sha256 arm:   "0a977d9aa0c7567cdac718750fb35fb6c2690eead5b499eec918ce8b1938cc8d",
+         intel: "90b6354474f0e79bea137444a6bdb5f43c9db324415737bb6f7a45ef6d5ebbf9"
 
   url "https://releases.bootstrapstudio.io/#{version}/Bootstrap%20Studio%20(#{arch}).dmg"
   name "Bootstrap Studio"
