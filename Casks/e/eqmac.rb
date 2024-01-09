@@ -1,6 +1,6 @@
 cask "eqmac" do
-  version "1.8.1"
-  sha256 "b88c6557f3b51988ab8c5dbab9a0e95f70f76622c751c9b2aac81cdb9d352133"
+  version "1.8.2"
+  sha256 "ad4ddc98c5eb89e075d102dd8125d15247f457d5d74ed9548e448f99eb0df136"
 
   url "https://github.com/bitgapp/eqMac/releases/download/v#{version}/eqMac.dmg",
       verified: "github.com/bitgapp/eqMac/"
