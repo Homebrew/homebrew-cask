@@ -1,6 +1,6 @@
 cask "android-commandlinetools" do
-  version "10406996"
-  sha256 "6821609e885d4b68f4066751949a9211f4196ab36df9d63f7a5f9037ca64e2d6"
+  version "11076708"
+  sha256 "7bc5c72ba0275c80a8f19684fb92793b83a6b5c94d4d179fc5988930282d7e64"
 
   url "https://dl.google.com/android/repository/commandlinetools-mac-#{version}_latest.zip",
       verified: "dl.google.com/android/repository/"
