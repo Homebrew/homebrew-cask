@@ -3,7 +3,7 @@ cask "markedit" do
   sha256 "4f01ef61e4eb5daf994d051a28d0790846780ce6cf8b436966452325e32861fa"
 
   url "https://github.com/MarkEdit-app/MarkEdit/releases/download/v#{version}/MarkEdit-#{version}.dmg"
-  name "markedit"
+  name "MarkEdit"
   desc "TextEdit, but dedicated to Markdown"
   homepage "https://github.com/MarkEdit-app/MarkEdit"
 
