@@ -1,6 +1,6 @@
 cask "multipass" do
-  version "1.12.2"
-  sha256 "c2994476746369935ff54258a2c764cb6e344f77f64cf09688d55a86245bcbf4"
+  version "1.13.0"
+  sha256 "f699a5b7acfea9faa352a7f85df2917b0657a56f4a94c68f92cf616ae491f354"
 
   on_arm do
     postflight do
