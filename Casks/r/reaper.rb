@@ -7,7 +7,7 @@ cask "reaper" do
     url "https://dlcf.reaper.fm/#{version.major}.x/reaper#{version.major_minor.no_dots}_x86_64.dmg"
   end
   on_catalina :or_newer do
-    sha256 "223b605a15e960b689ed8094d9ffe5c39ba4b636c193bb6fa9dd8e1a509a33ee"
+    sha256 "3e0600c12491c1ec3e40bc7afc6b3e275bf7899e14db66e7e95f1759993c3f3d"
 
     url "https://dlcf.reaper.fm/#{version.major}.x/reaper#{version.major_minor.no_dots}_universal.dmg"
   end
