@@ -8,6 +8,11 @@ cask "jyutping" do
   desc "Cantonese Jyutping Input Method"
   homepage "https://jyutping.app/"
 
+  livecheck do
+    url "https://jyutping.app/appcast.xml"
+    strategy :sparkle, &:short_version
+  end
+
   auto_updates true
   depends_on macos: ">= :monterey"
 
