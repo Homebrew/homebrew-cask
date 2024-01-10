@@ -4,7 +4,7 @@ cask "markedit" do
 
   url "https://github.com/MarkEdit-app/MarkEdit/releases/download/v#{version}/MarkEdit-#{version}.dmg"
   name "MarkEdit"
-  desc "TextEdit, but dedicated to Markdown"
+  desc "Markdown editor"
   homepage "https://github.com/MarkEdit-app/MarkEdit"
 
   livecheck do
