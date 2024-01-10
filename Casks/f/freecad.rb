@@ -11,9 +11,12 @@ cask "freecad" do
   desc "3D parametric modeler"
   homepage "https://www.freecad.org/"
 
+  # Upstream uses GitHub releases to indicate that a version is released
+  # (there's also sometimes a notable gap between the release being created
+  # and the homepage being updated), so the `GithubLatest` strategy is necessary.
   livecheck do
-    url "https://www.freecad.org/downloads.php"
-    regex(/FreeCAD[._-]v?(\d+(?:\.\d+)+)[._-]mac[._-]#{arch}\.dmg/i)
+    url :stable
+    strategy :github_latest
   end
 
   depends_on macos: ">= :sierra"
