@@ -17,6 +17,8 @@ cask "naver-whale" do
     end
   end
 
+  auto_updates true
+
   app "Whale.app"
 
   zap trash: [
