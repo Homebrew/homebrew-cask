@@ -1,9 +1,9 @@
 cask "chromium-gost" do
   arch arm: "arm64", intel: "amd64"
 
-  version "120.0.6099.129"
-  sha256 arm:   "c6039ab800f722f68b41317b00f3534fa687d01c881b1163e1ab3c442317a40f",
-         intel: "d745c45e7adf1de34b67cc353a3e6ae0bfe4106b0dd84a5e0a05112329648163"
+  version "120.0.6099.216"
+  sha256 arm:   "881c2e5735c6f52c9ec81f624d193a2619aeafbb3cdbe7778fb9420393261ff7",
+         intel: "0247d6fb9048e2b718510a0f2db232973f22e054c4d2eceb6cf46f4a62e17361"
 
   url "https://github.com/deemru/Chromium-Gost/releases/download/#{version}/chromium-gost-#{version}-macos-#{arch}.tar.bz2"
   name "Chromium-Gost"
