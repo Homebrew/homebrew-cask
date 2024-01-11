@@ -23,15 +23,7 @@ cask "rustrover" do
   depends_on macos: ">= :catalina"
 
   app "RustRover #{version.before_comma} EAP.app", target: "RustRover.app"
-
-  uninstall_postflight do
-    ENV["PATH"].split(File::PATH_SEPARATOR).map { |path| File.join(path, "rover") }.each do |path|
-      if File.readable?(path) &&
-         File.readlines(path).grep(/# see com.intellij.idea.SocketLock for the server side of this interface/).any?
-        File.delete(path)
-      end
-    end
-  end
+  binary "#{appdir}/RustRover.app/Contents/MacOS/rustrover"
 
   zap trash: [
     "~/Library/Application Support/JetBrains/RustRover#{version.major_minor}",

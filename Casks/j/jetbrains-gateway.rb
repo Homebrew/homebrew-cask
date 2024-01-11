@@ -21,6 +21,7 @@ cask "jetbrains-gateway" do
   depends_on macos: ">= :high_sierra"
 
   app "JetBrains Gateway.app"
+  binary "#{appdir}/JetBrains Gateway.app/Contents/MacOS/gateway"
 
   zap trash: [
     "~/Library/Application Support/JetBrains/JetBrainsGateway2021.3",

@@ -23,15 +23,7 @@ cask "goland" do
   depends_on macos: ">= :high_sierra"
 
   app "GoLand.app"
-
-  uninstall_postflight do
-    ENV["PATH"].split(File::PATH_SEPARATOR).map { |path| File.join(path, "goland") }.each do |path|
-      if File.readable?(path) &&
-         File.readlines(path).grep(/# see com.intellij.idea.SocketLock for the server side of this interface/).any?
-        File.delete(path)
-      end
-    end
-  end
+  binary "#{appdir}/GoLand.app/Contents/MacOS/goland"
 
   zap trash: [
     "~/Library/Application Support/JetBrains/GoLand",
