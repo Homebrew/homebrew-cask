@@ -268,9 +268,7 @@ jobs:
             require "cask/cask_loader"
             require "utils/github/actions"
 
-            before = JSON.parse(<<~'EOS').transform_keys(&:to_sym)
-              ${{ steps.snapshot.outputs.before }}
-            EOS
+            before = JSON.parse(ENV.fetch('SNAPSHOT_BEFORE')).transform_keys(&:to_sym)
             after = Check.all
 
             cask = Cask::CaskLoader.load('${{ matrix.cask.path }}')
@@ -284,6 +282,9 @@ jobs:
             exit 1 if errors.any?
           EOF
         if: always() && steps.snapshot.outcome == 'success'
+        env:
+          SNAPSHOT_BEFORE: |
+            ${{ steps.snapshot.outputs.before }}
 
   conclusion:
     name: conclusion
