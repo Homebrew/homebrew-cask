@@ -1,6 +1,6 @@
 cask "fing" do
-  version "3.6.0"
-  sha256 "b0dc15f52114fa995b50e5808f81baafac50e2b8385f084f3a610fcf87e7f4c6"
+  version "3.6.1"
+  sha256 "9212c5bccc19699920b4f9a357c75ccca3b19c85a348c60cb9ed612935299efc"
 
   url "https://get.fing.com/fing-desktop-releases/mac/Fing-#{version}.dmg"
   name "Fing Desktop"
