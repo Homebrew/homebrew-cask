@@ -8,6 +8,11 @@ cask "ollama" do
   desc "Get up and running with large language models locally"
   homepage "https://ollama.ai/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
   conflicts_with formula: "ollama"
   depends_on macos: ">= :high_sierra"
