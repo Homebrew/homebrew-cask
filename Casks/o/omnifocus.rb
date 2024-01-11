@@ -84,8 +84,8 @@ cask "omnifocus" do
     uninstall quit: "com.omnigroup.OmniFocus#{version.major}"
   end
   on_ventura :or_newer do
-    version "4.0.3"
-    sha256 "64ebd979261150259e3bd2357ea4c662fce111dde4a503eeebdf4c3949a7b8c8"
+    version "4.0.4"
+    sha256 "6d4d0ca7939f7b3888b7720487f5cd35c6a33a4085480b8463f21f34a12050dc"
 
     url "https://downloads.omnigroup.com/software/macOS/13/OmniFocus-#{version}.dmg"
 
