@@ -22,6 +22,7 @@ cask "backblaze" do
             ],
             delete:    [
               "#{appdir}/Backblaze.app",
+              "#{appdir}/BackblazeRestore.app",
               "/Library/Logs/DiagnosticReports/bzbmenu_*.*_resource.diag",
               "/Library/PreferencePanes/BackblazeBackup.prefPane",
             ]
