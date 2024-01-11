@@ -271,18 +271,20 @@ jobs:
             before = JSON.parse(ENV.fetch("HOMEBREW_SNAPSHOT_BEFORE")).transform_keys(&:to_sym)
             after = Check.all
 
-            cask = Cask::CaskLoader.load('${{ matrix.cask.path }}')
+            cask_path = ENV.fetch("HOMEBREW_CASK_PATH")
+            cask = Cask::CaskLoader.load(cask_path)
             errors = Check.errors(before, after, cask: cask)
 
             errors.each do |error|
               onoe error
-              puts GitHub::Actions::Annotation.new(:error, error, file: '${{ matrix.cask.path }}')
+              puts GitHub::Actions::Annotation.new(:error, error, file: cask_path)
             end
 
             exit 1 if errors.any?
           EOF
         if: always() && steps.snapshot.outcome == 'success'
         env:
+          HOMEBREW_CASK_PATH: ${{ matrix.cask.path }}
           HOMEBREW_SNAPSHOT_BEFORE: |
             ${{ steps.snapshot.outputs.before }}
 
