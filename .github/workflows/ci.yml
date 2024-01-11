@@ -224,8 +224,14 @@ jobs:
         id: snapshot
         run: |
           brew ruby -r "$(brew --repository homebrew/cask)/cmd/lib/check.rb" <<'EOF'
+            before = JSON.pretty_generate(Check.all)
+            puts before
             File.open(ENV.fetch("GITHUB_OUTPUT"), "a") do |f|
-              f.puts "before=#{JSON.generate(Check.all)}"
+              f.puts <~OUTPUT
+                before<<JSON
+                #{before}"
+                JSON
+              OUTPUT
             end
           EOF
         if: always() && steps.info.outcome == 'success'
