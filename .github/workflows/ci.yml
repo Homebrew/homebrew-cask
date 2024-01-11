@@ -268,7 +268,7 @@ jobs:
             require "cask/cask_loader"
             require "utils/github/actions"
 
-            before = JSON.parse(ENV.fetch('SNAPSHOT_BEFORE')).transform_keys(&:to_sym)
+            before = JSON.parse(ENV.fetch('HOMEBREW_SNAPSHOT_BEFORE')).transform_keys(&:to_sym)
             after = Check.all
 
             cask = Cask::CaskLoader.load('${{ matrix.cask.path }}')
@@ -283,7 +283,7 @@ jobs:
           EOF
         if: always() && steps.snapshot.outcome == 'success'
         env:
-          SNAPSHOT_BEFORE: |
+          HOMEBREW_SNAPSHOT_BEFORE: |
             ${{ steps.snapshot.outputs.before }}
 
   conclusion:
