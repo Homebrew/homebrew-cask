@@ -285,8 +285,7 @@ jobs:
         if: always() && steps.snapshot.outcome == 'success'
         env:
           HOMEBREW_CASK_PATH: ${{ matrix.cask.path }}
-          HOMEBREW_SNAPSHOT_BEFORE: |
-            ${{ steps.snapshot.outputs.before }}
+          HOMEBREW_SNAPSHOT_BEFORE: ${{ steps.snapshot.outputs.before }}
 
   conclusion:
     name: conclusion
