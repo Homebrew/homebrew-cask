@@ -270,6 +270,7 @@ jobs:
 
             before = JSON.parse(ENV.fetch("HOMEBREW_SNAPSHOT_BEFORE")).transform_keys(&:to_sym)
             after = Check.all
+            puts JSON.pretty_generate(after)
 
             cask_path = ENV.fetch("HOMEBREW_CASK_PATH")
             cask = Cask::CaskLoader.load(cask_path)
