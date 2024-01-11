@@ -17,7 +17,7 @@ cask "macjournal" do
   app "MacJournal.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.danschimpf.macjournal.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.danschimpf.macjournal.sfl*",
     "~/Library/Application Support/MacJournal",
     "~/Library/Caches/com.DanSchimpf.MacJournal",
     "~/Library/Preferences/com.DanSchimpf.MacJournal.plist",
