@@ -1,6 +1,6 @@
 cask "macjournal" do
-  version "7.3.1"
-  sha256 "00cb357e4c3a57847203e74e116e95ff2517fe5d3ba76b02586d439135edfe05"
+  version "7.4"
+  sha256 "8dbb9e2342004a39bb045b24d75885fe70fc7136fb5e04e750e020bf29bfac47"
 
   url "https://danschimpf.com/macjournal/MacJournal_#{version}.zip"
   name "MacJournal"
@@ -17,7 +17,7 @@ cask "macjournal" do
   app "MacJournal.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.danschimpf.macjournal.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.danschimpf.macjournal.sfl*",
     "~/Library/Application Support/MacJournal",
     "~/Library/Caches/com.DanSchimpf.MacJournal",
     "~/Library/Preferences/com.DanSchimpf.MacJournal.plist",
