@@ -227,7 +227,7 @@ jobs:
             before = JSON.pretty_generate(Check.all)
             puts before
             File.open(ENV.fetch("GITHUB_OUTPUT"), "a") do |f|
-              f.puts <~OUTPUT
+              f.puts <<~OUTPUT
                 before<<JSON
                 #{before}"
                 JSON
