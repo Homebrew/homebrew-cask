@@ -7,5 +7,7 @@ cask "nocturn" do
   desc "Multi-platform Twitter client"
   homepage "https://github.com/k0kubun/Nocturn"
 
+  deprecate! date: "2024-01-11", because: :discontinued
+
   app "Nocturn-darwin-x64/Nocturn.app"
 end
