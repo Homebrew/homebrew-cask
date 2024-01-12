@@ -3,7 +3,7 @@ cask "shutter-encoder" do
 
   version "17.8"
   sha256 arm:   "ac6dd034a423ac84aeee5cfe600336483313bd55e5ba0d94cfc465264a1c41b4",
-         intel: "8512788704f63fdcfd62f7985293c6aad732a2a7ffae7077b7a4d012516c02c6"
+         intel: "6a3fd91b2abfd9de44763bb4517961a5c9bdcb24182e72461cc1d412054190dc"
 
   url "https://www.shutterencoder.com/Shutter%20Encoder%20#{version}%20#{arch.gsub(" ", "%20")}.pkg"
   name "Shutter Encoder"
