@@ -1,6 +1,6 @@
 cask "hydrogen" do
-  version "1.2.2"
-  sha256 "c20c2edf80d4f22bfc068e9d9176bf1e8f0a27d66d86340bc1010cd9cc29995d"
+  version "1.2.3"
+  sha256 "a93321a565ecc8f629532a8309e59b2bc7efc15167fd8ee088a60cfb42433dd5"
 
   url "https://github.com/hydrogen-music/hydrogen/releases/download/#{version}/Hydrogen-#{version}.dmg",
       verified: "github.com/hydrogen-music/hydrogen/"
