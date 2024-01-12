@@ -27,6 +27,6 @@ cask "command-x" do
 
   caveats <<~EOS
     This variant of #{token} is only updated annually or when security vulnerabilities are discovered.
-    For a more frequently updated versio, install via the Mac App Store.
+    For a more frequently updated version, install via the Mac App Store.
   EOS
 end
