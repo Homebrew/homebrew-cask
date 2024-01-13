@@ -119,25 +119,10 @@ jobs:
           key: ${{ matrix.runner }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
           restore-keys: ${{ matrix.runner }}-rubygems-
 
-      - name: Install Homebrew Gems
-        id: gems
-        run: brew install-bundler-gems
-        if: steps.cache.outputs.cache-hit != 'true'
-
-      - name: Run brew readall ${{ matrix.tap }}
-        id: readall
-        run: brew readall --os=all --arch=all '${{ matrix.tap }}'
-        if: >
-          always() &&
-          contains(fromJSON('["success", "skipped"]'), steps.gems.outcome) &&
-          !matrix.skip_readall
-
-      - name: Run brew style ${{ matrix.tap }}
-        run: brew style '${{ matrix.tap }}'
-        if: >
-          always() &&
-          contains(fromJSON('["success", "skipped"]'), steps.readall.outcome) &&
-          !matrix.cask
+      - name: Run brew test-bot --only-tap-syntax
+        id: tap-syntax
+        run: brew test-bot --tap '${{ matrix.tap }}'' --only-tap-syntax
+        if: always() && !matrix.cask
 
       - name: Run brew fetch --cask ${{ matrix.cask.token }}
         id: fetch
@@ -146,7 +131,7 @@ jobs:
         timeout-minutes: 30
         if: >
           always() &&
-          contains(fromJSON('["success", "skipped"]'), steps.readall.outcome) &&
+          contains(fromJSON('["success", "skipped"]'), steps.tap-syntax.outcome) &&
           matrix.cask
 
       - name: Run brew audit --cask${{ (matrix.cask && ' ') || ' --tap ' }}${{ matrix.cask.token || matrix.tap }}
@@ -156,7 +141,7 @@ jobs:
         timeout-minutes: 30
         if: >
           always() &&
-          contains(fromJSON('["success", "skipped"]'), steps.readall.outcome) &&
+          contains(fromJSON('["success", "skipped"]'), steps.tap-syntax.outcome) &&
           (!matrix.cask || steps.fetch.outcome == 'success') &&
           !matrix.skip_audit
 
