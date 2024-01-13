@@ -121,7 +121,7 @@ jobs:
 
       - name: Run brew test-bot --only-tap-syntax
         id: tap-syntax
-        run: brew test-bot --tap '${{ matrix.tap }}'' --only-tap-syntax
+        run: brew test-bot --tap '${{ matrix.tap }}' --only-tap-syntax
         if: always() && !matrix.cask
 
       - name: Run brew fetch --cask ${{ matrix.cask.token }}
