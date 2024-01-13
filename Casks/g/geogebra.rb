@@ -17,6 +17,8 @@ cask "geogebra" do
     end
   end
 
+  auto_updates true
+
   app "GeoGebra Classic #{version.major}.app"
 
   uninstall quit:       "org.geogebra.mathapps",
