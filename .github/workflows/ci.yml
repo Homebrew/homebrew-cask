@@ -76,7 +76,7 @@ jobs:
         with:
           core: false
           cask: true
-          test-bot: false
+          test-bot: true
 
       - name: Enable debug mode
         run: |
