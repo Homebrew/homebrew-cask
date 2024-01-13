@@ -92,6 +92,10 @@ jobs:
 
       - name: Clean up CI machine
         run: |
+          if ! brew uninstall --cask firefox && ! rm -r /Applications/Firefox.app; then
+            echo '::warning::Removing Firefox is no longer necessary.'
+          fi
+
           if ! brew uninstall --cask julia && ! rm -r /Applications/Julia-*.app; then
             echo '::warning::Removing Julia is no longer necessary.'
           fi
@@ -224,8 +228,14 @@ jobs:
         id: snapshot
         run: |
           brew ruby -r "$(brew --repository homebrew/cask)/cmd/lib/check.rb" <<'EOF'
+            before = JSON.pretty_generate(Check.all)
+            puts before
             File.open(ENV.fetch("GITHUB_OUTPUT"), "a") do |f|
-              f.puts "before=#{JSON.generate(Check.all)}"
+              f.puts <<~OUTPUT
+                before<<JSON
+                #{before}
+                JSON
+              OUTPUT
             end
           EOF
         if: always() && steps.info.outcome == 'success'
@@ -262,22 +272,25 @@ jobs:
             require "cask/cask_loader"
             require "utils/github/actions"
 
-            before = JSON.parse(<<~'EOS').transform_keys(&:to_sym)
-              ${{ steps.snapshot.outputs.before }}
-            EOS
+            before = JSON.parse(ENV.fetch("HOMEBREW_SNAPSHOT_BEFORE")).transform_keys(&:to_sym)
             after = Check.all
+            puts JSON.pretty_generate(after)
 
-            cask = Cask::CaskLoader.load('${{ matrix.cask.path }}')
+            cask_path = ENV.fetch("HOMEBREW_CASK_PATH")
+            cask = Cask::CaskLoader.load(cask_path)
             errors = Check.errors(before, after, cask: cask)
 
             errors.each do |error|
               onoe error
-              puts GitHub::Actions::Annotation.new(:error, error, file: '${{ matrix.cask.path }}')
+              puts GitHub::Actions::Annotation.new(:error, error, file: cask_path)
             end
 
             exit 1 if errors.any?
           EOF
         if: always() && steps.snapshot.outcome == 'success'
+        env:
+          HOMEBREW_CASK_PATH: ${{ matrix.cask.path }}
+          HOMEBREW_SNAPSHOT_BEFORE: ${{ steps.snapshot.outputs.before }}
 
   conclusion:
     name: conclusion
