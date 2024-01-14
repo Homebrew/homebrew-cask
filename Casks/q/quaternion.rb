@@ -20,7 +20,16 @@ cask "quaternion" do
     end
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "quaternion.app"
+
+  zap trash: [
+    "~/Library/Application Support/Quotient/quaternion",
+    "~/Library/Containers/com.github.quaternion",
+    "~/Library/Preferences/com.github.quaternion.plist",
+    "~/Library/Preferences/com.qmatrixclient.quaternion.plist",
+    "~/Library/Preferences/com.quotient.quaternion.plist",
+    "~/Library/Saved Application State/com.github.quaternion.savedState",
+  ]
 end
