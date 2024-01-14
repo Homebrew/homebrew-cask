@@ -59,5 +59,10 @@ cask "itsycal" do
 
   app "Itsycal.app"
 
-  zap trash: "~/Library/Preferences/com.mowglii.ItsycalApp.plist"
+  uninstall quit: "com.mowglii.ItsycalApp"
+
+  zap trash: [
+    "~/Library/HTTPStorages/com.mowglii.ItsycalApp",
+    "~/Library/Preferences/com.mowglii.ItsycalApp.plist",
+  ]
 end
