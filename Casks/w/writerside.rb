@@ -23,15 +23,7 @@ cask "writerside" do
   depends_on macos: ">= :catalina"
 
   app "Writerside #{version.before_comma} EAP.app", target: "Writerside.app"
-
-  uninstall_postflight do
-    ENV["PATH"].split(File::PATH_SEPARATOR).map { |path| File.join(path, "writerside") }.each do |path|
-      if File.readable?(path) &&
-         File.readlines(path).grep(/# see com.intellij.idea.SocketLock for the server side of this interface/).any?
-        File.delete(path)
-      end
-    end
-  end
+  binary "#{appdir}/Writerside.app/Contents/MacOS/writerside"
 
   zap trash: [
     "~/Library/Application Support/JetBrains/Writerside#{version.major_minor}",
