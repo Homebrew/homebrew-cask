@@ -7,14 +7,9 @@ cask "znote" do
 
   url "https://github.com/alagrede/znote-app/releases/download/v#{version}/znote-#{version}#{arch}.dmg",
       verified: "github.com/alagrede/znote-app/"
-  name "znote"
+  name "Znote"
   desc "Notes-taking app"
   homepage "https://znote.io/"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
 
   depends_on macos: ">= :el_capitan"
 
