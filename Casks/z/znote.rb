@@ -16,6 +16,8 @@ cask "znote" do
     strategy :github_latest
   end
 
+  depends_on macos: ">= :el_capitan"
+
   app "znote.app"
 
   zap trash: [
