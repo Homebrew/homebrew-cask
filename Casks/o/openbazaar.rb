@@ -7,6 +7,8 @@ cask "openbazaar" do
   name "OpenBazaar#{version.major}"
   homepage "https://www.openbazaar.org/"
 
+  deprecate! date: "2024-01-14", because: :discontinued
+
   app "OpenBazaar#{version.major}.app"
 
   zap trash: [
