@@ -8,7 +8,7 @@ cask "oso-cloud" do
       verified: "d3i4cc4dqewpo9.cloudfront.net/"
   name "OSO Cloud CLI"
   desc "Tool for interacting with OSO Cloud"
-  homepage "https://cloud-docs.osohq.com/get-started/quickstart"
+  homepage "https://www.osohq.com/docs/reference/client-apis/cli"
 
   binary "oso_cli_mac_osx_#{arch}", target: "oso-cloud"
 end
