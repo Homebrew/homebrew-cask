@@ -5,7 +5,7 @@ cask "grafx" do
   url "https://pulkomandy.tk/projects/GrafX#{version.major}/downloads/#{version.csv.second}"
   name "GrafX2"
   desc "256 color painting program"
-  homepage "https://pulkomandy.tk/projects/GrafX#{version.major}"
+  homepage "https://pulkomandy.tk/projects/GrafX2"
 
   livecheck do
     url "https://pulkomandy.tk/projects/GrafX2/downloads"
