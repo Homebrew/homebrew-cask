@@ -5,7 +5,8 @@ cask "rclone-browser" do
   url "https://github.com/mmozeiko/RcloneBrowser/releases/download/#{version.csv.first}/rclone-browser-#{version.csv.first}-#{version.csv.second}-macOS.zip",
       verified: "github.com/mmozeiko/RcloneBrowser/"
   name "Rclone Browser"
-  homepage "https://mmozeiko.github.io/RcloneBrowser/"
+  desc "GUI for rclone"
+  homepage "https://martins.ninja/RcloneBrowser/"
 
   deprecate! date: "2023-12-17", because: :discontinued
 
