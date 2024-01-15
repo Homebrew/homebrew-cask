@@ -8,8 +8,10 @@ cask "adobe-acrobat-reader" do
   homepage "https://acrobat.adobe.com/us/en/acrobat/pdf-reader.html"
 
   livecheck do
-    url "https://armmf.adobe.com/arm-manifests/mac/AcrobatDC/reader/current_version.txt"
-    regex(/(\d+(?:\.\d+)+)/i)
+    url "https://rdc.adobe.io/reader/products?lang=en&site=landing&os=Mac%20OS%2010.15&api_key=dc-get-adobereader-cdn"
+    strategy :json do |json|
+      json.dig("products", "reader").map { |product| product["version"] }
+    end
   end
 
   auto_updates true
