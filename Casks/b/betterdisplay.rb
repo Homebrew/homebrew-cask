@@ -10,8 +10,8 @@ cask "betterdisplay" do
     depends_on macos: ">= :monterey"
   end
   on_monterey :or_newer do
-    version "2.1.3"
-    sha256 "1bfbcc0b16ad810c933e9ae5f503caa59615943275b7b84060b5b5e4721d5926"
+    version "2.2.0"
+    sha256 "f7c31085b67fab5eb2848540b23a4fe13c02286c7a634e8c0248ab9fd3c9d86a"
 
     livecheck do
       url :url
