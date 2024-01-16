@@ -1,6 +1,6 @@
 cask "soulver" do
-  version "3.9.2,416"
-  sha256 "58a6b0e63ce12d8d2208be142e99c7450864f5931088f7e93ef17ce1c4b4d1a2"
+  version "3.10,425"
+  sha256 "7c9ba131e254a84c8bd9b6cd05f7230234d94662d4f9126c7fd9dda139cbb504"
 
   url "https://soulver.app/mac/sparkle/soulver-#{version.csv.first}-#{version.csv.second}.zip"
   name "Soulver"
@@ -20,7 +20,7 @@ cask "soulver" do
   zap trash: [
     "~/Library/Application Scripts/app.soulver.mac.QuicklookInSpotlight",
     "~/Library/Application Support/app.soulver.mac",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/app.soulver.mac.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/app.soulver.mac.sfl*",
     "~/Library/Application Support/Soulver #{version.major}",
     "~/Library/Caches/app.soulver.mac",
     "~/Library/Containers/app.soulver.mac.QuicklookInSpotlight",
