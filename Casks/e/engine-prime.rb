@@ -6,21 +6,22 @@ cask "engine-prime" do
       verified: "inmusicbrands.com/"
   name "Engine Prime"
   desc "Music Management Software for Denon's Engine OS Hardware"
-  homepage "https://www.denondj.com/engineprime"
+  homepage "https://web.archive.org/web/20170602015353/http://denondj.com/engineprime"
 
-  livecheck do
-    url "https://www.denondj.com/downloads"
-    regex(%r{href=.*?/Engine[._-]?Prime[._-]?v?(\d+(?:\.\d+)*)(?:[._-]([0-9a-z]+))?[._-]Setup\.dmg}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map do |match|
-        "#{match[0]}#{"," + match[1] if match[1]}"
-      end
-    end
-  end
+  # https://community.enginedj.com/t/engine-prime-vs-engine-dj/40181
+  deprecate! date: "2024-01-15", because: :unmaintained
 
   pkg "Engine Prime_#{version.csv.first}_Setup.pkg"
 
   uninstall pkgutil: "com.airmusictechnology.engineprime.application"
 
   zap trash: "~/Music/Engine Library"
+
+  caveats do
+    <<~EOS
+      engine-dj is the official successor to this software:
+
+        brew install --cask engine-dj
+    EOS
+  end
 end
