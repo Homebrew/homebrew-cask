@@ -1,9 +1,9 @@
 cask "graalvm-jdk" do
   arch arm: "aarch64", intel: "x64"
 
-  version "21.0.1"
-  sha256 arm:   "4b5ddffad649b3e64853ba230b6e8f7acd65322bb8f11852e0521ab1bb4d8b03",
-         intel: "0647d57ec98d7aa19d2801b3ec58697d7eb44a408df511bd49d39f0150a08f87"
+  version "21.0.2"
+  sha256 arm:   "b504f7c570836a9c6b1b92813c5123718636d0ff0f832321129a4fe3a7b9a0b3",
+         intel: "3e24632f27be74d039508ea2b0b7862ef8c40784f55785cf6b6e40b4b28d9d53"
 
   url "https://download.oracle.com/graalvm/#{version.major}/archive/graalvm-jdk-#{version}_macos-#{arch}_bin.tar.gz",
       verified: "download.oracle.com/"
