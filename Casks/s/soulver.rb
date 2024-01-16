@@ -20,7 +20,7 @@ cask "soulver" do
   zap trash: [
     "~/Library/Application Scripts/app.soulver.mac.QuicklookInSpotlight",
     "~/Library/Application Support/app.soulver.mac",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/app.soulver.mac.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/app.soulver.mac.sfl*",
     "~/Library/Application Support/Soulver #{version.major}",
     "~/Library/Caches/app.soulver.mac",
     "~/Library/Containers/app.soulver.mac.QuicklookInSpotlight",
