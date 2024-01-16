@@ -16,8 +16,8 @@ cask "sip" do
     end
   end
   on_mojave :or_newer do
-    version "3.3.1"
-    sha256 "78c59c33841bc1643d7a0075da822d564bda540933553492078d40b839d57cb7"
+    version "3.3.2"
+    sha256 "f9ecc84eff93085b4cdadabe567b912309e3ad564fd128bbd8ca6ee06d6c648a"
 
     livecheck do
       url "https://sipapp.io/updates/"
