@@ -1,6 +1,6 @@
 cask "floorp" do
-  version "11.7.1"
-  sha256 "4c7b2ee6b2c5056e50fff86289dcf79ef9003264d10ca10f755920ff7c30e559"
+  version "11.8.0"
+  sha256 "51ca367737a1b173fb93ce8d864115c5441be6b6a51bc067d27e782ec07f4594"
 
   url "https://github.com/Floorp-Projects/Floorp/releases/download/v#{version}/floorp-macOS-universal.dmg",
       verified: "github.com/Floorp-Projects/Floorp/"
