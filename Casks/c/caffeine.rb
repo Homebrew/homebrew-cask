@@ -10,6 +10,8 @@ cask "caffeine" do
 
   app "Caffeine.app"
 
+  uninstall quit: "com.intelliscapesolutions.caffeine"
+
   zap trash: [
     "~/Library/Application Support/com.intelliscapesolutions.caffeine",
     "~/Library/Preferences/com.intelliscapesolutions.caffeine.plist",
