@@ -8,16 +8,10 @@ cask "remarkable" do
   desc "View, Screen Share, organize, import, and download files to a reMarkable device"
   homepage "https://remarkable.com/"
 
-  livecheck do
-    url "https://get-updates.cloud.remarkable.engineering/sparkle/reMarkableMacOs/Prod/appcast.xml"
-    regex(%r{/reMarkableMacOs/(\d+)/reMarkable[._-]v?(\d+(?:\.\d+)+)\.(.+)\.dmg}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match.second},#{match.first},#{match.third}" }
-    end
-  end
+  deprecate! date: "2024-01-17", because: "has moved to the app store"
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :big_sur"
 
   app "reMarkable.app"
 
