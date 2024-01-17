@@ -1,6 +1,6 @@
 cask "medis" do
-  version "2.14.0"
-  sha256 "2b33fecb19d8e1cb50f045f79a4dbb337965cef40046f7dd8aa632b821485ef4"
+  version "2.14.1"
+  sha256 "87d41fee5c139a1cec53d63a6c12e02cc7012d51fa8c2aa6c99ff80d846957dd"
 
   url "https://api.getmedis.com/medis-#{version}.zip"
   name "Medis"
