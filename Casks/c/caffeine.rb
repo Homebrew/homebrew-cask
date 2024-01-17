@@ -16,4 +16,8 @@ cask "caffeine" do
     "~/Library/Caches/com.intelliscapesolutions.caffeine",
     "~/Library/HTTPStorages/com.intelliscapesolutions.caffeine.binarycookies",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
