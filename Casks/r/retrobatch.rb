@@ -13,16 +13,16 @@ cask "retrobatch" do
   end
 
   auto_updates true
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :monterey"
 
   app "Retrobatch.app"
 
   zap trash: [
-    "Library/Application Support/Retrobatch",
-    "Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/" \
+    "~/Library/Application Support/Retrobatch",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/" \
     "com.flyingmeat.retrobatch.sfl*",
-    "Library/HTTPStorages/com.flyingmeat.Retrobatch",
-    "Library/Saved Application State/com.flyingmeat.Retrobatch.savedState",
-    "Library/Preferences/com.flyingmeat.Retrobatch.plist",
+    "~/Library/HTTPStorages/com.flyingmeat.Retrobatch",
+    "~/Library/Saved Application State/com.flyingmeat.Retrobatch.savedState",
+    "~/Library/Preferences/com.flyingmeat.Retrobatch.plist",
   ]
 end
