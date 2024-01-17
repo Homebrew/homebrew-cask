@@ -20,10 +20,8 @@ cask "domzilla-caffeine" do
     sha256 "d96b375d0eb01f6cbce1f49e70fa484facf8be0236350f677249bacb7fe9cb87"
 
     livecheck do
-      url :url
-      strategy :extract_plist do |items|
-        items["net.domzilla.caffeine"].short_version
-      end
+      url "https://www.caffeine-app.net/download"
+      strategy :header_match
     end
   end
 
