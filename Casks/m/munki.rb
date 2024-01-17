@@ -1,6 +1,6 @@
 cask "munki" do
-  version "6.4.0.4627"
-  sha256 "0b185cd97d19cb344c0a9bdaae5a38a97f43705258c050431b97864fa44e7c2f"
+  version "6.4.1.4630"
+  sha256 "185d51dd180554562a532180ab777832cf4afdd4f0380d3b46c954b79877ac09"
 
   url "https://github.com/munki/munki/releases/download/v#{version.major_minor_patch}/munkitools-#{version}.pkg",
       verified: "github.com/munki/munki/"
