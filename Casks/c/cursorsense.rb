@@ -16,5 +16,10 @@ cask "cursorsense" do
 
   app "CursorSense.app"
 
-  # No zap stanza required
+  zap trash: [
+    "~/Library/Application Support/SteerMouse & CursorSense",
+    "~/Library/HTTPStorages/jp.plentycom.CursorSense.app",
+    "~/Library/LaunchAgents/jp.plentycom.CursorSense.boa.plist",
+    "~/Library/Preferences/jp.plentycom.CursorSense.app.plist",
+  ]
 end
