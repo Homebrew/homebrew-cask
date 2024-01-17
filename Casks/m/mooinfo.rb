@@ -5,9 +5,9 @@ cask "mooinfo" do
   url "https://github.com/rememberber/MooInfo/releases/download/1.1.3/MooInfo_1.1.3.dmg",
       verified: "github.com/p0deje/Maccy/"
   name "MooInfo"
-  desc "A visual of OSHI, to view information about the system and hardware."
+  desc "Visualization GUI for OSHI, to view information about the system and hardware."
   homepage "https://rememberber.github.io/MooInfo/"
-
+  
   livecheck do
     url "https://gitee.com/zhoubochina/MooInfo/raw/master/src/main/resources/version_summary.json"
     regex(/^"currentVersion":\s*"(\d+(?:\.\d+)+)",$/i)
