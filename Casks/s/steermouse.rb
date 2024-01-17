@@ -12,7 +12,7 @@ cask "steermouse" do
     regex(/href=.*?SteerMouse[._-]?v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  prefpane "SteerMouse.prefPane"
+  app "SteerMouse.app"
 
   zap trash: "~/Library/Application Support/SteerMouse & CursorSense/Device.smsetting",
       rmdir: [
