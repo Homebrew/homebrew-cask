@@ -21,7 +21,7 @@ cask "prizmo" do
   zap trash: [
     "~/Library/Application Scripts/62UF8HAVJA.com.creaceed.prizmo",
     "~/Library/Application Scripts/com.creaceed.*",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.creaceed.prizmo2.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.creaceed.prizmo2.sfl*",
     "~/Library/Containers/com.creaceed.prizmo*",
     "~/Library/Group Containers/62UF8HAVJA.com.creaceed.prizmo",
   ]
