@@ -1,6 +1,6 @@
 cask "unity-webgl-support-for-editor" do
-  version "2023.2.2f1,dfe9eb92cac5"
-  sha256 "d2d99a7dc3603067c79e5084a97c7d171707d6cdc2935d0f9d25608175406c4a"
+  version "2023.2.5f1,381b4941466e"
+  sha256 "eb777bd4c1bff4da507b7e3dfd1ed189647516539e675b30d49c430a790684c9"
 
   url "https://download.unity3d.com/download_unity/#{version.csv.second}/MacEditorTargetInstaller/UnitySetup-WebGL-Support-for-Editor-#{version.csv.first}.pkg",
       verified: "download.unity3d.com/download_unity/"
