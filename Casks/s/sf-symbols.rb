@@ -10,8 +10,8 @@ cask "sf-symbols" do
     end
   end
   on_monterey :or_newer do
-    version "5"
-    sha256 "e9db5caf0458d6a107aae64f6f09c4a360a672e34df59905a3cae7ffc4be72d3"
+    version "5.1"
+    sha256 "ec720e940629407cf2a0c856d89b70ab64e8afca23b389931e35237cc28a30ce"
 
     url "https://devimages-cdn.apple.com/design/resources/download/SF-Symbols-#{version}.dmg"
 
