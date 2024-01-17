@@ -14,9 +14,11 @@ cask "steermouse" do
 
   app "SteerMouse.app"
 
-  zap trash: "~/Library/Application Support/SteerMouse & CursorSense/Device.smsetting",
-      rmdir: [
-        "~/Library/Application Support/SteerMouse & CursorSense/Device Definitions/",
-        "~/Library/Application Support/SteerMouse & CursorSense/",
-      ]
+  zap trash: [
+    "~/Library/Application Support/SteerMouse & CursorSense",
+    "~/Library/Caches/jp.plentycom.app.SteerMouse",
+    "~/Library/HTTPStorages/jp.plentycom.app.SteerMouse",
+    "~/Library/LaunchAgents/jp.plentycom.boa.SteerMouse.plist",
+    "~/Library/Preferences/jp.plentycom.app.SteerMouse.plist",
+  ]
 end
