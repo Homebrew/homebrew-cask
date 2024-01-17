@@ -5,7 +5,7 @@ cask "mooinfo" do
   url "https://github.com/rememberber/MooInfo/releases/download/1.1.3/MooInfo_1.1.3.dmg",
       verified: "github.com/p0deje/Maccy/"
   name "MooInfo"
-  desc "Welcome to try! A visual implementation of OSHI, to view information about the system and hardware.Such as OS, processes, memory, CPU, disks, devices, sensors, etc."
+  desc "A visual of OSHI, to view information about the system and hardware."
   homepage "https://rememberber.github.io/MooInfo/"
 
   livecheck do
