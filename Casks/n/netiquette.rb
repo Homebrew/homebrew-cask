@@ -1,6 +1,6 @@
 cask "netiquette" do
-  version "2.1.1"
-  sha256 "3f27ee68809f776f893af9f542e0a648d4641e22c98ca962a7c549346ac73f86"
+  version "2.2.0"
+  sha256 "0e4b579f28be4b222d5057cc0263d5cc33fc23a3887b683a9bdc5b180e1199a9"
 
   url "https://github.com/objective-see/Netiquette/releases/download/v#{version}/Netiquette_#{version}.zip",
       verified: "github.com/objective-see/"
