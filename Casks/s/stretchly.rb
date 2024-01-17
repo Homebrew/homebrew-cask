@@ -15,6 +15,8 @@ cask "stretchly" do
 
   app "Stretchly.app"
 
+  uninstall quit: "net.hovancik.stretchly"
+
   zap trash: [
     "~/Library/Application Support/Stretchly",
     "~/Library/Logs/Stretchly",
