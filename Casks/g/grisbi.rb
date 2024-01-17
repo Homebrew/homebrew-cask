@@ -1,6 +1,6 @@
 cask "grisbi" do
-  version "3.0.1"
-  sha256 "ea5c1cda6e774e7607cd8a2da94bcd420369bc04136d94f8455fb4735c047aa5"
+  version "3.0.2"
+  sha256 "77683b815a8d971a273bc5d2affaf166544c8e635c67901ce460e062c4f6f2f6"
 
   url "https://downloads.sourceforge.net/grisbi/Grisbi-#{version}.dmg",
       verified: "downloads.sourceforge.net/grisbi/"
