@@ -49,7 +49,7 @@ jobs:
           signing_key: ${{ secrets.BREWTESTBOT_GPG_SIGNING_SUBKEY }}
 
       - name: Cache Homebrew Gems
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ${{ steps.set-up-homebrew.outputs.gems-path }}
           key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
@@ -64,7 +64,7 @@ jobs:
           echo "time=$(date -u +'%Y-%m-%dT%H:%M:%SZ')" >> $GITHUB_OUTPUT
 
       - name: Cache state
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/bump-unversioned-casks-state.json
           key: bump-unversioned-casks-${{ steps.cache-id.outputs.time }}
