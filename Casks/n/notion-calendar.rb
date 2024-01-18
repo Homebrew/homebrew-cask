@@ -1,13 +1,13 @@
-cask "cron" do
+cask "notion-calendar" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.116.0,2311017rcjbjbtx"
-  sha256 arm:   "66457edbbf2f5c736e885dea559629fb710717b6a8df8b777d13a2cb562ae278",
-         intel: "2cc49e5b9e1b75b7c00e198025c55a601ca6876822fe8745a570a7554ed06b17"
+  version "1.117.0,240117ctn5jt6gd"
+  sha256 arm:   "de2e12d05fe3447e706928ea9c01453ca4109aae0ef8d284a0ae65ae1964b4fd",
+         intel: "42b12ca46a1ba6e297c8fec73e2caf107578e47e5055562af29d389b49464262"
 
-  url "https://download.todesktop.com/210303leazlircz/Cron%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}-mac.zip",
+  url "https://download.todesktop.com/210303leazlircz/Notion%20Calendar%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}-mac.zip",
       verified: "download.todesktop.com/210303leazlircz/"
-  name "Cron Calendar"
+  name "Notion Calendar"
   desc "Calendar for professionals and teams"
   homepage "https://cron.com/"
 
@@ -23,12 +23,13 @@ cask "cron" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
-  app "Cron.app"
+  app "Notion Calendar.app"
 
+  # Renamed from Cron to Notion Calendar on 2024-01-18, but some files still use the old name
   zap trash: [
-    "~/Library/Application Support/Cron",
+    "~/Library/Application Support/Notion Calendar",
     "~/Library/Preferences/com.cron.electron.plist",
     "~/Library/Saved Application State/com.cron.electron.savedState",
   ]
