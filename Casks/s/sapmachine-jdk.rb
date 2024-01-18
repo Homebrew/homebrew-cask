@@ -14,11 +14,11 @@ cask "sapmachine-jdk" do
   # The version information on the homepage is rendered client-side from the
   # following JSON file, so we have to check it instead.
   livecheck do
-    url "https://sap.github.io/SapMachine/assets/data/sapmachine_releases.json"
+    url "https://sap.github.io/SapMachine/assets/data/sapmachine-releases-latest.json"
     regex(/["']tag["']:\s*["']sapmachine[._-]v?(\d+(?:\.\d+)*)["']/i)
   end
 
-  artifact "sapmachine-jdk-#{version}.jdk", target: "/Library/Java/JavaVirtualMachines/sapmachine-jdk-#{version}.jdk"
+  artifact "sapmachine-jdk-#{version}.jdk", target: "/Library/Java/JavaVirtualMachines/sapmachine-jdk.jdk"
 
   zap trash: "~/Library/Saved Application State/com.sap.openjdk.jconsole.savedState"
 end
