@@ -9,7 +9,7 @@ cask "notion-calendar" do
       verified: "download.todesktop.com/210303leazlircz/"
   name "Notion Calendar"
   desc "Calendar for professionals and teams"
-  homepage "https://cron.com/"
+  homepage "https://www.notion.so/product/calendar"
 
   livecheck do
     url "https://download.todesktop.com/210303leazlircz/latest-mac.yml"
