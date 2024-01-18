@@ -1,6 +1,6 @@
 cask "dungeon-crawl-stone-soup-tiles" do
-  version "0.30.1"
-  sha256 "283284feae15da85fec53908873892b47f4b26671a67b3476ccc7e427d565905"
+  version "0.30.2"
+  sha256 "38208a18ff48d6604e3a39899f37c987d861e4bb340ce6b4269a9fda010298cc"
 
   url "https://github.com/crawl/crawl/releases/download/#{version}/dcss-#{version}-macos-tiles-universal.zip",
       verified: "github.com/crawl/crawl/releases/"
