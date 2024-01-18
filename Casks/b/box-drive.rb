@@ -1,5 +1,5 @@
 cask "box-drive" do
-  version "2.36.112"
+  version "2.37.142"
   sha256 :no_check
 
   url "https://e3.boxcdn.net/desktop/releases/mac/BoxDrive.pkg",
