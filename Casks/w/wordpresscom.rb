@@ -21,6 +21,8 @@ cask "wordpresscom" do
 
   app "WordPress.com.app"
 
+  uninstall quit: "com.automattic.wordpress"
+
   zap trash: [
     "~/Library/Application Support/Wordpress.com",
     "~/Library/Application Support/Caches/wordpressdesktop-updater",
