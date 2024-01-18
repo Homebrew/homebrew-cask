@@ -17,5 +17,12 @@ cask "theiaide" do
 
   app "TheiaIDE.app"
 
-  zap trash: "~/.theia-ide"
+  zap trash: [
+    "~/.theia-ide",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/eclipse.theia.sfl3",
+    "~/Library/Application Support/Theia IDE",
+    "~/Library/Logs/Theia IDE",
+    "~/Library/Preferences/eclipse.theia.plist",
+    "~/Library/Saved Application State/eclipse.theia.savedState",
+  ]
 end
