@@ -17,9 +17,12 @@ cask "visual-studio-code" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Visual Studio Code.app"
   binary "#{appdir}/Visual Studio Code.app/Contents/Resources/app/bin/code"
+
+  uninstall quit: "com.microsoft.VSCode"
 
   zap trash: [
     "~/.vscode",
