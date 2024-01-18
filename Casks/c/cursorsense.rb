@@ -1,6 +1,6 @@
 cask "cursorsense" do
-  version "2.3.3"
-  sha256 "ff41f8fa7dbbf900d45eff142f7ef50d6d46a4d04d32ecf2561bd8a97c0c1979"
+  version "2.4"
+  sha256 "d01293527664515d416a6228d39a0dbfa4e5ec041eb64a39ea5714e22f20b054"
 
   url "https://plentycom.jp/ctrl/files_cs/CursorSense#{version}.dmg"
   name "CursorSense"
@@ -14,7 +14,12 @@ cask "cursorsense" do
 
   depends_on macos: ">= :sierra"
 
-  prefpane "CursorSense.prefPane"
+  app "CursorSense.app"
 
-  # No zap stanza required
+  zap trash: [
+    "~/Library/Application Support/SteerMouse & CursorSense",
+    "~/Library/HTTPStorages/jp.plentycom.CursorSense.app",
+    "~/Library/LaunchAgents/jp.plentycom.CursorSense.boa.plist",
+    "~/Library/Preferences/jp.plentycom.CursorSense.app.plist",
+  ]
 end
