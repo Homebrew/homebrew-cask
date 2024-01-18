@@ -8,6 +8,8 @@ cask "caffeine" do
   desc "Utility that prevents the system from going to sleep"
   homepage "https://intelliscapesolutions.com/apps/caffeine"
 
+  conflicts_with cask: "domzilla-caffeine"
+
   app "Caffeine.app"
 
   uninstall quit: "com.intelliscapesolutions.caffeine"
