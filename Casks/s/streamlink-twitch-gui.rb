@@ -8,6 +8,7 @@ cask "streamlink-twitch-gui" do
   homepage "https://github.com/streamlink/streamlink-twitch-gui/"
 
   depends_on formula: "streamlink"
+  depends_on macos: ">= :high_sierra"
 
   app "Streamlink Twitch GUI.app"
 
