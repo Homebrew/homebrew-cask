@@ -8,12 +8,10 @@ cask "ttu-base-suite" do
   homepage "https://downloads.teradata.com/TeradataToolsAndUtilities_macOSBrew"
 
   livecheck do
-    url "https://downloads.teradata.com/TeradataToolsAndUtilities_macOSBrew"
-    regex(%r{(\d+(?:-\d+)+)/TeradataToolsAndUtilities-macosx-brew-\s*(\d+(?:\.\d+)+)}i)
+    url :homepage
+    regex(%r{href=.*?/(\d+(?:-\d+)+)/TeradataToolsAndUtilities-macosx-brew[._-]v?(\d+(?:\.\d+)+)\.t}i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map do |match|
-        "#{match[1]},#{match[0]}"
-      end
+      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
   end
 
