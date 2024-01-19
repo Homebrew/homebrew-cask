@@ -15,6 +15,8 @@ cask "volanta" do
     end
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Volanta.app"
 
   zap trash: [
