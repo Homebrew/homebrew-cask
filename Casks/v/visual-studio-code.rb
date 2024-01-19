@@ -22,8 +22,6 @@ cask "visual-studio-code" do
   app "Visual Studio Code.app"
   binary "#{appdir}/Visual Studio Code.app/Contents/Resources/app/bin/code"
 
-  uninstall quit: "com.microsoft.VSCode"
-
   zap trash: [
     "~/.vscode",
     "~/Library/Application Support/Code",
