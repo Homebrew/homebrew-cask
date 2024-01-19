@@ -11,9 +11,12 @@ cask "vscodium" do
   homepage "https://github.com/VSCodium/vscodium"
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "VSCodium.app"
   binary "#{appdir}/VSCodium.app/Contents/Resources/app/bin/codium"
+
+  uninstall quit: "com.vscodium"
 
   zap trash: [
     "~/.vscode-oss",
