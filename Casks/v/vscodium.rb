@@ -25,7 +25,7 @@ cask "vscodium" do
     "~/Library/Caches/com.vscodium",
     "~/Library/Caches/com.vscodium.ShipIt",
     "~/Library/HTTPStorages/com.vscodium",
-    "~/Library/Preferences/com.vscodium.plist",
+    "~/Library/Preferences/com.vscodium*.plist",
     "~/Library/Saved Application State/com.vscodium.savedState",
   ]
 end
