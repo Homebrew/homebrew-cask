@@ -19,7 +19,7 @@ cask "playdate-simulator" do
 
   uninstall_preflight do
     Pathname("/usr/local/bin").glob("arm-*").each do |exec|
-      exec.unlink if exec.exist? && exec.readlink.to_s.include?("playdate")
+      Utils.gain_permissions_remove(exec) if exec.exist? && exec.readlink.to_s.include?("playdate")
     end
   end
 
