@@ -20,11 +20,12 @@ cask "vscodium" do
 
   zap trash: [
     "~/.vscode-oss",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.visualstudio.code.oss.sfl*",
     "~/Library/Application Support/VSCodium",
-    "~/Library/Logs/VSCodium",
-    "~/Library/Preferences/com.visualstudio.code.oss.helper.plist",
-    "~/Library/Preferences/com.visualstudio.code.oss.plist",
-    "~/Library/Saved Application State/com.visualstudio.code.oss.savedState",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vscodium.sfl3",
+    "~/Library/Caches/com.vscodium",
+    "~/Library/Caches/com.vscodium.ShipIt",
+    "~/Library/HTTPStorages/com.vscodium",
+    "~/Library/Preferences/com.vscodium.plist",
+    "~/Library/Saved Application State/com.vscodium.savedState",
   ]
 end
