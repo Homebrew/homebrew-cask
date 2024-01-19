@@ -7,6 +7,8 @@ cask "scoot" do
   desc "Keyboard-driven cursor actuator"
   homepage "https://github.com/mjrusso/scoot"
 
+  depends_on macos: ">= :big_sur"
+
   app "Scoot.app"
 
   zap trash: [
