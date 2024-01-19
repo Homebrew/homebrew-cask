@@ -20,7 +20,7 @@ cask "clion" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "CLion.app"
   binary "#{appdir}/CLion.app/Contents/MacOS/clion"
