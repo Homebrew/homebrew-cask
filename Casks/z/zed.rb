@@ -18,8 +18,6 @@ cask "zed" do
   app "Zed.app"
   binary "#{appdir}/Zed.app/Contents/MacOS/cli", target: "zed"
 
-  uninstall quit: "dev.zed.Zed"
-
   zap trash: [
     "~/.config/Zed",
     "~/Library/Application Support/Zed",
