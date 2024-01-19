@@ -12,6 +12,8 @@ cask "surfshark" do
     strategy :extract_plist
   end
 
+  depends_on macos: ">= :catalina"
+
   app "Surfshark.app"
 
   zap trash: [
