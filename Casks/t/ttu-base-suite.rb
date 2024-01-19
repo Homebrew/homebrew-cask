@@ -30,5 +30,5 @@ cask "ttu-base-suite" do
             },
             pkgutil: "com.Teradata.*2000.pkg.ttuuninstaller"
 
-  # No zap stanza required
+  zap trash: "~/Library/Saved Application State/com.teradata.TTUListProducts.savedState"
 end
