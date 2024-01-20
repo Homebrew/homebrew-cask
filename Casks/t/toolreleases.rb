@@ -26,8 +26,8 @@ cask "toolreleases" do
   app "ToolReleases.app"
 
   uninstall quit:       [
-              "com.developermaris.ToolReleases",
               "com.apple.systemevents",
+              "com.developermaris.ToolReleases",
             ],
             login_item: "ToolReleases"
 
