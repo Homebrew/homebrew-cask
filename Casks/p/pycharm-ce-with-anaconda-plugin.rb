@@ -25,8 +25,8 @@ cask "pycharm-ce-with-anaconda-plugin" do
 
   zap trash: [
     "~/Library/Application Support/PyCharm#{version.major_minor}",
-    "~/Library/Caches/PyCharmCE#{version.major_minor}",
     "~/Library/Caches/PyCharm#{version.major_minor}",
+    "~/Library/Caches/PyCharmCE#{version.major_minor}",
     "~/Library/Logs/JetBrains/PyCharmCE#{version.major_minor}",
     "~/Library/Logs/PyCharm#{version.major_minor}",
     "~/Library/Logs/PyCharmCE#{version.major_minor}",
