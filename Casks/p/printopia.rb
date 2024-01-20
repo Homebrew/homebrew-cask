@@ -21,13 +21,13 @@ cask "printopia" do
             ]
 
   zap trash: [
-    "~/Library/Application Support/com.decisivetactics.printopia",
-    "~/Library/Caches/com.decisivetactics.printopia",
-    "~/Library/Preferences/com.decisivetactics.printopia.plist",
-    "~/Library/Saved Application State/com.decisivetactics.printopia.savedState",
     "/Library/Application Support/com.decisivetactics.printopia",
     "/Library/Logs/Printopia",
     "/Users/Shared/._com.decisivetactics.printopia",
     "/Users/Shared/Printopia",
+    "~/Library/Application Support/com.decisivetactics.printopia",
+    "~/Library/Caches/com.decisivetactics.printopia",
+    "~/Library/Preferences/com.decisivetactics.printopia.plist",
+    "~/Library/Saved Application State/com.decisivetactics.printopia.savedState",
   ]
 end
