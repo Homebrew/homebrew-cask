@@ -10,8 +10,8 @@ cask "spectacle-editor" do
   app "Spectacle Editor.app"
 
   zap trash: [
-    "~/Library/Application Support/Spectacle Editor",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.formidable.spectacle-editor.sfl*",
+    "~/Library/Application Support/Spectacle Editor",
     "~/Library/Preferences/com.formidable.spectacle-editor.plist",
   ]
 end
