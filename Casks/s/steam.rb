@@ -18,8 +18,8 @@ cask "steam" do
   app "Steam.app"
 
   uninstall launchctl: [
-              "com.valvesoftware.steamclean",
               "com.valvesoftware.steam.ipctool",
+              "com.valvesoftware.steamclean",
             ],
             quit:      [
               "com.valvesoftware.steam",
@@ -28,9 +28,9 @@ cask "steam" do
             ]
 
   zap trash: [
+    "~/Library/Application Support/Steam/",
     "~/Library/LaunchAgents/com.valvesoftware.steamclean.plist",
     "~/Library/Preferences/com.valvesoftware.steam.helper.plist",
-    "~/Library/Application Support/Steam/",
     "~/Library/Saved Application State/com.valvesoftware.steam.savedState/",
   ]
 end
