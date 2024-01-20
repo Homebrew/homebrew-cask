@@ -17,7 +17,7 @@ cask "synology-note-station-client" do
   zap trash: [
     "~/Library/Application Support/synology-note-station-client",
     "~/Library/Caches/synology-note-station-client",
-    "~/Library/Saved Application State/synology.note.station.savedState",
     "~/Library/Preferences/synology.note.station.plist",
+    "~/Library/Saved Application State/synology.note.station.savedState",
   ]
 end
