@@ -26,8 +26,8 @@ cask "my-image-garden" do
 
   zap trash: [
     "/Library/Caches/Canon",
-    "~/Library/Application Scripts/jp.co.canon.MyImageGarden",
     "~/Library/Application Scripts/jp.co.canon.ij.pesp.group",
+    "~/Library/Application Scripts/jp.co.canon.MyImageGarden",
     "~/Library/Containers/jp.co.canon.MyImageGarden",
     "~/Library/Group Containers/jp.co.canon.ij.pesp.group",
   ]
