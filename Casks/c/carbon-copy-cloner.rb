@@ -25,11 +25,11 @@ cask "carbon-copy-cloner" do
             login_item: "CCC User Agent"
 
   zap trash: [
+    "/Library/LaunchDaemons/com.bombich.ccchelper.plist",
     "~/Library/Application Support/com.bombich.ccc",
     "~/Library/Caches/com.bombich.ccc",
     "~/Library/Preferences/com.bombich.ccc.plist",
     "~/Library/Preferences/com.bombich.cccuseragent.plist",
     "~/Library/Saved Application State/com.bombich.ccc.savedState",
-    "/Library/LaunchDaemons/com.bombich.ccchelper.plist",
   ]
 end
