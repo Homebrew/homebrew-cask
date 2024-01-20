@@ -13,8 +13,8 @@ cask "welly" do
 
   zap trash: [
     "~/Library/Application Support/Welly",
-    "~/Library/Caches/Welly",
     "~/Library/Caches/org.net9.Welly",
+    "~/Library/Caches/Welly",
     "~/Library/Cookies/org.net9.Welly.binarycookies",
     "~/Library/Preferences/org.net9.Welly.plist",
   ]
