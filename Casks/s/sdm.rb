@@ -22,8 +22,8 @@ cask "sdm" do
   uninstall delete: "#{appdir}/SDM.app/Contents/Resources/sdm-socket"
 
   zap trash: [
-    "~/.sdm",
     "/usr/local/bin/sdm",
+    "~/.sdm",
     "~/Library/Application Support/SDM",
     "~/Library/Caches/com.electron.sdm*",
     "~/Library/Preferences/com.electron.sdm.plist",
