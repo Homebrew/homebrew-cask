@@ -31,9 +31,9 @@ cask "podolski" do
   ]
 
   zap trash: [
-    "~/Library/Application Support/u-he/Podolski",
     "~/Library/Application Support/u-he/com.u-he.Podolski.midiassign.txt",
     "~/Library/Application Support/u-he/com.u-he.Podolski.Preferences.txt",
+    "~/Library/Application Support/u-he/Podolski",
   ]
 
   caveats do
