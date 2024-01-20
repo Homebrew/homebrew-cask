@@ -19,8 +19,8 @@ cask "browser-deputy" do
 
   zap trash: [
     "~/Library/Application Support/Browser Deputy",
-    "~/Library/Caches/ltd.anybox.BrowserDeputy",
     "~/Library/Caches/Browser Deputy",
+    "~/Library/Caches/ltd.anybox.BrowserDeputy",
     "~/Library/HTTPStorages/ltd.anybox.BrowserDeputy",
     "~/Library/HTTPStorages/ltd.anybox.BrowserDeputy.binarycookies",
     "~/Library/Preferences/ltd.anybox.BrowserDeputy.plist",
