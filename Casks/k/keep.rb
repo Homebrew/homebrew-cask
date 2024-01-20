@@ -17,8 +17,8 @@ cask "keep" do
   zap trash: [
     "~/Library/Application Support/Keep",
     "~/Library/Caches/com.electron.keep",
-    "~/Library/Preferences/com.electron.keep.plist",
     "~/Library/Preferences/com.electron.keep.helper.plist",
+    "~/Library/Preferences/com.electron.keep.plist",
     "~/Library/Saved Application State/com.electron.keep.savedState",
   ]
 end
