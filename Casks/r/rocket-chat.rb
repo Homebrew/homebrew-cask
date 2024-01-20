@@ -19,9 +19,9 @@ cask "rocket-chat" do
 
   zap trash: [
     "~/Library/Application Support/Rocket.Chat",
+    "~/Library/Caches/chat.rocket",
     "~/Library/Caches/chat.rocket.electron.helper",
     "~/Library/Caches/chat.rocket.ShipIt",
-    "~/Library/Caches/chat.rocket",
     "~/Library/Preferences/chat.rocket.electron.helper.plist",
     "~/Library/Preferences/chat.rocket.plist",
     "~/Library/Saved Application State/chat.rocket.savedState",
