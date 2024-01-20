@@ -22,8 +22,8 @@ cask "epic-games" do
     "~/Library/Application Support/Epic",
     "~/Library/Caches/com.epicgames.EpicGamesLauncher",
     "~/Library/Cookies/com.epicgames.EpicGamesLauncher.binarycookies",
-    "~/Library/HTTPStorages/com.epicgames.EpicGamesLauncher",
     "~/Library/HTTPStorages/com.epicgames.CrashReportClient",
+    "~/Library/HTTPStorages/com.epicgames.EpicGamesLauncher",
     "~/Library/Logs/Unreal Engine/EpicGamesLauncher",
     "~/Library/Preferences/Unreal Engine/EpicGamesLauncher",
   ]
