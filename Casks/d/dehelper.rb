@@ -32,8 +32,8 @@ cask "dehelper" do
     "~/Library/Eudb_de",
     "~/Library/HTTPStorages/com.eusoft.dehelper",
     "~/Library/HTTPStorages/com.eusoft.dehelper.binarycookies",
-    "~/Library/Preferences/com.eusoft.dehelper.plist",
     "~/Library/Preferences/com.eusoft.dehelper.LightPeek.plist",
+    "~/Library/Preferences/com.eusoft.dehelper.plist",
     "~/Library/Preferences/group.com.eusoft.dehelper.plist",
     "~/Library/WebKit/com.eusoft.dehelper",
   ]
