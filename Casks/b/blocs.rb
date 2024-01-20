@@ -19,8 +19,8 @@ cask "blocs" do
   app "Blocs.app"
 
   zap trash: [
-    "~/Library/Application Support/Blocs",
     "~/Library/Application Support/Blocs *",
+    "~/Library/Application Support/Blocs",
     "~/Library/Caches/com.cazoobi.Blocs-*",
     "~/Library/HTTPStorages/com.cazoobi.Blocs-*",
     "~/Library/HTTPStorages/com.cazoobi.Blocs-*.binarycookies",
