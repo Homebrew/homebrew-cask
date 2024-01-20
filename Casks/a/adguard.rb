@@ -21,8 +21,8 @@ cask "adguard" do
   pkg "AdGuard.pkg"
 
   uninstall launchctl: [
-              "com.adguard.mac.adguard.pac",
               "com.adguard.mac.adguard.helper",
+              "com.adguard.mac.adguard.pac",
               "com.adguard.mac.adguard.tun-helper",
               "com.adguard.mac.adguard.xpcgate2",
             ],
