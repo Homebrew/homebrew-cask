@@ -23,8 +23,8 @@ cask "mono-mdk" do
               "/private/etc/paths.d/mono-commands",
             ],
             rmdir:   [
-              "/Library/Frameworks/Mono.framework/Versions",
               "/Library/Frameworks/Mono.framework",
+              "/Library/Frameworks/Mono.framework/Versions",
             ]
 
   zap trash: [
