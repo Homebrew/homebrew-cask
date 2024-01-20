@@ -18,7 +18,7 @@ cask "localxpose" do
 
   auto_updates true
 
-  binary "loclx-darwin-#{arch}", target: "loclx"
+  binary "loclx"
 
   zap trash: "~/.localxpose"
 end
