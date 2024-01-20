@@ -11,10 +11,10 @@ cask "surge-synthesizer" do
   pkg "Surge-#{version}-Setup.pkg"
 
   uninstall pkgutil: [
-    "com.vemberaudio.vst2.pkg",
-    "com.vemberaudio.vst3.pkg",
     "com.vemberaudio.au.pkg",
     "com.vemberaudio.resources.pkg",
+    "com.vemberaudio.vst2.pkg",
+    "com.vemberaudio.vst3.pkg",
     "org.surge-synthesizer.fxau.pkg",
     "org.surge-synthesizer.fxvst3.pkg",
   ]
