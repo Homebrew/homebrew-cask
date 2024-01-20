@@ -20,12 +20,12 @@ cask "cisco-jabber" do
               "com.jabra.CiscoJabberPlugin",
               "com.logitech.LogiUCPlugin",
               "com.PlantronicsPlugin.CiscoJabberPlugin",
-              "com.Sennheiser.pkg.SennheiserSDKv789904MacSDKv8602",
               "com.sennheiser.CiscoJabberPlugin",
+              "com.Sennheiser.pkg.SennheiserSDKv789904MacSDKv8602",
             ],
             delete:  [
               "/Applications/Cisco Jabber.app",
-              "/Library/Logs/Jabber/",
               "/Library/Application Support/Cisco/Unified Communications/Jabber/",
+              "/Library/Logs/Jabber/",
             ]
 end
