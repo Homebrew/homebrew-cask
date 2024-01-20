@@ -22,8 +22,8 @@ cask "dingtalk-lite" do
 
   zap trash: [
     "~/Library/Application Support/DingTalkMacLite",
-    "~/Library/Caches/DingTalkLite",
     "~/Library/Caches/com.alibaba.DingTalkMacLite",
+    "~/Library/Caches/DingTalkLite",
     "~/Library/Saved Application State/com.alibaba.DingTalkMacLite.savedState",
   ]
 end
