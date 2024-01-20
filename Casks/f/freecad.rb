@@ -26,7 +26,7 @@ cask "freecad" do
   zap trash: [
     "~/Library/Application Support/FreeCAD",
     "~/Library/Caches/FreeCAD",
-    "~/Library/Preferences/FreeCAD",
     "~/Library/Preferences/com.freecad.FreeCAD.plist",
+    "~/Library/Preferences/FreeCAD",
   ]
 end
