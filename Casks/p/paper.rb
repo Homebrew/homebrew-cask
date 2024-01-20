@@ -21,7 +21,7 @@ cask "paper" do
   uninstall quit: "com.w.paper"
 
   zap trash: [
-    "~/Library/Containers/com.w.paper-LaunchAtLoginHelper",
     "~/Library/Containers/com.w.paper",
+    "~/Library/Containers/com.w.paper-LaunchAtLoginHelper",
   ]
 end
