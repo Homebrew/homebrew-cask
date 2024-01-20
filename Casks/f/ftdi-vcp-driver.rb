@@ -9,8 +9,8 @@ cask "ftdi-vcp-driver" do
 
     uninstall kext:    "com.FTDI.driver.FTDIUSBSerialDriver",
               pkgutil: [
-                "com.FTDI.ftdiusbserialdriverinstaller.*",
                 "com.FTDI.driver.FTDIUSBSerialDriver",
+                "com.FTDI.ftdiusbserialdriverinstaller.*",
               ],
               delete:  "/Library/Extensions/FTDIUSBSerialDriver.kext"
 
@@ -50,8 +50,8 @@ cask "ftdi-vcp-driver" do
     #           }
 
     uninstall delete: [
-      "~/Library/Containers/com.ftdi.vcp.dext",
       "~/Library/Application Scripts/com.ftdi.vcp.dext",
+      "~/Library/Containers/com.ftdi.vcp.dext",
     ]
 
     caveats do
