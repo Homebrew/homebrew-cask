@@ -11,8 +11,8 @@ cask "dexed" do
   pkg "dexed-#{version}.mpkg"
 
   uninstall pkgutil: [
+    "com.digitalsuburban.DexedAU",
     "com.digitalsuburban.DexedStandalone",
     "com.digitalsuburban.DexedVST3",
-    "com.digitalsuburban.DexedAU",
   ]
 end
