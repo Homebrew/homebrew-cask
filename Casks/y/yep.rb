@@ -15,8 +15,8 @@ cask "yep" do
   app "Yep.app"
 
   zap trash: [
-    "~/Library/Application Support/Yep",
     "~/Library/Application Support/com.ironic.yep#{version.major}",
+    "~/Library/Application Support/Yep",
     "~/Library/Caches/com.ironic.yep#{version.major}",
     "~/Library/HTTPStorages/com.ironic.yep#{version.major}",
     "~/Library/Preferences/com.ironic.yep#{version.major}.plist",
