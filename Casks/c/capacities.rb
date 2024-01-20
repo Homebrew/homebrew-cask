@@ -22,8 +22,8 @@ cask "capacities" do
 
   zap trash: [
     "~/Library/Application Support/Capacities",
-    "~/Library/Preferences/io.capacities.app.plist",
     "~/Library/Logs/Capacities/",
+    "~/Library/Preferences/io.capacities.app.plist",
     "~/Library/Saved Application State/io.capacities.app.savedState",
   ]
 end
