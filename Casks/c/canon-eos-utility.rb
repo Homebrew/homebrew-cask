@@ -45,11 +45,11 @@ cask "canon-eos-utility" do
               "/Library/Application Support/Canon_Inc_IC/UniversalInstaller/Uninstall/Auto Update Interface Library/Uninstall_for_EOS Web Service Registration Tool.xml",
               "/Library/Application Support/Canon_Inc_IC/UniversalInstaller/Uninstall/CameraSurveyProgram",
               "/Library/Application Support/Canon_Inc_IC/UniversalInstaller/Uninstall/EOS Lens Registration Tool",
-              "/Library/Application Support/Canon_Inc_IC/UniversalInstaller/Uninstall/EOS Web Service Registration Tool",
-              "/Library/Application Support/Canon_Inc_IC/UniversalInstaller/Uninstall/EOS Utility",
               "/Library/Application Support/Canon_Inc_IC/UniversalInstaller/Uninstall/EOS Utility 2",
               "/Library/Application Support/Canon_Inc_IC/UniversalInstaller/Uninstall/EOS Utility 3",
               "/Library/Application Support/Canon_Inc_IC/UniversalInstaller/Uninstall/EOS Utility Launcher",
+              "/Library/Application Support/Canon_Inc_IC/UniversalInstaller/Uninstall/EOS Utility",
+              "/Library/Application Support/Canon_Inc_IC/UniversalInstaller/Uninstall/EOS Web Service Registration Tool",
             ],
             rmdir:  [
               "/Applications/Canon Utilities",
@@ -59,9 +59,9 @@ cask "canon-eos-utility" do
   zap trash: [
     "~/Library/Caches/com.canon.EOS-Lens-Registration-Tool",
     "~/Library/Caches/com.canon.UpdateChecker",
-    "~/Library/Preferences/jp.co.canon.ic.camerasurveyprogram.plist",
-    "~/Library/Preferences/com.canon.EOS-Utility.plist",
     "~/Library/Preferences/com.canon.EOS Utility 2.plist",
     "~/Library/Preferences/com.canon.EOS-Utility-3.plist",
+    "~/Library/Preferences/com.canon.EOS-Utility.plist",
+    "~/Library/Preferences/jp.co.canon.ic.camerasurveyprogram.plist",
   ]
 end
