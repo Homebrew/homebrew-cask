@@ -37,9 +37,9 @@ cask "obs-ndi" do
   end
 
   uninstall pkgutil: [
+    "'fr.palakis.obs-ndi'",
     "com.newtek.ndi.runtime",
     "fr.palakis.obs-ndi",
-    "'fr.palakis.obs-ndi'",
   ]
 
   # No zap stanza required
