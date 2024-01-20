@@ -21,7 +21,7 @@ cask "protonmail-bridge" do
 
   zap trash: [
     "~/Library/Application Support/protonmail",
-    "~/Library/Caches/protonmail",
     "~/Library/Caches/Proton AG/Proton Mail Bridge",
+    "~/Library/Caches/protonmail",
   ]
 end
