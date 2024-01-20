@@ -11,9 +11,9 @@ cask "aria-maestosa" do
   app "Aria Maestosa.app"
 
   zap trash: [
+    "~/Library/Application Support/Aria Maestosa",
+    "~/Library/Autosave Information/org.AriaMaestosa.plist",
     "~/Library/Preferences/AriaMaestosa",
     "~/Library/Saved Application State/org.AriaMaestosa.savedState",
-    "~/Library/Autosave Information/org.AriaMaestosa.plist",
-    "~/Library/Application Support/Aria Maestosa",
   ]
 end
