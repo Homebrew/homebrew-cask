@@ -21,9 +21,9 @@ cask "fig" do
   binary "#{appdir}/Fig.app/Contents/MacOS/fig-darwin-universal", target: "fig"
 
   uninstall launchctl: [
+              "io.fig.dotfiles-daemon",
               "io.fig.launcher",
               "io.fig.uninstall",
-              "io.fig.dotfiles-daemon",
             ],
             quit:      [
               "com.mschrage.fig",
