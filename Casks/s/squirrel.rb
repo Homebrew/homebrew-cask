@@ -19,7 +19,6 @@ cask "squirrel" do
             delete:  "/Library/Input Methods/Squirrel.app"
 
   zap trash: [
-    # Data for older versions (< 0.10.0)
     "~/Library/Caches/com.googlecode.rimeime.inputmethod.Squirrel",
     "~/Library/Caches/im.rime.inputmethod.Squirrel",
     "~/Library/Preferences/com.googlecode.rimeime.inputmethod.Squirrel.plist",
