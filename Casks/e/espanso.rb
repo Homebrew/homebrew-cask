@@ -24,8 +24,8 @@ cask "espanso" do
     "~/Library/Caches/espanso",
     "~/Library/LaunchAgents/com.federicoterzi.espanso.plist",
     "~/Library/Preferences/com.federicoterzi.espanso.plist",
-    "~/Library/Preferences/espanso.plist",
     "~/Library/Preferences/espanso",
+    "~/Library/Preferences/espanso.plist",
     "~/Library/Saved Application State/com.federicoterzi.espanso.savedState",
   ]
 
