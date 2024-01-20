@@ -24,8 +24,8 @@ cask "detail" do
               "co.detail.mac",
             ],
             delete:  [
-              "/Library/CoreMediaIO/Plug-Ins/DAL/Detail Camera.plugin",
               "/Library/Audio/Plug-Ins/HAL/Detail Audio.driver",
+              "/Library/CoreMediaIO/Plug-Ins/DAL/Detail Camera.plugin",
             ]
 
   zap trash: [
