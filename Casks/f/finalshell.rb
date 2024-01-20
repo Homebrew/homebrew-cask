@@ -16,7 +16,7 @@ cask "finalshell" do
 
   depends_on macos: ">= :el_capitan"
 
-  pkg "finalshell_install.pkg"
+  pkg "finalshell_macos_#{arch}.pkg"
 
   uninstall quit:    "finalshellinstall.all",
             pkgutil: [
