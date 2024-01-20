@@ -17,8 +17,8 @@ cask "tuxera-ntfs" do
   pkg ".packages/Flat/Install Tuxera NTFS.mpkg"
 
   uninstall quit:    [
-              "com.tuxera.Tuxera-NTFS",
               "com.tuxera.filesystems.ntfs.agent",
+              "com.tuxera.Tuxera-NTFS",
             ],
             pkgutil: [
               "com.tuxera.pkg.Tuxera_NTFS",
@@ -30,7 +30,7 @@ cask "tuxera-ntfs" do
         "/Library/Preferences/com.tuxera.NTFS.plist",
       ],
       trash:  [
-        "~/Library/Saved Application State/com.tuxera.TuxeraDiskManager.savedState",
         "~/Library/Caches/com.tuxera.filesystems.ntfs.agent",
+        "~/Library/Saved Application State/com.tuxera.TuxeraDiskManager.savedState",
       ]
 end
