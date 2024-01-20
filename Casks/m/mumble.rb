@@ -19,10 +19,10 @@ cask "mumble" do
   app "Mumble.app"
 
   zap trash: [
+    "/Library/ScriptingAdditions/MumbleOverlay.osax",
     "~/Library/Application Support/Mumble",
     "~/Library/Logs/Mumble.log",
     "~/Library/Preferences/net.sourceforge.mumble.Mumble.plist",
     "~/Library/Saved Application State/net.sourceforge.mumble.Mumble.savedState",
-    "/Library/ScriptingAdditions/MumbleOverlay.osax",
   ]
 end
