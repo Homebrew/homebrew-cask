@@ -19,9 +19,9 @@ cask "logitech-camera-settings" do
   uninstall signal:     ["TERM", "com.logitech.vc.LogiVCCoreService"],
             login_item: "Background Replace",
             pkgutil:    [
-              "com.logitech.vc.LogiVCCoreService.launchd.pkg",
-              "com.logitech.vc.LogiVCCoreService.app.pkg",
               "com.logitech.vc.CameraSettings.pkg",
+              "com.logitech.vc.LogiVCCoreService.app.pkg",
+              "com.logitech.vc.LogiVCCoreService.launchd.pkg",
             ]
 
   zap trash: [
