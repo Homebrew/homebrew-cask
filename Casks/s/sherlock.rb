@@ -19,8 +19,8 @@ cask "sherlock" do
 
   zap trash: [
     "/Users/Shared/Sherlock",
-    "~/Library/Application Support/Sherlock",
     "~/Library/Application Support/io.inspiredcode.Sherlock",
+    "~/Library/Application Support/Sherlock",
     "~/Library/Preferences/io.inspiredcode.Sherlock.plist",
   ]
 end
