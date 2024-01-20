@@ -29,8 +29,8 @@ cask "postman" do
   zap trash: [
     "~/Library/Application Support/com.postmanlabs.mac.ShipIt",
     "~/Library/Application Support/Postman",
-    "~/Library/Caches/com.postmanlabs.mac.ShipIt",
     "~/Library/Caches/com.postmanlabs.mac",
+    "~/Library/Caches/com.postmanlabs.mac.ShipIt",
     "~/Library/Caches/Postman",
     "~/Library/HTTPStorages/com.postmanlabs.mac",
     "~/Library/Preferences/ByHost/com.postmanlabs.mac.ShipIt.*.plist",
