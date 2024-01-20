@@ -18,8 +18,8 @@ cask "android-file-transfer" do
   app "Android File Transfer.app"
 
   zap trash: [
-        "~/Library/Application Support/Google/Android File Transfer",
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.google.android.mtpviewer.sfl*",
+        "~/Library/Application Support/Google/Android File Transfer",
         "~/Library/Preferences/com.google.android.mtpviewer.plist",
       ],
       rmdir: "~/Library/Application Support/Google"
