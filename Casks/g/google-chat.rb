@@ -14,9 +14,9 @@ cask "google-chat" do
   app "Chat.app"
 
   zap trash: [
-    "~/Library/Logs/Chat",
-    "~/Library/Saved Application State/com.google.chat.savedState",
     "~/Library/Application Support/Chat",
+    "~/Library/Logs/Chat",
     "~/Library/Preferences/com.google.chat*",
+    "~/Library/Saved Application State/com.google.chat.savedState",
   ]
 end
