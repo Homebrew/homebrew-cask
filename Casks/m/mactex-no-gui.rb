@@ -49,10 +49,10 @@ cask "mactex-no-gui" do
 
   uninstall pkgutil: "org.tug.mactex.texlive#{version.major}",
             delete:  [
-              "/usr/local/texlive/#{version.major}",
-              "/Library/TeX",
-              "/etc/paths.d/TeX",
               "/etc/manpaths.d/TeX",
+              "/etc/paths.d/TeX",
+              "/Library/TeX",
+              "/usr/local/texlive/#{version.major}",
             ]
 
   zap trash: "/usr/local/texlive/texmf-local",
