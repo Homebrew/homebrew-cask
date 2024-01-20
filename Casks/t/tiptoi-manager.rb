@@ -18,8 +18,8 @@ cask "tiptoi-manager" do
 
   uninstall quit:    "com.ravensburger.tiptoimanager",
             pkgutil: [
-              "com.ravensburger.tiptoimanager",
               "com.ravensburger.tiptoi.TipToiBindings",
+              "com.ravensburger.tiptoimanager",
             ],
             delete:  "/Applications/tiptoi® Manager.app"
 

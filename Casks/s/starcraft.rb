@@ -19,10 +19,10 @@ cask "starcraft" do
   uninstall delete: "/Applications/StarCraft"
 
   zap trash: [
+    "/Users/Shared/Battle.net",
     "~/Library/Preferences/com.blizzard.Starcraft.plist",
     "~/Library/Preferences/com.blizzard.systemsurvey.plist",
     "~/Library/Preferences/net.battle.plist",
-    "/Users/Shared/Battle.net",
   ]
 
   caveats <<~EOS

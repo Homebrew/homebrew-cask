@@ -13,10 +13,10 @@ cask "writefull" do
   app "Writefull.app"
 
   zap trash: [
-    "~/Library/Application Support/Writefull_3beta",
     "~/Library/Application Support/com.paraphrase.Writefull.ShipIt",
-    "~/Library/Caches/Writefull_3beta",
+    "~/Library/Application Support/Writefull_3beta",
     "~/Library/Caches/com.paraphrase.Writefull",
+    "~/Library/Caches/Writefull_3beta",
     "~/Library/Preferences/com.paraphrase.Writefull.plist",
     "~/Library/Saved Application State/com.paraphrase.Writefull.savedState",
   ]

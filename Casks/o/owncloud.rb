@@ -21,8 +21,8 @@ cask "owncloud" do
   pkg "ownCloud-#{version}-#{arch}.pkg"
 
   uninstall pkgutil: [
-    "com.ownCloud.client",
     "com.owncCloud.finderPlugin",
+    "com.ownCloud.client",
   ]
 
   zap trash: [

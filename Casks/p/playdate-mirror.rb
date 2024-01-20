@@ -21,8 +21,8 @@ cask "playdate-mirror" do
   uninstall quit: "com.panic.Mirror"
 
   zap trash: [
-    "~/Library/Saved Application State/com.panic.Mirror.savedState",
     "~/Library/Preferences/com.panic.Mirror.plist",
     "~/Library/Preferences/Mirror Preferences",
+    "~/Library/Saved Application State/com.panic.Mirror.savedState",
   ]
 end

@@ -20,8 +20,8 @@ cask "quit-all" do
     "~/Library/Application Support/com.quitallapp.quitall-paddle",
     "~/Library/Application Support/Quit All",
     "~/Library/Caches/com.quitallapp.quitall-paddle",
-    "~/Library/HTTPStorages/com.quitallapp.quitall-paddle.binarycookies",
     "~/Library/HTTPStorages/com.quitallapp.quitall-paddle",
+    "~/Library/HTTPStorages/com.quitallapp.quitall-paddle.binarycookies",
     "~/Library/Preferences/com.quitallapp.quitall-paddle.plist",
   ]
 end

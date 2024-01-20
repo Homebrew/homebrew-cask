@@ -24,8 +24,8 @@ cask "openemu" do
   app "OpenEmu.app"
 
   zap trash: [
-    "~/Library/Application Support/OpenEmu",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.openemu.openemu.sfl*",
+    "~/Library/Application Support/OpenEmu",
     "~/Library/Application Support/org.openemu.OEXPCCAgent.Agents",
     "~/Library/Caches/OpenEmu",
     "~/Library/Caches/org.openemu.OpenEmu",

@@ -21,8 +21,8 @@ cask "private-internet-access" do
   }
 
   uninstall launchctl: [
-              "com.privateinternetaccess.vpn.installhelper",
               "com.privateinternetaccess.vpn.daemon",
+              "com.privateinternetaccess.vpn.installhelper",
             ],
             quit:      "com.privateinternetaccess.vpn",
             delete:    [

@@ -36,8 +36,8 @@ cask "spotify" do
 
   zap trash: [
     "~/Library/Application Support/Spotify",
-    "~/Library/Caches/com.spotify.client.helper",
     "~/Library/Caches/com.spotify.client",
+    "~/Library/Caches/com.spotify.client.helper",
     "~/Library/Cookies/com.spotify.client.binarycookies",
     "~/Library/HTTPStorages/com.spotify.client",
     "~/Library/Logs/Spotify",

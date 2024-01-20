@@ -31,8 +31,8 @@ cask "standard-notes" do
 
   zap trash: [
     "~/Library/Application Support/Standard Notes",
-    "~/Library/Caches/org.standardnotes.standardnotes.ShipIt",
     "~/Library/Caches/org.standardnotes.standardnotes",
+    "~/Library/Caches/org.standardnotes.standardnotes.ShipIt",
     "~/Library/Preferences/org.standardnotes.standardnotes.helper.plist",
     "~/Library/Preferences/org.standardnotes.standardnotes.plist",
     "~/Library/Saved Application State/org.standardnotes.standardnotes.savedState",

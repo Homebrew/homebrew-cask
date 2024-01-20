@@ -17,8 +17,8 @@ cask "neo4j" do
   app "Neo4j Desktop.app"
 
   zap trash: [
-    "~/Library/Application Support/Neo4j Desktop",
     "~/Library/Application Support/com.Neo4j.Relate",
+    "~/Library/Application Support/Neo4j Desktop",
     "~/Library/Caches/com.Neo4j.Relate",
     "~/Library/Logs/Neo4j Desktop",
     "~/Library/Preferences/com.neo4j.neo4j-desktop.plist",

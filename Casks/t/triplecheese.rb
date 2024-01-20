@@ -31,9 +31,9 @@ cask "triplecheese" do
   ]
 
   zap trash: [
-    "~/Library/Application Support/u-he/TripleCheese",
     "~/Library/Application Support/u-he/com.u-he.TripleCheese.midiassign.txt",
     "~/Library/Application Support/u-he/com.u-he.TripleCheese.Preferences.txt",
+    "~/Library/Application Support/u-he/TripleCheese",
   ]
 
   caveats do

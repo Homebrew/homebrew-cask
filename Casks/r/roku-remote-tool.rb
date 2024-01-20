@@ -16,7 +16,7 @@ cask "roku-remote-tool" do
 
   uninstall delete: [
     "~/Library/Application Support/roku_remote_tool",
-    "~/Library/Preferences/com.rokuremotetool.plist",
     "~/Library/Logs/roku_remote_tool",
+    "~/Library/Preferences/com.rokuremotetool.plist",
   ]
 end

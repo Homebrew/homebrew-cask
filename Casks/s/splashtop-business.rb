@@ -17,8 +17,8 @@ cask "splashtop-business" do
 
   uninstall quit:    "com.splashtop.stb.macosx",
             pkgutil: [
-              "com.splashtop.stb.*",
               "com.splashtop.splashtopBusiness.*",
+              "com.splashtop.stb.*",
             ]
 
   zap trash: [

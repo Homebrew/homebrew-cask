@@ -17,9 +17,9 @@ cask "prolific-pl2303" do
   uninstall quit:    "com.prolific.PLVCDriver",
             kext:    "com.prolific.driver.PL2303",
             pkgutil: [
-              "com.Susteen.driver.PL2303",
               "com.prolific.driver.PL2303",
               "com.prolific.pkg.PLVCDriver",
+              "com.Susteen.driver.PL2303",
             ],
             delete:  [
               "/Library/Extensions/ProlificUsbSerial.kext",

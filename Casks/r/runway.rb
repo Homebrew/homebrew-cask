@@ -16,10 +16,10 @@ cask "runway" do
   app "Runway.app"
 
   zap trash: [
+    "~/.runway",
     "~/Library/Application Support/Runway",
     "~/Library/Logs/Runway",
     "~/Library/Preferences/com.runwayai.runway.plist",
     "~/Library/Saved Application State/com.runwayai.runway.savedState",
-    "~/.runway",
   ]
 end

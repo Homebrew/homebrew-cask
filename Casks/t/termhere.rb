@@ -13,8 +13,8 @@ cask "termhere" do
   app "TermHere.app"
 
   zap trash: [
-    "~/Library/Application Support/CrashReporter/TermHere Finder Extension*",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/ws.hbang.termhere.sfl*",
+    "~/Library/Application Support/CrashReporter/TermHere Finder Extension*",
     "~/Library/Caches/ws.hbang.TermHere",
     "~/Library/Containers/ws.hbang.TermHere.TermHere-Finder-Extension",
     "~/Library/Cookies/ws.hbang.TermHere.binarycookies",

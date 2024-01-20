@@ -17,10 +17,10 @@ cask "todesk" do
   pkg "ToDesk_#{version}.pkg"
 
   uninstall launchctl: [
+              "com.youqu.todesk.client.startup",
               "com.youqu.todesk.desktop",
               "com.youqu.todesk.service",
               "com.youqu.todesk.startup",
-              "com.youqu.todesk.client.startup",
             ],
             quit:      "com.youqu.todesk.mac",
             pkgutil:   "com.youqu.todesk.mac",

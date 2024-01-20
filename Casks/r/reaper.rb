@@ -26,9 +26,9 @@ cask "reaper" do
   zap trash: [
     "~/Library/Application Support/REAPER",
     "~/Library/Preferences/com.cockos.reaper.plist",
+    "~/Library/Saved Application State/com.cockos.ReaMote.savedState",
     "~/Library/Saved Application State/com.cockos.reaper.savedState",
     "~/Library/Saved Application State/com.cockos.reaperhosti386.savedState",
     "~/Library/Saved Application State/com.cockos.reaperhostx8664.savedState",
-    "~/Library/Saved Application State/com.cockos.ReaMote.savedState",
   ]
 end

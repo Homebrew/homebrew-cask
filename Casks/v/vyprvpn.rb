@@ -19,9 +19,9 @@ cask "vyprvpn" do
   app "VyprVPN.app"
 
   uninstall launchctl: [
-              "vyprvpnservice",
               "com.goldenfrog.resourcewatchdog",
               "com.goldenfrog.VyprVPNUserAgent",
+              "vyprvpnservice",
             ],
             quit:      "com.goldenfrog.VyprVPN*",
             kext:      "com.goldenfrog.VyprVPNMalwareFilter"

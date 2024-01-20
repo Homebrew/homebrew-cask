@@ -17,8 +17,8 @@ cask "tad" do
   binary "#{appdir}/Tad.app/Contents/Resources/tad.sh", target: "tad"
 
   zap trash: [
-    "~/Library/Application Support/Tad",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.antonycourtney.tad.sfl*",
+    "~/Library/Application Support/Tad",
     "~/Library/Logs/Tad",
     "~/Library/Preferences/com.antonycourtney.tad.plist",
     "~/Library/Saved Application State/com.antonycourtney.tad.savedState",

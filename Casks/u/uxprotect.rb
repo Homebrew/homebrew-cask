@@ -18,8 +18,8 @@ cask "uxprotect" do
 
   zap trash: [
     "~/Library/Application Scripts/com.digitasecurity.UXProtect",
-    "~/Library/Caches/KSCrash/UXProtect",
     "~/Library/Caches/com.digitasecurity.UXProtect",
+    "~/Library/Caches/KSCrash/UXProtect",
     "~/Library/Containers/com.digitasecurity.UXProtect",
     "~/Library/Preferences/com.digitasecurity.UXProtect.plist",
   ]

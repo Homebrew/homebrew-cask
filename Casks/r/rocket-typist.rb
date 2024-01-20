@@ -18,8 +18,8 @@ cask "rocket-typist" do
   app "Rocket Typist.app"
 
   zap trash: [
-    "~/Library/Application Support/com.witt-software.Rocket-Typist-#{version.major}",
     "~/Library/Application Support/com.witt-software.rocket-typist",
+    "~/Library/Application Support/com.witt-software.Rocket-Typist-#{version.major}",
     "~/Library/Application Support/Rocket Typist",
     "~/Library/Caches/com.apple.helpd/Generated/com.witt-software.Rocket-Typist.help*",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.witt-software.Rocket-Typist-#{version.major}",

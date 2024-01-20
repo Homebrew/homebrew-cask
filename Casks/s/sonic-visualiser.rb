@@ -21,9 +21,9 @@ cask "sonic-visualiser" do
   app "Sonic Visualiser.app"
 
   zap trash: [
-    "~/Library/Saved Application State/org.sonicvisualiser.SonicVisualiser.savedState",
+    "~/Library/Application Support/sonic-visualiser/",
     "~/Library/Preferences/org.sonicvisualiser.Sonic Visualiser.plist",
     "~/Library/Preferences/org.sonicvisualiser.SonicVisualiser.plist",
-    "~/Library/Application Support/sonic-visualiser/",
+    "~/Library/Saved Application State/org.sonicvisualiser.SonicVisualiser.savedState",
   ]
 end

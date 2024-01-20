@@ -15,10 +15,10 @@ cask "screenfocus" do
   app "ScreenFocus.app"
 
   zap trash: [
-    "~/Library/Application Support/ScreenFocus",
+    "/Users/Shared/ScreenFocus",
     "~/Library/Application Support/com.apptorium.ScreenFocus-dm",
+    "~/Library/Application Support/ScreenFocus",
     "~/Library/Caches/com.apptorium.ScreenFocus-dm",
     "~/Library/Preferences/com.apptorium.ScreenFocus-dm.plist",
-    "/Users/Shared/ScreenFocus",
   ]
 end

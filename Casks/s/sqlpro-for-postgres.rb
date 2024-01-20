@@ -16,7 +16,7 @@ cask "sqlpro-for-postgres" do
   app "SQLPro for Postgres.app"
 
   zap trash: [
-    "~/Library/Containers/com.hankinsoft.osx.sqlpropostgres",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.hankinsoft.osx.sqlpropostgres.sfl*",
+    "~/Library/Containers/com.hankinsoft.osx.sqlpropostgres",
   ]
 end

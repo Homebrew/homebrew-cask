@@ -26,7 +26,7 @@ cask "zenmap" do
             delete:  "/Applications/Zenmap.app"
 
   zap trash: [
-    "~/Library/Saved Application State/org.insecure.Zenmap.savedState",
     "~/.zenmap",
+    "~/Library/Saved Application State/org.insecure.Zenmap.savedState",
   ]
 end

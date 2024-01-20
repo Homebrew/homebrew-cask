@@ -15,8 +15,8 @@ cask "shadowsocksx-ng" do
   uninstall launchctl: [
               "com.qiuyuzhou.shadowsocksX-NG.http",
               "com.qiuyuzhou.shadowsocksX-NG.kcptun",
-              "com.qiuyuzhou.shadowsocksX-NG.local",
               "com.qiuyuzhou.ShadowsocksX-NG.LaunchHelper",
+              "com.qiuyuzhou.shadowsocksX-NG.local",
             ],
             quit:      "com.qiuyuzhou.ShadowsocksX-NG",
             script:    {

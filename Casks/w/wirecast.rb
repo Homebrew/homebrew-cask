@@ -26,8 +26,8 @@ cask "wirecast" do
     "~/Library/Caches/net.telestream.wirecast/",
     "~/Library/HTTPStorages/net.telestream.wirecast",
     "~/Library/Logs/Wirecast",
-    "~/Library/Preferences/Wirecast",
     "~/Library/Preferences/net.telestream.wirecast.plist",
+    "~/Library/Preferences/Wirecast",
     "~/Library/Saved Applicate State/net.telestream.wirecast.savedState",
   ]
 end

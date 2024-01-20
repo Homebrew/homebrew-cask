@@ -23,9 +23,9 @@ cask "radio-silence" do
               must_succeed: false,
             },
             launchctl:    [
-              "com.radiosilenceapp.trial",
               "com.radiosilenceapp.agent",
               "com.radiosilenceapp.nke",
+              "com.radiosilenceapp.trial",
             ],
             quit:         "com.radiosilenceapp.client",
             kext:         "com.radiosilenceapp.nke.filter",

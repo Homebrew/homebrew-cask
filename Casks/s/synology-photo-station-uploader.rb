@@ -31,9 +31,9 @@ cask "synology-photo-station-uploader" do
             ]
 
   zap trash: [
-        "~/Library/Application Support/Synology/Photo Station Uploader",
         "~/Library/Application Scripts/com.synology.PhotoUploaderShellApp.PhotoUploaderFinderSync",
         "~/Library/Application Scripts/group.com.synology.PhotoUploader",
+        "~/Library/Application Support/Synology/Photo Station Uploader",
         "~/Library/Containers/com.synology.PhotoUploaderShellApp.PhotoUploaderFinderSync",
         "~/Library/Group Containers/group.com.synology.PhotoUploader",
         "~/Library/Saved Application State/com.synology.PhotoStationUploader.savedState",

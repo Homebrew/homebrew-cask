@@ -26,8 +26,8 @@ cask "superduper" do
     "~/Library/Application Support/SuperDuper!",
     "~/Library/Caches/com.blacey.SuperDuper",
     "~/Library/Preferences/com.blacey.SuperDuper.plist",
-    "~/Library/Preferences/com.paradigmasoft.vstudio.plist",
     "~/Library/Preferences/com.paradigmasoft.VStudio",
+    "~/Library/Preferences/com.paradigmasoft.vstudio.plist",
     "~/Library/Saved Application State/com.blacey.SuperDuper.savedState",
     "~/Library/Services/Run SuperDuper! Settings.workflow",
   ]

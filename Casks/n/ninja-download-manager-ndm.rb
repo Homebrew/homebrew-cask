@@ -17,8 +17,8 @@ cask "ninja-download-manager-ndm" do
   uninstall pkgutil: "com.knockoutsoft.pkg.ndm"
 
   zap trash: [
-    "~/Library/ndm",
     "~/Library/Caches/com.knockoutsoft.ndm",
+    "~/Library/ndm",
     "~/Library/Saved Application State/com.knockoutsoft.ndm.savedState",
   ]
 end

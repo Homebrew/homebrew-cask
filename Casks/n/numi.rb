@@ -21,14 +21,14 @@ cask "numi" do
             quit:      "com.dmitrynikolaev.numi"
 
   zap trash: [
-    "~/Library/Application Support/Numi",
+    "/Users/Shared/Numi",
     "~/Library/Application Support/com.dmitrynikolaev.numi",
     "~/Library/Application Support/CrashReporter/Numi_*.plist",
+    "~/Library/Application Support/Numi",
     "~/Library/Caches/com.crashlytics.data/com.dmitrynikolaev.numi",
     "~/Library/Caches/com.dmitrynikolaev.numi",
     "~/Library/Caches/io.fabric.sdk.mac.data/com.dmitrynikolaev.numi",
     "~/Library/Containers/com.dmitrynikolaev.numi.NumiExtension",
     "~/Library/Preferences/com.dmitrynikolaev.numi.plist",
-    "/Users/Shared/Numi",
   ]
 end

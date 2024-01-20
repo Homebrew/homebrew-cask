@@ -22,8 +22,8 @@ cask "quickbooks" do
   app "QuickBooks #{version.csv.second}.app"
 
   zap trash: [
-    "~/Library/Application Support/QuickBooks #{version.csv.second}",
     "~/Library/Application Support/com.intuit.QuickBooks#{version.csv.second}",
+    "~/Library/Application Support/QuickBooks #{version.csv.second}",
     "~/Library/Caches/com.intuit.QuickBooks#{version.csv.second}",
     "~/Library/HTTPStorages/com.intuit.QuickBooks#{version.csv.second}*",
     "~/Library/Logs/QuickBooks",

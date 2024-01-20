@@ -16,8 +16,8 @@ cask "wch-ch34x-usb-serial-driver" do
 
   uninstall quit:    "cn.wch.CH34xVCPDriver",
             kext:    [
-              "cn.wch.CH34xVCPDriver",
               "cn.wch.CH34xVCPControlDriver",
+              "cn.wch.CH34xVCPDriver",
             ],
             pkgutil: "cn.wch.pkg.CH34xVCPDriver"
 

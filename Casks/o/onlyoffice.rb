@@ -24,7 +24,7 @@ cask "onlyoffice" do
 
   zap trash: [
     "~/Library/Application Support/asc.onlyoffice.ONLYOFFICE",
-    "~/Library/Preferences/asc.onlyoffice.ONLYOFFICE.plist",
     "~/Library/Preferences/asc.onlyoffice.editors-helper-renderer.plist",
+    "~/Library/Preferences/asc.onlyoffice.ONLYOFFICE.plist",
   ]
 end

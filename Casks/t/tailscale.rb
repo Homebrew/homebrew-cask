@@ -32,14 +32,14 @@ cask "tailscale" do
             login_item: "Tailscale"
 
   zap trash: [
-    "~/Library/Tailscale",
     "~/Library/Application Scripts/*.io.tailscale.ipn.macsys",
-    "~/Library/Application Scripts/io.tailscale.ipn.macsys.share-extension",
     "~/Library/Application Scripts/io.tailscale.ipn.macsys",
+    "~/Library/Application Scripts/io.tailscale.ipn.macsys.share-extension",
     "~/Library/Containers/io.tailscale.ipn.macos.network-extension",
-    "~/Library/Containers/io.tailscale.ipn.macsys.share-extension",
     "~/Library/Containers/io.tailscale.ipn.macsys",
+    "~/Library/Containers/io.tailscale.ipn.macsys.share-extension",
     "~/Library/Containers/Tailscale",
     "~/Library/Group Containers/*.io.tailscale.ipn.macsys",
+    "~/Library/Tailscale",
   ]
 end

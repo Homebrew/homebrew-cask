@@ -29,14 +29,14 @@ cask "sublime-text" do
   # More info: https://www.sublimetext.com/docs/side_by_side.html
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.sublimetext.#{version[0]}.sfl*",
-    "~/Library/Application Support/Sublime Text",
     "~/Library/Application Support/Sublime Text (Safe Mode)",
     "~/Library/Application Support/Sublime Text 3",
+    "~/Library/Application Support/Sublime Text",
     "~/Library/Caches/com.sublimetext.#{version[0]}",
     "~/Library/Caches/com.sublimetext.3",
-    "~/Library/Caches/Sublime Text",
     "~/Library/Caches/Sublime Text (Safe Mode)",
     "~/Library/Caches/Sublime Text 3",
+    "~/Library/Caches/Sublime Text",
     "~/Library/HTTPStorages/com.sublimetext.#{version[0]}",
     "~/Library/HTTPStorages/com.sublimetext.3",
     "~/Library/Preferences/com.sublimetext.#{version[0]}.plist",

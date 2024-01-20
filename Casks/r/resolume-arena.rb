@@ -21,13 +21,13 @@ cask "resolume-arena" do
   uninstall launchctl: "com.resolume.arena",
             signal:    ["TERM", "com.resolume.arena"],
             pkgutil:   [
+              "com.resolume.pkg.ResolumeAlley",
               "com.resolume.pkg.ResolumeArena.*",
+              "com.resolume.pkg.ResolumeCommon",
               "com.resolume.pkg.ResolumeDXV",
               "com.resolume.pkg.ResolumeQuickLook",
-              "com.resolume.pkg.ResolumeAlley",
-              "com.resolume.pkg.ResolumeWireNodes",
-              "com.resolume.pkg.ResolumeCommon",
               "com.resolume.pkg.ResolumeWire",
+              "com.resolume.pkg.ResolumeWireNodes",
             ],
             delete:    "/Applications/Resolume Arena #{version.major}"
 

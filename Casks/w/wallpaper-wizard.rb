@@ -18,11 +18,11 @@ cask "wallpaper-wizard" do
   uninstall quit: "com.macpaw.WallWiz-site"
 
   zap trash: [
-    "~/Library/Preferences/com.macpaw.WallWiz-site.plist",
-    "~/Library/Application Support/Wallpaper Wizard",
     "~/Library/Application Support/com.macpaw.WallWiz-site",
+    "~/Library/Application Support/Wallpaper Wizard",
     "~/Library/Caches/com.macpaw.WallWiz-site",
     "~/Library/Cookies/com.macpaw.WallWiz-site.binarycookies",
     "~/Library/Logs/com.macpaw.WallWiz-site",
+    "~/Library/Preferences/com.macpaw.WallWiz-site.plist",
   ]
 end

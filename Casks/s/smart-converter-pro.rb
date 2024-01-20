@@ -17,7 +17,7 @@ cask "smart-converter-pro" do
   app "Smart Converter Pro #{version.major}.app"
 
   zap trash: [
-    "~/Library/Containers/com.shedworx.smartconverter",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.shedworx.smartconverter.sfl*",
+    "~/Library/Containers/com.shedworx.smartconverter",
   ]
 end

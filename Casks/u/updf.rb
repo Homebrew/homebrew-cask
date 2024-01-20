@@ -20,10 +20,10 @@ cask "updf" do
   zap trash: [
     "~/Library/Application Support/com.superace.updf.installer",
     "~/Library/Application Support/com.superace.updf.mac",
-    "~/Library/Caches/UPDF",
-    "~/Library/Caches/UPDF Installer",
     "~/Library/Caches/com.superace.updf.installer",
     "~/Library/Caches/com.superace.updf.mac",
+    "~/Library/Caches/UPDF Installer",
+    "~/Library/Caches/UPDF",
     "~/Library/HTTPStorages/com.superace.updf.installer",
     "~/Library/HTTPStorages/com.superace.updf.mac",
     "~/Library/HTTPStorages/com.superace.updf.mac.binarycookies",

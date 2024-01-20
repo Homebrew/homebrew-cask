@@ -20,8 +20,8 @@ cask "synology-surveillance-station-client" do
               "com.synology.svsclient-Live-View",
               "com.synology.svsclient-Monitor-Center",
               "com.synology.svsclient-Recording",
-              "com.synology.svsclient-Timeline",
               "com.synology.svsclient-SurveillanceStationClient",
+              "com.synology.svsclient-Timeline",
             ],
             delete:    "/Applications/Synology Surveillance Station Client.app"
 

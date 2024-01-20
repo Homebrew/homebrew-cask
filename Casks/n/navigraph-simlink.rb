@@ -20,8 +20,8 @@ cask "navigraph-simlink" do
   app "Navigraph Simlink.app"
 
   zap trash: [
+    "~/Library/Preferences/Navigraph.NavigraphSimlinkSettings.plist",
     "~/Library/Saved Application State/Navigraph.NavigraphSimlink.savedState",
     "~/Library/Saved Application State/Navigraph.NavigraphSimlinkSettings.savedState",
-    "~/Library/Preferences/Navigraph.NavigraphSimlinkSettings.plist",
   ]
 end

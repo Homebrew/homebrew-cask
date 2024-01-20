@@ -17,8 +17,8 @@ cask "protonmail-import-export" do
 
   zap trash: [
     "~/Library/Application Support/protonmail/importExport",
-    "~/Library/Caches/protonmail/importExport",
     "~/Library/Caches/ProtonMail Import-Export app",
+    "~/Library/Caches/protonmail/importExport",
     "~/Library/Preferences/com.protonmail.import-export.ProtonMail Import-Export app.plist",
   ]
 end

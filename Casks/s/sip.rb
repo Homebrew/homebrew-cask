@@ -40,9 +40,9 @@ cask "sip" do
 
   zap trash: [
     "~/.sip_v*",
-    "~/Library/Application Support/Sip",
-    "~/Library/Application Support/io.sipapp.Sip-paddle",
     "~/Library/Application Support/CrashReporter/Sip_*.plist",
+    "~/Library/Application Support/io.sipapp.Sip-paddle",
+    "~/Library/Application Support/Sip",
     "~/Library/Caches/io.sipapp.Sip-paddle",
     "~/Library/Cookies/io.sipapp.Sip-paddle.binarycookies",
     "~/Library/Preferences/io.sipapp.Sip-paddle.plist",

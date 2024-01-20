@@ -24,13 +24,13 @@ cask "wordpresscom" do
   uninstall quit: "com.automattic.wordpress"
 
   zap trash: [
-    "~/Library/Application Support/Wordpress.com",
     "~/Library/Application Support/Caches/wordpressdesktop-updater",
+    "~/Library/Application Support/Wordpress.com",
     "~/Library/Caches/com.automattic.wordpress",
     "~/Library/Caches/com.automattic.wordpress.ShipIt",
+    "~/Library/HTTPStorages/com.automattic.wordpress",
     "~/Library/Preferences/ByHost/com.automattic.wordpress.ShipIt.*.plist",
     "~/Library/Preferences/com.automattic.wordpress*.plist",
-    "~/Library/HTTPStorages/com.automattic.wordpress",
     "~/Library/Saved Application State/com.automattic.wordpress.savedState",
   ]
 end

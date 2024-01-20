@@ -18,8 +18,8 @@ cask "royal-tsx" do
   app "Royal TSX.app"
 
   zap trash: [
-    "~/Library/Application Support/Royal TSX",
     "~/Library/Application Support/com.lemonmojo.RoyalTSX.App",
+    "~/Library/Application Support/Royal TSX",
     "~/Library/Caches/com.lemonmojo.RoyalTSX.App",
     "~/Library/Preferences/com.lemonmojo.RoyalTSX.App.plist",
   ]

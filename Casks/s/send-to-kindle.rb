@@ -21,7 +21,7 @@ cask "send-to-kindle" do
 
   zap trash: [
     "~/Library/Application Support/Amazon/SendToKindle",
-    "~/Library/Preferences/com.amazon.SendToKindle.plist",
     "~/Library/Logs/SendToKindleInstall.log",
+    "~/Library/Preferences/com.amazon.SendToKindle.plist",
   ]
 end

@@ -36,10 +36,10 @@ cask "onedrive" do
             pkgutil:   "com.microsoft.OneDrive",
             delete:    [
               "/Applications/OneDrive.app",
-              "/Library/Logs/Microsoft/OneDrive",
               "/Library/LaunchAgents/com.microsoft.OneDriveStandaloneUpdater.plist",
               "/Library/LaunchDaemons/com.microsoft.OneDriveStandaloneUpdaterDaemon.plist",
               "/Library/LaunchDaemons/com.microsoft.OneDriveUpdaterDaemon.plist",
+              "/Library/Logs/Microsoft/OneDrive",
             ]
 
   zap trash: [

@@ -26,8 +26,8 @@ cask "plugdata" do
 
   zap trash: [
     "~/Library/Application Support/PlugData.settings",
-    "~/Library/Caches/PlugData",
     "~/Library/Caches/com.PlugData.PlugDataStandalone",
+    "~/Library/Caches/PlugData",
     "~/Library/HTTPStorages/com.PlugData.PlugDataStandalone",
     "~/Library/PlugData",
     "~/Library/Preferences/com.PlugData.PlugDataStandalone.plist",

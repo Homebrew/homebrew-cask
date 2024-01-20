@@ -29,8 +29,8 @@ cask "openrct2" do
   app "OpenRCT2.app"
 
   zap trash: [
-    "~/Library/Application Support/OpenRCT2",
     "~/Library/Application Support/CrashReporter/OpenRCT2*",
+    "~/Library/Application Support/OpenRCT2",
     "~/Library/Preferences/io.openrct2.OpenRCT2.plist",
     "~/Library/Preferences/website.openrct2.OpenRCT2.plist",
     "~/Library/Saved Application State/io.openrct2.OpenRCT2.savedState",

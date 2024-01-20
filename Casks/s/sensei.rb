@@ -29,8 +29,8 @@ cask "sensei" do
   zap trash: [
     "~/Library/Application Support/org.cindori.Sensei",
     "~/Library/Application Support/Sensei",
-    "~/Library/Caches/org.cindori.Sensei",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/org.cindori.Sensei",
+    "~/Library/Caches/org.cindori.Sensei",
     "~/Library/Cookies/org.cindori.Sensei.binarycookies",
     "~/Library/HTTPStorages/org.cindori.Sensei",
     "~/Library/HTTPStorages/org.cindori.Sensei.binarycookies",
