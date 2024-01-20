@@ -17,8 +17,8 @@ cask "kitematic" do
     "~/Library/Application Support/Kitematic",
     "~/Library/Caches/Kitematic",
     "~/Library/Logs/Kitematic",
-    "~/Library/Preferences/com.electron.kitematic.plist",
     "~/Library/Preferences/com.electron.kitematic.helper.plist",
+    "~/Library/Preferences/com.electron.kitematic.plist",
     "~/Library/Saved Application State/com.electron.kitematic.savedState",
   ]
 end
