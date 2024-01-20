@@ -23,9 +23,9 @@ cask "dropbox-capture" do
 
   zap trash: [
     "~/Library/Application Support/Dropbox-Capture",
-    "~/Library/Caches/Dropbox-Capture",
     "~/Library/Caches/com.electron.dropbox-capture",
     "~/Library/Caches/com.electron.dropbox-capture.ShipIt",
+    "~/Library/Caches/Dropbox-Capture",
     "~/Library/Logs/Dropbox-Capture",
     "~/Library/Preferences/com.electron.dropbox-capture.plist",
   ]
