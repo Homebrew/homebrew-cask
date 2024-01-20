@@ -240,6 +240,7 @@ cask "firefox" do
   uninstall quit: "org.mozilla.firefox"
 
   zap trash: [
+        "/Library/Logs/DiagnosticReports/firefox_*",
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.mozilla.firefox.sfl*",
         "~/Library/Application Support/CrashReporter/firefox_*",
         "~/Library/Application Support/Firefox",
@@ -251,7 +252,6 @@ cask "firefox" do
         "~/Library/Preferences/org.mozilla.firefox.plist",
         "~/Library/Saved Application State/org.mozilla.firefox.savedState",
         "~/Library/WebKit/org.mozilla.firefox",
-        "/Library/Logs/DiagnosticReports/firefox_*",
       ],
       rmdir: [
         "~/Library/Application Support/Mozilla", #  May also contain non-Firefox data
