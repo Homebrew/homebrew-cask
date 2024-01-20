@@ -13,7 +13,7 @@ cask "cilicon" do
   app "Cilicon.app"
 
   zap trash: [
-    "~/cilicon.yml",
     "~/.cilicon.yml",
+    "~/cilicon.yml",
   ]
 end
