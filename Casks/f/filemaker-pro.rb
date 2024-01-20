@@ -20,8 +20,8 @@ cask "filemaker-pro" do
   zap trash: [
     "/Users/Shared/FileMaker",
     "~/Library/Application Support/FileMaker",
-    "~/Library/Caches/FileMaker",
     "~/Library/Caches/com.filemaker.client.pro12",
+    "~/Library/Caches/FileMaker",
     "~/Library/HTTPStorages/com.filemaker.client.pro12",
     "~/Library/Preferences/com.filemaker.client.pro12.plist",
     "~/Library/Saved Application State/com.filemaker.client.pro12.savedState",
