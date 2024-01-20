@@ -23,13 +23,13 @@ cask "microsoft-remote-desktop" do
               "com.microsoft.update.agent",
             ],
             quit:      [
-              "com.microsoft.autoupdate2",
               "com.microsoft.autoupdate.fba",
+              "com.microsoft.autoupdate2",
               "com.microsoft.errorreporting",
             ],
             pkgutil:   [
-              "com.microsoft.rdc.macos",
               "com.microsoft.package.Microsoft_AutoUpdate.app",
+              "com.microsoft.rdc.macos",
             ]
 
   zap trash: [
