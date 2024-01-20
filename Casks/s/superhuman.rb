@@ -22,10 +22,10 @@ cask "superhuman" do
 
   zap trash: [
     "~/Library/Application Support/Superhuman",
-    "~/Library/Caches/Superhuman",
     "~/Library/Caches/com.superhuman.electron",
-    "~/Library/Caches/com.superhuman.electron.ShipIt",
     "~/Library/Caches/com.superhuman.electron.helper",
+    "~/Library/Caches/com.superhuman.electron.ShipIt",
+    "~/Library/Caches/Superhuman",
     "~/Library/Logs/Superhuman",
     "~/Library/Preferences/com.superhuman.electron.helper.plist",
     "~/Library/Preferences/com.superhuman.electron.plist",
