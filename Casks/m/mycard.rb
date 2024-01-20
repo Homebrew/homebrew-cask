@@ -18,8 +18,8 @@ cask "mycard" do
   zap trash: [
     "~/Library/Application Support/mycard",
     "~/Library/Application Support/MyCardLibrary",
-    "~/Library/Preferences/com.mycard.mycard.plist",
     "~/Library/Logs/MyCard",
+    "~/Library/Preferences/com.mycard.mycard.plist",
     "~/Library/Saved Application State/com.mycard.mycard.savedState",
   ]
 end
