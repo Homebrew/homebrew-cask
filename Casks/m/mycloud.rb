@@ -23,7 +23,7 @@ cask "mycloud" do
 
   zap trash: [
     "~/Library/Application Support/myCloudDesktop",
-    "~/Library/Preferences/ch.swisscom.mycloud.desktop.plist",
     "~/Library/Preferences/ch.swisscom.mycloud.desktop.helper.plist",
+    "~/Library/Preferences/ch.swisscom.mycloud.desktop.plist",
   ]
 end
