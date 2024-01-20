@@ -18,8 +18,8 @@ cask "psi" do
   uninstall quit: "org.psi-im"
 
   zap trash: [
-    "~/Library/Saved Application State/org.psi-im.savedState",
-    "~/Library/Caches/Psi",
     "~/Library/Application Support/Psi",
+    "~/Library/Caches/Psi",
+    "~/Library/Saved Application State/org.psi-im.savedState",
   ]
 end
