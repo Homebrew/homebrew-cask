@@ -21,7 +21,7 @@ cask "microsoft-openjdk" do
   uninstall pkgutil: "com.microsoft.#{version.major}.jdk"
 
   zap trash: [
-    "~/Library/Saved Application State/net.java.openjdk.java.savedState",
     "~/Library/Preferences/net.java.openjdk.java.plist",
+    "~/Library/Saved Application State/net.java.openjdk.java.savedState",
   ]
 end
