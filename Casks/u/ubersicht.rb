@@ -21,8 +21,8 @@ cask "ubersicht" do
             login_item: "Übersicht"
 
   zap trash: [
-    "~/Library/Application Support/Übersicht",
     "~/Library/Application Support/tracesOf.Uebersicht",
+    "~/Library/Application Support/Übersicht",
     "~/Library/Caches/tracesOf.Uebersicht",
     "~/Library/Preferences/tracesOf.Uebersicht.plist",
     "~/Library/WebKit/tracesOf.Uebersicht",
