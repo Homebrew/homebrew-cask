@@ -22,8 +22,8 @@ cask "iina" do
 
   zap trash: [
     "~/Library/Application Scripts/com.colliderli.iina.OpenInIINA",
-    "~/Library/Application Support/com.colliderli.iina",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.colliderli.iina.sfl*",
+    "~/Library/Application Support/com.colliderli.iina",
     "~/Library/Application Support/CrashReporter/IINA*.plist",
     "~/Library/Caches/com.colliderli.iina",
     "~/Library/Containers/com.colliderli.iina.OpenInIINA",
