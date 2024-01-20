@@ -18,8 +18,8 @@ cask "serviio" do
             pkgutil:   [
               "org.serviio.pkg.autostart",
               "org.serviio.pkg.JRE",
-              "org.serviio.pkg.ServiioConsole",
               "org.serviio.pkg.Serviio",
+              "org.serviio.pkg.ServiioConsole",
             ]
 
   zap trash: [
