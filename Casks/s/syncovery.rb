@@ -22,8 +22,8 @@ cask "syncovery" do
   zap trash: [
     "~/Library/Application Support/Syncovery",
     "~/Library/Logs/Syncovery",
-    "~/Library/Preferences/Syncovery.ini",
     "~/Library/Preferences/Syncovery",
+    "~/Library/Preferences/Syncovery.ini",
     "~/Saved Application State/com.company.Syncovery.savedState",
   ]
 end
