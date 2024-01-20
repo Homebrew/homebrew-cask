@@ -15,8 +15,8 @@ cask "league-displays" do
   app "LeagueDisplays.app"
 
   zap trash: [
-    "~/Library/Logs/LeagueDisplays-Configurator.log",
     "~/Library/Application Support/LolScreenSaver",
+    "~/Library/Logs/LeagueDisplays-Configurator.log",
     "~/Library/Screen Savers/League.saver",
   ]
 end
