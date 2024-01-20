@@ -26,7 +26,7 @@ cask "aldente" do
     "~/Library/Application Support/AlDente",
     "~/Library/Caches/com.apphousekitchen.aldente-pro",
     "~/Library/HTTPStorages/com.apphousekitchen.aldente-pro.binarycookies",
-    "~/Library/Preferences/com.apphousekitchen.aldente-pro_backup.plist",
     "~/Library/Preferences/com.apphousekitchen.aldente-pro.plist",
+    "~/Library/Preferences/com.apphousekitchen.aldente-pro_backup.plist",
   ]
 end
