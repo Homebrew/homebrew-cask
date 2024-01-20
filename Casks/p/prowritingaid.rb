@@ -14,8 +14,8 @@ cask "prowritingaid" do
   app "ProWritingAid.app"
 
   zap trash: [
-    "~/Library/Application Support/ProWritingAid",
     "~/Library/Application Support/ProWritingAid Desktop",
+    "~/Library/Application Support/ProWritingAid",
     "~/Library/Preferences/com.orpheus.prowritingaid.mac.plist",
     "~/Library/Saved Application State/com.orpheus.prowritingaid.mac.savedState",
   ]
