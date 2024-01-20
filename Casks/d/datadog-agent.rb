@@ -24,9 +24,9 @@ cask "datadog-agent" do
             ]
 
   zap trash: [
+    "/opt/datadog-agent",
     "~/.datadog-agent",
     "~/Library/LaunchAgents/com.datadoghq.agent.plist",
-    "/opt/datadog-agent",
   ]
 
   caveats <<~EOS
