@@ -20,9 +20,9 @@ cask "istat-menus" do
   uninstall launchctl: [
               "com.bjango.istatmenus.agent",
               "com.bjango.istatmenus.daemon",
-              "com.bjango.istatmenusnotifications",
-              "com.bjango.istatmenus.status",
               "com.bjango.istatmenus.installerhelper",
+              "com.bjango.istatmenus.status",
+              "com.bjango.istatmenusnotifications",
             ],
             signal:    [
               ["TERM", "com.bjango.iStat-Menus-Notifications"],
@@ -39,20 +39,20 @@ cask "istat-menus" do
             ]
 
   zap trash: [
-    "~/Library/Application Support/iStat Menus",
+    "/Users/Shared/.iStatMenus",
     "~/Library/Application Scripts/com.bjango.istatmenus.iStat-Menus-Widget",
-    "~/Library/Caches/com.bjango.istatmenus",
-    "~/Library/Caches/com.bjango.istatmenus.status",
-    "~/Library/Caches/com.bjango.istatmenus.agent",
+    "~/Library/Application Support/iStat Menus",
     "~/Library/Caches/com.bjango.iStat-Menus-Updater",
+    "~/Library/Caches/com.bjango.istatmenus",
+    "~/Library/Caches/com.bjango.istatmenus.agent",
+    "~/Library/Caches/com.bjango.istatmenus.status",
     "~/Library/Caches/com.bjango.iStatMenusAgent",
     "~/Library/Caches/iStat Menus",
     "~/Library/Containers/com.bjango.istatmenus.iStat-Menus-Widget",
     "~/Library/Cookies/com.bjango.istatmenus.binarycookies",
     "~/Library/Logs/iStat Menus",
-    "~/Library/Preferences/com.bjango.istatmenus.plist",
     "~/Library/Preferences/com.bjango.istatmenus#{version.major}.extras.plist",
+    "~/Library/Preferences/com.bjango.istatmenus.plist",
     "~/Library/Preferences/com.bjango.istatmenus.status.plist",
-    "/Users/Shared/.iStatMenus",
   ]
 end
