@@ -18,8 +18,8 @@ cask "ente" do
   zap trash: [
     "~/Library/Application Support/ente",
     "~/Library/Logs/ente",
-    "~/Library/Preferences/io.ente.bhari-frame.plist",
     "~/Library/Preferences/io.ente.bhari-frame.helper.plist",
+    "~/Library/Preferences/io.ente.bhari-frame.plist",
     "~/Library/Saved Application State/io.ente.bhari-frame.savedState",
   ]
 end
