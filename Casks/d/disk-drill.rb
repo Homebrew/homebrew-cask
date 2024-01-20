@@ -31,7 +31,7 @@ cask "disk-drill" do
     "~/Library/Logs/DiskDrill.log",
     "~/Library/Preferences/com.cleverfiles.activator.xml",
     "~/Library/Preferences/com.cleverfiles.Disk_Drill.plist",
-    "~/Library/Preferences/com.cleverfiles.DiskDrill.plist",
     "~/Library/Preferences/com.cleverfiles.DiskDrill-setapp.plist",
+    "~/Library/Preferences/com.cleverfiles.DiskDrill.plist",
   ]
 end
