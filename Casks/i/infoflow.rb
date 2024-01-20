@@ -20,9 +20,9 @@ cask "infoflow" do
 
   zap trash: [
     "~/Library/Caches/com.baidu.hi.mac",
-    "~/Library/WebKit/com.baidu.hi.mac",
     "~/Library/HTTPStorages/com.baidu.hi.mac",
     "~/Library/Preferences/com.baidu.hi.mac.plist",
     "~/Library/Saved Application State/com.baidu.hi.mac.savedState",
+    "~/Library/WebKit/com.baidu.hi.mac",
   ]
 end
