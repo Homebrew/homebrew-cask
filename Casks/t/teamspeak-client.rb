@@ -33,8 +33,8 @@ cask "teamspeak-client" do
   app "TeamSpeak #{version.major} Client.app"
 
   zap trash: [
-    "~/Library/Application Support/TeamSpeak #{version.major}",
     "~/Library/Application Support/CrashReporter/ts#{version.major}client_*.plist",
+    "~/Library/Application Support/TeamSpeak #{version.major}",
     "~/Library/Preferences/com.teamspeak.TeamSpeak#{version.major}.plist*",
     "~/Library/Saved Application State/com.teamspeak.TeamSpeak#{version.major}.savedState",
   ]
