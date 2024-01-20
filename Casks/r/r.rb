@@ -91,8 +91,8 @@ cask "r" do
         "~/.RData",
         "~/.Rhistory",
         "~/.Rprofile",
-        "~/Library/R",
         "~/Library/Caches/org.R-project.R",
+        "~/Library/R",
       ]
 
   caveats do
