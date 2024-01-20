@@ -32,8 +32,8 @@ cask "charles" do
 
   zap trash: [
     "~/Library/Application Support/Charles",
-    "~/Library/Preferences/com.xk72.Charles.plist",
     "~/Library/Preferences/com.xk72.charles.config",
+    "~/Library/Preferences/com.xk72.Charles.plist",
     "~/Library/Saved Application State/com.xk72.Charles.savedState",
   ]
 end
