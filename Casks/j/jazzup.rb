@@ -15,7 +15,7 @@ cask "jazzup" do
   app "JazzUp.app"
 
   zap trash: [
-    "~/Library/Preferences/com.irradiatedsoftware.JazzUp.plist",
     "~/Library/Caches/com.irradiatedsoftware.JazzUp",
+    "~/Library/Preferences/com.irradiatedsoftware.JazzUp.plist",
   ]
 end
