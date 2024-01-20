@@ -19,8 +19,8 @@ cask "sony-ps-remote-play" do
   uninstall pkgutil: "com.playstation.RemotePlay.pkg"
 
   zap trash: [
-    "~/Library/Application Support/Sony Corporation/PS4 Remote Play",
     "~/Library/Application Support/Sony Corporation/PS Remote Play",
+    "~/Library/Application Support/Sony Corporation/PS4 Remote Play",
     "~/Library/Caches/com.playstation.RemotePlay",
     "~/Library/Cookies/com.playstation.RemotePlay.binarycookies",
     "~/Library/HTTPStorages/com.playstation.RemotePlay.binarycookies",
