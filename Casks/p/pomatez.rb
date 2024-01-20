@@ -21,8 +21,8 @@ cask "pomatez" do
   uninstall signal: ["KILL", "application.com.roldanjr.pomatez"]
 
   zap trash: [
-    "~/Library/Application Support/pomatez",
     "~/Library/Application Support/CrashReporter/Pomatez_*.plist",
+    "~/Library/Application Support/pomatez",
     "~/Library/Logs/pomatez",
     "~/Library/Preferences/com.roldanjr.pomatez.plist",
     "~/Library/Saved Application State/com.roldanjr.pomatez.savedState",
