@@ -17,8 +17,8 @@ cask "ultdata" do
   app "UltData.app"
 
   zap trash: [
-    "~/Library/Application Support/UltData",
     "~/Library/Application Support/com.tenorshare.TenorshareUltData",
+    "~/Library/Application Support/UltData",
     "~/Library/Caches/com.tenorshare.TenorshareUltData",
     "~/Library/Preferences/com.tenorshare.TenorshareUltData.plist",
     "~/Library/Saved Application State/com.tenorshare.TenorshareUltData.savedState",
