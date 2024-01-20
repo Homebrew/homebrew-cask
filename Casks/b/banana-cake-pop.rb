@@ -21,10 +21,10 @@ cask "banana-cake-pop" do
   app "Banana Cake Pop.app"
 
   zap trash: [
-    "~/Library/Application Support/bananacakepop",
     "~/Library/Application Support/@banana-cake-pop",
-    "~/Library/Caches/com.chillicream.bananacakepop.ShipIt",
+    "~/Library/Application Support/bananacakepop",
     "~/Library/Caches/com.chillicream.bananacakepop",
+    "~/Library/Caches/com.chillicream.bananacakepop.ShipIt",
     "~/Library/Preferences/ByHost/com.chillicream.bananacakepop.ShipIt.*.plist",
     "~/Library/Preferences/com.chillicream.bananacakepop.plist",
     "~/Library/Saved Application State/com.chillicream.bananacakepop.savedState",
