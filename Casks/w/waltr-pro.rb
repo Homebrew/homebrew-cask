@@ -17,11 +17,11 @@ cask "waltr-pro" do
   app "WALTR PRO.app"
 
   zap trash: [
+    "/Users/Shared/WALTR PRO",
     "~/Library/Application Support/WALTR PRO",
     "~/Library/Caches/com.softorino.waltrpro",
     "~/Library/Logs/WALTR PRO",
     "~/Library/Preferences/com.softorino.waltrpro.plist",
     "~/Library/Saved Application State/com.softorino.waltrpro.savedState",
-    "/Users/Shared/WALTR PRO",
   ]
 end
