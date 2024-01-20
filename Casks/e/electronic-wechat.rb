@@ -16,8 +16,8 @@ cask "electronic-wechat" do
     "~/Library/Application Support/electronic-wechat",
     "~/Library/Application Support/electronic-wechat/Local Storage/https_web.wechat.com_0.localstorage",
     "~/Library/Application Support/electronic-wechat/Local Storage/https_web.wechat.com_0.localstorage-journal",
-    "~/Library/Saved Application State/com.electron.electronic-wechat.savedState",
-    "~/Library/Preferences/com.electron.electronic-wechat.plist",
     "~/Library/Preferences/com.electron.electronic-wechat.helper.plist",
+    "~/Library/Preferences/com.electron.electronic-wechat.plist",
+    "~/Library/Saved Application State/com.electron.electronic-wechat.savedState",
   ]
 end
