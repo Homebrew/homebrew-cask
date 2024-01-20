@@ -23,9 +23,7 @@ cask "salt" do
               "com.saltstack.salt.minion",
               "com.saltstack.salt.syndic",
             ],
-            pkgutil:   [
-              "com.saltstack.salt",
-            ]
+            pkgutil:   "com.saltstack.salt"
 
   zap trash: "/etc/salt"
 
