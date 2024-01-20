@@ -22,7 +22,7 @@ cask "letter-opener" do
               "app.letteropener.softwareupdate.agent",
             ],
             pkgutil:   [
-              "pkg.app.letteropener.*",
               "com.restoroot.Letter-Opener",
+              "pkg.app.letteropener.*",
             ]
 end
