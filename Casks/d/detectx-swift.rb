@@ -19,8 +19,8 @@ cask "detectx-swift" do
   app "DetectX Swift.app"
 
   zap trash: [
-    "~/Library/Application Support/DetectX Swift",
     "~/Library/Application Support/com.sqwarq.DetectX-Swift",
+    "~/Library/Application Support/DetectX Swift",
     "~/Library/Caches/com.sqwarq.DetectX-Swift",
     "~/Library/LaunchAgents/com.sqwarq.DetectX-Swift.observer.plist",
     "~/Library/Preferences/com.sqwarq.DetectX-Swift.plist",
