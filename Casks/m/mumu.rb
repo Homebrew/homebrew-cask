@@ -21,8 +21,8 @@ cask "mumu" do
   app "Mumu.app"
 
   zap trash: [
-    "~/Library/Application Support/Mumu",
     "~/Library/Application Support/com.wilbertliu.mumu",
+    "~/Library/Application Support/Mumu",
     "~/Library/Caches/com.wilbertliu.mumu",
     "~/Library/Cookies/com.wilbertliu.mumu.binarycookies",
     "~/Library/Preferences/com.wilbertliu.mumu.plist",
