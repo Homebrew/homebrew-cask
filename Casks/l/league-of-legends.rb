@@ -18,6 +18,8 @@ cask "league-of-legends" do
   uninstall delete: "/Applications/League of Legends.app"
 
   zap trash: [
+        "/Users/Shared/Riot Games/Metadata/league_of_legends.live",
+        "/Users/Shared/Riot Games/Metadata/league_of_legends.live.game_patch",
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.riotgames.maccontainer.sfl*",
         "~/Library/Application Support/Riot Games/Install League of Legends",
         "~/Library/Application Support/Riot Games/League of Legends",
@@ -26,8 +28,6 @@ cask "league-of-legends" do
         "~/Library/Preferences/com.riotgames.LeagueofLegends.LeagueClientUxHelper.plist",
         "~/Library/Saved Application State/com.riotgames.LeagueofLegends.GameClient.savedState",
         "~/Library/Saved Application State/com.riotgames.LeagueofLegends.LeagueClientUx.savedState",
-        "/Users/Shared/Riot Games/Metadata/league_of_legends.live.game_patch",
-        "/Users/Shared/Riot Games/Metadata/league_of_legends.live",
       ],
       rmdir: [
         "~/Documents/League of Legends",
