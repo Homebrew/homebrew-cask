@@ -17,11 +17,11 @@ cask "clicker-for-youtube" do
   app "Clicker for YouTube.app"
 
   zap trash: [
+    "/Users/Shared/com.dbklabs.clicker-for-youtube.ipak",
     "~/Library/Application Scripts/com.dbklabs.clicker-for-youtube.Open-in-Clicker-for-YouTube",
     "~/Library/Caches/com.dbklabs.clicker-for-youtube",
     "~/Library/Containers/com.dbklabs.clicker-for-youtube.Open-in-Clicker-for-YouTube",
     "~/Library/Preferences/com.dbklabs.clicker-for-youtube.plist",
     "~/Library/WebKit/com.dbklabs.clicker-for-youtube",
-    "/Users/Shared/com.dbklabs.clicker-for-youtube.ipak",
   ]
 end
