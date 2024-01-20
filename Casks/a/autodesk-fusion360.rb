@@ -14,8 +14,8 @@ cask "autodesk-fusion360" do
   }
 
   uninstall quit:   [
-              "com.autodesk.fusion360",
               "com.autodesk.dls.streamer.scriptapp.Autodesk-Fusion-360",
+              "com.autodesk.fusion360",
             ],
             script: {
               executable: "#{staged_path}/Install Autodesk Fusion 360.app/Contents/MacOS/streamer",
@@ -27,8 +27,8 @@ cask "autodesk-fusion360" do
               ],
             },
             delete: [
-              "~/Applications/Autodesk Fusion 360.app",
               "~/Applications/Autodesk Fusion 360 Service Utility.app",
+              "~/Applications/Autodesk Fusion 360.app",
               "~/Applications/Remove Autodesk Fusion 360.app",
             ]
 
