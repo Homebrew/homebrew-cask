@@ -17,8 +17,8 @@ cask "memory-clean-3" do
 
   uninstall quit: [
     "com.fiplab.flcore",
-    "com.fiplab.memoryclean3",
     "com.fiplab.mc3loginhelper",
+    "com.fiplab.memoryclean3",
   ]
 
   zap trash: [
