@@ -15,8 +15,8 @@ cask "valley" do
   app "Valley.app"
 
   zap trash: [
-    "~/Library/Application Support/Valley",
     "~/Library/Application Support/file__0.localstorage",
+    "~/Library/Application Support/Valley",
     "~/Library/Saved Application State/com.Unigine.Valley.savedState",
   ]
 end
