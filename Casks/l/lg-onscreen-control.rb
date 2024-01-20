@@ -33,9 +33,9 @@ cask "lg-onscreen-control" do
             pkgutil:    [
               "com.lge.onscreenControl.*",
               "com.lge.OnscreenControl.*",
+              "com.OSC.Fonts.pkg",
               "com.OSC_Directory.pkg",
               "com.OSC_Library.pkg",
-              "com.OSC.Fonts.pkg",
               "com.OSCApp.pkg",
               "com.OSCMultiMonitor.pkg",
               "com.uninstall.pkg",
