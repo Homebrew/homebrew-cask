@@ -1,11 +1,14 @@
 cask "tastytrade" do
-  arch arm: "-aarch64"
+  version "2.8.0"
+  
+  if Hardware::CPU.intel?
+    sha256 "98ace9292f65022780328fb3a61c98c6542e62046390770d16b8942a9b9e6be8"
+    url "https://download.tastytrade.com/desktop-#{version.major}.x.x/#{version}/tastytrade-#{version}.dmg"
+  else
+    sha256 "62532bc7b23a439e501c0eff1c3bab216adcbc5c64c05539d06fcdf5d1705088"
+    url "https://download.tastytrade.com/desktop-#{version.major}.x.x/#{version}/tastytrade-#{version}-aarch64.dmg"
+  end
 
-  version "2.5.4"
-  sha256 arm:   "51f21ecd02cd7b0acf13d80f712e87a2a163d79a8b1721cebc78559deb1615fe",
-         intel: "da585b646afba35104957cbfb433c4b27cc9f1ee6fd69f3a045397c3a27d5c7f"
-
-  url "https://download.tastytrade.com/desktop-#{version.major}.x.x/#{version}/tastytrade-#{version}#{arch}.dmg"
   name "tastytrade"
   desc "Desktop trading platform"
   homepage "https://tastytrade.com/technology/"
