@@ -58,8 +58,8 @@ cask "google-cloud-sdk" do
   uninstall delete: staged_path.dirname/"latest"
 
   zap trash: [
-    google_cloud_sdk_root,
     "#{google_cloud_sdk_root}.staging",
+    google_cloud_sdk_root,
   ]
 
   caveats <<~EOS
