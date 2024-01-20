@@ -18,9 +18,9 @@ cask "font-finagler" do
   binary "#{appdir}/Font Finagler.app/Contents/MacOS/finagler"
 
   zap trash: [
+    "~/Library/Caches/com.markdouma.FontFinagler",
     "~/Library/HTTPStorages/com.markdouma.FontFinagler",
     "~/Library/HTTPStorages/com.markdouma.FontFinagler.binarycookies",
     "~/Library/Preferences/com.markdouma.FontFinagler.plist",
-    "~/Library/Caches/com.markdouma.FontFinagler",
   ]
 end
