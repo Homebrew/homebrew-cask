@@ -17,8 +17,8 @@ cask "menumeters" do
 
   zap trash: [
     "~/Library/Caches/com.yujitach.MenuMeters",
-    "~/Library/PreferencesPanes/MenuMeters.prefPane",
     "~/Library/Preferences/com.ragingmenace.MenuMeters.plist",
     "~/Library/Preferences/com.yujitach.MenuMeters.plist",
+    "~/Library/PreferencesPanes/MenuMeters.prefPane",
   ]
 end
