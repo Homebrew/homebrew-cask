@@ -18,9 +18,9 @@ cask "steelseries-engine" do
 
   uninstall launchctl: "com.steelseries.SSENext",
             quit:      [
-              "com.steelseries.SteelSeries-Engine-#{version.major}",
               "com.steelseries.ssenext.client.*",
               "com.steelseries.ssenext.uninstaller",
+              "com.steelseries.SteelSeries-Engine-#{version.major}",
             ],
             kext:      "com.steelseries.ssenext.driver",
             script:    [
@@ -34,9 +34,9 @@ cask "steelseries-engine" do
     "~/Library/Application Support/steelseries-engine-#{version.major}-client",
     "~/Library/Caches/com.steelseries.SteelSeries-Engine-#{version.major}",
     "~/Library/Logs/SteelSeries Engine #{version.major} Client",
-    "~/Library/Preferences/com.steelseries.SteelSeries-Engine-#{version.major}.plist",
     "~/Library/Preferences/com.steelseries.ssenext.client.helper.plist",
     "~/Library/Preferences/com.steelseries.ssenext.client.plist",
+    "~/Library/Preferences/com.steelseries.SteelSeries-Engine-#{version.major}.plist",
     "~/Library/Saved Application State/com.steelseries.ssenext.client.savedState",
   ]
 end
