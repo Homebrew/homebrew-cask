@@ -25,7 +25,7 @@ cask "overdrive-media-console" do
   uninstall pkgutil: "com.overdrive.overdriveMediaConsole.*"
 
   zap trash: [
-    "~/Library/Preferences/com.overdrive.overdrivemediaconsole.plist",
     "~/Library/Caches/com.overdrive.overdrivemediaconsole",
+    "~/Library/Preferences/com.overdrive.overdrivemediaconsole.plist",
   ]
 end
