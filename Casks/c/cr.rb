@@ -18,8 +18,8 @@ cask "cr" do
   app "cr#{version.major}.app"
 
   zap trash: [
+    "/Applications/cr#{version.major}.ini",
     "~/.cr#{version.major}",
     "~/Library/Saved Application State/org.coolreader.cr#{version.major}.savedState",
-    "/Applications/cr#{version.major}.ini",
   ]
 end
