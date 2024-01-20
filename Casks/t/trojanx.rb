@@ -14,8 +14,8 @@ cask "trojanx" do
   uninstall delete: "/Library/Application Support/TrojanX"
 
   zap trash: [
+    "~/.TrojanX",
     "~/Library/Application Support/TrojanX",
     "~/Library/Preferences/TrojanX.plist",
-    "~/.TrojanX",
   ]
 end
