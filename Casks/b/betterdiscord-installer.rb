@@ -13,8 +13,8 @@ cask "betterdiscord-installer" do
   app "BetterDiscord.app"
 
   zap trash: [
-    "~/Library/Application Support/BetterDiscord",
     "~/Library/Application Support/BetterDiscord Installer",
+    "~/Library/Application Support/BetterDiscord",
     "~/Library/Preferences/app.betterdiscord.installer.plist",
     "~/Library/Saved Application State/app.betterdiscord.installer.savedState",
   ]
