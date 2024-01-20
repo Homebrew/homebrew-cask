@@ -15,8 +15,8 @@ cask "polypane" do
 
   zap trash: [
     "~/Library/Application Support/Polypane",
-    "~/Library/Caches/com.firstversionist.polypane.ShipIt",
     "~/Library/Caches/com.firstversionist.polypane",
+    "~/Library/Caches/com.firstversionist.polypane.ShipIt",
     "~/Library/Logs/Polypane",
     "~/Library/Preferences/com.firstversionist.polypane.plist",
     "~/Library/Saved Application State/com.firstversionist.polypane.savedState",
