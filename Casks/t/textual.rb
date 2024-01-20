@@ -19,7 +19,7 @@ cask "textual" do
   app "Textual.app"
 
   zap trash: [
-    "~/Library/Preferences/com.codeux.apps.textual.plist",
     "~/Library/Application Support/Textual",
+    "~/Library/Preferences/com.codeux.apps.textual.plist",
   ]
 end
