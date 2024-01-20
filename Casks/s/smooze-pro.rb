@@ -20,8 +20,8 @@ cask "smooze-pro" do
   uninstall quit: "co.smoozepro.macos"
 
   zap trash: [
-    "~/Library/Application Support/Smooze Pro",
     "~/Library/Application Support/co.smoozepro.macos",
+    "~/Library/Application Support/Smooze Pro",
     "~/Library/Caches/co.smoozepro.macos",
     "~/Library/HTTPStorages/co.smoozepro.macos",
     "~/Library/HTTPStorages/co.smoozepro.macos.binarycookies",
