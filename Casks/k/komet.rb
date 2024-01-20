@@ -18,7 +18,7 @@ cask "komet" do
   app "Komet.app"
 
   zap trash: [
-    "~/Library/Preferences/org.zgcoder.Komet.plist",
     "~/Library/Caches/org.zgcoder.Komet",
+    "~/Library/Preferences/org.zgcoder.Komet.plist",
   ]
 end
