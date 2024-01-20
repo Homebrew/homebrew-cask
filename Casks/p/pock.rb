@@ -18,8 +18,8 @@ cask "pock" do
 
   zap trash: [
     "~/Library/Application Scripts/com.pigigaldi.pock.QLPockWidget",
-    "~/Library/Application Support/Pock",
     "~/Library/Application Support/com.pigigaldi.pock",
+    "~/Library/Application Support/Pock",
     "~/Library/Caches/com.pigigaldi.pock",
     "~/Library/Containers/com.pigigaldi.pock.QLPockWidget",
     "~/Library/Preferences/com.pigigaldi.pock.plist",
