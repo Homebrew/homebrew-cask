@@ -21,8 +21,8 @@ cask "fsmonitor" do
 
   zap trash: [
     "/Users/Shared/FSMonitor",
-    "~/Library/Application Support/FSMonitor",
     "~/Library/Application Support/com.tristan.FSMonitor",
+    "~/Library/Application Support/FSMonitor",
     "~/Library/Caches/com.tristan.FSMonitor",
     "~/Library/Preferences/com.tristan.FSMonitor.plist",
     "~/Library/Saved Application State/com.tristan.FSMonitor.savedState",
