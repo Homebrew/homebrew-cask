@@ -17,14 +17,14 @@ cask "eobcanka" do
   pkg "eObcanka.pkg"
 
   uninstall quit:    [
-              "cz.monetplus.eOP.Eop2v1CzeTokenApp",
-              "cz.monetplus.eOP.EopCzeTokenApp",
               "com.monetplus.cardmanager",
               "cz.monetplus.eOb--anka-Identifikace",
+              "cz.monetplus.eOP.Eop2v1CzeTokenApp",
+              "cz.monetplus.eOP.EopCzeTokenApp",
             ],
             pkgutil: [
-              "com.Monet.pkg.CryptoPlusEOPCTK",
               "com.Monet.pkg.CryptoPlusEOP",
+              "com.Monet.pkg.CryptoPlusEOPCTK",
             ]
 
   zap trash: [
