@@ -16,8 +16,8 @@ cask "gitpigeon" do
   app "GitPigeon.app"
 
   zap trash: [
-    "~/Library/Application Support/zettlr",
     "~/Library/Application Support/com.zbudniewek.GitPigeon",
+    "~/Library/Application Support/zettlr",
     "~/Library/Caches/com.zbudniewek.GitPigeon",
     "~/Library/Preferences/com.zbudniewek.GitPigeon.plist",
   ]
