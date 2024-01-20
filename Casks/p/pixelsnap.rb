@@ -27,8 +27,8 @@ cask "pixelsnap" do
 
   zap trash: [
     "~/Library/Application Support/PixelSnap",
-    "~/Library/Caches/SentryCrash/PixelSnap 2",
     "~/Library/Caches/pl.maketheweb.pixelsnap2",
+    "~/Library/Caches/SentryCrash/PixelSnap 2",
     "~/Library/Preferences/pl.maketheweb.pixelsnap2.plist",
   ]
 end
