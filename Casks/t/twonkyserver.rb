@@ -15,8 +15,8 @@ cask "twonkyserver" do
   pkg "TwonkyServerInstaller-#{version}.pkg"
 
   uninstall launchctl: [
-              "com.twonky.server.Twonky",
               "com.twonky.server.tsuninstall",
+              "com.twonky.server.Twonky",
             ],
             signal:    ["TERM", "com.twonky.server.Twonky"],
             pkgutil:   "com.twonky.server.Twonky",
