@@ -17,11 +17,11 @@ cask "lego-mindstorms-ev3" do
   pkg "LEGO MINDSTORMS EV3 Home Edition.pkg"
 
   uninstall pkgutil: [
+    "com.microsoft.silverlight.plugin",
+    "com.ni.pkg.lego.ev3.Eng",
     "com.ni.pkg.lego.ev3.Eng.#{version}",
     "com.ni.pkg.lego.x3.#{version}.core",
     "com.ni.pkg.lego.x3.#{version}.update",
-    "com.microsoft.silverlight.plugin",
-    "com.ni.pkg.lego.ev3.Eng",
     "com.ni.pkg.lego.x3.core",
     "com.ni.pkg.lego.x3.update",
     "com.ni.pkg.legodriver",
