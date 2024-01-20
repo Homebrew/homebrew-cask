@@ -35,8 +35,8 @@ cask "remotix-agent" do
             ],
             login_item: "Remotix Agent",
             pkgutil:    [
-              "com.nulana.rxagentmac.daemon",
               "com.nulana.rxagentmac",
+              "com.nulana.rxagentmac.daemon",
             ],
             delete:     [
               "/Library/LaunchAgents/com.nulana.rxagentmac.user.plist",
