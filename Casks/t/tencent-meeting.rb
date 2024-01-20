@@ -36,8 +36,8 @@ cask "tencent-meeting" do
   uninstall quit: "com.tencent.meeting"
 
   zap trash: [
-    "~/Library/Application Scripts/FN2V63AD2J.com.tencent.meeting",
     "~/Library/Application Scripts/com.tencent.meeting",
+    "~/Library/Application Scripts/FN2V63AD2J.com.tencent.meeting",
     "~/Library/Caches/com.tencent.meeting*",
     "~/Library/Containers/com.tencent.meeting*",
     "~/Library/Containers/com.tencent.wemeet.FileDelta",
