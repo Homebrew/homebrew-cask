@@ -18,8 +18,8 @@ cask "qudedup-extract-tool" do
 
   zap trash: [
         "~/Library/Application Support/QNAP/QuDedup Extract Tool",
-        "~/Library/Preferences/QNAP/QuDedup Extract Tool.plist",
         "~/Library/Preferences/com.qnap.QuDedupExTool.plist",
+        "~/Library/Preferences/QNAP/QuDedup Extract Tool.plist",
         "~/Library/Saved Application State/com.qnap.QuDedupExTool.savedState",
       ],
       rmdir: [
