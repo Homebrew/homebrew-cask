@@ -18,8 +18,7 @@ cask "retrobatch" do
   app "Retrobatch.app"
 
   zap trash: [
-    "com.flyingmeat.retrobatch.sfl*",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/" \
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.flyingmeat.retrobatch.sfl*",
     "~/Library/Application Support/Retrobatch",
     "~/Library/HTTPStorages/com.flyingmeat.Retrobatch",
     "~/Library/Preferences/com.flyingmeat.Retrobatch.plist",
