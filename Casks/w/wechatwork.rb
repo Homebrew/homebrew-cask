@@ -29,17 +29,17 @@ cask "wechatwork" do
   uninstall quit: "com.tencent.WeWorkMac"
 
   zap trash: [
-    "~/Library/Application Scripts/com.tencent.WeWorkMac",
     "~/Library/Application Scripts/88L2Q4487U.com.tencent.WeWorkMac",
-    "~/Library/Application Scripts/88L2Q4487U.com.tencent.WeWorkMacDebug",
-    "~/Library/Application Scripts/88L2Q4487U.com.tencent.WeWorkMacUIDev",
     "~/Library/Application Scripts/88L2Q4487U.com.tencent.WeWorkMac.dev",
     "~/Library/Application Scripts/88L2Q4487U.com.tencent.WeWorkMac.IPCHelper",
-    "~/Library/Containers/com.tencent.WeWorkMac",
+    "~/Library/Application Scripts/88L2Q4487U.com.tencent.WeWorkMacDebug",
+    "~/Library/Application Scripts/88L2Q4487U.com.tencent.WeWorkMacUIDev",
+    "~/Library/Application Scripts/com.tencent.WeWorkMac",
     "~/Library/Containers/88L2Q4487U.com.tencent.WeWorkMac",
-    "~/Library/Containers/88L2Q4487U.com.tencent.WeWorkMacDebug",
-    "~/Library/Containers/88L2Q4487U.com.tencent.WeWorkMacUIDev",
     "~/Library/Containers/88L2Q4487U.com.tencent.WeWorkMac.dev",
     "~/Library/Containers/88L2Q4487U.com.tencent.WeWorkMac.IPCHelper",
+    "~/Library/Containers/88L2Q4487U.com.tencent.WeWorkMacDebug",
+    "~/Library/Containers/88L2Q4487U.com.tencent.WeWorkMacUIDev",
+    "~/Library/Containers/com.tencent.WeWorkMac",
   ]
 end
