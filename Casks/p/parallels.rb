@@ -48,6 +48,7 @@ cask "parallels" do
 
   uninstall signal: ["TERM", "com.parallels.desktop.console"],
             delete: [
+              "/Library/Preferences/Parallels",
               "/usr/local/bin/prl_convert",
               "/usr/local/bin/prl_disk_tool",
               "/usr/local/bin/prl_perf_ctl",
@@ -55,7 +56,6 @@ cask "parallels" do
               "/usr/local/bin/prlctl",
               "/usr/local/bin/prlexec",
               "/usr/local/bin/prlsrvctl",
-              "/Library/Preferences/Parallels",
             ]
 
   zap trash: [
