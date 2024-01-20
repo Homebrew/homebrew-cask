@@ -26,8 +26,8 @@ cask "drawpile" do
 
   zap trash: [
     "~/Library/Application Support/drawpile",
-    "~/Library/Preferences/net.drawpile.DrawpileClient.plist",
     "~/Library/Preferences/net.drawpile.drawpile.plist",
+    "~/Library/Preferences/net.drawpile.DrawpileClient.plist",
     "~/Library/Saved Application State/net.drawpile.DrawpileClient.savedState",
   ]
 end
