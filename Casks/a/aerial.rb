@@ -14,15 +14,13 @@ cask "aerial" do
   screen_saver "Aerial.saver"
 
   zap trash: [
-    "Application Support/Aerial",
-    "ByHost/com.JohnCoates.Aerial*.plist",
     "~/Library/Application Support/Aerial",
     "~/Library/Caches/Aerial",
-    "~/Library/Containers/com.apple.ScreenSaver.Engine.legacyScreenSaver.x86-64/Data/Library/" \
+    "~/Library/Containers/com.apple.ScreenSaver.Engine.legacyScreenSaver.x86-64/Data/Library/Application Support/Aerial",
     "~/Library/Containers/com.apple.ScreenSaver.Engine.legacyScreenSaver.x86-64/Data/Library/Caches/Aerial",
     "~/Library/Containers/com.apple.ScreenSaver.Engine.legacyScreenSaver/Data/Library/Application Support/Aerial",
     "~/Library/Containers/com.apple.ScreenSaver.Engine.legacyScreenSaver/Data/Library/Caches/Aerial",
-    "~/Library/Containers/com.apple.ScreenSaver.Engine.legacyScreenSaver/Data/Library/Preferences/" \
+    "~/Library/Containers/com.apple.ScreenSaver.Engine.legacyScreenSaver/Data/Library/Preferences/ByHost/com.JohnCoates.Aerial*.plist",
     "~/Library/Preferences/ByHost/com.JohnCoates.Aerial*",
     "~/Library/Screen Savers/Aerial.saver",
   ]
