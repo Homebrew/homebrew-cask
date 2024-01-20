@@ -25,9 +25,9 @@ cask "nomachine" do
               "com.nomachine.nxplayer",
               "com.nomachine.nxrunner",
               "com.nomachine.nxserver",
+              "com.nomachine.server",
               "com.nomachine.uninstall",
               "com.nomachine.uninstallAgent",
-              "com.nomachine.server",
             ],
             pkgutil:   [
               "com.nomachine.nomachine.NoMachine-*.pkg",
