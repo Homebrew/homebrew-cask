@@ -24,11 +24,11 @@ cask "license-control-center" do
   ]
 
   zap trash: [
-    "/Library/Application Support/Syncrosoft",
     "/Library/Application Support/eLicenser",
+    "/Library/Application Support/Syncrosoft",
     "/Library/Syncrosoft",
-    "/var/db/receipts/com.syncrosoft.*",
     "/var/db/receipts/com.eLicenser.*",
+    "/var/db/receipts/com.syncrosoft.*",
     "~/Library/Preferences/com.Syncrosoft.LCC.plist",
     "~/Library/Saved Application State/com.Syncrosoft.LCC.savedState",
   ]
