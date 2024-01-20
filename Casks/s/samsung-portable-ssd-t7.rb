@@ -21,14 +21,14 @@ cask "samsung-portable-ssd-t7" do
 
   uninstall launchctl: "com.samsung.portablessdplus.mon",
             quit:      [
-              "com.samsung.portablessdplus.software",
               "/Applications/SamsungPortableSSD_#{version.csv.second}.app",
+              "com.samsung.portablessdplus.software",
             ],
             kext:      "com.samsung.portablessd.driver",
             pkgutil:   [
-              "com.samsung.portablessdplusuniversal.softwarepkg",
               "com.samsung.portablessd.driverpkg",
               "com.samsung.portablessdplus.softwarepkg",
+              "com.samsung.portablessdplusuniversal.softwarepkg",
             ],
             delete:    [
               "/Applications/SamsungPortableSSD_#{version.csv.second}.app",
@@ -36,8 +36,8 @@ cask "samsung-portable-ssd-t7" do
             ]
 
   zap trash: [
-    "~/Library/Application Support/PortableSSD",
     "~/Library/Application Support/Portable_SSD",
+    "~/Library/Application Support/PortableSSD",
     "~/Library/LaunchAgents/com.samsung.portablessdplus.mon.plist",
     "~/Library/Saved Application State/com.samsung.portablessd*",
   ]
