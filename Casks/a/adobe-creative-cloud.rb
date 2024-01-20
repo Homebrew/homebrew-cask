@@ -122,7 +122,6 @@ cask "adobe-creative-cloud" do
         "~/Library/Logs/PDApp*.log",
         "~/Library/Preferences/Adobe/.[A-Z0-9]???????????",
         "~/Library/Preferences/com.adobe.crashreporter.plist",
-
       ],
       rmdir: [
         "/Users/Shared/Adobe",
