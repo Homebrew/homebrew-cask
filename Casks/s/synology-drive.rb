@@ -24,10 +24,10 @@ cask "synology-drive" do
               "com.synology.Synology Cloud Station",
             ],
             quit:      [
-              "io.com.synology.CloudStationUI",
               "com.synology.CloudStation",
               "com.synology.CloudStationUI",
               "com.synology.SynologyDrive.FinderHelper",
+              "io.com.synology.CloudStationUI",
             ],
             pkgutil:   "com.synology.CloudStation",
             delete:    "/Applications/Synology Drive Client.app"
