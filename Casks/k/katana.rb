@@ -10,9 +10,9 @@ cask "katana" do
   app "Katana.app"
 
   zap trash: [
+    "~/.katana",
     "~/Library/Application Support/Katana",
     "~/Library/Logs/Katana",
     "~/Library/Preferences/com.electron.katana.plist",
-    "~/.katana",
   ]
 end
