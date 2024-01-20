@@ -1,6 +1,6 @@
 cask "frappe-books" do
-  version "0.20.0"
-  sha256 "23da621f8c6e9488804f3c6b2a2c5c7c0dc9484b9e6a985381d5c0736e4fefa8"
+  version "0.20.1"
+  sha256 "2581cdab7ffdda0357cf611c6cbc86901028782964bf7ad7e2abbe4f0e7e73bd"
 
   url "https://github.com/frappe/books/releases/download/v#{version}/Frappe-Books-#{version}.dmg",
       verified: "github.com/frappe/books/"
