@@ -16,8 +16,8 @@ cask "vk-messenger" do
   app "VK Messenger.app"
 
   zap trash: [
-    "~/Library/Preferences/com.vk.messages.plist",
     "~/Library/Preferences/com.vk.messages.helper.plist",
+    "~/Library/Preferences/com.vk.messages.plist",
     "~/Library/Saved Application State/com.vk.messages.savedState",
   ]
 end
