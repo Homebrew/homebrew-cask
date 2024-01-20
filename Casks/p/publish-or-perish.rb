@@ -20,7 +20,7 @@ cask "publish-or-perish" do
 
   zap trash: [
     "~/Library/Application Support/Publish or Perish",
-    "~/Library/Preferences/Publish or Perish.json",
     "~/Library/Preferences/com.tarma.popmac.plist",
+    "~/Library/Preferences/Publish or Perish.json",
   ]
 end
