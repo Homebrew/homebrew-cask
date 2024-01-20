@@ -19,9 +19,9 @@ cask "plan" do
     "~/Library/Application Support/Plan-Mac",
     "~/Library/Caches/com.getplan.Plan",
     "~/Library/Cookies/com.getplan.Plan.binarycookies",
-    "~/Library/Preferences/com.getplan.Plan.plist",
     "~/Library/Preferences/com.getplan.mac.plist",
-    "~/Library/Saved Application State/com.getplan.Plan.savedState",
+    "~/Library/Preferences/com.getplan.Plan.plist",
     "~/Library/Saved Application State/com.getplan.mac.savedState",
+    "~/Library/Saved Application State/com.getplan.Plan.savedState",
   ]
 end
