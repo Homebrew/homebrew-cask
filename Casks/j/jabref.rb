@@ -19,11 +19,11 @@ cask "jabref" do
   app "JabRef.app"
 
   zap trash: [
+    "/var/db/receipts/JabRef.bom",
+    "/var/db/receipts/JabRef.plist",
     "~/Library/Application Support/JabRef",
     "~/Library/Logs/jabref",
     "~/Library/Preferences/org.jabref.cli.plist",
     "~/Library/Saved Application State/org.jabref.cli.savedState",
-    "/var/db/receipts/JabRef.bom",
-    "/var/db/receipts/JabRef.plist",
   ]
 end
