@@ -18,8 +18,8 @@ cask "imageoptim" do
   app "ImageOptim.app"
 
   zap trash: [
-    "~/Library/Caches/net.pornel.ImageOptim",
     "~/Library/Caches/ImageOptimResults.db",
+    "~/Library/Caches/net.pornel.ImageOptim",
     "~/Library/Preferences/net.pornel.ImageOptim.plist",
     "~/Library/Saved Application State/net.pornel.ImageOptim.savedState",
   ]
