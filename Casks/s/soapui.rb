@@ -38,7 +38,7 @@ cask "soapui" do
   zap trash: [
     "~/.soapuios",
     "~/default-soapui-workspace.xml",
-    "~/soapui-settings.xml",
     "~/Library/Application Support/SoapUI-*",
+    "~/soapui-settings.xml",
   ]
 end
