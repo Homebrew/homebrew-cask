@@ -23,17 +23,17 @@ cask "imazing" do
             login_item: "iMazing Mini"
 
   zap trash: [
-    "~/Library/Application Support/iMazing",
+    "/Users/Shared/iMazing Mini",
+    "/Users/Shared/iMazing",
     "~/Library/Application Support/iMazing Mini",
+    "~/Library/Application Support/iMazing",
     "~/Library/Application Support/MobileSync/Backup/iMazing.Versions",
     "~/Library/Caches/com.DigiDNA.iMazing#{version.major}Mac",
     "~/Library/Caches/com.DigiDNA.iMazing#{version.major}Mac.Mini",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.DigiDNA.iMazing#{version.major}Mac.Mini",
     "~/Library/Caches/iMazing",
-    "~/Library/Preferences/com.DigiDNA.iMazing#{version.major}Mac.plist",
     "~/Library/Preferences/com.DigiDNA.iMazing#{version.major}Mac.Mini.plist",
-    "/Users/Shared/iMazing Mini",
-    "/Users/Shared/iMazing",
+    "~/Library/Preferences/com.DigiDNA.iMazing#{version.major}Mac.plist",
   ]
 
   caveats <<~EOS
