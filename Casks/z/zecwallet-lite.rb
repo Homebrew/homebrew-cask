@@ -13,7 +13,7 @@ cask "zecwallet-lite" do
   app "Zecwallet Lite.app"
 
   zap trash: [
-    "~/Library/Application Support/Zecwallet Lite",
     "~/Library/Application Support/Zcash/zecwallet-light-wallet.debug.log",
+    "~/Library/Application Support/Zecwallet Lite",
   ]
 end
