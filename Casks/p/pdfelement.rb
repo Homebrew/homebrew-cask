@@ -17,8 +17,8 @@ cask "pdfelement" do
   app "PDFelement.app"
 
   uninstall quit: [
-    "com.wondershare.PDFelement",
     "com.wondershare.helper_compact",
+    "com.wondershare.PDFelement",
   ]
 
   zap trash: [
