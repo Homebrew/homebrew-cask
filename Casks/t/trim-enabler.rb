@@ -28,12 +28,12 @@ cask "trim-enabler" do
     "~/Library/Application Support/CrashReporter/Trim Enabler_#{version.major}.plist",
     "~/Library/Application Support/org.cindori.TrimEnabler#{version.major}",
     "~/Library/Application Support/Trim Enabler",
-    "~/Library/Caches/org.cindori.TrimEnabler#{version.major}",
     "~/Library/Caches/com.plausiblelabs.crashreporter.data/org.cindori.TrimEnabler#{version.major}",
+    "~/Library/Caches/org.cindori.TrimEnabler#{version.major}",
     "~/Library/Cookies/org.cindori.TrimEnabler#{version.major}.binarycookies",
     "~/Library/Logs/DiagnosticReports/Trim Enabler_#{version.major}.crash",
-    "~/Library/Preferences/org.cindori.TrimEnabler.plist",
     "~/Library/Preferences/org.cindori.TrimEnabler#{version.major}.plist",
+    "~/Library/Preferences/org.cindori.TrimEnabler.plist",
     "~/Library/Saved Application State/org.cindori.TrimEnabler#{version.major}.savedState",
   ]
 end
