@@ -13,8 +13,8 @@ cask "murus" do
   uninstall launchctl: "it.murus.murusfirewallrules"
 
   zap trash: [
-    "/etc/murus.sh",
     "/etc/murus",
+    "/etc/murus.sh",
     "/Library/Application Support/Murus",
     "/Library/Preferences/it.murus.muruslibrary.plist",
     "~/Library/Caches/it.murus.Murus",
