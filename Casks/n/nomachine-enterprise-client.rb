@@ -22,8 +22,8 @@ cask "nomachine-enterprise-client" do
               "com.nomachine.uninstallAgent",
             ],
             pkgutil:   [
-              "com.nomachine.nomachine.NoMachine*.pkg",
               "com.nomachine.*",
+              "com.nomachine.nomachine.NoMachine*.pkg",
             ],
             delete:    "/Applications/NoMachine.app"
 
