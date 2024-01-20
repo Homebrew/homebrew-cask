@@ -32,8 +32,8 @@ cask "jupyterlab" do
     "~/Library/Caches/org.jupyter.jupyterlab-desktop.ShipIt",
     "~/Library/HTTPStorages/org.jupyter.jupyterlab-desktop",
     "~/Library/Jupyter",
-    "~/Library/Logs/jupyterlab-desktop",
     "~/Library/Logs/JupyterLab",
+    "~/Library/Logs/jupyterlab-desktop",
     "~/Library/Preferences/com.electron.jupyterlab-desktop.plist",
     "~/Library/Saved Application State/com.electron.jupyterlab-desktop.savedState",
   ]
