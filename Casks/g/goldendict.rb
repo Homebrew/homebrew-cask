@@ -16,8 +16,8 @@ cask "goldendict" do
   binary "#{appdir}/GoldenDict.app/Contents/MacOS/GoldenDict"
 
   zap trash: [
+    "~/.goldendict",
     "~/Library/Preferences/org.goldendict.plist",
     "~/Library/Saved Application State/org.goldendict.savedState",
-    "~/.goldendict",
   ]
 end
