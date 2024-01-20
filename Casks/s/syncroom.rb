@@ -17,8 +17,8 @@ cask "syncroom" do
   pkg "SYNCROOM.pkg"
 
   uninstall pkgutil: [
-    "jp.co.yamaha.ux.SYNCROOM.pkg",
     "jp.co.yamaha.ux.SYNCROOM-AU-BRIDGE.pkg",
+    "jp.co.yamaha.ux.SYNCROOM.pkg",
   ]
 
   zap trash: [
