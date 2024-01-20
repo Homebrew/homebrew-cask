@@ -98,9 +98,9 @@ cask "asix-ax88179" do
   uninstall pkgutil: [
     "com.asix.ax88179.uninstall",
     "com.asix.pkg.ASIXUSBDeviceAppInstaller",
+    "com.mygreatcompany.pkg.ASIXUSBDeviceAPPUninstall",
     "com.mygreatcompany.pkg.AX88179178A",
     "com.mygreatcompany.pkg.AX88179A772DDEXTAPPUninistaller",
-    "com.mygreatcompany.pkg.ASIXUSBDeviceAPPUninstall",
   ]
 
   caveats do
