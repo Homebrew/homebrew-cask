@@ -9,10 +9,8 @@ cask "reader" do
   homepage "https://readwise.io/read/"
 
   livecheck do
-    url "https://reader-desktop-releases.readwise.io/update-manifest.json"
-    strategy :json do |json|
-      json["version"]
-    end
+    url :stable
+    strategy :github_latest
   end
 
   auto_updates true
