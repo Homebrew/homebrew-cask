@@ -1,6 +1,6 @@
 cask "brickstore" do
-  version "2024.1.3"
-  sha256 "74739687edf75751c0887fcf6c013765a69e277f4b703441c9ea1319004adfdc"
+  version "2024.1.4"
+  sha256 "8d8939658fbda0d3c90815a983e0b03b731906bf56f59e6234e2d541cdd281e7"
 
   url "https://github.com/rgriebl/brickstore/releases/download/v#{version}/macOS-BrickStore-#{version}.dmg",
       verified: "github.com/rgriebl/brickstore/"
