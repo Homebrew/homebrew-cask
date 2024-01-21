@@ -12,7 +12,7 @@ cask "mqttfx" do
 
   livecheck do
     url "https://softblade.de/download/"
-    regex(/href=.*?mqttfx[._-]v?(\d+(?:\.\d+)+)-macos\.dmg/i)
+    regex(/href=.*?mqttfx[._-]v?(\d+(?:\.\d+)+)-macos/i)
   end
 
   installer script: {
