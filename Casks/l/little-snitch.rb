@@ -20,7 +20,6 @@ cask "little-snitch" do
   zap trash: [
         "/Library/Application Support/Objective Development/Little Snitch",
         "/Library/Caches/at.obdev.LittleSnitchConfiguration",
-        # These kext's should not be uninstalled by Cask
         "/Library/Extensions/LittleSnitch.kext",
         "/Library/Little Snitch",
         "/Library/Logs/LittleSnitchDaemon.log",
