@@ -11,7 +11,19 @@ cask "tastytrade" do
   homepage "https://tastytrade.com/technology/"
 
   livecheck do
-    skip "No version information available"
+    url "https://tastytrade.com/page-data/technology/page-data.json"
+    strategy :json do |json|
+      static_hashes = json["staticQueryHashes"]
+
+      version = static_hashes.map do |static_hash|
+        content = Homebrew::Livecheck::Strategy.page_content("https://tastytrade.com/page-data/sq/d/#{static_hash}.json")
+        next if content.blank? || content[:content].blank?
+
+        hash_json = JSON.parse(content[:content])
+        version = hash_json.dig("data", "contentstackGlobalSettings", "tastyworksSoftware", "desktopVersion")
+        break version if version.present?
+      end
+    end
   end
 
   auto_updates true
