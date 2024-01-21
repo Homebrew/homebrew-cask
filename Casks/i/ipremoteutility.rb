@@ -1,15 +1,15 @@
 cask "ipremoteutility" do
-  version "1.9.3"
-  sha256 "3523153ffbe2c4d5bb47e703c70db6880f8da2f2740d4521e5407d9d4decf380"
+  version "1.9.4"
+  sha256 "1af15c27fb3e4127e17341db520b6f3cc9acdbbdd3560b816a916795cbf435e8"
 
-  url "https://www.flandersscientific.com/ip-remote/release/IPRemoteUtility-#{version}-macOSX.zip"
+  url "https://www.flandersscientific.com/ip-remote/release/IPRemoteUtility-#{version}-macOS.zip"
   name "Flanders IP Remote Utility"
   desc "Management of Flanders Scientific hardware"
   homepage "https://www.flandersscientific.com/ip-remote/"
 
   livecheck do
     url :homepage
-    regex(/href=.*?IPRemoteUtility[._-]v?(\d+(?:\.\d+)+)[._-]macOSX\.zip/i)
+    regex(/href=.*?IPRemoteUtility[._-]v?(\d+(?:\.\d+)+)[._-]macOS\.zip/i)
   end
 
   depends_on macos: ">= :high_sierra"
