@@ -1,7 +1,7 @@
 cask "localxpose" do
   arch arm: "arm64", intel: "amd64"
 
-  version "24.1.2"
+  version "24.1.3"
   sha256 :no_check
 
   url "https://api.localxpose.io/api/v2/downloads/loclx-darwin-#{arch}.zip"
@@ -18,7 +18,7 @@ cask "localxpose" do
 
   auto_updates true
 
-  binary "loclx-darwin-#{arch}", target: "loclx"
+  binary "loclx"
 
   zap trash: "~/.localxpose"
 end
