@@ -2,15 +2,15 @@ cask "tencent-meeting" do
   arch arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "3.22.1.446,8f0c6d40b9f8d7f4a38fe3bd88408f1a"
-    sha256 "6f7f2cf1bfdea528bfe9f2049abfba078ab71d9c69acf046fe720b7a39b4c2de"
+    version "3.22.10.404,30e1e05e321f0bffa82240eff1952b71"
+    sha256 "b0dd4b4dcc3b08d29d1c2037971277e9949b0b460a3f1a033399fc99617720e2"
   end
   on_intel do
-    version "3.22.1.446,c8874588d13a00f5b5544a832569b574"
-    sha256 "ac4f5cf7b98de84696fdedbff30ba33fa368967d98ce2212611bd32b741ea5c5"
+    version "3.22.10.404,915eb273f5cb1de26047c0d04b0104d7"
+    sha256 "d62b0944d5816610a948290e08d3e217b732738fc1cbbc5b1dc5ba734efaeaba"
   end
 
-  url "https://updatecdn.meeting.qq.com/cos/#{version.csv.second}/TencentMeeting_0300000000_#{version.csv.first}.publish.#{arch}.dmg",
+  url "https://updatecdn.meeting.qq.com/cos/#{version.csv.second}/TencentMeeting_0300000000_#{version.csv.first}.publish.#{arch}.officialwebsite.dmg",
       verified: "updatecdn.meeting.qq.com/cos/"
   name "Tencent Meeting"
   name "腾讯会议"
@@ -18,13 +18,15 @@ cask "tencent-meeting" do
   homepage "https://meeting.tencent.com/"
 
   livecheck do
-    url "https://meeting.tencent.com/web-service/query-app-update-info/?from=2&app_publish_channel=TencentInside&sdk_id=0300000000&os=mac&arch=#{arch}&appver=#{version.csv.first}"
+    url %Q(https://meeting.tencent.com/web-service/query-download-info?q=[{"package-type":"app","channel":"0300000000","platform":"mac","arch":"#{arch}"}]&nonce=1234567890123456)
     regex(%r{/cos/(\h+)/TencentMeeting[._-].+?v?(\d+(?:\.\d+)+)})
     strategy :json do |json, regex|
-      match = json.dig("target", "url")&.match(regex)
-      next version if match.blank?
+      json["info-list"]&.map do |item|
+        match = item["url"]&.match(regex)
+        next if match.blank?
 
-      "#{match[2]},#{match[1]}"
+        "#{match[2]},#{match[1]}"
+      end
     end
   end
 
