@@ -29,13 +29,8 @@ cask "lark" do
   app "LarkSuite.app"
 
   zap trash: [
-    # feishu
-    "~/Library/Caches/com.bytedance.lark.helper",
-    # both
     "~/Library/Caches/com.electron.lark",
-    # lark
     "~/Library/Caches/com.electron.lark.helper",
-    "~/Library/Preferences/com.bytedance.lark.helper.plist",
     "~/Library/Preferences/com.electron.lark.helper.plist",
     "~/Library/Saved Application State/com.electron.lark.savedState",
   ]
