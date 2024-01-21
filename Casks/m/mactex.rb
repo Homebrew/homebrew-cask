@@ -67,16 +67,12 @@ cask "mactex" do
 
   zap trash: [
         "/usr/local/texlive/texmf-local",
-        # LaTeXiT:
         "~/Library/Application Scripts/*.fr.chachatelier.pierre.LaTeXiT",
         "~/Library/Application Scripts/fr.chachatelier.pierre.LaTeXiT.appex",
-        # BibDesk:
         "~/Library/Application Support/BibDesk",
         "~/Library/Application Support/com.apple.sharedfilelist/*/fr.chachatelier.pierre.latexit.sfl2",
-        # TexShop:
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/texshop.sfl*",
         "~/Library/Application Support/LaTeXiT",
-        # TeX Live Utility:
         "~/Library/Application Support/TeX Live Utility",
         "~/Library/Application Support/TeXShop",
         "~/Library/Caches/com.apple.helpd/Generated/edu.ucsd.cs.mmccrack.bibdesk.help*",
