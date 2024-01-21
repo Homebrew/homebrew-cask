@@ -9,7 +9,7 @@ cask "standard-notes" do
       verified: "github.com/standardnotes/app/"
   name "Standard Notes"
   desc "Free, open-source, and completely encrypted notes app"
-  homepage "https://standardnotes.org/"
+  homepage "https://standardnotes.com/"
 
   # The app's auto-updater avoids versions marked as "pre-release" on GitHub,
   # so we do the same thing in this check.
