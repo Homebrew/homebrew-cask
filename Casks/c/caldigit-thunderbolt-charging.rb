@@ -14,13 +14,12 @@ cask "caldigit-thunderbolt-charging" do
 
   pkg "CalDigit-Thunderbolt-Station-Mac-Drivers.pkg"
 
-  tcs = "ThunderboltStationChargingSupport"
-  uninstall kext:    "com.CalDigit.#{tcs}",
+  uninstall kext:    "com.CalDigit.ThunderboltStationChargingSupport",
             pkgutil: [
-              "com.CalDigit.CalDigit#{tcs}.StationsChargingSupport.CalDigit#{tcs}.pkg",
+              "com.CalDigit.CalDigitThunderboltStationChargingSupport*.pkg",
               "com.CalDigit.ThunderboltStation3ChargingSupport.pkg",
             ],
-            delete:  "/Library/Extensions/CalDigit#{tcs}.kext"
+            delete:  "/Library/Extensions/CalDigitThunderboltStationChargingSupport.kext"
 
   caveats do
     reboot
