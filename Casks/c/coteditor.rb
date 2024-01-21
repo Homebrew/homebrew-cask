@@ -57,7 +57,7 @@ cask "coteditor" do
   end
   on_ventura :or_newer do
     version "4.7.3"
-    sha256 "fd8c7f7a2c6eb2bde1ee554a0ba7e9be29b4d04284774ff8fe3f83ace8d647a2"
+    sha256 "3e5b6bd38be32234eb140deba3df3370539610bbb1e6e3b13faccfb58c4bf481"
 
     livecheck do
       url :url
@@ -72,7 +72,7 @@ cask "coteditor" do
   homepage "https://coteditor.com/"
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :ventura"
 
   app "CotEditor.app"
   binary "#{appdir}/CotEditor.app/Contents/SharedSupport/bin/cot"
