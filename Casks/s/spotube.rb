@@ -1,5 +1,5 @@
 cask "spotube" do
-  version "3.4.1"
+  version "3.4.0"
   sha256 "7627f679cdfb40bf4554f1a0aaabed076cd15fa3f7342b61e45167a40491fc0b"
 
   url "https://github.com/KRTirtho/spotube/releases/download/v#{version}/Spotube-macos-universal.dmg",
