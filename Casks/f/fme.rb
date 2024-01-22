@@ -23,8 +23,8 @@ cask "fme" do
   pkg "fme-form-#{version.csv.first}-b#{version.csv.second}-macosx-#{arch}.pkg"
 
   uninstall pkgutil: [
-              "com.safesoftware.pkg.engine.fme-form-#{version.major_minor}-b#{version.csv.second}-macosx-#{arch}",
               "com.safesoftware.pkg.apps.fme-form-#{version.major_minor}-b#{version.csv.second}-macosx-#{arch}",
+              "com.safesoftware.pkg.engine.fme-form-#{version.major_minor}-b#{version.csv.second}-macosx-#{arch}",
             ],
             delete:  [
               "/Applications/FME #{version.major_minor}",
@@ -32,9 +32,9 @@ cask "fme" do
             ]
 
   zap trash: [
-    "~/Library/Application Support/FME",
     "~/Library/Application Support/FME Desktop Help",
     "~/Library/Application Support/FME Help",
     "~/Library/Application Support/FME Workbench",
+    "~/Library/Application Support/FME",
   ]
 end

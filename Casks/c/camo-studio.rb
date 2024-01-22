@@ -29,8 +29,8 @@ cask "camo-studio" do
   zap trash: [
         "~/Library/Application Support/CrashReporter/Camo Studio",
         "~/Library/Application Support/Reincubate/Camo",
-        "~/Library/Caches/SentryCrash/Camo Studio",
         "~/Library/Caches/com.reincubate.macos.cam",
+        "~/Library/Caches/SentryCrash/Camo Studio",
         "~/Library/HTTPStorages/com.reincubate.macos.cam",
         "~/Library/Preferences/com.reincubate.macos.cam.plist",
         "~/Library/WebKit/com.reincubate.macos.cam",

@@ -23,9 +23,9 @@ cask "ilok-license-manager" do
               "com.paceap.eden.licensed.agent",
             ],
             pkgutil:   [
+              "com.paceap.pkg.eden.activationexperience",
               "com.paceap.pkg.eden.iLokLicenseManager",
               "com.paceap.pkg.eden.licensed",
-              "com.paceap.pkg.eden.activationexperience",
             ],
             delete:    "/usr/local/bin/iloktool"
 
@@ -35,8 +35,8 @@ cask "ilok-license-manager" do
       ],
       trash:  [
         "~/Library/Caches/com.paceap.iLokLicenseManager",
-        "~/Library/Logs/Eden",
         "~/Library/HTTPStorages/com.paceap.eden.iLokLicenseManager",
+        "~/Library/Logs/Eden",
         "~/Library/Preferences/com.paceap.iLokLicenseManager.plist",
         "~/Library/Saved Application State/com.paceap.eden.iLokLicenseManager.savedState",
       ]

@@ -20,8 +20,10 @@ cask "little-snitch" do
   zap trash: [
         "/Library/Application Support/Objective Development/Little Snitch",
         "/Library/Caches/at.obdev.LittleSnitchConfiguration",
+        "/Library/Extensions/LittleSnitch.kext",
         "/Library/Little Snitch",
         "/Library/Logs/LittleSnitchDaemon.log",
+        "/Library/StagedExtensions/Library/Extensions/LittleSnitch.kext",
         "~/Library/Application Support/Little Snitch",
         "~/Library/Caches/at.obdev.LittleSnitchAgent",
         "~/Library/Caches/at.obdev.LittleSnitchConfiguration",
@@ -40,9 +42,6 @@ cask "little-snitch" do
         "~/Library/Preferences/at.obdev.LittleSnitchSoftwareUpdate.plist",
         "~/Library/Saved Application State/at.obdev.LittleSnitchInstaller.savedState",
         "~/Library/WebKit/at.obdev.LittleSnitchConfiguration",
-        # These kext's should not be uninstalled by Cask
-        "/Library/Extensions/LittleSnitch.kext",
-        "/Library/StagedExtensions/Library/Extensions/LittleSnitch.kext",
       ],
       rmdir: "/Library/Application Support/Objective Development"
 end

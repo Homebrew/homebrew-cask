@@ -16,8 +16,8 @@ cask "igv" do
 
   zap trash: [
     "~/.igv",
-    "~/Library/Preferences/org.broad.igv.plist",
     "~/igv",
+    "~/Library/Preferences/org.broad.igv.plist",
   ]
 
   caveats do

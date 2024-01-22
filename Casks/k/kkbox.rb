@@ -22,8 +22,8 @@ cask "kkbox" do
   zap trash: [
     "~/Library/Application Support/com.kkbox.KKBOX",
     "~/Library/Application Support/KKBOX",
-    "~/Library/Caches/com.kkbox.electron-app.ShipIt",
     "~/Library/Caches/com.kkbox.electron-app",
+    "~/Library/Caches/com.kkbox.electron-app.ShipIt",
     "~/Library/Caches/com.kkbox.KKBOX",
     "~/Library/Caches/KKBOX",
     "~/Library/HTTPStorages/com.kkbox.electron-app",

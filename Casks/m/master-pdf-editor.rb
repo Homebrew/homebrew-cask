@@ -17,8 +17,8 @@ cask "master-pdf-editor" do
   app "Master PDF Editor.app"
 
   zap trash: [
-    "~/Library/Application Support/Master PDF Editor",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.code-industry.masterpdfeditor3.sfl*",
+    "~/Library/Application Support/Master PDF Editor",
     "~/Library/Preferences/net.code-industry.Master PDF Editor.plist",
     "~/Library/Saved Application State/net.code-industry.MasterPDFEditor3.savedState",
   ]

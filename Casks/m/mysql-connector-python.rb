@@ -18,10 +18,10 @@ cask "mysql-connector-python" do
 
   uninstall pkgutil: [
     "com.mysql.connector-python",
-    "com.mysql.connector-python-py3.8",
-    "com.mysql.connector-python-py3.9",
     "com.mysql.connector-python-py3.10",
     "com.mysql.connector-python-py3.11",
+    "com.mysql.connector-python-py3.8",
+    "com.mysql.connector-python-py3.9",
     "com.oracle.mysql.connector.python",
   ]
 

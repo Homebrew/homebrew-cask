@@ -21,8 +21,8 @@ cask "fpc-laz" do
   pkg "fpc-#{version.csv.first}-intelarm64-macosx.mpkg/Contents/Packages/fpc-#{version.csv.first}-intelarm64-macosx.pkg"
 
   uninstall pkgutil: [
-    "org.freepascal.freePascalCompiler322.fpcinstintelarm64",
-    "org.freepascal.freePascalCompiler320.fpcinst386",
     "org.freepascal.fpc",
+    "org.freepascal.freePascalCompiler320.fpcinst386",
+    "org.freepascal.freePascalCompiler322.fpcinstintelarm64",
   ]
 end

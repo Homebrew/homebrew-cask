@@ -14,8 +14,8 @@ cask "mist" do
 
   uninstall launchctl: "com.ninxsoft.mist.helper",
             quit:      [
-              "com.ninxsoft.mist.helper",
               "com.ninxsoft.mist",
+              "com.ninxsoft.mist.helper",
             ],
             pkgutil:   "com.ninxsoft.pkg.mist",
             delete:    [

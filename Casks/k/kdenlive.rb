@@ -20,7 +20,7 @@ cask "kdenlive" do
   zap trash: [
     "~/Library/Application Support/kdenlive",
     "~/Library/Caches/kdenlive",
-    "~/Library/Preferences/kdenliverc",
     "~/Library/Preferences/kdenlive-layoutsrc",
+    "~/Library/Preferences/kdenliverc",
   ]
 end

@@ -13,7 +13,7 @@ cask "edex-ui" do
 
   zap trash: [
     "~/Library/Application Support/eDEX-UI",
-    "~/Library/Saved Application State/com.edex.ui.savedState",
     "~/Library/Preferences/com.edex.ui.plist",
+    "~/Library/Saved Application State/com.edex.ui.savedState",
   ]
 end

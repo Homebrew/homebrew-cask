@@ -55,8 +55,8 @@ cask "gcc-arm-embedded" do
   uninstall pkgutil: "arm-gnu-toolchain-#{pkg_version}-darwin-#{arch}-arm-none-eabi",
             delete:  "/Applications/ArmGNUToolchain/#{pkg_version}/arm-none-eabi",
             rmdir:   [
-              "/Applications/ArmGNUToolchain/#{pkg_version}",
               "/Applications/ArmGNUToolchain",
+              "/Applications/ArmGNUToolchain/#{pkg_version}",
             ]
 
   # No zap stanza required

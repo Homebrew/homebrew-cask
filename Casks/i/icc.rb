@@ -23,9 +23,9 @@ cask "icc" do
   uninstall pkgutil: "com.chessclub.*"
 
   zap trash: [
-    "~/Library/Preferences/com.chessclub.desktop-icc",
-    "~/Library/Saved Application State/com.chessclub.desktop-icc.savedState",
     "~/.cache/internet_chess_club",
     "~/.internet_chess_club",
+    "~/Library/Preferences/com.chessclub.desktop-icc",
+    "~/Library/Saved Application State/com.chessclub.desktop-icc.savedState",
   ]
 end

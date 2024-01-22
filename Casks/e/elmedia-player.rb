@@ -19,8 +19,8 @@ cask "elmedia-player" do
 
   zap trash: [
     "~/Library/Caches/com.Eltima.ElmediaPlayer",
+    "~/Library/Preferences/com.eltima.activator.xml",
     "~/Library/Preferences/com.Eltima.ElmediaPlayer.LSSharedFileList.plist",
     "~/Library/Preferences/com.Eltima.ElmediaPlayer.plist",
-    "~/Library/Preferences/com.eltima.activator.xml",
   ]
 end

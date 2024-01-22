@@ -21,11 +21,8 @@ cask "after-dark-classic" do
   ]
 
   zap trash: [
-    "~/Library/Containers/com.apple.ScreenSaver.Engine.legacyScreenSaver/" \
-    "Data/Library/Preferences/ByHost/jp.co.infinisys.boris11.*.plist",
-    "~/Library/Containers/com.apple.ScreenSaver.Engine.legacyScreenSaver/" \
-    "Data/Library/Preferences/ByHost/jp.co.infinisys.flyingscreensaver12.*.plist",
-    "~/Library/Containers/com.apple.ScreenSaver.Engine.legacyScreenSaver/" \
-    "Data/Library/Preferences/ByHost/jp.co.infinisys.mowingman11.*.plist",
+    "~/Library/Containers/com.apple.ScreenSaver.Engine.legacyScreenSaver/Data/Library/Preferences/ByHost/jp.co.infinisys.boris11.*.plist",
+    "~/Library/Containers/com.apple.ScreenSaver.Engine.legacyScreenSaver/Data/Library/Preferences/ByHost/jp.co.infinisys.flyingscreensaver12.*.plist",
+    "~/Library/Containers/com.apple.ScreenSaver.Engine.legacyScreenSaver/Data/Library/Preferences/ByHost/jp.co.infinisys.mowingman11.*.plist",
   ]
 end

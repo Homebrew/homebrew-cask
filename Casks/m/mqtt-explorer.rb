@@ -17,8 +17,8 @@ cask "mqtt-explorer" do
   uninstall quit: "de.t7n.apps.mqtt-explorer"
 
   zap trash: [
+    "~/Library/Application Scripts/de.t7n.apps.mqtt-explorer",
     "~/Library/Containers/de.t7n.apps.mqtt-explorer",
     "~/Library/Group Containers/*.de.t7n.apps.mqtt-explorer",
-    "~/Library/Application Scripts/de.t7n.apps.mqtt-explorer",
   ]
 end

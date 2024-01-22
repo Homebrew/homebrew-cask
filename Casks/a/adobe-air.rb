@@ -24,9 +24,9 @@ cask "adobe-air" do
               sudo:       true,
             },
             rmdir:  [
-              "/Applications/Adobe/Flash Player/AddIns",
-              "/Applications/Adobe/Flash Player",
               "/Applications/Adobe",
+              "/Applications/Adobe/Flash Player",
+              "/Applications/Adobe/Flash Player/AddIns",
             ]
 
   zap trash: [

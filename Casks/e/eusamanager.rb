@@ -15,14 +15,14 @@ cask "eusamanager" do
   pkg "EUSignWebInstall.pkg"
 
   uninstall pkgutil: [
-              "ua.com.iit.eusamanager_osplm",
-              "ua.com.iit.euscpnmh_osplm",
               "ua.com.iit.EUSAManager",
+              "ua.com.iit.eusamanager_osplm",
               "ua.com.iit.euscpnmh",
+              "ua.com.iit.euscpnmh_osplm",
             ],
             delete:  [
-              "/Applications/euscpnmh.app",
               "/Applications/EUSAManager.app",
+              "/Applications/euscpnmh.app",
             ]
 
   zap trash: [

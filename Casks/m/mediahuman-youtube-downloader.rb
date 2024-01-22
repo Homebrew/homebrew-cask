@@ -17,7 +17,7 @@ cask "mediahuman-youtube-downloader" do
   app "MediaHuman YouTube Downloader.app"
 
   zap trash: [
-    "~/Library/Saved Application State/com.mediahuman.YouTube Downloader.savedState",
     "~/Library/Preferences/com.mediahuman.YouTube Downloader.plist",
+    "~/Library/Saved Application State/com.mediahuman.YouTube Downloader.savedState",
   ]
 end

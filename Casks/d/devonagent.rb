@@ -20,15 +20,15 @@ cask "devonagent" do
   zap trash: [
     "~/Library/Application Scripts/*.devon-technologies.*",
     "~/Library/Application Support/DEVONagent",
-    "~/Library/Caches/DEVONagent",
-    "~/Library/Scripts/Applications/Safari/*DEVONagent*.scpt",
-    "~/Library/Caches/TemporaryItems/DEVONagent",
     "~/Library/Caches/com.devon-technologies.agent",
+    "~/Library/Caches/DEVONagent",
+    "~/Library/Caches/TemporaryItems/DEVONagent",
     "~/Library/Containers/com.devon-technologies.get",
     "~/Library/Group Containers/*.devon-technologies.*",
     "~/Library/Group Containers/*.devon-technologies.*",
     "~/Library/HTTPStorages/com.devon-technologies.agent",
     "~/Library/Preferences/com.devon-technologies.agent.plist",
+    "~/Library/Scripts/Applications/Safari/*DEVONagent*.scpt",
     "~/Library/WebKit/com.devon-technologies.agent",
   ]
 end

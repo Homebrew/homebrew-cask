@@ -20,8 +20,8 @@ cask "mplayerx" do
   zap trash: [
     "~/.mplayer",
     "~/Library/Application Support/MPlayerX",
+    "~/Library/Caches/org.niltsh.MPlayerX",
     "~/Library/Preferences/org.niltsh.MPlayerX.LSSharedFileList.plist",
     "~/Library/Preferences/org.niltsh.MPlayerX.plist",
-    "~/Library/Caches/org.niltsh.MPlayerX",
   ]
 end

@@ -28,8 +28,8 @@ cask "fujitsu-scansnap-home" do
               "com.ricoh.pfu.SshAutoLaunch",
             ],
             quit:      [
-              "com.fujitsu.pfu.SSMenuBar",
               "com.fujitsu.pfu.Ssh*",
+              "com.fujitsu.pfu.SSMenuBar",
             ],
             pkgutil:   "com.fujitsu.pfu.scansnap.Home.*"
 

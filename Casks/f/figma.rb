@@ -24,8 +24,8 @@ cask "figma" do
   zap trash: [
     "~/Library/Application Support/Figma",
     "~/Library/Application Support/figma-desktop",
-    "~/Library/Caches/com.figma.Desktop",
     "~/Library/Caches/com.figma.agent",
+    "~/Library/Caches/com.figma.Desktop",
     "~/Library/Preferences/com.figma.Desktop.plist",
     "~/Library/Saved Application State/com.figma.Desktop.savedState",
   ]

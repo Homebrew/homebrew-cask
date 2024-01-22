@@ -15,7 +15,7 @@ cask "launchpad-manager" do
   app "Launchpad Manager.app"
 
   zap trash: [
-    "~/Library/Application Support/Launchpad Manager",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.attilamiklosi.yos.launchpadmanager.sfl*",
+    "~/Library/Application Support/Launchpad Manager",
   ]
 end

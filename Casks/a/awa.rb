@@ -22,8 +22,8 @@ cask "awa" do
 
   zap trash: [
     "~/Library/Application Support/AWA",
-    "~/Library/Preferences/fm.awa.liverpool.plist",
     "~/Library/Preferences/fm.awa.liverpool.helper.plist",
+    "~/Library/Preferences/fm.awa.liverpool.plist",
     "~/Library/Saved Application State/fm.awa.liverpool.savedState",
   ]
 end

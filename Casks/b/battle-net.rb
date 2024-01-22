@@ -27,17 +27,17 @@ cask "battle-net" do
   uninstall delete: "/Applications/Battle.net.app"
 
   zap trash: [
+        "/Users/Shared/Battle.net",
+        "/Users/Shared/Blizzard",
         "~/Library/Application Support/Battle.net",
         "~/Library/Caches/net.battle.bootstrapper",
-        "~/Library/Preferences/net.battle.net.app.plist",
         "~/Library/Preferences/net.battle.app.helper.plist",
         "~/Library/Preferences/net.battle.Authenticator.prefs",
         "~/Library/Preferences/net.battle.Identity.prefs",
+        "~/Library/Preferences/net.battle.net.app.plist",
         "~/Library/Preferences/net.battle.plist",
         "~/Library/Preferences/net.battnet.battle.plist",
         "~/Library/Saved Application State/net.battle.app.savedState",
-        "/Users/Shared/Battle.net",
-        "/Users/Shared/Blizzard",
       ],
       rmdir: "~/Blizzard"
 

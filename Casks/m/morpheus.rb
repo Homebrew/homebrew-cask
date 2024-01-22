@@ -18,13 +18,13 @@ cask "morpheus" do
   app "Morpheus.app"
 
   zap trash: [
+    "~/Library/Application Support/CrashReporter/morpheus_*.plist",
     "~/Library/Application Support/data/Morpheus",
     "~/Library/Application Support/Morpheus",
-    "~/Library/Application Support/CrashReporter/morpheus_*.plist",
     "~/Library/Caches/Morpheus",
-    "~/Library/Preferences/morpheus-gui.plist",
-    "~/Library/Preferences/io.gitlab.morpheus.morpheus.plist",
     "~/Library/Preferences/de.tu-dresden.Morpheus.plist",
+    "~/Library/Preferences/io.gitlab.morpheus.morpheus.plist",
+    "~/Library/Preferences/morpheus-gui.plist",
     "~/Library/Preferences/org.morpheus.Morpheus.plist",
     "~/Library/Saved Application State/de.tu-dresden.Morpheus.savedState",
     "~/Library/Saved Application State/io.gitlab.morpheus.morpheus.savedState",

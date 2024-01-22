@@ -21,8 +21,8 @@ cask "elektron-overbridge" do
   pkg "Elektron Overbridge Installer #{version.csv.first}.pkg"
 
   uninstall launchctl: [
-              "se.elektron.overbridge.engine",
               "asp.se.elektron.overbridge.coreaudio2",
+              "se.elektron.overbridge.engine",
             ],
             quit:      "se.elektron.OverbridgeEngine",
             pkgutil:   "se.elektron.overbridge.*",

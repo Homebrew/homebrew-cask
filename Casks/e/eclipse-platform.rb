@@ -23,7 +23,7 @@ cask "eclipse-platform" do
 
   zap trash: [
     "~/.eclipse",
-    "~/Library/Preferences/org.eclipse.sdk.ide.plist",
     "~/eclipse-workspace",
+    "~/Library/Preferences/org.eclipse.sdk.ide.plist",
   ]
 end

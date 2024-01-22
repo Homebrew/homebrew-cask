@@ -69,10 +69,10 @@ cask "microsoft-office" do
   zap trash: [
     "~/Library/Application Scripts/com.microsoft.errorreporting",
     "~/Library/Application Scripts/com.microsoft.Excel",
+    "~/Library/Application Scripts/com.microsoft.Office365ServiceV2",
     "~/Library/Application Scripts/com.microsoft.OneDrive.FileProvider",
     "~/Library/Application Scripts/com.microsoft.OneDrive.FinderSync",
     "~/Library/Application Scripts/com.microsoft.OneDriveLauncher",
-    "~/Library/Application Scripts/com.microsoft.Office365ServiceV2",
     "~/Library/Application Scripts/com.microsoft.onenote.mac",
     "~/Library/Application Scripts/com.microsoft.onenote.mac.shareextension",
     "~/Library/Application Scripts/com.microsoft.openxml.excel.app",

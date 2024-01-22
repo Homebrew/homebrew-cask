@@ -18,8 +18,8 @@ cask "keep-it" do
   app "Keep It.app"
 
   zap trash: [
+    "~/Library/Containers/com.reinvented.Keep It",
     "~/Library/Containers/com.reinvented.Keep-It-Indexing",
     "~/Library/Containers/com.reinvented.Keep-It-Metadata",
-    "~/Library/Containers/com.reinvented.Keep It",
   ]
 end

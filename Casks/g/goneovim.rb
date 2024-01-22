@@ -27,7 +27,7 @@ cask "goneovim" do
   end
 
   zap trash: [
-    "~/Library/Saved Application State/com.ident.goneovim.savedState",
     "~/.goneovim",
+    "~/Library/Saved Application State/com.ident.goneovim.savedState",
   ]
 end

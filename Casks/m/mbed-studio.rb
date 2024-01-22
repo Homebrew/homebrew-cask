@@ -21,9 +21,9 @@ cask "mbed-studio" do
   uninstall pkgutil: "com.arm.mbed.studio"
 
   zap trash: [
-    "~/Library/Application Support/Mbed Studio",
     "~/.mbed-library-cache",
     "~/.mbed-library-pipeline",
     "~/.mbed-studio",
+    "~/Library/Application Support/Mbed Studio",
   ]
 end

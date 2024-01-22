@@ -15,7 +15,7 @@ cask "cinderella" do
   app "Cinderella.app"
 
   zap trash: [
-    "~/Library/Preferences/cinderella2-user.properties",
     "~/Library/Preferences/cinderella2-global.properties",
+    "~/Library/Preferences/cinderella2-user.properties",
   ]
 end

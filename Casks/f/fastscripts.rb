@@ -18,8 +18,8 @@ cask "fastscripts" do
   app "FastScripts.app"
 
   zap trash: [
-    "~/Library/Application Support/FastScripts",
     "~/Library/Application Support/FastScripts Script Runner",
+    "~/Library/Application Support/FastScripts",
     "~/Library/Caches/com.red-sweater.fastscripts#{version.major}",
     "~/Library/Preferences/com.red-sweater.fastscripts#{version.major}.plist",
     "~/Library/WebKit/com.red-sweater.fastscripts#{version.major}",

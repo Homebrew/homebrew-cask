@@ -22,7 +22,7 @@ cask "modrinth" do
   zap trash: [
     "~/Library/Application Support/com.modrinth.theseus",
     "~/Library/Caches/com.modrinth.theseus",
-    "~/Library/WebKit/com.modrinth.theseus",
     "~/Library/Saved Application State/com.modrinth.theseus.savedState",
+    "~/Library/WebKit/com.modrinth.theseus",
   ]
 end

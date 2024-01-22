@@ -19,8 +19,8 @@ cask "box-sync" do
 
   uninstall quit:   "com.box.sync",
             delete: [
-              "/Library/PrivilegedHelperTools/com.box.sync.iconhelper",
               "/Library/PrivilegedHelperTools/com.box.sync.bootstrapper",
+              "/Library/PrivilegedHelperTools/com.box.sync.iconhelper",
             ]
 
   zap trash: [

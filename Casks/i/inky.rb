@@ -12,9 +12,9 @@ cask "inky" do
 
   zap trash: [
     "~/Library/Application Support/Inky",
+    "~/Library/Logs/Inky",
     "~/Library/Preferences/com.inkle.inky.helper.plist",
     "~/Library/Preferences/com.inkle.inky.plist",
     "~/Library/Saved Application State/com.inkle.inky.savedState",
-    "~/Library/Logs/Inky",
   ]
 end

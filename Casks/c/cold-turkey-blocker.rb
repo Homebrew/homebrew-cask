@@ -19,10 +19,10 @@ cask "cold-turkey-blocker" do
               "launchkeep.cold-turkey-all-users",
             ],
             pkgutil:   [
-              "com.getcoldturkey.coldturkeyblocker",
               "com.getcoldturkey.blocker-chrome-ext",
               "com.getcoldturkey.blocker-edge-ext",
               "com.getcoldturkey.blocker-firefox-ext",
+              "com.getcoldturkey.coldturkeyblocker",
             ]
 
   zap trash: [

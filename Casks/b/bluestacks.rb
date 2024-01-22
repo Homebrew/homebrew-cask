@@ -20,8 +20,8 @@ cask "bluestacks" do
   app "BlueStacks X.app"
 
   zap trash: [
-        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bluestacks.bluestacks.sfl*",
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bluestacks.bluestacks-support-tool.sfl*",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.bluestacks.bluestacks.sfl*",
         "~/Library/BlueStacks",
         "~/Library/Caches/com.bluestacks.BlueStacks",
         "~/Library/Caches/com.bluestacks.BlueStacks-Support-Tool",

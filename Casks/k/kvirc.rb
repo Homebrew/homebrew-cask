@@ -17,8 +17,8 @@ cask "kvirc" do
   app "KVIrc.app"
 
   zap trash: [
+    "~/.kvirc*.rc",
     "~/Library/Preferences/com.kvirc.kvirc.plist",
     "~/Library/Saved Application State/com.kvirc.kvirc.savedState",
-    "~/.kvirc*.rc",
   ]
 end

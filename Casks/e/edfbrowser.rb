@@ -19,8 +19,8 @@ cask "edfbrowser" do
   app "EDFbrowser.app"
 
   zap trash: [
+    "~/.EDFbrowser",
     "~/Library/Preferences/net.teuniz.EDFbrowser.plist",
     "~/Library/Saved Application State/net.teuniz.EDFbrowser.savedState",
-    "~/.EDFbrowser",
   ]
 end

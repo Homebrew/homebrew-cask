@@ -17,7 +17,7 @@ cask "empoche" do
 
   zap trash: [
     "~/Library/Application Support/empoche",
-    "~/Library/Saved Application State/com.empoche.app.savedState",
     "~/Library/Preferences/com.empoche.app.plist",
+    "~/Library/Saved Application State/com.empoche.app.savedState",
   ]
 end

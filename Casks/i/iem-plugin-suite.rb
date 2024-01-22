@@ -18,10 +18,10 @@ cask "iem-plugin-suite" do
   pkg "IEMPluginSuite_v#{version}.pkg"
 
   uninstall pkgutil: [
-    "at.iem.pkg.IEMPluginSuiteVST",
-    "at.iem.pkg.IEMPluginSuiteVST3",
     "at.iem.pkg.IEMPluginSuiteLV2",
     "at.iem.pkg.IEMPluginSuiteStandalones",
+    "at.iem.pkg.IEMPluginSuiteVST",
+    "at.iem.pkg.IEMPluginSuiteVST3",
   ]
 
   zap trash: "~/Library/Application Support/IEMAudioPlugins"

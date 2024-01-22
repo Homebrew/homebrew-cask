@@ -23,8 +23,8 @@ cask "loginputmac" do
 
   zap trash: [
     "~/Documents/落格输入法",
-    "~/Library/Application Support/LogInputMac#{version.major}",
     "~/Library/Application Support/com.logcg.inputmethod.LogInputMac#{version.major}",
+    "~/Library/Application Support/LogInputMac#{version.major}",
     "~/Library/Caches/com.logcg.inputmethod.LogInputMac#{version.major}",
     "~/Library/HTTPStorages/com.logcg.inputmethod.LogInputMac#{version.major}",
     "~/Library/Preferences/com.logcg.inputmethod.LogInputMac#{version.major}.plist",

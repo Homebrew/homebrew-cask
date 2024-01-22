@@ -19,7 +19,7 @@ cask "clocker" do
     "~/Library/Application Scripts/com.abhishek.Clocker",
     "~/Library/Containers/com.abhishek.Clocker",
     "~/Library/Preferences/com.abhishek.Clocker.plist",
-    "~/Library/Preferences/com.abhishek.ClockerHelper.plist",
     "~/Library/Preferences/com.abhishek.Clocker.prefs",
+    "~/Library/Preferences/com.abhishek.ClockerHelper.plist",
   ]
 end

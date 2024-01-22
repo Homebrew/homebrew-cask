@@ -15,9 +15,9 @@ cask "ccleaner" do
   pkg "Install CCleaner.pkg"
 
   uninstall launchctl: [
+              "com.piriform.ccleaner (com.piriform.CCleaner)",
               "com.piriform.CCleaner",
               "com.piriform.ccleaner.CCleanerAgent",
-              "com.piriform.ccleaner (com.piriform.CCleaner)",
               "com.piriform.ccleaner.engine.xpc",
               "com.piriform.ccleaner.services.submit",
               "com.piriform.ccleaner.services.xpc",
@@ -30,6 +30,7 @@ cask "ccleaner" do
             delete:    "/Library/PrivilegedHelperTools/com.piriform.ccleaner.CCleanerAgent"
 
   zap trash: [
+    "/Users/Shared/CCleaner",
     "~/Library/Application Support/CCleaner",
     "~/Library/Caches/com.piriform.ccleaner",
     "~/Library/Cookies/com.piriform.ccleaner.binarycookies",
@@ -37,6 +38,5 @@ cask "ccleaner" do
     "~/Library/HTTPStorages/com.piriform.ccleaner.binarycookies",
     "~/Library/Preferences/com.piriform.ccleaner.plist",
     "~/Library/Saved Application State/com.piriform.ccleaner.savedState",
-    "/Users/Shared/CCleaner",
   ]
 end

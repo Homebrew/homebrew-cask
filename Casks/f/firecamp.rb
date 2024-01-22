@@ -16,8 +16,8 @@ cask "firecamp" do
   app "Firecamp.app"
 
   zap trash: [
+    "~/.firecamp",
     "~/Library/Application Support/firecamp",
     "~/Library/Preferences/com.firecamp.app.plist",
-    "~/.firecamp",
   ]
 end

@@ -20,8 +20,8 @@ cask "monodraw" do
 
   zap trash: [
     "~/Library/Application Support/com.helftone.monodraw",
-    "~/Library/Caches/com.helftone.monodraw",
     "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/com.helftone.monodraw.help*",
+    "~/Library/Caches/com.helftone.monodraw",
     "~/Library/Preferences/com.helftone.monodraw.plist",
   ]
 end

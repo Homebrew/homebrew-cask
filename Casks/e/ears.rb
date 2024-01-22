@@ -19,8 +19,8 @@ cask "ears" do
   uninstall launchctl: "com.clickontyler.Ears.Launcher"
 
   zap trash: [
-    "~/Library/Application Support/Ears",
     "~/Library/Application Support/com.clickontyler.Ears",
+    "~/Library/Application Support/Ears",
     "~/Library/Caches/com.clickontyler.Ears",
     "~/Library/HTTPStorages/com.clickontyler.Ears",
     "~/Library/HTTPStorages/com.clickontyler.Ears.binarycookies",

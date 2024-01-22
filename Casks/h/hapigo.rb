@@ -19,8 +19,8 @@ cask "hapigo" do
 
   zap trash: [
     "~/Library/Application Support/Hapigo",
-    "~/Library/Caches/Hapigo",
     "~/Library/Caches/com.xunyong.hapigo",
+    "~/Library/Caches/Hapigo",
     "~/Library/HTTPStorages/com.xunyong.hapigo",
     "~/Library/HTTPStorages/com.xunyong.hapigo.binarycookies",
     "~/Library/Preferences/com.xunyong.hapigo.plist",

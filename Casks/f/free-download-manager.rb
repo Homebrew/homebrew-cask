@@ -31,8 +31,8 @@ cask "free-download-manager" do
         "~/Library/Application Support/Softdeluxe/Free Download Manager",
         "~/Library/Caches/org.freedownloadmanager.fdm#{version.major}",
         "~/Library/Caches/Softdeluxe/Free Download Manager",
-        "~/Library/Preferences/org.freedownloadmanager.fdm#{version.major}.plist",
         "~/Library/Preferences/com.softdeluxe.Free Download Manager.plist",
+        "~/Library/Preferences/org.freedownloadmanager.fdm#{version.major}.plist",
         "~/Library/Saved Application State/org.freedownloadmanager.fdm#{version.major}.savedState",
       ],
       rmdir: [

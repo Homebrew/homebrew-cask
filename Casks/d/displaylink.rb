@@ -59,8 +59,8 @@ cask "displaylink" do
   uninstall launchctl: [
               "73YQY62QM3.com.displaylink.DisplayLinkAPServer",
               "com.displaylink.displaylinkmanager",
-              "com.displaylink.useragent-prelogin",
               "com.displaylink.useragent",
+              "com.displaylink.useragent-prelogin",
             ],
             quit:      "DisplayLinkUserAgent",
             pkgutil:   "com.displaylink.*",

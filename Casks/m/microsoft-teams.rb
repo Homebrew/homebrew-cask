@@ -49,8 +49,8 @@ cask "microsoft-teams" do
             delete:    [
               "/Applications/Microsoft Teams (work or school).app",
               "/Library/Application Support/Microsoft/TeamsUpdaterDaemon",
-              "/Library/Logs/Microsoft/Teams",
               "/Library/Logs/Microsoft/MSTeams",
+              "/Library/Logs/Microsoft/Teams",
               "/Library/Preferences/com.microsoft.teams.plist",
             ]
 
@@ -69,8 +69,8 @@ cask "microsoft-teams" do
         "~/Library/Group Containers/*.com.microsoft.teams",
         "~/Library/HTTPStorages/com.microsoft.teams",
         "~/Library/HTTPStorages/com.microsoft.teams.binarycookies",
-        "~/Library/Logs/Microsoft Teams",
         "~/Library/Logs/Microsoft Teams Helper (Renderer)",
+        "~/Library/Logs/Microsoft Teams",
         "~/Library/Preferences/com.microsoft.teams.plist",
         "~/Library/Saved Application State/com.microsoft.teams.savedState",
         "~/Library/Saved Application State/com.microsoft.teams2.savedState",

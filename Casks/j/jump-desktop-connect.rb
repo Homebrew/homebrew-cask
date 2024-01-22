@@ -16,15 +16,15 @@ cask "jump-desktop-connect" do
 
   uninstall launchctl: [
               "application.com.p5sys.jump.connect.*",
-              "com.p5sys.jump.connect.service",
               "com.p5sys.jump.connect.agent",
+              "com.p5sys.jump.connect.service",
             ],
             signal:    ["QUIT", "com.p5sys.jump.connect"],
             pkgutil:   "com.p5sys.jump.connect",
             delete:    "/Library/Application Support/Jump Desktop/Connect/sharedconfig.plist",
             rmdir:     [
-              "/Library/Application Support/Jump Desktop/Connect/",
               "/Library/Application Support/Jump Desktop",
+              "/Library/Application Support/Jump Desktop/Connect/",
             ]
 
   zap trash: [
