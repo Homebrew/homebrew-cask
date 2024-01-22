@@ -1,6 +1,6 @@
 cask "raspberry-pi-imager" do
   version "1.8.5"
-  sha256 "55ee320bfc56c0a4d396bede83c7f2bd0b46582227ece2038872330ca6104f6e"
+  sha256 "154a101fd6cfeb0b92a1d53ccaba047a9cd7e2fddfef3988178952416e940681"
 
   url "https://github.com/raspberrypi/rpi-imager/releases/download/v#{version}/Raspberry.Pi.Imager.#{version}.dmg",
       verified: "github.com/raspberrypi/rpi-imager/"
