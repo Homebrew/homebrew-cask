@@ -16,5 +16,5 @@ cask "lyricsfinder" do
 
   app "LyricsFinder.app"
 
-  zap trash: ""
+  zap trash: "~/Library/Preferences/com.mediahuman.Lyrics Finder.plist"
 end
