@@ -3,7 +3,7 @@ cask "lyricsfinder" do
   sha256 :no_check
 
   url "https://www.mediahuman.com/download/LyricsFinder.dmg"
-  name "LyricsFinder"
+  name "Lyrics Finder"
   desc "Free software application that can help you find and add missing lyrics"
   homepage "https://www.mediahuman.com/lyrics-finder"
 
