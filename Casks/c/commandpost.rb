@@ -16,8 +16,8 @@ cask "commandpost" do
     end
   end
   on_big_sur :or_newer do
-    version "1.4.25"
-    sha256 "7682d43791963d818f3c2a27e2e05a56ab804ba9ccd4578d1992c022907acc65"
+    version "1.4.26"
+    sha256 "a12f8fd6dc3be8510b9603bcaba98aa7139f3c72229d96f5f7ef7a70c8b2ff30"
   end
 
   url "https://github.com/CommandPost/CommandPost/releases/download/#{version}/CommandPost_#{version}.dmg",
