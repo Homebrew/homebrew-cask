@@ -4,7 +4,7 @@ cask "lyricsfinder" do
 
   url "https://www.mediahuman.com/download/LyricsFinder.dmg"
   name "Lyrics Finder"
-  desc "Free software application that can help you find and add missing lyrics"
+  desc "Find and download song lyrics"
   homepage "https://www.mediahuman.com/lyrics-finder"
 
   livecheck do
