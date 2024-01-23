@@ -16,7 +16,7 @@ cask "jasp" do
     regex(/href=.*?JASP[._-]v?(\d+(?:\.\d+)+)[._-]macOS[._-]#{arch}_2\.dmg/i)
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "JASP.app"
 
