@@ -1,8 +1,9 @@
 cask "mylio" do
-  version "24.1.7710"
+  version "24.1.7711"
   sha256 :no_check
 
-  url "https://download.mylio.com/Mylio.dmg"
+  url "https://myliodownloads.com/Mylio.dmg",
+      verified: "myliodownloads.com/"
   name "Mylio"
   desc "Photo organizer"
   homepage "https://mylio.com/"
