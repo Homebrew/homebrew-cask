@@ -1,12 +1,11 @@
 cask "caffeine" do
-  version "1.1.3"
-  sha256 "240e5ab832a25ed0af43aeffd1d66dc663dfea7c2525d918c214d6107981a03b"
+  version "1.4.2"
+  sha256 :no_check
 
-  url "https://github.com/IntelliScape/caffeine/releases/download/#{version}/Caffeine.dmg",
-      verified: "github.com/IntelliScape/caffeine/"
+  url "https://www.caffeine-app.net/download/sonoma/"
   name "Caffeine"
   desc "Utility that prevents the system from going to sleep"
-  homepage "https://intelliscapesolutions.com/apps/caffeine"
+  homepage "https://www.caffeine-app.net/"
 
   conflicts_with cask: "domzilla-caffeine"
 
@@ -20,8 +19,4 @@ cask "caffeine" do
     "~/Library/HTTPStorages/com.intelliscapesolutions.caffeine.binarycookies",
     "~/Library/Preferences/com.intelliscapesolutions.caffeine.plist",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
