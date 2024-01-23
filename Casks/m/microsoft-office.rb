@@ -1,6 +1,6 @@
 cask "microsoft-office" do
-  version "16.80.23121017"
-  sha256 "96fea841201602c82b6ba91ebf841be5c6b58d5a2caf0ff388de354b9d8a2fb1"
+  version "16.81.24011420"
+  sha256 "b7f7453191df5429e08e7577866b10f5e4fc641f98dc894fb344eb68e53b203e"
 
   url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_365_and_Office_#{version}_Installer.pkg"
   name "Microsoft Office"
