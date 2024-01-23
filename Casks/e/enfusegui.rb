@@ -1,6 +1,6 @@
 cask "enfusegui" do
-  version "3.24.0"
-  sha256 "5b85bd7b4e4f57f1ccf429881fe7eebcf895f43dd7d6ea61b48a9f152ec5302f"
+  version "3.24.1"
+  sha256 "8cb4d1abbf38f20ed0d750921237279bd3478ea3702bfe24fc2f864b2ce07896"
 
   url "https://swipeware.com/apps/enfusegui/v#{version.major}/EnfuseGUI-#{version}.dmg"
   name "EnfuseGUI"
