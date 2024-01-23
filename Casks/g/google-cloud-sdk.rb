@@ -1,9 +1,9 @@
 cask "google-cloud-sdk" do
   arch arm: "arm", intel: "x86_64"
 
-  version "460.0.0"
-  sha256 arm:   "5774f9ed194dcaf4ca6806d7cc5c7db9ec77e6c45c3c0e34a69d833abca16e72",
-         intel: "5c9b84fa5aed4412db2e67824329abde6a1146c21363412e5e140f5637264239"
+  version "461.0.0"
+  sha256 arm:   "464e04fbbea1d619fa06c5468b97384aaf5ed67d1efbb5da410711ed28ef5fdf",
+         intel: "d4f2c74d90b207501c1a51492a0680cd9232959ea12a3b9e83859ae03d6997c2"
 
   url "https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-#{version}-darwin-#{arch}.tar.gz"
   name "Google Cloud SDK"
