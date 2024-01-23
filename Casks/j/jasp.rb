@@ -2,21 +2,26 @@ cask "jasp" do
   arch arm: "arm64", intel: "x86_64"
   livecheck_folder = on_arch_conditional arm: "-apple-silicon"
 
-  version "0.18.3.0"
-  sha256 arm:   "604c9eb6384274d8c52b6c1eb60700e4667255bdf89349a2bec9f01462f09d37",
-         intel: "26e8cc9f9db6752e4ecc8124f87ca6ff608bf5de5a703a06e1c896358bb5b566"
+  version "0.18.3.0,2"
+  sha256 arm:   "9d701af21055dca67a98fc8269720d6d23bcfb82cceb3fa8f4774cb74d197bbb",
+         intel: "37c10c0fb3c53b1b01fc4cf696b21273a62b7eb224eaa2ef0632b36cbcfa94ae"
 
-  url "https://static.jasp-stats.org/JASP-#{version}-macOS-#{arch}.dmg"
+  url "https://static.jasp-stats.org/JASP-#{version.csv.first}-macOS-#{arch}#{"_#{version.csv.second}" if version.csv.second}.dmg"
   name "JASP"
   desc "Statistical analysis application"
   homepage "https://jasp-stats.org/"
 
   livecheck do
     url "https://jasp-stats.org/thank-you-for-downloading-jasp-macos#{livecheck_folder}/"
-    regex(/href=.*?JASP[._-]v?(\d+(?:\.\d+)+)[._-]macOS[._-]#{arch}\.dmg/i)
+    regex(/href=.*?JASP[._-]v?(\d+(?:\.\d+)+)[._-]macOS[._-]#{arch}(?:_(\d+))?\.dmg/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map do |match|
+        (match.length > 1) ? "#{match[0]},#{match[1]}" : match[0]
+      end
+    end
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :monterey"
 
   app "JASP.app"
 
