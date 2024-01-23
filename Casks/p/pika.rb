@@ -8,6 +8,14 @@ cask "pika" do
   desc "Colour picker for colours onscreen"
   homepage "https://superhighfives.com/pika"
 
+  livecheck do
+    url "https://superhighfives.com/releases/pika"
+    strategy :sparkle, &:short_version
+  end
+
+  auto_updates true
+  depends_on macos: ">= :catalina"
+
   app "Pika.app"
 
   zap trash: [
