@@ -9,8 +9,8 @@ cask "bitbox" do
   homepage "https://bitbox.swiss/"
 
   livecheck do
-    url "https://bitbox.swiss/de/download/"
-    regex(%r{href=.*?/BitBox[._-]?(\d+(?:.\d+)+)[._-]macOS\.zip}i)
+    url :url
+    strategy :github_latest
   end
 
   app "BitBox.app"
