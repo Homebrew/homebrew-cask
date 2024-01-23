@@ -10,12 +10,21 @@ cask "tastytrade" do
   desc "Desktop trading platform"
   homepage "https://tastytrade.com/technology/"
 
+  # The version information is found in a random JSON file, which is referenced
+  # from another JSON file. We can't tell which file will contain the version
+  # information, so we check each until we find a match. As of writing, the
+  # first JSON file contains the version information but this check could
+  # involve further requests if the order of the JSON files changes or the
+  # structure of the target JSON file changes. The latter would cause the check
+  # to fetch all the JSON files before failing, which isn't ideal.
   livecheck do
     url "https://tastytrade.com/page-data/technology/page-data.json"
     strategy :json do |json|
-      static_hashes = json["staticQueryHashes"]
+      requests = 0
+      version = json["staticQueryHashes"]&.each do |static_hash|
+        requests += 1
+        break if requests > 4
 
-      version = static_hashes.map do |static_hash|
         content = Homebrew::Livecheck::Strategy.page_content("https://tastytrade.com/page-data/sq/d/#{static_hash}.json")
         next if content.blank? || content[:content].blank?
 
