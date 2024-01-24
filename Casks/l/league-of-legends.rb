@@ -30,8 +30,8 @@ cask "league-of-legends" do
         "~/Library/Saved Application State/com.riotgames.LeagueofLegends.LeagueClientUx.savedState",
       ],
       rmdir: [
+        "/Users/Shared/Riot Games",
         "~/Documents/League of Legends",
         "~/Library/Application Support/Riot Games",
-        "/Users/Shared/Riot Games",
       ]
 end

@@ -69,7 +69,7 @@ cask "microsoft-auto-update" do
         "~/Library/Saved Application State/com.microsoft.autoupdate2.savedState",
       ],
       rmdir: [
-        "~/Library/Caches/Microsoft/uls",
         "~/Library/Caches/Microsoft",
+        "~/Library/Caches/Microsoft/uls",
       ]
 end
