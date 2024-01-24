@@ -17,4 +17,20 @@ cask "cernbox" do
   uninstall signal:     ["TERM", "ch.cern.cernbox"],
             login_item: "cernbox",
             pkgutil:    "ch.cern.cernbox"
+
+  zap trash: [
+    "~/Library/Application Scripts/ch.cern.cernbox",
+    "~/Library/Application Scripts/ch.cern.cernbox.FinderSyncExt",
+    "~/Library/Containers/ch.cern.cernbox.FinderSyncExt",
+    "~/Library/Group Containers/ch.cern.cernbox",
+    "~/Library/HTTPStorages/ch.cern.cernbox",
+    "~/Library/LaunchAgents/ch.cern.cernbox.plist",
+    "~/Library/Preferences/cernbox",
+    "~/Library/Preferences/ch.cern.cernbox.plist",
+    "~/Library/Saved Application State/ch.cern.cernbox.savedState",
+  ]
+
+  caveats do
+    requires_rosetta
+  end
 end
