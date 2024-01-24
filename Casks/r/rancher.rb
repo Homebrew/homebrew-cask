@@ -1,9 +1,9 @@
 cask "rancher" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "1.12.1"
-  sha256 arm:   "00b4e6ebe8979d6d4bb0ef01e9c2dcb1290537a044d4cea4fbce70d19751c456",
-         intel: "70abf99654185d201573af993c22ca14e70838862904e818cb4b5e0d0bb6c165"
+  version "1.12.2"
+  sha256 arm:   "9ab8131239a34ff880b79617f71254a502fb30a3dd7908b13533b84e9698a499",
+         intel: "299034631ee0faa747f55b2ca7d6682419a15563a706ef8a2415e8638108fd35"
 
   url "https://github.com/rancher-sandbox/rancher-desktop/releases/download/v#{version}/Rancher.Desktop-#{version}.#{arch}.dmg",
       verified: "github.com/rancher-sandbox/rancher-desktop/"
