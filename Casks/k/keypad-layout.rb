@@ -1,6 +1,6 @@
 cask "keypad-layout" do
-  version "1.11"
-  sha256 "0d4b75ee6077eed9b5eab03f14699d8a1d635d54ee6cbbdb5d5083c1cdd08d23"
+  version "1.12"
+  sha256 "3c4ec7dbe0d50918b4bfb126347d33e29bd7af0a5ae31aa48d68eb91c03e4ad0"
 
   url "https://github.com/janten/keypad-layout/releases/download/#{version}/Keypad-Layout.zip"
   name "Keypad Layout"
