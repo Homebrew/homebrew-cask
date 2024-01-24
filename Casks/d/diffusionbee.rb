@@ -11,6 +11,8 @@ cask "diffusionbee" do
   desc "Run Stable Diffusion locally"
   homepage "https://diffusionbee.com/"
 
+  depends_on macos: ">= :ventura"
+
   app "DiffusionBee.app"
 
   zap trash: [
