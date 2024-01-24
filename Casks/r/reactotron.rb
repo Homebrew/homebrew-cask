@@ -1,9 +1,9 @@
 cask "reactotron" do
   arch arm: "-arm64"
 
-  version "3.3.0"
-  sha256 arm:   "964cc46e43fd5e7db9151ab8b8e7ab8746f05ced9c7aa6276af35094ad7fd7c0",
-         intel: "dd8474d47c2512ba43eb99c68b45d36dea6becd90386343ae22227b29131e760"
+  version "3.3.1"
+  sha256 arm:   "b90481bee680d2a9456721936642388e8fd04fd5c83f0b08b2f5984f31fe4533",
+         intel: "dabd5791ab259e3c962f889608d69eabbba84b87daa72f2d933911c7c655163c"
 
   url "https://github.com/infinitered/reactotron/releases/download/reactotron-app%40#{version}/Reactotron-#{version}#{arch}-mac.zip"
   name "Reactotron"
