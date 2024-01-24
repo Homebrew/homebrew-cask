@@ -9,7 +9,7 @@ cask "syncplay" do
   homepage "https://syncplay.pl/"
 
   livecheck do
-    url :stable
+    url :url
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
