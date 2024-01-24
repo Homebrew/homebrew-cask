@@ -16,8 +16,8 @@ cask "quiterss" do
 
   zap delete: [
     "~/.config/QuiteRss",
-    "~/Library/Caches/QuiteRss",
     "~/Library/Application Support/QuiteRss",
+    "~/Library/Caches/QuiteRss",
     "~/Library/Preferences/org.quiterss.QuiteRSS.plist",
   ]
 end
