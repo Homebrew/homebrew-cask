@@ -12,7 +12,13 @@ cask "file-juicer" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :high_sierra"
 
   app "File Juicer.app"
+
+  zap trash: [
+    "~/Library/HTTPStorages/com.echoone.FileJuicer",
+    "~/Library/Preferences/com.echoone.FileJuicer.plist",
+    "~/Library/Saved Application State/com.echoone.FileJuicer.savedState",
+  ]
 end
