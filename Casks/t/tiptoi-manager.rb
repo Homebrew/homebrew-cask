@@ -5,7 +5,7 @@ cask "tiptoi-manager" do
   url "https://cdn.ravensburger.de/db/Installer/tiptoi_Manager_Installer.pkg"
   name "tiptoi Manager"
   desc "Manage the data on children's Ravensburger tip toi audio pen"
-  homepage "https://www.ravensburger.de/entdecken/ravensburger-marken/tiptoi/tiptoi-manager/index.html"
+  homepage "https://service.ravensburger.de/tiptoi%25C2%25AE/tiptoi_Manager"
 
   livecheck do
     url :url
