@@ -1,7 +1,7 @@
 cask "jaikoz" do
   arch arm: "-m1"
 
-  version "11.7,1.0"
+  version "11.8,1.0"
   sha256 :no_check
 
   url "https://www.jthink.net/jaikoz/jsp/manualdownload/jaikoz-osx#{arch}.dmg"
