@@ -12,7 +12,7 @@ cask "ganttproject" do
   homepage "https://www.ganttproject.biz/"
 
   livecheck do
-    url :stable
+    url :url
     strategy :github_latest
   end
 
