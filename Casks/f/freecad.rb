@@ -15,7 +15,7 @@ cask "freecad" do
   # (there's also sometimes a notable gap between the release being created
   # and the homepage being updated), so the `GithubLatest` strategy is necessary.
   livecheck do
-    url :stable
+    url :url
     strategy :github_latest
   end
 
