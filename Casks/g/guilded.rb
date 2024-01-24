@@ -23,4 +23,11 @@ cask "guilded" do
     "~/Library/Preferences/com.electron.guilded.plist",
     "~/Library/Saved Application State/com.electron.guilded.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+    <<~EOS
+      Please see https://www.guilded.gg/Guilded-Official/channels/b78e9e5f-4750-4466-a269-a8bc08f3e120/forums/489565095 for ARM build support.
+    EOS
+  end
 end
