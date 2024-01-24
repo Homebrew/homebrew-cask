@@ -9,7 +9,7 @@ cask "outline-manager" do
   homepage "https://www.getoutline.org/"
 
   livecheck do
-    url :stable
+    url :url
     regex(/(?:manager[._-])?v?(\d+(?:\.\d+)+)/i)
     strategy :github_latest
   end
