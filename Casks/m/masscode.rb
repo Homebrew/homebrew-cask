@@ -12,7 +12,7 @@ cask "masscode" do
   homepage "https://masscode.io/"
 
   livecheck do
-    url :stable
+    url :url
     regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
