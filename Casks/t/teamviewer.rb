@@ -53,8 +53,8 @@ cask "teamviewer" do
     pkg "TeamViewer.pkg"
   end
   on_monterey :or_newer do
-    version "15.49.3"
-    sha256 "24456deea06173fcbfee578fa2d92db2bb8f28af12e5b72df371fd89b12826a5"
+    version "15.50.5"
+    sha256 "8de9e8f3045de959e0f368b649265ffa06178c3c3420b002292d6d60e97c0979"
 
     livecheck do
       url "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=#{version}&os=macos&osversion=12.7&type=1&channel=1"
