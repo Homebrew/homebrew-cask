@@ -139,6 +139,11 @@ module Check
                         .grep_v(/\.\d+\Z/)
 
     missing_running_apps = running_apps - Array(uninstall_directives[:quit])
+
+    # Some applications may launch a browser session after install
+    # Skip Firefox, unless the cask is a Firefox cask
+    missing_running_apps.delete("org.mozilla.firefox") unless cask.token.include?("firefox")
+
     if missing_running_apps.any?
       message = "Some applications are still running, add them to #{Formatter.identifier("uninstall quit:")}\n"
       message += missing_running_apps.join("\n")
