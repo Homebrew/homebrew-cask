@@ -27,8 +27,8 @@ cask "surge" do
             delete:    "/Library/PrivilegedHelperTools/com.nssurge.surge-mac.helper"
 
   zap delete: [
-    "~/Library/Application Support/Surge",
     "~/Library/Application Support/com.nssurge.surge-mac",
+    "~/Library/Application Support/Surge",
     "~/Library/Caches/com.nssurge.surge-mac",
     "~/Library/Caches/com.nssurge.surge-mac.plist",
     "~/Library/HTTPStorages/com.nssurge.surge-mac",
