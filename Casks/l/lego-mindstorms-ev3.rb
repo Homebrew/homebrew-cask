@@ -29,8 +29,8 @@ cask "lego-mindstorms-ev3" do
   ]
 
   zap pkgutil: [
-    "com.ni.pkg.legodriver",
     "com.microsoft.silverlight.plugin",
+    "com.ni.pkg.legodriver",
     "com.ximian.mono-*",
   ]
 end
