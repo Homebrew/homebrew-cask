@@ -26,8 +26,8 @@ cask "outset" do
             delete:    "/usr/local/outset"
 
   zap trash: [
-    "/Library/LaunchAgents/io.macadmins.outset.login.plist",
     "/Library/LaunchAgents/io.macadmins.outset.login-window.plist",
+    "/Library/LaunchAgents/io.macadmins.outset.login.plist",
     "/Library/LaunchAgents/io.macadmins.outset.on-demand.plist",
     "/Library/LaunchDaemons/io.macadmins.outset.boot.plist",
     "/Library/LaunchDaemons/io.macadmins.outset.cleanup.plist",
