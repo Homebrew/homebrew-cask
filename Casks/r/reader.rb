@@ -9,7 +9,7 @@ cask "reader" do
   homepage "https://readwise.io/read/"
 
   livecheck do
-    url :stable
+    url :url
     strategy :github_latest
   end
 
