@@ -28,9 +28,9 @@ cask "mamp" do
             delete:  "/Applications/MAMP"
 
   zap delete: [
+        "/Library/Application Support/appsolute",
         "/Library/LaunchDaemons/de.appsolute.mampprohelper.plist",
         "/Library/PrivilegedHelperTools/de.appsolute.mampprohelper",
-        "/Library/Application Support/appsolute",
       ],
       trash:  [
         "~/Library/Application Support/appsolute",
