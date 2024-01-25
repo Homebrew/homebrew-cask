@@ -1,6 +1,6 @@
 cask "adrive" do
-  version "4.11.0"
-  sha256 "8ed69cc6855d65cdd437c023c931fd30175fbdbb76fb0c1f6a548c34e9281f09"
+  version "4.12.0"
+  sha256 "c6265bce6b6e28568359e09e0d069795364e9f42e15fdc4a7d8b8e437991c917"
 
   url "https://cdn.aliyundrive.net/downloads/apps/desktop/aDrive-#{version}.dmg",
       verified: "cdn.aliyundrive.net/"
