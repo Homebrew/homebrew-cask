@@ -1,6 +1,6 @@
 cask "ableton-live-standard" do
-  version "11.3.20"
-  sha256 "e1b8afe2994e018998cfe2cd4c4fc198751fe33ff0044e03aa8876f2067abc6d"
+  version "11.3.21"
+  sha256 "b9f245b0bc6860f60c17b236a726c614d2512aece4f804d76d58d569a8144176"
 
   url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_standard_#{version}_universal.dmg"
   name "Ableton Live Standard"
