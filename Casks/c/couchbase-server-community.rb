@@ -1,6 +1,6 @@
 cask "couchbase-server-community" do
-  version "7.2.2"
-  sha256 "1129a710cd453deacb64479129217dffe5b1a778d5e934c602b8628ad796a55a"
+  version "7.2.4"
+  sha256 "686aa84ce001f876a93f1bb1de711bd04f45b2df89a7870a19fb6ed830372e7a"
 
   url "https://packages.couchbase.com/releases/#{version}/couchbase-server-community_#{version}-macos_x86_64.dmg"
   name "Couchbase Server"
