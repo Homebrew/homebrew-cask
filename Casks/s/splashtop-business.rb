@@ -15,8 +15,9 @@ cask "splashtop-business" do
 
   pkg "Splashtop Business.pkg"
 
-  uninstall quit:    "com.splashtop.stb.macosx",
-            pkgutil: [
+  uninstall launchctl: "com.splashtop.stb.macosx.helper.autoupdate",
+            quit:      "com.splashtop.stb.macosx",
+            pkgutil:   [
               "com.splashtop.splashtopBusiness.*",
               "com.splashtop.stb.*",
             ]
