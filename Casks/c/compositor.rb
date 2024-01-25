@@ -1,6 +1,6 @@
 cask "compositor" do
-  version "1.24.0"
-  sha256 "88af9743c727167f2af597dc19a0d14d0277ae2ce2ac8135f115d821971e5720"
+  version "1.25.0"
+  sha256 "112a63b84fa8722d0ff53262d84e7bd09e6a232a689b27f446146a138e2de49f"
 
   url "https://compositorapp.com/updates/Compositor_#{version}.zip"
   name "Compositor"
