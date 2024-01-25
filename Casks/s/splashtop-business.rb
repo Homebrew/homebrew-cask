@@ -1,6 +1,6 @@
 cask "splashtop-business" do
-  version "3.6.2.1"
-  sha256 "5dfaf961aff02a992109a555626a5b1167661e4defd4cc0c56f331ccb0e9eb03"
+  version "3.6.4.0"
+  sha256 "97f48d2fa8793933e9152de778ba8f2f07d2e3a1fc0668d1a315322147ea2f30"
 
   url "https://d17kmd0va0f0mp.cloudfront.net/macclient/STB/Splashtop_Business_Mac_INSTALLER_v#{version}.dmg",
       verified: "d17kmd0va0f0mp.cloudfront.net/macclient/STB/"
@@ -15,8 +15,9 @@ cask "splashtop-business" do
 
   pkg "Splashtop Business.pkg"
 
-  uninstall quit:    "com.splashtop.stb.macosx",
-            pkgutil: [
+  uninstall launchctl: "com.splashtop.stb.macosx.helper.autoupdate",
+            quit:      "com.splashtop.stb.macosx",
+            pkgutil:   [
               "com.splashtop.splashtopBusiness.*",
               "com.splashtop.stb.*",
             ]
