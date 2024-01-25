@@ -1,5 +1,5 @@
 cask "droidcam-obs" do
-  version "2.3.0"
+  version "2.3.1"
   sha256 "6ab3836026afadeab2780306b550d7b01e7abe649b3ecac9b34d37bb2e3c16b2"
 
   url "https://github.com/dev47apps/droidcam-obs-plugin/releases/download/#{version}/DroidCamOBS_#{version}_macos.pkg",
