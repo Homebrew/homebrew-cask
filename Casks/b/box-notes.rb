@@ -8,12 +8,8 @@ cask "box-notes" do
   desc "Online notes for secure, real-time collaboration"
   homepage "https://www.box.com/resources/downloads/notes"
 
-  livecheck do
-    url "https://notes.services.box.com/updates/latest?platform=darwin&v=#{version.major}.0.0"
-    strategy :json do |json|
-      json["version"]
-    end
-  end
+  # https://support.box.com/hc/en-us/articles/5504613283859-Box-Notes-Desktop-app-EOL-on-June-15-2022
+  deprecate! date: "2024-01-24", because: :discontinued
 
   app "Box Notes.app"
 
