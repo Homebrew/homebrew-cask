@@ -8,8 +8,8 @@ cask "raycast" do
     end
   end
   on_monterey :or_newer do
-    version "1.66.0"
-    sha256 "bc17e4fa163073bb3cdb574edade3ab8c749ba22ab8b561dfd916d53e08cea1d"
+    version "1.66.1"
+    sha256 "9f50c0dd289f7e64cc921c2fe0e426bf00dad4ca393ceda435f91bffda75bd49"
 
     livecheck do
       url :url
