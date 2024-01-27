@@ -1,9 +1,9 @@
 cask "altair-graphql-client" do
   arch arm: "arm64", intel: "x64"
 
-  version "6.1.0"
-  sha256 arm:   "ddae2a85137610685c30da5a8be128f2ebe3df9f66565fad409512e7039b6704",
-         intel: "1e64488af6e706e3a9e9a2864d390995de39a475a610360c953772e8663ccbf1"
+  version "6.2.0"
+  sha256 arm:   "9f1eee491d293d731c8cb7db3dcc9fd306a22985571edae35bf64f331094fece",
+         intel: "7b742b513c07d449e951d8a27a9a3987ba38d244d1e49a847040ae553e49838e"
 
   url "https://github.com/imolorhe/altair/releases/download/v#{version}/altair_#{version}_#{arch}_mac.zip",
       verified: "github.com/imolorhe/altair/"
