@@ -1,5 +1,5 @@
 cask "cheetah3d" do
-  version "7.5.3"
+  version "8.0"
   sha256 :no_check
 
   url "https://www.cheetah3d.com/download/Cheetah3D.dmg"
@@ -13,4 +13,11 @@ cask "cheetah3d" do
   end
 
   app "Cheetah3D.app"
+
+  zap trash: [
+    "~/Library/Application Support/Cheetah3D",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/de.wengenmayer.cheetah3d.sfl*",
+    "~/Library/HTTPStorages/de.wengenmayer.Cheetah3D",
+    "~/Library/Preferences/de.wengenmayer.Cheetah3D.plist",
+  ]
 end
