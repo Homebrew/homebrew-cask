@@ -3,7 +3,7 @@ cask "jazz2-resurrection" do
   arch arm: "ARM64", intel: "x64"
 
   version "2.5.0"
-  sha256 "748027e79902082d1cd6c969f25f69099d6004666e021d86edbfeb1af40d853d"
+  sha256 "e724d0650032f9272bfc25c512b342fd2c0ed728a3230e0b5bc59f4e6b9bd6f7"
 
   url "https://github.com/deathkiller/jazz2/releases/download/#{version}/Jazz2_#{version}_MacOS.zip",
       verified: "github.com/deathkiller/jazz2/"
