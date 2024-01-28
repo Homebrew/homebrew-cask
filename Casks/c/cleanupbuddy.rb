@@ -4,7 +4,7 @@ cask "cleanupbuddy" do
 
   url "https://sparkle.cleanupbuddy.app/CleanupBuddy-latest.dmg"
   name "CleanupBuddy"
-  desc "Clean Mac's keyboard and trackpad"
+  desc "Clean keyboard and trackpad"
   homepage "https://cleanupbuddy.app/"
 
   livecheck do
