@@ -10,26 +10,20 @@ cask "eloston-chromium" do
     sha256 "895fc268038dec015f19fc78e496577ffa2cd81de56324ca21de134e88f1cd01"
   end
 
-  url "https://github.com/ungoogled-software/ungoogled-chromium-macos/releases/download/#{version.csv.first}_#{arch}__#{version.csv.second}/ungoogled-chromium_#{version.csv.first}_#{arch}-macos.dmg",
+  url "https://github.com/ungoogled-software/ungoogled-chromium-macos/releases/download/#{version.csv.first}__#{version.csv.second}/ungoogled-chromium_#{version.csv.first}_#{arch}-macos.dmg",
       verified: "github.com/ungoogled-software/ungoogled-chromium-macos/"
   name "Ungoogled Chromium"
   desc "Google Chromium, sans integration with Google"
   homepage "https://ungoogled-software.github.io/ungoogled-chromium-binaries/"
 
-  # Releases are separated by architecture, so we have to check multiple recent
-  # releases instead of only the "latest" release.
   livecheck do
     url :url
     regex(/^v?(\d+(?:[.-]\d+)+)(?:[._-]#{arch})?(?:[._-]+?(\d+(?:\.\d+)*))?$/i)
-    strategy :github_releases do |json, regex|
-      json.map do |release|
-        next if release["draft"] || release["prerelease"]
+    strategy :github_latest do |json, regex|
+      match = json["tag_name"]&.match(regex)
+      next if match.blank?
 
-        match = release["tag_name"]&.match(regex)
-        next if match.blank?
-
-        (match.length >= 2) ? "#{match[1]},#{match[2]}" : match[1]
-      end
+      (match.length >= 2) ? "#{match[1]},#{match[2]}" : match[1]
     end
   end
 
