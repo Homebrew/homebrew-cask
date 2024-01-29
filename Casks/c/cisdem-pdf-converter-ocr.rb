@@ -18,7 +18,7 @@ cask "cisdem-pdf-converter-ocr" do
 
   zap trash: [
     "~/Documents/Cisdem PDF Converter OCR",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.cisdem.pdfconverterocr.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.cisdem.pdfconverterocr.sfl*",
     "~/Library/Application Support/com.cisdem.pdfconverterocr",
     "~/Library/Caches/com.cisdem.pdfconverterocr",
     "~/Library/HTTPStorages/com.cisdem.pdfconverterocr",
