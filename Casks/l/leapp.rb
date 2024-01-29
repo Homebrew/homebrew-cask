@@ -3,7 +3,7 @@ cask "leapp" do
 
   version "0.24.4"
   sha256 arm:   "868bd7a168b613289f0ff9aab5afd253a4be6409e5671a7da621788dde3f3e4d",
-         intel: "1f547c90b6863a7fe9e0d8e3462196aa7b0e2e0ce532f83585b0df7c47c24b38"
+         intel: "0ac4901fda14c7f624e6732164576bdb16bc524431de8b659f144a6a760d7e7c"
 
   url "https://asset.noovolari.com/#{version}/Leapp-#{version}#{arch}.dmg",
       verified: "asset.noovolari.com/"
