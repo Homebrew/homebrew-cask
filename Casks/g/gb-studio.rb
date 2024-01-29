@@ -9,4 +9,10 @@ cask "gb-studio" do
   homepage "https://www.gbstudio.dev/"
 
   app "GB Studio.app"
+
+  zap trash: [
+    "~/Library/Application Support/GB Studio",
+    "~/Library/Preferences/dev.gbstudio.gbstudio.plist",
+    "~/Library/Saved Application State/dev.gbstudio.gbstudio.savedState",
+  ]
 end
