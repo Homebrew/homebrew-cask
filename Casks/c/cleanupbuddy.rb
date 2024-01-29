@@ -1,15 +1,15 @@
 cask "cleanupbuddy" do
-  version "1.0"
-  sha256 :no_check
+  version "1.0,9"
+  sha256 "f1250669c3023c4f77e63df456b98533eecf2199d9a651e218001e977749ebb3"
 
-  url "https://sparkle.cleanupbuddy.app/CleanupBuddy-latest.dmg"
+  url "https://sparkle.cleanupbuddy.app/CleanupBuddy_v#{version.csv.first}-#{version.csv.second}.dmg"
   name "CleanupBuddy"
   desc "Clean keyboard and trackpad"
   homepage "https://cleanupbuddy.app/"
 
   livecheck do
     url "https://sparkle.cleanupbuddy.app/appcast.xml"
-    strategy :sparkle, &:short_version
+    strategy :sparkle
   end
 
   auto_updates true
