@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+# rubocop:disable Style/TopLevelMethodDefinition
+
 require "find"
 require "json"
 require "open-uri"
@@ -114,3 +116,5 @@ end.freeze
 Open3.capture2("/usr/bin/pbcopy", stdin_data: "#{CASK_LISTS.join("\n")}\n")
 puts("Copied lists to clipboard. Replace the information in the issue.")
 system("open", ONLINE_ISSUE)
+
+# rubocop:enable Style/TopLevelMethodDefinition
