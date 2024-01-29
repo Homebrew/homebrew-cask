@@ -1,6 +1,6 @@
 cask "gb-studio" do
-  version "3.1.0"
-  sha256 "73d5d487962aab11268d281cad80e8fd42cf08e16e82c527a402acf63703a2ef"
+  version "3.2.0"
+  sha256 "ae43525f08b94b93dc10b3a8593539163858ae13ef657208701213eb5425d426"
 
   url "https://github.com/chrismaltby/gb-studio/releases/download/v#{version}/gb-studio-mac.zip",
       verified: "github.com/chrismaltby/gb-studio/"
@@ -9,4 +9,10 @@ cask "gb-studio" do
   homepage "https://www.gbstudio.dev/"
 
   app "GB Studio.app"
+
+  zap trash: [
+    "~/Library/Application Support/GB Studio",
+    "~/Library/Preferences/dev.gbstudio.gbstudio.plist",
+    "~/Library/Saved Application State/dev.gbstudio.gbstudio.savedState",
+  ]
 end
