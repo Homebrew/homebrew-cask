@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-# rubocop:disable Style/TopLevelMethodDefinition
+# rubocop:disable Style/GlobalVars, Style/TopLevelMethodDefinition
 
 #
 # list_running_app_ids
@@ -19,7 +19,6 @@ require "io/console"
 ### globals
 ###
 
-# rubocop:disable Style/GlobalVars
 $opt_test = nil
 $COLUMNS = IO.console.winsize.last
 
@@ -123,5 +122,4 @@ if $opt_test
 else
   report_apps
 end
-# rubocop:enable Style/GlobalVars
-# rubocop:enable Style/TopLevelMethodDefinition
+# rubocop:enable Style/GlobalVars, Style/TopLevelMethodDefinition
