@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+# rubocop:disable Style/TopLevelMethodDefinition
+
 #
 # generate_cask_token
 #
@@ -433,3 +435,5 @@ if ARGV.length != 1
 end
 
 report
+
+# rubocop:enable Style/TopLevelMethodDefinition

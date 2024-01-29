@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+# rubocop:disable Style/TopLevelMethodDefinition
+
 require "open3"
 require "pathname"
 require "yaml"
@@ -89,3 +91,5 @@ App = Pathname(ARGV[0]).freeze
 
 find_sparkle(App)
 find_electron_builder(App)
+
+# rubocop:enable Style/TopLevelMethodDefinition
