@@ -1,6 +1,6 @@
 cask "wezterm" do
-  version "20240127-113634,bbcac864"
-  sha256 "f47bc29ddcd3cb2211084d0da4ed76528b1154f700e2731076d0fc7568f257ea"
+  version "20240128-202157,1e552d76"
+  sha256 "0cf9e5802a77358ac23f50989bd15b2dffcb3bbf729eb51d69a54edcb1d81fd6"
 
   url "https://github.com/wez/wezterm/releases/download/#{version.csv.first}-#{version.csv.second}/WezTerm-macos-#{version.csv.first}-#{version.csv.second}.zip",
       verified: "github.com/wez/wezterm/"
