@@ -12,7 +12,16 @@ cask "eudic" do
 
   livecheck do
     url "https://www.eudic.net/update/eudic_mac.xml"
-    strategy :sparkle
+    regex(/href=.*?eudicmac\.dmg\?v=(\d+(?:-\d+)+)/i)
+    strategy :sparkle do |item, regex|
+      download_page = Homebrew::Livecheck::Strategy.page_content("https://www.eudic.net/v4/en/app/download")
+      next if download_page[:content].blank?
+
+      match = download_page[:content].match(regex)
+      next if match.blank?
+
+      "#{item.short_version},#{match[1]}"
+    end
   end
 
   depends_on macos: ">= :high_sierra"
