@@ -8,11 +8,6 @@ cask "easydevo" do
   desc "Elegant tool built for coding"
   homepage "https://easydevo.boringboring.design/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
