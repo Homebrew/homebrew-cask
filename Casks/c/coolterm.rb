@@ -2,15 +2,13 @@ cask "coolterm" do
   version "2.1.0.3.0.1282"
   sha256 :no_check
 
-  url "https://freeware.the-meiers.org/CoolTermMac.dmg"
+  url "https://web.archive.org/web/20230330021625/https://freeware.the-meiers.org/CoolTermMac.dmg"
   name "CoolTerm"
   desc "Serial port terminal"
-  homepage "https://freeware.the-meiers.org/"
+  homepage "https://web.archive.org/web/20230330021625/https://freeware.the-meiers.org/"
 
-  livecheck do
-    url "https://freeware.the-meiers.org/version/CoolTerm.ver"
-    regex(/^\s*v?(\d+(?:\.\d+)+)\s*$/i)
-  end
+  # 509 error for the site
+  deprecate! date: "2024-01-24", because: "site is not accessible"
 
   depends_on macos: ">= :mojave"
 
