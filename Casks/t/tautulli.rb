@@ -5,7 +5,7 @@ cask "tautulli" do
   url "https://github.com/Tautulli/Tautulli/releases/download/v#{version}/Tautulli-macos-v#{version}-x64.pkg",
       verified: "github.com/Tautulli/Tautulli/"
   name "Tautulli"
-  desc "Open-source monitoring, analytics and notifications tool for Plex Media Server"
+  desc "Monitoring, analytics and notifications tool for Plex Media Server"
   homepage "https://tautulli.com/"
 
   livecheck do
