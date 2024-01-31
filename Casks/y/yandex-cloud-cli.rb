@@ -8,6 +8,8 @@ cask "yandex-cloud-cli" do
   desc "CLI for Yandex Cloud"
   homepage "https://cloud.yandex.com/docs/cli/"
 
+  # This can return a page with a CAPTCHA instead of the expected content
+  # (e.g. when the check is run in the homebrew/cask CI environment).
   livecheck do
     url "https://cloud.yandex.com/en/docs/cli/release-notes"
     regex(/Version\s+(\d+(?:\.\d+)+)\s+\(/i)
