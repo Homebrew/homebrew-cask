@@ -49,7 +49,6 @@ module Homebrew
       name:         "syntax",
       tap:          tap.name,
       runner:       runner,
-      skip_readall: false,
     }
 
     matrix = [syntax_job]
@@ -64,9 +63,6 @@ module Homebrew
       if cask_jobs.any?
         # If casks were changed, skip `audit` for whole tap.
         syntax_job[:skip_audit] = true
-
-        # If casks were cahnged, skip `readall` in the syntax job.
-        syntax_job[:skip_readall] = true
 
         # The syntax job only runs `style` at this point, which should work on Linux.
         # Running on macOS is currently faster though, since `homebrew/cask` and

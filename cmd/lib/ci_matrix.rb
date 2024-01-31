@@ -176,7 +176,6 @@ module CiMatrix
           audit_args:   audit_args + arch_args,
           fetch_args:   arch_args,
           skip_install: labels.include?("ci-skip-install") || !native_runner_arch || skip_install,
-          skip_readall: !native_runner_arch,
           runner:       runner.fetch(:name),
         }
       end
