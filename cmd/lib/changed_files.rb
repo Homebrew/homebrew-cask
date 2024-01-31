@@ -1,6 +1,12 @@
 # frozen_string_literal: true
 
+require "system_command"
+
 module ChangedFiles
+  # TODO: replace with public API like Utils.safe_popen_read that's less likely to be volatile to changes
+  # see https://github.com/Homebrew/brew/pull/16540#issuecomment-1913737000
+  include SystemCommand::Mixin
+
   def changed_files
     commit_range_start = system_command!("git", args: ["rev-parse", "origin"], chdir: path).stdout.chomp
     commit_range_end = system_command!("git", args: ["rev-parse", "HEAD"], chdir: path).stdout.chomp

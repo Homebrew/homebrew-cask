@@ -1,12 +1,16 @@
-# typed: false
 # frozen_string_literal: true
 
 require "forwardable"
+require "system_command"
 
 APPLE_LAUNCHJOBS_REGEX =
   /\A(?:application\.)?com\.apple\.(installer|Preview|Safari|systemevents|systempreferences|Terminal)(?:\.|$)/
 
 module Check
+  # TODO: replace with public API like Utils.safe_popen_read that's less likely to be volatile to changes
+  # see https://github.com/Homebrew/brew/pull/16540#issuecomment-1913737000
+  extend SystemCommand::Mixin
+
   CHECKS = {
     installed_apps:       lambda {
       ["/Applications", File.expand_path("~/Applications")]
