@@ -18,8 +18,9 @@ cask "tautulli" do
   pkg "Tautulli-macos-v#{version}-x64.pkg"
 
   uninstall quit:       "com.Tautulli.Tautulli",
+            login_item: "Tautulli",
             pkgutil:    "com.Tautulli.Tautulli",
-            login_item: "Tautulli"
+            delete:     "/Applications/Tautulli.app"
 
   zap trash: "~/Library/Application Support/Tautulli"
 end
