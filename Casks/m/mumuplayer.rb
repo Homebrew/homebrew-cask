@@ -29,24 +29,13 @@ cask "mumuplayer" do
   app "MuMuPlayer.app"
 
   zap trash: [
-    "~/Library/Application Scripts/9699UND7H5.group.com.netease.mumu.nemux",
+    "~/Library/Application Scripts/*.group.com.netease.mumu.nemux",
     "~/Library/Application Support/com.netease.mumu.nemux",
-    "~/Library/Caches/com.netease.mumu.nemux",
-    "~/Library/Caches/com.netease.mumu.nemux.emulator",
-    "~/Library/Caches/com.netease.mumu.nemux.installer",
-    "~/Library/Group Containers/9699UND7H5.group.com.netease.mumu.nemux",
-    "~/Library/HTTPStorages/com.netease.mumu.nemux",
-    "~/Library/HTTPStorages/com.netease.mumu.nemux.binarycookies",
-    "~/Library/HTTPStorages/com.netease.mumu.nemux.emulator",
-    "~/Library/HTTPStorages/com.netease.mumu.nemux.installer",
-    "~/Library/Preferences/com.netease.mumu.nemux.emulator.plist",
-    "~/Library/Preferences/com.netease.mumu.nemux.installer.plist",
-    "~/Library/Preferences/com.netease.mumu.nemux.plist",
-    "~/Library/Preferences/group.com.netease.mumu.plist",
-    "~/Library/Saved Application State/com.netease.mumu.nemux.emulator.savedState",
-    "~/Library/Saved Application State/com.netease.mumu.nemux.installer.savedState",
-    "~/Library/Saved Application State/com.netease.mumu.nemux.savedState",
-    "~/Library/WebKit/com.netease.mumu.nemux",
-    "~/Library/WebKit/com.netease.mumu.nemux.emulator",
+    "~/Library/Caches/com.netease.mumu.nemux*",
+    "~/Library/Group Containers/*.group.com.netease.mumu.nemux",
+    "~/Library/HTTPStorages/com.netease.mumu.nemux*",
+    "~/Library/Preferences/*.netease.mumu*.plist",
+    "~/Library/Saved Application State/com.netease.mumu.nemux*.savedState",
+    "~/Library/WebKit/com.netease.mumu.nemux*",
   ]
 end
