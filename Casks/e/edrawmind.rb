@@ -1,8 +1,8 @@
 cask "edrawmind" do
   version "11.0.5,5378"
-  sha256 "f8aa8c61dbfa13953e2123440b10eef284b1f06f6fae562d5e059b9c5d3867ca"
+  sha256 "eadd4e013bd0267597810d0564ae72f776b0ceb8a26869554050695f9c1949b5"
 
-  url "https://download.edrawsoft.com/edrawmind_full#{version.csv.second}.dmg"
+  url "https://download.edrawsoft.com/cbs_down/edrawmind_full#{version.csv.second}.zip"
   name "EdrawMind"
   desc "Mind mapping software"
   homepage "https://www.edrawsoft.com/edrawmind/"
