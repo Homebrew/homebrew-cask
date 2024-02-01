@@ -1,6 +1,6 @@
 cask "edrawmind" do
-  version "11.0.3,5378"
-  sha256 "87e0b1bb6fca4dec90c40f2576f16570fd4b2bfc9c239abed68777e2e5e02f01"
+  version "11.0.5,5378"
+  sha256 "f8aa8c61dbfa13953e2123440b10eef284b1f06f6fae562d5e059b9c5d3867ca"
 
   url "https://download.edrawsoft.com/edrawmind_full#{version.csv.second}.dmg"
   name "EdrawMind"
