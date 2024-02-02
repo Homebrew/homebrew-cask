@@ -8,8 +8,7 @@ cask "ia-markdown-dictionary" do
   homepage "https://ia.net/topics/ia-markdown-dictionary"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    skip "No version information available"
   end
 
   dictionary "iA Markdown.dictionary"
