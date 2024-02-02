@@ -13,6 +13,7 @@ cask "beyond-compare" do
   end
 
   auto_updates true
+  conflicts_with cask: "homebrew/cask-versions/beyond-compare-beta"
 
   app "Beyond Compare.app"
   binary "#{appdir}/Beyond Compare.app/Contents/MacOS/bcomp"
