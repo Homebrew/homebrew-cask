@@ -16,7 +16,7 @@ cask "znote" do
   app "znote.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tony.znote.sfl3",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tony.znote.sfl*",
     "~/Library/Application Support/znote",
     "~/Library/Preferences/com.tony.znote.plist",
     "~/Library/Saved Application State/com.tony.znote.savedState",
