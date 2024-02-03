@@ -1,6 +1,6 @@
 cask "goxel" do
-  version "0.13.0"
-  sha256 "444bf005616958435fd53bae0a6e69d13bd9d1cd09c4da1fee79b4d77924b779"
+  version "0.14.0"
+  sha256 "d195f3ef9aa38fb2346b156a17a10f2625a531bf4ffdd02675a8b302a7ee84fe"
 
   url "https://github.com/guillaumechereau/goxel/releases/download/v#{version}/goxel-#{version}-mac.zip",
       verified: "github.com/guillaumechereau/goxel/"
