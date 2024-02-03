@@ -1,6 +1,6 @@
 cask "soulseek" do
-  version "2023-1-15"
-  sha256 "e12a87fe695288446ba67d36bf0b4bbb7098497e973d9883199c6c5c332d4df2"
+  version "2024-2-1"
+  sha256 "2daa09953aa9bbb62ffa4dee87b8cc219c3f8f88f349309d47faa3aaed213e70"
 
   url "https://www.slsknet.org/SoulseekQt/Mac/SoulseekQt-#{version}.dmg"
   name "Soulseek"
