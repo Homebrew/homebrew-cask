@@ -1,11 +1,11 @@
-cask "hancom-word" do
+cask "hancom-docs" do
   version "12.30.0,5491"
   sha256 :no_check
 
   url "https://cdn.hancom.com/pds/hnc/DOWN/HancomDocs/HwpMac_HancomDocs.pkg",
       referer: "https://hancom.com/mypage/myIndivPrdtList.do"
-  name "Hacom Word Processor 2022"
-  desc "Word processor"
+  name "Hacom Docs"
+  desc "Subscription based Word processor"
   homepage "https://office.hancom.com/"
 
   livecheck do
