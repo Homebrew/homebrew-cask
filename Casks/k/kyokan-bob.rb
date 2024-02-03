@@ -1,9 +1,9 @@
 cask "kyokan-bob" do
   arch arm: "arm64", intel: "x86"
 
-  version "2.0.0"
-  sha256 arm:   "4b3134c50accc9a57572a5adf6622240e53dafbe247cc4bc1ac18a4f21affd1c",
-         intel: "23b0f56567be8935de93147d1cc291f6dcf32fd3426e5e12b72916bf02e8684d"
+  version "2.1.0"
+  sha256 arm:   "0fe432c089333b21af568ba1ef5f33fda95c1ab2a27e9cc445413ec012661fd1",
+         intel: "84aa56ec0d7269dd66764d8ca01bb110d9fd88e380b5fbc7749dc7d6b321bd22"
 
   url "https://github.com/kyokan/bob-wallet/releases/download/v#{version}/Bob-#{version}-#{arch}.dmg",
       verified: "github.com/kyokan/bob-wallet/"
