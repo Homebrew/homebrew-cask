@@ -13,7 +13,7 @@ cask "lunarbar" do
 
   zap trash: [
     "~/Library/Application Scripts/app.cyan.lunarbar",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/app.cyan.lunarbar.sfl3",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/app.cyan.lunarbar.sfl*",
     "~/Library/Containers/app.cyan.lunarbar",
     "~/Library/Saved Application State/app.cyan.lunarbar.savedState",
   ]
