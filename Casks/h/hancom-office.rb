@@ -1,6 +1,6 @@
 cask "hancom-office" do
   version "12.30.0.5542"
-  sha256 :no_check
+  sha256 "98124f07e7950efea972737a2da63599e358c8a6ef5088e05f7f7825af7ea6d7"
 
   url "https://cdn.hancom.com/pds/hnc/DOWN/HancomOffice-general-#{version}.pkg",
       referer: "https://hancom.com/mypage/myIndivPrdtList.do"
@@ -18,8 +18,6 @@ cask "hancom-office" do
             pkgutil: "com.hancom.office.hwp#{version.major}.mac.general"
 
   zap trash: [
-    "/private/var/db/receipts/com.hancom.office.hwp#{version.major}.mac.general.bom",
-    "/private/var/db/receipts/com.hancom.office.hwp#{version.major}.mac.general.plist",
     "~/Library/Caches/com.hancom.office.hwp#{version.major}.mac.general",
     "~/Library/HTTPStorages/com.hancom.office.hwp#{version.major}.mac.general",
     "~/Library/HTTPStorages/com.hancom.office.hwp#{version.major}.mac.general.binarycookies",
