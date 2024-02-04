@@ -19,7 +19,7 @@ cask "receipts" do
   zap trash: [
     "~/Documents/Receipts.receipts",
     "~/Library/Application Scripts/com.apperdeck.mac.Receipts.ReceiptsShareExtension",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.apperdeck.mac.receipts.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.apperdeck.mac.receipts.sfl*",
     "~/Library/Caches/com.apperdeck.mac.Receipts",
     "~/Library/Containers/com.apperdeck.mac.Receipts.ReceiptsShareExtension",
     "~/Library/HTTPStorages/com.apperdeck.mac.Receipts",

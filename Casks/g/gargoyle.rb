@@ -18,7 +18,7 @@ cask "gargoyle" do
   app "Gargoyle.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.googlecode.garglk.launcher.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.googlecode.garglk.launcher.sfl*",
     "~/Library/Preferences/com.googlecode.garglk.Launcher.plist",
     "~/Library/Saved Application State/com.googlecode.garglk.Launcher.savedState",
   ]

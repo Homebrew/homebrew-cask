@@ -20,7 +20,7 @@ cask "scapple" do
   zap trash: [
     "~/Library/Application Support/CloudDocs/session/containers/iCloud.com.literatureandlatte.scapple",
     "~/Library/Application Support/CloudDocs/session/containers/iCloud.com.literatureandlatte.scapple.plist",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.literatureandlatte.scapple.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.literatureandlatte.scapple.sfl*",
     "~/Library/Application Support/Scapple",
     "~/Library/Autosave Information/com.literatureandlatte.scapple.plist",
     "~/Library/Caches/com.literatureandlatte.scapple",

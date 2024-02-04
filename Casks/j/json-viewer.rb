@@ -18,7 +18,7 @@ cask "json-viewer" do
 
   zap trash: [
     "~/Library/Application Scripts/com.pascalgiguere.JSON-Viewer",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.pascalgiguere.json-viewer.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.pascalgiguere.json-viewer.sfl*",
     "~/Library/Containers/com.pascalgiguere.JSON-Viewer",
   ]
 end

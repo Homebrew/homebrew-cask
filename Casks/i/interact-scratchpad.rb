@@ -20,7 +20,7 @@ cask "interact-scratchpad" do
   zap trash: [
     "~/Library/Application Scripts/com.agiletortoise.Interact-Scratchpad-OSX",
     "~/Library/Application Scripts/com.agiletortoise.Interact-Scratchpad-OSX.Interact-Scratchpad-Share",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.agiletortoise.interact-scratchpad-osx.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.agiletortoise.interact-scratchpad-osx.sfl*",
     "~/Library/Containers/com.agiletortoise.Interact-Scratchpad-OSX",
     "~/Library/Containers/com.agiletortoise.Interact-Scratchpad-OSX.Interact-Scratchpad-Share",
   ]

@@ -36,7 +36,7 @@ cask "synology-drive" do
     "~/Library/Application Scripts/com.synology.CloudStationUI.FileProvider",
     "~/Library/Application Scripts/com.synology.SynologyDrive.FinderHelper*",
     "~/Library/Application Scripts/group.com.synology.CloudStationUI",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.synology.synologydrive.finderhelper.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.synology.synologydrive.finderhelper.sfl*",
     "~/Library/Application Support/FileProvider/com.synology.CloudStationUI.FileProvider",
     "~/Library/Application Support/SynologyDrive",
     "~/Library/Containers/com.synology.CloudStationUI.FileProvider",

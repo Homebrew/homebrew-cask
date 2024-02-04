@@ -18,7 +18,7 @@ cask "slidepilot" do
   app "SlidePilot.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/de.pascalbraband.slidepilot.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/de.pascalbraband.slidepilot.sfl*",
     "~/Library/Caches/de.pascalbraband.SlidePilot",
     "~/Library/Preferences/de.pascalbraband.SlidePilot.document-configuration.plist",
     "~/Library/Preferences/de.pascalbraband.SlidePilot.plist",

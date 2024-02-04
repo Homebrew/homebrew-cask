@@ -20,7 +20,7 @@ cask "fission" do
   uninstall quit: "com.rogueamoeba.Fission"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.rogueamoeba.fission.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.rogueamoeba.fission.sfl*",
     "~/Library/Application Support/Fission/",
     "~/Library/Caches/com.rogueamoeba.Fission",
     "~/Library/HTTPStorages/com.rogueamoeba.Fission",

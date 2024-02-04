@@ -11,7 +11,7 @@ cask "todotxt" do
   app "TodoTxtMac.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.descy.michael.todotxtmac.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.descy.michael.todotxtmac.sfl*",
     "~/Library/Preferences/com.descy.michael.TodoTxtMac.plist",
   ]
 end

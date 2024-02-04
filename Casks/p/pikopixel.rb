@@ -16,7 +16,7 @@ cask "pikopixel" do
   app "PikoPixel.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.twilightedge.pikopixel.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.twilightedge.pikopixel.sfl*",
     "~/Library/Preferences/com.twilightedge.PikoPixel.plist",
   ]
 end

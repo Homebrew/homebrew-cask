@@ -18,7 +18,7 @@ cask "tofu" do
 
   zap trash: [
     "~/Library/Application Scripts/com.asagoo.tofu",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.asagoo.tofu.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.asagoo.tofu.sfl*",
     "~/Library/Containers/com.asagoo.tofu",
   ]
 end
