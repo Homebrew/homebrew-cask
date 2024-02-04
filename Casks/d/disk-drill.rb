@@ -23,7 +23,7 @@ cask "disk-drill" do
   }
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.cleverfiles.diskdrill.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.cleverfiles.diskdrill.sfl*",
     "~/Library/Application Support/DiskDrill",
     "~/Library/Caches/com.cleverfiles.Disk_Drill",
     "~/Library/Containers/com.cleverfiles.DiskDrill.Media/Data/cfbackd.chief",
