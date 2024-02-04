@@ -4,7 +4,7 @@ cask "qlmarkdown" do
 
   url "https://github.com/sbarex/QLMarkdown/releases/download/#{version}/QLMarkdown.zip"
   name "sbarex QLMarkdown"
-  desc "QuickLook generator for Markdown files"
+  desc "Quick Look generator for Markdown files"
   homepage "https://github.com/sbarex/QLMarkdown"
 
   auto_updates true

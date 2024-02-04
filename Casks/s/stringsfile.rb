@@ -4,7 +4,7 @@ cask "stringsfile" do
 
   url "https://blog.timac.org/2014/0325-quicklook-plugin-to-preview-strings-files/StringsFile.qlgenerator.zip"
   name "StringsFile QuickLook plugin"
-  desc "QuickLook plugin to preview .strings files"
+  desc "Quick Look plugin to preview .strings files"
   homepage "https://blog.timac.org/?p=933"
 
   livecheck do

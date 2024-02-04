@@ -4,7 +4,7 @@ cask "voxql" do
 
   url "https://github.com/heptal/VoxQL/releases/download/#{version}/VoxQL.qlgenerator.zip"
   name "voxql"
-  desc "QuickLook generator for MagicaVoxel files"
+  desc "Quick Look generator for MagicaVoxel files"
   homepage "https://github.com/heptal/VoxQL"
 
   qlplugin "VoxQL.qlgenerator"

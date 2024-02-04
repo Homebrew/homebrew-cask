@@ -4,7 +4,7 @@ cask "avifquicklook" do
 
   url "https://github.com/dreampiggy/AVIFQuickLook/releases/download/#{version}/AVIFQuickLook.qlgenerator.zip"
   name "AVIFQuickLook"
-  desc "QuickLook Plugin for AVIF images"
+  desc "Quick Look Plugin for AVIF images"
   homepage "https://github.com/dreampiggy/AVIFQuickLook"
 
   qlplugin "AVIFQuickLook.qlgenerator"

@@ -4,7 +4,7 @@ cask "quicknfo" do
 
   url "https://github.com/The-Master777/QuickNFO/releases/download/v#{version}/QuickNFO.qlgenerator.zip"
   name "QuickNFO"
-  desc "QuickLook plugin for viewing NFO files"
+  desc "Quick Look plugin for viewing NFO files"
   homepage "https://github.com/planbnet/QuickNFO"
 
   qlplugin "QuickNFO.qlgenerator"

@@ -4,7 +4,7 @@ cask "qlnetcdf" do
 
   url "https://github.com/tobeycarman/QLNetcdf/releases/download/v#{version}/QLNetcdf.qlgenerator.zip"
   name "QLNetcdf"
-  desc "QuickLook plugin for viewing NetCDF files"
+  desc "Quick Look plugin for viewing NetCDF files"
   homepage "https://github.com/tobeycarman/QLNetcdf/"
 
   qlplugin "QLNetcdf.qlgenerator"
