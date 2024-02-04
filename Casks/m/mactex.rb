@@ -70,7 +70,7 @@ cask "mactex" do
         "~/Library/Application Scripts/*.fr.chachatelier.pierre.LaTeXiT",
         "~/Library/Application Scripts/fr.chachatelier.pierre.LaTeXiT.appex",
         "~/Library/Application Support/BibDesk",
-        "~/Library/Application Support/com.apple.sharedfilelist/*/fr.chachatelier.pierre.latexit.sfl2",
+        "~/Library/Application Support/com.apple.sharedfilelist/*/fr.chachatelier.pierre.latexit.sfl*",
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/texshop.sfl*",
         "~/Library/Application Support/LaTeXiT",
         "~/Library/Application Support/TeX Live Utility",
