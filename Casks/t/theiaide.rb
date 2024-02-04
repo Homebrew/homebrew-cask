@@ -19,7 +19,7 @@ cask "theiaide" do
 
   zap trash: [
     "~/.theia-ide",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/eclipse.theia.sfl3",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/eclipse.theia.sfl*",
     "~/Library/Application Support/Theia IDE",
     "~/Library/Logs/Theia IDE",
     "~/Library/Preferences/eclipse.theia.plist",
