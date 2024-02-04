@@ -17,7 +17,7 @@ cask "platypus" do
   app "Platypus.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.sveinbjorn.platypus.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/org.sveinbjorn.platypus.sfl*",
     "~/Library/Application Support/Platypus",
     "~/Library/Caches/org.sveinbjorn.Platypus",
     "~/Library/Preferences/org.sveinbjorn.Platypus.plist",
