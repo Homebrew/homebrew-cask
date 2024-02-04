@@ -18,7 +18,7 @@ cask "poedit" do
   app "Poedit.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.poedit.poedit.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.poedit.poedit.sfl*",
     "~/Library/Application Support/Poedit",
     "~/Library/Caches/net.poedit.Poedit",
     "~/Library/HTTPStorages/net.poedit.Poedit.binarycookies",
