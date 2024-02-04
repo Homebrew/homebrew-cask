@@ -17,7 +17,7 @@ cask "pdfelement-express" do
   app "PDFelement Express.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.wondershare.pdfelement.express.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.wondershare.pdfelement.express.sfl*",
     "~/Library/Application Support/com.wondershare.PDFelement.Express",
     "~/Library/Application Support/PDFelement",
     "~/Library/Application Support/wondershare",
