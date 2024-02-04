@@ -4,7 +4,7 @@ cask "quicklookase" do
 
   url "https://github.com/rsodre/QuickLookASE/releases/download/v#{version}/QuickLookASE.qlgenerator.zip"
   name "QuickLookASE"
-  desc "QuickLook generator for Adobe Swatch Exchange files"
+  desc "Quick Look generator for Adobe Swatch Exchange files"
   homepage "https://github.com/rsodre/QuickLookASE"
 
   qlplugin "QuickLookASE.qlgenerator"

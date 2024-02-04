@@ -4,7 +4,7 @@ cask "qlprettypatch" do
 
   url "https://github.com/atnan/QLPrettyPatch/releases/download/v#{version}/QLPrettyPatch.qlgenerator.zip"
   name "QLPrettyPatch"
-  desc "QuickLook plugin to view patch files"
+  desc "Quick Look plugin to view patch files"
   homepage "https://github.com/atnan/QLPrettyPatch"
 
   qlplugin "QLPrettyPatch.qlgenerator"

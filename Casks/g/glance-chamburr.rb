@@ -19,6 +19,6 @@ cask "glance-chamburr" do
   ]
 
   caveats <<~EOS
-    You must start #{appdir}/Glance.app once manually to setup the QuickLook plugin.
+    You must start #{appdir}/Glance.app once manually to setup the Quick Look plugin.
   EOS
 end

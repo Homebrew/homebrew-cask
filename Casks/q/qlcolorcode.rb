@@ -4,7 +4,7 @@ cask "qlcolorcode" do
 
   url "https://github.com/anthonygelibert/QLColorCode/releases/download/release-#{version}/QLColorCode.qlgenerator.zip"
   name "QLColorCode"
-  desc "QuickLook plug-in that renders source code with syntax highlighting"
+  desc "Quick Look plug-in that renders source code with syntax highlighting"
   homepage "https://github.com/anthonygelibert/QLColorCode"
 
   depends_on macos: ">= :mojave"
