@@ -21,7 +21,7 @@ cask "ddpm" do
             rmdir:   "/Applications/DDPM"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/qisda.autolaunchddpmhelper.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/qisda.autolaunchddpmhelper.sfl*",
     "~/Library/Caches/Qisda.DDPM",
     "~/Library/Containers/Qisda.AutoLaunchDDPMHelper",
     "~/Library/HTTPStorages/Qisda.DDPM",
