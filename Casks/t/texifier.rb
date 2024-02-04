@@ -23,7 +23,7 @@ cask "texifier" do
   zap trash: [
     "~/Library/Application Support/CloudDocs/session/containers/iCloud.com.vallettaventures.texpadm",
     "~/Library/Application Support/CloudDocs/session/containers/iCloud.com.vallettaventures.texpadm.plist",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vallettaventures.texpad.sfl2",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vallettaventures.texpad.sfl*",
     "~/Library/Application Support/Texpad",
     "~/Library/Caches/com.vallettaventures.Texpad",
     "~/Library/Cookies/com.vallettaventures.Texpad.binarycookies",
