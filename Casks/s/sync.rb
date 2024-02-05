@@ -1,5 +1,5 @@
 cask "sync" do
-  version "2.2.29"
+  version "2.2.30"
   sha256 :no_check
 
   url "https://www.sync.com/download/apple/Sync.dmg"
