@@ -8,7 +8,7 @@ cask "dehelper" do
   name "Dehelper"
   name "德语助手"
   desc "Chinese-German dictionary"
-  homepage "https://www.eudic.net/v4/de/app/download"
+  homepage "https://www.eudic.net/v#{version.major}/de/app/dehelper"
 
   livecheck do
     url "https://www.eudic.net/update/dehelper_mac.xml"
