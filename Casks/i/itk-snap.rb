@@ -27,4 +27,10 @@ cask "itk-snap" do
   end
 
   app "ITK-SNAP.app"
+
+  zap trash: [
+    "~/Library/Application Support/itksnap.org",
+    "~/Library/Preferences/org.itksnap.plist",
+    "~/Library/Saved Application State/org.itksnap.savedState",
+  ]
 end
