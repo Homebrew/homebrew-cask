@@ -17,6 +17,6 @@ cask "jgrasp" do
   uninstall pkgutil: "jgrasp"
 
   caveats do
-    depends_on_java "6+"
+    depends_on_java "11+"
   end
 end
