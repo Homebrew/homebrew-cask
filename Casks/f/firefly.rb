@@ -1,6 +1,6 @@
 cask "firefly" do
-  version "2.0.4"
-  sha256 "afe399f01f241e7ac1f210edb4b8a56b729a00ffb7c37722dbd8722e11a0f1d5"
+  version "2.0.6"
+  sha256 "6b6a7235e202cff18eb4b5672758115e8a57b14b75407887c71000060920c253"
 
   url "https://dl.firefly.iota.org/firefly-iota-desktop-#{version}.dmg"
   name "Firefly"
