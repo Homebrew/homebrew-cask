@@ -10,8 +10,7 @@ cask "hancom-docs" do
 
   livecheck do
     url "https://cdn.hancom.com/upd/HwpMac2022/HancomOfficeHWPDocs/hupdate_mac.ini"
-    strategy :page_match
-    regex(/Hwp_mac\s*=\s*(\d+(?:\.\d+)*)/i)
+    regex(/Hwp_mac\s*=\s*(\d+(?:\.\d+)+)/i)
   end
 
   pkg "HwpMac_HancomDocs.pkg"
@@ -20,11 +19,11 @@ cask "hancom-docs" do
             pkgutil: "com.hancom.office.hwp#{version.major}.mac.general"
 
   zap trash: [
-    "~/Library/Caches/com.hancom.office.hwp#{version.major}.mac.general",
-    "~/Library/HTTPStorages/com.hancom.office.hwp#{version.major}.mac.general",
-    "~/Library/HTTPStorages/com.hancom.office.hwp#{version.major}.mac.general.binarycookies",
-    "~/Library/Preferences/com.hancom.office.hwp#{version.major}.mac.general.plist",
-    "~/Library/Saved Application State/com.hancom.office.hwp#{version.major}.mac.general.savedState",
-    "~/Library/WebKit/com.hancom.office.hwp#{version.major}.mac.general",
+    "~/Library/Caches/com.hancom.office.hwp*.mac.general",
+    "~/Library/HTTPStorages/com.hancom.office.hwp*.mac.general",
+    "~/Library/HTTPStorages/com.hancom.office.hwp*.mac.general.binarycookies",
+    "~/Library/Preferences/com.hancom.office.hwp*.mac.general.plist",
+    "~/Library/Saved Application State/com.hancom.office.hwp*.mac.general.savedState",
+    "~/Library/WebKit/com.hancom.office.hwp*.mac.general",
   ]
 end
