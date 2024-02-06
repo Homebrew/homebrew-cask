@@ -5,7 +5,7 @@ cask "hancom-docs" do
   url "https://cdn.hancom.com/pds/hnc/DOWN/HancomDocs/HwpMac_HancomDocs.pkg",
       referer: "https://hancom.com/mypage/myIndivPrdtList.do"
   name "Hancom Docs"
-  desc "Subscription-based word processor"
+  desc "Word processor"
   homepage "https://office.hancom.com/"
 
   livecheck do
