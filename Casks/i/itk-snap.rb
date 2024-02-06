@@ -1,5 +1,6 @@
 cask "itk-snap" do
   arch arm: "arm64", intel: "x86_64"
+  livecheck_arch = on_arch_conditional arm: "M1", intel: "Intel"
 
   on_arm do
     version "4.0.2,13696"
@@ -17,12 +18,14 @@ cask "itk-snap" do
   homepage "http://www.itksnap.org/pmwiki/pmwiki.php"
 
   livecheck do
-    url "https://www.nitrc.org/frs/downloadlink.php/#{version.csv.second}"
-    strategy :header_match do |headers|
-      match = headers["location"].match(/itksnap[._-]?(\d+(?:\.\d+)*)[._-]?Darwin-#{arch}\.dmg/i)
-      next if match.blank?
-
-      "#{match[1]},#{version.csv.second}"
+    url "http://www.itksnap.org/pmwiki/pmwiki.php?n=Main.Downloads"
+    regex(%r{
+      >\s*ITK-SNAP\s+v?(\d+(?:\.\d+)+)\s*<.*?
+      /download/snap/register\.php\?[^"' >]*?link=(\d+)[^>]*?>
+      \s*MacOS\s+Binary\s+\(#{livecheck_arch}\s+processor
+    }imx)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
   end
 
