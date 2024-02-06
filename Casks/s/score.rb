@@ -1,8 +1,11 @@
 cask "score" do
-  version "3.1.12"
-  sha256 "4033767b7b90aee5e973acbfaf5f1a21f17f98361661bb7a2867836591237bcf"
+  arch arm: "AppleSilicon", intel: "Intel"
 
-  url "https://github.com/ossia/score/releases/download/v#{version}/ossia.score-#{version}-macOS.dmg",
+  version "3.1.13"
+  sha256 arm:   "d13f5c7880e8a48788880109f6e232f7b72c0d51da283030587e3c6d6bafaaec",
+         intel: "c9684d514a59523a808c5ecb532af9db959a12b230ad9febc052f723b2b93d9a"
+
+  url "https://github.com/ossia/score/releases/download/v#{version}/ossia.score-#{version}-macOS-#{arch}.dmg",
       verified: "github.com/ossia/score/"
   name "ossia score"
   desc "Interactive sequencer for intermedia art"
