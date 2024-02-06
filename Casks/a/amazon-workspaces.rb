@@ -1,5 +1,5 @@
 cask "amazon-workspaces" do
-  version "5.17.0.4506"
+  version "5.18.0.4614"
   sha256 :no_check
 
   url "https://d2td7dqidlhjx7.cloudfront.net/prod/global/osx/WorkSpaces.pkg",
