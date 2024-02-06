@@ -1,6 +1,6 @@
 cask "firefly-shimmer" do
-  version "2.1.10"
-  sha256 "14987060bda75dc5c70c13d832299bb9d20c2e7c934090a6d3f4070d39d336ba"
+  version "2.1.12"
+  sha256 "e1110d1ad32009794021e30bfa7e6a6701cde304abd05852e058767e4ee8ece3"
 
   url "https://github.com/iotaledger/firefly/releases/download/desktop-shimmer-#{version}/firefly-shimmer-desktop-#{version}.dmg",
       verified: "github.com/iotaledger/firefly/"
