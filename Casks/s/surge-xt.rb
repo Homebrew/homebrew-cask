@@ -1,6 +1,6 @@
 cask "surge-xt" do
-  version "1.3.0"
-  sha256 "96b0927dd3c3081fa708a8c07382645c85985ba4c4dba0fbbc2fa1d98f4bb8c6"
+  version "1.3.1"
+  sha256 "e30b218700d4067edb3a0eadb4128784e41f91f663cff19e3fbb38460883cf59"
 
   url "https://github.com/surge-synthesizer/releases-xt/releases/download/#{version}/surge-xt-macOS-#{version}.dmg",
       verified: "github.com/surge-synthesizer/releases-xt/"
