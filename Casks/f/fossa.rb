@@ -8,6 +8,11 @@ cask "fossa" do
   desc "Zero-configuration polyglot dependency analysis tool"
   homepage "https://fossa.com/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   binary "fossa"
 
   # No zap stanza required
