@@ -4,7 +4,7 @@ cask "ia-markdown-dictionary" do
 
   url "https://files.ia.net/tips/iA-Markdown-#{version}.dictionary.zip"
   name "iA Markdown Dictionary"
-  desc "Markdown Dictionary for Dictionary.app"
+  desc "Markdown dictionary for Dictionary.app"
   homepage "https://ia.net/topics/ia-markdown-dictionary"
 
   livecheck do
@@ -12,4 +12,6 @@ cask "ia-markdown-dictionary" do
   end
 
   dictionary "iA Markdown.dictionary"
+
+  # No zap stanza required
 end
