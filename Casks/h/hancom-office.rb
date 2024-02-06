@@ -9,8 +9,8 @@ cask "hancom-office" do
   homepage "https://office.hancom.com/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://cdn.hancom.com/pds/hnc/DOWN/"
+    regex(/href=.*?HancomOffice-general[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
   pkg "HancomOffice-general-#{version}.pkg"
