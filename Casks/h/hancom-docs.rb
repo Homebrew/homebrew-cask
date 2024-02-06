@@ -4,13 +4,14 @@ cask "hancom-docs" do
 
   url "https://cdn.hancom.com/pds/hnc/DOWN/HancomDocs/HwpMac_HancomDocs.pkg",
       referer: "https://hancom.com/mypage/myIndivPrdtList.do"
-  name "Hacom Docs"
-  desc "Subscription based Word processor"
+  name "Hancom Docs"
+  desc "Subscription-based word processor"
   homepage "https://office.hancom.com/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://cdn.hancom.com/upd/HwpMac2022/HancomOfficeHWPDocs/hupdate_mac.ini"
+    strategy :page_match
+    regex(/Hwp_mac\s*=\s*(\d+(?:\.\d+)*)/i)
   end
 
   pkg "HwpMac_HancomDocs.pkg"
