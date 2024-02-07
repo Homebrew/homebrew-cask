@@ -2,12 +2,12 @@ cask "tencent-meeting" do
   arch arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "3.23.0.466,3c4ff173a6b389ad3bedc42c8bf0bea3"
-    sha256 "128c3a99c28e147144dadf8cbd85939d6e53b1764dd169cc74412b1f64ef2bc9"
+    version "3.24.3.401,7861cf367f7764fc531090effa381b3c"
+    sha256 "7ce846c33cf38f8a2894492cc71ea7b370aedeb5bb969fe52c4228d20a383110"
   end
   on_intel do
-    version "3.23.0.466,5b68e9604bb3a7858088baa76a55c75e"
-    sha256 "d3fe697acab9f73867f4cd6015066cf473c2d26c3041b1b2ec2a02dba8e5509f"
+    version "3.24.3.401,6098097df3d0ff1ec23752a331c8784d"
+    sha256 "9166e4f4a4198c029699279ae1d2679817077ef4b8dac0ab3ea33d77a9578a0b"
   end
 
   url "https://updatecdn.meeting.qq.com/cos/#{version.csv.second}/TencentMeeting_0300000000_#{version.csv.first}.publish.#{arch}.officialwebsite.dmg",
