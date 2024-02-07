@@ -7,10 +7,7 @@ cask "acronis-true-image" do
   desc "Full image backup and cloning software"
   homepage "https://www.acronis.com/personal/computer-backup/"
 
-  livecheck do
-    url "https://www.acronis.com/en-us/support/updates/index.html"
-    regex(/Acronis\s*True\s*Image\s*(\d+(?:\.\d+)*)/i)
-  end
+  deprecate! date: "2024-02-07", because: :discontinued
 
   pkg "Install Acronis True Image.pkg"
 
