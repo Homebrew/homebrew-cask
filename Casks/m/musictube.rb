@@ -1,5 +1,5 @@
 cask "musictube" do
-  version "1.16"
+  version "2.0"
   sha256 :no_check
 
   url "https://flavio.tordini.org/files/musictube/musictube.dmg"
