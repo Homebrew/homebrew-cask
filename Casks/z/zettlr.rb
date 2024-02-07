@@ -10,7 +10,7 @@ cask "zettlr" do
   desc "Open-source markdown editor"
   homepage "https://github.com/Zettlr/Zettlr/"
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "Zettlr.app"
 
