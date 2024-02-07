@@ -1,6 +1,6 @@
 cask "elgato-wave-link" do
-  version "1.8.4.1122"
-  sha256 "f3a5a9159a4de0c350845332db11790068198d22eb726b5b9bba2efc5ca4e44b"
+  version "1.9.2.1913"
+  sha256 "63038dcee9f265679c77e73d53099d622721108b51f20b47a09e7d03daca7b59"
 
   url "https://edge.elgato.com/egc/macos/wavelink/#{version.major_minor_patch}/WaveLink_#{version}.pkg",
       user_agent: :fake
@@ -9,8 +9,10 @@ cask "elgato-wave-link" do
   homepage "https://www.elgato.com/ww/en/s/downloads"
 
   livecheck do
-    url "https://www.elgato.com/graphql?query=query%20contentJson(%24identifier%3A%5BString%5D%24contentType%3AString%24options%3AContentJsonOptionsInput)%7BcontentJson(identifiers%3A%24identifier%20contentType%3A%24contentType%20options%3A%24options)%7Bidentifier%20entries%7D%7D&operationName=contentJson&variables=%7B%22contentType%22%3A%22downloads%22%2C%22identifier%22%3A%5B%22downloads%22%5D%2C%22options%22%3A%7B%22level%22%3A1%7D%7D&locale=en-US"
-    regex(/WaveLink[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
+    url "https://gc-updates.elgato.com/mac/wl-update/final1/app-version-check.json.php"
+    strategy :json do |json|
+      json.dig("Manual", "Version")
+    end
   end
 
   depends_on macos: ">= :catalina"
