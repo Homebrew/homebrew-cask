@@ -9,11 +9,10 @@ cask "elgato-stream-deck" do
 
   livecheck do
     url "https://gc-updates.elgato.com/mac/sd-update/final/app-version-check.json"
-strategy :json do |json|
-  puts json
-  json.dig("Manual", "Version")
-end
-end
+    strategy :json do |json|
+      json.dig("Manual", "Version")
+    end
+  end
 
   auto_updates true
   depends_on macos: ">= :high_sierra"
