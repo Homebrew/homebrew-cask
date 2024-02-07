@@ -1,9 +1,9 @@
 cask "pile" do
   arch arm: "-arm64", intel: ""
 
-  version "0.9.2"
-  sha256 arm:   "9e73f64231e988be8b60050e8f8cfed8dab06982e6b2f0683da6ba2343380774",
-         intel: "54e482eb0ba672299e72f2ba775d8883be5690723dad7687796148514dc1ab7c"
+  version "0.9.3"
+  sha256 arm:   "00655673917f2029587e0bb1930bf2fc145f2717a271ae2b8456c0521633191f",
+         intel: "415a74a725c1a696f3a869d0fe9f09ee548b63d36a43369afe0bd193d0e8b5f9"
 
   url "https://github.com/UdaraJay/Pile/releases/download/v#{version}/Pile-#{version}#{arch}.dmg",
       verified: "github.com/UdaraJay/Pile/"
