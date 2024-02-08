@@ -1,14 +1,17 @@
 cask "ytmdesktop-youtube-music" do
-  version "1.14.2"
-  sha256 "d7fb0b2dbe54469b39fc1c2daf0f17e65b0d84d4a2c171998c41c7691a378f0d"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://github.com/ytmdesktop/ytmdesktop/releases/download/#{version}/ytm-desktop_macos-#{version.tr(".", "_")}.zip",
+  version "2.0.0"
+  sha256 arm:   "c7a7734d295eaa3a8a7d42db2c2013618fd3fc06e9600d1c1485e1eec153b0cd",
+         intel: "8be61191307a1609adfac81fec6d440f17a0f81f1b94b618ef37332262a8d8c8"
+
+  url "https://github.com/ytmdesktop/ytmdesktop/releases/download/v#{version}/YouTube-Music-Desktop-App-darwin-#{arch}-#{version}.zip",
       verified: "github.com/ytmdesktop/"
   name "YouTube Music Desktop App"
   desc "YouTube music client"
   homepage "https://ytmdesktop.app/"
 
-  container nested: "YouTube Music Desktop App-#{version}.dmg"
+  depends_on macos: ">= :catalina"
 
   app "YouTube Music Desktop App.app"
 
