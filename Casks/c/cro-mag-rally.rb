@@ -1,6 +1,6 @@
 cask "cro-mag-rally" do
-  version "3.0.0"
-  sha256 "09acf7d859fceb11bdc0cb99c1dc7e2bf6b32bedbd786212177baa6042a6dd4d"
+  version "3.0.1"
+  sha256 "fc039fc19df8a466c7c185490e7768a81760312a89fe415c4ddb2ebc08e601e9"
 
   url "https://github.com/jorio/CroMagRally/releases/download/#{version}/CroMagRally-#{version}-mac.dmg",
       verified: "github.com/jorio/CroMagRally/"
