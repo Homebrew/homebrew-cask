@@ -8,7 +8,7 @@ cask "epoccam" do
   homepage "https://www.elgato.com/ww/en/s/downloads"
 
   livecheck do
-    url "https://www.elgato.com/graphql?query=query%20contentJson(%24identifier%3A%5BString%5D%24contentType%3AString%24options%3AContentJsonOptionsInput)%7BcontentJson(identifiers%3A%24identifier%20contentType%3A%24contentType%20options%3A%24options)%7Bidentifier%20entries%7D%7D&operationName=contentJson&variables=%7B%22contentType%22%3A%22downloads%22%2C%22identifier%22%3A%5B%22downloads%22%5D%2C%22options%22%3A%7B%22level%22%3A1%7D%7D&locale=en-US"
+    url "https://help.elgato.com/api/v2/help_center/en-us/articles/360052826852.json"
     strategy :page_match do |page|
       match = page[/EpocCam[._-]Installer[._-]v?(\d+(?:[._]\d+)+)\.pkg/i, 1]
       next if match.blank?
