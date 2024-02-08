@@ -1,8 +1,8 @@
 cask "yacreader" do
-  version "9.13.1.2307166"
-  sha256 "51f4b0f564aa4796e78e80efc0e1cff155d0fb89cc75579ee54d128d66d6998e"
+  version "9.14.1.2402053"
+  sha256 "d11b1539102b168909c7d5996ebc5d34aa27e9c7284dfc129b88e542235b4c93"
 
-  url "https://github.com/YACReader/yacreader/releases/download/#{version.major_minor_patch}/YACReader-#{version}.MacOSX-Intel.Qt6.dmg",
+  url "https://github.com/YACReader/yacreader/releases/download/#{version.major_minor_patch}/YACReader-#{version}.MacOSX-U.Qt6.dmg",
       verified: "github.com/YACReader/yacreader/"
   name "YACReader"
   desc "Comic reader"
@@ -10,7 +10,7 @@ cask "yacreader" do
 
   livecheck do
     url "https://www.yacreader.com/downloads"
-    regex(%r{href=.*?/YACReader[._-]v?(\d+(?:\.\d+)+)[._-]MacOSX[._-]Intel[._-]Qt6\.dmg}i)
+    regex(%r{href=.*?/YACReader[._-]v?(\d+(?:\.\d+)+)[._-]MacOSX[._-]U[._-]Qt6\.dmg}i)
   end
 
   app "YACReader.app"
