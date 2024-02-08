@@ -23,6 +23,8 @@ cask "elecom-mouse-assistant" do
               "jp.co.elecom.mousePane",
             ]
 
+  # No zap stanza required
+
   caveats do
     reboot
   end
