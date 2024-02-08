@@ -16,7 +16,7 @@ cask "netdownloadhelpercoapp" do
     strategy :github_latest
   end
 
-  pkg "vdhcoapp-#{version}-mac-#{arch}-installer.pkg"
+  pkg "vdhcoapp-mac-#{arch}-installer.pkg"
 
   uninstall pkgutil: "net.downloadhelper.coapp"
 
