@@ -1,11 +1,11 @@
 cask "netdownloadhelpercoapp" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2.0.10"
-  sha256 arm:   "fa38230277d9b15ff4f0b7ea404cb1addbe112ba4b870cdf7a198c7268da85e0",
-         intel: "e24aa23b398bfbd3e5c727afab2022bea2e57b768346bd9816aaa362065feeb0"
+  version "2.0.17"
+  sha256 arm:   "e67e33c46fd6e8a6c08647ee16c4f77746a234bf06a3cff9d2fa771f666a6d57",
+         intel: "e043cb2e255836ad749ab626ef34d186cb9df66741728af9dde67a8c7308dffb"
 
-  url "https://github.com/mi-g/vdhcoapp/releases/download/v#{version}/vdhcoapp-#{version}-mac-#{arch}-installer.pkg",
+  url "https://github.com/mi-g/vdhcoapp/releases/download/v#{version}/vdhcoapp-mac-#{arch}-installer.pkg",
       verified: "github.com/mi-g/vdhcoapp/"
   name "Video DownloadHelper Companion App"
   desc "Allows video downloads from the Web"
