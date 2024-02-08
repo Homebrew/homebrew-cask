@@ -5,6 +5,7 @@ cask "ridibooks" do
   url "https://viewer-ota.ridicdn.net/pc_electron/Ridibooks-#{version}-universal.dmg",
       verified: "viewer-ota.ridicdn.net/pc_electron/"
   name "Ridibooks"
+  desc "Ebook reader"
   homepage "https://ridibooks.com/support/app/download"
 
   livecheck do
