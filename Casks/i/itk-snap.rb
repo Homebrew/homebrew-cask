@@ -3,11 +3,11 @@ cask "itk-snap" do
   livecheck_arch = on_arch_conditional arm: "M1", intel: "Intel"
 
   on_arm do
-    version "4.0.2,13696"
+    version "4.0.2,15357"
     sha256 "aba01235a44b9080fae2c5cf0b35485f96b335f1a50442ee4fb941d4c4846501"
   end
   on_intel do
-    version "4.0.2,13697"
+    version "4.0.2,15356"
     sha256 "333071f6703e6d3a8554fcc33f2a632cf3106a0bdc230893807a4c288e9e13da"
   end
 
