@@ -1,9 +1,9 @@
 cask "obsbot-center" do
-  version "2.0.8.18"
-  sha256 "0b1302dcad857047204c9ba253c0f3ee171c10608957d76c8d056b736970fb1a"
+  version "2.0.8.24"
+  sha256 "d0b55043f0133572c2fa06595ff7c37cc90d7cccf3b3c26dde5955f6b77bdfd5"
 
-  url "https://obsbot-static-resource.oss-accelerate.aliyuncs.com/download/obsbot-webcam/Obsbot_Center_OA_E_MacOS_#{version}_release.dmg",
-      verified: "obsbot-static-resource.oss-accelerate.aliyuncs.com/download/obsbot-webcam/"
+  url "https://resource-cdn.obsbothk.com/download/obsbot-center/Obsbot_Center_OA_E_MacOS_#{version}_release.dmg",
+      verified: "resource-cdn.obsbothk.com/download/obsbot-center/"
   name "OBSBOT Center"
   desc "Configuration and firmware update utility for OBSBOT Tiny and Meet series"
   homepage "https://www.obsbot.com/download"
