@@ -1,10 +1,11 @@
 cask "ridibooks" do
-  version "0.10.2"
-  sha256 "f5e2de0eaef175767821b75d7423a83a86c8b6eaa787147feb4925469c5038bc"
+  version "0.11.2"
+  sha256 "d32a89f78b8b7cde216334741919ad7b2107e8216126434bf4df0dd19c439b17"
 
-  url "https://viewer-ota.ridicdn.net/pc_electron/Ridibooks-#{version}.dmg",
+  url "https://viewer-ota.ridicdn.net/pc_electron/Ridibooks-#{version}-universal.dmg",
       verified: "viewer-ota.ridicdn.net/pc_electron/"
   name "Ridibooks"
+  desc "Ebook reader"
   homepage "https://ridibooks.com/support/app/download"
 
   livecheck do
