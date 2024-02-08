@@ -1,9 +1,9 @@
 cask "ovito" do
   arch arm: "arm64", intel: "intel"
 
-  version "3.10.1"
-  sha256 arm:   "fed42dc1c176071a4d50af3806ff13bd8890607b260deb546bfd71561c7bc17b",
-         intel: "45b196cb615d05f67f66cf496147f715f0524a6ec79531e0284db2e0fe2ee263"
+  version "3.10.2"
+  sha256 arm:   "a048f8e1f6f0c6dd5a2d637a699fa070e391e6bc81df24f70a655a75a8cb4620",
+         intel: "181049d5687a6d4fb195e693973ae425b47663d40aa6bd150cb2e698104ec315"
 
   url "https://www.ovito.org/download/master/ovito-basic-#{version}-macos-#{arch}.dmg"
   name "OVITO"
@@ -11,8 +11,8 @@ cask "ovito" do
   homepage "https://www.ovito.org/"
 
   livecheck do
-    url "https://www.ovito.org/os-downloads/"
-    regex(/version\sv?(\d+(?:\.\d+)+)/i)
+    url :homepage
+    regex(/href=.*?ovito[._-]basic[._-]v?(\d+(?:\.\d+)+)(?:[._-]macos)?[._-]#{arch}\.dmg/i)
   end
 
   auto_updates true
