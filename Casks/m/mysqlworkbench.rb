@@ -33,7 +33,7 @@ cask "mysqlworkbench" do
   end
   on_big_sur do
     version "8.0.31"
-    sha256 "746549812eae490c94501de2c4b784c178cd936049e5853bb264fea8b802b081"
+    sha256 "6807ac1138c424c57d7e912c08301a838a90935dd0fc7a5658d3ded23f98a865"
 
     url "https://downloads.mysql.com/archives/get/p/#{version.major}/file/mysql-workbench-community-#{version}-macos-x86_64.dmg"
 
@@ -43,9 +43,10 @@ cask "mysqlworkbench" do
   end
   on_monterey do
     version "8.0.34"
-    sha256 "746549812eae490c94501de2c4b784c178cd936049e5853bb264fea8b802b081"
+    sha256 arm:   "aea67c39354d76c38f2e9aca4390dbe4f75ecc3f12110ff598bf2fc46f48bf8c",
+           intel: "9fba65a06db4c67e353014b49c41d7cd0e915dd6584df43d6cb099f38cf841e2"
 
-    url "https://downloads.mysql.com/archives/get/p/#{version.major}/file/mysql-workbench-community-#{version}-macos-x86_64.dmg"
+    url "https://downloads.mysql.com/archives/get/p/#{version.major}/file/mysql-workbench-community-#{version}-macos-#{arch}.dmg"
 
     livecheck do
       skip "Legacy version"
