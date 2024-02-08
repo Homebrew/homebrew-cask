@@ -1,6 +1,6 @@
 # If your issue was closed without review
 
-Both the [reporting bugs section of the readme](https://github.com/Homebrew/homebrew-cask#reporting-bugs) and [the bug report issue template you need to fill before opening an issue](https://github.com/Homebrew/homebrew-cask/blob/HEAD/.github/ISSUE_TEMPLATE/01_bug_report.md) warn that if the instructions aren’t followed, your issue may be closed without review.
+Both the [reporting bugs section of the readme](https://github.com/Homebrew/homebrew-cask#reporting-bugs) and [the bug report issue template you need to fill before opening an issue](https://github.com/Homebrew/homebrew-cask/issues/new?template=01_bug_report.yml) warn that if the instructions aren’t followed, your issue may be closed without review.
 
 You might have been redirected to this document if it was apparent to a maintainer that was the case. We worked hard on those guides to keep things running smoothly, so we ask you go back and follow them. It is OK to open a new issue for that.
 

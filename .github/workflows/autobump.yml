@@ -1,0 +1,179 @@
+name: Bump casks on schedule or request
+
+on:
+  workflow_dispatch:
+    inputs:
+      casks:
+        description: Custom list of casks to livecheck and bump if outdated
+        required: false
+  schedule:
+    # Every 3 hours 23 minutes past the hour
+    - cron: "23 */3 * * *"
+
+env:
+  CASKS: >
+    1password
+    1password-cli
+    alfred
+    alt-tab
+    altair-graphql-client
+    apifox
+    appcleaner
+    arc
+    banking-4
+    beeper
+    bettermouse
+    bettertouchtool
+    bike
+    brave-browser
+    bruno
+    burp-suite
+    burp-suite-professional
+    busycal
+    calibre
+    canva
+    capacities
+    carbon-copy-cloner
+    chatall
+    chirp
+    chromium-gost
+    clickup
+    cloudnet
+    codeql
+    cog
+    confluent-cli
+    copilot
+    copilot-for-xcode
+    cursor
+    dbeaver-community
+    descript
+    downie
+    dropbox
+    duckduckgo
+    electerm
+    electron
+    elephas
+    eloston-chromium
+    figma
+    firefox
+    flipper
+    flutter
+    fmail2
+    forkgram-telegram
+    fossa
+    foxglove-studio
+    gather
+    glyphs
+    google-chrome
+    google-cloud-sdk
+    google-drive
+    grammarly-desktop
+    grandtotal
+    hackolade
+    heptabase
+    hstracker
+    hydrus-network
+    jdownloader
+    jupyterlab
+    libreoffice
+    librewolf
+    logseq
+    loom
+    macupdater
+    melodics
+    metasploit
+    microsoft-edge
+    microsoft-openjdk
+    milanote
+    multiapp
+    netron
+    openlens
+    openshift-client
+    opera
+    opera-gx
+    orbstack
+    osu
+    pitch
+    plex
+    plex-htpc
+    plex-media-server
+    postman
+    purei-play
+    puzzles
+    qownnotes
+    qqlive
+    quarto
+    readdle-spark
+    reader
+    reaper
+    rewind
+    rive
+    segger-jlink
+    setapp
+    sf
+    sfm
+    shapr3d
+    sigmaos
+    signal
+    siyuan
+    skype
+    sol
+    spotify
+    standard-notes
+    stats
+    teamviewer
+    telegram
+    telegram-desktop
+    teleport-connect
+    termius
+    thunderbird
+    todoist
+    tor-browser
+    trader-workstation
+    trainerroad
+    tsh
+    tuist
+    unity
+    uvtools
+    viber
+    visual-studio-code
+    vivaldi
+    vrew
+    vscodium
+    vuescan
+    warp
+    webcatalog
+    webull
+    whatsapp
+    workflowy
+    zed
+    zoom
+    zoom-for-it-admins
+
+permissions:
+  contents: read
+
+jobs:
+  autobump:
+    if: github.repository == 'Homebrew/homebrew-cask'
+    runs-on: macos-latest
+    steps:
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+        with:
+          core: false
+          cask: true
+          test-bot: false
+
+      - name: Configure Git user
+        uses: Homebrew/actions/git-user-config@master
+        with:
+          username: ${{ (github.event_name == 'workflow_dispatch' && github.actor) || 'BrewTestBot' }}
+
+      - name: Bump casks
+        uses: Homebrew/actions/bump-packages@master
+        continue-on-error: true
+        with:
+          token: ${{ secrets.HOMEBREW_CASK_REPO_WORKFLOW_TOKEN }}
+          casks: ${{ github.event.inputs.casks || env.CASKS }}

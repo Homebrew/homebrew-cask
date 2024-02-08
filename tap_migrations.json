@@ -27,7 +27,6 @@
   "lunchy": "homebrew/core",
   "micromamba": "homebrew/core",
   "minikube": "homebrew/core",
-  "mitmproxy": "homebrew/core",
   "mosh": "homebrew/core",
   "nmap": "homebrew/core",
   "node": "homebrew/core",

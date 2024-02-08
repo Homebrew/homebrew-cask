@@ -1,6 +1,22 @@
 name: CI
 
-on: pull_request
+on:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      casks:
+        description: List of casks to audit (comma-separated)
+        required: true
+      skip_install:
+        description: Skip installation of casks
+        required: false
+        default: true
+        type: boolean
+      new_cask:
+        description: Apply new cask audit
+        required: false
+        default: false
+        type: boolean
 
 env:
   HOMEBREW_DEVELOPER: 1
@@ -25,10 +41,12 @@ jobs:
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
         with:
+          core: false
+          cask: true
           test-bot: false
 
       - name: Check out Pull Request
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
           persist-credentials: false
@@ -36,8 +54,12 @@ jobs:
       - name: Generate CI matrix
         id: generate-matrix
         run: |
-          brew tap homebrew/cask
-          brew ruby -- "$(brew --repository homebrew/cask)/cmd/lib/generate-matrix.rb" "${{ github.event.pull_request.url }}"
+          if [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" ]]
+          then
+            brew ruby -- "$(brew --repository homebrew/cask)/cmd/lib/generate-matrix.rb" ${{ github.event.inputs.skip_install  && '--skip-install' }} ${{ github.event.inputs.new_cask  && '--new' }} --casks=${{ github.event.inputs.casks }}
+          else
+            brew ruby -- "$(brew --repository homebrew/cask)/cmd/lib/generate-matrix.rb" --url="${{ github.event.pull_request.url }}"
+          fi
 
   test:
     name: ${{ matrix.name }}
@@ -52,6 +74,8 @@ jobs:
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
         with:
+          core: false
+          cask: true
           test-bot: false
 
       - name: Enable debug mode
@@ -61,28 +85,15 @@ jobs:
         if: runner.debug
 
       - name: Check out Pull Request
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
           persist-credentials: false
 
       - name: Clean up CI machine
         run: |
-          if ! brew list --cask visual-studio &>/dev/null; then
-            if ! rm -r '/Applications/Visual Studio.app'; then
-              echo '::warning::Removing Visual Studio is no longer necessary.'
-            fi
-          fi
-
           if ! brew uninstall --cask julia && ! rm -r /Applications/Julia-*.app; then
             echo '::warning::Removing Julia is no longer necessary.'
-          fi
-
-          if ! rm /usr/local/share/man/man1/al.1 || \
-             ! sudo rm /etc/paths.d/mono-commands || \
-             ! sudo rm -r /Library/Frameworks/Mono.framework || \
-             ! sudo pkgutil --forget com.xamarin.mono-MDK.pkg; then
-            echo '::warning::Uninstalling Mono is no longer necessary.'
           fi
 
           if ! rm /usr/local/bin/dotnet; then
@@ -93,8 +104,8 @@ jobs:
             echo '::warning::Removing `cocoapods` symlink is no longer necessary.'
           fi
 
-          if ! rm /usr/local/bin/conda; then
-            echo '::warning::Removing `conda` symlink is no longer necessary.'
+          if ! rm /usr/local/bin/chromedriver; then
+            echo '::warning::Removing `chromedriver` symlink is no longer necessary.'
           fi
 
           brew unlink python && brew link --overwrite python
@@ -102,7 +113,7 @@ jobs:
 
       - name: Cache Homebrew Gems
         id: cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ${{ steps.set-up-homebrew.outputs.gems-path }}
           key: ${{ matrix.runner }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
@@ -115,7 +126,7 @@ jobs:
 
       - name: Run brew readall ${{ matrix.tap }}
         id: readall
-        run: brew readall '${{ matrix.tap }}'
+        run: brew readall --os=all --arch=all '${{ matrix.tap }}'
         if: >
           always() &&
           contains(fromJSON('["success", "skipped"]'), steps.gems.outcome) &&
@@ -131,7 +142,7 @@ jobs:
       - name: Run brew fetch --cask ${{ matrix.cask.token }}
         id: fetch
         run: |
-          brew fetch --cask --retry --force '${{ matrix.cask.path }}'
+          brew fetch --cask --retry --force ${{ join(matrix.fetch_args, ' ') }} '${{ matrix.cask.path }}'
         timeout-minutes: 30
         if: >
           always() &&

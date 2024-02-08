@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+# rubocop:disable Style/TopLevelMethodDefinition
+
 #
 # list_login_items_for_app
 #
@@ -64,3 +66,4 @@ end
 
 process_args
 list_login_items_for_app $app_path # rubocop:disable Style/GlobalVars
+# rubocop:enable Style/TopLevelMethodDefinition

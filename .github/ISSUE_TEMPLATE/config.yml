@@ -12,4 +12,4 @@ contact_links:
     about: Having a Homebrew formula problem? Report it to Homebrew/homebrew-core (the formula tap/repository)
   - name: Ideas for a new feature
     url: https://docs.brew.sh/How-To-Open-a-Homebrew-Pull-Request
-    about: If you have an idea for a new feature here's how to add it to Brew
+    about: If you have an idea for a new feature, here's how to add it to Homebrew
