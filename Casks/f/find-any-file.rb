@@ -9,8 +9,8 @@ cask "find-any-file" do
   homepage "https://apps.tempel.org/FindAnyFile/"
 
   livecheck do
-    url "https://findanyfile.app/appcast#{version.major}.php"
-    strategy :sparkle, &:short_version
+    url :homepage
+    regex(/href=.*?FindAnyFile[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
   depends_on macos: ">= :el_capitan"
