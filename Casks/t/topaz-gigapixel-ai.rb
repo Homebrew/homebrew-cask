@@ -16,5 +16,10 @@ cask "topaz-gigapixel-ai" do
 
   uninstall pkgutil: "com.topazlabs.TopazGigapixelAI"
 
-  # No zap stanza required
+  zap trash: [
+    "~/Library/Preferences/com.topaz-labs-llc.Topaz Gigapixel AI.plist",
+    "~/Library/Preferences/com.topazlabs.Topaz Gigapixel AI.plist",
+    "~/Library/Preferences/com.topazlabs.TopazGigapixelAI.plist",
+    "~/Library/Saved Application State/com.topazlabs.TopazGigapixelAI.savedState",
+  ]
 end
