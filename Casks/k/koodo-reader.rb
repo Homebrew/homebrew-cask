@@ -13,7 +13,7 @@ cask "koodo-reader" do
 
   livecheck do
     url :homepage
-    regex(/Stable\sVersion\s(\d+(?:\.\d+)+)/i)
+    regex(/Stable\s*Version\s*v?(\d+(?:\.\d+)+)/i)
   end
 
   app "Koodo Reader.app"
