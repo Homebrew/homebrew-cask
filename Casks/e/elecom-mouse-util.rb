@@ -1,4 +1,4 @@
-cask "elecom-mouse-assistant" do
+cask "elecom-mouse-util" do
   version "5.2.13.000"
   sha256 "9896a8efa0cb6de3f8e0ecf1d39f21e14f9c2f7a0798dbf36649bcd9d4944e2e"
 
@@ -9,7 +9,7 @@ cask "elecom-mouse-assistant" do
 
   livecheck do
     url "https://www.elecom.co.jp/global/download-list/utility/mouse_assistant/mac/"
-    regex(/ELECOM_Mouse_Installer_(\d+(?:\.\d+)+)\.zip/i)
+    regex(/ELECOM[._-]Mouse[._-]Installer[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
   depends_on macos: ">= :el_capitan"
