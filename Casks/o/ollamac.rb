@@ -11,4 +11,9 @@ cask "ollamac" do
   depends_on macos: ">= :sonoma"
 
   app "Ollamac.app"
+
+  zap trash: [
+    "~/Library/Containers/com.kevinhermawan.Ollamac",
+    "~/Library/Application Scripts/com.kevinhermawa.Ollamac"
+  ]
 end
