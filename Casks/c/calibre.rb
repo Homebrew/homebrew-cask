@@ -54,7 +54,7 @@ cask "calibre" do
   desc "E-books management software"
   homepage "https://calibre-ebook.com/"
 
-  conflicts_with cask: "homebrew/cask-versions/calibre4"
+  conflicts_with cask: "calibre4"
   depends_on macos: ">= :catalina"
 
   app "calibre.app"
