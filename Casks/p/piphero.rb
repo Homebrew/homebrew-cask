@@ -1,9 +1,9 @@
 cask "piphero" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.1.1"
-  sha256 arm:   "9bcd257e85fdb26256a5c579f6378a0c043f956422cae763e8495ff0689af67f",
-         intel: "092a17d31aa427583f2cee098d29c286580604a7df92d3e0416db07fe94dc534"
+  version "1.2.0"
+  sha256 arm:   "0ace00722786d40520f959a4aa08562b4e55cdcfccf138ca0101fd3341d59541",
+         intel: "d68da3857add68ed987e51b44ef96a8066c238525e791dde7c013ceab64510a5"
 
   url "https://github.com/pipheroapp/downloads/releases/download/v#{version}/PiPHero-#{version}-mac-#{arch}.dmg",
       verified: "github.com/pipheroapp/downloads/"
