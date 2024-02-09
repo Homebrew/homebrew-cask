@@ -1,5 +1,5 @@
 cask "dehelper" do
-  version "4.6.1,2024-01-07"
+  version "4.6.1,2024-01-09"
   sha256 "e20a93c9f00fae04038a9efe157563e084ccbcfa69b97265c8cbfdf241c612d7"
 
   url "https://static.frdic.com/pkg/dhmac.dmg?v=#{version.csv.second}",
