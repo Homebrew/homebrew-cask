@@ -11,7 +11,7 @@ cask "screaming-frog-seo-spider" do
   homepage "https://www.screamingfrog.co.uk/seo-spider/"
 
   livecheck do
-    url "https://www.screamingfrog.co.uk/wp-content/themes/screamingfrog/inc/download-modal.php"
+    url :homepage
     regex(%r{href=.*?/ScreamingFrogSEOSpider[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg}i)
   end
 
@@ -21,8 +21,4 @@ cask "screaming-frog-seo-spider" do
     "~/.ScreamingFrogSEOSpider",
     "~/Library/Application Support/uk.co.screamingfrog.seospider.ui.b/",
   ]
-
-  caveats do
-    depends_on_java "7+"
-  end
 end
