@@ -12,6 +12,8 @@ cask "yandex-disk" do
     strategy :extract_plist
   end
 
+  auto_updates true
+
   app "Yandex.Disk.2.app"
 
   zap trash: [
