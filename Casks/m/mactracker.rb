@@ -1,6 +1,6 @@
 cask "mactracker" do
-  version "7.12.13"
-  sha256 "860ee6715b19644f341b46c3f6201b418fcef33c7377eab3cc405d363e21fb8d"
+  version "7.12.14"
+  sha256 "643c8265a4d017c35b1aacb43bcc8e559ded348bcdc5358b4e16c429c6450fb7"
 
   url "https://www.mactracker.ca/downloads/Mactracker_#{version}.zip"
   name "Mactracker"
