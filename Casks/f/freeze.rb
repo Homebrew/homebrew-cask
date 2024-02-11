@@ -1,6 +1,6 @@
 cask "freeze" do
-  version "3.16,312"
-  sha256 "506ac942f5fd105858a8415d7c3d4b6036d75e7e537310b4faae71cb4bd7e59b"
+  version "4.0,316"
+  sha256 "0145982cf6c97910a299cc06487d4fb1f74d7b2c9090ed9bac220fd487c3cd94"
 
   url "https://www.freezeapp.net/download/Freeze-#{version.csv.first}-#{version.csv.second}.zip"
   name "Freeze"
