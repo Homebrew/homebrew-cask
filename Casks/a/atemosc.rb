@@ -1,9 +1,9 @@
 cask "atemosc" do
   arch arm: "-arm64"
 
-  version "5.0.8"
-  sha256 arm:   "3905b0af6499ed02c4bcb83be31dba0c9fe6f8cc0c99ebf041aaa70a6d8b7fdb",
-         intel: "a839e4a3b2bf4f0db400caf2851b44c298d73ac1e4faf8fae1be1eaa16b6a0fe"
+  version "5.0.9"
+  sha256 arm:   "705f6f032027e27400198a37036e90fdc5e203caeac820fe6a0c76bf4b3b869b",
+         intel: "a2d7aadfce03126ce1b4bee73ae011e01587ab6b1fb43ef5e50871d2499a7961"
 
   url "https://atemosc.com/download/atemOSC-#{version}#{arch}.dmg"
   name "atemOSC"
