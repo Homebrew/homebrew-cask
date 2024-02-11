@@ -13,6 +13,9 @@ cask "jaspersoft-studio" do
     regex(%r{url=.*?/jasperstudio/files/JasperSoftStudio[._-]v?(\d+(?:\.\d+)+)}i)
   end
 
+  # https://community.jaspersoft.com/knowledgebase/faq/faqs-on-community-edition-changes-effective-january-25-2024-r4629/
+  deprecate! date: "2024-02-11", because: :repo_removed
+
   auto_updates true
 
   app "Jaspersoft Studio #{version}.app"
