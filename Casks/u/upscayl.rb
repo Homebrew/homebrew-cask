@@ -20,6 +20,6 @@ cask "upscayl" do
   zap trash: [
     "~/Library/Application Support/Upscayl",
     "~/Library/Preferences/org.upscayl.app.plist",
-    "~/Library/Saved Applicatrtjion State/org.upscayl.app.savedState",
+    "~/Library/Saved Application State/org.upscayl.app.savedState",
   ]
 end
