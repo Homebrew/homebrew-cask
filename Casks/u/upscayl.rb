@@ -1,6 +1,6 @@
 cask "upscayl" do
-  version "2.9.8"
-  sha256 "39946611bed5fbbf860efd21b69bb8d345eb9d7897ec38c3d4c704880180731a"
+  version "2.9.9"
+  sha256 "21cab689f557c5ddaee36ee9f6bf22bf042072cbb4e3c354e486e2ba2b86df3a"
 
   url "https://github.com/upscayl/upscayl/releases/download/v#{version}/upscayl-#{version}-mac.dmg",
       verified: "github.com/upscayl/upscayl/"
@@ -14,7 +14,7 @@ cask "upscayl" do
   end
 
   depends_on macos: ">= :monterey"
-  
+
   app "Upscayl.app"
 
   zap trash: [
