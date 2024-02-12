@@ -48,7 +48,6 @@ cask "apparency" do
   desc "Inspect application bundles"
   homepage "https://www.mothersruin.com/software/Apparency/"
 
-  auto_updates true
   depends_on macos: ">= :mojave"
 
   app "Apparency.app"
