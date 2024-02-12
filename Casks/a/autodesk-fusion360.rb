@@ -6,7 +6,7 @@ cask "autodesk-fusion360" do
   url "https://dl.appstreaming.autodesk.com/production/installers/Fusion%20Client%20Downloader.dmg"
   name "Autodesk Fusion 360"
   desc "Integrated CAD, CAM, CAE, and PCB software"
-  homepage "https://www.autodesk.com/products/fusion-360"
+  homepage "https://www.autodesk.com/products/fusion-360/overview"
 
   installer script: {
     executable: "#{staged_path}/Install Autodesk Fusion.app/Contents/MacOS/Fusion Client Downloader",
@@ -14,7 +14,7 @@ cask "autodesk-fusion360" do
   }
 
   uninstall quit:   [
-              "com.autodesk.dls.streamer.scriptapp.Autodesk-Fusion-360",
+              "com.autodesk.dls.streamer.scriptapp.Autodesk-Fusion",
               "com.autodesk.fusion360",
             ],
             script: {
@@ -27,9 +27,9 @@ cask "autodesk-fusion360" do
               ],
             },
             delete: [
-              "~/Applications/Autodesk Fusion 360 Service Utility.app",
-              "~/Applications/Autodesk Fusion 360.app",
-              "~/Applications/Remove Autodesk Fusion 360.app",
+              "~/Applications/Autodesk Fusion Service Utility.app",
+              "~/Applications/Autodesk Fusion.app",
+              "~/Applications/Remove Autodesk Fusion.app",
             ]
 
   zap trash: [
