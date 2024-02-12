@@ -13,7 +13,7 @@ cask "ollamac" do
   app "Ollamac.app"
 
   zap trash: [
+    "~/Library/Application Scripts/com.kevinhermawa.Ollamac",
     "~/Library/Containers/com.kevinhermawan.Ollamac",
-    "~/Library/Application Scripts/com.kevinhermawa.Ollamac"
   ]
 end
