@@ -3,7 +3,7 @@ cask "autodesk-fusion360" do
   version :latest
   sha256 :no_check
 
-  url "https://dl.appstreaming.autodesk.com/production/installers/Fusion%20360%20Client%20Downloader.dmg"
+  url "https://dl.appstreaming.autodesk.com/production/installers/Fusion%20Client%20Downloader.dmg"
   name "Autodesk Fusion 360"
   desc "Integrated CAD, CAM, CAE, and PCB software"
   homepage "https://www.autodesk.com/products/fusion-360"
