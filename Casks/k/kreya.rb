@@ -1,7 +1,7 @@
 cask "kreya" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.13.0"
+  version "1.13.1"
   sha256 :no_check
 
   url "https://stable-downloads.kreya.app/Kreya-osx-#{arch}.zip"
