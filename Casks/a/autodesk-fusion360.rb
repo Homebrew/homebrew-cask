@@ -9,7 +9,7 @@ cask "autodesk-fusion360" do
   homepage "https://www.autodesk.com/products/fusion-360"
 
   installer script: {
-    executable: "#{staged_path}/Install Autodesk Fusion 360.app/Contents/MacOS/Fusion 360 Client Downloader",
+    executable: "#{staged_path}/Install Autodesk Fusion.app/Contents/MacOS/Fusion 360 Client Downloader",
     args:       ["--quiet"],
   }
 
@@ -18,7 +18,7 @@ cask "autodesk-fusion360" do
               "com.autodesk.fusion360",
             ],
             script: {
-              executable: "#{staged_path}/Install Autodesk Fusion 360.app/Contents/MacOS/streamer",
+              executable: "#{staged_path}/Install Autodesk Fusion.app/Contents/MacOS/streamer",
               args:       [
                 "--process", "uninstall",
                 "--quiet",
