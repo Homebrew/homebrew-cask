@@ -1,5 +1,4 @@
-cask "autodesk-fusion360" do
-  # NOTE: "360" is not a version number, but an intrinsic part of the product name
+cask "autodesk-fusion" do
   version :latest
   sha256 :no_check
 
@@ -15,7 +14,7 @@ cask "autodesk-fusion360" do
 
   uninstall quit:   [
               "com.autodesk.dls.streamer.scriptapp.Autodesk-Fusion",
-              "com.autodesk.fusion360",
+              "com.autodesk.fusion",
             ],
             script: {
               executable: "#{staged_path}/Install Autodesk Fusion.app/Contents/MacOS/streamer",
