@@ -1,24 +1,23 @@
-cask "autodesk-fusion360" do
-  # NOTE: "360" is not a version number, but an intrinsic part of the product name
+cask "autodesk-fusion" do
   version :latest
   sha256 :no_check
 
-  url "https://dl.appstreaming.autodesk.com/production/installers/Fusion%20360%20Client%20Downloader.dmg"
+  url "https://dl.appstreaming.autodesk.com/production/installers/Fusion%20Client%20Downloader.dmg"
   name "Autodesk Fusion 360"
   desc "Integrated CAD, CAM, CAE, and PCB software"
-  homepage "https://www.autodesk.com/products/fusion-360"
+  homepage "https://www.autodesk.com/products/fusion-360/overview"
 
   installer script: {
-    executable: "#{staged_path}/Install Autodesk Fusion 360.app/Contents/MacOS/Fusion 360 Client Downloader",
+    executable: "#{staged_path}/Install Autodesk Fusion.app/Contents/MacOS/Fusion Client Downloader",
     args:       ["--quiet"],
   }
 
   uninstall quit:   [
-              "com.autodesk.dls.streamer.scriptapp.Autodesk-Fusion-360",
-              "com.autodesk.fusion360",
+              "com.autodesk.dls.streamer.scriptapp.Autodesk-Fusion",
+              "com.autodesk.fusion",
             ],
             script: {
-              executable: "#{staged_path}/Install Autodesk Fusion 360.app/Contents/MacOS/streamer",
+              executable: "#{staged_path}/Install Autodesk Fusion.app/Contents/MacOS/streamer",
               args:       [
                 "--process", "uninstall",
                 "--quiet",
@@ -27,9 +26,9 @@ cask "autodesk-fusion360" do
               ],
             },
             delete: [
-              "~/Applications/Autodesk Fusion 360 Service Utility.app",
-              "~/Applications/Autodesk Fusion 360.app",
-              "~/Applications/Remove Autodesk Fusion 360.app",
+              "~/Applications/Autodesk Fusion Service Utility.app",
+              "~/Applications/Autodesk Fusion.app",
+              "~/Applications/Remove Autodesk Fusion.app",
             ]
 
   zap trash: [
