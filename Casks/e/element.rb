@@ -1,6 +1,6 @@
 cask "element" do
   version "1.11.57"
-  sha256 :no_check
+  sha256 "53d3ae72acc86444954f1e255de74a0a35bbbff3c57cb21e1e7fed53eafb54e4"
 
   url "https://packages.element.io/desktop/install/macos/Element.dmg"
   name "Element"
@@ -10,7 +10,7 @@ cask "element" do
   # The upstream website doesn't appear to provide version information. We check
   # GitHub releases as a best guess of when a new version is released.
   livecheck do
-    url "https://github.com/vector-im/element-desktop"
+    url "https://github.com/element-hq/element-desktop"
     strategy :github_latest
   end
 
