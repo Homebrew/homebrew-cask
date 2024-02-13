@@ -27,9 +27,9 @@ cask "dotnet" do
   end
 
   conflicts_with cask: [
+    "dotnet-preview",
     "dotnet-sdk",
-    "homebrew/cask-versions/dotnet-preview",
-    "homebrew/cask-versions/dotnet-sdk-preview",
+    "dotnet-sdk-preview",
   ], formula: "dotnet"
   depends_on macos: ">= :mojave"
 
