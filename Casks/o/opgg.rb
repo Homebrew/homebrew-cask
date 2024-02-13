@@ -12,6 +12,8 @@ cask "opgg" do
     strategy :electron_builder
   end
 
+  auto_updates true
+
   app "OP.GG.app"
 
   zap trash: [
