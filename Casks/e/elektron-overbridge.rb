@@ -1,6 +1,6 @@
 cask "elektron-overbridge" do
-  version "2.7.9,0e8d7acd-0cd9-5b1b-ba14-94e2e5ae393d"
-  sha256 "99c472d14a947ed1b519dc698d87f3299c87cbc806ab94559ebd8123cdff6acf"
+  version "2.7.13,31ec56e9-963b-5a69-ba50-7d422453d874"
+  sha256 "5a540060632941a2d527c7f0974716601a4777b0b7d43f5dabd4ec92b5e3be0f"
 
   url "https://s3-eu-west-1.amazonaws.com/se-elektron-devops/release/#{version.csv.second}/Elektron_Overbridge_#{version.csv.first}.dmg",
       verified: "s3-eu-west-1.amazonaws.com/se-elektron-devops/"
