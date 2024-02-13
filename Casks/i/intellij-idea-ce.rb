@@ -21,7 +21,7 @@ cask "intellij-idea-ce" do
   end
 
   auto_updates true
-  conflicts_with cask: "homebrew/cask-versions/intellij-idea-ce19"
+  conflicts_with cask: "intellij-idea-ce19"
   depends_on macos: ">= :high_sierra"
 
   app "IntelliJ IDEA CE.app"
