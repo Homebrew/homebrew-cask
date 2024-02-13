@@ -21,8 +21,8 @@ cask "defold" do
 
   auto_updates true
   conflicts_with cask: [
-    "homebrew/cask-versions/defold-alpha",
-    "homebrew/cask-versions/defold-beta",
+    "defold-alpha",
+    "defold-beta",
   ]
 
   app "Defold.app"
