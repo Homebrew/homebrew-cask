@@ -1,6 +1,6 @@
 cask "igv" do
-  version "2.17.1"
-  sha256 "a5655701dda1af6e177e7f652c45d3b9faf8641f5875776147c4585237326ce5"
+  version "2.17.2"
+  sha256 "f42ea840f82c093eacd1c5b285ed5ff0b523e658254d9e4d823a751ee037bd62"
 
   url "https://data.broadinstitute.org/igv/projects/downloads/#{version.major_minor}/IGV_MacApp_#{version}.zip"
   name "Integrative Genomics Viewer (IGV)"
