@@ -4,7 +4,7 @@ cask "qdirstat" do
 
   url "https://github.com/jesusha123/qdirstat-macos/releases/download/#{version}/QDirStat-#{version}.dmg"
   name "QDirStat"
-  desc "Graphical application to show where your disk space has gone"
+  desc "Disk utilisation visualiser"
   homepage "https://github.com/jesusha123/qdirstat-macos/"
 
   auto_updates true
@@ -12,5 +12,9 @@ cask "qdirstat" do
 
   app "QDirStat.app"
 
-  zap trash: []
+  zap trash: [
+    "~/Library/Preferences/com.qdirstat.QDirStat*.plist",
+    "~/Library/Preferences/com.yourcompany.qdirstat.plist",
+    "~/Library/Saved Application State/com.yourcompany.qdirstat.savedState",
+  ]
 end
