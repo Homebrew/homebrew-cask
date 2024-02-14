@@ -2,7 +2,7 @@ cask "navicat-for-sqlite" do
   version "16.3.4"
   sha256 :no_check
 
-  url "https://download.navicat.com/download/navicat#{version.major_minor.no_dots}_sqlite_en.dmg"
+  url "https://dn.navicat.com/download/navicat#{version.major_minor.no_dots}_sqlite_en.dmg"
   name "Navicat for SQLite"
   desc "Database administration and development tool for SQLite"
   homepage "https://www.navicat.com/products/navicat-for-sqlite"

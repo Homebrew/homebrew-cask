@@ -2,7 +2,7 @@ cask "navicat-for-oracle" do
   version "16.3.4"
   sha256 :no_check
 
-  url "https://download.navicat.com/download/navicat#{version.major_minor.no_dots}_ora_en.dmg"
+  url "https://dn.navicat.com/download/navicat#{version.major_minor.no_dots}_ora_en.dmg"
   name "Navicat for Oracle"
   desc "Database administration and development tool for Oracle"
   homepage "https://www.navicat.com/products/navicat-for-oracle"

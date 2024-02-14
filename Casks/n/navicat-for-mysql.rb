@@ -2,7 +2,7 @@ cask "navicat-for-mysql" do
   version "16.3.4"
   sha256 :no_check
 
-  url "https://download.navicat.com/download/navicat#{version.major_minor.no_dots}_mysql_en.dmg"
+  url "https://dn.navicat.com/download/navicat#{version.major_minor.no_dots}_mysql_en.dmg"
   name "Navicat for MySQL"
   desc "Database administration and development tool"
   homepage "https://www.navicat.com/products/navicat-for-mysql"
