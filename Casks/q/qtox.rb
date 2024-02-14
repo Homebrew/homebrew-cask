@@ -8,6 +8,8 @@ cask "qtox" do
   desc "Instant messaging and video conferencing app"
   homepage "https://qtox.github.io/"
 
+  deprecate! date: "2024-02-13", because: :discontinued
+
   app "qTox.app"
 
   zap trash: [
