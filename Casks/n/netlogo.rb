@@ -4,7 +4,7 @@ cask "netlogo" do
 
   url "https://ccl.northwestern.edu/netlogo/#{version}/NetLogo-#{version}.dmg"
   name "NetLogo"
-  desc "Multi-agent programmable modeling environment"
+  desc "Multi-agent programmable modelling environment"
   homepage "https://ccl.northwestern.edu/netlogo/"
 
   livecheck do

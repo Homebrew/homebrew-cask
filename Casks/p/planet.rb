@@ -5,7 +5,7 @@ cask "planet" do
   url "https://github.com/Planetable/Planet/releases/download/release-#{version}/Planet.zip",
       verified: "github.com/Planetable/Planet/"
   name "Planet"
-  desc "Decentralized blogs and websites powered by IPFS and Ethereum Name System"
+  desc "Decentralised blogs and websites powered by IPFS and Ethereum Name System"
   homepage "https://www.planetable.xyz/"
 
   livecheck do

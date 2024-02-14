@@ -5,7 +5,7 @@ cask "toinane-colorpicker" do
   url "https://github.com/toinane/colorpicker/releases/download/#{version}/Colorpicker-#{version}.dmg",
       verified: "github.com/toinane/colorpicker/"
   name "Colorpicker"
-  desc "Get and save color codes"
+  desc "Get and save colour codes"
   homepage "https://colorpicker.fr/"
 
   app "Colorpicker.app"

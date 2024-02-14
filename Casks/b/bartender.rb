@@ -10,7 +10,7 @@ cask "bartender" do
 
   url "https://macbartender.com/B2/updates/#{version.dots_to_hyphens}/Bartender%20#{version.major}.zip"
   name "Bartender"
-  desc "Menu bar icon organizer"
+  desc "Menu bar icon organiser"
   homepage "https://www.macbartender.com/"
 
   livecheck do

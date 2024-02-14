@@ -5,7 +5,7 @@ cask "clementine" do
   url "https://github.com/clementine-player/Clementine/releases/download/#{version}/clementine-#{version}.dmg",
       verified: "github.com/clementine-player/Clementine/"
   name "Clementine"
-  desc "Music player and library organizer"
+  desc "Music player and library organiser"
   homepage "https://www.clementine-player.org/"
 
   app "clementine.app"

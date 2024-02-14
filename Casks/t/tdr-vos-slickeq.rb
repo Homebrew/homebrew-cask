@@ -4,7 +4,7 @@ cask "tdr-vos-slickeq" do
 
   url "https://www.tokyodawn.net/labs/SlickEQ/#{version}/TDR%20VOS%20SlickEQ.zip?x24775"
   name "TDR VOS SlickEQ"
-  desc "Mixing equalizer"
+  desc "Mixing equaliser"
   homepage "https://www.tokyodawn.net/tdr-vos-slickeq/"
 
   livecheck do

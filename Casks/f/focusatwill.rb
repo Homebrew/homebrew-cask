@@ -5,7 +5,7 @@ cask "focusatwill" do
   url "https://faw-desktop.s3.amazonaws.com/focusatwill-#{version}-universal.dmg",
       verified: "faw-desktop.s3.amazonaws.com/"
   name "Focus@Will"
-  desc "Personalized focus music"
+  desc "Personalised focus music"
   homepage "https://www.focusatwill.com/"
 
   livecheck do

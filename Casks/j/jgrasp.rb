@@ -4,7 +4,7 @@ cask "jgrasp" do
 
   url "https://jgrasp.org/dl4g/jgrasp/jgrasp#{version.no_dots}.pkg"
   name "jgrasp"
-  desc "IDE with visualizations for improving software comprehensibility"
+  desc "IDE with visualisations for improving software comprehensibility"
   homepage "https://jgrasp.org/"
 
   livecheck do

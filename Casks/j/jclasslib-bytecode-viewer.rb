@@ -4,7 +4,7 @@ cask "jclasslib-bytecode-viewer" do
 
   url "https://github.com/ingokegel/jclasslib/releases/download/#{version}/jclasslib_macos_#{version.dots_to_underscores}.dmg"
   name "jclasslib bytecode viewer"
-  desc "Visualize all aspects of compiled Java class files and the contained bytecode"
+  desc "Visualise all aspects of compiled Java class files and the contained bytecode"
   homepage "https://github.com/ingokegel/jclasslib"
 
   auto_updates true

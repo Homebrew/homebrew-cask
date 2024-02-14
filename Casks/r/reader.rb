@@ -5,7 +5,7 @@ cask "reader" do
   url "https://github.com/readwiseio/reader-desktop-releases/releases/download/reader-desktop-v#{version}/Reader_#{version}_universal.dmg",
       verified: "github.com/readwiseio/reader-desktop-releases/"
   name "Readwise Reader"
-  desc "Save articles to read, highlight key content, and organize notes for review"
+  desc "Save articles to read, highlight key content, and organise notes for review"
   homepage "https://readwise.io/read/"
 
   livecheck do

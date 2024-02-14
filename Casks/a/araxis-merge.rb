@@ -19,7 +19,7 @@ cask "araxis-merge" do
 
   url "https://www.araxis.com/download/Merge#{version}-macOS.dmg"
   name "Araxis Merge"
-  desc "Two and three-way file comparison, merging and folder synchronization"
+  desc "Two and three-way file comparison, merging and folder synchronisation"
   homepage "https://www.araxis.com/merge/"
 
   depends_on macos: ">= :mojave"

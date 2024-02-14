@@ -7,7 +7,7 @@ cask "filebot" do
 
   url "https://get.filebot.net/filebot/FileBot_#{version}/FileBot_#{version}_#{arch}.app.tar.xz"
   name "FileBot"
-  desc "Tool for organizing and renaming movies, TV shows, anime or music"
+  desc "Tool for organising and renaming movies, TV shows, anime or music"
   homepage "https://www.filebot.net/"
 
   livecheck do

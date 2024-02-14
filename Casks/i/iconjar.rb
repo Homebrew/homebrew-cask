@@ -4,7 +4,7 @@ cask "iconjar" do
 
   url "https://geticonjar.com/releases/IconJar.app.#{version.csv.second}.zip"
   name "IconJar"
-  desc "Icon organizer"
+  desc "Icon organiser"
   homepage "https://geticonjar.com/"
 
   livecheck do

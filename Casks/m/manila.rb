@@ -4,7 +4,7 @@ cask "manila" do
 
   url "https://github.com/neilsardesai/Manila/releases/download/v#{version}/Manila.zip"
   name "Manila"
-  desc "Finder extension for changing folder colors"
+  desc "Finder extension for changing folder colours"
   homepage "https://github.com/neilsardesai/Manila#readme"
 
   livecheck do

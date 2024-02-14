@@ -98,7 +98,7 @@ cask "omnifocus" do
   end
 
   name "OmniFocus"
-  desc "Scheduling application focusing on organization"
+  desc "Scheduling application focusing on organisation"
   homepage "https://www.omnigroup.com/omnifocus/"
 
   auto_updates true

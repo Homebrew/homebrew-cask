@@ -5,7 +5,7 @@ cask "transocks" do
   url "https://download.chuansuo.io/transocks/download/mac/#{version}/Transocks_official_v#{version}.dmg",
       verified: "download.chuansuo.io/"
   name "Transocks"
-  desc "Tool to optimize access to various video music resources"
+  desc "Tool to optimise access to various video music resources"
   homepage "https://www.transocks.com/"
 
   livecheck do

@@ -4,7 +4,7 @@ cask "gamma-control" do
 
   url "https://littoral.michelf.ca/apps/gamma-control/gamma-control-#{version}.zip"
   name "Gamma Control"
-  desc "Per-screen color adjustments"
+  desc "Per-screen colour adjustments"
   homepage "https://michelf.ca/projects/gamma-control/"
 
   livecheck do

@@ -8,7 +8,7 @@ cask "cursr" do
   url "https://github.com/bitgapp/Cursr/releases/download/v#{version}/Cursr-mac-#{arch}.dmg",
       verified: "github.com/bitgapp/Cursr/"
   name "Cursr"
-  desc "Customize mouse movements between multiple displays"
+  desc "Customise mouse movements between multiple displays"
   homepage "https://cursr.app/"
 
   livecheck do

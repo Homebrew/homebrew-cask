@@ -5,7 +5,7 @@ cask "cinco" do
   url "https://ls5download.cs.tu-dortmund.de/cinco/releases/#{version}/cinco-#{version}-macos.dmg",
       verified: "ls5download.cs.tu-dortmund.de/cinco/releases/"
   name "Cinco"
-  desc "Generator-driven Eclipse IDE for domain-specific graphical modeling tools"
+  desc "Generator-driven Eclipse IDE for domain-specific graphical modelling tools"
   homepage "https://cinco.scce.info/"
 
   livecheck do

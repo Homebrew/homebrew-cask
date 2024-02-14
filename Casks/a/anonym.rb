@@ -4,7 +4,7 @@ cask "anonym" do
 
   url "https://www.hanynet.com/anonym-#{version}.zip"
   name "Anonym"
-  desc "Network access anonymizer"
+  desc "Network access anonymiser"
   homepage "https://www.hanynet.com/anonym/"
 
   livecheck do

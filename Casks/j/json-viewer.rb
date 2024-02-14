@@ -4,7 +4,7 @@ cask "json-viewer" do
 
   url "https://jsonviewer.app/JSON-Viewer-#{version}.dmg"
   name "JSON Viewer"
-  desc "App to visualize, validate and format JSON datasets"
+  desc "App to visualise, validate and format JSON datasets"
   homepage "https://jsonviewer.app/"
 
   livecheck do

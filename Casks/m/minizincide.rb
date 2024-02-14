@@ -5,7 +5,7 @@ cask "minizincide" do
   url "https://github.com/MiniZinc/MiniZincIDE/releases/download/#{version}/MiniZincIDE-#{version}-bundled.dmg",
       verified: "github.com/MiniZinc/MiniZincIDE/"
   name "MiniZincIDE"
-  desc "Open-source constraint modeling language and IDE"
+  desc "Open-source constraint modelling language and IDE"
   homepage "https://www.minizinc.org/index.html"
 
   conflicts_with formula: "minizinc"

@@ -4,7 +4,7 @@ cask "taskpaper" do
 
   url "https://www.taskpaper.com/assets/app/TaskPaper-#{version}.dmg"
   name "TaskPaper"
-  desc "App to make lists and help with organization"
+  desc "App to make lists and help with organisation"
   homepage "https://www.taskpaper.com/"
 
   livecheck do

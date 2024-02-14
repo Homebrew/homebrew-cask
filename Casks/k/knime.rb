@@ -8,7 +8,7 @@ cask "knime" do
   url "https://download.knime.org/analytics-platform/macosx/knime_#{version}.app.macosx.cocoa.#{arch}.dmg",
       verified: "download.knime.org/analytics-platform/macosx/"
   name "KNIME Analytics Platform"
-  desc "Software to create and productionize data science"
+  desc "Software to create and productionise data science"
   homepage "https://www.knime.com/"
 
   livecheck do

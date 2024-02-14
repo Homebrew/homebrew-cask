@@ -4,7 +4,7 @@ cask "fabfilter-twin" do
 
   url "https://www.fabfilter.com/downloads/fftwin#{version.no_dots}.dmg"
   name "FabFilter Twin"
-  desc "Synthesizer plug-in"
+  desc "Synthesiser plug-in"
   homepage "https://www.fabfilter.com/products/twin-2-powerful-synthesizer-plug-in"
 
   livecheck do

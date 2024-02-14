@@ -8,7 +8,7 @@ cask "ogdesign-eagle" do
   url "https://eaglefile.oss-cn-shenzhen.aliyuncs.com/releases/Eagle-#{version.csv.first}-#{arch}build#{version.csv.second}.dmg",
       verified: "eaglefile.oss-cn-shenzhen.aliyuncs.com/releases/"
   name "Eagle"
-  desc "Organize all your reference images in one place"
+  desc "Organise all your reference images in one place"
   homepage "https://eagle.cool/"
 
   livecheck do

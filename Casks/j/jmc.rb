@@ -4,7 +4,7 @@ cask "jmc" do
 
   url "https://github.com/jcm93/jmc/releases/download/v#{version}/jmc.app.zip"
   name "jmc"
-  desc "Media organizer"
+  desc "Media organiser"
   homepage "https://github.com/jcm93/jmc"
 
   # This regex should be removed or tightened (/^v?(\d+(?:\.\d+)+)$/i) when

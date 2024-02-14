@@ -5,7 +5,7 @@ cask "eqmac" do
   url "https://github.com/bitgapp/eqMac/releases/download/v#{version}/eqMac.dmg",
       verified: "github.com/bitgapp/eqMac/"
   name "eqMac"
-  desc "System-wide audio equalizer"
+  desc "System-wide audio equaliser"
   homepage "https://eqmac.app/"
 
   livecheck do

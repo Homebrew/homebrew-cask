@@ -7,7 +7,7 @@ cask "geomap" do
 
   url "https://app.geomapapp.org/MapApp/GeoMapApp-#{version}-#{arch}.dmg"
   name "GeoMapApp"
-  desc "Browse, visualize and analyze geoscience data sets"
+  desc "Browse, visualise and analyze geoscience data sets"
   homepage "https://www.geomapapp.org/"
 
   livecheck do

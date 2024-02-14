@@ -5,7 +5,7 @@ cask "bisq" do
   url "https://github.com/bisq-network/bisq/releases/download/v#{version}/Bisq-#{version}.dmg",
       verified: "github.com/bisq-network/bisq/"
   name "Bisq"
-  desc "Decentralized bitcoin exchange network"
+  desc "Decentralised bitcoin exchange network"
   homepage "https://bisq.network/"
 
   livecheck do

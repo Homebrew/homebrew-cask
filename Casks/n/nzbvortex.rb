@@ -4,7 +4,7 @@ cask "nzbvortex" do
 
   url "https://www.nzbvortex.com/downloads/NZBVortex-#{version}.zip"
   name "NZBVortex"
-  desc "NZB client, optimized for performance and ease of use"
+  desc "NZB client, optimised for performance and ease of use"
   homepage "https://www.nzbvortex.com/landing/"
 
   livecheck do

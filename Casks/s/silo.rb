@@ -4,7 +4,7 @@ cask "silo" do
 
   url "https://nevercenter.com/silo/download/filearchive/Install_Silo_#{version.major}_#{version.minor}#{version.patch}_mac.dmg"
   name "Silo"
-  desc "3D polygonal modeler and UV mapper"
+  desc "3D polygonal modeller and UV mapper"
   homepage "https://nevercenter.com/silo/"
 
   livecheck do

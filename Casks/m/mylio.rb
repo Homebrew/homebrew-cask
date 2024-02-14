@@ -5,7 +5,7 @@ cask "mylio" do
   url "https://myliodownloads.com/Mylio.dmg",
       verified: "myliodownloads.com/"
   name "Mylio"
-  desc "Photo organizer"
+  desc "Photo organiser"
   homepage "https://mylio.com/"
 
   livecheck do

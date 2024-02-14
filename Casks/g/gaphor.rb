@@ -5,7 +5,7 @@ cask "gaphor" do
   url "https://github.com/gaphor/gaphor/releases/download/#{version}/Gaphor-#{version}.dmg",
       verified: "github.com/gaphor/gaphor/"
   name "Gaphor"
-  desc "UML/SysML modeling tool"
+  desc "UML/SysML modelling tool"
   homepage "https://gaphor.org/"
 
   depends_on macos: ">= :high_sierra"

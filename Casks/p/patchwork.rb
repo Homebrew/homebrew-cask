@@ -4,7 +4,7 @@ cask "patchwork" do
 
   url "https://github.com/ssbc/patchwork/releases/download/v#{version}/Patchwork-#{version}.dmg"
   name "Patchwork"
-  desc "Decentralized messaging and sharing app using Secure Scuttlebutt"
+  desc "Decentralised messaging and sharing app using Secure Scuttlebutt"
   homepage "https://github.com/ssbc/patchwork"
 
   deprecate! date: "2023-12-17", because: :discontinued

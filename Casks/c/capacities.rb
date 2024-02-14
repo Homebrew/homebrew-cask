@@ -8,7 +8,7 @@ cask "capacities" do
   url "https://capacities-frontend-app.s3.eu-central-1.amazonaws.com/Capacities-#{version}#{arch}.dmg",
       verified: "capacities-frontend-app.s3.eu-central-1.amazonaws.com/"
   name "Capacities"
-  desc "App to write and organize your ideas"
+  desc "App to write and organise your ideas"
   homepage "https://capacities.io/"
 
   livecheck do

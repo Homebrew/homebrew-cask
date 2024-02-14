@@ -4,7 +4,7 @@ cask "triplecheese" do
 
   url "https://dl.u-he.com/releases/TripleCheese_#{version.csv.first.no_dots}_#{version.csv.second}_Mac.zip"
   name "Triple Cheese"
-  desc "Luscious and cheesy synthesizer"
+  desc "Luscious and cheesy synthesiser"
   homepage "https://u-he.com/products/triplecheese/"
 
   livecheck do

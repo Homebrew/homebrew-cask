@@ -4,7 +4,7 @@ cask "zeplin" do
 
   url "https://api.zeplin.io/urls/download-mac"
   name "Zeplin"
-  desc "Share, organize and collaborate on designs"
+  desc "Share, organise and collaborate on designs"
   homepage "https://zeplin.io/"
 
   livecheck do

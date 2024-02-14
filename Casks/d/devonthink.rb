@@ -4,7 +4,7 @@ cask "devonthink" do
 
   url "https://download.devontechnologies.com/download/devonthink/#{version}/DEVONthink_#{version.major}.app.zip"
   name "DEVONthink"
-  desc "Collect, organize, edit and annotate documents"
+  desc "Collect, organise, edit and annotate documents"
   homepage "https://www.devontechnologies.com/apps/devonthink/"
 
   livecheck do

@@ -5,7 +5,7 @@ cask "get-backup-pro" do
   url "https://belightsoft.s3.amazonaws.com/updates/Get+Backup+Pro+#{version.major}.zip",
       verified: "belightsoft.s3.amazonaws.com/updates/"
   name "Get Backup Pro #{version.major}"
-  desc "Backup software with folder synchronization"
+  desc "Backup software with folder synchronisation"
   homepage "https://www.belightsoft.com/products/getbackup/"
 
   livecheck do

@@ -4,7 +4,7 @@ cask "receiptquicklook" do
 
   url "https://github.com/letiemble/ReceiptQuickLook/releases/download/#{version}/ReceiptQuickLook.qlgenerator.zip"
   name "ReceiptQuickLook"
-  desc "Quick Look plugin to visualize App Store cryptographic receipts"
+  desc "Quick Look plugin to visualise App Store cryptographic receipts"
   homepage "https://github.com/letiemble/ReceiptQuickLook"
 
   qlplugin "ReceiptQuickLook.qlgenerator"

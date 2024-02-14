@@ -4,7 +4,7 @@ cask "icollections" do
 
   url "https://naarakstudio.com/download/iCollections.dmg"
   name "iCollections"
-  desc "App to help keep the desktop organized"
+  desc "App to help keep the desktop organised"
   homepage "https://naarakstudio.com/icollections/"
 
   livecheck do

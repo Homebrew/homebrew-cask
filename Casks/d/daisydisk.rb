@@ -4,7 +4,7 @@ cask "daisydisk" do
 
   url "https://daisydiskapp.com/download/DaisyDisk.zip"
   name "DaisyDisk"
-  desc "Disk space visualizer"
+  desc "Disk space visualiser"
   homepage "https://daisydiskapp.com/"
 
   livecheck do

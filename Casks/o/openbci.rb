@@ -5,7 +5,7 @@ cask "openbci" do
   url "https://github.com/OpenBCI/OpenBCI_GUI/releases/download/v#{version.csv.first}/openbcigui_v#{version.csv.first}_#{version.csv.second}_macosx.dmg",
       verified: "github.com/OpenBCI/OpenBCI_GUI/"
   name "OpenBCI"
-  desc "Connect to OpenBCI hardware, visualize and stream physiological data"
+  desc "Connect to OpenBCI hardware, visualise and stream physiological data"
   homepage "https://openbci.com/"
 
   livecheck do

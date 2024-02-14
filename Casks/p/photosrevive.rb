@@ -4,7 +4,7 @@ cask "photosrevive" do
 
   url "https://neededapps.com/appcasts/photosrevive/versions/#{version}"
   name "PhotosRevive"
-  desc "Colorise old black and white photos automatically"
+  desc "Colourise old black and white photos automatically"
   homepage "https://neededapps.com/photosrevive/"
 
   livecheck do

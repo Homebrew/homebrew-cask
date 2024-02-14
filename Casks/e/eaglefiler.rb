@@ -4,7 +4,7 @@ cask "eaglefiler" do
 
   url "https://c-command.com/downloads/EagleFiler-#{version}.dmg"
   name "EagleFiler"
-  desc "Organize files, archive e-mails, save Web pages and notes, search everything"
+  desc "Organise files, archive e-mails, save Web pages and notes, search everything"
   homepage "https://c-command.com/eaglefiler/"
 
   livecheck do

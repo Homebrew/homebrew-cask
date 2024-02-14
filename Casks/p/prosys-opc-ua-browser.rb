@@ -7,7 +7,7 @@ cask "prosys-opc-ua-browser" do
 
   url "https://www.prosysopc.com/opcua/apps/UaBrowser/dist/#{version.csv.first}-#{version.csv.second}/prosys-opc-ua-browser-mac-#{arch}-#{version.csv.first}-#{version.csv.second}.dmg"
   name "Prosys OPC UA Browser"
-  desc "Browse and visualize data from OPC UA servers"
+  desc "Browse and visualise data from OPC UA servers"
   homepage "https://www.prosysopc.com/products/opc-ua-browser/"
 
   livecheck do

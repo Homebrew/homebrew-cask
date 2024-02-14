@@ -4,7 +4,7 @@ cask "northernspysoftware-colorpicker" do
 
   url "http://www.northernspysoftware.com/download/ColorPicker_#{version}.dmg"
   name "ColorPicker"
-  desc "Utility to use the Apple color picker anywhere"
+  desc "Utility to use the Apple colour picker anywhere"
   homepage "http://www.northernspysoftware.com/software/colorpicker"
 
   livecheck do

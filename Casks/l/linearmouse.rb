@@ -5,7 +5,7 @@ cask "linearmouse" do
   url "https://github.com/linearmouse/linearmouse/releases/download/v#{version}/LinearMouse.dmg",
       verified: "github.com/linearmouse/linearmouse/"
   name "LinearMouse"
-  desc "Customize mouse behavior"
+  desc "Customise mouse behavior"
   homepage "https://linearmouse.org/"
 
   auto_updates true

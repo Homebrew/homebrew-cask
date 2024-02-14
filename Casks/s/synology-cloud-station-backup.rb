@@ -4,7 +4,7 @@ cask "synology-cloud-station-backup" do
 
   url "https://global.download.synology.com/download/Tools/CloudStationBackup/#{version.csv.first}-#{version.csv.second}/Mac/Installer/synology-cloud-station-backup-#{version.csv.second}.dmg"
   name "Synology Cloud Station Backup"
-  desc "Back up files to a centralized Synology NAS"
+  desc "Back up files to a centralised Synology NAS"
   homepage "https://www.synology.com/"
 
   livecheck do

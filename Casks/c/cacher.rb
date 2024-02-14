@@ -5,7 +5,7 @@ cask "cacher" do
   url "https://cacher-download.nyc3.digitaloceanspaces.com/Cacher-#{version}-universal-mac.zip",
       verified: "cacher-download.nyc3.digitaloceanspaces.com/"
   name "Cacher"
-  desc "Code snippet organizer"
+  desc "Code snippet organiser"
   homepage "https://www.cacher.io/"
 
   livecheck do

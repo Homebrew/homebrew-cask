@@ -4,7 +4,7 @@ cask "qtspim" do
 
   url "https://downloads.sourceforge.net/spimsimulator/QtSpim_#{version}_mac.mpkg.zip"
   name "QtSpim"
-  desc "Simulator that runs MIPS32 assembly language programs"
+  desc "Simulator that runs MIPS32 assembly language programmes"
   homepage "https://spimsimulator.sourceforge.net/"
 
   livecheck do
