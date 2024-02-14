@@ -4,7 +4,7 @@ cask "kigb" do
 
   url "https://www.bannister.org/software/dlh/kigb-#{version.no_dots}.zip"
   name "KiGB"
-  desc "Nintendo Game Boy/Game Boy Colour emulator"
+  desc "Nintendo Game Boy/Game Boy Color emulator"
   homepage "https://www.bannister.org/software/kigb.htm"
 
   livecheck do

@@ -4,7 +4,7 @@ cask "toshiba-color-mfp" do
 
   url "https://business.toshiba.com/downloads/KB/f1Ulds/#{version.csv.second}/TOSHIBA_ColorMFP.dmg.gz"
   name "Toshiba ColorMFP Drivers"
-  desc "Drivers for Toshiba ColourMFP devices"
+  desc "Drivers for Toshiba ColorMFP devices"
   homepage "https://business.toshiba.com/support"
 
   livecheck do
