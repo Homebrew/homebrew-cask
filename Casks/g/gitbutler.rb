@@ -29,6 +29,9 @@ cask "gitbutler" do
 
   zap trash: [
     "~/Library/Application Support/com.gitbutler.app",
+    "~/Library/Caches/com.gitbutler.app",
+    "~/Library/Logs/com.gitbutler.app",
+    "~/Library/Preferences/com.gitbutler.app.plist",
     "~/Library/Saved Application State/com.gitbutler.app.savedState",
     "~/Library/WebKit/com.gitbutler.app",
   ]
