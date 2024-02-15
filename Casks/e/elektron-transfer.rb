@@ -1,15 +1,21 @@
 cask "elektron-transfer" do
-  version "1.6.7"
-  sha256 "fe933767e5717e78c99888431867e7c164d72a1ffc6e80f9d7fdd1d8691fc7b7"
+  version "1.7.8,8381803e-e802-5dd8-a7d5-381000616a04"
+  sha256 "5c3e363a5c26d3efcb6faa7c04ff0c90d56a4426fa17def54487904874ecd2da"
 
-  url "https://cdn.www.elektron.se/media/downloads/transfer/Elektron_Transfer_#{version}.dmg"
+  url "https://s3-eu-west-1.amazonaws.com/se-elektron-devops/release/#{version.csv.second}/Elektron_Transfer_#{version.csv.first}.dmg",
+      verified: "s3-eu-west-1.amazonaws.com/se-elektron-devops/"
   name "Elektron Transfer"
   desc "Transfer samples, presets, sounds, projects and firmware to Elektron devices"
   homepage "https://www.elektron.se/en/download-support-transfer"
 
   livecheck do
     url :homepage
-    regex(/Elektron[._-]Transfer[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(%r{([a-zA-Z0-9_-]+)/Elektron[._-]Transfer[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map do |match|
+        "#{match[1]},#{match[0]}"
+      end
+    end
   end
 
   depends_on macos: ">= :high_sierra"
