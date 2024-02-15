@@ -7,6 +7,11 @@ cask "desktoppr" do
   desc "Command-line tool to set the desktop picture"
   homepage "https://github.com/scriptingosx/desktoppr"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   pkg "desktoppr-#{version}.pkg"
 
   uninstall pkgutil: "com.scriptingosx.desktoppr"
