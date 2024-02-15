@@ -1,6 +1,6 @@
 cask "vellum" do
-  version "3.6.3,36300"
-  sha256 "a42bffa39f6a18da465def99cc5d2b38c4e6564166acab303c2b64c9f2bd8647"
+  version "3.6.4,36400"
+  sha256 "294b2787f07715d8cc44d4a851b9bd194a66fd0b0ac41721b3b07fcca8947d05"
 
   url "https://180g.s3.amazonaws.com/downloads/Vellum-#{version.csv.second}.zip",
       verified: "180g.s3.amazonaws.com/downloads/"
