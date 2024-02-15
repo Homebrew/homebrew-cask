@@ -4,7 +4,7 @@ cask "keycastr" do
 
   url "https://github.com/keycastr/keycastr/releases/download/v#{version}/KeyCastr.app.zip"
   name "KeyCastr"
-  desc "Open-source keystroke visualizer"
+  desc "Open-source keystroke visualiser"
   homepage "https://github.com/keycastr/keycastr"
 
   app "KeyCastr.app"

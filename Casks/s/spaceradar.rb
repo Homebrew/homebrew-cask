@@ -4,7 +4,7 @@ cask "spaceradar" do
 
   url "https://github.com/zz85/space-radar/releases/download/v#{version}/SpaceRadar-darwin-x64.zip"
   name "SpaceRadar"
-  desc "Disk And Memory Space Visualization App built with Electron & d3.js"
+  desc "Disk space and memory visualiser"
   homepage "https://github.com/zz85/space-radar"
 
   livecheck do

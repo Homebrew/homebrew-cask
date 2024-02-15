@@ -5,7 +5,7 @@ cask "colorsnapper" do
   url "https://cs2-binaries.s3.amazonaws.com/ColorSnapper2-#{version.dots_to_underscores}.zip",
       verified: "cs2-binaries.s3.amazonaws.com/"
   name "ColorSnapper 2"
-  desc "Color picking application"
+  desc "Colour picker"
   homepage "https://colorsnapper.com/"
 
   # The Sparkle feed has incorrect pubDates for newer items, which causes the

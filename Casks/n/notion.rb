@@ -9,7 +9,7 @@ cask "notion" do
   url "https://desktop-release.notion-static.com/Notion-#{version}#{arch}.dmg",
       verified: "desktop-release.notion-static.com/"
   name "Notion"
-  desc "App to write, plan, collaborate, and get organized"
+  desc "App to write, plan, collaborate, and get organised"
   homepage "https://www.notion.so/"
 
   livecheck do

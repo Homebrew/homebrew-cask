@@ -5,7 +5,7 @@ cask "duo-connect" do
   url "https://dl.duosecurity.com/DuoConnect-#{version}.pkg",
       verified: "dl.duosecurity.com/"
   name "DuoConnect"
-  desc "Access your organization’s SSH servers"
+  desc "Access your organisation’s SSH servers"
   homepage "https://guide.duo.com/duoconnect"
 
   livecheck do

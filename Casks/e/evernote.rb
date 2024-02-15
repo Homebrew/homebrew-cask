@@ -50,7 +50,7 @@ cask "evernote" do
   end
 
   name "Evernote"
-  desc "App for note taking, organizing, task lists, and archiving"
+  desc "App for note taking, organising, task lists, and archiving"
   homepage "https://evernote.com/"
 
   auto_updates true

@@ -4,7 +4,7 @@ cask "free-download-manager" do
 
   url "https://dn3.freedownloadmanager.org/#{version.major}/latest/fdm.dmg"
   name "Free Download Manager"
-  desc "Download accelerator and organizer"
+  desc "Download accelerator and organiser"
   homepage "https://www.freedownloadmanager.org/"
 
   livecheck do

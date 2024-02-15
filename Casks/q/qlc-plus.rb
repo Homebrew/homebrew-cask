@@ -4,7 +4,7 @@ cask "qlc-plus" do
 
   url "https://qlcplus.org/downloads/#{version}/QLC+_#{version}.dmg"
   name "Q Light Controller+"
-  desc "Control DMX or analog lighting systems"
+  desc "Control DMX or analogue lighting systems"
   homepage "https://qlcplus.org/"
 
   livecheck do

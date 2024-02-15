@@ -7,7 +7,7 @@ cask "shadow" do
 
   url "https://update.shadow.tech/launcher/prod/mac/#{arch}/ShadowPC-#{version}.dmg"
   name "Shadow"
-  desc "Online virtualized computer"
+  desc "Online virtualised computer"
   homepage "https://shadow.tech/"
 
   livecheck do

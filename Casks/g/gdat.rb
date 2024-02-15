@@ -5,7 +5,7 @@ cask "gdat" do
   url "https://drive.google.com/uc?export=download&id=#{version.csv.second}",
       verified: "drive.google.com/uc?export=download&id=#{version.csv.second}"
   name "Genealogical DNA Analysis Tool"
-  desc "App that utilizes autosomal DNA to aid in the research of family trees"
+  desc "App that utilises autosomal DNA to aid in the research of family trees"
   homepage "https://www.getgdat.com/"
 
   livecheck do

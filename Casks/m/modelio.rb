@@ -5,7 +5,7 @@ cask "modelio" do
   url "https://downloads.sourceforge.net/modeliouml/modelio-open-source-#{version}-macosx.cocoa.x86_64.tar.gz",
       verified: "sourceforge.net/modeliouml/"
   name "Modelio"
-  desc "Extensible modeling environment"
+  desc "Extensible modelling environment"
   homepage "https://www.modelio.org/"
 
   app "Modelio #{version.major_minor}.app"

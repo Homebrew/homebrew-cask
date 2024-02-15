@@ -28,7 +28,7 @@ cask "sip" do
   url "https://sipapp.fra1.digitaloceanspaces.com/updates/v#{version.major}/sip-#{version}.dmg",
       verified: "sipapp.fra1.digitaloceanspaces.com/updates/"
   name "Sip"
-  desc "Collect, organize & share colors"
+  desc "Collect, organise & share colours"
   homepage "https://sipapp.io/"
 
   auto_updates true

@@ -8,7 +8,7 @@ cask "deltawalker" do
   url "https://deltawalker.s3.amazonaws.com/DeltaWalker-#{version}_#{arch}.dmg",
       verified: "deltawalker.s3.amazonaws.com/"
   name "DeltaWalker"
-  desc "Tool to compare and synchronize files and folders"
+  desc "Tool to compare and synchronise files and folders"
   homepage "https://www.deltawalker.com/"
 
   livecheck do

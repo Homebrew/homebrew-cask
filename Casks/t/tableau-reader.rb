@@ -4,7 +4,7 @@ cask "tableau-reader" do
 
   url "https://downloads.tableau.com/tssoftware/TableauReader-#{version.dots_to_hyphens}.dmg"
   name "Tableau Reader"
-  desc "Open and interact with data visualizations built in Tableau Desktop"
+  desc "Open and interact with data visualisations built in Tableau Desktop"
   homepage "https://www.tableau.com/products/reader"
 
   livecheck do

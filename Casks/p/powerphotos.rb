@@ -76,7 +76,7 @@ cask "powerphotos" do
   end
 
   name "PowerPhotos"
-  desc "Tool to organize photo libraries"
+  desc "Tool to organise photo libraries"
   homepage "https://www.fatcatsoftware.com/powerphotos/"
 
   auto_updates true

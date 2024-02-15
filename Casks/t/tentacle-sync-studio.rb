@@ -4,7 +4,7 @@ cask "tentacle-sync-studio" do
 
   url "https://tentaclesync.com/files/downloads/ttsyncstudio-v#{version.dots_to_underscores}.dmg"
   name "Tentacle Sync Studio"
-  desc "Automatically synchronize video and audio via timecode"
+  desc "Automatically synchronise video and audio via timecode"
   homepage "https://tentaclesync.com/"
 
   livecheck do

@@ -5,7 +5,7 @@ cask "boom-3d" do
   url "https://dfvk972795zr9.cloudfront.net/Boom3Dmac/webstore/Boom3D.dmg",
       verified: "dfvk972795zr9.cloudfront.net/"
   name "Boom 3D"
-  desc "Volume booster and equalizer software"
+  desc "Volume booster and equaliser software"
   homepage "https://www.globaldelight.com/boom/"
 
   livecheck do

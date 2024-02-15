@@ -4,7 +4,7 @@ cask "vcv-rack" do
 
   url "https://vcvrack.com/downloads/RackFree-#{version}-mac-x64.pkg"
   name "VCV Rack"
-  desc "Open-source virtual modular synthesizer"
+  desc "Open-source virtual modular synthesiser"
   homepage "https://vcvrack.com/"
 
   livecheck do

@@ -8,7 +8,7 @@ cask "slab" do
   url "https://github.com/slab/desktop-releases/releases/download/v#{version}/Slab-#{version}-darwin-#{arch}.dmg",
       verified: "github.com/slab/desktop-releases/"
   name "Slab"
-  desc "Knowledge management for organizations"
+  desc "Knowledge management for organisations"
   homepage "https://slab.com/"
 
   auto_updates true

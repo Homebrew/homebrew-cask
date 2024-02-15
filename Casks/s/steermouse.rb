@@ -4,7 +4,7 @@ cask "steermouse" do
 
   url "https://plentycom.jp/ctrl/files_sm/SteerMouse#{version}.dmg"
   name "SteerMouse"
-  desc "Customize mouse buttons, wheels and cursor speed"
+  desc "Customise mouse buttons, wheels and cursor speed"
   homepage "https://plentycom.jp/en/steermouse/"
 
   livecheck do

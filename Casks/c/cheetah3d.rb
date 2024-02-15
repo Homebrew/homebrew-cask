@@ -4,7 +4,7 @@ cask "cheetah3d" do
 
   url "https://www.cheetah3d.com/download/Cheetah3D.dmg"
   name "Cheetah3D"
-  desc "3D modeling, rendering and animation software"
+  desc "3D modelling, rendering and animation software"
   homepage "https://www.cheetah3d.com/"
 
   livecheck do

@@ -4,7 +4,7 @@ cask "monotype" do
 
   url "https://monotypeapp.monotype.com/release/#{version.no_dots}/mac/system/DTAppInstaller.tar.tgz"
   name "Monotype Desktop App"
-  desc "Font finder and organizer"
+  desc "Font finder and organiser"
   homepage "https://support.monotype.com/en/articles/7860542-monotype-desktop-app"
 
   livecheck do

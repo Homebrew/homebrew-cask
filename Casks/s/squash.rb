@@ -5,7 +5,7 @@ cask "squash" do
   url "https://dl.devant-cdn.io/v1/app/4ad73d1f-7ab7-4f7f-b9df-8d2d906ef718/Squash-#{version.csv.second}.zip/Squash.zip",
       verified: "dl.devant-cdn.io/v1/app/4ad73d1f-7ab7-4f7f-b9df-8d2d906ef718/"
   name "squash"
-  desc "Batch image processor, resizer, and converter"
+  desc "Batch image processor, resiser, and converter"
   homepage "https://www.realmacsoftware.com/squash/"
 
   livecheck do

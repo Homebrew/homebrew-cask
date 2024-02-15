@@ -5,7 +5,7 @@ cask "foxglove-studio" do
   url "https://github.com/foxglove/studio/releases/download/v#{version}/foxglove-studio-#{version}-mac-universal.dmg",
       verified: "github.com/foxglove/studio/"
   name "Foxglove Studio"
-  desc "Visualization and debugging tool for robotics"
+  desc "Visualisation and debugging tool for robotics"
   homepage "https://foxglove.dev/"
 
   livecheck do

@@ -4,7 +4,7 @@ cask "xnconvert" do
 
   url "https://download.xnview.com/XnConvert-mac.dmg"
   name "XnSoft XnConvert"
-  desc "Image-converter and resizer tool"
+  desc "Image-converter and resiser tool"
   homepage "https://www.xnview.com/en/xnconvert/"
 
   livecheck do

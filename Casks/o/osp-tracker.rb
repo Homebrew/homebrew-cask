@@ -4,7 +4,7 @@ cask "osp-tracker" do
 
   url "https://physlets.org/tracker/installers/download.php?file=Tracker-#{version}-osx-installer.dmg"
   name "Tracker"
-  desc "Video analysis and modeling tool for physics education"
+  desc "Video analysis and modelling tool for physics education"
   homepage "https://physlets.org/tracker/"
 
   livecheck do

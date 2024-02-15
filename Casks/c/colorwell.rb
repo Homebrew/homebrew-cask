@@ -4,7 +4,7 @@ cask "colorwell" do
 
   url "https://sweetpproductions.com/products/colorwell/ColorWell.dmg"
   name "ColorWell"
-  desc "Color picker and color palette generator"
+  desc "Colour picker and colour palette generator"
   homepage "https://colorwell.sweetpproductions.com/"
 
   livecheck do

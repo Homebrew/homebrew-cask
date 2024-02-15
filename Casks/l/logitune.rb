@@ -4,7 +4,7 @@ cask "logitune" do
 
   url "https://software.vc.logitech.com/downloads/tune/LogiTuneInstaller.dmg"
   name "LogiTune"
-  desc "Optimize your webcam, headset, and Logi Dock for video meetings"
+  desc "Optimise your webcam, headset, and Logi Dock for video meetings"
   homepage "https://www.logitech.com/en-us/video-collaboration/software/logi-tune-software.html"
 
   livecheck do

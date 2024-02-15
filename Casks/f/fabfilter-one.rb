@@ -4,7 +4,7 @@ cask "fabfilter-one" do
 
   url "https://www.fabfilter.com/downloads/ffone#{version.no_dots}.dmg"
   name "FabFilter One"
-  desc "Synthesizer plug-in"
+  desc "Synthesiser plug-in"
   homepage "https://www.fabfilter.com/products/volcano-2-powerful-filter-plug-in"
 
   livecheck do

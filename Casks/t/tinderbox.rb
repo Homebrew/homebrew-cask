@@ -4,7 +4,7 @@ cask "tinderbox" do
 
   url "https://www.eastgate.com/download/tbx#{version.no_dots}.dmg"
   name "Tinderbox"
-  desc "Tool to take, visualize and analyze notes"
+  desc "Tool to take, visualise and analyze notes"
   homepage "https://eastgate.com/Tinderbox/"
 
   livecheck do

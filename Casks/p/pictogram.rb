@@ -4,7 +4,7 @@ cask "pictogram" do
 
   url "https://pictogramapp.com/updates/v#{version.csv.first}%20%28Build%20#{version.csv.second}%29.zip"
   name "Pictogram"
-  desc "Customize and maintain app icons"
+  desc "Customise and maintain app icons"
   homepage "https://pictogramapp.com/"
 
   livecheck do

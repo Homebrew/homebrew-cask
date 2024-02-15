@@ -5,7 +5,7 @@ cask "kuaitie" do
   url "https://clipweb.oss-cn-qingdao.aliyuncs.com/release/macos/packages/kuaitie-#{version.csv.first.no_dots}_#{version.csv.second}.zip",
       verified: "clipweb.oss-cn-qingdao.aliyuncs.com/release/macos/packages/"
   name "kuaitie"
-  desc "Cross-platform cloud clipboard synchronization tool"
+  desc "Cross-platform cloud clipboard synchronisation tool"
   homepage "https://home.clipber.com/"
 
   livecheck do

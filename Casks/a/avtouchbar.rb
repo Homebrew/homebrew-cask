@@ -4,7 +4,7 @@ cask "avtouchbar" do
 
   url "https://www.avtouchbar.com/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/AVTouchBar-#{version.csv.first}.zip"
   name "AVTouchBar"
-  desc "Audio Visualizer for the Touch Bar"
+  desc "Audio Visualiser for the Touch Bar"
   homepage "https://www.avtouchbar.com/"
 
   livecheck do

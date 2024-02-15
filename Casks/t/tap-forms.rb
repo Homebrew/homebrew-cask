@@ -5,7 +5,7 @@ cask "tap-forms" do
   url "https://paddle.s3.amazonaws.com/fulfillment_downloads/9234/503174/#{version.csv.second}_Tap%20Forms%20Install%20#{version.csv.first}.dmg",
       verified: "paddle.s3.amazonaws.com/"
   name "Tap Forms 5"
-  desc "Helps to organize important files in one place"
+  desc "Helps to organise important files in one place"
   homepage "https://www.tapforms.com/"
 
   livecheck do

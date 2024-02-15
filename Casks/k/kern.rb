@@ -4,7 +4,7 @@ cask "kern" do
 
   url "https://www.fullbucket.de/music/dl/kern_#{version.dots_to_underscores}_mac.pkg"
   name "Kern"
-  desc "Performance synthesizer"
+  desc "Performance synthesiser"
   homepage "https://www.fullbucket.de/music/kern.html"
 
   livecheck do

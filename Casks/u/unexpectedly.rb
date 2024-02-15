@@ -4,7 +4,7 @@ cask "unexpectedly" do
 
   url "http://s.sudre.free.fr/Software/files/Unexpectedly.dmg"
   name "Unexpectedly"
-  desc "Browse and visualize the reports from crashes"
+  desc "Browse and visualise the reports from crashes"
   homepage "http://s.sudre.free.fr/Software/Unexpectedly/about.html"
 
   livecheck do

@@ -4,7 +4,7 @@ cask "qsync-client" do
 
   url "https://download.qnap.com/Storage/Utility/QNAPQsyncClientMac-#{version}.dmg"
   name "Qnap Qsync"
-  desc "Automatic file synchronization"
+  desc "Automatic file synchronisation"
   homepage "https://www.qnap.com/en/utilities/essentials#utliity_3"
 
   livecheck do

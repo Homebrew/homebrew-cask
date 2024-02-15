@@ -4,7 +4,7 @@ cask "curio" do
 
   url "https://www.zengobi.com/downloads/Curio#{version.csv.second.no_dots}.zip"
   name "Curio"
-  desc "Note-taking and organizing app"
+  desc "Note-taking and organisation tool"
   homepage "https://zengobi.com/curio/"
 
   livecheck do

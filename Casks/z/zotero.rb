@@ -4,7 +4,7 @@ cask "zotero" do
 
   url "https://download.zotero.org/client/release/#{version}/Zotero-#{version}.dmg"
   name "Zotero"
-  desc "Collect, organize, cite, and share research sources"
+  desc "Collect, organise, cite, and share research sources"
   homepage "https://www.zotero.org/"
 
   livecheck do

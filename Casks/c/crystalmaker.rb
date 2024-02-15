@@ -4,7 +4,7 @@ cask "crystalmaker" do
 
   url "https://crystalmaker.com/downloads/crystalmaker#{version.major}_mac.zip"
   name "CrystalMaker"
-  desc "Visualize crystal and molecular structures"
+  desc "Visualise crystal and molecular structures"
   homepage "https://crystalmaker.com/index.html"
 
   livecheck do

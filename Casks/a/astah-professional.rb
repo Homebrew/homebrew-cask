@@ -5,7 +5,7 @@ cask "astah-professional" do
   url "https://cdn.change-vision.com/files/astah-professional-#{version.csv.first.dots_to_underscores}-#{version.csv.second}-MacOs.dmg",
       verified: "cdn.change-vision.com/files/"
   name "Change Vision Astah Professional"
-  desc "Software modeling tool"
+  desc "Software modelling tool"
   homepage "https://astah.net/editions/professional"
 
   livecheck do

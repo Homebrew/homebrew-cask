@@ -5,7 +5,7 @@ cask "surge-synthesizer" do
   url "https://github.com/surge-synthesizer/releases/releases/download/#{version}/Surge-#{version}-Setup.dmg",
       verified: "github.com/surge-synthesizer/releases/"
   name "Surge"
-  desc "Hybrid synthesizer"
+  desc "Hybrid synthesiser"
   homepage "https://surge-synthesizer.github.io/"
 
   pkg "Surge-#{version}-Setup.pkg"

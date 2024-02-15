@@ -129,7 +129,7 @@ cask "karabiner-elements" do
   end
 
   name "Karabiner Elements"
-  desc "Keyboard customizer"
+  desc "Keyboard customiser"
   homepage "https://karabiner-elements.pqrs.org/"
 
   auto_updates true

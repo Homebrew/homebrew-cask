@@ -4,7 +4,7 @@ cask "flux" do
 
   url "https://justgetflux.com/mac/Flux#{version}.zip"
   name "f.lux"
-  desc "Screen color temperature controller"
+  desc "Screen colour temperature controller"
   homepage "https://justgetflux.com/"
 
   # The sparkle feed "https://justgetflux.com/mac/macflux.xml" is currently

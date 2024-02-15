@@ -5,7 +5,7 @@ cask "mumu-x" do
   url "https://paddle.s3.amazonaws.com/fulfillment_downloads/116824/662730/#{version.csv.second}_Mumu%20X%20#{version.csv.first}.dmg",
       verified: "paddle.s3.amazonaws.com/fulfillment_downloads/116824/662730/"
   name "Mumu X"
-  desc "Utilizes GPT-3 AI powered synonyms to find emojis and symbols"
+  desc "Utilises GPT-3 AI powered synonyms to find emojis and symbols"
   homepage "https://getmumu.com/"
 
   livecheck do

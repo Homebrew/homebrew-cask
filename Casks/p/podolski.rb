@@ -4,7 +4,7 @@ cask "podolski" do
 
   url "https://dl.u-he.com/releases/Podolski_#{version.csv.first.no_dots}_#{version.csv.second}_Mac.zip"
   name "Podolski"
-  desc "Virtual analogue synthesizer"
+  desc "Virtual analogue synthesiser"
   homepage "https://u-he.com/products/podolski/"
 
   livecheck do

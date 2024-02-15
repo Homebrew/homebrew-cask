@@ -7,7 +7,7 @@ cask "staruml" do
 
   url "https://files.staruml.io/releases-v#{version.major}/StarUML-#{version}#{arch}.dmg"
   name "StarUML"
-  desc "Software modeler"
+  desc "Software modeller"
   homepage "https://staruml.io/"
 
   livecheck do

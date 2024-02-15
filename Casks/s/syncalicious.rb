@@ -4,7 +4,7 @@ cask "syncalicious" do
 
   url "https://github.com/zenangst/Syncalicious/releases/download/#{version}/Syncalicious.zip"
   name "Syncalicious"
-  desc "Backup and synchronize preferences across multiple machines"
+  desc "Backup and synchronise preferences across multiple machines"
   homepage "https://github.com/zenangst/Syncalicious"
 
   depends_on macos: ">= :mojave"

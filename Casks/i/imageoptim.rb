@@ -4,7 +4,7 @@ cask "imageoptim" do
 
   url "https://imageoptim.com/ImageOptim#{version}.tar.xz"
   name "ImageOptim"
-  desc "Tool to optimize images to a smaller size"
+  desc "Tool to optimise images to a smaller size"
   homepage "https://imageoptim.com/mac"
 
   livecheck do

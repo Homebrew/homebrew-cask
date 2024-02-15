@@ -4,7 +4,7 @@ cask "workspaces" do
 
   url "https://www.apptorium.com/public/products/workspaces/releases/Workspaces-#{version}.zip"
   name "Workspaces"
-  desc "Workspace organizing app"
+  desc "Workspace organising app"
   homepage "https://www.apptorium.com/workspaces"
 
   livecheck do

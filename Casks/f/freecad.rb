@@ -8,7 +8,7 @@ cask "freecad" do
   url "https://github.com/FreeCAD/FreeCAD/releases/download/#{version}/FreeCAD-#{version}-macOS-#{arch}.dmg",
       verified: "github.com/FreeCAD/FreeCAD/"
   name "FreeCAD"
-  desc "3D parametric modeler"
+  desc "3D parametric modeller"
   homepage "https://www.freecad.org/"
 
   # Upstream uses GitHub releases to indicate that a version is released

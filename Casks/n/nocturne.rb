@@ -4,7 +4,7 @@ cask "nocturne" do
 
   url "https://github.com/Daij-Djan/nocturne/blob/master/Dist/#{version}.zip?raw=true"
   name "Nocturne"
-  desc "Adjust display colors to suit low light conditions"
+  desc "Adjust display colours to suit low light conditions"
   homepage "https://github.com/Daij-Djan/nocturne"
 
   livecheck do

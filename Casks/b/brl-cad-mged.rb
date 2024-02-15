@@ -5,7 +5,7 @@ cask "brl-cad-mged" do
   url "https://downloads.sourceforge.net/brlcad/BRL-CAD%20for%20Mac%20OS%20X/#{version}/BRL-CAD%20#{version}.dmg",
       verified: "downloads.sourceforge.net/brlcad/"
   name "BRL-CAD"
-  desc "Solid modeling system"
+  desc "Solid modelling system"
   homepage "https://brlcad.org/"
 
   livecheck do

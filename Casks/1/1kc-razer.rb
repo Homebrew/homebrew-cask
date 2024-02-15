@@ -4,7 +4,7 @@ cask "1kc-razer" do
 
   url "https://github.com/1kc/razer-macos/releases/download/v#{version}/Razer.macOS-#{version}-universal.dmg"
   name "Razer macOS"
-  desc "Open source color effects manager for Razer devices"
+  desc "Open source colour effects manager for Razer devices"
   homepage "https://github.com/1kc/razer-macos"
 
   livecheck do

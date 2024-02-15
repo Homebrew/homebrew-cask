@@ -4,7 +4,7 @@ cask "sunvox" do
 
   url "https://www.warmplace.ru/soft/sunvox/sunvox-#{version}.zip"
   name "SunVox"
-  desc "Modular synthesizer"
+  desc "Modular synthesiser"
   homepage "https://www.warmplace.ru/soft/sunvox/"
 
   livecheck do

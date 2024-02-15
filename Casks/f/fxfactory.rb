@@ -5,7 +5,7 @@ cask "fxfactory" do
   url "https://fxfactory.s3.amazonaws.com/noiseindustries/fxfactory/FxFactory-#{version.csv.first}-#{version.csv.second}.zip",
       verified: "fxfactory.s3.amazonaws.com/noiseindustries/"
   name "FxFactory"
-  desc "Browse, install and purchase effects and plugins from a huge catalog"
+  desc "Browse, install and purchase effects and plugins from a huge catalogue"
   homepage "https://fxfactory.com/"
 
   livecheck do

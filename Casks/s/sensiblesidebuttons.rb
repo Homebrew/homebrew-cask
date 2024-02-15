@@ -5,7 +5,7 @@ cask "sensiblesidebuttons" do
   url "https://github.com/archagon/sensible-side-buttons/releases/download/#{version}/SensibleSideButtons-#{version}.dmg",
       verified: "github.com/archagon/sensible-side-buttons/"
   name "Sensible Side Buttons"
-  desc "Utilize mouse side navigation buttons"
+  desc "Utilise mouse side navigation buttons"
   homepage "https://sensible-side-buttons.archagon.net/"
 
   app "SensibleSideButtons.app"

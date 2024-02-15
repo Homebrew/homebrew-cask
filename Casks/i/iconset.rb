@@ -8,7 +8,7 @@ cask "iconset" do
   url "https://github.com/IconsetApp/iconset/releases/download/v#{version}/Iconset-#{version}-#{arch}mac.zip",
       verified: "github.com/IconsetApp/iconset/"
   name "Iconset"
-  desc "Organize icon sets and packs in one place"
+  desc "Organise icon sets and packs in one place"
   homepage "https://iconset.io/"
 
   livecheck do

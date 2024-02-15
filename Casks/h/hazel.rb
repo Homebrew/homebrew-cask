@@ -5,7 +5,7 @@ cask "hazel" do
   url "https://s3.amazonaws.com/Noodlesoft/Hazel-#{version}.dmg",
       verified: "s3.amazonaws.com/Noodlesoft/"
   name "Hazel"
-  desc "Automated organization"
+  desc "Automated organisation"
   homepage "https://www.noodlesoft.com/"
 
   livecheck do

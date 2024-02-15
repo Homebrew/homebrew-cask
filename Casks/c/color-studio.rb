@@ -4,7 +4,7 @@ cask "color-studio" do
 
   url "https://github.com/bernaferrari/color-studio/releases/download/#{version}/ColorStudio.zip"
   name "Color Studio"
-  desc "Coherent colorscheme creator"
+  desc "Coherent colour scheme creator"
   homepage "https://github.com/bernaferrari/color-studio"
 
   app "Color Studio/Color Studio.app"

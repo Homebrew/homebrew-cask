@@ -7,7 +7,7 @@ cask "hackolade" do
   url "https://s3-eu-west-1.amazonaws.com/hackolade/current/Hackolade-mac#{arch}-setup-signed.pkg",
       verified: "s3-eu-west-1.amazonaws.com/hackolade/"
   name "Hackolade"
-  desc "Data Modeling for NoSQL databases, storage formats, REST APIs, and JSON in RDBMS"
+  desc "Polyglot data modelling software"
   homepage "https://hackolade.com/"
 
   livecheck do

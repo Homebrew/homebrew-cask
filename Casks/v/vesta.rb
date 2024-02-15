@@ -4,7 +4,7 @@ cask "vesta" do
 
   url "https://jp-minerals.org/vesta/archives/#{version}/VESTA.dmg"
   name "VESTA"
-  desc "Visualization for electronic and structural analysis"
+  desc "Visualisation for electronic and structural analysis"
   homepage "https://jp-minerals.org/vesta/en/"
 
   livecheck do
