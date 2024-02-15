@@ -1,9 +1,9 @@
 cask "mutesync" do
   arch arm: "-arm64"
 
-  version "5.6.5"
-  sha256 arm:   "cda9bd7deb0c897572baefd5be8c73f308d011dee541f2864a0b23e5f3bf470a",
-         intel: "daa84d035aae65de173b7e45866cf989cc2aead34ec153470bdf10a64998e7f2"
+  version "5.6.6"
+  sha256 arm:   "ce75bbcba9c074434e6f08faf95a3c87510f27bd9369041cecf1703a703b7c16",
+         intel: "c6f3b5105dee5cc905a81d9f519bbd75f95871268104216f61a9e319bd411cc4"
 
   url "https://mutesync.s3.us-west-2.amazonaws.com/mutesync-#{version}#{arch}.dmg",
       verified: "mutesync.s3.us-west-2.amazonaws.com/"
