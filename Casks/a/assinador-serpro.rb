@@ -14,7 +14,7 @@ cask "assinador-serpro" do
 
   depends_on macos: ">= :sierra"
 
-  pkg "AssinadorSerpro#{version}.mpkg/Contents/Packages/AssinadorSerpro.pkg"
+  pkg "AssinadorSerpro-#{version}.mpkg/Contents/Packages/AssinadorSerpro.pkg"
 
   uninstall pkgutil: "br.gov.serpro.desktop.assinador"
 
