@@ -21,9 +21,9 @@ cask "microsoft-office-businesspro" do
     microsoft-outlook
     microsoft-powerpoint
     microsoft-teams
+    microsoft-teams-classic
     microsoft-word
     onedrive
-    homebrew/cask-versions/microsoft-teams-classic
   ]
   depends_on cask: "microsoft-auto-update"
   depends_on macos: ">= :monterey"
