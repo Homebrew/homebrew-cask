@@ -1,6 +1,6 @@
 cask "yacreader" do
-  version "9.14.1.2402053"
-  sha256 "d11b1539102b168909c7d5996ebc5d34aa27e9c7284dfc129b88e542235b4c93"
+  version "9.14.2.2402143"
+  sha256 "ee59a7f6b13216ff01dc00aa50c19c35121c074260d5be9a38bac67854a52054"
 
   url "https://github.com/YACReader/yacreader/releases/download/#{version.major_minor_patch}/YACReader-#{version}.MacOSX-U.Qt6.dmg",
       verified: "github.com/YACReader/yacreader/"
