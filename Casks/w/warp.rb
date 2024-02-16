@@ -7,6 +7,13 @@ cask "warp" do
   desc "Rust-based terminal"
   homepage "https://www.warp.dev/"
 
+  livecheck do
+    url "https://releases.warp.dev/channel_versions.json"
+    strategy :json do |json|
+      json["stable"]["version"][1..-1]
+    end
+  end
+
   auto_updates true
 
   app "Warp.app"
