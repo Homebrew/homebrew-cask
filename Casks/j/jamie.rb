@@ -5,9 +5,9 @@ cask "jamie" do
   url "https://github.com/louismorgner/jamie-release/releases/download/v#{version}/jamie-#{version}.dmg",
       verified: "github.com/louismorgner/jamie-release/"
   name "jamie"
-  desc "Best AI-powered meeting notes. Across all tools. 15+ languages. Privacy-first"
+  desc "AI-powered meeting notes"
   homepage "https://meetjamie.ai/"
-  
+
   auto_updates true
   depends_on macos: ">= :catalina"
 
