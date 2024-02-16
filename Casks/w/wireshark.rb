@@ -20,9 +20,14 @@ cask "wireshark" do
   desc "Network protocol analyzer"
   homepage "https://www.wireshark.org/"
 
+  # This appcast sometimes uses a newer pubDate for an older version, so we
+  # have to ignore the default `Sparkle` strategy sorting (which involves the
+  # pubDate) and simply work with the version numbers.
   livecheck do
     url "https://www.wireshark.org/update/0/Wireshark/0.0.0/macOS/#{livecheck_arch}64/en-US/stable.xml"
-    strategy :sparkle
+    strategy :sparkle do |items|
+      items.map(&:nice_version)
+    end
   end
 
   auto_updates true
