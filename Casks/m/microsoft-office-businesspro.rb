@@ -1,6 +1,6 @@
 cask "microsoft-office-businesspro" do
-  version "16.81.24011420"
-  sha256 "a9be856fd6d75b5dd58a56c6b9cd2abd70a6b902318989f47d53397c1e13403b"
+  version "16.82.24021116"
+  sha256 "268ccc614a366676d6999cea09d66697762560865a7f2921ab549123ae437167"
 
   url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_365_and_Office_#{version}_BusinessPro_Installer.pkg"
   name "Microsoft Office BusinessPro"
@@ -21,9 +21,9 @@ cask "microsoft-office-businesspro" do
     microsoft-outlook
     microsoft-powerpoint
     microsoft-teams
+    microsoft-teams-classic
     microsoft-word
     onedrive
-    homebrew/cask-versions/microsoft-teams-classic
   ]
   depends_on cask: "microsoft-auto-update"
   depends_on macos: ">= :monterey"
