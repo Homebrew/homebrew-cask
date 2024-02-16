@@ -48,8 +48,8 @@ cask "microsoft-word" do
     end
   end
   on_monterey :or_newer do
-    version "16.81.24011420"
-    sha256 "af0920fed5d4c9a873b079f3d9e0dd9549b2e132f4cfd2142df31d46da008d3b"
+    version "16.82.24021116"
+    sha256 "c88d779c17f6a505d30b878c09ead12fdc675ac62c9bd25ed4481acc48c65e1e"
 
     livecheck do
       url "https://go.microsoft.com/fwlink/p/?linkid=525134"
