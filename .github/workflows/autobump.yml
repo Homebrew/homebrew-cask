@@ -19,7 +19,11 @@ env:
     altair-graphql-client
     apifox
     appcleaner
+    aqua
     arc
+    assinador-serpro
+    axure-rp
+    backblaze
     banking-4
     beeper
     bettermouse
@@ -37,6 +41,7 @@ env:
     chatall
     chirp
     chromium-gost
+    clay
     clickup
     cloudnet
     codeql
@@ -44,14 +49,19 @@ env:
     confluent-cli
     copilot
     copilot-for-xcode
+    cryptomator
+    crystalmaker
     cursor
     dbeaver-community
     descript
+    desktoppr
     downie
     dropbox
     duckduckgo
+    ecamm-live
     electerm
     electron
+    elektron-transfer
     elephas
     eloston-chromium
     figma
@@ -62,6 +72,7 @@ env:
     forkgram-telegram
     fossa
     foxglove-studio
+    fxfactory
     gather
     glyphs
     google-chrome
@@ -69,17 +80,22 @@ env:
     google-drive
     grammarly-desktop
     grandtotal
+    gstreamer-development
+    gstreamer-runtime
     hackolade
     heptabase
     hstracker
     hydrus-network
     jdownloader
+    jetbrains-gateway
     jupyterlab
+    keysafe
     libreoffice
     librewolf
     logseq
     loom
     macupdater
+    megazeux
     melodics
     metasploit
     microsoft-edge
