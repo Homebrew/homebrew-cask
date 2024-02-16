@@ -7,12 +7,7 @@ cask "jamie" do
   name "jamie"
   desc "Best AI-powered meeting notes. Across all tools. 15+ languages. Privacy-first"
   homepage "https://meetjamie.ai/"
-
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
+  
   auto_updates true
   depends_on macos: ">= :catalina"
 
