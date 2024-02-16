@@ -4,7 +4,7 @@ cask "jamie" do
 
   url "https://github.com/louismorgner/jamie-release/releases/download/v#{version}/jamie-#{version}.dmg",
       verified: "github.com/louismorgner/jamie-release/"
-  name "Jamie"
+  name "jamie"
   desc "Best AI-powered meeting notes. Across all tools. 15+ languages. Privacy-first"
   homepage "https://meetjamie.ai/"
 
