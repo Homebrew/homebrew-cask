@@ -9,8 +9,14 @@ cask "batteryboi" do
   homepage "https://batteryboi.ovatar.io/"
 
   livecheck do
-    url "https://api.ovatar.io/version?id=com.ovatar.batteryapp"
-    strategy :sparkle
+    url :url
+    regex(/^(?:Version[._-]?)?v?(\d+(?:\.\d+)+)(?:#(\d+))?$/i)
+    strategy :github_latest do |json, regex|
+      match = json["tag_name"]&.match(regex)
+      next if match.blank?
+
+      match[2].present? ? "#{match[1]},#{match[2]}" : match[1]
+    end
   end
 
   depends_on macos: ">= :big_sur"
