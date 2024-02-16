@@ -8,10 +8,13 @@ cask "outline-manager" do
   desc "Tool to create and manage Outline servers, powered by Shadowsocks"
   homepage "https://www.getoutline.org/"
 
+  # The GitHub repository contains tag/releases for other software and the
+  # "latest" release may not be for Outline Manager, so we have to check
+  # multiple releases to identify the latest version.
   livecheck do
     url :url
-    regex(/(?:manager[._-])?v?(\d+(?:\.\d+)+)/i)
-    strategy :github_latest
+    regex(%r{^(?:manager(?:[._-]macos)?[/._-])?v?(\d+(?:\.\d+)+)$}i)
+    strategy :github_releases
   end
 
   app "Outline Manager.app"
