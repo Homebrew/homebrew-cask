@@ -13,4 +13,11 @@ cask "safeincloud-password-manager" do
   end
 
   app "SafeInCloud Password Manager.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.safeincloud.Safe-In-Cloud.OSX",
+    "~/Library/Application Scripts/com.safeincloud.Safe-In-Cloud.OSX.Safari-Extension",
+    "~/Library/Containers/com.safeincloud.Safe-In-Cloud.OSX",
+    "~/Library/Containers/com.safeincloud.Safe-In-Cloud.OSX.Safari-Extension",
+  ]
 end
