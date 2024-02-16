@@ -29,6 +29,6 @@ cask "ttu-base-suite" do
               sudo:       true,
             },
             pkgutil: "com.Teradata.*2000.pkg.ttuuninstaller"
-  
+
   zap trash: "~/Library/Saved Application State/com.teradata.TTUListProducts.savedState"
 end
