@@ -19,7 +19,7 @@ cask "ttu-base-suite" do
 
   installer script: {
     executable: "silent-install.sh",
-    args:       ["ttu-base-suite-2000"],
+    args:       ["ARGS"],
     sudo:       true,
   }
 
@@ -29,6 +29,6 @@ cask "ttu-base-suite" do
               sudo:       true,
             },
             pkgutil: "com.Teradata.*2000.pkg.ttuuninstaller"
-
+  
   zap trash: "~/Library/Saved Application State/com.teradata.TTUListProducts.savedState"
 end
