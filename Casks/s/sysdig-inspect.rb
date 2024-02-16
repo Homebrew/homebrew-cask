@@ -7,6 +7,11 @@ cask "sysdig-inspect" do
   desc "Interface for container troubleshooting and security investigation"
   homepage "https://github.com/draios/sysdig-inspect"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Sysdig Inspect-darwin-x64/Sysdig Inspect.app"
 
   zap trash: [
