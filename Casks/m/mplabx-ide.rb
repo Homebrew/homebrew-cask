@@ -1,8 +1,9 @@
 cask "mplabx-ide" do
   version "6.20"
-  sha256 "803e9a22286f3544a4e36353064dc67e4854d4b0be09717e30b013f32682a391"
+  sha256 "18ba349f93f1f18ddae57cbbe8f52418ece2969a2154fa892acb7216fdb9a537"
 
-  url "https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/SoftwareTools/MPLABX-v#{version}-osx-installer.dmg"
+  url "https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/SoftwareTools/MPLABX-v#{version}-osx-installer.dmg",
+      referer: "https://www.microchip.com/"
   name "MPLab X IDE"
   desc "IDE for Microchip's microcontrollers and digital signal controllers"
   homepage "https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide"
