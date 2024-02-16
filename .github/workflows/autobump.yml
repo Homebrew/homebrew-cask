@@ -10,162 +10,6 @@ on:
     # Every 3 hours 23 minutes past the hour
     - cron: "23 */3 * * *"
 
-env:
-  CASKS: >
-    1password
-    1password-cli
-    alfred
-    alt-tab
-    altair-graphql-client
-    apifox
-    appcleaner
-    aqua
-    arc
-    assinador-serpro
-    axure-rp
-    backblaze
-    banking-4
-    beeper
-    bettermouse
-    bettertouchtool
-    bike
-    brave-browser
-    bruno
-    burp-suite
-    burp-suite-professional
-    busycal
-    calibre
-    canva
-    capacities
-    carbon-copy-cloner
-    chatall
-    chirp
-    chromium-gost
-    clay
-    clickup
-    cloudnet
-    codeql
-    cog
-    confluent-cli
-    copilot
-    copilot-for-xcode
-    cryptomator
-    crystalmaker
-    cursor
-    dbeaver-community
-    descript
-    desktoppr
-    downie
-    dropbox
-    duckduckgo
-    ecamm-live
-    electerm
-    electron
-    elektron-transfer
-    elephas
-    eloston-chromium
-    figma
-    firefox
-    flipper
-    flutter
-    fmail2
-    forkgram-telegram
-    fossa
-    foxglove-studio
-    fxfactory
-    gather
-    glyphs
-    google-chrome
-    google-cloud-sdk
-    google-drive
-    grammarly-desktop
-    grandtotal
-    gstreamer-development
-    gstreamer-runtime
-    hackolade
-    heptabase
-    hstracker
-    hydrus-network
-    jdownloader
-    jetbrains-gateway
-    jupyterlab
-    keysafe
-    libreoffice
-    librewolf
-    logseq
-    loom
-    macupdater
-    megazeux
-    melodics
-    metasploit
-    microsoft-edge
-    microsoft-openjdk
-    milanote
-    multiapp
-    netron
-    openlens
-    openshift-client
-    opera
-    opera-gx
-    orbstack
-    osu
-    pitch
-    plex
-    plex-htpc
-    plex-media-server
-    postman
-    purei-play
-    puzzles
-    qownnotes
-    qqlive
-    quarto
-    readdle-spark
-    reader
-    reaper
-    rewind
-    rive
-    segger-jlink
-    setapp
-    sf
-    sfm
-    shapr3d
-    sigmaos
-    signal
-    siyuan
-    skype
-    sol
-    spotify
-    standard-notes
-    stats
-    teamviewer
-    telegram
-    telegram-desktop
-    teleport-connect
-    termius
-    thunderbird
-    todoist
-    tor-browser
-    trader-workstation
-    trainerroad
-    tsh
-    tuist
-    unity
-    uvtools
-    viber
-    visual-studio-code
-    vivaldi
-    vrew
-    vscodium
-    vuescan
-    warp
-    webcatalog
-    webull
-    whatsapp
-    workflowy
-    zed
-    zoom
-    zoom-for-it-admins
-
 permissions:
   contents: read
 
@@ -174,6 +18,9 @@ jobs:
     if: github.repository == 'Homebrew/homebrew-cask'
     runs-on: macos-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
       - name: Set up Homebrew
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
@@ -187,9 +34,13 @@ jobs:
         with:
           username: ${{ (github.event_name == 'workflow_dispatch' && github.actor) || 'BrewTestBot' }}
 
+      - name: Get list of autobump casks
+        id: autobump
+        run: echo "autobump_list=$(xargs < "$GITHUB_WORKSPACE"/.github/autobump.txt)" >> "$GITHUB_OUTPUT"
+
       - name: Bump casks
         uses: Homebrew/actions/bump-packages@master
         continue-on-error: true
         with:
           token: ${{ secrets.HOMEBREW_CASK_REPO_WORKFLOW_TOKEN }}
-          casks: ${{ github.event.inputs.casks || env.CASKS }}
+          casks: ${{ github.event.inputs.casks || steps.autobump.outputs.autobump_list }}
