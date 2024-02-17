@@ -10,7 +10,9 @@ cask "visual-studio-code" do
 
   livecheck do
     url "https://update.code.visualstudio.com/api/update/darwin-universal/stable/latest"
-    regex(/"productVersion"\s*:\s*"(\d+(:?\.\d+)+)"/i)
+    strategy :json do |json|
+      json["productVersion"]
+    end
   end
 
   auto_updates true
