@@ -19,6 +19,9 @@ cask "visual-studio-code" do
   app "Visual Studio Code.app"
   binary "#{appdir}/Visual Studio Code.app/Contents/Resources/app/bin/code"
 
+  uninstall launchctl: "com.microsoft.VSCode.ShipIt",
+            quit:      "com.microsoft.VSCode"
+
   zap trash: [
     "~/.vscode",
     "~/Library/Application Support/Code",
