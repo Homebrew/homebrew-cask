@@ -1,18 +1,15 @@
 cask "visual-studio-code" do
-  arch arm: "darwin-arm64", intel: "darwin"
-
   version "1.86.2"
-  sha256 arm:   "b82dcb4bc6b2316ef4fdc5a0ab924152758a1a0e437831bd63d501d717e36b6f",
-         intel: "0ac71d38cf0a50c8757153a8db238e60d33d50c1559d26998b5c002af69f6b8b"
+  sha256 "b9fe35872597f54afa0391bbea7470ae847074051067c09daabbfb4b1388b5ff"
 
-  url "https://update.code.visualstudio.com/#{version}/#{arch}/stable"
+  url "https://update.code.visualstudio.com/#{version}/darwin-universal/stable"
   name "Microsoft Visual Studio Code"
   name "VS Code"
   desc "Open-source code editor"
   homepage "https://code.visualstudio.com/"
 
   livecheck do
-    url "https://update.code.visualstudio.com/api/update/#{arch}/stable/latest"
+    url "https://update.code.visualstudio.com/api/update/darwin-universal/stable/latest"
     regex(/"productVersion"\s*:\s*"(\d+(:?\.\d+)+)"/i)
   end
 
