@@ -1,5 +1,5 @@
 cask "cloudflare-warp" do
-  version "2024.1.160.0,20240124.7"
+  version "2024.2.68.0,20240214.9"
   sha256 :no_check
 
   url "https://1111-releases.cloudflareclient.com/mac/Cloudflare_WARP.zip",
