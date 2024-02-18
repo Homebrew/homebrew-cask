@@ -94,7 +94,10 @@ cask "karabiner-elements" do
                 "org.pqrs.karabiner.agent.karabiner_grabber",
                 "org.pqrs.karabiner.agent.karabiner_observer",
                 "org.pqrs.karabiner.karabiner_console_user_server",
+                "org.pqrs.karabiner.karabiner_grabber",
+                "org.pqrs.karabiner.karabiner_observer",
                 "org.pqrs.karabiner.karabiner_session_monitor",
+                "org.pqrs.karabiner.NotificationWindow",
               ],
               signal:       [
                 ["TERM", "org.pqrs.Karabiner-Menu"],
@@ -141,6 +144,7 @@ cask "karabiner-elements" do
     "~/Library/Application Support/Karabiner-Elements",
     "~/Library/Caches/org.pqrs.Karabiner-Elements.Updater",
     "~/Library/Containers/org.pqrs.Karabiner-VirtualHIDDevice-Manager",
+    "~/Library/HTTPStorages/org.pqrs.Karabiner-Elements.Settings",
     "~/Library/Preferences/org.pqrs.Karabiner-Elements.Updater.plist",
   ]
 end
