@@ -15,7 +15,7 @@ cask "double-commander" do
     url "https://sourceforge.net/projects/doublecmd/rss?path=/macOS"
     regex(%r{url=["']?.*?/doublecmd[._-](\d+(?:\.\d+)+)[._-][^"']*?.dmg}i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]}" }
+      page.scan(regex).map { |match| (match[0]).to_s }
     end
   end
 
