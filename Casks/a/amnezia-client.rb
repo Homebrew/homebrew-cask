@@ -18,6 +18,12 @@ cask "amnezia-client" do
 
   app "AmneziaVPN.app"
 
+  uninstall quit:   [
+              "AmneziaVPN",
+                "AmneziaVPN-service",
+            ],
+            delete: "/Applications/AmneziaVPN.app"
+
   zap trash: [
     "~/Library/Caches/AmneziaVPN.ORG",
     "~/Library/Preferences/AmneziaVPN.plist",
