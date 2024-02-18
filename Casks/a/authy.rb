@@ -12,6 +12,8 @@ cask "authy" do
     strategy :header_match
   end
 
+  deprecate! date: "2024-03-19", because: :discontinued
+
   auto_updates true
 
   app "Authy Desktop.app"
