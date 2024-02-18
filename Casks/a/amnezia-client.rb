@@ -19,8 +19,8 @@ cask "amnezia-client" do
   app "AmneziaVPN.app"
 
   uninstall quit:   [
-              "AmneziaVPN-service",
               "AmneziaVPN",
+              "AmneziaVPN-service",
             ],
             delete: "/Applications/AmneziaVPN.app"
 
