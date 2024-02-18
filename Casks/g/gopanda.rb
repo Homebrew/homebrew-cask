@@ -7,10 +7,7 @@ cask "gopanda" do
   desc "Pandanet client"
   homepage "https://pandanet-igs.com/communities/gopanda2"
 
-  livecheck do
-    url "https://pandanet-igs.com/gopanda#{version.major}/download/latest-mac.yml"
-    strategy :electron_builder
-  end
+  disable! date: "2024-02-18", because: "download artifact not available"
 
   app "GoPanda#{version.major}.app"
 end
