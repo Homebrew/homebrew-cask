@@ -1,5 +1,5 @@
 cask "ringcentral" do
-  arch arm: "-arm64", intel: ""
+  arch arm: "-arm64"
 
   version "24.1.10"
   sha256 :no_check
