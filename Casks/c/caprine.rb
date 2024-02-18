@@ -1,9 +1,9 @@
 cask "caprine" do
   arch arm: "-arm64"
 
-  version "2.59.1"
-  sha256 arm:   "eec8b899e2e7119bb92b65edf37062ae1f993b043f55ced17102ba7a83aee29d",
-         intel: "58c4f8cab2e30d232c23f9456d8383bb7ff4c21705fbefb84a1a0285f3322df4"
+  version "2.59.2"
+  sha256 arm:   "25a9f48d8d490dc019e427162a78577717bfe0a52d0b49d8534948f5efd1e434",
+         intel: "31d493e996cd3c7bef234925cdce979c526dc24c89caef4232d36203daeb2e2d"
 
   url "https://github.com/sindresorhus/caprine/releases/download/v#{version}/Caprine-#{version}#{arch}.dmg"
   name "Caprine"
