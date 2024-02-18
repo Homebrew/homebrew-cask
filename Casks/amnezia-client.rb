@@ -17,4 +17,10 @@ cask "amnezia-client" do
   depends_on macos: ">= :high_sierra"
 
   app "AmneziaVPN.app"
+
+  zap trash: [
+    "~/Library/Caches/AmneziaVPN.ORG",
+    "~/Library/Preferences/AmneziaVPN.plist",
+    "~/Library/Preferences/org.amneziavpn.AmneziaVPN.plist",
+  ]
 end
