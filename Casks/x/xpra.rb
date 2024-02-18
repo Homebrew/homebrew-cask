@@ -6,8 +6,8 @@ cask "xpra" do
     sha256 "8133fedb49f6899fdc7a87cf98021ef08976d1804d74e425a56b1d651ce71710"
   end
   on_intel do
-    version "5.0.2,3"
-    sha256 "4fce517e0547dc5cd6b26c08df9f42c4ad30bdfe7eebc9e0d0f4f4c6f280de9a"
+    version "5.0.5,0"
+    sha256 "b331c811f585fc878c0397c510b96d22dc2899f9d868d63659952df0975b4a05"
   end
 
   url "https://www.xpra.org/dists/osx/#{arch}/Xpra-#{arch}-#{version.csv.first}-r#{version.csv.second}.pkg"
