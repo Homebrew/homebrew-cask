@@ -144,6 +144,7 @@ cask "karabiner-elements" do
     "~/Library/Application Support/Karabiner-Elements",
     "~/Library/Caches/org.pqrs.Karabiner-Elements.Updater",
     "~/Library/Containers/org.pqrs.Karabiner-VirtualHIDDevice-Manager",
+    "~/Library/HTTPStorages/org.pqrs.Karabiner-Elements.Settings",
     "~/Library/Preferences/org.pqrs.Karabiner-Elements.Updater.plist",
   ]
 end
