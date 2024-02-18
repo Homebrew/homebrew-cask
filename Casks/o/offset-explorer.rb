@@ -13,7 +13,7 @@ cask "offset-explorer" do
     regex(/Offset\s*Explorer\s*v?(\d+(?:\.\d+)+)/i)
   end
 
-  app "Offset Explorer #{version.major}.app"
+  app "Offset Explorer 2.app"
 
-  zap trash: "~/.kafkatool#{version.major}"
+  zap trash: "~/.kafkatool2"
 end
