@@ -19,7 +19,6 @@ cask "ttu-base-suite" do
 
   installer script: {
     executable: "silent-install.sh",
-    args:       ["ttu-base-suite-2000"],
     sudo:       true,
   }
 
