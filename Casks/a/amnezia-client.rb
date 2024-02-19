@@ -5,7 +5,7 @@ cask "amnezia-client" do
   url "https://github.com/amnezia-vpn/amnezia-client/releases/download/#{version}/AmneziaVPN_#{version}.dmg",
       verified: "github.com/amnezia-vpn/amnezia-client/"
   name "Amnezia VPN"
-  desc "Amnezia is an open-source VPN client"
+  desc "VPN client"
   homepage "https://amnezia.org/"
 
   livecheck do
