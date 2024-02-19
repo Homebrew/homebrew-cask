@@ -49,9 +49,9 @@ cask "klayout" do
   end
   on_sonoma :or_newer do
     version "0.28.17"
-    sha256 "01230beb69df62960e403db198770b889d464b2487c85231ca0392d833da5695"
+    sha256 "786473a0b3ef99ce0b62d1c20327f71d432e47b151deb373ce351afea6473316"
 
-    url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Ventura-1-qt5Brew-RsysPhb311.dmg",
+    url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Sonoma-1-qt5Brew-RsysPhb311.dmg",
         verified: "klayout.org/downloads/MacOS/"
 
     livecheck do
