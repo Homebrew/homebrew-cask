@@ -14,4 +14,14 @@ cask "yojimbo" do
   end
 
   app "Yojimbo.app"
+
+  zap trash: [
+    "~/Library/Caches/com.apple.helpd/Generated/Yojimbo Help*#{version}",
+    "~/Library/Caches/com.barebones.yojimbo4",
+    "~/Library/HTTPStorages/com.barebones.yojimbo4",
+    "~/Library/Logs/Yojimbo",
+    "~/Library/Preferences/com.barebones.yojimbo4.plist",
+    "~/Library/Saved Application State/com.barebones.yojimbo4.savedState",
+    "~/Yojimbo",
+  ]
 end
