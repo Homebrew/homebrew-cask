@@ -8,6 +8,25 @@ cask "polkadot-js" do
   desc "Portal into the Polkadot and Substrate networks"
   homepage "https://polkadot.js.org/"
 
+  # Not every GitHub release provides a file for macOS, so we check multiple
+  # recent releases instead of only the "latest" release.
+  livecheck do
+    url :url
+    regex(/^Polkadot[._-]JS[._-]Apps[._-]mac[._-](\d+(?:\.\d+)*)\.(?:dmg|pkg|zip)$/i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
+
+        release["assets"]&.map do |asset|
+          match = asset["name"]&.match(regex)
+          next if match.blank?
+
+          match[1]
+        end
+      end.flatten
+    end
+  end
+
   app "Polkadot-JS Apps.app"
 
   zap trash: [
