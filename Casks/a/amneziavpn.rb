@@ -1,4 +1,4 @@
-cask "amnezia-client" do
+cask "amneziavpn" do
   version "4.1.0.1"
   sha256 "c421f28697fd9200fd9dbcdd111fa2778fe8d01b45e8ae672886399181c780cb"
 
