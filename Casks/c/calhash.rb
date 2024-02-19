@@ -22,7 +22,7 @@ cask "calhash" do
     url "https://www.titanium-software.fr/download/13/CalHash.dmg"
   end
   on_sonoma :or_newer do
-    version "1.3.1"
+    version "1.3.2"
 
     url "https://www.titanium-software.fr/download/14/CalHash.dmg"
   end
