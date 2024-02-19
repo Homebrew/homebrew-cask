@@ -1,9 +1,9 @@
 cask "netdownloadhelpercoapp" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2.0.17"
-  sha256 arm:   "e67e33c46fd6e8a6c08647ee16c4f77746a234bf06a3cff9d2fa771f666a6d57",
-         intel: "e043cb2e255836ad749ab626ef34d186cb9df66741728af9dde67a8c7308dffb"
+  version "2.0.19"
+  sha256 arm:   "be91d5896db29724389c79bc8ce2b1b257bf7516068755aa2a4027c87c82eb9b",
+         intel: "3e4c513c368aa426d9713c857778996773014bcf1874c909c80cfb6ec96de50e"
 
   url "https://github.com/mi-g/vdhcoapp/releases/download/v#{version}/vdhcoapp-mac-#{arch}-installer.pkg",
       verified: "github.com/mi-g/vdhcoapp/"
