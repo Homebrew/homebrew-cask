@@ -13,7 +13,10 @@ cask "double-commander" do
 
   livecheck do
     url "https://sourceforge.net/projects/doublecmd/rss?path=/macOS"
-    regex(%r{url=["']?.*?/doublecmd[._-](\d+(?:\.\d+)+)[._-][^"']*?.dmg}i)
+    regex(%r{url=.*?/doublecmd[._-](\d+(?:[.-]\d+)+)[^"' ]*?\.dmg}i)
+    strategy :sourceforge do |page, regex|
+      page.scan(regex).map { |match| match[0].tr("-", ",") }
+    end
   end
 
   app "Double Commander.app"
