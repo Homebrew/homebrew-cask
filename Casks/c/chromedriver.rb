@@ -19,7 +19,7 @@ cask "chromedriver" do
     end
   end
 
-  conflicts_with cask: "homebrew/cask-versions/chromedriver-beta"
+  conflicts_with cask: "chromedriver-beta"
 
   binary "chromedriver-mac-#{arch}/chromedriver"
 
