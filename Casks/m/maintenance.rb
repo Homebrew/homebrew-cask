@@ -42,7 +42,7 @@ cask "maintenance" do
     url "https://www.titanium-software.fr/download/13/Maintenance.dmg"
   end
   on_sonoma :or_newer do
-    version "3.1.3"
+    version "3.1.4"
 
     url "https://www.titanium-software.fr/download/14/Maintenance.dmg"
   end
@@ -71,7 +71,7 @@ cask "maintenance" do
   app "Maintenance.app"
 
   zap trash: [
-    "~/Library/Caches/com.apple.helpd/Generated/com.titanium.Maintenance.help*3.0.1",
+    "~/Library/Caches/com.apple.helpd/Generated/com.titanium.Maintenance.help*",
     "~/Library/Preferences/com.titanium.Maintenance.plist",
     "~/Library/Saved Application State/com.titanium.Maintenance.savedState",
   ]
