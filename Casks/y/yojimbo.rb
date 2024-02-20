@@ -1,6 +1,6 @@
 cask "yojimbo" do
   version "4.6.3"
-  sha256 "fc9e1ef31ca48aced4d17c433ad24da1bc94be61a2b40e8a8b7e04f92ae9d023"
+  sha256 "1496c28e14c86ef501d9e66caf1620abd2f80acb15ca78eb42a9cc03f1aba50f"
 
   url "https://s3.amazonaws.com/BBSW-download/Yojimbo_#{version}.dmg",
       verified: "s3.amazonaws.com/BBSW-download/"
@@ -14,4 +14,14 @@ cask "yojimbo" do
   end
 
   app "Yojimbo.app"
+
+  zap trash: [
+    "~/Library/Caches/com.apple.helpd/Generated/Yojimbo Help*#{version}",
+    "~/Library/Caches/com.barebones.yojimbo4",
+    "~/Library/HTTPStorages/com.barebones.yojimbo4",
+    "~/Library/Logs/Yojimbo",
+    "~/Library/Preferences/com.barebones.yojimbo4.plist",
+    "~/Library/Saved Application State/com.barebones.yojimbo4.savedState",
+    "~/Yojimbo",
+  ]
 end
