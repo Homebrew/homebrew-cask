@@ -16,7 +16,7 @@ cask "deepl" do
     version "24.1.2756848"
     sha256 "ca6dc9700e4134925c0e3d74cddbc1b63e80b2e4edb3be5273fca1059236d8ad"
 
-    url "https://www.deepl.com/macos/download/#{version}/DeepL_#{version}.tar.gz"
+    url "https://www.deepl.com/macos/download/#{version.major_minor}/#{version.patch}/DeepL_#{version}.tar.gz"
 
     livecheck do
       url "https://appdownload.deepl.com/macos/bigsur/update.json"
