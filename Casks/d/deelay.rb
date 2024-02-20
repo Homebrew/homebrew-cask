@@ -9,7 +9,7 @@ cask "deelay" do
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?/(\w+)/(\w+)/deelay[._-](\d+(?:\.\d+)+)\.zip}i)
+    regex(%r{href=.*?/(\w+)/(\w+)/deelay[._-]v?(\d+(?:\.\d+)+)\.zip}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[2]},#{match[0]},#{match[1]}" }
     end
