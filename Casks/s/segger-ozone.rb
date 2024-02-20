@@ -12,7 +12,6 @@ cask "segger-ozone" do
         "non_emb_ctr"              => "confirmed",
         "submit"                   => "Download software",
       }
-
   name "Segger Ozone J-Link Debugger"
   desc "Software and Documentation pack for Segger Ozone J-Link debugger"
   homepage "https://www.segger.com/downloads/jlink#Ozone"
