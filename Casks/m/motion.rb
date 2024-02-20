@@ -22,7 +22,7 @@ cask "motion" do
 
   livecheck do
     url :url
-    strategy :github_releases
+    strategy :github_latest
   end
 
   auto_updates true
