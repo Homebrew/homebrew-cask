@@ -21,6 +21,7 @@ cask "fixkey" do
   zap trash: [
     "~/Library/Application Support/fixkey",
     "~/Library/Caches/fixkey",
+    "~/Library/HTTPStorages/fixkey",
     "~/Library/Preferences/fixkey.plist",
   ]
 end
