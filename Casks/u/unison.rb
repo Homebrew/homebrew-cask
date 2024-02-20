@@ -1,6 +1,6 @@
 cask "unison" do
-  version "2.53.3"
-  sha256 "c389e23927e43117851dd01b6fe681c8fa2f8c21bad599c24e2dfb8639f4100b"
+  version "2.53.4"
+  sha256 "1c3e18eefcd63ced1cd4bf43015cb6c0adac9824466de2c5cf7d598b3a8901fb"
 
   url "https://github.com/bcpierce00/unison/releases/download/v#{version}/Unison-#{version}-macos.app.tar.gz",
       verified: "github.com/bcpierce00/unison/"
