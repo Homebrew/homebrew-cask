@@ -1,6 +1,6 @@
 cask "gdisk" do
-  version "1.0.9"
-  sha256 "f71cb241fa5d5e0fb5e8b8f1f0fa8875d546ced91095b75c216f70fc63301bcb"
+  version "1.0.10"
+  sha256 "38f0d2947803912cf0861f7a07ed2ae76979c88de5c20d6b10d6f9e7fe72b07d"
 
   url "https://downloads.sourceforge.net/gptfdisk/gdisk-#{version}.pkg"
   name "GPT fdisk"
