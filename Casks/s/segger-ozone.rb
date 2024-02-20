@@ -13,13 +13,13 @@ cask "segger-ozone" do
         "submit"                   => "Download software",
       }
 
-  name "Segger Ozone The J-Link Debugger"
-  desc "Software and Documentation pack for Segger Ozone debugger"
+  name "Segger Ozone J-Link Debugger"
+  desc "Software and Documentation pack for Segger Ozone J-Link debugger"
   homepage "https://www.segger.com/downloads/jlink#Ozone"
 
   livecheck do
     url "https://www.segger.com/downloads/jlink/ReleaseNotes_Ozone.html"
-    regex(/Version\s*V(\d+(?:\.\d+[a-z]?)*)/i)
+    regex(/<h2[^>]*>\s*Version\s*(\d+(?:\.\d+)+[a-z]?)/i)
   end
 
   pkg "Ozone_MacOSX_V#{version.no_dots}_#{arch}.pkg"
