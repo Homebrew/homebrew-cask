@@ -1,6 +1,6 @@
 cask "squirrelsql" do
-  version "4.7.0"
-  sha256 "44747de1e99d8625e80a113ae2cd5f649deee062a96a6cb0c43f5a2fc5f51bbf"
+  version "4.7.1"
+  sha256 "6f31f2559b50df85e05b7e6e3e208e28067cc8bb8bd7dc240ba686fddb02381d"
 
   url "https://downloads.sourceforge.net/squirrel-sql/1-stable/#{version}/squirrel-sql-#{version}-MACOSX-install.jar",
       verified: "sourceforge.net/squirrel-sql/"
