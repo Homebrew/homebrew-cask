@@ -24,9 +24,7 @@ cask "segger-ozone" do
 
   pkg "Ozone_MacOSX_V#{version.no_dots}_#{arch}.pkg"
 
-  uninstall quit:    [
-              "com.segger.Ozone.*",
-            ],
+  uninstall quit:    "com.segger.Ozone.*",
             pkgutil: "com.segger.pkg.Ozone"
 
   zap trash: [
