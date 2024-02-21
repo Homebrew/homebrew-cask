@@ -11,6 +11,8 @@ cask "acreom" do
   desc "Personal knowledge base for developers"
   homepage "https://acreom.com/"
 
+  depends_on macos: ">= :high_sierra"
+
   app "acreom.app"
 
   zap trash: [
