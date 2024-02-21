@@ -1,6 +1,6 @@
 cask "mints" do
-  version "1.17,2024.02"
-  sha256 "054d5d05f130a9dc6e07f9d9f9b73254b1495fca1f75115e2d9682c7ec9de2dd"
+  version "1.18,2024.02"
+  sha256 "9399aba7a73b33420cf460c7fd53b2220d613217343779b8af8ad4d8702f7ee1"
 
   url "https://eclecticlightdotcom.files.wordpress.com/#{version.csv.second.major}/#{version.csv.second.minor}/mints#{version.csv.first.no_dots}.zip",
       verified: "eclecticlightdotcom.files.wordpress.com/"
