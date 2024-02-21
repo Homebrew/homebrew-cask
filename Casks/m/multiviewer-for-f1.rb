@@ -1,4 +1,5 @@
 cask "multiviewer-for-f1" do
+  # NOTE: "1" is not a version number, but an intrinsic part of the product name
   arch arm: "arm64", intel: "x64"
 
   on_arm do
