@@ -25,7 +25,8 @@ cask "steam" do
               "com.valvesoftware.steam",
               "com.valvesoftware.steam.helper",
               "com.valvesoftware.steam.helper.EH",
-            ]
+            ],
+            delete:    "~/Library/Application Support/Steam/Steam.AppBundle"
 
   zap trash: [
     "~/Library/Application Support/Steam/",
