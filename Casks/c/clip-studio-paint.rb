@@ -1,6 +1,6 @@
-cask "clip-studio-paint@1" do
-  version "1.13.2"
-  sha256 "b1cbf25b35f0f3ee11b2dd621b0dd6b023133cb21c76de8220ceceac4a0352c8"
+cask "clip-studio-paint" do
+  version "2.3.4"
+  sha256 "52303ea331dbdced3b8ae73cec0e9c3f1d5ae7b842bebba8988215262baef6a1"
 
   url "https://vd.clipstudio.net/clipcontent/paint/app/#{version.no_dots}/CSP_#{version.no_dots}m_app.pkg"
   name "Clip Studio Paint"
@@ -8,7 +8,7 @@ cask "clip-studio-paint@1" do
   homepage "https://www.clipstudio.net/en"
 
   livecheck do
-    url "https://www.clipstudio.net/en/dl/release_note/"
+    url "https://www.clipstudio.net/en/dl/release_note/v2"
     regex(/Clip\s+Studio\s+Paint\s+(?:v|Ver\.?|Version)?\s*(\d+(?:\.\d+)+)/i)
   end
 
