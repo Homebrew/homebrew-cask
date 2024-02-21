@@ -7,11 +7,6 @@ cask "jordanbaird-ice" do
   desc "Menu bar manager"
   homepage "https://github.com/jordanbaird/Ice"
 
-  livecheck do
-    url "https://github.com/jordanbaird/Ice/releases"
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on macos: ">= :sonoma"
 
