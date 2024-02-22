@@ -1,8 +1,8 @@
 cask "drivethrurpg" do
-  version "3.3.0.0"
-  sha256 "558091905cf17303491f8e454caa77a13079c8e142ddc910e373dfdaf26ec424"
+  version "3.4.6"
+  sha256 "4ed84b80a84f442a9b2049f5338a0769aa937d6e31af3b193480f95d506436ee"
 
-  url "https://dtrpg-library-app.s3.us-east-2.amazonaws.com/DriveThruRPG_v#{version}.dmg",
+  url "https://dtrpg-library-app.s3.us-east-2.amazonaws.com/DriveThruRPG_#{version}.dmg",
       verified: "dtrpg-library-app.s3.us-east-2.amazonaws.com/"
   name "DriveThruRPG Library App"
   desc "Sync DriveThruRPG libraries to compatible devices"
@@ -16,4 +16,9 @@ cask "drivethrurpg" do
   depends_on macos: ">= :high_sierra"
 
   app "DriveThruRPG.app"
+
+  zap trash: [
+    "~/Library/Preferences/com.onebookshelf.DriveThruRPG.plist",
+    "~/Library/Saved Application State/com.drivethrurpg.savedState",
+  ]
 end
