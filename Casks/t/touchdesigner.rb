@@ -1,9 +1,9 @@
 cask "touchdesigner" do
   arch arm: "arm64", intel: "intel"
 
-  version "2022.33910"
-  sha256 arm:   "cc913b7591d01dbff03656162929736583ff1b98bb40a06733b4493f8a52ab4c",
-         intel: "fabe5d27e48112e2ff98725766704e9f4146041e1f21da8c078b92973037b115"
+  version "2023.11510"
+  sha256 arm:   "5a77b6d733be88b6faea42202c14d9358771c70533afe854850d52244c98a516",
+         intel: "9c83f8a245c259b70bdf379ea15b29404bbcf6c080adbeaca273289b0abc9e13"
 
   url "https://download.derivative.ca/TouchDesigner.#{version}.#{arch}.dmg"
   name "Derivative TouchDesigner"
