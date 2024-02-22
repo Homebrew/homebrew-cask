@@ -13,6 +13,7 @@ cask "lm-studio" do
     regex(/LM\+Studio[._-]darwin[._-]arm64[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
+  auto_updates true
   depends_on arch: :arm64
 
   app "LM Studio.app"
