@@ -9,11 +9,11 @@ cask "zotero" do
 
   livecheck do
     url "https://www.zotero.org/download/"
-    regex(/standaloneVersions.*?"mac"\s*:\s*"(\d+(?:\.\d+)*)"/i)
+    regex(/standaloneVersions.*?"mac"\s*:\s*"(\d+(?:\.\d+)+)"/i)
   end
 
   auto_updates true
-  conflicts_with cask: "homebrew/cask-versions/zotero-beta"
+  conflicts_with cask: "zotero-beta"
 
   app "Zotero.app"
 
