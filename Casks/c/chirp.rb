@@ -1,6 +1,6 @@
 cask "chirp" do
-  version "20240220"
-  sha256 "eed34f5161b99f9c3ebfa0b9c1f5f66c620d94574b363b1b9373e5805aa295a5"
+  version "20240222"
+  sha256 "28849ad6d24453cbde1241c842d016b5f12eb0f57e64c8d312cd82b5a5afdda9"
 
   url "https://trac.chirp.danplanet.com/chirp_next/next-#{version}/chirp-next-#{version}.app.zip"
   name "CHIRP"
