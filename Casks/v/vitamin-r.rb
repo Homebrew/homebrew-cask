@@ -6,8 +6,8 @@ cask "vitamin-r" do
     depends_on macos: ">= :el_capitan"
   end
   on_mojave :or_newer do
-    version "4.16"
-    sha256 "59f9a979fc822307e515b7af582fe5417273ff86f04552498263c5967a3c196b"
+    version "4.17"
+    sha256 "f0bc085f2b8bf474458207f3257510c407c94f687ed33b97267f3a7101b47d45"
 
     depends_on macos: ">= :mojave"
   end
