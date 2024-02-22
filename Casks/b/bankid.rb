@@ -1,6 +1,6 @@
 cask "bankid" do
-  version "7.14.1"
-  sha256 "98be02f71f182f1cb04417cc8325edc224b36c8455c8928e632e9fcaf5c6a5d9"
+  version "7.14.2"
+  sha256 "52da38b2509cb0f457c096dca01ee2390359cdbc365e4d43552fb72ef7bec1a2"
 
   url "https://cdn.bankid.com/bisp/mac/BankID_installation_#{version.dots_to_underscores}.pkg"
   name "BankID Security Application (Sweden)"
