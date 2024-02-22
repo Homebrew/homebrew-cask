@@ -13,6 +13,7 @@ cask "theiaide" do
     regex(/href=.*?TheiaIDE[._-]v?(\d+(?:\.\d+)+)(?:-mac)?\.zip/i)
   end
 
+  auto_updates true
   depends_on macos: ">= :high_sierra"
 
   app "TheiaIDE.app"
