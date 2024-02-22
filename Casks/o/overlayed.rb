@@ -8,11 +8,6 @@ cask "overlayed" do
   desc "Modern, open-source, and free voice chat overlay for Discord"
   homepage "https://overlayed.dev/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: ">= :high_sierra"
 
   app "Overlayed.app"
