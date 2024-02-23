@@ -46,9 +46,9 @@ module Homebrew
 
     runner = CiMatrix.random_runner[:name]
     syntax_job = {
-      name:         "syntax",
-      tap:          tap.name,
-      runner:       runner,
+      name:   "syntax",
+      tap:    tap.name,
+      runner: runner,
     }
 
     matrix = [syntax_job]
