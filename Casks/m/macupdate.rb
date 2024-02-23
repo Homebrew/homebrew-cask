@@ -7,10 +7,7 @@ cask "macupdate" do
   desc "Software updater"
   homepage "https://www.macupdate.com/desktop"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  disable! date: "2024-02-22", because: :discontinued
 
   app "MacUpdate Desktop.app"
 
