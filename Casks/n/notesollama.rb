@@ -4,7 +4,7 @@ cask "notesollama" do
 
   url "https://smallest.app/notesollama/NotesOllama-#{version}.zip"
   name "NotesOllama"
-  desc "LLM support for Apple Notes thruough Ollama"
+  desc "LLM support for Apple Notes through Ollama"
   homepage "https://smallest.app/notesollama/"
 
   livecheck do
