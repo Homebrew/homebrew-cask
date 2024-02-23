@@ -23,37 +23,34 @@ cask "logi-options-plus" do
     sudo:       true,
   }
 
-  uninstall script: [
-    executable: "logioptionsplus_installer.app/Contents/MacOS/logioptionsplus_installer",
-    args:       ["--quiet", "--uninstall"],
-    sudo:       true,
-  ]
+  uninstall launchctl: [
+              "com.logi.cp-dev-mgr",
+              "com.logi.optionsplus",
+              "com.logi.optionsplus.updater",
+            ],
+            quit:      [
+              "com.logi.cp-dev-mgr",
+              "com.logi.optionsplus",
+              "com.logi.optionsplus.driverhost",
+              "com.logi.optionsplus.updater",
+              "com.logitech.FirmwareUpdateTool",
+            ],
+            delete:    [
+              "/Applications/logioptionsplus.app",
+              "/Applications/Utilities/Logi Options+ Driver Installer.bundle",
+              "/Library/Application Support/Logitech.localized/LogiOptionsPlus",
+            ],
+            rmdir:     "/Library/Application Support/Logitech.localized"
 
-  zap launchctl: [
-        "com.logi.cp-dev-mgr",
-        "com.logi.optionsplus",
-        "com.logi.optionsplus.agent",
-        "com.logi.optionsplus.updater",
-      ],
-      quit:      [
-        "com.logi.cp-dev-mgr",
-        "com.logi.optionsplus",
-        "com.logi.optionsplus.agent",
-        "com.logi.optionsplus.updater",
-      ],
-      delete:    [
-        "/Applications/logioptionsplus.app",
-        "/Library/LaunchAgents/com.logi.optionsplus.plist",
-        "/Library/LaunchDaemons/com.logi.optionsplus.updater.plist",
-      ],
-      trash:     [
-        "/Users/Shared/LogiOptionsPlus",
-        "~/Library/Application Support/LogiOptionsPlus",
-        "~/Library/Application Support/logioptionsplus",
-        "~/Library/Preferences/com.logi.cp-dev-mgr.plist",
-        "~/Library/Preferences/com.logi.optionsplus.plist",
-        "~/Library/Saved Application State/com.logi.optionsplus.savedState",
-      ]
+  zap trash: [
+    "/Users/Shared/logi",
+    "/Users/Shared/LogiOptionsPlus",
+    "~/Library/Application Support/LogiOptionsPlus",
+    "~/Library/Preferences/com.logi.cp-dev-mgr.plist",
+    "~/Library/Preferences/com.logi.optionsplus.driverhost.plist",
+    "~/Library/Preferences/com.logi.optionsplus.plist",
+    "~/Library/Saved Application State/com.logi.optionsplus.savedState",
+  ]
 
   caveats do
     reboot
