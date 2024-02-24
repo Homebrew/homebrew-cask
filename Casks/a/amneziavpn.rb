@@ -1,6 +1,6 @@
 cask "amneziavpn" do
-  version "4.1.0.1"
-  sha256 "c421f28697fd9200fd9dbcdd111fa2778fe8d01b45e8ae672886399181c780cb"
+  version "4.4.0.0"
+  sha256 "2f7c13cceef59c4c72b551e2a2abbaf7cde823a564ed7166f17e56f008a7fff5"
 
   url "https://github.com/amnezia-vpn/amnezia-client/releases/download/#{version}/AmneziaVPN_#{version}.dmg",
       verified: "github.com/amnezia-vpn/amnezia-client/"
