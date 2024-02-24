@@ -1,6 +1,6 @@
 cask "notesollama" do
-  version "0.2.1"
-  sha256 "86446927a946f455bdff0a0309eac43ddb0f76186a561fb91038b886b0845564"
+  version "0.2.3"
+  sha256 "8343010333c5dcbfc947c8bc55ddb255ca8fc7e51c35784b329bca57212b4ebd"
 
   url "https://smallest.app/notesollama/NotesOllama-#{version}.zip"
   name "NotesOllama"
