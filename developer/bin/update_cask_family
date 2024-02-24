@@ -74,5 +74,5 @@ for cask in $(get_${cask_family}); do
     continue
   fi
 
-  brew bump-cask-pr --no-browse --version "${new_version}" "${cask}"
+  brew bump-cask-pr --no-browse --no-fork --version "${new_version}" "${cask}"
 done
