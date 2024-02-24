@@ -1,6 +1,6 @@
 cask "aifun" do
-  version "0.8.0"
-  sha256 "91d9097071b891292b4934d563488b044d168260cd12e3f0fed7494ac0a5005e"
+  version "0.8.1"
+  sha256 "01e75d1714ca6a4bf564f12ace7297dd9148d35659c1463f2ef11897af6a453a"
 
   url "https://static.aifun.kapokcloud.com/v#{version}/AiFun_#{version}_macos.dmg",
       verified: "static.aifun.kapokcloud.com/"
