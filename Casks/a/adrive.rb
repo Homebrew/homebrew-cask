@@ -1,8 +1,11 @@
 cask "adrive" do
-  version "4.12.0"
-  sha256 "c6265bce6b6e28568359e09e0d069795364e9f42e15fdc4a7d8b8e437991c917"
+  arch arm: "-arm64"
 
-  url "https://cdn.aliyundrive.net/downloads/apps/desktop/aDrive-#{version}.dmg",
+  version "4.12.0"
+  sha256 arm:   "5f8ba554b7603a733e1db63f6adaf457f5dbf951ba1419a57edb40a54abd9844",
+         intel: "c6265bce6b6e28568359e09e0d069795364e9f42e15fdc4a7d8b8e437991c917"
+
+  url "https://cdn.aliyundrive.net/downloads/apps/desktop/aDrive-#{version}#{arch}.dmg",
       verified: "cdn.aliyundrive.net/"
   name "Aliyundrive"
   name "阿里云盘"
