@@ -51,15 +51,21 @@ cask "starnet2" do
     EOS
   end
 
-  uninstall delete: [
-    "/usr/local/lib/libc10.dylib",
-    "/usr/local/lib/libopencv_*",
-    "/usr/local/lib/libtorch.dylib",
-    "/usr/local/lib/libtorch_cpu.dylib",
-  ]
+  uninstaller = "#{bin_path}/uninstaller.sh"
+  uninstall_preflight do
+    libs = Dir.children("#{caskroom_path}/#{version}/StarNet2T_MacOS/lib").map { |lib| "/usr/local/lib/#{lib}" }
+    File.write uninstaller, <<~EOS
+      rm #{libs.join(" ")}
+    EOS
+  end
+
+  uninstall script: {
+    executable: uninstaller,
+    sudo:       true,
+  }
 
   # No zap stanza required
-  #
+
   caveats do
     files_in_usr_local
   end
