@@ -16,6 +16,8 @@ cask "heptabase" do
     strategy :github_latest
   end
 
+  auto_updates true
+
   app "Heptabase.app"
 
   zap trash: [
