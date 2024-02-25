@@ -10,7 +10,7 @@ cask "vitalsource-bookshelf" do
 
   livecheck do
     url "https://support.vitalsource.com/hc/en-gb/p/download"
-    regex(/href=["']?[^'" >]*VitalSource[-_.]Bookshelf[-_.](\d+(?:\.\d+)+)\.dmg/i)
+    regex(/href=.*?VitalSource[-_.]Bookshelf[-_.]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   depends_on macos: ">= :mojave"
