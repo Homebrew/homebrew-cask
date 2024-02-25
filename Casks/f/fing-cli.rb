@@ -12,6 +12,8 @@ cask "fing-cli" do
     regex(%r{href=.*?/CLI[._-]macOSX[._-]v?(\d+(?:\.\d+)+)\.zip}i)
   end
 
+  disable! date: "2024-02-25", because: :no_longer_available
+
   pkg "Fing-#{version}-osX.pkg"
 
   uninstall pkgutil: "Fing"
