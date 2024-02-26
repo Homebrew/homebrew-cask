@@ -28,9 +28,9 @@ cask "docker" do
     depends_on macos: :big_sur
   end
   on_monterey :or_newer do
-    version "4.27.2,137060"
-    sha256 arm:   "05df5bafd920f83564766378cf68a974346bba2a5a2beae15015094be1aef8a4",
-           intel: "784ec9535cea22d16405696f4e9fc77dad761f83957dd0a62650245169ae8e4a"
+    version "4.28.0,139021"
+    sha256 arm:   "bbea580cbda59233c620a258e4a27369e04d5068735a087b8e13622d5e69fcd5",
+           intel: "2bd6e03121d608dad89261ca14f6e495fdcca97e36231b43da2d7a762047df9d"
 
     livecheck do
       url "https://desktop.docker.com/mac/main/#{arch}/appcast.xml"
