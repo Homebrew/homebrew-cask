@@ -39,7 +39,17 @@ cask "suspicious-package" do
       skip "Legacy version"
     end
   end
-  on_big_sur :or_newer do
+  on_big_sur do
+    version "4.3.3"
+    sha256 "a262c317ad2d6949e0d0f2bec9524a4a85e0e69d6aec0373cf185892acac1f69"
+
+    url "https://www.mothersruin.com/software/downloads/SuspiciousPackage-#{version}.dmg"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_monterey :or_newer do
     version "4.4,1088"
     sha256 :no_check
 
@@ -57,6 +67,8 @@ cask "suspicious-package" do
   name "Suspicious Package"
   desc "Application for inspecting installer packages"
   homepage "https://www.mothersruin.com/software/SuspiciousPackage/"
+
+  auto_updates true
 
   app "Suspicious Package.app"
   binary "#{appdir}/Suspicious Package.app/Contents/SharedSupport/spkg"
