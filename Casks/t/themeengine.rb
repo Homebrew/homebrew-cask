@@ -10,10 +10,10 @@ cask "themeengine" do
   livecheck do
     url :url
     strategy :git do |tags|
-      tags.map do |tag|
+      tags.filter_map do |tag|
         match = tag.match(/^(\d+(?:\.\d+)*)\((\d+)\)$/i)
         "#{match[1]},#{match[2]}" if match
-      end.compact
+      end
     end
   end
 
