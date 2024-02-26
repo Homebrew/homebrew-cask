@@ -41,7 +41,7 @@ cask "suspicious-package" do
   end
   on_big_sur do
     version "4.3.3"
-    sha256 :no_check
+    sha256 "a262c317ad2d6949e0d0f2bec9524a4a85e0e69d6aec0373cf185892acac1f69"
 
     url "https://www.mothersruin.com/software/downloads/SuspiciousPackage-#{version}.dmg"
 
