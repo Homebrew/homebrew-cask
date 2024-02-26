@@ -11,7 +11,7 @@ cask "ealeksandrov-cd-to" do
     url :url
     regex(/^v?(\d+(?:[._]\d+)+)$/i)
     strategy :git do |tags, regex|
-      tags.map { |tag| tag[regex, 1]&.tr("_", ".") }.compact
+      tags.filter_map { |tag| tag[regex, 1]&.tr("_", ".") }
     end
   end
 
