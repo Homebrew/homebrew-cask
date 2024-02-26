@@ -9,7 +9,7 @@ cask "opal-composer" do
   homepage "https://opalcamera.com/opal-composer"
 
   livecheck do
-    url "https://public-opal-bucket.s3.us-east-2.amazonaws.com/release/appcast.xml"
+    url "https://updates.opal.camera/release/appcast.xml"
     strategy :sparkle
   end
 
