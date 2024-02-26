@@ -1,9 +1,9 @@
 cask "codux" do
   arch arm: "arm64", intel: "x64"
 
-  version "15.20.0"
-  sha256 arm:   "ac0e81b2d834c2105e73c76426aa5d2b96f9a789c44187e5ae891ce014820a0b",
-         intel: "7bb690c3c6abbd57845cee9f7f35450359e5e8d2dc3ce33d882c2fb163848892"
+  version "15.21.0"
+  sha256 arm:   "e742713684a6a7fc02a9355cf76f13e6372efa49b5cfa0622e908b5f5646b132",
+         intel: "fdbb217e49ea429173510f1522e8370e8c53408f1d4e5a69514a3e6a501bb30e"
 
   url "https://github.com/wixplosives/codux-versions/releases/download/#{version}/Codux-#{version}.#{arch}.dmg",
       verified: "github.com/wixplosives/codux-versions/"
