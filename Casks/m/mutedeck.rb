@@ -10,8 +10,8 @@ cask "mutedeck" do
   homepage "https://mutedeck.com/"
 
   livecheck do
-    url "https://mutedeck.canny.io/changelog"
-    regex(/Most\srecent\supdate:\sv(\d+(?:\.\d+)+)/i)
+    url "https://mutedeck.canny.io/api/changelog/feed.rss"
+    regex(/<title>\s*v?(\d+(?:\.\d+)+)[ <"]/i)
   end
 
   depends_on macos: ">= :big_sur"
