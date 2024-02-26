@@ -16,3 +16,5 @@ Additionally, **if adding a new cask**:
 - [ ] `brew audit --cask --new <cask>` worked successfully.
 - [ ] `HOMEBREW_NO_INSTALL_FROM_API=1 brew install --cask <cask>` worked successfully.
 - [ ] `brew uninstall --cask <cask>` worked successfully.
+
+---
