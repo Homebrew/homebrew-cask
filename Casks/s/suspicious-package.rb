@@ -68,8 +68,6 @@ cask "suspicious-package" do
   desc "Application for inspecting installer packages"
   homepage "https://www.mothersruin.com/software/SuspiciousPackage/"
 
-  auto_updates true
-
   app "Suspicious Package.app"
   binary "#{appdir}/Suspicious Package.app/Contents/SharedSupport/spkg"
 
