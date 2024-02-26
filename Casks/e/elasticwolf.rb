@@ -13,5 +13,7 @@ cask "elasticwolf" do
     regex(%r{href=.*?/ElasticWolf[._-]osx[._-]v?(\d+(?:\.\d+)+)\.zip}i)
   end
 
+  disable! date: "2024-02-26", because: :no_longer_available
+
   app "ElasticWolf.app"
 end
