@@ -39,7 +39,17 @@ cask "suspicious-package" do
       skip "Legacy version"
     end
   end
-  on_big_sur :or_newer do
+  on_big_sur do
+    version "4.3.3"
+    sha256 :no_check
+
+    url "https://www.mothersruin.com/software/downloads/SuspiciousPackage-#{version}.dmg"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_monterey :or_newer do
     version "4.4,1088"
     sha256 :no_check
 
