@@ -4,7 +4,13 @@ cask "figtree" do
 
   url "https://github.com/rambaut/figtree/releases/download/v#{version}/FigTree.v#{version}.dmg"
   name "FigTree"
+  desc "Phylogenetic tree viewer"
   homepage "https://github.com/rambaut/figtree/"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
 
   app "FigTree v#{version}.app"
   qlplugin "QuickLook Plugin/FigTreeQuickLookPlugin.qlgenerator"
