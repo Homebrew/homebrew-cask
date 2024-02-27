@@ -1,6 +1,6 @@
 cask "ttu-odbc-suite" do
   version "20.00.07.00,2024-02"
-  sha256 "e07e91c9e19bbe252c50cd5d1c285aef05ec4342ae0ab92d9177bc6f92bc7767"
+  sha256 "3e27d0fa7462d899ae2e9097e6ee170f26837aeb0e7fbf766186747490dd70a8"
 
   url "https://downloads.teradata.com/sites/default/files/#{version.csv.second}/TeradataODBC-macosx-brew-#{version.csv.first}.tar"
   name "Teradata Tools and Utilities"
@@ -17,17 +17,13 @@ cask "ttu-odbc-suite" do
 
   depends_on macos: ">= :catalina"
 
-  installer script: {
-    executable: "silent-install.sh",
-    sudo:       true,
-  }
+  pkg "TeradataODBC#{version.csv.first}.pkg"
 
-  uninstall script:  {
-              executable: "silent-uninstall.sh",
-              args:       ["ODBC"],
-              sudo:       true,
-            },
-            pkgutil: "com.Teradata.*2000.pkg.ttuuninstaller"
+  uninstall pkgutil: "com.Teradata.*2000.pkg.ttuuninstaller"
 
   zap trash: "~/Library/Saved Application State/com.teradata.TTUListProducts.savedState"
+
+  caveats do
+    license "https://downloads.teradata.com/download/license/download-agreement-teradata-tools-utilities"
+  end
 end
