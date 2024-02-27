@@ -22,7 +22,7 @@ cask "ttu-odbc-suite" do
   uninstall pkgutil: [
     "com.Teradata.teradataToolsAndUtilities2000.pkg.odbc",
     "com.Teradata.teradataToolsAndUtilities2000.pkg.ttulistproducts",
-    "com.Teradata.teradataToolsAndUtilities2000.pkg.ttuuninstaller"
+    "com.Teradata.teradataToolsAndUtilities2000.pkg.ttuuninstaller",
   ]
 
   zap trash: "~/Library/Saved Application State/com.teradata.TTUListProducts.savedState"
