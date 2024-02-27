@@ -1,6 +1,6 @@
 cask "fixkey" do
-  version "1.0.6"
-  sha256 "d79594fc7cbe268c55e92b8de0b22b864dae6079f4b6accf61f50f246dd6ce43"
+  version "1.1.2"
+  sha256 "7c99b5ca462be9adc1c469598b86a764e778d05d841faf30a39bd603c2cc005f"
 
   url "https://fixkey.download/fixkey%20#{version}.dmg",
       verified: "fixkey.download/"
