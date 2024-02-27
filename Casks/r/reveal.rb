@@ -1,6 +1,6 @@
 cask "reveal" do
-  version "45"
-  sha256 "fa7cab718a852c3f40439c9a7750593cf075c3db310535807164cdc0df0ba3b5"
+  version "46"
+  sha256 "a7f6679438d6afd74db75a1cb1aeaef428905ce573bfa746ce856b8fa0f1a67a"
 
   url "https://download.revealapp.com/Reveal.app-#{version}.zip"
   name "Reveal"
