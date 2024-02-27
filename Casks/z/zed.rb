@@ -23,6 +23,7 @@ cask "zed" do
     "~/.config/Zed",
     "~/Library/Application Support/Zed",
     "~/Library/Logs/Zed",
+    "~/Library/Preferences/dev.zed.Zed.plist",
     "~/Library/Saved Application State/dev.zed.Zed.savedState",
   ]
 end
