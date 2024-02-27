@@ -8,6 +8,11 @@ cask "mindmac" do
   desc "ChatGPT client"
   homepage "https://mindmac.app/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :ventura"
 
   app "MindMac.app"
