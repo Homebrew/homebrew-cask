@@ -19,7 +19,11 @@ cask "shortcat" do
 
   zap trash: [
     "~/Library/Application Support/Shortcat",
+    "~/Library/Caches/com.sproutcube.Shortcat",
+    "~/Library/Caches/SentryCrash/Shortcat",
     "~/Library/Cookies/com.sproutcube.Shortcat.binarycookies",
+    "~/Library/HTTPStorages/com.sproutcube.Shortcat",
     "~/Library/Preferences/com.sproutcube.Shortcat.plist",
+    "~/Library/WebKit/com.sproutcube.Shortcat",
   ]
 end
