@@ -57,9 +57,9 @@ cask "transcribe" do
     ]
   end
   on_ventura :or_newer do
-    version "9.40.0"
-    sha256 arm:   "030510d74aea878a17f669bcee7726704b3376315baba4d7eb48e191ca1174b6",
-           intel: "b1cc25eba8129fa87d1fa15f0f9640cb60438f5ad49e73abe921677668310878"
+    version "9.40.1"
+    sha256 arm:   "861cf4637ae854a2b199d0f9f7d41ced5726a523671a6f5aa8a80108b732b8cc",
+           intel: "70fd989b831ee5e836cdb0b93804e2fe764e4dc4ced516c67d01c9a9dbf6ba07"
 
     url "https://www.seventhstring.com/xscribe/downmo/transcribe-#{arch}-#{version}.dmg"
 
