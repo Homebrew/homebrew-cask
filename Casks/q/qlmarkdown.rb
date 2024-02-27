@@ -17,6 +17,7 @@ cask "qlmarkdown" do
     "~/Library/Application Scripts/org.sbarex.QLMarkdown.QLExtension",
     "~/Library/Containers/org.sbarex.QLMarkdown",
     "~/Library/Containers/org.sbarex.QLMarkdown.QLExtension",
+    "~/Library/Group Containers/org.sbarex.qlmarkdown",
     "~/Library/Preferences/org.sbarex.QLMarkdown.plist",
     "~/Library/QuickLook/QLMarkdown.qlgenerator",
   ]
