@@ -15,6 +15,8 @@ cask "wow" do
     end
   end
 
+  disable! date: "2024-02-27", because: :unmaintained
+
   app "WOW.app"
 
   zap trash: [
