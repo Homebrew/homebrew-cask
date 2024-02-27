@@ -18,6 +18,7 @@ cask "menuwhere" do
 
   zap trash: [
     "~/Library/Caches/com.manytricks.Menuwhere",
+    "~/Library/HTTPStorages/com.manytricks.Menuwhere",
     "~/Library/Preferences/com.manytricks.Menuwhere.plist",
   ]
 end
