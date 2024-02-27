@@ -9,7 +9,8 @@ cask "vitalsource-bookshelf" do
   homepage "https://www.vitalsource.com/bookshelf-features"
 
   livecheck do
-    skip "No version information available"
+    url "https://support.vitalsource.com/hc/en-gb/p/download"
+    regex(/href=.*?VitalSource[-_.]Bookshelf[-_.]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   depends_on macos: ">= :mojave"
