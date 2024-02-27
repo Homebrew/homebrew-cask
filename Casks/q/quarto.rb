@@ -19,5 +19,9 @@ cask "quarto" do
 
   uninstall pkgutil: "org.rstudio.quarto"
 
-  zap trash: "~/Library/Caches/quarto"
+  zap trash: [
+    "~/Library/Application Support/quarto",
+    "~/Library/Application Support/quarto-writer",
+    "~/Library/Caches/quarto",
+  ]
 end
