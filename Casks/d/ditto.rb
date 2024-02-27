@@ -1,6 +1,6 @@
 cask "ditto" do
-  version "1.11.2"
-  sha256 "4cfbd94d54e691f0f8132b4dd7eb45078c7f83f78d49f0ba5444a12eeb04cd9d"
+  version "1.11.3"
+  sha256 "09a4b70745538b0465dc8297656e255bd974e1f945eff34c219fa1ec1e08b04a"
 
   url "https://download.airsquirrels.com/Ditto/App/Mac/Ditto-#{version}.dmg"
   name "Ditto"
