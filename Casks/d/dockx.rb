@@ -1,6 +1,6 @@
 cask "dockx" do
-  version "1.1.0"
-  sha256 "0591ca48abc970e397a58bfe4ad8d2fc37f193d148389a7e7410c090a8e12fa4"
+  version "1.1.2"
+  sha256 "b7b9375acf77da916d7443218b13616f9a325ad18913dbfcca7c5ff7e9f8321a"
 
   url "https://d-1251679148.file.myqcloud.com/download/DockX-#{version.csv.first}.dmg",
       verified: "d-1251679148.file.myqcloud.com/download/"
