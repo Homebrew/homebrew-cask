@@ -1,9 +1,9 @@
 cask "tinkerwell" do
   arch arm: "-arm64"
 
-  version "4.8.0"
-  sha256 arm:   "f2e4f5d9048f8d659c1463de5f0cdbbebc871c9ca2700ff4261eb432fb35ba55",
-         intel: "20b971db300eb550e51d94543257db5d4005ae0a3800961ac98fc84d138038cd"
+  version "4.9.0"
+  sha256 arm:   "9571685b7b5a294daa3e6543435eb91baef977f9986cc7e20e7974bb276b49c1",
+         intel: "420928002dc26d0831f18b950e59880603db5bb23f52c9b822ec292a3855cb8b"
 
   url "https://download.tinkerwell.app/tinkerwell/Tinkerwell-#{version}#{arch}.dmg"
   name "Tinkerwell"
