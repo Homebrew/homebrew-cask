@@ -1,5 +1,5 @@
 cask "plus42-decimal" do
-  version "1.1.4b"
+  version "1.1.4d"
   sha256 :no_check
 
   url "https://thomasokken.com/plus42/download/Plus42Mac.zip"
