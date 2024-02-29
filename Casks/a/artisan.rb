@@ -1,6 +1,6 @@
 cask "artisan" do
-  version "2.10.0"
-  sha256 "f2e7160bc1428497d268c02f5996a8c36e34d47bc313fbee86f98dfed742733d"
+  version "2.10.2"
+  sha256 "090d53defc345268b053a2b24f4567e6c69ce1f07468d413d141be1a29464dee"
 
   url "https://github.com/artisan-roaster-scope/artisan/releases/download/v#{version}/artisan-mac-#{version}.dmg",
       verified: "github.com/artisan-roaster-scope/artisan/"
