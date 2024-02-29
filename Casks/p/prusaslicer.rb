@@ -1,6 +1,6 @@
 cask "prusaslicer" do
-  version "2.7.1,202312121432"
-  sha256 "208f6669d44b8bb19089eea54b67ac056eb13469fd008d6fa0475e18ba0d857f"
+  version "2.7.2,202402291330"
+  sha256 "70c6225c42e7ec0ba104375a986e8167fcdf2ee074dec648b8daf4fc467ff279"
 
   url "https://github.com/prusa3d/PrusaSlicer/releases/download/version_#{version.csv.first}/PrusaSlicer-#{version.csv.first}+MacOS-universal-#{version.csv.second}.dmg",
       verified: "github.com/prusa3d/PrusaSlicer/"
