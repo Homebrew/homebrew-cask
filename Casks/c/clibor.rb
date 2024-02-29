@@ -15,7 +15,7 @@ cask "clibor" do
 
   livecheck do
     url "https://chigusa-web.com/clibor-for-mac-en/download/"
-    regex(/Clibor\.dmg\s–\sv?(\d+(?:\.\d+)+)/i)
+    regex(/Clibor\.dmg\s*(?:[–—-]|&[a-z]+;)?\s*v?(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
