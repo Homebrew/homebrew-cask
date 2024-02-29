@@ -1,6 +1,6 @@
 cask "gluemotion" do
-  version "2.2.0"
-  sha256 "a8c8e9b6989f44807952a41b9f627b10b1c0409112b7f9c3629dc2a6d36c3d99"
+  version "2.2.2"
+  sha256 "cd9fe2194cef815948d3fabfcb27a6a8e532b8658eeadc820a76ae137c16b873"
 
   url "https://neededapps.com/appcasts/gluemotion/versions/#{version}"
   name "GlueMotion"
