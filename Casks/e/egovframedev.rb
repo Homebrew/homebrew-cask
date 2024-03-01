@@ -1,9 +1,9 @@
 cask "egovframedev" do
   arch arm: "AArch64", intel: "x86_64"
 
-  version "4.1.0"
-  sha256 arm:   "7e7ece1b05a6e4ccfca522a44f4a4e0230a164f8542df0e78c0181efc039590e",
-         intel: "b3c652165914f7ccc05eae9e4730954a0a2cf0d361331a14f2c291fa51510652"
+  version "4.2.0"
+  sha256 arm:   "b6c5a3eae903cbc4bdffa490a97853330329a4215af8ae9d5cb8d45d3cbb34c6",
+         intel: "93e2cd8ba2cca542509601a1627fe7a468fadacd83aa9f667c014259afdbeaca"
 
   url "https://maven.egovframe.go.kr/publist/HDD1/public/eGovFrameDev-#{version}-Mac-#{arch}.dmg"
   name "eGovFrameDev"
@@ -12,12 +12,22 @@ cask "egovframedev" do
 
   livecheck do
     url "https://www.egovframe.go.kr/home/sub.do?menuNo=39"
-    regex(/개발환경\sv?(\d+(?:\.\d+)+)\s플러그인/i)
+    regex(/개발자용\s개발환경\s(\d+(?:\.\d+)+).*/i)
   end
 
   depends_on macos: ">= :big_sur"
 
   app "eGovFrameDev-#{version}-Mac-#{arch}.app"
+
+  postflight do
+    icon_path = "#{Caskroom.path}/egovframedev@#{version}/#{version}/app.icns"
+    app_path = "/Applications/eGovFrameDev-#{version}-Mac-#{arch}.app"
+    system_command "mkdir", args: ["-p", File.dirname(icon_path)]
+    system_command "curl", args: ["-s", "-o", icon_path, "https://maven.egovframe.go.kr/publist/HDD1/public/app.icns"]
+    system_command "xattr", args: ["-d", "com.apple.quarantine", app_path]
+    system_command "cp", args: [icon_path, "#{app_path}/Contents/Resources/Eclipse.icns"]
+    system_command "touch", args: [app_path]
+  end
 
   zap trash: [
     "~/Library/Preferences/org.eclipse.platform.ide.plist",
