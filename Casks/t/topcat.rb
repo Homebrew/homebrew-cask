@@ -1,5 +1,5 @@
 cask "topcat" do
-  version "4.9"
+  version "4.9-1"
   sha256 :no_check
 
   url "https://www.star.bristol.ac.uk/mbt/topcat/topcat-all.dmg"
