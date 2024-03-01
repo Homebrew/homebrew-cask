@@ -11,8 +11,7 @@ cask "wifiman-desktop" do
   homepage "https://wifiman.com/"
 
   livecheck do
-    url :url
-    strategy :sparkle
+    skip "No version information available"
   end
 
   pkg "wifiman-desktop-#{version}-mac-#{arch}.pkg"
