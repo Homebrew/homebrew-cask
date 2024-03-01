@@ -17,4 +17,6 @@ cask "wifiman-desktop" do
   pkg "wifiman-desktop-#{version}-mac-#{arch}.pkg"
 
   uninstall pkgutil: "wifiman-desktop-#{version}-mac-#{arch}.pkg"
+
+  zap trash: "~/Library/Application Support/wifiman-desktop"
 end
