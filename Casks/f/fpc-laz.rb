@@ -25,4 +25,10 @@ cask "fpc-laz" do
     "org.freepascal.freePascalCompiler320.fpcinst386",
     "org.freepascal.freePascalCompiler322.fpcinstintelarm64",
   ]
+
+  # No zap stanza required
+
+  caveats do
+    files_in_usr_local
+  end
 end
