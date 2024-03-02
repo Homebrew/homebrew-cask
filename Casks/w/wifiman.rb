@@ -17,7 +17,8 @@ cask "wifiman" do
   pkg "wifiman-desktop-#{version}-mac-#{arch}.pkg"
 
   uninstall launchctl: "wifiman-desktop",
-            pkgutil:   "com.ui.wifiman-desktop"
+            pkgutil:   "com.ui.wifiman-desktop",
+            delete:    "/Applications/WiFiman.app"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.ui.wifiman-desktop.sfl*",
