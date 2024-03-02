@@ -1,4 +1,4 @@
-cask "wifiman-desktop" do
+cask "wifiman" do
   arch arm: "arm64", intel: "x64"
 
   version "0.3.0"
@@ -16,7 +16,14 @@ cask "wifiman-desktop" do
 
   pkg "wifiman-desktop-#{version}-mac-#{arch}.pkg"
 
-  uninstall pkgutil: "wifiman-desktop-#{version}-mac-#{arch}.pkg"
+  uninstall launchctl: "com.ui.wifiman-desktop",
+            pkgutil:   "wifiman-desktop"
 
-  zap trash: "~/Library/Application Support/wifiman-desktop"
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.ui.wifiman-desktop.sfl*",
+    "~/Library/Application Support/wifiman-desktop",
+    "~/Library/Logs/wifiman-desktop",
+    "~/Library/Preferences/com.ui.wifiman-desktop.plist",
+    "~/Library/Saved Application State/com.ui.wifiman-desktop.savedState",
+  ]
 end
