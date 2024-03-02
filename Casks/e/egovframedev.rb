@@ -17,9 +17,7 @@ cask "egovframedev" do
 
   depends_on macos: ">= :big_sur"
 
-  app "eGovFrameDev-#{version}-Mac-#{arch}#{on_intel do
-                                              "_dpit"
-                                            end}.app"
+  app on_arch_conditional arm: "eGovFrameDev-#{version}-Mac-#{arch}.app", intel: "eGovFrameDev-#{version}-Mac-#{arch}_dpit.app"
 
   zap trash: [
     "~/Library/Preferences/org.eclipse.platform.ide.plist",
