@@ -1,5 +1,6 @@
 cask "egovframedev" do
   arch arm: "AArch64", intel: "x86_64"
+  app_suffix = on_arch_conditional intel: "_dpit"
 
   version "4.2.0"
   sha256 arm:   "b6c5a3eae903cbc4bdffa490a97853330329a4215af8ae9d5cb8d45d3cbb34c6",
@@ -17,7 +18,7 @@ cask "egovframedev" do
 
   depends_on macos: ">= :big_sur"
 
-  app on_arch_conditional arm: "eGovFrameDev-#{version}-Mac-#{arch}.app", intel: "eGovFrameDev-#{version}-Mac-#{arch}_dpit.app"
+  app "eGovFrameDev-#{version}-Mac-#{arch}#{app_suffix}.app"
 
   zap trash: [
     "~/Library/Preferences/org.eclipse.platform.ide.plist",
