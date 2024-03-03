@@ -1,6 +1,6 @@
 cask "kodi" do
-  version "20.4-Nexus"
-  sha256 "535d45adeea2827e587fff501453d87bf427d325f8d5c549d73ce93873ba464c"
+  version "20.5-Nexus"
+  sha256 "fa574ee720b8bef991516bb4648e67aa63f94a6af5b19adaffad4a5e7931ae5a"
 
   url "https://mirrors.kodi.tv/releases/osx/x86_64/kodi-#{version}-x86_64.dmg"
   name "Kodi"
