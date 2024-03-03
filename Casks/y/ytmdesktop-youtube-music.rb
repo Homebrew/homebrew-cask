@@ -6,8 +6,8 @@ cask "ytmdesktop-youtube-music" do
     sha256 "c7a7734d295eaa3a8a7d42db2c2013618fd3fc06e9600d1c1485e1eec153b0cd"
   end
   on_intel do
-    version "2.0.1"
-    sha256 "ed17891bd7182b8b1ae3a0adc5239eac8c3fbf5ec207512d0928e234433030b2"
+    version "2.0.2"
+    sha256 "712337e1cc38dadd26162c2380cdcb956f8534c3f3c1b794f799fe935c1054f5"
   end
 
   url "https://github.com/ytmdesktop/ytmdesktop/releases/download/v#{version}/YouTube-Music-Desktop-App-darwin-#{arch}-#{version}.zip",
