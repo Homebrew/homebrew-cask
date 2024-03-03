@@ -6,7 +6,7 @@ cask "ava" do
       verified: "s3.amazonaws.com/www.avapls.com/"
   name "Ava"
   desc "Run language models locally on your computer"
-  homepage "https://www.avapls.com/"
+  homepage "https://avapls.com/"
 
   livecheck do
     url :homepage
