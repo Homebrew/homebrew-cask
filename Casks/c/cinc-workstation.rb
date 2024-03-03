@@ -5,9 +5,9 @@ cask "cinc-workstation" do
   sha256 arm:   "8be0c1b792302947adcbcf843a2710a331e0a52732455a7012fb99f10aee7569",
          intel: "088dc9534e97cc191bd1eebca9185dbcb1d2b181ea39fdbbc18a2232ba080c46"
 
-  url "http://downloads.cinc.sh/files/stable/cinc-workstation/#{version}/mac_os_x/11/cinc-workstation-#{version}-1.#{arch}.dmg"
+  url "https://downloads.cinc.sh/files/stable/cinc-workstation/#{version}/mac_os_x/11/cinc-workstation-#{version}-1.#{arch}.dmg"
   name "Cinc Workstation"
-  desc "Free-as-in-Beer all-in-one installer for Chef infrastructure management tools"
+  desc "Installer for Chef infrastructure management tools"
   homepage "https://cinc.sh/start/workstation/"
 
   livecheck do
