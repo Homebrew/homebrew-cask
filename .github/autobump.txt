@@ -106,7 +106,6 @@ plex-htpc
 plex-media-server
 postman
 purei-play
-puzzles
 qownnotes
 qqlive
 quarto
