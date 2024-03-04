@@ -1,5 +1,5 @@
 cask "navicat-premium-essentials" do
-  version "16.3.6"
+  version "16.3.7"
   sha256 :no_check
 
   url "https://dn.navicat.com/download/navicatess#{version.major_minor.no_dots}_premium_en.dmg"
