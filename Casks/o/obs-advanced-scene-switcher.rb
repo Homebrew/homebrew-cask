@@ -1,11 +1,8 @@
 cask "obs-advanced-scene-switcher" do
-  arch arm: "arm64", intel: "x86_64"
+  version "1.25.1"
+  sha256 "0a7584d43115d1ff3cd1c2fb626b3e42ba7d3b5a76a3ead78a10a70f421fe395"
 
-  version "1.24.2"
-  sha256 arm:   "34a2516e7b279719fb536e792c145bb1445c357df832bb14d942100566875f5f",
-         intel: "57b38069018cf4a16ba8a27a98410d1ecfbea5fe6177b136785647fdf5d8e25a"
-
-  url "https://github.com/WarmUpTill/SceneSwitcher/releases/download/#{version}/advanced-scene-switcher-macos-#{arch}.pkg",
+  url "https://github.com/WarmUpTill/SceneSwitcher/releases/download/#{version}/advanced-scene-switcher-#{version}-macos-universal.pkg",
       verified: "github.com/WarmUpTill/SceneSwitcher/"
   name "OBS Advanced Scene Switcher"
   desc "Automated scene switcher for OBS Studio"
@@ -13,9 +10,12 @@ cask "obs-advanced-scene-switcher" do
 
   depends_on cask: "obs"
 
-  pkg "advanced-scene-switcher-macos-#{arch}.pkg"
+  pkg "advanced-scene-switcher-#{version}-macos-universal.pkg"
 
-  uninstall pkgutil: "com.warmuptill.advanced-scene-switcher",
+  uninstall pkgutil: [
+              "'com.warmuptill.advanced-scene-switcher'",
+              "com.warmuptill.advanced-scene-switcher",
+            ],
             delete:  "/Library/Application Support/obs-studio/plugins/advanced-scene-switcher.plugin",
             rmdir:   "/Library/Application Support/obs-studio/plugins"
 
