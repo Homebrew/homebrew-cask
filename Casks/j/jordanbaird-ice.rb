@@ -1,6 +1,6 @@
 cask "jordanbaird-ice" do
-  version "0.6.1"
-  sha256 "b0d68e6fb47ef7be58d3bfd695d76fbb2118da89e2fcb8d1199b1f2759b4d057"
+  version "0.6.2"
+  sha256 "fae280948471935fdfd90962d3c5377628c0c59f46d737cf26df4cc89326248d"
 
   url "https://github.com/jordanbaird/Ice/releases/download/#{version}/Ice.zip"
   name "Ice"
