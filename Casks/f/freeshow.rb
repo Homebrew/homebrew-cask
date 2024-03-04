@@ -1,6 +1,6 @@
 cask "freeshow" do
-  version "1.1.3"
-  sha256 "75f66b670bfdefe25e94d414b9bf300dd5d80622615dde13198515323ce4ea2e"
+  version "1.1.4"
+  sha256 "d4e29948f892044869fa971a3143ecd7ed8981a0946cedac8624cf6222734e36"
 
   url "https://github.com/ChurchApps/FreeShow/releases/download/v#{version}/FreeShow-#{version}.dmg",
       verified: "github.com/ChurchApps/"

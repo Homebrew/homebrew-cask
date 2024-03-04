@@ -1,5 +1,6 @@
 cask "egovframedev" do
   arch arm: "AArch64", intel: "x86_64"
+  app_suffix = on_arch_conditional intel: "_dpit"
 
   version "4.2.0"
   sha256 arm:   "b6c5a3eae903cbc4bdffa490a97853330329a4215af8ae9d5cb8d45d3cbb34c6",
@@ -12,12 +13,12 @@ cask "egovframedev" do
 
   livecheck do
     url "https://www.egovframe.go.kr/home/sub.do?menuNo=39"
-    regex(/개발환경\sv?(\d+(?:\.\d+)+)\s플러그인/i)
+    regex(/개발자용\s개발환경\s(\d+(?:\.\d+)+).*/i)
   end
 
   depends_on macos: ">= :big_sur"
 
-  app "eGovFrameDev-#{version}-Mac-#{arch}.app"
+  app "eGovFrameDev-#{version}-Mac-#{arch}#{app_suffix}.app"
 
   zap trash: [
     "~/Library/Preferences/org.eclipse.platform.ide.plist",

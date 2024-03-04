@@ -3,6 +3,8 @@
 alfred
 alt-tab
 altair-graphql-client
+amie
+apidog
 apifox
 appcleaner
 aqua
@@ -54,6 +56,7 @@ eloston-chromium
 figma
 firefox
 flipper
+floorp
 flutter
 fmail2
 forkgram-telegram
@@ -61,6 +64,7 @@ fossa
 foxglove-studio
 fxfactory
 gather
+gitbutler
 glyphs
 google-chrome
 google-cloud-sdk
@@ -82,14 +86,14 @@ librewolf
 logseq
 loom
 macupdater
-megazeux
 melodics
 metasploit
 microsoft-edge
 microsoft-openjdk
 milanote
+mindmac
 multiapp
-netron
+ollama
 openlens
 openshift-client
 opera
@@ -111,6 +115,7 @@ reader
 reaper
 rewind
 rive
+roam
 segger-jlink
 setapp
 sf
@@ -150,5 +155,6 @@ webull
 whatsapp
 workflowy
 zed
+znote
 zoom
 zoom-for-it-admins

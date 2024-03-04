@@ -1,6 +1,6 @@
 cask "lookin" do
-  version "1.0.6"
-  sha256 "ccde0b09cbffc955a5beb33e285b530ac27ba20291424110be0faec2d21e98ee"
+  version "1.0.7"
+  sha256 "45e0f5b0714e0ff41edcde8e0d2a95a174e5ffd1d4e3f22138446df3bb6013a5"
 
   url "https://cdn.lookin.work/release/Lookin-#{version.dots_to_hyphens}.zip"
   name "Lookin"

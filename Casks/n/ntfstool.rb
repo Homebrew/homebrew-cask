@@ -1,19 +1,15 @@
 cask "ntfstool" do
-  version "2.3.2"
-  sha256 "4c8179aebdd171bf1b6ef2d58a4cf89c5f92cab17be68abc4ddfa1ee3b004112"
+  version "3.5.1"
+  sha256 "3d910b02c9267d9d48aa031f9ea1d1c39af3171d9f012b1fa421e6af382a58ad"
 
-  url "https://github.com/ntfstool/ntfstool/releases/download/#{version}/NTFSTool-#{version}.dmg"
+  url "https://github.com/ntfstool/ntfstool/releases/download/#{version}/ntfstool#{version}.zip"
   name "NTFSTool"
   desc "Utility that provides NTFS read and write support"
   homepage "https://github.com/ntfstool/ntfstool"
 
   auto_updates true
-  depends_on cask: "macfuse"
 
-  app "NTFSTool.app"
+  app "Ntfstool.app"
 
-  zap trash: [
-    "~/Library/Logs/NTFSTool",
-    "~/Library/Preferences/com.ntfstool.aile.plist",
-  ]
+  zap trash: "~/.ntfstool"
 end
