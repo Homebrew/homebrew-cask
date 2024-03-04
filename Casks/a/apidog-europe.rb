@@ -1,15 +1,18 @@
 cask "apidog-europe" do
-  # Do not merge this PR. This is a testing PR.
-  version "2.5.10"
-  sha256 "7b0bc3345d2ef91e793690f802453f1d8973da59fd070873b7aa79fec3a1d23f"
+  arch arm: "-macOS-arm64"
+  livecheck_folder = on_arch_conditional arm: "-arm64"
 
-  url "https://assets.eu.apidog.com/download/#{version}/Apidog%20Europe-#{version}.dmg"
+  version "2.5.9"
+  sha256 arm:   "5c3e2c514b4d6c79b3f76a91c3b07f74eca931cf189ba201d95d3c52384e2150",
+         intel: "2ad46c2bbb39c73d2ac05ffbaf99f45c5f755bac4daa7a337ed005d7052f334b"
+
+  url "https://assets.eu.apidog.com/download/#{version}/Apidog%20Europe#{arch}-#{version}.dmg"
   name "Apidog Europe"
   desc "API development platform hosted in Europe"
   homepage "https://apidog.com/"
 
   livecheck do
-    url "https://api.eu.apidog.com/api/v1/configs/client-updates/latest/mac/latest-mac.yml"
+    url "https://api.eu.apidog.com/api/v1/configs/client-updates/latest/mac#{livecheck_folder}/latest-mac.yml"
     strategy :electron_builder
   end
 
