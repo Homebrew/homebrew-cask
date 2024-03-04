@@ -81,6 +81,15 @@ cask "docker" do
   binary "Docker.app/Contents/Resources/etc/docker.fish-completion",
          target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/docker.fish"
 
+  on_monterey :or_newer do
+    binary "Docker.app/Contents/Resources/etc/docker-compose.bash-completion",
+           target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/docker-compose"
+    binary "Docker.app/Contents/Resources/etc/docker-compose.zsh-completion",
+           target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_docker-compose"
+    binary "Docker.app/Contents/Resources/etc/docker-compose.fish-completion",
+           target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/docker-compose.fish"
+  end
+
   postflight do
     kubectl_target = Pathname("/usr/local/bin/kubectl")
 
