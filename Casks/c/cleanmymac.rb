@@ -1,6 +1,6 @@
 cask "cleanmymac" do
-  version "4.15.0"
-  sha256 "9711718b7130152c7fcfde98cb274c4d420db9720dbcca0e32f5a2af0bbecebe"
+  version "4.15.1"
+  sha256 "2a19514c8cddb11d1182b4a8949435482bc7134a36d8ac9135a1e231e9afc70e"
 
   url "https://dl.devmate.com/com.macpaw.CleanMyMac#{version.major}/CleanMyMacX.dmg",
       verified: "dl.devmate.com/"
