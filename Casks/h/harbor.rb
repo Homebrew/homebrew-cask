@@ -7,5 +7,7 @@ cask "harbor" do
   desc "Tool to monitor Codeship builds from the status bar"
   homepage "https://github.com/madeintandem/harbor"
 
+  deprecate! date: "2024-03-05", because: :unmaintained
+
   app "Harbor.app"
 end
