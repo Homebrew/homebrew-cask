@@ -16,24 +16,7 @@ cask "ytmdesktop-youtube-music" do
   desc "YouTube music client"
   homepage "https://ytmdesktop.app/"
 
-  # Not every GitHub release provides a file for both architectures, so we check
-  # multiple recent releases instead of only the "latest" release.
-  livecheck do
-    url :url
-    regex(/Desktop[._-]App[._-]darwin[._-](?:#{arch})[._-]v?(\d+(?:\.\d+)+)\.(?:dmg|pkg|zip)$/i)
-    strategy :github_releases do |json, regex|
-      json.map do |release|
-        next if release["draft"] || release["prerelease"]
-
-        release["assets"]&.map do |asset|
-          match = asset["name"]&.match(regex)
-          next if match.blank?
-
-          match[1]
-        end
-      end.flatten
-    end
-  end
+  disable! date: "2024-03-06", because: :no_longer_available
 
   depends_on macos: ">= :catalina"
 
