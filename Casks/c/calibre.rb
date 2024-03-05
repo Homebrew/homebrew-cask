@@ -49,7 +49,7 @@ cask "calibre" do
     end
   end
 
-  url "https://github.com/kovidgoyal/calibre/releases/download/v#{version}/calibre-#{version}.dmg", verified: "github.com/kovidgoyal/calibre/"
+  url "https://download.calibre-ebook.com/#{version}/calibre-#{version}.dmg"
   name "calibre"
   desc "E-books management software"
   homepage "https://calibre-ebook.com/"
