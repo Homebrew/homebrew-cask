@@ -92,7 +92,7 @@ jobs:
 
       - name: Clean up CI machine
         run: |
-          if ! brew uninstall --cask julia && ! rm -r /Applications/Julia-*.app; then
+          if [ "${{ matrix.runner }}" == 'macos-12' ] && ! brew uninstall --cask julia && ! rm -r /Applications/Julia-*.app; then
             echo '::warning::Removing Julia is no longer necessary.'
           fi
 
