@@ -1,10 +1,9 @@
 cask "egovframedev" do
   arch arm: "AArch64", intel: "x86_64"
-  app_suffix = on_arch_conditional intel: "_dpit"
 
   version "4.2.0"
   sha256 arm:   "b6c5a3eae903cbc4bdffa490a97853330329a4215af8ae9d5cb8d45d3cbb34c6",
-         intel: "93e2cd8ba2cca542509601a1627fe7a468fadacd83aa9f667c014259afdbeaca"
+         intel: "40df38a8eb73df152b8425930e321f1e05b859143554adbbb03465dd904b4f0e"
 
   url "https://maven.egovframe.go.kr/publist/HDD1/public/eGovFrameDev-#{version}-Mac-#{arch}.dmg"
   name "eGovFrameDev"
@@ -18,7 +17,7 @@ cask "egovframedev" do
 
   depends_on macos: ">= :big_sur"
 
-  app "eGovFrameDev-#{version}-Mac-#{arch}#{app_suffix}.app"
+  app "eGovFrameDev-#{version}-Mac-#{arch}.app"
 
   zap trash: [
     "~/Library/Preferences/org.eclipse.platform.ide.plist",
