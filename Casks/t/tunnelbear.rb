@@ -9,7 +9,7 @@ cask "tunnelbear" do
     depends_on macos: ">= :sierra"
   end
   on_big_sur :or_newer do
-    version "5.2.2"
+    version "5.2.3"
     sha256 :no_check
 
     url "https://s3.amazonaws.com/tunnelbear/downloads/mac/TunnelBear.zip",
