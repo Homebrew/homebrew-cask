@@ -1,6 +1,6 @@
 cask "pyzo" do
-  version "4.14.4"
-  sha256 "de99d4f7d0b38d9ad675ac0c5c75e9447c0ced57d239c08fa2873d78d001eba7"
+  version "4.15.0"
+  sha256 "e9c25aae926096b3c1d6267368ee39951021c074a96ab937a46d85d6ad5b21ed"
 
   url "https://github.com/pyzo/pyzo/releases/download/v#{version}/pyzo-#{version}-macos_x86_64.dmg",
       verified: "github.com/pyzo/pyzo/"
