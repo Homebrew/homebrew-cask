@@ -1,6 +1,6 @@
 cask "ableton-live-suite" do
-  version "11.3.21"
-  sha256 "d4584282c6e0bbd27dfc5b2a1c4fe11508b2507532cb7acd4528c6ddc9a6b490"
+  version "12.0"
+  sha256 "c1e24371e234d6bc826a7317761688ed7196824103a1246aa7d7ca4b4247ec6a"
 
   url "https://cdn-downloads.ableton.com/channels/#{version}/ableton_live_suite_#{version}_universal.dmg"
   name "Ableton Live Suite"
@@ -13,7 +13,7 @@ cask "ableton-live-suite" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :big_sur"
 
   app "Ableton Live #{version.major} Suite.app"
 
