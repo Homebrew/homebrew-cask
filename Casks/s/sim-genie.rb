@@ -1,6 +1,6 @@
 cask "sim-genie" do
-  version "2022.3,292"
-  sha256 "8454d4a869728cc19bb14e21be685f51ac23ee3967d037ecb9bd3504853070d7"
+  version "2024.1,306"
+  sha256 "ca52bd4f238d0f8bd474f6a1634d44c486bdb45ac12a5c096719b6175558bf0d"
 
   url "https://d1b3av25dd6jdq.cloudfront.net/releases/macos/SimGenie.#{version.csv.first}.#{version.csv.second}.zip",
       verified: "d1b3av25dd6jdq.cloudfront.net/"
