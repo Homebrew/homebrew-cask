@@ -50,4 +50,8 @@ cask "autodesk-fusion" do
     "~/Library/Saved Application State/com.Autodesk.streamer.savedState",
     "~/Library/WebKit/com.autodesk.AdskIdentityManager",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
