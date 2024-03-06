@@ -7,6 +7,11 @@ cask "coolterm" do
   desc "Serial port terminal"
   homepage "https://freeware.the-meiers.org/"
 
+  livecheck do
+    url "https://freeware.the-meiers.org/previous"
+    regex(/href=.*?CoolTermMac(\d+(?:\.\d+)*)\.dmg/i)
+  end
+
   depends_on macos: ">= :mojave"
 
   app "CoolTerm.app"
