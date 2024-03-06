@@ -7,10 +7,8 @@ cask "keyshot" do
   desc "Real-time 3D rendering"
   homepage "https://www.keyshot.com/"
 
-  livecheck do
-    url "https://www.keyshot.com/direct-downloads/"
-    regex(/href=.*?keyshot[._-]mac64[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
-  end
+  # Download links are walled (no longer publicly available)
+  disable! date: "2024-02-28", because: :no_longer_meets_criteria
 
   depends_on macos: ">= :sierra"
 
