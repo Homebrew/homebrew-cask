@@ -16,13 +16,14 @@ permissions:
 
 jobs:
   update:
-    if: startsWith(github.repository, 'Homebrew/')
+    if: github.repository_owner == 'Homebrew'
     strategy:
       matrix:
         runner:
           - macos-11
           - macos-12
           - macos-13
+          - macos-14
           - ubuntu-latest
     runs-on: ${{ matrix.runner }}
     steps:
@@ -44,5 +45,4 @@ jobs:
 
       - name: Install Homebrew Gems
         id: gems
-        run: brew install-bundler-gems
-        if: steps.cache.outputs.cache-hit != 'true'
+        run: brew install-bundler-gems --groups=audit,bootsnap,style
