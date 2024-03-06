@@ -180,7 +180,7 @@ module CiMatrix
       cask_content = path.read
 
       runners, multi_os = runners(cask_content: cask_content)
-      runners.product(architectures(cask_content: cask_content)).map do |runner, arch|
+      runners.product(architectures(cask_content: cask_content)).filter_map do |runner, arch|
         native_runner_arch = arch == runner.fetch(:arch)
         # If it's just a single OS test then we can just use the two real arch runners.
         next if !native_runner_arch && !multi_os
