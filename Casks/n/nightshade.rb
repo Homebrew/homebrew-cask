@@ -12,7 +12,7 @@ cask "nightshade" do
     regex(/Nightshade[._-]v?(\d+(?:\.\d+)+)[._-]m1\.dmg/i)
   end
 
-  depends_on arch: :arm64
+  depends_on arch: :arm64 # testing64
 
   app "Nightshade.app"
 
