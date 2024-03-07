@@ -1,18 +1,17 @@
 cask "ibkr" do
-  arch arm: "arm", intel: "x64"
-  os = on_arch_conditional arm: "macos", intel: "macosx"
+  arch arm: "-arm", intel: "x-x64"
 
-  version "0.07.1g"
+  version "0.07.1h"
   sha256 :no_check
 
-  url "https://download2.interactivebrokers.com/installers/ntws/latest-standalone/ntws-latest-standalone-#{os}-#{arch}.dmg"
+  url "https://download2.interactivebrokers.com/installers/ntws/latest-standalone/ntws-latest-standalone-macos#{arch}.dmg"
   name "IBKR Desktop"
   desc "Trading software"
   homepage "https://www.interactivebrokers.com/"
 
   livecheck do
     url "https://download2.interactivebrokers.com/installers/ntws/latest-standalone/version.json"
-    regex(/"buildVersion"\s*:\s*"(\d+(?:\.\d+)+[a-z]*)"/i)
+    regex(/(\d+(?:\.\d+)+[a-z]*)/i)
   end
 
   installer script: {
@@ -28,6 +27,8 @@ cask "ibkr" do
 
   zap trash: [
     "/Applications/IBKR Desktop",
+    "~/Applications/IBKR Desktop",
+    "~/Desktop/IBKR Desktop",
     "~/Jts",
     "~/Library/Application Support/IBKR Desktop",
   ]
