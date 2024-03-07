@@ -14,7 +14,7 @@ cask "lm-studio" do
   end
 
   auto_updates true
-  depends_on arch: :arm64
+  depends_on arch: :arm64 # testing64
 
   app "LM Studio.app"
 
