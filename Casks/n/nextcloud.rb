@@ -10,8 +10,8 @@ cask "nextcloud" do
     depends_on macos: ">= :mojave"
   end
   on_monterey :or_newer do
-    version "3.12.0"
-    sha256 "30673c8e7f33dfc8124a2ef723060f395ddd363487cc3786ef3eafa6c8d8d4d9"
+    version "3.12.1"
+    sha256 "6ac78e22c57c13884328f06deded69c75a157dad2f4349eb50b283b970bbf3fa"
 
     livecheck do
       url :url
