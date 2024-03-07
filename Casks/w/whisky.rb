@@ -15,7 +15,7 @@ cask "whisky" do
 
   auto_updates true
   depends_on macos: ">= :sonoma"
-  depends_on arch: :arm64
+  depends_on arch: :arm64 # testing64
 
   app "Whisky.app"
   binary "#{appdir}/Whisky.app/Contents/Resources/WhiskyCmd", target: "whisky"
