@@ -21,7 +21,7 @@ cask "virtualbuddy" do
   end
 
   conflicts_with cask: "homebrew/cask-versions/virtualbuddy-beta"
-  depends_on arch: :arm64
+  depends_on arch: :arm64 # testing64
   depends_on macos: ">= :monterey"
 
   app "VirtualBuddy.app"
