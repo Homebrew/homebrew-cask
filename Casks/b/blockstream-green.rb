@@ -1,8 +1,11 @@
 cask "blockstream-green" do
-  version "1.2.9"
-  sha256 "1b8589bc997016087ba27ef28f2026626834c91af525ca88bd3841bafcbe4c06"
+  arch arm: "arm64", intel: "x86_64"
 
-  url "https://github.com/Blockstream/green_qt/releases/download/release_#{version}/BlockstreamGreen_MacOS_x86_64.zip",
+  version "2.0.1"
+  sha256 arm:   "efb4e3ff118e93e6e174cdda3579092bd7c910ca7946ce97f03726b0958eb08f",
+         intel: "7e7785e3905ff1a04cdbd075dfcbfeb00aa8da0321eec3e0cac81877e072f736"
+
+  url "https://github.com/Blockstream/green_qt/releases/download/release_#{version}/BlockstreamGreen-#{arch}.dmg",
       verified: "github.com/Blockstream/green_qt/"
   name "Blockstream Green"
   desc "Multi-platform Bitcoin and Liquid wallet"
