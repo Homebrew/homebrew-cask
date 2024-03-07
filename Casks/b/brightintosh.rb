@@ -13,7 +13,7 @@ cask "brightintosh" do
   end
 
   depends_on macos: ">= :monterey"
-  depends_on arch: :arm64
+  depends_on arch: :arm64 # testing64
 
   app "BrightIntosh.app"
 
