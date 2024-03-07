@@ -54,7 +54,7 @@ module Check
     },
     loaded_launchjobs:    lambda {
       launchctl = lambda do |sudo|
-        system_command!("/bin/launchctl", args: ["list"], print_stderr: false, sudo: sudo)
+        system_command!("/bin/launchctl", args: ["list"], print_stderr: false, sudo:)
           .stdout
           .lines.drop(1)
           .grep_v(APPLE_LAUNCHJOBS_REGEX)
