@@ -13,7 +13,7 @@ cask "aethersx2" do
   end
 
   depends_on macos: ">= :big_sur"
-  depends_on arch: :arm64
+  depends_on arch: :arm64 # testing64
 
   app "AetherSX2.app"
 
