@@ -9,7 +9,7 @@ cask "manymc" do
 
   deprecate! date: "2024-01-07", because: :discontinued
 
-  depends_on arch: :arm64
+  depends_on arch: :arm64 # testing64
   depends_on macos: ">= :big_sur"
 
   app "ManyMC.app"
