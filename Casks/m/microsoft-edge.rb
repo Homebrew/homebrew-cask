@@ -2,12 +2,12 @@ cask "microsoft-edge" do
   linkid = on_arch_conditional arm: "2093504", intel: "2069148"
 
   on_arm do
-    version "122.0.2365.63,73a07aa6-b8e8-4555-95b1-a709271ee36a"
-    sha256 "654f1092c13a6c85101ebf42a4d8cf0a2ffb1894ccbcaf0078a252a709b8ae71"
+    version "122.0.2365.80,9c227984-0429-48e9-bade-ba93774a430a"
+    sha256 "4fca764d70068e29d1b4657fb4c8b28bfcd8aebc295368bb49e7560f19af0716"
   end
   on_intel do
-    version "122.0.2365.63,21a73de0-1704-4568-b12a-a3b21dbec451"
-    sha256 "fa149ad7718c2de493d9d899788677931763a461c2757905d4b4b5dcf9c4eb0c"
+    version "122.0.2365.80,11fca4af-cf39-4407-94b7-0574108ba352"
+    sha256 "b92174560f5472e594057278034aba3e9dca14c70034494401c88f0c2646f677"
   end
 
   url "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/#{version.csv.second}/MicrosoftEdge-#{version.csv.first}.pkg"
@@ -37,7 +37,7 @@ cask "microsoft-edge" do
   uninstall launchctl: [
               "com.microsoft.EdgeUpdater.update-internal.109.0.1518.89.system",
               "com.microsoft.EdgeUpdater.update.system",
-              "com.microsoft.EdgeUpdater.wake.109.0.1518.89.system",
+              "com.microsoft.EdgeUpdater.wake.system",
             ],
             pkgutil:   "com.microsoft.edgemac"
 
