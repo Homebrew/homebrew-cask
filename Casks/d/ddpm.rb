@@ -2,7 +2,8 @@ cask "ddpm" do
   version "1.3.0.0026"
   sha256 "fad4c289349f0d6e6b55af535f7494dcba1762fffddaa089d75065f9dd4ccdd3"
 
-  url "https://www.delldisplaymanagermac.com/DDPM/DDPMv#{version}.zip"
+  url "https://www.delldisplaymanagermac.com/DDPM/DDPMv#{version}.zip",
+      verified: "delldisplaymanagermac.com/"
   name "DDPM"
   name "Dell Display and Peripheral Manager"
   desc "Monitors and peripherals manager"
