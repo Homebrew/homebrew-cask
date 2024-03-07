@@ -12,7 +12,7 @@ cask "spatial" do
     regex(/href=.*?spatial[._-]v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
-  depends_on arch: :arm64
+  depends_on arch: :arm64 # testing64
   depends_on macos: ">= :sonoma"
 
   binary "spatial_#{version}/spatial"
