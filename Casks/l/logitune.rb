@@ -1,5 +1,5 @@
 cask "logitune" do
-  version "3.5.173"
+  version "3.5.249"
   sha256 :no_check
 
   url "https://software.vc.logitech.com/downloads/tune/LogiTuneInstaller.dmg"
