@@ -9,7 +9,7 @@ cask "playcover-community" do
 
   auto_updates true
   conflicts_with cask: "homebrew/cask-versions/playcover-community-beta"
-  depends_on arch: :arm64
+  depends_on arch: :arm64 # testing64
   depends_on macos: ">= :monterey"
 
   app "PlayCover.app"
