@@ -26,12 +26,12 @@ module ChangedFiles
     modified_cask_files = modified_files.select { |path| cask_file?(path) }
 
     {
-      modified_files:                modified_files,
-      added_files:                   added_files,
-      modified_ruby_files:           modified_ruby_files,
-      modified_command_files:        modified_command_files,
-      modified_github_actions_files: modified_github_actions_files,
-      modified_cask_files:           modified_cask_files,
+      modified_files:,
+      added_files:,
+      modified_ruby_files:,
+      modified_command_files:,
+      modified_github_actions_files:,
+      modified_cask_files:,
     }
   end
 end

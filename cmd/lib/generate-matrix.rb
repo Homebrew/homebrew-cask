@@ -48,16 +48,16 @@ module Homebrew
     syntax_job = {
       name:   "syntax",
       tap:    tap.name,
-      runner: runner,
+      runner:,
     }
 
     matrix = [syntax_job]
 
     unless labels&.include?("ci-syntax-only")
       cask_jobs = if args.casks&.any?
-        CiMatrix.generate(tap, labels: labels, cask_names: casks, skip_install: skip_install, new_cask: new_cask)
+        CiMatrix.generate(tap, labels:, cask_names: casks, skip_install:, new_cask:)
       else
-        CiMatrix.generate(tap, labels: labels, skip_install: skip_install, new_cask: new_cask)
+        CiMatrix.generate(tap, labels:, skip_install:, new_cask:)
       end
 
       if cask_jobs.any?

@@ -17,7 +17,7 @@ cask "redquits" do
 
       cask = CaskLoader.load(__FILE__)
       download_url = "http://redquits.s3.amazonaws.com/RedQuits_v#{major_version}.pkg"
-      Homebrew::Livecheck::Strategy::ExtractPlist.find_versions(cask: cask, url: download_url)[:matches].values
+      Homebrew::Livecheck::Strategy::ExtractPlist.find_versions(cask:, url: download_url)[:matches].values
     end
   end
 
