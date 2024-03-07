@@ -8,7 +8,7 @@ cask "cilicon" do
   homepage "https://github.com/traderepublic/Cilicon"
 
   depends_on macos: ">= :ventura"
-  depends_on arch: :arm64
+  depends_on arch: :arm64 # testing64
 
   app "Cilicon.app"
 
