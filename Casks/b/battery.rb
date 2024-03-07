@@ -9,7 +9,7 @@ cask "battery" do
 
   auto_updates true
   depends_on macos: ">= :high_sierra"
-  depends_on arch: :arm64
+  depends_on arch: :arm64 # testing64
 
   app "battery.app"
 
