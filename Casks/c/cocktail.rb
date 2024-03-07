@@ -88,8 +88,8 @@ cask "cocktail" do
     end
   end
   on_sonoma :or_newer do
-    version "17.1.0"
-    sha256 "6d4a2276aa19b3a6eebc836f24d0faba57c6a2602644ad50e7b0ecb8344fefba"
+    version "17.1.1"
+    sha256 "cd1de2561de983b5cbc9a029f349e779f09c0fd4ec531224ec598442ae7d24f9"
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}SE.dmg"
 
