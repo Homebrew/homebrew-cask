@@ -1,9 +1,9 @@
 cask "duplicacy-web-edition" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.7.2"
-  sha256 arm:   "a0a0669f18f1a4d14bcdb066af3ea609e6bd3fb9f09ba843bc9f285826d6ee3e",
-         intel: "7745d2ed6474a91c0d66c28e11296cd3a61fe3de6fd3c0b22c8666127befb0dc"
+  version "1.8.0"
+  sha256 arm:   "7c5eaa463aee201351b01de642e94ab3d575acbc0a8e20fe386bfb63346ff0cc",
+         intel: "53e7a7de4e343430146c8d9de86e0b35d915b018ec5bd62539a4010f46376c98"
 
   url "https://acrosync.com/duplicacy-web/duplicacy_web_osx_#{arch}_#{version}.dmg",
       verified: "acrosync.com/duplicacy-web/"
