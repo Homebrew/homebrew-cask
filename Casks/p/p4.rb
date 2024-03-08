@@ -1,7 +1,8 @@
 cask "p4" do
+  # NOTE: "4" is not a version number, but an intrinsic part of the product name
   arch arm: "12arm64", intel: "1015x86_64"
 
-  version "2023.2,2535420"
+  version "2023.2,2563409"
   sha256 arm:   "c825bb42d24312184b7a5f937d78e9b549392b10ecf0248375a2bc7aa5486e3b",
          intel: "818d345df408b6a01693c0a501d80cba4473d90719e6910ccaa08380b6c13dd6"
 
