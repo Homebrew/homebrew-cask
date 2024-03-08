@@ -1,5 +1,5 @@
 cask "rightfont" do
-  version "8.5"
+  version "8.6"
   sha256 :no_check
 
   url "https://rightfontapp.com/update/rightfont.zip"
