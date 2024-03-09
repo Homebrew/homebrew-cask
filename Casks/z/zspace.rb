@@ -7,8 +7,8 @@ cask "zspace" do
     sha256 "4667f3f73a68c6687a50bec3180aac063367556b7494e1f284b3d36ef3eeb63e"
   end
   on_intel do
-    version "2.4.2024020201,1709191590,020222"
-    sha256 "cb42005491805b1d4c302eb0d513ff22bf348d588b2227b1476e555bc045cff5"
+    version "2.4.2024020202,1709796178,030621"
+    sha256 "7cc3e15a814dc0aebc17f8e3d33dd39083ad3a54127e968ee3d79a48a85f0161"
   end
 
   url "https://update.zenithspace.net/app/APP_ZSPACE_DESKTOP_MAC#{folder}/V#{version.csv.first}/zspace/#{version.csv.second}/zspace_mac_#{arch}_#{version.csv.first}_#{version.csv.third}.dmg",
