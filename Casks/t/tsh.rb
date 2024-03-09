@@ -1,6 +1,6 @@
 cask "tsh" do
-  version "15.1.1"
-  sha256 "bd0d491c9581665805e1964ff5c6630d6257798319b6724bfe5de706d0e76fb0"
+  version "15.1.3"
+  sha256 "e16f8ad3a7cdf34d5e67bf91df84f174c16b56ef78035b8ab2ed1d39683b84f2"
 
   url "https://cdn.teleport.dev/tsh-#{version}.pkg",
       verified: "cdn.teleport.dev/"
