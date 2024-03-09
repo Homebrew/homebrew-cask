@@ -1,6 +1,6 @@
 cask "kvirc" do
-  version "5.2.0,Quasar"
-  sha256 "945e51861f031c7adbdb5f3d7322f94b40850c33a7d050300dfb30d3d5e2bdd1"
+  version "5.2.2,Quasar"
+  sha256 "8b231c9919e50dfaef5df640c67bb8b292c843141b6e8bc45001a0a308039a74"
 
   url "https://github.com/kvirc/KVIrc/releases/download/#{version.csv.first}/KVIrc-#{version.csv.first}-#{version.csv.second}.dmg",
       verified: "github.com/kvirc/KVIrc/"
