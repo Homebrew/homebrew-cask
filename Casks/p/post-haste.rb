@@ -1,8 +1,8 @@
 cask "post-haste" do
-  version "2.8.2,2820"
-  sha256 "b9aa07e946b48e4a9ef173a038eb111eb68197b7707c87bfcdd71e7de2206985"
+  version "2.8.3,2831"
+  sha256 "71c6bd0675a0f91407f599d1a3cd0a71066aacf8c5c9054cab45557eefa51db0"
 
-  url "https://www.digitalrebellion.com/download/posthaste?version=#{version.csv.second}"
+  url "https://download.digitalrebellion.com/posthaste/Post_Haste_for_Mac_#{version.csv.second}.dmg"
   name "Post Haste"
   desc "Digital media project management tool"
   homepage "https://www.digitalrebellion.com/posthaste/"
