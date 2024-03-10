@@ -4,7 +4,7 @@ cask "arturia-software-center" do
 
   url "https://dl.arturia.net/products/asc/soft/Arturia_Software_Center__#{version.dots_to_underscores}.pkg", verified: "dl.arturia.net/"
   name "Arturia Software Center"
-  desc "Manage Arturia hardware and software"
+  desc "Installer for installation and license activation of Arturia products"
   homepage "https://www.arturia.com/technology/asc"
 
   livecheck do
@@ -20,8 +20,6 @@ cask "arturia-software-center" do
         match.to_s
       end
     end
-  end
-    skip "Not available"
   end
 
   pkg "Arturia_Software_Center__#{version.dots_to_underscores}.pkg"
