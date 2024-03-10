@@ -1,9 +1,9 @@
 cask "openlp" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "3.1.0"
-  sha256 arm:   "5137ce466dcbfeb06c84d22f69027cab87da0f5250347ece7097398e29670bae",
-         intel: "51d3c8b6197bce3c4393263940f6779c3cfb17829d8bf7a3e2d722307315db3c"
+  version "3.1.1"
+  sha256 arm:   "e5a30442924fd358d58fc854ac05bbd1e42c2773aad325c9e6b350520f99701d",
+         intel: "0893c466780eb28d663717c74b5ad1fde1bd6eeecfc395a34cbfdbb8420dde31"
 
   url "https://get.openlp.org/#{version}/OpenLP-#{version}-#{arch}.dmg"
   name "OpenLP"
