@@ -26,8 +26,11 @@ cask "arturia-software-center" do
 
   pkg "Arturia_Software_Center__#{version.dots_to_underscores}.pkg"
 
-  uninstall pkgutil: ["com.Arturia.ArturiaSoftwareCenter.fonts",
-                      "com.Arturia.ArturiaSoftwareCenter.resources"]
+  uninstall launchctl: "com.Arturia.ArturiaSoftwareCenterAgent",
+            pkgutil:   [
+              "com.Arturia.ArturiaSoftwareCenter.fonts",
+              "com.Arturia.ArturiaSoftwareCenter.resources",
+            ]
 
   zap delete: [
         "/Library/Arturia/Arturia Software Center",
