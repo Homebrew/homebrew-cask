@@ -48,7 +48,7 @@ jobs:
       - name: Check out Pull Request
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 2
           persist-credentials: false
 
       - name: Generate CI matrix
@@ -87,7 +87,7 @@ jobs:
       - name: Check out Pull Request
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 2
           persist-credentials: false
 
       - name: Clean up CI machine
