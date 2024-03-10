@@ -2,7 +2,8 @@ cask "arturia-software-center" do
   version "2.7.1.2466"
   sha256 "a83e87823a4098c6c60de14733f2ce236042c0f12bd25118cad88167551a5ceb"
 
-  url "https://dl.arturia.net/products/asc/soft/Arturia_Software_Center__#{version.dots_to_underscores}.pkg", verified: "dl.arturia.net/"
+  url "https://dl.arturia.net/products/asc/soft/Arturia_Software_Center__#{version.dots_to_underscores}.pkg",
+      verified: "dl.arturia.net/"
   name "Arturia Software Center"
   desc "Installer for installation and license activation of Arturia products"
   homepage "https://www.arturia.com/technology/asc"
