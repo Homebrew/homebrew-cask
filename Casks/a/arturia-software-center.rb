@@ -8,6 +8,19 @@ cask "arturia-software-center" do
   homepage "https://www.arturia.com/technology/asc"
 
   livecheck do
+    url "https://www.arturia.com/api/resources?slugs=asc&types=soft"
+    regex(/\d+(?:\.\d+)+/i)
+    strategy :json do |json, regex|
+      json.map do |entry|
+        next unless entry["platform_type"]["mac"]
+
+        match = entry["version"]&.match(regex)
+        next if match.blank?
+
+        match.to_s
+      end
+    end
+  end
     skip "Not available"
   end
 
