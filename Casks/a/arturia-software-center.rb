@@ -29,13 +29,14 @@ cask "arturia-software-center" do
   uninstall pkgutil: ["com.Arturia.ArturiaSoftwareCenter.fonts",
                       "com.Arturia.ArturiaSoftwareCenter.resources"]
 
-  zap trash: [
-      "/var/db/receipts/com.Arturia.ArturiaSoftwareCenter.fonts.bom",
-      "/var/db/receipts/com.Arturia.ArturiaSoftwareCenter.fonts.plist",
-      "/var/db/receipts/com.Arturia.ArturiaSoftwareCenter.resources.bom",
-      "/var/db/receipts/com.Arturia.ArturiaSoftwareCenter.resources.plist",
-      "~/Library/Caches/com.Arturia.ArturiaSoftwareCenter",
-      "~/Library/WebKit/com.Arturia.ArturiaSoftwareCenter",
-    "/Library/Arturia/Arturia Software Center",
-  ]
+  zap delete: [
+        "/Library/Arturia/Arturia Software Center",
+        "/Library/ArturiaSC/",
+      ],
+      trash:  [
+        "~/Library/Caches/com.Arturia.ArturiaSoftwareCenter",
+        "~/Library/Saved Application State/com.Arturia.ArturiaSoftwareCenter.savedState",
+        "~/Library/WebKit/com.Arturia.ArturiaSoftwareCenter",
+      ],
+      rmdir:  "/Library/Arturia"
 end
