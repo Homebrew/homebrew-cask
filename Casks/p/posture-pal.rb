@@ -21,4 +21,10 @@ cask "posture-pal" do
   depends_on macos: ">= :sonoma"
 
   app "Posture Pal.app"
+
+  zap trash: [
+    "~/Library/HTTPStorages/com.goodsnooze.sebby-gum",
+    "~/Library/Preferences/com.goodsnooze.sebby-gum.plist",
+    "~/Library/Preferences/group.com.goodsnooze.posturepal.shared.plist",
+  ]
 end
