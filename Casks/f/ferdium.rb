@@ -11,8 +11,12 @@ cask "ferdium" do
   desc "Multi-platform multi-messaging app"
   homepage "https://ferdium.org/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
-  conflicts_with cask: "ferdium-beta"
 
   app "Ferdium.app"
 
