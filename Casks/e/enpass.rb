@@ -8,8 +8,8 @@ cask "enpass" do
   homepage "https://www.enpass.io/"
 
   livecheck do
-    url "https://www.enpass.io/downloads/"
-    regex(%r{href=.*?/(\d+(?:\.\d+)+)/Enpass\.pkg}i)
+    url "https://www.enpass.io/download/macos/website/stable"
+    strategy :header_match
   end
 
   depends_on macos: ">= :sierra"
