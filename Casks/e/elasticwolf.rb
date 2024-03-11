@@ -8,11 +8,6 @@ cask "elasticwolf" do
   desc "Manage Amazon Web Services (AWS) cloud resources"
   homepage "https://aws.amazon.com/developer/tools/AWS-ElasticWolf-Client-Console/"
 
-  livecheck do
-    url :homepage
-    regex(%r{href=.*?/ElasticWolf[._-]osx[._-]v?(\d+(?:\.\d+)+)\.zip}i)
-  end
-
   disable! date: "2024-02-26", because: :no_longer_available
 
   app "ElasticWolf.app"
