@@ -1,8 +1,11 @@
 cask "gearboy" do
-  version "3.4.0"
-  sha256 "9b7b276c2f4b01dab8a1562b9dce5c61ab61c770b74a81c4d26e1d1e69be2bfb"
+  arch arm: "arm", intel: "intel"
 
-  url "https://github.com/drhelius/Gearboy/releases/download/gearboy-#{version}/Gearboy-#{version}-macOS.zip"
+  version "3.5.0"
+  sha256 arm:   "fd1a592afc7847c41ad933ae7a39656ad84d45042521e27f7ac62fa5347335f3",
+         intel: "317678aa721fc6747a07bb255ea5497aa2a47761f0ddc6d4f44ff45aa88429dd"
+
+  url "https://github.com/drhelius/Gearboy/releases/download/#{version}/Gearboy-#{version}-macos-#{arch}.zip"
   name "Gearboy"
   homepage "https://github.com/drhelius/Gearboy"
 
@@ -11,5 +14,7 @@ cask "gearboy" do
     strategy :github_latest
   end
 
-  app "Gearboy-#{version}-macOS/Gearboy.app"
+  app "Gearboy.app"
+
+  zap trash: "~/Library/Saved Application State/me.ignaciosanchez.Gearboy.savedState"
 end
