@@ -18,9 +18,9 @@ cask "gyazo" do
             quit:      "com.gyazo.menu",
             pkgutil:   "com.gyazo.pkg",
             delete:    [
-              "#{appdir}/Gyazo Menu.app",
-              "#{appdir}/Gyazo Video.app",
-              "#{appdir}/Gyazo.app",
+              "/Applications/Gyazo Menu.app",
+              "/Applications/Gyazo Video.app",
+              "/Applications/Gyazo.app",
             ]
 
   zap trash: [
