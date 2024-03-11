@@ -7,11 +7,6 @@ cask "fing-cli" do
   desc "Network scanner"
   homepage "https://www.fing.com/products/development-toolkit/"
 
-  livecheck do
-    url :homepage
-    regex(%r{href=.*?/CLI[._-]macOSX[._-]v?(\d+(?:\.\d+)+)\.zip}i)
-  end
-
   disable! date: "2024-02-25", because: :no_longer_available
 
   pkg "Fing-#{version}-osX.pkg"
