@@ -5,20 +5,16 @@ cask "arturia-software-center" do
   url "https://dl.arturia.net/products/asc/soft/Arturia_Software_Center__#{version.dots_to_underscores}.pkg",
       verified: "dl.arturia.net/"
   name "Arturia Software Center"
-  desc "Installer for installation and license activation of Arturia products"
+  desc "Installer and license activation for Arturia products"
   homepage "https://www.arturia.com/technology/asc"
 
   livecheck do
     url "https://www.arturia.com/api/resources?slugs=asc&types=soft"
-    regex(/\d+(?:\.\d+)+/i)
-    strategy :json do |json, regex|
-      json.map do |entry|
-        next unless entry["platform_type"]["mac"]
+    strategy :json do |json|
+      json.map do |item|
+        next if item["platform_type"] != "mac"
 
-        match = entry["version"]&.match(regex)
-        next if match.blank?
-
-        match.to_s
+        item["version"]
       end
     end
   end
