@@ -3,7 +3,7 @@ cask "xpra" do
 
   on_arm do
     version "5.0.7,0"
-    sha256 "825ef2edcf48e23e2a3ae256dc79cf53ebe928e6f849705facc18a0aad1b068b"
+    sha256 "cfd8a0b514bfc00b087093df47771514fa9728db019b4bb36d399ebe35275eca"
   end
   on_intel do
     version "6.0,35230"
