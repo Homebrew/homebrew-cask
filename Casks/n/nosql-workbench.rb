@@ -1,9 +1,9 @@
 cask "nosql-workbench" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.12.0"
-  sha256 arm:   "41c5526746a97647a845da9bef7e84882a1017446d0179b4c32a32ed3a355f0f",
-         intel: "f5c4cda823a5946650263784c84fb791abe33ddc9958558711cdd4aff0dab6c4"
+  version "3.12.1"
+  sha256 arm:   "cebc1e19e2e1c97f2a60d66c2eb43d9a441c0e9d4365a9356a47a1f9ec81fcb0",
+         intel: "82015cdce14eedbc7131a39643e38eb5b71a8eb769b8f476c31386b86813549e"
 
   url "https://s3.amazonaws.com/nosql-workbench/NoSQL%20Workbench-mac-#{arch}-#{version}.dmg",
       verified: "s3.amazonaws.com/nosql-workbench/"
