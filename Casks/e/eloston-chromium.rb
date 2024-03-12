@@ -9,7 +9,7 @@ cask "eloston-chromium" do
       verified: "github.com/ungoogled-software/ungoogled-chromium-macos/"
   name "Ungoogled Chromium"
   desc "Google Chromium, sans integration with Google"
-  homepage "https://ungoogled-software.github.io/ungoogled-chromium-binaries/"
+  homepage "https://ungoogled-software.github.io/"
 
   livecheck do
     url :url
