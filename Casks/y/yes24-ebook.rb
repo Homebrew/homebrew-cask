@@ -6,7 +6,7 @@ cask "yes24-ebook" do
       verified: "cdn.k-epub.com/UPGRADE/"
   name "yes24-ebook"
   desc "Crema Ebook reader for Yes24"
-  homepage "https://www.yes24.com/"
+  homepage "https://www.yes24.com/Main/default.aspx"
 
   livecheck do
     url "https://cremaupdate.k-epub.com/sv_update.aspx?usrid=&old=0"
