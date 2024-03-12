@@ -1,6 +1,6 @@
 cask "time-out" do
-  version "2.9.5"
-  sha256 "b3cb665b3b1f0513351c45e53a261cabd5e17bf57f75c54059e1c9051ce7d5a3"
+  version "2.9.6"
+  sha256 "f447c797a34c343a7a0b04276a903269f56c02181c22a3f71205abfaa3b9f394"
 
   url "https://www.dejal.com/download/timeout-#{version}.zip"
   name "Time Out"
