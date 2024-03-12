@@ -1,6 +1,6 @@
 cask "microsoft-office" do
-  version "16.82.24021116"
-  sha256 "5cc0271a8086506a02d65dc441a92af4ced9ed67bcf3f0c03ec11019df45bb0c"
+  version "16.83.24031120"
+  sha256 "d6e2358cca4cceaba0188161975c289f799c2cca4a10af8d2105f722d85eb957"
 
   url "https://officecdnmac.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_365_and_Office_#{version}_Installer.pkg"
   name "Microsoft Office"
@@ -56,8 +56,10 @@ cask "microsoft-office" do
               "com.microsoft.package.Microsoft_Word.app",
               "com.microsoft.package.Proofing_Tools",
               "com.microsoft.pkg.licensing",
+              "com.microsoft.wdav",
             ],
             delete:    [
+              "/Applications/Microsoft Defender.app",
               "/Applications/Microsoft Excel.app",
               "/Applications/Microsoft OneNote.app",
               "/Applications/Microsoft Outlook.app",
