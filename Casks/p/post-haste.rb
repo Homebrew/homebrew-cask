@@ -1,6 +1,6 @@
 cask "post-haste" do
-  version "2.8.3,2831"
-  sha256 "71c6bd0675a0f91407f599d1a3cd0a71066aacf8c5c9054cab45557eefa51db0"
+  version "2.8.3,2832"
+  sha256 "a3a2b9f73f99a880b3155fa24e3b0ce6a2fee32d822dcfb2e80a135c29f2b64e"
 
   url "https://download.digitalrebellion.com/posthaste/Post_Haste_for_Mac_#{version.csv.second}.dmg"
   name "Post Haste"
