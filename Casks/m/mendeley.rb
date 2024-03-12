@@ -7,10 +7,7 @@ cask "mendeley" do
   desc "Research management tool"
   homepage "https://www.mendeley.com/reference-management/mendeley-desktop"
 
-  livecheck do
-    url "https://www.mendeley.com/autoupdates/installer/Mac-x64/stable-incoming"
-    strategy :header_match
-  end
+  deprecate! date: "2024-03-12", because: :discontinued
 
   app "Mendeley Desktop.app"
 
@@ -21,4 +18,12 @@ cask "mendeley" do
     "~/Library/Preferences/com.mendeley.Mendeley Desktop.plist",
     "~/Library/Saved Application State/com.mendeley.desktop.savedState",
   ]
+
+  caveats do
+    <<~EOS
+      mendeley-reference-manager is the successor to this software:
+
+        brew install --cask mendeley-reference-manager
+    EOS
+  end
 end
