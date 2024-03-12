@@ -5,7 +5,8 @@ cask "burp-suite-professional" do
   sha256 arm:   "1c9798177dca8a389436e4ec604ae3152f18c59793d6405429a24923829f7b8f",
          intel: "0a239e3338e957b378bba67f2d23752e8b799b5f8a98493413eca94bea1c9ea5"
 
-  url "https://portswigger.net/burp/releases/download?product=pro&version=#{version}&type=#{arch}"
+  url "https://portswigger-cdn.net/burp/releases/download?product=pro&version=#{version}&type=#{arch}",
+      verified: "portswigger-cdn.net/burp/releases/"
   name "Burp Suite Professional"
   desc "Web security testing toolkit"
   homepage "https://portswigger.net/burp/pro"
