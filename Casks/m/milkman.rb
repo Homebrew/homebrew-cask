@@ -1,6 +1,6 @@
 cask "milkman" do
-  version "5.8.0"
-  sha256 "d88f6560dec0bcbb0cbf1758ac2c6523df70a0b79cd2db87b280687904d81eb9"
+  version "5.9.0"
+  sha256 "46cc3a7b763c9b7ba6edae7f901c9ba948a020702c2d976109849bae1cc0cf0c"
 
   url "https://github.com/warmuuh/milkman/releases/download/#{version}/milkman-dist-appbundle-macos64-bin.tgz"
   name "Milkman"
