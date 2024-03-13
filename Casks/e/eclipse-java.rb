@@ -1,9 +1,9 @@
 cask "eclipse-java" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "4.30.0,2023-12"
-  sha256 arm:   "e31dedbdbf1ff9e361787f4c7c3c2428a63bc9b46cf8ca96c2ad69155160f62d",
-         intel: "568e7c7bd30358b77aa7ea9e77fe3a7fc1506b8493a799339a2bec9cbb4ce1e3"
+  version "4.31.0,2024-03"
+  sha256 arm:   "06f82a33d07d8ae93e5a055e2b2a6b56f0db5e5ca51c2c5dd53a4739d4d1475e",
+         intel: "c38b97c63a30a32ab258ef5029869c37945ca3a47e4566085c878337af198d93"
 
   url "https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/#{version.csv.second}/R/eclipse-java-#{version.csv.second}-R-macosx-cocoa-#{arch}.dmg&r=1"
   name "Eclipse IDE for Java Developers"
