@@ -38,6 +38,13 @@ cask "docker" do
     end
 
     depends_on macos: ">= :monterey"
+
+    binary "Docker.app/Contents/Resources/etc/docker-compose.bash-completion",
+           target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/docker-compose"
+    binary "Docker.app/Contents/Resources/etc/docker-compose.zsh-completion",
+           target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_docker-compose"
+    binary "Docker.app/Contents/Resources/etc/docker-compose.fish-completion",
+           target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/docker-compose.fish"
   end
 
   url "https://desktop.docker.com/mac/main/#{arch}/#{version.csv.second}/Docker.dmg"
