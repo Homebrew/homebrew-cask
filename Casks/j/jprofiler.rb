@@ -15,9 +15,9 @@ cask "jprofiler" do
   app "JProfiler.app"
 
   zap trash: [
-    "~/.jprofiler#{version.split(".").first}",
+    "~/.jprofiler*",
     "~/Library/Preferences/com.jprofiler.history.plist",
-    "~/Library/Preferences/com.jprofiler.v#{version.split(".").first}.plist",
+    "~/Library/Preferences/com.jprofiler.v*.plist",
     "~/Library/Preferences/jprofiler.vmoptions",
   ]
 end
