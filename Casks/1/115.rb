@@ -1,6 +1,6 @@
 cask "115" do
-  version "2.0.8.5"
-  sha256 "27348c4d4c012586ee2c295d912680b42a855fadb22b1a23fd4585e0e5753b16"
+  version "2.0.9.3"
+  sha256 "fba0be9bb046ad28d615a1927a0934cbcbe2809b9c70e854fedf2b6bc611d3ad"
 
   url "https://down.115.com/client/115pc/mac/115pc_#{version}.dmg"
   name "115"
@@ -18,7 +18,7 @@ cask "115" do
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
-  app "115桌面版.app"
+  app "115生活.app"
 
   uninstall quit: "org.115pc.115Desktop"
 
