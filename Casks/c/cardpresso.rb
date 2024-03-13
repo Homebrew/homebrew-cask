@@ -8,9 +8,11 @@ cask "cardpresso" do
   homepage "https://www.cardpresso.com/"
 
   livecheck do
-    skip "No version information available"
+    url "https://www.cardpresso.com/cardpresso-software/latest-release/"
+    regex(/href=.*?cardPresso[._-]?v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  auto_updates true
   depends_on macos: ">= :high_sierra"
 
   app "cardPresso.app"
