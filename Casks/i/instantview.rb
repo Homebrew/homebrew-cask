@@ -9,7 +9,7 @@ cask "instantview" do
 
   livecheck do
     url "https://www.siliconmotion.com/downloads/index.html"
-    regex(/macOS[._-]instantview[._-]v(\d+(?:\.\d+)+)(\w\d+)\.dmg/i)
+    regex(/macOS[._-]instantview[._-]V(\d+(?:\.\d+)+)(\w\d+)\.dmg/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
