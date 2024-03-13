@@ -29,13 +29,19 @@ cask "mactex" do
       choices: [
         {
           # Ghostscript
-          "choiceIdentifier" => "org.tug.mactex.ghostscript10.00",
+          "choiceIdentifier" => "org.tug.mactex.ghostscript10.03.0",
           "choiceAttribute"  => "selected",
           "attributeSetting" => 0,
         },
         {
           # Ghostscript Dynamic Library
-          "choiceIdentifier" => "org.tug.mactex.ghostscript10.00-libgs",
+          "choiceIdentifier" => "org.tug.mactex.ghostscript10.03.0-libgs",
+          "choiceAttribute"  => "selected",
+          "attributeSetting" => 0,
+        },
+        {
+          # Ghostscript Mutool
+          "choiceIdentifier" => "org.tug.mactex.ghostscript10.03.0-mutool",
           "choiceAttribute"  => "selected",
           "attributeSetting" => 0,
         },
@@ -46,7 +52,7 @@ cask "mactex" do
           "attributeSetting" => 1,
         },
         {
-          # TeXLive
+          # TeX Live
           "choiceIdentifier" => "org.tug.mactex.texlive#{version.major}",
           "choiceAttribute"  => "selected",
           "attributeSetting" => 1,
