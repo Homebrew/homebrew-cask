@@ -13,7 +13,7 @@ cask "tsh" do
     regex(/tsh[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
-  conflicts_with cask:    "homebrew/cask-versions/tsh13",
+  conflicts_with cask:    "tsh13",
                  formula: "teleport"
 
   pkg "tsh-#{version}.pkg"
