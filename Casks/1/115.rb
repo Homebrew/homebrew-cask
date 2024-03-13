@@ -18,7 +18,7 @@ cask "115" do
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
-  app "115桌面版.app"
+  app "115生活.app"
 
   uninstall quit: "org.115pc.115Desktop"
 
