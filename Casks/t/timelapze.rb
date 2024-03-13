@@ -4,7 +4,7 @@ cask "timelapze" do
 
   url "https://github.com/wkaisertexas/ScreenTimeLapse/releases/download/v#{version}/TimeLapze.zip"
   name "TimeLapze"
-  desc "Record screen time lapses with ease in a simple, intuitive interface"
+  desc "Record screen time lapses in a menu bar interface"
   homepage "https://github.com/wkaisertexas/ScreenTimeLapse"
 
   auto_updates true
