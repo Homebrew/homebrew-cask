@@ -1,6 +1,6 @@
 cask "basictex" do
-  version "2023.0314"
-  sha256 "bee681935e4af6dd3ae79229ccd5437e6a0ced138b530e88fe66a95a13c113b1"
+  version "2024.0309"
+  sha256 "42595c82f36b9271872e917a821b642f83831e867fe86bae5f6ab15f2fea350b"
 
   url "https://mirror.ctan.org/systems/mac/mactex/mactex-basictex-#{version.no_dots}.pkg",
       verified: "mirror.ctan.org/systems/mac/mactex/"
