@@ -1,6 +1,12 @@
 cask "piezo" do
-  version "1.8.2"
   sha256 :no_check
+
+  on_ventura :or_older do
+    version "1.8.2"
+  end
+  on_sonoma :or_newer do
+    version "1.9.0"
+  end
 
   url "https://rogueamoeba.com/piezo/download/Piezo.zip"
   name "Piezo"
