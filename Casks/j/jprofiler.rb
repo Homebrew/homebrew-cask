@@ -13,4 +13,11 @@ cask "jprofiler" do
   end
 
   app "JProfiler.app"
+
+  zap trash: [
+    "~/.jprofiler*",
+    "~/Library/Preferences/com.jprofiler.history.plist",
+    "~/Library/Preferences/com.jprofiler.v*.plist",
+    "~/Library/Preferences/jprofiler.vmoptions",
+  ]
 end
