@@ -1,6 +1,6 @@
 cask "timelapze" do
   version "1.0.0"
-  sha256 :no_check
+  sha256 "da770b4e6691b5eaf86ce93cef41d6345dbcf228e4c93abee8a62a93c294f74a"
 
   url "https://github.com/wkaisertexas/ScreenTimeLapse/releases/download/v#{version}/TimeLapze.zip"
   name "TimeLapze"
