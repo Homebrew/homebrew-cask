@@ -1,6 +1,6 @@
 cask "cilicon" do
-  version "2.1.0"
-  sha256 "af39cff356afb5c22f006349a72f0bf1db02ad55bb2401eeb6bd360308fd9c01"
+  version "2.2.0"
+  sha256 "9004441d3004b659b91da08538ebe0b8808c96696e363e83de951b34d4f84865"
 
   url "https://github.com/traderepublic/Cilicon/releases/download/v#{version}/Cilicon.zip"
   name "Cilicon"
