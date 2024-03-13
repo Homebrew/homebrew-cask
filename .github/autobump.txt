@@ -32,6 +32,7 @@ calibre
 canva
 capacities
 carbon-copy-cloner
+cardpresso
 chatall
 chirp
 chromedriver
