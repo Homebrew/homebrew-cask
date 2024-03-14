@@ -12,9 +12,7 @@ cask "nperf" do
 
   livecheck do
     url "https://app.nperf.com/getMacApp?arch=#{arch}"
-    strategy :header_match do |headers|
-      headers["location"][/(\d+\.\d+\.\d+)\.pkg/i, 1]
-    end
+    strategy :header_match
   end
 
   pkg "nPerf-#{arch}-#{version}.pkg"
