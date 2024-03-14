@@ -5,7 +5,7 @@ cask "tuxguitar" do
   url "https://github.com/helge17/tuxguitar/releases/download/#{version}/tuxguitar-#{version}-macosx-swt-cocoa-x86_64.app.tar.gz"
   name "TuxGuitar"
   desc "Multitrack guitar tablature editor and player"
-  homepage "https://www.tuxguitar.app"
+  homepage "https://www.tuxguitar.app/"
 
   app "tuxguitar-#{version}-macosx-cocoa-64.app"
 end
