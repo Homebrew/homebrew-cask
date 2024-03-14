@@ -7,7 +7,7 @@ cask "minotaur-wallet" do
   
     url "https://github.com/minotaur-ergo/minotaur-wallet/releases/download/v#{version}/minotaur-#{version}#{arch}.dmg"
     name "Minotaur Wallet"
-    desc "This is the first multi-platform wallet for ergo."
+    desc "This is the first multi-platform wallet for ergo"
     homepage "https://github.com/minotaur-ergo/minotaur-wallet"
   
     depends_on macos: ">= :sonoma"
@@ -18,7 +18,8 @@ cask "minotaur-wallet" do
     zap trash: [
       "~/Databases/minotaur",
       "~/Library/Application Support/minotaur",
+      "~/Library/Preferences/io.github.minotaurergo.minotaur.plist",
       "~/Library/Saved Application State/io.github.minotaurergo.minotaur.savedState",
-      "~/Library/Preferences/io.github.minotaurergo.minotaur.plist"
     ]
   end
+  
