@@ -11,7 +11,7 @@ cask "zc" do
     url "http://zectonal-releases.s3-website-us-east-1.amazonaws.com/zc/releases/download/index.html"
     strategy :page_match
     # regex(%r{href=.*?\"v(\d+(?:\.\d+)*)\/index\.html\"}i)
-    regex(%r{href=.*?\"http:\/\/zectonal-releases\.s3-website-us-east-1\.amazonaws\.com\/zc\/releases\/download\/v(\d+(?:\.\d+)*).*}i)
+    regex(%r{href=.*?"http://zectonal-releases\.s3-website-us-east-1\.amazonaws\.com/zc/releases/download/v(\d+(?:\.\d+)*).*}i)
   end
 
   binary "zc"
