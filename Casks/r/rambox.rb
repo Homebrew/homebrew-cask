@@ -6,7 +6,7 @@ cask "rambox" do
       verified: "github.com/ramboxapp/download/"
   name "Rambox"
   desc "Free and Open Source messaging and emailing app"
-  homepage "https://rambox.pro/"
+  homepage "https://rambox.app/"
 
   auto_updates true
   conflicts_with cask: "rambox-ce"
