@@ -10,7 +10,7 @@ cask "minotaur-wallet" do
     desc "This is the first multi-platform wallet for ergo"
     homepage "https://github.com/minotaur-ergo/minotaur-wallet"
   
-    depends_on macos: ">= :sonoma"
+    depends_on macos: ">= :catalina"
   
     # Renamed for consistency: the real name is Minotaur Wallet
     app "minotaur.app", target: "Minotaur Wallet.app"
@@ -22,4 +22,3 @@ cask "minotaur-wallet" do
       "~/Library/Saved Application State/io.github.minotaurergo.minotaur.savedState",
     ]
   end
-  
