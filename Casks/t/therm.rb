@@ -1,6 +1,6 @@
 cask "therm" do
-  version "0.6.2"
-  sha256 "9b1dc2cdead021351131b5460fdd623e99dac7cb96f9bfdd1fd48c36f5eb3062"
+  version "0.6.3"
+  sha256 "fc93a8e275449ddb9da76e5da27425dfddf0be3727ba14decebe56632f7eef3a"
 
   url "https://github.com/trufae/Therm/releases/download/#{version}/Therm-#{version}.zip"
   name "Therm"
