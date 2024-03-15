@@ -204,6 +204,7 @@ vrew
 vscodium
 vuescan
 warp
+wave
 webcatalog
 webull
 whatsapp
