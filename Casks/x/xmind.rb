@@ -13,7 +13,7 @@ cask "xmind" do
     strategy :header_match
   end
 
-  conflicts_with cask: "homebrew/cask-versions/xmind8"
+  conflicts_with cask: "xmind8"
 
   app "Xmind.app"
 
