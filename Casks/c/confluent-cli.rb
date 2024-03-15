@@ -1,9 +1,9 @@
 cask "confluent-cli" do
   arch arm: "arm64", intel: "amd64"
 
-  version "3.53.0"
-  sha256 arm:   "7d762bd9f9dfc3d1c9c19cc68cd8544d0c77c3f1798b43ad74a104111e0d4a34",
-         intel: "b4cf779e67617fbfa9e89eb80e713d21eb68a74da18a7f987c2cff3cc71d405d"
+  version "3.54.0"
+  sha256 arm:   "147c2cfd6367655163a208446a74343d57ce51bf5d489d0bd378e32bce15b3c6",
+         intel: "ba8baadd8dd9932c7862f09c98e4589a107d80a14dd05e23a4cd9405e154360f"
 
   url "https://s3-us-west-2.amazonaws.com/confluent.cloud/confluent-cli/archives/#{version}/confluent_#{version}_darwin_#{arch}.tar.gz",
       verified: "s3-us-west-2.amazonaws.com/confluent.cloud/confluent-cli/archives/"
