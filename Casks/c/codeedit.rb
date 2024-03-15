@@ -8,11 +8,6 @@ cask "codeedit" do
   desc "Code editor"
   homepage "https://www.codeedit.app/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: ">= :ventura"
 
   app "CodeEdit.app"
