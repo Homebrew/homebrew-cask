@@ -1,6 +1,6 @@
 cask "freeorion" do
-  version "0.5"
-  sha256 "de3386188ee90ed8d0080a2b1c848f44c86304349c3235ac349f1d4777a30e1d"
+  version "0.5.0.1"
+  sha256 "c6436383071148dbc7b5d63981ae7afebda52340710f603b35f0e22a0aa9ecf5"
 
   url "https://github.com/freeorion/freeorion/releases/download/v#{version}/FreeOrion_v#{version}_MacOSX_10.12.dmg",
       verified: "github.com/freeorion/"
