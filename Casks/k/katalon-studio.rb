@@ -5,11 +5,11 @@ cask "katalon-studio" do
   url "https://download.katalon.com/#{version}/Katalon%20Studio.dmg"
   name "Katalon Studio"
   desc "Test automation solution"
-  homepage "https://www.katalon.com/download/"
+  homepage "https://katalon.com/download"
 
   livecheck do
-    url "https://github.com/katalon-studio/katalon-studio"
-    strategy :github_latest
+    url :homepage
+    regex(/href=.*(\d+(?:\.\d+)+)/i)
   end
 
   app "Katalon Studio.app"
