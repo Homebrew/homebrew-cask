@@ -1,8 +1,11 @@
 cask "flipper" do
-  version "0.239.0"
-  sha256 "192dc10ae4017c223074b89c5581326c26dde215f29e53bb6547a44c9898464c"
+  arch arm: "aarch64", intel: "x64"
 
-  url "https://github.com/facebook/flipper/releases/download/v#{version}/Flipper-mac.dmg",
+  version "0.250.0"
+  sha256 arm:   "9e84f0ccb28a8ded1de8613b9cebca07bc1748cac1dca999437a9d2a4084cb82",
+         intel: "b57e8fa50e0490c885eb245cae09a2065897d5c0f6139fb8ccfbba071e70f9b2"
+
+  url "https://github.com/facebook/flipper/releases/download/v#{version}/Flipper-server-mac-#{arch}.dmg",
       verified: "github.com/facebook/flipper/"
   name "Facebook Flipper"
   desc "Desktop debugging platform for mobile developers"
