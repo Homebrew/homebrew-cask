@@ -9,7 +9,7 @@ cask "nx-studio" do
   homepage "https://imaging.nikon.com/imaging/lineup/software/nx_studio/"
 
   livecheck do
-    url "https://downloadcenter.nikonimglib.com/en/download/sw/247.html"
+    url "https://downloadcenter.nikonimglib.com/en/download/sw/251.html"
     regex(/NX\s+Studio\s+Version\s+(\d+(?:\.\d+)+)/i)
   end
 
