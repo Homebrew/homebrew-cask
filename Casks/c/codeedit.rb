@@ -10,15 +10,7 @@ cask "codeedit" do
 
   livecheck do
     url :url
-    regex(%r{/\D*?([^/]+?)/CodeEdit[._-]([a-f0-9]+)\.dmg$}i)
-    strategy :github_latest do |json, regex|
-      json["assets"]&.map do |asset|
-        match = asset["browser_download_url"]&.match(regex)
-        next if match.blank?
-
-        "#{match[1]},#{match[2]}"
-      end
-    end
+    strategy :github_latest
   end
 
   depends_on macos: ">= :ventura"
