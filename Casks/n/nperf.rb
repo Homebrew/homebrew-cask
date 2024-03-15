@@ -7,7 +7,7 @@ cask "nperf" do
 
   url "https://repo.nperf.com/macos/nperf/nPerf-#{arch}-#{version}.pkg"
   name "nPerf"
-  desc "Test the quality of your Internet connection up to 10 Gb/s"
+  desc "Internet speed test utility"
   homepage "https://www.nperf.com/"
 
   livecheck do
