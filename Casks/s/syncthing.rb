@@ -8,6 +8,12 @@ cask "syncthing" do
   desc "Real time file synchronisation software"
   homepage "https://syncthing.net/"
 
+  livecheck do
+    url :url
+    regex(/v?(\d+(?:[\.\-]\d+)+)/i)
+    strategy :github_latest
+  end
+
   auto_updates true
   depends_on macos: ">= :sierra"
 
