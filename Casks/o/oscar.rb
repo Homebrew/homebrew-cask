@@ -1,8 +1,8 @@
 cask "oscar" do
-  version "1.5.1"
-  sha256 "09b1ff0499b6ec90e22069ce44d68b1e94f7d456cb93a5817b412fa20c891580"
+  version "1.5.2"
+  sha256 "fd1a116169d510bb14515d183611fe26eb69ec4b17894ebbf3c1facae21b1749"
 
-  url "https://www.apneaboard.com/OSCAR/OSCAR-#{version}.dmg",
+  url "https://www.apneaboard.com/OSCAR/#{version}/OSCAR-#{version}.dmg",
       verified: "apneaboard.com/OSCAR/"
   name "OSCAR"
   desc "CPAP Analysis Reporter"
