@@ -90,14 +90,11 @@ Once it’s done check that it worked with:
 ```
 node --version
 ```
-NOTE:If you got error {node@16 is key only ,which means its not syntax into path.. } or If you have another version of node installed (e.g. previous version or windows version) then you need will to link the version we just installed to homebrew use the command: 
-![req5](https://github.com/DEvackemann/Web3-DApps/assets/150266045/924c417b-aab3-4244-9b8e-2e44b51c16be)
+If you got error {node@16 is key only ,which means its not syntax into path.. } or If you have another version of node installed (e.g. previous version or windows version) then you need will to link the version we just installed to homebrew use the command: 
 
 ```
 brew link node@16
 ```
-NOTE:If you got error like this 
-![Screenshot 2024-03-16 170550](https://github.com/DEvackemann/Web3-DApps/assets/150266045/73ec0f3c-8bad-41ae-8b53-478428dd57b6)
 
 ### file system errors
 
@@ -112,7 +109,7 @@ export LD_LIBRARY_PATH=/path/to/libicu:$LD_LIBRARY_PATH
 ```
 node --version
 ```
-Here is a helpful resource: [How to fix](https://github.com/DEvackemann/Web3-DApps).
+
 
 ---
 
