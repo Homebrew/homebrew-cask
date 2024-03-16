@@ -17,8 +17,8 @@ cask "simply-fortran" do
       sha256 "11d513fc26c367869e678e3a46f5ec80bae8e55747c1331c46c022deb388937e"
     end
     on_intel do
-      version "3.33.4066"
-      sha256 "3269ce4f7c38951d4b4d212332ee4fffe3eb41fbbe0497e51312b420ee797ef1"
+      version "3.34.4153"
+      sha256 "e51694b4311331824066f4e047d711e1a8e78d0270a726975253ca7ec941e52b"
     end
 
     url "https://download.simplyfortran.com/#{version.major_minor}/macos/simplyfortran-#{version}#{arch}.dmg"
