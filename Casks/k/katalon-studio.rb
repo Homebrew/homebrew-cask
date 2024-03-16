@@ -1,6 +1,6 @@
 cask "katalon-studio" do
   arch arm: "%20Arm64"
-  app_suffix = on_arch_conditional arm: "Arm64"
+  app_suffix = on_arch_conditional arm: " Arm64"
 
   version "9.3.2"
   sha256 arm:   "f80d385a4ba8b77d0fcadee4576b651766849e70d54cbd11ad30ad222be17e78",
