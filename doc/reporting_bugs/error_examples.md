@@ -1,6 +1,6 @@
 Examples of common errors and their solutions
 
-#### `curl` error:
+#### `curl` Error:
 
 If the error output includes something like
 
@@ -26,7 +26,7 @@ If the error output includes something like
 Error: Permission denied - (/usr/local/Caskroom/someapp/0.1/Someapp.app, /Applications/Someapp.app)
 ```
 
-the problem isn’t with Homebrew Cask itself, but some permissions on your system.
+the problem isn’t with Homebrew Cask itself, but some permissions on your system
 
 [How to fix](https://docs.brew.sh/Common-Issues#cask---permission-denied)
 
@@ -37,7 +37,7 @@ the problem isn’t with Homebrew Cask itself, but some permissions on your syst
 If the error output includes something like
 
 ```
-Error: Checksum for Cask 'your-cask' does not match.
+Error: Checksum for Cask 'your-cask' does not match
 
 Expected: 3dbc6c2205af35db5370c7642b9a2b833668880569b9c64a7f5a670bf9911130
 Actual: 526d747d99a93b760f7965e25a57ed61de9b93d566a0ba0c5f1c7e83719b20fd
@@ -80,3 +80,13 @@ it’s likely the software you’re trying to install is incompatible with your 
 #### Unlisted reason
 
 If your issue isn’t listed here, [go back](https://github.com/Homebrew/homebrew-cask/blob/HEAD/README.md#reporting-bugs) and pick `My problem isn’t listed`.
+
+---
+#### node@16 is key only ,which means its not syntax into
+If you have another version of node installed (e.g. previous version or windows version) then you need will to link the version we just installed to homebrew use the command: 
+
+```
+brew link node@16
+```
+[How to fix](https://docs.brew.sh/Node-for-Formula-Authors#running-npm-install)
+
