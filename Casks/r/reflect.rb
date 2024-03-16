@@ -1,9 +1,9 @@
 cask "reflect" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.1.5"
-  sha256 arm:   "1382a8824d9b7b85d16ba2d36ec418afef5db0248c404ddbe24740397c70dbdd",
-         intel: "be6f623748d7a780b38506ded3ad32e6c107666a5986e396b3b033c30f440d9f"
+  version "2.1.6"
+  sha256 arm:   "be677124b4ed83ea87f641b66ef6b4587ced4d0ef94e6bb039ebd3448213dac2",
+         intel: "f3150352f742b864c60463e1267b40ba96cd93f17bf8bd8d34976b6f8ba3f213"
 
   url "https://github.com/team-reflect/reflect-electron-updates/releases/download/v#{version}/Reflect-darwin-#{arch}-#{version}.zip",
       verified: "github.com/team-reflect/reflect-electron-updates/"
