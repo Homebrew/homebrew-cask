@@ -12,6 +12,7 @@ cask "menuwhere" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   app "Menuwhere.app"
 
   uninstall quit: "com.manytricks.Menuwhere"
