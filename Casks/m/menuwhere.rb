@@ -13,6 +13,7 @@ cask "menuwhere" do
   end
 
   auto_updates true
+
   app "Menuwhere.app"
 
   uninstall quit: "com.manytricks.Menuwhere"
