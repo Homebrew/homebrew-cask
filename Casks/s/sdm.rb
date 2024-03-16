@@ -1,6 +1,6 @@
 cask "sdm" do
-  version "21.57.0,5AD54481557DE5091AB70588859C8ADF0F47802A"
-  sha256 "ae95a56d82d4fcfb4df6cb781ed120d0e0adcca1c02717325965494d23eb2358"
+  version "21.58.0,B6C20DCF92EE8EDC175C27F62FE34EB1D624A498"
+  sha256 "b6af6fa552cfdd1c37b1651c1cbb104013a4b984ad4b6eec5e3c7200e67ff166"
 
   url "https://downloads.strongdm.com/builds/desktop/#{version.csv.first}/darwin/universal/#{version.csv.second}/SDM-#{version.csv.first}.universal.zip"
   name "sdm"
