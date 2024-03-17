@@ -16,7 +16,7 @@ cask "spyder" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :big_sur"
 
   app "Spyder.app"
 
@@ -26,8 +26,4 @@ cask "spyder" do
     "~/Library/Caches/Spyder",
     "~/Library/Saved Application State/org.spyder-ide.Spyder.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
