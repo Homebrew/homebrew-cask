@@ -1,11 +1,11 @@
 cask "spyder" do
-  arch arm: "arm64", intel: "x86_64"
+  arch arm: "_arm64"
 
-  version "5.5.1"
-  sha256 arm:   "ae399b7d27b2c33eae952e0eb48eb6b9949052ffea7dc57b1f6686a75915b01a",
-         intel: "024f35c289bb8dc17b450f67916e0cf0794787884c53857bfee48948370db348"
+  version "5.5.3"
+  sha256 arm:   "028b38a4d02f2186a5a61e0e6cc143643b0cb02bfd4e103b07e7d5af5e74fd9b",
+         intel: "38b395abd9c352feb48b5436026685f62aa46849e11969a4e8db08140773ca7b"
 
-  url "https://github.com/spyder-ide/spyder/releases/download/v#{version}/Spyder_#{arch}.dmg",
+  url "https://github.com/spyder-ide/spyder/releases/download/v#{version}/Spyder#{arch}.dmg",
       verified: "github.com/spyder-ide/spyder/"
   name "Spyder"
   desc "Scientific Python IDE"
