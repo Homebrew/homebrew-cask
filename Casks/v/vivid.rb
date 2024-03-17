@@ -10,9 +10,16 @@ cask "vivid" do
 
   livecheck do
     url "https://lumen-digital.com/apps/vivid/appcast.xml"
+    # this is a super hackish solution only for this release
+    # once a new version gets released the strategy may be changed to
+    # `strategy :sparkle, &:short_version`
     strategy :sparkle do |item|
       target_date = Time.parse("2024-03-12 10:39:00 +0000")
-      "#{item.short_version}build1" if (item.short_version == "2.9") && (target_date == item.pub_date)
+      if (item.short_version == "2.9") && (target_date == item.pub_date)
+        "#{item.short_version}build1"
+      else
+        item.short_version
+      end
     end
   end
 
