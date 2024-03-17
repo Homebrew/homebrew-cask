@@ -24,6 +24,6 @@ cask "syncovery" do
     "~/Library/Logs/Syncovery",
     "~/Library/Preferences/Syncovery",
     "~/Library/Preferences/Syncovery.ini",
-    "~/Saved Application State/com.company.Syncovery.savedState",
+    "~/Library/Saved Application State/com.company.Syncovery.savedState",
   ]
 end
