@@ -164,9 +164,9 @@ cask "gpg-suite-no-mail" do
             ]
 
   zap trash: [
-    "~/Containers/com.apple.mail/Data/Library/Frameworks/Libmacgpg.framework",
     "~/Library/Application Support/GPGTools",
     "~/Library/Caches/org.gpgtools.gpg*",
+    "~/Library/Containers/com.apple.mail/Data/Library/Frameworks/Libmacgpg.framework",
     "~/Library/Containers/com.apple.mail/Data/Library/Preferences/org.gpgtools.*",
     "~/Library/Frameworks/Libmacgpg.framework",
     "~/Library/HTTPStorages/org.gpgtools.*",
