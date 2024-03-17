@@ -10,9 +10,9 @@ cask "foldit" do
 
   livecheck do
     url "https://fold.it/releases"
-    regex (/<h2[^>]*?>[^<]*?(\d+)/i)
+    regex(/<h2[^>]*?>[^<]*?(\d+)/i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]}" }
+      page.scan(regex).map { |match| (match[0]).to_s }
     end
   end
 
