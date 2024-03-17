@@ -16,6 +16,6 @@ cask "nuage" do
     "~/Library/Caches/ch.laurinbrandner.nuage",
     "~/Library/Containers/ch.laurinbrandner.nuage",
     "~/Library/Logs/DiagnosticReports/Nuage*.crash",
-    "~/Preferences/ch.laurinbrandner.nuage.plist",
+    "~/Library/Preferences/ch.laurinbrandner.nuage.plist",
   ]
 end
