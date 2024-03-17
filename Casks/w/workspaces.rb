@@ -17,9 +17,9 @@ cask "workspaces" do
   app "Workspaces.app"
 
   zap trash: [
-    "~/Application Support/Workspaces",
     "~/Library/Application Scripts/com.apptorium.Workspaces*",
     "~/Library/Application Support/com.apptorium.Workspaces*",
+    "~/Library/Application Support/Workspaces",
     "~/Library/Caches/com.apptorium.Workspaces*",
     "~/Library/Containers/com.apptorium.Workspaces-Helper",
     "~/Library/Cookies/com.apptorium.Workspaces*.binarycookies",
