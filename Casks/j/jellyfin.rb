@@ -8,7 +8,7 @@ cask "jellyfin" do
   homepage "https://jellyfin.org/"
 
   livecheck do
-    url "https://repo.jellyfin.org/releases/server/macos/stable/"
+    url "https://repo.jellyfin.org/releases/server/macos/stable/installer/"
     regex(/href=.*?jellyfin[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
   end
 
