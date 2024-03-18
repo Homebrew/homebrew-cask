@@ -16,9 +16,7 @@ cask "background-music" do
 
   uninstall_postflight do
     system_command "/usr/bin/killall",
-                   args:         [
-                     "coreaudiod",
-                   ],
+                   args:         ["coreaudiod"],
                    sudo:         true,
                    must_succeed: true
   end
