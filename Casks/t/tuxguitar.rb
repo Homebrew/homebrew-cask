@@ -1,11 +1,14 @@
 cask "tuxguitar" do
-  version "1.5.6"
-  sha256 "fa53ebd78fa507bbb2a654e17efb6913957cf5eb8cceeb6da3423c82ff6e18ff"
+  version "1.6.1"
+  sha256 "44380e39dbbc711aec2e5d5b0b9ba0e128024980919e27f0d934a29e26ea3b8c"
 
-  url "https://downloads.sourceforge.net/tuxguitar/tuxguitar-#{version}-macosx-cocoa-64.app.tar.gz"
+  url "https://github.com/helge17/tuxguitar/releases/download/#{version}/tuxguitar-#{version}-macosx-swt-cocoa-x86_64.app.tar.gz",
+      verified: "github.com/helge17/tuxguitar/"
   name "TuxGuitar"
   desc "Multitrack guitar tablature editor and player"
-  homepage "https://sourceforge.net/projects/tuxguitar/"
+  homepage "https://www.tuxguitar.app/"
 
   app "tuxguitar-#{version}-macosx-cocoa-64.app"
+
+  zap trash: "~/Library/Application Support/tuxguitar"
 end
