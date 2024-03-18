@@ -1,6 +1,6 @@
 cask "active-trader-pro" do
-  version "1.0.54"
-  sha256 "d28d4fabecfd23813029553f08ca189a232101bbc5832894726e462196a52c18"
+  version "1.0.55"
+  sha256 "394689bce9630cd949a40ae9914533acaf028f8d08019833dbb7a49f3416866e"
 
   url "https://www.fidelity.com/webcontent/Codeweaver/activetrader-#{version}.zip"
   name "Active Trader Pro"
