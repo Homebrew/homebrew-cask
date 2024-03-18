@@ -17,12 +17,8 @@ cask "blackhole-64ch" do
   pkg "BlackHole64ch.v#{version}.pkg"
 
   uninstall_postflight do
-    system_command "/bin/launchctl",
-                   args:         [
-                     "kickstart",
-                     "-kp",
-                     "system/com.apple.audio.coreaudiod",
-                   ],
+    system_command "/usr/bin/killall",
+                   args:         ["coreaudiod"],
                    sudo:         true,
                    must_succeed: true
   end
