@@ -9,8 +9,7 @@ cask "qq" do
 
   livecheck do
     url "https://im.qq.com/rainbow/ntQQDownload/"
-    regex(/QQ_([\d\._]+)\.dmg/i)
-    strategy :page_match
+    regex(/QQ[._-]v?(\d+(?:[._]\d+)+)\.dmg/i)
   end
 
   auto_updates true
