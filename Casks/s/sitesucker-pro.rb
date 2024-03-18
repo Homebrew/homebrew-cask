@@ -8,8 +8,8 @@ cask "sitesucker-pro" do
     end
   end
   on_catalina :or_newer do
-    version "5.3"
-    sha256 "f2f8ac5667347f2eac851c4d6feab42063bc49ee86e46742e40ea62faa443e20"
+    version "5.3.1"
+    sha256 "8ab1fb62df555d67fe6571a09d2aaa0fa15635c10f9168b9fe0542d2ed647112"
 
     livecheck do
       url "https://ricks-apps.com/osx/sitesucker/history.html"
