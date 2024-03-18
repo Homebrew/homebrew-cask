@@ -2,23 +2,23 @@ cask "hma-pro-vpn" do
   version :latest
   sha256 :no_check
 
-  url "https://s-mac-sl.avcdn.net/macosx/privax/HMA-Pro-VPN.dmg",
+  url "https://s-mac-sl.avcdn.net/macosx/privax/HMA-VPN.dmg",
       verified: "s-mac-sl.avcdn.net/"
-  name "HMA! Pro VPN"
-  name "HideMyAss! Pro VPN"
-  homepage "https://www.hidemyass.com/index"
+  name "HMA! VPN"
+  desc "VPN program from Hide My Ass"
+  homepage "https://www.hidemyass.com/index.html"
 
-  installer manual: "Install HMA! Pro VPN.app"
+  installer manual: "Install HMA VPN.pkg"
 
-  uninstall launchctl: "com.privax.hmaprovpn.helper",
-            quit:      "com.privax.hmaprovpn.helper",
+  uninstall launchctl: "com.privax.osx.provpn.helper",
+            quit:      "com.privax.osx.provpn.helper",
             delete:    [
-              "/Applications/HMA! Pro VPN.app",
-              "/Library/PrivilegedHelperTools/com.privax.hmaprovpn.helper",
+              "/Applications/HMA VPN.app",
+              "/Library/PrivilegedHelperTools/com.privax.osx.provpn.helper",
             ]
 
   zap trash: [
-    "~/Library/Preferences/com.privax.hmaprovpn.plist",
-    "~/Library/Saved Application State/com.privax.hmaprovpn.savedState",
+    "~/Library/Preferences/com.privax.osx.provpn.helper.plist",
+    "~/Library/Saved Application State/com.privax.osx.provpn.helper.savedState",
   ]
 end
