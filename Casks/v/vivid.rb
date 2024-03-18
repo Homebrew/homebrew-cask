@@ -1,6 +1,6 @@
 cask "vivid" do
   version "2.9"
-  sha256 "f864d540f8ec2add56590956bf33b9979302dec0314c69451274e0921172d291"
+  sha256 "45f180d875f38882eac81293fc524458ed6f1dcffac4927cf28cfbb8c617dcb4"
 
   url "https://lumen-digital.com/apps/vivid/releases/Vivid#{version}.zip",
       verified: "lumen-digital.com/apps/vivid/releases/"
@@ -12,6 +12,8 @@ cask "vivid" do
     url "https://lumen-digital.com/apps/vivid/appcast.xml"
     strategy :sparkle, &:short_version
   end
+
+  depends_on macos: ">= :monterey"
 
   app "Vivid.app"
 
