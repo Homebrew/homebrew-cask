@@ -15,11 +15,9 @@ cask "background-music" do
   pkg "BackgroundMusic-#{version}.pkg"
 
   uninstall_postflight do
-    system_command "/bin/launchctl",
+    system_command "/usr/bin/killall",
                    args:         [
-                     "kickstart",
-                     "-kp",
-                     "system/com.apple.audio.coreaudiod",
+                     "coreaudiod",
                    ],
                    sudo:         true,
                    must_succeed: true
