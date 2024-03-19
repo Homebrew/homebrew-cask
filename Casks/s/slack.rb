@@ -20,9 +20,9 @@ cask "slack" do
     end
   end
   on_big_sur :or_newer do
-    version "4.36.140"
-    sha256 arm:   "ddde6385b066c76e924bafd7edccb47cf6a6492d72cd174c652d0c32effc1585",
-           intel: "4dc5866ae5ce5d412bb96df930cfcc2228a81f4861db3f4239903e35d4ef2e70"
+    version "4.37.94"
+    sha256 arm:   "8cc96cf8dcf175cdd59d86a3aadea30546dce92be113611d80fdcb45f72b043e",
+           intel: "afc80c3c7104c78e11ac32e4dfedd4e296f2e261ed460aa8761561774eda6707"
 
     livecheck do
       url "https://slack.com/ssb/download-osx"
@@ -37,7 +37,7 @@ cask "slack" do
   homepage "https://slack.com/"
 
   auto_updates true
-  conflicts_with cask: "homebrew/cask-versions/slack-beta"
+  conflicts_with cask: "slack-beta"
   depends_on macos: ">= :mojave"
 
   app "Slack.app"
