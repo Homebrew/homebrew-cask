@@ -1,15 +1,15 @@
 cask "rekordbox" do
-  version "6.8.2,20240117151901"
-  sha256 "a5c9f517de1f860a1497832540932dc8110375c4c253bfeb3b09bb2fd32b48b5"
+  version "6.8.3,20240311121350"
+  sha256 "73f3abb92c8992297472b34539509588246a4ccc7f4baed551375ad29ba2ad1a"
 
-  url "https://cdn.rekordbox.com/files/#{version.csv.second}/Install_rekordbox_#{version.csv.first.dots_to_underscores}.pkg_.zip"
+  url "https://cdn.rekordbox.com/files/#{version.csv.second}/Install_rekordbox_#{version.csv.first.dots_to_underscores}.zip"
   name "rekordbox"
   desc "Free Dj app to prepare and manage your music files"
   homepage "https://rekordbox.com/en/"
 
   livecheck do
     url "https://rekordbox.com/en/download/"
-    regex(%r{data-url=.*?/(\d+)/Install[._-]rekordbox[._-]v?(\d+(?:[._]\d+)+)\.pkg_\.zip}i)
+    regex(%r{data-url=.*?/(\d+)/Install[._-]rekordbox[._-]v?(\d+(?:[._]\d+)+)\.zip}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match.second.tr("_", ".")},#{match.first}" }
     end
