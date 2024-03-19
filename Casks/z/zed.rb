@@ -13,7 +13,6 @@ cask "zed" do
   end
 
   auto_updates true
-  conflicts_with cask: "zed-preview"
   depends_on macos: ">= :catalina"
 
   app "Zed.app"
