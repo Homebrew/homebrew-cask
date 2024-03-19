@@ -37,7 +37,7 @@ cask "slack" do
   homepage "https://slack.com/"
 
   auto_updates true
-  conflicts_with cask: "homebrew/cask-versions/slack-beta"
+  conflicts_with cask: "slack-beta"
   depends_on macos: ">= :mojave"
 
   app "Slack.app"
