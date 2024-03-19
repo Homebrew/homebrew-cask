@@ -1,4 +1,4 @@
-cask "hma-pro-vpn" do
+cask "hma-vpn" do
   version :latest
   sha256 :no_check
 
