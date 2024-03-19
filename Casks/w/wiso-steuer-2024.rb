@@ -1,6 +1,6 @@
 cask "wiso-steuer-2024" do
   # NOTE: "2024" is not a version number, but an intrinsic part of the product name
-  version "31.04.3630"
+  version "31.05.3670"
   sha256 :no_check
 
   url "https://download.buhl.de/ESD/Steuer/2024/WISOSteuer2024.dmg"
