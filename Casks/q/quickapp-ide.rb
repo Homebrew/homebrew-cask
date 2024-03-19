@@ -9,7 +9,7 @@ cask "quickapp-ide" do
 
   livecheck do
     url "https://www.quickapp.cn/api/ide/rpk/getPackage"
-    regex(/quickapp-ide-(\d+(?:\.\d+)*)\.pkg/i)
+    regex(/quickapp[._-]ide[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
   pkg "quickapp-ide-#{version}.pkg"
