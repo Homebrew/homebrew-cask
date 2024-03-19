@@ -1,6 +1,6 @@
 cask "codeexpander" do
-  version "4.3.6"
-  sha256 "ed010ce433d31b9a04f82f86474f2ddcda87092e2c9d2060be2bc2e091683167"
+  version "4.3.8"
+  sha256 "993849b21822b62c29b96d70e7ee306e329ed963d0560ca2ecc2b5e7e23d29e1"
 
   url "https://github.com/oncework/codeexpander/releases/download/#{version.major_minor}.x/CodeExpander-#{version}.dmg"
   name "CodeExpander"

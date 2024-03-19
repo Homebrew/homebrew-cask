@@ -1,6 +1,6 @@
 cask "equinox" do
-  version "2.0"
-  sha256 "6f10fecbc09619a80b78980cef476d78e55c7ef02cac07e75816a7c7be8113b1"
+  version "3.0"
+  sha256 "b35388a43fe481e8acd391c0d644cb4c7be77e48f7ca049ddb8ef70dee6326de"
 
   url "https://github.com/rlxone/Equinox/releases/download/v#{version}/Equinox.dmg",
       verified: "github.com/rlxone/Equinox/"
