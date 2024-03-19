@@ -9,7 +9,6 @@ cask "quickapp-ide" do
 
   livecheck do
     url "https://www.quickapp.cn/api/ide/rpk/getPackage"
-    strategy :page_match
     regex(/quickapp-ide-(\d+(?:\.\d+)*)\.pkg/i)
   end
 
