@@ -9,8 +9,7 @@ cask "zc" do
 
   livecheck do
     url "https://docs.zectonal.com/zc/releases/download/index.html"
-    strategy :page_match
-    regex(/href=.*v(\d+(?:\.\d+)*).*/i)
+    regex(%r{href=.*?download/v?(\d+(?:\.\d+)+)/index.html}i)
   end
 
   binary "zc"
