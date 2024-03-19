@@ -1,6 +1,6 @@
 cask "zed" do
-  version "0.126.2"
-  sha256 "4a528714b19c08c59d2dd1c2d13e681cc297623e38a58bcf33b8c2b12c7e07c1"
+  version "0.126.3"
+  sha256 "c1b0a28cae6cc8fc6065e36062e673b11fb7602da78db21cfa68b120c1bae4bc"
 
   url "https://zed.dev/api/releases/stable/#{version}/Zed.dmg"
   name "Zed"
@@ -13,7 +13,6 @@ cask "zed" do
   end
 
   auto_updates true
-  conflicts_with cask: "zed-preview"
   depends_on macos: ">= :catalina"
 
   app "Zed.app"
