@@ -1,9 +1,9 @@
 cask "devkinsta" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.13.1"
-  sha256 arm:   "863e0abc1e983e024dc5bd3d7b3365f65a5aa80e687a22ba7947eeb4b3452fce",
-         intel: "81d4762ac92f54aa066900dcabde61ce473a0e059329a6f98ac1e0126cab80bd"
+  version "2.13.2"
+  sha256 arm:   "d66d4315b899e7923027a743cefd9139f1619d119034a4e825e9788be8d7ebf3",
+         intel: "64bf2328b9795b993edb1c0ca0b8f63126d0e33474f48770c48dd8fe8bbdd108"
 
   url "https://devkinsta-updates.s3.amazonaws.com/DevKinsta-#{version}-#{arch}.zip",
       verified: "devkinsta-updates.s3.amazonaws.com/"
