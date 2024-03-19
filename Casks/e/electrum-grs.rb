@@ -1,6 +1,6 @@
 cask "electrum-grs" do
-  version "4.4.4"
-  sha256 "d3f912d12b6468bdebcd63353d785cabd5efe19a36627439fac05f67e0fe37f9"
+  version "4.5.4"
+  sha256 "87fd71fe9cf8e2f185664778fd0106056c34a5c545d40b50322b91c705702cd1"
 
   url "https://github.com/groestlcoin/electrum-grs/releases/download/v#{version}/electrum-grs-#{version}.dmg",
       verified: "github.com/groestlcoin/electrum-grs/"
