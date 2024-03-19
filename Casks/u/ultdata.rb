@@ -1,5 +1,5 @@
 cask "ultdata" do
-  version "9.7.25.19"
+  version "9.7.26.3"
   sha256 :no_check
 
   url "https://download.tenorshare.com/downloads/ultdata-ios-mac.dmg"
