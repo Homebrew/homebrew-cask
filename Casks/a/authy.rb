@@ -7,11 +7,6 @@ cask "authy" do
   desc "Two-factor authentication software"
   homepage "https://authy.com/"
 
-  livecheck do
-    url "https://electron.authy.com/download?channel=stable&arch=x64&platform=darwin&version=latest&product=authy"
-    strategy :header_match
-  end
-
   deprecate! date: "2024-03-19", because: :discontinued
 
   auto_updates true
