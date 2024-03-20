@@ -28,6 +28,11 @@ cask "ghidra" do
     FileUtils.mv(staged_path, "#{caskroom_path}/#{version.csv.first}-#{version.csv.second}")
   end
 
+  postflight do
+    #The decompile and sleigh binaries need to have the quarantine flag taken off (equivalent of right clicking and clicking open from Finder before Ghidra can use them)
+    xattr -d com.apple.quarantine "#{caskroom_path}/#{version.csv.first}-#{version.csv.second}/ghidra_#{version.csv.first}_PUBLIC/Ghidra/Features/Decompiler/os/mac_{arm,x86}_64/{decompile,sleigh}"
+  end
+
   uninstall_preflight do
     FileUtils.mv("#{caskroom_path}/#{version.csv.first}-#{version.csv.second}", staged_path)
   end
