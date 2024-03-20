@@ -30,6 +30,7 @@ cask "ghidra" do
 
   postflight do
     # The decompiler binaries need the quarantine flag taken off before Ghidra can use them
+    # Its the same thing as right clicking in Finder and clicking Open, and confirming on the dialog
     system("xattr -d com.apple.quarantine '#{caskroom_path}/#{version.csv.first}-#{version.csv.second}/ghidra_#{version.csv.first}_PUBLIC/Ghidra/Features/Decompiler/os/mac_arm_64/decompile'")
     system("xattr -d com.apple.quarantine '#{caskroom_path}/#{version.csv.first}-#{version.csv.second}/ghidra_#{version.csv.first}_PUBLIC/Ghidra/Features/Decompiler/os/mac_arm_64/sleigh'")
     system("xattr -d com.apple.quarantine '#{caskroom_path}/#{version.csv.first}-#{version.csv.second}/ghidra_#{version.csv.first}_PUBLIC/Ghidra/Features/Decompiler/os/mac_x86_64/decompile'")
