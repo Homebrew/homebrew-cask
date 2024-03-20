@@ -12,7 +12,7 @@ cask "vpn-enabler" do
     url "https://cutedgesystems.com/downloads/VPNEnablerForSierra.zip"
   end
   on_high_sierra :or_newer do
-    version "5.2"
+    version "5.2,1"
     sha256 :no_check
 
     url "https://cutedgesystems.com/downloads/VPNEnablerForHighSierra.zip"
