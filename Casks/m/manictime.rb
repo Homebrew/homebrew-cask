@@ -8,7 +8,7 @@ cask "manictime" do
   url "https://cdn.manictime.com/setup/mac/v#{version.dots_to_underscores}/manictime-#{version}-osx-#{arch}.dmg"
   name "ManicTime"
   desc "Time tracker that automatically collects computer usage data"
-  homepage "https://www.manictime.com/Mac"
+  homepage "https://www.manictime.com/"
 
   # The download page includes a link to a beta version, so instead of
   # mapping over the versions present on the page, we return the first match
