@@ -5,15 +5,12 @@ cask "foldit" do
   url "https://files.ipd.uw.edu/pub/foldit/Foldit-macos_x64.dmg",
       verified: "files.ipd.uw.edu/pub/foldit/"
   name "Foldit"
-  desc "Crowdsourcing, protein folding computer game"
+  desc "Protein folding computer game"
   homepage "https://fold.it/"
 
   livecheck do
     url "https://fold.it/releases"
     regex(/<h2[^>]*?>[^<]*?(\d+)/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| (match[0]).to_s }
-    end
   end
 
   auto_updates true
