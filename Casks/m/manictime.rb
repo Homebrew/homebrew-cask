@@ -10,9 +10,18 @@ cask "manictime" do
   desc "Time tracker that automatically collects computer usage data"
   homepage "https://www.manictime.com/Mac"
 
+  # The download page includes a link to a beta version, so instead of
+  # mapping over the versions present on the page, we returrn the first match
+  # which is the latest stable version
   livecheck do
-    url "https://www.manictime.com/mac/download"
+    url "https://www.manictime.com/download/mac"
     regex(/manictime[._-]v?(\d+(?:\.\d+)+)[._-]osx[._-]#{arch}\.dmg/i)
+    strategy :page_match do |page, regex|
+      match = page.match(regex)
+      next if match.blank?
+
+      match[1]
+    end
   end
 
   depends_on macos: ">= :mojave"
