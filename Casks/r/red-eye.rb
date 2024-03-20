@@ -1,5 +1,5 @@
 cask "red-eye" do
-  version "1.2.0"
+  version "1.1.0,15"
   sha256 :no_check
 
   url "https://web.archive.org/web/20200814031954/https://www.hexedbits.com/downloads/redeye.zip",
