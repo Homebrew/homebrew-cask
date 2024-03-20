@@ -11,7 +11,7 @@ cask "manictime" do
   homepage "https://www.manictime.com/Mac"
 
   # The download page includes a link to a beta version, so instead of
-  # mapping over the versions present on the page, we returrn the first match
+  # mapping over the versions present on the page, we return the first match
   # which is the latest stable version
   livecheck do
     url "https://www.manictime.com/download/mac"
@@ -30,5 +30,11 @@ cask "manictime" do
 
   uninstall pkgutil: "com.finkit.manictime.tracker"
 
-  zap trash: "~/Library/Application Support/ManicTime"
+  zap trash: [
+    "~/.local/share/manictime",
+    "~/Library/Application Support/com.apple.sharedfilelist/*/com.finkit.manictime.tracker.sfl*",
+    "~/Library/Application Support/ManicTime",
+    "~/Library/LaunchAgents/com.ManicTime.mac.start.plist",
+    "~/Library/Preferences/com.finkit.manictime.tracker.plist",
+  ]
 end
