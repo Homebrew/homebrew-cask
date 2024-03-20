@@ -7,10 +7,7 @@ cask "quickbooks-online" do
   desc "Accounting software"
   homepage "https://qbo.intuit.com/"
 
-  livecheck do
-    url "https://http-download.intuit.com/http.intuit/CMO/qbo_client_web/static/release/mac/latest-mac.yml"
-    strategy :electron_builder
-  end
+  disable! date: "2024-03-20", because: :no_longer_available
 
   app "QuickBooks.app"
 end
