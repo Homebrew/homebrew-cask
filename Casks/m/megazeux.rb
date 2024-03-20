@@ -7,6 +7,11 @@ cask "megazeux" do
   desc "ASCII-based game creation system"
   homepage "https://www.digitalmzx.com/"
 
+  livecheck do
+    url "https://github.com/AliceLR/megazeux"
+    strategy :git
+  end
+
   app "MegaZeux.app"
   artifact "Documentation", target: "~/Library/Application Support/MegaZeux/Documentation"
 
