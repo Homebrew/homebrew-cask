@@ -8,12 +8,6 @@ cask "jamie" do
   desc "AI-powered meeting notes"
   homepage "https://meetjamie.ai/"
 
-  # Remove on next release
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   auto_updates true
   depends_on macos: ">= :catalina"
 
