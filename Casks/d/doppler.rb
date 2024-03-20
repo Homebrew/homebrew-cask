@@ -1,5 +1,5 @@
 cask "doppler" do
-  version "2.1.18"
+  version "2.1.20"
   sha256 :no_check
 
   url "https://updates.brushedtype.co/doppler-macos/download"
