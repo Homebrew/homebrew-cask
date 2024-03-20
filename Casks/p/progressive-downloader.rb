@@ -9,7 +9,7 @@ cask "progressive-downloader" do
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?/(\d+(?:\.\d+)+)/PSD[._-]?.+\.dmg}i)
+    regex(%r{href=.*?/(\d+(?:\.\d+)+)/PSD[^"' >]*?\.dmg}i)
   end
 
   depends_on macos: ">= :high_sierra"
