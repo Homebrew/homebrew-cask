@@ -1,6 +1,6 @@
 cask "anypointstudio" do
-  version "7.16.0"
-  sha256 "041733deee14a82dc5d2d9258fd3a68f63fde3ce6a6d91fd688a611d5d8e433a"
+  version "7.17.0"
+  sha256 "9235c1d315ad31a6189baab480bb109756a550874e988d54d6d01a940d9b5146"
 
   vsuffix = (version.patch == "0") ? "GA" : "U#{version.patch}"
 
