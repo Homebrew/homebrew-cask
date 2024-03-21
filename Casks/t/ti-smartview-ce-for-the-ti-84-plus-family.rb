@@ -16,7 +16,7 @@ cask "ti-smartview-ce-for-the-ti-84-plus-family" do
 
   pkg "TI-SmartView-CE-84-#{version.csv.first}.pkg"
 
-  uninstall pkgutil: "com.ti.et.smartview.TISmartViewCE84"
+  uninstall pkgutil: "com.ti.et.smartview.TI-SmartViewCE84"
 
   zap trash: [
     "~/Library/Logs/Texas Instruments/TI-SmartView CE for the TI-84 Plus Family",
