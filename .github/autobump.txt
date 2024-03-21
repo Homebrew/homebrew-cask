@@ -154,6 +154,7 @@ multiapp
 multiviewer-for-f1
 netron
 notesnook
+notion
 ollama
 onedrive
 openaudible
