@@ -5,10 +5,10 @@ cask "webplotdigitizer" do
   url "https://automeris.io/downloads/WebPlotDigitizer-#{version}-darwin-x64.zip"
   name "WebPlotDigitizer"
   desc "Extract numerical data from plot images"
-  homepage "https://automeris.io/WebPlotDigitizer/"
+  homepage "https://automeris.io/WebPlotDigitizer.html"
 
   livecheck do
-    url "https://automeris.io/WebPlotDigitizer/download.html"
+    url "https://automeris.io/download.html"
     regex(%r{href=.*?/WebPlotDigitizer-(\d+(?:\.\d+)*)-darwin-x64\.zip}i)
   end
 
