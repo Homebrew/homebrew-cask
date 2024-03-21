@@ -1,11 +1,8 @@
 cask "steam-plus-plus" do
-  arch arm: "arm64", intel: "x64"
+  version "3.0.0-rc.7"
+  sha256 "0010aa2f5323df74fafbe8e158e01243018edac3dcb26d2aaea2cbf8819cfa84"
 
-  version "2.8.6"
-  sha256 arm:   "772cfb10035f5dc290aa6a1e6f373826db4f45e8bd65e4d06083e4973b576dad",
-         intel: "6c03b9358532254c2ae3329fcdbdad58c165f08343f759064f3a5c20bc59212e"
-
-  url "https://github.com/BeyondDimension/SteamTools/releases/download/#{version}/Steam++_macos_#{arch}_v#{version}.dmg",
+  url "https://github.com/BeyondDimension/SteamTools/releases/download/#{version}/Steam++_v#{version}_macos.dmg",
       verified: "github.com/BeyondDimension/SteamTools/"
   name "Steam++"
   desc "Steam helper tools"
@@ -14,6 +11,7 @@ cask "steam-plus-plus" do
   livecheck do
     url :url
     strategy :github_latest
+    regex(/v?(\d+(?:\.\d+)+(?:-rc\.(\d+)?))/i)
   end
 
   depends_on macos: ">= :mojave"
