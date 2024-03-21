@@ -6,7 +6,7 @@ cask "ti-smartview-ce-for-the-ti-84-plus-family" do
       verified: "d13g8g4x8s9rc1.cloudfront.net/downloads/files/cdn/smartview/84ce/"
   name "TI SmartView CE Emulator Software for the TI-84 Plus Family"
   desc "Software to emulate the TI 84 Plus family of calculators"
-  homepage "https://education.ti.com/en-au/products/computer-software/ti-smartview-ce-for-84"
+  homepage "https://education.ti.com/en/products/computer-software/ti-smartview-ce-for-84"
 
   livecheck do
     url "https://education.ti.com/smartview/downloads/84cemac"
