@@ -1,6 +1,6 @@
 cask "dcp-o-matic-kdm-creator" do
-  version "2.16.78"
-  sha256 "2a3e5c18b1c30ceeea058cb22d9babf34344c30b8d25c8a74422c229c8e07583"
+  version "2.16.79"
+  sha256 "eab51f46d3e66e3d79109e43c95b639fe38038e5d9c15f4e4093676497c2e37b"
 
   url "https://dcpomatic.com/dl.php?id=osx-10.10-kdm&version=#{version}"
   name "DCP-o-matic KDM Creator"
