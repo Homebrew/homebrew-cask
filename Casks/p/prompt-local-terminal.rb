@@ -9,7 +9,7 @@ cask "prompt-local-terminal" do
 
   livecheck do
     url "https://download-cdn.panic.com/prompt/"
-    regex(%r{href="/prompt/Install%20Prompt%20Local%20Terminal%20(\d+\.\d+\.\d+)\.zip"}i)
+    regex(/href=.*?Install%20Prompt%20Local%20Terminal%20v?(\d+(?:\.\d+)+)\.zip/i)
   end
 
   depends_on macos: ">= :ventura"
