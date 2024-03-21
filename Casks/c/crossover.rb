@@ -1,6 +1,6 @@
 cask "crossover" do
-  version "24.0.0"
-  sha256 "4965e0a407c28d9fc3145fdc40bf32e6f64b29f80c2eaec7a4e6d70f2d22e716"
+  version "24.0.1"
+  sha256 "8ccf4869f408cc4ceb740db685f51e4e34b041e5b42aea4406dd529f4a4fcf1a"
 
   url "https://media.codeweavers.com/pub/crossover/cxmac/demo/crossover-#{version}.zip"
   name "CrossOver"
