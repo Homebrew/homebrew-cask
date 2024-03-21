@@ -15,7 +15,7 @@ cask "softraid" do
 
   depends_on macos: ">= :mojave"
 
-  app "SoftRAID #{version}/SoftRAID.app"
+  app "SoftRAID.app"
 
   zap trash: [
     "~/Library/Caches/com.apple.helpd/Generated/com.softraid.SoftRAID.help*#{version}/",
