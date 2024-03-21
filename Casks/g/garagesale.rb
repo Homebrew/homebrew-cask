@@ -1,6 +1,6 @@
 cask "garagesale" do
-  version "9.7.2"
-  sha256 "c588bb0e7fee4f37d075a00fe3c38d4e1bd68206d87e50f8496258be1c65f664"
+  version "9.7.3"
+  sha256 "52631882b32ac54ca3ce6db8f109e03314d03b31f4cad2213b9e50cc93f7918f"
 
   url "https://downloads.iwascoding.com/downloads/GarageSale_#{version}.dmg"
   name "GarageSale"
@@ -17,8 +17,8 @@ cask "garagesale" do
   app "GarageSale.app"
 
   zap trash: [
-    "~/Library/Application Scripts/com.iwascoding.garagesale8",
-    "~/Library/Caches/com.apple.helpd/Generated/com.iwascoding.garagesale8.help*8.4",
-    "~/Library/Containers/com.iwascoding.garagesale8",
+    "~/Library/Application Scripts/com.iwascoding.garagesale*",
+    "~/Library/Caches/com.apple.helpd/Generated/com.iwascoding.garagesale*",
+    "~/Library/Containers/com.iwascoding.garagesale*",
   ]
 end
