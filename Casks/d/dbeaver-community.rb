@@ -20,6 +20,7 @@ cask "dbeaver-community" do
   auto_updates true
 
   app "DBeaver.app"
+  binary "#{appdir}/DBeaver.app/Contents/MacOS/dbeaver"
 
   uninstall signal: ["TERM", "org.jkiss.dbeaver.core.product"]
 
