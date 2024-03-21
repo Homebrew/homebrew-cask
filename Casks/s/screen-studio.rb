@@ -12,9 +12,9 @@ cask "screen-studio" do
   homepage "https://www.screen.studio/"
 
   livecheck do
-    url "https://www.screen.studio/api/app-version"
+    url "https://www.screen.studio/api/trpc/appInfo.latestVersionInfo?input=%7B%22isBeta%22%3Afalse%7D"
     strategy :json do |json|
-      json["version"]
+      json.dig("result", "data", "version")
     end
   end
 
