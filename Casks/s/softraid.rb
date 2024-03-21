@@ -13,7 +13,7 @@ cask "softraid" do
     strategy :header_match
   end
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :mojave"
 
   app "SoftRAID #{version}/SoftRAID #{version}.app"
 
