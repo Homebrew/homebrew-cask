@@ -13,13 +13,8 @@ cask "krisp" do
 
   livecheck do
     url "https://download.krisp.ai/mac?package=package_#{livecheck_arch}"
-    regex(%r{/Krisp[._-](\d+(?:\.\d+)+)[._-]#{arch}\.pkg}i)
-    strategy :header_match do |headers, regex|
-      match = headers["location"]&.match(regex)
-      next if match.blank?
-
-      match[1]
-    end
+    regex(%r{/Krisp[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.pkg}i)
+    strategy :header_match
   end
 
   auto_updates true
