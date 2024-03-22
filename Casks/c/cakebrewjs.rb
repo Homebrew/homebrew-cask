@@ -1,15 +1,15 @@
 cask "cakebrewjs" do
-  version "1.4.4"
-  sha256 "620aa8621df50f776bb21f9e435e0c0e77ffc0f836007ab35613b8acbd0400f1"
+  version "2.0.0"
+  sha256 "caaaba2f5484dcf91d31844f694ec6a206577a2f773586e80ef317253de30111"
 
-  url "https://downloads.sourceforge.net/cakebrewjs/v#{version}/cakebrewjs-#{version}-mac.zip"
+  url "https://downloads.sourceforge.net/cakebrewjs/cakebrewjs-#{version}-Darwin.dmg"
   name "cakebrewjs"
-  desc "Homebrew GUI app written in electron"
+  desc "Homebrew GUI app"
   homepage "https://sourceforge.net/projects/cakebrewjs/"
 
   livecheck do
     url "https://sourceforge.net/projects/cakebrewjs/rss?"
-    regex(/cakebrewjs-(\d+(?:\.\d+)+)-mac\.zip/i)
+    regex(/cakebrewjs-(\d+(?:\.\d+)+)-Darwin\.dmg/i)
     strategy :page_match
   end
 
@@ -20,5 +20,6 @@ cask "cakebrewjs" do
     "~/Library/Caches/cakebrewjs",
     "~/Library/Preferences/com.electron.cakebrewjs.helper.plist",
     "~/Library/Preferences/com.electron.cakebrewjs.plist",
+    "~/Library/Preferences/com.shemeshg.Cakebrewjs2.plist",
   ]
 end
