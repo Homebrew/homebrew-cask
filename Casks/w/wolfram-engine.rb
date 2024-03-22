@@ -1,6 +1,6 @@
 cask "wolfram-engine" do
-  version "13.2.0.0"
-  sha256 "90233c70a56a104775666e2559f0126a074a6adf298aec949b316f51cb6372bc"
+  version "14.0.0.0"
+  sha256 "6f281cc645d63e98180327f084fda3becd78ae5c977e2026f71ed48e2999d381"
 
   url "https://files.wolframcdn.com/packages/Homebrew/#{version}/WolframEngine_#{version.major_minor_patch}_MAC.dmg",
       verified: "files.wolframcdn.com/packages/Homebrew/"
