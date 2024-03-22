@@ -10,10 +10,6 @@ cask "galaxybudsclient" do
   desc "Unofficial manager for the Buds, Buds+, Buds Live and Buds Pro"
   homepage "https://github.com/ThePBone/GalaxyBudsClient"
 
-  livecheck do
-    url :url
-  end
-
   depends_on macos: ">= :sonoma"
 
   pkg "GalaxyBudsClient_macOS-#{arch}.pkg"
