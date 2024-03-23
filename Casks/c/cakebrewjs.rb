@@ -1,6 +1,6 @@
 cask "cakebrewjs" do
-  version "2.0.0"
-  sha256 "caaaba2f5484dcf91d31844f694ec6a206577a2f773586e80ef317253de30111"
+  version "2.1.0"
+  sha256 "3e03980d07ddc86b44767e6cce9a5ffda302443579128eafd7e9bb777770cd83"
 
   url "https://downloads.sourceforge.net/cakebrewjs/cakebrewjs-#{version}-Darwin.dmg"
   name "cakebrewjs"
@@ -18,6 +18,7 @@ cask "cakebrewjs" do
   zap trash: [
     "~/Library/Application Support/cakebrewjs",
     "~/Library/Caches/cakebrewjs",
+    "~/Library/Caches/CakebrewJs2App",
     "~/Library/Preferences/com.electron.cakebrewjs.helper.plist",
     "~/Library/Preferences/com.electron.cakebrewjs.plist",
     "~/Library/Preferences/com.shemeshg.Cakebrewjs2.plist",
