@@ -18,6 +18,7 @@ cask "cakebrewjs" do
   zap trash: [
     "~/Library/Application Support/cakebrewjs",
     "~/Library/Caches/cakebrewjs",
+    "~/Library/Caches/CakebrewJs2App",
     "~/Library/Preferences/com.electron.cakebrewjs.helper.plist",
     "~/Library/Preferences/com.electron.cakebrewjs.plist",
     "~/Library/Preferences/com.shemeshg.Cakebrewjs2.plist",
