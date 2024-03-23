@@ -1,8 +1,8 @@
 cask "vv" do
-  version "2.4.10"
-  sha256 "b6060d1105745640728fd7cdcc6a312a1d497a29cb30e5575cfb3318cd9577e8"
+  version "2.6.0"
+  sha256 "2eabec088da81f601979663f86b5271751d42336f2e892dd4532ced433860d92"
 
-  url "https://github.com/vv-vim/vv/releases/download/v#{version}/VV-#{version}.dmg"
+  url "https://github.com/vv-vim/vv/releases/download/v#{version}/VV-#{version}-universal.dmg"
   name "VV"
   desc "Neovim client"
   homepage "https://github.com/vv-vim/vv"
