@@ -63,23 +63,23 @@ cask "docker" do
   ]
 
   app "Docker.app"
-  binary "Docker.app/Contents/Resources/bin/com.docker.cli",
+  binary "#{appdir}/Docker.app/Contents/Resources/bin/com.docker.cli",
          target: "/usr/local/bin/com.docker.cli"
-  binary "Docker.app/Contents/Resources/bin/docker",
+  binary "#{appdir}/Docker.app/Contents/Resources/bin/docker",
          target: "/usr/local/bin/docker"
-  binary "Docker.app/Contents/Resources/bin/docker-compose",
+  binary "#{appdir}/Docker.app/Contents/Resources/bin/docker-compose",
          target: "/usr/local/bin/docker-compose"
-  binary "Docker.app/Contents/Resources/bin/docker-credential-desktop",
+  binary "#{appdir}/Docker.app/Contents/Resources/bin/docker-credential-desktop",
          target: "/usr/local/bin/docker-credential-desktop"
-  binary "Docker.app/Contents/Resources/bin/docker-credential-ecr-login",
+  binary "#{appdir}/Docker.app/Contents/Resources/bin/docker-credential-ecr-login",
          target: "/usr/local/bin/docker-credential-ecr-login"
-  binary "Docker.app/Contents/Resources/bin/docker-credential-osxkeychain",
+  binary "#{appdir}/Docker.app/Contents/Resources/bin/docker-credential-osxkeychain",
          target: "/usr/local/bin/docker-credential-osxkeychain"
-  binary "Docker.app/Contents/Resources/bin/docker-index",
+  binary "#{appdir}/Docker.app/Contents/Resources/bin/docker-index",
          target: "/usr/local/bin/docker-index"
-  binary "Docker.app/Contents/Resources/bin/hub-tool",
+  binary "#{appdir}/Docker.app/Contents/Resources/bin/hub-tool",
          target: "/usr/local/bin/hub-tool"
-  binary "Docker.app/Contents/Resources/bin/kubectl",
+  binary "#{appdir}/Docker.app/Contents/Resources/bin/kubectl",
          target: "/usr/local/bin/kubectl.docker"
   binary "Docker.app/Contents/Resources/etc/docker.bash-completion",
          target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/docker"
