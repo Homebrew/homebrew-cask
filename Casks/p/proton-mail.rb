@@ -8,7 +8,7 @@ cask "proton-mail" do
   url "https://github.com/ProtonMail/inbox-desktop/releases/download/v#{version}/Proton-Mail-#{version}-#{arch}.dmg",
       verified: "github.com/ProtonMail/inbox-desktop/"
   name "Proton Mail"
-  desc "Client for Proton Mail"
+  desc "Client for Proton Mail and Proton Calendar"
   homepage "https://proton.me/mail"
 
   auto_updates true
