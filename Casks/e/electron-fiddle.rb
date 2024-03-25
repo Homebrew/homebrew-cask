@@ -1,11 +1,11 @@
 cask "electron-fiddle" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.36.0"
-  sha256 arm:   "a935a765eea0b8cca2b78a295c7a6faa796435ea30958f708f2cac5608654f43",
-         intel: "a68f0f3181a5bb7af9ca4891d3a186330b8a6754d498e6971c9da6b7d645f497"
+  version "0.36.2"
+  sha256 arm:   "e58fd3c483234342fd0b82e72c0bc81276f4e7328e3007e25825d95a83387e32",
+         intel: "4ae560f05215c5eb9eab563e7ff5de117bd1f34508194dc34fbe265f84ea2cef"
 
-  url "https://github.com/electron/fiddle/releases/download/v#{version}/Electron-Fiddle-darwin-#{arch}-#{version}.zip",
+  url "https://github.com/electron/fiddle/releases/download/v#{version}/Electron.Fiddle-darwin-#{arch}-#{version}.zip",
       verified: "github.com/electron/fiddle/"
   name "Electron Fiddle"
   desc "Create and play with small Electron experiments"
