@@ -1,7 +1,7 @@
 cask "idafree" do
   arch arm: "arm_"
 
-  version "8.4.240320"
+  version "8.4"
   sha256 arm:   "75b806df3a3be1268fa079fb3b1e0bfbaf3340ee2712f9a2eb33fca0e2c19c83",
          intel: "d5fb5cc4443c85a692503c59654b46910d92d5dcbd68c893c12c1ba8c0ea2729"
 
@@ -12,7 +12,7 @@ cask "idafree" do
 
   livecheck do
     url :homepage
-    regex(/>.*?v?(\d+(?:\.\d+)+).*?</i)
+    regex(/>.*?v?(\d+(?:\.\d+)).*?<\/a/i)
   end
 
   depends_on macos: ">= :catalina"
