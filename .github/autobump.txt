@@ -237,6 +237,7 @@ understand
 unity
 uvtools
 viber
+virtualbuddy
 visual-studio-code
 vivaldi
 vrew
