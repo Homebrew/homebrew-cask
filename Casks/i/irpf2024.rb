@@ -20,8 +20,4 @@ cask "irpf2024" do
 
   # No zap stanza required
 
-  caveats <<~EOS
-    IRPF2024 will store data in ~/Documents/ProgramasRFB/IRPF2024.
-    You might want to delete this directory after you finish your tax report.
-  EOS
 end
