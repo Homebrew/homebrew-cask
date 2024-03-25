@@ -1,6 +1,6 @@
 cask "android-platform-tools" do
-  version "35.0.0"
-  sha256 "85c75ac31556dc95712cf1bdec592098e6c5067dc485356591d85932178bf8cd"
+  version "35.0.1"
+  sha256 "0556ad1d5828b38aee125501493735ec773ab0ffc062a1c77e95ebcfed29a89b"
 
   url "https://dl.google.com/android/repository/platform-tools_r#{version}-darwin.zip",
       verified: "google.com/android/repository/"
@@ -9,8 +9,8 @@ cask "android-platform-tools" do
   homepage "https://developer.android.com/studio/releases/platform-tools"
 
   livecheck do
-    url "https://dl.google.com/android/repository/platform-tools-latest-darwin.zip"
-    strategy :header_match
+    url :homepage
+    regex(/data-text=.*?v?(\d+(?:\.\d+)+)["'> (]/i)
   end
 
   binary "#{staged_path}/platform-tools/adb"
