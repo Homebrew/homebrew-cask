@@ -12,7 +12,7 @@ cask "idafree" do
 
   livecheck do
     url :homepage
-    regex(/>.*?v?(\d+(?:\.\d+)).*?<\/a/i)
+    regex(/>.*?v?(\d+(?:\.\d+)).*?</i)
   end
 
   depends_on macos: ">= :catalina"
