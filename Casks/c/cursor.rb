@@ -9,7 +9,7 @@ cask "cursor" do
       verified: "download.todesktop.com/230313mzl4w4u92/"
   name "Cursor"
   desc "Write, edit, and chat about your code with AI"
-  homepage "https://www.cursor.so/"
+  homepage "https://cursor.sh/"
 
   livecheck do
     url "https://download.todesktop.com/230313mzl4w4u92/latest-mac.yml"
