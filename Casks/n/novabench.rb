@@ -1,5 +1,5 @@
 cask "novabench" do
-  version "5.5.0"
+  version "5.5.1"
   sha256 :no_check
 
   url "https://novabench.com/files/novabench.dmg"
