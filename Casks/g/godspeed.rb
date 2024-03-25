@@ -1,8 +1,8 @@
 cask "godspeed" do
   version "1.0.0"
-  sha256 :no_check
+  sha256 "0934f088b17bce7c25fe9dfbc60fdfb80fabc1471a2edff8e5aeb8986b0366b3"
 
-  url "https://com-godspeedapp-app-versions.s3.us-west-1.amazonaws.com/latest/Godspeed.dmg",
+  url "https://com-godspeedapp-app-versions.s3.us-west-1.amazonaws.com/#{version}/Godspeed.zip",
       verified: "com-godspeedapp-app-versions.s3.us-west-1.amazonaws.com/"
   name "Godspeed"
   desc "Keyboard-focused todo manager"
