@@ -20,6 +20,7 @@ cask "virtualbuddy" do
     end
   end
 
+  auto_updates true
   conflicts_with cask: "homebrew/cask-versions/virtualbuddy-beta"
   depends_on arch: :arm64
   depends_on macos: ">= :monterey"
