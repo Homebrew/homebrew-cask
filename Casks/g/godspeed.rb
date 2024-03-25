@@ -8,7 +8,14 @@ cask "godspeed" do
   desc "Keyboard-focused todo manager"
   homepage "https://godspeedapp.com/"
 
-  depends_on macos: ">= :monterey"
+  livecheck do
+    url "https://api.godspeedapp.com/update-check/latest"
+    strategy :json do |json|
+      json["name"].sub("v", "")
+    end
+  end
+
+  depends_on macos: ">= :catalina"
 
   app "Godspeed.app"
 
