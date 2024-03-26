@@ -1,8 +1,8 @@
 cask "orion" do
-  version "0.99,127"
+  version "0.99,127.1"
 
   on_mojave :or_older do
-    sha256 "6d6e67324c957f11d076b55a5cb5a0e7fe46d0afea257e5606c4a765c0e8e79a"
+    sha256 "4f384174598e3efbfdcf1cffd39033a86fc499da15007ff625e695e6c37846d3"
 
     url "https://browser.kagi.com/updates/10_14/#{version.csv.second}.zip"
 
@@ -14,7 +14,7 @@ cask "orion" do
     depends_on macos: :mojave
   end
   on_catalina do
-    sha256 "501f6fd8049a3a6058b9022668e9c4b06370d43e3d646098cb756e188be514d4"
+    sha256 "1d1293d585afd73912ba832a5635d192252b028f5385b9cfc334c263bc23e5ad"
 
     url "https://browser.kagi.com/updates/10_15/#{version.csv.second}.zip"
 
@@ -26,7 +26,7 @@ cask "orion" do
     depends_on macos: :catalina
   end
   on_big_sur do
-    sha256 "466ca395a8d571210dc42f53ceff82bdc264bb23d35f7bb0d29c86610cec6066"
+    sha256 "466045a834ae053e8626aa238b13f9fbf003ac11000ed92fe73f120f5e86d21f"
 
     url "https://browser.kagi.com/updates/11_0/#{version.csv.second}.zip"
 
@@ -38,7 +38,7 @@ cask "orion" do
     depends_on macos: :big_sur
   end
   on_monterey do
-    sha256 "5609531a8bf65bd6b2764098e990f50eafad5515e457f5c13a2cdd3c59c5d56a"
+    sha256 "4e499735f1d422891eb96e3cb2c710abd4078654b7096d8424442b6399a8c233"
 
     url "https://browser.kagi.com/updates/12_0/#{version.csv.second}.zip"
 
@@ -50,7 +50,7 @@ cask "orion" do
     depends_on macos: :monterey
   end
   on_ventura do
-    sha256 "dddc9b65b66aac7cc7a117ee35f7c44c0b987cb2609cd1501cb83bcabe538a57"
+    sha256 "a16e3e50c1ed2a40b57c3cd16df34201a69610f26b7a3b0dfadd288795215aaf"
 
     url "https://browser.kagi.com/updates/13_0/#{version.csv.second}.zip"
 
@@ -62,7 +62,7 @@ cask "orion" do
     depends_on macos: :ventura
   end
   on_sonoma :or_newer do
-    sha256 "29ff1cc5e35db547cdd4d2c278df8c1d8f2dcf56b94ed317e4ca6bae176e45b3"
+    sha256 "8f6760a459748f73d4c278d6412dbd477115875b0efe188bc0a3cf1be301313a"
 
     url "https://browser.kagi.com/updates/14_0/#{version.csv.second}.zip"
 
