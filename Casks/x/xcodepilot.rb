@@ -4,7 +4,7 @@ cask "xcodepilot" do
 
   url "https://xcodepilot.thriller.fun/packages/appcast/XcodePilot.v#{version.csv.first}_#{version.csv.second}.zip"
   name "XcodePilot"
-  desc "A toolset for Apple developers to increase productivity and efficiency"
+  desc "Toolset for Apple developers to increase productivity and efficiency"
   homepage "https://xcodepilot.thriller.fun/"
 
   livecheck do
@@ -22,9 +22,9 @@ cask "xcodepilot" do
   zap trash: [
     "~/Library/Application Support/fun.thriller.XcodePilot",
     "~/Library/Caches/fun.thriller.XcodePilot",
-    "~/Library/Caches/Logs/fun.thriller.XcodePilot.*.log",
     "~/Library/Containers/org.sparkle-project.Downloader/Data/Library/Caches/fun.thriller.XcodePilot",
     "~/Library/Group Containers/V63R5GQ252.group.fun.thriller.xcode.pilot",
-    "~/Library/Preferences/fun.thriller.XcodePilot.plist"
+    "~/Library/Preferences/fun.thriller.XcodePilot.plist",
+    "~/Library/WebKit/fun.thriller.XcodePilot",
   ]
 end
