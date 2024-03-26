@@ -46,7 +46,7 @@ cask "tripmode" do
     "~/Library/Application Scripts/P39EL2R8C4.com.alix-sarl.TripMode",
     "~/Library/Application Support/Tripmode",
     "~/Library/Caches/ch.tripmode.TripMode",
-    "~/Library/Caches/com.apple.helpd/Generated/ch.tripmode.TripMode.help*#{version.csv.first}",
+    "~/Library/Caches/com.apple.helpd/Generated/ch.tripmode.TripMode.help*",
     "~/Library/Group Containers/P39EL2R8C4.com.alix-sarl.TripMode",
     "~/Library/Preferences/ch.tripmode.TripMode.plist",
   ]
