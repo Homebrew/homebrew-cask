@@ -1,9 +1,9 @@
 cask "phpwebstudy" do
   arch arm: "-arm64"
 
-  version "2.4.0"
-  sha256 arm:   "a4bd46b3f580b8fa3d10607acc1c36b4bfaada6755824c348055cada3c1ad8a3",
-         intel: "1f57f2be3ed88c4f7c64a9506fc0b9edc5f695acc20ec8f5be549b2f59b7dce6"
+  version "2.4.1"
+  sha256 arm:   "48e60faec2fef3a04eaf5309e07935bc101e5f78c4d328337c18e7513b63f3db",
+         intel: "95ae8b71c7158fca392a9ec02287a9085be487a45a18e79d65a1c789e556f35d"
 
   url "https://github.com/xpf0000/PhpWebStudy/releases/download/v#{version}/PhpWebStudy-#{version}#{arch}-mac.zip",
       verified: "github.com/xpf0000/PhpWebStudy/"
