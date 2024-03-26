@@ -160,7 +160,7 @@ mongodb-compass-isolated-edition
 mongodb-compass-readonly
 mp3tag
 mullvad-browser
-mullvad-vpn
+mullvadvpn
 multiapp
 multiviewer-for-f1
 netron
