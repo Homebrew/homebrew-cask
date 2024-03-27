@@ -10,11 +10,6 @@ cask "lookaway" do
   desc "Reduce dry eyes and digital strain"
   homepage "https://lookaway.app/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: ">= :monterey"
 
   app "LookAway.app"
