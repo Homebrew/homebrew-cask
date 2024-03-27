@@ -11,10 +11,7 @@ cask "godspeed" do
   livecheck do
     url "https://api.godspeedapp.com/update-check/latest"
     strategy :json do |json|
-      name = json["name"]
-      next if name.blank?
-
-      name.tr("v", "")
+      json["name"]&.tr("v", "")
     end
   end
 
