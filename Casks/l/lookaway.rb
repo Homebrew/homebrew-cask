@@ -10,6 +10,7 @@ cask "lookaway" do
   desc "Reduce dry eyes and digital strain"
   homepage "https://lookaway.app/"
 
+  auto_updates true
   depends_on macos: ">= :monterey"
 
   app "LookAway.app"
