@@ -7,7 +7,7 @@ cask "lookaway" do
   url "https://github.com/mysticalbits/lookaway-releases/releases/download/#{version}/LookAway.dmg",
       verified: "github.com/mysticalbits/lookaway-releases/"
   name "LookAway"
-  desc "Reduce dry eyes and digital strain"
+  desc "Break time reminder app"
   homepage "https://lookaway.app/"
 
   auto_updates true
