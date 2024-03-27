@@ -1,9 +1,9 @@
 cask "motion" do
   arch arm: "aarch64", intel: "amd64"
 
-  version "0.66.0"
-  sha256 arm:   "be62cbc48b95da1067431eac3f75f4d6b9d6ab7d4f376a6df8517323336c0e56",
-         intel: "10fbf5a2b5076cea2a53a4854d43b222e8f25fcf806f1fc9ae856e686afb4ef1"
+  version "0.67.0"
+  sha256 arm:   "5948845ba942a104b8b120d3aed2dec9602810080ae7ac23b485b002e175d048",
+         intel: "d824ee0ad9e9669886b4add8cfb8370bc8afafcd3fff33dd67d9dc96baad09e6"
 
   on_arm do
     depends_on macos: ">= :big_sur"
