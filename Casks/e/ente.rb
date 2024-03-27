@@ -7,12 +7,13 @@ cask "ente" do
   name "Ente"
   desc "Desktop client for Ente Photos"
   homepage "https://ente.io/"
-  auto_updates true
 
   livecheck do
     url :url
     strategy :github_latest
   end
+
+  auto_updates true
 
   app "ente.app"
 
