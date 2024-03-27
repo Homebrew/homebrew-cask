@@ -16,5 +16,10 @@ cask "lookaway" do
 
   uninstall quit: "com.mysticalbits.lookaway"
 
-  zap trash: "~/Library/Application Support/LookAway"
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mysticalbits.lookaway.sfl*",
+    "~/Library/Application Support/LookAway",
+    "~/Library/Caches/SentryCrash/LookAway",
+    "~/Library/Preferences/com.mysticalbits.lookaway.plist",
+  ]
 end
