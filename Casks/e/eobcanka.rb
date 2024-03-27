@@ -1,6 +1,6 @@
 cask "eobcanka" do
   version "3.4.2"
-  sha256 :no_check
+  sha256 "a74d4205c0faabc8866165a42ac5370d5fdabf632f541a6e80e787b889f6e598"
 
   url "https://info.identitaobcana.cz/download/eObcanka.dmg"
   name "eObčanka"
