@@ -8,17 +8,12 @@ cask "detail" do
   desc "Pro camera for video calls"
   homepage "https://detail.co/"
 
-  livecheck do
-    url "https://api.detail.co/v1/macOS/latest"
-    strategy :header_match
-  end
+  deprecate! date: "2024-03-28", because: "latest versions are only available in the Mac App Store"
 
   auto_updates true
   depends_on macos: ">= :big_sur"
 
   pkg "Detail.pkg"
-
-  deprecate! date: "2024-03-28", because: "latest versions are only available in the Mac App Store"
 
   uninstall pkgutil: [
               "co.detail.DAL",
