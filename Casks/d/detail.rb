@@ -18,6 +18,8 @@ cask "detail" do
 
   pkg "Detail.pkg"
 
+  deprecate! date: "2024-03-28", because: "latest versions are only available in the Mac App Store"
+
   uninstall pkgutil: [
               "co.detail.DAL",
               "co.detail.HAL",
