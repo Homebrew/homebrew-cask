@@ -1,6 +1,6 @@
 cask "mfiles" do
-  version "2.5.2,20231201"
-  sha256 "e5793ea86158613f9ca06e43051fd3ad2e10b267031bc9d04e73f0fe88e014e8"
+  version "2.5.3,20240328"
+  sha256 "ed871abb9876721f6b9e17805147c9afa505851857f1dd88cfeef4a847b59173"
 
   url "https://mfiles.maokebing.com/package/mfiles-helper-#{version.csv.first}-macos-#{version.csv.second}.dmg"
   name "MFiles"
