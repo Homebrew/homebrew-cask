@@ -12,7 +12,7 @@ cask "deltawalker" do
   homepage "https://www.deltawalker.com/"
 
   livecheck do
-    url "https://www.deltawalker.com/content/download.html"
+    url "https://www.deltawalker.com/download"
     regex(/href=.*?DeltaWalker[._-]?v?(\d+(?:\.\d+)+)_#{arch}\.dmg/i)
   end
 
