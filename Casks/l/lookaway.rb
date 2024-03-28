@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 cask "lookaway" do
   version "1.4.1"
   sha256 "0f211bad3302453f28bbde874ede70e5c048d1ff09e8d53eadbb977b40a9e0b3"
