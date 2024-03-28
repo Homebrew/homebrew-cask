@@ -17,6 +17,15 @@ cask "eclipse-java" do
   # Renamed to avoid conflict with other Eclipse.
   app "Eclipse.app", target: "Eclipse Java.app"
 
+  # https://help.eclipse.org/latest/topic/org.eclipse.platform.doc.isv/reference/misc/multi_user_installs.html
+  postflight do
+    set_permissions "/Applications/Eclipse Java.app/Contents/Eclipse", "0555"
+  end
+
+  uninstall_preflight do
+    set_permissions "/Applications/Eclipse Java.app/Contents/Eclipse", "0755"
+  end
+
   zap trash: [
     "~/.eclipse",
     "~/eclipse-workspace",
