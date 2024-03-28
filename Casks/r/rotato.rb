@@ -1,15 +1,16 @@
 cask "rotato" do
-  version "145"
-  sha256 "bb81a64ec7a5114397b79c96acf9ce282d57c44d7c4f1aeb63b70707d6f8449d"
+  version "147"
+  sha256 "df06ea5961c8f764133286abf0d4133b619c9918fa794663879e54c5a314eb5c"
 
-  url "https://rotato.app/api/releases/download/#{version}"
+  url "https://download.rota.to/Rotato-#{version}.dmg",
+      verified: "download.rota.to/"
   name "Rotato"
   desc "Mockup generator & animator 3D"
   homepage "https://rotato.app/"
 
   livecheck do
     url "https://api.appcenter.ms/v0.1/public/sparkle/apps/a62ce1b5-fb95-4615-a1b0-fd246b7ce1ed"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
