@@ -1,9 +1,9 @@
 cask "electerm" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.38.41"
-  sha256 arm:   "97bdf36bf5b84b1b246980350249f49438c83db9601541f0aadf0853d44fb8dd",
-         intel: "6933a543aa54ec0c1f05aa2270355d2a343ceb9b9ae2c3148a91ce9304bd7f5e"
+  version "1.38.42"
+  sha256 arm:   "f4ea3aac35048d6b86f85fd946e40d3916fc423ccec8ccd4428e3952c3f44702",
+         intel: "de422ce72319a7a5393f93d32c0076e991bdc397ce4a92dbd0504dae567f0dd9"
 
   url "https://github.com/electerm/electerm/releases/download/v#{version}/electerm-#{version}-mac-#{arch}.dmg"
   name "electerm"
