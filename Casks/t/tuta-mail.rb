@@ -1,8 +1,9 @@
 cask "tuta-mail" do
   version "220.240321.0"
-  sha256 :no_check
+  sha256 "b38264909750aed31ba6ff81b98ad741d176bb99f8d7906dd9ffa098aa43fba3"
 
-  url "https://app.tuta.com/desktop/tutanota-desktop-mac.dmg"
+  url "https://github.com/tutao/tutanota/releases/download/tutanota-desktop-release-#{version}/tutanota-desktop-mac.dmg",
+      verified: "github.com/tutao/tutanota/"
   name "Tuta Mail"
   desc "Email client"
   homepage "https://tuta.com/"
