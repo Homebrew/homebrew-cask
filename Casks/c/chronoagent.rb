@@ -23,6 +23,6 @@ cask "chronoagent" do
   zap trash: [
     "~/Library/Caches/com.apple.helpd/Generated/ChronoAgent Help Center*",
     "~/Library/Containers/com.apple.helpviewer/Data/com.econtechnologies.preference.chronoagent.*",
-    "~/Library/Preferences/com.econtechnologies.chronoagent.prefPane.plis",
+    "~/Library/Preferences/com.econtechnologies.chronoagent.prefPane.plist",
   ]
 end
