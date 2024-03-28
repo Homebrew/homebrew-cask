@@ -10,7 +10,7 @@ cask "rotato" do
 
   livecheck do
     url "https://api.appcenter.ms/v0.1/public/sparkle/apps/a62ce1b5-fb95-4615-a1b0-fd246b7ce1ed"
-    strategy :sparkle
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
