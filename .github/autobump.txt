@@ -109,6 +109,7 @@ gdevelop
 geogebra
 gitbutler
 github
+gitify
 glyphs
 goland
 goodsync
