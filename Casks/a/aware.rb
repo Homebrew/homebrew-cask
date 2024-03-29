@@ -11,4 +11,9 @@ cask "aware" do
   depends_on macos: ">= :ventura"
 
   app "Aware.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.awaremac.Aware",
+    "~/Library/Containers/com.awaremac.Aware",
+  ]
 end
