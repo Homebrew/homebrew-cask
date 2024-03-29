@@ -1,6 +1,6 @@
 cask "aware" do
-  version "1.1.0"
-  sha256 "65876e04bcf1915ccf917ebaf5ec99ca5ae8ba5fc50011144a47bfbadb23e060"
+  version "1.1.1"
+  sha256 "d436d21ca4915feaa5b34426dc82c9c3a90d78cce8792506be4d3c9c13ff1ada"
 
   url "https://github.com/josh/Aware/releases/download/v#{version}/Aware.zip",
       verified: "github.com/josh/Aware/"
