@@ -1,6 +1,6 @@
 cask "capcut" do
-  version "3.0.0.1015"
-  sha256 "5a2858073fc5585d47c7ddf7483832dcdbfdd44c7acfbcc050078f4ea1535a7e"
+  version "3.3.0.1159"
+  sha256 "26c253719a61eae679a2923121a83d0a39b98d920a5c57f3e00d66224986c867"
 
   url "https://lf16-capcut.faceulv.com/obj/capcutpc-packages-us/packages/CapCut_#{version.dots_to_underscores}_capcutpc_0_creatortool.dmg",
       verified: "lf16-capcut.faceulv.com/obj/capcutpc-packages-us/packages/"
