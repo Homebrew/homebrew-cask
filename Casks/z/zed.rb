@@ -1,8 +1,11 @@
 cask "zed" do
-  version "0.128.3"
-  sha256 "88d00c88c5df41e59efe10909ae241d72f989fc5eb02ec462af104731b5239f3"
+  arch arm: "aarch64", intel: "x86_64"
 
-  url "https://zed.dev/api/releases/stable/#{version}/Zed.dmg"
+  version "0.128.3"
+  sha256 arm:   "c8590811cbd11ce526bc718a81c77a8d21a19d6255d32674b9397cc7ac1ee259",
+         intel: "d37445e360099dfe1adff6bcbfb5c338e69c2863b6eae1739274d386cf5cf4f0"
+
+  url "https://zed.dev/api/releases/stable/#{version}/Zed-#{arch}.dmg"
   name "Zed"
   desc "Multiplayer code editor"
   homepage "https://zed.dev/"
