@@ -1,5 +1,5 @@
 cask "keymapp" do
-  version "1.1.0"
+  version "1.1.1"
   sha256 :no_check
 
   url "https://oryx.nyc3.cdn.digitaloceanspaces.com/keymapp/keymapp-latest.dmg",
