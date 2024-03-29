@@ -2,10 +2,10 @@ cask "feed-the-beast" do
   arch arm: "arm64", intel: "x64"
 
   version "1.25.6"
-  sha256 arm:   "7cd9db09f32a90c48029f698e60100e18d19bde8f16b7b26649f17e9c2828f98",
-         intel: "7cd9db09f32a90c48029f698e60100e18d19bde8f16b7b26649f17e9c2828f99"
+  sha256 arm:   "8cdd030d94efbe67ec0380813caf42f75e579c117810c14edfad08e79d64a03d",
+         intel: "397c25a095c330e63fc18a81afa4d91126563aedceb39e0f2623529a1b98ad49"
 
-  url "https://feed-the-beast.com/app/ftb-app-#{version}-#{arch}.dmg"
+  url "https://piston.feed-the-beast.com/app/ftb-app-#{version}-#{arch}.dmg"
   name "Feed the Beast"
   desc "Minecraft mod downloader and manager"
   homepage "https://www.feed-the-beast.com/"
