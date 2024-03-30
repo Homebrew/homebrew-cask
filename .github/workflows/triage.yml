@@ -75,3 +75,7 @@ jobs:
             - label: missing zap
               path: Casks/.+
               missing_content: zap .+\n
+
+            - label: autobump
+              path: \.github/autobump\.txt
+              allow_any_match: true
