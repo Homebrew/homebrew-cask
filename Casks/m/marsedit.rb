@@ -19,9 +19,9 @@ cask "marsedit" do
 
   zap trash: [
     "~/Library/Application Scripts/com.red-sweater.*",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.red-sweater.marsedit5.sfl*",
-    "~/Library/Caches/com.apple.helpd/Generated/com.red-sweater.marsedit5.help*",
-    "~/Library/Containers/com.red-sweater.marsedit5.*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.red-sweater.marsedit*.sfl*",
+    "~/Library/Caches/com.apple.helpd/Generated/com.red-sweater.marsedit*.help*",
+    "~/Library/Containers/com.red-sweater.marsedit*.*",
     "~/Library/Group Containers/493CVA9A35.com.red-sweater",
   ]
 end
