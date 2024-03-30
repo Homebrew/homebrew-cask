@@ -15,7 +15,7 @@ cask "feed-the-beast" do
     regex(/ftb[._-]app[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
-  app "FTBApp.app"
+  app "FTB App.app"
 
   zap trash: "~/Library/Application Support/ftblauncher"
 
