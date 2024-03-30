@@ -1,5 +1,5 @@
 cask "clearvpn" do
-  version :latest
+  version "3.0.0"
   sha256 :no_check
 
   url "https://dl.devmate.com/com.macpaw.clearvpn.macos-site-ver/ClearVPN.dmg",
