@@ -1,12 +1,12 @@
 cask "clearvpn" do
-  version "3.0.0"
-  sha256 "10b009d6f8d0ff79edec6545a751716000bb42a6c4084c03287d063b1e82d810"
+  version :latest
+  sha256 :no_check
 
   url "https://dl.devmate.com/com.macpaw.clearvpn.macos-site-ver/ClearVPN.dmg",
       verified: "dl.devmate.com/"
   name "ClearVPN"
-  desc "ClearVPN is a hassle-free VPN app for secure online journeys"
-  homepage "https://clearvpn.com"
+  desc "One-tap VPN for secure online journeys"
+  homepage "https://clearvpn.com/"
 
   livecheck do
     url "https://updates.devmate.com/com.macpaw.clearvpn.macos-site-ver.xml"
