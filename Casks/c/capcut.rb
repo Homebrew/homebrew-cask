@@ -5,7 +5,7 @@ cask "capcut" do
   url "https://lf16-capcut.faceulv.com/obj/capcutpc-packages-us/packages/CapCut_#{version.dots_to_underscores}_capcutpc_0_creatortool.dmg",
       verified: "lf16-capcut.faceulv.com/obj/capcutpc-packages-us/packages/"
   name "CapCut"
-  desc "Creative platform powered by AI that enables video editing and image design"
+  desc "Video editing and image design platform"
   homepage "https://www.capcut.com/"
 
   livecheck do
