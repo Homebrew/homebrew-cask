@@ -2,15 +2,79 @@ cask "gitkraken-cli" do
   arch arm: "macOS_arm64", intel: "macOS_x86_64"
 
   version "1.6.1"
-  sha256 arm:   "004023ed133532f5daab8e2f5d5126f00c00b1135fa54c7dcc932faf96a476c7",
-         intel: "9f23cbc098b32bdb4b916965a3a713913b4f3dfaf0a0286d6c46b67b8ad0cd73"
+  sha256 arm:   "5fd64bfed8f6469b962f6e6214aed243131445e1511adc42a53ef110e66926cb",
+         intel: "abae4d82acfdd7ae1e892ef93e594dde421a4a4baf08dc07ede0f2c41ad66c26"
 
   url "https://github.com/gitkraken/gk-cli/releases/download/v#{version}/gk_#{version}_#{arch}.zip"
+
   name "GitKraken CLI"
   desc "CLI for GitKraken"
   homepage "https://github.com/gitkraken/gk-cli"
 
   binary "gk"
 
+  postflight do
+    arch = Hardware::CPU.intel? ? "intel" : "arm"
+    bash_completion_dir = File.join(HOMEBREW_PREFIX, "etc", "bash_completion.d")
+    if arch == "arm"
+      zsh_completion_dir = File.join(HOMEBREW_PREFIX, "share", "zsh", "site-functions")
+    else
+      zsh_completion_dir = File.join("/usr/local", "share", "zsh", "site-functions")
+    end
+    fish_completion_dir = File.join(HOMEBREW_PREFIX, "share", "fish", "vendor_completions.d")
+
+    FileUtils.mkdir_p bash_completion_dir
+    FileUtils.ln_sf "#{staged_path}/gk.bash", File.join(bash_completion_dir, "gk")
+
+    FileUtils.mkdir_p zsh_completion_dir
+    FileUtils.ln_sf "#{staged_path}/_gk", File.join(zsh_completion_dir, "_gk")
+
+    FileUtils.mkdir_p fish_completion_dir
+    FileUtils.ln_sf "#{staged_path}/gk.fish", File.join(fish_completion_dir, "gk.fish")
+  end
+
+  uninstall_postflight do
+    arch = Hardware::CPU.intel? ? "intel" : "arm"
+
+    bash_completion_file = "#{HOMEBREW_PREFIX}/etc/bash_completion.d/gk"
+    File.delete(bash_completion_file) if File.exist?(bash_completion_file)
+
+    if arch == "arm"
+      zsh_completion_file = "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_gk"
+    else
+      zsh_completion_file = "/usr/local/share/zsh/site-functions/_gk" # Corrected this line
+    end
+    File.delete(zsh_completion_file) if File.exist?(zsh_completion_file)
+
+    fish_completion_file = "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/gk.fish"
+    File.delete(fish_completion_file) if File.exist?(fish_completion_file)
+  end
+
   zap trash: "~/.gitkraken"
+
+  caveats <<~EOS
+  Shell completions have been installed. If you are using bash or zsh, they should be automatically loaded. For fish, the completions should also autoload.
+
+  If you experience issues with autoloading completions, please ensure your shell is configured to load completions from the Homebrew completions directories.
+
+  Bash users: If you haven't installed bash-completion, you'll need to do so for completions to work. Install it via Homebrew with:
+   brew install bash-completion
+   or
+   brew install bash-completion@2
+
+  After installation, add the following line to your .bash_profile or .bashrc:
+  [[ -r "#{HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]] && . "#{HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
+
+  Zsh users should ensure that the following line is present in their .zshrc:
+    autoload -Uz compinit && compinit
+    - For Apple Silicon Macs, add the following line to your shell configuration file (.zshrc):
+      fpath=("/opt/homebrew/share/zsh/site-functions" $fpath)
+    - For Intel Macs, use:
+      fpath=("/usr/local/share/zsh/site-functions" $fpath)
+
+  Remember to restart your terminal or source your shell configuration file for changes to take effect.
+
+  Fish users should not need to take any additional action as long as the fish shell is properly configured to load from the vendor completions directory.
+EOS
+
 end
