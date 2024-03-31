@@ -6,7 +6,6 @@ cask "gitkraken-cli" do
          intel: "abae4d82acfdd7ae1e892ef93e594dde421a4a4baf08dc07ede0f2c41ad66c26"
 
   url "https://github.com/gitkraken/gk-cli/releases/download/v#{version}/gk_#{version}_#{arch}.zip"
-
   name "GitKraken CLI"
   desc "CLI for GitKraken"
   homepage "https://github.com/gitkraken/gk-cli"
@@ -14,12 +13,12 @@ cask "gitkraken-cli" do
   binary "gk"
 
   postflight do
-    arch = Hardware::CPU.intel? ? "intel" : "arm"
+    arch arm: "arm", intel: "intel"
     bash_completion_dir = File.join(HOMEBREW_PREFIX, "etc", "bash_completion.d")
-    if arch == "arm"
-      zsh_completion_dir = File.join(HOMEBREW_PREFIX, "share", "zsh", "site-functions")
+    zsh_completion_dir = if arch == "arm"
+      File.join(HOMEBREW_PREFIX, "share", "zsh", "site-functions")
     else
-      zsh_completion_dir = File.join("/usr/local", "share", "zsh", "site-functions")
+      File.join("/usr/local", "share", "zsh", "site-functions")
     end
     fish_completion_dir = File.join(HOMEBREW_PREFIX, "share", "fish", "vendor_completions.d")
 
@@ -34,47 +33,46 @@ cask "gitkraken-cli" do
   end
 
   uninstall_postflight do
-    arch = Hardware::CPU.intel? ? "intel" : "arm"
+    arch arm: "arm", intel: "intel"
 
     bash_completion_file = "#{HOMEBREW_PREFIX}/etc/bash_completion.d/gk"
-    File.delete(bash_completion_file) if File.exist?(bash_completion_file)
+    FileUtils.rm_f(bash_completion_file)
 
-    if arch == "arm"
-      zsh_completion_file = "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_gk"
+    zsh_completion_file = if arch == "arm"
+      "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_gk"
     else
-      zsh_completion_file = "/usr/local/share/zsh/site-functions/_gk" # Corrected this line
+      "/usr/local/share/zsh/site-functions/_gk" # Corrected this line
     end
-    File.delete(zsh_completion_file) if File.exist?(zsh_completion_file)
+    FileUtils.rm_f(zsh_completion_file)
 
     fish_completion_file = "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/gk.fish"
-    File.delete(fish_completion_file) if File.exist?(fish_completion_file)
+    FileUtils.rm_f(fish_completion_file)
   end
 
   zap trash: "~/.gitkraken"
 
   caveats <<~EOS
-  Shell completions have been installed. If you are using bash or zsh, they should be automatically loaded. For fish, the completions should also autoload.
+    Shell completions have been installed. If you are using bash or zsh, they should be automatically loaded. For fish, the completions should also autoload.
 
-  If you experience issues with autoloading completions, please ensure your shell is configured to load completions from the Homebrew completions directories.
+    If you experience issues with autoloading completions, please ensure your shell is configured to load completions from the Homebrew completions directories.
 
-  Bash users: If you haven't installed bash-completion, you'll need to do so for completions to work. Install it via Homebrew with:
-   brew install bash-completion
-   or
-   brew install bash-completion@2
+    Bash users: If you haven't installed bash-completion, you'll need to do so for completions to work. Install it via Homebrew with:
+     brew install bash-completion
+     or
+     brew install bash-completion@2
 
-  After installation, add the following line to your .bash_profile or .bashrc:
-  [[ -r "#{HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]] && . "#{HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
+    After installation, add the following line to your .bash_profile or .bashrc:
+    [[ -r "#{HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]] && . "#{HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
 
-  Zsh users should ensure that the following line is present in their .zshrc:
-    autoload -Uz compinit && compinit
-    - For Apple Silicon Macs, add the following line to your shell configuration file (.zshrc):
-      fpath=("/opt/homebrew/share/zsh/site-functions" $fpath)
-    - For Intel Macs, use:
-      fpath=("/usr/local/share/zsh/site-functions" $fpath)
+    Zsh users should ensure that the following line is present in their .zshrc:
+      autoload -Uz compinit && compinit
+      - For Apple Silicon Macs, add the following line to your shell configuration file (.zshrc):
+        fpath=("/opt/homebrew/share/zsh/site-functions" $fpath)
+      - For Intel Macs, use:
+        fpath=("/usr/local/share/zsh/site-functions" $fpath)
 
-  Remember to restart your terminal or source your shell configuration file for changes to take effect.
+    Remember to restart your terminal or source your shell configuration file for changes to take effect.
 
-  Fish users should not need to take any additional action as long as the fish shell is properly configured to load from the vendor completions directory.
-EOS
-
+    Fish users should not need to take any additional action as long as the fish shell is properly configured to load from the vendor completions directory.
+  EOS
 end
