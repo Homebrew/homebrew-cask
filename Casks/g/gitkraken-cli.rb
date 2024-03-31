@@ -5,6 +5,29 @@ cask "gitkraken-cli" do
   sha256 arm:   "004023ed133532f5daab8e2f5d5126f00c00b1135fa54c7dcc932faf96a476c7",
          intel: "9f23cbc098b32bdb4b916965a3a713913b4f3dfaf0a0286d6c46b67b8ad0cd73"
 
+  on_arm do
+    postflight do
+      zsh_completion_dir = "#{HOMEBREW_PREFIX}/share/zsh/site-functions"
+      FileUtils.mkdir_p zsh_completion_dir
+      FileUtils.ln_sf "#{staged_path}/_gk", "#{zsh_completion_dir}/_gk"
+    end
+    uninstall_postflight do
+      zsh_completion_file = "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_gk"
+      FileUtils.rm_f zsh_completion_file
+    end
+  end
+  on_intel do
+    postflight do
+      zsh_completion_dir = "/usr/local/share/zsh/site-functions"
+      FileUtils.mkdir_p zsh_completion_dir
+      FileUtils.ln_sf "#{staged_path}/_gk", "#{zsh_completion_dir}/_gk"
+    end
+    uninstall_postflight do
+      zsh_completion_file = "/usr/local/share/zsh/site-functions/_gk"
+      FileUtils.rm_f zsh_completion_file
+    end
+  end
+
   url "https://github.com/gitkraken/gk-cli/releases/download/v#{version}/gk_#{version}_#{arch}.zip"
   name "GitKraken CLI"
   desc "CLI for GitKraken"
@@ -13,40 +36,20 @@ cask "gitkraken-cli" do
   binary "gk"
 
   postflight do
-    arch arm: "arm", intel: "intel"
-    bash_completion_dir = File.join(HOMEBREW_PREFIX, "etc", "bash_completion.d")
-    zsh_completion_dir = if arch == "arm"
-      File.join(HOMEBREW_PREFIX, "share", "zsh", "site-functions")
-    else
-      File.join("/usr/local", "share", "zsh", "site-functions")
-    end
-    fish_completion_dir = File.join(HOMEBREW_PREFIX, "share", "fish", "vendor_completions.d")
+    bash_completion_dir = "#{HOMEBREW_PREFIX}/etc/bash_completion.d"
+    fish_completion_dir = "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d"
 
     FileUtils.mkdir_p bash_completion_dir
-    FileUtils.ln_sf "#{staged_path}/gk.bash", File.join(bash_completion_dir, "gk")
-
-    FileUtils.mkdir_p zsh_completion_dir
-    FileUtils.ln_sf "#{staged_path}/_gk", File.join(zsh_completion_dir, "_gk")
-
+    FileUtils.ln_sf "#{staged_path}/gk.bash", "#{bash_completion_dir}/gk"
     FileUtils.mkdir_p fish_completion_dir
-    FileUtils.ln_sf "#{staged_path}/gk.fish", File.join(fish_completion_dir, "gk.fish")
+    FileUtils.ln_sf "#{staged_path}/gk.fish", "#{fish_completion_dir}/gk.fish"
   end
 
   uninstall_postflight do
-    arch arm: "arm", intel: "intel"
-
     bash_completion_file = "#{HOMEBREW_PREFIX}/etc/bash_completion.d/gk"
-    FileUtils.rm_f(bash_completion_file)
-
-    zsh_completion_file = if arch == "arm"
-      "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_gk"
-    else
-      "/usr/local/share/zsh/site-functions/_gk" # Corrected this line
-    end
-    FileUtils.rm_f(zsh_completion_file)
-
+    FileUtils.rm_f bash_completion_file
     fish_completion_file = "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/gk.fish"
-    FileUtils.rm_f(fish_completion_file)
+    FileUtils.rm_f fish_completion_file
   end
 
   zap trash: "~/.gitkraken"
