@@ -5,29 +5,6 @@ cask "gitkraken-cli" do
   sha256 arm:   "004023ed133532f5daab8e2f5d5126f00c00b1135fa54c7dcc932faf96a476c7",
          intel: "9f23cbc098b32bdb4b916965a3a713913b4f3dfaf0a0286d6c46b67b8ad0cd73"
 
-  on_arm do
-    postflight do
-      zsh_completion_dir = "#{HOMEBREW_PREFIX}/share/zsh/site-functions"
-      FileUtils.mkdir_p zsh_completion_dir
-      FileUtils.ln_sf "#{staged_path}/_gk", "#{zsh_completion_dir}/_gk"
-    end
-    uninstall_postflight do
-      zsh_completion_file = "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_gk"
-      FileUtils.rm_f zsh_completion_file
-    end
-  end
-  on_intel do
-    postflight do
-      zsh_completion_dir = "/usr/local/share/zsh/site-functions"
-      FileUtils.mkdir_p zsh_completion_dir
-      FileUtils.ln_sf "#{staged_path}/_gk", "#{zsh_completion_dir}/_gk"
-    end
-    uninstall_postflight do
-      zsh_completion_file = "/usr/local/share/zsh/site-functions/_gk"
-      FileUtils.rm_f zsh_completion_file
-    end
-  end
-
   url "https://github.com/gitkraken/gk-cli/releases/download/v#{version}/gk_#{version}_#{arch}.zip"
   name "GitKraken CLI"
   desc "CLI for GitKraken"
@@ -36,20 +13,18 @@ cask "gitkraken-cli" do
   binary "gk"
 
   postflight do
-    bash_completion_dir = "#{HOMEBREW_PREFIX}/etc/bash_completion.d"
-    fish_completion_dir = "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d"
-
-    FileUtils.mkdir_p bash_completion_dir
-    FileUtils.ln_sf "#{staged_path}/gk.bash", "#{bash_completion_dir}/gk"
-    FileUtils.mkdir_p fish_completion_dir
-    FileUtils.ln_sf "#{staged_path}/gk.fish", "#{fish_completion_dir}/gk.fish"
+    FileUtils.mkdir_p "#{HOMEBREW_PREFIX}/etc/bash_completion.d"
+    FileUtils.ln_sf "#{staged_path}/gk.bash", "#{HOMEBREW_PREFIX}/etc/bash_completion.d/gk"
+    FileUtils.mkdir_p "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d"
+    FileUtils.ln_sf "#{staged_path}/gk.fish", "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/gk.fish"
+    FileUtils.mkdir_p "#{HOMEBREW_PREFIX}/share/zsh/site-functions"
+    FileUtils.ln_sf "#{staged_path}/_gk", "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_gk"
   end
 
   uninstall_postflight do
-    bash_completion_file = "#{HOMEBREW_PREFIX}/etc/bash_completion.d/gk"
-    FileUtils.rm_f bash_completion_file
-    fish_completion_file = "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/gk.fish"
-    FileUtils.rm_f fish_completion_file
+    FileUtils.rm_f "#{HOMEBREW_PREFIX}/etc/bash_completion.d/gk"
+    FileUtils.rm_f "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/gk.fish"
+    FileUtils.rm_f "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_gk"
   end
 
   zap trash: "~/.gitkraken"
@@ -69,10 +44,8 @@ cask "gitkraken-cli" do
 
     Zsh users should ensure that the following line is present in their .zshrc:
       autoload -Uz compinit && compinit
-      - For Apple Silicon Macs, add the following line to your shell configuration file (.zshrc):
+      - Add the following line to your shell configuration file (.zshrc):
         fpath=("/opt/homebrew/share/zsh/site-functions" $fpath)
-      - For Intel Macs, use:
-        fpath=("/usr/local/share/zsh/site-functions" $fpath)
 
     Remember to restart your terminal or source your shell configuration file for changes to take effect.
 
