@@ -17,7 +17,7 @@ cask "cloudflare-warp" do
 
   auto_updates true
 
-  pkg "Cloudflare_WARP.pkg"
+  pkg "Cloudflare_WARP_#{version.csv.first}.pkg"
 
   uninstall launchctl: "com.cloudflare.1dot1dot1dot1.macos.loginlauncherapp",
             script:    {
