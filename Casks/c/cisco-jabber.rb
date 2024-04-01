@@ -28,4 +28,12 @@ cask "cisco-jabber" do
               "/Library/Application Support/Cisco/Unified Communications/Jabber/",
               "/Library/Logs/Jabber/",
             ]
+
+  zap trash: [
+    "~/Library/Application Support/Cisco/Unified Communications/Jabber",
+    "~/Library/Caches/com.cisco.Jabber",
+    "~/Library/Logs/Jabber",
+    "~/Library/Preferences/com.cisco.Jabber.plist",
+    "~/Library/WebKit/com.cisco.Jabber",
+  ]
 end
