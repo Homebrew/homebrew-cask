@@ -9,7 +9,7 @@ cask "capcut" do
   homepage "https://www.capcut.com/"
 
   livecheck do
-    url "https://editor-api-sg.capcut.com/service/settings/v3/?app=1&arch_info=arm64&device_id=2398670469&aid=359289&from_aid=359289&device_platform=mac&from_channel=capcutpc_0"
+    url "https://editor-api.capcutapi.com/service/settings/v3/?aid=359289&from_aid=359289&device_platform=mac&from_channel=capcutpc_0"
     regex(/CapCut[._-]v?(\d+(?:[._]\d+)+).+?\.dmg/i)
     strategy :json do |json, regex|
       url = json.dig("data", "settings", "installer_downloader_config", "url")
