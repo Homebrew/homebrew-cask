@@ -16,7 +16,7 @@ cask "mutedeck" do
 
   depends_on macos: ">= :big_sur"
 
-  installer manual: "MuteDeck-#{version}-Installer"
+  installer manual: "MuteDeck-#{version}-Installer.app"
 
   uninstall launchctl: "application.com.mutedeck.mac",
             quit:      "com.mutedeck.mac",
