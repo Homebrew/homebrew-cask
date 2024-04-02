@@ -12,7 +12,7 @@ cask "google-cloud-sdk" do
 
   livecheck do
     url "https://cloud.google.com/sdk/docs/install-sdk"
-    regex(/google-cloud-cli-(\d+(?:\.\d+)+)/i)
+    regex(/google[._-]cloud[._-]cli[._-]v?(\d+(?:\.\d+)+)/i)
   end
 
   auto_updates true
