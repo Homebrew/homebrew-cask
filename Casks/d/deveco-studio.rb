@@ -22,7 +22,7 @@ cask "deveco-studio" do
   homepage "https://developer.harmonyos.com/"
 
   livecheck do
-    url "https://developer.harmonyos.com/cn/develop/deveco-studio#download"
+    url "https://developer.huawei.com/consumer/cn/deveco-studio/"
     regex(/devecostudio[._-]mac#{arch}[._-](\d+(?:\.\d+)+)\.zip/i)
   end
 
