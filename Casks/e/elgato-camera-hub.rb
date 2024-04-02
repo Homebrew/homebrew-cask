@@ -1,8 +1,8 @@
 cask "elgato-camera-hub" do
-  version "1.9.0.2718"
-  sha256 "bc8f151542f22549f4ef90d6adb7193d2423d017d6ebd6567415a7f6e8aaaeff"
+  version "1.9.1.2906"
+  sha256 "c5c2573e38f401a2d811436ae82b4bebd667e45b4af7a97231c006f1f59ef967"
 
-  url "https://edge.elgato.com/egc/macos/echm/#{version.major_minor}/Camera_Hub_#{version}.pkg"
+  url "https://edge.elgato.com/egc/macos/echm/#{version.major_minor_patch}/Camera_Hub_#{version}.pkg"
   name "Elgato Camera Hub"
   desc "Elgato FACECAM configuration tool"
   homepage "https://www.elgato.com/ww/en/s/downloads"
