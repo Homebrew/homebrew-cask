@@ -40,6 +40,7 @@ cask "appcleaner" do
 
   zap trash: [
     "~/Library/Caches/net.freemacsoft.AppCleaner",
+    "~/Library/HTTPStorages/net.freemacsoft.AppCleaner",
     "~/Library/Preferences/net.freemacsoft.AppCleaner-SmartDelete.plist",
     "~/Library/Preferences/net.freemacsoft.AppCleaner.plist",
     "~/Library/Saved Application State/net.freemacsoft.AppCleaner.savedState",
