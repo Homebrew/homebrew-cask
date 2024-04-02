@@ -1,6 +1,6 @@
 cask "nightshade" do
-  version "1.0.1"
-  sha256 "c00482860846b3b7cf0e0b6a445795296e55e5fec7167f9a2b6d65fbf05d36c6"
+  version "1.0.2"
+  sha256 "d58c591bbcf4efde3c5e683658d1dde601c8bb4664e17120c64b3ffcaba0a769"
 
   url "https://mirror.cs.uchicago.edu/fawkes/files/nightshade/Nightshade-#{version}-m1.dmg"
   name "Nightshade"
