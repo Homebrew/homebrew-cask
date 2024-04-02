@@ -27,5 +27,6 @@ cask "skim" do
     "~/Library/HTTPStorages/net.sourceforge.skim-app.skim",
     "~/Library/Preferences/net.sourceforge.skim-app.skim.bookmarks.plist",
     "~/Library/Preferences/net.sourceforge.skim-app.skim.plist",
+    "~/Library/Saved Application State/net.sourceforge.skim-app.skim.savedState",
   ]
 end
