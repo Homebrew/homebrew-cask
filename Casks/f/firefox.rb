@@ -219,9 +219,9 @@ cask "firefox" do
 
   auto_updates true
   conflicts_with cask: [
-    "homebrew/cask-versions/firefox-beta",
-    "homebrew/cask-versions/firefox-cn",
-    "homebrew/cask-versions/firefox-esr",
+    "firefox-beta",
+    "firefox-cn",
+    "firefox-esr",
   ]
   depends_on macos: ">= :catalina"
 
