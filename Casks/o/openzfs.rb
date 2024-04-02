@@ -71,7 +71,7 @@ cask "openzfs" do
 
   livecheck do
     url "https://openzfsonosx.org/forum/viewforum.php?f=20"
-    regex(/viewtopic[^"' >]*t=(\d+).*zfs[._-]macOS[._-]v?(\d+(?:(?:\.)\d+)+)/i)
+    regex(/viewtopic[^"' >]*t=(\d+).*zfs[._-]macOS[._-]v?(\d+(?:(?:\.)\d+)+)(?:\s*release)/i)
     strategy :page_match do |page, regex|
       # Find the first [stable] release topic on the News forum
       post_id, version = page.scan(regex).first
