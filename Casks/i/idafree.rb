@@ -11,8 +11,8 @@ cask "idafree" do
   homepage "https://hex-rays.com/ida-free/"
 
   livecheck do
-    url :homepage
-    regex(/>.*?v?(\d+(?:\.\d+)).*?</i)
+    url "https://hex-rays.com/products/ida/news/"
+    regex(/>\s*IDA\s*v?(\d+(?:\.\d+)+)[^<]*?</i)
   end
 
   depends_on macos: ">= :catalina"
