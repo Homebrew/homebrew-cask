@@ -5,7 +5,7 @@ cask "clearvpn" do
   url "https://dl.devmate.com/com.macpaw.clearvpn.macos-site-ver/#{version.csv.second}/#{version.csv.third}/ClearVPN-#{version.csv.second}.zip",
       verified: "dl.devmate.com/"
   name "ClearVPN"
-  desc "One-tap VPN for secure online journeys"
+  desc "VPN client"
   homepage "https://clearvpn.com/"
 
   livecheck do
