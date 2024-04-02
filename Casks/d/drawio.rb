@@ -23,7 +23,11 @@ cask "drawio" do
   zap trash: [
     "~/Library/Application Support/draw.io",
     "~/Library/Caches/com.jgraph.drawio.desktop",
+    "~/Library/Caches/com.jgraph.drawio.desktop.ShipIt",
+    "~/Library/Caches/draw.io-updater",
+    "~/Library/HTTPStorages/com.jgraph.drawio.desktop",
     "~/Library/Logs/draw.io",
+    "~/Library/Preferences/ByHost/com.jgraph.drawio.desktop.ShipIt.*.plist",
     "~/Library/Preferences/com.jgraph.drawio.desktop.helper.plist",
     "~/Library/Preferences/com.jgraph.drawio.desktop.plist",
     "~/Library/Saved Application State/com.jgraph.drawio.desktop.savedState",
