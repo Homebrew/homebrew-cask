@@ -9,7 +9,7 @@ cask "cakebrewjs" do
 
   livecheck do
     url "https://sourceforge.net/projects/cakebrewjs/rss?"
-    regex(/cakebrewjs-(\d+(?:\.\d+)+)-Darwin\.dmg/i)
+    regex(/cakebrewjs[._-]v?(\d+(?:\.\d+)+)[._-]Darwin\.dmg/i)
     strategy :page_match
   end
 
