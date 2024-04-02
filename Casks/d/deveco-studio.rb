@@ -19,7 +19,7 @@ cask "deveco-studio" do
 
   name "DevEco Studio"
   desc "Development platform for HarmonyOS and OpenHarmony"
-  homepage "https://developer.harmonyos.com/"
+  homepage "https://developer.huawei.com/consumer/cn/"
 
   livecheck do
     url "https://developer.huawei.com/consumer/cn/deveco-studio/"
