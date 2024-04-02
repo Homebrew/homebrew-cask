@@ -8,10 +8,7 @@ cask "hypercal" do
   desc "Privacy first calendar that connects your schedules and tasks into a single view"
   homepage "https://hypercal.app/"
 
-  livecheck do
-    url "https://updater-api.hypercal.app/download"
-    strategy :header_match
-  end
+  disable! date: "2024-04-02", because: :no_longer_available
 
   app "Hypercal.app"
 
