@@ -1,9 +1,9 @@
 cask "tagspaces" do
   arch arm: "arm64", intel: "x64"
 
-  version "5.7.10"
-  sha256 arm:   "26c2f42e2ef84460de7637f1fff6af250c81f6dc67db4504336c11d482c7b213",
-         intel: "ae076b2e444ffca07928304380a25ae9f80ae8a38f16aa948c268a3211025e7e"
+  version "5.7.11"
+  sha256 arm:   "f0f006ff36589d712d63bbd3dc3771921a90b3e9c361283a44251db9bfe35fd6",
+         intel: "ece6c80da561b1f4290867e59fb15b206d11e2800077344bb516e667285f8e59"
 
   url "https://github.com/tagspaces/tagspaces/releases/download/v#{version}/tagspaces-mac-#{arch}-#{version}.dmg",
       verified: "github.com/tagspaces/tagspaces/"

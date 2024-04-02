@@ -1,12 +1,12 @@
 cask "adobe-creative-cloud" do
   arch arm: "macarm64", intel: "osx10"
 
-  version "6.1.0.587"
-  sha256 arm:   "348e2452b2be16dddc3ab9dd6d9af2ed7d2048bc9a602ac19768da3539ba8ac4",
-         intel: "3a04b719fea3cb038133c805e637d9730bb84805b70d90b1379dc87bcb16b9e9"
+  version "6.1.0.587.7"
+  sha256 arm:   "d0ceaf057c0b995f98f8e14a9deb413fd03ef60dfe948dd73eb16fb8bdb0d326",
+         intel: "f5c14f83008a94165b7c873d368475c45c5c42dc86381ab99b137dd35f3998f9"
 
   # If url breaks you can find the latest static urls - https://helpx.adobe.com/download-install/kb/creative-cloud-desktop-app-download.html
-  url "https://ccmdl.adobe.com/AdobeProducts/KCCC/CCD/#{version.major_minor_patch.dots_to_underscores}/#{arch}/ACCCx#{version.dots_to_underscores}.dmg"
+  url "https://ccmdl.adobe.com/AdobeProducts/KCCC/CCD/#{version.dots_to_underscores}/#{arch}/ACCCx#{version.dots_to_underscores}.dmg"
   name "Adobe Creative Cloud"
   desc "Collection of apps and services for photography, design, video, web, and UX"
   homepage "https://www.adobe.com/creativecloud.html"

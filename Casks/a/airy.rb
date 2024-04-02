@@ -1,5 +1,5 @@
 cask "airy" do
-  version "3.29"
+  version "3.29.1"
   sha256 :no_check
 
   url "https://cdn.airy-youtube-downloader.com/products/airy/mac/download/airy.dmg"

@@ -1,6 +1,6 @@
 cask "popo" do
-  version "4.0.1,1710336197372"
-  sha256 "47140907b697270f8b84f93a358a02dddcce9472c1b12a9d7934a22432173bc0"
+  version "4.1.0,1711629434741"
+  sha256 "f877d80261903abf27b2c63d50130d659d63911b0d7ecacf70b55fa72a4ea8d2"
 
   url "https://popo.netease.com/file/popomac/POPO-setup_prod_#{version.csv.second}.dmg"
   name "NetEase POPO"

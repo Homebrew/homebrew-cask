@@ -9,8 +9,8 @@ cask "guilded" do
 
   livecheck do
     url "https://www.guilded.gg/AppBuilds/mac/release-mac.yml"
-    strategy :electron_builder do |data|
-      data["version"].tr("-release", "")
+    strategy :electron_builder do |yaml|
+      yaml["version"]&.sub(/[._-]release.*$/i, "")
     end
   end
 

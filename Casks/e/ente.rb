@@ -5,13 +5,10 @@ cask "ente" do
   url "https://github.com/ente-io/photos-desktop/releases/download/v#{version}/ente-#{version}-universal.dmg",
       verified: "github.com/ente-io/photos-desktop/"
   name "Ente"
-  desc "Desktop client for Ente"
+  desc "Desktop client for Ente Photos"
   homepage "https://ente.io/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  auto_updates true
 
   app "ente.app"
 

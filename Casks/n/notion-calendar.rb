@@ -1,9 +1,9 @@
 cask "notion-calendar" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.119.0,24020864o7qbuof"
-  sha256 arm:   "f4e2f4e1533170fb26db65d37ed49ea8b4b36490fadece7a9526f0d7a2499535",
-         intel: "7ce7a67acabf5d28aae8ab8edcd1630938ee2c750800a4421bf94dcbca326d34"
+  version "1.120.0,240326ydciyyj0o"
+  sha256 arm:   "1fc729de0dd7738e71d97be9966402842350bbfff3c86022b9abd395fa522cab",
+         intel: "ea2850671a6a6da1c99d9dc810ffb3ede04c8ca2b2e4d2e9c692844522b14b2c"
 
   url "https://download.todesktop.com/210303leazlircz/Notion%20Calendar%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}-mac.zip",
       verified: "download.todesktop.com/210303leazlircz/"

@@ -1,7 +1,7 @@
 cask "mutedeck" do
   arch arm: "-arm"
 
-  version "2.5"
+  version "2.6"
   sha256 :no_check
 
   url "https://releases.mutedeck.com/macos#{arch}/mutedeck-mac#{arch}.dmg"
@@ -16,7 +16,7 @@ cask "mutedeck" do
 
   depends_on macos: ">= :big_sur"
 
-  installer manual: "MuteDeck-#{version}-Installer"
+  installer manual: "MuteDeck-#{version}-Installer.app"
 
   uninstall launchctl: "application.com.mutedeck.mac",
             quit:      "com.mutedeck.mac",

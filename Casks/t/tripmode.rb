@@ -11,8 +11,8 @@ cask "tripmode" do
     end
   end
   on_big_sur :or_newer do
-    version "3.2.2,1378"
-    sha256 "4fcbb4f02f88eac8b2197a447442e36d808e02f85fed5ebc6fee6a792fc2d2b3"
+    version "3.2.3,1834"
+    sha256 "a5a50fdfe81e78033b16974456fc53434e4c1237ad40f5b881c368e32c6aacdd"
 
     url "https://tripmode-updates.ch/app/TripMode-#{version.csv.first}-#{version.csv.second}.zip",
         verified: "tripmode-updates.ch/app/"
@@ -46,7 +46,7 @@ cask "tripmode" do
     "~/Library/Application Scripts/P39EL2R8C4.com.alix-sarl.TripMode",
     "~/Library/Application Support/Tripmode",
     "~/Library/Caches/ch.tripmode.TripMode",
-    "~/Library/Caches/com.apple.helpd/Generated/ch.tripmode.TripMode.help*#{version.csv.first}",
+    "~/Library/Caches/com.apple.helpd/Generated/ch.tripmode.TripMode.help*",
     "~/Library/Group Containers/P39EL2R8C4.com.alix-sarl.TripMode",
     "~/Library/Preferences/ch.tripmode.TripMode.plist",
   ]

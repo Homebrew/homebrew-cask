@@ -12,8 +12,8 @@ cask "blisk" do
   homepage "https://blisk.io/"
 
   livecheck do
-    url "https://blisk.io/download/?os=mac"
-    regex(/href=.*?BliskInstaller[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    url "https://blisk.io/download/installer/?os=mac#{arch}"
+    strategy :header_match
   end
 
   depends_on macos: ">= :high_sierra"

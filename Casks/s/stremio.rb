@@ -1,6 +1,6 @@
 cask "stremio" do
-  version "4.4.165"
-  sha256 "62aae0a471566e432c41f02ae346f44d49fe87bae158a22395f41427cb9e4f51"
+  version "4.4.168"
+  sha256 "4f140302a2c283a15a4740bfa4d983b6cc373e9375336dd69de274ae4b18c1ce"
 
   url "https://dl.strem.io/shell-osx/v#{version}/Stremio+#{version}.dmg"
   name "Stremio"
