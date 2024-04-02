@@ -22,8 +22,11 @@ cask "zed" do
   binary "#{appdir}/Zed.app/Contents/MacOS/cli", target: "zed"
 
   zap trash: [
-    "~/.config/Zed",
+    "~/.config/zed",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dev.zed.zed.sfl*",
     "~/Library/Application Support/Zed",
+    "~/Library/Caches/dev.zed.Zed",
+    "~/Library/HTTPStorages/dev.zed.Zed",
     "~/Library/Logs/Zed",
     "~/Library/Preferences/dev.zed.Zed.plist",
     "~/Library/Saved Application State/dev.zed.Zed.savedState",
