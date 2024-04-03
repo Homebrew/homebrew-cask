@@ -20,7 +20,9 @@ appflowy
 aptakube
 aqua
 arc
+atlauncher
 audius
+avast-secure-browser
 axure-rp
 backblaze
 banana-cake-pop
@@ -54,6 +56,7 @@ chromedriver
 chromium-gost
 clay
 cleanmymac
+clickhouse
 clickup
 clion
 cloudnet
@@ -61,9 +64,12 @@ codeql
 codux
 cog
 confluent-cli
+cookie
 copilot
 copilot-for-xcode
 coscreen
+couchbase-server-community
+couchbase-server-enterprise
 cryptomator
 crystalmaker
 cursor
@@ -110,6 +116,7 @@ firefox
 fixkey
 fleet
 flipper
+flirc
 floorp
 flutter
 fmail2
@@ -146,7 +153,9 @@ grandtotal
 gstreamer-development
 gstreamer-runtime
 hackolade
+hbuilderx
 heptabase
+heroic
 hoppscotch
 hstracker
 hydrus-network
@@ -202,6 +211,7 @@ mongodb-compass-isolated-edition
 mongodb-compass-readonly
 morgen
 mp3tag
+mqttx
 mullvad-browser
 mullvadvpn
 multiapp
@@ -233,6 +243,7 @@ openlens
 openshift-client
 opera
 opera-gx
+operadriver
 orbstack
 origami-studio
 oscar
@@ -272,6 +283,7 @@ puzzles
 pycharm
 pycharm-ce
 qbittorrent
+qlab
 qownnotes
 qqlive
 quarto
@@ -307,9 +319,11 @@ spark-ar-studio
 spotify
 spybuster
 standard-notes
+stash
 stats
 steamcmd
 superhuman
+superkey
 superlist
 supernotes
 swiftformat-for-xcode
@@ -363,6 +377,7 @@ webull
 wechat
 wechatwork
 whatsapp
+wondershare-uniconverter
 workflowy
 writerside
 xemu
