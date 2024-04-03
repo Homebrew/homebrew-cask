@@ -1,9 +1,9 @@
 cask "widelands" do
-  arch arm: "12-Arm", intel: "11"
+  arch arm: "14-arm64", intel: "12-x86"
 
-  version "1.1"
-  sha256 arm:   "b469457ddb78443c70896c4a81fd1787193bd0453bd6d63e6d4cf96d322f13ff",
-         intel: "65a965297ffc1e7f262234bf09064364f7a181eec8685d02e2f7de22d30c12b4"
+  version "1.2"
+  sha256 arm:   "7b19ba62c561daa7880a4fa5683591d916f43a4b846f1fc527e1c47e6e84d4e4",
+         intel: "ca3a4db1c6ccf07d2ff246d6bd979f5e7e116a8529d3ae41fdfc8d66bf4d5f93"
 
   url "https://github.com/widelands/widelands/releases/download/v#{version}/Widelands-#{version}-MacOS#{arch}.dmg",
       verified: "github.com/widelands/widelands/"
