@@ -1,6 +1,6 @@
 cask "telegram" do
-  version "10.10,261674"
-  sha256 "0b07a5cde2d8a54eada76e093ab9a59f00fc9bbf5c0f8fac4e383b14a5e7b08b"
+  version "10.10.2,261795"
+  sha256 "feb88e48d1533b9830727e327b0e6faa46b8a6f8beb74bce27166c52c2cbcfe1"
 
   url "https://osx.telegram.org/updates/Telegram-#{version.csv.first}.#{version.csv.second}.app.zip"
   name "Telegram for macOS"
@@ -16,7 +16,7 @@ cask "telegram" do
   end
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :high_sierra"
 
   app "Telegram.app"
 
