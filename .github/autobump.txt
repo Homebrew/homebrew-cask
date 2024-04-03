@@ -156,6 +156,7 @@ hackolade
 hbuilderx
 heptabase
 heroic
+holavpn
 hoppscotch
 hstracker
 hydrus-network
