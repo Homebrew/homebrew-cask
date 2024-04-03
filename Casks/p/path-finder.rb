@@ -1,5 +1,5 @@
 cask "path-finder" do
-  version "2168"
+  version "2169"
   sha256 :no_check
 
   url "https://get.cocoatech.com/PathFinder.dmg",
