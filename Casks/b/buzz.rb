@@ -7,6 +7,8 @@ cask "buzz" do
   desc "Transcribes and translates audio"
   homepage "https://github.com/chidiwilliams/buzz"
 
+  deprecate! date: "2024-04-03", because: :moved_to_mas
+
   app "Buzz.app"
 
   zap trash: [
