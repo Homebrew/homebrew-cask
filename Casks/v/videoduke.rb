@@ -1,5 +1,5 @@
 cask "videoduke" do
-  version "2.15"
+  version "2.15.1"
   sha256 :no_check
 
   url "https://cdn.video-downloader-mac.com/download/videoduke.dmg"
