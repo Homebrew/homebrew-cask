@@ -2,8 +2,8 @@ cask "texmacs" do
   arch arm: "-arm"
 
   version "2.1.4"
-  sha256 arm:   "baf36986247c8df2b7301a47f773eba9556e36235d2bac062e68405e65316bff",
-         intel: "2d2640feca9e755ff1a056786a6776f52329e6084d2f924ab0f7e98609571ee7"
+  sha256 arm:   "71bd118626d78adaaeeb06bbe083b5e2702a5b1db433531b93d3d2211d229171",
+         intel: "ac5127eb5a2fa4ec32dfae403e96e9223c6fd227b115626b60925944a3cc2257"
 
   url "https://ftp.texmacs.org/TeXmacs/tmftp/macos/TeXmacs-#{version}#{arch}.dmg"
   name "GNU TeXmacs"
