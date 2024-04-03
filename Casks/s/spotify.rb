@@ -27,7 +27,7 @@ cask "spotify" do
   end
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :catalina"
 
   app "Spotify.app"
 
