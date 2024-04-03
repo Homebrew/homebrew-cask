@@ -1,10 +1,10 @@
 # This file is synced from the `.github` repository, do not modify it directly.
-name: Triage issues
+name: Manage stale issues
 
 on:
   push:
     paths:
-      - .github/workflows/triage-issues.yml
+      - .github/workflows/stale-issues.yml
     branches-ignore:
       - dependabot/**
   schedule:
@@ -17,7 +17,7 @@ permissions:
   pull-requests: write
 
 concurrency:
-  group: triage-issues
+  group: stale-issues
   cancel-in-progress: ${{ github.event_name != 'issue_comment' }}
 
 jobs:
@@ -68,17 +68,3 @@ jobs:
             pull request open, add a `help wanted` or `in progress` label.
           exempt-pr-labels: "help wanted,in progress"
           any-of-labels: "bump-formula-pr,bump-cask-pr"
-
-  lock-threads:
-    if: github.repository_owner == 'Homebrew' && github.event_name != 'issue_comment'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Lock Outdated Threads
-        uses: dessant/lock-threads@1bf7ec25051fe7c00bdd17e6a7cf3d7bfb7dc771
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          process-only: 'issues, prs'
-          issue-inactive-days: 30
-          add-issue-labels: outdated
-          pr-inactive-days: 30
-          add-pr-labels: outdated
