@@ -17,6 +17,7 @@ cask "gimp" do
   end
 
   conflicts_with cask: "homebrew/cask-versions/gimp-dev"
+  depends_on macos: ">= :high_sierra"
 
   app "GIMP.app"
   shimscript = "#{staged_path}/gimp.wrapper.sh"
