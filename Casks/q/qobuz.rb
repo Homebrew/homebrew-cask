@@ -1,9 +1,9 @@
 cask "qobuz" do
   arch arm: "arm64/bigsur", intel: "x64/elCapitan_sierra"
 
-  version "7.1.3,010"
-  sha256 arm:   "61d5a8d509cc95b269d5cfd331aa448afaf20c264759a059ec3f843fdc4a008b",
-         intel: "98dbf049f3c94c755d063ebd978465ff7ba1ed9e0f5fb5acaca4f2ad3f62cd94"
+  version "7.1.4,008"
+  sha256 arm:   "4eaec2b1bf307b370122cc79899416fef52866f189f4f3f7b65e3bb5f7e942dd",
+         intel: "46d50274f60ab1e860a0db94ccfda7dbcde24cb4983d5518a281804256ff0500"
 
   url "https://desktop.qobuz.com/releases/darwin/#{arch}/#{version.csv.first}-b#{version.csv.second}/Qobuz.dmg"
   name "Qobuz"
