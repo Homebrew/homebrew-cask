@@ -1,12 +1,17 @@
 cask "volt" do
-  arch arm: "macos_arm64", intel: "macos"
+  version "0.96"
+  sha256 arm:   "f7c0eb75c4a7e93abc3b8cc248e31db5cdb1871d0936162e183f9f3e684af8a4",
+         intel: "7a52cb3dd08b82f4ae48777fa6625bc79c798a91714cbc0a5c0c1ab069c746bc"
 
-  version "0.87"
-  sha256 arm:   "ae933c40c77742317f44a62c273bb8de805c9b5bc627711ddf618217f171cf28",
-         intel: "6ef5b811650bf28e2b5d8e0a57eaa843a8e3f3d235d72ca123d95ab035c5fe03"
+  on_arm do
+    url "https://github.com/voltapp/volt/releases/download/#{version}/volt_macos_arm64.zip",
+        verified: "github.com/voltapp/volt/"
+  end
+  on_intel do
+    url "https://github.com/voltapp/volt/releases/download/#{version}/Volt.dmg",
+        verified: "github.com/voltapp/volt/"
+  end
 
-  url "https://github.com/voltapp/volt/releases/download/#{version}/volt_#{arch}.zip",
-      verified: "github.com/voltapp/volt/"
   name "Volt"
   desc "Client for Slack, Discord, Skype, Gmail, Twitter, Facebook, and more"
   homepage "https://volt-app.com/"
