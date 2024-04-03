@@ -8,10 +8,7 @@ cask "zoho-docs" do
   desc "Sync files to/from Zoho Docs"
   homepage "https://www.zoho.com/docs/desktop-sync.html"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  disable! date: "2024-04-03", because: :no_longer_available
 
   depends_on macos: ">= :high_sierra"
 
