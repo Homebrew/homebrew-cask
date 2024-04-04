@@ -186,6 +186,7 @@ logi-options-plus
 logos
 logseq
 loom
+loupedeck
 lunar
 maa
 macupdater
