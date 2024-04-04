@@ -1,8 +1,8 @@
 cask "loupedeck" do
-  version "5.8.1.18057"
-  sha256 "578985193deb6a13e5a99dbf4ab13252dab7ab1f2caf0f7900445c74374a0c67"
+  version "5.9.0.19176"
+  sha256 "df939adeb085c7a097d2cef96f5d15850c764d1b741bb25b9b12ae68d5c7b924"
 
-  url "https://5145542.fs1.hubspotusercontent-na1.net/hubfs/5145542/Knowledge%20Base/LD%20Software%20Downloads/#{version.major_minor_patch}/LoupedeckInstaller_#{version}.dmg",
+  url "https://5145542.fs1.hubspotusercontent-na1.net/hubfs/5145542/Knowledge%20Base/LD%20Software%20Downloads/#{version.major_minor_patch.chomp(".0")}/LoupedeckInstaller_#{version}.dmg",
       verified: "5145542.fs1.hubspotusercontent-na1.net/hubfs/5145542/"
   name "Loupdeck"
   desc "Software for Loupedeck consoles"
@@ -18,12 +18,9 @@ cask "loupedeck" do
   pkg "LoupedeckInstaller.pkg"
 
   uninstall launchctl: "com.loupedeck.loupedeck2.launch",
-            signal:    [
-              ["TERM", "com.loupedeck.Loupedeck2"],
-              ["QUIT", "com.loupedeck.Loupedeck2"],
-              ["INT", "com.loupedeck.Loupedeck2"],
-              ["HUP", "com.loupedeck.Loupedeck2"],
-              ["KILL", "com.loupedeck.Loupedeck2"],
+            quit:      [
+              "com.loupedeck.Loupedeck2",
+              "com.loupedeck.loupedeckconfig",
             ],
             pkgutil:   [
               "com.loupedeck.ImageLibraryInstaller",
@@ -34,6 +31,7 @@ cask "loupedeck" do
               "com.loupedeck.MediaInstaller",
               "com.loupedeck.OBSClientPluginPackageInstaller",
               "com.loupedeck.PluginPackageInstaller",
+              "com.loupedeck.UIPackageInstaller",
             ],
             delete:    "/Applications/Loupedeck.app"
 
