@@ -11,7 +11,7 @@ After making any changes to a cask, existing or new, verify:
 Additionally, **if adding a new cask**:
 
 - [ ] Named the cask according to the [token reference](https://docs.brew.sh/Cask-Cookbook#token-reference).
-- [ ] Checked the cask was not [already refused](https://github.com/Homebrew/homebrew-cask/search?q=is%3Aclosed&type=Issues).
+- [ ] Checked the cask was not [already refused](https://github.com/Homebrew/homebrew-cask/search?q=is%3Aclosed&type=pullrequests).
 - [ ] Checked the cask is submitted to [the correct repo](https://docs.brew.sh/Acceptable-Casks#finding-a-home-for-your-cask).
 - [ ] `brew audit --cask --new <cask>` worked successfully.
 - [ ] `HOMEBREW_NO_INSTALL_FROM_API=1 brew install --cask <cask>` worked successfully.
