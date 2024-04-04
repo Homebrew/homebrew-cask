@@ -1,19 +1,21 @@
 cask "banksiagui" do
-  version "0.55"
-  sha256 "4917730ce916905fa92b97733665f11cb88a85ab80f59bda6e48bd57fed4e210"
+  arch arm: "applesilicon", intel: "mac"
 
-  url "https://banksiagui.com/dl/BanksiaGui-#{version}-mac.zip"
-  name "BanksiaGui"
+  version "0.58"
+  sha256 arm:   "1f058c0371d6a912d943f5e03d007628d0e03ff039c3481a5101bab19fdee492",
+         intel: "8b31f9e747fdaf8e468a712ab431b96a7c0d8ab16a451c1dd0f790d4bc9c5e40"
+
+  url "https://banksiagui.com/dl/banksiagui-#{version}-#{arch}.zip"
+  name "banksiagui"
   desc "Chess GUI"
   homepage "https://banksiagui.com/"
 
-  # The homepage uses a WordPress anti-crawler protection plugin which
-  # returns a 403 error when trying to run livecheck
   livecheck do
-    skip "Version information can't be retrieved due to anti-crawler protection"
+    url "https://banksiagui.com/download/"
+    regex(/banksiagui[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.zip/i)
   end
 
-  app "BanksiaGui.app"
+  app "banksiagui-#{version}/banksiagui.app"
 
   zap trash: [
     "~/Library/Preferences/softgaroo.banksia.plist",
