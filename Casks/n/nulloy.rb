@@ -8,6 +8,11 @@ cask "nulloy" do
   desc "Music player"
   homepage "https://nulloy.com/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Nulloy.app"
 
   zap trash: "~/Library/Saved Application State/com.nulloy.savedState"
