@@ -1,8 +1,8 @@
 cask "muyu" do
-  version "1.5.0,41"
-  sha256 "03d9e71c59412e5a198bcdb9161b9bb0107ff7adccf351f1bac5ad6f1602bc0a"
+  version "1.5.1,43"
+  sha256 "595ced25efae4a9b65f35897d3372d4f4814bfabb9f1229087c9080cd165f560"
 
-  url "https://breakit.thriller.fun/packages/Muyu.v#{version.csv.first}_#{version.csv.second}.zip"
+  url "https://breakit.thriller.fun/packages/appcast/Muyu.v#{version.csv.first}_#{version.csv.second}.zip"
   name "Muyu"
   desc "Combination of work efficiency and health"
   homepage "https://breakit.thriller.fun/"
