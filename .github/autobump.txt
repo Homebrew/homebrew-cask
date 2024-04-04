@@ -60,6 +60,7 @@ clickhouse
 clickup
 clion
 cloudnet
+cmake
 codeql
 codux
 cog
