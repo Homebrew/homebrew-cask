@@ -322,6 +322,7 @@ standard-notes
 stash
 stats
 steamcmd
+steelseries-gg
 superhuman
 superkey
 superlist
