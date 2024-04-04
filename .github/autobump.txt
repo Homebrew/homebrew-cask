@@ -294,6 +294,7 @@ reaper
 rectangle
 rectangle-pro
 remote-desktop-manager
+remotehamradio
 restfox
 rewind
 rider

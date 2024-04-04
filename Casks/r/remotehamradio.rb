@@ -1,8 +1,8 @@
 cask "remotehamradio" do
-  version "2.2.1"
-  sha256 "f042a12c30227723eebdaaaa348ebb6b3ade4dde4126beac2514fd9a7dc10499"
+  version "2.3.0"
+  sha256 "4c5379c4d1f8878bd350eb0fd05f31f0e7d0e7d6edb3eb4541d6bc53aa0b143e"
 
-  url "https://s3.amazonaws.com/rhr-electron/desktop-releases/RemoteHamRadio-#{version}-mac.zip",
+  url "https://s3.amazonaws.com/rhr-electron/desktop-releases/RemoteHamRadio-#{version}-universal-mac.zip",
       verified: "s3.amazonaws.com/rhr-electron/desktop-releases/"
   name "RemoteHamRadio"
   desc "Desktop console app for RemoteHamRadio service"
@@ -10,7 +10,7 @@ cask "remotehamradio" do
 
   livecheck do
     url "https://update.remotehamradio.com/desktop/download?platform=Macintosh"
-    regex(/href=.*?RemoteHamRadio[._-]v?(\d+(?:\.\d+)+)-mac\.zip/i)
+    regex(/href=.*?RemoteHamRadio[._-]v?(\d+(?:\.\d+)+)[._-]universal[._-]mac\.zip/i)
   end
 
   app "RemoteHamRadio.app"
