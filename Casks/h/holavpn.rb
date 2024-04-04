@@ -9,7 +9,7 @@ cask "holavpn" do
 
   livecheck do
     url "https://hola.org/download"
-    regex(/"iosmac2e":"(#{version.csv.first.major}[^"]+)","iosmac2e_build":"([^"]+)"/i)
+    regex(/"iosmac2e":"(#{version.csv.first.major}[^"]+)"(?:,"iosmac2e_next":"[^"]+")?,"iosmac2e_build":"([^"]+)"/i)
     strategy :page_match do |page|
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
