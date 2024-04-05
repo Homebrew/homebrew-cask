@@ -29,7 +29,8 @@ cask "powershell" do
   ]
 
   caveats <<~EOS
-    To use Homebrew in PowerShell, set:
+    To use Homebrew in PowerShell, run the following in a PowerShell session:
+      New-Item -Path (Split-Path -Parent -Path $PROFILE.CurrentUserAllHosts) -ItemType Directory -Force
       Add-Content -Path $PROFILE.CurrentUserAllHosts -Value '$(#{HOMEBREW_PREFIX}/bin/brew shellenv) | Invoke-Expression'
   EOS
 end
