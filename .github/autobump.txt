@@ -47,6 +47,7 @@ calibre
 camtasia
 canva
 capacities
+captain
 carbon-copy-cloner
 cardpresso
 chatall
@@ -71,6 +72,7 @@ copilot-for-xcode
 coscreen
 couchbase-server-community
 couchbase-server-enterprise
+craft
 cryptomator
 crystalmaker
 cursor
@@ -106,6 +108,7 @@ element
 elephas
 elephicon
 eloston-chromium
+evernote
 expressvpn
 fantastical
 fedistar
@@ -234,6 +237,7 @@ nordpass
 nordvpn
 notesnook
 notion
+notion-calendar
 nova
 nozbe
 ocenaudio
@@ -305,6 +309,7 @@ rive
 roam
 rubymine
 rustrover
+santa
 segger-jlink
 setapp
 sf
@@ -317,6 +322,7 @@ siyuan
 skype
 slack
 slack-cli
+snagit
 sol
 spacedrive
 spark-ar-studio
