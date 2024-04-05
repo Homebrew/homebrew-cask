@@ -3,7 +3,7 @@ cask "halloy" do
   sha256 "cd1d808a3223e83cece32b208ecd3351d53a7456ce9a6c19e91076de31f834af"
   
   url "https://github.com/squidowl/halloy/releases/download/#{version}/halloy.dmg",
-      verified: "github.com/squidowl/halloy"
+      verified: "github.com/squidowl/halloy/"
   name "Halloy"
   desc "IRC application written in Rust"
   homepage "https://halloy.squidowl.org/"
