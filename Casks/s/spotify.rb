@@ -31,7 +31,10 @@ cask "spotify" do
 
   app "Spotify.app"
 
-  uninstall launchctl: "com.spotify.webhelper",
+  uninstall launchctl: [
+              "com.spotify.client.startuphelper",
+              "com.spotify.webhelper",
+            ],
             quit:      "com.spotify.client"
 
   zap trash: [
