@@ -7,7 +7,7 @@ cask "btp" do
 
   url "https://tools.hana.ondemand.com/additional/btp-cli-darwin-#{arch}-#{version}.tar.gz",
       cookies: {
-        "eula_3_1_agreed" => "tools.hana.ondemand.com/developer-license-3_1.txt",
+        "eula_3_2_agreed" => "tools.hana.ondemand.com/developer-license-3_2.txt",
       }
   name "SAP Business Technology Platform Command Line Interface"
   desc "CLI for the SAP Business Technology Platform"
@@ -23,6 +23,6 @@ cask "btp" do
   # No zap stanza required
 
   caveats do
-    license "https://tools.hana.ondemand.com/developer-license-3_1.txt"
+    license "https://tools.hana.ondemand.com/developer-license-3_2.txt"
   end
 end
