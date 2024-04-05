@@ -1,9 +1,9 @@
 cask "gretl" do
   arch arm: "arm64", intel: "intel"
 
-  version "2023c"
-  sha256 arm:   "6e5f499a21cb2d1dfc356c165b95a92b87f55f7d9a43c50a848896fc8ecd661c",
-         intel: "ef4fefa3459bf6c02830c3f76a730acfc665c4f9ba7ce1190e34321ade922598"
+  version "2024a"
+  sha256 arm:   "5a8a030bfd599073a1f900303bc1fa5c4e4c730b00ffc2a90bc4f6301f89411c",
+         intel: "0bbed1734d0e6a9a018f901243da86cacaca5fb974bc6325885e257ff8818f8f"
 
   url "https://downloads.sourceforge.net/gretl/gretl-#{version}-macos-#{arch}.pkg"
   name "gretl"
