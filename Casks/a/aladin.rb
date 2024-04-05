@@ -1,10 +1,8 @@
 cask "aladin" do
-  arch arm: "arm", intel: "amd"
-
   version "12.060"
   sha256 :no_check
 
-  url "https://aladin.cds.unistra.fr/java/Aladin.#{arch}.dmg"
+  url "https://aladin.cds.unistra.fr/java/download/Aladin.dmg"
   name "Aladin Desktop"
   desc "Interactive sky atlas"
   homepage "https://aladin.cds.unistra.fr/AladinDesktop/"
@@ -14,20 +12,11 @@ cask "aladin" do
     regex(%r{<h1>\s*Official\s+version\s*(?:<[^/>]*>\s*)?v?(\d+(?:\.\d+)+)}i)
   end
 
-  installer script: {
-    executable: "Aladin Sky Atlas Installer.app/Contents/MacOS/JavaApplicationStub",
-    args:       ["-q"], # install4j, Unattended mode
-  }
-
-  uninstall script: {
-    executable: "/Applications/Aladin Sky Atlas/Aladin Sky Atlas Uninstaller.app/Contents/MacOS/JavaApplicationStub",
-    args:       ["-q"],
-  }
+  app "Aladin.app"
 
   zap trash: "~/.aladin"
 
-  # Aladin 12 has a built-in jre
-  # caveats do
-  # depends_on_java
-  # end
+  caveats do
+    depends_on_java
+  end
 end
