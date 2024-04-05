@@ -1,22 +1,16 @@
 cask "jdownloader" do
-  version "48254"
+  arch arm: "aarch64", intel: "amd64"
+
+  version :latest
   sha256 :no_check
 
-  url "https://installer.jdownloader.org/clean/JD2Setup.dmg",
-      user_agent: :fake
+  url "https://installer.jdownloader.org/homebrew/latest/JDownloader2Setup_macos-#{arch}_v21.dmg"
   name "JDownloader"
   desc "Download manager"
   homepage "https://jdownloader.org/"
 
-  livecheck do
-    url "https://svn.jdownloader.org/build.php"
-    regex(/Revision:.*?(\d+)[\s<]/i)
-  end
-
-  auto_updates true
-
   preflight do
-    system_command "#{staged_path}/JDownloader Installer.app/Contents/MacOS/JavaApplicationStub",
+    system_command "#{staged_path}/JDownloader 2 Installer.app/Contents/MacOS/JavaApplicationStub",
                    args:         [
                      "-dir", appdir.to_s,
                      "-q",
@@ -29,7 +23,7 @@ cask "jdownloader" do
   end
 
   uninstall delete: [
-    "#{appdir}/JDownloader 2.0",
+    "#{appdir}/JDownloader 2",
     "#{appdir}/JDownloader2.app",
   ]
 
