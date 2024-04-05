@@ -7,6 +7,11 @@ cask "dosbox-staging" do
   desc "DOS game emulator"
   homepage "https://github.com/dosbox-staging/dosbox-staging/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "DOSBox Staging.app"
 
   zap trash: "~/Library/Preferences/DOSBox"
