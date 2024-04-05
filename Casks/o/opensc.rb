@@ -1,6 +1,6 @@
 cask "opensc" do
-  version "0.25.0"
-  sha256 "5417186cf88a50931b6186f2c3ade95525b683e55b418eae9d56d728c76d2e51"
+  version "0.25.1"
+  sha256 "9679d70db011a68e99360fcd4c5538b0481bd036fb058fc309b999837e63e063"
 
   url "https://github.com/OpenSC/OpenSC/releases/download/#{version}/OpenSC-#{version}.dmg"
   name "OpenSC"
