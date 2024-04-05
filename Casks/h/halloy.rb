@@ -8,12 +8,10 @@ cask "halloy" do
   desc "IRC application written in Rust"
   homepage "https://halloy.squidowl.org/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   app "Halloy.app"
 
-  zap trash: "~/Library/Application Support/halloy"
+  zap trash: [
+    "~/Library/Application Support/halloy",
+    "~/Library/Saved Application State/org.squidowl.halloy.savedState",
+  ]
 end
