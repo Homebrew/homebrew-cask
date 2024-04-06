@@ -4,7 +4,7 @@ cask "viable" do
 
   url "https://eclecticlightdotcom.files.wordpress.com/#{version.csv.second.major}/#{version.csv.second.minor}/viable#{version.csv.first}.zip",
       verified: "eclecticlightdotcom.files.wordpress.com/"
-  name "silnite"
+  name "viable"
   desc "Create and run macOS virtual machines on Apple silicon Macs"
   homepage "https://eclecticlight.co/virtualisation-on-apple-silicon"
 
