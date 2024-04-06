@@ -5,7 +5,7 @@ cask "halloy" do
   url "https://github.com/squidowl/halloy/releases/download/#{version}/halloy.dmg",
       verified: "github.com/squidowl/halloy/"
   name "Halloy"
-  desc "IRC application written in Rust"
+  desc "IRC client"
   homepage "https://halloy.squidowl.org/"
 
   app "Halloy.app"
