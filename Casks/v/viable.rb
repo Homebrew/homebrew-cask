@@ -10,7 +10,7 @@ cask "viable" do
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?/(\d+)/(\d+)/viable[._-]?v?(\d+(?:\.\d+)*\w?)\.zip}i)
+    regex(%r{href=.*?/uploads/(\d+)/(\d+)/viable[._-]?v?(\w+)\.zip}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|
         "#{match[2]},#{match[0]}.#{match[1]}"
@@ -23,6 +23,9 @@ cask "viable" do
   app "viable#{version.csv.first}/Viable.app"
 
   zap trash: [
+    "~/Library/Caches/co.eclecticlight.Viable",
+    "~/Library/HTTPStorages/co.eclecticlight.Viable",
     "~/Library/Preferences/co.eclecticlight.Viable.plist",
+    "~/Library/Saved Application State/co.eclecticlight.Viable.savedState",
   ]
 end
