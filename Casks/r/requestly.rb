@@ -1,5 +1,5 @@
 cask "requestly" do
-  arch arm: "-arm64", intel: ""
+  arch arm: "-arm64"
 
   version "1.6.0"
   sha256 arm:   "5e17a3256ad4adb1a45bdd7f283b5aedc982b3aa01a053e4ec10a5e13c8a5172",
@@ -11,19 +11,15 @@ cask "requestly" do
   desc "Open-Source platform for front-end developers that helps write, test & debug"
   homepage "https://requestly.com/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   depends_on macos: ">= :high_sierra"
 
   app "Requestly.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.requestly*.sfl*",
     "~/Library/Application Support/Requestly",
     "~/Library/Logs/Requestly",
-    "~/Library/Preferences/io.requestly.beta.plist",
-    "~/Library/Saved Application State/io.requestly.beta.savedState",
+    "~/Library/Preferences/io.requestly.*.plist",
+    "~/Library/Saved Application State/io.requestly.*.savedState",
   ]
 end
