@@ -1,9 +1,9 @@
 cask "roam" do
   arch arm: "arm64", intel: "x64"
 
-  version "103.0.0-beta001"
-  sha256 arm:   "daaf1731ef22c6f442f5bfbe5e94bfb143b57edab910bd2dfdcdc963f2950c1b",
-         intel: "c457c3e8db5d296797c2e1c8e8dad35d100904a8c1cd6a30f88d69e43e406707"
+  version "103.0.1-beta001"
+  sha256 arm:   "c9759de19163b09cc5fa54a4b036bee9421ca0c91ca45475bfd93b8685a10425",
+         intel: "a70bbf976d7d20032a229514447880d2941bcdb72d75930d674f9292fbeda283"
 
   url "https://download.ro.am/Roam/8a86d88cfc9da3551063102e9a4e2a83/latest/darwin/#{arch}/Roam.dmg"
   name "Roam"
