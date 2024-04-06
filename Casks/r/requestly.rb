@@ -8,7 +8,7 @@ cask "requestly" do
   url "https://github.com/requestly/requestly-desktop-app/releases/download/v#{version}/Requestly-#{version}#{arch}.dmg",
       verified: "github.com/requestly/requestly-desktop-app/"
   name "Requestly"
-  desc "Open-Source platform for front-end developers that helps write, test & debug"
+  desc "Intercept and modify HTTP requests"
   homepage "https://requestly.com/"
 
   depends_on macos: ">= :high_sierra"
