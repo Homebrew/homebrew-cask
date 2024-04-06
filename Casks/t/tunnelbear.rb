@@ -6,14 +6,25 @@ cask "tunnelbear" do
     url "https://s3.amazonaws.com/tunnelbear/downloads/mac/TunnelBear-#{version}.zip",
         verified: "s3.amazonaws.com/tunnelbear/downloads/mac/"
 
+    livecheck do
+      skip "Legacy version"
+    end
+
     depends_on macos: ">= :sierra"
   end
   on_big_sur :or_newer do
     version "5.2.3"
     sha256 :no_check
 
-    url "https://s3.amazonaws.com/tunnelbear/downloads/mac/TunnelBear.zip",
+    url "https://s3.amazonaws.com/tunnelbear/downloads/mac/TunnelBear-#{version}.zip",
         verified: "s3.amazonaws.com/tunnelbear/downloads/mac/"
+
+    livecheck do
+      url "https://s3.amazonaws.com/tunnelbear/downloads/mac/appcast.xml"
+      strategy :sparkle do |items|
+        items.map(&:short_version)
+      end
+    end
 
     depends_on macos: ">= :big_sur"
   end
@@ -21,15 +32,6 @@ cask "tunnelbear" do
   name "TunnelBear"
   desc "VPN client for secure internet access and private browsing"
   homepage "https://www.tunnelbear.com/"
-
-  # Older versions may have a more recent `pubDate` than newer versions, so we
-  # have to check all the items in the appcast.
-  livecheck do
-    url "https://tunnelbear.s3.amazonaws.com/downloads/mac/appcast.xml"
-    strategy :sparkle do |items|
-      items.map(&:short_version)
-    end
-  end
 
   auto_updates true
 
