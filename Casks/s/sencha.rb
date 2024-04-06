@@ -8,8 +8,8 @@ cask "sencha" do
   homepage "https://www.sencha.com/products/sencha-cmd/"
 
   livecheck do
-    url "https://www.sencha.com/products/extjs/cmd-download/"
-    regex(/href=.*?SenchaCmd[._-]v?(\d+(?:\.\d+)+)[._-]osx\.app\.zip/i)
+    url "https://www.sencha.com/products/extjs/evaluate/"
+    regex(/SenchaCmd[._-]v?(\d+(?:\.\d+)+)[._-]osx\.app\.zip/i)
   end
 
   installer script: {
