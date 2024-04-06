@@ -9,7 +9,7 @@ cask "samsung-portable-ssd-t7" do
 
   livecheck do
     url :homepage
-    regex(/SamsungPortableSSD[._-]Setup[._-]Mac[._-]v?(\d+(?:\.\d+)+)\.zip.*\n*\s*.*Version\sv?(\d+(?:\.\d+)+)/i)
+    regex(/SamsungPortableSSD[._-]Setup[._-]Mac[._-]v?(\d+(?:\.\d+)+)[._-]v?(\d+(?:\.\d+)+)/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
     end
