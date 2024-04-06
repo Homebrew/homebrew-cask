@@ -7,10 +7,7 @@ cask "aethersx2" do
   desc "Sony PlayStation 2 emulator for ARM based Macs"
   homepage "https://aethersx2.com/"
 
-  livecheck do
-    url "https://www.aethersx2.com/archive/?dir=desktop/mac"
-    regex(/AetherSX2[._-]v?(\d+(?:\.\d+)[._-]\d+)[._-]mac\.zip/i)
-  end
+  disable! date: "2024-04-06", because: :no_longer_available
 
   depends_on macos: ">= :big_sur"
   depends_on arch: :arm64
