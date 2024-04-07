@@ -1,8 +1,8 @@
 cask "outfox" do
-  version "0.5.0-pre042,20231224"
+  version "0.5.0-pre042,OF5.0.0-042,OutFox-alpha,MacOS-universal-date-20231224"
   sha256 "5c6f772d17e972c7836174af6831a3257619bff4a5c681dbb1ac05cad6180055"
 
-  url "https://github.com/TeamRizu/OutFox/releases/download/OF5.0.0-042/OutFox-alpha-#{version.csv.first}-MacOS-universal-date-#{version.csv.second}.dmg",
+  url "https://github.com/TeamRizu/OutFox/releases/download/#{version.csv.second}/#{version.csv.third}-#{version.csv.first}-#{version.csv.fourth}.dmg",
       verified: "github.com/TeamRizu/OutFox/"
   name "OutFox"
   desc "Extensible rhythm game engine based on StepMania"
@@ -10,16 +10,19 @@ cask "outfox" do
 
   livecheck do
     url :url
-    regex(/OutFox[._-]alpha[._-](\d+(?:\.\d+)+[._-]pre\d+)[._-]MacOS[._-]universal[._-]date[._-](\d+)\.dmg$/i)
+    regex(%r{/([^/]+?)/([^/]+)-v?(\d+(?:\.\d+)+[^/]*?)-(MacOSX?[^/]*)\.dmg$})
     strategy :github_releases do |json, regex|
-      json.map do |release|
+      # Temporarily restrict the ten newest releases, to work around older
+      # versions using a 4.13.0 version scheme instead of the newer 0.4.14.
+      # TODO: Replace this with `json.map do |release|` when possible
+      json[0...9].map do |release|
         next if release["draft"] || release["prerelease"]
 
         release["assets"]&.map do |asset|
-          match = asset["name"]&.match(regex)
+          match = asset["browser_download_url"]&.match(regex)
           next if match.blank?
 
-          "#{match[1]},#{match[2]}"
+          "#{match[3]},#{match[1]},#{match[2]},#{match[4]}"
         end
       end.flatten
     end
