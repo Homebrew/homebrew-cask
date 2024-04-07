@@ -8,6 +8,11 @@ cask "ente-auth" do
   desc "Desktop client for Ente Auth"
   homepage "https://ente.io/"
 
+  livecheck do
+    url :url
+    regex(/^auth[._-]v?(\d+(?:\.\d+)+)$/i)
+  end
+
   auto_updates true
   depends_on macos: ">= :mojave"
 
