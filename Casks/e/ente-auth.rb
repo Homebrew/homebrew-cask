@@ -3,10 +3,12 @@ cask "ente-auth" do
   sha256 "f48ca68ec4d4aeeeba08a4cd7f928d3caab5534fa87ed06a738c483e35a30ae7"
 
   url "https://github.com/ente-io/ente/releases/download/auth-v#{version}/ente-auth-v#{version}.dmg",
-      verified: "github.com/ente-io/ente"
+      verified: "github.com/ente-io/ente/"
   name "Ente Auth"
   desc "Desktop client for Ente Auth"
   homepage "https://ente.io/"
+
+  depends_on macos: ">= :mojave"
 
   auto_updates true
 
