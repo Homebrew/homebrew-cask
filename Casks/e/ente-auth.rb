@@ -8,9 +8,8 @@ cask "ente-auth" do
   desc "Desktop client for Ente Auth"
   homepage "https://ente.io/"
 
-  depends_on macos: ">= :mojave"
-
   auto_updates true
+  depends_on macos: ">= :mojave"
 
   app "Ente Auth.app"
 
