@@ -7,10 +7,7 @@ cask "brightintosh" do
   desc "Utility that allows increased screen brightness"
   homepage "https://www.brightintosh.de/"
 
-  livecheck do
-    url "https://c.brightintosh.de/updates/appcast.xml"
-    strategy :sparkle, &:short_version
-  end
+  deprecate! date: "2024-04-11", because: :moved_to_mas
 
   depends_on macos: ">= :monterey"
   depends_on arch: :arm64
