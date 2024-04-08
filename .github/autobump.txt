@@ -1,5 +1,6 @@
 1password
 1password-cli
+8x8-work
 affine
 affinity-designer
 affinity-photo
@@ -273,6 +274,7 @@ plex-htpc
 plex-media-server
 plus42-binary
 plus42-decimal
+poe
 popo
 popsql
 portfolioperformance
@@ -311,6 +313,7 @@ rubymine
 rustrover
 santa
 segger-jlink
+session
 setapp
 sf
 sfm
@@ -360,12 +363,14 @@ topaz-video-ai
 tor-browser
 trader-workstation
 trainerroad
+treesheets
 tresorit
 trezor-suite
 tsh
 tuist
 tuple
 tuta-mail
+tyme
 uhk-agent
 understand
 unity
@@ -394,5 +399,6 @@ writerside
 xemu
 zed
 znote
+zoc
 zoom
 zoom-for-it-admins
