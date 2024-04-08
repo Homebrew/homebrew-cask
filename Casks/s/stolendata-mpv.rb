@@ -1,4 +1,4 @@
-cask "mpv" do
+cask "stolendata-mpv" do
   on_catalina :or_older do
     version "0.35.0"
     sha256 "376415c787aef391a3927cdecd5bb0dac9f21ef9d7742516b8cd8d8ce502e7b6"
