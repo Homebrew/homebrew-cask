@@ -14,6 +14,7 @@ cask "mutedeck" do
     regex(/<title>\s*v?(\d+(?:\.\d+)+)[ <"]/i)
   end
 
+  auto_updates true
   depends_on macos: ">= :big_sur"
 
   installer manual: "MuteDeck-#{version}-Installer.app"
