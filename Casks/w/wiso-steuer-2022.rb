@@ -1,4 +1,5 @@
 cask "wiso-steuer-2022" do
+  # NOTE: "2022" is not a version number, but an intrinsic part of the product name
   version "29.15.4410"
   sha256 :no_check
 
