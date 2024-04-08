@@ -1,5 +1,6 @@
 cask "wiso-steuer-2022" do
-  version "29.15.4360"
+  # NOTE: "2022" is not a version number, but an intrinsic part of the product name
+  version "29.15.4410"
   sha256 :no_check
 
   url "https://download.buhl.de/ESD/Steuer/2022/WISOSteuerMac2022.dmg"
