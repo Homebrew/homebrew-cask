@@ -1,6 +1,6 @@
 cask "godspeed" do
-  version "1.0.3"
-  sha256 "1d95b4dbe1d8ed8ffe384acdfc58ad97bb5b296636e8e67fb406c266ee4e49f5"
+  version "1.0.7"
+  sha256 "15eefce0717b2144babcab25f5212913fc9e5d8343115eb8fc07f4484224d8d4"
 
   url "https://com-godspeedapp-app-versions.s3.us-west-1.amazonaws.com/#{version}/Godspeed.zip",
       verified: "com-godspeedapp-app-versions.s3.us-west-1.amazonaws.com/"
