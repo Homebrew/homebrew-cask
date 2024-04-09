@@ -1,6 +1,6 @@
 cask "xcodepilot" do
-  version "1.3.0,17"
-  sha256 "12563731f207de79a2321f3c9f123357e9710f0b5716b1d60709e57e908d31b3"
+  version "1.3.0,18"
+  sha256 "982410101e44c537e8ce91a2e7229327352902f84a7273c1b561186b78b0fa78"
 
   url "https://xcodepilot.thriller.fun/packages/appcast/XcodePilot.v#{version.csv.first}_#{version.csv.second}.zip"
   name "XcodePilot"
