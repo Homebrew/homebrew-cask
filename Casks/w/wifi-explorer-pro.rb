@@ -24,7 +24,7 @@ cask "wifi-explorer-pro" do
 
   zap trash: [
     "~/Library/Application Support/WiFi Explorer Pro #{version.major}",
-    "~/Library/Caches/com.apple.helpd/Generated/com.intuitibits.wifiexplorerpro#{version.major}.*",
+    "~/Library/Caches/com.apple.helpd/Generated/com.intuitibits.wifiexplorerpro*",
     "~/Library/Caches/com.intuitibits.wifiexplorerpro#{version.major}",
     "~/Library/Group Containers/2B9R362QNU.com.adriangranados.wifiexplorer",
     "~/Library/Preferences/com.intuitibits.wifiexplorerpro#{version.major}.plist",
