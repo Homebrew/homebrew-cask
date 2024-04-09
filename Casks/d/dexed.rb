@@ -8,6 +8,11 @@ cask "dexed" do
   desc "DX7 FM synthesiser"
   homepage "https://asb2m10.github.io/dexed/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   pkg "dexed-#{version}.mpkg"
 
   uninstall pkgutil: [
