@@ -10,8 +10,8 @@ cask "tunnelbear" do
     depends_on macos: ">= :sierra"
   end
   on_big_sur :or_newer do
-    version "5.3.0"
-    sha256 "0007bf00e55e9fd517a52a1127943ebef02d62423845707108923d1345a6760d"
+    version "5.3.1"
+    sha256 "ab021ae5d1d3e12686b946a79d50bea62110b7d6463bd6e29b34b595834c017c"
 
     # Older versions may have a more recent `pubDate` than newer versions, so we
     # have to check all the items in the appcast.
