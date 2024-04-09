@@ -12,7 +12,7 @@ cask "touchdesigner" do
 
   livecheck do
     url "https://docs.derivative.ca/Release_Notes"
-    regex(/href=["'].*?["']>build\s?(\d+(?:\.\d+)+)\s?download\s?</i)
+    regex(/Build\s+(\d+(?:\.\d+)+)/i)
   end
 
   depends_on macos: ">= :mojave"
