@@ -1,6 +1,6 @@
 cask "bookletcreator" do
-  version "2.0.5"
-  sha256 "f9e702b48d56c41104ddd5c051d5ea77330717113f92396e225ab8983c82d176"
+  version "2.1.0"
+  sha256 "689c0497e469335b2440f55877281dec86ce035e3a00fc7035f9f989826fee64"
 
   url "https://www.bookletcreator.com/files/BookletCreator-#{version}.dmg"
   name "BookletCreator"
@@ -8,12 +8,12 @@ cask "bookletcreator" do
   homepage "https://www.bookletcreator.com/"
 
   livecheck do
-    url "https://www.bookletcreator.com/update/bc-appcast.xml"
-    strategy :sparkle, &:short_version
+    url "https://www.bookletcreator.com/download/BookletCreatorMac"
+    strategy :header_match
   end
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :mojave"
 
   app "BookletCreator.app"
 
