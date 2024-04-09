@@ -27,7 +27,7 @@ cask "visual-studio" do
 
   auto_updates true
   depends_on macos: ">= :catalina"
-  depends_on cask: "homebrew/cask-versions/mono-mdk-for-visual-studio"
+  depends_on cask: "mono-mdk-for-visual-studio"
 
   app "Visual Studio.app"
 
