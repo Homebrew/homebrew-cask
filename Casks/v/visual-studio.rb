@@ -2,12 +2,12 @@ cask "visual-studio" do
   arch arm: "arm64", intel: "x64"
 
   on_arm do
-    version "17.6.10.428,cc678cb4-01e3-4abe-9d81-84949de368c7,2b3b2ca81103f18aac1963084908f4dc"
-    sha256 "ff8257c60aed8a1afb8b924a48e351b3c81d507ff701054b310c8f125f538c1b"
+    version "17.6.11.400,d9bdf235-5f23-4901-a4d4-88b1fc208e50,4d6cb7eba0d59cb70f7ef2adaf48fc60"
+    sha256 "1a6ace31b0c05d09e3b4eb4fa8cd99596518aaaae573d9a24886ecd4691be1af"
   end
   on_intel do
-    version "17.6.10.428,cc678cb4-01e3-4abe-9d81-84949de368c7,30f21de7c6d65a4e4d0f69a2f8c8f044"
-    sha256 "ec321f38296d0ef9d4dcbdbe83fa9ac6ce6c308d512e1474d6cd29c12762d512"
+    version "17.6.11.400,d9bdf235-5f23-4901-a4d4-88b1fc208e50,5afb005d0e71c07fcfbd518d1b0de9e0"
+    sha256 "460f9a407b34790dda5bc9f9d4470d1f7dd80dec8f3f7dc672a3ebda07c26a93"
   end
 
   url "https://download.visualstudio.microsoft.com/download/pr/#{version.csv.second}/#{version.csv.third}/visualstudioformac-#{version.csv.first}-#{arch}.dmg"
@@ -27,7 +27,7 @@ cask "visual-studio" do
 
   auto_updates true
   depends_on macos: ">= :catalina"
-  depends_on cask: "homebrew/cask-versions/mono-mdk-for-visual-studio"
+  depends_on cask: "mono-mdk-for-visual-studio"
 
   app "Visual Studio.app"
 
