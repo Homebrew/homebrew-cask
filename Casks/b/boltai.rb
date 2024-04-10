@@ -24,5 +24,6 @@ cask "boltai" do
     "~/Library/HTTPStorages/co.podzim.BoltGPT",
     "~/Library/Preferences/co.podzim.BoltGPT.plist",
     "~/Library/Saved Application State/co.podzim.BoltGPT.savedState",
+    "~/Library/WebKit/co.podzim.BoltGPT",
   ]
 end
