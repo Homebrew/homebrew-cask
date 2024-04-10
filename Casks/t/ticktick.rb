@@ -1,9 +1,9 @@
 cask "ticktick" do
-  version "5.3.00,334"
-  sha256 "7465e8c337ea4a0fbc844cf08ff4f7507ef67ce2d98f289ce670450f46e89ade"
+  version "5.3.01,336"
+  sha256 "a0d362f0d0c30a049fa8cf57672ce80599d59b5f15fde1117b3967a255ae9075"
 
   url "https://ticktick-download-mac.s3.amazonaws.com/download/mac/TickTick_#{version.csv.first}_#{version.csv.second}.dmg",
-      verified: "ticktick-download-mac.s3.amazonaws.com/"
+      verified: "ticktick-download-mac.s3.amazonaws.com/download/mac/"
   name "TickTick"
   desc "To-do & task list manager"
   homepage "https://www.ticktick.com/home"
@@ -24,17 +24,11 @@ cask "ticktick" do
   app "TickTick.app"
 
   zap trash: [
-    "~/Library/Application Scripts/com.TickTick.task.mac.MainWidget",
-    "~/Library/Application Scripts/com.TickTick.task.mac.TickTick-Safari-Extension",
-    "~/Library/Application Scripts/com.TickTick.task.mac.TickTick-Today-Widget",
-    "~/Library/Application Scripts/com.TickTick.task.mac.TickTick-WidgetConfiguration-Extension",
+    "~/Library/Application Scripts/com.TickTick.task.mac.*",
     "~/Library/Application Support/com.TickTick.task.mac",
     "~/Library/Caches/com.TickTick.task.mac",
     "~/Library/Caches/TickTick",
-    "~/Library/Containers/com.TickTick.task.mac.MainWidget",
-    "~/Library/Containers/com.TickTick.task.mac.TickTick-Safari-Extension",
-    "~/Library/Containers/com.TickTick.task.mac.TickTick-Today-Widget",
-    "~/Library/Containers/com.TickTick.task.mac.TickTick-WidgetConfiguration-Extension",
+    "~/Library/Containers/com.TickTick.task.mac.*",
     "~/Library/Group Containers/75TY9UT8AY.com.TickTick.task.mac",
     "~/Library/Preferences/com.TickTick.task.mac.plist",
     "~/Library/Saved Application State/com.TickTick.task.mac.savedState",
