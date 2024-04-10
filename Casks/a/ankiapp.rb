@@ -1,17 +1,18 @@
-cask "ankiapp-anki" do
+cask "ankiapp" do
   version "9.0.6"
-  sha256 :no_check
+  sha256 "65fcec8e2717535bc359ab584303f90da64ec478e393558cb2e3a6e9be9cebeb"
 
-  url "https://www.ankiapp.com/static/AnkiApp-MacOS.zip"
+  url "https://updates.ankiapp.com/AnkiApp-#{version}-universal-mac.zip"
   name "AnkiApp"
   desc "Spaced Repetition Flashcard App"
   homepage "https://www.ankiapp.com/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://updates.ankiapp.com/latest-mac.yml"
+    strategy :electron_builder
   end
 
+  auto_updates true
   depends_on macos: ">= :high_sierra"
 
   app "AnkiApp.app"
