@@ -8,10 +8,7 @@ cask "recordit" do
   desc "Screencasting software"
   homepage "https://recordit.co/"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  disable! date: "2024-04-09", because: :no_longer_available
 
   app "RecordIt.app"
 
