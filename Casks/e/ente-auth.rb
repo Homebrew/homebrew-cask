@@ -1,6 +1,6 @@
 cask "ente-auth" do
-  version "2.0.50"
-  sha256 "f48ca68ec4d4aeeeba08a4cd7f928d3caab5534fa87ed06a738c483e35a30ae7"
+  version "2.0.54"
+  sha256 "6e76c276eb85caf1bd2025c42f13cbeb5f6a300e576a927e76de6a65a6b1a79a"
 
   url "https://github.com/ente-io/ente/releases/download/auth-v#{version}/ente-auth-v#{version}.dmg",
       verified: "github.com/ente-io/ente/"
@@ -11,6 +11,7 @@ cask "ente-auth" do
   livecheck do
     url :url
     regex(/^auth[._-]v?(\d+(?:\.\d+)+)$/i)
+    strategy :github_releases
   end
 
   auto_updates true
