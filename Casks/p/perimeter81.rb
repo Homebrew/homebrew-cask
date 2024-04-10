@@ -13,6 +13,8 @@ cask "perimeter81" do
     regex(/href=.*?Perimeter81[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
+  depends_on macos: ">= :big_sur"
+
   pkg "Perimeter81_#{version}.pkg"
 
   uninstall launchctl: [
