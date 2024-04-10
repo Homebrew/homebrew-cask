@@ -40,14 +40,9 @@ cask "flox" do
               executable: "/usr/local/share/flox/scripts/uninstall",
               sudo:       true,
             },
-            pkgutil:      "com.floxdev.flox",
-            delete:       [
-              "/opt/homebrew/Caskroom/flox",
-              "~/.cache/flox",
-            ]
+            pkgutil:      "com.floxdev.flox"
 
   zap trash: [
-    "/opt/homebrew/Caskroom/flox",
     "~/.cache/flox",
     "~/.config/flox",
   ]
