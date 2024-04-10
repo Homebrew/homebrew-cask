@@ -171,6 +171,7 @@ inso
 insomnia
 intellij-idea
 intellij-idea-ce
+jamie
 jdownloader
 jetbrains-gateway
 jgrennison-openttd
