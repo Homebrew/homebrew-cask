@@ -1,6 +1,6 @@
 cask "sqlpro-for-mssql" do
-  version "2023.10"
-  sha256 "23a95acd225049919fb24d1aa9ec0e012ef181ff3885d0b232f84d209a0c215b"
+  version "2024.21"
+  sha256 "cfaf4c6ad193213a7cdd68669b3caafc90fd3357d77cb91b45b0f02549896b3e"
 
   url "https://d3fwkemdw8spx3.cloudfront.net/mssql/SQLProMSSQL.#{version}.app.zip",
       verified: "d3fwkemdw8spx3.cloudfront.net/mssql/"
