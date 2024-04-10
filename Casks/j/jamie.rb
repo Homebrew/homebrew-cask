@@ -1,6 +1,6 @@
 cask "jamie" do
-  version "4.0.6"
-  sha256 "bcc278e2f3e7a4505b3bcce84820356d670bf0d0b6012a0ad0d15cba66fb0373"
+  version "4.0.7"
+  sha256 "e2e5a875d763b4bbd7b8277e777d04ff0a693cb774d4f804d887db1616269167"
 
   url "https://github.com/louismorgner/jamie-release/releases/download/v#{version}/jamie-#{version}.dmg",
       verified: "github.com/louismorgner/jamie-release/"
