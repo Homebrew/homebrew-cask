@@ -12,6 +12,8 @@ cask "accessmenubarapps" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
+
   app "AccessMenuBarApps#{version}/AccessMenuBarApps.app"
 
   uninstall quit: "de.ortisoft.AccessMenuBarApps"
