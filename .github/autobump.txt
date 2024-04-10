@@ -10,7 +10,7 @@ alt-tab
 altair-graphql-client
 amazon-chime
 amie
-ankiapp-anki
+ankiapp
 anydesk
 anydo
 apidog
