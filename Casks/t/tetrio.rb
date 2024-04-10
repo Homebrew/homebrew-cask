@@ -11,8 +11,8 @@ cask "tetrio" do
   homepage "https://tetr.io/about"
 
   livecheck do
-    url "https://tetr.io/about/desktop/history/"
-    regex(%r{href=['"]\.\./builds/(\d+)/TETR\.IO[ _-]Setup[ _-](?:x86|arm64)*.dmg['"]}i)
+    url "https://tetr.io/about/desktop/"
+    regex(%r{href=.*builds/(\d+)/TETR\.IO[. _-]Setup[. _-]#{arch}\.dmg}i)
   end
 
   app "TETR.IO.app"
