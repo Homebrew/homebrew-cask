@@ -12,5 +12,16 @@ cask "sqleditor" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
+
   app "SQLEditor.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.malcolmhardie.sqleditor.cocoa.sfl*",
+    "~/Library/Application Support/SQLEditor",
+    "~/Library/HTTPStorages/com.malcolmhardie.sqleditor.cocoa",
+    "~/Library/Logs/SQLEditor.log",
+    "~/Library/Preferences/com.malcolmhardie.sqleditor.cocoa.plist",
+    "~/Library/Saved Application State/com.malcolmhardie.sqleditor.cocoa.savedState",
+  ]
 end
