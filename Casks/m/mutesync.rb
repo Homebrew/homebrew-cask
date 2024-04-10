@@ -16,6 +16,8 @@ cask "mutesync" do
     strategy :electron_builder
   end
 
+  auto_updates true
+
   app "mutesync.app"
 
   zap trash: [
