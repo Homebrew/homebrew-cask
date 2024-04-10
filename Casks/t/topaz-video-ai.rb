@@ -13,7 +13,7 @@ cask "topaz-video-ai" do
     regex(/>Topaz\sVideo\sAI\sv?(\d+(?:\.\d+)+)\s*</i)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|
-        version = match.first
+        version = match[0]
         next version if version.split(".").length >= 3
 
         "#{version}.0"
