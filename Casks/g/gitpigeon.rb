@@ -6,10 +6,7 @@ cask "gitpigeon" do
   name "GitPigeon"
   homepage "https://www.gitpigeon.com/"
 
-  livecheck do
-    url "https://updates.gitpigeon.com/appcast.xml"
-    strategy :sparkle
-  end
+  deprecate! date: "2024-04-10", because: :unmaintained
 
   depends_on macos: ">= :mojave"
 
