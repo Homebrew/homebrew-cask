@@ -1,15 +1,18 @@
 cask "tetrio" do
-  version "8.0.0"
-  sha256 :no_check
+  arch arm: "arm64", intel: "x86"
 
-  url "https://tetr.io/about/desktop/builds/TETR.IO%20Setup.dmg"
+  version "9"
+  sha256 arm:   "deec4ba6ab1a03b3e9f858f49f40a06f6fd191b27d54d4460a290993c9f9b8f2",
+         intel: "3a80bc7ef4856e5ef1f2653bd85cc3376c50f3cb6919f7a1e906ea4cd7cc1739"
+
+  url "https://tetr.io/about/desktop/builds/#{version}/TETR.IO%20Setup%20#{arch}.dmg"
   name "TETR.IO"
   desc "Free-to-play Tetris clone"
   homepage "https://tetr.io/about"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://tetr.io/about/desktop/"
+    regex(%r{href=.*builds/(\d+)/TETR\.IO[. _-]Setup[. _-]#{arch}\.dmg}i)
   end
 
   app "TETR.IO.app"
