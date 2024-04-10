@@ -7,10 +7,7 @@ cask "securid" do
   desc "Authentication software"
   homepage "https://community.rsa.com/t5/securid-software-token-for-macos/tkb-p/securid-software-token-macos"
 
-  livecheck do
-    url :homepage
-    regex(/SecurID\s*Software\s*Token\s*(\d+(?:\.\d+)*)\s*for\s*macOS/i)
-  end
+  disable! date: "2024-04-09", because: :no_longer_meets_criteria
 
   container nested: "RSASecurIDMac#{version.no_dots}.dmg"
 
