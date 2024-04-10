@@ -24,8 +24,8 @@ cask "arduino-ide" do
   zap trash: [
     "~/.arduinoIDE",
     "~/Library/Application Support/arduino-ide",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/cc.arduino.ide2.sfl*",
-    "~/Library/Preferences/cc.arduino.IDE2.plist",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/cc.arduino.ide*.sfl*",
+    "~/Library/Preferences/cc.arduino.IDE*.plist",
     "~/Library/Saved Application State/cc.arduino.IDE#{version.major}.savedState",
   ]
 end
