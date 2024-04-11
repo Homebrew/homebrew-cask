@@ -1,6 +1,6 @@
 cask "tinderbox" do
-  version "9.7.2"
-  sha256 "3626b23b282c4f47c9dbd6958e2c7c28ec097936211e15c3f862ecad75bfddd3"
+  version "9.7.3"
+  sha256 "6c14a0256d0dd859a90d82ff6365e4223b6a89beff924f35a7fa52b9d0bac2a4"
 
   url "https://www.eastgate.com/download/tbx#{version.no_dots}.dmg"
   name "Tinderbox"
@@ -18,10 +18,10 @@ cask "tinderbox" do
 
   zap trash: [
     "~/Library/Application Support/Tinderbox",
-    "~/Library/Caches/com.eastgate.Tinderbox-9",
-    "~/Library/Preferences/com.eastgate.Tinderbox-9.plist",
+    "~/Library/Caches/com.eastgate.Tinderbox-#{version.major}",
+    "~/Library/Preferences/com.eastgate.Tinderbox-#{version.major}.plist",
     "~/Library/Preferences/Tinderbox™ Preferences",
-    "~/Library/Saved Application State/com.eastgate.Tinderbox-9.savedState",
-    "~/Library/WebKit/com.eastgate.Tinderbox-9",
+    "~/Library/Saved Application State/com.eastgate.Tinderbox-#{version.major}.savedState",
+    "~/Library/WebKit/com.eastgate.Tinderbox-#{version.major}",
   ]
 end
