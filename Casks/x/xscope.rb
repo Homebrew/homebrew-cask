@@ -13,6 +13,8 @@ cask "xscope" do
     strategy :sparkle
   end
 
+  auto_updates true
+
   app "xScope.app"
 
   zap trash: [
