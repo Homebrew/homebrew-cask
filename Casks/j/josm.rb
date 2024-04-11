@@ -1,8 +1,12 @@
 cask "josm" do
-  version "19039"
-  sha256 "57cf9452ee257f713e0d1e47e911e6e877b4306f4232f9ee629fa6794dfe014a"
+  arch arm: "aarch64", intel: "x64"
+  app_suffix = on_arch_conditional arm: "arm64", intel: "x86_64"
 
-  url "https://github.com/JOSM/josm/releases/download/#{version}-tested/JOSM-macOS-java17-#{version}.zip",
+  version "19039"
+  sha256 arm:   "cf822692733d6ec3e0a7482099d6906906619ffa5f022a030d285256f12b9513",
+         intel: "d8eafc7d0af65cc0823b1a8254f9d1672f712ae94fa7a6601357f77f17e27a58"
+
+  url "https://github.com/JOSM/josm/releases/download/#{version}-tested/JOSM-macOS-java17-#{version}-#{arch}.zip",
       verified: "github.com/JOSM/josm/"
   name "JOSM"
   desc "Extensible editor for OpenStreetMap"
@@ -14,7 +18,7 @@ cask "josm" do
     strategy :github_latest
   end
 
-  app "JOSM.app"
+  app "JOSM_17_#{app_suffix}.app"
 
   zap trash: [
     "~/Library/Caches/JOSM",
