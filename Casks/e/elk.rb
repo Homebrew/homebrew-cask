@@ -10,6 +10,8 @@ cask "elk" do
   desc "Mastodon web client"
   homepage "https://github.com/elk-zone/elk-native"
 
+  deprecate! date: "2024-04-11", because: "is no longer maintained. It's recommended to use Elk as a PWA instead"
+
   livecheck do
     url :url
     regex(/elk[._-]native[._-]v?(\d+(?:\.\d+)+)/i)
