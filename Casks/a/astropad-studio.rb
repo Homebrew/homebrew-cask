@@ -12,14 +12,22 @@ cask "astropad-studio" do
     strategy :sparkle
   end
 
+  auto_updates true
+
   app "Astropad Studio.app"
 
   uninstall quit: "com.astro-hq.AstropadStudioMac"
 
   zap trash: [
-    "~/Library/Caches/Astropad",
-    "~/Library/Caches/com.astro-hq.AstropadStudioMac",
-    "~/Library/Preferences/com.astro-hq.AstropadStudioMac.plist",
-    "~/Library/Saved Application State/com.astro-hq.AstropadStudioMac.savedState",
-  ]
+        "~/Library/Application Support/astro-hq/AstropadStudio",
+        "~/Library/Application Support/com.astro-hq.AstropadStudioMac",
+        "~/Library/Caches/Astropad",
+        "~/Library/Caches/com.astro-hq.AstropadStudioMac",
+        "~/Library/Caches/SentryCrash/Astropad Studio",
+        "~/Library/HTTPStorages/com.astro-hq.AstropadStudioMac",
+        "~/Library/Logs/Astropad",
+        "~/Library/Preferences/com.astro-hq.AstropadStudioMac.plist",
+        "~/Library/Saved Application State/com.astro-hq.AstropadStudioMac.savedState",
+      ],
+      rmdir: "~/Library/Application Support/astro-hq"
 end
