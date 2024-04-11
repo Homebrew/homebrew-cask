@@ -12,6 +12,7 @@ cask "app-tamer" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: ">= :high_sierra"
 
   app "App Tamer.app"
@@ -22,7 +23,9 @@ cask "app-tamer" do
   ]
 
   zap trash: [
+    "~/Library/Application Support/.com.stclairsoft.data",
     "~/Library/Caches/com.stclairsoft.AppTamer",
+    "~/Library/HTTPStorages/com.stclairsoft.AppTamer",
     "~/Library/Preferences/com.stclairsoft.AppTamer.plist",
   ]
 end
