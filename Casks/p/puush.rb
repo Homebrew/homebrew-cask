@@ -7,10 +7,7 @@ cask "puush" do
   desc "Share screenshots"
   homepage "https://puush.me/"
 
-  livecheck do
-    url "https://puush.me/dl/puush.xml?hax=jax"
-    strategy :sparkle
-  end
+  deprecate! date: "2024-04-11", because: :unmaintained
 
   app "puush.app"
 end
