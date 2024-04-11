@@ -12,10 +12,7 @@ cask "flox" do
 
   livecheck do
     url "https://downloads.flox.dev/by-env/stable/LATEST_VERSION"
-    strategy :page_match do |page|
-      match = page.match(/(\d+(?:\.\d+)+)/)
-      match ? match[0] : nil
-    end
+    regex(/^v?(\d+(?:\.\d+)+)$/i)
   end
 
   auto_updates true
