@@ -18,10 +18,10 @@ cask "tinderbox" do
 
   zap trash: [
     "~/Library/Application Support/Tinderbox",
-    "~/Library/Caches/com.eastgate.Tinderbox-9",
-    "~/Library/Preferences/com.eastgate.Tinderbox-9.plist",
+    "~/Library/Caches/com.eastgate.Tinderbox-#{version.major}",
+    "~/Library/Preferences/com.eastgate.Tinderbox-#{version.major}.plist",
     "~/Library/Preferences/Tinderbox™ Preferences",
-    "~/Library/Saved Application State/com.eastgate.Tinderbox-9.savedState",
-    "~/Library/WebKit/com.eastgate.Tinderbox-9",
+    "~/Library/Saved Application State/com.eastgate.Tinderbox-#{version.major}.savedState",
+    "~/Library/WebKit/com.eastgate.Tinderbox-#{version.major}",
   ]
 end
