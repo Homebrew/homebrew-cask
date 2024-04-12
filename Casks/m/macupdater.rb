@@ -7,7 +7,7 @@ cask "macupdater" do
   end
   on_ventura :or_newer do
     version "3.3.0"
-    sha256 "1486c68ab4dfa88d8265ebfa4c479bf5393e6d05a02666db9ee7e38fb6371d36"
+    sha256 "b45971cf7d2fe93a6c49d15bee08f1587bbe154e31f2cef205e8111acfd96a5a"
 
     depends_on macos: ">= :ventura"
   end
@@ -32,8 +32,7 @@ cask "macupdater" do
 
   zap trash: [
     "~/Library/Application Scripts/com.corecode.MacUpdaterLaunchHelper",
-    "~/Library/Application Support/MacUpdater",
-    "~/Library/Application Support/MacUpdaterInstallHelper",
+    "~/Library/Application Support/MacUpdater*",
     "~/Library/Caches/com.corecode.MacUpdater",
     "~/Library/Containers/com.corecode.MacUpdaterLaunchHelper",
     "~/Library/Cookies/com.corecode.MacUpdater.binarycookies",
