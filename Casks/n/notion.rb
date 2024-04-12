@@ -2,9 +2,9 @@ cask "notion" do
   arch arm: "-arm64"
   livecheck_folder = on_arch_conditional arm: "arm64", intel: "latest"
 
-  version "3.4.1"
-  sha256 arm:   "0c6b3d1e771899a593349cac065f77f50e6e890c04a780e5d5ddbbb072e1a6eb",
-         intel: "3381def6356216ff53a50c7f22cbeca60b7524a59f144e68cf4e6bb753299ad7"
+  version "3.4.2"
+  sha256 arm:   "1ad0a452256ad08f9f33eead029e5d47951abf7ab9e2e9e46f77cdddde9bb68b",
+         intel: "809a7d7269ad73cbfe720fb08944b3c6ff0329235a4720f0251c78654773e6b7"
 
   url "https://desktop-release.notion-static.com/Notion-#{version}#{arch}.dmg",
       verified: "desktop-release.notion-static.com/"
@@ -27,9 +27,8 @@ cask "notion" do
     "~/Library/Application Support/Notion",
     "~/Library/Caches/notion.id*",
     "~/Library/Logs/Notion",
-    "~/Library/Preferences/ByHost/notion.id.*.plist",
-    "~/Library/Preferences/notion.id.helper.plist",
-    "~/Library/Preferences/notion.id.plist",
+    "~/Library/Preferences/ByHost/notion.id.*",
+    "~/Library/Preferences/notion.id.*",
     "~/Library/Saved Application State/notion.id.savedState",
     "~/Library/WebKit/notion.id",
   ]
