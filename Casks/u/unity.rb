@@ -1,9 +1,9 @@
 cask "unity" do
   arch arm: "Arm64"
 
-  version "2023.2.17f1,396a1c6fe404"
-  sha256 arm:   "c3576eeb5eeeb000d158b4c94b4b83cf2983efefe428f264746c544c3200c1dd",
-         intel: "0c9ad5caae071bc56571cee3874a0939e4a734deb7e9f521575462b0a36558fa"
+  version "2023.2.18f1,1cb755715f58"
+  sha256 arm:   "bf0ef992547263bcd2ca521e11214ff65fa9acdb2f1a41ca460341e450f737e0",
+         intel: "770ae7cdb0e3859a08a7b6be168fa8c66cd118595e405c021cdb74715eb837cd"
 
   url "https://download.unity3d.com/download_unity/#{version.csv.second}/MacEditorInstaller#{arch}/Unity-#{version.csv.first}.pkg",
       verified: "download.unity3d.com/download_unity/"
@@ -27,15 +27,13 @@ cask "unity" do
             pkgutil: "com.unity3d.UnityEditor5.x",
             delete:  "/Applications/Unity"
 
-  zap delete: "/Library/Application Support/Unity",
-      trash:  [
-        "/Library/Application Support/Unity",
-        "~/Library/Application Support/Unity",
-        "~/Library/Application Support/UnityHub",
-        "~/Library/Caches/com.unity3d.UnityEditor",
-        "~/Library/Logs/Unity",
-        "~/Library/Preferences/com.unity3d.unityhub.plist",
-        "~/Library/Saved Application State/com.unity3d.unityhub.savedState",
-        "~/Library/Unity",
-      ]
+  zap trash: [
+    "/Library/Application Support/Unity",
+    "~/Library/Application Support/Unity*",
+    "~/Library/Caches/com.unity3d.UnityEditor",
+    "~/Library/Logs/Unity",
+    "~/Library/Preferences/com.unity3d.unityhub.plist",
+    "~/Library/Saved Application State/com.unity3d.unityhub.savedState",
+    "~/Library/Unity",
+  ]
 end
