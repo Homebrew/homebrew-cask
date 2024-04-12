@@ -1,12 +1,12 @@
 cask "superhuman" do
   arch arm: "-arm64"
 
-  version "25.1.25"
-  sha256 arm:   "0a22bbfc1b186c9bdb0ddd5a551e549ccf18df5181ad6b0c2c845028098a7762",
-         intel: "ad642629b5cb4cf1af8eca9c94343e26e9c061bde21a71dd03b7c08819f50903"
+  version "25.1.26"
+  sha256 arm:   "093edd22c11372007ca52cb3966ff506b2cb3acde9afdd96c19bdfcc9aaa9cbe",
+         intel: "c46e25971988c06c72602f5d60c834720bcc5ea4efc1295dd9231edf3c9f780d"
 
   url "https://storage.googleapis.com/download.superhuman.com/supertron-update/Superhuman-#{version}#{arch}-latest-mac.zip",
-      verified: "storage.googleapis.com/download.superhuman.com/"
+      verified: "storage.googleapis.com/download.superhuman.com/supertron-update/"
   name "Superhuman"
   desc "Email client"
   homepage "https://superhuman.com/"
@@ -22,13 +22,10 @@ cask "superhuman" do
 
   zap trash: [
     "~/Library/Application Support/Superhuman",
-    "~/Library/Caches/com.superhuman.electron",
-    "~/Library/Caches/com.superhuman.electron.helper",
-    "~/Library/Caches/com.superhuman.electron.ShipIt",
+    "~/Library/Caches/com.superhuman.electron*",
     "~/Library/Caches/Superhuman",
     "~/Library/Logs/Superhuman",
-    "~/Library/Preferences/com.superhuman.electron.helper.plist",
-    "~/Library/Preferences/com.superhuman.electron.plist",
+    "~/Library/Preferences/com.superhuman.electron.*",
     "~/Library/Preferences/com.superhuman.mail.plist",
     "~/Library/Saved Application State/com.superhuman.electron.savedState",
   ]
