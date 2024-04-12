@@ -17,7 +17,7 @@ cask "raycast" do
   homepage "https://raycast.com/"
 
   livecheck do
-    url "https://raycast.com/releases"
+    url "https://releases.raycast.com/releases"
     regex(/"version":\s*"(\d+(?:\.\d+)+)"/i)
     strategy :page_match
   end
