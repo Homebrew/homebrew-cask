@@ -27,11 +27,9 @@ cask "unity" do
             pkgutil: "com.unity3d.UnityEditor5.x",
             delete:  "/Applications/Unity"
 
-  zap delete: "/Library/Application Support/Unity",
-      trash:  [
+  zap trash: [
         "/Library/Application Support/Unity",
-        "~/Library/Application Support/Unity",
-        "~/Library/Application Support/UnityHub",
+        "~/Library/Application Support/Unity*",
         "~/Library/Caches/com.unity3d.UnityEditor",
         "~/Library/Logs/Unity",
         "~/Library/Preferences/com.unity3d.unityhub.plist",
