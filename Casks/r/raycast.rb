@@ -1,27 +1,25 @@
 cask "raycast" do
-  on_big_sur :or_older do
-    version "1.50.0"
-    sha256 "f8bbd00d06636e3fe9f154ff69ff57c0a48a90a77ae58cdcc2b285f61a170a88"
-
-    livecheck do
-      skip "Legacy version"
-    end
-  end
-  on_monterey :or_newer do
-    version "1.71.2"
-    sha256 "0729fa42620a688145f7fe7f46ed0a2beba80667289c1db4fa7ea10d4c5aab2a"
-
-    livecheck do
-      url :url
-      regex(/Raycast[._-]v?(\d+(?:\.\d+)+)(?:[._-](\h+))[._-]universal\.dmg/i)
-      strategy :header_match
-    end
-  end
-
-  url "https://releases.raycast.com/releases/#{version}/download?build=universal"
   name "Raycast"
   desc "Control your tools with a few keystrokes"
   homepage "https://raycast.com/"
+
+  version "1.71.2"
+
+  on_intel do
+    sha256 "dc1b4ff20a30666961cabb2306ccb7e6e80fe901a35c7b9bc5b6c3cecac3ca8b"
+    url "https://releases.raycast.com/releases/#{version}/download?build=x86_64"
+  end
+
+  on_arm do
+    sha256 "ef44ede1a19f42bf032c5a3aafeab4de0bbb8f5f8c18bcfb37e0f7b099e811f2"
+    url "https://releases.raycast.com/releases/#{version}/download?build=arm"
+  end
+
+  livecheck do
+    url "https://raycast.com/releases"
+    regex(/"version":\s*"(\d+(?:\.\d+)+)"/i)
+    strategy :page_match
+  end
 
   auto_updates true
 
