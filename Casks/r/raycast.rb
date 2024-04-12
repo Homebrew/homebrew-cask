@@ -3,22 +3,32 @@ cask "raycast" do
     version "1.50.0"
     sha256 "f8bbd00d06636e3fe9f154ff69ff57c0a48a90a77ae58cdcc2b285f61a170a88"
 
+    url "https://releases.raycast.com/releases/#{version}/download?build=universal"
+
     livecheck do
       skip "Legacy version"
     end
+
+    depends_on macos: ">= :big_sur"
   end
   on_monterey :or_newer do
+    arch arm: "arm", intel: "x86_64"
+
     version "1.71.3"
-    sha256 "8e21a8e07dfca80886321e1c92cc327837228d82f6c1b723b3e22e6c3163a1b5"
+    sha256 arm:   "04c82466ef5d5807833c4eed97dcca0107ce89e229a8c5a66f49bd2f69ace0ea",
+           intel: "f3d3cf7bdbe21e8fd8b7ccdd3daef895c9acadf06d39e147b82c8e3e5a6089b1"
+
+    url "https://releases.raycast.com/releases/#{version}/download?build=#{arch}"
 
     livecheck do
       url :url
-      regex(/Raycast[._-]v?(\d+(?:\.\d+)+)(?:[._-](\h+))[._-]universal\.dmg/i)
+      regex(/Raycast[._-]v?(\d+(?:\.\d+)+)(?:[._-](\h+))[._-]#{arch}\.dmg/i)
       strategy :header_match
     end
+
+    depends_on macos: ">= :monterey"
   end
 
-  url "https://releases.raycast.com/releases/#{version}/download?build=universal"
   name "Raycast"
   desc "Control your tools with a few keystrokes"
   homepage "https://raycast.com/"
