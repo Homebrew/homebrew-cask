@@ -1,5 +1,5 @@
 cask "yandex-music" do
-  version "5.0.19"
+  version "5.0.20"
   sha256 :no_check
 
   url "https://music-desktop-application.s3.yandex.net/stable/Yandex_Music_universal_#{version}.dmg",
