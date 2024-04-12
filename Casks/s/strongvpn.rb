@@ -1,5 +1,5 @@
 cask "strongvpn" do
-  version "2.3.1"
+  version "2.4.1"
   sha256 :no_check
 
   url "https://static.colomovers.com/mac/StrongVPN.dmg",
