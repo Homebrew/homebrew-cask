@@ -28,12 +28,12 @@ cask "unity" do
             delete:  "/Applications/Unity"
 
   zap trash: [
-        "/Library/Application Support/Unity",
-        "~/Library/Application Support/Unity*",
-        "~/Library/Caches/com.unity3d.UnityEditor",
-        "~/Library/Logs/Unity",
-        "~/Library/Preferences/com.unity3d.unityhub.plist",
-        "~/Library/Saved Application State/com.unity3d.unityhub.savedState",
-        "~/Library/Unity",
-      ]
+    "/Library/Application Support/Unity",
+    "~/Library/Application Support/Unity*",
+    "~/Library/Caches/com.unity3d.UnityEditor",
+    "~/Library/Logs/Unity",
+    "~/Library/Preferences/com.unity3d.unityhub.plist",
+    "~/Library/Saved Application State/com.unity3d.unityhub.savedState",
+    "~/Library/Unity",
+  ]
 end
