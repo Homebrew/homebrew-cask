@@ -14,6 +14,8 @@ cask "raycast" do
   on_monterey :or_newer do
     arch arm: "arm", intel: "x86_64"
 
+    livecheck_arch = on_arch_conditional arm: "arm", intel: "x86"
+
     version "1.71.3"
     sha256 arm:   "04c82466ef5d5807833c4eed97dcca0107ce89e229a8c5a66f49bd2f69ace0ea",
            intel: "f3d3cf7bdbe21e8fd8b7ccdd3daef895c9acadf06d39e147b82c8e3e5a6089b1"
@@ -22,7 +24,7 @@ cask "raycast" do
 
     livecheck do
       url :url
-      regex(/Raycast[._-]v?(\d+(?:\.\d+)+)(?:[._-](\h+))[._-]#{arch}\.dmg/i)
+      regex(/Raycast[._-]v?(\d+(?:\.\d+)+)(?:[._-](\h+))[._-]#{livecheck_arch}\.dmg/i)
       strategy :header_match
     end
 
