@@ -14,11 +14,18 @@ cask "okta-advanced-server-access" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: ">= :high_sierra"
 
   pkg "ScaleFT-#{version}.pkg"
 
   uninstall pkgutil: "com.scaleft.ScaleFT"
 
-  zap trash: "~/Library/Caches/com.scaleft.ScaleFT"
+  zap trash: [
+    "~/Library/Application Support/ScaleFT",
+    "~/Library/Caches/com.scaleft.ScaleFT",
+    "~/Library/HTTPStorages/com.scaleft.ScaleFT",
+    "~/Library/Logs/ScaleFT",
+    "~/Library/Preferences/com.scaleft.ScaleFT.plist",
+  ]
 end
