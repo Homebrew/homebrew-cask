@@ -12,12 +12,17 @@ cask "mimecast" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: ">= :sierra"
 
   app "Mimecast.app"
 
   zap trash: [
+    "~/Library/Application Support/com.mimecast.Mimecast-Mail",
+    "~/Library/Caches/com.crashlytics.data/com.mimecast.Mimecast-Mail",
+    "~/Library/Caches/com.mimecast.Mimecast-Mail",
     "~/Library/com.mimecast.Mimecast-Mail",
+    "~/Library/HTTPStorages/com.mimecast.Mimecast-Mail",
     "~/Library/Logs/Mimecast",
     "~/Library/Preferences/com.mimecast.Mimecast-Mail.plist",
   ]
