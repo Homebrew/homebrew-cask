@@ -27,9 +27,8 @@ cask "notion" do
     "~/Library/Application Support/Notion",
     "~/Library/Caches/notion.id*",
     "~/Library/Logs/Notion",
-    "~/Library/Preferences/ByHost/notion.id.*.plist",
-    "~/Library/Preferences/notion.id.helper.plist",
-    "~/Library/Preferences/notion.id.plist",
+    "~/Library/Preferences/ByHost/notion.id.*",
+    "~/Library/Preferences/notion.id.*",
     "~/Library/Saved Application State/notion.id.savedState",
     "~/Library/WebKit/notion.id",
   ]
