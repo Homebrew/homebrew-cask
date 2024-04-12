@@ -7,10 +7,7 @@ cask "astropad" do
   desc "Utility to turn an iPad into a drawing tablet"
   homepage "https://astropad.com/"
 
-  livecheck do
-    url "https://s3.amazonaws.com/astropad.com/downloads/sparkle.xml"
-    strategy :sparkle, &:short_version
-  end
+  deprecate! date: "2024-04-11", because: :discontinued
 
   app "Astropad.app"
 
