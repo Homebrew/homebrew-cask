@@ -1,9 +1,9 @@
 cask "yandex-music" do
-  version "5.0.19"
-  sha256 :no_check
+  version "5.0.20"
+  sha256 "bf1d798ccd6a3fc00199895ea734e176d87f3044f4709fefa94b4928a8e66c74"
 
   url "https://music-desktop-application.s3.yandex.net/stable/Yandex_Music_universal_#{version}.dmg",
-      verified: "music-desktop-application.s3.yandex.net/"
+      verified: "music-desktop-application.s3.yandex.net/stable/"
   name "Yandex Music"
   desc "Tune in to Yandex Music and get personal recommendations"
   homepage "https://music.yandex.ru/"
