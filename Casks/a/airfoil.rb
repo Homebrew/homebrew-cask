@@ -1,5 +1,5 @@
 cask "airfoil" do
-  version "5.11.8"
+  version "5.12.1"
   sha256 :no_check
 
   url "https://rogueamoeba.com/airfoil/mac/download/Airfoil.zip"
@@ -8,12 +8,12 @@ cask "airfoil" do
   homepage "https://rogueamoeba.com/airfoil/mac/"
 
   livecheck do
-    url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=1231&bundleid=com.rogueamoeba.airfoil&platform=osx&version=#{version.no_dots}8000"
+    url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&bundleid=com.rogueamoeba.airfoil&platform=osx"
     strategy :sparkle
   end
 
   auto_updates true
-  depends_on macos: ">= :big_sur"
+  depends_on macos: ">= :sonoma"
 
   app "Airfoil/Airfoil Satellite.app"
   app "Airfoil/Airfoil.app"
