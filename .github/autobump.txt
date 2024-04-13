@@ -398,6 +398,7 @@ wondershare-uniconverter
 workflowy
 writerside
 xemu
+yealink-meeting
 zed
 znote
 zoc
