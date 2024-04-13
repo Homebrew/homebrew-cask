@@ -1,9 +1,9 @@
 cask "vapor" do
   arch arm: "M1", intel: "x86"
 
-  version "3.9.1"
-  sha256 arm:   "dbb552c55cbe1dcbef4736ef3c4dbcabc2d7d1572406ee5d9f5b64fc480c1fa8",
-         intel: "601ae6e9bd8b8bc82f2e6900b6522e1383e77e22f329267eb78f2059a7c1ee2d"
+  version "3.9.2"
+  sha256 arm:   "130806331261298a53c07451ab11bc728e5fe0fc86483bcc8a8f49a5d8018751",
+         intel: "00dbfcea7e6a7512d76fd6684af9471ba9bd0cc62dd324b6ee9e941e091f174d"
 
   url "https://github.com/NCAR/VAPOR/releases/download/v#{version}/VAPOR#{version.major}-#{version}-Darwin#{arch}.dmg"
   name "VAPOR"
