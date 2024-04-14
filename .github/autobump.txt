@@ -35,6 +35,7 @@ bettertouchtool
 bike
 bitwarden
 bloop
+boltai
 brave-browser
 brickstore
 bruno
@@ -158,6 +159,7 @@ grandtotal
 gstreamer-development
 gstreamer-runtime
 hackolade
+hashbackup
 hbuilderx
 heptabase
 heroic
@@ -171,6 +173,7 @@ inso
 insomnia
 intellij-idea
 intellij-idea-ce
+jami
 jamie
 jdownloader
 jetbrains-gateway
@@ -341,6 +344,7 @@ superhuman
 superkey
 superlist
 supernotes
+superproductivity
 swiftformat-for-xcode
 tableau
 tableau-prep
@@ -356,12 +360,14 @@ teleport-connect
 tenable-nessus-agent
 tencent-meeting
 termius
+thangs-sync
 thunderbird
 tidelift
 timeular
 tinkerwell
 to-audio-converter
 todoist
+topaz-gigapixel-ai
 topaz-video-ai
 tor-browser
 trader-workstation
@@ -379,6 +385,7 @@ understand
 unity
 updf
 uvtools
+valentina-studio
 viber
 virtualbuddy
 visual-studio-code
