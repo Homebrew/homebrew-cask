@@ -8,7 +8,7 @@ cask "far2l" do
     url "https://github.com/elfmz/far2l/releases/download/v_#{version}/far2l-#{version}-beta-MacOS-10.11-x64.dmg"
   end
   on_catalina do
-    sha256 "c9f01ed2b7f62b13e9a7d629a7fdecc31b10066bd4ae7e2112b0de9664708fa3"
+    sha256 "830512808ebfc0a8ba9f2348e59d444a289bda9a0ad9983dc027843c9dd5cc6d"
 
     url "https://github.com/elfmz/far2l/releases/download/v_#{version}/far2l-#{version}-beta-MacOS-10.15-x64.dmg"
   end
