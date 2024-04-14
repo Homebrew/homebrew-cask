@@ -16,8 +16,8 @@ cask "domzilla-caffeine" do
     end
   end
   on_sonoma :or_newer do
-    version "1.4.2"
-    sha256 "2f65f1d083987f455d6a4678ec29ecdd1c346adb6995a0b0936c2d4bfba81207"
+    version "1.4.3"
+    sha256 "5d1127fe3a5be772c61b9685915bd244b2e47b4607242b0d3b9cc517f5269c43"
 
     livecheck do
       url "https://www.caffeine-app.net/download"
