@@ -347,6 +347,7 @@ tableau-prep
 tableau-public
 tableau-reader
 tableplus
+tageditor
 tailscale
 teamviewer
 telegram
