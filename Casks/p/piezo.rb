@@ -3,23 +3,38 @@ cask "piezo" do
 
   on_ventura :or_older do
     version "1.8.2"
+
+    url "https://rogueamoeba.com/piezo/download/Piezo.zip"
+
+    # NOTE: The `system` value will need to be kept up to date with the latest
+    # macOS Ventura version (e.g. 1366 for 13.6.6).
+    livecheck do
+      url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=1366&bundleid=com.rogueamoeba.Piezo&platform=osx&version=#{version.no_dots}8000"
+      strategy :sparkle
+    end
+
+    depends_on macos: ">= :big_sur"
   end
   on_sonoma :or_newer do
-    version "1.9.0"
+    version "1.9.1"
+
+    url "https://rogueamoeba.com/piezo/download/Piezo-ARK.zip"
+
+    # NOTE: The `system` value will need to be kept up to date with the latest
+    # macOS version (e.g. 1441 for 14.4.1).
+    livecheck do
+      url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=1441&bundleid=com.rogueamoeba.Piezo&platform=osx&version=#{version.no_dots}8000"
+      strategy :sparkle
+    end
+
+    depends_on macos: ">= :sonoma"
   end
 
-  url "https://rogueamoeba.com/piezo/download/Piezo.zip"
   name "Piezo"
   desc "Audio recording application"
   homepage "https://rogueamoeba.com/piezo/"
 
-  livecheck do
-    url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=1231&bundleid=com.rogueamoeba.Piezo&platform=osx&version=#{version.no_dots}8000"
-    strategy :sparkle
-  end
-
   auto_updates true
-  depends_on macos: ">= :big_sur"
 
   app "Piezo.app"
 
