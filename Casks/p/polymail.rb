@@ -1,11 +1,11 @@
 cask "polymail" do
   arch arm: "-arm64"
 
-  version "2.3.4"
-  sha256 arm:   "804d89ac47bc39af383fdff63ae8d2c72af070624b7fecb7c84de1abb2f25d53",
-         intel: "48547e91583ab34d750fb27c1b207c97a7dc01a227e2603098f2a3915e6ee5b5"
+  version "2.3.9"
+  sha256 arm:   "b4cb632afd459160da47f5dde55282ae7c38c8335d198cc72058942fd5d9187f",
+         intel: "2472e17f118a97d630928ed532916ef88759474eaa16ab0c5f2a7a5b5a8fbbad"
 
-  url "https://sparkle-updater.polymail.io/macos#{arch}/builds/Polymail-v#{version}.zip"
+  url "https://sparkle-updater.polymail.io/macos#{arch}/builds/Polymail-v#{version}.dmg"
   name "Polymail"
   desc "Email productivity application"
   homepage "https://polymail.io/"
