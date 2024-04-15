@@ -12,9 +12,12 @@ cask "millie" do
     strategy :electron_builder
   end
 
+  auto_updates true
+
   app "Millie.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.millie.sfl*",
     "~/Library/Application Support/millie",
     "~/Library/Logs/millie",
     "~/Library/Preferences/com.electron.millie.plist",
