@@ -23,7 +23,7 @@ cask "mailbutler" do
             delete:    "/Library/Mail/Bundles/Mailbutler.mailbundle"
 
   zap trash: [
-    "~/Library/Application Scripts/75PWYP7Y7K.group.com.mailbutler.agent",
+    "~/Library/Application Scripts/*.group.com.mailbutler.agent",
     "~/Library/Application Scripts/com.mailbutler.app*",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mailbutler.*.sfl*",
     "~/Library/Application Support/com.mailbutler.agent",
@@ -32,7 +32,7 @@ cask "mailbutler" do
     "~/Library/Caches/com.mailbutler.app",
     "~/Library/Caches/SentryCrash/Mailbutler*",
     "~/Library/Containers/com.mailbutler.app",
-    "~/Library/Group Containers/75PWYP7Y7K.group.com.mailbutler.agent",
+    "~/Library/Group Containers/*.group.com.mailbutler.agent",
     "~/Library/HTTPStorages/com.mailbutler.agent",
     "~/Library/HTTPStorages/com.mailbutler.app",
     "~/Library/LaunchAgents/com.mailbutler.agent.plist",
