@@ -1,8 +1,8 @@
 cask "mailbutler" do
   version "7510,3299563"
-  sha256 "79a395388ed98e8aeb4231a47c1aa9418be5d96a356bd29befa0a501bab4ff8e"
+  sha256 "fd0fd9dcf3755b80b986b823e1438129768975be0e4d0a2353202ad29af3b1ff"
 
-  url "https://downloads.mailbutler.io/sparkle/public/Mailbutler_#{version.csv.first}-#{version.csv.second}.zip"
+  url "https://downloads.mailbutler.io/sparkle/public/new-horizons/Mailbutler_#{version.csv.first}-#{version.csv.second}.pkg"
   name "Mailbutler"
   desc "Personal assistant and productivity tool for Apple Mail"
   homepage "https://www.mailbutler.io/"
@@ -12,18 +12,32 @@ cask "mailbutler" do
     strategy :sparkle
   end
 
+  auto_updates true
   depends_on macos: ">= :high_sierra"
 
-  app "Mailbutler.app"
+  pkg "Mailbutler_#{version.csv.first}-#{version.csv.second}.pkg"
 
-  uninstall delete: "/Library/Mail/Bundles/Mailbutler.mailbundle"
+  uninstall launchctl: "com.mailbutler.agent",
+            quit:      "com.mailbutler.agent",
+            pkgutil:   "com.mailbutler.agent",
+            delete:    "/Library/Mail/Bundles/Mailbutler.mailbundle"
 
   zap trash: [
+    "~/Library/Application Scripts/*.group.com.mailbutler.agent",
+    "~/Library/Application Scripts/com.mailbutler.app*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.mailbutler.*.sfl*",
+    "~/Library/Application Support/com.mailbutler.agent",
     "~/Library/Application Support/com.mailbutler.app",
+    "~/Library/Caches/com.mailbutler.agent",
     "~/Library/Caches/com.mailbutler.app",
+    "~/Library/Caches/SentryCrash/Mailbutler*",
+    "~/Library/Containers/com.mailbutler.app",
+    "~/Library/Group Containers/*.group.com.mailbutler.agent",
+    "~/Library/HTTPStorages/com.mailbutler.agent",
+    "~/Library/HTTPStorages/com.mailbutler.app",
     "~/Library/LaunchAgents/com.mailbutler.agent.plist",
-    "~/Library/Preferences/com.mailbutler.agent.plist",
-    "~/Library/Preferences/com.mailbutler.app.plist",
+    "~/Library/Preferences/com.mailbutler.*.plist",
+    "~/Library/Preferences/group.com.mailbutler.agent.plist",
     "~/Library/Saved Application State/com.mailbutler.app.savedState",
   ]
 end
