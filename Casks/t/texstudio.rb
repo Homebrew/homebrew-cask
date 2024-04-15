@@ -7,7 +7,7 @@ cask "texstudio" do
     url "https://github.com/texstudio-org/texstudio/releases/download/#{version}/texstudio-#{version}-osx-m1.zip",
         verified: "github.com/texstudio-org/texstudio/"
 
-    app "texstudio#{version}-osx-m1.app"
+    app "texstudio-#{version}-osx-m1.app"
   end
   on_intel do
     url "https://github.com/texstudio-org/texstudio/releases/download/#{version}/texstudio-#{version}-osx.dmg",
