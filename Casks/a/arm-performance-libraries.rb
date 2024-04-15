@@ -31,5 +31,8 @@ cask "arm-performance-libraries" do
 
   # No zap stanza required
 
-  caveats "You may need to source /opt/arm/armpl_#{install_suffix}/armpl_env_vars.sh in order to use these libraries."
+  caveats do
+    license "https://developer.arm.com/documentation/109686/latest"
+    "You may need to source /opt/arm/armpl_#{install_suffix}/armpl_env_vars.sh in order to use these libraries."
+  end
 end
