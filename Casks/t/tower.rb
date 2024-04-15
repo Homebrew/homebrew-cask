@@ -25,6 +25,9 @@ cask "tower" do
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.fournova.tower*.sfl*",
     "~/Library/Application Support/com.fournova.Tower*",
     "~/Library/Caches/com.fournova.Tower*",
+    "~/Library/Caches/com.plausiblelabs.crashreporter.data/com.fournova.Tower*",
+    "~/Library/HTTPStorages/com.fournova.Tower*",
     "~/Library/Preferences/com.fournova.Tower*.plist",
+    "~/Library/Saved Application State/com.fournova.Tower*.savedState",
   ]
 end
