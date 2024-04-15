@@ -9,7 +9,6 @@ cask "eudic" do
   desc "European dictionary"
   homepage "https://www.eudic.net/v4/en/app/eudic"
 
-  auto_updates true
   depends_on macos: ">= :high_sierra"
 
   app "Eudic.app"
