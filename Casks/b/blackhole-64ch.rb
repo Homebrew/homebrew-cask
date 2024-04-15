@@ -2,7 +2,7 @@ cask "blackhole-64ch" do
   version "0.6.0"
   sha256 "7c1bdad59ba1b732bacaa53ddcfd5e7d965cdc4c5a9231317f56cf4f563ecf59"
 
-  url "https://existential.audio/downloads/BlackHole64ch.v#{version}.pkg"
+  url "https://existential.audio/downloads/BlackHole64ch-#{version}.pkg"
   name "BlackHole 64ch"
   desc "Virtual Audio Driver"
   homepage "https://existential.audio/blackhole/"
