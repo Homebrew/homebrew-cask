@@ -1,5 +1,5 @@
 cask "eudic" do
-  version "4.6.0"
+  version :latest
   sha256 :no_check
 
   url "https://static.eudic.net/pkg/eudicmac.dmg",
@@ -9,12 +9,6 @@ cask "eudic" do
   desc "European dictionary"
   homepage "https://www.eudic.net/v4/en/app/eudic"
 
-  livecheck do
-    url "https://static.eudic.net/pkg/eudic_mac.xml"
-    strategy :sparkle, &:short_version
-  end
-
-  auto_updates true
   depends_on macos: ">= :high_sierra"
 
   app "Eudic.app"
