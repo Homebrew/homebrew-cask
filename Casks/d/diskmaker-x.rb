@@ -25,4 +25,6 @@ cask "diskmaker-x" do
   name "DiskMaker X"
   desc "Tool to build a system install disk"
   homepage "https://diskmakerx.com/"
+
+  disable! date: "2024-04-14", because: :no_longer_available
 end
