@@ -4,7 +4,7 @@ cask "arm-performance-libraries" do
   sha256 "228bf3a2c25dbd45c2f89c78f455ee3c7dfb25e121c20d2765138b5174e688dc"
 
   url "https://developer.arm.com/-/media/Files/downloads/hpc/arm-performance-libraries/#{version.dots_to_hyphens}/macos/arm-performance-libraries_#{version}_macOS.tgz"
-  name "arm-performance-libraries"
+  name "Arm Performance Libraries"
   desc "Optimized standard core math libraries for Arm processors"
   homepage "https://developer.arm.com/downloads/-/arm-performance-libraries"
 
