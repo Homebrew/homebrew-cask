@@ -1,6 +1,6 @@
 cask "aptakube" do
-  version "1.6.3"
-  sha256 "d13aa255e9ef3551d2ff7d61a7c9ce107e47732b09c6d96fbfb3646ba9ceafeb"
+  version "1.6.4"
+  sha256 "a35070f220415933149d33e05a6bae311c987ca8f64b10178aaa78eedf9dd9cb"
 
   url "https://releases.aptakube.com/Aptakube_#{version}_universal.dmg"
   name "Aptakube"
