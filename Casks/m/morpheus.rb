@@ -8,7 +8,7 @@ cask "morpheus" do
   desc "Modelling environment for multi-cellular systems biology"
   homepage "https://morpheus.gitlab.io/"
 
-  deprecate! date: "2024-04-15", because: :no_longer_available
+  deprecate! date: "2024-04-15", because: :discontinued
 
   conflicts_with cask: "homebrew/cask-versions/morpheus-beta"
 
