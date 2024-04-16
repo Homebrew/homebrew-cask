@@ -4,7 +4,7 @@ cask "gopeed" do
 
   origin = "https://github.com/GopeedLab/gopeed/releases/download/v#{version}/Gopeed-v#{version}-macos.dmg"
 
-  url "#{origin}",
+  url origin.to_s,
       verified: "github.com/GopeedLab/gopeed/"
   name "Gopeed"
   desc "Modern download manager that supports all platforms"
