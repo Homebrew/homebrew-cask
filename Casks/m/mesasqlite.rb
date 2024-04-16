@@ -7,10 +7,7 @@ cask "mesasqlite" do
   desc "Create, design and alter an SQLite3 database"
   homepage "http://www.desertsandsoftware.com/wordpress/?page_id=17"
 
-  livecheck do
-    url "http://www.desertsandsoftware.com/?page_id=99"
-    regex(/version\s*(\d+(?:\.\d+)*)/i)
-  end
+  disable! date: "2024-04-15", because: :no_longer_available
 
   app "MesaSQLite.app"
 end
