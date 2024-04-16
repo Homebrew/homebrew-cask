@@ -20,7 +20,7 @@ cask "vpn-tracker-365" do
     end
   end
 
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :high_sierra"
 
   app "VPN Tracker 365.app"
 
@@ -29,8 +29,7 @@ cask "vpn-tracker-365" do
     "/Library/Extensions/com.equinux.VPNTracker365.*",
     "/Library/LaunchDaemons/com.equinux.VPNTracker365.agent.plist",
     "/Library/Preferences/com.equinux.VPNTracker365.plist",
-    "/Library/PrivilegedHelperTools/com.equinux.VPNTracker365.agent",
-    "/Library/PrivilegedHelperTools/com.equinux.VPNTracker365.connectiond",
+    "/Library/PrivilegedHelperTools/com.equinux.VPNTracker365.*",
   ]
 
   zap trash: [
