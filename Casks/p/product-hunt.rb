@@ -6,10 +6,7 @@ cask "product-hunt" do
   name "Product Hunt"
   homepage "https://www.producthunt.com/apps/mac"
 
-  livecheck do
-    url "https://producthunt.s3.amazonaws.com/mac/producthuntcast.xml"
-    strategy :sparkle
-  end
+  deprecate! date: "2024-04-16", because: :moved_to_mas
 
   app "Product Hunt.app"
 end
