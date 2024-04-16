@@ -14,7 +14,7 @@ cask "blackhole-16ch" do
     strategy :github_latest
   end
 
-  pkg "BlackHole16ch.v#{version}.pkg"
+  pkg "BlackHole16ch-#{version}.pkg"
 
   uninstall_postflight do
     system_command "/usr/bin/killall",
