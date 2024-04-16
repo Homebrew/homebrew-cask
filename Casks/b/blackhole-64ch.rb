@@ -1,8 +1,8 @@
 cask "blackhole-64ch" do
-  version "0.5.0"
-  sha256 "7943397be3907e23d146ecfb6c3740220d2d35605cd23dcade65dc8bcb5da822"
+  version "0.6.0"
+  sha256 "7c1bdad59ba1b732bacaa53ddcfd5e7d965cdc4c5a9231317f56cf4f563ecf59"
 
-  url "https://existential.audio/downloads/BlackHole64ch.v#{version}.pkg"
+  url "https://existential.audio/downloads/BlackHole64ch-#{version}.pkg"
   name "BlackHole 64ch"
   desc "Virtual Audio Driver"
   homepage "https://existential.audio/blackhole/"
@@ -14,7 +14,7 @@ cask "blackhole-64ch" do
     strategy :github_latest
   end
 
-  pkg "BlackHole64ch.v#{version}.pkg"
+  pkg "BlackHole64ch-#{version}.pkg"
 
   uninstall_postflight do
     system_command "/usr/bin/killall",
