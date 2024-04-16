@@ -19,4 +19,9 @@ cask "moneydance" do
   depends_on macos: ">= :el_capitan"
 
   app "Moneydance.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.infinitekind.MoneydanceOSX",
+    "~/Library/Containers/com.infinitekind.MoneydanceOSX",
+  ]
 end
