@@ -1,9 +1,9 @@
 cask "manictime" do
   arch arm: "arm64", intel: "x64"
 
-  version "2023.3.0"
-  sha256 arm:   "246225f4942947c6b3a62df0f097b0a30347c42eefd24c6e8e97ea288b1546f2",
-         intel: "3ec7667050d0ab4ac1fce8846194368445b9c1c809fa7ad5f669ad430be2890b"
+  version "2024.1.0.2"
+  sha256 arm:   "c9b03be2c3162280b693fe5b69d46e9c462a48869ddf672919cba193b2637aab",
+         intel: "ece5a44b010b44dd325bf1eac5842d286837d40e7fad2d5a237e3c3a9651a2b2"
 
   url "https://cdn.manictime.com/setup/mac/v#{version.dots_to_underscores}/manictime-#{version}-osx-#{arch}.dmg"
   name "ManicTime"
@@ -26,7 +26,7 @@ cask "manictime" do
 
   depends_on macos: ">= :mojave"
 
-  pkg "manictime-#{version}-osx-#{arch}.pkg"
+  pkg "ManicTime.pkg"
 
   uninstall pkgutil: "com.finkit.manictime.tracker"
 
