@@ -21,9 +21,10 @@ cask "flox" do
   pkg "flox-#{version}.#{arch}-darwin.pkg"
 
   uninstall early_script: {
-              executable: "/usr/bin/killall",
-              args:       ["-9", "pkgdb"],
-              sudo:       true,
+              executable:   "/usr/bin/killall",
+              args:         ["-9", "pkgdb"],
+              sudo:         true,
+              must_succeed: false,
             },
             launchctl:    [
               "org.nixos.darwin-store",
