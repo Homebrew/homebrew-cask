@@ -1,9 +1,9 @@
 cask "reqable" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2.11.1"
-  sha256 arm:   "298f4fc8db2c6029f8ea71923da757e62e70d334ba672ffe85b7d42187c19c6f",
-         intel: "be663d0aa0138b5378856ce6faff5b2fd92eb418b98a09ccc8208a59d0fb3a52"
+  version "2.12.0"
+  sha256 arm:   "86979e43caa76d706be2ef4df4d98b336e16a21b542fcd9b7db64a6b66c989f3",
+         intel: "cc7b4b91b69d486fefc553112aa05d84fc22c5299f7723afc9918002c15195ff"
 
   url "https://github.com/reqable/reqable-app/releases/download/#{version}/reqable-app-macos-#{arch}.dmg",
       verified: "github.com/reqable/reqable-app/"
