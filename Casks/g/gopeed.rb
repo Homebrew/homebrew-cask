@@ -24,4 +24,3 @@ cask "gopeed" do
     "~/Library/Containers/com.gopeed",
   ]
 end
-
