@@ -1,9 +1,9 @@
 cask "jetbrains-toolbox" do
   arch arm: "-arm64"
 
-  version "2.2.3,2.2.3.20090"
-  sha256 arm:   "25f00c9022402e16c4a93c30abcd832bde60085d7bd37103c3156ef25e2727ca",
-         intel: "542fc6b1feb2dd071486f05792c15d18ab0241e2c22769f75c4af138cbd25b98"
+  version "2.3,2.3.0.30876"
+  sha256 arm:   "cab0bc327ecd1529c7a42165ec42195344aae19857df9ca1aa67931e681b7744",
+         intel: "bbcaaf48a0e206ab79e90e51ee3b29b9092332ef3f3a98fcdba941e586da026e"
 
   url "https://download.jetbrains.com/toolbox/jetbrains-toolbox-#{version.csv.second}#{arch}.dmg"
   name "JetBrains Toolbox"
