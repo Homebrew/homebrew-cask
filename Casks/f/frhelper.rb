@@ -1,5 +1,5 @@
 cask "frhelper" do
-  version "4.6.3"
+  version :latest
   sha256 :no_check
 
   url "https://static.eudic.net/pkg/fhmac.dmg",
@@ -9,12 +9,6 @@ cask "frhelper" do
   desc "French-Chinese dictionary and learning tool"
   homepage "https://www.eudic.net/v4/fr/app/frhelper"
 
-  livecheck do
-    url "https://static.eudic.net/pkg/frhelper_mac.xml"
-    strategy :sparkle, &:short_version
-  end
-
-  auto_updates true
   depends_on macos: ">= :high_sierra"
 
   app "Frhelper.app"
