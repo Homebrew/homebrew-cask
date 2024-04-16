@@ -14,4 +14,14 @@ cask "forecast" do
   end
 
   app "Forecast.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/fm.overcast.forecast-encoder.sfl*",
+    "~/Library/Application Support/Forecast",
+    "~/Library/Caches/fm.overcast.forecast-encoder",
+    "~/Library/HTTPStorages/fm.overcast.forecast-encoder",
+    "~/Library/Preferences/fm.overcast.forecast-encoder.plist",
+    "~/Library/Saved Application State/fm.overcast.forecast-encoder.savedState",
+    "~/Library/WebKit/fm.overcast.forecast-encoder",
+  ]
 end
