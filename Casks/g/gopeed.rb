@@ -3,7 +3,7 @@ cask "gopeed" do
   sha256 "58a22f680a84c72c1a9ba9728c2e17dd27dae171c24b5ceb94bc8dd20475232e"
 
   url "https://github.com/GopeedLab/gopeed/releases/download/v#{version}/Gopeed-v#{version}-macos.dmg",
-  verified: "github.com/GopeedLab/gopeed/"
+       verified: "github.com/GopeedLab/gopeed/"
   name "Gopeed"
   desc "A modern download manager that supports all platforms. Built with Golang and Flutter."
   homepage "https://gopeed.com/"
