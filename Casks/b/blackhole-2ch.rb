@@ -1,8 +1,8 @@
 cask "blackhole-2ch" do
-  version "0.5.0"
-  sha256 "f042f31193a66d82e5a39afc429e3c1b8f1683f5996e7d8f9af5b6bb4603bfe6"
+  version "0.6.0"
+  sha256 "8d2223cc1aa976b70d14ff7c469cc62a64c3192177c8c0eb38df0483db790c7b"
 
-  url "https://existential.audio/downloads/BlackHole2ch.v#{version}.pkg"
+  url "https://existential.audio/downloads/BlackHole2ch-#{version}.pkg"
   name "BlackHole 2ch"
   desc "Virtual Audio Driver"
   homepage "https://existential.audio/blackhole/"
@@ -14,7 +14,7 @@ cask "blackhole-2ch" do
     strategy :github_latest
   end
 
-  pkg "BlackHole2ch.v#{version}.pkg"
+  pkg "BlackHole2ch-#{version}.pkg"
 
   uninstall_postflight do
     system_command "/usr/bin/killall",
