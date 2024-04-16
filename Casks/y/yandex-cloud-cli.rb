@@ -25,6 +25,10 @@ cask "yandex-cloud-cli" do
   }
   binary "yandex-cloud-cli/bin/docker-credential-yc"
   binary "yandex-cloud-cli/bin/yc"
+  binary "yandex-cloud-cli/completion.zsh.inc",
+         target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_yc"
+  binary "yandex-cloud-cli/completion.bash.inc",
+         target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/yc"
 
   uninstall delete: "#{staged_path}/#{token}"
 
