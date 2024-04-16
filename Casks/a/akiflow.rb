@@ -8,7 +8,8 @@ cask "akiflow" do
   homepage "https://akiflow.com/"
 
   livecheck do
-    skip "Constantly changes between download page and direct download"
+    url "https://download.akiflow.com/builds/download"
+    strategy :header_match 
   end
 
   depends_on macos: ">= :high_sierra"
