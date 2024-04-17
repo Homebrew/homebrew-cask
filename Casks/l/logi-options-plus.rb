@@ -1,5 +1,5 @@
 cask "logi-options-plus" do
-  version "1.68.542186"
+  version "1.70.551909"
   sha256 :no_check
 
   url "https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer.zip",
@@ -34,6 +34,7 @@ cask "logi-options-plus" do
               "com.logi.optionsplus.driverhost",
               "com.logi.optionsplus.updater",
               "com.logitech.FirmwareUpdateTool",
+              "com.logitech.logiaipromptbuilder",
             ],
             delete:    [
               "/Applications/logioptionsplus.app",
