@@ -1,9 +1,9 @@
 cask "vcv-rack" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.5.0"
-  sha256  arm:   "7ae70918e85967f1468252209e52341d8c538c43ad7a2e2b84b3099aeb27039b",
-          intel: "afdb0271362fa14bda34a9a21a20ceb3ee8d3e555d684ba341cc3dfef10058b4"
+  version "2.5.1"
+  sha256  arm:   "8b1515ca580a0ab69e7e9e16e82b5cf0f7cef4e107d7263d67d4e889604d8857",
+          intel: "37ce22538553367953d43659d3246c9707f4c64876809a7828b66cc5900eab7d"
 
   url "https://vcvrack.com/downloads/RackFree-#{version}-mac-#{arch}.pkg"
   name "VCV Rack"
