@@ -9,7 +9,7 @@ cask "protonvpn" do
 
   livecheck do
     url "https://protonvpn.com/download/macos-update3.xml"
-    regex(/ProtonVPN_mac_v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/ProtonVPN[._-]mac[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   auto_updates true
@@ -21,8 +21,7 @@ cask "protonvpn" do
             quit:      "ch.protonvpn.mac"
 
   zap trash: [
-    "~/Library/Application Scripts/ch.protonvpn.mac",
-    "~/Library/Application Scripts/ch.protonvpn.ProtonVPNStarter",
+    "~/Library/Application Scripts/ch.protonvpn.*",
     "~/Library/Application Support/CrashReporter/ProtonVPN*",
     "~/Library/Application Support/ProtonVPN",
     "~/Library/Caches/ch.protonvpn.mac",
