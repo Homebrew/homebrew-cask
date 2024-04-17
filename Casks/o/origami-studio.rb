@@ -1,5 +1,5 @@
 cask "origami-studio" do
-  version "165.0.0.8.240"
+  version "165.0.0.9.240"
   sha256 :no_check
 
   url "https://facebook.com/designtools/origami/",
