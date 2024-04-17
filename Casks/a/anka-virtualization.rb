@@ -1,6 +1,6 @@
 cask "anka-virtualization" do
-  version "3.3.9.182"
-  sha256 "5c72f54b0de0d6d8f15841b7d7e4fd79e4dc29fd035c6ab2bb966497d8783e95"
+  version "3.3.10.185"
+  sha256 "6afdbd1948a5b95256a5eba8fcdd7476caa4bea2fc1bd52da216b5d131f43c68"
 
   url "https://downloads.veertu.com/anka/Anka-#{version}.pkg"
   name "Anka Virtualization"
