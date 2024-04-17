@@ -1,6 +1,6 @@
 cask "mendeley-reference-manager" do
-  version "2.112.1"
-  sha256 "0221ecd24e810ec74b868093da5f46300410e3242fdd43cf8d25b50e8f7b116d"
+  version "2.112.2"
+  sha256 "15f59b9fa66482e6a77d428be440a12db442a715cb5c09b8c85c4d75e862354e"
 
   url "https://static.mendeley.com/bin/desktop/mendeley-reference-manager-#{version}-x64.dmg"
   name "Mendeley Reference Manager"
