@@ -18,6 +18,7 @@ cask "image2icon" do
   app "Image2Icon.app"
 
   zap trash: [
+    "~/Library/Application Scripts/net.shinyfrog.image2icon.templateRenderer",
     "~/Library/Caches/net.shinyfrog.image2icon",
     "~/Library/Containers/net.shinyfrog.image2icon*",
     "~/Library/Containers/net.shinyfrog.templateRenderer",
