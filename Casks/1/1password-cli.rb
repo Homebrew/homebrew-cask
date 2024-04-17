@@ -1,9 +1,9 @@
 cask "1password-cli" do
   arch arm: "arm64", intel: "amd64"
 
-  version "2.26.1"
-  sha256 arm:   "13b4de15dbde273be9ecf8a96689eb0b2579ba81ec8dea0f6bd58972bc97f740",
-         intel: "75534626ad70647b4eafbbf60baa9d6aabc6f743f22616e545f6807253c1eaab"
+  version "2.27.0"
+  sha256 arm:   "de1a00b3dc554542a84d5fd479606488671dd73db07dd94a5797ad644c7e5c1a",
+         intel: "ad606943c33f394f37e41582c7bf6eae5d33c443cb3d77c2367062317d7ba217"
 
   url "https://cache.agilebits.com/dist/1P/op2/pkg/v#{version}/op_darwin_#{arch}_v#{version}.zip",
       verified: "cache.agilebits.com/dist/1P/op2/pkg/"
