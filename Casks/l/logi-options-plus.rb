@@ -34,6 +34,7 @@ cask "logi-options-plus" do
               "com.logi.optionsplus.driverhost",
               "com.logi.optionsplus.updater",
               "com.logitech.FirmwareUpdateTool",
+              "com.logitech.logiaipromptbuilder",
             ],
             delete:    [
               "/Applications/logioptionsplus.app",
