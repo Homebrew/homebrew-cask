@@ -10,14 +10,14 @@ cask "virtualbox" do
   livecheck do
     url "https://www.virtualbox.org/wiki/Downloads"
     strategy :page_match do |page|
-      match = page.match(/href=.*?VirtualBox-(\d+(?:\.\d+)+)-(\d+)-OSX.dmg/)
+      match = page.match(/href=.*?VirtualBox[._-]v?(\d+(?:\.\d+)+)[._-](\d+)[._-]OSX.dmg/)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
     end
   end
 
-  conflicts_with cask: "homebrew/cask-versions/virtualbox-beta"
+  conflicts_with cask: "virtualbox-beta"
   depends_on macos: ">= :catalina"
   depends_on arch: :x86_64
 
