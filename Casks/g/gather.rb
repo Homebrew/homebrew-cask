@@ -1,9 +1,9 @@
 cask "gather" do
   arch arm: "-arm64"
 
-  version "1.4.0"
-  sha256 arm:   "f58fe89e2e041707f81fb5256a610a64442ae572df44a36fbb4bdb0777b5b967",
-         intel: "8eb1145f76a7a90ebfc46e412cfb44c33da1292bab3fe9e9c2def4c3d6d3802c"
+  version "1.4.1"
+  sha256 arm:   "1a1a01e63f20809837f8f2ab3649f7595a52852d213d83b13f131f33466f97db",
+         intel: "9d5b2dc996dc027e8d6db69b6f27b111458464ace2d3efddefd3275f3ca3dde9"
 
   url "https://github.com/gathertown/gather-town-desktop-releases/releases/download/v#{version}/Gather-#{version}#{arch}-mac.zip",
       verified: "github.com/gathertown/gather-town-desktop-releases/"
