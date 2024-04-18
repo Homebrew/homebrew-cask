@@ -170,6 +170,7 @@ hoppscotch
 hstracker
 hydrus-network
 ibm-cloud-cli
+idrive
 iina-plus
 inso
 insomnia
