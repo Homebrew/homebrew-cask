@@ -15,7 +15,7 @@ cask "godot" do
   end
 
   conflicts_with cask: "godot3"
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "Godot.app"
   binary "#{appdir}/Godot.app/Contents/MacOS/Godot", target: "godot"
