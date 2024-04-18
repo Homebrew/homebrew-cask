@@ -15,9 +15,15 @@ cask "feed-the-beast" do
     regex(/ftb[._-]app[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
-  app "FTB App.app"
+  app "FTB Electron App.app"
 
-  zap trash: "~/Library/Application Support/ftblauncher"
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dev.ftb.app.sfl*",
+    "~/Library/Application Support/FTB Electron App",
+    "~/Library/Logs/FTB Electron App",
+    "~/Library/Preferences/dev.ftb.app.plist",
+    "~/Library/Saved Application State/dev.ftb.app.savedState",
+  ]
 
   caveats do
     depends_on_java
