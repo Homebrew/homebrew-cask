@@ -134,6 +134,7 @@ fork
 forkgram-telegram
 fossa
 foxglove-studio
+framer
 free42-binary
 free42-decimal
 fsnotes
