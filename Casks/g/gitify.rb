@@ -4,7 +4,7 @@ cask "gitify" do
 
   url "https://github.com/gitify-app/gitify/releases/download/v#{version}/Gitify-#{version}-universal-mac.zip"
   name "Gitify"
-  desc "App that shows GitHub notifications on the desktop"
+  desc "GitHub Notifications on your menu bar"
   homepage "https://github.com/gitify-app/gitify"
 
   livecheck do
