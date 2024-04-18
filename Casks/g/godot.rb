@@ -1,6 +1,6 @@
 cask "godot" do
-  version "4.2.1"
-  sha256 "7426f9ea843643ad51776a456d918604123104cfc2b4ba71c9ac6ac55a4b7d75"
+  version "4.2.2"
+  sha256 "57646027e4b304dc65570b3f29d78a7eefa862e287d4e99f432bc381143d1ec5"
 
   url "https://github.com/godotengine/godot/releases/download/#{version}-stable/Godot_v#{version}-stable_macos.universal.zip",
       verified: "github.com/godotengine/godot/"
@@ -14,8 +14,8 @@ cask "godot" do
     strategy :github_latest
   end
 
-  conflicts_with cask: "homebrew/cask-versions/godot3"
-  depends_on macos: ">= :sierra"
+  conflicts_with cask: "godot3"
+  depends_on macos: ">= :high_sierra"
 
   app "Godot.app"
   binary "#{appdir}/Godot.app/Contents/MacOS/Godot", target: "godot"
