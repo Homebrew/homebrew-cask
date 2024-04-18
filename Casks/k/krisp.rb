@@ -2,9 +2,9 @@ cask "krisp" do
   arch arm: "arm64", intel: "x64"
   livecheck_arch = on_arch_conditional arm: "arm", intel: "64"
 
-  version "2.35.8"
-  sha256 arm:   "5822c30882567d417f7a299616f2df2ca373bca2f2ed79b4a7971cd91a22b173",
-         intel: "96a0c44fcc85a31fa6764235adf9bb742a5affeb573771393ec8343b17d32648"
+  version "2.35.10"
+  sha256 arm:   "3071560b5409e8529b8ec705c53f2327eaa065b5957595bf6585afef89248e9c",
+         intel: "7b286e21143717d27474c2637c741bfcef593d385e6353a182ba50aecc0d8727"
 
   url "https://cdn.krisp.ai/mp/#{version}/mac/Krisp_#{version}_#{arch}.pkg"
   name "Krisp"
