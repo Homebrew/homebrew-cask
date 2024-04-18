@@ -1,7 +1,7 @@
 cask "4k-youtube-to-mp3" do
+  # NOTE: "3" is not a version number, but an intrinsic part of the product name
   arch arm: "arm64", intel: "x64"
 
-  # NOTE: "3" is not a version number, but an intrinsic part of the product name
   version "5.2.3"
   sha256 arm:   "5bc64af981cf0d34a95b4e3c05455ad43c3fcef96b2ad0b3c0fb6b035d88a5fc",
          intel: "da74b30669b9a22ad1743de22c1dfa98f9442a63089462c06e51899bce53b92b"
@@ -22,9 +22,7 @@ cask "4k-youtube-to-mp3" do
 
   zap trash: [
     "~/Library/Application Support/4kdownload.com",
-    "~/Library/Preferences/com.4kdownload.4K Video to MP3.plist",
-    "~/Library/Preferences/com.4kdownload.4K YouTube to MP3.plist",
-    "~/Library/Preferences/com.4kdownload.ApplicationDirectories.plist",
+    "~/Library/Preferences/com.4kdownload.*",
     "~/Library/Saved Application State/com.openmedia.4kyoutubetomp3.savedState",
   ]
 end
