@@ -1,6 +1,7 @@
 1password
 1password-cli
 8x8-work
+adguard-vpn
 affine
 affinity-designer
 affinity-photo
