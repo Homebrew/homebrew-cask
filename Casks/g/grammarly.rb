@@ -7,10 +7,7 @@ cask "grammarly" do
   desc "Utility to fix grammar errors and style issues in text"
   homepage "https://www.grammarly.com/"
 
-  livecheck do
-    url "https://update.grammarly.com/desktop-editor/osx"
-    regex(/GrammarlyEditor[._-]?v?(\d+(?:\.\d+)+)[._-]osx\.zip/i)
-  end
+  disable! date: "2024-04-24", because: :discontinued
 
   auto_updates true
 
