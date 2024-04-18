@@ -1,9 +1,9 @@
 cask "feed-the-beast" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.25.7"
-  sha256 arm:   "4e10bb1b9f3b5c95ba17e53f018912dc9c44f5c4ed0699b326edb3725a6c1099",
-         intel: "2029ac34a7589327db81c1c17634b8b0a89c2e20f04e1b45221becd75cb72f21"
+  version "1.25.8"
+  sha256 arm:   "871327000a4ee7c215cdfde0eb850dea8db79904cea6a4a88126ff5bffd2ec58",
+         intel: "23ced0486681927a9f234ebb92eb550a09000651f08f2cfd1d05d811494b582a"
 
   url "https://piston.feed-the-beast.com/app/ftb-app-#{version}-#{arch}.dmg"
   name "Feed the Beast"
@@ -15,11 +15,15 @@ cask "feed-the-beast" do
     regex(/ftb[._-]app[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
-  app "FTB App.app"
+  auto_updates true
 
-  zap trash: "~/Library/Application Support/ftblauncher"
+  app "FTB Electron App.app"
 
-  caveats do
-    depends_on_java
-  end
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dev.ftb.app.sfl*",
+    "~/Library/Application Support/FTB Electron App",
+    "~/Library/Logs/FTB Electron App",
+    "~/Library/Preferences/dev.ftb.app.plist",
+    "~/Library/Saved Application State/dev.ftb.app.savedState",
+  ]
 end
