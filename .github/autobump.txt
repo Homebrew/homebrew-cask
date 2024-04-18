@@ -155,6 +155,7 @@ goodsync
 google-chrome
 google-cloud-sdk
 google-drive
+gosign
 gpxsee
 grammarly-desktop
 grandtotal
