@@ -1,9 +1,9 @@
 cask "captain" do
   arch arm: "-arm64"
 
-  version "10.4.0"
-  sha256 arm:   "082e8960c018eb4542f35624cd1300b51c5c965dfb49a90f2761ad1a69d68488",
-         intel: "23f8cd8ceafa78d63d21d2fdfa54c89e91442846fcdccecae3a36e70eeaa1e14"
+  version "10.5.0"
+  sha256 arm:   "fa9a7d9efb07c9ed837ab856be7ed9e503a01a7614c8bedaeb11420bc647bcfd",
+         intel: "3828412835c7b690b5478c796f15051b0260876eb223b20e9172b9040c424693"
 
   url "https://github.com/RickWong/Captain/releases/download/v#{version}/Captain-#{version}#{arch}.dmg",
       verified: "github.com/RickWong/Captain/"
