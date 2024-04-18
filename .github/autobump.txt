@@ -356,6 +356,7 @@ snagit
 sol
 spacedrive
 spark-ar-studio
+splice
 spotify
 spybuster
 standard-notes
