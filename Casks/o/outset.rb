@@ -1,6 +1,6 @@
 cask "outset" do
-  version "4.1.1.21918"
-  sha256 "5c38db5fcba9cc91e4dd815395796de083a3d8ff713886544d792858c259884c"
+  version "4.1.2.21936"
+  sha256 "da11b2f8f82fc708381e573b4023a60b4d661f3de94748b8526a0c5b3aad2c3b"
 
   url "https://github.com/macadmins/outset/releases/download/v#{version}/Outset-#{version}.pkg"
   name "outset"
