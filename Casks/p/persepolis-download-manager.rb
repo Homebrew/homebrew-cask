@@ -1,5 +1,4 @@
 cask "persepolis-download-manager" do
-
   version "4.1.0"
   sha256 "db6afcd9322eeab2221e1ef93de6642bf5a4b5f4d1cd270cbec3b6ce704bd695"
 
