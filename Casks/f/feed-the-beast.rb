@@ -15,6 +15,8 @@ cask "feed-the-beast" do
     regex(/ftb[._-]app[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
+  auto_updates true
+
   app "FTB Electron App.app"
 
   zap trash: [
@@ -24,8 +26,4 @@ cask "feed-the-beast" do
     "~/Library/Preferences/dev.ftb.app.plist",
     "~/Library/Saved Application State/dev.ftb.app.savedState",
   ]
-
-  caveats do
-    depends_on_java
-  end
 end
