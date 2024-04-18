@@ -15,7 +15,7 @@ cask "adguard" do
   end
 
   auto_updates true
-  conflicts_with cask: "homebrew/cask-versions/adguard-nightly"
+  conflicts_with cask: "adguard-nightly"
   depends_on macos: ">= :catalina"
 
   pkg "AdGuard.pkg"
@@ -37,7 +37,7 @@ cask "adguard" do
 
   zap delete: "/Library/Logs/com.adguard.mac.adguard",
       trash:  [
-        "~/Library/Application Scripts/*.com.adguard.mac*",
+        "~/Library/Application Scripts/*com.adguard.mac*",
         "~/Library/Application Support/Adguard",
         "~/Library/Application Support/com.adguard.*",
         "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.adguard.mac.adguard.loginhelper.sfl*",
