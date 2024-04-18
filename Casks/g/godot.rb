@@ -14,7 +14,7 @@ cask "godot" do
     strategy :github_latest
   end
 
-  conflicts_with cask: "homebrew/cask-versions/godot3"
+  conflicts_with cask: "godot3"
   depends_on macos: ">= :sierra"
 
   app "Godot.app"
