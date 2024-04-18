@@ -1,9 +1,9 @@
 cask "btp" do
   arch arm: "arm64", intel: "amd64"
 
-  version "2.61.0"
-  sha256 arm:   "b776ea5136a6d7c431b1e060e655b869512248faad9ac6711e6767a588a64c5d",
-         intel: "82de75c8c2aa4ac4ac06781e3f47abf18f5a2a5195ed53a8bc29f658625234bc"
+  version "2.64.0"
+  sha256 arm:   "e4adae692cc500ec63e8f007c9efa246a97cb6efe75326964644500092621579",
+         intel: "6a303474216c0bf91fc4db219bef62d67047150a76482b60620517c3cb987711"
 
   url "https://tools.hana.ondemand.com/additional/btp-cli-darwin-#{arch}-#{version}.tar.gz",
       cookies: {
