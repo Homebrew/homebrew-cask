@@ -1,7 +1,7 @@
 cask "redisinsight" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.46.0"
+  version "2.48.0"
   sha256 :no_check
 
   url "https://download.redisinsight.redis.com/latest/RedisInsight-mac-#{arch}.dmg"
@@ -14,12 +14,12 @@ cask "redisinsight" do
   # GitHub releases as a best guess of when a new version is released.
   livecheck do
     url "https://github.com/RedisInsight/RedisInsight"
-    strategy :github_latest
+    strategy :git
   end
 
   auto_updates true
 
-  app "RedisInsight.app"
+  app "Redis Insight.app"
 
   zap trash: [
     "~/Library/Preferences/org.RedisLabs.RedisInsight-V#{version.major}.plist",
