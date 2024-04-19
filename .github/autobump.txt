@@ -347,6 +347,7 @@ santa
 sapmachine-jdk
 screen-studio
 segger-jlink
+sentinel
 session
 setapp
 sf
