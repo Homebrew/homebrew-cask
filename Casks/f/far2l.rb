@@ -22,11 +22,9 @@ cask "far2l" do
   desc "Unix fork of FAR Manager v2"
   homepage "https://github.com/elfmz/far2l"
 
-  # This check should be updated to avoid unstable versions if/when stable
-  # versions become available in the future.
   livecheck do
     url :url
-    regex(/^\D*?(\d+(?:\.\d+)+)$/i)
+    regex(/v?(\d+(?:\.\d+)+(?:\w)*)/i)
     strategy :github_latest
   end
 
