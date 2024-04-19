@@ -14,7 +14,7 @@ cask "redisinsight" do
   # GitHub releases as a best guess of when a new version is released.
   livecheck do
     url "https://github.com/RedisInsight/RedisInsight"
-    strategy :github_latest
+    strategy :git
   end
 
   auto_updates true
