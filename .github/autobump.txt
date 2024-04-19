@@ -399,6 +399,7 @@ todoist
 topaz-gigapixel-ai
 topaz-video-ai
 tor-browser
+touchosc
 trader-workstation
 trainerroad
 treesheets
