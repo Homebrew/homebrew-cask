@@ -285,6 +285,7 @@ ovito
 ovito-pro
 pagico
 panoply
+parsehub
 path-finder
 pdfelement
 permute
