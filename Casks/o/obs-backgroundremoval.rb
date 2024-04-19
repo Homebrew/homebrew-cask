@@ -5,7 +5,7 @@ cask "obs-backgroundremoval" do
   url "https://github.com/occ-ai/obs-backgroundremoval/releases/download/#{version}/obs-backgroundremoval-#{version}-macos-universal.pkg",
       verified: "github.com/occ-ai/obs-backgroundremoval/"
   name "OBS Background Removal"
-  desc "Virtual Green-screen and Low-Light Enhancement"
+  desc "Virtual Green-screen and Low-Light Enhancement OBS Plugin"
   homepage "https://obsproject.com/forum/resources/background-removal-virtual-green-screen-low-light-enhance.1260"
 
   livecheck do
