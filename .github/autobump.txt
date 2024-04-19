@@ -352,6 +352,7 @@ shadow
 shapr3d
 sigmaos
 signal
+sipgate-clinq
 siyuan
 skype
 slack
