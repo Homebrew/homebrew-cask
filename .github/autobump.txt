@@ -398,6 +398,7 @@ termius
 thangs-sync
 ths
 thunderbird
+ticktick
 tidelift
 timeular
 tinkerwell
