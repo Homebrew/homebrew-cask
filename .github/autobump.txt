@@ -201,6 +201,7 @@ lm-studio
 logi-options-plus
 logos
 logseq
+lookaway
 loom
 loupedeck
 lunar
