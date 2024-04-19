@@ -345,6 +345,7 @@ rubymine
 rustrover
 santa
 sapmachine-jdk
+screen-studio
 segger-jlink
 session
 setapp
