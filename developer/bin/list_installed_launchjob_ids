@@ -37,7 +37,7 @@ merge_sources () {
 }
 
 clean_sources () {
-    /usr/bin/egrep -v '^com\.apple\.'
+    /usr/bin/grep -E -v '^com\.apple\.'
 }
 
 mark_up_sources () {
@@ -66,15 +66,15 @@ if [[ $1 =~ ^-+h(elp)?$ ]]; then
     printf "list_installed_launchjob_ids
 
 List all installed launchjob IDs, which may be useful
-in a Cask uninstall stanza, eg
+in a Cask uninstall stanza, e.g.:
 
     uninstall launchctl: 'job.id.goes.here'
 
-Launchctl jobs attributed to Apple will be ommitted.
+Launchctl jobs attributed to Apple will be omitted.
 
 If a launchctl job is currently loaded, and visible to the current
 user, it will be followed by a plus symbol '(+)' in the output.
-This can be verified via the command
+This can be verified via the command:
 
     /bin/launchctl list 'job.id.goes.here'
 
