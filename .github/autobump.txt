@@ -1,11 +1,17 @@
 1password
 1password-cli
 8x8-work
+ableton-live-intro
+ableton-live-lite
+ableton-live-standard
+ableton-live-suite
+adguard
 adguard-vpn
 affine
 affinity-designer
 affinity-photo
 affinity-publisher
+akiflow
 alfred
 alt-tab
 altair-graphql-client
@@ -29,6 +35,7 @@ axure-rp
 backblaze
 banana-cake-pop
 banking-4
+banktivity
 beeper
 betterdisplay
 bettermouse
@@ -69,6 +76,7 @@ cmake
 codeql
 codux
 cog
+coin-wallet
 confluent-cli
 cookie
 copilot
@@ -80,6 +88,7 @@ couchbase-server-enterprise
 craft
 cryptomator
 crystalmaker
+curseforge
 cursor
 datadog-agent
 datagrip
@@ -94,6 +103,7 @@ dcp-o-matic-encode-server
 dcp-o-matic-kdm-creator
 dcp-o-matic-player
 dcp-o-matic-playlist-editor
+deezer
 descript
 desktoppr
 direqual
@@ -145,6 +155,7 @@ gather
 gcs
 gdevelop
 geogebra
+git-credential-manager
 gitbutler
 github
 gitify
@@ -159,6 +170,7 @@ google-cloud-sdk
 google-drive
 gosign
 gpxsee
+gqrx
 grammarly-desktop
 grandtotal
 gstreamer-development
@@ -183,14 +195,17 @@ jami
 jamie
 jdownloader
 jetbrains-gateway
+jetbrains-toolbox
 jgrennison-openttd
 jupyterlab
 juxtacode
 keymapp
 keysafe
+kitty
 lagrange
 languagetool
 leapp
+ledger-live
 lens
 libreoffice
 libreoffice-language-pack
@@ -247,6 +262,7 @@ mqttx
 mullvad-browser
 mullvadvpn
 multiapp
+multitouch
 multiviewer-for-f1
 native-access
 navicat-for-mariadb
@@ -337,6 +353,7 @@ reader
 reaper
 rectangle
 rectangle-pro
+reflect
 remote-desktop-manager
 remotehamradio
 restfox
@@ -344,6 +361,7 @@ rewind
 rider
 rive
 roam
+rode-central
 rubymine
 rustrover
 santa
@@ -435,6 +453,7 @@ vscodium
 vuescan
 wakatime
 warp
+waterfox
 wave
 wavebox
 webcatalog
@@ -447,6 +466,7 @@ whisky
 wondershare-uniconverter
 workflowy
 writerside
+xcodepilot
 xemu
 yealink-meeting
 zed
