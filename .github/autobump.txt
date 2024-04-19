@@ -234,6 +234,7 @@ mitmproxy
 mmhmm
 mochi
 mochi-diffusion
+moneydance
 moneymanager
 mongodb-compass
 mongodb-compass-isolated-edition
