@@ -4,13 +4,13 @@ cask "hancom-word" do
 
   url "https://cdn.hancom.com/pds/hnc/DOWN/HancomOfficeHWPGeneral.pkg",
       referer: "https://hancom.com/mypage/myIndivPrdtList.do"
-  name "Hacom Word Processor 2024"
+  name "Hacom Word Processor"
   desc "Word processor"
   homepage "https://office.hancom.com/"
 
   livecheck do
     url "https://cdn.hancom.com/upd/HwpMac2022/HancomOfficeHWPDocs/hupdate_mac.ini"
-    regex(/Hwp_mac\s*=\s*(\d+(?:\.\d+)+)/i)
+    regex(/hwp_mac.*?(\d+(?:\.\d+)+)/i)
   end
 
   pkg "HancomOfficeHWPGeneral.pkg"
