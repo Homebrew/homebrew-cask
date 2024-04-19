@@ -1,11 +1,11 @@
 cask "itk-snap" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "4.0.2"
-  sha256 arm:   "aba01235a44b9080fae2c5cf0b35485f96b335f1a50442ee4fb941d4c4846501",
-         intel: "333071f6703e6d3a8554fcc33f2a632cf3106a0bdc230893807a4c288e9e13da"
+  version "4.2.0,20240422"
+  sha256 arm:   "250c119c723398c2a88afa84015a0c08b082261f54f48f062ce0e8105b6eeaaa",
+         intel: "f4414b5eed59599b233efbf1963a0684304fa35901cc61e2420ca623be0f8997"
 
-  url "https://downloads.sourceforge.net/itk-snap/itksnap-#{version.csv.first}-Darwin-#{arch}.dmg",
+  url "https://downloads.sourceforge.net/itk-snap/itksnap-#{version.csv.first}-#{version.csv.second}-Darwin-#{arch}.dmg",
       verified: "downloads.sourceforge.net/itk-snap/"
   name "ITK-SNAP"
   desc "Segment structures in 3D medical images"
