@@ -344,6 +344,7 @@ rustrover
 santa
 sapmachine-jdk
 segger-jlink
+sentinel
 session
 setapp
 sf
