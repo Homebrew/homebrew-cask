@@ -70,7 +70,7 @@ in a Cask uninstall stanza, eg
 
     uninstall launchctl: 'job.id.goes.here'
 
-Launchctl jobs attributed to Apple will be ommitted.
+Launchctl jobs attributed to Apple will be omitted.
 
 If a launchctl job is currently loaded, and visible to the current
 user, it will be followed by a plus symbol '(+)' in the output.
