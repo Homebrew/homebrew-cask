@@ -5,7 +5,7 @@ cask "popclip" do
   url "https://pilotmoon.com/downloads/PopClip-#{version}.zip"
   name "PopClip"
   desc "Used to access context-specific actions when text is selected"
-  homepage "https://pilotmoon.com/popclip/"
+  homepage "https://www.popclip.app/"
 
   livecheck do
     url "https://softwareupdate.pilotmoon.com/update/popclip/appcast.xml"
