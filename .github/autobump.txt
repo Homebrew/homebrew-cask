@@ -245,6 +245,7 @@ mullvad-browser
 mullvadvpn
 multiapp
 multiviewer-for-f1
+native-access
 navicat-for-mariadb
 navicat-for-mysql
 navicat-for-oracle
