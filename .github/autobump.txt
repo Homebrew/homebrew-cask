@@ -355,6 +355,7 @@ rectangle-pro
 reflect
 remote-desktop-manager
 remotehamradio
+reqable
 restfox
 rewind
 rider
