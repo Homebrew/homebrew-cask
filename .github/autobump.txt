@@ -127,6 +127,7 @@ expressvpn
 fantastical
 fedistar
 figma
+figma-agent
 fiji
 finbar
 finch
