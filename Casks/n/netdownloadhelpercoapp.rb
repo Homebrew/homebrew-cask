@@ -34,9 +34,5 @@ cask "netdownloadhelpercoapp" do
 
   uninstall pkgutil: "net.downloadhelper.coapp"
 
-  zap trash: [
-        "/var/db/receipts/net.downloadhelper.coapp.bom",
-        "/var/db/receipts/net.downloadhelper.coapp.plist",
-      ],
-      rmdir: "~/dwhelper"
+  zap rmdir: "~/dwhelper"
 end
