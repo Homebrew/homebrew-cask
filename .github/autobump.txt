@@ -346,6 +346,7 @@ puzzles
 pycharm
 pycharm-ce
 qbittorrent
+qgis
 qlab
 qownnotes
 qqlive
