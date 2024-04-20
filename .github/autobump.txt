@@ -172,6 +172,7 @@ gpxsee
 gqrx
 grammarly-desktop
 grandtotal
+groestlcoin-core
 gstreamer-development
 gstreamer-runtime
 hackolade
