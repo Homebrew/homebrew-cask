@@ -24,6 +24,8 @@ cask "mathpix-snipping-tool" do
     "~/Library/Caches/com.crashlytics.data/com.mathpix.snipping-tool-noappstore",
     "~/Library/Caches/com.mathpix.snipping-tool-noappstore",
     "~/Library/Caches/io.fabric.sdk.mac.data/com.mathpix.snipping-tool-noappstore",
+    "~/Library/HTTPStorages/com.mathpix.snipping-tool-noappstore",
     "~/Library/Preferences/com.mathpix.snipping-tool-noappstore.plist",
+    "~/Library/WebKit/com.mathpix.snipping-tool-noappstore",
   ]
 end
