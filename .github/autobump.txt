@@ -107,6 +107,7 @@ descript
 desktoppr
 direqual
 discord
+double-commander
 downie
 drata-agent
 draw-things
