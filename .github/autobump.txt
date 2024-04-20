@@ -105,7 +105,6 @@ dcp-o-matic-playlist-editor
 deezer
 descript
 desktoppr
-direqual
 discord
 double-commander
 downie
@@ -146,7 +145,6 @@ fork
 forkgram-telegram
 fossa
 foxglove-studio
-framer
 free42-binary
 free42-decimal
 fsnotes
@@ -166,10 +164,7 @@ glyphs
 godspeed
 goland
 goodsync
-google-chrome
 google-cloud-sdk
-google-drive
-gosign
 gpxsee
 gqrx
 grammarly-desktop
@@ -187,7 +182,6 @@ hoppscotch
 hstracker
 hydrus-network
 ibm-cloud-cli
-idrive
 iina-plus
 inso
 insomnia
@@ -326,7 +320,6 @@ plex-htpc
 plex-media-server
 plus42-binary
 plus42-decimal
-poe
 popo
 popsql
 portfolioperformance
@@ -365,7 +358,6 @@ restfox
 rewind
 rider
 rive
-roam
 rode-central
 rubymine
 rustrover
@@ -392,7 +384,6 @@ sol
 spacedrive
 spark-ar-studio
 splice
-spotify
 spybuster
 standard-notes
 stash
@@ -410,7 +401,6 @@ tableau-prep
 tableau-public
 tableau-reader
 tableplus
-tageditor
 tailscale
 teamviewer
 telegram
@@ -426,7 +416,6 @@ ticktick
 tidelift
 timeular
 tinkerwell
-to-audio-converter
 todoist
 topaz-gigapixel-ai
 topaz-video-ai
@@ -442,14 +431,12 @@ tsh
 tuist
 tuple
 tuta-mail
-tyme
 uhk-agent
 understand
 unity
 updf
 uvtools
 valentina-studio
-viber
 virtualbuddy
 visual-studio-code
 vivaldi
