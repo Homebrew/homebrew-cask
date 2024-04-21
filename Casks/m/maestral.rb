@@ -1,6 +1,6 @@
 cask "maestral" do
-  version "1.9.2"
-  sha256 "24b0e575108717cd4a5cf823ea521682b623ab51f56827eaea14ceab2de2c66c"
+  version "1.9.3"
+  sha256 "79f3c0603e04fcc8762feb593349a76063f561ef5feb8d62060fbc862664aa40"
 
   url "https://github.com/SamSchott/maestral/releases/download/v#{version}/Maestral-#{version}.dmg",
       verified: "github.com/SamSchott/maestral/"
@@ -14,7 +14,7 @@ cask "maestral" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :big_sur"
 
   app "Maestral.app"
   binary "#{appdir}/Maestral.app/Contents/MacOS/maestral-cli", target: "maestral"
