@@ -25,7 +25,7 @@ jobs:
           comment-limit: 15
           comment: |
             Hi, thanks for your contribution to Homebrew! You already have >=15 open pull requests, so please get them ready to be merged or close them before you open more. If CI fails on any of them, please fix it or ask for help doing so.
-            If you are performing simple version bumps, @BrewTestBot automatically bumps [a list of formulae](https://github.com/${{ github.repository }}/blob/HEAD/.github/autobump.txt) so you don't need to. Please take a look at issues and pull requests labelled https://github.com/${{ github.repository }}/labels/help%20wanted and see if you can help to fix any of them. Thanks!
+            If you are performing simple version bumps, @BrewTestBot automatically bumps [a list of casks](https://github.com/${{ github.repository }}/blob/HEAD/.github/autobump.txt) so you don't need to. Please take a look at issues and pull requests labelled https://github.com/${{ github.repository }}/labels/help%20wanted and see if you can help to fix any of them. Thanks!
           close-limit: 30
           close: true
 
