@@ -21,6 +21,8 @@ cask "choreo" do
 
   binary "choreo"
 
+  zap trash: "~/.choreo"
+
   # post-install message
   postflight do
     user_home = Dir.home
