@@ -220,6 +220,7 @@ maa
 macfuse
 macupdater
 macwhisper
+maestral
 mailbutler
 mambaforge
 media-center

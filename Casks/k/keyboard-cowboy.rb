@@ -12,5 +12,9 @@ cask "keyboard-cowboy" do
 
   app "Keyboard Cowboy.app"
 
-  zap trash: "~/Library/Preferences/com.zenangst.Keyboard-Cowboy.plist"
+  zap trash: [
+    "~/.keyboard-cowboy.json",
+    "~/Library/HTTPStorages/com.zenangst.Keyboard-Cowboy",
+    "~/Library/Preferences/com.zenangst.Keyboard-Cowboy.plist",
+  ]
 end
