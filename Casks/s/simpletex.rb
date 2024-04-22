@@ -9,6 +9,8 @@ cask "simpletex" do
   desc "Formula snipping and recognition app"
   homepage "https://simpletex.cn/"
 
+  auto_updates true
+
   app "SimpleTex.app"
 
   zap trash: [
