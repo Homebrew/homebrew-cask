@@ -9,7 +9,18 @@ cask "mailtrackerblocker" do
   homepage "https://apparition47.github.io/MailTrackerBlocker/"
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
+  # Application does not work on macOS 14+, and is moved to the App Store
+  # This still receives updates for older macOS versions
+  depends_on macos: [
+    :el_capitan,
+    :sierra,
+    :high_sierra,
+    :mojave,
+    :catalina,
+    :big_sur,
+    :monterey,
+    :ventura,
+  ]
 
   pkg "MailTrackerBlocker.pkg"
 
