@@ -4,7 +4,7 @@ cask "metaimage" do
 
   url "https://neededapps.com/appcasts/metaimage/versions/#{version}"
   name "MetaImage"
-  desc "Editor to read, write and edit images metadata"
+  desc "Image metadata and geographical tag viewer & editor"
   homepage "https://neededapps.com/metaimage/"
 
   livecheck do
