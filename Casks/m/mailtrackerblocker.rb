@@ -8,19 +8,10 @@ cask "mailtrackerblocker" do
   desc "Email tracker, read receipt and spy pixel blocker plugin for Apple Mail"
   homepage "https://apparition47.github.io/MailTrackerBlocker/"
 
+  deprecate! date: "2024-04-22", because: :moved_to_mas
+
   auto_updates true
-  # Application does not work on macOS 14+, and is moved to the App Store
-  # This still receives updates for older macOS versions
-  depends_on macos: [
-    :el_capitan,
-    :sierra,
-    :high_sierra,
-    :mojave,
-    :catalina,
-    :big_sur,
-    :monterey,
-    :ventura,
-  ]
+  depends_on macos: "<= :ventura"
 
   pkg "MailTrackerBlocker.pkg"
 
