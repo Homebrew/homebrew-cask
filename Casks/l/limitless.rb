@@ -8,8 +8,10 @@ cask "limitless" do
   homepage "https://www.limitless.ai/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://storage.googleapis.com/limitless-data/builds/main/manifest.json"
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
   depends_on macos: ">= :ventura"
