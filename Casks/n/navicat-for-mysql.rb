@@ -17,7 +17,7 @@ cask "navicat-for-mysql" do
 
   zap trash: [
     "~/Library/Application Support/PremiumSoft CyberTech/Navicat CC/Navicat for MySQL",
-    "~/Library/Caches/com.apple.helpd/Generated/Navicat Help*#{version}",
+    "~/Library/Caches/com.apple.helpd/Generated/Navicat Help*",
     "~/Library/Preferences/com.navicat.NavicatForMySQL.plist",
     "~/Library/Saved Application State/com.navicat.NavicatForMySQL.savedState",
   ]
