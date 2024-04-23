@@ -1,6 +1,6 @@
 cask "modern-csv" do
-  version "2.0.6"
-  sha256 "cb046c39df1b7231308a800929e891076fa1da0a26b02647a0027b32e06eef2a"
+  version "2.0.7"
+  sha256 "735a787808fa9e49e860b703bfe9e3919d59ccdb503ac79c95efaf98945d872f"
 
   url "https://www.moderncsv.com/release/ModernCSV-Mac-v#{version}.dmg"
   name "Modern CSV"
