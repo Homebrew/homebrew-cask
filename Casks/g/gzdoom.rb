@@ -13,4 +13,6 @@ cask "gzdoom" do
   end
 
   app "GZDoom.app"
+
+  zap trash: "~/Library/Preferences/gzdoom.ini"
 end
