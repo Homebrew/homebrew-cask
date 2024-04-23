@@ -16,7 +16,7 @@ cask "navicat-premium-essentials" do
   app "Navicat Premium Essentials.app"
 
   zap trash: [
-    "~/Library/Caches/com.apple.helpd/Generated/Navicat Help*#{version}",
+    "~/Library/Caches/com.apple.helpd/Generated/Navicat Help*",
     "~/Library/Preferences/com.navicat.NavicatPremiumEssentials.plist",
     "~/Library/Saved Application State/com.navicat.NavicatPremiumEssentials.savedState",
   ]
