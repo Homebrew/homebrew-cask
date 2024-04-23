@@ -1,5 +1,5 @@
 cask "navicat-for-postgresql" do
-  version "16.3.7"
+  version "16.3.8"
   sha256 :no_check
 
   url "https://dn.navicat.com/download/navicat#{version.major_minor.no_dots}_pgsql_en.dmg"
@@ -17,7 +17,7 @@ cask "navicat-for-postgresql" do
 
   zap trash: [
     "~/Library/Application Support/PremiumSoft CyberTech/Navicat CC/Navicat for PostgreSQL",
-    "~/Library/Caches/com.apple.helpd/Generated/Navicat Help*#{version}",
+    "~/Library/Caches/com.apple.helpd/Generated/Navicat Help*",
     "~/Library/Preferences/com.navicat.NavicatForPostgreSQL.plist",
     "~/Library/Saved Application State/com.navicat.NavicatForPostgreSQL.savedState",
   ]
