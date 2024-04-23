@@ -18,7 +18,7 @@ cask "navicat-premium" do
 
   zap trash: [
     "~/Library/Application Support/PremiumSoft CyberTech/Navicat CC/Navicat Premium",
-    "~/Library/Caches/com.apple.helpd/Generated/Navicat Help*#{version}",
+    "~/Library/Caches/com.apple.helpd/Generated/Navicat Help*",
     "~/Library/Preferences/com.navicat.NavicatPremium.plist",
     "~/Library/Saved Application State/com.navicat.NavicatPremium.savedState",
   ]
