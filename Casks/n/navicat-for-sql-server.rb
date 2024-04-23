@@ -1,5 +1,5 @@
 cask "navicat-for-sql-server" do
-  version "16.3.7"
+  version "16.3.8"
   sha256 :no_check
 
   url "https://dn.navicat.com/download/navicat#{version.major_minor.no_dots}_sqlserver_en.dmg"
@@ -17,7 +17,7 @@ cask "navicat-for-sql-server" do
 
   zap trash: [
     "~/Library/Application Support/PremiumSoft CyberTech/Navicat CC/Navicat for SQL Server",
-    "~/Library/Caches/com.apple.helpd/Generated/Navicat Help*#{version}",
+    "~/Library/Caches/com.apple.helpd/Generated/Navicat Help*",
     "~/Library/Preferences/com.navicat.NavicatForSQLServer.plist",
     "~/Library/Saved Application State/com.navicat.NavicatForSQLServer.savedState",
   ]
