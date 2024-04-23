@@ -17,7 +17,7 @@ cask "navicat-for-oracle" do
 
   zap trash: [
     "~/Library/Application Support/PremiumSoft CyberTech/Navicat CC/Navicat for Oracle",
-    "~/Library/Caches/com.apple.helpd/Generated/Navicat Help*#{version}",
+    "~/Library/Caches/com.apple.helpd/Generated/Navicat Help*",
     "~/Library/Preferences/com.navicat.NavicatForOracle.plist",
     "~/Library/Saved Application State/com.navicat.NavicatForOracle.savedState",
   ]
