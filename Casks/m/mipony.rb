@@ -18,6 +18,7 @@ cask "mipony" do
             pkgutil: "net.installer.mipony.*"
 
   zap trash: [
+    "~/.config/Mipony",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.downloader.mipony.sfl*",
     "~/Library/Caches/com.downloader.Mipony",
     "~/Library/HTTPStorages/com.downloader.Mipony",
