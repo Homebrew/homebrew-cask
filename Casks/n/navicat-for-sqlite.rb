@@ -1,5 +1,5 @@
 cask "navicat-for-sqlite" do
-  version "16.3.7"
+  version "16.3.8"
   sha256 :no_check
 
   url "https://dn.navicat.com/download/navicat#{version.major_minor.no_dots}_sqlite_en.dmg"
@@ -17,7 +17,7 @@ cask "navicat-for-sqlite" do
 
   zap trash: [
     "~/Library/Application Support/PremiumSoft CyberTech/Navicat CC/Navicat for SQLite",
-    "~/Library/Caches/com.apple.helpd/Generated/Navicat Help*#{version}",
+    "~/Library/Caches/com.apple.helpd/Generated/Navicat Help*",
     "~/Library/Preferences/com.navicat.NavicatForSQLite.plist",
     "~/Library/Saved Application State/com.navicat.NavicatForSQLite.savedState",
   ]
