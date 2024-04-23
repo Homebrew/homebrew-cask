@@ -17,7 +17,7 @@ cask "navicat-for-sqlite" do
 
   zap trash: [
     "~/Library/Application Support/PremiumSoft CyberTech/Navicat CC/Navicat for SQLite",
-    "~/Library/Caches/com.apple.helpd/Generated/Navicat Help*#{version}",
+    "~/Library/Caches/com.apple.helpd/Generated/Navicat Help*",
     "~/Library/Preferences/com.navicat.NavicatForSQLite.plist",
     "~/Library/Saved Application State/com.navicat.NavicatForSQLite.savedState",
   ]
