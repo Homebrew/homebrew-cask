@@ -1,6 +1,6 @@
 cask "sysdig-inspect" do
-  version "0.10.1"
-  sha256 "a1e0c370c171d2e2e97fe8cc1ef27cde3ee790ef2058c713ed70dd95755bb040"
+  version "0.10.2"
+  sha256 "eb19bf4f46a85bbeb4888739668d02a1b860bcd99b1a27011e5cb92426c81f03"
 
   url "https://github.com/draios/sysdig-inspect/releases/download/#{version}/sysdig-inspect-mac-x86_64.zip"
   name "Sysdig Inspect"

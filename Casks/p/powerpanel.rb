@@ -1,6 +1,6 @@
 cask "powerpanel" do
-  version "2.5.1"
-  sha256 "947d222bcf866b7b218673c7624331370d7392e4f5e7f46dbdb31c59868d307e"
+  version "2.5.2"
+  sha256 "b4a86390d34535affe0e5d5d25ea70c80be46b510e1b3215813218b930ddecac"
 
   url "https://dl4jz3rbrsfum.cloudfront.net/software/PPP_Mac_v#{version}.pkg",
       verified: "dl4jz3rbrsfum.cloudfront.net/"

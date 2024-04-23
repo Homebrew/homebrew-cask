@@ -1,11 +1,8 @@
 cask "persepolis-download-manager" do
-  arch arm: "M", intel: "Intel"
+  version "4.1.0"
+  sha256 "db6afcd9322eeab2221e1ef93de6642bf5a4b5f4d1cd270cbec3b6ce704bd695"
 
-  version "4.0.1"
-  sha256 arm:   "67c430937e6062a40a432cd09282188487f2c6af0a861f3de1131e483447fe55",
-         intel: "563a591c92c1fd3a6ea11761ba29614eef2b1a0e78eb7f0827bde452c1b5b610"
-
-  url "https://github.com/persepolisdm/persepolis/releases/download/#{version}/Persepolis.Download.Manager.#{arch}.Chips.dmg",
+  url "https://github.com/persepolisdm/persepolis/releases/download/#{version}/persepolis_#{version}_macos.dmg",
       verified: "github.com/persepolisdm/persepolis/"
   name "Persepolis"
   desc "GUI for aria2"

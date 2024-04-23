@@ -1,6 +1,6 @@
 cask "rippling" do
-  version "3.6.19"
-  sha256 "805fbd94db9dd7cc0f3919c2016498ffc30ba1c268fca92b48733ddd84d50c71"
+  version "3.6.20"
+  sha256 "ead65601267faa16d5982b4796cbb97ae689bec778aa1aa67427e9cb4ff77cce"
 
   url "https://hardware-cdn.rippling.com/device_release/electron-installer/#{version}/macos/Rippling.dmg"
   name "Rippling"

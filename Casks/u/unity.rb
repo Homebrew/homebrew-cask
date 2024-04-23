@@ -13,9 +13,14 @@ cask "unity" do
 
   livecheck do
     url "https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json"
-    regex(%r{/download_unity/(\h+)/MacEditorInstaller/Unity-(\d+(?:\.\d+)+[a-z]*\d*)\.pkg}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
+    regex(%r{/(\h+)/MacEditorInstaller/Unity[._-]v?(\d+(?:\.\d+)+[a-z]*\d*)\.pkg}i)
+    strategy :json do |json, regex|
+      json["official"]&.map do |release|
+        match = release["downloadUrl"]&.match(regex)
+        next if match.blank?
+
+        "#{match[2]},#{match[1]}"
+      end
     end
   end
 

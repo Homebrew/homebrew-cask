@@ -15,10 +15,13 @@ cask "unclutter" do
   app "Unclutter.app"
 
   zap trash: [
+    "~/Library/Application Scripts/*.group.com.softwareambience.Unclutter",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.softwareambience.unclutter.sfl*",
     "~/Library/Application Support/Unclutter",
     "~/Library/Caches/com.softwareambience.Unclutter",
     "~/Library/Containers/com.softwareambience.Unclutter",
-    "~/Library/Group Containers/*.com.softwareanbience.Unclutter",
+    "~/Library/Group Containers/*.group.com.softwareambience.Unclutter",
+    "~/Library/HTTPStorages/com.softwareambience.Unclutter",
     "~/Library/Preferences/com.softwareambience.Unclutter.plist",
   ]
 end

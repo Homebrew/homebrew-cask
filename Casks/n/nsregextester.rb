@@ -7,10 +7,7 @@ cask "nsregextester" do
   name "NSRegexTester"
   homepage "https://github.com/aaronvegh/nsregextester"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  deprecate! date: "2024-04-18", because: :unmaintained
 
   app "NSRegexTester.app"
 end

@@ -1,8 +1,8 @@
 cask "insta360-studio" do
-  version "5.0.0,RC_build171,6500b773e9cbaba798d5cb936351537c,20240326_025731_signed_1711393131783"
-  sha256 "8ebf85712157d2955c3e7bb0a68440dd1077866ae574ad2e2e398be2bcfa6be3"
+  version "5.1.0,RC_build32,ede0f3b36b4aa7af0832a1388d882f00,20240416_155631_signed"
+  sha256 "7371ffbcf513f54fd8b971c20a1233f7ceb07c2d307ac9dbb1f3f93cacdce452"
 
-  url "https://file.insta360.com/static/#{version.csv.third}/Insta360Studio_#{version.csv.first}(#{version.csv.second})_#{version.csv.fourth}.pkg"
+  url "https://file.insta360.com/static/#{version.csv.third}/Insta360%20Studio_#{version.csv.first}(#{version.csv.second})_#{version.csv.fourth}.pkg"
   name "Insta360 Studio"
   desc "Video and photo editor"
   homepage "https://www.insta360.com/"
@@ -11,7 +11,7 @@ cask "insta360-studio" do
     url "https://openapi.insta360.com/app/appDownload/getGroupApp?group=insta360-go2&X-Language=en-us"
     regex(%r{
       /(\h+)/
-      Insta360Studio
+      Insta360(?:%20)?Studio
       (?:[._-]|%20)(?:\d+(?:\.\d+)+)
       (?:[._-]?\(([^)]+?)\))?
       [._-](\d+(?:[._-](?:\d+|signed))*)
@@ -40,7 +40,7 @@ cask "insta360-studio" do
     end
   end
 
-  pkg "Insta360Studio_#{version.csv.first}(#{version.csv.second})_#{version.csv.fourth}.pkg"
+  pkg "Insta360 Studio_#{version.csv.first}(#{version.csv.second})_#{version.csv.fourth}.pkg"
 
   uninstall quit:    "com.insta360.studio",
             pkgutil: [
