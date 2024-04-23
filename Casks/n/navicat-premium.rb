@@ -1,5 +1,5 @@
 cask "navicat-premium" do
-  version "16.3.7"
+  version "16.3.8"
   sha256 :no_check
 
   url "https://dn.navicat.com/download/navicat#{version.major_minor.no_dots}_premium_en.dmg"
@@ -18,7 +18,7 @@ cask "navicat-premium" do
 
   zap trash: [
     "~/Library/Application Support/PremiumSoft CyberTech/Navicat CC/Navicat Premium",
-    "~/Library/Caches/com.apple.helpd/Generated/Navicat Help*#{version}",
+    "~/Library/Caches/com.apple.helpd/Generated/Navicat Help*",
     "~/Library/Preferences/com.navicat.NavicatPremium.plist",
     "~/Library/Saved Application State/com.navicat.NavicatPremium.savedState",
   ]
