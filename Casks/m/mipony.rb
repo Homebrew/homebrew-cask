@@ -16,4 +16,13 @@ cask "mipony" do
 
   uninstall quit:    "com.downloader.Mipony",
             pkgutil: "net.installer.mipony.*"
+
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.downloader.mipony.sfl*",
+    "~/Library/Caches/com.downloader.Mipony",
+    "~/Library/HTTPStorages/com.downloader.Mipony",
+    "~/Library/HTTPStorages/com.downloader.Mipony.binarycookies",
+    "~/Library/Preferences/com.downloader.Mipony.plist",
+    "~/Library/Saved Application State/com.downloader.Mipony.savedState",
+  ]
 end
