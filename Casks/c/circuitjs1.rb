@@ -9,8 +9,9 @@ cask "circuitjs1" do
   homepage "https://www.falstad.com/circuit/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://github.com/pfalstad/circuitjs1/blob/master/src/com/lushprojects/circuitjs1/client/circuitjs1.java"
+    regex(/versionString = \\"([^\\]*)\\/i)
+    strategy :page_match
   end
 
   app "CircuitJS1.app"
