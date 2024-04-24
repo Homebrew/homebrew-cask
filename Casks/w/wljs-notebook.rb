@@ -6,7 +6,7 @@ cask "wljs-notebook" do
          intel: "a93c1aad237357298662f87d27caa4d55f9b2decc04fe4fa9007fdb15bcebcf6"
 
   url "https://github.com/JerryI/wolfram-js-frontend/releases/download/#{version}/WLJS.Notebook-#{version}#{arch}.dmg"
-  name "wljs-notebook"
+  name "WLJS Notebook"
   desc "Javascript frontend for Wolfram Engine"
   homepage "https://github.com/JerryI/wolfram-js-frontend"
 
