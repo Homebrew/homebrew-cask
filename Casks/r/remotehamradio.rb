@@ -1,6 +1,6 @@
 cask "remotehamradio" do
-  version "2.3.0"
-  sha256 "4c5379c4d1f8878bd350eb0fd05f31f0e7d0e7d6edb3eb4541d6bc53aa0b143e"
+  version "2.4.0"
+  sha256 "ced6a78c49c1f6235ff9cd0a39d1a120e02aeb5e3a8cb74688ab59a83f1a367e"
 
   url "https://s3.amazonaws.com/rhr-electron/desktop-releases/RemoteHamRadio-#{version}-universal-mac.zip",
       verified: "s3.amazonaws.com/rhr-electron/desktop-releases/"
