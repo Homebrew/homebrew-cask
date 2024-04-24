@@ -69,6 +69,7 @@ cask "zoom" do
     "~/Library/Preferences/us.zoom.xos.Hotkey.plist",
     "~/Library/Preferences/us.zoom.xos.plist",
     "~/Library/Preferences/us.zoom.ZoomAutoUpdater.plist",
+    "~/Library/Preferences/us.zoom.ZoomClips.plist",
     "~/Library/Preferences/ZoomChat.plist",
     "~/Library/Saved Application State/us.zoom.xos.savedState",
     "~/Library/WebKit/us.zoom.xos",
