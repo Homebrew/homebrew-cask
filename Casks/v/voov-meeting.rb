@@ -2,12 +2,12 @@ cask "voov-meeting" do
   arch arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "3.20.3.510,5c4fc55753a7409d4ffa3001f637ccc3"
-    sha256 "10076eb918b8382da29a7024b7495f521ffb6eb2ddf292b48ecfb986fa45973e"
+    version "3.23.0.510,20aaf6d3276e7afe7b1138456376bb20"
+    sha256 "62ac7a05b12b8e382eacfe7a891850dc66c179ab28e1f21d59162098731686c7"
   end
   on_intel do
-    version "3.20.3.510,b52e81dcd22c04598758370761419a89"
-    sha256 "eb06420e4548ce24bee20584fe1ff37106b94c27bd77a76fb96428a188887083"
+    version "3.23.0.510,d446a271d673d349dddcddabdce8e2a5"
+    sha256 "867a1817ba0139fef6d1352b8f374f3d6acb9e87c3ea384a965413bd4cad04dd"
   end
 
   url "https://updatecdn.meeting.qq.com/cos/#{version.csv.second}/VooVMeeting_1410000198_#{version.csv.first}.publish.#{arch}.dmg",
