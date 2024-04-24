@@ -1,9 +1,9 @@
 cask "google-cloud-sdk" do
   arch arm: "arm", intel: "x86_64"
 
-  version "472.0.0"
-  sha256 arm:   "bd13287a300d4e2c220a49be56008ae67147ab2b263eb61806d80016762bb583",
-         intel: "cc9d313ed286aae4f4a28b57897bde46199122295cd44109461b2ab0ecc94d59"
+  version "473.0.0"
+  sha256 arm:   "4b534bf60585b6f6918daf0feeb0b68b39a689a794404e5a4f8fd8ce844de31c",
+         intel: "9ddd90144a004d9ff630781e9b8f144c21b2cea8fb45038073b7fb82399ed478"
 
   url "https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-#{version}-darwin-#{arch}.tar.gz"
   name "Google Cloud SDK"
@@ -31,7 +31,6 @@ cask "google-cloud-sdk" do
       "--install-python", "false"
     ],
   }
-  binary "google-cloud-sdk/bin/anthoscli"
   binary "google-cloud-sdk/bin/bq"
   binary "google-cloud-sdk/bin/docker-credential-gcloud"
   binary "google-cloud-sdk/bin/gcloud"
