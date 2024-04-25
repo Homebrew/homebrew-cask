@@ -1,15 +1,15 @@
 cask "disk-drill" do
-  version "5.5.1515"
-  sha256 :no_check
+  version "5.4.1426"
+  sha256 "516795feb032cb4e1bdf83b7df7d5ab5de25cb7943e859493b20f2b664a0ddf8"
 
-  url "https://dl.cleverfiles.com/diskdrill.dmg"
+  url "https://dl.cleverfiles.com/diskdrill-#{version.dots_to_hyphens}.dmg"
   name "Disk Drill"
   desc "Data recovery software"
   homepage "https://www.cleverfiles.com/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://www.cleverfiles.com/releases/auto-update/dd-newestr.xml"
+    strategy :sparkle
   end
 
   auto_updates true
