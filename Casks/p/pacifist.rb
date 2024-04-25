@@ -16,6 +16,7 @@ cask "pacifist" do
   depends_on macos: ">= :mojave"
 
   app "Pacifist.app"
+  binary "#{appdir}/Pacifist.app/Contents/Resources/usr/bin/pacifist"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.charlessoft.pacifist.sfl*",
