@@ -18,7 +18,11 @@ cask "crystalmaker" do
 
   zap trash: [
     "~/Library/Application Scripts/com.crystalmaker.crystalmaker.v#{version.major}",
+    "~/Library/Application Scripts/group.com.crystalmaker.bundle.v#{version.major}",
+    "~/Library/Application Scripts/group.com.crystalmaker.crystalmaker.v#{version.major}",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.crystalmaker.crystalmaker.v#{version.major}.sfl*",
     "~/Library/Containers/com.crystalmaker.crystalmaker.v#{version.major}",
+    "~/Library/Group Containers/group.com.crystalmaker.bundle.v#{version.major}",
+    "~/Library/Group Containers/group.com.crystalmaker.crystalmaker.v#{version.major}",
   ]
 end
