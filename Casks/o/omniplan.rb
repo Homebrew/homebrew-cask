@@ -23,11 +23,23 @@ cask "omniplan" do
 
     url "https://downloads.omnigroup.com/software/MacOSX/10.14/OmniPlan-#{version}.dmg"
   end
-  on_catalina :or_newer do
+  on_catalina do
+    version "4.2.7"
+    sha256 "157cbea0055a87b2c078c336ea9f5d9aaa9caa242c92265f410e5d7ac534883f"
+
+    url "https://downloads.omnigroup.com/software/MacOSX/10.14/OmniPlan-#{version}.dmg"
+  end
+  on_big_sur do
     version "4.6"
     sha256 "2d674c80ee5c60e3697a38b4933084958ea2b1f990a28827722b803257e7722d"
 
     url "https://downloads.omnigroup.com/software/macOS/11/OmniPlan-#{version}.dmg"
+  end
+  on_monterey :or_newer do
+    version "4.8"
+    sha256 "121cd345c9d30682c3a16cb0d5103707af30a4e8405a1be0a9cbfe6f92ee86d3"
+
+    url "https://downloads.omnigroup.com/software/macOS/12/OmniPlan-#{version}.dmg"
   end
 
   name "OmniPlan"
@@ -40,7 +52,7 @@ cask "omniplan" do
   end
 
   auto_updates true
-  conflicts_with cask: "homebrew/cask-versions/omniplan3"
+  conflicts_with cask: "omniplan3"
 
   app "OmniPlan.app"
 
