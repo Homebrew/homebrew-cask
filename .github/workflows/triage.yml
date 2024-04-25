@@ -68,9 +68,9 @@ jobs:
               path: Casks/.+
               missing_content: \n  desc .+\n
 
-            - label: appcast migration needed
+            - label: extract_plist livecheck
               path: Casks/.+
-              content: \n  appcast .+\n
+              content: \n  strategy :extract_plist.*\n
 
             - label: missing zap
               path: Casks/.+
