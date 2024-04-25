@@ -1,9 +1,9 @@
 cask "helo" do
   arch arm: "-arm64"
 
-  version "1.6.2"
-  sha256 arm:   "b1ef0c2c300d7c644f91cfc664bb28b3066b86257984b0407b52dd0e7ed59d0d",
-         intel: "a22704a4b8f5bc13a9f1c8f6e893657576c20308fe7372ae87306d58d70dca48"
+  version "1.7.0"
+  sha256 arm:   "f06465971d21e38c5a96c5d4f1689440a2673bf00bc38e963fd182af2bc0fe83",
+         intel: "3c36c4f402bdaef2b999fcea24df05a44e33deec341d8b98ce709aa084cb54af"
 
   url "https://helo.fra1.digitaloceanspaces.com/helo/HELO-#{version}#{arch}.dmg",
       verified: "helo.fra1.digitaloceanspaces.com/helo/"
