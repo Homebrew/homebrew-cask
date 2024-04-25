@@ -1,4 +1,5 @@
 cask "mplab-xc32" do
+  # NOTE: "32" is not a version number, but an intrinsic part of the product name
   version "4.40"
   sha256 "4463c2c7e191121dfbb103f40dc9ddbe1ef930fecd1d1bc12a574600e8ee4264"
 
@@ -9,7 +10,7 @@ cask "mplab-xc32" do
 
   livecheck do
     url "https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers/xc32"
-    regex(%r{href=.*?ProductDocuments/SoftwareTools/xc32[._-]v?(\d+(?:\.\d+)+)-full-install-osx-installer\.dmg}i)
+    regex(%r{href=.*?SoftwareTools/xc32[._-]v?(\d+(?:\.\d+)+)[._-]full[._-]install[._-]osx[._-]installer\.dmg}i)
   end
 
   installer script: {
@@ -54,4 +55,6 @@ cask "mplab-xc32" do
     args:       ["--mode", "unattended"],
     sudo:       true,
   }
+
+  # No zap stanza required
 end
