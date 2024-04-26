@@ -7,6 +7,13 @@ cask "singlecrystal" do
   desc "Single-crystal diffraction software"
   homepage "https://crystalmaker.com/singlecrystal/index.html"
 
+  livecheck do
+    url "https://crystalmaker.com/support/updates/VersionData-SCM.xml"
+    strategy :xml do |xml|
+      xml.get_elements("//version").map { |item| item.attributes["number"] }
+    end
+  end
+
   depends_on macos: ">= :mojave"
 
   app "SingleCrystal.app"
