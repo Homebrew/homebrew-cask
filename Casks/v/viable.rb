@@ -4,13 +4,13 @@ cask "viable" do
 
   url "https://eclecticlightdotcom.files.wordpress.com/#{version.csv.second.major}/#{version.csv.second.minor}/viable#{version.csv.first}.zip",
       verified: "eclecticlightdotcom.files.wordpress.com/"
-  name "viable"
+  name "Viable"
   desc "Create and run macOS virtual machines on Apple silicon Macs"
-  homepage "https://eclecticlight.co/virtualisation-on-apple-silicon"
+  homepage "https://eclecticlight.co/virtualisation-on-apple-silicon/"
 
   livecheck do
     url :homepage
-    regex(%r{href=.*?/uploads/(\d+)/(\d+)/viable[._-]?v?(\w+)\.zip}i)
+    regex(%r{href=.*?/(\d+)/(\d+)/viable[._-]?v?(\w+)\.zip}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|
         "#{match[2]},#{match[0]}.#{match[1]}"
