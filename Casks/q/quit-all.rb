@@ -17,6 +17,7 @@ cask "quit-all" do
   app "QuitAll.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.quitallapp.quitall-paddle.sfl*",
     "~/Library/Application Support/com.quitallapp.quitall-paddle",
     "~/Library/Application Support/Quit All",
     "~/Library/Caches/com.quitallapp.quitall-paddle",

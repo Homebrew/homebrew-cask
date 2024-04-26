@@ -43,6 +43,7 @@ cask "istat-menus" do
     "/Users/Shared/.iStatMenus",
     "~/Library/Application Scripts/com.bjango.istatmenus.iStat-Menus-Widget",
     "~/Library/Application Support/iStat Menus",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/y93tk974at.com.bjango.istatmenus.agent.mas.sfl*",
     "~/Library/Caches/com.bjango.iStat-Menus-Updater",
     "~/Library/Caches/com.bjango.istatmenus",
     "~/Library/Caches/com.bjango.istatmenus.agent",

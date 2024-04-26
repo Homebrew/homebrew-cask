@@ -18,6 +18,7 @@ cask "cloudmounter" do
   app "CloudMounter.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.eltima.cloudmounter.sfl*",
     "~/Library/Application Support/com.eltima.cloudmounter",
     "~/Library/Caches/com.eltima.cloudmounter",
     "~/Library/Logs/CloudMounter.log",

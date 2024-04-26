@@ -47,6 +47,7 @@ cask "logi-options-plus" do
     "/Users/Shared/logi",
     "/Users/Shared/LogiOptionsPlus",
     "~/Library/Application Support/LogiOptionsPlus",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.logi.optionsplus*.sfl*",
     "~/Library/Preferences/com.logi.cp-dev-mgr.plist",
     "~/Library/Preferences/com.logi.optionsplus.driverhost.plist",
     "~/Library/Preferences/com.logi.optionsplus.plist",

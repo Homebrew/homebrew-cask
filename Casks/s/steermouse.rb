@@ -15,6 +15,7 @@ cask "steermouse" do
   app "SteerMouse.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/jp.plentycom.boa.steermouse.sfl*",
     "~/Library/Application Support/SteerMouse & CursorSense",
     "~/Library/Caches/jp.plentycom.app.SteerMouse",
     "~/Library/HTTPStorages/jp.plentycom.app.SteerMouse",

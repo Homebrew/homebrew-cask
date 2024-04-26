@@ -125,6 +125,8 @@ cask "docker" do
         "~/.docker",
         "~/Library/Application Scripts/com.docker.helper",
         "~/Library/Application Scripts/group.com.docker",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.docker.helper.sfl*",
+        "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.dockerdesktop.sfl*",
         "~/Library/Application Support/com.bugsnag.Bugsnag/com.docker.docker",
         "~/Library/Application Support/Docker Desktop",
         "~/Library/Caches/com.docker.docker",
