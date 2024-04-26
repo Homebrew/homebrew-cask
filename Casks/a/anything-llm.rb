@@ -17,7 +17,7 @@ cask "anything-llm" do
     regex(/(\d+(?:\.\d+)+)/i)
   end
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :high_sierra"
 
   app "AnythingLLM.app"
 
