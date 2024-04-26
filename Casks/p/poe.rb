@@ -20,6 +20,7 @@ cask "poe" do
   app "Poe.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.quora.poe.electron.sfl*",
     "~/Library/Application Support/poe-electron",
     "~/Library/Caches/com.quora.poe.electron",
     "~/Library/Caches/com.quora.poe.electron.ShipIt",

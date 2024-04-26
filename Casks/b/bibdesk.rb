@@ -19,6 +19,7 @@ cask "bibdesk" do
 
   zap trash: [
     "~/Library/Application Support/BibDesk",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/edu.ucsd.cs.mmccrack.bibdesk.sfl*",
     "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/edu.ucsd.cs.mmccrack.bibdesk.help*",
     "~/Library/Caches/edu.ucsd.cs.mmccrack.bibdesk",
     "~/Library/Cookies/edu.ucsd.cs.mmccrack.bibdesk.binarycookies",

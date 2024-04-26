@@ -19,6 +19,7 @@ cask "wolfram-engine" do
   binary "#{appdir}/Wolfram Engine.app/Contents/Resources/Wolfram Player.app/Contents/MacOS/wolframscript"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.wolfram.wolframengine.sfl*",
     "~/Library/Caches/Wolfram",
     "~/Library/WolframEngine",
   ]

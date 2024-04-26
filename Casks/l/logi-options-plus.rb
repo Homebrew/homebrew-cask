@@ -46,6 +46,7 @@ cask "logi-options-plus" do
   zap trash: [
     "/Users/Shared/logi",
     "/Users/Shared/LogiOptionsPlus",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.logi.optionsplus*.sfl*",
     "~/Library/Application Support/LogiOptionsPlus",
     "~/Library/Preferences/com.logi.cp-dev-mgr.plist",
     "~/Library/Preferences/com.logi.optionsplus.driverhost.plist",

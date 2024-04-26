@@ -42,6 +42,7 @@ cask "istat-menus" do
   zap trash: [
     "/Users/Shared/.iStatMenus",
     "~/Library/Application Scripts/com.bjango.istatmenus.iStat-Menus-Widget",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/y93tk974at.com.bjango.istatmenus.agent.mas.sfl*",
     "~/Library/Application Support/iStat Menus",
     "~/Library/Caches/com.bjango.iStat-Menus-Updater",
     "~/Library/Caches/com.bjango.istatmenus",

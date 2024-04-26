@@ -21,6 +21,7 @@ cask "julia" do
 
   zap trash: [
     "~/.julia",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.github.julia.sfl*",
     "~/Library/Logs/Julia",
     "~/Library/Preferences/com.github.Julia.plist",
     "~/Library/Preferences/julia.plist",

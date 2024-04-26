@@ -24,6 +24,7 @@ cask "notion" do
 
   zap trash: [
     "~/Library/Application Support/Caches/notion-updater",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/notion.id.sfl*",
     "~/Library/Application Support/Notion",
     "~/Library/Caches/notion.id*",
     "~/Library/Logs/Notion",

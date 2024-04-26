@@ -12,5 +12,5 @@ cask "mission-control-plus" do
 
   app "Mission Control Plus.app"
 
-  # No zap stanza required
+  zap trash: "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/io.fadel.missioncontrolplus.sfl*"
 end

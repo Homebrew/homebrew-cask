@@ -14,6 +14,7 @@ cask "grammarly" do
   app "Grammarly Editor.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.grammarly.projectllama.loginhelper.sfl*",
     "~/Library/Application Support/Grammarly",
     "~/Library/Caches/com.grammarly.DesktopEditor",
     "~/Library/Caches/com.grammarly.DesktopEditor.ShipIt",

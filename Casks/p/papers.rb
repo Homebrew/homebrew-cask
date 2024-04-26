@@ -20,6 +20,7 @@ cask "papers" do
   zap trash: [
     "~/Documents/Papers Library",
     "~/Documents/Papers Styles",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.readcube.papers.sfl*",
     "~/Library/Application Support/Papers",
     "~/Library/Application Support/ReadCube Shared",
     "~/Library/Caches/com.ReadCube.Papers",
