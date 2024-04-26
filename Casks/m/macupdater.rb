@@ -7,7 +7,7 @@ cask "macupdater" do
   end
   on_ventura :or_newer do
     version "3.3.0"
-    sha256 "b45971cf7d2fe93a6c49d15bee08f1587bbe154e31f2cef205e8111acfd96a5a"
+    sha256 "82d6a7c3dd95fbc010da90b67fe28b9bed97bb00c22b89b964514d8d25ed9250"
 
     depends_on macos: ">= :ventura"
   end
