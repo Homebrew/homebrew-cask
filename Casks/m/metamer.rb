@@ -9,23 +9,24 @@ cask "metamer" do
   homepage "https://eclecticlight.co/xattred-sandstrip-xattr-tools/"
 
   livecheck do
-    url "https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
-    strategy :page_match do |page|
-      match = page.match(%r{(\d+)/(\d+)/metamer(\d+)\.zip}i)
-      next if match.blank?
-
-      "#{match[3].split("", 2).join(".")},#{match[1]}.#{match[2]}"
+    url :homepage
+    regex(%r{href=.*?/(\d+)/(\d+)/metamer(\d+)\.zip}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map do |match|
+        "#{match[2].split("", 2).join(".")},#{match[0]}.#{match[1]}"
+      end
     end
   end
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :high_sierra"
 
   app "metamer#{version.csv.first.no_dots}/Metamer.app"
 
   zap trash: [
-    "~/Library/Caches/co.eclecticlight.Metamer/",
-    "~/Library/HTTPStorages/co.eclecticlight.Metamer/",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/co.eclecticlight.metamer.sfl*",
+    "~/Library/Caches/co.eclecticlight.Metamer",
+    "~/Library/HTTPStorages/co.eclecticlight.Metamer",
     "~/Library/Preferences/co.eclecticlight.Metamer.plist",
-    "~/Library/Saved Application State/co.eclecticlight.Metamer.savedState/",
+    "~/Library/Saved Application State/co.eclecticlight.Metamer.savedState",
   ]
 end

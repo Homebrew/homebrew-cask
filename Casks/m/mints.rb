@@ -9,8 +9,8 @@ cask "mints" do
   homepage "https://eclecticlight.co/mints-a-multifunction-utility/"
 
   livecheck do
-    url "https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
-    regex(%r{/(\d+)/(\d+)/mints(\d+)\.zip}i)
+    url :homepage
+    regex(%r{href=.*?/(\d+)/(\d+)/mints(\d+)\.zip}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|
         "#{match[2].split("", 2).join(".")},#{match[0]}.#{match[1]}"
@@ -18,11 +18,12 @@ cask "mints" do
     end
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "mints#{version.csv.first.no_dots}/Mints.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/co.eclecticlight.mints.sfl*",
     "~/Library/Caches/co.eclecticlight.Mints",
     "~/Library/HTTPStorages/co.eclecticlight.Mints",
     "~/Library/Preferences/co.eclecticlight.Mints.plist",

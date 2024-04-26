@@ -9,8 +9,8 @@ cask "taccy" do
   homepage "https://eclecticlight.co/taccy-signet-precize-alifix-utiutility-alisma/"
 
   livecheck do
-    url "https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
-    regex(%r{/(\d+)/(\d+)/taccy(\d+)\.zip}i)
+    url :homepage
+    regex(%r{href=.*?/(\d+)/(\d+)/taccy(\d+)\.zip}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|
         "#{match[2].split("", 2).join(".")},#{match[0]}.#{match[1]}"

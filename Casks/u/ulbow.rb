@@ -9,8 +9,8 @@ cask "ulbow" do
   homepage "https://eclecticlight.co/consolation-t2m2-and-log-utilities/"
 
   livecheck do
-    url "https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
-    regex(%r{/(\d+)/(\d+)/ulbow(\d+)\.zip}i)
+    url :homepage
+    regex(%r{href=.*?/(\d+)/(\d+)/ulbow(\d+)\.zip}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|
         "#{match[2].split("", 2).join(".")},#{match[0]}.#{match[1]}"
@@ -18,11 +18,12 @@ cask "ulbow" do
     end
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :high_sierra"
 
   app "ulbow#{version.csv.first.no_dots}/Ulbow.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/co.eclecticlight.ulbow.sfl*",
     "~/Library/Caches/co.eclecticlight.Ulbow",
     "~/Library/HTTPStorages/co.eclecticlight.Ulbow",
     "~/Library/Preferences/co.eclecticlight.Ulbow.plist",

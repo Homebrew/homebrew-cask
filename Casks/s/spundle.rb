@@ -9,8 +9,8 @@ cask "spundle" do
   homepage "https://eclecticlight.co/dintch/"
 
   livecheck do
-    url "https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
-    regex(%r{(\d+)/(\d+)/Spundle(\d+)\.zip}i)
+    url :homepage
+    regex(%r{href=.*?/(\d+)/(\d+)/Spundle(\d+)\.zip}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|
         "#{match[2].split("", 2).join(".")},#{match[0]}.#{match[1]}"
@@ -23,7 +23,9 @@ cask "spundle" do
   app "spundle#{version.csv.first.no_dots}/Spundle.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/co.eclecticlight.spundle.sfl*",
     "~/Library/Caches/co.eclecticlight.Spundle",
+    "~/Library/HTTPStorages/co.eclecticlight.Spundle",
     "~/Library/Preferences/co.eclecticlight.Spundle.plist",
     "~/Library/Saved Application State/co.eclecticlight.Spundle.savedState",
   ]

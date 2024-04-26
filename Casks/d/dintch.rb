@@ -9,12 +9,12 @@ cask "dintch" do
   homepage "https://eclecticlight.co/dintch"
 
   livecheck do
-    url "https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
-    strategy :page_match do |page|
-      match = page.match(%r{(\d+)/(\d+)/dintch(\d+)\.zip}i)
-      next if match.blank?
-
-      "#{match[3].split("", 2).join(".")},#{match[1]}.#{match[2]}"
+    url :homepage
+    regex(%r{href=.*?/(\d+)/(\d+)/dintch(\d+)\.zip}i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map do |match|
+        "#{match[2].split("", 2).join(".")},#{match[0]}.#{match[1]}"
+      end
     end
   end
 
@@ -23,6 +23,7 @@ cask "dintch" do
   app "dintch#{version.csv.first.no_dots}/Dintch.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/co.eclecticlight.dintch.sfl*",
     "~/Library/Caches/co.eclecticlight.Dintch",
     "~/Library/HTTPStorages/co.eclecticlight.Dintch",
     "~/Library/Preferences/co.eclecticlight.Dintch.plist",

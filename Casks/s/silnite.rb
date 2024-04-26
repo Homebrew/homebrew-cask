@@ -18,7 +18,7 @@ cask "silnite" do
     end
   end
 
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :big_sur"
 
   pkg "silnite#{version.csv.first}/silniteInstaller.pkg"
 

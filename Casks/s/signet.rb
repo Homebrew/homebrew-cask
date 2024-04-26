@@ -9,8 +9,8 @@ cask "signet" do
   homepage "https://eclecticlight.co/taccy-signet-precize-alifix-utiutility-alisma/"
 
   livecheck do
-    url "https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
-    regex(%r{/(\d+)/(\d+)/signet(\d+)\.zip}i)
+    url :homepage
+    regex(%r{href=.*?/(\d+)/(\d+)/signet(\d+)\.zip}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|
         "#{match[2].split("", 2).join(".")},#{match[0]}.#{match[1]}"
@@ -18,10 +18,13 @@ cask "signet" do
     end
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "#{token}#{version.csv.first.no_dots}/Signet.app"
 
   zap trash: [
     "~/Library/Caches/co.eclecticlight.Signet",
+    "~/Library/HTTPStorages/co.eclecticlight.Signet",
     "~/Library/Preferences/co.eclecticlight.Signet.plist",
     "~/Library/Saved Application State/co.eclecticlight.Signet.savedState",
   ]

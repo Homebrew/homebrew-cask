@@ -10,7 +10,7 @@ cask "xprocheck" do
 
   livecheck do
     url :homepage
-    regex(%r{/(\d+)/(\d+)/xprocheck(\d+)\.zip}i)
+    regex(%r{href=.*?/(\d+)/(\d+)/xprocheck(\d+)\.zip}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map do |match|
         "#{match[2].split("", 2).join(".")},#{match[0]}.#{match[1]}"
@@ -22,5 +22,10 @@ cask "xprocheck" do
 
   app "xprocheck#{version.csv.first.no_dots}/XProCheck.app"
 
-  zap trash: "~/Library/Saved Application State/co.eclecticlight.XProCheck.savedState"
+  zap trash: [
+    "~/Library/Caches/co.eclecticlight.XProCheck",
+    "~/Library/HTTPStorages/co.eclecticlight.XProCheck",
+    "~/Library/Preferences/co.eclecticlight.XProCheck.plist",
+    "~/Library/Saved Application State/co.eclecticlight.XProCheck.savedState",
+  ]
 end
