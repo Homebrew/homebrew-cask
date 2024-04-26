@@ -17,6 +17,7 @@ cask "one-switch" do
   app "One Switch.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/studio.fireball.oneswitch.sfl*",
     "~/Library/Application Support/One Switch",
     "~/Library/Application Support/studio.fireball.OneSwitch",
     "~/Library/Caches/studio.fireball.OneSwitch",

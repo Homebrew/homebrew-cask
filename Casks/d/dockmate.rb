@@ -19,6 +19,7 @@ cask "dockmate" do
   app "DockMate.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.macenhance.dockmate.sfl*",
     "~/Library/Application Support/com.macenhance.dockmate",
     "~/Library/Application Support/DockMate",
     "~/Library/Caches/com.macenhance.dockmate",

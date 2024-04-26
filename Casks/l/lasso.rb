@@ -19,6 +19,7 @@ cask "lasso" do
   app "Lasso.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.heavylightapps.lassolaunchhelper.sfl*",
     "~/Library/Application Support/com.heavylightapps.lasso",
     "~/Library/Application Support/Lasso",
     "~/Library/Caches/com.heavylightapps.lasso",
