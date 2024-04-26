@@ -9,9 +9,8 @@ cask "crystalmaker" do
 
   livecheck do
     url "https://crystalmaker.com/support/updates/VersionData-CMM.xml"
-    regex(/\b(\d+\.\d+\.\d+)\b/)
-    strategy :xml do |xml, regex|
-      xml.get_elements("versiondata/versionlist/version").map { |item| item.attributes["number"][regex, 1] }
+    strategy :xml do |xml|
+      xml.get_elements("//version").map { |item| item.attributes["number"] }
     end
   end
 
