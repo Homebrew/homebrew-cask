@@ -11,7 +11,7 @@ cask "crystalmaker" do
     url "https://crystalmaker.com/support/updates/VersionData-CMM.xml"
     regex(/\b(\d+\.\d+\.\d+)\b/)
     strategy :xml do |xml, regex|
-        xml.get_elements("versiondata/versionlist/version").map { |item| item.attributes['number'][regex, 1] }
+      xml.get_elements("versiondata/versionlist/version").map { |item| item.attributes["number"][regex, 1] }
     end
   end
 
