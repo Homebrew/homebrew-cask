@@ -46,6 +46,9 @@ bitwarden
 bloop
 boltai
 brave-browser
+brave-browser@beta
+brave-browser@dev
+brave-browser@nightly
 brickstore
 bruno
 burp-suite
@@ -164,6 +167,8 @@ glyphs
 godspeed
 goland
 goodsync
+google-chrome@beta
+google-chrome@dev
 google-cloud-sdk
 gpxsee
 gqrx
@@ -231,6 +236,8 @@ metasploit
 microsoft-auto-update
 microsoft-azure-storage-explorer
 microsoft-edge
+microsoft-edge@beta
+microsoft-edge@dev
 microsoft-excel
 microsoft-office
 microsoft-office-businesspro
