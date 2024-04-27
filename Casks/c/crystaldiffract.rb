@@ -4,7 +4,7 @@ cask "crystaldiffract" do
 
   url "https://crystalmaker.com/downloads/crystaldiffract#{version.major}_mac.zip"
   name "CrystalDiffract"
-  desc "Powder diffraction software including phase ID & rietveld refinement"
+  desc "Powder diffraction software including phase ID & Rietveld refinement"
   homepage "https://crystalmaker.com/crystaldiffract/index.html"
 
   livecheck do
