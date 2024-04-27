@@ -1,6 +1,6 @@
 cask "texifier" do
-  version "1.9.26,799,573d472"
-  sha256 "918e2f880e8d16385c21822495ed4520db89ddc505d281fe03bee1b4c67f24c9"
+  version "1.9.27,802,38a73af"
+  sha256 "1d168df28e877c7e7597b59bda36b54e432b12ffd6d422299252ef60478f0dc2"
 
   url "https://download.texifier.com/apps/osx/updates/Texifier_#{version.csv.first.dots_to_underscores}__#{version.csv.second}__#{version.csv.third}.dmg"
   name "Texifier"
