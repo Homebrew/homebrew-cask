@@ -12,7 +12,7 @@ cask "rapidminer-studio" do
     strategy :header_match
   end
 
-  app "RapidMiner Studio.app"
+  app "AI Studio #{version}.app"
 
   zap trash: "~/.RapidMiner",
       rmdir: "~/Documents/RapidMiner"
