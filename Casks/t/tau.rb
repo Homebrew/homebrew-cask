@@ -1,7 +1,7 @@
 cask "tau" do
   arch arm: "_arm64"
 
-  version "2.33.1"
+  version "2.33.2"
   sha256 :no_check
 
   url "http://tau.uoregon.edu/tau#{arch}.dmg"
