@@ -1,9 +1,9 @@
 cask "openmtp" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.2.10"
-  sha256 arm:   "8440e9c956342b876722bbb5c0ea3fcdbbbbbb78edda7d788c579319aceacb76",
-         intel: "5c0f3f687f392c1329a63c868c01f6e526a72dcecf59bf8d07b70a426c3929f5"
+  version "3.2.20"
+  sha256 arm:   "4686774d78ae90d88ca34211cc4644a2e5ce92e4e934bf01b13b6b3070b847fc",
+         intel: "efb76f376a774514dc14696e3f26d3f4bbac63a7279d45760eb5dbabface632d"
 
   url "https://github.com/ganeshrvel/openmtp/releases/download/v#{version}/openmtp-#{version}-mac-#{arch}.zip",
       verified: "github.com/ganeshrvel/openmtp/"
