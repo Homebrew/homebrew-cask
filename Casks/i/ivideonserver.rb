@@ -14,4 +14,6 @@ cask "ivideonserver" do
   end
 
   app "IvideonServer.app"
+
+  zap trash: "~/Library/Saved Application State/com.ivideon.IvideonServer.savedState"
 end
