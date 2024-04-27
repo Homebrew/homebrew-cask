@@ -9,7 +9,9 @@ cask "crystalmaker" do
 
   livecheck do
     url "https://crystalmaker.com/support/updates/VersionData-CMM.xml"
-    regex(/<version[^>]+?number=["']?v?(\d+(?:\.\d+)+)["']?[^>]*?>/i)
+    strategy :xml do |xml|
+      xml.get_elements("//version").map { |item| item.attributes["number"] }
+    end
   end
 
   depends_on macos: ">= :mojave"
