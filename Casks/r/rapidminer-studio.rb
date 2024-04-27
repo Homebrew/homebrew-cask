@@ -1,5 +1,5 @@
 cask "rapidminer-studio" do
-  version "10.3.1"
+  version "2024.0.0"
   sha256 :no_check
 
   url "https://releases.rapidminer.com/latest/rapidminer-studio/rapidminer-studio-osx.dmg"
@@ -12,7 +12,7 @@ cask "rapidminer-studio" do
     strategy :header_match
   end
 
-  app "RapidMiner Studio.app"
+  app "AI Studio #{version}.app"
 
   zap trash: "~/.RapidMiner",
       rmdir: "~/Documents/RapidMiner"
