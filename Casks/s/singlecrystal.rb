@@ -4,7 +4,7 @@ cask "singlecrystal" do
 
   url "https://crystalmaker.com/downloads/singlecrystal#{version.major}_mac.zip"
   name "SingleCrystal"
-  desc "Single-crystal diffraction software"
+  desc "Crystal diffraction software"
   homepage "https://crystalmaker.com/singlecrystal/index.html"
 
   livecheck do
