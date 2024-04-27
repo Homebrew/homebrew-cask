@@ -9,6 +9,11 @@ cask "1password@nightly" do
   desc "Password manager"
   homepage "https://1password.com/"
 
+  conflicts_with cask: [
+    "1password",
+    "1password@7",
+    "1password@beta",
+  ]
   depends_on macos: ">= :catalina"
 
   app "1Password.app"
