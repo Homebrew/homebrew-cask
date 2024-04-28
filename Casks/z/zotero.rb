@@ -13,7 +13,7 @@ cask "zotero" do
   end
 
   auto_updates true
-  conflicts_with cask: "zotero-beta"
+  conflicts_with cask: "zotero@beta"
   depends_on macos: ">= :el_capitan"
 
   app "Zotero.app"
