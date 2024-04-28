@@ -17,7 +17,7 @@ cask "xamarin-mac" do
     end
   end
 
-  depends_on cask: "homebrew/cask-versions/mono-mdk-for-visual-studio"
+  depends_on cask: "mono-mdk-for-visual-studio"
 
   pkg "xamarin.mac-#{version.csv.first}.pkg"
 
