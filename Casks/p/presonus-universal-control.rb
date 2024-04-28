@@ -10,7 +10,7 @@ cask "presonus-universal-control" do
 
   livecheck do
     url "https://legacy.presonus.com/products/Universal-Control/downloads"
-    regex(/Universal\s?Control\sv?(\d+(?:\.\d+)*)/i)
+    regex(/Universal\s?Control\sv?(\d+(?:\.\d+)+)/i)
   end
 
   depends_on macos: ">= :mojave"
