@@ -27,4 +27,11 @@ cask "presonus-universal-control" do
               "presonus.pkg.Universal.Control.presets",
               "presonus.pkg.Universal.Control.tb_driver",
             ]
+
+  zap trash: [
+    "/Library/Application Support/PreSonus/universalcontrol",
+    "/Library/LaunchDaemons/com.presonus.ucdaemon.plist",
+    "~/Library/Application Support/PreSonus/universalcontrol",
+    "~/Library/Preferences/com.presonus.ucapp.plist",
+  ]
 end
