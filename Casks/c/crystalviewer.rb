@@ -15,15 +15,12 @@ cask "crystalviewer" do
   end
 
   depends_on macos: ">= :mojave"
+  depends_on cask: "crystalmaker"
 
   app "CrystalViewer.app"
 
   zap trash: [
     "~/Library/Application Scripts/com.crystalmaker.crystalviewer.v#{version.major}",
-    "~/Library/Application Scripts/group.com.crystalmaker.bundle.v#{version.major}",
-    "~/Library/Application Scripts/group.com.crystalmaker.crystalmaker.v#{version.major}",
     "~/Library/Containers/com.crystalmaker.crystalviewer.v#{version.major}",
-    "~/Library/Group Containers/group.com.crystalmaker.bundle.v#{version.major}",
-    "~/Library/Group Containers/group.com.crystalmaker.crystalmaker.v#{version.major}",
   ]
 end
