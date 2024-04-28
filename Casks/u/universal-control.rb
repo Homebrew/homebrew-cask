@@ -22,4 +22,6 @@ cask "universal-control" do
   uninstall pkgutil: "presonus.pkg.Universal.Control.presets"
   uninstall pkgutil: "presonus.pkg.Universal.Control.controlpanel"
   uninstall pkgutil: "presonus.pkg.Universal.Control.tb_driver"
+  uninstall launchctl: "com.presonus.ucdaemon"
+  uninstall launchctl: "asp.com.presonus.pae-quantum-audio-plug-in"
 end
