@@ -1,6 +1,6 @@
 cask "betaflight-configurator" do
-  version "10.9.0"
-  sha256 "e5c6cbcdd513fe33ff3a357ff6a19c4914bfb8f40b10cbb109e7a5752d3e33a7"
+  version "10.10.0"
+  sha256 "a9ddadd2d983e62865cab7a3839f5a6513e3c839a0c4c3c79b5fa9730ed5a3bd"
 
   url "https://github.com/betaflight/betaflight-configurator/releases/download/#{version}/betaflight-configurator_#{version}_macOS.dmg"
   name "Betaflight-Configurator"
