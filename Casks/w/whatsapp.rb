@@ -17,8 +17,8 @@ cask "whatsapp" do
 
   auto_updates true
   conflicts_with cask: [
-    "whatsapp-beta",
-    "whatsapp-legacy",
+    "whatsapp@beta",
+    "whatsapp@legacy",
   ]
   depends_on macos: ">= :big_sur"
 
