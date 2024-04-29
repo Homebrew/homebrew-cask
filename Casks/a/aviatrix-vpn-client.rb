@@ -1,5 +1,5 @@
 cask "aviatrix-vpn-client" do
-  version "2.16.42"
+  version "2.17.7"
   sha256 :no_check
 
   url "https://aviatrix-download.s3.amazonaws.com/AviatrixVPNClient/AVPNC_mac.pkg",
@@ -9,8 +9,11 @@ cask "aviatrix-vpn-client" do
   homepage "https://docs.aviatrix.com/Downloads/samlclient.html"
 
   livecheck do
-    url "https://read.docs.aviatrix.com/HowTos/Aviatrix_VPN_Client_Release_Notes.html"
-    regex(/strong>(\d+(?:\.\d+)+)/i)
+    url "https://docs.aviatrix.com/previous/documentation/latest/release-notes/vpn-client/vpn-release-notes.html"
+    regex(/href=.*?aviatrix[._-]vpn[._-]client[._-]v?(\d+(?:[.-]\d+)+)[ "<]/i)
+    strategy :page_match do |page, regex|
+      page.scan(regex).map { |match| match&.first&.tr("-", ".") }
+    end
   end
 
   pkg "AVPNC_mac.pkg"
