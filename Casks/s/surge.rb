@@ -29,13 +29,10 @@ cask "surge" do
   zap delete: [
     "~/Library/Application Support/com.nssurge.surge-mac",
     "~/Library/Application Support/Surge",
-    "~/Library/Caches/com.nssurge.surge-mac",
-    "~/Library/Caches/com.nssurge.surge-mac.plist",
+    "~/Library/Caches/com.nssurge.surge-mac*",
     "~/Library/HTTPStorages/com.nssurge.surge-mac",
     "~/Library/Logs/Surge",
-    "~/Library/Preferences/com.nssurge.surge-dashboard.plist",
-    "~/Library/Preferences/com.nssurge.surge-mac.plist",
-    "~/Library/Saved Application State/com.nssurge.surge-dashboard.savedState",
-    "~/Library/Saved Application State/com.nssurge.surge-mac.savedState",
+    "~/Library/Preferences/com.nssurge.surge*",
+    "~/Library/Saved Application State/com.nssurge.surge*",
   ]
 end
