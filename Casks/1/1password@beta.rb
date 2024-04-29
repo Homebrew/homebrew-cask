@@ -1,18 +1,18 @@
-cask "1password" do
+cask "1password@beta" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "8.10.30"
-  sha256 arm:   "0d2ea809dafab2b17e7622faf1ada03ac912e31fae8f58bc0ed2f7b9a6b1bff2",
-         intel: "ba70b5733e68a1276ee02b1feff75a0b23dd332dff2e9ddaefa07b4c16bf5579"
+  version "8.10.32-11.BETA"
+  sha256 arm:   "2ab0d81dfa5529886baabc5f3acb9faf94b39d30411ffba880d338ae46c797e7",
+         intel: "69f2831633f793819d43a0aa37032fb3e61c06748d95a20140f048298feb7b5f"
 
   url "https://downloads.1password.com/mac/1Password-#{version}-#{arch}.zip"
   name "1Password"
-  desc "Password manager that keeps all passwords secure behind one password"
+  desc "Password manager"
   homepage "https://1password.com/"
 
   livecheck do
     url "https://app-updates.agilebits.com/product_history/OPM#{version.major}"
-    regex(%r{href=.*?/1Password[._-]?v?(\d+(?:.\d+)*)(?:[._-]\d+[._-]?PRODUCTION)?[._-]?\$ARCH\.zip}i)
+    regex(%r{href=.*?/1Password[._-]?v?(\d+(?:.\d+)*(?:[._-]BETA))[._-]?\$ARCH\.zip}i)
   end
 
   auto_updates true
