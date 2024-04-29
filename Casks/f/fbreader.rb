@@ -18,5 +18,9 @@ cask "fbreader" do
 
   uninstall pkgutil: "com.fbreader"
 
-  zap trash: "~/.FBReader"
+  zap trash: [
+    "~/.FBReader",
+    "~/Library/Application Scripts/com.fbreader",
+    "~/Library/Containers/com.fbreader",
+  ]
 end
