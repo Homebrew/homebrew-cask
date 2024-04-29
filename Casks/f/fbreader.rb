@@ -8,8 +8,10 @@ cask "fbreader" do
   homepage "https://fbreader.org/macos/"
 
   livecheck do
-    url :homepage
-    regex(%r{>Current\s*version:\sv?(\d+(?:\.\d+)+).*?</h}i)
+    url "https://fbreader.org/service/look_for_updates/macos/other"
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
   pkg "FBReader.pkg"
