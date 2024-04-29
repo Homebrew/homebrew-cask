@@ -19,7 +19,7 @@ cask "dropbox" do
   end
 
   auto_updates true
-  conflicts_with cask: "dropbox-beta"
+  conflicts_with cask: "dropbox@beta"
 
   app "Dropbox.app"
 
