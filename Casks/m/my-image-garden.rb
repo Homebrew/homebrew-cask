@@ -1,6 +1,6 @@
 cask "my-image-garden" do
-  version "3.6.7,05"
-  sha256 "4165174ad610a8172db60ce15c2bd19ba6f6359792b36ec5aba8b27da25815f3"
+  version "3.6.8,06"
+  sha256 "4e31bfce4bf811fee352945149b4bf868e9db09064e52addea0a0fad90f94eb3"
 
   url "https://gdlp01.c-wss.com/gds/2/0200006062/#{version.csv.second}/mmig-mac-#{version.csv.first.dots_to_underscores}-ea11.dmg",
       verified: "c-wss.com/"
@@ -9,7 +9,7 @@ cask "my-image-garden" do
   homepage "https://support-asia.canon-asia.com/?personal"
 
   livecheck do
-    url "https://pdisp01.c-wss.com/gdl/WWUFORedirectTarget.do?id=MDIwMDAwNjA2MjA1"
+    url "https://pdisp01.c-wss.com/gdl/WWUFORedirectTarget.do?id=MDIwMDAwNjA2MjA2"
     regex(%r{/([^/]+)/mmig-mac[._-]v?(\d+(?:[._]\d+)+)-ea11\.dmg}i)
     strategy :header_match do |headers, regex|
       match = headers["location"].match(regex)
