@@ -11,7 +11,6 @@ cask "1password@nightly" do
 
   conflicts_with cask: [
     "1password",
-    "1password@7",
     "1password@beta",
   ]
   depends_on macos: ">= :catalina"

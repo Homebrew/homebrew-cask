@@ -18,7 +18,6 @@ cask "1password@beta" do
   auto_updates true
   conflicts_with cask: [
     "1password",
-    "1password@7",
     "1password@nightly",
   ]
   depends_on macos: ">= :catalina"
