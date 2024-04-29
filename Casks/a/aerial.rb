@@ -1,6 +1,6 @@
 cask "aerial" do
-  version "3.3.7"
-  sha256 "9445903df76aeb9c50937a32af3981acd65e079f83f403af558df83a940a8352"
+  version "3.3.8"
+  sha256 "457804fd7ba8959d353908aeae27fc998d5379033970b59a2afe60434623c44d"
 
   url "https://github.com/JohnCoates/Aerial/releases/download/v#{version}/Aerial.saver.zip",
       verified: "github.com/JohnCoates/Aerial/"
@@ -8,7 +8,7 @@ cask "aerial" do
   desc "Apple TV Aerial screensaver"
   homepage "https://aerialscreensaver.github.io/"
 
-  conflicts_with cask: "homebrew/cask-versions/aerial-beta"
+  conflicts_with cask: "aerial-beta"
   depends_on macos: ">= :sierra"
 
   screen_saver "Aerial.saver"
