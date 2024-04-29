@@ -17,7 +17,6 @@ cask "1password" do
 
   auto_updates true
   conflicts_with cask: [
-    "1password@7",
     "1password@beta",
     "1password@nightly",
   ]
