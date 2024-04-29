@@ -1,6 +1,6 @@
 cask "tuta-mail" do
-  version "225.240417.0"
-  sha256 "6925a1bf92592a015005bc6dd8c7c45f850a244d2ead88621e8b256500a999a6"
+  version "227.240429.0"
+  sha256 "10aba809dda1055abf2b629a559e3d627b9fdece384a8b338aec06cc56621ad5"
 
   url "https://github.com/tutao/tutanota/releases/download/tutanota-desktop-release-#{version}/tutanota-desktop-mac.dmg",
       verified: "github.com/tutao/tutanota/"
