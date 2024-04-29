@@ -21,4 +21,11 @@ cask "aviatrix-vpn-client" do
   uninstall launchctl: "aviatrix.vpn.client.rp.plist",
             pkgutil:   "com.Aviatrix.VPNClient",
             delete:    "/Applications/Aviatrix VPN Client.app"
+
+  zap trash: [
+    "~/Library/Aviatrix",
+    "~/Library/Logs/AviatrixVPNC",
+    "~/Library/Preferences/org.pythonmac.unspecified.AviatrixVPNClient.plist",
+    "~/Library/Saved Application State/org.pythonmac.unspecified.AviatrixVPNClient.savedState",
+  ]
 end
