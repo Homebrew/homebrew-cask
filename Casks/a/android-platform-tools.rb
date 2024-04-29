@@ -6,11 +6,11 @@ cask "android-platform-tools" do
       verified: "google.com/android/repository/"
   name "Android SDK Platform-Tools"
   desc "Android SDK component"
-  homepage "https://developer.android.com/studio/releases/platform-tools"
+  homepage "https://developer.android.com/tools/releases/platform-tools"
 
   livecheck do
     url :homepage
-    regex(/data-text=.*?v?(\d+(?:\.\d+)+)["'> (]/i)
+    regex(/data-text=["']?[^"' >]*?v?(\d+(?:\.\d+)+)["'> (]/i)
   end
 
   binary "#{staged_path}/platform-tools/adb"
