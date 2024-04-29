@@ -13,6 +13,11 @@ cask "1password-cli@1" do
     regex(%r{href=.*?/op_apple_universal[._-]v?(\d+(?:\.\d+)+)\.pkg}i)
   end
 
+  conflicts_with cask: [
+    "1password-cli",
+    "1password-cli@beta",
+  ]
+
   pkg "op_apple_universal_v#{version}.pkg"
 
   uninstall pkgutil: "com.1password.op"
