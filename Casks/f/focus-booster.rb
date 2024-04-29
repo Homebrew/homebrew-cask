@@ -13,5 +13,7 @@ cask "focus-booster" do
     regex(%r{href=.*?/focusboosterv?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
+  disable! date: "2024-04-28", because: :no_longer_available
+
   app "focus booster.app"
 end
