@@ -1,4 +1,4 @@
-cask "anything-llm" do
+cask "anythingllm" do
   arch arm: "-Silicon"
 
   version "1.5.1"
