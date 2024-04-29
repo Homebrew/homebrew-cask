@@ -15,7 +15,6 @@ cask "crystalviewer" do
   end
 
   depends_on macos: ">= :mojave"
-  depends_on cask: "crystalmaker"
 
   app "CrystalViewer.app"
 
