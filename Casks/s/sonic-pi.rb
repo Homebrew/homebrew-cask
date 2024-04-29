@@ -22,8 +22,8 @@ cask "sonic-pi" do
     end
   end
   on_big_sur do
-    version "4.5.0"
-    sha256 "e5aee461fba113ef3e3a43ba9feb8e49bcf824e76d4aa195191c82d4ce387ab3"
+    version "4.5.1"
+    sha256 "15d589a27636edc4a4b9e9685950d857c7dd076d310497d650f90a387645456a"
 
     url "https://sonic-pi.net/files/releases/v#{version}/Sonic-Pi-for-Intel-Mac-x64-v#{version.dots_to_hyphens}.dmg"
 
@@ -32,8 +32,8 @@ cask "sonic-pi" do
     end
   end
   on_monterey do
-    version "4.5.0"
-    sha256 "e5aee461fba113ef3e3a43ba9feb8e49bcf824e76d4aa195191c82d4ce387ab3"
+    version "4.5.1"
+    sha256 "15d589a27636edc4a4b9e9685950d857c7dd076d310497d650f90a387645456a"
 
     url "https://sonic-pi.net/files/releases/v#{version}/Sonic-Pi-for-Intel-Mac-x64-v#{version.dots_to_hyphens}.dmg"
 
@@ -42,9 +42,9 @@ cask "sonic-pi" do
     end
   end
   on_ventura :or_newer do
-    version "4.5.0"
-    sha256 arm:   "3e333bbaaeed36331448eb4a7e31faf866b2c8176ab59962ba3d5d48d6dce7b0",
-           intel: "e5aee461fba113ef3e3a43ba9feb8e49bcf824e76d4aa195191c82d4ce387ab3"
+    version "4.5.1"
+    sha256 arm:   "58c72fca0b42588060c21d4d677cc8ffe377ef82409e7f2a73fff0fc2163d278",
+           intel: "15d589a27636edc4a4b9e9685950d857c7dd076d310497d650f90a387645456a"
 
     url "https://sonic-pi.net/files/releases/v#{version}/Sonic-Pi-for-#{arch}-v#{version.dots_to_hyphens}.dmg"
 
