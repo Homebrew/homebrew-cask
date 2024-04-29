@@ -14,6 +14,7 @@ cask "limitless" do
     end
   end
 
+  auto_updates true
   depends_on macos: ">= :ventura"
 
   app "Limitless.app"
