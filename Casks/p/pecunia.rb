@@ -9,7 +9,7 @@ cask "pecunia" do
 
   livecheck do
     url "https://pecuniabanking.de/index.php/downloads"
-    regex(%r{href="/downloads/([\d.]+)/Pecunia.zip}i)
+    regex(%r{href=.*?downloads/v?(\d+(?:\.\d+)+)/Pecunia\.zip}i)
   end
 
   depends_on macos: ">= :high_sierra"
