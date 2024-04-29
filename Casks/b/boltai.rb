@@ -1,6 +1,6 @@
 cask "boltai" do
-  version "1.15.17"
-  sha256 "6f07c4a6ce033a04e29af04aa78ac1637ce7acbb462294022f2e8a38ae5609f9"
+  version "1.15.18"
+  sha256 "61f4f9f650a766664515bf67e326dffd9fda04e61516c707d74862c99ff7f251"
 
   url "https://download.boltai.com/releases/BoltAI-#{version}.dmg"
   name "BoltAI"
