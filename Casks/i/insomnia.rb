@@ -17,6 +17,7 @@ cask "insomnia" do
   end
 
   auto_updates true
+  conflicts_with cask: "insomnia@alpha"
   depends_on macos: ">= :catalina"
 
   app "Insomnia.app"
