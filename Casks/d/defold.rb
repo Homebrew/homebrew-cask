@@ -21,8 +21,8 @@ cask "defold" do
 
   auto_updates true
   conflicts_with cask: [
-    "defold-alpha",
-    "defold-beta",
+    "defold@alpha",
+    "defold@beta",
   ]
 
   app "Defold.app"
