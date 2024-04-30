@@ -20,8 +20,8 @@ cask "kaleidoscope" do
 
   auto_updates true
   conflicts_with cask: %w[
-    kaleidoscope2
-    kaleidoscope3
+    kaleidoscope@2
+    kaleidoscope@3
     ksdiff
     ksdiff2
   ]
