@@ -13,8 +13,8 @@ cask "dolphin" do
   end
 
   conflicts_with cask: [
-    "homebrew/cask-versions/dolphin-beta",
-    "homebrew/cask-versions/dolphin-dev",
+    "dolphin@beta",
+    "dolphin@dev",
   ]
   depends_on macos: ">= :catalina"
 

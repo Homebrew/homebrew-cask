@@ -11,7 +11,7 @@ cask "dolphin@dev" do
 
   conflicts_with cask: [
     "dolphin",
-    "dolphin-beta",
+    "dolphin@beta",
   ]
   depends_on macos: ">= :catalina"
 
