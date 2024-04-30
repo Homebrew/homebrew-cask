@@ -1,6 +1,6 @@
 cask "doxie" do
-  version "3.1"
-  sha256 "e0d53143ed018d101a2a5797398c1be3d6533b77b38580d0bacff4d01a6f47f1"
+  version "3.3"
+  sha256 "28f98bc938aa0e4ab281df0dcb561d45f3bdadaf51255399e63fc635723a0516"
 
   url "https://download.getdoxie.com/Doxie-#{version}.dmg"
   name "Doxie"
