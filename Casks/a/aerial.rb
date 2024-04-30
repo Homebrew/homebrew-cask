@@ -8,7 +8,7 @@ cask "aerial" do
   desc "Apple TV Aerial screensaver"
   homepage "https://aerialscreensaver.github.io/"
 
-  conflicts_with cask: "aerial-beta"
+  conflicts_with cask: "aerial@beta"
   depends_on macos: ">= :sierra"
 
   screen_saver "Aerial.saver"
