@@ -1,9 +1,9 @@
 cask "phoenix-code" do
   arch arm: "aarch64", intel: "x64"
 
-  version "3.5.6"
-  sha256 arm:   "767549d4af463aae72940e90ffa4348aab92bb2dbdb4ab139f156886db5b763f",
-         intel: "fdaa2d7101d85c68266f710b568afb6f30b23381b8eec3beb58967424feaf654"
+  version "3.6.4"
+  sha256 arm:   "5868a0e0479134b300e9f1fca0c484d8fdef4e611a48b46bbe912d430983378c",
+         intel: "3a1b5692d38b4d1d63462f3a900e33e3e0c5e8f1a955b36a9515369f55c40fc0"
 
   url "https://github.com/phcode-dev/phoenix-desktop/releases/download/prod-app-v#{version}/Phoenix.Code_#{version}_#{arch}.dmg",
       verified: "github.com/phcode-dev/phoenix-desktop/"
