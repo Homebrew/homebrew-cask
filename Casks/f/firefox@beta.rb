@@ -76,8 +76,8 @@ cask "firefox@beta" do
 
   conflicts_with cask: [
     "firefox",
-    "firefox-cn",
-    "firefox-esr",
+    "firefox@cn",
+    "firefox@esr",
   ]
   depends_on macos: ">= :catalina"
 

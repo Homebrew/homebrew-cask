@@ -15,9 +15,9 @@ cask "firefox@cn" do
   auto_updates true
   conflicts_with cask: %w[
     firefox
-    firefox-beta
-    firefox-developer-edition
-    firefox-esr
+    firefox@beta
+    firefox@developer-edition
+    firefox@esr
   ]
   depends_on macos: ">= :catalina"
 
