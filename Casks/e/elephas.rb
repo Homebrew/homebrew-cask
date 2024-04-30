@@ -12,7 +12,7 @@ cask "elephas" do
     strategy :sparkle
   end
 
-  conflicts_with cask: "homebrew/cask-versions/elephas-beta"
+  conflicts_with cask: "elephas@beta"
   depends_on macos: ">= :monterey"
 
   app "Elephas.app"
