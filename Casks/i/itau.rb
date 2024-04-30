@@ -4,7 +4,7 @@ cask "itau" do
   sha256 :no_check
 
   on_arm do
-    version "2.2.2.16"
+    version "2.3.2.16"
   end
   on_intel do
     version "2.2.2.16"
