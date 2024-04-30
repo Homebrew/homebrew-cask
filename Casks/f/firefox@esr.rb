@@ -221,8 +221,8 @@ cask "firefox@esr" do
   auto_updates true
   conflicts_with cask: [
     "firefox",
-    "firefox-beta",
-    "firefox-cn",
+    "firefox@beta",
+    "firefox@cn",
   ]
   depends_on macos: ">= :sierra"
 

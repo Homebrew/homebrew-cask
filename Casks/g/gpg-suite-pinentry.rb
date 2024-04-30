@@ -15,7 +15,7 @@ cask "gpg-suite-pinentry" do
   conflicts_with cask: [
     "gpg-suite",
     "gpg-suite-no-mail",
-    "homebrew/cask-versions/gpg-suite-nightly",
+    "gpg-suite@nightly",
   ], formula: "gpg"
   depends_on macos: ">= :mojave"
 

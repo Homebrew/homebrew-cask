@@ -16,7 +16,7 @@ cask "arduino-ide" do
     strategy :github_latest
   end
 
-  conflicts_with cask: "arduino-ide-nightly"
+  conflicts_with cask: "arduino-ide@nightly"
   depends_on macos: ">= :high_sierra"
 
   app "Arduino IDE.app"

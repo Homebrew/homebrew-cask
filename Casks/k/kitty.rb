@@ -7,6 +7,7 @@ cask "kitty" do
   desc "GPU-based terminal emulator"
   homepage "https://github.com/kovidgoyal/kitty"
 
+  conflicts_with cask: "kitty@nightly"
   depends_on macos: ">= :sierra"
 
   app "kitty.app"

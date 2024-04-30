@@ -22,7 +22,7 @@ cask "emacs@nightly" do
 
   conflicts_with cask:    [
                    "emacs",
-                   "emacs-pretest",
+                   "emacs@pretest",
                  ],
                  formula: "emacs"
 
