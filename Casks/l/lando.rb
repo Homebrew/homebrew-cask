@@ -21,6 +21,7 @@ cask "lando" do
     strategy :github_releases
   end
 
+  conflicts_with cask: "lando@edge"
   depends_on cask: "docker"
 
   pkg "LandoInstaller.pkg",
