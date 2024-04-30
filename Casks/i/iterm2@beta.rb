@@ -17,7 +17,7 @@ cask "iterm2@beta" do
   conflicts_with cask: [
     "iterm2",
     "iterm2-legacy",
-    "iterm2-nightly",
+    "iterm2@nightly",
   ]
   depends_on macos: ">= :catalina"
 
