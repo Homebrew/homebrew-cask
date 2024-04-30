@@ -11,15 +11,15 @@ cask "rstudio" do
   livecheck do
     url "https://posit.co/download/rstudio-desktop/"
     strategy :page_match do |page|
-      match = page.match(/RStudio-(\d+(?:\.\d+)+)-(\d+)\.dmg/i)
+      match = page.match(/RStudio[._-]v?(\d+(?:\.\d+)+)[._-](\d+)\.dmg/i)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
     end
   end
 
-  conflicts_with cask: "homebrew/cask-versions/rstudio-daily"
-  depends_on macos: ">= :high_sierra"
+  conflicts_with cask: "rstudio-daily"
+  depends_on macos: ">= :monterey"
 
   app "RStudio.app"
 
