@@ -16,7 +16,7 @@ cask "inso" do
     regex(/^lib@v?(\d{1,3}(?:\.\d+)+)$/i)
   end
 
-  conflicts_with cask: "homebrew/cask-versions/inso-beta"
+  conflicts_with cask: "inso@beta"
 
   binary "inso"
 
