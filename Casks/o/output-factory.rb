@@ -1,5 +1,5 @@
 cask "output-factory" do
-  version "3.0"
+  version "2.5.7"
   sha256 :no_check
 
   url "https://zevrix.com/downloads/OutputFactory.dmg"
@@ -7,9 +7,12 @@ cask "output-factory" do
   desc "Automate printing and exporting from Adobe InDesign"
   homepage "https://zevrix.com/OutputFactory/"
 
-  livecheck do
-    url "https://zevrix.com/download/"
-    regex(/Output\s*Factory\s*(\d+(?:\.\d+)+)/i)
+ livecheck do
+    url "https://zevrix.com/zsversioncontrol/ZSVersionControl.xml"
+    strategy :xml do |xml|
+      elements = xml.get_elements("//dict/key[text()='Output Factory']/following-sibling::dict/key[text()='version']/following-sibling::string")
+      elements.first.text unless elements.empty?
+    end
   end
 
   installer manual: "Output Factory Installer.app"
