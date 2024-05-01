@@ -14,7 +14,7 @@ cask "mailmate" do
   end
 
   auto_updates true
-  conflicts_with cask: "homebrew/cask-versions/mailmate-beta"
+  conflicts_with cask: "mailmate@beta"
 
   app "MailMate.app"
   binary "#{appdir}/MailMate.app/Contents/Resources/emate"
