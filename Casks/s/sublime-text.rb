@@ -15,8 +15,8 @@ cask "sublime-text" do
 
   auto_updates true
   conflicts_with cask: [
-    "homebrew/cask-versions/sublime-text3",
-    "homebrew/cask-versions/sublime-text-dev",
+    "sublime-text3",
+    "sublime-text@dev",
   ]
 
   app "Sublime Text.app"
