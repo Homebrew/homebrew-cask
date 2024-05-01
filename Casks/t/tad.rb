@@ -1,8 +1,12 @@
 cask "tad" do
-  version "0.13.0"
-  sha256 "4c71f6f6a0fadf65891663d1a0462dd8d3576a4c62bdd8721012cbdd61ee1fee"
+  arch arm: "aarch64", intel: "x86-64"
+  suffix = on_arch_conditional arm: "-arm64", intel: ""
 
-  url "https://github.com/antonycourtney/tad/releases/download/v#{version}/Tad-#{version}.dmg",
+  version "0.13.0"
+  sha256  intel: "4c71f6f6a0fadf65891663d1a0462dd8d3576a4c62bdd8721012cbdd61ee1fee",
+          arm:   "9c129a65fdf94b4b32b6e26d8836a56d4284bff9a6e1df657cc23d19e5c802b1"
+
+  url "https://github.com/antonycourtney/tad/releases/download/v#{version}/Tad-#{version}#{suffix}.dmg",
       verified: "github.com/antonycourtney/tad/"
   name "Tad"
   desc "Desktop application for viewing and analyzing tabular data"
@@ -12,6 +16,8 @@ cask "tad" do
     url :url
     strategy :github_latest
   end
+
+  depends_on macos: ">= :catalina"
 
   app "Tad.app"
   binary "#{appdir}/Tad.app/Contents/Resources/tad.sh", target: "tad"
