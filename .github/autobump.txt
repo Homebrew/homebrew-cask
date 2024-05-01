@@ -17,6 +17,7 @@ alt-tab
 altair-graphql-client
 amazon-chime
 amie
+android-studio-preview@canary
 ankiapp
 anydesk
 anydo
@@ -36,6 +37,7 @@ backblaze
 banana-cake-pop
 banking-4
 banktivity
+beekeeper-studio
 beeper
 betterdisplay
 bettermouse
@@ -108,7 +110,9 @@ dcp-o-matic-playlist-editor
 deezer
 descript
 desktoppr
+devpod
 discord
+discord@canary
 double-commander
 downie
 drata-agent
@@ -125,6 +129,7 @@ element
 elephas
 elephicon
 eloston-chromium
+emacs@nightly
 evernote
 expressvpn
 fantastical
@@ -135,6 +140,7 @@ fiji
 finbar
 finch
 firefox
+firefox@esr
 fixkey
 fleet
 flipper
@@ -168,6 +174,9 @@ godspeed
 goland
 goodsync
 google-chrome@beta
+google-chrome@beta
+google-chrome@canary
+google-chrome@dev
 google-chrome@dev
 google-cloud-sdk
 gpxsee
@@ -192,6 +201,9 @@ inso
 insomnia
 intellij-idea
 intellij-idea-ce
+iterm2
+iterm2@beta
+iterm2@nightly
 jami
 jamie
 jdownloader
@@ -221,6 +233,7 @@ lookaway
 loom
 loupedeck
 lunar
+lunar-client
 maa
 macfuse
 macupdater
@@ -253,6 +266,7 @@ mindmac
 miniforge
 mitmproxy
 mixed-in-key
+mixxx@snapshot
 mmhmm
 mochi
 mochi-diffusion
@@ -299,6 +313,8 @@ openlens
 openshift-client
 opera
 opera-gx
+opera-developer
+opera@beta
 operadriver
 oracle-jdk
 oracle-jdk-javadoc
@@ -315,6 +331,7 @@ path-finder
 pdfelement
 permute
 pgadmin4
+phoenix-code
 phpstorm
 phpwebstudy
 piclist
@@ -333,6 +350,7 @@ popsql
 portfolioperformance
 postman
 postman-cli
+postman@canary
 powerphotos
 praat
 preform
@@ -382,13 +400,17 @@ shadow
 shapr3d
 sigmaos
 signal
+signal@beta
 sipgate-clinq
 siyuan
+sketch@beta
 skype
 slack
 slack-cli
 snagit
 sol
+sourcetree
+sourcetree@beta
 spacedrive
 spark-ar-studio
 splice
@@ -417,6 +439,7 @@ teleport-connect
 tenable-nessus-agent
 tencent-meeting
 termius
+termius@beta
 thangs-sync
 ths
 thunderbird
@@ -448,8 +471,10 @@ valentina-studio
 virtualbuddy
 visual-studio-code
 vivaldi
+vivaldi@snapshot
 vrew
 vscodium
+vsee
 vuescan
 wakatime
 warp
@@ -470,6 +495,7 @@ xcodepilot
 xemu
 yealink-meeting
 zed
+zed@preview
 znote
 zoc
 zoom
