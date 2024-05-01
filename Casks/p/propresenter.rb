@@ -40,7 +40,7 @@ cask "propresenter" do
   homepage "https://renewedvision.com/propresenter/"
 
   auto_updates true
-  conflicts_with cask: "homebrew/cask-versions/propresenter-beta"
+  conflicts_with cask: "propresenter@beta"
 
   app "ProPresenter.app"
 
