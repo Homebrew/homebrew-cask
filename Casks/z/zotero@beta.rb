@@ -1,6 +1,6 @@
 cask "zotero@beta" do
-  version "7.0.0-beta.76,91054acfe"
-  sha256 "95da6459a205c840b8ce852d9bc8eb8627c93302b8a476ea72ccc3f3e216f2df"
+  version "7.0.0-beta.77,adaa61f2c"
+  sha256 "17cec0ba33d48cfde381e0fed0d2ac1fd49e39f1c2a80e83e0931b1c1f58b2ef"
 
   url "https://download.zotero.org/client/beta/#{version.csv.first}%2B#{version.csv.second}/Zotero-#{version.csv.first}%2B#{version.csv.second}.dmg"
   name "Zotero Beta"
@@ -11,7 +11,7 @@ cask "zotero@beta" do
     url "https://www.zotero.org/download/client/update/0/0/Darwin/en-US/beta/Darwin%25/update.xml"
     strategy :xml do |xml|
       xml.get_elements("//update[@type='major']").map do |element|
-        element.attributes["displayVersion"].split("+").join(",")
+        element.attributes["displayVersion"]&.tr("+", ",")
       end
     end
   end
