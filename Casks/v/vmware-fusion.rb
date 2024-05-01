@@ -17,12 +17,12 @@ cask "vmware-fusion" do
 
   auto_updates true
   conflicts_with cask: [
-    "homebrew/cask-versions/vmware-fusion7",
-    "homebrew/cask-versions/vmware-fusion8",
-    "homebrew/cask-versions/vmware-fusion10",
-    "homebrew/cask-versions/vmware-fusion11",
-    "homebrew/cask-versions/vmware-fusion12",
-    "homebrew/cask-versions/vmware-fusion-tech-preview",
+    "vmware-fusion-tech@preview",
+    "vmware-fusion10",
+    "vmware-fusion11",
+    "vmware-fusion12",
+    "vmware-fusion7",
+    "vmware-fusion8",
   ]
   depends_on macos: ">= :monterey"
 
