@@ -1,10 +1,10 @@
-cask "logi-options-plus-minimal" do
+cask "logi-options-plus-offline" do
   version "1.70.551909"
   sha256 :no_check
 
   url "https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer_offline.zip",
       verified: "download01.logi.com/web/ftp/pub/techsupport/optionsplus/"
-  name "Logitech Options+ (Minimal)"
+  name "Logitech Options+ (offline version)"
   desc "Software for Logitech devices, most extra features disabled"
   homepage "https://www.logitech.com/en-us/software/logi-options-plus.html"
 
