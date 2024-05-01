@@ -13,7 +13,7 @@ cask "tor-browser" do
   end
 
   auto_updates true
-  conflicts_with cask: "homebrew/cask-versions/tor-browser-alpha"
+  conflicts_with cask: "tor-browser@alpha"
   depends_on macos: ">= :sierra"
 
   app "Tor Browser.app"
