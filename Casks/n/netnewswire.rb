@@ -14,7 +14,7 @@ cask "netnewswire" do
   end
 
   auto_updates true
-  conflicts_with cask: "homebrew/cask-versions/netnewswire-beta"
+  conflicts_with cask: "netnewswire@beta"
   depends_on macos: ">= :catalina"
 
   app "NetNewsWire.app"
