@@ -7,11 +7,12 @@ cask "output-factory" do
   desc "Automate printing and exporting from Adobe InDesign"
   homepage "https://zevrix.com/OutputFactory/"
 
- livecheck do
+  livecheck do
     url "https://zevrix.com/zsversioncontrol/ZSVersionControl.xml"
     strategy :xml do |xml|
-      elements = xml.get_elements("//dict/key[text()='Output Factory']/following-sibling::dict/key[text()='version']/following-sibling::string")
-      elements.first.text unless elements.empty?
+      xml.elements[
+        "//dict/key[text()='Output Factory']/following-sibling::dict[1]/key[text()='version']"
+      ]&.next_element&.text
     end
   end
 
