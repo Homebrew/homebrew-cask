@@ -9,7 +9,7 @@ cask "freeplane" do
       verified: "downloads.sourceforge.net/freeplane/"
   name "Freeplane"
   desc "Mind mapping and knowledge management software"
-  homepage "https://www.freeplane.org/wiki/index.php/Home"
+  homepage "https://docs.freeplane.org/"
 
   livecheck do
     url "https://sourceforge.net/projects/freeplane/rss?path=/freeplane%20stable"
