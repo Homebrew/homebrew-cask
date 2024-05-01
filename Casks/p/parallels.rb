@@ -17,13 +17,13 @@ cask "parallels" do
 
   auto_updates true
   conflicts_with cask: [
-    "homebrew/cask-versions/parallels12",
-    "homebrew/cask-versions/parallels13",
-    "homebrew/cask-versions/parallels14",
-    "homebrew/cask-versions/parallels15",
-    "homebrew/cask-versions/parallels16",
-    "homebrew/cask-versions/parallels17",
-    "homebrew/cask-versions/parallels18",
+    "parallels15",
+    "parallels@12",
+    "parallels@13",
+    "parallels@14",
+    "parallels@16",
+    "parallels@17",
+    "parallels@18",
   ]
   depends_on macos: ">= :monterey"
 

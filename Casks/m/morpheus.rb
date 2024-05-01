@@ -10,7 +10,7 @@ cask "morpheus" do
 
   deprecate! date: "2024-04-15", because: :discontinued
 
-  conflicts_with cask: "homebrew/cask-versions/morpheus-beta"
+  conflicts_with cask: "morpheus-beta"
 
   app "Morpheus.app"
 

@@ -9,7 +9,7 @@ cask "arduino" do
 
   deprecate! date: "2023-12-17", because: :discontinued
 
-  conflicts_with cask: "homebrew/cask-versions/arduino-nightly"
+  conflicts_with cask: "arduino-nightly"
 
   app "Arduino.app"
   binary "#{appdir}/Arduino.app/Contents/Java/arduino-builder"

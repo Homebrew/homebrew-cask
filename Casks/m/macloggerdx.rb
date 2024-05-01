@@ -12,7 +12,7 @@ cask "macloggerdx" do
     regex(/Download:\s*v?(\d+(?:\.\d+)+)[\s<]/im)
   end
 
-  conflicts_with cask: "homebrew/cask-versions/macloggerdx-beta"
+  conflicts_with cask: "macloggerdx@beta"
   depends_on macos: ">= :high_sierra"
 
   app "MacLoggerDX.app"

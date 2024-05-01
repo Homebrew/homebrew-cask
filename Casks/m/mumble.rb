@@ -13,7 +13,7 @@ cask "mumble" do
     strategy :header_match
   end
 
-  conflicts_with cask: "homebrew/cask-versions/mumble-snapshot"
+  conflicts_with cask: "mumble@snapshot"
   depends_on macos: ">= :high_sierra"
 
   app "Mumble.app"

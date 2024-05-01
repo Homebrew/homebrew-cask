@@ -14,7 +14,7 @@ cask "utm" do
     strategy :github_latest
   end
 
-  conflicts_with cask: "homebrew/cask-versions/utm-beta"
+  conflicts_with cask: "utm@beta"
   depends_on macos: ">= :big_sur"
 
   app "UTM.app"

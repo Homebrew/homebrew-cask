@@ -8,7 +8,7 @@ cask "playcover-community" do
   homepage "https://github.com/PlayCover/PlayCover"
 
   auto_updates true
-  conflicts_with cask: "homebrew/cask-versions/playcover-community-beta"
+  conflicts_with cask: "playcover-community@beta"
   depends_on arch: :arm64
   depends_on macos: ">= :monterey"
 
