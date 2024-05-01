@@ -13,7 +13,7 @@ cask "pdf-expert" do
   end
 
   auto_updates true
-  conflicts_with cask: "homebrew/cask-versions/pdf-expert-beta"
+  conflicts_with cask: "pdf-expert@beta"
   depends_on macos: ">= :monterey"
 
   app "PDF Expert.app"
