@@ -1,5 +1,6 @@
 1password
 1password-cli
+1password@beta
 8x8-work
 ableton-live-intro
 ableton-live-lite
@@ -11,6 +12,7 @@ affine
 affinity-designer
 affinity-photo
 affinity-publisher
+airtame
 akiflow
 alfred
 alt-tab
@@ -21,6 +23,7 @@ android-studio-preview@canary
 ankiapp
 anydesk
 anydo
+anytype
 apidog
 apidog-europe
 apifox
@@ -34,6 +37,7 @@ audius
 avast-secure-browser
 axure-rp
 backblaze
+badlion-client
 banana-cake-pop
 banking-4
 banktivity
@@ -52,6 +56,7 @@ brave-browser@beta
 brave-browser@dev
 brave-browser@nightly
 brickstore
+browser-deputy
 bruno
 burp-suite
 burp-suite-professional
@@ -67,6 +72,7 @@ carbon-copy-cloner
 cardpresso
 chatall
 chatbox
+chia
 chirp
 chromedriver
 chromium-gost
@@ -107,12 +113,14 @@ dcp-o-matic-encode-server
 dcp-o-matic-kdm-creator
 dcp-o-matic-player
 dcp-o-matic-playlist-editor
+ddnet
 deezer
 descript
 desktoppr
 devpod
 discord
 discord@canary
+discord@development
 double-commander
 downie
 drata-agent
@@ -130,6 +138,7 @@ elephas
 elephicon
 eloston-chromium
 emacs@nightly
+enpass
 evernote
 expressvpn
 fantastical
@@ -139,6 +148,7 @@ figma-agent
 fiji
 finbar
 finch
+firealpaca
 firefox
 firefox@esr
 fixkey
@@ -195,6 +205,7 @@ holavpn
 hoppscotch
 hstracker
 hydrus-network
+ibkr
 ibm-cloud-cli
 iina-plus
 inso
@@ -220,6 +231,8 @@ languagetool
 leapp
 ledger-live
 lens
+libcblite
+libcblite-community
 libreoffice
 libreoffice-language-pack
 librewolf
@@ -312,8 +325,8 @@ opencat
 openlens
 openshift-client
 opera
-opera-gx
 opera-developer
+opera-gx
 opera@beta
 operadriver
 oracle-jdk
@@ -420,6 +433,7 @@ stash
 stats
 steamcmd
 steelseries-gg
+sublime-text@dev
 superhuman
 superkey
 superlist
