@@ -16,9 +16,11 @@ cask "unity" do
     regex(%r{/(\h+)/MacEditorInstaller/Unity[._-]v?(\d+(?:\.\d+)+[a-z]*\d*)\.pkg}i)
     strategy :json do |json, regex|
       json["official"]&.map do |release|
+        # Keep only 202X.X.XfX versions
+        next unless release["version"].start_with?("202")
+
         match = release["downloadUrl"]&.match(regex)
         next if match.blank?
-        next if match[2].start_with?("6000") # Skip Unity 6 Preview release
 
         "#{match[2]},#{match[1]}"
       end
