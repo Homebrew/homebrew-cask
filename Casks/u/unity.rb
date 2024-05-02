@@ -13,9 +13,12 @@ cask "unity" do
 
   livecheck do
     url "https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json"
-    regex(%r{/(\h+)/MacEditorInstaller/Unity[._-]v?(\d+(?:\.\d+)+[a-z]*\d*)\.pkg}i)
+    regex(%r{/(\h+)/MacEditorInstaller/Unity[._-]v?(\d+(?:\.\d+)+(?:f\d+)?)\.pkg}i)
     strategy :json do |json, regex|
       json["official"]&.map do |release|
+        # Only use 202X.X.XfX versions until Unity 6 (6000) is a full release
+        next unless release["version"].start_with?("202")
+
         match = release["downloadUrl"]&.match(regex)
         next if match.blank?
 
