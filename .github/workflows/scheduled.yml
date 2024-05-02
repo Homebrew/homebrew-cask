@@ -43,7 +43,7 @@ jobs:
           casks="$(find "$(brew --repo "${TAP}")/Casks" -type f | shuf -n "${TEST_COUNT}" | xargs -I{} basename {} .rb)"
           # shellcheck disable=SC2086
           json="$(
-            brew info --json=v2 $casks |
+            brew info --json=v2 --casks $casks |
             jq --compact-output '[.casks[] | select(.deprecated == false and .disabled == false) | .full_token]'
           )"
           echo "json=${json}" >> "$GITHUB_OUTPUT"
