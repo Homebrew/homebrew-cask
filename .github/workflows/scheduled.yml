@@ -17,6 +17,9 @@ concurrency:
 permissions:
   issues: write
 
+env:
+  HOMEBREW_SIMULATE_MACOS_ON_LINUX: 1
+
 jobs:
   create_matrix:
     if: startsWith( github.repository, 'Homebrew/' )
@@ -59,7 +62,6 @@ jobs:
       HOMEBREW_GITHUB_API_TOKEN: "${{ github.token }}"
       GH_TOKEN: "${{ github.token }}"
       REPORTING_ISSUE: 172732
-      HOMEBREW_SIMULATE_MACOS_ON_LINUX: 1
     strategy:
       fail-fast: false
       matrix:
