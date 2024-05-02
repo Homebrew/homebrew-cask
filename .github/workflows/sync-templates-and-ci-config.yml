@@ -21,7 +21,6 @@ jobs:
       matrix:
         repo:
           - Homebrew/homebrew-cask-fonts
-          - Homebrew/homebrew-cask-versions
     steps:
       - name: Clone main repository
         uses: actions/checkout@v4
