@@ -4,7 +4,7 @@ cask "battery" do
 
   url "https://github.com/actuallymentor/battery/releases/download/v#{version}/battery-#{version}-mac-arm64.dmg"
   name "Battery"
-  desc "CLI for managing the battery charging status"
+  desc "macOS app and CLI for managing the battery charging status"
   homepage "https://github.com/actuallymentor/battery/"
 
   auto_updates true
@@ -12,6 +12,8 @@ cask "battery" do
   depends_on arch: :arm64
 
   app "battery.app"
+
+  caveat "The macOS app (battery) must be run at least once to complete installation of the CLI."
 
   uninstall delete: "/usr/local/bin/smc"
 
