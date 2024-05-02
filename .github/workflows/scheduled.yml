@@ -17,6 +17,9 @@ concurrency:
 permissions:
   issues: write
 
+env:
+  HOMEBREW_SIMULATE_MACOS_ON_LINUX: 1
+
 jobs:
   create_matrix:
     if: startsWith( github.repository, 'Homebrew/' )
