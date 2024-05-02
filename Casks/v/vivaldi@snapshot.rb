@@ -3,7 +3,7 @@ cask "vivaldi@snapshot" do
   sha256 "d4899580576236af4dc3408e8700fad0e030ca42c9e23876f4b5ee52ca235f68"
 
   url "https://downloads.vivaldi.com/snapshot-auto/Vivaldi.#{version}.universal.tar.xz"
-  name "Vivaldi"
+  name "Vivaldi Snapshot"
   desc "Web browser with built-in email client focusing on customization and control"
   homepage "https://vivaldi.com/"
 
@@ -26,5 +26,6 @@ cask "vivaldi@snapshot" do
     "~/Library/HTTPStorages/com.vivaldi.Vivaldi.snapshot",
     "~/Library/Preferences/com.vivaldi.Vivaldi.snapshot.plist",
     "~/Library/Saved Application State/com.vivaldi.Vivaldi.snapshot.savedState",
+    "~/Library/WebKit/com.vivaldi.Vivaldi.snapshot",
   ]
 end
