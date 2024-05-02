@@ -13,7 +13,7 @@ cask "battery" do
 
   app "battery.app"
 
-  caveat "The macOS app (battery) must be run at least once to complete installation of the CLI."
+  caveats "The macOS app (battery) must be run at least once to complete installation of the CLI."
 
   uninstall delete: "/usr/local/bin/smc"
 
