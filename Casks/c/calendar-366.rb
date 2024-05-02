@@ -1,4 +1,5 @@
 cask "calendar-366" do
+  # NOTE: "366" is not a version number, but an intrinsic part of the product name
   version "2.15.4"
   sha256 "4e650e9651587abd715e3ab422079a4b435839b67ae497ce5b1e753cda4cc6e7"
 
