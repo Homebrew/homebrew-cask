@@ -1,6 +1,6 @@
 cask "unity-android-support-for-editor" do
-  version "2023.2.18f1,1cb755715f58"
-  sha256 "c4f6a0a21160a9a7cb6a43982c10bbf9155ef6164ad0624f06ba1c9b39b55894"
+  version "2023.2.20f1,0e25a174756c"
+  sha256 "834a09fb035ebf9210b5fbbe9d9784d37b4faa52c63d0c049d8fff43aabf52a9"
 
   url "https://download.unity3d.com/download_unity/#{version.csv.second}/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-#{version.csv.first}.pkg",
       verified: "download.unity3d.com/download_unity/"
@@ -9,14 +9,7 @@ cask "unity-android-support-for-editor" do
   homepage "https://unity.com/products"
 
   livecheck do
-    url "https://public-cdn.cloud.unity3d.com/hub/prod/releases-darwin.json"
-    regex(%r{
-        /download_unity/(\h+)/MacEditorTargetInstaller
-        /UnitySetup-Android-Support-for-Editor-(\d+(?:\.\d+)+[a-z]*\d*)\.pkg
-      }ix)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[1]},#{match[0]}" }
-    end
+    cask "unity"
   end
 
   depends_on cask: "unity"
