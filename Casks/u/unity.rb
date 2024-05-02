@@ -18,6 +18,7 @@ cask "unity" do
       json["official"]&.map do |release|
         match = release["downloadUrl"]&.match(regex)
         next if match.blank?
+        next if match[2].start_with?("6000") # Skip Unity 6 Preview release
 
         "#{match[2]},#{match[1]}"
       end
