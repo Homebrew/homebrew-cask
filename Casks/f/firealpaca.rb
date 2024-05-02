@@ -1,5 +1,5 @@
 cask "firealpaca" do
-  version "2.11.19"
+  version "2.11.20"
   sha256 :no_check
 
   url "https://firealpaca.com/download/mac",
