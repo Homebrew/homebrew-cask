@@ -1,8 +1,9 @@
 cask "115" do
-  version "2.0.9.3"
-  sha256 "fba0be9bb046ad28d615a1927a0934cbcbe2809b9c70e854fedf2b6bc611d3ad"
+  # NOTE: "115" is not a version number, but an intrinsic part of the product name
+  version "2.0.10.2"
+  sha256 "83b45692a449220cb1918f1ca4fbf329e87cbc2c4810e44b2e312df30797c1bb"
 
-  url "https://down.115.com/client/115pc/mac/115pc_#{version}.dmg"
+  url "https://down.115.com/client/115pc/mac/115pc_v#{version}.dmg"
   name "115"
   name "115桌面版"
   desc "Client for the 115 cloud storage service"
@@ -23,13 +24,7 @@ cask "115" do
   uninstall quit: "org.115pc.115Desktop"
 
   zap trash: [
-    "~/Library/Application Support/115",
-    "~/Library/Application Support/115DocViewer",
-    "~/Library/Application Support/115Player",
-    "~/Library/Saved Application State/org.115pc.115Desktop.savedState",
-    "~/Library/Saved Application State/org.115pc.115DocViewer.savedState",
-    "~/Library/Saved Application State/org.115pc.115Music.savedState",
-    "~/Library/Saved Application State/org.115pc.115Photo.savedState",
-    "~/Library/Saved Application State/org.115pc.115Player.savedState",
+    "~/Library/Application Support/115*",
+    "~/Library/Saved Application State/org.115pc.115*",
   ]
 end
