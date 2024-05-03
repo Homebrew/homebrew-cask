@@ -13,11 +13,10 @@ cask "firefox@cn" do
   end
 
   auto_updates true
-  conflicts_with cask: %w[
-    firefox
-    firefox@beta
-    firefox@developer-edition
-    firefox@esr
+  conflicts_with cask: [
+    "firefox",
+    "firefox@beta",
+    "firefox@esr",
   ]
   depends_on macos: ">= :catalina"
 
