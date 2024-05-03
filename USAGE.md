@@ -120,19 +120,18 @@ Since the Homebrew Cask repository is a Homebrew tap, you’ll pull down the lat
 
 Homebrew [automatically taps and keeps Homebrew Cask updated](https://github.com/Homebrew/homebrew-cask/pull/15381). `brew update` is all that is required.
 
-## Additional Taps (optional)
+## Additional Tap (optional)
 
-The primary Homebrew Cask tap includes most of the casks that a typical user will be interested in. There are a few additional taps where we store different kinds of casks.
+The primary Homebrew Cask tap includes most of the casks that a typical user will be interested in. There is an additional tap where we store different fonts as casks.
 
 | tap name | description |
 | -------- | ----------- |
-| [homebrew/cask-versions](https://github.com/Homebrew/homebrew-cask-versions) | contains alternate versions of casks (_e.g._ betas, nightly releases, old versions)
 | [homebrew/cask-fonts](https://github.com/Homebrew/homebrew-cask-fonts)       | contains casks that install fonts
 
-You can tap any of the above with the `brew tap` command:
+You can tap the above with the `brew tap` command:
 
 ```bash
-brew tap <tap_name>
+brew tap homebrew/cask-fonts
 ```
 
 after which casks from the new tap will be available to `search` or `install` just like casks from the main tap. `brew update` will automatically keep your new tap up to date.
