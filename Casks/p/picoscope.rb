@@ -12,7 +12,7 @@ cask "picoscope" do
     regex(%r{href=.*?/PicoScope[._-]v?(\d+(?:.\d+)+)[._-]T(?:and|n)M[._-]Stable\.pkg}i)
   end
 
-  conflicts_with cask: "picoscope-beta"
+  conflicts_with cask: "picoscope@beta"
   depends_on macos: ">= :high_sierra"
 
   pkg "PicoScope_#{version}_TandM_Stable.pkg"

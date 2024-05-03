@@ -18,7 +18,7 @@ cask "surge" do
   end
 
   auto_updates true
-  conflicts_with cask: "surge4"
+  conflicts_with cask: "surge@4"
   depends_on macos: ">= :high_sierra"
 
   app "Surge.app"

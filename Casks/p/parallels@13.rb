@@ -15,14 +15,14 @@ cask "parallels@13" do
     end
   end
 
-  conflicts_with cask: %w[
-    parallels
-    parallels12
-    parallels14
-    parallels15
-    parallels16
-    parallels17
-    parallels18
+  conflicts_with cask: [
+    "parallels",
+    "parallels@12",
+    "parallels@14",
+    "parallels@15",
+    "parallels@16",
+    "parallels@17",
+    "parallels@18",
   ]
   depends_on macos: "<= :high_sierra"
 

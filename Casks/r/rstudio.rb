@@ -18,7 +18,7 @@ cask "rstudio" do
     end
   end
 
-  conflicts_with cask: "rstudio-daily"
+  conflicts_with cask: "rstudio@daily"
   depends_on macos: ">= :monterey"
 
   app "RStudio.app"

@@ -20,7 +20,10 @@ cask "virtualbox@beta" do
     regex(/href=.*?VirtualBox[._-]v?(\d+(?:[.-]\d+)+.*?)[._-]#{arch}\.dmg(?!.+?development)/i)
   end
 
-  conflicts_with cask: "virtualbox"
+  conflicts_with cask: [
+    "virtualbox",
+    "virtualbox@6",
+  ]
   depends_on macos: ">= :catalina"
 
   pkg "VirtualBox.pkg",

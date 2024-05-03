@@ -13,7 +13,7 @@ cask "mullvadvpn" do
     strategy :header_match
   end
 
-  conflicts_with cask: "mullvadvpn-beta"
+  conflicts_with cask: "mullvadvpn@beta"
   depends_on macos: ">= :big_sur"
 
   pkg "MullvadVPN-#{version}.pkg"

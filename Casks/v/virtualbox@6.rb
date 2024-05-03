@@ -15,7 +15,10 @@ cask "virtualbox@6" do
     end
   end
 
-  conflicts_with cask: "virtualbox-beta"
+  conflicts_with cask: [
+    "virtualbox",
+    "virtualbox@beta",
+  ]
   depends_on macos: ">= :high_sierra"
   depends_on arch: :x86_64
 
