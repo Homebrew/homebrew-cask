@@ -19,7 +19,7 @@ cask "openemu" do
   homepage "https://openemu.org/"
 
   auto_updates true
-  conflicts_with cask: "openemu-experimental"
+  conflicts_with cask: "openemu@experimental"
 
   app "OpenEmu.app"
 
