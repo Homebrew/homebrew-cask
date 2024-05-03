@@ -37,7 +37,7 @@ cask "slack" do
   homepage "https://slack.com/"
 
   auto_updates true
-  conflicts_with cask: "slack-beta"
+  conflicts_with cask: "slack@beta"
   depends_on macos: ">= :mojave"
 
   app "Slack.app"
@@ -48,18 +48,15 @@ cask "slack" do
     "~/Library/Application Scripts/com.tinyspeck.slackmacgap",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.tinyspeck.slackmacgap.sfl*",
     "~/Library/Application Support/Slack",
-    "~/Library/Caches/com.tinyspeck.slackmacgap",
-    "~/Library/Caches/com.tinyspeck.slackmacgap.ShipIt",
-    "~/Library/Containers/com.tinyspeck.slackmacgap",
-    "~/Library/Containers/com.tinyspeck.slackmacgap.SlackCallsService",
+    "~/Library/Caches/com.tinyspeck.slackmacgap*",
+    "~/Library/Containers/com.tinyspeck.slackmacgap*",
     "~/Library/Cookies/com.tinyspeck.slackmacgap.binarycookies",
     "~/Library/Group Containers/*.com.tinyspeck.slackmacgap",
     "~/Library/Group Containers/*.slack",
     "~/Library/HTTPStorages/com.tinyspeck.slackmacgap*",
     "~/Library/Logs/Slack",
     "~/Library/Preferences/ByHost/com.tinyspeck.slackmacgap.ShipIt.*.plist",
-    "~/Library/Preferences/com.tinyspeck.slackmacgap.helper.plist",
-    "~/Library/Preferences/com.tinyspeck.slackmacgap.plist",
+    "~/Library/Preferences/com.tinyspeck.slackmacgap*",
     "~/Library/Saved Application State/com.tinyspeck.slackmacgap.savedState",
     "~/Library/WebKit/com.tinyspeck.slackmacgap",
   ]
