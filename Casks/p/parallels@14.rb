@@ -16,14 +16,14 @@ cask "parallels@14" do
   end
 
   auto_updates true
-  conflicts_with cask: %w[
-    parallels
-    parallels12
-    parallels13
-    parallels15
-    parallels16
-    parallels17
-    parallels18
+  conflicts_with cask: [
+    "parallels",
+    "parallels@12",
+    "parallels@13",
+    "parallels@15",
+    "parallels@16",
+    "parallels@17",
+    "parallels@18",
   ]
   depends_on macos: [
     :el_capitan,
