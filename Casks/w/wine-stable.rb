@@ -32,8 +32,8 @@ cask "wine-stable" do
   end
 
   conflicts_with cask: [
-    "wine-devel",
-    "wine-staging",
+    "wine@devel",
+    "wine@staging",
   ]
   depends_on cask: "gstreamer-runtime"
   depends_on macos: ">= :catalina"
