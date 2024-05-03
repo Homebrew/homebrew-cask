@@ -20,7 +20,7 @@ cask "obs" do
   end
 
   auto_updates true
-  conflicts_with cask: "obs-beta"
+  conflicts_with cask: "obs@beta"
   depends_on macos: ">= :big_sur"
 
   app "OBS.app"
