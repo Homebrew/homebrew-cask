@@ -12,7 +12,7 @@ cask "mi" do
     strategy :sparkle, &:short_version
   end
 
-  conflicts_with cask: "mi-beta"
+  conflicts_with cask: "mi@beta"
   depends_on macos: ">= :high_sierra"
 
   app "mi.app"
