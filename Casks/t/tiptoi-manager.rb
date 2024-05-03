@@ -1,5 +1,5 @@
 cask "tiptoi-manager" do
-  version "5.1"
+  version "5.2"
   sha256 :no_check
 
   url "https://cdn.ravensburger.de/db/Installer/tiptoi_Manager_Installer.pkg"
