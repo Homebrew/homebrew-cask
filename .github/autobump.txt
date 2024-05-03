@@ -1,6 +1,8 @@
 1password
 1password-cli
 1password@beta
+4k-video-downloaderplus
+4k-youtube-to-mp3
 8x8-work
 ableton-live-intro
 ableton-live-lite
@@ -8,6 +10,8 @@ ableton-live-standard
 ableton-live-suite
 adguard
 adguard-vpn
+adguard-vpn@nightly
+adguard@nightly
 affine
 affinity-designer
 affinity-photo
@@ -48,6 +52,7 @@ bettermouse
 bettertouchtool
 bezel
 bike
+binance
 bitwarden
 bloop
 boltai
@@ -75,6 +80,7 @@ chatbox
 chia
 chirp
 chromedriver
+chromedriver@beta
 chromium-gost
 clay
 cleanmymac
@@ -121,6 +127,7 @@ devpod
 discord
 discord@canary
 discord@development
+discord@ptb
 double-commander
 downie
 drata-agent
@@ -283,6 +290,8 @@ mixxx@snapshot
 mmhmm
 mochi
 mochi-diffusion
+monal
+monal@beta
 moneydance
 moneymanager
 mongodb-compass
@@ -293,6 +302,7 @@ mp3tag
 mqttx
 mullvad-browser
 mullvadvpn
+mullvadvpn@beta
 multiapp
 multitouch
 multiviewer-for-f1
@@ -368,6 +378,7 @@ powerphotos
 praat
 preform
 prepros
+pritunl
 private-internet-access
 proton-drive
 proton-mail
@@ -398,6 +409,8 @@ rewind
 rider
 rive
 rode-central
+rstudio
+rstudio@daily
 rubymine
 rustrover
 santa
@@ -418,6 +431,7 @@ sipgate-clinq
 siyuan
 sketch@beta
 skype
+skype@preview
 slack
 slack-cli
 snagit
@@ -501,6 +515,7 @@ webull
 wechat
 wechatwork
 whatsapp
+whatsapp@beta
 whisky
 wondershare-uniconverter
 workflowy
