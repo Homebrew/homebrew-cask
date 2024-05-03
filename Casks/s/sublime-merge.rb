@@ -14,7 +14,7 @@ cask "sublime-merge" do
   end
 
   auto_updates true
-  conflicts_with cask: "sublime-merge-dev"
+  conflicts_with cask: "sublime-merge@dev"
 
   app "Sublime Merge.app"
   binary "#{appdir}/Sublime Merge.app/Contents/SharedSupport/bin/smerge"
