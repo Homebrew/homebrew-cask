@@ -11,8 +11,8 @@ cask "visit" do
     end
   end
   on_mojave :or_newer do
-    version "3.3.3"
-    sha256 "e79692cb6430c030290a38859ba91927f56a35f632a71001690e3b2a9de4a9e8"
+    version "3.4.1"
+    sha256 "909f482c6a5e1777ede98d4c0a8019cd23f41ac0fde1eb58942ca99da84ef132"
 
     url "https://github.com/visit-dav/visit/releases/download/v#{version}/VisIt-#{version}.dmg",
         verified: "github.com/visit-dav/visit/"
