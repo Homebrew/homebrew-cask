@@ -1,6 +1,6 @@
 cask "obs-ndi" do
-  version "4.13.1"
-  sha256 "9367964f1a46667eb1ecbd533dce0c8a4454d44823babfe15cd1a0a6b06ba409"
+  version "4.13.2"
+  sha256 "fe3d054399bb104afe67a9751702950995ce53f76c660647b44e3287cceb4bcc"
 
   url "https://github.com/obs-ndi/obs-ndi/releases/download/#{version}/obs-ndi-#{version}-macos-universal.pkg"
   name "obs-ndi"
