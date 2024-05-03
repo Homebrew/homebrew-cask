@@ -12,7 +12,7 @@ cask "mixxx" do
     regex(%r{href=.*?/mixxx[._-]v?(\d+(?:\.\d+)+)[._-]macos(?:intel|arm)\.dmg}i)
   end
 
-  conflicts_with cask: "mixxx-snapshot"
+  conflicts_with cask: "mixxx@snapshot"
 
   app "Mixxx.app"
 
