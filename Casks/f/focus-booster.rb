@@ -8,11 +8,6 @@ cask "focus-booster" do
   desc "Time tracker"
   homepage "https://www.focusboosterapp.com/"
 
-  livecheck do
-    url "https://www.focusboosterapp.com/download"
-    regex(%r{href=.*?/focusboosterv?(\d+(?:\.\d+)+)\.dmg}i)
-  end
-
   disable! date: "2024-04-28", because: :no_longer_available
 
   app "focus booster.app"
