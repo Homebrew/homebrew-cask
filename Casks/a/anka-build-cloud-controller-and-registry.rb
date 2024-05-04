@@ -10,12 +10,6 @@ cask "anka-build-cloud-controller-and-registry" do
   desc "Virtual machine management GUI/API and registry"
   homepage "https://veertu.com/"
 
-  livecheck do
-    url "https://veertu.com/downloads/anka-build-cloud-controller-registry-darwin-#{arch.downcase}-latest"
-    regex(/AnkaControllerRegistry#{arch}[._-]?v?(\d+(?:\.\d+)*[._-]\h+)\.pkg/i)
-    strategy :header_match
-  end
-
   deprecate! date: "2023-12-17", because: :discontinued
 
   pkg "AnkaControllerRegistry#{arch}-#{version}.pkg"
