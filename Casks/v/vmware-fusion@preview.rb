@@ -1,4 +1,4 @@
-cask "vmware-fusion-tech@preview" do
+cask "vmware-fusion@preview" do
   version "22068932"
   sha256 "0be8da472b15477168fb97ad27902b09313c03ca45330e438ae8cf91609d3234"
 
