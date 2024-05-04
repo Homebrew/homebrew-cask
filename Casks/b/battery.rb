@@ -4,7 +4,7 @@ cask "battery" do
 
   url "https://github.com/actuallymentor/battery/releases/download/v#{version}/battery-#{version}-mac-arm64.dmg"
   name "Battery"
-  desc "App for managing battery charging on Apple Silicon computers. (Also installs a CLI on first use.)"
+  desc "App for managing battery charging. (Also installs a CLI on first use.)"
   homepage "https://github.com/actuallymentor/battery/"
 
   auto_updates true
