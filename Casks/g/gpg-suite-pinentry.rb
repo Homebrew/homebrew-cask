@@ -16,7 +16,7 @@ cask "gpg-suite-pinentry" do
     "gpg-suite",
     "gpg-suite-no-mail",
     "gpg-suite@nightly",
-  ], formula: "gpg"
+  ], formula: "gnupg"
   depends_on macos: ">= :mojave"
 
   pkg "Install.pkg",
