@@ -1,9 +1,9 @@
 cask "superslicer" do
   arch arm: "_arm"
 
-  version "2.4.58.5,220924"
-  sha256 arm:   "c65d21e51ac57eb75c915ae172a642f48d63584f6bdd8a280aa2443319a66010",
-         intel: "95652e91bef57c73f38c0c78f2fcc9dfce429516f5de516b5e8ac5db20d20132"
+  version "2.5.59.9,240430"
+  sha256 arm:   "1c3effee119dcd43d9ab560e6f1131b7389d8bdf096220a21e8e759c1faf5cf4",
+         intel: "86f5d9e6f762a98ad0b650659bf1c8547c4838aca3a7bd7d4f2e7ecd021b8fbb"
 
   url "https://github.com/supermerill/SuperSlicer/releases/download/#{version.csv.first}/SuperSlicer_#{version.csv.first}_macos#{arch}_#{version.csv.second}.dmg"
   name "SuperSlicer"
