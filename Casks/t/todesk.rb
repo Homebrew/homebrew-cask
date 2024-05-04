@@ -8,8 +8,8 @@ cask "todesk" do
   homepage "https://www.todesk.com/"
 
   livecheck do
-    url "https://dl.todesk.com/macos/uplog.html"
-    regex(%r{<div\sclass="text">(\d+(?:\.\d+)+)</div>}i)
+    url "https://www.todesk.com/download.html"
+    regex(/ToDesk[._-]v?(\d+(?:\.\d+)+)\.pkg/i)
   end
 
   auto_updates true
