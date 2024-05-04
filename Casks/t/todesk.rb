@@ -1,6 +1,6 @@
 cask "todesk" do
   version "4.7.2.1"
-  sha256 "dbc167b9f720430990fcc0e3d035f99a0f649017b0a81f21ca8be61ed5d3266e"
+  sha256 :no_check # required as upstream package is updated in-place
 
   url "https://dl.todesk.com/macos/ToDesk_#{version}.pkg"
   name "ToDesk"
