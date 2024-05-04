@@ -9,8 +9,8 @@ cask "vyprvpn" do
   homepage "https://www.vyprvpn.com/"
 
   livecheck do
-    url "https://www.goldenfrog.com/downloads/vyprvpn/desktop/mac-feed.xml"
-    strategy :sparkle, &:short_version
+    url "https://www.vyprvpn.com/vpn-apps/vpn-for-mac"
+    regex(/href=.*?VyprVPN[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   auto_updates true
