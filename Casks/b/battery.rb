@@ -4,7 +4,7 @@ cask "battery" do
 
   url "https://github.com/actuallymentor/battery/releases/download/v#{version}/battery-#{version}-mac-arm64.dmg"
   name "Battery"
-  desc "App and CLI for managing the battery charging status"
+  desc "App for managing battery charging on Apple Silicon computers. (Also installs a CLI on first use.)"
   homepage "https://github.com/actuallymentor/battery/"
 
   auto_updates true
@@ -23,6 +23,4 @@ cask "battery" do
     "~/Library/Preferences/org.mentor.Battery.plist",
     "~/Library/Saved Application State/co.palokaj.battery.savedState",
   ]
-
-  caveats "The macOS app (battery) must be run at least once to complete installation of the CLI."
 end
