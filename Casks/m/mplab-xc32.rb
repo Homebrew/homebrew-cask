@@ -1,5 +1,4 @@
 cask "mplab-xc32" do
-  # NOTE: "32" is not a version number, but an intrinsic part of the product name
   version "4.40"
   sha256 "4463c2c7e191121dfbb103f40dc9ddbe1ef930fecd1d1bc12a574600e8ee4264"
 
@@ -10,14 +9,14 @@ cask "mplab-xc32" do
 
   livecheck do
     url "https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers/xc32"
-    regex(%r{href=.*?SoftwareTools/xc32[._-]v?(\d+(?:\.\d+)+)[._-]full[._-]install[._-]osx[._-]installer\.dmg}i)
+    regex(%r{href=.*?ProductDocuments/SoftwareTools/xc32[._-]v?(\d+(?:\.\d+)+)-full-install-osx-installer\.dmg}i)
   end
 
-  depends_on arch: :x86_64
-
+  # The upstream install script doesn't work on ARM processors, so call the installer directly
   installer script: {
-    executable: "xc32-v#{version}-osx-installer.app/Contents/MacOS/installbuilder.sh",
+    executable: "xc32-v#{version}-osx-installer.app/Contents/MacOS/MPLAB XC32 Compiler",
     args:       [
+      "osx-x86_64",
       "--mode", "unattended",
       "--unattendedmodeui", "none",
       "--ModifyAll", "0",
@@ -52,11 +51,17 @@ cask "mplab-xc32" do
     set_ownership staged_path.to_s
   end
 
+  # The upstream uninstall script doesn't work on ARM processors, so call the uninstaller directly
   uninstall script: {
-    executable: "Uninstall-xc32-v#{version}.app/Contents/MacOS/installbuilder.sh",
-    args:       ["--mode", "unattended"],
+    executable: "#{staged_path}/Uninstall-xc32-v#{version}.app/Contents/MacOS/Uninstall-xc32-v#{version}",
+    args:       [
+      "osx-x86_64",
+      "--mode", "unattended"
+    ],
     sudo:       true,
   }
 
-  # No zap stanza required
+  caveats do
+    requires_rosetta
+  end
 end
