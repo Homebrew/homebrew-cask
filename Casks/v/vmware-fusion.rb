@@ -16,7 +16,7 @@ cask "vmware-fusion" do
   end
 
   auto_updates true
-  conflicts_with cask: "vmware-fusion-tech@preview"
+  conflicts_with cask: "vmware-fusion@preview"
   depends_on macos: ">= :monterey"
 
   app "VMware Fusion.app"
