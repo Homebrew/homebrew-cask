@@ -24,5 +24,13 @@ cask "bitcoin-core" do
     set_permissions "#{staged_path}/Bitcoin-Qt.app", "0755"
   end
 
-  zap trash: "~/Library/Preferences/org.bitcoin.Bitcoin-Qt.plist"
+  # NOTE: do NOT trash directory "~/Library/Application Support/Bitcoin" because bitcoin wallets are in it,
+  # but "blocks" and "chainstate" directories can be trashed safely to save disk space.
+  zap trash: [
+    "~/Library/Application Support/Bitcoin/blocks",
+    "~/Library/Application Support/Bitcoin/chainstate",
+    "~/Library/Preferences/org.bitcoin.Bitcoin-Qt.plist",
+    "~/Library/Preferences/org.bitcoinfoundation.Bitcoin-Qt.plist",
+    "~/Library/Saved Application State/org.bitcoinfoundation.Bitcoin-Qt.savedState",
+  ]
 end
