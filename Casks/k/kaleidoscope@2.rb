@@ -29,7 +29,6 @@ cask "kaleidoscope@2" do
     kaleidoscope
     kaleidoscope@3
     ksdiff
-    ksdiff2
   ]
   depends_on macos: ">= :sierra"
 

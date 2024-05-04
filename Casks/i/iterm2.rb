@@ -37,7 +37,6 @@ cask "iterm2" do
 
   auto_updates true
   conflicts_with cask: [
-    "iterm2-legacy",
     "iterm2@beta",
     "iterm2@nightly",
   ]

@@ -13,7 +13,6 @@ cask "forklift" do
   end
 
   auto_updates true
-  conflicts_with cask: "forklift3"
   depends_on macos: ">= :monterey"
 
   app "ForkLift.app"

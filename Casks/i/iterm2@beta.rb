@@ -16,7 +16,6 @@ cask "iterm2@beta" do
   auto_updates true
   conflicts_with cask: [
     "iterm2",
-    "iterm2-legacy",
     "iterm2@nightly",
   ]
   depends_on macos: ">= :catalina"

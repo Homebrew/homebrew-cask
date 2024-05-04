@@ -19,10 +19,7 @@ cask "processing" do
     end
   end
 
-  conflicts_with cask: [
-    "processing2",
-    "processing@3",
-  ]
+  conflicts_with cask: "processing@3"
   depends_on macos: ">= :catalina"
 
   app "Processing.app"

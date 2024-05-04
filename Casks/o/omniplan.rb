@@ -76,7 +76,6 @@ cask "omniplan" do
   homepage "https://www.omnigroup.com/omniplan/"
 
   auto_updates true
-  conflicts_with cask: "omniplan3"
 
   app "OmniPlan.app"
 

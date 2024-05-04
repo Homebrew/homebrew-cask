@@ -15,10 +15,7 @@ cask "xmind@beta" do
     end
   end
 
-  conflicts_with cask: [
-    "xmind",
-    "xmind8",
-  ]
+  conflicts_with cask: "xmind"
 
   app "Xmind.app"
 

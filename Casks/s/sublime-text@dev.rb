@@ -14,10 +14,7 @@ cask "sublime-text@dev" do
   end
 
   auto_updates true
-  conflicts_with cask: [
-    "sublime-text",
-    "sublime-text3",
-  ]
+  conflicts_with cask: "sublime-text"
 
   app "Sublime Text.app"
   binary "#{appdir}/Sublime Text.app/Contents/SharedSupport/bin/subl"

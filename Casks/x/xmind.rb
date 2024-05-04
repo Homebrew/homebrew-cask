@@ -13,7 +13,7 @@ cask "xmind" do
     strategy :header_match
   end
 
-  conflicts_with cask: "xmind8"
+  conflicts_with cask: "xmind@beta"
 
   app "Xmind.app"
 
