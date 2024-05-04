@@ -8,13 +8,6 @@ cask "wow" do
   desc "Stream Wow TV content (formerly Sky Ticket)"
   homepage "https://wowtv.de/"
 
-  livecheck do
-    url "https://web.static.nowtv.com/watch/player/wowtv/de/latest/update.json"
-    strategy :json do |json|
-      json["platforms"]["darwin"]["version"]
-    end
-  end
-
   disable! date: "2024-02-27", because: :unmaintained
 
   app "WOW.app"
