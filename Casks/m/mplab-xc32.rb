@@ -13,6 +13,8 @@ cask "mplab-xc32" do
     regex(%r{href=.*?SoftwareTools/xc32[._-]v?(\d+(?:\.\d+)+)[._-]full[._-]install[._-]osx[._-]installer\.dmg}i)
   end
 
+  depends_on arch: :x86_64
+
   installer script: {
     executable: "xc32-v#{version}-osx-installer.app/Contents/MacOS/installbuilder.sh",
     args:       [
