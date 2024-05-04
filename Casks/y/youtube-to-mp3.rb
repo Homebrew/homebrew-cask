@@ -1,4 +1,5 @@
 cask "youtube-to-mp3" do
+  # NOTE: "3" is not a version number, but an intrinsic part of the product name
   version "3.9.9.91"
   sha256 :no_check
 
