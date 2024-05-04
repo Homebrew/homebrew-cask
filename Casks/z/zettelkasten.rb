@@ -15,6 +15,11 @@ cask "zettelkasten" do
 
   app "Zettelkasten.app"
 
+  zap trash: [
+    "~/.Zettelkasten",
+    "~/Library/Saved Application State/de.danielluedecke.zettelkasten.ZettelkastenApp.savedState",
+  ]
+
   caveats do
     depends_on_java "8"
   end
