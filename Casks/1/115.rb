@@ -18,17 +18,8 @@ cask "115" do
 
   auto_updates true
   depends_on macos: ">= :high_sierra"
-  container type: :naked
 
-  installer script: {
-    executable: "/usr/bin/hdiutil",
-    args:       ["attach", "-nobrowse", "#{staged_path}/115pc_v#{version}.dmg"],
-  }
-  installer script: "/Volumes/115生活/115生活.app/Contents/MacOS/115setup"
-  installer script: {
-    executable: "/usr/bin/hdiutil",
-    args:       ["detach", "/Volumes/115生活"],
-  }
+  installer script: "#{staged_path}/115生活.app/Contents/MacOS/115setup"
 
   uninstall quit: "org.115pc.115Desktop"
   uninstall delete: [
