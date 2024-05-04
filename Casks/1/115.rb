@@ -18,13 +18,29 @@ cask "115" do
 
   auto_updates true
   depends_on macos: ">= :high_sierra"
+  container type: :naked
 
-  app "115生活.app"
+  installer script: {
+    executable: "/usr/bin/hdiutil",
+    args:       ["attach", "-nobrowse", "#{staged_path}/115pc_v#{version}.dmg"],
+  }
+  installer script: "/Volumes/115生活/115生活.app/Contents/MacOS/115setup"
+  installer script: {
+    executable: "/usr/bin/hdiutil",
+    args:       ["detach", "/Volumes/115生活"],
+  }
 
   uninstall quit: "org.115pc.115Desktop"
+  uninstall delete: [
+    "/Applications/115生活.app",
+    "/Applications/115生活.app/Contents/app/115DocViewer.app",
+    "/Applications/115生活.app/Contents/app/115Music.app",
+    "/Applications/115生活.app/Contents/app/115Photo.app",
+    "/Applications/115生活.app/Contents/app/115Player.app",
+  ]
 
   zap trash: [
-    "~/Library/Application Support/115*",
+    "~/Library/Application Support/115生活",
     "~/Library/Saved Application State/org.115pc.115*",
   ]
 end
