@@ -23,7 +23,6 @@ cask "kaleidoscope" do
     kaleidoscope@2
     kaleidoscope@3
     ksdiff
-    ksdiff2
   ]
   depends_on macos: ">= :ventura"
 

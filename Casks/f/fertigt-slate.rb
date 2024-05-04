@@ -7,8 +7,6 @@ cask "fertigt-slate" do
   desc "Window management application"
   homepage "https://github.com/fertigt/slate_arm64"
 
-  conflicts_with cask: "slate"
-
   app "Slate.app"
 
   zap trash: [

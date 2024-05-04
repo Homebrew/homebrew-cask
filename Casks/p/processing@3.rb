@@ -16,10 +16,7 @@ cask "processing@3" do
     end
   end
 
-  conflicts_with cask: [
-    "processing",
-    "processing2",
-  ]
+  conflicts_with cask: "processing"
 
   app "Processing.app"
 

@@ -12,7 +12,7 @@ cask "ksdiff" do
   conflicts_with cask: [
     "kaleidoscope",
     "kaleidoscope@2",
-    "ksdiff2",
+    "kaleidoscope@3",
   ]
 
   pkg "ksdiff-#{version.csv.first}/Install ksdiff.pkg"

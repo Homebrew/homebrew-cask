@@ -9,7 +9,6 @@ cask "rambox" do
   homepage "https://rambox.app/"
 
   auto_updates true
-  conflicts_with cask: "rambox-ce"
 
   app "Rambox.app"
 

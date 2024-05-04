@@ -29,7 +29,6 @@ cask "kaleidoscope@3" do
     kaleidoscope
     kaleidoscope@2
     ksdiff
-    ksdiff2
   ]
   depends_on macos: ">= :big_sur"
 

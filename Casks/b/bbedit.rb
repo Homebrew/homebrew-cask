@@ -14,6 +14,7 @@ cask "bbedit" do
   end
 
   auto_updates true
+  conflicts_with cask: "bbedit@14"
   depends_on macos: ">= :catalina"
 
   app "BBEdit.app"
