@@ -16,8 +16,8 @@ cask "openttd" do
     end
   end
   on_catalina :or_newer do
-    version "14.0"
-    sha256 "1a8cc5a92a69d559c85af3bf6e31583ef7acbce2d2664b0401947024c3fd458b"
+    version "14.1"
+    sha256 "68954bbfb941a599c9b2e017d56e12b64794f2494b4d41d308d66167e53fc6c5"
 
     livecheck do
       url "https://www.openttd.org/downloads/openttd-releases/latest"
