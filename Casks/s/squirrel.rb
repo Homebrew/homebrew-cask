@@ -1,8 +1,8 @@
 cask "squirrel" do
-  version "0.16.2"
-  sha256 "e08d28fd72445bccbdbccc06b16a9e300c07371f67d576cd4ed35731be9d4ad6"
+  version "0.18"
+  sha256 "db8522e83b725e5253da04d41a76ed58eeb39f0aaf1c6e73ac4dba567dcf2286"
 
-  url "https://github.com/rime/squirrel/releases/download/#{version}/Squirrel-#{version}.zip",
+  url "https://github.com/rime/squirrel/releases/download/#{version}/Squirrel-#{version}.pkg",
       verified: "github.com/rime/squirrel/"
   name "Squirrel"
   desc "Rime input method engine"
