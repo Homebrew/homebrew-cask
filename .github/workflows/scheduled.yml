@@ -17,15 +17,10 @@ concurrency:
 permissions:
   issues: write
 
-env:
-  HOMEBREW_SIMULATE_MACOS_ON_LINUX: 1
-
 jobs:
   create_matrix:
     if: startsWith( github.repository, 'Homebrew/' )
-    runs-on: ubuntu-22.04
-    container:
-      image: ghcr.io/homebrew/ubuntu22.04:master
+    runs-on: macos-latest
     outputs:
       json: ${{ steps.matrix.outputs.json }}
     env:
@@ -54,8 +49,6 @@ jobs:
   audit_online:
     if: startsWith( github.repository, 'Homebrew/' )
     runs-on: ${{ matrix.os }}
-    container:
-      image: ghcr.io/homebrew/ubuntu22.04:master
     needs: create_matrix
     name: "Online check (${{ matrix.os }}): ${{ matrix.cask }}"
     env:
@@ -66,7 +59,7 @@ jobs:
       fail-fast: false
       matrix:
         cask: ${{ fromJson(needs.create_matrix.outputs.json) }}
-        os: [ubuntu-22.04]
+        os: [macos-latest]
     steps:
       - name: Set up Homebrew
         id: set-up-homebrew
@@ -78,7 +71,6 @@ jobs:
 
       - name: Check cask source is not archived.
         id: archived
-        if: matrix.os != 'macos-latest'
         run: brew audit --cask --online --skip-style --only github_repository_archived,gitlab_repository_archived ${{ matrix.cask }}
 
       - name: Report online issues
@@ -90,7 +82,6 @@ jobs:
 
       - name: Check cask for unavailable homepage.
         id: homepage
-        if: matrix.os != 'macos-latest'
         run: brew audit --cask --online --skip-style --only homepage ${{ matrix.cask }}
 
       - name: Report homepage issues
@@ -102,7 +93,6 @@ jobs:
 
       - name: Check cask for missing sources.
         id: fetch
-        if: matrix.os != 'macos-latest'
         run: brew fetch --cask -s ${{ matrix.cask }}
 
       - name: Report fetch issues
