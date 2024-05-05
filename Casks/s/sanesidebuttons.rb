@@ -16,5 +16,9 @@ cask "sanesidebuttons" do
 
   app "SaneSideButtons.app"
 
-  zap trash: "~/Library/Preferences/com.janhuelsmann.sanesidebuttons.plist"
+  zap trash: [
+    "~/Library/Application Scripts/com.janhuelsmann.SaneSideButtons",
+    "~/Library/Containers/com.janhuelsmann.SaneSideButtons",
+    "~/Library/Preferences/com.janhuelsmann.sanesidebuttons.plist",
+  ]
 end
