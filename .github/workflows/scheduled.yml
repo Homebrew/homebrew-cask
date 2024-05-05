@@ -35,6 +35,8 @@ jobs:
           cask: true
           test-bot: false
 
+      - run: brew install coreutils
+
       - name: Generate matrix
         id: matrix
         run: |
