@@ -10,11 +10,16 @@ cask "taccy" do
 
   livecheck do
     url "https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
-    regex(%r{/(\d+)/(\d+)/taccy(\d+)\.zip}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map do |match|
-        "#{match[2].split("", 2).join(".")},#{match[0]}.#{match[1]}"
-      end
+    regex(%r{/(\d+)/(\d+)/[^/]+?$}i)
+    strategy :xml do |xml, regex|
+      item = xml.elements["//dict[key[text()='AppName']/following-sibling::*[1][text()='Taccy']]"]
+      next unless item
+
+      version = item.elements["key[text()='Version']"]&.next_element&.text&.strip
+      match = item.elements["key[text()='URL']"]&.next_element&.text&.strip&.match(regex)
+      next if version.blank? || match.blank?
+
+      "#{version},#{match[1]}.#{match[2]}"
     end
   end
 

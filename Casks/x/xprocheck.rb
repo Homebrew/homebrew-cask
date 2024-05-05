@@ -9,12 +9,17 @@ cask "xprocheck" do
   homepage "https://eclecticlight.co/consolation-t2m2-and-log-utilities/"
 
   livecheck do
-    url :homepage
-    regex(%r{/(\d+)/(\d+)/xprocheck(\d+)\.zip}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map do |match|
-        "#{match[2].split("", 2).join(".")},#{match[0]}.#{match[1]}"
-      end
+    url "https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
+    regex(%r{/(\d+)/(\d+)/[^/]+?$}i)
+    strategy :xml do |xml, regex|
+      item = xml.elements["//dict[key[text()='AppName']/following-sibling::*[1][text()='XProCheck']]"]
+      next unless item
+
+      version = item.elements["key[text()='Version']"]&.next_element&.text&.strip
+      match = item.elements["key[text()='URL']"]&.next_element&.text&.strip&.match(regex)
+      next if version.blank? || match.blank?
+
+      "#{version},#{match[1]}.#{match[2]}"
     end
   end
 
@@ -22,5 +27,10 @@ cask "xprocheck" do
 
   app "xprocheck#{version.csv.first.no_dots}/XProCheck.app"
 
-  zap trash: "~/Library/Saved Application State/co.eclecticlight.XProCheck.savedState"
+  zap trash: [
+    "~/Library/Caches/co.eclecticlight.XProCheck",
+    "~/Library/HTTPStorages/co.eclecticlight.XProCheck",
+    "~/Library/Preferences/co.eclecticlight.XProCheck.plist",
+    "~/Library/Saved Application State/co.eclecticlight.XProCheck.savedState",
+  ]
 end

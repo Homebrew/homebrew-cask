@@ -9,16 +9,14 @@ cask "silnite" do
   homepage "https://eclecticlight.co/lockrattler-systhist/"
 
   livecheck do
-    url :homepage
-    regex(%r{href=.*?/(\d+)/(\d+)/silnite[._-]?v?(\d+(?:\.\d+)*\w?)\.zip}i)
+    url "https://eclecticlight.co/downloads/"
+    regex(%r{href=.*?/(\d+)/(\d+)/silnite[^"' >]*?\.zip[^>]*?>\s*silnite\s+v?(\d+(?:\.\d+)*)[^a-z)]}i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map do |match|
-        "#{match[2]},#{match[0]}.#{match[1]}"
-      end
+      page.scan(regex).map { |match| "#{match[2]},#{match[0]}.#{match[1]}" }
     end
   end
 
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :big_sur"
 
   pkg "silnite#{version.csv.first}/silniteInstaller.pkg"
 
