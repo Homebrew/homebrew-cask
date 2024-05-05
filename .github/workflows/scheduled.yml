@@ -95,7 +95,7 @@ jobs:
 
       - name: Check cask for missing sources.
         id: fetch
-        run: brew fetch --cask -s ${{ matrix.cask }}
+        run: brew fetch --cask ${{ matrix.cask }}
 
       - name: Report fetch issues
         if: ${{ failure() && steps.fetch.conclusion == 'failure' }}
