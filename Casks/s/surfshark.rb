@@ -12,6 +12,7 @@ cask "surfshark" do
     strategy :extract_plist
   end
 
+  auto_updates true
   depends_on macos: ">= :catalina"
 
   app "Surfshark.app"
