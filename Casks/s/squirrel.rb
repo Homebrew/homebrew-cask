@@ -1,6 +1,6 @@
 cask "squirrel" do
   version "0.18"
-  sha256 "db8522e83b725e5253da04d41a76ed58eeb39f0aaf1c6e73ac4dba567dcf2286"
+  sha256 "52522e2c5083a718bb7c2d2ed153cb5cfb001e040ef34cbe1b99faa3caf48266"
 
   url "https://github.com/rime/squirrel/releases/download/#{version}/Squirrel-#{version}.pkg",
       verified: "github.com/rime/squirrel/"
@@ -10,7 +10,7 @@ cask "squirrel" do
 
   auto_updates true
 
-  pkg "Squirrel.pkg"
+  pkg "Squirrel-#{version}.pkg"
 
   uninstall pkgutil: [
               "com.googlecode.rimeime.Squirrel.pkg", # Package name of older versions (< 0.10.0)
