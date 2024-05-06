@@ -1,9 +1,9 @@
 cask "keepassxc" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2.7.7"
-  sha256 arm:   "8681540627d03f70f683dc5acd79af8f42bba21425ffaf352c79eb5c31fb9712",
-         intel: "8e3a5d93a749569515604241ed21512f689d60c32fa1ed85f57f69042896b655"
+  version "2.7.8"
+  sha256 arm:   "45995a9fe0e090a9d4470955976862ef49455ea1667b8c5aca046e202a64bf79",
+         intel: "dbe2b6be4c2e2a496bed485998e0fa586dfe24b09ff022f7b5c337d9d292bec4"
 
   url "https://github.com/keepassxreboot/keepassxc/releases/download/#{version}/KeePassXC-#{version}-#{arch}.dmg",
       verified: "github.com/keepassxreboot/keepassxc/"
