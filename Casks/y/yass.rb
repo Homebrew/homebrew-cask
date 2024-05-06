@@ -1,9 +1,9 @@
 cask "yass" do
   arch arm: "-arm64", intel: "-x64"
 
-  version "1.9.3"
-  sha256 arm:   "6ce5b7ca7e75cd4d478cf196c5c090b3e9216f402c3fa480be4bf4eb27d44b39",
-         intel: "3085d10427db5bf88d6189450d6e9d889bf54ff934c587bffad177ac2b114ef3"
+  version "1.9.4"
+  sha256 arm:   "e655af89081dfd5c4981508f71080816b38aa8a268e700820f9b49555b7fc415",
+         intel: "aa1d6b9715fed3de116e2b06afbd5b22c4d22537fd240b9fdb1929bdd99c13bf"
 
   url "https://github.com/Chilledheart/yass/releases/download/#{version}/yass-macos-release#{arch}-#{version}.dmg"
   name "YASS"
