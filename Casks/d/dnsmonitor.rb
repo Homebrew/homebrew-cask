@@ -1,8 +1,8 @@
 cask "dnsmonitor" do
-  version "1.1.1"
-  sha256 "1bbe97e06e6176507ea9847997fd772a0a8dedc04e349671f26495cbda9ad227"
+  version "1.2.0"
+  sha256 "4dd80e03d967a959040ddff8ad73be4e624da421dffc39bf26b6d40ae6ac70a9"
 
-  url "https://github.com/objective-see/DNSMonitor/releases/download/v#{version}/DNSMonitor_#{version}.zip"
+  url "https://github.com/objective-see/DNSMonitor/releases/download/v#{version}/DNSMonitor_v#{version}.zip"
   name "dnsmonitor"
   desc "Monitor DNS activity"
   homepage "https://github.com/objective-see/DNSMonitor/"
