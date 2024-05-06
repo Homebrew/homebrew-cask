@@ -14,7 +14,6 @@ cask "wordpresscom-studio" do
   livecheck do
     url :homepage
     regex(/studio[._-]darwin[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)\.app\.zip/i)
-    strategy :page_match
   end
 
   auto_updates true
