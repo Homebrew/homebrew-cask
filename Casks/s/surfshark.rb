@@ -8,8 +8,8 @@ cask "surfshark" do
   homepage "https://surfshark.com/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://downloads.surfshark.com/macOS/stable/appcast.xml"
+    strategy :sparkle
   end
 
   auto_updates true
