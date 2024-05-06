@@ -12,6 +12,7 @@ cask "ff-works" do
     regex(/version\s*(\d+(?:\.\d+)+)/i)
   end
 
+  auto_updates true
   depends_on macos: ">= :el_capitan"
 
   app "ff·Works.app"
