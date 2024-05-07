@@ -8,8 +8,8 @@ cask "etrecheckpro" do
   homepage "https://etrecheck.com/"
 
   livecheck do
-    url "https://etrecheck.com/en/details.html"
-    regex(/EtreCheckPro\sversion\s(\d+(?:\.\d+)+)/i)
+    url "https://cdn.etrecheck.com/EtreCheckProUpdates.plist"
+    strategy :sparkle, &:short_version
   end
 
   depends_on macos: ">= :high_sierra"
