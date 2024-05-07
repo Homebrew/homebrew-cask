@@ -1,6 +1,6 @@
 cask "ace-link" do
-  version "2.0.6"
-  sha256 "4616e4063e45c3f4c624df884ff1a367ac8ad9b545142099bfbef3a0396fdd9e"
+  version "2.1.0"
+  sha256 "778e122a739c53aba5e5a8715b630b287089ef89870064a0345c0ee526d44886"
 
   url "https://github.com/blaise-io/acelink/releases/download/#{version}/Ace.Link.#{version}.dmg"
   name "Ace Link"
