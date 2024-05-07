@@ -5,12 +5,25 @@ cask "quiet" do
   url "https://github.com/TryQuiet/quiet/releases/download/%40quiet%2Fdesktop%40#{version}/Quiet-#{version}.dmg",
       verified: "github.com/TryQuiet/quiet/"
   name "Quiet"
-  desc "Desktop app for Quiet"
+  desc "A private, p2p alternative to Slack and Discord built on Tor & IPFS"
   homepage "https://tryquiet.org/"
 
+  # Upstream creates GitHub releases for both stable and alpha versions for
+  # both desktop and mobile versions, so it is necessary to check recent
+  # releases to match the latest stable desktop version.
   livecheck do
     url :url
-    strategy :github_latest
+    regex(/^@quiet\/desktop@\d+(?:.\d+)+$/i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
+
+        match = release["tag_name"]&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
+    end
   end
 
   depends_on macos: ">= :high_sierra"
