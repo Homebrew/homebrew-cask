@@ -1,8 +1,8 @@
 cask "surfshark" do
   version "4.14.0,2225"
-  sha256 :no_check
+  sha256 "b6d5f7730071fcfed4470ad03e32f6959d29778e564b579b11794a588dec50c0"
 
-  url "https://downloads.surfshark.com/macOS/latest/Surfshark.dmg"
+  url "https://downloads2.surfshark.com/macOS/stable/#{version.csv.first}/#{version.csv.second}/Surfshark.dmg"
   name "Surfshark"
   desc "VPN client for secure internet access and private browsing"
   homepage "https://surfshark.com/"
