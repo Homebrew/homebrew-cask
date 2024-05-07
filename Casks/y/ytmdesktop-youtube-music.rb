@@ -4,14 +4,18 @@ cask "ytmdesktop-youtube-music" do
   on_arm do
     version "2.0.0"
     sha256 "c7a7734d295eaa3a8a7d42db2c2013618fd3fc06e9600d1c1485e1eec153b0cd"
+
+    url "https://github.com/ytmdesktop/ytmdesktop/releases/download/v#{version}/YouTube-Music-Desktop-App-darwin-#{arch}-#{version}.zip",
+        verified: "github.com/ytmdesktop/ytmdesktop/"
   end
   on_intel do
     version "2.0.5"
     sha256 "c1de73b67b9258be0e83383556d9e49c370d2f5dc6122e3e531cbe3f95146b7b"
+
+    url "https://github.com/ytmdesktop/ytmdesktop/releases/download/v#{version}/YouTube-Music.Desktop.App-darwin-#{arch}-#{version}.zip",
+        verified: "github.com/ytmdesktop/ytmdesktop/"
   end
 
-  url "https://github.com/ytmdesktop/ytmdesktop/releases/download/v#{version}/YouTube-Music-Desktop-App-darwin-#{arch}-#{version}.zip",
-      verified: "github.com/ytmdesktop/"
   name "YouTube Music Desktop App"
   desc "YouTube music client"
   homepage "https://ytmdesktop.app/"
