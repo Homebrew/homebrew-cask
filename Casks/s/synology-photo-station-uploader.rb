@@ -6,5 +6,6 @@ cask "synology-photo-station-uploader" do
   name "Synology Photo Station Uploader"
   desc "Bulk upload photos and videos to Synology Photo Station"
   homepage "https://www.synology.com/"
+
   disable! date: "2024-05-07", because: :no_longer_available
 end
