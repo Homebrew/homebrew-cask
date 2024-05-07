@@ -9,6 +9,7 @@ cask "squirrel" do
   homepage "https://rime.im/"
 
   auto_updates true
+  depends_on macos: ">= :ventura"
 
   pkg "Squirrel-#{version}.pkg"
 
