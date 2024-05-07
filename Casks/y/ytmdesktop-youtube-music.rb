@@ -4,19 +4,40 @@ cask "ytmdesktop-youtube-music" do
   on_arm do
     version "2.0.0"
     sha256 "c7a7734d295eaa3a8a7d42db2c2013618fd3fc06e9600d1c1485e1eec153b0cd"
+
+    url "https://github.com/ytmdesktop/ytmdesktop/releases/download/v#{version}/YouTube-Music-Desktop-App-darwin-#{arch}-#{version}.zip",
+        verified: "github.com/ytmdesktop/ytmdesktop/"
   end
   on_intel do
-    version "2.0.2"
-    sha256 "712337e1cc38dadd26162c2380cdcb956f8534c3f3c1b794f799fe935c1054f5"
+    version "2.0.5"
+    sha256 "c1de73b67b9258be0e83383556d9e49c370d2f5dc6122e3e531cbe3f95146b7b"
+
+    url "https://github.com/ytmdesktop/ytmdesktop/releases/download/v#{version}/YouTube-Music.Desktop.App-darwin-#{arch}-#{version}.zip",
+        verified: "github.com/ytmdesktop/ytmdesktop/"
   end
 
-  url "https://github.com/ytmdesktop/ytmdesktop/releases/download/v#{version}/YouTube-Music-Desktop-App-darwin-#{arch}-#{version}.zip",
-      verified: "github.com/ytmdesktop/"
   name "YouTube Music Desktop App"
   desc "YouTube music client"
   homepage "https://ytmdesktop.app/"
 
-  disable! date: "2024-03-06", because: :no_longer_available
+  # Not every GitHub release provides a file for both architectures, so we check
+  # multiple recent releases instead of only the "latest" release.
+  livecheck do
+    url :url
+    regex(/Desktop[._-]App[._-]darwin[._-](?:#{arch})[._-]v?(\d+(?:\.\d+)+)\.(?:dmg|pkg|zip)$/i)
+    strategy :github_releases do |json, regex|
+      json.map do |release|
+        next if release["draft"] || release["prerelease"]
+
+        release["assets"]&.map do |asset|
+          match = asset["name"]&.match(regex)
+          next if match.blank?
+
+          match[1]
+        end
+      end.flatten
+    end
+  end
 
   depends_on macos: ">= :catalina"
 
