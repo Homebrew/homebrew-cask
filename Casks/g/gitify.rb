@@ -15,11 +15,11 @@ cask "gitify" do
   app "Gitify.app"
 
   preflight do
-    system_command "/usr/bin/pkill", args: ["-f", "Gitify.app"]
+    system_command "/usr/bin/killall", args: ["-q", "Gitify"]
   end
 
   postflight do
-    system_command "open", args: ["-a", "Gitify.app"]
+    system_command "open", args: ["-a", "Gitify"]
   end
 
   uninstall quit: [
