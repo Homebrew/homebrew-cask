@@ -18,6 +18,10 @@ cask "gitify" do
     system_command "/usr/bin/pkill", args: ["-f", "Gitify.app"]
   end
 
+  postflight do
+    system_command "open", args: ["-a", "Gitify.app"]
+  end
+
   uninstall quit: [
     "com.electron.gitify",
     "com.electron.gitify.helper",
