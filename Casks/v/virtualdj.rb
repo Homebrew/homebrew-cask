@@ -9,7 +9,7 @@ cask "virtualdj" do
 
   livecheck do
     url "https://virtualdj.com/download/mac"
-    regex(/install[._-]virtualdj[._-]?(\d+(?:\.\d+)*)[._-]b(\d+)[._-]mac\.pkg/i)
+    regex(/install[._-]virtualdj[._-]v?(\d+(?:\.\d+)*)[._-]b(\d+)[._-]mac\.pkg/i)
     strategy :header_match do |headers, regex|
       match = headers["location"].match(regex)
       next if match.blank?
