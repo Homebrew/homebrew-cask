@@ -1,6 +1,6 @@
 cask "ollama" do
-  version "0.1.33"
-  sha256 "bef86be265e7f215577625af4fa30e45f180f1b6c60ed5c3560ce3b3a59d561d"
+  version "0.1.34"
+  sha256 "9c68fdca76e352b2bde259bb621aebebeb437c5f25c8bc258b9ffd88723811d3"
 
   url "https://github.com/ollama/ollama/releases/download/v#{version}/Ollama-darwin.zip",
       verified: "github.com/ollama/ollama/"
