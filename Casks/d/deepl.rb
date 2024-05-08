@@ -9,8 +9,8 @@ cask "deepl" do
       url "https://appdownload.deepl.com/macos/"
       regex(%r{^old/v?(\d+(?:\.\d+)+)/(\d+(?:\.\d+)*)/DeepL\.(?:zip|tar\.gz)$}i)
       strategy :xml do |xml|
-        xml.get_elements("//ListBucketResult//Contents//Key").map do |item|
-          match = item.text.match(regex)
+        xml.get_elements("//Contents/Key").map do |item|
+          match = item.text&.match(regex)
           next if match.blank?
 
           "#{match[1]}.#{match[2]}"
