@@ -5,10 +5,10 @@ cask "shearwater-cloud" do
   url "https://downloads.shearwater.com/livedownloads/ShearwaterCloudInstaller_#{version}.dmg"
   name "Shearwater Cloud"
   desc "Review, edit and share dive log data"
-  homepage "https://www.shearwater.com/"
+  homepage "https://shearwater.com/"
 
   livecheck do
-    url "https://www.shearwater.com/cloud/"
+    url "https://shearwater.com/pages/shearwater-cloud"
     regex(/href=.*?ShearwaterCloudInstaller[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
