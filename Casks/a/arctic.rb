@@ -1,8 +1,8 @@
 cask "arctic" do
-  version "24.1.1,19,20240403132247"
-  sha256 "066769d586e60d50360075fddc58b1a69201d721d5bbcb45dadccd0ca46fd35b"
+  version "24.1.2,21,20240502224923"
+  sha256 "013fe167f9590afc2b7cdf9bca08b12600efd8f9d69c496859bbddc8bef57e3b"
 
-  url "https://updates.hedge.video/arctic/macos/updates/production/Arctic_20240403132247_v#{version.csv.first}b#{version.csv.second}/Arctic-#{version.csv.second}.zip"
+  url "https://updates.hedge.video/arctic/macos/updates/production/Arctic_#{version.csv.third}_v#{version.csv.first}b#{version.csv.second}/Arctic-#{version.csv.second}.zip"
   name "Arctic"
   desc "Display and manage Final Cut Pro X libraries"
   homepage "https://hedge.video/arctic"
