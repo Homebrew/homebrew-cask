@@ -8,7 +8,7 @@ cask "youlean-loudness-meter" do
   homepage "https://youlean.co/youlean-loudness-meter/"
 
   livecheck do
-    url "https://youlean.co/download/"
+    url "https://youlean.co/download-youlean-loudness-meter/"
     regex(%r{href=.*?/(\w+)/(\w+)/youlean[._-]loudness[._-]meter[._-]\d+[._-]v?(\d+(?:\.\d+)+)[._-]macOS\.zip}i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[2]},#{match[0]},#{match[1]}" }
