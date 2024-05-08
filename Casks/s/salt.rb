@@ -11,7 +11,7 @@ cask "salt" do
   homepage "https://saltproject.io/"
 
   livecheck do
-    url "https://repo.saltproject.io/salt/py3/macos/latest"
+    url "https://repo.saltproject.io/salt/py3/macos/latest/"
     regex(/salt[._-]v?(\d+(?:\.\d+)+)-py3-#{arch}\.pkg/)
   end
 
