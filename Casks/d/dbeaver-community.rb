@@ -13,7 +13,7 @@ cask "dbeaver-community" do
   livecheck do
     url "https://dbeaver.io/product/dbeaver-ce-version.xml"
     strategy :xml do |xml|
-      xml.get_elements("version/number").first&.text&.strip
+      xml.elements["//version/number"]&.text&.strip
     end
   end
 
