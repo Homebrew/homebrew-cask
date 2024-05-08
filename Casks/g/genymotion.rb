@@ -12,7 +12,7 @@ cask "genymotion" do
     sha256 "beb88db7cfed503ed95ff68377fac0848256c300caf78b4be7b8b8c62ade80eb"
 
     livecheck do
-      url "https://www.genymotion.com/download/"
+      url "https://www.genymotion.com/product-desktop/download/"
       regex(/href=.*?Genymotion[._-]v?(\d+(?:\.\d+)+)\.(?:dmg|pkg)/i)
     end
   end
