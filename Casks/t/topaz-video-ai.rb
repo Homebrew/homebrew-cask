@@ -7,19 +7,9 @@ cask "topaz-video-ai" do
   desc "Video upscaler and quality enhancer"
   homepage "https://www.topazlabs.com/topaz-video-ai"
 
-  # The version for some releases is missing the last digit, so we add ".0"
-  # to the end in these cases
   livecheck do
-    url "https://community.topazlabs.com/c/video-ai/video-ai-releases/69"
-    regex(/>Topaz\sVideo\sAI\sv?(\d+(?:\.\d+)+)\s*</i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map do |match|
-        version = match[0]
-        next version if version.split(".").length >= 3
-
-        "#{version}.0"
-      end
-    end
+    url "https://topazlabs.com/d/tvai/latest/mac/full"
+    strategy :header_match
   end
 
   app "Topaz Video AI.app"
