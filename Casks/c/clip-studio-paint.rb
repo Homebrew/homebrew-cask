@@ -8,7 +8,7 @@ cask "clip-studio-paint" do
   homepage "https://www.clipstudio.net/en"
 
   livecheck do
-    url "https://www.clipstudio.net/en/dl/release_note/v2"
+    url "https://www.clipstudio.net/en/dl/release_note/v2/"
     regex(/Clip\s+Studio\s+Paint\s+(?:v|Ver\.?|Version)?\s*(\d+(?:\.\d+)+)/i)
   end
 
