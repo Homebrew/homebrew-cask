@@ -7,17 +7,7 @@ cask "topaz-sharpen-ai" do
   desc "AI-powered image sharpener that produces natural results"
   homepage "https://www.topazlabs.com/sharpen-ai"
 
-  livecheck do
-    url "https://community.topazlabs.com/c/releases/sharpen-ai"
-    strategy :page_match do |page|
-      match = page[%r{href=.*?/sharpen[._-]ai[._-]v?(\d+(?:-\d+)+)}i, 1]
-      next if match.blank?
-
-      match += ".0"
-
-      match.tr("-", ".")
-    end
-  end
+  deprecate! date: "2024-05-07", because: :discontinued
 
   app "Topaz Sharpen AI.app"
 
