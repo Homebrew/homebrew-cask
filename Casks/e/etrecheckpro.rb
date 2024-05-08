@@ -9,7 +9,9 @@ cask "etrecheckpro" do
 
   livecheck do
     url "https://cdn.etrecheck.com/EtreCheckProUpdates.plist"
-    regex(/CFBundleShortVersionString.*?\n.*?(\d+(?:\.\d+)+)/i)
+    strategy :xml do |xml|
+      xml.elements["//key[text()='CFBundleShortVersionString']"]&.next_element&.text&.strip
+    end
   end
 
   depends_on macos: ">= :high_sierra"
