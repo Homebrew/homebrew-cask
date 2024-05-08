@@ -7,15 +7,7 @@ cask "topaz-denoise-ai" do
   desc "Eliminate noise in your images"
   homepage "https://www.topazlabs.com/denoise-ai"
 
-  livecheck do
-    url "https://community.topazlabs.com/c/releases/denoise-ai"
-    strategy :page_match do |page|
-      match = page[%r{href=.*?/denoise[._-](\d+(?:-\d+)+)}i, 1]
-      next if match.blank?
-
-      match.tr("-", ".")
-    end
-  end
+  deprecate! date: "2024-05-07", because: :discontinued
 
   app "Topaz DeNoise AI.app"
 
