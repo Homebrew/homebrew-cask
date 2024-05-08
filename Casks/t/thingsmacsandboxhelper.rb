@@ -5,7 +5,7 @@ cask "thingsmacsandboxhelper" do
   url "https://static.culturedcode.com/things/thingssandboxhelper/#{version}/ThingsHelper.zip"
   name "Things Helper"
   desc "Helper application for Things"
-  homepage "https://culturedcode.com/things/mac/help/things-sandboxing-helper-things#{version.major}/"
+  homepage "https://culturedcode.com/things/help/things-sandboxing-helper-things#{version.major}/"
 
   livecheck do
     url :homepage

@@ -8,7 +8,7 @@ cask "monotype" do
   homepage "https://support.monotype.com/en/articles/7860542-monotype-desktop-app"
 
   livecheck do
-    url "https://support.monotype.com/en/articles/7859464-release-notes"
+    url "https://support.monotype.com/en/articles/8617063-latest-release-notes"
     regex(/<p>Version\s*v?(\d+(?:\.\d+)+)[ "<]/i)
   end
 

@@ -9,7 +9,7 @@ cask "dropbox@beta" do
       verified: "dropbox.com/"
   name "Dropbox"
   desc "Client for the Dropbox cloud storage service"
-  homepage "https://www.dropboxforum.com/t5/Desktop-client-builds/bd-p/101003016"
+  homepage "https://www.dropboxforum.com/t5/Dropbox-desktop-client-builds/bd-p/101003016"
 
   livecheck do
     url :homepage
