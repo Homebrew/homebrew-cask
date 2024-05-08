@@ -9,7 +9,7 @@ cask "etrecheckpro" do
 
   livecheck do
     url "https://cdn.etrecheck.com/EtreCheckProUpdates.plist"
-    strategy :sparkle, &:short_version
+    regex(/CFBundleShortVersionString.*?\n.*?(\d+(?:\.\d+)+)/i)
   end
 
   depends_on macos: ">= :high_sierra"
