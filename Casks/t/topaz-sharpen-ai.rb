@@ -18,6 +18,7 @@ cask "topaz-sharpen-ai" do
       match.tr("-", ".")
     end
   end
+  deprecate! date: "2024-05-07", because: :discontinued
 
   app "Topaz Sharpen AI.app"
 
