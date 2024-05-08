@@ -1,9 +1,9 @@
 cask "min" do
   arch arm: "arm64", intel: "x86"
 
-  version "1.32.0"
-  sha256 arm:   "663f061fc5cc3f511bc2b907f3dc61f447748955eb89d34e94d05799de3fcc58",
-         intel: "de25e122f820d8f5b4607c3f4166c921f4924bf9c688057e3fc373f343f31cc2"
+  version "1.32.1"
+  sha256 arm:   "02eddf536da721eea11f1fd035ac7e2e067d1868904df6ca9184fdc09082c182",
+         intel: "b78ed297534b7fd5ff9f62dee8c66218a3c13eae4497103c06febbfe0d90e90c"
 
   url "https://github.com/minbrowser/min/releases/download/v#{version}/min-v#{version}-mac-#{arch}.zip",
       verified: "github.com/minbrowser/min/"
