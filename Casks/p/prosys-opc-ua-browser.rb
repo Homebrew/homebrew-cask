@@ -12,8 +12,9 @@ cask "prosys-opc-ua-browser" do
 
   livecheck do
     url "https://downloads.prosysopc.com/opc-ua-browser-downloads.php"
+    regex(/href=.*?prosys[._-]opc[._-]ua[._-]browser[._-]mac[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)[._-](\d+)\.dmg/i)
     strategy :page_match do |page|
-      match = page.match(/prosys[._-]opc[._-]ua[._-]browser[._-]mac[._-]#{arch}[._-]v?(\d+(?:\.\d+)+)[._-](\d+)\.dmg/i)
+      match = page.match(regex)
       next if match.blank?
 
       "#{match[1]},#{match[2]}"
