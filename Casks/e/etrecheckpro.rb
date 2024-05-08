@@ -1,5 +1,5 @@
 cask "etrecheckpro" do
-  version "6.8.4"
+  version "6.8.5"
   sha256 :no_check
 
   url "https://cdn.etrecheck.com/EtreCheckPro.zip"
@@ -8,8 +8,10 @@ cask "etrecheckpro" do
   homepage "https://etrecheck.com/"
 
   livecheck do
-    url "https://etrecheck.com/en/details.html"
-    regex(/EtreCheckPro\sversion\s(\d+(?:\.\d+)+)/i)
+    url "https://cdn.etrecheck.com/EtreCheckProUpdates.plist"
+    strategy :xml do |xml|
+      xml.elements["//key[text()='CFBundleShortVersionString']"]&.next_element&.text&.strip
+    end
   end
 
   depends_on macos: ">= :high_sierra"
