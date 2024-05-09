@@ -1,4 +1,4 @@
-cask "font-smoothing-adjuster" do
+cask "fontsmoothingadjuster" do
   version "2.0.0"
   sha256 "187401950b827c58262a9bb86878c5dd5820550c00ca414f971ce82837d7419f"
 
