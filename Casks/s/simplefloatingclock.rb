@@ -11,5 +11,7 @@ cask "simplefloatingclock" do
     regex(/Simple\s+Floating\s+Clock\s+(\d(?:\.\d+)+)/i)
   end
 
+  disable! date: "2024-05-09", because: :unmaintained
+
   app "Simple Floating Clock/SimpleFloatingClock.app"
 end
