@@ -1,6 +1,6 @@
 cask "wine-stable" do
-  version "9.0"
-  sha256 "9b0356a2b840a06facd69bb77901fe7cfe1d424510afc319418a44984ee41136"
+  version "9.0_1"
+  sha256 "a45f3a04f48d564c84a3f023de196f76b28ace9ed7b4bceab72d328885f09aad"
 
   # Current winehq packages are deprecated and these are packages from
   # the new maintainers that will eventually be pushed to Winehq.
@@ -15,9 +15,9 @@ cask "wine-stable" do
   # recent releases instead of only the "latest" release.
   livecheck do
     url :url
-    regex(/^v?(\d+(?:[.-]\d+)+)$/i)
+    regex(/^v?(\d+(?:[._-]\d+)+)$/i)
     strategy :github_releases do |json, regex|
-      file_regex = /^wine-stable[._-].*?$/i
+      file_regex = /^wine[._-]stable[._-].*?$/i
 
       json.map do |release|
         next if release["draft"] || release["prerelease"]
