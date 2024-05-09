@@ -15,7 +15,7 @@ cask "wine-stable" do
   # recent releases instead of only the "latest" release.
   livecheck do
     url :url
-    regex(/^v?(\d+(?:[.-]\d+)+)$/i)
+    regex(/^v?(\d+(?:[.-_]\d+)+)$/i)
     strategy :github_releases do |json, regex|
       file_regex = /^wine-stable[._-].*?$/i
 
