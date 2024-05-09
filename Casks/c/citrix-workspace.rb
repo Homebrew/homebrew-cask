@@ -10,7 +10,8 @@ cask "citrix-workspace" do
   livecheck do
     url "https://downloadplugins.citrix.com/ReceiverUpdates/Prod/catalog_macos2.xml"
     strategy :xml do |xml|
-      xml.get_elements("//Installers[@name='WorkspaceApp']/Installer/Version").map(&:text)
+      xml.get_elements("//Installers[@name='WorkspaceApp']/Installer/Version")
+         .map { |item| item.text&.strip }
     end
   end
 

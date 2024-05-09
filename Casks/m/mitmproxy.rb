@@ -15,7 +15,7 @@ cask "mitmproxy" do
   livecheck do
     url "https://downloads.mitmproxy.org/list"
     strategy :xml do |xml|
-      xml.get_elements("//ListBucketResult//CommonPrefixes//Prefix").map do |item|
+      xml.get_elements("//Prefix").map do |item|
         item.text&.strip&.delete_suffix("/")
       end
     end

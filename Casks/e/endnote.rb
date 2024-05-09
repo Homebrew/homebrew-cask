@@ -10,7 +10,7 @@ cask "endnote" do
   livecheck do
     url "https://download.endnote.com/updates/21.0/EN21MacUpdates.xml"
     strategy :xml do |xml|
-      xml.get_elements("//updateTo").map(&:text)
+      xml.get_elements("//updateTo").map { |item| item.text&.strip }
     end
   end
 
