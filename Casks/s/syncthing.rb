@@ -1,6 +1,6 @@
 cask "syncthing" do
-  version "1.27.7-1"
-  sha256 "18615e061519645002963b48ae2f03683e3cb94794f357b451e2093c60596dbd"
+  version "1.27.7-2"
+  sha256 "1b9c5275d4d0b02760bd2c34cdeaa1c8847c5ad2b932095613fe5575578c924c"
 
   url "https://github.com/syncthing/syncthing-macos/releases/download/v#{version}/Syncthing-#{version}.dmg",
       verified: "github.com/syncthing/syncthing-macos/"
