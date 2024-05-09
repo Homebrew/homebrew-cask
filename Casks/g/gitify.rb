@@ -24,17 +24,6 @@ cask "gitify" do
     opoo "Unable to forcibly close Gitify.app"
   end
 
-  postflight do
-    retries ||= 3
-    ohai "Attempting to relaunch Gitify.app to avoid unwanted user intervention" if retries >= 3
-    return unless system_command "open", args: ["-a", "/Applications/Gitify.app"]
-  rescue RuntimeError
-    sleep 1
-    retry unless (retries -= 1).zero?
-    opoo "Unable to automatically relaunch Gitify.app. Please open manually"
-    system_command "open", args: ["-a", "Gitify"]
-  end
-
   uninstall quit: [
     "com.electron.gitify",
     "com.electron.gitify.helper",
