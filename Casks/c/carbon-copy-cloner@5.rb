@@ -8,19 +8,13 @@ cask "carbon-copy-cloner@5" do
   desc "Hard disk backup and cloning utility"
   homepage "https://bombich.com/"
 
-  livecheck do
-    url "https://bombich.com/software/updates/ccc.php?os_major=11&os_minor=6&os_bugfix=0&ccc=6000&beta=0&locale=en"
-    strategy :json do |json|
-      version = json.dig("stable", "version")
-      build = json.dig("stable", "build")
-      next if version.blank? || build.blank?
-
-      "#{version}.#{build}"
-    end
-  end
+  deprecate! date: "2024-05-01", because: :discontinued
 
   auto_updates true
-  conflicts_with cask: "carbon-copy-cloner"
+  conflicts_with cask: [
+    "carbon-copy-cloner",
+    "carbon-copy-cloner@6",
+  ]
 
   app "Carbon Copy Cloner.app"
 
