@@ -1,6 +1,6 @@
 cask "discord@canary" do
-  version "0.0.496"
-  sha256 "5e4c053faf7b3f891fc42d87b003d359eea603caaa0ee264b8895f533465cf1b"
+  version "0.0.498"
+  sha256 "169f2de2a1041594916e950b46a7192df278365a50841106939231ae76ec4fdf"
 
   url "https://dl-canary.discordapp.net/apps/osx/#{version}/DiscordCanary.dmg",
       verified: "dl-canary.discordapp.net/"
