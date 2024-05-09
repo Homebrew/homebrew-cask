@@ -7,14 +7,7 @@ cask "synology-photo-station-uploader" do
   desc "Bulk upload photos and videos to Synology Photo Station"
   homepage "https://www.synology.com/"
 
-  livecheck do
-    url "https://www.synology.com/en-us/releaseNote/PhotoStationUploader"
-    strategy :patch_match do |page|
-      match = page.match(/<h3>Version:\s(\d+(?:\.\d+)+)-(\d+)/i)
-
-      "#{match[1]},#{match[2]}"
-    end
-  end
+  disable! date: "2024-05-09", because: :no_longer_available
 
   pkg "SynologyPhotoStationUploader-#{version.after_comma}-Mac-Installer.pkg"
 
