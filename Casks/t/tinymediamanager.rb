@@ -12,12 +12,15 @@ cask "tinymediamanager" do
 
   livecheck do
     url "https://release.tinymediamanager.org/"
-    regex(/href=.*?v?(\d+(?:\.\d+)+)[._-]macos[._-]x86[._-]64\.dmg/i)
+    regex(/href=.*?v?(\d+(?:\.\d+)+)[._-]macos[._-]#{arch}\.dmg/i)
   end
 
   auto_updates true
 
   app "tinyMediaManager.app"
 
-  # No zap stanza required
+  zap trash: [
+    "~/Library/Application Support/tinyMediaManager",
+    "~/Library/Saved Application State/org.tinyMediaManager.tinymediamanager.savedState",
+  ]
 end
