@@ -1,9 +1,9 @@
 cask "proton-mail" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.0.1"
-  sha256 arm:   "b3bdb8003bda8cd0348fbdc246aa86b252c90a4da0d1ecc0a2a0ba618a146c11",
-         intel: "b07c2902d084787cf676074af38728f4fda36a0e088aaca576a4ba35c3a4a93f"
+  version "1.0.2"
+  sha256 arm:   "e4c17499fc19b582d885210624c2dbab064f0726e19c5a6d2a706cac6df8ce67",
+         intel: "cdf029256e48b55ea83b1e704874b55fb0f993c1ef3d165aa5fa572e3d313bd3"
 
   url "https://github.com/ProtonMail/inbox-desktop/releases/download/v#{version}/Proton-Mail-#{version}-#{arch}.dmg",
       verified: "github.com/ProtonMail/inbox-desktop/"
