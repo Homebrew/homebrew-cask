@@ -1,5 +1,5 @@
 cask "jamie" do
-  arch arm: "-arm64", intel: ""
+  arch arm: "-arm64"
 
   version "4.0.9"
   sha256 arm:   "04302560792bd1ffc5a29f90e64d53ff36cefb6b33d4be522feb793a92d985a4",
