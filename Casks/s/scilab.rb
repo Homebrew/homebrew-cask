@@ -3,7 +3,7 @@ cask "scilab" do
 
   on_arm do
     version "2024.0.0"
-    sha256 "66c760501aabf592f2cbf03156767c5faa4ab085d2bc391410d8a99c0d67cfa5"
+    sha256 "7d635ad455815378c8df8d177004c6067cf8402f8e5fbae2c53cb41c9c8bb0a4"
   end
   on_intel do
     version "2024.0.0"
