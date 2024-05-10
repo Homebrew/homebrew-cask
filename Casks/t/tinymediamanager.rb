@@ -12,7 +12,7 @@ cask "tinymediamanager" do
 
   livecheck do
     url "https://release.tinymediamanager.org/"
-    regex(%r{href=.*?v?(\d+(?:\.\d+)+)[._-]macos[._-]x86[._-]64\.dmg}i)
+    regex(/href=.*?v?(\d+(?:\.\d+)+)[._-]macos[._-]x86[._-]64\.dmg/i)
   end
 
   auto_updates true
