@@ -1,8 +1,11 @@
 cask "jamie" do
-  version "4.0.8"
-  sha256 "aea56283c4ae2f37edcaabdb03d82aec751efbb3ed3f718da2eaab37fb3b68de"
+  arch arm: "-arm64", intel: ""
 
-  url "https://github.com/louismorgner/jamie-release/releases/download/v#{version}/jamie-#{version}.dmg",
+  version "4.0.9"
+  sha256 arm:   "04302560792bd1ffc5a29f90e64d53ff36cefb6b33d4be522feb793a92d985a4",
+         intel: "3e07815960cdb4178b6414c298761cdb4622494463438f43e8bc3d7d271b97dc"
+
+  url "https://github.com/louismorgner/jamie-release/releases/download/v#{version}/jamie-#{version}#{arch}.dmg",
       verified: "github.com/louismorgner/jamie-release/"
   name "jamie"
   desc "AI-powered meeting notes"
