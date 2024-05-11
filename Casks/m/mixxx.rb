@@ -1,15 +1,25 @@
 cask "mixxx" do
-  version "2.4.0"
-  sha256 "7a05b1765a0e0a22427eca811f070903a5fadfced53a5ec004815cc17d9b5f21"
+  arch arm: "arm", intel: "intel"
 
-  url "https://downloads.mixxx.org/releases/#{version}/mixxx-#{version}-macosintel.dmg"
+  version "2.4.1"
+  sha256 arm:   "c9ad0bd7c02ac02a70d1d36a30f197945bdde2073b5dbf1e67badb310e3abd95",
+         intel: "b4d43050b9462b510218c75a730e8c46f059ed9d723caf7fedae469e519d1c7e"
+
+  on_arm do
+    depends_on macos: ">= :big_sur"
+  end
+  on_intel do
+    depends_on macos: ">= :sierra"
+  end
+
+  url "https://downloads.mixxx.org/releases/#{version}/mixxx-#{version}-macos#{arch}.dmg"
   name "Mixxx"
   desc "Open-source DJ software"
   homepage "https://www.mixxx.org/"
 
   livecheck do
     url "https://mixxx.org/download/"
-    regex(%r{href=.*?/mixxx[._-]v?(\d+(?:\.\d+)+)[._-]macos(?:intel|arm)\.dmg}i)
+    regex(%r{href=.*?/mixxx[._-]v?(\d+(?:\.\d+)+)[._-]macos#{arch}\.dmg}i)
   end
 
   conflicts_with cask: "mixxx@snapshot"
