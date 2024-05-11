@@ -1,9 +1,9 @@
 cask "popclip" do
-  version "2024.5"
-  sha256 "426fe69bddc8a107d8a44d89bc319987ccc10ecbfcb579c8c50100505c31595c"
+  version "2024.3.2"
+  sha256 "9c353dcc0365e2bac181eb60970042635348f336555f856361aa34682da846c2"
 
   url "https://pilotmoon.com/downloads/PopClip-#{version}.zip",
-      verified: "pilotmoon.com/"
+      verified: "pilotmoon.com/downloads/"
   name "PopClip"
   desc "Used to access context-specific actions when text is selected"
   homepage "https://www.popclip.app/"
