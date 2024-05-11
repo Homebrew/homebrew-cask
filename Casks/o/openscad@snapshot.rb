@@ -1,6 +1,6 @@
 cask "openscad@snapshot" do
-  version "2024.05.06"
-  sha256 "8db2eec76c7dd4f3a5f783dd32802737980d1a7fd6042fb0d26e38251abeff54"
+  version "2024.05.10"
+  sha256 "5791f14e2cbdcde0a538bd4f12252ddaec51d9222bb9f2734f97c244c9f02ef0"
 
   url "https://files.openscad.org/snapshots/OpenSCAD-#{version}.dmg"
   name "OpenSCAD"
