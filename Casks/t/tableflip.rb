@@ -1,6 +1,6 @@
 cask "tableflip" do
-  version "1.6.1"
-  sha256 "501d2b3dd08bb57f3d5c8b0d2860d21e970b1cf1ca5783a80022083836404ae0"
+  version "1.6.2"
+  sha256 "82acda5a9fb783f193db9783d96faddfbfb878c856fed202055e9e41ffe82005"
 
   url "https://update.christiantietze.de/tableflip/v#{version.major}/TableFlip-v#{version}.zip",
       verified: "update.christiantietze.de/tableflip/"
