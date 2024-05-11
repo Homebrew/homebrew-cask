@@ -1,7 +1,7 @@
 cask "texstudio" do
-  version "4.7.3"
-  sha256 arm:   "314da45d6071c4e18643282b25f6df7114bd42964d85b63526ffbfa048d993e7",
-         intel: "ce1cd5ab82d907165e232dfc5ccf8329f086e375f4936c6b9da9b0091ddd0674"
+  version "4.8.0"
+  sha256 arm:   "d9f972ef2c91191279b5cebab598f9c5633d8feca60d14b708735a8152125915",
+         intel: "015f8991ac54ba405e39bf42ae4144feae6a349a057d8a6eba6246c9ff005aea"
 
   on_arm do
     url "https://github.com/texstudio-org/texstudio/releases/download/#{version}/texstudio-#{version}-osx-m1.zip",
