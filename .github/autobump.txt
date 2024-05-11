@@ -5,9 +5,13 @@
 4k-youtube-to-mp3
 8x8-work
 ableton-live-intro
+ableton-live-intro@11
 ableton-live-lite
+ableton-live-lite@11
 ableton-live-standard
+ableton-live-standard@11
 ableton-live-suite
+ableton-live-suite@11
 adguard
 adguard-vpn
 adguard-vpn@nightly
@@ -23,6 +27,7 @@ alt-tab
 altair-graphql-client
 amazon-chime
 amie
+android-studio
 android-studio-preview@canary
 ankiapp
 anydesk
@@ -60,6 +65,7 @@ brave-browser
 brave-browser@beta
 brave-browser@dev
 brave-browser@nightly
+bricklink-studio
 brickstore
 browser-deputy
 bruno
@@ -83,10 +89,12 @@ chromedriver
 chromedriver@beta
 chromium-gost
 clay
+cleanclip
 cleanmymac
 clickhouse
 clickup
 clion
+clockify
 cloudnet
 cmake
 codeql
@@ -120,6 +128,7 @@ dcp-o-matic-kdm-creator
 dcp-o-matic-player
 dcp-o-matic-playlist-editor
 ddnet
+deckset
 deezer
 descript
 desktoppr
@@ -128,12 +137,15 @@ discord
 discord@canary
 discord@development
 discord@ptb
+dockx
 double-commander
+douyin-chat
 downie
 drata-agent
 draw-things
 drawio
 dropbox
+dropbox@beta
 dropshare
 duckduckgo
 ecamm-live
@@ -152,10 +164,13 @@ fantastical
 fedistar
 figma
 figma-agent
+figma@beta
 fiji
 finbar
 finch
 firealpaca
+firefly
+firefly-shimmer
 firefox
 firefox@esr
 fixkey
@@ -183,6 +198,7 @@ geogebra
 git-credential-manager
 gitbutler
 github
+github@beta
 gitify
 gitkraken
 gitkraken-cli
@@ -219,6 +235,7 @@ inso
 insomnia
 intellij-idea
 intellij-idea-ce
+intellij-idea@eap
 iterm2
 iterm2@beta
 iterm2@nightly
@@ -233,6 +250,7 @@ juxtacode
 keymapp
 keysafe
 kitty
+krisp
 lagrange
 languagetool
 leapp
@@ -372,12 +390,14 @@ popo
 popsql
 portfolioperformance
 postman
+postman-agent
 postman-cli
 postman@canary
 powerphotos
 praat
 preform
 prepros
+prezi-video
 pritunl
 private-internet-access
 proton-drive
@@ -395,6 +415,7 @@ qownnotes
 qqlive
 quarto
 quicken
+razorsql
 readdle-spark
 reader
 reaper
@@ -418,6 +439,7 @@ sapmachine-jdk
 screen-studio
 segger-jlink
 sentinel
+sequel-ace
 session
 setapp
 sf
@@ -434,8 +456,10 @@ skype
 skype@preview
 slack
 slack-cli
+slack@beta
 snagit
 sol
+soulver
 sourcetree
 sourcetree@beta
 spacedrive
@@ -477,10 +501,12 @@ timeular
 tinkerwell
 todoist
 topaz-gigapixel-ai
+topaz-photo-ai
 topaz-video-ai
 tor-browser
 touchosc
 trader-workstation
+tradingview
 trainerroad
 treesheets
 tresorit
@@ -488,6 +514,7 @@ trezor-suite
 truhu
 tsh
 tuist
+tunnelbear
 tuple
 tuta-mail
 uhk-agent
@@ -496,6 +523,8 @@ unity
 updf
 uvtools
 valentina-studio
+vellum
+virtualbox@beta
 virtualbuddy
 visual-studio-code
 vivaldi
@@ -522,6 +551,7 @@ workflowy
 writerside
 xcodepilot
 xemu
+xnviewmp
 yealink-meeting
 zed
 zed@preview
@@ -530,3 +560,4 @@ zoc
 zoom
 zoom-for-it-admins
 zulu
+youtube-to-mp3
