@@ -12,8 +12,8 @@ cask "jellyfin" do
   homepage "https://jellyfin.org/"
 
   livecheck do
-    url "https://repo.jellyfin.org/?path=/server/macos/latest-stable/amd64"
-    regex(/href=.*?jellyfin[._-]v?(\d+(?:[.-]\d+)+)\.dmg/i)
+    url "https://repo.jellyfin.org/?path=/server/macos/latest-stable/#{arch}"
+    regex(/href=.*?jellyfin[._-]v?(\d+(?:[.-]\d+)+)#{arch_suffix}\.dmg/i)
   end
 
   app "Jellyfin.app"
