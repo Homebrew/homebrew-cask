@@ -10,7 +10,9 @@ cask "pastebot" do
 
   livecheck do
     url "https://tapbots.net/pastebot#{version.major}/update.plist"
-    regex(%r{<key>shortVersion</key>.*\n.*<string>(\d+(?:\.\d+)+)</string>}i)
+    strategy :xml do |xml|
+      xml.get_elements("//key[text()='shortVersion']").map { |item| item.next_element&.text&.strip }
+    end
   end
 
   depends_on macos: ">= :mojave"
