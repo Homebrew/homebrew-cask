@@ -1,8 +1,8 @@
 cask "sonos" do
-  version "16.1,78.1.51030"
-  sha256 "3c141f4b46b6f7372819634b89288cdb41fd425e57f17370d50da2e84e51c921"
+  version "16.2,79.0.52294"
+  sha256 "e23a4a69511f9ed67f75ebb7fc45bc2c434643a4790a33305e429f7570ce0dd4"
 
-  url "https://update-software.sonos.com/software/nvasc21FQF/Sonos_#{version.csv.second.sub(/(\d+)\.(\d+)\.(\d+)/, '\1.\2-\3')}.dmg"
+  url "https://update-software.sonos.com/software/nAtvycichO/Sonos_#{version.csv.second.sub(/(\d+)\.(\d+)\.(\d+)/, '\1.\2-\3')}.dmg"
   name "Sonos S2"
   desc "Control your Sonos system"
   homepage "https://www.sonos.com/"
