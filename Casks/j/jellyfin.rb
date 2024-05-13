@@ -6,7 +6,7 @@ cask "jellyfin" do
   sha256 arm:   "c4f03418e1bb1bebf3ccc0ea18746686d07bdf19e1ca118c649f5bc63448e4f0",
          intel: "a4baf6b8b1e2c4fd2320e5936fed192b17fcc17ba156ff0dba1df74da9c80d5d"
 
-  url "https://repo.jellyfin.org/files/server/macos/latest-stable/#{arch}/jellyfin_#{version}#{arch_suffix}.dmg"
+  url "https://repo.jellyfin.org/files/server/macos/stable/v#{version}/#{arch}/jellyfin_#{version}#{arch_suffix}.dmg"
   name "Jellyfin"
   desc "Media system"
   homepage "https://jellyfin.org/"
