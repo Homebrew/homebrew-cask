@@ -1,6 +1,6 @@
 cask "fastscripts" do
-  version "3.3.1"
-  sha256 "3f0159df0631ab458d4ecf557b8774bfc881b54cdb7c74a0d4dbb4a2003fd1e6"
+  version "3.3.2"
+  sha256 "2f171d0925d1b1f90914cf4f3ef63ef13af401e903786da51dc834def1c72bbb"
 
   url "https://redsweater.com/fastscripts/FastScripts#{version}.zip"
   name "FastScripts"
