@@ -1,8 +1,8 @@
 cask "rescuetime" do
-  version "3.1.4.1"
+  version "3.2.0.10"
   sha256 :no_check
 
-  url "https://www.rescuetime.com/installers/RescueTimeInstaller_X.pkg"
+  url "https://assets.rescuetime.com/installers/RescueTimeInstaller_X.app.zip"
   name "RescueTime"
   desc "Time optimising application"
   homepage "https://www.rescuetime.com/"
@@ -12,9 +12,9 @@ cask "rescuetime" do
     strategy :extract_plist
   end
 
-  pkg "RescueTimeInstaller_X.pkg"
+  auto_updates
 
-  uninstall pkgutil: "com.rescuetime.RescueTime"
+  app "RescueTime.app"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.rescuetime.rescuetime.sfl*",
