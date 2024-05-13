@@ -1,9 +1,9 @@
 cask "chromedriver" do
   arch arm: "arm64", intel: "x64"
 
-  version "124.0.6367.201"
-  sha256 arm:   "14ed249dc00f8ff701c2518dd91745191ec19f9a4acd34657f6210e36da69b97",
-         intel: "8e75a61fa333a99cf32006e5bc916fe632852762c82f21b2f9e3aa6fab169967"
+  version "124.0.6367.207"
+  sha256 arm:   "115e3923a95abfddee333819923ca9ab545aceab4fd56f30f3f7387556798632",
+         intel: "d34e7cda39e5024564a85b329599d359f1e1e53264cfe9bd5bc4025d829eadfa"
 
   url "https://storage.googleapis.com/chrome-for-testing-public/#{version}/mac-#{arch}/chromedriver-mac-#{arch}.zip",
       verified: "storage.googleapis.com/chrome-for-testing-public/"
