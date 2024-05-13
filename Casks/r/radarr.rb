@@ -1,9 +1,9 @@
 cask "radarr" do
   arch arm: "arm64", intel: "x64"
 
-  version "5.4.6.8723"
-  sha256 arm:   "4adde7d215fcc2b30566dce24430d89dc6e7da1ebae0961815b6cdf894f85545",
-         intel: "b0b2f32be208b84830b45eb975ff54e264b5806f3ddfad1415527af16fe4d0dc"
+  version "5.5.3.8819"
+  sha256 arm:   "3d71cd613df596d67ae8efef72c61fbd4d5f3b33e45a3097597a27cd73d3bd86",
+         intel: "01ede027d8a5f065413a8f856229e9c8b269e6e49ec7a46d53b5093009262210"
 
   url "https://github.com/Radarr/Radarr/releases/download/v#{version}/Radarr.master.#{version}.osx-app-core-#{arch}.zip",
       verified: "github.com/Radarr/Radarr/"
