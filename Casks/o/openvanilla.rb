@@ -10,12 +10,12 @@ cask "openvanilla" do
 
   livecheck do
     url "https://raw.githubusercontent.com/openvanilla/openvanilla/master/Source/Mac/OpenVanilla-Info.plist"
-    strategy :page_match do |page|
-      shortversion = page.match(/CFBundleShortVersionString.*?\n.*?(\d+(?:\.\d+)+)/i)
-      version = page.match(/CFBundleVersion.*?\n.*?(\d+(?:\.\d+)*)/i)
-      next if shortversion.blank? || version.blank?
+    strategy :xml do |xml|
+      short_version = xml.elements["//key[text()='CFBundleShortVersionString']"]&.next_element&.text&.strip
+      version = xml.elements["//key[text()='CFBundleVersion']"]&.next_element&.text&.strip
+      next if short_version.blank? || version.blank?
 
-      "#{shortversion[1]},#{version[1]}"
+      "#{short_version},#{version}"
     end
   end
 

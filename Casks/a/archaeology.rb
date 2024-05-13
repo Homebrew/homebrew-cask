@@ -9,9 +9,12 @@ cask "archaeology" do
 
   livecheck do
     url "https://www.mothersruin.com/software/Archaeology/data/ArchaeologyVersionInfo.plist"
-    regex(/CFBundleShortVersionString.*?\n.*?(\d+(?:\.\d+)*).*?\n.*?CFBundleVersion.*?\n.*?(\d+(?:\.\d+)*)/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+    strategy :xml do |xml|
+      short_version = xml.elements["//key[text()='CFBundleShortVersionString']"]&.next_element&.text&.strip
+      version = xml.elements["//key[text()='CFBundleVersion']"]&.next_element&.text&.strip
+      next if short_version.blank? || version.blank?
+
+      "#{short_version},#{version}"
     end
   end
 

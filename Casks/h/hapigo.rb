@@ -9,7 +9,9 @@ cask "hapigo" do
 
   livecheck do
     url "https://hapigo.com/update/cast.plist"
-    regex(%r{<key>version</key>\s*\n\s*<string>(\d+(?:\.\d+)+)</string>}i)
+    strategy :xml do |xml|
+      xml.get_elements("//key[text()='version']").map { |item| item.next_element&.text&.strip }
+    end
   end
 
   auto_updates true
