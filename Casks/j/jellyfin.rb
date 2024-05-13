@@ -23,7 +23,7 @@ cask "jellyfin" do
     "~/.cache/jellyfin/",
     "~/.config/jellyfin/",
     "~/.local/share/jellyfin/",
-    "~/Library/Application Support/jellyfin/",
+    "~/Library/Application Support/jellyfin",
     "~/Library/Preferences/Jellyfin.Server.plist",
   ]
 end
