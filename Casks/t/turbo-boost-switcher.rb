@@ -9,8 +9,13 @@ cask "turbo-boost-switcher" do
   homepage "https://www.rugarciap.com/turbo-boost-switcher-for-os-x/"
 
   livecheck do
-    url "https://www.rugarciap.com/turbo-boost-switcher-for-os-x-blog/"
-    regex(%r{href=.*?/Turbo[._-]Boost[._-]Switcher[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    url "https://api.rugarciap.com/tbs_version_free"
+    strategy :page_match do |page|
+      match = page.match(/(\d{1})(\d{2})(\d{1})/)
+      next if match.blank?
+
+      "#{match[1]}.#{match[2]}.#{match[3]}"
+    end
   end
 
   depends_on arch: :x86_64
