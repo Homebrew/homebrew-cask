@@ -1,18 +1,19 @@
 cask "rescuetime" do
   version "3.2.0.10"
-  sha256 :no_check
+  sha256 "f4f657c2e1334a713a2168527176242eaa2cad12ba2033950228110161aaca89"
 
-  url "https://assets.rescuetime.com/installers/RescueTimeInstaller_X.app.zip"
+  url "https://assets.rescuetime.com/installers/RescueTimeInstaller_#{version}.app.zip"
   name "RescueTime"
   desc "Time optimising application"
   homepage "https://www.rescuetime.com/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://www.rescuetime.com/installers/appcast/rtx"
+    strategy :sparkle
   end
 
-  auto_updates
+  auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "RescueTime.app"
 
