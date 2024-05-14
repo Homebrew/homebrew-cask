@@ -84,6 +84,7 @@ cardpresso
 chatall
 chatbox
 chia
+chipmunk
 chirp
 chromedriver
 chromedriver@beta
@@ -157,6 +158,7 @@ elephas
 elephicon
 eloston-chromium
 emacs@nightly
+emclient
 enpass
 evernote
 expressvpn
@@ -188,6 +190,7 @@ fossa
 foxglove-studio
 free42-binary
 free42-decimal
+freeyourmusic
 fsnotes
 futubull
 fxfactory
@@ -195,6 +198,7 @@ gather
 gcs
 gdevelop
 geogebra
+geogebra@5
 git-credential-manager
 gitbutler
 github
@@ -207,9 +211,7 @@ godspeed
 goland
 goodsync
 google-chrome@beta
-google-chrome@beta
 google-chrome@canary
-google-chrome@dev
 google-chrome@dev
 google-cloud-sdk
 gpxsee
@@ -231,6 +233,7 @@ hydrus-network
 ibkr
 ibm-cloud-cli
 iina-plus
+imazing
 inso
 insomnia
 intellij-idea
@@ -241,10 +244,12 @@ iterm2@beta
 iterm2@nightly
 jami
 jamie
+java@beta
 jdownloader
 jetbrains-gateway
 jetbrains-toolbox
 jgrennison-openttd
+jitsi-meet
 jupyterlab
 juxtacode
 keymapp
@@ -262,6 +267,7 @@ libreoffice
 libreoffice-language-pack
 librewolf
 lightburn
+limitless
 linear-linear
 lm-studio
 logi-options-plus
@@ -304,6 +310,7 @@ mindmac
 miniforge
 mitmproxy
 mixed-in-key
+mixxx
 mixxx@snapshot
 mmhmm
 mochi
@@ -332,7 +339,6 @@ navicat-for-postgresql
 navicat-for-sql-server
 navicat-for-sqlite
 navicat-premium
-navicat-premium-essentials
 netron
 nextcloud
 nordlayer
@@ -351,6 +357,7 @@ onekey
 openaudible
 opencat
 openlens
+openscad@snapshot
 openshift-client
 opera
 opera-developer
@@ -402,12 +409,14 @@ pritunl
 private-internet-access
 proton-drive
 proton-mail
+protonmail-bridge
 protonvpn
 proxyman
 purei-play
 puzzles
 pycharm
 pycharm-ce
+pyfa
 qbittorrent
 qgis
 qlab
@@ -428,6 +437,7 @@ reqable
 restfox
 rewind
 rider
+rippling
 rive
 rode-central
 rstudio
@@ -437,6 +447,8 @@ rustrover
 santa
 sapmachine-jdk
 screen-studio
+screens-connect
+securityspy
 segger-jlink
 sentinel
 sequel-ace
@@ -464,6 +476,7 @@ sourcetree
 sourcetree@beta
 spacedrive
 spark-ar-studio
+sparrow
 splice
 spybuster
 standard-notes
@@ -477,21 +490,25 @@ superkey
 superlist
 supernotes
 superproductivity
+surge
 swiftformat-for-xcode
 tableau
 tableau-prep
 tableau-public
 tableau-reader
+tableflip
 tableplus
 tailscale
 teamviewer
 telegram
+telegram-a
 telegram-desktop
 teleport-connect
 tenable-nessus-agent
 tencent-meeting
 termius
 termius@beta
+texstudio
 thangs-sync
 ths
 thunderbird
@@ -499,6 +516,7 @@ ticktick
 tidelift
 timeular
 tinkerwell
+to-audio-converter
 todoist
 topaz-gigapixel-ai
 topaz-photo-ai
@@ -553,6 +571,7 @@ xcodepilot
 xemu
 xnviewmp
 yealink-meeting
+youtube-to-mp3
 zed
 zed@preview
 znote
@@ -560,4 +579,3 @@ zoc
 zoom
 zoom-for-it-admins
 zulu
-youtube-to-mp3
