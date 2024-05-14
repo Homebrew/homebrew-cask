@@ -1,8 +1,8 @@
 cask "navicat-premium-essentials" do
-  version "16.3.9"
+  version "17.0.6"
   sha256 :no_check
 
-  url "https://dn.navicat.com/download/navicatess#{version.major_minor.no_dots}_premium_en.dmg"
+  url "https://navicat.com/download/direct-download?product=navicatess#{version.major_minor.no_dots}_premium_en.dmg&location=1"
   name "Navicat Premium Essentials"
   desc "Database administration and development tool"
   homepage "https://navicat.com/products/navicat-essentials"
