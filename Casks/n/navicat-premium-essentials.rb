@@ -5,11 +5,9 @@ cask "navicat-premium-essentials" do
   url "https://dn.navicat.com/download/navicatess#{version.major_minor.no_dots}_premium_en.dmg"
   name "Navicat Premium Essentials"
   desc "Database administration and development tool"
-  homepage "https://navicat.com/products/navicat-essentials"
+  homepage "https://www.navicat.com/products/navicat-premium"
 
-  livecheck do
-    cask "navicat-premium"
-  end
+  deprecate! date: "2024-05-14", because: :discontinued
 
   depends_on macos: ">= :mojave"
 
