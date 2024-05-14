@@ -1,11 +1,8 @@
 cask "vcv-rack" do
-  arch arm: "arm64", intel: "x64"
+  version "2.5.2"
+  sha256 "f60ff318a131de2cebb7d48c79f0beec06f933af827f15773721d5dee272f4fc"
 
-  version "2.5.1"
-  sha256  arm:   "8b1515ca580a0ab69e7e9e16e82b5cf0f7cef4e107d7263d67d4e889604d8857",
-          intel: "37ce22538553367953d43659d3246c9707f4c64876809a7828b66cc5900eab7d"
-
-  url "https://vcvrack.com/downloads/RackFree-#{version}-mac-#{arch}.pkg"
+  url "https://vcvrack.com/downloads/RackFree-#{version}-mac-x64+arm64.pkg"
   name "VCV Rack"
   desc "Open-source virtual modular synthesiser"
   homepage "https://vcvrack.com/"
@@ -15,7 +12,7 @@ cask "vcv-rack" do
     regex(/###\s(\d+(?:\.\d+)+)/i)
   end
 
-  pkg "RackFree-#{version}-mac-#{arch}.pkg"
+  pkg "RackFree-#{version}-mac-x64+arm64.pkg"
 
   uninstall pkgutil: "com.vcvrack.rack"
 
