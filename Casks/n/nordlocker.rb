@@ -1,5 +1,5 @@
 cask "nordlocker" do
-  version "4.10.0"
+  version "4.24.0"
   sha256 :no_check
 
   url "https://downloads.nordcdn.com/apps/macos/generic/NordLocker/latest11plus/latest/NordLocker.pkg",
@@ -9,7 +9,7 @@ cask "nordlocker" do
   homepage "https://nordlocker.com/"
 
   livecheck do
-    url "https://downloads.nordcdn.com/apps/macos/generic/NordLocker/latest/update_pkg.xml"
+    url "https://downloads.nordcdn.com/apps/macos/generic/NordLocker/latest11plus/latest/update_pkg_11plus.xml"
     strategy :sparkle, &:short_version
   end
 
