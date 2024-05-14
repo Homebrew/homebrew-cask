@@ -1,6 +1,6 @@
 cask "openthesaurus-deutsch" do
-  version "2023.12.28"
-  sha256 "cb12ab497c71d0aa56cfa6ae2df4b5e5b9fb7eed424c35dd82400cc9ce66a9e5"
+  version "2024.05.14"
+  sha256 "1fb1e2ae141e646c5caf56cb139383209344cdeca653cb4aac138fcfc4e06388"
 
   url "https://github.com/Tekl/openthesaurus-deutsch/releases/download/v#{version}/OpenThesaurus_Deutsch_dictionaryfile.zip",
       verified: "github.com/Tekl/openthesaurus-deutsch/"
