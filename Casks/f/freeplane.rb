@@ -17,6 +17,8 @@ cask "freeplane" do
     strategy :page_match
   end
 
+  depends_on macos: ">= :el_capitan"
+
   app "Freeplane.app"
 
   zap trash: "~/Library/Saved Application State/org.freeplane.launcher.savedState"
