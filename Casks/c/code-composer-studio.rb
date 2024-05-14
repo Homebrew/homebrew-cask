@@ -13,7 +13,7 @@ cask "code-composer-studio" do
   end
 
   installer script: {
-    executable: "ccs_setup_#{version}.app/Contents/MacOS/installbuilder.sh",
+    executable: "CCS#{version}_osx/ccs_setup_#{version}.app/Contents/MacOS/installbuilder.sh",
     args:       ["--mode", "unattended", "--prefix", "/Applications/TI"],
   }
 
