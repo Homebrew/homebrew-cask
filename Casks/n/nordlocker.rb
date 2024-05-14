@@ -9,7 +9,7 @@ cask "nordlocker" do
   homepage "https://nordlocker.com/"
 
   livecheck do
-    url "https://downloads.nordcdn.com/apps/macos/generic/NordLocker/latest/update_pkg.xml"
+    url "https://downloads.nordcdn.com/apps/macos/generic/NordLocker/latest11plus/latest/update_pkg_11plus.xml"
     strategy :sparkle, &:short_version
   end
 
