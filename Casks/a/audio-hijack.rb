@@ -16,7 +16,7 @@ cask "audio-hijack" do
     depends_on macos: ">= :big_sur"
   end
   on_sonoma :or_newer do
-    version "4.4.0"
+    version "4.4.1"
 
     url "https://rogueamoeba.com/audiohijack/download/AudioHijack-ARK.zip"
 
