@@ -1,9 +1,9 @@
 cask "freeplane" do
   arch arm: "apple", intel: "intel"
 
-  version "1.11.13"
-  sha256 arm:   "b37e5ed36de03285f2052d0d6eb5f0c9b1e2fc70b6bc7052b655152be9103db1",
-         intel: "fdb7041268db1198d47ad75ecbedf0453bce26c440e2c4dbe568f18e164cd4e2"
+  version "1.11.14"
+  sha256 arm:   "ff00170a72459ca86b5f6bac432b43f82781ccdddef70765596c5fa8cc88e57e",
+         intel: "c3fa615ef95fd369f80f3b1da7d6afd43ab8d5263fb2a990a0bcfa702829487d"
 
   url "https://downloads.sourceforge.net/freeplane/Freeplane-#{version}-#{arch}.dmg",
       verified: "downloads.sourceforge.net/freeplane/"
@@ -16,6 +16,8 @@ cask "freeplane" do
     regex(%r{/freeplane%20stable/Freeplane[._-]v?(\d+(?:\.\d+)+)(?:[._-]#{arch})?\.dmg}i)
     strategy :page_match
   end
+
+  depends_on macos: ">= :el_capitan"
 
   app "Freeplane.app"
 
