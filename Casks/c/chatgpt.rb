@@ -5,10 +5,11 @@ cask "chatgpt" do
   url "https://persistent.oaistatic.com/sidekick/public/ChatGPT_Desktop_public_latest.dmg",
       verified: "persistent.oaistatic.com/sidekick/public/"
   name "ChatGPT"
-  desc "OpenAI official ChatGPT desktop app for GPT-4o / GPT-3.5"
+  desc "OpenAI's official ChatGPT desktop app"
   homepage "https://chatgpt.com/"
 
   depends_on macos: ">= :sonoma"
+  depends_on arch: :arm64
 
   app "ChatGPT.app"
 
