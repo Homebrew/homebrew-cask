@@ -8,8 +8,16 @@ cask "little-snitch" do
   homepage "https://www.obdev.at/products/littlesnitch/index.html"
 
   livecheck do
-    url "https://www.obdev.at/products/littlesnitch/download.html"
-    regex(%r{href=.*?/LittleSnitch[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
+    url "https://sw-update.obdev.at/update-feeds/littlesnitch#{version.major}.plist"
+    regex(/LittleSnitch[._-]v?(\d+(?:\.\d+)+)\.dmg/)
+    strategy :xml do |xml, regex|
+      xml.get_elements("//key[text()='DownloadURL']").map do |item|
+        match = item.next_element&.text&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
+    end
   end
 
   auto_updates true
