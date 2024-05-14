@@ -7,10 +7,7 @@ cask "northernspysoftware-colorpicker" do
   desc "Utility to use the Apple colour picker anywhere"
   homepage "http://www.northernspysoftware.com/software/colorpicker"
 
-  livecheck do
-    url :homepage
-    regex(/ColorPicker_(\d+(?:\.\d+)*)\.dmg/i)
-  end
+  disable! date: "2024-05-14", because: :no_longer_available
 
   app "ColorPicker.app"
 
