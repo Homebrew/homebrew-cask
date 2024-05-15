@@ -1,0 +1,64 @@
+name: Google Fonts
+
+on:
+  push:
+    branches:
+      - debug-google-fonts
+  schedule:
+    - cron: "0 0 * * 0" # weekly
+  workflow_dispatch:
+
+jobs:
+  google-fonts:
+    name: ${{ matrix.mode }}
+    if: github.repository == 'Homebrew/homebrew-cask'
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - noun: addition
+            mode: add
+          - noun: update
+            mode: update
+          - noun: deletion
+            mode: delete
+    steps:
+      - name: Checkout homebrew/cask-fonts
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Checkout google/fonts
+        uses: actions/checkout@v4
+        with:
+          repository: google/fonts
+          path: vendor/google-fonts
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install Python packages
+        run: pip3 install gftools html2text jinja2 protobuf
+
+      - name: Import Google Fonts
+        run: ./developer/bin/import_google_fonts vendor/google-fonts ${{ matrix.mode }}
+
+      - name: Create pull request with updated files
+        id: create-pull-request
+        uses: peter-evans/create-pull-request@6d6857d36972b65feb161a90e484f2984215f83e
+        with:
+          branch: auto-${{ matrix.mode }}-google-fonts
+          commit-message: Update Google Fonts
+          base: master
+          author: BrewTestBot <BrewTestBot@users.noreply.github.com>
+          committer: BrewTestBot <BrewTestBot@users.noreply.github.com>
+          title: Automatic ${{ matrix.noun }} of Google Fonts
+          body: |
+            This pull request was created automatically by the [`google-fonts`](https://github.com/Homebrew/homebrew-cask/blob/master/.github/workflows/google-fonts.yml) workflow.
+          token: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
+      - name: Print pull request URL
+        if: steps.create-pull-request.outputs.pull-request-number
+        run: |
+          echo "Created pull request:"
+          echo "  https://github.com/${{ github.repository }}/pull/${{ steps.create-pull-request.outputs.pull-request-number }}"
