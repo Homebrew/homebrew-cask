@@ -7,10 +7,8 @@ cask "opera-crypto@developer" do
   desc "Web3 browser"
   homepage "https://www.opera.com/crypto/next"
 
-  livecheck do
-    url "https://get.geo.opera.com/pub/opera_crypto-developer/"
-    regex(%r{href=["']?v?(\d+(?:\.\d+)+)/?["' >]}i)
-  end
+  # https://blogs.opera.com/desktop/2024/02/opera-delists-the-experimental-crypto-browser/
+  deprecate! date: "2024-05-15", because: :discontinued
 
   auto_updates true
 
