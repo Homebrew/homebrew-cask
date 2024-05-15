@@ -19,7 +19,7 @@ cask "tripmode" do
 
     livecheck do
       url "https://tripmode-updates.ch/app/appcast-v#{version.major}.xml"
-      regex(%r{/TripMode[._-]v?(\d+(?:\.\d+)*)[._-](\d+)\.zip}i)
+      regex(%r{/TripMode[._-]v?(\d+(?:\.\d+)+)[._-](\d+)\.zip}i)
       strategy :sparkle do |item, regex|
         item.url.scan(regex).map do |match|
           if match[1] == item.version
