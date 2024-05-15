@@ -1,11 +1,12 @@
 cask "philips-hue-sync" do
-  version "1.11.2.60"
+  version "1.12.0.64"
   sha256 :no_check
 
-  url "https://firmware.meethue.com/v1/download?deviceTypeId=HueSyncMac"
+  url "https://firmware.meethue.com/v1/download?deviceTypeId=HueSyncMac",
+      verified: "firmware.meethue.com/v1/"
   name "Philips Hue Sync"
   desc "Control your smart light system"
-  homepage "https://www2.meethue.com/en-us/entertainment/hue-sync"
+  homepage "https://www.philips-hue.com/en-us/explore-hue/propositions/entertainment/sync-with-pc"
 
   livecheck do
     url :url
