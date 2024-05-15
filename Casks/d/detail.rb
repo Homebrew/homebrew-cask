@@ -8,7 +8,7 @@ cask "detail" do
   desc "Pro camera for video calls"
   homepage "https://detail.co/"
 
-  deprecate! date: "2024-03-28", because: "latest versions are only available in the Mac App Store"
+  deprecate! date: "2024-03-28", because: :moved_to_mas
 
   auto_updates true
   depends_on macos: ">= :big_sur"
