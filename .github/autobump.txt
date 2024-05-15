@@ -134,10 +134,12 @@ deezer
 descript
 desktoppr
 devpod
+devtunnel
 discord
 discord@canary
 discord@development
 discord@ptb
+diskcatalogmaker
 dockx
 double-commander
 douyin-chat
@@ -235,7 +237,9 @@ ibm-cloud-cli
 iina-plus
 imazing
 inso
+inso@beta
 insomnia
+insomnia@alpha
 intellij-idea
 intellij-idea-ce
 intellij-idea@eap
@@ -361,7 +365,7 @@ openlens
 openscad@snapshot
 openshift-client
 opera
-opera-developer
+opera@developer
 opera-gx
 opera@beta
 operadriver
@@ -437,6 +441,7 @@ remotehamradio
 reqable
 restfox
 rewind
+rhino
 rider
 rippling
 rive
@@ -459,6 +464,7 @@ sf
 sfm
 shadow
 shapr3d
+shearwater-cloud
 sigmaos
 signal
 signal@beta
@@ -499,6 +505,7 @@ tableau-public
 tableau-reader
 tableflip
 tableplus
+tageditor
 tailscale
 teamviewer
 telegram
