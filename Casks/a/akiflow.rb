@@ -1,6 +1,6 @@
 cask "akiflow" do
-  version "2.42.11,8ac23307"
-  sha256 "3ae3b4b328c5f83f59a56b8a4d4d0e1fcd8b69b41f1fdaf536fe78da9628e390"
+  version "2.42.12,28093c14"
+  sha256 "8ce9f53c8b47dbbd05cf2865f3ae5d55beaaf7e8c9b85c8293f7994fe19cdcb0"
 
   url "https://download.akiflow.com/builds/Akiflow-#{version.csv.first}-#{version.csv.second}-universal.dmg"
   name "Akiflow"
