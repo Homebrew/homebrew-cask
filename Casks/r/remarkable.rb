@@ -8,7 +8,7 @@ cask "remarkable" do
   desc "View, Screen Share, organise, import, and download files to a reMarkable device"
   homepage "https://remarkable.com/"
 
-  deprecate! date: "2024-01-17", because: "has moved to the app store"
+  deprecate! date: "2024-01-17", because: :moved_to_mas
 
   auto_updates true
   depends_on macos: ">= :big_sur"
