@@ -90,11 +90,11 @@ end
         token = self.font_name().lower().replace(" ", "-")
         return f"font-{token}"
     
-    def token_first_letter(self):
-        return self.token().split("font-")[1][0]
+    def token_sharding_dir(self):
+        return "font-" + self.token().split("font-")[1][0]
 
     def dest_path(self):
-        return os.path.join("Casks", "font", f"{self.token_first_letter()}", f"{self.token()}.rb")
+        return os.path.join("Casks", "font", f"{self.token_sharding_dir()}", f"{self.token()}.rb")
 
     def name_path(self):
         return self.font_name().replace(" ", "+")
