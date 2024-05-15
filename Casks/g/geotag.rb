@@ -1,6 +1,6 @@
 cask "geotag" do
-  version "5.2.1"
-  sha256 "e0d87bdee4b1888611267d2ab2fba3cef3c0a3b0e99671343c92395677536f38"
+  version "5.3"
+  sha256 "2782705e4672bce72d90c23eaa974cc68fc66f19960541772a2b96afa83d863e"
 
   url "https://www.snafu.org/GeoTag/GeoTag-#{version}.dmg"
   name "GeoTag"
