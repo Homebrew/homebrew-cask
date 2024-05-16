@@ -1,6 +1,6 @@
 cask "duplicati" do
-  version "2.0.7.1_beta_2023-05-25"
-  sha256 "99c7987cb2e8c8ac03bdfc31429a82db0e1364995fd269e8ef2a3514045eda05"
+  version "2.0.8.1_beta_2024-05-07"
+  sha256 "c5576c52e838f81c12b7988a70d34562d8622013e024356d28df450835a34523"
 
   url "https://updates.duplicati.com/beta/duplicati-#{version}.dmg"
   name "Duplicati"
