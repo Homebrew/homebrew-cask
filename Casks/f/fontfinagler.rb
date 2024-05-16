@@ -1,4 +1,4 @@
-cask "font-finagler" do
+cask "fontfinagler" do
   version "2.0.3"
   sha256 "40898491baaafcfc06df8a132ba3d161675d2df492c8a133bc807008469c106a"
 
