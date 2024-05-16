@@ -1,5 +1,4 @@
 cask "openbb-terminal" do
-  # raised an issue about the x86.64 typo, https://github.com/OpenBB-finance/OpenBBTerminal/issues/5405
   arch arm: "ARM64", intel: "x86.64"
 
   version "3.2.5"
@@ -12,10 +11,7 @@ cask "openbb-terminal" do
   desc "Open-source investment research terminal"
   homepage "https://openbb.co/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  deprecate! date: "2024-05-16", because: :discontinued
 
   depends_on macos: ">= :monterey"
 
