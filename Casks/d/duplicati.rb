@@ -16,8 +16,6 @@ cask "duplicati" do
 
   app "Duplicati.app"
 
-  uninstall delete: "/Applications/Duplicati.app"
-
   zap trash: [
     "~/.config/Duplicati",
     "~/Library/Application Support/Duplicati",
