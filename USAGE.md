@@ -16,7 +16,7 @@ To search for casks, use `brew search`. Let’s see if there’s a cask for Goog
 ```console
 $ brew search --cask google-chrome
 ==> Casks
-google-chrome                google-chrome-beta           google-chrome-canary         google-chrome-dev
+google-chrome                google-chrome@beta           google-chrome@canary         google-chrome@dev
 ```
 
 ## Installing Casks
