@@ -19,4 +19,8 @@ cask "svp" do
     "~/Library/Preferences/com.svp-team.SVP4.plist",
     "~/Library/Preferences/com.svp-team.svpmanager.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
