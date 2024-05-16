@@ -1,8 +1,9 @@
 cask "font-maple" do
-  version "6.3"
-  sha256 "029e0ec0ffd0185cfdfb19f5dab7a489ad7fa7047166fbfe1fe6666625dcc5c6"
+  # Check on next version bump if the `container` stanza can be removed
+  version "6.4"
+  sha256 "7f07c594d6da5971428dc9e8ecd2b7759a80cec1cb87dadd1a44aadbac5cf6ac"
 
-  url "https://github.com/subframe7536/Maple-font/releases/download/v#{version}/MapleMono.zip"
+  url "https://github.com/subframe7536/Maple-font/releases/download/v#{version}/MapleMono-otf.zip"
   name "Maple Mono"
   desc "Nerd Font font with round corners"
   homepage "https://github.com/subframe7536/Maple-font"
@@ -12,10 +13,14 @@ cask "font-maple" do
     strategy :github_latest
   end
 
-  font "ttf/MapleMono-Bold.ttf"
-  font "ttf/MapleMono-BoldItalic.ttf"
-  font "ttf/MapleMono-Italic.ttf"
-  font "ttf/MapleMono-Regular.ttf"
+  container type: :tar
+
+  font "MapleMono-Bold.otf"
+  font "MapleMono-BoldItalic.otf"
+  font "MapleMono-Italic.otf"
+  font "MapleMono-Light.otf"
+  font "MapleMono-LightItalic.otf"
+  font "MapleMono-Regular.otf"
 
   # No zap stanza required
 end
