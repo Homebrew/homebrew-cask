@@ -8,6 +8,11 @@ cask "firefly-shimmer" do
   desc "Official wallet for IOTA"
   homepage "https://firefly.iota.org/"
 
+  livecheck do
+    url "https://dl.firefly.iota.org/shimmer-mac.yml"
+    strategy :electron_builder
+  end
+
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
