@@ -524,6 +524,7 @@ supernotes
 superproductivity
 surge
 swiftformat-for-xcode
+tableflip
 tableplus
 tageditor
 tailscale
