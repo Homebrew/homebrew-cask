@@ -1,6 +1,6 @@
 cask "dcp-o-matic-playlist-editor" do
-  version "2.16.83"
-  sha256 "4024809c9f0fb3ac78ec703e21c160c42bd520d9fe034d4958553bb0441cd65c"
+  version "2.16.84"
+  sha256 "3434d7500e2923c3c40605161ed7bc6f0ee1c03abbca07f86158491a2495fea3"
 
   url "https://dcpomatic.com/dl.php?id=osx-10.10-playlist&version=#{version}"
   name "DCP-o-matic Playlist Editor"

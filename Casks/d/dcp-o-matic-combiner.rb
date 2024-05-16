@@ -1,6 +1,6 @@
 cask "dcp-o-matic-combiner" do
-  version "2.16.83"
-  sha256 "c3db4b43fa797458b0eb9e24f120ed006f6fbfeabdd865d6d5e5ffb69e93b0be"
+  version "2.16.84"
+  sha256 "e95c31f9ba7b416bb594f903259058d6260ab24617a96b200558bc71ceaca4ba"
 
   url "https://dcpomatic.com/dl.php?id=osx-10.10-combiner&version=#{version}"
   name "DCP-o-matic-combiner"

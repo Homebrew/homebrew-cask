@@ -2,15 +2,15 @@ cask "wireshark" do
   arch arm: "Arm", intel: "Intel"
   livecheck_arch = on_arch_conditional arm: "arm", intel: "x86-"
 
-  version "4.2.4"
+  version "4.2.5"
 
   on_arm do
-    sha256 "93c874a00c3f436bb0a234dd170e30fb3a966736aea7590013e48a1eeb612a01"
+    sha256 "72d670ad068ac46c1d16ffb5fc8e6b582136a0eed6fc278b9f36877311e4e4af"
 
     depends_on macos: ">= :big_sur"
   end
   on_intel do
-    sha256 "00f6f08652263d4a93249ff1ba8fdff28de16806184d9d26e0dba1ab8b9ed604"
+    sha256 "67a1ea88226c2f5699c3c6c36fb0006d84c62bdbfe5474dccff30860fd9f81b7"
 
     depends_on macos: ">= :mojave"
   end

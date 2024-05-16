@@ -1,5 +1,5 @@
 cask "tresorit" do
-  version "3.5.2982.4190"
+  version "3.5.3013.4230"
   sha256 :no_check
 
   url "https://installerstorage.blob.core.windows.net/public/install/Tresorit.dmg",

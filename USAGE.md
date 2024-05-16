@@ -16,7 +16,7 @@ To search for casks, use `brew search`. Let’s see if there’s a cask for Goog
 ```console
 $ brew search --cask google-chrome
 ==> Casks
-google-chrome                google-chrome-beta           google-chrome-canary         google-chrome-dev
+google-chrome                google-chrome@beta           google-chrome@canary         google-chrome@dev
 ```
 
 ## Installing Casks
@@ -116,31 +116,9 @@ KeepingYouAwake.app (App)
 
 Since the Homebrew Cask repository is a Homebrew tap, you’ll pull down the latest casks every time you issue the regular Homebrew command `brew update`. You can check for outdated casks with `brew outdated` and install the outdated casks with `brew upgrade`. Many applications update themselves, so their casks are ignored by `brew outdated` and `brew upgrade`. This behaviour can be overridden by adding `--greedy` to either command.
 
-## Updating/Upgrading the Homebrew Cask Tool
+## Updating/Upgrading Homebrew Cask
 
 Homebrew [automatically taps and keeps Homebrew Cask updated](https://github.com/Homebrew/homebrew-cask/pull/15381). `brew update` is all that is required.
-
-## Additional Tap (optional)
-
-The primary Homebrew Cask tap includes most of the casks that a typical user will be interested in. There is an additional tap where we store different fonts as casks.
-
-| tap name | description |
-| -------- | ----------- |
-| [homebrew/cask-fonts](https://github.com/Homebrew/homebrew-cask-fonts)       | contains casks that install fonts
-
-You can tap the above with the `brew tap` command:
-
-```bash
-brew tap homebrew/cask-fonts
-```
-
-after which casks from the new tap will be available to `search` or `install` just like casks from the main tap. `brew update` will automatically keep your new tap up to date.
-
-You may also specify a fully-qualified cask token (which includes the tap) for any `brew` command. This will implicitly add the tap if you have not previously added it with `brew tap`:
-
-```bash
-brew install homebrew/cask-fonts/font-symbola
-```
 
 ## Options
 

@@ -11,15 +11,24 @@ cask "tripmode" do
     end
   end
   on_big_sur :or_newer do
-    version "3.2.3,1834"
+    version "3.2.3,1384,1834"
     sha256 "a5a50fdfe81e78033b16974456fc53434e4c1237ad40f5b881c368e32c6aacdd"
 
-    url "https://tripmode-updates.ch/app/TripMode-#{version.csv.first}-#{version.csv.second}.zip",
+    url "https://tripmode-updates.ch/app/TripMode-#{version.csv.first}-#{version.csv.third || version.csv.second}.zip",
         verified: "tripmode-updates.ch/app/"
 
     livecheck do
       url "https://tripmode-updates.ch/app/appcast-v#{version.major}.xml"
-      strategy :sparkle
+      regex(%r{/TripMode[._-]v?(\d+(?:\.\d+)+)[._-](\d+)\.zip}i)
+      strategy :sparkle do |item, regex|
+        item.url.scan(regex).map do |match|
+          if match[1] == item.version
+            "#{item.short_version},#{item.version}"
+          else
+            "#{item.short_version},#{item.version},#{match[1]}"
+          end
+        end
+      end
     end
 
     depends_on macos: ">= :big_sur"
