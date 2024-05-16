@@ -7,6 +7,8 @@ cask "svp" do
   desc "Real Time Video Frame Rate Conversion"
   homepage "https://www.svp-team.com/"
 
+  depends_on macos: ">= :mojave"
+
   livecheck do
     url "https://www.svp-team.com/files/svp4-latest.php?mac"
     strategy :header_match
