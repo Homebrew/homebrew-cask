@@ -1,6 +1,6 @@
 cask "bean" do
-  version "3.6.4"
-  sha256 "2d239ba7eba05a78e041cc9e77c60142a98c8ffb25f46078e89e7d11b44cfade"
+  version "3.7.0"
+  sha256 "0a9efdddf8cf86c1748be828cf7fbf86083b5f22d2941df6357ac5a79f14e3ae"
 
   url "https://www.bean-osx.com/releases/Bean-Install-#{version.dots_to_hyphens}.zip"
   name "Bean"
