@@ -1,16 +1,17 @@
 cask "tableau" do
-  version "2024.1.1"
-  sha256 "823e74c090b8d38bf0114caba84ba1d7c848429dc2ba4f1cc241b705ece7191c"
+  version "2024.1.2"
+  sha256 "a61feab30c47f4ed6502895eb97ef5b84aa0615ffb2f646c58ad5be7e836c61c"
 
-  url "https://downloads.tableau.com/tssoftware/TableauDesktop-#{version.dots_to_hyphens}.dmg"
+  url "https://downloads.tableau.com/tssoftware/TableauDesktop-#{version.dots_to_hyphens}.dmg",
+      user_agent: "curl/8.7.1"
   name "Tableau Desktop"
   desc "Data visualization software"
   homepage "https://www.tableau.com/products/desktop"
 
   livecheck do
-    url "https://www.tableau.com/downloads/desktop/mac"
-    strategy :header_match do |headers|
-      headers["location"][/TableauDesktop[._-]v?(\d+(?:-\d+)+)\.dmg/i, 1].tr("-", ".")
+    url "https://downloads.tableau.com/TableauAutoUpdate.xml"
+    strategy :xml do |xml|
+      xml.get_elements("//version").map { |item| item.attributes["releaseNotesVersion"] }
     end
   end
 

@@ -524,10 +524,6 @@ supernotes
 superproductivity
 surge
 swiftformat-for-xcode
-tableau
-tableau-prep
-tableau-public
-tableau-reader
 tableflip
 tableplus
 tageditor

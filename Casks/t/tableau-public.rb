@@ -1,16 +1,17 @@
 cask "tableau-public" do
-  version "2024.1.1"
-  sha256 "25e001e99acc0892ca1365693bcbf5e4aea1034ffe8d6111f2b6301a4fc6aa20"
+  version "2024.1.2"
+  sha256 "88fabddc5564994ad617807662e128a29a0e4b8e3a5e589f750761f56fd775d2"
 
-  url "https://downloads.tableau.com/public/TableauPublic-#{version.dots_to_hyphens}.dmg"
+  url "https://downloads.tableau.com/public/TableauPublic-#{version.dots_to_hyphens}.dmg",
+      user_agent: "curl/8.7.1"
   name "Tableau Public"
   desc "Explore, create and publicly share data visualisations online"
   homepage "https://public.tableau.com/s/"
 
   livecheck do
-    url "https://www.tableau.com/downloads/public/mac"
-    strategy :header_match do |headers|
-      headers["location"][/TableauPublic[._-]v?(\d+(?:-\d+)+)\.dmg/i, 1].tr("-", ".")
+    url "https://downloads.tableau.com/TableauAutoUpdate.xml"
+    strategy :xml do |xml|
+      xml.get_elements("//version").map { |item| item.attributes["releaseNotesVersion"] }
     end
   end
 
