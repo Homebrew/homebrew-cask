@@ -5,7 +5,8 @@ cask "font-wix-madefor-text" do
   url "https://github.com/wix-incubator/wixmadefor/releases/download/#{version}/wixmadefor-fonts.zip",
       verified: "github.com/wix-incubator/wixmadefor/"
   name "Wix Madefor Text"
-  homepage "https://fonts.google.com/specimen/Wix+Madefor+Text"
+  desc "Typeface with wide geometric proportions, clean curves, and grotesk terminals"
+  homepage "https://www.wix.com/typeface/madefor"
 
   font "wixmadefor-fonts/fonts/variable/WixMadeforText[wght].ttf"
   font "wixmadefor-fonts/fonts/variable/WixMadeforText-Italic[wght].ttf"
