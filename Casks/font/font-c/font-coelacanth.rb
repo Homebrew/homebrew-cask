@@ -7,6 +7,12 @@ cask "font-coelacanth" do
   desc "Serif typeface inspired by Bruce Rogers' Centaur"
   homepage "https://github.com/Fuzzypeg/Coelacanth"
 
+  livecheck do
+    url "https://github.com/Fuzzypeg/Coelacanth/tree/master/release"
+    regex(/coelacanth[._-]v?(\d+(?:\.\d+)+)\.zip/i)
+    strategy :page_match
+  end
+
   font "Coelacanth.otf"
   font "CoelacanthBold.otf"
   font "CoelacanthCaption.otf"
