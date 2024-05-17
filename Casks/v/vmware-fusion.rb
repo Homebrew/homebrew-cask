@@ -18,6 +18,7 @@ cask "vmware-fusion" do
   auto_updates true
   conflicts_with cask: "vmware-fusion@preview"
   depends_on macos: ">= :monterey"
+  container nested: "com.vmware.fusion.zip"
 
   app "#{staged_path}/payload/VMware Fusion.app"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vkd/bin/vctl"
@@ -46,10 +47,6 @@ cask "vmware-fusion" do
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-vmx"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-vmx-debug"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-vmx-stats"
-
-  preflight do
-    system_command "/usr/bin/unzip", args: ["-o", "#{staged_path}/com.vmware.fusion.zip", "-d", staged_path.to_s]
-  end
 
   postflight do
     system_command "#{appdir}/VMware Fusion.app/Contents/Library/Initialize VMware Fusion.tool",
