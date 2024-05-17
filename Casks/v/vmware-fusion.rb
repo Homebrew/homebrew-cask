@@ -1,8 +1,8 @@
 cask "vmware-fusion" do
-  version "13.5.1,23298085"
-  sha256 "7ff2797c44f9569980acb0c41ebf647c9db59556602d5d7f0a2f0d2be3c4cc86"
+  version "13.5.2,23775688"
+  sha256 "4d470e2160acb5da7d52d478f6ef12829c5ebe3c04e3154652466ba0bfeed3f6"
 
-  url "https://download3.vmware.com/software/FUS-#{version.csv.first.no_dots}/VMware-Fusion-#{version.csv.first}-#{version.csv.second}_universal.dmg"
+  url "http://softwareupdate.vmware.com/cds/vmw-desktop/fusion/#{version.csv.first}/#{version.csv.second}/universal/core/com.vmware.fusion.zip.tar"
   name "VMware Fusion"
   desc "Create, manage, and run virtual machines"
   homepage "https://www.vmware.com/products/fusion.html"
@@ -19,7 +19,7 @@ cask "vmware-fusion" do
   conflicts_with cask: "vmware-fusion@preview"
   depends_on macos: ">= :monterey"
 
-  app "VMware Fusion.app"
+  app "#{staged_path}/payload/VMware Fusion.app"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vkd/bin/vctl"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmnet-bridge"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmnet-cfgcli"
@@ -46,6 +46,10 @@ cask "vmware-fusion" do
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-vmx"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-vmx-debug"
   binary "#{appdir}/VMware Fusion.app/Contents/Library/vmware-vmx-stats"
+
+  preflight do
+    system_command "/usr/bin/unzip", args: ["-o", "#{staged_path}/com.vmware.fusion.zip", "-d", staged_path.to_s]
+  end
 
   postflight do
     system_command "#{appdir}/VMware Fusion.app/Contents/Library/Initialize VMware Fusion.tool",
