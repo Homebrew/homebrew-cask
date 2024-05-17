@@ -1,28 +1,31 @@
 cask "affinity-photo" do
-  version "2.4.2"
-  sha256 :no_check
+  version "2.4.2,2371"
+  sha256 "84b18af04a7272bcfd4c9009e34de5e8d297e892ae168b1fe64322f148506299"
 
-  url "https://store.serif.com/download/89007d/"
-  name "Affinity Photo #{version.major}"
+  url "https://s3-eu-west-1.amazonaws.com/affinity-update/mac2/retail/Affinity%20Photo%20#{version.csv.first.major}%20Affinity%20Store%20#{version.csv.second}.zip",
+      verified: "s3-eu-west-1.amazonaws.com/"
+  name "Affinity Photo #{version.csv.first.major}"
   desc "Professional image editing software"
   homepage "https://affinity.serif.com/en-us/photo/"
 
   livecheck do
-    url :url
-    strategy :header_match
+    url "https://go.seriflabs.com/affinity-update-mac-retail-photo#{version.csv.first.major}"
+    strategy :sparkle do |item|
+      "#{item.short_version},#{item.version}"
+    end
   end
 
   auto_updates true
   depends_on macos: ">= :catalina"
 
-  app "Affinity Photo #{version.major}.app"
+  app "Affinity Photo #{version.csv.first.major}.app"
 
   zap trash: [
-    "~/Library/Application Support/Affinity Photo 2",
-    "~/Library/Caches/com.seriflabs.affinityphoto2",
-    "~/Library/HTTPStorages/com.seriflabs.affinityphoto2",
-    "~/Library/Preferences/com.seriflabs.affinityphoto2.plist",
-    "~/Library/Saved Application State/com.seriflabs.affinityphoto2.savedState",
-    "~/Library/WebKit/com.seriflabs.affinityphoto2",
+    "~/Library/Application Support/Affinity Photo #{version.csv.first.major}",
+    "~/Library/Caches/com.seriflabs.affinityphoto#{version.csv.first.major}",
+    "~/Library/HTTPStorages/com.seriflabs.affinityphoto#{version.csv.first.major}",
+    "~/Library/Preferences/com.seriflabs.affinityphoto#{version.csv.first.major}.plist",
+    "~/Library/Saved Application State/com.seriflabs.affinityphoto#{version.csv.first.major}.savedState",
+    "~/Library/WebKit/com.seriflabs.affinityphoto#{version.csv.first.major}",
   ]
 end

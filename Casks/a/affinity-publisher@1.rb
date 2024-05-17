@@ -1,15 +1,16 @@
 cask "affinity-publisher@1" do
   version "1.10.8"
-  sha256 :no_check
+  sha256 "6d5675970b745775bd5c35d28d20e1c68fe0771cdc2c17161f6762c2730a1278"
 
-  url "https://store.serif.com/download/7ef252/"
+  url "https://s3-eu-west-1.amazonaws.com/affinity-update/mac/retail/Affinity%20Publisher-#{version}.app.zip",
+      verified: "s3-eu-west-1.amazonaws.com/"
   name "Affinity Publisher"
   desc "Professional desktop publishing software"
   homepage "https://affinity.serif.com/en-us/publisher/"
 
   livecheck do
-    url :url
-    strategy :header_match
+    url "https://go.seriflabs.com/affinity-update-mac-retail-publisher"
+    strategy :sparkle, &:version
   end
 
   auto_updates true

@@ -1,15 +1,16 @@
 cask "affinity-photo@1" do
   version "1.10.8"
-  sha256 :no_check
+  sha256 "02b1f30f890ae58cab9fa8bf9a509f4a9d8ad8c09de79baf499cd6f6fdd5bfb1"
 
-  url "https://store.serif.com/download/075b51/"
+  url "https://s3-eu-west-1.amazonaws.com/affinity-update/mac/retail/Affinity%20Photo-#{version}.app.zip",
+      verified: "s3-eu-west-1.amazonaws.com/"
   name "Affinity Photo"
   desc "Professional image editing software"
   homepage "https://affinity.serif.com/en-us/photo/"
 
   livecheck do
-    url :url
-    strategy :header_match
+    url "https://go.seriflabs.com/affinity-update-mac-retail-photo"
+    strategy :sparkle, &:version
   end
 
   auto_updates true
