@@ -76,6 +76,7 @@ buttercup
 c0re100-qbittorrent
 cahier
 camtasia
+camunda-modeler
 canva
 capacities
 captain
