@@ -9,7 +9,7 @@ cask "font-coelacanth" do
 
   livecheck do
     url "https://github.com/Fuzzypeg/Coelacanth/tree/master/release"
-    regex(/href=.*?coelacanth[._-]v?(\d+(?:\.\d+)+)\.zip/i)
+    regex(/coelacanth[._-]v?(\d+(?:\.\d+)+)\.zip/i)
     strategy :page_match
   end
 
