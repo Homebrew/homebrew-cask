@@ -13,14 +13,14 @@ cask "simpletex" do
 
   livecheck do
     url "https://server.simpletex.cn/misc/check/force_update_version/"
-    regex(/"macos_version":\s"(\d+(?:\.\d+)+)",\s"macos_latest_version":\s"(\d+(?:\.\d+)+)"/i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map do |match|
-        if match[1] == match[0]
-          match[0]
-        else
-          "#{match[1]},#{match[0]}"
-        end
+    strategy :json do |json|
+      macos_version = json.dig("res", "macos_version")
+      macos_latest_version = json.dig("res", "macos_latest_version")
+
+      if macos_latest_version == macos_version
+        macos_latest_version
+      else
+        "#{macos_latest_version},#{macos_version}"
       end
     end
   end
