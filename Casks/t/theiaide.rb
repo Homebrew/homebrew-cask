@@ -1,6 +1,6 @@
 cask "theiaide" do
-  version "1.49.100"
-  sha256 "13fb314199011b0b89b424e0cbef82253278c57abddfa74f19f84dae91abaf91"
+  version "1.49.101"
+  sha256 "54af7ec2d6a7210f681d40e5d94d47b398d6bcc59532f7347b74155f1a8ecaa9"
 
   url "https://download.eclipse.org/theia/ide/#{version}/macos/TheiaIDE.dmg",
       verified: "download.eclipse.org/theia/ide/"
