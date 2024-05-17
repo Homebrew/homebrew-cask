@@ -8,11 +8,7 @@ cask "feem" do
   desc "Local file transfer"
   homepage "https://feem.io/"
 
-  livecheck do
-    url "https://feem.link/feem-for-mac"
-    regex(/Feem[._-]Mac[._-]v?(\d+(?:\.\d+)+).*?\.pkg/i)
-    strategy :header_match
-  end
+  deprecate! date: "2024-05-17", because: :moved_to_mas
 
   pkg "Feem_Mac_#{version}_beta_Installer.pkg"
 
