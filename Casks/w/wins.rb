@@ -1,13 +1,17 @@
 cask "wins" do
-  version :latest
-  sha256 :no_check
-
-  url "https://f005.backblazeb2.com/file/winsWebsite/Wins-latest-1.6.6.dmg", verified: "backblazeb2.com/file/winsWebsite/"
+  version "1.6.6"
+  sha256 "594fb383c26f3b36dfa132312ddbafb0e59f7566616b5f02294e769cecf55605"
+  url "https://f005.backblazeb2.com/file/winsWebsite/Wins-latest-#{version}.dmg", verified: "backblazeb2.com/file/winsWebsite/"
   name "Wins"
-  desc "Brand new window manager"
+  desc "Window manager"
   homepage "https://wins.cool/"
-  depends_on macos: '>= :high_sierra'
+  depends_on macos: ">= :high_sierra"
   app "Wins.app"
+  livecheck do
+    url "https://wins.cool/"
+    strategy :page_match
+    regex(/href=.*?Wins-latest[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+  end
   zap trash: [
     "~/Library/Application Support/cools.wins.main",
     "~/Library/Application Support/Wins",
