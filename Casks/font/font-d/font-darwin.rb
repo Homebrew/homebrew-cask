@@ -1,6 +1,3 @@
-# typed: true
-# frozen_string_literal: true
-
 cask "font-darwin" do
   version :latest
   sha256 :no_check
