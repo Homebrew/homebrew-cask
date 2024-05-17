@@ -12,7 +12,6 @@
 ###
 
 require "open3"
-require "set"
 require "io/console"
 
 ###
