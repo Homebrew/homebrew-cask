@@ -5,7 +5,7 @@ cask "font-pushster" do
   url "https://github.com/google/fonts/raw/main/ofl/pushster/Pushster-Regular.ttf",
       verified: "github.com/google/fonts/"
   name "Pushster"
-  homepage ""
+  homepage "https://fonts.google.com/specimen/Lobster"
 
   font "Pushster-Regular.ttf"
 
