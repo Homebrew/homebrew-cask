@@ -1,15 +1,16 @@
 cask "affinity-designer@1" do
   version "1.10.8"
-  sha256 :no_check
+  sha256 "7c3d9ce7e42dd8f3b3cf7f37aaffde3a59f33087007b9a2c81d86baceaa39ef6"
 
-  url "https://store.serif.com/download/aa4dee/"
+  url "https://s3-eu-west-1.amazonaws.com/affinity-update/mac/retail/Affinity%20Designer-#{version}.app.zip",
+      verified: "s3-eu-west-1.amazonaws.com/"
   name "Affinity Designer"
   desc "Professional graphic design software"
   homepage "https://affinity.serif.com/en-us/designer/"
 
   livecheck do
-    url :url
-    strategy :header_match
+    url "https://go.seriflabs.com/affinity-update-mac-retail-designer"
+    strategy :sparkle, &:short_version
   end
 
   auto_updates true
