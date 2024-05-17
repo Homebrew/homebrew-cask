@@ -11,6 +11,12 @@ cask "gitkraken-cli" do
   homepage "https://github.com/gitkraken/gk-cli"
 
   binary "gk"
+  binary "gk.bash",
+         target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/gk"
+  binary "_gk",
+         target: "#{HOMEBREW_PREFIX}/share/zsh/site-functions/_gk"
+  binary "gk.fish",
+         target: "#{HOMEBREW_PREFIX}/share/fish/vendor_completions.d/gk.fish"
 
   zap trash: "~/.gitkraken"
 end
