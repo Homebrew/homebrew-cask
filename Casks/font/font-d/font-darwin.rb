@@ -9,7 +9,7 @@ cask "font-darwin" do
   name "Darwin"
   homepage "https://github.com/topological-modular-forms/Darwin-Typeface/tree/main"
 
-  font "DarwinSerif-Regular.ttf"
+  font "DarwinSerif-Regular.otf"
 
   # No zap stanza required
 end
