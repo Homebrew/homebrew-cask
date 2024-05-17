@@ -4,7 +4,7 @@ cask "font-darwin" do
 
   url "https://github.com/topological-modular-forms/Darwin-Typeface/raw/main/output/DarwinSerif-Regular.otf"
   name "Darwin"
-  homepage "https://github.com/topological-modular-forms/Darwin-Typeface/tree/main"
+  homepage "https://github.com/topological-modular-forms/Darwin-Typeface"
 
   font "DarwinSerif-Regular.otf"
 
