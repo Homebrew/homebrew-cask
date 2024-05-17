@@ -1,6 +1,6 @@
 cask "applite" do
-  version "1.2.4"
-  sha256 "b72d7e655c25ec6ef4fa89730255ed2c5617ce4b7e26e43f793801f6c9ac6468"
+  version "1.2.5"
+  sha256 "c03474eb4b839b860ab3e12d076d74a3b03f5946d1c9621384563cb04e9ce3f1"
 
   url "https://github.com/milanvarady/Applite/releases/download/v#{version}/Applite.dmg",
       verified: "github.com/milanvarady/Applite/"
