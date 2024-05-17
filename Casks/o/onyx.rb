@@ -37,12 +37,12 @@ cask "onyx" do
     url "https://www.titanium-software.fr/download/12/OnyX.dmg"
   end
   on_ventura do
-    version "4.4.6"
+    version "4.4.7"
 
     url "https://www.titanium-software.fr/download/13/OnyX.dmg"
   end
   on_sonoma :or_newer do
-    version "4.5.7"
+    version "4.5.8"
 
     url "https://www.titanium-software.fr/download/14/OnyX.dmg"
   end
