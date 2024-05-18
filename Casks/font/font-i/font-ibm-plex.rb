@@ -132,6 +132,8 @@ cask "font-ibm-plex" do
   font "plex-#{version}/IBM-Plex-Serif/fonts/complete/otf/IBMPlexSerif-TextItalic.otf"
   font "plex-#{version}/IBM-Plex-Serif/fonts/complete/otf/IBMPlexSerif-Thin.otf"
   font "plex-#{version}/IBM-Plex-Serif/fonts/complete/otf/IBMPlexSerif-ThinItalic.otf"
+  font "plex-#{version}/IBM-Plex-Sans-Variable/fonts/complete/ttf/IBM Plex Sans Var-Roman.ttf"
+  font "plex-#{version}/IBM-Plex-Sans-Variable/fonts/complete/ttf/IBM Plex Sans Var-Italic.ttf"
 
   # No zap stanza required
 end
