@@ -7,8 +7,8 @@ cask "font-0xproto" do
   desc "Programming font focused on source code legibility"
   homepage "https://github.com/0xType/0xProto"
 
-  font "fonts/0xProto-Regular.otf"
-  font "fonts/0xProto-Italic.otf"
+  font "0xProto-Regular.otf"
+  font "0xProto-Italic.otf"
 
   # No zap stanza required
 end
