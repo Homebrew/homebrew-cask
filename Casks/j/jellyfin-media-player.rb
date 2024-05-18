@@ -1,11 +1,11 @@
 cask "jellyfin-media-player" do
   arch arm: "AppleSilicon", intel: "Intel"
 
-  version "1.10.0"
-  sha256 arm:   "1fd584132af2107d7aaeb46c66a5b05ba78a2f56150b6f54482abe6bb705acd0",
-         intel: "dda9b26971a8c25eea9e759ab89aa8bf5abd4e4b805dc37827d13bddc6da1ab5"
+  version "1.10.1"
+  sha256 arm:   "254c2c877ffd248366b200c15c92a97d768e002993dfe870c19f5c1db7389ab3",
+         intel: "5806bd43601a67f901e9c4a72d8a540d880c2dcef4792df6fd4d46b74082bf9d"
 
-  url "https://github.com/jellyfin/jellyfin-media-player/releases/download/v#{version}/JellyfinMediaPlayer-#{arch}.dmg",
+  url "https://github.com/jellyfin/jellyfin-media-player/releases/download/v#{version}/JellyfinMediaPlayer-#{version}-#{arch}.dmg",
       verified: "github.com/jellyfin/jellyfin-media-player/"
   name "Jellyfin Media Player"
   desc "Jellyfin desktop client"
