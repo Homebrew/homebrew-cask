@@ -12,6 +12,8 @@ cask "spamsieve" do
     regex(%r{href=.*?/SpamSieve[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
+  auto_updates true
+
   app "SpamSieve.app"
 
   zap trash: [
