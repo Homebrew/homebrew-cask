@@ -1,6 +1,6 @@
 cask "get-backup-pro" do
   version "3.7.3"
-  sha256 "814173025816992dce2e90c2075c25641c440bec1edfba82920af43c1e0f41e8"
+  sha256 "248f6eae946f266318f687c02de7265089380b8e763701f8f0ff3f212829bdd6"
 
   url "https://belightsoft.s3.amazonaws.com/updates/Get+Backup+Pro+#{version.major}.zip",
       verified: "belightsoft.s3.amazonaws.com/updates/"
@@ -16,4 +16,10 @@ cask "get-backup-pro" do
   auto_updates true
 
   app "Get Backup Pro #{version.major}.app"
+
+  zap trash: [
+    "~/Library/Application Support/Get Backup #{version.major}",
+    "~/Library/HTTPStorages/com.belightsoft.GetBackupPro#{version.major}",
+    "~/Library/Preferences/com.belightsoft.GetBackupPro#{version.major}.plist",
+  ]
 end
