@@ -23,8 +23,7 @@ cask "vesktop" do
   
     zap trash: [
       "~/Library/Application Support/vesktop",
-      "~/Library/Preferences/dev.vencord.vesktop.plist",
-      "~/Library/Preferences/com.hnc.Discord.plist",
+      "~/Library/Preferences/dev.vencord.vesktop.plist",=
       "~/Library/Saved Application State/dev.vencord.vesktop.savedState",
     ]
   end
