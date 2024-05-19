@@ -16,4 +16,12 @@ cask "openlp" do
   end
 
   app "OpenLP.app"
+
+  zap trash: [
+    "~/Library/Application Support/openlp",
+    "~/Library/Caches/com.apple.helpd/Generated/org.openlp.OpenLP.help*",
+    "~/Library/Preferences/org.openlp.OpenLP.plist",
+    "~/Library/Preferences/org.openlp.plist",
+    "~/Library/Saved Application State/org.openlp.OpenLP.savedState",
+  ]
 end
