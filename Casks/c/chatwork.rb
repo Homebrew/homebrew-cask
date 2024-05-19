@@ -1,5 +1,7 @@
 cask "chatwork" do
-  version "2.8.2.7340"
+  livecheck_arch = on_arch_conditional arm: "arm64", intel: "x64"
+
+  version "2.8.3"
   sha256 :no_check
 
   url "https://desktop-app.chatwork.com/installer/ChatWork.dmg"
@@ -8,11 +10,14 @@ cask "chatwork" do
   homepage "https://www.chatwork.com/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://desktop-release.chatwork.com/darwin/#{livecheck_arch}/latest?version=0.0.0"
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
-  depends_on macos: ">= :high_sierra"
+  auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "ChatWork.app"
 
