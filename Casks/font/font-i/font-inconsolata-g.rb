@@ -7,6 +7,8 @@ cask "font-inconsolata-g" do
   name "Inconsolata-g"
   homepage "https://leonardo-m.livejournal.com/77079.html"
 
+  disable! date: "2024-05-19", because: :no_longer_available
+
   font "Inconsolata-g.otf"
 
   # No zap stanza required
