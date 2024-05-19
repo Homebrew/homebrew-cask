@@ -24,10 +24,10 @@ cask "klayout" do
     end
   end
   on_monterey do
-    version "0.28.17"
-    sha256 "deba4653e9efb7c9e7cce7f3a609e796fa6d815014ecd4316ba46dbb330c2abb"
+    version "0.29.1"
+    sha256 "48335aa0c34611aad45f1558b27a88d0021243ba0c72e13ee3b1cdf07d64f156"
 
-    url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Monterey-1-qt5Brew-RsysPhb311.dmg",
+    url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Monterey-1-qt5MP-RsysPhb311.dmg",
         verified: "klayout.org/downloads/MacOS/"
 
     livecheck do
@@ -36,10 +36,10 @@ cask "klayout" do
     end
   end
   on_ventura do
-    version "0.28.17"
-    sha256 "01230beb69df62960e403db198770b889d464b2487c85231ca0392d833da5695"
+    version "0.29.1"
+    sha256 "c6f0b08a1410168bf854103991b59471b4c0ecf7667724706917132b50816d28"
 
-    url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Ventura-1-qt5Brew-RsysPhb311.dmg",
+    url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Ventura-1-qt5MP-RsysPhb311.dmg",
         verified: "klayout.org/downloads/MacOS/"
 
     livecheck do
@@ -48,10 +48,10 @@ cask "klayout" do
     end
   end
   on_sonoma :or_newer do
-    version "0.28.17"
-    sha256 "786473a0b3ef99ce0b62d1c20327f71d432e47b151deb373ce351afea6473316"
+    version "0.29.1"
+    sha256 "5741aefac5ad02011d05500b71b5e9c4fbe86df2e5893538b7148a8efa95581b"
 
-    url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Sonoma-1-qt5Brew-RsysPhb311.dmg",
+    url "https://www.klayout.org/downloads/MacOS/HW-klayout-#{version}-macOS-Sonoma-1-qt5MP-RsysPhb311.dmg",
         verified: "klayout.org/downloads/MacOS/"
 
     livecheck do
