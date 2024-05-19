@@ -9,7 +9,7 @@ cask "skype" do
   homepage "https://www.skype.com/"
 
   livecheck do
-    url "https://go.skype.com/mac.download"
+    url "https://get.skype.com/go/getskype-skypeformac"
     strategy :header_match
   end
 
