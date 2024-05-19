@@ -455,6 +455,7 @@ qownnotes
 qqlive
 quarto
 quicken
+racket
 razorsql
 readdle-spark
 reader
