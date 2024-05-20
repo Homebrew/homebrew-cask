@@ -18,12 +18,7 @@ cask "vmware-fusion@preview" do
   desc "Create, manage, and run virtual machines"
   homepage "https://blogs.vmware.com/teamfusion/tech-preview"
 
-  livecheck do
-    url "https://customerconnect.vmware.com/channel/public/api/v1.0/dlg/beta/header?locale=en_US&downloadGroup=FUS-TP2023"
-    strategy :json do |json|
-      json["buildNumber"]
-    end
-  end
+  disable! date: "2024-05-20", because: :no_longer_available
 
   auto_updates true
   conflicts_with cask: "vmware-fusion"
