@@ -22,7 +22,8 @@ cask "wd-security" do
     sudo:       true,
   }
 
-  uninstall launchctl: "com.wdc.WDPrivilegedHelper",
+  uninstall quit: ["com.wdc.WDPrivilegedHelper", "com.wdc.branded.security"],
+            launchctl: "com.wdc.WDPrivilegedHelper",
             script:    {
               # replicating #{staged_path}/installer.sh
               executable: "#{staged_path}/exec/WD Security Installer.app/Contents/MacOS/WD Security Installer",
