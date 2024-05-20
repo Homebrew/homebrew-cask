@@ -8,6 +8,11 @@ cask "inky" do
   desc "Editor for ink: inkle's narrative scripting language"
   homepage "https://www.inklestudios.com/ink/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Inky.app"
 
   zap trash: [
