@@ -5,7 +5,7 @@ cask "quickrecorder" do
   url "https://github.com/lihaoyun6/QuickRecorder/releases/download/#{version}/QuickRecorder_v#{version}.dmg",
       verified: "github.com/lihaoyun6/QuickRecorder/"
   name "QuickRecorder"
-  desc "A lightweight and high-performance screen recorder for macOS"
+  desc "Lightweight and high-performance screen recorder for macOS"
   homepage "https://lihaoyun6.github.io/quickrecorder/"
 
   livecheck do
@@ -14,7 +14,6 @@ cask "quickrecorder" do
   end
 
   auto_updates true
-
   depends_on macos: ">= :monterey"
 
   app "QuickRecorder.app"
