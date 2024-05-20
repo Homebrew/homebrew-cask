@@ -19,6 +19,7 @@ cask "wd-security" do
     # replicating #{staged_path}/installer.sh
     executable: "#{staged_path}/exec/WD Security Installer.app/Contents/MacOS/WD Security Installer",
     args:       ["-install", "-silent"],
+    sudo:       true,
   }
 
   uninstall script: {
