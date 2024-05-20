@@ -19,7 +19,7 @@ cask "insta360-studio" do
     }ix)
     strategy :json do |json, regex|
       # Find the Insta360 Studio app
-      app = json.dig("data", "apps")&.find { |item| item["id"] == 38 }
+      app = json.dig("data", "apps")&.find { |item| item["app_id"] == 38 }
       next if app.blank?
 
       # Find the newest macOS version
