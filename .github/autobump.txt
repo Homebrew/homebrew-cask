@@ -16,6 +16,7 @@ adguard
 adguard-vpn
 adguard-vpn@nightly
 adguard@nightly
+adrive
 affine
 affinity-designer
 affinity-photo
@@ -56,6 +57,7 @@ betterdisplay
 bettermouse
 bettertouchtool
 bezel
+bibdesk
 bike
 binance
 bitwarden
@@ -119,6 +121,7 @@ cursor
 datadog-agent
 datagrip
 dataspell
+datovka
 dbeaver-community
 dcp-o-matic
 dcp-o-matic-batch-converter
@@ -132,6 +135,7 @@ dcp-o-matic-playlist-editor
 ddnet
 deckset
 deezer
+default-folder-x
 descript
 desktoppr
 devpod
@@ -143,6 +147,7 @@ discord@ptb
 diskcatalogmaker
 dockx
 double-commander
+douyin
 douyin-chat
 downie
 drata-agent
@@ -151,6 +156,7 @@ drawio
 dropbox
 dropbox@beta
 dropshare
+dropzone
 duckduckgo
 ecamm-live
 electerm
@@ -161,6 +167,7 @@ elephas
 elephicon
 eloston-chromium
 emacs@nightly
+embyserver
 emclient
 enpass
 evernote
@@ -189,8 +196,8 @@ focusrite-control
 focusrite-control-2
 font-iosevka
 font-iosevka-aile
-font-iosevka-curly-slab
 font-iosevka-curly
+font-iosevka-curly-slab
 font-iosevka-etoile
 font-iosevka-slab
 font-iosevka-ss01
@@ -274,12 +281,14 @@ iterm2@beta
 iterm2@nightly
 jami
 jamie
+jan
 java@beta
 jdownloader
 jetbrains-gateway
 jetbrains-toolbox
 jgrennison-openttd
 jitsi-meet
+jumpshare
 jupyterlab
 juxtacode
 keymapp
@@ -339,6 +348,7 @@ milanote
 millie
 mindmac
 miniforge
+miro
 mitmproxy
 mixed-in-key
 mixxx
@@ -373,7 +383,6 @@ navicat-premium
 netron
 nextcloud
 nordlayer
-nordlayer
 nordpass
 nordvpn
 notesnook
@@ -391,9 +400,9 @@ openlens
 openscad@snapshot
 openshift-client
 opera
-opera@developer
 opera-gx
 opera@beta
+opera@developer
 operadriver
 oracle-jdk
 oracle-jdk-javadoc
@@ -503,6 +512,7 @@ skype@preview
 slack
 slack-cli
 slack@beta
+smultron
 snagit
 sol
 soulver
@@ -560,6 +570,7 @@ trainerroad
 treesheets
 tresorit
 trezor-suite
+trilium-notes
 truhu
 tsh
 tuist
@@ -575,6 +586,8 @@ valentina-studio
 vellum
 virtualbox@beta
 virtualbuddy
+virtualhere
+virtualhereserver
 visual-studio-code
 vivaldi
 vivaldi@snapshot
