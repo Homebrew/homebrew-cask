@@ -4,7 +4,7 @@ cask "chime" do
 
   url "https://updates.chimehq.com/com.chimehq.Edit/#{version.csv.second}/Chime.app.zip"
   name "Chime"
-  desc "Open source text/code editor"
+  desc "Text and code editor"
   homepage "https://www.chimehq.com/"
 
   livecheck do
