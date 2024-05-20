@@ -14,6 +14,8 @@ cask "sync" do
 
   app "Sync.app"
 
+  uninstall quit: "com.sync.desktop"
+
   zap trash: [
         "~/Library/Application Scripts/com.sync.desktop",
         "~/Library/Application Scripts/com.sync.desktop.findersync",
