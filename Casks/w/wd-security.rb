@@ -22,7 +22,12 @@ cask "wd-security" do
     sudo:       true,
   }
 
-  uninstall quit: ["com.wdc.WDPrivilegedHelper", "com.wdc.branded.security"],
+  uninstall early_script: {
+              executable:   "/usr/bin/killall",
+              args:         ["-9", "com.wdc.WDPrivilegedHelper"],
+              sudo:         true,
+              must_succeed: false,
+            },
             launchctl: "com.wdc.WDPrivilegedHelper",
             script:    {
               # replicating #{staged_path}/installer.sh
