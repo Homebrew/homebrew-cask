@@ -10,15 +10,6 @@ cask "chime" do
   livecheck do
     url "https://updates.chimehq.com/com.chimehq.Edit/release/appcast.xml"
     strategy :sparkle
-
-    # Alternate method to get the version
-    # url "https://www.chimehq.com/download"
-    # regex(/<a href=.*?\/(\d+)\/Chime.app.zip/)
-    # strategy :page_match do |page, regex|
-    #     url_v_match = page.match(regex)
-    #     version = page.match(/Version <span class="value">([\d.]+)/)
-    #     "#{version[1]},#{url_v_match[1]}"
-    # end
   end
 
   auto_updates true
