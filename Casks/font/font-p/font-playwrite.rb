@@ -346,4 +346,6 @@ cask "font-playwrite" do
   font "variable/PlaywriteUSTrad[wght].ttf"
   font "variable/PlaywriteVN[wght].ttf"
   font "variable/PlaywriteZA[wght].ttf"
+
+  # No zap stanza required
 end
