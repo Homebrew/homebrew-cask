@@ -1,6 +1,6 @@
 cask "synfigstudio" do
-  version "1.4.4,2022.12.25,b8d62"
-  sha256 "1e9a274e606a6f6805509df0e42cc37ddc4d3d85b0bde22d67fd1f3e967415e1"
+  version "1.4.5,2024.05.19,f4b8d"
+  sha256 "cb3459979ce817b85acd2d2bdc79b49545533fb75e077e334fe16577df1e346c"
 
   url "https://github.com/synfig/synfig/releases/download/v#{version.csv.first}/SynfigStudio-#{version.csv.first}-#{version.csv.second}-osx-#{version.csv.third}.dmg",
       verified: "github.com/synfig/synfig/"
