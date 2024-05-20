@@ -11,4 +11,9 @@ cask "rnnoise" do
   vst_plugin "macos-rnnoise/vst/rnnoise_mono.vst"
   vst_plugin "macos-rnnoise/vst/rnnoise_stereo.vst"
   vst3_plugin "macos-rnnoise/rnnoise.vst3"
+
+  zap rmdir: [
+    "~/Library/Audio/Plug-Ins/VST",
+    "~/Library/Audio/Plug-Ins/VST3",
+  ]
 end
