@@ -7,6 +7,11 @@ cask "loungy" do
   desc "Application launcher"
   homepage "https://github.com/MatthiasGrandl/Loungy"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   app "Loungy.app"
 
   zap trash: [
