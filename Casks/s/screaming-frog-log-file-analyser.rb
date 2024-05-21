@@ -21,6 +21,6 @@ cask "screaming-frog-log-file-analyser" do
 
   zap trash: [
     "~/.ScreamingFrogLogfileAnalyser",
-    "~/Library/Application Support/uk.co.screamingfrog.ui.b/",
+    "~/Library/Application Support/uk.co.screamingfrog.ui.b",
   ]
 end
