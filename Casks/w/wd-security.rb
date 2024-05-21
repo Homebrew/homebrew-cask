@@ -35,4 +35,8 @@ cask "wd-security" do
             ]
 
   zap trash: "~/Library/Preferences/com.wdc.branded.security.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end
