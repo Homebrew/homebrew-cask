@@ -1,6 +1,6 @@
 cask "instantview" do
-  version "3.19,R0002"
-  sha256 "b9c258ccca92281a0c942139f7e7053a655015c1221245c4a83b119e65cf0080"
+  version "3.20,R0003"
+  sha256 "01bb3beb3ced803e548bd7fdb4ff1ee76d1f6a79c7824c46ca3e34919845ff68"
 
   url "https://www.siliconmotion.com/downloads/macOS_InstantView_V#{version.csv.first}#{version.csv.second}.dmg"
   name "SiliconMotion InstantView"
@@ -9,7 +9,7 @@ cask "instantview" do
 
   livecheck do
     url "https://www.siliconmotion.com/downloads/index.html"
-    regex(/macOS[._-]instantview[._-]V(\d+(?:\.\d+)+)(\w\d+)\.dmg/i)
+    regex(/macOS[._-]instantview[._-]v?(\d+(?:\.\d+)+)(\w\d+)\.dmg/i)
     strategy :page_match do |page, regex|
       page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
     end
