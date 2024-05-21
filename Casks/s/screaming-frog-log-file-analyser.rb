@@ -15,6 +15,8 @@ cask "screaming-frog-log-file-analyser" do
     regex(%r{href=.*?/ScreamingFrogLogFileAnalyser[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg}i)
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "Screaming Frog Log File Analyser.app"
 
   zap trash: [
