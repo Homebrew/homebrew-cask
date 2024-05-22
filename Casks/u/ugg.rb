@@ -4,7 +4,7 @@ cask "ugg" do
 
   url "https://static.bigbrain.gg/electron-app-lol/U.GG-#{version}.dmg",
       verified: "static.bigbrain.gg/electron-app-lol/"
-  name "ugg"
+  name "U GG"
   desc "Game analysis and champion picker"
   homepage "https://u.gg/"
 
