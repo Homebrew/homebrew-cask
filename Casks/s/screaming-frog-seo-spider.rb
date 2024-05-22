@@ -15,6 +15,8 @@ cask "screaming-frog-seo-spider" do
     regex(%r{href=.*?/ScreamingFrogSEOSpider[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg}i)
   end
 
+  depends_on macos: ">= :big_sur"
+
   app "Screaming Frog SEO Spider.app"
 
   zap trash: [
