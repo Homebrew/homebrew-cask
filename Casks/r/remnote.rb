@@ -1,9 +1,9 @@
 cask "remnote" do
   arch arm: "-arm64"
 
-  version "1.16.5"
-  sha256 arm:   "a27dfe4e807f772d71ce42c2735179e11b39a46f1940b6e83011ca3d8fb5d725",
-         intel: "f5e7802d9659476f2dc22969ce8a5aa67f107d9054326a180d69cb96a2b540df"
+  version "1.16.15"
+  sha256 arm:   "c64ccb38ca81ba50ad67d5393f2d3c29d64fe4789bb6ad4e5bb8ec9fee14a3be",
+         intel: "69bd0907046c1e9b5df8b43ac0f59752c02a103354270da0f0d76169337907b8"
 
   url "https://download.remnote.io/remnote-desktop/RemNote-#{version}#{arch}-mac.zip",
       verified: "download.remnote.io/"
