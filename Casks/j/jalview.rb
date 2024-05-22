@@ -12,8 +12,11 @@ cask "jalview" do
 
   livecheck do
     url "https://www.jalview.org/downloads/installers/release/Jalview-latest-macos-x64-java_8.dmg"
-    regex(/Jalview-(\d(?:_\d+)*)-macos-x64-java_8\.dmg/i)
-    strategy :header_match
+    strategy :header_match do |headers|
+      v = headers["location"][%r{/Jalview-(\d(?:_\d+)*)-macos-x64-java_8\.dmg$}i, 1]
+
+      "#{v.underscores_to_dots}"
+    end
   end
 
   app "Jalview.app"
