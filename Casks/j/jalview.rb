@@ -11,8 +11,9 @@ cask "jalview" do
   homepage "https://www.jalview.org/"
 
   livecheck do
-    url "https://www.jalview.org/getdown/release/1.8/release/build_properties"
-    regex(/^VERSION=(\d+(?:\.\d+)*)/i)
+    url "https://www.jalview.org/downloads/installers/release/Jalview-latest-macos-x64-java_8.dmg"
+    regex(/Jalview-(\d(?:_\d+)*)-macos-x64-java_8\.dmg/i)
+    strategy :header_match
   end
 
   app "Jalview.app"
