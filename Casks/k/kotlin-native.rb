@@ -1,11 +1,11 @@
 cask "kotlin-native" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "1.9.24"
-  sha256 arm:   "4465e2d92c94be21fd1dd300a52a0125f11d78e7e7b2c6939d695dbc627acac6",
-         intel: "783c1b9955748cb3794446f70f925f0db8f352e66e8f1036a6ec3be537b5685b"
+  version "2.0.0"
+  sha256 arm:   "3f13d0f6d54dcae7e8a8a011f5f71706d4339fa3246d5235d52a30d8edd39790",
+         intel: "23e390aa2fc84a89a1e06b529c9e2c3f7ecd32ef706b25cb7dbf75b8946f8784"
 
-  url "https://github.com/JetBrains/kotlin/releases/download/v#{version}/kotlin-native-macos-#{arch}-#{version}.tar.gz",
+  url "https://github.com/JetBrains/kotlin/releases/download/v#{version}/kotlin-native-prebuilt-macos-#{arch}-#{version}.tar.gz",
       verified: "github.com/JetBrains/kotlin/"
   name "Kotlin Native"
   desc "LLVM backend for Kotlin"
@@ -18,14 +18,14 @@ cask "kotlin-native" do
 
   conflicts_with formula: "kotlin"
 
-  binary "kotlin-native-macos-#{arch}-#{version}/bin/cinterop"
-  binary "kotlin-native-macos-#{arch}-#{version}/bin/generate-platform"
-  binary "kotlin-native-macos-#{arch}-#{version}/bin/jsinterop"
-  binary "kotlin-native-macos-#{arch}-#{version}/bin/klib"
-  binary "kotlin-native-macos-#{arch}-#{version}/bin/konan-lldb"
-  binary "kotlin-native-macos-#{arch}-#{version}/bin/konanc"
-  binary "kotlin-native-macos-#{arch}-#{version}/bin/kotlinc-native"
-  binary "kotlin-native-macos-#{arch}-#{version}/bin/run_konan"
+  binary "kotlin-native-prebuilt-macos-#{arch}-#{version}/bin/cinterop"
+  binary "kotlin-native-prebuilt-macos-#{arch}-#{version}/bin/generate-platform"
+  binary "kotlin-native-prebuilt-macos-#{arch}-#{version}/bin/jsinterop"
+  binary "kotlin-native-prebuilt-macos-#{arch}-#{version}/bin/klib"
+  binary "kotlin-native-prebuilt-macos-#{arch}-#{version}/bin/konan-lldb"
+  binary "kotlin-native-prebuilt-macos-#{arch}-#{version}/bin/konanc"
+  binary "kotlin-native-prebuilt-macos-#{arch}-#{version}/bin/kotlinc-native"
+  binary "kotlin-native-prebuilt-macos-#{arch}-#{version}/bin/run_konan"
 
   # No zap stanza required
   caveats do
