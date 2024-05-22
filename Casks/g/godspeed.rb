@@ -1,9 +1,8 @@
 cask "godspeed" do
-  version "1.1.6"
-  sha256 "be86506be64646db396c5d7ee0d1bd8b92b2ce3995802dda63991f3572d0ee59"
+  version "1.2.4"
+  sha256 "56895043e91299d561ebf325773d3ab89d90e20cabe226b37137f4ddfbd80914"
 
-  url "https://com-godspeedapp-app-versions.s3.us-west-1.amazonaws.com/#{version}/Godspeed.zip",
-      verified: "com-godspeedapp-app-versions.s3.us-west-1.amazonaws.com/"
+  url "https://app-updates.godspeedapp.com/#{version}%2FGodspeed.zip"
   name "Godspeed"
   desc "Keyboard-focused todo manager"
   homepage "https://godspeedapp.com/"
