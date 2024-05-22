@@ -1,10 +1,10 @@
 cask "texshop" do
   version "5.35"
-  sha256 "4ef9286e0d4c03f609690c39e2f219e31ee538abe454c125760fc68ba5d7a17f"
+  sha256 "d6da42bc81f19f69de3e31f6a5b05e8937856ccdb07360a80873f898fe33c9a4"
 
   url "https://pages.uoregon.edu/koch/texshop/texshop-64/texshop#{version.no_dots}.zip"
   name "TeXShop"
-  desc "TeX previewer"
+  desc "LaTeX and TeX editor and previewer"
   homepage "https://pages.uoregon.edu/koch/texshop/"
 
   livecheck do
@@ -20,9 +20,12 @@ cask "texshop" do
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/texshop.sfl*",
     "~/Library/Application Support/TeXShop",
+    "~/Library/Caches/com.apple.helpd/Generated/TeXShop Help*",
     "~/Library/Caches/com.apple.helpd/SDMHelpData/Other/English/HelpSDMIndexFile/TeXShop Help*",
     "~/Library/Caches/TeXShop",
+    "~/Library/HTTPStorages/TeXShop",
     "~/Library/Preferences/TeXShop.plist",
     "~/Library/TeXShop",
+    "~/Library/WebKit/TeXShop",
   ]
 end
