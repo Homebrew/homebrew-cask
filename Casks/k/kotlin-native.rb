@@ -18,14 +18,14 @@ cask "kotlin-native" do
 
   conflicts_with formula: "kotlin"
 
-  binary "kotlin-native-macos-#{arch}-#{version}/bin/cinterop"
-  binary "kotlin-native-macos-#{arch}-#{version}/bin/generate-platform"
-  binary "kotlin-native-macos-#{arch}-#{version}/bin/jsinterop"
-  binary "kotlin-native-macos-#{arch}-#{version}/bin/klib"
-  binary "kotlin-native-macos-#{arch}-#{version}/bin/konan-lldb"
-  binary "kotlin-native-macos-#{arch}-#{version}/bin/konanc"
-  binary "kotlin-native-macos-#{arch}-#{version}/bin/kotlinc-native"
-  binary "kotlin-native-macos-#{arch}-#{version}/bin/run_konan"
+  binary "kotlin-native-prebuilt-macos-#{arch}-#{version}/bin/cinterop"
+  binary "kotlin-native-prebuilt-macos-#{arch}-#{version}/bin/generate-platform"
+  binary "kotlin-native-prebuilt-macos-#{arch}-#{version}/bin/jsinterop"
+  binary "kotlin-native-prebuilt-macos-#{arch}-#{version}/bin/klib"
+  binary "kotlin-native-prebuilt-macos-#{arch}-#{version}/bin/konan-lldb"
+  binary "kotlin-native-prebuilt-macos-#{arch}-#{version}/bin/konanc"
+  binary "kotlin-native-prebuilt-macos-#{arch}-#{version}/bin/kotlinc-native"
+  binary "kotlin-native-prebuilt-macos-#{arch}-#{version}/bin/run_konan"
 
   # No zap stanza required
   caveats do
