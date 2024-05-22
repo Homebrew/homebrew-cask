@@ -12,7 +12,7 @@ cask "jalview" do
 
   livecheck do
     url "https://www.jalview.org/getdown/release/1.8/release/build_properties"
-    regex(/^VERSION="(\d+(?:\.\d+)*)"/i)
+    regex(/^VERSION=(\d+(?:\.\d+)*)/i)
   end
 
   app "Jalview.app"
