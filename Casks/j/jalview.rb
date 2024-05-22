@@ -12,10 +12,11 @@ cask "jalview" do
 
   livecheck do
     url "https://www.jalview.org/downloads/installers/release/Jalview-latest-macos-x64-java_8.dmg"
-    strategy :header_match do |headers|
-      v = headers["location"][%r{/Jalview-(\d(?:_\d+)*)-macos-x64-java_8\.dmg$}i, 1]
-
-      "#{v.underscores_to_dots}"
+    regex(/Jalview-(\d(?:_\d+)*)-macos-x64-java_8\.dmg/i)
+    strategy :header_match do |headers, regex|
+      headers["location"].scan(regex).map do |match|
+        match[0].tr("_", ".").to_s
+      end
     end
   end
 
