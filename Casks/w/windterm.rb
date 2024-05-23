@@ -1,8 +1,8 @@
 cask "windterm" do
-  version "2.6.0"
+  version "2.6.1"
   sha256 "c1a1ff2263b3ded7816c8d2e7309e77f3d0901d488c8559281cfd4d2bb7b891b"
 
-  url "https://github.com/kingToolbox/WindTerm/releases/download/#{version}/WindTerm_2.6.1_Mac_Portable_x86_64.dmg"
+  url "https://github.com/kingToolbox/WindTerm/releases/download/2.6.0/WindTerm_#{version}_Mac_Portable_x86_64.dmg"
   name "WindTerm"
   desc "SSH/SFTP/Shell/Telnet/Serial terminal"
   homepage "https://github.com/kingToolbox/WindTerm"
