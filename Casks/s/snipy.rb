@@ -7,10 +7,7 @@ cask "snipy" do
   desc "Snippet manager with sharing support"
   homepage "https://snipy.io/"
 
-  livecheck do
-    url "https://ta-production-snipy-releases.s3.amazonaws.com/latest-mac.yml"
-    strategy :electron_builder
-  end
+  disable! date: "2024-05-23", because: :no_longer_available
 
   auto_updates true
 
