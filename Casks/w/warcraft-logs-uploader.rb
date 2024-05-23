@@ -10,8 +10,7 @@ cask "warcraft-logs-uploader" do
 
   livecheck do
     url "https://classic.warcraftlogs.com/client/download"
-    strategy :page_match
-    regex(%r{.*?/warcraftlogs[._-]v?(\d+(?:\.\d+)*)\.dmg}i)
+    regex(%r{.*?/warcraftlogs[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
   end
 
   auto_updates true
