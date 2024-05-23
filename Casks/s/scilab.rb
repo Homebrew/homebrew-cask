@@ -2,12 +2,12 @@ cask "scilab" do
   arch arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "2024.0.0"
-    sha256 "7d635ad455815378c8df8d177004c6067cf8402f8e5fbae2c53cb41c9c8bb0a4"
+    version "2024.1.0"
+    sha256 "8d198194b7b4b0531568ea72e3662c94d76d1a31369b019846c5b99c7f0bbbfc"
   end
   on_intel do
-    version "2024.0.0"
-    sha256 "3077f06d0f8b0a2d49ae0880ad12f50da2c12e6c5f4430b33af1b09288f714bc"
+    version "2024.1.0"
+    sha256 "382c38c43510ef12a9375c4c9ec777863ab9c241cffbac4e753596f35378e69c"
   end
 
   url "https://www.utc.fr/~mottelet/scilab/download/#{version}/scilab-#{version}-#{arch}.dmg",
