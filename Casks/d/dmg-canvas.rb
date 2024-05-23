@@ -1,5 +1,5 @@
 cask "dmg-canvas" do
-  version "4.0.7,400028"
+  version "4.0.8,400032"
   sha256 :no_check
 
   url "https://arweb-assets.s3.amazonaws.com/downloads/dmgcanvas/DMGCanvas.dmg",
