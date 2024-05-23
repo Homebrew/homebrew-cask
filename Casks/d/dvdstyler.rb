@@ -14,4 +14,10 @@ cask "dvdstyler" do
   end
 
   app "DVDStyler.app"
+
+  zap trash: [
+    "~/Library/Preferences/DVDStyler Preferences",
+    "~/Library/Preferences/org.dvdstyler.DVDStyler.plist",
+    "~/Library/Saved Application State/org.dvdstyler.DVDStyler.savedState",
+  ]
 end
