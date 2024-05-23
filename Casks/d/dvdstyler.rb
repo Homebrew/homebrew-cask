@@ -10,7 +10,7 @@ cask "dvdstyler" do
 
   livecheck do
     url "https://www.dvdstyler.org/en/downloads"
-    regex(%r{href=.*?/DVDStyler-(\d+(?:\.\d+)+(?:_\d+)*)-MacOSX\.dmg}i)
+    regex(/DVDStyler[._-]?(\d+(?:[._]\d+)+)[._-]?MacOSX\.dmg/i)
   end
 
   app "DVDStyler.app"
