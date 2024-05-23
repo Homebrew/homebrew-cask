@@ -9,9 +9,14 @@ cask "phocus" do
 
   livecheck do
     url "https://api.hasselblad.com/products/downloads/133/all"
-    regex(/Phocus-(\d+(?:\.\d+)+)\.dmg/i)
-    strategy :page_match do |page, regex|
-      page.match(regex)[1]
+    regex(/Phocus[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    strategy :json do |json, regex|
+      json.map do |item|
+        match = item["url"]&.match(regex)
+        next if match.blank?
+
+        match[1]
+      end
     end
   end
 
