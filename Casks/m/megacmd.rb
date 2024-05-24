@@ -1,5 +1,5 @@
 cask "megacmd" do
-  version "1.6.3"
+  version "1.7.0"
   sha256 :no_check
 
   url "https://mega.nz/MEGAcmdSetup.dmg"
