@@ -1,3 +1,4 @@
+# This file is synced from `Homebrew/brew` by the `.github` repository, do not modify it directly.
 ---
 AllCops:
   TargetRubyVersion: 3.3
@@ -12,8 +13,6 @@ AllCops:
   - Taps/*/*/vendor/**/*
   SuggestExtensions:
     rubocop-minitest: false
-Homebrew:
-  Enabled: true
 Layout/ArgumentAlignment:
   Exclude:
   - Taps/*/*/*.rb
