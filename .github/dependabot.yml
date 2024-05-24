@@ -12,6 +12,10 @@ updates:
     ignore:
       - dependency-name: actions/stale
       - dependency-name: dessant/lock-threads
+    groups:
+      artifacts:
+        patterns:
+          - actions/*-artifact
 
   - package-ecosystem: bundler
     directory: /
