@@ -1,80 +1,226 @@
-inherit_from:
-  - ../.rubocop.yml
-
-Bundler/GemFilename:
-  Enabled: false
-
-Homebrew/MoveToExtendOS:
-  Enabled: true
+---
+AllCops:
+  TargetRubyVersion: 3.3
+  NewCops: enable
+  Include:
+  - "**/*.rbi"
   Exclude:
-    - "{extend,test,requirements}/**/*"
-    - "os.rb"
-
-Naming/PredicateName:
+  - Homebrew/sorbet/rbi/{dsl,gems}/**/*.rbi
+  - Homebrew/sorbet/rbi/parlour.rbi
+  - Homebrew/bin/*
+  - Homebrew/vendor/**/*
+  - Taps/*/*/vendor/**/*
+  SuggestExtensions:
+    rubocop-minitest: false
+Homebrew:
+  Enabled: true
+Layout/ArgumentAlignment:
+  Exclude:
+  - Taps/*/*/*.rb
+  - "/**/Formula/**/*.rb"
+  - "**/Formula/**/*.rb"
+Layout/CaseIndentation:
+  EnforcedStyle: end
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+Layout/EndAlignment:
+  EnforcedStyleAlignWith: start_of_line
+Layout/HashAlignment:
+  EnforcedHashRocketStyle: table
+  EnforcedColonStyle: table
+Layout/LeadingCommentSpace:
+  Exclude:
+  - Taps/*/*/cmd/*.rb
+Layout/LineLength:
+  Max: 118
+  AllowedPatterns:
+  - "#: "
+  - ' url "'
+  - ' mirror "'
+  - " plist_options "
+  - ' executable: "'
+  - ' font "'
+  - ' homepage "'
+  - ' name "'
+  - ' pkg "'
+  - ' pkgutil: "'
+  - "    sha256 cellar: "
+  - "    sha256  "
+  - "#{language}"
+  - "#{version."
+  - ' "/Library/Application Support/'
+  - "\"/Library/Caches/"
+  - "\"/Library/PreferencePanes/"
+  - ' "~/Library/Application Support/'
+  - "\"~/Library/Caches/"
+  - "\"~/Library/Containers"
+  - "\"~/Application Support"
+  - " was verified as official when first introduced to the cask"
+Layout/SpaceAroundOperators:
+  Enabled: false
+Layout/SpaceBeforeBrackets:
+  Exclude:
+  - "**/*_spec.rb"
+  - Taps/*/*/*.rb
+  - "/**/{Formula,Casks}/**/*.rb"
+  - "**/{Formula,Casks}/**/*.rb"
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
+Lint/DuplicateBranch:
+  Exclude:
+  - Taps/*/*/*.rb
+  - "/**/{Formula,Casks}/**/*.rb"
+  - "**/{Formula,Casks}/**/*.rb"
+Lint/ParenthesesAsGroupedExpression:
+  Exclude:
+  - Taps/*/*/*.rb
+  - "/**/Formula/**/*.rb"
+  - "**/Formula/**/*.rb"
+Lint/UnusedMethodArgument:
+  AllowUnusedKeywordArguments: true
+Metrics:
+  Enabled: false
+Naming/BlockForwarding:
+  Enabled: false
+Naming/FileName:
+  Regex: !ruby/regexp /^[\w\@\-\+\.]+(\.rb)?$/
+Naming/HeredocDelimiterNaming:
+  ForbiddenDelimiters:
+  - END, EOD, EOF
+Naming/InclusiveLanguage:
+  CheckStrings: true
+  FlaggedTerms:
+    slave:
+      AllowedRegex:
+      - gitslave
+      - log_slave
+      - ssdb_slave
+      - var_slave
+      - patches/13_fix_scope_for_show_slave_status_data.patch
+Naming/MethodName:
+  AllowedPatterns:
+  - "\\A(fetch_)?HEAD\\?\\Z"
+Naming/MethodParameterName:
   inherit_mode:
     merge:
-      - AllowedMethods
-  AllowedMethods:
-    - is_32_bit?
-    - is_64_bit?
-
-# Only enforce documentation for public APIs.
-# Checked by the tests.yml syntax job
-Style/Documentation:
-  AllowedConstants:
-    - Homebrew
-  Include:
-    - cask/cask.rb
-    - cask/dsl.rb
-    - cask/dsl/version.rb
-    - cask/url.rb
-    - development_tools.rb
-    - download_strategy.rb
-    - extend/ENV/super.rb
-    - extend/kernel.rb
-    - extend/pathname.rb
-    - formula.rb
-    - formula_assertions.rb
-    - formula_free_port.rb
-    - language/go.rb
-    - language/java.rb
-    - language/node.rb
-    - language/perl.rb
-    - language/python.rb
-    - livecheck/strategy/apache.rb
-    - livecheck/strategy/bitbucket.rb
-    - livecheck/strategy/cpan.rb
-    - livecheck/strategy/crate.rb
-    - livecheck/strategy/extract_plist.rb
-    - livecheck/strategy/git.rb
-    - livecheck/strategy/github_latest.rb
-    - livecheck/strategy/github_releases.rb
-    - livecheck/strategy/gnome.rb
-    - livecheck/strategy/gnu.rb
-    - livecheck/strategy/hackage.rb
-    - livecheck/strategy/json.rb
-    - livecheck/strategy/launchpad.rb
-    - livecheck/strategy/npm.rb
-    - livecheck/strategy/page_match.rb
-    - livecheck/strategy/pypi.rb
-    - livecheck/strategy/sourceforge.rb
-    - livecheck/strategy/sparkle.rb
-    - livecheck/strategy/xml.rb
-    - livecheck/strategy/xorg.rb
-    - livecheck/strategy/yaml.rb
-    - os.rb
-    - resource.rb
-    - utils/inreplace.rb
-    - utils/shebang.rb
-    - utils/string_inreplace_extension.rb
-    - version.rb
-    - tap.rb
-
-Homebrew/NegateInclude:
+    - AllowedNames
+Naming/VariableNumber:
+  Enabled: false
+Style/AndOr:
+  EnforcedStyle: always
+Style/ArgumentsForwarding:
+  Enabled: false
+Style/AutoResourceCleanup:
+  Enabled: true
+Style/BarePercentLiterals:
+  EnforcedStyle: percent_q
+Style/BlockDelimiters:
+  BracesRequiredMethods:
+  - sig
+Style/ClassAndModuleChildren:
   Exclude:
-    # YARD runs stand-alone.
-    - yard/docstring_parser.rb
-
-Style/DocumentationMethod:
+  - "**/*.rbi"
+Style/CollectionMethods:
+  Enabled: true
+Style/DisableCopsWithinSourceCodeDirective:
+  Enabled: true
   Include:
-    - "formula.rb"
+  - Taps/*/*/*.rb
+  - "/**/{Formula,Casks}/**/*.rb"
+  - "**/{Formula,Casks}/**/*.rb"
+Style/Documentation:
+  Exclude:
+  - Taps/**/*
+  - "/**/{Formula,Casks}/**/*.rb"
+  - "**/{Formula,Casks}/**/*.rb"
+  - "**/*.rbi"
+Style/FetchEnvVar:
+  Exclude:
+  - Taps/*/*/*.rb
+  - "/**/Formula/**/*.rb"
+  - "**/Formula/**/*.rb"
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: always
+  Exclude:
+  - Taps/*/*/*.rb
+  - "/**/{Formula,Casks}/**/*.rb"
+  - "**/{Formula,Casks}/**/*.rb"
+  - Homebrew/test/**/Casks/**/*.rb
+  - "**/*.rbi"
+  - "**/Brewfile"
+Style/GuardClause:
+  Exclude:
+  - Taps/*/*/*.rb
+  - "/**/{Formula,Casks}/**/*.rb"
+  - "**/{Formula,Casks}/**/*.rb"
+Style/HashAsLastArrayItem:
+  Exclude:
+  - Taps/*/*/*.rb
+  - "/**/Formula/**/*.rb"
+  - "**/Formula/**/*.rb"
+Style/InverseMethods:
+  InverseMethods:
+    :blank?: :present?
+Style/InvertibleUnlessCondition:
+  Enabled: true
+  InverseMethods:
+    :==: :!=
+    :zero?: 
+    :blank?: :present?
+Style/MutableConstant:
+  EnforcedStyle: strict
+Style/NumericLiteralPrefix:
+  EnforcedOctalStyle: zero_only
+Style/NumericLiterals:
+  MinDigits: 7
+  Strict: true
+  Exclude:
+  - "**/Brewfile"
+Style/OpenStructUse:
+  Exclude:
+  - Taps/**/*
+  - Homebrew/cli/args.rb
+  - Homebrew/cli/args.rbi
+Style/RescueStandardError:
+  EnforcedStyle: implicit
+Style/ReturnNil:
+  Enabled: true
+Style/SendWithLiteralMethodName:
+  Enabled: false
+Style/StderrPuts:
+  Enabled: false
+Style/StringConcatenation:
+  Exclude:
+  - Taps/*/*/*.rb
+  - "/**/{Formula,Casks}/**/*.rb"
+  - "**/{Formula,Casks}/**/*.rb"
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: double_quotes
+Style/StringMethods:
+  Enabled: true
+Style/SuperWithArgsParentheses:
+  Enabled: false
+Style/SymbolArray:
+  EnforcedStyle: brackets
+Style/TernaryParentheses:
+  EnforcedStyle: require_parentheses_when_complex
+Style/TopLevelMethodDefinition:
+  Enabled: true
+  Exclude:
+  - Taps/**/*
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
+Style/UnlessLogicalOperators:
+  Enabled: true
+  EnforcedStyle: forbid_logical_operators
+Style/WordArray:
+  MinSize: 4
+
