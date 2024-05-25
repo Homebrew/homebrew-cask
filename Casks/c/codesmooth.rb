@@ -2,7 +2,8 @@
 # frozen_string_literal: true
 
 cask "codesmooth" do
-  sha256 "62a088560abe5ca71cf3900165a0178facc3b39960695d00084f2926f9e4acf0"
+  version "1.0.0"
+  sha256 "da9c9950fdbae2081b6bf25281cafe403453f31f58e1bb09311619e47db12ab9"
 
   url "https://storage.googleapis.com/codesmooth-resources/public/cli/codesmooth-#{version}.tar.gz"
   name "CodeSmooth CLI"
