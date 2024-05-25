@@ -1,6 +1,6 @@
 cask "gamma-control" do
-  version "6.3.4"
-  sha256 "69c38595eca643ef46f8379324f4db5e3443f384fda6dee46bc73a8212d51cd0"
+  version "6.3.5"
+  sha256 "dc4d44f8b74ff6f12a718356d10cd37f083c5c1b42ccb3ecfe00a0177c2953fe"
 
   url "https://littoral.michelf.ca/apps/gamma-control/gamma-control-#{version}.zip"
   name "Gamma Control"
