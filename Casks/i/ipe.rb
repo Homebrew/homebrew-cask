@@ -1,9 +1,9 @@
 cask "ipe" do
   arch arm: "arm", intel: "intel"
 
-  version "7.2.28"
-  sha256 arm:   "920a6ab47c3fd6a9d5e9a530d3a1d288d282d5dc9227383d3bf6e75307b1faa9",
-         intel: "2de5402c14cc8bbfcc3f6ea45a3712c5cfac928aeabf506d0673aecbb6884ff7"
+  version "7.2.29"
+  sha256 arm:   "25afb5d6bd0f4f51e27823d86de470d6caa7600e8ee5111f633fa10879904b8c",
+         intel: "8bfb970614be423f1bf716217be3db6faa4676c5fa55a51ef81a2e3c6d6edc4d"
 
   url "https://github.com/otfried/ipe/releases/download/v#{version}/ipe-#{version}-mac-#{arch}.dmg",
       verified: "github.com/otfried/ipe/"
