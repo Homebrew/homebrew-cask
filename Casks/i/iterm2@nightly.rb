@@ -3,13 +3,13 @@ cask "iterm2@nightly" do
   version "3_5_20240524"
   sha256 "ef34add52cf93c72325e710207d90e048d494e5c985bb5bbd4907cbc3b147682"
 
-  url "https://www.iterm2.com/nightly/iTerm2-#{version}-nightly.zip"
+  url "https://iterm2.com/nightly/iTerm2-#{version}-nightly.zip"
   name "iTerm2"
   desc "Terminal emulator as alternative to Apple's Terminal app"
-  homepage "https://www.iterm2.com/"
+  homepage "https://iterm2.com/"
 
   livecheck do
-    url "https://www.iterm2.com/nightly/latest"
+    url "https://iterm2.com/nightly/latest"
     strategy :header_match
   end
 
