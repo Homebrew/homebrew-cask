@@ -1,3 +1,6 @@
+# typed: true
+# frozen_string_literal: true
+
 cask "codesmooth" do
   sha256 "62a088560abe5ca71cf3900165a0178facc3b39960695d00084f2926f9e4acf0"
 
@@ -8,9 +11,7 @@ cask "codesmooth" do
 
   binary "bin/codesmooth-macos", target: "codesmooth"
 
-  zap trash: [
-    "~/.config/codesmooth",
-  ]
+  zap trash: "~/.config/codesmooth"
 
   caveats do
     license "https://www.apache.org/licenses/LICENSE-2.0"
