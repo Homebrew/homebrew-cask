@@ -33,7 +33,7 @@ cask "iterm2" do
   url "https://iterm2.com/downloads/stable/iTerm2-#{version.dots_to_underscores}.zip"
   name "iTerm2"
   desc "Terminal emulator as alternative to Apple's Terminal app"
-  homepage "https://www.iterm2.com/"
+  homepage "https://iterm2.com/"
 
   auto_updates true
   conflicts_with cask: [
