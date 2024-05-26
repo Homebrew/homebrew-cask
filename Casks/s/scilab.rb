@@ -10,14 +10,13 @@ cask "scilab" do
     sha256 "382c38c43510ef12a9375c4c9ec777863ab9c241cffbac4e753596f35378e69c"
   end
 
-  url "https://www.scilab.org/download/#{version}/scilab-#{version}-#{arch}.dmg",
-      verified: "scilab.org/download/"
+  url "https://www.scilab.org/download/#{version}/scilab-#{version}-#{arch}.dmg"
   name "Scilab"
   desc "Software for numerical computation"
   homepage "https://www.scilab.org/"
 
   livecheck do
-    url "https://www.scilab.org/download/"
+    url "https://www.scilab.org/download/latest/"
     regex(/href=.*?scilab[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
