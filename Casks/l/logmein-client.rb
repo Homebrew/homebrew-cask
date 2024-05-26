@@ -1,5 +1,5 @@
 cask "logmein-client" do
-  version "4.1.7905,4.1.0.7905"
+  version "4.1.7930,4.1.0.7930"
   sha256 :no_check
 
   url "https://secure.logmein.com/LogMeInClientMac.dmg"
