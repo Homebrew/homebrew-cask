@@ -6,7 +6,7 @@ cask "mac-mouse-fix" do
       verified: "github.com/noah-nuebling/mac-mouse-fix/"
   name "Mac Mouse Fix"
   desc "Mouse utility to add gesture functions and smooth scrolling to 3rd party mice"
-  homepage "https://noah-nuebling.github.io/mac-mouse-fix-website/"
+  homepage "https://macmousefix.com/"
 
   livecheck do
     url :url
@@ -14,6 +14,8 @@ cask "mac-mouse-fix" do
   end
 
   auto_updates true
+  conflicts_with cask: "mac-mouse-fix@2"
+  depends_on macos: ">= :high_sierra"
 
   app "Mac Mouse Fix.app"
 
