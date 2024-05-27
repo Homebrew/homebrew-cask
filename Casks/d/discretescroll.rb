@@ -1,6 +1,6 @@
 cask "discretescroll" do
-  version "0.1.1u"
-  sha256 "773a05b4add3763297b65a8c74335ccc4b5fa57b817b2420198326618198f669"
+  version "1.0.0"
+  sha256 "00f30ed94d3500514593099ceb5aabe06dff540363d051deaa3abd2680b52eb4"
 
   url "https://github.com/emreyolcu/discrete-scroll/releases/download/v#{version}/DiscreteScroll.zip"
   name "DiscreteScroll"
