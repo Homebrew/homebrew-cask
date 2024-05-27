@@ -1,9 +1,9 @@
 cask "aliworkbench" do
-  version "9.37.06QNM"
-  sha256 "38093b3450b33db1e92fbec38631c274a4ceb540c5a95850e934468fc3679258"
+  version "9.39.01QNM"
+  sha256 "9c3a524c8fd4cd6648ba03355b1c5b5265728dc825ab4b6a4d7b7844556cd8c8"
 
   url "https://download.alicdn.com/wangwang/AliworkbenchQN_(#{version}).dmg",
-      verified: "download.alicdn.com/"
+      verified: "download.alicdn.com/wangwang/"
   name "AliWorkBench"
   name "Qian Niu"
   name "千牛"
@@ -28,8 +28,7 @@ cask "aliworkbench" do
   zap trash: [
     "~/Library/Application Support/Aliworkbench",
     "~/Library/Caches/com.taobao.Aliworkbench",
-    "~/Library/HTTPStorages/com.taobao.Aliworkbench",
-    "~/Library/HTTPStorages/com.taobao.Aliworkbench.binarycookies",
+    "~/Library/HTTPStorages/com.taobao.Aliworkbench*",
     "~/Library/Preferences/com.taobao.Aliworkbench.plist",
     "~/Library/Saved Application State/com.taobao.Aliworkbench.savedState",
     "~/Library/WebKit/com.taobao.Aliworkbench",
