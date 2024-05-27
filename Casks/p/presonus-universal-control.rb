@@ -1,8 +1,8 @@
 cask "presonus-universal-control" do
-  version "4.3.0.99802"
-  sha256 "9e558cfdbcf01afdf1cbb5d93232b7d751ef67cde42540529642d982eee95452"
+  version "4.3.1.100005"
+  sha256 "c50fa033014e337b03ba32866e6ca828f2756b9b44835f8ef7ff3f6e3ae1582b"
 
-  url "https://pae-web.presonusmusic.com/downloads/products/dmg/PreSonus_Universal_Control_v#{version.dots_to_underscores}.dmg",
+  url "https://pae-web.presonusmusic.com/downloads/products/dmg/PreSonus_Universal_Control_#{version.dots_to_underscores}.dmg",
       verified: "pae-web.presonusmusic.com/downloads/products/dmg/"
   name "Universal Control"
   desc "PreSonus software control interface"
