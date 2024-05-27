@@ -66,8 +66,9 @@ jobs:
 
             - label: missing description
               path: Casks/.+
-              missing_content: \n  desc .+\n
-              missing_content: cask "font-
+              missing_content:
+                - \n  desc .+\n
+                - cask "font-
 
             - label: extract_plist livecheck
               path: Casks/.+
