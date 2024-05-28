@@ -13,7 +13,7 @@ cask "rustdesk" do
 
   livecheck do
     url :url
-    regex(/(\d+(?:\.\d+(\-\d+)?)+)/)
+    regex(/^v?(\d+(?:[.-]\d+)+)$/i)
     strategy :github_latest
   end
 
