@@ -6,7 +6,7 @@ cask "kiibohd-configurator" do
       verified: "github.com/kiibohd/configurator/"
   name "Kiibohd Configurator"
   desc "Modular community keyboard firmware"
-  homepage "http://kiibohd.com/"
+  homepage "https://kiibohd.com/"
 
   depends_on formula: "dfu-util"
 
