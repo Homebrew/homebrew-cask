@@ -9,7 +9,7 @@ cask "steamcmd" do
   homepage "https://developer.valvesoftware.com/wiki/SteamCMD"
 
   livecheck do
-    url "http://media.steampowered.com/client/steam_cmd_osx"
+    url "https://media.steampowered.com/client/steam_cmd_osx"
     regex(/"version"\s*"([^"]+)"/i)
   end
 
