@@ -6,7 +6,7 @@ cask "submariner" do
       verified: "github.com/NattyNarwhal/Submariner/"
   name "Submariner"
   desc "Subsonic client"
-  homepage "http://submarinerapp.com/"
+  homepage "https://submarinerapp.com/"
 
   depends_on macos: ">= :big_sur"
 
