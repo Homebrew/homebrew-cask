@@ -2,10 +2,10 @@ cask "jtool" do
   version :latest
   sha256 :no_check
 
-  url "http://www.newosxbook.com/tools/jtool.tar"
+  url "https://www.newosxbook.com/tools/jtool.tar"
   name "jtool"
   desc "Tool to help out reverse engineering, security researchers, and tweak developers"
-  homepage "http://newosxbook.com/tools/jtool.html"
+  homepage "https://newosxbook.com/tools/jtool.html"
 
   deprecate! date: "2023-12-17", because: :discontinued
 
