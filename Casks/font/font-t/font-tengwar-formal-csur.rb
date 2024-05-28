@@ -5,7 +5,7 @@ cask "font-tengwar-formal-csur" do
   url "https://downloads.sourceforge.net/freetengwar/TengwarFormalCSUR#{version}.zip"
   name "Tengwar Formal CSUR"
   desc "Tengwar Unicode font compliant with CSUR"
-  homepage "http://freetengwar.sourceforge.net/formal.html"
+  homepage "https://freetengwar.sourceforge.net/formal.html"
 
   livecheck do
     url :homepage
