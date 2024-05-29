@@ -2,14 +2,14 @@ cask "datadog-agent" do
   version "7.54.0-1"
   sha256 "49483a3a9cd25ee1aaa8658c4320acf89577bfcc52d41a0fea6c42a9d6236f66"
 
-  url "https://s3.amazonaws.com/dd-agent/datadog-agent-#{version}.dmg",
-      verified: "s3.amazonaws.com/dd-agent/"
+  url "https://dd-agent.s3.amazonaws.com/datadog-agent-#{version}.dmg",
+      verified: "dd-agent.s3.amazonaws.com/"
   name "Datadog Agent"
   desc "Monitoring and security across systems, apps, and services"
   homepage "https://www.datadoghq.com/"
 
   livecheck do
-    url "https://s3.amazonaws.com/dd-agent/"
+    url "https://dd-agent.s3.amazonaws.com/"
     regex(%r{<Key>datadog-agent-([\d.-]+)\.dmg</Key>}i)
   end
 
