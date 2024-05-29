@@ -7,10 +7,7 @@ cask "quiterss" do
   desc "Free news feeds reader"
   homepage "https://quiterss.org/"
 
-  livecheck do
-    url "https://quiterss.org/en/download"
-    regex(/href=.*?QuiteRSS[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
-  end
+  disable! date: "2024-05-28", because: :no_longer_available
 
   app "quiterss.app"
 
