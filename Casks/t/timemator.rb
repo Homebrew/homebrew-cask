@@ -2,8 +2,8 @@ cask "timemator" do
   version "3.0.4"
   sha256 "fd64538606b05338bc3bf742d893665afc0e8b1c5f32a5238fd1f2324fd72356"
 
-  url "https://s3-eu-west-1.amazonaws.com/catforce-timemator/releases/Timemator_#{version}.dmg",
-      verified: "s3-eu-west-1.amazonaws.com/catforce-timemator/"
+  url "https://catforce-timemator.s3.amazonaws.com/releases/Timemator_#{version}.dmg",
+      verified: "catforce-timemator.s3.amazonaws.com/"
   name "Timemator"
   desc "Automatic time-tracking application"
   homepage "https://timemator.com/"
