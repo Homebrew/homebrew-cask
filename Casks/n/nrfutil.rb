@@ -1,6 +1,6 @@
 cask "nrfutil" do
-  version "1.0.0-60fe18a"
-  sha256 "229af1183c16cef8e18554ef3a922cb56f16eb7ee8dce76d16a0ace94e7fc6d1"
+  version "1.2.0-9ca8c73"
+  sha256 "454fda3f1ee088f76aa57ac6f208d71d415d0ba3c1f7b88f5ca2347b10775048"
 
   url "https://developer.nordicsemi.com/.pc-tools/nrfutil/universal-osx/nrfutil-launcher-universal-apple-darwin-#{version}"
   name "nrfutil"
