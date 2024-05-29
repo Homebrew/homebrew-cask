@@ -1,11 +1,11 @@
 cask "proton-mail" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.0.2"
-  sha256 arm:   "e4c17499fc19b582d885210624c2dbab064f0726e19c5a6d2a706cac6df8ce67",
-         intel: "cdf029256e48b55ea83b1e704874b55fb0f993c1ef3d165aa5fa572e3d313bd3"
+  version "1.0.3"
+  sha256 arm:   "c691cfec43b6876209e8cca8e35b89cb5d20805027341128bcaf35c07234540e",
+         intel: "b042e8f30820f7ef8bdbf7a74d7f35bf948234bd6b31d9fa533cc11d388b96aa"
 
-  url "https://github.com/ProtonMail/inbox-desktop/releases/download/v#{version}/Proton-Mail-#{version}-#{arch}.dmg",
+  url "https://github.com/ProtonMail/inbox-desktop/releases/download/v#{version}/Proton.Mail-#{version}-#{arch}.dmg",
       verified: "github.com/ProtonMail/inbox-desktop/"
   name "Proton Mail"
   desc "Client for Proton Mail and Proton Calendar"
