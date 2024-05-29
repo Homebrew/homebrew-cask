@@ -8,4 +8,6 @@ cask "discretescroll" do
   homepage "https://github.com/emreyolcu/discrete-scroll"
 
   app "DiscreteScroll.app"
+
+  zap trash: "~/Library/Preferences/com.emreyolcu.DiscreteScroll.plist"
 end
