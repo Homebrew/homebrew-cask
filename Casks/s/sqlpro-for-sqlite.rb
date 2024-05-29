@@ -1,6 +1,6 @@
 cask "sqlpro-for-sqlite" do
-  version "2024.10"
-  sha256 "e6c67edd7880d76670e3a51617ec965545bea4ad43f85f4b6a3d6c9a78bcb5c0"
+  version "2024.30"
+  sha256 "5e7ed1bc6d5cac38ca6d318bb4db347acec99e2983092f17337363113dc635ed"
 
   url "https://d3fwkemdw8spx3.cloudfront.net/sqlite/SQLProSQLite.#{version}.app.zip",
       verified: "d3fwkemdw8spx3.cloudfront.net/sqlite/"
