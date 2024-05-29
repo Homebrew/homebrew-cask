@@ -5,8 +5,8 @@ cask "razorsql" do
   sha256 arm:   "9fef2aba1731015afc9ab2bc85163745be0eb74419a64bc57d5e79449d8c77f0",
          intel: "f0339dbe62b103751dd291f817bcf94d778b5b1d09fffd8d45d2b2202ad5cae4"
 
-  url "https://s3.dualstack.us-east-1.amazonaws.com/downloads.razorsql.com/downloads/#{version.dots_to_underscores}/razorsql#{version.dots_to_underscores}#{arch}.dmg",
-      verified: "s3.dualstack.us-east-1.amazonaws.com/"
+  url "https://s3.amazonaws.com/downloads.razorsql.com/downloads/#{version.dots_to_underscores}/razorsql#{version.dots_to_underscores}#{arch}.dmg",
+      verified: "s3.amazonaws.com/"
   name "RazorSQL"
   desc "SQL query tool and SQL editor"
   homepage "https://razorsql.com/"
