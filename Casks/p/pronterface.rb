@@ -1,17 +1,8 @@
 cask "pronterface" do
-  version "2.0.1,3.10"
+  version "2.1.0,3.10"
+  sha256 "cdd2966a2d793f665b24a30e42f40ab926520f36952af9140b75033a8c020e84"
 
-  on_big_sur :or_older do
-    sha256 "5c66655efd1f5e8906169467d9843e55ec5a7f9b72fc0d827e59b850ebf944fb"
-
-    url "https://github.com/kliment/Printrun/releases/download/printrun-#{version.csv.first}/printrun-#{version.csv.first}_macos-11_x64_py#{version.csv.second}.zip"
-  end
-  on_monterey :or_newer do
-    sha256 "34467fb64dba31f43a15a503f2e1285b3e367a55d9a414a5bd33675d8e81719c"
-
-    url "https://github.com/kliment/Printrun/releases/download/printrun-#{version.csv.first}/printrun-#{version.csv.first}_macos-12_x64_py#{version.csv.second}.zip"
-  end
-
+  url "https://github.com/kliment/Printrun/releases/download/printrun-#{version.csv.first}/printrun-#{version.csv.first}_macos-12_x64_py#{version.csv.second}.zip"
   name "Printrun"
   desc "Control your 3D printer from your PC"
   homepage "https://github.com/kliment/Printrun"
