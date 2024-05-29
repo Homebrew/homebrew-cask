@@ -6,8 +6,8 @@ cask "vimcal" do
   sha256 arm:   "dcc17bbbef2693b24d5e70e90cd0f34db4ad742f0cd2da79741ddd69742c6e3d",
          intel: "55a489342db24a1839bf9728597ce3420352c96fb59c60b950e00c5bb4c64167"
 
-  url "https://vimcal-#{host_suffix}.s3.us-west-1.amazonaws.com/Vimcal-#{version}#{arch}.dmg",
-      verified: "vimcal-#{host_suffix}.s3.us-west-1.amazonaws.com/"
+  url "https://vimcal-#{host_suffix}.s3.amazonaws.com/Vimcal-#{version}#{arch}.dmg",
+      verified: "vimcal-#{host_suffix}.s3.amazonaws.com/"
   name "Vimcal"
   desc "Calendar"
   homepage "https://vimcal.com/"
