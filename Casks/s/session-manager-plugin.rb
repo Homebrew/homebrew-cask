@@ -5,8 +5,8 @@ cask "session-manager-plugin" do
   sha256 arm:   "e26d1ae39d576451e6c5cc06e1ced3a6219905b1213b2479819fe7230b139424",
          intel: "478e225121772def86266958c9630072debcaa325e51456ec25325cf59a17855"
 
-  url "https://s3.amazonaws.com/session-manager-downloads/plugin/#{version}/mac#{arch}/session-manager-plugin.pkg",
-      verified: "s3.amazonaws.com/session-manager-downloads/plugin/"
+  url "https://session-manager-downloads.s3.amazonaws.com/plugin/#{version}/mac#{arch}/session-manager-plugin.pkg",
+      verified: "session-manager-downloads.s3.amazonaws.com/plugin/"
   name "Session Manager Plugin for the AWS CLI"
   desc "Plugin for AWS CLI to start and end sessions that connect to managed instances"
   homepage "https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-working-with-install-plugin.html"
