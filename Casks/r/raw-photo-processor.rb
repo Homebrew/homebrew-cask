@@ -16,4 +16,13 @@ cask "raw-photo-processor" do
   end
 
   app "Raw Photo Processor 64.app"
+
+  zap trash: [
+    "~/Library/Application Support/RPP",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.tigry.rpp.sfl*",
+    "~/Library/Caches/net.tigry.rpp",
+    "~/Library/HTTPStorages/net.tigry.rpp",
+    "~/Library/Preferences/net.tigry.rpp.plist",
+    "~/Library/Saved Application State/net.tigry.rpp.savedState",
+  ]
 end
