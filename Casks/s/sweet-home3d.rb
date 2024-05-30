@@ -1,6 +1,6 @@
 cask "sweet-home3d" do
-  version "7.3"
-  sha256 "5652e86f8ba6843bab415451b73a97556356ea5ec95fade23328c5ffc839de9e"
+  version "7.4"
+  sha256 "b4c8aad6ac00eb610d5e6c405b8e505aab09ee7216e6bb706d774d400511f209"
 
   url "https://downloads.sourceforge.net/sweethome3d/SweetHome3D/SweetHome3D-#{version}/SweetHome3D-#{version}-macosx.dmg",
       verified: "sourceforge.net/sweethome3d/"
