@@ -1,6 +1,6 @@
 cask "slack-cli" do
-  version "2.24.0"
-  sha256 "a49bb18fa691c57968b649aa87a4f9b3bee856c2f127cd90da10600cdae8fa5e"
+  version "2.25.0"
+  sha256 "7a4d15b0d73732939230401eb0698dcbfe5da3dbd176a60fc87661c4f7d1113e"
 
   url "https://downloads.slack-edge.com/slack-cli/slack_cli_#{version}_macOS_64-bit.tar.gz",
       verified: "downloads.slack-edge.com/slack-cli/"
