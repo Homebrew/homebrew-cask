@@ -23,7 +23,9 @@ jobs:
       startsWith(github.repository, 'Homebrew/') &&
       (
         github.event.label.name == 'ci-requeue' ||
+        github.event.label.name == 'ci-requeue-failed-jobs' ||
         github.event.label.name == 'ci-retry' ||
+        github.event.label.name == 'ci-retry-failed-jobs' ||
         github.event.label.name == 'ci-skip-appcast' ||
         github.event.label.name == 'ci-skip-install' ||
         github.event.label.name == 'ci-skip-homepage' ||
@@ -43,3 +45,11 @@ jobs:
           continuous-label: ci-retry
           trigger-labels: ci-skip-appcast,ci-skip-install,ci-skip-homepage,ci-skip-livecheck,ci-syntax-only,ci-skip-repository,ci-skip-livecheck-min-os
           workflow: ci.yml
+      - name: Re-run CI failed jobs
+        uses: reitermarkus/rerun-workflow@440187d88f68a23cfb30caab5f33ac1bcce31b6a
+        with:
+              token: ${{ secrets.HOMEBREW_GITHUB_PUBLIC_REPO_TOKEN }}
+              once-label: ci-requeue-failed-jobs
+              continuous-label: ci-retry-failed-jobs
+              workflow: ci.yml
+              failed-jobs-only: true
