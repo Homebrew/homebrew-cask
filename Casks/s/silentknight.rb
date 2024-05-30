@@ -10,8 +10,8 @@ cask "silentknight" do
     depends_on macos: ">= :el_capitan"
   end
   on_catalina :or_newer do
-    version "2.07,2023.11"
-    sha256 "90bc1b10f02f09c2a684a0f04242f2e93b1aadd912e5341bc5a7415cfe8f0c62"
+    version "2.08,2024.05"
+    sha256 "c1c7b462c5510bdaa62992b0441a20e46415b3f9a06ab8965f6eb227c406e438"
 
     livecheck do
       url "https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
@@ -25,7 +25,7 @@ cask "silentknight" do
         next if version.blank? || match.blank?
 
         # Temporarily override the version to account for a one-off mismatch
-        version = "2.07" if version == "2.7"
+        version = "2.08" if version == "2.8"
 
         "#{version},#{match[1]}.#{match[2]}"
       end
