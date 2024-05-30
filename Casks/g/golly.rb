@@ -10,4 +10,10 @@ cask "golly" do
 
   suite "golly-#{version}-mac"
   binary "#{appdir}/golly-#{version}-mac/bgolly"
+
+  zap trash: [
+    "~/Library/Application Support/Golly",
+    "~/Library/Preferences/net.sourceforge.golly.plist",
+    "~/Library/Saved Application State/net.sourceforge.golly.savedState",
+  ]
 end
