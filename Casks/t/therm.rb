@@ -13,4 +13,10 @@ cask "therm" do
   end
 
   app "Therm.app"
+
+  zap trash: [
+    "~/Library/Application Support/Therm",
+    "~/Library/Preferences/com.pancake.therm.plist",
+    "~/Library/Saved Application State/com.pancake.therm.savedState",
+  ]
 end
