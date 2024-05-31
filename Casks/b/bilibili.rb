@@ -1,8 +1,8 @@
 cask "bilibili" do
-  version "1.13.5.3377"
-  sha256 :no_check
+  version "1.13.5"
+  sha256 "c3f1f43bfc8836cb27d8acbff24834129366a4e30920c3113cccb5f9e70509ac"
 
-  url "https://dl.hdslb.com/mobile/fixed/pc_electron_mac/bili_mac.dmg",
+  url "https://dl.hdslb.com/mobile/fixed/pc_electron_mac/bili_mac.dmg?v=#{version}",
       verified: "dl.hdslb.com/"
   name "Bilibili"
   name "哔哩哔哩官方客户端"
@@ -10,8 +10,8 @@ cask "bilibili" do
   homepage "https://app.bilibili.com/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "http://api.bilibili.com/x/elec-frontend/update/latest.yml"
+    strategy :electron_builder
   end
 
   auto_updates true
