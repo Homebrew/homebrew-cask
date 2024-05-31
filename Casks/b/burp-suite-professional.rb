@@ -1,9 +1,9 @@
 cask "burp-suite-professional" do
   arch arm: "MacOsArm64", intel: "MacOsx"
 
-  version "2024.4.4"
-  sha256 arm:   "9aff3e965c57d36055da67785c92b640b2c877bd2279ee027605ef55331ae1ac",
-         intel: "a6b5f0cd66564b4c050be564370a81986eb280f51cfc7618c296495c38f2a835"
+  version "2024.4.5"
+  sha256 arm:   "49b837490cfd415c58253e2e0368bb9b86f7436b4864e3a70762827f47a4a50b",
+         intel: "65357c44d408e9140b965fdcac610860a81e0cb3ae61bf409b6c1532cb57fe88"
 
   url "https://portswigger-cdn.net/burp/releases/download?product=pro&version=#{version}&type=#{arch}",
       verified: "portswigger-cdn.net/burp/releases/"
