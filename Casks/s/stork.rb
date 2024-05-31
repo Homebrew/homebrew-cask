@@ -7,10 +7,7 @@ cask "stork" do
   desc "Messenger with powerful features for hybrid work"
   homepage "https://stork.ai/"
 
-  livecheck do
-    url "https://downloads.stork.ai/macos/release/app_cast.xml"
-    strategy :sparkle
-  end
+  disable! date: "2024-05-31", because: :no_longer_available
 
   auto_updates true
   depends_on macos: ">= :catalina"
