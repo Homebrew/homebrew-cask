@@ -1,25 +1,56 @@
 cask "font-junicode" do
-  version "1.002"
-  sha256 "c199d96c8424be60fcab8d00d2eee39ea8ae632cfd5e710cbbd70626d6a729e7"
+  version "2.207"
+  sha256 "6f98028bf139c47d3aef5ea931d8bb4434d091f1308eb80f3ae0c398e399e973"
 
-  url "https://downloads.sourceforge.net/junicode/junicode-#{version}.zip",
-      verified: "downloads.sourceforge.net/junicode/"
+  url "https://github.com/psb1558/Junicode-font/releases/download/v#{version}/Junicode_#{version}.zip"
   name "Junicode"
-  homepage "https://junicode.sourceforge.io/"
+  homepage "https://github.com/psb1558/Junicode-font"
 
   livecheck do
-    url "https://sourceforge.net/projects/junicode/rss?path=/junicode"
-    regex(%r{url=.*?/junicode[._-]v?(\d+(?:[.-]\d+)+)\.(?:t|zip)}i)
-    strategy :sourceforge do |page, regex|
-      page.scan(regex).map { |match| match[0].tr("-", ".") }
-    end
+    url :url
+    strategy :github_latest
   end
 
-  font "FoulisGreek.ttf"
-  font "Junicode-Bold.ttf"
-  font "Junicode-BoldItalic.ttf"
-  font "Junicode-Italic.ttf"
-  font "Junicode.ttf"
+  font "Junicode/OTF/Junicode-Bold.otf"
+  font "Junicode/OTF/Junicode-BoldItalic.otf"
+  font "Junicode/OTF/Junicode-Cond.otf"
+  font "Junicode/OTF/Junicode-CondItalic.otf"
+  font "Junicode/OTF/Junicode-CondLight.otf"
+  font "Junicode/OTF/Junicode-CondLightItalic.otf"
+  font "Junicode/OTF/Junicode-CondMedium.otf"
+  font "Junicode/OTF/Junicode-CondMediumItalic.otf"
+  font "Junicode/OTF/Junicode-Exp.otf"
+  font "Junicode/OTF/Junicode-ExpBold.otf"
+  font "Junicode/OTF/Junicode-ExpBoldItalic.otf"
+  font "Junicode/OTF/Junicode-ExpItalic.otf"
+  font "Junicode/OTF/Junicode-ExpMedium.otf"
+  font "Junicode/OTF/Junicode-ExpMediumItalic.otf"
+  font "Junicode/OTF/Junicode-ExpSmBold.otf"
+  font "Junicode/OTF/Junicode-ExpSmBoldItalic.otf"
+  font "Junicode/OTF/Junicode-Italic.otf"
+  font "Junicode/OTF/Junicode-Light.otf"
+  font "Junicode/OTF/Junicode-LightItalic.otf"
+  font "Junicode/OTF/Junicode-Medium.otf"
+  font "Junicode/OTF/Junicode-MediumItalic.otf"
+  font "Junicode/OTF/Junicode-Regular.otf"
+  font "Junicode/OTF/Junicode-SmBold.otf"
+  font "Junicode/OTF/Junicode-SmBoldItalic.otf"
+  font "Junicode/OTF/Junicode-SmCond.otf"
+  font "Junicode/OTF/Junicode-SmCondItalic.otf"
+  font "Junicode/OTF/Junicode-SmCondLight.otf"
+  font "Junicode/OTF/Junicode-SmCondLightItalic.otf"
+  font "Junicode/OTF/Junicode-SmCondMedium.otf"
+  font "Junicode/OTF/Junicode-SmCondMediumItalic.otf"
+  font "Junicode/OTF/Junicode-SmExp.otf"
+  font "Junicode/OTF/Junicode-SmExpBold.otf"
+  font "Junicode/OTF/Junicode-SmExpBoldItalic.otf"
+  font "Junicode/OTF/Junicode-SmExpItalic.otf"
+  font "Junicode/OTF/Junicode-SmExpMedium.otf"
+  font "Junicode/OTF/Junicode-SmExpMediumItalic.otf"
+  font "Junicode/OTF/Junicode-SmExpSmBold.otf"
+  font "Junicode/OTF/Junicode-SmExpSmBoldItalic.otf"
+  font "Junicode/VAR/JunicodeVF-Italic.ttf"
+  font "Junicode/VAR/JunicodeVF-Roman.ttf"
 
   # No zap stanza required
 end
