@@ -2,8 +2,8 @@ cask "usbimager" do
   arch arm: "arm", intel: "intel"
 
   version "1.0.10"
-  sha256 arm:   "54fb7b909009acca97f8ae42939d53e5a70c1030c001a024a0531173001e908d",
-         intel: "85081cde8626b3714b77244de85d38830e89f0d1af7341514ad93077c7ba826a"
+  sha256 arm:   "a8d2125a8a5edae9309e635741c0fea099c5e58844c86dc786331e48b9431832",
+         intel: "675eacd90d0e7d25a4fabe0cfe506173cb52b4731aaff6d41825e64da288cb9e"
 
   url "https://gitlab.com/bztsrc/usbimager/raw/binaries/usbimager_#{version}-#{arch}-macosx-cocoa.zip",
       verified: "gitlab.com/bztsrc/usbimager/"
