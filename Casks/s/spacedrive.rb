@@ -10,6 +10,8 @@ cask "spacedrive" do
   desc "Open source cross-platform file explorer"
   homepage "https://github.com/spacedriveapp/spacedrive"
 
+  auto_updates true
+
   livecheck do
     url :url
     strategy :github_latest
