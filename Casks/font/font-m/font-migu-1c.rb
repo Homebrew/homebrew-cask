@@ -7,6 +7,10 @@ cask "font-migu-1c" do
   name "Migu 1C"
   homepage "https://mix-mplus-ipa.osdn.jp/migu/#migu1c"
 
+  livecheck do
+    skip "No version information available"
+  end
+
   font "migu-1c-#{version}/migu-1c-bold.ttf"
   font "migu-1c-#{version}/migu-1c-regular.ttf"
 
