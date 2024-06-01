@@ -1,6 +1,6 @@
 cask "irpf2024" do
-  version "1.1"
-  sha256 "f20c2cd35cffd67d66a58091230f329480cadc4711b4bf561f82c7c3a1a4f481"
+  version "1.2"
+  sha256 "78196b5315be4a1e0232c4c3758dc93e5d1eba9378cd5552405b3e01b0f54d43"
 
   url "https://downloadirpf.receita.fazenda.gov.br/irpf/2024/irpf/arquivos/IRPF2024-v#{version}.dmg"
   name "IRPF 2024"
