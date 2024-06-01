@@ -3,7 +3,7 @@ cask "font-ocr" do
   sha256 "39289c641520265ecedbade99f01600f316f8196ec57f71c8402d3ba09438666"
 
   url "https://ftp.iij.ad.jp/pub/osdn.jp/tsukurimashou/56948/ocr-#{version}.zip",
-      verified: "osdn.dl.osdn.jp/tsukurimashou/"
+      verified: "ftp.iij.ad.jp/pub/osdn.jp/tsukurimashou/"
   name "OCR"
   homepage "https://ansuz.sooke.bc.ca/page/fonts#ocra"
 
