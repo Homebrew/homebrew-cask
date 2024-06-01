@@ -8,10 +8,8 @@ cask "google-chrome" do
   homepage "https://www.google.com/chrome/"
 
   livecheck do
-    url :url
-    strategy :extract_plist do |versions|
-      versions.values.filter_map(&:short_version).first
-    end
+    url "https://chromiumdash.appspot.com/fetch_releases?channel=Stable&platform=Mac"
+    regex(/"version":\s*"v?(\d+(?:\.\d+)+)"/i)
   end
 
   auto_updates true
