@@ -7,6 +7,10 @@ cask "font-migu-2m" do
   name "Migu 2M"
   homepage "https://mix-mplus-ipa.osdn.jp/migu/#migu2m"
 
+  livecheck do
+    skip "No version information available"
+  end
+
   font "migu-2m-#{version}/migu-2m-bold.ttf"
   font "migu-2m-#{version}/migu-2m-regular.ttf"
 
