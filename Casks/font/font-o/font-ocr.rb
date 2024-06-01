@@ -7,6 +7,10 @@ cask "font-ocr" do
   name "OCR"
   homepage "https://ansuz.sooke.bc.ca/page/fonts#ocra"
 
+  livecheck do
+    skip "No version information available"
+  end
+
   font "ocr-#{version}/OCRA.otf"
   font "ocr-#{version}/OCRB.otf"
   font "ocr-#{version}/OCRBE.otf"
