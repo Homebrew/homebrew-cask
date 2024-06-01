@@ -7,6 +7,10 @@ cask "font-mplus" do
   name "M+ FONTS"
   homepage "https://mplusfonts.github.io"
 
+  livecheck do
+    skip "No version information available"
+  end
+
   font "mplus-TESTFLIGHT-#{version}/mplus-1c-black.ttf"
   font "mplus-TESTFLIGHT-#{version}/mplus-1c-bold.ttf"
   font "mplus-TESTFLIGHT-#{version}/mplus-1c-heavy.ttf"
