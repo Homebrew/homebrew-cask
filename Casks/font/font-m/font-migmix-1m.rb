@@ -7,6 +7,10 @@ cask "font-migmix-1m" do
   name "MigMix 1M"
   homepage "https://mix-mplus-ipa.osdn.jp/migmix/#migmix1m"
 
+  livecheck do
+    skip "No version information available"
+  end
+
   font "migmix-1m-#{version}/migmix-1m-bold.ttf"
   font "migmix-1m-#{version}/migmix-1m-regular.ttf"
 
