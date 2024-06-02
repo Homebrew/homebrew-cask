@@ -1,6 +1,6 @@
 cask "draw-things" do
-  version "1.20240515.0-057e56d1"
-  sha256 "057e56d1bb37142a2efe5231a4e1bff1b65dd41836b56213392527fae63835e8"
+  version "1.20240531.1-5642f788"
+  sha256 "5642f7882696013325588f60de8b5b3cd078256d5817df58ecdba2514c4dc11e"
 
   url "https://static.drawthings.ai/DrawThings-#{version}.zip"
   name "Draw Things"
