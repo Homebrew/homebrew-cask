@@ -1,6 +1,6 @@
 cask "persepolis-download-manager" do
-  version "4.1.0"
-  sha256 "db6afcd9322eeab2221e1ef93de6642bf5a4b5f4d1cd270cbec3b6ce704bd695"
+  version "4.2.0"
+  sha256 "b3219945bc4e49a0eddfbcd05df9ffa6c0790249ff4095cd6a0faad64343d462"
 
   url "https://github.com/persepolisdm/persepolis/releases/download/#{version}/persepolis_#{version}_macos.dmg",
       verified: "github.com/persepolisdm/persepolis/"
