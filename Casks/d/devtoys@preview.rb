@@ -1,8 +1,13 @@
 cask "devtoys@preview" do
   version "v2.0.0.3"
-  sha256 "70385adb55941d47b145c2e7622c7efb972bd04d3d3013846f06f174ecf1b1b6"
+  sha256 :no_check
 
-  url "https://github.com/DevToys-app/DevToys/releases/download/#{version}/devtoys_osx_arm64.zip"
+  if Hardware::CPU.intel?
+    url "https://github.com/DevToys-app/DevToys/releases/download/#{version}/devtoys_osx_x64.zip"
+  else
+    url "https://github.com/DevToys-app/DevToys/releases/download/#{version}/devtoys_osx_arm64.zip"
+  end
+
   name "DevToys"
   desc "A Swiss Army Knife for developers"
   homepage "https://github.com/DevToys-app/DevToys"
