@@ -1,6 +1,6 @@
 cask "minizincide" do
-  version "2.8.4"
-  sha256 "c3b1cb03cd186f400e61e3bb9532c057ee5d33bc8dbbc93e8dd7d8fe6a68d56e"
+  version "2.8.5"
+  sha256 "ca71aff993bb9db7c5c9175b724aefd8769071a09a392a19b7a3a7d06a4d0e59"
 
   url "https://github.com/MiniZinc/MiniZincIDE/releases/download/#{version}/MiniZincIDE-#{version}-bundled.dmg",
       verified: "github.com/MiniZinc/MiniZincIDE/"
