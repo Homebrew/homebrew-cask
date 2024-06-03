@@ -1,9 +1,9 @@
 cask "ankerwork" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.0.3"
-  sha256 arm:   "4c229125ccc1374cc409462d15218e22e96ff784eade63a36b097bd4900c0f24",
-         intel: "61226e32c989a31bf7b3c6b53a32fd5a379d434d1fd05ac2cc2003bcf95f70b9"
+  version "3.0.4"
+  sha256 arm:   "d56a3b64f25daec7f4d4d41b42c14087e90244949ec520bfbd7defcb2faa143d",
+         intel: "3a99ddf50cc6594adf783a5f1b241fd8491295a2a719d61fec4ab1a1c59191d9"
 
   url "https://ankerwork.s3.us-west-2.amazonaws.com/electron/AnkerWork-Setup-#{arch}.dmg",
       verified: "ankerwork.s3.us-west-2.amazonaws.com/electron/"
