@@ -1,10 +1,15 @@
 cask "font-ezra-sil" do
   version "2.51"
-  sha256 "fd2894531aab32ff7d6845e3d0b4c0401c91f64ba637d13624dfc17a3e815831"
+  sha256 "f16bcb3ec4473ac6a9f138ee0dbde7cc2f835e93a90cbe8649b3f32677760cc1"
 
-  url "https://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=EzraSIL#{version.no_dots}.zip&filename=EzraSIL#{version.no_dots}.zip"
+  url "https://software.sil.org/downloads/r/ezra/EzraSIL-#{version}.zip"
   name "Ezra SIL"
-  homepage "https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=EzraSIL_Home"
+  homepage "https://software.sil.org/ezra/"
+
+  livecheck do
+    url :homepage
+    regex(/href=.*?EzraSIL[._-]v?(\d+(?:\.\d+)+)\.zip/i)
+  end
 
   font "EzraSIL#{version}/SILEOT.ttf"
   font "EzraSIL#{version}/SILEOTSR.ttf"
