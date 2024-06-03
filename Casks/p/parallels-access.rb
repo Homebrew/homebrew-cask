@@ -7,13 +7,7 @@ cask "parallels-access" do
   desc "Simplest remote access to your computer from anywhere"
   homepage "https://www.parallels.com/products/access/"
 
-  livecheck do
-    url "https://download.parallels.com/website_links/pmobile/3/builds-en_US.json"
-    strategy :page_match do |page|
-      scan = page.scan(/ParallelsAccess[._-]v?(\d+(?:\.\d+)+)-(\d+)[._-]mac\.dmg/i)
-      scan.map { |v| "#{v[0]}-#{v[1]}" }
-    end
-  end
+  disable! date: "2024-06-04", because: :no_longer_available
 
   # This .dmg cannot be extracted normally
   # Original discussion: https://github.com/Homebrew/homebrew-cask/issues/26872
