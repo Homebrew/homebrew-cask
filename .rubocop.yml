@@ -186,8 +186,6 @@ Style/RescueStandardError:
   EnforcedStyle: implicit
 Style/ReturnNil:
   Enabled: true
-Style/SendWithLiteralMethodName:
-  Enabled: false
 Style/StderrPuts:
   Enabled: false
 Style/StringConcatenation:
