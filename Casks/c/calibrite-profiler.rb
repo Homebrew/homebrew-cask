@@ -8,6 +8,11 @@ cask "calibrite-profiler" do
   desc "Display calibration software for Calibrite, ColorChecker and X-Rite devices"
   homepage "https://calibrite.com/calibrite-profiler/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
