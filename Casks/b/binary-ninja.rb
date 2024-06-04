@@ -11,7 +11,6 @@ cask "binary-ninja" do
     url :url
     regex(/(\d+(?:\.\d+)+)/)
     strategy :extract_plist do |items|
-      puts items["com.vector35.binaryninja"].short_version
       items["com.vector35.binaryninja"].short_version[regex, 1]
     end
   end
