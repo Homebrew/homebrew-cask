@@ -2,24 +2,30 @@ cask "ultimaker-cura" do
   arch arm: "ARM64", intel: "X64"
 
   on_arm do
-    version "5.7.1"
-    sha256 "80465fbc2c50af1a64f68a7109a0b7beabbd18960c9d25213adcc39e0145f0cf"
+    version "5.7.2,5.7.2-RC2"
+    sha256 "eb4950b2c4f0928a727fd77c71d6b196fcb1d3fca3bc71df1c54752b8d7d0826"
   end
   on_intel do
-    version "5.7.1"
-    sha256 "6854689aa549e0aae07c002a401f024a57290b74ffae8ebe4fb234c2c0b8b48d"
+    version "5.7.2,5.7.2-RC2"
+    sha256 "1cb00b09c13d118547fe782c3a91b9489897e245ebb60949b7c331535cda0ce5"
   end
 
-  url "https://github.com/Ultimaker/Cura/releases/download/#{version}/Ultimaker-Cura-#{version}-macos-#{arch}.dmg",
+  url "https://github.com/Ultimaker/Cura/releases/download/#{version.csv.second}/UltiMaker-Cura-#{version.csv.first}-macos-#{arch}.dmg",
       verified: "github.com/Ultimaker/Cura/"
-  name "Ultimaker Cura"
+  name "UltiMaker Cura"
   name "Cura"
   desc "3D printer and slicing GUI"
   homepage "https://ultimaker.com/software/ultimaker-cura"
 
   livecheck do
     url :url
-    strategy :github_latest
+    regex(/^(\d+(?:\.\d+)+)/i)
+    strategy :github_latest do |item, regex|
+      version = item["tag_name"][regex, 1]
+      next if version.blank?
+
+      "#{version},#{item["tag_name"]}"
+    end
   end
 
   app "UltiMaker Cura.app"
