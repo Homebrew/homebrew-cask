@@ -16,7 +16,7 @@ cask "devtoys" do
   zap trash: [
     "~/Library/com.devtoys.preview",
     "~/Library/Preferences/com.devtoys.plist",
-    "~/Library/Preferences/com.yuki.DevToys.plist"
+    "~/Library/Preferences/com.yuki.DevToys.plist",
     "~/Library/Caches/com.devtoys.preview",
     "~/Library/WebKit/come.devtoys.app",
   ]
