@@ -1,11 +1,10 @@
 cask "font-ocr" do
-  version "0.2"
-  sha256 "39289c641520265ecedbade99f01600f316f8196ec57f71c8402d3ba09438666"
+  version "0.3.1"
+  sha256 "58136fccfdee0923cc83a20996a067b98bae054570ee41bf896d7ca8224399bf"
 
-  url "https://ftp.iij.ad.jp/pub/osdn.jp/tsukurimashou/56948/ocr-#{version}.zip",
-      verified: "ftp.iij.ad.jp/pub/osdn.jp/tsukurimashou/"
+  url "https://tsukurimashou.org/files/ocr-#{version}.zip"
   name "OCR"
-  homepage "https://ansuz.sooke.bc.ca/page/fonts#ocra"
+  homepage "https://tsukurimashou.org/ocr.php.en"
 
   livecheck do
     skip "No version information available"
