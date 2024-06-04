@@ -7,7 +7,8 @@ cask "font-ocr" do
   homepage "https://tsukurimashou.org/ocr.php.en"
 
   livecheck do
-    skip "No version information available"
+    url :homepage
+    regex(%r{href=.*?/ocr-(\d+(?:\.\d+)*)\.zip}i)
   end
 
   font "ocr-#{version}/OCRA.otf"
