@@ -7,6 +7,8 @@ cask "spectacle-editor" do
   desc "Drag and drop Spectacle editor"
   homepage "https://github.com/plotly/spectacle-editor"
 
+  disable! date: "2024-06-03", because: :no_longer_available
+
   app "Spectacle Editor.app"
 
   zap trash: [
