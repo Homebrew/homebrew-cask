@@ -1,14 +1,18 @@
 cask "font-migu-1c" do
-  version "20150712"
-  sha256 "62aba11af4e5343b5437c866e3747366d084b63885539c92636222d2978999f1"
+  version "2020.0307"
+  sha256 "de18e4558495ab2860e01a218e43274c49660ab882085f4b803bfd9f0ccde02b"
 
-  url "https://ftp.iij.ad.jp/pub/osdn.jp/mix-mplus-ipa/63545/migu-1c-#{version}.zip",
-    verified: "ftp.iij.ad.jp/pub/osdn.jp/mix-mplus-ipa/"
+  url "https://github.com/itouhiro/mixfont-mplus-ipa/releases/download/v#{version}/migu-1c-#{version.no_dots}.zip",
+      verified: "github.com/itouhiro/mixfont-mplus-ipa/"
   name "Migu 1C"
-  homepage "https://mix-mplus-ipa.osdn.jp/migu/#migu1c"
+  homepage "https://itouhiro.github.io/mixfont-mplus-ipa/migu/"
 
   livecheck do
-    skip "No version information available"
+    url :homepage
+    strategy :page_match do |page|
+      page.scan(%r{href=.*?/migu-1c-(\d*)\.zip}i)
+          .map { |match| match[0].insert(4, ".") }
+    end
   end
 
   font "migu-1c-#{version}/migu-1c-bold.ttf"
