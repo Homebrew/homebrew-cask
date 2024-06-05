@@ -22,9 +22,9 @@ cask "avidemux" do
   desc "Video editor"
   homepage "https://www.avidemux.org/"
 
-  app "Avidemux_#{version}.app"
-  binary "#{appdir}/Avidemux_#{version}.app/Contents/MacOS/avidemux_cli", target: "avidemux"
-  binary "#{appdir}/Avidemux_#{version}.app/Contents/MacOS/avidemux_jobs"
+  app "Avidemux_#{version}.app", target: "Avidemux.app"
+  binary "#{appdir}/Avidemux.app/Contents/MacOS/avidemux_cli", target: "avidemux"
+  binary "#{appdir}/Avidemux.app/Contents/MacOS/avidemux_jobs"
 
   zap trash: [
     "~/.avidemux6",
