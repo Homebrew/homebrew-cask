@@ -1,9 +1,9 @@
 cask "toinane-colorpicker" do
   arch arm: "arm64", intel: "x64"
 
-  version "2.2.1"
-  sha256 arm:   "7f3f0e2ac92da11b2b49cfe45c14bf621c991e043e890bb773334496b8e9d1bc",
-         intel: "dbeb808d43f1882487a2e792cddc072e472567355a51d7379a37902eb33a5e4b"
+  version "2.2.2"
+  sha256 arm:   "59e0df7270d53902e0971a2f70c7cce6c646a0f58634ac8d7418dcc72a526d82",
+         intel: "dc1af14fe9785a3e5906153aec20f2960266628b0428d9ca98ef4944dc4bef9b"
 
   url "https://github.com/toinane/colorpicker/releases/download/#{version}/Colorpicker-#{version}-#{arch}.dmg",
       verified: "github.com/toinane/colorpicker/"
