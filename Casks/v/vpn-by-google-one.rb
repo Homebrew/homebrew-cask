@@ -7,10 +7,7 @@ cask "vpn-by-google-one" do
   desc "VPN provided by Google One"
   homepage "https://one.google.com/about/vpn"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  disable! date: "2024-06-20", because: :discontinued
 
   auto_updates true
   depends_on macos: ">= :big_sur"
