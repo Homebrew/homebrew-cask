@@ -1,9 +1,9 @@
 cask "blockbench" do
   arch arm: "arm64", intel: "x64"
 
-  version "4.10.2"
-  sha256 arm:   "753ff273542107a8f3e0ed272d2237e71e2aea47efc3492476377c6d9e7d6d5b",
-         intel: "e15b1a27a948f93d79019ade139dc0430a4b2d7fbcf36b6666d7f727da38d165"
+  version "4.10.3"
+  sha256 arm:   "172acfae68a389aa01c506f019a0c2bcf968d2b777f7d073a6b1dd5cac9f07f4",
+         intel: "abf7fa2a20208e86b3196380fed1473ae56334408c62fb0440ca3b63184705c0"
 
   url "https://github.com/JannisX11/blockbench/releases/download/v#{version}/Blockbench_#{arch}_#{version}.dmg",
       verified: "github.com/JannisX11/blockbench/"
