@@ -1,5 +1,5 @@
 cask "loopback" do
-  version "2.3.2"
+  version "2.3.3"
   sha256 :no_check
 
   url "https://rogueamoeba.com/loopback/download/Loopback.zip"
