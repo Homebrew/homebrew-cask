@@ -3,9 +3,9 @@ cask "retroarch" do
   sha256 :no_check # required as upstream package is often updated in place
 
   url "https://buildbot.libretro.com/stable/#{version}/apple/osx/x86_64/RetroArch.dmg",
-      verified: "retroarch.com/"
+      verified: "buildbot.libretro.com/stable/"
   name "RetroArch"
-  desc "RetroArch is a frontend for emulators, game engines and media players. (OpenGL graphics API version)"
+  desc "Frontend for emulators, game engines and media players (OpenGL graphics API version)"
   homepage "https://www.retroarch.com/"
 
   livecheck do
@@ -14,6 +14,7 @@ cask "retroarch" do
   end
 
   conflicts_with cask: "retroarch-metal"
+  depends_on macos: ">= :high_sierra"
 
   app "RetroArch.app"
 
