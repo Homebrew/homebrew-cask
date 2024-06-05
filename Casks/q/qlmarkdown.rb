@@ -1,6 +1,6 @@
 cask "qlmarkdown" do
-  version "1.0.18"
-  sha256 "e2f42e96d938af05a3fb7ed4c7f18c84d8b12ecab8ab0862fdc418056b58aaa9"
+  version "1.0.19"
+  sha256 "e0ceb42efb3cddce1c7861b88f5291654e28d470bfc3be18ef0ff65d8f2a7301"
 
   url "https://github.com/sbarex/QLMarkdown/releases/download/#{version}/QLMarkdown.zip"
   name "sbarex QLMarkdown"
