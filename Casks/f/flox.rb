@@ -26,22 +26,23 @@ cask "flox" do
               sudo:         true,
               must_succeed: false,
             },
-            launchctl:    [
-              "org.nixos.darwin-store",
-              "org.nixos.nix-daemon",
-            ],
-            quit:         [
-              "org.nixos.darwin-store",
-              "org.nixos.nix-daemon",
-            ],
-            script:       {
-              executable: "/usr/local/share/flox/scripts/uninstall",
-              sudo:       true,
-            },
-            pkgutil:      "com.floxdev.flox"
+            delete:       "/usr/local/bin/flox"
 
-  zap trash: [
-    "~/.cache/flox",
-    "~/.config/flox",
-  ]
+  zap launchctl: [
+        "org.nixos.darwin-store",
+        "org.nixos.nix-daemon",
+      ],
+      quit:      [
+        "org.nixos.darwin-store",
+        "org.nixos.nix-daemon",
+      ],
+      script:    {
+        executable: "/usr/local/share/flox/scripts/uninstall",
+        sudo:       true,
+      },
+      pkgutil:   "com.floxdev.flox",
+      trash:     [
+        "~/.cache/flox",
+        "~/.config/flox",
+      ]
 end
