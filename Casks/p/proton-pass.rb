@@ -1,4 +1,4 @@
-cask "protonpass" do
+cask "proton-pass" do
   version "1.17.5"
   sha256 "2331a0974c047c0115b9ad76db16ca5d0a4b65987bd84b2bdcb1aeef1c9d198b"
 
