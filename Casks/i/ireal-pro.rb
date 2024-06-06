@@ -13,8 +13,8 @@ cask "ireal-pro" do
     depends_on macos: ">= :high_sierra"
   end
   on_big_sur :or_newer do
-    version "2024.4,20240411"
-    sha256 "d5e3463799bde28ca147d0ae3679c8b663cb261e66e7e0b859daae4c35e40116"
+    version "2024.6,20240614"
+    sha256 "47ed459e280be6e5b38d9763b4838fd11b632fbe5f54b55f7eb74c81f2e1d87f"
 
     url "https://ireal-pro.s3.amazonaws.com/iRealPro#{version.csv.second}.zip",
         verified: "ireal-pro.s3.amazonaws.com/"
