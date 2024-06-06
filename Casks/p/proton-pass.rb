@@ -7,17 +7,22 @@ cask "proton-pass" do
   desc "Desktop client for Proton Pass"
   homepage "https://proton.me/pass"
 
+  livecheck do
+    # TODO: add when Proton Pass releases resource
+    skip "No version information available"
+  end
+
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: ">= :catalina"
 
   app "Proton Pass.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/me.proton.pass.electron.*",
     "~/Library/Application Support/Proton Pass",
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/me.proton.pass.electron.sfl3",
     "~/Library/Caches/me.proton.pass.electron.ShipIt",
     "~/Library/HTTPStorages/me.proton.pass.electron",
     "~/Library/Logs/Proton Pass",
-    "~/Library/Preferences/me.proton.pass.electron.plist"
+    "~/Library/Preferences/me.proton.pass.electron.plist",
   ]
 end
