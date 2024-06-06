@@ -7,7 +7,7 @@ cask "spotify" do
     version "1.2.39.578,0ea3f38b,108"
   end
   on_intel do
-    version "1.2.39.578,0ea3f38b,107"
+    version "1.2.39.578,0ea3f38b,108"
   end
 
   url "https://download.scdn.co/Spotify#{arch}.dmg",
