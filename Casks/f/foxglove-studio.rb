@@ -1,24 +1,25 @@
 cask "foxglove-studio" do
-  version "1.87.0"
-  sha256 "331b202ced0aa987792b5652662209e7b341f4e18bb1c7a5ed47836259fad2c3"
+  version "2.6.0"
+  sha256 "0f0646b0aefc202b7e4c603bc5cc2178aecf3fc1d1d0a19d0aa9b52daa9cabcc"
 
-  url "https://github.com/foxglove/studio/releases/download/v#{version}/foxglove-studio-#{version}-mac-universal.dmg",
-      verified: "github.com/foxglove/studio/"
+  url "https://get.foxglove.dev/desktop/latest/foxglove-studio-#{version}-mac-universal.dmg"
   name "Foxglove Studio"
   desc "Visualisation and debugging tool for robotics"
   homepage "https://foxglove.dev/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://get.foxglove.dev/desktop/latest/stable-mac.yml"
+    strategy :electron_builder
   end
 
+  auto_updates true
   depends_on macos: ">= :catalina"
 
   app "Foxglove Studio.app"
 
   zap trash: [
     "~/Library/Application Scripts/dev.foxglove.studio.quicklook",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/dev.foxglove.studio.sfl*",
     "~/Library/Application Support/Foxglove Studio",
     "~/Library/Caches/dev.foxglove.studio",
     "~/Library/Caches/dev.foxglove.studio.ShipIt",
