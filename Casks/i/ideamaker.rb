@@ -1,11 +1,11 @@
 cask "ideamaker" do
   arch arm: "-arm64"
 
-  version "4.3.3.6560"
-  sha256 arm:   "31486067e67d564bf464c2bf35795caef3eef2d42e043017eab35c5e4328dde0",
-         intel: "8d39a317e647c541293b2a27ed7752833727a79d2dcdd841df5e072bab6679b0"
+  version "5.0.6.8380"
+  sha256 arm:   "0c710231461afa239a58975a001681ad254d5a54b68356a75338273892c5e394",
+         intel: "9439cf24ed1e66b05c2a96f6359f0ed1148aea7c74d3126a0259ad50023decca"
 
-  url "https://download.raise3d.com/ideamaker/release/#{version.major_minor_patch}/install_ideaMaker_#{version}#{arch}.dmg"
+  url "https://downcdn.raise3d.com/ideamaker/release/#{version.major_minor_patch}/install_ideaMaker_#{version}#{arch}.dmg"
   name "ideaMaker"
   desc "FDM 3D Printing Slicer by Raise3D"
   homepage "https://www.raise3d.com/ideamaker/"
