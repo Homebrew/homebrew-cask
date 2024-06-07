@@ -1,5 +1,5 @@
 cask "garmin-express" do
-  version "7.22.0.0,7220000"
+  version "7.22.1.0,7220100"
   sha256 :no_check
 
   url "https://download.garmin.com/omt/express/GarminExpress.dmg"
