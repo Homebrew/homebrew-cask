@@ -7,8 +7,8 @@ cask "molotov" do
     sha256 "648a1cd4496a23272f10f3af2dc901b3c356933fbc25fbc9b0732c52eeccf5b8"
   end
   on_intel do
-    version "6.0.0"
-    sha256 "b449e72941a18506cf2e51d7e18d2d33e1a90f36a150b8290fcb94d3f712002f"
+    version "6.0.2"
+    sha256 "d2eaeb287dc237266b507a8ff603ca108b0cc2cbe06b82567f5b382f65a0988a"
   end
 
   url "https://desktop-auto-upgrade.molotov.tv/mac/#{arch_folder}Molotov-#{version}-mac.zip"
