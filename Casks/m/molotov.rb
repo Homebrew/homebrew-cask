@@ -21,5 +21,16 @@ cask "molotov" do
     regex(%r{/Molotov-v?(\d+(?:\.\d+)+)-mac\.zip}i)
   end
 
+  depends_on macos: ">= :catalina"
+
   app "Molotov.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/tv.molotov.molotovdesktopapp.sfl*",
+    "~/Library/Application Support/molotov",
+    "~/Library/Caches/com.apple.nsurlsessiond/Downloads/tv.molotov.MolotovDesktopApp",
+    "~/Library/Logs/molotov",
+    "~/Library/Preferences/tv.molotov.MolotovDesktopApp.plist",
+    "~/Library/Saved Application State/tv.molotov.MolotovDesktopApp.savedState",
+  ]
 end
