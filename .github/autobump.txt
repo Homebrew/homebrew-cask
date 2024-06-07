@@ -1,5 +1,6 @@
 1password
 1password-cli
+1password-cli@beta
 1password@beta
 4k-video-downloader
 4k-video-downloaderplus
@@ -33,6 +34,7 @@ amie
 android-studio
 android-studio-preview@beta
 android-studio-preview@canary
+anki
 ankiapp
 anydesk
 anydo
@@ -40,6 +42,7 @@ anytype
 apidog
 apidog-europe
 apifox
+apipost
 appcleaner
 appflowy
 aptakube
@@ -51,6 +54,7 @@ avast-secure-browser
 axure-rp
 backblaze
 badlion-client
+baidunetdisk
 banana-cake-pop
 banking-4
 banktivity
@@ -101,12 +105,16 @@ chromedriver
 chromedriver@beta
 chromium-gost
 chronycontrol
+cisdem-data-recovery
+cisdem-pdf-converter-ocr
 clay
 cleanclip
 cleanmymac
 clickhouse
 clickup
 clion
+clion@eap
+clock-signal
 clockify
 cloudnet
 cmake
@@ -133,6 +141,7 @@ datagrip
 dataspell
 datovka
 dbeaver-community
+dbgate
 dcp-o-matic
 dcp-o-matic-batch-converter
 dcp-o-matic-combiner
@@ -148,6 +157,8 @@ deeper
 deezer
 default-folder-x
 defold
+defold@alpha
+defold@beta
 descript
 desktoppr
 devpod
@@ -193,6 +204,7 @@ evernote
 expressvpn
 fantastical
 fedistar
+feed-the-beast
 ferdium
 figma
 figma-agent
@@ -290,6 +302,7 @@ holavpn
 hoppscotch
 hstracker
 hydrus-network
+ibackup-viewer
 ibkr
 ibm-cloud-cli
 iina-plus
@@ -315,6 +328,7 @@ jetbrains-toolbox
 jgrennison-openttd
 jitsi-meet
 joplin
+julia
 jumpshare
 jupyterlab
 juxtacode
@@ -352,6 +366,8 @@ lunar
 lunar-client
 maa
 macfuse
+macloggerdx
+macloggerdx@beta
 macrorecorder
 macupdater
 macwhisper
@@ -359,6 +375,7 @@ maestral
 mailbutler
 mambaforge
 media-center
+mediainfo
 melodics
 mendeley-reference-manager
 messenger
@@ -375,6 +392,7 @@ microsoft-onenote
 microsoft-openjdk
 microsoft-outlook
 microsoft-powerpoint
+microsoft-remote-desktop
 microsoft-teams
 microsoft-word
 milanote
@@ -420,6 +438,7 @@ navicat-premium
 neovide
 netron
 nextcloud
+ngrok
 nordlayer
 nordpass
 nordvpn
@@ -432,6 +451,7 @@ nozbe
 obs-advanced-scene-switcher
 ocenaudio
 ollama
+omnifocus
 onedrive
 onekey
 opal-composer
@@ -496,9 +516,11 @@ pritunl
 private-internet-access
 proton-drive
 proton-mail
+proton-pass
 protonmail-bridge
 protonvpn
 proxyman
+psychopy
 purei-play
 puzzles
 pycharm
@@ -513,6 +535,7 @@ qqlive
 quarto
 quicken
 racket
+rancher
 razorsql
 readdle-spark
 reader
@@ -523,9 +546,9 @@ rectangle-pro
 reflect
 remote-desktop-manager
 remotehamradio
+removebg
 reqable
 restfox
-rewind
 rhino
 ricochet-refresh
 rider
@@ -542,6 +565,8 @@ rustrover
 santa
 sapmachine-jdk
 schism-tracker
+screaming-frog-log-file-analyser
+screaming-frog-seo-spider
 screen-studio
 screens-connect
 sdm
@@ -561,14 +586,17 @@ setapp
 sf
 sfm
 shadow
+shadow@beta
 shapr3d
 shattered-pixel-dungeon
 shearwater-cloud
 sigmaos
 signal
 signal@beta
+simplex
 sip
 sipgate-clinq
+sitesucker-pro
 siyuan
 sketch@beta
 skype
@@ -584,6 +612,7 @@ sourcetree
 sourcetree@beta
 spacedrive
 spark-ar-studio
+sparkle
 sparrow
 splice
 spybuster
@@ -609,6 +638,7 @@ teamviewer
 telegram
 telegram-a
 telegram-desktop
+telegram-desktop@beta
 teleport-connect
 tenable-nessus-agent
 tencent-meeting
@@ -653,6 +683,7 @@ uhk-agent
 understand
 unity
 universal-gcode-platform
+universal-media-server
 updf
 utools
 uvtools
@@ -669,10 +700,12 @@ vivaldi
 vivaldi@snapshot
 vrew
 vscodium
+vscodium@insiders
 vsee
 vuescan
 wakatime
 warp
+wasabi-wallet
 waterfox
 wave
 wavebox
@@ -697,6 +730,7 @@ youtube-to-mp3
 zalo
 zed
 zed@preview
+zeplin
 znote
 zoc
 zoom
