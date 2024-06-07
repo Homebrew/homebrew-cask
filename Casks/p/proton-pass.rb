@@ -21,11 +21,13 @@ cask "proton-pass" do
   app "Proton Pass.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/me.proton.pass.electron.*",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/me.proton.pass.electron..sfl*",
     "~/Library/Application Support/Proton Pass",
+    "~/Library/Caches/me.proton.pass.electron",
     "~/Library/Caches/me.proton.pass.electron.ShipIt",
     "~/Library/HTTPStorages/me.proton.pass.electron",
     "~/Library/Logs/Proton Pass",
     "~/Library/Preferences/me.proton.pass.electron.plist",
+    "~/Library/Saved Application State/me.proton.pass.electron.savedState",
   ]
 end
