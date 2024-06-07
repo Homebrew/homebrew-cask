@@ -10,8 +10,11 @@ cask "proton-pass" do
   livecheck do
     url "https://proton.me/download/PassDesktop/darwin/universal/version.json"
     strategy :json do |json|
-      json["Releases"].select { |item| item["CategoryName"]&.match?("Stable") }
-                      .map { |item| item["Version"] }
+      json["Releases"]&.map do |item|
+        next unless item["CategoryName"]&.match?("Stable")
+
+        item["Version"]
+      end
     end
   end
 
