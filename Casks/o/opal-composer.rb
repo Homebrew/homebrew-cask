@@ -15,6 +15,8 @@ cask "opal-composer" do
 
   depends_on macos: ">= :monterey"
 
+  auto_updates true
+
   app "Opal Composer.app"
 
   zap trash: [
