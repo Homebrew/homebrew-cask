@@ -1,5 +1,5 @@
 cask "craft" do
-  version "2.8.3"
+  version "2.8.4"
   sha256 :no_check
 
   url "https://res.craft.do/native/sparkle/Craft.dmg"
