@@ -8,7 +8,8 @@ cask "font-genjyuugothic-x" do
   homepage "http://jikasei.me/font/genjyuu/"
 
   livecheck do
-    skip "No version information available"
+    url :homepage
+    regex(/href=.*genjyuugothic-x[._-]v?(\d+(?:\.\d+)*)\.zip"/i)
   end
 
   font "GenJyuuGothicX-Bold.ttf"
