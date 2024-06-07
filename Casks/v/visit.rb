@@ -1,16 +1,16 @@
 cask "visit" do
-  on_high_sierra :or_older do
-    version "3.1.1"
-    sha256 "4213daed23de17ee8bcfba779a96cce3ef92d3075ae666f7aeaffa824d484924"
+  on_big_sur :or_older do
+    version "3.3.2"
+    sha256 "f406850b21ddc16a6ca636b5c9087b41baeb5460ac92a9b140194c010eb285b3"
 
-    url "https://github.com/visit-dav/visit/releases/download/v#{version}/visit#{version}.darwin-x86_64-10.13.dmg",
+    url "https://github.com/visit-dav/visit/releases/download/v#{version}/Visit-#{version}.dmg",
         verified: "github.com/visit-dav/visit/"
 
     livecheck do
       skip "Legacy version"
     end
   end
-  on_mojave :or_newer do
+  on_monterey :or_newer do
     version "3.4.1"
     sha256 "909f482c6a5e1777ede98d4c0a8019cd23f41ac0fde1eb58942ca99da84ef132"
 
@@ -27,7 +27,7 @@ cask "visit" do
   desc "Visualisation and data analysis for mesh-based scientific data"
   homepage "https://wci.llnl.gov/simulation/computer-codes/visit"
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "VisIt.app"
 
