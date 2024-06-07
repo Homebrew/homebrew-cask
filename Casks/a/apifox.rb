@@ -1,9 +1,9 @@
 cask "apifox" do
   arch arm: "-macOS-arm64"
 
-  version "2.5.29"
-  sha256 arm:   "fa94d34316e0251c141fa281b9054d095601a1337d799ece504a794da5733cb9",
-         intel: "cd3481f7822dbd5f29fd6417bdb94180a790951aa6b877b20b172bbfca913578"
+  version "2.5.30"
+  sha256 arm:   "cfe4ae160882bb929e9a01fd6b8382708789b1ead6b4c03381312f7ba9d89c9b",
+         intel: "78a7b548246383fa549c8665402e01760670afbef67445b69b347ddd6d511b02"
 
   url "https://file-assets.apifox.com/download/#{version}/Apifox#{arch}-#{version}.dmg"
   name "Apifox"
