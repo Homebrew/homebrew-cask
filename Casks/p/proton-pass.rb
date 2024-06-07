@@ -8,8 +8,11 @@ cask "proton-pass" do
   homepage "https://proton.me/pass"
 
   livecheck do
-    # TODO: add when Proton Pass releases resource
-    skip "No version information available"
+    url "https://proton.me/download/PassDesktop/darwin/universal/version.json"
+    strategy :json do |json|
+      json["Releases"].select { |item| item["CategoryName"]&.match?("Stable") }
+                      .map { |item| item["Version"] }
+    end
   end
 
   auto_updates true
