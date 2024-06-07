@@ -12,6 +12,7 @@ cask "lo-rain" do
     strategy :sparkle, &:short_version
   end
 
+  auto_updates true
   depends_on macos: ">= :monterey"
 
   app "lo-rain.app"
