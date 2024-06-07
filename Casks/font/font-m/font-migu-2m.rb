@@ -10,7 +10,7 @@ cask "font-migu-2m" do
   livecheck do
     url :homepage
     strategy :page_match do |page|
-      page.scan(%r{href=.*?/migu-2m-(\d*)\.zip}i)
+      page.scan(/href=.*migu-2m[._-]v?(\d+(?:\.\d+)*)\.zip"/i)
           .map { |match| match[0].insert(4, ".") }
     end
   end
