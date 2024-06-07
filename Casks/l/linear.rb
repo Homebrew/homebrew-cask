@@ -8,6 +8,8 @@ cask "linear" do
   desc "Ruler app with web-development in mind"
   homepage "https://linear.theuxshop.com/"
 
+  disable! date: "2024-06-07", because: :unmaintained
+
   app "linear.app"
 
   zap trash: [
