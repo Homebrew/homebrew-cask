@@ -1,5 +1,5 @@
 cask "cockatrice" do
-  on_mojave :or_older do
+  on_mojave do
     version "2.8.0,2021-01-26,Prismatic.Bridge"
     sha256 "53a4db3e3b97196b42c20959da701de5713f0811907d07ba187192f53fccef1d"
 

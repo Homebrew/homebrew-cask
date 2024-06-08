@@ -1,5 +1,5 @@
 cask "stats" do
-  on_mojave :or_older do
+  on_mojave do
     version "2.8.26"
     sha256 "1a4b44ba02520683b0a6c192388f593c36dde4d15c784a22dccf0caefe81e8b7"
 

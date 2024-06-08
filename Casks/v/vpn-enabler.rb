@@ -1,5 +1,5 @@
 cask "vpn-enabler" do
-  on_el_capitan :or_older do
+  on_el_capitan do
     version "3.0.6"
     sha256 "fae22c4e3b05c77d3658b45c92398c3a6f7fa7792bc124e1b463efb662519536"
 

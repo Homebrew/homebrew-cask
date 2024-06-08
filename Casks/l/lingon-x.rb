@@ -1,5 +1,5 @@
 cask "lingon-x" do
-  on_high_sierra :or_older do
+  on_high_sierra do
     version "6.6.5"
     sha256 "b0231b1a98dcc8f5c4234b419c9f5331407b8cce29b33f0ea2e32b12595adfa8"
   end

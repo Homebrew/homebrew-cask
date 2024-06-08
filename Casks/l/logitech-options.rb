@@ -1,5 +1,5 @@
 cask "logitech-options" do
-  on_sierra :or_older do
+  on_sierra do
     version "7.14.77"
     sha256 "e4df55642e04139fc93d955e949bf736196a404ed067d87f8de7eb9ac9117ece"
 

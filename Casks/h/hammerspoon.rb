@@ -1,5 +1,5 @@
 cask "hammerspoon" do
-  on_mojave :or_older do
+  on_mojave do
     version "0.9.93"
     sha256 "eb4eb4b014d51b32ac15f87050eb11bcc2e77bcdbfbf5ab60a95ecc50e55d2a3"
 
@@ -8,7 +8,7 @@ cask "hammerspoon" do
 
     # Specific build provided for Mojave upstream https://github.com/Hammerspoon/hammerspoon/issues/3023#issuecomment-992980087
     livecheck do
-      skip "Specific build for Mojave and earlier"
+      skip "Specific build for Mojave and later"
     end
   end
   on_catalina :or_newer do

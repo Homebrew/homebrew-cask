@@ -1,5 +1,5 @@
 cask "klayout" do
-  on_catalina :or_older do
+  on_catalina do
     version "0.28.12"
     sha256 "b2bca1ad625f84be8d6eeba7cc4864c83dd09d01d4e413059c8cff130c825b3e"
 

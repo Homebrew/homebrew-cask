@@ -1,5 +1,5 @@
 cask "sip" do
-  on_sierra :or_older do
+  on_sierra do
     version "1.2"
     sha256 "eb4507ce67c6d19c4e649d3e033542265be8d2aaccabc7f8ee00080842a886c0"
 

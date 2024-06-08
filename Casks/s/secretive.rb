@@ -1,5 +1,5 @@
 cask "secretive" do
-  on_catalina :or_older do
+  on_catalina do
     version "1.0.3"
     sha256 "d8522c153f20cd03513e6815bdb46be98eae0db2b2a45d30f60b25a6609d1657"
 

@@ -1,5 +1,5 @@
 cask "qbittorrent" do
-  on_high_sierra :or_older do
+  on_high_sierra do
     version "4.3.2"
     sha256 "dd38e80710978430694c430276a6b7749ef3533cbd0271075bc9eada484ea36b"
 

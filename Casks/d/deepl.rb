@@ -1,5 +1,5 @@
 cask "deepl" do
-  on_catalina :or_older do
+  on_catalina do
     version "3.7.292629"
     sha256 "efcac4988a606d9793a3bdb8e7e73dce8e3d06ed2249a4434eb54c1624b40b87"
 

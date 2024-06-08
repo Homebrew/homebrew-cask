@@ -1,7 +1,7 @@
 cask "gpgfrontend" do
   version "2.1.3"
 
-  on_big_sur :or_older do
+  on_big_sur do
     sha256 "a7fa8ded6a28c31a14552b8114371c7a089aa76dc065825e3fedf1139240aa9e"
 
     url "https://github.com/saturneric/GpgFrontend/releases/download/v#{version}/GpgFrontend-#{version}-macos-11.dmg",

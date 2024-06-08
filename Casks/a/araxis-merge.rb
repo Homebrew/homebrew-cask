@@ -1,5 +1,5 @@
 cask "araxis-merge" do
-  on_mojave :or_older do
+  on_mojave do
     version "2021.5602"
     sha256 "06c56e6d08057090f3718b6db560e2a79551f953d4c83c0fad8b60f415c59347"
 

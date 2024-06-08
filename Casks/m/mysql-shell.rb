@@ -1,7 +1,7 @@
 cask "mysql-shell" do
   arch arm: "arm64", intel: "x86-64bit"
 
-  on_sierra :or_older do
+  on_sierra do
     version "8.0.12,10.13-x86-64bit"
     sha256 "7e4f01f4f5c9f4567b2eafa6ffefe502096be89e4cdfb9952e6d379be8fffe7f"
 
