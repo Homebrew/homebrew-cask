@@ -1,6 +1,6 @@
 cask "chainner" do
-  version "0.24.0"
-  sha256 "209f180541be2d7db3c0828ca775293dc7fb7cb076b01ce368974e92913c8b82"
+  version "0.24.1"
+  sha256 "260400471ea1eac0f22bc11f5556170df26a8248eab3f36d173b07d5524700f4"
 
   url "https://github.com/chaiNNer-org/chaiNNer/releases/download/v#{version}/chaiNNer-#{version}-universal-macos.dmg",
       verified: "github.com/chaiNNer-org/chaiNNer/"
