@@ -6,7 +6,7 @@ cask "sipgate-softphone" do
       verified: "sipgate-desktop-app-dev.s3.amazonaws.com/"
   name "Sipgate Softphone"
   desc "Make telephone calls on the computer"
-  homepage "https://www.sipgateteam.de/softphone"
+  homepage "https://www.sipgate.de/softphone-download"
 
   livecheck do
     url "https://sipgate-desktop-app-dev.s3.amazonaws.com/latest-mac.yml"
