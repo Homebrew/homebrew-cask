@@ -2,8 +2,8 @@ cask "jalview" do
   arch arm: "aarch64", intel: "x64"
 
   version "2.11.3.3"
-  sha256 arm:   "63c3b141ca5b60b5d05a4cb68c17310b4b46144fee4a574f29f4bdac90d777e5",
-         intel: "a9c6bd5885cceb99e8d56a38b8038c62f6b89c9c03181cb0c181ed96dc47cdc3"
+  sha256 arm:   "b2414604e75ed029c7b520f1442ff3e3df00f677d88dd7068141ea8126a24423",
+         intel: "47bb1f11b5fc2b94479818ae615b2752cc4286684fd8a5f5f5619a0728fb99e0"
 
   url "https://www.jalview.org/downloads/installers/release/Jalview-#{version.dots_to_underscores}-macos-#{arch}-java_8.dmg"
   name "Jalview"
