@@ -10,10 +10,7 @@ cask "webplotdigitizer" do
   desc "Extract numerical data from plot images"
   homepage "https://automeris.io/WebPlotDigitizer.html"
 
-  livecheck do
-    url "https://automeris.io/download.html"
-    regex(%r{href=.*?/WebPlotDigitizer-(\d+(?:\.\d+)*)-darwin-x64\.zip}i)
-  end
+  deprecate! date: "2024-06-10", because: :discontinued
 
   depends_on macos: ">= :catalina"
 
