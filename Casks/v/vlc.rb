@@ -2,8 +2,8 @@ cask "vlc" do
   arch arm: "arm64", intel: "intel64"
 
   version "3.0.21"
-  sha256 arm:   "9fdeae1e2770c83f347ef6e4e46330fe9be70d70ca2339a8f35595e72d40a204",
-         intel: "81013f7b265f726dbe97027cbee032b13639022ffb5f8fcb8d4c0fd1aebcfe08"
+  sha256 arm:   "15dd65bf6489da9ec6a67f5585c74c40a58993acff41a82958a916dd74178044",
+         intel: "d431fd051c3dc7af02bd313c6d05d90cf604b70ed3ec5bba6fd4c49ef3e638d9"
 
   url "https://get.videolan.org/vlc/#{version}/macosx/vlc-#{version}-#{arch}.dmg"
   name "VLC media player"
