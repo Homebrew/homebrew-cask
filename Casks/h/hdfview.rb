@@ -2,14 +2,15 @@ cask "hdfview" do
   version "3.3.1"
   sha256 "0fc8c0c1abc24a63cf6d8fb46885766dc45e54240589d60ed358ae70a5cd3e04"
 
-  url "https://support.hdfgroup.org/ftp/HDF5/releases/HDF-JAVA/hdfview-#{version}/bin/HDFView-#{version}-macos11_64.tar.gz"
+  url "https://github.com/HDFGroup/hdfview/releases/download/v#{version}/HDFView-#{version}-Darwin.tar.gz",
+      verified: "github.com/HDFGroup/hdfview/"
   name "HDFView"
   desc "Tool for browsing and editing HDF files"
   homepage "https://www.hdfgroup.org/downloads/hdfview/"
 
   livecheck do
-    url :homepage
-    regex(/href=.*?HDFView[._-]v?(\d+(?:\.\d+)+)[._-]macos[^"' >]*?\.(?:t|zip)/i)
+    url :url
+    strategy :github_latest
   end
 
   depends_on macos: ">= :el_capitan"
