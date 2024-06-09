@@ -6,7 +6,7 @@ cask "freesmug-chromium" do
       verified: "sourceforge.net/osxportableapps/"
   name "Chromium"
   desc "Google Chromium built to solve Chrome incompatibility issue"
-  homepage "http://www.freesmug.org/chromium"
+  homepage "https://www.freesmug.org/chromium"
 
   deprecate! date: "2023-12-17", because: :discontinued
 

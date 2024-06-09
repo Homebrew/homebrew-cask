@@ -9,7 +9,7 @@ cask "sherlock" do
   homepage "https://sherlock.inspiredcode.io/"
 
   livecheck do
-    url "http://sparkle.sherlock.inspiredcode.io"
+    url "https://sherlock-website-assets.s3.amazonaws.com/versions.xml"
     strategy :sparkle
   end
 

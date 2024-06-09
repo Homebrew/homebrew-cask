@@ -9,7 +9,7 @@ cask "wings3d" do
       verified: "sourceforge.net/wings/"
   name "Wings 3D"
   desc "Advanced subdivision modeller"
-  homepage "http://www.wings3d.com/"
+  homepage "https://www.wings3d.com/"
 
   app "Wings3D.app"
 end

@@ -2,7 +2,7 @@ cask "vmware-fusion" do
   version "13.5.2,23775688"
   sha256 "4d470e2160acb5da7d52d478f6ef12829c5ebe3c04e3154652466ba0bfeed3f6"
 
-  url "http://softwareupdate.vmware.com/cds/vmw-desktop/fusion/#{version.csv.first}/#{version.csv.second}/universal/core/com.vmware.fusion.zip.tar"
+  url "https://softwareupdate.vmware.com/cds/vmw-desktop/fusion/#{version.csv.first}/#{version.csv.second}/universal/core/com.vmware.fusion.zip.tar"
   name "VMware Fusion"
   desc "Create, manage, and run virtual machines"
   homepage "https://www.vmware.com/products/fusion.html"

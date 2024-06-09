@@ -5,7 +5,7 @@ cask "aptanastudio" do
   url "https://github.com/aptana/studio3/releases/download/#{version}/Aptana_Studio_#{version.major}.dmg",
       verified: "github.com/aptana/studio3/"
   name "Aptana Studio"
-  homepage "http://www.aptana.com/"
+  homepage "https://www.aptana.com/"
 
   livecheck do
     url :url

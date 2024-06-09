@@ -6,7 +6,7 @@ cask "opensong" do
       verified: "sourceforge.net/opensong/"
   name "OpenSong"
   desc "Presentation software"
-  homepage "http://www.opensong.org/"
+  homepage "https://www.opensong.org/"
 
   # This regex has to match unstable versions until the cask uses a stable
   # version again.

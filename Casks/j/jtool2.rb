@@ -3,10 +3,10 @@ cask "jtool2" do
   version "2.2"
   sha256 :no_check
 
-  url "http://newosxbook.com/tools/jtool2.tgz"
+  url "https://newosxbook.com/tools/jtool2.tgz"
   name "jtool2"
   desc "Tool to help out reverse engineering, security researchers, and tweak developers"
-  homepage "http://newosxbook.com/tools/jtool.html"
+  homepage "https://newosxbook.com/tools/jtool.html"
 
   livecheck do
     skip "version available by running `jtool2 --version` when installed"

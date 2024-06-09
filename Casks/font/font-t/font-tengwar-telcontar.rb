@@ -5,7 +5,7 @@ cask "font-tengwar-telcontar" do
   url "https://downloads.sourceforge.net/freetengwar/TengwarTelcontar.#{version}.zip"
   name "Tengwar Telcontar"
   desc "Tengwar Telcontar - a Unicode Tengwar font"
-  homepage "http://freetengwar.sourceforge.net/tengtelc.html"
+  homepage "https://freetengwar.sourceforge.net/tengtelc.html"
 
   livecheck do
     url :homepage

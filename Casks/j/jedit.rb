@@ -6,7 +6,7 @@ cask "jedit" do
       verified: "sourceforge.net/jedit/"
   name "jEdit"
   desc "Text editor"
-  homepage "http://www.jedit.org/"
+  homepage "https://www.jedit.org/"
 
   app "jEdit.app"
 
