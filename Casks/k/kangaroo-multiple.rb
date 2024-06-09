@@ -8,7 +8,8 @@ cask "kangaroo-multiple" do
   homepage "https://github.com/dbkangaroo/kangaroo"
 
   livecheck do
-    cask "kangaroo-multiple"
+    url :stable
+    strategy :github_latest
   end
 
   auto_updates true
