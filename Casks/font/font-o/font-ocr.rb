@@ -1,11 +1,15 @@
 cask "font-ocr" do
-  version "0.2"
-  sha256 "39289c641520265ecedbade99f01600f316f8196ec57f71c8402d3ba09438666"
+  version "0.3.1"
+  sha256 "58136fccfdee0923cc83a20996a067b98bae054570ee41bf896d7ca8224399bf"
 
-  url "https://osdn.dl.osdn.jp/tsukurimashou/56948/ocr-#{version}.zip",
-      verified: "osdn.dl.osdn.jp/tsukurimashou/"
+  url "https://tsukurimashou.org/files/ocr-#{version}.zip"
   name "OCR"
-  homepage "https://ansuz.sooke.bc.ca/page/fonts#ocra"
+  homepage "https://tsukurimashou.org/ocr.php.en"
+
+  livecheck do
+    url :homepage
+    regex(/href=.*ocr[._-]v?(\d+(?:\.\d+)*)\.zip/i)
+  end
 
   font "ocr-#{version}/OCRA.otf"
   font "ocr-#{version}/OCRB.otf"

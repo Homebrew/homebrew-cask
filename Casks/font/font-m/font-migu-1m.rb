@@ -1,13 +1,22 @@
 cask "font-migu-1m" do
-  version "20150712"
-  sha256 "d4c38664dd57bc5927abe8f4fbea8f06a8ece3fea49ea02354d4e03ac6d15006"
+  version "2020.0307"
+  sha256 "e4806d297e59a7f9c235b0079b2819f44b8620d4365a8955cb612c9ff5809321"
 
-  url "https://osdn.dl.osdn.jp/mix-mplus-ipa/63545/migu-1m-#{version}.zip"
+  url "https://github.com/itouhiro/mixfont-mplus-ipa/releases/download/v#{version}/migu-1m-#{version.no_dots}.zip",
+      verified: "github.com/itouhiro/mixfont-mplus-ipa/"
   name "Migu 1M"
-  homepage "https://mix-mplus-ipa.osdn.jp/migu/#migu1m"
+  homepage "https://itouhiro.github.io/mixfont-mplus-ipa/migu/"
 
-  font "migu-1m-#{version}/migu-1m-bold.ttf"
-  font "migu-1m-#{version}/migu-1m-regular.ttf"
+  livecheck do
+    url :homepage
+    strategy :page_match do |page|
+      page.scan(/href=.*migu-1m[._-]v?(\d+(?:\.\d+)*)\.zip"/i)
+          .map { |match| match[0].insert(4, ".") }
+    end
+  end
+
+  font "migu-1m-#{version.no_dots}/migu-1m-bold.ttf"
+  font "migu-1m-#{version.no_dots}/migu-1m-regular.ttf"
 
   # No zap stanza required
 end

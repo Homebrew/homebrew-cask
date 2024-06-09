@@ -1,11 +1,16 @@
 cask "font-genjyuugothic-x" do
-  version "20150607,8.644"
+  version "20150607"
   sha256 "e4a0ea11b8155056ad2b678c8501b2e76dd99b8c8eb5363d396fe7c3079201b3"
 
-  url "https://osdn.dl.osdn.jp/users/#{version.csv.second.major}/#{version.csv.second.no_dots}/genjyuugothic-x-#{version.csv.first}.zip",
-      verified: "osdn.jp/"
+  url "https://ftp.iij.ad.jp/pub/osdn.jp/users/8/8644/genjyuugothic-x-#{version}.zip",
+      verified: "ftp.iij.ad.jp/pub/osdn.jp/users/"
   name "Gen Jyuu GothicX"
   homepage "http://jikasei.me/font/genjyuu/"
+
+  livecheck do
+    url :homepage
+    regex(/href=.*genjyuugothic-x[._-]v?(\d+(?:\.\d+)*)\.zip"/i)
+  end
 
   font "GenJyuuGothicX-Bold.ttf"
   font "GenJyuuGothicX-ExtraLight.ttf"

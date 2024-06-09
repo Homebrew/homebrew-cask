@@ -1,12 +1,17 @@
 cask "font-genjyuugothic-l" do
-  version "20150607,8.643"
+  version "20150607"
   sha256 "d2fccec290232df110d1116fef4411416875acf7647084c9ab7d7eb5e8a80c50"
 
-  url "https://osdn.dl.osdn.jp/users/#{version.csv.second.major}/#{version.csv.second.no_dots}/genjyuugothic-l-#{version.csv.first}.zip",
-      verified: "osdn.jp/"
+  url "https://ftp.iij.ad.jp/pub/osdn.jp/users/8/8643/genjyuugothic-l-#{version}.zip",
+      verified: "ftp.iij.ad.jp/pub/osdn.jp/users/"
   name "Gen Jyuu GothicL"
   desc "Weak-Rounded version of Gen Shin Gothic"
   homepage "http://jikasei.me/font/genjyuu/"
+
+  livecheck do
+    url :homepage
+    regex(/href=.*genjyuugothic-l[._-]v?(\d+(?:\.\d+)*)\.zip"/i)
+  end
 
   font "GenJyuuGothicL-Bold.ttf"
   font "GenJyuuGothicL-ExtraLight.ttf"
