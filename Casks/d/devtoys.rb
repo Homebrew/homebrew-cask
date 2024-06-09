@@ -19,5 +19,5 @@ cask "devtoys" do
     "~/Library/Preferences/com.yuki.DevToys.plist",
     "~/Library/Caches/com.devtoys.preview",
     "~/Library/WebKit/come.devtoys.app",
-  ]
+   ]
 end
