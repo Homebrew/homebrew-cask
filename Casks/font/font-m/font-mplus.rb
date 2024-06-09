@@ -3,13 +3,11 @@ cask "font-mplus" do
   sha256 "44eb973b4b6aff574de454db105ddc23e6749c2294734bd9cb1e0d734e4cdd79"
 
   url "https://ftp.iij.ad.jp/pub/osdn.jp/mplus-fonts/62344/mplus-TESTFLIGHT-#{version}.tar.xz",
-    verified: "ftp.iij.ad.jp/pub/osdn.jp/mplus-fonts/"
+      verified: "ftp.iij.ad.jp/pub/osdn.jp/mplus-fonts/"
   name "M+ FONTS"
-  homepage "https://mplusfonts.github.io"
+  homepage "https://mplusfonts.github.io/"
 
-  livecheck do
-    skip "No version information available"
-  end
+  disable! date: "2024-06-09", because: "is moved to font-m-plus-1, font-m-plus-2..."
 
   font "mplus-TESTFLIGHT-#{version}/mplus-1c-black.ttf"
   font "mplus-TESTFLIGHT-#{version}/mplus-1c-bold.ttf"
