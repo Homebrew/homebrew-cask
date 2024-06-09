@@ -20,6 +20,6 @@ cask "kangaroo-multiple" do
     "~/Library/Application Support/org.gnome.KangarooDevel",
     "~/Library/Caches/org.gnome.KangarooDevel",
     "~/Library/Preferences/org.gnome.KangarooDevel.plist",
-    "~/Library/Saved Application State/org.gnome.KangarooDevel.savedState",
+    "~/Library/Saved Application State/org.gnome.KangarooDevel.savedState"
   ]
 end
