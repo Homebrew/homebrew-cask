@@ -1,6 +1,6 @@
 cask "rio" do
-  version "0.0.39"
-  sha256 "73b163a68a87c023a9fd1075f9bf498292cf730a9c91abe89334abb70d042e75"
+  version "0.1.0"
+  sha256 "f98d735dcd157f49fa6211408b78837935922aaa4a3ebe418b71c775858d73b3"
 
   url "https://github.com/raphamorim/rio/releases/download/v#{version}/Rio-v#{version}.dmg"
   name "Rio"
@@ -11,6 +11,8 @@ cask "rio" do
     url :url
     strategy :github_latest
   end
+
+  depends_on macos: ">= :catalina"
 
   app "Rio.app"
   binary "Rio.app/Contents/MacOS/rio"
