@@ -7,7 +7,15 @@ cask "secretive" do
       skip "Legacy version"
     end
   end
-  on_big_sur :or_newer do
+  on_big_sur do
+    version "2.3.1"
+    sha256 "493a72362898b4480baa70f115d9515b41b2af4a503caf00277e2bc3824b0bbd"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_monterey :or_newer do
     version "2.4.1"
     sha256 "00ddf651f1151f1e3888c51e58ce343f6888480db79771b6de7371db21bde4d8"
 
