@@ -1,9 +1,9 @@
 cask "october" do
   arch arm: "arm64", intel: "amd64"
 
-  version "1.8.0"
-  sha256 arm:   "a97993cf52e985c92c2a287a44702d87a0c692402b58934925d6e75d1b19d8aa",
-         intel: "4342c2adc3125a3a8522ad14f72c50d43377ba0b98391e68314dfbd08392ef54"
+  version "1.9.0"
+  sha256 arm:   "97083a7c8823137ed72f80d94d3fc8989af1250ced59815e7eeb81fca64a6492",
+         intel: "88aff8f1ba35a49bba75d5870a911a9a9ca499233cd8ab51db06afa6147212f4"
 
   url "https://github.com/marcus-crane/october/releases/download/v#{version}/october_#{version}_darwin_#{arch}.zip",
       verified: "github.com/marcus-crane/october/"
