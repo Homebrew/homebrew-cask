@@ -1,6 +1,6 @@
 cask "activitywatch" do
-  version "0.13.0"
-  sha256 "81bccef0282313f7a4199a05942a706dad518ad8af04a503adfe6f37100e7130"
+  version "0.13.1"
+  sha256 "dfe4a7ab1a92307ec3e1e6ee649d76907974f4a5de8fa7719f5740040ff7ca3c"
 
   url "https://github.com/ActivityWatch/activitywatch/releases/download/v#{version}/activitywatch-v#{version}-macos-x86_64.dmg",
       verified: "github.com/ActivityWatch/activitywatch/"
