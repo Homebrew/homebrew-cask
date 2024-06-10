@@ -10,7 +10,7 @@ cask "material-maker" do
 
   depends_on macos: ">= :sierra"
 
-  app "material_maker.app", target: "Material Maker.app"
+  app "material_maker.app"
 
   zap trash: [
     "~/Library/Application Support/CrashReporter/material_maker*.plist",
