@@ -8,7 +8,7 @@ cask "red-eye" do
   desc "Tool to prevent the system from going into sleep mode"
   homepage "https://www.hexedbits.com/redeye/"
 
-  deprecate! date: "2024-01-21", because: "download artifact not available"
+  deprecate! date: "2024-01-21", because: :no_longer_available
 
   depends_on macos: ">= :mojave"
 

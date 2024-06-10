@@ -8,7 +8,7 @@ cask "pomotodo" do
   desc "Time management app for creators"
   homepage "https://pomotodo.com/"
 
-  disable! date: "2024-01-05", because: "download artifact not available"
+  disable! date: "2024-01-05", because: :no_longer_available
 
   app "Pomotodo.app"
 

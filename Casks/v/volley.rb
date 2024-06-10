@@ -8,7 +8,7 @@ cask "volley" do
   desc "Asynchronous video messaging app"
   homepage "https://www.volleyapp.com/"
 
-  disable! date: "2024-01-04", because: "download artifact not available"
+  disable! date: "2024-01-04", because: :no_longer_available
 
   app "Volley.app"
 

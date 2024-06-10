@@ -8,7 +8,7 @@ cask "flomo" do
   desc "Memo note taking and management app"
   homepage "https://flomoapp.com/"
 
-  disable! date: "2024-01-01", because: "download artifact not available"
+  disable! date: "2024-01-01", because: :no_longer_available
 
   depends_on macos: ">= :catalina"
 

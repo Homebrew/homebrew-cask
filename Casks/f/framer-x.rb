@@ -7,7 +7,7 @@ cask "framer-x" do
   desc "Tool that helps teams design every part of the product experience"
   homepage "https://framer.com/"
 
-  disable! date: "2024-01-01", because: "download artifact not available"
+  disable! date: "2024-01-01", because: :no_longer_available
 
   auto_updates true
   depends_on macos: ">= :high_sierra"
