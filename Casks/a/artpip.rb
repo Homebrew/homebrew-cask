@@ -7,7 +7,7 @@ cask "artpip" do
   desc "Curated photographic desktop backgrounds"
   homepage "https://www.artpip.com/"
 
-  disable! date: "2024-01-01", because: "download artifact not available"
+  disable! date: "2024-01-01", because: :no_longer_available
 
   app "Artpip.app"
 end

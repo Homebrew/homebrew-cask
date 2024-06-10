@@ -7,7 +7,7 @@ cask "dendroscope" do
   desc "Interactive viewer for rooted phylogenetic trees and networks"
   homepage "https://www.wsi.uni-tuebingen.de/lehrstuehle/algorithms-in-bioinformatics/software/dendroscope/"
 
-  disable! date: "2024-01-04", because: "download artifact not available"
+  disable! date: "2024-01-04", because: :no_longer_available
 
   installer script: {
     executable: "Dendroscope Installer.app/Contents/MacOS/JavaApplicationStub",

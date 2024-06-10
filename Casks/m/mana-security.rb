@@ -7,7 +7,7 @@ cask "mana-security" do
   desc "Vulnerability Management for individuals"
   homepage "https://www.manasecurity.com/"
 
-  disable! date: "2024-01-04", because: "download artifact not available"
+  disable! date: "2024-01-04", because: :no_longer_available
 
   depends_on macos: ">= :big_sur"
 

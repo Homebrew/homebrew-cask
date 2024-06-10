@@ -7,7 +7,7 @@ cask "endurance" do
   desc "Battery monitoring and management"
   homepage "https://enduranceapp.com/"
 
-  disable! date: "2024-01-07", because: "download artifact not available"
+  disable! date: "2024-01-07", because: :no_longer_available
 
   app "Endurance.app"
 
