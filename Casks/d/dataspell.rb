@@ -1,9 +1,9 @@
 cask "dataspell" do
   arch arm: "-aarch64"
 
-  version "2024.1.1,241.15989.62"
-  sha256 arm:   "eb345888f6e926439a1142614e10b36123b40fbd876d31060856c7e532b53f64",
-         intel: "dfbe160a8a1676dad81b5d5ca35d8d02258a5684c3a140bbb415edae575a058b"
+  version "2024.1.2,241.17890.10"
+  sha256 arm:   "ee69b1ed4ebfe1f4f41e6d617d4ccc8ac2d9a484dace45f2a3c0532a4a091ae2",
+         intel: "5284682b7446ec3328e73dd16d6c11c331487fd21a20029c8b9ddb38c7d00968"
 
   url "https://download.jetbrains.com/python/dataspell-#{version.csv.first}#{arch}.dmg"
   name "DataSpell"
@@ -22,7 +22,7 @@ cask "dataspell" do
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
-  app "DataSpell.app"
+  app "DataSpell #{version.major_minor} EAP.app", target: "DataSpell.app"
   binary "#{appdir}/DataSpell.app/Contents/MacOS/dataspell"
 
   zap trash: [
