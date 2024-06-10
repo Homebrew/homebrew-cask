@@ -7,7 +7,23 @@ cask "araxis-merge" do
       skip "Legacy version"
     end
   end
-  on_catalina :or_newer do
+  on_catalina do
+    version "2022.5786"
+    sha256 "a8a65089d7965a3ecdf3b65dbeaed54f4f31d0bc7b85c9d970aa999ab5cfa4df"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_big_sur do
+    version "2023.5915"
+    sha256 "8e9372f56a3597bdea49caadab1f11e998d8686c5e2d19472ec9470db643032e"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_monterey :or_newer do
     version "2024.6000"
     sha256 "282c4eaa26236e50c33a6955b3eb2e8ae2e5492fbfdd314f808befcc604dcb7c"
 
