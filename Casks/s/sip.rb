@@ -15,7 +15,31 @@ cask "sip" do
       skip "Legacy version"
     end
   end
-  on_mojave :or_newer do
+  on_mojave do
+    version "2.5.5"
+    sha256 "a67550abe2f43981b7b41827ee9ccc0f826383cc1d146e748bde399f3c352d62"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_catalina do
+    version "2.8"
+    sha256 "95e2bd14ce3de9743304efee4fb9964f00fc9505401f1e036de8175616ca58dd"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_big_sur do
+    version "2.8"
+    sha256 "95e2bd14ce3de9743304efee4fb9964f00fc9505401f1e036de8175616ca58dd"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_monterey :or_newer do
     version "3.5.1"
     sha256 "59f69f6c73dfc3a2984ee4ff869d8086781dbe45c30c73c260f848a2d1561fc0"
 
