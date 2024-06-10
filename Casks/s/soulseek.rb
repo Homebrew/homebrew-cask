@@ -13,4 +13,9 @@ cask "soulseek" do
   end
 
   app "SoulseekQt.app"
+
+  zap trash: [
+    "~/.SoulseekQt",
+    "~/Library/Saved Application State/com.yourcompany.SoulseekQt.savedState",
+  ]
 end
