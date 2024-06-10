@@ -2,6 +2,24 @@ cask "firefox@nightly" do
   version :latest
   sha256 :no_check
 
+  language "af" do
+    "af"
+  end
+  language "ar" do
+    "ar"
+  end
+  language "be" do
+    "be"
+  end
+  language "bg" do
+    "bg"
+  end
+  language "bn" do
+    "bn"
+  end
+  language "ca" do
+    "ca"
+  end
   language "cs" do
     "cs"
   end
@@ -29,6 +47,12 @@ cask "firefox@nightly" do
   language "es-ES" do
     "es-ES"
   end
+  language "fa" do
+    "fa"
+  end
+  language "ff" do
+    "ff"
+  end
   language "fi" do
     "fi"
   end
@@ -37,6 +61,18 @@ cask "firefox@nightly" do
   end
   language "gl" do
     "gl"
+  end
+  language "gn" do
+    "gn"
+  end
+  language "gu" do
+    "gu-IN"
+  end
+  language "he" do
+    "he"
+  end
+  language "hi" do
+    "hi-IN"
   end
   language "in" do
     "hi-IN"
@@ -47,11 +83,26 @@ cask "firefox@nightly" do
   language "ja" do
     "ja-JP-mac"
   end
+  language "ka" do
+    "ka"
+  end
   language "ko" do
     "ko"
   end
+  language "mr" do
+    "mr"
+  end
+  language "my" do
+    "my"
+  end
+  language "ne" do
+    "ne-NP"
+  end
   language "nl" do
     "nl"
+  end
+  language "pa-IN" do
+    "pa-IN"
   end
   language "pl" do
     "pl"
@@ -65,11 +116,38 @@ cask "firefox@nightly" do
   language "ru" do
     "ru"
   end
+  language "si" do
+    "si"
+  end
+  language "sq" do
+    "sq"
+  end
+  language "sr" do
+    "sr"
+  end
+  language "sv" do
+    "sv-SE"
+  end
+  language "ta" do
+    "ta"
+  end
+  language "te" do
+    "te"
+  end
+  language "th" do
+    "th"
+  end
+  language "tl" do
+    "tl"
+  end
   language "tr" do
     "tr"
   end
   language "uk" do
     "uk"
+  end
+  language "ur" do
+    "ur"
   end
   language "zh-TW" do
     "zh-TW"
@@ -78,10 +156,7 @@ cask "firefox@nightly" do
     "zh-CN"
   end
 
-  url "https://download-installer.cdn.mozilla.net/pub/firefox/nightly/latest-mozilla-central#{(language == "en-US") ? "" : "-l10n"}/" do |page|
-    file_path = page.scan(%r{<td><a href="(/pub/firefox/nightly/[^"]+\.mac\.dmg)">}).flatten.grep(/\.#{language}\.mac\.dmg/).max
-    [URI.join(page.url, file_path), { verified: "mozilla.net" }]
-  end
+  url "https://download.mozilla.org/?product=firefox-nightly-latest-l10n-ssl&os=osx&lang=#{language}"
   name "Mozilla Firefox Nightly"
   desc "Web browser"
   homepage "https://www.mozilla.org/firefox/channel/desktop/#nightly"
