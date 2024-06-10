@@ -2,10 +2,11 @@ cask "alcom" do
   version "0.1.7"
   sha256 "3d1f3e9372ae0f3ea141eafbcf8242da6f074eb0c0f14b3b7f6c048cfffa8e44"
 
-  url "https://github.com/vrc-get/vrc-get/releases/download/gui-v#{version}/ALCOM-#{version}-universal.dmg"
+  url "https://github.com/vrc-get/vrc-get/releases/download/gui-v#{version}/ALCOM-#{version}-universal.dmg",
+      verified: "github.com/vrc-get/vrc-get/"
   name "ALCOM"
   desc "Graphical frontend of vrc-get, open source alternative to VRChat Package Manager"
-  homepage "https://github.com/vrc-get/vrc-get"
+  homepage "https://vrc-get.anatawa12.com/alcom"
 
   livecheck do
     url :url
