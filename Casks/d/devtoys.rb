@@ -1,15 +1,24 @@
 cask "devtoys" do
-  version "0.0.11"
-  sha256 "84f6b354546b1731204deb48daed53caacab277b524bcdd8d5e47d53fc47b413"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://github.com/ObuchiYuki/DevToysMac/releases/download/#{version}/DevToys.app.zip"
+  version "2.0.1.0"
+  sha256 arm:   "15b81d500ec20f608abf837acdc52c1fd6d22163de789c72683e5fc166808ec5",
+         intel: "f397473471b1b9cae40ae005912c096bd4cda8572325bd0d515a07fbf6a6b1a6"
+
+  url "https://github.com/DevToys-app/DevToys/releases/download/v#{version}/devtoys_osx_#{arch}.zip"
   name "DevToys"
   desc "Utilities designed to make common development tasks easier"
-  homepage "https://github.com/ObuchiYuki/DevToysMac"
+  homepage "https://github.com/DevToys-app/DevToys"
 
   depends_on macos: ">= :catalina"
 
   app "DevToys.app"
 
-  zap trash: "~/Library/Preferences/com.yuki.DevToys.plist"
+  zap trash: [
+    "~/Library/Caches/com.devtoys.preview",
+    "~/Library/com.devtoys.preview",
+    "~/Library/Preferences/com.devtoys.plist",
+    "~/Library/Preferences/com.yuki.DevToys.plist",
+    "~/Library/WebKit/come.devtoys.app",
+  ]
 end
