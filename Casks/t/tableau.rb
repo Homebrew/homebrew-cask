@@ -1,6 +1,6 @@
 cask "tableau" do
-  version "2024.1.2"
-  sha256 "a61feab30c47f4ed6502895eb97ef5b84aa0615ffb2f646c58ad5be7e836c61c"
+  version "2024.1.3"
+  sha256 "ecb299b8edf42cb3fddab9f7624e0f219ef6145f69f450a6d1ef883c5c1691a4"
 
   url "https://downloads.tableau.com/tssoftware/TableauDesktop-#{version.dots_to_hyphens}.dmg",
       user_agent: "curl/8.7.1"
