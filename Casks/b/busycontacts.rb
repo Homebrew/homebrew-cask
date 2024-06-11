@@ -1,20 +1,16 @@
 cask "busycontacts" do
-  version "2024.1.2,2024-02-15-01-15"
+  version "2024.1.2"
   sha256 "54f1a92915549416da37e5ce6e7bad51dd78a54cf4f6439664f6873af8f36018"
 
-  url "https://7e968b6ce8a839f034d9-23cfb9eddcb7b94cb43ba95f95a76900.ssl.cf1.rackcdn.com/bct-#{version.csv.first}-#{version.csv.second}.zip",
-      verified: "7e968b6ce8a839f034d9-23cfb9eddcb7b94cb43ba95f95a76900.ssl.cf1.rackcdn.com/"
+  url "https://www.busymac.com/download/bct-#{version}.zip"
   name "BusyContacts"
   desc "Contact manager focusing on efficiency"
   homepage "https://www.busymac.com/busycontacts/index.html"
 
   livecheck do
-    url "https://www.busymac.com/download/BusyContacts.zip"
-    strategy :header_match do |headers|
-      match = headers["location"].match(/bct-(\d+(?:\.\d+)+)-(.*?)\.zip/)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]}"
+    url "https://versioncheck.busymac.com/busycontacts/news.plist"
+    strategy :xml do |xml|
+      xml.elements["//dict/key[text()='current']"]&.next_element&.text&.strip
     end
   end
 
