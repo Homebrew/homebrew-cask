@@ -3,7 +3,7 @@ cask "vcam" do
   sha256 "e88aa8ae051bbb82deb112657bd1ece69fbc90c7f06dcfef7e26809103f6fe99"
 
   url "https://downloads.vcam.ai/mac/VCam.ai_#{version}.pkg"
-  name "VCam"
+  name "VCam.ai"
   desc "Webcam background tool"
   homepage "https://vcam.ai/"
 
