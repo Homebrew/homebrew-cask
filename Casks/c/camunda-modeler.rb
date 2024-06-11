@@ -13,7 +13,7 @@ cask "camunda-modeler" do
 
   livecheck do
     url "https://camunda.com/download/modeler/"
-    regex(%r{href=.*?/camunda[._-]?modeler[._-]?v?(\d+(?:\.\d+)+)[._-]?mac-#{arch}\.zip}i)
+    regex(%r{href=.*?/camunda[._-]modeler[._-]v?(\d+(?:\.\d+)+)[._-]mac[._-]#{arch}\.zip}i)
   end
 
   depends_on macos: ">= :catalina"
