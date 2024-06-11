@@ -10,7 +10,17 @@ cask "proxifier" do
       regex(/Version\s*(\d+(?:\.\d+)+)/i)
     end
   end
-  on_big_sur :or_newer do
+  on_big_sur do
+    version "3.8"
+    sha256 "1f8bbad340500ad49c541570ba3233a88e60fd4e02030f596e7d32f93d244020"
+
+    url "https://www.proxifier.com/download/legacy/ProxifierMac#{version.no_dots}.dmg"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_monterey :or_newer do
     version "3.11"
     sha256 "c391178f8e1b7ffe4175ec8e7218f1e488973a6aca0d55292b0f0c42184eab8c"
 
