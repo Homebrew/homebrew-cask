@@ -8,9 +8,19 @@ cask "fetch" do
   homepage "https://fetchsoftworks.com/fetch/"
 
   livecheck do
-    url "https://updates.fetchsoftworks.com/list/fetch-#{version.major}K0-release.xml"
-    strategy :sparkle, &:short_version
+    url "https://fetchsoftworks.com/fetch/release-notes/"
+    regex(/href=.*Fetch[._-]v?(\d+(?:\.\d+)+)\.zip"/i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Fetch.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.fetchsoftworks.Fetch",
+    "~/Library/Caches/com.apple.helpd/Generated/com.fetchsoftworks.fetch.help*",
+    "~/Library/HTTPStorages/com.fetchsoftworks.Fetch",
+    "~/Library/Preferences/com.fetchsoftworks.Fetch.plist",
+    "~/Library/Saved Application State/com.fetchsoftworks.Fetch.savedState",
+  ]
 end
