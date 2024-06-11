@@ -16,8 +16,12 @@ cask "vcam" do
 
   pkg "VCam.ai_#{version}.pkg"
 
-  preflight do
+  postflight do
+    # Description: Ensure console variant of postinstall is non-interactive.
+    # This is because `open /Applications/VCam.ai/VCam.app` is called from the
+    # postinstall script of the package and we don't want any user intervention there.
     retries ||= 3
+    ohai "The VCam.ai package postinstall script launches the VCam app" if retries >= 3
     ohai "Attempting to close VCam.app to avoid unwanted user intervention" if retries >= 3
     return unless system_command "/usr/bin/pkill", args: ["-f", "/Applications/VCam.ai/VCam.app"]
   rescue RuntimeError
