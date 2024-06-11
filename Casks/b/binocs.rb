@@ -10,10 +10,7 @@ cask "binocs" do
   desc "CLI-first uptime and performance monitoring tool for websites, apps and APIs"
   homepage "https://binocs.sh/"
 
-  livecheck do
-    url "https://download.binocs.sh/VERSION"
-    regex(/v(\d+(?:\.\d+)+)/i)
-  end
+  disable! date: "2024-06-11", because: :no_longer_available
 
   binary "binocs"
 
