@@ -22,6 +22,8 @@ cask "liteicon" do
     strategy :sparkle, &:short_version
   end
 
+  deprecate! date: "2024-06-11", because: :discontinued
+
   auto_updates true
 
   app "LiteIcon.app"
