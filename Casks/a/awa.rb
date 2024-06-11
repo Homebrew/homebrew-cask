@@ -11,7 +11,7 @@ cask "awa" do
   livecheck do
     url "https://contents.awa.io/pc_update.json"
     strategy :json do |json|
-      json["version"]&.split("-").first
+      json["version"]&.split("-")&.first
     end
   end
 
