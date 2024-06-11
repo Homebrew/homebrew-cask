@@ -9,8 +9,10 @@ cask "awa" do
   homepage "https://awa.fm/"
 
   livecheck do
-    url "https://pd.awa.io/mac/stable/latest"
-    strategy :header_match
+    url "https://contents.awa.io/pc_update.json"
+    strategy :json do |json|
+      json["version"]&.split("-").first
+    end
   end
 
   auto_updates true
