@@ -9,7 +9,7 @@ cask "vcam" do
 
   livecheck do
     url "https://downloads.vcam.ai/mac/updates.txt"
-    regex(/ProductVersion = (\d+(?:\.\d+)+)/i)
+    regex(/v?(\d+(?:\.\d+)+)/i)
   end
 
   depends_on macos: ">= :catalina"
