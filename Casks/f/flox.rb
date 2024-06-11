@@ -20,28 +20,41 @@ cask "flox" do
 
   pkg "flox-#{version}.#{arch}-darwin.pkg"
 
-  uninstall early_script: {
-              executable:   "/usr/bin/killall",
-              args:         ["-9", "pkgdb"],
-              sudo:         true,
-              must_succeed: false,
-            },
-            launchctl:    [
+  uninstall launchctl: [
               "org.nixos.darwin-store",
               "org.nixos.nix-daemon",
             ],
-            quit:         [
+            quit:      [
               "org.nixos.darwin-store",
               "org.nixos.nix-daemon",
             ],
-            script:       {
+            script:    {
               executable: "/usr/local/share/flox/scripts/uninstall",
               sudo:       true,
             },
-            pkgutil:      "com.floxdev.flox"
+            pkgutil:   "com.floxdev.flox",
+            delete:    "/usr/local/share/flox"
 
-  zap trash: [
-    "~/.cache/flox",
-    "~/.config/flox",
-  ]
+  # Remove and uninstall Flox's Nix Store regardless of the current state.
+  # Script is inline'd to support zap independent of an uninstall because
+  # uninstall will remove the uninstall script itself.
+  zap script: {
+        executable: "/bin/sh",
+        args:       ["-c", '
+/usr/sbin/diskutil unmount /nix || /usr/sbin/lsof /nix
+/usr/sbin/diskutil apfs deleteVolume "Nix Store"
+/usr/bin/dscl . delete /Groups/nixbld || true
+for i in $(seq 1 32); do /usr/bin/dscl . -delete "/Users/_nixbld$i" || true ; done
+/usr/bin/sed -i -e "/^nix$/d" /etc/synthetic.conf || true
+/usr/bin/sed -i -e "/ \\/nix apfs rw,noauto,nobrowse,suid,owners$/d" /etc/fstab || true
+EDITOR=cat vifs > /dev/null
+'],
+        sudo:       true,
+      },
+      trash:  [
+        "/etc/flox-version.update",
+        "/etc/nix/nix.conf.bak",
+        "~/.cache/flox",
+        "~/.config/flox",
+      ]
 end
