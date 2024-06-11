@@ -18,13 +18,13 @@ cask "omnipresence" do
     url "https://downloads.omnigroup.com/software/MacOSX/10.13/OmniPresence-#{version}.dmg"
   end
   on_mojave do
-    version "1.9.1"
+    version "1.8"
     sha256 "dfb2d162103b3c23e2225dee2322d006f72be3b99b1283c365f6fdd4d1e047d3"
 
     url "https://downloads.omnigroup.com/software/MacOSX/10.14/OmniPresence-#{version}.dmg"
   end
   on_catalina do
-    version "1.9.1"
+    version "1.8"
     sha256 "dfb2d162103b3c23e2225dee2322d006f72be3b99b1283c365f6fdd4d1e047d3"
 
     url "https://downloads.omnigroup.com/software/MacOSX/10.14/OmniPresence-#{version}.dmg"
@@ -46,4 +46,11 @@ cask "omnipresence" do
   end
 
   app "OmniPresence.app"
+
+  zap trash: [
+    "~/Library/Application Scripts/com.omnigroup.OmniPresence",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.omnigroup.omnipresence.sfl*",
+    "~/Library/Containers/com.omnigroup.OmniPresence",
+    "~/Library/Preferences/com.omnigroup.OmniPresence.plist",
+  ]
 end
