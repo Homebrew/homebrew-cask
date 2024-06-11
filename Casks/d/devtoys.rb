@@ -10,15 +10,16 @@ cask "devtoys" do
   desc "Utilities designed to make common development tasks easier"
   homepage "https://github.com/DevToys-app/DevToys"
 
-  depends_on macos: ">= :catalina"
+  depends_on macos: ">= :monterey"
 
   app "DevToys.app"
 
   zap trash: [
+    "~/Library/Caches/com.devtoys",
     "~/Library/Caches/com.devtoys.preview",
-    "~/Library/com.devtoys.preview",
     "~/Library/Preferences/com.devtoys.plist",
     "~/Library/Preferences/com.yuki.DevToys.plist",
-    "~/Library/WebKit/come.devtoys.app",
+    "~/Library/WebKit/com.devtoys",
+    "~/Library/WebKit/com.devtoys.app",
   ]
 end
