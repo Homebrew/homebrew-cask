@@ -1,5 +1,5 @@
 cask "intune-company-portal" do
-  version "5.2404.0"
+  version "5.2406.0"
   sha256 :no_check
 
   url "https://officecdn.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/CompanyPortal-Installer.pkg"
