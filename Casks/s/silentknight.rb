@@ -10,8 +10,8 @@ cask "silentknight" do
     depends_on macos: ">= :el_capitan"
   end
   on_catalina :or_newer do
-    version "2.08,2024.05"
-    sha256 "c1c7b462c5510bdaa62992b0441a20e46415b3f9a06ab8965f6eb227c406e438"
+    version "2.9,2024.06"
+    sha256 "a3d33fef8edfdbc5e3b5c88235f12d1f84ca6a7b2dd60204a56a93677a261453"
 
     livecheck do
       url "https://raw.githubusercontent.com/hoakleyelc/updates/master/eclecticapps.plist"
@@ -24,9 +24,6 @@ cask "silentknight" do
         match = item.elements["key[text()='URL']"]&.next_element&.text&.strip&.match(regex)
         next if version.blank? || match.blank?
 
-        # Temporarily override the version to account for a one-off mismatch
-        version = "2.08" if version == "2.8"
-
         "#{version},#{match[1]}.#{match[2]}"
       end
     end
@@ -34,13 +31,21 @@ cask "silentknight" do
     depends_on macos: ">= :catalina"
   end
 
-  url "https://eclecticlightdotcom.files.wordpress.com/#{version.csv.second.major}/#{version.csv.second.minor}/silentknight#{version.csv.first.no_dots}.zip",
+  # Upstream zero-pads the minor version in the no-dot filename version to two
+  # digits (e.g. 2.9 is 209). We only need this workaround while the minor
+  # version is less than two digits, so we should be able to switch back to
+  # `version.csv.first.no_dots` in the filename with version 2.10+.`
+  no_dot_version = version.csv.first.split(".").each_with_index.map do |n, i|
+    (i < 1 || n.length > 1) ? n : n.rjust(2, "0")
+  end.join
+
+  url "https://eclecticlightdotcom.files.wordpress.com/#{version.csv.second.major}/#{version.csv.second.minor}/silentknight#{no_dot_version}.zip",
       verified: "eclecticlightdotcom.files.wordpress.com/"
   name "SilentKnight"
   desc "Automatically checks computer's security"
   homepage "https://eclecticlight.co/lockrattler-systhist/"
 
-  app "silentknight#{version.csv.first.no_dots}/SilentKnight.app"
+  app "silentknight#{no_dot_version}/SilentKnight.app"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/co.eclecticlight.silentknight.sfl*",
