@@ -9,12 +9,13 @@ cask "emclient" do
 
   livecheck do
     url "https://www.emclient.com/dist/latest/setup.pkg"
-    strategy :header_match do |headers|
-      headers["location"][/v?(\d+(?:\.\d+)+)_Mac/i, 1]
-    end
+    regex(/v?(\d+(?:\.\d+)+)[._-]Mac/i)
+    strategy :header_match
   end
 
   auto_updates true
+  conflicts_with cask: "emclient@beta"
+  depends_on macos: ">= :big_sur"
 
   pkg "setup.pkg"
 
@@ -23,9 +24,7 @@ cask "emclient" do
 
   zap trash: [
     "~/Library/Caches/com.emclient.mail.client",
-    "~/Library/Preferences/com.emclient.mail.client.plist",
-    "~/Library/Preferences/com.emclient.mail.repair.plist",
-    "~/Library/Preferences/com.emclient.mail.shared.plist",
+    "~/Library/Preferences/com.emclient.mail.*.plist",
     "~/Library/Saved Application State/com.emclient.mail.client.savedState",
   ]
 end
