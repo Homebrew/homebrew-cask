@@ -5,7 +5,7 @@ cask "retroarch" do
   url "https://buildbot.libretro.com/stable/#{version}/apple/osx/x86_64/RetroArch.dmg",
       verified: "buildbot.libretro.com/stable/"
   name "RetroArch"
-  desc "Frontend for emulators, game engines and media players (OpenGL graphics API version)"
+  desc "Frontend for emulators, game engines and media players (OpenGL graphics API)"
   homepage "https://www.retroarch.com/"
 
   livecheck do
