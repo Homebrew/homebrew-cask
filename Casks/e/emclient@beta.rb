@@ -24,9 +24,7 @@ cask "emclient@beta" do
 
   zap trash: [
     "~/Library/Caches/com.emclient.mail.client",
-    "~/Library/Preferences/com.emclient.mail.client.plist",
-    "~/Library/Preferences/com.emclient.mail.repair.plist",
-    "~/Library/Preferences/com.emclient.mail.shared.plist",
+    "~/Library/Preferences/com.emclient.mail.*.plist",
     "~/Library/Saved Application State/com.emclient.mail.client.savedState",
   ]
 end
