@@ -53,7 +53,6 @@ cask "iterm2" do
     "~/Library/Containers/iTermAI",
     "~/Library/Cookies/com.googlecode.iterm2.binarycookies",
     "~/Library/Preferences/com.googlecode.iterm2.plist",
-    "~/Library/Saved Application State/com.googlecode.iterm2.iTermAI.savedState",
-    "~/Library/Saved Application State/com.googlecode.iterm2.savedState",
+    "~/Library/Saved Application State/com.googlecode.iterm2*.savedState",
   ]
 end
