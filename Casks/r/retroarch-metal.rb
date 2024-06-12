@@ -5,7 +5,7 @@ cask "retroarch-metal" do
   url "https://buildbot.libretro.com/stable/#{version}/apple/osx/universal/RetroArch_Metal.dmg",
       verified: "buildbot.libretro.com/stable/"
   name "RetroArch"
-  desc "Frontend for emulators, game engines and media players (Metal graphics API version)"
+  desc "Frontend for emulators, game engines and media players (Metal graphics API)"
   homepage "https://www.retroarch.com/"
 
   livecheck do
