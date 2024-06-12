@@ -7,6 +7,8 @@ cask "githubpulse" do
   desc "Statusbar app to help you remember to contribute every day on Github"
   homepage "https://github.com/tadeuzagallo/GithubPulse"
 
+  deprecate! date: "2024-06-12", because: :unmaintained
+
   livecheck do
     url :homepage
     strategy :github
