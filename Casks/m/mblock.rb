@@ -8,10 +8,7 @@ cask "mblock" do
   desc "Coding tool designed for teaching STEAM"
   homepage "https://www.mblock.cc/"
 
-  livecheck do
-    url "https://s.mblock.cc/download/pc-mac"
-    strategy :header_match
-  end
+  disable! date: "2024-06-12", because: "download artifact behind signed url"
 
   depends_on macos: ">= :sierra"
 
