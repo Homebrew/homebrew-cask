@@ -7,7 +7,7 @@ cask "jalview" do
 
   url "https://www.jalview.org/downloads/installers/release/Jalview-#{version.dots_to_underscores}-macos-#{arch}-java_8.dmg"
   name "Jalview"
-  desc "Multiple sequence alignment editor, visualisor, analysis and figure generator"
+  desc "Multiple sequence alignment editor, visualiser, analysis and figure generator"
   homepage "https://www.jalview.org/"
 
   livecheck do

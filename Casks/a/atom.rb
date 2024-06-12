@@ -4,7 +4,7 @@ cask "atom" do
 
   url "https://github.com/atom/atom/releases/download/v#{version}/atom-mac.zip",
       verified: "github.com/atom/atom/"
-  name "Github Atom"
+  name "GitHub Atom"
   desc "Text editor"
   homepage "https://atom.io/"
 
