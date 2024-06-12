@@ -18,7 +18,8 @@ cask "candybar" do
         verified: "files.iconfactory.net/software/"
 
     livecheck do
-      skip "No version information available"
+      url :url
+      strategy :extract_plist
     end
   end
 
