@@ -13,9 +13,8 @@ cask "opal-composer" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :monterey"
-
   auto_updates true
+  depends_on macos: ">= :monterey"
 
   app "Opal Composer.app"
 

@@ -6,7 +6,7 @@ cask "font-alumni-sans-collegiate-one-sc" do
       branch:    "main",
       only_path: "ofl/alumnisanscollegiateonesc"
   name "Alumni Sans Collegiate One SC"
-  desc "The small caps version of alumni sans collegiate one to contribute, see github"
+  desc "Small caps version of alumni sans collegiate one to contribute, see github"
   homepage "https://github.com/googlefonts/alumni-sans-collegiate"
 
   font "AlumniSansCollegiateOneSC-Italic.ttf"
