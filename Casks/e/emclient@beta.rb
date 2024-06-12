@@ -9,9 +9,8 @@ cask "emclient@beta" do
 
   livecheck do
     url "https://www.emclient.com/dist/latest-beta-mac/"
-    strategy :header_match do |headers|
-      headers["location"][/v?(\d+(?:\.\d+)+)[._-]Mac/i, 1]
-    end
+    regex(/v?(\d+(?:\.\d+)+)[._-]Mac/i)
+    strategy :header_match
   end
 
   auto_updates true
