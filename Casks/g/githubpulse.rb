@@ -9,10 +9,5 @@ cask "githubpulse" do
 
   deprecate! date: "2024-06-12", because: :unmaintained
 
-  livecheck do
-    url :homepage
-    strategy :github
-  end
-
   app "GithubPulse.app"
 end
