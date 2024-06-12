@@ -61,7 +61,7 @@ jobs:
       - name: Generate cache ID
         id: cache-id
         run: |
-          echo "time=$(date -u +'%Y-%m-%dT%H:%M:%SZ')" >> $GITHUB_OUTPUT
+          echo "time=$(date -u +'%Y-%m-%dT%H:%M:%SZ')" >> "$GITHUB_OUTPUT"
 
       - name: Cache state
         uses: actions/cache@v4
