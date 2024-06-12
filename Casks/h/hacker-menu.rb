@@ -2,11 +2,12 @@ cask "hacker-menu" do
   version "1.1.5"
   sha256 "ab7de53e74b4514f46726f6dc3be467a1dd7f320990656b60cbb7ea4dd74bacf"
 
-  url "https://github.com/jingweno/hacker-menu/releases/download/v#{version}/hacker-menu-mac.zip",
-      verified: "github.com/jingweno/hacker-menu/"
+  url "https://github.com/owenthereal/hacker-menu/releases/download/v#{version}/hacker-menu-mac.zip"
   name "Hacker Menu"
-  desc "Hacker News Delivered to Desktop :dancers:"
-  homepage "https://hackermenu.io/"
+  desc "Hacker News Delivered to Desktop"
+  homepage "https://github.com/owenthereal/hacker-menu"
+
+  deprecate! date: "2024-06-12", because: :unmaintained
 
   app "Hacker Menu.app"
 
