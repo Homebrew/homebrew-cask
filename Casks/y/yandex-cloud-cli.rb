@@ -19,10 +19,6 @@ cask "yandex-cloud-cli" do
     executable: "install.sh",
     args:       ["-i", "#{staged_path}/#{token}", "-r", "/dev/null"],
   }
-  installer script: {
-    executable: "yandex-cloud-cli/bin/yc",
-    args:       ["components", "post-update"],
-  }
   binary "yandex-cloud-cli/bin/docker-credential-yc"
   binary "yandex-cloud-cli/bin/yc"
   binary "yandex-cloud-cli/completion.zsh.inc",
