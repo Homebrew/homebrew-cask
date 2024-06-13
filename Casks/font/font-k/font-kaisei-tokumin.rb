@@ -7,7 +7,6 @@ cask "font-kaisei-tokumin" do
       branch:    "main",
       only_path: "ofl/kaiseitokumin"
   name "Kaisei Tokumin"
-  desc "Designed to keep the legibility and still have power as an extra bold typeface"
   homepage "https://fonts.google.com/specimen/Kaisei+Tokumin"
 
   font "KaiseiTokumin-Bold.ttf"

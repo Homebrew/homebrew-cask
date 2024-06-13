@@ -7,7 +7,6 @@ cask "font-comic-neue" do
       branch:    "main",
       only_path: "ofl/comicneue"
   name "Comic Neue"
-  desc "Original reinterpretation of the classic, comic sans"
   homepage "https://fonts.google.com/specimen/Comic+Neue"
 
   font "ComicNeue-Bold.ttf"

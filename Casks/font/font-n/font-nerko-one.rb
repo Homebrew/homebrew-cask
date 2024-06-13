@@ -5,7 +5,6 @@ cask "font-nerko-one" do
   url "https://github.com/google/fonts/raw/main/ofl/nerkoone/NerkoOne-Regular.ttf",
       verified: "github.com/google/fonts/"
   name "Nerko One"
-  desc "Chunky ‘marker’ effect font"
   homepage "https://fonts.google.com/specimen/Nerko+One"
 
   font "NerkoOne-Regular.ttf"

@@ -5,7 +5,6 @@ cask "font-mingzat" do
   url "https://github.com/google/fonts/raw/main/ofl/mingzat/Mingzat-Regular.ttf",
       verified: "github.com/google/fonts/"
   name "Mingzat"
-  desc "Unicode font based on jason glavy's jg lepcha custom-encoded font"
   homepage "https://fonts.google.com/specimen/Mingzat"
 
   font "Mingzat-Regular.ttf"

@@ -7,7 +7,6 @@ cask "font-narnoor" do
       branch:    "main",
       only_path: "ofl/narnoor"
   name "Narnoor"
-  desc "Actively being revived"
   homepage "https://fonts.google.com/specimen/Narnoor"
 
   font "Narnoor-Bold.ttf"

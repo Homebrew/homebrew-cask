@@ -4,7 +4,6 @@ cask "font-bitter-ht" do
 
   url "https://www.huertatipografica.com/free_download/144"
   name "Bitter ht"
-  desc "Slab-serif typeface optimized for e-ink screens"
   homepage "https://www.huertatipografica.com/fonts/bitter-ht"
 
   font "BitterPro-Black.ttf"

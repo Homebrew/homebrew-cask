@@ -7,7 +7,6 @@ cask "font-be-vietnam-pro" do
       branch:    "main",
       only_path: "ofl/bevietnampro"
   name "Be Vietnam Pro"
-  desc "Well suited to tech companies and startups"
   homepage "https://fonts.google.com/specimen/Be+Vietnam+Pro"
 
   font "BeVietnamPro-Black.ttf"

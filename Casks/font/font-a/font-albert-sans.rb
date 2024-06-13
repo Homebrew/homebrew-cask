@@ -7,7 +7,6 @@ cask "font-albert-sans" do
       branch:    "main",
       only_path: "ofl/albertsans"
   name "Albert Sans"
-  desc "Modern geometric sans serif family"
   homepage "https://fonts.google.com/specimen/Albert+Sans"
 
   font "AlbertSans-Italic[wght].ttf"

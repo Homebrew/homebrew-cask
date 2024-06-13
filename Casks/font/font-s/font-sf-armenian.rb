@@ -5,7 +5,6 @@ cask "font-sf-armenian" do
   url "https://devimages-cdn.apple.com/design/resources/download/SF-Armenian.dmg"
   name "San Francisco Armenian"
   name "SF Armenian"
-  desc "Armenian extension of \"San Francisco\" by Apple"
   homepage "https://developer.apple.com/fonts"
 
   pkg "SF Armenian Fonts.pkg"

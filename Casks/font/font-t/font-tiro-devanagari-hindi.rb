@@ -7,7 +7,6 @@ cask "font-tiro-devanagari-hindi" do
       branch:    "main",
       only_path: "ofl/tirodevanagarihindi"
   name "Tiro Devanagari Hindi"
-  desc "Broader proportions, generous counters, and strong diagonal strokes"
   homepage "https://fonts.google.com/specimen/Tiro+Devanagari+Hindi"
 
   font "TiroDevanagariHindi-Italic.ttf"

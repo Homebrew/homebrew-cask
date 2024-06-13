@@ -4,7 +4,6 @@ cask "font-togalite" do
 
   url "https://moji-waku.com/download/togalite.zip"
   name "Togalite"
-  desc "M+ extended with thorn"
   homepage "https://moji-waku.com/togalite/index.html"
 
   font "togalite/togalite-black.otf"

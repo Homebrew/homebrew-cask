@@ -4,7 +4,6 @@ cask "font-spleen" do
 
   url "https://github.com/fcambus/spleen/releases/download/#{version}/spleen-#{version}.tar.gz"
   name "Spleen"
-  desc "Monospaced bitmap font"
   homepage "https://github.com/fcambus/spleen"
 
   font "spleen-#{version}/spleen-6x12.otf"

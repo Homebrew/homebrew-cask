@@ -5,7 +5,6 @@ cask "font-signika" do
   url "https://github.com/google/fonts/raw/main/ofl/signika/Signika%5BGRAD%2Cwght%5D.ttf",
       verified: "github.com/google/fonts/"
   name "Signika"
-  desc "Sans-serif signage typeface with a gentle character"
   homepage "https://fonts.google.com/specimen/Signika"
 
   font "Signika[GRAD,wght].ttf"

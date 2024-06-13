@@ -5,7 +5,6 @@ cask "font-potta-one" do
   url "https://github.com/google/fonts/raw/main/ofl/pottaone/PottaOne-Regular.ttf",
       verified: "github.com/google/fonts/"
   name "Potta One"
-  desc "Single style font family featuring letterforms inspired by brush lettering"
   homepage "https://fonts.google.com/specimen/Potta+One"
 
   font "PottaOne-Regular.ttf"

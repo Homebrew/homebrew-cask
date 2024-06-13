@@ -4,7 +4,6 @@ cask "font-noto-serif-cjk-sc" do
 
   url "https://github.com/notofonts/noto-cjk/releases/download/Serif#{version}/09_NotoSerifCJKsc.zip"
   name "Noto Serif CJK SC"
-  desc "Language Specific OTFs Simplified Chinese (简体中文)"
   homepage "https://github.com/notofonts/noto-cjk/tree/main/Serif"
 
   livecheck do

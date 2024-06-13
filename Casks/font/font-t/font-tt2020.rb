@@ -4,7 +4,6 @@ cask "font-tt2020" do
 
   url "https://github.com/ctrlcctrlv/TT2020/archive/v#{version}.zip"
   name "TT2020"
-  desc "Advanced, open source, hyperrealistic, multilingual typewriter font"
   homepage "https://github.com/ctrlcctrlv/TT2020"
 
   font "TT2020-#{version}/dist/TT2020Base-Italic.ttf"

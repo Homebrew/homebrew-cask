@@ -4,7 +4,6 @@ cask "font-academicons" do
 
   url "https://github.com/jpswalsh/academicons/archive/v#{version}.zip"
   name "Academicons"
-  desc "Specialist icon font for academics"
   homepage "https://github.com/jpswalsh/academicons"
 
   font "academicons-#{version}/fonts/academicons.ttf"

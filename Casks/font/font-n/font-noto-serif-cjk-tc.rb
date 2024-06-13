@@ -4,7 +4,6 @@ cask "font-noto-serif-cjk-tc" do
 
   url "https://github.com/notofonts/noto-cjk/releases/download/Serif#{version}/10_NotoSerifCJKtc.zip"
   name "Noto Serif CJK TC"
-  desc "Language Specific OTFs Traditional Chinese — Taiwan (繁體中文—臺灣)"
   homepage "https://github.com/notofonts/noto-cjk/tree/main/Serif"
 
   livecheck do

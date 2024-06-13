@@ -7,7 +7,6 @@ cask "font-zen-kaku-gothic-new" do
       branch:    "main",
       only_path: "ofl/zenkakugothicnew"
   name "Zen Kaku Gothic New"
-  desc "Classical yet simple and stylish version"
   homepage "https://fonts.google.com/specimen/Zen+Kaku+Gothic+New"
 
   font "ZenKakuGothicNew-Black.ttf"

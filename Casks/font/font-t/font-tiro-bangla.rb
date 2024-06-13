@@ -7,7 +7,6 @@ cask "font-tiro-bangla" do
       branch:    "main",
       only_path: "ofl/tirobangla"
   name "Tiro Bangla"
-  desc "Suited to traditional literary publishing"
   homepage "https://fonts.google.com/specimen/Tiro+Bangla"
 
   font "TiroBangla-Italic.ttf"

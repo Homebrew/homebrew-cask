@@ -7,7 +7,6 @@ cask "font-carlito" do
       branch:    "main",
       only_path: "ofl/carlito"
   name "Carlito"
-  desc "Metric-compatible with calibri"
   homepage "https://fonts.google.com/specimen/Carlito"
 
   font "Carlito-Bold.ttf"

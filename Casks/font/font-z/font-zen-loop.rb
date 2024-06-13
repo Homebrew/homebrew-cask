@@ -7,7 +7,6 @@ cask "font-zen-loop" do
       branch:    "main",
       only_path: "ofl/zenloop"
   name "Zen Loop"
-  desc "Latin fonts designed by yoshimichi ohira, as part of zen fonts collection"
   homepage "https://fonts.google.com/specimen/Zen+Loop"
 
   font "ZenLoop-Italic.ttf"

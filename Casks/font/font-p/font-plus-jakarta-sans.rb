@@ -7,7 +7,6 @@ cask "font-plus-jakarta-sans" do
       branch:    "main",
       only_path: "ofl/plusjakartasans"
   name "Plus Jakarta Sans"
-  desc "Versatile modern type family"
   homepage "https://fonts.google.com/specimen/Plus+Jakarta+Sans"
 
   font "PlusJakartaSans-Italic[wght].ttf"

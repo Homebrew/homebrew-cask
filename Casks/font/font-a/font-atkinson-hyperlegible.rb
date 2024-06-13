@@ -4,7 +4,6 @@ cask "font-atkinson-hyperlegible" do
 
   url "https://www.brailleinstitute.org/wp-content/uploads/atkinson-hyperlegible-font/Atkinson-Hyperlegible-Font-Print-and-Web-#{version}.zip"
   name "Atkinson Hyperlegible"
-  desc "Font with greater legibility and readability for low vision readers"
   homepage "https://www.brailleinstitute.org/freefont"
 
   font "Atkinson-Hyperlegible-Font-Print-and-Web-#{version}/Print Fonts/Atkinson-Hyperlegible-Bold-102.otf"

@@ -7,7 +7,6 @@ cask "font-kaisei-opti" do
       branch:    "main",
       only_path: "ofl/kaiseiopti"
   name "Kaisei Opti"
-  desc "Modern style japanese typeface"
   homepage "https://fonts.google.com/specimen/Kaisei+Opti"
 
   font "KaiseiOpti-Bold.ttf"

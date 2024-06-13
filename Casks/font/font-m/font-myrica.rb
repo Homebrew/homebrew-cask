@@ -5,7 +5,6 @@ cask "font-myrica" do
   url "https://github.com/tomokuni/Myrica/archive/refs/tags/#{version}.tar.gz",
       verified: "github.com/tomokuni/Myrica/"
   name "Myrica"
-  desc "Programming font"
   homepage "https://myrica.estable.jp/"
 
   font "Myrica-#{version}/Myrica.TTC"

@@ -5,7 +5,6 @@ cask "font-pt-serif" do
   url "https://api.paratype.com/api/editions/ofl/download/52194",
       referer: "https://www.paratype.com/"
   name "PT Serif"
-  desc "Universal type family designed for use together with PT Sans"
   homepage "https://www.paratype.com/fonts/pt/pt-serif"
 
   font "PT/PT/PT-Serif/pt-serif_bold-italic.ttf"

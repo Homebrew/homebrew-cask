@@ -4,7 +4,6 @@ cask "font-victor-mono" do
 
   url "https://rubjo.github.io/victor-mono/VictorMonoAll.zip"
   name "Victor Mono"
-  desc "Monospaced font with cursive italics and programming symbol ligatures"
   homepage "https://rubjo.github.io/victor-mono/"
 
   livecheck do

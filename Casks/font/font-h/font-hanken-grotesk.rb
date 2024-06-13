@@ -7,7 +7,6 @@ cask "font-hanken-grotesk" do
       branch:    "main",
       only_path: "ofl/hankengrotesk"
   name "Hanken Grotesk"
-  desc "Led by alfredo marco pradil"
   homepage "https://fonts.google.com/specimen/Hanken+Grotesk"
 
   font "HankenGrotesk-Italic[wght].ttf"

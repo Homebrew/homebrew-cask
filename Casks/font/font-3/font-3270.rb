@@ -4,7 +4,6 @@ cask "font-3270" do
 
   url "https://github.com/rbanffy/3270font/releases/download/v#{version.csv.first}/3270_fonts_#{version.csv.second}.zip"
   name "IBM 3270"
-  desc "Derived from the x3270 font"
   homepage "https://github.com/rbanffy/3270font"
 
   livecheck do

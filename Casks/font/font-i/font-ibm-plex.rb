@@ -4,7 +4,6 @@ cask "font-ibm-plex" do
 
   url "https://github.com/IBM/plex/archive/refs/tags/v#{version}.zip"
   name "IBM Plex"
-  desc "Corporate typeface for IBM"
   homepage "https://github.com/IBM/plex"
 
   livecheck do

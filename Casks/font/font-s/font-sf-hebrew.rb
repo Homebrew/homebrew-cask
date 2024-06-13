@@ -5,7 +5,6 @@ cask "font-sf-hebrew" do
   url "https://devimages-cdn.apple.com/design/resources/download/SF-Hebrew.dmg"
   name "San Francisco Hebrew"
   name "SF Hebrew"
-  desc "Hebrew extension of \"San Francisco\" by Apple"
   homepage "https://developer.apple.com/fonts"
 
   pkg "SF Hebrew Fonts.pkg"

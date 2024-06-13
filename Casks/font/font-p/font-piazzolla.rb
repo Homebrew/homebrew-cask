@@ -7,7 +7,6 @@ cask "font-piazzolla" do
       branch:    "main",
       only_path: "ofl/piazzolla"
   name "Piazzolla"
-  desc "Serif font family for media"
   homepage "https://fonts.google.com/specimen/Piazzolla"
 
   font "Piazzolla-Italic[opsz,wght].ttf"

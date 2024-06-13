@@ -7,7 +7,6 @@ cask "font-belanosima" do
       branch:    "main",
       only_path: "ofl/belanosima"
   name "Belanosima"
-  desc "Inspired by geometric sans serif designs from the 1920s"
   homepage "https://fonts.google.com/specimen/Belanosima"
 
   font "Belanosima-Bold.ttf"

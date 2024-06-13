@@ -7,7 +7,6 @@ cask "font-tourney" do
       branch:    "main",
       only_path: "ofl/tourney"
   name "Tourney"
-  desc "Completely solid"
   homepage "https://fonts.google.com/specimen/Tourney"
 
   font "Tourney-Italic[wdth,wght].ttf"

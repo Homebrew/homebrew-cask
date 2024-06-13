@@ -4,7 +4,6 @@ cask "font-delugia-mono-powerline" do
 
   url "https://github.com/adam7/delugia-code/releases/download/v#{version}/delugia-mono-powerline.zip"
   name "Delugia Code"
-  desc "Cascadia Code + Nerd Fonts, minor difference between Caskaydia Cove Nerd Font"
   homepage "https://github.com/adam7/delugia-code"
 
   font "delugia-mono-powerline/DelugiaMonoPL-Bold.ttf"

@@ -7,7 +7,6 @@ cask "font-xanh-mono" do
       branch:    "main",
       only_path: "ofl/xanhmono"
   name "Xanh Mono"
-  desc "Mono-serif typeface, designed by lam bao and duy dao"
   homepage "https://fonts.google.com/specimen/Xanh+Mono"
 
   font "XanhMono-Italic.ttf"

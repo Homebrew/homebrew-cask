@@ -4,7 +4,6 @@ cask "font-escumasia" do
 
   url "https://moji-waku.com/download/escumasia.zip"
   name "Escumasia"
-  desc "Ancient biology styled font inspired by escumasia"
   homepage "https://moji-waku.com/escumasia/index.html"
 
   font "escumasia/Escumasia-Regular.otf"

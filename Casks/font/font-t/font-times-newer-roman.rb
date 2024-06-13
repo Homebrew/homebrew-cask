@@ -4,7 +4,6 @@ cask "font-times-newer-roman" do
 
   url "https://timesnewerroman.com/assets/TimesNewerRoman.zip"
   name "Times Newer Roman"
-  desc "Looks just like Times New Roman, but characters are 5-10% wider"
   homepage "https://timesnewerroman.com/"
 
   font "TimesNewerRoman-Bold.otf"

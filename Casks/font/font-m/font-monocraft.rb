@@ -4,7 +4,6 @@ cask "font-monocraft" do
 
   url "https://github.com/IdreesInc/Monocraft/releases/download/v#{version}/Monocraft.ttf"
   name "Monocraft"
-  desc "Monospaced programming font inspired by the Minecraft typeface"
   homepage "https://github.com/IdreesInc/Monocraft"
 
   font "Monocraft.ttf"

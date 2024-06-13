@@ -5,7 +5,6 @@ cask "font-linux-libertine" do
   url "https://downloads.sourceforge.net/linuxlibertine/LinLibertineTTF_#{version.tr(",", "_")}.tgz",
       verified: "downloads.sourceforge.net/linuxlibertine/"
   name "Linux Libertine"
-  desc "Libre multilingual serif font"
   homepage "http://linuxlibertine.org/"
 
   # The regex below specifically matches filenames with a version and optional

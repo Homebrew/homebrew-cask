@@ -5,7 +5,6 @@ cask "font-reddit-mono" do
   url "https://github.com/google/fonts/raw/main/ofl/redditmono/RedditMono%5Bwght%5D.ttf",
       verified: "github.com/google/fonts/"
   name "Reddit Mono"
-  desc "Complemented by reddit sans and reddit sans condensed"
   homepage "https://fonts.google.com/specimen/Reddit+Mono"
 
   font "RedditMono[wght].ttf"

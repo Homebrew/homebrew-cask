@@ -5,7 +5,6 @@ cask "font-slackside-one" do
   url "https://github.com/google/fonts/raw/main/ofl/slacksideone/SlacksideOne-Regular.ttf",
       verified: "github.com/google/fonts/"
   name "Slackside One"
-  desc "Handwritten display font"
   homepage "https://fonts.google.com/specimen/Slackside+One"
 
   font "SlacksideOne-Regular.ttf"

@@ -5,7 +5,6 @@ cask "font-smiley-sans" do
   url "https://github.com/atelier-anchor/smiley-sans/releases/download/v#{version}/smiley-sans-v#{version}.zip",
       verified: "github.com/atelier-anchor/smiley-sans/"
   name "Smiley Sans"
-  desc "Chinese typeface seeking a visual balance between the humanist and the geometric"
   homepage "https://atelier-anchor.com/typefaces/smiley-sans/"
 
   font "SmileySans-Oblique.ttf"

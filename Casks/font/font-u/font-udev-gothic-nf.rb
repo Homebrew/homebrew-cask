@@ -4,7 +4,6 @@ cask "font-udev-gothic-nf" do
 
   url "https://github.com/yuru7/udev-gothic/releases/download/v#{version}/UDEVGothic_NF_v#{version}.zip"
   name "UDEV Gothic NF"
-  desc "Integrate fonts from BIZ UD Gothic and JetBrains Mono"
   homepage "https://github.com/yuru7/udev-gothic"
 
   font "UDEVGothic_NF_v#{version}/UDEVGothic35NF-Bold.ttf"

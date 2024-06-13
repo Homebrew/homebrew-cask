@@ -4,7 +4,6 @@ cask "font-last-resort-high-efficiency" do
 
   url "https://github.com/unicode-org/last-resort-font/releases/download/#{version}/LastResortHE-Regular.ttf"
   name "Last Resort High-Efficiency"
-  desc "Special-purpose font, providing glyphs to represent types of Unicode characters"
   homepage "https://github.com/unicode-org/last-resort-font"
 
   font "LastResortHE-Regular.ttf"

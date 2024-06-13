@@ -4,7 +4,6 @@ cask "font-cooper-hewitt" do
 
   url "https://www.cooperhewitt.org/wp-content/uploads/fonts/CooperHewitt-OTF-public.zip"
   name "Cooper Hewitt"
-  desc "Contemporary sans serif composed of modified-geometric curves and arches"
   homepage "https://www.cooperhewitt.org/open-source-at-cooper-hewitt/cooper-hewitt-the-typeface-by-chester-jenkins/"
 
   font "CooperHewitt-OTF-public/CooperHewitt-Bold.otf"

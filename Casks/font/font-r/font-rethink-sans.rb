@@ -7,7 +7,6 @@ cask "font-rethink-sans" do
       branch:    "main",
       only_path: "ofl/rethinksans"
   name "Rethink Sans"
-  desc "Sans-serif type family"
   homepage "https://fonts.google.com/specimen/Rethink+Sans"
 
   font "RethinkSans-Italic[wght].ttf"

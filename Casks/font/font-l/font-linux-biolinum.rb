@@ -5,7 +5,6 @@ cask "font-linux-biolinum" do
   url "https://downloads.sourceforge.net/linuxlibertine/LinLibertineTTF_#{version.tr(",", "_")}.tgz",
       verified: "downloads.sourceforge.net/linuxlibertine/"
   name "Linux Biolinum"
-  desc "Libre multilingual sans-serif font"
   homepage "http://linuxlibertine.org/"
 
   # The regex below specifically matches filenames with a version and optional

@@ -4,7 +4,6 @@ cask "font-noto-serif-cjk-jp" do
 
   url "https://github.com/notofonts/noto-cjk/releases/download/Serif#{version}/07_NotoSerifCJKjp.zip"
   name "Noto Serif CJK JP"
-  desc "Language Specific OTFs Japanese (日本語)"
   homepage "https://github.com/notofonts/noto-cjk/tree/main/Serif"
 
   livecheck do

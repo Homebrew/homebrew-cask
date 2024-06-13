@@ -7,7 +7,6 @@ cask "font-roboto" do
       branch:    "main",
       only_path: "ofl/roboto"
   name "Roboto"
-  desc "Font with a mechanical skeleton and the forms are largely geometric"
   homepage "https://fonts.google.com/specimen/Roboto"
 
   font "Roboto-Italic[wdth,wght].ttf"

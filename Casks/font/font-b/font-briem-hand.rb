@@ -5,7 +5,6 @@ cask "font-briem-hand" do
   url "https://github.com/google/fonts/raw/main/ofl/briemhand/BriemHand%5Bwght%5D.ttf",
       verified: "github.com/google/fonts/"
   name "Briem Hand"
-  desc "Modern adaptation of sixteenth-century chancery cursive"
   homepage "https://fonts.google.com/specimen/Briem+Hand"
 
   font "BriemHand[wght].ttf"

@@ -5,7 +5,6 @@ cask "font-b612" do
   url "https://github.com/polarsys/b612/archive/refs/tags/#{version}.zip",
       verified: "github.com/polarsys/b612/"
   name "B612"
-  desc "Font designed and tested to be used on aircraft cockpit screens"
   homepage "https://b612-font.com/"
 
   font "b612-#{version}/fonts/ttf/B612-Bold.ttf"

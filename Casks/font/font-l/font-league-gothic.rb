@@ -5,7 +5,6 @@ cask "font-league-gothic" do
   url "https://github.com/theleagueof/league-gothic/releases/download/#{version}/LeagueGothic-#{version}.tar.xz",
       verified: "github.com/theleagueof/league-gothic/"
   name "League Gothic"
-  desc "Revival of an old classic, Alternate Gothic #1"
   homepage "https://www.theleagueofmoveabletype.com/league-gothic"
 
   font "LeagueGothic-#{version}/static/OTF/LeagueGothic-Regular.otf"

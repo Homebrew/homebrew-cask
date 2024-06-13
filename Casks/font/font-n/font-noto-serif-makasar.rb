@@ -5,7 +5,6 @@ cask "font-noto-serif-makasar" do
   url "https://github.com/google/fonts/raw/main/ofl/notoserifmakasar/NotoSerifMakasar-Regular.ttf",
       verified: "github.com/google/fonts/"
   name "Noto Serif Makasar"
-  desc "Design for the historical southeast asian makasar script"
   homepage "https://fonts.google.com/specimen/Noto+Serif+Makasar"
 
   font "NotoSerifMakasar-Regular.ttf"

@@ -5,7 +5,6 @@ cask "font-ebh" do
   url "https://exeterbookhand.com/EBH-v#{version}.zip"
   name "EBH"
   name "Exeter Book Hand"
-  desc "Vectorized font based on script in the Exeter Book"
   homepage "https://exeterbookhand.com/"
 
   livecheck do

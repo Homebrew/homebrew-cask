@@ -7,7 +7,6 @@ cask "font-aref-ruqaa-ink" do
       branch:    "main",
       only_path: "ofl/arefruqaaink"
   name "Aref Ruqaa Ink"
-  desc "Led by khaled hosny, a type designer based in cairo, egypt"
   homepage "https://fonts.google.com/specimen/Aref+Ruqaa+Ink"
 
   font "ArefRuqaaInk-Bold.ttf"

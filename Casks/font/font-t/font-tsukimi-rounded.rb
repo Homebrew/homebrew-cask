@@ -7,7 +7,6 @@ cask "font-tsukimi-rounded" do
       branch:    "main",
       only_path: "ofl/tsukimirounded"
   name "Tsukimi Rounded"
-  desc "Sans-serif typeface with rounded terminals"
   homepage "https://fonts.google.com/specimen/Tsukimi+Rounded"
 
   font "TsukimiRounded-Bold.ttf"

@@ -5,7 +5,6 @@ cask "font-mononoki" do
   url "https://github.com/madmalik/mononoki/releases/download/#{version}/mononoki.zip",
       verified: "github.com/madmalik/mononoki/"
   name "Mononoki"
-  desc "Programming font"
   homepage "https://madmalik.github.io/mononoki/"
 
   font "mononoki-Bold.otf"

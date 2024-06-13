@@ -7,7 +7,6 @@ cask "font-advent-pro" do
       branch:    "main",
       only_path: "ofl/adventpro"
   name "Advent Pro"
-  desc "Modern font designed for web and print"
   homepage "https://fonts.google.com/specimen/Advent+Pro"
 
   font "AdventPro-Italic[wdth,wght].ttf"

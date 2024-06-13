@@ -4,7 +4,6 @@ cask "font-meslo-lg-dz" do
 
   url "https://github.com/andreberg/Meslo-Font/raw/master/dist/v#{version}/Meslo%20LG%20DZ%20v#{version}.zip"
   name "Meslo LG DZ"
-  desc "Dotted-zero variant of the Meslo LG font"
   homepage "https://github.com/andreberg/Meslo-Font"
 
   font "Meslo LG DZ v#{version}/MesloLGLDZ-Bold.ttf"

@@ -7,7 +7,6 @@ cask "font-iming" do
   name "一點明體"
   name "一点明朝"
   name "一点明体"
-  desc "Traditional Chinese typefaces in TrueType"
   homepage "https://github.com/ichitenfont/I.Ming"
 
   font "I.Ming-#{version}/#{version}/I.Ming-#{version}.ttf"

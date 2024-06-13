@@ -5,7 +5,6 @@ cask "font-playpen-sans" do
   url "https://github.com/google/fonts/raw/main/ofl/playpensans/PlaypenSans%5Bwght%5D.ttf",
       verified: "github.com/google/fonts/"
   name "Playpen Sans"
-  desc "Variable font with a weight range from thin to extrabold"
   homepage "https://fonts.google.com/specimen/Playpen+Sans"
 
   font "PlaypenSans[wght].ttf"

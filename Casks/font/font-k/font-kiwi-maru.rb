@@ -7,7 +7,6 @@ cask "font-kiwi-maru" do
       branch:    "main",
       only_path: "ofl/kiwimaru"
   name "Kiwi Maru"
-  desc "Typeface for visualization of everyday and slang expressions"
   homepage "https://fonts.google.com/specimen/Kiwi+Maru"
 
   font "KiwiMaru-Light.ttf"

@@ -4,7 +4,6 @@ cask "font-andika" do
 
   url "https://software.sil.org/downloads/r/andika/Andika-#{version}.zip"
   name "Andika"
-  desc "Sans-serif font family designed and optimized for literacy use"
   homepage "https://software.sil.org/andika/"
 
   livecheck do

@@ -5,7 +5,6 @@ cask "font-gnu-unifont" do
   url "https://ftpmirror.gnu.org/unifont/unifont-#{version}/unifont-#{version}.tar.gz",
       verified: "ftpmirror.gnu.org/unifont/"
   name "GNU Unifont"
-  desc "Unicode bitmap font"
   homepage "https://unifoundry.com/unifont.html"
 
   livecheck do

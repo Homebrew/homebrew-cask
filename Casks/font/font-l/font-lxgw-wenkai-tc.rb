@@ -5,7 +5,6 @@ cask "font-lxgw-wenkai-tc" do
   url "https://github.com/lxgw/LxgwWenkaiTC/releases/download/v#{version}/lxgw-wenkai-tc-v#{version}.zip"
   name "LXGW WenKai TC"
   name "霞鶩文楷 TC"
-  desc "Open-source traditional Chinese font derived from Fontworks' Klee One"
   homepage "https://github.com/lxgw/LxgwWenkaiTC"
 
   font "lxgw-wenkai-tc-v#{version}/LXGWWenKaiMonoTC-Bold.ttf"
