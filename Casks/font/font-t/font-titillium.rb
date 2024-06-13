@@ -7,6 +7,8 @@ cask "font-titillium" do
   name "Titillium"
   homepage "http://nta.accademiadiurbino.it/titillium/"
 
+  disable! date: "2024-06-13", because: :no_longer_available
+
   font "Titillium_roman_upright_italic_#{version.before_comma.dots_to_underscores}_OT/Titillium-Black.otf"
   font "Titillium_roman_upright_italic_#{version.before_comma.dots_to_underscores}_OT/Titillium-Bold.otf"
   font "Titillium_roman_upright_italic_#{version.before_comma.dots_to_underscores}_OT/Titillium-BoldItalic.otf"
