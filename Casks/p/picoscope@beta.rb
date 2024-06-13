@@ -4,7 +4,7 @@ cask "picoscope@beta" do
 
   url "https://oem.picotech.com/software/p#{version.major}beta/PicoScope_#{version.major}_TnM_Early_Access_#{version}.pkg"
   name "PicoScope beta"
-  desc "Test and measurement oscilloscope software for PicoScope oscilloscops"
+  desc "Test and measurement oscilloscope software for PicoScope oscilloscopes"
   homepage "https://www.picotech.com/"
 
   livecheck do

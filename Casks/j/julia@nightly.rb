@@ -10,7 +10,7 @@ cask "julia@nightly" do
   homepage "https://julialang.org/"
 
   livecheck do
-    skip "No reliable version info"
+    skip "No reliable way to get version info"
   end
 
   app "Julia-#{version}.app"

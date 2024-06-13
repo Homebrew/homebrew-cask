@@ -4,7 +4,7 @@ cask "copilot-for-xcode" do
 
   url "https://github.com/intitni/CopilotForXcode/releases/download/#{version}/Copilot.for.Xcode.app.zip"
   name "Copilot for Xcode"
-  desc "Xcode extension for Github Copilot"
+  desc "Xcode extension for GitHub Copilot"
   homepage "https://github.com/intitni/CopilotForXcode"
 
   livecheck do

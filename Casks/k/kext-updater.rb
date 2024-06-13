@@ -4,7 +4,7 @@ cask "kext-updater" do
 
   url "https://update.kextupdater.de/kextupdater/kextupdaterng.zip"
   name "Kext Updater"
-  desc "Automatic updater for kernel extensions required by 'Hackintoshes'"
+  desc "Automatic updater for kernel extensions required by Hackintoshes"
   homepage "https://kextupdater.de/"
 
   livecheck do
