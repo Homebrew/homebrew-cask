@@ -1,6 +1,6 @@
 cask "engine-dj" do
-  version "3.4.0,5fabc561fbec2611,f6b3dc2c20"
-  sha256 "56c516f1c33df457d7a9370d97403957496f4aded006f57f49fd1a38dbe09a0d"
+  version "4.0.0,af2cdcfdbe977f25,778d88f94d"
+  sha256 "6f6e89abdb8b64d9a62854c0e9690b69d33f1b8b46dc9da44ee5238f891d7813"
 
   url "https://imb-cicd-public.s3.amazonaws.com/Engine/#{version.csv.first}/Release/#{version.csv.second}/Engine_DJ_#{version.csv.first}_#{version.csv.third}_Setup.dmg",
       verified: "imb-cicd-public.s3.amazonaws.com/Engine/"
