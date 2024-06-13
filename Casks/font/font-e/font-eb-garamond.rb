@@ -5,7 +5,6 @@ cask "font-eb-garamond" do
   url "https://bitbucket.org/georgd/eb-garamond/downloads/EBGaramond-#{version}.zip",
       verified: "bitbucket.org/georgd/eb-garamond/"
   name "EB Garamond"
-  desc "Garamond typeface based on the 1592 Berner specimen"
   homepage "https://github.com/georgd/EB-Garamond"
 
   font "EBGaramond-#{version}/otf/EBGaramond-Initials.otf"

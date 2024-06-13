@@ -4,7 +4,6 @@ cask "font-chomsky" do
 
   url "https://github.com/ctrlcctrlv/chomsky/releases/download/v#{version}/Chomsky.otf"
   name "Chomsky"
-  desc "New York Times masthead, reimagined as a full font"
   homepage "https://github.com/ctrlcctrlv/chomsky"
 
   font "Chomsky.otf"

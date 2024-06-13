@@ -5,7 +5,6 @@ cask "font-makinas4" do
 
   url "https://moji-waku.com/download/makinas4.zip"
   name "Makinas 4"
-  desc "Emotionless straight-line-shape font"
   homepage "https://moji-waku.com/makinas/index.html"
 
   font "makinas4/Makinas-4-Flat.otf"

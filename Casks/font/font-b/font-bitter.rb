@@ -7,7 +7,6 @@ cask "font-bitter" do
       branch:    "main",
       only_path: "ofl/bitter"
   name "Bitter"
-  desc "Slab-serif typeface optimized for e-ink screens"
   homepage "https://fonts.google.com/specimen/Bitter"
 
   font "Bitter-Italic[wght].ttf"

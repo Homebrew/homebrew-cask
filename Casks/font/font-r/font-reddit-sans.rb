@@ -7,7 +7,6 @@ cask "font-reddit-sans" do
       branch:    "main",
       only_path: "ofl/redditsans"
   name "Reddit Sans"
-  desc "Complemented by reddit sans condensed and reddit mono"
   homepage "https://fonts.google.com/specimen/Reddit+Sans"
 
   font "RedditSans-Italic[wght].ttf"

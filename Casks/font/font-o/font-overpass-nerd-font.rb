@@ -4,7 +4,6 @@ cask "font-overpass-nerd-font" do
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/Overpass.zip"
   name "Overpass Nerd Font families (Overpass)"
-  desc "Developer targeted fonts with a high number of glyphs"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
   livecheck do

@@ -5,7 +5,6 @@ cask "font-bungee" do
   url "https://github.com/djrrb/bungee/releases/download/v#{version}/Bungee-fonts.zip",
       verified: "github.com/djrrb/bungee/"
   name "Bungee"
-  desc "Fonts for vertical and multicolor typography"
   homepage "https://djr.com/bungee/"
 
   font "Bungee-fonts/Bungee_Basic/Bungee-Regular.ttf"

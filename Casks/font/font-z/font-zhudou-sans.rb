@@ -5,7 +5,6 @@ cask "font-zhudou-sans" do
   url "https://github.com/Buernia/Zhudou-Sans/releases/download/v#{version}/Zhudou.Sans.zip"
   name "Zhudou Sans"
   name "煮豆黑体"
-  desc "CJK symbols and punctuation derived from Noto Sans"
   homepage "https://github.com/Buernia/Zhudou-Sans"
 
   font "otf/ZhudouSans-Bold.otf"

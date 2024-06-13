@@ -4,7 +4,6 @@ cask "font-waptia" do
 
   url "https://moji-waku.com/download/waptia.zip"
   name "WAPTIA"
-  desc "Ancient-biology styled font"
   homepage "https://moji-waku.com/waptia/index.html"
 
   font "waptia/Waptia-Light.otf"

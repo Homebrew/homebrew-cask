@@ -4,7 +4,6 @@ cask "font-latin-modern" do
 
   url "https://www.gust.org.pl/projects/e-foundry/latin-modern/download/lm#{version}otf.zip"
   name "Latin Modern"
-  desc "Latin Modern font family, derived from Computer Modern fonts"
   homepage "https://www.gust.org.pl/projects/e-foundry/latin-modern"
 
   livecheck do

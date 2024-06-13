@@ -4,7 +4,6 @@ cask "font-plemol-jp-hs" do
 
   url "https://github.com/yuru7/PlemolJP/releases/download/v#{version}/PlemolJP_HS_v#{version}.zip"
   name "PlemolJP HS"
-  desc "Japanese programming font synthesized from IBM Plex Mono and IBM Plex Sans JP"
   homepage "https://github.com/yuru7/PlemolJP"
 
   font "PlemolJP_HS_v#{version}/PlemolJP_HS/PlemolJPHS-Bold.ttf"

@@ -5,7 +5,6 @@ cask "font-monaspace" do
   url "https://github.com/githubnext/monaspace/releases/download/v#{version}/monaspace-v#{version}.zip",
       verified: "github.com/githubnext/monaspace/"
   name "Monaspace"
-  desc "Superfamily of fonts for code"
   homepage "https://monaspace.githubnext.com/"
 
   font "monaspace-v#{version}/fonts/otf/MonaspaceArgon-Bold.otf"

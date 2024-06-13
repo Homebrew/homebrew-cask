@@ -5,7 +5,6 @@ cask "font-raleway" do
   url "https://github.com/theleagueof/raleway/releases/download/#{version}/Raleway-#{version}.tar.xz",
       verified: "github.com/theleagueof/raleway/"
   name "Raleway"
-  desc "Elegant sans-serif font family, now 9 weights and italic style"
   homepage "https://www.theleagueofmoveabletype.com/raleway"
 
   font "Raleway-#{version}/static/OTF/Raleway-Thin.otf"

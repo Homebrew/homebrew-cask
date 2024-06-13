@@ -4,7 +4,6 @@ cask "font-urbanist" do
 
   url "https://github.com/coreyhu/Urbanist/releases/download/#{version}/Urbanist-fonts.zip"
   name "Urbanist"
-  desc "Geometric sans-serif font"
   homepage "https://github.com/coreyhu/Urbanist"
 
   font "Urbanist-fonts/fonts/otf/Urbanist-Black.otf"

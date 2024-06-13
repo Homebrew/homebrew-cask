@@ -4,7 +4,6 @@ cask "font-iosevka-ss17" do
 
   url "https://github.com/be5invis/Iosevka/releases/download/v#{version}/PkgTTC-IosevkaSS17-#{version}.zip"
   name "Iosevka SS17"
-  desc "Sans-serif, slab-serif, monospace and quasi‑proportional typeface family"
   homepage "https://github.com/be5invis/Iosevka/"
 
   livecheck do

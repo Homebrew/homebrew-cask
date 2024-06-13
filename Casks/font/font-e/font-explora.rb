@@ -5,7 +5,6 @@ cask "font-explora" do
   url "https://github.com/google/fonts/raw/main/ofl/explora/Explora-Regular.ttf",
       verified: "github.com/google/fonts/"
   name "Explora"
-  desc "Beautiful calligraphic typeface with swash forms"
   homepage "https://fonts.google.com/specimen/Explora"
 
   font "Explora-Regular.ttf"

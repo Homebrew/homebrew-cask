@@ -5,7 +5,6 @@ cask "font-cubic-11" do
   url "https://github.com/ACh-K/Cubic-11/archive/refs/tags/v#{version}.tar.gz"
   name "Cubic 11"
   name "俐方體11號"
-  desc "Open-source 11x11 Traditional Chinese bitmap font"
   homepage "https://github.com/ACh-K/Cubic-11"
 
   font "Cubic-11-#{version}/fonts/ttf/Cubic_11_#{version}_R.ttf"

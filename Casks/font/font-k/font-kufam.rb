@@ -7,7 +7,6 @@ cask "font-kufam" do
       branch:    "main",
       only_path: "ofl/kufam"
   name "Kufam"
-  desc "Arabic-Latin bilingual typeface intended for contemporary information design"
   homepage "https://fonts.google.com/specimen/Kufam"
 
   font "Kufam-Italic[wght].ttf"

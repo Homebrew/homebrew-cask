@@ -7,7 +7,6 @@ cask "font-windsong" do
       branch:    "main",
       only_path: "ofl/windsong"
   name "WindSong"
-  desc "Elongated script with multiple stylistic sets"
   homepage "https://fonts.google.com/specimen/WindSong"
 
   font "WindSong-Medium.ttf"

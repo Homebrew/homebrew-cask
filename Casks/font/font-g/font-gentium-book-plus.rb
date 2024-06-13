@@ -7,7 +7,6 @@ cask "font-gentium-book-plus" do
       branch:    "main",
       only_path: "ofl/gentiumbookplus"
   name "Gentium Book Plus"
-  desc "New version of the reduced character set families, gentium book basic"
   homepage "https://fonts.google.com/specimen/Gentium+Book+Plus"
 
   font "GentiumBookPlus-Bold.ttf"

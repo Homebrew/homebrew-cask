@@ -7,7 +7,6 @@ cask "font-goldman" do
       branch:    "main",
       only_path: "ofl/goldman"
   name "Goldman"
-  desc "Latin display typeface designed for posters"
   homepage "https://fonts.google.com/specimen/Goldman"
 
   font "Goldman-Bold.ttf"

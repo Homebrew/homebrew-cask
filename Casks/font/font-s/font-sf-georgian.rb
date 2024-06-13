@@ -5,7 +5,6 @@ cask "font-sf-georgian" do
   url "https://devimages-cdn.apple.com/design/resources/download/SF-Georgian.dmg"
   name "San Francisco Georgian"
   name "SF Georgian"
-  desc "Georgian extension of \"San Francisco\" by Apple"
   homepage "https://developer.apple.com/fonts"
 
   pkg "SF Georgian Fonts.pkg"

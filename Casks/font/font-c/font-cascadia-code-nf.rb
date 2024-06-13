@@ -4,7 +4,6 @@ cask "font-cascadia-code-nf" do
 
   url "https://github.com/microsoft/cascadia-code/releases/download/v#{version}/CascadiaCode-#{version}.zip"
   name "Cascadia Code NF"
-  desc "Version of Cascadia Code with embedded Nerd Fonts symbols"
   homepage "https://github.com/microsoft/cascadia-code"
 
   livecheck do

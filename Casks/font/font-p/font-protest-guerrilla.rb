@@ -5,7 +5,6 @@ cask "font-protest-guerrilla" do
   url "https://github.com/google/fonts/raw/main/ofl/protestguerrilla/ProtestGuerrilla-Regular.ttf",
       verified: "github.com/google/fonts/"
   name "Protest Guerrilla"
-  desc "Stencil version of strike"
   homepage "https://fonts.google.com/specimen/Protest+Guerrilla"
 
   font "ProtestGuerrilla-Regular.ttf"

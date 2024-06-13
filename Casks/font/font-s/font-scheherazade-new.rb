@@ -7,7 +7,6 @@ cask "font-scheherazade-new" do
       branch:    "main",
       only_path: "ofl/scheherazadenew"
   name "Scheherazade New"
-  desc "Named after the heroine of the classic arabian nights tale"
   homepage "https://fonts.google.com/specimen/Scheherazade+New"
 
   font "ScheherazadeNew-Bold.ttf"

@@ -7,7 +7,6 @@ cask "font-karantina" do
       branch:    "main",
       only_path: "ofl/karantina"
   name "Karantina"
-  desc "Three weight family that includes - light, regular and bold"
   homepage "https://fonts.google.com/specimen/Karantina"
 
   font "Karantina-Bold.ttf"

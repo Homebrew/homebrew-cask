@@ -5,7 +5,6 @@ cask "font-gentium-plus" do
   url "https://github.com/silnrsi/font-gentium/releases/download/v#{version}/GentiumPlus-#{version}.zip",
       verified: "github.com/silnrsi/font-gentium/"
   name "Gentium"
-  desc "Multilingual font"
   homepage "https://software.sil.org/gentium/"
 
   font "GentiumPlus-#{version}/GentiumBookPlus-Bold.ttf"

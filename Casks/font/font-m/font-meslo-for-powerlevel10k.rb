@@ -4,7 +4,6 @@ cask "font-meslo-for-powerlevel10k" do
 
   url "https://github.com/romkatv/powerlevel10k-media/releases/download/v#{version}/meslo-lgs-nf.tar.gz"
   name "Meslo Nerd Font for Powerlevel10k"
-  desc "Monospace font customized for Powerlevel10k"
   homepage "https://github.com/romkatv/powerlevel10k-media"
 
   font "MesloLGS NF Bold Italic.ttf"

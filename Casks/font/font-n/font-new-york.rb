@@ -5,7 +5,6 @@ cask "font-new-york" do
   url "https://devimages-cdn.apple.com/design/resources/download/NY.dmg"
   name "New York"
   name "NY"
-  desc "Serif font \"New York\" by Apple"
   homepage "https://developer.apple.com/fonts/"
 
   pkg "NY Fonts.pkg"

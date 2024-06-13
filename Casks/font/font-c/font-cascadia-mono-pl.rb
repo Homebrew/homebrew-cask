@@ -4,7 +4,6 @@ cask "font-cascadia-mono-pl" do
 
   url "https://github.com/microsoft/cascadia-code/releases/download/v#{version}/CascadiaCode-#{version}.zip"
   name "Cascadia Mono PL"
-  desc "Version of Cascadia Code without ligatures and with embedded Powerline symbols"
   homepage "https://github.com/microsoft/cascadia-code"
 
   livecheck do

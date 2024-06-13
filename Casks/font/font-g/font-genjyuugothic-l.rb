@@ -5,7 +5,6 @@ cask "font-genjyuugothic-l" do
   url "https://ftp.iij.ad.jp/pub/osdn.jp/users/8/8643/genjyuugothic-l-#{version}.zip",
       verified: "ftp.iij.ad.jp/pub/osdn.jp/users/"
   name "Gen Jyuu GothicL"
-  desc "Weak-Rounded version of Gen Shin Gothic"
   homepage "http://jikasei.me/font/genjyuu/"
 
   livecheck do

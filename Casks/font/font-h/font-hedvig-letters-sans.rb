@@ -5,7 +5,6 @@ cask "font-hedvig-letters-sans" do
   url "https://github.com/google/fonts/raw/main/ofl/hedvigletterssans/HedvigLettersSans-Regular.ttf",
       verified: "github.com/google/fonts/"
   name "Hedvig Letters Sans"
-  desc "Perfect when it’s not"
   homepage "https://fonts.google.com/specimen/Hedvig+Letters+Sans"
 
   font "HedvigLettersSans-Regular.ttf"

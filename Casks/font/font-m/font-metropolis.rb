@@ -4,7 +4,6 @@ cask "font-metropolis" do
 
   url "https://www.1001fonts.com/download/metropolis.zip"
   name "Metropolis"
-  desc "Modern, geometric typeface"
   homepage "https://www.1001fonts.com/metropolis-font.html"
 
   font "Metropolis-Black.otf"

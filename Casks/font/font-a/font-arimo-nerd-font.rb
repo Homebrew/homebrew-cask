@@ -4,7 +4,6 @@ cask "font-arimo-nerd-font" do
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/Arimo.zip"
   name "Arimo Nerd Font (Arimo)"
-  desc "Developer targeted fonts with a high number of glyphs"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
   livecheck do

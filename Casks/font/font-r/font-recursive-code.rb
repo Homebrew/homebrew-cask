@@ -4,7 +4,6 @@ cask "font-recursive-code" do
 
   url "https://github.com/arrowtype/recursive/releases/download/v#{version}/ArrowType-Recursive-#{version}.zip"
   name "Recursive Code"
-  desc "Recursive's prebuilt text-editor-friendly files, including powerline glyphs"
   homepage "https://github.com/arrowtype/recursive"
 
   font "ArrowType-Recursive-#{version}/Recursive_Code/RecMonoSemicasual/RecMonoSemicasual-BoldItalic-#{version}.ttf"

@@ -7,7 +7,6 @@ cask "font-ysabeau-office" do
       branch:    "main",
       only_path: "ofl/ysabeauoffice"
   name "Ysabeau Office"
-  desc "Exercise in restraint"
   homepage "https://fonts.google.com/specimen/Ysabeau+Office"
 
   font "YsabeauOffice-Italic[wght].ttf"

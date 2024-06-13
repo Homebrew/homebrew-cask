@@ -7,7 +7,6 @@ cask "font-brygada-1918" do
       branch:    "main",
       only_path: "ofl/brygada1918"
   name "Brygada 1918"
-  desc "Available on the project's website"
   homepage "https://fonts.google.com/specimen/Brygada+1918"
 
   font "Brygada1918-Italic[wght].ttf"

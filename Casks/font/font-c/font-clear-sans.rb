@@ -6,7 +6,6 @@ cask "font-clear-sans" do
       branch:    "main",
       only_path: "TTF"
   name "Clear Sans"
-  desc "Sans-serif typeface"
   homepage "https://github.com/intel/clear-sans"
 
   deprecate! date: "2023-12-17", because: :discontinued

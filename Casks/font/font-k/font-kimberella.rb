@@ -4,7 +4,6 @@ cask "font-kimberella" do
 
   url "https://moji-waku.com/download/kimberella.zip"
   name "Kimberella"
-  desc "Ancient biology styled font inspired by kimberella"
   homepage "https://moji-waku.com/kimberella/index.html"
 
   font "kimberella/Kimberella-Regular.otf"

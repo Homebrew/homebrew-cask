@@ -5,7 +5,6 @@ cask "font-lxgw-wenkai-gb" do
   url "https://github.com/lxgw/LxgwWenkaiGB/releases/download/v#{version}/lxgw-wenkai-gb-v#{version}.zip"
   name "LXGW WenKai GB"
   name "霞鹜文楷 GB"
-  desc "Open-source Simplified Chinese font derived from Fontworks' Klee One"
   homepage "https://github.com/lxgw/LxgwWenkaiGB"
 
   font "lxgw-wenkai-gb-v#{version}/LXGWWenKaiMonoGB-Bold.ttf"

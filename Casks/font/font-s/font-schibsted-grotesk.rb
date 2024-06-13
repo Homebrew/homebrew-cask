@@ -7,7 +7,6 @@ cask "font-schibsted-grotesk" do
       branch:    "main",
       only_path: "ofl/schibstedgrotesk"
   name "Schibsted Grotesk"
-  desc "Digital-first font family crafted for user interfaces"
   homepage "https://fonts.google.com/specimen/Schibsted+Grotesk"
 
   font "SchibstedGrotesk-Italic[wght].ttf"

@@ -5,7 +5,6 @@ cask "font-sf-compact" do
   url "https://devimages-cdn.apple.com/design/resources/download/SF-Compact.dmg"
   name "San Francisco Compact"
   name "SF Compact"
-  desc "Compact variant of \"San Francisco\" by Apple"
   homepage "https://developer.apple.com/fonts/"
 
   pkg "SF Compact Fonts.pkg"

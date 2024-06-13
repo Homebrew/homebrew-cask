@@ -5,7 +5,6 @@ cask "font-tektur" do
   url "https://github.com/google/fonts/raw/main/ofl/tektur/Tektur%5Bwdth%2Cwght%5D.ttf",
       verified: "github.com/google/fonts/"
   name "Tektur"
-  desc "Set high allowing for compact typesetting"
   homepage "https://fonts.google.com/specimen/Tektur"
 
   font "Tektur[wdth,wght].ttf"

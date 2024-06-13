@@ -4,7 +4,6 @@ cask "font-terminess-ttf-nerd-font" do
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/Terminus.zip"
   name "Terminess Nerd Font (Terminus)"
-  desc "Developer targeted fonts with a high number of glyphs"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
   livecheck do

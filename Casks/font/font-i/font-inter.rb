@@ -5,7 +5,6 @@ cask "font-inter" do
   url "https://github.com/rsms/inter/releases/download/v#{version}/Inter-#{version}.zip",
       verified: "github.com/rsms/inter/"
   name "Inter"
-  desc "Variable font designed for display"
   homepage "https://rsms.me/inter/"
 
   font "InterVariable-Italic.ttf"

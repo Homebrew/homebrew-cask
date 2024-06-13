@@ -10,7 +10,6 @@ cask "font-437-plus" do
   name "Px437"
   name "PxPlus"
   name "Ultimate Oldschool PC Font Pack"
-  desc "Collection of classic text mode fonts from DOS-era IBM PCs and compatibles"
   homepage "https://int10h.org/oldschool-pc-fonts/"
 
   livecheck do

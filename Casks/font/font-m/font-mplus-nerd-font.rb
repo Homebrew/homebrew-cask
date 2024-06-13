@@ -4,7 +4,6 @@ cask "font-mplus-nerd-font" do
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/MPlus.zip"
   name "M+ Nerd Font families (MPlus)"
-  desc "Developer targeted fonts with a high number of glyphs"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
   livecheck do

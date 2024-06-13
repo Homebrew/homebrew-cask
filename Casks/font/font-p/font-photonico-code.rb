@@ -4,7 +4,6 @@ cask "font-photonico-code" do
 
   url "https://github.com/Photonico/Photonico_Code/releases/download/#{version}/Photonico.#{version}.Regular.ttf"
   name "Photonico Code"
-  desc "Free, monospace, slab-serif style font for coding"
   homepage "https://github.com/Photonico/Photonico_Code"
 
   font "Photonico.#{version}.Regular.ttf"

@@ -5,7 +5,6 @@ cask "font-harano-aji" do
   url "https://github.com/trueroad/HaranoAjiFonts/archive/refs/tags/#{version}.zip"
   name "Harano Aji"
   name "原ノ味"
-  desc "Japanese fonts (Source Han fonts with Adobe-Japan1 (AJ1) CIDs)"
   homepage "https://github.com/trueroad/HaranoAjiFonts"
 
   font "HaranoAjiFonts-#{version}/HaranoAjiGothic-Bold.otf"

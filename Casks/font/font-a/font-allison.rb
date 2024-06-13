@@ -5,7 +5,6 @@ cask "font-allison" do
   url "https://github.com/google/fonts/raw/main/ofl/allison/Allison-Regular.ttf",
       verified: "github.com/google/fonts/"
   name "Allison"
-  desc "Casual handwriting script"
   homepage "https://fonts.google.com/specimen/Allison"
 
   font "Allison-Regular.ttf"

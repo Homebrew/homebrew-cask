@@ -7,7 +7,6 @@ cask "font-ruwudu" do
       branch:    "main",
       only_path: "ofl/ruwudu"
   name "Ruwudu"
-  desc "Open font family for arabic script languages that use the rubutun kano style"
   homepage "https://fonts.google.com/specimen/Ruwudu"
 
   font "Ruwudu-Bold.ttf"

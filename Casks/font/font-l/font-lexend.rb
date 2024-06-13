@@ -5,7 +5,6 @@ cask "font-lexend" do
   url "https://github.com/google/fonts/raw/main/ofl/lexend/Lexend%5Bwght%5D.ttf",
       verified: "github.com/google/fonts/"
   name "Lexend"
-  desc "Expanded by font bureau with a range of 8 weights"
   homepage "https://fonts.google.com/specimen/Lexend"
 
   font "Lexend[wght].ttf"

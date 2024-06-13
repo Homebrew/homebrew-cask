@@ -5,7 +5,6 @@ cask "font-commit-mono" do
   url "https://github.com/eigilnikolajsen/commit-mono/releases/download/v#{version}/CommitMono-#{version}.zip",
       verified: "github.com/eigilnikolajsen/commit-mono/"
   name "Commit Mono"
-  desc "Neutral programming typeface"
   homepage "https://commitmono.com/"
 
   font "CommitMono-#{version}/CommitMono-400-Italic.otf"

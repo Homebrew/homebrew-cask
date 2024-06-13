@@ -7,7 +7,6 @@ cask "font-fuzzy-bubbles" do
       branch:    "main",
       only_path: "ofl/fuzzybubbles"
   name "Fuzzy Bubbles"
-  desc "Perfect for children's parties"
   homepage "https://fonts.google.com/specimen/Fuzzy+Bubbles"
 
   font "FuzzyBubbles-Bold.ttf"

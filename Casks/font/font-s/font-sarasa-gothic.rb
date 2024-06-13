@@ -8,7 +8,6 @@ cask "font-sarasa-gothic" do
   name "更紗黑體"
   name "更紗ゴシック"
   name "사라사고딕"
-  desc "CJK programming font based on Iosevka and Source Han Sans"
   homepage "https://github.com/be5invis/Sarasa-Gothic"
 
   font "Sarasa-Bold.ttc"

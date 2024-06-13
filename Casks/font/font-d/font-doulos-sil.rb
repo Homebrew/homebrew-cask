@@ -4,7 +4,6 @@ cask "font-doulos-sil" do
 
   url "https://software.sil.org/downloads/r/doulos/DoulosSIL-#{version}.zip"
   name "Doulos SIL"
-  desc "Unicode-based font family supporting languages using Latin and Cyrillic scripts"
   homepage "https://software.sil.org/doulos/"
 
   livecheck do

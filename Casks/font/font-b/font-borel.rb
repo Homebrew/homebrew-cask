@@ -5,7 +5,6 @@ cask "font-borel" do
   url "https://github.com/google/fonts/raw/main/ofl/borel/Borel-Regular.ttf",
       verified: "github.com/google/fonts/"
   name "Borel"
-  desc "French cursive primer"
   homepage "https://fonts.google.com/specimen/Borel"
 
   font "Borel-Regular.ttf"

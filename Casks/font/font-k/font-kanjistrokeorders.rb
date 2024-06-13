@@ -4,7 +4,6 @@ cask "font-kanjistrokeorders" do
 
   url "https://drive.google.com/uc?export=download&id=#{version.csv.second}"
   name "KanjiStrokeOrders"
-  desc "Stroke order diagrams for 6500+ kanji, 180+ kana symbols and Latin characters"
   homepage "https://sites.google.com/site/nihilistorguk/"
 
   font "KanjiStrokeOrders_v#{version.before_comma}.ttf"

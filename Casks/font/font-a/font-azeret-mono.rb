@@ -7,7 +7,6 @@ cask "font-azeret-mono" do
       branch:    "main",
       only_path: "ofl/azeretmono"
   name "Azeret Mono"
-  desc "Designed by martin vácha and daniel quisek"
   homepage "https://fonts.google.com/specimen/Azeret+Mono"
 
   font "AzeretMono-Italic[wght].ttf"

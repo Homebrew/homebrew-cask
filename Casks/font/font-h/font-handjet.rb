@@ -5,7 +5,6 @@ cask "font-handjet" do
   url "https://github.com/google/fonts/raw/main/ofl/handjet/Handjet%5BELGR%2CELSH%2Cwght%5D.ttf",
       verified: "github.com/google/fonts/"
   name "Handjet"
-  desc "Font tailored to work well with handjet printers"
   homepage "https://fonts.google.com/specimen/Handjet"
 
   font "Handjet[ELGR,ELSH,wght].ttf"

@@ -4,7 +4,6 @@ cask "font-free-mono-tengwar" do
 
   url "https://downloads.sourceforge.net/freetengwar/FreeMonoTengwar.#{version}.zip"
   name "FreeMonoTengwar"
-  desc "Unicode tengwar monospaced font"
   homepage "https://freetengwar.sourceforge.net/freemonotengwar.html"
 
   livecheck do

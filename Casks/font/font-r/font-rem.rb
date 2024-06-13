@@ -7,7 +7,6 @@ cask "font-rem" do
       branch:    "main",
       only_path: "ofl/rem"
   name "REM"
-  desc "Acronym for rapid eye movement"
   homepage "https://fonts.google.com/specimen/REM"
 
   font "REM-Italic[wght].ttf"

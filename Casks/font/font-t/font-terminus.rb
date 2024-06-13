@@ -4,7 +4,6 @@ cask "font-terminus" do
 
   url "https://files.ax86.net/terminus-ttf/files/#{version}/terminus-ttf-#{version}.zip"
   name "Terminus TTF"
-  desc "Fixed-width bitmap font"
   homepage "https://files.ax86.net/terminus-ttf/"
 
   livecheck do

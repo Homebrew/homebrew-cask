@@ -4,7 +4,6 @@ cask "font-sauce-code-pro-nerd-font" do
 
   url "https://github.com/ryanoasis/nerd-fonts/releases/download/v#{version}/SourceCodePro.zip"
   name "SauceCodePro Nerd Font (Source Code Pro)"
-  desc "Developer targeted fonts with a high number of glyphs"
   homepage "https://github.com/ryanoasis/nerd-fonts"
 
   livecheck do

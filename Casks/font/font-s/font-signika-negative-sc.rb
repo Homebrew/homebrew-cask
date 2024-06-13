@@ -7,7 +7,6 @@ cask "font-signika-negative-sc" do
       branch:    "main",
       only_path: "ofl/signikanegativesc"
   name "Signika Negative SC"
-  desc "Alternative version of the Signika SC font"
   homepage "https://fonts.google.com/specimen/Signika+Negative"
 
   font "SignikaNegativeSC-Bold.ttf"

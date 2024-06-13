@@ -7,7 +7,6 @@ cask "font-fragment-mono" do
       branch:    "main",
       only_path: "ofl/fragmentmono"
   name "Fragment Mono"
-  desc "Monospaced coding font inspired on Helvetica"
   homepage "https://fonts.google.com/specimen/Fragment+Mono"
 
   font "FragmentMono-Italic.ttf"

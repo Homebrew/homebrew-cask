@@ -4,7 +4,6 @@ cask "font-mamelon" do
 
   url "https://moji-waku.com/download/mamelon_hireg.zip"
   name "Mamelon"
-  desc "Dailylife-styled round gothic font for electronic devices"
   homepage "https://moji-waku.com/mamelon/index.html"
 
   font "mamelon_hireg/Mamelon-3-Hi-Regular.otf"

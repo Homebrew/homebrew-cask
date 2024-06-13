@@ -7,7 +7,6 @@ cask "font-figtree" do
       branch:    "main",
       only_path: "ofl/figtree"
   name "Figtree"
-  desc "Clean yet friendly geometric sans serif font for usage in web and mobile apps"
   homepage "https://fonts.google.com/specimen/Figtree"
 
   font "Figtree-Italic[wght].ttf"

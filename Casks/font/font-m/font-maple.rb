@@ -5,7 +5,6 @@ cask "font-maple" do
 
   url "https://github.com/subframe7536/Maple-font/releases/download/v#{version}/MapleMono-otf.zip"
   name "Maple Mono"
-  desc "Nerd Font font with round corners"
   homepage "https://github.com/subframe7536/Maple-font"
 
   livecheck do

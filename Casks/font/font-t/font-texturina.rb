@@ -7,7 +7,6 @@ cask "font-texturina" do
       branch:    "main",
       only_path: "ofl/texturina"
   name "Texturina"
-  desc "Designed by guillermo torres"
   homepage "https://fonts.google.com/specimen/Texturina"
 
   font "Texturina-Italic[opsz,wght].ttf"

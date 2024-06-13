@@ -5,7 +5,6 @@ cask "font-sf-pro" do
   url "https://devimages-cdn.apple.com/design/resources/download/SF-Pro.dmg"
   name "San Francisco Pro"
   name "SF Pro"
-  desc "Sans-serif variant of \"San Francisco\" by Apple"
   homepage "https://developer.apple.com/fonts/"
 
   pkg "SF Pro Fonts.pkg"

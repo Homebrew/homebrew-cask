@@ -5,7 +5,6 @@ cask "font-computer-modern" do
   url "https://downloads.sourceforge.net/cm-unicode/cm-unicode-#{version}-ttf.tar.xz",
       verified: "downloads.sourceforge.net/cm-unicode/"
   name "Computer Modern"
-  desc "Multilingual unicode fonts, mainly for X applications"
   homepage "https://cm-unicode.sourceforge.io/"
 
   livecheck do
