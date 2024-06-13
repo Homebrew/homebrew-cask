@@ -1,5 +1,4 @@
-cask "iterm2-ai-plugin" do
-  # NOTE: "2" is not a version number, but an intrinsic part of the product name
+cask "itermai" do
   version "1.1"
   sha256 "484ee4fe3176a82c90993a16d08ab89a5c5b5a84e8fea1f481d7644f0f64a7f9"
 
