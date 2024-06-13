@@ -1,6 +1,6 @@
 cask "wine-stable" do
-  version "9.0_1"
-  sha256 "a45f3a04f48d564c84a3f023de196f76b28ace9ed7b4bceab72d328885f09aad"
+  version "9.0_2"
+  sha256 "257537b3e4f9271c4b8b56bdf6a976179a718f617204532aeae94b8560fc3283"
 
   # Current winehq packages are deprecated and these are packages from
   # the new maintainers that will eventually be pushed to Winehq.
@@ -70,16 +70,4 @@ cask "wine-stable" do
         "~/.local/share/icons",
         "~/.local/share/mime",
       ]
-
-  caveats <<~EOS
-    #{token} supports both 32-bit and 64-bit. It is compatible with an existing
-    32-bit wine prefix, but it will now default to 64-bit when you create a new
-    wine prefix. The architecture can be selected using the WINEARCH environment
-    variable which can be set to either win32 or win64.
-
-    To create a new pure 32-bit prefix, you can run:
-      $ WINEARCH=win32 WINEPREFIX=~/.wine32 winecfg
-
-    See the Wine FAQ for details: https://wiki.winehq.org/FAQ#Wineprefixes
-  EOS
 end
