@@ -45,7 +45,6 @@
   "srclib": "homebrew/core",
   "sshfs": "homebrew/core",
   "sslmate": "homebrew/core",
-  "swi-prolog": "homebrew/core",
   "terraform": "homebrew/core",
   "vault": "homebrew/core",
   "vfuse": "homebrew/core",
