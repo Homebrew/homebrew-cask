@@ -1,6 +1,6 @@
 cask "font-palemonasmufi-bolditalic" do
   version "2.0"
-  sha256 "cb23eba95af00a4547cf761c4d4016434bfa00608374638e899d1c90102afd17"
+  sha256 :no_check
 
   url "https://mufi.info/q.php?o=mufifontfiledownload&name=PalemMUFI-bi.ttf"
   name "PalemonasMUFI Bold italic"
