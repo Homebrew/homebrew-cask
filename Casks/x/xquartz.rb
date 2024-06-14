@@ -20,6 +20,7 @@ cask "xquartz" do
   pkg "XQuartz-#{version}.pkg"
 
   uninstall launchctl: "org.xquartz.privileged_startx",
+            quit:      "org.xquartz.X11",
             pkgutil:   "org.xquartz.X11"
 
   zap trash: [
@@ -38,4 +39,8 @@ cask "xquartz" do
         "~/.fonts",
         "~/Library/Logs/X11",
       ]
+
+  caveats <<~EOS
+    Logout and log back in to update your DISPLAY environment variable.
+  EOS
 end
