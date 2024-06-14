@@ -22,7 +22,7 @@ cask "dataspell" do
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
-  app "DataSpell #{version.major_minor} EAP.app", target: "DataSpell.app"
+  app "DataSpell.app"
   binary "#{appdir}/DataSpell.app/Contents/MacOS/dataspell"
 
   zap trash: [
