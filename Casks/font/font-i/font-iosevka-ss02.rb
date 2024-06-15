@@ -1,6 +1,6 @@
 cask "font-iosevka-ss02" do
-  version "30.1.2"
-  sha256 "a7639ade48743d17e5c1b74ab32c97b6d452a934a6421891744ef9c90012e02c"
+  version "30.2.0"
+  sha256 "5fa87523f3edd54529ad32108ccbc5e8580292ae051cd4614482c94e1001c28d"
 
   url "https://github.com/be5invis/Iosevka/releases/download/v#{version}/PkgTTC-IosevkaSS02-#{version}.zip"
   name "Iosevka SS02"
