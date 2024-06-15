@@ -4,7 +4,6 @@ cask "font-palemonasmufi-bold" do
 
   url "https://mufi.info/q.php?o=mufifontfiledownload&name=PalemMUFI-bd.ttf"
   name "PalemonasMUFI Italic"
-  desc "Unicode font with 1340 glyphs from MUFI v3.0"
   homepage "https://mufi.info/q.php?p=mufi/fonts/fontfamily/6"
 
   font "PalemMUFI-bd.ttf"
