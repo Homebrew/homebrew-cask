@@ -312,6 +312,7 @@ ibkr
 ibm-cloud-cli
 iina-plus
 imazing
+inkdown
 inso
 inso@beta
 insomnia
