@@ -4,7 +4,7 @@ cask "font-noto-sans-phagspa" do
 
   url "https://github.com/google/fonts/raw/main/ofl/notosansphagspa/NotoSansPhagsPa-Regular.ttf"
   name "Noto Sans PhagsPa"
-  homepage "https://github.com/notofonts/phags-pa.git"
+  homepage "https://github.com/notofonts/phags-pa"
 
   font "NotoSansPhagsPa-Regular.ttf"
 
