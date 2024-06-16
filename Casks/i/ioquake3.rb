@@ -21,6 +21,6 @@ cask "ioquake3" do
 
     #{appdir}/ioquake3/baseq3/ or ~/Library/Application Support/Quake3/baseq3/
 
-    and download patch data from https://files.ioquake3.org/quake3-latest-pk3s.zip
+    and download patch data from https://ioquake3.org/extras/patch-data/
   EOS
 end
