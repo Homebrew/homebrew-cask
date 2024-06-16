@@ -3,7 +3,7 @@ cask "ioquake3" do
   version "1.36"
   sha256 :no_check
 
-  url "https://files.ioquake3.org/macOS.zip"
+  url "https://files.ioquake3.org/ioquake3_notarized.zip"
   name "ioquake3"
   desc "First person shooter engine"
   homepage "https://ioquake3.org/"
