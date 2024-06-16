@@ -1,9 +1,9 @@
 cask "mixxx@snapshot" do
   arch arm: "arm", intel: "intel"
 
-  version "2.6-alpha-16-g7931a0756c"
-  sha256 arm:   "f0790286b9f5dba1887f8f7e6ba0111f8f9ccd8cf492c692c8275ac5f9e279a0",
-         intel: "673e1ee41c9cb9dbe74d8ffb58ceaef4e2734080181460896fb523b25a96f5f3"
+  version "2.6-alpha-17-g5056f56f50"
+  sha256 arm:   "4d2fd4d70d8dba84cafb3f535cc0638f21123400f62bce164f28357743bb4684",
+         intel: "3f59ab11df8a6b06e8f9cea89752f4b4897c7e1bcab12cb7b9b22dec14a1bcfe"
 
   on_arm do
     depends_on macos: ">= :big_sur"
