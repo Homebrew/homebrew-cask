@@ -12,7 +12,7 @@ cask "galaxybudsclient" do
 
   depends_on macos: ">= :sonoma"
 
-  pkg "GalaxyBudsClient_macOS-#{arch}.pkg"
+  pkg "GalaxyBudsClient_macOS_#{arch}.pkg"
 
   uninstall pkgutil: "me.timschneeberger.galaxybudsclient"
 
