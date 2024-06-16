@@ -4,15 +4,7 @@ cask "getoutline" do
   version "1.3.1"
   sha256 :no_check
 
-  # arm64 (apple-silicon)
-  on_arm do
-    url "https://desktop.getoutline.com/mac/dmg/arm64"
-  end
-  # x64 (intel)
-  on_intel do
-    url "https://desktop.getoutline.com/mac/dmg/x64"
-  end
-
+    url "https://desktop.getoutline.com/mac/dmg/#{arch}"
   name "Outline"
   desc "Fast, collaborative, knowledge base for your team built using React and Node.js"
   homepage "https://getoutline.com/"
