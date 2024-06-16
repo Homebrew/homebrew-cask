@@ -4,7 +4,7 @@ cask "font-noto-serif-hentaigana" do
 
   url "https://github.com/google/fonts/raw/main/ofl/notoserifhentaigana/NotoSerifHentaigana%5Bwght%5D.ttf"
   name "Noto Serif Hentaigana"
-  homepage "https://github.com/notofonts/hentaigana.git"
+  homepage "https://github.com/notofonts/hentaigana"
 
   font "NotoSerifHentaigana[wght].ttf"
 
