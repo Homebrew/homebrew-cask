@@ -6,8 +6,6 @@ cask "silentknight" do
     livecheck do
       skip "Legacy version"
     end
-
-    depends_on macos: ">= :el_capitan"
   end
   on_catalina :or_newer do
     version "2.9,2024.06"
@@ -27,8 +25,6 @@ cask "silentknight" do
         "#{version},#{match[1]}.#{match[2]}"
       end
     end
-
-    depends_on macos: ">= :catalina"
   end
 
   # Upstream zero-pads the minor version in the no-dot filename version to two

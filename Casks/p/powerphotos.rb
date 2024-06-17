@@ -71,8 +71,6 @@ cask "powerphotos" do
         items.find { |item| item.channel.nil? }&.short_version
       end
     end
-
-    depends_on macos: ">= :monterey"
   end
 
   name "PowerPhotos"

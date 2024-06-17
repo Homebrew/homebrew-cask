@@ -69,8 +69,6 @@ cask "omnigraffle" do
       url "https://www.omnigroup.com/download/latest/omnigraffle/"
       strategy :header_match
     end
-
-    depends_on macos: ">= :monterey"
   end
 
   name "OmniGraffle"

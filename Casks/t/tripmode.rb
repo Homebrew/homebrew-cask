@@ -30,8 +30,6 @@ cask "tripmode" do
         end
       end
     end
-
-    depends_on macos: ">= :big_sur"
   end
 
   name "TripMode"

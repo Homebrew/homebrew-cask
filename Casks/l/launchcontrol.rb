@@ -15,8 +15,6 @@ cask "launchcontrol" do
       url "https://www.soma-zone.com/LaunchControl/a/appcast-update-#{version.major}.xml"
       strategy :sparkle, &:short_version
     end
-
-    depends_on macos: ">= :big_sur"
   end
 
   url "https://www.soma-zone.com/download/files/LaunchControl-#{version}.tar.xz"
