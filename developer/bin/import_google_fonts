@@ -52,9 +52,6 @@ class FontCask:
       only_path: "{{folder}}"
 {% endif %}
   name "{{font_name}}"
-{% if desc %}
-  desc "{{desc}}"
-{% endif %}
   homepage "{{homepage}}"
 
 {% for file in files %}
