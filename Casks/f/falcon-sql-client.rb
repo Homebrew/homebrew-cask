@@ -8,6 +8,8 @@ cask "falcon-sql-client" do
   desc "Free, open-source SQL client"
   homepage "https://plot.ly/free-sql-client-download/"
 
+  deprecate! date: "2024-06-17", because: :repo_archived
+
   app "Falcon SQL Client.app"
 
   zap trash: [
