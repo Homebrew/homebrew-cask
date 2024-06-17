@@ -1,9 +1,9 @@
 cask "android-studio-preview@canary" do
   arch arm: "mac_arm", intel: "mac"
 
-  version "2024.1.2.5"
-  sha256 arm:   "eeacc9abcce91f23cb16dec8bd3116bf6538b8f78f8eff8119643eb6458c8702",
-         intel: "c829c758a1e4d269083afcb3208fbfa49a13513b6aacfd827ef5067af23ea35f"
+  version "2024.1.2.6"
+  sha256 arm:   "85308432269f120b7b7bd5d58c11506a7927eaabe0e36ce7e4b1a13339a366e2",
+         intel: "034f6b60bf159370c88c8beeeebffadb7c44e9a1ab210c2e0354b4d16d62448b"
 
   url "https://redirector.gvt1.com/edgedl/android/studio/install/#{version}/android-studio-#{version}-#{arch}.dmg",
       verified: "redirector.gvt1.com/edgedl/android/studio/install/"
