@@ -21,7 +21,7 @@ cask "launchcontrol" do
 
   url "https://www.soma-zone.com/download/files/LaunchControl-#{version}.tar.xz"
   name "LaunchControl"
-  desc "Create, manage and debug system- and user services"
+  desc "Create, manage and debug system and user services"
   homepage "https://www.soma-zone.com/LaunchControl/"
 
   auto_updates true
