@@ -5,13 +5,6 @@ cask "mixxx" do
   sha256 arm:   "c9ad0bd7c02ac02a70d1d36a30f197945bdde2073b5dbf1e67badb310e3abd95",
          intel: "b4d43050b9462b510218c75a730e8c46f059ed9d723caf7fedae469e519d1c7e"
 
-  on_arm do
-    depends_on macos: ">= :big_sur"
-  end
-  on_intel do
-    depends_on macos: ">= :sierra"
-  end
-
   url "https://downloads.mixxx.org/releases/#{version}/mixxx-#{version}-macos#{arch}.dmg"
   name "Mixxx"
   desc "Open-source DJ software"
@@ -23,6 +16,7 @@ cask "mixxx" do
   end
 
   conflicts_with cask: "mixxx@snapshot"
+  depends_on macos: ">= :sierra"
 
   app "Mixxx.app"
 

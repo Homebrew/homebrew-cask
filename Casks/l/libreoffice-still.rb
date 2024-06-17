@@ -6,13 +6,6 @@ cask "libreoffice-still" do
   sha256 arm:   "17686aff42734ea4feef08e1189bab3011220000f7784061314c1ae9e5942531",
          intel: "42d2eeaeee7bcb0e76e9decdcb8f5a4beebf133ad31f7d42a5e96ea770860110"
 
-  on_arm do
-    depends_on macos: ">= :big_sur"
-  end
-  on_intel do
-    depends_on macos: ">= :catalina"
-  end
-
   url "https://download.documentfoundation.org/libreoffice/stable/#{version}/mac/#{folder}/LibreOffice_#{version}_MacOS_#{arch}.dmg",
       verified: "download.documentfoundation.org/libreoffice/stable/"
   name "LibreOffice Still"
@@ -34,6 +27,7 @@ cask "libreoffice-still" do
   end
 
   conflicts_with cask: "libreoffice"
+  depends_on macos: ">= :catalina"
 
   app "LibreOffice.app"
   binary "#{appdir}/LibreOffice.app/Contents/MacOS/gengal"
