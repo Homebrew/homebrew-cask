@@ -9,8 +9,6 @@ cask "xit" do
       skip "Legacy version"
     end
 
-    depends_on macos: ">= :mojave"
-
     app "Xit.app"
   end
   on_monterey :or_newer do
@@ -27,14 +25,14 @@ cask "xit" do
       regex(/^v?(\d+(?:\.\d+)+(?:b\d+)?)$/i)
     end
 
-    depends_on macos: ">= :monterey"
-
     app "Xit#{arch} #{version}/Xit.app"
   end
 
   name "Xit"
   desc "GUI for the git version control system"
   homepage "https://github.com/Uncommon/Xit"
+
+  depends_on macos: ">= :mojave"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.uncommonplace.xit.sfl*",

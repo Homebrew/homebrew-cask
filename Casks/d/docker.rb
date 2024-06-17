@@ -13,8 +13,6 @@ cask "docker" do
     livecheck do
       skip "Legacy version"
     end
-
-    depends_on macos: ">= :catalina"
   end
   on_big_sur do
     version "4.24.2,124339"
@@ -24,8 +22,6 @@ cask "docker" do
     livecheck do
       skip "Legacy version"
     end
-
-    depends_on macos: :big_sur
   end
   on_monterey :or_newer do
     version "4.31.0,153195"
@@ -36,8 +32,6 @@ cask "docker" do
       url "https://desktop.docker.com/mac/main/#{arch}/appcast.xml"
       strategy :sparkle
     end
-
-    depends_on macos: ">= :monterey"
 
     binary "Docker.app/Contents/Resources/etc/docker-compose.bash-completion",
            target: "#{HOMEBREW_PREFIX}/etc/bash_completion.d/docker-compose"
@@ -61,6 +55,7 @@ cask "docker" do
     docker-compose
     docker-credential-helper-ecr
   ]
+  depends_on macos: ">= :catalina"
 
   app "Docker.app"
   binary "#{appdir}/Docker.app/Contents/Resources/bin/com.docker.cli",

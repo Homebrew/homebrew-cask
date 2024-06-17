@@ -6,8 +6,6 @@ cask "mmhmm-studio" do
     livecheck do
       skip "Legacy version"
     end
-
-    depends_on macos: ">= :big_sur"
   end
   on_ventura :or_newer do
     version "2.6.3,1703105000"
@@ -22,8 +20,6 @@ cask "mmhmm-studio" do
         items.map(&:nice_version)
       end
     end
-
-    depends_on macos: ">= :ventura"
   end
 
   url "https://updates.mmhmm.app/mac/production/mmhmmStudio_#{version.csv.first}.zip"
@@ -32,6 +28,7 @@ cask "mmhmm-studio" do
   homepage "https://www.mmhmm.app/product"
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "mmhmm Studio.app"
 

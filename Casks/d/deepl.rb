@@ -17,8 +17,6 @@ cask "deepl" do
         end
       end
     end
-
-    depends_on macos: ">= :catalina"
   end
   on_big_sur do
     version "24.2.1798840"
@@ -29,8 +27,6 @@ cask "deepl" do
     livecheck do
       skip "Legacy version"
     end
-
-    depends_on macos: ">= :big_sur"
   end
   on_monterey :or_newer do
     version "24.4.2912025"
@@ -50,8 +46,6 @@ cask "deepl" do
         end
       end
     end
-
-    depends_on macos: ">= :monterey"
   end
 
   name "DeepL"
@@ -59,6 +53,7 @@ cask "deepl" do
   homepage "https://www.deepl.com/"
 
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "DeepL.app"
 
