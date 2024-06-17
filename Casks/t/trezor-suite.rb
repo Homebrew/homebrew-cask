@@ -12,8 +12,8 @@ cask "trezor-suite" do
   homepage "https://suite.trezor.io/"
 
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://data.trezor.io/suite/releases/desktop/latest/latest-mac.yml"
+    strategy :electron_builder
   end
 
   auto_updates true
