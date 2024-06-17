@@ -17,14 +17,14 @@ cask "choreo" do
 
   binary "choreo"
 
-  zap trash: "~/.choreo"
-
   # post-install message
   postflight do
-    puts "\nFor generating completion scripts, run the following command:" <<
-    "\n\n    choreo completion <shell-name> >> ~/.choreo/bin/choreo-completion" <<
-    "\n\nSupported shell names: bash, zsh, fish\n\n" <<
-    "To load the completion scripts, add the following line to your shell configuration file:" <<
-    "\n\n   [ -f ~/.choreo/bin/choreo-completion ] && source ~/.choreo/bin/choreo-completion\n\n"
+    puts "\nFor generating completion scripts, run the following command:" \
+         "\n\n    choreo completion <shell-name> >> ~/.choreo/bin/choreo-completion" \
+         "\n\nSupported shell names: bash, zsh, fish\n\n" \
+         "To load the completion scripts, add the following line to your shell configuration file:" \
+         "\n\n   [ -f ~/.choreo/bin/choreo-completion ] && source ~/.choreo/bin/choreo-completion\n\n"
   end
+
+  zap trash: "~/.choreo"
 end
