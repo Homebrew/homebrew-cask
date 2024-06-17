@@ -61,7 +61,5 @@ cask "cave-story" do
   desc "Action-adventure game reminiscent of classic 8- and 16-bit games"
   homepage "https://www.cavestory.org/"
 
-  depends_on macos: ">= :catalina"
-
   zap trash: "~/Library/Preferences/com.nakiwo.Doukutsu.plist"
 end
