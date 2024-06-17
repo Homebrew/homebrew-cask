@@ -4,15 +4,21 @@ cask "getoutline" do
   version "1.3.1"
   sha256 :no_check
 
-  url "https://desktop.getoutline.com/mac/dmg/#{arch}"
+  url "https://download.todesktop.com/2211128hgkdcltv/Outline%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}.dmg",
+      verified: "download.todesktop.com/2211128hgkdcltv/"
   name "Outline"
   desc "Knowledge management tool"
   homepage "https://getoutline.com/"
 
   livecheck do
-    url :url
-    regex(/outline\s?(\d+(?:\.\d+)*)/i)
-    strategy :header_match
+    url "https://download.todesktop.com/2211128hgkdcltv/latest-mac.yml"
+    regex(/Build[ ._-]([^-]+)[._-]/i)
+    strategy :electron_builder do |item, regex|
+      build = item["files"].first["url"][regex, 1]
+      next if build.blank?
+
+      "#{item["version"]},#{build}"
+    end
   end
 
   depends_on macos: ">= :catalina"
