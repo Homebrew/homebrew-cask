@@ -15,8 +15,6 @@ cask "bzflag" do
     regex(%r{Download\s(\d+(?:\.\d+)+)\sfor</.*?\n\s*macOS}i)
   end
 
-  depends_on macos: ">= :big_sur"
-
   app "BZFlag-#{version}.app"
 
   zap trash: [
