@@ -20,8 +20,10 @@ cask "sitesucker-pro" do
     sha256 "189f4e60238dbc81d87abd278bc286952aed83cc6b6d94906a5470decd90e94e"
 
     livecheck do
-      url "https://ricks-apps.com/osx/sitesucker/history.html"
-      regex(/Version\s*(\d+(?:\.\d+)+)/i)
+      url "https://ricks-apps.com/osx/sitesucker/pro-versions.plist"
+      strategy :xml do |xml|
+        xml.elements["//dict/key[text()='App Version']"]&.next_element&.text&.strip
+      end
     end
   end
 
