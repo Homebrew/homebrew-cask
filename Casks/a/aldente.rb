@@ -1,6 +1,6 @@
 cask "aldente" do
-  version "1.26.1,55"
-  sha256 "0a6a506b6403cae0f2501059bc2470e3f476e1c7011ecc39a86cf036534526ce"
+  version "1.27,57"
+  sha256 "412a333f8f125f89ba69d66573c9396ca792177207052a224cf0bf9814b538a7"
 
   url "https://apphousekitchen.com/aldente/AlDente#{version.csv.first}.dmg"
   name "AlDente"
