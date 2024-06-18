@@ -14,6 +14,7 @@ cask "skim" do
   end
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "Skim.app"
   binary "#{appdir}/Skim.app/Contents/SharedSupport/displayline"
@@ -21,6 +22,7 @@ cask "skim" do
   binary "#{appdir}/Skim.app/Contents/SharedSupport/skimpdf"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/net.sourceforge.skim-app.skim.sfl*",
     "~/Library/Caches/com.apple.helpd/Generated/net.sourceforge.skim-app.skim.help*",
     "~/Library/Caches/net.sourceforge.skim-app.skim",
     "~/Library/Cookies/net.sourceforge.skim-app.skim.binarycookies",
