@@ -126,6 +126,14 @@ jobs:
           key: ${{ matrix.runner }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
           restore-keys: ${{ matrix.runner }}-rubygems-
 
+      - name: Cache style cache
+        if: runner.os == 'macOS'
+        uses: actions/cache@v4
+        with:
+          path: ~/Library/Caches/Homebrew/style
+          key: macos-style-cache-${{ github.sha }}
+          restore-keys: macos-style-cache-
+
       - name: Run brew test-bot --only-tap-syntax
         id: tap-syntax
         run: brew test-bot --tap '${{ matrix.tap }}' --only-tap-syntax
