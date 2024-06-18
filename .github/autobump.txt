@@ -448,6 +448,7 @@ notion
 notion-calendar
 nova
 nozbe
+obs@beta
 obs-advanced-scene-switcher
 ocenaudio
 ollama
