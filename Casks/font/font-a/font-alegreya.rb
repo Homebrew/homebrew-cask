@@ -1,8 +1,8 @@
 cask "font-alegreya" do
   version "2.008"
-  sha256 "8a10cae2b660b048c53e9be1612698b86ed123a284f9f9d17cc9a4a45388650a"
+  sha256 "44dacbe3c4b60c203b1d60f0a55ebf6c139823f83fd234f9b078ece7cb15676e"
 
-  url "https://github.com/huertatipografica/Alegreya/archive/v#{version}.zip"
+  url "https://github.com/huertatipografica/Alegreya/archive/refs/tags/v#{version}.tar.gz"
   name "Alegreya"
   homepage "https://github.com/huertatipografica/Alegreya"
 
