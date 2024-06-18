@@ -10,6 +10,8 @@ cask "macupdater" do
     sha256 "3052da96d7f09416dfebac43f5579c5fdb8789df2e35c85f0870c12634c83d8c"
 
     depends_on macos: ">= :ventura"
+
+    binary "#{appdir}/MacUpdater.app/Contents/Resources/macupdater_install"
   end
 
   url "https://www.corecode.io/downloads/macupdater_#{version}.dmg"
