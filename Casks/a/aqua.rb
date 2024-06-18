@@ -11,7 +11,7 @@ cask "aqua" do
   homepage "https://www.jetbrains.com/aqua/"
 
   livecheck do
-    url "https://data.services.jetbrains.com/products/releases?code=QA&latest=true&type=preview"
+    url "https://data.services.jetbrains.com/products/releases?code=QA&latest=true&type=release"
     strategy :json do |json|
       json["QA"].map do |release|
         "#{release["version"]},#{release["build"]}"
