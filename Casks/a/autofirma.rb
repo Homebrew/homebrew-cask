@@ -36,6 +36,7 @@ cask "autofirma" do
                    sudo: true
   end
 
-  uninstall pkgutil: "es.gob.afirma",
+  uninstall quit:    "es.gob.afirma",
+            pkgutil: "es.gob.afirma",
             delete:  "/Applications/AutoFirma.app"
 end
