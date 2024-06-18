@@ -22,8 +22,14 @@ module Homebrew
                description: "Skip installing casks"
         switch "--new",
                description: "Run new cask checks"
+        switch "--syntax-only",
+               description: "Only run syntax checks"
 
         conflicts "--url", "--casks"
+        conflicts "--syntax-only", "--url"
+        conflicts "--syntax-only", "--casks"
+        conflicts "--syntax-only", "--skip-install"
+        conflicts "--syntax-only", "--new"
       end
 
       def run
@@ -50,7 +56,7 @@ module Homebrew
 
         matrix = [syntax_job]
 
-        unless labels&.include?("ci-syntax-only")
+        if !args.syntax_only? && !labels&.include?("ci-syntax-only")
           cask_jobs = if args.casks&.any?
             CiMatrix.generate(tap, labels:, cask_names: casks, skip_install:, new_cask:)
           else
