@@ -6,14 +6,20 @@ cask "slack" do
     sha256 arm:   "8c060d33c7c451b58abaed380da4e6781089530d3b9c12da70e738e27c4eb47c",
            intel: "7e0ba8a18a9cf95090ad80f58437d647eee5d1842ac4f15ea053c16c1629edde"
 
+    url "https://downloads.slack-edge.com/releases/macos/#{version}/prod/#{arch}/Slack-#{version}-macOS.dmg",
+        verified: "downloads.slack-edge.com/"
+
     livecheck do
       skip "Legacy version"
     end
   end
   on_big_sur :or_newer do
-    version "4.38.125"
-    sha256 arm:   "6061efcc92cefb0b220cc40907694986d0ffdd0252aa6f4bc3a9598e241b9ccc",
-           intel: "206e01a8bd0b0213217dbac42a6e14f77ea26e2869084cbec0937f0cb4d94fc4"
+    version "4.39.88"
+    sha256 arm:   "57404addbec8821b3e13d897202a342926de509e27117ce4ab6f3f552311874a",
+           intel: "d240bfa3264fe9fa7004caa64bc9b7addca1c9f8251965a37cf843739b4045c0"
+
+    url "https://downloads.slack-edge.com/desktop-releases/mac/#{arch}/#{version}/Slack-#{version}-macOS.dmg",
+        verified: "downloads.slack-edge.com/"
 
     livecheck do
       url "https://slack.com/ssb/download-osx"
@@ -21,8 +27,6 @@ cask "slack" do
     end
   end
 
-  url "https://downloads.slack-edge.com/releases/macos/#{version}/prod/#{arch}/Slack-#{version}-macOS.dmg",
-      verified: "downloads.slack-edge.com/releases/macos/"
   name "Slack"
   desc "Team communication and collaboration software"
   homepage "https://slack.com/"
