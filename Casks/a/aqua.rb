@@ -1,11 +1,11 @@
 cask "aqua" do
   arch arm: "-aarch64"
 
-  version "2024.1,241.15989.156"
-  sha256 arm:   "3a9e7421eb1953dba1963422e18b54cb74b5ba7b6b8ad51f7ce3825d8a8b9d65",
-         intel: "af0e91a48f63604443ad6d47220c0e705cbddae91a7b5c2bf563db774b2b5a2d"
+  version "2024.1.2,241.17011.162"
+  sha256 arm:   "1a3766eb93b6fefb6c2a18c3a424309748af64981d5d2ee95114be1ddcdf5167",
+         intel: "ba1918f9c91dd034e64c1d65d51b050bedaed1d7502797d38265d9d6250740c1"
 
-  url "https://download.jetbrains.com/aqua/aqua-#{version.csv.second}#{arch}.dmg"
+  url "https://download.jetbrains.com/aqua/aqua-#{version.csv.first}#{arch}.dmg"
   name "Aqua"
   desc "Tests writing environment"
   homepage "https://www.jetbrains.com/aqua/"
@@ -22,7 +22,7 @@ cask "aqua" do
   auto_updates true
   depends_on macos: ">= :high_sierra"
 
-  app "Aqua #{version.before_comma} EAP.app", target: "Aqua.app"
+  app "Aqua.app"
   binary "#{appdir}/Aqua.app/Contents/MacOS/aqua"
 
   zap trash: [
