@@ -49,18 +49,28 @@ cask "omnigraffle" do
       skip "Legacy version for Catalina"
     end
   end
-  on_big_sur :or_newer do
+  on_big_sur do
     version "7.22.6"
     sha256 "1159e731ab282b2f2b3881cbc75cc7bb40263cb3b56826f4ef6334295b47a883"
 
     url "https://downloads.omnigroup.com/software/macOS/11/OmniGraffle-#{version}.dmg"
 
     livecheck do
+      skip "Legacy version for Big Sur"
+    end
+  end
+  on_monterey :or_newer do
+    version "7.23"
+    sha256 "fb561d79ad1f40920158253dd7c4a4516150dc4b43e08d0778f0e62095ddbd14"
+
+    url "https://downloads.omnigroup.com/software/macOS/12/OmniGraffle-#{version}.dmg"
+
+    livecheck do
       url "https://www.omnigroup.com/download/latest/omnigraffle/"
       strategy :header_match
     end
 
-    depends_on macos: ">= :big_sur"
+    depends_on macos: ">= :monterey"
   end
 
   name "OmniGraffle"
