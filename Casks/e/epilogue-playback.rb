@@ -1,6 +1,6 @@
 cask "epilogue-playback" do
-  version "1.3.0"
-  sha256 "c2841e94ca3eafc61399285d09acdec9dc6e951e22eb9f45672ab56e5e761632"
+  version "1.3.1"
+  sha256 "b4218a1837ce7ff59e41326f5119492073105b759c73663eb498766bbb6c3303"
 
   url "https://epilogue.nyc3.digitaloceanspaces.com/releases/software/Playback/version/#{version}/release/mac/Playback.dmg",
       verified: "epilogue.nyc3.digitaloceanspaces.com/releases/software/Playback/version/"
