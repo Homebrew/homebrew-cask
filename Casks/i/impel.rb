@@ -1,6 +1,6 @@
 cask "impel" do
-  version "1.0.3"
-  sha256 "627e6e5e4699fab4130fc7a59fbcd6d223317bc6f6e9fe16ad0fe20ab60b690d"
+  version "1.0.4"
+  sha256 "ca2070f890d9921165058860134f60491438bed0c5db83de67aad8f7369b5ff6"
 
   url "https://impel-sparkle-updater.fly.dev/impel_#{version.dots_to_underscores}.tar.xz",
       verified: "impel-sparkle-updater.fly.dev/"
