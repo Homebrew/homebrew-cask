@@ -1,6 +1,6 @@
 cask "cycling74-max" do
-  version "8.6.2_240319"
-  sha256 "778e735fb36fbded8abae349b2ded403bc1538767f23f08a9b6a10516eca3b73"
+  version "8.6.3_240618"
+  sha256 "d03e474a315f3741410a781dd41497060122d8d4685a05e47027061a57f6dea5"
 
   url "https://downloads.cdn.cycling74.com/max8/Max#{version.no_dots}.dmg"
   name "Cycling ‘74 Max"
