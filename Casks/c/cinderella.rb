@@ -9,7 +9,7 @@ cask "cinderella" do
 
   livecheck do
     url "https://beta.cinderella.de/"
-    regex(/href="Cinderella-(\d+.\d+b?.+)\.dmg"/i)
+    regex(/href="Cinderella[._-](\d+.\d+b?.+)\.dmg"/i)
   end
 
   app "Cinderella.app"
