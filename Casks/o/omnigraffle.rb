@@ -6,7 +6,7 @@ cask "omnigraffle" do
     url "https://downloads.omnigroup.com/software/MacOSX/10.11/OmniGraffle-#{version}.dmg"
 
     livecheck do
-      skip "Legacy version for El Capitan"
+      skip "Legacy version"
     end
   end
   on_sierra do
@@ -16,7 +16,7 @@ cask "omnigraffle" do
     url "https://downloads.omnigroup.com/software/MacOSX/10.12/OmniGraffle-#{version}.dmg"
 
     livecheck do
-      skip "Legacy version for Sierra"
+      skip "Legacy version"
     end
   end
   on_high_sierra do
@@ -26,7 +26,7 @@ cask "omnigraffle" do
     url "https://downloads.omnigroup.com/software/MacOSX/10.13/OmniGraffle-#{version}.dmg"
 
     livecheck do
-      skip "Legacy version for High Sierra"
+      skip "Legacy version"
     end
   end
   on_mojave do
@@ -36,7 +36,7 @@ cask "omnigraffle" do
     url "https://downloads.omnigroup.com/software/MacOSX/10.14/OmniGraffle-#{version}.dmg"
 
     livecheck do
-      skip "Legacy version for Mojave"
+      skip "Legacy version"
     end
   end
   on_catalina do
@@ -46,7 +46,7 @@ cask "omnigraffle" do
     url "https://downloads.omnigroup.com/software/MacOSX/10.14/OmniGraffle-#{version}.dmg"
 
     livecheck do
-      skip "Legacy version for Catalina"
+      skip "Legacy version"
     end
   end
   on_big_sur do
@@ -56,7 +56,7 @@ cask "omnigraffle" do
     url "https://downloads.omnigroup.com/software/macOS/11/OmniGraffle-#{version}.dmg"
 
     livecheck do
-      skip "Legacy version for Big Sur"
+      skip "Legacy version"
     end
   end
   on_monterey :or_newer do
