@@ -8,7 +8,7 @@ cask "prezi-video" do
   homepage "https://prezi.com/video/"
 
   livecheck do
-    url "https://s3.amazonaws.com/prezidesktop/assets/mac/prezi-video/updates/prezi-video.xml"
+    url "https://prezidesktop.s3.amazonaws.com/assets/mac/prezi-video/updates/prezi-video.xml"
     strategy :sparkle, &:short_version
   end
 

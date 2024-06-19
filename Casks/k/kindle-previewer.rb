@@ -9,7 +9,7 @@ cask "kindle-previewer" do
   homepage "https://kdp.amazon.com/en_US/help/topic/G202131170"
 
   livecheck do
-    url "https://s3.amazonaws.com/kindlepreviewer/UG_ReleaseNotes_EN.txt"
+    url "https://kindlepreviewer.s3.amazonaws.com/UG_ReleaseNotes_EN.txt"
     regex(/Kindle\sPreviewer\sv?(\d+(?:\.\d+)+)/i)
   end
 

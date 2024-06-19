@@ -2,8 +2,8 @@ cask "affinity-designer" do
   version "2.5.2,2486"
   sha256 "7a4845cc5896ca3525d8f06ddf48eb688264ffb21b389217f7ad72f9b3730674"
 
-  url "https://s3-eu-west-1.amazonaws.com/affinity-update/mac2/retail/Affinity%20Designer%20#{version.csv.first.major}%20Affinity%20Store%20#{version.csv.second}.zip",
-      verified: "s3-eu-west-1.amazonaws.com/"
+  url "https://affinity-update.s3.amazonaws.com/mac2/retail/Affinity%20Designer%20#{version.csv.first.major}%20Affinity%20Store%20#{version.csv.second}.zip",
+      verified: "affinity-update.s3.amazonaws.com/"
   name "Affinity Designer #{version.csv.first.major}"
   desc "Professional graphic design software"
   homepage "https://affinity.serif.com/en-us/designer/"

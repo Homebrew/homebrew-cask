@@ -2,8 +2,8 @@ cask "almighty" do
   version "2.6.7"
   sha256 :no_check
 
-  url "https://almighty-app.s3.eu-north-1.amazonaws.com/Almighty.zip",
-      verified: "almighty-app.s3.eu-north-1.amazonaws.com/"
+  url "https://almighty-app.s3.amazonaws.com/Almighty.zip",
+      verified: "almighty-app.s3.amazonaws.com/"
   name "Almighty"
   desc "Settings and tweaks configurator"
   homepage "https://onmyway133.com/almighty/"

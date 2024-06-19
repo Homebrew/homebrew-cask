@@ -2,8 +2,8 @@ cask "niftyman" do
   version "2.0.0"
   sha256 "9ffdfc517fe48f521793a03fcda3912becb004b7652821452f25a3be173f6f55"
 
-  url "https://notion-menubar-updates.s3-us-west-2.amazonaws.com/Niftyman-#{version}.dmg",
-      verified: "notion-menubar-updates.s3-us-west-2.amazonaws.com/"
+  url "https://notion-menubar-updates.s3.amazonaws.com/Niftyman-#{version}.dmg",
+      verified: "notion-menubar-updates.s3.amazonaws.com/"
   name "Niftyman"
   desc "Access the Notion tool from the menu bar"
   homepage "https://shadowfax.app/niftyman"

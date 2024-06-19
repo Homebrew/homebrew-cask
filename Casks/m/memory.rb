@@ -9,7 +9,7 @@ cask "memory" do
   homepage "https://memory.ai/timely/"
 
   livecheck do
-    url "https://memorymacapp.s3-eu-west-1.amazonaws.com/sparkle.xml"
+    url "https://memorymacapp.s3.amazonaws.com/sparkle.xml"
     strategy :sparkle, &:short_version
   end
 
