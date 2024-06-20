@@ -1,6 +1,6 @@
 cask "ares" do
-  version "138"
-  sha256 "6ca39e1e2b12bcd11a60ccef79d2300fde421ddc0d853b6841cb877a4909bee0"
+  version "139"
+  sha256 "8d9021af43b2c2b45ed5086f2d414d39f3f3aef710cff97a61fde657a88b1f9a"
 
   url "https://github.com/ares-emulator/ares/releases/download/v#{version}/ares-macos-latest.zip",
       verified: "github.com/ares-emulator/ares/"
