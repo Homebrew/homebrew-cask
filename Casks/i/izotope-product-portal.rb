@@ -2,8 +2,8 @@ cask "izotope-product-portal" do
   version "1.4.8"
   sha256 "5f4ea1f17723630b3512598da86086a661a05880cdd9a33aad1b0f2aafc402ff"
 
-  url "https://s3.amazonaws.com/izotopedownloads/product_download/iZotope_Product_Portal_v#{version.dots_to_underscores}.dmg",
-      verified: "s3.amazonaws.com/izotopedownloads/"
+  url "https://izotopedownloads.s3.amazonaws.com/product_download/iZotope_Product_Portal_v#{version.dots_to_underscores}.dmg",
+      verified: "izotopedownloads.s3.amazonaws.com/"
   name "Izotope product portal"
   desc "Professional audio software for audio recording, mixing, broadcast and others"
   homepage "https://www.izotope.com/en/products/downloads.html"
