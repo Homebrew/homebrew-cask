@@ -1,5 +1,5 @@
 cask "lehreroffice" do
-  version "2024.2.0"
+  version "2024.2.1"
   sha256 :no_check
 
   url "https://www.lehreroffice.ch/lo/dateien/easy/lo_desktop_macos.dmg"
