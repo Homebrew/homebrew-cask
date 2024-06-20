@@ -1,9 +1,11 @@
 cask "bitrix24" do
+  arch arm: "macos_arm", intel: "desktop"
+
   # NOTE: "24" is not a version number, but an intrinsic part of the product name
-  version "14.4.0.75"
+  version "15.0.60.76"
   sha256 :no_check
 
-  url "https://dl.bitrix24.com/b24/bitrix24_desktop.dmg"
+  url "https://dl.bitrix24.com/b24/bitrix24_#{arch}.dmg"
   name "Bitrix24"
   desc "Online workspace for your business"
   homepage "https://www.bitrix24.com/apps/mobile-and-desktop-apps.php#desktop_app"
@@ -13,7 +15,17 @@ cask "bitrix24" do
     strategy :sparkle
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "Bitrix24.app"
+
+  zap trash: [
+    "~/.bxd",
+    "~/Library/Application Scripts/com.bitrixsoft.bitrix24desktop",
+    "~/Library/Application Scripts/com.bitrixsoft.bitrix24desktop.finder-ext",
+    "~/Library/Containers/com.bitrixsoft.bitrix24desktop.finder-ext",
+    "~/Library/Group Containers/com.bitrixsoft.bitrix24desktop",
+    "~/Library/HTTPStorages/com.bitrixsoft.bitrix24desktop",
+    "~/Library/Preferences/com.bitrixsoft.bitrix24desktop.plist",
+  ]
 end
