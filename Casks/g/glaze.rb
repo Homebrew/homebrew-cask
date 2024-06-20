@@ -2,12 +2,12 @@ cask "glaze" do
   arch arm: "arm64", intel: "Intel"
 
   on_arm do
-    version "2.0"
-    sha256 "16bb21a2872c30b97ac78b0496dd4b3acefe8481fea571064ec66bc68005212c"
+    version "2.1"
+    sha256 "8fe831d650ffb4c8cf425bb77bb529148756e850368fff19315e8457c0fdbdde"
   end
   on_intel do
-    version "1.1.1"
-    sha256 "1d5d4503b47cfadcbf79062ddd5d5691b8ab03f4e0939835855c66f9c3a3267f"
+    version "2.1"
+    sha256 "34546f93a98625cfad6a215c7274acdacb365f8d666e338219af02465ff7ba94"
 
     depends_on macos: ">= :ventura"
   end
