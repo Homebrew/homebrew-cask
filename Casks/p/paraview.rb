@@ -6,8 +6,8 @@ cask "paraview" do
     sha256 "3dd49675e8d3bc0f4b571ffcebd3eb9e4449c498352eb83d3e56a88dd2cec2a2"
   end
   on_intel do
-    version "5.13.0,RC1-MPI-OSX11.0-Python3.10"
-    sha256 "7ed54a8c614897cf10c889952b512b9c67287fa77e96bbcac334499ee28a95ad"
+    version "5.13.0,RC1-MPI-OSX10.15-Python3.10"
+    sha256 "0936966922a0925304706969c47ea0659aa167721afd80a1ccc70a2ab36fe357"
   end
 
   url "https://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v#{version.csv.first.major_minor}&type=binary&os=macOS&downloadFile=ParaView-#{version.csv.first}#{"-#{version.csv.second}" if version.csv.second}-#{arch}.dmg",
