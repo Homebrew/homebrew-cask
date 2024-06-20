@@ -1,5 +1,5 @@
 cask "ibackup-viewer" do
-  version "4.3016"
+  version "4.3020"
   sha256 :no_check
 
   url "https://www.imactools.com/download/iBackupViewer.dmg"
