@@ -1,6 +1,6 @@
 cask "tor-browser" do
-  version "13.0.16"
-  sha256 "bae116fa619040ac78daf1b8c5c58af49cfe89e1cf6c7b6112b9ae827fbc3f3a"
+  version "13.5"
+  sha256 "7abfb14aaeea40a1af26230eebef6c7df6c47e6d3ce09ad04a6cb937b1da7fa5"
 
   url "https://archive.torproject.org/tor-package-archive/torbrowser/#{version}/tor-browser-macos-#{version}.dmg"
   name "Tor Browser"
