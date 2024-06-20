@@ -18,6 +18,7 @@ cask "sdm" do
   depends_on macos: ">= :high_sierra"
 
   app "SDM.app"
+  binary "#{appdir}/SDM.app/Contents/Resources/sdm.darwin", target: "sdm"
 
   uninstall delete: "#{appdir}/SDM.app/Contents/Resources/sdm-socket"
 
