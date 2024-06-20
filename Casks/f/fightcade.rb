@@ -1,6 +1,6 @@
 cask "fightcade" do
-  version "2.1.38"
-  sha256 "30b0e8ef341dfb1ae935fa29e42bf7e54e4e9478440cda0e0430c8d0c38498ce"
+  version "2.1.41"
+  sha256 "9471a9f4c4577465203a646578aa2fc371ccbbcdf0b83dc11b7b47f506a2b07c"
 
   url "https://web.fightcade.com/download/Fightcade-osx-v#{version}.tar.gz"
   name "Fightcade"
