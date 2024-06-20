@@ -7,10 +7,7 @@ cask "fuzzyclock" do
   desc "Displays the time in your menubar"
   homepage "https://mschmidt.me/macos.html"
 
-  livecheck do
-    url :homepage
-    regex(/version\s+(\d+(?:\.\d+)+)/i)
-  end
+  disable! date: "2024-06-20", because: :no_longer_available
 
   app "FuzzyClock.app"
 
