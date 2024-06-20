@@ -7,10 +7,7 @@ cask "threads" do
   desc "Communication tool for focused discussions and decision taking"
   homepage "https://threads.com/"
 
-  livecheck do
-    url "https://starupdate.threads.com/update/mac/0.0.0"
-    regex(%r{version/(\d+(?:\.\d+)+)/}i)
-  end
+  disable! date: "2024-06-20", because: :no_longer_available
 
   auto_updates true
 
