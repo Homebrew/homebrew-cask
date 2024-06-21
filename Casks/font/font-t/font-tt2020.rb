@@ -1,8 +1,8 @@
 cask "font-tt2020" do
   version "0.2.1"
-  sha256 "050fa5c979557229242db4fad007e18941e8d64aab1d2ae96c9e99c44773fa5d"
+  sha256 "a6c34a7ffce6e2f87c12566724029bde528364ce653805ac3d28a34845d815e7"
 
-  url "https://github.com/ctrlcctrlv/TT2020/archive/v#{version}.zip"
+  url "https://github.com/ctrlcctrlv/TT2020/archive/refs/tags/v#{version}.tar.gz"
   name "TT2020"
   homepage "https://github.com/ctrlcctrlv/TT2020"
 
