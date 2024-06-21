@@ -1,9 +1,9 @@
 cask "tad" do
   arch arm: "-arm64"
 
-  version "0.13.0"
-  sha256  arm:   "9c129a65fdf94b4b32b6e26d8836a56d4284bff9a6e1df657cc23d19e5c802b1",
-          intel: "4c71f6f6a0fadf65891663d1a0462dd8d3576a4c62bdd8721012cbdd61ee1fee"
+  version "0.14.0"
+  sha256  arm:   "18004712674bbd7072137937f2ad02231f71b2b326d48079e72f9a536660d588",
+          intel: "b942fc420a3b19240b52f798d29334bbd78f89ebbf7c7702962668eccc39011e"
 
   url "https://github.com/antonycourtney/tad/releases/download/v#{version}/Tad-#{version}#{arch}.dmg",
       verified: "github.com/antonycourtney/tad/"
