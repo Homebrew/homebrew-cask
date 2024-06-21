@@ -1,6 +1,6 @@
 cask "loungy" do
-  version "0.1.2"
-  sha256 "81700f11ed264fceae4623b906de98b52340f760baa1dede3ff5c2eeaf008320"
+  version "0.1.3"
+  sha256 "4d901b7dc6a02c6e51ba2af941ecd038b02308a642e330505a8f8882b07deb19"
 
   url "https://github.com/MatthiasGrandl/Loungy/releases/download/v#{version}/Loungy_#{version}_universal.dmg"
   name "Loungy"
