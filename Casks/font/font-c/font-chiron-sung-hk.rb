@@ -1,8 +1,8 @@
 cask "font-chiron-sung-hk" do
   version "1.011"
-  sha256 "67334720bcc01e043b9acebcfe6aa5ad023837b89650f448e13ec4274aae9c36"
+  sha256 "8ddbbd47001cbf0210a3814dee1c94df2f2560f092b379ace2e59289cb21452b"
 
-  url "https://github.com/chiron-fonts/chiron-sung-hk/archive/refs/tags/v#{version}.zip"
+  url "https://github.com/chiron-fonts/chiron-sung-hk/archive/refs/tags/v#{version}.tar.gz"
   name "Chiron Sung HK"
   name "昭源宋體"
   homepage "https://github.com/chiron-fonts/chiron-sung-hk"
