@@ -1,5 +1,5 @@
 cask "idrive" do
-  version "3.5.10.77"
+  version "3.5.10.78"
   sha256 :no_check
 
   url "https://www.idrive.com/downloads/IDrive.dmg"
@@ -15,6 +15,7 @@ cask "idrive" do
   pkg "IDrive.pkg"
 
   uninstall launchctl: [
+              "com.iDrive.FinderPluginApp",
               "IDriveDaemon",
               "IDSyncDaemon",
               "IDWifiManager",
