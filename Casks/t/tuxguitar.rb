@@ -7,5 +7,7 @@ cask "tuxguitar" do
   desc "Multitrack guitar tablature editor and player"
   homepage "https://sourceforge.net/projects/tuxguitar/"
 
+  deprecate! date: "2024-06-21", because: :discontinued
+
   app "tuxguitar-#{version}-macosx-cocoa-64.app"
 end
