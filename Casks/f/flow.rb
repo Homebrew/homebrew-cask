@@ -1,5 +1,5 @@
 cask "flow" do
-  version "6.2.0.2076"
+  version "6.2.0.2082"
   sha256 :no_check
 
   url "https://cdn.getflow.com/darwin_x64/Flow.zip"
