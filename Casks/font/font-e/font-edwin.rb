@@ -1,8 +1,8 @@
 cask "font-edwin" do
   version "0.54"
-  sha256 "761a15932defe72b40eecb22e8255cba225bc9efedb208c83e2f5b0b77b7103e"
+  sha256 "17a073c27aec6842de81da3a05d8eed4e1be448f732a79f8b48012477abacd89"
 
-  url "https://github.com/MuseScoreFonts/Edwin/archive/refs/tags/v#{version}.zip"
+  url "https://github.com/MuseScoreFonts/Edwin/archive/refs/tags/v#{version}.tar.gz"
   name "Text font for musical scores"
   homepage "https://github.com/MuseScoreFonts/Edwin"
 
