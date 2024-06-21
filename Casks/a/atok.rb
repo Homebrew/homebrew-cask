@@ -40,9 +40,7 @@ cask "atok" do
         "/Library/Application Support/JustSystems",
         "/Library/Application Support/Preferences/JustSystems",
         "/Library/JustSystems",
-        "/Library/Preferences/com.justsystems.atok.lma.plist",
-        "/Library/Preferences/com.justsystems.atok.mypassport.plist",
-        "/Library/Preferences/com.justsystems.lma.install.plist",
+        "/Library/Preferences/com.justsystems.*.plist",
         "/Library/Preferences/JustSystems",
       ],
       trash:  [
