@@ -1,6 +1,6 @@
 cask "freetube" do
-  version "0.20.0"
-  sha256 "bc94c5b06bbf2480e2fee9e5ddbf4274903eaf510d4d8ce87ba84de0ed040e59"
+  version "0.21.0"
+  sha256 "d8d26422ae356c748342bf32a405cd83402879c435db3dc6f02b3f1f890b6320"
 
   url "https://github.com/FreeTubeApp/FreeTube/releases/download/v#{version}-beta/freetube-#{version}-mac-x64.dmg"
   name "FreeTube"
