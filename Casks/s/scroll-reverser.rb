@@ -1,6 +1,6 @@
 cask "scroll-reverser" do
-  version "1.8.2"
-  sha256 "afe125b05ef1740f9a95101233006453b0e02bd71b6195608414bab5fb5d2c6a"
+  version "1.9"
+  sha256 "0961dbb6f8ef4e5edd432bf0dd6e7cdd4219d8bac8b3baa3f576af9a42bbf585"
 
   url "https://pilotmoon.com/downloads/ScrollReverser-#{version}.zip"
   name "Scroll Reverser"
@@ -8,18 +8,16 @@ cask "scroll-reverser" do
   homepage "https://pilotmoon.com/scrollreverser/"
 
   livecheck do
-    url "https://pilotmoon.com/appcast/sr.xml"
+    url "https://softwareupdate.pilotmoon.com/update/scrollreverser/appcast.xml"
     strategy :sparkle, &:short_version
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :ventura"
 
   app "Scroll Reverser.app"
 
   zap trash: [
-    "~/Library/Application Scripts/com.pilotmoon.scroll-reverser.launcher",
     "~/Library/Caches/com.pilotmoon.scroll-reverser",
-    "~/Library/Containers/com.pilotmoon.scroll-reverser.launcher",
     "~/Library/Preferences/com.pilotmoon.scroll-reverser.plist",
   ]
 end
