@@ -23,12 +23,7 @@ cask "soundtoys" do
 
   pkg "Install Soundtoys #{version.major_minor} Bundle.pkg"
 
-  uninstall launchctl: [
-              "com.paceap.eden.licensed",
-              "com.paceap.eden.licensed.agent",
-            ],
-            pkgutil:   [
-              "com.paceap.pkg.eden.*",
-              "com.soundtoys.*",
-            ]
+  uninstall pkgutil: "com.soundtoys.*"
+
+  zap trash: "~/Library/Saved Application State/com.soundtoys.RemoveSoundtoys.savedState"
 end
