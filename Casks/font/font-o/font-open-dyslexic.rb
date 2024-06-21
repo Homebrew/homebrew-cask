@@ -1,8 +1,8 @@
 cask "font-open-dyslexic" do
   version "20160623-Stable"
-  sha256 "3b4a84f573d3f5d75e198bbf362ff6fa812b33d6559dce651e44df455be929cc"
+  sha256 "a44fde7d5fcf1e3825d00de20f7d71fb7b339a7e71067cd9566e8ab16692802a"
 
-  url "https://codeload.github.com/antijingoist/open-dyslexic/zip/#{version}"
+  url "https://github.com/antijingoist/open-dyslexic/archive/refs/tags/#{version}.tar.gz"
   name "OpenDyslexic"
   homepage "https://github.com/antijingoist/open-dyslexic"
 
