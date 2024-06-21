@@ -2,7 +2,7 @@ cask "font-consolas-for-powerline" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/eugeii/consolas-powerline-vim/archive/master.zip"
+  url "https://github.com/eugeii/consolas-powerline-vim/archive/refs/heads/master.tar.gz"
   name "Consolas for Powerline"
   homepage "https://github.com/eugeii/consolas-powerline-vim"
 
