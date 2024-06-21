@@ -1,8 +1,8 @@
 cask "font-office-code-pro" do
   version "1.004"
-  sha256 "9e24d15309ead8c523ec3f0444ed9c171bba535e109c43b1dde8abfa9d359150"
+  sha256 "9bca923d17f6c47a586d8e4567d46ccfa58fb8b8e2247b5ee2a19da1597c58f6"
 
-  url "https://github.com/nathco/Office-Code-Pro/archive/#{version}.zip"
+  url "https://github.com/nathco/Office-Code-Pro/archive/refs/tags/#{version}.tar.gz"
   name "Office Code Pro"
   homepage "https://github.com/nathco/Office-Code-Pro"
 
