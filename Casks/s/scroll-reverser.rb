@@ -1,6 +1,6 @@
 cask "scroll-reverser" do
-  version "1.8.2"
-  sha256 "afe125b05ef1740f9a95101233006453b0e02bd71b6195608414bab5fb5d2c6a"
+  version "1.9"
+  sha256 "0961dbb6f8ef4e5edd432bf0dd6e7cdd4219d8bac8b3baa3f576af9a42bbf585"
 
   url "https://pilotmoon.com/downloads/ScrollReverser-#{version}.zip"
   name "Scroll Reverser"
