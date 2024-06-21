@@ -7,10 +7,7 @@ cask "bbc-iplayer-downloads" do
   desc "Download programmes from the BBC iPlayer website"
   homepage "https://www.bbc.co.uk/iplayer/install"
 
-  livecheck do
-    url "https://downloads-app.iplayer.api.bbc.co.uk/stable/darwin-x64"
-    strategy :header_match
-  end
+  disable! date: "2024-06-21", because: :no_longer_available
 
   depends_on macos: ">= :el_capitan"
 
