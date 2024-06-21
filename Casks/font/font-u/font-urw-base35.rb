@@ -1,9 +1,9 @@
 cask "font-urw-base35" do
   # NOTE: "35" is not a version number, but an intrinsic part of the product name
   version "20200910"
-  sha256 "66eed7ca2dfbf44665aa34cb80559f4a90807d46858ccf76c34f9ac1701cfa27"
+  sha256 "e0d9b7f11885fdfdc4987f06b2aa0565ad2a4af52b22e5ebf79e1a98abd0ae2f"
 
-  url "https://github.com/ArtifexSoftware/urw-base35-fonts/archive/#{version}.zip"
+  url "https://github.com/ArtifexSoftware/urw-base35-fonts/archive/refs/tags/#{version}.tar.gz"
   name "URW++ base 35"
   homepage "https://github.com/ArtifexSoftware/urw-base35-fonts"
 
