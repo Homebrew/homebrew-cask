@@ -126,6 +126,7 @@ confluent-cli
 cookie
 copilot
 copilot-for-xcode
+copyq
 coscreen
 coteditor
 couchbase-server-community
@@ -194,12 +195,14 @@ elektron-transfer
 element
 elephas
 elephicon
+elgato-camera-hub
 elgato-stream-deck
 eloston-chromium
 emacs@nightly
 embyserver
 emclient
 enpass
+ente-auth
 evernote
 expressvpn
 fantastical
@@ -267,6 +270,7 @@ fxfactory
 gather
 gcs
 gdevelop
+genesys-cloud
 geogebra
 geogebra@5
 git-credential-manager
@@ -301,6 +305,7 @@ heroic
 holavpn
 hoppscotch
 hstracker
+http-toolkit
 hydrus-network
 ibackup-viewer
 ibkr
@@ -369,6 +374,7 @@ macfuse
 macloggerdx
 macloggerdx@beta
 macrorecorder
+mactracker
 macupdater
 macwhisper
 maestral
@@ -376,6 +382,7 @@ mailbutler
 mambaforge
 media-center
 mediainfo
+mediamate
 melodics
 mendeley-reference-manager
 messenger
@@ -448,11 +455,13 @@ notion
 notion-calendar
 nova
 nozbe
-obs@beta
 obs-advanced-scene-switcher
+obs@beta
 ocenaudio
+okta-advanced-server-access
 ollama
 omnifocus
+omnigraffle
 onedrive
 onekey
 opal-composer
@@ -482,6 +491,7 @@ parsehub
 path-finder
 pdf-expert
 pdf-expert@beta
+pdf-reader-pro
 pdfelement
 permute
 pgadmin4
@@ -509,6 +519,7 @@ postman-agent
 postman-cli
 postman@canary
 powerphotos
+powershell
 praat
 preform
 prepros
@@ -533,6 +544,7 @@ qlab
 qownnotes
 qq
 qqlive
+qqmusic
 quarto
 quicken
 racket
@@ -559,6 +571,8 @@ rippling
 rive
 rode-central
 rotki
+royal-tsx
+royal-tsx@beta
 rstudio
 rstudio@daily
 rubymine
@@ -607,6 +621,7 @@ slack-cli
 slack@beta
 smultron
 snagit
+snapmaker-luban
 sol
 soulver
 sourcetree
@@ -616,6 +631,7 @@ spark-ar-studio
 sparkle
 sparrow
 splice
+springtoolsuite
 spybuster
 standard-notes
 stash
@@ -634,6 +650,7 @@ swiftformat-for-xcode
 tableflip
 tableplus
 tageditor
+tagspaces
 tailscale
 teamviewer
 telegram
@@ -705,6 +722,7 @@ vscodium@insiders
 vsee
 vuescan
 wakatime
+warcraft-logs-uploader
 warp
 wasabi-wallet
 waterfox
@@ -729,6 +747,7 @@ yass
 yealink-meeting
 youtube-to-mp3
 zalo
+zappy
 zed
 zed@preview
 zeplin
