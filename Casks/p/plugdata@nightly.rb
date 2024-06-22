@@ -2,13 +2,11 @@ cask "plugdata@nightly" do
   version "862326963a8133bd499f2bad5617f7af1fe408cd"
   sha256 :no_check
 
-  url "https://glyphpress.com/plugdata/plugdata-macOS-Universal.pkg", 
-  verified: "https://glyphpress.com/plugdata/"
+  url "https://glyphpress.com/plugdata/plugdata-macOS-Universal.pkg",
+      verified: "glyphpress.com/plugdata/"
   name "PlugData"
   desc "Plugin wrapper for PureData"
   homepage "https://plugdata.org/"
-
-  conflicts_with cask: "plugdata"
 
   livecheck do
     url "https://glyphpress.com/plugdata/plugdata-macOS-Universal.pkg.txt"
@@ -16,6 +14,7 @@ cask "plugdata@nightly" do
   end
 
   auto_updates false
+  conflicts_with cask: "plugdata"
 
   pkg "plugdata-macOS-Universal.pkg"
 
@@ -36,4 +35,3 @@ cask "plugdata@nightly" do
     "~/Library/Preferences/com.PlugData.PlugDataStandalone.plist",
   ]
 end
-
