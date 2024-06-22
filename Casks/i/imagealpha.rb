@@ -7,10 +7,7 @@ cask "imagealpha" do
   desc "Utility to reduce the size of 24-bit PNG files"
   homepage "https://pngmini.com/"
 
-  livecheck do
-    url "https://pngmini.com/appcast.xml"
-    strategy :sparkle
-  end
+  deprecate! date: "2024-06-22", because: :discontinued
 
   app "ImageAlpha.app"
 end
