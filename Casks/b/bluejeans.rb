@@ -7,10 +7,7 @@ cask "bluejeans" do
   desc "Video conferencing for the digital workplace"
   homepage "https://www.bluejeans.com/"
 
-  livecheck do
-    url "https://swdl.bluejeans.com/desktop-app/mac/ga.appcast.xml"
-    strategy :sparkle
-  end
+  disable! date: "2024-06-22", because: :no_longer_available
 
   depends_on macos: ">= :catalina"
 
