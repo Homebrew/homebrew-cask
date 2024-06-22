@@ -8,7 +8,7 @@ cask "ivpn" do
   url "https://repo.ivpn.net/macos/bin/IVPN-#{version}#{arch}.dmg"
   name "IVPN"
   desc "VPN client"
-  homepage "https://www.ivpn.net/apps-macos"
+  homepage "https://www.ivpn.net/en/apps-macos"
 
   livecheck do
     url :homepage
