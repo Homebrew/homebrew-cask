@@ -1,6 +1,6 @@
 cask "handbrake" do
-  version "1.8.0"
-  sha256 "e203108deaa8eda471fc6d27ca31b361cdd8bfe14ae41602d3581872e11da1a0"
+  version "1.8.1"
+  sha256 "6ce7a063acdd8c4c55b79543181d1e8ff251d0d40e8d4e573d218708473cd4a8"
 
   url "https://github.com/HandBrake/HandBrake/releases/download/#{version}/HandBrake-#{version}.dmg",
       verified: "github.com/HandBrake/HandBrake/"
