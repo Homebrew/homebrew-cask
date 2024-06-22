@@ -1,6 +1,6 @@
 cask "lycheeslicer" do
-  version "5.4.3"
-  sha256 "71e502a4813d2f2a79ed3d36e91327da4c5e44b7d13cb85bb57620a1dcc9140a"
+  version "6.0.2"
+  sha256 "f2d8fe2d30304a377824cb3b5a50896badf285e66d126ac613085b22292a417f"
 
   url "https://mango-lychee.nyc3.cdn.digitaloceanspaces.com/LycheeSlicer-#{version}.dmg",
       verified: "mango-lychee.nyc3.cdn.digitaloceanspaces.com/"
@@ -10,7 +10,7 @@ cask "lycheeslicer" do
 
   livecheck do
     url "https://mango3d.io/downloads/"
-    regex(/href=.*?LycheeSlicer[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
+    regex(/version:\s*v?(\d+(?:\.\d+)+)/i)
   end
 
   app "LycheeSlicer.app"
