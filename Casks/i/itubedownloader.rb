@@ -8,10 +8,7 @@ cask "itubedownloader" do
   desc "Download YouTube videos, channels, or playlists"
   homepage "https://alphasoftware.co/"
 
-  livecheck do
-    url "https://itubedownloader.s3.us-east-2.amazonaws.com/appcast.xml"
-    strategy :sparkle, &:short_version
-  end
+  disable! date: "2024-06-22", because: :no_longer_available
 
   app "iTubeDownloader.app"
 end
