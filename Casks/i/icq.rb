@@ -8,10 +8,7 @@ cask "icq" do
   desc "Messenger application"
   homepage "https://icq.com/desktop"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  disable! date: "2024-06-26", because: :no_longer_available
 
   auto_updates true
   depends_on macos: ">= :mojave"
