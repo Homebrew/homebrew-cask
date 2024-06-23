@@ -8,10 +8,7 @@ cask "operator" do
   desc "Prelude Operator is a desktop adversary emulation platform"
   homepage "https://www.prelude.org/"
 
-  livecheck do
-    url "https://s3.amazonaws.com/operator.versions/dist/latest-mac.yml"
-    strategy :electron_builder
-  end
+  disable! date: "2024-06-23", because: :no_longer_available
 
   app "Operator.app"
 
