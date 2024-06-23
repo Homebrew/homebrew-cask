@@ -16,4 +16,14 @@ cask "techsmith-capture" do
   depends_on macos: ">= :catalina"
 
   app "TechSmith Capture.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.techsmith.relayrecorder",
+    "~/Library/Application Support/TechSmith",
+    "~/Library/Caches/com.techsmith.relayrecorder",
+    "~/Library/HTTPStorages/com.techsmith.relayrecorder",
+    "~/Library/HTTPStorages/com.techsmith.relayrecorder.binarycookies",
+    "~/Library/Preferences/com.techsmith.relayrecorder.plist",
+    "~/Library/Saved Application State/com.techsmith.relayrecorder.savedState",
+  ]
 end
