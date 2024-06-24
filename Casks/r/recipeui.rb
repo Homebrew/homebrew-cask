@@ -11,10 +11,7 @@ cask "recipeui" do
   desc "API discovery, testing and sharing tool"
   homepage "https://recipeui.com/"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
+  deprecate! date: "2024-06-23", because: :repo_archived
 
   auto_updates true
 
