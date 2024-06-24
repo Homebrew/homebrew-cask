@@ -35,4 +35,18 @@ cask "atok" do
               "com.justsystems.JustOnlineUpdate.pkg",
               "com.justsystems.pkg.lma",
             ]
+
+  zap delete: [
+        "/Library/Application Support/JustSystems",
+        "/Library/Application Support/Preferences/JustSystems",
+        "/Library/JustSystems",
+        "/Library/Preferences/com.justsystems.*.plist",
+        "/Library/Preferences/JustSystems",
+      ],
+      trash:  [
+        "~/Library/Caches/com.justsystems.OnlineUpdate",
+        "~/Library/HTTPStorages/com.justsystems.OnlineUpdate",
+        "~/Library/Preferences/com.justsystems.OnlineUpdate.plist",
+        "~/Library/Saved Application State/com.justsystems.OnlineUpdate.savedState",
+      ]
 end
