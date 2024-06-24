@@ -1,8 +1,11 @@
 cask "zui" do
-  version "1.7.0"
-  sha256 "db2d15bf021619b48ccd8d8e76c7efb6f1ef505d322744c384c97c492a28e401"
+  arch arm: "arm64", intel: "x64"
 
-  url "https://github.com/brimdata/zui/releases/download/v#{version}/Zui-#{version}.dmg",
+  version "1.8.0"
+  sha256 arm:   "5264bdff147d714664d6bf33a692c94260688367991ea4f2749f2ba386db6e9e",
+         intel: "3796937bdca394bad2d0d20a5b858915d9071492003bb5383cbebe3bf2ed2106"
+
+  url "https://github.com/brimdata/zui/releases/download/v#{version}/Zui-#{version}-#{arch}.dmg",
       verified: "github.com/brimdata/zui/"
   name "Zui"
   desc "Graphical user interface for exploring data in Zed lakes"
