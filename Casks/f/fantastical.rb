@@ -1,6 +1,6 @@
 cask "fantastical" do
-  version "3.8.17"
-  sha256 "802387b558baf77c7eb935f4f29ec65da4b9e44574d1e91297494026a4a20c49"
+  version "3.8.19"
+  sha256 "30dc0ad18403a79f9183a9d32d989126e66f608b0a77ec20dc04b27752e4e109"
 
   url "https://cdn.flexibits.com/Fantastical_#{version}.zip"
   name "Fantastical"
