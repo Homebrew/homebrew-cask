@@ -16,6 +16,8 @@ cask "darktable" do
     regex(/href=.*?darktable[._-]v?(\d+(?:\.\d+)+)[._-]#{arch}\.dmg/i)
   end
 
+  depends_on macos: ">= :ventura"
+
   app "darktable.app"
 
   zap trash: [
