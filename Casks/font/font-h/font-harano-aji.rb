@@ -1,8 +1,8 @@
 cask "font-harano-aji" do
   version "20231009"
-  sha256 "27f3e553ca324fce689cc86634fcda190b4c5106cc1eaecc5a3c18ff5d16785e"
+  sha256 "fdfb27096b5ca3f2325cfcb676af9ed0fb84272c5b8223463c90ebd3a93bce7b"
 
-  url "https://github.com/trueroad/HaranoAjiFonts/archive/refs/tags/#{version}.zip"
+  url "https://github.com/trueroad/HaranoAjiFonts/archive/refs/tags/#{version}.tar.gz"
   name "Harano Aji"
   name "原ノ味"
   homepage "https://github.com/trueroad/HaranoAjiFonts"
