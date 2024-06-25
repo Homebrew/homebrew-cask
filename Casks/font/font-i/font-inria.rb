@@ -2,10 +2,9 @@ cask "font-inria" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/BlackFoundry/InriaFonts/archive/master.zip",
-      verified: "github.com/BlackFoundry/InriaFonts/"
+  url "https://github.com/BlackFoundry/InriaFonts/archive/refs/heads/master.tar.gz"
   name "Inria"
-  homepage "https://black-foundry.com/blog/inria-serif-and-inria/"
+  homepage "https://github.com/BlackFoundryCom/InriaFonts/"
 
   font "InriaFonts-master/fonts/InriaSans/OTF/InriaSans-Bold.otf"
   font "InriaFonts-master/fonts/InriaSans/OTF/InriaSans-BoldItalic.otf"
