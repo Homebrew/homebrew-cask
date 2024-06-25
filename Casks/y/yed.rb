@@ -1,11 +1,11 @@
 cask "yed" do
   arch arm: "arm64", intel: "amd64"
 
-  version "3.23.2"
-  sha256 arm:   "79220943ab52deb18297aa9d90facd718040d2b03f20b1017bc6c3da41805a1e",
-         intel: "9af1882be4ba17ff8f28ba3a42662fe3cec0fbfedd9c1a2589c342b05e216664"
+  version "3.24"
+  sha256 arm:   "197420d3376912f5b9a2590b1c22c2107bba06269e0b8db61e287d21d6f9b6d0",
+         intel: "ba885436ea3de1919879e73eaf77b97c6175df3fb90693c0a31756dde0ab885a"
 
-  url "https://www.yworks.com/resources/yed/demo/yEd-#{version}_with-JRE20_#{arch}.dmg"
+  url "https://www.yworks.com/resources/yed/demo/yEd-#{version}_with-JRE21_#{arch}.dmg"
   name "yWorks yEd"
   desc "Create diagrams manually, or import external data for analysis"
   homepage "https://www.yworks.com/products/yed"
