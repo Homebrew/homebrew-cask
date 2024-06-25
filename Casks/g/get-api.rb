@@ -1,6 +1,6 @@
 cask "get-api" do
-  version "1.1.0"
-  sha256 "727f362817b3bcf7180162a896c7e09257942ad9f166bacd74d2e1aa3e9cccfa"
+  version "1.1.1"
+  sha256 "575276e414642e05ebb74a362d4b1f7a9b7d063c0a5889269548e7a21dfac237"
 
   url "https://files.getapi.io/macos/#{version}/Get%20API.dmg"
   name "GetAPI"
@@ -8,7 +8,7 @@ cask "get-api" do
   homepage "https://getapi.io/"
 
   livecheck do
-    url "https://getapi.io/release/osx/getapi_latest"
+    url "https://getapi.com/release/osx/getapi_latest"
     strategy :header_match
   end
 
