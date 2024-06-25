@@ -8,6 +8,8 @@ cask "yuna" do
   desc "Anime player and list manager"
   homepage "https://yuna.moe/"
 
+  disable! date: "2024-06-24", because: :no_longer_available
+
   app "Yuna.app"
 
   zap trash: "~/Library/Application Support/yuna"
