@@ -23,6 +23,12 @@ cask "soundtoys" do
 
   pkg "Install Soundtoys #{version.major_minor} Bundle.pkg"
 
+  # The Soundtoys application bundles the install of the iLok License Manager
+  # this is often shared with other applications and should not be removed
+  # it also isn't removed by the Soundtoys uninstaller
+  # pkgutil: "com.paceap.pkg.*"
+  # launchctl: "com.paceap.eden.*"
+  # delete: "/usr/local/bin/iloktool"
   uninstall pkgutil: "com.soundtoys.*"
 
   zap trash: "~/Library/Saved Application State/com.soundtoys.RemoveSoundtoys.savedState"
