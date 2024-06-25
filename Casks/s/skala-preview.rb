@@ -8,10 +8,7 @@ cask "skala-preview" do
   desc "Design preview tool"
   homepage "https://bjango.com/mac/skalapreview/"
 
-  livecheck do
-    url "https://download.bjango.com/skalapreview/"
-    strategy :header_match
-  end
+  deprecate! date: "2024-06-25", because: :unmaintained
 
   app "Skala Preview.app"
 end
