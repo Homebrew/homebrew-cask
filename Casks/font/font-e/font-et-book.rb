@@ -2,7 +2,7 @@ cask "font-et-book" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/edwardtufte/et-book/archive/gh-pages.zip",
+  url "https://github.com/edwardtufte/et-book/archive/refs/heads/gh-pages.tar.gz",
       verified: "github.com/edwardtufte/et-book/"
   name "ET Book"
   name "Edward Tufte Book"

@@ -2,7 +2,7 @@ cask "font-libre-franklin" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/impallari/Libre-Franklin/archive/master.zip"
+  url "https://github.com/impallari/Libre-Franklin/archive/refs/heads/master.tar.gz"
   name "Libre Franklin"
   homepage "https://github.com/impallari/Libre-Franklin"
 

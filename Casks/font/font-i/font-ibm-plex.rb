@@ -1,8 +1,8 @@
 cask "font-ibm-plex" do
   version "6.4.1"
-  sha256 "ffeb177c747f62f37a3648e588a64b2c265e558cb7819901a3d15314fbb9deb8"
+  sha256 "2a21ec092c988c7e70c0774972fa820a98e81343a436a355f6f59322389c3672"
 
-  url "https://github.com/IBM/plex/archive/refs/tags/v#{version}.zip"
+  url "https://github.com/IBM/plex/archive/refs/tags/v#{version}.tar.gz"
   name "IBM Plex"
   homepage "https://github.com/IBM/plex"
 

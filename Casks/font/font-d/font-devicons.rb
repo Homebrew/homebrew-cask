@@ -1,8 +1,8 @@
 cask "font-devicons" do
   version "1.8.0"
-  sha256 "fc0baa260f54832c059d1d9eab3798ae758d1a1cf0c1695e9883aab85d9a4308"
+  sha256 "d8d2dc243ca42897a082ffe32a22cab53cdd148cf87b24162cf450ccfc12fece"
 
-  url "https://github.com/vorillaz/devicons/archive/#{version}.zip",
+  url "https://github.com/vorillaz/devicons/archive/refs/tags/#{version}.tar.gz",
       verified: "github.com/vorillaz/devicons/"
   name "Devicons"
   homepage "https://vorillaz.github.io/devicons/"

@@ -1,8 +1,8 @@
 cask "font-simple-line-icons" do
   version "2.5.4"
-  sha256 "4e21668ca8c22b082e63e016a4565af1a3875322a08cfcceaa2d9baf8fc21b3b"
+  sha256 "1b0b4f39c0ed88e5507548bfeac01b1177804941ec687195ad551a7ce690b24d"
 
-  url "https://github.com/thesabbir/simple-line-icons/archive/#{version}.zip",
+  url "https://github.com/thesabbir/simple-line-icons/archive/refs/tags/#{version}.tar.gz",
       verified: "github.com/thesabbir/simple-line-icons/"
   name "Simple Line Icons"
   homepage "https://simplelineicons.github.io/"

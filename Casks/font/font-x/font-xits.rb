@@ -1,8 +1,8 @@
 cask "font-xits" do
   version "1.302"
-  sha256 "afb3e0804985bc8ab822e9cfc2a94706383491e7f5f56ccdca04909f30688fb0"
+  sha256 "a396dfddde7da50ce82cae530775ab522b1d33f87ca8211634535b6325a09c2b"
 
-  url "https://github.com/khaledhosny/xits/archive/v#{version}.zip"
+  url "https://github.com/khaledhosny/xits/archive/refs/tags/v#{version}.tar.gz"
   name "XITS"
   homepage "https://github.com/khaledhosny/xits"
 

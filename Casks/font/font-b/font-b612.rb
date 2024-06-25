@@ -1,8 +1,8 @@
 cask "font-b612" do
   version "1.008"
-  sha256 "727cb91e47d65ac49c2d97d7b1c36d9891b885d9ddf06e15ad3d23d22bdad9cf"
+  sha256 "bfe4827931a22ecde5576c2bd06b462d467b89fa580b6ded651346f94eba8dd6"
 
-  url "https://github.com/polarsys/b612/archive/refs/tags/#{version}.zip",
+  url "https://github.com/polarsys/b612/archive/refs/tags/#{version}.tar.gz",
       verified: "github.com/polarsys/b612/"
   name "B612"
   homepage "https://b612-font.com/"

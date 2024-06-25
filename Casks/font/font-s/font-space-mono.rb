@@ -2,7 +2,7 @@ cask "font-space-mono" do
   version :latest
   sha256 :no_check
 
-  url "https://github.com/googlefonts/spacemono/archive/main.zip"
+  url "https://github.com/googlefonts/spacemono/archive/refs/heads/master.tar.gz"
   name "Space Mono"
   homepage "https://github.com/googlefonts/spacemono"
 

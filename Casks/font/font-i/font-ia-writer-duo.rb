@@ -2,7 +2,7 @@ cask "font-ia-writer-duo" do
   version :latest
   sha256 :no_check
 
-  url "https://codeload.github.com/iaolo/iA-Fonts/zip/master"
+  url "https://github.com/iaolo/iA-Fonts/archive/refs/heads/master.tar.gz"
   name "iA Writer Duo"
   homepage "https://github.com/iaolo/iA-Fonts"
 
