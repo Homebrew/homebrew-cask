@@ -1,8 +1,8 @@
 cask "font-overpass" do
   version "3.0.5"
-  sha256 "56e62646a3e8f9b9aab57523b9c57eaca8fba79fb55a50f80d2fce0688344159"
+  sha256 "beb7528f1e9adf3decf841f02510a3752820561a06842f9097d9f2565fe41f34"
 
-  url "https://github.com/RedHatOfficial/Overpass/archive/refs/tags/v#{version}.zip",
+  url "https://github.com/RedHatOfficial/Overpass/archive/refs/tags/v#{version}.tar.gz",
       verified: "github.com/RedHatOfficial/Overpass/"
   name "Overpass"
   homepage "https://overpassfont.org/"
