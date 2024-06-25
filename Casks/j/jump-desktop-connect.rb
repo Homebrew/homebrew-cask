@@ -1,5 +1,5 @@
 cask "jump-desktop-connect" do
-  version "6.10.27,61027"
+  version "6.10.28,61028"
   sha256 :no_check
 
   url "https://mirror.jumpdesktop.com/downloads/connect/JumpDesktopConnect.dmg"
