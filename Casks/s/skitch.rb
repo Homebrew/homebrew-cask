@@ -7,9 +7,7 @@ cask "skitch" do
   desc "Screen capture tool with mark up and sharing features"
   homepage "https://evernote.com/products/skitch"
 
-  livecheck do
-    skip "No version information available"
-  end
+  disable! date: "2024-06-25", because: :no_longer_available
 
   auto_updates true
 
