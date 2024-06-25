@@ -1,7 +1,7 @@
 cask "defold" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.8.1"
+  version "1.9.0"
   sha256 :no_check # required as upstream package is updated in-place
 
   url "https://github.com/defold/defold/releases/download/#{version}/Defold-#{arch}-macos.dmg",
