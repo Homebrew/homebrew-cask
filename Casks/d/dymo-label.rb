@@ -1,6 +1,6 @@
 cask "dymo-label" do
-  version "1.4.4.18"
-  sha256 "5bba1476e5d0a2301a2d1a13822dada6c31f2f624c5cb5484e19bb1b95719720"
+  version "1.4.6.60"
+  sha256 "0c6f5a8fe77601334f75dc9786baa5edfd2656dadde6ea0f28f38c8ff4bbe657"
 
   url "https://download.dymo.com/dymo/Software/Mac/DCDMac#{version}.pkg"
   name "Dymo Label"
