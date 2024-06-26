@@ -8,8 +8,8 @@ cask "megazeux" do
   homepage "https://www.digitalmzx.com/"
 
   livecheck do
-    url "https://github.com/AliceLR/megazeux"
-    strategy :git
+    url "https://www.digitalmzx.com/megazeux.php"
+    regex(/href=["'][^"' >]*?download\.php\?latest=osx["' ][^>]*?>\s*v?(\d+(?:\.\d+)+)\s*</im)
   end
 
   app "MegaZeux.app"
