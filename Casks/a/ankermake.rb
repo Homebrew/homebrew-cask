@@ -1,20 +1,15 @@
 cask "ankermake" do
-  version "0.9.34_1,PtaR1wXoSj1GXEjC"
-  sha256 "6b5bc78e29387b6f1f5f6429e7b380aa53f9978e235154fe7f3eb2444fb8f4e9"
+  version "0.9.44_6"
+  sha256 "f201d782da18fb4b53de039a7731eee430bb6d75e4c7c6640d94c4a62e47dbe7"
 
-  url "https://public-make-moat-us.s3.amazonaws.com/security/#{version.csv.second}.AnkerMake_V#{version.csv.first}.dmg",
-      verified: "public-make-moat-us.s3.amazonaws.com/security/"
+  url "https://github.com/ankermake/AnkerMake-Slicer/releases/download/v#{version.split("_").first}/AnkerMake_V#{version}.zip",
+      verified: "github.com/ankermake/AnkerMake-Slicer/"
   name "AnkerMake"
   desc "Slicer for AnkerMake 3D printers"
   homepage "https://www.ankermake.com/software"
 
-  # The homepage lists the current version and the
-  # url, but uses JavaScript in an encrypted fashion.
-  livecheck do
-    skip "No version information available"
-  end
-
   depends_on macos: ">= :big_sur"
+  container nested: "AnkerMake_V#{version}/AnkerMake_V#{version}.dmg"
 
   app "AnkerMake.app"
 
