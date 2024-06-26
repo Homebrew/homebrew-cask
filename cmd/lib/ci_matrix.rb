@@ -124,6 +124,8 @@ module CiMatrix
     ruby_files_in_wrong_directory =
       changed_files[:modified_ruby_files] - (
       changed_files[:modified_cask_files] +
+      # Allow third-party taps to include both formulae/casks.
+      (tap.official? ? changed_files[:modified_formula_files] : []) +
       changed_files[:modified_command_files] +
       changed_files[:modified_github_actions_files]
     )
