@@ -17,8 +17,6 @@ cask "contexts" do
         item.version.chars.join(".")
       end
     end
-
-    depends_on macos: ">= :catalina"
   end
 
   url "https://contexts.co/releases/Contexts-#{version}.dmg"

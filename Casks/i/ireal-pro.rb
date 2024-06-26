@@ -9,8 +9,6 @@ cask "ireal-pro" do
     livecheck do
       skip "Legacy version"
     end
-
-    depends_on macos: ">= :high_sierra"
   end
   on_big_sur :or_newer do
     version "2024.6,20240614"
@@ -23,8 +21,6 @@ cask "ireal-pro" do
       url "https://ireal-pro.s3.amazonaws.com/appcast.xml"
       strategy :sparkle
     end
-
-    depends_on macos: ">= :big_sur"
   end
 
   name "iReal Pro"
@@ -32,6 +28,7 @@ cask "ireal-pro" do
   homepage "https://irealpro.com/"
 
   auto_updates true
+  depends_on macos: ">= :high_sierra"
 
   app "iReal Pro.app"
 

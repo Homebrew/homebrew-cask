@@ -5,15 +5,11 @@ cask "piezo" do
     version "1.8.2"
 
     url "https://rogueamoeba.com/piezo/download/Piezo.zip"
-
-    depends_on macos: ">= :big_sur"
   end
   on_sonoma :or_newer do
     version "1.9.2"
 
     url "https://rogueamoeba.com/piezo/download/Piezo-ARK.zip"
-
-    depends_on macos: ">= :sonoma"
   end
 
   name "Piezo"
@@ -26,6 +22,7 @@ cask "piezo" do
   end
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "Piezo.app"
 

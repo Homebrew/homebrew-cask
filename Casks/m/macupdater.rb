@@ -2,14 +2,10 @@ cask "macupdater" do
   on_monterey :or_older do
     version "2.3.15"
     sha256 "9d6775c99b2a76d3f3be0e3d23c27305666341be16d38a0661c8d9cfa50e5256"
-
-    depends_on macos: ">= :mojave"
   end
   on_ventura :or_newer do
     version "3.3.1"
     sha256 "3052da96d7f09416dfebac43f5579c5fdb8789df2e35c85f0870c12634c83d8c"
-
-    depends_on macos: ">= :ventura"
 
     binary "#{appdir}/MacUpdater.app/Contents/Resources/macupdater_install"
   end
@@ -25,6 +21,7 @@ cask "macupdater" do
   end
 
   auto_updates true
+  depends_on macos: ">= :mojave"
 
   app "MacUpdater.app"
   binary "#{appdir}/MacUpdater.app/Contents/Resources/macupdater_client"

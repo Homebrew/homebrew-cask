@@ -6,8 +6,6 @@ cask "nextcloud" do
     livecheck do
       skip "Legacy version"
     end
-
-    depends_on macos: ">= :mojave"
   end
   on_monterey :or_newer do
     version "3.13.0"
@@ -34,6 +32,7 @@ cask "nextcloud" do
   homepage "https://nextcloud.com/"
 
   auto_updates true
+  depends_on macos: ">= :mojave"
 
   pkg "Nextcloud-#{version}.pkg"
   binary "/Applications/Nextcloud.app/Contents/MacOS/nextcloudcmd"

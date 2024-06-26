@@ -45,8 +45,6 @@ cask "itsycal" do
       url "https://itsycal.s3.amazonaws.com/itsycal.xml"
       strategy :sparkle, &:short_version
     end
-
-    depends_on macos: ">= :big_sur"
   end
 
   url "https://itsycal.s3.amazonaws.com/Itsycal-#{version}.zip",

@@ -8,8 +8,6 @@ cask "raycast" do
     livecheck do
       skip "Legacy version"
     end
-
-    depends_on macos: ">= :big_sur"
   end
   on_monterey :or_newer do
     arch arm: "arm", intel: "x86_64"
@@ -27,8 +25,6 @@ cask "raycast" do
       regex(/Raycast[._-]v?(\d+(?:\.\d+)+)(?:[._-](\h+))[._-]#{livecheck_arch}\.dmg/i)
       strategy :header_match
     end
-
-    depends_on macos: ">= :monterey"
   end
 
   name "Raycast"
@@ -36,6 +32,7 @@ cask "raycast" do
   homepage "https://raycast.com/"
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "Raycast.app"
 

@@ -6,8 +6,6 @@ cask "tunnelbear" do
     livecheck do
       skip "Legacy version"
     end
-
-    depends_on macos: ">= :sierra"
   end
   on_big_sur :or_newer do
     version "5.3.1"
@@ -21,8 +19,6 @@ cask "tunnelbear" do
         items.map(&:short_version)
       end
     end
-
-    depends_on macos: ">= :big_sur"
   end
 
   url "https://tunnelbear.s3.amazonaws.com/downloads/mac/TunnelBear-#{version}.zip",
@@ -32,6 +28,7 @@ cask "tunnelbear" do
   homepage "https://www.tunnelbear.com/"
 
   auto_updates true
+  depends_on macos: ">= :sierra"
 
   app "TunnelBear.app"
 

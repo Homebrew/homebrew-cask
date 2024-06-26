@@ -8,8 +8,6 @@ cask "sketch" do
     livecheck do
       skip "Legacy version"
     end
-
-    depends_on macos: ">= :big_sur"
   end
   on_monterey :or_newer do
     version "100.1,180159"
@@ -21,8 +19,6 @@ cask "sketch" do
       url "https://download.sketch.com/sketch-versions.xml"
       strategy :sparkle
     end
-
-    depends_on macos: ">= :monterey"
   end
 
   name "Sketch"
@@ -30,6 +26,7 @@ cask "sketch" do
   homepage "https://www.sketch.com/"
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "Sketch.app"
 

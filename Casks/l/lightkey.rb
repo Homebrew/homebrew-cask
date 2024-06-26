@@ -19,8 +19,6 @@ cask "lightkey" do
         end
       end
     end
-
-    depends_on macos: ">= :big_sur"
   end
   on_ventura :or_newer do
     version "4.8.3"
@@ -36,8 +34,6 @@ cask "lightkey" do
         items.map(&:version)
       end
     end
-
-    depends_on macos: ">= :ventura"
   end
 
   url "https://lightkeyapp.com/download/Lightkey-#{version.dots_to_hyphens}/LightkeyInstaller.zip"
@@ -46,6 +42,7 @@ cask "lightkey" do
   homepage "https://lightkeyapp.com/"
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   pkg "LightkeyInstaller.pkg"
 

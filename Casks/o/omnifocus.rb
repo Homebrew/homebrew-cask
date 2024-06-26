@@ -1,5 +1,5 @@
 cask "omnifocus" do
-  on_el_capitan do
+  on_el_capitan :or_older do
     version "2.10"
     sha256 "e808a72e60cdff9ff5aa1046d856bf62d6418e4915248816c4640e32e52fd8e8"
 

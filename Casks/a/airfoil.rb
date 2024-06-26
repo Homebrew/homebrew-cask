@@ -12,8 +12,6 @@ cask "airfoil" do
       url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=1366&bundleid=com.rogueamoeba.airfoil&platform=osx&version=#{version.no_dots}8000"
       strategy :sparkle
     end
-
-    depends_on macos: ">= :big_sur"
   end
   on_sonoma :or_newer do
     version "5.12.1"
@@ -26,8 +24,6 @@ cask "airfoil" do
       url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=1441&bundleid=com.rogueamoeba.airfoil&platform=osx&version=#{version.no_dots}8000"
       strategy :sparkle
     end
-
-    depends_on macos: ">= :sonoma"
   end
 
   name "Airfoil"
@@ -35,6 +31,7 @@ cask "airfoil" do
   homepage "https://rogueamoeba.com/airfoil/mac/"
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "Airfoil/Airfoil Satellite.app"
   app "Airfoil/Airfoil.app"

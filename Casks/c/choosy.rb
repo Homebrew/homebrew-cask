@@ -58,8 +58,6 @@ cask "choosy" do
       strategy :sparkle
     end
 
-    depends_on macos: ">= :big_sur"
-
     pkg "Choosy.pkg"
   end
 

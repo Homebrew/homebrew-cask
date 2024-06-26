@@ -12,8 +12,6 @@ cask "audio-hijack" do
       url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=1366&bundleid=com.rogueamoeba.audiohijack&platform=osx&version=#{version.no_dots}8000"
       strategy :sparkle
     end
-
-    depends_on macos: ">= :big_sur"
   end
   on_sonoma :or_newer do
     version "4.4.2"
@@ -26,8 +24,6 @@ cask "audio-hijack" do
       url "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&system=1441&bundleid=com.rogueamoeba.audiohijack&platform=osx&version=#{version.no_dots}8000"
       strategy :sparkle
     end
-
-    depends_on macos: ">= :sonoma"
   end
 
   name "Audio Hijack"
@@ -35,6 +31,7 @@ cask "audio-hijack" do
   homepage "https://rogueamoeba.com/audiohijack/"
 
   auto_updates true
+  depends_on macos: ">= :big_sur"
 
   app "Audio Hijack.app"
 
