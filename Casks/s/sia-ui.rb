@@ -7,9 +7,7 @@ cask "sia-ui" do
   desc "Graphical frontend for Sia"
   homepage "https://sia.tech/"
 
-  livecheck do
-    skip "No version information available"
-  end
+  deprecate! date: "2024-06-26", because: :discontinued
 
   app "Sia-UI.app"
 end
