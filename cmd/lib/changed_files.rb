@@ -20,20 +20,11 @@ module ChangedFiles
       "git", args: ["diff", "--name-only", "--diff-filter=A", commit_range], chdir: path
     ).stdout.split("\n").map { |path| Pathname(path) }
 
-    modified_ruby_files = modified_files.select { |path| path.extname == ".rb" }
-    modified_command_files = modified_files.select { |path| path.ascend.to_a.last.to_s == "cmd" }
-    modified_github_actions_files = modified_files.select { |path| path.to_s.start_with?(".github/actions/") }
     modified_cask_files = modified_files.select { |path| cask_file?(path) }
-    modified_formula_files = modified_files.select { |path| formula_file?(path) }
 
     {
-      modified_files:,
       added_files:,
-      modified_ruby_files:,
-      modified_command_files:,
-      modified_github_actions_files:,
       modified_cask_files:,
-      modified_formula_files:,
     }
   end
 end
