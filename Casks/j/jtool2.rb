@@ -8,9 +8,7 @@ cask "jtool2" do
   desc "Tool to help out reverse engineering, security researchers, and tweak developers"
   homepage "https://newosxbook.com/tools/jtool.html"
 
-  livecheck do
-    skip "version available by running `jtool2 --version` when installed"
-  end
+  deprecate! date: "2024-06-27", because: :discontinued
 
   binary "jtool2"
 end
