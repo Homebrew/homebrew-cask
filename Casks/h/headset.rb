@@ -2,16 +2,16 @@ cask "headset" do
   arch arm: "arm64", intel: "x64"
 
   version "4.2.1"
-  sha256 arm:   "63c6b9b45e7de083eee9267546b5695648d70b088da3488cffa0ca5897691d61",
-         intel: "1fa8274db4738f363b741df1dc5004ca87b947e81d3732eefbea5bce39c6ce57"
+  sha256 arm:   "073fb9b79225d516edf380fc2128083fcb8773e39d50e99cc4b9f9ea8ff33a68",
+         intel: "a46fde8dfebbe4e4d19a5645e79b80954f1d26e2b58696e57383b94d36a140f3"
 
-  url "https://github.com/headsetapp/headset-electron/releases/download/v#{version}/Headset-#{version}-#{arch}.dmg",
+  url "https://github.com/headsetapp/headset-electron/releases/download/v#{version}/Headset-#{version}-mac-#{arch}.zip",
       verified: "github.com/headsetapp/headset-electron/"
   name "Headset"
   desc "Music player powered by YouTube and Reddit"
   homepage "https://headsetapp.co/"
 
-  app "Headset.app"
+  app "build/headset-darwin-#{arch}/Headset.app"
 
   zap trash: [
     "~/Library/Application Support/Headset",
