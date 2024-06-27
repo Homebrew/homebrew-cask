@@ -1,4 +1,4 @@
-cask "retroarch-metal-nightly" do
+cask "retroarch-metal@nightly" do
   version :latest
   sha256 :no_check
 
