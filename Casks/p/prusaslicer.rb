@@ -12,7 +12,7 @@ cask "prusaslicer" do
     skip "No reliable way to get version info"
   end
 
-  app "Original Prusa Drivers/PrusaSlicer.app"
+  app "PrusaSlicer.app"
 
   zap trash: [
     "~/Library/Application Support/PrusaSlicer",
