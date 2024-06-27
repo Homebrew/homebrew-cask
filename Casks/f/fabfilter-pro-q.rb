@@ -2,7 +2,7 @@ cask "fabfilter-pro-q" do
   version "3.26"
   sha256 "0bcb7879703c45a17bd9a9ad2a3f6510ecf08608810ed087cadc94c9404570a5"
 
-  url "https://www.fabfilter.com/downloads/ffproq#{version.no_dots}.dmg"
+  url "https://cdn-b.fabfilter.com/downloads/ffproq#{version.no_dots}.dmg"
   name "FabFilter Pro-Q"
   desc "Equaliser plug-in"
   homepage "https://www.fabfilter.com/products/pro-q-3-equalizer-plug-in"
