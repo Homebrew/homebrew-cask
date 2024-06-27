@@ -1,6 +1,6 @@
 cask "jyutping" do
-  version "0.45.0"
-  sha256 "b5f4dfd6bb683944cfc796a03da37f41eb1119b42f5a4192c53fe187b5ff3aef"
+  version "0.46.0"
+  sha256 "b70ec8cee3d7e8dc5acc83bed081d6635eb98c26e53c77e848cf28fcc9ad3efb"
 
   url "https://github.com/yuetyam/jyutping/releases/download/#{version}/Jyutping-v#{version}-Mac-IME.pkg.zip",
       verified: "github.com/yuetyam/jyutping/"
