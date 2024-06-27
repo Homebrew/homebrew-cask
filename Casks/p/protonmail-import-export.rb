@@ -21,4 +21,8 @@ cask "protonmail-import-export" do
     "~/Library/Caches/protonmail/importExport",
     "~/Library/Preferences/com.protonmail.import-export.ProtonMail Import-Export app.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

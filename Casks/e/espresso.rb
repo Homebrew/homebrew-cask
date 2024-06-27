@@ -23,4 +23,8 @@ cask "espresso" do
     "~/Library/Preferences/com.kanagacode.espresso.plist",
     "~/Library/WebKit/com.kanagacode.espresso",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

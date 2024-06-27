@@ -19,4 +19,8 @@ cask "slippi-dolphin" do
     "~/Library/Application Support/Dolphin",
     "~/Library/Preferences/com.project-slippi.dolphin.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

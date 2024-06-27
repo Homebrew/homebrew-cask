@@ -18,4 +18,8 @@ cask "icestudio" do
     "~/Library/Preferences/com.nw-builder.icestudio.plist",
     "~/Library/Saved Application State/com.nw-builder.icestudio.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

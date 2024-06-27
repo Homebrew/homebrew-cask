@@ -18,4 +18,8 @@ cask "wey" do
     "~/Library/Saved Application State/org.yue.wey.savedState",
     "~/Library/WebKit/org.yue.wey",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

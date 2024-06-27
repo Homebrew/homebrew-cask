@@ -16,4 +16,8 @@ cask "qtox" do
     "~/Library/Preferences/chat.tox.qtox.plist",
     "~/Library/Saved Application State/chat.tox.qtox.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

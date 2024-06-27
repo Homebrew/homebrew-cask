@@ -20,4 +20,8 @@ cask "favro" do
     "~/Library/Preferences/com.favro.desktop-app.plist",
     "~/Library/Saved Application State/com.favro.desktop-app.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

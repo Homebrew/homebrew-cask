@@ -20,4 +20,8 @@ cask "operator" do
     "~/Library/Preferences/com.prelude.operator.plist",
     "~/Library/Saved Application State/com.prelude.operator.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

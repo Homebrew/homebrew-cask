@@ -19,4 +19,8 @@ cask "google-chat" do
     "~/Library/Preferences/com.google.chat*",
     "~/Library/Saved Application State/com.google.chat.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

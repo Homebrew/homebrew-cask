@@ -11,4 +11,8 @@ cask "sensiblesidebuttons" do
   app "SensibleSideButtons.app"
 
   zap trash: "~/Library/Preferences/net.archagon.sensible-side-buttons.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end

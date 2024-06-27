@@ -36,4 +36,8 @@ cask "qt-creator" do
     "~/Library/Preferences/org.qt-project.qtcreator.plist",
     "~/Library/Saved Application State/org.qt-project.qtcreator.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

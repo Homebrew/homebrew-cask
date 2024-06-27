@@ -25,4 +25,8 @@ cask "final-fantasy-xiv-online" do
     "~/Library/HTTPStorages/com.square-enix.finalfantasyxiv",
     "~/Library/Preferences/com.square-enix.finalfantasyxiv.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

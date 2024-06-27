@@ -15,4 +15,8 @@ cask "tachidesk-sorayomi" do
     "~/Library/Application Scripts/com.suwayomi.tachideskSorayomi",
     "~/Library/Containers/com.suwayomi.tachideskSorayomi",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

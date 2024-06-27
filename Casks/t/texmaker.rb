@@ -18,4 +18,8 @@ cask "texmaker" do
     "~/Library/Preferences/texmaker.plist",
     "~/Library/Saved Application State/texmaker.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

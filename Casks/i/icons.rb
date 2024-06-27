@@ -10,4 +10,8 @@ cask "icons" do
   deprecate! date: "2023-12-17", because: :discontinued
 
   app "Icons.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

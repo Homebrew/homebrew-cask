@@ -20,4 +20,8 @@ cask "dogecoin" do
   end
 
   zap trash: "~/Library/com.dogecoin.Dogecoin-Qt.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end

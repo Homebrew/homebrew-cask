@@ -16,4 +16,8 @@ cask "jet" do
   binary "jet"
 
   # No zap stanza required
+
+  caveats do
+    requires_rosetta
+  end
 end

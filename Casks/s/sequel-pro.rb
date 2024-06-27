@@ -20,6 +20,7 @@ cask "sequel-pro" do
   ]
 
   caveats do
+    requires_rosetta
     <<~EOS
       #{token} has been deprecated in favor of Sequel Ace.
         brew install --cask sequel-ace

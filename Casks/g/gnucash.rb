@@ -28,4 +28,8 @@ cask "gnucash" do
     "~/Library/Preferences/org.gnucash.Gnucash.plist",
     "~/Library/Saved Application State/org.gnucash.Gnucash.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

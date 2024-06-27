@@ -16,4 +16,8 @@ cask "tortoisehg" do
   app "TortoiseHg.app"
 
   zap trash: "~/.config/tortoisehg.org"
+
+  caveats do
+    requires_rosetta
+  end
 end

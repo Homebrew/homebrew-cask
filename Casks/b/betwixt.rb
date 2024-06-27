@@ -38,4 +38,8 @@ cask "betwixt" do
     "~/Library/Preferences/com.electron.betwixt.plist",
     "~/Library/Saved Application State/com.electron.betwixt.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

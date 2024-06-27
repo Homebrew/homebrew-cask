@@ -16,4 +16,8 @@ cask "vox-preferences-pane" do
   prefpane "Vox Preferences.prefPane"
 
   zap trash: "~/Library/Preferences/com.coppertino.VoxPrefs.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end

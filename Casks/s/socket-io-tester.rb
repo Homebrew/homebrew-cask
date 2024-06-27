@@ -9,4 +9,8 @@ cask "socket-io-tester" do
   deprecate! date: "2023-12-17", because: :discontinued
 
   app "socket-io-tester-darwin-x64/socket-io-tester.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

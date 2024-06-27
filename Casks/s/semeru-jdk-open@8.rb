@@ -21,4 +21,8 @@ cask "semeru-jdk-open@8" do
   uninstall pkgutil: "net.ibm-semeru-open.8.jdk"
 
   # No zap stanza required
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -15,4 +15,8 @@ cask "vagrant-manager" do
     "~/Library/Caches/lanayo.Vagrant-Manager",
     "~/Library/Preferences/lanayo.Vagrant-Manager.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

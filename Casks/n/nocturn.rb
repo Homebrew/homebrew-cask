@@ -10,4 +10,8 @@ cask "nocturn" do
   deprecate! date: "2024-01-11", because: :discontinued
 
   app "Nocturn-darwin-x64/Nocturn.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

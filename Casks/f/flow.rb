@@ -21,4 +21,8 @@ cask "flow" do
     "~/Library/HTTPStorages/com.metalab.flow-mac",
     "~/Library/Preferences/com.metalab.flow-mac.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

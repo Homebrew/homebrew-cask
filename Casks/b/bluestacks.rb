@@ -33,4 +33,8 @@ cask "bluestacks" do
         "~/Library/Preferences/com.bluestacks.BlueStacks.plist",
       ],
       rmdir: "~/Library/Caches/KSCrashReports"
+
+  caveats do
+    requires_rosetta
+  end
 end

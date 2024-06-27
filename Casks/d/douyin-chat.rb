@@ -32,4 +32,8 @@ cask "douyin-chat" do
     "~/Library/Preferences/com.bytedance.awemeim.desktop.plist",
     "~/Library/Saved Application State/com.bytedance.awemeim.desktop.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

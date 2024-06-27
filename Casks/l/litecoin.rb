@@ -31,4 +31,8 @@ cask "litecoin" do
     "~/Library/Preferences/org.litecoin.Litecoin-Qt.plist",
     "~/Library/Saved Application State/org.litecoin.Litecoin-Qt.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

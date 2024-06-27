@@ -15,6 +15,7 @@ cask "jad" do
   manpage "jad.1"
 
   caveats do
+    requires_rosetta
     <<~EOS
       Instructions on using jad are available in
 

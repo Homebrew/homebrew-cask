@@ -18,4 +18,8 @@ cask "embyserver" do
   app "EmbyServer.app"
 
   zap trash: "~/.config/emby-server"
+
+  caveats do
+    requires_rosetta
+  end
 end

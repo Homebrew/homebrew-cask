@@ -10,4 +10,8 @@ cask "komodo-edit" do
   deprecate! date: "2023-12-17", because: :discontinued
 
   app "Komodo Edit #{version.major}.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

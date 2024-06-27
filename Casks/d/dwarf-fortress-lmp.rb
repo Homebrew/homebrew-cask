@@ -20,4 +20,8 @@ cask "dwarf-fortress-lmp" do
     "~/Library/Preferences/Lazy Mac Pack.plist",
     "~/Library/Saved Application State/Lazy Mac Pack.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -39,12 +39,15 @@ cask "amazon-music" do
     "~/Library/Saved Application State/com.amazon.music.savedState",
   ]
 
-  caveats <<~EOS
-    If the app will not launch after installation, try
+  caveats do
+    requires_rosetta
+    <<~EOS
+      If the app will not launch after installation, try
 
-      brew uninstall --zap --cask #{token}
-      brew install --cask #{token}
+        brew uninstall --zap --cask #{token}
+        brew install --cask #{token}
 
-    then re-launch the app.
-  EOS
+      then re-launch the app.
+    EOS
+  end
 end

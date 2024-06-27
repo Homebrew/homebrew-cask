@@ -15,4 +15,8 @@ cask "backlog" do
   app "Backlog-darwin-x64/Backlog.app"
 
   zap trash: "~/Library/Application Support/Backlog"
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -16,4 +16,8 @@ cask "detexify" do
   app "Detexify.app"
 
   zap trash: "~/Library/Preferences/org.kirelabs.Detexify-Mac.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end

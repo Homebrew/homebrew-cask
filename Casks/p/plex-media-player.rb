@@ -22,6 +22,7 @@ cask "plex-media-player" do
   ]
 
   caveats do
+    requires_rosetta
     <<~EOS
       #{token} has been deprecated in favor of Plex for Desktop and Plex HTPC.
 

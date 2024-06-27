@@ -8,4 +8,8 @@ cask "gmvault" do
   homepage "http://gmvault.org/"
 
   binary "gmvault-v#{version}/gmvault"
+
+  caveats do
+    requires_rosetta
+  end
 end

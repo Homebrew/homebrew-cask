@@ -14,4 +14,8 @@ cask "unipro-ugene" do
     "~/Library/Preferences/com.unipro.UGENE.plist",
     "~/Library/Preferences/net.ugene.ugene.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

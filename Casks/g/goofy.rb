@@ -20,4 +20,8 @@ cask "goofy" do
     "~/Library/Preferences/cc.buechele.Goofy.plist",
     "~/Library/Saved Application State/cc.buechele.Goofy.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

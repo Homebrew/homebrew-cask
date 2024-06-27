@@ -27,4 +27,8 @@ cask "webcamoid" do
     "~/Library/Preferences/org.webcamoid.cmio.AkVCam.Assistant.plist",
     "~/Library/Saved Application State/com.webcamoidprj.webcamoid.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

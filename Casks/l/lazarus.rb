@@ -25,4 +25,8 @@ cask "lazarus" do
             delete:  "/Applications/Lazarus.app"
 
   zap trash: "~/.lazarus"
+
+  caveats do
+    requires_rosetta
+  end
 end

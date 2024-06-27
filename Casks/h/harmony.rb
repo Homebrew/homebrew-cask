@@ -24,4 +24,8 @@ cask "harmony" do
     "~/Library/Preferences/com.vincelwt.harmony.plist",
     "~/Library/Saved Application State/com.vincelwt.harmony.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

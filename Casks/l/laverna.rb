@@ -12,4 +12,8 @@ cask "laverna" do
   deprecate! date: "2024-01-01", because: :unmaintained
 
   app "laverna.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

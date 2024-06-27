@@ -14,4 +14,8 @@ cask "syncmate" do
   end
 
   app "SyncMate.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

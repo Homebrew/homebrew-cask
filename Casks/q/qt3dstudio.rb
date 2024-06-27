@@ -22,4 +22,8 @@ cask "qt3dstudio" do
   installer manual: "qt-3dstudio-opensource-mac-x64-#{version}.app"
 
   uninstall delete: "~/Applications/qt3dstudio-#{version}"
+
+  caveats do
+    requires_rosetta
+  end
 end

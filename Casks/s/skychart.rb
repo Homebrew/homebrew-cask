@@ -24,4 +24,8 @@ cask "skychart" do
     "~/Library/Preferences/net.ap-i.skychart.plist",
     "~/Library/Saved Application State/net.ap-i.skychart.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

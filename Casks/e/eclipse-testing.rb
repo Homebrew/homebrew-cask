@@ -11,4 +11,8 @@ cask "eclipse-testing" do
 
   # Renamed to avoid conflict with other Eclipse.
   app "Eclipse.app", target: "Eclipse Testing.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

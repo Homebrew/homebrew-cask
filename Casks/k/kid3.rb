@@ -25,4 +25,8 @@ cask "kid3" do
   binary "#{appdir}/kid3.app/Contents/MacOS/kid3-cli"
 
   zap trash: "~/Library/Preferences/com.kid3.Kid3.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end

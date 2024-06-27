@@ -20,4 +20,8 @@ cask "electronic-wechat" do
     "~/Library/Preferences/com.electron.electronic-wechat.plist",
     "~/Library/Saved Application State/com.electron.electronic-wechat.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

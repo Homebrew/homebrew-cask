@@ -16,4 +16,8 @@ cask "julia@lts" do
   binary "#{appdir}/Julia-#{version.major_minor}.app/Contents/Resources/julia/bin/julia", target: "julia-lts"
 
   zap trash: "~/.julia"
+
+  caveats do
+    requires_rosetta
+  end
 end

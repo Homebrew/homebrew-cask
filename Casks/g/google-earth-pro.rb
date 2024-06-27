@@ -35,4 +35,8 @@ cask "google-earth-pro" do
         "~/Library/Caches/com.Google.GoogleEarthPro",
         "~/Library/Caches/Google Earth",
       ]
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -10,4 +10,8 @@ cask "wombat" do
   app "Wombat.app"
 
   zap trash: "~/Library/Application Support/Wombat"
+
+  caveats do
+    requires_rosetta
+  end
 end

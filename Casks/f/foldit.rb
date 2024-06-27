@@ -19,4 +19,8 @@ cask "foldit" do
   app "Foldit.app"
 
   zap trash: "~/Library/Saved Application State/edu.washington.foldit.savedState"
+
+  caveats do
+    requires_rosetta
+  end
 end

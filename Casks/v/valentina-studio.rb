@@ -23,4 +23,8 @@ cask "valentina-studio" do
     "~/Library/Preferences/com.paradigmasoft.vstudio.plist",
     "~/Library/Saved Application State/com.paradigmasoft.vstudio.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

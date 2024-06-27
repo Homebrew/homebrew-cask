@@ -17,4 +17,8 @@ cask "ethereum-wallet" do
     "~/Library/Preferences/com.ethereum.wallet.helper.plist",
     "~/Library/Preferences/com.ethereum.wallet.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

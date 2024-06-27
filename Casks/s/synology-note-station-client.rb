@@ -20,4 +20,8 @@ cask "synology-note-station-client" do
     "~/Library/Preferences/synology.note.station.plist",
     "~/Library/Saved Application State/synology.note.station.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

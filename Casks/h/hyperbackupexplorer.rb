@@ -18,4 +18,8 @@ cask "hyperbackupexplorer" do
     "~/Library/Preferences/com.synology.HyperBackupExplorer.plist",
     "~/Library/Saved Application State/com.synology.HyperBackupExplorer.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

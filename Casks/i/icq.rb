@@ -21,4 +21,8 @@ cask "icq" do
     "~/Library/Preferences/com.icq.macicq.plist",
     "~/Library/Saved Application State/com.icq.macicq.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

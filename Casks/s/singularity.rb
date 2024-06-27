@@ -17,4 +17,8 @@ cask "singularity" do
   end
 
   app "SingularityAlpha.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

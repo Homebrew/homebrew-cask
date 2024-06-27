@@ -23,4 +23,8 @@ cask "unity-hub" do
         "~/Library/Preferences/com.unity3d.unityhub.plist",
       ],
       rmdir: "/Applications/Unity/Hub"
+
+  caveats do
+    requires_rosetta
+  end
 end

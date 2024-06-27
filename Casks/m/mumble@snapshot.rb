@@ -29,4 +29,8 @@ cask "mumble@snapshot" do
     "~/Library/Preferences/net.sourceforge.mumble.Mumble.plist",
     "~/Library/Saved Application State/net.sourceforge.mumble.Mumble.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

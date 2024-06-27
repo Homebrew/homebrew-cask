@@ -26,13 +26,16 @@ cask "firestorm" do
     "~/Library/Preferences/Firestorm.plist",
   ]
 
-  caveats <<~EOS
-    This version does not contain the Havok engine (does not matter if
-    you are not a content creator).
+  caveats do
+    requires_rosetta
+    <<~EOS
+      This version does not contain the Havok engine (does not matter if
+      you are not a content creator).
 
-    Most problems that crop up during updates can be resolved or fixed by
-    performing a clean install. For instructions, see:
+      Most problems that crop up during updates can be resolved or fixed by
+      performing a clean install. For instructions, see:
 
-      https://wiki.phoenixviewer.com/doku.php?id=fs_clean_reinstall
-  EOS
+        https://wiki.phoenixviewer.com/doku.php?id=fs_clean_reinstall
+    EOS
+  end
 end

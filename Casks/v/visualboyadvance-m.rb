@@ -19,4 +19,8 @@ cask "visualboyadvance-m" do
     "~/Library/Application Support/visualboyadvance-m",
     "~/Library/Preferences/visualboyadvance-m.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -28,4 +28,8 @@ cask "amazon-luna" do
     "~/Library/Preferences/Amazon.SpiderPorkClientMac.plist",
     "~/Library/WebKit/Amazon.SpiderPorkClientMac",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

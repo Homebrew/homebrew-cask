@@ -8,4 +8,8 @@ cask "comma-chameleon" do
   homepage "https://comma-chameleon.io/"
 
   app "Comma Chameleon-darwin-x64/Comma Chameleon.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

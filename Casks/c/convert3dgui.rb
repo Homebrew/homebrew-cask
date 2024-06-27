@@ -19,4 +19,8 @@ cask "convert3dgui" do
   binary "#{appdir}/Convert3DGUI.app/Contents/bin/c4d"
 
   zap trash: "~/Library/Saved Application State/org.itksnap.c3dgui.savedState"
+
+  caveats do
+    requires_rosetta
+  end
 end

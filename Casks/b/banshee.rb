@@ -11,4 +11,8 @@ cask "banshee" do
   deprecate! date: "2023-12-17", because: :discontinued
 
   app "Banshee.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

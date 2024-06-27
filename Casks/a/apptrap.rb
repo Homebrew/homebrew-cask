@@ -18,4 +18,8 @@ cask "apptrap" do
   uninstall login_item: "AppTrap"
 
   zap trash: "~/Library/Preferences/com.KumaranVijayan.AppTrap.prefpanel.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end

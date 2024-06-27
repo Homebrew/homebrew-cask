@@ -10,4 +10,8 @@ cask "haroopad" do
   app "Haroopad.app"
 
   zap trash: "~/Library/Application Support/Haroopad"
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -30,6 +30,7 @@ cask "osxfuse" do
 
   caveats do
     reboot
+    requires_rosetta
     <<~EOS
       `#{token}` has been succeeded by `macfuse` as of version 4.0.0.
 

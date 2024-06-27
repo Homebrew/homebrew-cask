@@ -12,4 +12,8 @@ cask "launchrocket" do
   prefpane "LaunchRocket.prefPane"
 
   zap trash: "~/Library/Preferences/com.joshbutts.launchrocket.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end

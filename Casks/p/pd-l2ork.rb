@@ -26,4 +26,8 @@ cask "pd-l2ork" do
     "~/Library/Logs/Purr-Data",
     "~/Library/Purr-Data",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

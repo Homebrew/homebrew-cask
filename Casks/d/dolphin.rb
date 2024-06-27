@@ -24,4 +24,8 @@ cask "dolphin" do
     "~/Library/Application Support/Dolphin",
     "~/Library/Preferences/org.dolphin-emu.dolphin.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -24,4 +24,8 @@ cask "studiolinkstandalone" do
   end
 
   app "StudioLinkStandalone.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -12,4 +12,8 @@ cask "shades" do
   end
 
   prefpane "Shades Preferences.prefPane"
+
+  caveats do
+    requires_rosetta
+  end
 end

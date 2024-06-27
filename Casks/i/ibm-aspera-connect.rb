@@ -30,4 +30,8 @@ cask "ibm-aspera-connect" do
     "~/Library/Preferences/com.aspera.connect.plist",
     "~/Library/Saved Application State/com.aspera.connect.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

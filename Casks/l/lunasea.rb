@@ -24,4 +24,8 @@ cask "lunasea" do
     "~/Library/Application Scripts/app.lunasea.lunasea",
     "~/Library/Containers/app.lunasea.lunasea",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

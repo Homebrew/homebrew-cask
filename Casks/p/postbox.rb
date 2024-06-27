@@ -29,4 +29,8 @@ cask "postbox" do
     "~/Library/Preferences/com.postbox-inc.postbox.plist",
     "~/Library/Saved Application State/com.postbox-inc.postbox.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

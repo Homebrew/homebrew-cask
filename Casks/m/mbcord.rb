@@ -8,4 +8,8 @@ cask "mbcord" do
   homepage "https://github.com/oonqt/MBCord"
 
   app "MBCord.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

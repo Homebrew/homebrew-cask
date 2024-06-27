@@ -14,4 +14,8 @@ cask "html-mangareader" do
     "~/Library/Preferences/HTML Mangareader.plist",
     "~/Library/Saved Application State/HTML Mangareader.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

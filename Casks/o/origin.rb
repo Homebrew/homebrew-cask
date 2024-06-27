@@ -24,4 +24,8 @@ cask "origin" do
     "~/Library/LaunchAgents/com.ea.origin.WebHelper.plist",
     "~/Library/Saved Application State/com.ea.Origin.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

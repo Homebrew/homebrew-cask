@@ -21,4 +21,8 @@ cask "nuclino" do
     "~/Library/Logs/Nuclino",
     "~/Library/Preferences/com.nuclino.desktop.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

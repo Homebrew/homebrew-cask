@@ -19,4 +19,8 @@ cask "scidvsmac" do
     "~/Library/Preferences/net.sf.scid.plist",
     "~/Library/Saved Application State/net.sf.scid.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

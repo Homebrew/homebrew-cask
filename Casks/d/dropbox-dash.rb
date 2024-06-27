@@ -24,4 +24,8 @@ cask "dropbox-dash" do
     "~/Library/Group Containers/com.dash",
     "~/Library/Preferences/io.hypertools.Dropbox-Dash.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
