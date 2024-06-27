@@ -2,7 +2,7 @@ cask "fabfilter-pro-c" do
   version "2.20"
   sha256 "3245198d936e65028b004103ad0812f78d045adf096da3a19ae542efeb74958b"
 
-  url "https://www.fabfilter.com/downloads/ffproc#{version.no_dots}.dmg"
+  url "https://cdn-b.fabfilter.com/downloads/ffproc#{version.no_dots}.dmg"
   name "FabFilter Pro-C"
   desc "Compressor plug-in"
   homepage "https://www.fabfilter.com/products/pro-c-2-compressor-plug-in"
