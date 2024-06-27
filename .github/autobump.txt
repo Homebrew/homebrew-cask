@@ -345,6 +345,7 @@ kkbox
 krisp
 lagrange
 languagetool
+lark
 leapp
 ledger-live
 lehreroffice
