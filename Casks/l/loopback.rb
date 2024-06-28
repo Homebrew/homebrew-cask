@@ -14,12 +14,12 @@ cask "loopback" do
     depends_on macos: ">= :big_sur"
   end
   on_sonoma :or_newer do
-    version "2.4.0"
+    version "2.4.1"
 
     depends_on macos: ">= :sonoma"
 
     # NOTE: see https://weblog.rogueamoeba.com/2024/06/07/now-you-can-install-loopback-in-under-one-minute/#fn1-2024-06-loopback
-    caveats "Loopback 2.4.0 requires macOS 14.5 or newer."
+    caveats "Loopback #{version} requires macOS 14.5 or newer."
   end
 
   url "https://rogueamoeba.com/loopback/download-#{audio_engine}.php"
