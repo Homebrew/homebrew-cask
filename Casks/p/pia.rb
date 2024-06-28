@@ -13,7 +13,7 @@ cask "pia" do
     strategy :github_latest
   end
 
-  app "PIA.app"
+  app "pia.app"
 
   zap trash: "~/Library/Application Support/pia"
 end
