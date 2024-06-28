@@ -15,5 +15,5 @@ cask "pia" do
 
   app "PIA.app"
 
-  zap trash: "~/Library/Application Support/PIA"
+  zap trash: "~/Library/Application Support/pia"
 end
