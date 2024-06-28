@@ -2,8 +2,8 @@ cask "pia" do
   version "3.0.3"
   sha256 "696dafca5d4a4472eca0c1ded044a3ef3448d767e0a8a65c239ec5c415187964"
 
-  url "https://github.com/LINCnil/pia/releases/download/v#{version}/pia-#{version}.dmg", 
-    verified: "https://github.com/LINCnil/pia/releases/download"
+  url "https://github.com/LINCnil/pia/releases/download/v#{version}/pia-#{version}.dmg",
+      verified: "github.com/LINCnil/pia/releases/download/"
   name "pia"
   desc "Privacy Impact Assessment Tool"
   homepage "https://github.com/LINCnil/pia"
@@ -15,7 +15,5 @@ cask "pia" do
 
   app "PIA.app"
 
-  zap trash: [
-    "~/Library/Application Support/PIA",
-  ]
+  zap trash: "~/Library/Application Support/PIA"
 end
