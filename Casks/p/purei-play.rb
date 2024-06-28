@@ -1,6 +1,6 @@
 cask "purei-play" do
-  version "2024-06-21,77429c7a"
-  sha256 "c2751459d60445d7103f37b70519c10d59626da231708bb3138cf2d742b6f528"
+  version "2024-06-26,6a6ff95b"
+  sha256 "7c1106453e2b06600fe2060cfe43e23d9d7cd8a88417cefbffb26f98e89ce0ab"
 
   url "https://playbuilds.s3.amazonaws.com/#{version.csv.second}/Play.dmg",
       verified: "playbuilds.s3.amazonaws.com/"
@@ -14,6 +14,8 @@ cask "purei-play" do
       "#{json["commitDate"][/^(\d+(?:-\d+)+)T/i, 1]},#{json["commitHash"]}"
     end
   end
+
+  depends_on macos: ">= :catalina"
 
   app "Play.app"
 
