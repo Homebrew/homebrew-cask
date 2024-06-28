@@ -707,6 +707,7 @@ updf
 utools
 uvtools
 valentina-studio
+vamiga
 vellum
 virtualbox@beta
 virtualbuddy
