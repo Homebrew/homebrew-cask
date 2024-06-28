@@ -4,9 +4,9 @@ cask "talkdesk-desktop" do
   sha256 "16eb1e4708ea74250231404caf18a472624dd67fc907c4f438d65fc0694c63c5"
 
   url "https://td-infra-prd-us-east-1-s3-atlaselectron.s3.amazonaws.com/talkdesk-#{version}.dmg",
-    verified: "td-infra-prd-us-east-1-s3-atlaselectron.s3.amazonaws.com"
+      verified: "td-infra-prd-us-east-1-s3-atlaselectron.s3.amazonaws.com/"
   name "Talkdesk Workspace Desktop for MacOS"
-  desc "Talkdesk Workspace Desktop app allows you to use Talkdesk CX Cloud as stand-alone software"
+  desc "Desktop app that allows you to use Talkdesk as stand-alone software"
   homepage "https://www.mytalkdesk.com/atlas/download"
 
   livecheck do
@@ -14,17 +14,16 @@ cask "talkdesk-desktop" do
     strategy :electron_builder
   end
 
-  depends_on macos: ">= :catalina"
-
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   app "Talkdesk.app"
 
   zap trash: [
-    "~/Library/Application Support/Talkdesk",
     "~/Library/Application Support/Caches/talkdesk-updater",
-    "~/Library/Saved Application State/com.talkdesk.atlas.savedState",
+    "~/Library/Application Support/Talkdesk",
+    "~/Library/Logs/Talkdesk",
     "~/Library/Preferences/com.talkdesk.atlas.plist",
-    "~/Library/Logs/Talkdesk"
+    "~/Library/Saved Application State/com.talkdesk.atlas.savedState",
   ]
 end
