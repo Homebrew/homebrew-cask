@@ -1,6 +1,6 @@
 cask "fl-studio" do
-  version "21.2.3.3586"
-  sha256 "b4b42643a5e84dc5c24abc4fd988867b2487b32ffc2dd252c5eeb7673fd01e6d"
+  version "24.1.0.3875"
+  sha256 "9316ee92a2dd0b4ea5d390f4d527dbda3814a526f4159184313818fd3a6606cc"
 
   url "https://demodownload.image-line.com/flstudio/flstudio_mac_#{version}.dmg"
   name "FL Studio"
@@ -14,7 +14,14 @@ cask "fl-studio" do
 
   pkg "Install FL Studio.pkg"
 
-  uninstall pkgutil: "com.Image-Line.pkg.FL21.2ONLINE"
+  uninstall launchctl: "com.image-line.flc-install-helper-socket",
+            pkgutil:   [
+              "com.image-line.fl-cloud-plugins.app",
+              "com.image-line.fl-cloud-plugins.launchDaemon",
+              "com.Image-Line.pkg.#{version.major}ONLINE",
+              "com.Image-Line.pkg.flcloud.plugins",
+            ],
+            delete:    "/Applications/FL Cloud Plugins.app"
 
   zap trash: [
     "~/Library/Caches/com.image-line.flstudio",
