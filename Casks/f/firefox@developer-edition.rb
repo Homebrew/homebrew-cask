@@ -70,15 +70,17 @@ cask "firefox@developer-edition" do
     "zh-CN"
   end
 
-  url "https://download.mozilla.org/?product=firefox-devedition-latest-ssl&os=osx&lang=#{language}"
+  url "https://download-installer.cdn.mozilla.net/pub/devedition/releases/#{version}/mac/#{language}/Firefox%20#{version}.dmg",
+      verified: "download-installer.cdn.mozilla.net/pub/devedition/releases/"
   name "Mozilla Firefox Developer Edition"
   desc "Web browser"
   homepage "https://www.mozilla.org/firefox/developer/"
 
   livecheck do
-    url "https://archive.mozilla.org/pub/devedition/releases/"
-    regex %r{href=.*?/releases/(\d+(?:\.\d+)+b?\d*)/}i
-    strategy :page_match
+    url "https://product-details.mozilla.org/1.0/firefox_versions.json"
+    strategy :json do |json|
+      json["FIREFOX_DEVEDITION"]
+    end
   end
 
   auto_updates true
