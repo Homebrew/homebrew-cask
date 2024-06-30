@@ -21,4 +21,8 @@ cask "authy" do
     "~/Library/Preferences/com.authy.authy-mac.helper.plist",
     "~/Library/Preferences/com.authy.authy-mac.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
