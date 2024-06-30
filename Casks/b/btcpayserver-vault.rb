@@ -16,4 +16,8 @@ cask "btcpayserver-vault" do
   depends_on macos: ">= :high_sierra"
 
   app "BTCPayServer Vault.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
