@@ -25,4 +25,8 @@ cask "second-life-viewer" do
     "~/Library/Application Support/SecondLife",
     "~/Library/Caches/SecondLife",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
