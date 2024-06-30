@@ -23,4 +23,8 @@ cask "qdslrdashboard" do
     "~/Library/Application Support/DslrDashboard/qDslrDashboard",
     "~/Library/Saved Application State/info.dslrdashboard.qDslrDashboard.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
