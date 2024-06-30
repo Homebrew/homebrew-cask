@@ -22,4 +22,8 @@ cask "qownnotes" do
     "~/Library/Preferences/com.pbe.QOwnNotes.plist",
     "~/Library/Saved Application State/com.PBE.QOwnNotes.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
