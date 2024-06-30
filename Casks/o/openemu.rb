@@ -59,4 +59,8 @@ cask "openemu" do
     "~/Library/Preferences/org.openemu.VisualBoyAdvance.plist",
     "~/Library/Saved Application State/org.openemu.OpenEmu.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
