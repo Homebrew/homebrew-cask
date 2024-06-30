@@ -15,4 +15,8 @@ cask "electrum-ltc" do
   app "Electrum-LTC.app"
 
   zap trash: "~/.electrum-ltc"
+
+  caveats do
+    requires_rosetta
+  end
 end
