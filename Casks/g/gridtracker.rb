@@ -22,4 +22,8 @@ cask "gridtracker" do
     "~/Library/Preferences/org.gridtracker.gridtracker.plist",
     "~/Library/Saved Application State/org.gridtracker.gridtracker.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
