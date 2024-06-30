@@ -14,4 +14,8 @@ cask "tla-plus-toolbox" do
   end
 
   app "TLA+ Toolbox.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
