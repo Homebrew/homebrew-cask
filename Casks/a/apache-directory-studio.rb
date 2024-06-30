@@ -18,6 +18,7 @@ cask "apache-directory-studio" do
 
   caveats do
     depends_on_java "11+"
+    requires_rosetta
     <<~EOS
       To set the Java VM to use:
 
