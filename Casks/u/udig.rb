@@ -15,7 +15,7 @@ cask "udig" do
 
   caveats do
     depends_on_java "8"
-
+    requires_rosetta
     <<~EOS
       #{token} will fail to launch unless java 1.8 is installed as the system’s default. Point #{token} to java 1.8 by editing:
 
