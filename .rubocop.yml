@@ -135,6 +135,9 @@ Style/Documentation:
   - "/**/{Formula,Casks}/**/*.rb"
   - "**/{Formula,Casks}/**/*.rb"
   - "**/*.rbi"
+Style/EmptyMethod:
+  Exclude:
+  - "**/*.rbi"
 Style/FetchEnvVar:
   Exclude:
   - Taps/*/*/*.rb
