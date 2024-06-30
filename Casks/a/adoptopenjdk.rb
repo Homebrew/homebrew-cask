@@ -21,6 +21,7 @@ cask "adoptopenjdk" do
   ]
 
   caveats do
+    requires_rosetta
     <<~EOS
       Temurin is the official successor to this software:
 
