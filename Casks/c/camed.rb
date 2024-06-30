@@ -14,4 +14,8 @@ cask "camed" do
   end
 
   app "CAMEd-#{version}/CAMed.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
