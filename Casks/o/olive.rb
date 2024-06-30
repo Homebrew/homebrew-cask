@@ -20,4 +20,8 @@ cask "olive" do
     "~/Library/Preferences/com.*.Olive.plist",
     "~/Library/Preferences/olivevideoeditor.org",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
