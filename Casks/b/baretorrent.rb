@@ -18,4 +18,8 @@ cask "baretorrent" do
     "~/Library/Application Support/baretorrent",
     "~/Library/Saved Application State/baretorrent.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
