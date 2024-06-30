@@ -20,4 +20,8 @@ cask "teambition" do
     "~/Library/Preferences/com.teambition.teambition.plist",
     "~/Library/Saved Application State/com.teambition.teambition.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
