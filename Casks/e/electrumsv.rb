@@ -14,4 +14,8 @@ cask "electrumsv" do
   end
 
   app "ElectrumSV.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
