@@ -19,4 +19,8 @@ cask "duckietv" do
               "/Applications/duckieTV.app",
               "~/Library/Application Support/DuckieTV-Standalone",
             ]
+
+  caveats do
+    requires_rosetta
+  end
 end
