@@ -34,4 +34,8 @@ cask "steam" do
     "~/Library/Preferences/com.valvesoftware.steam.helper.plist",
     "~/Library/Saved Application State/com.valvesoftware.steam.savedState/",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
