@@ -10,4 +10,8 @@ cask "mojibar" do
   deprecate! date: "2023-12-17", because: :discontinued
 
   app "Mojibar-darwin-x64/Mojibar.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
