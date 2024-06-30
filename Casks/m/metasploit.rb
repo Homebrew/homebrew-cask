@@ -40,4 +40,8 @@ cask "metasploit" do
             rmdir:  "/opt/metasploit-framework"
 
   zap trash: "~/.msf4"
+
+  caveats do
+    requires_rosetta
+  end
 end
