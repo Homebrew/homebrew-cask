@@ -9,8 +9,8 @@ cask "firealpaca" do
   homepage "https://firealpaca.com/"
 
   livecheck do
-    url :homepage
-    regex(/Version\s*:\s*(\d+(?:\.\d+)+)/i)
+    url :url
+    strategy :header_match
   end
 
   app "FireAlpaca.app"
