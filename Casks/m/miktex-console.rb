@@ -13,4 +13,8 @@ cask "miktex-console" do
   end
 
   app "MiKTeX Console.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
