@@ -18,4 +18,8 @@ cask "disk-inventory-x" do
   app "Disk Inventory X.app"
 
   zap trash: "~/Library/Preferences/com.derlien.DiskInventoryX.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end
