@@ -29,4 +29,8 @@ cask "meld" do
     "~/Library/Preferences/org.gnome.meld.plist",
     "~/Library/Saved Application State/org.gnome.meld.savedState/",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
