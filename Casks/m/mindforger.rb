@@ -22,4 +22,8 @@ cask "mindforger" do
   end
 
   app "mindforger.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
