@@ -44,4 +44,8 @@ cask "steelseries-gg" do
     "~/Library/Saved Application State/com.steelseries.gg.client.savedState",
     "~/Library/Saved Application State/com.steelseries.gg.uninstaller.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
