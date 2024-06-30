@@ -74,4 +74,8 @@ cask "wine@devel" do
         "~/.local/share/icons",
         "~/.local/share/mime",
       ]
+
+  caveats do
+    requires_rosetta
+  end
 end
