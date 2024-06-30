@@ -19,4 +19,8 @@ cask "librepcb" do
     "~/Library/Saved Application State/com.yourcompany.librepcb.savedState",
     "~/Library/Saved Application State/org.librepcb.LibrePCB.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
