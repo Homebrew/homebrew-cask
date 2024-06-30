@@ -21,4 +21,8 @@ cask "nuclear" do
     "~/Library/Preferences/nuclear.plist",
     "~/Library/Saved Application State/nuclear.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
