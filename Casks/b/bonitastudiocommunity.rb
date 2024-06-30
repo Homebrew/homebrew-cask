@@ -26,4 +26,8 @@ cask "bonitastudiocommunity" do
     "/Library/Caches/org.bonitasoft.studio.product",
     "~/Library/Preferences/org.bonitasoft.studio.product.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
