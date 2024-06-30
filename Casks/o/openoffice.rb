@@ -43,4 +43,8 @@ cask "openoffice" do
   app "OpenOffice.app"
 
   zap trash: "~/Library/Application Support/OpenOffice"
+
+  caveats do
+    requires_rosetta
+  end
 end
