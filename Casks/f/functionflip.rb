@@ -13,4 +13,8 @@ cask "functionflip" do
   end
 
   prefpane "FunctionFlip.prefPane"
+
+  caveats do
+    requires_rosetta
+  end
 end
