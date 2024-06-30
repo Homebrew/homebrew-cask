@@ -27,4 +27,8 @@ cask "epic-games" do
     "~/Library/Logs/Unreal Engine/EpicGamesLauncher",
     "~/Library/Preferences/Unreal Engine/EpicGamesLauncher",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
