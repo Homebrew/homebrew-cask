@@ -22,4 +22,8 @@ cask "vmpk" do
     "~/Library/Preferences/net.sourceforge.vmpk.VMPK.plist",
     "~/Library/Saved Application State/net.sourceforge.vmpk.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
