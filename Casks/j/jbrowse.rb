@@ -10,8 +10,7 @@ cask "jbrowse" do
 
   livecheck do
     url :url
-    strategy :git
-    regex(/^v?(\d+(?:\.\d+)+)$/i)
+    strategy :github_latest
   end
 
   depends_on macos: ">= :catalina"
