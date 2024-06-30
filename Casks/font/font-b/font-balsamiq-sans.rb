@@ -7,7 +7,7 @@ cask "font-balsamiq-sans" do
       branch:    "main",
       only_path: "ofl/balsamiqsans"
   name "Balsamiq Sans"
-  homepage "https://balsamiq.com/givingback/opensource/font/"
+  homepage "https://fonts.google.com/specimen/Balsamiq+Sans"
 
   font "BalsamiqSans-Bold.ttf"
   font "BalsamiqSans-BoldItalic.ttf"
