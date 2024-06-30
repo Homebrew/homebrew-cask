@@ -41,8 +41,11 @@ cask "battle-net" do
       ],
       rmdir: "~/Blizzard"
 
-  caveats <<~EOS
-    If your installation directory is not /Applications, you will need to
-    uninstall this cask manually.
-  EOS
+  caveats do
+    requires_rosetta
+    <<~EOS
+      If your installation directory is not /Applications, you will need to
+      uninstall this cask manually.
+    EOS
+  end
 end
