@@ -14,5 +14,6 @@ cask "exist-db" do
 
   caveats do
     depends_on_java "8"
+    requires_rosetta
   end
 end
