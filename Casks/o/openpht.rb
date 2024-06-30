@@ -14,4 +14,8 @@ cask "openpht" do
     "~/Library/Logs/OpenPHT.log",
     "~/Library/Saved Application State/tv.openpht.openpht.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
