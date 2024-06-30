@@ -10,4 +10,8 @@ cask "fly" do
   binary "fly"
 
   # No zap stanza required
+
+  caveats do
+    requires_rosetta
+  end
 end
