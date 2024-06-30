@@ -33,4 +33,8 @@ cask "polkadot-js" do
     "~/Library/Preferences/com.polkadotjs.polkadotjs-apps.plist",
     "~/Library/Saved Application State/com.polkadotjs.polkadotjs-apps.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
