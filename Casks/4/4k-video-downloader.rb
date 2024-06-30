@@ -23,4 +23,8 @@ cask "4k-video-downloader" do
     "~/Library/Preferences/com.openmedia.4kvideodownloader.plist",
     "~/Library/Saved Application State/com.openmedia.4kvideodownloader.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
