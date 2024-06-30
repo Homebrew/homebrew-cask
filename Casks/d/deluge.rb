@@ -20,4 +20,8 @@ cask "deluge" do
     "~/Library/Preferences/org.deluge.plist",
     "~/Library/Saved Application State/org.deluge.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
