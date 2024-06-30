@@ -9,4 +9,8 @@ cask "minishift" do
   binary "minishift-#{version}-darwin-amd64/minishift"
 
   zap trash: "~/.minishift"
+
+  caveats do
+    requires_rosetta
+  end
 end
