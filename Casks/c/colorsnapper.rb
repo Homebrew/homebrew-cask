@@ -29,4 +29,8 @@ cask "colorsnapper" do
     "~/Library/Cookies/com.koolesache.ColorSnapper2.binarycookies",
     "~/Library/Preferences/com.koolesache.ColorSnapper2.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

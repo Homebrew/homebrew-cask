@@ -19,4 +19,8 @@ cask "bisq" do
     "~/Library/Application Support/Bisq",
     "~/Library/Saved Application State/io.bisq.CAT.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

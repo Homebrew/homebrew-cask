@@ -13,4 +13,8 @@ cask "comictagger" do
   end
 
   app "ComicTagger.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

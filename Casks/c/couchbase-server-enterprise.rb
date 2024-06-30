@@ -25,4 +25,8 @@ cask "couchbase-server-enterprise" do
     "~/Library/Preferences/com.couchbase.couchbase-server.plist",
     "~/Library/Preferences/couchbase-server.ini",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

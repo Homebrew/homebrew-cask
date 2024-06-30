@@ -17,4 +17,8 @@ cask "chiaki" do
     "~/Library/Application Support/Chiaki",
     "~/Library/Preferences/com.chiaki.Chiaki.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

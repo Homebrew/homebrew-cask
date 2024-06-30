@@ -23,4 +23,8 @@ cask "android-file-transfer" do
         "~/Library/Preferences/com.google.android.mtpviewer.plist",
       ],
       rmdir: "~/Library/Application Support/Google"
+
+  caveats do
+    requires_rosetta
+  end
 end

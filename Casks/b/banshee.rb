@@ -6,9 +6,13 @@ cask "banshee" do
       verified: "gnome.org/pub/GNOME/binaries/mac/banshee/"
   name "Banshee"
   desc "Multimedia management and playback application"
-  homepage "https://www.banshee-project.org/"
+  homepage "https://banshee.fm/"
 
   deprecate! date: "2023-12-17", because: :discontinued
 
   app "Banshee.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

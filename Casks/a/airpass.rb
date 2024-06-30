@@ -9,4 +9,8 @@ cask "airpass" do
   homepage "https://airpass.tiagoalves.me/"
 
   app "Airpass.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -27,4 +27,8 @@ cask "beyond-compare" do
     "~/Library/Preferences/com.ScooterSoftware.BeyondCompare.plist",
     "~/Library/Saved Application State/com.ScooterSoftware.BeyondCompare.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

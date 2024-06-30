@@ -17,4 +17,8 @@ cask "chrome-devtools" do
     "~/Library/Preferences/com.auchenberg.chrome-devtools-app.plist",
     "~/Library/Saved Application State/com.auchenberg.chrome-devtools-app.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

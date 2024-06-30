@@ -24,4 +24,8 @@ cask "coinomi-wallet" do
     "~/Library/Caches/Coinomi",
     "~/Library/Saved Application State/com.coinomi.desktop.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

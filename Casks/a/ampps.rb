@@ -19,4 +19,8 @@ cask "ampps" do
   uninstall_preflight do
     set_permissions "#{appdir}/AMPPS", "0777"
   end
+
+  caveats do
+    requires_rosetta
+  end
 end

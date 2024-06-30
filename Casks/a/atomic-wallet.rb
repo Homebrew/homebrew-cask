@@ -17,4 +17,8 @@ cask "atomic-wallet" do
   app "Atomic Wallet.app"
 
   zap trash: "~/Library/Application Support/atomic"
+
+  caveats do
+    requires_rosetta
+  end
 end

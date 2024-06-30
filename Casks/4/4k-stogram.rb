@@ -18,4 +18,8 @@ cask "4k-stogram" do
   app "4K Stogram.app"
 
   zap trash: "~/Pictures/4K Stogram"
+
+  caveats do
+    requires_rosetta
+  end
 end
