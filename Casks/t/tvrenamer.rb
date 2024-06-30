@@ -17,5 +17,6 @@ cask "tvrenamer" do
 
   caveats do
     depends_on_java
+    requires_rosetta
   end
 end
