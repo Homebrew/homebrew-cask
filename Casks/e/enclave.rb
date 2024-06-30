@@ -22,4 +22,8 @@ cask "enclave" do
     "/etc/enclave",
     "/var/log/enclave",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
