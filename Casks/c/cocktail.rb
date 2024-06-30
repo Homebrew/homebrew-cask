@@ -88,8 +88,8 @@ cask "cocktail" do
     end
   end
   on_sonoma :or_newer do
-    version "17.3"
-    sha256 "95de3f2b202ceb2bea74004353d7cc349d88373319488d52fc47ebe160508032"
+    version "17.3.1"
+    sha256 "380f64edc0045d42e5509c0f6d6d1b7ff4c547540ac6f9c6a8a1b2be101b6455"
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}SE.dmg"
 
@@ -109,4 +109,8 @@ cask "cocktail" do
     "~/Library/Preferences/com.maintain.cocktail.plist",
     "~/Library/Preferences/com.maintain.cocktail.ventura#{version.major}.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
