@@ -14,7 +14,7 @@ cask "lazycat" do
     url "https://dl.lazycat.cloud/client/desktop/lzc-client-desktop_#{arch}.dmg.metadata.json"
     strategy :json do |json|
       json["buildVersion"]
-      version.delete_prefix('v')
+      version.delete_prefix("v")
     end
   end
 
@@ -23,7 +23,7 @@ cask "lazycat" do
   app "懒猫微服.app"
 
   zap trash: [
-    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/cloud.lazycat.client.sfl3",
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/cloud.lazycat.client.sfl*",
     "~/Library/Preferences/cloud.lazycat.client.plist",
     "~/Library/Saved Application State/cloud.lazycat.client.savedState",
     "~/lazycat",
