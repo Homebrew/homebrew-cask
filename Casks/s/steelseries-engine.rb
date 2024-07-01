@@ -39,4 +39,8 @@ cask "steelseries-engine" do
     "~/Library/Preferences/com.steelseries.SteelSeries-Engine-#{version.major}.plist",
     "~/Library/Saved Application State/com.steelseries.ssenext.client.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

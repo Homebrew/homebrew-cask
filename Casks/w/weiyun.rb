@@ -21,4 +21,8 @@ cask "weiyun" do
     "~/Library/Preferences/com.tencent.MacWeiyun.plist",
     "~/Library/Saved Application State/com.tencent.MacWeiyun.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

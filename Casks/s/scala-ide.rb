@@ -22,4 +22,8 @@ cask "scala-ide" do
   # Also renamed to avoid conflict with other eclipse Casks.
   # Original discussion: https://github.com/Homebrew/homebrew-cask/pull/2731
   app "eclipse.app", target: "Scala IDE.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

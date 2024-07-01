@@ -25,4 +25,8 @@ cask "xiaomi-cloud" do
     "~/Library/Preferences/micloud.pc.xiaomi.helper.plist",
     "~/Library/Preferences/micloud.pc.xiaomi.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

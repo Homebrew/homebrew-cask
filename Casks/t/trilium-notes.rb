@@ -20,4 +20,8 @@ cask "trilium-notes" do
     "~/Library/Preferences/com.electron.trilium-notes.plist",
     "~/Library/Saved Application State/com.electron.trilium-notes.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

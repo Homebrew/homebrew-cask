@@ -24,4 +24,8 @@ cask "zotero" do
     "~/Library/Preferences/org.zotero.zotero.plist",
     "~/Library/Saved Application State/org.zotero.zotero.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

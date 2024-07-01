@@ -14,4 +14,8 @@ cask "uncolored" do
   end
 
   app "Uncolored.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

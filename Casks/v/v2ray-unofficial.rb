@@ -18,4 +18,8 @@ cask "v2ray-unofficial" do
     "~/Library/Preferences/V2Ray-Desktop",
     "~/Library/Saved Application State/com.yourcompany.V2Ray-Desktop.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
