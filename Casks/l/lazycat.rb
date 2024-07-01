@@ -18,7 +18,14 @@ cask "lazycat" do
     end
   end
 
-  depends_on macos: ">= :catalina" # >=10.15
+  depends_on macos: ">= :catalina"
 
   app "懒猫微服.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/cloud.lazycat.client.sfl3",
+    "~/Library/Preferences/cloud.lazycat.client.plist",
+    "~/Library/Saved Application State/cloud.lazycat.client.savedState",
+    "~/lazycat",
+  ]
 end
