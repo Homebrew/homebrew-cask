@@ -1,6 +1,6 @@
 cask "media-center" do
-  version "32.00.52"
-  sha256 "a31b11874a0249fe7c58f6cbeaa61331ac0d4b285f2f0a10827682efeda844a0"
+  version "32.00.58"
+  sha256 "dab21b062e35562b6320c5e0b6c9faa9618b4a60d6947ef6fa3d501514dcf201"
 
   url "https://files.jriver-cdn.com/mediacenter/channels/v#{version.major}/stable/MediaCenter#{version.no_dots}-Universal.dmg",
       verified: "files.jriver-cdn.com/mediacenter/"
