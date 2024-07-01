@@ -3,7 +3,7 @@ cask "ueli" do
 
   version "9.0.1"
   sha256 intel: "4c17bdee3365ebd76801fbfbc45e9895119aeff604f53059cba2d930c9ed3b5d",
-         arm:   "3ea010fe3d8d7c91c310bc601260cb4f7bc33ad647039657da0d33ce3ff4d60a"
+         arm:   "7e81deb4815f7d9b4904ca02572202ca0d5af6da3f356d49606ead43d72f75cb"
 
   url "https://github.com/oliverschwendener/ueli/releases/download/v#{version}/Ueli-#{version}#{arch}.dmg",
       verified: "github.com/oliverschwendener/ueli/"
