@@ -23,9 +23,9 @@ cask "lazycat" do
   app "懒猫微服.app"
 
   zap trash: [
+    "~/lazycat",
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/cloud.lazycat.client.sfl*",
     "~/Library/Preferences/cloud.lazycat.client.plist",
     "~/Library/Saved Application State/cloud.lazycat.client.savedState",
-    "~/lazycat",
   ]
 end
