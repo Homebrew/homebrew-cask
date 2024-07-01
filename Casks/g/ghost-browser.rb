@@ -17,7 +17,7 @@ cask "ghost-browser" do
   homepage "https://ghostbrowser.com/"
 
   livecheck do
-    url "http://ghostbrowser.s3.amazonaws.com/updates/macosx/manifest#{arch}"
+    url "https://ghostbrowser.s3.amazonaws.com/updates/macosx/manifest#{arch}"
     regex(/^(\d+(?:\.\d+)+)\n/i)
   end
 
