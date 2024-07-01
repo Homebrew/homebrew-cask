@@ -1,6 +1,6 @@
 cask "preform" do
-  version "3.37.3,365_67139"
-  sha256 "5c1c43f72f1b49e97a31ce3ae2d924d593b0d94e6bdd9b96d99701a83f283331"
+  version "3.37.4,368_67812"
+  sha256 "f9597ecf85b1ee1ab40ac7c4f6efa6cc456181869fb2288b19416b0c19bec2cd"
 
   url "https://downloads.formlabs.com/PreForm/Release/#{version.csv.first}/PreForm_mac_#{version.csv.first}_release_releaser_#{version.csv.second}.dmg"
   name "PreForm"
@@ -23,4 +23,8 @@ cask "preform" do
     "~/Library/Preferences/com.formlabs.PreForm.plist",
     "~/Library/Saved Application State/com.formlabs.PreForm.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
