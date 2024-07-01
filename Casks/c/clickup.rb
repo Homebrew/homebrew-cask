@@ -1,9 +1,9 @@
 cask "clickup" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.4.1,240619ic1xdwua0"
-  sha256 arm:   "aeb18efd9fc156bee8f50784facd9ece425b1fa2375cd46c5703886581ab0c30",
-         intel: "a8110b846ccca7badc9d7f170ce36d4c0466463d8f4978b1d5da04e77502ecff"
+  version "3.4.6,240628j5dpljz0a"
+  sha256 arm:   "f282bc35ed49f15cd60b792e20a70a99b33217464b00827fe8d27eb1214e98f6",
+         intel: "44fb8207d0e7741ba6fa083d1a1e6d88211db3e9bb36e63dbe8bdfb85e1f6eb9"
 
   url "https://download.todesktop.com/221003ra4tebclw/ClickUp%20#{version.csv.first}%20-%20Build%20#{version.csv.second}-#{arch}.dmg",
       verified: "download.todesktop.com/221003ra4tebclw/"
