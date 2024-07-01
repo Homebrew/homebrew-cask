@@ -9,8 +9,8 @@ cask "gamemaker" do
   homepage "https://gamemaker.io/"
 
   livecheck do
-    url "https://gamemaker.io/en/download"
-    regex(%r{href=.*?/GameMaker-(\d+(?:\.\d+)*)\.pkg.+is-primary}i)
+    url "https://gamemaker.io/en/download/mac/monthly/GameMaker.pkg"
+    strategy :header_match
   end
 
   pkg "GameMaker-#{version}.pkg"
