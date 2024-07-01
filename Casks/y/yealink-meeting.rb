@@ -1,6 +1,6 @@
 cask "yealink-meeting" do
-  version "4.6.21,f1c4aa668105371767275fbbf49bd689"
-  sha256 "21b865ee1fca9a067a266536c9a072d5aa94de3bd037f6d616e941b6af62bb14"
+  version "4.6.23,0851df859740efdab24f3066cf3dfc51"
+  sha256 "8cb9ea423dd6dac93d5fb5fdb1609725aadfd0010ec25703c39873125f6f916f"
 
   url "https://download.ylyun.com/yealink-meeting/macos/latest/Yealink-Meeting.dmg?v=#{version.csv.second}"
   name "Yealink Meeting"
@@ -20,4 +20,8 @@ cask "yealink-meeting" do
     "~/Library/Application Support/Yealink Meeting",
     "~/Library/Application Support/YealinkSdk",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
