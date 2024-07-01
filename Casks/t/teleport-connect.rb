@@ -1,6 +1,6 @@
 cask "teleport-connect" do
-  version "16.0.1"
-  sha256 "1343efb936b54f43128d37df7cd0d141d45c3c7cecefc1def37a99b8cc074108"
+  version "16.0.3"
+  sha256 "e56e756811c4a3a46094be404a94464f10f502bf6638e6bfb4da01cf2e1eed28"
 
   url "https://cdn.teleport.dev/Teleport%20Connect-#{version}.dmg",
       verified: "cdn.teleport.dev/"
@@ -20,8 +20,4 @@ cask "teleport-connect" do
     "~/Library/Preferences/gravitational.teleport.connect.plist",
     "~/Library/Saved Application State/gravitational.teleport.connect.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
