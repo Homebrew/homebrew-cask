@@ -1,4 +1,4 @@
-cask "orka-desktop@beta" do
+cask "orka-desktop" do
   version "3.0.0-beta.1"
   sha256 "73979664b53c186e28ce83962639151a63c50be3fdddad2348c7a634bdfd85d8"
 
