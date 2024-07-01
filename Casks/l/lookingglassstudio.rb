@@ -1,6 +1,6 @@
 cask "lookingglassstudio" do
-  version "1.5.1"
-  sha256 "8f7e337ab0aafc0b759840fa1d458f9bcf6df24d3167786a5c6148e3e4262df7"
+  version "1.6.0"
+  sha256 "02551ba289a65fca766f4dbcf794410d3763a0a737e4d819415245055748147b"
 
   url "https://dhtk4bwj5r21z.cloudfront.net/HoloPlayStudio/PublicLinks/LookingGlassStudio-#{version}.dmg",
       verified: "dhtk4bwj5r21z.cloudfront.net/HoloPlayStudio/PublicLinks/"
@@ -21,4 +21,8 @@ cask "lookingglassstudio" do
     "~/Library/Application Support/LookingGlassStudio",
     "~/Library/Preferences/com.lookingglassfactory.studio.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
