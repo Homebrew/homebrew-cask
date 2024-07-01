@@ -1,6 +1,6 @@
 cask "ticktick" do
-  version "6.0.00,361"
-  sha256 "cc8a3702a14a10dca54fd2c90be8fb0b3464d7d8c2e2d1b53d3d43cd081966a0"
+  version "6.0.00,363"
+  sha256 "0efa84a12ea2e0ea94b90b3172e861e7df6c27327f9133fa01e66d26c2a67869"
 
   url "https://ticktick-download-mac.s3.amazonaws.com/download/mac/TickTick_#{version.csv.first}_#{version.csv.second}.dmg",
       verified: "ticktick-download-mac.s3.amazonaws.com/download/mac/"
