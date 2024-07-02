@@ -8,8 +8,8 @@ cask "nextcloud" do
     end
   end
   on_monterey :or_newer do
-    version "3.13.0"
-    sha256 "c6aace27190509071337b3746448d3f39ce7faefe8fdf25431975a3018b396cd"
+    version "3.13.1"
+    sha256 "65199c4cb872f9d684f03f691f0a4f40fa8ae7ad8669c8c947fde397380a0d8a"
 
     livecheck do
       url :url
