@@ -23,4 +23,8 @@ cask "pronterface" do
   depends_on macos: ">= :big_sur"
 
   app "pronterface.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

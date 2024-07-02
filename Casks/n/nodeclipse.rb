@@ -20,4 +20,8 @@ cask "nodeclipse" do
   # Also renamed to avoid conflict with other eclipse Casks.
   # Original discussion: https://github.com/Homebrew/homebrew-cask/pull/8183
   app "Eclipse.app", target: "Nodeclipse.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

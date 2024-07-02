@@ -18,4 +18,8 @@ cask "redream" do
     "~/Library/Application Support/redream",
     "~/Library/Saved Application State/io.recompiled.redream.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
