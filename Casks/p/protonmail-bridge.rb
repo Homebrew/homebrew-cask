@@ -1,6 +1,6 @@
 cask "protonmail-bridge" do
-  version "3.11.1"
-  sha256 "c078746b46b4eee3047ea094f62e3eb8ac428e8aa36a583d580c58c385c66bb2"
+  version "3.12.0"
+  sha256 "bbceba62d378a40fad60ccca46ac2e8872fa024b9679c19c07a2af18a0471ea3"
 
   url "https://github.com/ProtonMail/proton-bridge/releases/download/v#{version}/Bridge-Installer.dmg",
       verified: "github.com/ProtonMail/proton-bridge/"
