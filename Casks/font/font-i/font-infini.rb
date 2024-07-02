@@ -2,7 +2,7 @@ cask "font-infini" do
   version "1.003"
   sha256 :no_check
 
-  url "http://www.cnap.graphismeenfrance.fr/infini/en/download/Infini-cnap-engl_fonts-specimen-v2.zip"
+  url "https://www.cnap.fr/sites/infini/en/download/Infini-cnap-engl_fonts-specimen-v2.zip"
   name "Infini"
   homepage "http://www.cnap.graphismeenfrance.fr/infini/en/"
 
