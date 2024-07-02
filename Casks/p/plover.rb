@@ -18,8 +18,11 @@ cask "plover" do
 
   zap trash: "~/Library/Application Support/plover/"
 
-  caveats <<~EOS
-    Version 4 is a major change and the configuration file it creates is not
-    compatible with Plover 3 or earlier. Please backup your plover.cfg.
-  EOS
+  caveats do
+    requires_rosetta
+    <<~EOS
+      Version 4 is a major change and the configuration file it creates is not
+      compatible with Plover 3 or earlier. Please backup your plover.cfg.
+    EOS
+  end
 end

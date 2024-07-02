@@ -20,4 +20,8 @@ cask "readmoreading" do
     "~/Library/Preferences/com.readmoo.electron.plist",
     "~/Library/Saved Application State/com.readmoo.electron.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

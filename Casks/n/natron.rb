@@ -30,4 +30,8 @@ cask "natron" do
   end
 
   app "Natron.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

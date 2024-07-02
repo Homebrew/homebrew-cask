@@ -13,4 +13,8 @@ cask "rq" do
   end
 
   binary "rq"
+
+  caveats do
+    requires_rosetta
+  end
 end

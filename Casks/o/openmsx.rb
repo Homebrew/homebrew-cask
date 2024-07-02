@@ -9,4 +9,8 @@ cask "openmsx" do
   homepage "https://openmsx.org/"
 
   app "openMSX.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
