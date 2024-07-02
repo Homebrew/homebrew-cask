@@ -1,5 +1,5 @@
 cask "boom-3d" do
-  version "2.1.1,102.1.1009"
+  version "2.2.0,102.2.0052"
   sha256 :no_check
 
   url "https://dfvk972795zr9.cloudfront.net/Boom3Dmac/webstore/Boom3D.dmg",
@@ -12,6 +12,8 @@ cask "boom-3d" do
     url :url
     strategy :extract_plist
   end
+
+  depends_on macos: ">= :mojave"
 
   app "Boom 3D.app"
 
