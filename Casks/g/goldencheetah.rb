@@ -14,4 +14,8 @@ cask "goldencheetah" do
   end
 
   app "GoldenCheetah.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

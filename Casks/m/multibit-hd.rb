@@ -11,4 +11,8 @@ cask "multibit-hd" do
   app "MultiBit HD.app"
 
   uninstall quit: "com.install4j.6925-4794-5772-4956.24"
+
+  caveats do
+    requires_rosetta
+  end
 end

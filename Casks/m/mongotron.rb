@@ -21,4 +21,8 @@ cask "mongotron" do
     "~/Library/Application Support/Mongotron",
     "~/Library/Caches/Mongotron",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

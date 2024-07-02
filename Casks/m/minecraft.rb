@@ -22,4 +22,8 @@ cask "minecraft" do
     "~/Library/Caches/com.mojang.minecraftlauncher",
     "~/Library/Caches/com.mojang.minecraftlauncherupdater",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

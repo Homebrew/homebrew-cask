@@ -13,4 +13,8 @@ cask "gitblade" do
   end
 
   app "GitBlade.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
