@@ -1,6 +1,6 @@
 cask "hookmark" do
-  version "6.0.1,2023.10"
-  sha256 "02a961aec10781723592f093dd24b10b95cc77882babeadff1cbb8b693c17126"
+  version "6.2,2024.05"
+  sha256 "dc13baafba9fb3512f2e8bd8f18752d8d50097c83574da7f275db9ae33b5b242"
 
   url "https://hookproductivity.com/wp-content/uploads/#{version.csv.second.major}/#{version.csv.second.minor}/Hookmark-app-#{version.csv.first}.dmg_.zip",
       user_agent: :fake
@@ -13,7 +13,7 @@ cask "hookmark" do
   end
 
   auto_updates true
-  depends_on macos: ">= :el_capitan"
+  depends_on macos: ">= :high_sierra"
 
   app "Hookmark.app"
 
