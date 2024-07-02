@@ -1,12 +1,12 @@
 cask "lando" do
   arch arm: "arm64", intel: "x64"
 
-  version "3.20.8"
-  sha256 arm:   "111a4994b1b7badc8cb91a4a29f1f7064bc1e29ef0f225e3d040b72fbb6c0037",
-         intel: "43503628455d34da6e429cc7c88cc49acca14311a6756270241a96528061c528"
+  version "3.21.0"
+  sha256 arm:   "ef66b51d104fea703afaea806743da870ad8cfc66eb14559dba84add026e168a",
+         intel: "a7ad7336a6bcf8ddd74c0615a119c71c0e4d3625b9f76afcb3af20cca322469b"
 
-  url "https://github.com/lando/lando/releases/download/v#{version}/lando-#{arch}-v#{version}.dmg",
-      verified: "github.com/lando/lando/"
+  url "https://github.com/lando/cli/releases/download/v#{version}/lando-macos-#{arch}-v#{version}",
+      verified: "github.com/lando/cli/"
   name "Lando"
   desc "Local development environment and DevOps tool built on Docker"
   homepage "https://lando.dev/"
@@ -24,21 +24,7 @@ cask "lando" do
   conflicts_with cask: "lando@edge"
   depends_on cask: "docker"
 
-  pkg "LandoInstaller.pkg",
-      choices: [
-        {
-          "choiceIdentifier" => "choiceDocker",
-          "choiceAttribute"  => "selected",
-          "attributeSetting" => 0,
-        },
-        {
-          "choiceIdentifier" => "choiceLando",
-          "choiceAttribute"  => "selected",
-          "attributeSetting" => 1,
-        },
-      ]
-
-  uninstall pkgutil: "dev.lando.pkg.lando"
+  binary "lando-macos-#{arch}-v#{version}", target: "lando"
 
   zap trash: "~/.lando"
 end
