@@ -27,4 +27,8 @@ cask "deezer" do
     "~/Library/Preferences/com.deezer.deezer-desktop.plist",
     "~/Library/Saved Application State/com.deezer.deezer-desktop.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

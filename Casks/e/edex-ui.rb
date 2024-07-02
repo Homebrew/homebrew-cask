@@ -16,4 +16,8 @@ cask "edex-ui" do
     "~/Library/Preferences/com.edex.ui.plist",
     "~/Library/Saved Application State/com.edex.ui.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

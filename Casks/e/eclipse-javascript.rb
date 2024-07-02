@@ -11,4 +11,8 @@ cask "eclipse-javascript" do
 
   # Renamed to avoid conflict with other Eclipse.
   app "Eclipse.app", target: "Eclipse JavaScript.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

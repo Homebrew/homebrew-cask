@@ -21,4 +21,8 @@ cask "easyeda" do
     "~/Library/Preferences/com.easyeda.editor.plist",
     "~/Library/Saved Application State/com.easyeda.editor.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

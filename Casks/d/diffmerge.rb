@@ -21,4 +21,8 @@ cask "diffmerge" do
     "~/Library/Preferences/SourceGear DiffMerge Preferences",
     "~/Library/Saved Application State/com.sourcegear.DiffMerge.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -28,4 +28,8 @@ cask "daedalus-mainnet" do
     "~/Library/Preferences/com.electron.daedalus-mainnet.plist",
     "~/Library/Saved Application State/com.electron.daedalus-mainnet.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

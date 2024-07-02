@@ -23,4 +23,8 @@ cask "envkey" do
     "~/Library/Logs/EnvKey",
     "~/Library/Preferences/com.envkey.EnvKeyApp.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
