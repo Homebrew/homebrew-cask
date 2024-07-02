@@ -4,7 +4,7 @@ cask "font-infini" do
 
   url "https://www.cnap.fr/sites/infini/en/download/Infini-cnap-engl_fonts-specimen-v2.zip"
   name "Infini"
-  homepage "http://www.cnap.graphismeenfrance.fr/infini/en/"
+  homepage "https://www.cnap.fr/sites/infini/en/"
 
   font "Infini-cnap-engl_fonts-specimen-v2/01_Fonts/01_Regular/infini-regular.otf"
   font "Infini-cnap-engl_fonts-specimen-v2/01_Fonts/02_Italic/infini-italic.otf"
