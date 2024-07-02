@@ -16,4 +16,8 @@ cask "ivideonserver" do
   app "IvideonServer.app"
 
   zap trash: "~/Library/Saved Application State/com.ivideon.IvideonServer.savedState"
+
+  caveats do
+    requires_rosetta
+  end
 end

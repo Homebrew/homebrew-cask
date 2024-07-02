@@ -25,4 +25,8 @@ cask "liclipse" do
     "~/Library/Preferences/com.brainwy.liclipse.rcp.product.plist",
     "~/Library/Saved Application State/com.brainwy.liclipse.rcp.product.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

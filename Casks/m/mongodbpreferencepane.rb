@@ -10,4 +10,8 @@ cask "mongodbpreferencepane" do
   deprecate! date: "2023-12-17", because: :discontinued
 
   prefpane "MongoDB.prefPane"
+
+  caveats do
+    requires_rosetta
+  end
 end

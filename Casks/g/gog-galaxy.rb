@@ -32,4 +32,8 @@ cask "gog-galaxy" do
     "~/Library/Preferences/com.gog.galaxy.plist",
     "~/Library/Saved Application State/com.gog.galaxy.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

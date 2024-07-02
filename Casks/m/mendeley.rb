@@ -20,6 +20,7 @@ cask "mendeley" do
   ]
 
   caveats do
+    requires_rosetta
     <<~EOS
       mendeley-reference-manager is the successor to this software:
 
