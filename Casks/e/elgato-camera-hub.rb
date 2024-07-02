@@ -1,6 +1,6 @@
 cask "elgato-camera-hub" do
-  version "1.10.1.3357"
-  sha256 "c9987f5ce929d65cc25e7622fd0cbf51740acc573bb0bd791ce41222712e382c"
+  version "1.10.2.3481"
+  sha256 "0f355438a81eb606f6e0784f2d6d07de8eec6897cc5e12d64988653d9feb793f"
 
   url "https://edge.elgato.com/egc/macos/echm/#{version.major_minor_patch}/Camera_Hub_#{version}.pkg"
   name "Elgato Camera Hub"
