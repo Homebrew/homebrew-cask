@@ -1,12 +1,14 @@
 cask "vnote" do
-  version "3.17.0"
-  sha256 "7adeaf277dba716a8b6eb300b803d55e84a5e93ba34dcf6497b2680b1834bef2"
+  version "3.18.0"
+  sha256 "3720cea666f2c7e44bba1729f6bde39f4acd2b3d3c2cd014e228388c67f1e613"
 
-  url "https://github.com/vnotex/vnote/releases/download/v#{version}/vnote-mac-x64-qt5.15.2_v#{version}.zip",
+  url "https://github.com/vnotex/vnote/releases/download/v#{version}/vnote-#{version}-mac-universal.zip",
       verified: "github.com/vnotex/vnote/"
   name "VNote"
   desc "Note-taking platform"
   homepage "https://vnotex.github.io/vnote/"
+
+  depends_on macos: ">= :monterey"
 
   app "VNote.app"
 
@@ -15,8 +17,4 @@ cask "vnote" do
     "~/Library/Preferences/com.vnotex.vnote.plist",
     "~/Library/Preferences/VNote",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
