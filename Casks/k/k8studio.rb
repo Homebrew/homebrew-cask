@@ -1,18 +1,23 @@
+# typed: true
+# frozen_string_literal: true
+
 cask "k8studio" do
-  version "1.0.11-beta"
+  version "1.0.11"
 
-
-  if Hardware::CPU.intel?
-    url "https://github.com/guiqui/k8Studio/releases/download/v1.0.11-beta/K8Studio-1.0.11-beta.dmg"
-    sha256 "c78651df1b92abd9a55dfb4c89129d046b04d19cda634759af204c59b102373e"
-  else
-    url "https://github.com/guiqui/k8Studio/releases/download/v1.0.11-beta/K8Studio-1.0.11-beta-arm64.dmg"
+  on_arm do
     sha256 "77f5e0b4fb2d74070ef9b3a8d55e11fed326e9a4941ae855272a412983bd843b"
+
+    url "https://github.com/guiqui/k8Studio/releases/download/v1.0.11-beta/K8Studio-1.0.11-beta-arm64.dmg"
+  end
+  on_intel do
+    sha256 "c78651df1b92abd9a55dfb4c89129d046b04d19cda634759af204c59b102373e"
+
+    url "https://github.com/guiqui/k8Studio/releases/download/v1.0.11-beta/K8Studio-1.0.11-beta.dmg"
   end
 
   name "K8studio"
-  desc "K8studio Kubernetes GUI"
-  homepage "https://k8studio.io"
+  desc "Kubernetes GUI"
+  homepage "https://k8studio.io/"
 
   app "K8Studio.app"
 
@@ -23,4 +28,3 @@ cask "k8studio" do
     EOS
   end
 end
-
