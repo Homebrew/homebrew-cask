@@ -2,12 +2,12 @@ cask "dosbox-x" do
   arch arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "2024.03.01,20240301150043"
-    sha256 "e88472dafbb28acaf09343897be94cabcaae9c059d976a24f585cc90d31f00c6"
+    version "2024.07.01,20240702034526"
+    sha256 "e5b78f52358eb151843538146a2eb1c77aa89216da3cb288fc21a84903d15b90"
   end
   on_intel do
-    version "2024.03.01,20240301163105"
-    sha256 "431a8d18f331f6eeed8333c7be0f9caad211df72c5277773a8ff3c1da659f5c0"
+    version "2024.07.01,20240702034526"
+    sha256 "f80d9d73f00c52a4520fecffea647d058a31bed880427b904992ecad44e55d2d"
   end
 
   url "https://github.com/joncampbell123/dosbox-x/releases/download/dosbox-x-v#{version.csv.first}/dosbox-x-macosx-#{arch}-#{version.csv.second}.zip",
