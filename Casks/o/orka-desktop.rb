@@ -9,7 +9,7 @@ cask "orka-desktop" do
 
   livecheck do
     url :url
-    regex(/v?(\d+(?:\.\d+)+-beta\.\d+)/i)
+    regex(/v?(\d+(?:\.\d+)+(?:-beta\.\d+)?)/i)
     strategy :github_latest
   end
 
