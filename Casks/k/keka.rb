@@ -1,6 +1,6 @@
 cask "keka" do
-  version "1.4.2"
-  sha256 "cac175915ecbf5210eda10ebce89ef50d3109a4f2dc1795a4a1af08054149044"
+  version "1.4.3"
+  sha256 "c723b6e64adafdfb8bbb05a7a808facb9ad252a35a7f17d0ae3a74abafcab386"
 
   url "https://github.com/aonez/Keka/releases/download/v#{version}/Keka-#{version}.dmg",
       verified: "github.com/aonez/Keka/"
