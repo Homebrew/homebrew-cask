@@ -4,11 +4,18 @@ cask "boxcryptor" do
     sha256 "386defb15f934561541929ddfe9305fb6a44121b59804810f641b52986996a0b"
 
     livecheck do
-      url "https://www.boxcryptor.com/en/help/about/macos/"
-      regex(/Download\s+v?(\d+(?:\.\d+)+)\s+for\s+macOS\s+10\.1[0-5]/i)
+      skip "Legacy version"
     end
   end
-  on_big_sur :or_newer do
+  on_big_sur do
+    version "2.46.1668"
+    sha256 "0cd09325a1bb9716cd56b67ca8c080d5d0e6ea77c2360cdf15d1368c4725869f"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_monterey :or_newer do
     version "3.13.680"
     sha256 "b2f4ba62013636bd2db3685eb7c3d9dae3a919eee25b09945ccdc95a9146b05d"
 
@@ -23,7 +30,7 @@ cask "boxcryptor" do
   desc "Tool to encrypt files and folders in various cloud storage services"
   homepage "https://www.boxcryptor.com/en/"
 
-  depends_on macos: ">= :mojave"
+  depends_on macos: ">= :catalina"
 
   app "Boxcryptor.app"
 
