@@ -121,21 +121,6 @@ module CiMatrix
 
     changed_files = tap.changed_files
 
-    ruby_files_in_wrong_directory =
-      changed_files[:modified_ruby_files] - (
-      changed_files[:modified_cask_files] +
-      changed_files[:modified_command_files] +
-      changed_files[:modified_github_actions_files]
-    )
-
-    if ruby_files_in_wrong_directory.any?
-      ruby_files_in_wrong_directory.each do |path|
-        puts "::error file=#{path}::File is in wrong directory."
-      end
-
-      odie "Found Ruby files in wrong directory:\n#{ruby_files_in_wrong_directory.join("\n")}"
-    end
-
     cask_files_to_check = if cask_names.any?
       cask_names.map do |cask_name|
         Cask::CaskLoader.find_cask_in_tap(cask_name, tap).relative_path_from(tap.path)
