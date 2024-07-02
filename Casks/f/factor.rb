@@ -16,5 +16,6 @@ cask "factor" do
 
   caveats do
     path_environment_variable "#{appdir}/factor"
+    requires_rosetta
   end
 end

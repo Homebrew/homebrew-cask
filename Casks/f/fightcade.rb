@@ -23,4 +23,8 @@ cask "fightcade" do
     "~/Library/Preferences/com.fightcade*.plist",
     "~/Library/Saved Application State/com.fightcade*.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

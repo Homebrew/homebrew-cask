@@ -19,4 +19,8 @@ cask "electrocrud" do
     "~/Library/Preferences/com.garrylachman.electrocrud.plist",
     "~/Library/Saved Application State/com.garrylachman.electrocrud.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

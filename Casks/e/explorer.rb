@@ -13,4 +13,8 @@ cask "explorer" do
     "~/Library/Application Support/Explorer",
     "~/Library/Caches/Explorer",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

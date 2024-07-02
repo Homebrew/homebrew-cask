@@ -22,4 +22,8 @@ cask "electrum" do
     "~/Library/Preferences/org.org.pythonmac.unspecified.Electrum.plist",
     "~/Library/Saved Application State/Electrum.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -14,4 +14,8 @@ cask "doomsday-engine" do
 
   app "Doomsday.app"
   app "Doomsday Shell.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
