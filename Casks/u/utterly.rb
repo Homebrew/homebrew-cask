@@ -1,5 +1,5 @@
 cask "utterly" do
-  version "0.9.0-SNAPSHOT-140e1bc"
+  version "1.0.0-SNAPSHOT-5d888fe"
   sha256 :no_check
 
   url "https://www.utterly.app/Utterly.pkg"
