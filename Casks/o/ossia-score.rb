@@ -1,4 +1,4 @@
-cask "score" do
+cask "ossia-score" do
   version "3.2.3-2"
   sha256 "300c63f98e3e641df121f8b0244bf24f38b5181b49b3f222d39676ff866d5438"
 
