@@ -11,6 +11,11 @@ cask "heynote" do
   desc "Dedicated scratchpad for developers"
   homepage "https://heynote.com/"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   depends_on macos: ">= :catalina"
 
   app "Heynote.app"
