@@ -6,11 +6,6 @@ cask "simplefloatingclock" do
   name "Simple Floating Clock"
   homepage "http://www.splook.com/Software/Simple_Floating_Clock.html"
 
-  livecheck do
-    url :homepage
-    regex(/Simple\s+Floating\s+Clock\s+(\d(?:\.\d+)+)/i)
-  end
-
   disable! date: "2024-05-09", because: :unmaintained
 
   app "Simple Floating Clock/SimpleFloatingClock.app"
