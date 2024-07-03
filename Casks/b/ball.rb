@@ -4,12 +4,12 @@ cask "ball" do
 
   url "https://github.com/nate-parrott/ball/releases/download/v#{version}/Ball.dmg"
   name "Ball"
-  desc "It's a little  that lives in your dock"
+  desc "Utility that adds a ball to your dock"
   homepage "https://github.com/nate-parrott/ball"
 
   depends_on macos: ">= :ventura"
 
-  # No zap stanza required
-
   app "Ball.app"
+
+  # No zap stanza required
 end
