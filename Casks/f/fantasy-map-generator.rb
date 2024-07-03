@@ -6,11 +6,6 @@ cask "fantasy-map-generator" do
     url "https://github.com/Azgaar/Fantasy-Map-Generator/releases/download/current/fmg-darwin-arm64.zip",
         verified: "github.com/Azgaar/Fantasy-Map-Generator/"
 
-    livecheck do
-      url :url
-      strategy :extract_plist
-    end
-
     app "Azgaars_Fantasy_Map_Generator.app"
   end
   on_intel do
@@ -20,16 +15,14 @@ cask "fantasy-map-generator" do
     url "https://github.com/Azgaar/Fantasy-Map-Generator/releases/download/v#{version}/FMG-macos-x64.dmg",
         verified: "github.com/Azgaar/Fantasy-Map-Generator/"
 
-    livecheck do
-      skip "Legacy version"
-    end
-
     app "Azgaar's Fantasy Map Generator.app"
   end
 
   name "Azgaar's Fantasy Map Generator"
   desc "Generate interactive and highly customizable maps"
   homepage "https://azgaar.github.io/Fantasy-Map-Generator"
+
+  disable! date: "2024-07-03", because: :no_longer_available
 
   zap trash: [
     "~/Library/Application Support/azgaars-fantasy-map-generator-nativefier-2aab42",
