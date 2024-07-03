@@ -1,5 +1,5 @@
 cask "jabra-direct" do
-  version "6.15.10901"
+  version "6.16.15901"
   sha256 :no_check
 
   url "https://jabraxpressonlineprdstor.blob.core.windows.net/jdo/JabraDirectSetup.dmg",
@@ -14,6 +14,7 @@ cask "jabra-direct" do
   end
 
   auto_updates true
+  depends_on macos: ">= :catalina"
 
   pkg "JabraDirectSetup.pkg"
 
@@ -43,4 +44,8 @@ cask "jabra-direct" do
     "~/Library/Preferences/com.jabra.prefsettings.plist",
     "~/Library/Saved Application State/com.jabra.directonline.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
