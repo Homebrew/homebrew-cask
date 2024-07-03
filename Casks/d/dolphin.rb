@@ -9,7 +9,7 @@ cask "dolphin" do
 
   livecheck do
     url "https://dolphin-emu.org/download/"
-    regex(/href=.*?dolphin[._-]v?(\d+(?:\.\d+)*)(?:[._-]universal)?\.dmg/i)
+    regex(/href=.*?dolphin[._-]v?(\d+(?:\.\d+)*[a-z]?)(?:[._-]universal)?\.dmg/i)
   end
 
   conflicts_with cask: [
