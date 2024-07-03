@@ -4,7 +4,7 @@ cask "positron" do
 
   url "https://github.com/posit-dev/positron/releases/download/#{version}/Positron-#{version}.dmg"
   name "Positron"
-  desc "Next-generation data science IDE"
+  desc "Data science IDE"
   homepage "https://github.com/posit-dev/positron"
 
   depends_on macos: ">= :catalina"
