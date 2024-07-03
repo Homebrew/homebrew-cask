@@ -21,4 +21,8 @@ cask "shureplus-motiv" do
     "~/Library/Logs/ShurePlus MOTIV",
     "~/Library/Saved Application State/com.shure.motiv.desktop.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
