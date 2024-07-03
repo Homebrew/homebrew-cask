@@ -23,6 +23,8 @@ cask "microsoft-teams@classic" do
     strategy :header_match
   end
 
+  deprecate! date: "2024-07-03", because: :discontinued
+
   auto_updates true
   conflicts_with cask: "microsoft-office-businesspro"
   depends_on macos: ">= :el_capitan"
