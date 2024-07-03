@@ -34,5 +34,9 @@ cask "kdiff3" do
     EOS
   end
 
-  zap trash: "~/.kdiff3rc"
+  zap trash: [
+    "~/.kdiff3rc",
+    "~/Library/Application Support/kdiff3",
+    "~/Library/Preferences/kdiff3rc",
+  ]
 end
