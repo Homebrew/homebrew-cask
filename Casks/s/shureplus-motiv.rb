@@ -9,7 +9,7 @@ cask "shureplus-motiv" do
 
   livecheck do
     url "https://www.shure.com/en-US/support/downloads/software-firmware-archive/shure_plus_motiv_desktop"
-    regex(/<span\sclass="firmware__version">\n?\t+?(\d+(?:\.\d+)+)/i)
+    regex(/href=.*MOTIV[._-]Desktop[._-]macOS[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
   app "ShurePlus MOTIV.app"
