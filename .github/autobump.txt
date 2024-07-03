@@ -516,6 +516,7 @@ polypane
 popo
 popsql
 portfolioperformance
+positron
 postman
 postman-agent
 postman-cli
