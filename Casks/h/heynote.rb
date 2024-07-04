@@ -1,9 +1,9 @@
 cask "heynote" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.7.0"
-  sha256 arm:   "c82de320188a5422c8fb0dff2bc11b69a114433b7a5b02bd99acb41152061500",
-         intel: "656d44c6f6d8beadb34eee30181a3d9d677d8173846f692c622980f16bc12127"
+  version "1.7.1"
+  sha256 arm:   "ae23c0c7b9a46a3b989e1f9cc7fd3a02a897c50295a0e6137610ba840850e855",
+         intel: "0148e14683238f5d798c5ae10e195f755827a8648348f287dee28ba6aa992731"
 
   url "https://github.com/heyman/heynote/releases/download/v#{version}/Heynote_#{version}_#{arch}.dmg",
       verified: "github.com/heyman/heynote/"
