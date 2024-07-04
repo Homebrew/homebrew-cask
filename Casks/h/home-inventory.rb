@@ -7,10 +7,7 @@ cask "home-inventory" do
   desc "Documentation application for home and belongings"
   homepage "https://binaryformations.com/products/home-inventory/"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  deprecate! date: "2024-07-04", because: :discontinued
 
   depends_on macos: ">= :sierra"
 
