@@ -1,6 +1,6 @@
 cask "whatsapp@legacy" do
-  version "2.2422.51"
-  sha256 "988e5021884a37b0bd776043dba2e8b3e73d5cd8b6a0b57e1b54996631dfa050"
+  version "2.2425.52"
+  sha256 "acd505e9bdcd4339dd744cc8854b283f7608884a19404a8c1938ee8edd850108"
 
   url "https://web.whatsapp.com/desktop/mac/files/release-#{version}.zip"
   name "WhatsApp Legacy"
@@ -32,4 +32,8 @@ cask "whatsapp@legacy" do
     "~/Library/Preferences/WhatsApp.plist",
     "~/Library/Saved Application State/WhatsApp.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
