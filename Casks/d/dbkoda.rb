@@ -8,10 +8,7 @@ cask "dbkoda" do
   desc "Open-source, next generation IDE for MongoDB"
   homepage "https://www.dbkoda.com/"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  deprecate! date: "2024-07-04", because: :discontinued
 
   app "dbKoda.app"
 
@@ -23,4 +20,8 @@ cask "dbkoda" do
     "~/Library/Preferences/com.southbanksoftware.dbkoda.plist",
     "~/Library/Saved Application State/com.southbanksoftware.dbkoda.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
