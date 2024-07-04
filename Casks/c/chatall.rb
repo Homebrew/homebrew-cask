@@ -1,9 +1,9 @@
 cask "chatall" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.80.106"
-  sha256 arm:   "cdd4bcc4dbfcbc09f94fc2785135e17f109b7e9138aa3134db0d3f0188e6ca7e",
-         intel: "13a564f19dd7706c134d18b6f6988f5a376fa45273502b79320868001e80c2e1"
+  version "1.82.107"
+  sha256 arm:   "cc589529b9dad36c80d0d549229f52a5f7e74d42ab8ceecb536ab269268824f9",
+         intel: "5451155e7e7ce98850f7110784ae694805de55259d89fc5a6e112e6d45ca58a0"
 
   url "https://github.com/sunner/ChatALL/releases/download/v#{version}/ChatALL-#{version}-mac-#{arch}.dmg"
   name "ChatALL"
