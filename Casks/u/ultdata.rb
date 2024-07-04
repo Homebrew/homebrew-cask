@@ -1,15 +1,15 @@
 cask "ultdata" do
-  version "9.7.27.12"
-  sha256 :no_check
+  version "1053"
+  sha256 "1ecbd8c186d7e9c68bd5005de9fa3a135c5c86fc458a182953c05f2b778354e6"
 
-  url "https://download.tenorshare.com/downloads/ultdata-ios-mac.dmg"
+  url "https://download.tenorshare.com/downloads/ultdata-ios-mac_#{version}.dmg"
   name "UltData"
   desc "iPhone data recovery software"
   homepage "https://www.tenorshare.com/products/iphone-data-recovery.html"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url :homepage
+    regex(/href=.*?ultdata-ios-mac[._-]v?(\d+(?:\.\d+)*)\.dmg/i)
   end
 
   auto_updates true
@@ -23,4 +23,8 @@ cask "ultdata" do
     "~/Library/Preferences/com.tenorshare.TenorshareUltData.plist",
     "~/Library/Saved Application State/com.tenorshare.TenorshareUltData.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
