@@ -11,13 +11,13 @@ cask "idrive" do
   livecheck do
     url "https://static.idriveonlinebackup.com/downloads/version_mac.js"
     strategy :page_match do |page|
-      version = page.match(/Version:?\s*(\d+(?:\.\d+)*)/i)
-      next if version.blank?
+      version_match = page.match(/Version:?\s*v?(\d+(?:\.\d+)+)/i)
+      next if version_match.blank?
 
-      download_id = page.match(%r{downloads/(\w+)/}i)
-      next if download_id.blank?
+      id_match = page.match(%r{downloads/([^/]+?)/}i)
+      next if id_match.blank?
 
-      "#{version[1]},#{download_id[1]}"
+      "#{version_match[1]},#{id_match[1]}"
     end
   end
 
