@@ -3,11 +3,11 @@ cask "gcc-arm-embedded" do
   # https://github.com/Homebrew/homebrew-core/pull/45780#issuecomment-569246452
   arch arm: "arm64", intel: "x86_64"
 
-  version "13.2.rel1"
-  pkg_version = "13.2.Rel1"
-  gcc_version = "13.2.1"
-  sha256 arm:   "57343df9a2d7c5c587b59ad011bf516ca286f6f9d0ef5957a3ad251f5579fd16",
-         intel: "cba310dcd5e5b7f443ffea3ae4d6e00d757a616eb824ace6158c7473a8e2b33c"
+  version "13.3.rel1"
+  pkg_version = "13.3.Rel1"
+  gcc_version = "13.3.1"
+  sha256 arm:   "926af5163d173cd115a576a4e20ce74c29565bc99b478c81450f8069cdffd3bc",
+         intel: "bbe9e9ce68bdd4f4baf380c25fe677ed1bd0fbb43d843fa7f4f48f47e56c748d"
 
   url "https://developer.arm.com/-/media/Files/downloads/gnu/#{version}/binrel/arm-gnu-toolchain-#{version}-darwin-#{arch}-arm-none-eabi.pkg"
   name "GCC ARM Embedded"
@@ -52,7 +52,7 @@ cask "gcc-arm-embedded" do
   binary "/Applications/ArmGNUToolchain/#{pkg_version}/arm-none-eabi/bin/arm-none-eabi-strings"
   binary "/Applications/ArmGNUToolchain/#{pkg_version}/arm-none-eabi/bin/arm-none-eabi-strip"
 
-  uninstall pkgutil: "arm-gnu-toolchain-#{pkg_version}-darwin-#{arch}-arm-none-eabi",
+  uninstall pkgutil: "arm-gnu-toolchain-#{version}-darwin-#{arch}-arm-none-eabi",
             delete:  "/Applications/ArmGNUToolchain/#{pkg_version}/arm-none-eabi",
             rmdir:   [
               "/Applications/ArmGNUToolchain",
