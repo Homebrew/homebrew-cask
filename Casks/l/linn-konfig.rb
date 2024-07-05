@@ -7,11 +7,6 @@ cask "linn-konfig" do
   desc "Control software for audio equipment"
   homepage "https://www.linn.co.uk/software"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
-
   deprecate! date: "2023-12-17", because: :discontinued
 
   pkg "konfig_latest_osx.pkg"
