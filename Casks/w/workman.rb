@@ -8,11 +8,6 @@ cask "workman" do
   desc "Alternative English keyboard layout"
   homepage "https://workmanlayout.org/"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
-
   deprecate! date: "2024-06-21", because: :unmaintained
 
   keyboard_layout "Workman-master/mac/Workman.bundle"
