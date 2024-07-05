@@ -7,10 +7,11 @@ cask "pashua" do
   desc "Native dialogs for scripting languages"
   homepage "https://www.bluem.net/en/mac/pashua/"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  deprecate! date: "2024-07-05", because: :unmaintained
 
   app "Pashua.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
