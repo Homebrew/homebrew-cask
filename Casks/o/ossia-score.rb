@@ -1,6 +1,6 @@
 cask "ossia-score" do
-  version "3.2.3-2"
-  sha256 "300c63f98e3e641df121f8b0244bf24f38b5181b49b3f222d39676ff866d5438"
+  version "3.2.3-3"
+  sha256 "cc98bc08d5719842f8ddf895e5c28aa08e37fbbea471c28d8fc4a9c2d5e0629f"
 
   url "https://github.com/ossia/score/releases/download/v#{version}/ossia.score-#{version}-macOS.dmg",
       verified: "github.com/ossia/score/"
