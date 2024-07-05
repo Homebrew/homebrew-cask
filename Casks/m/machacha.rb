@@ -7,10 +7,7 @@ cask "machacha" do
   desc "Split archives into smaller parts and join them when requested"
   homepage "http://www.julifos.com/soft/machacha/"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  deprecate! date: "2024-07-05", because: :unmaintained
 
   app "MacHacha.app"
 
@@ -18,4 +15,8 @@ cask "machacha" do
     "~/Library/Preferences/com.pescadosweb.machacha.plist",
     "~/Library/Saved Application State/com.pescadosweb.machacha.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
