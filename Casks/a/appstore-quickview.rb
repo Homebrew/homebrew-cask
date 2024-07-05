@@ -7,10 +7,7 @@ cask "appstore-quickview" do
   desc "Quickview for the App Store"
   homepage "https://www.marcmoini.com/aq_en.html"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  disable! date: "2024-07-05", because: :unmaintained
 
   app "App...Store Quickview.app"
 end
