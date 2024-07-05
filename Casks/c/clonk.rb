@@ -8,10 +8,7 @@ cask "clonk" do
   desc "Single player and multiplayer action game"
   homepage "http://www.clonk.de/cr.php"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  disable! date: "2024-07-05", because: :unmaintained
 
   app "Clonk.app"
 end
