@@ -7,10 +7,7 @@ cask "midistroke" do
   desc "Converts midi note, program or CC messages into keystrokes"
   homepage "https://www.charlie-roberts.com/midiStroke/"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  disable! date: "2024-07-05", because: :unmaintained
 
   app "midiStroke.app"
 
