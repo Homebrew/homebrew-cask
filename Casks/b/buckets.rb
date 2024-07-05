@@ -1,9 +1,9 @@
 cask "buckets" do
   arch arm: "arm64", intel: "amd64"
 
-  version "0.72.2"
-  sha256 arm:   "9f9104a700d5546fe55161b7c5e41ec12b2f57ff64d96236a13905cb508eb42c",
-         intel: "a0b02ee94a648fcd26c7d4ad18abcf241ee89fa972ace8ede84ee741fdbfa1d0"
+  version "0.75.0"
+  sha256 arm:   "61d576908eff4cc2970bb5809a34ac437167e759211abba67b50a1f76bae0214",
+         intel: "91a7fcbbeb603d00b6987ab94a4630176702b4afd30dd999687339a48673dd9b"
 
   url "https://github.com/buckets/application/releases/download/v#{version}/Buckets-#{arch}-#{version}.dmg",
       verified: "github.com/buckets/application/"
