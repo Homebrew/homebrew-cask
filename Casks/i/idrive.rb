@@ -1,21 +1,31 @@
 cask "idrive" do
-  version "3.5.10.79"
-  sha256 :no_check
+  version "3.5.10.80,070624"
+  sha256 "231518ded3b6273e56ae68c98bfb068d90c6a7e836fa761f29ad8d402d243714"
 
-  url "https://www.idrive.com/downloads/IDrive.dmg"
+  url "https://static.idriveonlinebackup.com/downloads/#{version.csv.second}/IDrive.dmg",
+      verified: "static.idriveonlinebackup.com/downloads/"
   name "iDrive"
   desc "Cloud backup and storage solution"
   homepage "https://www.idrive.com/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://static.idriveonlinebackup.com/downloads/version_mac.js"
+    strategy :page_match do |page|
+      version_match = page.match(/Version:?\s*v?(\d+(?:\.\d+)+)/i)
+      next if version_match.blank?
+
+      id_match = page.match(%r{downloads/([^/]+?)/}i)
+      next if id_match.blank?
+
+      "#{version_match[1]},#{id_match[1]}"
+    end
   end
 
   pkg "IDrive.pkg"
 
   uninstall launchctl: [
               "com.iDrive.FinderPluginApp",
+              "com.prosoftnet.DaemonHelper",
               "IDriveDaemon",
               "IDSyncDaemon",
               "IDWifiManager",
