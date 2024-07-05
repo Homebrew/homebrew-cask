@@ -9,12 +9,18 @@ cask "gitfox" do
   homepage "https://www.gitfox.app/"
 
   livecheck do
-    url "https://storage.googleapis.com/gitfox/Gitfox.latest.stable.zip"
-    strategy :extract_plist
+    url "https://api.gitfox.app/v1/versions"
+    strategy :json do |json|
+      json.dig("response", "builds")&.map do |item|
+        next if !item["short_version_string"] || !item["build"]
+
+        "#{item["short_version_string"]},#{item["build"]}"
+      end
+    end
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  depends_on macos: ">= :ventura"
 
   app "Gitfox.app"
   binary "#{appdir}/Gitfox.app/Contents/SharedSupport/bin/gitfox-cli", target: "gitfox"
