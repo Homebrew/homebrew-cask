@@ -13,11 +13,6 @@ cask "spideroakone" do
   desc "Cloud backup and storage"
   homepage "https://spideroak.com/"
 
-  livecheck do
-    url :url
-    strategy :header_match
-  end
-
   disable! date: "2024-06-07", because: :no_longer_available
 
   depends_on macos: ">= :high_sierra"
