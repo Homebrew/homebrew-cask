@@ -1,8 +1,8 @@
 cask "freecol" do
-  version "1.1.0"
-  sha256 "8cf26aa6c051835d1b0f7c35ce29bb2875d26096afaf9cd46ea00961b18c85e1"
+  version "1.2.0"
+  sha256 "3bf9b810ef9288440620090869b0778c52d91c234f92d728d3c8b138e38676ac"
 
-  url "https://downloads.sourceforge.net/freecol/freecol-#{version}.dmg",
+  url "https://downloads.sourceforge.net/freecol/FreeCol-#{version}.dmg",
       verified: "sourceforge.net/freecol/"
   name "FreeCol"
   desc "Turn-based strategy game"
