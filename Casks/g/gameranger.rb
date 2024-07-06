@@ -6,10 +6,7 @@ cask "gameranger" do
   name "GameRanger"
   homepage "https://gameranger.com/"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  disable! date: "2024-07-05", because: :unmaintained
 
   app "GameRanger.app"
 
