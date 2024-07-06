@@ -1,16 +1,16 @@
 cask "lotus" do
   version "1.3.2"
-  sha256 :no_check
+  sha256 "ca1535e7f2a2a83aad3b6b3cf694d17932d2e61a17ba4044f1b15fd1ac31ca5c"
 
-  url "https://app-updates.vadimdemedes.com/lotus/download/osx",
+  url "https://app-updates.vadimdemedes.com/lotus/download/Lotus-#{version}-mac.zip",
       verified: "app-updates.vadimdemedes.com/lotus/download/"
   name "Lotus"
   desc "Keep up with GitHub notifications"
   homepage "https://getlotus.app/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://app-updates.vadimdemedes.com/lotus/download/osx"
+    strategy :header_match
   end
 
   depends_on macos: ">= :el_capitan"
