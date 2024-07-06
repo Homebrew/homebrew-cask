@@ -6,12 +6,10 @@ cask "guild-wars2" do
   url "https://gw2cdn.s3.amazonaws.com/client/branches/Gw2Setup-64.dmg",
       verified: "gw2cdn.s3.amazonaws.com/"
   name "Guild Wars 2"
+  desc "Online roleplaying game"
   homepage "https://www.guildwars2.com/"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  disable! date: "2024-07-06", because: :discontinued
 
   app "Guild Wars 2 64-bit.app"
 
@@ -20,4 +18,8 @@ cask "guild-wars2" do
     "~/Library/Preferences/net.arena.Guild-Wars-2.plist",
     "~/Library/Saved Application State/net.arena.Guild-Wars-2.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
