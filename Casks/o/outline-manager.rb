@@ -3,7 +3,7 @@ cask "outline-manager" do
   sha256 "9c5ccba90834056bcf18ee0ca84d3e036483f503576966da020450bc5bdd1a1d"
 
   url "https://s3.amazonaws.com/outline-releases/manager/macos/stable/Outline-Manager.dmg",
-      verified: "https://s3.amazonaws.com/outline-releases/manager/macos/"
+      verified: "s3.amazonaws.com/outline-releases/manager/macos/"
   name "Outline Manager"
   desc "Tool to create and manage Outline servers, powered by Shadowsocks"
   homepage "https://www.getoutline.org/"
