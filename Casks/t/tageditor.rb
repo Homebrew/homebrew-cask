@@ -2,7 +2,7 @@ cask "tageditor" do
   version "1.0.15,1249"
   sha256 :no_check
 
-  url "https://amvidia.com/download-tag-editor-mac-native.dmg.zip"
+  url "https://amvidia.com/downloads/tag-editor-mac.dmg"
   name "Tag Editor"
   desc "Spreadsheet style tag editor for audio files"
   homepage "https://amvidia.com/tag-editor"
@@ -11,6 +11,8 @@ cask "tageditor" do
     url :url
     strategy :extract_plist
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "Tag Editor.app"
 
