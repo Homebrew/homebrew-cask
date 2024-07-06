@@ -1,6 +1,6 @@
 cask "gaphor" do
-  version "2.25.1"
-  sha256 "57e04d5aae8185d81e22f94210821e3fa2f16fa50103d9d04890cc5c04e28bd6"
+  version "2.26.0"
+  sha256 "659a602db8e5f3404260fbd05bf4bbdce299ae55370ddbe1fe03c99a60a32fee"
 
   url "https://github.com/gaphor/gaphor/releases/download/#{version}/Gaphor-#{version}.dmg",
       verified: "github.com/gaphor/gaphor/"
@@ -18,4 +18,8 @@ cask "gaphor" do
     "~/.cache/gaphor",
     "~/.local/share/gaphor",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
