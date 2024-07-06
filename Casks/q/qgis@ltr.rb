@@ -1,6 +1,6 @@
 cask "qgis@ltr" do
-  version "3.34.7,20240517_162727"
-  sha256 "5d178bafc9adb54ad3e9f8b1e46542ac8de8d2a983540c45711ebf6afba9342a"
+  version "3.34.8,20240705_155110"
+  sha256 "51f2fdcf66133c6e9572344346b55a2f7ba8177c49b33bf329cded780870f401"
 
   url "https://qgis.org/downloads/macos/ltr/qgis_ltr_final-#{version.csv.first.dots_to_underscores}_#{version.csv.second}.dmg"
   name "QGIS LTR"
@@ -26,4 +26,8 @@ cask "qgis@ltr" do
     "~/Library/Caches/QGIS",
     "~/Library/Saved Application State/org.qgis.qgis*.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
