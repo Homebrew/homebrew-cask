@@ -1,5 +1,5 @@
 cask "nordpass" do
-  version "5.17.26"
+  version "5.18.7"
   sha256 :no_check
 
   url "https://downloads.npass.app/mac/NordPass.dmg",
@@ -29,4 +29,8 @@ cask "nordpass" do
     "~/Library/Preferences/com.nordsec.nordpass.plist",
     "~/Library/Saved Application State/com.nordsec.nordpass.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
