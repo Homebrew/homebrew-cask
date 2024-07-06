@@ -22,4 +22,8 @@ cask "clickcharts" do
     "~/Library/LaunchAgents/com.nchsoftware.clickcharts.schedule.LikeSurvey.plist",
     "~/Library/Preferences/ByHost/com.nchsoftware.clickcharts.*.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
