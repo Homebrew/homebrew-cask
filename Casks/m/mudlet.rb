@@ -1,6 +1,6 @@
 cask "mudlet" do
-  version "4.17.2"
-  sha256 "3aedd1803d8c3daa978eb39276885c15c30dccd3ee9969f8625ffe74222e3dfa"
+  version "4.18.1"
+  sha256 "21c089822969d4c757d38144a31765c31a4ee293e022bb529555304a61af08a9"
 
   url "https://www.mudlet.org/wp-content/files/Mudlet-#{version}.dmg"
   name "Mudlet"
@@ -21,4 +21,8 @@ cask "mudlet" do
     "~/Library/Saved Application State/org.mudlet.mudlet.savedState",
     "~/mudlet-data",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
