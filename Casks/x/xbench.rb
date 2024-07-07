@@ -7,10 +7,7 @@ cask "xbench" do
   desc "Benchmarking software"
   homepage "http://xbench.com/"
 
-  livecheck do
-    url :homepage
-    regex(/href=.*?Xbench[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
-  end
+  disable! date: "2024-07-07", because: :unmaintained
 
   app "XBench.app"
 end
