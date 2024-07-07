@@ -12,6 +12,8 @@ cask "yousician" do
     strategy :extract_plist
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "Yousician Launcher.app"
 
   zap trash: [
