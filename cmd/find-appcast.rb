@@ -14,17 +14,15 @@ module Homebrew
   module Cmd
     class FindAppcastCmd < AbstractCommand
       cmd_args do
-        Homebrew::CLI::Parser.new do
-          usage_banner <<~EOS
-            `find-appcast` <app_path>
+        usage_banner <<~EOS
+          `find-appcast` <app_path>
 
-            Finds the appcast for a given app when a path is provided to the .app bundle.
-          EOS
+          Finds the appcast for a given app when a path is provided to the .app bundle.
+        EOS
 
-          named_args :app_path, min: 1
+        named_args :app_path, min: 1
 
-          hide_from_man_page!
-        end
+        hide_from_man_page!
       end
 
       sig { override.void }
