@@ -19,4 +19,8 @@ cask "zy-player" do
     "~/Library/Preferences/com.hunlongyu.zy.plist",
     "~/Library/Saved Application State/com.hunlongyu.zy.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
