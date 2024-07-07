@@ -6,10 +6,7 @@ cask "serial-tools" do
   name "Serial Tools"
   homepage "https://www.w7ay.net/site/Applications/Serial%20Tools/"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  disable! date: "2024-07-06", because: :unmaintained
 
   app "Serial Tools.app"
 end
