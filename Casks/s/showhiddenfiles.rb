@@ -7,10 +7,11 @@ cask "showhiddenfiles" do
   desc "Reveals hidden files in Finder"
   homepage "https://gotoes.org/sales/ShowHiddenFilesMacOSX/How_To_Show_Hidden_Files.php"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  deprecate! date: "2024-07-06", because: :unmaintained
 
   app "ShowHiddenFiles.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
