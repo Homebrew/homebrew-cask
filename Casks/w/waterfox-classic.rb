@@ -22,4 +22,8 @@ cask "waterfox-classic" do
     "~/Library/Caches/Waterfox",
     "~/Library/Preferences/org.waterfoxproject.waterfox.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
