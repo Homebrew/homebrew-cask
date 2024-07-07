@@ -1,33 +1,74 @@
 cask "spotify" do
   arch arm: "ARM64"
 
-  sha256 :no_check
+  on_sierra :or_older do
+    version "1.1.89.862,94554d24"
+    sha256 :no_check
 
-  on_arm do
-    version "1.2.41.434,39a25e2c,374"
+    url "https://download.scdn.co/Spotify-10.11-12.dmg",
+        verified: "download.scdn.co/"
+
+    livecheck do
+      skip "Legacy version"
+    end
   end
-  on_intel do
-    version "1.2.41.434,39a25e2c,341"
+  on_high_sierra do
+    version "1.2.20.1216,e7a7b92f"
+    sha256 :no_check
+
+    url "https://download.scdn.co/Spotify-10.13-14.dmg",
+        verified: "download.scdn.co/"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_mojave do
+    version "1.2.20.1216,e7a7b92f"
+    sha256 :no_check
+
+    url "https://download.scdn.co/Spotify-10.13-14.dmg",
+        verified: "download.scdn.co/"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_catalina do
+    version "1.2.37.701,e66eb7bc"
+    sha256 :no_check
+
+    url "https://download.scdn.co/Spotify-10.15.dmg",
+        verified: "download.scdn.co/"
+
+    livecheck do
+      skip "Legacy version"
+    end
+  end
+  on_big_sur :or_newer do
+    version "1.2.41.434,39a25e2c"
+    sha256 :no_check
+
+    url "https://download.scdn.co/Spotify#{arch}.dmg",
+        verified: "download.scdn.co/"
+
+    livecheck do
+      url "https://www.spotify.com/opensource/"
+      regex(/<tr.*?(\d+(?:\.\d+)+)[._-]g(\h+)/i)
+      strategy :page_match do |page, regex|
+        match = page.match(regex)
+        next if match.blank?
+
+        "#{match[1]},#{match[2]}"
+      end
+    end
   end
 
-  url "https://download.scdn.co/Spotify#{arch}.dmg",
-      verified: "download.scdn.co/"
   name "Spotify"
   desc "Music streaming service"
   homepage "https://www.spotify.com/"
 
-  livecheck do
-    url :url
-    strategy :extract_plist do |items|
-      match = items["com.spotify.client"].version.match(/^(\d+(?:\.\d+)+)[._-]g(\h+)[._-](\d+)$/i)
-      next if match.blank?
-
-      "#{match[1]},#{match[2]},#{match[3]}"
-    end
-  end
-
   auto_updates true
-  depends_on macos: ">= :big_sur"
 
   app "Spotify.app"
 
