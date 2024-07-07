@@ -27,4 +27,8 @@ cask "1clipboard" do
     "~/Library/Preferences/com.ngwin.1clipboard.plist",
     "~/Library/Saved Application State/com.ngwin.1clipboard.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
