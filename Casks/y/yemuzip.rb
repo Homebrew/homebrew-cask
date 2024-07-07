@@ -12,4 +12,8 @@ cask "yemuzip" do
   end
 
   app "YemuZip.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
