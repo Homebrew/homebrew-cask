@@ -13,4 +13,8 @@ cask "wavesurfer" do
   end
 
   app "WaveSurfer.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
