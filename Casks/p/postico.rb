@@ -1,6 +1,6 @@
 cask "postico" do
-  version "2.1,9682"
-  sha256 "3008b7fe100658ca9c67cee3ce19ff4476796f17bec5367747acd002c1d10679"
+  version "2.1.1,9692"
+  sha256 "e9736618ea8ab811da637303dc776da1348ff8d827ccb2a030ebc572fb0a6571"
 
   url "https://downloads.eggerapps.at/postico/postico-#{version.csv.second}.dmg"
   name "Postico"
