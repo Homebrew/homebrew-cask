@@ -15,4 +15,8 @@ cask "shortcutdetective" do
   app "ShortcutDetective.app"
 
   zap trash: "~/Library/Preferences/com.irradiatedsoftware.ShortcutDetective.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end
