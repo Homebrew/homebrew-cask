@@ -8,17 +8,15 @@ module Homebrew
   module Cmd
     class FontCaskerCmd < AbstractCommand
       cmd_args do
-        Homebrew::CLI::Parser.new do
-          usage_banner <<~EOS
-            `font-casker` <archive_path>
+        usage_banner <<~EOS
+          `font-casker` <archive_path>
 
-            Generates cask stanzas from OTF/TTF files within <archive_path>.
-          EOS
+          Generates cask stanzas from OTF/TTF files within <archive_path>.
+        EOS
 
-          named_args :archive_path, min: 1, max: 1
+        named_args :archive_path, min: 1, max: 1
 
-          hide_from_man_page!
-        end
+        hide_from_man_page!
       end
 
       FONT_EXT_PATTERN = /.(otf|ttf)\Z/i
