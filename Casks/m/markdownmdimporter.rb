@@ -6,10 +6,7 @@ cask "markdownmdimporter" do
   name "Markdown Spotlight Plugin"
   homepage "https://brettterpstra.com/2011/10/18/fixing-spotlight-indexing-of-markdown-content/"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  deprecate! date: "2024-07-07", because: :unmaintained
 
   mdimporter "Markdown.mdimporter"
 end
