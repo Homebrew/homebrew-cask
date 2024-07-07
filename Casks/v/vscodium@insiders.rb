@@ -12,8 +12,6 @@ cask "vscodium@insiders" do
   desc "Code editor"
   homepage "https://vscodium.com/"
 
-  deprecate! date: "2025-05-01", because: :unsigned
-
   depends_on macos: ">= :catalina"
 
   app "VSCodium - Insiders.app"
