@@ -29,4 +29,8 @@ cask "xee" do
     "~/Library/Cookies/cx.c3.Xee3.binarycookies",
     "~/Library/Preferences/cx.c3.Xee3.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
