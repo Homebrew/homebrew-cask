@@ -21,4 +21,8 @@ cask "5kplayer" do
     "~/Library/Preferences/com.digiarty.5kplayer.plist",
     "~/Library/Saved Application State/com.digiarty.5kplayer.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
