@@ -8,8 +8,8 @@ cask "licensed" do
   homepage "https://amarsagoo.info/licensed/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url :homepage
+    regex(%r{>\s*Version\s*v?(\d+(?:\.\d+)+)[^<]*</}i)
   end
 
   depends_on macos: ">= :high_sierra"
