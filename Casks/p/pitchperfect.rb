@@ -4,12 +4,10 @@ cask "pitchperfect" do
 
   url "https://www.nch.com.au/tuner/pitchmaci.zip"
   name "PitchPerfect"
+  desc "Guitar tuning software"
   homepage "https://www.nch.com.au/tuner/"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  disable! date: "2024-07-06", because: :no_longer_meets_criteria
 
   app "PitchPerfect.app"
 
