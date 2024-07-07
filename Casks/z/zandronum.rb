@@ -24,11 +24,14 @@ cask "zandronum" do
     "~/Library/Saved Application State/org.doomseeker.app.savedState",
   ]
 
-  caveats <<~EOS
-    Install IWADs to ~/Library/Application Support/Zandronum/
+  caveats do
+    requires_rosetta
+    <<~EOS
+      Install IWADs to ~/Library/Application Support/Zandronum/
 
-    For more information, see:
+      For more information, see:
 
-      https://wiki.zandronum.com/Zandronum_and_IWAD_Files
-  EOS
+        https://wiki.zandronum.com/Zandronum_and_IWAD_Files
+    EOS
+  end
 end

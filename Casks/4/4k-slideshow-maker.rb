@@ -21,4 +21,8 @@ cask "4k-slideshow-maker" do
     "~/Library/Preferences/com.4kdownload.4K Slideshow Maker.plist",
     "~/Library/Saved Application State/com.openmedia.4kslideshowmaker.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

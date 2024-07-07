@@ -16,4 +16,8 @@ cask "x-moto" do
   app "X-Moto.app"
 
   zap trash: "~/Library/Saved Application State/net.sourceforge.xmoto.savedState"
+
+  caveats do
+    requires_rosetta
+  end
 end

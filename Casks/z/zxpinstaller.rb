@@ -11,4 +11,8 @@ cask "zxpinstaller" do
   app "ZXPInstaller.app"
 
   zap trash: "~/Library/Preferences/com.electron.zxpinstaller.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end
