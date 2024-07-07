@@ -9,12 +9,7 @@ cask "pgadmin3" do
   desc "Administration and development platform for PostgreSQL"
   homepage "https://www.pgadmin.org/"
 
-  livecheck do
-    url "https://pgadmin-archive.postgresql.org/pgadmin3/index.html"
-    regex(%r{href=["']?v?(\d+(?:\.\d+)+)(?:/index.html)/?["' >]}i)
-  end
-
-  deprecate! date: "2025-05-01", because: :unsigned
+  disable! date: "2024-07-06", because: :no_longer_meets_criteria
 
   app "pgAdmin3.app"
 
