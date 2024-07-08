@@ -20,4 +20,8 @@ cask "vidl" do
     "~/Library/Containers/com.omz-software.ViDL.ViDL-SafariExtension",
     "~/Library/Saved Application State/com.omz-software.ViDL.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
