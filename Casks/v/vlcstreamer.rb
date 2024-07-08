@@ -19,4 +19,8 @@ cask "vlcstreamer" do
     "~/Library/Application Support/VLCStreamer",
     "~/Library/Preferences/com.HobbyistSoftware.VLCStreamer.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
