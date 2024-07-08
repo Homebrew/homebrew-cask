@@ -22,4 +22,8 @@ cask "virtualhostx" do
     "~/Library/Caches/com.clickontyler.VirtualHostX",
     "~/Library/Preferences/com.clickontyler.VirtualHostX.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
