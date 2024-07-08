@@ -15,4 +15,8 @@ cask "unlox" do
   depends_on macos: ">= :high_sierra"
 
   app "Unlox.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
