@@ -7,7 +7,6 @@ cask 'gplayer' do
   desc 'GPlayer is a media player application.'
   homepage 'https://ztgg-crm-us.oss-us-west-1.aliyuncs.com/software/g-player/prod/GPlayer.dmg'
 
-  depends_on macos: '>= :big_sur'
   depends_on arch: :intel
 
   app 'GPlayer.app'
