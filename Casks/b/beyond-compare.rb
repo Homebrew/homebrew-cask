@@ -1,6 +1,6 @@
 cask "beyond-compare" do
-  version "4.4.7.28397"
-  sha256 "a9ba4cea125bbfe00fa3e79de39937197ae5d479d94710f5b93da5bda377a0ce"
+  version "5.0.0.29773"
+  sha256 "a9c83f1bf1ec9f369ba070057475d369e4788d240eec6b8f866a890ef3cf5872"
 
   url "https://www.scootersoftware.com/files/BCompareOSX-#{version}.zip"
   name "Beyond Compare"
@@ -27,8 +27,4 @@ cask "beyond-compare" do
     "~/Library/Preferences/com.ScooterSoftware.BeyondCompare.plist",
     "~/Library/Saved Application State/com.ScooterSoftware.BeyondCompare.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
