@@ -13,4 +13,8 @@ cask "ultimate-control" do
   end
 
   app "Ultimate Control.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

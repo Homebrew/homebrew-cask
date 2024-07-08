@@ -14,4 +14,8 @@ cask "universal-android-debloater" do
   binary "uad_gui-macos-opengl", target: "uad"
 
   zap trash: "~/Library/Caches/uad"
+
+  caveats do
+    requires_rosetta
+  end
 end

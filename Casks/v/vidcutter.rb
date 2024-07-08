@@ -13,4 +13,8 @@ cask "vidcutter" do
   end
 
   app "VidCutter.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
