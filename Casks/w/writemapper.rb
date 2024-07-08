@@ -13,4 +13,8 @@ cask "writemapper" do
   end
 
   app "WriteMapper.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

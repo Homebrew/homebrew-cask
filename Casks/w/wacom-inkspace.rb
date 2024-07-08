@@ -12,4 +12,8 @@ cask "wacom-inkspace" do
   end
 
   app "Wacom Inkspace App.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

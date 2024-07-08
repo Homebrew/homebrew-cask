@@ -12,4 +12,8 @@ cask "wannianli" do
   app "WanNianLi.app"
 
   zap trash: "~/Library/Application Support/com.zfdang.calendar"
+
+  caveats do
+    requires_rosetta
+  end
 end

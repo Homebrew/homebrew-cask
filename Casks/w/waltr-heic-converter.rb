@@ -27,4 +27,8 @@ cask "waltr-heic-converter" do
     "~/Library/Logs/com.softorino.WaltrHeicConverter",
     "~/Library/Preferences/com.softorino.WaltrHeicConverter.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
