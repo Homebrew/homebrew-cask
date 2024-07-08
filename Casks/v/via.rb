@@ -15,4 +15,8 @@ cask "via" do
     "~/Library/Logs/VIA",
     "~/Library/Preferences/org.via.configurator.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
