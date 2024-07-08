@@ -1,6 +1,6 @@
 cask "appflowy" do
-  version "0.6.2"
-  sha256 "f2b28b7818f0cd6a0640e93e7d2fcd7d53408c748b0dc766eca91c6c644ba514"
+  version "0.6.3"
+  sha256 "a2d55f754a96bff7e0c0562095d4a1aa3974800ca71eacb8f27d60b7bf425460"
 
   url "https://github.com/AppFlowy-IO/AppFlowy/releases/download/#{version}/Appflowy-#{version}-macos-universal.zip",
       verified: "github.com/AppFlowy-IO/AppFlowy/"
