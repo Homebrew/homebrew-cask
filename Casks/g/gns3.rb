@@ -1,7 +1,7 @@
 cask "gns3" do
   # NOTE: "3" is not a version number, but an intrinsic part of the product name
-  version "2.2.47"
-  sha256 "dbb1d540501adb58589c2e9c985ce2f839dc08afa9378637966e9577b291e22c"
+  version "2.2.48"
+  sha256 "8b08977690ea9627f9b9a21102e0475cf9a8b5fcc419e7fe77caeb94f0e1a786"
 
   url "https://github.com/GNS3/gns3-gui/releases/download/v#{version}/GNS3-#{version}.dmg",
       verified: "github.com/GNS3/gns3-gui/"
