@@ -7,14 +7,14 @@ cask 'gplayer' do
   desc 'GPlayer is a media player application.'
   homepage 'https://ztgg-crm-us.oss-us-west-1.aliyuncs.com/software/g-player/prod/GPlayer.dmg'
 
-  depends_on macos: '>= :high_sierra'
-  depends_on arch: :x86_64
+  depends_on macos: '>= :big_sur'
+  depends_on arch: :intel
 
   app 'GPlayer.app'
 
-  caveats do
-    "GPlayer requires Rosetta 2 to run on Apple Silicon. " \
-    "You can install Rosetta 2 by running: " \
-    "`/usr/sbin/softwareupdate --install-rosetta`"
-  end
+  caveats <<~EOS
+    GPlayer requires Rosetta 2 to run on Apple Silicon.
+    You can install Rosetta 2 by running:
+      /usr/sbin/softwareupdate --install-rosetta
+  EOS
 end
