@@ -21,4 +21,8 @@ cask "vu" do
   depends_on macos: ">= :sierra"
 
   app "vu.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
