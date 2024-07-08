@@ -21,4 +21,8 @@ cask "vlc-setup" do
     "~/Library/Preferences/com.HobbyistSoftware.VLCSetup.plist",
     "~/Library/Saved Application State/com.HobbyistSoftware.VLCSetup.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
