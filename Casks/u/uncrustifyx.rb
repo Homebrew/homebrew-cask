@@ -8,4 +8,8 @@ cask "uncrustifyx" do
   homepage "https://github.com/ryanmaxwell/UncrustifyX"
 
   app "UncrustifyX.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
