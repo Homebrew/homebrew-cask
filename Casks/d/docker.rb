@@ -24,9 +24,9 @@ cask "docker" do
     end
   end
   on_monterey :or_newer do
-    version "4.31.0,153195"
-    sha256 arm:   "1ae620e92ae1cf87b6607b86b11a792a1a7a4ebfdda1663cb9bce8f275f40b10",
-           intel: "b2571ed2a749572675330d31d0de7ef53425ef8b722b54239ab7eb927eeebcb8"
+    version "4.32.0,157355"
+    sha256 arm:   "74499c18784943b6b9058f2fc222d1737e6b0e831065ca76237028666d99ffe0",
+           intel: "c469f8074acc3a37167284fe086c498acb1c0a25361833e8eb8ff209465ace93"
 
     livecheck do
       url "https://desktop.docker.com/mac/main/#{arch}/appcast.xml"
@@ -58,11 +58,9 @@ cask "docker" do
   depends_on macos: ">= :catalina"
 
   app "Docker.app"
-  binary "#{appdir}/Docker.app/Contents/Resources/bin/com.docker.cli",
-         target: "/usr/local/bin/com.docker.cli"
   binary "#{appdir}/Docker.app/Contents/Resources/bin/docker",
          target: "/usr/local/bin/docker"
-  binary "#{appdir}/Docker.app/Contents/Resources/bin/docker-compose",
+  binary "#{appdir}/Docker.app/Contents/Resources/cli-plugins/docker-compose",
          target: "/usr/local/bin/docker-compose"
   binary "#{appdir}/Docker.app/Contents/Resources/bin/docker-credential-desktop",
          target: "/usr/local/bin/docker-credential-desktop"
