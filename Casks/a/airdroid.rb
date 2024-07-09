@@ -21,4 +21,8 @@ cask "airdroid" do
     "~/Library/Saved Application State/com.sandstudio.airdroid.savedState",
     "~/Library/WebKit/Databases/___IndexedDB/com.sandstudio.airdroid",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
