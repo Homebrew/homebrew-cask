@@ -25,4 +25,8 @@ cask "breaktimer" do
     "~/Library/Preferences/com.tomjwatson.breaktimer.plist",
     "~/Library/Saved Application State/com.tomjwatson.breaktimer.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
