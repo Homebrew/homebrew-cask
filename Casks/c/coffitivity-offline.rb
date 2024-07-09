@@ -16,4 +16,8 @@ cask "coffitivity-offline" do
     "~/Library/Preferences/com.electron.coffitivity-offline.plist",
     "~/Library/Saved Application State/com.electron.coffitivity-offline.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
