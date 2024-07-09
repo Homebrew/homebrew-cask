@@ -11,4 +11,8 @@ cask "imo" do
   deprecate! date: "2023-12-17", because: :moved_to_mas
 
   app "Imo.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
