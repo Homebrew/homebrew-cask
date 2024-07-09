@@ -10,7 +10,7 @@ cask "fightcade" do
   livecheck do
     url "https://web.fightcade.com/download/update.json"
     strategy :json do |json|
-      json["mac"]["version"]
+      json.dig("mac", "version")
     end
   end
 
