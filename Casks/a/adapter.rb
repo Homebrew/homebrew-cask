@@ -19,4 +19,8 @@ cask "adapter" do
     "~/Library/Caches/com.macroplant.adapter",
     "~/Library/com.macroplant.adapter.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
