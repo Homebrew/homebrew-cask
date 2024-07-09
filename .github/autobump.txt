@@ -338,6 +338,7 @@ julia
 jumpshare
 jupyterlab
 juxtacode
+kdenlive
 keyboard-cowboy
 keymapp
 keysafe
