@@ -13,7 +13,7 @@ cask "airtame" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "Airtame.app"
 
@@ -23,4 +23,8 @@ cask "airtame" do
     "~/Library/Preferences/com.airtame.airtame-application.plist",
     "~/Library/Saved Application State/com.airtame.airtame-application.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
