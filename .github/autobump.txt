@@ -222,6 +222,7 @@ firealpaca
 firefly
 firefly-shimmer
 firefox
+firefox@developer-edition
 firefox@esr
 fixkey
 fleet
