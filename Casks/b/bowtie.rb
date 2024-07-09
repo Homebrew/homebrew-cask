@@ -13,4 +13,8 @@ cask "bowtie" do
   end
 
   app "Bowtie #{version}/Bowtie.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
