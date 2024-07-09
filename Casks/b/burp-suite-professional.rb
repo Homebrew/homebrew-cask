@@ -14,7 +14,7 @@ cask "burp-suite-professional" do
   livecheck do
     url "https://portswigger.net/burp/releases/data"
     strategy :json do |json|
-      all_versions = json["ResultSet"]["Results"]
+      all_versions = json.dig("ResultSet", "Results")
       next if all_versions.blank?
 
       all_versions.filter_map do |item|
