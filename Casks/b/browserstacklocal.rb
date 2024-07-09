@@ -20,4 +20,8 @@ cask "browserstacklocal" do
     "~/.bstack",
     "~/Library/Caches/com.browserstack.Local",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
