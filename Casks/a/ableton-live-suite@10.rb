@@ -36,4 +36,8 @@ cask "ableton-live-suite@10" do
     "/Users/Shared/Max [0-9]",
     "~/Music/Ableton",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
