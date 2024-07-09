@@ -9,4 +9,8 @@ cask "ananas-analytics-desktop-edition" do
   homepage "https://ananasanalytics.com/"
 
   app "Ananas Analytics Desktop Edition.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

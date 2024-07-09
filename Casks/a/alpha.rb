@@ -17,4 +17,8 @@ cask "alpha" do
     "~/Library/Preferences/net.sourceforge.alphacocoa.plist",
     "~/Library/Saved Application State/net.sourceforge.alphacocoa.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

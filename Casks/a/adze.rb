@@ -20,4 +20,8 @@ cask "adze" do
     "~/Library/Caches/com.Kobot.Adze",
     "~/Library/Preferences/com.Kobot.Adze.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -21,4 +21,8 @@ cask "aegisub" do
     "~/Library/Preferences/com.aegisub.aegisub.plist",
     "~/Library/Saved Application State/com.aegisub.aegisub.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

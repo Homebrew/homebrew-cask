@@ -21,4 +21,8 @@ cask "airserver" do
     "~/Library/Preferences/com.pratikkumar.airserver-mac.AirServer.plist",
     "~/Library/Preferences/com.pratikkumar.airserver-mac.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

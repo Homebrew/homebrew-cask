@@ -10,4 +10,8 @@ cask "360safe" do
   deprecate! date: "2023-12-17", because: :discontinued
 
   app "360Safe.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

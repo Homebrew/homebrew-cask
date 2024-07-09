@@ -20,4 +20,8 @@ cask "alternote" do
     "~/Library/Application Scripts/com.Alternote",
     "~/Library/Containers/com.Alternote",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -13,4 +13,8 @@ cask "aimersoft-video-converter-ultimate" do
   end
 
   app "Aimersoft Video Converter Ultimate.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

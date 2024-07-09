@@ -30,4 +30,8 @@ cask "abbyy-finereader-pdf" do
     "~/Library/Saved Application State/com.abbyy.FineReader.savedState",
     "~/Library/Saved Application State/com.abbyy.FRPDFViewer.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

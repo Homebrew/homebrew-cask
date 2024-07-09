@@ -14,4 +14,8 @@ cask "androidtool" do
     "~/Library/Preferences/com.mortenjust.AndroidTool.plist",
     "~/Library/Saved Application State/com.mortenjust.AndroidTool.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

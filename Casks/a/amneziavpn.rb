@@ -28,4 +28,8 @@ cask "amneziavpn" do
     "~/Library/Preferences/AmneziaVPN.plist",
     "~/Library/Preferences/org.amneziavpn.AmneziaVPN.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

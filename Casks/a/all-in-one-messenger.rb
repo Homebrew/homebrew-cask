@@ -26,4 +26,8 @@ cask "all-in-one-messenger" do
     "~/Library/Preferences/im.allinone.messenger.plist",
     "~/Library/Saved Application State/im.allinone.messenger.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -22,4 +22,8 @@ cask "amadeus-pro" do
     "~/Library/Preferences/com.HairerSoft.AmadeusPro.plist",
     "~/Library/Saved Application State/com.HairerSoft.AmadeusPro.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

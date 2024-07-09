@@ -20,4 +20,8 @@ cask "010-editor" do
         "~/Library/Saved Application State/com.SweetScape.010Editor.savedState",
       ],
       rmdir: "~/Documents/SweetScape"
+
+  caveats do
+    requires_rosetta
+  end
 end

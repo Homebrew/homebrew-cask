@@ -25,4 +25,8 @@ cask "active-trader-pro" do
     "~/Library/Preferences/com.fmr.activetrader.plist",
     "~/Library/Saved Application State/com.fmr.activetrader.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

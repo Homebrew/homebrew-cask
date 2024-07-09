@@ -22,4 +22,8 @@ cask "algodoo" do
     "~/Library/Preferences/se.algoryx.Algodoo.plist",
     "~/Library/Saved Application State/se.algoryx.algodoo-regular.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

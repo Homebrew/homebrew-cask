@@ -18,4 +18,8 @@ cask "advancedrestclient" do
     "~/Library/Application Support/advanced-rest-client",
     "~/Library/Logs/AdvancedRestClient",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

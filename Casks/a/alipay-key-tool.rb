@@ -18,4 +18,8 @@ cask "alipay-key-tool" do
     "~/Library/Preferences/com.alipay.alipayleytool.plist",
     "~/Library/Saved Application State/com.alipay.alipayleytool.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

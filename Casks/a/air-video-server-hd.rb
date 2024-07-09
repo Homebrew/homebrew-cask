@@ -20,4 +20,8 @@ cask "air-video-server-hd" do
     "~/Library/Logs/AirVideoServerHD",
     "~/Library/Preferences/com.inmethod.AirVideoServerHD.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
