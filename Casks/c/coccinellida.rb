@@ -13,4 +13,8 @@ cask "coccinellida" do
   end
 
   app "Coccinellida.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
