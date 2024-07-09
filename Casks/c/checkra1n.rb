@@ -13,4 +13,8 @@ cask "checkra1n" do
   end
 
   app "checkra1n.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
