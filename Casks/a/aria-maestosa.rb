@@ -16,4 +16,8 @@ cask "aria-maestosa" do
     "~/Library/Preferences/AriaMaestosa",
     "~/Library/Saved Application State/org.AriaMaestosa.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
