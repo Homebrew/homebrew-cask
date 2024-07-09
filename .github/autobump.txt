@@ -132,6 +132,7 @@ coteditor
 couchbase-server-community
 couchbase-server-enterprise
 craft
+creality-print
 crossover
 cryptomator
 crystalmaker
