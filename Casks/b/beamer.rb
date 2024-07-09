@@ -25,4 +25,8 @@ cask "beamer" do
         "~/Library/Saved Application State/com.softorino.beamer.savedState",
       ],
       rmdir: "/Users/Shared/Beamer"
+
+  caveats do
+    requires_rosetta
+  end
 end
