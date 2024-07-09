@@ -15,4 +15,8 @@ cask "contraste" do
   depends_on macos: ">= :high_sierra"
 
   app "Contraste.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
