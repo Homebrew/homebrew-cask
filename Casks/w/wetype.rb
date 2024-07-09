@@ -12,7 +12,7 @@ cask "wetype" do
     url "https://z.weixin.qq.com/web/api/app_info"
     regex(/WeTypeInstaller[._-]v?(\d+(?:.\d+)+)[._-](\d+).zip/i)
     strategy :json do |json, regex|
-      match = json["data"]["mac"]["download_link"].match(regex)
+      match = json.dig("data", "mac", "download_link")&.match(regex)
       "#{match[1]},#{match[2]}"
     end
   end
