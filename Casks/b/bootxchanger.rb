@@ -8,7 +8,7 @@ cask "bootxchanger" do
   desc "Utility to change the boot logo on old Macs"
   homepage "https://namedfork.net/bootxchanger/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-07-09", because: "is 32-bit only"
 
   app "BootXChanger.app"
 end
