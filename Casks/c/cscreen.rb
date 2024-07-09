@@ -18,4 +18,8 @@ cask "cscreen" do
   binary "cscreen"
 
   # No zap stanza required
+
+  caveats do
+    requires_rosetta
+  end
 end
