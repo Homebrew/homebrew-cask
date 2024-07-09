@@ -13,4 +13,8 @@ cask "beacon-scanner" do
   end
 
   app "Beacon Scanner.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
