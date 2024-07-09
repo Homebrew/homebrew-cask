@@ -36,4 +36,8 @@ cask "charles" do
     "~/Library/Preferences/com.xk72.Charles.plist",
     "~/Library/Saved Application State/com.xk72.Charles.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
