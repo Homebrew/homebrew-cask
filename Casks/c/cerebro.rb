@@ -20,4 +20,8 @@ cask "cerebro" do
     "~/Library/Preferences/com.cerebroapp.Cerebro.plist",
     "~/Library/Saved Application State/com.cerebroapp.Cerebro.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
