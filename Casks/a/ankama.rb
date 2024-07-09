@@ -21,4 +21,8 @@ cask "ankama" do
     "~/Library/Preferences/com.ankama.zaap.plist",
     "~/Library/Saved Application State/com.ankama.zaap.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
