@@ -22,4 +22,8 @@ cask "axure-rp" do
     "~/Library/Preferences/com.axure.AxureRP#*.plist",
     "~/Library/Saved Application State/com.axure.AxureRP#*.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
