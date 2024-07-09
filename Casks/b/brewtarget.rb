@@ -14,4 +14,8 @@ cask "brewtarget" do
     "~/Library/Preferences/com.brewtarget.Brewtarget.plist",
     "~/Library/Saved Application State/com.brewtarget.Brewtarget.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
