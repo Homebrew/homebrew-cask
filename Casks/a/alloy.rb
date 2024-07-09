@@ -14,4 +14,8 @@ cask "alloy" do
   end
 
   app "Alloy.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
