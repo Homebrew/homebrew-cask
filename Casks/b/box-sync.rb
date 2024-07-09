@@ -28,4 +28,8 @@ cask "box-sync" do
         "~/Library/Logs/Box/Box Sync",
       ],
       rmdir: "~/Library/Application Support/Box"
+
+  caveats do
+    requires_rosetta
+  end
 end

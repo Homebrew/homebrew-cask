@@ -24,4 +24,8 @@ cask "base" do
     "~/Library/Caches/uk.co.menial.Base",
     "~/Library/Preferences/uk.co.menial.Base.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

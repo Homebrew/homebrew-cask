@@ -20,4 +20,8 @@ cask "bridge" do
     "~/Library/Preferences/se.quixel.bridge.plist",
     "~/Library/Saved Application State/se.quixel.bridge.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

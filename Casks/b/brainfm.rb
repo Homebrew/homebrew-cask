@@ -14,4 +14,8 @@ cask "brainfm" do
     "~/Library/Preferences/com.electron.brain.fm.plist",
     "~/Library/Saved Application State/com.electron.brain.fm.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -18,4 +18,8 @@ cask "betterdiscord-installer" do
     "~/Library/Preferences/app.betterdiscord.installer.plist",
     "~/Library/Saved Application State/app.betterdiscord.installer.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

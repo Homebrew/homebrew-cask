@@ -16,4 +16,8 @@ cask "bilimini" do
     "~/Library/Preferences/com.electron.bilimini.plist",
     "~/Library/Saved Application State/com.electron.bilimini.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

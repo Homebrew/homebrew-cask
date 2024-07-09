@@ -15,4 +15,8 @@ cask "barrier" do
     "~/Library/Application Support/barrier",
     "~/Library/Saved Application State/barrier.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

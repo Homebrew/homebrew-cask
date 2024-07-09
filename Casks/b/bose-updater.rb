@@ -23,5 +23,6 @@ cask "bose-updater" do
 
   caveats do
     license "https://btu.bose.com/#section=install"
+    requires_rosetta
   end
 end

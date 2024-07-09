@@ -10,4 +10,8 @@ cask "bossa" do
   app "BOSSA.app"
   binary "bossac"
   binary "bossash"
+
+  caveats do
+    requires_rosetta
+  end
 end

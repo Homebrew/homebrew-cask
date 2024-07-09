@@ -22,4 +22,8 @@ cask "boost-note" do
     "~/Library/Preferences/com.boostio.boostnote.plist",
     "~/Library/Saved Application State/com.boostio.boostnote.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

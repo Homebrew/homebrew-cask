@@ -20,4 +20,8 @@ cask "bluesense" do
         "~/Library/Preferences/com.inspira.bluesense.plist",
       ],
       rmdir: "~/Library/Application Scripts/com.inspira.bluesense"
+
+  caveats do
+    requires_rosetta
+  end
 end

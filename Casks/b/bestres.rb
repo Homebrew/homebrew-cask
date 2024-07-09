@@ -20,4 +20,8 @@ cask "bestres" do
   end
 
   app "BestRes.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
