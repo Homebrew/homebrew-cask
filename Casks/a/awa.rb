@@ -28,4 +28,8 @@ cask "awa" do
     "~/Library/Preferences/fm.awa.liverpool.plist",
     "~/Library/Saved Application State/fm.awa.liverpool.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
