@@ -19,4 +19,8 @@ cask "bitbox" do
     "~/Library/Preferences/ch.shiftcrypto.BitBoxApp.plist",
     "~/Library/Saved Application State/ch.shiftcrypto.wallet.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
