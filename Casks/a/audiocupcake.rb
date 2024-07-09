@@ -22,4 +22,8 @@ cask "audiocupcake" do
     "~/Library/Preferences/com.sottovoce.AudioCupcake.plist",
     "~/Library/Saved Application State/com.sottovoce.AudioCupcake.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
