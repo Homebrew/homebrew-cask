@@ -12,4 +12,8 @@ cask "aexol-remote-mouse" do
   end
 
   app "Remote Mouse for Mac.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
