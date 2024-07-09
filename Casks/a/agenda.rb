@@ -7,7 +7,7 @@ cask "agenda" do
   desc "Note taking application focusing on dates"
   homepage "https://agenda.com/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  deprecate! date: "2023-12-17", because: :moved_to_mas
 
   depends_on macos: ">= :mojave"
 
@@ -23,10 +23,4 @@ cask "agenda" do
     "~/Library/Group Containers/WRBK2Z2EG7.group.com.momenta.agenda.macos",
     "~/Library/Preferences/com.momenta.agenda.macos.plist",
   ]
-
-  caveats do
-    <<~EOS
-      Newer versions are only available in Mac App Store.
-    EOS
-  end
 end
