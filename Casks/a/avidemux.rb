@@ -30,4 +30,8 @@ cask "avidemux" do
     "~/.avidemux6",
     "~/Library/Saved Application State/Avidemux.org.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
