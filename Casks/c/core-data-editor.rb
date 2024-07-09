@@ -9,4 +9,8 @@ cask "core-data-editor" do
   depends_on macos: ">= :sierra"
 
   app "Core Data Editor.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
