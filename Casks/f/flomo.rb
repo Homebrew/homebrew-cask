@@ -8,7 +8,7 @@ cask "flomo" do
   desc "Memo note taking and management app"
   homepage "https://flomoapp.com/"
 
-  disable! date: "2024-01-01", because: :no_longer_available
+  disable! date: "2024-01-01", because: :moved_to_mas
 
   depends_on macos: ">= :catalina"
 
@@ -18,15 +18,4 @@ cask "flomo" do
     "~/Library/Application Scripts/com.flomoapp.mac",
     "~/Library/Containers/com.flomoapp.mac",
   ]
-
-  caveats do
-    <<~EOS
-      Flomo versions prior to 2.0 are no longer supported and newer versions
-      are hosted on third-party file uploading sites that we can't use in the
-      cask or check for new versions.
-
-      See the homepage for alternative installation methods (Mac App Store,
-      etc.).
-    EOS
-  end
 end
