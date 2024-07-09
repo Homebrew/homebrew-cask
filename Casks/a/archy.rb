@@ -16,4 +16,8 @@ cask "archy" do
   binary "archyBin/archy-macos-#{version}", target: "archy"
 
   zap trash: "~/.archy_config"
+
+  caveats do
+    requires_rosetta
+  end
 end
