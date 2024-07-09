@@ -22,4 +22,8 @@ cask "cr" do
     "~/.cr#{version.major}",
     "~/Library/Saved Application State/org.coolreader.cr#{version.major}.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
