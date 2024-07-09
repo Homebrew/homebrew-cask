@@ -18,4 +18,8 @@ cask "classicftp" do
     "~/Library/Application Support/ClassicFTP",
     "~/Library/Preferences/com.nchsoftware.classicftp.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
