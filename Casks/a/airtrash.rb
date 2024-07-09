@@ -13,4 +13,8 @@ cask "airtrash" do
     "~/Library/Application Support/airtrash",
     "~/Library/Preferences/maciejczyzewski.airtrash.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
