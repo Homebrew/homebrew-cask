@@ -15,4 +15,8 @@ cask "coqide" do
   depends_on macos: ">= :sierra"
 
   app "CoqIDE_#{version.major_minor_patch}.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
