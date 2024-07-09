@@ -18,4 +18,8 @@ cask "black-light-pro" do
     "~/Library/Application Scripts/ca.michelf.BlackLight.Pro",
     "~/Library/Containers/ca.michelf.BlackLight.Pro",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
