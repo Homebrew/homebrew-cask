@@ -18,4 +18,8 @@ cask "appium" do
     "~/Library/Preferences/io.appium.desktop.plist",
     "~/Library/Saved Application State/io.appium.desktop.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
