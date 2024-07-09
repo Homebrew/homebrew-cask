@@ -11,5 +11,7 @@ cask "brain-workshop" do
     regex(%r{url=.*?/brainworkshop[._-]v?(\d+(?:\.\d+)+)-MacOSX\.zip}i)
   end
 
+  disable! date: "2024-07-09", because: "is 32-bit only"
+
   app "Brain Workshop.app"
 end
