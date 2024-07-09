@@ -12,4 +12,8 @@ cask "apppolice" do
   uninstall quit: "com.definemac.AppPolice"
 
   zap trash: "~/Library/Preferences/com.definemac.AppPolice.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end
