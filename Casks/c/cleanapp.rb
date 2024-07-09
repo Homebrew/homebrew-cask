@@ -24,4 +24,8 @@ cask "cleanapp" do
     "~/Library/Preferences/com.syniumsoftware.stats_config.plist",
     "~/Library/Saved Application State/com.syniumsoftware.CleanApp.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
