@@ -24,4 +24,8 @@ cask "cctalk" do
     "~/Library/HTTPStorages/com.hujiang.mac.cctalk",
     "~/Library/Preferences/com.hujiang.mac.cctalk.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
