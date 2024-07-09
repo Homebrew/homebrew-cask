@@ -8,9 +8,12 @@ cask "google-analytics-opt-out" do
   homepage "https://tools.google.com/dlpage/gaoptout"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    skip "No version information available"
   end
 
   app "Google Analytics Opt Out.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
