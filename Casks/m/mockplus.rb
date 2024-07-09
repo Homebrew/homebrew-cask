@@ -25,4 +25,8 @@ cask "mockplus" do
     "~/Library/Mockplus2",
     "~/Library/Saved Application State/com.mockplus.desktop.chinese.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
