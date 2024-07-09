@@ -25,4 +25,8 @@ cask "cisdem-pdf-converter-ocr" do
     "~/Library/Preferences/com.cisdem.pdfconverterocr.plist",
     "~/Library/Saved Application State/com.cisdem.pdfconverterocr.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
