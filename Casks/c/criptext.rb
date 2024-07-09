@@ -19,4 +19,8 @@ cask "criptext" do
     "~/Library/Logs/Criptext",
     "~/Library/Saved Application State/com.criptext.criptextmail.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
