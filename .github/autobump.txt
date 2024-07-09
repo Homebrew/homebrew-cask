@@ -733,6 +733,7 @@ vuescan
 wakatime
 warcraft-logs-uploader
 warp
+warzone-2100
 wasabi-wallet
 waterfox
 wave
