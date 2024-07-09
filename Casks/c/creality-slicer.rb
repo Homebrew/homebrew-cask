@@ -23,4 +23,8 @@ cask "creality-slicer" do
     "~/Library/Preferences/com.creality.crealityslicer.plist",
     "~/Library/Saved Application State/com.creality.crealityslicer.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
