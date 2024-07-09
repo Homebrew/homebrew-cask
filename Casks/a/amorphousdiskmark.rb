@@ -15,4 +15,8 @@ cask "amorphousdiskmark" do
     "~/Library/Preferences/com.katsurashareware.AmorphousDiskMark.plist",
     "~/Library/Saved Application State/com.katsurashareware.AmorphousDiskMark.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
