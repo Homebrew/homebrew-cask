@@ -25,4 +25,8 @@ cask "adium" do
     "~/Library/Preferences/com.adiumX.adiumX.plist",
     "~/Library/Saved Application State/com.adiumX.adiumX.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
