@@ -429,6 +429,7 @@ morgen
 mountain-duck
 mp3tag
 mqttx
+mudlet
 mullvad-browser
 mullvadvpn
 mullvadvpn@beta
