@@ -13,4 +13,8 @@ cask "composercat" do
   end
 
   app "Composercat.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
