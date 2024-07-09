@@ -62,4 +62,8 @@ cask "cave-story" do
   homepage "https://www.cavestory.org/"
 
   zap trash: "~/Library/Preferences/com.nakiwo.Doukutsu.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end
