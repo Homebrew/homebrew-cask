@@ -10,8 +10,12 @@ cask "bino" do
 
   livecheck do
     url "http://devernay.free.fr/hacks/bino/"
-    regex(/href=.*?Bino-(\d+(?:\.\d+)+)-OSX-Mavericks-GPL\.zip/i)
+    regex(/href=.*?Bino[._-](\d+(?:\.\d+)+)[._-]OSX[._-]Mavericks[._-]GPL\.zip/i)
   end
 
   app "Bino.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
