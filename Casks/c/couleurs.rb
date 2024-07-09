@@ -15,4 +15,8 @@ cask "couleurs" do
   depends_on macos: ">= :sierra"
 
   app "Couleurs.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
