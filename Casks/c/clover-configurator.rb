@@ -21,4 +21,8 @@ cask "clover-configurator" do
     "~/Library/Caches/org.altervista.mackie100projects.Clover-Configurator",
     "~/Library/Preferences/org.altervista.mackie100projects.Clover-Configurator.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
