@@ -105,5 +105,6 @@ cask "asix-ax88179" do
 
   caveats do
     reboot
+    requires_rosetta
   end
 end
