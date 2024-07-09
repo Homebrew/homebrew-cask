@@ -17,4 +17,8 @@ cask "bwana" do
     "~/Library/Caches/Bwana",
     "~/Library/Preferences/com.bruji.bwana.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
