@@ -209,6 +209,7 @@ fantastical
 fedistar
 feed-the-beast
 ferdium
+fightcade
 figma
 figma-agent
 figma@beta
