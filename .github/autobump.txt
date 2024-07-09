@@ -745,6 +745,7 @@ wechatwork
 whatsapp
 whatsapp@beta
 whisky
+wing-personal
 wondershare-uniconverter
 workflowy
 writerside
