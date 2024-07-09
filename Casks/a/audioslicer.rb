@@ -7,5 +7,7 @@ cask "audioslicer" do
   desc "Finds all silences in an audio file"
   homepage "https://audioslicer.sourceforge.net/"
 
+  disable! date: "2024-07-09", because: "is 32-bit only"
+
   app "AudioSlicer.app"
 end
