@@ -13,4 +13,8 @@ cask "au-lab" do
   end
 
   app "AU Lab.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
