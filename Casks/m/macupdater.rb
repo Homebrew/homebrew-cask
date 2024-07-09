@@ -4,8 +4,8 @@ cask "macupdater" do
     sha256 "9d6775c99b2a76d3f3be0e3d23c27305666341be16d38a0661c8d9cfa50e5256"
   end
   on_ventura :or_newer do
-    version "3.3.1"
-    sha256 "3052da96d7f09416dfebac43f5579c5fdb8789df2e35c85f0870c12634c83d8c"
+    version "3.3.2"
+    sha256 "4552c9bc51737d90c12ee68cc53c05b561583f5d02b46f36ad7c8a6a976bcdde"
 
     binary "#{appdir}/MacUpdater.app/Contents/Resources/macupdater_install"
   end
