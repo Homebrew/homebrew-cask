@@ -10,7 +10,7 @@ cask "yealink-meeting" do
   livecheck do
     url "https://www.ylyun.com/portal/front/appPackageInfo?type=macos"
     strategy :json do |json|
-      "#{json["data"]["packageVersion"]},#{json["data"]["md5"]}"
+      "#{json.dig("data", "packageVersion")},#{json.dig("data", "md5")}"
     end
   end
 
