@@ -549,6 +549,7 @@ qq
 qqlive
 qqmusic
 quarto
+quickbooks
 quicken
 racket
 rancher
