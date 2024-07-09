@@ -18,4 +18,8 @@ cask "aqua-data-studio" do
     "~/.datastudio",
     "~/Library/Saved Application State/com.aquafold.datastudio.DataStudio.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
