@@ -24,4 +24,8 @@ cask "audiorelay" do
     "~/Library/Logs/AudioRelay",
     "~/Library/Preferences/com.azefsw.audioconnect.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
