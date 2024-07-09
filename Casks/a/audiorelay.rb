@@ -10,7 +10,7 @@ cask "audiorelay" do
   livecheck do
     url "https://api.audiorelay.net/Downloads"
     strategy :json do |json|
-      json["macOs"]["version"]
+      json.dig("macOs", "version")
     end
   end
 
