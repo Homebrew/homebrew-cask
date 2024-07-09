@@ -710,6 +710,7 @@ typora
 typora@dev
 ueli
 uhk-agent
+ultimate
 understand
 unity
 universal-gcode-platform
