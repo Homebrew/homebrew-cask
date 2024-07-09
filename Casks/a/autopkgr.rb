@@ -11,4 +11,8 @@ cask "autopkgr" do
   depends_on macos: ">= :high_sierra"
 
   app "AutoPkgr.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
