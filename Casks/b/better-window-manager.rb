@@ -13,4 +13,8 @@ cask "better-window-manager" do
   end
 
   app "Better Window Manager.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
