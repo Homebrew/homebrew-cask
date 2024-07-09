@@ -335,6 +335,7 @@ jetbrains-toolbox
 jgrennison-openttd
 jitsi-meet
 joplin
+jordanbaird-ice
 julia
 jumpshare
 jupyterlab
