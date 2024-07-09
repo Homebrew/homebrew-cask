@@ -12,7 +12,7 @@ cask "mockplus" do
   livecheck do
     url "https://api.mockplus.com/v6/software/checkNewerVersionForMockupV2?name=MockplusClassic&version=latest&platform=mac"
     strategy :json do |json|
-      json["value"]["version"]
+      json.dig("value", "version")
     end
   end
 
@@ -25,4 +25,8 @@ cask "mockplus" do
     "~/Library/Mockplus2",
     "~/Library/Saved Application State/com.mockplus.desktop.chinese.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

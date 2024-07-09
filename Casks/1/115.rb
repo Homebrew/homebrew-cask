@@ -12,7 +12,7 @@ cask "115" do
   livecheck do
     url "https://appversion.115.com/1/web/1.0/api/chrome"
     strategy :json do |json|
-      json["data"]["mac_115"]["version_code"]
+      json.dig("data", "mac_115", "version_code")
     end
   end
 

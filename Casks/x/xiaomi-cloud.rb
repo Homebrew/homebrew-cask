@@ -12,7 +12,7 @@ cask "xiaomi-cloud" do
   livecheck do
     url "https://update-server.micloud.xiaomi.net/api/v1/releases"
     strategy :json do |json|
-      json["data"]["version"]
+      json.dig("data", "version")
     end
   end
 

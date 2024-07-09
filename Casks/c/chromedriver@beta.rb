@@ -15,7 +15,7 @@ cask "chromedriver@beta" do
     url "https://googlechromelabs.github.io/chrome-for-testing/last-known-good-versions-with-downloads.json"
     regex(/v?(\d+(?:\.\d+)+)/i)
     strategy :json do |json, regex|
-      json["channels"]["Beta"]["version"]&.scan(regex) { |match| match[0] }
+      json.dig("channels", "Beta", "version")&.scan(regex) { |match| match[0] }
     end
   end
 

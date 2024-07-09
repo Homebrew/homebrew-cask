@@ -10,7 +10,7 @@ cask "warp" do
   livecheck do
     url "https://releases.warp.dev/channel_versions.json"
     strategy :json do |json|
-      json["stable"]["version"][1..]
+      json.dig("stable", "version")&.delete_prefix("v")
     end
   end
 

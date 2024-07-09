@@ -10,7 +10,7 @@ cask "audiorelay" do
   livecheck do
     url "https://api.audiorelay.net/Downloads"
     strategy :json do |json|
-      json["macOs"]["version"]
+      json.dig("macOs", "version")
     end
   end
 
@@ -24,4 +24,8 @@ cask "audiorelay" do
     "~/Library/Logs/AudioRelay",
     "~/Library/Preferences/com.azefsw.audioconnect.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -11,7 +11,7 @@ cask "carbide-create" do
   livecheck do
     url "https://carbide-downloads.website-us-east-1.linodeobjects.com/builds.json"
     strategy :json do |json|
-      json["cc"]["stable"]["osx"]["build"].to_s
+      json.dig("cc", "stable", "osx", "build")&.to_s
     end
   end
 

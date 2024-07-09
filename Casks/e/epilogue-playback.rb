@@ -11,7 +11,7 @@ cask "epilogue-playback" do
   livecheck do
     url "https://www.epilogue.co/v2/api/update"
     strategy :json do |json|
-      v = json["operator-app"]["osx"]["version"]
+      v = json.dig("operator-app", "osx", "version")
       "#{v["major"]}.#{v["minor"]}.#{v["patch"]}"
     end
   end

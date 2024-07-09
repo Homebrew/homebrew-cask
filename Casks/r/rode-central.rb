@@ -10,7 +10,7 @@ cask "rode-central" do
   livecheck do
     url "https://update.rode.com/rode-devices-manifest.json"
     strategy :json do |json|
-      json["rode-central-manifest"]["macos"]["main-version"]["update-version"]
+      json.dig("rode-central-manifest", "macos", "main-version", "update-version")
     end
   end
 

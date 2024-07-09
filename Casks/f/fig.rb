@@ -10,7 +10,7 @@ cask "fig" do
   livecheck do
     url "https://repo.fig.io/generic/stable/index.json"
     strategy :json do |json|
-      json["hints"]["livecheck"]
+      json.dig("hints", "livecheck")
     end
   end
 

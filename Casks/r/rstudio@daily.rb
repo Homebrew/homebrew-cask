@@ -11,8 +11,8 @@ cask "rstudio@daily" do
   livecheck do
     url "https://dailies.rstudio.com/rstudio/latest/index.json"
     strategy :json do |json|
-      json["products"]["electron"]["platforms"]["macos"]["version"]
-        &.tr("+", "-")
+      json.dig("products", "electron", "platforms", "macos", "version")
+          &.tr("+", "-")
     end
   end
 

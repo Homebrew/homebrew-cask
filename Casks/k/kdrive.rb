@@ -11,7 +11,7 @@ cask "kdrive" do
     url "https://www.infomaniak.com/drive/latest"
     regex(/kDrive[._-](\d+(?:\.\d+)+)\.pkg/i)
     strategy :json do |json|
-      json["macos"]["downloadurl"]&.scan(regex)&.map { |match| (match[0]).to_s }
+      json.dig("macos", "downloadurl")&.scan(regex)&.map { |match| (match[0]).to_s }
     end
   end
 
