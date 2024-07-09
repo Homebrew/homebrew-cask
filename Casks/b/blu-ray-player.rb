@@ -20,4 +20,8 @@ cask "blu-ray-player" do
   auto_updates true
 
   app "Blu-ray Player.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
