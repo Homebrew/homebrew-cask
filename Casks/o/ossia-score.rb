@@ -1,8 +1,11 @@
 cask "ossia-score" do
-  version "3.2.3-3"
-  sha256 "cc98bc08d5719842f8ddf895e5c28aa08e37fbbea471c28d8fc4a9c2d5e0629f"
+  arch arm: "AppleSilicon", intel: "Intel"
 
-  url "https://github.com/ossia/score/releases/download/v#{version}/ossia.score-#{version}-macOS.dmg",
+  version "3.2.4"
+  sha256 arm:   "4a1f69f6c8072b0476f161b21bd5d37d8b3dd61e97fb8a3ace0d6476135ce4c7",
+         intel: "feb43d1e4f559659a80f53cdf57c9aa6cf3d618e9bca6d7d0e2e6b91344351ce"
+
+  url "https://github.com/ossia/score/releases/download/v#{version}/ossia.score-#{version}-macOS-#{arch}.dmg",
       verified: "github.com/ossia/score/"
   name "ossia score"
   desc "Interactive sequencer for intermedia art"
@@ -22,8 +25,4 @@ cask "ossia-score" do
     "~/Library/Preferences/io.ossia.score.plist",
     "~/Library/Saved Application State/io.ossia.score.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
