@@ -552,6 +552,7 @@ qq
 qqlive
 qqmusic
 quarto
+quickbooks
 quicken
 quip
 racket
