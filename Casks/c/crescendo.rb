@@ -17,4 +17,8 @@ cask "crescendo" do
   app "Crescendo.app"
 
   zap trash: "~/Library/Saved Application State/com.suprhackersteve.crescendo.savedState"
+
+  caveats do
+    requires_rosetta
+  end
 end
