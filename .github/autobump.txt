@@ -550,6 +550,7 @@ qqlive
 qqmusic
 quarto
 quicken
+quip
 racket
 rancher
 razorsql
