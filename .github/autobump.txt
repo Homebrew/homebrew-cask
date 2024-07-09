@@ -313,6 +313,7 @@ ibkr
 ibm-cloud-cli
 iina-plus
 imazing
+imhex
 inkdown
 inso
 inso@beta
