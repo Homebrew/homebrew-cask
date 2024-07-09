@@ -12,6 +12,8 @@ cask "adobe-creative-cloud-cleaner-tool" do
     strategy :extract_plist
   end
 
+  depends_on macos: ">= :catalina"
+
   app "Adobe Creative Cloud Cleaner Tool.app"
 
   uninstall quit: "com.Adobe.Installers.AdobeCreativeCloudCleanerTool"
@@ -21,4 +23,8 @@ cask "adobe-creative-cloud-cleaner-tool" do
     "~/Library/Logs/Adobe Creative Cloud Cleaner Tool.log",
     "~/Library/Saved Application State/com.Adobe.Installers.AdobeCreativeCloudCleanerTool.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
