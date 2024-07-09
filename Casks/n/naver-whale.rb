@@ -13,7 +13,7 @@ cask "naver-whale" do
   livecheck do
     url "https://cv.whale.naver.com/version/latest_version"
     strategy :json do |json|
-      json["message"]["@version"]
+      json.dig("message", "@version")
     end
   end
 
