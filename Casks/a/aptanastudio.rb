@@ -13,4 +13,8 @@ cask "aptanastudio" do
   end
 
   app "AptanaStudio.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

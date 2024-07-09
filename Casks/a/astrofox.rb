@@ -21,4 +21,8 @@ cask "astrofox" do
     "~/Library/Preferences/io.astrofox.app.plist",
     "~/Library/Saved Application State/io.astrofox.app.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

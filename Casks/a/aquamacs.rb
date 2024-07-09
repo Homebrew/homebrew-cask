@@ -16,4 +16,8 @@ cask "aquamacs" do
   app "Aquamacs.app"
 
   zap trash: "~/Library/Caches/Aquamacs Emacs"
+
+  caveats do
+    requires_rosetta
+  end
 end

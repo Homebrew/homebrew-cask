@@ -20,4 +20,8 @@ cask "astro-command-center" do
     "~/Library/Preferences/com.http-www-astrogaming-com.ASTRO Command Center.plist",
     "~/Library/Saved Application State/com.astrogaming.acc.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

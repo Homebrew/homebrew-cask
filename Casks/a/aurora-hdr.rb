@@ -18,4 +18,8 @@ cask "aurora-hdr" do
     "~/Library/Caches/com.macphun.auroraHDR2019",
     "~/Library/Preferences/com.macphun.auroraHDR2019.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

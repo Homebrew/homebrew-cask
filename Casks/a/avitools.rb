@@ -18,4 +18,8 @@ cask "avitools" do
     "~/Library/Application Support/EmmGunn",
     "~/Library/Preferences/com.emmgunn.AVItools#{version.major}.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

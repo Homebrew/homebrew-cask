@@ -10,4 +10,8 @@ cask "autovolume" do
   depends_on macos: ">= :sierra"
 
   app "AutoVolume.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

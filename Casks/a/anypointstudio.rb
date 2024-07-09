@@ -20,4 +20,8 @@ cask "anypointstudio" do
   uninstall delete: "/Library/Logs/DiagnosticReports/AnypointStudio*.diag"
 
   # No zap stanza required
+
+  caveats do
+    requires_rosetta
+  end
 end

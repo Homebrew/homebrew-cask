@@ -26,4 +26,8 @@ cask "attachecase" do
     "~/Library/Application Scripts/dev.hibara.attachecase",
     "~/Library/Containers/dev.hibara.attachecase",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
