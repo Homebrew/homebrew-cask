@@ -7,10 +7,7 @@ cask "deepnest" do
   desc "Nesting application for CNC machines"
   homepage "https://deepnest.io/"
 
-  livecheck do
-    url :homepage
-    regex(/href=.*?Deepnest-(\d+(?:\.\d+)+)-mac\.zip/i)
-  end
+  deprecate! date: "2024-07-09", because: :unmaintained
 
   app "Deepnest-#{version}-mac/Deepnest-mac-#{version}.app", target: "Deepnest.app"
 
@@ -22,4 +19,8 @@ cask "deepnest" do
     "~/Library/Saved Application State/com.deepnest.io.savedState",
     "~/Library/WebKit/com.deepnest.io",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
