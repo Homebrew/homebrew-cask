@@ -12,5 +12,7 @@ cask "arrsync" do
     regex(/arrsync-(\d+(?:\.\d+)+)\.dmg/i)
   end
 
+  disable! date: "2024-07-09", because: "is 32-bit only"
+
   app "arRsync.app"
 end

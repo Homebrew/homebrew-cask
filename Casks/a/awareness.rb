@@ -12,6 +12,8 @@ cask "awareness" do
     regex(%r{/Awareness-(\d+(?:\.\d+)+)\.dmg}i)
   end
 
+  disable! date: "2024-07-09", because: "is 32-bit only"
+
   app "Awareness.app"
 
   zap trash: "~/Library/Preferences/com.futureproof.awareness.plist"
