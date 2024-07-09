@@ -10,7 +10,7 @@ cask "grids" do
   livecheck do
     url "https://gridsapp.net/appcast.json"
     strategy :json do |json|
-      json["version"]["mac"]
+      json.dig("version", "mac")
     end
   end
 
