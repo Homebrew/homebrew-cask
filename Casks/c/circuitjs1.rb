@@ -19,4 +19,8 @@ cask "circuitjs1" do
     "~/Library/Preferences/com.falstad.CircuitJS1.plist",
     "~/Library/Saved Application State/com.falstad.CircuitJS1.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
