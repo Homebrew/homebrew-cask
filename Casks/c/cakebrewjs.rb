@@ -23,4 +23,8 @@ cask "cakebrewjs" do
     "~/Library/Preferences/com.electron.cakebrewjs.plist",
     "~/Library/Preferences/com.shemeshg.Cakebrewjs2.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

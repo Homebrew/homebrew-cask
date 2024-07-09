@@ -21,4 +21,8 @@ cask "classroom-mode-for-minecraft" do
     "~/Library/Caches/com.microsoft.mc-classroommode",
     "~/Library/WebKit/com.microsoft.mc-classroommode",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

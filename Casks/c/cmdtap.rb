@@ -13,4 +13,8 @@ cask "cmdtap" do
   end
 
   app "CmdTap.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -21,4 +21,8 @@ cask "clipy" do
     "~/Library/Cookies/com.clipy-app.Clipy.binarycookies",
     "~/Library/Preferences/com.clipy-app.Clipy.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

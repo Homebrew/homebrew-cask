@@ -22,4 +22,8 @@ cask "cisco-proximity" do
     "~/Library/Preferences/com.cisco.Proximity.plist",
     "~/Library/Saved Application State/com.cisco.experimental.Proximity.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -16,4 +16,8 @@ cask "cabal" do
     "~/Library/Preferences/club.cabal.desktop.plist",
     "~/Library/Saved Application State/club.cabal.desktop.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

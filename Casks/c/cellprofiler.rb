@@ -14,4 +14,8 @@ cask "cellprofiler" do
   end
 
   app "CellProfiler.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

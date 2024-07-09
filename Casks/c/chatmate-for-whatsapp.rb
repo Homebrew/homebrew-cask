@@ -31,4 +31,8 @@ cask "chatmate-for-whatsapp" do
     "~/Library/Preferences/net.coldx.mac.WhatsApp.plist",
     "~/Library/WebKit/net.coldx.mac.WhatsApp",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

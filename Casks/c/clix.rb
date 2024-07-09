@@ -22,4 +22,8 @@ cask "clix" do
   postflight do
     set_permissions "#{appdir}/CLIX/CLIX.app", "0700"
   end
+
+  caveats do
+    requires_rosetta
+  end
 end

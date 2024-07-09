@@ -8,4 +8,8 @@ cask "cleartext" do
   homepage "https://github.com/mortenjust/cleartext-mac"
 
   app "Cleartext.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -23,4 +23,8 @@ cask "cardpresso" do
     "~/Library/Preferences/com.cardpresso.cardPresso.plist",
     "~/Library/Saved Application State/com.cardpresso.cardPresso.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

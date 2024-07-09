@@ -21,4 +21,8 @@ cask "cloud189" do
     "~/Library/Application Support/com.21cn.cloud-dist",
     "~/Library/Preferences/21cn.cloud.dist.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

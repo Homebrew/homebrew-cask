@@ -17,4 +17,8 @@ cask "clipgrab" do
   app "ClipGrab.app"
 
   zap trash: "~/Library/Preferences/de.clipgrab.ClipGrab.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end
