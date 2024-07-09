@@ -18,4 +18,8 @@ cask "airmedia" do
   depends_on macos: ">= :sierra"
 
   app "Crestron AirMedia.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
