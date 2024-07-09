@@ -56,7 +56,7 @@ cask "cocktail" do
   end
   on_big_sur do
     version "14.5.0"
-    sha256 "13833eefd4913eccbc319e57d7bac93c50f5a0a667d6dde877f5aa8a047be068"
+    sha256 :no_check
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}BSE.dmg"
 
@@ -67,7 +67,7 @@ cask "cocktail" do
   end
   on_monterey do
     version "15.6"
-    sha256 "1eb59c166702fc132a959f9ac87fa2beb9f69170cd173b9da6d6954c3a7fccc4"
+    sha256 :no_check
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}ME.dmg"
 
@@ -78,7 +78,7 @@ cask "cocktail" do
   end
   on_ventura do
     version "16.6"
-    sha256 "8fcb3fda2fc0b3ca7655f9f4c22822066495c5fca7b184d0e4e499bda4e4075c"
+    sha256 :no_check
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}VE.dmg"
 
@@ -88,8 +88,8 @@ cask "cocktail" do
     end
   end
   on_sonoma :or_newer do
-    version "17.3"
-    sha256 "95de3f2b202ceb2bea74004353d7cc349d88373319488d52fc47ebe160508032"
+    version "17.4"
+    sha256 :no_check
 
     url "https://www.maintain.se/downloads/Cocktail#{version.major}SE.dmg"
 
@@ -109,4 +109,8 @@ cask "cocktail" do
     "~/Library/Preferences/com.maintain.cocktail.plist",
     "~/Library/Preferences/com.maintain.cocktail.ventura#{version.major}.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
