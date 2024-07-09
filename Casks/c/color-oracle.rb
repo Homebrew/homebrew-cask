@@ -16,4 +16,8 @@ cask "color-oracle" do
   uninstall login_item: "Color Oracle"
 
   zap trash: "~/Library/Preferences/ch.ethz.ika.colororacle.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end
