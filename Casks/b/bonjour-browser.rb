@@ -7,7 +7,7 @@ cask "bonjour-browser" do
   desc "Display all the bonjour services on your local network"
   homepage "https://www.tildesoft.com/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2023-12-17", because: "is 32-bit only."
 
   depends_on macos: "<= :mojave"
 
