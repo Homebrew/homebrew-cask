@@ -16,4 +16,8 @@ cask "clementine" do
     "~/Library/Preferences/org.clementine-player.Clementine.plist",
     "~/Library/Saved Application State/org.clementine-player.Clementine.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
