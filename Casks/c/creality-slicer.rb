@@ -10,7 +10,7 @@ cask "creality-slicer" do
   livecheck do
     url "https://file-cdn.creality.com/ota-sz/crealityslicer/last.json"
     strategy :json do |json|
-      v = json["cura"]["Darwin"]
+      v = json.dig("cura", "Darwin")
       "#{v["major"]}.#{v["minor"]}.#{v["revision"]}"
     end
   end
