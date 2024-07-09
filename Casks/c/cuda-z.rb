@@ -13,4 +13,8 @@ cask "cuda-z" do
   end
 
   app "CUDA-Z.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
