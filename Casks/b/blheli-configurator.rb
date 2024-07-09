@@ -7,4 +7,8 @@ cask "blheli-configurator" do
   homepage "https://github.com/blheli-configurator/blheli-configurator"
 
   app "BLHeli Configurator.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
