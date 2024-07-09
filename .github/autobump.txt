@@ -43,6 +43,7 @@ apidog
 apidog-europe
 apifox
 apipost
+apparency
 appcleaner
 appflowy
 aptakube
