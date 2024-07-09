@@ -25,4 +25,8 @@ cask "cashnotify" do
     "~/Library/Preferences/com.baguetteengineering.cashnotify.plist",
     "~/Library/Saved Application State/com.baguetteengineering.cashnotify.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
