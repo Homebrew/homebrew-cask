@@ -14,4 +14,8 @@ cask "bluefish" do
   end
 
   app "Bluefish.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
