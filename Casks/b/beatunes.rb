@@ -25,4 +25,8 @@ cask "beatunes" do
     "~/Library/Logs/beaTunes",
     "~/Library/Preferences/com.tagtraum.beatunes.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
