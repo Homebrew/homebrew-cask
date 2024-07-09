@@ -16,6 +16,8 @@ cask "command-x" do
     end
   end
 
+  deprecate! date: "2024-07-09", because: :moved_to_mas
+
   depends_on macos: ">= :ventura"
 
   app "Command X.app"
@@ -24,9 +26,4 @@ cask "command-x" do
     "~/Library/Application Scripts/com.sindresorhus.Command-X",
     "~/Library/Containers/com.sindresorhus.Command-X",
   ]
-
-  caveats <<~EOS
-    This variant of #{token} is only updated annually or when security vulnerabilities are discovered.
-    For a more frequently updated version, install via the Mac App Store.
-  EOS
 end
