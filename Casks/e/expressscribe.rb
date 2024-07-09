@@ -8,8 +8,8 @@ cask "expressscribe" do
   homepage "https://www.nch.com.au/scribe/index.html"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://www.nch.com.au/scribe/versions.html"
+    regex(/Version\s*v?(\d+(?:\.\d+)+)/i)
   end
 
   app "ExpressScribe.app"
@@ -20,4 +20,8 @@ cask "expressscribe" do
     "~/Library/Preferences/com.nchsoftware.expressscribe-free.plist",
     "~/Library/Saved Application State/com.nchsoftware.expressscribe-free.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
