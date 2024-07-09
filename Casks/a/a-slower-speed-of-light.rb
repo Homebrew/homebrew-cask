@@ -10,4 +10,8 @@ cask "a-slower-speed-of-light" do
   deprecate! date: "2023-12-17", because: :discontinued
 
   app "A Slower Speed of Light.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
