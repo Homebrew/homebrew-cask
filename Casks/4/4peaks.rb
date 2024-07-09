@@ -22,4 +22,8 @@ cask "4peaks" do
     "~/Library/Preferences/com.mekentosj.4peaks.plist",
     "~/Library/Saved Application State/com.mekentosj.4peaks.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
