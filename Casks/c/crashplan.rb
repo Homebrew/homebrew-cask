@@ -8,7 +8,11 @@ cask "crashplan" do
   homepage "https://www.crashplan.com/"
 
   livecheck do
-    skip "No version information available"
+    url "https://download.crashplan.com/installs/agent/latest-mac.dmg"
+    strategy :header_match do |headers|
+      match = headers["location"].match(%r{/(\d+(?:\.\d+)+)/(\d+)/})
+      "#{match[1]},#{match[2]}" if match
+    end
   end
 
   depends_on macos: ">= :sonoma"
