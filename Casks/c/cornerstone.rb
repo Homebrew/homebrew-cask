@@ -15,4 +15,8 @@ cask "cornerstone" do
   depends_on macos: ">= :mojave"
 
   app "Cornerstone.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
