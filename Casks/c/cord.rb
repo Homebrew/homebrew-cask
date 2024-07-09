@@ -19,4 +19,8 @@ cask "cord" do
     "~/Library/Preferences/net.sf.cord.plist",
     "~/Library/Saved Application State/net.sf.cord.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

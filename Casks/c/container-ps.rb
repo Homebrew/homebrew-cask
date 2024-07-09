@@ -8,4 +8,8 @@ cask "container-ps" do
   homepage "https://github.com/Toinane/container-ps"
 
   app "Container PS.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

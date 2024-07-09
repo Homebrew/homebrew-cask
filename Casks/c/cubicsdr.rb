@@ -13,4 +13,8 @@ cask "cubicsdr" do
   end
 
   app "CubicSDR.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

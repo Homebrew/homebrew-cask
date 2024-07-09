@@ -29,4 +29,8 @@ cask "codeexpander" do
     "~/Library/Preferences/com.codeexpander.plist",
     "~/Library/Saved Application State/com.codeexpander.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

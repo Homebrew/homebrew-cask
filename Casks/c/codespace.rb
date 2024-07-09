@@ -15,4 +15,8 @@ cask "codespace" do
   depends_on macos: ">= :el_capitan"
 
   app "Codespace.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

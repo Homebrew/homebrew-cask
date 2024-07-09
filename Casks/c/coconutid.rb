@@ -20,4 +20,8 @@ cask "coconutid" do
     "~/Library/Caches/com.coconut-flavour.coconutID",
     "~/Library/Preferences/com.coconut-flavour.coconutID.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

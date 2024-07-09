@@ -15,4 +15,8 @@ cask "crypter" do
     "~/Library/Preferences/com.github.hr.crypter.plist",
     "~/Library/Saved Application State/com.github.hr.crypter.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

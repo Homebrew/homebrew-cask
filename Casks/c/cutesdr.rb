@@ -19,4 +19,8 @@ cask "cutesdr" do
   end
 
   app "cutesdr.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

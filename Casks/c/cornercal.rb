@@ -10,4 +10,8 @@ cask "cornercal" do
   depends_on macos: ">= :sierra"
 
   app "CornerCal.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

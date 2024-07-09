@@ -24,4 +24,8 @@ cask "cura-lulzbot" do
     "~/Library/Preferences/org.pythonmac.unspecified.cura-lulzbot.cura-lulzbot",
     "~/Library/Saved Application State/org.pythonmac.unspecified.cura-lulzbot.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
