@@ -22,4 +22,8 @@ cask "cloud-pbx" do
     "~/Library/Preferences/de.deutschland-lan.Cloud PBX.plist",
     "~/Library/Saved Application State/com.broadsoft.communicator.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
