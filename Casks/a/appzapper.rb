@@ -24,4 +24,8 @@ cask "appzapper" do
     "~/Library/Application Support/AppZapper",
     "~/Library/Preferences/com.appzapper.appzapper2.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
