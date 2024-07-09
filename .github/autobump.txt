@@ -485,6 +485,7 @@ oracle-jdk-javadoc
 orbstack
 origami-studio
 oscar
+ossia-score
 osu
 ovito
 ovito-pro
