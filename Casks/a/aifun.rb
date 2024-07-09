@@ -29,8 +29,4 @@ cask "aifun" do
     "~/Library/Preferences/com.getaifun.plist",
     "~/Library/Saved Application State/com.getaifun.savedState",
   ]
-
-  caveats do
-    requires_rosetta
-  end
 end
