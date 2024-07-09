@@ -18,4 +18,8 @@ cask "appgrid" do
   uninstall quit: "com.sdegutis.AppGrid"
 
   zap trash: "~/Library/Preferences/com.sdegutis.AppGrid.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end
