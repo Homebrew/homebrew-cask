@@ -18,4 +18,8 @@ cask "agi" do
   app "AGI.app"
 
   zap trash: "~/.agic"
+
+  caveats do
+    requires_rosetta
+  end
 end
