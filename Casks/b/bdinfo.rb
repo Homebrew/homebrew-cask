@@ -19,4 +19,8 @@ cask "bdinfo" do
     "~/Library/Preferences/com.yourcompany.BDInfo-OSX.plist",
     "~/Library/Saved Application State/com.yourcompany.BDInfo-OSX.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
