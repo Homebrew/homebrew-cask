@@ -9,4 +9,8 @@ cask "fredm-fuse" do
   homepage "https://fuse-for-macosx.sourceforge.io/"
 
   app "Fuse for MacOS/Fuse.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
