@@ -9,9 +9,12 @@ cask "crashplan" do
 
   livecheck do
     url "https://download.crashplan.com/installs/agent/latest-mac.dmg"
-    strategy :header_match do |headers|
-      match = headers["location"].match(%r{/(\d+(?:\.\d+)+)/(\d+)/})
-      "#{match[1]},#{match[2]}" if match
+    regex(/CrashPlan[._-]v?(\d+(?:[._]\d+)+)/i)
+    strategy :header_match do |headers, regex|
+      match = headers["location"]&.match(regex)
+      next if match.blank?
+
+      match[1].tr("_", ",")
     end
   end
 
