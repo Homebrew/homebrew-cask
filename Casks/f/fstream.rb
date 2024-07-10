@@ -13,4 +13,8 @@ cask "fstream" do
   end
 
   app "FStream.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
