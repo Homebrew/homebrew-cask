@@ -1,5 +1,5 @@
 cask "gosign" do
-  version "2.1.9"
+  version "2.2.0"
   sha256 :no_check
 
   url "https://rinnovofirma.infocert.it/gosign/download/darwin/latest"
@@ -22,4 +22,8 @@ cask "gosign" do
     "~/Library/Preferences/it.infocert.desktop.gosign.plist",
     "~/Library/Saved Application State/it.infocert.desktop.gosign.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
