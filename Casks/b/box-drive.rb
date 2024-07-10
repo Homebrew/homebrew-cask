@@ -1,8 +1,8 @@
 cask "box-drive" do
   version "2.38.173"
-  sha256 :no_check
+  sha256 "4a1e0810aeeb4e160152ec8f0cc04c70c758a5515241cbbfdf98b68b2ec25ba0"
 
-  url "https://e3.boxcdn.net/desktop/releases/mac/BoxDrive.pkg",
+  url "https://e3.boxcdn.net/desktop/releases/mac/BoxDrive-#{version}.pkg",
       verified: "e3.boxcdn.net/desktop/releases/mac/"
   name "Box Drive"
   desc "Client for the Box cloud storage service"
@@ -19,7 +19,7 @@ cask "box-drive" do
   conflicts_with cask: "box-sync"
   depends_on macos: ">= :el_capitan"
 
-  pkg "BoxDrive.pkg"
+  pkg "BoxDrive-#{version}.pkg"
 
   uninstall launchctl: "com.box.desktop.helper",
             quit:      [
