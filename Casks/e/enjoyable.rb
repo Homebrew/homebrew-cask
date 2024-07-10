@@ -15,4 +15,8 @@ cask "enjoyable" do
   app "Enjoyable.app"
 
   zap trash: "~/Library/Preferences/com.yukkurigames.Enjoyable.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end
