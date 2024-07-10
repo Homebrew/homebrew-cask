@@ -14,4 +14,8 @@ cask "thyme" do
     "~/Library/Application Support/Thyme",
     "~/Library/Preferences/com.joaomoreno.Thyme.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
