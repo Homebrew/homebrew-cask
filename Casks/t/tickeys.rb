@@ -11,4 +11,8 @@ cask "tickeys" do
   app "Tickeys.app"
 
   zap trash: "~/Library/Preferences/com.yingDev.Tickeys.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end
