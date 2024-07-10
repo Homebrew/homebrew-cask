@@ -31,4 +31,8 @@ cask "the-archive-browser" do
         "~/Library/Application Support/The Archive Browser",
         "~/Library/Caches/cx.c3.thearchivebrowser",
       ]
+
+  caveats do
+    requires_rosetta
+  end
 end
