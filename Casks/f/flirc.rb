@@ -19,4 +19,8 @@ cask "flirc" do
     "~/Library/HTTPStorages/com.flirc.Flirc.binarycookies",
     "~/Library/Preferences/com.flirc.Flirc.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
