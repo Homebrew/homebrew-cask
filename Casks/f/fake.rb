@@ -13,4 +13,8 @@ cask "fake" do
   end
 
   app "Fake.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
