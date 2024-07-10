@@ -1,5 +1,5 @@
 cask "ricoh-theta" do
-  version "3.20.0,4"
+  version "3.20.0"
   sha256 :no_check
 
   url "https://theta360-statics.s3.amazonaws.com/app/viewer/RICOH%20THETA.dmg",
@@ -9,8 +9,8 @@ cask "ricoh-theta" do
   homepage "https://theta360.com/en/support/download/pcmac/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url :homepage
+    regex(/>\s*Version\s*v?(\d+(?:\.\d+)+)[^<]*</i)
   end
 
   app "RICOH THETA.app"
@@ -21,4 +21,8 @@ cask "ricoh-theta" do
     "~/Library/Preferences/com.ricoh.thetasphericalviewer.plist",
     "~/Library/Saved Application State/com.ricoh.thetasphericalviewer.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
