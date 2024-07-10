@@ -20,4 +20,8 @@ cask "data-science-studio" do
     "~/Library/Preferences/com.dataiku.datasciencestudio.plist",
     "~/Library/Saved Application State/com.dataiku.datasciencestudio.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
