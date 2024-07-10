@@ -18,4 +18,8 @@ cask "firebase-admin" do
     "~/Library/Preferences/com.firebaseadmin.firebase-admin.helper.plist",
     "~/Library/Preferences/com.firebaseadmin.firebase-admin.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
