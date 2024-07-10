@@ -6,12 +6,13 @@ cask "dictcc-en-de-dictionary-plugin" do
   name "dict.cc English-German dictionary plugin"
   homepage "https://www.dict.cc/?s=about%3Awordlist"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  deprecate! date: "2024-07-10", because: :unmaintained
 
   pkg "macosx10.6_dict.cc_dictionary.pkg"
 
   uninstall pkgutil: "org.lipflip.dictcccDeutschenglischDictionary..*"
+
+  caveats do
+    requires_rosetta
+  end
 end
