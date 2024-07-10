@@ -10,4 +10,8 @@ cask "timelane" do
   depends_on macos: ">= :mojave"
 
   app "Timelane.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
