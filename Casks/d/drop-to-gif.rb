@@ -8,10 +8,14 @@ cask "drop-to-gif" do
   desc "Zero-click animated Gifs"
   homepage "https://mortenjust.github.io/droptogif/"
 
-  app "Drop to GIF.app"
+  deprecate! date: "2024-07-10", because: :unmaintained
 
   zap trash: [
     "~/Library/Preferences/com.mortenjust.Drop-to-GIF.plist",
     "~/Library/Saved Application State/com.mortenjust.Drop-to-GIF.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
