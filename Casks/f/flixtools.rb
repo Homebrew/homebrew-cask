@@ -1,5 +1,5 @@
 cask "flixtools" do
-  version "3.3.1.3.667"
+  version "3.3.1,667"
   sha256 :no_check
 
   url "https://www.flixtools.com/download/FlixTools.dmg"
@@ -7,9 +7,18 @@ cask "flixtools" do
   desc "Downloads subtitles for movies"
   homepage "https://www.flixtools.com/"
 
+  # The version text on the download page (https://www.flixtools.com/download/)
+  # isn't present in the HTML and is rendered with JavaScript using data from
+  # the `versionchk.json` file.
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://www.flixtools.com/v/versionchk.json"
+    strategy :json do |json|
+      version = json["finalVersion"]
+      build = json["final"]
+      next if version.blank? || build.blank?
+
+      "#{version},#{build}"
+    end
   end
 
   app "FlixTools.app"
