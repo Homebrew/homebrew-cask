@@ -6,10 +6,11 @@ cask "droidid" do
   name "DroidID"
   homepage "https://www.suyashsrijan.com/droidid/"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  deprecate! date: "2024-07-10", because: :unmaintained
 
   app "DroidID.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
