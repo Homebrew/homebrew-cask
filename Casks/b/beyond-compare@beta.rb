@@ -7,10 +7,7 @@ cask "beyond-compare@beta" do
   desc "Compare files and folders"
   homepage "https://www.scootersoftware.com/"
 
-  livecheck do
-    url "https://www.scootersoftware.com/beta/download"
-    regex(/BCompareOSX[_.-]v?(\d+(?:\.\d+)+)\.zip/i)
-  end
+  deprecate! date: "2024-07-10", because: :discontinued
 
   auto_updates true
   conflicts_with cask: "beyond-compare"
