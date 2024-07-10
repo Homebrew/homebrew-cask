@@ -7,4 +7,8 @@ cask "touchbarserver" do
   homepage "https://github.com/bikkelbroeders/TouchBarDemoApp"
 
   app "TouchBarServer.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
