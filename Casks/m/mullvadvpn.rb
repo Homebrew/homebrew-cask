@@ -23,6 +23,9 @@ cask "mullvadvpn" do
             delete:    [
               "/Library/Caches/mullvad-vpn",
               "/Library/LaunchDaemons/net.mullvad.daemon.plist",
+              "/opt/homebrew/share/fish/vendor_completions.d/mullvad.fish",
+              "/usr/local/share/fish/vendor_completions.d/mullvad.fish",
+              "/usr/local/share/zsh/site-functions/_mullvad",
               "/var/log/mullvad-vpn",
             ]
 
