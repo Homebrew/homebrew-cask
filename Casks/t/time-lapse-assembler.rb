@@ -13,4 +13,8 @@ cask "time-lapse-assembler" do
   end
 
   app "Time Lapse Assembler.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
