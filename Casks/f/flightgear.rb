@@ -16,4 +16,8 @@ cask "flightgear" do
   app "FlightGear.app"
 
   zap trash: "~/Library/Application Support/FlightGear"
+
+  caveats do
+    requires_rosetta
+  end
 end
