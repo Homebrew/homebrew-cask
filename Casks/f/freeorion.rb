@@ -21,4 +21,8 @@ cask "freeorion" do
     "~/Library/Application Support/FreeOrion",
     "~/Library/Saved Application State/org.freeorion.FreeOrion.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
