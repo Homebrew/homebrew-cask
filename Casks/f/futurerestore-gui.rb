@@ -15,4 +15,8 @@ cask "futurerestore-gui" do
   app "FutureRestore GUI.app"
 
   zap trash: "~/FutureRestoreGUI"
+
+  caveats do
+    requires_rosetta
+  end
 end
