@@ -19,4 +19,8 @@ cask "textbar" do
     "~/Library/Caches/com.RichSomerfield.TextBar",
     "~/Library/Preferences/com.RichSomerfield.TextBar.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

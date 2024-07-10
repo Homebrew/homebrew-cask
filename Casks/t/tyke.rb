@@ -17,4 +17,8 @@ cask "tyke" do
   uninstall quit: "org.torrez.tyke"
 
   zap trash: "~/Library/Preferences/org.torrez.tyke.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end

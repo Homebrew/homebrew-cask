@@ -10,4 +10,8 @@ cask "tip" do
   app "Tip.app"
 
   zap trash: "~/Library/Application Scripts/tanin.tip"
+
+  caveats do
+    requires_rosetta
+  end
 end

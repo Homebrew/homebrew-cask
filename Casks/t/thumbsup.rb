@@ -13,4 +13,8 @@ cask "thumbsup" do
   end
 
   app "ThumbsUp.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

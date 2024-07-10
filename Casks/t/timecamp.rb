@@ -16,4 +16,8 @@ cask "timecamp" do
   app "TimeCamp.app"
 
   zap rmdir: "~/Library/Application Support/TimeCamp"
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -19,4 +19,8 @@ cask "tag" do
   app "Tag.app"
 
   zap trash: "~/Library/Preferences/com.feisty-dog.Tag.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end

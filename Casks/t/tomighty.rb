@@ -10,4 +10,8 @@ cask "tomighty" do
   app "Tomighty.app"
 
   zap trash: "~/Library/Preferences/org.tomighty.Tomighty.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end

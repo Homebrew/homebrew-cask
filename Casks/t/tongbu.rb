@@ -13,4 +13,8 @@ cask "tongbu" do
   end
 
   app "Tongbu.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

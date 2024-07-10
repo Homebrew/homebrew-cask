@@ -22,4 +22,8 @@ cask "tint" do
     "~/Library/Preferences/de.beyondco.tint.plist",
     "~/Library/Saved Application State/de.beyondco.tint.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

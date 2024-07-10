@@ -13,4 +13,8 @@ cask "texts" do
   end
 
   app "Texts.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

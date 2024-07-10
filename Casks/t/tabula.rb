@@ -9,4 +9,8 @@ cask "tabula" do
   homepage "https://tabula.technology/"
 
   app "tabula/Tabula.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -18,4 +18,8 @@ cask "taskexplorer" do
     "~/Library/Caches/com.objective-see.TaskExplorer",
     "~/Library/Preferences/com.objective-see.TaskExplorer.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
