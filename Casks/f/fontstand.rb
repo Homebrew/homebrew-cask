@@ -28,4 +28,8 @@ cask "fontstand" do
     "~/Library/LaunchAgents/com.fontstand-bv.mac.Fontstand-Agent.plist",
     "~/Library/Preferences/com.fontstand-bv.mac.Fontstand.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
