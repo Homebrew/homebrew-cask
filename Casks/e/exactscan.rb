@@ -20,4 +20,8 @@ cask "exactscan" do
     "~/Library/HTTPStorages/de.exactcode.ExactScan",
     "~/Library/Preferences/de.exactcode.ExactScan.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
