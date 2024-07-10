@@ -1,9 +1,9 @@
 cask "amie" do
   arch arm: "-arm64"
 
-  version "240705.0.0"
-  sha256 arm:   "dd7eda3a47b029c45ee2f8ccc8ad4c16bafe0a86b4c2a387ccb647d32708e0f7",
-         intel: "8d2e7dcc889eb83f26a05e4a5aed923bc969ebbc68c8ff52d70979948f099c53"
+  version "240710.0.0"
+  sha256 arm:   "e887a7666df79a5ccf6679be9a94bd924dfb061dda3fbf582ff63ebf1767ab52",
+         intel: "961eb6ae5eab70da5ac93e6e8b8c8034823908f84ada049593f3470295819015"
 
   url "https://github.com/amieso/electron-releases/releases/download/v#{version}/Amie-#{version}#{arch}-mac.zip",
       verified: "github.com/amieso/electron-releases/"
