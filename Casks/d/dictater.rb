@@ -7,5 +7,11 @@ cask "dictater" do
   name "Dictater"
   homepage "https://nosrac.github.io/Dictater/"
 
+  deprecate! date: "2024-07-10", because: :unmaintained
+
   app "Dictater.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
