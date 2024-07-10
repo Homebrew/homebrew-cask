@@ -30,4 +30,8 @@ cask "drawpile" do
     "~/Library/Preferences/net.drawpile.DrawpileClient.plist",
     "~/Library/Saved Application State/net.drawpile.DrawpileClient.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
