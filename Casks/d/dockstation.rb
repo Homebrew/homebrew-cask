@@ -7,6 +7,8 @@ cask "dockstation" do
   name "DockStation"
   homepage "https://dockstation.io/"
 
+  deprecate! date: "2024-07-10", because: :unmaintained
+
   depends_on macos: ">= :el_capitan"
 
   app "DockStation.app"
@@ -17,4 +19,8 @@ cask "dockstation" do
     "~/Library/Preferences/org.dockstation.DockStation.plist",
     "~/Library/Saved Application State/org.dockstation.DockStation.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
