@@ -20,4 +20,8 @@ cask "fireworks" do
     "~/Library/Application Scripts/com.Besher-Al-Maleh.fireworks",
     "~/Library/Containers/com.Besher-Al-Maleh.fireworks",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
