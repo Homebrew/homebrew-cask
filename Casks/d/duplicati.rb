@@ -20,4 +20,8 @@ cask "duplicati" do
     "~/.config/Duplicati",
     "~/Library/Application Support/Duplicati",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
