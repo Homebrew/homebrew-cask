@@ -7,13 +7,7 @@ cask "aether" do
   desc "Peer-to-peer ephemeral public communities"
   homepage "https://getaether.net/"
 
-  livecheck do
-    url "https://static.getaether.net/WebsiteReleaseLinks/Latest/LatestReleaseLinks.json"
-    regex(%r{/Aether-(\d+(?:\.\d+)*-dev\.\d+)%2B(\d+\.[0-9a-f]+)\.dmg}i)
-    strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
-    end
-  end
+  disable! date: "2024-07-10", because: :no_longer_available
 
   app "Aether.app"
 
