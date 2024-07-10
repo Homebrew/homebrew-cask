@@ -16,4 +16,8 @@ cask "dropbox-passwords" do
   depends_on macos: ">= :sierra"
 
   app "Dropbox Passwords.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
