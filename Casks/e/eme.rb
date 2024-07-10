@@ -10,4 +10,8 @@ cask "eme" do
   auto_updates true
 
   app "EME.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
