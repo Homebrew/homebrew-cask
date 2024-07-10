@@ -18,4 +18,8 @@ cask "datasette" do
     "~/Library/Preferences/io.datasette.app.plist",
     "~/Library/Saved Application State/io.datasette.app.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
