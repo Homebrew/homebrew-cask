@@ -34,4 +34,8 @@ cask "elgato-game-capture-hd" do
     "~/Library/Logs/elgato.log",
     "~/Library/Preferences/com.elgato.GameCaptureHD.plist*",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
