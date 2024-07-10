@@ -15,4 +15,8 @@ cask "tuck" do
   app "Tuck.app"
 
   zap trash: "~/Library/Preferences/com.irradiatedsoftware.Tuck.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end
