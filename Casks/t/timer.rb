@@ -20,4 +20,8 @@ cask "timer" do
     "~/Library/Preferences/com.apimac.Timer.plist",
     "~/Library/Preferences/com.apimac.TimerMac.pdata",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
