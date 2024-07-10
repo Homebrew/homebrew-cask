@@ -20,4 +20,8 @@ cask "firecamp" do
     "~/Library/Application Support/firecamp",
     "~/Library/Preferences/com.firecamp.app.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
