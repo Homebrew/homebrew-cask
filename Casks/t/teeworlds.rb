@@ -13,4 +13,8 @@ cask "teeworlds" do
 
   app "Teeworlds.app"
   app "Teeworlds Server.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
