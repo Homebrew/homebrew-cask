@@ -21,4 +21,8 @@ cask "deskreen" do
     "~/Library/Preferences/com.pavlobu.Deskreen.plist",
     "~/Library/Saved Application State/com.pavlobu.Deskreen.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
