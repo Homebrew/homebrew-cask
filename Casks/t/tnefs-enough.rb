@@ -13,4 +13,8 @@ cask "tnefs-enough" do
   end
 
   app "TNEF's Enough.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
