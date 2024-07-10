@@ -19,4 +19,8 @@ cask "energia" do
     "~/Library/Energia15",
     "~/Library/Saved Application State/nu.energia.Energia.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

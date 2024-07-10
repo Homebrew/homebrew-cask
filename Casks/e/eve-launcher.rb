@@ -22,4 +22,8 @@ cask "eve-launcher" do
     "~/Library/Application Support/EVE Online",
     "~/Library/Preferences/com.ccpgames.EVE.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

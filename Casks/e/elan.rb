@@ -25,4 +25,8 @@ cask "elan" do
     "~/Library/Preferences/ELAN",
     "~/Library/Preferences/nl.mpi.elan.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

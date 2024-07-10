@@ -10,4 +10,8 @@ cask "electorrent" do
   auto_updates true
 
   app "Electorrent.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

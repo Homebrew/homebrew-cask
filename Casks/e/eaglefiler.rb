@@ -28,4 +28,8 @@ cask "eaglefiler" do
     "~/Library/Preferences/com.c-command.EagleFiler.plist",
     "~/Library/Saved Application State/com.c-command.EagleFiler.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

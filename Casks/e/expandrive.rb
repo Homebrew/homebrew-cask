@@ -15,6 +15,8 @@ cask "expandrive" do
     end
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "ExpanDrive.app"
 
   zap trash: [
@@ -23,4 +25,8 @@ cask "expandrive" do
     "~/Library/Preferences/com.expandrive.ExpanDrive*.plist",
     "~/Library/Preferences/com.expandrive.ExpanDrive.helper.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

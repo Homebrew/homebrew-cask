@@ -10,10 +10,14 @@ cask "ev3-classroom" do
 
   livecheck do
     url "https://education.lego.com/page-data/en-us/downloads/mindstorms-ev3/software/page-data.json"
-    regex(/EV3[._-]v?(\d+(?:\.\d+)+)_Global\.dmg/i)
+    regex(/EV3[._-]v?(\d+(?:\.\d+)+)[._-]Global\.dmg/i)
   end
 
   depends_on macos: ">= :mojave"
 
   app "EV3 Classroom.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

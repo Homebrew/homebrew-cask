@@ -14,4 +14,8 @@ cask "emailchemy" do
   end
 
   app "Emailchemy.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -20,4 +20,8 @@ cask "editaro" do
     "~/Library/Preferences/com.electron.editaro.plist",
     "~/Library/Saved Application State/com.electron.editaro.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

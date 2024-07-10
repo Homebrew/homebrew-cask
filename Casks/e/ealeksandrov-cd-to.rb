@@ -17,16 +17,7 @@ cask "ealeksandrov-cd-to" do
 
   app "cd_to_#{version.major_minor.dots_to_underscores}/terminal/cd_to.app"
 
-  caveats <<~EOS
-    To complete installation:
-    1. Open the Applications folder in finder.
-    2. Drag "cd_to.app" onto the Finder toolbar while holding down the command(⌘)
-    and option(⌥) keys.
-
-    To use, just click on the new button and instantly opens a new Terminal.app
-    window.
-
-    Only "cd to.app" for Terminal.app has been added to the Applications folder.
-    The iterm and x11_term versions are also staged.
-  EOS
+  caveats do
+    requires_rosetta
+  end
 end

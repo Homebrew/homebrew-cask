@@ -20,4 +20,8 @@ cask "enzymex" do
     "~/Library/Preferences/com.mekentosj.enzymex.plist",
     "~/Library/Saved Application State/com.mekentosj.enzymex.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
