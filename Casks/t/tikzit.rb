@@ -11,4 +11,8 @@ cask "tikzit" do
   depends_on macos: ">= :sierra"
 
   app "TikZiT.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
