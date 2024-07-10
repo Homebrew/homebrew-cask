@@ -9,4 +9,8 @@ cask "the-cheat" do
   homepage "https://github.com/chazmcgarvey/thecheat"
 
   app "The Cheat.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
