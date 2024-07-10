@@ -7,10 +7,7 @@ cask "baudline" do
   desc "Time-frequency browser"
   homepage "https://www.baudline.com/"
 
-  livecheck do
-    url "https://www.baudline.com/download.html"
-    regex(/href=.*?baudline_(\d+(?:\.\d+)+)_macosx_universal\.dmg/i)
-  end
+  disable! date: "2024-07-09", because: :no_longer_meets_criteria
 
   app "baudline.app"
 end
