@@ -1,6 +1,6 @@
 cask "thinlinc-client" do
-  version "4.16.0_3389"
-  sha256 "7537495138dd63499067d70f5965a134a6887c1817f47fc768a7bea25a6244b8"
+  version "4.17.0_3543"
+  sha256 "34283ca262cbc308e5170cc0304f5036f58167fbbcea6d98988202405fcb9838"
 
   url "https://www.cendio.com/downloads/clients/tl-#{version}-client-macos.iso"
   name "ThinLinc"
@@ -15,4 +15,8 @@ cask "thinlinc-client" do
   app "ThinLinc Client.app"
 
   zap trash: "~/.thinlinc"
+
+  caveats do
+    requires_rosetta
+  end
 end
