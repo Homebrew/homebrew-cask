@@ -15,4 +15,8 @@ cask "townwifi" do
   auto_updates true
 
   app "TownWifi.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
