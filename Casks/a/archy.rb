@@ -10,7 +10,9 @@ cask "archy" do
 
   livecheck do
     url "https://sdk-cdn.mypurecloud.com/archy/versions.json"
-    regex(/"version"\s*:\s*"(\d+(?:\.\d+)+)"/i)
+    strategy :json do |json|
+      json.map { |item| item["version"] }
+    end
   end
 
   binary "archyBin/archy-macos-#{version}", target: "archy"
