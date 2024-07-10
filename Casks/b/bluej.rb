@@ -8,7 +8,8 @@ cask "bluej" do
   homepage "https://www.bluej.org/"
 
   livecheck do
-    url "https://github.com/k-pet-group/BlueJ-Greenfoot"
+    url :homepage
+    regex(/Version\s*v?(\d+(?:\.\d+)+)/i)
   end
 
   depends_on macos: ">= :sierra"
