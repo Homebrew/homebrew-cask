@@ -31,4 +31,8 @@ cask "debookee" do
     "~/Library/Saved Application State/com.iwaxx.Debookee.savedState",
     "~/Library/WebKit/com.iwaxx.Debookee",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -12,4 +12,8 @@ cask "dyn-updater" do
   end
 
   app "Dyn Updater.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

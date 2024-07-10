@@ -14,4 +14,8 @@ cask "dremel-slicer" do
   end
 
   app "Dremel3DSlicer-#{version}-mac/Dremel DigiLab 3D Slicer.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

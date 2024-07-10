@@ -23,4 +23,8 @@ cask "dashcam-viewer" do
     "~/Library/Caches/earthshinesw",
     "~/Library/Preferences/com.earthshinesw.DashcamViewer.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

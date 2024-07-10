@@ -21,4 +21,8 @@ cask "dixa" do
     "~/Library/Preferences/dixa.plist",
     "~/Library/Saved Application State/dixa.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

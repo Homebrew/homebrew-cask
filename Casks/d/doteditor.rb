@@ -11,4 +11,8 @@ cask "doteditor" do
   depends_on formula: "graphviz"
 
   app "DotEditor.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

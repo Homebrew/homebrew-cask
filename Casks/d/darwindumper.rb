@@ -22,4 +22,8 @@ cask "darwindumper" do
     "~/Library/Preferences/org.tom.DarwinDumper.plist",
     "~/Library/Saved Application State/com.DarwinDumper.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

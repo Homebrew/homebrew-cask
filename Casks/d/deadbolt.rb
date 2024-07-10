@@ -19,4 +19,8 @@ cask "deadbolt" do
     "~/Library/Preferences/org.alichtman.deadbolt.plist",
     "~/Library/Saved Application State/org.alichtman.deadbolt.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

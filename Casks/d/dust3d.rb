@@ -15,7 +15,13 @@ cask "dust3d" do
     regex(/^v?(\d+(?:\.\d+)+(?:-rc\.?\d*)?)$/i)
   end
 
+  depends_on macos: ">= :high_sierra"
+
   app "dust3d-#{version}.app"
 
   zap trash: "~/Library/Saved Application State/com.yourcompany.dust3d.savedState"
+
+  caveats do
+    requires_rosetta
+  end
 end

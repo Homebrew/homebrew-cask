@@ -20,4 +20,8 @@ cask "dvdstyler" do
     "~/Library/Preferences/org.dvdstyler.DVDStyler.plist",
     "~/Library/Saved Application State/org.dvdstyler.DVDStyler.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -21,4 +21,8 @@ cask "decloner" do
     "~/Library/Preferences/com.pixelespresso.Decloner.plist",
     "~/Library/Saved Application State/com.pixelespresso.Decloner.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

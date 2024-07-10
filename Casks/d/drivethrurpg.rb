@@ -13,7 +13,7 @@ cask "drivethrurpg" do
     regex(/href=.*?DriveThruRPG[._-]v?(\d+(?:\.\d+)+)\.dmg/i)
   end
 
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "DriveThruRPG.app"
 
@@ -21,4 +21,8 @@ cask "drivethrurpg" do
     "~/Library/Preferences/com.onebookshelf.DriveThruRPG.plist",
     "~/Library/Saved Application State/com.drivethrurpg.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

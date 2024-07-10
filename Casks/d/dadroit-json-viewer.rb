@@ -22,4 +22,8 @@ cask "dadroit-json-viewer" do
     "~/.config/Dadroit",
     "~/Library/Saved Application State/com.dadroit.Viewer.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

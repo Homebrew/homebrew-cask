@@ -19,4 +19,8 @@ cask "doxygen" do
     "~/Library/Preferences/org.doxygen.plist",
     "~/Library/Saved Application State/org.doxygen.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -24,4 +24,8 @@ cask "dosbox" do
   app "dosbox.app"
 
   zap trash: "~/Library/Preferences/DOSBox*"
+
+  caveats do
+    requires_rosetta
+  end
 end
