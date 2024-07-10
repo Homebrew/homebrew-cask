@@ -22,4 +22,8 @@ cask "fanny" do
     "~/Library/Group Containers/fanny-shared-defaults",
     "~/Library/Preferences/com.fannywidget.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
