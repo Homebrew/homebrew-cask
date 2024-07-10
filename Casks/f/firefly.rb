@@ -29,4 +29,8 @@ cask "firefly" do
     "~/Library/Preferences/org.iota.firefly.plist",
     "~/Library/Saved Application State/org.iota.firefly.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
