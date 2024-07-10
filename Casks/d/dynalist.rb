@@ -13,4 +13,8 @@ cask "dynalist" do
   end
 
   app "Dynalist.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
