@@ -13,6 +13,8 @@ cask "fotokasten" do
     strategy :sparkle
   end
 
+  depends_on macos: ">= :mojave"
+
   app "Fotokasten.app"
 
   zap trash: [
@@ -22,4 +24,8 @@ cask "fotokasten" do
     "~/Library/Preferences/de.designer.fotokasten.osx.plist",
     "~/Library/WebKit/de.designer.fotokasten.osx",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
