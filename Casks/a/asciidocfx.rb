@@ -3,7 +3,7 @@ cask "asciidocfx" do
 
   version "1.8.10"
   sha256 arm:   "aa3790f8d250136ef8025a4862d64a188640bc4b835ec3857401d2b5eec95b79",
-         intel: "81fbb4ea8fd781a62e1e92fd936d038c919d337cdfb0509f24f91d27a29db146"
+         intel: "eb4510935a93df580633a7508be2c719f827a889ea6ded72f2a5956ba3b1a9a8"
 
   url "https://github.com/asciidocfx/AsciidocFX/releases/download/v#{version}/AsciidocFX_Mac#{arch}.dmg",
       verified: "github.com/asciidocfx/AsciidocFX/"
