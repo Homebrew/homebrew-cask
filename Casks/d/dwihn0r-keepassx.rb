@@ -6,5 +6,11 @@ cask "dwihn0r-keepassx" do
   name "KeePassX"
   homepage "https://github.com/dwihn0r/keepassx/"
 
+  disable! date: "2024-07-10", because: :unmaintained
+
   app "KeePassX.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
