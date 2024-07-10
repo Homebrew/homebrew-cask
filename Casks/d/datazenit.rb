@@ -7,5 +7,11 @@ cask "datazenit" do
   name "Datazenit"
   homepage "https://datazenit.com/"
 
+  deprecate! date: "2024-07-10", because: :unmaintained
+
   app "Datazenit.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
