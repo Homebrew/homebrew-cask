@@ -15,4 +15,8 @@ cask "tuneinstructor" do
   depends_on macos: ">= :catalina"
 
   app "Tune•Instructor.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
