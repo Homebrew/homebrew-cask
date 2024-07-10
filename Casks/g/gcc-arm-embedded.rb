@@ -4,7 +4,7 @@ cask "gcc-arm-embedded" do
   arch arm: "arm64", intel: "x86_64"
 
   version "13.3.rel1"
-  pkg_version = "13.3.Rel1"
+  pkg_version = "13.3.rel1"
   gcc_version = "13.3.1"
   sha256 arm:   "926af5163d173cd115a576a4e20ce74c29565bc99b478c81450f8069cdffd3bc",
          intel: "bbe9e9ce68bdd4f4baf380c25fe677ed1bd0fbb43d843fa7f4f48f47e56c748d"
@@ -52,7 +52,7 @@ cask "gcc-arm-embedded" do
   binary "/Applications/ArmGNUToolchain/#{pkg_version}/arm-none-eabi/bin/arm-none-eabi-strings"
   binary "/Applications/ArmGNUToolchain/#{pkg_version}/arm-none-eabi/bin/arm-none-eabi-strip"
 
-  uninstall pkgutil: "arm-gnu-toolchain-#{version}-darwin-#{arch}-arm-none-eabi",
+  uninstall pkgutil: "arm-gnu-toolchain-#{pkg_version}-darwin-#{arch}-arm-none-eabi",
             delete:  "/Applications/ArmGNUToolchain/#{pkg_version}/arm-none-eabi",
             rmdir:   [
               "/Applications/ArmGNUToolchain",
