@@ -8,6 +8,8 @@ cask "caption" do
   desc "Finds and sets up subtitles automatically"
   homepage "https://getcaption.co/"
 
+  deprecate! date: "2024-07-09", because: :unmaintained
+
   app "Caption.app"
 
   zap trash: [
@@ -16,4 +18,8 @@ cask "caption" do
     "~/Library/Preferences/com.electron.caption.plist",
     "~/Library/Saved Application State/com.electron.caption.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
