@@ -20,4 +20,8 @@ cask "turtl" do
   end
 
   app "Turtl.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
