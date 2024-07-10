@@ -1,6 +1,6 @@
 cask "prowritingaid" do
-  version "2.0.60"
-  sha256 "d0798bc1c64f6db62642040b2d448e1c685258120228e9002c64497499d445c0"
+  version "2.5.41290"
+  sha256 "4ca07e66fd934a0d45f39469518f870aa5afee8b083fd61468265423b384b924"
 
   url "https://cdn.prowritingaid.com/prowritingaid-desktop/desktop_#{version.dots_to_underscores}/ProWritingAid.dmg"
   name "ProWritingAid"
@@ -8,8 +8,11 @@ cask "prowritingaid" do
   homepage "https://prowritingaid.com/"
 
   livecheck do
-    skip "No version information available"
+    url "https://prowritingaid.com/en/App/DesktopHistory"
+    regex(/Version\s*v?(\d+(?:\.\d+)+)/i)
   end
+
+  depends_on macos: ">= :high_sierra"
 
   app "ProWritingAid.app"
 
@@ -19,4 +22,8 @@ cask "prowritingaid" do
     "~/Library/Preferences/com.orpheus.prowritingaid.mac.plist",
     "~/Library/Saved Application State/com.orpheus.prowritingaid.mac.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
