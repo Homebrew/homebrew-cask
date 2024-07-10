@@ -23,4 +23,8 @@ cask "edfbrowser" do
     "~/Library/Preferences/net.teuniz.EDFbrowser.plist",
     "~/Library/Saved Application State/net.teuniz.EDFbrowser.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
