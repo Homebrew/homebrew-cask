@@ -22,4 +22,8 @@ cask "filepane" do
     "~/Library/Preferences/com.mymixapps.FilePane.plist",
     "~/Users/Shared/FilePane/",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
