@@ -8,13 +8,11 @@ cask "imo" do
   desc "Video calls and chat"
   homepage "https://imo.im/"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  deprecate! date: "2023-12-17", because: :moved_to_mas
 
   app "Imo.app"
 
   caveats do
-    <<~EOS
-      Newer version is only available in Mac App Store.
-    EOS
+    requires_rosetta
   end
 end
