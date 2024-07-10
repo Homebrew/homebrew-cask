@@ -13,4 +13,8 @@ cask "time-tracker" do
   end
 
   app "Time Tracker.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
