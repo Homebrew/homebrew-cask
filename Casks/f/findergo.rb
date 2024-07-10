@@ -10,4 +10,8 @@ cask "findergo" do
   depends_on macos: ">= :sierra"
 
   app "FinderGo.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
