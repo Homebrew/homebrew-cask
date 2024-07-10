@@ -2,15 +2,15 @@ cask "effect-house" do
   arch arm: "_M1_101", intel: "_Intel_101"
 
   on_arm do
-    version "4.2.4,132,0531"
-    sha256 "c78279276d8023894ba11994a845167f8e8bf94f5147261218abba1304313714"
+    version "4.3.0,7157,0626"
+    sha256 "ae421fe5d080e8d32f030f11eedd1cd91b3e82e3f0347bae1958f1675ab503db"
   end
   on_intel do
-    version "4.2.4,115,0531"
-    sha256 "c8868e3718a44f0a8b1bf86457af350d2569c9aee3267fea7006568c1e368901"
+    version "4.3.0,7161,0626"
+    sha256 "fd12450e2ffe11cb2c3fda888f50860d1ab24b40a682dc87853a9a10c1b14c7e"
   end
 
-  url "https://sf16-va.tiktokcdn.com/obj/eden-va2/olaa_ajlmml_zlp/ljhwZthlaukjlkulzlp/V#{version.csv.first.no_dots}_External_Release_#{version.csv.third}/Effect_House_v#{version.csv.first}.#{version.csv.second}#{arch}.dmg",
+  url "https://sf16-va.tiktokcdn.com/obj/eden-va2/olaa_ajlmml_zlp/ljhwZthlaukjlkulzlp/V#{version.csv.first.no_dots}a_ExternalRelease_#{version.csv.third}/Effect_House_v#{version.csv.first}.#{version.csv.second}#{arch}.dmg",
       verified: "sf16-va.tiktokcdn.com/obj/eden-va2/olaa_ajlmml_zlp/ljhwZthlaukjlkulzlp/"
   name "TikTok Effect House"
   desc "Create vibrant AR effects for TikTok"
