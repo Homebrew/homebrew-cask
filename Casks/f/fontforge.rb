@@ -26,4 +26,8 @@ cask "fontforge" do
   app "FontForge.app"
 
   zap trash: "~/.cache/fontforge"
+
+  caveats do
+    requires_rosetta
+  end
 end
