@@ -4,7 +4,7 @@ cask "gcc-aarch64-embedded" do
   arch arm: "arm64", intel: "x86_64"
 
   version "13.3.rel1"
-  pkg_version = "13.3.Rel1"
+  pkg_version = "13.3.rel1"
   gcc_version = "13.3.1"
   sha256 arm:   "e8d1b044546df16d4f654d72eafe2f68950d39838078d6f32f132de0d6649eee",
          intel: "2a3e1c4364f401cb206bc95b2fd0c3e58f3dc539db3c4e4b0ecdfcba8267d6a2"
@@ -52,7 +52,7 @@ cask "gcc-aarch64-embedded" do
   binary "/Applications/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-strings"
   binary "/Applications/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf/bin/aarch64-none-elf-strip"
 
-  uninstall pkgutil: "arm-gnu-toolchain-#{version}-darwin-#{arch}-aarch64-none-elf",
+  uninstall pkgutil: "arm-gnu-toolchain-#{pkg_version}-darwin-#{arch}-aarch64-none-elf",
             delete:  "/Applications/ArmGNUToolchain/#{pkg_version}/aarch64-none-elf",
             rmdir:   [
               "/Applications/ArmGNUToolchain",
