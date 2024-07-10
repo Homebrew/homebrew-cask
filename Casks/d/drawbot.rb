@@ -9,4 +9,8 @@ cask "drawbot" do
   homepage "https://www.drawbot.com/"
 
   app "DrawBot.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
