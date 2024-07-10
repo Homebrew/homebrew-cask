@@ -21,4 +21,8 @@ cask "edrawmind" do
     "~/Library/Preferences/com.edrawsoft.mindmaster.plist",
     "~/Library/Saved Application State/com.edrawsoft.mindmaster.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
