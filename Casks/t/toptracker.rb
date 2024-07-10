@@ -16,4 +16,8 @@ cask "toptracker" do
   depends_on macos: ">= :sierra"
 
   app "TopTracker.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
