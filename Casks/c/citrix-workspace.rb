@@ -1,6 +1,6 @@
 cask "citrix-workspace" do
-  version "24.02.10.24"
-  sha256 "9c3b2e7116dc3c2a68c24b3b6d01e4a94f8aa76954824b2604a307d86492df61"
+  version "24.05.0.89"
+  sha256 "34a374300ff79466cde9119c9e9f89fb1c21d5ce94c94e697223c7cbba36d47a"
 
   url "https://downloadplugins.citrix.com/ReceiverUpdates/Prod/Receiver/Mac/CitrixWorkspaceAppUniversal#{version}.pkg"
   name "Citrix Workspace"
@@ -34,7 +34,13 @@ cask "citrix-workspace" do
               "com.citrix.receiver.nomas",
               "com.citrix.ReceiverHelper",
             ],
-            pkgutil:   "com.citrix.ICAClient"
+            pkgutil:   [
+              "com.citrix.common",
+              "com.citrix.enterprisebrowserinstaller",
+              "com.citrix.ICAClient",
+              "com.citrix.ICAClientcwa",
+              "com.citrix.ICAClienthdx",
+            ]
 
   zap trash: [
     "~/Library/Application Support/Citrix Receiver",
