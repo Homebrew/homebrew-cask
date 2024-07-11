@@ -8,12 +8,7 @@ cask "cncnet" do
   desc "Multiplayer platform for classic Command & Conquer games"
   homepage "https://cncnet.org/"
 
-  livecheck do
-    url :url
-    strategy :extract_plist do |item|
-      item["CnCNet459984781Wine.wineskin.prefs"].short_version
-    end
-  end
+  deprecate! date: "2024-07-11", because: :unmaintained
 
   app "CnCNet.app"
 
