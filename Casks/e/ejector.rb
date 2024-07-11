@@ -7,10 +7,7 @@ cask "ejector" do
   desc "Adds an Eject icon to the menu bar"
   homepage "https://www.jeb.com.fr/en/ejector.shtml"
 
-  livecheck do
-    url :homepage
-    regex(%r{href=.*?/Ejector[._-]v?(\d+(?:\.\d+)+)\.dmg}i)
-  end
+  disable! date: "2024-07-10", because: "is 32-bit only"
 
   app "Ejector.app"
 end
