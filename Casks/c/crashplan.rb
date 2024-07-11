@@ -18,7 +18,7 @@ cask "crashplan" do
     end
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: ">= :monterey"
 
   pkg "Install CrashPlan.pkg"
 
