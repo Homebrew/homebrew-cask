@@ -25,4 +25,8 @@ cask "gas-mask" do
     "~/Library/Logs/Gas Mask.log",
     "~/Library/Preferences/ee.clockwise.gmask.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
