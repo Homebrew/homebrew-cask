@@ -1,5 +1,5 @@
 cask "amazon-workspaces" do
-  version "5.21.0.5194"
+  version "5.21.0"
   sha256 :no_check
 
   url "https://d2td7dqidlhjx7.cloudfront.net/prod/global/osx/WorkSpaces.pkg",
@@ -9,11 +9,11 @@ cask "amazon-workspaces" do
   homepage "https://clients.amazonworkspaces.com/"
 
   livecheck do
-    url :url
-    strategy :extract_plist
+    url "https://docs.aws.amazon.com/workspaces/latest/userguide/amazon-workspaces-osx-client.html"
+    regex(/>\s*v?(\d+(?:\.\d+)+)\s*</i)
   end
 
-  depends_on macos: ">= :sierra"
+  depends_on macos: ">= :catalina"
 
   pkg "WorkSpaces.pkg"
 
