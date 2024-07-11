@@ -7,6 +7,8 @@ cask "graphiql" do
   desc "Light, Electron-based Wrapper around GraphiQL"
   homepage "https://github.com/skevy/graphiql-app"
 
+  deprecate! date: "2024-07-11", because: :unmaintained
+
   app "GraphiQL.app"
 
   zap trash: [
@@ -15,4 +17,8 @@ cask "graphiql" do
     "~/Library/Preferences/com.sk3vy.graphiql-app.plist",
     "~/Library/Saved Application State/com.sk3vy.graphiql-app.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
