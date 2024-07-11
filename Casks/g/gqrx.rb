@@ -23,4 +23,8 @@ cask "gqrx" do
   end
 
   zap trash: "~/.config/gqrx"
+
+  caveats do
+    requires_rosetta
+  end
 end
