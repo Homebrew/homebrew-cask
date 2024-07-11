@@ -1,8 +1,10 @@
 cask "jandi" do
+  arch arm: "-arm64"
+
   version "1.7.7,202306"
   sha256 :no_check
 
-  url "https://cdn.jandi.com/jandi-pc/download/JANDI.dmg"
+  url "https://cdn.jandi.com/jandi-pc/download/JANDI#{arch}.dmg"
   name "JANDI"
   desc "Desktop app for the JANDI collaboration platform"
   homepage "https://www.jandi.com/landing/"
