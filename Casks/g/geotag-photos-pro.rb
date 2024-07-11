@@ -14,4 +14,8 @@ cask "geotag-photos-pro" do
   end
 
   app "Geotag Photos Pro 2.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
