@@ -30,4 +30,8 @@ cask "goneovim" do
     "~/.goneovim",
     "~/Library/Saved Application State/com.ident.goneovim.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

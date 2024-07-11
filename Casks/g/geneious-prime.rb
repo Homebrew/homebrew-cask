@@ -21,4 +21,8 @@ cask "geneious-prime" do
     "~/Library/Preferences/Geneious.in.use.vmoptions",
     "~/Library/Saved Application State/com.biomatters.Geneious.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

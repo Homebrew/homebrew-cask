@@ -11,4 +11,8 @@ cask "gridea" do
   auto_updates true
 
   app "Gridea.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

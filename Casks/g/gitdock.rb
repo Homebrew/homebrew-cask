@@ -18,4 +18,8 @@ cask "gitdock" do
     "~/Library/Preferences/com.electron.gitdock.plist",
     "~/Library/Saved Application State/com.electron.gitdock.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

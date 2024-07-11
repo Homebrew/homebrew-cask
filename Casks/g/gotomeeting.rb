@@ -23,4 +23,8 @@ cask "gotomeeting" do
     "~/Library/LaunchAgents/com.logmein.GoToMeeting.G2MAIRUploader.plist",
     "~/Library/LaunchAgents/com.logmein.GoToMeeting.G2MUpdate.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

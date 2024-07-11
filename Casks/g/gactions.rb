@@ -13,4 +13,8 @@ cask "gactions" do
   end
 
   binary "gactions-sdk/gactions"
+
+  caveats do
+    requires_rosetta
+  end
 end

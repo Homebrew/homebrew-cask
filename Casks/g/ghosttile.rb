@@ -21,4 +21,8 @@ cask "ghosttile" do
   end
 
   app "GhostTile.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

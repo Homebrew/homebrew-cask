@@ -28,4 +28,8 @@ cask "geektool" do
     "~/Library/Preferences/org.tynsoe.GeekTool.plist",
     "~/Library/Preferences/org.tynsoe.geektool3.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

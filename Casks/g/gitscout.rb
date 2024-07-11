@@ -19,4 +19,8 @@ cask "gitscout" do
     "~/Library/Preferences/com.electron.gitscout.plist",
     "~/Library/Saved Application State/com.electron.gitscout.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

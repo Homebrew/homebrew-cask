@@ -17,4 +17,8 @@ cask "geburtstagschecker" do
     "~/Library/Caches/earthlingsoft.GeburtstagsChecker",
     "~/Library/Preferences/earthlingsoft.GeburtstagsChecker.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

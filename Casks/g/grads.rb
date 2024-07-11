@@ -20,13 +20,18 @@ cask "grads" do
   binary "grads-#{version}/bin/gribscan"
   binary "grads-#{version}/bin/stnmap"
 
-  caveats <<~EOS
-    In order to use the GrADS tools, you will need
-    the GrADS fonts and maps data sets, and may need
-    to set some environmental variables.
+  # No zap stanza required
 
-    See the documentation at:
+  caveats do
+    requires_rosetta
+    <<~EOS
+      In order to use the GrADS tools, you will need
+      the GrADS fonts and maps data sets, and may need
+      to set some environmental variables.
+
+      See the documentation at:
 
       #{staged_path}/grads-#{version}/bin/INSTALL
-  EOS
+    EOS
+  end
 end

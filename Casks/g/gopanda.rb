@@ -13,4 +13,8 @@ cask "gopanda" do
   end
 
   app "GoPanda#{version.major}.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
