@@ -16,4 +16,8 @@ cask "grafx" do
   end
 
   app "Grafx#{version.major}.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
