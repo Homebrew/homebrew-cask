@@ -6,6 +6,7 @@
 4k-video-downloaderplus
 4k-youtube-to-mp3
 8x8-work
+a-better-finder-attributes
 ableton-live-intro
 ableton-live-intro@11
 ableton-live-lite
