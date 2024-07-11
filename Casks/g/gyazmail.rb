@@ -13,4 +13,8 @@ cask "gyazmail" do
   end
 
   app "GyazMail.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
