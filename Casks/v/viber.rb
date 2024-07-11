@@ -1,5 +1,5 @@
 cask "viber" do
-  version "23.0.0,2300"
+  version "23.1.0,2310"
   sha256 :no_check
 
   url "https://download.viber.com/desktop/mac/Viber.dmg"
@@ -28,4 +28,8 @@ cask "viber" do
         "~/Library/Saved Application State/com.viber.osx.savedState",
       ],
       rmdir: "~/Documents/ViberDownloads"
+
+  caveats do
+    requires_rosetta
+  end
 end
