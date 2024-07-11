@@ -1,9 +1,9 @@
 cask "openshift-client" do
   arch arm: "-arm64"
 
-  version "4.16.2"
-  sha256 arm:   "807c64ebc413ddc01fdc0a931a7d9237394efa5492374c5a0dd276488df94a5c",
-         intel: "2cd1199c9571ab66988d6e39f32f365a99f961ff7e013b0cbe9d74052941ceff"
+  version "4.16.3"
+  sha256 arm:   "1418af2fea261e40d63f3194a0a5a517d94e34d7c682cb3e781a513ef8efe0b0",
+         intel: "daaa4ac71947e8962a911f182be81d7cf8884ecbcf6c75895f01f1f13fc01ed1"
 
   url "https://mirror.openshift.com/pub/openshift-v#{version.major}/clients/ocp/#{version}/openshift-client-mac#{arch}.tar.gz"
   name "Openshift Client"
