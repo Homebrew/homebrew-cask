@@ -2,12 +2,12 @@ cask "xpra" do
   arch arm: "arm64", intel: "x86_64"
 
   on_arm do
-    version "6.0.1,3"
-    sha256 "119a62ea87a25a046908645fbd7a6283fba02ce6c43ba073d580c1f3b66ca9ea"
+    version "6.0.2,0"
+    sha256 "0f780c2bbe578d01fb8211269639e5004528eefaa6dc10b709e6fcfa75bf4e65"
   end
   on_intel do
-    version "6.0,35230"
-    sha256 "e6554c7a28ad266b48cdff2f08d060223cb0ba3656cad945df885be630bfd3cb"
+    version "6.0.2,0"
+    sha256 "ea82c0eb46467795d4f5f6fe89c60efc9e71c4a7decc1777f9c8d01352221b4b"
   end
 
   url "https://www.xpra.org/dists/osx/#{arch}/Xpra-#{arch}-#{version.csv.first}-r#{version.csv.second}.pkg"
@@ -16,10 +16,12 @@ cask "xpra" do
   homepage "https://www.xpra.org/"
 
   livecheck do
-    url "https://www.xpra.org/dists/osx/#{arch}/Xpra-#{arch}.pkg.sha1"
-    regex(/#{arch}[._-]v?(\d+(?:\.\d+)+)[._-]r(\d+)\.pkg/i)
+    url "https://xpra.org/dists/MacOS/#{arch}/"
+    regex(/href=.*?Xpra-#{arch}[._-]v?(\d+(?:\.\d+)+)(?:[._-]r(\d+))?\.pkg/i)
     strategy :page_match do |page, regex|
-      page.scan(regex).map { |match| "#{match[0]},#{match[1]}" }
+      page.scan(regex).map do |match|
+        match[1] ? "#{match[0]},#{match[1]}" : match[0]
+      end
     end
   end
 
