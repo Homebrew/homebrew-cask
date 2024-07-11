@@ -1,6 +1,6 @@
 cask "douyin-chat" do
-  version "1.1.18,11966755"
-  sha256 "725ae941ecb235b59c40aca7658146d8fc5f828acdc5cbfb1a5e5929aa2f9eb8"
+  version "1.1.19,11970632"
+  sha256 "44272a5841b048e06d6df34666481f284fae8f4998b47ee8e1ab75dda42ea4f8"
 
   url "https://lf-impc.douyinstatic.com/obj/tos-aweme-im-pc/7094550955558967563/releases/#{version.csv.second}/#{version.csv.first}/darwin-x64/DouyinChat.dmg",
       verified: "lf-impc.douyinstatic.com/obj/tos-aweme-im-pc/"
