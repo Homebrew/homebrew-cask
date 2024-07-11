@@ -7,7 +7,13 @@ cask "firebird-emu" do
   desc "TI Nspire calculator emulator"
   homepage "https://github.com/nspire-emus/firebird"
 
+  depends_on macos: ">= :high_sierra"
+
   app "firebird-emu.app"
 
   zap trash: "~/Library/Preferences/org.firebird-emus.firebird-emu.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end

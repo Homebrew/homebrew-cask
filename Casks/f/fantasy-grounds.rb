@@ -13,4 +13,8 @@ cask "fantasy-grounds" do
   app "Fantasy Grounds.app"
 
   zap trash: "~/Library/Saved Application State/Fantasy Grounds*"
+
+  caveats do
+    requires_rosetta
+  end
 end

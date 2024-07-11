@@ -14,4 +14,8 @@ cask "foldingtext" do
   end
 
   app "FoldingText.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

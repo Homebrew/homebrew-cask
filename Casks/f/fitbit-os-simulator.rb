@@ -13,4 +13,8 @@ cask "fitbit-os-simulator" do
   end
 
   app "Fitbit OS Simulator.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

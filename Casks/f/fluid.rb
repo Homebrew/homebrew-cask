@@ -22,4 +22,8 @@ cask "fluid" do
     "~/Library/Preferences/com.fluidapp.Fluid*",
     "~/Library/Saved Application State/com.fluidapp.Fluid*",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

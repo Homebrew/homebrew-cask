@@ -12,4 +12,8 @@ cask "fman" do
   end
 
   app "fman.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

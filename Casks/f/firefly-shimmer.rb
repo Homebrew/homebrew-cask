@@ -14,7 +14,7 @@ cask "firefly-shimmer" do
   end
 
   auto_updates true
-  depends_on macos: ">= :high_sierra"
+  depends_on macos: ">= :catalina"
 
   app "Firefly Shimmer.app"
 
@@ -27,4 +27,8 @@ cask "firefly-shimmer" do
     "~/Library/Preferences/org.iota.firefly.plist",
     "~/Library/Saved Application State/org.iota.firefly.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

@@ -13,4 +13,8 @@ cask "freemind" do
   end
 
   app "FreeMind.app"
+
+  caveats do
+    requires_rosetta
+  end
 end

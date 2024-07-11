@@ -22,4 +22,8 @@ cask "fing" do
     "~/Library/Preferences/com.fing.app.plist",
     "~/Library/Saved Application State/com.fing.app.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

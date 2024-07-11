@@ -6,7 +6,7 @@ cask "frappe-books" do
       verified: "github.com/frappe/books/"
   name "Frappe Books"
   desc "Book-keeping software for small businesses and freelancers"
-  homepage "https://frappebooks.com/"
+  homepage "https://frappe.io/books/"
 
   livecheck do
     url :url
@@ -20,4 +20,8 @@ cask "frappe-books" do
     "~/Library/Preferences/io.frappe.books.plist",
     "~/Library/Saved Application State/io.frappe.books.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end

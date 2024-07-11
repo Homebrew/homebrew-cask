@@ -11,4 +11,8 @@ cask "flameshot" do
   app "flameshot.app"
 
   zap trash: "~/.config/flameshot/flameshot.ini"
+
+  caveats do
+    requires_rosetta
+  end
 end
