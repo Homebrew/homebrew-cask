@@ -6,7 +6,7 @@ cask "gulp" do
   name "gulp-app"
   homepage "https://github.com/sindresorhus/gulp-app"
 
-  deprecate! date: "2023-12-17", because: :discontinued
+  disable! date: "2024-07-11", because: "is 32-bit only"
 
   app "gulp.app"
 

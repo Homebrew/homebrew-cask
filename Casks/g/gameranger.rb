@@ -6,7 +6,7 @@ cask "gameranger" do
   name "GameRanger"
   homepage "https://gameranger.com/"
 
-  disable! date: "2024-07-05", because: :unmaintained
+  disable! date: "2024-07-05", because: "is 32-bit only"
 
   app "GameRanger.app"
 
