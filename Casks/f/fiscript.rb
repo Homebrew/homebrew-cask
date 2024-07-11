@@ -6,6 +6,8 @@ cask "fiscript" do
   name "FiScript"
   homepage "https://github.com/Mortennn/FiScript"
 
+  deprecate! date: "2024-07-10", because: :unmaintained
+
   depends_on macos: ">= :sierra"
 
   app "FiScript.app"
@@ -19,4 +21,8 @@ cask "fiscript" do
     "~/Library/Group Containers/group.Mortennn.FiScript",
     "~/Library/Group Containers/sharedContainerID.container",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
