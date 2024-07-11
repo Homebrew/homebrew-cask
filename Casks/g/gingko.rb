@@ -16,4 +16,8 @@ cask "gingko" do
   app "Gingko.app"
 
   zap trash: "~/Library/Application Support/Gingko"
+
+  caveats do
+    requires_rosetta
+  end
 end
