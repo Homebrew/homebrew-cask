@@ -9,7 +9,9 @@ cask "devonagent" do
 
   livecheck do
     url "https://api.devontechnologies.com/1/apps/sparkle/sparkle.php?id=300005193"
-    strategy :sparkle
+    strategy :sparkle do |items|
+      items.map(&:version)
+    end
   end
 
   auto_updates true
