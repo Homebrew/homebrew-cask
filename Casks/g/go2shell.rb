@@ -15,4 +15,8 @@ cask "go2shell" do
   app "Go2Shell.app"
 
   zap trash: "~/Library/Preferences/com.zipzapmac.Go2Shell.plist"
+
+  caveats do
+    requires_rosetta
+  end
 end
