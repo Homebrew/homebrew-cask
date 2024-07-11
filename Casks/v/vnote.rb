@@ -1,6 +1,6 @@
 cask "vnote" do
-  version "3.18.0"
-  sha256 "3720cea666f2c7e44bba1729f6bde39f4acd2b3d3c2cd014e228388c67f1e613"
+  version "3.18.1"
+  sha256 "3699cfa700a52841525f5aeac1ee5aaf51e6eceaad000a799f4078fcb8de89b2"
 
   url "https://github.com/vnotex/vnote/releases/download/v#{version}/vnote-#{version}-mac-universal.zip",
       verified: "github.com/vnotex/vnote/"
