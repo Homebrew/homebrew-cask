@@ -7,5 +7,11 @@ cask "graphsketcher" do
   desc "Graph drawing and data plotting app"
   homepage "https://github.com/graphsketcher/GraphSketcher"
 
+  disable! date: "2024-07-11", because: :unmaintained
+
   app "GraphSketcher/GraphSketcher.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
