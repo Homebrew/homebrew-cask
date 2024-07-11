@@ -1,6 +1,6 @@
 cask "the-unofficial-homestuck-collection" do
-  version "2.0.7"
-  sha256 "dd29899a8aec948da21b6318d5ec51b3c9b74e141fbfe28056cdbe1f1a75b12c"
+  version "2.5.1"
+  sha256 "692dfecd05d28c0566334111de13543ba8b2a3bfbe4a001e74c70a9866323293"
 
   url "https://github.com/Bambosh/unofficial-homestuck-collection/releases/download/v#{version}/The-Unofficial-Homestuck-Collection-#{version}.dmg",
       verified: "github.com/Bambosh/unofficial-homestuck-collection/"
@@ -21,8 +21,11 @@ cask "the-unofficial-homestuck-collection" do
     "~/Library/Saved Application State/com.bambosh.unofficialhomestuckcollection.savedState",
   ]
 
-  caveats <<~EOS
-    You will need to download the corresponding Asset Pack by visiting:
-      #{Formatter.url(homepage)}
-  EOS
+  caveats do
+    requires_rosetta
+    <<~EOS
+      You will need to download the corresponding Asset Pack by visiting:
+        https://bambosh.github.io/unofficial-homestuck-collection/
+    EOS
+  end
 end
