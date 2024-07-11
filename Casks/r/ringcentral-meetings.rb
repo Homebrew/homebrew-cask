@@ -7,10 +7,7 @@ cask "ringcentral-meetings" do
   desc "Video conferencing, screen sharing, and team messaging platform"
   homepage "https://www.ringcentral.com/online-meetings/overview.html"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  deprecate! date: "2024-07-11", because: :discontinued
 
   pkg "RCMeetingsClientSetup.pkg"
 
