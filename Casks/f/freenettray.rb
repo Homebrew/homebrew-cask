@@ -8,10 +8,16 @@ cask "freenettray" do
   desc "Menu bar application to control Freenet"
   homepage "https://freenetproject.org/"
 
+  deprecate! date: "2024-07-10", because: :unmaintained
+
   app "FreenetTray.app"
 
   zap trash: [
     "~/Library/Application Support/Freenet",
     "~/Library/Preferences/org.freenetproject.mactray.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
