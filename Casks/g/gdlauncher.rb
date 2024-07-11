@@ -17,4 +17,8 @@ cask "gdlauncher" do
     "~/Library/Preferences/org.gorilladevs.GDLauncher.plist",
     "~/Library/Saved Application State/org.gorilladevs.GDLauncher.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
