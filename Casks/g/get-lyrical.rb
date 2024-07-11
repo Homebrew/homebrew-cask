@@ -13,4 +13,8 @@ cask "get-lyrical" do
   end
 
   app "Get Lyrical/Get Lyrical.app"
+
+  caveats do
+    requires_rosetta
+  end
 end
