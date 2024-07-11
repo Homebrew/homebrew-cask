@@ -22,6 +22,7 @@ cask "replit" do
   app "Replit.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.electron.replit.sfl3",
     "~/Library/Application Support/Replit",
     "~/Library/Caches/com.electron.replit",
     "~/Library/Caches/com.electron.replit.ShipIt",
