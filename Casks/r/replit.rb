@@ -28,5 +28,6 @@ cask "replit" do
     "~/Library/HTTPStorages/com.electron.replit",
     "~/Library/Logs/Replit",
     "~/Library/Preferences/com.electron.replit.plist",
+    "~/Library/Saved Application State/com.electron.replit.savedState",
   ]
 end
