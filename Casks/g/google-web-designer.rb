@@ -22,4 +22,8 @@ cask "google-web-designer" do
         "~/Library/Saved Application State/com.google.WebDesigner.savedState",
       ],
       rmdir: "~/Library/Google"
+
+  caveats do
+    requires_rosetta
+  end
 end
