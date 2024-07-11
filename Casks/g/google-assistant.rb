@@ -16,4 +16,8 @@ cask "google-assistant" do
     "~/Library/Preferences/com.redvirus.g-assist.plist",
     "~/Library/Saved Application State/com.redvirus.g-assist.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
