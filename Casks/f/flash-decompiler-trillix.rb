@@ -8,7 +8,7 @@ cask "flash-decompiler-trillix" do
   desc "Convert SWF files to editable FLA projects"
   homepage "https://www.flash-decompiler.com/mac.html"
 
-  disable! date: "2024-07-03", because: :unmaintained
+  disable! date: "2024-07-03", because: "is 32-bit only"
 
   app "Flash Decompiler Trillix.app"
 end
