@@ -20,4 +20,8 @@ cask "grisbi" do
     "~/Library/Preferences/org.grisbi.Grisbi.plist",
     "~/Library/Saved Application State/org.grisbi.Grisbi.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
