@@ -16,4 +16,8 @@ cask "gswitch" do
     "~/Library/Caches/gSwitch",
     "~/Library/Preferences/com.CodySchrank.gSwitch.plist",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
