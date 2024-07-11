@@ -7,7 +7,13 @@ cask "gopass-ui" do
   desc "Password manager for teams"
   homepage "https://github.com/codecentric/gopass-ui"
 
+  deprecate! date: "2024-07-11", because: :unmaintained
+
   app "Gopass UI.app"
 
   zap trash: "~/.config/gopass"
+
+  caveats do
+    requires_rosetta
+  end
 end
