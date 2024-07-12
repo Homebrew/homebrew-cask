@@ -9,10 +9,7 @@ cask "ithoughtsx" do
   desc "Mind mapping tool"
   homepage "https://www.toketaware.com/ithoughts-osx"
 
-  livecheck do
-    url :url
-    strategy :extract_plist
-  end
+  deprecate! date: "2024-07-11", because: :unmaintained
 
   auto_updates true
   depends_on macos: ">= :el_capitan"
