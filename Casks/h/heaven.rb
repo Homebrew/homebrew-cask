@@ -18,4 +18,8 @@ cask "heaven" do
     "~/Library/Application Support/Heaven",
     "~/Library/Saved Application State/com.Unigine.Heaven.savedState",
   ]
+
+  caveats do
+    requires_rosetta
+  end
 end
