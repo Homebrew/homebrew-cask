@@ -15,6 +15,7 @@ cask "keeper-password-manager" do
   app "Keeper Password Manager.app"
 
   zap trash: [
+    "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.keepersecurity.passwordmanager.sfl*",
     "~/Library/Application Support/Keeper Password Manager",
     "~/Library/Preferences/com.keepersecurity.passwordmanager.plist",
     "~/Library/Saved Application State/com.keepersecurity.passwordmanager.savedState",
