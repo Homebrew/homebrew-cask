@@ -3,7 +3,7 @@ cask "jagex" do
   sha256 :no_check
 
   url "https://cdn.jagex.com/Jagex%20Launcher%20Installer.dmg"
-  name "jagexlauncher"
+  name "jagex"
   desc "Official Jagex Launcher"
   homepage "https://www.jagex.com/"
 
